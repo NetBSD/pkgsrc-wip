@@ -1,13 +1,16 @@
+# $NetBSD$
 
 DISTNAME=	payara-${PAYARA_VER}
 CATEGORIES=	www
-MASTER_SITES=	https://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/Payara+${PAYARA_VER}/
+MASTER_SITES=	http://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/Payara+${PAYARA_VER}/
 EXTRACT_SUFX=	.zip
+
+#https://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/Payara+4.1.2.172/payara-4.1.2.172.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.payara.fish/
 COMMENT=	Java EE 7 application server based on GlassFish 4.1
-LICENSE=	cddl-1.1 OR (cddl-1.0 AND gnu-gpl-v2)
+LICENSE=	cddl-1.0 AND gnu-gpl-v2
 
 NO_BUILD=	yes
 USE_JAVA=	run
@@ -16,7 +19,7 @@ USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
-PAYARA_VER=	4.1.1.171
+PAYARA_VER=	4.1.2.172
 PAYARA_HOME=	${PREFIX}/share/payara
 EGDIR=		${PREFIX}/share/examples/payara
 RCD_SCRIPTS=	payara
@@ -49,7 +52,7 @@ INSTALLATION_DIRS+=	${PAYARA_HOME}
 GLASSFISH_BIN_FILES=	appclient asadmin capture-schema jspc package-appclient schemagen \
 			startserv stopserv wscompile wsdeploy wsgen wsimport xjc
 
-BUILD_DEFS+=	VARBASE	
+BUILD_DEFS+=	VARBASE
 WRKSRC=		${WRKDIR}/payara41
 
 do-install:

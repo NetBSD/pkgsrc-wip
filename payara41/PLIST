@@ -241,8 +241,8 @@ share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/commons
 share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/dojo-ajax-nodemo-0.4.4.jar
 share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/json-1.0.jar
 share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/prototype-1.5.0.jar
-share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/webui-jsf-4.0.2.10.payara-p5.jar
-share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/webui-jsf-suntheme-4.0.2.10.payara-p5.jar
+share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/webui-jsf-4.0.2.10.payara-p6.jar
+share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/extra/webui-jsf-suntheme-4.0.2.10.payara-p6.jar
 share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/faces-config.xml
 share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-core-4.1.1.jar
 share/payara/glassfish/lib/install/applications/__admingui/WEB-INF/sun-web.xml
@@ -678,6 +678,7 @@ share/payara/glassfish/modules/console-payara-branding-plugin.jar
 share/payara/glassfish/modules/console-plugin-service.jar
 share/payara/glassfish/modules/console-web-plugin.jar
 share/payara/glassfish/modules/container-common.jar
+share/payara/glassfish/modules/datadog-notifier-console-plugin.jar
 share/payara/glassfish/modules/dataprovider.jar
 share/payara/glassfish/modules/dbschema-repackaged.jar
 share/payara/glassfish/modules/deployment-admin.jar
@@ -697,6 +698,7 @@ share/payara/glassfish/modules/endorsed/javax.annotation-api.jar
 share/payara/glassfish/modules/endorsed/jaxb-api.jar
 share/payara/glassfish/modules/endorsed/webservices-api-osgi.jar
 share/payara/glassfish/modules/entitybean-container.jar
+share/payara/glassfish/modules/environment-warning.jar
 share/payara/glassfish/modules/eventbus-notifier-console-plugin.jar
 share/payara/glassfish/modules/flashlight-extra-jdk-packages.jar
 share/payara/glassfish/modules/flashlight-framework.jar
@@ -749,7 +751,6 @@ share/payara/glassfish/modules/hk2-utils.jar
 share/payara/glassfish/modules/hk2.jar
 share/payara/glassfish/modules/inmemory.jacc.provider.jar
 share/payara/glassfish/modules/internal-api.jar
-share/payara/glassfish/modules/j-interop-repackaged.jar
 share/payara/glassfish/modules/jackson-annotations.jar
 share/payara/glassfish/modules/jackson-core.jar
 share/payara/glassfish/modules/jackson-databind.jar
@@ -823,6 +824,7 @@ share/payara/glassfish/modules/jettison.jar
 share/payara/glassfish/modules/jms-admin.jar
 share/payara/glassfish/modules/jms-core.jar
 share/payara/glassfish/modules/jms-notifier-console-plugin.jar
+share/payara/glassfish/modules/jmx-monitoring-plugin.jar
 share/payara/glassfish/modules/jmx-monitoring.jar
 share/payara/glassfish/modules/jmxremote_optional-repackaged.jar
 share/payara/glassfish/modules/jpa-container.jar
@@ -847,11 +849,14 @@ share/payara/glassfish/modules/management-api.jar
 share/payara/glassfish/modules/metro-glue.jar
 share/payara/glassfish/modules/mimepull.jar
 share/payara/glassfish/modules/monitoring-core.jar
+share/payara/glassfish/modules/newrelic-notifier-console-plugin.jar
 share/payara/glassfish/modules/notification-core.jar
+share/payara/glassfish/modules/notification-datadog-core.jar
 share/payara/glassfish/modules/notification-email-core.jar
 share/payara/glassfish/modules/notification-eventbus-core.jar
 share/payara/glassfish/modules/notification-hipchat-core.jar
 share/payara/glassfish/modules/notification-jms-core.jar
+share/payara/glassfish/modules/notification-newrelic-core.jar
 share/payara/glassfish/modules/notification-slack-core.jar
 share/payara/glassfish/modules/notification-snmp-core.jar
 share/payara/glassfish/modules/notification-xmpp-core.jar
@@ -876,12 +881,14 @@ share/payara/glassfish/modules/osgi-cli-remote.jar
 share/payara/glassfish/modules/osgi-container.jar
 share/payara/glassfish/modules/osgi-jpa-extension.jar
 share/payara/glassfish/modules/osgi-resource-locator.jar
+share/payara/glassfish/modules/payara-api.jar
 share/payara/glassfish/modules/payara-console-extras.jar
 share/payara/glassfish/modules/payara-jbatch.jar
 share/payara/glassfish/modules/payara-jsr107.jar
 share/payara/glassfish/modules/payara-micro-boot.jar
 share/payara/glassfish/modules/payara-micro-cdi.jar
 share/payara/glassfish/modules/payara-micro-service.jar
+share/payara/glassfish/modules/payara-rest-endpoints.jar
 share/payara/glassfish/modules/persistence-common.jar
 share/payara/glassfish/modules/pfl-asm.jar
 share/payara/glassfish/modules/pfl-basic-tools.jar
