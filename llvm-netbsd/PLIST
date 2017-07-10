@@ -299,6 +299,7 @@ include/llvm/CodeGen/GlobalISel/GISelAccessor.h
 include/llvm/CodeGen/GlobalISel/IRTranslator.h
 include/llvm/CodeGen/GlobalISel/InstructionSelect.h
 include/llvm/CodeGen/GlobalISel/InstructionSelector.h
+include/llvm/CodeGen/GlobalISel/InstructionSelectorImpl.h
 include/llvm/CodeGen/GlobalISel/Legalizer.h
 include/llvm/CodeGen/GlobalISel/LegalizerHelper.h
 include/llvm/CodeGen/GlobalISel/LegalizerInfo.h
@@ -528,7 +529,6 @@ include/llvm/DebugInfo/PDB/Native/ISectionContribVisitor.h
 include/llvm/DebugInfo/PDB/Native/InfoStream.h
 include/llvm/DebugInfo/PDB/Native/InfoStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/ModuleDebugStream.h
-include/llvm/DebugInfo/PDB/Native/ModuleDebugStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/NamedStreamMap.h
 include/llvm/DebugInfo/PDB/Native/NativeCompilandSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeEnumModules.h
@@ -705,6 +705,7 @@ include/llvm/IR/PassManagerInternal.h
 include/llvm/IR/PatternMatch.h
 include/llvm/IR/PredIteratorCache.h
 include/llvm/IR/ProfileSummary.h
+include/llvm/IR/SafepointIRVerifier.h
 include/llvm/IR/Statepoint.h
 include/llvm/IR/SymbolTableListTraits.h
 include/llvm/IR/TrackingMDRef.h
@@ -963,6 +964,7 @@ include/llvm/Support/Recycler.h
 include/llvm/Support/RecyclingAllocator.h
 include/llvm/Support/Regex.h
 include/llvm/Support/Registry.h
+include/llvm/Support/ReverseIteration.h
 include/llvm/Support/SHA1.h
 include/llvm/Support/SMLoc.h
 include/llvm/Support/SaveAndRestore.h
@@ -1324,3 +1326,9 @@ lib/libLLVMipo.a
 lib/libLTO.${SOEXT}
 lib/libLTO.${SOEXT}.5
 lib/libLTO.${SOEXT}.5.0.0svn
+share/opt-viewer/opt-diff.py
+share/opt-viewer/opt-stats.py
+share/opt-viewer/opt-viewer.py
+share/opt-viewer/optpmap.py
+share/opt-viewer/optrecord.py
+share/opt-viewer/style.css
