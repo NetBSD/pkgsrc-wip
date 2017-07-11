@@ -2,7 +2,7 @@ $NetBSD$
 
 Do not assume what is not Linux or FreeBSD is OSX.
 
---- src/video_device.c.orig	2016-10-01 08:28:56.147136487 +0000
+--- src/video_device.c.orig	2017-07-10 22:33:54.000000000 +0000
 +++ src/video_device.c
 @@ -30,14 +30,18 @@
  
@@ -112,7 +112,7 @@ Do not assume what is not Linux or FreeBSD is OSX.
 +#else /* not __OSX__*/
          /* Open selected device */
          char device_address[] = "/dev/videoXX";
-         snprintf(device_address + 10 , sizeof(device_address) - 10, "%i", selection);
+         snprintf(device_address + 10, sizeof(device_address) - 10, "%i", selection);
 @@ -482,14 +490,6 @@ VideoDeviceError open_video_device(Video
              return vde_FailedStart;
          }
