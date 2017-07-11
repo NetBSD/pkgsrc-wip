@@ -28,6 +28,12 @@ INSTALL_MAKE_FLAGS+=	${LUAKIT_MAKE_FLAGS}
 
 LUA_VERSIONS_ACCEPTED=	51
 
+SUBST_CLASSES+=		xdg-dirs
+SUBST_STAGE.xdg-dirs=	pre-configure
+SUBST_MESSAGE.xdg-dirs=	Add pkgsrc xdg-dirs to the search path.
+SUBST_FILES.xdg-dirs=	luah.c clib/xdg.c common/luautil.c
+SUBST_SED.xdg-dirs=	-e 's,@PKGSRCXDGPATH@,"${PREFIX}/etc/xdg",g'
+
 .include "../../lang/lua/luaversion.mk"
 
 DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem

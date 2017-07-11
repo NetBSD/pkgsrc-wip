@@ -67,7 +67,6 @@ share/doc/luakit/modules/lousy.widget.tabi.html
 share/doc/luakit/modules/lousy.widget.tablist.html
 share/doc/luakit/modules/lousy.widget.uri.html
 share/doc/luakit/modules/luakit.html
-share/doc/luakit/modules/mixed_content.html
 share/doc/luakit/modules/msg.html
 share/doc/luakit/modules/newtab_chrome.html
 share/doc/luakit/modules/noscript.html
@@ -123,7 +122,6 @@ share/luakit/lib/history.lua
 share/luakit/lib/history_chrome.lua
 share/luakit/lib/image_css.lua
 share/luakit/lib/image_css_wm.lua
-share/luakit/lib/introspector.lua
 share/luakit/lib/introspector_chrome.lua
 share/luakit/lib/jquery.min.js
 share/luakit/lib/lousy/bind.lua
@@ -148,7 +146,6 @@ share/luakit/lib/lousy/widget/tabi.lua
 share/luakit/lib/lousy/widget/tablist.lua
 share/luakit/lib/lousy/widget/uri.lua
 share/luakit/lib/markdown.lua
-share/luakit/lib/mixed_content.lua
 share/luakit/lib/newtab_chrome.lua
 share/luakit/lib/noscript.lua
 share/luakit/lib/open_editor.lua
