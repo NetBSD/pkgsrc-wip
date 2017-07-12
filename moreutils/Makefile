@@ -36,6 +36,7 @@ SUBST_SED.pkgmandir=		-e 's,share/man,${PKGMANDIR},'
 MAKE_ENV+=	\
 	PREFIX=${PREFIX} \
 	CFLAGS=${CFLAGS:Q} \
+	LDFLAGS=${LDFLAGS:Q} \
 	DOCBOOKXSL=${PREFIX}/share/xsl/docbook \
 	INSTALL_BIN=${INSTALL_PROGRAM:Q} \
 	INSTALL_MAN=${INSTALL_MAN:Q} \

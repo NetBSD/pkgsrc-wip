@@ -21,9 +21,10 @@ corresponding INSTALL_{MAN,SCRIPT} in a similar vein of INSTALL_BIN.
 -	install $(PERLSCRIPTS) $(DESTDIR)$(PREFIX)/bin
 +	$(INSTALL_SCRIPT) $(PERLSCRIPTS) $(DESTDIR)$(PREFIX)/bin
  
- 	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
 -	install $(MANS) $(DESTDIR)$(PREFIX)/share/man/man1
-+	$(INSTALL_MAN) $(MANS) $(DESTDIR)$(PREFIX)/share/man/man1
++	mkdir -p $(DESTDIR)$(PREFIX)/man/man1
++	$(INSTALL_MAN) $(MANS) $(DESTDIR)$(PREFIX)/man/man1
  
  check: isutf8
  	./is_utf8/test.sh
