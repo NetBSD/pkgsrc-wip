@@ -1,4 +1,6 @@
 ===========================================================================
+$NetBSD$
+
 * There are many modules that are not enabled by default. If they are
   required, please  manually enable them in ${WRKSRC}/modules.conf file.
   As for now, some required by wip/fusionpbx (GUI interface) were included.
