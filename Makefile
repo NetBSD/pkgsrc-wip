@@ -1742,6 +1742,7 @@ SUBDIR+=	libretro-mednafen-lynx
 SUBDIR+=	libretro-mednafen-ngp
 SUBDIR+=	libretro-mednafen-pce-fast
 SUBDIR+=	libretro-mednafen-psx
+SUBDIR+=	libretro-mednafen-saturn
 SUBDIR+=	libretro-mednafen-supergrafx
 SUBDIR+=	libretro-mednafen-vb
 SUBDIR+=	libretro-mednafen-wswan
