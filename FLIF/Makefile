@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/FLIF-0.3
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake pkg-config
 
+INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../graphics/png/buildlink3.mk"

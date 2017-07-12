@@ -4,4 +4,4 @@ bin/flif
 bin/gif2flif
 lib/libflif.so
 lib/libflif.so.0
-share/man/man1/flif.1
+man/man1/flif.1
