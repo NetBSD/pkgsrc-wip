@@ -541,6 +541,7 @@ include/llvm/DebugInfo/PDB/Native/PDBStringTable.h
 include/llvm/DebugInfo/PDB/Native/PDBStringTableBuilder.h
 include/llvm/DebugInfo/PDB/Native/PDBTypeServerHandler.h
 include/llvm/DebugInfo/PDB/Native/PublicsStream.h
+include/llvm/DebugInfo/PDB/Native/PublicsStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/RawConstants.h
 include/llvm/DebugInfo/PDB/Native/RawError.h
 include/llvm/DebugInfo/PDB/Native/RawTypes.h
