@@ -2,37 +2,33 @@ $NetBSD$
 
 Make use of DESTDIR and MANDIR.
 
---- src/Makefile.orig	2016-08-26 20:56:57.000000000 +0000
+--- src/Makefile.orig	2017-07-10 21:19:04.000000000 +0000
 +++ src/Makefile
 @@ -1,4 +1,5 @@
--PREFIX := $(DESTDIR)/usr
-+PREFIX ?= $(DESTDIR)/usr
-+MANDIR ?= $(PREFIX)/share/man
+ PREFIX := $(DESTDIR)/usr/local
++MANDIR := $(PREFIX)/share/man
  CXXFLAGS := $(shell pkg-config --cflags zlib libpng) -DLODEPNG_NO_COMPILE_PNG -DLODEPNG_NO_COMPILE_DISK
+ CFLAGS := $(shell pkg-config --cflags zlib libpng) -DLODEPNG_NO_COMPILE_PNG -DLODEPNG_NO_COMPILE_DISK
  LDFLAGS := $(shell pkg-config --libs libpng)
+@@ -76,10 +77,10 @@ libpixbufloader-flif$(LIBEXT): libflif$(
+ pixbufloader: libpixbufloader-flif$(LIBEXT)
  
-@@ -63,16 +64,16 @@ viewflif: libflif$(LIBEXT) viewflif.c
- 
- 
- install: all
--	install -d $(PREFIX)/bin $(PREFIX)/lib $(PREFIX)/share/man/man1
--	install -s -m 755 flif viewflif $(PREFIX)/bin
--	install -s -m 755 libflif$(LIBEXT) libflif$(LIBEXTV) $(PREFIX)/lib
+ install: flif libflif$(LIBEXT) install-libflif$(LIBEXT)
+-	install -d $(PREFIX)/bin $(PREFIX)/share/man/man1
++	install -d $(PREFIX)/bin $(MANDIR)/man1
+ 	install -m 755 flif $(PREFIX)/bin
+ 	strip -x $(PREFIX)/bin/flif
 -	install -m 644 ../doc/flif.1 $(PREFIX)/share/man/man1
--	install -m 755 ../tools/gif2flif $(PREFIX)/bin
--	install -m 755 ../tools/apng2flif $(PREFIX)/bin
-+	install -d $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(PREFIX)/lib $(DESTDIR)$(MANDIR)/man1
-+	install -s -m 755 flif viewflif $(DESTDIR)$(PREFIX)/bin
-+	install -s -m 755 libflif$(LIBEXT) libflif$(LIBEXTV) $(DESTDIR)$(PREFIX)/lib
-+	install -m 644 ../doc/flif.1 $(DESTDIR)$(MANDIR)/man1
-+	install -m 755 ../tools/gif2flif $(DESTDIR)$(PREFIX)/bin
-+	install -m 755 ../tools/apng2flif $(DESTDIR)$(PREFIX)/bin
++	install -m 644 ../doc/flif.1 $(MANDIR)/man1
+ 	install -m 755 ../tools/gif2flif $(PREFIX)/bin
+ 	install -m 755 ../tools/apng2flif $(PREFIX)/bin
  
- install-dev:
--	install -d $(PREFIX)/include
--	install -m 644 library/*.h $(PREFIX)/include
-+	install -d $(DESTDIR)$(PREFIX)/include
-+	install -m 644 library/*.h $(DESTDIR)$(PREFIX)/include
+@@ -129,7 +130,7 @@ uninstall:
+ 	rm -f $(PREFIX)/lib/libflif_dec$(LIBEXT)
+ 	rm -f $(PREFIX)/lib/libflif$(LIBEXTV)
+ 	rm -f $(PREFIX)/lib/libflif_dec$(LIBEXTV)
+-	rm -f $(PREFIX)/share/man/man1/flif.1
++	rm -f $(MANDIR)/man1/flif.1
+ 	rm -f /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-flif$(LIBEXT)
  
- install-decoder: decoder
- 	install -s -m 755 dflif $(PREFIX)/bin
+ clean:

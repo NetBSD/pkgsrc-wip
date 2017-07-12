@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	FLIF-0.1alpha
+DISTNAME=	FLIF-0.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FLIF-hub/}
 
@@ -11,14 +11,14 @@ WRKSRC=			${WRKDIR}/flif
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flif.info/
 COMMENT=	Free Lossless Image Format
-LICENSE=	gnu-lgpl-v3
+LICENSE=	gnu-lgpl-v3 AND apache-2.0
 
-BUILD_DIRS=	src
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake pkg-config
-MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
+
+INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../graphics/png/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
