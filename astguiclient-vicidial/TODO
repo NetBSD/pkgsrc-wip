@@ -1,6 +1,4 @@
-* This software is installed by the PERL script provided by upstream.
-  Meaning, after running this script, ${MAKE} deinstall will not work
-  if you have the need to deinstall the files. Thus, you'll have to
-  manually delete the files.
+* Use of {PAX} to replace install script.
+* Fill out the PLIST after install script is replaced.
 * Only tested on FreeBSD 11 x86_64.
 * Document options in mk/defaults/options.description. 

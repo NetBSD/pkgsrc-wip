@@ -2,7 +2,7 @@
 # Options for astGUIclient VICIdial
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vicidial
-PKG_SUPPORTED_OPTIONS=	lame sox apache sipsak screen iftop openntpd ploticus ttyload
+PKG_SUPPORTED_OPTIONS=	lame sox sipsak screen iftop openntpd ploticus ttyload
 PKG_SUGGESTED_OPTIONS=	lame sox
 
 .include "../../mk/bsd.options.mk"
@@ -13,11 +13,6 @@ PKG_SUGGESTED_OPTIONS=	lame sox
 
 .if !empty(PKG_OPTIONS:Msox)
 .include "../../audio/sox/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mapache)
-.include "../../www/apache24/buildlink3.mk"
-DEPENDS+=	ap24-php56>=5.6:../../www/ap-php
 .endif
 
 .if !empty(PKG_OPTIONS:Msipsak)
