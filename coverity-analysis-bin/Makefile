@@ -14,6 +14,8 @@ INSTALLATION_DIRS+=	${PREFIX}/coverity
 
 ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
 NOT_FOR_PLATFORM=	NetBSD-[0-4]*.*-x86_64
+# pre-built binaries without RELRO
+CHECK_RELRO_SUPPORTED=	no
 
 USE_TOOLS+=		pax
 
