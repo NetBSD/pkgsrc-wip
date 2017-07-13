@@ -104,7 +104,7 @@ do-install:
 		--DONEmonitor=${VARBASE}/spool/asterisk/monitorDONE \
 		--copy_sample_conf_files \
 		--asterisk_version=11.
-	cd ${WRKSRC}/extras && ${PAX} -wr * ${PREFIX}/share/vicidial/extras
+	cd ${WRKSRC} && ${PAX} -wr extras/ ${PREFIX}/share/vicidial/
 	#${CP} -R ${WRKSRC}/extras  ${PREFIX}/share/vicidial/extras
 
 .include "options.mk"
