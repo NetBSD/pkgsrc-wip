@@ -213,7 +213,6 @@ SUBDIR+=	bastard
 SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
-SUBDIR+=	beats
 SUBDIR+=	bedtools2
 SUBDIR+=	belle-sip
 SUBDIR+=	bertini
