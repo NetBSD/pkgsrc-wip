@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME} # More than one possibility -- please check manually.
 
-USE_TOOLS+=	make
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 
@@ -28,11 +27,9 @@ CMAKE_ARGS+=	-DBUILD_PORTAUDIO:BOOL=OFF
 #option(BUILD_ALSA "Build with support for ALSA audio backend." ON)
 #option(BUILD_PORTAUDIO "Build with support for Portaudio audio backend." ON)
 
+BUILD_TARGET=	all lrelease
 DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
-
-pre-install:
-	cd ${WRKSCR} && make lrelease
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
