@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-vecx-20170709
+DISTNAME=	libretro-vecx-20170714
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,7 +8,7 @@ HOMEPAGE=	https://wiki.libretro.com/index.php?title=Vecx
 COMMENT=	Libretro core for Vectrex emulation
 LICENSE=	gnu-gpl-v3
 
-GITHUB_TAG=	b47eb91aba80906b6dca1eee698958cdd2deb0d1
+GITHUB_TAG=	bad6f6aedecc7a9e8ead715be61cb2fc34125491
 
 MAKE_FILE=	Makefile.libretro
 

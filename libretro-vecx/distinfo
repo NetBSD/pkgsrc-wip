@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-vecx-20170709-b47eb91aba80906b6dca1eee698958cdd2deb0d1.tar.gz) = dc3ab89f6004098fcf04bbe6a29c5109a02243db
-RMD160 (libretro-vecx-20170709-b47eb91aba80906b6dca1eee698958cdd2deb0d1.tar.gz) = c8868ebc67d65574b49823362bacf7968d920ce6
-SHA512 (libretro-vecx-20170709-b47eb91aba80906b6dca1eee698958cdd2deb0d1.tar.gz) = ae2afb738210eadce406b0accd885e1c930c3a79dbab2f25f398f9e0bb27e255599d7c9a44b134d721eb0e8ba528c0e3a4fb6fe94766e9887460c8e452661e6b
-Size (libretro-vecx-20170709-b47eb91aba80906b6dca1eee698958cdd2deb0d1.tar.gz) = 129122 bytes
+SHA1 (libretro-vecx-20170714-bad6f6aedecc7a9e8ead715be61cb2fc34125491.tar.gz) = 35b40de7c98e67c5f825fc03b0ebc1d7bd1c8b8b
+RMD160 (libretro-vecx-20170714-bad6f6aedecc7a9e8ead715be61cb2fc34125491.tar.gz) = f49d4f1d6d4d39bb7478206746add06e1b04652d
+SHA512 (libretro-vecx-20170714-bad6f6aedecc7a9e8ead715be61cb2fc34125491.tar.gz) = fdda2ffa99a1a107e954492215714507023c4311cbf4e0a891f776cdf39796e0b8eab65e1aaed69888073bb7634274c55cb9e207ce637fba0409bd4bf787e2de
+Size (libretro-vecx-20170714-bad6f6aedecc7a9e8ead715be61cb2fc34125491.tar.gz) = 129088 bytes
