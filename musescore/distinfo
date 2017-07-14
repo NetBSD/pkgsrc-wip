@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2012/08/20 11:20:14 thomasklausner Exp $
+$NetBSD$
 
-SHA1 (mscore-1.2.tar.bz2) = 378d9efe4e6f103284bd0b9a61a58ed0c429215e
-RMD160 (mscore-1.2.tar.bz2) = 5df0ba333f7cec4d9e28263d7d1bc3cd741be115
-Size (mscore-1.2.tar.bz2) = 85739954 bytes
-SHA1 (patch-CMakeLists.txt) = 7eb3c0ad3ca8d4ee8358318267d6b9b936aca15e
-SHA1 (patch-mscore_CMakeLists.txt) = 7650cbe029132408c4135b3e4095c88543f396aa
+SHA1 (MuseScore-2.0.3.zip) = be98f5867f2060aedf15e9f20a89bf2e33b423af
+RMD160 (MuseScore-2.0.3.zip) = 28748c9f554cfdb25cdcb799baaa9cc2235197f7
+SHA512 (MuseScore-2.0.3.zip) = d028b0fb7d042c3fc9b4eaaa52d72e4ad381c3aa4aacfce577fe7a7df4b8e5234fda9af3afff26e0cc612ca21a1801a6fdc804937384763e7ef4179d3c302211
+Size (MuseScore-2.0.3.zip) = 55961927 bytes
+SHA1 (patch-CMakeLists.txt) = 2b36ef24dfa884ef6830a97e871d11a45a9542f4
+SHA1 (patch-mscore_CMakeLists.txt) = b226bd4dd4d20a0549baadb7196273467f07a594

@@ -1,15 +1,24 @@
-$NetBSD: patch-mscore_CMakeLists.txt,v 1.1 2012/08/20 11:20:14 thomasklausner Exp $
+$NetBSD$
 
-Fix freetype2 detection/cflags.
+Fix cmake.
 
---- mscore/CMakeLists.txt.orig	2011-07-27 13:32:44.000000000 +0000
+--- mscore/CMakeLists.txt.orig	2016-04-01 02:46:08.000000000 +0000
 +++ mscore/CMakeLists.txt
-@@ -362,7 +362,7 @@ if (NOT MINGW AND NOT APPLE)
+@@ -479,7 +479,6 @@ else (MINGW)
+       ${QT_LIBRARIES}
+       mscore_freetype
+       z
+-      dl
+       pthread
        )
-    target_link_libraries(genft al ${QT_LIBRARIES} -lfreetype )
-    set_target_properties(genft
--      PROPERTIES COMPILE_FLAGS "-include ${PROJECT_BINARY_DIR}/all.h -I/usr/include/freetype2"
-+      PROPERTIES COMPILE_FLAGS "-include ${PROJECT_BINARY_DIR}/all.h `pkg-config --cflags freetype2`"
-       )
- endif (NOT MINGW AND NOT APPLE)
+     if (USE_PORTAUDIO)
+@@ -514,9 +513,6 @@ else (MINGW)
+ 
+    # gold does not use indirect shared libraries for symbol resolution, Linux only
+    if (NOT APPLE)
+-      if(USE_JACK)
+-         target_link_libraries(mscore dl)
+-      endif(USE_JACK)
+       target_link_libraries(mscore rt)
+    endif (NOT APPLE)
  

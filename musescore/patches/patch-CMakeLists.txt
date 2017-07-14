@@ -1,17 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2012/08/20 11:20:14 thomasklausner Exp $
+$NetBSD$
 
-lrelease is not in path.
+Install man pages properly.
 
---- CMakeLists.txt.orig	2012-03-13 13:37:09.000000000 +0000
+--- CMakeLists.txt.orig	2016-04-01 02:46:08.000000000 +0000
 +++ CMakeLists.txt
-@@ -421,8 +421,8 @@ add_custom_target(lupdate
- 
- add_custom_target(lrelease
-    COMMAND ${PROJECT_SOURCE_DIR}/gen-qt-projectfile ${PROJECT_SOURCE_DIR} > mscore.pro
--   COMMAND lrelease ${PROJECT_SOURCE_DIR}/share/locale/*.ts
--   COMMAND lrelease ${PROJECT_SOURCE_DIR}/share/plugins/musescore.com/translations/*.ts
-+   COMMAND ${QTDIR}/bin/lrelease ${PROJECT_SOURCE_DIR}/share/locale/*.ts
-+   COMMAND ${QTDIR}/bin/lrelease ${PROJECT_SOURCE_DIR}/share/plugins/musescore.com/translations/*.ts
-    WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
-    )
- 
+@@ -521,7 +521,7 @@ if (NOT MINGW AND NOT APPLE)
+             )
+     endif (GZIP_EXECUTABLE AND NOT CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+     # install man pages in either compressed or uncompressed form
+-    install( FILES ${MAN_BUILD} DESTINATION share/man/man1 COMPONENT doc)
++    install( FILES ${MAN_BUILD} DESTINATION man/man1 COMPONENT doc)
+     # create symlink alias for man pages so `man musescore` = `man mscore`
+     find_program( LN_EXECUTABLE ln DOC "A tool for creating symbolic link aliases (optional)." )
+     if (LN_EXECUTABLE)
