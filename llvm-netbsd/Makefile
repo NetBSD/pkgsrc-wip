@@ -37,6 +37,8 @@ SUBST_STAGE.lto=	pre-configure
 SUBST_FILES.lto=	tools/lto/lto.exports
 SUBST_SED.lto=		-e '/^LLVM/d'
 
+REPLACE_PYTHON+=	tools/opt-viewer/*.py
+
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	notdylib
@@ -65,5 +67,6 @@ post-extract:
 
 .include "../../wip/mk/svn-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
