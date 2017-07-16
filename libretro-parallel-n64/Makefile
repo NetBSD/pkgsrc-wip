@@ -11,6 +11,7 @@ GITHUB_TAG=	571a477b79d57c10846fbfbdba9c6447f8d54cb9
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
+EXTRACT_USING=	bsdtar
 
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure
