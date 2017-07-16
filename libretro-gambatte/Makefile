@@ -15,6 +15,7 @@ GITHUB_TAG=	fafc291217c4fdb5a25c3543694fc3b3238e3ccb
 USE_LANGUAGES=	c c++
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
+EXTRACT_USING=	bsdtar
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
