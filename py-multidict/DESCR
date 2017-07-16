@@ -1,4 +1,0 @@
-Multidicts are useful for working with HTTP headers, URL
-query args etc.
-
-The code was extracted from aiohttp library.

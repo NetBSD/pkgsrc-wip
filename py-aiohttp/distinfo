@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (aiohttp-2.0.7.tar.gz) = f44b935f0c94b461f364d465118af8fcc156b5c5
-RMD160 (aiohttp-2.0.7.tar.gz) = b2b2f38821226c1079760ff75aa27de15eb5967c
-SHA512 (aiohttp-2.0.7.tar.gz) = b16564f254ced6356fc4a49894fd85ba230b0382f2b83a12930f8c434e9175954248d8501c1a3a84ac1135a680581f36705ebd602db1589192ba073cf837edf2
-Size (aiohttp-2.0.7.tar.gz) = 739606 bytes
-SHA1 (patch-setup.py) = 5e546e6069f14828af9c0e0934cff65a54e3927f
