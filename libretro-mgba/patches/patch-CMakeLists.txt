@@ -2,9 +2,9 @@ $NetBSD$
 
 vfs-dirent peeks into non-standard structures and is not needed for libretro.
 
---- CMakeLists.txt.orig	2016-12-31 09:45:51.000000000 +0000
+--- CMakeLists.txt.orig	2017-07-16 19:04:50.000000000 +0000
 +++ CMakeLists.txt
-@@ -185,7 +185,7 @@ elseif(UNIX)
+@@ -208,7 +208,7 @@ elseif(UNIX)
  		set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread")
  	endif()
  

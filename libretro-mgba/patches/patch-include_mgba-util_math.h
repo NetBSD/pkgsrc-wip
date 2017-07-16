@@ -1,12 +1,12 @@
 $NetBSD$
 
-NetBSD defines popcount32 in libc
+NetBSD defines popcount32 in libc.
 
---- src/util/math.h.orig	2017-03-29 18:42:18.000000000 +0000
-+++ src/util/math.h
-@@ -8,11 +8,15 @@
+--- include/mgba-util/math.h.orig	2017-07-16 19:04:50.000000000 +0000
++++ include/mgba-util/math.h
+@@ -10,11 +10,15 @@
  
- #include "util/common.h"
+ CXX_GUARD_START
  
 +#ifndef __NetBSD__
  static inline uint32_t popcount32(unsigned bits) {
