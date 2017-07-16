@@ -12,6 +12,7 @@ GITHUB_PROJECT=	beetle-supergrafx-libretro
 GITHUB_TAG=	951421d39e6e713395b397c8b2e694aa9eae997d
 
 USE_TOOLS=	gmake
+EXTRACT_USING+=	bsdtar
 
 USE_LANGUAGES=	c c++
 
