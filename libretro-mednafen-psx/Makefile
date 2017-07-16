@@ -12,6 +12,7 @@ GITHUB_PROJECT=	beetle-psx-libretro
 GITHUB_TAG=	76862abefdde9097561e2b795e75b49247deff17
 
 USE_TOOLS=	gmake
+EXTRACT_USING=	bsdtar
 
 USE_LANGUAGES=	c c++
 
