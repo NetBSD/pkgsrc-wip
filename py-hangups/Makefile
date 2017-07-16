@@ -11,7 +11,7 @@ COMMENT=	Third-party instant messaging client for Google Hangouts
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-MechanicalSoup>=0.6.0:../../www/py-MechanicalSoup
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.2:../../wip/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.2:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.11.0:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.1.0:../../devel/py-protobuf
