@@ -30,6 +30,8 @@ DEPENDS+=	libXdamage-[0-9]*:../../x11/libXdamage
 
 INSTALL_MAKE_FLAGS=		INSTALL_ROOT=${DESTDIR}
 
+MAKE_ENV+=	LFLAGS=${LDFLAGS:Q}
+
 .include "options.mk"
 
 
