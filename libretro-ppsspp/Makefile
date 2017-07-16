@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}/libretro-ppsspp-${PPSSPP_TAG}/libretro
 
 USE_TOOLS=	gmake pkg-config
 USE_LANGUAGES=	c c++
+EXTRACT_USING=	bsdtar
 
 .include "../../mk/bsd.fast.prefs.mk"
 
