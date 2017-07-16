@@ -11,15 +11,7 @@ $NetBSD$
  
  #include "sanitizer_allocator_internal.h"
  #include "sanitizer_atomic.h"
-@@ -22,6 +22,7 @@
- #include "sanitizer_flags.h"
- #include "sanitizer_freebsd.h"
- #include "sanitizer_linux.h"
-+#include "sanitizer_netbsd.h"
- #include "sanitizer_placement_new.h"
- #include "sanitizer_procmaps.h"
- #include "sanitizer_stacktrace.h"
-@@ -148,7 +149,8 @@ bool SanitizerGetThreadName(char *name, 
+@@ -148,7 +148,8 @@ bool SanitizerGetThreadName(char *name, 
  #endif
  }
  
@@ -29,7 +21,7 @@ $NetBSD$
  static uptr g_tls_size;
  
  #ifdef __i386__
-@@ -176,7 +178,8 @@ void InitTlsSize() {
+@@ -176,7 +177,8 @@ void InitTlsSize() {
  }
  #else
  void InitTlsSize() { }
@@ -39,7 +31,7 @@ $NetBSD$
  
  #if (defined(__x86_64__) || defined(__i386__) || defined(__mips__) \
      || defined(__aarch64__) || defined(__powerpc64__) || defined(__s390__) \
-@@ -333,6 +336,10 @@ uptr ThreadSelf() {
+@@ -333,6 +335,10 @@ uptr ThreadSelf() {
  }
  #endif  // SANITIZER_FREEBSD
  
@@ -50,7 +42,7 @@ $NetBSD$
  #if !SANITIZER_GO
  static void GetTls(uptr *addr, uptr *size) {
  #if SANITIZER_LINUX && !SANITIZER_ANDROID
-@@ -362,7 +369,7 @@ static void GetTls(uptr *addr, uptr *siz
+@@ -362,7 +368,7 @@ static void GetTls(uptr *addr, uptr *siz
      *addr = (uptr) dtv[2];
      *size = (*addr == 0) ? 0 : ((uptr) segbase[0] - (uptr) dtv[2]);
    }
@@ -59,7 +51,7 @@ $NetBSD$
    *addr = 0;
    *size = 0;
  #else
-@@ -373,7 +380,7 @@ static void GetTls(uptr *addr, uptr *siz
+@@ -373,7 +379,7 @@ static void GetTls(uptr *addr, uptr *siz
  
  #if !SANITIZER_GO
  uptr GetTlsSize() {
