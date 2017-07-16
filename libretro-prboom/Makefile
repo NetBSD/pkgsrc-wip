@@ -9,6 +9,7 @@ COMMENT=	Libretro core for Doom
 LICENSE=	gnu-gpl-v2
 
 GITHUB_TAG=	e09831c627a84c34d72c3cc892566e1472abb598
+EXTRACT_USING=	bsdtar
 
 USE_TOOLS=	gmake
 
