@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_syscall_generic.inc.orig	2017-06-03 23:53:57.000000000 +0000
+--- lib/sanitizer_common/sanitizer_syscall_generic.inc.orig	2017-07-04 05:53:23.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_syscall_generic.inc
-@@ -11,13 +11,37 @@
+@@ -11,13 +11,39 @@
  //
  //===----------------------------------------------------------------------===//
  
@@ -18,6 +18,7 @@ $NetBSD$
 +# define SYS_sigprocmask SYS___sigprocmask14
 +# define SYS_nanosleep SYS___nanosleep50
 +#endif
++
 +#if SANITIZER_FREEBSD || SANITIZER_MAC || SANITIZER_NETBSD
  # define SYSCALL(name) SYS_ ## name
  #else
@@ -27,18 +28,19 @@ $NetBSD$
 -#if (SANITIZER_FREEBSD || SANITIZER_MAC) && defined(__x86_64__)
 +#if SANITIZER_NETBSD
 +// We use 3 kinds of internal_syscall's for different types of retval in order
-+// to address problems related to the byte order.
++// to address differences in calling conventions (e.g. registers to place the
++// return value in).
 +//   - internal_syscall     for 32-bit length (int, pid_t)
 +//   - internal_syscall64   for 64-bit length (off_t)
 +//   - internal_syscall_ptr for pointer and (s)size_t
-+# define  internal_syscall      syscall                                                                                               
++# define  internal_syscall      syscall
 +# define  internal_syscall64    __syscall
 +# if SANITIZER_WORDSIZE == 64
 +#  define internal_syscall_ptr  __syscall
 +# else
 +#  define internal_syscall_ptr  syscall
 +# endif
-+#elif (SANITIZER_FREEBSD || SANITIZER_MAC) && defined(__x86_64__)
++#elif defined(__x86_64__) && (SANITIZER_FREEBSD || SANITIZER_MAC)
  # define internal_syscall __syscall
  # else
  # define internal_syscall syscall

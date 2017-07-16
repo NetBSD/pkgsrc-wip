@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_unwind_linux_libcdep.cc.orig	2017-06-03 23:53:57.000000000 +0000
+--- lib/sanitizer_common/sanitizer_unwind_linux_libcdep.cc.orig	2017-07-04 05:53:22.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_unwind_linux_libcdep.cc
 @@ -8,11 +8,11 @@
  //===----------------------------------------------------------------------===//

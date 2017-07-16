@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_procmaps.h.orig	2017-06-03 23:53:58.000000000 +0000
+--- lib/sanitizer_common/sanitizer_procmaps.h.orig	2017-07-16 22:40:10.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_procmaps.h
 @@ -20,7 +20,7 @@
  
@@ -18,14 +18,14 @@ $NetBSD$
 -#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX
 +#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
  
- class MemoryMappingLayout {
-  public:
-@@ -58,7 +58,7 @@ class MemoryMappingLayout {
+ // Memory protection masks.
+ static const uptr kProtectionRead = 1;
+@@ -76,7 +76,7 @@ class MemoryMappingLayout {
  
    // FIXME: Hide implementation details for different platforms in
    // platform-specific files.
 -# if SANITIZER_FREEBSD || SANITIZER_LINUX
-+# if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
++#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
    ProcSelfMapsBuff proc_self_maps_;
    const char *current_;
  

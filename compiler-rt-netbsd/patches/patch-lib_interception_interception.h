@@ -1,16 +1,18 @@
 $NetBSD$
 
---- lib/interception/interception.h.orig	2017-06-03 23:53:56.000000000 +0000
+--- lib/interception/interception.h.orig	2017-07-04 05:53:20.000000000 +0000
 +++ lib/interception/interception.h
-@@ -15,7 +15,7 @@
+@@ -15,8 +15,8 @@
  #ifndef INTERCEPTION_H
  #define INTERCEPTION_H
  
 -#if !defined(__linux__) && !defined(__FreeBSD__) && \
+-  !defined(__APPLE__) && !defined(_WIN32)
 +#if !defined(__linux__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && \
-   !defined(__APPLE__) && !defined(_WIN32)
++    !defined(__APPLE__) && !defined(_WIN32)
  # error "Interception doesn't work on this operating system."
  #endif
+ 
 @@ -129,7 +129,7 @@ const interpose_substitution substitutio
      extern "C" ret_type func(__VA_ARGS__);
  # define DECLARE_WRAPPER_WINAPI(ret_type, func, ...) \

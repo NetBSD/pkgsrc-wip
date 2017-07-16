@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_procmaps_common.cc.orig	2017-06-03 23:53:58.000000000 +0000
+--- lib/sanitizer_common/sanitizer_procmaps_common.cc.orig	2017-07-16 22:40:10.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_procmaps_common.cc
 @@ -12,7 +12,7 @@
  
@@ -11,9 +11,9 @@ $NetBSD$
  
  #include "sanitizer_common.h"
  #include "sanitizer_placement_new.h"
-@@ -173,4 +173,4 @@ void GetMemoryProfile(fill_profile_f cb,
+@@ -171,4 +171,4 @@ void GetMemoryProfile(fill_profile_f cb,
  
  } // namespace __sanitizer
  
 -#endif // SANITIZER_FREEBSD || SANITIZER_LINUX
-+#endif // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
++#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD

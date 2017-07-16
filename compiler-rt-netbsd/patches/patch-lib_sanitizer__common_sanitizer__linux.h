@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux.h.orig	2017-06-03 23:53:57.000000000 +0000
+--- lib/sanitizer_common/sanitizer_linux.h.orig	2017-07-16 22:40:10.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux.h
 @@ -14,7 +14,7 @@
  #define SANITIZER_LINUX_H
@@ -11,7 +11,7 @@ $NetBSD$
  #include "sanitizer_common.h"
  #include "sanitizer_internal_defs.h"
  #include "sanitizer_posix.h"
-@@ -130,5 +130,5 @@ ALWAYS_INLINE uptr *get_android_tls_ptr(
+@@ -128,5 +128,5 @@ ALWAYS_INLINE uptr *get_android_tls_ptr(
  
  }  // namespace __sanitizer
  

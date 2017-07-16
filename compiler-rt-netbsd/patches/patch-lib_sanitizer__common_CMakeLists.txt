@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/CMakeLists.txt.orig	2017-06-03 23:53:58.000000000 +0000
+--- lib/sanitizer_common/CMakeLists.txt.orig	2017-07-16 22:40:10.000000000 +0000
 +++ lib/sanitizer_common/CMakeLists.txt
-@@ -22,6 +22,7 @@ set(SANITIZER_SOURCES_NOTERMINATION
+@@ -23,6 +23,7 @@ set(SANITIZER_SOURCES_NOTERMINATION
    sanitizer_procmaps_freebsd.cc
    sanitizer_procmaps_linux.cc
    sanitizer_procmaps_mac.cc
