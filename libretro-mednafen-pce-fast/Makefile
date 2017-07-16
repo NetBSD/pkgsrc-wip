@@ -14,6 +14,7 @@ GITHUB_TAG=	a24a7b76d854cffa8d9896650c52491dc8d4d6d5
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+EXTRACT_USING=	bsdtar
 
 PKGCONFIG_OVERRIDE+=	mednafen/tremor/vorbisidec.pc.in
 
