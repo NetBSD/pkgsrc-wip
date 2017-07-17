@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (elinks-20170609/elinks-current-0.13.tar.bz2) = 368676cac4f14ca0dd3b86680e08963413663b51
-RMD160 (elinks-20170609/elinks-current-0.13.tar.bz2) = c83a1292fb6c3aff3a325edf2f53d2543fcc2c79
-SHA512 (elinks-20170609/elinks-current-0.13.tar.bz2) = dc1b1a74ab2a7bc5a42d6a9258ed3d08a6bfb44cbebf230c21f9d4b494757553077ce6bd99f1b801e9577e16d5c8a1edd81e737095ee8a0790219f3c7e35851a
-Size (elinks-20170609/elinks-current-0.13.tar.bz2) = 2925273 bytes
+SHA1 (elinks-20170717/elinks-current-0.13.tar.bz2) = c48ec6fb2ad00160dd8ce304fbe3297f7cac0a53
+RMD160 (elinks-20170717/elinks-current-0.13.tar.bz2) = d9d5b9be5c18f40185313d29448a834c01eede7d
+SHA512 (elinks-20170717/elinks-current-0.13.tar.bz2) = 449dd796d524ee204ca6b61fedd8238d3719797482416cc60ceeecc4fe38a0f44ef9546370a3ac93a281fb4e17a526fb9c33a9b310b6514b81da20130b9ad0f9
+Size (elinks-20170717/elinks-current-0.13.tar.bz2) = 2925067 bytes
 SHA1 (patch-aa) = 55e32ba2a17aaf641e3ff3aeb1c63227ff6b24a4
 SHA1 (patch-ad) = 2c8cf70a82c8f77ecdc9540189e2385720bddd53
 SHA1 (patch-ae) = 851921c0d809eca87e41305292c68eb82338cbb4
