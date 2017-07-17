@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-glsl-shaders-20170624
+DISTNAME=	libretro-glsl-shaders-20170711
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,7 +8,7 @@ MAINTAINER=	nia.alarie@gmail.com
 COMMENT=	Libretro GLSL shaders
 
 GITHUB_PROJECT=	glsl-shaders
-GITHUB_TAG=	7816a476c2189f9c316e031e3b67965fae6aea93
+GITHUB_TAG=	5c60fa004a3edb62dd3672c52d8acf5ac523c36a
 
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none

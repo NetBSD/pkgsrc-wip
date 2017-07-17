@@ -12,6 +12,7 @@ share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0-level2/aa-shader-4.0-
 share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0.glsl
 share/libretro/shaders/anti-aliasing/shaders/advanced-aa.glsl
 share/libretro/shaders/anti-aliasing/shaders/fxaa.glsl
+share/libretro/shaders/blurs/bilateral.glsl
 share/libretro/shaders/blurs/blur-gauss-h.glsl
 share/libretro/shaders/blurs/blur-gauss-v.glsl
 share/libretro/shaders/blurs/blur5fast-horizontal.glsl
@@ -442,7 +443,9 @@ share/libretro/shaders/misc/image-adjustment.glsl
 share/libretro/shaders/misc/interlacing.glsl
 share/libretro/shaders/misc/nes-color-decoder.glsl
 share/libretro/shaders/misc/ntsc-colors.glsl
+share/libretro/shaders/misc/scanline-fract.glsl
 share/libretro/shaders/misc/scanline.glsl
+share/libretro/shaders/misc/scanlines-sine-abs.glsl
 share/libretro/shaders/misc/side-by-side-simple.glsl
 share/libretro/shaders/motionblur/braid-rewind.glslp
 share/libretro/shaders/motionblur/motionblur-simple.glslp
@@ -567,8 +570,14 @@ share/libretro/shaders/scalenx/shaders/scale2xSFX.glsl
 share/libretro/shaders/scalenx/shaders/scale2xplus.glsl
 share/libretro/shaders/scalenx/shaders/scale3x.glsl
 share/libretro/shaders/scalenx/shaders/scale3xSFX.glsl
+share/libretro/shaders/sharpen/adaptive-sharpen-multipass.glslp
 share/libretro/shaders/sharpen/adaptive-sharpen.glslp
+share/libretro/shaders/sharpen/shaders/adaptive-sharpen-pass1.glsl
+share/libretro/shaders/sharpen/shaders/adaptive-sharpen-pass2.glsl
 share/libretro/shaders/sharpen/shaders/adaptive-sharpen.glsl
+share/libretro/shaders/sharpen/shaders/diff.glsl
+share/libretro/shaders/sharpen/shaders/super-res-ex.glsl
+share/libretro/shaders/sharpen/super-xbr-super-res.glslp
 share/libretro/shaders/slang-conversion-template.glsl
 share/libretro/shaders/stock.glsl
 share/libretro/shaders/windowed/jinc2-sharp.glslp
@@ -605,8 +614,10 @@ share/libretro/shaders/xbr/super-4xbr-3d-6p-smoother.glslp
 share/libretro/shaders/xbr/super-xbr-2p.glslp
 share/libretro/shaders/xbr/super-xbr-3p-smoother.glslp
 share/libretro/shaders/xbr/super-xbr-6p.glslp
+share/libretro/shaders/xbr/super-xbr-deposterize.glslp
 share/libretro/shaders/xbr/xbr-hybrid.glslp
 share/libretro/shaders/xbr/xbr-lv2.glslp
+share/libretro/shaders/xbr/xbr-lv3-multipass.glslp
 share/libretro/shaders/xbr/xbr-lv3.glslp
 share/libretro/shaders/xbrz/4xbrz-linear.glslp
 share/libretro/shaders/xbrz/5xbrz-linear.glslp
