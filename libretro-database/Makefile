@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	libretro-database-20170607
+DISTNAME=	libretro-database-20170718
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
 COMMENT=	ROM scanning data and cheats provided by the libretro project
 
-GITHUB_TAG=	9b0cfc709acdfb21c41a8eb4bce5f43a385ed053
+GITHUB_TAG=	d6444d3fbfbd7b4f76153415e54e81116ddf680d
 
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
