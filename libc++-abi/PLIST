@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/libc++abi.1.0.dylib
+lib/libc++abi.1.dylib
+lib/libc++abi.a
+lib/libc++abi.dylib

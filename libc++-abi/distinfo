@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/03/17 22:38:18 adam Exp $
+
+SHA1 (libcxxabi-4.0.0.src.tar.xz) = abfb52b42c699a0ae55d8a1a736cadd5ef981334
+RMD160 (libcxxabi-4.0.0.src.tar.xz) = 1008ed2aa387cb09779ab1038b8f7c3f5d40e33e
+SHA512 (libcxxabi-4.0.0.src.tar.xz) = b69933a0bde00321323e98962cd54b78a48bc5e93448d7a5124cb5ef844497ba7648cd92fcbe476186c60c7742e3121841f150c142c2a14c1bf2aa26a8b93d64
+Size (libcxxabi-4.0.0.src.tar.xz) = 515560 bytes
