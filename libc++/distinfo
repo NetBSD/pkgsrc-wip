@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/03/17 22:38:18 adam Exp $
+
+SHA1 (libcxx-4.0.0.src.tar.xz) = d05a357243f71e508726975f1baa7d8c525bc156
+RMD160 (libcxx-4.0.0.src.tar.xz) = b1a870353076c9af77c16f182d5d6a987a0e3030
+SHA512 (libcxx-4.0.0.src.tar.xz) = 6dad794c00919955e14710def169cdcde8a1743431479e993c4a6a3c87c2fd9f5dbd6e17542e524981eed0783dce70384c356b74ef3c6d70598c6ff03454b1dd
+Size (libcxx-4.0.0.src.tar.xz) = 1450376 bytes
