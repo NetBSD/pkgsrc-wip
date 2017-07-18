@@ -457,7 +457,6 @@ include/llvm/DebugInfo/CodeView/TypeRecord.h
 include/llvm/DebugInfo/CodeView/TypeRecordBuilder.h
 include/llvm/DebugInfo/CodeView/TypeRecordMapping.h
 include/llvm/DebugInfo/CodeView/TypeSerializer.h
-include/llvm/DebugInfo/CodeView/TypeServerHandler.h
 include/llvm/DebugInfo/CodeView/TypeStreamMerger.h
 include/llvm/DebugInfo/CodeView/TypeSymbolEmitter.h
 include/llvm/DebugInfo/CodeView/TypeTableBuilder.h
@@ -540,7 +539,6 @@ include/llvm/DebugInfo/PDB/Native/PDBFile.h
 include/llvm/DebugInfo/PDB/Native/PDBFileBuilder.h
 include/llvm/DebugInfo/PDB/Native/PDBStringTable.h
 include/llvm/DebugInfo/PDB/Native/PDBStringTableBuilder.h
-include/llvm/DebugInfo/PDB/Native/PDBTypeServerHandler.h
 include/llvm/DebugInfo/PDB/Native/PublicsStream.h
 include/llvm/DebugInfo/PDB/Native/PublicsStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/RawConstants.h
