@@ -28,9 +28,6 @@ REPLACE_PYTHON=	src/gitversion/*.py
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
-CFLAGS+=	-g -ggdb3 -fno-omit-frame-pointer
-INSTALL_UNSTRIPPED= yes
-
 .include "../../security/crypto++/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
