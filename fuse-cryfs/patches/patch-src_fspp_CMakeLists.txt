@@ -1,0 +1,20 @@
+$NetBSD$
+
+Recognise netbsd librefuse
+
+--- src/fspp/CMakeLists.txt.orig	2017-02-11 12:34:50.000000000 +0000
++++ src/fspp/CMakeLists.txt
+@@ -18,9 +18,11 @@ target_activate_cpp14(${PROJECT_NAME})
+ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+   set(CMAKE_FIND_FRAMEWORK LAST)
+   set(FUSE_LIB_NAME "osxfuse")
+-else(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
++elseif(${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++  set(FUSE_LIB_NAME "refuse")
++else()
+   set(FUSE_LIB_NAME "fuse")
+-endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
++endif()
+ 
+ find_library_with_path(FUSE ${FUSE_LIB_NAME} FUSE_LIB_PATH)
+ target_link_libraries(${PROJECT_NAME} PUBLIC ${FUSE})
