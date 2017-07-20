@@ -1,7 +1,0 @@
-$NetBSD$
-
---- contrib/ivshmem-server/Makefile.objs.orig	2017-04-25 12:42:53.000000000 +0000
-+++ contrib/ivshmem-server/Makefile.objs
-@@ -1 +1 @@
--ivshmem-server-obj-y = ivshmem-server.o main.o
-+ivshmem-server-obj-$(CONFIG_IVSHMEM) = ivshmem-server.o main.o
