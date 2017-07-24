@@ -157,6 +157,7 @@ include/clang/Analysis/ProgramPoint.h
 include/clang/Analysis/Support/BumpVector.h
 include/clang/Basic/ABI.h
 include/clang/Basic/AddressSpaces.h
+include/clang/Basic/AlignedAllocation.h
 include/clang/Basic/AllDiagnostics.h
 include/clang/Basic/AttrHasAttributeImpl.inc
 include/clang/Basic/AttrKinds.h
@@ -476,6 +477,8 @@ include/clang/StaticAnalyzer/Frontend/AnalysisConsumer.h
 include/clang/StaticAnalyzer/Frontend/CheckerRegistration.h
 include/clang/StaticAnalyzer/Frontend/FrontendActions.h
 include/clang/StaticAnalyzer/Frontend/ModelConsumer.h
+include/clang/Tooling/ASTDiff/ASTDiff.h
+include/clang/Tooling/ASTDiff/ASTDiffInternal.h
 include/clang/Tooling/ArgumentsAdjusters.h
 include/clang/Tooling/CommonOptionsParser.h
 include/clang/Tooling/CompilationDatabase.h
@@ -599,7 +602,7 @@ lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang.${SOEXT}
 ${PLIST.notdylib}lib/libclang.${SOEXT}.${LLVM_MAJOR}
-lib/libclang.${SOEXT}.5
+lib/libclang.${SOEXT}.6
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a
@@ -619,6 +622,7 @@ lib/libclangRewriteFrontend.a
 lib/libclangSema.a
 lib/libclangSerialization.a
 lib/libclangTooling.a
+lib/libclangToolingASTDiff.a
 lib/libclangToolingCore.a
 lib/libclangToolingRefactor.a
 share/clang/bash-autocomplete.sh
