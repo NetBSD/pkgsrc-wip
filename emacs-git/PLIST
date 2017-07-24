@@ -1513,6 +1513,8 @@ share/emacs/${PKGVERSION}/lisp/dirtrack.el.gz
 share/emacs/${PKGVERSION}/lisp/dirtrack.elc
 share/emacs/${PKGVERSION}/lisp/disp-table.el.gz
 share/emacs/${PKGVERSION}/lisp/disp-table.elc
+share/emacs/${PKGVERSION}/lisp/display-line-numbers.el.gz
+share/emacs/${PKGVERSION}/lisp/display-line-numbers.elc
 share/emacs/${PKGVERSION}/lisp/dnd.el.gz
 share/emacs/${PKGVERSION}/lisp/dnd.elc
 share/emacs/${PKGVERSION}/lisp/doc-view.el.gz
