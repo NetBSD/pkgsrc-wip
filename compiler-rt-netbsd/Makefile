@@ -1,11 +1,11 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	compiler-rt-5.0.0
+PKGNAME=	compiler-rt-6.0.0
 CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	compiler-rt
 SVN_REPO.compiler-rt=	http://llvm.org/svn/llvm-project/compiler-rt/trunk
-SVN_REVISION.compiler-rt=	308620
+SVN_REVISION.compiler-rt=	308868
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiler-rt.llvm.org/
