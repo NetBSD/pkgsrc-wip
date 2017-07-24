@@ -18,6 +18,7 @@ bin/llvm-cxxdump
 bin/llvm-cxxfilt
 bin/llvm-diff
 bin/llvm-dis
+bin/llvm-dlltool
 bin/llvm-dsymutil
 bin/llvm-dwarfdump
 bin/llvm-dwp
@@ -29,12 +30,14 @@ bin/llvm-lto2
 bin/llvm-mc
 bin/llvm-mcmarkup
 bin/llvm-modextract
+bin/llvm-mt
 bin/llvm-nm
 bin/llvm-objdump
 bin/llvm-opt-report
 bin/llvm-pdbutil
 bin/llvm-profdata
 bin/llvm-ranlib
+bin/llvm-readelf
 bin/llvm-readobj
 bin/llvm-rtdyld
 bin/llvm-size
@@ -378,6 +381,7 @@ include/llvm/CodeGen/RegisterPressure.h
 include/llvm/CodeGen/RegisterScavenging.h
 include/llvm/CodeGen/RegisterUsageInfo.h
 include/llvm/CodeGen/ResourcePriorityQueue.h
+include/llvm/CodeGen/RuntimeLibcalls.def
 include/llvm/CodeGen/RuntimeLibcalls.h
 include/llvm/CodeGen/ScheduleDAG.h
 include/llvm/CodeGen/ScheduleDAGInstrs.h
@@ -434,6 +438,7 @@ include/llvm/DebugInfo/CodeView/DebugUnknownSubsection.h
 include/llvm/DebugInfo/CodeView/EnumTables.h
 include/llvm/DebugInfo/CodeView/Formatters.h
 include/llvm/DebugInfo/CodeView/FunctionId.h
+include/llvm/DebugInfo/CodeView/GUID.h
 include/llvm/DebugInfo/CodeView/LazyRandomTypeCollection.h
 include/llvm/DebugInfo/CodeView/Line.h
 include/llvm/DebugInfo/CodeView/RecordSerialization.h
@@ -483,6 +488,7 @@ include/llvm/DebugInfo/DWARF/DWARFDebugRangeList.h
 include/llvm/DebugInfo/DWARF/DWARFDie.h
 include/llvm/DebugInfo/DWARF/DWARFFormValue.h
 include/llvm/DebugInfo/DWARF/DWARFGdbIndex.h
+include/llvm/DebugInfo/DWARF/DWARFObject.h
 include/llvm/DebugInfo/DWARF/DWARFRelocMap.h
 include/llvm/DebugInfo/DWARF/DWARFSection.h
 include/llvm/DebugInfo/DWARF/DWARFTypeUnit.h
@@ -998,6 +1004,7 @@ include/llvm/Support/Valgrind.h
 include/llvm/Support/Watchdog.h
 include/llvm/Support/Win64EH.h
 include/llvm/Support/WindowsError.h
+include/llvm/Support/WindowsManifestMerger.h
 include/llvm/Support/YAMLParser.h
 include/llvm/Support/YAMLTraits.h
 include/llvm/Support/circular_raw_ostream.h
@@ -1039,6 +1046,7 @@ include/llvm/Target/TargetSelectionDAG.td
 include/llvm/Target/TargetSubtargetInfo.h
 include/llvm/Testing/Support/Error.h
 include/llvm/Testing/Support/SupportHelpers.h
+include/llvm/ToolDrivers/llvm-dlltool/DlltoolDriver.h
 include/llvm/ToolDrivers/llvm-lib/LibDriver.h
 include/llvm/Transforms/Coroutines.h
 include/llvm/Transforms/GCOVProfiler.h
@@ -1198,8 +1206,8 @@ lib/cmake/llvm/LLVMInstallSymlink.cmake
 lib/cmake/llvm/LLVMProcessSources.cmake
 lib/cmake/llvm/TableGen.cmake
 lib/cmake/llvm/VersionFromVCS.cmake
-lib/libLLVM-5.0.0svn.${SOEXT}
-lib/libLLVM-5.0svn.${SOEXT}
+lib/libLLVM-6.0.0svn.${SOEXT}
+lib/libLLVM-6.0svn.${SOEXT}
 lib/libLLVM.${SOEXT}
 ${PLIST.AArch64}lib/libLLVMAArch64AsmParser.a
 ${PLIST.AArch64}lib/libLLVMAArch64AsmPrinter.a
@@ -1241,6 +1249,7 @@ lib/libLLVMDebugInfoDWARF.a
 lib/libLLVMDebugInfoMSF.a
 lib/libLLVMDebugInfoPDB.a
 lib/libLLVMDemangle.a
+lib/libLLVMDlltoolDriver.a
 lib/libLLVMExecutionEngine.a
 lib/libLLVMGlobalISel.a
 ${PLIST.Hexagon}lib/libLLVMHexagonAsmParser.a
@@ -1324,8 +1333,8 @@ ${PLIST.XCore}lib/libLLVMXCoreInfo.a
 lib/libLLVMXRay.a
 lib/libLLVMipo.a
 lib/libLTO.${SOEXT}
-lib/libLTO.${SOEXT}.5
-lib/libLTO.${SOEXT}.5.0.0svn
+lib/libLTO.${SOEXT}.6
+lib/libLTO.${SOEXT}.6.0.0svn
 share/opt-viewer/opt-diff.py
 share/opt-viewer/opt-stats.py
 share/opt-viewer/opt-viewer.py
