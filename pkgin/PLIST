@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/02 14:33:35 imilh Exp $
-bin/pkgin
-man/man1/pkgin.1
-share/examples/pkgin/preferred.conf.example
-share/examples/pkgin/repositories.conf.example
