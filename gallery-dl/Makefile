@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gallery_dl-0.9.0
+DISTNAME=	gallery_dl-0.9.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gallery-dl/}
