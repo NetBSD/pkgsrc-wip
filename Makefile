@@ -2859,7 +2859,6 @@ SUBDIR+=	py-bokeh
 SUBDIR+=	py-bolos
 SUBDIR+=	py-booktype
 SUBDIR+=	py-botocore
-SUBDIR+=	py-bottleneck
 SUBDIR+=	py-brian
 SUBDIR+=	py-bruce
 SUBDIR+=	py-bsddb
