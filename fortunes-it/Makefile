@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	fortune-it-1.99
+PKGNAME=	${DISTNAME:S/fortune/fortunes/}
 CATEGORIES=	games
 MASTER_SITES=	http://www.fortune-it.net/download/ \
 		ftp://sunsite.unc.edu/pub/Linux/games/amusements/fortune/
@@ -9,6 +10,7 @@ MASTER_SITES=	http://www.fortune-it.net/download/ \
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://www.fortune-it.net/
 COMMENT=	Italian fortunes
+LICENSE=	public-domain
 
 BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
