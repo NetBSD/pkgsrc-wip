@@ -2680,7 +2680,6 @@ SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_summary-utils
-SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
 SUBDIR+=	plasma-desktop
 SUBDIR+=	plasma-integration
