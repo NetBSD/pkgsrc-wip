@@ -31,7 +31,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
 # For wip special, following gives symbol names when back trace is shown.
 CFLAGS+=		-g
-#CONFIGURE_ARGS+=	MAKEINFO=${LOCALBASE}/bin/makeinfo
 
 USE_GAMESGROUP=		yes
 
@@ -55,10 +54,6 @@ PRINT_PLIST_AWK+=       { gsub(/${PKGVERSION_NOREV}/, "$${PKGVERSION}"); \
 			gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); \
 			print; next; }
 
-# ./configure.lineno: 3555: Syntax error: Bad substitution
-# And then add another portablity problem ?
-#PKGSRC_MAKE_ENV+=       SH=/bin/ksh
-
 post-extract:
 	# set auto-load for send-pr library
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
@@ -69,5 +64,4 @@ pre-configure:
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-#.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
