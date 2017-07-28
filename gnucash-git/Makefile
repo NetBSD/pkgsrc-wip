@@ -57,7 +57,7 @@ CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONF
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -fiv
+	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "options.mk"
 
@@ -73,7 +73,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 .include "../../lang/guile20/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-#.include "../../misc/goffice0.8/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.6
 .include "../../security/gnome-keyring/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsecret+=	libsecret>=0.18
