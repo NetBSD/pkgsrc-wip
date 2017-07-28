@@ -7,45 +7,43 @@ CATEGORIES=	editors
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+HOMEPAGE=	https://www.gnu.org/software/emacs/
 COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
-
-USE_TOOLS+=	autoconf gm4 gmake gsed gzip makeinfo
-# for example, Mac OS X 10.6.1 has 2.61 which fails
-AUTOCONF_REQD=	2.65
-# NetBSD has 4.8
-TEXINFO_REQD=	4.13
 
 GIT_REPOSITORIES=	master
 GIT_MODULE.master=	emacs
 GIT_REPO.master=	git://git.sv.gnu.org/emacs.git
 _GIT_FLAGS?=		--depth 1
 
-GNU_CONFIGURE=		yes
-INFO_FILES=		yes
 WRKSRC=		${WRKDIR}/emacs
 
-CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
+GNU_CONFIGURE=	yes
+INFO_FILES=	yes
+USE_TOOLS+=	autoconf automake gm4 gmake gsed gzip makeinfo
+# for example, Mac OS X 10.6.1 has 2.61 which fails
+AUTOCONF_REQD=	2.65
+# NetBSD has 4.8
+TEXINFO_REQD=	4.13
+
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
 # For wip special, following gives symbol names when back trace is shown.
 CFLAGS+=		-g
-CONFIGURE_ARGS+=	MAKEINFO=${LOCALBASE}/bin/makeinfo
+#CONFIGURE_ARGS+=	MAKEINFO=${LOCALBASE}/bin/makeinfo
+
+USE_GAMESGROUP=		yes
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
-
 PLIST_SRC+=		PLIST
-PLIST_SUBST+=           DISTNAME=${DISTNAME}
-PRINT_PLIST_AWK+=       { gsub(/${PKGVERSION_NOREV}/, "$${PKGVERSION}"); \
-			gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); \
-			print; next; }
 
-MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
-CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-#SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM:Q}/update-game-score ${SETGID_GAMES_PERMS}
+MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 
 .include "options.mk"
 
@@ -53,10 +51,13 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} $
 CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION_NOREV}
 
-FILESDIR=	${.CURDIR}/files
+PRINT_PLIST_AWK+=       { gsub(/${PKGVERSION_NOREV}/, "$${PKGVERSION}"); \
+			gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); \
+			print; next; }
+
 # ./configure.lineno: 3555: Syntax error: Bad substitution
 # And then add another portablity problem ?
-PKGSRC_MAKE_ENV+=       SH=/bin/ksh
+#PKGSRC_MAKE_ENV+=       SH=/bin/ksh
 
 post-extract:
 	# set auto-load for send-pr library
@@ -68,6 +69,5 @@ pre-configure:
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
-.include "../../mk/oss.buildlink3.mk"
+#.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
