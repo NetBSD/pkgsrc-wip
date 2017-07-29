@@ -3,7 +3,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype libxml2 udev
+PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype udev
 PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
@@ -30,7 +30,7 @@ PKG_SUGGESTED_OPTIONS+=		rpi
 PKG_SUGGESTED_OPTIONS+=		opengl
 .endif
 
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
+PKG_SUGGESTED_OPTIONS.Linux+=	udev
 
 .include "../../mk/bsd.options.mk"
 
@@ -85,28 +85,11 @@ CONFIGURE_ARGS+=	--enable-mali_fbdev
 CONFIGURE_ARGS+=	--disable-udev
 .endif
 
-#
-# Legacy shader support
-#
-.if !empty(PKG_OPTIONS:Mlibxml2)
-CONFIGURE_ARGS+=	--enable-libxml2
-.include "../../textproc/libxml2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libxml2
-.endif
-
 .if !empty(PKG_OPTIONS:Msdl2)
 CONFIGURE_ARGS+=	--enable-sdl2
 .include "../../devel/SDL2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-sdl2
-.endif
-
-.if !empty(PKG_OPTIONS:Malsa)
-CONFIGURE_ARGS+=	--enable-alsa
-.include "../../audio/alsa-lib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
