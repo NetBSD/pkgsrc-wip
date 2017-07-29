@@ -4,6 +4,11 @@ DISTNAME=		gnucash-2.6.99
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
+# take copy mirrored on ftp.NetBSD.org for devel/googletest
+# for better DISTNAME
+# depending on googletest package is not sufficient since not all
+# files that are used are installed
+DISTFILES=		googletest-1.8.0.tar.gz
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
@@ -29,7 +34,7 @@ GIT_MODULE.github=	gnucash
 GIT_REPO.github=	https://github.com/Gnucash/gnucash.git
 WRKSRC=			${WRKDIR}/gnucash
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool makeinfo msgfmt perl:run pkg-config
@@ -40,7 +45,8 @@ INFO_FILES=		YES
 CONFIGURE_ARGS+=	--with-html-engine=webkit
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
-#CONFIGURE_ARGS+=	GUILE=${PREFIX}/${GUILE20_SUBDIR}/bin/guile
+CONFIGURE_ARGS+=	GTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
+CONFIGURE_ARGS+=	GMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 
 REPLACE_PERL+=		src/quotes/gnc-fq-dump
 REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
@@ -64,12 +70,12 @@ pre-configure:
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-#.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-#.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../lang/guile20/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

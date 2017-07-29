@@ -1,8 +1,10 @@
 $NetBSD: distinfo,v 1.82 2017/07/03 11:49:37 wiz Exp $
 
-SHA1 (gnucash-2.6.17.tar.bz2) = 5e21d20ee96cc27a15c3213c623b2e6bb4b3a953
-RMD160 (gnucash-2.6.17.tar.bz2) = c847025dc7f99248e015ad633e2fdf6bf6e11b28
-SHA512 (gnucash-2.6.17.tar.bz2) = 086f31644e29eaf4360db48124e3760d28ea186ef638bcdb6091db1acecb9641932777ac2969331c93d9aec0cd428a04f555e96b1b4e643e07905b86cb6209ca
-Size (gnucash-2.6.17.tar.bz2) = 13508462 bytes
-SHA1 (patch-configure.ac) = 85e1639e432a92613abd1ab394aaa17ce5797474
+SHA1 (googletest-1.8.0.tar.gz) = e7e646a6204638fe8e87e165292b8dd9cd4c36ed
+RMD160 (googletest-1.8.0.tar.gz) = b0a9e48874df3291a261ed85a0c0a4d677b01dc1
+SHA512 (googletest-1.8.0.tar.gz) = 1dbece324473e53a83a60601b02c92c089f5d314761351974e097b2cf4d24af4296f9eb8653b6b03b1e363d9c5f793897acae1f0c7ac40149216035c4d395d9d
+Size (googletest-1.8.0.tar.gz) = 1281617 bytes
+SHA1 (patch-configure.ac) = 382961e9e218601cb1667a5d4c089f56f0b69a8d
 SHA1 (patch-src_bin_gnucash-bin.c) = 18c8909af46cef77adddabd015bf57e4b0fd3f9b
+SHA1 (patch-src_register_register-gnome_gnucash-cursor.h) = 8c377dac6739e3d864af5d5790b9c693d8ca3f2b
+SHA1 (patch-src_register_register-gnome_table-gnome.c) = 074a5b3af739ce5349692dc81fba469b6efeff50
