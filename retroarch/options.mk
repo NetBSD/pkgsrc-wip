@@ -3,7 +3,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype udev
+PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype alsa udev
 PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
@@ -30,7 +30,7 @@ PKG_SUGGESTED_OPTIONS+=		rpi
 PKG_SUGGESTED_OPTIONS+=		opengl
 .endif
 
-PKG_SUGGESTED_OPTIONS.Linux+=	udev
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
 
 .include "../../mk/bsd.options.mk"
 
@@ -104,4 +104,11 @@ CONFIGURE_ARGS+=	--enable-freetype
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-freetype
+.endif
+
+.if !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--enable-alsa
+.include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-alsa
 .endif
