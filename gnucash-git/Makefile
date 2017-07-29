@@ -42,7 +42,6 @@ USE_TOOLS+=		autoconf automake autoreconf
 GNU_CONFIGURE=		yes
 INFO_FILES=		YES
 
-CONFIGURE_ARGS+=	--with-html-engine=webkit
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
 CONFIGURE_ARGS+=	GTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
