@@ -66,7 +66,7 @@ $NetBSD$
    static const size_t PageSize = Process::getPageSize();
    if (M.Address == nullptr || M.Size == 0)
      return std::error_code();
-@@ -166,128 +190,24 @@ Memory::protectMappedMemory(const Memory
+@@ -166,128 +190,29 @@ Memory::protectMappedMemory(const Memory
    return std::error_code();
  }
  
@@ -145,8 +145,11 @@ $NetBSD$
 -  if (0 != ::munmap(M.Address, M.Size))
 -    return MakeErrMsg(ErrMsg, "Can't release RWX Memory");
 -  return false;
--}
--
++Memory::AllocateJIT(size_t NumBytes, const MemoryBlock* NearBlock,
++                    std::error_code &EC) {
++  return allocateMappedMemory(NumBytes, NearBlock, MF_READ | MF_WRITE, EC, MF_EXEC);
+ }
+ 
 -bool Memory::setWritable (MemoryBlock &M, std::string *ErrMsg) {
 -#if defined(__APPLE__) && (defined(__arm__) || defined(__arm64__))
 -  if (M.Address == 0 || M.Size == 0) return false;
@@ -157,9 +160,9 @@ $NetBSD$
 -#else
 -  return true;
 -#endif
-+Memory::AllocateJIT(size_t NumBytes, const MemoryBlock* NearBlock,
-+                    std::error_code &EC) {
-+  return allocateMappedMemory(NumBytes, NearBlock, MF_READ | MF_WRITE, EC, MF_EXEC);
++std::error_code
++Memory::setReadable (const MemoryBlock &M) {
++  return protectMappedMemory(M, MF_READ);
  }
  
 -bool Memory::setExecutable (MemoryBlock &M, std::string *ErrMsg) {

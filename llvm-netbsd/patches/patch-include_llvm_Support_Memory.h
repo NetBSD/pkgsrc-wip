@@ -53,7 +53,7 @@ $NetBSD$
      /// \r error_success if the function was successful, or an error_code
      /// describing the failure if an error occurred.
      ///
-@@ -109,51 +119,38 @@ namespace sys {
+@@ -109,51 +119,42 @@ namespace sys {
      static std::error_code protectMappedMemory(const MemoryBlock &Block,
                                                 unsigned Flags);
  
@@ -97,7 +97,11 @@ $NetBSD$
      /// platforms.
      static void InvalidateInstructionCache(const void *Addr, size_t Len);
  
-+    /// setExecutable - Before the JIT can write a block of code, it has to be
++    /// setReadable - Before the JIT can write a block of code, it has to be
++    /// given read and write privilege.
++    static std::error_code setReadable(const MemoryBlock &M);
++
++    /// setWritable - Before the JIT can write a block of code, it has to be
 +    /// given read and write privilege.
 +    static std::error_code setWritable(const MemoryBlock &M);
 +
