@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/3.16/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Xterm like terminal program for GNOME 2
 LICENSE=		gnu-gpl-v3
 

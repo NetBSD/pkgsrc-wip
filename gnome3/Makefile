@@ -5,7 +5,7 @@ CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Meta-package for the GNOME desktop
 
 META_PACKAGE=	yes

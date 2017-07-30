@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/3.16/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/projects/epiphany/
+HOMEPAGE=	https://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
 LICENSE=	gnu-gpl-v2
 

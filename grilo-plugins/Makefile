@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo-plugins/0.3/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Plugins for grilo media browser
 LICENSE=	gnu-lgpl-v2
 

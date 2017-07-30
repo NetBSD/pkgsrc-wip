@@ -10,7 +10,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} #gnome-splash-2.16.0.png
 
 LICENSE=		gnu-gpl-v2
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		GNOME3 session management utilities
 
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto

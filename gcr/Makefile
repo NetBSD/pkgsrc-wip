@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcr/3.18/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Library for crypto UI and related tasks
 LICENSE=		gnu-gpl-v2
 

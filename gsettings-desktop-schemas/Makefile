@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/3.${GNOME3_
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Collection of GSettings schemas for the GNOME desktop
 LICENSE=	gnu-lgpl-v2.1
 

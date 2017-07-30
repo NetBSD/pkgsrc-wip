@@ -6,7 +6,7 @@ CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Gnome Display Manager
 
 DEPENDS+=	zenity>=2.16.0:../../wip/zenity

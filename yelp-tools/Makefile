@@ -5,7 +5,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Set of command-line tools to build and check your documentation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

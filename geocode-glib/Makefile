@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/geocode-glib/3.18/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Geocoding library
 LICENSE=		gnu-gpl-v2
 

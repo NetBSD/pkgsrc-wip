@@ -5,7 +5,7 @@
 DISTNAME=	vte-0.42.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 LICENSE=	gnu-lgpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/vte/distinfo

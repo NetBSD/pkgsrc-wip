@@ -8,7 +8,7 @@
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Terminal widget with improved accessibility and I18N support
 LICENSE=	gnu-lgpl-v2
 

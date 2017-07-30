@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cheese/3.18/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/projects/cheese/
+HOMEPAGE=	https://www.gnome.org/projects/cheese/
 COMMENT=	Use your webcam to take photos and videos
 LICENSE=	gnu-gpl-v2
 

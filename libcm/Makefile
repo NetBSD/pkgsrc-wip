@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/libcm/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Metacity compositor library
 #LICENSE=	gnu-gpl-v2
 
