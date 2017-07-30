@@ -33,7 +33,6 @@ PLIST.x11=	yes
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
@@ -49,4 +48,7 @@ PLIST.x11=	yes
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"

@@ -14,8 +14,10 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-BUILDLINK_API_DEPENDS.bullet+=	bullet>=2.83
-BUILDLINK_API_DEPENDS.osg+=	osg>=3.3.4
+DEPENDS+=	bullet>=2.83:../../wip/bullet
+DEPENDS+=	osg>=3.3.4:../../wip/osg
+
+CMAKE_ARGS+=	-DDESIRED_QT_VERSION=5
 
 .include "../../archivers/unshield/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
@@ -25,8 +27,7 @@ BUILDLINK_API_DEPENDS.osg+=	osg>=3.3.4
 .include "../../wip/bullet/buildlink3.mk" # XXX requires version in wip
 .include "../../wip/mygui-git/buildlink3.mk" # XXX
 .include "../../wip/osg/buildlink3.mk" # XXX requires version in wip
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
