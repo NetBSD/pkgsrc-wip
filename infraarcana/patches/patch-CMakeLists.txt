@@ -1,0 +1,22 @@
+$NetBSD$
+
+Use the pkgsrc installation prefix instead of the local directory.
+
+--- CMakeLists.txt.orig	2017-07-29 19:46:52.843171112 +0000
++++ CMakeLists.txt
+@@ -484,10 +484,10 @@ endif()
+ # ------------------------------------------------------------------------------
+ # Packaging
+ # ------------------------------------------------------------------------------
+-set(CMAKE_INSTALL_PREFIX target)
++#set(CMAKE_INSTALL_PREFIX target)
+ 
+-install(TARGETS ia       DESTINATION ia)
+-install(TARGETS ia-debug DESTINATION ia-debug)
++install(TARGETS ia       DESTINATION share/InfraArcana/ia)
++install(TARGETS ia-debug DESTINATION share/InfraArcana/ia-debug)
+ 
+-install(DIRECTORY res DESTINATION ia)
+-install(DIRECTORY res DESTINATION ia-debug)
++install(DIRECTORY res DESTINATION share/InfraArcana/ia)
++install(DIRECTORY res DESTINATION share/InfraArcana/ia-debug)

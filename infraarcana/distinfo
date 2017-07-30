@@ -1,16 +1,13 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-SHA1 (infraarcana/ia-18.2.tar.gz) = 73e21a3c41b130d937b123268678765612b7c7da
-RMD160 (infraarcana/ia-18.2.tar.gz) = 9b7d499506246fe1246e562c4cf81ee64f3630d4
-SHA512 (infraarcana/ia-18.2.tar.gz) = 4a6d09c0836ad0337e0e92e1f554551c2f93c65767779072abce9d9482b5aabc20da14eeb66bfda80d18254e1b42b71c93c4c1da8b5e449ce526db07be73885d
-Size (infraarcana/ia-18.2.tar.gz) = 33576360 bytes
-SHA1 (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = bc96a273a940cd218b9f7ea0819eda2ef45cc920
-RMD160 (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = 51ba0809f8fb915164039eb396a68d34534f9515
-SHA512 (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = 9ad70df01991302fa2b33739c1971072447daf65db1fc5d550208be7f31037bc2558a4f83b2eb5f769a127743949b177b9ac8c979d33c4da80cea3a5edacbf97
-Size (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = 13629 bytes
-SHA1 (patch-Makefile) = fee6998b86b63e1e67ee3d55561865d2f4565013
-SHA1 (patch-rl__utils_src_rl__utils.cpp) = 2b5a965e4f4f818f3bc94c52302b9d5f3d022d31
-SHA1 (patch-src_config.cpp) = ac2ee03728e5dc0e7cd851bd5f9ef0392ae27f22
-SHA1 (patch-src_input.cpp) = a84f3c470d08c9fa84de766fd951286a93dc1855
-SHA1 (patch-src_room.cpp) = de4bd35d31cd9c3359a061307511ef5c0e8bf3e0
-SHA1 (patch-src_save__handling.cpp) = 634c7a6db5870861e0d8e1a70a341776c16464a6
+SHA1 (infraarcana/ia-19.0.tar.gz) = 65d1f1b223715cf95d35fe917479dab1a76b623c
+RMD160 (infraarcana/ia-19.0.tar.gz) = eae3748894291840e773dbb61b468b62a87cb31b
+SHA512 (infraarcana/ia-19.0.tar.gz) = d611ef0eeecc131d7ad56b00f490870885e640d1116d18cf5ea0ec69cca76fc8bff0573b30e3b36452a2f73dece3ca595b4ee0d7219b86111525255d52c75bbd
+Size (infraarcana/ia-19.0.tar.gz) = 35192419 bytes
+SHA1 (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = c491d4e4bb2b93fbadcfeb525501e7e1e1c510c0
+RMD160 (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = 4cb45291fcc2b8335a0cd42d1370b0550cd4923d
+SHA512 (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = 12107c4d2daa45abf3044123926e2f147c41c509b85a6bcbad71e9296f85b9322b1b68ac63b5b894e12107ded3dc0d527138db31facdef2d34f6f3e7290ed16f
+Size (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = 17654 bytes
+SHA1 (patch-CMakeLists.txt) = f57baac4f727c5af6c3893970a1916fd0bb194ab
+SHA1 (patch-src_config.cpp) = 1dfb902992f1dfdbff171991410a0b73c2f666b0
+SHA1 (patch-src_saving.cpp) = ea5ee85b2dea39d99bb4a5e609c89c166b578fb3

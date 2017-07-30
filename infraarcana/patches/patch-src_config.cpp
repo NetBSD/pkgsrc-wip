@@ -2,15 +2,15 @@ $NetBSD: patch-src_Config.cpp,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
 Store config in home directory
 
---- src/config.cpp.orig	2016-07-02 15:42:10.000000000 +0000
+--- src/config.cpp.orig	2017-07-20 14:19:08.000000000 +0000
 +++ src/config.cpp
-@@ -512,7 +512,16 @@ void draw(const Menu_browser* const brow
+@@ -369,7 +369,16 @@ void player_sets_option(const MenuBrowse
  void read_file(std::vector<std::string>& lines)
  {
      std::ifstream file;
--    file.open("data/config");
+-    file.open("res/data/config");
 +    char *home = getenv("HOME");
-+    std::string config = "data/config";
++    std::string config = "res/data/config";
 +
 +    if (home != NULL)
 +    {
@@ -22,13 +22,12 @@ Store config in home directory
  
      if (file.is_open())
      {
-@@ -605,7 +614,16 @@ void set_variables_from_lines(std::vecto
- void write_lines_to_file(std::vector<std::string>& lines)
+@@ -454,6 +463,16 @@ void write_lines_to_file(const std::vect
  {
      std::ofstream file;
--    file.open("data/config", std::ios::trunc);
+     file.open("res/data/config", std::ios::trunc);
 +    char *home = getenv("HOME");
-+    std::string config = "data/config";
++    std::string config = "res/data/config";
 +
 +    if (home != NULL)
 +    {
