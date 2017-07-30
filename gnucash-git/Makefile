@@ -18,16 +18,11 @@ LICENSE=		gnu-gpl-v3
 DEPENDS+=		guile-slib>=3.2.1:../../devel/guile-slib
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
-DEPENDS+=		${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-# /usr/pkg/share/gnucash/python/pycons/console.py imports readline
-DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
 # for autoreconf
 BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
-# to make a configure test happy
-BUILD_DEPENDS+=		libdbi-driver-sqlite3-[0-9]*:../../databases/libdbi-driver-sqlite3
 
 GIT_REPOSITORIES=	github
 GIT_MODULE.github=	gnucash
@@ -43,7 +38,6 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		YES
 
 CONFIGURE_ARGS+=	--disable-error-on-warning
-CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
 CONFIGURE_ARGS+=	GTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CONFIGURE_ARGS+=	GMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
@@ -53,9 +47,7 @@ REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
 REPLACE_PERL+=		src/quotes/Quote_example.pl
 REPLACE_PERL+=		src/gnc-test-env.pl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.6.1
-REPLACE_PYTHON+=	src/python/pycons/*.py src/python/pycons/pycons
-PY_PATCHPLIST=		yes
+PLIST_SRC=		PLIST
 
 PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
@@ -77,8 +69,6 @@ BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/guile20/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.6
 .include "../../security/gnome-keyring/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsecret+=	libsecret>=0.18
