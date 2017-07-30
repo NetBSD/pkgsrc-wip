@@ -806,7 +806,6 @@ SUBDIR+=	fogleman-craft
 SUBDIR+=	font-bitstream-speedo
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
-SUBDIR+=	fortunes-it
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
