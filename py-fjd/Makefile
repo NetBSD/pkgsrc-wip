@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fjd/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/nhoening/fjd/
+HOMEPAGE=	https://github.com/nhoening/fjd/
 COMMENT=	File-based job distribution for everyone
 LICENSE=	apache-2.0
 

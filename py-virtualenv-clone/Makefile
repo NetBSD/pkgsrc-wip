@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv-clone/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/edwardgeorge/virtualenv-clone
+HOMEPAGE=	https://github.com/edwardgeorge/virtualenv-clone
 COMMENT=	Script for cloning a non-relocatable virtualenv
 LICENSE=	mit
 

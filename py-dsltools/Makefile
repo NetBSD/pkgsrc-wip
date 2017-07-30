@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dsltools/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/iskandr/dsltools
+HOMEPAGE=	https://github.com/iskandr/dsltools
 COMMENT=	Creating and traversing recursively nested data structures
 LICENSE=	modified-bsd
 

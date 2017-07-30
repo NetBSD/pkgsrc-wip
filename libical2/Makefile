@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=libical/}
 GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/libical/libical
+HOMEPAGE=	https://github.com/libical/libical
 COMMENT=	Reference implementation of the iCalendar data type and format
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.0
 

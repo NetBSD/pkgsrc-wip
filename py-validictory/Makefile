@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validictory/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/sunlightlabs/validictory
+HOMEPAGE=	https://github.com/sunlightlabs/validictory
 COMMENT=	General purpose python data validator
 LICENSE=	mit
 

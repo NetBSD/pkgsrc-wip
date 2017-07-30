@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ass/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rfw/python-ass
+HOMEPAGE=	https://github.com/rfw/python-ass
 COMMENT=	Library for parsing and manipulating Advanced SubStation Alpha
 LICENSE=	mit
 

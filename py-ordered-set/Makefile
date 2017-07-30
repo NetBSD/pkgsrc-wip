@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/ordered-set/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/LuminosoInsight/ordered-set
+HOMEPAGE=	https://github.com/LuminosoInsight/ordered-set
 COMMENT=	MutableSet that remembers its order
 LICENSE=	mit
 

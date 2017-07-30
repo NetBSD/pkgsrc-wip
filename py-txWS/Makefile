@@ -6,7 +6,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txWS/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/MostAwesomeDude/txWS
+HOMEPAGE=	https://github.com/MostAwesomeDude/txWS
 COMMENT=	Twisted WebSockets wrapper
 LICENSE=	mit
 

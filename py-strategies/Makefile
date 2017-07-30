@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/strategies/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://github.com/logpy/strategies
+HOMEPAGE=	https://github.com/logpy/strategies
 COMMENT=	Python library for control flow programming
 LICENSE=	modified-bsd
 

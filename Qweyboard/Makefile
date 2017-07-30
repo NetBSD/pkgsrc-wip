@@ -9,7 +9,7 @@ GIT_REPO.qweyboard=	https://github.com/kqr/qweyboard.git
 WRKSRC=			${WRKDIR}/qweyboard
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/kqr/qweyboard
+HOMEPAGE=	https://github.com/kqr/qweyboard
 COMMENT=	Velotype/Veyboard like experience on a regular computer keyboard
 LICENSE=	isc
 

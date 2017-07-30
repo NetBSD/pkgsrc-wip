@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/screenutils/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/Christophe31/screenutils
+HOMEPAGE=	https://github.com/Christophe31/screenutils
 COMMENT=	Lib for gnu-screen: creates/close/list/log sessions, injects commands
 LICENSE=	gnu-gpl-v2
 

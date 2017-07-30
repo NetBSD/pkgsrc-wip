@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydas/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/midasplatform/pydas
+HOMEPAGE=	https://github.com/midasplatform/pydas
 COMMENT=	Upload data to a Midas-based application with Python
 LICENSE=	apache-2.0
 

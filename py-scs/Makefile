@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scs/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/cvxgrp/scs
+HOMEPAGE=	https://github.com/cvxgrp/scs
 COMMENT=	Scs: splittling cone solver
 LICENSE=	gnu-gpl-v3
 

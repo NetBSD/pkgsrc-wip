@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpaths/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/remram44/rpaths
+HOMEPAGE=	https://github.com/remram44/rpaths
 COMMENT=	Path manipulation library
 LICENSE=	modified-bsd
 

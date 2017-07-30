@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-coveralls/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://github.com/z4r/python-coveralls
+HOMEPAGE=	https://github.com/z4r/python-coveralls
 COMMENT=	Python interface to coveralls.io API
 LICENSE=	apache-2.0
 

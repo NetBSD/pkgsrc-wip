@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/symath/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/bniemczyk/symbolic
+HOMEPAGE=	https://github.com/bniemczyk/symbolic
 COMMENT=	symbolic mathematics for python
 LICENSE=	2-clause-bsd
 

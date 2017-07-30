@@ -7,7 +7,7 @@ CATEGORIES=	devel math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CythonGSL/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/twiecki/CythonGSL
+HOMEPAGE=	https://github.com/twiecki/CythonGSL
 COMMENT=	Cython declarations for the Gnu Scientific Library
 LICENSE=	gnu-gpl-v3
 

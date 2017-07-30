@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=Q/QNET/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/mabuchilab/QNET
+HOMEPAGE=	https://github.com/mabuchilab/QNET
 COMMENT=	Tools for symbolically analyzing quantum feedback networks
 LICENSE=	gnu-gpl-v3
 

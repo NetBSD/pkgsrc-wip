@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kabuki/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/hddm-devs/kabuki
+HOMEPAGE=	https://github.com/hddm-devs/kabuki
 COMMENT=	Easy creation of hierarchical bayesian models
 LICENSE=	2-clause-bsd
 

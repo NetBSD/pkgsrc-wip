@@ -12,7 +12,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-HOMEPAGE=	http://github.com/PacificBiosciences/pypeFLOW
+HOMEPAGE=	https://github.com/PacificBiosciences/pypeFLOW
 
 MAINTAINER=	bacon4000@gmail.com
 

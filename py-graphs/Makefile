@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/graphs/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/all-umass/graphs
+HOMEPAGE=	https://github.com/all-umass/graphs
 COMMENT=	Library for graph-based machine learning
 LICENSE=	mit
 

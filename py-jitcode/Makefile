@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jitcode/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/neurophysik/jitcode
+HOMEPAGE=	https://github.com/neurophysik/jitcode
 COMMENT=	Just-in-Time Compilation for Ordinary Differential Equations
 LICENSE=	modified-bsd
 

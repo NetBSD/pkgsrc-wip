@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toro/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/ajdavis/toro/
+HOMEPAGE=	https://github.com/ajdavis/toro/
 COMMENT=	Synchronization primitives for Tornado coroutines
 LICENSE=	apache-2.0
 

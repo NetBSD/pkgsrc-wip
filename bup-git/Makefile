@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/bup/bup
+HOMEPAGE=	https://github.com/bup/bup
 COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
 

@@ -7,7 +7,7 @@ MASTER_SITES=	https://github.com/birney/wise3/archive/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
-HOMEPAGE=	http://github.com/birney/wise3/archive/
+HOMEPAGE=	https://github.com/birney/wise3/archive/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
 

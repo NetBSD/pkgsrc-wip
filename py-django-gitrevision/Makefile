@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-gitrevision/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://github.com/klen/django-gitrevision.git
+HOMEPAGE=	https://github.com/klen/django-gitrevision.git
 COMMENT=	Django git revision
 LICENSE=	gnu-lgpl-v2.1
 

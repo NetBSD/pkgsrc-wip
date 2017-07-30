@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cvxpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/cvxgrp/cvxpy/
+HOMEPAGE=	https://github.com/cvxgrp/cvxpy/
 COMMENT=	Python software for convex optimization
 LICENSE=	gnu-gpl-v3
 

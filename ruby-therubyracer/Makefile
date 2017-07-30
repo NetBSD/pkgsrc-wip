@@ -5,7 +5,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://github.com/cowboyd/libv8
+HOMEPAGE=	https://github.com/cowboyd/libv8
 COMMENT=	Embedded V8 Javascript
 LICENSE=        mit
 

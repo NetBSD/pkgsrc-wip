@@ -6,7 +6,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/biofrills/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/etal/biofrills
+HOMEPAGE=	https://github.com/etal/biofrills
 COMMENT=	Bioinformatics utilities for molecular sequence analysis
 LICENSE=	modified-bsd
 

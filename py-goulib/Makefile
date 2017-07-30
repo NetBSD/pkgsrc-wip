@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=G/Goulib/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/goulu/goulib
+HOMEPAGE=	https://github.com/goulu/goulib
 COMMENT=	Library of useful Python code for scientific + technical applications
 LICENSE=	gnu-lgpl-v3
 

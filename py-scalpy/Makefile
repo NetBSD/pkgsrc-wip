@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/ScalPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/sum33it/scalpy
+HOMEPAGE=	https://github.com/sum33it/scalpy
 COMMENT=	ScalPy: A python tool to study dynamical systems in cosmology
 LICENSE=	gnu-gpl-v3
 

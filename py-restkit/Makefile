@@ -6,7 +6,7 @@ CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/restkit/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/benoitc/restkit/
+HOMEPAGE=	https://github.com/benoitc/restkit/
 COMMENT=	Restkit is an HTTP resource kit for Python
 LICENSE=	mit
 

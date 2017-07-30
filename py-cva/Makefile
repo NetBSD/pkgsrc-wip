@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/12/52/3297aa6eb20d56417e8d02f001d2e3edb72b63762d1f6ee2d042f050797b/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/robertjw/
+HOMEPAGE=	https://github.com/robertjw/
 COMMENT=	Calculus of Variations Solver
 LICENSE=	gnu-lgpl-v2.1
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema/}
 EXTRACT_SUFX=	.zip#md5=0275f70c5f7c65657555ff478a4fc89c
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/Julian/jsonschema
+HOMEPAGE=	https://github.com/Julian/jsonschema
 COMMENT=	Implementation of JSON Schema validation for Python
 LICENSE=	mit
 

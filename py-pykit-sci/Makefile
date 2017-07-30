@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pykit-sci/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/androomerrill/pykit-sci
+HOMEPAGE=	https://github.com/androomerrill/pykit-sci
 COMMENT=	Collection of python modules for science
 LICENSE=	2-clause-bsd
 

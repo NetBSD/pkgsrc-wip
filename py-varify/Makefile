@@ -6,7 +6,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/varify/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/cbmi/varify
+HOMEPAGE=	https://github.com/cbmi/varify
 COMMENT=	Clinical DNA Sequencing Analysis and Data Discovery
 LICENSE=	modified-bsd
 

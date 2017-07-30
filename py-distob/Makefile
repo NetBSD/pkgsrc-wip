@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distob/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/mattja/distob/
+HOMEPAGE=	https://github.com/mattja/distob/
 COMMENT=	Distributed computing made easier, using remote objects
 LICENSE=	gnu-gpl-v3
 

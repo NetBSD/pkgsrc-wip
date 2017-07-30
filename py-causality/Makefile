@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/causality/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/akelleh/causality
+HOMEPAGE=	https://github.com/akelleh/causality
 COMMENT=	Tools for causal analysis
 LICENSE=	mit
 

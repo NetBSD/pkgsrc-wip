@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	angelmadames@gmail.com
-HOMEPAGE=	http://github.com/salva/p5-Net-SFTP-Foreign/
+HOMEPAGE=	https://github.com/salva/p5-Net-SFTP-Foreign/
 COMMENT=	SSH File Transfer Protocol client
 LICENSE=	${PERL5_LICENSE}
 

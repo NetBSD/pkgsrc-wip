@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=phatina/}
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	amoibos@gmail.com
-HOMEPAGE=	http://github.com/phatina/simple-mtpfs
+HOMEPAGE=	https://github.com/phatina/simple-mtpfs
 COMMENT=	FUSE module for interacting with MTP devices
 LICENSE=	gnu-gpl-v2
 

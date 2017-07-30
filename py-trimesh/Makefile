@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trimesh/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/mikedh/trimesh
+HOMEPAGE=	https://github.com/mikedh/trimesh
 COMMENT=	Import, export, process, analyze and view triangular meshes
 LICENSE=	mit
 

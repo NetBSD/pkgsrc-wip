@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://github.com/yrmt/signify/archive/
 
 MAINTAINER=	youri.mout@gmail.com
-HOMEPAGE=	http://github.com/yrmt/signify
+HOMEPAGE=	https://github.com/yrmt/signify
 COMMENT=	Cryptographically sign and verify files, from OpenBSD
 LICENSE=	isc
 

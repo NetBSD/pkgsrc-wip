@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blosc/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/blosc/python-blosc
+HOMEPAGE=	https://github.com/blosc/python-blosc
 COMMENT=	Blosc is a high performance compressor optimized for binary data
 LICENSE=	mit
 

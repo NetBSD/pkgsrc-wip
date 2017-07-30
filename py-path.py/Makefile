@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/path.py/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://github.com/jaraco/path.py
+HOMEPAGE=	https://github.com/jaraco/path.py
 COMMENT=	Module wrapper for os.path
 LICENSE=	mit
 

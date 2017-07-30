@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=cjd/mtpfs/archive/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	amoibos@gmail.com
-HOMEPAGE=	http://github.com/cjd/mtpfs
+HOMEPAGE=	https://github.com/cjd/mtpfs
 COMMENT=	Access to MTP device filesystem
 LICENSE=	gnu-gpl-v3
 

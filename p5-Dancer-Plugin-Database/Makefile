@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BI/BIGPRESH/}
 
 MAINTAINER=	ficovh@gmail.com
-HOMEPAGE=	http://github.com/bigpresh/Dancer-Plugin-Database
+HOMEPAGE=	https://github.com/bigpresh/Dancer-Plugin-Database
 COMMENT=	Easy database connections for Dancer applications
 LICENSE=	${PERL5_LICENSE}
 

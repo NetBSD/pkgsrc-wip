@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrsistent/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/tobgu/pyrsistent/
+HOMEPAGE=	https://github.com/tobgu/pyrsistent/
 COMMENT=	Persistent/Functional/Immutable data structures
 LICENSE=	mit
 

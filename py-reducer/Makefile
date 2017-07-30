@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reducer/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/mwcraig/reducer
+HOMEPAGE=	https://github.com/mwcraig/reducer
 COMMENT=	Process FITS files
 LICENSE=	2-clause-bsd
 

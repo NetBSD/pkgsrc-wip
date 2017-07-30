@@ -4,7 +4,7 @@ DISTNAME=	darcs-to-git-0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://github.com/purcell/${PKGBASE}
+HOMEPAGE=	https://github.com/purcell/${PKGBASE}
 COMMENT=	Convert a Darcs repository into a Git repository
 LICENSE=	mit
 

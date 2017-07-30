@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-premailer/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/ralphbean/python-premailer
+HOMEPAGE=	https://github.com/ralphbean/python-premailer
 COMMENT=	Prepare HTML for email embedd CSS to inline
 #LICENSE=	# TODO: (see mk/license.mk)
 

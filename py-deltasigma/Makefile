@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deltasigma/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/ggventurini/python-deltasigma
+HOMEPAGE=	https://github.com/ggventurini/python-deltasigma
 COMMENT=	Scale and map to implementable topologies delta sigma modulators
 LICENSE=	modified-bsd
 

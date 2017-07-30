@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/loggly/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/EA2D/loggly-python
+HOMEPAGE=	https://github.com/EA2D/loggly-python
 COMMENT=	Python interface to Loggly
 LICENSE=	apache-2.0
 

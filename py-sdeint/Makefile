@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sdeint/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/mattja/sdeint/
+HOMEPAGE=	https://github.com/mattja/sdeint/
 COMMENT=	Numerical integration of stochastic differential equations
 LICENSE=	gnu-gpl-v3
 

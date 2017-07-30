@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argh/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/neithere/argh/
+HOMEPAGE=	https://github.com/neithere/argh/
 COMMENT=	Unobtrusive argparse wrapper with natural syntax
 LICENSE=	gnu-lgpl-v3
 

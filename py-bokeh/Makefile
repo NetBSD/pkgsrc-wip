@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bokeh/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/bokeh/bokeh
+HOMEPAGE=	https://github.com/bokeh/bokeh
 COMMENT=	Statistical and novel interactive HTML plots for Python
 LICENSE=	modified-bsd
 

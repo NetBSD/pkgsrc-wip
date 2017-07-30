@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/getsentry/raven-python
+HOMEPAGE=	https://github.com/getsentry/raven-python
 COMMENT=	Raven is a client for Sentry
 LICENSE=	2-clause-bsd
 

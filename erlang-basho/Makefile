@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=basho/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://github.com/basho/otp/
+HOMEPAGE=		https://github.com/basho/otp/
 COMMENT=		Erlang/OTP fork by Basho
 LICENSE=		erlang-public-license
 

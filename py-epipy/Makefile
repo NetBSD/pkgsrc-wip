@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/epipy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/cmrivers/epipy
+HOMEPAGE=	https://github.com/cmrivers/epipy
 COMMENT=	Python tools for epidemiology
 LICENSE=	mit
 

@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciimathml/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://github.com/favalex/python-asciimathml
+HOMEPAGE=	https://github.com/favalex/python-asciimathml
 COMMENT=	ASCIIMathML to MathML translator
 LICENSE=	gnu-gpl-v3
 

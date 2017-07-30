@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/downhill/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/lmjohns3/downhill
+HOMEPAGE=	https://github.com/lmjohns3/downhill
 COMMENT=	Stochastic optimization routines for Theano
 LICENSE=	mit
 

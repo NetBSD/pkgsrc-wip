@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 #GIT_COMMIT=	928fb8f
 
 MAINTAINER=	amoibos@gmail.com
-HOMEPAGE=	http://github.com/JasonFerrara/jmtpfs
+HOMEPAGE=	https://github.com/JasonFerrara/jmtpfs
 COMMENT=	Access to MTP devices
 LICENSE=	gnu-gpl-v3
 

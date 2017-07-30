@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nsim/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/mattja/nsim/
+HOMEPAGE=	https://github.com/mattja/nsim/
 COMMENT=	Simulate systems from ODEs or SDEs, analyze time series
 LICENSE=	gnu-gpl-v3
 

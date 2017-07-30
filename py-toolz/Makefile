@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toolz/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/pytoolz/toolz/
+HOMEPAGE=	https://github.com/pytoolz/toolz/
 COMMENT=	List processing tools and functional utilities
 LICENSE=	modified-bsd
 

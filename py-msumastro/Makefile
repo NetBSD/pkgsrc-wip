@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msumastro/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/mwcraig/msumastro
+HOMEPAGE=	https://github.com/mwcraig/msumastro
 COMMENT=	Process FITS files
 LICENSE=	2-clause-bsd
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=f/fuzzpy/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/ezod/fuzzpy
+HOMEPAGE=	https://github.com/ezod/fuzzpy
 COMMENT=	Fuzzy sets, graphs, and mathematics for Python
 LICENSE=	gnu-gpl-v3
 

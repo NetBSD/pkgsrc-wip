@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=H/HDDM/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/hddm-devs/hddm
+HOMEPAGE=	https://github.com/hddm-devs/hddm
 COMMENT=	Hierarchical Bayesian estimation of Drift Diffusion Models
 LICENSE=	modified-bsd
 

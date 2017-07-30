@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/concepts/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/xflr6/concepts
+HOMEPAGE=	https://github.com/xflr6/concepts
 COMMENT=	Formal Concept Analysis with Python
 LICENSE=	mit
 

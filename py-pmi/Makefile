@@ -7,7 +7,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pmi/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://github.com/olenz/pmi/
+HOMEPAGE=	https://github.com/olenz/pmi/
 COMMENT=	Parallel Method Invocation
 LICENSE=	gnu-gpl-v3
 

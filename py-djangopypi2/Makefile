@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangopypi2/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/benliles/djangopypi/
+HOMEPAGE=	https://github.com/benliles/djangopypi/
 COMMENT=	Django application that emulates the Python Package Index
 LICENSE=	2-clause-bsd
 

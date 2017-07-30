@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/naima/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/zblz/naima
+HOMEPAGE=	https://github.com/zblz/naima
 COMMENT=	Derivation of non-thermal particle through MCMC spectral fitting
 LICENSE=	2-clause-bsd
 

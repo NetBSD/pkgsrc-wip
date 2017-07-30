@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/healpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/healpy
+HOMEPAGE=	https://github.com/healpy
 COMMENT=	Healpix tools package for Python
 LICENSE=	gnu-gpl-v2
 

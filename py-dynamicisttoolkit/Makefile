@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/1e/ed/2be1322f723ef11f959581c7082100dd18b8b82107eca151a3730636290a/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/moorepants/DynamicistToolKit
+HOMEPAGE=	https://github.com/moorepants/DynamicistToolKit
 COMMENT=	Various tools for theoretical and experimental dynamics
 #LICENSE=	# TODO: (see mk/license.mk)
 

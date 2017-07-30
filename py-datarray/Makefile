@@ -5,7 +5,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/datarray/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/fperez/datarray
+HOMEPAGE=	https://github.com/fperez/datarray
 COMMENT=	NumPy arrays with named axes and named indices
 LICENSE=	modified-bsd
 

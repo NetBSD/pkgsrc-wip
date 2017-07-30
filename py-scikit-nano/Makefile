@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-nano/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/androomerrill/scikit-nano
+HOMEPAGE=	https://github.com/androomerrill/scikit-nano
 COMMENT=	Python toolkit for generating nano-structures
 LICENSE=	modified-bsd
 

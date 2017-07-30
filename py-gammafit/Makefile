@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gammafit/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/zblz/gammafit
+HOMEPAGE=	https://github.com/zblz/gammafit
 COMMENT=	Derivation of non-thermal particle distributions MCMC spectraly
 LICENSE=	modified-bsd
 

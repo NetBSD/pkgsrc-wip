@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-quran/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/idris/django-quran
+HOMEPAGE=	https://github.com/idris/django-quran
 COMMENT=	Quranic models and helpers for use in Django projects
 LICENSE=	modified-bsd
 

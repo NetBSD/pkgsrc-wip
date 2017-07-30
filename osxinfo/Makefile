@@ -5,7 +5,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nbyouri/}
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://github.com/nbyouri/osxinfo
+HOMEPAGE=	https://github.com/nbyouri/osxinfo
 COMMENT=	Small Mac OS X Info Program
 LICENSE=	mit
 

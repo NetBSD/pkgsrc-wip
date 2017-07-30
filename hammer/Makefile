@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		-https://github.com/UpstandingHackers/hammer/archive/v${VERSION}${EXTRACT_SUFX}
 
 MAINTAINER=		thequux@upstandinghackers.com
-HOMEPAGE=		http://github.com/UpstandingHackers/hammer
+HOMEPAGE=		https://github.com/UpstandingHackers/hammer
 COMMENT=		Parser combinator library in C
 LICENSE=		gnu-gpl-v2
 

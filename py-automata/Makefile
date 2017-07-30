@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/automata/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/bniemczyk/automata
+HOMEPAGE=	https://github.com/bniemczyk/automata
 COMMENT=	Finite automata for python
 LICENSE=	modified-bsd
 

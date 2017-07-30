@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/handy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/Suor/handy
+HOMEPAGE=	https://github.com/Suor/handy
 COMMENT=	Collection of tools to make your django life easier
 LICENSE=	modified-bsd
 

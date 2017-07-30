@@ -5,7 +5,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SpamExperts/}
 
 MAINTAINER=	tom@replic8.net
-HOMEPAGE=	http://github.com/SpamExperts/pyzor/
+HOMEPAGE=	https://github.com/SpamExperts/pyzor/
 COMMENT=	Collaborative, networked system to detect and block spam
 LICENSE=	gnu-gpl-v2
 

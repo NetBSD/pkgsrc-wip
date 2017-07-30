@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ecos/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/embotech/ecos
+HOMEPAGE=	https://github.com/embotech/ecos
 COMMENT=	Embedded Cone Solver
 LICENSE=	gnu-gpl-v3
 

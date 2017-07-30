@@ -8,7 +8,7 @@ CATEGORIES=	www audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-audiofield/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/Star2Billing/django-audiofield
+HOMEPAGE=	https://github.com/Star2Billing/django-audiofield
 COMMENT=	Allows audio file upload and conversion to mp3, wav and ogg format
 LICENSE=	mit
 

@@ -7,7 +7,7 @@ MASTER_SITES=	https://pypi.python.org/packages/45/78/da8e4a5625e71566ff2af73c3ce
 
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/dask/dask/
+HOMEPAGE=	https://github.com/dask/dask/
 COMMENT=	Dask is a flexible parallel computing library for analytics
 LICENSE=	modified-bsd
 

@@ -6,7 +6,7 @@ CATEGORIES=	chat net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sleekxmpp/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/fritzy/SleekXMPP
+HOMEPAGE=	https://github.com/fritzy/SleekXMPP
 COMMENT=	SleekXMPP is an elegant Python library for XMPP
 LICENSE=	mit
 

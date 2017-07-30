@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rebound/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/hannorein/rebound
+HOMEPAGE=	https://github.com/hannorein/rebound
 COMMENT=	Open-source multi-purpose N-body code
 LICENSE=	gnu-gpl-v3
 

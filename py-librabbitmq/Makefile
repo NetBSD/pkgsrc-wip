@@ -6,7 +6,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/librabbitmq/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/celery/librabbitmq
+HOMEPAGE=	https://github.com/celery/librabbitmq
 COMMENT=	AMQP Client using the rabbitmq-c library
 LICENSE=	gnu-gpl-v2 AND mpl-1.1
 

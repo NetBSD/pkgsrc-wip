@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfmmlib/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/inducer/pyfmmlib
+HOMEPAGE=	https://github.com/inducer/pyfmmlib
 COMMENT=	Python wrappers for particle FMMs
 #LICENSE=	gnu-gpl-v2 AND mit
 

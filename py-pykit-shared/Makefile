@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	-https://github.com/androomerrill/pykit-shared/archive/v${VERSION}.tar.gz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/androomerrill/pykit-shared
+HOMEPAGE=	https://github.com/androomerrill/pykit-shared
 COMMENT=	Collection of modules shared amongst my other projects
 LICENSE=	2-clause-bsd
 

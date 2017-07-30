@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylire/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/fish2000/pylire/
+HOMEPAGE=	https://github.com/fish2000/pylire/
 COMMENT=	Python/Cython port of Lire image processing algorithms
 LICENSE=	gnu-gpl-v2
 

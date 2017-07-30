@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peng/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/pmacosta/peng/
+HOMEPAGE=	https://github.com/pmacosta/peng/
 COMMENT=	This package provides engineering-related classes and functions
 LICENSE=	mit
 
