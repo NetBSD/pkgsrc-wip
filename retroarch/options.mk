@@ -3,7 +3,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype alsa udev
+PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype alsa pulseaudio udev
 PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
@@ -111,4 +111,11 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+CONFIGURE_ARGS+=	--enable-pulse
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-pulse
 .endif
