@@ -13,14 +13,13 @@ COMMENT=	Innovative user interfaces made easy
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 
 USE_LANGUAGES= c
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-multiprocessing, py-imaging, py-gstreamer0.10, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-imaging, py-gstreamer0.10, py-gobject
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-game/buildlink3.mk"

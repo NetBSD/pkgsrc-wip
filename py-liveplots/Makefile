@@ -10,12 +10,11 @@ HOMEPAGE=	http://code.google.com/p/liveplots/
 COMMENT=	Real-time live plot server
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-multiprocessing-[0-9]*:../../devel/py-multiprocessing
 DEPENDS+=	${PYPKGPREFIX}-gnuplot-[0-9]*:../../graphics/py-gnuplot
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gnuplot, py-multiprocessing
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gnuplot
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
