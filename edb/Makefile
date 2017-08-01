@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://ftp.springdaemons.com/pub/snapshots/e17/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.enlightenment.org/
+HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	Enlightenment Database Library
 
 GNU_CONFIGURE=	yes

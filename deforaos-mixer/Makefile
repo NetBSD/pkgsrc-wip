@@ -3,10 +3,10 @@
 DISTNAME=	Mixer-0.1.1
 PKGNAME=	deforaos-mixer-0.1.1
 CATEGORIES=	audio
-MASTER_SITES=	http://www.defora.org/os/download/download/3705/
+MASTER_SITES=	https://www.defora.org/os/download/download/3705/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop volume mixer
 
 LICENSE=	gnu-gpl-v3

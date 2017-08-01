@@ -9,7 +9,7 @@ MASTER_SITES=	http://cdn.last.fm/client/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://www.last.fm/
+HOMEPAGE=	https://www.last.fm/
 COMMENT=	Official last.fm radio player
 
 BROKEN=		FIXME: I build fine now, but fail to load some libs.

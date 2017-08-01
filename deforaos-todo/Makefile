@@ -3,10 +3,10 @@
 DISTNAME=	Todo-0.1.2
 PKGNAME=	deforaos-todo-0.1.2
 CATEGORIES=	time
-MASTER_SITES=	http://www.defora.org/os/download/download/3506/
+MASTER_SITES=	https://www.defora.org/os/download/download/3506/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop todo list
 
 LICENSE=	gnu-gpl-v3

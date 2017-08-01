@@ -3,10 +3,10 @@
 DISTNAME=	Locker-0.2.2
 PKGNAME=	deforaos-locker-0.2.2
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/4329/
+MASTER_SITES=	https://www.defora.org/os/download/download/4329/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop screensaver
 
 LICENSE=	gnu-gpl-v3

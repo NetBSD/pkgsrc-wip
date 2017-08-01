@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glade/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://glade.gnome.org/
+HOMEPAGE=	https://glade.gnome.org/
 COMMENT=	User interface builder for the GTK2+ toolkit and GNOME2
 
 CONFLICTS+=	glade-*

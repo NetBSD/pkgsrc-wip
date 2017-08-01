@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NI/NILSONSFJ/
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://www.last.fm/api
+HOMEPAGE=	https://www.last.fm/api
 COMMENT=	Interface to the Audioscrobbler WebService API (aka Last.FM)
 
 DEPENDS+=	p5-CLASS>=0:../../devel/p5-CLASS

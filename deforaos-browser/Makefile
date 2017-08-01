@@ -4,10 +4,10 @@
 DISTNAME=	Browser-0.4.13
 PKGNAME=	deforaos-browser-0.4.13
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/4310/
+MASTER_SITES=	https://www.defora.org/os/download/download/4310/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop file manager and desktop handler
 
 LICENSE=	gnu-gpl-v3

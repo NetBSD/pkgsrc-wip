@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 PKGREVISION=	1
 
 MAINTAINER=	dieter.NetBSD@pandora.be
-HOMEPAGE=	http://www.enlightenment.org/
+HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	The Window Manager and Desktop Shell
 LICENSE=	2-clause-bsd
 

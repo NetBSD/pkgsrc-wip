@@ -4,10 +4,10 @@
 DISTNAME=	Player-0.1.5
 PKGNAME=	deforaos-player-0.1.5
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.defora.org/os/download/download/4279/
+MASTER_SITES=	https://www.defora.org/os/download/download/4279/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop media player
 
 LICENSE=	gnu-gpl-v3

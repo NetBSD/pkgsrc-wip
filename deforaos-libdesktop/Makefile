@@ -4,10 +4,10 @@
 DISTNAME=	libDesktop-0.2.0
 PKGNAME=	deforaos-libdesktop-0.2.0
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/4355/
+MASTER_SITES=	https://www.defora.org/os/download/download/4355/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop library
 
 LICENSE=	2-clause-bsd

@@ -4,10 +4,10 @@
 DISTNAME=	Panel-0.3.1
 PKGNAME=	deforaos-panel-0.3.1
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/4338/
+MASTER_SITES=	https://www.defora.org/os/download/download/4338/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop panel
 
 LICENSE=	gnu-gpl-v3

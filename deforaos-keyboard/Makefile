@@ -4,10 +4,10 @@ DISTNAME=	Keyboard-0.2.1
 PKGNAME=	deforaos-keyboard-0.2.1
 PKGREVISION=	2
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/3696/
+MASTER_SITES=	https://www.defora.org/os/download/download/3696/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop virtual keyboard
 
 LICENSE=	gnu-gpl-v3

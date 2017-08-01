@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.fontstock.com/public/
 DISTFILES=	PTSansOFL.zip PTSerifOFL.zip PTMonoOFL.zip
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://www.paratype.com/public/
+HOMEPAGE=	https://www.paratype.com/public/
 COMMENT=	Public fonts for minority languages of Russia
 LICENSE=	ofl-v1.1
 

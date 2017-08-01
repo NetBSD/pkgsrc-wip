@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dieter.NetBSD@pandora.be
-HOMEPAGE=	http://www.enlightenment.org/
+HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	E17 Widget Library
 LICENSE=	gnu-lgpl-v2
 

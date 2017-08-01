@@ -3,10 +3,10 @@
 DISTNAME=	Editor-0.3.1
 PKGNAME=	deforaos-editor-0.3.1
 CATEGORIES=	editors
-MASTER_SITES=	http://www.defora.org/os/download/download/4356/
+MASTER_SITES=	https://www.defora.org/os/download/download/4356/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop text editor
 
 LICENSE=	2-clause-bsd

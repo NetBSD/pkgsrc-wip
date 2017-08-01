@@ -5,7 +5,7 @@ CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
 MAINTAINER=		tonio@NetBSD.org
-HOMEPAGE=		http://www.bitlbee.org/
+HOMEPAGE=		https://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
 LICENSE=		gnu-gpl-v2
 

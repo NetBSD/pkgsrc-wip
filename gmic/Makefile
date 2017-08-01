@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://gmic.eu/files/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/gmic/
+HOMEPAGE=	https://sourceforge.net/projects/gmic/
 COMMENT=	Full-featured image processing framework
 LICENSE=	cecill-2.0
 

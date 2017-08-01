@@ -4,10 +4,10 @@
 DISTNAME=	PDFViewer-0.0.1
 PKGNAME=	deforaos-pdfviewer-0.0.1
 CATEGORIES=	print
-MASTER_SITES=	http://www.defora.org/os/download/download/3686/
+MASTER_SITES=	https://www.defora.org/os/download/download/3686/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop PDF viewer
 
 LICENSE=	gnu-gpl-v3

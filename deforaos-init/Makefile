@@ -4,10 +4,10 @@
 DISTNAME=	Init-0.0.0
 PKGNAME=	deforaos-init-0.0.0
 CATEGORIES=	net
-MASTER_SITES=	http://www.defora.org/os/download/download/3337/
+MASTER_SITES=	https://www.defora.org/os/download/download/3337/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS system session
 
 LICENSE=	gnu-gpl-v3

@@ -4,10 +4,10 @@ DISTNAME=	Surfer-0.2.7
 PKGNAME=	deforaos-surfer-0.2.7
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://www.defora.org/os/download/download/4345/
+MASTER_SITES=	https://www.defora.org/os/download/download/4345/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop web browser
 
 LICENSE=	gnu-gpl-v3

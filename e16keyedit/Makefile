@@ -7,7 +7,7 @@ CATEGORIES=		wm x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
 MAINTAINER=		Peter.Bex@student.kun.nl
-HOMEPAGE=		http://www.enlightenment.org/
+HOMEPAGE=		https://www.enlightenment.org/
 COMMENT=		Keys setup program for Enlightenment
 
 DEPENDS+=		enlightenment-0.16.*:../../wm/enlightenment

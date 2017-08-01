@@ -5,10 +5,10 @@ DISTNAME=	Phone-0.4.1
 PKGNAME=	deforaos-phone-0.4.1
 PKGREVISION=	1
 CATEGORIES=	comms net
-MASTER_SITES=	http://www.defora.org/os/download/download/4336/
+MASTER_SITES=	https://www.defora.org/os/download/download/4336/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop telephony
 
 LICENSE=	gnu-gpl-v3

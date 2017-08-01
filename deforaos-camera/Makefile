@@ -4,10 +4,10 @@
 DISTNAME=	Camera-0.1.0
 PKGNAME=	deforaos-camera-0.1.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.defora.org/os/download/download/4320/
+MASTER_SITES=	https://www.defora.org/os/download/download/4320/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop camera
 LICENSE=	gnu-gpl-v3
 

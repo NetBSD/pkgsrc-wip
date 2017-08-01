@@ -4,10 +4,10 @@
 DISTNAME=	Terminal-0.0.0
 PKGNAME=	deforaos-terminal-0.0.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/4281/
+MASTER_SITES=	https://www.defora.org/os/download/download/4281/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop terminal emulator
 
 LICENSE=	gnu-gpl-v3

@@ -3,11 +3,11 @@
 VERSION=	2.8.0u3
 DISTNAME=	fs-uae-launcher-${VERSION}
 CATEGORIES=	emulators
-#MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
-MASTER_SITES=	http://fs-uae.net/stable/${VERSION}/
+#MASTER_SITES=	https://fs-uae.net/fs-uae/devel/${VERSION}/
+MASTER_SITES=	https://fs-uae.net/stable/${VERSION}/
 
 MAINTAINER=	rhialto@falu.nl
-HOMEPAGE=	http://fs-uae.net/
+HOMEPAGE=	https://fs-uae.net/
 COMMENT=	Graphical launcher for FS-UAE, the Amiga Emulator
 LICENSE=	gnu-gpl-v2
 

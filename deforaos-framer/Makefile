@@ -4,10 +4,10 @@ DISTNAME=	Framer-0.0.0
 PKGNAME=	deforaos-framer-0.0.0
 PKGREVISION=	1
 CATEGORIES=	wm
-MASTER_SITES=	http://www.defora.org/os/download/download/3291/
+MASTER_SITES=	https://www.defora.org/os/download/download/3291/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop window manager
 
 LICENSE=	gnu-gpl-v3

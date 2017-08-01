@@ -2,11 +2,11 @@
 
 DISTNAME=	fs-uae-2.8.0u3
 CATEGORIES=	emulators
-#MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${PKGVERSION_NOREV}/
-MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/
+#MASTER_SITES=	https://fs-uae.net/fs-uae/devel/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
 MAINTAINER=	rhialto@falu.nl
-HOMEPAGE=	http://fs-uae.net/
+HOMEPAGE=	https://fs-uae.net/
 COMMENT=	FS-UAE Amiga Emulator
 LICENSE=	gnu-gpl-v2
 

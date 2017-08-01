@@ -3,10 +3,10 @@
 DISTNAME=	Probe-0.0.2
 PKGNAME=	deforaos-probe-0.0.2
 CATEGORIES=	net
-MASTER_SITES=	http://www.defora.org/os/download/download/3335/
+MASTER_SITES=	https://www.defora.org/os/download/download/3335/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS system monitoring infrastructure
 
 LICENSE=	gnu-gpl-v3

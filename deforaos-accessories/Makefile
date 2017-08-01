@@ -3,10 +3,10 @@
 DISTNAME=	Accessories-0.0.3
 PKGNAME=	deforaos-accessories-0.0.3
 CATEGORIES=	misc
-MASTER_SITES=	http://www.defora.org/os/download/download/3700/
+MASTER_SITES=	https://www.defora.org/os/download/download/3700/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS Accessories
 
 LICENSE=	gnu-gpl-v3
