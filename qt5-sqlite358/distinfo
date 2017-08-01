@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/10/26 19:04:01 adam Exp $
-
-SHA1 (qtbase-opensource-src-5.8.0.tar.xz) = eacdd022615734ccdba4e7a92f1f5f3366c0c415
-RMD160 (qtbase-opensource-src-5.8.0.tar.xz) = d395139af720a9c3bf00f962e2c3ebe01cd75702
-SHA512 (qtbase-opensource-src-5.8.0.tar.xz) = 36a1ba4b0dba02ae65c3b2b0aa3fb3767cbee4dbdf204c9ded7d1700e70144ce85a3a66167f86cc716a1fdd38d832962b2a752e803b0647d03032b2685da5ced
-Size (qtbase-opensource-src-5.8.0.tar.xz) = 44318700 bytes

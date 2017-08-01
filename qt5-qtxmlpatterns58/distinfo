@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/10/26 19:04:01 adam Exp $
-
-SHA1 (qtxmlpatterns-opensource-src-5.8.0.tar.xz) = 67533d5933cecc8526db03068f124703a6c3389f
-RMD160 (qtxmlpatterns-opensource-src-5.8.0.tar.xz) = da29dc37f5463817420113d05b41a9d303822bfe
-SHA512 (qtxmlpatterns-opensource-src-5.8.0.tar.xz) = debaf9fe25621deaac9f2d27bc909ea67d257884ac7577a6e2f5fdba6590d06d5f22659be55ee17dbcd431d76156082665ecb92c6ea13bf79e0f568fe383d377
-Size (qtxmlpatterns-opensource-src-5.8.0.tar.xz) = 1352108 bytes

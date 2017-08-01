@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- mkspecs/features/functions.prf.orig	2017-06-23 06:29:46.000000000 +0000
++++ mkspecs/features/functions.prf
+@@ -15,7 +15,7 @@ defineTest(isQtMinimum) {
+ 
+ defineTest(isPlatformSupported) {
+   QT_FOR_CONFIG += gui-private
+-  linux {
++  unix {
+     !gcc:!clang {
+       skipBuild("Qt WebEngine on Linux requires clang or GCC.")
+       return(false)

@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST.Linux,v 1.2 2016/01/03 21:15:57 markd Exp $
+qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/application_p.h
+qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/atspiadaptor_p.h
+qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/bridge_p.h
+qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/cache_p.h
+qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/constant_mappings_p.h
+qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/dbusconnection_p.h
+qt5/include/QtLinuxAccessibilitySupport/${PKGVERSION}/QtLinuxAccessibilitySupport/private/struct_marshallers_p.h
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake
+qt5/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake
+qt5/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake
+qt5/lib/libQt5LinuxAccessibilitySupport.prl

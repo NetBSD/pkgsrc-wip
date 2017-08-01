@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/10/26 19:04:01 adam Exp $
-
-SHA1 (qtwebsockets-opensource-src-5.8.0.tar.xz) = fc6a8c72f9a1825c404620a111e17de6d2ef1350
-RMD160 (qtwebsockets-opensource-src-5.8.0.tar.xz) = fb8b1ac9c9d49cd988fe2af337c2e30dde4b605a
-SHA512 (qtwebsockets-opensource-src-5.8.0.tar.xz) = c0e027287fa182d4f491a32d6d3286cc8b42cb4bc25d0631af765c84b0b2a1d61ebdd1819534f711b806d98c07f3e56ffa2bd6f0954c9af23f00c0f17abe3a17
-Size (qtwebsockets-opensource-src-5.8.0.tar.xz) = 194524 bytes
