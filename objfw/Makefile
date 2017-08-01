@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	objfw-0.90
-MASTER_SITES=	https://heap.zone/objfw/downloads/objfw-0.90.tar.gz
+MASTER_SITES=	https://heap.zone/objfw/downloads/
 CATEGORIES=	devel
 COMMENT=	Portable, lightweight framework for the Objective-C language
 LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
