@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/08/15 19:26:31 midar Exp $
 
-SHA1 (objfw-0.8.tar.xz) = 91ff1beb2e6da85d656fc7c65e41db7beea84cf2
-RMD160 (objfw-0.8.tar.xz) = af467417fcddf90829a5f20a95222df4e5352fd4
-Size (objfw-0.8.tar.xz) = 357172 bytes
+SHA1 (objfw-0.90.tar.gz) = 295f2efb40ba10bec955fd894f7ae8661cb8ae1f
+RMD160 (objfw-0.90.tar.gz) = 91270c57b6a32317c59cad2da1274341d2334bfc
+SHA512 (objfw-0.90.tar.gz) = a9661bc88cf3cad42b334fe1065c459a5b75fdffd764ffdf7340268422990644b467ee7a6e4731c715c31e49dae6788d94fc5e528c4dac9b5c7d0a7c9e2e8006
+Size (objfw-0.90.tar.gz) = 619601 bytes
