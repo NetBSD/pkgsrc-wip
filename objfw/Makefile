@@ -13,14 +13,12 @@ USE_LANGUAGES=		objc
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 
-PLIST_VARS+=	runtime bridge
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-PLIST.runtime = yes
+PLIST_SRC+=	${PKGDIR}/PLIST.runtime
 .else
-PLIST.bridge = yes
+PLIST_SRC+=	${PKGDIR}/PLIST.bridge
 .endif
 
 .include "../../mk/bsd.pkg.mk"
