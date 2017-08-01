@@ -15,6 +15,8 @@ CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_SRC=	PLIST
+
 .if ${OPSYS} != "Darwin"
 PLIST_SRC+=	${PKGDIR}/PLIST.runtime
 .else
