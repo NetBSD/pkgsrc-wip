@@ -6,3 +6,4 @@ SHA512 (sloccount-2.26.tar.gz) = ed6ab315a56dbdc86c654b94e790c9ea9e2dcad0db26b63
 Size (sloccount-2.26.tar.gz) = 190948 bytes
 SHA1 (patch-makefile) = 67ee105f46bb15b219b0ef888594928b453fe407
 SHA1 (patch-rpm__unpacker) = 1bd30245b1ad1c6de72c0ec63acbd76b95d79efb
+SHA1 (patch-sloccount) = 36f2b762aae891bfd0fdee52b0a34b286c16d5d5

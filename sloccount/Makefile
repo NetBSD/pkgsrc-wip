@@ -51,6 +51,12 @@ REPLACE_PERL+=		python_count
 REPLACE_PERL+=		simplecount
 REPLACE_PERL+=		sql_count
 
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing path to internal binaries.
+SUBST_STAGE.prefix=	post-patch
+SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_FILES.prefix=	sloccount
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/libexec/sloccount/sloccount ${DESTDIR}${PREFIX}/bin/sloccount
 	${GUNZIP_CMD} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sloccount.1.gz
