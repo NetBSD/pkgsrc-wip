@@ -7,7 +7,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
+#HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	Chinese input server
 
 USE_X11BASE=	yes

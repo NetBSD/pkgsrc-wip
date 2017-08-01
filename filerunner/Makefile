@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.cd.chalmers.se/~hch/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://www.cd.chalmers.se/~hch/filerunner.html
+#HOMEPAGE=	http://www.cd.chalmers.se/~hch/filerunner.html
 COMMENT=	Filemanager with FTP capabilities. Uses Tcl/Tk
 
 USE_X11BASE=	yes

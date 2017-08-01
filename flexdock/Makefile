@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://forge.scilab.org/index.php/p/flexdock/downloads/get/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://flexdock.dev.java.net/
+#HOMEPAGE=	https://flexdock.dev.java.net/
 COMMENT=	Swing windowing and docking framework
 LICENSE=	apache-2.0
 
