@@ -1,17 +1,18 @@
 # $NetBSD$
 
 DISTNAME=	objfw-0.90
-MASTER_SITES=	https://heap.zone/objfw/downloads/
 CATEGORIES=	devel
+MASTER_SITES=	https://heap.zone/objfw/downloads/
+
+MAINTAINER=	js@heap.zone
+HOMEPAGE=	https://heap.zone/objfw/
 COMMENT=	Portable, lightweight framework for the Objective-C language
 LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
-HOMEPAGE=	https://heap.zone/objfw/
-MAINTAINER=	js@heap.zone
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		objc
 CONFIGURE_ARGS+=	--enable-static
-CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
+CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:M*:Q} LDFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
