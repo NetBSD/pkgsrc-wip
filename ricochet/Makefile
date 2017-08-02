@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ricochet-1.1.2-src
+DISTNAME=	ricochet-1.1.4-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	chat
 MASTER_SITES=	https://ricochet.im/releases/${PKGVERSION_NOREV}/
@@ -21,7 +21,8 @@ INSTALLATION_DIRS+=	bin share/applications share/icons/hicolor/48x48/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
 
 pre-build:
-	cd ${WRKSRC} && ${QTDIR}/bin/qmake CONFIG+=release
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake \
+	    DEFINES+=RICOCHET_NO_PORTABLE CONFIG+=release
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ricochet ${DESTDIR}${PREFIX}/bin

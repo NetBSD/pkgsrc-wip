@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ricochet-1.1.2-src.tar.bz2) = dd4008591f210a87a221082fd2ed5344666b3cf9
-RMD160 (ricochet-1.1.2-src.tar.bz2) = 95f421e028db22b53ed2b8f19df86715f1d65d95
-SHA512 (ricochet-1.1.2-src.tar.bz2) = c647b9054fe2c8874ad5250d48552c54990107a53444e6d34f29a04ac246833835b7f3825f52cfe0e1fd7a1fff38033b0c1dc38024d57bd1314ee7ed30645ed3
-Size (ricochet-1.1.2-src.tar.bz2) = 1102760 bytes
+SHA1 (ricochet-1.1.4-src.tar.bz2) = 2a13d65cf13e864a469713c47b222760d01a1839
+RMD160 (ricochet-1.1.4-src.tar.bz2) = d737a18beda009cb8c1bfa98c1157e778629314b
+SHA512 (ricochet-1.1.4-src.tar.bz2) = a2f2b203beee98eeddc184bcbffa8c00ea9bee46121dce05feda0b39e1c05a82e1ae937b4c32e66dd15a0a1e7cc7e676b9f3ed9a9d3e0a4115e05c3019eb6f27
+Size (ricochet-1.1.4-src.tar.bz2) = 1183887 bytes
