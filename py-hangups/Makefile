@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2017/04/14 12:10:26 leot Exp $
 
-DISTNAME=	hangups-0.4.2
+DISTNAME=	hangups-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hangups/}
