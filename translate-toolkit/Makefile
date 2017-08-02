@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	translate-toolkit-2.2.3
+DISTNAME=	translate-toolkit-2.2.4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
 GITHUB_PROJECT=	translate
@@ -12,7 +12,7 @@ HOMEPAGE=	http://toolkit.translatehouse.org/
 COMMENT=	Essential Toolkit for Localization Engineers
 LICENSE=	gnu-gpl-v1
 
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1.9.0:../../databases/py-sqlite3
 
 USE_LANGUAGES=	c
