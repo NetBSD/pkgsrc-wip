@@ -2152,6 +2152,7 @@ SUBDIR+=	nmh
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
 SUBDIR+=	nodm
+SUBDIR+=	noice
 SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nomadio
