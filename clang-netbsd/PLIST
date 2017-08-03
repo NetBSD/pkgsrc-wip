@@ -353,6 +353,7 @@ include/clang/Lex/ScratchBuffer.h
 include/clang/Lex/Token.h
 include/clang/Lex/TokenConcatenation.h
 include/clang/Lex/TokenLexer.h
+include/clang/Lex/VariadicMacroSupport.h
 include/clang/Parse/AttrParserStringSwitches.inc
 include/clang/Parse/AttrSubMatchRulesParserStringSwitches.inc
 include/clang/Parse/ParseAST.h
@@ -452,6 +453,7 @@ include/clang/StaticAnalyzer/Core/PathSensitive/Environment.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ExplodedGraph.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ExprEngine.h
 include/clang/StaticAnalyzer/Core/PathSensitive/FunctionSummary.h
+include/clang/StaticAnalyzer/Core/PathSensitive/LoopUnrolling.h
 include/clang/StaticAnalyzer/Core/PathSensitive/LoopWidening.h
 include/clang/StaticAnalyzer/Core/PathSensitive/MemRegion.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ProgramState.h
@@ -515,6 +517,7 @@ lib/clang/${PKGVERSION}/include/altivec.h
 lib/clang/${PKGVERSION}/include/ammintrin.h
 lib/clang/${PKGVERSION}/include/arm_acle.h
 lib/clang/${PKGVERSION}/include/arm_neon.h
+lib/clang/${PKGVERSION}/include/arm64intr.h
 lib/clang/${PKGVERSION}/include/armintr.h
 lib/clang/${PKGVERSION}/include/avx2intrin.h
 lib/clang/${PKGVERSION}/include/avx512bwintrin.h
