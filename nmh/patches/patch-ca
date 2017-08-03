@@ -1,0 +1,74 @@
+$NetBSD: patch-ca,v 1.8 2014/09/06 16:07:43 schnoebe Exp $
+
+install config files into share/examples
+
+--- Makefile.in.orig	2017-08-03 02:22:59.000000000 +0000
++++ Makefile.in
+@@ -864,6 +864,7 @@ smtpserver = @smtpserver@
+ srcdir = @srcdir@
+ supported_locks = @supported_locks@
+ sysconfdir = @sysconfdir@
++egdir = @prefix@/share/examples/nmh
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -4625,46 +4626,46 @@ uninstall-dist_docs_contribDATA:
+ 	dir='$(DESTDIR)$(docs_contribdir)'; $(am__uninstall_files_from_dir)
+ install-dist_nmhetcDATA: $(dist_nmhetc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(dist_nmhetc_DATA)'; test -n "$(egdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(nmhetcdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(nmhetcdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
+ 	done
+ 
+ uninstall-dist_nmhetcDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(dist_nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(dist_nmhetc_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+ 	dir='$(DESTDIR)$(nmhetcdir)'; $(am__uninstall_files_from_dir)
+ install-nmhetcDATA: $(nmhetc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(nmhetc_DATA)'; test -n "$(egdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(nmhetcdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(nmhetcdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
+ 	done
+ 
+ uninstall-nmhetcDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(nmhetc_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+-	dir='$(DESTDIR)$(nmhetcdir)'; $(am__uninstall_files_from_dir)
++	dir='$(DESTDIR)$(egdir)'; $(am__uninstall_files_from_dir)
+ 
+ ID: $(am__tagged_files)
+ 	$(am__define_uniq_tagged_files); mkid -fID $$unique
