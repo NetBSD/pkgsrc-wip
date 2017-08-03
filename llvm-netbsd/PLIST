@@ -32,11 +32,13 @@ bin/llvm-mcmarkup
 bin/llvm-modextract
 bin/llvm-mt
 bin/llvm-nm
+bin/llvm-objcopy
 bin/llvm-objdump
 bin/llvm-opt-report
 bin/llvm-pdbutil
 bin/llvm-profdata
 bin/llvm-ranlib
+bin/llvm-rc
 bin/llvm-readelf
 bin/llvm-readobj
 bin/llvm-rtdyld
@@ -499,7 +501,6 @@ include/llvm/DebugInfo/MSF/IMSFFile.h
 include/llvm/DebugInfo/MSF/MSFBuilder.h
 include/llvm/DebugInfo/MSF/MSFCommon.h
 include/llvm/DebugInfo/MSF/MSFError.h
-include/llvm/DebugInfo/MSF/MSFStreamLayout.h
 include/llvm/DebugInfo/MSF/MappedBlockStream.h
 include/llvm/DebugInfo/PDB/ConcreteSymbolEnumerator.h
 include/llvm/DebugInfo/PDB/DIA/DIADataStream.h
@@ -528,6 +529,7 @@ include/llvm/DebugInfo/PDB/Native/DbiStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/EnumTables.h
 include/llvm/DebugInfo/PDB/Native/Formatters.h
 include/llvm/DebugInfo/PDB/Native/GlobalsStream.h
+include/llvm/DebugInfo/PDB/Native/GlobalsStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/Hash.h
 include/llvm/DebugInfo/PDB/Native/HashTable.h
 include/llvm/DebugInfo/PDB/Native/ISectionContribVisitor.h
@@ -1004,7 +1006,6 @@ include/llvm/Support/Valgrind.h
 include/llvm/Support/Watchdog.h
 include/llvm/Support/Win64EH.h
 include/llvm/Support/WindowsError.h
-include/llvm/Support/WindowsManifestMerger.h
 include/llvm/Support/YAMLParser.h
 include/llvm/Support/YAMLTraits.h
 include/llvm/Support/circular_raw_ostream.h
@@ -1173,6 +1174,7 @@ include/llvm/Transforms/Utils/ValueMapper.h
 include/llvm/Transforms/Vectorize.h
 include/llvm/Transforms/Vectorize/LoopVectorize.h
 include/llvm/Transforms/Vectorize/SLPVectorizer.h
+include/llvm/WindowsManifest/WindowsManifestMerger.h
 include/llvm/XRay/Graph.h
 include/llvm/XRay/InstrumentationMap.h
 include/llvm/XRay/Trace.h
@@ -1318,6 +1320,7 @@ lib/libLLVMTableGen.a
 lib/libLLVMTarget.a
 lib/libLLVMTransformUtils.a
 lib/libLLVMVectorize.a
+lib/libLLVMWindowsManifest.a
 ${PLIST.X86}lib/libLLVMX86AsmParser.a
 ${PLIST.X86}lib/libLLVMX86AsmPrinter.a
 ${PLIST.X86}lib/libLLVMX86CodeGen.a
