@@ -3097,7 +3097,7 @@ ${PLIST.unix}qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplu
 ${PLIST.unix}qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so
 ${PLIST.egl}qt5/plugins/platforms/libqeglfs.so
 qt5/plugins/platforms/libqminimal.so
-qt5/plugins/platforms/libqminimalegl.so
+${PLIST.egl}qt5/plugins/platforms/libqminimalegl.so
 qt5/plugins/platforms/libqoffscreen.so
 ${PLIST.unix}qt5/plugins/platforms/libqvnc.so
 ${PLIST.unix}qt5/plugins/platforms/libqxcb.so
