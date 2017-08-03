@@ -2148,6 +2148,7 @@ SUBDIR+=	ninka
 SUBDIR+=	nios2-gdb
 SUBDIR+=	nitrogen
 SUBDIR+=	njb-sharp
+SUBDIR+=	nmh
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
 SUBDIR+=	nodm
