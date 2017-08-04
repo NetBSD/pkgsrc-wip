@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-mednafen-saturn-20170716-f77b4a002c49f5ade68137ac10dd8eed8792519a.tar.gz) = 99e080eb897da0564a6f02d7036a7956d552597c
-RMD160 (libretro-mednafen-saturn-20170716-f77b4a002c49f5ade68137ac10dd8eed8792519a.tar.gz) = d1562ada1a5a26519674344bed6dec0ecc6c8270
-SHA512 (libretro-mednafen-saturn-20170716-f77b4a002c49f5ade68137ac10dd8eed8792519a.tar.gz) = 68a6c31adb084b431163d34cc4092d1b9a7f74392c9fd8a23d6cb8b6511b71cdd44202fbde510cc405ebe48e0a7ee763e9e8245bc0eeea5ed3d90b3de028bd36
-Size (libretro-mednafen-saturn-20170716-f77b4a002c49f5ade68137ac10dd8eed8792519a.tar.gz) = 977538 bytes
+SHA1 (libretro-mednafen-saturn-20170802-be3d5e17cfb5774703d4afe555e110e08a634f60.tar.gz) = fa96b33807af4a25d40967085beba89d865a1038
+RMD160 (libretro-mednafen-saturn-20170802-be3d5e17cfb5774703d4afe555e110e08a634f60.tar.gz) = f6a173680a59d9f045d22028878c5250f9b0adcc
+SHA512 (libretro-mednafen-saturn-20170802-be3d5e17cfb5774703d4afe555e110e08a634f60.tar.gz) = 5eceee77fc3723d652f7f0038b13f27e052e55f8d1cea8682c06b42b53bf110190aca3dd61828e6f7cd6f1c1d906cddb3e3df6cea49d2c7841300bedf0272cd8
+Size (libretro-mednafen-saturn-20170802-be3d5e17cfb5774703d4afe555e110e08a634f60.tar.gz) = 1597517 bytes
