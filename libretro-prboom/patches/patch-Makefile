@@ -2,12 +2,12 @@ $NetBSD$
 
 Honor LDFLAGS.
 
---- Makefile.orig	2017-04-10 14:31:33.000000000 +0000
+--- Makefile.orig	2017-07-07 13:12:29.000000000 +0000
 +++ Makefile
 @@ -41,7 +41,6 @@ ifneq ($(GIT_VERSION)," unknown")
  endif
  
- LIBM    := -lm
+ LIBS    := -lm
 -LDFLAGS := 
  
  ifeq ($(STATIC_LINKING),1)

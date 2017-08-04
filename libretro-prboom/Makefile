@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-prboom-20170410
+DISTNAME=	libretro-prboom-20170707
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,7 +8,7 @@ HOMEPAGE=	https://wiki.libretro.com/index.php?title=PrBoom
 COMMENT=	Libretro core for Doom
 LICENSE=	gnu-gpl-v2
 
-GITHUB_TAG=	e09831c627a84c34d72c3cc892566e1472abb598
+GITHUB_TAG=	1b5c4e469fb87fa87c0f130f53096ebe78268cad
 EXTRACT_USING=	bsdtar
 
 USE_TOOLS=	gmake
