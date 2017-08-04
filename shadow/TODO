@@ -31,4 +31,4 @@ so provide that file
 but the manpage says: no longer used by programs ... handled by PAM now
 
 - This package has known vulnerabilities, please investigate and fix
-  if possible. (see: CVE-2011-0721, CVE-2016-6252)
+  if possible. (see: CVE-2011-0721, CVE-2016-6252, CVE-2017-12424)
