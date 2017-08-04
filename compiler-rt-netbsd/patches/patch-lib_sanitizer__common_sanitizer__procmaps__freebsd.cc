@@ -22,14 +22,7 @@ $NetBSD$
  
  // Fix 'kinfo_vmentry' definition on FreeBSD prior v9.2 in 32-bit mode.
  #if SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32)
-@@ -28,19 +32,31 @@
- # endif
- #endif
- 
-+#ifndef __arraycount
-+#define __arraycount(__x) (sizeof(__x) / sizeof(__x[0]))
-+#endif
-+
+@@ -31,16 +35,24 @@
  namespace __sanitizer {
  
  void ReadProcMaps(ProcSelfMapsBuff *proc_maps) {
@@ -45,7 +38,7 @@ $NetBSD$
 +
    size_t Size = 0;
 -  int Err = sysctl(Mib, 4, NULL, &Size, NULL, 0);
-+  int Err = sysctl(Mib, __arraycount(Mib), NULL, &Size, NULL, 0);
++  int Err = sysctl(Mib, ARRAY_SIZE(Mib), NULL, &Size, NULL, 0);
    CHECK_EQ(Err, 0);
    CHECK_GT(Size, 0);
  
@@ -53,11 +46,11 @@ $NetBSD$
    void *VmMap = MmapOrDie(MmapedSize, "ReadProcMaps()");
    Size = MmapedSize;
 -  Err = sysctl(Mib, 4, VmMap, &Size, NULL, 0);
-+  Err = sysctl(Mib, __arraycount(Mib), VmMap, &Size, NULL, 0);
++  Err = sysctl(Mib, ARRAY_SIZE(Mib), VmMap, &Size, NULL, 0);
    CHECK_EQ(Err, 0);
  
    proc_maps->data = (char*)VmMap;
-@@ -71,7 +87,11 @@ bool MemoryMappingLayout::Next(MemoryMap
+@@ -71,7 +83,11 @@ bool MemoryMappingLayout::Next(MemoryMap
                        VmEntry->kve_path);
    }
  
