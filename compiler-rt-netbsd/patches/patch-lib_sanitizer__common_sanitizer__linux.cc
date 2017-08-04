@@ -16,7 +16,7 @@ $NetBSD$
  #include "sanitizer_symbolizer.h"
  
 -#if !SANITIZER_FREEBSD
-+#if !SANITIZER_FREEBSD && !SANITIZER_NETBSD
++#if SANITIZER_LINUX
  #include <asm/param.h>
  #endif
  
@@ -52,7 +52,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(mmap), (uptr)addr, length, prot, flags, fd,
                            offset);
  #else
-@@ -182,26 +195,39 @@ uptr internal_open(const char *filename,
+@@ -182,26 +195,38 @@ uptr internal_open(const char *filename,
  
  uptr internal_read(fd_t fd, void *buf, uptr count) {
    sptr res;
@@ -88,12 +88,11 @@ $NetBSD$
  }
  
 -#if !SANITIZER_LINUX_USES_64BIT_SYSCALLS && !SANITIZER_FREEBSD
-+#if !SANITIZER_LINUX_USES_64BIT_SYSCALLS && !SANITIZER_FREEBSD && \
-+    !SANITIZER_NETBSD
++#if !SANITIZER_LINUX_USES_64BIT_SYSCALLS && SANITIZER_LINUX
  static void stat64_to_stat(struct stat64 *in, struct stat *out) {
    internal_memset(out, 0, sizeof(*out));
    out->st_dev = in->st_dev;
-@@ -240,7 +266,7 @@ static void kernel_stat_to_stat(struct k
+@@ -240,7 +265,7 @@ static void kernel_stat_to_stat(struct k
  #endif
  
  uptr internal_stat(const char *path, void *buf) {
@@ -102,7 +101,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(fstatat), AT_FDCWD, (uptr)path,
                            (uptr)buf, 0);
  #elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
-@@ -265,7 +291,9 @@ uptr internal_stat(const char *path, voi
+@@ -265,7 +290,9 @@ uptr internal_stat(const char *path, voi
  }
  
  uptr internal_lstat(const char *path, void *buf) {
@@ -113,7 +112,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(fstatat), AT_FDCWD, (uptr)path,
                            (uptr)buf, AT_SYMLINK_NOFOLLOW);
  #elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
-@@ -290,7 +318,7 @@ uptr internal_lstat(const char *path, vo
+@@ -290,7 +317,7 @@ uptr internal_lstat(const char *path, vo
  }
  
  uptr internal_fstat(fd_t fd, void *buf) {
@@ -122,7 +121,7 @@ $NetBSD$
  # if SANITIZER_MIPS64
    // For mips64, fstat syscall fills buffer in the format of kernel_stat
    struct kernel_stat kbuf;
-@@ -324,7 +352,9 @@ uptr internal_dup2(int oldfd, int newfd)
+@@ -324,7 +351,9 @@ uptr internal_dup2(int oldfd, int newfd)
  }
  
  uptr internal_readlink(const char *path, char *buf, uptr bufsize) {
@@ -133,7 +132,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(readlinkat), AT_FDCWD,
                            (uptr)path, (uptr)buf, bufsize);
  #else
-@@ -354,7 +384,7 @@ uptr internal_sched_yield() {
+@@ -354,7 +383,7 @@ uptr internal_sched_yield() {
  }
  
  void internal__exit(int exitcode) {
@@ -142,7 +141,7 @@ $NetBSD$
    internal_syscall(SYSCALL(exit), exitcode);
  #else
    internal_syscall(SYSCALL(exit_group), exitcode);
-@@ -393,19 +423,25 @@ bool FileExists(const char *filename) {
+@@ -393,19 +422,25 @@ bool FileExists(const char *filename) {
  tid_t GetTid() {
  #if SANITIZER_FREEBSD
    return (uptr)pthread_self();
@@ -162,14 +161,14 @@ $NetBSD$
  #endif
    internal_memset(&tv, 0, sizeof(tv));
 +#if SANITIZER_NETBSD
-+  internal_syscall(SYSCALL(gettimeofday), &tv, NULL);
++  internal_syscall_ptr(SYSCALL(gettimeofday), &tv, NULL);
 +#else
    internal_syscall(SYSCALL(gettimeofday), (uptr)&tv, 0);
 +#endif
    return (u64)tv.tv_sec * 1000*1000*1000 + tv.tv_usec * 1000;
  }
  
-@@ -413,7 +449,7 @@ u64 NanoTime() {
+@@ -413,7 +448,7 @@ u64 NanoTime() {
  // 'environ' array (on FreeBSD) and does not use libc. This function should be
  // called first inside __asan_init.
  const char *GetEnv(const char *name) {
@@ -178,7 +177,7 @@ $NetBSD$
    if (::environ != 0) {
      uptr NameLen = internal_strlen(name);
      for (char **Env = ::environ; *Env != 0; Env++) {
-@@ -547,6 +583,8 @@ void BlockingMutex::Lock() {
+@@ -547,6 +582,8 @@ void BlockingMutex::Lock() {
    while (atomic_exchange(m, MtxSleeping, memory_order_acquire) != MtxUnlocked) {
  #if SANITIZER_FREEBSD
      _umtx_op(m, UMTX_OP_WAIT_UINT, MtxSleeping, 0, 0);
@@ -187,7 +186,7 @@ $NetBSD$
  #else
      internal_syscall(SYSCALL(futex), (uptr)m, FUTEX_WAIT, MtxSleeping, 0, 0, 0);
  #endif
-@@ -560,6 +598,8 @@ void BlockingMutex::Unlock() {
+@@ -560,6 +597,8 @@ void BlockingMutex::Unlock() {
    if (v == MtxSleeping) {
  #if SANITIZER_FREEBSD
      _umtx_op(m, UMTX_OP_WAKE, 1, 0, 0);
@@ -196,7 +195,7 @@ $NetBSD$
  #else
      internal_syscall(SYSCALL(futex), (uptr)m, FUTEX_WAKE, 1, 0, 0, 0);
  #endif
-@@ -575,6 +615,17 @@ void BlockingMutex::CheckLocked() {
+@@ -575,6 +614,17 @@ void BlockingMutex::CheckLocked() {
  // The actual size of this structure is specified by d_reclen.
  // Note that getdents64 uses a different structure format. We only provide the
  // 32-bit syscall here.
@@ -214,7 +213,7 @@ $NetBSD$
  struct linux_dirent {
  #if SANITIZER_X32 || defined(__aarch64__)
    u64 d_ino;
-@@ -589,16 +640,34 @@ struct linux_dirent {
+@@ -589,16 +639,34 @@ struct linux_dirent {
  #endif
    char               d_name[256];
  };
@@ -249,7 +248,7 @@ $NetBSD$
  }
  
  uptr internal_getpid() {
-@@ -610,7 +679,9 @@ uptr internal_getppid() {
+@@ -610,7 +678,9 @@ uptr internal_getppid() {
  }
  
  uptr internal_getdents(fd_t fd, struct linux_dirent *dirp, unsigned int count) {
@@ -260,7 +259,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(getdirentries), fd, (uptr)dirp, count, NULL);
  #elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
    return internal_syscall(SYSCALL(getdents64), fd, (uptr)dirp, count);
-@@ -620,7 +691,11 @@ uptr internal_getdents(fd_t fd, struct l
+@@ -620,7 +690,11 @@ uptr internal_getdents(fd_t fd, struct l
  }
  
  uptr internal_lseek(fd_t fd, OFF_T offset, int whence) {
@@ -272,7 +271,7 @@ $NetBSD$
  }
  
  #if SANITIZER_LINUX
-@@ -711,7 +786,7 @@ int internal_sigaction_syscall(int signu
+@@ -711,7 +785,7 @@ int internal_sigaction_syscall(int signu
  
  uptr internal_sigprocmask(int how, __sanitizer_sigset_t *set,
      __sanitizer_sigset_t *oldset) {
@@ -281,7 +280,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(sigprocmask), how, set, oldset);
  #else
    __sanitizer_kernel_sigset_t *k_set = (__sanitizer_kernel_sigset_t *)set;
-@@ -856,7 +931,9 @@ static uptr GetKernelAreaSize() {
+@@ -856,7 +930,9 @@ static uptr GetKernelAreaSize() {
  #endif  // SANITIZER_WORDSIZE == 32
  
  uptr GetMaxVirtualAddress() {
@@ -292,7 +291,7 @@ $NetBSD$
  # if defined(__powerpc64__) || defined(__aarch64__)
    // On PowerPC64 we have two different address space layouts: 44- and 46-bit.
    // We somehow need to figure out which one we are using now and choose
-@@ -900,8 +977,12 @@ uptr GetPageSize() {
+@@ -900,8 +976,12 @@ uptr GetPageSize() {
  }
  
  uptr ReadBinaryName(/*out*/char *buf, uptr buf_len) {
@@ -306,7 +305,7 @@ $NetBSD$
    const char *default_module_name = "kern.proc.pathname";
    size_t Size = buf_len;
    bool IsErr = (sysctl(Mib, ARRAY_SIZE(Mib), buf, &Size, NULL, 0) != 0);
-@@ -1545,6 +1626,8 @@ SignalContext::WriteFlag SignalContext::
+@@ -1545,6 +1625,8 @@ SignalContext::WriteFlag SignalContext::
    static const uptr PF_WRITE = 1U << 1;
  #if SANITIZER_FREEBSD
    uptr err = ucontext->uc_mcontext.mc_err;
@@ -315,7 +314,7 @@ $NetBSD$
  #else
    uptr err = ucontext->uc_mcontext.gregs[REG_ERR];
  #endif
-@@ -1591,6 +1674,11 @@ void GetPcSpBp(void *context, uptr *pc, 
+@@ -1591,6 +1673,11 @@ void GetPcSpBp(void *context, uptr *pc, 
    *pc = ucontext->uc_mcontext.mc_rip;
    *bp = ucontext->uc_mcontext.mc_rbp;
    *sp = ucontext->uc_mcontext.mc_rsp;
@@ -327,7 +326,7 @@ $NetBSD$
  # else
    ucontext_t *ucontext = (ucontext_t*)context;
    *pc = ucontext->uc_mcontext.gregs[REG_RIP];
-@@ -1603,6 +1691,11 @@ void GetPcSpBp(void *context, uptr *pc, 
+@@ -1603,6 +1690,11 @@ void GetPcSpBp(void *context, uptr *pc, 
    *pc = ucontext->uc_mcontext.mc_eip;
    *bp = ucontext->uc_mcontext.mc_ebp;
    *sp = ucontext->uc_mcontext.mc_esp;
@@ -339,7 +338,7 @@ $NetBSD$
  # else
    ucontext_t *ucontext = (ucontext_t*)context;
    *pc = ucontext->uc_mcontext.gregs[REG_EIP];
-@@ -1704,4 +1797,4 @@ bool GetRandom(void *buffer, uptr length
+@@ -1704,4 +1796,4 @@ bool GetRandom(void *buffer, uptr length
  
  } // namespace __sanitizer
  
