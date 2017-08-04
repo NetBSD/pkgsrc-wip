@@ -1,17 +1,17 @@
 $NetBSD$
 
---- cmake/config-ix.cmake.orig	2017-07-16 22:40:10.000000000 +0000
+--- cmake/config-ix.cmake.orig	2017-08-03 21:24:37.000000000 +0000
 +++ cmake/config-ix.cmake
-@@ -440,7 +440,7 @@ set(COMPILER_RT_SANITIZERS_TO_BUILD ${AL
+@@ -470,7 +470,7 @@ set(COMPILER_RT_SANITIZERS_TO_BUILD ${AL
  list_replace(COMPILER_RT_SANITIZERS_TO_BUILD all "${ALL_SANITIZERS}")
  
  if (SANITIZER_COMMON_SUPPORTED_ARCH AND NOT LLVM_USE_SANITIZER AND
--    (OS_NAME MATCHES "Android|Darwin|Linux|FreeBSD" OR
-+    (OS_NAME MATCHES "Android|Darwin|Linux|FreeBSD|NetBSD" OR
+-    (OS_NAME MATCHES "Android|Darwin|Linux|FreeBSD|Fuchsia" OR
++    (OS_NAME MATCHES "Android|Darwin|Linux|FreeBSD|NetBSD|Fuchsia" OR
      (OS_NAME MATCHES "Windows" AND (NOT MINGW AND NOT CYGWIN))))
    set(COMPILER_RT_HAS_SANITIZER_COMMON TRUE)
  else()
-@@ -453,7 +453,8 @@ else()
+@@ -483,7 +483,8 @@ else()
    set(COMPILER_RT_HAS_INTERCEPTION FALSE)
  endif()
  
