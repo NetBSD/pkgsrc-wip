@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-4do-20170423
+DISTNAME=	libretro-4do-20170724
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,7 +8,7 @@ HOMEPAGE=	https://wiki.libretro.com/index.php?title=4DO
 COMMENT=	Libretro core for 3DO emulation
 
 GITHUB_PROJECT=	4do-libretro
-GITHUB_TAG=	1c3ee3cd4a327ad87fb7fcfd93fddc851119cb6b
+GITHUB_TAG=	368a8eb2b8eb61a17d1d5be6edc37775820634c7
 
 USE_TOOLS=	gmake
 
