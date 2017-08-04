@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (OpenIPMI-2.0.24.tar.gz) = 3d62e3610c8ef472bb7199757a1e5707fc905274
+RMD160 (OpenIPMI-2.0.24.tar.gz) = ce2d73cd88118eed311ced3572c05064e9e42bdc
+SHA512 (OpenIPMI-2.0.24.tar.gz) = bf768efff80fd042a99308c0b9fa45a7608b6a9a025f0d564e32e2b224d0c6af8bf8aba8418fc5411c43b2fec74eeb989c3beb6b2b1828d7bc73eea53f0670a8
+Size (OpenIPMI-2.0.24.tar.gz) = 2508111 bytes
+SHA1 (patch-configure) = 3e1a2e56a328225f9049dbbfa8120a682c14be8e
+SHA1 (patch-ipmi.init) = 4d28bc719d7f00a98d03d1256d88cc4eb5a4011a

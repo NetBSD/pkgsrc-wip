@@ -1,0 +1,23 @@
+$NetBSD$
+#remove == for portability
+
+--- ipmi.init.orig     2017-08-03 01:39:15.000000000 +0000
++++ ipmi.init
+@@ -89,7 +89,7 @@ INTF_NUM=0
+ IPMI_SMB_MODULE_NAME="ipmi_smb"
+ IPMI_SI_MODULE_NAME="ipmi_si"
+ kernel=`uname -r | cut -d. -f1-2`
+-if [ "${kernel}" == "2.4" ]; then
++if [ "${kernel}" = "2.4" ]; then
+     IPMI_SMB_MODULE_NAME="ipmi_smb_intf"
+     IPMI_SI_MODULE_NAME="ipmi_si_drv"
+ fi
+@@ -283,7 +283,7 @@ start_powercontrol_common()
+ {
+       local poweroff_opts=""
+       load_hw_modules
+-      if [ "${IPMI_POWERCYCLE}" == "yes" ]; then
++      if [ "${IPMI_POWERCYCLE}" = "yes" ]; then
+           modinfo ipmi_poweroff 2>/dev/null | grep poweroff_control > /dev/null 2>&1 && \
+               poweroff_opts="poweroff_control=2"
+           modinfo ipmi_poweroff 2>/dev/null | grep poweroff_powercycle > /dev/null 2>&1 && \

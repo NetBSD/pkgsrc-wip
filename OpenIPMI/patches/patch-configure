@@ -1,0 +1,32 @@
+$NetBSD$
+#remove == for portability
+
+--- configure.orig     2017-08-03 01:48:38.000000000 +0000
++++ configure
+@@ -13192,7 +13192,7 @@ fi
+ 
+ echo "checking for tcl... $havetcl"
+ 
+-if test "x$havetcl" == "xyes"; then
++if test "x$havetcl" = "xyes"; then
+    OLDLIBS="$LIBS"
+    LIBS="$LIBS $TCL_LIBS"
+    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -14048,7 +14048,7 @@ fi
+ if test "x$diaprog" != "x"; then
+    diaver=`$diaprog --version 2>&1 | sed 's/Dia version \([^,]*\), .*$/\1/'`
+    tmp=`echo $diaver | sed 's/^[0-9.]\+$//'`
+-   if test "x$diaver" == "x" -o "x$tmp" != 'x'; then
++   if test "x$diaver" = "x" -o "x$tmp" != 'x'; then
+       # Couldn't get the dia version, give up.
+       echo "Couldn't determine the dia version from '$diaver'"
+    else
+@@ -14188,7 +14188,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-if test "x$DIA" == "x" -o "x$LATEX" == "x" -o "x$BIBTEX" == "x" -o "x$DVIPDF" == "x"; then
++if test "x$DIA" = "x" -o "x$LATEX" = "x" -o "x$BIBTEX" = "x" -o "x$DVIPDF" = "x"; then
+    echo "dia, latex, bibtex, and/or dvipdf is not present or not valid, you cannot regenerate documentation"
+    echo "The documentation comes already generated, so this is generally not a problem"
+ fi
