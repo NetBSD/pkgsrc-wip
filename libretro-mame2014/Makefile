@@ -46,5 +46,9 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/mame2014_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/mame2014_libretro.so
 
+.include "../../audio/flac/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

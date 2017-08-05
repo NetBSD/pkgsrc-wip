@@ -1,10 +1,32 @@
 $NetBSD$
 
-Avoid linuxisms.
+Avoid linuxisms and don't use bundled libraries.
 
---- Makefile.orig	2017-03-16 20:39:20.000000000 +0000
+--- Makefile.orig	2017-07-22 21:19:48.000000000 +0000
 +++ Makefile
-@@ -135,13 +135,13 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -100,21 +100,6 @@ endif
+ $(info CFLAGS = $(CONLYFLAGS))
+ $(info CPPFLAGS = $(CPPONLYFLAGS))
+ 
+-# uncomment next line to build expat as part of MAME build
+-BUILD_EXPAT = 1
+-
+-# uncomment next line to build zlib as part of MAME build
+-ifneq ($(platform), android)
+-   ifneq ($(platform), emscripten)
+-      BUILD_ZLIB = 1
+-   endif
+-endif
+-# uncomment next line to build libflac as part of MAME build
+-BUILD_FLAC = 1
+-
+-# uncomment next line to build jpeglib as part of MAME build
+-BUILD_JPEGLIB = 1
+-
+ # uncomment next line to build PortMidi as part of MAME/MESS build
+ #BUILD_MIDILIB = 1
+ VRENDER ?= soft
+@@ -135,13 +120,13 @@ ifneq (,$(findstring unix,$(platform)))
     REALCC ?= gcc
     NATIVECC ?= g++
     NATIVECFLAGS ?= -std=gnu99
@@ -20,3 +42,12 @@ Avoid linuxisms.
     ifeq ($(firstword $(filter x86_64,$(UNAME))),x86_64)
        PTR64 = 1
     endif
+@@ -764,7 +749,7 @@ endif
+ 
+ ifneq (,$(findstring clang,$(CC)))
+ ifneq ($(platform), android)
+-LIBS += -lstdc++ -lpthread
++LIBS += -pthread
+ endif
+ endif
+ #-------------------------------------------------
