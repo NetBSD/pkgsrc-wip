@@ -6,7 +6,6 @@ CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	clang
 GIT_REPO.clang=		git://github.com/llvm-mirror/clang.git
-GIT_REVISION.clang=	58123a81df74bcd2051b11f77a6a38277764a0d7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clang.llvm.org/

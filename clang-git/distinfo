@@ -12,7 +12,4 @@ Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
 SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
 RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
-SHA1 (patch-lib_Driver_ToolChains_CommonArgs.cpp) = 285bbfc2cdc058e53e8160bd6aff1ce5298b76e5
-SHA1 (patch-lib_Driver_ToolChains_NetBSD.cpp) = 6ddeadc54bed840bd7654ec602dfbd20b071f2d9
-SHA1 (patch-lib_Driver_ToolChains_NetBSD.h) = 4891098cce9cab17e01924fa7ea3a9b7cff69b26
 SHA1 (patch-tools_clang-format_CMakeLists.txt) = f119d2a94cbfb8c00a285d1aa7789ed26f8309cf
