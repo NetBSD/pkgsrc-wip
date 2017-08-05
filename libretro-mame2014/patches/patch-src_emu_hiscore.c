@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix build with clang.
+
 --- src/emu/hiscore.c.orig	2017-03-16 20:39:20.000000000 +0000
 +++ src/emu/hiscore.c
 @@ -36,7 +36,7 @@ static void copy_to_memory (running_mach
