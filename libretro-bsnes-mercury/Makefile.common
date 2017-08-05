@@ -4,15 +4,16 @@
 # used by wip/libretro-bsnes-mercury-accuracy/Makefile
 # used by wip/libretro-bsnes-mercury-performance/Makefile
 
-DISTNAME=	libretro-bsnes-mercury-20170510
+DISTNAME=	libretro-bsnes-mercury-20170628
 PKGNAME=	${DISTNAME:S/libretro-bsnes-mercury/libretro-bsnes-mercury-${BSNES_PROFILE}/}
 CATEGORIES=	emulators
+
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=Bsnes-mercury
 LICENSE=	gnu-gpl-v3
 
 GITHUB_PROJECT=	bsnes-mercury
-GITHUB_TAG=	29a435783b1da1dcaeeb64fed022f089e6bbf2ec
+GITHUB_TAG=	b68bd0acd7326372ee03efe033efe50fa3fd91e9
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
