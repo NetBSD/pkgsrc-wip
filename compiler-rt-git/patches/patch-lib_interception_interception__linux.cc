@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/interception/interception_linux.cc.orig	2017-07-03 15:33:06.000000000 +0000
+--- lib/interception/interception_linux.cc.orig	2017-07-04 05:53:20.000000000 +0000
 +++ lib/interception/interception_linux.cc
 @@ -12,14 +12,26 @@
  // Linux-specific interception methods.

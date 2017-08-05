@@ -1,11 +1,10 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	compiler-rt-5.0.0
+PKGNAME=	compiler-rt-6.0.0
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	compiler-rt
 GIT_REPO.compiler-rt=	https://github.com/llvm-mirror/compiler-rt.git
-GIT_REVISION.compiler-rt=	6ee59ff2a0b91f2224d38adb3fdb2dd5aefc107b
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiler-rt.llvm.org/
