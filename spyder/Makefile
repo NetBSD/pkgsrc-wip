@@ -13,8 +13,6 @@ LICENSE=	mit
 DEPENDS+= 	${PYPKGPREFIX}-rope>=0.9.3:../../devel/py-rope
 DEPENDS+= 	${PYPKGPREFIX}-sphinx>=1.2.3:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-rope
-
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
