@@ -8,7 +8,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://farsight.freedesktop.org/releases/gst-plugins-farsight/
 
 MAINTAINER=	yacht@users.sourceforge.net
-HOMEPAGE=	http://farsight.freedesktop.org/wiki/
+#HOMEPAGE=	http://farsight.freedesktop.org/wiki/
 COMMENT=	GStreamer farsight2 plugin
 LICENSE=	gnu-gpl-v2
 
