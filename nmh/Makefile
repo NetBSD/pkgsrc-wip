@@ -90,6 +90,8 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 CONFIGURE_ENV+=		ac_cv_func_arc4random=no
 .endif
 
+TEST_TARGET=		check
+
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist \
 	    ${DESTDIR}${EGDIR}/mhn.defaults

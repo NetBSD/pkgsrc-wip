@@ -1,6 +1,9 @@
 $NetBSD: patch-ca,v 1.8 2014/09/06 16:07:43 schnoebe Exp $
 
-install config files into share/examples
+- Introduce $egdir and install all configuration files in it, in order to
+  properly use CONF_FILES to manage configuration files for pkgsrc.
+- Adjust TEST_ENVIRONMENT in order to use $egdir instead of $nmhetcdir
+  because $nmhetcdir is not available in `test' phase.
 
 --- Makefile.in.orig	2017-08-03 02:22:59.000000000 +0000
 +++ Makefile.in
@@ -12,6 +15,17 @@ install config files into share/examples
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
+@@ -881,8 +882,8 @@ TESTS_ENVIRONMENT = MH_OBJ_DIR="@abs_bui
+ 		    CURL_USER_AGENT='@CURL_USER_AGENT@' \
+ 		    MH_TEST_DIR=`cd "@abs_builddir@" && pwd -P`/test/testdir \
+ 		    nmhlibexecdir="$(nmhlibexecdir)" bindir="$(bindir)" \
+-		    mandir="$(mandir)" nmhetcdir="$(nmhetcdir)" \
+-		    nmhetcdirinst="@nmhetcdirinst@$(nmhetcdir)" \
++		    mandir="$(mandir)" nmhetcdir="$(egdir)" \
++		    nmhetcdirinst="@nmhetcdirinst@$(egdir)" \
+ 		    supported_locks="$(supported_locks)" \
+ 		    default_locking="${default_locking}" \
+ 		    MULTIBYTE_ENABLED=$(MULTIBYTE_ENABLED) \
 @@ -4625,46 +4626,46 @@ uninstall-dist_docs_contribDATA:
  	dir='$(DESTDIR)$(docs_contribdir)'; $(am__uninstall_files_from_dir)
  install-dist_nmhetcDATA: $(dist_nmhetc_DATA)
