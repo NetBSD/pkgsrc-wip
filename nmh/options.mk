@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.4 2012/08/31 02:09:49 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nmh
-PKG_SUPPORTED_OPTIONS=		nmh-backup-hash sasl tls
+PKG_SUPPORTED_OPTIONS=		nmh-backup-hash oauth sasl tls
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,6 +13,13 @@ PKG_SUPPORTED_OPTIONS=		nmh-backup-hash sasl tls
 CONFIGURE_ARGS+=	--with-hash-backup
 .else
 CONFIGURE_ARGS+=	--without-hash-backup
+.endif
+
+.if !empty(PKG_OPTIONS:Moauth)
+CONFIGURE_ARGS+=	--with-oauth
+.include "../../www/curl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-oauth
 .endif
 
 .if !empty(PKG_OPTIONS:Msasl)
