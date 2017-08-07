@@ -4,3 +4,5 @@ SHA1 (qttools-opensource-src-5.9.1.tar.xz) = 56b9206e47b21614e8be6c96d033a7afbd2
 RMD160 (qttools-opensource-src-5.9.1.tar.xz) = ca550fa94039268c717df1b6ca4f61f7fb8c715b
 SHA512 (qttools-opensource-src-5.9.1.tar.xz) = 689d0d19b56c333862dc3270b72e83ad640c0b6462c37b13c5ad522338d2d7e105c88d47f506243b5fcf4d5813b63ce559049977e8d2c3e4fd1d7c5be9cd0a3f
 Size (qttools-opensource-src-5.9.1.tar.xz) = 9740532 bytes
+SHA1 (patch-src_assistant_assistant_assistant.pro) = 924ccf851fe96f6838bbfe906793839b8a869ac4
+SHA1 (patch-src_designer_src_plugins_plugins.pro) = c82d154785e19ebfb3e191f08c8e7f9b07458d4a
