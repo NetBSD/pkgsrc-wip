@@ -15,7 +15,6 @@ Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
 SHA1 (patch-cmake_config-ix.cmake) = 497da73e6ce4abe19f048a94b4d80b92c0ce7e82
 SHA1 (patch-lib_interception_interception__linux.cc) = 41e29e48d879a7c1a8e8c5c466439310783d5e9f
 SHA1 (patch-lib_interception_interception__linux.h) = ebbdd314aeff8be22107a78872a71b9606748b36
-SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = f84e3442e72b6d07ad7c8e8fcf44718c547e2a93
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 5d09c96941940fb7bb21b83161a5723140ac31e6
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.h) = b3177dc169208b1b3e0c951fe3fd9c07e82fff49
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = 36a89517584891a1a50536a681a5d42e99ef904d
