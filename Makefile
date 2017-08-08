@@ -1646,7 +1646,6 @@ SUBDIR+=	libffi-git
 SUBDIR+=	libfirm-git
 SUBDIR+=	libfolks
 SUBDIR+=	libfplll
-SUBDIR+=	libfpx
 SUBDIR+=	libftdi1
 SUBDIR+=	libgadu
 SUBDIR+=	libgda-bdb
