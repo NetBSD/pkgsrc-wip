@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/04/25 14:20:47 tnn Exp $
 
-DISTNAME=	retroarch-1.6.3
+DISTNAME=	retroarch-1.6.4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Official reference frontend for the libretro API
 LICENSE=	gnu-gpl-v3
 
 GITHUB_PROJECT=	RetroArch
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HAS_CONFIGURE=	yes
 
