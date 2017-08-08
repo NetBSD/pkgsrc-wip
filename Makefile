@@ -4543,7 +4543,6 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbmc
 SUBDIR+=	xbnbt
 SUBDIR+=	xbsql
-SUBDIR+=	xcb-util-xrm
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcursor-themes

@@ -1,4 +1,0 @@
-@comment $NetBSD$
-include/xcb/xcb_xrm.h
-lib/libxcb-xrm.la
-lib/pkgconfig/xcb-xrm.pc
