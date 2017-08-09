@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.49 2016/02/25 13:37:46 jperkin Exp $
+# $NetBSD: options.mk,v 1.57 2017/07/01 12:48:10 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -7,33 +7,15 @@ PKG_SUPPORTED_OPTIONS+=		vdpau vaapi
 
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
 
+.if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		dri3
-# dri3 working requires kernel support for dma_buf
-# .if ${OPSYS} == "Linux"
-# PKG_SUGGESTED_OPTIONS+=		dri3
-# .endif
+.endif
 
 # The LLVM option enables JIT accelerated software rendering and
 # is also required to support the latest RADEON GPUs, so enable it
 # by default on platforms where such GPUs might be encountered.
-.if \
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) ||	\
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-*arm*)
-PKG_SUGGESTED_OPTIONS+=		llvm
-.endif
-
-.if	(!empty(MACHINE_PLATFORM:MLinux-*-i386) ||	\
-	 !empty(MACHINE_PLATFORM:MLinux-*-x86_64)) &&	\
-	(!empty(CC_VERSION:Mgcc-4.[89].*) ||		\
-	 !empty(CC_VERSION:Mgcc-[56].*))
-PKG_SUGGESTED_OPTIONS+=		llvm
-.endif
-
-.if \
-	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
-	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
+	${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
@@ -247,6 +229,7 @@ CONFIGURE_ARGS+=	--enable-llvm-shared-libs
 # CONFIGURE_ARGS+=	--enable-r600-llvm-compiler
 .include "../../devel/libelf/buildlink3.mk"
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
+BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=4.0
 .include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
 .else # !llvm

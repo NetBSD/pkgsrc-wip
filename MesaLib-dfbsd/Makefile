@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2016/10/20 12:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2017/03/22 20:22:31 markd Exp $
 
-DISTNAME=	mesa-17.1.2
+DISTNAME=	mesa-17.1.6
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
-# Waiting for 17.0.1 subdirectory to be created
 # MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +16,9 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison pkg-config gmake flex
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
+
+#CFLAGS+=	-g -O0
+#CXXFLAGS+=	-g -O0
 
 GCC_REQD+=	4.2
 
