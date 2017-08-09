@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mame2003-20170803
+DISTNAME=	libretro-mame2003-20170807
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,9 +9,10 @@ COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.78)
 LICENSE=	no-commercial-use
 
 GITHUB_PROJECT=	mame2003-libretro
-GITHUB_TAG=	604844b2a0cd76890289049f3a823ae76172816c
+GITHUB_TAG=	982f31742e13f3083a31c8627eb6bf77824e3c2a
 
 USE_TOOLS=	gmake
+EXTRACT_USING=	bsdtar
 
 .include "../../mk/endian.mk"
 
