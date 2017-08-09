@@ -4,4 +4,5 @@ SHA1 (libretro-fbalpha-0.2.97.40.tar.gz) = ea8c0605172470b7c592cab46d63200f46572
 RMD160 (libretro-fbalpha-0.2.97.40.tar.gz) = d683b846bbc98a6dc4ffd3dd4a46fbd07a3366ea
 SHA512 (libretro-fbalpha-0.2.97.40.tar.gz) = 197a6dd939cda0fc5be4f1e9bfc9d933b9d63627e77f7b6c5da355cc8e97e43ee14b2556c3c1f201cf9a42900992bae711942e0d20317e7bd0132a6ad34e1050
 Size (libretro-fbalpha-0.2.97.40.tar.gz) = 8916054 bytes
+SHA1 (patch-src_burn_drv_konami_d__mystwarr.cpp) = ceebdff6bbe15162f79728622b681190fbcd53d0
 SHA1 (patch-src_cpu_arm7__intf.cpp) = 93f419448097a67725598835535d2f52452b65a4
