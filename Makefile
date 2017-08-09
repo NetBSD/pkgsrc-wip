@@ -3281,6 +3281,7 @@ SUBDIR+=	py-mdp
 SUBDIR+=	py-mdptoolbox
 SUBDIR+=	py-mdtraj
 SUBDIR+=	py-meigo
+SUBDIR+=	py-memory_profiler
 SUBDIR+=	py-mendeleev
 SUBDIR+=	py-meshio
 SUBDIR+=	py-meson
