@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	openmw-0.41.0
+DISTNAME=	openmw-0.42.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenMW/}
 

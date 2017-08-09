@@ -12,7 +12,6 @@ etc/openmw/openmw-cs.cfg
 etc/openmw/openmw.cfg
 etc/openmw/settings-default.cfg
 etc/openmw/version
-share/appdata/openmw.appdata.xml
 share/applications/openmw-cs.desktop
 share/applications/openmw.desktop
 share/games/openmw/resources/defaultfilters
@@ -112,6 +111,7 @@ share/games/openmw/resources/shaders/water_nm.png
 share/games/openmw/resources/shaders/water_vertex.glsl
 share/games/openmw/resources/version
 share/licenses/openmw/DejaVu Font License.txt
+share/metainfo/openmw.appdata.xml
 share/pixmaps/openmw-cs.png
 share/pixmaps/openmw.png
 @pkgdir share/games/openmw/data
