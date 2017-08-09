@@ -20,11 +20,11 @@ bin/vcf-shuffle-cols
 bin/vcf-sort
 bin/vcf-stats
 bin/vcf-subset
-bin/vcftools
 bin/vcf-to-tab
 bin/vcf-tstv
 bin/vcf-validator
-lib/perl5/site_perl/5.22.0/FaSlice.pm
-lib/perl5/site_perl/5.22.0/Vcf.pm
-lib/perl5/site_perl/5.22.0/VcfStats.pm
+bin/vcftools
+lib/perl5/site_perl/5.26.0/FaSlice.pm
+lib/perl5/site_perl/5.26.0/Vcf.pm
+lib/perl5/site_perl/5.26.0/VcfStats.pm
 man/man1/vcftools.1

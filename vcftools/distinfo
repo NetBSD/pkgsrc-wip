@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (vcftools_0.1.14.tar.gz) = e816a7f11297646b4b8b9682516d635b90736c75
-RMD160 (vcftools_0.1.14.tar.gz) = b6839448323a6401ff6233394c4a692ff14c7cba
-SHA512 (vcftools_0.1.14.tar.gz) = 1cb3c02dca2785d3405f2e532cc13fa9ea03138ef3ac23171313eb740975062b073f8a57c5826afa4355140a8388edd9f24b46ad8bba8b75b1e04368537dd435
-Size (vcftools_0.1.14.tar.gz) = 241228 bytes
+SHA1 (vcftools_0.1.15.tar.gz) = 6a5f29278b83c8679bf98cbb424b1154d7500952
+RMD160 (vcftools_0.1.15.tar.gz) = 656d34a1ec49d61c7e7aa59579e1d0e5970b33e6
+SHA512 (vcftools_0.1.15.tar.gz) = ceeebd4c3bde7be9c604453f40c636c61df516ac16814575c8d6d1b5901cb6a084abea6bdc4f457f9f17d099869b69463df4b6b2c76ae9f6ee86504ba2e550f9
+Size (vcftools_0.1.15.tar.gz) = 246909 bytes
