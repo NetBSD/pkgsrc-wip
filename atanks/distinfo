@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (atanks-6.5.tar.gz) = fda98c1b7c64400813495d92b514c2ab626ea705
+RMD160 (atanks-6.5.tar.gz) = 09e86ab7dfe0938e8e6411701fda3b91a3fe7a0c
+SHA512 (atanks-6.5.tar.gz) = cb1456e06132da754ae5d9926e118ecb8ac7789747f0a3273bcb49311d79824610bb9cfc74fbba8c75bbefe905d63ae2e01d193ccb37a64759f5490328c8cc89
+Size (atanks-6.5.tar.gz) = 6059648 bytes
+SHA1 (patch-Makefile) = 6ba61cf286a874041130c23fae22596330cf433f
