@@ -1101,6 +1101,7 @@ SUBDIR+=	gtksourcecompletion
 SUBDIR+=	gts-snapshot
 SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
+SUBDIR+=	gucharmap
 SUBDIR+=	guichan
 SUBDIR+=	guile-scsh
 SUBDIR+=	guilerxspencer

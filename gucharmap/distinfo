@@ -1,0 +1,26 @@
+$NetBSD$
+
+SHA1 (gucharmap-10.0.0/Blocks.txt) = 808db9df6d1ba08f152c10d261f87761621e720a
+RMD160 (gucharmap-10.0.0/Blocks.txt) = 667b99c6a22c82ed1f8b6efbee83a30bb249941f
+SHA512 (gucharmap-10.0.0/Blocks.txt) = ba03f8e800b36246917bc1168241362936b0e951d110154e69666811a17f8257316283bd9bb8508915d66908416ca4a019b5020fd59e24cc68b6c88d01154e43
+Size (gucharmap-10.0.0/Blocks.txt) = 9484 bytes
+SHA1 (gucharmap-10.0.0/DerivedAge.txt) = 898513156998e5dd1d0814fcb64f4c6864b2dc74
+RMD160 (gucharmap-10.0.0/DerivedAge.txt) = 1fd193f7cbef89c033821006fee256d3c301051c
+SHA512 (gucharmap-10.0.0/DerivedAge.txt) = d676c992a0634892de03fb7589da1dc6437666481ada6bad664bf5a19ac1781edc3465d69015285d9be2a8690a231a5d60996aa6ccc47c424b61b38c40024f3d
+Size (gucharmap-10.0.0/DerivedAge.txt) = 109581 bytes
+SHA1 (gucharmap-10.0.0/NamesList.txt) = 3a034872f1689da81cfb8f51730cad9ff2cf56d7
+RMD160 (gucharmap-10.0.0/NamesList.txt) = 2df82e65d04f9b27f11d35a4fb03095a3470685a
+SHA512 (gucharmap-10.0.0/NamesList.txt) = 41fdcdc2a9fe695b56d5697faae743e7bad53be756f3eb2d918d35d753d92cb0f514280539d54f4e750142ac00af02bb6f4c26eb3e5c98e0f0b2834d9d98c4ef
+Size (gucharmap-10.0.0/NamesList.txt) = 1503859 bytes
+SHA1 (gucharmap-10.0.0/Scripts.txt) = 28ae4bfabe070cc52d86e3a4c7c067bbd08dcc64
+RMD160 (gucharmap-10.0.0/Scripts.txt) = 5664374bdc0289a7854688aac9e4c1c805043fb3
+SHA512 (gucharmap-10.0.0/Scripts.txt) = f1e9a09bfc670577e50530c762d18724188d8c426baeeeffa3dc208328094429bdf6da430042db454b4c72600f9e465daadb3e943894e30de5f756d2b8aa699b
+Size (gucharmap-10.0.0/Scripts.txt) = 164026 bytes
+SHA1 (gucharmap-10.0.0/UnicodeData.txt) = c580a90a33f4079e9a36616b9755d03126b7756a
+RMD160 (gucharmap-10.0.0/UnicodeData.txt) = 3547d0ef40a3176db230d912da72a8863c82a297
+SHA512 (gucharmap-10.0.0/UnicodeData.txt) = 137a99ef34fdd2263dcd517bf50ec0ae5e14dd371bec2ed16080acb51bf9bada31d74b3fef874573594a2f6c0f8ade2919806ece4c84948f13bedbc19b8ad4c9
+Size (gucharmap-10.0.0/UnicodeData.txt) = 1735010 bytes
+SHA1 (gucharmap-10.0.0/Unihan.zip) = b6d32a88e55e7839ca864138bd12b3eb18a5a69e
+RMD160 (gucharmap-10.0.0/Unihan.zip) = 537be3d5634022e9dcd266a2ed812552142b2f00
+SHA512 (gucharmap-10.0.0/Unihan.zip) = 377f53ddc9ae514e8866c0e6b79f9b1d3613fad5a7e29c57a06baf8be84cbada0703b1c660401e7dbd2bb861b09fa9159b77322f42b34f5a0dc0d8f70ac4db12
+Size (gucharmap-10.0.0/Unihan.zip) = 6632227 bytes
