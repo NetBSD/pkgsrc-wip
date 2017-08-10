@@ -12,6 +12,7 @@ Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
 SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
 RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
+SHA1 (patch-cmake_config-ix.cmake) = bb00d24de6c628c3cec18c46b08860d23ef8ad88
 SHA1 (patch-lib_asan_asan__mapping.h) = 73f5f33e946868b4780864e633916376b11b16f1
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = 36a89517584891a1a50536a681a5d42e99ef904d
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.h) = 7ae546fe4c5fada950a8e06c73f7ac0e5ba81924
