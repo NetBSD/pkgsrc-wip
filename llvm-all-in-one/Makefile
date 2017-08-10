@@ -4,7 +4,7 @@ LLVM_VERSION=	5.0.0
 
 CATEGORIES=	lang devel
 
-LLVM_SVN_REV=		310414
+LLVM_SVN_REV=		310657
 
 SVN_REPOSITORIES=		llvm
 SVN_REPO.llvm=			http://llvm.org/svn/llvm-project/llvm/trunk
@@ -144,6 +144,9 @@ TEST_ENV+=		VERBOSE=1
 ${_test_}: build
 	${RUN}${_ULIMIT_CMD} cd ${TEST_DIRS} && ${TEST_MAKE_CMD} -j${MAKE_JOBS} ${_test_}
 .endfor
+
+check-check: build
+	${RUN}${_ULIMIT_CMD} cd ${TEST_DIRS} && ${TEST_MAKE_CMD} -j${MAKE_JOBS} ${_test_}
 
 do-test: check-llvm check-clang check-lldb check-compiler-rt check-lld check-libcxx check-unwind check-polly check-libomptarget
 	${RUN} echo "Running tests"
