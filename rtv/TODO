@@ -1,0 +1,31 @@
+When built against devel/py-curses CURSES_TYPE=curses on NetBSD (tested with
+8.99.1), at run-time it fails with:
+
+ % rtv
+ Traceback (most recent call last):
+   File "/usr/pkg/bin/rtv", line 11, in <module>
+     load_entry_point('rtv==1.17.1', 'console_scripts', 'rtv')()
+   File "/usr/pkg/lib/python2.7/site-packages/pkg_resources/__init__.py", line 561, in load_entry_point
+     return get_distribution(dist).load_entry_point(group, name)
+   File "/usr/pkg/lib/python2.7/site-packages/pkg_resources/__init__.py", line 2649, in load_entry_point
+     return ep.load()
+   File "/usr/pkg/lib/python2.7/site-packages/pkg_resources/__init__.py", line 2303, in load
+     return self.resolve()
+   File "/usr/pkg/lib/python2.7/site-packages/pkg_resources/__init__.py", line 2309, in resolve
+     module = __import__(self.module_name, fromlist=['__name__'], level=0)
+   File "/usr/pkg/lib/python2.7/site-packages/rtv/__main__.py", line 205, in <module>
+     sys.exit(main())
+   File "/usr/pkg/lib/python2.7/site-packages/rtv/__main__.py", line 188, in main
+     page.loop()
+   File "/usr/pkg/lib/python2.7/site-packages/rtv/page.py", line 81, in loop
+     self.draw()
+   File "/usr/pkg/lib/python2.7/site-packages/rtv/page.py", line 390, in draw
+     self._draw_content()
+   File "/usr/pkg/lib/python2.7/site-packages/rtv/page.py", line 508, in _draw_content
+     subwin_n_rows, subwin_n_cols, start, data['h_offset'])
+ _curses.error: curses function returned NULL
+ Exit 1
+
+Investigate why it fails in that way (only CURSES_TYPE=curses is affected,
+rebuilding or having a py-curses built with CURSES_TYPE=ncurses doesn't expose
+this problem).
