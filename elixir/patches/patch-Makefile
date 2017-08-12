@@ -1,26 +1,25 @@
 $NetBSD$
-add SED to use gsed for -i, fix man paths, and do not install .orig
 
---- Makefile.orig	2017-02-16 14:15:31.000000000 +0000
+--- Makefile.orig	2017-08-01 15:09:01.000000000 +0000
 +++ Makefile
 @@ -1,6 +1,7 @@
  REBAR ?= "$(CURDIR)/rebar"
  PREFIX ?= /usr/local
  SHARE_PREFIX ?= $(PREFIX)/share
 +SED ?= sed
- CANONICAL :=
+ CANONICAL := v1.5/
  ELIXIRC := bin/elixirc --verbose --ignore-module-conflict
  ERLC := erlc -I lib/elixir/include
-@@ -105,7 +106,7 @@ install: compile
+@@ -107,7 +108,7 @@ install: compile
  		$(INSTALL_DATA) $$dir/ebin/* "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/$$dir/ebin"; \
  	done
  	$(Q) $(INSTALL_DIR) "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/bin"
 -	$(Q) $(INSTALL_PROGRAM) $(filter-out %.ps1, $(filter-out %.bat, $(wildcard bin/*))) "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/bin"
 +	$(Q) $(INSTALL_PROGRAM) $(filter-out %.ps1, $(filter-out %.bat, $(filter-out %.orig, $(wildcard bin/*)))) "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/bin"
  	$(Q) $(INSTALL_DIR) "$(DESTDIR)$(PREFIX)/$(BINDIR)"
- 	$(Q) for file in "$(DESTDIR)$(PREFIX)"/$(LIBDIR)/elixir/bin/* ; do \
- 		ln -sf "../$(LIBDIR)/elixir/bin/$${file##*/}" "$(DESTDIR)$(PREFIX)/$(BINDIR)/" ; \
-@@ -236,14 +237,14 @@ build_man: man/iex.1 man/elixir.1
+ 	$(Q) for file in "$(DESTDIR)$(PREFIX)"/$(LIBDIR)/elixir/bin/*; do \
+ 		ln -sf "../$(LIBDIR)/elixir/bin/$${file##*/}" "$(DESTDIR)$(PREFIX)/$(BINDIR)/"; \
+@@ -250,14 +251,14 @@ build_man: man/iex.1 man/elixir.1
  
  man/iex.1:
  	$(Q) cp man/iex.1.in man/iex.1
@@ -28,7 +27,7 @@ add SED to use gsed for -i, fix man paths, and do not install .orig
 -	$(Q) sed -i.bak "/{COMMON}/d" man/iex.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/r common" man/iex.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/d" man/iex.1
- 	$(Q) rm man/iex.1.bak
+ 	$(Q) rm -f man/iex.1.bak
  
  man/elixir.1:
  	$(Q) cp man/elixir.1.in man/elixir.1
@@ -36,11 +35,11 @@ add SED to use gsed for -i, fix man paths, and do not install .orig
 -	$(Q) sed -i.bak "/{COMMON}/d" man/elixir.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/r common" man/elixir.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/d" man/elixir.1
- 	$(Q) rm man/elixir.1.bak
+ 	$(Q) rm -f man/elixir.1.bak
  
  clean_man:
-@@ -251,9 +252,9 @@ clean_man:
- 	rm -f man/iex.1
+@@ -267,9 +268,9 @@ clean_man:
+ 	rm -f man/iex.1.bak
  
  install_man: build_man
 -	$(Q) mkdir -p $(DESTDIR)$(SHARE_PREFIX)/man/man1
