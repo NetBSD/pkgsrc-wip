@@ -1,7 +1,7 @@
 IMPORTANT:
-Currently lacking an install / PLIST!
+lacking an install / PLIST! (XXX use DESTDIR?)
 Need bootstrap for platforms for which upstream doesn't release binaries
-Fetching shit to ~/.cargo
+Fetching shit to ~/.cargo (XXX prepare combined tarball, use HOME as an environment variable)
 
 Secondary:
 Test target doesn't work

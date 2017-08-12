@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2017/03/20 11:36:35 jperkin Exp $
 
-DISTNAME=	rustc-1.18.0-src
+DISTNAME=	rustc-1.19.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -20,19 +20,14 @@ UNLIMIT_RESOURCES+=	cputime
 USE_LANGUAGES=		c c++11
 GCC_REQD+=		4.8
 
-REPLACE_BASH+=			src/rust-installer/gen-install-script.sh
-REPLACE_BASH+=			src/rust-installer/gen-installer.sh
-CHECK_PORTABILITY_SKIP=		src/rust-installer/gen-install*
-CHECK_PORTABILITY_SKIP+=	src/grammar/check.sh
-
 .include "../../mk/bsd.prefs.mk"
 
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.17.0
-CARGO_STAGE0_VER=	0.18.0
+RUST_STAGE0_VER=	1.18.0
+CARGO_STAGE0_VER=	0.19.0
 # If this wrong, rust will begin fetching and creating these directories
 # in rustc*-src/build/cache.
-CARGO_DIRNAME=		${WRKSRC}/build/cache/2017-04-27
+CARGO_DIRNAME=		${WRKSRC}/build/cache/2017-06-08
 
 # Rust doesn't support pre-i686 Intel
 .if ${MACHINE_ARCH} == "i386"
@@ -61,15 +56,18 @@ pre-extract:
 	${CP} ${DISTDIR}/${CARGO_STAGE0} ${CARGO_DIRNAME}
 
 do-configure:
-	${CP} ${FILESDIR}/config.toml ${WRKSRC}/src/bootstrap
+	${CP} ${FILESDIR}/config.toml ${WRKSRC}/src/bootstrap/config.toml
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-configure
 SUBST_FILES.paths=	src/bootstrap/config.toml
-SUBST_SED.paths=	-e 's,@@PREFIX@@,${PREFIX},'
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
 
 do-build:
-	cd ${WRKSRC}; ${PYTHONBIN} x.py build
+	cd ${WRKSRC}; ${PYTHONBIN} x.py build --verbose
+
+do-install:
+	cd ${WRKSRC}; ${PYTHONBIN} x.py install --verbose
 
 # XXX tell it where rustc is
 #do-test:

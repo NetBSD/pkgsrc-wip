@@ -15,10 +15,10 @@
 [llvm]
 
 # Indicates whether the LLVM build is a Release or Debug build
-optimize = true
+#optimize = true
 
 # Indicates whether an LLVM Release build should include debug info
-release-debuginfo = false
+#release-debuginfo = false
 
 # Indicates whether the LLVM assertions are enabled or not
 #assertions = false
@@ -51,9 +51,7 @@ release-debuginfo = false
 # support. You'll need to write a target specification at least, and most
 # likely, teach rustc about the C ABI of the target. Get in touch with the
 # Rust team and file an issue if you need assistance in porting!
-#
-#### Excluding targets that are never encountered on pkgsrc! ####
-targets = "X86;ARM;AArch64;Mips;PowerPC;Sparc"
+#targets = "X86;ARM;AArch64;Mips;PowerPC;SystemZ;JSBackend;MSP430;Sparc;NVPTX;Hexagon"
 
 # Cap the number of parallel linker invocations when compiling LLVM.
 # This can be useful when building LLVM with debug info, which significantly
@@ -61,9 +59,7 @@ targets = "X86;ARM;AArch64;Mips;PowerPC;Sparc"
 # each linker process.
 # If absent or 0, linker invocations are treated like any other job and
 # controlled by rustbuild's -j parameter.
-#
-#### Wreaks havoc on RAM usage at build time ####
-link-jobs = 1
+#link-jobs = 0
 
 # Delete LLVM build directory on LLVM rebuild.
 # This option defaults to `false` for local development, but CI may want to
@@ -92,11 +88,11 @@ link-jobs = 1
 # for each target triple.
 #target = ["x86_64-unknown-linux-gnu"] # defaults to just the build triple
 
-# Instead of downloading the src/nightlies.txt version of Cargo specified, use
+# Instead of downloading the src/stage0.txt version of Cargo specified, use
 # this Cargo binary instead to build all Rust code
 #cargo = "/path/to/bin/cargo"
 
-# Instead of downloading the src/nightlies.txt version of the compiler
+# Instead of downloading the src/stage0.txt version of the compiler
 # specified, use this rustc binary instead as the stage0 snapshot compiler.
 #rustc = "/path/to/bin/rustc"
 
@@ -146,7 +142,7 @@ link-jobs = 1
 #extended = false
 
 # Verbosity level: 0 == not verbose, 1 == verbose, 2 == very verbose
-#verbose = 0
+verbose = 2
 
 # Build the sanitizer runtimes
 #sanitizers = false
@@ -156,13 +152,27 @@ link-jobs = 1
 # known-good version of OpenSSL, compile it, and link it to Cargo.
 #openssl-static = false
 
+# Run the build with low priority, by setting the process group's "nice" value
+# to +10 on Unix platforms, and by using a "low priority" job object on Windows.
+#low-priority = false
+
 # =============================================================================
 # General install configuration options
 # =============================================================================
 [install]
 
 # Instead of installing to /usr/local, install to this path instead.
-prefix = "@@PREFIX@@"
+prefix = @PREFIX@
+
+# Where to install system configuration files
+# If this is a relative path, it will get installed in `prefix` above
+#sysconfdir = "/etc"
+
+# Where to install documentation in `prefix` above
+#docdir = "share/doc/rust"
+
+# Where to install binaries in `prefix` above
+#bindir = "bin"
 
 # Where to install libraries in `prefix` above
 #libdir = "lib"
@@ -170,15 +180,15 @@ prefix = "@@PREFIX@@"
 # Where to install man pages in `prefix` above
 #mandir = "share/man"
 
-# Where to install documentation in `prefix` above
-#docdir = "share/doc/rust"
-
 # =============================================================================
 # Options for compiling Rust code itself
 # =============================================================================
 [rust]
 
 # Whether or not to optimize the compiler and standard library
+# Note: the slowness of the non optimized compiler compiling itself usually
+#       outweighs the time gains in not doing optimizations, therefore a
+#       full bootstrap takes much more time with optimize set to false.
 #optimize = true
 
 # Number of codegen units to use for each compiler invocation. A value of 0
@@ -304,3 +314,9 @@ prefix = "@@PREFIX@@"
 # Note that this address should not contain a trailing slash as file names will
 # be appended to it.
 #upload-addr = "https://example.com/folder"
+
+# Whether to build a plain source tarball to upload
+# We disable that on Windows not to override the one already uploaded on S3
+# as the one built on Windows will contain backslashes in paths causing problems
+# on linux
+#src-tarball = true
