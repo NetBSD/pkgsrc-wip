@@ -31,4 +31,6 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
 .include "../../devel/zlib/buildlink3.mk"
+# Causes configure to fail
+#.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
