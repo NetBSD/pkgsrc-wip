@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 #NO_CHECKSUM=	Yes
 # Note: the distname stays the same even though the actual dist (checksum) changes every so often
 #       so update the below every time changes occur to the distinfo
-DIST_SUBDIR= elinks-20170717
+DIST_SUBDIR= elinks-20170813
 
 CONFLICTS+=	elinks-[0-9]*
 LUA_VERSIONS_ACCEPTED=	51
