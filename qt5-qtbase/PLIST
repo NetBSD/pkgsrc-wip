@@ -3017,7 +3017,6 @@ qt5/mkspecs/modules/qt_lib_widgets_private.pri
 ${PLIST.unix}qt5/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri
 qt5/mkspecs/modules/qt_lib_xml.pri
 qt5/mkspecs/modules/qt_lib_xml_private.pri
-${PLIST.cups}qt5/mkspecs/modules/qt_plugin_cupsprintersupport.pri
 qt5/mkspecs/netbsd-g++/qmake.conf
 qt5/mkspecs/netbsd-g++/qplatformdefs.h
 qt5/mkspecs/openbsd-g++/qmake.conf
@@ -3101,8 +3100,7 @@ ${PLIST.egl}qt5/plugins/platforms/libqminimalegl.so
 qt5/plugins/platforms/libqoffscreen.so
 ${PLIST.unix}qt5/plugins/platforms/libqvnc.so
 ${PLIST.unix}qt5/plugins/platforms/libqxcb.so
-${PLIST.cups}qt5/plugins/printsupport/libcupsprintersupport.a
-${PLIST.cups}qt5/plugins/printsupport/libcupsprintersupport.prl
+${PLIST.cups}qt5/plugins/printsupport/libcupsprintersupport.so
 qt5/plugins/sqldrivers/libqsqlite.so
 ${PLIST.egl}qt5/plugins/xcbglintegrations/libqxcb-egl-integration.so
 ${PLIST.unix}qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so
