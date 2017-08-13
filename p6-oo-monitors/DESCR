@@ -1,0 +1,2 @@
+For Perl 6.
+A monitor provides per-instance mutual exclusion for objects. This means that for a given object instance, only one thread can ever be inside its methods at a time. This is achieved by a lock being associated with each object. The lock is acquired automatically at the entry to each method in the monitor. Condition variables are also supported.

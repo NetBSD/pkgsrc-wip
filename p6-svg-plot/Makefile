@@ -1,22 +1,23 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	xml-writer
-GITHUB_TAG=	4d30a9d8e06033ca97387971b653817becd5a759
-PKGREVISION= 2
+GITHUB_PROJECT=	svg-plot
+GITHUB_TAG=	f867cbfe31fd3aadb5830f2acd433c2d8a1de6df
+PKGREVISION= 1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_GITHUB:=masak/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=moritz/}
 
 MAINTAINER=	mspo@NetBSD.org
-HOMEPAGE=	https://github.com/masak/xml-writer
-COMMENT=	A Perl 6 module to generate XML
+HOMEPAGE=	https://github.com/moritz/svg-plot
+COMMENT=	A simple 2D chart plotter for Perl 6
 LICENSE=	artistic
 
 WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar
-NO_INTALL= yes
+
+DEPENDS+=	p6-svg:../p6-svg
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX} && ${FIND} * -type f -print |${SORT} -u;
 
