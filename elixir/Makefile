@@ -23,3 +23,8 @@ USE_TOOLS+=	gmake gsed
 BUILD_TARGET= compile
 
 .include "../../mk/bsd.pkg.mk"
+
+# These have to be included after bsd.pkg.mk otherwise elixir will warn the locale is set incorrectly as latin1
+MAKE_ENV += LC_CTYPE="en_US.UTF-8"
+MAKE_ENV += LC_LANG="en_US.UTF-8"
+MAKE_ENV += LC_ALL=""
