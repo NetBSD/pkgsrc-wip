@@ -29,7 +29,7 @@ do-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/perl6/site/precomp/.lock
 	${RM} -f ${DESTDIR}${PREFIX}/share/perl6/site/repo.lock
 	${RM} -f ${DESTDIR}${PREFIX}/share/perl6/site/version
-	cd ${DESTDIR}${PREFIX} && mkdir bin && ${LN} -s share/perl6/bin/zef bin/zef
+	cd ${DESTDIR}${PREFIX} && mkdir bin && ${LN} -s share/perl6/site/bin/zef bin/zef
 
 .include "../../wip/rakudo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
