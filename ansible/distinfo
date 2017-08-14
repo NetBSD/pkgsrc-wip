@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (ansible-2.3.1.0.tar.gz) = 7c5aa4e8908a0110904f3886000172cbb81c98a4
-RMD160 (ansible-2.3.1.0.tar.gz) = 7bb08ad54ff6d418843853853a561cfd116085bc
-SHA512 (ansible-2.3.1.0.tar.gz) = 7b4b33c56a15c41d756f095944d7a0dbf894557350879430df21061b717b9574aae624a276bf7e1a13d043b718aeaccac1ce510a3cb085983311ddf06fa832bc
-Size (ansible-2.3.1.0.tar.gz) = 4263357 bytes
+SHA1 (ansible-2.3.2.0.tar.gz) = abea37a4ba664b55af3d0d9c6017d45daa9816cd
+RMD160 (ansible-2.3.2.0.tar.gz) = fbe0cbcc197d7405aea2600d0c5c58412ca93d9c
+SHA512 (ansible-2.3.2.0.tar.gz) = 458506da8ae65a80b442834c6047f02eb92acf9f7dd4465c63b4360c4c4817a0f7c48c92a614b91760a54d036ed13f417edf3524bb8a34a8a53ceb11efc928ac
+Size (ansible-2.3.2.0.tar.gz) = 4319664 bytes
 SHA1 (patch-contrib_README.md) = 0493d61ab37e2c225a7c0c8481bedb15aa0b482c
 SHA1 (patch-contrib_inventory_cobbler.py) = 3d5811a00c18556a8993f23e17df6238bde477b5
 SHA1 (patch-contrib_inventory_collins.py) = fd3c4d71d8373488979274a9abb7faad173cc02f
