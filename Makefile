@@ -3285,7 +3285,6 @@ SUBDIR+=	py-meigo
 SUBDIR+=	py-memory_profiler
 SUBDIR+=	py-mendeleev
 SUBDIR+=	py-meshio
-SUBDIR+=	py-meson
 SUBDIR+=	py-metrics
 SUBDIR+=	py-metropack
 SUBDIR+=	py-minepy
