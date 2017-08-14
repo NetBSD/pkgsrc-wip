@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.21 2015/09/07 13:10:43 thomasklausner Exp $
 
-SHA1 (xpra-2.0.2.tar.xz) = bbe545c85569e4a02deba342d96c0688ca60ff29
-RMD160 (xpra-2.0.2.tar.xz) = fc46d6f348ad4603e6592f018a95187a4844437f
-SHA512 (xpra-2.0.2.tar.xz) = 4b36cf9cf96f094011412214368bc452ed597f1927f6488d6856ad80b575d7f37273cf49b8682fdbc137cf581d5a88b17a9241d508278e45e48f9451ba628b68
-Size (xpra-2.0.2.tar.xz) = 1926876 bytes
+SHA1 (xpra-2.1.1.tar.xz) = d828a42d1b69d7ac1dfd65f64014bc3034a2c04a
+RMD160 (xpra-2.1.1.tar.xz) = 3bb0b42505689a9970b7bc57cf93dc963475fb53
+SHA512 (xpra-2.1.1.tar.xz) = 913c6952b12bdc01ef8cbbb62b05cfc9bd564b6d425f7edd2448bc3bfbdd9dc0bf9a890b1c85d3e39c387468b9738de7de4336e80b4e715856746197e1e93b20
+Size (xpra-2.1.1.tar.xz) = 2065280 bytes
 SHA1 (patch-service_xpra) = 36c0c0716c4dd9e2d31c9568b1bef389a318713e
 SHA1 (patch-xpra_x11_gtk2_gdk__bindings.pyx) = 66e9688758e777de440ab047e9444309d543aac1
 SHA1 (patch-xpra_x11_gtk2_gdk__display__source.pyx) = 22184d73ed547373762070a550a5379eb6b4561b
