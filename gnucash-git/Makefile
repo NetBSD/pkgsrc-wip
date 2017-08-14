@@ -42,10 +42,16 @@ CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
 CONFIGURE_ARGS+=	GTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CONFIGURE_ARGS+=	GMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 
-REPLACE_PERL+=		src/quotes/gnc-fq-dump
-REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
-REPLACE_PERL+=		src/quotes/Quote_example.pl
-REPLACE_PERL+=		src/gnc-test-env.pl
+REPLACE_PERL+=		bindings/python/example_scripts/get_quotes.pl
+REPLACE_PERL+=		common/gnc-test-env.pl
+REPLACE_PERL+=		doc/examples/create-bogus-data.pl
+REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
+REPLACE_PERL+=		libgnucash/engine/xlate.pl
+REPLACE_PERL+=		libgnucash/quotes/gnc-fq-dump
+REPLACE_PERL+=		s/Quote_example.pl
+REPLACE_PERL+=		util/check-po.pl
+REPLACE_PERL+=		util/elegant-sort.pl
+REPLACE_PERL+=		util/fix-license.pl
 
 PLIST_SRC=		PLIST
 
