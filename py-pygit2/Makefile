@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/12/04 23:44:45 othyro Exp $
 
-DISTNAME=	pygit2-0.25.0
+DISTNAME=	pygit2-0.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
@@ -15,9 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	c
-
-# core dump during self tests:
-# https://github.com/libgit2/pygit2/issues/668
 
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/egg.mk"
