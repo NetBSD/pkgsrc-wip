@@ -1,8 +1,4 @@
-GNU Mailutils is a rich and powerful protocol-independent mail
-framework.  It contains a series of useful mail libraries, clients,
-and servers.  These are the primary mail utilities for the GNU system.
-The central library is capable of handling electronic mail in various
-mailbox formats and protocols, both local and remote.  Specifically,
-this project contains a POP3 server, an IMAP4 server, and a Sieve mail
-filter. It also provides a POSIX `mailx' client, and a collection of
-other handy tools.
+GNU Mailutils is a set of libraries and utilities for handling
+electronic mail. It addresses a wide audience and can be of interest
+to application developers, casual users and system administrators
+alike.

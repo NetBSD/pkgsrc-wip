@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2014/08/08 12:20:06 makoto Exp $
 
-SHA1 (mailutils-2.2.tar.gz) = 166a47c5eef6192542b568e031719c3e8d01d1f5
-RMD160 (mailutils-2.2.tar.gz) = cdbd626d520435dc8c7d4a27d79b3ea70a1290f7
-Size (mailutils-2.2.tar.gz) = 4497847 bytes
-SHA1 (patch-lib_stdio_in_h) = 256d3e0af178f2407db79fd18c0d17d5ba86a778
+SHA1 (mailutils-3.2.tar.gz) = 852f99e63c0827502096de7badf50bef7a8d102d
+RMD160 (mailutils-3.2.tar.gz) = bbd5cdf351b9bc131de89095c98770b68e52b93c
+SHA512 (mailutils-3.2.tar.gz) = 5528799ba1bf7b8eaf3c0e2fe436aeb0be03ccb85788eff7ab6f860da9a03d00f86a4ebcf6839c0a164c6c6d1a0cfe38ec8c848db45376d958325dadba13549e
+Size (mailutils-3.2.tar.gz) = 6095165 bytes
