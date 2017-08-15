@@ -1,23 +1,21 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	svg
-GITHUB_TAG=	f7117f484c713ec5d84f5662ac87909bca5dfe5d
+GITHUB_PROJECT=	p6-Template-Mustache
+GITHUB_TAG=	2ffcb06e5417aadcfd3e3f663fdb2e738a165dfb
 PKGREVISION= 1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_GITHUB:=moritz/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=softmoth/}
 
 MAINTAINER=	mspo@NetBSD.org
-HOMEPAGE=	https://github.com/moritz/svg
-COMMENT=	A Perl 6 module for SVG graphics
+HOMEPAGE=	https://github.com/softmoth/${GITHUB_PROJECT}
+COMMENT=	Perl6 library for the Mustache template format
 LICENSE=	artistic
 
 WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar
-
-DEPENDS+=	p6-xml-writer-[a-z0-9]:../p6-xml-writer
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX} && ${FIND} * -type f -print |${SORT} -u;
 

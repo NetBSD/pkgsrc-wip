@@ -1,23 +1,21 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	svg
-GITHUB_TAG=	f7117f484c713ec5d84f5662ac87909bca5dfe5d
+GITHUB_PROJECT=	Perl6-MIME-Base64
+GITHUB_TAG=	26302c6ac2dd8c234faa88729bed0a26cfbbd11f
 PKGREVISION= 1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_GITHUB:=moritz/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 
 MAINTAINER=	mspo@NetBSD.org
-HOMEPAGE=	https://github.com/moritz/svg
-COMMENT=	A Perl 6 module for SVG graphics
+HOMEPAGE=	https://github.com/perl6/${GITHUB_PROJECT}
+COMMENT=	A Perl 6 module for Base64
 LICENSE=	artistic
 
 WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar
-
-DEPENDS+=	p6-xml-writer-[a-z0-9]:../p6-xml-writer
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX} && ${FIND} * -type f -print |${SORT} -u;
 

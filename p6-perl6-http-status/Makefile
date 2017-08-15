@@ -1,23 +1,21 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	svg
-GITHUB_TAG=	f7117f484c713ec5d84f5662ac87909bca5dfe5d
+GITHUB_PROJECT=	perl6-http-status
+GITHUB_TAG=	20486489dfb9b3a81300e0ad068edf96855ba22b
 PKGREVISION= 1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_GITHUB:=moritz/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=supernovus/}
 
 MAINTAINER=	mspo@NetBSD.org
-HOMEPAGE=	https://github.com/moritz/svg
-COMMENT=	A Perl 6 module for SVG graphics
+HOMEPAGE=	https://github.com/supernovus/${GITHUB_PROJECT}
+COMMENT=	A Perl 6 module for HTTP status code text
 LICENSE=	artistic
 
 WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar
-
-DEPENDS+=	p6-xml-writer-[a-z0-9]:../p6-xml-writer
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX} && ${FIND} * -type f -print |${SORT} -u;
 
