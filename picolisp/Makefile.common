@@ -2,8 +2,8 @@
 # used by wip/picolisp/Makefile
 # used by wip/picolisp64/Makefile
 
-DISTNAME=	picoLisp
-PIL_VERSION=	17.3.21
+DISTNAME=	picoLisp-${PIL_VERSION}
+PIL_VERSION=	17.6
 CATEGORIES=	lang
 MASTER_SITES=	http://software-lab.de/
 EXTRACT_SUFX=	.tgz
@@ -14,8 +14,6 @@ COMMENT=	Simple programming language and application server framework
 LICENSE=	mit
 
 WRKSRC=	${WRKDIR}/picoLisp
-
-DIST_SUBDIR=	${DISTNAME}/${PIL_VERSION}
 
 BUILD_DIRS+=	src
 USE_TOOLS+=	gmake
