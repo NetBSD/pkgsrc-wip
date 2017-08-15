@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/08/19 19:21:33 yhardy Exp $
 https://github.com/NY00123/refkeen/archive/release-20170401.tar.gz
 
-DISTNAME=	refkeen-20170401
+DISTNAME=	refkeen-20170814
 GITHUB_PROJECT=	refkeen
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NY00123/}
