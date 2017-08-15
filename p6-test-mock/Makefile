@@ -1,15 +1,15 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	svg-plot
-GITHUB_TAG=	f867cbfe31fd3aadb5830f2acd433c2d8a1de6df
+GITHUB_PROJECT=	test-mock
+GITHUB_TAG=	b28dd4f3410ff1298649ea3ccb4efac0f77ab71b
 PKGREVISION= 1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_GITHUB:=moritz/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jnthn/}
 
 MAINTAINER=	mspo@NetBSD.org
-HOMEPAGE=	https://github.com/moritz/svg-plot
-COMMENT=	A simple 2D chart plotter for Perl 6
+HOMEPAGE=	https://github.com/jnthn
+COMMENT=	A Perl 6 module for testing
 LICENSE=	artistic
 
 WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar
 
-DEPENDS+=	p6-svg-[a-z0-9]*:../p6-svg
+DEPENDS+=	p6-oo-monitors-[a-z0-9]*:../p6-oo-monitors
 
 GENERATE_PLIST=	cd ${DESTDIR}${PREFIX} && ${FIND} * -type f -print |${SORT} -u;
 

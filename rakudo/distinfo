@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/09/13 22:04:07 schmonz Exp $
 
-SHA1 (rakudo-2017.06.tar.gz) = ef2ac7de8956c8b1909276f7a89092541bf3309c
-RMD160 (rakudo-2017.06.tar.gz) = d8a96f1e572762ee9744ee3020ab307044d5c341
-SHA512 (rakudo-2017.06.tar.gz) = fff211f200f9ff949ae7608edae099e08177e0edf6fee4f6dfb5357779f79ea1bb6f6ec629742744d2720979cb9d012f92730d6361e76e87a3550a33e203f6d5
-Size (rakudo-2017.06.tar.gz) = 2963199 bytes
+SHA1 (rakudo-2017.07.tar.gz) = 7a9a7cecafe741c46e046bd3ff55c7b5027e1481
+RMD160 (rakudo-2017.07.tar.gz) = 958b8be841caaf2672738fcb0d2e2100e60d5839
+SHA512 (rakudo-2017.07.tar.gz) = a80fba71bce8a6537962c5728ef1b54c6bfd275b9a4b7caacc6497f12a826b293a3a2bf8c412b21e91bb29bd3a325d9da17ecd8abb0ba2ffd4b8eecf0297d39f
+Size (rakudo-2017.07.tar.gz) = 2984621 bytes

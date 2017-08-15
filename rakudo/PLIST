@@ -2,6 +2,7 @@
 bin/perl6
 bin/perl6-debug-m
 bin/perl6-gdb-m
+bin/perl6-lldb-m
 bin/perl6-m
 bin/perl6-valgrind-m
 share/nqp/lib/Perl6/Actions.moarvm
