@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.kodi.tv/releases/source/
 
 MAINTAINER=	jmcneill@invisible.ca
-HOMEPAGE=	http://kodi.tv/
+HOMEPAGE=	https://kodi.tv/
 COMMENT=	Open source software media center
 LICENSE=	gnu-gpl-v2
 

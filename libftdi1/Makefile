@@ -2,11 +2,11 @@
 
 DISTNAME=	libftdi1-1.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.intra2net.com/en/developer/libftdi/download/
+MASTER_SITES=	https://www.intra2net.com/en/developer/libftdi/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.intra2net.com/en/developer/libftdi/
+HOMEPAGE=	https://www.intra2net.com/en/developer/libftdi/
 COMMENT=	Userland driver library for FTDI USB chips
 LICENSE=	gnu-lgpl-v2.1
 

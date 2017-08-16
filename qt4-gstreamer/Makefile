@@ -4,10 +4,10 @@
 DISTNAME=	qt-gstreamer-0.10.3
 PKGNAME=	${DISTNAME:S/qt/qt4/1}
 CATEGORIES=	multimedia x11
-MASTER_SITES=	http://gstreamer.freedesktop.org/data/src/qt-gstreamer/
+MASTER_SITES=	https://gstreamer.freedesktop.org/data/src/qt-gstreamer/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gstreamer.freedesktop.org/data/src/qt-gstreamer/
+HOMEPAGE=	https://gstreamer.freedesktop.org/data/src/qt-gstreamer/
 COMMENT=	C++ bindings (libraries and plugins) for GStreamer with a Qt-style API
 LICENSE=	gnu-lgpl-v2.1
 

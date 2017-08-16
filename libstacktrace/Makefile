@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/lmdbg/
+HOMEPAGE=	https://sourceforge.net/projects/lmdbg/
 COMMENT=	Stacktracing library similar to glibc backtrace(3)
 LICENSE=	mit
 

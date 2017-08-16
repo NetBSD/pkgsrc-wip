@@ -7,7 +7,7 @@ MASTER_SITES=	#
 DISTNAME=	#
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/lmdbg/
+HOMEPAGE=	https://sourceforge.net/projects/lmdbg/
 COMMENT=	Lightweight Modular malloc Debugger
 LICENSE=	mit
 

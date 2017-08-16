@@ -2,10 +2,10 @@
 
 DISTNAME=	spfmilter-1.0.8
 CATEGORIES=	mail
-MASTER_SITES=	http://www.libspf2.org/patch/
+MASTER_SITES=	https://www.libspf2.org/patch/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libspf2.org/
+HOMEPAGE=	https://www.libspf2.org/
 COMMENT=	Implementation of the Sender Policy Framework (SPF) as a milter
 
 

@@ -3,7 +3,7 @@
 
 DISTNAME=	i3-4.13
 CATEGORIES=	wm
-MASTER_SITES=	http://i3wm.org/downloads/
+MASTER_SITES=	https://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 GIT_REPOSITORIES=	i3
@@ -12,7 +12,7 @@ GIT_BRANCH.i3=		next
 WRKSRC=			${WRKDIR}/i3
 
 MAINTAINER=	tonnerre@NetBSD.org
-HOMEPAGE=	http://i3wm.org/
+HOMEPAGE=	https://i3wm.org/
 COMMENT=	Improved dynamic tiling window manager
 LICENSE=	modified-bsd
 

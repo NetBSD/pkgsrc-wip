@@ -7,7 +7,7 @@ MASTER_SITES=	http://ftp.horde.org/pub/nag/ \
 	ftp://ftp.horde.org/pub/nag/
 
 MAINTAINER=	frederic@fauberteau.org
-HOMEPAGE=	http://www.horde.org/nag/
+HOMEPAGE=	https://www.horde.org/nag/
 COMMENT=	Horde task list manager
 LICENSE=	gnu-gpl-v2
 

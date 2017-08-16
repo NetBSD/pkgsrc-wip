@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.horde.org/pub/chora/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.horde.org/apps/chora/
+HOMEPAGE=	https://www.horde.org/apps/chora/
 COMMENT=	Another CVS-via-web system
 LICENSE=	gnu-gpl-v2
 
