@@ -4,11 +4,11 @@
 DISTNAME=	libopensync-plugin-python-0.22
 PKGNAME=	${PYPKGPREFIX}-libopensync-plugin-0.22
 CATEGORIES=	comms
-MASTER_SITES=	http://www.opensync.org/attachment/wiki/download/
+#MASTER_SITES=	http://www.opensync.org/attachment/wiki/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.opensync.org/attachment/wiki/download/
+#HOMEPAGE=	http://www.opensync.org/attachment/wiki/download/
 COMMENT=	Python support code for opensync plugins
 
 

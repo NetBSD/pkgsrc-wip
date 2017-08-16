@@ -4,11 +4,11 @@
 DISTNAME=	libopensync-0.39
 PKGNAME=	${DISTNAME:S/-/-dev-/1}
 CATEGORIES=	comms
-MASTER_SITES=	http://www.opensync.org/download/releases/0.39/
+#MASTER_SITES=	http://www.opensync.org/download/releases/0.39/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.opensync.org/
+#HOMEPAGE=	http://www.opensync.org/
 COMMENT=	Platform independent, general purpose, synchronization framework
 LICENSE=	gnu-lgpl-v2.1
 

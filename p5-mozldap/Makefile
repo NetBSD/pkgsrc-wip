@@ -8,7 +8,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla.org/directory/perldap/releases/1.5.2/src/
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://www.mozilla.org/directory/perldap.html
+#HOMEPAGE=	http://www.mozilla.org/directory/perldap.html
 COMMENT=	Mozilla implementation of LDAP support libraries for Perl
 LICENSE=	gnu-gpl-v1 OR gnu-lgpl-v2.1 OR mpl-1.1
 

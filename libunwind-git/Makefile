@@ -7,7 +7,7 @@ GIT_REPOSITORIES=	libunwind
 GIT_REPO.libunwind=	https://github.com/llvm-mirror/libunwind.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libunwind.llvm.org/
+#HOMEPAGE=	http://libunwind.llvm.org/
 COMMENT=	LLVM libunwind
 LICENSE=	modified-bsd
 

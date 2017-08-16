@@ -3,11 +3,11 @@
 
 DISTNAME=	libopensync-plugin-palm-0.22
 CATEGORIES=	comms
-MASTER_SITES=	http://www.opensync.org/download/releases/0.22/
+##MASTER_SITES=	http://www.opensync.org/download/releases/0.22/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://www.opensync.org/download/releases/0.22/
+##HOMEPAGE=	http://www.opensync.org/download/releases/0.22/
 COMMENT=	Platform independent synchronization framework, palm plugin
 
 USE_TOOLS+=	pkg-config

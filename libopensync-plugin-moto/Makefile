@@ -2,11 +2,11 @@
 
 DISTNAME=	libopensync-plugin-moto-0.22
 CATEGORIES=	comms
-MASTER_SITES=	http://www.opensync.org/attachment/wiki/download/
+#MASTER_SITES=	http://www.opensync.org/attachment/wiki/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.opensync.org/attachment/wiki/download/
+#HOMEPAGE=	http://www.opensync.org/attachment/wiki/download/
 COMMENT=	Moto plugin for opensync (for Motorola phones)
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil

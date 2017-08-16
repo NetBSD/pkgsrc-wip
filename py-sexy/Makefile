@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://releases.chipx86.com/libsexy/sexy-python/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.chipx86.com/wiki/Libsexy
+#HOMEPAGE=	http://www.chipx86.com/wiki/Libsexy
 COMMENT=	Python bindings for libsexy
 LICENSE=	gnu-lgpl-v2.1
 
