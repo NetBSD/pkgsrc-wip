@@ -16,7 +16,8 @@ WRKSRC=		${WRKDIR}/${GITLAB_PROJECT}-${GITLAB_REV}-${GITLAB_TAG}/src
 
 USE_TOOLS=	pkg-config gmake
 
-MAKE_FLAGS=	prefix=${PREFIX}
+MAKE_FLAGS+=	prefix=${PREFIX}
+CFLAGS+=	-DPREFIX=\"${PREFIX}\"
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
