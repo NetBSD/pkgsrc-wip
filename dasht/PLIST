@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/dasht
+bin/dasht-docsets
+bin/dasht-docsets-extract
+bin/dasht-docsets-install
+bin/dasht-docsets-remove
+bin/dasht-docsets-update
+bin/dasht-query-exec
+bin/dasht-query-html
+bin/dasht-query-line
+bin/dasht-server
+bin/dasht-server-http
+man/man1/dasht-docsets-extract.1
+man/man1/dasht-docsets-install.1
+man/man1/dasht-docsets-remove.1
+man/man1/dasht-docsets-update.1
+man/man1/dasht-docsets.1
+man/man1/dasht-query-exec.1
+man/man1/dasht-query-html.1
+man/man1/dasht-query-line.1
+man/man1/dasht-server-http.1
+man/man1/dasht-server.1
+man/man1/dasht.1

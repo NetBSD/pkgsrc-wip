@@ -1,0 +1,15 @@
+$NetBSD$
+
+Just use pgrep(1) instead of a complex (and fragile) ps-piped-with-sed.
+
+--- bin/dasht.orig	2017-08-16 03:30:44.000000000 +0000
++++ bin/dasht
+@@ -71,7 +71,7 @@ if ! dasht-query-html "$@"; then
+ 
+   # emulate pipefail (which POSIX lacks) by killing off the w3m(1) process
+   # below (which starts up simultaneously alongside this pipeline segment)
+-  kill $(ps -e -o comm,ppid,pid | sed -n "s/^w3m *$$ //p")
++  kill $(pgrep -P $$ w3m)
+ 
+   # and then proceed to tell this script to generate a nonzero exit status
+   kill -s USR1 $$

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Just use sh(1) `read' command to get the confirmation from the user.
+
+--- bin/dasht-docsets-install.orig	2017-08-16 03:30:44.000000000 +0000
++++ bin/dasht-docsets-install
+@@ -86,7 +86,7 @@ printf "Installable docsets ($#):\n\n\t%
+ trap exit INT # let Control-C abort `xargs -p` when running under bash(1)
+ for docset; do
+   test -n "$force" || # don't ask for confirmation when it's being forced
+-  echo "Install $docset docset [y/N]" | xargs -p | grep -q . || continue
++  { printf "Install $docset docset [y/N]"; read r; [ "$r" = "y" ] || continue ; }
+ 
+   basename="$docset".tgz
+   tgz="$DASHT_DOCSETS_DIR/$basename"
