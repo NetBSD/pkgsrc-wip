@@ -1,9 +1,0 @@
-$Id: TODO,v 1.2 2006/04/20 07:08:27 ahallmann Exp $
-
-Modify the follwing to have some automation about ${VARBASE}
-
-files/cfexecd.sh:required_files="/var/cfengine/inputs/update.conf"
-files/cfexecd.sh:        if [ -f /var/cfengine/ppkeys/localhost.priv ]; then
-files/cfexecd.sh:                    "in /var/cfengine/ppkeys/localhost.priv"
-files/cfexecd.sh:        if [ ! -f /var/cfengine/ppkeys/localhost.priv ]; then
-files/cfservd.sh:required_files="/var/cfengine/inputs/cfservd.conf"
