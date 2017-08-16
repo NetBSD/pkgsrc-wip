@@ -2,7 +2,7 @@
 
 DISTNAME=	grafX2-2.4
 CATEGORIES=	graphics
-MASTER_SITES=	-https://gitlab.com/GrafX2/${GITLAB_PROJECT}/repository/archive.tar.gz?ref=${GITLAB_TAG}
+MASTER_SITES=	-https://gitlab.com/GrafX2/${GITLAB_PROJECT}/repository/${GITLAB_REV}/archive.tar.gz
 
 HOMEPAGE=	http://grafx2.chez.com/
 COMMENT=	Bitmap paint program suited for pixel art
