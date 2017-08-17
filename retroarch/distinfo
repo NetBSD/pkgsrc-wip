@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.4 2015/11/03 20:31:01 agc Exp $
 
-SHA1 (retroarch-1.6.4.tar.gz) = b167100b68bf73ade1c757ec77140a0c2a84909f
-RMD160 (retroarch-1.6.4.tar.gz) = 8a4d09690d29874be4be1380bfa15ddd26ba9aa7
-SHA512 (retroarch-1.6.4.tar.gz) = 9a51b8e6a7e7c6b959c9cff3f19ae89c98fd71680e63e08b1a3acf978a57bcf3a7ca1598702912b947a0216e7d590ad12585e8f1657328039baa304aa1eaaa8b
-Size (retroarch-1.6.4.tar.gz) = 17332541 bytes
+SHA1 (retroarch-1.6.6.tar.gz) = 94e18446afc4cabd353ddbac981d80528b4bf9d3
+RMD160 (retroarch-1.6.6.tar.gz) = 58178d2299fd017b9e89f96a9a78b7e2614a0946
+SHA512 (retroarch-1.6.6.tar.gz) = 6641873785d7a0e62676b9b2dc336c12835a090b424215efe95c837cf93e0bdec87418d59f75d2380bcc2d72576db4b8895ea6fb20b4d4e08a381624b6ba75bb
+Size (retroarch-1.6.6.tar.gz) = 17375387 bytes
 SHA1 (patch-Makefile) = 0a573beb9a95ab822eaa4056ccd260a0961b2d7b
 SHA1 (patch-Makefile.common) = ee3c0e6273d8a1c726f22423d261b10bb38b6ce3
 SHA1 (patch-frontend_drivers_platform__unix.c) = ad47823cdec50cc36e97f78b540d35a5ccf2d994
