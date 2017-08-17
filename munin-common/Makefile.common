@@ -4,9 +4,10 @@
 # used by wip/munin-master/Makefile
 # used by wip/munin-node/Makefile
 
-DISTNAME=	munin-2.0.25
+VERSION=	2.0.30
+DISTNAME=	munin-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
+MASTER_SITES=	http://downloads.munin-monitoring.org/munin/stable/${VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin-monitoring.org/
@@ -59,6 +60,7 @@ FILES_SUBST+=		PERL=${PERL5:Q}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+=		STATEDIR=${STATEDIR}
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 MAKE_ENV+=		BASH=${BASH:Q}
 MAKE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=		MUNIN_DBDIR=${MUNIN_DBDIR}
