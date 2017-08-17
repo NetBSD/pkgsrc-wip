@@ -9,6 +9,8 @@ HOMEPAGE=		http://dafoster.net/projects/rdiscount/
 COMMENT=		Converts documents in Markdown syntax to HTML
 LICENSE=		modified-bsd
 
+RUBYGEM_OPTIONS+=	--format-executable
+
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
