@@ -6,3 +6,4 @@ SHA512 (nmh-1.7-RC1.tar.gz) = 533ebc81ebf9070bfc754dc38d97600f18a50f23999b938348
 Size (nmh-1.7-RC1.tar.gz) = 1386731 bytes
 SHA1 (patch-ca) = 8e3d655602d8b508f403e51b105e122818b50b7c
 SHA1 (patch-cd) = 5a775091713bca2597a01fcd267d56e2a175588a
+SHA1 (patch-uip_mhical.c) = b95b92cc4e02a151772757c5ba9b92a20d472c85
