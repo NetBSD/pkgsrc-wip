@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1 2015/04/25 21:58:18 ahp-nils Exp $
-bin/mustache
+bin/mustache${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -73,6 +73,6 @@ ${GEM_LIBDIR}/test/partial_test.rb
 ${GEM_LIBDIR}/test/spec_test.rb
 ${GEM_LIBDIR}/test/template_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-man/man1/mustache.1
-man/man5/mustache.5
+man/man1/${RUBY_PKGPREFIX}-mustache.1
+man/man5/${RUBY_PKGPREFIX}-mustache.5
 @pkgdir lib/ruby/gems/2.0.0/build_info
