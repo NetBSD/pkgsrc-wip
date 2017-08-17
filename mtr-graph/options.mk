@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mtr-graph
 PKG_SUPPORTED_OPTIONS=	inet6
 PKG_SUPPORTED_OPTIONS+=	ipinfo
-PKG_SUPPORTED_OPTIONS+=	libidn
+PKG_SUPPORTED_OPTIONS+=	idn
 PKG_SUPPORTED_OPTIONS+=	unicode
 PKG_SUPPORTED_OPTIONS+=	sys-getopt
 PKG_OPTIONS_OPTIONAL_GROUPS+=	graphcairo
@@ -12,6 +12,7 @@ PKG_OPTIONS_GROUP.graphcairo+=	graphcairo-xlib
 PKG_SUGGESTED_OPTIONS+=	ipinfo
 PKG_SUGGESTED_OPTIONS+=	unicode
 PKG_SUGGESTED_OPTIONS+=	sys-getopt
+PKG_OPTIONS_LEGACY_OPTS=libidn:idn
 
 .include "../../mk/bsd.options.mk"
 
@@ -40,7 +41,7 @@ CONFIGURE_ARGS+=	--with-graphcairo-xlib
 .endif
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibidn)
+.if !empty(PKG_OPTIONS:Midn)
 .include "../../devel/libidn/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn
 .endif
