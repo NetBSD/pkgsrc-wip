@@ -14,7 +14,7 @@ RUBYGEM_OPTIONS+=	--format-executable
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
-	${LN} -sf ${PREFIX}/${GEM_LIBDIR}/man/rdiscount.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rdiscount.1
+	${LN} -sf ${PREFIX}/${GEM_LIBDIR}/man/rdiscount.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${RUBY_PKGPREFIX}-rdiscount.1
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
