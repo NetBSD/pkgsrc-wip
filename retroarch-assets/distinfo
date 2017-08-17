@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (retroarch-assets-20170508-92c58f06ce92e5bb5df17b1dc8ab4844eb839fd5.tar.gz) = b2857973796aa2a33e3128b72ba054e70608b68c
-RMD160 (retroarch-assets-20170508-92c58f06ce92e5bb5df17b1dc8ab4844eb839fd5.tar.gz) = 83c1af5b9300edf6dd5c4b9a3b4cd370fa57a49b
-SHA512 (retroarch-assets-20170508-92c58f06ce92e5bb5df17b1dc8ab4844eb839fd5.tar.gz) = 4f19a1ec903402732a21e046e9da7acebd2b514c8f1ba9f3f0fc9eb9030caf3aa72ff2f9f4c820df763edde36b02db4abddb023d55a314a5b0fb0c755e8a8df9
-Size (retroarch-assets-20170508-92c58f06ce92e5bb5df17b1dc8ab4844eb839fd5.tar.gz) = 69266613 bytes
+SHA1 (retroarch-assets-20170815-b1edf45cb6226bd282e2609e55bbde28c5d389f2.tar.gz) = f63d9ae6f8bfb1eaef7db6e5955ae3ad5312668b
+RMD160 (retroarch-assets-20170815-b1edf45cb6226bd282e2609e55bbde28c5d389f2.tar.gz) = 0a2b739409ccfad4635ef4be6400c1c52fa000f6
+SHA512 (retroarch-assets-20170815-b1edf45cb6226bd282e2609e55bbde28c5d389f2.tar.gz) = ec690a37e8dd7bc9e5aa7d9b5e55268a9fe21d3b29f04badb6765ecec6820fed1fe3152041cce63eb7ebc28bbff4cdeab08b8fb3391bb918de7d10c3a858981f
+Size (retroarch-assets-20170815-b1edf45cb6226bd282e2609e55bbde28c5d389f2.tar.gz) = 76839562 bytes

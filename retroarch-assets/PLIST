@@ -5,19 +5,61 @@ share/retroarch/assets/branding/retroarch-plain-logo.png
 share/retroarch/assets/branding/retroarch_bg.png
 share/retroarch/assets/branding/retroarch_libretro_bg.png
 share/retroarch/assets/branding/retroarch_nologo_bg.png
+share/retroarch/assets/glui/add.png
+share/retroarch/assets/glui/add_to_favorites.png
+share/retroarch/assets/glui/add_to_mixer.png
+share/retroarch/assets/glui/archive.png
 share/retroarch/assets/glui/back.png
+share/retroarch/assets/glui/close.png
+share/retroarch/assets/glui/configurations.png
+share/retroarch/assets/glui/controls.png
+share/retroarch/assets/glui/core_cheat_options.png
+share/retroarch/assets/glui/core_options.png
+share/retroarch/assets/glui/cores.png
+share/retroarch/assets/glui/database.png
+share/retroarch/assets/glui/file.png
+share/retroarch/assets/glui/folder.png
 share/retroarch/assets/glui/font.ttf
+share/retroarch/assets/glui/help.png
+share/retroarch/assets/glui/history.png
+share/retroarch/assets/glui/image.png
+share/retroarch/assets/glui/information.png
 share/retroarch/assets/glui/key-hover.png
 share/retroarch/assets/glui/key.png
+share/retroarch/assets/glui/load_content.png
+share/retroarch/assets/glui/load_state.png
 share/retroarch/assets/glui/main_tab_active.png
 share/retroarch/assets/glui/main_tab_passive.png
+share/retroarch/assets/glui/music.png
+share/retroarch/assets/glui/netplay.png
 share/retroarch/assets/glui/off.png
 share/retroarch/assets/glui/on.png
+share/retroarch/assets/glui/parent_directory.png
+share/retroarch/assets/glui/playlist.png
 share/retroarch/assets/glui/playlists_tab_active.png
 share/retroarch/assets/glui/playlists_tab_passive.png
 share/retroarch/assets/glui/pointer.png
+share/retroarch/assets/glui/quickmenu.png
+share/retroarch/assets/glui/quit.png
+share/retroarch/assets/glui/refresh.png
+share/retroarch/assets/glui/remove.png
+share/retroarch/assets/glui/rename.png
+share/retroarch/assets/glui/restart.png
+share/retroarch/assets/glui/resume.png
+share/retroarch/assets/glui/run.png
+share/retroarch/assets/glui/save_state.png
+share/retroarch/assets/glui/scan.png
+share/retroarch/assets/glui/settings.png
 share/retroarch/assets/glui/settings_tab_active.png
 share/retroarch/assets/glui/settings_tab_passive.png
+share/retroarch/assets/glui/shaders.png
+share/retroarch/assets/glui/start_core.png
+share/retroarch/assets/glui/state_slot.png
+share/retroarch/assets/glui/take_screenshot.png
+share/retroarch/assets/glui/undo_load_state.png
+share/retroarch/assets/glui/undo_save_state.png
+share/retroarch/assets/glui/update.png
+share/retroarch/assets/glui/video.png
 share/retroarch/assets/xmb/dot-art/font.ttf
 share/retroarch/assets/xmb/dot-art/png/2048-content.png
 share/retroarch/assets/xmb/dot-art/png/2048.png
@@ -97,6 +139,8 @@ share/retroarch/assets/xmb/dot-art/png/NEC - PC Engine CD - TurboGrafx-CD-conten
 share/retroarch/assets/xmb/dot-art/png/NEC - PC Engine CD - TurboGrafx-CD.png
 share/retroarch/assets/xmb/dot-art/png/NEC - PC Engine SuperGrafx-content.png
 share/retroarch/assets/xmb/dot-art/png/NEC - PC Engine SuperGrafx.png
+share/retroarch/assets/xmb/dot-art/png/NEC - PC-98-content.png
+share/retroarch/assets/xmb/dot-art/png/NEC - PC-98.png
 share/retroarch/assets/xmb/dot-art/png/NEC - PC-FX-content.png
 share/retroarch/assets/xmb/dot-art/png/NEC - PC-FX.png
 share/retroarch/assets/xmb/dot-art/png/Nintendo - Family Computer Disk System-content.png
@@ -109,6 +153,8 @@ share/retroarch/assets/xmb/dot-art/png/Nintendo - Game Boy-content.png
 share/retroarch/assets/xmb/dot-art/png/Nintendo - Game Boy.png
 share/retroarch/assets/xmb/dot-art/png/Nintendo - GameCube-content.png
 share/retroarch/assets/xmb/dot-art/png/Nintendo - GameCube.png
+share/retroarch/assets/xmb/dot-art/png/Nintendo - Nintendo 3DS-content.png
+share/retroarch/assets/xmb/dot-art/png/Nintendo - Nintendo 3DS.png
 share/retroarch/assets/xmb/dot-art/png/Nintendo - Nintendo 64-content.png
 share/retroarch/assets/xmb/dot-art/png/Nintendo - Nintendo 64.png
 share/retroarch/assets/xmb/dot-art/png/Nintendo - Nintendo 64DD-content.png
@@ -159,6 +205,8 @@ share/retroarch/assets/xmb/dot-art/png/Sega - SG-1000-content.png
 share/retroarch/assets/xmb/dot-art/png/Sega - SG-1000.png
 share/retroarch/assets/xmb/dot-art/png/Sega - Saturn-content.png
 share/retroarch/assets/xmb/dot-art/png/Sega - Saturn.png
+share/retroarch/assets/xmb/dot-art/png/Sharp - X68000-content.png
+share/retroarch/assets/xmb/dot-art/png/Sharp - X68000.png
 share/retroarch/assets/xmb/dot-art/png/Sinclair - ZX 81-content.png
 share/retroarch/assets/xmb/dot-art/png/Sinclair - ZX 81.png
 share/retroarch/assets/xmb/dot-art/png/Sinclair - ZX Spectrum +3-content.png
@@ -178,7 +226,6 @@ share/retroarch/assets/xmb/dot-art/png/Tiger - Game.com-content.png
 share/retroarch/assets/xmb/dot-art/png/Tiger - Game.com.png
 share/retroarch/assets/xmb/dot-art/png/Uzebox-content.png
 share/retroarch/assets/xmb/dot-art/png/Uzebox.png
-share/retroarch/assets/xmb/dot-art/png/X68000-content.png
 share/retroarch/assets/xmb/dot-art/png/achievement-list.png
 share/retroarch/assets/xmb/dot-art/png/add.png
 share/retroarch/assets/xmb/dot-art/png/arrow.png
@@ -234,7 +281,6 @@ share/retroarch/assets/xmb/dot-art/png/settings.png
 share/retroarch/assets/xmb/dot-art/png/subsetting.png
 share/retroarch/assets/xmb/dot-art/png/undo.png
 share/retroarch/assets/xmb/dot-art/png/wifi.png
-share/retroarch/assets/xmb/dot-art/png/x68000.png
 share/retroarch/assets/xmb/dot-art/png/zip.png
 share/retroarch/assets/xmb/flatui/font.ttf
 share/retroarch/assets/xmb/flatui/png/Atari - 2600-content.png
@@ -347,24 +393,42 @@ share/retroarch/assets/xmb/monochrome/png/Atari - 5200-content.png
 share/retroarch/assets/xmb/monochrome/png/Atari - 5200.png
 share/retroarch/assets/xmb/monochrome/png/Atari - 7800-content.png
 share/retroarch/assets/xmb/monochrome/png/Atari - 7800.png
+share/retroarch/assets/xmb/monochrome/png/Atari - Jaguar CD-content.png
+share/retroarch/assets/xmb/monochrome/png/Atari - Jaguar CD.png
 share/retroarch/assets/xmb/monochrome/png/Atari - Jaguar-content.png
 share/retroarch/assets/xmb/monochrome/png/Atari - Jaguar.png
 share/retroarch/assets/xmb/monochrome/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/monochrome/png/Atari - Lynx.png
 share/retroarch/assets/xmb/monochrome/png/Atari - ST-content.png
 share/retroarch/assets/xmb/monochrome/png/Atari - ST.png
+share/retroarch/assets/xmb/monochrome/png/Bally - Astrocade-content.png
+share/retroarch/assets/xmb/monochrome/png/Bally - Astrocade.png
 share/retroarch/assets/xmb/monochrome/png/Bandai - WonderSwan Color-content.png
 share/retroarch/assets/xmb/monochrome/png/Bandai - WonderSwan Color.png
 share/retroarch/assets/xmb/monochrome/png/Bandai - WonderSwan-content.png
 share/retroarch/assets/xmb/monochrome/png/Bandai - WonderSwan.png
+share/retroarch/assets/xmb/monochrome/png/Benesse - Pocket Challenge V2-content.png
+share/retroarch/assets/xmb/monochrome/png/Benesse - Pocket Challenge V2.png
+share/retroarch/assets/xmb/monochrome/png/CHIP-8-content.png
+share/retroarch/assets/xmb/monochrome/png/CHIP-8.png
+share/retroarch/assets/xmb/monochrome/png/Casio - Loopy-content.png
+share/retroarch/assets/xmb/monochrome/png/Casio - Loopy.png
+share/retroarch/assets/xmb/monochrome/png/Casio PV-1000-content.png
+share/retroarch/assets/xmb/monochrome/png/Casio PV-1000.png
 share/retroarch/assets/xmb/monochrome/png/Cave Story-content.png
 share/retroarch/assets/xmb/monochrome/png/Cave Story.png
+share/retroarch/assets/xmb/monochrome/png/Coleco - ColecoVision ADAM-content.png
+share/retroarch/assets/xmb/monochrome/png/Coleco - ColecoVision ADAM.png
 share/retroarch/assets/xmb/monochrome/png/Coleco - ColecoVision-content.png
 share/retroarch/assets/xmb/monochrome/png/Coleco - ColecoVision.png
 share/retroarch/assets/xmb/monochrome/png/Commodore - 64-content.png
 share/retroarch/assets/xmb/monochrome/png/Commodore - 64.png
 share/retroarch/assets/xmb/monochrome/png/Commodore - Amiga-content.png
 share/retroarch/assets/xmb/monochrome/png/Commodore - Amiga.png
+share/retroarch/assets/xmb/monochrome/png/Commodore - VIC-20-content.png
+share/retroarch/assets/xmb/monochrome/png/Commodore - VIC-20.png
+share/retroarch/assets/xmb/monochrome/png/Commodore Plus-4-content.png
+share/retroarch/assets/xmb/monochrome/png/Commodore Plus-4.png
 share/retroarch/assets/xmb/monochrome/png/DOOM-content.png
 share/retroarch/assets/xmb/monochrome/png/DOOM.png
 share/retroarch/assets/xmb/monochrome/png/DOS-content.png
@@ -373,10 +437,20 @@ share/retroarch/assets/xmb/monochrome/png/Dinothawr-content.png
 share/retroarch/assets/xmb/monochrome/png/Dinothawr.png
 share/retroarch/assets/xmb/monochrome/png/Dungeon Crawl Stone Soup-content.png
 share/retroarch/assets/xmb/monochrome/png/Dungeon Crawl Stone Soup.png
+share/retroarch/assets/xmb/monochrome/png/Emerson - Arcadia 2001-content.png
+share/retroarch/assets/xmb/monochrome/png/Emerson - Arcadia 2001.png
+share/retroarch/assets/xmb/monochrome/png/Entex - Adventure Vision-content.png
+share/retroarch/assets/xmb/monochrome/png/Entex - Adventure Vision.png
+share/retroarch/assets/xmb/monochrome/png/Epoch - Super Cassette Vision-content.png
+share/retroarch/assets/xmb/monochrome/png/Epoch - Super Cassette Vision.png
 share/retroarch/assets/xmb/monochrome/png/FB Alpha - Arcade Games-content.png
 share/retroarch/assets/xmb/monochrome/png/FB Alpha - Arcade Games.png
 share/retroarch/assets/xmb/monochrome/png/FFmpeg-content.png
 share/retroarch/assets/xmb/monochrome/png/FFmpeg.png
+share/retroarch/assets/xmb/monochrome/png/Fairchild - Channel F-content.png
+share/retroarch/assets/xmb/monochrome/png/Fairchild - Channel F.png
+share/retroarch/assets/xmb/monochrome/png/Funtech - Super Acan-content.png
+share/retroarch/assets/xmb/monochrome/png/Funtech - Super Acan.png
 share/retroarch/assets/xmb/monochrome/png/GCE - Vectrex-content.png
 share/retroarch/assets/xmb/monochrome/png/GCE - Vectrex.png
 share/retroarch/assets/xmb/monochrome/png/Game Park - GP32-content.png
@@ -385,29 +459,45 @@ share/retroarch/assets/xmb/monochrome/png/Game-content.png
 share/retroarch/assets/xmb/monochrome/png/Game.png
 share/retroarch/assets/xmb/monochrome/png/Handheld Electronic Game-content.png
 share/retroarch/assets/xmb/monochrome/png/Handheld Electronic Game.png
+share/retroarch/assets/xmb/monochrome/png/Hartung - Game Master-content.png
+share/retroarch/assets/xmb/monochrome/png/Hartung - Game Master.png
+share/retroarch/assets/xmb/monochrome/png/LeapFrog - Leapster Learning Game System-content.png
+share/retroarch/assets/xmb/monochrome/png/LeapFrog - Leapster Learning Game System.png
 share/retroarch/assets/xmb/monochrome/png/Libretro - Pad.png
 share/retroarch/assets/xmb/monochrome/png/Lutro-content.png
 share/retroarch/assets/xmb/monochrome/png/Lutro.png
+share/retroarch/assets/xmb/monochrome/png/MAME 2003-content.png
+share/retroarch/assets/xmb/monochrome/png/MAME 2003.png
+share/retroarch/assets/xmb/monochrome/png/MAME 2010-content.png
+share/retroarch/assets/xmb/monochrome/png/MAME 2010.png
 share/retroarch/assets/xmb/monochrome/png/MAME-content.png
 share/retroarch/assets/xmb/monochrome/png/MAME.png
-share/retroarch/assets/xmb/monochrome/png/MAME2003-content.png
-share/retroarch/assets/xmb/monochrome/png/MAME2003.png
-share/retroarch/assets/xmb/monochrome/png/MAME2010-content.png
-share/retroarch/assets/xmb/monochrome/png/MAME2010.png
 share/retroarch/assets/xmb/monochrome/png/Magnavox - Odyssey2-content.png
 share/retroarch/assets/xmb/monochrome/png/Magnavox - Odyssey2.png
+share/retroarch/assets/xmb/monochrome/png/Mattel - Intellevision-content.png
+share/retroarch/assets/xmb/monochrome/png/Mattel - Intellevision.png
 share/retroarch/assets/xmb/monochrome/png/Microsoft - MSX-content.png
 share/retroarch/assets/xmb/monochrome/png/Microsoft - MSX.png
 share/retroarch/assets/xmb/monochrome/png/Microsoft - MSX2-content.png
 share/retroarch/assets/xmb/monochrome/png/Microsoft - MSX2.png
+share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX 360-content.png
+share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX 360.png
+share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX One-content.png
+share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX One.png
 share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX.png
+share/retroarch/assets/xmb/monochrome/png/Minecraft-content.png
+share/retroarch/assets/xmb/monochrome/png/Minecraft.png
+share/retroarch/assets/xmb/monochrome/png/Mr. Boom-content.png
+share/retroarch/assets/xmb/monochrome/png/Mr. Boom.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine - TurboGrafx 16-content.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine - TurboGrafx 16.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine CD - TurboGrafx-CD-content.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine CD - TurboGrafx-CD.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine SuperGrafx-content.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine SuperGrafx.png
+share/retroarch/assets/xmb/monochrome/png/NEC - PC-98-content.png
+share/retroarch/assets/xmb/monochrome/png/NEC - PC-98.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC-FX-content.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC-FX.png
 share/retroarch/assets/xmb/monochrome/png/Neo Geo-content.png
@@ -422,6 +512,10 @@ share/retroarch/assets/xmb/monochrome/png/Nintendo - Game Boy-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Game Boy.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - GameCube-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - GameCube.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - New Nintendo 3DS-content.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - New Nintendo 3DS.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo 3DS-content.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo 3DS.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo 64-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo 64.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo 64DD-content.png
@@ -430,6 +524,8 @@ share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo DS Decrypted-conte
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo DS Decrypted.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo DS-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo DS.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo DSi-content.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo DSi.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo Entertainment System-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Nintendo Entertainment System.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Pokemon Mini-content.png
@@ -440,12 +536,22 @@ share/retroarch/assets/xmb/monochrome/png/Nintendo - Sufami Turbo-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Sufami Turbo.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Super Nintendo Entertainment System-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Super Nintendo Entertainment System.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Switch-content.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Switch.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Virtual Boy-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Virtual Boy.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Wii U-content.png
+share/retroarch/assets/xmb/monochrome/png/Nintendo - Wii U.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Wii-content.png
 share/retroarch/assets/xmb/monochrome/png/Nintendo - Wii.png
+share/retroarch/assets/xmb/monochrome/png/Philips - Videopac+-content.png
+share/retroarch/assets/xmb/monochrome/png/Philips - Videopac+.png
 share/retroarch/assets/xmb/monochrome/png/Quake1-content.png
 share/retroarch/assets/xmb/monochrome/png/Quake1.png
+share/retroarch/assets/xmb/monochrome/png/RCA - Studio II-content.png
+share/retroarch/assets/xmb/monochrome/png/RCA - Studio II.png
+share/retroarch/assets/xmb/monochrome/png/Rick Dangerous-content.png
+share/retroarch/assets/xmb/monochrome/png/Rick Dangerous.png
 share/retroarch/assets/xmb/monochrome/png/SNK - Neo Geo CD-content.png
 share/retroarch/assets/xmb/monochrome/png/SNK - Neo Geo CD.png
 share/retroarch/assets/xmb/monochrome/png/SNK - Neo Geo Pocket Color-content.png
@@ -474,6 +580,8 @@ share/retroarch/assets/xmb/monochrome/png/Sega - SG-1000-content.png
 share/retroarch/assets/xmb/monochrome/png/Sega - SG-1000.png
 share/retroarch/assets/xmb/monochrome/png/Sega - Saturn-content.png
 share/retroarch/assets/xmb/monochrome/png/Sega - Saturn.png
+share/retroarch/assets/xmb/monochrome/png/Sharp - X68000-content.png
+share/retroarch/assets/xmb/monochrome/png/Sharp - X68000.png
 share/retroarch/assets/xmb/monochrome/png/Sinclair - ZX 81-content.png
 share/retroarch/assets/xmb/monochrome/png/Sinclair - ZX 81.png
 share/retroarch/assets/xmb/monochrome/png/Sinclair - ZX Spectrum +3-content.png
@@ -482,17 +590,32 @@ share/retroarch/assets/xmb/monochrome/png/Sinclair - ZX Spectrum-content.png
 share/retroarch/assets/xmb/monochrome/png/Sinclair - ZX Spectrum.png
 share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation 2-content.png
 share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation 2.png
+share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation 3-content.png
+share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation 3.png
+share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation 4-content.png
+share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation 4.png
 share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation Portable-content.png
 share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation Portable.png
+share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation Vita-content.png
+share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation Vita.png
 share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation-content.png
 share/retroarch/assets/xmb/monochrome/png/Sony - PlayStation.png
 share/retroarch/assets/xmb/monochrome/png/The 3DO Company - 3DO-content.png
 share/retroarch/assets/xmb/monochrome/png/The 3DO Company - 3DO.png
 share/retroarch/assets/xmb/monochrome/png/Tiger - Game.com-content.png
 share/retroarch/assets/xmb/monochrome/png/Tiger - Game.com.png
+share/retroarch/assets/xmb/monochrome/png/Tomb Raider-content.png
+share/retroarch/assets/xmb/monochrome/png/Tomb Raider.png
 share/retroarch/assets/xmb/monochrome/png/Uzebox-content.png
 share/retroarch/assets/xmb/monochrome/png/Uzebox.png
+share/retroarch/assets/xmb/monochrome/png/VTech - CreatiVision-content.png
+share/retroarch/assets/xmb/monochrome/png/VTech - CreatiVision.png
+share/retroarch/assets/xmb/monochrome/png/VTech - V.Smile-content.png
+share/retroarch/assets/xmb/monochrome/png/VTech - V.Smile.png
+share/retroarch/assets/xmb/monochrome/png/Watara - Supervision-content.png
+share/retroarch/assets/xmb/monochrome/png/Watara - Supervision.png
 share/retroarch/assets/xmb/monochrome/png/achievement-list.png
+share/retroarch/assets/xmb/monochrome/png/add-favorite.png
 share/retroarch/assets/xmb/monochrome/png/add.png
 share/retroarch/assets/xmb/monochrome/png/arrow.png
 share/retroarch/assets/xmb/monochrome/png/battery-charging.png
@@ -512,6 +635,8 @@ share/retroarch/assets/xmb/monochrome/png/database.png
 share/retroarch/assets/xmb/monochrome/png/default-content.png
 share/retroarch/assets/xmb/monochrome/png/default.png
 share/retroarch/assets/xmb/monochrome/png/dialog-slice.png
+share/retroarch/assets/xmb/monochrome/png/favorites-content.png
+share/retroarch/assets/xmb/monochrome/png/favorites.png
 share/retroarch/assets/xmb/monochrome/png/file.png
 share/retroarch/assets/xmb/monochrome/png/folder.png
 share/retroarch/assets/xmb/monochrome/png/history.png
@@ -560,30 +685,48 @@ share/retroarch/assets/xmb/neoactive/png/Atari - 5200.png
 share/retroarch/assets/xmb/neoactive/png/Atari - 7800 (E).png
 share/retroarch/assets/xmb/neoactive/png/Atari - 7800-content.png
 share/retroarch/assets/xmb/neoactive/png/Atari - 7800.png
+share/retroarch/assets/xmb/neoactive/png/Atari - Jaguar CD-content.png
+share/retroarch/assets/xmb/neoactive/png/Atari - Jaguar CD.png
 share/retroarch/assets/xmb/neoactive/png/Atari - Jaguar-content.png
 share/retroarch/assets/xmb/neoactive/png/Atari - Jaguar.png
 share/retroarch/assets/xmb/neoactive/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/neoactive/png/Atari - Lynx.png
 share/retroarch/assets/xmb/neoactive/png/Atari - ST-content.png
 share/retroarch/assets/xmb/neoactive/png/Atari - ST.png
+share/retroarch/assets/xmb/neoactive/png/Bally - Astrocade-content.png
+share/retroarch/assets/xmb/neoactive/png/Bally - Astrocade.png
 share/retroarch/assets/xmb/neoactive/png/Bandai - WonderSwan Color-content.png
 share/retroarch/assets/xmb/neoactive/png/Bandai - WonderSwan Color.png
 share/retroarch/assets/xmb/neoactive/png/Bandai - WonderSwan-content.png
 share/retroarch/assets/xmb/neoactive/png/Bandai - WonderSwan.png
+share/retroarch/assets/xmb/neoactive/png/Benesse - Pocket Challenge V2-content.png
+share/retroarch/assets/xmb/neoactive/png/Benesse - Pocket Challenge V2.png
+share/retroarch/assets/xmb/neoactive/png/CHIP-8-content.png
+share/retroarch/assets/xmb/neoactive/png/CHIP-8.png
 share/retroarch/assets/xmb/neoactive/png/Capcom - CP System I-content.png
 share/retroarch/assets/xmb/neoactive/png/Capcom - CP System I.png
 share/retroarch/assets/xmb/neoactive/png/Capcom - CP System II-content.png
 share/retroarch/assets/xmb/neoactive/png/Capcom - CP System II.png
 share/retroarch/assets/xmb/neoactive/png/Capcom - CP System III-content.png
 share/retroarch/assets/xmb/neoactive/png/Capcom - CP System III.png
+share/retroarch/assets/xmb/neoactive/png/Casio - Loopy-content.png
+share/retroarch/assets/xmb/neoactive/png/Casio - Loopy.png
+share/retroarch/assets/xmb/neoactive/png/Casio - PV-1000-content.png
+share/retroarch/assets/xmb/neoactive/png/Casio - PV-1000.png
 share/retroarch/assets/xmb/neoactive/png/Cave Story-content.png
 share/retroarch/assets/xmb/neoactive/png/Cave Story.png
+share/retroarch/assets/xmb/neoactive/png/Coleco - ColecoVision ADAM-content.png
+share/retroarch/assets/xmb/neoactive/png/Coleco - ColecoVision ADAM.png
 share/retroarch/assets/xmb/neoactive/png/Coleco - ColecoVision-content.png
 share/retroarch/assets/xmb/neoactive/png/Coleco - ColecoVision.png
 share/retroarch/assets/xmb/neoactive/png/Commodore - 64-content.png
 share/retroarch/assets/xmb/neoactive/png/Commodore - 64.png
 share/retroarch/assets/xmb/neoactive/png/Commodore - Amiga-content.png
 share/retroarch/assets/xmb/neoactive/png/Commodore - Amiga.png
+share/retroarch/assets/xmb/neoactive/png/Commodore - VIC-20-content.png
+share/retroarch/assets/xmb/neoactive/png/Commodore - VIC-20.png
+share/retroarch/assets/xmb/neoactive/png/Commodore Plus-4-content.png
+share/retroarch/assets/xmb/neoactive/png/Commodore Plus-4.png
 share/retroarch/assets/xmb/neoactive/png/DOOM-content.png
 share/retroarch/assets/xmb/neoactive/png/DOOM.png
 share/retroarch/assets/xmb/neoactive/png/DOS-content.png
@@ -592,10 +735,20 @@ share/retroarch/assets/xmb/neoactive/png/Dinothawr-content.png
 share/retroarch/assets/xmb/neoactive/png/Dinothawr.png
 share/retroarch/assets/xmb/neoactive/png/Dungeon Crawl Stone Soup-content.png
 share/retroarch/assets/xmb/neoactive/png/Dungeon Crawl Stone Soup.png
+share/retroarch/assets/xmb/neoactive/png/Emerson - Arcadia 2001-content.png
+share/retroarch/assets/xmb/neoactive/png/Emerson - Arcadia 2001.png
+share/retroarch/assets/xmb/neoactive/png/Entex - Adventure Vision-content.png
+share/retroarch/assets/xmb/neoactive/png/Entex - Adventure Vision.png
+share/retroarch/assets/xmb/neoactive/png/Epoch - Super Cassette Vision-content.png
+share/retroarch/assets/xmb/neoactive/png/Epoch - Super Cassette Vision.png
 share/retroarch/assets/xmb/neoactive/png/FB Alpha - Arcade Games-content.png
 share/retroarch/assets/xmb/neoactive/png/FB Alpha - Arcade Games.png
 share/retroarch/assets/xmb/neoactive/png/FFmpeg-content.png
 share/retroarch/assets/xmb/neoactive/png/FFmpeg.png
+share/retroarch/assets/xmb/neoactive/png/Fairchild - Channel F-content.png
+share/retroarch/assets/xmb/neoactive/png/Fairchild - Channel F.png
+share/retroarch/assets/xmb/neoactive/png/Funtech - Super Acan-content.png
+share/retroarch/assets/xmb/neoactive/png/Funtech - Super Acan.png
 share/retroarch/assets/xmb/neoactive/png/GCE - Vectrex (E).png
 share/retroarch/assets/xmb/neoactive/png/GCE - Vectrex-content.png
 share/retroarch/assets/xmb/neoactive/png/GCE - Vectrex.png
@@ -603,10 +756,12 @@ share/retroarch/assets/xmb/neoactive/png/Game Park - GP32-content.png
 share/retroarch/assets/xmb/neoactive/png/Game Park - GP32.png
 share/retroarch/assets/xmb/neoactive/png/Game-content.png
 share/retroarch/assets/xmb/neoactive/png/Game.png
-share/retroarch/assets/xmb/neoactive/png/Handheld Electronic Game (Orig GW)-content.png
-share/retroarch/assets/xmb/neoactive/png/Handheld Electronic Game (Orig GW).png
 share/retroarch/assets/xmb/neoactive/png/Handheld Electronic Game-content.png
 share/retroarch/assets/xmb/neoactive/png/Handheld Electronic Game.png
+share/retroarch/assets/xmb/neoactive/png/Hartung - Game Master-content.png
+share/retroarch/assets/xmb/neoactive/png/Hartung - Game Master.png
+share/retroarch/assets/xmb/neoactive/png/LeapFrog - Leapster Learning Game System-content.png
+share/retroarch/assets/xmb/neoactive/png/LeapFrog - Leapster Learning Game System.png
 share/retroarch/assets/xmb/neoactive/png/Libretro - Pad.png
 share/retroarch/assets/xmb/neoactive/png/Lutro-content.png
 share/retroarch/assets/xmb/neoactive/png/Lutro.png
@@ -618,12 +773,22 @@ share/retroarch/assets/xmb/neoactive/png/MAME2010-content.png
 share/retroarch/assets/xmb/neoactive/png/MAME2010.png
 share/retroarch/assets/xmb/neoactive/png/Magnavox - Odyssey2-content.png
 share/retroarch/assets/xmb/neoactive/png/Magnavox - Odyssey2.png
+share/retroarch/assets/xmb/neoactive/png/Mattel - Intellevision-content.png
+share/retroarch/assets/xmb/neoactive/png/Mattel - Intellevision.png
 share/retroarch/assets/xmb/neoactive/png/Microsoft - MSX-content.png
 share/retroarch/assets/xmb/neoactive/png/Microsoft - MSX.png
 share/retroarch/assets/xmb/neoactive/png/Microsoft - MSX2-content.png
 share/retroarch/assets/xmb/neoactive/png/Microsoft - MSX2.png
-share/retroarch/assets/xmb/neoactive/png/Microsoft - XBOX-content.png
-share/retroarch/assets/xmb/neoactive/png/Microsoft - XBOX.png
+share/retroarch/assets/xmb/neoactive/png/Microsoft - XBOX 360-content.png
+share/retroarch/assets/xmb/neoactive/png/Microsoft - XBOX 360.png
+share/retroarch/assets/xmb/neoactive/png/Microsoft - XBOX One-content.png
+share/retroarch/assets/xmb/neoactive/png/Microsoft - XBOX One.png
+share/retroarch/assets/xmb/neoactive/png/Microsoft - Xbox-content.png
+share/retroarch/assets/xmb/neoactive/png/Microsoft - Xbox.png
+share/retroarch/assets/xmb/neoactive/png/Minecraft-content.png
+share/retroarch/assets/xmb/neoactive/png/Minecraft.png
+share/retroarch/assets/xmb/neoactive/png/Mr. Boom-content.png
+share/retroarch/assets/xmb/neoactive/png/Mr. Boom.png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine - TurboGrafx 16 (E).png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine - TurboGrafx 16 (J).png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine - TurboGrafx 16 (U).png
@@ -633,6 +798,8 @@ share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine CD - TurboGrafx-CD-cont
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine CD - TurboGrafx-CD.png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine SuperGrafx-content.png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine SuperGrafx.png
+share/retroarch/assets/xmb/neoactive/png/NEC - PC-98-content.png
+share/retroarch/assets/xmb/neoactive/png/NEC - PC-98.png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC-FX-content.png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC-FX.png
 share/retroarch/assets/xmb/neoactive/png/Neo Geo-content.png
@@ -647,6 +814,10 @@ share/retroarch/assets/xmb/neoactive/png/Nintendo - Game Boy-content.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Game Boy.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - GameCube-content.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - GameCube.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - New Nintendo 3DS-content.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - New Nintendo 3DS.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo 3DS-content.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo 3DS.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo 64-content.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo 64.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo 64DD-content.png
@@ -654,7 +825,8 @@ share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo 64DD.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo DS Decrypted-content.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo DS Decrypted.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo DS-content.png
-share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo DS.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo DSi-content.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo DSi.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo Entertainment System (J).png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo Entertainment System-content (J).png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Nintendo Entertainment System-content.png
@@ -670,12 +842,22 @@ share/retroarch/assets/xmb/neoactive/png/Nintendo - Super Nintendo Entertainment
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Super Nintendo Entertainment System-content (U).png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Super Nintendo Entertainment System-content.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Super Nintendo Entertainment System.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Switch-content.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Switch.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Virtual Boy-content.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Virtual Boy.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Wii U-content.png
+share/retroarch/assets/xmb/neoactive/png/Nintendo - Wii U.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Wii-content.png
 share/retroarch/assets/xmb/neoactive/png/Nintendo - Wii.png
+share/retroarch/assets/xmb/neoactive/png/Philips - Videopac+-content.png
+share/retroarch/assets/xmb/neoactive/png/Philips - Videopac+.png
 share/retroarch/assets/xmb/neoactive/png/Quake1-content.png
 share/retroarch/assets/xmb/neoactive/png/Quake1.png
+share/retroarch/assets/xmb/neoactive/png/RCA - Studio II-content.png
+share/retroarch/assets/xmb/neoactive/png/RCA - Studio II.png
+share/retroarch/assets/xmb/neoactive/png/Rick Dangerous-content.png
+share/retroarch/assets/xmb/neoactive/png/Rick Dangerous.png
 share/retroarch/assets/xmb/neoactive/png/SNK - Neo Geo CD-content.png
 share/retroarch/assets/xmb/neoactive/png/SNK - Neo Geo CD.png
 share/retroarch/assets/xmb/neoactive/png/SNK - Neo Geo Pocket Color-content.png
@@ -707,23 +889,40 @@ share/retroarch/assets/xmb/neoactive/png/Sega - SG-1000-content.png
 share/retroarch/assets/xmb/neoactive/png/Sega - SG-1000.png
 share/retroarch/assets/xmb/neoactive/png/Sega - Saturn-content.png
 share/retroarch/assets/xmb/neoactive/png/Sega - Saturn.png
+share/retroarch/assets/xmb/neoactive/png/Sharp - X68000-content.png
+share/retroarch/assets/xmb/neoactive/png/Sharp - X68000.png
 share/retroarch/assets/xmb/neoactive/png/Sinclair - ZX 81-content.png
 share/retroarch/assets/xmb/neoactive/png/Sinclair - ZX 81.png
 share/retroarch/assets/xmb/neoactive/png/Sinclair - ZX Spectrum +3-content.png
 share/retroarch/assets/xmb/neoactive/png/Sinclair - ZX Spectrum +3.png
 share/retroarch/assets/xmb/neoactive/png/Sinclair - ZX Spectrum-content.png
 share/retroarch/assets/xmb/neoactive/png/Sinclair - ZX Spectrum.png
+share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation 2-content.png
 share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation 2.png
+share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation 3-content.png
+share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation 3.png
+share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation 4-content.png
+share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation 4.png
 share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation Portable-content.png
 share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation Portable.png
+share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation Vita-content.png
+share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation Vita.png
 share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation-content.png
 share/retroarch/assets/xmb/neoactive/png/Sony - PlayStation.png
 share/retroarch/assets/xmb/neoactive/png/The 3DO Company - 3DO-content.png
 share/retroarch/assets/xmb/neoactive/png/The 3DO Company - 3DO.png
 share/retroarch/assets/xmb/neoactive/png/Tiger - Game.com-content.png
 share/retroarch/assets/xmb/neoactive/png/Tiger - Game.com.png
+share/retroarch/assets/xmb/neoactive/png/Tomb Raider-content.png
+share/retroarch/assets/xmb/neoactive/png/Tomb Raider.png
 share/retroarch/assets/xmb/neoactive/png/Uzebox-content.png
 share/retroarch/assets/xmb/neoactive/png/Uzebox.png
+share/retroarch/assets/xmb/neoactive/png/VTech - CreatiVision-content.png
+share/retroarch/assets/xmb/neoactive/png/VTech - CreatiVision.png
+share/retroarch/assets/xmb/neoactive/png/VTech - V.Smile-content.png
+share/retroarch/assets/xmb/neoactive/png/VTech - V.Smile.png
+share/retroarch/assets/xmb/neoactive/png/Watara - Supervision-content.png
+share/retroarch/assets/xmb/neoactive/png/Watara - Supervision.png
 share/retroarch/assets/xmb/neoactive/png/achievement-list.png
 share/retroarch/assets/xmb/neoactive/png/add.png
 share/retroarch/assets/xmb/neoactive/png/arrow.png
@@ -908,6 +1107,7 @@ share/retroarch/assets/xmb/pixel/png/cursor.png
 share/retroarch/assets/xmb/pixel/png/database.png
 share/retroarch/assets/xmb/pixel/png/default-content.png
 share/retroarch/assets/xmb/pixel/png/default.png
+share/retroarch/assets/xmb/pixel/png/dialog-slice.png
 share/retroarch/assets/xmb/pixel/png/file.png
 share/retroarch/assets/xmb/pixel/png/folder.png
 share/retroarch/assets/xmb/pixel/png/history.png
@@ -951,16 +1151,24 @@ share/retroarch/assets/xmb/retroactive/png/Atari - 7800 (E).png
 share/retroarch/assets/xmb/retroactive/png/Atari - 7800 (U).png
 share/retroarch/assets/xmb/retroactive/png/Atari - 7800-content.png
 share/retroarch/assets/xmb/retroactive/png/Atari - 7800.png
+share/retroarch/assets/xmb/retroactive/png/Atari - Jaguar CD-content.png
+share/retroarch/assets/xmb/retroactive/png/Atari - Jaguar CD.png
 share/retroarch/assets/xmb/retroactive/png/Atari - Jaguar-content.png
 share/retroarch/assets/xmb/retroactive/png/Atari - Jaguar.png
 share/retroarch/assets/xmb/retroactive/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/retroactive/png/Atari - Lynx.png
 share/retroarch/assets/xmb/retroactive/png/Atari - ST-content.png
 share/retroarch/assets/xmb/retroactive/png/Atari - ST.png
+share/retroarch/assets/xmb/retroactive/png/Bally - Astrocade-content.png
+share/retroarch/assets/xmb/retroactive/png/Bally - Astrocade.png
 share/retroarch/assets/xmb/retroactive/png/Bandai - WonderSwan Color-content.png
 share/retroarch/assets/xmb/retroactive/png/Bandai - WonderSwan Color.png
 share/retroarch/assets/xmb/retroactive/png/Bandai - WonderSwan-content.png
 share/retroarch/assets/xmb/retroactive/png/Bandai - WonderSwan.png
+share/retroarch/assets/xmb/retroactive/png/Benesse - Pocket Challenge V2-content.png
+share/retroarch/assets/xmb/retroactive/png/Benesse - Pocket Challenge V2.png
+share/retroarch/assets/xmb/retroactive/png/CHIP-8-content.png
+share/retroarch/assets/xmb/retroactive/png/CHIP-8.png
 share/retroarch/assets/xmb/retroactive/png/Capcom - CP System I-content.png
 share/retroarch/assets/xmb/retroactive/png/Capcom - CP System I.png
 share/retroarch/assets/xmb/retroactive/png/Capcom - CP System II (J).png
@@ -973,14 +1181,24 @@ share/retroarch/assets/xmb/retroactive/png/Capcom - CP System II-content.png
 share/retroarch/assets/xmb/retroactive/png/Capcom - CP System II.png
 share/retroarch/assets/xmb/retroactive/png/Capcom - CP System III-content.png
 share/retroarch/assets/xmb/retroactive/png/Capcom - CP System III.png
+share/retroarch/assets/xmb/retroactive/png/Casio - Loopy-content.png
+share/retroarch/assets/xmb/retroactive/png/Casio - Loopy.png
+share/retroarch/assets/xmb/retroactive/png/Casio - PV-1000-content.png
+share/retroarch/assets/xmb/retroactive/png/Casio - PV-1000.png
 share/retroarch/assets/xmb/retroactive/png/Cave Story-content.png
 share/retroarch/assets/xmb/retroactive/png/Cave Story.png
+share/retroarch/assets/xmb/retroactive/png/Coleco - ColecoVision ADAM-content.png
+share/retroarch/assets/xmb/retroactive/png/Coleco - ColecoVision ADAM.png
 share/retroarch/assets/xmb/retroactive/png/Coleco - ColecoVision-content.png
 share/retroarch/assets/xmb/retroactive/png/Coleco - ColecoVision.png
 share/retroarch/assets/xmb/retroactive/png/Commodore - 64-content.png
 share/retroarch/assets/xmb/retroactive/png/Commodore - 64.png
 share/retroarch/assets/xmb/retroactive/png/Commodore - Amiga-content.png
 share/retroarch/assets/xmb/retroactive/png/Commodore - Amiga.png
+share/retroarch/assets/xmb/retroactive/png/Commodore - VIC-20-content.png
+share/retroarch/assets/xmb/retroactive/png/Commodore - VIC-20.png
+share/retroarch/assets/xmb/retroactive/png/Commodore Plus-4-content.png
+share/retroarch/assets/xmb/retroactive/png/Commodore Plus-4.png
 share/retroarch/assets/xmb/retroactive/png/DOOM-content.png
 share/retroarch/assets/xmb/retroactive/png/DOOM.png
 share/retroarch/assets/xmb/retroactive/png/DOS-content.png
@@ -989,10 +1207,20 @@ share/retroarch/assets/xmb/retroactive/png/Dinothawr-content.png
 share/retroarch/assets/xmb/retroactive/png/Dinothawr.png
 share/retroarch/assets/xmb/retroactive/png/Dungeon Crawl Stone Soup-content.png
 share/retroarch/assets/xmb/retroactive/png/Dungeon Crawl Stone Soup.png
+share/retroarch/assets/xmb/retroactive/png/Emerson - Arcadia 2001-content.png
+share/retroarch/assets/xmb/retroactive/png/Emerson - Arcadia 2001.png
+share/retroarch/assets/xmb/retroactive/png/Entex - Adventure Vision-content.png
+share/retroarch/assets/xmb/retroactive/png/Entex - Adventure Vision.png
+share/retroarch/assets/xmb/retroactive/png/Epoch - Super Cassette Vision-content.png
+share/retroarch/assets/xmb/retroactive/png/Epoch - Super Cassette Vision.png
 share/retroarch/assets/xmb/retroactive/png/FB Alpha - Arcade Games-content.png
 share/retroarch/assets/xmb/retroactive/png/FB Alpha - Arcade Games.png
 share/retroarch/assets/xmb/retroactive/png/FFmpeg-content.png
 share/retroarch/assets/xmb/retroactive/png/FFmpeg.png
+share/retroarch/assets/xmb/retroactive/png/Fairchild - Channel F-content.png
+share/retroarch/assets/xmb/retroactive/png/Fairchild - Channel F.png
+share/retroarch/assets/xmb/retroactive/png/Funtech - Super Acan-content.png
+share/retroarch/assets/xmb/retroactive/png/Funtech - Super Acan.png
 share/retroarch/assets/xmb/retroactive/png/GCE - Vectrex (E).png
 share/retroarch/assets/xmb/retroactive/png/GCE - Vectrex-content.png
 share/retroarch/assets/xmb/retroactive/png/GCE - Vectrex.png
@@ -1000,10 +1228,12 @@ share/retroarch/assets/xmb/retroactive/png/Game Park - GP32-content.png
 share/retroarch/assets/xmb/retroactive/png/Game Park - GP32.png
 share/retroarch/assets/xmb/retroactive/png/Game-content.png
 share/retroarch/assets/xmb/retroactive/png/Game.png
-share/retroarch/assets/xmb/retroactive/png/Handheld Electronic Game (Orig GW)-content.png
-share/retroarch/assets/xmb/retroactive/png/Handheld Electronic Game (Orig GW).png
 share/retroarch/assets/xmb/retroactive/png/Handheld Electronic Game-content.png
 share/retroarch/assets/xmb/retroactive/png/Handheld Electronic Game.png
+share/retroarch/assets/xmb/retroactive/png/Hartung - Game Master-content.png
+share/retroarch/assets/xmb/retroactive/png/Hartung - Game Master.png
+share/retroarch/assets/xmb/retroactive/png/LeapFrog - Leapster Learning Game System-content.png
+share/retroarch/assets/xmb/retroactive/png/LeapFrog - Leapster Learning Game System.png
 share/retroarch/assets/xmb/retroactive/png/Libretro - Pad.png
 share/retroarch/assets/xmb/retroactive/png/Lutro-content.png
 share/retroarch/assets/xmb/retroactive/png/Lutro.png
@@ -1015,12 +1245,22 @@ share/retroarch/assets/xmb/retroactive/png/MAME2010-content.png
 share/retroarch/assets/xmb/retroactive/png/MAME2010.png
 share/retroarch/assets/xmb/retroactive/png/Magnavox - Odyssey2-content.png
 share/retroarch/assets/xmb/retroactive/png/Magnavox - Odyssey2.png
+share/retroarch/assets/xmb/retroactive/png/Mattel - Intellevision-content.png
+share/retroarch/assets/xmb/retroactive/png/Mattel - Intellevision.png
 share/retroarch/assets/xmb/retroactive/png/Microsoft - MSX-content.png
 share/retroarch/assets/xmb/retroactive/png/Microsoft - MSX.png
 share/retroarch/assets/xmb/retroactive/png/Microsoft - MSX2-content.png
 share/retroarch/assets/xmb/retroactive/png/Microsoft - MSX2.png
+share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX 360-content.png
+share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX 360.png
+share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX One-content.png
+share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX One.png
 share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX.png
+share/retroarch/assets/xmb/retroactive/png/Minecraft-content.png
+share/retroarch/assets/xmb/retroactive/png/Minecraft.png
+share/retroarch/assets/xmb/retroactive/png/Mr. Boom-content.png
+share/retroarch/assets/xmb/retroactive/png/Mr. Boom.png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine - TurboGrafx 16 (E).png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine - TurboGrafx 16 (U).png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine - TurboGrafx 16-content (E).png
@@ -1032,6 +1272,8 @@ share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine CD - TurboGrafx-CD-co
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine CD - TurboGrafx-CD.png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine SuperGrafx-content.png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine SuperGrafx.png
+share/retroarch/assets/xmb/retroactive/png/NEC - PC-98-content.png
+share/retroarch/assets/xmb/retroactive/png/NEC - PC-98.png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC-FX-content.png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC-FX.png
 share/retroarch/assets/xmb/retroactive/png/Neo Geo-content.png
@@ -1048,6 +1290,10 @@ share/retroarch/assets/xmb/retroactive/png/Nintendo - GameCube (J).png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - GameCube (U).png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - GameCube-content.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - GameCube.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - New Nintendo 3DS-content.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - New Nintendo 3DS.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo 3DS-content.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo 3DS.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo 64-content.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo 64.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo 64DD-content.png
@@ -1056,6 +1302,8 @@ share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo DS Decrypted-cont
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo DS Decrypted.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo DS-content.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo DS.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo DSi-content.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo DSi.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo Entertainment System (J).png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo Entertainment System-content (J).png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Nintendo Entertainment System-content.png
@@ -1077,10 +1325,19 @@ share/retroarch/assets/xmb/retroactive/png/Nintendo - Switch-content.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Switch.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Virtual Boy-content.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Virtual Boy.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - Wii U WUP-010 W.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - Wii U-content.png
+share/retroarch/assets/xmb/retroactive/png/Nintendo - Wii U.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Wii-content.png
 share/retroarch/assets/xmb/retroactive/png/Nintendo - Wii.png
+share/retroarch/assets/xmb/retroactive/png/Philips - Videopac+-content.png
+share/retroarch/assets/xmb/retroactive/png/Philips - Videopac+.png
 share/retroarch/assets/xmb/retroactive/png/Quake1-content.png
 share/retroarch/assets/xmb/retroactive/png/Quake1.png
+share/retroarch/assets/xmb/retroactive/png/RCA - Studio II-content.png
+share/retroarch/assets/xmb/retroactive/png/RCA - Studio II.png
+share/retroarch/assets/xmb/retroactive/png/Rick Dangerous-content.png
+share/retroarch/assets/xmb/retroactive/png/Rick Dangerous.png
 share/retroarch/assets/xmb/retroactive/png/SNK - Neo Geo CD-content.png
 share/retroarch/assets/xmb/retroactive/png/SNK - Neo Geo CD.png
 share/retroarch/assets/xmb/retroactive/png/SNK - Neo Geo Pocket Color-content.png
@@ -1120,6 +1377,8 @@ share/retroarch/assets/xmb/retroactive/png/Sega - SG-1000.png
 share/retroarch/assets/xmb/retroactive/png/Sega - Saturn (U).png
 share/retroarch/assets/xmb/retroactive/png/Sega - Saturn-content.png
 share/retroarch/assets/xmb/retroactive/png/Sega - Saturn.png
+share/retroarch/assets/xmb/retroactive/png/Sharp - X68000-content.png
+share/retroarch/assets/xmb/retroactive/png/Sharp - X68000.png
 share/retroarch/assets/xmb/retroactive/png/Sinclair - ZX 81-content.png
 share/retroarch/assets/xmb/retroactive/png/Sinclair - ZX 81.png
 share/retroarch/assets/xmb/retroactive/png/Sinclair - ZX Spectrum +3-content.png
@@ -1128,16 +1387,30 @@ share/retroarch/assets/xmb/retroactive/png/Sinclair - ZX Spectrum-content.png
 share/retroarch/assets/xmb/retroactive/png/Sinclair - ZX Spectrum.png
 share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation 2-content.png
 share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation 2.png
+share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation 3-content.png
+share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation 3.png
+share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation 4-content.png
+share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation 4.png
 share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation Portable-content.png
 share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation Portable.png
+share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation Vita-content.png
+share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation Vita.png
 share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation-content.png
 share/retroarch/assets/xmb/retroactive/png/Sony - PlayStation.png
 share/retroarch/assets/xmb/retroactive/png/The 3DO Company - 3DO-content.png
 share/retroarch/assets/xmb/retroactive/png/The 3DO Company - 3DO.png
 share/retroarch/assets/xmb/retroactive/png/Tiger - Game.com-content.png
 share/retroarch/assets/xmb/retroactive/png/Tiger - Game.com.png
+share/retroarch/assets/xmb/retroactive/png/Tomb Raider-content.png
+share/retroarch/assets/xmb/retroactive/png/Tomb Raider.png
 share/retroarch/assets/xmb/retroactive/png/Uzebox-content.png
 share/retroarch/assets/xmb/retroactive/png/Uzebox.png
+share/retroarch/assets/xmb/retroactive/png/VTech - CreatiVision-content.png
+share/retroarch/assets/xmb/retroactive/png/VTech - CreatiVision.png
+share/retroarch/assets/xmb/retroactive/png/VTech - V.Smile-content.png
+share/retroarch/assets/xmb/retroactive/png/VTech - V.Smile.png
+share/retroarch/assets/xmb/retroactive/png/Watara - Supervision-content.png
+share/retroarch/assets/xmb/retroactive/png/Watara - Supervision.png
 share/retroarch/assets/xmb/retroactive/png/achievement-list.png
 share/retroarch/assets/xmb/retroactive/png/add.png
 share/retroarch/assets/xmb/retroactive/png/arrow.png
@@ -1201,35 +1474,41 @@ share/retroarch/assets/xmb/systematic/png/2048-content.png
 share/retroarch/assets/xmb/systematic/png/2048.png
 share/retroarch/assets/xmb/systematic/png/Amstrad - CPC-content.png
 share/retroarch/assets/xmb/systematic/png/Amstrad - CPC.png
+share/retroarch/assets/xmb/systematic/png/Atari - 2600 CX2600A K.png
+share/retroarch/assets/xmb/systematic/png/Atari - 2600 CX2600A.png
+share/retroarch/assets/xmb/systematic/png/Atari - 2600 CX2600JR.png
+share/retroarch/assets/xmb/systematic/png/Atari - 2600 CX2600JRA.png
+share/retroarch/assets/xmb/systematic/png/Atari - 2600 CX2600JRB.png
 share/retroarch/assets/xmb/systematic/png/Atari - 2600-content.png
 share/retroarch/assets/xmb/systematic/png/Atari - 2600.png
-share/retroarch/assets/xmb/systematic/png/Atari - 2600a.png
-share/retroarch/assets/xmb/systematic/png/Atari - 2600jr.png
-share/retroarch/assets/xmb/systematic/png/Atari - 2600jr_S.png
-share/retroarch/assets/xmb/systematic/png/Atari - 2600vader.png
 share/retroarch/assets/xmb/systematic/png/Atari - 5200-content.png
-share/retroarch/assets/xmb/systematic/png/Atari - 5200-content_S.png
 share/retroarch/assets/xmb/systematic/png/Atari - 5200.png
 share/retroarch/assets/xmb/systematic/png/Atari - 7800-content.png
-share/retroarch/assets/xmb/systematic/png/Atari - 7800-content_S.png
 share/retroarch/assets/xmb/systematic/png/Atari - 7800.png
-share/retroarch/assets/xmb/systematic/png/Atari - 7800_S.png
+share/retroarch/assets/xmb/systematic/png/Atari - Jaguar CD-content.png
+share/retroarch/assets/xmb/systematic/png/Atari - Jaguar CD.png
 share/retroarch/assets/xmb/systematic/png/Atari - Jaguar-content.png
 share/retroarch/assets/xmb/systematic/png/Atari - Jaguar.png
+share/retroarch/assets/xmb/systematic/png/Atari - Lynx PAG0201.png
 share/retroarch/assets/xmb/systematic/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/systematic/png/Atari - Lynx.png
-share/retroarch/assets/xmb/systematic/png/Atari - Lynx_Original.png
 share/retroarch/assets/xmb/systematic/png/Atari - ST-content.png
 share/retroarch/assets/xmb/systematic/png/Atari - ST.png
-share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color Black.png
-share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color Blue.png
-share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color Orange.png
-share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color Silver.png
+share/retroarch/assets/xmb/systematic/png/Bally - Astrocade-content.png
+share/retroarch/assets/xmb/systematic/png/Bally - Astrocade.png
+share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color SCT-001 R.png
+share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color WSC-001 K.png
+share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color WSC-001 O.png
+share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color WSC-001 S.png
+share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color WSC-001 WSC-001 B.png
 share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color-content.png
 share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color.png
-share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Crystal Red.png
 share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan-content.png
 share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan.png
+share/retroarch/assets/xmb/systematic/png/Benesse - Pocket Challenge V2-content.png
+share/retroarch/assets/xmb/systematic/png/Benesse - Pocket Challenge V2.png
+share/retroarch/assets/xmb/systematic/png/CHIP-8-content.png
+share/retroarch/assets/xmb/systematic/png/CHIP-8.png
 share/retroarch/assets/xmb/systematic/png/Capcom - CP System I-content.png
 share/retroarch/assets/xmb/systematic/png/Capcom - CP System I.png
 share/retroarch/assets/xmb/systematic/png/Capcom - CP System II (J).png
@@ -1245,14 +1524,24 @@ share/retroarch/assets/xmb/systematic/png/Capcom - CP System III-content.png
 share/retroarch/assets/xmb/systematic/png/Capcom - CP System III-content_combo.png
 share/retroarch/assets/xmb/systematic/png/Capcom - CP System III-content_mobo.png
 share/retroarch/assets/xmb/systematic/png/Capcom - CP System III.png
+share/retroarch/assets/xmb/systematic/png/Casio - Loopy-content.png
+share/retroarch/assets/xmb/systematic/png/Casio - Loopy.png
+share/retroarch/assets/xmb/systematic/png/Casio - PV-1000-content.png
+share/retroarch/assets/xmb/systematic/png/Casio - PV-1000.png
 share/retroarch/assets/xmb/systematic/png/Cave Story-content.png
 share/retroarch/assets/xmb/systematic/png/Cave Story.png
+share/retroarch/assets/xmb/systematic/png/Coleco - ColecoVision ADAM-content.png
+share/retroarch/assets/xmb/systematic/png/Coleco - ColecoVision ADAM.png
 share/retroarch/assets/xmb/systematic/png/Coleco - ColecoVision-content.png
 share/retroarch/assets/xmb/systematic/png/Coleco - ColecoVision.png
 share/retroarch/assets/xmb/systematic/png/Commodore - 64-content.png
 share/retroarch/assets/xmb/systematic/png/Commodore - 64.png
 share/retroarch/assets/xmb/systematic/png/Commodore - Amiga-content.png
 share/retroarch/assets/xmb/systematic/png/Commodore - Amiga.png
+share/retroarch/assets/xmb/systematic/png/Commodore - VIC-20-content.png
+share/retroarch/assets/xmb/systematic/png/Commodore - VIC-20.png
+share/retroarch/assets/xmb/systematic/png/Commodore Plus-4-content.png
+share/retroarch/assets/xmb/systematic/png/Commodore Plus-4.png
 share/retroarch/assets/xmb/systematic/png/DOOM-content.png
 share/retroarch/assets/xmb/systematic/png/DOOM.png
 share/retroarch/assets/xmb/systematic/png/DOS-content.png
@@ -1261,10 +1550,21 @@ share/retroarch/assets/xmb/systematic/png/Dinothawr-content.png
 share/retroarch/assets/xmb/systematic/png/Dinothawr.png
 share/retroarch/assets/xmb/systematic/png/Dungeon Crawl Stone Soup-content.png
 share/retroarch/assets/xmb/systematic/png/Dungeon Crawl Stone Soup.png
+share/retroarch/assets/xmb/systematic/png/Emerson - Arcadia 2001-content.png
+share/retroarch/assets/xmb/systematic/png/Emerson - Arcadia 2001.png
+share/retroarch/assets/xmb/systematic/png/Entex - Adventure Vision-content.png
+share/retroarch/assets/xmb/systematic/png/Entex - Adventure Vision.png
+share/retroarch/assets/xmb/systematic/png/Epoch - Super Cassette Vision-content.png
+share/retroarch/assets/xmb/systematic/png/Epoch - Super Cassette Vision.png
 share/retroarch/assets/xmb/systematic/png/FB Alpha - Arcade Games-content.png
 share/retroarch/assets/xmb/systematic/png/FB Alpha - Arcade Games.png
 share/retroarch/assets/xmb/systematic/png/FFmpeg-content.png
 share/retroarch/assets/xmb/systematic/png/FFmpeg.png
+share/retroarch/assets/xmb/systematic/png/Fairchild - Channel F System II.png
+share/retroarch/assets/xmb/systematic/png/Fairchild - Channel F-content.png
+share/retroarch/assets/xmb/systematic/png/Fairchild - Channel F.png
+share/retroarch/assets/xmb/systematic/png/Funtech - Super Acan-content.png
+share/retroarch/assets/xmb/systematic/png/Funtech - Super Acan.png
 share/retroarch/assets/xmb/systematic/png/GCE - Vectrex-content.png
 share/retroarch/assets/xmb/systematic/png/GCE - Vectrex.png
 share/retroarch/assets/xmb/systematic/png/Game Park - GP32-content.png
@@ -1278,10 +1578,16 @@ share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game LN-08.png
 share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game MH-06.png
 share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game MT-03.png
 share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game RC-04.png
-share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game-content (Orig GW)-content.png
-share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game-content (Orig GW).png
 share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game-content.png
 share/retroarch/assets/xmb/systematic/png/Handheld Electronic Game.png
+share/retroarch/assets/xmb/systematic/png/Hartung - Game Master-content.png
+share/retroarch/assets/xmb/systematic/png/Hartung - Game Master.png
+share/retroarch/assets/xmb/systematic/png/LeapFrog - Leapster Learning Game System 1 GS.png
+share/retroarch/assets/xmb/systematic/png/LeapFrog - Leapster Learning Game System 1 PQ.png
+share/retroarch/assets/xmb/systematic/png/LeapFrog - Leapster Learning Game System 2 K.png
+share/retroarch/assets/xmb/systematic/png/LeapFrog - Leapster Learning Game System 2 PQ.png
+share/retroarch/assets/xmb/systematic/png/LeapFrog - Leapster Learning Game System-content.png
+share/retroarch/assets/xmb/systematic/png/LeapFrog - Leapster Learning Game System.png
 share/retroarch/assets/xmb/systematic/png/Libretro - Pad.png
 share/retroarch/assets/xmb/systematic/png/Lutro-content.png
 share/retroarch/assets/xmb/systematic/png/Lutro.png
@@ -1293,16 +1599,42 @@ share/retroarch/assets/xmb/systematic/png/MAME2010-content.png
 share/retroarch/assets/xmb/systematic/png/MAME2010.png
 share/retroarch/assets/xmb/systematic/png/Magnavox - Odyssey2-content.png
 share/retroarch/assets/xmb/systematic/png/Magnavox - Odyssey2.png
+share/retroarch/assets/xmb/systematic/png/Mattel - Intellevision 3504.png
+share/retroarch/assets/xmb/systematic/png/Mattel - Intellevision 49-75011.png
+share/retroarch/assets/xmb/systematic/png/Mattel - Intellevision 58-100.png
+share/retroarch/assets/xmb/systematic/png/Mattel - Intellevision 5872.png
+share/retroarch/assets/xmb/systematic/png/Mattel - Intellevision-content.png
+share/retroarch/assets/xmb/systematic/png/Mattel - Intellevision.png
 share/retroarch/assets/xmb/systematic/png/Microsoft - MSX-content.png
 share/retroarch/assets/xmb/systematic/png/Microsoft - MSX.png
 share/retroarch/assets/xmb/systematic/png/Microsoft - MSX2-content.png
 share/retroarch/assets/xmb/systematic/png/Microsoft - MSX2.png
-share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX Crystal.png
-share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX Green.png
-share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX Orange.png
-share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX Skeleton.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 E K.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 E KT.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 K.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 KT.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 S K.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 S KT.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 S W.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 S WT.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360 WT.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360-content.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX 360.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX G.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX O.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX One S W.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX One S WT.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX One X K.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX One-content.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX One.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX S.png
+share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX W.png
 share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX.png
+share/retroarch/assets/xmb/systematic/png/Minecraft-content.png
+share/retroarch/assets/xmb/systematic/png/Minecraft.png
+share/retroarch/assets/xmb/systematic/png/Mr. Boom-content.png
+share/retroarch/assets/xmb/systematic/png/Mr. Boom.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine - TurboGrafx 16 (J) Core II.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine - TurboGrafx 16 (J) Core.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine - TurboGrafx 16 (J) Shuttle.png
@@ -1320,6 +1652,8 @@ share/retroarch/assets/xmb/systematic/png/NEC - PC Engine CD - TurboGrafx-CD-con
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine CD - TurboGrafx-CD.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine SuperGrafx-content.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine SuperGrafx.png
+share/retroarch/assets/xmb/systematic/png/NEC - PC-98-content.png
+share/retroarch/assets/xmb/systematic/png/NEC - PC-98.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC-FX-content.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC-FX.png
 share/retroarch/assets/xmb/systematic/png/Neo Geo-content.png
@@ -1327,84 +1661,121 @@ share/retroarch/assets/xmb/systematic/png/Neo Geo.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Family Computer Disk System HVC-101.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Family Computer Disk System-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Family Computer Disk System.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Black.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Fuchsia.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Gold.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Green.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Indigo.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Orange.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Platinum.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Red.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Yellow.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 Blue.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 Famicom Color.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 Famicom.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance (e-Cards)-content.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance (e-Cards).png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 GO.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 O.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 P.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 S.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGB-001 Y.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 HVC1.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 HVC2.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 K.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 NES.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 Onyx.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 Platinum.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-101 Gold.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-101 Pearl Blue.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-101 Red.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance OXY-001 Black.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance OXY-001 Famicom.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance OXY-001 Silver.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-001 S.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-101 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-101 GO.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance AGS-101 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance OXY-001 HVC.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance OXY-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance OXY-001 S.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Advance.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color Green.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color Pink.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color Purple.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color Yellow.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color CGB-001 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color CGB-001 P.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color CGB-001 Q.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color CGB-001 Y.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy Color.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy PIL-Black.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy PIL-Blue.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy PIL-Green.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy PIL-Pink.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy PIL-Red.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy PIL-White.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy PIL-Yellow.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy DMG-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy DMG-001 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy DMG-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy DMG-001 P.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy DMG-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy DMG-001 W.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy DMG-001 Y.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 A.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 DMG.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 P.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 S.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-001 Y.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-101 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy MGB-101 S.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Game Boy.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube (J) Crystal.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube (J) Gundam G.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube (J) Spice.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube (J) Tales.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube (U) Black.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube (U) Platinum.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube DOL-001 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube DOL-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube DOL-001 O.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube DOL-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube DOL-001 S.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube DOL-001 W.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - GameCube.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Fire.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Gold.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Grape.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Ice.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Jungle.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Midnight.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Smoke.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 Watermelon.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - New Nintendo 3DS JAN-001 KA.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - New Nintendo 3DS JAN-001 WO.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - New Nintendo 3DS KTR-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - New Nintendo 3DS KTR-001 W.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - New Nintendo 3DS RED-001 W.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - New Nintendo 3DS-content.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - New Nintendo 3DS.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS CTR-001 A.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS CTR-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS CTR-001 Q.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS CTR-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS CTR-001 W.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS FTR-001 BK.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS FTR-001 KB.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS FTR-001 KR.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS FTR-001 RK.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS SPR-001 W.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS-content.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 3DS.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 A.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 H.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 O.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 P.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64 NUS-001 Q.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64DD-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo 64DD.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS Decrypted-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS Decrypted.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS NTR-001 Blue.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS NTR-001 Red.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS NTR-001 Silver.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS USG-001 Black.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS USG-001 White.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS UTL-001 Black.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS UTL-001 Blue.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS UTL-001 Burgundy.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS NTR-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS NTR-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS NTR-001 S.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS USG-001 K.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DS.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System (J) HVC-101.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System (J).png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System (U) NES-101.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi TWL-001 A.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi TWL-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi TWL-001 P.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi TWL-001 W.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi UTL-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi UTL-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi UTL-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi-content.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo DSi.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System HVC-001.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System HVC-101.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System NES-101.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System-content (J).png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Nintendo Entertainment System.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Pokemon Mini Chikorita.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Pokemon Mini Smoochum.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Pokemon Mini MIN-001 G.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Pokemon Mini MIN-001 Q.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Pokemon Mini-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Pokemon Mini.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Satellaview-content.png
@@ -1414,44 +1785,66 @@ share/retroarch/assets/xmb/systematic/png/Nintendo - Sufami Turbo SNS-001.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Sufami Turbo SNS-101.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Sufami Turbo-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Sufami Turbo.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System (J) SHVC-101.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System (J).png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System (U) SNS-101.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System SHVC-001.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System SHVC-101.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System SNS-101.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System-content (E).png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System-content (J).png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System-content (U).png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Super Nintendo Entertainment System.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Switch Color Joy.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Switch Console.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Switch Dock Color Joy.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Switch Dock Gray Joy.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Switch Dock.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 BK.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 BR.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 KB.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 KR.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 RB.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001 RK.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-001.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-007 BR.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-007 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Switch HAC-007.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Switch-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Switch.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Virtual Boy-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Virtual Boy.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Wii Black.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Wii Blue.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Wii Red.png
-share/retroarch/assets/xmb/systematic/png/Nintendo - Wii mini.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-001 B.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-001 BT.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-001 K.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-001 KT.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-001 R.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-001 RT.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-001 WT.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii RVL-201.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii U WUP-001 KT.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii U WUP-001 W.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii U WUP-001 WT.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii U-content.png
+share/retroarch/assets/xmb/systematic/png/Nintendo - Wii U.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Wii-content.png
 share/retroarch/assets/xmb/systematic/png/Nintendo - Wii.png
+share/retroarch/assets/xmb/systematic/png/Philips - Videopac+-content.png
+share/retroarch/assets/xmb/systematic/png/Philips - Videopac+.png
 share/retroarch/assets/xmb/systematic/png/Quake1-content.png
 share/retroarch/assets/xmb/systematic/png/Quake1.png
+share/retroarch/assets/xmb/systematic/png/RCA - Studio II-content.png
+share/retroarch/assets/xmb/systematic/png/RCA - Studio II.png
 share/retroarch/assets/xmb/systematic/png/RPG Maker 2000-content.png
 share/retroarch/assets/xmb/systematic/png/RPG Maker 2000.png
 share/retroarch/assets/xmb/systematic/png/RPG Maker 2003-content.png
 share/retroarch/assets/xmb/systematic/png/RPG Maker 2003.png
+share/retroarch/assets/xmb/systematic/png/Rick Dangerous-content.png
+share/retroarch/assets/xmb/systematic/png/Rick Dangerous.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo CD Tray.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo CD-content.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo CD.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo CDZ.png
-share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket Carbon.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket Color-content.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket Color.png
-share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket Silver.png
-share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket White.png
+share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket K.png
+share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket S.png
+share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket W.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket-content.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo Pocket.png
 share/retroarch/assets/xmb/systematic/png/SNK - Neo Geo-content.png
@@ -1466,21 +1859,21 @@ share/retroarch/assets/xmb/systematic/png/Sega - 32X (U) M1.png
 share/retroarch/assets/xmb/systematic/png/Sega - 32X (U) Neptune.png
 share/retroarch/assets/xmb/systematic/png/Sega - 32X-content.png
 share/retroarch/assets/xmb/systematic/png/Sega - 32X.png
-share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast Black.png
-share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast Blue.png
-share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast Gold.png
+share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast B.png
+share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast H.png
+share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast K.png
 share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast-content (E).png
 share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast-content (J).png
 share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast-content (U).png
 share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast-content.png
 share/retroarch/assets/xmb/systematic/png/Sega - Dreamcast.png
-share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Blue.png
-share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Gray.png
-share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Light Blue.png
-share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Purple.png
-share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Red.png
-share/retroarch/assets/xmb/systematic/png/Sega - Game Gear White.png
-share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Yellow.png
+share/retroarch/assets/xmb/systematic/png/Sega - Game Gear A.png
+share/retroarch/assets/xmb/systematic/png/Sega - Game Gear B.png
+share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Q.png
+share/retroarch/assets/xmb/systematic/png/Sega - Game Gear R.png
+share/retroarch/assets/xmb/systematic/png/Sega - Game Gear S.png
+share/retroarch/assets/xmb/systematic/png/Sega - Game Gear W.png
+share/retroarch/assets/xmb/systematic/png/Sega - Game Gear Y.png
 share/retroarch/assets/xmb/systematic/png/Sega - Game Gear-content.png
 share/retroarch/assets/xmb/systematic/png/Sega - Game Gear.png
 share/retroarch/assets/xmb/systematic/png/Sega - Master System - Mark III (J).png
@@ -1494,6 +1887,7 @@ share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis (J) Jet.pn
 share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis (J) M1.png
 share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis (J) M2.png
 share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis (U) M2.png
+share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis (U) M3.png
 share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis (U) Nomad.png
 share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis-content (E).png
 share/retroarch/assets/xmb/systematic/png/Sega - Mega Drive - Genesis-content (J).png
@@ -1521,6 +1915,11 @@ share/retroarch/assets/xmb/systematic/png/Sega - Saturn (U) Pluto.png
 share/retroarch/assets/xmb/systematic/png/Sega - Saturn (U).png
 share/retroarch/assets/xmb/systematic/png/Sega - Saturn-content.png
 share/retroarch/assets/xmb/systematic/png/Sega - Saturn.png
+share/retroarch/assets/xmb/systematic/png/Sharp - X68000 K.png
+share/retroarch/assets/xmb/systematic/png/Sharp - X68000 KT.png
+share/retroarch/assets/xmb/systematic/png/Sharp - X68000 ST.png
+share/retroarch/assets/xmb/systematic/png/Sharp - X68000-content.png
+share/retroarch/assets/xmb/systematic/png/Sharp - X68000.png
 share/retroarch/assets/xmb/systematic/png/Sinclair - ZX 81-content.png
 share/retroarch/assets/xmb/systematic/png/Sinclair - ZX 81.png
 share/retroarch/assets/xmb/systematic/png/Sinclair - ZX Spectrum +3-content.png
@@ -1537,21 +1936,49 @@ share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 2 SCPH-90000t.png
 share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 2-content CD.png
 share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 2-content.png
 share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 2.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Blue.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Go Black.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Go White.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Gold.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Red.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Silver.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Street Black.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable Street White.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable White.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 3 CECH-2000 K.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 3 CECH-2000 KT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 3 CECH-4000 KT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 3 CECHA00 KT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 3-content.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 3.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-1000 KT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-1000 S.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-1000 ST.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-1000 W.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-1000 WT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-2000 K.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-2000 KT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-2000 W.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-2000 WT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-7000 K.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4 CUH-7000 KT.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4-content.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation 4.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation DTL-H1000.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation DTL-H1200.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation DTL-H3000.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-2000 B.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-2000 H.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-2000 R.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-2000 S.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-2000 W.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-E1000 K.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-E1000 W.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-N1000 K.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable PSP-N1000 W.png
 share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable-content.png
 share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Portable.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation debug.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation devkit.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation netyaroze.png
-share/retroarch/assets/xmb/systematic/png/Sony - PlayStation one.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation SCPH-100.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita PCH-1000 B.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita PCH-1000 R.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita PCH-1000 W.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita PCH-2000 K.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita PCH-2000 W.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita VTE-1000 K.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita VTE-1000 W.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita-content.png
+share/retroarch/assets/xmb/systematic/png/Sony - PlayStation Vita.png
 share/retroarch/assets/xmb/systematic/png/Sony - PlayStation-content.png
 share/retroarch/assets/xmb/systematic/png/Sony - PlayStation.png
 share/retroarch/assets/xmb/systematic/png/The 3DO Company - 3DO FZ-10.png
@@ -1561,8 +1988,18 @@ share/retroarch/assets/xmb/systematic/png/The 3DO Company - 3DO-content.png
 share/retroarch/assets/xmb/systematic/png/The 3DO Company - 3DO.png
 share/retroarch/assets/xmb/systematic/png/Tiger - Game.com-content.png
 share/retroarch/assets/xmb/systematic/png/Tiger - Game.com.png
+share/retroarch/assets/xmb/systematic/png/Tomb Raider-content.png
+share/retroarch/assets/xmb/systematic/png/Tomb Raider.png
 share/retroarch/assets/xmb/systematic/png/Uzebox-content.png
 share/retroarch/assets/xmb/systematic/png/Uzebox.png
+share/retroarch/assets/xmb/systematic/png/VTech - CreatiVision-content.png
+share/retroarch/assets/xmb/systematic/png/VTech - CreatiVision.png
+share/retroarch/assets/xmb/systematic/png/VTech - V.Smile P.png
+share/retroarch/assets/xmb/systematic/png/VTech - V.Smile-content.png
+share/retroarch/assets/xmb/systematic/png/VTech - V.Smile.png
+share/retroarch/assets/xmb/systematic/png/Watara - Supervision Original.png
+share/retroarch/assets/xmb/systematic/png/Watara - Supervision-content.png
+share/retroarch/assets/xmb/systematic/png/Watara - Supervision.png
 share/retroarch/assets/xmb/systematic/png/achievement-list.png
 share/retroarch/assets/xmb/systematic/png/add.png
 share/retroarch/assets/xmb/systematic/png/arrow.png
