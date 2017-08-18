@@ -3404,6 +3404,10 @@ share/emacs/${PKGVERSION}/lisp/progmodes/executable.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/executable.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/f90.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/f90.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/flymake-proc.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/flymake-proc.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/flymake-ui.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/flymake-ui.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/flymake.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/flymake.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/fortran.el.gz
@@ -3597,6 +3601,8 @@ share/emacs/${PKGVERSION}/lisp/term/internal.el.gz
 share/emacs/${PKGVERSION}/lisp/term/internal.elc
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.el.gz
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.elc
+share/emacs/${PKGVERSION}/lisp/term/konsole.el.gz
+share/emacs/${PKGVERSION}/lisp/term/konsole.elc
 share/emacs/${PKGVERSION}/lisp/term/linux.el.gz
 share/emacs/${PKGVERSION}/lisp/term/linux.elc
 share/emacs/${PKGVERSION}/lisp/term/lk201.el.gz
