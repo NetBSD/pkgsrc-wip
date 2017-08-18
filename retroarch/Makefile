@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/04/25 14:20:47 tnn Exp $
 
-DISTNAME=	retroarch-1.6.6
+DISTNAME=	retroarch-1.6.7
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
