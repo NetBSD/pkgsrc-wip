@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1 2015/04/25 21:59:58 ahp-nils Exp $
-bin/ronn
+bin/ronn${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGES

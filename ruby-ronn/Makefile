@@ -1,19 +1,21 @@
 # $NetBSD: Makefile,v 1.1 2015/04/25 21:59:58 ahp-nils Exp $
 
-DISTNAME=	ronn-0.7.3
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel textproc
+DISTNAME=		ronn-0.7.3
+PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
+CATEGORIES=		devel textproc
 
-MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	https://rtomayko.github.io/ronn/
-COMMENT=	Manual authoring tool
-LICENSE=	mit
+MAINTAINER=		nils@NetBSD.org
+HOMEPAGE=		https://rtomayko.github.io/ronn/
+COMMENT=		Manual authoring tool
+LICENSE=		mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-hpricot-[0-9]*:../../textproc/ruby-hpricot
-DEPENDS+=	${RUBY_PKGPREFIX}-mustache-[0-9]*:../../wip/ruby-mustache
-DEPENDS+=	${RUBY_PKGPREFIX}-rdiscount-[0-9]*:../../wip/ruby-rdiscount
+DEPENDS+=		${RUBY_PKGPREFIX}-hpricot-[0-9]*:../../textproc/ruby-hpricot
+DEPENDS+=		${RUBY_PKGPREFIX}-mustache-[0-9]*:../../wip/ruby-mustache
+DEPENDS+=		${RUBY_PKGPREFIX}-rdiscount-[0-9]*:../../wip/ruby-rdiscount
 
-INSTALLATION_DIRS+=		${PKGMANDIR}/man1/ ${PKGMANDIR}/man7/
+RUBYGEM_OPTIONS+=	--format-executable
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7
 
 post-install:
 	${LN} -sf ${PREFIX}/${GEM_LIBDIR}/man/ronn.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ronn.1
