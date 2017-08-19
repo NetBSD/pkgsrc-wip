@@ -140,7 +140,8 @@ TEST_ENV+=		VERBOSE=1
 .for _test_ in check-llvm check-clang check-lldb check-compiler-rt check-lld \
 	check-libcxx check-unwind check-polly check-libomptarget \
 	check-sanitizer check-interception check-tsan check-asan check-msan \
-	check-ubsan check-all check-asan-dynamic check-safestack check-profile
+	check-ubsan check-all check-asan-dynamic check-safestack \
+	check-profile check-fuzzer
 ${_test_}: build
 	${RUN}${_ULIMIT_CMD} cd ${TEST_DIRS} && ${TEST_MAKE_CMD} -j${MAKE_JOBS} ${_test_}
 .endfor
