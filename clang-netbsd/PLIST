@@ -238,6 +238,7 @@ include/clang/Basic/SourceLocation.h
 include/clang/Basic/SourceManager.h
 include/clang/Basic/SourceManagerInternals.h
 include/clang/Basic/Specifiers.h
+include/clang/Basic/SyncScope.h
 include/clang/Basic/TargetBuiltins.h
 include/clang/Basic/TargetCXXABI.h
 include/clang/Basic/TargetInfo.h
@@ -497,6 +498,8 @@ include/clang/Tooling/Refactoring.h
 include/clang/Tooling/Refactoring/AtomicChange.h
 include/clang/Tooling/Refactoring/RecursiveSymbolVisitor.h
 include/clang/Tooling/Refactoring/Rename/RenamingAction.h
+include/clang/Tooling/Refactoring/Rename/SymbolName.h
+include/clang/Tooling/Refactoring/Rename/SymbolOccurrences.h
 include/clang/Tooling/Refactoring/Rename/USRFinder.h
 include/clang/Tooling/Refactoring/Rename/USRFindingAction.h
 include/clang/Tooling/Refactoring/Rename/USRLocFinder.h
@@ -515,9 +518,9 @@ lib/clang/${PKGVERSION}/include/__wmmintrin_pclmul.h
 lib/clang/${PKGVERSION}/include/adxintrin.h
 lib/clang/${PKGVERSION}/include/altivec.h
 lib/clang/${PKGVERSION}/include/ammintrin.h
+lib/clang/${PKGVERSION}/include/arm64intr.h
 lib/clang/${PKGVERSION}/include/arm_acle.h
 lib/clang/${PKGVERSION}/include/arm_neon.h
-lib/clang/${PKGVERSION}/include/arm64intr.h
 lib/clang/${PKGVERSION}/include/armintr.h
 lib/clang/${PKGVERSION}/include/avx2intrin.h
 lib/clang/${PKGVERSION}/include/avx512bwintrin.h
