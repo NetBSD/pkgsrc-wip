@@ -1,0 +1,7 @@
+$NetBSD$
+
+--- test/fuzzer/bad-strcmp.test.orig	2017-08-19 18:02:19.290355547 +0000
++++ test/fuzzer/bad-strcmp.test
+@@ -0,0 +1,2 @@
++RUN: %cpp_compiler %S/BadStrcmpTest.cpp -o %t-BadStrcmpTest
++RUN: %t-BadStrcmpTest -runs=100000

@@ -1,0 +1,9 @@
+$NetBSD$
+
+--- test/fuzzer/cleanse.test.orig	2017-08-19 18:02:19.290592084 +0000
++++ test/fuzzer/cleanse.test
+@@ -0,0 +1,4 @@
++RUN: %cpp_compiler %S/CleanseTest.cpp -o %t-CleanseTest
++RUN: echo -n 0123456789ABCDEFGHIZ > %t-in
++RUN: %t-CleanseTest -cleanse_crash=1 %t-in -exact_artifact_path=%t-out
++RUN: echo -n ' 1   5    A        Z' | diff - %t-out

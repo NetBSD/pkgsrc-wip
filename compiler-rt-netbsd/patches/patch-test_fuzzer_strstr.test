@@ -1,0 +1,9 @@
+$NetBSD$
+
+--- test/fuzzer/strstr.test.orig	2017-08-19 18:02:19.297080660 +0000
++++ test/fuzzer/strstr.test
+@@ -0,0 +1,4 @@
++RUN: %cpp_compiler %S/StrstrTest.cpp -o %t-StrstrTest
++RUN: not %t-StrstrTest               -seed=1 -runs=2000000   2>&1 | FileCheck %s
++CHECK: BINGO
++
