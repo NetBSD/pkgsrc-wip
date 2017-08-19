@@ -4,7 +4,7 @@ LLVM_VERSION=	6.0.0
 
 CATEGORIES=	lang devel
 
-LLVM_SVN_REV=		310832
+LLVM_SVN_REV=		311235
 
 SVN_REPOSITORIES=		llvm
 SVN_REPO.llvm=			http://llvm.org/svn/llvm-project/llvm/trunk
