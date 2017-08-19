@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/fuzzer/tests/CMakeLists.txt.orig	2017-08-19 18:02:19.281880135 +0000
+--- lib/fuzzer/tests/CMakeLists.txt.orig	2017-08-19 18:06:22.169861671 +0000
 +++ lib/fuzzer/tests/CMakeLists.txt
-@@ -0,0 +1,46 @@
+@@ -0,0 +1,49 @@
 +set(LIBFUZZER_UNITTEST_CFLAGS
 +  ${COMPILER_RT_UNITTEST_CFLAGS}
 +  ${COMPILER_RT_GTEST_CFLAGS}
@@ -15,6 +15,9 @@ $NetBSD$
 +set_target_properties(FuzzerUnitTests PROPERTIES FOLDER "Compiler-RT Tests")
 +
 +set(LIBFUZZER_UNITTEST_LINK_FLAGS ${COMPILER_RT_UNITTEST_LINK_FLAGS})
++if (OS_NAME MATCHES "NetBSD")
++  list(APPEND LIBFUZZER_UNITTEST_LINK_FLAGS -lrt)
++endif()
 +list(APPEND LIBFUZZER_UNITTEST_LINK_FLAGS --driver-mode=g++)
 +
 +if(APPLE)

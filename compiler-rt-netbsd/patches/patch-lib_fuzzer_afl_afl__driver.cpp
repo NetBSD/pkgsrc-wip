@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/fuzzer/afl/afl_driver.cpp.orig	2017-08-19 18:02:19.281430930 +0000
+--- lib/fuzzer/afl/afl_driver.cpp.orig	2017-08-19 18:06:22.111520157 +0000
 +++ lib/fuzzer/afl/afl_driver.cpp
-@@ -0,0 +1,335 @@
+@@ -0,0 +1,341 @@
 +//===- afl_driver.cpp - a glue between AFL and libFuzzer --------*- C++ -* ===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -73,9 +73,15 @@ $NetBSD$
 +#ifdef __linux__
 +#define LIBFUZZER_LINUX 1
 +#define LIBFUZZER_APPLE 0
++#define LIBFUZZER_NETBSD 0
 +#elif __APPLE__
 +#define LIBFUZZER_LINUX 0
 +#define LIBFUZZER_APPLE 1
++#define LIBFUZZER_NETBSD 0
++#elif __NetBSD__
++#define LIBFUZZER_LINUX 0
++#define LIBFUZZER_APPLE 0
++#define LIBFUZZER_NETBSD 1
 +#else
 +#error "Support for your platform has not been implemented"
 +#endif
@@ -124,7 +130,7 @@ $NetBSD$
 +  struct rusage usage;
 +  if (getrusage(RUSAGE_SELF, &usage))
 +    return 0;
-+  if (LIBFUZZER_LINUX) {
++  if (LIBFUZZER_LINUX || LIBFUZZER_NETBSD) {
 +    // ru_maxrss is in KiB
 +    return usage.ru_maxrss >> 10;
 +  } else if (LIBFUZZER_APPLE) {

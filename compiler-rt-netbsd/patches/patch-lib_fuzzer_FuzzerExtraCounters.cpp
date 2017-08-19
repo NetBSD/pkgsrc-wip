@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/fuzzer/FuzzerExtraCounters.cpp.orig	2017-08-19 18:02:19.277368365 +0000
+--- lib/fuzzer/FuzzerExtraCounters.cpp.orig	2017-08-19 18:06:21.680809375 +0000
 +++ lib/fuzzer/FuzzerExtraCounters.cpp
 @@ -0,0 +1,41 @@
 +//===- FuzzerExtraCounters.cpp - Extra coverage counters ------------------===//
@@ -16,7 +16,7 @@ $NetBSD$
 +
 +#include "FuzzerDefs.h"
 +
-+#if LIBFUZZER_LINUX
++#if LIBFUZZER_LINUX || LIBFUZZER_NETBSD
 +__attribute__((weak)) extern uint8_t __start___libfuzzer_extra_counters;
 +__attribute__((weak)) extern uint8_t __stop___libfuzzer_extra_counters;
 +

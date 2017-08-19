@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/fuzzer/FuzzerExtFunctionsWeak.cpp.orig	2017-08-19 18:02:19.277155657 +0000
+--- lib/fuzzer/FuzzerExtFunctionsWeak.cpp.orig	2017-08-19 18:06:21.652002460 +0000
 +++ lib/fuzzer/FuzzerExtFunctionsWeak.cpp
 @@ -0,0 +1,54 @@
 +//===- FuzzerExtFunctionsWeak.cpp - Interface to external functions -------===//
@@ -18,7 +18,7 @@ $NetBSD$
 +// to clients right now.
 +//===----------------------------------------------------------------------===//
 +#include "FuzzerDefs.h"
-+#if LIBFUZZER_LINUX
++#if LIBFUZZER_LINUX || LIBFUZZER_NETBSD
 +
 +#include "FuzzerExtFunctions.h"
 +#include "FuzzerIO.h"
@@ -56,4 +56,4 @@ $NetBSD$
 +
 +} // namespace fuzzer
 +
-+#endif // LIBFUZZER_LINUX
++#endif // LIBFUZZER_LINUX || LIBFUZZER_NETBSD

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/fuzzer/FuzzerUtilLinux.cpp.orig	2017-08-19 18:02:19.280774289 +0000
+--- lib/fuzzer/FuzzerUtilLinux.cpp.orig	2017-08-19 18:06:22.041673476 +0000
 +++ lib/fuzzer/FuzzerUtilLinux.cpp
 @@ -0,0 +1,24 @@
 +//===- FuzzerUtilLinux.cpp - Misc utils for Linux. ------------------------===//
@@ -14,7 +14,7 @@ $NetBSD$
 +// Misc utils for Linux.
 +//===----------------------------------------------------------------------===//
 +#include "FuzzerDefs.h"
-+#if LIBFUZZER_LINUX
++#if LIBFUZZER_LINUX || LIBFUZZER_NETBSD
 +
 +#include <stdlib.h>
 +
@@ -26,4 +26,4 @@ $NetBSD$
 +
 +} // namespace fuzzer
 +
-+#endif // LIBFUZZER_LINUX
++#endif // LIBFUZZER_LINUX || LIBFUZZER_NETBSD
