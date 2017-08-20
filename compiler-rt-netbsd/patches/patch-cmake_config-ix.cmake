@@ -31,6 +31,15 @@ $NetBSD$
    filter_available_targets(DFSAN_SUPPORTED_ARCH ${ALL_DFSAN_SUPPORTED_ARCH})
    filter_available_targets(LSAN_SUPPORTED_ARCH ${ALL_LSAN_SUPPORTED_ARCH})
    filter_available_targets(MSAN_SUPPORTED_ARCH ${ALL_MSAN_SUPPORTED_ARCH})
+@@ -526,7 +532,7 @@ else()
+ endif()
+ 
+ if (COMPILER_RT_HAS_SANITIZER_COMMON AND TSAN_SUPPORTED_ARCH AND
+-    OS_NAME MATCHES "Darwin|Linux|FreeBSD|Android")
++    OS_NAME MATCHES "Darwin|Linux|FreeBSD|Android|NetBSD")
+   set(COMPILER_RT_HAS_TSAN TRUE)
+ else()
+   set(COMPILER_RT_HAS_TSAN FALSE)
 @@ -573,3 +579,10 @@ if (COMPILER_RT_HAS_SANITIZER_COMMON AND
  else()
    set(COMPILER_RT_HAS_XRAY FALSE)
