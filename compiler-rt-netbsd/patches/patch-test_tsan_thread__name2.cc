@@ -9,7 +9,7 @@ $NetBSD$
 -#define pthread_setname_np pthread_set_name_np
 +#define tsan_pthread_setname_np pthread_set_name_np
 +#elif defined(__NetBSD__)
-+#define tsan_pthread_setname_np(a,b) pthread_setname_np((a),"%s",(void*)(b))
++#define tsan_pthread_setname_np(a, b) pthread_setname_np((a), "%s", (void*)(b))
 +#else
 +#define tsan_pthread_setname_np pthread_setname_np
  #endif
