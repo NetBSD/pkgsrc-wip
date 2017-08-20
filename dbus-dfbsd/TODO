@@ -1,6 +1,0 @@
-Copy port to sysutils/dbus, do not install from wip.
-
-FreeBSD and DragonFly changes discussed in
-pkg/50075 (Making dbus actually work on FreeBSD, DragonFly, and
- probably more)
-implemented.

@@ -11,7 +11,7 @@
 name="dbus"
 rcvar="@DBUS_RCVAR@"
 command="@PREFIX@/bin/dbus-daemon"
-command_args="--system"
+command_args="--system --fork"
 pidfile="@VARBASE@/run/dbus/@DBUS_SYSTEM_PID_FILE_SH@"
 start_precmd="dbus_prestart"
 stop_postcmd="dbus_poststop"
@@ -25,8 +25,8 @@ dbus_prestart() {
 	if @TEST@ ! -d $dir; then
 		@MKDIR@ $dir
 # On other systems /var/run/dbus root:wheel works fine
-#		@CHMOD@ 0755 $dir
-#		@CHOWN@ @DBUS_USER_SH@:@DBUS_GROUP_SH@ $dir
+		@CHMOD@ 0755 $dir
+		@CHOWN@ @DBUS_VAR_RUN_USER_SH@:@DBUS_VAR_RUN_GROUP_SH@ $dir
 	elif @TEST@ -f $pidfile; then
 		@RM@ -f $pidfile
 	fi
@@ -35,6 +35,7 @@ dbus_prestart() {
 
 dbus_poststop() {
 	@RM@ -f $pidfile
+	[ ! -d $dbdir ] || @RMDIR@ $dbdir
 }
 
 load_rc_config $name
