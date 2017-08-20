@@ -1,0 +1,10 @@
+@comment $NetBSD$
+libexec/munin-c/munin-plugins-c
+man/man1/munin-node-c.1
+man/man1/munin-plugins-c.1
+sbin/munin-inetd-c
+sbin/munin-node-c
+sbin/nb_env
+sbin/ok_plugin
+share/doc/munin-c/gpl-2.0.txt
+share/doc/munin-c/gpl-3.0.txt

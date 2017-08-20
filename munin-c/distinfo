@@ -1,0 +1,5 @@
+$NetBSD$
+
+SHA1 (patch-getversion) = 175e8cb68eb9a8d83dbad5b431034789e66f68df
+SHA1 (patch-src_node_Makefile.am) = e0075135e441e39f2c5700cc99f3b7fba6ee6c65
+SHA1 (patch-src_node_node.c) = 02643e7c288921f68600ceae517fd9b3fa1c5e54

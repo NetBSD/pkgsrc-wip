@@ -2054,6 +2054,7 @@ SUBDIR+=	multisync-syncml-moto
 SUBDIR+=	multitail
 SUBDIR+=	mumble
 SUBDIR+=	munge
+SUBDIR+=	munin-c
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node

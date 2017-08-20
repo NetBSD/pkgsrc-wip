@@ -1,0 +1,16 @@
+$NetBSD$
+
+Provide the possibility to set the default PLUGINCONFDIR for munin-node plugins.
+This will allow different sysconfdirs based on the operating system.
+
+--- src/node/Makefile.am.orig	2017-08-19 16:40:56.000000000 +0000
++++ src/node/Makefile.am
+@@ -11,7 +11,7 @@
+ include $(top_srcdir)/common.am
+ 
+ sbin_PROGRAMS = munin-node-c munin-inetd-c
+-AM_CPPFLAGS = -DPLUGINDIR=\"$(sysconfdir)/munin/plugins\"
++AM_CPPFLAGS = -DPLUGINDIR=\"$(sysconfdir)/munin/plugins\" -DPLUGINCONFDIR=\"$(sysconfdir)/munin/plugin-conf.d\"
+ munin_node_c_SOURCES = node.c
+ munin_inetd_c_SOURCES = inetd.c
+ man_MANS = munin-node-c.1
