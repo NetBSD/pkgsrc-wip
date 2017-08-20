@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	objfw-0.90
+DISTNAME=	objfw-0.90.1
 CATEGORIES=	devel
 MASTER_SITES=	https://heap.zone/objfw/downloads/
 

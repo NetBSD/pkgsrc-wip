@@ -195,7 +195,7 @@ include/ObjFW/unicode.h
 lib/libobjfw.a
 lib/libobjfw.so
 lib/libobjfw.so.8
-lib/libobjfw.so.8.0.0
+lib/libobjfw.so.8.1.0
 share/ofhash/lang/de.json
 share/ofhash/lang/languages.json
 share/ofhttp/lang/de.json
