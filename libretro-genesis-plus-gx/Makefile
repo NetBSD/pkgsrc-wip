@@ -12,6 +12,7 @@ LICENSE=	picodrive-license
 GITHUB_PROJECT=	Genesis-Plus-GX
 GITHUB_TAG=	abc3d20faf35e97dae1482bc0d5c5d0cac282a2d
 
+EXTRACT_USING=	bsdtar
 USE_TOOLS=	gmake
 
 MAKE_FILE=	Makefile.libretro
