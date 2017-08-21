@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 21:58:18 ahp-nils Exp $
-
-SHA1 (mustache-1.0.3.gem) = 9e3da0dbb4542a31a995c08be95f154e129719e4
-RMD160 (mustache-1.0.3.gem) = 4122c20f21625b1a2ad2364268b9fa6c46cdf8de
-SHA512 (mustache-1.0.3.gem) = 2329a8f63fd025cbf2dee7c8034b0914d5348874775a4df9067a8af9aa566c639dfa7a5fabf63c3f48d520d4b5b901ae47e880e5a85213c253780036e1650255
-Size (mustache-1.0.3.gem) = 40960 bytes
