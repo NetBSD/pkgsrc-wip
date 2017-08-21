@@ -1,13 +1,13 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-SHA1 (infraarcana/ia-19.0.tar.gz) = 65d1f1b223715cf95d35fe917479dab1a76b623c
-RMD160 (infraarcana/ia-19.0.tar.gz) = eae3748894291840e773dbb61b468b62a87cb31b
-SHA512 (infraarcana/ia-19.0.tar.gz) = d611ef0eeecc131d7ad56b00f490870885e640d1116d18cf5ea0ec69cca76fc8bff0573b30e3b36452a2f73dece3ca595b4ee0d7219b86111525255d52c75bbd
-Size (infraarcana/ia-19.0.tar.gz) = 35192419 bytes
-SHA1 (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = c491d4e4bb2b93fbadcfeb525501e7e1e1c510c0
-RMD160 (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = 4cb45291fcc2b8335a0cd42d1370b0550cd4923d
-SHA512 (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = 12107c4d2daa45abf3044123926e2f147c41c509b85a6bcbad71e9296f85b9322b1b68ac63b5b894e12107ded3dc0d527138db31facdef2d34f6f3e7290ed16f
-Size (infraarcana/rl_utils-a3e73bf9ae3d8d086113ebf44448d121ce1112cc.zip) = 17654 bytes
+SHA1 (infraarcana/ia-19.1.tar.gz) = 33204da381bee21bde9d5675c362b4ac63c6fb46
+RMD160 (infraarcana/ia-19.1.tar.gz) = 62c96a0e6ff177c4e0a6103e0ee68c8d2d04f6ca
+SHA512 (infraarcana/ia-19.1.tar.gz) = 59c22aaa6a6dd01d3c3933508913b389aeccdb761c416ade032e7ae53eb9bb1b9601b991d9bd3222266f13f0e3426c9902895eac63f7c208be70d5b3eb0c7443
+Size (infraarcana/ia-19.1.tar.gz) = 40268970 bytes
+SHA1 (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = 31fbc2acf9d8fc99199cb6ff4ab41da5ca7fca27
+RMD160 (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = c3514d15cc7b3eccb4682415581dec2b4b7f0626
+SHA512 (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = 71a07c0e4d25ecdfba39e71d44df7927f7564af3d9a3f348cfd3f79387a86cc6ecd546c493cfc4db53f62d675896d21237e9ed3ed65e72d21b3be88bf1cc50f7
+Size (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = 17982 bytes
 SHA1 (patch-CMakeLists.txt) = f57baac4f727c5af6c3893970a1916fd0bb194ab
 SHA1 (patch-src_config.cpp) = 1dfb902992f1dfdbff171991410a0b73c2f666b0
 SHA1 (patch-src_saving.cpp) = ea5ee85b2dea39d99bb4a5e609c89c166b578fb3
