@@ -1,8 +1,0 @@
-$NetBSD$
-
---- test/fuzzer/simple-cmp.test.orig	2017-08-19 18:02:19.296541907 +0000
-+++ test/fuzzer/simple-cmp.test
-@@ -0,0 +1,3 @@
-+RUN: %cpp_compiler %S/SimpleCmpTest.cpp -o %t-SimpleCmpTest
-+CHECK: BINGO
-+RUN: not %t-SimpleCmpTest -seed=1 -runs=100000000 2>&1 | FileCheck %s

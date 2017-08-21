@@ -1,9 +1,0 @@
-$NetBSD$
-
---- test/fuzzer/strncmp.test.orig	2017-08-19 18:02:19.296947649 +0000
-+++ test/fuzzer/strncmp.test
-@@ -0,0 +1,4 @@
-+RUN: %cpp_compiler %S/StrncmpTest.cpp -o %t-StrncmpTest
-+RUN: not %t-StrncmpTest              -seed=2 -runs=10000000   2>&1 | FileCheck %s
-+CHECK: BINGO
-+

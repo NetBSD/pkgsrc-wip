@@ -1,9 +1,0 @@
-$NetBSD$
-
---- test/fuzzer/dict1.txt.orig	2017-08-19 18:02:19.290942467 +0000
-+++ test/fuzzer/dict1.txt
-@@ -0,0 +1,4 @@
-+# Dictionary for SimpleDictionaryTest
-+
-+a="Elvis"
-+b="Presley"
