@@ -589,6 +589,7 @@ SUBDIR+=	dpic
 SUBDIR+=	dragbox-git
 SUBDIR+=	dropbox
 SUBDIR+=	drow
+SUBDIR+=	double-conversion
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
 SUBDIR+=	ds2
