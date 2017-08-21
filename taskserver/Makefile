@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	taskd-1.1.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://taskwarrior.org/download/
 
@@ -17,7 +18,27 @@ CMAKE_ARGS+=	-DTASKD_MAN5DIR=${PREFIX}/${PKGMANDIR}/man5
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+.include "../../mk/bsd.prefs.mk"
+SMF_NAME=	taskd
+TASKD_USER?=	taskd
+TASKD_GROUP?=	taskd
+TASKD_DATA?=	${VARBASE}/taskd
+PKG_GROUPS=	${TASKD_GROUP}
+PKG_USERS=	${TASKD_USER}:${TASKD_GROUP}
+PKG_GROUPS_VARS=	TASKD_USER
+PKG_USERS_VARS=	TASKD_GROUP
+PKG_HOME.${TASKD_USER}=	${TASKD_DATA}
+
+FILES_SUBST+=	TASKD_USER=${TASKD_USER} TASKD_GROUP=${TASKD_GROUP} \
+		TASKD_DATA=${TASKD_DATA}
+MESSAGE_SUBST+=	TASKD_DATA=${TASKD_DATA}
+
+BUILD_DEFS+=	TASKD_USER TASKD_GROUP TASKD_DATA VARBASE
+
 REPLACE_SH=	src/taskdctl
+
+MAKE_DIRS=+	${TASKD_DATA}
+OWN_DIRS_PERMS+=	${TASKD_DATA} ${TASKD_USER} ${TASKD_GROUP} 0750
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
