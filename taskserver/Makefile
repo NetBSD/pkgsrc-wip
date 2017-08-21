@@ -15,6 +15,8 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DTASKD_MAN1DIR=${PREFIX}/${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DTASKD_MAN5DIR=${PREFIX}/${PKGMANDIR}/man5
 
+LDFLAGS.SunOS+=	-lsocket -lnsl
+
 REPLACE_SH=	src/taskdctl
 
 .include "../../devel/libuuid/buildlink3.mk"
