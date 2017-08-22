@@ -29,6 +29,8 @@ lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.dd-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.dyndd-x86_64.so
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.fuzzer-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.fuzzer_no_main-x86_64.a
+lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.lsan-i386.a
+lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.lsan-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.profile-i386.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.profile-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.safestack-i386.a
