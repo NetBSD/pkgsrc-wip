@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	taskd-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://taskwarrior.org/download/
 
@@ -33,12 +33,23 @@ FILES_SUBST+=	TASKD_USER=${TASKD_USER} TASKD_GROUP=${TASKD_GROUP} \
 		TASKD_DATA=${TASKD_DATA}
 MESSAGE_SUBST+=	TASKD_DATA=${TASKD_DATA}
 
+EGDIR=	${PREFIX}/share/examples/taskd
+EGFILES+=	pki/README pki/generate pki/generate.ca \
+		pki/generate.client pki/generate.crl \
+		pki/generate.server pki/vars
+INSTALLATION_DIRS+=	${EGDIR}/pki
+
 BUILD_DEFS+=	TASKD_USER TASKD_GROUP TASKD_DATA VARBASE
 
 REPLACE_SH=	src/taskdctl
 
 MAKE_DIRS=+	${TASKD_DATA}
 OWN_DIRS_PERMS+=	${TASKD_DATA} ${TASKD_USER} ${TASKD_GROUP} 0750
+
+post-install:
+.for file in ${EGFILES}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${EGDIR}/${file}
+.endfor
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
