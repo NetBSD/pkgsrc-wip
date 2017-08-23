@@ -3,7 +3,7 @@
 # - let sloccount(1) find its helper binaries
 
 DISTNAME=	sloccount-2.26
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.dwheeler.com/sloccount/
 
@@ -54,7 +54,7 @@ SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing path to internal binaries.
 SUBST_STAGE.prefix=	post-patch
 SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_FILES.prefix=	compute_all sloccount
+SUBST_FILES.prefix=	compute_all compute_sloc_lang sloccount
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/libexec/sloccount/sloccount ${DESTDIR}${PREFIX}/bin/sloccount
