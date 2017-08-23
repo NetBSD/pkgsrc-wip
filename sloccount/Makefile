@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2015/08/31 17:18:52 khorben Exp $
 # TODO:
 # - let sloccount(1) find its helper binaries
-# - avoid use of md5sum(1)
 
 DISTNAME=	sloccount-2.26
 PKGREVISION=	3
