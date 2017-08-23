@@ -1,9 +1,10 @@
 $NetBSD$
 
-Add support for CFLAGS and LDFLAGS
+- Add support for CFLAGS and LDFLAGS
+- Correct permissions when installing manual pages and documentation
 
---- /home/khorben/Projects/EdgeBSD/pkgsrc/work/wip/sloccount/work/sloccount-2.26/makefile.orig	2017-07-28 14:42:35.000000000 +0000
-+++ /home/khorben/Projects/EdgeBSD/pkgsrc/work/wip/sloccount/work/sloccount-2.26/makefile
+--- makefile.orig	2004-08-01 18:52:06.000000000 +0000
++++ makefile
 @@ -37,7 +37,9 @@ EXE_SUFFIX=
  # Set this to your C compiler, if it's not "gcc"; a likely alternative is "cc".
  # The "-Wall" option turns on warnings in gcc.  gcc users might also want
@@ -59,3 +60,20 @@ Add support for CFLAGS and LDFLAGS
  
  
  install_programs: all
+@@ -171,14 +173,14 @@ uninstall_programs:
+ 
+ install_man: $(MANPAGES)
+ 	$(INSTALL_A_DIR) $(MAN_DIR_MAN1)
+-	$(INSTALL) $(MANPAGES) $(MAN_DIR_MAN1)
++	$(INSTALL) -m 0644 $(MANPAGES) $(MAN_DIR_MAN1)
+ 
+ uninstall_man:
+ 	cd $(MAN_DIR_MAN1) && rm -f $(MANPAGES)
+ 
+ install_docs: install_man
+ 	$(INSTALL_A_DIR) $(DOC_DIR)
+-	$(INSTALL) $(MYDOCS) $(DOC_DIR)
++	$(INSTALL) -m 0644 $(MYDOCS) $(DOC_DIR)
+ 
+ uninstall_docs:
+ 	rm -fr $(DOC_DIR)

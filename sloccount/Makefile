@@ -4,7 +4,7 @@
 # - avoid use of md5sum(1)
 
 DISTNAME=	sloccount-2.26
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.dwheeler.com/sloccount/
 
