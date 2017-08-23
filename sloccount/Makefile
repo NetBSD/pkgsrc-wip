@@ -3,7 +3,7 @@
 # - let sloccount(1) find its helper binaries
 
 DISTNAME=	sloccount-2.26
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.dwheeler.com/sloccount/
 

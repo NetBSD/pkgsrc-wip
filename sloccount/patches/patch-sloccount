@@ -42,3 +42,14 @@ Correct path to the helper binaries
    then
      display_results=y
    fi
+@@ -251,8 +253,8 @@ in
+   cd $datadir
+   case $details
+   in
+-    y)   get_sloc_details * ;;
+-    *)   get_sloc $addlang $showother $filecount $oneprogram $effort_model $schedule_model $personcost $overhead * ;;
++    y)   "$libexecdir/get_sloc_details" * ;;
++    *)   "$libexecdir/get_sloc" $addlang $showother $filecount $oneprogram $effort_model $schedule_model $personcost $overhead * ;;
+   esac;;
+ esac
+ 

@@ -8,4 +8,4 @@ SHA1 (patch-compute__all) = 86bee28f56a366c63f122a417bad92020e748df1
 SHA1 (patch-compute__sloc__lang) = 8692b6b086aad2cf986123c85f70229017a9bf37
 SHA1 (patch-makefile) = 0f696e08486299dadd919d3aee1d31d01d1c6ad1
 SHA1 (patch-rpm__unpacker) = 1bd30245b1ad1c6de72c0ec63acbd76b95d79efb
-SHA1 (patch-sloccount) = 36f2b762aae891bfd0fdee52b0a34b286c16d5d5
+SHA1 (patch-sloccount) = 610b0033e7b0e10939f1d4b5ec3f7e1fcaa83827
