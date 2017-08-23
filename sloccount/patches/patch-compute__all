@@ -1,0 +1,15 @@
+$NetBSD$
+
+Correct path to the helper binaries
+
+--- compute_all.orig	2004-08-01 03:01:39.000000000 +0000
++++ compute_all
+@@ -72,7 +72,7 @@ do
+        dup) true ;;
+        auto) true ;;
+        *)
+-         numsloc=`compute_sloc_lang $language "." | tr -d " "`
++         numsloc=`@PREFIX@/libexec/sloccount/compute_sloc_lang $language "." | tr -d " "`
+          echo "$language	$numsloc" >> all-physical.sloc.new
+        ;;
+      esac
