@@ -3,7 +3,7 @@
 # - let sloccount(1) find its helper binaries
 
 DISTNAME=	sloccount-2.26
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://www.dwheeler.com/sloccount/
 
@@ -49,6 +49,13 @@ REPLACE_PERL+=		print_sum
 REPLACE_PERL+=		python_count
 REPLACE_PERL+=		simplecount
 REPLACE_PERL+=		sql_count
+
+SUBST_CLASSES+=		generic
+SUBST_MESSAGE.generic=	Fixing path to internal generic_count binary.
+SUBST_STAGE.generic=	post-patch
+SUBST_SED.generic=	-e 's,^generic_count,${PREFIX}/libexec/sloccount/&,g'
+SUBST_FILES.generic=	ada_count awk_count csh_count exp_count lisp_count \
+			makefile_count ruby_count sed_count sh_count tcl_count
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing path to internal binaries.
