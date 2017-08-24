@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.92 2016/03/05 11:28:49 jperkin Exp $
 
-DISTNAME=		nmh-1.7-RC2
-PKGNAME=		nmh-1.7rc2
+DISTNAME=		nmh-1.7-RC3
+PKGNAME=		nmh-1.7rc3
 CATEGORIES=		mail
 MASTER_SITES=		https://download.savannah.nongnu.org/releases/nmh/
 

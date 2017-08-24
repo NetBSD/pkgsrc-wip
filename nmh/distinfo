@@ -1,9 +1,8 @@
 $NetBSD: distinfo,v 1.19 2015/11/03 23:27:11 agc Exp $
 
-SHA1 (nmh-1.7-RC2.tar.gz) = dc94b3421ff4a7e0e3455456c0f71a618f6988f2
-RMD160 (nmh-1.7-RC2.tar.gz) = a3334bdee9336646e04fcad7280a03dacb080c99
-SHA512 (nmh-1.7-RC2.tar.gz) = 347e4267612e133e6c9b1efd7200b8070e9ffa75fe41b211701294333f6ca462e1e06fbf75824a15085e5c6a67acbdf6ebd52aadbe99b908a42c6f41f24e2327
-Size (nmh-1.7-RC2.tar.gz) = 1386938 bytes
+SHA1 (nmh-1.7-RC3.tar.gz) = dff8fca233174680cd45463e6f6b901f410f2076
+RMD160 (nmh-1.7-RC3.tar.gz) = bd55fb4867ce6fc7efc07a32a6544d8b4a0d1ed7
+SHA512 (nmh-1.7-RC3.tar.gz) = 4e4c99fc91adc6b920772c28ad0001cffde91277a19322acc0f127776bef33889b40141e093559e96616c3631b967ff9c57e4dee88755ec7cb6956d0dcda0a01
+Size (nmh-1.7-RC3.tar.gz) = 1389989 bytes
 SHA1 (patch-ca) = 8e3d655602d8b508f403e51b105e122818b50b7c
 SHA1 (patch-cd) = 5a775091713bca2597a01fcd267d56e2a175588a
-SHA1 (patch-uip_mhical.c) = b95b92cc4e02a151772757c5ba9b92a20d472c85
