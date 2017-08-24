@@ -315,7 +315,7 @@ qt5/mkspecs/modules/qt_lib_multimedia_private.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri
-${PLIST.alsa}qt5/plugins/audio/libqtaudio_alsa.la
+${PLIST.alsa}qt5/plugins/audio/libqtaudio_alsa.so
 ${PLIST.unix}qt5/plugins/audio/libqtmedia_pulse.so
 ${PLIST.unix}qt5/plugins/mediaservice/libgstaudiodecoder.so
 ${PLIST.unix}qt5/plugins/mediaservice/libgstcamerabin.so
