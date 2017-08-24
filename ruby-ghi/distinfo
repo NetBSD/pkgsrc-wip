@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ghi-1.2.0.gem) = bf9b7ce75aad0597ba35f1a8baccd73dde50fed9
+RMD160 (ghi-1.2.0.gem) = 361f42d6c3e211c496cc80c7c0a41d015a4daeb2
+SHA512 (ghi-1.2.0.gem) = eac43e4fe5c7fc8c3f39ee621ebae53944ac021d7b2e1addac26fd9085384ede40d8daf14ccf9a8aea36ab3c5fb8861c3c49a34ac1008d0972f484eb6e9de9e5
+Size (ghi-1.2.0.gem) = 27136 bytes
+SHA1 (patch-lib_ghi_client.rb) = 2b596f815efa579c371dd2d596b292ac69f03da5
