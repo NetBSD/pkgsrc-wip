@@ -92,8 +92,6 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist \
 	    ${DESTDIR}${EGDIR}/mhn.defaults
 
-.include "../../mk/bsd.prefs.mk"
-
 .if ${OPSYS} == "Linux"
 .include "../../databases/gdbm_compat/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ndbm='gdbm_compat -lgdbm'
