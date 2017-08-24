@@ -22,4 +22,5 @@ PKGCONFIG_OVERRIDE+=	3rdParty/jemalloc/v5.0.1/jemalloc.pc.in
 PKGCONFIG_OVERRIDE+=	3rdParty/zlib/zlib-1.2.11/contrib/minizip/minizip.pc.in
 PKGCONFIG_OVERRIDE+=	3rdParty/zlib/zlib-1.2.11/zlib.pc.in
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
