@@ -22,10 +22,6 @@ USE_TOOLS+=		lex
 # Locks supported by `mail.local' are ".lock" and flock(2).
 
 .include "../../mk/bsd.prefs.mk"
-# Avoids SEGV in nmh's private version of strcasecmp() under gcc4
-.if !empty(PKGSRC_COMPILER:Mgcc*)
-CFLAGS+=		-O1
-.endif
 
 .include "options.mk"
 
