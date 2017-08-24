@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (arangodb-3.2.2.tar.gz) = 29906c7f4086ecc2d3d787188319dbbf49cda148
+RMD160 (arangodb-3.2.2.tar.gz) = c14d5e750ea3c987aca8b3316c6e9bb308c748b4
+SHA512 (arangodb-3.2.2.tar.gz) = 8a6c466cc749078374de598b17390faf97eefea99ad1b301d6cf1c50df2da72992ae1d3612334a35370bd97998ac9378a7c6659d1952ab549148f191b7f712ae
+Size (arangodb-3.2.2.tar.gz) = 143296198 bytes
+SHA1 (patch-3rdParty_V8_v5.7.0.0_third__party_icu_android_patch__locale.sh) = b65345314a67e1e6e769f6232f82f5066a035a35
+SHA1 (patch-3rdParty_V8_v5.7.0.0_third__party_icu_source_configure) = f751461b8f23b15d21492a874c4b461ca668402c
+SHA1 (patch-3rdParty_V8_v5.7.0.0_tools_run-llprof.sh) = 5018bdf4311ce63618b7569065dfdd69f5f08657
