@@ -15,12 +15,6 @@ CONFLICTS+=		ja-mh6-[0-9]*
 
 USE_TOOLS+=		lex
 
-# We choose DOT_LOCKING in our patches because ".lock" files are
-# the most common locking mechanism supported by mail software.
-# It also works well over NFS.
-
-# Locks supported by `mail.local' are ".lock" and flock(2).
-
 .include "../../mk/bsd.prefs.mk"
 
 .include "options.mk"
