@@ -70,6 +70,7 @@ go/doc/devel/release.html
 go/doc/devel/weekly.html
 go/doc/docs.html
 go/doc/editors.html
+go/doc/editors/go-plus.png
 go/doc/editors/gogland.png
 go/doc/editors/vimgo.png
 go/doc/editors/vscodego.png
@@ -1896,6 +1897,9 @@ go/src/cmd/go/testdata/src/testdep/p1/p1.go
 go/src/cmd/go/testdata/src/testdep/p1/p1_test.go
 go/src/cmd/go/testdata/src/testdep/p2/p2.go
 go/src/cmd/go/testdata/src/testdep/p3/p3.go
+go/src/cmd/go/testdata/src/testlist/bench_test.go
+go/src/cmd/go/testdata/src/testlist/example_test.go
+go/src/cmd/go/testdata/src/testlist/test_test.go
 go/src/cmd/go/testdata/src/testrace/race_test.go
 go/src/cmd/go/testdata/src/testregexp/x_test.go
 go/src/cmd/go/testdata/src/testregexp/z_test.go
@@ -2456,6 +2460,7 @@ go/src/cmd/vet/testdata/buildtag/buildtag.go
 go/src/cmd/vet/testdata/buildtag/buildtag_bad.go
 go/src/cmd/vet/testdata/cgo/cgo.go
 go/src/cmd/vet/testdata/cgo/cgo2.go
+go/src/cmd/vet/testdata/cgo/cgo3.go
 go/src/cmd/vet/testdata/composite.go
 go/src/cmd/vet/testdata/copylock.go
 go/src/cmd/vet/testdata/copylock_func.go
@@ -5752,6 +5757,7 @@ go/src/vendor/golang_org/x/text/unicode/norm/trie.go
 go/src/vendor/golang_org/x/text/unicode/norm/triegen.go
 go/test/235.go
 go/test/64bit.go
+go/test/README.md
 go/test/alg.go
 go/test/alias.go
 go/test/alias1.go
