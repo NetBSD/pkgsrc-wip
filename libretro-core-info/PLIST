@@ -18,6 +18,8 @@ share/libretro/info/bsnes_mercury_balanced_libretro.info
 share/libretro/info/bsnes_mercury_performance_libretro.info
 share/libretro/info/bsnes_performance_libretro.info
 share/libretro/info/cap32_libretro.info
+share/libretro/info/chaigame_libretro.info
+share/libretro/info/citra_libretro.info
 share/libretro/info/craft_libretro.info
 share/libretro/info/crocods_libretro.info
 share/libretro/info/cruzes_libretro.info
@@ -77,9 +79,12 @@ share/libretro/info/mgba_libretro.info
 share/libretro/info/mrboom_libretro.info
 share/libretro/info/mupen64plus_gles3_libretro.info
 share/libretro/info/mupen64plus_libretro.info
+share/libretro/info/nekop2_libretro.info
 share/libretro/info/nestopia_libretro.info
 share/libretro/info/nxengine_libretro.info
 share/libretro/info/o2em_libretro.info
+share/libretro/info/openlara_libretro.info
+share/libretro/info/opentyrian_libretro.info
 share/libretro/info/parallel_n64_debug_libretro.info
 share/libretro/info/parallel_n64_libretro.info
 share/libretro/info/pascal_pong_libretro.info
@@ -96,11 +101,14 @@ share/libretro/info/prboom_libretro.info
 share/libretro/info/prosystem_libretro.info
 share/libretro/info/psp1_libretro.info
 share/libretro/info/puae_libretro.info
+share/libretro/info/px68k_libretro.info
 share/libretro/info/quicknes_libretro.info
+share/libretro/info/redream_libretro.info
 share/libretro/info/reicast_libretro.info
 share/libretro/info/reicast_naomi_libretro.info
 share/libretro/info/remotejoy_libretro.info
 share/libretro/info/rustation_libretro.info
+share/libretro/info/sameboy_libretro.info
 share/libretro/info/scummvm_libretro.info
 share/libretro/info/snes9x2002_libretro.info
 share/libretro/info/snes9x2005_libretro.info
@@ -134,6 +142,8 @@ share/libretro/info/vbam_libretro.info
 share/libretro/info/vecx_libretro.info
 share/libretro/info/vice_x128_libretro.info
 share/libretro/info/vice_x64_libretro.info
+share/libretro/info/vice_xplus4_libretro.info
+share/libretro/info/vice_xvic_libretro.info
 share/libretro/info/virtualjaguar_libretro.info
 share/libretro/info/xrick_libretro.info
 share/libretro/info/yabause_libretro.info
