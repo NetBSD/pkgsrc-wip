@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-prosystem-20170124
+DISTNAME=	libretro-prosystem-20170822
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ COMMENT=	Libretro core based on the ProSystem Atari 7800 emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	prosystem-libretro
-GITHUB_TAG=	1cf54722a37e30a82a16db2a4fbb5edcbe005c70
+GITHUB_TAG=	31d2b8eb55fa078df7440575d7dacfa550a30106
 
 USE_TOOLS=	gmake
 
