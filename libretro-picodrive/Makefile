@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/02/05 16:57:53 wiz Exp $
 
-PKGNAME=	libretro-picodrive-20170418
+PKGNAME=	libretro-picodrive-20170818
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,8 +9,8 @@ HOMEPAGE=	https://wiki.libretro.com/index.php?title=PicoDrive
 COMMENT=	Libretro core for emulating Sega 8/16-bit consoles & 32X
 LICENSE=	picodrive-license
 
-PICODRIVE_TAG=	cbc93b68dca1d72882d07b54bbe1ef25b980558a
-CYCLONE_TAG=	355815ebb5b1c60916f66d043a43f3af7839589f
+PICODRIVE_TAG=	40cd7bc40b282c451cbb9bf064227d3d069a09f6
+CYCLONE_TAG=	66dda842eae01f47f5389b931ec9567fb0bbb6a1
 
 DISTFILES+=	${PICODRIVE_TAG}.tar.gz
 SITES.${PICODRIVE_TAG}.tar.gz= \
@@ -30,7 +30,17 @@ NOT_FOR_PLATFORM=	${BIGENDIANPLATFORMS}
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
-.if !empty(MACHINE_ARCH:M*arm*)
+.if !empty(MACHINE_ARCH:M*armv7*)
+CFLAGS+=		-marm
+BUILD_MAKE_FLAGS+=	ARCH=arm
+BUILD_MAKE_FLAGS+=	ARM_ASM=1
+BUILD_MAKE_FLAGS+=	use_cyclone=0
+BUILD_MAKE_FLAGS+=	use_fame=1
+BUILD_MAKE_FLAGS+=	use_drz80=0
+BUILD_MAKE_FLAGS+=	use_cz80=1
+BUILD_MAKE_FLAGS+=	use_sh2drc=1
+BUILD_MAKE_FLAGS+=	use_svpdrc=1
+.elif !empty(MACHINE_ARCH:M*armv6*)
 CFLAGS+=		-marm
 BUILD_MAKE_FLAGS+=	ARCH=arm
 BUILD_MAKE_FLAGS+=	ARM_ASM=1
