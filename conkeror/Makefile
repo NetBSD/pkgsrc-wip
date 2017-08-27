@@ -2,7 +2,7 @@
 
 PKGNAME=	conkeror-1.0.3
 DISTNAME=	11121bed996ce84e3536c3c8266cdf3164e02b5a
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://repo.or.cz/conkeror.git/snapshot/
 DIST_SUBDIR=	conkeror

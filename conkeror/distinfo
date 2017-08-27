@@ -8,6 +8,7 @@ SHA1 (patch-application.ini) = ed51742eff6309256cb6bb5f4b401d8791a6914a
 SHA1 (patch-conkeror.in) = 0fcf39a72c30a7061f1bd91d465e84cc84129078
 SHA1 (patch-favicon) = 71a07c9e6bb9a4d32531e15b976c782e7016fe83
 SHA1 (patch-modules_download-manager.js) = 8125b1369ecd942b12d6e3fcceec7552586082d1
+SHA1 (patch-modules_history.js) = 097d55d924a09a2f75539098de476948323234f4
 SHA1 (patch-modules_keywords.js) = 639a51fb8e0cbefc360d34972d1bb38613ff22b6
 SHA1 (patch-modules_page-modes_key-kill.js) = 73e0ee87bf6e7e8e0338626ea2ef04da4e0dea24
 SHA1 (patch-modules_permission-manager.js) = 8d90c8fa3734c7ea410718e7aca1e4854e1f1211
