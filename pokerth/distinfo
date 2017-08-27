@@ -6,6 +6,7 @@ SHA512 (PokerTH-1.1.1-src.tar.bz2) = bd822d15747d94b67657ea2fd0b9c8c1bdad0031a6e
 Size (PokerTH-1.1.1-src.tar.bz2) = 19326922 bytes
 SHA1 (patch-src_core_common_avatarmanager.cpp) = 19e550fde49ab04a4e8be56bc1b2b791e93e94f3
 SHA1 (patch-src_core_common_loghelper__server.cpp) = 8d2d12f80d99f4cd8cc4f314d1930e6538f16ce1
+SHA1 (patch-src_gui_qt_gametable_gametableimpl.cpp) = 6afb7c9c08acb0f7ad90b46a69c1a9558b7bb8a7
 SHA1 (patch-src_net_common_clientstate.cpp) = 7bdec191bebe06879e49040cecc947f1a1863859
 SHA1 (patch-src_net_common_clientthread.cpp) = d32d9eeb04f26c934f2395381f5b7c1ef42a0d36
 SHA1 (patch-src_net_common_downloaderthread.cpp) = f2bbf30753099878f267882fb3fa14277660aeb4
