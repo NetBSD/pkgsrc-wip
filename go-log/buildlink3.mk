@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-log
+
+.if !defined(GO_LOG_BUILDLINK3_MK)
+GO_LOG_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-log=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-log?=		build
+
+BUILDLINK_API_DEPENDS.go-log+=	go-log>=0.0.1
+BUILDLINK_PKGSRCDIR.go-log?=	../../wip/go-log
+.endif	# GO_LOG_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-log

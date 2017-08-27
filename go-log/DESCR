@@ -1,0 +1,8 @@
+This repository contains logging packages for Go:
+
+ * stdlog is the main package of this repository, it is a simple
+   and fast logger to the standard output.
+ * buflog and golog are customizable logging class which can be
+   used as a standalone or as a building block for other loggers.
+   stdlog is built upon them.
+ * log just provides a common interface for logging libraries.

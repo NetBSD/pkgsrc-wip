@@ -1,0 +1,19 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/alexcesaro/log.a
+gopkg/pkg/${GO_PLATFORM}/github.com/alexcesaro/log/buflog.a
+gopkg/pkg/${GO_PLATFORM}/github.com/alexcesaro/log/golog.a
+gopkg/pkg/${GO_PLATFORM}/github.com/alexcesaro/log/logtest.a
+gopkg/pkg/${GO_PLATFORM}/github.com/alexcesaro/log/stdlog.a
+gopkg/src/github.com/alexcesaro/log/LICENSE
+gopkg/src/github.com/alexcesaro/log/README.md
+gopkg/src/github.com/alexcesaro/log/buflog/buflog.go
+gopkg/src/github.com/alexcesaro/log/buflog/buflog_test.go
+gopkg/src/github.com/alexcesaro/log/golog/golog.go
+gopkg/src/github.com/alexcesaro/log/golog/golog_test.go
+gopkg/src/github.com/alexcesaro/log/log.go
+gopkg/src/github.com/alexcesaro/log/logtest/logtest.go
+gopkg/src/github.com/alexcesaro/log/null.go
+gopkg/src/github.com/alexcesaro/log/null_test.go
+gopkg/src/github.com/alexcesaro/log/stdlog/stdlog.go
+gopkg/src/github.com/alexcesaro/log/stdlog/stdlog_test.go
+@pkgdir bin
