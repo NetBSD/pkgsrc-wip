@@ -7,11 +7,11 @@ $NetBSD$
  
  #if SI_POSIX
 -# include "sanitizer_platform_limits_posix.h"
-+# if SANITIZER_NETBSD
-+#  include "sanitizer_platform_limits_netbsd.h"
-+# else
-+#  include "sanitizer_platform_limits_posix.h"
-+# endif
++#if SANITIZER_NETBSD
++#include "sanitizer_platform_limits_netbsd.h"
++#else
++#include "sanitizer_platform_limits_posix.h"
++#endif
  #endif
  
  #if SANITIZER_LINUX && !SANITIZER_ANDROID
