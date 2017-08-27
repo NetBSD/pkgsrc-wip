@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.4:../../converters/py-chardet
 .endif
 
 .if !empty(PKG_OPTIONS:Mpycountry)
-DEPENDS+=	${PYPKGPREFIX}-pycountry>=1.10:../../geography/py-pycountry
+DEPENDS+=	${PYPKGPREFIX}-country>=1.10:../../geography/py-country
 .endif
 
 .if !empty(PKG_OPTIONS:Mtradostm)
