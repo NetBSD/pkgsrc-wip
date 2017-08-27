@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- lib/sanitizer_common/CMakeLists.txt.orig	2017-08-03 21:24:37.000000000 +0000
++++ lib/sanitizer_common/CMakeLists.txt
+@@ -118,6 +118,7 @@ set(SANITIZER_HEADERS
+   sanitizer_placement_new.h
+   sanitizer_platform.h
+   sanitizer_platform_interceptors.h
++  sanitizer_platform_limits_netbsd.h
+   sanitizer_platform_limits_posix.h
+   sanitizer_posix.h
+   sanitizer_procmaps.h
