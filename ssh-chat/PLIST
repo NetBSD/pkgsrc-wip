@@ -1,0 +1,58 @@
+@comment $NetBSD$
+bin/ssh-chat
+gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat.a
+gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/chat.a
+gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/chat/message.a
+gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/set.a
+gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/sshd.a
+gopkg/src/github.com/shazow/ssh-chat/LICENSE
+gopkg/src/github.com/shazow/ssh-chat/Makefile
+gopkg/src/github.com/shazow/ssh-chat/README.md
+gopkg/src/github.com/shazow/ssh-chat/auth.go
+gopkg/src/github.com/shazow/ssh-chat/auth_test.go
+gopkg/src/github.com/shazow/ssh-chat/build_release
+gopkg/src/github.com/shazow/ssh-chat/chat/command.go
+gopkg/src/github.com/shazow/ssh-chat/chat/doc.go
+gopkg/src/github.com/shazow/ssh-chat/chat/help.go
+gopkg/src/github.com/shazow/ssh-chat/chat/logger.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/history.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/history_test.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/identity.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/logger.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/message.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/message_test.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/screen_test.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/theme.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/theme_test.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/user.go
+gopkg/src/github.com/shazow/ssh-chat/chat/message/user_test.go
+gopkg/src/github.com/shazow/ssh-chat/chat/room.go
+gopkg/src/github.com/shazow/ssh-chat/chat/room_test.go
+gopkg/src/github.com/shazow/ssh-chat/chat/sanitize.go
+gopkg/src/github.com/shazow/ssh-chat/chat/set_test.go
+gopkg/src/github.com/shazow/ssh-chat/cmd/ssh-chat/cmd.go
+gopkg/src/github.com/shazow/ssh-chat/cmd/ssh-chat/key.go
+gopkg/src/github.com/shazow/ssh-chat/godoc.go
+gopkg/src/github.com/shazow/ssh-chat/host.go
+gopkg/src/github.com/shazow/ssh-chat/host_test.go
+gopkg/src/github.com/shazow/ssh-chat/identity.go
+gopkg/src/github.com/shazow/ssh-chat/logger.go
+gopkg/src/github.com/shazow/ssh-chat/motd.txt
+gopkg/src/github.com/shazow/ssh-chat/set/item.go
+gopkg/src/github.com/shazow/ssh-chat/set/set.go
+gopkg/src/github.com/shazow/ssh-chat/set/set_test.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/auth.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/client.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/client_test.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/doc.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/logger.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/net.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/net_test.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/pty.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/ratelimit.go
+gopkg/src/github.com/shazow/ssh-chat/sshd/terminal.go
+@pkgdir gopkg/src/github.com/shazow/ssh-chat/vendor/github.com/shazow/rateio
+@pkgdir gopkg/src/github.com/shazow/ssh-chat/vendor/github.com/jessevdk/go-flags
+@pkgdir gopkg/src/github.com/shazow/ssh-chat/vendor/github.com/howeyc/gopass
+@pkgdir gopkg/src/github.com/shazow/ssh-chat/vendor/github.com/dustin/go-humanize
+@pkgdir gopkg/src/github.com/shazow/ssh-chat/vendor/github.com/alexcesaro/log
