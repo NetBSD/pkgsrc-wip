@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.1 2015/02/14 12:27:21 jihbed Exp $
 
-SHA1 (mps-youtube-0.2.5-2.tar.gz) = 9453245617efa6459b4f29a11ed55e6cf08954c8
-RMD160 (mps-youtube-0.2.5-2.tar.gz) = 686bf8c87db09d042b6bead353f593be52116b1c
-Size (mps-youtube-0.2.5-2.tar.gz) = 54835 bytes
+SHA1 (mps-youtube-0.2.7.1.tar.gz) = d49d3ae30176eddb930f2cba5494f3247204b8e2
+RMD160 (mps-youtube-0.2.7.1.tar.gz) = f1fa0996f71727f33a2da43a3066f426e112c125
+SHA512 (mps-youtube-0.2.7.1.tar.gz) = 760bd6ef6c04606e6e70e4d7f985482c5d5f1f33481a69398d20c2518ae7a1b0371501e31b6d0bcb46e702c53d8b2311e4556700c7d2ae4011006ffe9582de9b
+Size (mps-youtube-0.2.7.1.tar.gz) = 78128 bytes
+SHA1 (patch-setup.py) = 4b8be288b919fd5cd8a9fb3053312c77057e4fa5
