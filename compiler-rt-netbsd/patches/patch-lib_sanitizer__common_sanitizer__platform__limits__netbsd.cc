@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-27 06:51:29.495207732 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-27 06:59:58.497819810 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -0,0 +1,361 @@
+@@ -0,0 +1,359 @@
 +//===-- sanitizer_platform_limits_posix.cc --------------------------------===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -24,6 +24,7 @@ $NetBSD$
 +#include <dirent.h>
 +#include <glob.h>
 +#include <grp.h>
++#include <ifaddrs.h>
 +#include <limits.h>
 +#include <link_elf.h>
 +#include <net/if.h>
@@ -36,20 +37,20 @@ $NetBSD$
 +#include <poll.h>
 +#include <pthread.h>
 +#include <pwd.h>
++#include <semaphore.h>
 +#include <signal.h>
 +#include <stddef.h>
 +#include <sys/filio.h>
 +#include <sys/ipc.h>
 +#include <sys/mman.h>
 +#include <sys/mount.h>
-+#include <sys/mount.h>
 +#include <sys/mqueue.h>
 +#include <sys/msg.h>
 +#include <sys/mtio.h>
++#include <sys/ptrace.h>
 +#include <sys/resource.h>
 +#include <sys/shm.h>
 +#include <sys/signal.h>
-+#include <sys/socket.h>
 +#include <sys/socket.h>
 +#include <sys/sockio.h>
 +#include <sys/soundcard.h>
@@ -61,18 +62,15 @@ $NetBSD$
 +#include <sys/timespec.h>
 +#include <sys/timex.h>
 +#include <sys/types.h>
++#include <sys/ucontext.h>
 +#include <sys/utsname.h>
 +#include <term.h>
 +#include <termios.h>
 +#include <time.h>
++#include <utime.h>
 +#include <utmp.h>
 +#include <utmpx.h>
 +#include <wchar.h>
-+#include <ifaddrs.h>
-+#include <semaphore.h>
-+#include <sys/ptrace.h>
-+#include <sys/ucontext.h>
-+#include <utime.h>
 +#include <wordexp.h>
 +
 +// Include these after system headers to avoid name clashes and ambiguities.
