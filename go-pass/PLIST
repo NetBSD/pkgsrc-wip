@@ -1,0 +1,10 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/howeyc/gopass.a
+gopkg/src/github.com/howeyc/gopass/LICENSE.txt
+gopkg/src/github.com/howeyc/gopass/OPENSOLARIS.LICENSE
+gopkg/src/github.com/howeyc/gopass/README.md
+gopkg/src/github.com/howeyc/gopass/pass.go
+gopkg/src/github.com/howeyc/gopass/pass_test.go
+gopkg/src/github.com/howeyc/gopass/terminal.go
+gopkg/src/github.com/howeyc/gopass/terminal_solaris.go
+@pkgdir bin
