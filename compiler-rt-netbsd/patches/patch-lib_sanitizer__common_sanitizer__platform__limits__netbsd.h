@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2017-08-27 06:19:05.500321760 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2017-08-27 06:20:41.507773424 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -0,0 +1,566 @@
+@@ -0,0 +1,562 @@
 +//===-- sanitizer_platform_limits_posix.h ---------------------------------===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -17,8 +17,8 @@ $NetBSD$
 +// Sizes and layouts of platform-specific NetBSD data structures.
 +//===----------------------------------------------------------------------===//
 +
-+#ifndef SANITIZER_PLATFORM_LIMITS_POSIX_H
-+#define SANITIZER_PLATFORM_LIMITS_POSIX_H
++#ifndef SANITIZER_PLATFORM_LIMITS_NETBSD_H
++#define SANITIZER_PLATFORM_LIMITS_NETBSD_H
 +
 +#include "sanitizer_internal_defs.h"
 +#include "sanitizer_platform.h"
@@ -349,9 +349,7 @@ $NetBSD$
 +#define IOC_NRMASK ((1 << IOC_NRBITS) - 1)
 +#define IOC_TYPEMASK ((1 << IOC_TYPEBITS) - 1)
 +#define IOC_SIZEMASK ((1 << IOC_SIZEBITS) - 1)
-+#if defined(IOC_DIRMASK)
 +#undef IOC_DIRMASK
-+#endif
 +#define IOC_DIRMASK ((1 << IOC_DIRBITS) - 1)
 +#define IOC_NRSHIFT 0
 +#define IOC_TYPESHIFT (IOC_NRSHIFT + IOC_NRBITS)
@@ -435,7 +433,6 @@ $NetBSD$
 +extern unsigned IOCTL_TIOCSWINSZ;
 +extern unsigned IOCTL_SIOCGETSGCNT;
 +extern unsigned IOCTL_SIOCGETVIFCNT;
-+
 +extern unsigned IOCTL_MTIOCGET;
 +extern unsigned IOCTL_MTIOCTOP;
 +extern unsigned IOCTL_SIOCADDRT;
@@ -536,7 +533,6 @@ $NetBSD$
 +extern unsigned IOCTL_VT_RELDISP;
 +extern unsigned IOCTL_VT_SETMODE;
 +extern unsigned IOCTL_VT_WAITACTIVE;
-+
 +extern unsigned IOCTL_KDDISABIO;
 +extern unsigned IOCTL_KDENABIO;
 +extern unsigned IOCTL_KDGETLED;

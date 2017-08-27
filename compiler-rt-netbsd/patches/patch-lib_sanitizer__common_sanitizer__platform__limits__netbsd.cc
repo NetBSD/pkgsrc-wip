@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-27 06:19:05.500119741 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-27 06:20:41.501062305 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -0,0 +1,422 @@
+@@ -0,0 +1,372 @@
 +//===-- sanitizer_platform_limits_posix.cc --------------------------------===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -68,11 +68,6 @@ $NetBSD$
 +#include <utmp.h>
 +#include <utmpx.h>
 +#include <wchar.h>
-+#define statfs statvfs
-+#define d_ino d_fileno
-+
-+#undef IOC_DIRMASK
-+
 +#include <ifaddrs.h>
 +#include <semaphore.h>
 +#include <sys/ptrace.h>
@@ -82,7 +77,7 @@ $NetBSD$
 +
 +// Include these after system headers to avoid name clashes and ambiguities.
 +#include "sanitizer_internal_defs.h"
-+#include "sanitizer_platform_limits_posix.h"
++#include "sanitizer_platform_limits_netbsd.h"
 +
 +namespace __sanitizer {
 +unsigned struct_utsname_sz = sizeof(struct utsname);
@@ -106,7 +101,6 @@ $NetBSD$
 +unsigned struct_tms_sz = sizeof(struct tms);
 +unsigned struct_sigevent_sz = sizeof(struct sigevent);
 +unsigned struct_sched_param_sz = sizeof(struct sched_param);
-+unsigned struct_statfs_sz = sizeof(struct statfs);
 +unsigned struct_sockaddr_sz = sizeof(struct sockaddr);
 +unsigned ucontext_t_sz = sizeof(ucontext_t);
 +unsigned struct_rlimit_sz = sizeof(struct rlimit);
@@ -123,16 +117,6 @@ $NetBSD$
 +uptr sa_siginfo = (uptr)SA_SIGINFO;
 +
 +unsigned struct_shminfo_sz = sizeof(struct shminfo);
-+#define IPC_INFO -1
-+#define SHM_INFO -1
-+#define SHM_STAT -1
-+unsigned struct_shm_info_sz = -1;
-+#endif
-+int shmctl_ipc_stat = (int)IPC_STAT;
-+int shmctl_ipc_info = (int)IPC_INFO;
-+int shmctl_shm_info = (int)SHM_INFO;
-+
-+#endif
 +
 +unsigned struct_utmp_sz = sizeof(struct utmp);
 +unsigned struct_utmpx_sz = sizeof(struct utmpx);
@@ -160,13 +144,8 @@ $NetBSD$
 +unsigned struct_ifreq_sz = sizeof(struct ifreq);
 +unsigned struct_termios_sz = sizeof(struct termios);
 +unsigned struct_winsize_sz = sizeof(struct winsize);
-+unsigned struct_midi_info_sz = sizeof(struct midi_info);
 +unsigned struct_mtget_sz = sizeof(struct mtget);
 +unsigned struct_mtop_sz = sizeof(struct mtop);
-+unsigned struct_sbi_instrument_sz = sizeof(struct sbi_instrument);
-+unsigned struct_seq_event_rec_sz = sizeof(struct seq_event_rec);
-+unsigned struct_synth_info_sz = sizeof(struct synth_info);
-+unsigned struct_vt_mode_sz = sizeof(struct vt_mode);
 +unsigned struct_audio_buf_info_sz = sizeof(struct audio_buf_info);
 +unsigned struct_ppp_stats_sz = sizeof(struct ppp_stats);
 +unsigned struct_sioc_sg_req_sz = sizeof(struct sioc_sg_req);
@@ -220,34 +199,6 @@ $NetBSD$
 +unsigned IOCTL_TIOCSWINSZ = TIOCSWINSZ;
 +unsigned IOCTL_SIOCGETSGCNT = SIOCGETSGCNT;
 +unsigned IOCTL_SIOCGETVIFCNT = SIOCGETVIFCNT;
-+unsigned IOCTL_TCFLSH = TCFLSH;
-+unsigned IOCTL_TCGETA = TCGETA;
-+unsigned IOCTL_TCGETS = TCGETS;
-+unsigned IOCTL_TCSBRK = TCSBRK;
-+unsigned IOCTL_TCSBRKP = TCSBRKP;
-+unsigned IOCTL_TCSETA = TCSETA;
-+unsigned IOCTL_TCSETAF = TCSETAF;
-+unsigned IOCTL_TCSETAW = TCSETAW;
-+unsigned IOCTL_TCSETS = TCSETS;
-+unsigned IOCTL_TCSETSF = TCSETSF;
-+unsigned IOCTL_TCSETSW = TCSETSW;
-+unsigned IOCTL_TCXONC = TCXONC;
-+unsigned IOCTL_TIOCGLCKTRMIOS = TIOCGLCKTRMIOS;
-+unsigned IOCTL_TIOCGSOFTCAR = TIOCGSOFTCAR;
-+unsigned IOCTL_TIOCINQ = TIOCINQ;
-+unsigned IOCTL_TIOCLINUX = TIOCLINUX;
-+unsigned IOCTL_TIOCSERCONFIG = TIOCSERCONFIG;
-+unsigned IOCTL_TIOCSERGETLSR = TIOCSERGETLSR;
-+unsigned IOCTL_TIOCSERGWILD = TIOCSERGWILD;
-+unsigned IOCTL_TIOCSERSWILD = TIOCSERSWILD;
-+unsigned IOCTL_TIOCSLCKTRMIOS = TIOCSLCKTRMIOS;
-+unsigned IOCTL_TIOCSSOFTCAR = TIOCSSOFTCAR;
-+unsigned IOCTL_VT_DISALLOCATE = VT_DISALLOCATE;
-+unsigned IOCTL_VT_GETSTATE = VT_GETSTATE;
-+unsigned IOCTL_VT_RESIZE = VT_RESIZE;
-+unsigned IOCTL_VT_RESIZEX = VT_RESIZEX;
-+unsigned IOCTL_VT_SENDSIG = VT_SENDSIG;
-+#endif  // SANITIZER_LINUX
 +
 +const int si_SEGV_MAPERR = SEGV_MAPERR;
 +const int si_SEGV_ACCERR = SEGV_ACCERR;
@@ -315,8 +266,7 @@ $NetBSD$
 +CHECK_SIZE_AND_OFFSET(cmsghdr, cmsg_type);
 +
 +COMPILER_CHECK(sizeof(__sanitizer_dirent) <= sizeof(dirent));
-+CHECK_SIZE_AND_OFFSET(dirent, d_ino);
-+// There is no 'd_off' field on FreeBSD.
++CHECK_SIZE_AND_OFFSET(dirent, d_fileno);
 +CHECK_SIZE_AND_OFFSET(dirent, d_reclen);
 +
 +CHECK_TYPE_SIZE(ifconf);
