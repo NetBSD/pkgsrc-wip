@@ -1,0 +1,9 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/shazow/rateio.a
+gopkg/src/github.com/shazow/rateio/LICENSE
+gopkg/src/github.com/shazow/rateio/doc.go
+gopkg/src/github.com/shazow/rateio/limiter.go
+gopkg/src/github.com/shazow/rateio/reader.go
+gopkg/src/github.com/shazow/rateio/reader_test.go
+gopkg/src/github.com/shazow/rateio/writer.go
+@pkgdir bin
