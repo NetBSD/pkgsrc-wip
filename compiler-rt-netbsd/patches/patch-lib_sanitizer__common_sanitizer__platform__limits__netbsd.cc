@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-27 06:20:41.501062305 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-27 06:51:29.495207732 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -0,0 +1,372 @@
+@@ -0,0 +1,361 @@
 +//===-- sanitizer_platform_limits_posix.cc --------------------------------===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -362,16 +362,5 @@ $NetBSD$
 +CHECK_SIZE_AND_OFFSET(group, gr_passwd);
 +CHECK_SIZE_AND_OFFSET(group, gr_gid);
 +CHECK_SIZE_AND_OFFSET(group, gr_mem);
-+
-+CHECK_TYPE_SIZE(XDR);
-+CHECK_SIZE_AND_OFFSET(XDR, x_op);
-+CHECK_SIZE_AND_OFFSET(XDR, x_ops);
-+CHECK_SIZE_AND_OFFSET(XDR, x_public);
-+CHECK_SIZE_AND_OFFSET(XDR, x_private);
-+CHECK_SIZE_AND_OFFSET(XDR, x_base);
-+CHECK_SIZE_AND_OFFSET(XDR, x_handy);
-+COMPILER_CHECK(__sanitizer_XDR_ENCODE == XDR_ENCODE);
-+COMPILER_CHECK(__sanitizer_XDR_DECODE == XDR_DECODE);
-+COMPILER_CHECK(__sanitizer_XDR_FREE == XDR_FREE);
 +
 +#endif  // SANITIZER_NETBSD
