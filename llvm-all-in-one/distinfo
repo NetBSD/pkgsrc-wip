@@ -17,7 +17,6 @@ SHA1 (patch-include_llvm_ExecutionEngine_Orc_OrcRemoteTargetServer.h) = e2f96f49
 SHA1 (patch-lib_ExecutionEngine_Orc_OrcABISupport.cpp) = b24a57af1c6fea12f0dd252ccfd23ce6945f307d
 SHA1 (patch-lib_ExecutionEngine_SectionMemoryManager.cpp) = f3498378be67171ad4d1a211f6172d5f2f8248f7
 SHA1 (patch-lib_Support_Unix_Memory.inc) = 8b9b220178e94f17d1a66637277e07f887db9f79
-SHA1 (patch-lib_Transforms_Instrumentation_AddressSanitizer.cpp) = 67eee29c4d8525b603e6b7c0a52278bdf3353687
 SHA1 (patch-lib_Transforms_Instrumentation_InstrProfiling.cpp) = 871b474f415d9dc468cc07477101f88d7a20868b
 SHA1 (patch-lib_Transforms_Instrumentation_MemorySanitizer.cpp) = 64fdbb55c77d5f5f73152d2f8daa28adfc428e40
 SHA1 (patch-unittests_Support_MemoryTest.cpp) = 2b70513d36138d37eda5636c07b195e1ff0c9097
