@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2017-08-27 06:20:41.507773424 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2017-08-28 18:08:46.866135570 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -0,0 +1,562 @@
+@@ -0,0 +1,566 @@
 +//===-- sanitizer_platform_limits_posix.h ---------------------------------===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -19,6 +19,8 @@ $NetBSD$
 +
 +#ifndef SANITIZER_PLATFORM_LIMITS_NETBSD_H
 +#define SANITIZER_PLATFORM_LIMITS_NETBSD_H
++
++#if SANITIZER_NETBSD
 +
 +#include "sanitizer_internal_defs.h"
 +#include "sanitizer_platform.h"
@@ -67,7 +69,7 @@ $NetBSD$
 +  u32 aio_fildes;
 +  u32 aio_lio_opcode;
 +  long aio_reqprio;
-+#if _LP64
++#if SANITIZER_WORDSIZE == 64
 +  u8 aio_sigevent[32];
 +#else
 +  u8 aio_sigevent[20];
@@ -563,5 +565,7 @@ $NetBSD$
 +                 sizeof(((struct CLASS *)NULL)->MEMBER));                \
 +  COMPILER_CHECK(offsetof(struct __sanitizer_##CLASS, MEMBER) ==         \
 +                 offsetof(struct CLASS, MEMBER))
++
++#endif // SANITIZER_NETBSD
 +
 +#endif
