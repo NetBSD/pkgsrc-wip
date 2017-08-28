@@ -2,7 +2,7 @@ $NetBSD$
 
 --- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2017-08-28 18:08:46.866135570 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -0,0 +1,566 @@
+@@ -0,0 +1,568 @@
 +//===-- sanitizer_platform_limits_posix.h ---------------------------------===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -321,12 +321,14 @@ $NetBSD$
 +typedef void __sanitizer_FILE;
 +#define SANITIZER_HAS_STRUCT_FILE 0
 +
-+extern unsigned struct_shminfo_sz;
-+extern unsigned struct_shm_info_sz;
 +extern int shmctl_ipc_stat;
-+extern int shmctl_ipc_info;
-+extern int shmctl_shm_info;
-+extern int shmctl_shm_stat;
++
++// This simplifies generic code
++#define struct_shminfo_sz -1
++#define struct_shm_info_sz -1
++#define shmctl_shm_stat -1
++#define shmctl_ipc_info -1
++#define shmctl_shm_info -1
 +
 +extern unsigned struct_utmp_sz;
 +extern unsigned struct_utmpx_sz;

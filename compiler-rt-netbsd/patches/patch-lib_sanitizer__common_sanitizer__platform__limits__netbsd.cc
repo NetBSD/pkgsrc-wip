@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-27 06:59:58.497819810 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-08-28 18:08:46.850719854 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
 @@ -0,0 +1,359 @@
 +//===-- sanitizer_platform_limits_posix.cc --------------------------------===//
@@ -114,7 +114,7 @@ $NetBSD$
 +uptr sig_dfl = (uptr)SIG_DFL;
 +uptr sa_siginfo = (uptr)SA_SIGINFO;
 +
-+unsigned struct_shminfo_sz = sizeof(struct shminfo);
++int shmctl_ipc_stat = (int)IPC_STAT;
 +
 +unsigned struct_utmp_sz = sizeof(struct utmp);
 +unsigned struct_utmpx_sz = sizeof(struct utmpx);
