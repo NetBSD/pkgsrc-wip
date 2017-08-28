@@ -2702,6 +2702,7 @@ SUBDIR+=	plasma-workspace
 SUBDIR+=	plasma-workspace-wallpapers
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
+SUBDIR+=	plink
 SUBDIR+=	plod
 SUBDIR+=	plover-git
 SUBDIR+=	plover-wxgtk
