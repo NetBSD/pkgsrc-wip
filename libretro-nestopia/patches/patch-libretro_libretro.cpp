@@ -1,18 +1,17 @@
-$NetBSD: patch-libretro_libretro.cpp,v 1.1 2015/04/10 03:16:18 snj Exp $
+$NetBSD$
 
-retroarch normally expects to find the NstDatabase.xml file in
-~/.config/retroarch/bios, but there's no real reason to be editing it.
-Rather than have users manually copy the file into place, we install it
-system-wide and look for it there instead.
+This file is installed globally for pkgsrc users rather than making
+them install it manually in their home dir. There's no reason to be
+editing it.
 
---- libretro/libretro.cpp.orig	2017-04-01 02:50:44.000000000 +0000
+--- libretro/libretro.cpp.orig	2016-01-09 23:34:38.000000000 +0000
 +++ libretro/libretro.cpp
-@@ -957,7 +957,7 @@ bool retro_load_game(const struct retro_
-    }
-    delete custompalette;
-    
+@@ -720,7 +720,7 @@ bool retro_load_game(const struct retro_
+    if (!environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &dir) || !dir)
+       return false;
+ 
 -   snprintf(db_path, sizeof(db_path), "%s%cNstDatabase.xml", dir, slash);
-+   snprintf(db_path, sizeof(db_path), "%s/share/libretro-nestopia/NstDatabase.xml", PREFIX);
++   snprintf(db_path, sizeof(db_path), "%s/share/libretro/nestopia/NstDatabase.xml", PREFIX);
  
     if (log_cb)
        log_cb(RETRO_LOG_INFO, "NstDatabase.xml path: %s\n", db_path);

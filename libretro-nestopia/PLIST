@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/10 03:16:18 snj Exp $
+@comment $NetBSD$
 lib/libretro/nestopia_libretro.so
-share/libretro-nestopia/NstDatabase.xml
+share/libretro/nestopia/NstDatabase.xml
