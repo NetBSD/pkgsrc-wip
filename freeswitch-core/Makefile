@@ -1,14 +1,14 @@
 # $NetBSD$
 
 DISTNAME=	freeswitch-${VERSION}
-VERSION=	1.6.17
+VERSION=	1.6.19
 CATEGORIES=	net
 MASTER_SITES=	http://files.freeswitch.org/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	angelmadames@gmail.com	
 HOMEPAGE=	http://www.freeswitch.org/
-COMMENT=	FreeSwitch SoftSwitch Port
+COMMENT=	FreeSwitch SoftSwitch
 LICENSE=	mpl-1.1
 
 GNU_CONFIGURE=		yes
