@@ -633,6 +633,11 @@ include/llvm/ExecutionEngine/RTDyldMemoryManager.h
 include/llvm/ExecutionEngine/RuntimeDyld.h
 include/llvm/ExecutionEngine/RuntimeDyldChecker.h
 include/llvm/ExecutionEngine/SectionMemoryManager.h
+include/llvm/FuzzMutate/IRMutator.h
+include/llvm/FuzzMutate/OpDescriptor.h
+include/llvm/FuzzMutate/Operations.h
+include/llvm/FuzzMutate/Random.h
+include/llvm/FuzzMutate/RandomIRBuilder.h
 include/llvm/IR/Argument.h
 include/llvm/IR/AssemblyAnnotationWriter.h
 include/llvm/IR/Attributes.gen
@@ -1253,6 +1258,7 @@ lib/libLLVMDebugInfoPDB.a
 lib/libLLVMDemangle.a
 lib/libLLVMDlltoolDriver.a
 lib/libLLVMExecutionEngine.a
+lib/libLLVMFuzzMutate.a
 lib/libLLVMGlobalISel.a
 ${PLIST.Hexagon}lib/libLLVMHexagonAsmParser.a
 ${PLIST.Hexagon}lib/libLLVMHexagonCodeGen.a
