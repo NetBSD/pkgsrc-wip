@@ -5,17 +5,8 @@
 #              Mon Aug 28 18:05:44 CDT 2017               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-# LIB_DEPENDS=	liblapack.so:math/lapack \
-#		libcblas.so:math/cblas \
-#		libopenblas.so:math/openblas
-# Need to compile C files with C++ compiler, which clang complains about
-#USE_GCC=	yes
-
 DISTNAME=	plink-${PORTVERSION}
-CATEGORIES=	wip
+CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
 GITHUB_TAG=	cbcf442c176036138419b14d6b46a3d57e8325d4
@@ -25,37 +16,32 @@ HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
 COMMENT=	Whole genome association analysis toolset
 LICENSE=	gnu-gpl-v2
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
-
 # We need Fortran LDFLAGS to link with Lapack.
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/plink-ng-${GITHUB_TAG}/1.9
 
-CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include
-
+CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -I.
 CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib -llapack -lcblas -lopenblas"
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib -llapack -lcblas -lblas -lpthread"
 INSTALL_TARGET=	install-strip
 
 PORTVERSION=	1.90b4
-DATADIR=	${PREFIX}/share/plink
-DOCSDIR=	${PREFIX}/share/doc/plink
-EXAMPLESDIR=	${PREFIX}/share/examples/plink
 
 INSTALLATION_DIRS=	bin
 
 post-patch:
 	${CP} ${WRKSRC}/Makefile.std ${WRKSRC}/Makefile
 
-# Override install target and install as plink1 to allow coexistence with
+# Override install target and install as plink19 to allow coexistence with
 # plink 1.07
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin/plink19
 
+.include "../../wip/cblas/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
