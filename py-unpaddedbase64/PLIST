@@ -1,0 +1,8 @@
+@comment $NetBSD$
+${PYSITELIB}/unpaddedbase64-${PKGVERSION}-py${PYVERSSUFFIX}.${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/unpaddedbase64-${PKGVERSION}-py${PYVERSSUFFIX}.${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/unpaddedbase64-${PKGVERSION}-py${PYVERSSUFFIX}.${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/unpaddedbase64-${PKGVERSION}-py${PYVERSSUFFIX}.${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/unpaddedbase64.py
+${PYSITELIB}/unpaddedbase64.pyc
+${PYSITELIB}/unpaddedbase64.pyo

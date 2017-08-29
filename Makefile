@@ -3750,6 +3750,7 @@ SUBDIR+=	py-typedecorator
 SUBDIR+=	py-ufl
 SUBDIR+=	py-umalqurra
 SUBDIR+=	py-uncertainties
+SUBDIR+=	py-unpaddedbase64
 SUBDIR+=	py-upsilon
 SUBDIR+=	py-uptime
 SUBDIR+=	py-usagestats
