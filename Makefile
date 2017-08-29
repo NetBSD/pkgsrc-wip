@@ -3578,6 +3578,7 @@ SUBDIR+=	py-reparser
 SUBDIR+=	py-report
 SUBDIR+=	py-repositoryhandler
 SUBDIR+=	py-repoze.tm2
+SUBDIR+=	py-repoze.who
 SUBDIR+=	py-restkit
 SUBDIR+=	py-rf
 SUBDIR+=	py-rlcompleter2
