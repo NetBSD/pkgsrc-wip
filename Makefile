@@ -2908,6 +2908,7 @@ SUBDIR+=	py-bytecodeassembler
 SUBDIR+=	py-calphad
 SUBDIR+=	py-calverter
 SUBDIR+=	py-cameo
+SUBDIR+=	py-canonicaljson
 SUBDIR+=	py-captcha
 SUBDIR+=	py-cartopy
 SUBDIR+=	py-causalinfo

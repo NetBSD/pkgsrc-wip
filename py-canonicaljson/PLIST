@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/canonicaljson-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/canonicaljson-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/canonicaljson-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/canonicaljson-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/canonicaljson-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/canonicaljson.py
+${PYSITELIB}/canonicaljson.pyc
+${PYSITELIB}/canonicaljson.pyo
