@@ -3296,6 +3296,7 @@ SUBDIR+=	py-luminous
 SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-lzma
 SUBDIR+=	py-m2ext
+SUBDIR+=	py-macaroons
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
 SUBDIR+=	py-mailcap-fix
