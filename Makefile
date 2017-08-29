@@ -324,6 +324,7 @@ SUBDIR+=	casady-fonts
 SUBDIR+=	castget
 SUBDIR+=	cataclysm-dda
 SUBDIR+=	cb2bib
+SUBDIR+=	cblas
 SUBDIR+=	ccnet-server
 SUBDIR+=	ccrypt
 SUBDIR+=	cdbfasta
