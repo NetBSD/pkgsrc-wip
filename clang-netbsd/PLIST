@@ -58,6 +58,7 @@ include/clang/AST/CommentNodes.inc
 include/clang/AST/CommentParser.h
 include/clang/AST/CommentSema.h
 include/clang/AST/CommentVisitor.h
+include/clang/AST/DataCollection.h
 include/clang/AST/Decl.h
 include/clang/AST/DeclAccessPair.h
 include/clang/AST/DeclBase.h
@@ -82,6 +83,7 @@ include/clang/AST/ExternalASTMerger.h
 include/clang/AST/ExternalASTSource.h
 include/clang/AST/GlobalDecl.h
 include/clang/AST/LambdaCapture.h
+include/clang/AST/LexicallyOrderedRecursiveASTVisitor.h
 include/clang/AST/LocInfoType.h
 include/clang/AST/Mangle.h
 include/clang/AST/MangleNumberingContext.h
@@ -194,6 +196,7 @@ include/clang/Basic/DiagnosticCategories.h
 include/clang/Basic/DiagnosticCommentKinds.inc
 include/clang/Basic/DiagnosticCommonKinds.inc
 include/clang/Basic/DiagnosticDriverKinds.inc
+include/clang/Basic/DiagnosticError.h
 include/clang/Basic/DiagnosticFrontendKinds.inc
 include/clang/Basic/DiagnosticGroups.inc
 include/clang/Basic/DiagnosticIDs.h
@@ -495,14 +498,22 @@ include/clang/Tooling/FileMatchTrie.h
 include/clang/Tooling/FixIt.h
 include/clang/Tooling/JSONCompilationDatabase.h
 include/clang/Tooling/Refactoring.h
+include/clang/Tooling/Refactoring/ASTSelection.h
 include/clang/Tooling/Refactoring/AtomicChange.h
 include/clang/Tooling/Refactoring/RecursiveSymbolVisitor.h
+include/clang/Tooling/Refactoring/RefactoringActionRule.h
+include/clang/Tooling/Refactoring/RefactoringActionRuleRequirements.h
+include/clang/Tooling/Refactoring/RefactoringActionRuleRequirementsInternal.h
+include/clang/Tooling/Refactoring/RefactoringActionRules.h
+include/clang/Tooling/Refactoring/RefactoringActionRulesInternal.h
+include/clang/Tooling/Refactoring/RefactoringRuleContext.h
 include/clang/Tooling/Refactoring/Rename/RenamingAction.h
 include/clang/Tooling/Refactoring/Rename/SymbolName.h
 include/clang/Tooling/Refactoring/Rename/SymbolOccurrences.h
 include/clang/Tooling/Refactoring/Rename/USRFinder.h
 include/clang/Tooling/Refactoring/Rename/USRFindingAction.h
 include/clang/Tooling/Refactoring/Rename/USRLocFinder.h
+include/clang/Tooling/Refactoring/SourceSelectionConstraints.h
 include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
