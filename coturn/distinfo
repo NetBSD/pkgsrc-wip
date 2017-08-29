@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (coturn-4.5.0.6.zip) = 97c18ecb5d71aafd8ab311e6266a83b5a6e1635a
+RMD160 (coturn-4.5.0.6.zip) = db2944d57eb0a3ab63fe15575fef5f1396f4a580
+SHA512 (coturn-4.5.0.6.zip) = d24096f06bc1c3c69f73d2a582ae30fe619f5d045b21a156948fc36df2f7fee5f534157d38c4a7f3a3d7be63f2f8b21e8b7d235aca202803d289861ad24f6d8e
+Size (coturn-4.5.0.6.zip) = 533057 bytes
+SHA1 (patch-postinstall.txt) = 0369389fa3436f4da472ac6b00cbe8dffe48da6d
