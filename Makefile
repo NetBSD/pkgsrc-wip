@@ -3488,6 +3488,7 @@ SUBDIR+=	py-pyaiml
 SUBDIR+=	py-pyamf
 SUBDIR+=	py-pyamg
 SUBDIR+=	py-pycifrw
+SUBDIR+=	py-pycryptodomex
 SUBDIR+=	py-pydelay
 SUBDIR+=	py-pydenticon
 SUBDIR+=	py-pydy
