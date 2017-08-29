@@ -1611,7 +1611,6 @@ SUBDIR+=	libGenome
 SUBDIR+=	libLLVM38
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
-SUBDIR+=	libassuan22
 SUBDIR+=	libavc1394
 SUBDIR+=	libbfio
 SUBDIR+=	libbpg
