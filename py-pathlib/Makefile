@@ -12,10 +12,10 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_ACCEPTED=	27 # included in 3.4+
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_pathlib.py
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
