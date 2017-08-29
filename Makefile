@@ -3522,6 +3522,7 @@ SUBDIR+=	py-pyquante
 SUBDIR+=	py-pyrit
 SUBDIR+=	py-pyrr
 SUBDIR+=	py-pysal
+SUBDIR+=	py-pysaml2
 SUBDIR+=	py-pysb
 SUBDIR+=	py-pyscard
 SUBDIR+=	py-pyside
