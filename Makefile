@@ -3111,6 +3111,7 @@ SUBDIR+=	py-formex
 SUBDIR+=	py-forthon
 SUBDIR+=	py-fortpy
 SUBDIR+=	py-freetype-py
+SUBDIR+=	py-frozendict
 SUBDIR+=	py-fs
 SUBDIR+=	py-fssa
 SUBDIR+=	py-functions
