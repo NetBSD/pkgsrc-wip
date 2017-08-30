@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mednafen-wswan-20170621
+DISTNAME=	libretro-beetle-wswan-20170621
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 

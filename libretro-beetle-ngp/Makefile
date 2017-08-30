@@ -1,9 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mednafen-ngp-20170803
+DISTNAME=	libretro-beetle-ngp-20170803
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
+MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_NGP
 COMMENT=	Libretro core based on the Mednafen Neo Geo Pocket emulator
 LICENSE=	gnu-gpl-v2

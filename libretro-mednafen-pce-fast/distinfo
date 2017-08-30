@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/02/08 00:02:18 joerg Exp $
-
-SHA1 (libretro-mednafen-pce-fast-20170409-a24a7b76d854cffa8d9896650c52491dc8d4d6d5.tar.gz) = f70975bf630ed5da3819e85209e022d284e65b3f
-RMD160 (libretro-mednafen-pce-fast-20170409-a24a7b76d854cffa8d9896650c52491dc8d4d6d5.tar.gz) = 6ce482aaa1637433a8ebcf95c990ca28b1631504
-SHA512 (libretro-mednafen-pce-fast-20170409-a24a7b76d854cffa8d9896650c52491dc8d4d6d5.tar.gz) = b56a8fed43a9113fa886b1c4bcb2fd1ceb3e3c4e925ff6d1b7ecc6e964cfdc02067471543b65c11a37c1b341413d8998b70f8020930c2c32450a361ed52afd21
-Size (libretro-mednafen-pce-fast-20170409-a24a7b76d854cffa8d9896650c52491dc8d4d6d5.tar.gz) = 364116 bytes

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mednafen-supergrafx-20170321
+DISTNAME=	libretro-beetle-sgx-20170321
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -11,9 +11,9 @@ LICENSE=	gnu-gpl-v2
 GITHUB_PROJECT=	beetle-supergrafx-libretro
 GITHUB_TAG=	951421d39e6e713395b397c8b2e694aa9eae997d
 
-USE_TOOLS=	gmake
 EXTRACT_USING+=	bsdtar
 
+USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
 
 .include "../../mk/endian.mk"

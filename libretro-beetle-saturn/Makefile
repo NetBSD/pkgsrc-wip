@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mednafen-saturn-20170808
+DISTNAME=	libretro-beetle-saturn-20170808
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -12,9 +12,10 @@ LICENSE=	gnu-gpl-v2
 GITHUB_PROJECT=	beetle-saturn-libretro
 GITHUB_TAG=	682ca8aa92817c76fc7da24c67f45878f9a1aa08
 
+EXTRACT_USING=	bsdtar
+
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
-EXTRACT_USING=	bsdtar
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

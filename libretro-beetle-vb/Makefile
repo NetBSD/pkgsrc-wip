@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mednafen-vb-20170501
+DISTNAME=	libretro-beetle-vb-20170501
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -12,7 +12,6 @@ GITHUB_PROJECT=	beetle-vb-libretro
 GITHUB_TAG=	f1a8a46bcc2d4dda64a05dba552f9135be8527d3
 
 USE_TOOLS=	gmake
-
 USE_LANGUAGES=	c c++
 
 .include "../../mk/endian.mk"
