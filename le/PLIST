@@ -1,7 +1,8 @@
 @comment $NetBSD$
 bin/le
-lib/charset.alias
 man/man1/le.1
+share/applications/le.desktop
+share/icons/hicolor/48x48/apps/le-icon.png
 share/le/colors-black
 share/le/colors-blue
 share/le/colors-defbg
