@@ -16,4 +16,5 @@ WRKSRC=		${WRKDIR}/plibsys-0.0.3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
