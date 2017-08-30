@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (epacts-2017.08.15-a5209db1b3929c4dd2f15f27ea085edf3a634ee7.tar.gz) = ebd14ed6d45929f897e015514fb9898bf2c71a0a
+RMD160 (epacts-2017.08.15-a5209db1b3929c4dd2f15f27ea085edf3a634ee7.tar.gz) = 1d845f9f19a6e5c09fbe82c23e67dcace26d3915
+SHA512 (epacts-2017.08.15-a5209db1b3929c4dd2f15f27ea085edf3a634ee7.tar.gz) = 53ac5492fa18a29de05c875254c7a433b093479a5d654d1311268186d8e0fa5dc4f2023b5a635cc3bcc448ca5f43ec7a599ba1798420c44f1d31a0937d97b726
+Size (epacts-2017.08.15-a5209db1b3929c4dd2f15f27ea085edf3a634ee7.tar.gz) = 174244056 bytes
+SHA1 (patch-Makefile) = 3d4a68e7e4d6822e6c141ca084a303a358ed03b9
+SHA1 (patch-Makefile.am) = b6ff5b5e58a3c77150f8380a61ee49f7442661af
+SHA1 (patch-data_Makefile) = f89fd01c40cbd7ccc94df61ba659106b8eac5e48
+SHA1 (patch-data_Makefile.in) = c16052d736ead5c4b656e1ffb976460f2eee8b0a
+SHA1 (patch-src_FreqTable.h) = ead74052f923342f799adbadb983c574dec4c9ba

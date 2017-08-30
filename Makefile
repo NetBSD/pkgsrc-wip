@@ -695,6 +695,7 @@ SUBDIR+=	enigma2000
 SUBDIR+=	entrance
 SUBDIR+=	eor
 SUBDIR+=	eot
+SUBDIR+=	epacts
 SUBDIR+=	epeg
 SUBDIR+=	epiphany
 SUBDIR+=	epsilon
