@@ -1,7 +1,7 @@
 ===========================================================================
 $NetBSD$
 
-Mednafen Lynx requires an Atari Lynx BIOS image file for operation.
+Beetle Lynx requires an Atari Lynx BIOS image file for operation.
 
 In retroarch, you'll need to place it as lynxboot.img in the System Directory
 or in the Content Directory next to the software you are going to run.

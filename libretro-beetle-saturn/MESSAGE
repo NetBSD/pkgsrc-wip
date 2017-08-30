@@ -1,7 +1,7 @@
 ===========================================================================
 $NetBSD$
 
-Mednafen Saturn requires the following MESS BIOS files in order to work:
+Beetle Saturn requires the following MESS BIOS files in order to work:
 
 * mpr-17933.bin (MD5 sum: 3240872c70984b6cbfda1586cab68dbe)
 * sega_100a.bin (MD5 sum: f273555d7d91e8a5a6bfd9bcf066331c)
