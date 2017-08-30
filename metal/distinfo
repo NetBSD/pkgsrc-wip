@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (generic-metal-2011-03-25.tar.gz) = 5b1e497f6d531145d5207d4fd945ea6bf3402af9
+RMD160 (generic-metal-2011-03-25.tar.gz) = b4b5e57dcd63bb6996e2b2a59f6bad6a74ba0078
+SHA512 (generic-metal-2011-03-25.tar.gz) = 36756c3beecfda5a4bb1333387d6819adb295d2b66677919d59fa037e4b5424e1ff40d165cd4a6cbed31684312ee5e1775795712904727fdd29c5450210ad9a3
+Size (generic-metal-2011-03-25.tar.gz) = 461431 bytes
+SHA1 (patch-Makefile) = 62eb8c43ec3911ddb5d4204c772358d1ab3d7d4b

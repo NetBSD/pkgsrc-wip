@@ -1961,6 +1961,7 @@ SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
 SUBDIR+=	meta-tracker
+SUBDIR+=	metal
 SUBDIR+=	metalog
 SUBDIR+=	metasploit
 SUBDIR+=	mg-cvs
