@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mednafen-psx-20170507
+DISTNAME=	libretro-mednafen-psx-20170828
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,11 +9,11 @@ COMMENT=	Libretro core based on the Mednafen PlayStation emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-psx-libretro
-GITHUB_TAG=	76862abefdde9097561e2b795e75b49247deff17
+GITHUB_TAG=	5a3093be0fb24dbb1d95303ae615ad4647cb54f6
 
-USE_TOOLS=	gmake
 EXTRACT_USING=	bsdtar
 
+USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
 
 .include "../../mk/endian.mk"

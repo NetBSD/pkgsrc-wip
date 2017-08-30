@@ -10,4 +10,4 @@ PlayStation.
 
 Mednafen can load CD-ROM games from a ripped/dumped copy of the disc, such
 as CUE+BIN. Additionally there is support for CloneCD "CCD/IMG/SUB" rips,
-and cdrdao "TOC" files. In the case of CUE+BIN, a CUE file is required.
+and cdrdao "TOC" files. A CUE file is required.
