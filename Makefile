@@ -3656,6 +3656,7 @@ SUBDIR+=	py-shp
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-shutilwhich
 SUBDIR+=	py-siginterrupt
+SUBDIR+=	py-signedjson
 SUBDIR+=	py-sima
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools

@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/signedjson-1.0.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/signedjson-1.0.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/signedjson-1.0.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/signedjson-1.0.0-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/signedjson-1.0.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/signedjson/__init__.py
+${PYSITELIB}/signedjson/__init__.pyc
+${PYSITELIB}/signedjson/__init__.pyo
+${PYSITELIB}/signedjson/key.py
+${PYSITELIB}/signedjson/key.pyc
+${PYSITELIB}/signedjson/key.pyo
+${PYSITELIB}/signedjson/sign.py
+${PYSITELIB}/signedjson/sign.pyc
+${PYSITELIB}/signedjson/sign.pyo
