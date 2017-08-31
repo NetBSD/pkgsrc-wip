@@ -1,10 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	synapse-v0.22.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/v//}
+DISTNAME=	synapse-0.22.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat
 GITHUB_PROJECT=	synapse
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=matrix-org/}
+GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com
@@ -28,8 +29,9 @@ DEPENDS+= ${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+= ${PYPKGPREFIX}-frozendict-[0-9]*:../../wip/py-frozendict
 DEPENDS+= ${PYPKGPREFIX}-unpaddedbase64-[0-9]*:../../wip/py-unpaddedbase64
 DEPENDS+= ${PYPKGPREFIX}-canonicaljson-[0-9]*:../../wip/py-canonicaljson
-#DEPENDS+= ${PYPKGPREFIX}-macaroons-[0-9]*:../../wip/py-macaroons
-#DEPENDS+= ${PYPKGPREFIX}-pycryptodomex-[0-9]*:../../wip/py-pycryptodomex
+DEPENDS+= ${PYPKGPREFIX}-macaroons-[0-9]*:../../wip/py-macaroons
+DEPENDS+= ${PYPKGPREFIX}-pycryptodomex-[0-9]*:../../wip/py-pycryptodomex
+DEPENDS+= ${PYPKGPREFIX}-matrix-angular-sdk-[0-9]*:../../wip/py-matrix-angular-sdk
 DEPENDS+= ${PYPKGPREFIX}-pydenticon-[0-9]*:../../wip/py-pydenticon
 DEPENDS+= ${PYPKGPREFIX}-pysaml2-[0-9]*:../../wip/py-pysaml2
 DEPENDS+= ${PYPKGPREFIX}-repoze.who-[0-9]*:../../wip/py-repoze.who
@@ -39,7 +41,7 @@ DEPENDS+= ${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=       zip>=3.0:../../archivers/zip
 DEPENDS+=       freetype>=1.5:../../graphics/freetype
 
-WRKSRC=         ${WRKDIR}/${DISTNAME:S/v//}
+WRKSRC=         ${WRKDIR}/${DISTNAME}
 
 SYNAPSE_USER?=            synapse
 SYNAPSE_GROUP?=           synapse
@@ -59,6 +61,7 @@ PKG_HOME.${SYNAPSE_USER}= ${SYNAPSE_DATADIR}
 PKG_SHELL.${SYNAPSE_USER}=${NOLOGIN}
 
 RCD_SCRIPTS=           	synapse
+INSTALLATION_DIRS=      bin ${PYSITELIB}
 
 MAKE_DIRS+=             ${SYNAPSE_PIDDIR}
 OWN_DIRS=               ${SYNAPSE_LOGDIR}
