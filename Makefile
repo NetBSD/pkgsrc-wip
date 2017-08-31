@@ -3314,6 +3314,7 @@ SUBDIR+=	py-markovchain
 SUBDIR+=	py-math-snappy
 SUBDIR+=	py-mathjspy
 SUBDIR+=	py-matplottheme
+SUBDIR+=	py-matrix-angular-sdk
 SUBDIR+=	py-matrix-synapse
 SUBDIR+=	py-mave
 SUBDIR+=	py-mcerp
