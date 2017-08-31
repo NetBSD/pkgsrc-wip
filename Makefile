@@ -2900,6 +2900,7 @@ SUBDIR+=	py-bitarray
 SUBDIR+=	py-bitsets
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-blaze
+SUBDIR+=	py-blist
 SUBDIR+=	py-blosc
 SUBDIR+=	py-bloscpack
 SUBDIR+=	py-bokeh
