@@ -19,11 +19,7 @@ COMMENT=	Efficient and Parallelizable Association Container Toolbox
 # Check this
 LICENSE=	gnu-gpl-v3
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
-
 DEPENDS+=	gnuplot>=0:../../graphics/gnuplot
-DEPENDS+=	R>=0:../../math/R
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
@@ -42,11 +38,10 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
 post-install:
-	${STRIP_CMD} \
+	${STRIP} \
 		${DESTDIR}${PREFIX}/lib/mmSKAT/libs/mmSKAT.so \
 		${DESTDIR}${PREFIX}/lib/epactsR/libs/epactsR.so
 
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
+.include "../../math/R/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
