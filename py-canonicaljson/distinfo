@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (canonicaljson-v1.0.0.zip) = 407ec34de2e5624811c2de6374baf697e69871ca
-RMD160 (canonicaljson-v1.0.0.zip) = beb58543fb1787cada3492604aa639a491dd4d7c
-SHA512 (canonicaljson-v1.0.0.zip) = efb14079a2ac3979e59dfb0a24955c47d688ac74d0377fc959dd4de062322b4489a1a16661682392e4accee5f3760afaca1098cc1b849782e6ff7c95fddb59f0
-Size (canonicaljson-v1.0.0.zip) = 8679 bytes
+SHA1 (canonicaljson-1.0.0.zip) = 407ec34de2e5624811c2de6374baf697e69871ca
+RMD160 (canonicaljson-1.0.0.zip) = beb58543fb1787cada3492604aa639a491dd4d7c
+SHA512 (canonicaljson-1.0.0.zip) = efb14079a2ac3979e59dfb0a24955c47d688ac74d0377fc959dd4de062322b4489a1a16661682392e4accee5f3760afaca1098cc1b849782e6ff7c95fddb59f0
+Size (canonicaljson-1.0.0.zip) = 8679 bytes
