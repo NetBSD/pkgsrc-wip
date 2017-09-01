@@ -16,6 +16,8 @@ HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
 COMMENT=	Whole genome association analysis toolset
 LICENSE=	gnu-gpl-v2
 
+BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2.4
+
 # We need Fortran LDFLAGS to link with Lapack.
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake
