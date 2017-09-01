@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		retroarch-assets-20170815
+DISTNAME=		retroarch-assets-20170830
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.retroarch.com/
 COMMENT=		Assets for RetroArch
 #LICENSE=		cc-by-v4.0
 
-GITHUB_TAG=		b1edf45cb6226bd282e2609e55bbde28c5d389f2
+GITHUB_TAG=		3acffa41f215adcaa4b675055dbb4c8b19ccb74c
 
 EXTRACT_USING=		bsdtar
 USE_LANGUAGES=		# none
