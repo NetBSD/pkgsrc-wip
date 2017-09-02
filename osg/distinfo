@@ -11,3 +11,4 @@ SHA1 (patch-applications_present3D_Cluster.cpp) = ccbc1d524562d6f655a38c0ea3ff4c
 SHA1 (patch-src_osgPlugins_osc_ip_posix_NetworkingUtils.cpp) = 5748636ed17d23a0a595d38b2b392e773840a102
 SHA1 (patch-src_osgPlugins_osc_osc_OscHostEndianness.h) = d8e9efa88898e240775ead76c5c9df4c86cd562c
 SHA1 (patch-src_osg_GLExtensions.cpp) = 5fc04fa162c5cf8aa34ddfb0152092b02e8eec08
+SHA1 (patch-src_osg_Texture.cpp) = 9d89e5f5d66d5fb3df974709064cd4c911d9dcac
