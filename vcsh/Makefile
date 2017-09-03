@@ -11,6 +11,7 @@ COMMENT=	Version Control System for the home directory
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+# TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Shell-Command-[0-9]*:../../wip/p5-Shell-Command
 BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../wip/p5-Test-Most
 BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
