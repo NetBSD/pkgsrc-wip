@@ -63,7 +63,7 @@ Suggested package updates
 	o java-asm-3.2
 	o java-bcel-5.2
 	o java-swt-3.6
-	o js-Gallery-2.25.2
+	o js-Gallery-2.27.0
 	o kawa-1.9.1
 	o kibana-4.3.1
 	o kino-1.0.0
@@ -85,6 +85,7 @@ Suggested package updates
 	o miro-5.0
 	o mixxx-1.11.0
 	o moe-1.9
+	o moreutils-0.61
 	o mpgedit-0.73dev2
 	o mumble-1.2.4
 	o mupen64-0.5
