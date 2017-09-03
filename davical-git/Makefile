@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://www.davical.org/
+HOMEPAGE=	https://www.davical.org/
 COMMENT=	Simple CalDAV server using a PostgreSQL backend
 
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3

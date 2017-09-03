@@ -5,7 +5,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	-https://github.com/mpv-player/mpv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mpv.io/
+HOMEPAGE=	https://mpv.io/
 COMMENT=	Video player based on MPlayer and mplayer2 (git version)
 LICENSE=	gnu-gpl-v2
 

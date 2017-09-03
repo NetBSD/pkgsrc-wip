@@ -5,7 +5,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libots/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libots.sf.net/
+#HOMEPAGE=	http://libots.sf.net/
 COMMENT=	Tool and library for auto-summarizing text
 LICENSE=	gnu-gpl-v2
 

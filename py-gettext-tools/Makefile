@@ -4,7 +4,7 @@ PKGNAME=	${PYPKGPREFIX}-gettext-tools-${PY_DISTVERSION}
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.python.org/topics/database/
+HOMEPAGE=	https://www.python.org/topics/database/
 COMMENT=	Python tools for development of I18N Python apps
 
 NO_BUILD=	yes

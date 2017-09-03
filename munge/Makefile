@@ -7,7 +7,7 @@ MASTER_SITES=	http://munge.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://code.google.com/p/munge/
+HOMEPAGE=	https://dun.github.io/munge/
 COMMENT=	Authentication service for creating and validating credentials
 
 USE_TOOLS=	perl pkg-config

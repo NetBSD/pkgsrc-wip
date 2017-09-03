@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mesa3d.org/
+HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 
