@@ -4,4 +4,4 @@ SHA1 (meka/meka-2ea7d721a6c8adf4d1c2a70303fa529810b2d72e.zip) = 5776fe10fcc6a347
 RMD160 (meka/meka-2ea7d721a6c8adf4d1c2a70303fa529810b2d72e.zip) = b273722c55653662b61ae92cd34019bdfa07bae2
 SHA512 (meka/meka-2ea7d721a6c8adf4d1c2a70303fa529810b2d72e.zip) = 528392c4755ed2e289c2a90d155d43fcbeb6eae79bdbc1a69452457a2678c7847b6ace318cf262e6015097f2b5e20dce7f764fbdb3884e0c5643595d82dff340
 Size (meka/meka-2ea7d721a6c8adf4d1c2a70303fa529810b2d72e.zip) = 16278029 bytes
-SHA1 (patch-meka_srcs_Makefile) = 6f5fba99606abb6e0a40482cdea08f93b47b629e
+SHA1 (patch-meka_srcs_Makefile) = 2afcfbbbdabf02279b0a8574eda98ed6093f8edb
