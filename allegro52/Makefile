@@ -2,7 +2,7 @@
 
 VERSION=	5.2.1.1
 DISTNAME=	allegro-${VERSION}
-#PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/allegro/allegro/${VERSION}/
 
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
