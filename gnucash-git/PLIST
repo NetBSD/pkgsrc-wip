@@ -90,7 +90,6 @@ include/gnucash/gnc-exp-parser.h
 include/gnucash/gnc-features.h
 include/gnucash/gnc-file.h
 include/gnucash/gnc-frequency.h
-include/gnucash/gnc-gdate-utils.h
 include/gnucash/gnc-general-search.h
 include/gnucash/gnc-general-select.h
 include/gnucash/gnc-gettext-util.h
@@ -1133,6 +1132,7 @@ share/gnucash/ui/gnc-sxed-window-ui-full.xml
 share/gnucash/ui/gnc-sxed-window-ui.xml
 share/gnucash/ui/gnc-windows-menu-ui-quartz.xml
 share/gnucash/ui/gnc-windows-menu-ui.xml
+share/gnucash/ui/gnucash-fallback.css
 share/gnucash/ui/gnucash.css
 share/gnucash/ui/osx_accel_map
 share/icons/hicolor/128x128/apps/gnucash-icon.png
