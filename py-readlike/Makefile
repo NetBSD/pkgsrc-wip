@@ -10,7 +10,7 @@ HOMEPAGE=	http://jangler.info/code/readlike
 COMMENT=	GNU Readline-like line editing module
 LICENSE=	mit
 
-USE_LANGUAGES=			# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
