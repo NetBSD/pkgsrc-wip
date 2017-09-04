@@ -15,8 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.2:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.11.0:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.1.0:../../devel/py-protobuf
-DEPENDS+=	${PYPKGPREFIX}-readlike>=0.1.2:../../wip/py-readlike
-DEPENDS+=	${PYPKGPREFIX}-reparser>=1.4.3:../../wip/py-reparser
+DEPENDS+=	${PYPKGPREFIX}-readlike>=0.1.2:../../devel/py-readlike
+DEPENDS+=	${PYPKGPREFIX}-reparser>=1.4.3:../../devel/py-reparser
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.1:../../devel/py-urwid
 
