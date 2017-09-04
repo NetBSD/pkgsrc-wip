@@ -3586,7 +3586,6 @@ SUBDIR+=	py-redbaron
 SUBDIR+=	py-reducer
 SUBDIR+=	py-regex
 SUBDIR+=	py-remctl
-SUBDIR+=	py-reparser
 SUBDIR+=	py-report
 SUBDIR+=	py-repositoryhandler
 SUBDIR+=	py-repoze.tm2
