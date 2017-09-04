@@ -2014,7 +2014,6 @@ SUBDIR+=	mono-zeroconf
 SUBDIR+=	mop
 SUBDIR+=	mopac7
 SUBDIR+=	moregroupware
-SUBDIR+=	moreutils
 SUBDIR+=	morse
 SUBDIR+=	mosquitto
 SUBDIR+=	motion
