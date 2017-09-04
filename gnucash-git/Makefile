@@ -26,7 +26,7 @@ BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
 GIT_REPOSITORIES=	github
 GIT_MODULE.github=	gnucash
-GIT_REPO.github=	https://github.com/Gnucash/gnucash.git
+GIT_REPO.github=	git://github.com/Gnucash/gnucash.git
 WRKSRC=			${WRKDIR}/gnucash
 
 USE_LANGUAGES=		c c++
