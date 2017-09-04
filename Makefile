@@ -4127,7 +4127,6 @@ SUBDIR+=	slclust
 SUBDIR+=	slideml
 SUBDIR+=	slim
 SUBDIR+=	slime
-SUBDIR+=	sloccount
 SUBDIR+=	slowhttptest
 SUBDIR+=	slrn-devel
 SUBDIR+=	slune
