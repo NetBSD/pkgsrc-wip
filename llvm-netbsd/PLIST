@@ -1236,6 +1236,7 @@ ${PLIST.ARM}lib/libLLVMARMCodeGen.a
 ${PLIST.ARM}lib/libLLVMARMDesc.a
 ${PLIST.ARM}lib/libLLVMARMDisassembler.a
 ${PLIST.ARM}lib/libLLVMARMInfo.a
+${PLIST.ARM}lib/libLLVMARMUtils.a
 lib/libLLVMAnalysis.a
 lib/libLLVMAsmParser.a
 lib/libLLVMAsmPrinter.a
