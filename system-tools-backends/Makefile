@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/system-tools-backends/2.10/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://system-tools-backends.freedesktop.org/
+HOMEPAGE=		https://system-tools-backends.freedesktop.org/
 COMMENT=		DBus interface for system configuration
 LICENSE=		gnu-gpl-v2
 

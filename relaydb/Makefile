@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://www.benzedrine.cx/
 
 MAINTAINER=		peter@pointless.nl
-HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
+#HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
 COMMENT=		Spam relay database
 
 NO_CONFIGURE=		yes

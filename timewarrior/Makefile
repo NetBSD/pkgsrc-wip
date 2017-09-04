@@ -3,10 +3,10 @@
 DISTNAME=	timew-1.0.0.beta1
 PKGNAME=	${DISTNAME:S/timew/timewarrior/}
 CATEGORIES=	time
-MASTER_SITES=	http://taskwarrior.org/download/
+MASTER_SITES=	https://taskwarrior.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://taskwarrior.org/
+HOMEPAGE=	https://taskwarrior.org/
 COMMENT=	Command-line time tracking application
 LICENSE=	mit
 

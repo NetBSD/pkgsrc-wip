@@ -7,7 +7,7 @@ MASTER_SITES=	http://static.rust-lang.org/dist/
 MASTER_SITES+=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rust-lang.org/
+HOMEPAGE=	https://www.rust-lang.org/
 COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
 

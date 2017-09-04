@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=g/gmpy2/}
 EXTRACT_SUFX=	.zip#md5=95f008bcab6372164358123f43e3f490
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://code.google.com/p/gmpy/
+HOMEPAGE=	https://github.com/aleaxit/gmpy/
 COMMENT=	GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x
 LICENSE=	gnu-gpl-v3
 

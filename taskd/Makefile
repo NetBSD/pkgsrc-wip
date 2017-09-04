@@ -3,10 +3,10 @@
 DISTNAME=	taskd-1.1.0
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://taskwarrior.org/download/
+MASTER_SITES=	https://taskwarrior.org/download/
 
 MAINTAINER=	esg@sdf.org
-HOMEPAGE=	http://taskwarrior.org/download/
+HOMEPAGE=	https://taskwarrior.org/download/
 COMMENT=	Lightweight, secure server providing access to task data
 LICENSE=	mit
 

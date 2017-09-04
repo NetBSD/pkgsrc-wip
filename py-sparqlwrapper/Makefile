@@ -10,7 +10,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SPARQLWrapper/}
 MAINTAINER=	bacon4000@gmail.com
 
-HOMEPAGE=	http://rdflib.github.io/sparqlwrapper/
+HOMEPAGE=	https://rdflib.github.io/sparqlwrapper/
 COMMENT=	SPARQL endpoint interface to Python
 LICENSE=	w3c
 

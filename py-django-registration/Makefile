@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://bitbucket.org/ubernostrum/django-registration/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bitbucket.org/ubernostrum/django-registration/wiki/Home
+#HOMEPAGE=	https://bitbucket.org/ubernostrum/django-registration/wiki/Home
 COMMENT=	User-registration application for Django
 LICENSE=	modified-bsd
 
