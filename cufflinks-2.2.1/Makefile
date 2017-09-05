@@ -11,17 +11,17 @@ DISTNAME=	cufflinks-2.2.1
 CATEGORIES=	biology
 MASTER_SITES=	http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 
 COMMENT=	RNA transcript assembly, differential expression/regulation
-# LICENSE=
+LICENSE=	boost-license
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-bam=${PREFIX}/samtools0119
 
 # Darwin
-CFLAGS+=	-I${LOCALBASE}/include/eigen3
+CFLAGS+=	-I${PREFIX}/include/eigen3
 # These are getting left out on CentOS and Darwin in spite of buildlink
 LDFLAGS+=	-L${PREFIX}/lib -lboost_thread -lboost_system -lboost_serialization
 
@@ -29,18 +29,19 @@ LDFLAGS+=	-L${PREFIX}/lib -lboost_thread -lboost_system -lboost_serialization
 SUBST_CLASSES+=		arch
 SUBST_STAGE.arch=	post-patch
 SUBST_FILES.arch=	configure
-SUBST_SED.arch=		's|arch -k|arch|g'
+SUBST_SED.arch=		-e 's|arch -k|arch|g'
 
 # Allow compiling on i386
 SUBST_CLASSES+=		cflags
 SUBST_STAGE.cflags=	post-patch
 SUBST_FILES.cflags=	configure
-SUBST_SED.cflags=	's|-arch x86_64||g'
+SUBST_SED.cflags=	-e 's|-arch x86_64||g'
 
 SUBST_CLASSES+=		ldouble
 SUBST_STAGE.ldouble=	post-patch
 SUBST_FILES.ldouble=	${WRKSRC}/src/*.cpp ${WRKSRC}/src/*.h
-SUBST_SED.ldouble=	-e 's|logl|log|g' -e 's|long double|double|g'
+SUBST_SED.ldouble=	-e 's|logl|log|g'
+SUBST_SED.ldouble+=	-e 's|long double|double|g'
 
 .include "../../wip/samtools0119/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

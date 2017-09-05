@@ -1,5 +1,6 @@
 $NetBSD: patch-src_bundles.cpp,v 1.1 2014/09/04 21:51:02 outpaddling Exp $
 
+# Const too big for int on some systems
 --- src/bundles.cpp.orig	2014-03-24 21:54:47.000000000 +0000
 +++ src/bundles.cpp
 @@ -698,7 +698,7 @@ double BundleFactory::next_valid_alignme
