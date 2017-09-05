@@ -26,6 +26,12 @@ TEST_TARGET=		check
 INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
+CONFIGURE_ARGS+=	--disable-binutils
+CONFIGURE_ARGS+=	--disable-gprof
+CONFIGURE_ARGS+=	--disable-gold
+CONFIGURE_ARGS+=	--disable-gas
+CONFIGURE_ARGS+=	--disable-ld
+
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp
 SUBST_STAGE.fix-depcomp+=	pre-configure
