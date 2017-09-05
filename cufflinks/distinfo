@@ -4,5 +4,5 @@ SHA1 (cufflinks-2.1.1.tar.gz) = 9c5bf3d3872e8dd358ba7d7407644ab2cbbfdcb6
 RMD160 (cufflinks-2.1.1.tar.gz) = 4a612f98be24d7d31520be0501f1f4bcd3e76e0f
 SHA512 (cufflinks-2.1.1.tar.gz) = 3a52852d356240eeb24bfc10e449524499f03e8b908133f35e7fcb6ccb5d3566bacd99aa752082081b601fcd2872f5335473ccecb2cd1cb9a9224af41b224c29
 Size (cufflinks-2.1.1.tar.gz) = 705930 bytes
-SHA1 (patch-configure) = fa6121ad0abad7bfcc9cfc585b395999b107277c
-SHA1 (patch-src_bundles.cpp) = d90c68a2613c42b182e5dc4250f0609e55789c5b
+SHA1 (patch-configure) = 87a10d1d224f60370f6c42f901460529f57df59f
+SHA1 (patch-src_bundles.cpp) = fcb5e8ba79faa1d1fdebcbe96da0fbc54d959b6e

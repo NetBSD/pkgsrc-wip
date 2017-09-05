@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Non-portable shell feature
 --- configure.orig	2013-04-11 13:09:12.000000000 +0000
 +++ configure
 @@ -6339,7 +6339,7 @@ LDFLAGS="$LDFLAGS $EIGEN_LDFLAGS"

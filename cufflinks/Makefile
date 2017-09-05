@@ -11,8 +11,8 @@ MASTER_SITES=	http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/
 
 MAINTAINER=	dsiercks@uwm.edu
 HOMEPAGE=	http://port.home.page/
-COMMENT=	Transcript assembly, differential expression and regulation for RNA-Seq
-# LICENSE=	
+COMMENT=	Transcript assembly, differential expression, regulation for RNA-Seq
+LICENSE=	boost-license
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
@@ -30,7 +30,6 @@ SUBST_SED.boost+=	-e 's|logl|log|g'
 SUBST_SED.boost+=	-e 's|long double|double|g'
 SUBST_SED.boost+=	-e 's|Lf|lf|g'
 SUBST_SED.boost+=	-e 's|Lg|lg|g'
-SUBST_MESSAGE.boost=	"Substituting for boost"
 SUBST_FILES.boost+=	${WRKSRC}/src/abundances.cpp
 SUBST_FILES.boost+=	${WRKSRC}/src/abundances.h
 SUBST_FILES.boost+=	${WRKSRC}/src/assemble.h
@@ -60,11 +59,8 @@ SUBST_STAGE.boolint=	post-patch
 SUBST_FILES.boolint=	${WRKSRC}/src/rounding.h
 SUBST_SED.boolint+=	-e 's|int& is_up|bool\& is_up|g'
 
-# CONFIGURE_ARGS are not linker flags.  Run configure --help to see
-# proper usage of --with-bam
 CONFIGURE_ARGS+=--with-bam=${PREFIX}/samtools0119 --with-boost
-# CONFIGURE_ARGS+=--with-bam="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
-CFLAGS+=	-I${LOCALBASE}/include/eigen3
+CFLAGS+=	-I${PREFIX}/include/eigen3
 LDFLAGS+=	-lboost_system -lboost_iostreams -lboost_thread
 
 PORTVERSION=	2.1.1
