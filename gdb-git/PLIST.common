@@ -7,7 +7,6 @@ info/annotate.info
 info/bfd.info
 info/gdb.info
 info/stabs.info
-lib/charset.alias
 man/man1/gdb.1
 man/man1/gdbserver.1
 man/man5/gdbinit.5

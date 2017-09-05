@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- gdb/Makefile.in.orig	2017-09-05 14:15:26.304324019 +0000
++++ gdb/Makefile.in
+@@ -2083,7 +2083,7 @@ install-only: $(CONFIG_INSTALL)
+ 			$(DESTDIR)$(bindir)/$$transformed_name$(EXEEXT) ; \
+ 		$(SHELL) $(srcdir)/../mkinstalldirs $(DESTDIR)$(includedir)/gdb ; \
+ 		$(INSTALL_DATA) jit-reader.h $(DESTDIR)$(includedir)/gdb/jit-reader.h
+-	if test "x$(HAVE_NATIVE_GCORE_TARGET)$(HAVE_NATIVE_GCORE_HOST)" != x; \
++	if test "x$(HAVE_NATIVE_GCORE_TARGET)$(HAVE_NATIVE_GCORE_HOST)" = x; \
+ 	then \
+ 	  transformed_name=`t='$(program_transform_name)'; \
+ 			    echo gcore | sed -e "$$t"` ; \
