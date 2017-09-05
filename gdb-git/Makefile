@@ -45,6 +45,8 @@ AUTO_MKDIRS=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=	gcore
+
 .if ${OPSYS} == "SunOS"
 # Work around a bug in gdb's configure
 CONFIGURE_ENV+=		ac_cv_header_curses_h=yes
@@ -55,7 +57,6 @@ CONFIGURE_ENV+= gdb_cv_var_elf=yes
 MAKE_ENV+= gdb_cv_var_elf=yes
 CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
 MAKE_ENV+= gdb_cv_struct_lwp=yes
-
 .elif ${OPSYS} == "DragonFly"
 TARGET_STR=		${MACHINE_ARCH}--dragonfly
 BUILD_DEFS+=		${TARGET_STR}
@@ -63,15 +64,13 @@ BUILD_DEFS+=		${TARGET_STR}
 ##	   *** Gdb does not support native target i386-pc-dragonfly"
 CONFIGURE_ARGS+=		--target=${TARGET_STR}
 TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
+.elif !empty(OPSYS:MLinux)
+PLIST.gcore=	YES
 .endif
 
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
 .if ${OPSYS} == "DragonFly"
-# Following are installed by binutils
-#. for f in ansidecl.h bfdlink.h dis-asm.h symcat.h
-#	(cd ${WRKSRC}/include; ${INSTALL_DATA} ${f}  ${DESTDIR}${PREFIX}/include)
-#. endfor
 	(cd ${DESTDIR}${PREFIX}/bin;               ${LN} ${TARGET_STR}-gdb gdb)
 	(cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; ${LN} ${TARGET_STR}-gdb.1 gdb.1)
 .endif
