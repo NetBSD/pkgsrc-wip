@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=		uthash-1.9.9.1
+PKGNAME=		uthash-2.0.2
 CATEGORIES=		devel
 DISTNAME=		${PKGNAME_NOREV}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=troydhanson/}
