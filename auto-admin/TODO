@@ -1,4 +1,0 @@
-
-PLIST.Linux should not include Redhat-only scripts.
-
-Upgrade NetBSD and Darwin to 0.3.4.
