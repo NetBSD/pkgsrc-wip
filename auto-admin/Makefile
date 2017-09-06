@@ -23,6 +23,8 @@ SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
 
 INSTALLATION_DIRS=	sbin
 
+REDHAT_RELEASE=		/etc/redhat-release
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
@@ -30,7 +32,7 @@ do-install:
 	    ${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin; \
 	fi
-	if ${TEST} -e /etc/redhat-release; then \
+	if ${TEST} -e ${REDHAT_RELEASE}; then \
 	    ${INSTALL_SCRIPT} ${WRKSRC}/CentOS/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin; \
 	fi
