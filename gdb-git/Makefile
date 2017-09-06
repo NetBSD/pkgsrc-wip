@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-gprof
 CONFIGURE_ARGS+=	--disable-gold
 CONFIGURE_ARGS+=	--disable-gas
 CONFIGURE_ARGS+=	--disable-ld
+CONFIGURE_ARGS+=	--enable-targets=all
 
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp

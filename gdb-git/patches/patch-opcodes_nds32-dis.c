@@ -7,12 +7,12 @@ $NetBSD$
      case N32_OP6_ALU2:
        /* FFBI */
 -      if (__GF (insn, 0, 7) == (N32_ALU2_FFBI | __BIT (6)))
-+      if (__GF (insn, 0, 7) == (N32_ALU2_FFBI | __ONEBIT (6)))
++      if (__GF (insn, 0, 7) == (N32_ALU2_FFBI | N32_BIT (6)))
  	return MASK_OP (insn, 0x7f);
 -      else if (__GF (insn, 0, 7) == (N32_ALU2_MFUSR | __BIT (6))
 -	       || __GF (insn, 0, 7) == (N32_ALU2_MTUSR | __BIT (6)))
-+      else if (__GF (insn, 0, 7) == (N32_ALU2_MFUSR | __ONEBIT (6))
-+	       || __GF (insn, 0, 7) == (N32_ALU2_MTUSR | __ONEBIT (6)))
++      else if (__GF (insn, 0, 7) == (N32_ALU2_MFUSR | N32_BIT (6))
++	       || __GF (insn, 0, 7) == (N32_ALU2_MTUSR | N32_BIT (6)))
  	/* RDOV CLROV */
  	return MASK_OP (insn, 0xf81ff);
        return MASK_OP (insn, 0x1ff);
