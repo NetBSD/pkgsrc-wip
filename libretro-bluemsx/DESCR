@@ -1,0 +1,16 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+blueMSX is a portable open source MSX computer system emulator that uses
+an emulation model to achieve the highest level of accuracy possible.
+
+The emulation engine in blueMSX is cycle accurate, which means that the
+timing and synchronization between emulated hardware components appear the
+same as on a real MSX. The goal is to replicate each individual component
+as accurate as possible, which means that the emulator requires a more
+high end computer than emulators optimized for speed.
+
+It also emulates the Spectravideo SVI, ColecoVision, and Sega SG-1000.
