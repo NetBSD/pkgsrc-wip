@@ -28,24 +28,13 @@ INSTALLATION_DIRS=	sbin
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
-#	ls ${WRKSRC}/${OPSYS}/Scripts
-# This does not work
-#.if exists(${WRKSRC}/${OPSYS}/Scripts)
-# This does not work
-#.if exists(/usr/pkgsrc/wip/auto-admin/work/auto-admin-0.4.0)
-# This works
-# .if exists(/usr/pkgsrc/wip/auto-admin/work)
-# This works after mkdir /etc/auto-admin-0.4.0
-# .if exists(/etc/auto-admin-0.4.0)
-# Temporary hack
-.if ${OPSYS} == NetBSD
-	@${ECHO} "Installing ${WRKSRC}/${OPSYS}/Scripts/*"
-	${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
-		${DESTDIR}${PREFIX}/sbin
-.endif
-.if exists(/etc/redhat-release)
-	${INSTALL_SCRIPT} ${WRKSRC}/CentOS/Scripts/* \
-		${DESTDIR}${PREFIX}/sbin
-.endif
+	if ${TEST} -e ${WRKSRC}/${OPSYS}/Scripts; then \
+	    ${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
+		${DESTDIR}${PREFIX}/sbin; \
+	fi
+	if ${TEST} -e /etc/redhat-release; then \
+	    ${INSTALL_SCRIPT} ${WRKSRC}/CentOS/Scripts/* \
+		${DESTDIR}${PREFIX}/sbin; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"
