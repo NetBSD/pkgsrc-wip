@@ -1752,6 +1752,7 @@ SUBDIR+=	libretro-beetle-saturn
 SUBDIR+=	libretro-beetle-sgx
 SUBDIR+=	libretro-beetle-vb
 SUBDIR+=	libretro-beetle-wswan
+SUBDIR+=	libretro-bluemsx
 SUBDIR+=	libretro-bsnes-mercury
 SUBDIR+=	libretro-bsnes-mercury-accuracy
 SUBDIR+=	libretro-bsnes-mercury-performance
