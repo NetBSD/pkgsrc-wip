@@ -28,13 +28,15 @@ INSTALLATION_DIRS=	sbin
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
-	ls ${WRKSRC}/${OPSYS}/Scripts
+#	ls ${WRKSRC}/${OPSYS}/Scripts
 # This does not work
 #.if exists(${WRKSRC}/${OPSYS}/Scripts)
 # This does not work
 #.if exists(/usr/pkgsrc/wip/auto-admin/work/auto-admin-0.4.0)
-# This does work
+# This does work on NetBSD, but not CentOS 6
 # .if exists(/usr/pkgsrc/wip/auto-admin/work)
+# This workis on CentOS 6
+# .if exists(/usr/pkgsrc/wip/auto-admin)
 # Temporary hack
 .if ${OPSYS} == NetBSD
 	@${ECHO} "Installing ${WRKSRC}/${OPSYS}/Scripts/*"
