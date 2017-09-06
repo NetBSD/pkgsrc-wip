@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=		uthash-1.9.9
+PKGNAME=		uthash-1.9.9.1
 CATEGORIES=		devel
 DISTNAME=		${PKGNAME_NOREV}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=troydhanson/}
@@ -12,6 +12,7 @@ HOMEPAGE=		http://troydhanson.github.io/uthash/
 COMMENT=		Hash table, implemented in C
 LICENSE=		2-clause-bsd # actually, 1-clause
 
+EXTRACT_USING=		bsdtar
 NO_BUILD=		yes
 INSTALLATION_DIRS+=	include share/doc/uthash
 

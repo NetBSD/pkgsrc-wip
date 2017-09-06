@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (uthash-1.9.9.tar.gz) = 562f583d365ab21dc5dc0963241bea415fd26012
-RMD160 (uthash-1.9.9.tar.gz) = 031d5e7655238992595d9996c6c97d8796e79283
-Size (uthash-1.9.9.tar.gz) = 225620 bytes
+SHA1 (uthash-1.9.9.1.tar.gz) = 3ede175f87f0ae73e4a9d1b3822c035023aafdcc
+RMD160 (uthash-1.9.9.1.tar.gz) = 65a13b3a3a508800fc9cd336a375b6d8a1200f2b
+SHA512 (uthash-1.9.9.1.tar.gz) = 86dee09f0f2a36ac1ed2b4852b57f3929ad3d4268216559eca3d4a99b22f4de2d647c97f32fa7779a29a9606a23fbc5485c098fe3db8a4d6adc2658399fe1da0
+Size (uthash-1.9.9.1.tar.gz) = 248586 bytes
