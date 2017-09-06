@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 16:45:13 asau Exp $
-#
 
 PKGNAME=	texlive-texmf-minimal-${TEXLIVE_VERSION}
 DISTNAME=	texlive_texmf-minimal-${TEXLIVE_VERSION}${TEXLIVE_GENERATION}
@@ -13,11 +12,6 @@ COMMENT=	TeXLive texmf, minimal version from Edd Barret's OpenBSD repository
 PKG_DESTDIR_SUPPORT=	destdir
 
 NO_BUILD=	yes
-
-CONFLICTS+=	teTeX-texmf-[0-9]*
-CONFLICTS+=	teTeX2-texmf-[0-9]*
-CONFLICTS+=	teTeX3-texmf-[0-9]*
-CONFLICTS+=	texlive-texmf-full-[0-9]*
 
 USE_TOOLS+=	chown
 

@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 META_PACKAGE=	yes
 
-DEPENDS+=	teTeX-texmf>=3.0:../../print/teTeX3-texmf
+#DEPENDS+=	teTeX-texmf>=3.0:../../print/teTeX3-texmf
 DEPENDS+=	tex-jsclasses>=2010:../../print/tex-jsclasses
 DEPENDS+=	tex-here>=2010:../../print/tex-here
 DEPENDS+=	dvipdfmx>=20100328nb1:../../print/dvipdfmx

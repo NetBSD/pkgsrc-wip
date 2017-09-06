@@ -26,7 +26,7 @@ BUILD_DEPENDS+=		web2c-[0-9]*:../../print/web2c
 # tex not found
 BUILD_DEPENDS+=		tex-tetex-[0-9]*:../../print/tex-tetex
 # mkfmt tex.fmt not found
-BUILD_DEPENDS+=		teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
+#BUILD_DEPENDS+=		teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes

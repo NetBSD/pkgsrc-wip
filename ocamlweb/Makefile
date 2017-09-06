@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.2 2012/10/03 21:32:45 asau Exp $
-#
 
 DISTNAME=	ocamlweb-1.37
 CATEGORIES=	print

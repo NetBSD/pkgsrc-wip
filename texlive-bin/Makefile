@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.14 2010/11/13 02:46:40 minskim Exp $
-#
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
 DISTNAME=	texlive_base-${TEXLIVE_VERSION}-src
@@ -14,10 +13,6 @@ HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	TeXLive programs, using Edd Barret's OpenBSD repository
 
 MAKE_JOBS_SAFE=	no
-
-CONFLICTS+=	teTeX-bin-[0-9]*
-CONFLICTS+=	teTeX2-bin-[0-9]*
-CONFLICTS+=	teTeX3-bin-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
