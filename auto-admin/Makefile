@@ -23,8 +23,6 @@ SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
 
 INSTALLATION_DIRS=	sbin
 
-.include "../../mk/bsd.prefs.mk"
-
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
