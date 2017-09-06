@@ -33,10 +33,10 @@ do-install:
 #.if exists(${WRKSRC}/${OPSYS}/Scripts)
 # This does not work
 #.if exists(/usr/pkgsrc/wip/auto-admin/work/auto-admin-0.4.0)
-# This does work on NetBSD, but not CentOS 6
+# This works
 # .if exists(/usr/pkgsrc/wip/auto-admin/work)
-# This workis on CentOS 6
-# .if exists(/usr/pkgsrc/wip/auto-admin)
+# This works after mkdir /etc/auto-admin-0.4.0
+# .if exists(/etc/auto-admin-0.4.0)
 # Temporary hack
 .if ${OPSYS} == NetBSD
 	@${ECHO} "Installing ${WRKSRC}/${OPSYS}/Scripts/*"
