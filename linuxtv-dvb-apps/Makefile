@@ -3,11 +3,11 @@
 
 DISTNAME=		linuxtv-dvb-apps-1.1.1
 CATEGORIES=		linux
-MASTER_SITES=		http://www.linuxtv.org/downloads/
+MASTER_SITES=		https://www.linuxtv.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.linuxtv.org/
+HOMEPAGE=		https://www.linuxtv.org/
 COMMENT=		DVB applications from LinuxTV project
 
 USE_TOOLS+=		gmake

@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://fanglingsu.github.io/vimb/
+HOMEPAGE=	https://fanglingsu.github.io/vimb/
 COMMENT=	Vim-like webkit browser
 LICENSE=	gnu-gpl-v3
 

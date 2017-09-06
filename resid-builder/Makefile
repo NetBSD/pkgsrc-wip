@@ -4,10 +4,10 @@
 DISTNAME=	resid-builder-1.0.1+20060528.ccr
 PKGNAME=	resid-builder-20060528
 CATEGORIES=	audio
-MASTER_SITES=	http://www.tnsp.org/xs-files/
+MASTER_SITES=	https://www.tnsp.org/xs-files/
 
 MAINTAINER=	adam.hoka@gmail.com
-HOMEPAGE=	http://www.tnsp.org/xs-files/
+HOMEPAGE=	https://www.tnsp.org/xs-files/
 COMMENT=	Snapshot of reSID-builder from ccr/TNSP
 
 

@@ -3,11 +3,11 @@
 
 DISTNAME=	upower-0.9.16
 CATEGORIES=	sysutils
-MASTER_SITES=	http://upower.freedesktop.org/releases/
+MASTER_SITES=	https://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://upower.freedesktop.org/releases/
+HOMEPAGE=	https://upower.freedesktop.org/releases/
 COMMENT=	UPower is an abstraction for enumerating power devices
 LICENSE=	gnu-gpl-v2
 

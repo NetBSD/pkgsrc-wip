@@ -4,7 +4,7 @@ DISTNAME=		uhd-3.6.0
 CATEGORIES=		ham
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
+#HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
 

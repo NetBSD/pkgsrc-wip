@@ -10,7 +10,7 @@ LICENSE=		gnu-gpl-v2
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
+HOMEPAGE=		https://www.unix-ag.uni-kl.de/~massar/vpnc/
 COMMENT=		Client for Cisco3000 VPN Concentrator
 
 NOT_FOR_PLATFORM=	Interix-*-*

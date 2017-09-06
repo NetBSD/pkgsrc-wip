@@ -3,11 +3,11 @@
 DISTNAME=	webkitgtk-2.16.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
-MASTER_SITES=	http://www.webkitgtk.org/releases/
+MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.webkitgtk.org/
+HOMEPAGE=	https://www.webkitgtk.org/
 COMMENT=	GTK port of the WebKit browser engine
 LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 

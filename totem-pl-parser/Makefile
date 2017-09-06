@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem-pl-parser/${PKGVERSION_NOREV:R}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wiki.gnome.org/Apps/Videos
+HOMEPAGE=	https://wiki.gnome.org/Apps/Videos
 COMMENT=	Totem playlist parser
 LICENSE=	gnu-lgpl-v2
 

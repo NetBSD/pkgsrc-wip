@@ -4,7 +4,7 @@
 DISTNAME=		vnc-4_1_2-unixsrc
 PKGNAME=		realvnc-4.1.2
 CATEGORIES=		net x11
-MASTER_SITES=		http://www.realvnc.com/dist/
+MASTER_SITES=		https://www.realvnc.com/dist/
 DISTFILES=		vnc-4_1_2-unixsrc.tar.gz \
 			X430src-1.tgz \
 			X430src-2.tgz \
@@ -14,7 +14,7 @@ SITES.X430src-2.tgz=	http://ftp.gwdg.de/pub/xfree86/XFree86/4.3.0/source/
 SITES.X430src-3.tgz=	http://ftp.gwdg.de/pub/xfree86/XFree86/4.3.0/source/
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://www.realvnc.com/
+HOMEPAGE=		https://www.realvnc.com/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
 CONFLICTS+=		vnc-[0-9]*
@@ -41,7 +41,7 @@ SUBST_SED.pl=		-e "s|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g"
 
 # The distfile listed above is bogus, there is no direct link to download the
 # file, so a special command must be used.  I lifted this from FreeBSD Ports.
-DISTURL=http://www.realvnc.com/cgi-bin/download.cgi?product=free4/src/unix&acceptLicense=1&filever=4.1.2&filetype=tar_gz&haveDetails=1
+DISTURL=https://www.realvnc.com/cgi-bin/download.cgi?product=free4/src/unix&acceptLicense=1&filever=4.1.2&filetype=tar_gz&haveDetails=1
 pre-fetch:
 .if !exists(${DISTDIR}/${DISTNAME}.tar.gz)
 	cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}.tar.gz ${DISTURL:Q}
