@@ -1,15 +1,36 @@
 $NetBSD$
 
-This file is installed globally for pkgsrc users rather than making
-them install it manually in their home dir. There's no reason to be
-editing it.
+NstDatabase.xml is installed globally for pkgsrc users rather than
+making them install it manually in their home dir. There's no reason
+to be editing it.
 
---- libretro/libretro.cpp.orig	2016-01-09 23:34:38.000000000 +0000
+--- libretro/libretro.cpp.orig	2017-09-03 20:32:25.000000000 +0000
 +++ libretro/libretro.cpp
-@@ -720,7 +720,7 @@ bool retro_load_game(const struct retro_
-    if (!environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &dir) || !dir)
-       return false;
+@@ -17,7 +17,7 @@
+ #include "../source/core/api/NstApiUser.hpp"
+ #include "../source/core/api/NstApiFds.hpp"
  
+-#define NST_VERSION "1.48-WIP"
++#define NST_VERSION "1.48"
+ 
+ #ifdef _WIN32
+ #define snprintf _snprintf
+@@ -308,11 +308,7 @@ void retro_get_system_info(struct retro_
+ {
+    memset(info, 0, sizeof(*info));
+    info->library_name     = "Nestopia";
+-#ifdef GIT_VERSION
+-   info->library_version  = NST_VERSION GIT_VERSION;
+-#else
+    info->library_version  = NST_VERSION;
+-#endif
+    info->need_fullpath    = false;
+    info->valid_extensions = "nes|fds|unf|unif";
+ }
+@@ -957,7 +953,7 @@ bool retro_load_game(const struct retro_
+    }
+    delete custompalette;
+    
 -   snprintf(db_path, sizeof(db_path), "%s%cNstDatabase.xml", dir, slash);
 +   snprintf(db_path, sizeof(db_path), "%s/share/libretro/nestopia/NstDatabase.xml", PREFIX);
  

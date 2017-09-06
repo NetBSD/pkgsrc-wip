@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/04/10 03:16:17 snj Exp $
 
-DISTNAME=	libretro-nestopia-1.47
+DISTNAME=	libretro-nestopia-1.48
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rdanbrook/}
 
