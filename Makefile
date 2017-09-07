@@ -1777,6 +1777,7 @@ SUBDIR+=	libretro-picodrive
 SUBDIR+=	libretro-ppsspp
 SUBDIR+=	libretro-prboom
 SUBDIR+=	libretro-prosystem
+SUBDIR+=	libretro-px68k
 SUBDIR+=	libretro-snes9x
 SUBDIR+=	libretro-snes9x2005
 SUBDIR+=	libretro-snes9x2010

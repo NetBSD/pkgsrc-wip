@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD$
+
+PX68K requires its BIOS files to be placed in the subdirectory "keropi" of
+either the RetroArch content directory or system directory.
+
+Sharp released the BIOS files to the public domain. They can be downloaded
+for free here: http://www.jcec.co.uk/x68000r.zip
+
+===========================================================================

@@ -1,0 +1,16 @@
+$NetBSD$
+
+Don't override CFLAGS
+
+--- Makefile.libretro.orig	2017-07-31 10:39:04.000000000 +0000
++++ Makefile.libretro
+@@ -39,8 +39,7 @@ ENDIANNESS_DEFINES :=
+ CORE_DIR := .
+ 
+ ifeq ($(platform), unix)
+-	CFLAGS = -g -O2 
+-	CXXFLAGS = -g -O2  -fno-merge-constants 
++	CXXFLAGS += -fno-merge-constants 
+ 	TARGET := $(TARGET_NAME)_libretro.so
+ 	fpic := -fPIC
+ 	SHARED := -shared -Wl,--no-undefined -Wl,--version-script=link.T
