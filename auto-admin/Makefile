@@ -17,11 +17,17 @@ REPLACE_SH=	*/Scripts/*
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
-SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-clean-pkgsrc
+SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-denyhosts-setup
 SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-denyhosts-remove-ip
-SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-print-make-variable
+SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-pkgsrc-add-license
 SUBST_SED.prefix+=	-e "s|/usr/local|${PREFIX}|g"
-SUBST_SED.prefix+=	-e "s|/usr/pkgsrc|${PREFIX}|g"
+SUBST_SED.prefix+=	-e "s|/usr/pkg|${PREFIX}|g"
+
+SUBST_CLASSES+=		pkgsrc
+SUBST_STAGE.pkgsrc=	post-patch
+SUBST_SED.pkgsrc=	-e 's|/usr/pkgsrc|${BUILD_DIR}/../..|g'
+SUBST_FILES.pkgsrc+=	${WRKSRC}/Common/Scripts/auto-clean-pkgsrc
+SUBST_FILES.pkgsrc+=	${WRKSRC}/Common/Scripts/auto-print-make-variable
 
 INSTALLATION_DIRS=	sbin
 
