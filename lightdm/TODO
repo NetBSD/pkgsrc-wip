@@ -22,3 +22,5 @@ https://bugs.launchpad.net/lightdm/+bug/790186
 layout.c:125: error: too many arguments to function 'xkl_config_registry_load'
 https://bugs.launchpad.net/lightdm/+bug/972297
 
+Investigate and try to address if possible the following security vulnerabilites:
+ - CVE-2015-8316
