@@ -776,6 +776,7 @@ SUBDIR+=	fftw-mpich
 SUBDIR+=	fftw-openmpi
 SUBDIR+=	fftw2-openmpi
 SUBDIR+=	fgallery
+SUBDIR+=	fiche
 SUBDIR+=	file-roller
 SUBDIR+=	filelight
 SUBDIR+=	filepp
