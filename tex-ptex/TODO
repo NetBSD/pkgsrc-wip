@@ -1,9 +1,0 @@
-To test, process following file with 
-platex test.tex
-
--------- test.tex ---------
-\documentclass{jarticle}
-\begin{document}
-test
-\end{document}
----------------------------
