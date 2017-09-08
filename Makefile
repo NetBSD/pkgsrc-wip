@@ -1771,6 +1771,7 @@ SUBDIR+=	libretro-mame2003
 SUBDIR+=	libretro-mame2014
 SUBDIR+=	libretro-mgba
 SUBDIR+=	libretro-nestopia
+SUBDIR+=	libretro-np2kai
 SUBDIR+=	libretro-o2em
 SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-pcsx-rearmed
