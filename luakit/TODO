@@ -1,0 +1,27 @@
+Some problems that needs to be investigated.
+
+Opening a tab and then close it get luakit stucks with a high CPU usage
+-----------------------------------------------------------------------
+To reproduce (at least on NetBSD/amd64 8.99.1):
+
+ 1. Launch luakit
+ 2. `:tabopen www.example.org' (this will switch to the new tab)
+ 3. Close the `www.example.org' tab via `d'
+ 4. High CPU usage for the `luakit' process in a stuck state
+
+Directly attaching gdb via `gdb -p `pgrep luakit`' reveals:
+
+ (gdb) bt
+ #0  0x000076b4124ac54a in ___lwp_park60 () from /usr/lib/libc.so.12
+ #1  0x000076b41280a526 in pthread_cond_timedwait (cond=0x76b414792c10, mutex=0x76b414792be0, abstime=0x76b3fa5dff00)
+     at /usr/src/lib/libpthread/pthread_cond.c:169
+ #2  0x000076b41a28cbbe in g_cond_wait_until () from /usr/pkg/lib/libglib-2.0.so.0
+ #3  0x000076b41a21d1f9 in g_async_queue_pop_intern_unlocked () from /usr/pkg/lib/libglib-2.0.so.0
+ #4  0x000076b41a21d7eb in g_async_queue_timeout_pop () from /usr/pkg/lib/libglib-2.0.so.0
+ #5  0x000076b41a26fd3a in g_thread_pool_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+ #6  0x000076b41a26f2e5 in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+ #7  0x000076b41280c1cf in pthread__create_tramp (cookie=0x76b411bb6000) at /usr/src/lib/libpthread/pthread.c:593
+ #8  0x000076b41248e8a0 in ?? () from /usr/lib/libc.so.12
+ #9  0x0000000000000000 in ?? ()
+
+  -- leot (2017/09/08)
