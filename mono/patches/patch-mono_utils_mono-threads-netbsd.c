@@ -1,8 +1,8 @@
 $NetBSD: patch-mono_utils_mono-threads-netbsd.c,v 1.1 2014/11/30 08:40:51 spz Exp $
 
---- mono/utils/mono-threads-netbsd.c.orig	2014-11-29 21:20:20.000000000 +0000
+--- mono/utils/mono-threads-netbsd.c.orig	2017-08-02 13:16:42.000000000 +0000
 +++ mono/utils/mono-threads-netbsd.c
-@@ -0,0 +1,23 @@
+@@ -1,3 +1,26 @@
 +#include <config.h>
 +
 +#if defined(__NetBSD__)
@@ -26,3 +26,6 @@ $NetBSD: patch-mono_utils_mono-threads-netbsd.c,v 1.1 2014/11/30 08:40:51 spz Ex
 +}
 +
 +#endif
+ /**
+  * \file
+  */

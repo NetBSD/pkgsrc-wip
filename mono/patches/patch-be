@@ -1,6 +1,6 @@
 $NetBSD: patch-be,v 1.5 2014/11/30 08:40:51 spz Exp $
 
---- support/sys-mman.c.orig	2014-09-22 13:23:09.000000000 +0000
+--- support/sys-mman.c.orig	2017-08-02 13:16:42.000000000 +0000
 +++ support/sys-mman.c
 @@ -10,7 +10,6 @@
  #include <config.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-be,v 1.5 2014/11/30 08:40:51 spz Exp $
  #endif
  
  #ifdef PLATFORM_MACOSX
-@@ -25,6 +24,9 @@
+@@ -30,6 +29,9 @@
  #include <sys/types.h>
  #include <sys/mman.h>
  #include <errno.h>
@@ -20,17 +20,3 @@ $NetBSD: patch-be,v 1.5 2014/11/30 08:40:51 spz Exp $
  
  #include "map.h"
  #include "mph.h"
-@@ -109,8 +111,13 @@ Mono_Posix_Syscall_mremap (void *old_add
- 	if (Mono_Posix_FromMremapFlags (flags, &_flags) == -1)
- 		return MAP_FAILED;
- 
-+#if defined(__NetBSD__)
-+	return mremap (old_address, (size_t) old_size, old_address, (size_t) new_size,
-+			(unsigned long) _flags);
-+#else
- 	return mremap (old_address, (size_t) old_size, (size_t) new_size,
- 			(unsigned long) _flags);
-+#endif
- }
- #endif /* def HAVE_MREMAP */
- 

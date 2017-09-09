@@ -2,7 +2,7 @@ $NetBSD: patch-dl,v 1.5 2014/11/30 08:40:51 spz Exp $
 
 SunOS needs unistd.h for sysconf().
 
---- mono/utils/dlmalloc.c.orig	2014-09-22 13:23:09.000000000 +0000
+--- mono/utils/dlmalloc.c.orig	2017-08-02 13:16:42.000000000 +0000
 +++ mono/utils/dlmalloc.c
 @@ -1208,11 +1208,14 @@ int mspace_mallopt(int, int);
  #ifndef LACKS_UNISTD_H
@@ -20,15 +20,3 @@ SunOS needs unistd.h for sysconf().
  
  #ifndef WIN32
  #ifndef malloc_getpagesize
-@@ -1375,7 +1378,11 @@ static int win32munmap(void* ptr, size_t
- #endif /* HAVE_MMAP */
- 
- #if HAVE_MMAP && HAVE_MREMAP
-+#ifdef linux
- #define CALL_MREMAP(addr, osz, nsz, mv) mremap((addr), (osz), (nsz), (mv))
-+#else
-+#define CALL_MREMAP(addr, osz, nsz, mv) mremap((addr), (osz), (addr), (nsz), (mv))
-+#endif
- #else  /* HAVE_MMAP && HAVE_MREMAP */
- #define CALL_MREMAP(addr, osz, nsz, mv) MFAIL
- #endif /* HAVE_MMAP && HAVE_MREMAP */
