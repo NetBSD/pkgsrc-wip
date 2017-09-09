@@ -106,7 +106,7 @@ INSTALLATION_DIRS+=	share/examples/MesaLib
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/mesa/drivers/dri/common/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
 
-.include "../../devel/libpthread-stubs/buildlink3.mk"
+.include "../../wip/libpthread-stubs/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
