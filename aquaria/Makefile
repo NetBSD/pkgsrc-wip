@@ -6,7 +6,7 @@ CATEGORIES=	games
 GITHUB_TAG=	d8da8576e8321fd989cbb865c0e4d19d295a36b1
 GITHUB_PROJECT=	Aquaria
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AquariaOSE/}
-LICENSE=	gpl-v2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	cfkoch@edgebsd.org
 COMMENT=	Aquaria Open Source Edition
