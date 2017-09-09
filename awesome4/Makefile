@@ -68,7 +68,7 @@ pre-configure:
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
-.include "../../wip/xcb-util-xrm/buildlink3.mk"
+.include "../../x11/xcb-util-xrm/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
 
 .include "../../lang/lua/luaversion.mk"
