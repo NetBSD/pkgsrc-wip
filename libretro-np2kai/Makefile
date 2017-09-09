@@ -17,6 +17,8 @@ MAKE_FILE=	sdl2/Makefile.libretro
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
 
+ONLY_FOR_PLATFORM=	Linux-*-*
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:

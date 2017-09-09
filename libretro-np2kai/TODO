@@ -1,0 +1,3 @@
+Build fails on NetBSD, uses linux-specific headers
+
+Fixes will most likely have to be arranged with upstream
