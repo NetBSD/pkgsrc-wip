@@ -6,7 +6,7 @@ CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	clang
 SVN_REPO.clang=		http://llvm.org/svn/llvm-project/cfe/trunk
-SVN_REVISION.clang=	311941
+SVN_REVISION.clang=	312882
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clang.llvm.org/

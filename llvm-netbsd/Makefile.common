@@ -19,7 +19,7 @@ CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	llvm
 SVN_REPO.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
-SVN_REVISION.llvm=	311941
+SVN_REVISION.llvm=	312882
 
 WRKSRC=			${WRKDIR}/llvm
 

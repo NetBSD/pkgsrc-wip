@@ -306,6 +306,7 @@ include/llvm/CodeGen/GlobalISel/InstructionSelect.h
 include/llvm/CodeGen/GlobalISel/InstructionSelector.h
 include/llvm/CodeGen/GlobalISel/InstructionSelectorImpl.h
 include/llvm/CodeGen/GlobalISel/Legalizer.h
+include/llvm/CodeGen/GlobalISel/LegalizerCombiner.h
 include/llvm/CodeGen/GlobalISel/LegalizerHelper.h
 include/llvm/CodeGen/GlobalISel/LegalizerInfo.h
 include/llvm/CodeGen/GlobalISel/Localizer.h
@@ -488,6 +489,7 @@ include/llvm/DebugInfo/DWARF/DWARFDebugMacro.h
 include/llvm/DebugInfo/DWARF/DWARFDebugPubTable.h
 include/llvm/DebugInfo/DWARF/DWARFDebugRangeList.h
 include/llvm/DebugInfo/DWARF/DWARFDie.h
+include/llvm/DebugInfo/DWARF/DWARFExpression.h
 include/llvm/DebugInfo/DWARF/DWARFFormValue.h
 include/llvm/DebugInfo/DWARF/DWARFGdbIndex.h
 include/llvm/DebugInfo/DWARF/DWARFObject.h
@@ -628,11 +630,13 @@ include/llvm/ExecutionEngine/Orc/RPCSerialization.h
 include/llvm/ExecutionEngine/Orc/RPCUtils.h
 include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
 include/llvm/ExecutionEngine/Orc/RawByteChannel.h
+include/llvm/ExecutionEngine/Orc/RemoteObjectLayer.h
 include/llvm/ExecutionEngine/OrcMCJITReplacement.h
 include/llvm/ExecutionEngine/RTDyldMemoryManager.h
 include/llvm/ExecutionEngine/RuntimeDyld.h
 include/llvm/ExecutionEngine/RuntimeDyldChecker.h
 include/llvm/ExecutionEngine/SectionMemoryManager.h
+include/llvm/FuzzMutate/FuzzerCLI.h
 include/llvm/FuzzMutate/IRMutator.h
 include/llvm/FuzzMutate/OpDescriptor.h
 include/llvm/FuzzMutate/Operations.h
@@ -1095,6 +1099,7 @@ include/llvm/Transforms/Scalar/ConstantHoisting.h
 include/llvm/Transforms/Scalar/CorrelatedValuePropagation.h
 include/llvm/Transforms/Scalar/DCE.h
 include/llvm/Transforms/Scalar/DeadStoreElimination.h
+include/llvm/Transforms/Scalar/DivRemPairs.h
 include/llvm/Transforms/Scalar/EarlyCSE.h
 include/llvm/Transforms/Scalar/Float2Int.h
 include/llvm/Transforms/Scalar/GVN.h
