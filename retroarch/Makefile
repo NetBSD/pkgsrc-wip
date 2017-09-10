@@ -16,7 +16,6 @@ HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=--disable-builtinminiupnpc
 CONFIGURE_ARGS+=--disable-builtinzlib
-CONFIGURE_ARGS+=--disable-x11	# broken, SDL2 works
 
 CONFIGURE_ENV+=	BIN_DIR=${PREFIX}/bin
 CONFIGURE_ENV+=	MAN_DIR=${PREFIX}/${PKGMANDIR}

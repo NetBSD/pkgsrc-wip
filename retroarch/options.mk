@@ -3,8 +3,8 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype alsa caca pulseaudio udev
-PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
+PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype x11 alsa caca pulseaudio udev
+PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype x11
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
@@ -46,6 +46,18 @@ CONFIGURE_ARGS+=	--enable-opengl
 .include "../../graphics/MesaLib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-opengl
+.endif
+
+.if !empty(PKG_OPTIONS:Mx11)
+CONFIGURE_ARGS+=	--enable-x11
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-x11
 .endif
 
 .if !empty(PKG_OPTIONS:Mcaca)
