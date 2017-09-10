@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--with-gmalloc
 
 .if !empty(PKG_OPTIONS:Mffcall)
 CONFIGURE_ARGS+=	--with-dynamic-ffi
-.  include "../../devel/ffcall/buildlink3.mk"
+.  include "../../devel/libffcall/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mregexp)

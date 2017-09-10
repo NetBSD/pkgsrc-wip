@@ -51,7 +51,7 @@ pre-configure:
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../devel/ffcall/buildlink3.mk"
+.include "../../devel/libffcall/buildlink3.mk"
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

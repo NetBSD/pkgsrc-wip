@@ -5,5 +5,5 @@
 
 .include "../../devel/libsigsegv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../devel/ffcall/buildlink3.mk" # avcall, callback
+.include "../../devel/libffcall/buildlink3.mk" # avcall, callback
 .include "../../devel/readline/buildlink3.mk"
