@@ -17,7 +17,12 @@ MAKE_FILE=	sdl2/Makefile.libretro
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
 
-ONLY_FOR_PLATFORM=	Linux-*-*
+.include "../../mk/bsd.prefs.mk"
+
+# The networking code currently uses non-portable Linux-specific calls.
+.if ${OPSYS} != "Linux"
+MAKE_FLAGS=	SUPPORT_NET=0
+.endif
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
