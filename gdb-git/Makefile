@@ -4,7 +4,9 @@
 DISTNAME=	gdb-8.0
 CATEGORIES=	devel
 GIT_REPOSITORIES=	gdb
-GIT_REPO.gdb=		git://sourceware.org/git/binutils-gdb.git
+#GIT_REPO.gdb=		git://sourceware.org/git/binutils-gdb.git # broken?
+#GIT_REPO.gdb=		http://sourceware.org/git/binutils-gdb.git # broken?
+GIT_REPO.gdb=		https://github.com/wallento/binutils-gdb.git
 GIT_DEEP_CLONE.gdb=	yes # server dies on shallow clones
 WRKSRC=         ${WRKDIR}/gdb
 
