@@ -1,9 +1,10 @@
 $NetBSD$
 
 chunk 1: test(1) operator portability
-chunk 2: simplify check for readline
+chunk 2: Add support for curses(3)
+chunk 3: simplify check for readline
 
---- configure.ac.orig	2016-09-14 20:52:04.000000000 +0000
+--- configure.ac.orig	2017-01-28 21:10:55.000000000 +0000
 +++ configure.ac
 @@ -78,7 +78,7 @@ elif test "x$enable_python_plugins" != x
          rm -f Python.framework
@@ -14,7 +15,17 @@ chunk 2: simplify check for readline
          AX_PYTHON_DEVEL
          AM_CONDITIONAL([BUILD_PYTHON_API], [true])
          AC_DEFINE([HAVE_PYTHON], [1], [Python support])
-@@ -172,15 +172,8 @@ AS_IF([test "x$enable_icons" != xno],
+@@ -135,7 +135,8 @@ PKG_CHECK_MODULES([ncursesw], [ncursesw]
+         [NCURSES_CFLAGS="$ncurses_CFLAGS"; NCURSES_LIBS="$ncurses_LIBS"; NCURSES="ncurses"],
+         [AC_CHECK_LIB([ncursesw], [main], [],
+             [AC_CHECK_LIB([ncurses], [main], [],
+-            	[AC_MSG_ERROR([ncurses is required for profanity])])])])])
++	        [AC_CHECK_LIB([curses], [main], [],
++            	    [AC_MSG_ERROR([ncurses is required for profanity])])])])])])
+ AM_CPPFLAGS="$AM_CPPFLAGS $NCURSES_CFLAGS"
+ LIBS="$NCURSES_LIBS $LIBS"
+ 
+@@ -172,15 +173,8 @@ AS_IF([test "x$enable_icons" != xno],
              [AC_MSG_ERROR([gtk+-2.0 or higher is required for icons])],
              [AC_MSG_NOTICE([gtk+-2.0 not found, icons not enabled])])])])
  
@@ -32,3 +43,11 @@ chunk 2: simplify check for readline
  
  ### Check for desktop notification support
  ### Linux/FreeBSD require libnotify
+@@ -280,6 +274,7 @@ AC_CHECK_LIB([expect], [main], [AM_CONDI
+ ### Check for ncursesw/ncurses.h first, Arch linux uses ncurses.h for ncursesw
+ AC_CHECK_HEADERS([ncursesw/ncurses.h], [], [])
+ AC_CHECK_HEADERS([ncurses.h], [], [])
++AC_CHECK_HEADERS([curses.h], [], [])
+ 
+ ### Default parameters
+ AM_CFLAGS="-Wall -Wno-deprecated-declarations"
