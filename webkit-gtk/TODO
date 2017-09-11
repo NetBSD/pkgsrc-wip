@@ -1,2 +1,12 @@
 - Should we install stuffs installed in ${PREFIX}/libexec/webkit2gtk-4.0/ in ${PREFIX}/bin/
   instead (at least MiniBrowser and eventually jsc?)
+
+- After using any webkit-gtk browser on - at least NetBSD/amd64 8.99.1 there are
+  errors of the following forms:
+
+   Error sending IPC message: Message too long
+  
+  ...according a quick grep the code path involved seems in
+  Source/WebKit2/Platform/IPC/unix/ConnectionUnix.cpp:Connection::sendOutputMessage()
+  ...and the process program is WebKitNetworkPro.
+    -- leot (2017/09/11)
