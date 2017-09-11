@@ -1,7 +1,7 @@
 # $NetBSD$
 # vim: noexpandtab:
 
-DISTNAME=	wjelement-1.2
+DISTNAME=	wjelement-1.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=netmail-open/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
