@@ -3059,6 +3059,7 @@ SUBDIR+=	py-dnspython
 SUBDIR+=	py-dnspython3
 SUBDIR+=	py-dolo
 SUBDIR+=	py-downhill
+SUBDIR+=	py-drawille
 SUBDIR+=	py-drawnow
 SUBDIR+=	py-dreampie
 SUBDIR+=	py-dropbox
