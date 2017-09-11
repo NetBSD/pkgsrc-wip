@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 12:10:26 leot Exp $
+
+SHA1 (requests-cache-0.4.13.tar.gz) = 4ccf9e23886ebf960befb7c28b32e8745da5bc1e
+RMD160 (requests-cache-0.4.13.tar.gz) = 0d69f94c070100340e3505cbebbb944d2df72a5c
+SHA512 (requests-cache-0.4.13.tar.gz) = 1f9c0961facec73c5458fd8e7b22a36ea620fd686bf8032fc002e55cfda4923235ebc3b33454e3ccae14452f50ffe1104a1b28f7b95b0a99c94ff94adc340f34
+Size (requests-cache-0.4.13.tar.gz) = 29342 bytes
