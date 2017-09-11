@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=       Gallery-2.25.0
+DISTNAME=       Gallery-2.27.0
 PKGNAME=        js-${DISTNAME}
 CATEGORIES=     www graphics
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=blueimp/}
