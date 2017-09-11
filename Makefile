@@ -1170,6 +1170,7 @@ SUBDIR+=	hijra
 SUBDIR+=	hlint
 SUBDIR+=	homebank
 SUBDIR+=	hoogle
+SUBDIR+=	howdoi
 SUBDIR+=	hpoj
 SUBDIR+=	hs-Boolean
 SUBDIR+=	hs-ConfigFile

@@ -1,0 +1,14 @@
+@comment $NetBSD$
+bin/howdoi
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/howdoi/__init__.py
+${PYSITELIB}/howdoi/__init__.pyc
+${PYSITELIB}/howdoi/__init__.pyo
+${PYSITELIB}/howdoi/howdoi.py
+${PYSITELIB}/howdoi/howdoi.pyc
+${PYSITELIB}/howdoi/howdoi.pyo
