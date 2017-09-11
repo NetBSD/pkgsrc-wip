@@ -4680,6 +4680,7 @@ SUBDIR+=	yi
 SUBDIR+=	ympd
 SUBDIR+=	yoda
 SUBDIR+=	yosys
+SUBDIR+=	you-get
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv

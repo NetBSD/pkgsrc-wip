@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (you-get-0.4.900.tar.gz) = a97599dd39154ab0b2f317352dfeb1cdf93bed34
+RMD160 (you-get-0.4.900.tar.gz) = 216db97cfa1bb7f0f197c68d8d8302e749347161
+SHA512 (you-get-0.4.900.tar.gz) = 5d3e5b40a7d3ee62bf20ce2dfb30b444481bb2991af6f1e3f5d77c709e0687272922ec9463f66ec2f6b73f303aba988260f81755ef8390112ad2504a40ae99e4
+Size (you-get-0.4.900.tar.gz) = 133929 bytes
+SHA1 (patch-src_you__get_processor_ffmpeg.py) = 0ce8eca6cd0e1a4d564811eb7995a54c186ae7f3
