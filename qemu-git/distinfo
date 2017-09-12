@@ -7,5 +7,4 @@ Size (qemu-2.8.1.tar.bz2) = 28366270 bytes
 SHA1 (patch-hw_scsi_esp.c) = aa7030ac8d09082bd57044e6a0d4e2fc5c066a45
 SHA1 (patch-hw_usb_dev-mtp.c) = abd0146b4369146bdcd1038906b057c3d0362e80
 SHA1 (patch-memory.c) = 30074f7f93c79dfc22ad4fb745f9e34941f831e6
-SHA1 (patch-target_m68k_fpu__helper.c) = c73a89e3f475ab01c581208b98db0e7f483dfb83
 SHA1 (patch-tests_Makefile.include) = a1dab206f61947079602d1bafcefc419b5d17881
