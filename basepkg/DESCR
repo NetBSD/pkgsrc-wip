@@ -2,6 +2,5 @@ Basepkg is a shell script for NetBSD base system packages.
 The features of Basepkg include:
 
 - Making packages of NetBSD base system.
-- pkg_add(1) and pkg_delete(1) wrapper for installation to the system.
 
 Please read share/basepkg/README.md for use it.

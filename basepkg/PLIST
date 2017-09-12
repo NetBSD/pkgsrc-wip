@@ -1,6 +1,8 @@
 @comment $NetBSD$
 share/basepkg/README.md
 share/basepkg/basepkg.sh
+share/basepkg/sets/install
+share/basepkg/sets/deinstall
 share/basepkg/sets/comments
 share/basepkg/sets/deps
 share/basepkg/sets/descrs

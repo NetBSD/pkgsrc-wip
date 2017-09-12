@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DEPENDS+=	pkg_install>=20160410:../../pkgtools/pkg_install
+DEPENDS+=	pkg_install>=20170419:../../pkgtools/pkg_install
 
-DISTNAME=	basepkg-0.994
+DISTNAME=	basepkg-1.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}/basepkg-0.994
+WRKSRC=		${WRKDIR}/basepkg-1.0
 USE_LANGUAGES=	# none
 USE_TOOLS+= pax
 
@@ -27,6 +27,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/sets/comments ${DESTDIR}${PREFIX}/share/basepkg/sets
 	${INSTALL_DATA} ${WRKSRC}/sets/deps ${DESTDIR}${PREFIX}/share/basepkg/sets
 	${INSTALL_DATA} ${WRKSRC}/sets/descrs ${DESTDIR}${PREFIX}/share/basepkg/sets
+	${INSTALL_DATA} ${WRKSRC}/sets/install ${DESTDIR}${PREFIX}/share/basepkg/sets
+	${INSTALL_DATA} ${WRKSRC}/sets/deinstall ${DESTDIR}${PREFIX}/share/basepkg/sets
 	cd ${WRKSRC}/sets && ${PAX} -wr lists ${DESTDIR}${PREFIX}/share/basepkg/sets
 
 .include "../../mk/bsd.pkg.mk"
