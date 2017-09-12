@@ -49,7 +49,7 @@ DEPENDS+=	qt4-tiff>=4.5.0:../../x11/qt4-tiff \
 		gst-plugins1-flac>=1.4.0:../../audio/gst-plugins1-flac \
 		gst-plugins1-gio>=1.4.0:../../sysutils/gst-plugins1-gio \
 		gst-plugins1-lame>=1.4.0:../../audio/gst-plugins1-lame \
-		gst-plugins1-mad>=1.4.0:../../audio/gst-plugins1-mad \
+		gst-plugins1-mpg123>=1.4.0:../../audio/gst-plugins1-mpg123 \
 		gst-plugins1-opus>=1.4.0:../../audio/gst-plugins1-opus \
 		gst-plugins1-twolame>=1.4.0:../../audio/gst-plugins1-twolame \
 		gst-plugins1-vorbis>=1.4.0:../../audio/gst-plugins1-vorbis \
