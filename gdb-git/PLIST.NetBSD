@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2013/02/04 11:28:19 makoto Exp $
-include/ansidecl.h
-include/bfd.h
-include/bfdlink.h
-include/dis-asm.h
-include/symcat.h
-lib/libbfd.la
-lib/libopcodes.la

@@ -7,7 +7,7 @@ GIT_REPOSITORIES=	gdb
 #GIT_REPO.gdb=		git://sourceware.org/git/binutils-gdb.git # broken?
 #GIT_REPO.gdb=		http://sourceware.org/git/binutils-gdb.git # broken?
 GIT_REPO.gdb=		https://github.com/wallento/binutils-gdb.git
-GIT_DEEP_CLONE.gdb=	yes # server dies on shallow clones
+#GIT_DEEP_CLONE.gdb=	yes # server dies on shallow clones
 WRKSRC=         ${WRKDIR}/gdb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +17,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++11
 
-BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
@@ -34,6 +33,8 @@ CONFIGURE_ARGS+=	--disable-gold
 CONFIGURE_ARGS+=	--disable-gas
 CONFIGURE_ARGS+=	--disable-ld
 CONFIGURE_ARGS+=	--enable-targets=all
+
+INSTALL_DIRS=		gdb
 
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp
@@ -60,6 +61,7 @@ CONFIGURE_ENV+= gdb_cv_var_elf=yes
 MAKE_ENV+= gdb_cv_var_elf=yes
 CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
 MAKE_ENV+= gdb_cv_struct_lwp=yes
+PLIST.gcore=	YES
 .elif ${OPSYS} == "DragonFly"
 TARGET_STR=		${MACHINE_ARCH}--dragonfly
 BUILD_DEFS+=		${TARGET_STR}
