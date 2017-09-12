@@ -15,6 +15,9 @@ HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 LICENSE=	gnu-gpl-v3
 
+# No code for DragonFly in GDB
+NOT_FOR_PLATFORM+=	DragonFly-*-*
+
 USE_LANGUAGES=		c c++11
 
 GNU_CONFIGURE=		YES
@@ -62,13 +65,6 @@ MAKE_ENV+= gdb_cv_var_elf=yes
 CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
 MAKE_ENV+= gdb_cv_struct_lwp=yes
 PLIST.gcore=	YES
-.elif ${OPSYS} == "DragonFly"
-TARGET_STR=		${MACHINE_ARCH}--dragonfly
-BUILD_DEFS+=		${TARGET_STR}
-## Remove "-pc" string, without this, getting following message:
-##	   *** Gdb does not support native target i386-pc-dragonfly"
-CONFIGURE_ARGS+=		--target=${TARGET_STR}
-TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
 .elif !empty(OPSYS:MLinux)
 PLIST.gcore=		YES
 PLIST.gdbserver=	YES
@@ -82,10 +78,6 @@ check-base:
 
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
-.if ${OPSYS} == "DragonFly"
-	(cd ${DESTDIR}${PREFIX}/bin;               ${LN} ${TARGET_STR}-gdb gdb)
-	(cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; ${LN} ${TARGET_STR}-gdb.1 gdb.1)
-.endif
 #
 # PATH of libiberty.a differs between clang and gcc: (and conflicts to other toolchain)
 # Rename to avoid conflict to native and other toolchain

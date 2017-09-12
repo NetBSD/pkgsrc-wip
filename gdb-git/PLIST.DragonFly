@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.DragonFly,v 1.1 2013/02/04 11:05:06 makoto Exp $
-bin/i386--dragonfly-gdb
-man/man1/i386--dragonfly-gdb.1
