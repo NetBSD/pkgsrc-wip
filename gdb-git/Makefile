@@ -49,7 +49,7 @@ AUTO_MKDIRS=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	gcore
+PLIST_VARS+=	gcore gdbserver
 
 .if ${OPSYS} == "SunOS"
 # Work around a bug in gdb's configure
@@ -70,7 +70,8 @@ BUILD_DEFS+=		${TARGET_STR}
 CONFIGURE_ARGS+=		--target=${TARGET_STR}
 TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
 .elif !empty(OPSYS:MLinux)
-PLIST.gcore=	YES
+PLIST.gcore=		YES
+PLIST.gdbserver=	YES
 .endif
 
 # TEST_DEPENDS
