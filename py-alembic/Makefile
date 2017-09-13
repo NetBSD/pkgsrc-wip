@@ -10,7 +10,7 @@ HOMEPAGE=	http://bitbucket.org/zzzeek/alembic
 COMMENT=	Database migration tool for SQLAlchemy
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-editor>=0.3:../../wip/py-editor
+DEPENDS+=	${PYPKGPREFIX}-editor>=0.3:../../editors/py-editor
 DEPENDS+=	${PYPKGPREFIX}-mako>=0.8.1:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.0:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.8:../../databases/py-sqlalchemy

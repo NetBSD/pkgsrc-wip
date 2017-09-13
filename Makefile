@@ -3074,7 +3074,6 @@ SUBDIR+=	py-easydev
 SUBDIR+=	py-easymodeler
 SUBDIR+=	py-ecos
 SUBDIR+=	py-ecspy
-SUBDIR+=	py-editor
 SUBDIR+=	py-eemeter
 SUBDIR+=	py-eigency
 SUBDIR+=	py-embedc
