@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/05/09 23:00:49 jihbed Exp $
 
-SHA1 (blosc-1.2.3.tar.gz) = 019c1512024fe2c17f45a0e2b7ec9e21f3e573c6
-RMD160 (blosc-1.2.3.tar.gz) = f0da5119cd18a0a8cba6a60b222deffb39b26d93
-Size (blosc-1.2.3.tar.gz) = 225781 bytes
+SHA1 (blosc-1.5.1.tar.gz) = eb091c35bc14b4c2e2eb9b942b2f8982576ceeda
+RMD160 (blosc-1.5.1.tar.gz) = 854146b50a95afebb5a343f45a10173c189a1f12
+SHA512 (blosc-1.5.1.tar.gz) = 76d8c5d9e0e3485aacd5646970ce62e34d6ef3ff04e134342544ab044c4d1925a537187b4ce8b7ef3f6cd327e26d47dbdf1bf04233186a8baedbc7c839071cf8
+Size (blosc-1.5.1.tar.gz) = 641172 bytes
