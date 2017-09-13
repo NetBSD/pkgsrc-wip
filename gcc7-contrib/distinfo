@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gcc-7.2.0.tar.gz) = dec3effe9f73bf2216a88804ac805a05f9b33ea8
+RMD160 (gcc-7.2.0.tar.gz) = fa4eb09ea8c3fc388c6918096f134e188cce4c2d
+SHA512 (gcc-7.2.0.tar.gz) = ae287b4696e78764136a60457dc147b2ef2cc108b2721c5c81d02467f47f08470a1be72b9576dd9af7c86838bc8543eabfe7a1c4ca7bd3166c40929ff5abd3ab
+Size (gcc-7.2.0.tar.gz) = 111997123 bytes
+SHA1 (patch-contrib_download__prerequisites) = fa71cd48499617f785ac6b5583268a58c0c87626
