@@ -1,4 +1,3 @@
 * fix installation path of man pages
-* check if installation path of locale files is correct
 * fix problem during startup - it does not find lots of pictures it wants to find
   https://github.com/andrejv/wxmaxima/issues/922
