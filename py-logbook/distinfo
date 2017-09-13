@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (Logbook-1.0.0.tar.gz) = 3fc457bdbb4b60e1d77ed8988d781476cf188fe9
-RMD160 (Logbook-1.0.0.tar.gz) = 2d1f3d100794bdd1409071d6eef3fcc41570672e
-SHA512 (Logbook-1.0.0.tar.gz) = 9cb33b0454364b2c80f1d390aebdb060414c9352f2d487c0f5e26e079dbf8f241f5814c9bd8c1e120796f2148a48f6e1894a28afe0064003bb65990858297c7f
-Size (Logbook-1.0.0.tar.gz) = 178113 bytes
+SHA1 (Logbook-1.1.0.tar.gz) = a37d227454a60be17005c0a733ba5b8314b06741
+RMD160 (Logbook-1.1.0.tar.gz) = 8f56fc0e7a6abb152600b25c39dfca05c205b9a7
+SHA512 (Logbook-1.1.0.tar.gz) = c03a20598e04b3a9b6f9add2a218b36bff6077af30a7410061dc79121132af7d3e13b8e9b7be830e257945b12745ac00d53f74177c2bbd10ab05c72addbdc3ec
+Size (Logbook-1.1.0.tar.gz) = 186683 bytes

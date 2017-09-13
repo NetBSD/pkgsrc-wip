@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Logbook-1.0.0
+DISTNAME=	Logbook-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=L/Logbook/}
