@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	blosc
+
+.if !defined(BLOSC_BUILDLINK3_MK)
+BLOSC_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.blosc+=	blosc>=1.12.1
+BUILDLINK_PKGSRCDIR.blosc?=	../../wip/blosc
+
+.endif	# BLOSC_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-blosc

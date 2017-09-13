@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/blosc-export.h
+include/blosc.h
+lib/libblosc.${PKGVERSION}.so
+lib/libblosc.1.so
+lib/libblosc.a
+lib/libblosc.so
+lib/pkgconfig/blosc.pc
