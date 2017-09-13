@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2014/04/06 16:13:01 othyro Exp $
 
-SHA1 (slime/v2.5.tar.gz) = f17ea85242963869a3fa0852495f84784e4c00bc
-RMD160 (slime/v2.5.tar.gz) = 36c4da6a30359a20597b80bea6581463b0b1625e
-Size (slime/v2.5.tar.gz) = 1032135 bytes
+SHA1 (xemacs-slime/v2.5.tar.gz) = f17ea85242963869a3fa0852495f84784e4c00bc
+RMD160 (xemacs-slime/v2.5.tar.gz) = 36c4da6a30359a20597b80bea6581463b0b1625e
+SHA512 (xemacs-slime/v2.5.tar.gz) = 695d365ca115bcd4a858ef0d63c134d068dc6cd07b0eff9350f337b1f0a5e374711cc72eba1aa882955fc34b4c2b8a644163b82fb0a07cc3a844dcad6f5b5107
+Size (xemacs-slime/v2.5.tar.gz) = 1032135 bytes
