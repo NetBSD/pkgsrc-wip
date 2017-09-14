@@ -51,7 +51,12 @@ CFLAGS+=		-marm
 .endif
 
 .if !empty(PKG_OPTIONS:Mrpi)
-MAKE_ENV+=	platform=rpi
+SUBST_CLASSES+=		vc
+SUBST_STAGE.vc=		pre-configure
+SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
+SUBST_FILES.vc=		Makefile
+SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
+MAKE_ENV+=		platform=rpi
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
 .endif
 

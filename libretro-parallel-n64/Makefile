@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-parallel-n64-20170801
+DISTNAME=	libretro-parallel-n64-20170907
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,17 +8,11 @@ COMMENT=	Libretro core for Nintendo 64 emulation
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	parallel-n64
-GITHUB_TAG=	b8f4445577119d10707ecb89c4362862bb5abd15
+GITHUB_TAG=	c052e43f382c6162956fc35df21081abb4f5b1cb
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
 EXTRACT_USING=	bsdtar
-
-SUBST_CLASSES+=		vc
-SUBST_STAGE.vc=		pre-configure
-SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
-SUBST_FILES.vc=		Makefile
-SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
