@@ -11,11 +11,19 @@ HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	GNU GCC helper utilities
 LICENSE=	gnu-gpl-v3
 
+USE_TOOLS+=	perl
+
+REPLACE_PERL+=	contrib/mklog
+
+GCC_PKGNAME=		gcc${GCC7_DIST_VERSION:R:R}
+GCC_SUBPREFIX=		${GCC_PKGNAME}-contrib
+GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
+
 NO_BUILD=	yes
 
-INSTALL_DIRS=	bin
+INSTALLATION_DIRS+=	${GCC_PREFIX:Q}/bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/mklog bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/mklog ${DESTDIR}${GCC_PREFIX:Q}/bin
 
 .include "../../mk/bsd.pkg.mk"
