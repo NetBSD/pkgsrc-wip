@@ -4,7 +4,7 @@ straight into any libretro-compatible frontend. This development interface is
 open to others so that they can run these pluggable emulator and game cores
 also in their own programs or devices.
 
-MAME is the  Multiple Arcade Machine Emulator. This is based on MAME 0.78
+MAME is the Multiple Arcade Machine Emulator. This is based on MAME 0.78
 with backported patches for performance and compatibility improvements. This
 core is a popular choice for the Raspberry Pi family and other low-powered
 hardware because it supports most 2D-era arcade games and a broad set of
