@@ -4,3 +4,4 @@ SHA1 (luakit-2017.08.10.tar.gz) = 9700901e09ec91f598df188e82972c0d2578aaed
 RMD160 (luakit-2017.08.10.tar.gz) = 144c400c408bdfc3385ee1c3b569351f1f0ae1af
 SHA512 (luakit-2017.08.10.tar.gz) = 6cceb241ca5a7ad7dfbb3964888318b5f2c5f734175ea7ecd5178419d037d58dc5e0aba00a7ed8ca3dd811cc5af953c353b0cd203be95a15c6a78c396f9230c8
 Size (luakit-2017.08.10.tar.gz) = 399564 bytes
+SHA1 (patch-config_window.lua) = ecf8a30ca267d6d0f29919bca952fa77cfc57607
