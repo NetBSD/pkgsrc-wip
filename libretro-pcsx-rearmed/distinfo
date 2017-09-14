@@ -1,9 +1,6 @@
 $NetBSD: distinfo,v 1.5 2017/02/17 17:02:01 joerg Exp $
 
-SHA1 (libretro-pcsx-rearmed-0.22.tar.gz) = bdd2e38aa53c13e557ddc0ccac2bdcea909f9f9d
-RMD160 (libretro-pcsx-rearmed-0.22.tar.gz) = ea7328498d32d12ee3e4b3504ed1685effecb9a1
-SHA512 (libretro-pcsx-rearmed-0.22.tar.gz) = e193e3a8061595a0ffe13d2755b446560687f776e72ffd51db9ba982267353ecf5a4ce82a060806da2d3389e4c6adaa99cddd3b58d29d30f196d9a828bb72d29
-Size (libretro-pcsx-rearmed-0.22.tar.gz) = 1153355 bytes
-SHA1 (patch-libpcsxcore_cdriso.c) = 31339ba2ea5a812c1172630bfb7ea64bd20ec9ec
-SHA1 (patch-libpcsxcore_new__dynarec_new__dynarec.c) = 82ec36e064ae4f725379ca889eefe1f60038adc0
-SHA1 (patch-plugins_cdrcimg_cdrcimg.c) = ecaca7dc5dd4ee8ecc19085947795be2112ed8d0
+SHA1 (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = 0a5eb683d712aa7bbc68d57d220939a7d3b0691f
+RMD160 (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = a4287b63b88f519a68d579092762540747587665
+SHA512 (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = dafa91ad8d7bca755ea4e8d3d3c50908c4de703d8f76745c68ad83bf9b4970f681c06eebd3fee5051a8c59954ed27a5abc779abe6c6dbe88cdbf00c9c8851e2c
+Size (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = 877749 bytes
