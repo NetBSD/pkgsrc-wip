@@ -16,7 +16,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.libretro
 
-MAKE_FLAGS+=	LIBPTHREAD="${BUILDLINK_LIBS.pthread}"
+MAKE_FLAGS+=	LIBPTHREAD="${PTHREAD_LIBS}"
+MAKE_FLAGS+=	EXTRA_LDFLAGS="${PTHREAD_LDFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
