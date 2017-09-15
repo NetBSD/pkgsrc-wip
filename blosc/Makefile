@@ -1,19 +1,16 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	c-blosc
-GITHUB_TAG=	v1.12.1
-DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT:S/c-//}-${DISTNAME:S/v//}
+DISTNAME=	blosc-1.12.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Blosc/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_PROJECT=	c-blosc
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://blosc.org/
 COMMENT=	Blocking, shuffling, and lossless compression library
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
