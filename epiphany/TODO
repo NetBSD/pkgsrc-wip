@@ -1,5 +1,7 @@
-This package hangs and has messages of 
-Error sending IPC message: Message too long
+- This package hangs and has messages of 
+   Error sending IPC message: Message too long
+  These happens also with wip/webkit-gtk, please give a look to
+  wip/webkit-gtk/TODO for more information.
 
-Saw occasional core dumps and leaks.
-Old webkit may be the problem?
+- Saw occasional core dumps and leaks.
+  Old webkit may be the problem?
