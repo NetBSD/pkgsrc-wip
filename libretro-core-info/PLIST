@@ -4,7 +4,6 @@ share/libretro/info/2048_libretro.info
 share/libretro/info/3dengine_libretro.info
 share/libretro/info/4do_libretro.info
 share/libretro/info/81_libretro.info
-share/libretro/info/NP2kai_libretro.info
 share/libretro/info/advanced_tests_libretro.info
 share/libretro/info/atari800_libretro.info
 share/libretro/info/beetle_psx_libretro.info
@@ -82,6 +81,7 @@ share/libretro/info/mupen64plus_gles3_libretro.info
 share/libretro/info/mupen64plus_libretro.info
 share/libretro/info/nekop2_libretro.info
 share/libretro/info/nestopia_libretro.info
+share/libretro/info/np2kai_libretro.info
 share/libretro/info/nxengine_libretro.info
 share/libretro/info/o2em_libretro.info
 share/libretro/info/openlara_libretro.info

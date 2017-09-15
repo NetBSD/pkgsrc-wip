@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	libretro-core-info-20170907
+DISTNAME=	libretro-core-info-20170914
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 HOMEPAGE=	https://www.libretro.com/
 COMMENT=	Libretro core information
 
-GITHUB_TAG=	1a34edf18946b83ab9c27a1a734ba7fb62cb7375
+GITHUB_TAG=	fb05fe13d318f183b990f386af132d06835d3973
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
