@@ -5,7 +5,7 @@ PKGNAME=	solarus-${DISTNAME}
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/christopho/zsdx/archive/
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.solarus-games.org/games/zelda-mystery-of-solarus-dx/
 COMMENT=	Zelda Mystery of Solarus DX
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
