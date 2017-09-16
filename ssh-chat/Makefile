@@ -8,7 +8,7 @@ CATEGORIES=	chat security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shazow/}
 GITHUB_PROJECT=	ssh-chat
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://github.com/shazow/ssh-chat
 COMMENT=	Chat over SSH
 LICENSE=	mit

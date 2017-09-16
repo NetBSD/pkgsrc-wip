@@ -8,7 +8,7 @@ CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=howeyc/}
 GITHUB_PROJECT=	gopass
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://github.com/howeyc/gopass
 COMMENT=	getpasswd for Go
 LICENSE=	isc

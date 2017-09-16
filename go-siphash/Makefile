@@ -8,7 +8,7 @@ CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dchest/}
 GITHUB_PROJECT=	siphash
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://github.com/dchest/siphash
 COMMENT=	Go implementation of SipHash-2-4
 LICENSE=	public-domain

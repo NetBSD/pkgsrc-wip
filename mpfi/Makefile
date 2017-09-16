@@ -4,7 +4,7 @@ DISTNAME=	mpfi-1.5.1
 CATEGORIES=	math
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/30130/
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://gforge.inria.fr/frs/download.php/file/30130/
 COMMENT=	TODO: Short description of the package
 LICENSE=	gnu-gpl-v2

@@ -6,7 +6,7 @@ PKGNAME=	${DIST_SUBDIR}-${DISTNAME}
 CATEGORIES=	net devel
 MASTER_SITES=	https://gitweb.torproject.org/pluggable-transports/goptlib.git/snapshot/
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://gitweb.torproject.org/pluggable-transports/goptlib.git/snapshot/
 COMMENT=	Library for writing Tor pluggable transports in Go
 LICENSE=	cc0-1.0-universal

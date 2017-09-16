@@ -8,7 +8,7 @@ CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
 GITHUB_PROJECT=	ed25519
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://github.com/agl/ed25519
 COMMENT=	Ed25519 for Go
 LICENSE=	modified-bsd

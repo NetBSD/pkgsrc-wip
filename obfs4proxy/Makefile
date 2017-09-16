@@ -5,7 +5,7 @@ CATEGORIES=	security net
 MASTER_SITES=	https://people.torproject.org/~yawning/releases/obfs4proxy/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://people.torproject.org/~yawning/releases/obfs4proxy/
 COMMENT=	Look-like nothing obfuscation protocol
 LICENSE=	modified-bsd

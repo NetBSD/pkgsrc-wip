@@ -4,7 +4,7 @@ DISTNAME=	sollya-5.0
 CATEGORIES=	math
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/33151/
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	https://gforge.inria.fr/frs/download.php/33151/
 COMMENT=	Environment and library for safe floating-point code development
 LICENSE=	cecil-1.0 AND gnu-gpl-v3
