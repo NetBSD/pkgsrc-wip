@@ -109,7 +109,7 @@ DESCR_SRC="$(${MAKE} show-var VARNAME=DESCR_SRC) /dev/null"
 
 DASH70=----------------------------------------------------------------------
 
-echo "Import ${PKGNAME} as ${CATEGORY}/${PACKAGE}." > ${MSG}
+echo "${CATEGORY}/${PACKAGE}: import ${PKGNAME}" > ${MSG}
 echo "" >> ${MSG}
 cat ${DESCR_SRC} >> ${MSG}
 echo "${SCM}: ${DASH70}" >> ${MSG}
