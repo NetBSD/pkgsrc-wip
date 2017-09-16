@@ -755,7 +755,7 @@ ${PYSITELIB}/theano/sandbox/neighbours.pyo
 ${PYSITELIB}/theano/sandbox/rng_mrg.py
 ${PYSITELIB}/theano/sandbox/rng_mrg.pyc
 ${PYSITELIB}/theano/sandbox/rng_mrg.pyo
-${PYSITELIB}/theano/sandbox/samples_MRG31k3p_1${PYVERSSUFFIX}_5.txt
+${PYSITELIB}/theano/sandbox/samples_MRG31k3p_12_7_5.txt
 ${PYSITELIB}/theano/sandbox/softsign.py
 ${PYSITELIB}/theano/sandbox/softsign.pyc
 ${PYSITELIB}/theano/sandbox/softsign.pyo
