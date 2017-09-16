@@ -9,4 +9,7 @@
   ...according a quick grep the code path involved seems in
   Source/WebKit2/Platform/IPC/unix/ConnectionUnix.cpp:Connection::sendOutputMessage()
   ...and the process program is WebKitNetworkPro.
-    -- leot (2017/09/11)
+
+  Changing default SOCKET_TYPE to `SOCK_STREAM' seems to fix that (so treating
+  NetBSD like Darwin!) seems to fix this issue.
+    -- leot (2017/09/16)
