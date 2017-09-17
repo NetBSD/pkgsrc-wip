@@ -2848,7 +2848,6 @@ SUBDIR+=	py-aigo
 SUBDIR+=	py-aikif
 SUBDIR+=	py-aipy
 SUBDIR+=	py-albatross
-SUBDIR+=	py-alembic
 SUBDIR+=	py-alfanous
 SUBDIR+=	py-algebraic
 SUBDIR+=	py-algebraixlib

@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 PYTHON_VERSIONS_ACCEPTED=	36 35 34
 
 DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.0a5:../../mail/py-aiosmtpd
-DEPENDS+=	${PYPKGPREFIX}-alembic-[0-9]*:../../wip/py-alembic
+DEPENDS+=	${PYPKGPREFIX}-alembic-[0-9]*:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.14.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-falcon>=1.0.0rc1:../../devel/py-falcon
