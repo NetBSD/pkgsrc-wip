@@ -53,7 +53,7 @@ DEPENDS+=	p5-HTML-Format>=2.12:../../www/p5-HTML-Format
 DEPENDS+=	p5-HTML-Tree>=5.0:../../www/p5-HTML-Tree
 DEPENDS+=	p5-Switch>=2.1:../../lang/p5-Switch
 DEPENDS+=	p5-Time-Local>=1.25:../../time/p5-Time-Local
-DEPENDS+=	p5-Mail-Message>=3.0:../../wip/p5-Mail-Message
+DEPENDS+=	p5-Mail-Message>=3.0:../../mail/p5-Mail-Message
 DEPENDS+=	p5-Mail-IMAPClient>=3.3:../../mail/p5-Mail-IMAPClient
 DEPENDS+=	p5-Mail-POP3Client>=2.1:../../mail/p5-Mail-POP3Client
 DEPENDS+=	p5-IO-Socket-SSL>=2.0:../../security/p5-IO-Socket-SSL
