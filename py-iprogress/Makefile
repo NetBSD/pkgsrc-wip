@@ -10,10 +10,8 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/I/IProgress/
 COMMENT=	Text progress bar library for Python
 LICENSE=	modified-bsd OR gnu-lgpl-v2.1
 
-DEPENDS+=	 ${PYPKGPREFIX}-ipython>=2.0.0:../../devel/py- ipython
-DEPENDS+=	 ${PYPKGPREFIX}-six>=1.9.0:../../lang/py- six
-
-WRKSRC=		${WRKDIR}/IProgress-0.2
+DEPENDS+=	 ${PYPKGPREFIX}-ipython>=2.0.0:../../devel/py-ipython
+DEPENDS+=	 ${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
