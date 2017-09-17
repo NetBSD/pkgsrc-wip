@@ -11,4 +11,3 @@ ${PYSITELIB}/gravipy/__init__.pyo
 ${PYSITELIB}/gravipy/tensorial.py
 ${PYSITELIB}/gravipy/tensorial.pyc
 ${PYSITELIB}/gravipy/tensorial.pyo
-share/doc/py-gravipy/GraviPy - tutorial.html
