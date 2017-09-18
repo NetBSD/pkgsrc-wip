@@ -228,7 +228,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
 _EMACS_VERSIONS_ALL= \
 	emacs20 emacs21 emacs21nox emacs22 emacs22nox emacs23 emacs23nox \
-	emacs24 emacs24nox emacs25 emacs26\
+	emacs24 emacs24nox emacs25 emacs26 emacs27\
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -243,7 +243,8 @@ _EMACS_PKGDIR_MAP= \
 	emacs24nox@../../editors/emacs24-nox11 \
 	emacs25@../../editors/emacs25 \
 	emacs25nox@../../editors/emacs25-nox11 \
-	emacs26@../../wip/emacs-git \
+	emacs26@../../editors/emacs26 \
+	emacs27@../../wip/emacs-git \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
