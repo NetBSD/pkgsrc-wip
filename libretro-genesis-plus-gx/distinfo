@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-genesis-plus-gx-20170815-abc3d20faf35e97dae1482bc0d5c5d0cac282a2d.tar.gz) = 208520fd7e286bc73aaa858a4b3c3d068bf4be93
-RMD160 (libretro-genesis-plus-gx-20170815-abc3d20faf35e97dae1482bc0d5c5d0cac282a2d.tar.gz) = d63e83a7cbccd1e40f0771e229bc40d8fadf8299
-SHA512 (libretro-genesis-plus-gx-20170815-abc3d20faf35e97dae1482bc0d5c5d0cac282a2d.tar.gz) = 578c8395da4e71d430b1b87462cc0a83a80994681efabc310bdbc5a90c9cc38ceccad8c040f4f3431325eb59c4ef2a443a6eee113d292b4dc8982bcdf8f4e804
-Size (libretro-genesis-plus-gx-20170815-abc3d20faf35e97dae1482bc0d5c5d0cac282a2d.tar.gz) = 5848843 bytes
+SHA1 (libretro-genesis-plus-gx-20170916-997360b11463c9851858e42aa37ce972cdf76a4d.tar.gz) = c2163c0c925a3d91d3a5c2a016d8d0c13b68caa2
+RMD160 (libretro-genesis-plus-gx-20170916-997360b11463c9851858e42aa37ce972cdf76a4d.tar.gz) = f52dffde0e300b0e430241ba36993f23ee6b733c
+SHA512 (libretro-genesis-plus-gx-20170916-997360b11463c9851858e42aa37ce972cdf76a4d.tar.gz) = cfdcdc424abacc0b4ebdbab50fcad574cb2dc1552fb34f0912a83c5753f0aa56fd76297048b5772c9f3970320f8d3587eff5aa90ab9f9053bbf540d4459c4bb8
+Size (libretro-genesis-plus-gx-20170916-997360b11463c9851858e42aa37ce972cdf76a4d.tar.gz) = 6152161 bytes

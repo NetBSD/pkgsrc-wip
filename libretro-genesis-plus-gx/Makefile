@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-genesis-plus-gx-20170815
+DISTNAME=	libretro-genesis-plus-gx-20170916
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	picodrive-license
 
 GITHUB_PROJECT=	Genesis-Plus-GX
-GITHUB_TAG=	abc3d20faf35e97dae1482bc0d5c5d0cac282a2d
+GITHUB_TAG=	997360b11463c9851858e42aa37ce972cdf76a4d
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS=	gmake
@@ -22,7 +22,7 @@ BUILD_MAKE_FLAGS+=	SHARED_LIBVORBIS=1
 .include "../../mk/endian.mk"
 
 .if ${MACHINE_ENDIAN} == "big"
-BUILD_MAKE_FLAGS+=	ENDIANNESS_DEFINES=-DBYTE_ORDER=BIG_ENDIAN
+BUILD_MAKE_FLAGS+=	ENDIANNESS_DEFINES="-DBYTE_ORDER=BIG_ENDIAN -DCPU_IS_BIG_ENDIAN=1 -DWORDS_BIGENDIAN=1"
 .endif
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
