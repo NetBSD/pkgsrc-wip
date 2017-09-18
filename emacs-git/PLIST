@@ -110,6 +110,7 @@ share/emacs/${PKGVERSION}/etc/NEWS.22
 share/emacs/${PKGVERSION}/etc/NEWS.23
 share/emacs/${PKGVERSION}/etc/NEWS.24
 share/emacs/${PKGVERSION}/etc/NEWS.25
+share/emacs/${PKGVERSION}/etc/NEWS.26
 share/emacs/${PKGVERSION}/etc/NEXTSTEP
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
 share/emacs/${PKGVERSION}/etc/ORDERS

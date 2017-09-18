@@ -2,7 +2,7 @@
 
 .include	"version.mk"
 DISTNAME=	emacs-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
-PKGNAME=	emacs26-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
+PKGNAME=	emacs27-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 CATEGORIES=	editors
 MASTER_SITES=	#
 
@@ -63,5 +63,6 @@ pre-configure:
 
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libimagequant/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
