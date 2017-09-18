@@ -3360,6 +3360,7 @@ SUBDIR+=	py-msumastro
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-multimethods
 SUBDIR+=	py-multiprocess
+SUBDIR+=	py-multitasking
 SUBDIR+=	py-mvpoly
 SUBDIR+=	py-myfitter
 SUBDIR+=	py-mysqldb-docs
