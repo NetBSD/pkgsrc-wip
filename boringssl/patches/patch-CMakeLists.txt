@@ -1,0 +1,18 @@
+$NetBSD$
+
+Avoid defining _XOPEN_SOURCE twice (we're passing it as CFLAGS)
+
+--- CMakeLists.txt.orig	2017-09-19 07:08:07.000000000 +0000
++++ CMakeLists.txt
+@@ -152,11 +152,6 @@ if(CMAKE_COMPILER_IS_GNUCXX)
+   endif()
+ endif()
+ 
+-# pthread_rwlock_t requires a feature flag.
+-if(NOT WIN32)
+-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D_XOPEN_SOURCE=700")
+-endif()
+-
+ if(FUZZ)
+   if(NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+     message(FATAL_ERROR "You need to build with Clang for fuzzing to work")
