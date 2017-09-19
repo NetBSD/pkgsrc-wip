@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2014/10/09 14:06:29 thomasklausner Exp $
-#
 
-DISTNAME=	CGI-Application-Server-0.060
+DISTNAME=	CGI-Application-Server-0.063
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
@@ -18,7 +17,6 @@ DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 DEPENDS+=       p5-HTTP-Server-Simple>=0:../../www/p5-HTTP-Server-Simple
 DEPENDS+=       p5-Test-WWW-Mechanize>=0:../../www/p5-Test-WWW-Mechanize
 DEPENDS+=       p5-HTTP-Server-Simple-Static>=0:../../www/p5-HTTP-Server-Simple-Static
-
 
 PERL5_PACKLIST=		auto/CGI/Application/Server/.packlist
 USE_LANGUAGES=		# none
