@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/11/09 18:14:45 jihbed Exp $
+
+SHA1 (fix-yahoo-finance-0.0.19.tar.gz) = 964f7ab4b360b33c42ae23017c1fe8e196d39613
+RMD160 (fix-yahoo-finance-0.0.19.tar.gz) = fc54fd8e42abdfd968048e5e9de08b594d5156f4
+SHA512 (fix-yahoo-finance-0.0.19.tar.gz) = 5174d5c194c4375bb62c4640604d1e0ca9aefd7352035e8b7e9af3ea8682fb11df879287bd6ce93611ee026369b56bbe041079a110485666dbe698c7d205211b
+Size (fix-yahoo-finance-0.0.19.tar.gz) = 10352 bytes

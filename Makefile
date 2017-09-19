@@ -3111,6 +3111,7 @@ SUBDIR+=	py-filelock
 SUBDIR+=	py-fiona
 SUBDIR+=	py-fipy
 SUBDIR+=	py-fitsarray
+SUBDIR+=	py-fix-yahoo-finance
 SUBDIR+=	py-fjd
 SUBDIR+=	py-flavio
 SUBDIR+=	py-flipper
