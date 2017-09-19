@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/03/11 15:06:47 uccwen Exp $
-#
 
-DISTNAME=	Astro-SpaceTrack-0.090
+DISTNAME=	Astro-SpaceTrack-0.099
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Astro/}
