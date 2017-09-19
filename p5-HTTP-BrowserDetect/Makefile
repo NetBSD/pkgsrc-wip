@@ -11,7 +11,6 @@ COMMENT=		Detect browser, version, OS from UserAgent
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
-DEPENDS+=		p5-JSON-PP-[0-9]*:../../converters/p5-JSON-PP
 
 PERL5_PACKLIST=		auto/HTTP/BrowserDetect/.packlist
 

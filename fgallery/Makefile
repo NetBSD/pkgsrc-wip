@@ -25,7 +25,6 @@ DEPENDS+=       pngcrush>=1.7:../../graphics/pngcrush
 DEPENDS+=       lcms2>=2.7:../../graphics/lcms2
 DEPENDS+=       p7zip>=9.38:../../archivers/p7zip
 DEPENDS+=       p5-Image-ExifTool>=10.0:../../graphics/p5-Image-ExifTool
-DEPENDS+=       p5-JSON-PP>=2.27:../../converters/p5-JSON-PP
 
 FG_SHAREDIR=    share/${PKGBASE}
 FG_VIEWDIR=     share/${PKGBASE}/view
