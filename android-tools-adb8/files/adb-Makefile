@@ -1,0 +1,49 @@
+SUBDIR=	client
+NOMAN= #defined
+
+.include <bsd.own.mk>
+
+
+LIB=	adb
+
+SRCS=		adb.cpp adb_auth_host.cpp adb_client.cpp adb_io.cpp
+SRCS+=		adb_listeners.cpp adb_trace.cpp adb_utils.cpp
+SRCS+=		bugreport.cpp
+SRCS+=		commandline.cpp console.cpp diagnose_usb.cpp fdevent.cpp
+SRCS+=		jdwp_service.cpp line_printer.cpp services.cpp
+SRCS+=		socket_spec.cpp
+SRCS+=		sockets.cpp shell_service.cpp file_sync_client.cpp transport_usb.cpp
+SRCS+=		sysdeps_unix.cpp transport.cpp transport_local.cpp transport_mdns.cpp
+SRCS+=		client/main.cpp
+
+
+CPPFLAGS+=	-DADB_HOST=1
+CPPFLAGS+=	-DHAVE_FORKEXEC=1
+CPPFLAGS+=	-DHAVE_SYMLINKS
+CPPFLAGS+=	-DHAVE_TERMIO_H
+CPPFLAGS+=	-DADB_REVISION=11
+CPPFLAGS+=	-I.
+CPPFLAGS+=	-I../include
+CPPFLAGS+=	-I../base/include
+CPPFLAGS+=	-I../libcutils/include
+CPPFLAGS+=	-I../libutils/include
+CPPFLAGS+=	-I../libcrypto_utils/include
+CPPFLAGS+=	-I../fs_mgr/include
+
+CFLAGS= -O2 -g -Wall
+CXXFLAGS= -std=gnu++14
+#LIBS= -lrt -lpthread -lcrypto -lssl -lz
+
+DPADD+=		${.CURDIR}/../libcutils
+DPADD+=		${.CURDIR}/../base
+
+LDADD+=		-L${.CURDIR}/../libcutils -lcutils
+LDADD+=		-L${.CURDIR}/../base -lbase
+LDADD+=		-lssl -lcrypto -lpthread
+
+LDSTATIC=	-static
+
+NOGCCERROR=	#defined
+NOCLANGERROR=	#defined
+
+.include <bsd.lib.mk>

@@ -1,0 +1,47 @@
+NOMAN= #defined
+
+.include <bsd.own.mk>
+
+PROG_CXX=	adb
+
+SRCS=		usb_libusb.cpp main.cpp
+
+PREFIX?=	/usr/pkg
+
+CPPFLAGS+=	-DADB_HOST=1
+CPPFLAGS+=	-DHAVE_FORKEXEC=1
+CPPFLAGS+=	-DHAVE_SYMLINKS
+CPPFLAGS+=	-DHAVE_TERMIO_H
+CPPFLAGS+=	-DADB_REVISION=11
+CPPFLAGS+=	-I${PREFIX}/include
+CPPFLAGS+=	-I.
+CPPFLAGS+=	-I../daemon
+CPPFLAGS+=	-I../
+CPPFLAGS+=	-I../../include
+CPPFLAGS+=	-I../../base/include
+CPPFLAGS+=	-I../../libcutils/include
+CPPFLAGS+=	-I../../libutils/include
+CPPFLAGS+=	-I../../libcrypto_utils/include
+CPPFLAGS+=	-I../../fs_mgr/include
+
+CFLAGS= -O2 -g -Wall
+CXXFLAGS= -std=gnu++14
+#LIBS= -lrt -lpthread -lcrypto -lssl -lz
+
+DPADD+=		${.CURDIR}/../../libcutils
+DPADD+=		${.CURDIR}/../../base
+DPADD+=		${.CURDIR}/..
+
+LDADD+=		-L${.CURDIR}/../../libcutils -lcutils
+LDADD+=		-L${.CURDIR}/../../base -lbase
+LDADD+=		-L${.CURDIR}/../../adb -ladb
+LDADD+=		-L${PREFIX}/bssl/lib # XXX
+LDADD+=		-L${PREFIX}/lib #XXX!
+LDADD+=		-lssl -lcrypto -lpthread -lusb-1.0 -ldns_sd
+
+LDSTATIC=	-static
+
+NOGCCERROR=	#defined
+NOCLANGERROR=	#defined
+
+.include <bsd.prog.mk>

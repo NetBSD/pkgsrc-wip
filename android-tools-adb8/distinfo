@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.2 2015/03/07 16:28:33 tnn2 Exp $
+
+SHA1 (platform_system_core-android-8.0.0_r11.tar.gz) = ef1b57388986847856551561def54e16176ab27c
+RMD160 (platform_system_core-android-8.0.0_r11.tar.gz) = c7128987d8046f485eedc59d969fc110a4c5db3e
+SHA512 (platform_system_core-android-8.0.0_r11.tar.gz) = d1c8757d9bc4d8f8b32b9353946a45de2bfea6349af733240b70dc3e29d75196ecb0d95fe9357bf804d0ddc8e160f218b352108341e81ed8d45503fcaf6f3106
+Size (platform_system_core-android-8.0.0_r11.tar.gz) = 5115425 bytes
+SHA1 (patch-adb_adb.h) = ebe4534fda180cbe55be6476ebd3ae7cd4b0d4ff
+SHA1 (patch-adb_adb__trace.h) = dc5454ae819159651d323e223c49def04c3897f4
+SHA1 (patch-adb_client_usb__libusb.cpp) = 97f99fad0a9b7660b42509562320223a66b4647f
+SHA1 (patch-adb_shell__service.cpp) = 9f0b154117c71054f04aa7fa1fecde43599cc3fa
+SHA1 (patch-adb_shell__service.h) = 2a81cf808092598d6c7e065ed14bf4c502b322c2
+SHA1 (patch-base_file.cpp) = b9e4afc690834990398461354f16a29b447d00c9
+SHA1 (patch-base_logging.cpp) = 9497504937cdad468c9438cce0327a05b105c434
+SHA1 (patch-sysdeps.h) = 5e4626599f8d5a0ca1d8151c0abee7bf376a95bc

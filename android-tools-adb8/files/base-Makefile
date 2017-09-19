@@ -1,0 +1,27 @@
+NOMAN= #defined
+
+.include <bsd.own.mk>
+
+LIB= base
+SRCS=  parsenetaddress.cpp
+SRCS+= file.cpp logging.cpp stringprintf.cpp strings.cpp quick_exit.cpp
+
+CPPFLAGS+= -DADB_HOST=1
+CPPFLAGS+= -DHAVE_FORKEXEC=1
+CPPFLAGS+= -DHAVE_SYMLINKS
+CPPFLAGS+= -DHAVE_TERMIO_H
+CPPFLAGS+= -DADB_REVISION=11
+CPPFLAGS+= -I.
+CPPFLAGS+= -I../base/include
+CPPFLAGS+= -Iinclude
+CPPFLAGS+= -I../libutils/include
+CPPFLAGS+= -I../libcrypto_utils/include
+
+CFLAGS= -O2 -g -Wall
+CXXFLAGS= -std=gnu++14
+LIBS= -lrt -lpthread -lcrypto -lssl -lz
+
+NOGCCERROR= #defined
+NOCLANGERROR= #defined
+
+.include <bsd.lib.mk>
