@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2015/12/31 02:57:35 agc Exp $
+@comment $NetBSD$
 bssl/bin/bssl
 bssl/bin/bssl_shim
 bssl/bin/ssl_test
@@ -39,15 +39,17 @@ bssl/include/openssl/evp.h
 bssl/include/openssl/ex_data.h
 bssl/include/openssl/hkdf.h
 bssl/include/openssl/hmac.h
+bssl/include/openssl/is_boringssl.h
 bssl/include/openssl/lhash.h
 bssl/include/openssl/lhash_macros.h
 bssl/include/openssl/md4.h
 bssl/include/openssl/md5.h
 bssl/include/openssl/mem.h
+bssl/include/openssl/nid.h
 bssl/include/openssl/obj.h
 bssl/include/openssl/obj_mac.h
 bssl/include/openssl/objects.h
-bssl/include/openssl/opensslfeatures.h
+bssl/include/openssl/opensslconf.h
 bssl/include/openssl/opensslv.h
 bssl/include/openssl/ossl_typ.h
 bssl/include/openssl/pem.h
@@ -55,19 +57,19 @@ bssl/include/openssl/pkcs12.h
 bssl/include/openssl/pkcs7.h
 bssl/include/openssl/pkcs8.h
 bssl/include/openssl/poly1305.h
-bssl/include/openssl/pqueue.h
+bssl/include/openssl/pool.h
 bssl/include/openssl/rand.h
 bssl/include/openssl/rc4.h
+bssl/include/openssl/ripemd.h
 bssl/include/openssl/rsa.h
 bssl/include/openssl/safestack.h
 bssl/include/openssl/sha.h
+bssl/include/openssl/span.h
 bssl/include/openssl/srtp.h
 bssl/include/openssl/ssl.h
 bssl/include/openssl/ssl3.h
 bssl/include/openssl/stack.h
-bssl/include/openssl/stack_macros.h
 bssl/include/openssl/thread.h
-bssl/include/openssl/time_support.h
 bssl/include/openssl/tls1.h
 bssl/include/openssl/type_check.h
 bssl/include/openssl/x509.h
