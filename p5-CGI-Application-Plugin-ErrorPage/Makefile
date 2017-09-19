@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2014/10/09 14:06:28 thomasklausner Exp $
-#
 
-DISTNAME=	CGI-Application-Plugin-ErrorPage-1.20
+DISTNAME=	CGI-Application-Plugin-ErrorPage-1.21
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}

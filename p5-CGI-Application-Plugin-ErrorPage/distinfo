@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/01/21 19:27:59 ficovh Exp $
 
-SHA1 (CGI-Application-Plugin-ErrorPage-1.20.tar.gz) = 4b72250fa6764effbc2e8d9c0d212f65306478fe
-RMD160 (CGI-Application-Plugin-ErrorPage-1.20.tar.gz) = 83d0c9ed76cf8391f5f7c77b3535790a59e1bdfb
-Size (CGI-Application-Plugin-ErrorPage-1.20.tar.gz) = 12333 bytes
+SHA1 (CGI-Application-Plugin-ErrorPage-1.21.tar.gz) = 468e4b43a7037e502760c781ea9973c54ee25090
+RMD160 (CGI-Application-Plugin-ErrorPage-1.21.tar.gz) = f29a3bebf2d58c097c9669dd032d1f171a7a3622
+SHA512 (CGI-Application-Plugin-ErrorPage-1.21.tar.gz) = 7ff7c2b8f32bf9a43901be52d37c929ad9c9fb728f38d4b55d46e00be7062317329b20605925b0dc0fd45fc367fae3db856ac785ffe48e7507028daacbf5c788
+Size (CGI-Application-Plugin-ErrorPage-1.21.tar.gz) = 12572 bytes
