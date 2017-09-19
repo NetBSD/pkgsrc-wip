@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2005/08/29 20:04:38 kuli0020 Exp $
 
-SHA1 (Catalyst-Plugin-Email-0.04.tar.gz) = fcbc96bff8c07d66529042cb97b32a15e72e2288
-RMD160 (Catalyst-Plugin-Email-0.04.tar.gz) = 714670448d390c254f4908715873fc44bf975b61
-Size (Catalyst-Plugin-Email-0.04.tar.gz) = 1813 bytes
+SHA1 (Catalyst-Plugin-Email-0.09.tar.gz) = 81689c33cb033fbf8f13f190257d4e3f24e9f446
+RMD160 (Catalyst-Plugin-Email-0.09.tar.gz) = eb373e566726886b35bb8de034e76905d4ee6a2d
+SHA512 (Catalyst-Plugin-Email-0.09.tar.gz) = 5cea24e1bfc413a69aa013fc69ffaa013a7ce337459817d28e5b09656d3833a02b82b87a73038c6c450f4d6650fa30d693381299d055d7c017645935975f1007
+Size (Catalyst-Plugin-Email-0.09.tar.gz) = 4787 bytes
