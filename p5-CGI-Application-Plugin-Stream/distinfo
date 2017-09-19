@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/04/29 04:13:31 ficovh Exp $
 
-SHA1 (CGI-Application-Plugin-Stream-2.10.tar.gz) = 78cca2cefe005f59c440a362c4cbeeaa12cf115b
-RMD160 (CGI-Application-Plugin-Stream-2.10.tar.gz) = ba1482a20de9c430e7fe1332810646e180cc0922
-Size (CGI-Application-Plugin-Stream-2.10.tar.gz) = 5958 bytes
+SHA1 (CGI-Application-Plugin-Stream-2.12.tar.gz) = b05b4b155f9b8c0647b74648b3fc05f154f62e35
+RMD160 (CGI-Application-Plugin-Stream-2.12.tar.gz) = 81007c190b50b76a5809f8d13bf09df3dfc32f21
+SHA512 (CGI-Application-Plugin-Stream-2.12.tar.gz) = 8e2adad7c67e6173eb0783bf3c4920f7ae733d6f8ce1bbed2d588703c83b7ab560e7eb4ffc03afde6beb70a350d153bcb5d01d5a27ba33c78298e1883133f141
+Size (CGI-Application-Plugin-Stream-2.12.tar.gz) = 7488 bytes
