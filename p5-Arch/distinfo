@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2007/02/06 05:41:02 netcap Exp $
 
-SHA1 (Arch-0.5.1.tar.gz) = f164779cbc7d83105f2fba8878f49756b86873a0
-RMD160 (Arch-0.5.1.tar.gz) = 26005aed0e32a825f94b2b54704a2a3c96ec94d8
-Size (Arch-0.5.1.tar.gz) = 95665 bytes
+SHA1 (Arch-0.5.2.tar.gz) = 8c789285ef80092deb0ccad8de98338e7051bf08
+RMD160 (Arch-0.5.2.tar.gz) = 395da64e34cb6bed7bb0e42fe21a80da27eea044
+SHA512 (Arch-0.5.2.tar.gz) = d4a999945ab500439047fa50471324cf8b4a74d1199c65ce0daf987d4fdd26958624f5bca763e635abe33283d6cede28ef7cacd1c91c58c975a2294af30b8abd
+Size (Arch-0.5.2.tar.gz) = 98054 bytes

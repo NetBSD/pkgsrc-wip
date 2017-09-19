@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2012/10/04 09:13:21 asau Exp $
 
-DISTNAME=	Arch-0.5.1
+DISTNAME=	Arch-0.5.2
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 # MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Arch/}
