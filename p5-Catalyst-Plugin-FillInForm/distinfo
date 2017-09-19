@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2005/08/29 20:34:52 kuli0020 Exp $
 
-SHA1 (Catalyst-Plugin-FillInForm-0.06.tar.gz) = 0d23bc49387723ce37bc0b071ecb000d3bb6dade
-RMD160 (Catalyst-Plugin-FillInForm-0.06.tar.gz) = e70b985593bd9c9322228a93857543c7a690b9c0
-Size (Catalyst-Plugin-FillInForm-0.06.tar.gz) = 2837 bytes
+SHA1 (Catalyst-Plugin-FillInForm-0.12.tar.gz) = d8da9bf44121f07f03e0f7e617be984c440ccfda
+RMD160 (Catalyst-Plugin-FillInForm-0.12.tar.gz) = 1b541a9444b192b2f502a4d46bfeeed8782aec2e
+SHA512 (Catalyst-Plugin-FillInForm-0.12.tar.gz) = 572c601a47218c23982f435115b89c48308af7cd22558165ca105a42ab3e247593f261785f4cce6d367f96f792de927219f3494b9e9d749a95dde93228fe2f2b
+Size (Catalyst-Plugin-FillInForm-0.12.tar.gz) = 17832 bytes
