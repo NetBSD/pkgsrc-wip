@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.2 2013/02/14 19:20:25 shattered Exp $
 
-SHA1 (Apache2-ModSSL-0.08.tar.gz) = c7f5f9086d59d3845d1c1cba04eae8a67d44c658
-RMD160 (Apache2-ModSSL-0.08.tar.gz) = e6540913373ae4f5d6c9d33ab4e193e24a6313e0
-Size (Apache2-ModSSL-0.08.tar.gz) = 9679 bytes
+SHA1 (Apache2-ModSSL-0.10.tar.gz) = a72ee7c93fe2f44053f552a647db7101187d400d
+RMD160 (Apache2-ModSSL-0.10.tar.gz) = 110a48fdea6344441aafc11bd1ce5d88eb6cd9fb
+SHA512 (Apache2-ModSSL-0.10.tar.gz) = f003cfa8056950ea101041b3801b6f4b0f9f856c09d64085869196e87ac52cbba5cc888515e7a6f78a80db14971e01df1f2217dfe05c6e712181b26fa1d43030
+Size (Apache2-ModSSL-0.10.tar.gz) = 10118 bytes
 SHA1 (patch-aa) = fd46b3a01437c470754c563295147b49f51bd069
