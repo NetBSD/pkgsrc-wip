@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2013/01/21 01:53:59 othyro Exp $
-
-SHA1 (grip-3.3.1.tar.gz) = 58ef51fbddf981a189f8b5b39774e3bd6862127d
-RMD160 (grip-3.3.1.tar.gz) = ec523457b06505e6ec98605badcacd5085599676
-Size (grip-3.3.1.tar.gz) = 812562 bytes
-SHA1 (patch-aa) = f4f75d81614dbc5f8949eccba47e2fcbfe306f2b
-SHA1 (patch-ad) = 4f5b02e8b107ca296ff7374d9757c100bffd77fc

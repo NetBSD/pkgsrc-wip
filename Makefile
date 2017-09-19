@@ -1068,7 +1068,6 @@ SUBDIR+=	grc
 SUBDIR+=	greenbone-security-assistant
 SUBDIR+=	gretl
 SUBDIR+=	grilo-plugins
-SUBDIR+=	grip
 SUBDIR+=	grisbi
 SUBDIR+=	groku
 SUBDIR+=	groovy

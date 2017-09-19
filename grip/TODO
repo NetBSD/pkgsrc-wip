@@ -1,5 +1,0 @@
-$Id: TODO,v 1.5 2010/12/22 02:31:50 khorben Exp $
-
-    o Does not work well under NetBSD, we'll have to look deeply 
-      in it :).
-    o id3lib support disabled (breaks configure script).
