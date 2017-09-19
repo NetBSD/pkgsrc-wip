@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/01/29 06:48:31 ficovh Exp $
 
-SHA1 (CGI-Application-Plugin-ConfigAuto-1.30.tar.gz) = 1527cac938bc9730a30a91c03bae68715866e6dc
-RMD160 (CGI-Application-Plugin-ConfigAuto-1.30.tar.gz) = 7a45b53a66a5db23012145bb00d04c24d7646fbc
-Size (CGI-Application-Plugin-ConfigAuto-1.30.tar.gz) = 5801 bytes
+SHA1 (CGI-Application-Plugin-ConfigAuto-1.33.tar.gz) = 0f5572f7500a26c08279ad173a13ff87e9a7fa1f
+RMD160 (CGI-Application-Plugin-ConfigAuto-1.33.tar.gz) = 2d541c0777cea44231288b6d3c6b67863b028397
+SHA512 (CGI-Application-Plugin-ConfigAuto-1.33.tar.gz) = 206bef64a4fa1546728a1374dbcf5235cb5f8b12595f38fb5a5360e738e6aacec47e9025573570d5842a393b89a9e8267fbc2385eba44a73d71ced5f6b142faa
+Size (CGI-Application-Plugin-ConfigAuto-1.33.tar.gz) = 6043 bytes
