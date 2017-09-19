@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.1 2015/02/12 05:20:41 makoto Exp $
 
-SHA1 (Alien-SDL-1.444.tar.gz) = b425efe29b35a8ed6a9da653b3107795c74f4fe1
-RMD160 (Alien-SDL-1.444.tar.gz) = a7db2f10f746405584e5d55b7eaa9ff2f884c0c0
-Size (Alien-SDL-1.444.tar.gz) = 349527 bytes
+SHA1 (Alien-SDL-1.446.tar.gz) = 7272acef859f73e0351686502af02e5c7c2f6c32
+RMD160 (Alien-SDL-1.446.tar.gz) = bfd9eaf167fd84232465a6fa7f07b332b4c57da1
+SHA512 (Alien-SDL-1.446.tar.gz) = dfb5f104f449857b9567ca93a0c3b15aed2618e27019569c95c4b7469e1f7d5cc390fe2dda9c6add41e9648c1f6efe053d08a4bd0fcc5bc546a217721bea824c
+Size (Alien-SDL-1.446.tar.gz) = 350448 bytes
 SHA1 (patch-Build_PL) = 626da15f7f3d113974c65cf68b46e7ecb456dc5e
