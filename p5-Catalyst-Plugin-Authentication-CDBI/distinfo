@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 05:58:02 rillig Exp $
-
-SHA1 (Catalyst-Plugin-Authentication-CDBI-0.09.tar.gz) = 5d6ead68b440a3440727a790899ffb8f6d09f552
-RMD160 (Catalyst-Plugin-Authentication-CDBI-0.09.tar.gz) = fc8bb25e9d04dfe8f7949c6999cccb65eaa75c0c
-Size (Catalyst-Plugin-Authentication-CDBI-0.09.tar.gz) = 3488 bytes

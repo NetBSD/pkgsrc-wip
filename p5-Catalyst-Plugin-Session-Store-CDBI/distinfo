@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/06 09:27:01 netcap Exp $
-
-SHA1 (Catalyst-Plugin-Session-Store-CDBI-0.03.tar.gz) = b1b317117402de1be8b9c16c4cfd4cf91cdc7c55
-RMD160 (Catalyst-Plugin-Session-Store-CDBI-0.03.tar.gz) = 646d75309c3ce29dc95df8338e0162b53ce34464
-Size (Catalyst-Plugin-Session-Store-CDBI-0.03.tar.gz) = 4101 bytes
