@@ -2341,7 +2341,6 @@ SUBDIR+=	p5-CGI-Untaint
 SUBDIR+=	p5-CGI-Untaint-date
 SUBDIR+=	p5-CGI-Untaint-email
 SUBDIR+=	p5-Cache-Mmap
-SUBDIR+=	p5-Catalyst-Action-REST
 SUBDIR+=	p5-Catalyst-Component-InstancePerContext
 SUBDIR+=	p5-Catalyst-Controller-DBIC-API
 SUBDIR+=	p5-Catalyst-Engine-Apache
