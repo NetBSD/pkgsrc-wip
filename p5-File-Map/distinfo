@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2014/01/04 14:10:49 uccwen Exp $
 
-SHA1 (File-Map-0.61.tar.gz) = 39c5fe07ca4c1197e8f55aa1c313697e03e9f23b
-RMD160 (File-Map-0.61.tar.gz) = 1be60ce3bfc84a50159f158a7dd6418a7a6f138f
-Size (File-Map-0.61.tar.gz) = 74315 bytes
+SHA1 (File-Map-0.64.tar.gz) = 9ee774de3791bc6efc2d6f25cd7501f57aa48025
+RMD160 (File-Map-0.64.tar.gz) = 8e5c27470f08a61478a845cec12692d210638f88
+SHA512 (File-Map-0.64.tar.gz) = dc1182e79d20e835e19c78f5187dd108b45938209933a7074674d472ac300277fc1fb7604b023ad7d3456ef5837bb8274a94e1cac79f95f2a2235855c59d3809
+Size (File-Map-0.64.tar.gz) = 78083 bytes
