@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2013/03/30 20:53:30 jgoamakf Exp $
 
-SHA1 (HTML-GenerateUtil-1.11.tar.gz) = 95a980387dac6fbd210610ee36c74a91e33c945d
-RMD160 (HTML-GenerateUtil-1.11.tar.gz) = 9763c56f05b14ec4db975e0e042980b8bd86068d
-Size (HTML-GenerateUtil-1.11.tar.gz) = 21123 bytes
+SHA1 (HTML-GenerateUtil-1.20.tar.gz) = 64083cd510fc6de045d48789ee04cb295c88c3a6
+RMD160 (HTML-GenerateUtil-1.20.tar.gz) = 58e909fbed85072b5e41cabab7b2487ce6a6679e
+SHA512 (HTML-GenerateUtil-1.20.tar.gz) = bc99549fffa0d3a4ca48a2e1d4a3049a05ca6a62c0510b8cab698d87e5843716836d652f33af375ead918d3facaedef32fe4af06d6626d6055500d53135403ba
+Size (HTML-GenerateUtil-1.20.tar.gz) = 23448 bytes
