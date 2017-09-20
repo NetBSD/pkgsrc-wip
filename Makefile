@@ -2384,6 +2384,7 @@ SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBIx-Easy
 SUBDIR+=	p5-DBIx-Simple
 SUBDIR+=	p5-Dancer-Plugin-Database
+SUBDIR+=	p5-Dancer-Plugin-Database-Core
 SUBDIR+=	p5-Data-DPath
 SUBDIR+=	p5-Data-DPath-Validator
 SUBDIR+=	p5-Data-Properties
