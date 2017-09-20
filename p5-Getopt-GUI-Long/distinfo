@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/08/25 22:30:19 leot1990 Exp $
 
-SHA1 (Getopt-GUI-Long-0.91.tar.gz) = d8c8603312a9de02f92b73b1bd58944c1f0f2bbf
-RMD160 (Getopt-GUI-Long-0.91.tar.gz) = 1fa7ab2e5820cda0d7468c3e60554799243d8c44
-Size (Getopt-GUI-Long-0.91.tar.gz) = 13726 bytes
+SHA1 (Getopt-GUI-Long-0.93.tar.gz) = f387142e998bee5e20eb4efcc9765350a313a29d
+RMD160 (Getopt-GUI-Long-0.93.tar.gz) = 90099cc29c320769e4f89fe25d7d0d420a889e48
+SHA512 (Getopt-GUI-Long-0.93.tar.gz) = ae0880eb339ce607abe2ca16ccc5176c844531ef6dd0b09afe91f2e3501c73f4383e8f90136e46748b6c93fdd65b7c4936addf496261a2a25c0011cc555961f5
+Size (Getopt-GUI-Long-0.93.tar.gz) = 14086 bytes
