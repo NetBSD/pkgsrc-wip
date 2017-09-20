@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.4 2013/04/18 01:00:08 jgoamakf Exp $
 
-SHA1 (HTML-TagCloud-0.37.tar.gz) = 73748a87813e2741d1ce76e5d88114ebc1f68838
-RMD160 (HTML-TagCloud-0.37.tar.gz) = 19a95892f21a8d85ae0863c966f8bf9d94e066eb
-Size (HTML-TagCloud-0.37.tar.gz) = 10307 bytes
+SHA1 (HTML-TagCloud-0.38.tar.gz) = 60b935e70b175ce6db0a42c1dacedb080e93cfaf
+RMD160 (HTML-TagCloud-0.38.tar.gz) = c6ff61813930933edd2c1726ae7a1636be979a18
+SHA512 (HTML-TagCloud-0.38.tar.gz) = b45706d9ef56e03dbc71be45ece3500afd867a2adfefa53144a8e1974cbdba0e25dd89ad7d5b38afb6f260b5abee15f7ee1b89d34d1bcfa20efe365706eeb600
+Size (HTML-TagCloud-0.38.tar.gz) = 10531 bytes
