@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/11/13 12:52:04 ryo-on Exp $
 
-SHA1 (Gtk2-Spell-1.03.tar.gz) = 89f2ee70e7ac2aa8334942a72ccab11059f6507b
-RMD160 (Gtk2-Spell-1.03.tar.gz) = 5dac58c30bc7baec225b9af3aeeabc3fbd83a4f3
-Size (Gtk2-Spell-1.03.tar.gz) = 15812 bytes
+SHA1 (Gtk2-Spell-1.04.tar.gz) = c4c042bbdf8e247b6c8a7f8fa8f27f295bc3adb1
+RMD160 (Gtk2-Spell-1.04.tar.gz) = 6c016413c685123b1eb1e70d3be167bcecceac97
+SHA512 (Gtk2-Spell-1.04.tar.gz) = b0f71158e56efe561e9999066e896c92b90e9b046e6193fe0b96b4b8fbd4d10d9fc906b9313b4c5c5fbc93cdd33b710eea3170a9677bcdea46fa22032d19b960
+Size (Gtk2-Spell-1.04.tar.gz) = 17512 bytes
 SHA1 (patch-aa) = f5ac39732cb9c1ad5fe90baf72f09f913649ea2d
