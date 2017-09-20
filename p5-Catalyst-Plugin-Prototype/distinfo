@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 05:59:46 rillig Exp $
 
-SHA1 (Catalyst-Plugin-Prototype-1.32.tar.gz) = 8f3a69864fdd20656ce4219b3e293398002c3615
-RMD160 (Catalyst-Plugin-Prototype-1.32.tar.gz) = ff2bfe247aebcfcd4da92e652c49db2e3ea0b949
-Size (Catalyst-Plugin-Prototype-1.32.tar.gz) = 2255 bytes
+SHA1 (Catalyst-Plugin-Prototype-1.33.tar.gz) = 2c3cb44b0fc052ff5328bc7b05927c8c6c9bd7f8
+RMD160 (Catalyst-Plugin-Prototype-1.33.tar.gz) = 238cd5e04f4a60ade2b5fff10df32f1434f9283d
+SHA512 (Catalyst-Plugin-Prototype-1.33.tar.gz) = c6a7dcde80bbfe7be83823f9372266681e6a07a9f8a3c78831cfaa1e7be4bb1f27c92f09f2abc484e97b681310c9076d98d9c82434b146a0655c76824e914851
+Size (Catalyst-Plugin-Prototype-1.33.tar.gz) = 18789 bytes
