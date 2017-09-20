@@ -2364,7 +2364,6 @@ SUBDIR+=	p5-Catalyst-Plugin-Pluggable
 SUBDIR+=	p5-Catalyst-Plugin-Prototype
 SUBDIR+=	p5-Catalyst-Plugin-Session-State-URI
 SUBDIR+=	p5-Catalyst-Plugin-Session-Store-DBI
-SUBDIR+=	p5-Catalyst-Plugin-Singleton
 SUBDIR+=	p5-Catalyst-Plugin-Static
 SUBDIR+=	p5-Catalyst-Plugin-SubRequest
 SUBDIR+=	p5-Catalyst-Plugin-Unicode-Encoding
