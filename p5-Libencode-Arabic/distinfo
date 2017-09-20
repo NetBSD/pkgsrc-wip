@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/09/07 00:56:29 jihbed Exp $
 
-SHA1 (Encode-Arabic-1.8.tar.gz) = ed6d0348eea0e021d874a09da1f3ca5690afb833
-RMD160 (Encode-Arabic-1.8.tar.gz) = ea64fb259009a7e3c1825dd7baeab52b2bd924ab
-Size (Encode-Arabic-1.8.tar.gz) = 59283 bytes
+SHA1 (Encode-Arabic-14.2.tar.gz) = f78b9db1268e2156d66a8186f3cc0a69d63e4c0b
+RMD160 (Encode-Arabic-14.2.tar.gz) = d21f5b34b6b3954ac5ea3727522fea243540dad4
+SHA512 (Encode-Arabic-14.2.tar.gz) = 0c1613dd88763a049c7cd4395b18dc5c33496a5b6e64c2156733d564423e25249e68f0f28f7bc9c074678218521fee72e4d3ddc2a4c3897d83727cdc08054cf8
+Size (Encode-Arabic-14.2.tar.gz) = 89893 bytes
