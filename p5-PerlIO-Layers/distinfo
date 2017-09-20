@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/04/13 08:39:13 jgoamakf Exp $
 
-SHA1 (PerlIO-Layers-0.010.tar.gz) = 7c4e409a877e37f18e4ff32f33db2c132d0ff166
-RMD160 (PerlIO-Layers-0.010.tar.gz) = 00106a1e1b599f3d087f175e3b30d03498709e38
-Size (PerlIO-Layers-0.010.tar.gz) = 13708 bytes
+SHA1 (PerlIO-Layers-0.011.tar.gz) = 5ef1c66e4043722ef4914cc2ea0b99885a2b47bc
+RMD160 (PerlIO-Layers-0.011.tar.gz) = ecac32bde2bb539b824bb80071294d34a2d7a7fb
+SHA512 (PerlIO-Layers-0.011.tar.gz) = 1c1a7a77c7e52d45c15015ecfee71d679acd98bb067a5d0147d6fe97fb35e40ab0a4dc3ecf1fb1b6ad8c599e9b765448e9dab5345c168552726ef9929d3bed81
+Size (PerlIO-Layers-0.011.tar.gz) = 14570 bytes
