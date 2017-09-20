@@ -17,5 +17,14 @@ GNU_CONFIGURE=	yes
 
 RCD_SCRIPTS=	minerd
 
+CONF_FILES+=	${PREFIX}/share/examples/cpuminer/minerd.conf \
+		${PKG_SYSCONFDIR}/minerd.conf
+
+INSTALLATION_DIRS+=	share/examples/cpuminer
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/minerd.conf \
+		${DESTDIR}${PREFIX}/share/examples/cpuminer
+
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

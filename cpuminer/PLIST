@@ -1,3 +1,4 @@
 @comment $NetBSD$
 bin/minerd
 man/man1/minerd.1
+share/examples/cpuminer/minerd.conf
