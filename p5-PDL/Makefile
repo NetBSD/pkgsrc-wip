@@ -27,5 +27,4 @@ PERL5_PACKLIST=		auto/PDL/.packlist
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
