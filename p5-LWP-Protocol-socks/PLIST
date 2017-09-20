@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/27 21:42:47 tomasbodzar Exp $
-lib/perl5/vendor_perl/5.14.0/LWP/Protocol/socks.pm
-lib/perl5/vendor_perl/5.14.0/LWP/Protocol/socks4.pm
-lib/perl5/vendor_perl/5.14.0/URI/socks.pm
-lib/perl5/vendor_perl/5.14.0/URI/socks4.pm
-lib/perl5/vendor_perl/5.14.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/LWP/Protocol/socks/.packlist
-lib/perl5/vendor_perl/man/man3/LWP::Protocol::socks.3
-lib/perl5/vendor_perl/man/man3/LWP::Protocol::socks4.3
-lib/perl5/vendor_perl/man/man3/URI::socks.3
