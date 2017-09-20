@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/01/22 16:55:19 ficovh Exp $
 
-SHA1 (Exception-Class-TryCatch-1.12.tar.gz) = 4e1f5b7f716e0bd357e010c9a4a0c6c34f943045
-RMD160 (Exception-Class-TryCatch-1.12.tar.gz) = 4a72ca02a53938ac6925b968705536b21b58553c
-Size (Exception-Class-TryCatch-1.12.tar.gz) = 17811 bytes
+SHA1 (Exception-Class-TryCatch-1.13.tar.gz) = 19c12a4810eb228c53835cd6c7323c7900f3e9de
+RMD160 (Exception-Class-TryCatch-1.13.tar.gz) = 58ce0eec5acbd9864137777bba7513126d9c94c6
+SHA512 (Exception-Class-TryCatch-1.13.tar.gz) = bf5f5b39484cf762543044b1946e4b26ce91369cb41efd4b4b422e5ec749fd7661e1891b86eea368521797f9a4224569382ab25f03d8908b0fb31aac070601d9
+Size (Exception-Class-TryCatch-1.13.tar.gz) = 20629 bytes
