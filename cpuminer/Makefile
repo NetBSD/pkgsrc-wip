@@ -30,5 +30,6 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/minerd.conf \
 		${DESTDIR}${PREFIX}/share/examples/cpuminer
 
+.include "../../textproc/jansson/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
