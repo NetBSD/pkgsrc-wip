@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/07/06 02:46:55 ficovh Exp $
 
-SHA1 (Dancer-Plugin-Database-1.40.tar.gz) = 68351e93c2b70d55cca3afa8e0d6a0d18ed2f3af
-RMD160 (Dancer-Plugin-Database-1.40.tar.gz) = db2c5daa35571527754d3ad2e5c4be84fafc3fde
-Size (Dancer-Plugin-Database-1.40.tar.gz) = 17340 bytes
+SHA1 (Dancer-Plugin-Database-2.13.tar.gz) = 064fc107f6fe748e022e18b5993b837950fb0a9f
+RMD160 (Dancer-Plugin-Database-2.13.tar.gz) = bc8dfd9c37aa304379b55486010f0e9f2cd5563d
+SHA512 (Dancer-Plugin-Database-2.13.tar.gz) = 2e6d7553da1a14c02825530408443bfa5619b8fdf329ac12ed4f2b82aa6973ed358b685234020d8a50ded3d6725cd9a6432c057290295e93616d42816d1fea59
+Size (Dancer-Plugin-Database-2.13.tar.gz) = 19428 bytes
