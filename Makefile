@@ -253,6 +253,7 @@ SUBDIR+=	bmp-docklet
 SUBDIR+=	boa
 SUBDIR+=	bogomips
 SUBDIR+=	boinc-git
+SUBDIR+=	bolt-llm
 SUBDIR+=	bonnie++-current
 SUBDIR+=	boo
 SUBDIR+=	boost-asynchronous
