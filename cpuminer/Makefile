@@ -14,6 +14,7 @@ GITHUB_PROJECT=	cpuminer
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	autoconf autoheader automake
 
 RCD_SCRIPTS=	minerd
 
@@ -21,6 +22,9 @@ CONF_FILES+=	${PREFIX}/share/examples/cpuminer/minerd.conf \
 		${PKG_SYSCONFDIR}/minerd.conf
 
 INSTALLATION_DIRS+=	share/examples/cpuminer
+
+pre-configure:
+	cd ${WRKSRC} && ${SH} ./autogen.sh
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/minerd.conf \
