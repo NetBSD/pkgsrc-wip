@@ -6,6 +6,7 @@
 ###########################################################
 
 DISTNAME=	plink-${PORTVERSION}
+PKGNAME=	plink19-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
