@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/10/03 12:56:43 ryo-on Exp $
 
-SHA1 (Net-UPnP-1.4.2.tar.gz) = 1c9b2fdb03994ec47b15f2ef296b213088d03a1d
-RMD160 (Net-UPnP-1.4.2.tar.gz) = 0fe53463dc96280eb224d0778f1fa336136fa06a
-Size (Net-UPnP-1.4.2.tar.gz) = 18910 bytes
+SHA1 (Net-UPnP-1.4.3.tar.gz) = 1b0fdf5175d6fe138a88da3561ef5a49780584d2
+RMD160 (Net-UPnP-1.4.3.tar.gz) = cc59ecb86c25d2d941fb8d2ecfc8973a2846e88e
+SHA512 (Net-UPnP-1.4.3.tar.gz) = 72c8733402a7fec1ca24523dbf4b9d7baf0c1bcae44a36bc8ba2193cb40396f6285584c6fc11a961003477a9abbf0a4e2da9e1876e341ddc52da7850540fff8f
+Size (Net-UPnP-1.4.3.tar.gz) = 19169 bytes
