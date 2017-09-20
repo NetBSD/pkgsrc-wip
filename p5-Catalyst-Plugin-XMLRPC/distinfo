@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/09 21:04:05 kuli0020 Exp $
-
-SHA1 (Catalyst-Plugin-XMLRPC-0.06.tar.gz) = db29e47c16bf190eda80c54b03c94273181548ba
-RMD160 (Catalyst-Plugin-XMLRPC-0.06.tar.gz) = cd86aedbd16018a3d43448d928bfdfad060e9d9b
-Size (Catalyst-Plugin-XMLRPC-0.06.tar.gz) = 3916 bytes
