@@ -2362,7 +2362,6 @@ SUBDIR+=	p5-Catalyst-Plugin-FormValidator
 SUBDIR+=	p5-Catalyst-Plugin-HTML-Widget
 SUBDIR+=	p5-Catalyst-Plugin-Pluggable
 SUBDIR+=	p5-Catalyst-Plugin-Prototype
-SUBDIR+=	p5-Catalyst-Plugin-Session-FastMmap
 SUBDIR+=	p5-Catalyst-Plugin-Session-State-URI
 SUBDIR+=	p5-Catalyst-Plugin-Session-Store-DBI
 SUBDIR+=	p5-Catalyst-Plugin-Singleton
