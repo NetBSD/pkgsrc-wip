@@ -12,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES+=	c
 
-DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-XSLoader-[0-9]*:../../devel/p5-XSLoader
 
 PERL5_MODULE_TYPE=	Module::Build
