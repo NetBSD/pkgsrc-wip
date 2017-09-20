@@ -1,0 +1,118 @@
+$NetBSD$
+
+# Respect env
+--- Makefile.orig	2017-08-03 00:14:08.000000000 +0000
++++ Makefile
+@@ -1,28 +1,33 @@
+ ### modify these paths to local Boost and NLopt install directories
+-BOOST_INSTALL_DIR = /home/pl88/boost_1_58_0/install
+-NLOPT_INSTALL_DIR = /groups/price/poru/HSPH_SVN/src/BOLT-LMM/nlopt-2.4.2
++BOOST_INSTALL_DIR ?= ${LOCALBASE}
++# NLOPT_INSTALL_DIR ?= ${LOCALBASE}
++
++MKDIR ?=	mkdir
++DESTDIR ?=	.
++PREFIX ?=	/usr/local
++INSTALL ?=	install
+ 
+ MKLROOT = /groups/price/poru/external_software/intel/mkl
+ INTELROOT = /groups/price/poru/external_software/intel
+-ZLIB_STATIC_DIR = /opt/zlib-1.2.8/lib # probably unnecessary on most systems
+-GLIBC_STATIC_DIR = /home/pl88/glibc-static/usr/lib64
++ZLIB_STATIC_DIR ?= /usr/lib
++GLIBC_STATIC_DIR ?= /home/pl88/glibc-static/usr/lib64
+ 
+ ifeq ($(strip ${linking}),)
+ 	linking = dynamic
+ endif
+ 
+-# CC = g++
+-CC = /groups/price/poru/external_software/intel/bin/icpc
++# CXX = g++
++CXX ?= /groups/price/poru/external_software/intel/bin/icpc
+ 
+ ifeq (${debug},true)
+-	CFLAGS += -g
++	CXXFLAGS += -g
+ else
+-	CFLAGS += -O2
++	CXXFLAGS += -O2
+ endif
+ 
+-CFLAGS += -msse -msse2
+-CFLAGS += -DUSE_SSE -DMEASURE_DGEMM -DVERBOSE
+-CFLAGS += -Wall
++CXXFLAGS += -msse -msse2
++CXXFLAGS += -DUSE_SSE -DMEASURE_DGEMM -DVERBOSE
++CXXFLAGS += -Wall
+ 
+ 
+ # add Boost include and lib paths
+@@ -51,7 +56,7 @@ ifneq ($(strip ${ZLIB_STATIC_DIR}),)
+ endif
+ 
+ # add MKL paths (if not compiling with g++, i.e., compiling with icpc)
+-ifneq (${CC},g++)
++ifneq (${CXX},${CXX})
+ 	CPATHS += -I${MKLROOT}/include
+ 	ifeq (${linking},dynamic)
+ 		LPATHS += -L${MKLROOT}/lib/intel64 -Wl,-rpath,${MKLROOT}/lib/intel64 # for libmkl*
+@@ -60,28 +65,28 @@ ifneq (${CC},g++)
+ endif
+ 
+ # add flags for static linking; build LAPACK/MKL component of link line
+-ifeq (${CC},g++)
+-	CFLAGS += -fopenmp
+-	LFLAGS += -fopenmp
+-	LLAPACK = -llapack -lgfortran
++ifeq (${CXX},${CXX})
++	CXXFLAGS += -fopenmp
++	LDFLAGS += -fopenmp
++	LLAPACK = -llapack -lblas -lgfortran
+ 	ifeq (${linking},static)
+-		LFLAGS += -static
++		LDFLAGS += -static
+ 		LPATHS += -L${GLIBC_STATIC_DIR} -L${ZLIB_STATIC_DIR}
+ 	else ifeq (${linking},static-except-glibc)
+-		LFLAGS += -static-libgcc -static-libstdc++
++		LDFLAGS += -static-libgcc -static-libstdc++
+ 		LPATHS += -L${ZLIB_STATIC_DIR}
+ 	endif
+ else
+-	CFLAGS += -DUSE_MKL #-DUSE_MKL_MALLOC
+-	CFLAGS += -qopenmp
+-	LFLAGS += -qopenmp
+-	CFLAGS += -Wunused-variable -Wpointer-arith -Wuninitialized -Wreturn-type -Wcheck -Wshadow
++	CXXFLAGS += -DUSE_MKL #-DUSE_MKL_MALLOC
++	CXXFLAGS += -qopenmp
++	LDFLAGS += -qopenmp
++	CXXFLAGS += -Wunused-variable -Wpointer-arith -Wuninitialized -Wreturn-type -Wcheck -Wshadow
+ 	ifeq (${linking},static)
+-		LFLAGS += -static
++		LDFLAGS += -static
+ 		LPATHS += -L${GLIBC_STATIC_DIR} -L${ZLIB_STATIC_DIR}
+ 		LLAPACK = -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_core.a ${MKLROOT}/lib/intel64/libmkl_intel_thread.a -Wl,--end-group
+ 	else ifeq (${linking},static-except-glibc)
+-		LFLAGS += -static-intel -static-libstdc++ -static-libgcc
++		LDFLAGS += -static-intel -static-libstdc++ -static-libgcc
+ 		LPATHS += -L${ZLIB_STATIC_DIR}
+ 		LLAPACK = -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_core.a ${MKLROOT}/lib/intel64/libmkl_intel_thread.a -Wl,--end-group
+ 	else
+@@ -110,11 +115,15 @@ OMAIN = BoltMain.o $O
+ .PHONY: clean
+ 
+ %.o: %.cpp
+-	${CC} ${CFLAGS} ${CPATHS} -o $@ -c $<
++	${CXX} ${CXXFLAGS} ${CPATHS} -o $@ -c $<
+ 
+ $T: ${OMAIN}
+-	${CC} ${LFLAGS} -o $T ${OMAIN} $L
++	${CXX} ${LDFLAGS} -o $T ${OMAIN} $L
+ 
+ clean:
+ 	rm -f *.o
+ 	rm -f $T
++
++install:
++	${MKDIR} ${DESTDIR}${PREFIX}/bin
++	${INSTALL} -c -s $T ${DESTDIR}${PREFIX}/bin

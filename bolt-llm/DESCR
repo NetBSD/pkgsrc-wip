@@ -1,0 +1,4 @@
+The BOLT-LMM algorithm computes statistics for testing association between
+phenotype and genotypes using a linear mixed model (LMM)  [1]. By default,
+BOLT-LMM assumes a Bayesian mixture-of-normals prior for the random effect
+attributed to SNPs other than the one being tested.

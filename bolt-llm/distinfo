@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (BOLT-LMM_v2.3.tar.gz) = 4f2caf427cbcbe58175e6e5c711c3d8b0c66a9d6
+RMD160 (BOLT-LMM_v2.3.tar.gz) = d0d207f2993d00607f256edb0e9cda57aa0bd800
+SHA512 (BOLT-LMM_v2.3.tar.gz) = a396bb6699fbb87327901a8db46faa45705405160f318796f887b8cd6edd495f10fa460201a4eead57b2bc34adb45f44d26dd59ae12ed2240d4d46b6b6e959e6
+Size (BOLT-LMM_v2.3.tar.gz) = 336986328 bytes
+SHA1 (patch-FileUtils.cpp) = 258138822f610ab38f9cf3cf0ad03ca49b67ad1c
+SHA1 (patch-Makefile) = f960889320bdcd8e158cd509ae87b65672169ed5
+SHA1 (patch-StringUtils.cpp) = f0a5c3375a95391235d85fc9431524236e39910f
