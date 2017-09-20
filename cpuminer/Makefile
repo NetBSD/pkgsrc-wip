@@ -15,5 +15,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 
+RCD_SCRIPTS=	minerd
+
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
