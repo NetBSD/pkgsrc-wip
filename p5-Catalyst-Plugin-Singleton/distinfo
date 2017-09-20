@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 05:59:14 rillig Exp $
-
-SHA1 (Catalyst-Plugin-Singleton-0.02.tar.gz) = b6cac4fc29d73504aaccba40449e2ff32afac7e9
-RMD160 (Catalyst-Plugin-Singleton-0.02.tar.gz) = 59ba656d6f43bc5cd61b1ef1f5bc3b47c7a44a89
-Size (Catalyst-Plugin-Singleton-0.02.tar.gz) = 2127 bytes
