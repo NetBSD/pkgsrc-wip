@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2008/08/08 09:37:35 athaba Exp $
 
-SHA1 (Exporter-Tidy-0.07.tar.gz) = 3766c39938eacd1044c8b668c7d5305e937ad9e7
-RMD160 (Exporter-Tidy-0.07.tar.gz) = 35869b2b6163876d188420f56cfa8d098cf41cfd
-Size (Exporter-Tidy-0.07.tar.gz) = 23355 bytes
+SHA1 (Exporter-Tidy-0.08.tar.gz) = b14ee0bc77101c7661c0144abe0c2f4d3ad444b7
+RMD160 (Exporter-Tidy-0.08.tar.gz) = 4f92a29eb6aa39c08f888c84a4a94a3e0988d526
+SHA512 (Exporter-Tidy-0.08.tar.gz) = 3d218c845d95267baacc227b5c864e8cefeabb1d92ac39f86129495c6d9bb971ca1f924ca91f3998c51c95a535e1f0c39774174cb12c75771a23e3f16ed02816
+Size (Exporter-Tidy-0.08.tar.gz) = 23689 bytes

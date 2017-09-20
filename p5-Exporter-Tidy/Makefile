@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2012/10/04 10:45:27 asau Exp $
-#
 
-DISTNAME=	Exporter-Tidy-0.07
+DISTNAME=	Exporter-Tidy-0.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Exporter/}
