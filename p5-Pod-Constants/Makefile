@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.3 2012/10/04 19:11:58 asau Exp $
-#
 
-DISTNAME=	Pod-Constants-0.16
+DISTNAME=	Pod-Constants-0.19
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SAMV/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MG/MGV/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Pod-Constants/

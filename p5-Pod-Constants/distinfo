@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/08/29 21:19:45 leot1990 Exp $
 
-SHA1 (Pod-Constants-0.16.tar.gz) = 2e70dd23447daed6d2ce539b98ef95cc89fc9d67
-RMD160 (Pod-Constants-0.16.tar.gz) = aef20cd3986ae2fe9bba8529e94a1fcfa95da01a
-Size (Pod-Constants-0.16.tar.gz) = 8997 bytes
+SHA1 (Pod-Constants-0.19.tar.gz) = 2bcabb0e847d4de634bb1f47c9a5f419a6689aac
+RMD160 (Pod-Constants-0.19.tar.gz) = c5ef0e7bc518a00b51c0110fb097077f7f821e7f
+SHA512 (Pod-Constants-0.19.tar.gz) = 4c7b7ccdede87f0069bf100406de5b2320b5f9cb0363d413e90b419e512d4322114851d78fdd7a1bce63347ee5986ecd397b11579b91eee6e46d9b0a82b0b64a
+Size (Pod-Constants-0.19.tar.gz) = 13455 bytes
