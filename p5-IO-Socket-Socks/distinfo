@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/01/15 00:25:55 lexort Exp $
 
-SHA1 (IO-Socket-Socks-0.66.tar.gz) = d954271f3d13218e3c55477b12806c7f7701b32b
-RMD160 (IO-Socket-Socks-0.66.tar.gz) = 9fe5f4eba14be628aba495593b1d647102cfebca
-Size (IO-Socket-Socks-0.66.tar.gz) = 26971 bytes
+SHA1 (IO-Socket-Socks-0.74.tar.gz) = ac2c0e86dfe850107f3647b5722d364036c7239d
+RMD160 (IO-Socket-Socks-0.74.tar.gz) = 117c88fd675aa7ee571fb5da908ec424d294bdaa
+SHA512 (IO-Socket-Socks-0.74.tar.gz) = db6154f3c7f532c6c8a04242e0d301bd124154ebbbc9bbcf0812dda5350bebc501a833057533edeb6b634141bfab5c92b4c1714c348226be1c967aa7b4f2ebe5
+Size (IO-Socket-Socks-0.74.tar.gz) = 27933 bytes
