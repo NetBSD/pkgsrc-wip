@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2013/05/15 06:01:24 jgoamakf Exp $
 
-DISTNAME=	Exception-Base-0.2401
+DISTNAME=	Exception-Base-0.2501
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DE/DEXTER/}
