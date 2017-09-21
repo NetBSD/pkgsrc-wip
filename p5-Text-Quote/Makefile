@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2012/10/04 19:12:00 asau Exp $
-#
 
-DISTNAME=	Text-Quote-0.3
+DISTNAME=	Text-Quote-0.32
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}

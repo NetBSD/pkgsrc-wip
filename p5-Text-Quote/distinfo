@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2008/08/08 10:14:52 athaba Exp $
 
-SHA1 (Text-Quote-0.3.tar.gz) = 1e36427b36946be7749bb7715556c4d93f7be0cd
-RMD160 (Text-Quote-0.3.tar.gz) = b695c727cb19dc73f6d54d14c8cd1bc4823a51d7
-Size (Text-Quote-0.3.tar.gz) = 12068 bytes
+SHA1 (Text-Quote-0.32.tar.gz) = 3b0339fb4fb6d5ba26637b481fbf111c87a004ab
+RMD160 (Text-Quote-0.32.tar.gz) = d8209cfb6993a93a2b7dcd9771af7bba883096ae
+SHA512 (Text-Quote-0.32.tar.gz) = 533c91c0aa52890f0d6d68e81cb31ee3428cd834e1d2ea2170fc68fb5f7f92844df54686f08adbe210193a6cb6181a2b3c649ef6a32734cd378d57d2f978cd03
+Size (Text-Quote-0.32.tar.gz) = 19396 bytes
