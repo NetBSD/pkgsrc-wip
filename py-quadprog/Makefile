@@ -12,5 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
