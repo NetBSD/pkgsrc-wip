@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/11/03 03:28:48 agc Exp $
 
-SHA1 (Term-ReadLine-Perl5-1.41.tar.gz) = 9fd04784a2a8e4ea7a69c42303f34ed6c969ed8c
-RMD160 (Term-ReadLine-Perl5-1.41.tar.gz) = 155ec165c1ab8f82381b08980566cdea5b274040
-SHA512 (Term-ReadLine-Perl5-1.41.tar.gz) = 026b8ce3c9a536ff54216624ffe8fad7af55cc1e0bc96ded481be7b4aacde2872600bff37ba9b2ba6ad3b5f4b740e799a5c25a49ceede9a9e1a8eb40d29ec9be
-Size (Term-ReadLine-Perl5-1.41.tar.gz) = 110544 bytes
+SHA1 (Term-ReadLine-Perl5-1.43.tar.gz) = d93f294d19dd13c6e004a6ea2f4cb451b2703fdb
+RMD160 (Term-ReadLine-Perl5-1.43.tar.gz) = 7afa87101cc25d996837ab8fb9c722418e90faa3
+SHA512 (Term-ReadLine-Perl5-1.43.tar.gz) = 8dd2c71a7f668872e7852440ceeea3fca76d8df489154eee1d3656c653e6873fc90691b8c2f85e350bf694e47877996a54b9c66a33db9f0aa94d331e1b75c773
+Size (Term-ReadLine-Perl5-1.43.tar.gz) = 112930 bytes
