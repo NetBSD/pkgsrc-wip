@@ -1,3 +1,0 @@
-qVamps is a GUI, which enables the user to select titles from a DVD,
-uses Vamps for requantization and create a new DVD. qVamps uses
-dvdauthor for creation of the new DVD's data structures.
