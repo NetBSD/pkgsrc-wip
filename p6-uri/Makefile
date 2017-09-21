@@ -23,7 +23,7 @@ do-build:
 	cd ${WRKSRC} && mkdir -p ${DESTDIR}${PREFIX}/share/perl6/site
 
 do-install:
-	cd ${WRKSRC} && RAKUDO_RERESOLVE_DEPENDENCIES=0 ${PREFIX}/bin/perl6 ${PREFIX}/share/perl6/bin/install-dist.pl -for=site -to=${DESTDIR}${PREFIX}/share/perl6/site
+	-cd ${WRKSRC} && RAKUDO_RERESOLVE_DEPENDENCIES=0 ${PREFIX}/bin/perl6 ${PREFIX}/share/perl6/bin/install-dist.pl -for=site -to=${DESTDIR}${PREFIX}/share/perl6/site
 
 .include "../../wip/rakudo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
