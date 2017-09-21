@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/10 08:29:01 thomasklausner Exp $
 
-DISTNAME=	RT-Authen-ExternalAuth-0.25
+DISTNAME=	RT-Authen-ExternalAuth-0.27
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RT/}
@@ -19,6 +19,7 @@ DEPENDS+=	rt4-[0-9]*:../../devel/rt4
 # TODO: broken -- installs to var!
 PERL5_PACKLIST=		auto/RT/Authen/ExternalAuth/.packlist
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 MAKE_ENV+=		RTHOME=${PREFIX}/share/rt4/lib
 
 # checks permissions of file from rt4 and dies if different user
