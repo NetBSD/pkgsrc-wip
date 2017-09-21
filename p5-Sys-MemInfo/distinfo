@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.1 2013/06/30 13:39:57 noud4 Exp $
 
-SHA1 (Sys-MemInfo-0.91.tar.gz) = 75d959e24e39187102c3480e622efdba92e96bc1
-RMD160 (Sys-MemInfo-0.91.tar.gz) = 8efa2a167801f18f7f55e76ba358ceec1bfe0eb2
-Size (Sys-MemInfo-0.91.tar.gz) = 6802 bytes
+SHA1 (Sys-MemInfo-0.99.tar.gz) = 86ed269b0623194f1d74faf90238b51ff58d673e
+RMD160 (Sys-MemInfo-0.99.tar.gz) = c344dbd46d9701498310189035e6f4f2eeac9860
+SHA512 (Sys-MemInfo-0.99.tar.gz) = ad0f8a12db7f7c643d0eb2d68fb1dcbff43928b786d390243e89d88537bd99360f88af177678ce5141e3870224da80ea5a432c465e8c7ec384abd21014c0e1c0
+Size (Sys-MemInfo-0.99.tar.gz) = 13276 bytes
+SHA1 (patch-arch_bsd.xs) = 802374f5366610b25374c74b6d321282d9809322
