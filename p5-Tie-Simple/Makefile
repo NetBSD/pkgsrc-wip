@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/12 05:44:00 makoto Exp $
 
-DISTNAME=	Tie-Simple-1.03
+DISTNAME=	Tie-Simple-1.04
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/H/HA/HANENKAMP/
