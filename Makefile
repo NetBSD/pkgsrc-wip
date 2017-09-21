@@ -3636,7 +3636,6 @@ SUBDIR+=	py-scs
 SUBDIR+=	py-sdeint
 SUBDIR+=	py-sdt_metrics
 SUBDIR+=	py-se
-SUBDIR+=	py-seaborn
 SUBDIR+=	py-seeds
 SUBDIR+=	py-selection
 SUBDIR+=	py-selenium
