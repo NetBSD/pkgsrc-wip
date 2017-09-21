@@ -1,35 +1,42 @@
-# $NetBSD: Makefile,v 1.8 2014/04/06 23:57:44 othyro Exp $
+# $NetBSD$
 #
 
 DISTNAME=		v${PKGVER}
-PKGVER=			2.5
+PKGVER=			2.20
 PKGNAME=		${EMACS_PKGNAME_PREFIX}slime-${PKGVER}
-PKGREVISION=		2
+#PKGREVISION=		1
 CATEGORIES=		editors
-MASTER_SITES=		https://github.com/slime/slime/archive/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=slime}/slime/archive/
 DIST_SUBDIR=		${PKGBASE}
 
 MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://common-lisp.net/project/slime/
 COMMENT=		Superior Lisp Interaction Mode for Emacs
-LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND mit AND public-domain # AND LLGPL
+LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND \
+			mit AND public-domain AND gnu-llgpl
 
 WRKSRC=			${WRKDIR}/slime-${PKGVER}
 USE_TOOLS+=		gmake makeinfo
 NO_CONFIGURE=		yes
 INFO_FILES=		yes
 
-INSTALLATION_DIRS+=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/slime/lib
+EMACS_VERSIONS_ACCEPTED= \
+			emacs25 emacs25nox \
+			emacs24 emacs24nox \
+			emacs23 emacs23nox
+
+INSTALLATION_DIRS+=	${EMACS_INFOPREFIX}
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/slime
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/slime/lib
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/slime/swank
+
 SLIME_LISPDIR=		${EMACS_LISPPREFIX}/slime
 
 do-build:
 	cd ${WRKSRC}/doc && ${GMAKE} slime.info
-	cd ${WRKSRC} && ${EMACS_BIN} -batch \
+	cd ${WRKSRC} && ${EMACS_BIN} --batch --no-init-file --no-site-lisp \
 		-eval '(setq load-path (cons nil load-path))' \
 		-f batch-byte-compile *.el
-
-pre-install:
-	${MKDIR} ${SLIME_LISPDIR}
 
 do-install:
 	cd ${WRKSRC} && \
@@ -37,9 +44,9 @@ do-install:
 		${INSTALL_DATA} *.el ${DESTDIR}${SLIME_LISPDIR}; \
 		${INSTALL_DATA} *.elc ${DESTDIR}${SLIME_LISPDIR}; \
 		${INSTALL_DATA} *.lisp ${DESTDIR}${SLIME_LISPDIR}; \
-		${INSTALL_DATA} lib/*.el ${DESTDIR}${SLIME_LISPDIR}/lib
-		${INSTALL_DATA} ${WRKSRC}/doc/slime.info \
-			${DESTDIR}${EMACS_INFOPREFIX}
+		${INSTALL_DATA} swank/*.lisp ${DESTDIR}${SLIME_LISPDIR}/swank; \
+		${INSTALL_DATA} lib/*.el ${DESTDIR}${SLIME_LISPDIR}/lib; \
+		${INSTALL_DATA} doc/slime.info ${DESTDIR}${EMACS_INFOPREFIX}
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

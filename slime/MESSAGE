@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2014/04/06 23:57:44 othyro Exp $
+$NetBSD$
 
 To use SLIME you need one of the many known-to-work Lisp implementations out
 there, such as lang/clisp or lang/sbcl. Add the following to your Emacs
@@ -11,6 +11,7 @@ configuration file:
 
 ;; Set your lisp system and, optionally, some contribs
 (setq inferior-lisp-program "the path to your Lisp binary")
+
 (slime-setup)
 
 Start it with 'M-x slime'.

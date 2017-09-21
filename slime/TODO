@@ -1,6 +1,0 @@
-Important:
-
- * Make this work for other versions and flavors of Emacs (emacs-nox11, xemacs,
-   etc);
- * Add LLGPL (Lesser Lisp General Public License) to pkgsrc/licenses;
- * Finish LICENSE;
