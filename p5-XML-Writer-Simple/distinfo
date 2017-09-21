@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2011/10/17 04:56:03 jgoamakf Exp $
 
-SHA1 (XML-Writer-Simple-0.07.tar.gz) = 7c784e05559208daae42ad55a53ef9afe542d7fa
-RMD160 (XML-Writer-Simple-0.07.tar.gz) = 057a526b196dae9bf67f63254b720d6924156c2c
-Size (XML-Writer-Simple-0.07.tar.gz) = 5941 bytes
+SHA1 (XML-Writer-Simple-0.12.tar.gz) = d6aa31a6a55f9898963c4cb05f4d15dd95849bdb
+RMD160 (XML-Writer-Simple-0.12.tar.gz) = d63118d6731131b5868ecb10da336fae658527e5
+SHA512 (XML-Writer-Simple-0.12.tar.gz) = fc2ed7bbda5edfa8e33101df4427625cfefaeba6827f6ec69b2c99d220da4da8205089e9e8e4df3a6bd2cf0ff2e69db50fb461bae0388c545d1a8e1c07639645
+Size (XML-Writer-Simple-0.12.tar.gz) = 14415 bytes
