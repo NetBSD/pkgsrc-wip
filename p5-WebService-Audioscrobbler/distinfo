@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2007/12/10 04:51:21 netcap Exp $
 
-SHA1 (WebService-Audioscrobbler-0.07.tar.gz) = 1d1e9379fba962e2affed9014872a5753a8411d1
-RMD160 (WebService-Audioscrobbler-0.07.tar.gz) = 6d4a6f9c2f9b6e735251484579ebe7eaab91fa6f
-Size (WebService-Audioscrobbler-0.07.tar.gz) = 10274 bytes
+SHA1 (WebService-Audioscrobbler-0.08.tar.gz) = 7a97a3e85591ca23dc6c804d61ac91b22a5c7e62
+RMD160 (WebService-Audioscrobbler-0.08.tar.gz) = c5b759aea79bd343d43f3402f75126c5a42f7213
+SHA512 (WebService-Audioscrobbler-0.08.tar.gz) = 4fa654c1655d350ee2cc05662109e7bba231f606e28b69516c70074b94a09289b9d0b0783520d6896a3c12f86da022b25c885dd595da12c99d4a538c2de44c56
+Size (WebService-Audioscrobbler-0.08.tar.gz) = 11022 bytes
