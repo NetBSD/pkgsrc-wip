@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2013/04/18 10:49:54 jgoamakf Exp $
 
-SHA1 (Text-ASCIITable-0.20.tar.gz) = fda6cbe2dbe4e665aa452082bc509506c7222400
-RMD160 (Text-ASCIITable-0.20.tar.gz) = d57c5fc579f8655ba860adb1eaab2af512f608b0
-Size (Text-ASCIITable-0.20.tar.gz) = 20884 bytes
+SHA1 (Text-ASCIITable-0.22.tar.gz) = af6de225ba44661a08ae031bec2d0b4ae1fa5d54
+RMD160 (Text-ASCIITable-0.22.tar.gz) = ee66c13ab7180815d5ac79b1c41e78ff7210ca34
+SHA512 (Text-ASCIITable-0.22.tar.gz) = cdf550b84c1dbe2b39aa59945a53964237444e55ad64af26d736c4a3525bb037dbf4fb38f380cd9d6477cb8f98017a1e57668ca63139137d58d0ed45287e4bf9
+Size (Text-ASCIITable-0.22.tar.gz) = 28919 bytes
