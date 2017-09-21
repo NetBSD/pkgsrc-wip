@@ -1,0 +1,27 @@
+$NetBSD$
+
+SHA1 (openblas/OpenBLAS-0.2.20.tar.gz) = a186074145a24823e82c65672dad1cd1ca6fe89c
+RMD160 (openblas/OpenBLAS-0.2.20.tar.gz) = 2b9728cd227894d7378b0f3686b90d0e7e7975d9
+SHA512 (openblas/OpenBLAS-0.2.20.tar.gz) = 8dfc8e8c8d456b834d2e9544c8eadd9f4770e30db8b8dd76af601ec0735fd86c9cf63dd6a03ccd23fc02ec2e05069a09875b9073dfe29f99aadab3a958ae2634
+Size (openblas/OpenBLAS-0.2.20.tar.gz) = 11637301 bytes
+SHA1 (openblas/large.tgz) = a689e5b180595b40c5719b0f358b31b15b57a2db
+RMD160 (openblas/large.tgz) = 8010ff4002ef42cf22a9ee9345011d68fc27d855
+SHA512 (openblas/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
+Size (openblas/large.tgz) = 2595 bytes
+SHA1 (openblas/timing.tgz) = fd47fc3f26d142a791df51e4a422a49662507252
+RMD160 (openblas/timing.tgz) = f0fe220e7ab611d4db8d8cab960361955e2ab093
+SHA512 (openblas/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
+Size (openblas/timing.tgz) = 1059485 bytes
+SHA1 (patch-Makefile) = 421b8e8d322edc7801e8cc9b0ccf57644018ccde
+SHA1 (patch-Makefile.rule) = 72108fa4d1e8279f78c01606d21b9149947afdaa
+SHA1 (patch-Makefile.system) = eb5bfb5a2f5308ad6ac6f4d7e4b0c2eeaa049200
+SHA1 (patch-c_check) = 32af951c38db716e3ec81b8c7d4c985368561b8e
+SHA1 (patch-common__arm.h) = 1cc14adb8441d3282d57f1b44d69251f86f51392
+SHA1 (patch-cpuid__arm.c) = b1890daa38f15ad122b3f151563836349c00e9b3
+SHA1 (patch-cpuid__arm64.c) = eb2f5cb73f365c5cdc35c6dd2f3244e5082e26a0
+SHA1 (patch-cpuid_ia64.c) = f33294230098a7fb1ef49dd1557b2a07ed11a3a9
+SHA1 (patch-cpuid_sparc.c) = 709647898b963b6afaa7ab91147dc9f261e3da02
+SHA1 (patch-driver_others_memory.c) = 76d7ef5cfcf2a322182ed454a7416a8323329417
+SHA1 (patch-exports+Makefile) = 2429badefe7f379739c41ae142da0cffd41f46cf
+SHA1 (patch-f_check) = 11751e7e779790a47f80f825555bb24d072d0f30
+SHA1 (patch-interface__ztrmv.c) = fefab5887bfc735fb5050df051f39b03201cee2c

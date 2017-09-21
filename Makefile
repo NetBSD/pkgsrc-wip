@@ -2248,6 +2248,7 @@ SUBDIR+=	open21xx
 SUBDIR+=	openaxiom-svn
 SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
+SUBDIR+=	openblas
 SUBDIR+=	openbsc
 SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
