@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/10/09 14:06:30 thomasklausner Exp $
 
-DISTNAME=		URI-Title-1.88
+DISTNAME=		URI-Title-1.901
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}
@@ -16,8 +16,6 @@ DEPENDS+=		p5-File-Type>=0.22:../../devel/p5-File-Type
 DEPENDS+=		p5-MP3-Info>=1.01:../../audio/p5-MP3-Info
 DEPENDS+=		p5-Image-Size>=1.01:../../graphics/p5-Image-Size
 DEPENDS+=		p5-libwww>=5.805:../../www/p5-libwww
-
-REPLACE_PERL=		title.pl
 
 PERL5_PACKLIST=		auto/URI/Title/.packlist
 
