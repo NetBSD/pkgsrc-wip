@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/06/06 08:22:45 ryoon Exp $
+
+SHA1 (Unicode-EastAsianWidth-Detect-0.03.tar.gz) = d70e4f69e894f25bf9d38bccf884cba39a446cbc
+RMD160 (Unicode-EastAsianWidth-Detect-0.03.tar.gz) = 15b4a589da7a635c203b620ef95bb48a5f56ae58
+SHA512 (Unicode-EastAsianWidth-Detect-0.03.tar.gz) = 28231286878980a155bb5727a3021825fa4f455cddd0b2b8304e669a9b8eb95e9aae83d36abaa79a5ca129d9a90858963183dc08ca6b7a069a3308f8714e9073
+Size (Unicode-EastAsianWidth-Detect-0.03.tar.gz) = 9924 bytes
