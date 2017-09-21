@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-sgx-20170829
+DISTNAME=	libretro-beetle-sgx-20170917
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ COMMENT=	Libretro core based on the Mednafen SuperGrafx emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-supergrafx-libretro
-GITHUB_TAG=	67b70b4c30d0d09ba9ec67787f84a969b705923d
+GITHUB_TAG=	673a8260521f76467a6967aceb9a0cdbad60c137
 
 EXTRACT_USING+=	bsdtar
 
