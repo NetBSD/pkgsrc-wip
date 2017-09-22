@@ -43,37 +43,11 @@ OPENBLAS_SVER=	0
 TEST_TARGET=	tests
 MAXTHREADS?=	8
 
-# No openmp for now
-BUILDFLAGS_THREAD+=	NUM_THREADS=${MAXTHREADS} USE_THREAD=1
-BENCHMARK_THREADS_FLAG=		OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
-
-# CPU-agnostic build for now.  Provide option for CPU-optimized build later.
-BUILDFLAGS+=	DYNAMIC_ARCH=1
-BUILDFLAGS+=	NO_AVX=1
-BUILDFLAGS+=	NO_AVX2=1
-
 .if ${MACHINE_ARCH:M*64} == ""
 BUILDFLAGS+=	BINARY32=1
 .else
 BUILDFLAGS+=	BINARY64=1
 .endif
-
-# Not yet implemented, from FreeBSD port
-#.if ${PORT_OPTIONS:MINTERFACE64}
-#BUILDFLAGS+=	INTERFACE64=1
-#.endif
-#.if ${PORT_OPTIONS:MOPENMP}
-#BUILDFLAGS_THREAD+=	USE_OPENMP=1
-#CFLAGS+=	-fopenmp
-#CXXFLAGS+=	-fopenmp
-#FFLAGS+=	-fopenmp
-#.endif
-#.if ! ${PORT_OPTIONS:MAVX}
-#BUILDFLAGS+=	NO_AVX=1
-#.endif
-#.if ! ${PORT_OPTIONS:MAVX2}
-#BUILDFLAGS+=	NO_AVX2=1
-#.endif
 
 SUBST_CLASSES+=		find
 SUBST_STAGE.find=	post-patch
@@ -149,13 +123,6 @@ do-build:
 	${CP} ${WRKSRC}/libopenblasp-${OPENBLAS_SUFX}.a ${WRKDIR}/lib/libopenblasp.a
 	${CP} ${WRKSRC}/libopenblasp-${OPENBLAS_SUFX}.so ${WRKDIR}/lib/libopenblasp.so.${OPENBLAS_SVER}
 
-BENCHMARK_MAXTHREADS?=	${MAXTHREADS}
-#.if ${PORT_OPTIONS:MOPENMP}
-#BENCHMARK_THREADS_FLAG=		OMP_NUM_THREADS=${BENCHMARK_MAXTHREADS}
-#.else
-BENCHMARK_THREADS_FLAG=		OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
-#.endif
-
 .PHONY: benchmark
 benchmark: build
 	cd ${WRKSRC} ; ${SETENV} ${BUILDFLAGS} NUM_THREADS=${MAXTHREADS} \
@@ -170,4 +137,5 @@ do-install:
 	${LN} -sf ${l}.so.${OPENBLAS_SVER} ${DESTDIR}${PREFIX}/lib/${l}.so
 .endfor
 
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
