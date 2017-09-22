@@ -128,9 +128,7 @@ SUBST_FILES.threads+=	${WRKSRC}/ctest/Makefile
 # Keep this if there are user-selectable options.
 # .include "options.mk"
 
-# Specify which directories to create before install.
-# You should only need this if using your own install target.
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
+INSTALLATION_DIRS=	lib
 
 post-extract:
 	cd ${DISTDIR}/${DIST_SUBDIR} ; \
@@ -152,7 +150,7 @@ BENCHMARK_MAXTHREADS?=	${MAXTHREADS}
 #.if ${PORT_OPTIONS:MOPENMP}
 #BENCHMARK_THREADS_FLAG=		OMP_NUM_THREADS=${BENCHMARK_MAXTHREADS}
 #.else
-#BENCHMARK_THREADS_FLAG=		OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
+BENCHMARK_THREADS_FLAG=		OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
 #.endif
 
 .PHONY: benchmark

@@ -5,8 +5,3 @@ lib/libopenblas.so.0
 lib/libopenblasp.a
 lib/libopenblasp.so
 lib/libopenblasp.so.0
-@pkgdir share/examples
-@pkgdir share/doc
-@pkgdir man/man1
-@pkgdir include
-@pkgdir bin
