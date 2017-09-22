@@ -3704,6 +3704,7 @@ SUBDIR+=	py-strategies
 SUBDIR+=	py-sumatra
 SUBDIR+=	py-sunpy
 SUBDIR+=	py-swiginac
+SUBDIR+=	py-sydent
 SUBDIR+=	py-symath
 SUBDIR+=	py-symboltype
 SUBDIR+=	py-symcxx
