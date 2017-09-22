@@ -3950,6 +3950,7 @@ SUBDIR+=	reinteract
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
+SUBDIR+=	renameutils
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	resin
