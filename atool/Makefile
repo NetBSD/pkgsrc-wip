@@ -4,14 +4,14 @@ DISTNAME=	atool-0.39.0
 CATEGORIES=	archivers
 MASTER_SITES=	http://savannah.nongnu.org/download/atool/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/atool
-COMMENT=	Script for managing various archives
-LICENSE=	gnu-gpl-v3
+MAINTAINER=	mcy@lm7.fr
+HOMEPAGE=	http://www.nongnu.org/atool/
+COMMENT=	Manage file archives of various types
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	perl gmake bash
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	# none
-CONFIG_SHELL=	bash
+USE_LANGUAGES=	# none (perl)
+USE_TOOLS+=	gmake perl
+REPLACE_PERL=	atool
 
 .include "../../mk/bsd.pkg.mk"
