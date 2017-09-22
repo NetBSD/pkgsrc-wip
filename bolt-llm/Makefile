@@ -31,7 +31,7 @@ INSTALLATION_DIRS=	bin
 
 # FIXME: Use openblas when available for better performance
 .include "../../math/nlopt/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../wip/openblas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

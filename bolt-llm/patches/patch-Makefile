@@ -68,7 +68,7 @@ $NetBSD$
 +ifeq (${CXX},${CXX})
 +	CXXFLAGS += -fopenmp
 +	LDFLAGS += -fopenmp
-+	LLAPACK = -llapack -lblas -lgfortran
++	LLAPACK = -llapack -lopenblas -lgfortran
  	ifeq (${linking},static)
 -		LFLAGS += -static
 +		LDFLAGS += -static
