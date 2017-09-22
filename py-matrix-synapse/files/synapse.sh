@@ -18,11 +18,11 @@ name=synapse
 
 rcvar=$name
 load_rc_config ${name}
-synapse_user="@SYNAPSE_SYNAPSE_USERS@"
-synapse_conf="@PREFIX@/etc/homeserver.yaml"
-synapse_dbdir="@SYNAPSE_DATADIR@"
-synapse_logdir="@SYNAPSE_LOGDIR@"
-synapse_pidfile="@SYNAPSE_PIDDIR@/homeserver.pid"
+synapse_user="synapse"
+synapse_conf="@PKG_SYSCONFDIR@/homeserver.yaml"
+synapse_dbdir="@VARBASE@/db/${name}"
+synapse_logdir="@VARBASE@/log/${name}"
+synapse_pidfile="@VARBASE@/run/homeserver.pid"
 
 pidfile="${synapse_pidfile}"
 procname="@PYTHONBIN@"
@@ -33,15 +33,15 @@ start_precmd=start_precmd
 start_precmd()
 {
 	if [ ! -d ${synapse_pidfile%/*} ] ; then
-		install -d -o @SYNAPSE_USERS@ -g wheel ${synapse_pidfile%/*};
+		install -d -o ${synapse_user} -g wheel ${synapse_pidfile%/*};
 	fi
 
 	if [ ! -d ${synapse_dbdir} ] ; then
-		install -d -o @SYNAPSE_USERS@ -g wheel ${synapse_dbdir};
+		install -d -o ${synapse_user} -g wheel ${synapse_dbdir};
 	fi
 
 	if [ ! -d ${synapse_logdir} ] ; then
-		install -d -o @SYNAPSE_USERS@ -g wheel ${synapse_logdir};
+		install -d -o ${synapse_user} -g wheel ${synapse_logdir};
 	fi
 
 	if $(grep -q CHANGEME ${synapse_conf}) ; then
