@@ -29,6 +29,8 @@ SUBST_SED.ndata=	-e "s,@DATADIR@,${NAEV_DATADIR},"
 BUILD_TARGET=		all ndata.zip
 INSTALL_TARGET=		install install-ndata
 
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
