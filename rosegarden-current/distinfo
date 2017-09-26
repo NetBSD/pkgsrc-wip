@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/02/15 22:20:41 jcflack Exp $
-
-SHA1 (rosegarden-4-0.9.1.tar.gz) = 0791f44fa0a1d2ed6f24df91b9c713bf43aebcfb
-RMD160 (rosegarden-4-0.9.1.tar.gz) = 495c0604ac32e79f2efad1685c9832d022822d74
-Size (rosegarden-4-0.9.1.tar.gz) = 2681936 bytes
-SHA1 (patch-aa) = b5ec0a10c90593794266ac6b85e8037a14de0fd1
-SHA1 (patch-ab) = 404cd7257a3bcc83c9a255daf728c2258abfaeee

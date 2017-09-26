@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/19 00:48:45 yomram Exp $
-
-SHA1 (klamav-0.37-source.tar.gz) = b13289b865334fd8c14903d27abf63659dd04ee8
-RMD160 (klamav-0.37-source.tar.gz) = 7603dccec96f18b5dd803e3125b645356825d966
-Size (klamav-0.37-source.tar.gz) = 1697192 bytes

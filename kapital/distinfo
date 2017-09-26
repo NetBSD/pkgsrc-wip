@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2003/06/14 01:03:02 greyskyy Exp $
-
-SHA1 (kapital-1.1.030606.tar.gz) = c422878e41dad9f4fac9802087649b76e724078c
-Size (kapital-1.1.030606.tar.gz) = 2105062 bytes
-SHA1 (patch-aa) = 90dad3a05f622840f29c53a65692531cd13e6909
-SHA1 (patch-ab) = d1945c935d0f484b207164beaa2a66b972637023
-SHA1 (patch-ac) = e7181f18289965c14d30f4b108f8c4429c7e4893
-SHA1 (patch-ad) = 5b1b828d1831b63dff2962d5d30706c47785992f

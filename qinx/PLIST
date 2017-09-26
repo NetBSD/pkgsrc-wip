@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/14 20:11:47 shattered Exp $
-lib/kde3/kstyle_qinx_config.la
-lib/kde3/kwin3_qinx.la
-lib/kde3/kwin_qinx_config.la
-lib/kde3/plugins/styles/qinx.la
-share/kde/apps/kwin/qinx.desktop
-share/kde/apps/kdisplay/color-schemes/qinx.kcsrc
-share/kde/apps/kdisplay/color-schemes/qinxmodern.kcsrc
-share/kde/apps/kstyle/themes/qinx.themerc

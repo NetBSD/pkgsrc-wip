@@ -2,6 +2,4 @@
 $NetBSD: MESSAGE,v 1.1.1.1 2005/12/10 12:55:30 ghen Exp $
 
 For the -x and -X options to work, you must install x11/xdialog.
-
-For the -k option to work, you must install x11/kdebase3 (for kdialog).
 ===========================================================================

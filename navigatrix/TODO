@@ -1,5 +1,0 @@
-- Make this use meta-pkgs/kde3/buildlink3.mk.
-
-- Test the package against the latest version of KDE in pkgsrc.
-
-- Test if the GPS subsystem actually works under NetBSD.

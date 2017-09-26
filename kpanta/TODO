@@ -1,8 +1,0 @@
-$Id: TODO,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
-
-Behaves strange (eg. don't work now)
-
-Installs documentation to share/doc/HTML/ -- should be changed to KDE path
-(I currently don't have time to look how it is done, sorry)
-
-	-- dotz@irc.pl

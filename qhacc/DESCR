@@ -1,6 +1,0 @@
-QHacc is a simple, personal accounting program based on Qt. It
-features double- or single-entry bookkeeping and a reconciliation
-window. It also provides support for memorized and split transactions,
-auto-completion of frequently used transactions, multiple account
-types, graphing, archiving, and scheduled transactions that can be
-based on the account balance.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/18 07:12:51 thomasklausner Exp $
-
-SHA1 (moto4lin-0.3.tar.bz2) = 12dff499f7a29a36e7b7a67d3260d470280485dc
-RMD160 (moto4lin-0.3.tar.bz2) = 5aa52bb87488d66b8c15cb28599816c3007b3b34
-Size (moto4lin-0.3.tar.bz2) = 59392 bytes
-SHA1 (patch-aa) = 39e138d6fd3b6f4153138cabf97ff54259bf85a3

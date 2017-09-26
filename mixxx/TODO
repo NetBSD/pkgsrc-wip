@@ -1,2 +1,0 @@
-- Make it work (it segfaults).
-- Make it build on platforms without pselect(2).

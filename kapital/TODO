@@ -1,8 +1,0 @@
-
-compiles and installs fine, but for some reason crashes in right after the 
-	splash screen.
-
-pkglint says:
-WARN: use of INTERACTIVE_STAGE discouraged. provide batch mode by using BATCH and/or FOR_CDROM.
-
-Use LIBTOOL_OVERRIDE (if still necessary) instead of LTCONFIG_OVERRIDE.

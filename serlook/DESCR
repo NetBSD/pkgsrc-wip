@@ -1,7 +1,0 @@
-
-serlook is a tool aimed to inspect and debug serial line data traffic
-developed in a Linux+KDE environment.
-
-It can work as a classic point-to-point serial terminal mode or as a
-line snooper , monitoring the data exchanged between two hosts
-(needs a PCs equipped with at least two serial ports and a derived cable).

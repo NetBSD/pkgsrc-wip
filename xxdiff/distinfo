@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/12/15 19:18:06 jsonn Exp $
-
-SHA1 (xxdiff-3.1.tar.gz) = 90e503cf05bdfab960cc57b55b31e345277a6aaf
-RMD160 (xxdiff-3.1.tar.gz) = 3b6c2955ebc5d22b7fde4a81fb5deffde65f1427
-Size (xxdiff-3.1.tar.gz) = 1074150 bytes
-SHA1 (patch-aa) = d93b505e0c042252b0aca5b081ac8f68318da952
-SHA1 (patch-ab) = a8a3f0ec615914d237366a270bcc99cc282d59e4

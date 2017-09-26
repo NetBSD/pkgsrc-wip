@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/03/29 04:58:32 ianzag Exp $
-
-SHA1 (sim-0.9.3.tar.gz) = eb3f2d44d66bcf5bbec7a51bc1086c4f5151f472
-RMD160 (sim-0.9.3.tar.gz) = 57d7b6c5a4a8397c787c2984e2ff78e22912be62
-Size (sim-0.9.3.tar.gz) = 3729191 bytes

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1 2012/12/17 22:15:50 othyro Exp $
-
-SHA1 (snotes-1.1.5.tar.bz2) = a13e9d16d7f4759b1c91ea9d4701637a99a0f432
-RMD160 (snotes-1.1.5.tar.bz2) = b6ebf2e5871d36f55ac2caab825b57d0ce7ce061
-Size (snotes-1.1.5.tar.bz2) = 155591 bytes
-SHA1 (patch-config.h) = 85db410d807c640a200fdcaf0a0757132c5af9e4
-SHA1 (patch-main.cpp) = 73422cc5baff5eaf265f3f22979c8d8a71b60a0f

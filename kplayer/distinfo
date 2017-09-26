@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/11/13 21:38:05 shattered Exp $
-
-SHA1 (kplayer-0.6.3.tar.bz2) = 7a27b2c46fe030c7d3607e7596b581e4af05c642
-RMD160 (kplayer-0.6.3.tar.bz2) = 269052c6edcd77c7776d834406d3dfc464d9843a
-Size (kplayer-0.6.3.tar.bz2) = 4912815 bytes
-SHA1 (patch-ad) = 26b7b2f704de5917611e28c0284e25c95bc34370

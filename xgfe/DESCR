@@ -1,6 +1,0 @@
-	Xgfe is a GUI front end to the Gnuplot plotting package. It is
-developed under Linux, is written in C++, and uses the Qt v1.32 widget set.
-using Gnuplot is easier with xgfe. It does not currently support every
-option of Gnuplot, but it supports many things.
-	Xgfe does offer the ability to type commands directly to Gnuplot
-so its full capabilites (theoretically) are available through the GUI.

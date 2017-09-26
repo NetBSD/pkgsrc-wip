@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
-bin/dvd2xvid
-share/dvd2xvid/icons/configure.png
-share/dvd2xvid/icons/dvd2xvid32.png
-share/dvd2xvid/icons/exit.png
-share/dvd2xvid/icons/filesave.png
-share/dvd2xvid/icons/reload.png
-share/dvd2xvid/icons/sprachen.png

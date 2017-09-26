@@ -1,4 +1,0 @@
-Sipbomber is a tool for testing SIP protocol (RFC 3261) implementations. It
-checks only server implementations, or UAS (proxies, user agent servers,
-redirect servers, and registrars). It features a QT user interface and
-automatic and manual testing modes, and incorporates CERT tests.

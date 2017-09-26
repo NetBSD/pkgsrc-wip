@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/04 23:11:11 shattered Exp $
-
-SHA1 (synce-kde-0.9.1.tar.gz) = 2a494c96e546e974891bbf4a3aa5ff8fc5d81d4f
-RMD160 (synce-kde-0.9.1.tar.gz) = 9f150063b7305fec7a5c10055c5d0b2c4aa44262
-Size (synce-kde-0.9.1.tar.gz) = 900696 bytes
-SHA1 (patch-aa) = bcbb0be47f104696c5cf9a2b30e3ba25270668f6

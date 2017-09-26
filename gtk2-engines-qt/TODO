@@ -1,9 +1,0 @@
-$Id: TODO,v 1.1.1.1 2004/01/06 22:44:42 mpasternak Exp $
-
-Doesn't work properly. Needs debugging, but as people want such
-functionality, I think we won't have to wait long for next releases.
-
-Perhaps do some work on patch/patch-ab and Makefile (QTDIR could be done
-other way)
-
-	-- dotz@irc.pl

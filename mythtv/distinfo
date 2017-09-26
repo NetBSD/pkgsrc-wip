@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/13 19:22:38 grantbeattie Exp $
-
-SHA1 (mythtv-0.11.tar.bz2) = 93d80bc36524d03f32d947d50f4ced4a79d11f8b
-Size (mythtv-0.11.tar.bz2) = 2789629 bytes
-SHA1 (patch-aa) = cc201775e278614ddbc802c9733b9d8a62c57011

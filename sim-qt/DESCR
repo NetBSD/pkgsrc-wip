@@ -1,7 +1,0 @@
-
-SIM (Simple Instant Messenger).
-
-Plugins-based instant messenger with support
-various protocols. Based on the Qt library and
-works on X11 (optional with KDE-support),
-MS Windows and MacOS X.

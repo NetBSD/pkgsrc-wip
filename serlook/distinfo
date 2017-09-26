@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/03/29 04:58:59 ianzag Exp $
-
-SHA1 (serlook-0.2.4-KDE3.tar.gz) = 6c6cdd1f6848e8143dec14616c774d1a0ec369d4
-RMD160 (serlook-0.2.4-KDE3.tar.gz) = 39afa4aa7a95da64505fd45e25cfbcd1ce5fa6e0
-Size (serlook-0.2.4-KDE3.tar.gz) = 1158976 bytes
-SHA1 (patch-aa) = 69fcdefc2c89625e8c961ef5de8f5b5fb731fe9b

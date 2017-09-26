@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
-
-SHA1 (9714-gtk-qt-engine-0.2.tar.bz2) = 74747c6896e8834a3fdeb5cb1c4aa6400e63c3ab
-RMD160 (9714-gtk-qt-engine-0.2.tar.bz2) = 76cc14fd5b58f9f1a0754a7477794f1a752136cb
-Size (9714-gtk-qt-engine-0.2.tar.bz2) = 166972 bytes
-SHA1 (patch-aa) = 0c9feb1e7c3b3ff5cb7be1cbc4996249fc109434
-SHA1 (patch-ab) = 2860ffae21a6b32d98895936097938a52e30ed9c

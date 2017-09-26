@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/08/29 12:49:54 rillig Exp $
-
-SHA1 (gambas2-1.9.40.tar.bz2) = 1b65189aed99c88b01ef66fd1fac8efd9d405b4b
-RMD160 (gambas2-1.9.40.tar.bz2) = c67e8501575327f0da8f60ff99b4718af895d356
-Size (gambas2-1.9.40.tar.bz2) = 6949177 bytes
-SHA1 (patch-aa) = 59c1b9add16268b7ebbbac9dda70144e35a88b4f
-SHA1 (patch-ab) = 2ee577a7a513f3462d471b3314bb05999924951c
-SHA1 (patch-ac) = 4c1f71cc5a3899d79e0e5eff668feb8f84b0a203
-SHA1 (patch-ad) = 071c476da54b2ff5d2805896c9e305ce52a43699

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/12/22 12:48:54 mweckbecker Exp $
-
-SHA1 (QtCurve-Gtk2-1.8.16.tar.bz2) = 533f00bd762bcf304a29078cd6fd428c6c4f51dd
-RMD160 (QtCurve-Gtk2-1.8.16.tar.bz2) = 427f8e2aa09b3accd263e0fe0b28fe84c440ab7b
-Size (QtCurve-Gtk2-1.8.16.tar.bz2) = 184324 bytes
-SHA1 (patch-ag) = 3ec10a70fbea315d5bcb6d80836aa56e67b6ac8b 

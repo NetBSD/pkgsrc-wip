@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2012/09/28 03:19:43 othyro Exp $
-
-SHA1 (bpmcounter-0.1.0.tar.gz) = 09d4153cf39a7f70cc06f7ad235de4cd3f707715
-RMD160 (bpmcounter-0.1.0.tar.gz) = f5f7ce567478b4912f30902c7210ed644c253b5e
-Size (bpmcounter-0.1.0.tar.gz) = 257561 bytes
-SHA1 (patch-bpm.cpp) = 84bc842bea60ff7bc34ad0ac1355a8f486b3f24d

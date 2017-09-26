@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/11 23:00:30 jihbed Exp $
-bin/xxdiff
-man/man1/xxdiff.1
-share/doc/xxdiff/doc.html

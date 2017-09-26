@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:31 rillig Exp $
-
-SHA1 (navigatrix-0.5.tar.gz) = b00b9b036643aaa6f2209f864cb385fd1b7d3865
-RMD160 (navigatrix-0.5.tar.gz) = f09f9812edfbae46e168fe40a86d32678231b8e8
-Size (navigatrix-0.5.tar.gz) = 563993 bytes
-SHA1 (patch-aa) = 8b7aa44d47ade15480d4723174f41e790aa04c71

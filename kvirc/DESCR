@@ -1,7 +1,0 @@
-Fully scriptable graphical IRC client with plugin support
-A highly configurable graphical IRC client with an MDI interface,
-built-in scripting language, support for DCC, drag & drop, and much
-more. KVIrc uses the Qt widget set, has support for KDE, has more
-features than you can think of, can be extended using its own scripting
-language, supports custom plugins and is nearly a desktop environment on
-its own.
