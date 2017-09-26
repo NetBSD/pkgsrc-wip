@@ -1,8 +1,0 @@
-- some (strange) message while building
-
-Removing the old /usr/pkg/lib/perl5/site_perl/5.20.0/x86_64-netbsd-thread-multi/auto/Alien/SDL 
-cannot unlink file for /usr/pkg/lib/perl5/site_perl/5.20.0/x86_64-netbsd-thread-multi/auto/Alien/SDL/.packlist: Permission denied at inc/My/Builder.pm line 53.
-cannot restore permissions to 0100644 for /usr/pkg/lib/perl5/site_perl/5.20.0/x86_64-netbsd-thread-multi/auto/Alien/SDL/.packlist: Permission denied at inc/My/Builder.pm line 53.
-cannot remove directory for /usr/pkg/lib/perl5/site_perl/5.20.0/x86_64-netbsd-thread-multi/auto/Alien/SDL: Permission denied at inc/My/Builder.pm line 53.
-Build option used:
-

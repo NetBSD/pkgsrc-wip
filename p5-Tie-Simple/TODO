@@ -1,6 +1,0 @@
-ting a Unix-style Makefile
-Writing Makefile for Tie::Simple
-Writing MYMETA.yml and MYMETA.json
-Undefined subroutine &main::WriteMakefile called at Makefile.PL line 4.
-Died at /usr/pkg/bin/url2pkg line 194.
-modena@makoto 14:30:08/150212(..wip/p5-Tie-Simple)% 
