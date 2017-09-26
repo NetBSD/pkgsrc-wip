@@ -5,7 +5,7 @@ PKG_SUPPORTED_OPTIONS+=		arts dbus debug distributed
 PKG_SUGGESTED_OPTIONS+=		distributed
 
 PKG_OPTIONS_REQUIRED_GROUPS=	frontends backends
-PKG_OPTIONS_GROUP.frontends=	gtk gnome kde
+PKG_OPTIONS_GROUP.frontends=	gtk gnome
 
 # The backends (configuration databases) is a bit of a mess!
 #   * backends/src/Core.cc requires one of GConf, GDome (XML), or Qt
@@ -14,7 +14,7 @@ PKG_OPTIONS_GROUP.frontends=	gtk gnome kde
 # Workrave doesn't currently support Qt without KDE.
 # We interpret gnome to imply gconf.
 # No KDE/Qt implies glib must be included
-PKG_OPTIONS_GROUP.backends=	xml gconf gnome kde
+PKG_OPTIONS_GROUP.backends=	xml gconf gnome
 
 .include "../../mk/bsd.options.mk"
 
@@ -58,18 +58,6 @@ CONFIGURE_ARGS+=	--enable-gconf
 .  else
 CONFIGURE_ARGS+=	--disable-gconf
 .  endif
-.endif
-
-###
-### KDE
-###
-.if !empty(PKG_OPTIONS:Mkde)
-CONFIGURE_ARGS+=	--enable-kde
-.  include "../../devel/kdesdk3/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-kde
-#  must explicitly include glib if no KDE for backends/src/Configurator.cc
-.  include "../../devel/glib2/buildlink3.mk"
 .endif
 
 ###

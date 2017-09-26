@@ -12,4 +12,3 @@
 
     Untested:
 	PKG_OPTIONS.workrave='gnome'
-	PKG_OPTIONS.workrave='kde'

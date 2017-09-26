@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.6 2012/10/07 20:11:07 asau Exp $
-#
 
 DISTNAME=		workrave-1.8.5
 CATEGORIES=		x11
@@ -25,7 +24,6 @@ CONFIGURE_ARGS+=	--docdir="${PREFIX}/share/doc/${PKGBASE}"
 # __STDC_VERSION__ doesn't appear to be defined by c++
 CXXFLAGS+=		-D_ISOC99_SOURCE
 
-# XXX for KDE, need to set kdesoundsdir?
 INSTALL_MAKE_FLAGS+=	utilsdir=${EGDIR}/sound/events
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/sound/events/workrave.soundlist \
