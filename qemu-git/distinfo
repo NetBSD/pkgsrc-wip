@@ -4,7 +4,4 @@ SHA1 (qemu-2.8.1.tar.bz2) = 224289c5e568e400920363820a0647e2aca569e7
 RMD160 (qemu-2.8.1.tar.bz2) = 93f71138d19c871195c9e0b1a7ba66275773f93a
 SHA512 (qemu-2.8.1.tar.bz2) = 0397b4029cdcb77ed053c44b3579a3f34894038e6fc6b4aa88de14515f5a78bf2f41c5e865f37111529f567c85d2f1c4deefae47dde54f76eac79410e5b2bdda
 Size (qemu-2.8.1.tar.bz2) = 28366270 bytes
-SHA1 (patch-hw_scsi_esp.c) = aa7030ac8d09082bd57044e6a0d4e2fc5c066a45
-SHA1 (patch-hw_usb_dev-mtp.c) = abd0146b4369146bdcd1038906b057c3d0362e80
-SHA1 (patch-memory.c) = 30074f7f93c79dfc22ad4fb745f9e34941f831e6
 SHA1 (patch-tests_Makefile.include) = a1dab206f61947079602d1bafcefc419b5d17881
