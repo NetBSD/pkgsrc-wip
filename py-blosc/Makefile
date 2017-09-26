@@ -15,6 +15,6 @@ USE_LANGUAGES=	c
 MAKE_ENV+=	BLOSC_DIR=${BUILDLINK_PREFIX.blosc}
 PYDISTUTILSPKG=	yes
 
+.include "../../devel/blosc/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../wip/blosc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

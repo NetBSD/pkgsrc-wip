@@ -240,7 +240,6 @@ SUBDIR+=	blasr
 SUBDIR+=	blasr_libcpp
 SUBDIR+=	bleachbit
 SUBDIR+=	blink
-SUBDIR+=	blosc
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez-gnome
 SUBDIR+=	bluez-hcidump

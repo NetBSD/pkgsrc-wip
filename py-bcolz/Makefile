@@ -14,9 +14,9 @@ USE_LANGUAGES=	c
 
 MAKE_ENV+=	BLOSC_DIR=${BUILDLINK_PREFIX.blosc}
 
+.include "../../devel/blosc/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.8
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../wip/blosc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
