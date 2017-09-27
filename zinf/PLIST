@@ -2,8 +2,6 @@
 bin/zinf
 lib/zinf/plugins/albumart-ui.a
 lib/zinf/plugins/albumart.ui
-lib/zinf/plugins/arts-pmo.a
-lib/zinf/plugins/arts.pmo
 lib/zinf/plugins/cd-lmc.a
 lib/zinf/plugins/cd-pmo.a
 lib/zinf/plugins/cd.lmc

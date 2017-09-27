@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.3 2006/09/07 12:03:21 hfath Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sxemacs
-PKG_SUPPORTED_OPTIONS=	ldap xface canna pgsql ffi arts
+PKG_SUPPORTED_OPTIONS=	ldap xface canna pgsql ffi
 
 .include "../../mk/bsd.options.mk"
 
@@ -42,9 +42,4 @@ CONFIGURE_ARGS+=	--with-ffi
 CONFIGURE_ARGS+=	--without-ffi
 .endif
 
-.if !empty(PKG_OPTIONS:Marts)
-CONFIGURE_ARGS+=	--with-sound=arts
-.include "../../audio/arts/buildlink3.mk"
-.else
 CONFIGURE_ARGS+=	--with-sound=noarts
-.endif

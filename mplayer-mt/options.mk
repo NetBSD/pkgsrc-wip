@@ -27,9 +27,6 @@ PKG_SUGGESTED_OPTIONS+=		mplayer-internal-faad
 .if !empty(PKGNAME:M*mplayer*)
 PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas pulseaudio sdl
 
-.  if ${OPSYS} != "SunOS"
-PKG_SUPPORTED_OPTIONS+=	arts
-.  endif
 .elif !empty(PKGNAME:M*mencoder*)
 PKG_SUPPORTED_OPTIONS+=	faac lame
 .endif
@@ -96,13 +93,7 @@ EXTRA_LIBS=
 .  include "../../graphics/aalib/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Marts)
-CONFIGURE_ARGS+=	--enable-arts
-EXTRA_LIBS+=		-lartsc
-.  include "../../audio/arts/buildlink3.mk"
-.else
 CONFIGURE_ARGS+=	--disable-arts
-.endif
 
 .if !empty(PKG_OPTIONS:Mcdparanoia)
 CONFIGURE_ARGS+=	--enable-cdparanoia

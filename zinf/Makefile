@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.17 2012/10/07 20:11:11 asau Exp $
-#
 
 DISTNAME=	zinf-2.2.5
 CATEGORIES=	audio
@@ -37,7 +36,6 @@ CONFIGURE_ARGS+=	--disable-x86opts
 PRIVILEGED_STAGES+=	clean
 
 .include "../../audio/alsa-lib/buildlink3.mk"
-.include "../../audio/arts/buildlink3.mk"
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
