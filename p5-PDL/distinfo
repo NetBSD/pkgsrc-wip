@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2005/06/01 04:31:09 apost Exp $
 
-SHA1 (PDL-2.4.2.tar.gz) = 60ef4e1487f24c0aa4ced0b30aeb51ec7d53a499
-RMD160 (PDL-2.4.2.tar.gz) = 34736f1a56be9e8c354ca974d4aa4f90cbd5ce04
-Size (PDL-2.4.2.tar.gz) = 2151379 bytes
-SHA1 (patch-aa) = 5261a2fcd7c3c95930d08bc40f3739edd87b9ef0
+SHA1 (PDL-2.018.tar.gz) = 509cf495900a06c5d503ee98b2675a02a4adef79
+RMD160 (PDL-2.018.tar.gz) = a9616fd7c8461832cd8fe194427ee4b5424eb885
+SHA512 (PDL-2.018.tar.gz) = e6c45b8f2a5b4ab64611ad18288a784e38165231639445b5c96da6e735f15dcb463de7f4b164ff8309fc27939ec6cd2134ec0d6026ec9715cceb8f6094a2714b
+Size (PDL-2.018.tar.gz) = 2892896 bytes
