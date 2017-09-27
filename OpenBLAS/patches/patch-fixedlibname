@@ -1,0 +1,19 @@
+$NetBSD$
+
+Patch to have one predictable library name, not depending on build configuration.
+There is only one install of OpenBLAS in pkgsrc at a given time. Funny how
+the LIBDLLNAME was not differing ...
+
+--- Makefile.system.orig	2017-02-09 21:15:17.079845857 +0100
++++ Makefile.system	2017-02-09 21:16:54.915105356 +0100
+@@ -1061,6 +1061,10 @@
+ endif
+ endif
+ 
++# Override the library name madness to have one predictable
++# name to put into PLIST for pkgsrc.
++LIBNAME         = $(LIBPREFIX)_pkg$(REVISION).$(LIBSUFFIX)
++LIBNAME_P       = $(LIBPREFIX)_pkg$(REVISION)_p.$(LIBSUFFIX)
+ 
+ LIBDLLNAME   = $(LIBPREFIX).dll
+ LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so)

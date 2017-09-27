@@ -10,6 +10,8 @@ lib/cmake/openblas/OpenBLASConfig.cmake
 lib/cmake/openblas/OpenBLASConfigVersion.cmake
 lib/libopenblas.a
 lib/libopenblas.so
-lib/libopenblasp-r${PKGVERSION}.a
-lib/libopenblasp-r${PKGVERSION}.so
+lib/libopenblas.so.0
+lib/libopenblas_pkg-r${PKGVERSION}.a
+lib/libopenblas_pkg-r${PKGVERSION}.so
+lib/pkgconfig/openblas.pc
 @pkgdir bin

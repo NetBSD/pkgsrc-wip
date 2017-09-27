@@ -1,7 +1,8 @@
 $NetBSD$
 
-SHA1 (OpenBLAS-0.2.19.tar.gz) = df4ceb25d2529748ad0f2715e62fefb348477edd
-RMD160 (OpenBLAS-0.2.19.tar.gz) = 8472d90075a8c1d357b896eba7ce293be508bca0
-SHA512 (OpenBLAS-0.2.19.tar.gz) = 7081a8540b8037c0d4d6db0ec4b51277856c0e0f4e2575671984e5deb3482102da8936c43691087c8475d67070f89ac6925e4867ead60802aa2a29e8517e7495
-Size (OpenBLAS-0.2.19.tar.gz) = 10834034 bytes
-SHA1 (patch-driver_others_memory.c) = 3f0d6014782810cc89c6fe0d0c1684e5ffdc2000
+SHA1 (OpenBLAS-0.2.20.tar.gz) = a186074145a24823e82c65672dad1cd1ca6fe89c
+RMD160 (OpenBLAS-0.2.20.tar.gz) = 2b9728cd227894d7378b0f3686b90d0e7e7975d9
+SHA512 (OpenBLAS-0.2.20.tar.gz) = 8dfc8e8c8d456b834d2e9544c8eadd9f4770e30db8b8dd76af601ec0735fd86c9cf63dd6a03ccd23fc02ec2e05069a09875b9073dfe29f99aadab3a958ae2634
+Size (OpenBLAS-0.2.20.tar.gz) = 11637301 bytes
+Size (patch-fixedlibname) = 662 bytes
+SHA1 (patch-fixedlibname) = 17d35f09aedcddfb8f20bb888fa134cdf0b3bd2b
