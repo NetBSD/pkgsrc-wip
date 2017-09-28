@@ -1,14 +1,15 @@
 # $NetBSD$
 
+PORTREVISION=	0.1
 PKGBASE=        facedetect
-DISTNAME=       ${PKGBASE}-1.0
-PKGREVISION=    1
+DISTNAME=       ${PKGBASE}-v${PORTREVISION}
+PKGREVISION=    2
 CATEGORIES=     graphics
 
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=wavexx/}
 GITHUB_PROJECT= ${PKGBASE}
-GITHUB_TAG=     d4a226674c71e89bc171f7b66de997acc1d82b72
-EXTRACT_OPTS_TAR= -s/facedetect-${GITHUB_TAG}/${DISTNAME}/p
+GITHUB_TAG=     v${PORTREVISION}
+EXTRACT_OPTS_TAR= -s/facedetect-${PORTREVISION}/${DISTNAME}/p
 
 MAINTAINER=     ast@NetBSD.org
 HOMEPAGE=       http://www.thregr.org/~wavexx/software/facedetect/
