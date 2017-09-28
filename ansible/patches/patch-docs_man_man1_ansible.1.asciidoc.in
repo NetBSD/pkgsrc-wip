@@ -2,35 +2,29 @@ $NetBSD: patch-docs_man_man1_ansible.1.asciidoc.in,v 1.0 2016/02/24 22:44:14 tty
 
 Fix hardcoded paths.
 
---- docs/man/man1/ansible.1.asciidoc.in.orig	2016-01-14 22:33:27.000000000 +0000
+--- docs/man/man1/ansible.1.asciidoc.in.orig	2017-09-19 02:57:21.000000000 +0000
 +++ docs/man/man1/ansible.1.asciidoc.in
-@@ -102,7 +102,7 @@ Show help message and exit.
+@@ -113,7 +113,7 @@ ask for privilege escalation password
  
- *-i* 'PATH', *--inventory=*'PATH'::
+ *-M*, *--module-path*::
  
--The 'PATH' to the inventory, which defaults to '/etc/ansible/hosts'.
-+The 'PATH' to the inventory, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
- Alternatively you can use a comma separated list of hosts or single host with trailing comma 'host,'.
+-prepend colon-separated path(s) to module library (default=[u'/home/jenkins/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules'])
++prepend colon-separated path(s) to module library (default=[u'/home/jenkins/.ansible/plugins/modules', u'@PREFIX@/share/ansible/plugins/modules'])
  
- *-l* 'SUBSET', *--limit=*'SUBSET'::
-@@ -121,7 +121,7 @@ Execute the module called 'NAME'.
- *-M* 'DIRECTORY', *--module-path=*'DIRECTORY'::
+ *-P* 'POLL_INTERVAL', *--poll* 'POLL_INTERVAL'::
  
- The 'DIRECTORY' search path to load modules from. The default is
--'/usr/share/ansible'. This can also be set with the ANSIBLE_LIBRARY
-+'@PREFIX@/share/ansible'. This can also be set with the ANSIBLE_LIBRARY
- environment variable.
+@@ -161,7 +161,7 @@ show this help message and exit
  
- *-o*, *--one-line*::
-@@ -227,11 +227,11 @@ Many more are available for most options
- FILES
+ *-i*, *--inventory*, *--inventory-file*::
+ 
+-specify inventory host path (default=[[u'/etc/ansible/hosts']]) or comma separated host list. --inventory-file is deprecated
++specify inventory host path (default=[[u'@PKG_SYSCONFDIR@/ansible/hosts']]) or comma separated host list. --inventory-file is deprecated
+ 
+ *-k*, *--ask-pass*::
+ 
+@@ -219,7 +219,7 @@ FILES
  -----
  
--/etc/ansible/hosts -- Default inventory file
-+@PKG_SYSCONFDIR@/ansible/hosts -- Default inventory file
- 
--/usr/share/ansible/ -- Default module library
-+@PREFIX@/share/ansible/ -- Default module library
  
 -/etc/ansible/ansible.cfg -- Config file, used if present
 +@PKG_SYSCONFDIR@/ansible/ansible.cfg -- Config file, used if present

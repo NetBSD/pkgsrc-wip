@@ -2,26 +2,20 @@ $NetBSD: patch-docs_man_man1_ansible-pull.1,v 1.0 2016/02/24 22:43:58 tty Exp $
 
 Fix hardcoded paths.
 
---- docs/man/man1/ansible-pull.1.orig	2017-06-01 17:00:23.000000000 +0000
+--- docs/man/man1/ansible-pull.1.orig	2017-09-19 02:57:29.000000000 +0000
 +++ docs/man/man1/ansible-pull.1
-@@ -120,7 +120,7 @@ Show the help message and exit\&.
- The
- \fIPATH\fR
- to the inventory, which defaults to
--\fI/etc/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
-+\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
- \fIhost,\fR\&.
+@@ -161,7 +161,7 @@ ask for privilege escalation password
+ .PP
+ \fB\-M\fR, \fB\-\-module\-path\fR
+ .RS 4
+-prepend colon\-separated path(s) to module library (default=[u\*(Aq/home/jenkins/\&.ansible/plugins/modules\*(Aq, u\*(Aq/usr/share/ansible/plugins/modules\*(Aq])
++prepend colon\-separated path(s) to module library (default=[u\*(Aq/home/jenkins/\&.ansible/plugins/modules\*(Aq, u\*(Aq@PREFIX@/share/ansible/plugins/modules\*(Aq])
  .RE
  .PP
-@@ -216,11 +216,11 @@ ANSIBLE_CONFIG \(em Override the default
+ \fB\-T\fR \fITIMEOUT\fR, \fB\-\-timeout\fR \fITIMEOUT\fR
+@@ -252,7 +252,7 @@ ANSIBLE_CONFIG \(em Override the default
  Many more are available for most options in ansible\&.cfg
  .SH "FILES"
- .sp
--/etc/ansible/hosts \(em Default inventory file
-+@PKG_SYSCONFDIR@/ansible/hosts \(em Default inventory file
- .sp
--/usr/share/ansible/ \(em Default module library
-+@PREFIX@/share/ansible/ \(em Default module library
  .sp
 -/etc/ansible/ansible\&.cfg \(em Config file, used if present
 +@PKG_SYSCONFDIR@/ansible/ansible\&.cfg \(em Config file, used if present

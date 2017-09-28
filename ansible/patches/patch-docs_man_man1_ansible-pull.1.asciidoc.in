@@ -2,26 +2,29 @@ $NetBSD: patch-docs_man_man1_ansible-pull.1.asciidoc.in,v 1.0 2016/02/24 22:44:0
 
 Fix hardcoded paths.
 
---- docs/man/man1/ansible-pull.1.asciidoc.in.orig	2017-06-01 17:00:04.000000000 +0000
+--- docs/man/man1/ansible-pull.1.asciidoc.in.orig	2017-09-19 02:57:21.000000000 +0000
 +++ docs/man/man1/ansible-pull.1.asciidoc.in
-@@ -110,7 +110,7 @@ Show the help message and exit.
+@@ -138,7 +138,7 @@ ask for privilege escalation password
  
- *-i* 'PATH', *--inventory=*'PATH'::
+ *-M*, *--module-path*::
  
--The 'PATH' to the inventory, which defaults to '/etc/ansible/hosts'.
-+The 'PATH' to the inventory, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
- Alternatively you can use a comma separated list of hosts or single host with traling comma 'host,'.
+-prepend colon-separated path(s) to module library (default=[u'/home/jenkins/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules'])
++prepend colon-separated path(s) to module library (default=[u'/home/jenkins/.ansible/plugins/modules', u'@PREFIX@/share/ansible/plugins/modules'])
  
- *--private-key=*'PRIVATE_KEY_FILE'::
-@@ -205,11 +205,11 @@ Many more are available for most options
- FILES
+ *-T* 'TIMEOUT', *--timeout* 'TIMEOUT'::
+ 
+@@ -170,7 +170,7 @@ show this help message and exit
+ 
+ *-i*, *--inventory*, *--inventory-file*::
+ 
+-specify inventory host path (default=[[u'/etc/ansible/hosts']]) or comma separated host list. --inventory-file is deprecated
++specify inventory host path (default=[[u'@PKG_SYSCONFDIR@/ansible/hosts']]) or comma separated host list. --inventory-file is deprecated
+ 
+ *-k*, *--ask-pass*::
+ 
+@@ -228,7 +228,7 @@ FILES
  -----
  
--/etc/ansible/hosts -- Default inventory file
-+@PKG_SYSCONFDIR@/ansible/hosts -- Default inventory file
- 
--/usr/share/ansible/ -- Default module library
-+@PREFIX@/share/ansible/ -- Default module library
  
 -/etc/ansible/ansible.cfg -- Config file, used if present
 +@PKG_SYSCONFDIR@/ansible/ansible.cfg -- Config file, used if present

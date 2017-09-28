@@ -4,21 +4,18 @@ Fix hardcoded paths.
 
 --- docs/man/man1/ansible-doc.1.orig	2016-01-14 22:33:38.000000000 +0000
 +++ docs/man/man1/ansible-doc.1
-@@ -42,7 +42,7 @@ ansible\-doc [\-M module_path] [\-l] [\-
- the
- \fIDIRECTORY\fR
- search path to load modules from\&. The default is
--\fI/usr/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
-+\fI@PREFIX@/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
+@@ -44,7 +44,7 @@ show program\(cqs version number and exi
+ .PP
+ \fB\-M\fR, \fB\-\-module\-path\fR
+ .RS 4
+-prepend colon\-separated path(s) to module library (default=[u\*(Aq/home/jenkins/\&.ansible/plugins/modules\*(Aq, u\*(Aq/usr/share/ansible/plugins/modules\*(Aq])
++prepend colon\-separated path(s) to module library (default=[u\*(Aq/home/jenkins/\&.ansible/plugins/modules\*(Aq, u\*(Aq@PREFIX@/share/ansible/plugins/modules\*(Aq])
  .RE
  .PP
- \fB\-s\fR, \fB\-\-snippet=\fR
-@@ -59,9 +59,9 @@ Produce a terse listing of modules and a
- ANSIBLE_LIBRARY \(em Override the default ansible module library path
+ \fB\-a\fR, \fB\-\-all\fR
+@@ -86,7 +86,7 @@ ANSIBLE_CONFIG \(em Override the default
+ Many more are available for most options in ansible\&.cfg
  .SH "FILES"
- .sp
--/usr/share/ansible/ \(em Default module library
-+@PREFIX@/share/ansible/ \(em Default module library
  .sp
 -/etc/ansible/ansible\&.cfg \(em Config file, used if present
 +@PKG_SYSCONFDIR@/ansible/ansible\&.cfg \(em Config file, used if present

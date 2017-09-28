@@ -2,35 +2,20 @@ $NetBSD: patch-docs_man_man1_ansible-playbook.1,v 1.1 2016/03/01 12:01:04 tty Ex
 
 Fix hardcoded paths.
 
---- docs/man/man1/ansible-playbook.1.orig	2017-06-01 17:00:22.000000000 +0000
+--- docs/man/man1/ansible-playbook.1.orig	2017-09-19 02:57:25.000000000 +0000
 +++ docs/man/man1/ansible-playbook.1
-@@ -128,7 +128,7 @@ Show help page and exit\&.
- The
- \fIPATH\fR
- to the inventory, which defaults to
--\fI/etc/ansible/hosts\fR\&. Alternatively, you can use a comma\-separated list of hosts or a single host with a trailing comma
-+\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&. Alternatively, you can use a comma\-separated list of hosts or a single host with a trailing comma
- \fIhost,\fR\&.
+@@ -174,7 +174,7 @@ ask for privilege escalation password
+ .PP
+ \fB\-M\fR, \fB\-\-module\-path\fR
+ .RS 4
+-prepend colon\-separated path(s) to module library (default=[u\*(Aq/home/jenkins/\&.ansible/plugins/modules\*(Aq, u\*(Aq/usr/share/ansible/plugins/modules\*(Aq])
++prepend colon\-separated path(s) to module library (default=[u\*(Aq/home/jenkins/\&.ansible/plugins/modules\*(Aq, u\*(Aq@PREFIX@/share/ansible/plugins/modules\*(Aq])
  .RE
  .PP
-@@ -159,7 +159,7 @@ List all tasks that would be executed; d
- The
- \fIDIRECTORY\fR
- search path to load modules from\&. The default is
--\fI/usr/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
-+\fI@PREFIX@/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
- .RE
- .PP
- \fB\-\-private\-key=\fR\fIPRIVATE_KEY_FILE\fR
-@@ -291,11 +291,11 @@ ANSIBLE_CONFIG \(em Override the default
+ \fB\-R\fR \fISU_USER\fR, \fB\-\-su\-user\fR \fISU_USER\fR
+@@ -265,7 +265,7 @@ ANSIBLE_CONFIG \(em Override the default
  Many more are available for most options in ansible\&.cfg
  .SH "FILES"
- .sp
--/etc/ansible/hosts \(em Default inventory file
-+@PKG_SYSCONFDIR@/ansible/hosts \(em Default inventory file
- .sp
--/usr/share/ansible/ \(em Default module library
-+@PREFIX@/share/ansible/ \(em Default module library
  .sp
 -/etc/ansible/ansible\&.cfg \(em Config file, used if present
 +@PKG_SYSCONFDIR@/ansible/ansible\&.cfg \(em Config file, used if present
