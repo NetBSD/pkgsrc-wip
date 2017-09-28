@@ -18,7 +18,7 @@ NO_BUILD=       yes
 USE_TOOLS+=     perl
 REPLACE_PERL=   ${PKGBASE}
 
-DEPENDS+=       facedetect>=1.0:../../wip/facedetect
+DEPENDS+=       facedetect>=0.1:../../wip/facedetect
 DEPENDS+=       ImageMagick>=6.9:../../graphics/ImageMagick
 DEPENDS+=       jpegoptim>=1.4:../../graphics/jpegoptim
 DEPENDS+=       pngcrush>=1.7:../../graphics/pngcrush
