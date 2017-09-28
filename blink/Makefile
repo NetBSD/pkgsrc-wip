@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-eventlib-[0-9]*:../../net/py-eventlib
 DEPENDS+=	${PYPKGPREFIX}-python-application-[0-9]*:../../wip/py-python-application
 DEPENDS+=	${PYPKGPREFIX}-qt4-[0-9]*:../../x11/py-qt4
 DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+DEPENDS+=	${PYPKGPREFIX}-cjson-[0-9]*:../../textproc/py-cjson
 
 USE_LANGUAGES=	c
 
@@ -33,7 +34,6 @@ post-install:
 	done
 
 .include "../../net/libvncserver/buildlink3.mk"
-.include "../../textproc/py-cjson/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
