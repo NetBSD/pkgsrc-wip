@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/07/04 03:04:36 jihbed Exp $
-
-SHA1 (gitdb-0.6.4.tar.gz) = 21cbba28199802e73e0c4a83b7c02369bbf8c7d7
-RMD160 (gitdb-0.6.4.tar.gz) = 68c014ea3cce0f9b9a58c8f39b255ea817af0d70
-Size (gitdb-0.6.4.tar.gz) = 400506 bytes
-SHA1 (patch-gitdb___fun.c) = de6ae01612d9722091ced017a3d33c99afcf74c7
