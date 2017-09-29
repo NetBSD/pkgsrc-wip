@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/06/14 22:52:11 jihbed Exp $
-
-SHA1 (regex-2017.02.08.tar.gz) = 01ac11015fd482288f928e8bd5d8ec7949d60124
-RMD160 (regex-2017.02.08.tar.gz) = 3aee9670a4554ae0b81fbc38edf744890ff6f4f3
-SHA512 (regex-2017.02.08.tar.gz) = 1a4062eb1d598fcd02043cc328bc4273846f2dfc64ec4e83c34edd73226fd2f05c7d192d299bdf84098c6a2b1fb5dcd1c97fa545fb65673a45b72cd82fdcaaef
-Size (regex-2017.02.08.tar.gz) = 600957 bytes
