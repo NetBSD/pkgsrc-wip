@@ -11,6 +11,8 @@ COMMENT=	Git Object Database
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-smmap2-[0-9]*:../../wip/py-smmap2
+# major test failures, see
+# https://github.com/gitpython-developers/gitdb/issues/42
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
