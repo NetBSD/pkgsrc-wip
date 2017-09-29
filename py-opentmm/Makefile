@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.4 2014/12/31 13:58:35 thomasklausner Exp $
-#
 
 DISTNAME=	openTMM-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,8 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 #DEPENDS+=	${PYPKGPREFIX}-django-gitrevision>=0.1.4:../../wip/py-django-gitrevision
-
-#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-git via py-django-gitrevision
 
 USE_LANGUAGES=	c fortran
 

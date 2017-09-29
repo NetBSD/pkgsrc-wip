@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2014/12/31 13:58:32 thomasklausner Exp $
 
-DISTNAME=	GitPython-2.0.8
+DISTNAME=	GitPython-2.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/GitPython/git/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/GitPython/}
@@ -10,15 +10,16 @@ HOMEPAGE=	https://github.com/gitpython-developers/GitPython
 COMMENT=	Python library used to interact with Git repositories
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-smmap>=0.8.5:../../wip/py-smmap
-DEPENDS+=	${PYPKGPREFIX}-gitdb>=0.6.1:../../wip/py-gitdb
-DEPENDS+=	git>=1.7.0:../../devel/git
+DEPENDS+=	${PYPKGPREFIX}-smmap2-[0-9]*:../../wip/py-smmap2
+DEPENDS+=	${PYPKGPREFIX}-gitdb2-[0-9]*:../../wip/py-gitdb2
+DEPENDS+=	git-base>=1.7.0:../../devel/git-base
 
+# major test failures as of 2.1.7
+# https://github.com/gitpython-developers/GitPython/issues/673
 # TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-ddt-[0-9]*:../../devel/py-ddt
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-
-#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.3.2.RC1
 
 USE_LANGUAGES=	# none
 

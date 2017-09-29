@@ -120,6 +120,7 @@ ${PYSITELIB}/git/test/fixtures/blame
 ${PYSITELIB}/git/test/fixtures/blame_binary
 ${PYSITELIB}/git/test/fixtures/blame_complex_revision
 ${PYSITELIB}/git/test/fixtures/blame_incremental
+${PYSITELIB}/git/test/fixtures/blame_incremental_2.11.1_plus
 ${PYSITELIB}/git/test/fixtures/cat_file.py
 ${PYSITELIB}/git/test/fixtures/cat_file.pyc
 ${PYSITELIB}/git/test/fixtures/cat_file.pyo
@@ -159,6 +160,7 @@ ${PYSITELIB}/git/test/fixtures/issue-301_stderr
 ${PYSITELIB}/git/test/fixtures/ls_tree_a
 ${PYSITELIB}/git/test/fixtures/ls_tree_b
 ${PYSITELIB}/git/test/fixtures/ls_tree_commit
+${PYSITELIB}/git/test/fixtures/ls_tree_empty
 ${PYSITELIB}/git/test/fixtures/reflog_HEAD
 ${PYSITELIB}/git/test/fixtures/reflog_invalid_date
 ${PYSITELIB}/git/test/fixtures/reflog_invalid_email
@@ -227,6 +229,9 @@ ${PYSITELIB}/git/test/test_diff.pyo
 ${PYSITELIB}/git/test/test_docs.py
 ${PYSITELIB}/git/test/test_docs.pyc
 ${PYSITELIB}/git/test/test_docs.pyo
+${PYSITELIB}/git/test/test_exc.py
+${PYSITELIB}/git/test/test_exc.pyc
+${PYSITELIB}/git/test/test_exc.pyo
 ${PYSITELIB}/git/test/test_fun.py
 ${PYSITELIB}/git/test/test_fun.pyc
 ${PYSITELIB}/git/test/test_fun.pyo

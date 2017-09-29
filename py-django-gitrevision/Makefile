@@ -14,8 +14,6 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-git-[0-9]*:../../wip/py-git
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-git
-
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
