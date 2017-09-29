@@ -3275,6 +3275,7 @@ SUBDIR+=	py-louie
 SUBDIR+=	py-louvain
 SUBDIR+=	py-lrparsing
 SUBDIR+=	py-lru-dict
+SUBDIR+=	py-lscsoft-glue
 SUBDIR+=	py-lsqfit
 SUBDIR+=	py-luminous
 SUBDIR+=	py-lxmlproc
