@@ -1,7 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/dchest/siphash.a
-gopkg/src/github.com/dchest/siphash/README
-gopkg/src/github.com/dchest/siphash/hash.go
-gopkg/src/github.com/dchest/siphash/siphash.go
-gopkg/src/github.com/dchest/siphash/siphash_test.go
-@pkgdir bin
