@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.5 2015/08/11 23:01:32 jihbed Exp $
 
-SHA1 (astropy-1.1.1.tar.gz) = 2017eb49bae29607e8e4095fc9d918510ddcdf36
-RMD160 (astropy-1.1.1.tar.gz) = 895b3d5b8bb728516ffb42ca2a851770b6d3a550
-SHA512 (astropy-1.1.1.tar.gz) = bc3c370da32d5f0098dbfc2808dba9d4d4424d3dcfba4d7ffd84b39569387b79ad93086e10678c259237f9cfe1229725501d0dc4eba51c9d01a4cd8a72024fb4
-Size (astropy-1.1.1.tar.gz) = 8157305 bytes
+SHA1 (astropy-2.0.2.tar.gz) = 29ce40d65c4d43eab91187f2c5c83c28285d5d1d
+RMD160 (astropy-2.0.2.tar.gz) = ec4c044414c43990ad818bb7ed037f0db81fc38d
+SHA512 (astropy-2.0.2.tar.gz) = f73b21a1af8cbd7c6cb4ab18536fbeadb4285e57e40ca9742b21c9bf4f698d17b7de8c2f143742c375074cdbc3917980f71db3233f8a5d1f02c9fa89c01a917e
+Size (astropy-2.0.2.tar.gz) = 8225348 bytes

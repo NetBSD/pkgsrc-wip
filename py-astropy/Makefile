@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	astropy-1.1.1
+DISTNAME=	astropy-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
@@ -10,7 +10,13 @@ HOMEPAGE=	http://www.astropy.org/
 COMMENT=	Community-developed python astronomy tools
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/astropy-1.1.1
+DEPENDS+=	${PYPKGPREFIX}-h5py-[0-9]*:../../devel/py-h5py
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
