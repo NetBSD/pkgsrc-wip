@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2015/07/04 02:41:41 jihbed Exp $
 
-DISTNAME=	smmap2-2.0.1
+DISTNAME=	smmap2-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap2/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap2/}
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/Byron/smmap
 COMMENT=	Git implementation of a sliding window memory map manager
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
