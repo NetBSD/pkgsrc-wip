@@ -1,0 +1,45 @@
+The following operations are supported:
+
+QR rank-1 update (qr1up)
+        Updates the QR factorization after an additive rank-1 update to the
+        original matrix (A = A + u*v'). Works for full & economized 
+        factorization.
+QR column insert (qrinc)
+        Updates the QR factorization after an inserting a column to the
+        original matrix. Works for full & economized factorization.
+QR column delete (qrdec)
+        Updates the QR factorization after an deleting a column from the
+        original matrix. Works for full & economized factorization.
+QR column shift (qrshc)
+        Updates the QR factorization after a circular shift of columns in 
+        the original matrix. Works for full & economized factorization.
+QR row insert (qrinr)
+        Updates the QR factorization after an inserting a row to the
+        original matrix. Works for full factorization only.
+QR row delete (qrder)
+        Updates the QR factorization after an deleting a row from the
+        original matrix. Works for full factorization only.
+
+Cholesky rank-1 update (ch1up)
+        Updates the Cholesky factorization after positive rank-1 update
+        A = A + u*u'. 
+Cholesky rank-1 downdate (ch1dn)
+        Updates the Cholesky factorization after positive rank-1 downdate
+        A = A - u*u'. 
+Cholesky symmetric insert (chinx)
+        Updates the Cholesky factorization after a symmetric column/row
+        insertion.
+Cholesky symmetric insert (chdex)
+        Updates the Cholesky factorization after a symmetric column/row
+        deletion.
+Cholesky symmetric shift (chshx)
+        Updates the Cholesky factorization after a symmetric column/row
+        left/right circular shift.
+
+LU rank-1 update (lu1up)
+        Updates the LU factorization after a rank-1 update (A = A + u*v.'). 
+        No pivoting available. Faster than lup1up, but less stable.
+LU pivoted rank-1 update (lup1up)
+        Updates a row-pivoted LUP factorization after a rank-1 update
+        (A = A + u*v.'). Also updates the row permutation matrix. Slower
+        than lu1up, but more stable.

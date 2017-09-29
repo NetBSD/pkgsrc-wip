@@ -1,0 +1,35 @@
+$NetBSD
+
+--- src/Makefile.orig	2017-04-14 22:09:56.691696785 +0200
++++ src/Makefile	2017-04-14 23:16:19.705455550 +0200
+@@ -34,6 +34,19 @@
+ 
+ OBJS = $(SRC:%.f=%.o)
+ 
++.SUFFIXES:      .f      .lo     .o
++LOBJS = $(SRC:%.f=%.lo)
++.f.lo:  
++	libtool --tag=FC --mode=compile $(FC) -o $@ -c $(FFLAGS) $<
++
++lalib: ../libqrupdate.la
++
++../libqrupdate.la: $(LOBJS)
++	libtool --tag=FC --mode=link $(FC) $(FFLAGS) -o $@  -version-info $(MAJOR) -rpath $(PREFIX)/$(LIBDIR) $(LOBJS)
++
++lainstall: lalib
++	libtool --tag=FC --mode=install install -D ../libqrupdate.la $(DESTDIR)$(PREFIX)/$(LIBDIR)/libqrupdate.la
++
+ lib: ../libqrupdate.a
+ 
+ ifeq ($(shell uname),Darwin)
+@@ -59,6 +72,10 @@
+ 
+ clean:
+ 	rm -f $(OBJS)
++	rm -f $(LOBJS)
++	rm -rf .libs
++	rm -f ../libqrupdate.la
++	rm -rf ../.libs
+ 
+ install: install-shlib install-staticlib
+ 
