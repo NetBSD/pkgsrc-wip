@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/05 17:46:51 jihbed Exp $
-bin/nltkbasedsegmentertokeniserrunner2.7
+@comment $NetBSD$
+bin/nltkbasedsegmentertokeniserrunner${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/recluse/__init__.py
 ${PYSITELIB}/recluse/__init__.pyc
 ${PYSITELIB}/recluse/__init__.pyo
@@ -9,6 +10,9 @@ ${PYSITELIB}/recluse/_version.pyo
 ${PYSITELIB}/recluse/article_randomiser.py
 ${PYSITELIB}/recluse/article_randomiser.pyc
 ${PYSITELIB}/recluse/article_randomiser.pyo
+${PYSITELIB}/recluse/article_selector.py
+${PYSITELIB}/recluse/article_selector.pyc
+${PYSITELIB}/recluse/article_selector.pyo
 ${PYSITELIB}/recluse/nltk_based_segmenter_tokeniser.py
 ${PYSITELIB}/recluse/nltk_based_segmenter_tokeniser.pyc
 ${PYSITELIB}/recluse/nltk_based_segmenter_tokeniser.pyo
@@ -26,6 +30,9 @@ ${PYSITELIB}/recluse/test/data/unigram_counts.gz
 ${PYSITELIB}/recluse/test/test_article_randomiser.py
 ${PYSITELIB}/recluse/test/test_article_randomiser.pyc
 ${PYSITELIB}/recluse/test/test_article_randomiser.pyo
+${PYSITELIB}/recluse/test/test_article_selector.py
+${PYSITELIB}/recluse/test/test_article_selector.pyc
+${PYSITELIB}/recluse/test/test_article_selector.pyo
 ${PYSITELIB}/recluse/test/test_nltk_based_segmenter_tokeniser.py
 ${PYSITELIB}/recluse/test/test_nltk_based_segmenter_tokeniser.pyc
 ${PYSITELIB}/recluse/test/test_nltk_based_segmenter_tokeniser.pyo
@@ -45,5 +52,5 @@ ${PYSITELIB}/recluse/vocabulary_cutter.py
 ${PYSITELIB}/recluse/vocabulary_cutter.pyc
 ${PYSITELIB}/recluse/vocabulary_cutter.pyo
 ${PYSITELIB}/recluse/vocabulary_generator.py
-${PYSITELIB}/recluse/vocabulary_generator.pyc
-${PYSITELIB}/recluse/vocabulary_generator.pyo
+${PLIST.py2x}${PYSITELIB}/recluse/vocabulary_generator.pyc
+${PLIST.py2x}${PYSITELIB}/recluse/vocabulary_generator.pyo
