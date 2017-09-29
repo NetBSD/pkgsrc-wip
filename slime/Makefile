@@ -21,9 +21,7 @@ NO_CONFIGURE=		yes
 INFO_FILES=		yes
 
 EMACS_VERSIONS_ACCEPTED= \
-			emacs25 emacs25nox \
-			emacs24 emacs24nox \
-			emacs23 emacs23nox
+			emacs25 emacs25nox
 
 INSTALLATION_DIRS+=	${EMACS_INFOPREFIX}
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/slime

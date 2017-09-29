@@ -33,8 +33,6 @@ ${FOR_emacs20}${EMACS_LISPPREFIX}/w3m/w3m-e20.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-e21.el.gz
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
-${FOR_emacs22nox}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-ems.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-ems.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-favicon.el.gz
@@ -50,8 +48,6 @@ ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-fsf.el.gz
 ${FOR_emacs20}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
-${FOR_emacs22nox}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-hist.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-hist.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-image.el.gz

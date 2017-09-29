@@ -8,7 +8,7 @@ CONFLICTS+=	elscreen-[0-9]*
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://github.com/knu/elscreen
-COMMENT=	Window manager within Emacs (for emacs24)
+COMMENT=	Window manager within Emacs
 LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	knu
