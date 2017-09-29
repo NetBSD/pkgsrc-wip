@@ -3,4 +3,5 @@ doing stuff outside the pkgsrc env.
 
 - This package has known vulnerabilities, please investigate and fix if possible:
    CVE-2015-4093, CVE-2015-9056, CVE-2016-10365, CVE-2016-10366,
-   CVE-2016-1000219, CVE-2016-1000220, CVE-2017-8439, CVE-2017-8440, CVE-2017-8452
+   CVE-2016-1000219, CVE-2016-1000220, CVE-2017-8439, CVE-2017-8440,
+   CVE-2017-8452, CVE-2017-11479
