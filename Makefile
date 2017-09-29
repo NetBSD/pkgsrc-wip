@@ -3117,6 +3117,7 @@ SUBDIR+=	py-ghalatawi
 SUBDIR+=	py-gist
 SUBDIR+=	py-git
 SUBDIR+=	py-gitdb
+SUBDIR+=	py-gitdb2
 SUBDIR+=	py-glespy
 SUBDIR+=	py-gmane
 SUBDIR+=	py-gmpy2
