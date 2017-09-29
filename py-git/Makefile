@@ -14,7 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-smmap2-[0-9]*:../../wip/py-smmap2
 DEPENDS+=	${PYPKGPREFIX}-gitdb2-[0-9]*:../../wip/py-gitdb2
 DEPENDS+=	git-base>=1.7.0:../../devel/git-base
 
-# major test failures as of 2.1.7
+# tests are not intended to be run from pypi distfile,
+# since they operate on GitPython's git repository, see
 # https://github.com/gitpython-developers/GitPython/issues/673
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-ddt-[0-9]*:../../devel/py-ddt
