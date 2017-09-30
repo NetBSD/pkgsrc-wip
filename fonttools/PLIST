@@ -515,9 +515,9 @@ ${PYSITELIB}/fontTools/voltLib/lexer.pyo
 ${PYSITELIB}/fontTools/voltLib/parser.py
 ${PYSITELIB}/fontTools/voltLib/parser.pyc
 ${PYSITELIB}/fontTools/voltLib/parser.pyo
-${PYSITELIB}/fonttools-${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/fonttools-${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/fonttools-${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/fonttools-${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/fonttools-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 share/man/man1/ttx.1
