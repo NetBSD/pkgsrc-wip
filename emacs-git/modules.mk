@@ -342,7 +342,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
-.  if empty(EMACS_TYPE:Memacs25) && empty(EMACS_TYPE:Memacs26)
+.  if empty(EMACS_TYPE:Memacs25) && empty(EMACS_TYPE:Memacs26) && empty(EMACS_TYPE:Memacs27)
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp
 .  else
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
