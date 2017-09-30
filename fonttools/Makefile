@@ -14,6 +14,5 @@ COMMENT=	Library to manipulate font files from Python
 
 WRKSRC=		${WRKDIR}/fonttools-3.15.1
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
