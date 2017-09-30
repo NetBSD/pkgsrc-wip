@@ -14,8 +14,8 @@ USE_LANGUAGES=	# none
 
 PYSETUP=	buildsetup.py
 
-DEPENDS+=	${PYPKGPREFIX}-distorm3-[0-9]*:../../devel/py-distorm3/
+DEPENDS+=	${PYPKGPREFIX}-distorm3-[0-9]*:../../devel/py-distorm3
+DEPENDS+=	${PYPKGPREFIX}-cxfreeze-[0-9]*:../../lang/py-cxfreeze
 
-.include "../../lang/py-cxfreeze/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

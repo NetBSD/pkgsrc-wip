@@ -477,7 +477,6 @@ SUBDIR+=	cvsproxy
 SUBDIR+=	cvstrac
 SUBDIR+=	cwebx
 SUBDIR+=	cwm
-SUBDIR+=	cxfreeze
 SUBDIR+=	cycle
 SUBDIR+=	cygwin
 SUBDIR+=	cygwin-binutils
