@@ -21,6 +21,7 @@ USE_TOOLS+=		gmake makeinfo
 NO_CONFIGURE=		yes
 
 TEST_TARGET=		check
+DOCDIR?=		${PREFIX}/share/doc
 
 INSTALLATION_DIRS+=	${DOCDIR} \
 			${EMACS_LISPPREFIX:C|^${PREFIX}/||}/apel \
@@ -35,7 +36,7 @@ MAKE_FLAGS+=	VERSION_SPECIFIC_LISPDIR=${EMACS_LISPPREFIX:Q}
 MAKE_FLAGS+=	${MAKE_FLAGS.${EMACS_FLAVOR}}
 
 # apel is included in xemacs-packages
-EMACS_VERSIONS_ACCEPTED=emacs21 emacs21nox emacs20 emacs25 emacs26
+EMACS_VERSIONS_ACCEPTED=emacs21 emacs21nox emacs20 emacs25 emacs26 emacs27
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
