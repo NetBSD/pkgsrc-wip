@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=fonttools/fonttools/}
-COMMENT=	A library to manipulate font files from Python
+COMMENT=	Library to manipulate font files from Python
 #LICENSE=	# TODO: (see mk/license.mk)
 
 WRKSRC=		${WRKDIR}/fonttools-3.15.1
