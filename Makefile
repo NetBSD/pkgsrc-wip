@@ -782,6 +782,7 @@ SUBDIR+=	filevercmp
 SUBDIR+=	filter_audio-git
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
+SUBDIR+=	firefox
 SUBDIR+=	firefox-dfbsd
 SUBDIR+=	firefox-hg
 SUBDIR+=	firefox-webrtc
