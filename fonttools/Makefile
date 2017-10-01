@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fonttools/}
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://groups.google.com/forum/#!forum/fonttools
 COMMENT=	Library to manipulate font files from Python
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
