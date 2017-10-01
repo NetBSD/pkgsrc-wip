@@ -441,7 +441,6 @@ SUBDIR+=	cpdup
 SUBDIR+=	cpluff
 SUBDIR+=	cpm
 SUBDIR+=	cpqarrayd
-SUBDIR+=	cpuminer
 SUBDIR+=	crabemu
 SUBDIR+=	crawl-stone-soup
 SUBDIR+=	creal
