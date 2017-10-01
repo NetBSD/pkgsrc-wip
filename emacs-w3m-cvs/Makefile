@@ -46,7 +46,7 @@ SUBST_SED.fix-icondir+=		-e 's|images/w3m|w3m|g'
 EMACS_BUILDLINK=
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
 				xemacs215 xemacs214 \
-				emacs25 emacs26
+				emacs25 emacs26 emacs27
 
 EVAL_PREFIX+=		W3MPREFIX=w3m
 
