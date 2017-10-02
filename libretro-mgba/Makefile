@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mgba-0.6.0
+DISTNAME=	libretro-mgba-0.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 
