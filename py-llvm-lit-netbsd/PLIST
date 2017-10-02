@@ -51,6 +51,12 @@ ${PYSITELIB}/lit/formats/googletest.pyo
 ${PYSITELIB}/lit/formats/shtest.py
 ${PYSITELIB}/lit/formats/shtest.pyc
 ${PYSITELIB}/lit/formats/shtest.pyo
+${PYSITELIB}/lit/llvm/__init__.py
+${PYSITELIB}/lit/llvm/__init__.pyc
+${PYSITELIB}/lit/llvm/__init__.pyo
+${PYSITELIB}/lit/llvm/config.py
+${PYSITELIB}/lit/llvm/config.pyc
+${PYSITELIB}/lit/llvm/config.pyo
 ${PYSITELIB}/lit/main.py
 ${PYSITELIB}/lit/main.pyc
 ${PYSITELIB}/lit/main.pyo
