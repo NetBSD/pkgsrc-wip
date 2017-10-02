@@ -11,6 +11,7 @@ bin/llvm-as
 bin/llvm-bcanalyzer
 bin/llvm-c-test
 bin/llvm-cat
+bin/llvm-cfi-verify
 bin/llvm-config
 bin/llvm-cov
 bin/llvm-cvtres
@@ -242,6 +243,7 @@ include/llvm/Analysis/TargetTransformInfoImpl.h
 include/llvm/Analysis/Trace.h
 include/llvm/Analysis/TypeBasedAliasAnalysis.h
 include/llvm/Analysis/TypeMetadataUtils.h
+include/llvm/Analysis/ValueLattice.h
 include/llvm/Analysis/ValueTracking.h
 include/llvm/Analysis/VectorUtils.h
 include/llvm/AsmParser/Parser.h
@@ -252,6 +254,7 @@ include/llvm/BinaryFormat/Dwarf.h
 include/llvm/BinaryFormat/ELF.h
 include/llvm/BinaryFormat/ELFRelocs/AArch64.def
 include/llvm/BinaryFormat/ELFRelocs/AMDGPU.def
+include/llvm/BinaryFormat/ELFRelocs/ARC.def
 include/llvm/BinaryFormat/ELFRelocs/ARM.def
 include/llvm/BinaryFormat/ELFRelocs/AVR.def
 include/llvm/BinaryFormat/ELFRelocs/BPF.def
@@ -665,6 +668,7 @@ include/llvm/IR/DebugInfoMetadata.h
 include/llvm/IR/DebugLoc.h
 include/llvm/IR/DerivedTypes.h
 include/llvm/IR/DerivedUser.h
+include/llvm/IR/DiagnosticHandler.h
 include/llvm/IR/DiagnosticInfo.h
 include/llvm/IR/DiagnosticPrinter.h
 include/llvm/IR/Dominators.h
@@ -1185,6 +1189,9 @@ include/llvm/Transforms/Vectorize.h
 include/llvm/Transforms/Vectorize/LoopVectorize.h
 include/llvm/Transforms/Vectorize/SLPVectorizer.h
 include/llvm/WindowsManifest/WindowsManifestMerger.h
+include/llvm/WindowsResource/ResourceProcessor.h
+include/llvm/WindowsResource/ResourceScriptToken.h
+include/llvm/WindowsResource/ResourceScriptTokenList.h
 include/llvm/XRay/Graph.h
 include/llvm/XRay/InstrumentationMap.h
 include/llvm/XRay/Trace.h
