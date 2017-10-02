@@ -812,7 +812,6 @@ SUBDIR+=	fnteditfs
 SUBDIR+=	fogleman-craft
 SUBDIR+=	font-bitstream-speedo
 SUBDIR+=	fontaine
-SUBDIR+=	fonttools
 SUBDIR+=	fonttosfnt
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fprobe
