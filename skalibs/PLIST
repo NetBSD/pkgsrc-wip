@@ -16,6 +16,7 @@ include/skalibs/cdb_make.h
 include/skalibs/config.h
 include/skalibs/datastruct.h
 include/skalibs/direntry.h
+include/skalibs/disize.h
 include/skalibs/diuint.h
 include/skalibs/diuint32.h
 include/skalibs/djbtime.h
@@ -32,7 +33,6 @@ include/skalibs/genset.h
 include/skalibs/gensetdyn.h
 include/skalibs/genwrite.h
 include/skalibs/getpeereid.h
-include/skalibs/gidstuff.h
 include/skalibs/iobuffer.h
 include/skalibs/iopause.h
 include/skalibs/ip46.h
@@ -44,7 +44,6 @@ include/skalibs/netstring.h
 include/skalibs/nonposix.h
 include/skalibs/nsig.h
 include/skalibs/random.h
-include/skalibs/randomegd.h
 include/skalibs/rc4.h
 include/skalibs/segfault.h
 include/skalibs/selfpipe.h
@@ -67,17 +66,15 @@ include/skalibs/strerr2.h
 include/skalibs/surf.h
 include/skalibs/sysdeps.h
 include/skalibs/tai.h
-include/skalibs/uint.h
+include/skalibs/types.h
 include/skalibs/uint16.h
 include/skalibs/uint32.h
 include/skalibs/uint64.h
-include/skalibs/ulong.h
 include/skalibs/unix-timed.h
 include/skalibs/unix-transactional.h
 include/skalibs/unixconnection.h
 include/skalibs/unixmessage.h
 include/skalibs/unixonacid.h
-include/skalibs/ushort.h
 include/skalibs/webipc.h
 ${PLIST.include-shared-objects}lib/libskarnet.so
 ${PLIST.include-shared-objects}lib/libskarnet.so.${PKGVERSION}

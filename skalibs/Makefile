@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	skalibs-2.4.0.1
+DISTNAME=	skalibs-2.6.0.0
 MASTER_SITES=	http://skarnet.org/software/skalibs/
 CATEGORIES=	devel
 
