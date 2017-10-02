@@ -1,8 +1,8 @@
 $NetBSD$
 
---- include/llvm/ExecutionEngine/Orc/IndirectionUtils.h.orig	2017-07-05 18:41:32.000000000 +0000
+--- include/llvm/ExecutionEngine/Orc/IndirectionUtils.h.orig	2017-10-02 15:23:26.164151727 +0000
 +++ include/llvm/ExecutionEngine/Orc/IndirectionUtils.h
-@@ -164,15 +164,16 @@ public:
+@@ -168,15 +168,16 @@ public:
    LocalJITCompileCallbackManager(JITTargetAddress ErrorHandlerAddress)
        : JITCompileCallbackManager(ErrorHandlerAddress) {
      /// Set up the resolver block.
@@ -24,8 +24,8 @@ $NetBSD$
      EC = sys::Memory::protectMappedMemory(ResolverBlock.getMemoryBlock(),
                                            sys::Memory::MF_READ |
                                                sys::Memory::MF_EXEC);
-@@ -191,12 +192,11 @@ private:
-   void grow() override {
+@@ -195,13 +196,11 @@ private:
+   Error grow() override {
      assert(this->AvailableTrampolines.empty() && "Growing prematurely?");
  
 -    std::error_code EC;
@@ -33,7 +33,8 @@ $NetBSD$
 -        sys::OwningMemoryBlock(sys::Memory::allocateMappedMemory(
 -            sys::Process::getPageSize(), nullptr,
 -            sys::Memory::MF_READ | sys::Memory::MF_WRITE, EC));
--    assert(!EC && "Failed to allocate trampoline block");
+-    if (EC)
+-      return errorCodeToError(EC);
 +    std::string Err;
 +    auto TrampolineBlock = sys::OwningMemoryBlock(
 +        sys::Memory::AllocateRWX(sys::Process::getPageSize(), nullptr, &Err));
@@ -42,11 +43,3 @@ $NetBSD$
  
      unsigned NumTrampolines =
          (sys::Process::getPageSize() - TargetT::PointerSize) /
-@@ -211,6 +211,7 @@ private:
-           static_cast<JITTargetAddress>(reinterpret_cast<uintptr_t>(
-               TrampolineMem + (I * TargetT::TrampolineSize))));
- 
-+    std::error_code EC;
-     EC = sys::Memory::protectMappedMemory(TrampolineBlock.getMemoryBlock(),
-                                           sys::Memory::MF_READ |
-                                               sys::Memory::MF_EXEC);

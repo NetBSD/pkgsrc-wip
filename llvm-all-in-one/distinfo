@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (patch-include_llvm_ExecutionEngine_Orc_IndirectionUtils.h) = 7aa55e13e78ed6a4a80520ffada33016ec27a711
+SHA1 (patch-include_llvm_ExecutionEngine_Orc_IndirectionUtils.h) = 22060ef02e83a7ea9cada158866910d0bb782fcf
 SHA1 (patch-include_llvm_ExecutionEngine_Orc_OrcRemoteTargetServer.h) = e2f96f49e1d5afa1e1cbc3cfc98a81b19f0ce230
 SHA1 (patch-lib_ExecutionEngine_Orc_OrcABISupport.cpp) = b24a57af1c6fea12f0dd252ccfd23ce6945f307d
 SHA1 (patch-lib_ExecutionEngine_SectionMemoryManager.cpp) = f3498378be67171ad4d1a211f6172d5f2f8248f7
