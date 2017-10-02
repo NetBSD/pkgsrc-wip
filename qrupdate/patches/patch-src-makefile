@@ -1,4 +1,7 @@
-$NetBSD
+$NetBSD$
+
+This provides a libtool build of the library (dynamic and static)
+for easy handling in pkgsrc.
 
 --- src/Makefile.orig	2017-04-14 22:09:56.691696785 +0200
 +++ src/Makefile	2017-04-14 23:16:19.705455550 +0200

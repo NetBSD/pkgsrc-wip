@@ -2,11 +2,11 @@
 
 DISTNAME=	qrupdate-1.1.2
 CATEGORIES=	math
-MASTER_SITES=	https://downloads.sourceforge.net/project/qrupdate/qrupdate/1.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qrupdate/}
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
-HOMEPAGE=	https://downloads.sourceforge.net/project/qrupdate/qrupdate/1.2/
-COMMENT=	library for fast updating of QR and Cholesky decompositions
+HOMEPAGE=	https://qrupdate.sourceforge.io/
+COMMENT=	Library for fast updating of QR and Cholesky decompositions
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=    yes
