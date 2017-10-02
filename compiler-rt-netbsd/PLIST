@@ -54,7 +54,5 @@ lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone-x
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone-x86_64.a.syms
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone-x86_64.so
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-i386.a
-lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-i386.so
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-x86_64.a.syms
-lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-x86_64.so
