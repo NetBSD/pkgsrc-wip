@@ -8,6 +8,7 @@ bin/clang-cpp
 bin/clang-format
 bin/clang-import-test
 bin/clang-offload-bundler
+bin/clang-refactor
 bin/clang-rename
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
@@ -196,6 +197,7 @@ include/clang/Basic/DiagnosticAnalysisKinds.inc
 include/clang/Basic/DiagnosticCategories.h
 include/clang/Basic/DiagnosticCommentKinds.inc
 include/clang/Basic/DiagnosticCommonKinds.inc
+include/clang/Basic/DiagnosticCrossTUKinds.inc
 include/clang/Basic/DiagnosticDriverKinds.inc
 include/clang/Basic/DiagnosticError.h
 include/clang/Basic/DiagnosticFrontendKinds.inc
@@ -236,6 +238,7 @@ include/clang/Basic/PlistSupport.h
 include/clang/Basic/PragmaKinds.h
 include/clang/Basic/PrettyStackTrace.h
 include/clang/Basic/SanitizerBlacklist.h
+include/clang/Basic/SanitizerSpecialCaseList.h
 include/clang/Basic/Sanitizers.def
 include/clang/Basic/Sanitizers.h
 include/clang/Basic/SourceLocation.h
@@ -268,6 +271,8 @@ include/clang/CodeGen/ModuleBuilder.h
 include/clang/CodeGen/ObjectFilePCHContainerOperations.h
 include/clang/CodeGen/SwiftCallingConv.h
 include/clang/Config/config.h
+include/clang/CrossTU/CrossTUDiagnostic.h
+include/clang/CrossTU/CrossTranslationUnit.h
 include/clang/Driver/Action.h
 include/clang/Driver/Compilation.h
 include/clang/Driver/Distro.h
@@ -502,6 +507,8 @@ include/clang/Tooling/Refactoring.h
 include/clang/Tooling/Refactoring/ASTSelection.h
 include/clang/Tooling/Refactoring/AtomicChange.h
 include/clang/Tooling/Refactoring/RecursiveSymbolVisitor.h
+include/clang/Tooling/Refactoring/RefactoringAction.h
+include/clang/Tooling/Refactoring/RefactoringActionRegistry.def
 include/clang/Tooling/Refactoring/RefactoringActionRule.h
 include/clang/Tooling/Refactoring/RefactoringActionRuleRequirements.h
 include/clang/Tooling/Refactoring/RefactoringActionRuleRequirementsInternal.h
@@ -627,6 +634,7 @@ lib/libclangASTMatchers.a
 lib/libclangAnalysis.a
 lib/libclangBasic.a
 lib/libclangCodeGen.a
+lib/libclangCrossTU.a
 lib/libclangDriver.a
 lib/libclangDynamicASTMatchers.a
 lib/libclangEdit.a
