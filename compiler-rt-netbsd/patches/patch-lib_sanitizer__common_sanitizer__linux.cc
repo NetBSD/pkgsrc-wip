@@ -194,7 +194,7 @@ $NetBSD$
 +  size_t len;
 +
 +  len = sizeof(path);
-+  if (sysctl(name, __arraycount(name), path, &len, NULL, 0) != -1)
++  if (sysctl(name, ARRAY_SIZE(name), path, &len, NULL, 0) != -1)
 +    pathname = path;
 +#endif
 +
