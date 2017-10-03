@@ -12,7 +12,7 @@ COMMENT=	Backtester for financial algorithms
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-alembic>=0.7.7:../../databases/py-alembic
-DEPENDS+=	${PYPKGPREFIX}-bcolz>=0.12.1:../../wip/py-bcolz
+DEPENDS+=	${PYPKGPREFIX}-bcolz>=0.12.1:../../devel/py-bcolz
 DEPENDS+=	${PYPKGPREFIX}-click>=4.0.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-contextlib2>=0.4.0:../../devel/py-contextlib2
 DEPENDS+=	${PYPKGPREFIX}-cyordereddict>=0.2.2:../../devel/py-cyordereddict

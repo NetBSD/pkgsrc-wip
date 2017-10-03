@@ -2857,7 +2857,6 @@ SUBDIR+=	py-bandicoot
 SUBDIR+=	py-bandit
 SUBDIR+=	py-bannock
 SUBDIR+=	py-baron
-SUBDIR+=	py-bcolz
 SUBDIR+=	py-bctpy
 SUBDIR+=	py-beampy
 SUBDIR+=	py-behaviour
