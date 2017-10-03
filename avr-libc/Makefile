@@ -13,7 +13,7 @@ LICENSE=		modified-bsd
 BROKEN=			'Undefined control sequence.l.303 \backmatter, see TODO. Thank you.'
 
 BUILD_DEPENDS+=		doxygen>=1.8.9.1:../../devel/doxygen
-BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
+BUILD_DEPENDS+=		fig2dev-[0-9]*:../../print/fig2dev
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
 BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
