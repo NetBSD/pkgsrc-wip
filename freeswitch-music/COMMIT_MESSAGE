@@ -1,0 +1,5 @@
+freeswitch-music: Update to 1.0.52
+
+* Upstream changes:
+	- Default location now is sounds/music/default;
+	- Improved audio quality.
