@@ -1,3 +1,5 @@
+# $NetBSD$
+
 PKG_OPTIONS_VAR=		PKG_OPTIONS.synapse
 PKG_SUPPORTED_OPTIONS=		email ldap pgsql sqlite
 

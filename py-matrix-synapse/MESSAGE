@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD$
+
 Configuring Synapse:
 
 You may use the sample config located at @PREFIX@/etc to get started. It
@@ -21,3 +24,4 @@ directory, database, and media storage with this method.
 It is also important that you deploy a TLS certificate that your
 clients accept as valid or some functionality will fail to work
 correctly (eg, media file retrieval).
+===========================================================================

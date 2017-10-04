@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Fix operand to get proper version.
+
 --- synapse/python_dependencies.py.orig	2017-07-06 17:11:49.000000000 +0000
 +++ synapse/python_dependencies.py
 @@ -24,7 +24,7 @@ REQUIREMENTS = {

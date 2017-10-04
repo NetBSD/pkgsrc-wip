@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (synapse-v0.22.1.zip) = b203acb6f921713a35649d6fe49b86b465bad781
-RMD160 (synapse-v0.22.1.zip) = f5c7dae3b3c4afe1cc59ea3fc45fa6499d846ef2
-SHA512 (synapse-v0.22.1.zip) = 313094b2b0cbd8b9e5f84fca90f514e1561902ee072f4a22395b28586b71d62a946d2edbb539c6838ad375666bced4fbb605c6524fac46e32e6b0e0c2f094af1
-Size (synapse-v0.22.1.zip) = 1282036 bytes
-SHA1 (patch-synapse_python__dependencies.py) = 9319dda78ff46c1c375c283307a0a82c93dc9dbd
+SHA1 (synapse-0.22.1.zip) = b203acb6f921713a35649d6fe49b86b465bad781
+RMD160 (synapse-0.22.1.zip) = f5c7dae3b3c4afe1cc59ea3fc45fa6499d846ef2
+SHA512 (synapse-0.22.1.zip) = 313094b2b0cbd8b9e5f84fca90f514e1561902ee072f4a22395b28586b71d62a946d2edbb539c6838ad375666bced4fbb605c6524fac46e32e6b0e0c2f094af1
+Size (synapse-0.22.1.zip) = 1282036 bytes
+SHA1 (patch-synapse_python__dependencies.py) = ce4c61b32aa9728c0258798e328aa373e9f7c402
