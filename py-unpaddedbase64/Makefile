@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	unpaddedbase64-1.1.0
-VERSION=	v1.1.0
+DISTNAME=	unpaddedbase64-${VERSION}
+VERSION=	1.1.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=    	devel python
 GITHUB_PROJECT=	python-unpaddedbase64
