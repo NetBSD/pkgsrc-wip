@@ -1,9 +1,9 @@
 @comment $NetBSD$
-${PYSITELIB}/pymacaroons-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/pymacaroons-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/pymacaroons-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/pymacaroons-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/pymacaroons-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pymacaroons/__init__.py
 ${PYSITELIB}/pymacaroons/__init__.pyc
 ${PYSITELIB}/pymacaroons/__init__.pyo

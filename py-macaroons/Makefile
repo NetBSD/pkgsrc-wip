@@ -18,6 +18,5 @@ LICENSE=	mit
 .include "../../lang/python/egg.mk"
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_LANGUAGES=	# none
 
 .include "../../mk/bsd.pkg.mk"
