@@ -2,8 +2,11 @@
   Nevertheless, these bundled libs are patched by upstream developers.
   I ran into many errors while integrating pkgsrc libs instead of the bundled ones.
   Thus, further work needs to be done to make them work or bundled libs are
-  unavoidable.  
+  unavoidable.    Specific issues are:
+
+    - wip/libzrtp (does not build on netbsd-7 amd64)
 
 * Use of CONF_FILES framework to avoid pkglint errors. 
 
-* This package has only been tested on FreeBSD 11.  
+* This package has only been tested on FreeBSD 11.  It does not build
+  on NetBSD 7 amd64.
