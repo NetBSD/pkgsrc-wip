@@ -16,15 +16,6 @@ $NetBSD$
  #include "sanitizer_common/sanitizer_platform_limits_posix.h"
  #include "sanitizer_common/sanitizer_posix.h"
  #include "sanitizer_common/sanitizer_procmaps.h"
-@@ -62,7 +63,7 @@
- # undef sa_sigaction
- #endif
- 
--#if SANITIZER_FREEBSD
-+#if SANITIZER_FREEBSD || SANITIZER_NETBSD
- extern "C" void *__libc_stack_end;
- void *__libc_stack_end = 0;
- #endif
 @@ -401,4 +402,4 @@ void cur_thread_finalize() {
  
  }  // namespace __tsan
