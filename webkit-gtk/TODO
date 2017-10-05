@@ -10,4 +10,7 @@
   Source/WebKit2/Platform/IPC/unix/ConnectionUnix.cpp:Connection::sendOutputMessage()
   ...and the process program is WebKitNetworkPro.
 
+  It is worth to verify that the EMSGSIZE is provoked by the sendmsg(2) calls in
+  the sendOutputMessage() method.
+
     -- leot (2017/10/05)
