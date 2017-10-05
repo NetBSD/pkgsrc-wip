@@ -192,7 +192,7 @@ $NetBSD$
 +  static const int name[] = {
 +    CTL_KERN, KERN_PROC_ARGS, -1, KERN_PROC_PATHNAME,
 +  };
-+  char path[MAXPATHLEN];
++  char path[400];
 +  size_t len;
 +
 +  len = sizeof(path);
