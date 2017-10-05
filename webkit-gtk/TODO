@@ -10,6 +10,4 @@
   Source/WebKit2/Platform/IPC/unix/ConnectionUnix.cpp:Connection::sendOutputMessage()
   ...and the process program is WebKitNetworkPro.
 
-  Changing default SOCKET_TYPE to `SOCK_STREAM' seems to fix that (so treating
-  NetBSD like Darwin!) seems to fix this issue.
-    -- leot (2017/09/16)
+    -- leot (2017/10/05)
