@@ -1,3 +1,5 @@
+* Drop MESSAGE, and instead put files in share/doc/PKGNAME/.
+
 * There are some bundled libs that are currently imported to pkgsrc & pkgsrc-wip.
   Nevertheless, these bundled libs are patched by upstream developers.
   I ran into many errors while integrating pkgsrc libs instead of the bundled ones.
