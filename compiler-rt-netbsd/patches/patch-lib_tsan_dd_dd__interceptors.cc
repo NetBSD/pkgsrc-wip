@@ -6,11 +6,11 @@ $NetBSD$
  
  using namespace __dsan;
  
-+#if SANITIZER_NETBSD
++#if !SANITIZER_NETBSD
  __attribute__((tls_model("initial-exec")))
 +#endif
  static __thread Thread *thr;
-+#if SANITIZER_NETBSD
++#if !SANITIZER_NETBSD
  __attribute__((tls_model("initial-exec")))
 +#endif
  static __thread volatile int initing;
