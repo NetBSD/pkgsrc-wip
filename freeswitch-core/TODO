@@ -12,3 +12,8 @@
 
 * This package has only been tested on FreeBSD 11.  It does not build
   on NetBSD 7 amd64.
+
+* Determine a strategy for modules.  Arguably, the modules built by
+  the core package should be the default from upstream.  Ideally, it
+  would be possible to build modules separately so they can be in
+  their own package.
