@@ -5,6 +5,7 @@ RMD160 (freeswitch-1.6.19.tar.xz) = 2e6514bb3f67cf7f464dd924541e95e1baab283f
 SHA512 (freeswitch-1.6.19.tar.xz) = 2cf678b7035e17d05f3745921dccafd2fb874cf927fdde5bd274cc07a42e372e941bedaa9569c59d09882eed02de9e874661a64a165e3de860fa6be7adc365ae
 Size (freeswitch-1.6.19.tar.xz) = 33497296 bytes
 SHA1 (patch-configure) = 76661c5bd14857de5fcea046d58f2ec46c04d767
+SHA1 (patch-libs_libzrtp_third__party_bnlib_configure.ac) = 2eff9bde9e663fb6512ff6ce3261cccbb58b9d03
 SHA1 (patch-libs_spandsp_configure) = ace14e1f5ed3318c2f3a0ec7f47bbdf6308a2f34
 SHA1 (patch-libs_spandsp_unpack__gsm0610__data.sh) = facfda4025aeb36f9277b088dace41442417ec9c
 SHA1 (patch-libs_unimrcp_configure) = d4ce12c4bc47e89ac60675c9fc9d67dd546061ba
