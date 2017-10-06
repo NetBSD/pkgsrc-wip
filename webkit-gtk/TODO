@@ -14,3 +14,10 @@
   the sendOutputMessage() method.
 
     -- leot (2017/10/05)
+
+- `webkit-jit' option no longer works (not even compiles!). If possible fix it
+   and look at patches available in OpenBSD ports in order to get an idea on how
+   to handle them (and of course, also integrate them so that OpenBSD pkgsrc
+   users will benefit of that too!).
+
+    -- leot (2017/10/06)
