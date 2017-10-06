@@ -55,7 +55,7 @@ SUBST_FILES.paths+=	w3m.el
 SUBST_SED.paths+=	-e 's,@W3MPREFIX@,${W3MPREFIX},g'
 SUBST_STAGE.paths=	pre-configure
 
-.include "../../editors/emacs/modules.mk"
+.include "../../wip/emacs-git/modules.mk"
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
 
