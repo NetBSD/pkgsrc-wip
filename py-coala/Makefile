@@ -14,6 +14,7 @@ LICENSE=	gnu-agpl-v3
 PYTHON_VERSIONS_INCOMPATIBLE=   27
 
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
+DEPENDS+=	${PYPKGPREFIX}-print-[0-9]*:../../wip/py-print
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
