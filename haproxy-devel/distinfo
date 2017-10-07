@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (haproxy-1.7-dev0.tar.gz) = 9a3a2c067657e705b0094eb5154df0d59226357a
-RMD160 (haproxy-1.7-dev0.tar.gz) = 6a75ffdcd2084c9a47188fe98e7f1bf300e1d6ed
-SHA512 (haproxy-1.7-dev0.tar.gz) = e1c26127c929d4a4c004520d68681e2498f5963b2247781dd1283ef265224573891b0c115d211439fb48ec3604b5f6d9b4e511d32ad7e9084c0af64b6804ac9e
-Size (haproxy-1.7-dev0.tar.gz) = 1538088 bytes
-SHA1 (patch-Makefile.diff) = 43f6b233a25704bd707aac12df5dbc58c4246358
