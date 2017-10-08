@@ -16,6 +16,10 @@ USE_LANGUAGES=	# none
 
 EGG_NAME=	${DISTNAME:S/python-//}
 
+post-install:
+	${RUN} ${MV} ${DESTDIR}${PREFIX}/bin/unidiff \
+		${DESTDIR}${PREFIX}/bin/unidiff${PYVERSSUFFIX}
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
