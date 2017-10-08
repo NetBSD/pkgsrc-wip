@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=       ${PYPKGPREFIX}-coala_utils-[0-9]*:../../wip/py-coala_utils
-# Missing: py-sarge
+DEPENDS+=       ${PYPKGPREFIX}-sarge-[0-9]*:../../wip/py-sarge
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
