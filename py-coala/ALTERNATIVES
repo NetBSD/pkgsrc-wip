@@ -1,0 +1,5 @@
+bin/coala @PREFIX@/bin/coala@PYVERSSUFFIX@
+bin/coala-ci @PREFIX@/bin/coala-ci@PYVERSSUFFIX@
+bin/coala-delete-orig @PREFIX@/bin/coala-delete-orig@PYVERSSUFFIX@
+bin/coala-format @PREFIX@/bin/coala-format@PYVERSSUFFIX@
+bin/coala-json @PREFIX@/bin/coala-json@PYVERSSUFFIX@

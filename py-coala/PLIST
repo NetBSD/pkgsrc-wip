@@ -1,10 +1,9 @@
 @comment $NetBSD$
-bin/coala
-bin/coala-ci
-bin/coala-delete-orig
-bin/coala-format
-bin/coala-json
-coala.1
+bin/coala-ci${PYVERSSUFFIX}
+bin/coala-delete-orig${PYVERSSUFFIX}
+bin/coala-format${PYVERSSUFFIX}
+bin/coala-json${PYVERSSUFFIX}
+bin/coala${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -391,3 +390,4 @@ ${PYSITELIB}/coalib/testing/LocalBearTestHelper.pyo
 ${PYSITELIB}/coalib/testing/LocalBearTestHelper.pyc
 ${PYSITELIB}/coalib/testing/__init__.pyo
 ${PYSITELIB}/coalib/testing/__init__.pyc
+man/coala.1

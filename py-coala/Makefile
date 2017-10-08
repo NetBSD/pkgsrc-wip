@@ -13,6 +13,8 @@ LICENSE=	gnu-agpl-v3
 
 PYTHON_VERSIONS_INCOMPATIBLE=   27
 
+INSTALLATION_DIRS+=	${PKGMANDIR}
+
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-print-[0-9]*:../../wip/py-print
 DEPENDS+=	${PYPKGPREFIX}-coala_utils-[0-9]*:../../wip/py-coala_utils
@@ -23,6 +25,14 @@ DEPENDS+=	${PYPKGPREFIX}-unidiff-[0-9]*:../../wip/py-unidiff
 DEPENDS+=	${PYPKGPREFIX}-dependency_management-[0-9]*:../../wip/py-dependency_management
 # Missing:
 # py-libclang
+
+post-install:
+.for w in coala coala-ci coala-delete-orig coala-format coala-json
+	${RUN} ${MV} ${DESTDIR}${PREFIX}/bin/${w} \
+		${DESTDIR}${PREFIX}/bin/${w}${PYVERSSUFFIX}
+.endfor
+	${RUN} ${MV} ${DESTDIR}${PREFIX}/coala.1 \
+		 ${DESTDIR}${PREFIX}/${PKGMANDIR}/coala.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
