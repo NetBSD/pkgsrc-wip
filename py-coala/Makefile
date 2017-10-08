@@ -22,9 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-colorlog-[0-9]*:../../wip/py-colorlog
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-unidiff-[0-9]*:../../wip/py-unidiff
+DEPENDS+=	${PYPKGPREFIX}-libclang-py3-[0-9]*:../../wip/py-libclang-py3
 DEPENDS+=	${PYPKGPREFIX}-dependency_management-[0-9]*:../../wip/py-dependency_management
-# Missing:
-# py-libclang
 
 post-install:
 .for w in coala coala-ci coala-delete-orig coala-format coala-json
