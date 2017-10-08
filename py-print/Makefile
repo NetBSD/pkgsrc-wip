@@ -1,10 +1,10 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	PyPrint
-DISTNAME=	PyPrint-0.2.2
+DISTNAME=	PyPrint-0.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//:tl}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=coala/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyPrint/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/coala/PyPrint/

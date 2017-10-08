@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (PyPrint-0.2.2.tar.gz) = 029ce51fc19b166d0a7ac5f1f31d889f7d203532
-RMD160 (PyPrint-0.2.2.tar.gz) = 90c026a9a66d6dbe22346fcabc091eb3d71c5bd5
-SHA512 (PyPrint-0.2.2.tar.gz) = 4c331e4eae4fcfe896bb5baebbca63a886aa72951ae3c996556d86282b5af28b83c0486e7c08a3fcd4b92bdf6f8ddccf07c39b68752223642fa849686c511d7e
-Size (PyPrint-0.2.2.tar.gz) = 20405 bytes
+SHA1 (PyPrint-0.2.6.tar.gz) = 9f37cbf640113fe50cfa592442459fbc82f7ac0d
+RMD160 (PyPrint-0.2.6.tar.gz) = 2044546837f5f6e98c47289553c90c2dfc1f41d3
+SHA512 (PyPrint-0.2.6.tar.gz) = 7c346ec2f19a3819c1cab740ce9918b0d016ec280aa38f3583cd1d0be43a6ced6a65d387b52fcee3291806510ca5eedb57f768bedd308b28018b965b4d37be5a
+Size (PyPrint-0.2.6.tar.gz) = 17507 bytes
