@@ -20,8 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-colorlog-[0-9]*:../../wip/py-colorlog
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-unidiff-[0-9]*:../../wip/py-unidiff
+DEPENDS+=	${PYPKGPREFIX}-dependency_management-[0-9]*:../../wip/py-dependency_management
 # Missing:
-# py-dependency_management
 # py-libclang
 
 .include "../../lang/python/application.mk"
