@@ -16,6 +16,13 @@ PYTHON_VERSIONS_INCOMPATIBLE=   27
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-print-[0-9]*:../../wip/py-print
 DEPENDS+=	${PYPKGPREFIX}-coala_utils-[0-9]*:../../wip/py-coala_utils
+DEPENDS+=	${PYPKGPREFIX}-colorlog-[0-9]*:../../wip/py-colorlog
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+# Missing:
+# py-unidiff
+# py-dependency_management
+# py-libclang
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
