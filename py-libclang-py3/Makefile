@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	libclang-py3-3.9.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libclang-py3/}
 
