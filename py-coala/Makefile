@@ -19,8 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-coala_utils-[0-9]*:../../wip/py-coala_utils
 DEPENDS+=	${PYPKGPREFIX}-colorlog-[0-9]*:../../wip/py-colorlog
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-unidiff-[0-9]*:../../wip/py-unidiff
 # Missing:
-# py-unidiff
 # py-dependency_management
 # py-libclang
 
