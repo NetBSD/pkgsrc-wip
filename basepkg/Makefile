@@ -2,7 +2,7 @@
 
 DEPENDS+=	pkg_install>=20170419:../../pkgtools/pkg_install
 
-DISTNAME=	basepkg-1.0.1
+DISTNAME=	basepkg-1.0.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}/basepkg-1.0.1
+WRKSRC=		${WRKDIR}/basepkg-1.0.2
 USE_LANGUAGES=	# none
 USE_TOOLS+= pax
 
