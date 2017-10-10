@@ -3397,7 +3397,6 @@ SUBDIR+=	py-opensimplex
 SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-operators
-SUBDIR+=	py-ordered-set
 SUBDIR+=	py-ordereddict
 SUBDIR+=	py-orm
 SUBDIR+=	py-oset
