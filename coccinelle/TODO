@@ -1,7 +1,8 @@
 Still not ready for using it to update devel/coccinelle. The following issues
 should be investigated further and if possible fixed:
 
- - pkgsrc `test' target no longer works (manually invoking that on ${WRKSRC}
-   does the trick, I guess that some naughty things happen when
-   compiling/linking test programs)
  - Update to coccinelle-1.0.6 breaks textproc/coccigrep
+
+   XXXleot: provide a simple command to test that.
+    
+    -- leot (2017/10/10)

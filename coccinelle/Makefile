@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
-# the current version rejects this package's .mly file
-#DEPENDS+=	menhir>=20071212:../../devel/menhir
-CONFIGURE_ARGS+=	--without-menhir
+DEPENDS+=	menhir>=20071212:../../devel/menhir
+
+CONFIGURE_ARGS+=	--with-menhir
 CONFIGURE_ARGS+=	--disable-pyml
 
 MAKE_JOBS_SAFE=		no
@@ -45,6 +45,7 @@ TEST_TARGET=	test
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
+.include "../../devel/pcre-ocaml/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.11
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"
