@@ -25,7 +25,7 @@ do-install:
 .for f in ${WLADX_BINARIES}
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
-.for f in README README.md FILE_FORMATS CHANGELOG
+.for f in README.md FILE_FORMATS CHANGELOG
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 
