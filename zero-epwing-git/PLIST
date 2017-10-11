@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/zero-epwing
+share/doc/zero-epwing/README.md
