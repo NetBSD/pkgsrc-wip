@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/elfhash
+share/doc/elfhash/README.md

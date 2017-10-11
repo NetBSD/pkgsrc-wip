@@ -1,0 +1,14 @@
+- Fails to build on macOS, due to not finding features.h header.
+  For now, it's commented-out via a patch until there's a better
+  solution.
+
+- We should probably use the system's elf.h, if possible.
+
+- The author doesn't seem to use any licenses. However, he does
+  have some GPL'd stuff in his repo, like elf.h for example.
+
+  So for now we'll add GPL3 to LICENSE, and perhaps can nuke this
+  TODO item at a later when we're certain we have it right.
+
+- elfhash's Makefile hard-codes gcc and CFLAGS, and as such, doesn't
+  honor the $(CC) and $(CFLAGS) variables passed by pkgsrc.
