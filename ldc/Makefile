@@ -97,6 +97,6 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/d/core/threadasm.S.orig
 	${RM} ${DESTDIR}${PREFIX}/include/d/core/time.d.orig
 
-.include "../../wip/libLLVM35/buildlink3.mk"
+.include "../../wip/libLLVM38/buildlink3.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
