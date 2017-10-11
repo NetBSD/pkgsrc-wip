@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/mobimeta
+bin/mobitool
+include/mobi.h
+lib/libmobi.la
+lib/pkgconfig/libmobi.pc
+man/man1/mobimeta.1
+man/man1/mobitool.1
+share/doc/libmobi/ChangeLog
+share/doc/libmobi/README.md
