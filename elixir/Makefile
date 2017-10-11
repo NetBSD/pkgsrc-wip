@@ -13,7 +13,7 @@ LICENSE=		apache-2.0
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=		erlang>=18.0:../../lang/erlang
+DEPENDS+=		erlang>=18.0:../../lang/erlang
 
 WRKSRC=			${WRKDIR}/${PKGBASE}-${PKGVERSION_NOREV}
 CHECK_INTERPRETER_SKIP+=	bin/mix
