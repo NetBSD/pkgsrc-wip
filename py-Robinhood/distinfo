@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/06/13 02:07:35 kamil Exp $
+
+SHA1 (Robinhood-1.0.tar.gz) = 2d214059f9c4e880bd51e451b83da0f5d380bde0
+RMD160 (Robinhood-1.0.tar.gz) = 8bb8420177835a2c51ba2ddfc93c418aea030d05
+SHA512 (Robinhood-1.0.tar.gz) = d9412a00c1d5373414ff699c90011115368ad44ab4aacf404c2ce77ef65ad575f363c1163ea705570a249a492171bbe9015da1a91431f992bd77cbbf9e735f22
+Size (Robinhood-1.0.tar.gz) = 12971 bytes
+SHA1 (patch-setup.py) = 3430a3be9548c100399af2d9b129c2a35778ac6a

@@ -1,0 +1,4 @@
+Robinhood is a Python Framework to make trades with Robinhood Private
+API. Current features include placing buy orders, placing sell order,
+retrieving quote information, and querying user portfolio and
+positions data.

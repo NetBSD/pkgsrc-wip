@@ -2799,6 +2799,7 @@ SUBDIR+=	py-PyPE
 SUBDIR+=	py-PythonDirector
 SUBDIR+=	py-PythonMagick
 SUBDIR+=	py-RXP
+SUBDIR+=	py-Robinhood
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
 SUBDIR+=	py-Xlib
