@@ -3077,6 +3077,7 @@ SUBDIR+=	py-fileinspector
 SUBDIR+=	py-filelock
 SUBDIR+=	py-fiona
 SUBDIR+=	py-fipy
+SUBDIR+=	py-firehose
 SUBDIR+=	py-fitsarray
 SUBDIR+=	py-fix-yahoo-finance
 SUBDIR+=	py-fjd
