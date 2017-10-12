@@ -2795,7 +2795,6 @@ SUBDIR+=	py-Netzob
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-PEG2
 SUBDIR+=	py-Py2Play
-SUBDIR+=	py-PyNaCl
 SUBDIR+=	py-PyPE
 SUBDIR+=	py-PythonDirector
 SUBDIR+=	py-PythonMagick

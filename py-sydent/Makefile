@@ -22,7 +22,7 @@ DEPENDS+= ${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+= ${PYPKGPREFIX}-unpaddedbase64-[0-9]*:../../wip/py-unpaddedbase64
 DEPENDS+= ${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+= ${PYPKGPREFIX}-libnacl-[0-9]*:../../wip/py-libnacl
-DEPENDS+= ${PYPKGPREFIX}-PyNaCl-[0-9]*:../../wip/py-PyNaCl
+DEPENDS+= ${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+= ${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 
 
