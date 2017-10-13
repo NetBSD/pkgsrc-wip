@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/08/25 16:04:49 jihbed Exp $
+
+SHA1 (firehose-0.5.tar.gz) = 3d7110466a5e48d7ab0f32cff3c0eaf5d75eee63
+RMD160 (firehose-0.5.tar.gz) = 71bf4fc59af4c937219165f647743a6a275ce1e7
+SHA512 (firehose-0.5.tar.gz) = f19d0df1a607575edbc9a7e583b472a2217f7e9508853d8c2cf7a5d369e5da8bb1a2a6bf8fa301ac42312357e6542df453e9afa58f12ac07a38ffdc0dfdde9b8
+Size (firehose-0.5.tar.gz) = 57903 bytes
