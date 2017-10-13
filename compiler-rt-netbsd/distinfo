@@ -5,7 +5,6 @@ SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = eaffd9f8f2621ad465b5c734a764bdff0
 SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = f5825b7081758e07e36dbd47a887f31a20912a83
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 25cba9ff9d61910bb74d500e515da083af4e6cb7
 SHA1 (patch-lib_tsan_go_buildgo.sh) = fe64b3389bbf6ae2ddf187df3e0600b2f817f51d
-SHA1 (patch-lib_tsan_rtl_tsan__platform.h) = 9ba65b81bb95bdf3b949da801cb9b97bf94174c4
 SHA1 (patch-lib_tsan_rtl_tsan__platform__linux.cc) = 23744bd656f0dcee425821491bcaa723f26130a3
 SHA1 (patch-lib_tsan_rtl_tsan__platform__posix.cc) = ddf48d91100e681f09b7303a37936ac8cd7f775a
 SHA1 (patch-lib_tsan_rtl_tsan__rtl__amd64.S) = 95591667c23372ceb72334b2ceae800d32574ac6
