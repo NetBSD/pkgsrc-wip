@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-glsl-shaders-20170824
+DISTNAME=	libretro-glsl-shaders-20171011
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,7 +8,7 @@ MAINTAINER=	nia.alarie@gmail.com
 COMMENT=	Libretro GLSL shaders
 
 GITHUB_PROJECT=	glsl-shaders
-GITHUB_TAG=	dc7fd770fc9349c90e4f080b683d07746967f4d1
+GITHUB_TAG=	6565f3d5e9a34103a7dce34eec8a7f5332d6f9d1
 
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
@@ -60,7 +60,6 @@ SHADER_DIRS+=	eagle
 SHADER_DIRS+=	eagle/shaders
 SHADER_DIRS+=	handheld
 SHADER_DIRS+=	handheld/console-border
-SHADER_DIRS+=	handheld/console-border/old
 SHADER_DIRS+=	handheld/console-border/resources
 SHADER_DIRS+=	handheld/console-border/shader-files
 SHADER_DIRS+=	handheld/shaders
@@ -106,6 +105,8 @@ SHADER_DIRS+=	sabr
 SHADER_DIRS+=	sabr/shaders
 SHADER_DIRS+=	scalefx
 SHADER_DIRS+=	scalefx/shaders
+SHADER_DIRS+=	scalehq
+SHADER_DIRS+=	scalehq/shaders
 SHADER_DIRS+=	scalenx
 SHADER_DIRS+=	scalenx/shaders
 SHADER_DIRS+=	sharpen
