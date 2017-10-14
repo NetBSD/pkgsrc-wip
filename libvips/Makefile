@@ -1,17 +1,21 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.4.5
+DISTNAME= vips-8.5.9
+PKGNAME= lib${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/current/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jcupitt/}
 
 MAINTAINER=	base@atomicules.co.uk
-HOMEPAGE=	http://www.vips.ecs.soton.ac.uk/supported/current/
-COMMENT=	A 2D image processing library
+HOMEPAGE=	http://jcupitt.github.io/libvips/
+COMMENT=	Libvips is a demand-driven, horizontally threaded image processing lib
 LICENSE=	gnu-lgpl-v2.1
+
+GITHUB_PROJECT= libvips
+GITHUB_RELEASE= v${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		    pkg-config gmake
+USE_TOOLS+=			pkg-config gmake
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 

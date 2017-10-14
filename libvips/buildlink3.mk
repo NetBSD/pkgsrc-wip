@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vips
 VIPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vips+=	vips>=8.2.2
-BUILDLINK_PKGSRCDIR.vips?=	../../wip/vips
+BUILDLINK_PKGSRCDIR.vips?=	../../wip/libvips
 
 .endif	# VIPS_BUILDLINK3_MK
 

@@ -11,6 +11,8 @@ Makefile:
   to build via Pkgsrc without having libexif as a requirement. Even though it
   should build fine without it; If I just extract the source and ./configure
   and make it builds fine without libexif, it's just via this Makefile, etc.
+- Build from source instead of release bundle for more cross platform
+  compatibility?
 
 options.mk:
 
