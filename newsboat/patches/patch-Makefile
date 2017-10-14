@@ -1,0 +1,22 @@
+$NetBSD$
+
+Install man page with proper permissions (executable bit not needed for them!).
+
+--- Makefile.orig	2017-09-22 20:01:50.000000000 +0000
++++ Makefile
+@@ -182,13 +182,13 @@ install-newsbeuter: $(NEWSBEUTER)
+ 	$(MKDIR) $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) $(NEWSBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(MKDIR) $(DESTDIR)$(mandir)/man1
+-	$(INSTALL) doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+ 
+ install-podbeuter: $(PODBEUTER)
+ 	$(MKDIR) $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) $(PODBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(MKDIR) $(DESTDIR)$(mandir)/man1
+-	$(INSTALL) doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+ 
+ install-docs:
+ 	$(MKDIR) $(DESTDIR)$(docdir)
