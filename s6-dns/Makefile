@@ -16,5 +16,5 @@ CONFIGURE_ARGS+=	--with-sysdeps=${PREFIX}/lib/skalibs/sysdeps
 CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/skalibs
 CONFIGURE_ARGS+=	--with-include=${PREFIX}/include
 
-.include "../../wip/skalibs/buildlink3.mk"
+.include "../../devel/skalibs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
