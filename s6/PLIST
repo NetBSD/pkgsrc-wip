@@ -36,6 +36,7 @@ bin/s6-ipcserver-socketbinder
 bin/s6-ipcserverd
 bin/s6-log
 bin/s6-mkfifodir
+bin/s6-notifyoncheck
 bin/s6-setlock
 bin/s6-setsid
 bin/s6-setuidgid
