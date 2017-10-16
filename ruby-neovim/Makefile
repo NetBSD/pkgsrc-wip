@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	neovim-0.3.1
+DISTNAME=	neovim-0.5.1
 CATEGORIES=	devel editors
 
 HOMEPAGE=	https://github.com/alexgenco/neovim-ruby
