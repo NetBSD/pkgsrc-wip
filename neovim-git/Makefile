@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2015/06/18 20:53:01 jonthn Exp $
 
-PKGNAME=	neovim-0.2.0
+PKGNAME=	neovim-0.2.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 
@@ -33,7 +33,7 @@ post-extract:
 .include "options.mk"
 
 .include "../../devel/libuv/buildlink3.mk"
-.include "../../wip/msgpack-git/buildlink3.mk"
+.include "../../devel/msgpack/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../lang/lua/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

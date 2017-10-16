@@ -33,6 +33,8 @@ share/nvim/runtime/autoload/ada.vim
 share/nvim/runtime/autoload/adacomplete.vim
 share/nvim/runtime/autoload/ccomplete.vim
 share/nvim/runtime/autoload/clojurecomplete.vim
+share/nvim/runtime/autoload/context.vim
+share/nvim/runtime/autoload/contextcomplete.vim
 share/nvim/runtime/autoload/csscomplete.vim
 share/nvim/runtime/autoload/decada.vim
 share/nvim/runtime/autoload/gnat.vim
@@ -50,6 +52,7 @@ share/nvim/runtime/autoload/netrwSettings.vim
 share/nvim/runtime/autoload/netrw_gitignore.vim
 share/nvim/runtime/autoload/paste.vim
 share/nvim/runtime/autoload/phpcomplete.vim
+share/nvim/runtime/autoload/provider.vim
 share/nvim/runtime/autoload/provider/clipboard.vim
 share/nvim/runtime/autoload/provider/python.vim
 share/nvim/runtime/autoload/provider/python3.vim
@@ -107,7 +110,9 @@ share/nvim/runtime/compiler/ant.vim
 share/nvim/runtime/compiler/bcc.vim
 share/nvim/runtime/compiler/bdf.vim
 share/nvim/runtime/compiler/checkstyle.vim
+share/nvim/runtime/compiler/context.vim
 share/nvim/runtime/compiler/cs.vim
+share/nvim/runtime/compiler/csslint.vim
 share/nvim/runtime/compiler/cucumber.vim
 share/nvim/runtime/compiler/decada.vim
 share/nvim/runtime/compiler/dot.vim
@@ -122,6 +127,7 @@ share/nvim/runtime/compiler/fpc.vim
 share/nvim/runtime/compiler/g95.vim
 share/nvim/runtime/compiler/gcc.vim
 share/nvim/runtime/compiler/gfortran.vim
+share/nvim/runtime/compiler/ghc.vim
 share/nvim/runtime/compiler/gnat.vim
 share/nvim/runtime/compiler/go.vim
 share/nvim/runtime/compiler/haml.vim
@@ -146,6 +152,7 @@ share/nvim/runtime/compiler/onsgmls.vim
 share/nvim/runtime/compiler/pbx.vim
 share/nvim/runtime/compiler/perl.vim
 share/nvim/runtime/compiler/php.vim
+share/nvim/runtime/compiler/pylint.vim
 share/nvim/runtime/compiler/pyunit.vim
 share/nvim/runtime/compiler/rake.vim
 share/nvim/runtime/compiler/rspec.vim
@@ -185,6 +192,7 @@ share/nvim/runtime/doc/help.txt
 share/nvim/runtime/doc/helphelp.txt
 share/nvim/runtime/doc/howto.txt
 share/nvim/runtime/doc/if_cscop.txt
+share/nvim/runtime/doc/if_lua.txt
 share/nvim/runtime/doc/if_pyth.txt
 share/nvim/runtime/doc/if_ruby.txt
 share/nvim/runtime/doc/indent.txt
@@ -203,7 +211,6 @@ share/nvim/runtime/doc/msgpack_rpc.txt
 share/nvim/runtime/doc/nvim.txt
 share/nvim/runtime/doc/nvim_terminal_emulator.txt
 share/nvim/runtime/doc/options.txt
-share/nvim/runtime/doc/os_win32.txt
 share/nvim/runtime/doc/pattern.txt
 share/nvim/runtime/doc/pi_gzip.txt
 share/nvim/runtime/doc/pi_health.txt
@@ -289,6 +296,7 @@ share/nvim/runtime/ftplugin/arch.vim
 share/nvim/runtime/ftplugin/art.vim
 share/nvim/runtime/ftplugin/aspvbs.vim
 share/nvim/runtime/ftplugin/automake.vim
+share/nvim/runtime/ftplugin/awk.vim
 share/nvim/runtime/ftplugin/bdf.vim
 share/nvim/runtime/ftplugin/bst.vim
 share/nvim/runtime/ftplugin/btm.vim
@@ -434,6 +442,7 @@ share/nvim/runtime/ftplugin/rrst.vim
 share/nvim/runtime/ftplugin/rst.vim
 share/nvim/runtime/ftplugin/ruby.vim
 share/nvim/runtime/ftplugin/sass.vim
+share/nvim/runtime/ftplugin/scala.vim
 share/nvim/runtime/ftplugin/scheme.vim
 share/nvim/runtime/ftplugin/screen.vim
 share/nvim/runtime/ftplugin/scss.vim
@@ -503,6 +512,7 @@ share/nvim/runtime/indent/clojure.vim
 share/nvim/runtime/indent/cmake.vim
 share/nvim/runtime/indent/cobol.vim
 share/nvim/runtime/indent/config.vim
+share/nvim/runtime/indent/context.vim
 share/nvim/runtime/indent/cpp.vim
 share/nvim/runtime/indent/cs.vim
 share/nvim/runtime/indent/css.vim
@@ -547,6 +557,7 @@ share/nvim/runtime/indent/lua.vim
 share/nvim/runtime/indent/mail.vim
 share/nvim/runtime/indent/make.vim
 share/nvim/runtime/indent/matlab.vim
+share/nvim/runtime/indent/mf.vim
 share/nvim/runtime/indent/mma.vim
 share/nvim/runtime/indent/mp.vim
 share/nvim/runtime/indent/objc.vim
@@ -571,6 +582,7 @@ share/nvim/runtime/indent/rrst.vim
 share/nvim/runtime/indent/rst.vim
 share/nvim/runtime/indent/ruby.vim
 share/nvim/runtime/indent/sass.vim
+share/nvim/runtime/indent/scala.vim
 share/nvim/runtime/indent/scheme.vim
 share/nvim/runtime/indent/scss.vim
 share/nvim/runtime/indent/sdl.vim
@@ -606,6 +618,8 @@ share/nvim/runtime/indoff.vim
 share/nvim/runtime/keymap/accents.vim
 share/nvim/runtime/keymap/arabic.vim
 share/nvim/runtime/keymap/arabic_utf-8.vim
+share/nvim/runtime/keymap/armenian-eastern_utf-8.vim
+share/nvim/runtime/keymap/armenian-western_utf-8.vim
 share/nvim/runtime/keymap/belarusian-jcuken.vim
 share/nvim/runtime/keymap/bulgarian-bds.vim
 share/nvim/runtime/keymap/bulgarian-phonetic.vim
@@ -633,6 +647,7 @@ share/nvim/runtime/keymap/hebrewp_cp1255.vim
 share/nvim/runtime/keymap/hebrewp_iso-8859-8.vim
 share/nvim/runtime/keymap/hebrewp_utf-8.vim
 share/nvim/runtime/keymap/kana.vim
+share/nvim/runtime/keymap/kazakh-jcuken.vim
 share/nvim/runtime/keymap/lithuanian-baltic.vim
 share/nvim/runtime/keymap/magyar_utf-8.vim
 share/nvim/runtime/keymap/mongolian_utf-8.vim
@@ -646,6 +661,7 @@ share/nvim/runtime/keymap/polish-slash_iso-8859-2.vim
 share/nvim/runtime/keymap/polish-slash_utf-8.vim
 share/nvim/runtime/keymap/russian-dvorak.vim
 share/nvim/runtime/keymap/russian-jcuken.vim
+share/nvim/runtime/keymap/russian-jcukenmac.vim
 share/nvim/runtime/keymap/russian-jcukenwin.vim
 share/nvim/runtime/keymap/russian-yawerty.vim
 share/nvim/runtime/keymap/serbian-latin.vim
@@ -667,7 +683,9 @@ share/nvim/runtime/keymap/thaana-phonetic_utf-8.vim
 share/nvim/runtime/keymap/thaana.vim
 share/nvim/runtime/keymap/ukrainian-dvorak.vim
 share/nvim/runtime/keymap/ukrainian-jcuken.vim
+share/nvim/runtime/keymap/vietnamese-telex_utf-8.vim
 share/nvim/runtime/keymap/vietnamese-viqr_utf-8.vim
+share/nvim/runtime/keymap/vietnamese-vni_utf-8.vim
 share/nvim/runtime/macmap.vim
 share/nvim/runtime/macros/editexisting.vim
 share/nvim/runtime/macros/justify.vim
@@ -688,6 +706,7 @@ share/nvim/runtime/pack/dist/opt/vimball/autoload/vimball.vim
 share/nvim/runtime/pack/dist/opt/vimball/doc/tags
 share/nvim/runtime/pack/dist/opt/vimball/doc/vimball.txt
 share/nvim/runtime/pack/dist/opt/vimball/plugin/vimballPlugin.vim
+share/nvim/runtime/plugin/gui_shim.vim
 share/nvim/runtime/plugin/gzip.vim
 share/nvim/runtime/plugin/health.vim
 share/nvim/runtime/plugin/man.vim
@@ -1158,6 +1177,7 @@ share/nvim/runtime/syntax/samba.vim
 share/nvim/runtime/syntax/sas.vim
 share/nvim/runtime/syntax/sass.vim
 share/nvim/runtime/syntax/sather.vim
+share/nvim/runtime/syntax/scala.vim
 share/nvim/runtime/syntax/scheme.vim
 share/nvim/runtime/syntax/scilab.vim
 share/nvim/runtime/syntax/screen.vim
