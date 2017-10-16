@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- utils/head/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ utils/head/Makefile
+@@ -33,14 +33,14 @@ install: all
+ 	@echo "making install..."	
+ 	@for PGM in $(HEAD); \
+ 	do \
+-	   ( $(INSTALL) $(CMIXDIR)/utils/head/$$PGM $(DESTDIR); ) \
++	   ( $(INSTALL) $(CMIXDIR)/utils/head/$$PGM $(DESTDIR)/$(BINDIR); ) \
+ 	done
+ 
+ uninstall:
+ 	@echo "making uninstall..."	
+ 	@for PGM in $(HEAD); \
+ 	do \
+-	   ( $(RM) $(DESTDIR)/$$PGM; ) \
++	   ( $(RM) $(DESTDIR)/$(BINDIR)/$$PGM; ) \
+ 	done
+ 
+ clean:

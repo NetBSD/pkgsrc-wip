@@ -1,0 +1,35 @@
+$NetBSD$
+
+--- insts/jg/SPECTACLE2/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ insts/jg/SPECTACLE2/Makefile
+@@ -42,22 +42,22 @@ SPECTACLE2_BASE.o: $(INSTRUMENT_H) $(COM
+ install: dso_install
+ 
+ dso_install: all
+-	$(INSTALL) $(CURDIR)/libSPECTACLE2.so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/libSPECTEQ2.so $(LIBDESTDIR)
++	$(INSTALL) $(CURDIR)/libSPECTACLE2.so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/libSPECTEQ2.so $(DESTDIR)/$(LIBDIR)
+ 
+ standalone_install: standalone
+-	$(INSTALL) $(CURDIR)/SPECTACLE2 $(DESTDIR)
+-	$(INSTALL) $(CURDIR)/SPECTEQ2 $(DESTDIR)
++	$(INSTALL) $(CURDIR)/SPECTACLE2 $(DESTDIR)/$(BINDIR)
++	$(INSTALL) $(CURDIR)/SPECTEQ2 $(DESTDIR)/$(BINDIR)
+ 
+ uninstall: dso_uninstall standalone_uninstall
+ 
+ dso_uninstall:
+-	$(RM) $(LIBDESTDIR)/libSPECTACLE2.so
+-	$(RM) $(LIBDESTDIR)/libSPECTEQ2.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libSPECTACLE2.so
++	$(RM) $(DESTDIR)/$(LIBDIR)/libSPECTEQ2.so
+ 
+ standalone_uninstall:
+-	$(RM) $(DESTDIR)/SPECTACLE2
+-	$(RM) $(DESTDIR)/SPECTEQ2
++	$(RM) $(DESTDIR)/$(BINDIR)/SPECTACLE2
++	$(RM) $(DESTDIR)/$(BINDIR)/SPECTEQ2
+ 
+ clean:
+ 	$(RM) $(SPECTACLE2_OBJS) $(SPECTEQ2_OBJS) $(PROGS)

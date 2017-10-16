@@ -3953,6 +3953,7 @@ SUBDIR+=	rsound
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
+SUBDIR+=	rtcmix
 SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtl-sdr-git

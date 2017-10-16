@@ -1,0 +1,13 @@
+RTcmix is a real-time software "language" for doing digital sound
+synthesis and signal-processing. It is written in C/C++, and is
+distributed open-source, free of charge. In certain respects, it
+is similar in function to other extant unit-generator-based software
+languages such as CSOUND, SuperCollider and (to a lesser extent)
+JSyn and Max/MSP -- they do share a common heritage, after all.
+There are some differences, however, between all these languages...
+and variety is of course the spice of life!
+
+So if you've been searching the web high and low for just the right
+library of DSP functions to include in your latest&greatest "killer"
+(or maybe "peacefully coexisting"?) app, then RTcmix may just be
+the Right Package for You.

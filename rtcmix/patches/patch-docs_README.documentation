@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- docs/README.documentation.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/README.documentation
+@@ -5,8 +5,8 @@ Go to the RTcmix web page for lots of do
+ 
+ This distribution contains documentation in the form of man pages
+ and html.  These are installed in the directories you specify in 
+-makefile.conf.  (Adjust MANDESTDIR and HTMLDESTDIR to taste.)  To see
+-the man pages, add the MANDESTDIR to your MANPATH.  In bash, but 
++makefile.conf.  (Adjust MANPATH and HTMLDIR to taste.)  To see
++the man pages, add the MANPATH to your MANPATH.  In bash, but 
+ something like this in your .profile (or wherever you put such things):
+ 
+    MANPATH="$MANPATH:/usr/local/rtcmix/docs/man"

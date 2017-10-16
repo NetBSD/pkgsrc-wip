@@ -1,0 +1,127 @@
+$NetBSD$
+
+--- src/rtcmix/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ src/rtcmix/Makefile
+@@ -221,21 +221,21 @@ else
+ 	endif
+ endif
+ 
+-# This lets me compile without copying to LIBDIR
++# This lets me compile without copying to BLIBDIR
+ targets: $(TARGETS)
+ 
+ ifeq ($(BUILDTYPE), STANDALONE)
+   all: $(TARGETS)
+-		$(INSTALL) main.o $(LIBDIR)
+-		$(INSTALL) RTcmixMain.o $(LIBDIR)
+-		$(INSTALL) RTsockfuncs.o $(LIBDIR)
++		$(INSTALL) main.o $(BLIBDIR)
++		$(INSTALL) RTcmixMain.o $(BLIBDIR)
++		$(INSTALL) RTsockfuncs.o $(BLIBDIR)
+   ifeq ($(PERL_SUPPORT), TRUE)
+-		$(INSTALL) pRTcmix.o $(LIBDIR)
++		$(INSTALL) pRTcmix.o $(BLIBDIR)
+   endif
+   ifeq ($(PYTHON_SUPPORT), TRUE)
+-		$(INSTALL) pyRTcmix.o $(LIBDIR)
++		$(INSTALL) pyRTcmix.o $(BLIBDIR)
+   endif
+-		$(INSTALL) $(RTLIB) $(LIBDIR)
++		$(INSTALL) $(RTLIB) $(BLIBDIR)
+ else
+   all: $(TARGETS)
+ endif
+@@ -287,16 +287,16 @@ ifeq ($(BUILDTYPE), $(filter $(BUILDTYPE
+ endif
+ 
+ loader.o: loader.cpp
+-	$(CXX) $(CFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c loader.cpp
++	$(CXX) $(CFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c loader.cpp
+ 
+ connection.o: connection.cpp
+-	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c connection.cpp
++	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c connection.cpp
+ 
+ addcheckfunc.o: addcheckfunc.cpp
+-	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c addcheckfunc.cpp
++	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c addcheckfunc.cpp
+ 
+ RTcmix.o: RTcmix.cpp
+-	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c RTcmix.cpp
++	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c RTcmix.cpp
+ 
+ intraverse.o: intraverse.cpp
+ 	$(CXX) $(CXXFLAGS) -DRT_THREAD_COUNT=$(THREAD_COUNT) -c intraverse.cpp
+@@ -307,13 +307,13 @@ $(RTLIB): depend $(COMMON_OBJS) $(LIBMIN
+ endif
+ 
+ MMPrint.o: MMPrint.cpp MMPrint.h
+-	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c $< -o $@
++	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c $< -o $@
+ 
+ Option.o: Option.cpp Option.h
+-	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c $< -o $@
++	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c $< -o $@
+ 
+ PFBusData.o: PFBusData.cpp PFBusData.h
+-	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c $< -o $@
++	$(CXX) $(CXXFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c $< -o $@
+ 
+ $(MIX_INST):	
+ 	(cd ../../insts/base/MIX; make all)
+@@ -440,29 +440,41 @@ install:	standalone_install
+ 
+ endif
+ 
+-
+ standalone_install: all
+-	@if test ! -d $(DESTDIR); then mkdir $(DESTDIR); fi;
+-	$(INSTALL) MIX $(DESTDIR)/CMIX
++	@if test ! -d $(DESTDIR)/$(BINDIR); then mkdir -p $(DESTDIR)/$(BINDIR); fi;
++	@if test ! -d $(DESTDIR)/$(LIBDIR); then mkdir -p $(DESTDIR)/$(LIBDIR); fi;
++	$(INSTALL) MIX $(DESTDIR)/$(BINDIR)/CMIX
++	$(INSTALL) main.o $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) RTcmixMain.o $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) RTsockfuncs.o $(DESTDIR)/$(LIBDIR)
+ ifeq ($(PERL_SUPPORT), TRUE)
+-	$(INSTALL) PMIX $(DESTDIR)/PCMIX
++	$(INSTALL) PMIX $(DESTDIR)/$(BINDIR)/PCMIX
++	$(INSTALL) pRTcmix.o $(DESTDIR)/$(LIBDIR)
+ endif
+ ifeq ($(PYTHON_SUPPORT), TRUE)
+-	$(INSTALL) PYMIX $(DESTDIR)/PYCMIX
++	$(INSTALL) PYMIX $(DESTDIR)/$(BINDIR)/PYCMIX
++	$(INSTALL) pyRTcmix.o $(DESTDIR)/$(LIBDIR)
+ endif
++	$(INSTALL) $(RTLIB) $(DESTDIR)/$(LIBDIR)
+ 
+ uninstall: standalone_uninstall
+-	$(RM) $(LIBDIR)/$(RTLIB)
+-	$(RM) $(LIBDIR)/main.o
+-	$(RM) $(LIBDIR)/RTcmixMain.o
+-	$(RM) $(LIBDIR)/RTsockfuncs.o
+-	$(RM) $(LIBDIR)/pRTcmix.o
+-	$(RM) $(LIBDIR)/pyRTcmix.o
++	$(RM) $(BLIBDIR)/$(RTLIB)
++	$(RM) $(BLIBDIR)/main.o
++	$(RM) $(BLIBDIR)/RTcmixMain.o
++	$(RM) $(BLIBDIR)/RTsockfuncs.o
++	$(RM) $(BLIBDIR)/pRTcmix.o
++	$(RM) $(BLIBDIR)/pyRTcmix.o
+ 
+ standalone_uninstall:
+-	$(RM) $(DESTDIR)/CMIX
+-	$(RM) $(DESTDIR)/PCMIX
+-	$(RM) $(DESTDIR)/PYCMIX
++	$(RM) $(DESTDIR)/$(BINDIR)/CMIX
++	$(RM) $(DESTDIR)/$(BINDIR)/PCMIX
++	$(RM) $(DESTDIR)/$(BINDIR)/PYCMIX
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(RTLIB)
++	$(RM) $(DESTDIR)/$(LIBDIR)/main.o
++	$(RM) $(DESTDIR)/$(LIBDIR)/RTcmixMain.o
++	$(RM) $(DESTDIR)/$(LIBDIR)/RTsockfuncs.o
++	$(RM) $(DESTDIR)/$(LIBDIR)/pRTcmix.o
++	$(RM) $(DESTDIR)/$(LIBDIR)/pyRTcmix.o
+ 
+ clean:
+ 	(cd heap; $(MAKE) $(MFLAGS) clean;)

@@ -1,0 +1,73 @@
+$NetBSD$
+
+--- docs/pod/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/pod/Makefile
+@@ -127,46 +127,46 @@ clean:
+ 	$(RM) *.1 *.3 *.html *.ps *.pdf *.tmp pod2htm* $(SYN)
+ 
+ installman: $(MAN)
+-ifneq ($(strip $(MANDESTDIR)),)    # do only if MANDESTDIR is nonempty
+-	$(mkinstalldirs) $(MANDESTDIR)/man1
+-	$(mkinstalldirs) $(MANDESTDIR)/man3
+-	$(INSTALL) $(INST_MAN) $(SCRIPT_MAN) $(CMD_MAN) $(MANDESTDIR)/man1
++ifneq ($(strip $(MANDIR)),)    # do only if MANDIR is nonempty
++	$(mkinstalldirs) $(DESTDIR)/$(MANDIR)/man1
++	$(mkinstalldirs) $(DESTDIR)/$(MANDIR)/man3
++	$(INSTALL) $(INST_MAN) $(SCRIPT_MAN) $(CMD_MAN) $(DESTDIR)/$(MANDIR)/man1
+ ifneq ($(strip $(API_MAN)),)       # do only if API_MAN is nonempty
+-	$(INSTALL) $(API_MAN) $(MANDESTDIR)/man3
++	$(INSTALL) $(API_MAN) $(DESTDIR)/$(MANDIR)/man3
+ endif
+ endif
+ 
+ uninstallman:
+-ifneq ($(strip $(MANDESTDIR)),)    # do only if MANDESTDIR is nonempty
+-	( cd $(MANDESTDIR)/man1; $(RM) $(INST_MAN) $(SCRIPT_MAN) $(CMD_MAN) )
++ifneq ($(strip $(MANDIR)),)    # do only if MANDIR is nonempty
++	( cd $(DESTDIR)/$(MANDIR)/man1; $(RM) $(INST_MAN) $(SCRIPT_MAN) $(CMD_MAN) )
+ ifneq ($(strip $(API_MAN)),)       # do only if API_MAN is nonempty
+-	( cd $(MANDESTDIR)/man3; $(RM) $(API_MAN) )
++	( cd $(DESTDIR)/$(MANDIR)/man3; $(RM) $(API_MAN) )
+ endif
+ endif
+ 
+ installhtml: $(HTML) $(HTML_INDEX)
+-ifneq ($(strip $(HTMLDESTDIR)),)    # do only if HTMLDESTDIR is nonempty
+-	$(mkinstalldirs) $(HTMLDESTDIR)
+-	$(INSTALL) $(HTML) $(HTMLDESTDIR)
+-	$(INSTALL) $(HTML_INDEX) $(HTMLDESTDIR)
+-	$(INSTALL) style.css $(HTMLDESTDIR)
+-	$(mkinstalldirs) $(HTMLDESTDIR)/images
+-	( cd images; $(INSTALL) $(IMAGES) $(HTMLDESTDIR)/images )
++ifneq ($(strip $(HTMLDIR)),)    # do only if HTMLDIR is nonempty
++	$(mkinstalldirs) $(DESTDIR)/$(HTMLDIR)
++	$(INSTALL) $(HTML) $(DESTDIR)/$(HTMLDIR)
++	$(INSTALL) $(HTML_INDEX) $(DESTDIR)/$(HTMLDIR)
++	$(INSTALL) style.css $(DESTDIR)/$(HTMLDIR)
++	$(mkinstalldirs) $(DESTDIR)/$(HTMLDIR)/images
++	( cd images; $(INSTALL) $(IMAGES) $(DESTDIR)/$(HTMLDIR)/images )
+ endif
+ 
+ uninstallhtml:
+-ifneq ($(strip $(HTMLDESTDIR)),)    # do only if HTMLDESTDIR is nonempty
+-	( if test -d $(HTMLDESTDIR); then cd $(HTMLDESTDIR); \
++ifneq ($(strip $(HTMLDIR)),)    # do only if HTMLDIR is nonempty
++	( if test -d $(DESTDIR)/$(HTMLDIR); then cd $(DESTDIR)/$(HTMLDIR); \
+ 		$(RM) $(HTML) $(HTML_INDEX) style.css; fi )
+-	( cd $(HTMLDESTDIR)/images; $(RM) $(IMAGES) )
++	( cd $(DESTDIR)/$(HTMLDIR)/images; $(RM) $(IMAGES) )
+ endif
+ 
+ installsyn: $(SYN)
+-	$(INSTALL) $(SYN) $(BINDIR)
++	$(INSTALL) $(SYN) $(DESTDIR)/$(BINDIR)
+ 
+ uninstallsyn:
+-	( cd $(BINDIR); $(RM) $(SYN) )
++	( cd $(DESTDIR)/$(BINDIR); $(RM) $(SYN) )
+ 
+-install: installman installhtml installsyn
+-uninstall: uninstallman uninstallhtml uninstallsyn
++install: installman installhtml #installsyn
++uninstall: uninstallman uninstallhtml #uninstallsyn
+ 

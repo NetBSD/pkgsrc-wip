@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- src/control/osc/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ src/control/osc/Makefile
+@@ -22,10 +22,10 @@ depend:
+ -include depend
+ 
+ install: all
+-	$(INSTALL) $(LIBOSC) $(LIBDESTDIR)
++	$(INSTALL) $(LIBOSC) $(DESTDIR)/$(LIBDIR)
+ 
+ uninstall:
+-	$(RM) $(LIBDESTDIR)/$(LIBOSC)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(LIBOSC)
+ 
+ clean:
+ 	$(RM) *.o $(LIBOSC)

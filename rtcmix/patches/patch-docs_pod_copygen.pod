@@ -1,0 +1,24 @@
+$NetBSD$
+
+--- docs/pod/copygen.pod.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/pod/copygen.pod
+@@ -39,15 +39,15 @@ as the old one.
+ This optional argument specifies the type of interpolation to use when
+ copying the table to a new one with a larger size.  The types are:
+ 
+-=over 8
+-
+ =for html <p>
+ 
+-=item 0
++=over 8
++
++=item '0'
+ 
+ no interpolation
+ 
+-=item 1
++=item '1'
+ 
+ linear interpolation
+ 

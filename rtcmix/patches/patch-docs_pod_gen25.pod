@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- docs/pod/gen25.pod.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/pod/gen25.pod
+@@ -30,10 +30,10 @@ The size of the function table: how many
+ 
+ A code indicating which type of window function to draw:
+ 
+-=over 8
+-
+ =for html <p>
+ 
++=over 8
++
+ =item 1
+ 
+ Hanning window

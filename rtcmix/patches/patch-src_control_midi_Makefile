@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- src/control/midi/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ src/control/midi/Makefile
+@@ -36,10 +36,10 @@ depend:
+ -include depend
+ 
+ install: all
+-	$(INSTALL) $(LIBMIDI) $(LIBDESTDIR)
++	$(INSTALL) $(LIBMIDI) $(DESTDIR)/$(LIBDIR)
+ 
+ uninstall:
+-	$(RM) $(LIBDESTDIR)/$(LIBMIDI)
++	$(RM) $(DESTDIR)/$(LIBDIR)/$(LIBMIDI)
+ 
+ clean:
+ 	( cd portmidi; $(MAKE) $(MFLAGS) clean; )

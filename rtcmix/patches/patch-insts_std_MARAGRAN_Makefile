@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- insts/std/MARAGRAN/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ insts/std/MARAGRAN/Makefile
+@@ -40,20 +40,20 @@ $(OBJS2): $(INSTRUMENT_H) $(NAME2).h
+ install: dso_install
+ 
+ dso_install: lib$(NAME).so lib$(NAME2).so
+-	$(INSTALL) $(CURDIR)/lib$(NAME).so $(LIBDESTDIR)
+-	$(INSTALL) $(CURDIR)/lib$(NAME2).so $(LIBDESTDIR)
++	$(INSTALL) $(CURDIR)/lib$(NAME).so $(DESTDIR)/$(LIBDIR)
++	$(INSTALL) $(CURDIR)/lib$(NAME2).so $(DESTDIR)/$(LIBDIR)
+ 
+ standalone_install: standalone
+-	$(INSTALL) $(CURDIR)/$(NAME) $(DESTDIR)
+-	$(INSTALL) $(CURDIR)/$(NAME2) $(DESTDIR)
++	$(INSTALL) $(CURDIR)/$(NAME) $(DESTDIR)/$(BINDIR)
++	$(INSTALL) $(CURDIR)/$(NAME2) $(DESTDIR)/$(BINDIR)
+ 
+ uninstall: dso_uninstall standalone_uninstall
+ 
+ dso_uninstall:
+-	$(RM) $(LIBDESTDIR)/lib$(NAME).so $(LIBDESTDIR)/lib$(NAME2).so
++	$(RM) $(DESTDIR)/$(LIBDIR)/lib$(NAME).so $(DESTDIR)/$(LIBDIR)/lib$(NAME2).so
+ 
+ standalone_uninstall:
+-	$(RM) $(DESTDIR)/$(NAME) $(DESTDIR)/$(NAME2)
++	$(RM) $(DESTDIR)/$(BINDIR)/$(NAME) $(DESTDIR)/$(BINDIR)/$(NAME2)
+ 
+ clean:
+ 	$(RM) $(OBJS) $(OBJS2) $(PROGS)

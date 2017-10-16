@@ -1,0 +1,54 @@
+$NetBSD$
+
+--- utils/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ utils/Makefile
+@@ -13,8 +13,8 @@ OPTION_O = ../src/rtcmix/Option.o
+ LIBCONF = ../src/conf/libconf.a
+ 
+ # MIDI libraries for SETUP program
+-PTLIB = ../src/control/midi/portmidi/porttime/libporttime.a
+ ifeq ($(ARCH), LINUX)
++	PTLIB = ../src/control/midi/portmidi/porttime/libporttime.a
+ 	ifeq ($(AUDIODRIVER), ALSA)
+ 		PMLIB = ../src/control/midi/portmidi/pm_linux/libportmidi.a
+ 		MIDISYSLIB = -lasound -lpthread
+@@ -22,6 +22,7 @@ ifeq ($(ARCH), LINUX)
+ 	endif
+ endif
+ ifeq ($(ARCH), MACOSX)
++	PTLIB = ../src/control/midi/portmidi/porttime/libporttime.a
+ 	PMLIB = ../src/control/midi/portmidi/pm_mac/libportmidi.a
+ 	MIDISYSLIB = -framework CoreFoundation -framework CoreAudio -framework CoreMIDI
+ endif
+@@ -74,26 +75,26 @@ install: all
+ ifneq ($(strip $(PROGS)),)       # do only if PROGS is nonempty
+ 	@for PROG in $(PROGS); \
+ 	do \
+-	  ( $(INSTALL) $(CMIXDIR)/utils/$$PROG $(DESTDIR); ) \
++	  ( $(INSTALL) $(CMIXDIR)/utils/$$PROG $(DESTDIR)/$(BINDIR); ) \
+ 	done
+ endif
+-	@cd $(DESTDIR); if test -f $(PLAY); then ln -fs $(PLAY) play; fi
++#	@cd $(DESTDIR)/$(BINDIR); if test -f $(PLAY); then ln -fs $(PLAY) play; fi
+ 	@cd head; $(MAKE) $(MFLAGS) install
+ 	@cd resample; $(MAKE) $(MFLAGS) install
+ 
+ install_scripts::
+ 	@echo "installing scripts..."	
+-	@cd scripts; $(INSTALL) *[1,2]* $(DESTDIR)
++	@cd scripts; $(INSTALL) *[1,2]* $(DESTDIR)/$(BINDIR)
+ 
+ uninstall:
+ 	@echo "making uninstall..."	
+ ifneq ($(strip $(PROGS)),)       # do only if PROGS is nonempty
+ 	@for PROG in $(PROGS); \
+ 	do \
+-	  ( $(RM) $(DESTDIR)/$$PROG; ) \
++	  ( $(RM) $(DESTDIR)/$(BINDIR)/$$PROG; ) \
+ 	done
+ endif
+-	$(RM) $(DESTDIR)/play
++#	$(RM) $(DESTDIR)/$(BINDIR)/play
+ 	@cd head; $(MAKE) $(MFLAGS) uninstall
+ 	@cd resample; $(MAKE) $(MFLAGS) uninstall
+ 

@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- docs/pod/gen4.pod.orig	2015-10-03 21:09:58.000000000 +0000
++++ docs/pod/gen4.pod
+@@ -49,10 +49,10 @@ The value of the curve at I<timeN>.
+ 
+ Controls the curvature of the line segment from point N to point N+1.
+ 
+-=over 8
+-
+ =for html <p>
+ 
++=over 8
++
+ =item I<alpha> = 0
+ 
+ makes a straight line.

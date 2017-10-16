@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/parser/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ src/parser/Makefile
+@@ -34,7 +34,7 @@ parse_with_minc.o: parse_with_minc.c rtc
+ 	$(CC) $(CFLAGS) -c parse_with_minc.c
+ 
+ parse_with_perl.o: parse_with_perl.c rtcmix_parse.h
+-	$(CC) $(CFLAGS) $(PERL_CCFLAGS) -DSHAREDLIBDIR=\"$(LIBDESTDIR)\" -c parse_with_perl.c
++	$(CC) $(CFLAGS) $(PERL_CCFLAGS) -DSHAREDLIBDIR=\"$(LIBDIR)\" -c parse_with_perl.c
+ 
+ parse_with_python.o: parse_with_python.c rtcmix_parse.h
+ 	$(CC) $(CFLAGS) $(PYTHON_CCFLAGS) $(PYDEF) -c parse_with_python.c

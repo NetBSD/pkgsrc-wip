@@ -1,0 +1,27 @@
+$NetBSD$
+
+--- insts/std/STRUM2/Makefile.orig	2015-10-03 21:09:58.000000000 +0000
++++ insts/std/STRUM2/Makefile
+@@ -29,18 +29,18 @@ $(OBJS): $(INSTRUMENT_H) $(NAME).h
+ install: dso_install
+ 
+ dso_install: lib$(NAME).so
+-	$(INSTALL) $(CURDIR)/lib$(NAME).so $(LIBDESTDIR)
++	$(INSTALL) $(CURDIR)/lib$(NAME).so $(DESTDIR)/$(LIBDIR)
+ 
+ standalone_install: standalone
+-	$(INSTALL) $(CURDIR)/$(NAME) $(DESTDIR)
++	$(INSTALL) $(CURDIR)/$(NAME) $(DESTDIR)/$(BINDIR)
+ 
+ uninstall: dso_uninstall standalone_uninstall
+ 
+ dso_uninstall:
+-	$(RM) $(LIBDESTDIR)/lib$(NAME).so
++	$(RM) $(DESTDIR)/$(LIBDIR)/lib$(NAME).so
+ 
+ standalone_uninstall:
+-	$(RM) $(DESTDIR)/$(NAME)
++	$(RM) $(DESTDIR)/$(BINDIR)/$(NAME)
+ 
+ clean:
+ 	$(RM) $(OBJS) $(PROGS)
