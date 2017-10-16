@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/07/21 19:06:41 ryo-on Exp $
 
 SHA1 (libpafe-0.0.8.tar.gz) = dec47ea185dd052c3e9b28cfb3494e509f7a4316
 RMD160 (libpafe-0.0.8.tar.gz) = 337663aa12f9627d89ce712cde547c048725ac69
+SHA512 (libpafe-0.0.8.tar.gz) = 245cbc591be583dd01aca5d9f92064abbe9a703b02451ae2a7f1adc6a5c94f122610d791826693d9e4ab3a1d68d64c179bc5a3294a578d805444b009bf29f3ea
 Size (libpafe-0.0.8.tar.gz) = 345264 bytes
