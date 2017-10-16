@@ -7,6 +7,7 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 25cba9ff9d61910bb74d500
 SHA1 (patch-lib_tsan_go_buildgo.sh) = fe64b3389bbf6ae2ddf187df3e0600b2f817f51d
 SHA1 (patch-lib_tsan_rtl_tsan__platform__linux.cc) = 23744bd656f0dcee425821491bcaa723f26130a3
 SHA1 (patch-lib_tsan_rtl_tsan__platform__posix.cc) = ddf48d91100e681f09b7303a37936ac8cd7f775a
+SHA1 (patch-lib_tsan_rtl_tsan__rtl.cc) = f21a7acad2b84c1a32d83ddad336369b016a4990
 SHA1 (patch-lib_tsan_rtl_tsan__rtl__amd64.S) = 95591667c23372ceb72334b2ceae800d32574ac6
 SHA1 (patch-lib_tsan_tests_rtl_tsan__test__util__posix.cc) = 302c72dab4fe5a0c94d7de0d728033e616811e5e
 SHA1 (patch-test_tsan_lit.cfg) = c849d08c3df59a3de45c6515e05c3d9fac5424e7
