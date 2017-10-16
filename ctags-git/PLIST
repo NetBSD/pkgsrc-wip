@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/${PREFIX_PROGRAM}ctags
 ${PLIST.emacs}bin/${PREFIX_PROGRAM}etags
-libexec/ctags/drivers/${PREFIX_PROGRAM}coffeetags
 man/man1/${PREFIX_PROGRAM}ctags.1
+man/man7/ctags-incompatibilities.7
+man/man7/ctags-optlib.7
