@@ -216,7 +216,7 @@ include/llvm/Analysis/ObjCARCAliasAnalysis.h
 include/llvm/Analysis/ObjCARCAnalysisUtils.h
 include/llvm/Analysis/ObjCARCInstKind.h
 include/llvm/Analysis/ObjectUtils.h
-include/llvm/Analysis/OptimizationDiagnosticInfo.h
+include/llvm/Analysis/OptimizationRemarkEmitter.h
 include/llvm/Analysis/OrderedBasicBlock.h
 include/llvm/Analysis/PHITransAddr.h
 include/llvm/Analysis/Passes.h
@@ -244,6 +244,7 @@ include/llvm/Analysis/Trace.h
 include/llvm/Analysis/TypeBasedAliasAnalysis.h
 include/llvm/Analysis/TypeMetadataUtils.h
 include/llvm/Analysis/ValueLattice.h
+include/llvm/Analysis/ValueLatticeUtils.h
 include/llvm/Analysis/ValueTracking.h
 include/llvm/Analysis/VectorUtils.h
 include/llvm/AsmParser/Parser.h
@@ -426,6 +427,7 @@ include/llvm/DebugInfo/CodeView/CVTypeVisitor.h
 include/llvm/DebugInfo/CodeView/CodeView.h
 include/llvm/DebugInfo/CodeView/CodeViewError.h
 include/llvm/DebugInfo/CodeView/CodeViewRecordIO.h
+include/llvm/DebugInfo/CodeView/CodeViewRegisters.def
 include/llvm/DebugInfo/CodeView/CodeViewSymbols.def
 include/llvm/DebugInfo/CodeView/CodeViewTypes.def
 include/llvm/DebugInfo/CodeView/DebugChecksumsSubsection.h
@@ -890,7 +892,8 @@ include/llvm/ProfileData/SampleProf.h
 include/llvm/ProfileData/SampleProfReader.h
 include/llvm/ProfileData/SampleProfWriter.h
 include/llvm/Support/AArch64TargetParser.def
-include/llvm/Support/AMDGPUCodeObjectMetadata.h
+include/llvm/Support/AMDGPUKernelDescriptor.h
+include/llvm/Support/AMDGPUMetadata.h
 include/llvm/Support/ARMAttributeParser.h
 include/llvm/Support/ARMBuildAttributes.h
 include/llvm/Support/ARMEHABI.h
@@ -1260,6 +1263,7 @@ ${PLIST.BPF}lib/libLLVMBPFInfo.a
 lib/libLLVMBinaryFormat.a
 lib/libLLVMBitReader.a
 lib/libLLVMBitWriter.a
+lib/libLLVMCFIVerify.a
 lib/libLLVMCodeGen.a
 lib/libLLVMCore.a
 lib/libLLVMCoroutines.a
