@@ -1,5 +1,6 @@
 @comment $NetBSD$
 lib/clang/${PKGVERSION}/asan_blacklist.txt
+lib/clang/${PKGVERSION}/cfi_blacklist.txt
 lib/clang/${PKGVERSION}/include/sanitizer/allocator_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/asan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/common_interface_defs.h
