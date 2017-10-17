@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (RTcmix/v4.2.0.tar.gz) = 0b4d105becdf9bc0c22d69c99315081c129127d0
-RMD160 (RTcmix/v4.2.0.tar.gz) = cb9f275fde8b8f51daeed80708d92307484f15a7
-SHA512 (RTcmix/v4.2.0.tar.gz) = fe8512520ead40b5c43a66741fa126fed195e84528a0a32c90d57af9a47e28e76fd205389da48067a02cb4289b7e6d96c27e2e86986bd0a25ac1840f50886541
-Size (RTcmix/v4.2.0.tar.gz) = 3242897 bytes
+SHA1 (RTcmix-4.2.0.tar.gz) = 0b4d105becdf9bc0c22d69c99315081c129127d0
+RMD160 (RTcmix-4.2.0.tar.gz) = cb9f275fde8b8f51daeed80708d92307484f15a7
+SHA512 (RTcmix-4.2.0.tar.gz) = fe8512520ead40b5c43a66741fa126fed195e84528a0a32c90d57af9a47e28e76fd205389da48067a02cb4289b7e6d96c27e2e86986bd0a25ac1840f50886541
+Size (RTcmix-4.2.0.tar.gz) = 3242897 bytes
 SHA1 (patch-Makefile) = 68377a598b966ed965e8b023d14f010e0f45ede7
 SHA1 (patch-configure.ac) = ec0e3ef4bb0ae22da40d2ebee3c371dd8f491db1
 SHA1 (patch-defs.conf.in) = 4c86277d16d9e1b2978d478ba7532f99fd229c79
