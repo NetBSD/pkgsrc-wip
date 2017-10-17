@@ -18,8 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-gdata>=2.0.18:../../www/py-gdata
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
-BROKEN=		depends on py-termcolor which has not been imported
-#DEPENDS+=	${PYPKGPREFIX}-termcolor>=1.1.0:../../wip/py-termcolor
+DEPENDS+=	${PYPKGPREFIX}-termcolor>=1.1.0:../../devel/py-termcolor
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.2.5:../../www/py-mechanize
 
 USE_LANGUAGES=	# none

@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-termcolor-[0-9]*:../../wip/py-termcolor
+DEPENDS+=	${PYPKGPREFIX}-termcolor-[0-9]*:../../devel/py-termcolor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

@@ -1,4 +1,0 @@
-@comment $NetBSD$
-${PYSITELIB}/termcolor.py
-${PYSITELIB}/termcolor.pyc
-${PYSITELIB}/termcolor.pyo
