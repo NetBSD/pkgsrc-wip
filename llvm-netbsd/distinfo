@@ -1,5 +1,6 @@
 $NetBSD$
 
+SHA1 (patch-cmake_config-ix.cmake) = ba413c9c566cdc0aee351d6ec53f566de425799a
 SHA1 (patch-lib_Transforms_Instrumentation_AddressSanitizer.cpp) = ad230c1f0091f28451a29a11050588f412824e53
 SHA1 (patch-lib_Transforms_Instrumentation_InstrProfiling.cpp) = 871b474f415d9dc468cc07477101f88d7a20868b
 SHA1 (patch-lib_Transforms_Instrumentation_MemorySanitizer.cpp) = 64fdbb55c77d5f5f73152d2f8daa28adfc428e40
