@@ -13,5 +13,6 @@ SHA1 (patch-lib_tsan_rtl_tsan__rtl.cc) = 8d5938bb27f9d238ceeb09ac1e6e8090b196fdc
 SHA1 (patch-lib_tsan_rtl_tsan__rtl__amd64.S) = 95591667c23372ceb72334b2ceae800d32574ac6
 SHA1 (patch-lib_tsan_tests_rtl_tsan__test__util__posix.cc) = 302c72dab4fe5a0c94d7de0d728033e616811e5e
 SHA1 (patch-test_tsan_lit.cfg) = 001a4025f0542998da209df933359cf929d7631e
+SHA1 (patch-test_tsan_strerror__r.cc) = 6f157012b8a3ca80f11380b76c433bddea16c86b
 SHA1 (patch-test_tsan_tls__race.cc) = 7447ee161c27deb7196151f56ea739904bec8c1c
 SHA1 (patch-test_tsan_tls__race2.cc) = da9b3298b8e882db111b01ac10a5ae6dbeaa88dc
