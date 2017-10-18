@@ -2,14 +2,14 @@ $NetBSD$
 
 Make use of DESTDIR and MANDIR.
 
---- src/Makefile.orig	2017-07-10 21:19:04.000000000 +0000
+--- src/Makefile.orig	2017-10-16 18:25:09.000000000 +0000
 +++ src/Makefile
 @@ -1,4 +1,5 @@
  PREFIX := $(DESTDIR)/usr/local
 +MANDIR := $(PREFIX)/share/man
- CXXFLAGS := $(shell pkg-config --cflags zlib libpng) -DLODEPNG_NO_COMPILE_PNG -DLODEPNG_NO_COMPILE_DISK
- CFLAGS := $(shell pkg-config --cflags zlib libpng) -DLODEPNG_NO_COMPILE_PNG -DLODEPNG_NO_COMPILE_DISK
- LDFLAGS := $(shell pkg-config --libs libpng)
+ CXXFLAGS := $(CXXFLAGS) $(shell pkg-config --cflags zlib libpng) -DLODEPNG_NO_COMPILE_PNG -DLODEPNG_NO_COMPILE_DISK
+ CFLAGS := $(CFLAGS) $(shell pkg-config --cflags zlib libpng) -DLODEPNG_NO_COMPILE_PNG -DLODEPNG_NO_COMPILE_DISK
+ LDFLAGS := $(LDFLAGS) $(shell pkg-config --libs libpng)
 @@ -76,10 +77,10 @@ libpixbufloader-flif$(LIBEXT): libflif$(
  pixbufloader: libpixbufloader-flif$(LIBEXT)
  
@@ -23,7 +23,7 @@ Make use of DESTDIR and MANDIR.
  	install -m 755 ../tools/gif2flif $(PREFIX)/bin
  	install -m 755 ../tools/apng2flif $(PREFIX)/bin
  
-@@ -129,7 +130,7 @@ uninstall:
+@@ -130,7 +131,7 @@ uninstall:
  	rm -f $(PREFIX)/lib/libflif_dec$(LIBEXT)
  	rm -f $(PREFIX)/lib/libflif$(LIBEXTV)
  	rm -f $(PREFIX)/lib/libflif_dec$(LIBEXTV)
