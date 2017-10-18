@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2015/06/12 10:49:46 wiz Exp $
 
-DISTNAME=	Term-ReadLine-Perl5-1.43
+DISTNAME=	Term-ReadLine-Perl5-1.44
 #KGNAME=	p5-${DISTNAME:C/Perl5/Perl/}
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
