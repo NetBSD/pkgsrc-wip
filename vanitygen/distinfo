@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (vanitygen-0.21.tar.gz) = 38fde7e157088fb9c88770f92a038a33666d0ddf
+RMD160 (vanitygen-0.21.tar.gz) = 1325cc080dff94b1cd64343bbd8bc7361dc08eb8
+SHA512 (vanitygen-0.21.tar.gz) = 339fd0ddb7e78d55f95c7e4797d3e2e92dce407a8221f42f3e9971d07210fcea0d681e32247d2d1d46a0946a7e735597eb32dc981ac4f1796abe2ec0a141e88f
+Size (vanitygen-0.21.tar.gz) = 77441 bytes
+SHA1 (patch-Makefile) = c92cf37e77691689b4bafc177c3ebdf714ed5722

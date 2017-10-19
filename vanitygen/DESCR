@@ -1,0 +1,10 @@
+Vanitygen can generate regular bitcoin addresses, namecoin addresses,
+and testnet addresses.
+
+Vanitygen can search for exact prefixes or regular expression matches.
+When searching for exact prefixes, vanitygen will ensure that the
+prefix is possible, will provide a difficulty estimate, and will run
+about 30% faster.  Exact prefixes are case-sensitive by default, but
+may be searched case-insensitively using the "-i" option.  Regular
+expression patterns follow the Perl-compatible regular expression
+language.
