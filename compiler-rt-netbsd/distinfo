@@ -2,17 +2,20 @@ $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
 SHA1 (patch-cmake_config-ix.cmake) = 5b1842f08cc8c2b96e0529b552b09c7adf2065dc
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = eaffd9f8f2621ad465b5c734a764bdff0243af3d
+SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 297a3c995a3df644e515dda2856f0784e6e96a62
 SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = f5825b7081758e07e36dbd47a887f31a20912a83
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 25cba9ff9d61910bb74d500e515da083af4e6cb7
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = ce1a3cbb60b81ae67a3242eb96f8d277a1fad059
 SHA1 (patch-lib_sanitizer__common_sanitizer__thread__registry.cc) = ab0bccc862443c04ec0e7287bbf8e2632546bb90
 SHA1 (patch-lib_tsan_go_buildgo.sh) = fe64b3389bbf6ae2ddf187df3e0600b2f817f51d
-SHA1 (patch-lib_tsan_rtl_tsan__interceptors.cc) = 1d849dba05d9c8f70e3636fb65758e0971e8a2e3
+SHA1 (patch-lib_tsan_rtl_tsan__interceptors.cc) = 3bea97313e5ddf4942f0a63fabeaf61789328698
 SHA1 (patch-lib_tsan_rtl_tsan__platform__linux.cc) = 23744bd656f0dcee425821491bcaa723f26130a3
 SHA1 (patch-lib_tsan_rtl_tsan__platform__posix.cc) = ddf48d91100e681f09b7303a37936ac8cd7f775a
 SHA1 (patch-lib_tsan_rtl_tsan__rtl.cc) = 8d5938bb27f9d238ceeb09ac1e6e8090b196fdcc
 SHA1 (patch-lib_tsan_rtl_tsan__rtl__amd64.S) = 95591667c23372ceb72334b2ceae800d32574ac6
 SHA1 (patch-lib_tsan_tests_rtl_tsan__test__util__posix.cc) = 302c72dab4fe5a0c94d7de0d728033e616811e5e
 SHA1 (patch-test_tsan_lit.cfg) = 001a4025f0542998da209df933359cf929d7631e
+SHA1 (patch-test_tsan_map32bit.cc) = 08886c59b31fb1bc3574ce8c12d2a8194c0b64a1
 SHA1 (patch-test_tsan_strerror__r.cc) = 6f157012b8a3ca80f11380b76c433bddea16c86b
 SHA1 (patch-test_tsan_tls__race.cc) = 7447ee161c27deb7196151f56ea739904bec8c1c
 SHA1 (patch-test_tsan_tls__race2.cc) = da9b3298b8e882db111b01ac10a5ae6dbeaa88dc
