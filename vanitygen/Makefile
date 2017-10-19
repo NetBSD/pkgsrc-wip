@@ -13,6 +13,14 @@ USE_TOOLS+=	gmake
 
 BUILD_TARGET=	most # all: requires OpenCL
 
+INSTALLATION_DIRS+=	bin
+
+do-install:
+.for _file_ in vanitygen keyconv
+	cd ${WRKSRC} && \
+		${INSTALL_PROGRAM} ${_file_} ${DESTDIR}${PREFIX}/bin/
+.endfor
+
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
