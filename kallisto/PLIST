@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/kallisto
+bin/kallisto-test
+share/kallisto/test/README.md
+share/kallisto/test/Snakefile
+share/kallisto/test/reads_1.fastq.gz
+share/kallisto/test/reads_2.fastq.gz
+share/kallisto/test/transcripts.fasta.gz

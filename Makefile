@@ -1524,6 +1524,7 @@ SUBDIR+=	kacst-one
 SUBDIR+=	kacst-ttf
 SUBDIR+=	kactivitymanagerd
 SUBDIR+=	kahakai
+SUBDIR+=	kallisto
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kawa
 SUBDIR+=	kcalc
