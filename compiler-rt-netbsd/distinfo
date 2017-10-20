@@ -1,10 +1,14 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-SHA1 (patch-cmake_config-ix.cmake) = 5b1842f08cc8c2b96e0529b552b09c7adf2065dc
+SHA1 (patch-cmake_config-ix.cmake) = a1814db3e044ce3954655fea1e157a96bfa8df2f
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = eaffd9f8f2621ad465b5c734a764bdff0243af3d
-SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 297a3c995a3df644e515dda2856f0784e6e96a62
+SHA1 (patch-lib_msan_msan.h) = 5fefdf22e43c9c9a3cee8f9038bf21d8ba786da0
+SHA1 (patch-lib_msan_msan__interceptors.cc) = 57f1bc2f486aa346cf6ef12d5c4ca145f165df90
+SHA1 (patch-lib_msan_msan__linux.cc) = e38786bff9cde3de0a84614f757888f249fea905
+SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = f46dd7dcbe63fb39ed50696bf4bbb4eea1ef8f19
 SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = f5825b7081758e07e36dbd47a887f31a20912a83
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 25cba9ff9d61910bb74d500e515da083af4e6cb7
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cc) = 46f00f0eee984ac395f4418eae0fa75efd4895b2
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = ce1a3cbb60b81ae67a3242eb96f8d277a1fad059
 SHA1 (patch-lib_sanitizer__common_sanitizer__thread__registry.cc) = ab0bccc862443c04ec0e7287bbf8e2632546bb90
 SHA1 (patch-lib_tsan_go_buildgo.sh) = fe64b3389bbf6ae2ddf187df3e0600b2f817f51d
@@ -14,6 +18,7 @@ SHA1 (patch-lib_tsan_rtl_tsan__platform__posix.cc) = ddf48d91100e681f09b7303a379
 SHA1 (patch-lib_tsan_rtl_tsan__rtl.cc) = 8d5938bb27f9d238ceeb09ac1e6e8090b196fdcc
 SHA1 (patch-lib_tsan_rtl_tsan__rtl__amd64.S) = 95591667c23372ceb72334b2ceae800d32574ac6
 SHA1 (patch-lib_tsan_tests_rtl_tsan__test__util__posix.cc) = 302c72dab4fe5a0c94d7de0d728033e616811e5e
+SHA1 (patch-test_msan_lit.cfg) = 29a3a41c4a0c0df72ddde6a4e0c66d73ca1022e0
 SHA1 (patch-test_tsan_lit.cfg) = 001a4025f0542998da209df933359cf929d7631e
 SHA1 (patch-test_tsan_map32bit.cc) = 08886c59b31fb1bc3574ce8c12d2a8194c0b64a1
 SHA1 (patch-test_tsan_strerror__r.cc) = 6f157012b8a3ca80f11380b76c433bddea16c86b

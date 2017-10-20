@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2017-10-19 13:16:09.802766688 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2017-10-17 18:35:46.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -3795,7 +3795,7 @@ INTERCEPTOR(void, _exit, int status) {
  #define INIT__EXIT
