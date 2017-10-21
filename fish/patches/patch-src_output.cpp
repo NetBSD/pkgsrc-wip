@@ -11,3 +11,12 @@ $NetBSD$
      if (term_supports_color_natively(idx)) {
          // Use tparm to emit color escape.
          writembs(tparm(todo, idx));
+@@ -550,7 +550,7 @@ rgb_color_t parse_color(const wcstring &
+ }
+ 
+ /// Write specified multibyte string.
+-void writembs_check(char *mbs, const char *mbs_name, const char *file, long line) {
++void writembs_check(const char *mbs, const char *mbs_name, const char *file, long line) {
+     if (mbs != NULL) {
+         tputs(mbs, 1, &writeb);
+     } else {
