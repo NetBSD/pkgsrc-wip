@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-parallel-n64-20170907
+DISTNAME=	libretro-parallel-n64-20171022
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,7 +8,7 @@ COMMENT=	Libretro core for Nintendo 64 emulation
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	parallel-n64
-GITHUB_TAG=	c052e43f382c6162956fc35df21081abb4f5b1cb
+GITHUB_TAG=	40a12321b3c3a3689253d05d4851bd58a63b1beb
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
