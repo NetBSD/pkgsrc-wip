@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-bluemsx-20170808
+DISTNAME=	libretro-bluemsx-20171015
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ COMMENT=	Libretro core for accurate MSX/MSX2/ColecoVision/SVI/SG-1000 emulation
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	blueMSX-libretro
-GITHUB_TAG=	a67b0f310d001124825f7d3262f32976beac60b8
+GITHUB_TAG=	552919b0c7f96f2dc1aaa08663061709654b2a6d
 
 EXTRACT_USING=	bsdtar
 MAKE_FILE=	Makefile.libretro
