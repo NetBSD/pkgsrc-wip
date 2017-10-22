@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-lynx-20170605
+DISTNAME=	libretro-beetle-lynx-20170929
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ COMMENT=	Libretro core based on the Mednafen Atari Lynx emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-lynx-libretro
-GITHUB_TAG=	4e321b72c2c3ed0a4dca67317f98c58cb473446e
+GITHUB_TAG=	0225ca4e2429a82378476f4e4d5f8b303c1a7cb3
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
