@@ -1,0 +1,13 @@
+$NetBSD$
+
+Change path to ARC binary.
+
+--- test_data/runarc.orig	2016-03-29 05:17:16.000000000 +0000
++++ test_data/runarc
+@@ -1,5 +1,5 @@
+ #rm -rf working*
+ #rm -rf finished_*
+ echo "See log.txt for output...."
+-time ../bin/ARC --debug > log.txt
++time ARC --debug > log.txt
+ # > runarc.log

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ibest-ARC-v1.1.4-beta-0-g3831cb8.tar.gz) = 55452b86afb3f765a9cdb12f495272866320ba4c
+RMD160 (ibest-ARC-v1.1.4-beta-0-g3831cb8.tar.gz) = bb51afbcf0bb42dd29b23d3e0e08d10c6948a251
+SHA512 (ibest-ARC-v1.1.4-beta-0-g3831cb8.tar.gz) = 8fe359d592e4f600c353ffa3881b717f270d51b63c4ac481003e81b70d78bc3a7834ec20ee5425a1950b77bed7054f559c728576719e8889e495ad181e126a62
+Size (ibest-ARC-v1.1.4-beta-0-g3831cb8.tar.gz) = 627297 bytes
+SHA1 (patch-test__data_runarc) = b0d3804e0732a7a088566bc72ba07fcef017ebda

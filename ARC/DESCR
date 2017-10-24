@@ -1,0 +1,20 @@
+ARC -- Assembly by Reduced Complexity
+
+ARC is a pipeline which facilitates iterative, reference-guided de
+novo assemblies with the intent of:
+
+- Reducing time in analysis and increasing accuracy of results by only
+  considering those reads which should assemble together.
+
+- Reducing/removing reference bias as compared to mapping-based
+  approaches.
+
+The software is designed to work in situations where a whole-genome
+assembly is not the objective, but rather when the researcher wishes
+to assemble discrete 'targets' contained within next-generation
+shotgun sequence data. ARC decomplexifies the traditionally difficult
+problem of assembly by breaking the reads into small, manageable
+subsets which can then be assembled quickly and efficiently in
+parallel. Applications include those in which the researcher wishes to
+de novo assemble specific content and a set of semi-similar reference
+targets is available to initialize the assembly process.
