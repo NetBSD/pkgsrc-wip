@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- libsanitizer/sanitizer_common/Makefile.in.orig	2017-10-22 22:33:06.000000000 +0000
++++ libsanitizer/sanitizer_common/Makefile.in
+@@ -322,6 +322,7 @@ sanitizer_common_files = \
+ 	sanitizer_mac_libcdep.cc \
+ 	sanitizer_persistent_allocator.cc \
+ 	sanitizer_platform_limits_linux.cc \
++	sanitizer_platform_limits_netbsd.cc \
+ 	sanitizer_platform_limits_posix.cc \
+ 	sanitizer_posix.cc \
+ 	sanitizer_posix_libcdep.cc \
