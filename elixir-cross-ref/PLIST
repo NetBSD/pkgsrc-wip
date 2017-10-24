@@ -1,0 +1,19 @@
+@comment $NetBSD$
+libexec/elixir-cross-ref/data.py
+libexec/elixir-cross-ref/http/fonts/lxr.eot
+libexec/elixir-cross-ref/http/fonts/lxr.svg
+libexec/elixir-cross-ref/http/fonts/lxr.ttf
+libexec/elixir-cross-ref/http/fonts/lxr.woff
+libexec/elixir-cross-ref/http/header.css
+libexec/elixir-cross-ref/http/img/2penguins.svg
+libexec/elixir-cross-ref/http/script.js
+libexec/elixir-cross-ref/http/style.css
+libexec/elixir-cross-ref/http/web.py
+libexec/elixir-cross-ref/lib.py
+libexec/elixir-cross-ref/query.py
+libexec/elixir-cross-ref/script.sh
+libexec/elixir-cross-ref/templates/header.html
+libexec/elixir-cross-ref/templates/layout.html
+libexec/elixir-cross-ref/update.py
+share/doc/elixir-cross-ref/COPYING
+share/doc/elixir-cross-ref/README.md

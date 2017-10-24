@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (elixir-0.2.tar.gz) = fc6a6c0bad8484c9e8c814eb613155baa3b392d2
+RMD160 (elixir-0.2.tar.gz) = 333f2317925051cd127cc88d50747f2b68a0bbab
+SHA512 (elixir-0.2.tar.gz) = 132dae3348af4d868ceab6c651e2865f9b22572fb66797b769560977c29175fe8c88c76c7fba1f88de84370b4206f115be46fc8b5cf74f073350226429470439
+Size (elixir-0.2.tar.gz) = 33185 bytes
+SHA1 (patch-data.py) = 21bf89891492d0c09f45874e42c978df5ddd38cc
+SHA1 (patch-script.sh) = 3b01783c381a6a1c774a7bd35c6c56777c429a50
+SHA1 (patch-update.py) = 87cc476aa19d18e52a3458393b8826e731adea0a
