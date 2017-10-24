@@ -114,7 +114,23 @@ $NetBSD$
  # endif
  #else
    struct stat64 buf64;
-@@ -403,7 +397,7 @@ uptr internal_unlink(const char *path) {
+@@ -389,13 +383,11 @@ uptr internal_dup2(int oldfd, int newfd)
+ }
+ 
+ uptr internal_readlink(const char *path, char *buf, uptr bufsize) {
+-#if SANITIZER_NETBSD
+-  return internal_syscall_ptr(SYSCALL(readlink), path, buf, bufsize);
+-#elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
++#if SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
+   return internal_syscall(SYSCALL(readlinkat), AT_FDCWD,
+                           (uptr)path, (uptr)buf, bufsize);
+ #else
+-  return internal_syscall(SYSCALL(readlink), (uptr)path, (uptr)buf, bufsize);
++  return internal_syscall_ptr(SYSCALL(readlink), path, buf, bufsize);
+ #endif
+ }
+ 
+@@ -403,7 +395,7 @@ uptr internal_unlink(const char *path) {
  #if SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
    return internal_syscall(SYSCALL(unlinkat), AT_FDCWD, (uptr)path, 0);
  #else
@@ -123,7 +139,7 @@ $NetBSD$
  #endif
  }
  
-@@ -412,7 +406,7 @@ uptr internal_rename(const char *oldpath
+@@ -412,7 +404,7 @@ uptr internal_rename(const char *oldpath
    return internal_syscall(SYSCALL(renameat), AT_FDCWD, (uptr)oldpath, AT_FDCWD,
                            (uptr)newpath);
  #else
@@ -132,7 +148,7 @@ $NetBSD$
  #endif
  }
  
-@@ -433,14 +427,14 @@ unsigned int internal_sleep(unsigned int
+@@ -433,14 +425,14 @@ unsigned int internal_sleep(unsigned int
    struct timespec ts;
    ts.tv_sec = 1;
    ts.tv_nsec = 0;
@@ -149,7 +165,20 @@ $NetBSD$
                            (uptr)envp);
  }
  
-@@ -524,13 +518,13 @@ const char *GetEnv(const char *name) {
+@@ -474,11 +466,7 @@ u64 NanoTime() {
+   kernel_timeval tv;
+ #endif
+   internal_memset(&tv, 0, sizeof(tv));
+-#if SANITIZER_NETBSD
+-  internal_syscall_ptr(SYSCALL(gettimeofday), &tv, NULL);
+-#else
+-  internal_syscall(SYSCALL(gettimeofday), (uptr)&tv, 0);
+-#endif
++  internal_syscall_ptr(SYSCALL(gettimeofday), &tv, 0);
+   return (u64)tv.tv_sec * 1000*1000*1000 + tv.tv_usec * 1000;
+ }
+ 
+@@ -524,13 +512,13 @@ const char *GetEnv(const char *name) {
  #endif
  }
  
@@ -165,7 +194,7 @@ $NetBSD$
  static void ReadNullSepFileToArray(const char *path, char ***arr,
                                     int arr_size) {
    char *buff;
-@@ -556,7 +550,22 @@ static void ReadNullSepFileToArray(const
+@@ -556,7 +544,22 @@ static void ReadNullSepFileToArray(const
  #endif
  
  static void GetArgsAndEnv(char ***argv, char ***envp) {
@@ -189,7 +218,7 @@ $NetBSD$
  #if !SANITIZER_GO
    if (&__libc_stack_end) {
  #endif
-@@ -571,18 +580,6 @@ static void GetArgsAndEnv(char ***argv, 
+@@ -571,18 +574,6 @@ static void GetArgsAndEnv(char ***argv, 
      ReadNullSepFileToArray("/proc/self/environ", envp, kMaxEnvp);
    }
  #endif
@@ -208,7 +237,7 @@ $NetBSD$
  #endif
  }
  
-@@ -594,8 +591,22 @@ char **GetArgv() {
+@@ -594,8 +585,22 @@ char **GetArgv() {
  
  void ReExec() {
    char **argv, **envp;
@@ -232,44 +261,52 @@ $NetBSD$
    int rverrno;
    CHECK_EQ(internal_iserror(rv, &rverrno), true);
    Printf("execve failed, errno %d\n", rverrno);
-@@ -699,7 +710,7 @@ uptr internal_ptrace(int request, int pi
+@@ -698,13 +703,8 @@ uptr internal_ptrace(int request, int pi
+ }
  
  uptr internal_waitpid(int pid, int *status, int options) {
- #if SANITIZER_NETBSD
+-#if SANITIZER_NETBSD
 -  return internal_syscall(SYSCALL(wait4), pid, status, options,
-+  return internal_syscall_ptr(SYSCALL(wait4), pid, status, options,
-                           NULL /* rusage */);
- #else
-   return internal_syscall(SYSCALL(wait4), pid, (uptr)status, options,
-@@ -717,7 +728,7 @@ uptr internal_getppid() {
+-                          NULL /* rusage */);
+-#else
+-  return internal_syscall(SYSCALL(wait4), pid, (uptr)status, options,
++  return internal_syscall_ptr(SYSCALL(wait4), pid, (uptr)status, options,
+                           0 /* rusage */);
+-#endif
+ }
+ 
+ uptr internal_getpid() {
+@@ -716,14 +716,12 @@ uptr internal_getppid() {
+ }
  
  uptr internal_getdents(fd_t fd, struct linux_dirent *dirp, unsigned int count) {
- #if SANITIZER_NETBSD
+-#if SANITIZER_NETBSD
 -  return internal_syscall(SYSCALL(getdents), fd, dirp, (uptr)count);
-+  return internal_syscall64(SYSCALL(getdents), fd, dirp, (uptr)count);
- #elif SANITIZER_FREEBSD
+-#elif SANITIZER_FREEBSD
++#if SANITIZER_FREEBSD
    return internal_syscall(SYSCALL(getdirentries), fd, (uptr)dirp, count, NULL);
  #elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
-@@ -742,7 +753,11 @@ uptr internal_prctl(int option, uptr arg
+   return internal_syscall(SYSCALL(getdents64), fd, (uptr)dirp, count);
+ #else
+-  return internal_syscall(SYSCALL(getdents), fd, (uptr)dirp, count);
++  return internal_syscall_ptr(SYSCALL(getdents), fd, (uptr)dirp, count);
+ #endif
+ }
+ 
+@@ -742,7 +740,7 @@ uptr internal_prctl(int option, uptr arg
  #endif
  
  uptr internal_sigaltstack(const void *ss, void *oss) {
-+#if SANITIZER_NETBSD
+-  return internal_syscall(SYSCALL(sigaltstack), (uptr)ss, (uptr)oss);
 +  return internal_syscall_ptr(SYSCALL(sigaltstack), (uptr)ss, (uptr)oss);
-+#else
-   return internal_syscall(SYSCALL(sigaltstack), (uptr)ss, (uptr)oss);
-+#endif
  }
  
  int internal_fork() {
-@@ -823,8 +838,10 @@ int internal_sigaction_syscall(int signu
- 
+@@ -824,7 +822,7 @@ int internal_sigaction_syscall(int signu
  uptr internal_sigprocmask(int how, __sanitizer_sigset_t *set,
      __sanitizer_sigset_t *oldset) {
--#if SANITIZER_FREEBSD || SANITIZER_NETBSD
-+#if SANITIZER_FREEBSD
-   return internal_syscall(SYSCALL(sigprocmask), how, set, oldset);
-+#elif SANITIZER_NETBSD
+ #if SANITIZER_FREEBSD || SANITIZER_NETBSD
+-  return internal_syscall(SYSCALL(sigprocmask), how, set, oldset);
 +  return internal_syscall_ptr(SYSCALL(sigprocmask), how, set, oldset);
  #else
    __sanitizer_kernel_sigset_t *k_set = (__sanitizer_kernel_sigset_t *)set;

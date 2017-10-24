@@ -11,16 +11,18 @@ $NetBSD$
  INTERCEPTOR(int, pthread_setname_np, uptr thread, const char *name) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, pthread_setname_np, thread, name);
-@@ -4414,6 +4414,15 @@ INTERCEPTOR(int, pthread_setname_np, upt
+@@ -4414,6 +4414,17 @@ INTERCEPTOR(int, pthread_setname_np, upt
    return REAL(pthread_setname_np)(thread, name);
  }
  #define INIT_PTHREAD_SETNAME_NP COMMON_INTERCEPT_FUNCTION(pthread_setname_np);
 +#elif SANITIZER_INTERCEPT_PTHREAD_SETNAME_NP && SANITIZER_NETBSD
 +INTERCEPTOR(int, pthread_setname_np, uptr thread, const char *name, void *arg) {
 +  void *ctx;
++  char newname[32]; // PTHREAD_MAX_NAMELEN_NP=32
 +  COMMON_INTERCEPTOR_ENTER(ctx, pthread_setname_np, thread, name, arg);
 +  COMMON_INTERCEPTOR_READ_STRING(ctx, name, 0);
-+  COMMON_INTERCEPTOR_SET_PTHREAD_NAME(ctx, thread, name, arg);
++  internal_snprintf(newname, sizeof(newname), name, arg);
++  COMMON_INTERCEPTOR_SET_PTHREAD_NAME(ctx, thread, newname);
 +  return REAL(pthread_setname_np)(thread, name, arg);
 +}
 +#define INIT_PTHREAD_SETNAME_NP COMMON_INTERCEPT_FUNCTION(pthread_setname_np);

@@ -30,21 +30,3 @@ $NetBSD$
  #else
  extern __sanitizer_FILE *stdout, *stderr;
  #endif
-@@ -2248,8 +2256,17 @@ static void HandleRecvmsg(ThreadState *t
- #define COMMON_INTERCEPTOR_SET_THREAD_NAME(ctx, name) \
-   ThreadSetName(((TsanInterceptorContext *) ctx)->thr, name)
- 
-+#if !SANITIZER_NETBSD
- #define COMMON_INTERCEPTOR_SET_PTHREAD_NAME(ctx, thread, name) \
-   __tsan::ctx->thread_registry->SetThreadNameByUserId(thread, name)
-+#else
-+#define COMMON_INTERCEPTOR_SET_PTHREAD_NAME(ctx, thread, name, arg) \
-+  do { \
-+    char newname[32]; \
-+    internal_snprintf(newname, sizeof(newname), name, arg); \
-+    __tsan::ctx->thread_registry->SetThreadNameByUserId(thread, newname); \
-+  } while(0)
-+#endif
- 
- #define COMMON_INTERCEPTOR_BLOCK_REAL(name) BLOCK_REAL(name)
- 
