@@ -1,0 +1,12 @@
+Bugsx is a program which draws biomorphs based on parametric plots of
+Fourier sine and cosine series and let's you play with them interactively
+using the genetic algorithm.
+
+For more information about the theoretic backgrounds of
+bugsx consult Joshua R. Smith's paper distributed with this
+program in gzip'ed postscript format as bugs.ps.gz. You have
+to uncompress this file with 'gunzip' before you can print it.
+Gunzip should be available at an archive near you.
+
+The paper can also be gotten from:
+http://physics.www.media.mit.edu/~jrs/biomorphs.ps
