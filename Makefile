@@ -663,6 +663,7 @@ SUBDIR+=	elfhash-git
 SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot
 SUBDIR+=	elixir
+SUBDIR+=	elixir-cross-ref
 SUBDIR+=	elk
 SUBDIR+=	elscreen-git
 SUBDIR+=	emacs-git
