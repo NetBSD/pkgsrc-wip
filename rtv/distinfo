@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (rtv-1.18.0.tar.gz) = d4d3a40a6eb780e786f9a5afbdddb13ca936d82e
-RMD160 (rtv-1.18.0.tar.gz) = 4a8a755cf1f3ed5a70087ca406889bc066b10900
-SHA512 (rtv-1.18.0.tar.gz) = 9e8559e7589eead84d85aca14346bad85a551ac1ec59441a159cbe6843df6ee92bca151992da1c976d88319c7a5c27ae0b4f87abc3bb478e319831a92a6844b7
-Size (rtv-1.18.0.tar.gz) = 124989 bytes
+SHA1 (rtv-1.19.0.tar.gz) = be1fb41c92377df0bb4fe8d07af245eb60ee8bf5
+RMD160 (rtv-1.19.0.tar.gz) = 84bfe53556f5eece8bc1f6e182d1e7ce9bf13407
+SHA512 (rtv-1.19.0.tar.gz) = 989afaae38f8d1b3359c4f8cc80a08c97ec6d7ce8d3b1e775a908fe67cd19eaffc15444ecdbb1c848fb4aed3c4e7dc7d58603a548c87d46007e099974ff98198
+Size (rtv-1.19.0.tar.gz) = 131719 bytes

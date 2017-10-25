@@ -91,4 +91,7 @@ ${PYSITELIB}/rtv/templates/rtv.cfg
 ${PYSITELIB}/rtv/terminal.py
 ${PYSITELIB}/rtv/terminal.pyc
 ${PYSITELIB}/rtv/terminal.pyo
+${PYSITELIB}/rtv/theme.py
+${PYSITELIB}/rtv/theme.pyc
+${PYSITELIB}/rtv/theme.pyo
 man/man1/rtv.1
