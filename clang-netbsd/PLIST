@@ -149,6 +149,7 @@ include/clang/Analysis/Analyses/ThreadSafetyUtil.h
 include/clang/Analysis/Analyses/UninitializedValues.h
 include/clang/Analysis/AnalysisDeclContext.h
 include/clang/Analysis/AnalysisDiagnostic.h
+include/clang/Analysis/BodyFarm.h
 include/clang/Analysis/CFG.h
 include/clang/Analysis/CFGStmtMap.h
 include/clang/Analysis/CallGraph.h
@@ -542,7 +543,6 @@ lib/clang/${PKGVERSION}/include/adxintrin.h
 lib/clang/${PKGVERSION}/include/altivec.h
 lib/clang/${PKGVERSION}/include/ammintrin.h
 lib/clang/${PKGVERSION}/include/arm64intr.h
-lib/clang/${PKGVERSION}/include/clwbintrin.h
 lib/clang/${PKGVERSION}/include/arm_acle.h
 lib/clang/${PKGVERSION}/include/arm_neon.h
 lib/clang/${PKGVERSION}/include/armintr.h
@@ -566,6 +566,7 @@ lib/clang/${PKGVERSION}/include/avxintrin.h
 lib/clang/${PKGVERSION}/include/bmi2intrin.h
 lib/clang/${PKGVERSION}/include/bmiintrin.h
 lib/clang/${PKGVERSION}/include/clflushoptintrin.h
+lib/clang/${PKGVERSION}/include/clwbintrin.h
 lib/clang/${PKGVERSION}/include/clzerointrin.h
 lib/clang/${PKGVERSION}/include/cpuid.h
 lib/clang/${PKGVERSION}/include/cuda_wrappers/algorithm
