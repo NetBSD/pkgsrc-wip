@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/Transforms/Instrumentation/MemorySanitizer.cpp.orig	2017-06-12 00:24:36.000000000 +0000
+--- lib/Transforms/Instrumentation/MemorySanitizer.cpp.orig	2017-10-25 17:03:32.656232584 +0000
 +++ lib/Transforms/Instrumentation/MemorySanitizer.cpp
-@@ -280,6 +280,14 @@ static const MemoryMapParams FreeBSD_X86
+@@ -320,6 +320,14 @@ static const MemoryMapParams FreeBSD_X86
    0x380000000000,  // OriginBase
  };
  
@@ -17,7 +17,7 @@ $NetBSD$
  static const PlatformMemoryMapParams Linux_X86_MemoryMapParams = {
    &Linux_I386_MemoryMapParams,
    &Linux_X86_64_MemoryMapParams,
-@@ -305,6 +313,11 @@ static const PlatformMemoryMapParams Fre
+@@ -345,6 +353,11 @@ static const PlatformMemoryMapParams Fre
    &FreeBSD_X86_64_MemoryMapParams,
  };
  
@@ -26,10 +26,10 @@ $NetBSD$
 +  &NetBSD_X86_64_MemoryMapParams,
 +};
 +
+ namespace {
+ 
  /// \brief An instrumentation pass implementing detection of uninitialized
- /// reads.
- ///
-@@ -515,6 +528,15 @@ bool MemorySanitizer::doInitialization(M
+@@ -577,6 +590,15 @@ bool MemorySanitizer::doInitialization(M
            report_fatal_error("unsupported architecture");
        }
        break;
