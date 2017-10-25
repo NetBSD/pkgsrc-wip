@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-empyrical>=0.2.2:../../finance/py-empyrical
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=2.1.0:../../devel/py-intervaltree
-DEPENDS+=	${PYPKGPREFIX}-logbook>=0.12.5:../../wip/py-logbook
+DEPENDS+=	${PYPKGPREFIX}-logbook>=0.12.5:../../devel/py-logbook
 DEPENDS+=	${PYPKGPREFIX}-lru-dict>=1.1.4:../../wip/py-lru-dict
 DEPENDS+=	${PYPKGPREFIX}-mako>=1.0.1:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.4.8:../../devel/py-multipledispatch

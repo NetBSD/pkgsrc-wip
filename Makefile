@@ -3269,7 +3269,6 @@ SUBDIR+=	py-llvm-lit-netbsd
 SUBDIR+=	py-llvmlite
 SUBDIR+=	py-lmfit
 SUBDIR+=	py-locustio
-SUBDIR+=	py-logbook
 SUBDIR+=	py-loggly
 SUBDIR+=	py-logilab-database
 SUBDIR+=	py-logilab-mtconverter
