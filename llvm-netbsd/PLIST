@@ -771,6 +771,7 @@ include/llvm/MC/MCAsmInfoWasm.h
 include/llvm/MC/MCAsmLayout.h
 include/llvm/MC/MCAssembler.h
 include/llvm/MC/MCCodeEmitter.h
+include/llvm/MC/MCCodePadder.h
 include/llvm/MC/MCCodeView.h
 include/llvm/MC/MCContext.h
 include/llvm/MC/MCDirectives.h
@@ -1071,6 +1072,7 @@ include/llvm/Transforms/GCOVProfiler.h
 include/llvm/Transforms/IPO.h
 include/llvm/Transforms/IPO/AlwaysInliner.h
 include/llvm/Transforms/IPO/ArgumentPromotion.h
+include/llvm/Transforms/IPO/CalledValuePropagation.h
 include/llvm/Transforms/IPO/ConstantMerge.h
 include/llvm/Transforms/IPO/CrossDSOCFI.h
 include/llvm/Transforms/IPO/DeadArgumentElimination.h
@@ -1263,7 +1265,6 @@ ${PLIST.BPF}lib/libLLVMBPFInfo.a
 lib/libLLVMBinaryFormat.a
 lib/libLLVMBitReader.a
 lib/libLLVMBitWriter.a
-lib/libLLVMCFIVerify.a
 lib/libLLVMCodeGen.a
 lib/libLLVMCore.a
 lib/libLLVMCoroutines.a
