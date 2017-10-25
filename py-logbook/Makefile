@@ -6,7 +6,7 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=L/Logbook/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://logbook.pocoo.org/
+HOMEPAGE=	http://logbook.readthedocs.io/
 COMMENT=	Logging replacement for Python
 LICENSE=	modified-bsd
 
