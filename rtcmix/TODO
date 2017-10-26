@@ -3,3 +3,6 @@ Talk with the developers to clean the source and make it more portable.
 Only tested in NetBSD evbarm.
 
 trebol, 2017.
+
+Problems: needs -fPIC; has trouble linking against -lgen. (NetBSD/amd64)
+-- wiz 20171026

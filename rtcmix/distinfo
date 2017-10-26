@@ -153,3 +153,4 @@ SHA1 (patch-utils_Makefile) = 48b6d5217560cf6a2de29079291f9c1a242d0b69
 SHA1 (patch-utils_cmixplay.cpp) = a44a43bc115a42e2d780fba17d7e0402bbbae377
 SHA1 (patch-utils_head_Makefile) = 4e285f593c912958c409ae81be0865b65158d8b6
 SHA1 (patch-utils_resample_Makefile) = bcf2582dfb0a3a8e5464f488ac606a8fb35cea70
+SHA1 (patch-utils_scripts_sfconv) = b186edc3cc86ee071a0de7ebc66a2c3d14ba8db5
