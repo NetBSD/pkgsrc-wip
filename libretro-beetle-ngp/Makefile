@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-ngp-20170803
+DISTNAME=	libretro-beetle-ngp-20171024
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Libretro core based on the Mednafen Neo Geo Pocket emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-ngp-libretro
-GITHUB_TAG=	daf65fe59eefcbbd6ff164e52ec4b6fd209e3842
+GITHUB_TAG=	ab5d1d5933134c97d4c04a9a045887bf3bdb5aba
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++

@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.3 2017/02/08 00:02:18 joerg Exp $
 
-SHA1 (libretro-beetle-pce-fast-20170814-e88b456b82ff5ea84b14d1bf84e5c23a206fb696.tar.gz) = 641bd5febfc05aaed7c8972abbc62b173a8918c4
-RMD160 (libretro-beetle-pce-fast-20170814-e88b456b82ff5ea84b14d1bf84e5c23a206fb696.tar.gz) = 2b1887572616963a7c75872b390c4e59bbca3f1e
-SHA512 (libretro-beetle-pce-fast-20170814-e88b456b82ff5ea84b14d1bf84e5c23a206fb696.tar.gz) = f2ae3fe54a8ce463bc72fd7f672edcd61d274f124019a58268c11d1ae27dae8ba65a01d4e1ea3dff3c8af278383bf277d6b6e7cbd6f415c2a59455585c6a0692
-Size (libretro-beetle-pce-fast-20170814-e88b456b82ff5ea84b14d1bf84e5c23a206fb696.tar.gz) = 1150998 bytes
+SHA1 (libretro-beetle-pce-fast-20171024-d2080d754aad8f6d1006e0ce2d03b86612f4a38f.tar.gz) = 2f770656c5a7e1f782860d416a4bbaae2458f106
+RMD160 (libretro-beetle-pce-fast-20171024-d2080d754aad8f6d1006e0ce2d03b86612f4a38f.tar.gz) = d05e933984a78b3ac59c0a0e1c91a1767cc0e094
+SHA512 (libretro-beetle-pce-fast-20171024-d2080d754aad8f6d1006e0ce2d03b86612f4a38f.tar.gz) = d23bd75b7e87a667a4bfb60b283fd3433512bc41e7ad2536013e21f3a42a1195b7754670115e646d1b210b0050e5693a3184bc2e0cf6451ce5b26bbeac686a80
+Size (libretro-beetle-pce-fast-20171024-d2080d754aad8f6d1006e0ce2d03b86612f4a38f.tar.gz) = 1151421 bytes
