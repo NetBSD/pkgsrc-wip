@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (dnspython-1.15.0.zip) = 2a3ffd70c0dbcac5ab60b582b5c53d202a938570
-RMD160 (dnspython-1.15.0.zip) = 891ac558c723e12deab5445dbf0545731df7ca9f
-SHA512 (dnspython-1.15.0.zip) = 942f7cf083d1b0a9f03f040ceca194c38777f2e40862c388051986112b3f2a4a8426733ff46ec5a155319776e4a856412c3430b052b2f92f251f0e3260eb9bc1
-Size (dnspython-1.15.0.zip) = 252157 bytes
-SHA1 (patch-tests_test__zone.py) = 724f4eba20ad996abb02fd317c8ac8269d89ead7
