@@ -1,0 +1,7 @@
+- Investigate if we should install TESTS, if yes patches/patch-aa needed to be
+  adjusted accordingly like devel/tig
+- Review patches/patch-include_tig_display.h, I am not sure if it is correct
+- Add a comment about patches/patch-include_tig_tig.h
+- Why having two `review' worked upstream, can patches/patch-src_display.c
+  be avoided?
+    -- leot (2017/10/27)

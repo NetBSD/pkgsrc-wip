@@ -4304,6 +4304,7 @@ SUBDIR+=	theama
 SUBDIR+=	thepeg
 SUBDIR+=	threadingbuildingblocks
 SUBDIR+=	thrift
+SUBDIR+=	tig
 SUBDIR+=	tilda
 SUBDIR+=	timewarrior
 SUBDIR+=	tinyca2
