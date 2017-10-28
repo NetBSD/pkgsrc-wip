@@ -3860,7 +3860,6 @@ SUBDIR+=	qt5-qtimageformats
 SUBDIR+=	qt5-qtlocation
 SUBDIR+=	qt5-qtmacextras
 SUBDIR+=	qt5-qtmultimedia
-SUBDIR+=	qt5-qtquick1
 SUBDIR+=	qt5-qtquickcontrols
 SUBDIR+=	qt5-qtscript
 SUBDIR+=	qt5-qtsensors
