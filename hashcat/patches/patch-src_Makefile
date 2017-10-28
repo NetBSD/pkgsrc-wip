@@ -2,9 +2,9 @@ $NetBSD$
 
 Add minimal NetBSD support.
 Don't override CC nor optimisation flags in CFLAGS.
-On Darwin, use gsed.
+Use custom VERSION_TAG.
 
---- src/Makefile.orig	2017-03-03 14:26:59.000000000 +0000
+--- src/Makefile.orig	2017-10-27 09:48:24.000000000 +0000
 +++ src/Makefile
 @@ -21,7 +21,7 @@ UNAME                   := $(patsubst MS
  UNAME                   := $(patsubst MINGW32_NT-%,MSYS2,$(UNAME))
@@ -27,7 +27,7 @@ On Darwin, use gsed.
  
  ifeq ($(UNAME),CYGWIN)
  HASHCAT_FRONTEND        := hashcat.exe
-@@ -80,21 +84,14 @@ OPENCL_HEADERS_KHRONOS  := deps/OpenCL-H
+@@ -80,24 +84,12 @@ OPENCL_HEADERS_KHRONOS  := deps/OpenCL-H
  ## Native compiler paths
  ##
  
@@ -40,16 +40,28 @@ On Darwin, use gsed.
  
 -ifeq ($(UNAME),Darwin)
 -CC                      := clang
--# the sed -i option of OSX requires a parameter for the backup file (we just use "")
+-# the sed -i option of macOS requires a parameter for the backup file (we just use "")
 -SED_IN_PLACE            := -i ""
 -endif
- 
- ifeq ($(UNAME),FreeBSD)
+-
+-ifeq ($(UNAME),FreeBSD)
 -CC                      := cc
- SED                     := gsed
- endif
+-SED                     := gsed
+-endif
+-
+ ##
+ ## Cross compiler paths
+ ##
+@@ -127,7 +119,7 @@ COMPTIME                := $(shell date 
+ # the value will be something like this: "tag: vX.Y.Z, refs/pull/Y/head"
  
-@@ -162,7 +159,6 @@ endif
+ VERSION_EXPORT          := HEAD -> master, tag: v4.0.0
+-VERSION_TAG             := $(shell test -d .git && git describe --tags --dirty=+ || echo "$(VERSION_EXPORT)" | $(SED) 's/.*: v\([\.0-9]*\),.*/v\1/')
++VERSION_TAG             := @VERSION_TAG@
+ 
+ ##
+ ## General compiler and linker options
+@@ -176,7 +168,6 @@ endif
  LFLAGS                  := $(LDFLAGS)
  
  ifeq ($(DEBUG),0)
@@ -57,7 +69,7 @@ On Darwin, use gsed.
  LFLAGS                  += -s
  else
  ifeq ($(DEBUG),1)
-@@ -196,6 +192,13 @@ LFLAGS_NATIVE           += -lpthread
+@@ -211,6 +202,13 @@ LFLAGS_NATIVE           += -lpthread
  endif
  endif # FreeBSD
  
