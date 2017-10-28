@@ -15,7 +15,6 @@ BUILDLINK_LIBDIRS.qt5-qttools+=	qt5/plugins
 
 .include "../../wip/qt5-qtxmlpatterns/buildlink3.mk"
 #.include "../../wip/qt5-qtwebkit/buildlink3.mk"
-#.include "../../wip/qt5-sqlite3/buildlink3.mk"
 #instead:
 .include "../../wip/qt5-qtdeclarative/buildlink3.mk"
 .include "../../wip/qt5-qtlocation/buildlink3.mk"

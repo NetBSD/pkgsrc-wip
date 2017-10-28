@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/10/26 19:04:00 adam Exp $
 
-SHA1 (qtmacextras-opensource-src-5.9.1.tar.xz) = a21835f64f6ee0481a177039732696a792651c67
-RMD160 (qtmacextras-opensource-src-5.9.1.tar.xz) = 74a7395d063404d85745cfafd326f2a922f7f892
-SHA512 (qtmacextras-opensource-src-5.9.1.tar.xz) = 5456d01c60053b1fc0042c54f1ba6f90ccc8a2087988d79d9944a5359f62e814adc9db6fdfdd487f8cff7407f8033360696b758e3ab71b995f1eab7edb3a4506
-Size (qtmacextras-opensource-src-5.9.1.tar.xz) = 48452 bytes
+SHA1 (qtmacextras-opensource-src-5.9.2.tar.xz) = cd3cb89a2121c687d70c6c0733f2b88012215c2e
+RMD160 (qtmacextras-opensource-src-5.9.2.tar.xz) = 503fa06fdd29c485615534da6cc5b0183a5d5d24
+SHA512 (qtmacextras-opensource-src-5.9.2.tar.xz) = 1659615b84931221a6774d5f62e3d8f3fe2ca87ba9993aaa5ac70857c134bb9457ac5d1c94f5f409aa1110988d572e85af7d2004bbb94c93b38bcd8127b0face
+Size (qtmacextras-opensource-src-5.9.2.tar.xz) = 48560 bytes

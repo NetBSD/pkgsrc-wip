@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/10/26 19:03:59 adam Exp $
 
-SHA1 (qtimageformats-opensource-src-5.9.1.tar.xz) = ea705586bc2f09b4c9803344c66ae082f5b50f9f
-RMD160 (qtimageformats-opensource-src-5.9.1.tar.xz) = 98eea6c68cc88519d660d9e0f9e30ebc23d45013
-SHA512 (qtimageformats-opensource-src-5.9.1.tar.xz) = 03bc2cdebb8878bc8a0462d8eafadfa4c17cfd06ce7b65eb1f0cf3f4a0e2b673eff40a348898858e3dfcc680fac57c83a66d3bf059caa3b10825472f60650ff7
-Size (qtimageformats-opensource-src-5.9.1.tar.xz) = 2089468 bytes
+SHA1 (qtimageformats-opensource-src-5.9.2.tar.xz) = dbf9b3a906da8d38cfe240c36b43cd2b7507d44e
+RMD160 (qtimageformats-opensource-src-5.9.2.tar.xz) = 7dab9414525fe2276d3a102c8e8dce5e4bca33a8
+SHA512 (qtimageformats-opensource-src-5.9.2.tar.xz) = 5f1b93c0e5fffa4c2c063d14c12ad97114a452b16814ca9ac45f00ec36308a09770b3b4d137cb5d19bd3aa3a6f576724084df5d0dad75236d49868af9243c9d2
+Size (qtimageformats-opensource-src-5.9.2.tar.xz) = 2093756 bytes

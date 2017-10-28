@@ -104,6 +104,7 @@ qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplacesearchresult_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplacesupplier_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplaceuser_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qquickgeomapgesturearea_p.h
+qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qtlocation-config_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/unsupportedreplies_p.h
 qt5/include/QtLocation/QGeoCodeReply
 qt5/include/QtLocation/QGeoCodingManager
@@ -190,6 +191,7 @@ qt5/include/QtLocation/qplacesearchresult.h
 qt5/include/QtLocation/qplacesearchsuggestionreply.h
 qt5/include/QtLocation/qplacesupplier.h
 qt5/include/QtLocation/qplaceuser.h
+qt5/include/QtLocation/qtlocation-config.h
 qt5/include/QtLocation/qtlocationversion.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qclipperutils_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdeclarativegeoaddress_p.h

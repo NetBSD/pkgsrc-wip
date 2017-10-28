@@ -79,13 +79,6 @@ qt5/doc/qtdoc/images/deployment-mac-bundlestructure.png
 qt5/doc/qtdoc/images/deployment-windows-depends.png
 qt5/doc/qtdoc/images/draganddrop-examples.png
 qt5/doc/qtdoc/images/flickr_application.png
-qt5/doc/qtdoc/images/gs-project1.png
-qt5/doc/qtdoc/images/gs-project2.png
-qt5/doc/qtdoc/images/gs1.png
-qt5/doc/qtdoc/images/gs2.png
-qt5/doc/qtdoc/images/gs3.png
-qt5/doc/qtdoc/images/gs4.png
-qt5/doc/qtdoc/images/gs5.png
 qt5/doc/qtdoc/images/home.png
 qt5/doc/qtdoc/images/ico_note.png
 qt5/doc/qtdoc/images/ico_note_attention.png
@@ -96,6 +89,10 @@ qt5/doc/qtdoc/images/icon_Tools.png
 qt5/doc/qtdoc/images/kernel-settings.png
 qt5/doc/qtdoc/images/layout-examples.png
 qt5/doc/qtdoc/images/logo.png
+qt5/doc/qtdoc/images/notepad1.png
+qt5/doc/qtdoc/images/notepad2.png
+qt5/doc/qtdoc/images/notepad3.png
+qt5/doc/qtdoc/images/notepad4.png
 qt5/doc/qtdoc/images/ok.png
 qt5/doc/qtdoc/images/open-project.png
 qt5/doc/qtdoc/images/project-view-2.png
@@ -159,7 +156,6 @@ qt5/doc/qtdoc/ios-support.html
 qt5/doc/qtdoc/ipc.html
 qt5/doc/qtdoc/known-issues.html
 qt5/doc/qtdoc/lgpl.html
-qt5/doc/qtdoc/licenses-fonts.html
 qt5/doc/qtdoc/licenses-used-in-qt.html
 qt5/doc/qtdoc/licensing.html
 qt5/doc/qtdoc/linux-building.html

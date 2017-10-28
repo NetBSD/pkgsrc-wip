@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.3 2015/10/26 19:04:00 adam Exp $
 
-SHA1 (qtscript-opensource-src-5.9.1.tar.xz) = 7cffa968d4c25b3a616f2ec81eb384689eae6b2b
-RMD160 (qtscript-opensource-src-5.9.1.tar.xz) = 078d24d5e9dd6032e8224c41402e5d2deca0d585
-SHA512 (qtscript-opensource-src-5.9.1.tar.xz) = d4f5d0b804be742da5e439d13ef2c6b045dc5ddc81aa1462069db9a734cf1877b3205204a31c6775dd9bcb2c234e45f3d65dcc788f936fc0e49f6a4f37199b9f
-Size (qtscript-opensource-src-5.9.1.tar.xz) = 2610800 bytes
+SHA1 (qtscript-opensource-src-5.9.2.tar.xz) = ac6ad8dc3727194b7d339e9f3283692026e79066
+RMD160 (qtscript-opensource-src-5.9.2.tar.xz) = fc6c9c5a5dcf570cad3d047c71aa5e7653096825
+SHA512 (qtscript-opensource-src-5.9.2.tar.xz) = 3ce2e57a0a6b2382614f689edca0deed87afe944c1c41decb3b9f420449fa59f2b79e6330e78e01a950761a95903113eaa7fbf261886361114acf5015d93254c
+Size (qtscript-opensource-src-5.9.2.tar.xz) = 2611900 bytes
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_config.h) = e46033a23803b4e27dcd7f5369730e046ad5e4cb
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_JSValue.h) = 6672e941f0ecbba35b5b932ab9f7b49a269fb6e6
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_Platform.h) = 5467afc8dc5e2f93a267a6ab380bb647c501d145

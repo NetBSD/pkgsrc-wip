@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/10/26 19:03:59 adam Exp $
 
-SHA1 (qtgraphicaleffects-opensource-src-5.9.1.tar.xz) = fc98d4ab6f38e195aeb9bb0e6b9e0b45dccea24d
-RMD160 (qtgraphicaleffects-opensource-src-5.9.1.tar.xz) = 4ef5acd1434196f354c4454ab164373589f7438a
-SHA512 (qtgraphicaleffects-opensource-src-5.9.1.tar.xz) = c026900b426bacef40ddfaed7a32546f1f3f5f4e74fd1b2be247e5f81b4dc0894b585dda523e3ec0d875079b984efd379fce5cbf0e81d3cc4dbffddf0980e515
-Size (qtgraphicaleffects-opensource-src-5.9.1.tar.xz) = 14478792 bytes
+SHA1 (qtgraphicaleffects-opensource-src-5.9.2.tar.xz) = 77f9b01fdb7bbee49103cd57a0cea3ca070b14f1
+RMD160 (qtgraphicaleffects-opensource-src-5.9.2.tar.xz) = 3ad6e332c39cf7a1d9da63b44b8e54d46443160a
+SHA512 (qtgraphicaleffects-opensource-src-5.9.2.tar.xz) = 66464c26c9cc78763fda18898cd9c424bc4c0a5cbffc83d68d388e53327aeb77ae0e3c2c4cea947c3b6b7ec5af7bf5124492fc9642ff3c4ba75b06b9fa3883a4
+Size (qtgraphicaleffects-opensource-src-5.9.2.tar.xz) = 14480256 bytes

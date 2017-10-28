@@ -45,11 +45,14 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-PLIST_VARS+=		mac unix
+PLIST_VARS+=		jit mac unix
 .if ${OPSYS} == "Darwin"
 PLIST.mac=		yes
 .else
 PLIST.unix=		yes
+.endif
+.if ${OPSYS} != "NetBSD"
+PLIST.jit=		yes
 .endif
 
 # avoid creating a .qt directory in the users home directory

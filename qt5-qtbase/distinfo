@@ -1,10 +1,10 @@
 $NetBSD$
 
-SHA1 (qtbase-opensource-src-5.9.1.tar.xz) = 4901362bc200347373de5234f98aec4562fadbdf
-RMD160 (qtbase-opensource-src-5.9.1.tar.xz) = 1513b037a71e2328bb1d54d2406a327bb5351106
-SHA512 (qtbase-opensource-src-5.9.1.tar.xz) = b384e91b3fd88b2f32e826e3dd1c930213683a0fdbfd284a319204fa8d27c796b54324cf4a715f6bebd92fca6426e37cf0be5866fc1f6053b8758570ddb2fa45
-Size (qtbase-opensource-src-5.9.1.tar.xz) = 45350452 bytes
-SHA1 (patch-config.tests_unix_iconv_iconv.cpp) = 05131870b21ff778b1e6f3d1e7287060b6b88764
+SHA1 (qtbase-opensource-src-5.9.2.tar.xz) = 65332ea9fbeb31384a87fd22ff5ad2d6251bf893
+RMD160 (qtbase-opensource-src-5.9.2.tar.xz) = 2862c7d39f86f625b0f4dfdb2dbce647504a03f6
+SHA512 (qtbase-opensource-src-5.9.2.tar.xz) = a2f965871645256f3d019f71f3febb875455a29d03fccc7a3371ddfeb193b0af12394e779df05adf69fd10fe7b0d966f3915a24528ec7eb3bc36c2db6af2b6e7
+Size (qtbase-opensource-src-5.9.2.tar.xz) = 45148744 bytes
+SHA1 (patch-config.tests_unix_iconv_iconv.cpp) = ffd0107d57e308aa83a780818756c9a538efc591
 SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
 SHA1 (patch-mkspecs_features_create__cmake.prf) = 3f6b3a592e29f5529e5c87dbac036c165470eac4
 SHA1 (patch-mkspecs_features_qt__module.prf) = a04c4b1fe80250b6b3591f5486ac0fd3b5056c26
@@ -16,7 +16,6 @@ SHA1 (patch-src_corelib_io_io.pri) = fd2f93b5af4dda729b274dd0d8f82ca29b3cb62a
 SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = de4b6c6be89524763e40698bcf5e8f413abdb938
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 37f61c305335ca6a690b0491220ca8de508bfdb6
-SHA1 (patch-src_gui_painting_qcoregraphics.mm) = d2b5a71610fd4e14f55712f11a93f12ad41b0b95
 SHA1 (patch-src_network_kernel_qhostinfo__unix.cpp) = 3131d74a547abdcca7594b49b739cc1c0eed68f5
 SHA1 (patch-src_openglextensions_openglextensions.pro) = 575d31c3a48f36d82dc1f342078e636f4c25e33f
 SHA1 (patch-src_plugins_platforminputcontexts_compose_compose.pro) = 1655b2320b250defcfa406c95e58a1b728c0f2d9
