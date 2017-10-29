@@ -3,6 +3,7 @@ $NetBSD: distinfo,v 1.10 2015/03/15 14:22:19 bsiegert Exp $
 SHA1 (gdb-7.9.tar.gz) = 8f89aa6847dc87de2f720779a87ba360bdbc7efd
 RMD160 (gdb-7.9.tar.gz) = 939dda771a073e82e7d72fd584246f3d1d8e9bdc
 Size (gdb-7.9.tar.gz) = 33225783 bytes
+SHA1 (patch-bfd_elflink.c) = e91e9c54ce97f32dbfa9e97fcf23afe3ae3b9abd
 SHA1 (patch-gdb_amd64-linux-tdep.c) = 289591103c1c855faa9ad9a05b137693461d8b73
 SHA1 (patch-gdb_arm-tdep.c) = 80b1b0cbc92a48933d2693578d8fe151555edc3b
 SHA1 (patch-gdb_common_common-utils.c) = 52b07c9e85dc7a5b88616a569ea6f45af5d47b07

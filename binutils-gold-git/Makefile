@@ -1,14 +1,14 @@
 # $NetBSD: Makefile,v 1.11 2015/03/15 14:22:19 bsiegert Exp $
 #
 
-DISTNAME=	gold-8.0
+DISTNAME=	binutils-gold-8.0
 CATEGORIES=	devel
-GIT_REPOSITORIES=	gold
-#GIT_REPO.gold=		git://sourceware.org/git/binutils-gdb.git # broken?
-#GIT_REPO.gold=		http://sourceware.org/git/binutils-gdb.git # broken?
-GIT_REPO.gold=		https://github.com/wallento/binutils-gdb.git
-#GIT_DEEP_CLONE.gold=	yes # server dies on shallow clones
-WRKSRC=         ${WRKDIR}/gold
+GIT_REPOSITORIES=	binutils-gold
+#GIT_REPO.binutils-gold=		git://sourceware.org/git/binutils-gdb.git # broken?
+#GIT_REPO.binutils-gold=		http://sourceware.org/git/binutils-gdb.git # broken?
+GIT_REPO.binutils-gold=		https://github.com/wallento/binutils-gdb.git
+#GIT_DEEP_CLONE.binutils-gold=	yes # server dies on shallow clones
+WRKSRC=         ${WRKDIR}/binutils-gold
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/binutils/
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--disable-gprof
 CONFIGURE_ARGS+=	--enable-gold
 CONFIGURE_ARGS+=	--disable-gas
 CONFIGURE_ARGS+=	--disable-ld
-CONFIGURE_ARGS+=	--enable-targets=all
+#CONFIGURE_ARGS+=	--enable-targets=all
 CONFIGURE_ARGS+=	--disable-gdb
 
 INSTALL_DIRS=		gold
@@ -53,10 +53,16 @@ AUTO_MKDIRS=		yes
 .include "../../mk/bsd.prefs.mk"
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
+#BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 
-check-base:
-	${RUN}${_ULIMIT_CMD} cd ${TEST_DIRS} && ${TEST_MAKE_CMD} -j1 check TESTS="gdb.base/*.exp"
+#check-base:
+#	${RUN}${_ULIMIT_CMD} cd ${TEST_DIRS} && ${TEST_MAKE_CMD} -j1 check TESTS="gdb.base/*.exp"
+
+# Hack to prevent bogus regeneration of files triggered by timestamp delta
+# between .c/.h file and the original one like .y
+pre-configure:
+	${RUN} find ${WRKSRC} -name '*.c' -exec touch {} \;
+	${RUN} find ${WRKSRC} -name '*.h' -exec touch {} \;
 
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
