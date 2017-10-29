@@ -1639,6 +1639,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/ert.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/ert.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/ewoc.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/ewoc.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/faceup.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/faceup.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/find-func.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/find-func.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/float-sup.el.gz
