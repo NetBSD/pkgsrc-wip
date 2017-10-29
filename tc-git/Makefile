@@ -67,7 +67,7 @@ SUBST_SED.texinfo=	-e '/if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLA
 SUBST_CLASSES+=                s2i
 SUBST_MESSAGE.s2i=     string-to-int is an obsolete function; use `string-to-number' instead
 SUBST_STAGE.s2i=       post-patch
-SUBST_FILES.s2i=       lisp/eelll.el lisp/tc-is22.el lisp/tc-pre.el lisp/tc-pre-base.in
+SUBST_FILES.s2i=       lisp/eelll.el lisp/tc-is22.el lisp/tc-is20.el lisp/tc-is19.el lisp/tc-pre.el
 SUBST_SED.s2i=         -e s/string-to-int/string-to-number/g
 
 .include "options.mk"
