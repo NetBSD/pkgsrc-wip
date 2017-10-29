@@ -1,21 +1,20 @@
 # $NetBSD: Makefile,v 1.11 2015/03/15 14:22:19 bsiegert Exp $
 #
 
-DISTNAME=	gdb-8.0
+DISTNAME=	gold-8.0
 CATEGORIES=	devel
-GIT_REPOSITORIES=	gdb
-#GIT_REPO.gdb=		git://sourceware.org/git/binutils-gdb.git # broken?
-#GIT_REPO.gdb=		http://sourceware.org/git/binutils-gdb.git # broken?
-GIT_REPO.gdb=		https://github.com/wallento/binutils-gdb.git
-#GIT_DEEP_CLONE.gdb=	yes # server dies on shallow clones
-WRKSRC=         ${WRKDIR}/gdb
+GIT_REPOSITORIES=	gold
+#GIT_REPO.gold=		git://sourceware.org/git/binutils-gdb.git # broken?
+#GIT_REPO.gold=		http://sourceware.org/git/binutils-gdb.git # broken?
+GIT_REPO.gold=		https://github.com/wallento/binutils-gdb.git
+#GIT_DEEP_CLONE.gold=	yes # server dies on shallow clones
+WRKSRC=         ${WRKDIR}/gold
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
-COMMENT=	Symbolic debugger for multiple language frontends
+HOMEPAGE=	https://www.gnu.org/software/binutils/
+COMMENT=	Fast linker for ELF files
 LICENSE=	gnu-gpl-v3
 
-# No code for DragonFly in GDB
 NOT_FOR_PLATFORM+=	DragonFly-*-*
 
 USE_LANGUAGES=		c c++11
@@ -32,12 +31,13 @@ CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 CONFIGURE_ARGS+=	--disable-binutils
 CONFIGURE_ARGS+=	--disable-gprof
-CONFIGURE_ARGS+=	--disable-gold
+CONFIGURE_ARGS+=	--enable-gold
 CONFIGURE_ARGS+=	--disable-gas
 CONFIGURE_ARGS+=	--disable-ld
 CONFIGURE_ARGS+=	--enable-targets=all
+CONFIGURE_ARGS+=	--disable-gdb
 
-INSTALL_DIRS=		gdb
+INSTALL_DIRS=		gold
 
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp
@@ -51,24 +51,6 @@ AUTO_MKDIRS=		yes
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=	gcore gdbserver
-
-.if ${OPSYS} == "SunOS"
-# Work around a bug in gdb's configure
-CONFIGURE_ENV+=		ac_cv_header_curses_h=yes
-.elif ${OPSYS} == "NetBSD"
-.include "../../mk/curses.buildlink3.mk"
-CONFIGURE_ARGS+= -with-curses
-CONFIGURE_ENV+= gdb_cv_var_elf=yes
-MAKE_ENV+= gdb_cv_var_elf=yes
-CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
-MAKE_ENV+= gdb_cv_struct_lwp=yes
-PLIST.gcore=	YES
-.elif !empty(OPSYS:MLinux)
-PLIST.gcore=		YES
-PLIST.gdbserver=	YES
-.endif
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
