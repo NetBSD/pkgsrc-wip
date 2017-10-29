@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	edbrowse-3.6.2
+DISTNAME=	edbrowse-3.7.1
 CATEGORIES=	www
-MASTER_SITES=	http://edbrowse.org/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=CMB/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://edbrowse.org/
@@ -31,7 +31,8 @@ post-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/edbrowse.1
 
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../wip/spidermonkey24/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libduktape+=	libduktape>=2.1.0
+.include "../../lang/libduktape/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/tidy/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
