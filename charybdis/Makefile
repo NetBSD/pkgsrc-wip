@@ -10,19 +10,19 @@ HOMEPAGE=	https://github.com/freenode/ircd-seven/
 COMMENT=	Freenode's IRC server daemon
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	automake autoconf autoreconf
+USE_TOOLS+=	automake autoconf autoreconf
 
-HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 
-.include "../../mk/compiler.mk"
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
-CONFIGURE_ARGS+=	--enable-kqueue
-.endif
-
-INSTALLATION_DIRS+=	bin
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/charybdis
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./autogen.sh
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}
+.for f in ircd.conf.example ircd.motd reference.conf
+CONF_FILES+=	${PREFIX}/share/examples/charybdis/${f} \
+		${PKG_SYSCONFDIR}/${f}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
