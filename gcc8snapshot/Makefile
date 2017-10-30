@@ -149,7 +149,7 @@ CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
-TEST_TARGET=	-k check || ${TRUE}
+TEST_TARGET=	-j ${MAKE_JOBS} -k check || ${TRUE}
 pre-test:
 	${RUN} 							\
 	if runtest --version >/dev/null 2>/dev/null ; then	\
