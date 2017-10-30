@@ -37,6 +37,8 @@ CONFIGURE_ARGS+=	--disable-ld
 #CONFIGURE_ARGS+=	--enable-targets=all
 CONFIGURE_ARGS+=	--disable-gdb
 
+CONFIGURE_ARGS+=	--enable-plugins # Required on NetBSD
+
 INSTALL_DIRS=		gold
 
 # In gdb/configure, depcomp is parsed with sed.
