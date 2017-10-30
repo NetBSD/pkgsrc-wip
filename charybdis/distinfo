@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (charybdis-3.4.2.tar.gz) = 1b719ecc8d1ca69a12739f368de820450dea8f8e
-RMD160 (charybdis-3.4.2.tar.gz) = 83f43a8a63fd81babb4a0ac6fffbaefaf15cce41
-SHA512 (charybdis-3.4.2.tar.gz) = 5ba66b718feac9bab3558a0cb694b606435077c4fbdd70a57cd951797b0f8c28c4d8b6328812eca6fe7b6acfa1abcec50d4a7ece503eea8bc80455d747141ec1
-Size (charybdis-3.4.2.tar.gz) = 1952464 bytes
+SHA1 (charybdis-4.0.tar.gz) = 57957259f00e8c20ae22adee2d0648a8d017fe55
+RMD160 (charybdis-4.0.tar.gz) = 8abca605db25eb5b8aea95588c6819eb3fd0e1fa
+SHA512 (charybdis-4.0.tar.gz) = c65d1ee4a04a432694edaa2f58ec69a904de1f6195f6880a52d28c893c46d67bf2ed253f356dd8507b31d1850ce53b3eb18cf800638dc2389770cc5d2ae78924
+Size (charybdis-4.0.tar.gz) = 2681395 bytes
+SHA1 (patch-librb_configure.ac) = 078ed443d188eb2be7c61293aa19ed23b92331b5

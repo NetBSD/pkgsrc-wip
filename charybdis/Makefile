@@ -1,9 +1,8 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	ircd-seven
-DISTNAME=	charybdis-3.4.2
+DISTNAME=	charybdis-4.0
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=freenode/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=charybdis-ircd/}
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,6 +23,6 @@ CONFIGURE_ARGS+=	--enable-kqueue
 INSTALLATION_DIRS+=	bin
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && autoreconf -fiv
+	${RUN} cd ${WRKSRC} && ./autogen.sh
 
 .include "../../mk/bsd.pkg.mk"
