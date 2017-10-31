@@ -2849,7 +2849,6 @@ SUBDIR+=	py-astlib
 SUBDIR+=	py-astropy
 SUBDIR+=	py-astropysics
 SUBDIR+=	py-async
-SUBDIR+=	py-async-timeout
 SUBDIR+=	py-atmark
 SUBDIR+=	py-atmos
 SUBDIR+=	py-atom
