@@ -28,6 +28,7 @@ gopkg/pkg/${GO_PLATFORM}/upspin.io/dir/dircache.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/dir/inprocess.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/dir/remote.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/dir/server.a
+gopkg/pkg/${GO_PLATFORM}/upspin.io/dir/server/serverlog.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/dir/server/tree.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/dir/unassigned.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/errors.a
@@ -73,6 +74,7 @@ gopkg/pkg/${GO_PLATFORM}/upspin.io/store/storecache.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/store/transports.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/store/unassigned.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/subcmd.a
+gopkg/pkg/${GO_PLATFORM}/upspin.io/test/testutil.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/transports.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/upbox.a
 gopkg/pkg/${GO_PLATFORM}/upspin.io/upspin.a
@@ -110,6 +112,7 @@ gopkg/src/upspin.io/Gopkg.lock
 gopkg/src/upspin.io/Gopkg.toml
 gopkg/src/upspin.io/LICENSE
 gopkg/src/upspin.io/PATENTS
+gopkg/src/upspin.io/README.binary
 gopkg/src/upspin.io/README.md
 gopkg/src/upspin.io/access/access.go
 gopkg/src/upspin.io/access/access_test.go
@@ -134,6 +137,7 @@ gopkg/src/upspin.io/cloud/storage/disk/internal/local/path.go
 gopkg/src/upspin.io/cloud/storage/disk/internal/local/path_test.go
 gopkg/src/upspin.io/cloud/storage/storage.go
 gopkg/src/upspin.io/cloud/storage/storage_test.go
+gopkg/src/upspin.io/cloud/storage/storagetest/memory.go
 gopkg/src/upspin.io/cloud/storage/storagetest/storagetest.go
 gopkg/src/upspin.io/cmd/cacheserver/cacheutil/detach_posix.go
 gopkg/src/upspin.io/cmd/cacheserver/cacheutil/start.go
@@ -149,8 +153,10 @@ gopkg/src/upspin.io/cmd/upbox/main.go
 gopkg/src/upspin.io/cmd/upspin-setupstorage/setupstorage.go
 gopkg/src/upspin.io/cmd/upspin/allcmds_test.go
 gopkg/src/upspin.io/cmd/upspin/cmd_test.go
+gopkg/src/upspin.io/cmd/upspin/config.go
 gopkg/src/upspin.io/cmd/upspin/countersign.go
 gopkg/src/upspin.io/cmd/upspin/cp.go
+gopkg/src/upspin.io/cmd/upspin/createsuffixeduser.go
 gopkg/src/upspin.io/cmd/upspin/deletestorage.go
 gopkg/src/upspin.io/cmd/upspin/doc.go
 gopkg/src/upspin.io/cmd/upspin/gendoc.go
@@ -212,12 +218,18 @@ gopkg/src/upspin.io/dir/server/access.go
 gopkg/src/upspin.io/dir/server/all_test.go
 gopkg/src/upspin.io/dir/server/bench_test.go
 gopkg/src/upspin.io/dir/server/server.go
+gopkg/src/upspin.io/dir/server/serverlog/doc.go
+gopkg/src/upspin.io/dir/server/serverlog/dump.go
+gopkg/src/upspin.io/dir/server/serverlog/log.go
+gopkg/src/upspin.io/dir/server/serverlog/log_test.go
+gopkg/src/upspin.io/dir/server/serverlog/testdata/version0/d.tree.log.user@example.com/0
+gopkg/src/upspin.io/dir/server/serverlog/testdata/version0/d.tree.log.user@example.com/0.0
+gopkg/src/upspin.io/dir/server/serverlog/testdata/version0/tree.index.user@example.com
+gopkg/src/upspin.io/dir/server/serverlog/testdata/version0/tree.root.user@example.com
 gopkg/src/upspin.io/dir/server/snapshot.go
 gopkg/src/upspin.io/dir/server/snapshot_test.go
 gopkg/src/upspin.io/dir/server/tree/all_test.go
 gopkg/src/upspin.io/dir/server/tree/blocks.go
-gopkg/src/upspin.io/dir/server/tree/log.go
-gopkg/src/upspin.io/dir/server/tree/log_test.go
 gopkg/src/upspin.io/dir/server/tree/tree.go
 gopkg/src/upspin.io/dir/server/tree/watch.go
 gopkg/src/upspin.io/dir/server/tree/watch_test.go
@@ -226,7 +238,6 @@ gopkg/src/upspin.io/dir/unassigned/unassigned.go
 gopkg/src/upspin.io/doc/access_control.md
 gopkg/src/upspin.io/doc/arch.md
 gopkg/src/upspin.io/doc/config.md
-gopkg/src/upspin.io/doc/deploying_to_google_cloud.md
 gopkg/src/upspin.io/doc/doc.md
 gopkg/src/upspin.io/doc/faq.md
 gopkg/src/upspin.io/doc/images/arch/dirstore.png
@@ -487,7 +498,7 @@ gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/.gitignore
 gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/.travis.yml
 gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/CODE_OF_CONDUCT.md
 gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/CONTRIBUTING.md
-gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/LICENSE.md
+gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/LICENSE
 gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/README.md
 gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/gzip.go
 gopkg/src/upspin.io/vendor/github.com/NYTimes/gziphandler/gzip_go18.go
@@ -530,7 +541,7 @@ gopkg/src/upspin.io/vendor/golang.org/x/crypto/CONTRIBUTING.md
 gopkg/src/upspin.io/vendor/golang.org/x/crypto/CONTRIBUTORS
 gopkg/src/upspin.io/vendor/golang.org/x/crypto/LICENSE
 gopkg/src/upspin.io/vendor/golang.org/x/crypto/PATENTS
-gopkg/src/upspin.io/vendor/golang.org/x/crypto/README
+gopkg/src/upspin.io/vendor/golang.org/x/crypto/README.md
 gopkg/src/upspin.io/vendor/golang.org/x/crypto/acme/acme.go
 gopkg/src/upspin.io/vendor/golang.org/x/crypto/acme/autocert/autocert.go
 gopkg/src/upspin.io/vendor/golang.org/x/crypto/acme/autocert/cache.go
@@ -547,11 +558,13 @@ gopkg/src/upspin.io/vendor/golang.org/x/net/CONTRIBUTING.md
 gopkg/src/upspin.io/vendor/golang.org/x/net/CONTRIBUTORS
 gopkg/src/upspin.io/vendor/golang.org/x/net/LICENSE
 gopkg/src/upspin.io/vendor/golang.org/x/net/PATENTS
-gopkg/src/upspin.io/vendor/golang.org/x/net/README
+gopkg/src/upspin.io/vendor/golang.org/x/net/README.md
 gopkg/src/upspin.io/vendor/golang.org/x/net/codereview.cfg
 gopkg/src/upspin.io/vendor/golang.org/x/net/context/context.go
 gopkg/src/upspin.io/vendor/golang.org/x/net/context/go17.go
+gopkg/src/upspin.io/vendor/golang.org/x/net/context/go19.go
 gopkg/src/upspin.io/vendor/golang.org/x/net/context/pre_go17.go
+gopkg/src/upspin.io/vendor/golang.org/x/net/context/pre_go19.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/.gitattributes
 gopkg/src/upspin.io/vendor/golang.org/x/text/.gitignore
 gopkg/src/upspin.io/vendor/golang.org/x/text/AUTHORS
@@ -559,7 +572,7 @@ gopkg/src/upspin.io/vendor/golang.org/x/text/CONTRIBUTING.md
 gopkg/src/upspin.io/vendor/golang.org/x/text/CONTRIBUTORS
 gopkg/src/upspin.io/vendor/golang.org/x/text/LICENSE
 gopkg/src/upspin.io/vendor/golang.org/x/text/PATENTS
-gopkg/src/upspin.io/vendor/golang.org/x/text/README
+gopkg/src/upspin.io/vendor/golang.org/x/text/README.md
 gopkg/src/upspin.io/vendor/golang.org/x/text/cases/cases.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/cases/context.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/cases/fold.go
@@ -587,6 +600,8 @@ gopkg/src/upspin.io/vendor/golang.org/x/text/internal/ucd/ucd.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/Makefile
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/common.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/coverage.go
+gopkg/src/upspin.io/vendor/golang.org/x/text/language/doc.go
+gopkg/src/upspin.io/vendor/golang.org/x/text/language/gen.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/gen_common.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/gen_index.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/go1_1.go
@@ -594,7 +609,6 @@ gopkg/src/upspin.io/vendor/golang.org/x/text/language/go1_2.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/index.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/language.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/lookup.go
-gopkg/src/upspin.io/vendor/golang.org/x/text/language/maketables.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/match.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/parse.go
 gopkg/src/upspin.io/vendor/golang.org/x/text/language/tables.go
