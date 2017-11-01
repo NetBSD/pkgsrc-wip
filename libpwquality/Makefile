@@ -2,12 +2,12 @@
 
 DISTNAME=	libpwquality-1.3.0
 CATEGORIES=	security
-MASTER_SITES=	https://fedorahosted.org/releases/l/i/libpwquality/
+MASTER_SITES=	https://ftp.osuosl.org/pub/blfs/conglomeration/libpwquality/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for generating random passwords and quality checking
-HOMEPAGE=	https://fedorahosted.org/libpwquality/
+HOMEPAGE=	https://github.com/libpwquality/libpwquality
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		automake autoconf aclocal gmake
