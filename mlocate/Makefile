@@ -4,11 +4,11 @@
 DISTNAME=	mlocate-0.24
 PKGREVISION=	2
 CATEGORIES=	sysutils
-MASTER_SITES=	https://fedorahosted.org/releases/m/l/mlocate/
+MASTER_SITES=	https://releases.pagure.org/mlocate/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	esg@sdf.lonestar.org
-HOMEPAGE=	https://fedorahosted.org/releases/m/l/mlocate/
+HOMEPAGE=	https://pagure.io/mlocate
 COMMENT=	Merging 'locate' implementation
 LICENSE=	gnu-gpl-v2
 
