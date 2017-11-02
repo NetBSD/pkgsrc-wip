@@ -4,3 +4,5 @@ SHA1 (binutils-2.26.tar.gz) = bb933ec42eb2002d9270bd4c62a26c3706589ee9
 RMD160 (binutils-2.26.tar.gz) = 78bc233b75909cfb4ae915c5841d7bf8bc9d8e76
 SHA512 (binutils-2.26.tar.gz) = 4ce547796c2df8971fe40b90803f8f340215a576c08ce5030d8be979e114bc785a54a3227c8d39d7ab73277a3023fc54f65d4cb8515370a32bdf46109a63cae8
 Size (binutils-2.26.tar.gz) = 34832117 bytes
+SHA1 (patch-gas_configure) = 26931a79b0fd70790577343784b9c87bf6f7d539
+SHA1 (patch-ld_configure) = 2c6fdb4dc7af4ee58100910029be70fd9e5c90e0
