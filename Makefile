@@ -2503,6 +2503,7 @@ SUBDIR+=	p5-mha4mysql-node
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-spf-policyd
 SUBDIR+=	p5-transdecoder
+SUBDIR+=	p5-trimgalore
 SUBDIR+=	p5-xmlsig-svn
 SUBDIR+=	p6-Grammar-Profiler-Simple
 SUBDIR+=	p6-Perl6-MIME-Base64
