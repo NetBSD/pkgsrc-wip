@@ -22,7 +22,7 @@ GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/*.pl misc/plot-bamstats test/test.pl
 REPLACE_PYTHON=	misc/*.py
 
-PORTVERSION=	1.3.1
+PORTVERSION=	1.6
 
 post-patch:
 	${CP} ${FILESDIR}/ax_with_htslib.m4 ${WRKSRC}/

@@ -28,10 +28,12 @@ SUBST_FILES.version+=	${WRKSRC}/configure.ac
 
 PKGCONFIG_OVERRIDE=	htslib.pc.in
 
-PORTVERSION=	1.3.2
+PORTVERSION=	1.6
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
