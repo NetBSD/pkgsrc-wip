@@ -15,7 +15,7 @@
 
 DISTNAME=	macs2-${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-macs2-${PORTVERSION}
-CATEGORIES=	wip
+CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taoliu/}
 GITHUB_PROJECT=	MACS
 GITHUB_TAG=	6946b2f6571cd0a7cfbb882c79aaa25a05a5c48d
@@ -38,13 +38,8 @@ PORTVERSION=	2017.05.05
 post-patch:
 	${MV} -f ${WRKSRC}/setup_w_cython.py ${WRKSRC}/setup.py
 
-# Verify that we shouldn't use egg.mk or extensions.mk instead.
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
-# Based on USES=python.  Check this.
-.include "../../lang/python/application.mk"
-# Linux doesn't have zlib in the base, so just in case...
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
