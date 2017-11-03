@@ -2403,6 +2403,7 @@ SUBDIR+=	p5-HTTP-Request-StreamingUpload
 SUBDIR+=	p5-Hash-AsObject
 SUBDIR+=	p5-IO-Lambda
 SUBDIR+=	p5-IO-Socket-Socks
+SUBDIR+=	p5-IPC-Open3-Simple
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-Iterator
