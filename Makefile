@@ -748,6 +748,7 @@ SUBDIR+=	fastaunique
 SUBDIR+=	fastbit
 SUBDIR+=	fastjet
 SUBDIR+=	fastool
+SUBDIR+=	fastqc
 SUBDIR+=	fastrpc
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
