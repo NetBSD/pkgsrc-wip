@@ -176,7 +176,6 @@ SUBDIR+=	aten
 SUBDIR+=	atftp
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
-SUBDIR+=	atool
 SUBDIR+=	ats2
 SUBDIR+=	audiere
 SUBDIR+=	audio-mml
