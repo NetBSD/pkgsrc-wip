@@ -14,7 +14,6 @@
 #		p5-File-Spec-Native>=0:devel/p5-File-Spec-Native \
 #		p5-File-BaseDir>=0:devel/p5-File-BaseDir \
 #		p5-Cwd-Guard>=0:devel/p5-Cwd-Guard \
-#		${PYPKGPREFIX}-cutadapt>0:wip/py-cutadapt \
 #		fastqc>0:wip/fastqc
 
 DISTNAME=	trimgalore-${PORTVERSION}
@@ -44,6 +43,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/trim_galore ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw test_files ${DESTDIR}${DATADIR}
 
-# .include "../..///buildlink3.mk"
+.include "../../wip/py-cutadapt/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
