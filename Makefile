@@ -2220,6 +2220,7 @@ SUBDIR+=	ogmrip
 SUBDIR+=	ogre
 SUBDIR+=	olsrd
 SUBDIR+=	omega
+SUBDIR+=	omnispeak
 SUBDIR+=	oneloop
 SUBDIR+=	oolite
 SUBDIR+=	oops

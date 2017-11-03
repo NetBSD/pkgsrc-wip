@@ -1,0 +1,7 @@
+Omnispeak is an open-source reimplementation of Commander Keen
+episodes 4, 5, and 6. It aims to be a pixel-perfect, bug-for-bug
+clone of the original games, and is compatible with savegames from
+the DOS version.
+
+The game data files are required to run the game (shareware or
+registered copy).
