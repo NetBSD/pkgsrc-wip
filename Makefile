@@ -2972,6 +2972,7 @@ SUBDIR+=	py-cse
 SUBDIR+=	py-csp
 SUBDIR+=	py-ctutils
 SUBDIR+=	py-cubicweb
+SUBDIR+=	py-cutadapt
 SUBDIR+=	py-cva
 SUBDIR+=	py-cvf
 SUBDIR+=	py-cvxpy
