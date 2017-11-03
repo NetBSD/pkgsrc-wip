@@ -5,20 +5,9 @@
 #              Thu Nov  2 15:12:06 CDT 2017               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-#LICENSE_FILE=	${WRKSRC}/LICENSE
-# Do we really need p5-IPC-Open3-Simple or is IPC:Open3 part of core?
-# RUN_DEPENDS=	p5-IPC-Open3-Simple>=0:devel/p5-IPC-Open3-Simple \
-#		p5-File-Spec-Native>=0:devel/p5-File-Spec-Native \
-#		p5-File-BaseDir>=0:devel/p5-File-BaseDir \
-#		p5-Cwd-Guard>=0:devel/p5-Cwd-Guard \
-#		fastqc>0:wip/fastqc
-
 DISTNAME=	trimgalore-${PORTVERSION}
 PKGNAME=	p5-trimgalore-${PORTVERSION}
-CATEGORIES=	wip
+CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FelixKrueger/}
 GITHUB_PROJECT=	trimgalore
 GITHUB_TAG=	${PORTVERSION}
@@ -27,6 +16,8 @@ MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	https://github.com/FelixKrueger/TrimGalore
 COMMENT=	Wrapper around Cutadapt and FastQC for adapter and quality trimming
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	fastqc>0:../../wip/fastqc
 
 USE_TOOLS+=	perl:run pax
 REPLACE_PERL=	trim_galore
