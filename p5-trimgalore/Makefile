@@ -9,6 +9,7 @@
 # Unconverted and partially converted FreeBSD port syntax:
 
 #LICENSE_FILE=	${WRKSRC}/LICENSE
+# Do we really need p5-IPC-Open3-Simple or is IPC:Open3 part of core?
 # RUN_DEPENDS=	p5-IPC-Open3-Simple>=0:devel/p5-IPC-Open3-Simple \
 #		p5-File-Spec-Native>=0:devel/p5-File-Spec-Native \
 #		p5-File-BaseDir>=0:devel/p5-File-BaseDir \
