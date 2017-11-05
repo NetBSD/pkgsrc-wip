@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	textblob-0.11.1
+DISTNAME=	textblob-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textblob/}

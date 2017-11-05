@@ -68,9 +68,6 @@ ${PYSITELIB}/textblob/mixins.pyo
 ${PYSITELIB}/textblob/np_extractors.py
 ${PYSITELIB}/textblob/np_extractors.pyc
 ${PYSITELIB}/textblob/np_extractors.pyo
-${PYSITELIB}/textblob/ordereddict.py
-${PYSITELIB}/textblob/ordereddict.pyc
-${PYSITELIB}/textblob/ordereddict.pyo
 ${PYSITELIB}/textblob/parsers.py
 ${PYSITELIB}/textblob/parsers.pyc
 ${PYSITELIB}/textblob/parsers.pyo
