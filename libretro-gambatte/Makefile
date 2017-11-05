@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/05 01:40:45 jmcneill Exp $
 
-DISTNAME=	libretro-gambatte-20170217
+DISTNAME=	libretro-gambatte-20171024
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Libretro core based on the Gambatte Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	gambatte-libretro
-GITHUB_TAG=	fafc291217c4fdb5a25c3543694fc3b3238e3ccb
+GITHUB_TAG=	bcfd2df6d946c200fc6e50b0956b209582221492
 
 USE_LANGUAGES=	c c++
 MAKE_FILE=	Makefile.libretro
