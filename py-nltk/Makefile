@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/09/05 09:23:43 thomasklausner Exp $
 
-DISTNAME=	nltk-3.2.2
+DISTNAME=	nltk-3.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nltk/}
