@@ -440,7 +440,7 @@ include/clang/StaticAnalyzer/Checkers/SValExplainer.h
 include/clang/StaticAnalyzer/Core/Analyses.def
 include/clang/StaticAnalyzer/Core/AnalyzerOptions.h
 include/clang/StaticAnalyzer/Core/BugReporter/BugReporter.h
-include/clang/StaticAnalyzer/Core/BugReporter/BugReporterVisitor.h
+include/clang/StaticAnalyzer/Core/BugReporter/BugReporterVisitors.h
 include/clang/StaticAnalyzer/Core/BugReporter/BugType.h
 include/clang/StaticAnalyzer/Core/BugReporter/CommonBugCategories.h
 include/clang/StaticAnalyzer/Core/BugReporter/PathDiagnostic.h
@@ -502,15 +502,16 @@ include/clang/Tooling/Core/Lookup.h
 include/clang/Tooling/Core/QualTypeNames.h
 include/clang/Tooling/Core/Replacement.h
 include/clang/Tooling/DiagnosticsYaml.h
+include/clang/Tooling/Execution.h
 include/clang/Tooling/FileMatchTrie.h
 include/clang/Tooling/FixIt.h
 include/clang/Tooling/JSONCompilationDatabase.h
 include/clang/Tooling/Refactoring.h
 include/clang/Tooling/Refactoring/ASTSelection.h
 include/clang/Tooling/Refactoring/AtomicChange.h
+include/clang/Tooling/Refactoring/Extract/Extract.h
 include/clang/Tooling/Refactoring/RecursiveSymbolVisitor.h
 include/clang/Tooling/Refactoring/RefactoringAction.h
-include/clang/Tooling/Refactoring/RefactoringActionRegistry.def
 include/clang/Tooling/Refactoring/RefactoringActionRule.h
 include/clang/Tooling/Refactoring/RefactoringActionRuleRequirements.h
 include/clang/Tooling/Refactoring/RefactoringActionRules.h
@@ -529,6 +530,8 @@ include/clang/Tooling/Refactoring/Rename/USRFindingAction.h
 include/clang/Tooling/Refactoring/Rename/USRLocFinder.h
 include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
+include/clang/Tooling/StandaloneExecution.h
+include/clang/Tooling/ToolExecutorPluginRegistry.h
 include/clang/Tooling/Tooling.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_builtin_vars.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
