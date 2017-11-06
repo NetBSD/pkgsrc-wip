@@ -25,13 +25,12 @@ SUBST_FILES.search-path=	src/id_ca.c
 SUBST_SED.search-path=		-e 's,@@PKGSRC_DATA_DIR@@,${PREFIX}/share/omnispeak,g'
 
 BUILD_DIRS=		src
-BUILD_MAKE_FLAGS+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
 INSTALLATION_DIRS+=	bin share/omnispeak
 
 do-install:
 	${INSTALL_GAME} ${WRKSRC}/bin/omnispeak ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/bin/*.* ${DESTDIR}${PREFIX}/share/omnispeak/
 
-.include "../../devel/SDL2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"
