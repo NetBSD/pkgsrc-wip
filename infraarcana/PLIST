@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/infraarcana
 share/InfraArcana/ia-debug/ia-debug
+share/InfraArcana/ia-debug/res/ascii_graveyard
 share/InfraArcana/ia-debug/res/audio/amb_001.ogg
 share/InfraArcana/ia-debug/res/audio/amb_002.ogg
 share/InfraArcana/ia-debug/res/audio/amb_003.ogg
@@ -109,7 +110,6 @@ share/InfraArcana/ia-debug/res/contact.txt
 share/InfraArcana/ia-debug/res/credits.txt
 share/InfraArcana/ia-debug/res/data/map/levels.txt
 share/InfraArcana/ia-debug/res/data/map/rooms.txt
-share/InfraArcana/ia-debug/res/data/save
 share/InfraArcana/ia-debug/res/images/11x19.png
 share/InfraArcana/ia-debug/res/images/11x22.png
 share/InfraArcana/ia-debug/res/images/12x24.png
@@ -128,6 +128,7 @@ share/InfraArcana/ia-debug/res/license.txt
 share/InfraArcana/ia-debug/res/manual.txt
 share/InfraArcana/ia-debug/res/release_history.txt
 share/InfraArcana/ia/ia
+share/InfraArcana/ia/res/ascii_graveyard
 share/InfraArcana/ia/res/audio/amb_001.ogg
 share/InfraArcana/ia/res/audio/amb_002.ogg
 share/InfraArcana/ia/res/audio/amb_003.ogg
@@ -236,7 +237,6 @@ share/InfraArcana/ia/res/contact.txt
 share/InfraArcana/ia/res/credits.txt
 share/InfraArcana/ia/res/data/map/levels.txt
 share/InfraArcana/ia/res/data/map/rooms.txt
-share/InfraArcana/ia/res/data/save
 share/InfraArcana/ia/res/images/11x19.png
 share/InfraArcana/ia/res/images/11x22.png
 share/InfraArcana/ia/res/images/12x24.png
