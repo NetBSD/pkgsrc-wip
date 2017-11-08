@@ -1,5 +1,16 @@
-- Should we install stuffs installed in ${PREFIX}/libexec/webkit2gtk-4.0/ in ${PREFIX}/bin/
-  instead (at least MiniBrowser and eventually jsc?)
+- Readd - if needed - SunOS patches removed for 2.18.2 (logic pretty different
+  compared to 2.16.6), these are:
+
+   * patches/patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp
+   * patches/patch-Source_WTF_wtf_Compiler.h
+
+    -- leot (2017/11/08)
+
+- Think and discuss about `GCC_REQD= 5.0'. At least after 2.18 maintaining such
+  patches does not seem trivial. At the moment the kludge is no longer present
+  due that and to avoid maintaining further pkgsrc local patches.
+
+    -- leot (2017/11/08)
 
 - After using any webkit-gtk browser on - at least NetBSD/amd64 8.99.1 there are
   errors of the following forms:
@@ -21,3 +32,6 @@
    users will benefit of that too!).
 
     -- leot (2017/10/06)
+
+- Should we install stuffs installed in ${PREFIX}/libexec/webkit2gtk-4.0/ in ${PREFIX}/bin/
+  instead (at least MiniBrowser and eventually jsc?)

@@ -6,8 +6,8 @@ Add support for sparc64:
 
 From OpenBSD ports.
 
---- Source/WTF/wtf/Platform.h.orig	Tue Feb 28 09:34:11 2017
-+++ Source/WTF/wtf/Platform.h	Sun Mar 26 13:55:13 2017
+--- Source/WTF/wtf/Platform.h.orig	2017-10-16 12:18:56.000000000 +0000
++++ Source/WTF/wtf/Platform.h
 @@ -155,6 +155,12 @@
  #define WTF_CPU_BIG_ENDIAN 1
  #endif
@@ -21,16 +21,16 @@ From OpenBSD ports.
  /* CPU(X86) - i386 / x86 32-bit */
  #if   defined(__i386__) \
      || defined(i386)     \
-@@ -348,7 +354,7 @@
+@@ -353,7 +359,7 @@
  
  #endif /* ARM */
  
--#if CPU(ARM) || CPU(MIPS) || CPU(SH4)
-+#if CPU(ARM) || CPU(MIPS) || CPU(SH4) || CPU(SPARC64)
+-#if CPU(ARM) || CPU(MIPS) || CPU(SH4) || CPU(ALPHA) || CPU(HPPA)
++#if CPU(ARM) || CPU(MIPS) || CPU(SH4) || CPU(ALPHA) || CPU(HPPA) || CPU(SPARC64)
  #define WTF_CPU_NEEDS_ALIGNED_ACCESS 1
  #endif
  
-@@ -680,7 +686,8 @@
+@@ -713,7 +719,8 @@
      || CPU(S390X) \
      || CPU(MIPS64) \
      || CPU(PPC64) \
@@ -40,7 +40,7 @@ From OpenBSD ports.
  #define USE_JSVALUE64 1
  #else
  #define USE_JSVALUE32_64 1
-@@ -736,7 +743,7 @@
+@@ -770,7 +777,7 @@
  
  #if !defined(ENABLE_DFG_JIT) && ENABLE(JIT)
  /* Enable the DFG JIT on X86 and X86_64. */

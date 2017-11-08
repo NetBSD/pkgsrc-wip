@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.126 2017/05/03 08:38:45 jperkin Exp $
 
-DISTNAME=	webkitgtk-2.16.6
+DISTNAME=	webkitgtk-2.18.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -21,12 +21,7 @@ USE_LANGUAGES=	c c++11
 #USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 
-# GCC >= 4.7 or Clang >= 3.3
-# XXX: Kludge, upstream needs GCC 4.9.0 for IndexedDB support.
-# XXX: patches/patch-Source_cmake_OptionsGTK.cmake and
-# XXX: patches/patch-Source_WTF_wtf_Compiler.h disables that to
-# XXX: avoid requiring GCC 4.9.0.
-GCC_REQD+=	4.7
+GCC_REQD+=	5.0
 
 # Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
 # versions of ld.gold.
@@ -41,8 +36,9 @@ CMAKE_ARGS+=		-DPORT=GTK
 CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
 CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
+CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
-CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC=ON
+#CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC=ON # XXX: needs adjustements for sysinfo() stuffs in Source/WTF/wtf/RAMSize.cpp
 
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 		Source/WebCore/bindings/scripts/*.pl \

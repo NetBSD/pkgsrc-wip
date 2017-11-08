@@ -2,8 +2,8 @@ $NetBSD: patch-Source_WebKit2_NetworkProcess_cache_NetworkCacheFileSystem.cpp,v 
 
 SunOS does not support dirent d_type.
 
---- Source/WebKit2/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2017-02-20 16:20:17.000000000 +0000
-+++ Source/WebKit2/NetworkProcess/cache/NetworkCacheFileSystem.cpp
+--- Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2017-02-20 16:20:17.000000000 +0000
++++ Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp
 @@ -52,6 +52,12 @@ namespace NetworkCache {
  
  static DirectoryEntryType directoryEntryType(uint8_t dtype)
