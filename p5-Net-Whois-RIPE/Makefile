@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2015/07/12 19:01:21 thomasklausner Exp $
 
-DISTNAME=	Net-Whois-RIPE-2.006
+DISTNAME=	Net-Whois-RIPE-2.006002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}

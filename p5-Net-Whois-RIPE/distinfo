@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2005/06/28 03:57:59 geeohgeegeeoh Exp $
 
-SHA1 (Net-Whois-RIPE-2.006.tar.gz) = b182769bdbe64f3c44e1d58a34cb47d37f5539d6
-RMD160 (Net-Whois-RIPE-2.006.tar.gz) = 6353901360e9b31d2a44a763d116daa98a8478e2
-SHA512 (Net-Whois-RIPE-2.006.tar.gz) = f429977fd83e63092d4df3381dd1e499d36ea0a305b159ddde54217f598e50b812b1697de65f4c8aa7da1cd6e2c0d7acd5764974b060c102aff0968049b6a543
-Size (Net-Whois-RIPE-2.006.tar.gz) = 85383 bytes
+SHA1 (Net-Whois-RIPE-2.006002.tar.gz) = d95cdcfbe81883548bd6b2de216ba1f96fba920f
+RMD160 (Net-Whois-RIPE-2.006002.tar.gz) = 3d19fed38eb9558c09b300377cb66093a374b6f0
+SHA512 (Net-Whois-RIPE-2.006002.tar.gz) = 3bbb5d557ade996c30e34c72df8cff6c946dc64b92ebf420ddff54eb8598df033a574f80b9b603a4259514082f11202f3de019f16cc17ea59c1837568c62bde0
+Size (Net-Whois-RIPE-2.006002.tar.gz) = 86549 bytes
