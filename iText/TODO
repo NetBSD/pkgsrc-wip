@@ -1,2 +1,5 @@
 use autoclasspath tool (must be created :)
 rename to java-iText when importing into pkgsrc
+
+This package has known vulnerabilities, please investigate and fix if possible:
+ CVE-2017-9096
