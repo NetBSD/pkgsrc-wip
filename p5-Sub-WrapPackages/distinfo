@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2011/10/17 05:25:15 jgoamakf Exp $
 
-SHA1 (Sub-WrapPackages-2.0.tar.gz) = b4209732d1d522c0af89504798d1938a7bd9a638
-RMD160 (Sub-WrapPackages-2.0.tar.gz) = 5001a85b513143e935a252b8e742093ed34749c2
-Size (Sub-WrapPackages-2.0.tar.gz) = 18866 bytes
+SHA1 (Sub-WrapPackages-2.01.tar.gz) = 96d62dabe2dab3bdd1115420db7910decd7cc9c8
+RMD160 (Sub-WrapPackages-2.01.tar.gz) = dc47e4d893446e58ee18ff079c56882778fb5786
+SHA512 (Sub-WrapPackages-2.01.tar.gz) = b39610831ef1a634ee5b63eae984b0cab91f34e88684e50923eb39eee3aadd665e4c0011d09de304c61bdd3e0d6f385ec3ab9fa4b37e8be8b6ce0035164d8c4e
+Size (Sub-WrapPackages-2.01.tar.gz) = 19878 bytes
