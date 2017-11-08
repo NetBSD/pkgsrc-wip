@@ -39,7 +39,7 @@ Suggested package updates
 	o gforge-4.5.11
 	o giggle-0.6.1
 	o gitg-0.3.2
-	o gitlab-9.4
+	o gitlab-10.0
 	o gjs-1.42.0
 	o globulation2-0.9.4
 	o glsl-1.30
@@ -138,7 +138,7 @@ Suggested package updates
 	o vacuum-0.13a
 	o vidalia-0.2.21
 	o vidalia-devel-0.3.3
-	o virtualbox-5.1.10
+	o virtualbox-5.2
 	o webkit-gtk-2.18.2 [leot]
 	o wkhtmltopdf-0.12.4
 	o xaralx-bin-0.7.1692
