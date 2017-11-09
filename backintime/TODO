@@ -1,4 +1,4 @@
 GUI looks ok, but "Backup Now" doesn't do anything.
 
 - Possible security vulnerabilities:
-  CVE-2017-7572
+  CVE-2017-7572, CVE-2017-16667
