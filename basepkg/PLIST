@@ -1,11 +1,11 @@
 @comment $NetBSD$
 share/basepkg/README.md
 share/basepkg/basepkg.sh
-share/basepkg/sets/install
-share/basepkg/sets/deinstall
 share/basepkg/sets/comments
+share/basepkg/sets/deinstall
 share/basepkg/sets/deps
 share/basepkg/sets/descrs
+share/basepkg/sets/install
 share/basepkg/sets/lists/base/ad.aarch64
 share/basepkg/sets/lists/base/ad.arm
 share/basepkg/sets/lists/base/ad.arm.shl
@@ -150,6 +150,7 @@ share/basepkg/sets/lists/debug/md.amiga
 share/basepkg/sets/lists/debug/md.atari
 share/basepkg/sets/lists/debug/md.bebox
 share/basepkg/sets/lists/debug/md.dreamcast
+share/basepkg/sets/lists/debug/md.evbmips
 share/basepkg/sets/lists/debug/md.ews4800mips
 share/basepkg/sets/lists/debug/md.hp300
 share/basepkg/sets/lists/debug/md.hpcmips
@@ -196,6 +197,7 @@ share/basepkg/sets/lists/modules/ad.powerpc
 share/basepkg/sets/lists/modules/ad.sh3
 share/basepkg/sets/lists/modules/md.alpha
 share/basepkg/sets/lists/modules/md.amd64
+share/basepkg/sets/lists/modules/md.evbppc.powerpc
 share/basepkg/sets/lists/modules/md.hppa
 share/basepkg/sets/lists/modules/md.i386
 share/basepkg/sets/lists/modules/md.ia64
@@ -205,6 +207,7 @@ share/basepkg/sets/lists/modules/md.sparc
 share/basepkg/sets/lists/modules/md.sparc64
 share/basepkg/sets/lists/modules/md.vax
 share/basepkg/sets/lists/modules/mi
+share/basepkg/sets/lists/tests/ad.aarch64
 share/basepkg/sets/lists/tests/md.amd64
 share/basepkg/sets/lists/tests/md.i386
 share/basepkg/sets/lists/tests/mi
@@ -220,6 +223,8 @@ share/basepkg/sets/lists/xcomp/md.acorn32
 share/basepkg/sets/lists/xcomp/md.alpha
 share/basepkg/sets/lists/xcomp/md.amd64
 share/basepkg/sets/lists/xcomp/md.amiga
+share/basepkg/sets/lists/xcomp/md.atari
+share/basepkg/sets/lists/xcomp/md.cats
 share/basepkg/sets/lists/xcomp/md.dreamcast
 share/basepkg/sets/lists/xcomp/md.evbarm
 share/basepkg/sets/lists/xcomp/md.evbmips
@@ -232,9 +237,12 @@ share/basepkg/sets/lists/xcomp/md.i386
 share/basepkg/sets/lists/xcomp/md.luna68k
 share/basepkg/sets/lists/xcomp/md.mac68k
 share/basepkg/sets/lists/xcomp/md.macppc
+share/basepkg/sets/lists/xcomp/md.netwinder
 share/basepkg/sets/lists/xcomp/md.newsmips
 share/basepkg/sets/lists/xcomp/md.ofppc
 share/basepkg/sets/lists/xcomp/md.pmax
+share/basepkg/sets/lists/xcomp/md.sgimips
+share/basepkg/sets/lists/xcomp/md.shark
 share/basepkg/sets/lists/xcomp/md.sparc
 share/basepkg/sets/lists/xcomp/md.sparc64
 share/basepkg/sets/lists/xcomp/md.sun3
@@ -243,6 +251,7 @@ share/basepkg/sets/lists/xcomp/md.x68k
 share/basepkg/sets/lists/xcomp/md.zaurus
 share/basepkg/sets/lists/xcomp/mi
 share/basepkg/sets/lists/xcomp/shl.mi
+share/basepkg/sets/lists/xdebug/md.acorn32
 share/basepkg/sets/lists/xdebug/md.alpha
 share/basepkg/sets/lists/xdebug/md.amd64
 share/basepkg/sets/lists/xdebug/md.amiga
@@ -265,11 +274,13 @@ share/basepkg/sets/lists/xdebug/md.macppc
 share/basepkg/sets/lists/xdebug/md.netwinder
 share/basepkg/sets/lists/xdebug/md.newsmips
 share/basepkg/sets/lists/xdebug/md.ofppc
+share/basepkg/sets/lists/xdebug/md.pmax
 share/basepkg/sets/lists/xdebug/md.prep
 share/basepkg/sets/lists/xdebug/md.sgimips
 share/basepkg/sets/lists/xdebug/md.shark
 share/basepkg/sets/lists/xdebug/md.sparc
 share/basepkg/sets/lists/xdebug/md.sparc64
+share/basepkg/sets/lists/xdebug/md.sun3
 share/basepkg/sets/lists/xdebug/md.vax
 share/basepkg/sets/lists/xdebug/md.x68k
 share/basepkg/sets/lists/xdebug/md.zaurus
@@ -283,6 +294,7 @@ share/basepkg/sets/lists/xserver/ad.mipseb
 share/basepkg/sets/lists/xserver/ad.mipsel
 share/basepkg/sets/lists/xserver/ad.powerpc
 share/basepkg/sets/lists/xserver/ad.x86_64
+share/basepkg/sets/lists/xserver/md.acorn32
 share/basepkg/sets/lists/xserver/md.alpha
 share/basepkg/sets/lists/xserver/md.amd64
 share/basepkg/sets/lists/xserver/md.amiga
@@ -304,11 +316,13 @@ share/basepkg/sets/lists/xserver/md.macppc
 share/basepkg/sets/lists/xserver/md.netwinder
 share/basepkg/sets/lists/xserver/md.newsmips
 share/basepkg/sets/lists/xserver/md.ofppc
+share/basepkg/sets/lists/xserver/md.pmax
 share/basepkg/sets/lists/xserver/md.prep
 share/basepkg/sets/lists/xserver/md.sgimips
 share/basepkg/sets/lists/xserver/md.shark
 share/basepkg/sets/lists/xserver/md.sparc
 share/basepkg/sets/lists/xserver/md.sparc64
+share/basepkg/sets/lists/xserver/md.sun3
 share/basepkg/sets/lists/xserver/md.vax
 share/basepkg/sets/lists/xserver/md.x68k
 share/basepkg/sets/lists/xserver/md.zaurus

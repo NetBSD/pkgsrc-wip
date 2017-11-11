@@ -2,7 +2,7 @@
 
 DEPENDS+=	pkg_install>=20170419:../../pkgtools/pkg_install
 
-DISTNAME=	basepkg-1.0.2
+DISTNAME=	basepkg-1.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
@@ -13,8 +13,9 @@ LICENSE=	2-clause-bsd
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+AUTO_MKDIRS=	yes
 
-WRKSRC=		${WRKDIR}/basepkg-1.0.2
+WRKSRC=		${WRKDIR}/basepkg-1.1
 USE_LANGUAGES=	# none
 USE_TOOLS+= pax
 
@@ -23,7 +24,6 @@ INSTALLATION_DIRS+=	share/basepkg
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/basepkg.sh ${DESTDIR}${PREFIX}/share/basepkg
 	${INSTALL_SCRIPT} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/basepkg
-	${MKDIR} ${DESTDIR}${PREFIX}/share/basepkg/sets
 	${INSTALL_DATA} ${WRKSRC}/sets/comments ${DESTDIR}${PREFIX}/share/basepkg/sets
 	${INSTALL_DATA} ${WRKSRC}/sets/deps ${DESTDIR}${PREFIX}/share/basepkg/sets
 	${INSTALL_DATA} ${WRKSRC}/sets/descrs ${DESTDIR}${PREFIX}/share/basepkg/sets
