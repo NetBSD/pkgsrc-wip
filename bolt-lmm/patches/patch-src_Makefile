@@ -1,8 +1,8 @@
 $NetBSD$
 
-# Respect env
---- Makefile.orig	2017-08-03 00:14:08.000000000 +0000
-+++ Makefile
+# Standardize make vars
+--- src/Makefile.orig	2017-08-03 00:14:08.000000000 +0000
++++ src/Makefile
 @@ -1,28 +1,33 @@
  ### modify these paths to local Boost and NLopt install directories
 -BOOST_INSTALL_DIR = /home/pl88/boost_1_58_0/install
@@ -98,8 +98,14 @@ $NetBSD$
  		LPATHS += -L${ZLIB_STATIC_DIR}
  		LLAPACK = -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_core.a ${MKLROOT}/lib/intel64/libmkl_intel_thread.a -Wl,--end-group
  	else
-@@ -110,11 +115,15 @@ OMAIN = BoltMain.o $O
- .PHONY: clean
+@@ -107,14 +112,20 @@ T = bolt
+ O = Bolt.o BoltParams.o BoltParEstCV.o BoltReml.o CovariateBasis.o DataMatrix.o FileUtils.o Jackknife.o LDscoreCalibration.o MapInterpolater.o MatrixUtils.o MemoryUtils.o NonlinearOptMulti.o NumericUtils.o PhenoBuilder.o RestrictSnpSet.o SnpData.o SnpInfo.o SpectrumTools.o StatsUtils.o StringUtils.o Timer.o
+ OMAIN = BoltMain.o $O
+ 
+-.PHONY: clean
++.PHONY: clean all
++
++all: $T
  
  %.o: %.cpp
 -	${CC} ${CFLAGS} ${CPATHS} -o $@ -c $<

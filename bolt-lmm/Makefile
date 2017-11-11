@@ -6,7 +6,7 @@
 ###########################################################
 
 DISTNAME=	BOLT-LMM_v${PORTVERSION}
-PKGNAME=	bolt-llm-${PORTVERSION}
+PKGNAME=	bolt-lmm-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/
 
@@ -18,16 +18,27 @@ COMMENT=	Statistics for testing association between phenotype and genotypes
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++ fortran
-USE_TOOLS+=	gmake
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+USE_TOOLS+=	gmake pax
 
 CXXFLAGS=	-fopenmp
-BUILD_TARGET=	 bolt
 
 PORTVERSION=	2.3
+DATADIR=	share/bolt-lmm
+EXAMPLESDIR=	share/examples/bolt-lmm
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${DATADIR} ${EXAMPLESDIR}
+
+post-patch:
+	${RM} ${WRKSRC}/example/*.orig
+
+pre-build:
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}
+
+post-install:
+	cd ${WRKSRC} && pax -rw tables ${DESTDIR}${PREFIX}/${DATADIR}
+	cd ${WRKSRC}/example && pax -rw * ${DESTDIR}${PREFIX}/${EXAMPLESDIR}
+	${CHMOD} a+x ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*.sh
+	${CHMOD} g-w ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*
 
 # FIXME: Use openblas when available for better performance
 .include "../../math/nlopt/buildlink3.mk"
