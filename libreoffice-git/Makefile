@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.68 2015/11/23 10:30:16 wiz Exp $
 
 DISTNAME=	libreoffice
+PKGREVISION=	1
 CATEGORIES=	misc
 
 GIT_REPOSITORIES= core

@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.35 2016/04/11 19:01:40 ryoon Exp $
 
 PKGNAME=	qt5-qtbase-${QTVERSION}
+PKGREVISION=	1
 GIT_REPOSITORIES=	qtproject
 GIT_REPO.qtproject=	https://github.com/qtproject/qtbase.git
 # 5.6 will go up to 5.7 and dev automatically

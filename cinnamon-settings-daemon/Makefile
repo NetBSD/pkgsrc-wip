@@ -2,6 +2,7 @@
 
 DISTNAME=	3.0.1
 PKGNAME=	cinnamon-settings-daemon-3.0.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/cinnamon-settings-daemon/archive/}
 
