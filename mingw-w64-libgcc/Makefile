@@ -13,4 +13,4 @@ HAVE_FUNCS=	_finitef _isnanf acosf acosl asinf asinl atan2f atan2l atanf atanl c
 MAKE_ENV+=	ac_cv_lib_m_sin=yes
 MAKE_ENV+=	${HAVE_FUNCS:C/.*/ac_cv_func_&=yes/}
 
-.include "../../wip/mingw-w64-gcc/common.mk"
+.include "../../wip/mingw-w64-gcc/Makefile.common"

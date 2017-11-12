@@ -1,4 +1,7 @@
 # $NetBSD: common.mk,v 1.2 2012/10/03 15:09:55 asau Exp $
+#
+# used by wip/mingw-w64-gcc/Makefile
+# used by wip/mingw-w64-libgcc/Makefile
 
 DISTNAME=	gcc-4.5.1
 CATEGORIES=	cross
