@@ -1,0 +1,17 @@
+$NetBSD$
+
+tor -> tordev.
+
+--- Makefile.in.orig	2017-11-09 22:35:20.595595671 +0000
++++ Makefile.in
+@@ -2954,8 +2954,8 @@ src_tools_tor_gencert_LDADD = src/common
+ @COVERAGE_ENABLED_TRUE@    @TOR_LIB_MATH@ @TOR_ZLIB_LIBS@ @TOR_OPENSSL_LIBS@ \
+ @COVERAGE_ENABLED_TRUE@    @TOR_LIB_WS32@ @TOR_LIB_GDI@ @CURVE25519_LIBS@
+ 
+-confdir = $(sysconfdir)/tor
+-tordatadir = $(datadir)/tor
++confdir = $(sysconfdir)/tordev
++tordatadir = $(datadir)/tordev
+ conf_DATA = src/config/torrc.sample
+ tordata_DATA = src/config/geoip src/config/geoip6
+ 
