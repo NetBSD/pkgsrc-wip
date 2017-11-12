@@ -21,7 +21,7 @@ pre-configure:
 
 BUILD_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
 
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"

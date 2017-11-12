@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	cups debug gtk2
 PLIST_VARS+=		cups gtk2
 
 .if !empty(PKG_OPTIONS:Mcups)
-.  include "../../print/cups/buildlink3.mk"
+.  include "../../print/cups-base/buildlink3.mk"
 CONFIGURE_ARGS+=	-cups
 PLIST.cups=		yes
 .else

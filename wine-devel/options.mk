@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	opengl ssl x11
 PLIST_VARS+=		esd opengl x11 pulseaudio
 
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-cups
 .endif

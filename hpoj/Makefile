@@ -34,6 +34,6 @@ REPLACE.bash.old=	.*/bin/bash
 REPLACE.bash.new=	${PREFIX}/bin/bash
 REPLACE_FILES.bash=	scripts/ptal-cups.in
 
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

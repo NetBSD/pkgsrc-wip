@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.colord?=	../../wip/colord
 # XXX provides a wrappered API or otherwise does not expose the APIs of the
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
-#.include "../../print/cups/buildlink3.mk"
+#.include "../../print/cups-base/buildlink3.mk"
 #.include "../../wip/geocode-glib/buildlink3.mk"
 #.include "../../devel/nss/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"

@@ -8,7 +8,7 @@ CINNAMON_SETTINGS_DAEMON_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.cinnamon-settings-daemon+=	cinnamon-settings-daemon>=3.0.1
 BUILDLINK_PKGSRCDIR.cinnamon-settings-daemon?=		../../wip/cinnamon-settings-daemon
 
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../wip/cinnamon-desktop/buildlink3.mk"

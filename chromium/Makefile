@@ -314,7 +314,7 @@ do-install:
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 # This introduces OpenSSL dependency and it conflicts with bundled BoringSSL.
-#.include "../../print/cups/buildlink3.mk"
+#.include "../../print/cups-base/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
