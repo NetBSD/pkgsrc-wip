@@ -13,8 +13,7 @@ COMMENT=	Graphical wrapper around Xnest/Xephyr
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-CFLAGS=
-CFLAGS+=	-DPREFIX=\"${PREFIX:Q}\"
+CFLAGS=		-DPREFIX=\"${PREFIX:Q}\"
 CONFIGURE_ARGS+=CFLAGS=${CFLAGS:M*:Q}
 
 post-install:
