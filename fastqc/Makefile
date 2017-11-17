@@ -8,7 +8,7 @@
 DISTNAME=	fastqc_v${PORTVERSION}
 PKGNAME=	fastqc-${PORTVERSION}
 CATEGORIES=	biology
-MASTER_SITES=	http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+MASTER_SITES=	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon4000@gmail.com
@@ -36,6 +36,10 @@ USE_JAVA=	yes
 JAVAJARDIR=	${PREFIX}/share/java/classes
 
 INSTALLATION_DIRS=	bin ${DATADIR} ${DOCSDIR} ${JAVAJARDIR}/fastqc
+
+# Normal extract is corrupting org/apache/commons/math3/distribution/IntegerDistribution.class
+do-extract:
+	cd ${WRKDIR} && unzip ${DISTDIR}/${DISTFILES}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${JAVAJARDIR}/fastqc
