@@ -1,0 +1,39 @@
+$NetBSD$
+
+--- prosody.cfg.lua.dist.orig	2017-11-17 20:50:11.470659000 +0000
++++ prosody.cfg.lua.dist
+@@ -86,7 +86,7 @@ modules_disabled = {
+ 	-- "offline"; -- Store offline messages
+ 	-- "c2s"; -- Handle client connections
+ 	-- "s2s"; -- Handle server-to-server connections
+-	-- "posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
++	"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
+ }
+ 
+ -- Disable account creation by default, for security
+@@ -161,12 +161,13 @@ archive_expires_after = "1w" -- Remove a
+ -- Logging configuration
+ -- For advanced logging see https://prosody.im/doc/logging
+ log = {
+-	info = "prosody.log"; -- Change 'info' to 'debug' for verbose logging
+-	error = "prosody.err";
++	info = "@PROSODY_LOG@/prosody.log"; -- Change 'info' to 'debug' for verbose logging
++	error = "@PROSODY_LOG@/prosody.err";
+ 	-- "*syslog"; -- Uncomment this for logging to syslog
+ 	-- "*console"; -- Log to the console, useful for debugging with daemonize=false
+ }
+ 
++
+ -- Uncomment to enable statistics
+ -- For more info see https://prosody.im/doc/statistics
+ -- statistics = "internal"
+@@ -181,6 +182,9 @@ log = {
+ -- Location of directory to find certificates in (relative to main config file):
+ certificates = "certs"
+ 
++-- Enable PID file by default
++pidfile = "@PROSODY_RUN@/prosody.pid";
++
+ ----------- Virtual hosts -----------
+ -- You need to add a VirtualHost entry for each domain you wish Prosody to serve.
+ -- Settings under each VirtualHost entry apply *only* to that host.
