@@ -19,8 +19,8 @@ LICENSE=	gnu-gpl-v3
 
 SUBST_CLASSES+=		javapath
 SUBST_STAGE.javapath=	post-patch
-SUBST_SED.javapath+=	-e 's|$$RealBin$$delimiter|${JAVAJARDIR}$$delimiter|g'
-SUBST_SED.javapath+=	-e 's|$$RealBin/|${JAVAJARDIR}/|g'
+SUBST_SED.javapath+=	-e 's|$$RealBin$$delimiter|${DATADIR}$$delimiter${JAVAJARDIR}/fastqc$$delimiter|g'
+SUBST_SED.javapath+=	-e 's|$$RealBin/|${JAVAJARDIR}/fastqc/|g'
 SUBST_FILES.javapath+=	${WRKSRC}/fastqc
 
 USE_TOOLS+=	perl:run pax
@@ -35,18 +35,22 @@ DOCSDIR=	${PREFIX}/share/doc/fastqc
 USE_JAVA=	yes
 JAVAJARDIR=	${PREFIX}/share/java/classes
 
-INSTALLATION_DIRS=	bin ${DATADIR} ${DOCSDIR} ${JAVAJARDIR}
+INSTALLATION_DIRS=	bin ${DATADIR} ${DOCSDIR} ${JAVAJARDIR}/fastqc
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${JAVAJARDIR}/fastqc
 	${INSTALL_SCRIPT} ${WRKSRC}/fastqc \
 		${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw Configuration \
 		${DESTDIR}${DATADIR}
 	cd ${WRKSRC} && pax -rw Templates \
 		${DESTDIR}${DATADIR}
+	cd ${WRKSRC} && pax -rw net \
+		${DESTDIR}${JAVAJARDIR}/fastqc
+	cd ${WRKSRC} && pax -rw org \
+		${DESTDIR}${JAVAJARDIR}/fastqc
 	cd ${WRKSRC} && pax -rw uk \
-		${DESTDIR}${JAVAJARDIR}
+		${DESTDIR}${JAVAJARDIR}/fastqc
 	cd ${WRKSRC} && pax -rw 'Help' \
 		${DESTDIR}${DOCSDIR}
 
