@@ -557,6 +557,7 @@ share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps/emacs23.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs22.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs23.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/apps/emacs.ico
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/apps/emacs.svg
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/apps/emacs23.svg
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/mimetypes/emacs-document.svg
@@ -768,6 +769,7 @@ share/emacs/${PKGVERSION}/etc/images/sort-row-ascending.pbm
 share/emacs/${PKGVERSION}/etc/images/sort-row-ascending.xpm
 share/emacs/${PKGVERSION}/etc/images/spell.pbm
 share/emacs/${PKGVERSION}/etc/images/spell.xpm
+share/emacs/${PKGVERSION}/etc/images/splash.bmp
 share/emacs/${PKGVERSION}/etc/images/splash.pbm
 share/emacs/${PKGVERSION}/etc/images/splash.png
 share/emacs/${PKGVERSION}/etc/images/splash.svg
@@ -3961,6 +3963,7 @@ share/icons/hicolor/16x16/apps/emacs.png
 share/icons/hicolor/24x24/apps/emacs.png
 share/icons/hicolor/32x32/apps/emacs.png
 share/icons/hicolor/48x48/apps/emacs.png
+share/icons/hicolor/scalable/apps/emacs.ico
 share/icons/hicolor/scalable/apps/emacs.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document23.svg
