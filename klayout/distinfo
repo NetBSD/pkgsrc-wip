@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (klayout-0.25.tar.gz) = b335ddecbf774aeb0c2fcd77cad3565a7bb39812
+RMD160 (klayout-0.25.tar.gz) = 752150d582bb325c7fe5ad0cbf8d67946b0e0825
+SHA512 (klayout-0.25.tar.gz) = 0c05b0786e7e1dbf8035cbb3888eff776c0b96a4fcf2ebbc3065fe43340ae020b6713c2e1d2e7ab5caaf64d7ec84bea9d691ba6c0aea88e93c957530d3d4d114
+Size (klayout-0.25.tar.gz) = 16461165 bytes
+SHA1 (patch-config_Makefile_conf_freebsd-32-gcc-release) = 8ee1a6f42465ef650fbd26ec6dcdea4db249d018
+SHA1 (patch-config_Makefile_conf_netbsd-32-gcc-release) = 1fd264f8a25d4410cd48fcfbbbfbf149e65e3b22
+SHA1 (patch-src_layApplication.cc) = 510fad023dfcef928cb695963def0ce3d8b762fa
+SHA1 (patch-src_tlStream.cc) = aa3b781acad05e4ec45075b6d08750213ece3820
