@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	you-get-0.4.900
+DISTNAME=	you-get-0.4.964
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/you-get/}
 

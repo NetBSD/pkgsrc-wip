@@ -168,6 +168,9 @@ ${PYSITELIB}/you_get/extractors/freesound.pyo
 ${PYSITELIB}/you_get/extractors/funshion.py
 ${PYSITELIB}/you_get/extractors/funshion.pyc
 ${PYSITELIB}/you_get/extractors/funshion.pyo
+${PYSITELIB}/you_get/extractors/giphy.py
+${PYSITELIB}/you_get/extractors/giphy.pyc
+${PYSITELIB}/you_get/extractors/giphy.pyo
 ${PYSITELIB}/you_get/extractors/google.py
 ${PYSITELIB}/you_get/extractors/google.pyc
 ${PYSITELIB}/you_get/extractors/google.pyo
