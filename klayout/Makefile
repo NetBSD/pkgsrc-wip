@@ -9,6 +9,8 @@ HOMEPAGE=	http://www.klayout.de/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 
+BROKEN=		Makefile:337: recipe for target 'tlClassRegistry.lo' failed
+
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash
 
