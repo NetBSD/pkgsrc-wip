@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.postgresqlstudio.org/about/
-COMMENT=	GUI to control PostgreSQL database
+COMMENT=	GUI to manage PostgreSQL database
 LICENSE=	postgresql-license
 
 DEPENDS+=	apache-tomcat-[0-9]*:../../www/apache-tomcat8
