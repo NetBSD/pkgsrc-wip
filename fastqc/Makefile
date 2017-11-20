@@ -29,6 +29,9 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/FastQC
 
+# Normal extract is corrupting org/apache/commons/math3/distribution/IntegerDistribution.class due to a bug in archivers/unzip -a
+EXTRACT_OPTS_ZIP=	-qo
+
 PORTVERSION=	0.11.5
 DATADIR=	${PREFIX}/share/fastqc
 DOCSDIR=	${PREFIX}/share/doc/fastqc
@@ -36,10 +39,6 @@ USE_JAVA=	yes
 JAVAJARDIR=	${PREFIX}/share/java/classes
 
 INSTALLATION_DIRS=	bin ${DATADIR} ${DOCSDIR} ${JAVAJARDIR}/fastqc
-
-# Normal extract is corrupting org/apache/commons/math3/distribution/IntegerDistribution.class due to a bug in archivers/unzip -a
-do-extract:
-	cd ${WRKDIR} && unzip -qo ${DISTDIR}/${DISTFILES}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${JAVAJARDIR}/fastqc
