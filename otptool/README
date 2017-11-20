@@ -1,0 +1,6 @@
+The key is commonly
+encoded base32.
+
+Convert to hex first
+as otptool does not
+do this for you.
