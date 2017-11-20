@@ -1,0 +1,40 @@
+nmh: Update mail/nmh to 1.7
+
+pkgsrc changes:
+
+TODO: double-check if all of that are relevant for mail/nmh and eventually sort
+TODO: them as needed
+
+ - Add support for the `test' phase
+
+   Add support for nmh tests. Modify patches/patch-ca accordingly in order to
+   adjust TEST_ENVIRONMENT to use the configuration files in $egdir instead of the
+   ones in $nmhetcdir.
+   Actually all tests are passed except an mhparam test that sposts the
+   $egdir/$nmetcdir kludge.
+
+ - Update MASTER_SITES (use https:// and avoid redirects)
+
+ - Delete (a bit outdated) comment about locking mechanisms
+
+   Since 02 Feb 2014 (post-1.6) the default locking mechanisms are
+   (directly from m4/locking.m4):
+
+    - aix*|cygwin*|linux*: fcntl
+    - freebsd*|*netbsd*|openbsd*|darwin*: flock
+    - everything else: dot
+
+   The original comment was probably about just NetBSD and maybe Solaris
+   (it's dated 1999). Solaris still uses the `dot' mechanisms by default
+   but we no longer have any local patches about locking.
+
+ - Delete (no more needed) `-O1' hack to CFLAGS
+
+   mh_strcasecmp() was completely replaced by strcasecmp() on 24 Mar 2013, and
+   hence present in 1.6. Forcing `-O1' for gcc is no longer needed.
+
+ - Do not include bsd.prefs.mk two times (NFC)
+
+
+Changes:
+ TODO: fill in information from NEWS file about 1.7
