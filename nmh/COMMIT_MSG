@@ -35,6 +35,8 @@ pkgsrc changes:
 
  - Do not include bsd.prefs.mk two times (NFC)
 
+ - Add `oauth' PKG_OPTIONS (disabled by default) to enable OAuth2 support in
+   SMTP and POP auth via curl
 
 Changes:
 Release notes for nmh 1.7
