@@ -37,4 +37,160 @@ TODO: them as needed
 
 
 Changes:
- TODO: fill in information from NEWS file about 1.7
+Release notes for nmh 1.7
+=========================
+Welcome to nmh, the new version of the classic MH mail handling system.
+It's been over three years since the last release of nmh, and there have
+been a number of significant changes since the last release.  Long-time
+MH and nmh uses should read careful the NOTEABLE CHANGES section, as there
+are some significant changes to nmh behavior.  Otherwise, please see the
+README and INSTALL files for help on getting started with nmh.
+
+For news of future releases, subscribe to the low-volume
+    https://lists.nongnu.org/mailman/listinfo/nmh-announce
+
+---------------
+NOTABLE CHANGES
+---------------
+
+The largest notable changes in the 1.7 release are:
+
+- Complete unification of network security support.  All network protocols
+  (currently, POP and SMTP) have been refactored to use a common set of
+  security routines.  This means all protocols support all SASL mechanisms
+  (via the Cyrus-SASL library) and TLS.  TLS support has been strengthened
+  to perform certificate name validation and to require TLS 1.1 as a
+  minimum protocol.  Also, all protocols can make use of the OAuth2/XOAUTH
+  SASL mechanism, which is supported by Gmail.
+- send(1) now supports adding switches to post(8) based on the address or
+  domain of the email address in the From: header; this more easily allows
+  users to support multiple identities.
+- A generic facility for passing arguments to filter programs in repl(1)
+  by use of the -convertargs switch.
+- Native support for the manipulation of iCalendar requests; see mhical(1)
+  for more details.
+
+------------
+NEW FEATURES
+------------
+
+The following are new features for the 1.7 release of nmh:
+
+- When building from source, configure will derive ${prefix} from an existing
+  nmh installation if it finds one in your $PATH.
+- Added welcome message when nmh detects that its version changed.
+- The default locations for configuration files and support binaries
+  have been changed.  Configuration files now install into ${sysconfdir}/nmh,
+  and support binaries are placed in ${libexecdir}/nmh.  If you are upgrading
+  an existing installation you should look for old configuration files in
+  ${sysconfdir} and merge any local customizations into the new files in
+  ${sysconfdir}/nmh, then remove the old files.  ${libdir} will also contain
+  obsolete support programs that should be removed.
+- All TLS connections now perform certificate validation (including hostname
+  matching) by default; can be disabled on a per-application basis.
+- post now defaults to port 587 on 'smtp' message submission.
+- A value of 0 for the width switch of scan(1), inc(1), ap(1), dp(1),
+  fmttest(1), and mhl(1) now means as many characters as the format
+  engine can produce [Bug #15274].  That amount is limited by internal
+  buffers.
+- If a component has trailing whitespace, e.g., body:component="> ",
+  mhl now trims that whitespace off when filtering blank text lines.
+- An "rtrim" flag has been added to mhl to remove any trailing
+  whitespace from filtered text lines.  A corresponding "nortrim" flag
+  has also been added.
+- Added getmymbox and getmyaddr mh-format(5) function escapes.
+- New -[no]changecur, -fixtype, -decodetypes, and -[no]crlflinebreaks switches
+  have been added to mhfixmsg(1).
+- mhfixmsg now removes an extraneous trailing semicolon from header
+  parameter lists.
+- Added -convertargs switch to repl(1), to pass arguments to programs
+  specified in the user's profile or mhn.defaults to convert message
+  content.
+- Added mhical(1), to display, reply to, and cancel iCalendar (RFC 5545)
+  event requests.
+- Added multiply mh-format(5) function.
+- "mhparam bindir" prints the path to the directory containing the public
+  executables (${bindir}).
+- New "-prefer" switch for mhshow (and mhlist and mhshow), to allow specifying
+  the preferred content types to show, if present in a multipart alternative.
+- mh-format now has %(kilo) and %(kibi) functions, to allow printing
+  numbers with SI or IEC quantities, e.g. "10K", "2.3Mi".
+- Support for the -sendmail flag to send/post to change the sendmail
+  binary when using the sendmail/pipe MTS.
+- Added support to send(1) to specify switches to post(1) based on address or
+  domain name in From: header line in message draft.
+- post(8) -snoop now attempts to decode base64-encoded SMTP traffic.
+- folder(1) -nocreate now prints a warning message for a non-existent folder.
+- mhfixmsg(1) now allows -decodetext binary, though 8bit is still the default.
+- inc(1) and msgchk(1) now support TLS encryption natively.
+- All network protocols support the XOAUTH authentication mechanism.
+- Support for SMTPUTF8 (RFC 6531) has been added.  mhshow(1) already supported
+  RFC 6532, assuming all 8-bit message header field bodies are UTF-8 and use
+  of a UTF-8 locale.
+- mhfixmsg now replaces RFC 2047 encoding with RFC 2231 encoding of name and
+  filename parameters in Content-Type and Content-Disposition headers,
+  respectively.
+- If a message body contains 8-bit bytes, post(8) uses SMTP 8BITMIME if the
+  server supports it.  If not, post fails with a message to the user to
+  encode the message for 7-bit transport.
+- Fewer lseek(2)s will be used when reading headers in the common case.
+- ./configure's --enable-debug has been removed;  it did nothing.
+- configure now defaults to enabling each of TLS and Cyrus SASL if the
+  necessary headers and libraries are found.
+- Moved build_nmh to top-level directory.
+- Better error reporting for connections to network services.
+
+---------
+BUG FIXES
+---------
+
+- The format scanner no longer subtracts 1 from the width.  This has the
+  effect of no longer counting the trailing newline in the output of
+  scan(1), inc(1), and the other programs that rely on the format scanner.
+- The first character of some very short (less than 4 characters) message
+  bodies is no longer dropped.
+- Single-character headers can be reliably formatted, etc., instead of
+  apparently being missing.
+- mhfixmsg now adds a Content-Transfer-Encoding header at the message level,
+  if needed after decoding text parts.
+- mhbuild now checks whether all text parts need a Content-Transfer-Encoding
+  header, not just those with a character set not specified.
+- mhbuild no longer parses lines that start with # as directives with
+  -nodirectives.
+- repl now makes sure that any Fcc header in a replied-to message is not
+  copied into the outgoing draft by default, and that the -fcc switch
+  actually works in the absence of a Fcc header in the replied-to message.
+- A Content-ID is generated for message/external-body entities as required
+  by RFC 2045, even if -nocontentid is supplied to mhbuild.
+- post will now expand aliases on a "From" line when doing a BCC [Bug #51098].
+- scan can now handle empty files without violating an assert [Bug #51693].
+- An error when writing an error message, e.g. EPIPE, no longer causes
+  recursion until the stack is exhausted.
+
+-------------------
+DEPRECATED FEATURES
+-------------------
+
+- Support for the MHPDEBUG environment variable is deprecated and will be
+  removed from a future nmh release.  Instead, use the -debug switch to pick.
+- With the move of support binaries from ${libdir} to ${libexecdir}/nmh, the
+  mostly undocumented 'libdir' mhparam(1) component has been replaced by a
+  new 'libexecdir' component.  'libdir' will be removed in a future release.
+
+-----------------
+OBSOLETE FEATURES
+-----------------
+
+- The undocumented -queue switch to post was deprecated in nmh 1.6, and was
+  removed in this release.
+- conflict(8) was deprecated in nmh 1.6, and was removed in this release.
+- mhtest(8) was deprecated in nmh 1.6, and was removed in this release.
+- msh(1) was deprecated in nmh 1.6, and was removed in this release.
+- Support in alias files for the the "*" address-group (everyone) was
+  deprecated in nmh 1.6, and was removed in this release.
+- Support for multiple hostnames in the "servers" entry of mts.conf has
+  been removed.
+- Support in alias files for expanding aliases based on group membership
+  (=) and primary group (+) has been removed.
+
+As always, feedback is welcome.
