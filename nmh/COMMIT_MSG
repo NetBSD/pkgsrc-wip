@@ -1,18 +1,6 @@
 nmh: Update mail/nmh to 1.7
 
 pkgsrc changes:
-
-TODO: double-check if all of that are relevant for mail/nmh and eventually sort
-TODO: them as needed
-
- - Add support for the `test' phase
-
-   Add support for nmh tests. Modify patches/patch-ca accordingly in order to
-   adjust TEST_ENVIRONMENT to use the configuration files in $egdir instead of the
-   ones in $nmhetcdir.
-   Actually all tests are passed except an mhparam test that sposts the
-   $egdir/$nmetcdir kludge.
-
  - Update MASTER_SITES (use https:// and avoid redirects)
 
  - Delete (a bit outdated) comment about locking mechanisms
@@ -32,6 +20,18 @@ TODO: them as needed
 
    mh_strcasecmp() was completely replaced by strcasecmp() on 24 Mar 2013, and
    hence present in 1.6. Forcing `-O1' for gcc is no longer needed.
+
+ - Adjust --sysconfdir CONFIGURE_ARGS per-upstream change, now the nmh
+   directory is created by nmh's configure so pass PKG_SYSCONFBASE instead of
+   PKG_SYSCONFDIR.
+
+ - Add support for the `test' phase
+
+   Add support for nmh tests. Modify patches/patch-ca accordingly in order to
+   adjust TEST_ENVIRONMENT to use the configuration files in $egdir instead of the
+   ones in $nmhetcdir.
+   Actually all tests are passed except an mhparam test that sposts the
+   $egdir/$nmetcdir kludge.
 
  - Do not include bsd.prefs.mk two times (NFC)
 
