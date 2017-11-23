@@ -7,3 +7,5 @@
   libthr.so is not loaded, and that causes pthread_key_create() to always return
   ENOSYS. https://reviews.llvm.org/D39254
   Check whether it is valid for NetBSD.
+
+- Fix remaining issues in Sanitizers.
