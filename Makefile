@@ -4564,7 +4564,6 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdebug
 SUBDIR+=	xdiskusage
-SUBDIR+=	xdotool
 SUBDIR+=	xebece
 SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
-bin/xdotool
-include/xdo.h
-lib/libxdo.so
-lib/libxdo.so.2
-man/man1/xdotool.1
