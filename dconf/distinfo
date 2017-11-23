@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.12 2017/10/11 09:20:00 wiz Exp $
+
+SHA1 (dconf-0.27.1.tar.xz) = 0a7c416ef3112813d6122306172bb5b7a2ccc8df
+RMD160 (dconf-0.27.1.tar.xz) = b722ce4b99bef2082f7a9353f3521ca62d661680
+SHA512 (dconf-0.27.1.tar.xz) = a92bd67fb47e6ffaa1994ef6d99d349d38fcb6acff54e343d4451055dce26770bb385d2729fcfb44fe246247a1985fbaad2248cfbf9026312c55f17ec849b8ec
+Size (dconf-0.27.1.tar.xz) = 99996 bytes

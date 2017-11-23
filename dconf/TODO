@@ -1,0 +1,23 @@
+0.27.1 switched to meson build system. At least the following problems exist:
+
+* .pc file is broken: it contains "${prefix}//usr/pkg/lib" and misses -Wl,R
+
+* -Wl,-R from glib2's pkg-config file is ignored:
+
+=> Checking for missing run-time search paths in dconf-0.27.1
+ERROR: bin/dconf: missing library: libgobject-2.0.so.0
+ERROR: bin/dconf: missing library: libdconf.so.1
+ERROR: bin/dconf: missing library: libgio-2.0.so.0
+ERROR: bin/dconf: missing library: libglib-2.0.so.0
+ERROR: lib/gio/modules/libdconfsettings.so: missing library: libgobject-2.0.so.0
+ERROR: lib/gio/modules/libdconfsettings.so: missing library: libgio-2.0.so.0
+ERROR: lib/gio/modules/libdconfsettings.so: missing library: libglib-2.0.so.0
+ERROR: lib/libdconf.so.1.0.0: missing library: libgobject-2.0.so.0
+ERROR: lib/libdconf.so.1.0.0: missing library: libgio-2.0.so.0
+ERROR: lib/libdconf.so.1.0.0: missing library: libglib-2.0.so.0
+ERROR: libexec/dconf-service: missing library: libgobject-2.0.so.0
+ERROR: libexec/dconf-service: missing library: libgio-2.0.so.0
+ERROR: libexec/dconf-service: missing library: libglib-2.0.so.0
+*** Error code 1
+
+* man pages and gtk-doc is not installed any longer 
