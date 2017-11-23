@@ -10,7 +10,11 @@ $NetBSD$
  }
  
  ThreadContextBase::~ThreadContextBase() {
-@@ -88,6 +89,14 @@ void ThreadContextBase::Reset() {
+@@ -85,9 +86,18 @@ void ThreadContextBase::SetCreated(uptr 
+ void ThreadContextBase::Reset() {
+   status = ThreadStatusInvalid;
+   SetName(0);
++  atomic_store_relaxed(&thread_destroyed, 0);
    OnReset();
  }
  
@@ -25,7 +29,7 @@ $NetBSD$
  // ThreadRegistry implementation.
  
  const u32 ThreadRegistry::kUnknownTid = ~0U;
-@@ -170,14 +179,15 @@ void ThreadRegistry::RunCallbackForEachT
+@@ -170,14 +180,15 @@ void ThreadRegistry::RunCallbackForEachT
    }
  }
  
