@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/tsan/rtl/tsan_interceptors.cc.orig	2017-11-21 09:38:56.000000000 +0000
+--- lib/tsan/rtl/tsan_interceptors.cc.orig	2017-11-23 05:14:46.406806399 +0000
 +++ lib/tsan/rtl/tsan_interceptors.cc
-@@ -868,6 +868,7 @@ void DestroyThreadState() {
+@@ -932,6 +932,7 @@ void DestroyThreadState() {
    }
    DTLS_Destroy();
    cur_thread_finalize();
@@ -10,7 +10,7 @@ $NetBSD$
  }
  }  // namespace __tsan
  
-@@ -982,12 +983,14 @@ TSAN_INTERCEPTOR(int, pthread_create,
+@@ -1046,12 +1047,14 @@ TSAN_INTERCEPTOR(int, pthread_create,
  
  TSAN_INTERCEPTOR(int, pthread_join, void *th, void **ret) {
    SCOPED_INTERCEPTOR_RAW(pthread_join, th, ret);
@@ -27,7 +27,7 @@ $NetBSD$
    }
    return res;
  }
-@@ -996,10 +999,10 @@ DEFINE_REAL_PTHREAD_FUNCTIONS
+@@ -1060,10 +1063,10 @@ DEFINE_REAL_PTHREAD_FUNCTIONS
  
  TSAN_INTERCEPTOR(int, pthread_detach, void *th) {
    SCOPED_TSAN_INTERCEPTOR(pthread_detach, th);
