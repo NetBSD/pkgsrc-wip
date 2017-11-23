@@ -33,6 +33,7 @@ share/golly/Patterns/Life/Oscillators/low-period.rle
 share/golly/Patterns/Life/Oscillators/p103079214841.rle
 share/golly/Patterns/Life/Oscillators/p138.rle
 share/golly/Patterns/Life/Oscillators/p59-glider-loop.lua
+share/golly/Patterns/Life/Oscillators/phase-shift.rle
 share/golly/Patterns/Life/Oscillators/queen-bee-turn.rle
 share/golly/Patterns/Life/Oscillators/traffic-light-hasslers.rle
 share/golly/Patterns/Life/Oscillators/unique-high-period.rle
@@ -50,7 +51,6 @@ share/golly/Patterns/Life/Signal-Circuitry/p30-racetrack.rle
 share/golly/Patterns/Life/Signal-Circuitry/p46racetrack.rle
 share/golly/Patterns/Life/Signal-Circuitry/reflectors2.rle
 share/golly/Patterns/Life/Signal-Circuitry/reflectors.rle
-share/golly/Patterns/Life/Signal-Circuitry/signal-turn.rle
 share/golly/Patterns/Life/Signal-Circuitry/stargate.rle
 share/golly/Patterns/Life/Signal-Circuitry/single-channel-spiral-growth.rle.gz
 share/golly/Patterns/Life/Signal-Circuitry/traffic-lights-extruder.rle
@@ -114,7 +114,6 @@ share/golly/Patterns/Life/Spaceships/Cordership-LWSS-freeze-tag.rle
 share/golly/Patterns/Life/Spaceships/corderships.rle
 share/golly/Patterns/Life/Spaceships/diagonal.rle
 share/golly/Patterns/Life/Spaceships/orthogonal.rle
-share/golly/Patterns/Life/Spaceships/short-thin-race.rle
 share/golly/Patterns/Life/Spaceships/smallest-low-period.rle
 share/golly/Patterns/Life/Spaceships/spaceship-types.rle
 share/golly/Patterns/Life/Syntheses/109-still-lifes.rle
@@ -150,6 +149,8 @@ share/golly/Patterns/Life/Miscellaneous/sawtooth6b.rle
 share/golly/Patterns/Life/Miscellaneous/tubstretch-c124b.rle
 share/golly/Patterns/Life/Miscellaneous/twinprimes.rle
 share/golly/Patterns/Life/Miscellaneous/wicks-DRH-2002.rle
+share/golly/Patterns/Life/Signal-Circuitry/signal-turns-and-fizzles.rle.gz
+share/golly/Patterns/Life/Spaceships/short-thin.rle
 share/golly/Patterns/Patersons-Worms/worm-1040512.rle
 share/golly/Patterns/Patersons-Worms/worm-1042015.rle
 share/golly/Patterns/Patersons-Worms/worm-1042020.rle
@@ -272,9 +273,11 @@ share/golly/Patterns/Life-Like/persian-rugs.lif
 share/golly/Patterns/Life-Like/replicator.rle
 share/golly/Patterns/Life-Like/spiral-growth.rle
 share/golly/Patterns/Life-Like/white-whale.rle
+share/golly/Patterns/Life-Like/HighLife-replicator-spaceship.rle
 share/golly/Patterns/Life-Like/Morley/breeder2.rle
 share/golly/Patterns/Life-Like/Morley/enterprise-gun.rle
 share/golly/Patterns/Life-Like/Morley/growing-ship.rle
+share/golly/Patterns/Non-Totalistic/pondpuffer-spaceship.rle
 share/golly/Patterns/Margolus/BBM.rle
 share/golly/Patterns/Margolus/CrittersCircle.rle
 share/golly/Patterns/Margolus/CrittersOscillators.rle
