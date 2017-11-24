@@ -36,4 +36,4 @@ new maintainer):
   parameter is called -nodaemon (as in reality) or -n (as in the manpage))
 
 Possible vulnerabilites to investigate:
- - CVE-2017-6967
+ - CVE-2017-6967, CVE-2017-16927
