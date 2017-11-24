@@ -411,6 +411,7 @@ SUBDIR+=	cmetrics
 SUBDIR+=	cmusfm
 SUBDIR+=	coccinelle
 SUBDIR+=	coldfire
+SUBDIR+=	collectd-redis
 SUBDIR+=	collectd-unbound
 SUBDIR+=	colord
 SUBDIR+=	colord-gtk
