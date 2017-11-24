@@ -14,12 +14,12 @@ DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra>=2.15:../../wip/py-distutils-extra
 DEPENDS+=	${PYPKGPREFIX}-zeitgeist>=0.3.0:../../wip/py-zeitgeist
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_TOOLS+=	intltool
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG= 	yes
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2, py-gobject
 
 GCONF_SCHEMAS+=	extra/gnome-activity-journal.schemas
@@ -37,7 +37,6 @@ SUBST_MESSAGE.paths=	Fixing header search paths.
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

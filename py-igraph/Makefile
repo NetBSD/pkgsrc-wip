@@ -10,13 +10,10 @@ HOMEPAGE=       http://igraph.org/
 COMMENT=        Manipulating Undirected and Directed Graphs for Python
 LICENSE=        gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/igraph-0.1.11
-
-PYTHON_VERSIONED_DEPENDENCIES=  cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_TOOLS+=     pkg-config
 
-#.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../wip/igraph/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

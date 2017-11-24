@@ -12,11 +12,11 @@ COMMENT=	screen(1) for X
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cython>=0.14:../../devel/py-cython
+#DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-#PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 REPLACE_PYTHON+=	cups/xpraforwarder

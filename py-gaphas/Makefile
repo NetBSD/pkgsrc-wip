@@ -14,13 +14,12 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.0:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-decorator>=3.2.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8.1:../../wip/py-simplegeneric
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

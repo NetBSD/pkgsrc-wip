@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	intltool msgfmt
@@ -19,7 +20,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-notify, py-gtk2, py-gobject
 
 INSTALLATION_DIRS+=	bin
@@ -28,7 +28,6 @@ REPLACE_PYTHON+=   ${WRKSRC}/monajat-applet
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

@@ -11,13 +11,13 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	gst-ffmpeg-[0-9]*:../../multimedia/gst-plugins0.10-ffmpeg
 DEPENDS+=	gst-plugins0.10-x264-[0-9]*:../../multimedia/gst-plugins0.10-x264
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2, py-gstreamer0.10, py-gobject, py-elementtree
 
 .include "../../devel/py-gobject/buildlink3.mk"
@@ -34,5 +34,4 @@ BUILDLINK_API_DEPENDS.gst-python+=	${PYPKGPREFIX}-gstreamer0.10>=0.10.5
 BUILDLINK_ABI_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.8.5nb1
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

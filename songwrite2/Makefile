@@ -10,10 +10,11 @@ HOMEPAGE=	http://home.gna.org/oomadness/en/songwrite/
 COMMENT=	Music score and songbook editor
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 BUILD_OPTIONS=		# blank
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-EditObj2
 
 #INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/locale/en/LC_MESSAGES/
@@ -38,7 +39,6 @@ do-install:
 .include "../../print/evince/buildlink3.mk"
 DEPENDS+=	timidity-[0-9]*:../../audio/timidity
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
