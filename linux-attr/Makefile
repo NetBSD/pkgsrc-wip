@@ -1,37 +1,22 @@
 # $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
 #
 
-DISTNAME=		attr_2.4.32-1
-PKGNAME=	linux-attr-2.4.32.1
+DISTNAME=		attr-2.4.47.src
+PKGNAME=		linux-${DISTNAME:S/.src//}
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://oss.sgi.com/projects/xfs/cmd_tars/
+MASTER_SITES=		http://download.savannah.nongnu.org/releases/attr/
 
 MAINTAINER=		pkgsrc@blackmouse.biz
-HOMEPAGE=		http://acl.bestbits.at/
+HOMEPAGE=		https://savannah.nongnu.org/projects/attr
 COMMENT=		The extended attribute package for acl
 
 # uses linux/version.h and only tested under Linux
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-
-AUTOCONF_REQD=	2.50
-
-USE_TOOLS+=		autoconf gmake
+WRKSRC=			${WRKDIR}/${DISTNAME:S/.src//}
 GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-
-WRKSRC=		${WRKDIR}/attr-2.4.32
-
-pre-configure:
-	cd ${WRKSRC}; autoconf
-
-do-build:
-	cd ${WRKSRC}; gmake
-
-do-install:
-	cd ${WRKSRC}; gmake install install-lib install-dev
-
-post-install:
-	ln -sf ${PREFIX}/lib/libattr.so.* ${PREFIX}/libexec
+USE_TOOLS=		gmake
+BUILD_TARGET=		default
+INSTALL_TARGET=		install install-lib # prefix=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"

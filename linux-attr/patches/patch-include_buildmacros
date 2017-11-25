@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- include/buildmacros.orig	2013-05-19 05:07:22.000000000 +0000
++++ include/buildmacros
+@@ -66,10 +66,9 @@ endif
+ 
+ ifeq ($(ENABLE_SHARED),yes)
+ INSTALL_LTLIB = \
+-	cd $(TOPDIR)/$(LIBNAME)/.libs; \
+-	../$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
+-	../$(INSTALL) -m 644 -T so_dot_version $(LIBNAME).lai $(PKG_LIB_DIR); \
+-	../$(INSTALL) -T so_dot_current $(LIBNAME).lai $(PKG_LIB_DIR)
++	cd $(TOPDIR)/$(LIBNAME); \
++	$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
++	$(LTINSTALL) $(LIBNAME).la $(PKG_LIB_DIR)
+ endif
+ 
+ # Libtool thinks the static and shared libs should be in the same dir, so
