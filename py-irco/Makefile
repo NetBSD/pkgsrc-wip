@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=1.2.3:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-structlog>=0.3.2:../../sysutils/py-structlog
 BROKEN=		needs unpackaged wip/py-tablib-garetjax
 #DEPENDS+=	${PYPKGPREFIX}-tablib-garetjax>=0.9.12:../../wip/py-tablib-garetjax
-DEPENDS+=	${PYPKGPREFIX}-raven>=4.2.1:../../wip/py-raven
+DEPENDS+=	${PYPKGPREFIX}-raven>=4.2.1:../../www/py-raven
 
 USE_LANGUAGES=	# none
 

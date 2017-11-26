@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-Paste-[0-9]*:../../www/py-paste
 
 DEPENDS+=	${PYPKGPREFIX}-waitress>=0.8.8:../../www/py-waitress
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=1.0.8:../../www/py-WebOb
-DEPENDS+=	${PYPKGPREFIX}-webtest>=1.4.:../../wip/py-webtest
+DEPENDS+=	${PYPKGPREFIX}-WebTest>=1.4.:../../www/py-WebTest
 DEPENDS+=	${PYPKGPREFIX}-pylons>=1.0.0:../../wip/py-pylons
 DEPENDS+=	${PYPKGPREFIX}-Beaker>=1.6.4:../../wip/py-Beaker
 DEPENDS+=	${PYPKGPREFIX}-WebHelpers>=1.3:../../wip/py-webhelpers
