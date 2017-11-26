@@ -2779,8 +2779,6 @@ share/emacs/${PKGVERSION}/lisp/net/nsm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/nsm.elc
 share/emacs/${PKGVERSION}/lisp/net/ntlm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/ntlm.elc
-share/emacs/${PKGVERSION}/lisp/net/pinentry.el.gz
-share/emacs/${PKGVERSION}/lisp/net/pinentry.elc
 share/emacs/${PKGVERSION}/lisp/net/pop3.el.gz
 share/emacs/${PKGVERSION}/lisp/net/pop3.elc
 share/emacs/${PKGVERSION}/lisp/net/puny.el.gz
