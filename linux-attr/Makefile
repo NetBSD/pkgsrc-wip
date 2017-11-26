@@ -3,6 +3,7 @@
 
 DISTNAME=		attr-2.4.47.src
 PKGNAME=		linux-${DISTNAME:S/.src//}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.savannah.nongnu.org/releases/attr/
 
@@ -17,6 +18,11 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/.src//}
 GNU_CONFIGURE=		yes
 USE_TOOLS=		gmake
 BUILD_TARGET=		default
-INSTALL_TARGET=		install install-lib # prefix=${DESTDIR}${PREFIX}
+INSTALL_TARGET=		install install-lib install-dev
+
+post-install:
+	# Conflicts with ncurses manpages
+	rm -f ${DESTDIR}${PREFIX}/man/man3/attr_get.3
+	rm -f ${DESTDIR}${PREFIX}/man/man3/attr_set.3
 
 .include "../../mk/bsd.pkg.mk"
