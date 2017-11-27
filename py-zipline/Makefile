@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-empyrical>=0.2.2:../../finance/py-empyrical
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=2.1.0:../../devel/py-intervaltree
 DEPENDS+=	${PYPKGPREFIX}-logbook>=0.12.5:../../devel/py-logbook
-DEPENDS+=	${PYPKGPREFIX}-lru-dict>=1.1.4:../../wip/py-lru-dict
+DEPENDS+=	${PYPKGPREFIX}-lru-dict>=1.1.4:../../devel/py-lru-dict
 DEPENDS+=	${PYPKGPREFIX}-mako>=1.0.1:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.4.8:../../devel/py-multipledispatch
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.9.1:../../math/py-networkx
