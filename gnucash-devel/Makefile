@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.248 2017/07/03 11:49:37 wiz Exp $
 
-DISTNAME=		gnucash-2.7.1
+DISTNAME=		gnucash-2.7.2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,10 +20,6 @@ DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
-# for autoreconf
-#BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
-#BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
-
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -37,16 +33,10 @@ CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
 CONFIGURE_ARGS+=	GTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CONFIGURE_ARGS+=	GMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 
-REPLACE_PERL+=		bindings/python/example_scripts/get_quotes.pl
 REPLACE_PERL+=		common/gnc-test-env.pl
-REPLACE_PERL+=		doc/examples/create-bogus-data.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
-REPLACE_PERL+=		libgnucash/engine/xlate.pl
 REPLACE_PERL+=		libgnucash/quotes/gnc-fq-dump
-REPLACE_PERL+=		s/Quote_example.pl
-REPLACE_PERL+=		util/check-po.pl
 REPLACE_PERL+=		util/elegant-sort.pl
-REPLACE_PERL+=		util/fix-license.pl
 
 PLIST_SRC=		PLIST
 
@@ -54,9 +44,6 @@ PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
-
-#pre-configure:
-#	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "options.mk"
 

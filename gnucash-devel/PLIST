@@ -1152,8 +1152,6 @@ share/gnucash/ui/gnc-sxed-window-ui-full.xml
 share/gnucash/ui/gnc-sxed-window-ui.xml
 share/gnucash/ui/gnc-windows-menu-ui-quartz.xml
 share/gnucash/ui/gnc-windows-menu-ui.xml
-share/gnucash/ui/gnucash-fallback.css
-share/gnucash/ui/gnucash.css
 share/gnucash/ui/osx_accel_map
 share/icons/hicolor/128x128/apps/gnucash-icon.png
 share/icons/hicolor/16x16/apps/gnucash-icon.png
