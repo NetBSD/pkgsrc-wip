@@ -414,6 +414,7 @@ SUBDIR+=	coldfire
 SUBDIR+=	collectd-CGP
 SUBDIR+=	collectd-haproxy
 SUBDIR+=	collectd-redis
+SUBDIR+=	collectd-web
 SUBDIR+=	collectd-unbound
 SUBDIR+=	colord
 SUBDIR+=	colord-gtk
