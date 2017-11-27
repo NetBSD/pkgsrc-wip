@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-np2kai-0.13.tar.gz) = 991d33980eb1353fbc49226db425ee7bafbd5c48
-RMD160 (libretro-np2kai-0.13.tar.gz) = 737611b40ea40769e01dff3a674ae4f3e4a4cfc8
-SHA512 (libretro-np2kai-0.13.tar.gz) = 6a7a8bd71c4e3c62d7e280169bab8be40c8f7744eb18fd794d2566dd8ef6c20aa2e4d4378690b1cd24954e50ca5fd670f8ec73c74d15c5a89aa2d80bf12280e4
-Size (libretro-np2kai-0.13.tar.gz) = 1869360 bytes
+SHA1 (libretro-np2kai-0.14.tar.gz) = c95b625a5575eae5f2d87c8b7617a24ec07965b4
+RMD160 (libretro-np2kai-0.14.tar.gz) = f604aaa6da44ec16af3dd93a983f573cbe1d3e91
+SHA512 (libretro-np2kai-0.14.tar.gz) = cb15ebbe07ea483be48b3725663f05d0084d6661ae08b7669329d3511fe2a30a115532166716393594b5916d9e84323ca2a42bc098cacc350b9428d2795a6273
+Size (libretro-np2kai-0.14.tar.gz) = 1932048 bytes
