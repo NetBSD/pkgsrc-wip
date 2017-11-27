@@ -310,6 +310,7 @@ lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/budget-flow.go
 lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/budget-income-statement.go
 lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/budget.go
 lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/cash-flow.go
+lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/cashflow-barchart.go
 lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/category-barchart.go
 lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/daily-reports.go
 lib/gnucash/scm/ccache/2.0/gnucash/report/standard-reports/equity-statement.go
@@ -1044,6 +1045,7 @@ share/gnucash/scm/gnucash/report/standard-reports/budget-flow.scm
 share/gnucash/scm/gnucash/report/standard-reports/budget-income-statement.scm
 share/gnucash/scm/gnucash/report/standard-reports/budget.scm
 share/gnucash/scm/gnucash/report/standard-reports/cash-flow.scm
+share/gnucash/scm/gnucash/report/standard-reports/cashflow-barchart.scm
 share/gnucash/scm/gnucash/report/standard-reports/category-barchart.scm
 share/gnucash/scm/gnucash/report/standard-reports/daily-reports.scm
 share/gnucash/scm/gnucash/report/standard-reports/equity-statement.scm
@@ -1150,8 +1152,6 @@ share/gnucash/ui/gnc-sxed-window-ui-full.xml
 share/gnucash/ui/gnc-sxed-window-ui.xml
 share/gnucash/ui/gnc-windows-menu-ui-quartz.xml
 share/gnucash/ui/gnc-windows-menu-ui.xml
-share/gnucash/ui/gnucash-fallback.css
-share/gnucash/ui/gnucash.css
 share/gnucash/ui/osx_accel_map
 share/icons/hicolor/128x128/apps/gnucash-icon.png
 share/icons/hicolor/16x16/apps/gnucash-icon.png
