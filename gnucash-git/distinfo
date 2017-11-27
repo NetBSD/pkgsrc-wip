@@ -4,4 +4,4 @@ SHA1 (googletest-1.8.0.tar.gz) = e7e646a6204638fe8e87e165292b8dd9cd4c36ed
 RMD160 (googletest-1.8.0.tar.gz) = b0a9e48874df3291a261ed85a0c0a4d677b01dc1
 SHA512 (googletest-1.8.0.tar.gz) = 1dbece324473e53a83a60601b02c92c089f5d314761351974e097b2cf4d24af4296f9eb8653b6b03b1e363d9c5f793897acae1f0c7ac40149216035c4d395d9d
 Size (googletest-1.8.0.tar.gz) = 1281617 bytes
-SHA1 (patch-gnucash_gnucash-bin.c) = 13ab8aa17c3188668c22151a333fdad46b25cd36
+SHA1 (patch-gnucash_gnucash-bin.c) = f28c3849d028ab4b81dfeda57be764597d2119c4
