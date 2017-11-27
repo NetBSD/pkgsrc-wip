@@ -4,3 +4,4 @@ SHA1 (libretro-np2kai-0.14.tar.gz) = c95b625a5575eae5f2d87c8b7617a24ec07965b4
 RMD160 (libretro-np2kai-0.14.tar.gz) = f604aaa6da44ec16af3dd93a983f573cbe1d3e91
 SHA512 (libretro-np2kai-0.14.tar.gz) = cb15ebbe07ea483be48b3725663f05d0084d6661ae08b7669329d3511fe2a30a115532166716393594b5916d9e84323ca2a42bc098cacc350b9428d2795a6273
 Size (libretro-np2kai-0.14.tar.gz) = 1932048 bytes
+SHA1 (patch-sound_mame_driver.h) = e4ccfe7482bae5fba2d911e355578a6779af7242
