@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	libretro-snes9x-20170218
+DISTNAME=	libretro-snes9x-1.55
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=snes9xgit/}
 
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=Snes9x
 COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
