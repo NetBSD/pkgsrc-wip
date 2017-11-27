@@ -18,6 +18,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+DEPENDS+=	${PYPKGPREFIX}-collectd-[0-9]*:../../sysutils/py-collectd
 
 
 .include "../../mk/bsd.prefs.mk"
