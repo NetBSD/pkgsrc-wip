@@ -16,8 +16,6 @@ DEPENDS+=	gnuplot>=4.2.3:../../graphics/gnuplot
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-NOT_PAX_MPROTECT_SAFE=	bin/wxmaxima
-
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
