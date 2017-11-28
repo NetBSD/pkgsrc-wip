@@ -1,5 +1,6 @@
---- Makefile.orig	2013-03-19 02:48:09.000000000 -0500
-+++ Makefile	2014-05-21 19:07:53.000000000 -0500
+$NetBSD$
+
+# Respect env
 --- Makefile.orig	2013-03-19 07:48:09.000000000 +0000
 +++ Makefile
 @@ -1,6 +1,7 @@
@@ -13,7 +14,16 @@
  DFLAGS=		-D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_USE_KNETFILE -D_CURSES_LIB=1
  KNETFILE_O=	knetfile.o
  LOBJS=		bgzf.o kstring.o bam_aux.o bam.o bam_import.o sam.o bam_index.o	\
-@@ -41,7 +42,8 @@ all:$(PROG)
+@@ -14,7 +15,7 @@ AOBJS=		bam_tview.o bam_plcmd.o sam_view
+ PROG=		samtools
+ INCLUDES=	-I.
+ SUBDIRS=	. bcftools misc
+-LIBPATH=
++LIBPATH=	-L${PREFIX}/lib
+ LIBCURSES=	-lcurses # -lXCurses
+ 
+ .SUFFIXES:.c .o
+@@ -41,16 +42,17 @@ all:$(PROG)
  lib:libbam.a
  
  libbam.a:$(LOBJS)
@@ -22,4 +32,29 @@
 +		$(RANLIB) $@
  
  samtools:lib-recur $(AOBJS)
- 		$(CC) $(CFLAGS) -o $@ $(AOBJS) $(LDFLAGS) libbam.a -Lbcftools -lbcf $(LIBPATH) $(LIBCURSES) -lm -lz -lpthread
+-		$(CC) $(CFLAGS) -o $@ $(AOBJS) $(LDFLAGS) libbam.a -Lbcftools -lbcf $(LIBPATH) $(LIBCURSES) -lm -lz -lpthread
++		$(CC) $(CFLAGS) -o $@ $(AOBJS) $(LDFLAGS) libbam.a -Lbcftools -lbcf $(LIBPATH) $(LIBCURSES) ${LDFLAGS} -lm -lz -lpthread
+ 
+ razip:razip.o razf.o $(KNETFILE_O)
+-		$(CC) $(CFLAGS) -o $@ $^ -lz
++		$(CC) $(CFLAGS) -o $@ $^ ${LDFLAGS} -lz
+ 
+ bgzip:bgzip.o bgzf.o $(KNETFILE_O)
+-		$(CC) $(CFLAGS) -o $@ $^ -lz -lpthread
++		$(CC) $(CFLAGS) -o $@ $^ ${LDFLAGS} -lz -lpthread
+ 
+ bgzf.o:bgzf.c bgzf.h
+ 		$(CC) -c $(CFLAGS) $(DFLAGS) -DBGZF_CACHE $(INCLUDES) bgzf.c -o $@
+@@ -81,10 +83,10 @@ faidx_main.o:faidx.h razf.h
+ 
+ 
+ libbam.1.dylib-local:$(LOBJS)
+-		libtool -dynamic $(LOBJS) -o libbam.1.dylib -lc -lz
++		libtool -dynamic $(LOBJS) -o libbam.1.dylib -lc ${LDFLAGS} -lz
+ 
+ libbam.so.1-local:$(LOBJS)
+-		$(CC) -shared -Wl,-soname,libbam.so -o libbam.so.1 $(LOBJS) -lc -lz
++		$(CC) -shared -Wl,-soname,libbam.so -o libbam.so.1 $(LOBJS) -lc ${LDFLAGS} -lz
+ 
+ dylib:
+ 		@$(MAKE) cleanlocal; \

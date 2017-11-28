@@ -3,4 +3,6 @@ $NetBSD$
 SHA1 (samtools-0.1.19.tar.bz2) = ff3f4cf40612d4c2ad26e6fcbfa5f8af84cbe881
 RMD160 (samtools-0.1.19.tar.bz2) = 4e74858d3762f785452d1c9507bd127de9791894
 Size (samtools-0.1.19.tar.bz2) = 514507 bytes
-SHA1 (patch-Makefile) = 9ae9b0f04a3dad5d8f470b6fc132ba20d30e065d
+SHA1 (patch-Makefile) = 0eacdb0d29ac3c4864ee59f061c8c7094be415dd
+SHA1 (patch-bcftools_Makefile) = 8a4d19200856962c7adcbf7745a6fe0a74b4550d
+SHA1 (patch-misc_Makefile) = 6150b8e9de04af17077015402e507ee450ab12a2
