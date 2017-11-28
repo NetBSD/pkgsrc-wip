@@ -259,7 +259,6 @@ share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/030_is_local.xml
 share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/040_call_block.xml
 share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/050_user_record.xml
 share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/060_redial.xml
-share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/070_speed_dial.xml
 share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/200_agent_status.xml
 share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/210_agent_status_id.xml
 share/fusionpbx/app/dialplan/resources/switch/conf/dialplan/220_provision.xml
@@ -325,6 +324,7 @@ share/fusionpbx/app/dialplan_outbound/app_menu.php
 share/fusionpbx/app/dialplan_outbound/dialplan_outbound_add.php
 share/fusionpbx/app/dialplan_outbound/root.php
 share/fusionpbx/app/edit/app_config.php
+share/fusionpbx/app/edit/app_defaults.php
 share/fusionpbx/app/edit/app_languages.php
 share/fusionpbx/app/edit/app_menu.php
 share/fusionpbx/app/edit/clipadd.php
@@ -442,6 +442,7 @@ share/fusionpbx/app/follow_me/app_config.php
 share/fusionpbx/app/follow_me/app_menu.php
 share/fusionpbx/app/follow_me/root.php
 share/fusionpbx/app/gateways/app_config.php
+share/fusionpbx/app/gateways/app_defaults.php
 share/fusionpbx/app/gateways/app_languages.php
 share/fusionpbx/app/gateways/app_menu.php
 share/fusionpbx/app/gateways/gateway_copy.php
@@ -450,7 +451,6 @@ share/fusionpbx/app/gateways/gateway_edit.php
 share/fusionpbx/app/gateways/gateways.php
 share/fusionpbx/app/gateways/root.php
 share/fusionpbx/app/ivr_menus/app_config.php
-share/fusionpbx/app/ivr_menus/app_defaults.php
 share/fusionpbx/app/ivr_menus/app_languages.php
 share/fusionpbx/app/ivr_menus/app_menu.php
 share/fusionpbx/app/ivr_menus/ivr_menu_copy.php
@@ -532,6 +532,7 @@ share/fusionpbx/app/provision/app_config.php
 share/fusionpbx/app/provision/app_defaults.php
 share/fusionpbx/app/provision/app_menu.php
 share/fusionpbx/app/provision/index.php
+share/fusionpbx/app/provision/provision_write.php
 share/fusionpbx/app/provision/resources/classes/provision.php
 share/fusionpbx/app/provision/resources/functions/device_by.php
 share/fusionpbx/app/provision/root.php
@@ -541,7 +542,6 @@ share/fusionpbx/app/recordings/app_languages.php
 share/fusionpbx/app/recordings/app_menu.php
 share/fusionpbx/app/recordings/recording_delete.php
 share/fusionpbx/app/recordings/recording_edit.php
-share/fusionpbx/app/recordings/recording_play.php
 share/fusionpbx/app/recordings/recordings.php
 share/fusionpbx/app/recordings/resources/classes/switch_recordings.php
 share/fusionpbx/app/recordings/root.php
@@ -556,7 +556,6 @@ share/fusionpbx/app/registrations/root.php
 share/fusionpbx/app/registrations/status_registrations.php
 share/fusionpbx/app/registrations/status_registrations_inc.php
 share/fusionpbx/app/ring_groups/app_config.php
-share/fusionpbx/app/ring_groups/app_defaults.php
 share/fusionpbx/app/ring_groups/app_languages.php
 share/fusionpbx/app/ring_groups/app_menu.php
 share/fusionpbx/app/ring_groups/ring_group_delete.php
@@ -1651,7 +1650,6 @@ share/fusionpbx/resources/install/scripts/app/ring_groups/resources/scripts/dest
 share/fusionpbx/resources/install/scripts/app/ring_groups/resources/scripts/monitor.lua
 share/fusionpbx/resources/install/scripts/app/ring_groups/resources/scripts/ring_member.lua
 share/fusionpbx/resources/install/scripts/app/servers/resources/memcache.lua
-share/fusionpbx/resources/install/scripts/app/speed_dial/index.lua
 share/fusionpbx/resources/install/scripts/app/toll_allow/index.lua
 share/fusionpbx/resources/install/scripts/app/voicemail/app_languages.lua
 share/fusionpbx/resources/install/scripts/app/voicemail/index.lua
@@ -1679,7 +1677,6 @@ share/fusionpbx/resources/install/scripts/app/voicemail/resources/functions/reco
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/functions/record_name.lua
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/functions/return_call.lua
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/functions/send_email.lua
-share/fusionpbx/resources/install/scripts/app/voicemail/resources/functions/send_sms.lua
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/scripts/mwi.lua
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/scripts/mwi_subscribe.lua
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/templates/de/at/email_body.tpl
@@ -1689,7 +1686,6 @@ share/fusionpbx/resources/install/scripts/app/voicemail/resources/templates/de/d
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/templates/en/gb/email_body.tpl
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/templates/en/gb/email_subject.tpl
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/templates/en/us/email_body.tpl
-share/fusionpbx/resources/install/scripts/app/voicemail/resources/templates/en/us/email_body_transcription.tpl
 share/fusionpbx/resources/install/scripts/app/voicemail/resources/templates/en/us/email_subject.tpl
 share/fusionpbx/resources/install/scripts/app/xml_handler/index.lua
 share/fusionpbx/resources/install/scripts/app/xml_handler/resources/scripts/configuration/acl.conf.lua
@@ -1763,12 +1759,6 @@ share/fusionpbx/resources/install/scripts/resources/functions/interval_timer.lua
 share/fusionpbx/resources/install/scripts/resources/functions/is_uuid.lua
 share/fusionpbx/resources/install/scripts/resources/functions/lazy_settings.lua
 share/fusionpbx/resources/install/scripts/resources/functions/log.lua
-share/fusionpbx/resources/install/scripts/resources/functions/lunajson.lua
-share/fusionpbx/resources/install/scripts/resources/functions/lunajson/_str_lib.lua
-share/fusionpbx/resources/install/scripts/resources/functions/lunajson/_str_lib_lua53.lua
-share/fusionpbx/resources/install/scripts/resources/functions/lunajson/decoder.lua
-share/fusionpbx/resources/install/scripts/resources/functions/lunajson/encoder.lua
-share/fusionpbx/resources/install/scripts/resources/functions/lunajson/sax.lua
 share/fusionpbx/resources/install/scripts/resources/functions/mkdir.lua
 share/fusionpbx/resources/install/scripts/resources/functions/presence_in.lua
 share/fusionpbx/resources/install/scripts/resources/functions/route_to_bridge.lua
@@ -1783,7 +1773,6 @@ share/fusionpbx/resources/install/scripts/resources/tests/self_test.lua
 share/fusionpbx/resources/install/scripts/roku.lua
 share/fusionpbx/resources/install/scripts/service
 share/fusionpbx/resources/install/scripts/streamfile.lua
-share/fusionpbx/resources/install/scripts/transfer2.lua
 share/fusionpbx/resources/install/scripts/wakeup.lua
 share/fusionpbx/resources/install/sql/mysql.sql
 share/fusionpbx/resources/install/sql/pgsql.sql
@@ -2029,7 +2018,6 @@ share/fusionpbx/resources/templates/conf/autoload_configs/httapi.conf.xml
 share/fusionpbx/resources/templates/conf/autoload_configs/http_cache.conf.xml
 share/fusionpbx/resources/templates/conf/autoload_configs/ivr.conf.xml
 share/fusionpbx/resources/templates/conf/autoload_configs/java.conf.xml
-share/fusionpbx/resources/templates/conf/autoload_configs/json_cdr.conf.xml
 share/fusionpbx/resources/templates/conf/autoload_configs/lcr.conf.xml
 share/fusionpbx/resources/templates/conf/autoload_configs/local_stream.conf
 share/fusionpbx/resources/templates/conf/autoload_configs/logfile.conf.xml
@@ -2469,7 +2457,6 @@ share/fusionpbx/resources/templates/provision/yealink/w52p/directory.xml
 share/fusionpbx/resources/templates/provision/yealink/w52p/favorite_setting.xml
 share/fusionpbx/resources/templates/provision/yealink/w52p/y000000000025.cfg
 share/fusionpbx/resources/templates/provision/yealink/w52p/{$mac}.cfg
-share/fusionpbx/resources/uuid.php
 share/fusionpbx/resources/wysiwyg.php
 share/fusionpbx/root.php
 share/fusionpbx/secure/.htaccess
@@ -2478,7 +2465,6 @@ share/fusionpbx/secure/htaccess.tmp
 share/fusionpbx/secure/index.php
 share/fusionpbx/secure/root.php
 share/fusionpbx/secure/v_mailto.php
-share/fusionpbx/themes/default/app_config.php
 share/fusionpbx/themes/default/app_defaults.php
 share/fusionpbx/themes/default/app_languages.php
 share/fusionpbx/themes/default/config.php
