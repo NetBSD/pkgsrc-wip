@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/wxmaxima
 man/man1/wxmaxima.1
-share/appdata/wxMaxima.appdata.xml
 share/applications/wxMaxima.desktop
 share/bash-completion/completions/wxmaxima
 share/doc/wxmaxima/Autocomplete1.jpg
@@ -48,6 +47,7 @@ share/locale/tr/LC_MESSAGES/wxMaxima.mo
 share/locale/uk/LC_MESSAGES/wxMaxima.mo
 share/locale/zh_CN/LC_MESSAGES/wxMaxima.mo
 share/locale/zh_TW/LC_MESSAGES/wxMaxima.mo
+share/metainfo/wxMaxima.appdata.xml
 share/mime/packages/x-wxmathml.xml
 share/mime/packages/x-wxmaxima-batch.xml
 share/pixmaps/text-x-wxmathml.svg
@@ -100,7 +100,6 @@ share/wxMaxima/software-update-urgent.png
 share/wxMaxima/styles.png
 share/wxMaxima/testbench_simple.wxmx
 share/wxMaxima/text.png
-share/wxMaxima/tips.txt
 share/wxMaxima/view-refresh.png
 share/wxMaxima/weather-clear.png
 share/wxMaxima/weather-few-clouds.png
