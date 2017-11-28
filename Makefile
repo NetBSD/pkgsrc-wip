@@ -596,6 +596,7 @@ SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
 SUBDIR+=	doorman
 SUBDIR+=	dosemu2
+SUBDIR+=	dosfstools
 SUBDIR+=	dotclear
 SUBDIR+=	dotproject
 SUBDIR+=	double-conversion
