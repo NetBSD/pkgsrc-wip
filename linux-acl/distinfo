@@ -1,5 +1,8 @@
 $NetBSD: distinfo,v 1.1.1.1 2006/08/09 23:08:51 ondratu Exp $
 
-SHA1 (acl_2.2.39-1.tar.gz) = 596cfa3461e93d5ad402ba2c4f6e8f1d4118a635
-RMD160 (acl_2.2.39-1.tar.gz) = 5e6797b580c561a52d10b36d82587f8b80024a43
-Size (acl_2.2.39-1.tar.gz) = 122091 bytes
+SHA1 (acl-2.2.52.src.tar.gz) = 537dddc0ee7b6aa67960a3de2d36f1e2ff2059d9
+RMD160 (acl-2.2.52.src.tar.gz) = 2abac978d1b985c1a30aeaed8d78b13d96b467d6
+SHA512 (acl-2.2.52.src.tar.gz) = 59973199d371cd0b2368e95bc829a1b47f04e808a174fefba4c6854e766158bd19a71d9dbcc8d6fdc1573a1f971cdda39c453f7fa243bce02c1ab97c6e7c72e7
+Size (acl-2.2.52.src.tar.gz) = 386604 bytes
+SHA1 (patch-include_builddefs.in) = b0384d514048af6369852eb68705e20458665335
+SHA1 (patch-include_buildmacros) = 2f28373768e731b9eaa4526bf3ee78917f946684

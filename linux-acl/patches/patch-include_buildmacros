@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- include/buildmacros.orig	2013-05-19 04:52:09.000000000 +0000
++++ include/buildmacros
+@@ -66,31 +66,13 @@ endif
+ 
+ ifeq ($(ENABLE_SHARED),yes)
+ INSTALL_LTLIB = \
+-	cd $(TOPDIR)/$(LIBNAME)/.libs; \
+-	../$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
+-	../$(INSTALL) -m 644 -T so_dot_version $(LIBNAME).lai $(PKG_LIB_DIR); \
+-	../$(INSTALL) -T so_dot_current $(LIBNAME).lai $(PKG_LIB_DIR)
++	cd $(TOPDIR)/$(LIBNAME); \
++	$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
++	$(LTINSTALL) -m 644 $(LIBNAME).la $(PKG_LIB_DIR)/
+ endif
+ 
+-# Libtool thinks the static and shared libs should be in the same dir, so
+-# make the static lib appear in the place we chose as rpath (using the two
+-# symlinks below).
+-# Other things want the shared libs to appear in /usr/lib, else they'll
+-# link with the static libs there.  So, another symlink to get the .so into
+-# /usr/lib.
+ ifeq ($(ENABLE_SHARED),yes)
+-INSTALL_LTLIB_DEV = \
+-	cd $(TOPDIR)/$(LIBNAME)/.libs; \
+-	../$(INSTALL) -m 755 -d $(PKG_DEVLIB_DIR); \
+-	../$(INSTALL) -m 644 -T old_lib $(LIBNAME).lai $(PKG_DEVLIB_DIR); \
+-	../$(INSTALL) -m 644 $(LIBNAME).lai $(PKG_DEVLIB_DIR)/$(LIBNAME).la ; \
+-	../$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
+-	../$(INSTALL) -T so_base $(LIBNAME).lai $(PKG_LIB_DIR); \
+-	if test "x$(PKG_DEVLIB_DIR)" != "x$(PKG_LIB_DIR)" ; then \
+-	../$(INSTALL) -S $(PKG_DEVLIB_DIR)/$(LIBNAME).a $(PKG_LIB_DIR)/$(LIBNAME).a; \
+-	../$(INSTALL) -S $(PKG_DEVLIB_DIR)/$(LIBNAME).la $(PKG_LIB_DIR)/$(LIBNAME).la; \
+-	../$(INSTALL) -S $(PKG_LIB_DIR)/$(LIBNAME).so $(PKG_DEVLIB_DIR)/$(LIBNAME).so; \
+-	fi
++INSTALL_LTLIB_DEV = $(INSTALL_LTLIB)
+ else
+ INSTALL_LTLIB_DEV = $(INSTALL_LTLIB_STATIC)
+ endif

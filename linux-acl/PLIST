@@ -1,20 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:54 thomasklausner Exp $
-bin/getfacl
+@comment $NetBSD$
 bin/chacl
+bin/getfacl
 bin/setfacl
 include/acl/libacl.h
 include/sys/acl.h
-libexec/libacl.la
-lib/libacl.a
 lib/libacl.la
-lib/libacl.so
-lib/libacl.so.1
-lib/libacl.so.1.1.0
-man/man1/getfacl.1
 man/man1/chacl.1
+man/man1/getfacl.1
 man/man1/setfacl.1
 man/man3/acl_add_perm.3
 man/man3/acl_calc_mask.3
+man/man3/acl_check.3
 man/man3/acl_clear_perms.3
 man/man3/acl_cmp.3
 man/man3/acl_copy_entry.3
@@ -36,11 +32,10 @@ man/man3/acl_from_text.3
 man/man3/acl_get_entry.3
 man/man3/acl_get_fd.3
 man/man3/acl_get_file.3
-man/man3/acl_get_permset.3
 man/man3/acl_get_perm.3
+man/man3/acl_get_permset.3
 man/man3/acl_get_qualifier.3
 man/man3/acl_get_tag_type.3
-man/man3/acl_check.3
 man/man3/acl_init.3
 man/man3/acl_set_fd.3
 man/man3/acl_set_file.3
@@ -52,11 +47,14 @@ man/man3/acl_to_any_text.3
 man/man3/acl_to_text.3
 man/man3/acl_valid.3
 man/man5/acl.5
-share/doc/acl/COPYING
 share/doc/acl/CHANGES.gz
+share/doc/acl/COPYING
+share/doc/acl/COPYING.LGPL
 share/doc/acl/PORTING
 share/doc/acl/README
 share/locale/de/LC_MESSAGES/acl.mo
+share/locale/es/LC_MESSAGES/acl.mo
 share/locale/fr/LC_MESSAGES/acl.mo
+share/locale/gl/LC_MESSAGES/acl.mo
 share/locale/pl/LC_MESSAGES/acl.mo
 share/locale/sv/LC_MESSAGES/acl.mo
