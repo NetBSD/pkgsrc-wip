@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2014/08/22 09:14:38 thomasklausner Exp $
 
-SHA1 (xfs-1.1.4.tar.bz2) = 5b8c653476a09e65d93eb7e40da99794366699f5
-RMD160 (xfs-1.1.4.tar.bz2) = eabf3262ec4263fd7540e242e5f1b0e8c7225227
-Size (xfs-1.1.4.tar.bz2) = 239623 bytes
+SHA1 (xfs-1.2.0.tar.bz2) = 00848fcc2915ed8b00e75ac311c4727327324f57
+RMD160 (xfs-1.2.0.tar.bz2) = 131a282dcf30b3e56e39d3107349fe4fcb020e9a
+SHA512 (xfs-1.2.0.tar.bz2) = 557b08aa07919239ce345d60b288b886640200bb1a59649fc890c3ccaa8559cc6745189614e696ab1b390ec024b393be5493787b7b0d2b3545b342d743c2e0ef
+Size (xfs-1.2.0.tar.bz2) = 233957 bytes
