@@ -4551,7 +4551,6 @@ SUBDIR+=	wrcs
 SUBDIR+=	wsmake
 SUBDIR+=	wvstreams
 SUBDIR+=	wxGTK-test
-SUBDIR+=	wxmaxima
 SUBDIR+=	wxmaxima-git
 SUBDIR+=	xace
 SUBDIR+=	xalan-c
