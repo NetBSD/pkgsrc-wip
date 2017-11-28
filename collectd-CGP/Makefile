@@ -5,7 +5,7 @@ PKGNAME=        ${PHP_PKG_PREFIX}-${DISTNAME:S/-1//}
 CATEGORIES=	www
 GITHUB_PROJECT=	CGP
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=pommi/}
-GITHUB_TAG=     v${PKGVERSION_NOREV}
+GITHUB_TAG=     v${DISTNAME:S/collectd-cgp-//}
 EXTRACT_SUFX=   .zip
 
 MAINTAINER=	kethzer.dr@gmail.com
