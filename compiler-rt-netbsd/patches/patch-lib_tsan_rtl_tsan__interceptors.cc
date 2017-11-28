@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/tsan/rtl/tsan_interceptors.cc.orig	2017-11-21 09:38:56.000000000 +0000
+--- lib/tsan/rtl/tsan_interceptors.cc.orig	2017-11-28 14:09:06.655354421 +0000
 +++ lib/tsan/rtl/tsan_interceptors.cc
-@@ -548,7 +550,37 @@ extern "C" void __tsan_setjmp(uptr sp, u
+@@ -550,7 +550,37 @@ extern "C" void __tsan_setjmp(uptr sp, u
    SetJmp(cur_thread(), sp, mangled_sp);
  }
  
@@ -41,7 +41,7 @@ $NetBSD$
  TSAN_INTERCEPTOR(int, setjmp, void *env);
  TSAN_INTERCEPTOR(int, _setjmp, void *env);
  TSAN_INTERCEPTOR(int, sigsetjmp, void *env);
-@@ -593,6 +625,38 @@ DEFINE_REAL(int, sigsetjmp, void *env)
+@@ -595,6 +625,38 @@ DEFINE_REAL(int, sigsetjmp, void *env)
  DEFINE_REAL(int, __sigsetjmp, void *env)
  #endif  // SANITIZER_MAC
  
@@ -80,7 +80,7 @@ $NetBSD$
  TSAN_INTERCEPTOR(void, longjmp, uptr *env, int val) {
    // Note: if we call REAL(longjmp) in the context of ScopedInterceptor,
    // bad things will happen. We will jump over ScopedInterceptor dtor and can
-@@ -611,6 +675,7 @@ TSAN_INTERCEPTOR(void, siglongjmp, uptr 
+@@ -613,6 +675,7 @@ TSAN_INTERCEPTOR(void, siglongjmp, uptr 
    LongJmp(cur_thread(), env);
    REAL(siglongjmp)(env, val);
  }
@@ -88,16 +88,7 @@ $NetBSD$
  
  #if !SANITIZER_MAC
  TSAN_INTERCEPTOR(void*, malloc, uptr size) {
-@@ -2332,7 +2400,7 @@ static __sanitizer_sighandler_ptr signal
-   internal_memset(&act.sa_mask, -1, sizeof(act.sa_mask));
-   act.sa_flags = 0;
-   __sanitizer_sigaction old;
--  int res = sigaction(sig, &act, &old);
-+  int res = sigaction_symname(sig, &act, &old);
-   if (res) return (__sanitizer_sighandler_ptr)sig_err;
-   return old.handler;
- }
-@@ -2540,6 +2608,17 @@ void InitializeInterceptors() {
+@@ -2547,6 +2610,17 @@ void InitializeInterceptors() {
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
@@ -115,7 +106,7 @@ $NetBSD$
  #if !SANITIZER_MAC
    // We can not use TSAN_INTERCEPT to get setjmp addr,
    // because it does &setjmp and setjmp is not present in some versions of libc.
-@@ -2552,6 +2631,7 @@ void InitializeInterceptors() {
+@@ -2559,6 +2633,7 @@ void InitializeInterceptors() {
  
    TSAN_INTERCEPT(longjmp);
    TSAN_INTERCEPT(siglongjmp);
