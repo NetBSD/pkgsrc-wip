@@ -9,7 +9,6 @@ COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 LICENSE=	no-commercial-use
 
 GITHUB_PROJECT=	snes9x
-GITHUB_TAG=	bc8c0d57f954d0505c503d4cb10d6f79bb8445e8
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/libretro
 

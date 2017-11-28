@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-snes9x-1.55-bc8c0d57f954d0505c503d4cb10d6f79bb8445e8.tar.gz) = 8e4cd7ae95ba3006efd0012bd274c9f364389a91
-RMD160 (libretro-snes9x-1.55-bc8c0d57f954d0505c503d4cb10d6f79bb8445e8.tar.gz) = 7ebd12400d731cd7a72ef33a9e80089f38bc97db
-SHA512 (libretro-snes9x-1.55-bc8c0d57f954d0505c503d4cb10d6f79bb8445e8.tar.gz) = b80164bd652c92159cc39f428b3394d108e0c412d2931d96ac2ca5dfd5f5ba5f6e88517aed40f99ce00051d174c372196d0b74c84ad6220fc697994fa6ba9469
-Size (libretro-snes9x-1.55-bc8c0d57f954d0505c503d4cb10d6f79bb8445e8.tar.gz) = 481370 bytes
+SHA1 (libretro-snes9x-1.55.tar.gz) = 366d14f77f70e6eb7b4fac24cde6d79fcfc0add3
+RMD160 (libretro-snes9x-1.55.tar.gz) = ced65a95d14d2eb316494f2066cd4435889c096e
+SHA512 (libretro-snes9x-1.55.tar.gz) = 61d1d6f9c1fc4fbf6253ac7a7d214c771563d7d60238197b2f1525a58f8f9011446f400767d39ec464c69d80574a7dcd78557c8f47605df992af28cb107c0f6e
+Size (libretro-snes9x-1.55.tar.gz) = 2252841 bytes
