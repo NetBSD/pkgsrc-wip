@@ -2,26 +2,6 @@ $NetBSD$
 
 --- lib/tsan/rtl/tsan_interceptors.cc.orig	2017-11-21 09:38:56.000000000 +0000
 +++ lib/tsan/rtl/tsan_interceptors.cc
-@@ -502,15 +502,17 @@ static void SetJmp(ThreadState *thr, upt
- static void LongJmp(ThreadState *thr, uptr *env) {
- #ifdef __powerpc__
-   uptr mangled_sp = env[0];
--#elif SANITIZER_FREEBSD || SANITIZER_NETBSD
-+#elif SANITIZER_FREEBSD
-   uptr mangled_sp = env[2];
-+#elif SANITIZER_NETBSD
-+  uptr mangled_sp = env[6];
- #elif SANITIZER_MAC
- # ifdef __aarch64__
-     uptr mangled_sp = env[13];
- # else
-     uptr mangled_sp = env[2];
- # endif
--#elif defined(SANITIZER_LINUX)
-+#elif SANITIZER_LINUX
- # ifdef __aarch64__
-   uptr mangled_sp = env[13];
- # elif defined(__mips64)
 @@ -548,7 +550,37 @@ extern "C" void __tsan_setjmp(uptr sp, u
    SetJmp(cur_thread(), sp, mangled_sp);
  }
