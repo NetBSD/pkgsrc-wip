@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2015/08/23 13:37:02 thomasklausner Exp $
-
-SHA1 (xombrero-1.6.3.tgz) = d79af9184d2c812942d9eacc0fd5273cdb103da7
-RMD160 (xombrero-1.6.3.tgz) = 588c1a7241d7c9426aeb0ae000b02bc8f554077f
-Size (xombrero-1.6.3.tgz) = 290478 bytes
-SHA1 (patch-netbsd_Makefile) = 550745ddebea268b3eb9dbf6ea5cf0d8e8d82de0

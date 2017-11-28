@@ -4622,7 +4622,6 @@ SUBDIR+=	xmms-volnorm
 SUBDIR+=	xmms2
 SUBDIR+=	xmoto
 SUBDIR+=	xnee
-SUBDIR+=	xombrero
 SUBDIR+=	xonotic
 SUBDIR+=	xoo
 SUBDIR+=	xoreos

@@ -1,4 +1,0 @@
-xombrero is a minimalist web browser with sophisticated security features
-designed-in, rather than through an add-on after-the-fact. In particular, it
-provides both perswstent and per-session controls for scripts and cookies,
-making it easy to thwart tracking and scripting attacks.
