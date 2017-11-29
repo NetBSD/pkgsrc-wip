@@ -6,7 +6,6 @@ share/libretro/info/4do_libretro.info
 share/libretro/info/81_libretro.info
 share/libretro/info/advanced_tests_libretro.info
 share/libretro/info/atari800_libretro.info
-share/libretro/info/beetle_psx_libretro.info
 share/libretro/info/blastem_libretro.info
 share/libretro/info/bluemsx_libretro.info
 share/libretro/info/bnes_libretro.info
@@ -18,7 +17,7 @@ share/libretro/info/bsnes_mercury_balanced_libretro.info
 share/libretro/info/bsnes_mercury_performance_libretro.info
 share/libretro/info/bsnes_performance_libretro.info
 share/libretro/info/cap32_libretro.info
-share/libretro/info/chaigame_libretro.info
+share/libretro/info/chailove_libretro.info
 share/libretro/info/citra_libretro.info
 share/libretro/info/craft_libretro.info
 share/libretro/info/crocods_libretro.info
@@ -42,6 +41,7 @@ share/libretro/info/fbalpha_libretro.info
 share/libretro/info/fceumm_libretro.info
 share/libretro/info/ffmpeg_libretro.info
 share/libretro/info/fmsx_libretro.info
+share/libretro/info/freej2me_libretro.info
 share/libretro/info/fsuae_libretro.info
 share/libretro/info/fuse_libretro.info
 share/libretro/info/gambatte_libretro.info
@@ -51,11 +51,13 @@ share/libretro/info/gpsp_libretro.info
 share/libretro/info/gw_libretro.info
 share/libretro/info/handy_libretro.info
 share/libretro/info/hatari_libretro.info
+share/libretro/info/higan_sfc_libretro.info
 share/libretro/info/imageviewer_libretro.info
 share/libretro/info/lutro_libretro.info
 share/libretro/info/mame2000_libretro.info
 share/libretro/info/mame2003_libretro.info
 share/libretro/info/mame2003_midway_libretro.info
+share/libretro/info/mame2009_libretro.info
 share/libretro/info/mame2010_libretro.info
 share/libretro/info/mame2014_libretro.info
 share/libretro/info/mame2016_libretro.info
@@ -100,7 +102,6 @@ share/libretro/info/pokemini_libretro.info
 share/libretro/info/ppsspp_libretro.info
 share/libretro/info/prboom_libretro.info
 share/libretro/info/prosystem_libretro.info
-share/libretro/info/psp1_libretro.info
 share/libretro/info/puae_libretro.info
 share/libretro/info/px68k_libretro.info
 share/libretro/info/quicknes_libretro.info
