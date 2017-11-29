@@ -10,7 +10,8 @@ LICENSE=	no-commercial-use
 
 GITHUB_PROJECT=	snes9x
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/libretro
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+BUILD_DIRS=	libretro
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
@@ -18,7 +19,7 @@ USE_LANGUAGES=	c c++
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/snes9x_libretro.so \
+	${INSTALL_LIB} ${WRKSRC}/libretro/snes9x_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/snes9x_libretro.so
 
 .include "../../mk/bsd.pkg.mk"
