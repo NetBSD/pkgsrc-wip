@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fusionpbx-4.2
+DISTNAME=	fusionpbx-4.2.2
 CATEGORIES=	comms net audio
 GITHUB_PROJECT=	fusionpbx
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fusionpbx/}
@@ -38,7 +38,11 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql-[0-9]*:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
-DEPENDS+=	memcached-[0-9]*:../../devel/memcached
+
+.if (${PHP_VERSION_DEFAULT} == "56")
+DEPENDS+=	${PHP_PKG_PREFIX}-memcache-[0-9]*:../../devel/php-memcache
+DEPENDS+=	${PHP_PKG_PREFIX}-memcached-[0-9]*:../../devel/php-memcached
+.endif
 
 do-install:
 	cd ${WRKSRC}/${PKGNAME} && pax -rw -pe . ${DESTDIR}${PREFIX}/${INSTALLATION_DIRS}
