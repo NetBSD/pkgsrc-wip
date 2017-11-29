@@ -6,9 +6,10 @@ compiler.
 
 MPROTECT must be disabled for RetroArch for this core to be usable.
 
--
+-----
 
 All of the required asset files can be downloaded or cloned with git:
+
 git clone https://github.com/orbea/libretro-ppsspp-assets PPSSPP
 
 They must be placed in the RetroArch system directory or content directory,

@@ -2,9 +2,9 @@ $NetBSD$
 
 Allow using our own flags to link to pkgsrc ffmpeg.
 
---- Makefile.orig	2016-12-15 00:13:17.000000000 +0000
-+++ Makefile
-@@ -41,7 +41,6 @@ endif
+--- libretro/Makefile.orig	2017-11-26 20:20:47.000000000 +0000
++++ libretro/Makefile
+@@ -45,7 +45,6 @@ endif
  
  # Dirs
  CORE_DIR			= ..
@@ -12,7 +12,7 @@ Allow using our own flags to link to pkgsrc ffmpeg.
  LIBRETRODIR		= $(CORE_DIR)/libretro
  COREDIR			= $(CORE_DIR)/Core
  COMMONDIR		= $(CORE_DIR)/Common
-@@ -56,18 +55,12 @@ ifneq ($(GIT_VERSION)," unknown")
+@@ -60,18 +59,12 @@ ifneq ($(GIT_VERSION)," unknown")
  	CXXFLAGS += -DGIT_VERSION=\"$(GIT_VERSION)\"
  endif
  CC_AS ?= $(CC)

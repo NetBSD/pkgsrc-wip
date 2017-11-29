@@ -1,29 +1,25 @@
 # $NetBSD$
 
-PKGNAME=	libretro-ppsspp-20161215
+PKGNAME=	libretro-ppsspp-20171126
 CATEGORIES=	emulators
 
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=PPSSPP
 COMMENT=	Libretro core based on the PPSSPP PlayStation Portable emulator
 LICENSE=	gnu-gpl-v2
 
-PPSSPP_TAG=	5f7bcf7bfc15f83d405bcecd7a163a55ad1e7573
-NATIVE_TAG=	9baedbcc2a07b3bccc6d8b8d170498111b990adc
-ARMIPS_TAG=	8bd93be9ba715d2f5723857edacf936ae904d07c
+PPSSPP_TAG=	abee4eb1c967467a4c1886a9174738eb37577496
+ARMIPS_TAG=	770365d44df35d6e675c58bb2a774ca412278ef5
 
 DISTFILES+=	${PPSSPP_TAG}.tar.gz
 SITES.${PPSSPP_TAG}.tar.gz= \
 		${MASTER_SITE_GITHUB:=libretro/libretro-ppsspp/archive/}
 
-DISTFILES+=	${NATIVE_TAG}.tar.gz
-SITES.${NATIVE_TAG}.tar.gz= \
-		${MASTER_SITE_GITHUB:=libretro/ppsspp-native/archive/}
-
 DISTFILES+=	${ARMIPS_TAG}.tar.gz
 SITES.${ARMIPS_TAG}.tar.gz= \
 		${MASTER_SITE_GITHUB:=Kingcom/armips/archive/}
 
-WRKSRC=		${WRKDIR}/libretro-ppsspp-${PPSSPP_TAG}/libretro
+WRKSRC=		${WRKDIR}/libretro-ppsspp-${PPSSPP_TAG}
+BUILD_DIRS=	libretro
 
 USE_TOOLS=	gmake pkg-config
 USE_LANGUAGES=	c c++
@@ -33,23 +29,22 @@ EXTRACT_USING=	bsdtar
 
 .if !empty(MACHINE_ARCH:M*arm*)
 CFLAGS+=		-marm
-BUILD_MAKE_FLAGS+=	ARCH=arm
-.elif !empty(MACHINE_ARCH:M*aarch64*)
-BUILD_MAKE_FLAGS+=	ARCH=arm64
+BUILD_MAKE_FLAGS+=	WITH_DYNAREC=arm
 .elif !empty(MACHINE_ARCH:M*x86_64*)
-BUILD_MAKE_FLAGS+=	ARCH=x86_64
+BUILD_MAKE_FLAGS+=	WITH_DYNAREC=x86_64
+.elif !empty(MACHINE_ARCH:M*i386*)
+BUILD_MAKE_FLAGS+=	WITH_DYNAREC=x86
 .endif
 
-BUILD_MAKE_FLAGS+=	FFMPEGLDFLAGS="`pkg-config --libs libavformat libavcodec libswresample libswscale`"
+BUILD_MAKE_FLAGS+=	FFMPEGLDFLAGS="`pkg-config --libs libavformat libavcodec libavutil libswresample libswscale`"
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 post-extract:
-	${MV} ${WRKDIR}/ppsspp-native-${NATIVE_TAG}/* ${WRKSRC}/../native
-	${MV} ${WRKDIR}/armips-${ARMIPS_TAG}/* ${WRKSRC}/../ext/armips
+	${MV} ${WRKDIR}/armips-${ARMIPS_TAG}/* ${WRKSRC}/ext/armips
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/ppsspp_libretro.so \
+	${INSTALL_LIB} ${WRKSRC}/libretro/ppsspp_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/ppsspp_libretro.so
 
 .include "options.mk"
