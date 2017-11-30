@@ -1,17 +1,7 @@
 $NetBSD$
 
-SHA1 (conkeror/11121bed996ce84e3536c3c8266cdf3164e02b5a.tar.gz) = 4c60e0b7ed6949ee3e8f783f46b018118f8145eb
-RMD160 (conkeror/11121bed996ce84e3536c3c8266cdf3164e02b5a.tar.gz) = 7186d7af0e5955353f6051d73b58adb40558b327
-SHA512 (conkeror/11121bed996ce84e3536c3c8266cdf3164e02b5a.tar.gz) = 1ae2144b86acbdce6c3b85cfb9d89f205964cf1091effe2c1bd417cfb5d27002236bc8c9ec5f2aaa7806c8f12696e77ae65f557cc6fe9d1e594fe4a2f324bc13
-Size (conkeror/11121bed996ce84e3536c3c8266cdf3164e02b5a.tar.gz) = 315860 bytes
-SHA1 (patch-application.ini) = ed51742eff6309256cb6bb5f4b401d8791a6914a
+SHA1 (conkeror/685f24e3aeffc408dcea883e1d0c738cb18bbe8d.tar.gz) = 44c5cb4677bd55bed831ae978d47d655ec6bf8a7
+RMD160 (conkeror/685f24e3aeffc408dcea883e1d0c738cb18bbe8d.tar.gz) = 32fcd02907c43e35784cd7b93a819078757363d8
+SHA512 (conkeror/685f24e3aeffc408dcea883e1d0c738cb18bbe8d.tar.gz) = 58dfb429ca44519216c5a808a9448a8741a6217f559565ba8066ec552f8cb2c43c168345041d3b58e0e25f7e07412700a82abec574fb21277c7bb48361a37dab
+Size (conkeror/685f24e3aeffc408dcea883e1d0c738cb18bbe8d.tar.gz) = 316633 bytes
 SHA1 (patch-conkeror.in) = 0fcf39a72c30a7061f1bd91d465e84cc84129078
-SHA1 (patch-favicon) = 71a07c9e6bb9a4d32531e15b976c782e7016fe83
-SHA1 (patch-modules_download-manager.js) = 8125b1369ecd942b12d6e3fcceec7552586082d1
-SHA1 (patch-modules_history.js) = 097d55d924a09a2f75539098de476948323234f4
-SHA1 (patch-modules_keywords.js) = 639a51fb8e0cbefc360d34972d1bb38613ff22b6
-SHA1 (patch-modules_page-modes_key-kill.js) = 73e0ee87bf6e7e8e0338626ea2ef04da4e0dea24
-SHA1 (patch-modules_permission-manager.js) = 8d90c8fa3734c7ea410718e7aca1e4854e1f1211
-SHA1 (patch-search-engines) = 241a145a911bb49b7de0acaa45ac3733e079791e
-SHA1 (patch-search-engines2) = 0c67eab94dc7a7729935d85c753d9c4af418379f
-SHA1 (patch-search-engines3) = f67e77cf644eb484df56ba3ffa9d183106671c25
