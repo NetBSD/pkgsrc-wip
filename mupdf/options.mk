@@ -12,6 +12,8 @@ PLIST_VARS+=		opengl
 #
 .if !empty(PKG_OPTIONS:Mcurl)
 .include "../../www/curl/buildlink3.mk"
+.else
+MAKE_ENV+=	HAVE_CURL=no
 .endif
 
 #
@@ -21,4 +23,6 @@ PLIST_VARS+=		opengl
 PLIST.opengl=	yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
+.else
+MAKE_ENV+=	HAVE_GLUT=no
 .endif

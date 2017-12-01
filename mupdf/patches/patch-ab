@@ -65,7 +65,7 @@ $NetBSD: patch-ab,v 1.15 2017/05/19 18:00:38 fhajny Exp $
  endif
  
 +ifeq "$(shell pkg-config --exists glut && pkg-config --exists gl && echo yes)" "yes"
-+HAVE_GLUT := yes
++HAVE_GLUT ?= yes
 +SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
 +SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
 +endif
