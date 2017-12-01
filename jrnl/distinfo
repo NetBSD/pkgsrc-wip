@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (jrnl-1.9.7.tar.gz) = 65914c66762ded186201a526b19e702dd35b0939
-RMD160 (jrnl-1.9.7.tar.gz) = 5cb9b07e151327234bcf7cf3151fef7b32c40db5
-SHA512 (jrnl-1.9.7.tar.gz) = 6303856cca6bced7e6375834c39489b986cf89cffc9fc8e1d159065c8d6b7c8c020d1f4d6b024326a9cb89f0d69c59709a7bf82d1808baa2e9d9ef3908eeeec8
-Size (jrnl-1.9.7.tar.gz) = 169141 bytes
+SHA1 (jrnl-1.9.8.tar.gz) = 11c6e522e6074f5df39ecd664f24b7e70f67ce27
+RMD160 (jrnl-1.9.8.tar.gz) = b91ed3326a11c120c250d548d593e1f858db1663
+SHA512 (jrnl-1.9.8.tar.gz) = dad2e78a984c2415674e26e833dac118bc99acbd43b860dbf39a19a0374c92393b91087f0d1b3163ad0cf851c7abfebe80ce74320d6058f8a494a84bc51d0aef
+Size (jrnl-1.9.8.tar.gz) = 193595 bytes
 SHA1 (patch-setup.py) = 41ccaebed6a5bf3aca3a94eec376e6de830e0f32

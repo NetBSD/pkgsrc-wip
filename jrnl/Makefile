@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	jrnl-1.9.7
+DISTNAME=	jrnl-1.9.8
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maebert/}
 
