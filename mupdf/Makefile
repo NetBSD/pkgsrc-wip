@@ -55,6 +55,7 @@ post-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 # XXX: Needs lcms2-2.9 that ATM is not in pkgsrc.
+#BUILDLINK_API_DEPENDS.lcms2+= lcms2>=2.9
 #.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
