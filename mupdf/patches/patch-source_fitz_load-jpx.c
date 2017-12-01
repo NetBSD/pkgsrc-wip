@@ -1,6 +1,7 @@
 $NetBSD: patch-source_fitz_load-jpx.c,v 1.6 2017/10/19 20:32:07 leot Exp $
 
-- Restrict OPJ_STATIC to Windows (avoid linking errors due to hidden symbols)
+- Restrict OPJ_STATIC to Windows. 
+  This avoid linking errors due to opj_* hidden symbols when linking libmupdf.
 
 - MuPDF does some locking around its allocation calls; it overrides openjpeg's
   allocators to do this locking too. However mupdf tries to manually align things
