@@ -2,7 +2,7 @@
 bin/mjsgen
 bin/mujstest
 bin/mupdf
-${PLIST.glfw}bin/mupdf-gl
+${PLIST.opengl}bin/mupdf-gl
 bin/muraster
 bin/mutool
 include/mupdf/fitz.h

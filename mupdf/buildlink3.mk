@@ -16,9 +16,9 @@ pkgbase := mupdf
 .include "../../www/curl/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.mupdf:Mglfw)
+.if !empty(PKG_BUILD_OPTIONS.mupdf:Mopengl)
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glfw/buildlink3.mk"
+.include "../../graphics/glut/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"

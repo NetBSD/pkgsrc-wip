@@ -64,10 +64,10 @@ $NetBSD: patch-ab,v 1.15 2017/05/19 18:00:38 fhajny Exp $
  SYS_X11_LIBS := $(shell pkg-config --libs x11 xext)
  endif
  
-+ifeq "$(shell pkg-config --exists freeglut && pkg-config --exists gl && echo yes)" "yes"
++ifeq "$(shell pkg-config --exists glut && pkg-config --exists gl && echo yes)" "yes"
 +HAVE_GLUT := yes
-+SYS_GLUT_CFLAGS := $(shell pkg-config --cflags freeglut)
-+SYS_GLUT_LIBS := $(shell pkg-config --libs freeglut)
++SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
++SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
 +endif
 +
  ifeq "$(shell pkg-config --exists harfbuzz && echo yes)" "yes"
