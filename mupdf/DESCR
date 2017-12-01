@@ -1,0 +1,18 @@
+MuPDF is a lightweight PDF, XPS, and E-book viewer.
+
+The renderer in MuPDF is tailored for high quality anti-aliased
+graphics. It renders text with metrics and spacing accurate to
+within fractions of a pixel for the highest fidelity in reproducing
+the look of a printed page on screen. MuPDF is also small, fast,
+and yet complete.
+
+MuPDF supports PDF 1.7 with transparency, encryption, hyperlinks,
+annotations, searching and more. MuPDF also reads many other document
+and e-book formats, such as XPS, OpenXPS, CBZ, EPUB and FictionBook
+2.
+
+MuPDF is written modularly, so features can be added and removed
+by integrators if they so desire.
+
+Since the 1.2 release of MuPDF, we have optional support for
+interactive features such as form filling, javascript and transitions.

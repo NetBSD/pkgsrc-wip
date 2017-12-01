@@ -1,0 +1,5 @@
+- Adjust comment in the patches to reflect current adjustments
+- Document more in depth why we don't use/depends on lcms2 ATM (if needed,
+  probably in some patches)
+- Test `curl' option
+- Adjust for `glfw -> freeglut' transition and test it
