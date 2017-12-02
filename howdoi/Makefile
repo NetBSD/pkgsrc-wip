@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	howdoi-1.1.9
+DISTNAME=	howdoi-1.1.11
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/howdoi/}
 
