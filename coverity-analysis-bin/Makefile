@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	cov-analysis-netbsd64-8.7.0
-PKGNAME=	coverity-analysis-bin-8.7.0
+DISTNAME=	cov-analysis-netbsd64-2017.07
+PKGNAME=	coverity-analysis-bin-2017.07
 CATEGORIES=	devel
 MASTER_SITES=	# http://scan.coverity.com/download/
 

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (cov-analysis-netbsd64-8.7.0.tar.gz) = a6f6f7f596888d88807157eb75a95eef081ccb0a
-RMD160 (cov-analysis-netbsd64-8.7.0.tar.gz) = 9c2a5ec27c4c5293aa6ce29599693ea7d022084a
-SHA512 (cov-analysis-netbsd64-8.7.0.tar.gz) = e0d279aefcbb7bef6e3267739f47529b8770a118950de0dc7517c2f565f44e64e98c16ca3a4b71069e975f20b09b033b61af8943cb040a4ceb37fa0706d89a30
-Size (cov-analysis-netbsd64-8.7.0.tar.gz) = 69947746 bytes
+SHA1 (cov-analysis-netbsd64-2017.07.tar.gz) = 35c4ab21d92cc618b4f6fa935872d74794372e6b
+RMD160 (cov-analysis-netbsd64-2017.07.tar.gz) = 37e48be666ecd7d68a86e3f2ae8e692ff42a6fa6
+SHA512 (cov-analysis-netbsd64-2017.07.tar.gz) = 1850401ae213b62cf6ab22c4fb9229c80f92f91469bac84843d7e5efca49daf0fb94c7b388c701fed9619f279005344f1b8946868d0e0001e5932a23bc0b0b99
+Size (cov-analysis-netbsd64-2017.07.tar.gz) = 82906873 bytes
