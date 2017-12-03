@@ -46,6 +46,8 @@ REPLACE_SH=	src/taskdctl
 MAKE_DIRS=+	${TASKD_DATA}
 OWN_DIRS_PERMS+=	${TASKD_DATA} ${TASKD_USER} ${TASKD_GROUP} 0750
 
+RCD_SCRIPTS=	taskd
+
 post-install:
 .for file in ${EGFILES}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${EGDIR}/${file}
