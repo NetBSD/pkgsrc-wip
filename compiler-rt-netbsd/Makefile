@@ -33,7 +33,7 @@ post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
 .include "../../wip/mk/svn-package.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
-.include "../../wip/llvm-netbsd/buildlink3.mk"
+#DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
+#.include "../../wip/llvm-netbsd/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
