@@ -8,7 +8,7 @@ MASTER_SITES=	https://mc.pp.se/dc/files/
 MAINTAINER=	tr@vispaul.me
 HOMEPAGE=	https://mc.pp.se/dc/sw.html
 COMMENT=	Emulator capable of running some VMS games
-LICENSE=	public-domain
+LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/vms
 GNU_CONFIGURE=	yes
