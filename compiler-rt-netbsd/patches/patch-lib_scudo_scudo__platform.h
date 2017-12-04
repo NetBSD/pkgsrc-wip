@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/scudo/scudo_platform.h.orig	2017-11-06 03:58:05.000000000 +0000
+--- lib/scudo/scudo_platform.h.orig	2017-12-04 19:21:19.000545599 +0000
 +++ lib/scudo/scudo_platform.h
 @@ -16,7 +16,7 @@
  
