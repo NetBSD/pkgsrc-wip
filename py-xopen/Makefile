@@ -5,21 +5,17 @@
 #              Fri Nov  3 14:01:34 CDT 2017               #
 ###########################################################
 
-DISTNAME=	xopen-${PORTVERSION}
-PKGNAME=	${PYPKGPREFIX}-xopen-${PORTVERSION}
-CATEGORIES=	devel
+DISTNAME=	xopen-0.3.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
 
 MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/xopen
 COMMENT=	Open compressed files transparently
-# Check this
 LICENSE=	mit
 
 PYDISTUTILSPKG=	yes
 
-PORTVERSION=	0.3.2
-
-# Verify that we shouldn't use egg.mk or extensions.mk instead.
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
