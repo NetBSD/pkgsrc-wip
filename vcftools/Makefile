@@ -5,12 +5,12 @@
 #              Wed May 11 13:04:07 CDT 2016               #
 ###########################################################
 
-DISTNAME=	vcftools_${PORTVERSION}
-PKGNAME=	vcftools-${PORTVERSION}
+DISTNAME=	vcftools_${DISTVERSION}
+DISTVERSION=	0.1.15
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcftools/}
 GITHUB_PROJECT=	vcftools
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_TAG=	v${DISTVERSION}
 
 MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	https://github.com/vcftools/vcftools
@@ -25,12 +25,10 @@ REPLACE_PERL=	src/perl/*
 # No zlib.pc on FreeBSD 9.x
 CONFIGURE_ENV=	ZLIB_CFLAGS=" " ZLIB_LIBS="-lz"
 
-PORTVERSION=	0.1.15
-
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
 .include "../../devel/zlib/buildlink3.mk"
-# Causes configure to fail
+# Causes configure to fail.  Perl modules are prebuilt.
 #.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
