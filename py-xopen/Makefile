@@ -18,7 +18,7 @@ LICENSE=	mit
 
 PYDISTUTILSPKG=	yes
 
-PORTVERSION=	0.2.1
+PORTVERSION=	0.3.2
 
 # Verify that we shouldn't use egg.mk or extensions.mk instead.
 .include "../../lang/python/distutils.mk"
