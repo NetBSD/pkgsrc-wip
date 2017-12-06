@@ -10,7 +10,5 @@ HOMEPAGE=	https://pypi.python.org/pypi/xopen
 COMMENT=	Open compressed files transparently
 LICENSE=	mit
 
-PYDISTUTILSPKG=	yes
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
