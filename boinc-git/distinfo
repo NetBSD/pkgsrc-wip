@@ -1,7 +1,7 @@
 $NetBSD$
 
 SHA1 (patch-client_scripts_boinc-client.in) = f8adeab7c51783106e8784e4712b20aa5d1fcfae
-SHA1 (patch-clientgui_AsyncRPC.cpp) = 8562ef38806310ca978cdf9019b3f42b70d1b6d2
+SHA1 (patch-clientgui_AsyncRPC.cpp) = 80281316fb4c33ccac6fc3eef17682fbbb90d3a2
 SHA1 (patch-configure.ac) = 9173c44906200c0e0a48b7193f0acb5640ca998c
-SHA1 (patch-lib_diagnostics.cpp) = a4464fcab34460cb289de1d32e3a16f217f5d9f7
+SHA1 (patch-lib_diagnostics.cpp) = 0e791d8f70a557cf0833884d5a4b3e491ac19515
 SHA1 (patch-lib_diagnostics.h) = 6a7b9ca95b0c951e0473318b386f91a5ee777846

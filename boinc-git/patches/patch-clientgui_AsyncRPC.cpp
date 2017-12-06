@@ -3,12 +3,12 @@ $NetBSD$
 Correct header path.
 Do not use uselocale on NetBSD.
 
---- clientgui/AsyncRPC.cpp.orig	2016-07-07 11:29:38.000000000 +0000
+--- clientgui/AsyncRPC.cpp.orig	2017-12-06 19:29:06.000000000 +0000
 +++ clientgui/AsyncRPC.cpp
 @@ -20,7 +20,7 @@
  #endif
  
- #if !(defined(_WIN32) || (defined(__WXMAC__) && (MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_4)))
+ #if HAVE_XLOCALE_H
 -#include <xlocale.h>
 +#include <wx/xlocale.h>
  #endif

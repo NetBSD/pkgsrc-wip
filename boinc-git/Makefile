@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	boinc-7.6
+DISTNAME=	boinc-7.9.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BOINC/}
 
@@ -20,6 +20,7 @@ USE_TOOLS+=	gmake	# seems to be required only by ${WRKSRC}/_autosetup
 USE_LANGUAGES=	c c++ fortran
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--disable-manager
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./_autosetup
