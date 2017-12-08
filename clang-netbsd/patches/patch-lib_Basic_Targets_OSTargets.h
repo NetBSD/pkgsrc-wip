@@ -1,17 +1,16 @@
 $NetBSD$
 
---- lib/Basic/Targets/OSTargets.h.orig	2017-07-24 13:42:56.662132868 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2017-12-08 22:12:36.236521252 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -365,6 +365,8 @@ protected:
+@@ -358,12 +358,23 @@ protected:
      Builder.defineMacro("__ELF__");
      if (Opts.POSIXThreads)
        Builder.defineMacro("_REENTRANT");
 +    if (this->HasFloat128)
 +      Builder.defineMacro("__FLOAT128__");
+   }
  
-     switch (Triple.getArch()) {
-     default:
-@@ -382,6 +384,15 @@ public:
+ public:
    NetBSDTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
        : OSTargetInfo<Target>(Triple, Opts) {
      this->MCountName = "_mcount";
