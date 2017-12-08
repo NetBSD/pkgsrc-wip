@@ -185,7 +185,6 @@ Suggested ready to import packages
 	o trustedQSL
 	o vlevel
 	o xmms-skins [pkg/35666]
-	o xombrero
 
 Suggested infrastructure improvements
 =====================================
@@ -195,8 +194,3 @@ Suggested infrastructure improvements
 	o Support using cached distfiles for 'tool update' instead
 	  of checking out the whole repository again, in
 	  hg-package.mk.
-
-Suggested fixes
-===============
-
-	o xombrero-1.4.0
