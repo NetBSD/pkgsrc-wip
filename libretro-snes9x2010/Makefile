@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-snes9x2010-20170218
+DISTNAME=	libretro-snes9x2010-20171112
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,8 +9,9 @@ COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 LICENSE=	no-commercial-use
 
 GITHUB_PROJECT=	snes9x2010
-GITHUB_TAG=	b2a69de0df1eb39ed362806f9c9633f4544272af
+GITHUB_TAG=	cdc2a1f30a08b9e46c14d64de89b250907ec46c7
 
+MAKE_FILE=	Makefile.libretro
 USE_TOOLS=	gmake
 
 .include "../../mk/endian.mk"
