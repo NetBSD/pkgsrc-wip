@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/Transforms/Instrumentation/MemorySanitizer.cpp.orig	2017-10-25 17:03:32.656232584 +0000
+--- lib/Transforms/Instrumentation/MemorySanitizer.cpp.orig	2017-12-08 18:49:42.329089043 +0000
 +++ lib/Transforms/Instrumentation/MemorySanitizer.cpp
 @@ -320,6 +320,14 @@ static const MemoryMapParams FreeBSD_X86
    0x380000000000,  // OriginBase
@@ -8,10 +8,10 @@ $NetBSD$
  
 +// x86_64 NetBSD
 +static const MemoryMapParams NetBSD_X86_64_MemoryMapParams = {
-+  0xc00000000000,  // AndMask
-+  0x200000000000,  // XorMask
-+  0x100000000000,  // ShadowBase
-+  0x380000000000,  // OriginBase
++  0,               // AndMask
++  0x500000000000,  // XorMask
++  0,               // ShadowBase
++  0x100000000000,  // OriginBase
 +};
 +
  static const PlatformMemoryMapParams Linux_X86_MemoryMapParams = {
