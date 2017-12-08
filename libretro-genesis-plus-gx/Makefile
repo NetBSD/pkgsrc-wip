@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-genesis-plus-gx-20171016
+DISTNAME=	libretro-genesis-plus-gx-20171128
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	picodrive-license
 
 GITHUB_PROJECT=	Genesis-Plus-GX
-GITHUB_TAG=	2c8af6348ac0f808fbd965735823392d316f349d
+GITHUB_TAG=	4e1b797e86f5f4d1113063037a69ef5dc351aca7
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS=	gmake
