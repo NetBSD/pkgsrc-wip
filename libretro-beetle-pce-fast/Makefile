@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/11 00:16:25 jmcneill Exp $
 
-DISTNAME=	libretro-beetle-pce-fast-20171024
+DISTNAME=	libretro-beetle-pce-fast-20171202
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Libretro core based on the Mednafen PC Engine emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-pce-fast-libretro
-GITHUB_TAG=	d2080d754aad8f6d1006e0ce2d03b86612f4a38f
+GITHUB_TAG=	0f1326a24a6cc802f7a6ece75a3d95232101f240
 
 EXTRACT_USING=	bsdtar
 
