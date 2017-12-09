@@ -105,7 +105,7 @@ share/gtk-doc/html/libvips/VipsRegion.html
 share/gtk-doc/html/libvips/VipsThreadState.html
 share/gtk-doc/html/libvips/annotation-glossary.html
 share/gtk-doc/html/libvips/api-index-full.html
-share/gtk-doc/html/libvips/binding.html
+share/gtk-doc/html/libvips/binding.md.html
 share/gtk-doc/html/libvips/ch01.html
 share/gtk-doc/html/libvips/ch02.html
 share/gtk-doc/html/libvips/ch03.html
@@ -115,6 +115,7 @@ share/gtk-doc/html/libvips/file-format.html
 share/gtk-doc/html/libvips/func-list.html
 share/gtk-doc/html/libvips/home.png
 share/gtk-doc/html/libvips/index.html
+share/gtk-doc/html/libvips/index.sgml
 share/gtk-doc/html/libvips/interconvert.png
 share/gtk-doc/html/libvips/left-insensitive.png
 share/gtk-doc/html/libvips/left.png
@@ -154,7 +155,6 @@ share/gtk-doc/html/libvips/up.png
 share/gtk-doc/html/libvips/using-cli.html
 share/gtk-doc/html/libvips/using-from-c.html
 share/gtk-doc/html/libvips/using-from-cpp.html
-share/gtk-doc/html/libvips/using-from-python.html
 share/gtk-doc/html/libvips/using-threads.html
-share/locale/de/LC_MESSAGES/vips8.5.mo
-share/locale/en_GB/LC_MESSAGES/vips8.5.mo
+share/locale/de/LC_MESSAGES/vips8.6.mo
+share/locale/en_GB/LC_MESSAGES/vips8.6.mo
