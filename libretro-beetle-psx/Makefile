@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-psx-20171012
+DISTNAME=	libretro-beetle-psx-20171207
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Libretro core based on the Mednafen PlayStation emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-psx-libretro
-GITHUB_TAG=	b6a39e90526f4db5554c680fb6c56e9b2c8ea486
+GITHUB_TAG=	c9a566475e4cc2ba072a97cbae315c97fe971867
 
 EXTRACT_USING=	bsdtar
 
