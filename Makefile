@@ -1776,6 +1776,7 @@ SUBDIR+=	libretro-genesis-plus-gx
 SUBDIR+=	libretro-glsl-shaders
 SUBDIR+=	libretro-mame2003
 SUBDIR+=	libretro-mame2014
+SUBDIR+=	libretro-melonds
 SUBDIR+=	libretro-mgba
 SUBDIR+=	libretro-nestopia
 SUBDIR+=	libretro-np2kai
