@@ -2,17 +2,8 @@ $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
 SHA1 (patch-cmake_config-ix.cmake) = 5068232331d541c2786f01960a80e59252b1ad2c
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = 38ca750154dfc9843a56748078235824b772a147
-SHA1 (patch-lib_msan_msan.h) = 463509082f0b194f9439556632f37c637648802b
-SHA1 (patch-lib_msan_msan__allocator.cc) = 582608180d48dc03cf5d89572489f522c36978f4
 SHA1 (patch-lib_msan_msan__interceptors.cc) = ab97c2ecf0367fa5c78982b6402739ff160b1281
 SHA1 (patch-lib_msan_msan__linux.cc) = d75d7587071a9e7a3f6a08a3008af55319e62cab
-SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = ce8def76d88934a27cbb2f046c217368c83a7150
 SHA1 (patch-lib_scudo_scudo__platform.h) = b3c23678b264ec7568c800bc95e949f1a9b65399
 SHA1 (patch-test_lsan_lit.common.cfg) = 10dc251f80efb96d015a22c740dc20b1843b9a11
-SHA1 (patch-test_msan_ftime.cc) = e64d83c7e8363ac1901ac2ad7a38919c0607fa0b
-SHA1 (patch-test_msan_iconv.cc) = 6566cb3aadd7a185e1217372aa5e7a90b974bc3b
-SHA1 (patch-test_msan_ifaddrs.cc) = e4e018d64211acc134fed798d27dee47d2149313
-SHA1 (patch-test_msan_pvalloc.cc) = ca170027cec694bf0aeda310eee6c12bcf5ed41d
-SHA1 (patch-test_msan_textdomain.cc) = bfb79f49ea6a48e910684f0faee50111f5aa2532
-SHA1 (patch-test_msan_tsearch.cc) = 093f32664509723bc4f9177bdd97300843cffa4f
 SHA1 (patch-test_scudo_lit.cfg) = 171f340505f7c87f74a7814b9c4d12d7fcbc5690
