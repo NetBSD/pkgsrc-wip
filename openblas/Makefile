@@ -30,7 +30,7 @@ LICENSE=	modified-bsd
 # MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
 
 PORTVERSION=	0.2.20
