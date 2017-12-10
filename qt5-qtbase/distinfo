@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (qtbase-opensource-src-5.9.2.tar.xz) = 65332ea9fbeb31384a87fd22ff5ad2d6251bf893
-RMD160 (qtbase-opensource-src-5.9.2.tar.xz) = 2862c7d39f86f625b0f4dfdb2dbce647504a03f6
-SHA512 (qtbase-opensource-src-5.9.2.tar.xz) = a2f965871645256f3d019f71f3febb875455a29d03fccc7a3371ddfeb193b0af12394e779df05adf69fd10fe7b0d966f3915a24528ec7eb3bc36c2db6af2b6e7
-Size (qtbase-opensource-src-5.9.2.tar.xz) = 45148744 bytes
+SHA1 (qtbase-opensource-src-5.9.3.tar.xz) = ccf98c742699e0d39798748777fd438128c15fe4
+RMD160 (qtbase-opensource-src-5.9.3.tar.xz) = 9b7edd7badceb34deeb7df2c1afad3ed02475e62
+SHA512 (qtbase-opensource-src-5.9.3.tar.xz) = 256ffb8760e94c0f87790ed35e210d0c9613e14314ff442dd763cc93fbd5caa6c11c95f5d44b12a7687fb93c9f857878132cf6d76e5933f647ca7beb54b18c7c
+Size (qtbase-opensource-src-5.9.3.tar.xz) = 45160080 bytes
 SHA1 (patch-config.tests_unix_iconv_iconv.cpp) = ffd0107d57e308aa83a780818756c9a538efc591
 SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
 SHA1 (patch-mkspecs_features_create__cmake.prf) = 3f6b3a592e29f5529e5c87dbac036c165470eac4

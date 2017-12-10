@@ -1839,6 +1839,7 @@ qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtestcoreelement_p.h
 qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtestcorelist_p.h
 qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtestelement_p.h
 qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtestelementattribute_p.h
+qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtesthelpers_p.h
 qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtestlog_p.h
 qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtestresult_p.h
 qt5/include/QtTest/${PKGVERSION}/QtTest/private/qtesttable_p.h
