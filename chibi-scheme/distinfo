@@ -2,6 +2,8 @@ $NetBSD: distinfo,v 1.2 2015/08/05 15:22:53 leot1990 Exp $
 
 SHA1 (chibi-scheme-0.7.3.tar.gz) = cb4258eaf288feae43b417f4289c356a05cd1577
 RMD160 (chibi-scheme-0.7.3.tar.gz) = 67c5e509967782d8a001ac5f35631af56af90789
+SHA512 (chibi-scheme-0.7.3.tar.gz) = 9d3d59837835c522bb93bda34047d80020774afbbec3686dc47c6c4860c4115b8622dc2c8f8e7f3e3d9f58a4aebc36ddf87d39dc18af8d1f196b441aa9585bd8
 Size (chibi-scheme-0.7.3.tar.gz) = 812703 bytes
 SHA1 (patch-Makefile) = d6eb86d6f3c39c2c8c41e1339c98b1ca5bf6be60
 SHA1 (patch-benchmarks_gabriel_run.sh) = b15a6686db42d07350142c8ec5e8dafb2a2cee6a
+SHA1 (patch-lib_chibi_signal.c) = 9bdf2c06c38902439c302aa1fb2a6139a2026745
