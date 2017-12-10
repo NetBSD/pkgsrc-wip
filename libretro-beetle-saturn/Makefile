@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-saturn-20170808
+DISTNAME=	libretro-beetle-saturn-20171209
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -10,7 +10,7 @@ COMMENT=	Libretro core based on the Mednafen Sega Saturn emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-saturn-libretro
-GITHUB_TAG=	682ca8aa92817c76fc7da24c67f45878f9a1aa08
+GITHUB_TAG=	b5ee7662683051ba11a4c383734d9ddaf3b1e37a
 
 EXTRACT_USING=	bsdtar
 
