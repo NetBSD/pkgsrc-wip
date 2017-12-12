@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/22 17:01:46 shattered Exp $
-bin/dumpobj
-bin/macro11
-share/doc/macro11/README

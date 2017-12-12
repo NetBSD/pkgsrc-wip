@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/15 12:03:43 shattered Exp $
-bin/QtUkncBtl
-share/ukncbtl/ide_hdbootv0400.bin
-share/ukncbtl/ide_wdromv0110.bin
-share/ukncbtl/romctr_basic.bin
-share/ukncbtl/uknc_rom.bin
