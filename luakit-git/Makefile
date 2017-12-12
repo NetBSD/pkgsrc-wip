@@ -2,10 +2,10 @@
 
 PKGNAME=	luakit-0.0
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=aidanholm/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=luakit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://aidanholm.github.io/luakit/
+HOMEPAGE=	http://luakit.org/
 COMMENT=	Webkit based browser framework extensible by Lua
 LICENSE=	gnu-gpl-v3
 
@@ -13,7 +13,7 @@ USE_TOOLS+=	gmake
 
 GIT_REPOSITORIES=	luakit
 GIT_BRANCH.luakit=	develop
-GIT_REPO.luakit=	git://github.com/aidanholm/luakit
+GIT_REPO.luakit=	git://github.com/luakit/luakit
 WRKSRC=			${WRKDIR}/luakit
 
 LUAKIT_MAKE_FLAGS+=	DEVELOPMENT_PATHS=0
