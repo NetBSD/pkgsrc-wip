@@ -8,7 +8,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	http://download.microsoft.com/download/f/5/a/f5a3df76-d856-4a61-a6bd-722f52a5be26/
 DISTFILES=	PowerPointViewer.exe
 
-MAINTAINER=	shattered@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.microsoft.com/download/en/details.aspx?id=6
 COMMENT=	TrueType fonts from Microsoft Windows Vista
 LICENSE=	ms-ttf-license

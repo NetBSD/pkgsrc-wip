@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gitg/0.2/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	shattered@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://trac.novowork.com/gitg/
 COMMENT=	Git repository browser
 LICENSE=	gnu-gpl-v2
