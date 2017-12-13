@@ -290,6 +290,7 @@ SUBDIR+=	bugzilla
 SUBDIR+=	bullet
 SUBDIR+=	bup-git
 SUBDIR+=	busybox
+SUBDIR+=	bwa
 SUBDIR+=	bwm-ng
 SUBDIR+=	byzanz
 SUBDIR+=	c-news
