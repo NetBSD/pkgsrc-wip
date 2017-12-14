@@ -4,4 +4,4 @@ SHA1 (bwa-0.7.17.tar.gz) = 77f9aac723110227ea51cb42011336d291d03723
 RMD160 (bwa-0.7.17.tar.gz) = d26a266387dee4fc9fcf6eef4f7ffcc076495c22
 SHA512 (bwa-0.7.17.tar.gz) = 114e61b7cc5edcb67172d1eca7be1fa670ea33dd48b5c02c98318e254871363775c0dab327fd7ee7023200a5fedc745fa01cbe0fd9550d783f091d4df6926f48
 Size (bwa-0.7.17.tar.gz) = 232593 bytes
-SHA1 (patch-Makefile) = 8ed885e6d9b37f1ece5a725c57955ee79f74a1fe
+SHA1 (patch-Makefile) = 34e807355fc8f431214f0b1c7be5ed524fe0f620
