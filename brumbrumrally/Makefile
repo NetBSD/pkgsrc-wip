@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	brumbrumrally-0.6
+DISTNAME=	brumbrumrally-0.7
 CATEGORIES=	games
 MASTER_SITES=	http://dataapa.net/brumbrumrally/files/
 
