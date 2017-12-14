@@ -1,11 +1,9 @@
 # $NetBSD: Makefile,v 1.4 2016/07/09 06:37:51 wiz Exp $
-#
 
 DISTNAME=	bwa-0.7.17
 CATEGORIES=	biology
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lh3/}
-#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://bio-bwa.sourceforge.net/
