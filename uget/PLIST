@@ -42,9 +42,11 @@ ${PLIST.nls}share/locale/hr/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/hu/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/id/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/uget.mo
+${PLIST.nls}share/locale/ja/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/ka_GE/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/kk/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/ku/LC_MESSAGES/uget.mo
+${PLIST.nls}share/locale/lt/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/or_IN/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/uget.mo

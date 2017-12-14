@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.1 2013/03/03 17:55:48 othyro Exp $
 #
 
-DISTNAME=	uget-2.0.9
+DISTNAME=	uget-2.0.10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=urlget/}
 
 MAINTAINER=	ccatrian@eml.cc
-HOMEPAGE=	http://uget.visuex.com/
+HOMEPAGE=	http://ugetdm.com
 COMMENT=	Open Source download manager application developed with GTK+
 LICENSE=	gnu-lgpl-v2.1
 
