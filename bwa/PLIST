@@ -1,1 +1,5 @@
 @comment $NetBSD$
+bin/bwa
+bin/qualfa2fq.pl
+bin/xa2multi.pl
+man/man1/bwa.1

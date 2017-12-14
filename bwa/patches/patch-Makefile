@@ -12,13 +12,33 @@ $NetBSD$
  WRAP_MALLOC=-DUSE_MALLOC_WRAPPERS
  AR=			ar
  DFLAGS=		-DHAVE_PTHREAD $(WRAP_MALLOC)
-@@ -18,6 +18,9 @@ SUBDIRS=	.
+@@ -12,11 +12,14 @@ AOBJS=		bwashm.o bwase.o bwaseqio.o bwtg
+ 			bwtsw2_chain.o fastmap.o bwtsw2_pair.o
+ PROG=		bwa
+ INCLUDES=	
+-LIBS=		-lm -lz -lpthread
++LDFLAGS+=	-lm -lz -lpthread
+ SUBDIRS=	.
+ 
  ifeq ($(shell uname -s),Linux)
- 	LIBS += -lrt
- endif
-+ifeq ($(shell uname -s),NetBSD)
-+	LIBS += -lrt
+-	LIBS += -lrt
++	LDFLAGS += -lrt
 +endif
++ifeq ($(shell uname -s),NetBSD)
++	LDFLAGS += -lrt
+ endif
  
  .SUFFIXES:.c .o .cc
+@@ -27,10 +30,10 @@ endif
+ all:$(PROG)
  
+ bwa:libbwa.a $(AOBJS) main.o
+-		$(CC) $(CFLAGS) $(DFLAGS) $(AOBJS) main.o -o $@ -L. -lbwa $(LIBS)
++		$(CC) $(CFLAGS) $(DFLAGS) $(AOBJS) main.o -o $@ -L. -lbwa $(LDFLAGS)
+ 
+ bwamem-lite:libbwa.a example.o
+-		$(CC) $(CFLAGS) $(DFLAGS) example.o -o $@ -L. -lbwa $(LIBS)
++		$(CC) $(CFLAGS) $(DFLAGS) example.o -o $@ -L. -lbwa $(LDFLAGS)
+ 
+ libbwa.a:$(LOBJS)
+ 		$(AR) -csru $@ $(LOBJS)
