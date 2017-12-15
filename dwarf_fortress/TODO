@@ -1,7 +1,3 @@
 Fix sound.
 
 Workaround for png issues; use bitmaps instead.
-
-Package it up; am keeping an eye on wip/lugaru
-to see how it deals with the game expecting
-the data to be relative to it's location.

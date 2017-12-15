@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.2 2015/05/08 22:58:43 i3enedek Exp $
 
-SHA1 (df_43_05_linux.tar.bz2) = 1f0bfdb6a14a801b8f2cdc6fb6880b967e6a24bf
-RMD160 (df_43_05_linux.tar.bz2) = d2e99c1991f48c63096dfb301faf25d89b4f6ba7
-SHA512 (df_43_05_linux.tar.bz2) = 502e6bac0bdd5586fb6b4e1117caf144a0336a7eed3ed9350ec316e4a286e309a15e0738517c0dd7d32f182984c501c7a8756e942d3dde9fb87f72b153f38e7a
-Size (df_43_05_linux.tar.bz2) = 11580594 bytes
-SHA1 (patch-df) = fc5414f27e63eb280bb61914c4603715f7ff4734
+SHA1 (df_44_02_linux.tar.bz2) = b5ec54841a4adf19b5b7e668a05d64f8fea7cde2
+RMD160 (df_44_02_linux.tar.bz2) = 9c5454d040eadc14471cd74659ccbda4e9280a07
+SHA512 (df_44_02_linux.tar.bz2) = 793bf3f0726cb3fca35771781144e1f2cc8ae496222d24d1c8d6add83f5e78a2c11e458ab05a87f14141513e98807e5d0d99d384f719b02301140ff0dc915875
+Size (df_44_02_linux.tar.bz2) = 11940967 bytes
+SHA1 (patch-df) = 079651012bccfd59411faa1f390961e252c74dff
