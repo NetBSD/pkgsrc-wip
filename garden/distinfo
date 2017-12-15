@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (garden-1.0.9.tar.gz) = ed61ec3ece9258d822094160843c7521c38538ad
+RMD160 (garden-1.0.9.tar.gz) = e8aededc8a235d11025e51887c1b78cd7ccdded8
+SHA512 (garden-1.0.9.tar.gz) = e8f52fc0ebf9eaa7933ae1faa5610e8a27a5e7cfc59d033714c4306a53680feeddd52b1fb3050f2d72addba03ee383e71e57eac02270f3d2369aed054a9a9848
+Size (garden-1.0.9.tar.gz) = 2714783 bytes
+SHA1 (patch-configure) = 2663b0c4e1f607efb6314a954aa23cc14797759a
+SHA1 (patch-src_stuff.c) = 8af1def4c57577f5b56aa4c9383972f7a3befce1
+SHA1 (patch-src_stuff.h) = 4cf88affe9374329480697a21c7b15c142b8ccfc

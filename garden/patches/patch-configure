@@ -1,0 +1,36 @@
+$NetBSD$
+
+--- configure.orig	2015-01-19 21:57:48.000000000 +0000
++++ configure
+@@ -12319,7 +12319,7 @@ rm -f core conftest.err conftest.$ac_obj
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $have_allegro" >&5
+ $as_echo "$have_allegro" >&6; }
+ 	LIBS=$LIBS_SAVE
+-	if test "x$have_allegro" == "xyes"; then :
++	if test "x$have_allegro" = "xyes"; then :
+   return 0
+ else
+   return 1
+@@ -12591,7 +12591,7 @@ rm -f core conftest.err conftest.$ac_obj
+ 
+ 
+ try_link_allegro "$allegro_LIBS"
+-if test "x$?" == "x0"; then :
++if test "x$?" = "x0"; then :
+   LIBS="$LIBS $allegro_LIBS"
+        ALLEGRO_LIB=`echo $allegro_LIBS | sed -e 's/.*-l\([^[:blank:]]*\).*/\1/'`
+        have_allegro="yes"
+@@ -12608,11 +12608,11 @@ fi
+ for lib in $ALLEGRO_LIBS
+ do
+ 	ldflag="-l$lib"
+-	if test "x$have_allegro" == "xyes"; then :
++	if test "x$have_allegro" = "xyes"; then :
+   break
+ fi
+ 	try_link_allegro $ldflag
+-	if test "x$?" == "x0"; then :
++	if test "x$?" = "x0"; then :
+   LIBS="$LIBS $ldflag"
+ 	       ALLEGRO_LIB="$lib"
+ 	       have_allegro="yes"
