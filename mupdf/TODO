@@ -1,0 +1,4 @@
+- mupdf-1.12.0 will break print/zathura-pdf-mupdf due to some differences
+  between the 1.11 and 1.12.0 API. I will try to update zathura-pdf-mupdf
+  accordingly.
+    -- leot (2017/12/17)
