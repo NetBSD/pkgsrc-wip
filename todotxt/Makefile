@@ -15,10 +15,11 @@ USE_TOOLS+=	bash:run gsed:run
 
 SUBST_CLASSES+=		todosh
 SUBST_STAGE.todosh=	pre-configure
-SUBST_MESSAGE.todosh=	Adjusting hard-coded paths and use GNU sed
+SUBST_MESSAGE.todosh=	Adjusting hard-coded paths, version and use GNU sed
 SUBST_FILES.todosh+=	todo.sh
 SUBST_SED.todosh+=	-e '/TODOTXT_GLOBAL_CFG_FILE=/ s,/etc/todo/config,${PKG_SYSCONFDIR}/todo.cfg,'
 SUBST_SED.todosh+=	-E -e 's,([(| ])sed ,\1${TOOLS_PATH.gsed} ,g'
+SUBST_SED.todosh+=	-e 's,@DEV_VERSION@,${PKGVERSION_NOREV},g'
 
 SUBST_CLASSES+=		todocfg
 SUBST_STAGE.todocfg=	pre-configure
