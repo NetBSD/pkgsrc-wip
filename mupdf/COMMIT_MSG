@@ -23,6 +23,7 @@ pkgsrc changes:
    building mupdf-gl for native X.org where the glut.pc pkg-config
    file is available at build time.  Also adjust patches/patch-ab
    accordingly.
+ - Remove patches/patch-CVE*, they are no longer needed (all applied in 1.12.0)
 
 Changes:
 List of changes in MuPDF 1.12.0
