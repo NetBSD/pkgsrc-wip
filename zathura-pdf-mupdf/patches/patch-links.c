@@ -4,16 +4,7 @@ Avoid possible NULL-pointer dereference.
 
 --- links.c.orig	2017-01-11 21:21:14.000000000 +0000
 +++ links.c
-@@ -2,6 +2,8 @@
- 
- #define _POSIX_C_SOURCE 1
- 
-+#include <string.h>
-+
- #include <glib.h>
- 
- #include "plugin.h"
-@@ -43,25 +45,27 @@ pdf_page_links_get(zathura_page_t* page,
+@@ -43,25 +43,27 @@ pdf_page_links_get(zathura_page_t* page,
      zathura_link_type_t type     = ZATHURA_LINK_INVALID;
      zathura_link_target_t target = { 0 };
  

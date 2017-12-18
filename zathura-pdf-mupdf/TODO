@@ -1,2 +1,2 @@
-- Comment all the new patches
-- Still not stable, the patches need to be revised and adjusted.
+- Backport commit a3f70378 by Pavel Vinogradov to adjust zathura-pdf-mupdf
+  for the MuPDF 1.12.0

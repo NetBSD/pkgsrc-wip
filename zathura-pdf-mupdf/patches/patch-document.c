@@ -4,13 +4,7 @@ Correct the glib-2.0 include header file path.
 
 --- document.c.orig	2017-01-11 21:21:14.000000000 +0000
 +++ document.c
-@@ -2,10 +2,13 @@
- 
- #define _POSIX_C_SOURCE 1
- 
-+#include <stdlib.h>
-+#include <string.h>
-+
+@@ -5,7 +5,7 @@
  #include <mupdf/fitz.h>
  #include <mupdf/pdf.h>
  
