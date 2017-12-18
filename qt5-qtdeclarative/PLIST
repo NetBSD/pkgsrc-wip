@@ -214,6 +214,7 @@ qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4util_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4value_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4variantobject_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4vme_moth_p.h
+qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv4writebarrier_p.h
 qt5/include/QtQml/${PKGVERSION}/QtQml/private/qv8engine_p.h
 qt5/include/QtQml/QJSEngine
 qt5/include/QtQml/QJSValue
@@ -330,6 +331,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickdesignersupportpropertyc
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickdesignersupportstates_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickdesignerwindowmanager_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickdrag_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickdraghandler_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickdroparea_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickevents_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickflickable_p.h
@@ -342,6 +344,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickfontmetrics_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickgenericshadereffect_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickgraphicsinfo_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickgridview_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickhandlersmodule_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickimage_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickimage_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickimagebase_p.h
@@ -361,6 +364,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickloader_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickloader_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickmousearea_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickmousearea_p_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickmultipointhandler_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickmultipointtoucharea_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickopenglinfo_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickopenglshadereffect_p.h
@@ -373,7 +377,11 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpathview_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpathview_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpincharea_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpincharea_p_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpinchhandler_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpixmapcache_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpointerdevicehandler_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpointerhandler_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpointhandler_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpositioners_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickpositioners_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickprofiler_p.h
@@ -389,6 +397,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickshadereffect_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickshadereffectmesh_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickshadereffectsource_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickshortcut_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksinglepointhandler_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksmoothedanimation_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksmoothedanimation_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickspringanimation_p.h
@@ -404,6 +413,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickstateoperations_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquickstyledtext_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksvgparser_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicksystempalette_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicktaphandler_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicktext_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicktext_p_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qquicktextcontrol_p.h
@@ -455,12 +465,12 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgdefaultspritenode_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgdepthstencilbuffer_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgdistancefieldglyphnode_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgdistancefieldglyphnode_p_p.h
-qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgdistancefieldutil_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgengine_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsggeometry_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgmaterialshader_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgnode_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgnodeupdater_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgpkmhandler_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgrenderer_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgrenderloop_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgrendernode_p.h
@@ -484,6 +494,7 @@ qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgsoftwarespritenode_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgsoftwarethreadedrenderloop_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgtexture_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgtexturematerial_p.h
+qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgtexturereader_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgthreadedrenderloop_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qsgwindowsrenderloop_p.h
 qt5/include/QtQuick/${PKGVERSION}/QtQuick/private/qtquick-config_p.h
@@ -698,6 +709,8 @@ qt5/plugins/qmltooling/libqmldbg_tcp.so
 qt5/qml/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so
 qt5/qml/Qt/labs/folderlistmodel/plugins.qmltypes
 qt5/qml/Qt/labs/folderlistmodel/qmldir
+qt5/qml/Qt/labs/handlers/libhandlersplugin.so
+qt5/qml/Qt/labs/handlers/qmldir
 qt5/qml/Qt/labs/settings/libqmlsettingsplugin.so
 qt5/qml/Qt/labs/settings/plugins.qmltypes
 qt5/qml/Qt/labs/settings/qmldir
@@ -723,6 +736,9 @@ qt5/qml/QtQuick/LocalStorage/qmldir
 qt5/qml/QtQuick/Particles.2/libparticlesplugin.so
 qt5/qml/QtQuick/Particles.2/plugins.qmltypes
 qt5/qml/QtQuick/Particles.2/qmldir
+qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so
+qt5/qml/QtQuick/Shapes/plugins.qmltypes
+qt5/qml/QtQuick/Shapes/qmldir
 qt5/qml/QtQuick/Window.2/libwindowplugin.so
 qt5/qml/QtQuick/Window.2/plugins.qmltypes
 qt5/qml/QtQuick/Window.2/qmldir

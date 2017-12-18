@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/04/22 21:03:23 adam Exp $
+# $NetBSD$
 
-DISTNAME=	qtwebsockets-opensource-src-${QTVERSION}
+DISTNAME=	qtwebsockets-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebsockets-${QTVERSION}
 COMMENT=	Qt5 module for websockets
 
@@ -15,7 +15,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
-
 
 .include "../../wip/qt5-qtdeclarative/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

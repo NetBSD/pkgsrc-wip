@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2017/04/22 21:03:22 adam Exp $
+# $NetBSD$
 
-DISTNAME=	qttools-opensource-src-${QTVERSION}
+DISTNAME=	qttools-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
 COMMENT=	Qt5 tools
 

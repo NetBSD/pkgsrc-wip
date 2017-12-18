@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	qtbase-opensource-src-${QTVERSION}
+DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
 

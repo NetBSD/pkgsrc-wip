@@ -1,14 +1,14 @@
 $NetBSD$
 
-SHA1 (qtbase-opensource-src-5.9.3.tar.xz) = ccf98c742699e0d39798748777fd438128c15fe4
-RMD160 (qtbase-opensource-src-5.9.3.tar.xz) = 9b7edd7badceb34deeb7df2c1afad3ed02475e62
-SHA512 (qtbase-opensource-src-5.9.3.tar.xz) = 256ffb8760e94c0f87790ed35e210d0c9613e14314ff442dd763cc93fbd5caa6c11c95f5d44b12a7687fb93c9f857878132cf6d76e5933f647ca7beb54b18c7c
-Size (qtbase-opensource-src-5.9.3.tar.xz) = 45160080 bytes
+SHA1 (qtbase-everywhere-src-5.10.0.tar.xz) = 34fa3d4e7bb2b1545247a616190efaf74804db49
+RMD160 (qtbase-everywhere-src-5.10.0.tar.xz) = d6f9ab8526ebe50791b9b948930806dc8b3be73b
+SHA512 (qtbase-everywhere-src-5.10.0.tar.xz) = 8f832fb7bc5087df4b897cd23145e5350f03ca06e2fc5ccb11a7b998e4885c1b936c3e4b989c15fc076134a6a081a35efa37f402b5e8b85e2c780006641b2cdc
+Size (qtbase-everywhere-src-5.10.0.tar.xz) = 45851596 bytes
 SHA1 (patch-config.tests_unix_iconv_iconv.cpp) = ffd0107d57e308aa83a780818756c9a538efc591
 SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
 SHA1 (patch-mkspecs_features_create__cmake.prf) = 3f6b3a592e29f5529e5c87dbac036c165470eac4
 SHA1 (patch-mkspecs_features_qt__module.prf) = a04c4b1fe80250b6b3591f5486ac0fd3b5056c26
-SHA1 (patch-qmake_Makefile.unix) = 4987b38d12cc14ca60fcba4b9e5aa3c62e600806
+SHA1 (patch-qmake_Makefile.unix) = ec1af3d76dc5bd0b7b1d375ceeebbd016b6f555f
 SHA1 (patch-qmake_generators_makefile.cpp) = 26366f21108534a321d9d7c7f87066e9acf7d981
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = f0a4fdd304af2ee6c1b63022ccfcebd2640f0fcb
 SHA1 (patch-src_corelib_codecs_qiconvcodec.cpp) = 4387447f0f23f0f8c623c0c019ab632bc1cb5617
