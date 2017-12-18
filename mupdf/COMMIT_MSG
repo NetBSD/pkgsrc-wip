@@ -1,7 +1,28 @@
 mupdf: Update print/mupdf to 1.12.0
 
 pkgsrc changes:
- TODO: write me!
+ - Add support for the `opengl' option via graphics/glut and remove the `glfw'
+   option to follow upstream changes. Adjust options.mk and buildlink3.mk
+   accordingly.
+ - Add patches/patch-platform_gl_gl-app.h to not force freeglut GLUT
+   implementation to every non-APPLE platforms (glut also works!) and adjust the
+   glut.h include.
+ - Add a commented out lcms2 bl3 inclusion entry, lcms2>=2.9 is needed (due
+   "lcms2art.h" et al. inclusion, so disable it for now)
+ - Explain the OPJ_STATIC comment in patches/patch-source_fitz_load-jpx.c
+   a bit more in depth... ...this will hopefully save some time to
+   debug opj_* undefined symbols when trying to link libmupdf and
+   accidently omitting the patches/patch-source_fitz_load-jpx.c
+   hunk (for extra debugging stories fun, if OPJ_STATIC is defined
+   some opj_* symbols are defined while others are not defined,
+   making the debugging of that problem more naughty!).
+ - Inject HAVE_{CURL,GLUT} variables via MAKE_ENV in options.mk to avoid
+   depending on www/curl and graphics/glut (yes, that's a bit kludgy
+   but unfortunately mupdf doesn't have a configure and so there
+   isn't a more sensible way to do it).  This is needed to avoid
+   building mupdf-gl for native X.org where the glut.pc pkg-config
+   file is available at build time.  Also adjust patches/patch-ab
+   accordingly.
 
 Changes:
 List of changes in MuPDF 1.12.0
