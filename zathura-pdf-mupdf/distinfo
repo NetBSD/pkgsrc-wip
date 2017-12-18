@@ -9,6 +9,6 @@ SHA1 (patch-image.c) = 65fee62ddeddf5329a9eeb868b39f26c9232f759
 SHA1 (patch-index.c) = 96022a5e5c6152e56cecad8f47c4893419536c83
 SHA1 (patch-page.c) = adbe5766d39befdde4aed0a937ff96312921eb2f
 SHA1 (patch-plugin.h) = 1e93cac827843be7a5caf887c5c3381ad16388f4
-SHA1 (patch-render.c) = fc14be4e88f9f84383a9e117d15f8f853b14a01b
+SHA1 (patch-render.c) = 000477afe5286eb6e183cc87864c06f3f73ad8f2
 SHA1 (patch-select.c) = 5b6505ad998e1980a6cfa4dc0484f0707ea9799a
 SHA1 (patch-utils.c) = 870c37dfd7c359ad1e9891a75e9afc71ac3c36c7

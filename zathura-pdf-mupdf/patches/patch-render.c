@@ -1,6 +1,18 @@
 $NetBSD$
 
-- Always fz_close_device() before calling fz_drop_device().
+- Close device.
+
+  Every fz_drop_device() need a corresponding fz_close_device().
+  
+  This fixes the:
+  
+   warning: dropping unclosed device
+   warning: ... repeated <n> times ..
+  
+  warnings.
+
+  Backport from upstream, commit 622b35440d708a187add31adab8bca747c11d2a8.
+  
 - Updated for MuPDF 1.12.0
   
   Backport from upstream, commit a3f703788f77b19bb986e14666fe0c47911adddc.
