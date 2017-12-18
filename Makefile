@@ -2950,7 +2950,6 @@ SUBDIR+=	py-clics
 SUBDIR+=	py-clid
 SUBDIR+=	py-cliff
 SUBDIR+=	py-cligj
-SUBDIR+=	py-clint
 SUBDIR+=	py-clnum
 SUBDIR+=	py-clonedigger
 SUBDIR+=	py-clonedigger-jl

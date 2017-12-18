@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/01/26 23:00:49 jihbed Exp $
-
-SHA1 (clint-0.5.1.tar.gz) = 0b7fce2c68da2ac1165212d8bb9a8ad453d344c0
-RMD160 (clint-0.5.1.tar.gz) = 3d7db4ed06e1374e64db44cbaa17a51b4dd9765e
-Size (clint-0.5.1.tar.gz) = 29355 bytes
