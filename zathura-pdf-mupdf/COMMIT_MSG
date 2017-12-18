@@ -1,0 +1,11 @@
+zathura-pdf-mupdf: Backport patches from upstream and adapt to MuPDF 1.2.0 API
+
+- Backport all the relevant patches from upstream (NFCI, most of them were
+  already backported but diverged a bit from upstream).
+- Delete patches/patch-links.c, I can no longer reproduce the NULL pointer
+  dereference with mupdf-1.2.0.
+- Backport MuPDF 1.2.0 API update
+
+With these zathura-pdf-mupdf works with mupdf-1.2.0.
+
+Bump PKGREVISION.
