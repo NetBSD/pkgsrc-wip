@@ -1,2 +1,28 @@
-- Backport commit a3f70378 by Pavel Vinogradov to adjust zathura-pdf-mupdf
-  for the MuPDF 1.12.0
+- With commit a3f70378, backported for the MuPDF 1.12.0 update, there are:
+
+    warning: dropping unclosed device
+    warning: ... repeated <n> times ...
+
+  ...and then when zathura is closed it crashes with a SIGSEGV.
+  The `bt' - on NetBSD/amd64, 8.99.8 with pkgsrc-current packages - is the following:
+
+ #0  0x00007c0085608d80 in ?? ()
+ #1  0x00007c0084a02645 in ?? () from /usr/lib/libgcc_s.so.1
+ #2  0x00007c0084a10610 in ?? () from /usr/lib/libgcc_s.so.1
+ #3  0x00007c0084a10619 in _fini () from /usr/lib/libgcc_s.so.1
+ #4  0x00007c0084a10610 in ?? () from /usr/lib/libgcc_s.so.1
+ #5  0x00007f7e7ec01d09 in _rtld_call_function_void (obj=<optimized out>, addr=136341669097504) at /usr/src/libexec/ld.elf_so/rtld.h:504
+ #6  _rtld_call_initfini_function (obj=<optimized out>, mask=0x7f7fff4c5830, func=136341669097504)
+     at /usr/src/libexec/ld.elf_so/rtld.c:142
+ #7  _rtld_call_fini_function (obj=<optimized out>, mask=mask@entry=0x7f7fff4c5830, cur_objgen=10)
+     at /usr/src/libexec/ld.elf_so/rtld.c:157
+ #8  0x00007f7e7ec01dc9 in _rtld_call_fini_functions (mask=mask@entry=0x7f7fff4c5830, force=force@entry=1)
+     at /usr/src/libexec/ld.elf_so/rtld.c:203
+ #9  0x00007f7e7ec0206a in _rtld_exit () at /usr/src/libexec/ld.elf_so/rtld.c:412
+ #10 0x00007c0096100422 in __cxa_finalize (dso=dso@entry=0x0) at /usr/src/lib/libc/stdlib/atexit.c:222
+ #11 0x00007c00960fffc3 in exit (status=0) at /usr/src/lib/libc/stdlib/exit.c:60
+ #12 0x000000000040eca5 in _start ()
+
+  Investigate and fix these problems if possible. 
+
+    -- leot (2017/12/18)
