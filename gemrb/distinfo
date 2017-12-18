@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.12 2015/08/18 21:31:46 yhardy Exp $
 
-SHA1 (gemrb-0.8.4.tar.gz) = 10e972000999f205dc385d79fd73120fbfb6a2e1
-RMD160 (gemrb-0.8.4.tar.gz) = 16e1c1a20626c3e87644e571e231366c5af83887
-SHA512 (gemrb-0.8.4.tar.gz) = 4a64745481b3533efe3bfe333600b2c3f191eaff37a560be1e73c35c638cf737bae51305fe19e9e78bfd2eab9a9841b3403e89f91f0a968b6abdc5ce39a807f7
-Size (gemrb-0.8.4.tar.gz) = 12373930 bytes
+SHA1 (gemrb-0.8.5.tar.gz) = 7a9947e775dfaac5530828d6019851a6ced62d4f
+RMD160 (gemrb-0.8.5.tar.gz) = de833a4412a732a253f0b7ac05b41a49158a679f
+SHA512 (gemrb-0.8.5.tar.gz) = 867cb12e84096c072cc91690ec12b590bac5a4e680abebf03a304624f23489b413a2df51328ca2f6b507aedb3d126a85a0feca623f2e38f79a3e71cc707e93e8
+Size (gemrb-0.8.5.tar.gz) = 12403649 bytes
 SHA1 (patch-gemrb_plugins_VLCPlayer_CMakeLists.txt) = be1c9462ceb5bc64ab8d735b7802bad6fb799202

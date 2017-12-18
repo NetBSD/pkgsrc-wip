@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.14 2015/08/18 21:31:46 yhardy Exp $
 
-DISTNAME=	gemrb-0.8.4
+DISTNAME=	gemrb-0.8.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gemrb/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

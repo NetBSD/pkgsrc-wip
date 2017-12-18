@@ -8,7 +8,6 @@ lib/gemrb/plugins/ACMReader.so
 lib/gemrb/plugins/AREImporter.so
 lib/gemrb/plugins/BAMImporter.so
 lib/gemrb/plugins/BIFImporter.so
-lib/gemrb/plugins/BIKPlayer.so
 lib/gemrb/plugins/BMPImporter.so
 lib/gemrb/plugins/BMPWriter.so
 lib/gemrb/plugins/CHUImporter.so
@@ -36,7 +35,6 @@ lib/gemrb/plugins/PNGImporter.so
 lib/gemrb/plugins/PROImporter.so
 lib/gemrb/plugins/PSTOpcodes.so
 lib/gemrb/plugins/SAVImporter.so
-lib/gemrb/plugins/SDLAudio.so
 lib/gemrb/plugins/SDLVideo.so
 lib/gemrb/plugins/SPLImporter.so
 lib/gemrb/plugins/STOImporter.so
@@ -153,12 +151,14 @@ share/gemrb/GUIScripts/GUIDefines.py
 share/gemrb/GUIScripts/GUILOAD.py
 share/gemrb/GUIScripts/GUIMA.py
 share/gemrb/GUIScripts/GUIMG.py
+share/gemrb/GUIScripts/GUIMOVIE.py
 share/gemrb/GUIScripts/GUIOPT.py
 share/gemrb/GUIScripts/GUIOPTControls.py
 share/gemrb/GUIScripts/GUIPR.py
 share/gemrb/GUIScripts/GUIREC.py
 share/gemrb/GUIScripts/GUIRECCommon.py
 share/gemrb/GUIScripts/GUISAVE.py
+share/gemrb/GUIScripts/GUISONGS.py
 share/gemrb/GUIScripts/GUISTORE.py
 share/gemrb/GUIScripts/GUIWORLD.py
 share/gemrb/GUIScripts/GameCheck.py
@@ -193,9 +193,7 @@ share/gemrb/GUIScripts/bg1/GUICG8.py
 share/gemrb/GUIScripts/bg1/GUICG9.py
 share/gemrb/GUIScripts/bg1/GUIINV.py
 share/gemrb/GUIScripts/bg1/GUIJRNL.py
-share/gemrb/GUIScripts/bg1/GUIMOVIE.py
 share/gemrb/GUIScripts/bg1/GUIMP.py
-share/gemrb/GUIScripts/bg1/GUISONGS.py
 share/gemrb/GUIScripts/bg1/ImportFile.py
 share/gemrb/GUIScripts/bg1/LoadScreen.py
 share/gemrb/GUIScripts/bg1/MessageWindow.py
@@ -233,8 +231,6 @@ share/gemrb/GUIScripts/bg2/GUICG8.py
 share/gemrb/GUIScripts/bg2/GUICG9.py
 share/gemrb/GUIScripts/bg2/GUIINV.py
 share/gemrb/GUIScripts/bg2/GUIJRNL.py
-share/gemrb/GUIScripts/bg2/GUIMOVIE.py
-share/gemrb/GUIScripts/bg2/GUISONGS.py
 share/gemrb/GUIScripts/bg2/ImportFile.py
 share/gemrb/GUIScripts/bg2/ImportGame.py
 share/gemrb/GUIScripts/bg2/LUHLASelection.py
@@ -269,7 +265,6 @@ share/gemrb/GUIScripts/iwd/Autodetect.py
 share/gemrb/GUIScripts/iwd/CharGen.py
 share/gemrb/GUIScripts/iwd/GUIINV.py
 share/gemrb/GUIScripts/iwd/GUIJRNL.py
-share/gemrb/GUIScripts/iwd/GUIMOVIE.py
 share/gemrb/GUIScripts/iwd/LoadScreen.py
 share/gemrb/GUIScripts/iwd/MessageWindow.py
 share/gemrb/GUIScripts/iwd/PartyFormation.py
@@ -396,6 +391,7 @@ share/gemrb/unhardcoded/bg1/acidblmu.pro
 share/gemrb/unhardcoded/bg1/acidblob.pro
 share/gemrb/unhardcoded/bg1/acidbloc.pro
 share/gemrb/unhardcoded/bg1/aligns.2da
+share/gemrb/unhardcoded/bg1/area_reverbs.2da
 share/gemrb/unhardcoded/bg1/areapro.2da
 share/gemrb/unhardcoded/bg1/arrow.pro
 share/gemrb/unhardcoded/bg1/arrowex.pro
@@ -555,6 +551,7 @@ share/gemrb/unhardcoded/bg1/wssingle.2da
 share/gemrb/unhardcoded/bg2/HPBARB.2da
 share/gemrb/unhardcoded/bg2/ability.2da
 share/gemrb/unhardcoded/bg2/aligns.2da
+share/gemrb/unhardcoded/bg2/area_reverbs.2da
 share/gemrb/unhardcoded/bg2/areapro.2da
 share/gemrb/unhardcoded/bg2/at2xlvl.spl
 share/gemrb/unhardcoded/bg2/avatars.2da
@@ -1024,6 +1021,7 @@ share/gemrb/unhardcoded/how/wvdeath.pro
 share/gemrb/unhardcoded/how/wvhith.pro
 share/gemrb/unhardcoded/how/wwolf.pro
 share/gemrb/unhardcoded/how/zlaura.pro
+share/gemrb/unhardcoded/how/zzweaps.2da
 share/gemrb/unhardcoded/iwd/ability.2da
 share/gemrb/unhardcoded/iwd/abjurap.pro
 share/gemrb/unhardcoded/iwd/abjurh.pro
@@ -1395,6 +1393,7 @@ share/gemrb/unhardcoded/iwd/wvdeath.pro
 share/gemrb/unhardcoded/iwd/wvhith.pro
 share/gemrb/unhardcoded/iwd/wwolf.pro
 share/gemrb/unhardcoded/iwd/zlaura.pro
+share/gemrb/unhardcoded/iwd/zzweaps.2da
 share/gemrb/unhardcoded/iwd2/24895.spl
 share/gemrb/unhardcoded/iwd2/24896.spl
 share/gemrb/unhardcoded/iwd2/35782.spl
@@ -1454,6 +1453,7 @@ share/gemrb/unhardcoded/iwd2/area2.pro
 share/gemrb/unhardcoded/iwd2/area2np.pro
 share/gemrb/unhardcoded/iwd2/area3p.pro
 share/gemrb/unhardcoded/iwd2/area4np.pro
+share/gemrb/unhardcoded/iwd2/area_reverbs.2da
 share/gemrb/unhardcoded/iwd2/armorh.pro
 share/gemrb/unhardcoded/iwd2/arrow.pro
 share/gemrb/unhardcoded/iwd2/arrowex.pro
@@ -1727,6 +1727,7 @@ share/gemrb/unhardcoded/iwd2/pwstun.pro
 share/gemrb/unhardcoded/iwd2/pwstunh.pro
 share/gemrb/unhardcoded/iwd2/raceflag.2da
 share/gemrb/unhardcoded/iwd2/races.2da
+share/gemrb/unhardcoded/iwd2/racskill.2da
 share/gemrb/unhardcoded/iwd2/rad100.pro
 share/gemrb/unhardcoded/iwd2/rad250.pro
 share/gemrb/unhardcoded/iwd2/rad300.pro
@@ -1842,7 +1843,9 @@ share/gemrb/unhardcoded/iwd2/uhold.pro
 share/gemrb/unhardcoded/iwd2/uncanny.spl
 share/gemrb/unhardcoded/iwd2/uward.pro
 share/gemrb/unhardcoded/iwd2/uwardh.pro
+share/gemrb/unhardcoded/iwd2/vcremap.2da
 share/gemrb/unhardcoded/iwd2/vspherh.pro
+share/gemrb/unhardcoded/iwd2/walksnd.2da
 share/gemrb/unhardcoded/iwd2/wdeath1.pro
 share/gemrb/unhardcoded/iwd2/wdeath2.pro
 share/gemrb/unhardcoded/iwd2/web.pro
@@ -2152,6 +2155,8 @@ share/gemrb/unhardcoded/pst/vtouch.pro
 share/gemrb/unhardcoded/pst/weapprof.2da
 share/gemrb/unhardcoded/pst/web.pro
 share/gemrb/unhardcoded/pst/wmmos2b.mos
+share/gemrb/unhardcoded/shared/REVERB.2DA
+share/gemrb/unhardcoded/shared/avatar_shadows.2da
 share/gemrb/unhardcoded/shared/avprefg.2da
 share/gemrb/unhardcoded/shared/avprefix.2da
 share/gemrb/unhardcoded/shared/axeflm.pro
