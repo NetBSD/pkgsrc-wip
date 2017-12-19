@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.27 2017/04/22 21:03:22 adam Exp $
 
-DISTNAME=	qtscript-opensource-src-${QTVERSION}
+DISTNAME=	qtscript-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtscript-${QTVERSION}
 COMMENT=	Qt5 module for script
 

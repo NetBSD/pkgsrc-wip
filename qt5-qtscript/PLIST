@@ -156,12 +156,12 @@ qt5/lib/cmake/Qt5ScriptTools/Qt5ScriptToolsConfigVersion.cmake
 qt5/lib/libQt5Script.prl
 qt5/lib/libQt5Script.so
 qt5/lib/libQt5Script.so.5
-qt5/lib/libQt5Script.so.5.9
+qt5/lib/libQt5Script.so.5.10
 qt5/lib/libQt5Script.so.${PKGVERSION}
 qt5/lib/libQt5ScriptTools.prl
 qt5/lib/libQt5ScriptTools.so
 qt5/lib/libQt5ScriptTools.so.5
-qt5/lib/libQt5ScriptTools.so.5.9
+qt5/lib/libQt5ScriptTools.so.5.10
 qt5/lib/libQt5ScriptTools.so.${PKGVERSION}
 qt5/lib/pkgconfig/Qt5Script.pc
 qt5/lib/pkgconfig/Qt5ScriptTools.pc
