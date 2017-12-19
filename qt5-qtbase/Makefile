@@ -122,6 +122,7 @@ CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaintplugins/extrafilt
 CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
 CHECK_INTERPRETER_SKIP+=qt5/mkspecs/features/data/mac/objc_namespace.sh
 CHECK_INTERPRETER_SKIP+=qt5/mkspecs/features/uikit/device_destinations.sh
+CHECK_INTERPRETER_SKIP+=qt5/mkspecs/features/uikit/devices.py
 CHECK_INTERPRETER_SKIP+=qt5/mkspecs/macx-ios-clang/rename_main.sh
 
 SUBST_CLASSES+=		opt
