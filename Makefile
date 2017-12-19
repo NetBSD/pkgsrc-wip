@@ -3249,7 +3249,6 @@ SUBDIR+=	py-karta
 SUBDIR+=	py-kcs11
 SUBDIR+=	py-keras
 SUBDIR+=	py-keyczar
-SUBDIR+=	py-keyrings.alt
 SUBDIR+=	py-khayyam
 SUBDIR+=	py-kineticlib
 SUBDIR+=	py-kitchen
