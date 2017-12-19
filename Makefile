@@ -3928,7 +3928,6 @@ SUBDIR+=	raw
 SUBDIR+=	rawdog
 SUBDIR+=	rc.d.Interix
 SUBDIR+=	rc.subr
-SUBDIR+=	rcm
 SUBDIR+=	rdsn-git
 SUBDIR+=	rdup
 SUBDIR+=	re2-git
