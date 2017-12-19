@@ -4347,7 +4347,6 @@ SUBDIR+=	tmuni-ttf
 SUBDIR+=	tmva
 SUBDIR+=	tmw
 SUBDIR+=	tnt
-SUBDIR+=	todotxt
 SUBDIR+=	todotxt-git
 SUBDIR+=	tome
 SUBDIR+=	tome2
