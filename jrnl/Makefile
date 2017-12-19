@@ -12,7 +12,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-keyring>=3.3:../../security/py-keyring
-DEPENDS+=	${PYPKGPREFIX}-keyrings.alt>=1.3:../../wip/py-keyrings.alt
+DEPENDS+=	${PYPKGPREFIX}-keyrings.alt>=1.3:../../security/py-keyrings.alt
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=1.2:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2013b:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-readline-*:../../devel/py-readline
