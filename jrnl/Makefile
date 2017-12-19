@@ -4,7 +4,7 @@ DISTNAME=	jrnl-1.9.8
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maebert/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://jrnl.sh/
 COMMENT=	Command line journal application
 LICENSE=	mit
