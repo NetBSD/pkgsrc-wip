@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=todotxt/}
 GITHUB_PROJECT=	todo.txt-cli
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://todotxt.org/
 COMMENT=	Simple and extensible shell script for managing your todo.txt file
 LICENSE=	gnu-gpl-v3
