@@ -31,7 +31,7 @@ qt5/lib/libQt5WebSockets.prl
 qt5/lib/libQt5WebSockets.so
 qt5/lib/libQt5WebSockets.so.${PKGVERSION}
 qt5/lib/libQt5WebSockets.so.5
-qt5/lib/libQt5WebSockets.so.5.9
+qt5/lib/libQt5WebSockets.so.5.10
 qt5/lib/pkgconfig/Qt5WebSockets.pc
 qt5/mkspecs/modules/qt_lib_websockets.pri
 qt5/mkspecs/modules/qt_lib_websockets_private.pri
