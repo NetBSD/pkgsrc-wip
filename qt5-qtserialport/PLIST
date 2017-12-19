@@ -19,7 +19,7 @@ qt5/lib/libQt5SerialPort.prl
 qt5/lib/libQt5SerialPort.so
 qt5/lib/libQt5SerialPort.so.${PKGVERSION}
 qt5/lib/libQt5SerialPort.so.5
-qt5/lib/libQt5SerialPort.so.5.9
+qt5/lib/libQt5SerialPort.so.5.10
 qt5/lib/pkgconfig/Qt5SerialPort.pc
 qt5/mkspecs/modules/qt_lib_serialport.pri
 qt5/mkspecs/modules/qt_lib_serialport_private.pri
