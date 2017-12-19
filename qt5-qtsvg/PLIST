@@ -29,7 +29,7 @@ qt5/lib/libQt5Svg.prl
 qt5/lib/libQt5Svg.so
 qt5/lib/libQt5Svg.so.${PKGVERSION}
 qt5/lib/libQt5Svg.so.5
-qt5/lib/libQt5Svg.so.5.9
+qt5/lib/libQt5Svg.so.5.10
 qt5/lib/pkgconfig/Qt5Svg.pc
 qt5/mkspecs/modules/qt_lib_svg.pri
 qt5/mkspecs/modules/qt_lib_svg_private.pri
