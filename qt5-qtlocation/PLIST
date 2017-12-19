@@ -257,7 +257,6 @@ qt5/lib/cmake/Qt5Location/Qt5LocationConfigVersion.cmake
 qt5/lib/cmake/Qt5Location/Qt5Location_GeoServiceProviderFactoryEsri.cmake
 qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryItemsOverlay.cmake
 qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryMapbox.cmake
-qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryMapboxGL.cmake
 qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryNokia.cmake
 qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryOsm.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5PositioningConfig.cmake
@@ -268,12 +267,12 @@ qt5/lib/libQt5Location.prl
 qt5/lib/libQt5Location.so
 qt5/lib/libQt5Location.so.${PKGVERSION}
 qt5/lib/libQt5Location.so.5
-qt5/lib/libQt5Location.so.5.9
+qt5/lib/libQt5Location.so.5.10
 qt5/lib/libQt5Positioning.prl
 qt5/lib/libQt5Positioning.so
 qt5/lib/libQt5Positioning.so.${PKGVERSION}
 qt5/lib/libQt5Positioning.so.5
-qt5/lib/libQt5Positioning.so.5.9
+qt5/lib/libQt5Positioning.so.5.10
 qt5/lib/pkgconfig/Qt5Location.pc
 qt5/lib/pkgconfig/Qt5Positioning.pc
 qt5/mkspecs/modules/qt_lib_location.pri
@@ -283,7 +282,6 @@ qt5/mkspecs/modules/qt_lib_positioning_private.pri
 qt5/plugins/geoservices/libqtgeoservices_esri.so
 qt5/plugins/geoservices/libqtgeoservices_itemsoverlay.so
 qt5/plugins/geoservices/libqtgeoservices_mapbox.so
-qt5/plugins/geoservices/libqtgeoservices_mapboxgl.so
 qt5/plugins/geoservices/libqtgeoservices_nokia.so
 qt5/plugins/geoservices/libqtgeoservices_osm.so
 qt5/plugins/position/libqtposition_geoclue.so
