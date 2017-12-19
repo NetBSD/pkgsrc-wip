@@ -4,7 +4,7 @@ DISTNAME=	rcm-1.3.1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://thoughtbot.github.io/rcm/dist/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://thoughtbot.github.io/rcm/
 COMMENT=	Tools for rc file (dotfile) management
 LICENSE=	modified-bsd
