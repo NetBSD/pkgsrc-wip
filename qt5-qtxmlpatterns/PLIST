@@ -412,7 +412,7 @@ qt5/lib/cmake/Qt5XmlPatterns/Qt5XmlPatternsConfigVersion.cmake
 qt5/lib/libQt5XmlPatterns.prl
 qt5/lib/libQt5XmlPatterns.so
 qt5/lib/libQt5XmlPatterns.so.5
-qt5/lib/libQt5XmlPatterns.so.5.9
+qt5/lib/libQt5XmlPatterns.so.5.10
 qt5/lib/libQt5XmlPatterns.so.${PKGVERSION}
 qt5/lib/pkgconfig/Qt5XmlPatterns.pc
 qt5/mkspecs/modules/qt_lib_xmlpatterns.pri
