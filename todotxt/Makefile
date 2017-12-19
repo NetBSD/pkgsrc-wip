@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2014/05/21 14:06:31 ttys Exp $
 
 DISTNAME=	todotxt-2.10
-CATEGORIES=	misc
+CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=todotxt/}
 GITHUB_PROJECT=	todo.txt-cli
 GITHUB_TAG=	v${PKGVERSION_NOREV}
