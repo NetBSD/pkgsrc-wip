@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (html-xml-utils-7.4.tar.gz) = 694a67b723be500112217cd808789e837ae84bee
+RMD160 (html-xml-utils-7.4.tar.gz) = 9185eaf4ba6f93fbb07f4c029e6ae57abaaad5f4
+SHA512 (html-xml-utils-7.4.tar.gz) = 88a527c29ef23b34ecb778085aafd399943764a18a3e4b39ff27b3e2cc3effa84b9ffe7c2a0df80fb27a38a7e4d4ceef6db91da46cbb2b4f9fd59903d4868a20
+Size (html-xml-utils-7.4.tar.gz) = 343008 bytes
+SHA1 (patch-fopencookie.c) = 58a464521e323a87806d46b83902c74b846b8f26
