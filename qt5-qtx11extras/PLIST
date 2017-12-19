@@ -12,7 +12,7 @@ qt5/lib/cmake/Qt5X11Extras/Qt5X11ExtrasConfigVersion.cmake
 qt5/lib/libQt5X11Extras.prl
 qt5/lib/libQt5X11Extras.so
 qt5/lib/libQt5X11Extras.so.5
-qt5/lib/libQt5X11Extras.so.5.9
+qt5/lib/libQt5X11Extras.so.5.10
 qt5/lib/libQt5X11Extras.so.${PKGVERSION}
 qt5/lib/pkgconfig/Qt5X11Extras.pc
 qt5/mkspecs/modules/qt_lib_x11extras.pri
