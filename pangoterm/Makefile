@@ -3,6 +3,7 @@
 VER=		0_pre20160305
 DISTNAME=	pangoterm-0.${VER}
 CATEGORIES=	x11
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 HOMEPAGE=	http://www.leonerd.org.uk/code/pangoterm/

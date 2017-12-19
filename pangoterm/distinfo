@@ -5,3 +5,4 @@ RMD160 (pangoterm-0.0_pre20160305.tar.gz) = 2ebc9ccc2e9d1133eb0cea716639757a1436
 SHA512 (pangoterm-0.0_pre20160305.tar.gz) = 570c8fe1f7233884a849aa9b9160930b77682a9c3ef6f9c26891eb604c861e01a3ce13d418c8febc92e1cdb2794d5a1cf0097c27183395098c505540146f8467
 Size (pangoterm-0.0_pre20160305.tar.gz) = 22802 bytes
 SHA1 (patch-Makefile) = 76101dd2d5b46edffdf6ff0cc5b705c45c23fe96
+SHA1 (patch-pangoterm.c) = f7122ead69651ebe10ddda32dab1ad82f6f27680
