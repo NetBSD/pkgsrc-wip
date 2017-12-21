@@ -79,6 +79,8 @@ post-install:
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../databases/mysql57-client/buildlink3.mk"
+# vuln in 55 and 56 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
