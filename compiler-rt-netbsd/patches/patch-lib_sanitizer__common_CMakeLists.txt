@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- lib/sanitizer_common/CMakeLists.txt.orig	2017-12-04 19:21:19.000000000 +0000
++++ lib/sanitizer_common/CMakeLists.txt
+@@ -116,6 +116,7 @@ set(SANITIZER_HEADERS
+   sanitizer_list.h
+   sanitizer_mac.h
+   sanitizer_mutex.h
++  sanitizer_netbsd_syscalls.inc
+   sanitizer_persistent_allocator.h
+   sanitizer_placement_new.h
+   sanitizer_platform.h

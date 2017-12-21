@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/msan/msan_interceptors.cc.orig	2017-12-08 18:38:11.810044075 +0000
+--- lib/msan/msan_interceptors.cc.orig	2017-12-21 18:53:10.666569597 +0000
 +++ lib/msan/msan_interceptors.cc
 @@ -33,6 +33,7 @@
  #include "sanitizer_common/sanitizer_libc.h"
@@ -10,7 +10,7 @@ $NetBSD$
  
  #if SANITIZER_NETBSD
  #define gettimeofday __gettimeofday50
-@@ -1121,23 +1122,78 @@ struct MSanAtExitRecord {
+@@ -1138,23 +1139,78 @@ struct MSanAtExitRecord {
    void *arg;
  };
  
@@ -92,7 +92,15 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1535,6 +1591,9 @@ namespace __msan {
+@@ -1387,6 +1443,7 @@ static uptr signal_impl(int signo, uptr 
+   } while (false)
+ #define COMMON_SYSCALL_POST_WRITE_RANGE(p, s) __msan_unpoison(p, s)
+ #include "sanitizer_common/sanitizer_common_syscalls.inc"
++#include "sanitizer_common/sanitizer_netbsd_syscalls.inc"
+ 
+ struct dlinfo {
+   char *dli_fname;
+@@ -1552,6 +1609,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -102,7 +110,7 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1650,6 +1709,7 @@ void InitializeInterceptors() {
+@@ -1667,6 +1727,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);
