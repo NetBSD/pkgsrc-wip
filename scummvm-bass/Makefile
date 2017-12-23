@@ -6,7 +6,7 @@ MASTER_SITES=		https://www.scummvm.org/frs/extras/Beneath%20a%20Steel%20Sky/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://scummvm.sourceforge.net/
+HOMEPAGE=		https://www.scummvm.org/games/
 COMMENT=		Beneath a Steel Sky
 #LICENSE=		freeware license specified in readme.txt
 
