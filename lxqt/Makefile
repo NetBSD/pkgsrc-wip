@@ -4,17 +4,17 @@ PKGNAME=        lxqt-0.9.0
 CATEGORIES=     meta-pkgs
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://lxqt.org/
+HOMEPAGE=       https://lxqt.org/
 COMMENT=        Meta-package for LXQt desktop environment
 
 META_PACKAGE=   yes
 
 
-# See http://wiki.lxde.org/en/Build_LXDE-Qt_From_Source
+# See https://wiki.lxde.org/en/Build_LXDE-Qt_From_Source
 # example meta package from Mageia
 # https://svnweb.mageia.org/packages/cauldron/task-lxqt/current/SPECS/task-lxqt.spec?view=markup
 
-# Set of packages from http://downloads.lxqt.org/lxqt/0.9.0/
+# Set of packages from https://downloads.lxqt.org/lxqt/0.9.0/
 DEPENDS+=       liblxqt>=0.9.0:../../wip/liblxqt
 DEPENDS+=       lximage-qt>=0.4.0:../../wip/lximage-qt
 DEPENDS+=       lxmenu-data>=0.1.4:../../sysutils/lxmenu-data

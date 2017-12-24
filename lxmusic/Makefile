@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lxde.org/
+HOMEPAGE=	https://lxde.org/
 COMMENT=	Minimalist XMMS2-based music player
 LICENSE=	gnu-gpl-v2
 

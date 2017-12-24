@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://lxde.org/
+HOMEPAGE=	https://lxde.org/
 COMMENT=	Lxde login manager
 
 LICENSE=	gnu-gpl-v2

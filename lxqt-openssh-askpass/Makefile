@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxde/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lxqt.org/
+HOMEPAGE=	https://lxqt.org/
 COMMENT=	Tool used with openssh to prompt the user for password
 LICENSE=	gnu-lgpl-v2.1
 
