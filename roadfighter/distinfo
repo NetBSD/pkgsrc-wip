@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (roadfighter.src_1.0.1269.tgz) = e6cacf74065fcd27838c66b4c57998f9fdbc2874
+RMD160 (roadfighter.src_1.0.1269.tgz) = b5b483a4bb7d50468c74a45defd00b01753ff7b0
+SHA512 (roadfighter.src_1.0.1269.tgz) = e80b3617c7ed638f8fd9ae3e4630e4a408a2cda8ed82780af0361c5059f067d47b46b82cbf88e079e57f8ef0552817d2d73988211cd299bd280b716a39610233
+Size (roadfighter.src_1.0.1269.tgz) = 4724447 bytes
+SHA1 (patch-CTile.cpp) = 2b15192c06cd15621491b1211ee4c078e35bfcb2
+SHA1 (patch-CTile.h) = 7b9bedeefb5726c7e29d98eb9de3a12860a8f6b3
+SHA1 (patch-build_linux_Makefile) = 8af4592f9f9a18d7f3fb52424c50428a12c5b884
+SHA1 (patch-menu__state.cpp) = 7fbf95eaf6cc46c7b189bbad73efdac7e9da71ca
