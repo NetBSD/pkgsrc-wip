@@ -1,0 +1,24 @@
+$NetBSD$
+
+--- build/linux/Makefile.orig	2009-02-06 10:12:51.000000000 +0000
++++ build/linux/Makefile
+@@ -1,6 +1,6 @@
+ EXE = f1spirit
+ SRC = sources
+-PREFIX = /usr
++#PREFIX = /usr
+ EXTRADIR = ./build/linux
+ 
+ GAMEDIR = $(PREFIX)/games
+@@ -40,8 +40,9 @@ OBJS = \
+ 
+ CC = gcc
+ #CFLAGS = -g3 -O3 -Wall `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
+-CFLAGS = -g3 -O3 -Wno-write-strings `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
+-LDFLAGS = `sdl-config --libs` `curl-config --libs` -L/usr/X11R6/lib/ -lSDL_image -lSDL_mixer -lSDL_net -lGL -lGLU
++#CFLAGS = -g3 -O3 -Wno-write-strings `sdl-config --cflags` `curl-config --cflags` -I${X11BASE}/include
++CFLAGS += -g3 -O3 -Wno-write-strings `sdl-config --cflags` `curl-config --cflags` -I${X11BASE}/include -I${PREFIX}/include/curl
++LDFLAGS += `sdl-config --libs` `curl-config --libs` -L${X11BASE}/lib/ -lSDL_image -lSDL_mixer -lSDL_net -lGL -lGLU
+ RM = rm -f
+ CP = cp -r
+ MD = mkdir -p
