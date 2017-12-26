@@ -45,12 +45,14 @@ share/libretro/info/freej2me_libretro.info
 share/libretro/info/fsuae_libretro.info
 share/libretro/info/fuse_libretro.info
 share/libretro/info/gambatte_libretro.info
+share/libretro/info/gearboy_libretro.info
 share/libretro/info/genesis_plus_gx_libretro.info
 share/libretro/info/gme_libretro.info
 share/libretro/info/gpsp_libretro.info
 share/libretro/info/gw_libretro.info
 share/libretro/info/handy_libretro.info
 share/libretro/info/hatari_libretro.info
+share/libretro/info/higan_sfc_balanced_libretro.info
 share/libretro/info/higan_sfc_libretro.info
 share/libretro/info/imageviewer_libretro.info
 share/libretro/info/lutro_libretro.info

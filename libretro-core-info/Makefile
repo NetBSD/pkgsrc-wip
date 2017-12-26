@@ -1,8 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-core-info-1.6.9
+DISTNAME=	libretro-core-info-1.7.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://www.libretro.com/
 COMMENT=	Libretro core information
