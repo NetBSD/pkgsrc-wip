@@ -2,21 +2,21 @@ $NetBSD$
 
 Install man page with proper permissions (executable bit not needed for them!).
 
---- Makefile.orig	2017-09-22 20:01:50.000000000 +0000
+--- Makefile.orig	2017-12-25 17:49:35.000000000 +0000
 +++ Makefile
-@@ -182,13 +182,13 @@ install-newsbeuter: $(NEWSBEUTER)
+@@ -222,13 +222,13 @@ install-newsboat: $(NEWSBOAT) doc/$(NEWS
  	$(MKDIR) $(DESTDIR)$(prefix)/bin
- 	$(INSTALL) $(NEWSBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) $(NEWSBOAT) $(DESTDIR)$(prefix)/bin
  	$(MKDIR) $(DESTDIR)$(mandir)/man1
--	$(INSTALL) doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
-+	$(INSTALL) -m 644 doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+-	$(INSTALL) doc/$(NEWSBOAT).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(NEWSBOAT).1 $(DESTDIR)$(mandir)/man1 || true
  
- install-podbeuter: $(PODBEUTER)
+ install-podboat: $(PODBOAT) doc/$(PODBOAT).1
  	$(MKDIR) $(DESTDIR)$(prefix)/bin
- 	$(INSTALL) $(PODBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) $(PODBOAT) $(DESTDIR)$(prefix)/bin
  	$(MKDIR) $(DESTDIR)$(mandir)/man1
--	$(INSTALL) doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
-+	$(INSTALL) -m 644 doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+-	$(INSTALL) doc/$(PODBOAT).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(PODBOAT).1 $(DESTDIR)$(mandir)/man1 || true
  
- install-docs:
+ install-docs: doc
  	$(MKDIR) $(DESTDIR)$(docdir)

@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	newsboat-2.10.1
+DISTNAME=	newsboat-2.10.2
 CATEGORIES=	news
-MASTER_SITES=	https://newsboat.org/releases/2.10.1/
+MASTER_SITES=	https://newsboat.org/releases/2.10.2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ COMMENT=	RSS/Atom feed reader for the text console
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pkg-config msgfmt perl
+USE_TOOLS+=	gmake pkg-config msgfmt
 USE_GNU_ICONV=	yes
 USE_CURSES=	wide
 
