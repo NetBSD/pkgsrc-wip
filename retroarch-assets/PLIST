@@ -184,8 +184,8 @@ share/retroarch/assets/xmb/dot-art/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/dot-art/png/Microsoft - Xbox.png
 share/retroarch/assets/xmb/dot-art/png/Minecraft-content.png
 share/retroarch/assets/xmb/dot-art/png/Minecraft.png
-share/retroarch/assets/xmb/dot-art/png/Mr. Boom-content.png
-share/retroarch/assets/xmb/dot-art/png/Mr. Boom.png
+share/retroarch/assets/xmb/dot-art/png/MrBoom-content.png
+share/retroarch/assets/xmb/dot-art/png/MrBoom.png
 share/retroarch/assets/xmb/dot-art/png/NEC - PC Engine - TurboGrafx 16-content.png
 share/retroarch/assets/xmb/dot-art/png/NEC - PC Engine - TurboGrafx 16.png
 share/retroarch/assets/xmb/dot-art/png/NEC - PC Engine CD - TurboGrafx-CD-content.png
@@ -602,8 +602,8 @@ share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/monochrome/png/Microsoft - XBOX.png
 share/retroarch/assets/xmb/monochrome/png/Minecraft-content.png
 share/retroarch/assets/xmb/monochrome/png/Minecraft.png
-share/retroarch/assets/xmb/monochrome/png/Mr. Boom-content.png
-share/retroarch/assets/xmb/monochrome/png/Mr. Boom.png
+share/retroarch/assets/xmb/monochrome/png/MrBoom-content.png
+share/retroarch/assets/xmb/monochrome/png/MrBoom.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine - TurboGrafx 16-content.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine - TurboGrafx 16.png
 share/retroarch/assets/xmb/monochrome/png/NEC - PC Engine CD - TurboGrafx-CD-content.png
@@ -812,6 +812,8 @@ share/retroarch/assets/xmb/neoactive/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/neoactive/png/Atari - Lynx.png
 share/retroarch/assets/xmb/neoactive/png/Atari - ST-content.png
 share/retroarch/assets/xmb/neoactive/png/Atari - ST.png
+share/retroarch/assets/xmb/neoactive/png/Atari - XEGS-content.png
+share/retroarch/assets/xmb/neoactive/png/Atari - XEGS.png
 share/retroarch/assets/xmb/neoactive/png/Bally - Astrocade-content.png
 share/retroarch/assets/xmb/neoactive/png/Bally - Astrocade.png
 share/retroarch/assets/xmb/neoactive/png/Bandai - WonderSwan Color-content.png
@@ -886,10 +888,16 @@ share/retroarch/assets/xmb/neoactive/png/LeapFrog - Leapster Learning Game Syste
 share/retroarch/assets/xmb/neoactive/png/Libretro - Pad.png
 share/retroarch/assets/xmb/neoactive/png/Lutro-content.png
 share/retroarch/assets/xmb/neoactive/png/Lutro.png
+share/retroarch/assets/xmb/neoactive/png/MAME 2000-content.png
+share/retroarch/assets/xmb/neoactive/png/MAME 2000.png
 share/retroarch/assets/xmb/neoactive/png/MAME 2003-content.png
 share/retroarch/assets/xmb/neoactive/png/MAME 2003.png
 share/retroarch/assets/xmb/neoactive/png/MAME 2010-content.png
 share/retroarch/assets/xmb/neoactive/png/MAME 2010.png
+share/retroarch/assets/xmb/neoactive/png/MAME 2014-content.png
+share/retroarch/assets/xmb/neoactive/png/MAME 2014.png
+share/retroarch/assets/xmb/neoactive/png/MAME 2016-content.png
+share/retroarch/assets/xmb/neoactive/png/MAME 2016.png
 share/retroarch/assets/xmb/neoactive/png/MAME-content.png
 share/retroarch/assets/xmb/neoactive/png/MAME.png
 share/retroarch/assets/xmb/neoactive/png/Magnavox - Odyssey2-content.png
@@ -908,8 +916,8 @@ share/retroarch/assets/xmb/neoactive/png/Microsoft - Xbox-content.png
 share/retroarch/assets/xmb/neoactive/png/Microsoft - Xbox.png
 share/retroarch/assets/xmb/neoactive/png/Minecraft-content.png
 share/retroarch/assets/xmb/neoactive/png/Minecraft.png
-share/retroarch/assets/xmb/neoactive/png/Mr. Boom-content.png
-share/retroarch/assets/xmb/neoactive/png/Mr. Boom.png
+share/retroarch/assets/xmb/neoactive/png/MrBoom-content.png
+share/retroarch/assets/xmb/neoactive/png/MrBoom.png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine - TurboGrafx 16 (E).png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine - TurboGrafx 16 (J).png
 share/retroarch/assets/xmb/neoactive/png/NEC - PC Engine - TurboGrafx 16 (U).png
@@ -1299,6 +1307,8 @@ share/retroarch/assets/xmb/retroactive/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/retroactive/png/Atari - Lynx.png
 share/retroarch/assets/xmb/retroactive/png/Atari - ST-content.png
 share/retroarch/assets/xmb/retroactive/png/Atari - ST.png
+share/retroarch/assets/xmb/retroactive/png/Atari - XEGS-content.png
+share/retroarch/assets/xmb/retroactive/png/Atari - XEGS.png
 share/retroarch/assets/xmb/retroactive/png/Bally - Astrocade-content.png
 share/retroarch/assets/xmb/retroactive/png/Bally - Astrocade.png
 share/retroarch/assets/xmb/retroactive/png/Bandai - WonderSwan Color-content.png
@@ -1379,10 +1389,16 @@ share/retroarch/assets/xmb/retroactive/png/LeapFrog - Leapster Learning Game Sys
 share/retroarch/assets/xmb/retroactive/png/Libretro - Pad.png
 share/retroarch/assets/xmb/retroactive/png/Lutro-content.png
 share/retroarch/assets/xmb/retroactive/png/Lutro.png
+share/retroarch/assets/xmb/retroactive/png/MAME 2000-content.png
+share/retroarch/assets/xmb/retroactive/png/MAME 2000.png
 share/retroarch/assets/xmb/retroactive/png/MAME 2003-content.png
 share/retroarch/assets/xmb/retroactive/png/MAME 2003.png
 share/retroarch/assets/xmb/retroactive/png/MAME 2010-content.png
 share/retroarch/assets/xmb/retroactive/png/MAME 2010.png
+share/retroarch/assets/xmb/retroactive/png/MAME 2014-content.png
+share/retroarch/assets/xmb/retroactive/png/MAME 2014.png
+share/retroarch/assets/xmb/retroactive/png/MAME 2016-content.png
+share/retroarch/assets/xmb/retroactive/png/MAME 2016.png
 share/retroarch/assets/xmb/retroactive/png/MAME-content.png
 share/retroarch/assets/xmb/retroactive/png/MAME.png
 share/retroarch/assets/xmb/retroactive/png/Magnavox - Odyssey2-content.png
@@ -1401,8 +1417,8 @@ share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/retroactive/png/Microsoft - XBOX.png
 share/retroarch/assets/xmb/retroactive/png/Minecraft-content.png
 share/retroarch/assets/xmb/retroactive/png/Minecraft.png
-share/retroarch/assets/xmb/retroactive/png/Mr. Boom-content.png
-share/retroarch/assets/xmb/retroactive/png/Mr. Boom.png
+share/retroarch/assets/xmb/retroactive/png/MrBoom-content.png
+share/retroarch/assets/xmb/retroactive/png/MrBoom.png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine - TurboGrafx 16 (E).png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine - TurboGrafx 16 (U).png
 share/retroarch/assets/xmb/retroactive/png/NEC - PC Engine - TurboGrafx 16-content (E).png
@@ -1668,6 +1684,8 @@ share/retroarch/assets/xmb/retrosystem/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/retrosystem/png/Atari - Lynx.png
 share/retroarch/assets/xmb/retrosystem/png/Atari - ST-content.png
 share/retroarch/assets/xmb/retrosystem/png/Atari - ST.png
+share/retroarch/assets/xmb/retrosystem/png/Atari - XEGS-content.png
+share/retroarch/assets/xmb/retrosystem/png/Atari - XEGS.png
 share/retroarch/assets/xmb/retrosystem/png/Bally - Astrocade-content.png
 share/retroarch/assets/xmb/retrosystem/png/Bally - Astrocade.png
 share/retroarch/assets/xmb/retrosystem/png/Bandai - WonderSwan Color-content.png
@@ -1773,8 +1791,8 @@ share/retroarch/assets/xmb/retrosystem/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/retrosystem/png/Microsoft - XBOX.png
 share/retroarch/assets/xmb/retrosystem/png/Minecraft-content.png
 share/retroarch/assets/xmb/retrosystem/png/Minecraft.png
-share/retroarch/assets/xmb/retrosystem/png/Mr. Boom-content.png
-share/retroarch/assets/xmb/retrosystem/png/Mr. Boom.png
+share/retroarch/assets/xmb/retrosystem/png/MrBoom-content.png
+share/retroarch/assets/xmb/retrosystem/png/MrBoom.png
 share/retroarch/assets/xmb/retrosystem/png/NEC - PC Engine - TurboGrafx 16 (E)-content.png
 share/retroarch/assets/xmb/retrosystem/png/NEC - PC Engine - TurboGrafx 16 (E).png
 share/retroarch/assets/xmb/retrosystem/png/NEC - PC Engine - TurboGrafx 16 (J)-content.png
@@ -2017,6 +2035,8 @@ share/retroarch/assets/xmb/systematic/png/Atari - Lynx-content.png
 share/retroarch/assets/xmb/systematic/png/Atari - Lynx.png
 share/retroarch/assets/xmb/systematic/png/Atari - ST-content.png
 share/retroarch/assets/xmb/systematic/png/Atari - ST.png
+share/retroarch/assets/xmb/systematic/png/Atari - XEGS-content.png
+share/retroarch/assets/xmb/systematic/png/Atari - XEGS.png
 share/retroarch/assets/xmb/systematic/png/Bally - Astrocade-content.png
 share/retroarch/assets/xmb/systematic/png/Bally - Astrocade.png
 share/retroarch/assets/xmb/systematic/png/Bandai - WonderSwan Color SCT-001 R.png
@@ -2116,10 +2136,16 @@ share/retroarch/assets/xmb/systematic/png/LeapFrog - Leapster Learning Game Syst
 share/retroarch/assets/xmb/systematic/png/Libretro - Pad.png
 share/retroarch/assets/xmb/systematic/png/Lutro-content.png
 share/retroarch/assets/xmb/systematic/png/Lutro.png
+share/retroarch/assets/xmb/systematic/png/MAME 2000-content.png
+share/retroarch/assets/xmb/systematic/png/MAME 2000.png
 share/retroarch/assets/xmb/systematic/png/MAME 2003-content.png
 share/retroarch/assets/xmb/systematic/png/MAME 2003.png
 share/retroarch/assets/xmb/systematic/png/MAME 2010-content.png
 share/retroarch/assets/xmb/systematic/png/MAME 2010.png
+share/retroarch/assets/xmb/systematic/png/MAME 2014-content.png
+share/retroarch/assets/xmb/systematic/png/MAME 2014.png
+share/retroarch/assets/xmb/systematic/png/MAME 2016-content.png
+share/retroarch/assets/xmb/systematic/png/MAME 2016.png
 share/retroarch/assets/xmb/systematic/png/MAME-content.png
 share/retroarch/assets/xmb/systematic/png/MAME.png
 share/retroarch/assets/xmb/systematic/png/Magnavox - Odyssey2-content.png
@@ -2158,8 +2184,8 @@ share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX-content.png
 share/retroarch/assets/xmb/systematic/png/Microsoft - XBOX.png
 share/retroarch/assets/xmb/systematic/png/Minecraft-content.png
 share/retroarch/assets/xmb/systematic/png/Minecraft.png
-share/retroarch/assets/xmb/systematic/png/Mr. Boom-content.png
-share/retroarch/assets/xmb/systematic/png/Mr. Boom.png
+share/retroarch/assets/xmb/systematic/png/MrBoom-content.png
+share/retroarch/assets/xmb/systematic/png/MrBoom.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine - TurboGrafx 16 (J) Core II.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine - TurboGrafx 16 (J) Core.png
 share/retroarch/assets/xmb/systematic/png/NEC - PC Engine - TurboGrafx 16 (J) Shuttle.png

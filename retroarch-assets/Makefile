@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=		retroarch-assets-1.6.9
+PKGNAME=		retroarch-assets-1.7.0
 DISTNAME=		RetroArch
 EXTRACT_SUFX=		.7z
 CATEGORIES=		emulators
