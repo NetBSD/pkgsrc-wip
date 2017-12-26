@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/09/14 22:26:14 yhardy Exp $
 
-DISTNAME=	ags-3.4.0.16
+DISTNAME=	ags-3.4.1.11
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adventuregamestudio/}
 GITHUB_TAG=	v.${PKGVERSION_NOREV}
