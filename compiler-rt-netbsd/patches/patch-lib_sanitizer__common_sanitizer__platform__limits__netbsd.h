@@ -1,10 +1,12 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2017-12-21 18:53:10.665534563 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2017-12-21 18:53:10.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -58,32 +58,34 @@ extern unsigned struct_rlimit_sz;
+@@ -57,33 +57,36 @@ extern unsigned ucontext_t_sz;
+ extern unsigned struct_rlimit_sz;
  extern unsigned struct_utimbuf_sz;
  extern unsigned struct_timespec_sz;
++extern unsigned struct_sembuf_sz;
  
 -struct __sanitizer_iocb {
 +extern unsigned struct_kevent_sz;
@@ -58,7 +60,13 @@ $NetBSD$
  struct __sanitizer_sem_t {
    uptr data[5];
  };
-@@ -135,6 +137,23 @@ typedef unsigned __sanitizer_pthread_key
+@@ -131,10 +134,29 @@ struct __sanitizer_ifaddrs {
+   unsigned int ifa_addrflags;
+ };
+ 
++typedef unsigned int __sanitizer_socklen_t;
++
+ typedef unsigned __sanitizer_pthread_key_t;
  
  typedef long long __sanitizer_time_t;
  
@@ -82,7 +90,7 @@ $NetBSD$
  struct __sanitizer_passwd {
    char *pw_name;
    char *pw_passwd;
-@@ -189,6 +208,12 @@ struct __sanitizer_msghdr {
+@@ -189,6 +211,12 @@ struct __sanitizer_msghdr {
    unsigned msg_controllen;
    int msg_flags;
  };
@@ -95,7 +103,7 @@ $NetBSD$
  struct __sanitizer_cmsghdr {
    unsigned cmsg_len;
    int cmsg_level;
-@@ -241,6 +266,22 @@ struct __sanitizer_sigaction {
+@@ -241,6 +269,22 @@ struct __sanitizer_sigaction {
    int sa_flags;
  };
  
@@ -118,7 +126,7 @@ $NetBSD$
  typedef __sanitizer_sigset_t __sanitizer_kernel_sigset_t;
  
  struct __sanitizer_kernel_sigaction_t {
-@@ -298,6 +339,8 @@ struct __sanitizer_pollfd {
+@@ -298,6 +342,8 @@ struct __sanitizer_pollfd {
  
  typedef unsigned __sanitizer_nfds_t;
  
@@ -127,19 +135,30 @@ $NetBSD$
  struct __sanitizer_glob_t {
    uptr gl_pathc;
    uptr gl_matchc;
-@@ -317,6 +360,30 @@ extern int glob_altdirfunc;
+@@ -317,6 +363,48 @@ extern int glob_altdirfunc;
  
  extern unsigned path_max;
  
 +extern int ptrace_pt_io;
++extern int ptrace_pt_lwpinfo;
 +extern int ptrace_pt_set_event_mask;
++extern int ptrace_pt_get_event_mask;
++extern int ptrace_pt_get_process_state;
 +extern int ptrace_pt_set_siginfo;
++extern int ptrace_pt_get_siginfo;
 +extern int ptrace_pt_set_sigmask;
++extern int ptrace_pt_get_sigmask;
++extern int ptrace_piod_read_d;
 +extern int ptrace_piod_write_d;
++extern int ptrace_piod_read_i;
 +extern int ptrace_piod_write_i;
++extern int ptrace_piod_read_auxv;
 +extern int ptrace_pt_setregs;
++extern int ptrace_pt_getregs;
 +extern int ptrace_pt_setfpregs;
++extern int ptrace_pt_getfpregs;
 +extern int ptrace_pt_setdbregs;
++extern int ptrace_pt_getdbregs;
 +
 +struct __sanitizer_ptrace_io_desc {
 +  int piod_op;
@@ -148,6 +167,13 @@ $NetBSD$
 +  uptr piod_len;
 +};
 +
++struct __sanitizer_ptrace_lwpinfo {
++  __sanitizer_lwpid_t pl_lwpid;
++  int pl_event;
++};
++
++extern unsigned struct_ptrace_ptrace_io_desc_struct_sz;
++extern unsigned struct_ptrace_ptrace_lwpinfo_struct_sz;
 +extern unsigned struct_ptrace_ptrace_event_struct_sz;
 +extern unsigned struct_ptrace_ptrace_siginfo_struct_sz;
 +
