@@ -61,6 +61,7 @@ ${PLIST.x11}lib/baresip/modules/x11grab.so
 share/baresip/busy.wav
 share/baresip/callwaiting.wav
 share/baresip/error.wav
+share/baresip/logo.png
 share/baresip/message.wav
 share/baresip/notfound.wav
 share/baresip/ring.wav
