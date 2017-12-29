@@ -2,7 +2,7 @@ $NetBSD$
 
 --- lib/msan/msan_interceptors.cc.orig	2017-12-21 18:53:10.000000000 +0000
 +++ lib/msan/msan_interceptors.cc
-@@ -33,6 +33,7 @@
+@@ -33,10 +33,12 @@
  #include "sanitizer_common/sanitizer_libc.h"
  #include "sanitizer_common/sanitizer_linux.h"
  #include "sanitizer_common/sanitizer_tls_get_addr.h"
@@ -10,7 +10,99 @@ $NetBSD$
  
  #if SANITIZER_NETBSD
  #define gettimeofday __gettimeofday50
-@@ -1138,23 +1139,78 @@ struct MSanAtExitRecord {
+ #define getrusage __getrusage50
++#define fstat __fstat50
+ #endif
+ 
+ #include <stdarg.h>
+@@ -688,6 +690,86 @@ INTERCEPTOR(int, putenv, char *string) {
+   return res;
+ }
+ 
++#if SANITIZER_NETBSD && 0
++INTERCEPTOR(int, kvm_dump_header, void *kb, int op, int arg, void *cnt) {
++  ENSURE_MSAN_INITED();
++  int res = REAL(fstat)(fd, buf);
++  if (!res)
++    __msan_unpoison(buf, __sanitizer::struct_stat_sz);
++  return res;
++}
++
++INTERCEPTOR(void *, kvm_getprocs, void *kb, int op, int arg, void *cnt) {
++  ENSURE_MSAN_INITED();
++  int res = REAL(fstat)(fd, buf);
++  if (!res)
++    __msan_unpoison(buf, __sanitizer::struct_stat_sz);
++  return res;
++}
++
++kvm_close
++0000000000004b99 T kvm_dump_header
++000000000000565e T kvm_dump_inval
++00000000000048cc T kvm_dump_mkheader
++0000000000004d35 T kvm_dump_wrtheader
++0000000000003f7e T kvm_getargv
++0000000000004006 T kvm_getargv2
++0000000000003fc2 T kvm_getenvv
++0000000000004015 T kvm_getenvv2
++00000000000043d3 T kvm_geterr
++000000000000194b T kvm_getfiles
++00000000000043d8 T kvm_getkernelname
++00000000000017ec T kvm_getloadavg
++00000000000020f3 T kvm_getlwps
++0000000000002ed4 T kvm_getproc2
++0000000000002ae8 T kvm_getprocs
++00000000000055ca T kvm_nlist
++0000000000005524 T kvm_open
++00000000000054b1 T kvm_openfiles
++00000000000057b9 T kvm_read
++0000000000004024 T kvm_uread
++000000000000595f T kvm_write
++
++#define MSAN_MAYBE_INTERCEPT_LIBKVM_FUNCTIONS \
++  INTERCEPT_FUNCTION(kvm_getproc2); \
++  INTERCEPT_FUNCTION(kvm_dump_header); \
++  INTERCEPT_FUNCTION(kvm_dump_inval); \
++  INTERCEPT_FUNCTION(kvm_dump_mkheader); \
++  INTERCEPT_FUNCTION(kvm_dump_wrtheader); \
++  INTERCEPT_FUNCTION(kvm_getargv); \
++  INTERCEPT_FUNCTION(kvm_getargv2); \
++  INTERCEPT_FUNCTION(kvm_getenvv); \
++  INTERCEPT_FUNCTION(kvm_getenvv2); \
++  INTERCEPT_FUNCTION(kvm_geterr); \
++  INTERCEPT_FUNCTION(kvm_getfiles); \
++  INTERCEPT_FUNCTION(kvm_getkernelname); \
++  INTERCEPT_FUNCTION(kvm_getloadavg); \
++  INTERCEPT_FUNCTION(kvm_getlwps); \
++  INTERCEPT_FUNCTION(kvm_getproc2); \
++  INTERCEPT_FUNCTION(kvm_getprocs); \
++  INTERCEPT_FUNCTION(kvm_nlist); \
++  INTERCEPT_FUNCTION(kvm_open); \
++  INTERCEPT_FUNCTION(kvm_openfiles); \
++  INTERCEPT_FUNCTION(kvm_read); \
++  INTERCEPT_FUNCTION(kvm_uread); \
++  INTERCEPT_FUNCTION(kvm_write)
++#else
++#define MSAN_MAYBE_INTERCEPT_LIBKVM_FUNCTIONS
++#endif
++
++#if SANITIZER_NETBSD
++INTERCEPTOR(int, fstat, int fd, void *buf) {
++  ENSURE_MSAN_INITED();
++  int res = REAL(fstat)(fd, buf);
++  if (!res)
++    __msan_unpoison(buf, __sanitizer::struct_stat_sz);
++  return res;
++}
++#define MSAN_MAYBE_INTERCEPT_FSTAT INTERCEPT_FUNCTION(fstat)
++#else
++#define MSAN_MAYBE_INTERCEPT_FSTAT
++#endif
++
+ #if !SANITIZER_FREEBSD && !SANITIZER_NETBSD
+ INTERCEPTOR(int, __fxstat, int magic, int fd, void *buf) {
+   ENSURE_MSAN_INITED();
+@@ -1138,23 +1220,78 @@ struct MSanAtExitRecord {
    void *arg;
  };
  
@@ -92,7 +184,7 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1387,6 +1443,7 @@ static uptr signal_impl(int signo, uptr 
+@@ -1387,6 +1524,7 @@ static uptr signal_impl(int signo, uptr 
    } while (false)
  #define COMMON_SYSCALL_POST_WRITE_RANGE(p, s) __msan_unpoison(p, s)
  #include "sanitizer_common/sanitizer_common_syscalls.inc"
@@ -100,7 +192,7 @@ $NetBSD$
  
  struct dlinfo {
    char *dli_fname;
-@@ -1552,6 +1609,9 @@ namespace __msan {
+@@ -1552,6 +1690,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -110,7 +202,15 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1667,6 +1727,7 @@ void InitializeInterceptors() {
+@@ -1633,6 +1774,7 @@ void InitializeInterceptors() {
+   INTERCEPT_FUNCTION(putenv);
+   INTERCEPT_FUNCTION(gettimeofday);
+   MSAN_MAYBE_INTERCEPT_FCVT;
++  MSAN_MAYBE_INTERCEPT_FSTAT;
+   MSAN_MAYBE_INTERCEPT___FXSTAT;
+   MSAN_INTERCEPT_FSTATAT;
+   MSAN_MAYBE_INTERCEPT___FXSTAT64;
+@@ -1667,6 +1809,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);
