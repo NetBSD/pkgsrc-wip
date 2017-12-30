@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2013/04/19 04:39:17 jgoamakf Exp $
 
-SHA1 (HTTP-BrowserDetect-3.14.tar.gz) = 573a8ed420d0c9f82e61ba1cc82f3ca3cd07a211
-RMD160 (HTTP-BrowserDetect-3.14.tar.gz) = aa9028a2d0733b0290a3026755c296f0e65fb695
-SHA512 (HTTP-BrowserDetect-3.14.tar.gz) = cf05af60dbda462df81a9d38d5738826b820534c5fde52f41a290f6d3253783154a2e460042117be32e86dd95f7f1e0e6055b4ca549cb7972cd3c156200c09df
-Size (HTTP-BrowserDetect-3.14.tar.gz) = 95445 bytes
+SHA1 (HTTP-BrowserDetect-3.16.tar.gz) = 2cd4017dc98a0c8cd104da47df0b5ec3f7c81f7c
+RMD160 (HTTP-BrowserDetect-3.16.tar.gz) = a9422b60fd8396286eafa1fa22f8b08996974e4d
+SHA512 (HTTP-BrowserDetect-3.16.tar.gz) = bf147e62646cfb7a3b483c99aaf117f6c3489d0f398843e4f5cf376928de3dd1c25bc9c414fe19473c266f91823965f28ea35681a26eb3ae30b452d78f24bda6
+Size (HTTP-BrowserDetect-3.16.tar.gz) = 112617 bytes
