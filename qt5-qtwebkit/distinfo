@@ -21,4 +21,5 @@ SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp)
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurface.h) = d1d986afd5525143fc786a959240a72167f03352
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurfaceToken.h) = 838acb2d7ecf41e5f6989d98459d103f4268cdcf
 SHA1 (patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = d18013d0e07d7ad7e9d84cb6ef2d418d9bba4c7e
+SHA1 (patch-Source_WebKit_PlatformQt.cmake) = 5dfde3b2e3092ffcd11fc6746bed1767b2c3b692
 SHA1 (patch-Source_cmake_OptionsQt.cmake) = 2527e56468709bd9fd0a98bf754ac9c692cac4dc
