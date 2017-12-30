@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.2 2015/09/13 20:39:38 yhardy Exp $
 
-DISTNAME=	chocolate-doom-2.3.0
+DISTNAME=	chocolate-doom-3.0.0
 CATEGORIES=	games
-MASTER_SITES=	http://www.chocolate-doom.org/downloads/2.3.0/
+MASTER_SITES=	http://www.chocolate-doom.org/downloads/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chocolate-doom.org/
@@ -10,7 +10,7 @@ COMMENT=	Doom/Heretic/Hexen/Strife source port
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,9 +28,9 @@ REPLACE_PYTHON+=		man/simplecpp
 
 .include "../../lang/python/application.mk"
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../net/SDL_net/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
