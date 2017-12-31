@@ -94,4 +94,9 @@ ${PYSITELIB}/rtv/terminal.pyo
 ${PYSITELIB}/rtv/theme.py
 ${PYSITELIB}/rtv/theme.pyc
 ${PYSITELIB}/rtv/theme.pyo
+${PYSITELIB}/rtv/themes/default.cfg.example
+${PYSITELIB}/rtv/themes/molokai.cfg
+${PYSITELIB}/rtv/themes/papercolor.cfg
+${PYSITELIB}/rtv/themes/solarized-dark.cfg
+${PYSITELIB}/rtv/themes/solarized-light.cfg
 man/man1/rtv.1
