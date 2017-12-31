@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (pybitbucket-0.12.0.tar.gz) = 9694ac88e25831733ce1ceeddb1cc5c5a720be47
+RMD160 (pybitbucket-0.12.0.tar.gz) = ad9546f62e6ad1a85c5b8512c22c613c33bca0b5
+SHA512 (pybitbucket-0.12.0.tar.gz) = 1bb7f77356c67a950993d1ed4b10dfeb6fdc8d906faa578a675ab1c8960b9fcc16b1d27e15129c5eb0f76dab30a142640be29d242f4001d5c32723f455a8f00c
+Size (pybitbucket-0.12.0.tar.gz) = 84451 bytes
+SHA1 (patch-setup.py) = 133dd004cb5ece741ffd67ec77da30951b4c2486

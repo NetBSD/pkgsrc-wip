@@ -1,0 +1,2 @@
+A Python wrapper for the Bitbucket Cloud REST API. This is not known to work
+with Bitbucket Server, previously known as Stash.
