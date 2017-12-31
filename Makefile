@@ -956,6 +956,7 @@ SUBDIR+=	gimp-dds
 SUBDIR+=	gin
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-modes-git
+SUBDIR+=	git-spindle
 SUBDIR+=	gitg
 SUBDIR+=	gitlab
 SUBDIR+=	gitless

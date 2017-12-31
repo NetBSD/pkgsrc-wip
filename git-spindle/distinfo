@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (git-spindle-3.4.2.tar.gz) = 5f9748aa3e527c9ea1685f5289f3c20b6f979159
+RMD160 (git-spindle-3.4.2.tar.gz) = 5927c465bf38faed023a38395e37969d049990c4
+SHA512 (git-spindle-3.4.2.tar.gz) = bff36588dd68bde7fbed42a34f1e383061b63cd36bb08aa6384ed624df1fdda3b7c309bfd13017f5e3dac0267e582d2ad3f879a08daa9349f770df0ccff7d9bc
+Size (git-spindle-3.4.2.tar.gz) = 1870475 bytes
+SHA1 (patch-lib_gitspindle_github.py) = 5f17e46025241e31c3991204f00a8e26e9ae3df7
