@@ -1,7 +1,13 @@
 @comment $NetBSD$
 bin/pan
+man/man1/pan.1
 share/appdata/pan.appdata.xml
 share/applications/pan.desktop
+share/icons/hicolor/16x16/apps/pan.png
+share/icons/hicolor/24x24/apps/pan.png
+share/icons/hicolor/256x256/apps/pan.png
+share/icons/hicolor/32x32/apps/pan.png
+share/icons/hicolor/48x48/apps/pan.png
 share/locale/am/LC_MESSAGES/pan.mo
 share/locale/ar/LC_MESSAGES/pan.mo
 share/locale/az/LC_MESSAGES/pan.mo
@@ -50,4 +56,3 @@ share/locale/uk/LC_MESSAGES/pan.mo
 share/locale/vi/LC_MESSAGES/pan.mo
 share/locale/zh_CN/LC_MESSAGES/pan.mo
 share/locale/zh_TW/LC_MESSAGES/pan.mo
-share/pixmaps/pan.png
