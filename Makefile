@@ -4277,7 +4277,6 @@ SUBDIR+=	tagtool
 SUBDIR+=	taisei
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
-SUBDIR+=	tamago-tsunagi
 SUBDIR+=	tardy
 SUBDIR+=	taskcoach
 SUBDIR+=	taskd
