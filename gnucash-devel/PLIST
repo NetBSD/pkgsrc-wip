@@ -4,9 +4,6 @@ bin/gnc-fq-dump
 bin/gnc-fq-helper
 bin/gnc-fq-update
 bin/gnucash
-bin/gnucash-env
-bin/gnucash-make-guids
-bin/gnucash-valgrind
 include/gnucash/Account.h
 include/gnucash/FreqSpec.h
 include/gnucash/Query.h
@@ -385,8 +382,6 @@ lib/libgnc-backend-xml-utils.la
 lib/libgnc-core-utils.la
 lib/libgnc-gnome.la
 lib/libgnc-module.la
-libexec/gnucash/overrides/gnucash-env
-libexec/gnucash/overrides/gnucash-make-guids
 man/man1/gnc-fq-dump.1
 man/man1/gnc-fq-helper.1
 man/man1/gnucash.1
@@ -854,6 +849,7 @@ share/gnucash/gnome
 share/gnucash/gtkbuilder/assistant-acct-period.glade
 share/gnucash/gtkbuilder/assistant-csv-account-import.glade
 share/gnucash/gtkbuilder/assistant-csv-export.glade
+share/gnucash/gtkbuilder/assistant-csv-price-import.glade
 share/gnucash/gtkbuilder/assistant-csv-trans-import.glade
 share/gnucash/gtkbuilder/assistant-hierarchy.glade
 share/gnucash/gtkbuilder/assistant-loan.glade
