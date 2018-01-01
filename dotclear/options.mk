@@ -19,11 +19,7 @@ WWW_GROUP?=             ${APACHE_GROUP}
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 .include "../../mk/apache.mk"
 DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.5:../../www/ap-php
-.if !empty(PKG_APACHE:Mapache22)
-WWW_CONF_FILE=		apache22.conf
-.else
 WWW_CONF_FILE=		apache24.conf
-.endif
 WWW_SYSCONFDIR=		${PREFIX}/etc/httpd
 .endif
 

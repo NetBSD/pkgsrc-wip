@@ -5,17 +5,6 @@ The Ganglia Web Frontend has been installed in the directory
 You must add appropriate configuration directives to your
 web server configuration file.
 
-A typical apache22 configuration would be:
-
-    Alias /ganglia/ "%%PREFIX%%/%%WEBFRONTDIR%%/"
-
-    <Directory "%%PREFIX%%/%%WEBFRONTDIR%%">
-        Options Indexes FollowSymlinks MultiViews
-        AllowOverride None
-        Order allow,deny
-        Allow from all
-    </Directory>
-
 A typical apache24 configuration would be:
 
     Alias /ganglia/ "%%PREFIX%%/%%WEBFRONTDIR%%/"

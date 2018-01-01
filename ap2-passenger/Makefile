@@ -11,7 +11,6 @@ RUBY_VERSIONS_ACCEPTED=	22 23   # www/ruby-rack via wip/ruby-passenger
 
 .include "../../wip/ruby-passenger/Makefile.common"
 
-PKG_APACHE_ACCEPTED=	apache24 apache22
 APACHE_MODULE=		YES
 USE_APR=		YES
 

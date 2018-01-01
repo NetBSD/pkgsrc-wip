@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2012/10/01 21:52:41 asau Exp $
 
 DISTNAME=	koha-2.2.9
-#PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/koha/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://koha.org/
 COMMENT=	Koha is an integrated library system
 
 DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
-DEPENDS+=	apache>=2.2:../../www/apache22
+DEPENDS+=	apache>=2.4:../../www/apache24
 
 DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Date-Manip>=5.44:../../devel/p5-Date-Manip
