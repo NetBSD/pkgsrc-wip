@@ -1,7 +1,13 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 21:21:53 yhardy Exp $
 
-SHA1 (Commander-Genius/v1822release.tar.gz) = c1ff103059686f5b9a0880289f56b6c076fd752c
-RMD160 (Commander-Genius/v1822release.tar.gz) = 2c705bd4e6dc9cd90d56e90493cb0319064bf812
-Size (Commander-Genius/v1822release.tar.gz) = 71019673 bytes
-SHA1 (patch-lib_GsKit_base_video_scaler_scalebit.cpp) = 003196f19690e0f0fbe4c2d2ab9390e475a42d01
-SHA1 (patch-src_install.cmake) = 67078bc0922aecc941a76680607ab076f5ced71f
+SHA1 (Commander-Genius/GsKit-f925d1362f0bc99598141a97d5a200d5e6a41391.tar.gz) = 9f3985033da709ea704814d32da40f7c9a8fb5c5
+RMD160 (Commander-Genius/GsKit-f925d1362f0bc99598141a97d5a200d5e6a41391.tar.gz) = 7719e5c889337e8135eb67fb76bddb3640060134
+SHA512 (Commander-Genius/GsKit-f925d1362f0bc99598141a97d5a200d5e6a41391.tar.gz) = e13784f2fd2f3f21ce9b0bd6123168df47f02958155ca4f1d77d3bc4c6805d46caa9ae15e067c692e38befbb68e5be45bfbd429ae4f7b8d3e07353a8e08e6740
+Size (Commander-Genius/GsKit-f925d1362f0bc99598141a97d5a200d5e6a41391.tar.gz) = 182611 bytes
+SHA1 (Commander-Genius/v200Release.tar.gz) = 704a791ffdac7c4671f384e4723e8f9f4582b086
+RMD160 (Commander-Genius/v200Release.tar.gz) = a8600a64878b537993e7d5e0a44ce9d8f8f96f06
+SHA512 (Commander-Genius/v200Release.tar.gz) = 09ecab0af219c58a3611a1ad7563da863f050861b124eb4c53e19c8d7929d5f3eb58f42f5754f893b0df54c56b427d5bafcec491a74b511f26d6e8183649d6f9
+Size (Commander-Genius/v200Release.tar.gz) = 60764172 bytes
+SHA1 (patch-GsKit_base_video_scaler_scalebit.cpp) = 390a892f4bdece12bcb6b36f84dee5ac2cec0c90
+SHA1 (patch-src_engine_unzip_ioapi.h) = 80366fc999aae516da6ce0279e8049532c3df247
+SHA1 (patch-src_install.cmake) = d40e5bf407429eb54c6cb6970a5b23963e55d2a3

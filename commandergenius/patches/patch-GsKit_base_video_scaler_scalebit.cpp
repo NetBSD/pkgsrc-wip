@@ -2,8 +2,8 @@ $NetBSD: patch-lib_GsKit_base_video_scaler_scalebit.cpp,v 1.1 2015/08/19 21:21:5
 
 Use malloc.h on NetBSD, not alloca.h.
 
---- ./lib/GsKit/base/video/scaler/scalebit.cpp.orig	2014-05-10 15:16:02.000000000 +0000
-+++ ./lib/GsKit/base/video/scaler/scalebit.cpp
+--- ./GsKit/base/video/scaler/scalebit.cpp.orig	2014-05-10 15:16:02.000000000 +0000
++++ ./GsKit/base/video/scaler/scalebit.cpp
 @@ -42,6 +42,8 @@
  
  #ifdef __MINGW32__
