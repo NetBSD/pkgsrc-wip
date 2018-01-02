@@ -1551,7 +1551,6 @@ SUBDIR+=	kahakai
 SUBDIR+=	kallisto
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kawa
-SUBDIR+=	kbuild
 SUBDIR+=	kcalc
 SUBDIR+=	kde-baseapps4
 SUBDIR+=	kde-cli-tools
