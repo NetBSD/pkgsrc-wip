@@ -14,7 +14,6 @@ COMMENT=		AES encryption pipe from the loop-aes project
 
 DEPENDS+=		gnupg>=1.2.0:../../security/gnupg
 
-CRYPTO=			YES
 GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"

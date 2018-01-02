@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Crypt-CAST5/
 COMMENT=	Perl5 CAST5 block cipher implementation
 
-
-CRYPTO=		YES
 PERL5_PACKLIST=	auto/Crypt/CAST5/.packlist
 
 .include "../../lang/perl5/module.mk"

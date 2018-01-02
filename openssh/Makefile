@@ -19,8 +19,6 @@ BROKEN_FOR_PLATFORM+=	OpenBSD-*-*
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		autoconf perl
 
-CRYPTO=			yes
-
 # retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		IPV6_READY
 
