@@ -7,7 +7,7 @@
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
 
-# # Created by: Jason Bacon <bacon4000@gmail.com>
+# # Created by: Jason Bacon <bacon@NetBSD.org>
 # # $FreeBSD$
 # PLIST_FILES=	bin/interval_tree_test include/${PORTNAME}/IntervalTree.h
 # # GH_TAGNAME=	${PORTVERSION}
@@ -29,7 +29,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekg/}
 GITHUB_TAG=	${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ekg/intervaltree
 COMMENT=	Minimal C++ interval tree implementation
 # Double-check this

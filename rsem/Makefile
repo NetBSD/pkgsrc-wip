@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=deweylab/}
 GITHUB_PROJECT=	RSEM
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://deweylab.biostat.wisc.edu/rsem/README.html
 COMMENT=	RNA-Seq by Expectation-Maximization
 LICENSE=	gnu-gpl-v3

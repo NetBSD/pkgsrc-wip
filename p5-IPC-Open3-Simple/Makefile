@@ -15,7 +15,7 @@ PKGNAME=	p5-IPC-Open3-Simple-${PORTVERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IPC-Open3-Simple/
 COMMENT=	Simple alternative to IPC::Open3
 # Check this

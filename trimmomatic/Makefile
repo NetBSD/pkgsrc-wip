@@ -9,7 +9,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.usadellab.org/cms/?page=trimmomatic
 COMMENT=	Flexible read trimming tool for Illumina NGS data
 LICENSE=	gnu-gpl-v3

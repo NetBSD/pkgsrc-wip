@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.netlib.org/blas/blast-forum/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/blas/blast-forum/
 COMMENT=	C bindings and headers for BLAS library
 # Not sure about this.  FreeBSD port has custom blas license.

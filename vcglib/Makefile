@@ -8,7 +8,7 @@
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
 
-## Created by: Jason Bacon <bacon4000@gmail.com>
+## Created by: Jason Bacon <bacon@NetBSD.org>
 ## $FreeBSD$
 #DISTVERSIONPREFIX=	v
 ##LICENSE=	unspecified

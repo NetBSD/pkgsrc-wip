@@ -18,7 +18,7 @@ DISTNAME=	jellyfish-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	http://www.cbcb.umd.edu/software/jellyfish/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.genome.umd.edu/jellyfish.html
 COMMENT=	Fast, memory-efficient counting of k-mers in DNA
 # Double-check this

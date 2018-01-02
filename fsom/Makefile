@@ -8,7 +8,7 @@ DISTNAME=	fsom-${PORTVERSION}
 CATEGORIES=	science
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ekg/fsom
 COMMENT=	Tiny C library for managing SOM (Self-Organizing Maps) neural networks
 LICENSE=	gnu-gpl-v3

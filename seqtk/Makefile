@@ -9,7 +9,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lh3/}
 GITHUB_TAG=	${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/lh3/seqtk
 COMMENT=	Tool for processing sequences in FASTA/FASTQ format
 LICENSE=	gnu-gpl-v2

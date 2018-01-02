@@ -15,7 +15,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PacificBiosciences/}
 GITHUB_PROJECT=	unanimity
 GITHUB_TAG=	054c59530f7ee7c3ce0adde4524f367e8d0244cd
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/PacificBiosciences/unanimity
 COMMENT=	Consensus library and applications
 LICENSE=	modified-bsd

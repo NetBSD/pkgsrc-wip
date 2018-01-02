@@ -13,7 +13,7 @@ PKGNAME=	metal-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	http://csg.sph.umich.edu/abecasis/Metal/download/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://genome.sph.umich.edu/wiki/METAL_Program
 COMMENT=	Meta-analysis of genomewide association scans
 # Check this

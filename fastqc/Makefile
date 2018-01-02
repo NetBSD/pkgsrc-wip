@@ -11,7 +11,7 @@ CATEGORIES=	biology
 MASTER_SITES=	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 COMMENT=	Quality control tool for high throughput sequence data
 # Check this

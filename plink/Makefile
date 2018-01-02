@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
 GITHUB_TAG=	cbcf442c176036138419b14d6b46a3d57e8325d4
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 #HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
 COMMENT=	Whole genome association analysis toolset
 LICENSE=	gnu-gpl-v2

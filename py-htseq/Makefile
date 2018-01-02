@@ -9,7 +9,7 @@ DISTNAME=	HTSeq-${PORTVERSION}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=H/HTSeq/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Framework to analyze data from high-throughput sequencing assays
 LICENSE=	gnu-gpl-v3

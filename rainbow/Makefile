@@ -10,7 +10,7 @@ CATEGORIES=	biology
 # FreeBSD MASTER_SITES: SF/bio-rainbow
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bio-rainbow/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/bio-rainbow/
 COMMENT=	Short reads clustering and local assembly
 # LICENSE=	unspecified

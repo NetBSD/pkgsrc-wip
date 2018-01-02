@@ -9,7 +9,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Finds and removes adapter sequences, primers, poly-A tails, etc
 LICENSE=	mit

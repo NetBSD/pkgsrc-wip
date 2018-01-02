@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=TransDecoder/}
 GITHUB_PROJECT=	TransDecoder
 GITHUB_TAG=	${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://transdecoder.github.io/
 COMMENT=	Identify candidate coding regions within transcript sequences
 LICENSE=	modified-bsd

@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://launchpad.net/ufl/${MMVERSION}.x/${MMVERSION}.0/+download/
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://launchpad.net/ufl
 COMMENT=	Unified Form Language for finite element discretizations
 

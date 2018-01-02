@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=torognes/}
 GITHUB_PROJECT=	vsearch
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/torognes/vsearch
 COMMENT=	Versatile open-source tool for metagenomics
 LICENSE=	gnu-gpl-v3

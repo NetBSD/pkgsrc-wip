@@ -8,7 +8,7 @@ DISTNAME=	stacks-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	http://catchenlab.life.illinois.edu/stacks/source/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://catchenlab.life.illinois.edu/stacks/
 COMMENT=	Software pipeline for building loci from short-read sequences
 LICENSE=	gnu-gpl-v2

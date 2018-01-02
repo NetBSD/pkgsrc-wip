@@ -14,7 +14,7 @@ EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://github.com/PacificBiosciences/pypeFLOW
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Lightweight and reusable make/flow data process library
 LICENSE=	mit

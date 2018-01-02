@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://launchpad.net/fiat/${MMVERSION}.x/release-${MMVERSION}/+download/
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://launchpad.net/fiat
 COMMENT=	Finite element Automatic Tabulator
 

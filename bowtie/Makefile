@@ -17,7 +17,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Ultrafast, memory-efficient short read aligner
 LICENSE=	artistic

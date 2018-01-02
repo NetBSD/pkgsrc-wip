@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=MBL-Woods-Hole/}
 GITHUB_PROJECT=	BPC-scripts
 GITHUB_TAG=	73c814a243955dc64ee248d9dacd4f71ac8640dc
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://vamps.mbl.edu/resources/software.php
 COMMENT=	Gast Illumina processing
 # Check this

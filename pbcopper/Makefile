@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PacificBiosciences/}
 GITHUB_PROJECT=	pbcopper
 GITHUB_TAG=	ce9a4b6d836d53997d7acce6b5dceaa8bb8f7c22
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/PacificBiosciences/pbcopper
 COMMENT=	Core C++ library for data structures, algorithms, and utilities
 LICENSE=	modified-bsd

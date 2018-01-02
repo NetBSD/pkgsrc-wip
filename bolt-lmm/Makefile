@@ -10,7 +10,7 @@ PKGNAME=	bolt-lmm-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/
 COMMENT=	Statistics for testing association between phenotype and genotypes
 

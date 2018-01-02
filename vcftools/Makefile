@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=vcftools/}
 GITHUB_PROJECT=	vcftools
 GITHUB_TAG=	v${DISTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/vcftools/vcftools
 COMMENT=	Tools for working with VCF genomics files
 LICENSE=	gnu-lgpl-v3

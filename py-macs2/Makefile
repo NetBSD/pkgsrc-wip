@@ -20,7 +20,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=taoliu/}
 GITHUB_PROJECT=	MACS
 GITHUB_TAG=	6946b2f6571cd0a7cfbb882c79aaa25a05a5c48d
 
-MAINTAINER=	bacon4000@uwm.edu
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/macs2
 COMMENT=	Novel algorithm for identifying transcript factor binding sites
 # Check this

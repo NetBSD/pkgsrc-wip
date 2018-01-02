@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_PROJECT=	samtools
 GITHUB_TAG=	${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.htslib.org/
 COMMENT=	Tools for manipulating next-generation sequencing data
 

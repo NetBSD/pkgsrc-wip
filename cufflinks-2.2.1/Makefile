@@ -11,7 +11,7 @@ DISTNAME=	cufflinks-2.2.1
 CATEGORIES=	biology
 MASTER_SITES=	http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	RNA transcript assembly, differential expression/regulation
 LICENSE=	boost-license

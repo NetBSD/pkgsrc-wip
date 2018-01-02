@@ -5,7 +5,7 @@ PKGNAME=	blast-2.2.30
 CATEGORIES=	biology
 MASTER_SITES=	ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI Basic Local Alignment Search Tool (Blast)
 LICENSE=	public-domain

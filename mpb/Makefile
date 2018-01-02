@@ -5,7 +5,7 @@ DISTNAME=	mpb-1.4.2
 CATEGORIES=	science
 MASTER_SITES=	http://ab-initio.mit.edu/mpb/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://ab-initio.mit.edu/mpb/
 COMMENT=	MIT Photonic Bands
 LICENSE=	gnu-gpl-v3

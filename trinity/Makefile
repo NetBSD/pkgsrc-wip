@@ -44,7 +44,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=trinityrnaseq/}
 GITHUB_PROJECT=	trinityrnaseq
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://trinityrnaseq.github.io/
 COMMENT=	Trinity assembles transcript sequences from Illumina RNA-Seq data
 

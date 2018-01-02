@@ -5,7 +5,7 @@ DISTNAME=	dolfin-${MMVERSION}.0
 CATEGORIES=	math python
 MASTER_SITES=	http://launchpad.net/dolfin/${MMVERSION}.x/${MMVERSION}.0/+download/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://launchpad.net/dolfin
 COMMENT=	C++/Python interface of FEniCS
 LICENSE=	gnu-lgpl-v3

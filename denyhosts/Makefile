@@ -4,7 +4,7 @@ DISTNAME=	DenyHosts-2.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://downloads.sourceforge.net/project/denyhosts/denyhosts/2.6/
 COMMENT=	Block hosts with too many failed login attempts
 LICENSE=	gnu-gpl-v2

@@ -20,7 +20,7 @@ GITHUB_TAG=	v${PORTVERSION}
 # NetBSD: Cannot find -lssp*
 PKGSRC_USE_SSP=	no
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
 # Check this

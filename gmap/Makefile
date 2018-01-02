@@ -10,7 +10,7 @@ DISTFILES=	gmap-gsnap-${PORTVERSION:C|\.|-|g}${EXTRACT_SUFX}
 CATEGORIES=	biology
 MASTER_SITES=	http://research-pub.gene.com/gmap/src/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Genomic Mapping and Alignment Program for mRNA and EST Sequences
 #LICENSE=	

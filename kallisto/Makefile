@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=pachterlab/}
 GITHUB_PROJECT=	kallisto
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pachterlab.github.io/kallisto/about.html
 COMMENT=	Quantify abundances of transcripts from RNA-Seq data
 # Check this

@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PacificBiosciences/}
 GITHUB_PROJECT=	pbbam
 GITHUB_TAG=	e46654e0e0b816230c16f4a6132c1feff633a62a
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/PacificBiosciences/pbbam
 COMMENT=	PacBio BAM C++ library, with SWIG bindings
 LICENSE=	modified-bsd

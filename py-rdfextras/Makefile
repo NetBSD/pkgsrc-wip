@@ -9,7 +9,7 @@ PKGNAME=	${PYPKGPREFIX}-rdfextras-${PORTVERSION}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RDFLib/rdfextras/archive/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Collection of packages providing extras based on RDFLib 3
 LICENSE=	original-bsd

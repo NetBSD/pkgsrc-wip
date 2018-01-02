@@ -8,7 +8,7 @@ DISTNAME=	smithwaterman-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ekg/smithwaterman
 COMMENT=	Smith-waterman-gotoh alignment algorithm
 LICENSE=	gnu-gpl-v2

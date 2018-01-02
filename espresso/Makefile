@@ -13,7 +13,7 @@ DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} \
 #		XSpectra-5.0.2.tar.gz \
 #		qe-gipaw-5.0.3.tar.gz \
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://qe-forge.org/gf/download/frsrelease/116/403/
 COMMENT=	Nanoscale electronic-structure calculations and materials modeling
 #LICENSE=	# TODO: (see mk/license.mk)

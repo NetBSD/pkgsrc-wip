@@ -7,7 +7,7 @@
 DISTNAME=	jellyfish-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gmarcais/}
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.genome.umd.edu/jellyfish.html
 GITHUB_TAG=	v${PORTVERSION}
 

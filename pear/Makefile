@@ -9,7 +9,7 @@ PKGNAME=	pear-merger-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	http://sco.h-its.org/exelixis/web/software/pear/files/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://sco.h-its.org/exelixis/web/software/pear/
 COMMENT=	Memory-efficient and highly accurate pair-end read merger
 # LICENSE=	Creative commons

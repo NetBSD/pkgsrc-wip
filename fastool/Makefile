@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fstrozzi/}
 GITHUB_PROJECT=	Fastool
 GITHUB_TAG=	${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/fstrozzi/Fastool
 COMMENT=	Simple and quick FastQ and FastA tool for file reading and conversion
 LICENSE=	2-clause-bsd

@@ -8,7 +8,7 @@ DISTNAME=	SPARQLWrapper-${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-sparqlwrapper-${PORTVERSION}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SPARQLWrapper/}
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 HOMEPAGE=	https://rdflib.github.io/sparqlwrapper/
 COMMENT=	SPARQL endpoint interface to Python

@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PacificBiosciences/}
 GITHUB_PROJECT=	seqan
 GITHUB_TAG=	a1fa79fd98923d2a017a792082e2e1252d05e9e3
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/PacificBiosciences/seqan
 COMMENT=	PacBio patched and stripped down seqan
 LICENSE=	modified-bsd
