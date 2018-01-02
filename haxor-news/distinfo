@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (haxor-news-0.4.3.tar.gz) = c5e1986680437c36a777012a3f24ea5e41d9028c
+RMD160 (haxor-news-0.4.3.tar.gz) = e057e23f5da990744578bcb4b5936b6fb2e9f619
+SHA512 (haxor-news-0.4.3.tar.gz) = 39d40bce1dfa7ecb0b81d7996012262bd9c5c40300cc1ebbb799cb586c76978d858f064b6ffeda1208289b388a9a5257603ea7dfb77b36391838272003ec523c
+Size (haxor-news-0.4.3.tar.gz) = 58696 bytes
+SHA1 (patch-setup.py) = 207050f0abbcdcb60d02f7bc55b13a45bdd45d7f

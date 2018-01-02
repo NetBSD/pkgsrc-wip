@@ -1171,6 +1171,7 @@ SUBDIR+=	hasktags
 SUBDIR+=	hawk
 SUBDIR+=	hawknl
 SUBDIR+=	haxima
+SUBDIR+=	haxor-news
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
 SUBDIR+=	hdparm
