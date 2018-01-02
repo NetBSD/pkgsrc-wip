@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2015/04/29 12:40:50 outpaddling Exp $
 
-DISTNAME=	slurm-17.11.1
+DISTNAME=	slurm-17.11.1-2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \

@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (slurm-17.11.1.tar.bz2) = 9358fe114df529680cc6be03ea26a3ee5a105290
-RMD160 (slurm-17.11.1.tar.bz2) = a1ee38770ab9ca87444333b181284bcccda47527
-SHA512 (slurm-17.11.1.tar.bz2) = 3fad76fb59f2af5fbb889873b156fcc88720fa686011296ff87351a778b683b66ea09318ad2419ae41c3e5f1ede7995fde875b1c23229bb53e77263084b4027b
-Size (slurm-17.11.1.tar.bz2) = 6180867 bytes
+SHA1 (slurm-17.11.1-2.tar.bz2) = 156532f257f99cbacc5b94bf324e924b63e6cf12
+RMD160 (slurm-17.11.1-2.tar.bz2) = 72356103a954be2772dce23d025169f961bd3ea2
+SHA512 (slurm-17.11.1-2.tar.bz2) = a2020169ed6071d4544f67722c31e3e556e740a35e1fbb3a2bcb6c63bb7fd8362c909ece04352cd1f77d65763161b1e65065ed4f95ac57cf1cac76447ddd8baf
+Size (slurm-17.11.1-2.tar.bz2) = 6181098 bytes
 SHA1 (patch-etc_init.d.slurm.in) = beaedd5385b4aad04583d2bc5a23557519f74ec5
 SHA1 (patch-src_slurmd_slurmstepd_task.c) = 7948c76ce65b0e5211486d2e7b1901664c1f7016
