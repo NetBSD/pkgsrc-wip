@@ -1,14 +1,23 @@
 # $NetBSD$
 
-DISTNAME=	farbfeld-1
-MASTER_SITES=	http://dl.suckless.org/farbfeld/
+DISTNAME=	farbfeld-3
 CATEGORIES=	graphics
-LICENSE=	isc
+MASTER_SITES=	http://dl.suckless.org/farbfeld/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Suckless image format with conversion tools
+LICENSE=	isc
 
 USE_TOOLS+=	gmake
-NO_CONFIGURE=	yes
 
-.include "../../graphics/jpeg/buildlink3.mk"
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
+
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+
+USE_LANGUAGES=	c99
+
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
