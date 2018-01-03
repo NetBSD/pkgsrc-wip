@@ -2729,6 +2729,7 @@ SUBDIR+=	piwik
 SUBDIR+=	pixz
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
+SUBDIR+=	pkg-dev
 SUBDIR+=	pkg_conflicts
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)

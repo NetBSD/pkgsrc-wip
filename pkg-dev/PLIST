@@ -1,0 +1,11 @@
+@comment $NetBSD$
+sbin/pbulk-new-chroot
+sbin/pbulk-setup
+sbin/pbulk-start-chroot
+sbin/pkg-check
+sbin/pkg-diff
+sbin/pkg-grep
+sbin/pkg-list
+sbin/pkg-reinstall
+sbin/pkg-remake
+sbin/pkg-vuln
