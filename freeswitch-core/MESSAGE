@@ -3,21 +3,25 @@ $NetBSD$
 
 * There are many modules that are not enabled by default. If they are
   required, please  manually enable them in ${WRKSRC}/modules.conf file.
-  As for now, some required by wip/fusionpbx (GUI interface) were included.
-  (You should deinstall, enable the modules, update your PLIST or use
-  CHECK-FILES=no and then install again)
+  As for now, some commonly used were included.
 
-* The local_ip_v4 variable is used by sofia-sip module. However, automatic
-  detection of this value might fail after install. The workaround is
-  to manually set the local_ip_v4 value in vars.xml, usually located at:
+  (You should deinstall, enable the modules, update your PLIST or use
+  CHECK-FILES=no and then install FreeSWITCH again, if new modules
+  were enabled.)
+
+* The 'local_ip_v4' variable is used by sofia-sip module.
+  However, automatic detection of this value might fail. The workaround
+  is to manually set the local_ip_v4 value in vars.xml, usually located at:
 	${PREFIX}/etc/freeswitch/vars.xml.
+
   Example:
-	<X-PRE-PROCESS cmd="set" data="local_ip_v4=[yo.ur.i.p]"/>
+	<X-PRE-PROCESS cmd="set" data="local_ip_v4=yo.ur.i.p"/>
+	Replace "yo.ur.i.p" with a proper value.
 
 * The event_socket_module by default has an IPv6 configuration, therefore,
-  it is unable to load properly. Please set your IP address or '0.0.0.0' in
+  it is unable to load properly. Please set your binding IP address in
   the event_socket.conf.xml file inside conf_dir/autoload-configs/
 
-* If you are willing to spend some time installing a GUI interface, you
-  might want to check wip/fusionpbx. Highly recommended.
+* FreeSWITCH doesn't come with a GUI. If you have the time, take a look to:
+	wip/fusionpbx package.
 ===========================================================================

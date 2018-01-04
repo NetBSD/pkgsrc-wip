@@ -166,6 +166,31 @@ OWN_DIRS_PERMS+=	${PREFIX}/share/freeswitch ${FS_USER} ${FS_GROUP} 0755
 PKG_SYSCONFSUBDIR=	freeswitch
 PKG_SYSCONFDIR_PERMS=	${FS_USER} ${FS_GROUP} 0755
 
+#############################################################
+# WIP: Use of CONF_FILES according to pkgsrc best practices #
+#############################################################
+
+#EGDIR=			${PREFIX}/share/examples/freeswitch
+#CONF_FILES+=            ${EGDIR}/extensions.conf ${PKG_SYSCONFDIR}/extensions.conf
+#CONF_FILES+=            ${EGDIR}/freetdm.conf ${PKG_SYSCONFDIR}/freetdm.conf
+#.for a in alsa blacklist callcenter cdr_mongodb cdr_pg_csv cdr_sqlite \
+#	cepstral cidlookup conference.conf console db dialplan_directory \
+#	dingaling directory distributor easyroute enum erlang_event \
+#	event_multicast event_socket fax fifo freetdm hash httapi http_cache \
+#	ivr java json_cdr lcr local_stream logfile lua memcache modules mongo \
+#	nibblebill opal osp perl pocketsphinx portaudio post_load_modules \
+#	presence_map python redis rss rtmp sangoma_codec shout skinny sofia \
+#	spandsp spidermonkey switch syslog timezones translate tts_commandline \
+#	unicall unimrcp verto voicemail voicemail_ivr xml_cdr xml_curl \
+#	xml_rpc zeroconf
+#CONF_FILES+=            ${EGDIR}/autoload_configs/${a}.conf.xml \
+#			${PKG_SYSCONFDIR}/autoload_configs/${a}.conf.xml
+#.endfor
+#CONF_FILES+=            ${EGDIR}/magic ${PKG_SYSCONFDIR}/magic
+#CONF_FILES+=            ${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+
+#############################################################
+
 BUILDLINK_TRANSFORM+=	rm:-Werror
 CFLAGS+=        	-Wno-c11-extensions -Wno-deprecated-declarations \
 			-Wno-zero-length-array -Wno-incompatible-pointer-types
