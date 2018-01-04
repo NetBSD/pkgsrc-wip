@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	fusionpbx-4.2.2
+DISTNAME=	fusionpbx-4.3.4
 CATEGORIES=	comms net audio
 GITHUB_PROJECT=	fusionpbx
-MASTER_SITES=	${MASTER_SITE_GITHUB:=fusionpbx/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=angelmadames/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com
