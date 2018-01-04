@@ -1,0 +1,8 @@
+Tool for attaching simply to VMware Fusion Serial Consoles.
+
+VMware Fusion will, if appropriately coerced, emulate UARTs in
+guests and expose them to the host as UNIX domain sockets. This
+tool allows you to attach your terminal emulator directly to one
+of those sockets without having to lark about with socat and screen.
+
+Also works well with a VirtualBox host and a NetBSD guest.

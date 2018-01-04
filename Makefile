@@ -4516,6 +4516,7 @@ SUBDIR+=	vkeybd
 SUBDIR+=	vlevel
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmsbackup
+SUBDIR+=	vmware-sercons
 SUBDIR+=	vncselector
 SUBDIR+=	vpnc
 SUBDIR+=	vpr
