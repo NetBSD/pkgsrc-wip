@@ -41,9 +41,8 @@ CONFIGURE_ARGS+=	--with-dbdir=${VARBASE}/db/freeswitch
 CONFIGURE_ARGS+=	--with-imagesdir=${PREFIX}/share/freeswitch/images
 CONFIGURE_ARGS+=	--with-recordingsdir=${PREFIX}/freeswitch/recordings
 CONFIGURE_ARGS+=	--with-modinstdir=${PREFIX}/freeswitch/modules
-CONFIGURE_ARGS+=	--enable-zrtp
 CONFIGURE_ARGS+=	--enable-core-pgsql-support
-CONFIGURE_ARGS+=	--enable-xmlrpc-c
+CONFIGURE_ARGS+=	--disable-libvpx
 CONFIGURE_ARGS+=	--enable-64
 
 REPLACE_PERL+=		scripts/rss/*.pl
@@ -144,6 +143,13 @@ DEPENDS+=        	libyaml-[0-9]*:../../textproc/libyaml
 
 .include "../../mk/bsd.prefs.mk"
 
+.if (${PKGSRC_COMPILER} && ${CC} == "clang" && ${CXX} == "clang++")
+CONFIGURE_ARGS+=	--enable-zrtp
+BUILDLINK_TRANSFORM+=	rm:-Werror
+CFLAGS+=        	-Wno-c11-extensions -Wno-deprecated-declarations \
+			-Wno-zero-length-array -Wno-incompatible-pointer-types
+.endif
+
 FS_USER?=		freeswitch
 FS_GROUP?=		freeswitch
 PKG_USERS_VARS=		FS_USER
@@ -154,14 +160,15 @@ PKG_USERS=		${FS_USER}:${FS_GROUP}
 PKG_GECOS.${FS_USER}=	FreeSWITCH
 PKG_SHELL.${FS_USER}=	${NOLOGIN}
 
-MAKE_DIRS+=		${VARBASE}/log/freeswitch
-MAKE_DIRS+=		${VARBASE}/db/freeswitch
-MAKE_DIRS_PERMS+=	${VARBASE}/log/freeswitch ${FS_USER} ${FS_GROUP} 0644
-MAKE_DIRS_PERMS+=	${VARBASE}/db/freeswitch ${FS_USER} ${FS_GROUP} 0755
-OWN_DIRS=		${PREFIX}/freeswitch
-OWN_DIRS+=		${PREFIX}/share/freeswitch
-OWN_DIRS_PERMS+=	${PREFIX}/freeswitch ${FS_USER} ${FS_GROUP} 0755
-OWN_DIRS_PERMS+=	${PREFIX}/share/freeswitch ${FS_USER} ${FS_GROUP} 0755
+MAKE_DIRS+=		${VARBASE}/freeswitch
+MAKE_DIRS+=		${VARBASE}/share/freeswitch
+MAKE_DIRS_PERMS+=	${VARBASE}/freeswitch ${FS_USER} ${FS_GROUP} 0755
+MAKE_DIRS_PERMS+=	${VARBASE}/share/freeswitch ${FS_USER} ${FS_GROUP} 0755
+
+OWN_DIRS=		${PREFIX}/log/freeswitch
+OWN_DIRS+=		${PREFIX}/db/freeswitch
+OWN_DIRS_PERMS+=	${PREFIX}/log/freeswitch ${FS_USER} ${FS_GROUP} 0644
+OWN_DIRS_PERMS+=	${PREFIX}/db/freeswitch ${FS_USER} ${FS_GROUP} 0755
 
 PKG_SYSCONFSUBDIR=	freeswitch
 PKG_SYSCONFDIR_PERMS=	${FS_USER} ${FS_GROUP} 0755
@@ -191,9 +198,10 @@ PKG_SYSCONFDIR_PERMS=	${FS_USER} ${FS_GROUP} 0755
 
 #############################################################
 
-BUILDLINK_TRANSFORM+=	rm:-Werror
-CFLAGS+=        	-Wno-c11-extensions -Wno-deprecated-declarations \
-			-Wno-zero-length-array -Wno-incompatible-pointer-types
+.if (${PKGSRC_COMPILER} == "gcc")
+pre-configure:
+	cd ${WRKSRC} && ${SH} rebootstrap.sh -j
+.endif
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/srtp/libsrtp.la ${DESTDIR}${PREFIX}/lib
