@@ -16,9 +16,7 @@ LICENSE=	mit
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin
 USE_TOOLS+=		gmake
-
-do-build:
-	cd ${WRKSRC} && gmake sercons
+BUILD_TARGET=		sercons
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sercons ${DESTDIR}${PREFIX}/bin
