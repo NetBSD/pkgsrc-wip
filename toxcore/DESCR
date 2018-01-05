@@ -1,0 +1,4 @@
+Toxcore is a p2p network level libarary that provides encrpyted
+communication and data transfer between peers who can find eachother
+anonymously through a DHT. The peers are identified with numbers
+which contain their public key to be used for message encryption.
