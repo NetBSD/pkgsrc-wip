@@ -18,9 +18,5 @@ optional and off by default.
 
 It has has 3 different profiles: Performance, Balanced, and Accuracy.
 The Balanced version is recommended for modern PCs. Use the Accuracy
-profile only for extreme cases. For more information, see:
-
-https://wiki.libretro.com/index.php?title=Nintendo_SNES_Core_Compatibility
-
-The differences between the three profiles reflect differences in
-documented hardware behaviour versus actual hardware behaviour.
+profile only for extreme cases of hardware spec abuse (e.g. A.S.P.
+Air Strike Patrol).
