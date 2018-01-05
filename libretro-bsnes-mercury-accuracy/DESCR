@@ -17,6 +17,5 @@ accuracy is still uncompromisable; anything that affects accuracy is
 optional and off by default.
 
 It has has 3 different profiles: Performance, Balanced, and Accuracy.
-The Balanced version is recommended for modern PCs. Use the Accuracy
-profile only for extreme cases of hardware spec abuse (e.g. A.S.P.
-Air Strike Patrol).
+Balanced is recommended for modern PCs. Use Accuracy only for extreme
+cases of hardware spec abuse (e.g. the game A.S.P. Air Strike Patrol).

@@ -6,6 +6,6 @@ BSNES_PROFILE=	balanced
 
 PKGNAME=	${DISTNAME}
 HOMEPAGE=	https://docs.libretro.com/library/bsnes_mercury_balanced/
-COMMENT=	Libretro core for balanced SNES/Super Famicom emulation
+COMMENT=	Libretro core for SNES/Super Famicom emulation ("balanced" profile)
 
 .include "../../mk/bsd.pkg.mk"
