@@ -4,7 +4,7 @@ DISTNAME=	libretro-beetle-wswan-20171024
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_WSWAN
+HOMEPAGE=	https://docs.libretro.com/library/beetle_cygne/
 COMMENT=	Libretro core based on the Mednafen Wonderswan emulator
 LICENSE=	gnu-gpl-v2
 

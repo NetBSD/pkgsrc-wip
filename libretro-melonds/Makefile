@@ -4,6 +4,7 @@ DISTNAME=	libretro-melonds-20171207
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
+HOMEPAGE=	https://docs.libretro.com/library/melonds/
 COMMENT=	Libretro core based on the melonDS emulator
 LICENSE=	gnu-gpl-v3
 

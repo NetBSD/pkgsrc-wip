@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=PicoDrive
+HOMEPAGE=	https://docs.libretro.com/library/picodrive/
 COMMENT=	Libretro core for emulating Sega 8/16-bit consoles & 32X
 LICENSE=	picodrive-license
 

@@ -4,7 +4,7 @@ DISTNAME=	libretro-tyrquake-20170802
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=TyrQuake
+HOMEPAGE=	https://docs.libretro.com/library/tyrquake/
 COMMENT=	Libretro core for the TyrQuake interpreter for Quake and Quakeworld
 LICENSE=	gnu-gpl-v2
 

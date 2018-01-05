@@ -4,6 +4,7 @@ DISTNAME=	libretro-cap32-20171109
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
+HOMEPAGE=	https://docs.libretro.com/library/caprice32/
 COMMENT=	Libretro core based on the Caprice32 Amstrad CPC emulator
 LICENSE=	gnu-gpl-v2
 

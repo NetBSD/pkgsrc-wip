@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Genesis_Plus_GX
+HOMEPAGE=	https://docs.libretro.com/library/genesis_plus_gx/
 COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	picodrive-license
 

@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/gambatte-libretro
+HOMEPAGE=	https://docs.libretro.com/library/gambatte/
 COMMENT=	Libretro core based on the Gambatte Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
 

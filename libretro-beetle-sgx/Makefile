@@ -4,7 +4,7 @@ DISTNAME=	libretro-beetle-sgx-20170917
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_SGX
+HOMEPAGE=	https://docs.libretro.com/library/beetle_sgx/
 COMMENT=	Libretro core based on the Mednafen SuperGrafx emulator
 LICENSE=	gnu-gpl-v2
 

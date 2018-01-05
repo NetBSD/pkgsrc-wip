@@ -4,7 +4,7 @@ DISTNAME=	libretro-prboom-20170707
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=PrBoom
+HOMEPAGE=	https://docs.libretro.com/library/prboom/
 COMMENT=	Libretro core for Doom
 LICENSE=	gnu-gpl-v2
 

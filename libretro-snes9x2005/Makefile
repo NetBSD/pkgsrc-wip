@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Snes9x_2005
+HOMEPAGE=	https://docs.libretro.com/library/snes9x_2005/
 COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 LICENSE=	no-commercial-use
 

@@ -4,7 +4,7 @@ DISTNAME=	libretro-o2em-20170124
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=O2EM
+HOMEPAGE=	https://docs.libretro.com/library/o2em/
 COMMENT=	Libretro core for Magnavox Odyssey 2 and VideoPac emulation
 LICENSE=	artistic
 

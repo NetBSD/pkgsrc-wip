@@ -3,7 +3,7 @@
 PKGNAME=	libretro-ppsspp-20171126
 CATEGORIES=	emulators
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=PPSSPP
+HOMEPAGE=	https://docs.libretro.com/library/ppsspp/
 COMMENT=	Libretro core based on the PPSSPP PlayStation Portable emulator
 LICENSE=	gnu-gpl-v2
 

@@ -4,7 +4,7 @@ DISTNAME=	libretro-fmsx-20170703
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=FMSX
+HOMEPAGE=	https://docs.libretro.com/library/fmsx/
 COMMENT=	Libretro core for emulation of the MSX family of home computers
 LICENSE=	no-commercial-use
 

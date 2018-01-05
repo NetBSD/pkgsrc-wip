@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/stella-libretro
+HOMEPAGE=	https://docs.libretro.com/library/stella/
 COMMENT=	Libretro core based on the Stella Atari 2600 (VCS) emulator
 LICENSE=	gnu-gpl-v2
 

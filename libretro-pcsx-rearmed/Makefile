@@ -8,7 +8,7 @@ GITHUB_PROJECT=	pcsx_rearmed
 GITHUB_TAG=	09d454e73bc251b44848abba4026efcd452df752
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=PCSX_ReARMed
+HOMEPAGE=	https://docs.libretro.com/library/pcsx_rearmed/
 COMMENT=	Libretro core based on the PCSX ReARMed emulator
 LICENSE=	gnu-gpl-v2
 

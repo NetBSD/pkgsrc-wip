@@ -3,7 +3,8 @@
 DISTNAME=	libretro-virtualjaguar-20170218
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Virtual_Jaguar
+
+HOMEPAGE=	https://docs.libretro.com/library/virtual_jaguar/
 COMMENT=	Libretro core for Atari Jaguar emulation
 LICENSE=	gnu-gpl-v3
 

@@ -4,7 +4,7 @@ DISTNAME=	libretro-desmume-20170211
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=DeSmuME
+HOMEPAGE=	https://docs.libretro.com/library/desmume/
 COMMENT=	Libretro core based on the Desmume Nintendo DS emulator
 LICENSE=	gnu-gpl-v2
 

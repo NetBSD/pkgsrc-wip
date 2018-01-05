@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=FCEUmm
+HOMEPAGE=	https://docs.libretro.com/library/fceumm/
 COMMENT=	Libretro core based on the FCEUmm Famicom/NES emulator
 LICENSE=	gnu-gpl-v2
 

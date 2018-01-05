@@ -4,7 +4,7 @@ DISTNAME=	libretro-fuse-20171202
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Fuse
+HOMEPAGE=	https://docs.libretro.com/library/fuse/
 COMMENT=	Libretro core based on the FUSE ZX Spectrum emulator
 LICENSE=	gnu-gpl-v3
 

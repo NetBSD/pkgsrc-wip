@@ -4,7 +4,7 @@ DISTNAME=	libretro-vecx-20170718
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Vecx
+HOMEPAGE=	https://docs.libretro.com/library/vecx/
 COMMENT=	Libretro core for Vectrex emulation
 LICENSE=	gnu-gpl-v3
 

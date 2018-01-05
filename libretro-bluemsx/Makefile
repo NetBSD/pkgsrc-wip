@@ -4,7 +4,7 @@ DISTNAME=	libretro-bluemsx-20171116
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=BlueMSX
+HOMEPAGE=	https://docs.libretro.com/library/bluemsx/
 COMMENT=	Libretro core for accurate MSX/MSX2/ColecoVision/SVI/SG-1000 emulation
 LICENSE=	gnu-gpl-v2
 

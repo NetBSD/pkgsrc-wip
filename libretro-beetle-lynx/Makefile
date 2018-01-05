@@ -4,7 +4,7 @@ DISTNAME=	libretro-beetle-lynx-20170929
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_LYNX
+HOMEPAGE=	https://docs.libretro.com/library/beetle_handy/
 COMMENT=	Libretro core based on the Mednafen Atari Lynx emulator
 LICENSE=	gnu-gpl-v2
 

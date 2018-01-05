@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
-HOMEPAGE=	https://github.com/libretro/beetle-pce-fast-libretro
+HOMEPAGE=	https://docs.libretro.com/library/beetle_pce_fast/
 COMMENT=	Libretro core based on the Mednafen PC Engine emulator
 LICENSE=	gnu-gpl-v2
 

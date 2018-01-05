@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_NGP
+HOMEPAGE=	https://docs.libretro.com/library/beetle_neopop/
 COMMENT=	Libretro core based on the Mednafen Neo Geo Pocket emulator
 LICENSE=	gnu-gpl-v2
 

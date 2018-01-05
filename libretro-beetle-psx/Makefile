@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	nia.alarie@gmail.com
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_PSX
+HOMEPAGE=	https://docs.libretro.com/library/beetle_psx/
 COMMENT=	Libretro core based on the Mednafen PlayStation emulator
 LICENSE=	gnu-gpl-v2
 
