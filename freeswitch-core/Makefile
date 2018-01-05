@@ -12,8 +12,6 @@ COMMENT=	FreeSwitch SoftSwitch
 LICENSE=	mpl-1.1
 
 GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	libtool */libtool */*/libtool */*/*/libtool
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal automake autoconf gmake perl pkg-config bash
 
@@ -144,7 +142,11 @@ DEPENDS+=        	libyaml-[0-9]*:../../textproc/libyaml
 .include "../../mk/bsd.prefs.mk"
 
 .if (${PKGSRC_COMPILER} && ${CC} == "clang" && ${CXX} == "clang++")
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	libtool */libtool */*/libtool */*/*/libtool
+
 CONFIGURE_ARGS+=	--enable-zrtp
+
 BUILDLINK_TRANSFORM+=	rm:-Werror
 CFLAGS+=        	-Wno-c11-extensions -Wno-deprecated-declarations \
 			-Wno-zero-length-array -Wno-incompatible-pointer-types
@@ -160,15 +162,15 @@ PKG_USERS=		${FS_USER}:${FS_GROUP}
 PKG_GECOS.${FS_USER}=	FreeSWITCH
 PKG_SHELL.${FS_USER}=	${NOLOGIN}
 
-MAKE_DIRS+=		${VARBASE}/freeswitch
-MAKE_DIRS+=		${VARBASE}/share/freeswitch
-MAKE_DIRS_PERMS+=	${VARBASE}/freeswitch ${FS_USER} ${FS_GROUP} 0755
-MAKE_DIRS_PERMS+=	${VARBASE}/share/freeswitch ${FS_USER} ${FS_GROUP} 0755
+MAKE_DIRS+=		${PREFIX}/freeswitch
+MAKE_DIRS+=		${PREFIX}/share/freeswitch
+MAKE_DIRS_PERMS+=	${PREFIX}/freeswitch ${FS_USER} ${FS_GROUP} 0755
+MAKE_DIRS_PERMS+=	${PREFIX}/share/freeswitch ${FS_USER} ${FS_GROUP} 0755
 
-OWN_DIRS=		${PREFIX}/log/freeswitch
-OWN_DIRS+=		${PREFIX}/db/freeswitch
-OWN_DIRS_PERMS+=	${PREFIX}/log/freeswitch ${FS_USER} ${FS_GROUP} 0644
-OWN_DIRS_PERMS+=	${PREFIX}/db/freeswitch ${FS_USER} ${FS_GROUP} 0755
+OWN_DIRS=		${VARBASE}/log/freeswitch
+OWN_DIRS+=		${VARBASE}/db/freeswitch
+OWN_DIRS_PERMS+=	${VARBASE}/log/freeswitch ${FS_USER} ${FS_GROUP} 0644
+OWN_DIRS_PERMS+=	${VARBASE}/db/freeswitch ${FS_USER} ${FS_GROUP} 0755
 
 PKG_SYSCONFSUBDIR=	freeswitch
 PKG_SYSCONFDIR_PERMS=	${FS_USER} ${FS_GROUP} 0755
