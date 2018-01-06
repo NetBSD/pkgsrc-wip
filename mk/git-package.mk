@@ -1,3 +1,5 @@
+# $NetBSD$
+#
 # This file provides simple access to git repositories, so that packages
 # can be created from git instead of from released tarballs.
 #
@@ -8,21 +10,38 @@
 #		GIT_REPO must be defined.
 #
 #	GIT_REPO.${id}
-#		The git repository
+#		The git repository.
+#
+#		Examples:
+#			https://github.com/NetBSD/pkgsrc
+#			git://git@github.com:NetBSD/pkgsrc.git
+#			git@github.com:NetBSD/pkgsrc.git
 #
 # It may define the following variables:
 #
 #	GIT_BRANCH.${id}
 #		The branch to check out.
 #
+#		This should seldomly be used since it prevents the build
+#		from being reproducible. Prefer a tag or a revision
+#		instead.
+#
 #	GIT_REVISION.${id}
 #		The revision to check out.
 #
+#		Example: 4b825dc642cb6eb9a060e54bf8d69288fbee4904
+#
 #	GIT_TAG.${id}
-#		Overridable GIT tag for a repository.
+#		The tag to check out.
+#
+#		Example: v1.0.0
 #
 #	GIT_ENV.${id}
-#		The environment for git, to set e.g. GIT_SSL_NO_VERIFY=true
+#		The environment variables for the git command.
+#
+#		Example: GIT_SSL_NO_VERIFY=true
+#
+# Keywords: git github
 
 .if !defined(_PKG_MK_GIT_PACKAGE_MK)
 _PKG_MK_GIT_PACKAGE_MK=	# defined
@@ -49,9 +68,9 @@ PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPOSITORIES must be set."
 GIT_REPOSITORIES?=	# none
 .endif
 
-.for _repo_ in ${GIT_REPOSITORIES}
-.  if !defined(GIT_REPO.${_repo_})
-PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${_repo_:Q}" must be set."
+.for repo in ${GIT_REPOSITORIES}
+.  if !defined(GIT_REPO.${repo})
+PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
 
