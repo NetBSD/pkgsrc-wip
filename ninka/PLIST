@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/03 23:07:42 jihbed Exp $
-bin/extComments.pl
-bin/filter.pl
-bin/matcher.pl
-bin/ninka.pl
-bin/senttok.pl
-bin/splitter.pl
