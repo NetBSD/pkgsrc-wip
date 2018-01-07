@@ -10,6 +10,9 @@ LICENSE=	isc
 
 USE_TOOLS+=	gmake
 
+# Needed for `convert' by 2ff
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
