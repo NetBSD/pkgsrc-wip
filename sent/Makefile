@@ -29,6 +29,8 @@ SUBST_SED.makefile+=    -e 's,^LDFLAGS *= ,LDFLAGS += ,'
 # XXX: freetype2 is not needed, do not add it to CFLAGS.
 SUBST_SED.makefile+=	-e 's,-I/usr/include/freetype2,,'
 
+USE_LANGUAGES=	c99
+
 INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
