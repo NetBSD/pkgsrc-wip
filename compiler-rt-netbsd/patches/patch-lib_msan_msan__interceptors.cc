@@ -1,21 +1,16 @@
 $NetBSD$
 
---- lib/msan/msan_interceptors.cc.orig	2017-12-21 18:53:10.000000000 +0000
+--- lib/msan/msan_interceptors.cc.orig	2018-01-08 15:33:13.616083625 +0000
 +++ lib/msan/msan_interceptors.cc
-@@ -33,10 +33,12 @@
+@@ -33,6 +33,7 @@
  #include "sanitizer_common/sanitizer_libc.h"
  #include "sanitizer_common/sanitizer_linux.h"
  #include "sanitizer_common/sanitizer_tls_get_addr.h"
 +#include "sanitizer_common/sanitizer_vector.h"
  
  #if SANITIZER_NETBSD
- #define gettimeofday __gettimeofday50
- #define getrusage __getrusage50
-+#define fstat __fstat50
- #endif
- 
- #include <stdarg.h>
-@@ -688,6 +690,86 @@ INTERCEPTOR(int, putenv, char *string) {
+ #define fstat __fstat50
+@@ -689,6 +690,73 @@ INTERCEPTOR(int, putenv, char *string) {
    return res;
  }
  
@@ -86,23 +81,10 @@ $NetBSD$
 +#define MSAN_MAYBE_INTERCEPT_LIBKVM_FUNCTIONS
 +#endif
 +
-+#if SANITIZER_NETBSD
-+INTERCEPTOR(int, fstat, int fd, void *buf) {
-+  ENSURE_MSAN_INITED();
-+  int res = REAL(fstat)(fd, buf);
-+  if (!res)
-+    __msan_unpoison(buf, __sanitizer::struct_stat_sz);
-+  return res;
-+}
-+#define MSAN_MAYBE_INTERCEPT_FSTAT INTERCEPT_FUNCTION(fstat)
-+#else
-+#define MSAN_MAYBE_INTERCEPT_FSTAT
-+#endif
-+
- #if !SANITIZER_FREEBSD && !SANITIZER_NETBSD
- INTERCEPTOR(int, __fxstat, int magic, int fd, void *buf) {
+ #if SANITIZER_NETBSD
+ INTERCEPTOR(int, fstat, int fd, void *buf) {
    ENSURE_MSAN_INITED();
-@@ -1138,23 +1220,78 @@ struct MSanAtExitRecord {
+@@ -1152,23 +1220,78 @@ struct MSanAtExitRecord {
    void *arg;
  };
  
@@ -184,7 +166,7 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1387,6 +1524,7 @@ static uptr signal_impl(int signo, uptr 
+@@ -1401,6 +1524,7 @@ static uptr signal_impl(int signo, uptr 
    } while (false)
  #define COMMON_SYSCALL_POST_WRITE_RANGE(p, s) __msan_unpoison(p, s)
  #include "sanitizer_common/sanitizer_common_syscalls.inc"
@@ -192,7 +174,7 @@ $NetBSD$
  
  struct dlinfo {
    char *dli_fname;
-@@ -1552,6 +1690,9 @@ namespace __msan {
+@@ -1566,6 +1690,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -202,15 +184,7 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1633,6 +1774,7 @@ void InitializeInterceptors() {
-   INTERCEPT_FUNCTION(putenv);
-   INTERCEPT_FUNCTION(gettimeofday);
-   MSAN_MAYBE_INTERCEPT_FCVT;
-+  MSAN_MAYBE_INTERCEPT_FSTAT;
-   MSAN_MAYBE_INTERCEPT___FXSTAT;
-   MSAN_INTERCEPT_FSTATAT;
-   MSAN_MAYBE_INTERCEPT___FXSTAT64;
-@@ -1667,6 +1809,7 @@ void InitializeInterceptors() {
+@@ -1682,6 +1809,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);
