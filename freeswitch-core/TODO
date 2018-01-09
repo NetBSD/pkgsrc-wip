@@ -17,3 +17,7 @@
   the core package should be the default from upstream.  Ideally, it
   would be possible to build modules separately so they can be in
   their own package.
+	UPDATE: Modules were included in the options.mk framework.
+	This will replace previous patch-modules.conf used (which was not ideal).
+	Since modules are bundled it is not possible to build them separately.
+	Not all modules were included. Work in progress.
