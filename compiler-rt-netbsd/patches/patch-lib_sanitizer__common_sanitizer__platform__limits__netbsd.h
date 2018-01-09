@@ -184,7 +184,51 @@ $NetBSD$
  struct __sanitizer_wordexp_t {
    uptr we_wordc;
    char **we_wordv;
-@@ -374,185 +462,1712 @@ struct __sanitizer_ifconf {
+@@ -350,6 +438,43 @@ struct __sanitizer_ifconf {
+   } ifc_ifcu;
+ };
+ 
++
++struct __sanitizer_kvm {
++  const char *program;
++  char *errp;
++  char errbuf[2048]; // _POSIX2_LINE_MAX
++  int pmfd;
++  int vmfd;
++  int swfd;
++  int nlfd;
++  char alive;
++  void *procbase;
++  void *procbase2;
++  void *lwpbase;
++  uptr procbase_len;
++  uptr procbase2_len;
++  uptr lwpbase_len;
++  unsigned long usrstack;
++  unsigned long min_uva, max_uva;
++  int nbpg;
++  char *swapspc;
++  char *argspc, *argbuf;
++  uptr argspc_len;
++  char **argv;
++  int argc;
++  void *kcore_hdr;
++  uptr cpu_dsize;
++  void *cpu_data;
++  u64 dump_off;
++  void *vmst;
++  void *vm_page_buckets;
++  int vm_page_hash_mask;
++  uptr fdalign;
++  void *iobuf;
++  uptr iobufsz;
++  char kernelname[1024];
++};
++
+ #define IOC_NRBITS 8
+ #define IOC_TYPEBITS 8
+ #define IOC_SIZEBITS 14
+@@ -374,185 +499,1712 @@ struct __sanitizer_ifconf {
  #define IOC_NR(nr) (((nr) >> IOC_NRSHIFT) & IOC_NRMASK)
  #define IOC_SIZE(nr) (((nr) >> IOC_SIZESHIFT) & IOC_SIZEMASK)
  
