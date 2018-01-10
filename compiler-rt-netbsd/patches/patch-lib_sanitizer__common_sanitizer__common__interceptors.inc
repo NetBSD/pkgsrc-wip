@@ -18,7 +18,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -6452,6 +6454,304 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
+@@ -6452,6 +6454,341 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
  #define INIT_WCSCAT
  #endif
  
@@ -320,15 +320,53 @@ $NetBSD$
 +#define INIT_DEVNAME
 +#endif
 +
++#if SANITIZER_INTERCEPT_SYSCTL
++INTERCEPTOR(int, sysctl, int *name, unsigned int namelen, void *oldp, uptr *oldlenp, void *newp, uptr newlen) {
++  void *ctx;
++  int res;
++  COMMON_INTERCEPTOR_ENTER(ctx, sysctl, name, namelen, oldp, oldlenp, newp, newlen);
++  if (name) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, namelen * sizeof(*name));
++  }
++  if (newp) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, newp, newlen);
++  }
++  res = REAL(sysctl)(name, namelen, oldp, oldlenp, newp, newlen);
++  if (!res)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldp, *oldlenp);
++  return res;
++}
++
++INTERCEPTOR(int, sysctlbyname, char *sname, void *oldp, uptr *oldlenp, void *newp, uptr newlen) {
++  void *ctx;
++  int res;
++  COMMON_INTERCEPTOR_ENTER(ctx, sysctlbyname, sname, oldp, oldlenp, newp, newlen);
++  if (sname) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, sname, REAL(strlen)(sname) + 1);
++  }
++  res = REAL(sysctlbyname)(sname, oldp, oldlenp, newp, newlen);
++  if (!res)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldp, *oldlenp);
++  return res;
++}
++
++#define INIT_SYSCTL \
++  COMMON_INTERCEPT_FUNCTION(sysctl); \
++  COMMON_INTERCEPT_FUNCTION(sysctlbyname)
++#else
++#define INIT_SYSCTL
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6663,6 +6963,8 @@ static void InitializeCommonInterceptors
+@@ -6663,6 +7000,9 @@ static void InitializeCommonInterceptors
    INIT_GETLOADAVG;
    INIT_WCSLEN;
    INIT_WCSCAT;
 +  INIT_KVM;
 +  INIT_DEVNAME;
++  INIT_SYSCTL;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);
