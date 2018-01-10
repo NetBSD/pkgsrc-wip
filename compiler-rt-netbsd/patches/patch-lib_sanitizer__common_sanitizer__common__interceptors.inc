@@ -18,7 +18,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -6452,6 +6454,374 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
+@@ -6452,6 +6454,407 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
  #define INIT_WCSCAT
  #endif
  
@@ -390,10 +390,43 @@ $NetBSD$
 +#define INIT_STRLCPY
 +#endif
 +
++#if SANITIZER_INTERCEPT_GETGROUPLIST
++INTERCEPTOR(int, getgrouplist, char *name, u32 basegid, u32 *groups, int *ngroups) {
++  void *ctx;
++  int res;
++  COMMON_INTERCEPTOR_ENTER(ctx, getgrouplist, name, basegid, groups, ngroups);
++  if (name) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
++  }
++  res = REAL(getgrouplist)(name, basegid, groups, ngroups);
++  if (groups && ngroups)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, groups, sizeof(*groups) * (*ngroups));
++  return res;
++}
++INTERCEPTOR(int, getgroupmembership, char *name, u32 basegid, u32 *groups, int maxgrp, int *ngroups) {
++  void *ctx;
++  int res;
++  COMMON_INTERCEPTOR_ENTER(ctx, getgroupmembership, name, basegid, groups, maxgrp, ngroups);
++  if (name) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
++  }
++  res = REAL(getgroupmembership)(name, basegid, groups, maxgrp, ngroups);
++  if (groups && ngroups)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, groups, sizeof(*groups) * (*ngroups));
++  return res;
++}
++
++#define INIT_GETGROUPLIST \
++  COMMON_INTERCEPT_FUNCTION(getgrouplist); \
++  COMMON_INTERCEPT_FUNCTION(getgroupmembership)
++#else
++#define INIT_GETGROUPLIST
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6663,6 +7033,10 @@ static void InitializeCommonInterceptors
+@@ -6663,6 +7066,11 @@ static void InitializeCommonInterceptors
    INIT_GETLOADAVG;
    INIT_WCSLEN;
    INIT_WCSCAT;
@@ -401,6 +434,7 @@ $NetBSD$
 +  INIT_DEVNAME;
 +  INIT_SYSCTL;
 +  INIT_STRLCPY;
++  INIT_GETGROUPLIST;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);
