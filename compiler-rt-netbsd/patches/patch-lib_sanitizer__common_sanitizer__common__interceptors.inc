@@ -18,7 +18,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -6452,6 +6454,341 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
+@@ -6452,6 +6454,374 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
  #define INIT_WCSCAT
  #endif
  
@@ -357,16 +357,50 @@ $NetBSD$
 +#define INIT_SYSCTL
 +#endif
 +
++#if SANITIZER_INTERCEPT_STRLCPY
++INTERCEPTOR(uptr, strlcpy, char *dst, char *src, uptr size) {
++  void *ctx;
++  uptr res;
++  COMMON_INTERCEPTOR_ENTER(ctx, strlcpy, dst, src, size);
++  if (src) {
++    uptr len = REAL(strnlen)(src, size);
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
++  }
++  res = REAL(strlcpy)(dst, src, size);
++  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst));
++  return res;
++}
++
++INTERCEPTOR(uptr, strlcat, char *dst, char *src, uptr size) {
++  void *ctx;
++  uptr res;
++  COMMON_INTERCEPTOR_ENTER(ctx, strlcat, dst, src, size);
++  if (src) {
++    uptr len = REAL(strnlen)(src, size);
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
++  }
++  res = REAL(strlcat)(dst, src, size);
++  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst));
++  return res;
++}
++#define INIT_STRLCPY \
++  COMMON_INTERCEPT_FUNCTION(strlcpy); \
++  COMMON_INTERCEPT_FUNCTION(strlcat)
++#else
++#define INIT_STRLCPY
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6663,6 +7000,9 @@ static void InitializeCommonInterceptors
+@@ -6663,6 +7033,10 @@ static void InitializeCommonInterceptors
    INIT_GETLOADAVG;
    INIT_WCSLEN;
    INIT_WCSCAT;
 +  INIT_KVM;
 +  INIT_DEVNAME;
 +  INIT_SYSCTL;
++  INIT_STRLCPY;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);
