@@ -3652,7 +3652,6 @@ SUBDIR+=	py-sdt_metrics
 SUBDIR+=	py-se
 SUBDIR+=	py-seeds
 SUBDIR+=	py-selection
-SUBDIR+=	py-selenium
 SUBDIR+=	py-semidbm
 SUBDIR+=	py-sempy
 SUBDIR+=	py-sentry

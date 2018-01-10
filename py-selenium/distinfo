@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2014/05/05 22:06:10 jihbed Exp $
-
-SHA1 (selenium-2.41.0.tar.gz) = 10ca7ab41e7bd98f743c96a5d55596bd645e2345
-RMD160 (selenium-2.41.0.tar.gz) = 705486b0a297a79e5ffd3fd4634e7445bf874137
-Size (selenium-2.41.0.tar.gz) = 2478255 bytes
