@@ -213,10 +213,10 @@ PKG_SYSCONFDIR_PERMS=	${FS_USER} ${FS_GROUP} 0755
 
 #############################################################
 
-.if !empty(PKGSRC_COMPILER:Mgcc)
+#.if !empty(PKGSRC_COMPILER:Mgcc)
 pre-configure:
 	cd ${WRKSRC} && ${SH} rebootstrap.sh -j
-.endif
+#.endif
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/srtp/libsrtp.la ${DESTDIR}${PREFIX}/lib

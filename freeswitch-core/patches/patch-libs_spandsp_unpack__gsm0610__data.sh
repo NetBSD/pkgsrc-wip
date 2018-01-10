@@ -1,6 +1,9 @@
 $NetBSD$
 
-Fix portability issues.
+Fix portability issues for non-bash interpreters, this was
+identified by the check_portability.awk script used when
+PKG_DEVELOPER is set to ~yes~. Patches for source files were
+submitted to upstream, their revision and integration is pending.
 
 --- libs/spandsp/unpack_gsm0610_data.sh.orig	2017-04-19 13:14:01.304432000 +0000
 +++ libs/spandsp/unpack_gsm0610_data.sh

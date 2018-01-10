@@ -1,0 +1,18 @@
+$NetBSD$
+
+Fix portability issues for non-bash interpreters, this was
+identified by the check_portability.awk script used when
+PKG_DEVELOPER is set to ~yes~. Patches for source files were
+submitted to upstream, their revision and integration is pending.
+
+--- libs/unimrcp/configure.ac.orig	2018-01-10 17:41:09.075109000 +0000
++++ libs/unimrcp/configure.ac
+@@ -92,7 +92,7 @@ AC_ARG_ENABLE(interlib-deps,
+     [enable_interlib_deps="yes"])
+ 
+ AC_MSG_NOTICE([enable inter-library dependencies: $enable_interlib_deps])
+-if test "${enable_interlib_deps}" == "yes"; then
++if test "${enable_interlib_deps}" = "yes"; then
+     link_all_deplibs=yes
+     link_all_deplibs_CXX=yes
+ else

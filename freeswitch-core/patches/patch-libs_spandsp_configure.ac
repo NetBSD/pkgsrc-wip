@@ -1,0 +1,27 @@
+$NetBSD$
+
+Fix portability issues for non-bash interpreters, this was
+identified by the check_portability.awk script used when
+PKG_DEVELOPER is set to ~yes~. Patches for source files were
+submitted to upstream, their revision and integration is pending.
+
+--- libs/spandsp/configure.ac.orig	2018-01-10 17:40:15.463405000 +0000
++++ libs/spandsp/configure.ac
+@@ -231,7 +231,7 @@ case "$host" in
+     ;;
+ esac
+ 
+-if test "${build}" == "${host}"
++if test "${build}" = "${host}"
+ then
+     AC_CHECK_HEADERS([X11/X.h])
+ fi
+@@ -275,7 +275,7 @@ AC_CHECK_HEADERS([FL/Fl_Audio_Meter.H])
+ 
+ AC_LANG([C])
+ 
+-if test "${build}" == "${host}"
++if test "${build}" = "${host}"
+ then
+     case "${host}" in
+     x86_64-*)
