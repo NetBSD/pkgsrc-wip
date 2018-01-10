@@ -2,12 +2,18 @@ $NetBSD$
 
 --- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2017-11-28 08:23:47.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -15,7 +15,53 @@
+@@ -15,7 +15,59 @@
  #include "sanitizer_platform.h"
  
  #if SANITIZER_NETBSD
++
++#define _KMEMUSER
++#define RAY_DO_SIGLEV
++
 +#include <sys/param.h>
 +#include <sys/types.h>
++
++#include <sys/sysctl.h>
 +
 +#include <altq/altq.h>
 +#include <altq/altq_afmap.h>
@@ -56,7 +62,7 @@ $NetBSD$
  #include <dirent.h>
  #include <glob.h>
  #include <grp.h>
-@@ -28,6 +74,8 @@
+@@ -28,6 +80,8 @@
  #include <net/route.h>
  #include <netdb.h>
  #include <netinet/in.h>
@@ -65,7 +71,7 @@ $NetBSD$
  #include <netinet/ip_mroute.h>
  #include <poll.h>
  #include <pthread.h>
-@@ -35,6 +83,93 @@
+@@ -35,6 +89,92 @@
  #include <semaphore.h>
  #include <signal.h>
  #include <stddef.h>
@@ -73,7 +79,6 @@ $NetBSD$
 +#include <sys/disk.h>
 +#include <sys/disklabel.h>
 +#include <sys/mount.h>
-+#define RAY_DO_SIGLEV
 +#include <dev/biovar.h>
 +#include <dev/bluetooth/btdev.h>
 +#include <dev/bluetooth/btsco.h>
@@ -159,7 +164,7 @@ $NetBSD$
  #include <sys/filio.h>
  #include <sys/ipc.h>
  #include <sys/mman.h>
-@@ -44,6 +179,7 @@
+@@ -44,6 +184,7 @@
  #include <sys/mtio.h>
  #include <sys/ptrace.h>
  #include <sys/resource.h>
@@ -167,7 +172,7 @@ $NetBSD$
  #include <sys/shm.h>
  #include <sys/signal.h>
  #include <sys/socket.h>
-@@ -99,18 +235,83 @@ unsigned struct_sockaddr_sz = sizeof(str
+@@ -99,18 +240,83 @@ unsigned struct_sockaddr_sz = sizeof(str
  unsigned ucontext_t_sz = sizeof(ucontext_t);
  unsigned struct_rlimit_sz = sizeof(struct rlimit);
  unsigned struct_timespec_sz = sizeof(struct timespec);
@@ -251,9 +256,13 @@ $NetBSD$
  int shmctl_ipc_stat = (int)IPC_STAT;
  
  unsigned struct_utmp_sz = sizeof(struct utmp);
-@@ -138,64 +339,1725 @@ int glob_altdirfunc = GLOB_ALTDIRFUNC;
+@@ -137,65 +343,1729 @@ int glob_altdirfunc = GLOB_ALTDIRFUNC;
+ 
  unsigned path_max = PATH_MAX;
  
++int struct_kinfo_proc_sz = sizeof(struct kinfo_proc);
++int struct_kinfo_proc2_sz = sizeof(struct kinfo_proc2);
++
  // ioctl arguments
 -unsigned struct_ifreq_sz = sizeof(struct ifreq);
 -unsigned struct_termios_sz = sizeof(struct termios);

@@ -135,10 +135,13 @@ $NetBSD$
  struct __sanitizer_glob_t {
    uptr gl_pathc;
    uptr gl_matchc;
-@@ -317,6 +363,48 @@ extern int glob_altdirfunc;
+@@ -317,6 +363,52 @@ extern int glob_altdirfunc;
  
  extern unsigned path_max;
  
++extern int struct_kinfo_proc_sz;
++extern int struct_kinfo_proc2_sz;
++
 +extern int ptrace_pt_io;
 +extern int ptrace_pt_lwpinfo;
 +extern int ptrace_pt_set_event_mask;
@@ -159,6 +162,7 @@ $NetBSD$
 +extern int ptrace_pt_getfpregs;
 +extern int ptrace_pt_setdbregs;
 +extern int ptrace_pt_getdbregs;
++
 +
 +struct __sanitizer_ptrace_io_desc {
 +  int piod_op;
@@ -184,7 +188,7 @@ $NetBSD$
  struct __sanitizer_wordexp_t {
    uptr we_wordc;
    char **we_wordv;
-@@ -350,6 +438,43 @@ struct __sanitizer_ifconf {
+@@ -350,6 +442,43 @@ struct __sanitizer_ifconf {
    } ifc_ifcu;
  };
  
@@ -228,7 +232,7 @@ $NetBSD$
  #define IOC_NRBITS 8
  #define IOC_TYPEBITS 8
  #define IOC_SIZEBITS 14
-@@ -374,185 +499,1712 @@ struct __sanitizer_ifconf {
+@@ -374,185 +503,1712 @@ struct __sanitizer_ifconf {
  #define IOC_NR(nr) (((nr) >> IOC_NRSHIFT) & IOC_NRMASK)
  #define IOC_SIZE(nr) (((nr) >> IOC_SIZESHIFT) & IOC_SIZEMASK)
  

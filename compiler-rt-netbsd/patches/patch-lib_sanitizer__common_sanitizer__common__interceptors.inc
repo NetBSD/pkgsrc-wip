@@ -2,7 +2,15 @@ $NetBSD$
 
 --- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-08 15:33:14.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
-@@ -1703,6 +1703,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
+@@ -75,6 +75,7 @@
+ #define clock_settime __clock_settime50
+ #define ctime __ctime50
+ #define ctime_r __ctime_r50
++#define devname __devname50
+ #define getitimer __getitimer50
+ #define getpwent __getpwent50
+ #define getpwnam __getpwnam50
+@@ -1703,6 +1704,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
  
  #if SANITIZER_INTERCEPT_IOCTL
  #include "sanitizer_common_interceptors_ioctl.inc"
@@ -10,7 +18,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -6452,6 +6453,246 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
+@@ -6452,6 +6454,304 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
  #define INIT_WCSCAT
  #endif
  
@@ -60,23 +68,51 @@ $NetBSD$
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_getargv, kd, kp, nchr);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
++  if (kp)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, kp, struct_kinfo_proc_sz);
 +  return REAL(kvm_getargv)(kd, kp, nchr);
 +}
 +
 +INTERCEPTOR(char **, kvm_getargv2, struct __sanitizer_kvm *kd, void *kp, int nchr) {
 +  void *ctx;
++  char **argv;
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_getargv2, kd, kp, nchr);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
-+  return REAL(kvm_getargv2)(kd, kp, nchr);
++  if (kp)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, kp, struct_kinfo_proc2_sz);
++  argv = REAL(kvm_getargv2)(kd, kp, nchr);
++  if (argv) {
++    char **p = argv;
++    while (*p) {
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *p, REAL(strlen)(*p) + 1);
++      p++;
++    }
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++  }
++  return argv;
 +}
 +
 +INTERCEPTOR(char **, kvm_getenvv, struct __sanitizer_kvm *kd, void *kp, int nchr) {
 +  void *ctx;
++  char **argv;
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_getenvv, kd, kp, nchr);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
-+  return REAL(kvm_getenvv)(kd, kp, nchr);
++  if (kp)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, kp, struct_kinfo_proc_sz);
++  argv = REAL(kvm_getenvv)(kd, kp, nchr);
++  if (argv) {
++    char **p = argv;
++    while (*p) {
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *p, REAL(strlen)(*p) + 1);
++      p++;
++    }
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++  }
++  return argv;
 +}
 +
 +INTERCEPTOR(char **, kvm_getenvv2, struct __sanitizer_kvm *kd, void *kp, int nchr) {
@@ -84,6 +120,8 @@ $NetBSD$
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_getenvv2, kd, kp, nchr);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
++  if (kp)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, kp, struct_kinfo_proc2_sz);
 +  return REAL(kvm_getenvv2)(kd, kp, nchr);
 +}
 +
@@ -254,14 +292,43 @@ $NetBSD$
 +#define INIT_KVM
 +#endif
 +
++#if SANITIZER_INTERCEPT_DEVNAME
++INTERCEPTOR(char *, devname, u64 dev, u32 type) {
++  void *ctx;
++  char *name;
++  COMMON_INTERCEPTOR_ENTER(ctx, devname, dev, type);
++  name = REAL(devname)(dev, type);
++  if (name)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, name, REAL(strlen)(name) + 1);
++  return name;
++}
++
++INTERCEPTOR(int, devname_r, u64 dev, u32 type, char *path, uptr len) {
++  void *ctx;
++  int res;
++  COMMON_INTERCEPTOR_ENTER(ctx, devname_r, dev, type, path, len);
++  res = REAL(devname_r)(dev, type, path, len);
++  if (!res)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, path, REAL(strlen)(path) + 1);
++  return res;
++}
++
++#define INIT_DEVNAME \
++  COMMON_INTERCEPT_FUNCTION(devname); \
++  COMMON_INTERCEPT_FUNCTION(devname_r)
++#else
++#define INIT_DEVNAME
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6663,6 +6904,7 @@ static void InitializeCommonInterceptors
+@@ -6663,6 +6963,8 @@ static void InitializeCommonInterceptors
    INIT_GETLOADAVG;
    INIT_WCSLEN;
    INIT_WCSCAT;
 +  INIT_KVM;
++  INIT_DEVNAME;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);
