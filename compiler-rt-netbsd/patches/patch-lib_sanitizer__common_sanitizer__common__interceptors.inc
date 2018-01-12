@@ -10,7 +10,17 @@ $NetBSD$
  #define getitimer __getitimer50
  #define getpwent __getpwent50
  #define getpwnam __getpwnam50
-@@ -1703,6 +1704,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
+@@ -107,6 +108,9 @@
+ #define times __times13
+ #define wait3 __wait350
+ #define wait4 __wait450
++extern const unsigned short *_ctype_tab_;
++extern const short *_toupper_tab_;
++extern const short *_tolower_tab_;
+ #endif
+ 
+ // Platform-specific options.
+@@ -1703,6 +1707,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
  
  #if SANITIZER_INTERCEPT_IOCTL
  #include "sanitizer_common_interceptors_ioctl.inc"
@@ -18,7 +28,53 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -6452,6 +6454,407 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
+@@ -2765,6 +2770,29 @@ INTERCEPTOR(int, accept4, int fd, void *
+ #define INIT_ACCEPT4
+ #endif
+ 
++#if SANITIZER_INTERCEPT_PACCEPT
++INTERCEPTOR(int, paccept, int fd, void *addr, unsigned *addrlen, __sanitizer_sigset_t *set, int f) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, paccept, fd, addr, addrlen, set, f);
++  unsigned addrlen0 = 0;
++  if (addrlen) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, addrlen, sizeof(*addrlen));
++    addrlen0 = *addrlen;
++  }
++  if (set) COMMON_INTERCEPTOR_READ_RANGE(ctx, set, sizeof(*set));
++  int fd2 = REAL(paccept)(fd, addr, addrlen, set, f);
++  if (fd2 >= 0) {
++    if (fd >= 0) COMMON_INTERCEPTOR_FD_SOCKET_ACCEPT(ctx, fd, fd2);
++    if (addr && addrlen)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, addr, Min(*addrlen, addrlen0));
++  }
++  return fd2;
++}
++#define INIT_PACCEPT COMMON_INTERCEPT_FUNCTION(paccept);
++#else
++#define INIT_PACCEPT
++#endif
++
+ #if SANITIZER_INTERCEPT_MODF
+ INTERCEPTOR(double, modf, double x, double *iptr) {
+   void *ctx;
+@@ -3153,7 +3181,14 @@ INTERCEPTOR(char *, setlocale, int categ
+   if (locale)
+     COMMON_INTERCEPTOR_READ_RANGE(ctx, locale, REAL(strlen)(locale) + 1);
+   char *res = REAL(setlocale)(category, locale);
+-  if (res) COMMON_INTERCEPTOR_WRITE_RANGE(ctx, res, REAL(strlen)(res) + 1);
++  if (res) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, res, REAL(strlen)(res) + 1);
++#if SANITIZER_NETBSD
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, _ctype_tab_, 257 * sizeof(short));
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, _toupper_tab_, 257 * sizeof(short));
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, _tolower_tab_, 257 * sizeof(short));
++#endif
++  }
+   return res;
+ }
+ 
+@@ -6452,6 +6487,463 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
  #define INIT_WCSCAT
  #endif
  
@@ -367,7 +423,7 @@ $NetBSD$
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
 +  }
 +  res = REAL(strlcpy)(dst, src, size);
-+  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst));
++  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst) + 1);
 +  return res;
 +}
 +
@@ -380,7 +436,7 @@ $NetBSD$
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
 +  }
 +  res = REAL(strlcat)(dst, src, size);
-+  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst));
++  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst) + 1);
 +  return res;
 +}
 +#define INIT_STRLCPY \
@@ -423,10 +479,74 @@ $NetBSD$
 +#define INIT_GETGROUPLIST
 +#endif
 +
++#if SANITIZER_INTERCEPT_ACCESS
++INTERCEPTOR(int, access, char *path, int mode) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, access, path, mode);
++  if (path) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
++  }
++  return REAL(access)(path, mode);
++}
++#define INIT_ACCESS COMMON_INTERCEPT_FUNCTION(access)
++#else
++#define INIT_ACCESS
++#endif
++
++#if SANITIZER_INTERCEPT_FACCESSAT
++INTERCEPTOR(int, faccessat, int fd, char *path, int mode, int flags) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, faccessat, fd, path, mode, flags);
++  if (path) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
++  }
++  return REAL(faccessat)(fd, path, mode, flags);
++}
++#define INIT_FACCESSAT COMMON_INTERCEPT_FUNCTION(faccessat)
++#else
++#define INIT_FACCESSAT
++#endif
++
++#if SANITIZER_INTERCEPT_ACCT
++INTERCEPTOR(int, acct, char *file) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, acct, file);
++  if (file) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, file, REAL(strlen)(file) + 1);
++  }
++  return REAL(acct)(file);
++}
++#define INIT_ACCT COMMON_INTERCEPT_FUNCTION(acct)
++#else
++#define INIT_ACCT
++#endif
++
++#if SANITIZER_INTERCEPT_ATOF
++INTERCEPTOR(double, atof, char *nptr) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, atof, nptr);
++  if (nptr) {
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, nptr, REAL(strlen)(nptr) + 1);
++  }
++  return REAL(atof)(nptr); // strtof // todo atoi atol
++}
++#define INIT_ATOF COMMON_INTERCEPT_FUNCTION(atof)
++#else
++#define INIT_ATOF
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6663,6 +7066,11 @@ static void InitializeCommonInterceptors
+@@ -6531,6 +7023,7 @@ static void InitializeCommonInterceptors
+   INIT_GETSOCKOPT;
+   INIT_ACCEPT;
+   INIT_ACCEPT4;
++  INIT_PACCEPT;
+   INIT_MODF;
+   INIT_RECVMSG;
+   INIT_SENDMSG;
+@@ -6663,6 +7156,15 @@ static void InitializeCommonInterceptors
    INIT_GETLOADAVG;
    INIT_WCSLEN;
    INIT_WCSCAT;
@@ -435,6 +555,10 @@ $NetBSD$
 +  INIT_SYSCTL;
 +  INIT_STRLCPY;
 +  INIT_GETGROUPLIST;
++  INIT_ACCESS;
++  INIT_FACCESSAT;
++  INIT_ACCT;
++  INIT_ATOF;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);
