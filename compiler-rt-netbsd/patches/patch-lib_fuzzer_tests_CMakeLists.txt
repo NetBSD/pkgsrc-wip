@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/fuzzer/tests/CMakeLists.txt.orig	2017-10-17 18:35:48.000000000 +0000
+--- lib/fuzzer/tests/CMakeLists.txt.orig	2018-01-15 06:00:16.375143319 +0000
 +++ lib/fuzzer/tests/CMakeLists.txt
 @@ -10,6 +10,9 @@ add_custom_target(FuzzerUnitTests)
  set_target_properties(FuzzerUnitTests PROPERTIES FOLDER "Compiler-RT Tests")
@@ -11,4 +11,4 @@ $NetBSD$
 +endif()
  list(APPEND LIBFUZZER_UNITTEST_LINK_FLAGS --driver-mode=g++)
  
- if(APPLE)
+ if(APPLE OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")

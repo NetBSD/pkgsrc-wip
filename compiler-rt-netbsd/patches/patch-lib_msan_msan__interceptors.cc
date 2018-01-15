@@ -2,7 +2,7 @@ $NetBSD$
 
 --- lib/msan/msan_interceptors.cc.orig	2018-01-08 15:33:13.000000000 +0000
 +++ lib/msan/msan_interceptors.cc
-@@ -33,6 +33,7 @@
+@@ -33,11 +33,13 @@
  #include "sanitizer_common/sanitizer_libc.h"
  #include "sanitizer_common/sanitizer_linux.h"
  #include "sanitizer_common/sanitizer_tls_get_addr.h"
@@ -10,7 +10,13 @@ $NetBSD$
  
  #if SANITIZER_NETBSD
  #define fstat __fstat50
-@@ -689,6 +690,73 @@ INTERCEPTOR(int, putenv, char *string) {
+ #define gettimeofday __gettimeofday50
+ #define getrusage __getrusage50
++#define tzset __tzset50
+ #endif
+ 
+ #include <stdarg.h>
+@@ -689,6 +691,73 @@ INTERCEPTOR(int, putenv, char *string) {
    return res;
  }
  
@@ -84,7 +90,33 @@ $NetBSD$
  #if SANITIZER_NETBSD
  INTERCEPTOR(int, fstat, int fd, void *buf) {
    ENSURE_MSAN_INITED();
-@@ -1152,23 +1220,78 @@ struct MSanAtExitRecord {
+@@ -1137,6 +1206,18 @@ INTERCEPTOR(int, pthread_join, void *th,
+ 
+ extern char *tzname[2];
+ 
++#if SANITIZER_NETBSD
++INTERCEPTOR(void, tzset, void) {
++  ENSURE_MSAN_INITED();
++  InterceptorScope interceptor_scope;
++  REAL(tzset)();
++  if (tzname[0])
++    __msan_unpoison(tzname[0], REAL(strlen)(tzname[0]) + 1);
++  if (tzname[1])
++    __msan_unpoison(tzname[1], REAL(strlen)(tzname[1]) + 1);
++  return;
++}
++#else
+ INTERCEPTOR(void, tzset, int fake) {
+   ENSURE_MSAN_INITED();
+   REAL(tzset)(fake);
+@@ -1146,29 +1227,85 @@ INTERCEPTOR(void, tzset, int fake) {
+     __msan_unpoison(tzname[1], REAL(strlen)(tzname[1]) + 1);
+   return;
+ }
++#endif
+ 
+ struct MSanAtExitRecord {
+   void (*func)(void *arg);
    void *arg;
  };
  
@@ -166,7 +198,19 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1401,6 +1524,7 @@ static uptr signal_impl(int signo, uptr 
+@@ -1322,6 +1459,11 @@ int OnExit() {
+     __msan_unpoison(to + size, 1);                          \
+   } while (false)
+ 
++#if SANITIZER_NETBSD1
++#define COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE       \
++  InterceptorScope interceptor_scope;
++#endif
++
+ #include "sanitizer_common/sanitizer_platform_interceptors.h"
+ #include "sanitizer_common/sanitizer_common_interceptors.inc"
+ 
+@@ -1401,6 +1543,7 @@ static uptr signal_impl(int signo, uptr 
    } while (false)
  #define COMMON_SYSCALL_POST_WRITE_RANGE(p, s) __msan_unpoison(p, s)
  #include "sanitizer_common/sanitizer_common_syscalls.inc"
@@ -174,7 +218,7 @@ $NetBSD$
  
  struct dlinfo {
    char *dli_fname;
-@@ -1566,6 +1690,9 @@ namespace __msan {
+@@ -1566,6 +1709,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -184,7 +228,7 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1682,6 +1809,7 @@ void InitializeInterceptors() {
+@@ -1682,6 +1828,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);

@@ -1,8 +1,16 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-08 15:33:14.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-15 06:00:16.210403175 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
-@@ -75,6 +75,7 @@
+@@ -36,6 +36,7 @@
+ //   COMMON_INTERCEPTOR_MEMCPY_IMPL
+ //   COMMON_INTERCEPTOR_COPY_STRING
+ //   COMMON_INTERCEPTOR_STRNDUP_IMPL
++//   COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE
+ //===----------------------------------------------------------------------===//
+ 
+ #include "interception/interception.h"
+@@ -75,6 +76,7 @@
  #define clock_settime __clock_settime50
  #define ctime __ctime50
  #define ctime_r __ctime_r50
@@ -10,7 +18,15 @@ $NetBSD$
  #define getitimer __getitimer50
  #define getpwent __getpwent50
  #define getpwnam __getpwnam50
-@@ -107,6 +108,9 @@
+@@ -88,6 +90,7 @@
+ #define glob __glob30
+ #define gmtime __gmtime50
+ #define gmtime_r __gmtime_r50
++#define localtime __locatime50
+ #define localtime_r __localtime_r50
+ #define mktime __mktime50
+ #define opendir __opendir30
+@@ -107,6 +110,9 @@
  #define times __times13
  #define wait3 __wait350
  #define wait4 __wait450
@@ -20,7 +36,90 @@ $NetBSD$
  #endif
  
  // Platform-specific options.
-@@ -1703,6 +1707,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
+@@ -279,6 +285,10 @@ bool PlatformHasDifferentMemcpyAndMemmov
+   return new_mem;
+ #endif
+ 
++#ifndef COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE
++#define COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE
++#endif
++
+ struct FileMetadata {
+   // For open_memstream().
+   char **addr;
+@@ -1229,6 +1239,7 @@ static void unpoison_tm(void *ctx, __san
+ INTERCEPTOR(__sanitizer_tm *, localtime, unsigned long *timep) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, localtime, timep);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   __sanitizer_tm *res = REAL(localtime)(timep);
+   if (res) {
+     COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
+@@ -1239,6 +1250,7 @@ INTERCEPTOR(__sanitizer_tm *, localtime,
+ INTERCEPTOR(__sanitizer_tm *, localtime_r, unsigned long *timep, void *result) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, localtime_r, timep, result);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   __sanitizer_tm *res = REAL(localtime_r)(timep, result);
+   if (res) {
+     COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
+@@ -1249,6 +1261,7 @@ INTERCEPTOR(__sanitizer_tm *, localtime_
+ INTERCEPTOR(__sanitizer_tm *, gmtime, unsigned long *timep) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, gmtime, timep);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   __sanitizer_tm *res = REAL(gmtime)(timep);
+   if (res) {
+     COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
+@@ -1259,6 +1272,7 @@ INTERCEPTOR(__sanitizer_tm *, gmtime, un
+ INTERCEPTOR(__sanitizer_tm *, gmtime_r, unsigned long *timep, void *result) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, gmtime_r, timep, result);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   __sanitizer_tm *res = REAL(gmtime_r)(timep, result);
+   if (res) {
+     COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
+@@ -1269,6 +1283,7 @@ INTERCEPTOR(__sanitizer_tm *, gmtime_r, 
+ INTERCEPTOR(char *, ctime, unsigned long *timep) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, ctime, timep);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   // FIXME: under ASan the call below may write to freed memory and corrupt
+   // its metadata. See
+   // https://github.com/google/sanitizers/issues/321.
+@@ -1282,6 +1297,7 @@ INTERCEPTOR(char *, ctime, unsigned long
+ INTERCEPTOR(char *, ctime_r, unsigned long *timep, char *result) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, ctime_r, timep, result);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   // FIXME: under ASan the call below may write to freed memory and corrupt
+   // its metadata. See
+   // https://github.com/google/sanitizers/issues/321.
+@@ -1295,6 +1311,7 @@ INTERCEPTOR(char *, ctime_r, unsigned lo
+ INTERCEPTOR(char *, asctime, __sanitizer_tm *tm) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, asctime, tm);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   // FIXME: under ASan the call below may write to freed memory and corrupt
+   // its metadata. See
+   // https://github.com/google/sanitizers/issues/321.
+@@ -1308,6 +1325,7 @@ INTERCEPTOR(char *, asctime, __sanitizer
+ INTERCEPTOR(char *, asctime_r, __sanitizer_tm *tm, char *result) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, asctime_r, tm, result);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   // FIXME: under ASan the call below may write to freed memory and corrupt
+   // its metadata. See
+   // https://github.com/google/sanitizers/issues/321.
+@@ -1321,6 +1339,7 @@ INTERCEPTOR(char *, asctime_r, __sanitiz
+ INTERCEPTOR(long, mktime, __sanitizer_tm *tm) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, mktime, tm);
++  COMMON_INTERCEPTOR_LOCALTIME_AND_FRIEND_SCOPE;
+   COMMON_INTERCEPTOR_READ_RANGE(ctx, &tm->tm_sec, sizeof(tm->tm_sec));
+   COMMON_INTERCEPTOR_READ_RANGE(ctx, &tm->tm_min, sizeof(tm->tm_min));
+   COMMON_INTERCEPTOR_READ_RANGE(ctx, &tm->tm_hour, sizeof(tm->tm_hour));
+@@ -1703,6 +1722,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
  
  #if SANITIZER_INTERCEPT_IOCTL
  #include "sanitizer_common_interceptors_ioctl.inc"
@@ -28,7 +127,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -2765,6 +2770,29 @@ INTERCEPTOR(int, accept4, int fd, void *
+@@ -2776,6 +2796,29 @@ INTERCEPTOR(int, accept4, int fd, void *
  #define INIT_ACCEPT4
  #endif
  
@@ -58,7 +157,7 @@ $NetBSD$
  #if SANITIZER_INTERCEPT_MODF
  INTERCEPTOR(double, modf, double x, double *iptr) {
    void *ctx;
-@@ -3153,7 +3181,14 @@ INTERCEPTOR(char *, setlocale, int categ
+@@ -3164,7 +3207,14 @@ INTERCEPTOR(char *, setlocale, int categ
    if (locale)
      COMMON_INTERCEPTOR_READ_RANGE(ctx, locale, REAL(strlen)(locale) + 1);
    char *res = REAL(setlocale)(category, locale);
@@ -74,7 +173,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6452,6 +6487,463 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
+@@ -6463,6 +6513,586 @@ INTERCEPTOR(wchar_t *, wcsncat, wchar_t 
  #define INIT_WCSCAT
  #endif
  
@@ -173,12 +272,23 @@ $NetBSD$
 +
 +INTERCEPTOR(char **, kvm_getenvv2, struct __sanitizer_kvm *kd, void *kp, int nchr) {
 +  void *ctx;
++  char **argv;
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_getenvv2, kd, kp, nchr);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
 +  if (kp)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kp, struct_kinfo_proc2_sz);
-+  return REAL(kvm_getenvv2)(kd, kp, nchr);
++  argv = REAL(kvm_getenvv2)(kd, kp, nchr);
++  if (argv) {
++    char **p = argv;
++    while (*p) {
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *p, REAL(strlen)(*p) + 1);
++      p++;
++    }
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++  }
++  return argv;
 +}
 +
 +INTERCEPTOR(char *, kvm_geterr, struct __sanitizer_kvm *kd) {
@@ -535,10 +645,122 @@ $NetBSD$
 +#define INIT_ATOF
 +#endif
 +
++#if SANITIZER_INTERCEPT_USER_FROM_UID
++INTERCEPTOR(char *, user_from_uid, u32 uid, int nouser) {
++  void *ctx;
++  char *user;
++  COMMON_INTERCEPTOR_ENTER(ctx, user_from_uid, uid, nouser);
++  user = REAL(user_from_uid)(uid, nouser);
++  if (user) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, user, REAL(strlen)(user) + 1);
++  }
++  return user;
++}
++#define INIT_USER_FROM_UID COMMON_INTERCEPT_FUNCTION(user_from_uid)
++#else
++#define INIT_USER_FROM_UID
++#endif
++
++#if SANITIZER_INTERCEPT_UID_FROM_USER
++INTERCEPTOR(int, uid_from_user, char *name, u32 *uid) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, uid_from_user, name, uid);
++  if (name)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
++  if (uid)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, uid, sizeof(*uid));
++  return REAL(uid_from_user)(name, uid);
++}
++#define INIT_UID_FROM_USER COMMON_INTERCEPT_FUNCTION(uid_from_user)
++#else
++#define INIT_UID_FROM_USER
++#endif
++
++#if SANITIZER_INTERCEPT_GROUP_FROM_GID
++INTERCEPTOR(char *, group_from_gid, u32 gid, int nogroup) {
++  void *ctx;
++  char *group;
++  COMMON_INTERCEPTOR_ENTER(ctx, group_from_gid, gid, nogroup);
++  group = REAL(group_from_gid)(gid, nogroup);
++  if (group) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, group, REAL(strlen)(group) + 1);
++  }
++  return group;
++}
++#define INIT_GROUP_FROM_GID COMMON_INTERCEPT_FUNCTION(group_from_gid)
++#else
++#define INIT_GROUP_FROM_GID
++#endif
++
++#if SANITIZER_INTERCEPT_GID_FROM_GROUP
++INTERCEPTOR(int, gid_from_group, char *group, u32 *gid) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, gid_from_group, group, gid);
++  if (group)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, group, REAL(strlen)(group) + 1);
++  if (gid)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, gid, sizeof(*gid));
++  return REAL(gid_from_group)(group, gid);
++}
++#define INIT_GID_FROM_USER COMMON_INTERCEPT_FUNCTION(gid_from_group)
++#else
++#define INIT_GID_FROM_USER
++#endif
++
++#if SANITIZER_INTERCEPT_GETTTYENT
++INTERCEPTOR(struct __sanitizer_ttyent *, getttyent, void) {
++  void *ctx;
++  struct __sanitizer_ttyent *ttyent;
++  COMMON_INTERCEPTOR_ENTER(ctx, getttyent);
++  ttyent = REAL(getttyent)();
++  if (ttyent) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, ttyent, struct_ttyent_sz);
++  }
++  return ttyent;
++}
++INTERCEPTOR(struct __sanitizer_ttyent *, getttynam, char *name) {
++  void *ctx;
++  struct __sanitizer_ttyent *ttyent;
++  COMMON_INTERCEPTOR_ENTER(ctx, getttynam, name);
++  if (name)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
++  ttyent = REAL(getttynam)(name);
++  if (ttyent) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, ttyent, struct_ttyent_sz);
++  }
++  return ttyent;
++}
++INTERCEPTOR(int, setttyent) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, setttyent);
++  return REAL(setttyent)();
++}
++INTERCEPTOR(int, setttyentpath, char *path) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, setttyentpath, path);
++  if (path)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
++  return REAL(setttyentpath)(path);
++}
++INTERCEPTOR(int, endttyent) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, endttyent);
++  return REAL(endttyent)();
++}
++#define INIT_GETTTYENT \
++  COMMON_INTERCEPT_FUNCTION(getttyent); \
++  COMMON_INTERCEPT_FUNCTION(getttynam); \
++  COMMON_INTERCEPT_FUNCTION(setttyent); \
++  COMMON_INTERCEPT_FUNCTION(setttyentpath); \
++  COMMON_INTERCEPT_FUNCTION(endttyent)
++#else
++#define INIT_GETTTYENT
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6531,6 +7023,7 @@ static void InitializeCommonInterceptors
+@@ -6542,6 +7172,7 @@ static void InitializeCommonInterceptors
    INIT_GETSOCKOPT;
    INIT_ACCEPT;
    INIT_ACCEPT4;
@@ -546,7 +768,7 @@ $NetBSD$
    INIT_MODF;
    INIT_RECVMSG;
    INIT_SENDMSG;
-@@ -6663,6 +7156,15 @@ static void InitializeCommonInterceptors
+@@ -6674,6 +7305,20 @@ static void InitializeCommonInterceptors
    INIT_GETLOADAVG;
    INIT_WCSLEN;
    INIT_WCSCAT;
@@ -559,6 +781,11 @@ $NetBSD$
 +  INIT_FACCESSAT;
 +  INIT_ACCT;
 +  INIT_ATOF;
++  INIT_USER_FROM_UID;
++  INIT_UID_FROM_USER;
++  INIT_GROUP_FROM_GID;
++  INIT_GID_FROM_USER;
++  INIT_GETTTYENT;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);

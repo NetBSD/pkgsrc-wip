@@ -172,7 +172,15 @@ $NetBSD$
  #include <sys/shm.h>
  #include <sys/signal.h>
  #include <sys/socket.h>
-@@ -99,18 +240,83 @@ unsigned struct_sockaddr_sz = sizeof(str
+@@ -67,6 +208,7 @@
+ #include <utmpx.h>
+ #include <wchar.h>
+ #include <wordexp.h>
++#include <ttyent.h>
+ 
+ // Include these after system headers to avoid name clashes and ambiguities.
+ #include "sanitizer_internal_defs.h"
+@@ -99,18 +241,83 @@ unsigned struct_sockaddr_sz = sizeof(str
  unsigned ucontext_t_sz = sizeof(ucontext_t);
  unsigned struct_rlimit_sz = sizeof(struct rlimit);
  unsigned struct_timespec_sz = sizeof(struct timespec);
@@ -256,12 +264,14 @@ $NetBSD$
  int shmctl_ipc_stat = (int)IPC_STAT;
  
  unsigned struct_utmp_sz = sizeof(struct utmp);
-@@ -137,65 +343,1729 @@ int glob_altdirfunc = GLOB_ALTDIRFUNC;
+@@ -137,65 +344,1731 @@ int glob_altdirfunc = GLOB_ALTDIRFUNC;
  
  unsigned path_max = PATH_MAX;
  
 +int struct_kinfo_proc_sz = sizeof(struct kinfo_proc);
 +int struct_kinfo_proc2_sz = sizeof(struct kinfo_proc2);
++
++int struct_ttyent_sz = sizeof(struct ttyent);
 +
  // ioctl arguments
 -unsigned struct_ifreq_sz = sizeof(struct ifreq);
