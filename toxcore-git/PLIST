@@ -7,3 +7,4 @@ lib/libtoxcore.la
 lib/libtoxencryptsave.la
 lib/pkgconfig/libtoxav.pc
 lib/pkgconfig/libtoxcore.pc
+@pkgdir bin
