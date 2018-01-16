@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	toxcore-0.1.3
+DISTNAME=	toxcore-0.1.11
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=toktok/}
 
