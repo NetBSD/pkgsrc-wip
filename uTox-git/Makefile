@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 
-.include "../../wip/toxcore-git/buildlink3.mk"
+.include "../../wip/toxcore/buildlink3.mk"
 .include "../../wip/filter_audio-git/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
