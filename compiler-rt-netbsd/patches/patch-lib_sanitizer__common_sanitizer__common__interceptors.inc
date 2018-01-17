@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-17 14:42:51.590090912 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-17 14:42:51.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -174,7 +174,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6476,6 +6527,614 @@ INTERCEPTOR(int, acct, const char *file)
+@@ -6476,6 +6527,620 @@ INTERCEPTOR(int, acct, const char *file)
  #define INIT_ACCT
  #endif
  
@@ -488,7 +488,7 @@ $NetBSD$
 +  return name;
 +}
 +
-+INTERCEPTOR(int, devname_r, u64 dev, u32 type, char *path, uptr len) {
++INTERCEPTOR(int, devname_r, u64 dev, u32 type, const char *path, uptr len) {
 +  void *ctx;
 +  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, devname_r, dev, type, path, len);
@@ -580,31 +580,36 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_GETGROUPLIST
-+INTERCEPTOR(int, getgrouplist, char *name, u32 basegid, u32 *groups,
++INTERCEPTOR(int, getgrouplist, const char *name, u32 basegid, u32 *groups,
 +            int *ngroups) {
 +  void *ctx;
 +  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, getgrouplist, name, basegid, groups, ngroups);
-+  if (name) {
++  if (name)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
-+  }
++  if (ngroups)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, ngroups, sizeof(*ngroups));
 +  res = REAL(getgrouplist)(name, basegid, groups, ngroups);
-+  if (groups && ngroups)
++  if (!res && groups && ngroups) {
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, groups, sizeof(*groups) * (*ngroups));
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, ngroups, sizeof(*ngroups));
++  }
 +  return res;
 +}
++
 +INTERCEPTOR(int, getgroupmembership, char *name, u32 basegid, u32 *groups,
 +            int maxgrp, int *ngroups) {
 +  void *ctx;
 +  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, getgroupmembership, name, basegid, groups,
 +                           maxgrp, ngroups);
-+  if (name) {
++  if (name)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
-+  }
 +  res = REAL(getgroupmembership)(name, basegid, groups, maxgrp, ngroups);
-+  if (groups && ngroups)
++  if (!res && groups && ngroups) {
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, groups, sizeof(*groups) * (*ngroups));
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, ngroups, sizeof(*ngroups));
++  }
 +  return res;
 +}
 +
@@ -616,12 +621,11 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_ACCESS
-+INTERCEPTOR(int, access, char *path, int mode) {
++INTERCEPTOR(int, access, const char *path, int mode) {
 +  void *ctx;
 +  COMMON_INTERCEPTOR_ENTER(ctx, access, path, mode);
-+  if (path) {
++  if (path)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-+  }
 +  return REAL(access)(path, mode);
 +}
 +#define INIT_ACCESS COMMON_INTERCEPT_FUNCTION(access)
@@ -630,12 +634,11 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_FACCESSAT
-+INTERCEPTOR(int, faccessat, int fd, char *path, int mode, int flags) {
++INTERCEPTOR(int, faccessat, int fd, const char *path, int mode, int flags) {
 +  void *ctx;
 +  COMMON_INTERCEPTOR_ENTER(ctx, faccessat, fd, path, mode, flags);
-+  if (path) {
++  if (path)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-+  }
 +  return REAL(faccessat)(fd, path, mode, flags);
 +}
 +#define INIT_FACCESSAT COMMON_INTERCEPT_FUNCTION(faccessat)
@@ -658,14 +661,13 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_USER_FROM_UID
-+INTERCEPTOR(char *, user_from_uid, u32 uid, int nouser) {
++INTERCEPTOR(const char *, user_from_uid, u32 uid, int nouser) {
 +  void *ctx;
-+  char *user;
++  const char *user;
 +  COMMON_INTERCEPTOR_ENTER(ctx, user_from_uid, uid, nouser);
 +  user = REAL(user_from_uid)(uid, nouser);
-+  if (user) {
++  if (user)
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, user, REAL(strlen)(user) + 1);
-+  }
 +  return user;
 +}
 +#define INIT_USER_FROM_UID COMMON_INTERCEPT_FUNCTION(user_from_uid)
@@ -674,14 +676,16 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_UID_FROM_USER
-+INTERCEPTOR(int, uid_from_user, char *name, u32 *uid) {
++INTERCEPTOR(int, uid_from_user, const char *name, u32 *uid) {
 +  void *ctx;
++  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, uid_from_user, name, uid);
 +  if (name)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
-+  if (uid)
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, uid, sizeof(*uid));
-+  return REAL(uid_from_user)(name, uid);
++  res = REAL(uid_from_user)(name, uid);
++  if (res != -1 && uid)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, uid, sizeof(*uid));
++  return res;
 +}
 +#define INIT_UID_FROM_USER COMMON_INTERCEPT_FUNCTION(uid_from_user)
 +#else
@@ -689,9 +693,9 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_GROUP_FROM_GID
-+INTERCEPTOR(char *, group_from_gid, u32 gid, int nogroup) {
++INTERCEPTOR(const char *, group_from_gid, u32 gid, int nogroup) {
 +  void *ctx;
-+  char *group;
++  const char *group;
 +  COMMON_INTERCEPTOR_ENTER(ctx, group_from_gid, gid, nogroup);
 +  group = REAL(group_from_gid)(gid, nogroup);
 +  if (group) {
@@ -705,14 +709,16 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_GID_FROM_GROUP
-+INTERCEPTOR(int, gid_from_group, char *group, u32 *gid) {
++INTERCEPTOR(int, gid_from_group, const char *group, u32 *gid) {
 +  void *ctx;
++  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, gid_from_group, group, gid);
 +  if (group)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, group, REAL(strlen)(group) + 1);
-+  if (gid)
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, gid, sizeof(*gid));
-+  return REAL(gid_from_group)(group, gid);
++  res = REAL(gid_from_group)(group, gid);
++  if (res != -1 && gid)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, gid, sizeof(*gid));
++  return res;
 +}
 +#define INIT_GID_FROM_USER COMMON_INTERCEPT_FUNCTION(gid_from_group)
 +#else
@@ -789,7 +795,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6555,6 +7214,7 @@ static void InitializeCommonInterceptors
+@@ -6555,6 +7220,7 @@ static void InitializeCommonInterceptors
    INIT_GETSOCKOPT;
    INIT_ACCEPT;
    INIT_ACCEPT4;
@@ -797,7 +803,7 @@ $NetBSD$
    INIT_MODF;
    INIT_RECVMSG;
    INIT_SENDMSG;
-@@ -6688,6 +7348,20 @@ static void InitializeCommonInterceptors
+@@ -6688,6 +7354,21 @@ static void InitializeCommonInterceptors
    INIT_WCSLEN;
    INIT_WCSCAT;
    INIT_ACCT;
@@ -815,6 +821,7 @@ $NetBSD$
 +  INIT_GID_FROM_USER;
 +  INIT_GETTTYENT;
 +  INIT_FGETLN;
++  INIT_GETGROUPLIST;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);

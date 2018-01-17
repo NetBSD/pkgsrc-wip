@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-01-17 14:42:51.590537504 +0000
+--- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-01-17 14:42:51.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_interceptors.h
 @@ -217,7 +217,8 @@
    (SI_FREEBSD || SI_LINUX_NOT_ANDROID || SI_SOLARIS)
