@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_internal_defs.h.orig	2018-01-15 06:00:15.999252256 +0000
+--- lib/sanitizer_common/sanitizer_internal_defs.h.orig	2018-01-15 06:00:15.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_internal_defs.h
 @@ -177,7 +177,9 @@ typedef uptr tid_t;
  // This header should NOT include any other headers to avoid portability issues.

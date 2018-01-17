@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/fuzzer/tests/CMakeLists.txt.orig	2018-01-15 06:00:16.375143319 +0000
+--- lib/fuzzer/tests/CMakeLists.txt.orig	2018-01-17 14:42:51.596169898 +0000
 +++ lib/fuzzer/tests/CMakeLists.txt
 @@ -10,6 +10,9 @@ add_custom_target(FuzzerUnitTests)
  set_target_properties(FuzzerUnitTests PROPERTIES FOLDER "Compiler-RT Tests")

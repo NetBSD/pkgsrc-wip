@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/sanitizer/netbsd_syscall_hooks.h.orig	2018-01-15 06:15:08.859550198 +0000
+--- include/sanitizer/netbsd_syscall_hooks.h.orig	2018-01-17 14:43:16.027644634 +0000
 +++ include/sanitizer/netbsd_syscall_hooks.h
 @@ -0,0 +1,4730 @@
 +//===-- netbsd_syscall_hooks.h --------------------------------------------===//
