@@ -2768,7 +2768,6 @@ SUBDIR+=	polarssl11
 SUBDIR+=	polipo
 SUBDIR+=	polkit-git
 SUBDIR+=	polkit-kde-agent
-SUBDIR+=	polkit-qt5
 SUBDIR+=	polly-git
 SUBDIR+=	polyclipping
 SUBDIR+=	polylib
