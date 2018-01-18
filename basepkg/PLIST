@@ -5,6 +5,7 @@ share/basepkg/sets/comments
 share/basepkg/sets/deinstall
 share/basepkg/sets/deps
 share/basepkg/sets/descrs
+share/basepkg/sets/essentials
 share/basepkg/sets/install
 share/basepkg/sets/lists/base/ad.aarch64
 share/basepkg/sets/lists/base/ad.arm
