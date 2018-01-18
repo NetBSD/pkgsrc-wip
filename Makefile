@@ -3843,7 +3843,6 @@ SUBDIR+=	py-xcal-raman
 SUBDIR+=	py-xdgapp
 SUBDIR+=	py-xdress
 SUBDIR+=	py-xlutils
-SUBDIR+=	py-xmltodict
 SUBDIR+=	py-xopen
 SUBDIR+=	py-xpra
 SUBDIR+=	py-yams
