@@ -1,5 +1,0 @@
-@comment $NetBSD$
-qt5/plugins/audio/libqtaudio_coreaudio.so
-qt5/plugins/mediaservice/libqavfcamera.so
-qt5/plugins/mediaservice/libqavfmediaplayer.so
-qt5/plugins/mediaservice/libqtmedia_audioengine.so

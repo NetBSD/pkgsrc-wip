@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/10/26 19:04:00 adam Exp $
-
-SHA1 (qtquickcontrols-everywhere-src-5.10.0.tar.xz) = 062509f58a3cf88604fce794c05c7131199e9002
-RMD160 (qtquickcontrols-everywhere-src-5.10.0.tar.xz) = 07b91a62f8887d2007c1432937e1d3d01f7a1da0
-SHA512 (qtquickcontrols-everywhere-src-5.10.0.tar.xz) = 87824d4802581710d6dc23f09c661aaff470a4050ada42be5b75ae88279a50782564a0f7feef059fdce5d50992438ec59417ff42e9258d890d7624855f0d7b70
-Size (qtquickcontrols-everywhere-src-5.10.0.tar.xz) = 5966860 bytes

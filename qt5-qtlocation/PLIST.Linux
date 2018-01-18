@@ -1,3 +1,0 @@
-@comment $NetBSD$
-qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryMapboxGL.cmake
-qt5/plugins/geoservices/libqtgeoservices_mapboxgl.so
