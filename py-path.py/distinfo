@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/01/31 17:12:20 jihbed Exp $
 
-SHA1 (path.py-7.1.zip) = d9840c63fe0474a14e18b57cb3fb06c1279b6a0f
-RMD160 (path.py-7.1.zip) = a299052f31165c02d586d73091475936a51edc14
-Size (path.py-7.1.zip) = 32852 bytes
+SHA1 (path.py-10.5.tar.gz) = 3fea1055eb50cb0dc552a864d40c5899604a84c7
+RMD160 (path.py-10.5.tar.gz) = b22b5b2ba02ed8912ab8b58e195634460e52af5e
+SHA512 (path.py-10.5.tar.gz) = 4f5e436d31432e4058147c308b578c63b46c195cbcb4dbe3c101c92ac391eb8eab453ae3f61004adc804e896d022f319d7759d1081e11a0ae9f36c0d4138840c
+Size (path.py-10.5.tar.gz) = 37394 bytes
