@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
 
 MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
 
-INSTALLATION_DIRS+=	bin share/doc/rclone
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -30,7 +30,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/rclone ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/MANUAL.html ${DESTDIR}${PREFIX}/share/doc/rclone
-	${INSTALL_DATA} ${WRKSRC}/MANUAL.txt ${DESTDIR}${PREFIX}/share/doc/rclone
+	${INSTALL_MAN} ${WRKSRC}/rclone.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
