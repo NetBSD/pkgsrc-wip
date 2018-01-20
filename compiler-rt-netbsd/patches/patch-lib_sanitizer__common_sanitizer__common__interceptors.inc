@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-20 14:37:44.460284188 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-20 14:37:44.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -166,7 +166,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6608,6 +6658,488 @@ INTERCEPTOR(int, getgroupmembership, con
+@@ -6608,6 +6658,495 @@ INTERCEPTOR(int, getgroupmembership, con
  #define INIT_GETGROUPLIST
  #endif
  
@@ -539,12 +539,12 @@ $NetBSD$
 +#endif
 +
 +#if SANITIZER_INTERCEPT_STRLCPY
-+INTERCEPTOR(uptr, strlcpy, char *dst, char *src, uptr size) {
++INTERCEPTOR(SIZE_T, strlcpy, char *dst, char *src, SIZE_T size) {
 +  void *ctx;
-+  uptr res;
++  SIZE_T res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, strlcpy, dst, src, size);
 +  if (src) {
-+    uptr len = REAL(strnlen)(src, size);
++    SIZE_T len = REAL(strnlen)(src, size);
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
 +  }
 +  res = REAL(strlcpy)(dst, src, size);
@@ -552,21 +552,28 @@ $NetBSD$
 +  return res;
 +}
 +
-+INTERCEPTOR(uptr, strlcat, char *dst, char *src, uptr size) {
++INTERCEPTOR(SIZE_T, strlcat, char *dst, char *src, SIZE_T size) {
 +  void *ctx;
-+  uptr res;
++  SIZE_T res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, strlcat, dst, src, size);
 +  if (src) {
-+    uptr len = REAL(strnlen)(src, size);
++    SIZE_T len = REAL(strnlen)(src, size);
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
 +  }
-+  res = REAL(strlcat)(dst, src, size);
++  if (dst) {
++    SIZE_T len = REAL(strnlen)(dst, size);
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, dst, len >= size ? size : len + 1);
++    // Simplify WRITE_RANGE
++    dst += len;
++    size -= len;
++  }
++  res = REAL(strlcpy)(dst, src, size);
 +  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst) + 1);
 +  return res;
 +}
 +#define INIT_STRLCPY \
 +  COMMON_INTERCEPT_FUNCTION(strlcpy); \
-+  COMMON_INTERCEPT_FUNCTION(strlcat)
++  COMMON_INTERCEPT_FUNCTION(strlcat);
 +#else
 +#define INIT_STRLCPY
 +#endif
@@ -655,7 +662,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6687,6 +7219,7 @@ static void InitializeCommonInterceptors
+@@ -6687,6 +7226,7 @@ static void InitializeCommonInterceptors
    INIT_GETSOCKOPT;
    INIT_ACCEPT;
    INIT_ACCEPT4;
@@ -663,7 +670,7 @@ $NetBSD$
    INIT_MODF;
    INIT_RECVMSG;
    INIT_SENDMSG;
-@@ -6827,6 +7360,13 @@ static void InitializeCommonInterceptors
+@@ -6827,6 +7367,13 @@ static void InitializeCommonInterceptors
    INIT_ACCESS;
    INIT_FACCESSAT;
    INIT_GETGROUPLIST;

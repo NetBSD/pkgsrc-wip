@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-01-20 14:37:44.460760436 +0000
+--- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-01-20 14:37:44.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_interceptors.h
 @@ -218,6 +218,7 @@
  #define SANITIZER_INTERCEPT_GETSOCKOPT SI_POSIX
