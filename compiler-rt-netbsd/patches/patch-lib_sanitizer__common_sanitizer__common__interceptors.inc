@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-18 12:26:39.364964646 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-20 14:37:44.460284188 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -18,15 +18,7 @@ $NetBSD$
  #define getitimer __getitimer50
  #define getpwent __getpwent50
  #define getpwnam __getpwnam50
-@@ -88,6 +90,7 @@
- #define glob __glob30
- #define gmtime __gmtime50
- #define gmtime_r __gmtime_r50
-+#define localtime __locatime50
- #define localtime_r __localtime_r50
- #define mktime __mktime50
- #define opendir __opendir30
-@@ -107,6 +110,9 @@
+@@ -108,6 +110,9 @@
  #define times __times13
  #define wait3 __wait350
  #define wait4 __wait450
@@ -36,7 +28,7 @@ $NetBSD$
  #endif
  
  // Platform-specific options.
-@@ -279,6 +285,10 @@ bool PlatformHasDifferentMemcpyAndMemmov
+@@ -280,6 +285,10 @@ bool PlatformHasDifferentMemcpyAndMemmov
    return new_mem;
  #endif
  
@@ -47,7 +39,7 @@ $NetBSD$
  struct FileMetadata {
    // For open_memstream().
    char **addr;
-@@ -1229,6 +1239,7 @@ static void unpoison_tm(void *ctx, __san
+@@ -1230,6 +1239,7 @@ static void unpoison_tm(void *ctx, __san
  INTERCEPTOR(__sanitizer_tm *, localtime, unsigned long *timep) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, localtime, timep);
@@ -55,7 +47,7 @@ $NetBSD$
    __sanitizer_tm *res = REAL(localtime)(timep);
    if (res) {
      COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
-@@ -1239,6 +1250,7 @@ INTERCEPTOR(__sanitizer_tm *, localtime,
+@@ -1240,6 +1250,7 @@ INTERCEPTOR(__sanitizer_tm *, localtime,
  INTERCEPTOR(__sanitizer_tm *, localtime_r, unsigned long *timep, void *result) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, localtime_r, timep, result);
@@ -63,7 +55,7 @@ $NetBSD$
    __sanitizer_tm *res = REAL(localtime_r)(timep, result);
    if (res) {
      COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
-@@ -1249,6 +1261,7 @@ INTERCEPTOR(__sanitizer_tm *, localtime_
+@@ -1250,6 +1261,7 @@ INTERCEPTOR(__sanitizer_tm *, localtime_
  INTERCEPTOR(__sanitizer_tm *, gmtime, unsigned long *timep) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, gmtime, timep);
@@ -71,7 +63,7 @@ $NetBSD$
    __sanitizer_tm *res = REAL(gmtime)(timep);
    if (res) {
      COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
-@@ -1259,6 +1272,7 @@ INTERCEPTOR(__sanitizer_tm *, gmtime, un
+@@ -1260,6 +1272,7 @@ INTERCEPTOR(__sanitizer_tm *, gmtime, un
  INTERCEPTOR(__sanitizer_tm *, gmtime_r, unsigned long *timep, void *result) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, gmtime_r, timep, result);
@@ -79,7 +71,7 @@ $NetBSD$
    __sanitizer_tm *res = REAL(gmtime_r)(timep, result);
    if (res) {
      COMMON_INTERCEPTOR_READ_RANGE(ctx, timep, sizeof(*timep));
-@@ -1269,6 +1283,7 @@ INTERCEPTOR(__sanitizer_tm *, gmtime_r, 
+@@ -1270,6 +1283,7 @@ INTERCEPTOR(__sanitizer_tm *, gmtime_r, 
  INTERCEPTOR(char *, ctime, unsigned long *timep) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, ctime, timep);
@@ -87,7 +79,7 @@ $NetBSD$
    // FIXME: under ASan the call below may write to freed memory and corrupt
    // its metadata. See
    // https://github.com/google/sanitizers/issues/321.
-@@ -1282,6 +1297,7 @@ INTERCEPTOR(char *, ctime, unsigned long
+@@ -1283,6 +1297,7 @@ INTERCEPTOR(char *, ctime, unsigned long
  INTERCEPTOR(char *, ctime_r, unsigned long *timep, char *result) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, ctime_r, timep, result);
@@ -95,7 +87,7 @@ $NetBSD$
    // FIXME: under ASan the call below may write to freed memory and corrupt
    // its metadata. See
    // https://github.com/google/sanitizers/issues/321.
-@@ -1295,6 +1311,7 @@ INTERCEPTOR(char *, ctime_r, unsigned lo
+@@ -1296,6 +1311,7 @@ INTERCEPTOR(char *, ctime_r, unsigned lo
  INTERCEPTOR(char *, asctime, __sanitizer_tm *tm) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, asctime, tm);
@@ -103,7 +95,7 @@ $NetBSD$
    // FIXME: under ASan the call below may write to freed memory and corrupt
    // its metadata. See
    // https://github.com/google/sanitizers/issues/321.
-@@ -1308,6 +1325,7 @@ INTERCEPTOR(char *, asctime, __sanitizer
+@@ -1309,6 +1325,7 @@ INTERCEPTOR(char *, asctime, __sanitizer
  INTERCEPTOR(char *, asctime_r, __sanitizer_tm *tm, char *result) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, asctime_r, tm, result);
@@ -111,7 +103,7 @@ $NetBSD$
    // FIXME: under ASan the call below may write to freed memory and corrupt
    // its metadata. See
    // https://github.com/google/sanitizers/issues/321.
-@@ -1321,6 +1339,7 @@ INTERCEPTOR(char *, asctime_r, __sanitiz
+@@ -1322,6 +1339,7 @@ INTERCEPTOR(char *, asctime_r, __sanitiz
  INTERCEPTOR(long, mktime, __sanitizer_tm *tm) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, mktime, tm);
@@ -119,7 +111,7 @@ $NetBSD$
    COMMON_INTERCEPTOR_READ_RANGE(ctx, &tm->tm_sec, sizeof(tm->tm_sec));
    COMMON_INTERCEPTOR_READ_RANGE(ctx, &tm->tm_min, sizeof(tm->tm_min));
    COMMON_INTERCEPTOR_READ_RANGE(ctx, &tm->tm_hour, sizeof(tm->tm_hour));
-@@ -1703,6 +1722,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
+@@ -1704,6 +1722,7 @@ FORMAT_INTERCEPTOR_IMPL(__isoc99_snprint
  
  #if SANITIZER_INTERCEPT_IOCTL
  #include "sanitizer_common_interceptors_ioctl.inc"
@@ -127,7 +119,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -2776,6 +2796,30 @@ INTERCEPTOR(int, accept4, int fd, void *
+@@ -2777,6 +2796,30 @@ INTERCEPTOR(int, accept4, int fd, void *
  #define INIT_ACCEPT4
  #endif
  
@@ -158,7 +150,7 @@ $NetBSD$
  #if SANITIZER_INTERCEPT_MODF
  INTERCEPTOR(double, modf, double x, double *iptr) {
    void *ctx;
-@@ -3164,7 +3208,14 @@ INTERCEPTOR(char *, setlocale, int categ
+@@ -3165,7 +3208,14 @@ INTERCEPTOR(char *, setlocale, int categ
    if (locale)
      COMMON_INTERCEPTOR_READ_RANGE(ctx, locale, REAL(strlen)(locale) + 1);
    char *res = REAL(setlocale)(category, locale);
@@ -174,7 +166,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6607,6 +6658,488 @@ INTERCEPTOR(int, getgroupmembership, con
+@@ -6608,6 +6658,488 @@ INTERCEPTOR(int, getgroupmembership, con
  #define INIT_GETGROUPLIST
  #endif
  
@@ -663,7 +655,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6686,6 +7219,7 @@ static void InitializeCommonInterceptors
+@@ -6687,6 +7219,7 @@ static void InitializeCommonInterceptors
    INIT_GETSOCKOPT;
    INIT_ACCEPT;
    INIT_ACCEPT4;
@@ -671,7 +663,7 @@ $NetBSD$
    INIT_MODF;
    INIT_RECVMSG;
    INIT_SENDMSG;
-@@ -6826,6 +7360,13 @@ static void InitializeCommonInterceptors
+@@ -6827,6 +7360,13 @@ static void InitializeCommonInterceptors
    INIT_ACCESS;
    INIT_FACCESSAT;
    INIT_GETGROUPLIST;

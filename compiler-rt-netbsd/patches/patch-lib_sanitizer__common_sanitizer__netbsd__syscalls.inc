@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_netbsd_syscalls.inc.orig	2018-01-18 12:27:21.940197418 +0000
+--- lib/sanitizer_common/sanitizer_netbsd_syscalls.inc.orig	2018-01-20 14:39:09.259564334 +0000
 +++ lib/sanitizer_common/sanitizer_netbsd_syscalls.inc
 @@ -0,0 +1,3793 @@
 +//===-- sanitizer_common_syscalls.inc ---------------------------*- C++ -*-===//
