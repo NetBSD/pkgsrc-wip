@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/rclone
+share/doc/rclone/MANUAL.html
+share/doc/rclone/MANUAL.txt
