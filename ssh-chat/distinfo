@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ssh-chat/v1.6.tar.gz) = 30871b283634ae44255b659154d460d891ab2bec
-RMD160 (ssh-chat/v1.6.tar.gz) = bc96bbd1a992e8eb298a69172972c4fb347ef2c5
-SHA512 (ssh-chat/v1.6.tar.gz) = e6895d154f599bc26664be7dc36216e323df569b8f6e0f37fe82a9424bb869fe2004e1cbdb7cbb5bd715ea670852ca8af123141b0dfd0550f38cc1255db42ad1
-Size (ssh-chat/v1.6.tar.gz) = 31259 bytes
+SHA1 (ssh-chat/v1.7.tar.gz) = adce4bcdd4b59b758b548b70a2241ef2ac25133b
+RMD160 (ssh-chat/v1.7.tar.gz) = e5f49b56fea8038eb16162925395420506bcf31d
+SHA512 (ssh-chat/v1.7.tar.gz) = 4b69ac87c7e39579a3fbfae44b9b0ae954f6c2d4bf3182152a987f990eb985070e9533d88ef9d0c988569b3db23e1f8256e47a63f935b9028febc5a7a66ea44d
+Size (ssh-chat/v1.7.tar.gz) = 33718 bytes

@@ -5,6 +5,9 @@ gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/chat.a
 gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/chat/message.a
 gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/set.a
 gopkg/pkg/${GO_PLATFORM}/github.com/shazow/ssh-chat/sshd.a
+gopkg/src/github.com/shazow/ssh-chat/CONTRIBUTING.md
+gopkg/src/github.com/shazow/ssh-chat/Gopkg.lock
+gopkg/src/github.com/shazow/ssh-chat/Gopkg.toml
 gopkg/src/github.com/shazow/ssh-chat/LICENSE
 gopkg/src/github.com/shazow/ssh-chat/Makefile
 gopkg/src/github.com/shazow/ssh-chat/README.md
@@ -35,7 +38,10 @@ gopkg/src/github.com/shazow/ssh-chat/cmd/ssh-chat/key.go
 gopkg/src/github.com/shazow/ssh-chat/godoc.go
 gopkg/src/github.com/shazow/ssh-chat/host.go
 gopkg/src/github.com/shazow/ssh-chat/host_test.go
+gopkg/src/github.com/shazow/ssh-chat/humantime.go
+gopkg/src/github.com/shazow/ssh-chat/humantime_test.go
 gopkg/src/github.com/shazow/ssh-chat/identity.go
+gopkg/src/github.com/shazow/ssh-chat/issue_template.md
 gopkg/src/github.com/shazow/ssh-chat/logger.go
 gopkg/src/github.com/shazow/ssh-chat/motd.txt
 gopkg/src/github.com/shazow/ssh-chat/set/item.go
