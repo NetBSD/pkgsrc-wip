@@ -20,6 +20,8 @@ MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
+CHECK_RELRO_SKIP+=	bin/rclone
+
 post-extract:
 	${MKDIR} ${WRKSRC}
 	${MV} ${WRKDIR}/${DISTNAME}/* ${WRKSRC}
