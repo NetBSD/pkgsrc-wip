@@ -13,7 +13,6 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../security/kwallet/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
