@@ -14,6 +14,8 @@ DEPENDS+=	kinit>=5.21.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge pkg-config perl:run
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 REPLACE_PERL+=	searchhandlers/khc_mansearch.pl
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
