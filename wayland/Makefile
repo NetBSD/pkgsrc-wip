@@ -1,9 +1,9 @@
 # $NetBSD$
 #
 
-DISTNAME=	wayland-1.9.90
+DISTNAME=	wayland-1.14.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://rainbow-runner.nl/freebsd/
+MASTER_SITES=	http://wayland.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ HOMEPAGE=	http://wayland.freedesktop.org
 COMMENT=	Computer display server protocol
 LICENSE=	mit
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
 USE_LANGUAGES+=	c c++
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
@@ -22,6 +22,12 @@ PKGCONFIG_OVERRIDE+=	src/wayland-cursor.pc.in
 PKGCONFIG_OVERRIDE+=	src/wayland-scanner.pc.in
 PKGCONFIG_OVERRIDE+=	src/wayland-server.pc.in
 
+CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fvi
+
+.include "../../wip/libepoll-shim/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

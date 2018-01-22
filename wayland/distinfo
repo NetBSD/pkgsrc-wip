@@ -1,9 +1,21 @@
 $NetBSD$
 
-SHA1 (wayland-1.9.90.tar.xz) = ffed32a005fa91c1eba4e1eaf4de3506f1615950
-RMD160 (wayland-1.9.90.tar.xz) = 38d1cedf203971888e53c3fbce26678d28093356
-SHA512 (wayland-1.9.90.tar.xz) = 3fd70d6d2365086938ddcb0b4cb477f8f35386511938e014e770bdf43449322b3768f940d78d94a19090338f0103ba432c9f0f810a9306cca5e53b8de5df0501
-Size (wayland-1.9.90.tar.xz) = 377944 bytes
-SHA1 (patch-src_wayland-server.c) = 5684c0691dc30f2b8cc9796dc803b5cb98a68a9d
-SHA1 (patch-tests_test-compositor.c) = d92b90063fa2efd0f3d01ca254bb1ca2e789cbaf
-SHA1 (patch-tests_test-runner.c) = 6f1c5f7a1810e89d3e2682c82573e8a6f1e4d804
+SHA1 (wayland-1.14.0.tar.xz) = 53a443be3bafe73209bbc49ef2cb134ed16e0141
+RMD160 (wayland-1.14.0.tar.xz) = b6e3f0bccde63eef905700d98c364b433e859762
+SHA512 (wayland-1.14.0.tar.xz) = bd38b2b8963d4d98d42c270e5d7dbff6323789a173b19b67a18258424fd8adee5021b282c9d7f6dad0bd25aa0160e76aecd8ed803d4eb25d911ef0a81cd713a5
+Size (wayland-1.14.0.tar.xz) = 413960 bytes
+SHA1 (patch-Makefile.am) = 086e3ab80dbaae733ea7c4084aae210026585c99
+SHA1 (patch-configure.ac) = e14c4ee81c2589a2b2ddd2f95aa7ae5bcf5d055e
+SHA1 (patch-src_event-loop.c) = 99bd6717302044430732cff21ede40e0849f026e
+SHA1 (patch-src_wayland-os.c) = 8d88cc2712b9ce8a4df8b05b6a2182d964c77ef1
+SHA1 (patch-src_wayland-os.h) = 0a8d2c7c4cbc68bedf78a924b9919158de540721
+SHA1 (patch-src_wayland-server.c) = 00c35945e8b3609f7e4e1fefd376d5d5546b8d5b
+SHA1 (patch-src_wayland-shm.c) = 6a6f49d531dcb8c9b4c7abdc139536e934c54fcb
+SHA1 (patch-tests_client-test.c) = 6ffe18dfd64176a92f6f795eb757c54a3cf0ad10
+SHA1 (patch-tests_connection-test.c) = af53116c99cbb8d6570bcec66bfd895c1ae01700
+SHA1 (patch-tests_event-loop-test.c) = 066be5163808b0a2727de514d3a7eb4493238dc5
+SHA1 (patch-tests_os-wrappers-test.c) = df3605d6dfd2f8da3b62ea73b0255f6ce6b4a66a
+SHA1 (patch-tests_queue-test.c) = 3ee8433faa50b033ab880d3c5b6a9846063d6bd6
+SHA1 (patch-tests_sanity-test.c) = 0457b89e90b31955b9c9c9f3f848c53d5c4e1f9f
+SHA1 (patch-tests_test-helpers.c) = e16e9aeac44a80e27dffd223e6c15c376d917a68
+SHA1 (patch-tests_test-runner.c) = a15a71fa10b8e8e55fbc307854e36842fab5e28b
