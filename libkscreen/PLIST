@@ -1,9 +1,11 @@
 @comment $NetBSD$
+bin/kscreen-doctor
 include/KF5/KScreen/KScreen/Config
 include/KF5/KScreen/KScreen/ConfigMonitor
 include/KF5/KScreen/KScreen/ConfigOperation
 include/KF5/KScreen/KScreen/EDID
 include/KF5/KScreen/KScreen/GetConfigOperation
+include/KF5/KScreen/KScreen/Log
 include/KF5/KScreen/KScreen/Mode
 include/KF5/KScreen/KScreen/Output
 include/KF5/KScreen/KScreen/Screen
@@ -16,6 +18,7 @@ include/KF5/KScreen/kscreen/configoperation.h
 include/KF5/KScreen/kscreen/edid.h
 include/KF5/KScreen/kscreen/getconfigoperation.h
 include/KF5/KScreen/kscreen/kscreen_export.h
+include/KF5/KScreen/kscreen/log.h
 include/KF5/KScreen/kscreen/mode.h
 include/KF5/KScreen/kscreen/output.h
 include/KF5/KScreen/kscreen/screen.h

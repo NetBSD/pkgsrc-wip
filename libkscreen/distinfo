@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libkscreen-5.6.3.tar.xz) = 46ed4993581af27bf88f4dd64187efa83f1e04b0
-RMD160 (libkscreen-5.6.3.tar.xz) = 271fc9604633e7bd665a69f76f8b345a34069131
-SHA512 (libkscreen-5.6.3.tar.xz) = c6e5fd3ba6ed44498f34c0018b724cc228a3e1af58bed9dba0f885e03a5812cf8565f137b51292ebde0694ae92e99c77b3543ce24491b149c7c940a43d06e956
-Size (libkscreen-5.6.3.tar.xz) = 83852 bytes
+SHA1 (libkscreen-5.11.5.tar.xz) = 6046b5112733e02130246a6aeae8bfa856719825
+RMD160 (libkscreen-5.11.5.tar.xz) = b918b0a7a62460805ab66227da068ac0c133bdc8
+SHA512 (libkscreen-5.11.5.tar.xz) = 40f5753d08d7bbed5693cbd2696a680565f4012412b6a097048a773ccc15af59a37659e3b73c3695c012b6c7435a05ff04f05009d9cac7971e40d75696ffacec
+Size (libkscreen-5.11.5.tar.xz) = 96556 bytes

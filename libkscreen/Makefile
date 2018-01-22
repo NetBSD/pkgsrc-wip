@@ -13,6 +13,8 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	src/kscreen2.pc.in
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 .include "../../wip/kwayland/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
