@@ -166,7 +166,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6608,6 +6658,495 @@ INTERCEPTOR(int, getgroupmembership, con
+@@ -6608,6 +6658,518 @@ INTERCEPTOR(int, getgroupmembership, con
  #define INIT_GETGROUPLIST
  #endif
  
@@ -218,12 +218,23 @@ $NetBSD$
 +INTERCEPTOR(char **, kvm_getargv, struct __sanitizer_kvm *kd, void *kp,
 +            int nchr) {
 +  void *ctx;
++  char **argv;
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_getargv, kd, kp, nchr);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
 +  if (kp)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kp, struct_kinfo_proc_sz);
-+  return REAL(kvm_getargv)(kd, kp, nchr);
++  argv = REAL(kvm_getargv)(kd, kp, nchr);
++  if (argv) {
++    char **p = argv;
++    while (*p) {
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *p, REAL(strlen)(*p) + 1);
++      p++;
++    }
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, p, sizeof(char **));
++  }
++  return argv;
 +}
 +
 +INTERCEPTOR(char **, kvm_getargv2, struct __sanitizer_kvm *kd, void *kp,
@@ -294,19 +305,27 @@ $NetBSD$
 +
 +INTERCEPTOR(char *, kvm_geterr, struct __sanitizer_kvm *kd) {
 +  void *ctx;
++  char *res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_geterr, kd);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
-+  return REAL(kvm_geterr)(kd);
++  res = REAL(kvm_geterr)(kd);
++  if (res)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, res, REAL(strlen)(res) + 1);
++  return res;
 +}
 +
 +INTERCEPTOR(int, kvm_getloadavg, struct __sanitizer_kvm *kd, double loadavg[],
 +            int nelem) {
 +  void *ctx;
++  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_getloadavg, kd, loadavg, nelem);
 +  if (kd)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
-+  return REAL(kvm_getloadavg)(kd, loadavg, nelem);
++  res = REAL(kvm_getloadavg)(kd, loadavg, nelem);
++  if (res > 0)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, loadavg, res * sizeof(*loadavg));
++  return res;
 +}
 +
 +INTERCEPTOR(char *, kvm_getfiles, struct __sanitizer_kvm *kd, int op, int arg,
@@ -386,6 +405,8 @@ $NetBSD$
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, mf, REAL(strlen)(mf) + 1);
 +  if (sf)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, sf, REAL(strlen)(sf) + 1);
++  if (program)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, program, REAL(strlen)(program) + 1);
 +  kd = REAL(kvm_open)(uf, mf, sf, flag, program);
 +  if (kd)
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
@@ -393,19 +414,21 @@ $NetBSD$
 +}
 +
 +INTERCEPTOR(struct __sanitizer_kvm *, kvm_openfiles, char *uf, char *mf,
-+            char *sf, int flag, char *program) {
++            char *sf, int flag, char *errout) {
 +  void *ctx;
 +  struct __sanitizer_kvm *kd;
-+  COMMON_INTERCEPTOR_ENTER(ctx, kvm_openfiles, uf, mf, sf, flag, program);
++  COMMON_INTERCEPTOR_ENTER(ctx, kvm_openfiles, uf, mf, sf, flag, errout);
 +  if (uf)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, uf, REAL(strlen)(uf) + 1);
 +  if (mf)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, mf, REAL(strlen)(mf) + 1);
 +  if (sf)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, sf, REAL(strlen)(sf) + 1);
-+  kd = REAL(kvm_openfiles)(uf, mf, sf, flag, program);
++  kd = REAL(kvm_openfiles)(uf, mf, sf, flag, errout);
 +  if (kd)
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, kd, sizeof(struct __sanitizer_kvm));
++  if (!kd && errout)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, errout, REAL(strlen)(errout) + 1);
 +  return kd;
 +}
 +
@@ -437,7 +460,7 @@ $NetBSD$
 +  uptr res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, kvm_write, kd, kva, buf, len);
 +  res = REAL(kvm_uread)(kd, kva, buf, len);
-+  if (res)
++  if (buf && res > 0)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, buf, res);
 +  return res;
 +}
@@ -464,7 +487,7 @@ $NetBSD$
 +  COMMON_INTERCEPT_FUNCTION(kvm_openfiles); \
 +  COMMON_INTERCEPT_FUNCTION(kvm_read); \
 +  COMMON_INTERCEPT_FUNCTION(kvm_uread); \
-+  COMMON_INTERCEPT_FUNCTION(kvm_write)
++  COMMON_INTERCEPT_FUNCTION(kvm_write);
 +#else
 +#define INIT_KVM
 +#endif
@@ -662,7 +685,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6687,6 +7226,7 @@ static void InitializeCommonInterceptors
+@@ -6687,6 +7249,7 @@ static void InitializeCommonInterceptors
    INIT_GETSOCKOPT;
    INIT_ACCEPT;
    INIT_ACCEPT4;
@@ -670,7 +693,7 @@ $NetBSD$
    INIT_MODF;
    INIT_RECVMSG;
    INIT_SENDMSG;
-@@ -6827,6 +7367,13 @@ static void InitializeCommonInterceptors
+@@ -6827,6 +7390,13 @@ static void InitializeCommonInterceptors
    INIT_ACCESS;
    INIT_FACCESSAT;
    INIT_GETGROUPLIST;
