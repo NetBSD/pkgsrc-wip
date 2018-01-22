@@ -17,6 +17,8 @@ DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 
 USE_TOOLS+=	msgmerge pkg-config
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colorschemes.knsrc \
 		${PKG_SYSCONFDIR}/xdg/colorschemes.knsrc
@@ -45,12 +47,13 @@ post-install:
 	${DESTDIR}${PREFIX}/share/examples/plasma-desktop/
 
 .include "../../audio/libcanberra/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/baloo5/buildlink3.mk"
-.include "../../x11/kactivities5/buildlink3.mk"
+.include "../../x11/kactivities-stats/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../devel/knotifyconfig/buildlink3.mk"
 .include "../../devel/kpeople/buildlink3.mk"

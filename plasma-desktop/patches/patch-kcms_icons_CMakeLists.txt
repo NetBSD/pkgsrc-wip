@@ -2,11 +2,13 @@ $NetBSD$
 
 Install via examples dir
 
---- kcms/icons/CMakeLists.txt.orig	2016-04-19 11:15:58.000000000 +0000
+--- kcms/icons/CMakeLists.txt.orig	2018-01-02 16:45:43.811463778 +0000
 +++ kcms/icons/CMakeLists.txt
-@@ -31,4 +31,4 @@ install(TARGETS kcm_icons  DESTINATION $
- ########### install files ###############
- 
+@@ -36,6 +36,6 @@ install(TARGETS kcm_icons  DESTINATION $
  install( FILES icons.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
--install( FILES icons.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
-+install( FILES icons.knsrc  DESTINATION  ${KDE_INSTALL_XDG_EX_DIR} )
+ 
+ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/icons.knsrc ${CMAKE_BINARY_DIR}/icons.knsrc)
+-install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
++install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc  DESTINATION  ${KDE_INSTALL_XDG_EX_DIR} )
+ 
+ install(TARGETS plasma-changeicons DESTINATION ${LIBEXEC_INSTALL_DIR} )
