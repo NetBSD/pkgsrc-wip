@@ -2,8 +2,14 @@
 bin/kmenuedit
 lib/libkdeinit5_kmenuedit.so
 share/applications/org.kde.kmenuedit.desktop
+share/doc/HTML/ca/kmenuedit/done.png
 share/doc/HTML/ca/kmenuedit/index.cache.bz2
 share/doc/HTML/ca/kmenuedit/index.docbook
+share/doc/HTML/ca/kmenuedit/itemname.png
+share/doc/HTML/ca/kmenuedit/new.png
+share/doc/HTML/ca/kmenuedit/reset.png
+share/doc/HTML/ca/kmenuedit/selectinternet.png
+share/doc/HTML/ca/kmenuedit/selection.png
 share/doc/HTML/de/kmenuedit/index.cache.bz2
 share/doc/HTML/de/kmenuedit/index.docbook
 share/doc/HTML/en/kmenuedit/done.png
@@ -18,6 +24,8 @@ share/doc/HTML/it/kmenuedit/index.cache.bz2
 share/doc/HTML/it/kmenuedit/index.docbook
 share/doc/HTML/nl/kmenuedit/index.cache.bz2
 share/doc/HTML/nl/kmenuedit/index.docbook
+share/doc/HTML/pt/kmenuedit/index.cache.bz2
+share/doc/HTML/pt/kmenuedit/index.docbook
 share/doc/HTML/pt_BR/kmenuedit/done.png
 share/doc/HTML/pt_BR/kmenuedit/index.cache.bz2
 share/doc/HTML/pt_BR/kmenuedit/index.docbook

@@ -14,6 +14,8 @@ DEPENDS+=	khotkeys>=${PLASMAVER}:../../wip/khotkeys
 
 USE_TOOLS+=	msgmerge
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
