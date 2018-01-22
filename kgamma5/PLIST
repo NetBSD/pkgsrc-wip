@@ -1,7 +1,7 @@
 @comment $NetBSD$
 qt5/plugins/kcm_kgamma.so
-share/doc/HTML/en/kgamma5/index.cache.bz2
-share/doc/HTML/en/kgamma5/index.docbook
+share/doc/HTML/en/kcontrol/kgamma/index.cache.bz2
+share/doc/HTML/en/kcontrol/kgamma/index.docbook
 share/kgamma/pics/background.png
 share/kgamma/pics/cmyscale.png
 share/kgamma/pics/darkgrey.png

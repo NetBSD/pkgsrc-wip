@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kgamma5-5.6.3.tar.xz) = 767dcd5b3aa2636e11fb75623ea3e0e422ec6bae
-RMD160 (kgamma5-5.6.3.tar.xz) = 5192fcd77cfaae0500865269e920fff3353e4cb3
-SHA512 (kgamma5-5.6.3.tar.xz) = 0792ae3b5b27f3ca59fcf8fc9d7e74ee5d12f3cca44072b441da2e58bb8c2b43e80082c75548ee3357925391325acbf3940e28245e0951d380620e0892690d65
-Size (kgamma5-5.6.3.tar.xz) = 72196 bytes
+SHA1 (kgamma5-5.11.5.tar.xz) = 7a17ad18a3c1cbd968b21839e7a0c4260756ef0e
+RMD160 (kgamma5-5.11.5.tar.xz) = 51bd6c4588887a4100b0dd33fad38f12b93f41e5
+SHA512 (kgamma5-5.11.5.tar.xz) = ac923f6e899b2b35ce80ed990315c3e72bfd239ad79a8630cdbdfbdc3248dd72608ac219cbeafd1d20e768496dc6bd2d71d1d326017a84f30b681b6c65e604df
+Size (kgamma5-5.11.5.tar.xz) = 64108 bytes
