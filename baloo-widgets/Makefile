@@ -3,7 +3,7 @@
 DISTNAME=	baloo-widgets-${KAPPSVER}
 CATEGORIES=	sysutils
 
-HOMEPAGE=	http://kde.org/applications/graphics/gwenview/
+HOMEPAGE=	https://community.kde.org/Baloo
 COMMENT=	Widgets for Baloo
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
