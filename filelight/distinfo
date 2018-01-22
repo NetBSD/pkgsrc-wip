@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (filelight-16.04.0.tar.xz) = b79d75065731d9db7981ae9ab6ce2e17df19ad04
-RMD160 (filelight-16.04.0.tar.xz) = ca9a1ed181a06992c788c221793db9013aabf832
-SHA512 (filelight-16.04.0.tar.xz) = 86c6cc1921fff745670ae55c6989b102df53c59766d82a9f893772e50532a95f72f4557fb71c50f31fca1dd07da4724c5913139e8c25c07c6775c7ab02dbb3e6
-Size (filelight-16.04.0.tar.xz) = 287608 bytes
-SHA1 (patch-misc_CMakeLists.txt) = 8743a16a7f55f715bef5846cf26eacea0eab9808
+SHA1 (filelight-17.12.1.tar.xz) = 7f43aad4f8392fc1b7b63b04800f716b01a2dfb9
+RMD160 (filelight-17.12.1.tar.xz) = 884f016a523f42216f6763ebdf675d5a0f590fee
+SHA512 (filelight-17.12.1.tar.xz) = 9282dd4ed14ae8880af5ea97760ceea2011af5c6789fb166855afbdc8da002017153988549d7b49a1e38d184da2f92a6bace907858dadd9f04738456b882439e
+Size (filelight-17.12.1.tar.xz) = 654724 bytes
+SHA1 (patch-misc_CMakeLists.txt) = 81211dbdf815aac037ecd39a84f091953fdb2711
