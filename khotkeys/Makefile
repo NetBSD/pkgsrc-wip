@@ -13,13 +13,15 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/app/CMakeFiles/kded_khotkeys_automoc.dir/AutogenInfo.cmake 
-SUBST_FILES.fix-moc+=	_KDE_build/test/CMakeFiles/khotkeys_standalone_automoc.dir/AutogenInfo.cmake 
-SUBST_FILES.fix-moc+=	_KDE_build/kcm_hotkeys/CMakeFiles/kcm_hotkeys_automoc.dir/AutogenInfo.cmake 
+SUBST_FILES.fix-moc=	_KDE_build/app/CMakeFiles/kded_khotkeys_autogen.dir/AutogenInfo.cmake 
+SUBST_FILES.fix-moc+=	_KDE_build/test/CMakeFiles/khotkeys_standalone_autogen.dir/AutogenInfo.cmake 
+SUBST_FILES.fix-moc+=	_KDE_build/kcm_hotkeys/CMakeFiles/kcm_hotkeys_autogen.dir/AutogenInfo.cmake 
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 #MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
