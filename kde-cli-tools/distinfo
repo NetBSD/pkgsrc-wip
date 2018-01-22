@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (kde-cli-tools-5.6.3.tar.xz) = 6dffce58ae80dcfa923d4600a97eae664a77f115
-RMD160 (kde-cli-tools-5.6.3.tar.xz) = 2cb299466f7b1f2667350477efbb2b3bdb9c3e3f
-SHA512 (kde-cli-tools-5.6.3.tar.xz) = ec262cbfe0f2d39a789037f5779f91c475cb9796f1061d6abe5e5489c958ed2b2fc1d211b69c9b9023b8bfed469d266d3adf51e5f82a7536744f21beb345e976
-Size (kde-cli-tools-5.6.3.tar.xz) = 505080 bytes
+SHA1 (kde-cli-tools-5.11.5.tar.xz) = 000f90ce56b9f104d7be27273766d499a364e450
+RMD160 (kde-cli-tools-5.11.5.tar.xz) = 724e2a1f19ea09539a27435e981e27699919cf09
+SHA512 (kde-cli-tools-5.11.5.tar.xz) = 1f1363026d7d372552a06db19630a7deece8228bba020c0469971012f6393d4439fc56645b7348fca777b27dd86f7ffe8299c6e024384aaf7525d91baebe4b48
+Size (kde-cli-tools-5.11.5.tar.xz) = 597040 bytes
 SHA1 (patch-kdeeject_kdeeject) = 3742a827c4b18cde06828ff585d3130062803b9a
