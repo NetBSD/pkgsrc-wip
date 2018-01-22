@@ -4423,6 +4423,7 @@ SUBDIR+=	unanimity
 SUBDIR+=	unarchiver-clt
 SUBDIR+=	undo-tree
 SUBDIR+=	unicorn5hc
+SUBDIR+=	unifraktur-ttf
 SUBDIR+=	unimrcp
 SUBDIR+=	unimrcp-apr
 SUBDIR+=	unimrcp-aprutil
