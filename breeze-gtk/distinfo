@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (breeze-gtk-5.6.3.tar.xz) = ce81be2e164bb1ac1ff76b9257f9ba59da504c33
-RMD160 (breeze-gtk-5.6.3.tar.xz) = 3fc3cce2a51f43994c01a98a90f441ce269be06f
-SHA512 (breeze-gtk-5.6.3.tar.xz) = 4d3003585507af02a62f13c3cde4560eb9664bfd166675280b086bff42db2383e4a2fc3598b8816f4e08a3994e367b8b257cb2aab08196acd996a4197d8fd98d
-Size (breeze-gtk-5.6.3.tar.xz) = 257860 bytes
+SHA1 (breeze-gtk-5.11.5.tar.xz) = 89ce34b038f1a2df8fa90802396ad79c5fea309a
+RMD160 (breeze-gtk-5.11.5.tar.xz) = 89d6809ef822b150eb805bf4fe29f35fe19b5084
+SHA512 (breeze-gtk-5.11.5.tar.xz) = d940624cff5b785d2b32ca6329f463b4c545ae613fb5e7364537703086900f920fe72c25f5731ba24409e27469e2281b5d74bfd36ffedee66cbd8ac62be0c53d
+Size (breeze-gtk-5.11.5.tar.xz) = 218340 bytes
