@@ -14,6 +14,8 @@ DEPENDS+=	kinit>=5.21.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/kio/buildlink3.mk"
