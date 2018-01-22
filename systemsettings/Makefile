@@ -17,5 +17,7 @@ USE_TOOLS+=	msgmerge
 
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../www/khtml/buildlink3.mk"
+.include "../../x11/kactivities-stats/buildlink3.mk"
+.include "../../x11/kirigami2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
