@@ -14,6 +14,9 @@ DEPENDS+=	kimageformats>=5.19.0:../../graphics/kimageformats
 
 USE_TOOLS+=	msgmerge pkg-config
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
+.include "../../devel/cfitsio/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
