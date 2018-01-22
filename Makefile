@@ -36,7 +36,6 @@ SUBDIR+=	R-MySQL
 SUBDIR+=	R-RNetCDF
 SUBDIR+=	R-Rgraphviz
 SUBDIR+=	R-Rserve
-SUBDIR+=	R-VGAM
 SUBDIR+=	R-biganalytics
 SUBDIR+=	R-bigmemory
 SUBDIR+=	R-bigmemory.sri
