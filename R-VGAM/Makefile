@@ -9,11 +9,11 @@ COMMENT=	Vector Generalized Linear and Additive Models
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	VGAM
-R_PKGVER=	1.0-2
+R_PKGVER=	1.0-4
 
 USE_LANGUAGES=	c fortran
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.15.1
+BUILDLINK_API_DEPENDS.R+=	R>=3.4.0
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/gettext-lib/buildlink3.mk"
