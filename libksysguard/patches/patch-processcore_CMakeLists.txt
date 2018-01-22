@@ -1,6 +1,6 @@
 $NetBSD$
 
---- processcore/CMakeLists.txt.orig	2016-04-19 11:13:53.000000000 +0000
+--- processcore/CMakeLists.txt.orig	2018-01-21 07:39:59.909536116 +0000
 +++ processcore/CMakeLists.txt
 @@ -28,7 +28,7 @@ target_link_libraries(processcore
  
@@ -11,3 +11,12 @@ $NetBSD$
  endif()
  
  target_include_directories(processcore PUBLIC "$<BUILD_INTERFACE:${libksysguard_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/ksysguard>")
+@@ -49,7 +49,7 @@ set(ksysguardprocesslist_helper_srcs
+     processes_base_p.cpp)
+ 
+ add_executable(ksysguardprocesslist_helper ${ksysguardprocesslist_helper_srcs})
+-target_link_libraries(ksysguardprocesslist_helper Qt5::Core KF5::Auth KF5::I18n)
++target_link_libraries(ksysguardprocesslist_helper Qt5::Core KF5::Auth KF5::I18n ${KVM_LIB})
+ install(TARGETS ksysguardprocesslist_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
+ 
+ kauth_install_helper_files(ksysguardprocesslist_helper org.kde.ksysguard.processlisthelper root)

@@ -22,12 +22,15 @@ RT_LIB_SCHED=	rt
 RT_LIB_SCHED=	# empty
 .endif
 CMAKE_ARGS+=	-DRT_LIB_SCHED=${RT_LIB_SCHED}
+CMAKE_ARGS.NetBSD+=	-DKVM_LIB=kvm
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
 CONF_FILES+=	${PREFIX}/share/examples/libksysguard/org.kde.ksysguard.processlisthelper.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf
 
 INSTALLATION_DIRS+=	share/examples/libksysguard
+
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 post-install:
 	mv ${DESTDIR}/etc/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf \
