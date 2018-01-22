@@ -16,8 +16,6 @@ DEPENDS+=	kinit>=5.21.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge pkg-config
 
-FILESDIR=	${.CURDIR}/../../wip/kwayland/files
-
 # generation of module.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
