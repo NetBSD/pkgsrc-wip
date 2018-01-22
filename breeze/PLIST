@@ -1,5 +1,7 @@
 @comment $NetBSD$
 bin/breeze-settings5
+lib/cmake/Breeze/BreezeConfig.cmake
+lib/cmake/Breeze/BreezeConfigVersion.cmake
 lib/kconf_update_bin/kde4breeze
 qt5/plugins/kstyle_breeze_config.so
 qt5/plugins/org.kde.kdecoration2/breezedecoration.so
@@ -100,6 +102,7 @@ share/icons/Breeze_Snow/cursors/left_ptr_watch
 share/icons/Breeze_Snow/cursors/left_side
 share/icons/Breeze_Snow/cursors/link
 share/icons/Breeze_Snow/cursors/move
+share/icons/Breeze_Snow/cursors/n-resize
 share/icons/Breeze_Snow/cursors/no-drop
 share/icons/Breeze_Snow/cursors/not-allowed
 share/icons/Breeze_Snow/cursors/openhand
@@ -129,6 +132,7 @@ share/icons/Breeze_Snow/cursors/size_ver
 share/icons/Breeze_Snow/cursors/split_h
 share/icons/Breeze_Snow/cursors/split_v
 share/icons/Breeze_Snow/cursors/text
+share/icons/Breeze_Snow/cursors/top_left_arrow
 share/icons/Breeze_Snow/cursors/top_left_corner
 share/icons/Breeze_Snow/cursors/top_right_corner
 share/icons/Breeze_Snow/cursors/top_side
@@ -202,6 +206,7 @@ share/icons/breeze_cursors/cursors/left_ptr_watch
 share/icons/breeze_cursors/cursors/left_side
 share/icons/breeze_cursors/cursors/link
 share/icons/breeze_cursors/cursors/move
+share/icons/breeze_cursors/cursors/n-resize
 share/icons/breeze_cursors/cursors/no-drop
 share/icons/breeze_cursors/cursors/not-allowed
 share/icons/breeze_cursors/cursors/openhand
@@ -231,6 +236,7 @@ share/icons/breeze_cursors/cursors/size_ver
 share/icons/breeze_cursors/cursors/split_h
 share/icons/breeze_cursors/cursors/split_v
 share/icons/breeze_cursors/cursors/text
+share/icons/breeze_cursors/cursors/top_left_arrow
 share/icons/breeze_cursors/cursors/top_left_corner
 share/icons/breeze_cursors/cursors/top_right_corner
 share/icons/breeze_cursors/cursors/top_side
@@ -276,16 +282,21 @@ share/locale/es/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/es/LC_MESSAGES/breeze_style_config.mo
 share/locale/et/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/et/LC_MESSAGES/breeze_style_config.mo
+share/locale/eu/LC_MESSAGES/breeze_kwin_deco.mo
+share/locale/eu/LC_MESSAGES/breeze_style_config.mo
 share/locale/fi/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/fi/LC_MESSAGES/breeze_style_config.mo
 share/locale/fr/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/fr/LC_MESSAGES/breeze_style_config.mo
 share/locale/gl/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/gl/LC_MESSAGES/breeze_style_config.mo
+share/locale/he/LC_MESSAGES/breeze_kwin_deco.mo
+share/locale/he/LC_MESSAGES/breeze_style_config.mo
 share/locale/hu/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/hu/LC_MESSAGES/breeze_style_config.mo
 share/locale/ia/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/ia/LC_MESSAGES/breeze_style_config.mo
+share/locale/id/LC_MESSAGES/breeze_style_config.mo
 share/locale/it/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/it/LC_MESSAGES/breeze_style_config.mo
 share/locale/ja/LC_MESSAGES/breeze_kwin_deco.mo
@@ -341,17 +352,21 @@ share/metainfo/org.kde.breezedark.desktop.appdata.xml
 share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/defaults
 share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/previews/preview.png
 share/plasma/look-and-feel/org.kde.breezedark.desktop/metadata.desktop
+share/plasma/look-and-feel/org.kde.breezedark.desktop/metadata.json
 share/wallpapers/Next/contents/images/1024x768.png
 share/wallpapers/Next/contents/images/1280x1024.png
 share/wallpapers/Next/contents/images/1280x800.png
+share/wallpapers/Next/contents/images/1366x768.png
 share/wallpapers/Next/contents/images/1440x900.png
 share/wallpapers/Next/contents/images/1600x1200.png
 share/wallpapers/Next/contents/images/1638x1024.png
 share/wallpapers/Next/contents/images/1680x1050.png
 share/wallpapers/Next/contents/images/1920x1080.png
+share/wallpapers/Next/contents/images/1920x1200.png
 share/wallpapers/Next/contents/images/2560x1440.png
 share/wallpapers/Next/contents/images/2560x1600.png
 share/wallpapers/Next/contents/images/3200x1800.png
 share/wallpapers/Next/contents/images/3200x2000.png
+share/wallpapers/Next/contents/images/3840x2160.png
 share/wallpapers/Next/contents/screenshot.png
 share/wallpapers/Next/metadata.desktop
