@@ -19,6 +19,9 @@ CMAKE_ARGS+=	-DKDE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 CMAKE_ARGS+=	-DKDE_INSTALL_XDG_EX_DIR=${PREFIX}/share/examples/kde-xdg
 CMAKE_ARGS+=	-DKDE_INSTALL_AUTOSTARTEXDIR=${PREFIX}/share/examples/kde-xdg/autostart
 
+# because librpcsvc produces a warning
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--fatal-warnings
+
 pre-configure: mk-kde-dir
 
 mk-kde-dir:
