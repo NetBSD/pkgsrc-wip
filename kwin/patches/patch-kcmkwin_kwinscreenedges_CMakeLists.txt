@@ -1,12 +1,12 @@
 $NetBSD$
 
---- kcmkwin/kwinscreenedges/CMakeLists.txt.orig	2016-04-19 11:12:37.000000000 +0000
+--- kcmkwin/kwinscreenedges/CMakeLists.txt.orig	2018-01-02 12:34:16.861372861 +0000
 +++ kcmkwin/kwinscreenedges/CMakeLists.txt
-@@ -20,6 +20,7 @@ target_link_libraries( kcm_kwinscreenedg
-     KF5::I18n
+@@ -22,6 +22,7 @@ set(kcm_screenedges_LIBS
      KF5::Service
+     KF5::Package
      KF5::Plasma
 +    kwineffects
      kwin4_effect_builtins
-     )
- install( TARGETS kcm_kwinscreenedges  DESTINATION ${PLUGIN_INSTALL_DIR} )
+ )
+ target_link_libraries( kcm_kwinscreenedges ${X11_LIBRARIES} ${kcm_screenedges_LIBS})

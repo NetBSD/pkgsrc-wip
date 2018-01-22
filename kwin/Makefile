@@ -22,9 +22,11 @@ FILESDIR=	${.CURDIR}/../../wip/kwayland/files
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/kcmkwin/kwinscripts/CMakeFiles/kcm_kwin_scripts_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/kcmkwin/kwincompositing/CMakeFiles/kwincompositing_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/kwin_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc=	_KDE_build/kcmkwin/kwinscripts/CMakeFiles/kcm_kwin_scripts_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/kcmkwin/kwincompositing/CMakeFiles/kwincompositing_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/kcmkwin/kwinscreenedges/CMakeFiles/kcm_kwinscreenedges_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/kcmkwin/kwinscreenedges/CMakeFiles/kcm_kwintouchscreen_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/kwin_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg

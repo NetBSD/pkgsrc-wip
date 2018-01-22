@@ -2,12 +2,12 @@ $NetBSD$
 
 Install via examples dir
 
---- data/CMakeLists.txt.orig	2016-04-19 11:12:37.000000000 +0000
+--- data/CMakeLists.txt.orig	2018-01-02 12:34:16.561370865 +0000
 +++ data/CMakeLists.txt
-@@ -8,5 +8,5 @@ install(TARGETS kwin5_update_default_rul
+@@ -7,5 +7,5 @@ install(TARGETS kwin5_update_default_rul
+ 
  ########### install files ###############
  
- install( FILES stripTitle.js  DESTINATION  ${DATA_INSTALL_DIR}/kwin )
 -install( FILES org_kde_kwin.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 +install( FILES org_kde_kwin.categories DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg )
  
