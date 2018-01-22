@@ -1673,6 +1673,7 @@ SUBDIR+=	libee
 SUBDIR+=	libeio
 SUBDIR+=	libeio-cvs
 SUBDIR+=	libepc
+SUBDIR+=	libepoll-shim
 SUBDIR+=	libeps
 SUBDIR+=	libevhtp
 SUBDIR+=	libffi-git

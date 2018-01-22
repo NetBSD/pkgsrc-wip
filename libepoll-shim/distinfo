@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (libepoll-shim-0.0.20161220-c04b26b.tar.gz) = e4681edbbe6b882c264405bb0742dc1f5811323e
+RMD160 (libepoll-shim-0.0.20161220-c04b26b.tar.gz) = 243c19ceab9d6c159349a67bb48305799fd0c9c6
+SHA512 (libepoll-shim-0.0.20161220-c04b26b.tar.gz) = b497b7ecd780364ae98c7b5d4a45098e47f4afb8f96dc48f3e765a69212c74f6a796adab9e5114aae9f95e6d0e7c4d13c0c6f97bf287cd0d298f321cbb765be3
+Size (libepoll-shim-0.0.20161220-c04b26b.tar.gz) = 7635 bytes
+SHA1 (patch-src_epoll.c) = be388ee385bd9eaa20210d7140a6e5d7dbc30c30
+SHA1 (patch-src_signalfd.c) = 9888cbd1b84cd6ad6d5d9965bee223a9c176e8c9
+SHA1 (patch-src_timerfd.c) = 3c499e28285a55d3af319c2fe3548fc8b5342d35
