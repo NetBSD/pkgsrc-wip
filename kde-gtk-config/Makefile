@@ -18,8 +18,6 @@ USE_TOOLS+=	msgmerge pkg-config
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cgcgtk3.knsrc \
 		${PKG_SYSCONFDIR}/xdg/cgcgtk3.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cgcicon.knsrc \
-		${PKG_SYSCONFDIR}/xdg/cgcicon.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cgctheme.knsrc \
 		${PKG_SYSCONFDIR}/xdg/cgctheme.knsrc
 
