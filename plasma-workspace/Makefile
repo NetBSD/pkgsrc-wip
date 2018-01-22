@@ -19,13 +19,15 @@ DEPENDS+=	plasma-integration>=${PLASMAVER}:../../wip/plasma-integration
 
 USE_TOOLS+=	msgmerge pkg-config
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 # generation of ksmserver.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/ksmserver/CMakeFiles/kdeinit_ksmserver_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/runners/windows/CMakeFiles/krunner_windows_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/applets/notifications/lib/CMakeFiles/plasma_applet_notifications_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc=	_KDE_build/ksmserver/CMakeFiles/kdeinit_ksmserver_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/runners/windows/CMakeFiles/krunner_windows_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/applets/notifications/lib/CMakeFiles/plasma_applet_notifications_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 SUBST_CLASSES+=		qtpath
@@ -36,12 +38,14 @@ SUBST_STAGE.qtpath=	post-patch
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/krunner.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/krunner.desktop
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/plasmashell.desktop \
-		${PKG_SYSCONFDIR}/xdg/autostart/plasmashell.desktop
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/org.kde.klipper.desktop \
-		${PKG_SYSCONFDIR}/xdg/autostart/org.kde.klipper.desktop
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/org.kde.plasmashell.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/org.kde.plasmashell.desktop
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/klipper.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/klipper.desktop
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/xembedsniproxy.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/xembedsniproxy.desktop
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kuiserver.categories \
+		${PKG_SYSCONFDIR}/xdg/kuiserver.categories
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/plasmoids.knsrc \
 		${PKG_SYSCONFDIR}/xdg/plasmoids.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/wallpaper.knsrc \
