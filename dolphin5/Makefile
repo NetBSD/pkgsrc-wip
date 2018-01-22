@@ -19,6 +19,8 @@ REPLACE_RUBY+=	src/settings/services/servicemenudeinstallation
 
 USE_TOOLS+=	msgmerge
 
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/servicemenu.knsrc \
 		${PKG_SYSCONFDIR}/xdg/servicemenu.knsrc
