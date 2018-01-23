@@ -1,6 +1,6 @@
 $NetBSD$
 
---- test/sanitizer_common/TestCases/NetBSD/kvm_open.cc.orig	2018-01-22 23:12:45.623442152 +0000
+--- test/sanitizer_common/TestCases/NetBSD/kvm_open.cc.orig	2018-01-23 22:46:48.358301060 +0000
 +++ test/sanitizer_common/TestCases/NetBSD/kvm_open.cc
 @@ -0,0 +1,13 @@
 +// RUN: %clangxx -O0 -g %s -o %t && %run %t

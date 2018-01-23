@@ -16,7 +16,23 @@ $NetBSD$
  #endif
  
  #include <stdarg.h>
-@@ -1137,6 +1139,18 @@ INTERCEPTOR(int, pthread_join, void *th,
+@@ -523,6 +525,7 @@ INTERCEPTOR(SIZE_T, __strxfrm_l, char *d
+ 
+ #define INTERCEPTOR_STRFTIME_BODY(char_type, ret_type, func, s, ...) \
+   ENSURE_MSAN_INITED();                                              \
++  InterceptorScope interceptor_scope;                                \
+   ret_type res = REAL(func)(s, __VA_ARGS__);                         \
+   if (s) __msan_unpoison(s, sizeof(char_type) * (res + 1));          \
+   return res;
+@@ -788,6 +791,7 @@ INTERCEPTOR(int, socketpair, int domain,
+ 
+ INTERCEPTOR(char *, fgets, char *s, int size, void *stream) {
+   ENSURE_MSAN_INITED();
++  InterceptorScope interceptor_scope;
+   char *res = REAL(fgets)(s, size, stream);
+   if (res)
+     __msan_unpoison(s, REAL(strlen)(s) + 1);
+@@ -1137,6 +1141,18 @@ INTERCEPTOR(int, pthread_join, void *th,
  
  extern char *tzname[2];
  
@@ -35,7 +51,7 @@ $NetBSD$
  INTERCEPTOR(void, tzset, int fake) {
    ENSURE_MSAN_INITED();
    REAL(tzset)(fake);
-@@ -1146,29 +1160,85 @@ INTERCEPTOR(void, tzset, int fake) {
+@@ -1146,29 +1162,85 @@ INTERCEPTOR(void, tzset, int fake) {
      __msan_unpoison(tzname[1], REAL(strlen)(tzname[1]) + 1);
    return;
  }
@@ -124,7 +140,7 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1322,6 +1392,11 @@ int OnExit() {
+@@ -1322,6 +1394,11 @@ int OnExit() {
      __msan_unpoison(to + size, 1);                          \
    } while (false)
  
@@ -136,7 +152,7 @@ $NetBSD$
  #include "sanitizer_common/sanitizer_platform_interceptors.h"
  #include "sanitizer_common/sanitizer_common_interceptors.inc"
  
-@@ -1401,6 +1476,7 @@ static uptr signal_impl(int signo, uptr 
+@@ -1401,6 +1478,7 @@ static uptr signal_impl(int signo, uptr 
    } while (false)
  #define COMMON_SYSCALL_POST_WRITE_RANGE(p, s) __msan_unpoison(p, s)
  #include "sanitizer_common/sanitizer_common_syscalls.inc"
@@ -144,7 +160,7 @@ $NetBSD$
  
  struct dlinfo {
    char *dli_fname;
-@@ -1566,6 +1642,9 @@ namespace __msan {
+@@ -1566,6 +1644,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -154,7 +170,7 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1682,6 +1761,7 @@ void InitializeInterceptors() {
+@@ -1682,6 +1763,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);

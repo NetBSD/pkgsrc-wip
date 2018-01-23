@@ -2,7 +2,7 @@ $NetBSD$
 
 --- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-01-15 06:00:16.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -57,33 +57,36 @@ extern unsigned ucontext_t_sz;
+@@ -57,33 +57,38 @@ extern unsigned ucontext_t_sz;
  extern unsigned struct_rlimit_sz;
  extern unsigned struct_utimbuf_sz;
  extern unsigned struct_timespec_sz;
@@ -10,6 +10,8 @@ $NetBSD$
  
 -struct __sanitizer_iocb {
 +extern unsigned struct_kevent_sz;
++extern unsigned struct_FTS_sz;
++extern unsigned struct_FTSENT_sz;
 +
 +union __sanitizer_sigval {
 +  int sival_int;
@@ -60,7 +62,7 @@ $NetBSD$
  struct __sanitizer_sem_t {
    uptr data[5];
  };
-@@ -110,6 +113,19 @@ struct __sanitizer_shmid_ds {
+@@ -110,6 +115,19 @@ struct __sanitizer_shmid_ds {
    void *_shm_internal;
  };
  
@@ -80,7 +82,7 @@ $NetBSD$
  extern unsigned struct_msqid_ds_sz;
  extern unsigned struct_mq_attr_sz;
  extern unsigned struct_timex_sz;
-@@ -131,6 +147,8 @@ struct __sanitizer_ifaddrs {
+@@ -131,6 +149,8 @@ struct __sanitizer_ifaddrs {
    unsigned int ifa_addrflags;
  };
  
@@ -89,7 +91,7 @@ $NetBSD$
  typedef unsigned __sanitizer_pthread_key_t;
  
  typedef long long __sanitizer_time_t;
-@@ -200,6 +218,12 @@ struct __sanitizer_msghdr {
+@@ -200,6 +220,12 @@ struct __sanitizer_msghdr {
    unsigned msg_controllen;
    int msg_flags;
  };
@@ -102,7 +104,7 @@ $NetBSD$
  struct __sanitizer_cmsghdr {
    unsigned cmsg_len;
    int cmsg_level;
-@@ -252,6 +276,22 @@ struct __sanitizer_sigaction {
+@@ -252,6 +278,22 @@ struct __sanitizer_sigaction {
    int sa_flags;
  };
  
@@ -125,7 +127,7 @@ $NetBSD$
  typedef __sanitizer_sigset_t __sanitizer_kernel_sigset_t;
  
  struct __sanitizer_kernel_sigaction_t {
-@@ -309,6 +349,8 @@ struct __sanitizer_pollfd {
+@@ -309,6 +351,8 @@ struct __sanitizer_pollfd {
  
  typedef unsigned __sanitizer_nfds_t;
  
@@ -134,7 +136,7 @@ $NetBSD$
  struct __sanitizer_glob_t {
    uptr gl_pathc;
    uptr gl_matchc;
-@@ -328,6 +370,54 @@ extern int glob_altdirfunc;
+@@ -328,6 +372,54 @@ extern int glob_altdirfunc;
  
  extern unsigned path_max;
  
@@ -189,7 +191,7 @@ $NetBSD$
  struct __sanitizer_wordexp_t {
    uptr we_wordc;
    char **we_wordv;
-@@ -361,6 +451,53 @@ struct __sanitizer_ifconf {
+@@ -361,6 +453,53 @@ struct __sanitizer_ifconf {
    } ifc_ifcu;
  };
  
@@ -243,7 +245,7 @@ $NetBSD$
  #define IOC_NRBITS 8
  #define IOC_TYPEBITS 8
  #define IOC_SIZEBITS 14
-@@ -385,185 +522,1712 @@ struct __sanitizer_ifconf {
+@@ -385,185 +524,1712 @@ struct __sanitizer_ifconf {
  #define IOC_NR(nr) (((nr) >> IOC_NRSHIFT) & IOC_NRMASK)
  #define IOC_SIZE(nr) (((nr) >> IOC_SIZESHIFT) & IOC_SIZEMASK)
  
