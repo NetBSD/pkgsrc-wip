@@ -166,7 +166,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6608,6 +6658,667 @@ INTERCEPTOR(int, getgroupmembership, con
+@@ -6608,6 +6658,757 @@ INTERCEPTOR(int, getgroupmembership, con
  #define INIT_GETGROUPLIST
  #endif
  
@@ -532,9 +532,11 @@ $NetBSD$
 +  if (newp)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, newp, newlen);
 +  res = REAL(sysctl)(name, namelen, oldp, oldlenp, newp, newlen);
-+  if (!res && oldp && oldlenp) {
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldlenp, sizeof(*oldlenp));
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldp, *oldlenp);
++  if (!res) {
++    if (oldlenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldlenp, sizeof(*oldlenp));
++    if (oldp && oldlenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldp, *oldlenp);
 +  }
 +  return res;
 +}
@@ -549,8 +551,10 @@ $NetBSD$
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, sname, REAL(strlen)(sname) + 1);
 +  res = REAL(sysctlbyname)(sname, oldp, oldlenp, newp, newlen);
 +  if (!res) {
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldlenp, sizeof(*oldlenp));
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldp, *oldlenp);
++    if (oldlenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldlenp, sizeof(*oldlenp));
++    if (oldp && oldlenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, oldp, *oldlenp);
 +  }
 +  return res;
 +}
@@ -566,8 +570,10 @@ $NetBSD$
 +  // It's also used mostly internally
 +  res = REAL(sysctlgetmibinfo)(sname, name, namelenp, cname, csz, rnode, v);
 +  if (!res) {
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, namelenp, sizeof(*namelenp));
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, name, *namelenp);
++    if (namelenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, namelenp, sizeof(*namelenp));
++    if (name && namelenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, name, *namelenp);
 +  }
 +  if (cname && csz) {
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, csz, sizeof(*csz));
@@ -584,8 +590,10 @@ $NetBSD$
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, sname, REAL(strlen)(sname) + 1);
 +  res = REAL(sysctlnametomib)(sname, name, namelenp);
 +  if (!res) {
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, namelenp, sizeof(*namelenp));
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, name, *namelenp);
++    if (namelenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, namelenp, sizeof(*namelenp));
++    if (name && namelenp)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, name, *namelenp);
 +  }
 +  return res;
 +}
@@ -597,10 +605,10 @@ $NetBSD$
 +  if (name)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, name, sizeof(*name) * namelen);
 +  res = REAL(asysctl)(name, namelen, len);
-+  if (res && len) {
++  if (len)
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, len, sizeof(*len));
++  if (res && len)
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, res, *len);
-+  }
 +  return res;
 +}
 +
@@ -611,10 +619,10 @@ $NetBSD$
 +  if (sname)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, sname, REAL(strlen)(sname) + 1);
 +  res = REAL(asysctlbyname)(sname, len);
-+  if (res && len) {
++  if (len)
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, len, sizeof(*len));
++  if (res && len)
 +    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, res, *len);
-+  }
 +  return res;
 +}
 +#define INIT_SYSCTL \
@@ -831,10 +839,92 @@ $NetBSD$
 +#define INIT_GETPROTOENT
 +#endif
 +
++#if SANITIZER_INTERCEPT_GETNETENT
++INTERCEPTOR(struct __sanitizer_netent *, getnetent) {
++  void *ctx;
++  struct __sanitizer_netent *n;
++  COMMON_INTERCEPTOR_ENTER(ctx, getnetent);
++  n = REAL(getnetent)();
++  if (n) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, n, sizeof(*n));
++
++    char **nn = n->n_aliases;
++
++    while (*nn) {
++       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, nn, sizeof(char **));
++       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *nn, REAL(strlen)(*nn) + 1);
++       nn++;
++    }
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, nn, sizeof(char **));
++  }
++  return n;
++}
++
++INTERCEPTOR(struct __sanitizer_netent *, getnetbyname, const char *name) {
++  void *ctx;
++  struct __sanitizer_netent *n;
++  COMMON_INTERCEPTOR_ENTER(ctx, getnetbyname, name);
++  n = REAL(getnetbyname)(name);
++  if (n) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, n, sizeof(*n));
++
++    char **nn = n->n_aliases;
++
++    while (*nn) {
++       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, nn, sizeof(char **));
++       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *nn, REAL(strlen)(*nn) + 1);
++       nn++;
++    }
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, nn, sizeof(char **));
++  }
++  return n;
++}
++
++INTERCEPTOR(struct __sanitizer_netent *, getnetbyaddr, u32 net, int type) {
++  void *ctx;
++  struct __sanitizer_netent *n;
++  COMMON_INTERCEPTOR_ENTER(ctx, getnetbyaddr, net, type);
++  n = REAL(getnetbyaddr)(net, type);
++  if (n) {
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, n, sizeof(*n));
++
++    char **nn = n->n_aliases;
++
++    while (*nn) {
++       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, nn, sizeof(char **));
++       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *nn, REAL(strlen)(*nn) + 1);
++       nn++;
++    }
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, nn, sizeof(char **));
++  }
++  return n;
++}
++
++INTERCEPTOR(void, setnetent, int stayopen) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, setnetent, stayopen);
++  return REAL(setnetent)(stayopen);
++}
++
++INTERCEPTOR(void, endnetent) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, endnetent);
++  return REAL(endnetent)();
++}
++#define INIT_GETNETENT \
++  COMMON_INTERCEPT_FUNCTION(getnetent); \
++  COMMON_INTERCEPT_FUNCTION(getnetbyname); \
++  COMMON_INTERCEPT_FUNCTION(getnetbyaddr); \
++  COMMON_INTERCEPT_FUNCTION(setnetent); \
++  COMMON_INTERCEPT_FUNCTION(endnetent);
++#else
++#define INIT_GETNETENT
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6687,6 +7398,7 @@ static void InitializeCommonInterceptors
+@@ -6687,6 +7488,7 @@ static void InitializeCommonInterceptors
    INIT_GETSOCKOPT;
    INIT_ACCEPT;
    INIT_ACCEPT4;
@@ -842,7 +932,7 @@ $NetBSD$
    INIT_MODF;
    INIT_RECVMSG;
    INIT_SENDMSG;
-@@ -6827,6 +7539,14 @@ static void InitializeCommonInterceptors
+@@ -6827,6 +7629,15 @@ static void InitializeCommonInterceptors
    INIT_ACCESS;
    INIT_FACCESSAT;
    INIT_GETGROUPLIST;
@@ -854,6 +944,7 @@ $NetBSD$
 +  INIT_GETTTYENT;
 +  INIT_FGETLN;
 +  INIT_GETPROTOENT;
++  INIT_GETNETENT;
  
  #if SANITIZER_NETBSD
    COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);
