@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-20 14:37:44.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-23 23:09:21.607269644 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -132,38 +132,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -2777,6 +2802,30 @@ INTERCEPTOR(int, accept4, int fd, void *
- #define INIT_ACCEPT4
- #endif
- 
-+#if SANITIZER_INTERCEPT_PACCEPT
-+INTERCEPTOR(int, paccept, int fd, void *addr, unsigned *addrlen,
-+            __sanitizer_sigset_t *set, int f) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, paccept, fd, addr, addrlen, set, f);
-+  unsigned addrlen0 = 0;
-+  if (addrlen) {
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, addrlen, sizeof(*addrlen));
-+    addrlen0 = *addrlen;
-+  }
-+  if (set) COMMON_INTERCEPTOR_READ_RANGE(ctx, set, sizeof(*set));
-+  int fd2 = REAL(paccept)(fd, addr, addrlen, set, f);
-+  if (fd2 >= 0) {
-+    if (fd >= 0) COMMON_INTERCEPTOR_FD_SOCKET_ACCEPT(ctx, fd, fd2);
-+    if (addr && addrlen)
-+      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, addr, Min(*addrlen, addrlen0));
-+  }
-+  return fd2;
-+}
-+#define INIT_PACCEPT COMMON_INTERCEPT_FUNCTION(paccept);
-+#else
-+#define INIT_PACCEPT
-+#endif
-+
- #if SANITIZER_INTERCEPT_MODF
- INTERCEPTOR(double, modf, double x, double *iptr) {
-   void *ctx;
-@@ -3165,7 +3214,14 @@ INTERCEPTOR(char *, setlocale, int categ
+@@ -3188,7 +3213,14 @@ INTERCEPTOR(char *, setlocale, int categ
    if (locale)
      COMMON_INTERCEPTOR_READ_RANGE(ctx, locale, REAL(strlen)(locale) + 1);
    char *res = REAL(setlocale)(category, locale);
@@ -179,7 +148,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6252,6 +6308,22 @@ INTERCEPTOR(int, stat, const char *path,
+@@ -6275,6 +6307,22 @@ INTERCEPTOR(int, stat, const char *path,
  #define INIT_STAT
  #endif
  
@@ -202,7 +171,7 @@ $NetBSD$
  #if SANITIZER_INTERCEPT___XSTAT
  INTERCEPTOR(int, __xstat, int version, const char *path, void *buf) {
    void *ctx;
-@@ -6608,6 +6680,837 @@ INTERCEPTOR(int, getgroupmembership, con
+@@ -6631,6 +6679,837 @@ INTERCEPTOR(int, getgroupmembership, con
  #define INIT_GETGROUPLIST
  #endif
  
@@ -1040,15 +1009,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6687,6 +7590,7 @@ static void InitializeCommonInterceptors
-   INIT_GETSOCKOPT;
-   INIT_ACCEPT;
-   INIT_ACCEPT4;
-+  INIT_PACCEPT;
-   INIT_MODF;
-   INIT_RECVMSG;
-   INIT_SENDMSG;
-@@ -6809,6 +7713,7 @@ static void InitializeCommonInterceptors
+@@ -6833,6 +7712,7 @@ static void InitializeCommonInterceptors
    INIT_SEND_SENDTO;
    INIT_STAT;
    INIT_EVENTFD_READ_WRITE;
@@ -1056,7 +1017,7 @@ $NetBSD$
    INIT___XSTAT;
    INIT___XSTAT64;
    INIT___LXSTAT;
-@@ -6827,6 +7732,17 @@ static void InitializeCommonInterceptors
+@@ -6851,6 +7731,17 @@ static void InitializeCommonInterceptors
    INIT_ACCESS;
    INIT_FACCESSAT;
    INIT_GETGROUPLIST;

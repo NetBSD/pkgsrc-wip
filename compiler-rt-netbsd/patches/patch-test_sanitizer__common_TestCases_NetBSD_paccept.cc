@@ -1,8 +1,11 @@
 $NetBSD$
 
---- test/sanitizer_common/TestCases/NetBSD/paccept.cc.orig	2018-01-23 22:46:48.358540436 +0000
+--- test/sanitizer_common/TestCases/NetBSD/paccept.cc.orig	2018-01-23 23:09:21.210142788 +0000
 +++ test/sanitizer_common/TestCases/NetBSD/paccept.cc
-@@ -0,0 +1,74 @@
+@@ -72,3 +72,77 @@ int main(void) {
+ 
+   return 0;
+ }
 +// RUN: %clangxx -O0 -g %s -o %t && %run %t
 +
 +#include <netinet/in.h>
