@@ -25,14 +25,21 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool makeinfo msgfmt perl:run pkg-config
+
+INFO_FILES=		yes
+
 USE_TOOLS+=		autoconf automake autoreconf
 GNU_CONFIGURE=		yes
-INFO_FILES=		YES
-
 CONFIGURE_ARGS+=	--disable-error-on-warning
 CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
 CONFIGURE_ARGS+=	GTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CONFIGURE_ARGS+=	GMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
+
+#USE_CMAKE=		yes
+#CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
+#CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
+#CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
+#BUILDLINK_TRANSFORM+=	rm:-Werror
 
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
@@ -45,6 +52,10 @@ PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
+
+# for CMake build
+#pre-build:
+#	${MKDIR} -p ${WRKDIR}/.home/.local/share
 
 .include "options.mk"
 
