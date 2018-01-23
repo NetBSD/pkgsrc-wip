@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.248 2017/07/03 11:49:37 wiz Exp $
 
-DISTNAME=		gnucash-2.6.99
+DISTNAME=		gnucash-2.7.99
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +15,7 @@ HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal or business finance management program
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		guile-slib>=3.2.1:../../devel/guile-slib
+DEPENDS+=		guile22-slib>=3.2.1:../../devel/guile22-slib
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
@@ -74,7 +74,7 @@ BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../lang/guile20/buildlink3.mk"
+.include "../../lang/guile22/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.6
 .include "../../security/gnome-keyring/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsecret+=	libsecret>=0.18
