@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.20 2017/11/21 10:32:02 leot Exp $
+
+SHA1 (nmh-1.7.1-RC2.tar.gz) = 7572f8ecf764c057bf8d9d8947caa54404e576f5
+RMD160 (nmh-1.7.1-RC2.tar.gz) = 6be879ae1bab39bb605ce9dd16d5565be3bb9dde
+SHA512 (nmh-1.7.1-RC2.tar.gz) = b10df8757c4d5cbe5ea7dc85c3a721ba6966c5c03bfd3c907d4cdc9f5103c8a12a6bcebaa12dd1678f6ae216d684a99424ac0a625bb93015a7f552a011260df7
+Size (nmh-1.7.1-RC2.tar.gz) = 1398579 bytes
+SHA1 (patch-ca) = 6fd7cda9424a02d3efb53b03bd078b26df7f5f3e
+SHA1 (patch-cd) = 5a775091713bca2597a01fcd267d56e2a175588a
