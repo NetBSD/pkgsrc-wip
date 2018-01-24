@@ -1,6 +1,6 @@
 $NetBSD$
 
---- test/sanitizer_common/TestCases/NetBSD/strlcpy.cc.orig	2018-01-23 23:10:30.966853389 +0000
+--- test/sanitizer_common/TestCases/NetBSD/strlcpy.cc.orig	2018-01-24 15:01:49.077791357 +0000
 +++ test/sanitizer_common/TestCases/NetBSD/strlcpy.cc
 @@ -0,0 +1,56 @@
 +// RUN: %clangxx -O0 -g %s -o %t && %run %t

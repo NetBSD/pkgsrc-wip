@@ -172,17 +172,18 @@ $NetBSD$
  #include <sys/shm.h>
  #include <sys/signal.h>
  #include <sys/socket.h>
-@@ -67,6 +208,9 @@
+@@ -67,6 +208,10 @@
  #include <utmpx.h>
  #include <wchar.h>
  #include <wordexp.h>
 +#include <ttyent.h>
 +
 +#include <fts.h>
++#include <regex.h>
  
  // Include these after system headers to avoid name clashes and ambiguities.
  #include "sanitizer_internal_defs.h"
-@@ -99,18 +243,85 @@ unsigned struct_sockaddr_sz = sizeof(str
+@@ -99,18 +244,87 @@ unsigned struct_sockaddr_sz = sizeof(str
  unsigned ucontext_t_sz = sizeof(ucontext_t);
  unsigned struct_rlimit_sz = sizeof(struct rlimit);
  unsigned struct_timespec_sz = sizeof(struct timespec);
@@ -190,6 +191,8 @@ $NetBSD$
 +unsigned struct_kevent_sz = sizeof(struct kevent);
 +unsigned struct_FTS_sz = sizeof(FTS);
 +unsigned struct_FTSENT_sz = sizeof(FTSENT);
++unsigned struct_regex_sz = sizeof(regex_t);
++unsigned struct_regmatch_sz = sizeof(regmatch_t);
  unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
  unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
  unsigned struct_timex_sz = sizeof(struct timex);
@@ -268,7 +271,7 @@ $NetBSD$
  int shmctl_ipc_stat = (int)IPC_STAT;
  
  unsigned struct_utmp_sz = sizeof(struct utmp);
-@@ -137,65 +348,1731 @@ int glob_altdirfunc = GLOB_ALTDIRFUNC;
+@@ -137,65 +351,1731 @@ int glob_altdirfunc = GLOB_ALTDIRFUNC;
  
  unsigned path_max = PATH_MAX;
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- test/sanitizer_common/TestCases/NetBSD/paccept.cc.orig	2018-01-23 23:09:21.210142788 +0000
+--- test/sanitizer_common/TestCases/NetBSD/paccept.cc.orig	2018-01-23 23:09:21.000000000 +0000
 +++ test/sanitizer_common/TestCases/NetBSD/paccept.cc
 @@ -72,3 +72,77 @@ int main(void) {
  
