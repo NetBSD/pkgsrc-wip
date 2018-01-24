@@ -22,6 +22,9 @@ CMAKE_ARGS+=	-DKDE_INSTALL_AUTOSTARTEXDIR=${PREFIX}/share/examples/kde-xdg/autos
 # because librpcsvc produces a warning
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--fatal-warnings
 
+# various issues with symbols such at qt_plugin_instance not being visible.
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 pre-configure: mk-kde-dir
 
 mk-kde-dir:
