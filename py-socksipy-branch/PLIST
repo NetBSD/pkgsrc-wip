@@ -1,5 +1,0 @@
-@comment $NetBSD$
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/socks.pyc
-${PYSITELIB}/socks.pyo
-${PYSITELIB}/socks.py
