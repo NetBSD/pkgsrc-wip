@@ -2,9 +2,9 @@ $NetBSD$
 
 tor -> tordev.
 
---- src/or/config.c.orig	2017-11-05 19:09:21.000000000 +0000
+--- src/or/config.c.orig	2018-01-24 17:04:12.000000000 +0000
 +++ src/or/config.c
-@@ -349,9 +349,9 @@ static config_var_t option_vars_[] = {
+@@ -359,9 +359,9 @@ static config_var_t option_vars_[] = {
    V(GeoIPv6File,                 FILENAME, "<default>"),
  #else
    V(GeoIPFile,                   FILENAME,
@@ -16,12 +16,12 @@ tor -> tordev.
  #endif /* defined(_WIN32) */
    OBSOLETE("Group"),
    V(GuardLifetime,               INTERVAL, "0 minutes"),
-@@ -7646,7 +7646,7 @@ normalize_data_directory(or_options_t *o
-               "\"%s\", which is probably not what you want.  Using "
-               "\"%s"PATH_SEPARATOR"tor\" instead", fn, LOCALSTATEDIR);
-      tor_free(fn);
--     fn = tor_strdup(LOCALSTATEDIR PATH_SEPARATOR "tor");
-+     fn = tor_strdup(LOCALSTATEDIR PATH_SEPARATOR "tordev");
-    }
-    tor_free(options->DataDirectory);
-    options->DataDirectory = fn;
+@@ -7769,7 +7769,7 @@ get_data_directory(const char *val)
+                "\"%s\", which is probably not what you want.  Using "
+                "\"%s"PATH_SEPARATOR"tor\" instead", fn, LOCALSTATEDIR);
+       tor_free(fn);
+-      fn = tor_strdup(LOCALSTATEDIR PATH_SEPARATOR "tor");
++      fn = tor_strdup(LOCALSTATEDIR PATH_SEPARATOR "tordev");
+     }
+     return fn;
+   }

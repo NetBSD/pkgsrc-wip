@@ -2,12 +2,12 @@ $NetBSD$
 
 tor -> tordev.
 
---- Makefile.in.orig	2017-11-09 22:35:20.595595671 +0000
+--- Makefile.in.orig	2018-01-25 23:58:59.734631432 +0000
 +++ Makefile.in
-@@ -2954,8 +2954,8 @@ src_tools_tor_gencert_LDADD = src/common
- @COVERAGE_ENABLED_TRUE@    @TOR_LIB_MATH@ @TOR_ZLIB_LIBS@ @TOR_OPENSSL_LIBS@ \
+@@ -3022,8 +3022,8 @@ src_tools_tor_gencert_LDADD = src/common
  @COVERAGE_ENABLED_TRUE@    @TOR_LIB_WS32@ @TOR_LIB_GDI@ @CURVE25519_LIBS@
  
+ @BUILD_LIBTORRUNNER_TRUE@src_tools_libtorrunner_a_SOURCES = src/tools/tor_runner.c src/or/tor_api.c
 -confdir = $(sysconfdir)/tor
 -tordatadir = $(datadir)/tor
 +confdir = $(sysconfdir)/tordev
