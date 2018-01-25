@@ -171,7 +171,7 @@ $NetBSD$
  #if SANITIZER_INTERCEPT___XSTAT
  INTERCEPTOR(int, __xstat, int version, const char *path, void *buf) {
    void *ctx;
-@@ -6631,6 +6679,930 @@ INTERCEPTOR(int, getgroupmembership, con
+@@ -6631,6 +6679,937 @@ INTERCEPTOR(int, getgroupmembership, con
  #define INIT_GETGROUPLIST
  #endif
  
@@ -564,11 +564,13 @@ $NetBSD$
 +  return res;
 +}
 +
-+INTERCEPTOR(int, sysctlgetmibinfo, char *sname, int *name, unsigned int *namelenp,
++INTERCEPTOR(int, sysctlgetmibinfo, char *sname, int *name,
++            unsigned int *namelenp,
 +            char *cname, SIZE_T *csz, void **rnode, int v) {
 +  void *ctx;
 +  int res;
-+  COMMON_INTERCEPTOR_ENTER(ctx, sysctlgetmibinfo, sname, name, namelenp, cname, csz, rnode, v);
++  COMMON_INTERCEPTOR_ENTER(ctx, sysctlgetmibinfo, sname, name, namelenp, cname,
++                           csz, rnode, v);
 +  if (sname)
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, sname, REAL(strlen)(sname) + 1);
 +  // Skip rnode, it's rarely used and not trivial to sanitize
@@ -587,7 +589,8 @@ $NetBSD$
 +  return res;
 +}
 +
-+INTERCEPTOR(int, sysctlnametomib, const char *sname, int *name, SIZE_T *namelenp) {
++INTERCEPTOR(int, sysctlnametomib, const char *sname, int *name,
++            SIZE_T *namelenp) {
 +  void *ctx;
 +  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, sysctlnametomib, sname, name, namelenp);
@@ -1019,7 +1022,8 @@ $NetBSD$
 +  return res;
 +}
 +
-+INTERCEPTOR(int, regexec, const void *preg, const char *string, SIZE_T nmatch, struct __sanitizer_regmatch *pmatch[], int eflags) {
++INTERCEPTOR(int, regexec, const void *preg, const char *string, SIZE_T nmatch,
++            struct __sanitizer_regmatch *pmatch[], int eflags) {
 +  void *ctx;
 +  int res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, regexec, preg, string, nmatch, pmatch, eflags);
@@ -1033,7 +1037,8 @@ $NetBSD$
 +  return res;
 +}
 +
-+INTERCEPTOR(SIZE_T, regerror, int errcode, const void *preg, char *errbuf, SIZE_T errbuf_size) {
++INTERCEPTOR(SIZE_T, regerror, int errcode, const void *preg, char *errbuf,
++            SIZE_T errbuf_size) {
 +  void *ctx;
 +  SIZE_T res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, regerror, errcode, preg, errbuf, errbuf_size);
@@ -1053,7 +1058,8 @@ $NetBSD$
 +  REAL(regfree)(preg);
 +}
 +
-+INTERCEPTOR(SSIZE_T, regnsub, char *buf, SIZE_T bufsiz, const char *sub, const struct __sanitizer_regmatch *rm, const char *str) {
++INTERCEPTOR(SSIZE_T, regnsub, char *buf, SIZE_T bufsiz, const char *sub,
++            const struct __sanitizer_regmatch *rm, const char *str) {
 +  void *ctx;
 +  SSIZE_T res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, regnsub, buf, bufsiz, sub, rm, str);
@@ -1070,7 +1076,8 @@ $NetBSD$
 +  return res;
 +}
 +
-+INTERCEPTOR(SSIZE_T, regasub, char **buf, const char *sub, const struct __sanitizer_regmatch *rm, const char *sstr) {
++INTERCEPTOR(SSIZE_T, regasub, char **buf, const char *sub,
++            const struct __sanitizer_regmatch *rm, const char *sstr) {
 +  void *ctx;
 +  SSIZE_T res;
 +  COMMON_INTERCEPTOR_ENTER(ctx, regasub, buf, sub, rm, sstr);
@@ -1102,7 +1109,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6833,6 +7805,7 @@ static void InitializeCommonInterceptors
+@@ -6833,6 +7812,7 @@ static void InitializeCommonInterceptors
    INIT_SEND_SENDTO;
    INIT_STAT;
    INIT_EVENTFD_READ_WRITE;
@@ -1110,7 +1117,7 @@ $NetBSD$
    INIT___XSTAT;
    INIT___XSTAT64;
    INIT___LXSTAT;
-@@ -6851,6 +7824,18 @@ static void InitializeCommonInterceptors
+@@ -6851,6 +7831,18 @@ static void InitializeCommonInterceptors
    INIT_ACCESS;
    INIT_FACCESSAT;
    INIT_GETGROUPLIST;

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- utils/generate_netbsd_ioctls.awk.orig	2018-01-24 15:01:49.078085846 +0000
+--- utils/generate_netbsd_ioctls.awk.orig	2018-01-25 11:26:34.539842526 +0000
 +++ utils/generate_netbsd_ioctls.awk
 @@ -0,0 +1,755 @@
 +#!/usr/bin/awk -f
