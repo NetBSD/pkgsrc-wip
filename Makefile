@@ -3678,7 +3678,6 @@ SUBDIR+=	py-smell
 SUBDIR+=	py-smmap2
 SUBDIR+=	py-smop
 SUBDIR+=	py-snappy
-SUBDIR+=	py-snmp
 SUBDIR+=	py-socksipy-branch
 SUBDIR+=	py-sode
 SUBDIR+=	py-sofa
