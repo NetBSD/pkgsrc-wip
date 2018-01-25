@@ -1,9 +1,10 @@
-$NetBSD: patch-lib_phusion__passenger_platform__info_cxx__portability.rb,v 1.3 2015/04/02 15:40:15 fhajny Exp $
+$NetBSD$
 
-Fix default paths.
---- lib/phusion_passenger/platform_info/cxx_portability.rb.orig	2013-10-26 22:00:00.000000000 +0000
-+++ lib/phusion_passenger/platform_info/cxx_portability.rb
-@@ -114,7 +114,7 @@ module PhusionPassenger
+Default paths.
+
+--- src/ruby_supportlib/phusion_passenger/platform_info/cxx_portability.rb.orig	2013-10-27 00:00:00.000000000 +0000
++++ src/ruby_supportlib/phusion_passenger/platform_info/cxx_portability.rb
+@@ -115,7 +115,7 @@ module PhusionPassenger
      private_class_method :check_hash_map
  
      def self.default_extra_c_or_cxxflags(cc_or_cxx)

@@ -1,5 +1,0 @@
-The passenger-status script doesn't work well on Illumos, possibly related
-to non-portable file locking code implemented.
-
-This package has known vulnerabilities, please investigate and fix if possible:
- CVE-2017-16355
