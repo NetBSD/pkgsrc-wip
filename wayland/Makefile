@@ -22,12 +22,18 @@ PKGCONFIG_OVERRIDE+=	src/wayland-cursor.pc.in
 PKGCONFIG_OVERRIDE+=	src/wayland-scanner.pc.in
 PKGCONFIG_OVERRIDE+=	src/wayland-server.pc.in
 
-CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fvi
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
 .include "../../wip/libepoll-shim/buildlink3.mk"
+.else
+BUILDLINK_TRANSFORM+=    rm:-lepoll-shim
+.endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
