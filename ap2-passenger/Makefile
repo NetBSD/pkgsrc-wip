@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
-COMMENT=		Passenger module for running Rails and Rack applications on Apache2
+COMMENT=		Passenger module for Apache 2.x
 
 BUILDLINK_DEPMETHOD.curl=	build
 
@@ -9,7 +9,6 @@ DEPENDS+=		${RUBY_PKGPREFIX}-${DISTNAME}:../../wip/ruby-passenger
 
 .include "../../wip/ruby-passenger/Makefile.common"
 
-RUBY_VERSIONS_ACCEPTED=	22 23   # www/ruby-rack via wip/ruby-passenger
 APACHE_MODULE=		YES
 USE_APR=		YES
 

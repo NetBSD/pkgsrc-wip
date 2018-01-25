@@ -1,6 +1,5 @@
-Phusion Passenger - a.k.a. mod_rails or mod_rack - makes deployment of Ruby
-web applications, such as those built on the revolutionary Ruby on Rails web
-framework, a breeze. It follows the usual Ruby on Rails conventions, such as
-"Don't-Repeat-Yourself".
+Phusion Passenger is a web server and application server,
+designed to be fast, robust and lightweight. It supports Ruby,
+Python, Node.js and Meteor.
 
-This package holds the Passenger agents and support files only.
+This package holds the Passenger agents, tools and support files.
