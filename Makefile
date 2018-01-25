@@ -3675,6 +3675,7 @@ SUBDIR+=	py-simulators
 SUBDIR+=	py-sleekxmpp
 SUBDIR+=	py-smcp
 SUBDIR+=	py-smell
+SUBDIR+=	py-smi
 SUBDIR+=	py-smmap2
 SUBDIR+=	py-smop
 SUBDIR+=	py-snappy
