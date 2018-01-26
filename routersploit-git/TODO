@@ -1,0 +1,3 @@
+On Darwin routersploit will depends on `gnureadline'
+(`routersploit/interpreter.py'), should we package py-gnureadline
+as well or can we just use py-readline instead?
