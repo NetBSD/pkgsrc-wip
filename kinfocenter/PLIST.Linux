@@ -1,0 +1,13 @@
+@comment $NetBSD$
+qt5/plugins/kcms/kcm_energyinfo.so
+qt5/plugins/kcms/kcm_fileindexermonitor.so
+share/kpackage/kcms/kcm_energyinfo/contents/ui/Graph.qml
+share/kpackage/kcms/kcm_energyinfo/contents/ui/main.qml
+share/kpackage/kcms/kcm_energyinfo/metadata.desktop
+share/kpackage/kcms/kcm_energyinfo/metadata.json
+share/kpackage/kcms/kcm_fileindexermonitor/contents/ui/constants.js
+share/kpackage/kcms/kcm_fileindexermonitor/contents/ui/main.qml
+share/kpackage/kcms/kcm_fileindexermonitor/metadata.desktop
+share/kpackage/kcms/kcm_fileindexermonitor/metadata.json
+share/kservices5/kcm_energyinfo.desktop
+share/kservices5/kcm_fileindexermonitor.desktop
