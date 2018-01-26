@@ -18,7 +18,7 @@ REPLACE_PERL+=	updaters/ksreenlocker_5_3_separate_autologin.pl
 SPECIAL_PERMS+=	${PREFIX}/libexec/kcheckpass \
 		${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555
 
-.include "../../security/openpam/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../devel/kdeclarative/buildlink3.mk"
 .include "../../devel/kidletime/buildlink3.mk"
 .include "../../wip/kwayland/buildlink3.mk"
