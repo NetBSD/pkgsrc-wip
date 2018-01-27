@@ -605,6 +605,7 @@ SUBDIR+=	dovecot-antispam
 SUBDIR+=	downtimed
 SUBDIR+=	dpic
 SUBDIR+=	dragbox-git
+SUBDIR+=	drkonqi
 SUBDIR+=	dropbox
 SUBDIR+=	drow
 SUBDIR+=	drpython
