@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-snmptrap
 
 .include "../../mk/bsd.pkg.mk"

@@ -15,12 +15,12 @@ DEPENDS+=	nawk-[0-9]*:../../lang/nawk
 
 WRKSRC=		${WRKDIR}/concorde
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-pthreads
 
 REPLACE_AWK+=	TINY/randtsp.awk
 
-ALL_TARGET= everything
+ALL_TARGET=	everything
 
 BINFILES=	CUT/mincut FMATCH/fmatch LINKERN/linkern \
 		 TINY/tinytsp TOOLS/edg2len TOOLS/edgunion TOOLS/fconvert \

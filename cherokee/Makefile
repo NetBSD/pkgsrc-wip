@@ -37,20 +37,20 @@ CONF_FILES+=		${EGDIR}/cherokee/cherokee.conf \
 
 RCD_SCRIPTS=		cherokee
 
-PYTHON_VERSIONS_INCOMPATIBLE=   34 35 36 # not yet ported as of 1.2.101
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.2.101
 
 .include "options.mk"
 
 BUILD_DEFS+=		VARBASE
 
 # this needs to be done before pre-configure
-SUBST_CLASSES+= 	python
-SUBST_STAGE.python= 	post-patch
-SUBST_MESSAGE.python= 	Fixing Python references
-SUBST_FILES.python= 	po/admin/generate_POTFILESin.py
-SUBST_VARS.python= 	PYTHONBIN
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	post-patch
+SUBST_MESSAGE.python=	Fixing Python references
+SUBST_FILES.python=	po/admin/generate_POTFILESin.py
+SUBST_VARS.python=	PYTHONBIN
 
-REPLACE_PYTHON= 	admin/server.py \
+REPLACE_PYTHON=		admin/server.py \
 			cherokee/cherokee-admin-launcher \
 			cherokee/cherokee-tweak
 

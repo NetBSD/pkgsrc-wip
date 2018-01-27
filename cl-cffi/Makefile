@@ -1,16 +1,16 @@
 # $NetBSD: Makefile,v 1.7 2012/09/24 18:26:53 asau Exp $
 #
 
-VERSION=        0.10.7.1
+VERSION=	0.10.7.1
 SHORTNAME=	cffi
 DISTNAME=	${SHORTNAME}_${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/project/cffi/releases/
 
-MAINTAINER=     ddeus.pkgsrc@mailnull.com
+MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://common-lisp.net/project/cffi/
-COMMENT=        The Common Foreign Function Interface for Common Lisp
-LICENSE=        public-domain
+COMMENT=	The Common Foreign Function Interface for Common Lisp
+LICENSE=	public-domain
 DEPENDS+=	${LISP_PREFIX}-trivial-features-[0-9]*:../../wip/cl-trivial-features
 DEPENDS+=	${LISP_PREFIX}-alexandria-[0-9]*:../../wip/cl-alexandria
 DEPENDS+=	${LISP_PREFIX}-babel-[0-9]*:../../wip/cl-babel

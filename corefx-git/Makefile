@@ -25,7 +25,7 @@ PKG_CC=			clang
 PKG_CXX=		clang++
 
 # NetBSD specific for now
-CMAKE_ARGS+=	 -DHeimdalGssApi=ON
+CMAKE_ARGS+=	-DHeimdalGssApi=ON
 
 do-configure:
 	${RUN} ${ECHO} Skip configure and call CMake via build.sh

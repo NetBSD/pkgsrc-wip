@@ -10,7 +10,7 @@ GITHUB_TAG=	v200Release
 DISTFILES=	${DEFAULT_DISTFILES} GsKit-${GSKIT_VER}.tar.gz
 GSKIT_VER=	f925d1362f0bc99598141a97d5a200d5e6a41391
 SITES.GsKit-${GSKIT_VER}.tar.gz= \
--https://github.com/gerstrong/GsKit/archive/${GSKIT_VER}.tar.gz
+		-https://github.com/gerstrong/GsKit/archive/${GSKIT_VER}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clonekeenplus.sourceforge.net/

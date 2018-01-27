@@ -10,16 +10,16 @@ HOMEPAGE=	http://www.burtonini.com/wordpress/?s=Contact+Lookup+Applet
 COMMENT=	Gnome panel applet for easy Evolution contact book access
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--prefix=${PREFIX}
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=	intltool
-USE_TOOLS+=	perl
-USE_TOOLS+=	pkg-config
-USE_TOOLS+=	gettext
-USE_TOOLS+=	gmake
-USE_LANGUAGES+= c
+USE_TOOLS+=		intltool
+USE_TOOLS+=		perl
+USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gettext
+USE_TOOLS+=		gmake
+USE_LANGUAGES+=		c
 
 .include "../../x11/gnome-panel/buildlink3.mk"
 BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.24.3

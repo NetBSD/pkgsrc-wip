@@ -47,9 +47,9 @@ PKG_SYSCONFDIR.c-news=	${CNEWSDATA}/etc
 EGDIR=		${PREFIX}/share/examples/c-news
 
 # Debugging aids
-CFLAGS+=	-Wall -Wno-error
-DBG=		-O -g3
-INSTALL_UNSTRIPPED = yes
+CFLAGS+=		-Wall -Wno-error
+DBG=			-O -g3
+INSTALL_UNSTRIPPED =	yes
 
 .include "../../mk/bsd.prefs.mk"
 

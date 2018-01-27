@@ -9,16 +9,16 @@ CATEGORIES=	fonts
 
 #DISTFILES+=	alexandria.zip
 # File is invalid?
-DISTFILES+=	Chicago.zip
-SITES.Chicago.zip=	http://moorstation.org/typoasis/designers/casady_greene/
-DISTFILES+=	Geneva_TTF.zip
-SITES.Geneva_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/G/
-DISTFILES+=	London.ttf.gz
-SITES.London.ttf.gz=	http://68kmla.org/wiki/uploads/4/4a/
-DISTFILES+=	CityOfAngelsTTF.zip
+DISTFILES+=			Chicago.zip
+SITES.Chicago.zip=		http://moorstation.org/typoasis/designers/casady_greene/
+DISTFILES+=			Geneva_TTF.zip
+SITES.Geneva_TTF.zip=		http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/G/
+DISTFILES+=			London.ttf.gz
+SITES.London.ttf.gz=		http://68kmla.org/wiki/uploads/4/4a/
+DISTFILES+=			CityOfAngelsTTF.zip
 SITES.CityOfAngelsTTF.zip=	http://68kmla.org/wiki/uploads/0/0a/
-DISTFILES+=	MONACO.TTF
-SITES.MONACO.TTF=	http://www.webdevkungfu.com/files/
+DISTFILES+=			MONACO.TTF
+SITES.MONACO.TTF=		http://www.webdevkungfu.com/files/
 # Cf. http://www.gringod.com/wp-upload/software/Fonts/Monaco_5.1.ttf
 # Cf. http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
 # This binhex file yields a StuffIt archive, which there is no practical way
@@ -29,15 +29,15 @@ SITES.MONACO.TTF=	http://www.webdevkungfu.com/files/
 #DISTFILES+=	Fernando%20Regular%20(2).ttf
 #SITES.Fernando%20Regular%20(2).ttf=	http://ufonts.com/bin/
 # Brampton is not yet complete.
-DISTFILES+=	Brampton.tgz
-SITES.Brampton.tgz=	http://christtrekker.users.sourceforge.net/fnt/
+DISTFILES+=			Brampton.tgz
+SITES.Brampton.tgz=		http://christtrekker.users.sourceforge.net/fnt/
 #DISTFILES+=	genoa.zip
 
 # This next one has Apple Garamond.
 # I don't think it is freely distributable though.
 #DISTFILES+=	macfonts.tar.gz
 #SITES.macfonts.tar.gz=	http://ubuntu-debs.googlecode.com/files/
-DISTFILES+=	virtue.zip
+DISTFILES+=		virtue.zip
 SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
 #DISTFILES+=	Mottek.zip
 #SITES.Mottek.zip=	http://www.searchfreefonts.com/assets/downloads/
@@ -51,12 +51,12 @@ RESTRICTED=	Various.
 DEPENDS+=	cairo-dingbat-ttf-[0-9]*:../../wip/cairo-dingbat-ttf
 DEPENDS+=	urbanrenewal-ttf-[0-9]*:../../fonts/urbanrenewal-ttf
 
-WRKSRC=		${WRKDIR}
-TTFPATH=	lib/X11/fonts/TTF
+WRKSRC=			${WRKDIR}
+TTFPATH=		lib/X11/fonts/TTF
 FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH}
 INSTALLATION_DIRS=	${TTFPATH}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 # OPTIONS
 PKG_OPTIONS_VAR=	PKG_OPTIONS.classic-mac-font-pack

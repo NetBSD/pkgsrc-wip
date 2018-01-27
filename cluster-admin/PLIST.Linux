@@ -65,8 +65,8 @@ sbin/cluster-sync-user
 sbin/cluster-sync-yum-packages
 sbin/cluster-update-backup-nodes
 sbin/cluster-update-io-nodes
-sbin/cluster-useradd
 sbin/cluster-user-admin
+sbin/cluster-useradd
 sbin/cluster-users
 sbin/compute-node-yum-packages
 sbin/enable-icmp-redirects
@@ -94,12 +94,12 @@ sbin/slurm-sync-backup-login
 sbin/slurm-sync-config
 sbin/slurm-update-idle-nodes
 sbin/slurm-usage-report
-sbin/ssh-keygen.csh
 sbin/ssh-keygen-for-user
+sbin/ssh-keygen.csh
 sbin/ssh-keygen.sh
 sbin/update-idle-nodes
 sbin/update-yum-pkgs
-share/cluster-admin/sys-update.sbatch
 share/cluster-admin/WWW/centos-power.jpg
 share/cluster-admin/WWW/global_styles.css
 share/cluster-admin/WWW/index.php
+share/cluster-admin/sys-update.sbatch

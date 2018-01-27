@@ -10,7 +10,7 @@ MASTER_SITES=	-http://weitz.de/files/cl-ppcre.tar.gz
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://weitz.de/cl-ppcre
 COMMENT=	CL-PPCRE-UNICODE is the CL-PPCRE package with Unicode support
-LICENSE= 	modified-bsd
+LICENSE=	modified-bsd
 
 WRKSRC=			${WRKDIR}/${DISTNAME}-${VERSION}
 

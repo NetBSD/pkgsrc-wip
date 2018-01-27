@@ -70,7 +70,7 @@ REQD_DIRS_PERMS+=	${CANNA_DICTDIR} ${CANNA_USER} ${CANNA_GROUP} 0775
 .for d in fuzokugo.cbd bushu.cld dics.dir iroha.cbd iroha.cld \
 	chimei.ctd hojomwd.ctd hojoswd.ctd kanasmpl.ctd katakana.ctd \
 	keishiki.ctd necgaiji.ctd number.ctd software.ctd suffix.ctd
-SPECIAL_PERMS+=	${CANNA_DICTDIR}/${d} ${CANNA_USER} ${CANNA_GROUP} 0664
+SPECIAL_PERMS+=		${CANNA_DICTDIR}/${d} ${CANNA_USER} ${CANNA_GROUP} 0664
 .endfor
 
 .include "../../wip/canna-lib/buildlink3.mk"

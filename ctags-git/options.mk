@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.1 2015/04/27 21:17:15 jonthn Exp $
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.ctags
-PKG_SUPPORTED_OPTIONS=          exctags emacs
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ctags
+PKG_SUPPORTED_OPTIONS=		exctags emacs
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,8 +20,8 @@ PLIST_SUBST+=		PREFIX_PROGRAM=""
 ###
 ### Generate tool/link for emacs support
 ###
-PLIST_VARS+=	emacs
+PLIST_VARS+=		emacs
 .if !empty(PKG_OPTIONS:Memacs)
 CONFIGURE_ARGS+=	--enable-etags
-PLIST.emacs=	yes
+PLIST.emacs=		yes
 .endif

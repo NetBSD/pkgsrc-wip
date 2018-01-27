@@ -3,13 +3,6 @@ bin/clementine
 bin/clementine-tagreader
 share/appdata/clementine.appdata.xml
 share/applications/clementine.desktop
-share/icons/hicolor/128x128/apps/clementine.png
-share/icons/hicolor/64x64/apps/clementine.png
-share/icons/hicolor/scalable/apps/clementine.svg
-share/kde4/services/clementine-feed.protocol
-share/kde4/services/clementine-itms.protocol
-share/kde4/services/clementine-itpc.protocol
-share/kde4/services/clementine-zune.protocol
 ${PLIST.visualisations}share/clementine/projectm-presets/Aderrasi - Agitator.milk
 ${PLIST.visualisations}share/clementine/projectm-presets/Aderrasi - Aimless (Gravity Directive Mix).milk
 ${PLIST.visualisations}share/clementine/projectm-presets/Aderrasi - Aimless (Spirogravity Mix).milk
@@ -581,3 +574,10 @@ ${PLIST.visualisations}share/clementine/projectm-presets/nil - Vortex of Vortice
 ${PLIST.visualisations}share/clementine/projectm-presets/project.tga
 ${PLIST.visualisations}share/clementine/projectm-presets/shifter - escape the worm - Eo.S. + Phat - Before_It_Eats_Your_Brain_Mix_v2.milk
 ${PLIST.visualisations}share/clementine/projectm-presets/shifter - escape the worm - Eo.S. + Phat 5362.milk
+share/icons/hicolor/128x128/apps/clementine.png
+share/icons/hicolor/64x64/apps/clementine.png
+share/icons/hicolor/scalable/apps/clementine.svg
+share/kde4/services/clementine-feed.protocol
+share/kde4/services/clementine-itms.protocol
+share/kde4/services/clementine-itpc.protocol
+share/kde4/services/clementine-zune.protocol

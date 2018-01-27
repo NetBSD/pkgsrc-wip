@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	crossguid
 CROSSGUID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.crossguid+=	crossguid>=0.0_pre20160908
-BUILDLINK_PKGSRCDIR.crossguid?=	../../devel/crossguid
+BUILDLINK_PKGSRCDIR.crossguid?=		../../devel/crossguid
 
 .include "../../devel/libuuid/buildlink3.mk"
 .endif	# CROSSGUID_BUILDLINK3_MK

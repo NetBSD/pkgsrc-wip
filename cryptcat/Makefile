@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/unix
 BUILD_TARGET=	${LOWER_OPSYS}
 
-INSTALLATION_DIRS+= 	bin share/doc/cryptcat
+INSTALLATION_DIRS+=	bin share/doc/cryptcat
 
 do-install:
 	cd ${WRKSRC} && \

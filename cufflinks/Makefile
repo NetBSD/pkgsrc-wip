@@ -59,9 +59,9 @@ SUBST_STAGE.boolint=	post-patch
 SUBST_FILES.boolint=	${WRKSRC}/src/rounding.h
 SUBST_SED.boolint+=	-e 's|int& is_up|bool\& is_up|g'
 
-CONFIGURE_ARGS+=--with-bam=${PREFIX}/samtools0119 --with-boost
-CFLAGS+=	-I${PREFIX}/include/eigen3
-LDFLAGS+=	-lboost_system -lboost_iostreams -lboost_thread
+CONFIGURE_ARGS+=	--with-bam=${PREFIX}/samtools0119 --with-boost
+CFLAGS+=		-I${PREFIX}/include/eigen3
+LDFLAGS+=		-lboost_system -lboost_iostreams -lboost_thread
 
 PORTVERSION=	2.1.1
 

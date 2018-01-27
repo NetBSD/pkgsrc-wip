@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	c-news-CR
 C_NEWS_CR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.c-news-CR+=	c-news-CR>=7
-BUILDLINK_DEPMETHOD.c-news-CR?=	build
-BUILDLINK_PKGSRCDIR.c-news-CR?=	../../wip/c-news
+BUILDLINK_DEPMETHOD.c-news-CR?=		build
+BUILDLINK_PKGSRCDIR.c-news-CR?=		../../wip/c-news
 .endif # C_NEWS_CR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-c-news-CR

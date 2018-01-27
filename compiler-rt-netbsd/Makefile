@@ -3,8 +3,8 @@
 PKGNAME=	compiler-rt-6.0.0
 CATEGORIES=	lang devel
 
-SVN_REPOSITORIES=	compiler-rt
-SVN_REPO.compiler-rt=	http://llvm.org/svn/llvm-project/compiler-rt/trunk
+SVN_REPOSITORIES=		compiler-rt
+SVN_REPO.compiler-rt=		http://llvm.org/svn/llvm-project/compiler-rt/trunk
 SVN_REVISION.compiler-rt=	323273
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

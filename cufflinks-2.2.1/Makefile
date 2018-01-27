@@ -16,8 +16,8 @@ MAINTAINER=	bacon@NetBSD.org
 COMMENT=	RNA transcript assembly, differential expression/regulation
 LICENSE=	boost-license
 
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-bam=${PREFIX}/samtools0119
 
 # Darwin

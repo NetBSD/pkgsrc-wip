@@ -13,9 +13,9 @@ HOMEPAGE=	http://www.freshports.org/sysutils/cronolog-devel/
 COMMENT=	Web log rotation utility that provides datestamp filenames
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	YES
-INFO_FILES=	yes
-USE_TOOLS+=	perl:run
+GNU_CONFIGURE=		YES
+INFO_FILES=		yes
+USE_TOOLS+=		perl:run
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 SUBST_CLASSES+=	cl

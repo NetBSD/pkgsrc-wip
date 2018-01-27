@@ -10,7 +10,7 @@ COMMENT=	The CLooG Code Generator in the Polyhedral Model's Home
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL= yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
 

@@ -3,9 +3,9 @@
 COLLECTD_PACKAGE=	redis
 COLLECTD_PLUGINS=	redis
 
-USE_TOOLS+=     gmake
-USE_LIBTOOL=    yes
-MAKE_ENV+=      DESTDIR=${DESTDIR}
+USE_TOOLS+=	gmake
+USE_LIBTOOL=	yes
+MAKE_ENV+=	DESTDIR=${DESTDIR}
 
 COMMENT=		Statistics collection daemon - redis plugins
 

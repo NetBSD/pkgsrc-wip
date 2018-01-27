@@ -15,12 +15,12 @@ HOMEPAGE=	http://www.moorstation.org/typoasis/designers/casady_greene/
 COMMENT=	TrueType fonts by Robin Casady
 LICENSE=	public-domain
 
-WRKSRC=		${WRKDIR}
-TTFPATH=	lib/X11/fonts/TTF
+WRKSRC=			${WRKDIR}
+TTFPATH=		lib/X11/fonts/TTF
 FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH:Q}
 INSTALLATION_DIRS=	${TTFPATH:Q}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf:Q}

@@ -23,7 +23,7 @@ CFLAGS+=	-Wno-inconsistent-missing-override \
 		-Wno-unused-variable \
 		-Wno-unused-function
 
-CMAKE_ARGS+= 	-DENABLE_SPOTIFY_BLOB=OFF \
+CMAKE_ARGS+=	-DENABLE_SPOTIFY_BLOB=OFF \
 		-DCRYPTOPP_LIBS=${LOCALBASE}/lib/libcryptopp.so \
 	     	-DCRYPTOPP_INCLUDEDIR=${LOCALBASE}/include/cryptopp \
 	     	-DCRYPTOPP_LIBDIR=${LOCALBASE}/lib \

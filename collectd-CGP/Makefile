@@ -1,12 +1,12 @@
 # $NetBSD$
 
 DISTNAME=	collectd-cgp-1
-PKGNAME=        ${PHP_PKG_PREFIX}-${DISTNAME:S/-1//}
+PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-1//}
 CATEGORIES=	www
 GITHUB_PROJECT=	CGP
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=pommi/}
-GITHUB_TAG=     v${DISTNAME:S/collectd-cgp-//}
-EXTRACT_SUFX=   .zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pommi/}
+GITHUB_TAG=	v${DISTNAME:S/collectd-cgp-//}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/pommi/
@@ -19,7 +19,7 @@ USE_TOOLS+=	pax unzip
 AUTO_MKDIRS=	yes
 EXTRACT_ONLY=	# empty
 
-INSTALLATION_DIRS=      share/collectd-graph-panel
+INSTALLATION_DIRS=	share/collectd-graph-panel
 
 WRKSRC=		${WRKDIR}/CGP-1
 

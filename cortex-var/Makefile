@@ -14,7 +14,7 @@ COMMENT=	TODO: Short description of the package
 
 WRKSRC=		${WRKDIR}/CORTEX_release_v1.0.5.21
 USE_TOOLS+=	pkg-config gmake
-BUILD_TARGET= 	cortex_var
+BUILD_TARGET=	cortex_var
 
 _BLNK_PASSTHRU_DIRS+=	${WRKSRC}/libs
 

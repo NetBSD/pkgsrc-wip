@@ -17,7 +17,7 @@ DEPENDS+=	horde>=2.2.4:../../www/horde
 USE_LANGUAGES=	# empty
 NO_BUILD=	YES
 
-CHORADIR=	${PREFIX}/share/chora
+CHORADIR=		${PREFIX}/share/chora
 INSTALLATION_DIRS+=	${CHORADIR}/config ${CHORADIR}/docs ${CHORADIR}/js/src
 INSTALLATION_DIRS+=	${CHORADIR}/lib/Block
 INSTALLATION_DIRS+=	${CHORADIR}/locale/cs_CZ/LC_MESSAGES

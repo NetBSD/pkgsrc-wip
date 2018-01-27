@@ -25,9 +25,9 @@ do-install:
 
 # on platforms where libbsd is available, it is needed for MD5
 .if defined(USE_LIBBSD)
-MAKE_FLAGS+= -DLIBBSD
+MAKE_FLAGS+=	-DLIBBSD
 .elif ${OPSYS} == Darwin
-MAKE_FLAGS+= -DNOMD5
+MAKE_FLAGS+=	-DNOMD5
 .endif
 
 .include "../../mk/bsd.pkg.mk"

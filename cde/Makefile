@@ -11,12 +11,12 @@ COMMENT=	Common Desktop Environment
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=     bison bdftopcf mkfontdir ksh awk:run
+USE_TOOLS+=	bison bdftopcf mkfontdir ksh awk:run
 BUILD_TARGET=	World
 
 MAKE_JOBS_SAFE=	no
 
-DEPENDS+= ast-ksh-[0-9]*:../../shells/ast-ksh
+DEPENDS+=	ast-ksh-[0-9]*:../../shells/ast-ksh
 
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
@@ -52,7 +52,7 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/appconfig/${i}/${j}
 .endfor
 OWN_DIRS+=		${PKG_SYSCONFDIR}/config
 OWN_DIRS+=		${PKG_SYSCONFDIR}/config/Xsession.d
-BUILDLINK_PASSTHRU_DIRS+=${PREFIX}/dt/lib
+BUILDLINK_PASSTHRU_DIRS+= ${PREFIX}/dt/lib
 
 SUBST_CLASSES+=		destdir
 SUBST_STAGE.destdir=	pre-configure

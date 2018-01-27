@@ -12,13 +12,13 @@ HOMEPAGE=	https://01.org/clear-sans
 COMMENT=	Clear Sans TrueType font from Intel
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=  # none
+USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
-FONTDIR=        ${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf= ${FONTDIR}
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALLATION_DIRS=      ${FONTDIR} share/doc/clearsans-ttf
+INSTALLATION_DIRS=	${FONTDIR} share/doc/clearsans-ttf
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/TTF/*.ttf ${DESTDIR}${FONTDIR}

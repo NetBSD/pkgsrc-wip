@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/wglass/collectd-haproxy
 COMMENT=	Plugin for collectd to gather HAProxy metrics
 LICENSE=	mit
 
-DEPENDS+=       haproxy>=1.4:../../net/haproxy
+DEPENDS+=	haproxy>=1.4:../../net/haproxy
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8

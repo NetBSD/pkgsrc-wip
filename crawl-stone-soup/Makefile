@@ -12,10 +12,10 @@ HOMEPAGE=	http://crawl.develz.org/wordpress/
 COMMENT=	Dungeon Crawl Stone Soup is a role-playing roguelike game
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
-USE_TOOLS+=	gmake
-USE_TOOLS+=	perl
-USE_LANGUAGES=	c c++
+USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
+USE_LANGUAGES=		c c++
 BUILD_MAKE_FLAGS+=	prefix=${PREFIX}
 BUILD_MAKE_FLAGS+=	SAVEDIR='~/.crawl'
 BUILD_MAKE_FLAGS+=	V=y

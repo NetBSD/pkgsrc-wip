@@ -12,7 +12,7 @@ HOMEPAGE=	http://cutecom.sourceforge.net/
 COMMENT=	Graphical serial terminal
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=      	lrzsz>=0.12.20:../../comms/lrzsz
+DEPENDS+=	lrzsz>=0.12.20:../../comms/lrzsz
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

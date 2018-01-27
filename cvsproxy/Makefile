@@ -10,6 +10,6 @@ COMMENT=	The cvsproxy is a relay server for the cvs pserver protocol
 
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=		autoconf automake
+USE_TOOLS+=	autoconf automake
 
 .include "../../mk/bsd.pkg.mk"

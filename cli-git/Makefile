@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2015/04/25 10:01:54 krytarowski Exp $
 
 GIT_REPOSITORIES=	cli
-GIT_REPO.cli=	https://github.com/dotnet/cli.git
+GIT_REPO.cli=		https://github.com/dotnet/cli.git
 
 DISTNAME=	cli
 PKGNAME=	cli-0.0.0

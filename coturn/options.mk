@@ -24,5 +24,5 @@ CONFIGURE_ENV+=	POSTCFLAGS="-I${PREFIX}/include/postgresql"
 .endif
 
 .if !empty(PKG_OPTIONS:Mredis)
-DEPENDS+=       redis-[0-9]*:../../databases/redis
+DEPENDS+=	redis-[0-9]*:../../databases/redis
 .endif

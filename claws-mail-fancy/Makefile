@@ -7,8 +7,8 @@ PLUGIN_NAME=    fancy
 MAINTAINER=	dieter.NetBSD@pandora.be
 COMMENT=	Renders HTML e-mail using the WebKit library
 
-CONFIGURE_ARGS+= --enable-${PLUGIN_NAME}-plugin
-CONFIGURE_ARGS+= --disable-libravatar-plugin
+CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
+CONFIGURE_ARGS+=	--disable-libravatar-plugin
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 

@@ -8,14 +8,14 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://alice.unibo.it/xwiki/bin/view/CARTAGO/
-COMMENT= Framework for programming and executing environments in multi-agent
+COMMENT=	Framework for programming and executing environments in multi-agent
 #LICENSE=	# TODO: (see mk/license.mk)
 
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15
 
 INSTALLATION_DIRS=	lib/java/cartago/lib share/doc/cartago
 

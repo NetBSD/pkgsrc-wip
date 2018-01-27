@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.chromium.org/Home
 COMMENT=	Chromium web browser
 LICENSE=	modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
-USE_TOOLS+=	bash bison flex:pkgsrc gmake pax perl pkg-config
-TOOLS_PLATFORM.flex=   # override the platform definition to use pkgsrc's flex.
-USE_LANGUAGES=	c c++
+USE_TOOLS+=		bash bison flex:pkgsrc gmake pax perl pkg-config
+TOOLS_PLATFORM.flex=	# override the platform definition to use pkgsrc's flex.
+USE_LANGUAGES=		c c++
 
 BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm

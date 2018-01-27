@@ -78,6 +78,7 @@ lib/cherokee/libplugin_htdigest.la
 lib/cherokee/libplugin_htpasswd.la
 lib/cherokee/libplugin_ip_hash.la
 ${PLIST.ldap}lib/cherokee/libplugin_ldap.la
+${PLIST.ssl}lib/cherokee/libplugin_libssl.la
 lib/cherokee/libplugin_method.la
 ${PLIST.mysql}lib/cherokee/libplugin_mysql.la
 lib/cherokee/libplugin_ncsa.la
@@ -98,7 +99,6 @@ lib/cherokee/libplugin_scgi.la
 lib/cherokee/libplugin_secdownload.la
 lib/cherokee/libplugin_server_info.la
 lib/cherokee/libplugin_ssi.la
-${PLIST.ssl}lib/cherokee/libplugin_libssl.la
 ${PLIST.ffmpeg}lib/cherokee/libplugin_streaming.la
 lib/cherokee/libplugin_target_ip.la
 lib/cherokee/libplugin_tls.la

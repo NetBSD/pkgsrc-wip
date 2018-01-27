@@ -14,7 +14,7 @@ COMMENT=	Cycle is a fertility calendar program for women
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
 REPLACE_PYTHON=	cycle.py
 
-INSTALLATION_DIRS= lib/cycle lib/cycle/bitmaps \
+INSTALLATION_DIRS=	lib/cycle lib/cycle/bitmaps \
 	lib/cycle/icons lib/cycle/icons/large lib/cycle/icons/mini \
 	lib/cycle/msg lib/cycle/msg/ca/LC_MESSAGES \
 	lib/cycle/msg/cs/LC_MESSAGES lib/cycle/msg/de/LC_MESSAGES \

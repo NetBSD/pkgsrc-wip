@@ -3,7 +3,7 @@
 DISTNAME=	cheese-3.18.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cheese/3.18/}
-EXTRACT_SUFX=		.tar.xz
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/projects/cheese/
@@ -18,7 +18,7 @@ DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*) || !empty(MACHINE_PLATFORM:MLinux)
-DEPENDS+= gst-plugins1-v4l2-[0-9]*:../../multimedia/gst-plugins1-v4l2
+DEPENDS+=	gst-plugins1-v4l2-[0-9]*:../../multimedia/gst-plugins1-v4l2
 .endif
 
 GNU_CONFIGURE=		yes

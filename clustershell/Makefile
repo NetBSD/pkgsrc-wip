@@ -10,7 +10,7 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://clustershell.sourceforge.net/
 COMMENT=	Python library to execute commands on local or distant cluster nodes
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

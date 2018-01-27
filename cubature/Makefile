@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS= include	share/doc/cubature
+INSTALLATION_DIRS=	include	share/doc/cubature
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/cubature.h ${DESTDIR}${PREFIX}/include

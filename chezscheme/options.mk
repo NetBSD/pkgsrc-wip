@@ -6,6 +6,6 @@ PKG_SUGGESTED_OPTIONS=	threads
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mthreads)
-CONFIGURE_ARGS+=--threads
-THR=t
+CONFIGURE_ARGS+= --threads
+THR=	t
 .endif

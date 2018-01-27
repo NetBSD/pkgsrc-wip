@@ -15,9 +15,9 @@ TMPEXT_DIR=	${WRKDIR}/${PKGVERSION_NOREV}/CLHEP
 AUTOCONF_REQD=	2.59
 USE_TOOLS+=	aclocal autoconf automake gmake perl
 
-GNU_CONFIGURE=	yes
-CONFIGURE_SCRIPT= ${TMPEXT_DIR}/configure
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	${TMPEXT_DIR}/configure
+USE_LANGUAGES=		c c++
 
 # Apply extra force to make it link on FreeBSD 6.3:
 LDFLAGS.FreeBSD=	-lc

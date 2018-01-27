@@ -34,7 +34,7 @@ post-patch:
 		./autogen.sh
 
 # We need 'xxd' in build time, which is in the vim-share package.
-BUILD_DEPENDS+= vim-share-[0-9]*:../../editors/vim-share
+BUILD_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 
 # cinelerra has some assembler source files.
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm

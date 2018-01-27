@@ -11,12 +11,12 @@ COMMENT=	Choosefont permit you to choose fonts out of a big amount of fonts
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
-DEPENDS+=		tk-Tix>=8.4.3:../../x11/tk-Tix
-USE_TOOLS+=		tclsh:run
-NO_BUILD=		yes
+DEPENDS+=	tk-Tix>=8.4.3:../../x11/tk-Tix
+USE_TOOLS+=	tclsh:run
+NO_BUILD=	yes
 
-INSTALLATION_DIRS=  bin lib/x11/choosefont lib/x11/choosefont/src lib/x11/choosefont/locale
-INSTALLATION_DIRS+= lib/x11/choosefont/src/output
+INSTALLATION_DIRS=	bin lib/x11/choosefont lib/x11/choosefont/src lib/x11/choosefont/locale
+INSTALLATION_DIRS+=	lib/x11/choosefont/src/output
 
 REPLACE_INTERPRETER+=	tclsh
 REPLACE.tclsh.old=	.*bash

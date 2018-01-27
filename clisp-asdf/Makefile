@@ -2,7 +2,7 @@
 
 DISTNAME=	asdf-2.018.19
 PKGNAME=	clisp-${DISTNAME}
-PKGREVISION=    1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kozachuk.info/netbsd/contrib/
 
@@ -16,7 +16,7 @@ DEPENDS+=	clisp>=2.49:../../lang/clisp
 USE_TOOLS+=	makeinfo
 INFO_FILES=	yes
 
-PKG_SYSCONFSUBDIR= clisp
+PKG_SYSCONFSUBDIR=	clisp
 
 INSTALLATION_DIRS= \
 		lib/clisp/dynmod \
@@ -30,7 +30,7 @@ CONF_FILES+=	share/examples/${PKGBASE}/source-registry.conf \
 CONF_FILES+=	share/examples/${PKGBASE}/asdf-output-translations.conf \
 		${PKG_SYSCONFDIR}/asdf-output-translations.conf
 
-CHECK_PORTABILITY_SKIP= bin/asdf-version bin/make-tarball
+CHECK_PORTABILITY_SKIP=	bin/asdf-version bin/make-tarball
 
 do-build:
 	( cd ${WRKSRC} && \

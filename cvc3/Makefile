@@ -16,11 +16,11 @@ USE_TOOLS+=	gmake bash perl bison
 
 CONFIGURE_ENV+=			ac_cv_prog_YACC="bison -y"
 
-SUBST_CLASSES+=                 fix-bash
-SUBST_STAGE.fix-bash=          	pre-configure
-SUBST_MESSAGE.fix-bash=        	Fixing hard-coded reference to bash.
-SUBST_FILES.fix-bash=          	Makefile.std
-SUBST_SED.fix-bash=            	-e 's,SHELL = /bin/bash,SHELL = ${TOOLS_PATH.bash},g'
+SUBST_CLASSES+=			fix-bash
+SUBST_STAGE.fix-bash=		pre-configure
+SUBST_MESSAGE.fix-bash=		Fixing hard-coded reference to bash.
+SUBST_FILES.fix-bash=		Makefile.std
+SUBST_SED.fix-bash=		-e 's,SHELL = /bin/bash,SHELL = ${TOOLS_PATH.bash},g'
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

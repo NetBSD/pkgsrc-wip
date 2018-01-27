@@ -2,7 +2,7 @@
 bin/chruby-exec
 share/chruby/auto.sh
 share/chruby/chruby.sh
-share/doc/chruby-0.3.8/ChangeLog.md
 share/doc/chruby-0.3.8/CONTRIBUTING.md
+share/doc/chruby-0.3.8/ChangeLog.md
 share/doc/chruby-0.3.8/LICENSE.txt
 share/doc/chruby-0.3.8/README.md

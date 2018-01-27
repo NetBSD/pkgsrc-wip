@@ -15,14 +15,14 @@ DIST_SUBDIR=	cargo
 
 # For crates download, Accept: header is required.
 # See: https://github.com/rust-lang/crates.io/issues/466
-FETCH_USING=	custom
-FETCH_CMD=	 ${TOOLS_PATH.curl}
+FETCH_USING=		custom
+FETCH_CMD=		${TOOLS_PATH.curl}
 FETCH_BEFORE_ARGS=	--fail --insecure --location --remote-time -H 'Accept:'
 FETCH_OUTPUT_ARGS=	-o
 FETCH_AFTER_ARGS=	-O
 
-CARGODIST=	cargo-0.17.0
-CARGODISTFILE=	cargo-0.17.0.tar.gz
+CARGODIST=		cargo-0.17.0
+CARGODISTFILE=		cargo-0.17.0.tar.gz
 SITES.${CARGODISTFILE}=	-https://github.com/rust-lang/cargo/archive/0.17.0.tar.gz
 CARGO_DISTFILES=	${CARGODISTFILE}
 

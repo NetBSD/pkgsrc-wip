@@ -3,7 +3,7 @@
 DISTNAME=		copytape
 PKGNAME=		${DISTNAME}-1.0
 CATEGORIES=		sysutils
-MASTER_SITES= \
+MASTER_SITES=		\
 	ftp://gatekeeper.dec.com/pub/usenet/comp.sources.unix/volume10/ \
 	ftp://ftp.uu.net/usenet/comp.sources.unix/volume10/ \
 	ftp://ftp.funet.fi/pub/archive/comp.sources.unix/volume10/ \
