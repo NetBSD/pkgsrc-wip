@@ -13,10 +13,10 @@ COMMENT=	Monte Carlo Event Generator for Central Exclusive Production
 
 WRKSRC=		${WRKDIR}
 
-NO_BUILD= yes
+NO_BUILD=	yes
 USE_LANGUAGES=	fortran
 
-INSTALLATION_DIRS= lib
+INSTALLATION_DIRS=	lib
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/superchicv1.3.f ${DESTDIR}${PREFIX}/lib/

@@ -1,7 +1,7 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:19 thomasklausner Exp $
-share/squirrelmail/plugins/compatibility/functions.php
 share/squirrelmail/plugins/compatibility/INSTALL
-share/squirrelmail/plugins/compatibility/index.php
 share/squirrelmail/plugins/compatibility/README
+share/squirrelmail/plugins/compatibility/functions.php
+share/squirrelmail/plugins/compatibility/index.php
 share/squirrelmail/plugins/compatibility/setup.php
 share/squirrelmail/plugins/compatibility/version

@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/silvertree
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost-regex=boost_regex-mt
 
 .include "../../devel/SDL/buildlink3.mk"

@@ -38,12 +38,12 @@ CONF_FILES=		${EGDIR}/send-pr.NetBSD.conf \
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/gnats
 #			${PKG_SYSCONFDIR}/gnats/gnats-adm
 
-SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	post-patch
-SUBST_MESSAGE.fix-paths=Fixing paths
-SUBST_FILES.fix-paths=	send-pr.sh
-SUBST_SED.fix-paths=	-e 's,install-sid,${PREFIX}/bin/install-sid,'
-SUBST_SED.fix-paths+=	-e 's,send-pr --request-id,${PREFIX}/bin/send-pr --request-id,'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		post-patch
+SUBST_MESSAGE.fix-paths=	Fixing paths
+SUBST_FILES.fix-paths=		send-pr.sh
+SUBST_SED.fix-paths=		-e 's,install-sid,${PREFIX}/bin/install-sid,'
+SUBST_SED.fix-paths+=		-e 's,send-pr --request-id,${PREFIX}/bin/send-pr --request-id,'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/gnats/dist/INSTALL.send-pr

@@ -8,14 +8,14 @@ HOMEPAGE=	http://scummvm.sourceforge.net/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 LICENSE=	gnu-gpl-v2
 
-NO_SRC_ON_FTP=	# changes daily
-NO_SRC_ON_CDROM=# changes daily
-USE_TOOLS+=	gmake perl
-USE_LANGUAGES=	c c++
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--prefix=${LOCALBASE}
-CONFIGURE_ARGS+=--mandir=${LOCALBASE}/${PKGMANDIR}
-WRKSRC=		${WRKDIR}/scummvm
+NO_SRC_ON_FTP=		# changes daily
+NO_SRC_ON_CDROM=	# changes daily
+USE_TOOLS+=		gmake perl
+USE_LANGUAGES=		c c++
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--mandir=${LOCALBASE}/${PKGMANDIR}
+WRKSRC=			${WRKDIR}/scummvm
 
 .include "options.mk"
 

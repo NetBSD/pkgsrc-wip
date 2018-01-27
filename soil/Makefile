@@ -13,12 +13,12 @@ HOMEPAGE=	http://www.lonesock.net/soil.html
 COMMENT=	Tiny C library used primarily for uploading textures into OpenGL
 LICENSE=	public-domain
 
-WRKSRC=		${WRKDIR}/SOIL
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pax
-NO_CONFIGURE=	yes
-BUILD_DIRS=	projects/makefile
-MAKE_FILE=	makefile
+WRKSRC=			${WRKDIR}/SOIL
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake pax
+NO_CONFIGURE=		yes
+BUILD_DIRS=		projects/makefile
+MAKE_FILE=		makefile
 INSTALLATION_DIRS+=	include lib
 
 SUBST_CLASSES+=		prefix

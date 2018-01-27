@@ -10,11 +10,11 @@ COMMENT=	Environment and library for safe floating-point code development
 LICENSE=	cecil-1.0 AND gnu-gpl-v3
 
 # XXX Form is optional, check the licence terms if distribution is allowed
-RESTRICTED=             Optional form on download page
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_FTP=          ${RESTRICTED}
-NO_SRC_ON_FTP=          ${RESTRICTED}
+RESTRICTED=		Optional form on download page
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

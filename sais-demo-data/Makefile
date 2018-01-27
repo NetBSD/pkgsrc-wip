@@ -14,7 +14,7 @@ LICENSE=	sais-demo-data-license
 LICENSE_FILE=	${FILESDIR}/sais-demo-data-license
 RESTRICTED=	${LICENSE}
 
-USE_LANGUAGES=	#
+USE_LANGUAGES=		#
 INSTALLATION_DIRS=	bin share/doc/sais-demo-data share/sais-demo-data
 INSTALLATION_DIRS+=	share/sais-demo-data/gamedata
 INSTALLATION_DIRS+=	share/sais-demo-data/graphics

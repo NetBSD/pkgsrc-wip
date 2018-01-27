@@ -11,12 +11,12 @@ HOMEPAGE=	http://www.computational.unibas.ch/software/spai/
 COMMENT=	Sparse Approximate Inverses
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=NO
+MAKE_JOBS_SAFE=	NO
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bash:run
-CONFIG_SHELL= bash
+CONFIG_SHELL=	bash
 USE_LANGUAGES=	c fortran
 
 CONFIGURE_ARGS+=	--with-mpi=${BUILDLINK_PREFIX.mpi}

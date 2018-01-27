@@ -15,29 +15,29 @@ PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-cruise)
-CONFIGURE_ARGS+=--enable-cruise
+CONFIGURE_ARGS+=	--enable-cruise
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-groovie2)
-CONFIGURE_ARGS+=--enable-groovie2
+CONFIGURE_ARGS+=	--enable-groovie2
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-lol)
-CONFIGURE_ARGS+=--enable-lol
+CONFIGURE_ARGS+=	--enable-lol
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-m4)
-CONFIGURE_ARGS+=--enable-m4
+CONFIGURE_ARGS+=	--enable-m4
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-saga2)
-CONFIGURE_ARGS+=--enable-saga2
+CONFIGURE_ARGS+=	--enable-saga2
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-sci)
-CONFIGURE_ARGS+=--enable-sci
+CONFIGURE_ARGS+=	--enable-sci
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-sci32)
-CONFIGURE_ARGS+=--enable-sci32
+CONFIGURE_ARGS+=	--enable-sci32
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-teenagent)
-CONFIGURE_ARGS+=--enable-teenagent
+CONFIGURE_ARGS+=	--enable-teenagent
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-tinsel)
-CONFIGURE_ARGS+=--enable-tinsel
+CONFIGURE_ARGS+=	--enable-tinsel
 .endif

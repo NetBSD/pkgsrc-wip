@@ -11,9 +11,9 @@ HOMEPAGE=	http://www.maths.bris.ac.uk/~mamjw/
 COMMENT=	Special values of symmetric power elliptic curve L-functions
 #LICENSE=	# TODO: (see mk/license.mk)
 
-WRKSRC=	${WRKDIR}/sympow-1.019
+WRKSRC=		${WRKDIR}/sympow-1.019
 USE_TOOLS+=	pax
-USE_LANGUAGES= c c++
+USE_LANGUAGES=	c c++
 
 SYMPOW_DIRECTORY=	${PREFIX}/lib/sympow
 DOCDIR=	${PREFIX}/share/doc/sympow

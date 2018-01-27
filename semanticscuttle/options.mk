@@ -1,11 +1,11 @@
 # $NetBSD: options.mk,v 1.3 2012/11/16 18:26:10 kristerw Exp $
 
-PKG_OPTIONS_VAR= PKG_OPTIONS.semanticscuttle
+PKG_OPTIONS_VAR=	PKG_OPTIONS.semanticscuttle
 
-PKG_OPTIONS_REQUIRED_GROUPS= db
-PKG_OPTIONS_GROUP.db= mysql pgsql sqlite oracle
+PKG_OPTIONS_REQUIRED_GROUPS=	db
+PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite oracle
 
-PKG_SUGGESTED_OPTIONS= mysql
+PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
 

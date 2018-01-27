@@ -9,7 +9,7 @@ HOMEPAGE=	http://projects.hepforge.org/siscone/
 COMMENT=	C++ code for a Seedless Infrared-Safe Cone jet finder
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP= configure
+CHECK_PORTABILITY_SKIP=	configure
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

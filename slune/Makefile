@@ -22,11 +22,12 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-vorbis, py-EditObj2
 
 PYSETUPINSTALLARGS=	--install-lib ${PYSITELIB} --install-scripts ${PREFIX}/bin --install-data ${PREFIX}/share/
 
-PYFILES= __init__.py character.py circuit_generator.py controler.py \
-		fight.py freestyle.py globdef.py gui.py gui_gl.py \
-		gui_option.py hunt.py ia_algogen.py init_editobj.py level.py \
-		player.py race.py race_algogen.py race_algogen2.py \
-		sound.py videosequence.py
+PYFILES= \
+	__init__.py character.py circuit_generator.py controler.py \
+	fight.py freestyle.py globdef.py gui.py gui_gl.py \
+	gui_option.py hunt.py ia_algogen.py init_editobj.py level.py \
+	player.py race.py race_algogen.py race_algogen2.py \
+	sound.py videosequence.py
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${PYSITELIB}/slune

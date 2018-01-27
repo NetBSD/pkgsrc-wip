@@ -10,7 +10,7 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Easy Virtual domain support plugin for SquirrelMail
 
-DEPENDS+=   squirrelmail-compatibility>=1.3:../../wip/squirrelmail-compatibility
+DEPENDS+=	squirrelmail-compatibility>=1.3:../../wip/squirrelmail-compatibility
 
 
 WRKSRC=		${WRKDIR}

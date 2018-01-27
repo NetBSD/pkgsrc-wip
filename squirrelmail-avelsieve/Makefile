@@ -13,7 +13,7 @@ COMMENT=	Sieve Script editing plugin for SquirrelMail
 NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
-USE_TOOLS+= tar
+USE_TOOLS+=	tar
 
 SMDIR=			${PREFIX}/share/squirrelmail
 MESSAGE_SUBST+=		SMDIR=${SMDIR}

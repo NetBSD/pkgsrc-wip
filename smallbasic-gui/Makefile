@@ -8,7 +8,7 @@ CATEGORIES+=	x11
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	SmallBASIC with GUI
 
-CONFIGURE_ARGS+=        --enable-sdl
+CONFIGURE_ARGS+=	--enable-sdl
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

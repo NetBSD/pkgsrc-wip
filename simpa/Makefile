@@ -15,7 +15,7 @@ USE_TOOLS+=	pax
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15
 
 INSTALLATION_DIRS=	lib/java/simpa/lib share/doc/simpa
 

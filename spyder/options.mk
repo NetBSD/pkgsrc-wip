@@ -2,13 +2,13 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spyder
 PKG_SUPPORTED_OPTIONS=	ipython numpy scipy sympy pandas pylint \
-		 flakes matplotlib psutil pygments pep8
+			flakes matplotlib psutil pygments pep8
 PKG_SUGGESTED_OPTIONS+=	ipython numpy scipy sympy pandas pylint \
-		 flakes matplotlib pygments
+			flakes matplotlib pygments
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	np plint
 PKG_OPTIONS_GROUP.np=		scipy  pandas
-PKG_OPTIONS_GROUP.plint=		pylint pyflakes pep8
+PKG_OPTIONS_GROUP.plint=	pylint pyflakes pep8
 
 .include "../../mk/bsd.options.mk"
 

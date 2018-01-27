@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.simutrans.com/en/paksets/
 COMMENT=	Game data for Simutrans 
 #LICENSE=	# TODO: (see mk/license.mk)
 
-NO_BUILD=      yes
+NO_BUILD=	yes
 
 
 #DEPENDS+=       unzip-[0-9]*:../../archivers/unzip

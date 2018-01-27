@@ -10,7 +10,7 @@ COMMENT=		Standard markdown converter implementation
 LICENSE=		modified-bsd
 
 GIT_REPOSITORIES=	stmd
-GIT_REPO.stmd= 		git://github.com/jgm/stmd.git
+GIT_REPO.stmd=		git://github.com/jgm/stmd.git
 
 BUILD_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
 

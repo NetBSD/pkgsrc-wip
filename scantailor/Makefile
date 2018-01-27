@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-SUBST_CLASSES+=	paths
+SUBST_CLASSES+=		paths
 SUBST_SED.paths+=	-e 's,/usr/local,${BUILDLINK_DIR},'
 SUBST_SED.paths+=	-e 's,libpng.lib,png15,'
 SUBST_FILES.paths=	CMakeLists.txt

@@ -1,8 +1,8 @@
 @comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:17 thomasklausner Exp $
 bin/scsh-install-pkg
-share/doc/scsh/modules/install-lib-1.2.0/pdf/install-lib.pdf
 lib/scsh/modules/install-lib
 lib/scsh/modules/install-lib-1.2.0/load.scm
 lib/scsh/modules/install-lib-1.2.0/scheme/install-lib-module.scm
 lib/scsh/modules/install-lib-1.2.0/scheme/install-lib-version.scm
 lib/scsh/modules/install-lib-1.2.0/scheme/install-lib.scm
+share/doc/scsh/modules/install-lib-1.2.0/pdf/install-lib.pdf

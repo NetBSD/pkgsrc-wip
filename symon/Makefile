@@ -12,8 +12,8 @@ MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 SYMON_HOME?=		${VARBASE}/db/symon
 EGDIR=			share/examples/symon
-CONF_FILES=     	${EGDIR}/symon.conf ${PKG_SYSCONFDIR}/symon.conf
-CONF_FILES+=     	${EGDIR}/symux.conf ${PKG_SYSCONFDIR}/symux.conf
+CONF_FILES=		${EGDIR}/symon.conf ${PKG_SYSCONFDIR}/symon.conf
+CONF_FILES+=		${EGDIR}/symux.conf ${PKG_SYSCONFDIR}/symux.conf
 
 BUILD_DEFS+=		VARBASE
 
@@ -31,20 +31,20 @@ REPLACE_PERL+=		client/getsymonitem.pl
 SYMON_USER?=		_symon
 SYMON_GROUP?=		_symon
 
-PKG_GROUPS_VARS+=	SYMON_GROUP
-PKG_USERS_VARS+=	SYMON_USER
-PKG_GROUPS=		${SYMON_GROUP}
-PKG_USERS=		${SYMON_USER}:${SYMON_GROUP}
-PKG_GECOS.${SYMON_USER}= Symon pseudo-user
-PKG_HOME.${SYMON_USER}=  ${SYMON_HOME}
+PKG_GROUPS_VARS+=		SYMON_GROUP
+PKG_USERS_VARS+=		SYMON_USER
+PKG_GROUPS=			${SYMON_GROUP}
+PKG_USERS=			${SYMON_USER}:${SYMON_GROUP}
+PKG_GECOS.${SYMON_USER}=	Symon pseudo-user
+PKG_HOME.${SYMON_USER}=		${SYMON_HOME}
 
-SUBST_CLASSES+=         paths
+SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_FILES.paths=      symon/symon.8 symux/symux.8
+SUBST_FILES.paths=	symon/symon.8 symux/symux.8
 SUBST_FILES.paths+=	symux/c_smrrds.sh
-SUBST_SED.paths+=       -e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=       -e 's,@PKG_PREFIX@,${PREFIX},g'
-SUBST_STAGE.paths=      post-patch
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@PKG_PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
 
 RCD_SCRIPTS=		symux symon
 

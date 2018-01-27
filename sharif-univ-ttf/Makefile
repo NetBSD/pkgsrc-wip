@@ -15,7 +15,7 @@ COMMENT=	This font was created by Sharif University
 WRKSRC=	${WRKDIR}
 
 USE_LANGUAGES=	# none
-NO_BUILD=		yes
+NO_BUILD=	yes
 
 FONTS_DIRS.ttf=		lib/X11/fonts/TTF
 

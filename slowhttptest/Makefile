@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/shekyan/slowhttptest
 COMMENT=	Tool implementing some Slow HTTP attacks
 LICENSE=	apache-2.0
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 .include "../../security/openssl/buildlink3.mk"

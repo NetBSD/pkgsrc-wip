@@ -1,9 +1,9 @@
 # $NetBSD$
 
-PKGNAME=	softvms-1.9
-DISTNAME=	softvms
-CATEGORIES=	emulators
-MASTER_SITES=	https://mc.pp.se/dc/files/
+PKGNAME=		softvms-1.9
+DISTNAME=		softvms
+CATEGORIES=		emulators
+MASTER_SITES=		https://mc.pp.se/dc/files/
 MASTER_SITE_BACKUP=	https://travispaul.me/distfiles/
 
 MAINTAINER=	tr@vispaul.me
@@ -11,9 +11,9 @@ HOMEPAGE=	https://mc.pp.se/dc/sw.html
 COMMENT=	Emulator capable of running some VMS games
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/vms
-GNU_CONFIGURE=	yes
-BUILD_TARGET=	vms
+WRKSRC=			${WRKDIR}/vms
+GNU_CONFIGURE=		yes
+BUILD_TARGET=		vms
 USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin
 

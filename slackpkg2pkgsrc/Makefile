@@ -11,8 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		# none
 COMMENT=		Simple script for easy generation of Slackware binary packages
 
-PY_PATCHPLIST=		yes
-NO_BUILD=		yes
+PY_PATCHPLIST=	yes
+NO_BUILD=	yes
 REPLACE_PYTHON=	slackpkg2pkgsrc.py
 
 INSTALLATION_DIRS=	bin

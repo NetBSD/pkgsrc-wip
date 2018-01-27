@@ -17,8 +17,8 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_TOOLS+=	perl:run
 USE_LANGUAGES=	# none
 
-NO_BUILD=	yes
-REPLACE_PERL=	sdif
+NO_BUILD=		yes
+REPLACE_PERL=		sdif
 INSTALLATION_DIRS=	bin
 
 do-install:

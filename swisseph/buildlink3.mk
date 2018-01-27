@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	swisseph
 SWISSEPH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.swisseph+=	swisseph>=1.78.00
-BUILDLINK_PKGSRCDIR.swisseph?=	../../wip/swisseph
+BUILDLINK_PKGSRCDIR.swisseph?=		../../wip/swisseph
 .endif	# SWISSEPH_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-swisseph

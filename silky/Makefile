@@ -11,7 +11,7 @@ HOMEPAGE=	http://silky.sourceforge.net/
 COMMENT=	Silky is an easy-to-use graphical SILC client
 
 
-USE_TOOLS+=gmake
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

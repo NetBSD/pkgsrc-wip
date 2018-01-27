@@ -13,11 +13,11 @@ COMMENT=	Java benchmark for scientific and numerical computing
 
 WRKSRC=		${WRKDIR}
 
-USE_JAVA=  run
+USE_JAVA=	run
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-SCMDIR=	${PREFIX}/lib/java/scimark2
+SCMDIR=		${PREFIX}/lib/java/scimark2
 SCMJDIR=	${PREFIX}/lib/java/scimark2/jnt
 
 INSTALLATION_DIRS=	bin ${SCMJDIR}

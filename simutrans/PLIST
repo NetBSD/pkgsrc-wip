@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/sim
 bin/simutrans
+share/simutrans/ai/readme.txt
 share/simutrans/change_request.txt
 share/simutrans/config/simuconf.tab
 share/simutrans/copyright.txt
@@ -14,7 +15,6 @@ share/simutrans/font/ro_font.fnt
 share/simutrans/history.txt
 share/simutrans/license.txt
 share/simutrans/license_squirrel.txt
-share/simutrans/ai/readme.txt
 share/simutrans/music/01-Simutrans-Main-Theme.mid
 share/simutrans/music/02-Gotta-catch-that-train.mid
 share/simutrans/music/03-Sunday-drivers.mid

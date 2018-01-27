@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.scilab?=	../../math/scilab
 
 BUILDLINK_FILES.scilab+=	lib/scilab-${SCIVERSION}/Version.incl
 
-SCI=	${BUILDLINK_DIR}/lib/scilab-5.5.2
+SCI=		${BUILDLINK_DIR}/lib/scilab-5.5.2
 CONFIGURE_ENV+=	SCI=${SCI:Q}
 MAKE_ENV+=	SCI=${SCI:Q}
 

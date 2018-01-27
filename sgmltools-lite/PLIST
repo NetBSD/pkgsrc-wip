@@ -4,6 +4,10 @@ bin/gensgmlenv
 bin/sgmltools
 bin/sgmlwhich
 man/man1/sgmltools-lite.1
+share/examples/sgmltools-lite/aliases
+share/examples/sgmltools-lite/catalog
+share/examples/sgmltools-lite/catalog.rh62
+share/examples/sgmltools-lite/catalog.suse
 share/sgml/dtd/sgmltools/catalog
 share/sgml/dtd/sgmltools/common
 share/sgml/dtd/sgmltools/deprec96
@@ -31,8 +35,4 @@ share/sgml/stylesheets/sgmltools/html.dsl
 share/sgml/stylesheets/sgmltools/ld2db.dsl
 share/sgml/stylesheets/sgmltools/print.dsl
 share/sgml/stylesheets/sgmltools/sgmltools.cat
-share/examples/sgmltools-lite/aliases
-share/examples/sgmltools-lite/catalog
-share/examples/sgmltools-lite/catalog.rh62
-share/examples/sgmltools-lite/catalog.suse
 @exec ${MKDIR} %D/share/sgml/misc/sgmltools/site-backends

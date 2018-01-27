@@ -1,17 +1,17 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:19 thomasklausner Exp $
-share/squirrelmail/plugins/vlogin/functions.php
-share/squirrelmail/plugins/vlogin/setup.php
-share/squirrelmail/plugins/vlogin/INSTALL
 share/squirrelmail/plugins/vlogin/COPYING
-share/squirrelmail/plugins/vlogin/index.php
+share/squirrelmail/plugins/vlogin/INSTALL
 share/squirrelmail/plugins/vlogin/README
-share/squirrelmail/plugins/vlogin/data/config.php.sample
 share/squirrelmail/plugins/vlogin/data/.htaccess
-share/squirrelmail/plugins/vlogin/data/index.php
+share/squirrelmail/plugins/vlogin/data/config.php.sample
+share/squirrelmail/plugins/vlogin/data/config.php.sample.per_user_functions_only
+share/squirrelmail/plugins/vlogin/data/config.php.sample.typical
 share/squirrelmail/plugins/vlogin/data/domains/domain.com.vlogin.config.php
 share/squirrelmail/plugins/vlogin/data/hostmap.dat.sample
-share/squirrelmail/plugins/vlogin/data/config.php.sample.typical
+share/squirrelmail/plugins/vlogin/data/index.php
 share/squirrelmail/plugins/vlogin/data/users.dat.sample
-share/squirrelmail/plugins/vlogin/data/config.php.sample.per_user_functions_only
-share/squirrelmail/plugins/vlogin/version
+share/squirrelmail/plugins/vlogin/functions.php
 share/squirrelmail/plugins/vlogin/functions.php.debug
+share/squirrelmail/plugins/vlogin/index.php
+share/squirrelmail/plugins/vlogin/setup.php
+share/squirrelmail/plugins/vlogin/version

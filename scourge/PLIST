@@ -1,7 +1,7 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:17 thomasklausner Exp $
 bin/scourge
-share/scourgedir/scourge
 share/scourgedir/data/.DS_Store
+share/scourgedir/data/Thumbs.db
 share/scourgedir/data/bookshelf.bmp
 share/scourgedir/data/candle.bmp
 share/scourgedir/data/chestfront.bmp
@@ -14,6 +14,7 @@ share/scourgedir/data/doorNS.bmp
 share/scourgedir/data/flame.bmp
 share/scourgedir/data/floor.bmp
 share/scourgedir/data/floor2.bmp
+share/scourgedir/data/floor3.bmp
 share/scourgedir/data/fonts/.DS_Store
 share/scourgedir/data/fonts/curlfont.txf
 share/scourgedir/data/fonts/default.txf
@@ -32,6 +33,7 @@ share/scourgedir/data/gui.bmp
 share/scourgedir/data/gui_small.bmp
 share/scourgedir/data/light.bmp
 share/scourgedir/data/logo.bmp
+share/scourgedir/data/marble.bmp
 share/scourgedir/data/models/.DS_Store
 share/scourgedir/data/models/m1.bmp
 share/scourgedir/data/models/m1.md2
@@ -46,17 +48,17 @@ share/scourgedir/data/models/m5.md2
 share/scourgedir/data/models/m6.bmp
 share/scourgedir/data/models/m6.md2
 share/scourgedir/data/objects/axe.3ds
-share/scourgedir/data/objects/sword.3ds
-share/scourgedir/data/objects/corpse.3ds
-share/scourgedir/data/objects/table.3ds
-share/scourgedir/data/objects/chair.3ds
-share/scourgedir/data/objects/helmet.3ds
-share/scourgedir/data/objects/column.3ds
 share/scourgedir/data/objects/board.3ds
-share/scourgedir/data/objects/stairs.3ds
-share/scourgedir/data/objects/gate.3ds
+share/scourgedir/data/objects/chair.3ds
+share/scourgedir/data/objects/column.3ds
+share/scourgedir/data/objects/corpse.3ds
 share/scourgedir/data/objects/gate-down.3ds
 share/scourgedir/data/objects/gate-up.3ds
+share/scourgedir/data/objects/gate.3ds
+share/scourgedir/data/objects/helmet.3ds
+share/scourgedir/data/objects/stairs.3ds
+share/scourgedir/data/objects/sword.3ds
+share/scourgedir/data/objects/table.3ds
 share/scourgedir/data/portraits/.DS_Store
 share/scourgedir/data/portraits/p1.bmp
 share/scourgedir/data/portraits/p10.bmp
@@ -73,7 +75,5 @@ share/scourgedir/data/scourge.bmp
 share/scourgedir/data/torchback.bmp
 share/scourgedir/data/wood.bmp
 share/scourgedir/data/woodtop.bmp
-share/scourgedir/data/Thumbs.db
-share/scourgedir/data/marble.bmp
-share/scourgedir/data/floor3.bmp
 share/scourgedir/saved/scourge.cfg
+share/scourgedir/scourge

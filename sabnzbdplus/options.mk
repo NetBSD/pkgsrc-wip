@@ -43,5 +43,5 @@ DEPENDS+=	${PYPKGPREFIX}-yenc-[0-9]*:../../converters/py-yenc
 ###
 .if !empty(PKG_OPTIONS:Mopenssl)
 DEPENDS+=	openssl-[0-9]*:../../security/openssl
-DEPENDS+= ${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 .endif

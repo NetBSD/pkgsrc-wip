@@ -1,8 +1,8 @@
 @comment $NetBSD$
 bin/shellinaboxd
 man/man1/shellinaboxd.1
-share/examples/rc.d/shellinaboxd
 share/doc/shellinabox/AUTHORS
 share/doc/shellinabox/COPYING
 share/doc/shellinabox/GPL-2
 share/doc/shellinabox/NEWS
+share/examples/rc.d/shellinaboxd

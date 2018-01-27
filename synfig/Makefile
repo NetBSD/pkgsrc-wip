@@ -11,7 +11,7 @@ COMMENT=	Vector-based 2D animation renderer
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=			pkg-config
+USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

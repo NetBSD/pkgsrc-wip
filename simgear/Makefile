@@ -17,7 +17,7 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_CMAKE=		yes
 
-BUILDLINK_API_DEPENDS.plib+= plib>=1.8.5
+BUILDLINK_API_DEPENDS.plib+=	plib>=1.8.5
 
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

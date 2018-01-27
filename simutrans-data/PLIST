@@ -1,16 +1,4 @@
 @comment $NetBSD$
-${PLIST.pak64}share/simutrans/pak/scenario/millionaire/de.tab
-${PLIST.pak64}share/simutrans/pak/sound/buzzsaw.wav
-${PLIST.pak64}share/simutrans/pak/sound/tree-cutting.wav
-${PLIST.pak64}share/simutrans/pak/symbol.CompassIso.pak
-${PLIST.pak64}share/simutrans/pak/symbol.CompassMap.pak
-${PLIST.pak64}share/simutrans/pak/text/frp.tab
-${PLIST.pak64}share/simutrans/pak/tree.Tree10.pak
-${PLIST.pak64}share/simutrans/pak/tree.Tree11.pak
-${PLIST.pak64}share/simutrans/pak/tree.Tree12.pak
-${PLIST.pak64}share/simutrans/pak/vehicle.Fahrradrikscha.pak
-${PLIST.pak64}share/simutrans/pak/vehicle.Rikscha.pak
-${PLIST.pak64}share/simutrans/pak/vehicle.Saenfte.pak
 ${PLIST.pak64}share/simutrans/pak/bridge.ClassicRail.pak
 ${PLIST.pak64}share/simutrans/pak/bridge.ClassicRoad.pak
 ${PLIST.pak64}share/simutrans/pak/bridge.MaglevBridge.pak
@@ -420,6 +408,7 @@ ${PLIST.pak64}share/simutrans/pak/scenario/anthill/en.tab
 ${PLIST.pak64}share/simutrans/pak/scenario/anthill/scenario.nut
 ${PLIST.pak64}share/simutrans/pak/scenario/book-empire/book-empire.sve
 ${PLIST.pak64}share/simutrans/pak/scenario/book-empire/scenario.nut
+${PLIST.pak64}share/simutrans/pak/scenario/millionaire/de.tab
 ${PLIST.pak64}share/simutrans/pak/scenario/millionaire/millionaire.sve
 ${PLIST.pak64}share/simutrans/pak/scenario/millionaire/scenario.nut
 ${PLIST.pak64}share/simutrans/pak/scenario/pharmacy-max/de.tab
@@ -436,6 +425,7 @@ ${PLIST.pak64}share/simutrans/pak/sound/arctic.wav
 ${PLIST.pak64}share/simutrans/pak/sound/boat-horn.wav
 ${PLIST.pak64}share/simutrans/pak/sound/boing.wav
 ${PLIST.pak64}share/simutrans/pak/sound/bus.wav
+${PLIST.pak64}share/simutrans/pak/sound/buzzsaw.wav
 ${PLIST.pak64}share/simutrans/pak/sound/cash.wav
 ${PLIST.pak64}share/simutrans/pak/sound/click.wav
 ${PLIST.pak64}share/simutrans/pak/sound/comet-jet.wav
@@ -451,6 +441,7 @@ ${PLIST.pak64}share/simutrans/pak/sound/jackhammer.wav
 ${PLIST.pak64}share/simutrans/pak/sound/planelow.wav
 ${PLIST.pak64}share/simutrans/pak/sound/sound.tab
 ${PLIST.pak64}share/simutrans/pak/sound/steam.wav
+${PLIST.pak64}share/simutrans/pak/sound/tree-cutting.wav
 ${PLIST.pak64}share/simutrans/pak/sound/tropic.wav
 ${PLIST.pak64}share/simutrans/pak/sound/truck.wav
 ${PLIST.pak64}share/simutrans/pak/symbol.AirStop.pak
@@ -458,6 +449,8 @@ ${PLIST.pak64}share/simutrans/pak/symbol.BigLogo.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.BusStop.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.CarStop.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.ColorOptions.pak
+${PLIST.pak64}share/simutrans/pak/symbol.CompassIso.pak
+${PLIST.pak64}share/simutrans/pak/symbol.CompassMap.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.Electricity.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.Flags.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.InTown.pak
@@ -514,6 +507,7 @@ ${PLIST.pak64}share/simutrans/pak/text/es.tab
 ${PLIST.pak64}share/simutrans/pak/text/et.tab
 ${PLIST.pak64}share/simutrans/pak/text/fi.tab
 ${PLIST.pak64}share/simutrans/pak/text/fr.tab
+${PLIST.pak64}share/simutrans/pak/text/frp.tab
 ${PLIST.pak64}share/simutrans/pak/text/gr.tab
 ${PLIST.pak64}share/simutrans/pak/text/hr.tab
 ${PLIST.pak64}share/simutrans/pak/text/hu.tab
@@ -561,6 +555,9 @@ ${PLIST.pak64}share/simutrans/pak/tree.Tanne_4.pak
 ${PLIST.pak64}share/simutrans/pak/tree.Tanne_5.pak
 ${PLIST.pak64}share/simutrans/pak/tree.Tanne_6.pak
 ${PLIST.pak64}share/simutrans/pak/tree.Tree1.pak
+${PLIST.pak64}share/simutrans/pak/tree.Tree10.pak
+${PLIST.pak64}share/simutrans/pak/tree.Tree11.pak
+${PLIST.pak64}share/simutrans/pak/tree.Tree12.pak
 ${PLIST.pak64}share/simutrans/pak/tree.Tree3.pak
 ${PLIST.pak64}share/simutrans/pak/tree.Tree5.pak
 ${PLIST.pak64}share/simutrans/pak/tree.Tree6.pak
@@ -683,6 +680,7 @@ ${PLIST.pak64}share/simutrans/pak/vehicle.Erztrailer.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.Erztransporter.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.Erzwagen.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.F7back.pak
+${PLIST.pak64}share/simutrans/pak/vehicle.Fahrradrikscha.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.FastFerry.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.Flachwagen.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.Fokker_F27.pak
@@ -780,9 +778,11 @@ ${PLIST.pak64}share/simutrans/pak/vehicle.Postwagen.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.PrPersonenwagen.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.PrPostwagen.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.RenaultTH5.pak
+${PLIST.pak64}share/simutrans/pak/vehicle.Rikscha.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.SD40-2-back.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.SD40-2-front.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.SMPoiltruck.pak
+${PLIST.pak64}share/simutrans/pak/vehicle.Saenfte.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.Sandanhaenger.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.Sandtransporter.pak
 ${PLIST.pak64}share/simutrans/pak/vehicle.Schooner_Bark.pak

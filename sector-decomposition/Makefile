@@ -8,7 +8,7 @@ MASTER_SITES=	http://wwwthep.physik.uni-mainz.de/~stefanw/download/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~stefanw/sector_decomposition/
-COMMENT= Used to compute numerically the Laurent expansion of Feynman integrals
+COMMENT=	Used to compute numerically the Laurent expansion of Feynman integrals
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes

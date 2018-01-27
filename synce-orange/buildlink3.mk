@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	orange
 ORANGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.orange+=	orange>=0.3
-BUILDLINK_PKGSRCDIR.orange?=		../../wip/synce-orange
+BUILDLINK_PKGSRCDIR.orange?=	../../wip/synce-orange
 
 .include "../../archivers/unshield/buildlink3.mk"
 .include "../../comms/synce-libsynce/buildlink3.mk"

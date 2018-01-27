@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2014/07/27 00:10:12 jihbed Exp $
 
 DISTNAME=	superlfv-1.0-0
-PKGNAME=${DISTNAME:S/-0//}
+PKGNAME=	${DISTNAME:S/-0//}
 CATEGORIES=	math java
 MASTER_SITES=	http://www.hepforge.org/archive/superlfv/
 EXTRACT_SUFX=	.zip

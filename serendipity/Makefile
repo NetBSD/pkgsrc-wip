@@ -28,8 +28,8 @@ REPLACE_FILES.perl=	htmlarea/plugins/SpellChecker/spell-check-logic.cgi
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/serendipity
 
-WWW_USER?=              ${APACHE_USER}
-WWW_GROUP?=             ${APACHE_GROUP}
+WWW_USER?=		${APACHE_USER}
+WWW_GROUP?=		${APACHE_GROUP}
 
 PKG_GROUPS_VARS+=	WWW_GROUP
 PKG_USERS_VARS+=	WWW_USER

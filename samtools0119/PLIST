@@ -24,9 +24,9 @@ samtools0119/bin/vcfutils.lua
 samtools0119/bin/wgsim
 samtools0119/bin/wgsim_eval.pl
 samtools0119/bin/zoom2sam.pl
+samtools0119/include/bam/bam.h
 samtools0119/include/bam/bam2bcf.h
 samtools0119/include/bam/bam_endian.h
-samtools0119/include/bam/bam.h
 samtools0119/include/bam/bam_tview.h
 samtools0119/include/bam/bgzf.h
 samtools0119/include/bam/errmod.h

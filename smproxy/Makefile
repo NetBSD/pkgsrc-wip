@@ -11,7 +11,7 @@ COMMENT=	Proxy to allow non-XSMP apps to be managed by xsm
 
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+= pkg-config
+USE_TOOLS+=	pkg-config
 
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

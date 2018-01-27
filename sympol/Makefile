@@ -15,11 +15,11 @@ DEPENDS+=	lrslib>=4.3:../../wip/lrslib
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-SUBST_CLASSES+=		installman
-SUBST_STAGE.installman=	pre-configure
-SUBST_SED.installman+=	-e 's,share/man/man1,man/man1,g'
+SUBST_CLASSES+=			installman
+SUBST_STAGE.installman=		pre-configure
+SUBST_SED.installman+=		-e 's,share/man/man1,man/man1,g'
 SUBST_FILES.installman+=	sympol/CMakeLists.txt
-SUBST_MESSAGE.paths=	Fixing header search paths.
+SUBST_MESSAGE.paths=		Fixing header search paths.
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

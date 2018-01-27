@@ -9,7 +9,7 @@ HOMEPAGE=		https://github.com/andmarti1424/scim/
 COMMENT=		Text-mode spreadsheet
 
 GIT_REPOSITORIES=	scim
-GIT_REPO.scim= 		git://github.com/andmarti1424/scim.git
+GIT_REPO.scim=		git://github.com/andmarti1424/scim.git
 WRKSRC=			${WRKDIR}/scim
 
 MAKE_JOBS_SAFE=		no

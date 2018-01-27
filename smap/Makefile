@@ -21,7 +21,7 @@ LDFLAGS+=	-lm
 LDFLAGS+=	${PTHREAD_LDFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS}
 
-SUBST_CLASSES+=	cflags
+SUBST_CLASSES+=		cflags
 SUBST_FILES.cflags=	Makefile
 SUBST_SED.cflags=	-e 's/^CFLAGS=/CFLAGS?=/g'
 SUBST_SED.cflags+=	-e 's/^LDFLAGS=/LDFLAGS?=/g'

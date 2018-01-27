@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.6 2015/02/04 10:10:53 thomasklausner Exp $
 
-DISTNAME=       sabnzbdplus-${DISTVERSION}
-DISTVERSION= 0.7.16
-DISTFILES=      SABnzbd-${DISTVERSION}-src${EXTRACT_SUFX}
+DISTNAME=	sabnzbdplus-${DISTVERSION}
+DISTVERSION=	0.7.16
+DISTFILES=	SABnzbd-${DISTVERSION}-src${EXTRACT_SUFX}
 CATEGORIES=	news
-MASTER_SITES=    ${MASTER_SITE_SOURCEFORGE:=sabnzbdplus/sabnzbdplus/}${DISTVERSION}/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sabnzbdplus/sabnzbdplus/}${DISTVERSION}/
 
 MAINTAINER=	wongk@apt.homeunix.net
 HOMEPAGE=	http://sabnzbdplus.sourceforge.net/
@@ -28,18 +28,18 @@ PKG_GROUPS=		sabnzbd
 PKG_USERS=		sabnzbd:sabnzbd
 PKG_HOME.sabnzbd=	${PREFIX}/sabnzbd
 
-OWN_DIRS_PERMS= ${PREFIX}/sabnzbd sabnzbd sabnzbd 0755
+OWN_DIRS_PERMS=	${PREFIX}/sabnzbd sabnzbd sabnzbd 0755
 
 INSTALLATION_DIRS+=	cherrypy gntp interfaces locale po tools util
 
-PY_PATCHPLIST=          yes
+PY_PATCHPLIST=		yes
 REPLACE_PYTHON=		*.py */*.py */*/*.py
 
-SUBST_CLASSES+=	fix-paths
-SUBST_STAGE.fix-paths=	pre-configure
-SUBST_MESSAGE.fix-paths= Fix absolute paths.
-SUBST_FILES.fix-paths=	SABnzbd.py
-SUBST_SED.fix-paths=	-e 's,%%PREFIX%%,${PREFIX},g'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fix absolute paths.
+SUBST_FILES.fix-paths=		SABnzbd.py
+SUBST_SED.fix-paths=		-e 's,%%PREFIX%%,${PREFIX},g'
 
 do-install:
 	${MKDIR} ${DESTDIR}/${PREFIX}/bin

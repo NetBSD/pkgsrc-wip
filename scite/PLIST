@@ -8,6 +8,7 @@ share/scite/PaneAPI.html
 share/scite/PrintHi.png
 share/scite/SciTE.html
 share/scite/SciTE.properties
+share/scite/SciTE.properties
 share/scite/SciTEDirector.html
 share/scite/SciTEDoc.html
 share/scite/SciTEDownload.html
@@ -15,7 +16,6 @@ share/scite/SciTEExtension.html
 share/scite/SciTEExternalLexer.html
 share/scite/SciTEExtras.html
 share/scite/SciTEFAQ.html
-share/scite/SciTE.properties
 share/scite/SciTEGlobal.properties
 share/scite/SciTEIco.png
 share/scite/SciTEImage.html

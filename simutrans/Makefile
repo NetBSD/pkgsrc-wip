@@ -4,10 +4,12 @@ PKGNAME=	simutrans-120.2.2
 DISTNAME=	simutrans-src-120-2-2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simutrans/}
-DISTFILES+=     language_pack-Base+texts.zip
-SITES.language_pack-Base+texts.zip=http://simutrans-germany.com/translator/data/tab/
-DISTFILES+=     ${DISTNAME}${EXTRACT_SUFX}
-SITES.${DISTNAME}${EXTRACT_SUFX}=${MASTER_SITE_SOURCEFORGE:=simutrans/}120-2-2/${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	language_pack-Base+texts.zip
+SITES.language_pack-Base+texts.zip= \
+		http://simutrans-germany.com/translator/data/tab/
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
+SITES.${DISTNAME}${EXTRACT_SUFX}= \
+		${MASTER_SITE_SOURCEFORGE:=simutrans/}120-2-2/${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,9 +20,9 @@ LICENSE=	artistic
 USE_TOOLS+=	pkg-config unzip gmake pax grep
 USE_LANGUAGES=	c++ c
 
-DEPENDS+=       simutrans-data-0.1{,nb*}:../../wip/simutrans-data
+DEPENDS+=	simutrans-data-0.1{,nb*}:../../wip/simutrans-data
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/configure.sh
 
@@ -33,7 +35,7 @@ PTHREAD_OPTS+=		require
 #AUTO_MKDIRS=		yes
 WRKSRC=			${WRKDIR}/simutrans
 
-SUBST_CLASSES+=	testeq
+SUBST_CLASSES+=		testeq
 SUBST_STAGE.testeq=	post-extract
 SUBST_MESSAGE.testeq=	Replace non-portable "==" operator for test(1)
 SUBST_FILES.testeq=	*.sh

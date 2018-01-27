@@ -7,11 +7,11 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/spyder-ide/spyder/wiki
-COMMENT= 	Scientific PYthon Development EnviRonment, alternative to IDLE
+COMMENT=	Scientific PYthon Development EnviRonment, alternative to IDLE
 LICENSE=	mit
 
-DEPENDS+= 	${PYPKGPREFIX}-rope>=0.9.3:../../devel/py-rope
-DEPENDS+= 	${PYPKGPREFIX}-sphinx>=1.2.3:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-rope>=0.9.3:../../devel/py-rope
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3:../../textproc/py-sphinx
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none

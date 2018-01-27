@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=			gmake
+USE_TOOLS+=		gmake
 
 GCONF_SCHEMAS+=	synfigstudio-thumbnailer.schemas
 post-install:

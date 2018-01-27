@@ -26,32 +26,32 @@ EGFILES=	htm.cf paths.pl paths.sh ports programs sara.cf \
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-SUBST_CLASSES+=	grp
-SUBST_STAGE.grp= post-patch
-SUBST_FILES.grp= src/misc/rex.c src/nfs-chk/nfs-chk.c
-SUBST_SED.grp= -e 's,GETGROUPS_T,gid_t,g'
+SUBST_CLASSES+=		grp
+SUBST_STAGE.grp=	post-patch
+SUBST_FILES.grp=	src/misc/rex.c src/nfs-chk/nfs-chk.c
+SUBST_SED.grp=		-e 's,GETGROUPS_T,gid_t,g'
 
 # Disable build of fping.
-SUBST_CLASSES+= fping
-SUBST_STAGE.fping= post-patch
-SUBST_FILES.fping= src/fping/Makefile
-SUBST_SED.fping= -e 's,: $$(PROG),:,g'
+SUBST_CLASSES+=		fping
+SUBST_STAGE.fping=	post-patch
+SUBST_FILES.fping=	src/fping/Makefile
+SUBST_SED.fping=	-e 's,: $$(PROG),:,g'
 
 # Change default path
-SUBST_CLASSES+= path
-SUBST_STAGE.path= pre-install
-SUBST_FILES.path= sara perl/* perllib/* bin/* html/*.pl
-SUBST_SED.path = -e 's,config\/,${EGDIR}/,g'
-SUBST_SED.path+= -e 's,perl.*\/,${PREFIX}/share/sara/,g'
-SUBST_SED.path+= -e 's,rules/,${PREFIX}/share/sara/rules/,g'
-SUBST_SED.path+= -e 's,`pwd`,\"${PREFIX}/share/sara/\",g'
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-install
+SUBST_FILES.path=	sara perl/* perllib/* bin/* html/*.pl
+SUBST_SED.path =	-e 's,config\/,${EGDIR}/,g'
+SUBST_SED.path+=	-e 's,perl.*\/,${PREFIX}/share/sara/,g'
+SUBST_SED.path+=	-e 's,rules/,${PREFIX}/share/sara/rules/,g'
+SUBST_SED.path+=	-e 's,`pwd`,\"${PREFIX}/share/sara/\",g'
 
 # Default bin path
-SUBST_CLASSES+= defpath
-SUBST_STAGE.defpath=post-build
-SUBST_FILES.defpath=config/paths.pl
-SUBST_SED.defpath = -e 's,\"bin/,\"${PREFIX}/bin/,g'
-SUBST_SED.defpath+= -e 's,config,${EGDIR}/,g'
+SUBST_CLASSES+=		defpath
+SUBST_STAGE.defpath=	post-build
+SUBST_FILES.defpath=	config/paths.pl
+SUBST_SED.defpath =	-e 's,\"bin/,\"${PREFIX}/bin/,g'
+SUBST_SED.defpath+=	-e 's,config,${EGDIR}/,g'
 
 REPLACE_PERL=	bin/get_targets bin/faux_fping sara add_user \
 	bin/*.sara* bin/*.sara.ext perl/*.pl perl/contrib/* html/*.pl \

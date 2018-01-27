@@ -86,7 +86,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=       --with-ncurses
+CONFIGURE_ARGS+=	--with-ncurses
 .elif ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--with-ncurses=no
 .endif

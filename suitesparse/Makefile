@@ -22,9 +22,9 @@ LICENSE=	gnu-gpl-v2
 CFLAGS+=	-O ${PTHREAD_CFLAGS} ${PICFLAG}
 
 .if ( ${MACHINE_ARCH} == "sparc" ) || ( ${MACHINE_ARCH} == "powerpc" )
-PICFLAG?=       -fPIC
+PICFLAG?=	-fPIC
 .else
-PICFLAG?=       -fpic
+PICFLAG?=	-fpic
 .endif
 
 # Platforms without librt
@@ -44,15 +44,15 @@ USE_TOOLS+=	gmake gsed
 
 USE_LANGUAGES=	c c++ fortran77
 
-WRKSRC=${WRKDIR}/SuiteSparse
+WRKSRC=		${WRKDIR}/SuiteSparse
 # Creating shared libs for all platforms is complicated.  Putting this off
 # for now.
 # WRKSRC_SHARED=${WRKSRC}_shared
-SVERSION=1
+SVERSION=	1
 
 .if defined (WITH_METIS)
-METIS=${PREFIX}/lib/libmetis.a
-METIS_PATH=${PREFIX}/include/metis
+METIS=			${PREFIX}/lib/libmetis.a
+METIS_PATH=		${PREFIX}/include/metis
 CHOLMOD_CONFIG =
 .else
 CHOLMOD_CONFIG =	-DNPARTITION

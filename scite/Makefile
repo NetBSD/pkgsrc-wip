@@ -12,12 +12,12 @@ HOMEPAGE=	http://scintilla.sourceforge.net/
 COMMENT=	Source code editor
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/scite
-USE_LANGUAGES=	c c++
-BUILD_DIRS+=	gtk
-USE_TOOLS+=	gmake pkg-config
-MAKE_FILE=	makefile
-INSTALLATION_DIRS= share/applications share/pixmaps
+WRKSRC=			${WRKDIR}/scite
+USE_LANGUAGES=		c c++
+BUILD_DIRS+=		gtk
+USE_TOOLS+=		gmake pkg-config
+MAKE_FILE=		makefile
+INSTALLATION_DIRS=	share/applications share/pixmaps
 
 .include "../../mk/bsd.prefs.mk"
 

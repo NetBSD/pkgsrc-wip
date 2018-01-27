@@ -2,7 +2,7 @@
 
 DISTNAME=	slrn-pre1.0.0-26
 PKGNAME=	slrn-pre1.0.0-26
-CONFLICTS=      slrn-pl-[0-9]* slrn-[0-9]*
+CONFLICTS=	slrn-pl-[0-9]* slrn-[0-9]*
 LICENSE=	gnu-gpl-v2
 #PKGREVISION=	1
 CATEGORIES=	news

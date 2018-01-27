@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/SymbolicC++3-3.35
 
-GNU_CONFIGURE= yes
-USE_LIBTOOL= yes
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.pkg.mk"

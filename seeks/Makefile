@@ -12,9 +12,9 @@ COMMENT=	Decentralized metasearch engine
 
 MAKE_JOBS_SAFE=	no
 
-DEPENDS+=       autogen-[0-9]*:../../devel/autogen
-DEPENDS+=       autoconf>=2.59:../../devel/autoconf
-DEPENDS+=       automake>=1.8.2:../../devel/automake
+DEPENDS+=	autogen-[0-9]*:../../devel/autogen
+DEPENDS+=	autoconf>=2.59:../../devel/autoconf
+DEPENDS+=	automake>=1.8.2:../../devel/automake
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

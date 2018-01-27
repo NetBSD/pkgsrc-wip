@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	structure
 STRUCTURE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.structure+=	structure>=2.3.4
-BUILDLINK_PKGSRCDIR.structure?=	../../wip/structure
+BUILDLINK_PKGSRCDIR.structure?=		../../wip/structure
 .endif	# STRUCTURE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-structure

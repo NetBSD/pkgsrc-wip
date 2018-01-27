@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	flex pax
-USE_LANGUAGES=  c
+USE_LANGUAGES=	c
 
 CONFIGURE_ARGS+=	--without-readline
 

@@ -22,12 +22,12 @@ lib/sipwitch/forward.so
 lib/sipwitch/scripting.so
 lib/sipwitch/subscriber.so
 lib/sipwitch/zeroconf.so
-sbin/sipw
-share/examples/sipwitch/sipwitch.conf
-share/examples/sipwitch/sipwitch.d/lab.xml-example
-share/examples/sipwitch/sipwitch.d/tests.xml
 man/man1/sippasswd.1
 man/man1/sipquery.1
 man/man1/sipwitch.1
 man/man8/sipw.8
 man/man8/sipwitch.cgi.8
+sbin/sipw
+share/examples/sipwitch/sipwitch.conf
+share/examples/sipwitch/sipwitch.d/lab.xml-example
+share/examples/sipwitch/sipwitch.d/tests.xml
