@@ -12,7 +12,7 @@ COMMENT=	Offer a system to generate binary updates for NetBSD
 
 WRKSRC=	${WRKDIR}/haze
 
-INSTALLATION_DIRS= sbin
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/haze ${DESTDIR}${PREFIX}/sbin/haze

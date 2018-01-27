@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.1.1.1 2008/08/22 05:10:37 phonohawk Exp $
 #
 
-PKG_OPTIONS_VAR= PKG_OPTIONS.hengband
+PKG_OPTIONS_VAR=	PKG_OPTIONS.hengband
 
 PKG_SUPPORTED_OPTIONS= \
 	japanese \
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS= \
 .include "../../mk/bsd.options.mk"
 
 .if empty(PKG_OPTIONS:Mjapanese)
-CONFIGURE_ARGS+= --disable-japanese
+CONFIGURE_ARGS+=	--disable-japanese
 .endif
 
 .if !empty(PKG_OPTIONS:Mncurses)

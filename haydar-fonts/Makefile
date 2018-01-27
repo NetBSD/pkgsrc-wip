@@ -19,7 +19,7 @@ USE_TOOLS+=	bdftopcf
 USE_LANGUAGES=	# none
 
 FONTS_DIR=	${PREFIX}/lib/X11/fonts/haydar-fonts
-REQD_DIRS+=		${FONTS_DIR}/bdf
+REQD_DIRS+=	${FONTS_DIR}/bdf
 
 INSTALLATION_DIRS=	${FONTS_DIR}
 

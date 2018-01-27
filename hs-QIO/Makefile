@@ -5,7 +5,7 @@ DISTNAME=	QIO-1.2
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org
-HOMEPAGE=   http://www.cs.nott.ac.uk/~asg/QIO/
+HOMEPAGE=	http://www.cs.nott.ac.uk/~asg/QIO/
 COMMENT=	QIO Monad is a library for defining quantum computations
 LICENSE=	modified-bsd
 

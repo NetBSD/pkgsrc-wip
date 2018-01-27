@@ -11,7 +11,7 @@ HOMEPAGE=	http://omnibus.uni-freiburg.de/~sd565/programs/hawk/
 COMMENT=	HAWK is a Monte Carlo integrator for pp -> H + 2jets
 
 VERSION=	1.1
-USE_TOOLS+= gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c
 
 INSTALLATION_DIRS=	bin

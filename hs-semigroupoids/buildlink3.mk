@@ -7,7 +7,7 @@ HS_SEMIGROUPOIDS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-semigroupoids+=	hs-semigroupoids>=4.2
 BUILDLINK_ABI_DEPENDS.hs-semigroupoids+=	hs-semigroupoids>=4.2
-BUILDLINK_PKGSRCDIR.hs-semigroupoids?=	../../wip/hs-semigroupoids
+BUILDLINK_PKGSRCDIR.hs-semigroupoids?=		../../wip/hs-semigroupoids
 
 .include "../../wip/hs-comonad/buildlink3.mk"
 .include "../../wip/hs-contravariant/buildlink3.mk"

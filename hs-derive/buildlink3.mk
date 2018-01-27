@@ -7,7 +7,7 @@ HS_DERIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-derive+=	hs-derive>=2.5.16
 BUILDLINK_ABI_DEPENDS.hs-derive+=	hs-derive>=2.5.16
-BUILDLINK_PKGSRCDIR.hs-derive?=	../../wip/hs-derive
+BUILDLINK_PKGSRCDIR.hs-derive?=		../../wip/hs-derive
 
 .include "../../devel/hs-haskell-src-exts/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"

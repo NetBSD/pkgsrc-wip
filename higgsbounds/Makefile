@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/HiggsBounds
 
-HAS_CONFIGURE= yes
+HAS_CONFIGURE=	yes
 USE_TOOLS+=	bash:run gmake
 USE_LANGUAGES=	fortran
 
@@ -24,7 +24,7 @@ REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${TOOLS_PATH.bash}
 REPLACE_FILES.bash=	create_store_pathname.bat
 
-MAKE_FILE= makefile
+MAKE_FILE=	makefile
 
 INSTALLATION_DIRS=	bin
 

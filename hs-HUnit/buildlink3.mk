@@ -7,7 +7,7 @@ HS_HUNIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-HUnit+=	hs-HUnit>=1.2.5
 BUILDLINK_ABI_DEPENDS.hs-HUnit+=	hs-HUnit>=1.2.5.2
-BUILDLINK_PKGSRCDIR.hs-HUnit?=	../../wip/hs-HUnit
+BUILDLINK_PKGSRCDIR.hs-HUnit?=		../../wip/hs-HUnit
 .endif	# HS_HUNIT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-HUnit

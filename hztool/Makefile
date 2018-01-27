@@ -10,7 +10,7 @@ HOMEPAGE=	http://projects.hepforge.org/hztool//
 COMMENT=	Robust model-to-data comparisons
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP=  configure
+CHECK_PORTABILITY_SKIP=	configure
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++ fortran

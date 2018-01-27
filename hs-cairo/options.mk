@@ -17,21 +17,21 @@ PKG_SUGGESTED_OPTIONS= \
 
 # Enable the PDF backend of Cairo.
 .if !empty(PKG_OPTIONS:Mpdf)
-CONFIGURE_ARGS+= -fcairo_pdf
+CONFIGURE_ARGS+=	-fcairo_pdf
 .else
-CONFIGURE_ARGS+= -f-cairo_pdf
+CONFIGURE_ARGS+=	-f-cairo_pdf
 .endif
 
 # Enable the PostScript backend of Cairo.
 .if !empty(PKG_OPTIONS:Mps)
-CONFIGURE_ARGS+= -fcairo_ps
+CONFIGURE_ARGS+=	-fcairo_ps
 .else
-CONFIGURE_ARGS+= -f-cairo_ps
+CONFIGURE_ARGS+=	-f-cairo_ps
 .endif
 
 # Enable the Scalable Vector Graphics (SVG) backend of Cairo.
 .if !empty(PKG_OPTIONS:Msvg)
-CONFIGURE_ARGS+= -fcairo_svg
+CONFIGURE_ARGS+=	-fcairo_svg
 .else
-CONFIGURE_ARGS+= -f-cairo_svg
+CONFIGURE_ARGS+=	-f-cairo_svg
 .endif

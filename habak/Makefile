@@ -2,7 +2,7 @@
 
 H_VERSION=	0.2.5
 DISTNAME=	habak-${H_VERSION}
-PKGREVISION=    1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.gna.org/fvwm-crystal/habak/${H_VERSION}/
 

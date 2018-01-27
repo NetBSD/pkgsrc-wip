@@ -1,8 +1,8 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 bin/haserl
 man/man1/haserl.1
-share/haserl/haserl.xcf
-share/haserl/haserl.png
-share/haserl/haserl-button.png
 share/haserl/bunny.cgi
 share/haserl/formelements.cgi
+share/haserl/haserl-button.png
+share/haserl/haserl.png
+share/haserl/haserl.xcf

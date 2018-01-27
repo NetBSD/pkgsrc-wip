@@ -7,7 +7,7 @@ HS_SHAKE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-shake+=	hs-shake>=0.11.4
 BUILDLINK_ABI_DEPENDS.hs-shake+=	hs-shake>=0.11.4
-BUILDLINK_PKGSRCDIR.hs-shake?=	../../wip/hs-shake
+BUILDLINK_PKGSRCDIR.hs-shake?=		../../wip/hs-shake
 
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"

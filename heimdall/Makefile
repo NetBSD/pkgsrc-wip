@@ -11,12 +11,12 @@ HOMEPAGE=	http://www.glassechidna.com.au/products/heimdall/
 COMMENT=	Cross-platform OSS suite to flash firmware on Samsung Galaxy S devices
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/Heimdall-1.3.2
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pkg-config
-QMAKE=		${QTDIR}/bin/qmake
+WRKSRC=			${WRKDIR}/Heimdall-1.3.2
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake pkg-config
+QMAKE=			${QTDIR}/bin/qmake
 CONFIGURE_DIRS+=	libpit heimdall
 BUILD_DIRS+=		libpit heimdall heimdall-frontend
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}

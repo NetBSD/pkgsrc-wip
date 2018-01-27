@@ -7,7 +7,7 @@ HS_HASHED_STORAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hashed-storage+=	hs-hashed-storage>=0.5.10
 BUILDLINK_ABI_DEPENDS.hs-hashed-storage+=	hs-hashed-storage>=0.5.10
-BUILDLINK_PKGSRCDIR.hs-hashed-storage?=	../../wip/hs-hashed-storage
+BUILDLINK_PKGSRCDIR.hs-hashed-storage?=		../../wip/hs-hashed-storage
 
 .include "../../wip/hs-dataenc/buildlink3.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"

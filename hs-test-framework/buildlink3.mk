@@ -7,7 +7,7 @@ HS_TEST_FRAMEWORK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-test-framework+=	hs-test-framework>=0.8
 BUILDLINK_ABI_DEPENDS.hs-test-framework+=	hs-test-framework>=0.8
-BUILDLINK_PKGSRCDIR.hs-test-framework?=	../../wip/hs-test-framework
+BUILDLINK_PKGSRCDIR.hs-test-framework?=		../../wip/hs-test-framework
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../wip/hs-ansi-wl-pprint/buildlink3.mk"

@@ -8,8 +8,8 @@ MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell bindings to the terminfo library
 LICENSE=	modified-bsd
 
-CONFIGURE_ARGS+= --configure-option=--with-curses-includes=${PREFIX:Q}/include/ncurses
-CONFIGURE_ARGS+= --configure-option=--with-curses-libraries=${PREFIX:Q}/lib
+CONFIGURE_ARGS+=	--configure-option=--with-curses-includes=${PREFIX:Q}/include/ncurses
+CONFIGURE_ARGS+=	--configure-option=--with-curses-libraries=${PREFIX:Q}/lib
 
 USE_NCURSES=    yes
 .include "../../wip/mk/haskell.mk"

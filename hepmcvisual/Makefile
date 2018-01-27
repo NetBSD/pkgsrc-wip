@@ -13,7 +13,7 @@ COMMENT=	Interactive Browser for HepMC events
 
 WRKSRC=		${WRKDIR}/HepMCVisual
 
-CHECK_PORTABILITY_SKIP= configure
+CHECK_PORTABILITY_SKIP=	configure
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

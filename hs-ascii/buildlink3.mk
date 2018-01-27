@@ -7,7 +7,7 @@ HS_ASCII_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ascii+=	hs-ascii>=0.0.4
 BUILDLINK_ABI_DEPENDS.hs-ascii+=	hs-ascii>=0.0.4
-BUILDLINK_PKGSRCDIR.hs-ascii?=	../../wip/hs-ascii
+BUILDLINK_PKGSRCDIR.hs-ascii?=		../../wip/hs-ascii
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
