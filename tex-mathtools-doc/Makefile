@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	mathtools.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-${TEXLIVE_REV}
-TEXLIVE_REV=	38833
+DISTNAME=		mathtools.doc
+PKGNAME=		tex-${DISTNAME:S/./-/}-${TEXLIVE_REV}
+TEXLIVE_REV=		38833
 TEXLIVE_USE_CTAN=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

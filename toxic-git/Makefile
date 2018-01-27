@@ -5,8 +5,8 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JFreegman/}
 
 GIT_REPOSITORIES=	toxic
-GIT_REPO.toxic=	https://github.com/JFreegman/toxic.git
-WRKSRC=	${WRKDIR}/toxic
+GIT_REPO.toxic=		https://github.com/JFreegman/toxic.git
+WRKSRC=			${WRKDIR}/toxic
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.tox.chat/clients/toxic

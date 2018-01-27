@@ -13,7 +13,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5:../../textproc/py-lxml
 .endif
 
 .if !empty(PKG_OPTIONS:Mlevenshtein)
-DEPENDS+=       ${PYPKGPREFIX}-Levenshtein>=0.12:../../textproc/py-Levenshtein
+DEPENDS+=	${PYPKGPREFIX}-Levenshtein>=0.12:../../textproc/py-Levenshtein
 .endif
 
 .if !empty(PKG_OPTIONS:Mchardet)
@@ -29,14 +29,14 @@ DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3:../../www/py-beautifulsoup4
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6.3.:../../textproc/py-sphinx
+BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.6.3.:../../textproc/py-sphinx
 SUBST_CLASSES+=		sphinx
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"
 SUBST_FILES.sphinx+=	docs/Makefile
 SUBST_STAGE.sphinx=	pre-configure
 SUBST_MESSAGE.sphinx=	Fix sphinx command names.
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-PLIST.doc=	yes
+PLIST.doc=		yes
 
 pre-build:
 		cd ${WRKSRC}/docs && ${MAKE} man

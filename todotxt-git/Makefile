@@ -14,8 +14,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://todotxt.com/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-DEPENDS=	bash>=4.3:../../shells/bash
-DEPENDS+=	bash-completion>=2.1:../../shells/bash-completion
+DEPENDS=		bash>=4.3:../../shells/bash
+DEPENDS+=		bash-completion>=2.1:../../shells/bash-completion
 
 WRKSRC=		${WRKDIR}/todo.txt-cli
 
@@ -34,7 +34,7 @@ NO_BUILD=	yes
 EGDIR=		share/examples/todotxt
 DOCDIR=		share/doc/todotxt
 
-INSTALLATION_DIRS= bin ${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS=	bin ${DOCDIR} ${EGDIR}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/todo.sh ${DESTDIR}${PREFIX}/bin

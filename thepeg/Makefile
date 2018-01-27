@@ -12,13 +12,13 @@ HOMEPAGE=	http://home.thep.lu.se/~leif/ThePEG/
 COMMENT=	Toolkit for High Energy Physics Event Generation
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP= configure
+CHECK_PORTABILITY_SKIP=	configure
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake perl
-USE_GNU_READLINE= yes
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake perl
+USE_GNU_READLINE=	yes
+USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.prefs.mk"
 

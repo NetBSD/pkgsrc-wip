@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	txt2tags-2.5
-CATEGORIES=			textproc
+CATEGORIES=	textproc
 MASTER_SITES=	http://txt2tags.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
@@ -13,13 +13,13 @@ COMMENT=			Text formatting and conversion tool
 REPLACE_PYTHON=		txt2tags
 
 USE_PKGLOCALEDIR=	yes
-NO_BUILD=			yes
-USE_LANGUAGES=	# none
+NO_BUILD=		yes
+USE_LANGUAGES=		# none
 
 DOC_DIR=			${PREFIX}/share/doc/${PKGBASE}
 SAMPLES_DIR=			${PREFIX}/share/examples/${PKGBASE}
-INSTALLATION_DIRS+= 		${DOC_DIR} ${SAMPLES_DIR}
-INSTALLATION_DIRS+= 		bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=		${DOC_DIR} ${SAMPLES_DIR}
+INSTALLATION_DIRS+=		bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR} ${SAMPLES_DIR} ${DESTDIR}${SAMPLES_DIR}/img

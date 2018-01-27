@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.1 2009/06/09 17:19:16 marko_schuetz Exp $
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.tardy
-PKG_SUPPORTED_OPTIONS=          testing
+PKG_OPTIONS_VAR=		PKG_OPTIONS.tardy
+PKG_SUPPORTED_OPTIONS=		testing
 PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.prefs.mk"

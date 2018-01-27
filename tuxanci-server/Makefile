@@ -14,7 +14,7 @@ COMMENT=	Server of Czechoslovak multiplatform action game like Bulanci
 
 WRKSRC=	${WRKDIR}/pkgs/tuxanci-0.20.0-src
 
-USE_CMAKE=      yes
+USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++
 
 EGDIR=		${PREFIX}/share/examples
@@ -22,9 +22,9 @@ MAKE_ENV+=	EGDIR=${EGDIR}
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/tuxanci-server
 CONF_FILES+=	${EGDIR}/tuxanci-server/server.conf ${PKG_SYSCONFDIR}/tuxanci-server/server.conf
 
-CMAKE_ARGS+= -DServer=1 \
-	     -DPREFIX=\\\"${PREFIX}/\\\" \
-	     -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-	     -DEGDIR=${EGDIR}
+CMAKE_ARGS+=	-DServer=1 \
+		-DPREFIX=\\\"${PREFIX}/\\\" \
+		-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+		-DEGDIR=${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

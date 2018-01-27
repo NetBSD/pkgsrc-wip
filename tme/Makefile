@@ -3,7 +3,7 @@
 DISTNAME=	tme-0.10
 CATEGORIES=	emulators
 MASTER_SITES=	http://phabrics.com/
-EXTRACT_SUFX=   .tar.xz
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	phabrics@phabrics.com
 

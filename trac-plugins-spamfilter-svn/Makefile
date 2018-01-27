@@ -16,9 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.3.2dev/9935
 
-SVN_REPOSITORIES=	spamfilter
-SVN_REPO.spamfilter=	https://svn.edgewall.org/repos/trac/plugins/0.12/spam-filter-captcha
-SVN_REVISION.spamfilter=${SVNREV}
+SVN_REPOSITORIES=		spamfilter
+SVN_REPO.spamfilter=		https://svn.edgewall.org/repos/trac/plugins/0.12/spam-filter-captcha
+SVN_REVISION.spamfilter=	${SVNREV}
 
 NO_CHECKSUM=	yes
 

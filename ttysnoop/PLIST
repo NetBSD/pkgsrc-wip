@@ -1,4 +1,4 @@
 @comment $NetBSD: PLIST,v 1.2 2005/11/02 02:35:31 poppnk Exp $
+man/man8/ttysnoop.8
 sbin/ttysnoop
 sbin/ttysnoops
-man/man8/ttysnoop.8

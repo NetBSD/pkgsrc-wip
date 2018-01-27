@@ -1,11 +1,11 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 21:34:21 lrfurtado Exp $
 bin/htcobol
-share/htcobol/htcobolrc
-lib/libhtcobol.so.0.61.0
 lib/libhtcobol.so
 lib/libhtcobol.so.0
-share/htcobol/htcobolpp
-share/htcobol/copybooks/screen.cpy
-man/man1/htcobol.1
+lib/libhtcobol.so.0.61.0
 man/man1/htcobf2f.1
+man/man1/htcobol.1
 man/man1/htcobolpp.1
+share/htcobol/copybooks/screen.cpy
+share/htcobol/htcobolpp
+share/htcobol/htcobolrc

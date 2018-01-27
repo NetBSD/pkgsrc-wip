@@ -17,7 +17,7 @@ SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	makefile
 SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
-SUBST_STAGE.prefix=     post-patch
+SUBST_STAGE.prefix=	post-patch
 
 INSTALLATION_DIRS+=	bin
 

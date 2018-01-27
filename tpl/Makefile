@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/troydhanson/tpl/
 COMMENT=	Store and reload your C data
 LICENSE=	2-clause-bsd
 
-GNU_CONFIGURE= 	yes
+GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	automake autoconf aclocal
 USE_LANGUAGES=	c c++

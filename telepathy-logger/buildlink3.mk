@@ -7,7 +7,7 @@ TELEPATHY_LOGGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.telepathy-logger+=	telepathy-logger>=0.1.4
 BUILDLINK_ABI_DEPENDS.telepathy-logger+=	telepathy-logger>=0.8.2
-BUILDLINK_PKGSRCDIR.telepathy-logger?=	../../wip/telepathy-logger
+BUILDLINK_PKGSRCDIR.telepathy-logger?=		../../wip/telepathy-logger
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"

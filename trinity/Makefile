@@ -56,7 +56,7 @@ LICENSE=	modified-bsd
 # Test and change if necessary.
 # MAKE_JOBS_SAFE=	no
 
-ONLY_FOR_PLATFORM=	 *-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-x86_64
 
 SUBST_CLASSES+=		env
 SUBST_STAGE.env=	post-patch

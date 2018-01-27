@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.12 2014/06/18 09:45:35 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
-PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
+PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 LICENSE=	gnu-gpl-v2
 
 # See ../../inputmethod/anthy/Makefile.common
@@ -35,7 +35,7 @@ GIT_REPO.master=	git://git.debian.org/git/pkg-anthy/egg.git
 GIT_DEEP_CLONE.master=	yes # defined
 
 GNU_CONFIGURE=	yes
-WRKSRC=			${WRKDIR}/egg
+WRKSRC=		${WRKDIR}/egg
 
 .include "../../editors/emacs/modules.mk"
 

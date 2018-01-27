@@ -9,19 +9,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/tripwire/
 COMMENT=	File and directory integrity checker
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src/
-CONFLICTS+=	tripwire-1*
-BUILD_TARGET=	release
-USE_TOOLS+=	gmake
-ONLY_FOR_PLATFORM= Linux-*-* OpenBSD-*-* FreeBSD-*-*
+WRKSRC=			${WRKDIR}/${DISTNAME}/src/
+CONFLICTS+=		tripwire-1*
+BUILD_TARGET=		release
+USE_TOOLS+=		gmake
+ONLY_FOR_PLATFORM=	Linux-*-* OpenBSD-*-* FreeBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "OpenBSD")
-SYSPRE=i386-unknown-openbsd
+SYSPRE=	i386-unknown-openbsd
 .endif
 .if (${OPSYS} == "FreeBSD")
-SYSPRE=i386-unknown-freebsd
+SYSPRE=	i386-unknown-freebsd
 .endif
 
 MAKE_ENV+=	SYSPRE=${SYSPRE:Q}

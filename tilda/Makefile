@@ -13,7 +13,7 @@ COMMENT=	Terminal like the classic first-person-shooter games
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config intltool msgfmt gmake flex
 USE_PKGLOCALEDIR=	yes
-USE_DIRS+=	xdg-1.4
+USE_DIRS+=		xdg-1.4
 
 .include "../../devel/confuse/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"

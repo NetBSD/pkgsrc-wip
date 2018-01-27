@@ -32,7 +32,7 @@ GIT_REPOSITORIES=	tc
 GIT_REPO.tc=		http://github.com/kanchoku/tc.git
 # fatal: unable to access 'http://github.com/kanchoku/tc.git/': SSL certificate problem: unable to get local issuer certificate
 # Add "-c http.sslVerify=false" to git command or,
-PKGSRC_SETENV=          GIT_SSL_NO_VERIFY=true
+PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
 ## With some condition, it pauses waiting for interaction:
 ## Saving file /WRKOBJDIR/wip/tc-git/work/tc/etc/bushu.rev...
 
@@ -64,11 +64,11 @@ SUBST_FILES.texinfo=	doc/Makefile
 SUBST_SED.texinfo=	-e '/if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLAGS\) -I $$\(srcdir\)/s/ -I ./tc.texinfo/'
 
 # string-to-int to string-to-number
-SUBST_CLASSES+=                s2i
-SUBST_MESSAGE.s2i=     string-to-int is an obsolete function; use `string-to-number' instead
-SUBST_STAGE.s2i=       post-patch
-SUBST_FILES.s2i=       lisp/eelll.el lisp/tc-is22.el lisp/tc-is20.el lisp/tc-is19.el lisp/tc-pre.el
-SUBST_SED.s2i=         -e s/string-to-int/string-to-number/g
+SUBST_CLASSES+=		s2i
+SUBST_MESSAGE.s2i=	string-to-int is an obsolete function; use `string-to-number' instead
+SUBST_STAGE.s2i=	post-patch
+SUBST_FILES.s2i=	lisp/eelll.el lisp/tc-is22.el lisp/tc-is20.el lisp/tc-is19.el lisp/tc-pre.el
+SUBST_SED.s2i=		-e s/string-to-int/string-to-number/g
 
 .include "options.mk"
 

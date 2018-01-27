@@ -24,6 +24,6 @@ bin/sortedcontainers/sortedlistwithkey.py
 bin/sortedcontainers/sortedset.py
 bin/sra_to_solid
 bin/tophat
-bin/tophat2
 bin/tophat-fusion-post
+bin/tophat2
 bin/tophat_reports

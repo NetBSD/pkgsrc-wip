@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	breqn.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.98c
-TEXLIVE_REV=	38099
+DISTNAME=		breqn.doc
+PKGNAME=		tex-${DISTNAME:S/./-/}-0.98c
+TEXLIVE_REV=		38099
 TEXLIVE_USE_CTAN=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

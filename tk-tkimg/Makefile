@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.flightlab.com/~joe/downloads/
 COMMENT=	Add support for several image formats to Tk
 LICENSE=	2-clause-bsd # XXX ? Same as Tcl
 
-WRKSRC=		${WRKDIR}/tkimg-1.3
-GNU_CONFIGURE=	yes
-TEST_TARGET=	test
+WRKSRC=			${WRKDIR}/tkimg-1.3
+GNU_CONFIGURE=		yes
+TEST_TARGET=		test
 INSTALLATION_DIRS+=	lib/Img${PKGVERSION}.9
 
 .include "options.mk"

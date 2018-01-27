@@ -23,10 +23,10 @@ CONF_FILES_PERMS+=	${EGDIR}/typespeedrc ${PREFIX}/etc/typespeedrc \
 CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH}/typespeed.score ${GAMEOWN} \
 			games 664
 
-SUBST_CLASSES+=		man-paths
-SUBST_STAGE.man-paths=	pre-patch
-SUBST_FILES.man-paths=	man/typespeed.6
-SUBST_SED.man-paths=	-e 's|/etc/|${PREFIX}/etc/|g'
+SUBST_CLASSES+=			man-paths
+SUBST_STAGE.man-paths=		pre-patch
+SUBST_FILES.man-paths=		man/typespeed.6
+SUBST_SED.man-paths=		-e 's|/etc/|${PREFIX}/etc/|g'
 SUBST_MESSAGE.man-paths=	Adjusting path in the game's man page
 
 post-install:

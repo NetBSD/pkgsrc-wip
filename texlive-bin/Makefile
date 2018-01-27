@@ -27,21 +27,21 @@ DEPENDS+=	t1utils-[0-9]*:../../fonts/t1utils
 DEPENDS+=	psutils-[0-9]*:../../print/psutils
 
 # Use pkgsrc versions instead of the ones shipped with livetex
-CONFIGURE_ARGS+=--with-system-freetype2
-CONFIGURE_ARGS+=--with-system-ncurses
-CONFIGURE_ARGS+=--with-system-pnglib
-CONFIGURE_ARGS+=--with-system-zlib
-CONFIGURE_ARGS+=--with-system-t1lib
-CONFIGURE_ARGS+=--with-system-gd
-CONFIGURE_ARGS+=--without-t1utils
-CONFIGURE_ARGS+=--without-psutils
+CONFIGURE_ARGS+=	--with-system-freetype2
+CONFIGURE_ARGS+=	--with-system-ncurses
+CONFIGURE_ARGS+=	--with-system-pnglib
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-system-t1lib
+CONFIGURE_ARGS+=	--with-system-gd
+CONFIGURE_ARGS+=	--without-t1utils
+CONFIGURE_ARGS+=	--without-psutils
 # We still need to use icu from texlive for now
 
-CONFIGURE_ARGS+=--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
+CONFIGURE_ARGS+=	--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
 
-CONFIGURE_ARGS+=--without-texinfo
-CONFIGURE_ARGS+=--without-texi2html
-CONFIGURE_ARGS+=--disable-multiplatform
+CONFIGURE_ARGS+=	--without-texinfo
+CONFIGURE_ARGS+=	--without-texi2html
+CONFIGURE_ARGS+=	--disable-multiplatform
 
 .include "../../wip/texlive/Makefile.common"
 .include "options.mk"

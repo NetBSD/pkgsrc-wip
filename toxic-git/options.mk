@@ -1,8 +1,8 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.toxic
-PKG_SUPPORTED_OPTIONS+= notify x11
-PKG_SUGGESTED_OPTIONS+= notify x11
+PKG_SUPPORTED_OPTIONS+=	notify x11
+PKG_SUGGESTED_OPTIONS+=	notify x11
 
 .include "../../mk/bsd.options.mk"
 

@@ -2,15 +2,15 @@
 
 DISTNAME=	hasida-table-0.8
 
-CATEGORIES=     inputmethod
-MASTER_SITES=   ftp://ftp.ki.nu/pub/
+CATEGORIES=	inputmethod
+MASTER_SITES=	ftp://ftp.ki.nu/pub/
 LICENSE=	2-clause-bsd
 
-MAINTAINER=     makoto@ki.nu
-HOMEPAGE=       http://www.ki.nu/~makoto/tcode/
-COMMENT=        Kanji table for t-code input (PostScript and PDF)
+MAINTAINER=	makoto@ki.nu
+HOMEPAGE=	http://www.ki.nu/~makoto/tcode/
+COMMENT=	Kanji table for t-code input (PostScript and PDF)
 
-USE_TOOLS+=     perl
+USE_TOOLS+=	perl
 REPLACE_PERL=	hasida-table
 # BUILD_DEPENDS+=	ghostscript-cidfonts-ryumin-[0-9]*:../../fonts/ghostscript-cidfonts-ryumin
 # BUILD_ENV+=	PKG_OPTIONS.ghostscript+=disable-compile-inits

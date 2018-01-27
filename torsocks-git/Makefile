@@ -9,9 +9,9 @@ COMMENT=	Library to torify applications
 LICENSE=	gnu-gpl-v2
 
 
-GIT_REPOSITORIES=       master
-GIT_REPO.master=        https://git.torproject.org/torsocks.git
-GIT_MODULE.master=      torsocks
+GIT_REPOSITORIES=	master
+GIT_REPO.master=	https://git.torproject.org/torsocks.git
+GIT_MODULE.master=	torsocks
 
 
 DIST_SUBDIR=	torsocks

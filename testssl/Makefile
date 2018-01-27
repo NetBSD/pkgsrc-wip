@@ -15,8 +15,8 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 
-NO_BUILD=	yes
-INSTALLATION_DIRS=bin share/doc/${PKGBASE}
+NO_BUILD=		yes
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 REPLACE_INTERPRETER+=	envbash
 REPLACE.envbash.old=	'/usr/bin/env\ bash'

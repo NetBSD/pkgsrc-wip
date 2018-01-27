@@ -13,7 +13,7 @@ COMMENT=		Tiny COBOL compiler for IA32 platforms
 
 CONFIGURE_ARGS+=	--with-libdb=2
 
-ONLY_FOR_PLATFORM= *-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 USE_TOOLS+=		gmake bison
 

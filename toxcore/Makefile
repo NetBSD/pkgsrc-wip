@@ -7,9 +7,9 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=TokTok/}
 GITHUB_RELEASE=	v0.1.11
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=       https://tox.chat/
-COMMENT=        Tox protocol library
-LICENSE=        gnu-gpl-v3
+HOMEPAGE=	https://tox.chat/
+COMMENT=	Tox protocol library
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_CMAKE=	yes

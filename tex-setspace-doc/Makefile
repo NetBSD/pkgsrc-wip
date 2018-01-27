@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	setspace.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-6.7a
-TEXLIVE_REV=	24881
+DISTNAME=		setspace.doc
+PKGNAME=		tex-${DISTNAME:S/./-/}-6.7a
+TEXLIVE_REV=		24881
 TEXLIVE_USE_CTAN=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

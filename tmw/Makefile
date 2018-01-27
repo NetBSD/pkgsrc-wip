@@ -11,10 +11,10 @@ HOMEPAGE=	http://themanaworld.sourceforge.net/
 COMMENT=	Free open source 2D MMORPG in development
 
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--with-opengl
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
 
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

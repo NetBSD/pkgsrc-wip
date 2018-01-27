@@ -7,7 +7,7 @@ PKGNAME=	texlive2013-0.2
 #BROKEN=		Still getting ERROR: [check-interpreter.mk], and NOT fixed yet.
 
 CATEGORIES=	print
-MASTER_SITES=   ${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 MASTER_SITES+=	ftp://tug.org/texlive/historic/2013/
 EXTRACT_SUFX=	.tar.xz
 

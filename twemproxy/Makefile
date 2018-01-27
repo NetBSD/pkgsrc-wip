@@ -12,13 +12,13 @@ HOMEPAGE=	https://github.com/twitter/twemproxy/
 COMMENT=	Fast, light-weight proxy for memcached and redis
 LICENSE=	apache-2.0
 
-EGFILES=	conf/nutcracker.yml
-EGFILES+=	conf/nutcracker.leaf.yml conf/nutcracker.root.yml
-EGDIR=		share/examples/twemproxy
+EGFILES=		conf/nutcracker.yml
+EGFILES+=		conf/nutcracker.leaf.yml conf/nutcracker.root.yml
+EGDIR=			share/examples/twemproxy
 INSTALLATION_DIRS=	${EGDIR}
 
-GNU_CONFIGURE=  YES
-USE_LIBTOOL=    yes
+GNU_CONFIGURE=	YES
+USE_LIBTOOL=	yes
 USE_TOOLS+=	autoreconf automake m4
 
 WRKSRC=	${WRKDIR}/twemproxy-0.4.1

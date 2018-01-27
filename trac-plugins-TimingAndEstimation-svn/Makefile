@@ -22,7 +22,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.2.8/11739
 
 SVN_REPOSITORIES=	plugin
 SVN_REPO.plugin=	https://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12
-SVN_REVISION.plugin=		${SVNVERSION}
+SVN_REVISION.plugin=	${SVNVERSION}
 
 NO_CHECKSUM=	yes
 

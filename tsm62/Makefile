@@ -60,7 +60,7 @@ RPMFILES+=		${WRKDIR}/TIVsm-API64.i386.rpm \
 			${WRKDIR}/gskssl64-8.0.14.6.linux.x86_64.rpm
 
 # Make sure suse pkg version equals the above
-DEPENDS+=               suse32_base-[0-9]*:../../emulators/suse121_32_base
+DEPENDS+=		suse32_base-[0-9]*:../../emulators/suse121_32_base
 
 EMUL32DIR=		${PREFIX}${_OPSYS_EMULDIR.linux32}
 PLIST_SUBST+=		EMUL32DIR=${EMUL32DIR:Q}

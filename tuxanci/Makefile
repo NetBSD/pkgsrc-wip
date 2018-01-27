@@ -15,15 +15,15 @@ COMMENT=	Czechoslovak multiplatform action game like Bulanci
 
 WRKSRC=	${WRKDIR}/pkgs/tuxanci-0.20.0-src
 
-USE_CMAKE=      yes
+USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++
 
-CMAKE_ARGS+= -DPREFIX=\\\"${PREFIX}/\\\" \
-	     -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-	     -DSDL_INCLUDE_DIR=${PREFIX}/include/SDL \
-	     -DSDLIMAGE_INCLUDE_DIR=${PREFIX}/include/SDL \
-	     -DSDLMIXER_INCLUDE_DIR=${PREFIX}/include/SDL \
-	     -DSDLTTF_INCLUDE_DIR=${PREFIX}/include/SDL
+CMAKE_ARGS+=	-DPREFIX=\\\"${PREFIX}/\\\" \
+		-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+		-DSDL_INCLUDE_DIR=${PREFIX}/include/SDL \
+		-DSDLIMAGE_INCLUDE_DIR=${PREFIX}/include/SDL \
+		-DSDLMIXER_INCLUDE_DIR=${PREFIX}/include/SDL \
+		-DSDLTTF_INCLUDE_DIR=${PREFIX}/include/SDL
 
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"

@@ -34,7 +34,7 @@ PKG_SYSCONFSUBDIR=	tordev
 PKG_GROUPS_VARS+=	TOR_GROUP
 PKG_USERS_VARS=		TOR_USER
 
-RCD_SCRIPTS=			tordev
+RCD_SCRIPTS=		tordev
 RCD_SCRIPT_SRC.tordev=	${FILESDIR}/tordev.in
 PKG_GROUPS=		${TOR_GROUP}
 PKG_USERS=		${TOR_USER}:${TOR_GROUP}
@@ -55,7 +55,7 @@ FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
-CHECK_PORTABILITY_SKIP+=contrib/*
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 .include "../../mk/bsd.prefs.mk"
 

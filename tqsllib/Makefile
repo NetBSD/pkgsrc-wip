@@ -20,7 +20,7 @@ USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 # There is a failure to find tqsllib.la; this fixed it (situation not clear).
-MAKE_JOBS_SAFE=	no
+MAKE_JOBS_SAFE=		no
 # The configure script is broken and looks in explicit paths, instead
 # of just trying to link.
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}

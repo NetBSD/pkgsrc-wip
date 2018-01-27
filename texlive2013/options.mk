@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.1 2013/11/02 13:01:38 makoto Exp $
 ### Set options
-PKG_OPTIONS_VAR=        PKG_OPTIONS.texlive
-PKG_SUPPORTED_OPTIONS=  bundle-lib
+PKG_OPTIONS_VAR=	PKG_OPTIONS.texlive
+PKG_SUPPORTED_OPTIONS=	bundle-lib
 # deleting bundle-lib results unable to define FT_Library
 PKG_SUGGESTED_OPTIONS=	bundle-lib
 

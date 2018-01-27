@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	lineno.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.41
-TEXLIVE_REV=	21442
+DISTNAME=		lineno.doc
+PKGNAME=		tex-${DISTNAME:S/./-/}-4.41
+TEXLIVE_REV=		21442
 TEXLIVE_USE_CTAN=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

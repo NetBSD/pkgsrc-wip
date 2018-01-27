@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.14 2015/08/04 20:04:16 thomasklausner Exp $
 
 UPSTREAM_VERSION=	3.90
-DISTNAME=	TracMasterTickets-${UPSTREAM_VERSION}
-VERSION=	${UPSTREAM_VERSION}.${SVN_TAG.mastertickets}
-PKGNAME=	trac-plugins-MasterTickets-${VERSION}
+DISTNAME=		TracMasterTickets-${UPSTREAM_VERSION}
+VERSION=		${UPSTREAM_VERSION}.${SVN_TAG.mastertickets}
+PKGNAME=		trac-plugins-MasterTickets-${VERSION}
 # PKGREVISION must exist for svn, or else it will get a date
 PKGREVISION=
-CATEGORIES=	www
-MASTER_SITES=	# not defined
+CATEGORIES=		www
+MASTER_SITES=		# not defined
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://trac-hacks.org/wiki/MasterTicketsPlugin

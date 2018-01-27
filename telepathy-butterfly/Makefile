@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
 
-REPLACE_PYTHON+=	waf telepathy-butterfly
+REPLACE_PYTHON+=		waf telepathy-butterfly
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gobject, py-papyon
 
 .include "../../devel/py-gobject/buildlink3.mk"

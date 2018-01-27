@@ -19,7 +19,7 @@ DEPENDS+=	p5-Net-Twitter>=0:../../net/p5-Net-Twitter
 DEPENDS+=	p5-TimeDate>=0:../../time/p5-TimeDate
 DEPENDS+=	p5-Getopt-GUI-Long>=0:../../wip/p5-Getopt-GUI-Long
 
-PERL5_PACKLIST= auto/twitmail/.packlist
+PERL5_PACKLIST=	auto/twitmail/.packlist
 USE_LANGUAGES=	# none
 
 .include "../../lang/perl5/module.mk"

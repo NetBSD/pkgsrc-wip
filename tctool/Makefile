@@ -13,10 +13,10 @@ HOMEPAGE=	http://speedmodem50b.berlios.de/
 COMMENT=	Speed Modem 50B/50B+/200/Cellpipe CELL 19A-BX utility
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGBASE}/src
-NO_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c++
+WRKSRC=			${WRKDIR}/${PKGBASE}/src
+NO_CONFIGURE=		YES
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c++
 INSTALLATION_DIRS=	bin
 
 CXXFLAGS.Linux+=	-DCSTDLIB

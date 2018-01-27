@@ -16,13 +16,13 @@ USE_LANGUAGES=	c c++
 USE_JAVA2=	yes
 
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
-MAKE_PROGRAM=ant
-MAKE_FILE=build.xml
+MAKE_PROGRAM=	ant
+MAKE_FILE=	build.xml
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-NO_CONFIGURE=yes
+NO_CONFIGURE=	yes
 
 do-build:
 .for optn in ${PKG_OPTIONS}

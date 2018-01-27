@@ -19,8 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.5.1:../../www/py-paste
 WRKSRC=		${WRKDIR}/thawab-3.0.13
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	intltool msgfmt
-USE_LANGUAGES=	# none
+USE_TOOLS+=		intltool msgfmt
+USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2

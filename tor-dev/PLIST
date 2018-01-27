@@ -3,9 +3,9 @@ bin/tor-dev
 bin/tor-gencert-dev
 bin/tor-resolve-dev
 bin/torify-dev
+${PLIST.doc}man/man1/tor-dev.1
 ${PLIST.doc}man/man1/tor-gencert-dev.1
 ${PLIST.doc}man/man1/tor-resolve-dev.1
-${PLIST.doc}man/man1/tor-dev.1
 ${PLIST.doc}man/man1/torify-dev.1
 ${PLIST.doc}share/doc/tordev/tor-gencert.html
 ${PLIST.doc}share/doc/tordev/tor-resolve.html
