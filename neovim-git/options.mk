@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	python ruby
 ### Support Python (add dependency)
 ###
 .  if !empty(PKG_OPTIONS:Mpython)
-DEPENDS+=       ${PYPKGPREFIX}-neovim-[0-9]*:../../wip/py-neovim
+DEPENDS+=	${PYPKGPREFIX}-neovim-[0-9]*:../../wip/py-neovim
 
 .include "../../lang/python/pyversion.mk"
 .  endif
@@ -19,7 +19,7 @@ DEPENDS+=       ${PYPKGPREFIX}-neovim-[0-9]*:../../wip/py-neovim
 ### Support Ruby (add dependency)
 ###
 .  if !empty(PKG_OPTIONS:Mruby)
-DEPENDS+=       ${RUBY_PKGPREFIX}-neovim-[0-9]*:../../wip/ruby-neovim
+DEPENDS+=	${RUBY_PKGPREFIX}-neovim-[0-9]*:../../wip/ruby-neovim
 
 .include "../../lang/ruby/rubyversion.mk"
 .  endif

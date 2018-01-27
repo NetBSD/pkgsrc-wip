@@ -14,7 +14,7 @@ COMMENT=		Libraries to support development of security-enabled applications (hg 
 LICENSE=		mpl-2.0
 
 HG_REPOSITORIES=	nss
-HG_REPO.nss=        	https://hg.mozilla.org/projects/nss
+HG_REPO.nss=		https://hg.mozilla.org/projects/nss
 WRKSRC=			${WRKDIR}/nss
 #WRKSRC=			${WRKDIR}
 
@@ -25,8 +25,8 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 # wants to use zlib before making sure it's built
 MAKE_JOBS_SAFE=		no
 
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/configure
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}configure
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		gmake perl pax pkg-config

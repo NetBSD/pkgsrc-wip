@@ -16,13 +16,14 @@ USE_LANGUAGES=	# none
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-*
 
-INSTALLATION_DIRS= bin 						\
-					   lib/java/netlogo/lib 			\
-					   lib/java/netlogo 				\
-					   share/doc/netlogo 			\
-					   lib/java/netlogo/extensions 	\
-					   share/netlogo/icons 			\
-					   share/applications
+INSTALLATION_DIRS= \
+	bin 					\
+	lib/java/netlogo/lib 			\
+	lib/java/netlogo 			\
+	share/doc/netlogo 			\
+	lib/java/netlogo/extensions 		\
+	share/netlogo/icons 			\
+	share/applications
 
 post-extract:
 	${CP} ${FILESDIR}/netlogo.desktop ${WRKSRC}

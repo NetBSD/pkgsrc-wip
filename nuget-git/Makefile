@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2015/04/25 10:01:54 krytarowski Exp $
 
 GIT_REPOSITORIES=	nuget
-GIT_REPO.nuget=	https://github.com/NuGet/NuGet.Client.git
+GIT_REPO.nuget=		https://github.com/NuGet/NuGet.Client.git
 
 DISTNAME=	nuget
 PKGNAME=	nuget-0.0.0

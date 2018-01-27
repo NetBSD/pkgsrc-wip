@@ -5,8 +5,8 @@ bin/migspeed
 bin/numactl
 bin/numademo
 bin/numastat
-include/numacompat1.h
 include/numa.h
+include/numacompat1.h
 include/numaif.h
 lib/libnuma.la
 man/man2/move_pages.2

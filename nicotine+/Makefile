@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-GeoIP>=0:../../net/py-GeoIP
 
 
 PY_PATCHPLIST=	yes
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-vorbis, py-gtk2
 REPLACE_PYTHON=	pynicotine/gtkgui/glade2py.py
 

@@ -1,16 +1,15 @@
 @comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:00 thomasklausner Exp $
 libexec/filter_nnrpd.pl
-sbin/mailpost
-sbin/actived
-sbin/nnrpd
 man/man3/dbz.3
-man/man5/nnrp.access.5
 man/man5/moderators.5
+man/man5/nnrp.access.5
 man/man8/nnrpd.8
+sbin/actived
+sbin/mailpost
+sbin/nnrpd
 share/doc/nnrpd/CONTRIBUTORS
 share/doc/nnrpd/COPYRIGHT
 share/doc/nnrpd/HISTORY
-share/doc/nnrpd/Install.ms
 share/doc/nnrpd/INN-faq_part1
 share/doc/nnrpd/INN-faq_part2
 share/doc/nnrpd/INN-faq_part3
@@ -20,6 +19,7 @@ share/doc/nnrpd/INN-faq_part6
 share/doc/nnrpd/INN-faq_part7
 share/doc/nnrpd/INN-faq_part8
 share/doc/nnrpd/INN-faq_part9
+share/doc/nnrpd/Install.ms
 share/doc/nnrpd/PGPKEYS
 share/doc/nnrpd/README
 share/doc/nnrpd/README.insync
@@ -29,6 +29,6 @@ share/examples/nnrpd/innshellvars
 share/examples/nnrpd/innshellvars.csh
 share/examples/nnrpd/innshellvars.pl
 share/examples/nnrpd/innshellvars.tcl
-share/examples/nnrpd/nnrp.access
 share/examples/nnrpd/moderators
+share/examples/nnrpd/nnrp.access
 share/examples/rc.d/actived

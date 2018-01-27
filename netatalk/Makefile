@@ -24,11 +24,11 @@ BUILDLINK_TRANSFORM+=	l:db48:${BDB_TYPE}
 
 PKG_CONFIG=		yes
 PKG_SYSCONFSUBDIR=	netatalk
-EGDIR=		${PREFIX}/share/examples/netatalk
-#CONF_FILES=	${EGDIR}/afp.conf		${PKG_SYSCONFDIR}/afd.conf
-CONF_FILES+=	${DESTDIR}${EGDIR}/afp.conf	${PKG_SYSCONFDIR}/afp.conf
-CONF_FILES+=	${EGDIR}/extmap.conf		${PKG_SYSCONFDIR}/extmap.conf
-#CONF_FILES+=	${EGDIR}/netatalk-dbus.conf	${PKG_SYSCONFDIR}/netatalk-dbus.conf
+EGDIR=			${PREFIX}/share/examples/netatalk
+#CONF_FILES=		${EGDIR}/afp.conf		${PKG_SYSCONFDIR}/afd.conf
+CONF_FILES+=		${DESTDIR}${EGDIR}/afp.conf	${PKG_SYSCONFDIR}/afp.conf
+CONF_FILES+=		${EGDIR}/extmap.conf		${PKG_SYSCONFDIR}/extmap.conf
+#CONF_FILES+=		${EGDIR}/netatalk-dbus.conf	${PKG_SYSCONFDIR}/netatalk-dbus.conf
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--with-libevent-header=${BUILDLINK_PREFIX.libevent}/include
 CONFIGURE_ARGS+=	--with-libevent-lib=${BUILDLINK_PREFIX.libevent}/lib
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
-CFLAGS.SunOS+= -I/usr/include/kerberosv5/
+CFLAGS.SunOS+=	-I/usr/include/kerberosv5/
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 

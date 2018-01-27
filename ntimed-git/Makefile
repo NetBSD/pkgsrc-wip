@@ -9,7 +9,7 @@ HOMEPAGE=		https://github.com/bsdphk/Ntimed
 COMMENT=		Network Time Synchronization
 
 GIT_REPOSITORIES=	Ntimed
-GIT_REPO.Ntimed= 	git://github.com/bsdphk/Ntimed.git
+GIT_REPO.Ntimed=	git://github.com/bsdphk/Ntimed.git
 
 WRKSRC=			${WRKDIR}/Ntimed
 GNU_CONFIGURE=		yes

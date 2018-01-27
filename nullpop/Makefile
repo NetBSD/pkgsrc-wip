@@ -11,6 +11,6 @@ COMMENT=	POP3 server that allows logins, but never returns any email
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=--libexecdir="${PREFIX}/bin"
+CONFIGURE_ARGS+=	--libexecdir="${PREFIX}/bin"
 
 .include "../../mk/bsd.pkg.mk"

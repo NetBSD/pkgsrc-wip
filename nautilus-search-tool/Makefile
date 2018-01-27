@@ -11,7 +11,7 @@ HOMEPAGE=	http://nautsearchtool.sourceforge.net/
 COMMENT=	Extension to have search files on popup menu
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=		pkg-config intltool
+USE_TOOLS+=	pkg-config intltool
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 

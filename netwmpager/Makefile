@@ -11,8 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	EWMH (NetWM) compatible pager
 LICENSE=	gnu-gpl-v2
 
-HAS_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+HAS_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples
 

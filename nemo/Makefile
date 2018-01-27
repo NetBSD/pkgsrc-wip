@@ -18,9 +18,9 @@ COMMENT=	File manager based on labels and timestamps
 # for stetic
 DEPENDS+=	monodevelop-[0-9]*:../../devel/monodevelop
 
-USE_PKGLOCALEDIR= yes
-USE_LANGUAGES=	# C#
-USE_TOOLS+=	gmake msgfmt pkg-config
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		# C#
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 .include "../../lang/mono2/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"

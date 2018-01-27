@@ -22,7 +22,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nehe.gamedev.net/
 COMMENT=		OpenGL tutorials from NeHe.gamedev.net - ${NEHE_OPENGL_TUT_FLAVOUR} versions
 
-DIST_SUBDIR=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
+DIST_SUBDIR=		nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
 USE_TOOLS+=		gmake pax
 RESTRICTED=		I am not sure if we can redistribute it
 NO_SRC_ON_FTP=		${RESTRICTED}

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	njb-sharp
 NJB_SHARP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.njb-sharp+=	njb-sharp>=0.2.2
-BUILDLINK_PKGSRCDIR.njb-sharp?=	../../wip/njb-sharp
+BUILDLINK_PKGSRCDIR.njb-sharp?=		../../wip/njb-sharp
 
 
 .include "../../wip/libnjb/buildlink3.mk"

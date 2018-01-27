@@ -13,11 +13,11 @@ COMMENT=	Nautilus extension to convert audio files
 
 #LICENSE=	# TODO: (see mk/license.mk)
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	perl intltool msgfmt gmake pkg-config
-USE_LANGUAGES+=	c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		perl intltool msgfmt gmake pkg-config
+USE_LANGUAGES+=		c c++
 
 GCONF_SCHEMAS+=	data/nautilus-sound-converter.schemas
 

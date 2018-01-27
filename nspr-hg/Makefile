@@ -14,14 +14,14 @@ LICENSE=	mpl-2.0
 
 HG_REPOSITORIES=	nspr
 HG_REPO.nspr=		https://hg.mozilla.org/projects/nspr
-WRKSRC=                 ${WRKDIR}/nspr
+WRKSRC=			${WRKDIR}/nspr
 #WRKSRC=                        ${WRKDIR}
 
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/configure
+CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}configure
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_LIBSUBDIR=nspr
+GNU_CONFIGURE_LIBSUBDIR= nspr
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		autoconf gmake perl
@@ -40,7 +40,7 @@ SUBST_FILES.nspr-config=	config/nspr-config.in
 SUBST_SED.nspr-config=		-e 's|-L$$libdir|"${COMPILER_RPATH_FLAG}$$libdir -L$$libdir"|g'
 
 .if ${OPSYS} == "OpenBSD"
-CHECK_SHLIBS_SUPPORTED= no
+CHECK_SHLIBS_SUPPORTED=	no
 .endif
 
 .if ${OPSYS} == "Darwin"
@@ -68,9 +68,9 @@ PLIST_VARS+=		sun4u_32
 .  if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .  else
-HW_CLASS!=	${UNAME} -m
+HW_CLASS!=		${UNAME} -m
 .    if ${HW_CLASS} == "sun4u"
-PLIST.sun4u_32=                yes
+PLIST.sun4u_32=		yes
 .    endif
 .  endif
 .endif

@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/nsp2
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	pkg-config automake autoconf
+USE_TOOLS+=		pkg-config automake autoconf
 USE_LANGUAGES=		c c++ fortran77
 
 pre-configure:

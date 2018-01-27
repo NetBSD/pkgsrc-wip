@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.1 2008/12/15 15:41:19 hfath Exp $
 
-PKG_OPTIONS_VAR=        	PKG_OPTIONS.nnrpd
+PKG_OPTIONS_VAR=		PKG_OPTIONS.nnrpd
 PKG_SUPPORTED_OPTIONS+=		perl tcl gpg
 PKG_SUGGESTED_OPTIONS+=		# none
 

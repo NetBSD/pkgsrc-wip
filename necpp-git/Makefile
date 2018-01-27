@@ -10,7 +10,7 @@ COMMENT=		C++ rewrite of the Numerical Electromagnetics Code
 LICENSE=		gnu-gpl-v2
 
 GIT_REPOSITORIES=	necpp
-GIT_REPO.necpp= 	git://github.com/tmolteno/necpp.git
+GIT_REPO.necpp=		git://github.com/tmolteno/necpp.git
 WRKSRC=			${WRKDIR}/necpp
 
 GNU_CONFIGURE=		yes

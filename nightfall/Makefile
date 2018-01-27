@@ -14,7 +14,7 @@ DEPENDS+=	gnuplot>=4.6.0:../../graphics/gnuplot
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	bison perl msgfmt intltool
+USE_TOOLS+=		bison perl msgfmt intltool
 
 CONFIGURE_ARGS+=	--with-included-gettext
 

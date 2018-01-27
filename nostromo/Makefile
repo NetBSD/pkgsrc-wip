@@ -1,42 +1,42 @@
 # $NetBSD$
 
-DISTNAME=       nostromo-1.9.5
-PKGREVISION=    2
-CATEGORIES=     www
-MASTER_SITES=   http://www.nazgul.ch/dev/
-DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+DISTNAME=	nostromo-1.9.5
+PKGREVISION=	2
+CATEGORIES=	www
+MASTER_SITES=	http://www.nazgul.ch/dev/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=     ast@NetBSD.org
-HOMEPAGE=       http://www.nazgul.ch/dev_nostromo.html
-COMMENT=        Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
-LICENSE=        modified-bsd
+MAINTAINER=	ast@NetBSD.org
+HOMEPAGE=	http://www.nazgul.ch/dev_nostromo.html
+COMMENT=	Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
+LICENSE=	modified-bsd
 
-USE_TOOLS+=     sed
-USE_TOOLS+=     perl
-REPLACE_PERL=   htdocs/cgi-bin/printenv
+USE_TOOLS+=	sed
+USE_TOOLS+=	perl
+REPLACE_PERL=	htdocs/cgi-bin/printenv
 
-RCD_SCRIPTS=    nostromo
-EGDIR=          ${DESTDIR}/${PREFIX}/nostromo
+RCD_SCRIPTS=	nostromo
+EGDIR=		${DESTDIR}/${PREFIX}/nostromo
 
-USR_LOCAL=      /usr/local
-VAR_NOSTROMO=   /var/nostromo
+USR_LOCAL=	/usr/local
+VAR_NOSTROMO=	/var/nostromo
 
-INSTALLATION_DIRS=      sbin
-INSTALLATION_DIRS+=     var/nostromo
-INSTALLATION_DIRS+=     ${PKGMANDIR}/man8
-INSTALLATION_DIRS+=     ${EGDIR}
-INSTALLATION_DIRS+=     ${EGDIR}/logs
-INSTALLATION_DIRS+=     ${EGDIR}/icons
-INSTALLATION_DIRS+=     ${EGDIR}/htdocs
-INSTALLATION_DIRS+=     ${EGDIR}/htdocs/cgi-bin
+INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS+=	var/nostromo
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}/logs
+INSTALLATION_DIRS+=	${EGDIR}/icons
+INSTALLATION_DIRS+=	${EGDIR}/htdocs
+INSTALLATION_DIRS+=	${EGDIR}/htdocs/cgi-bin
 
-SUBST_CLASSES+=         nostromo
-SUBST_FILES.nostromo=   src/nhttpd/nhttpd.8 \
+SUBST_CLASSES+=		nostromo
+SUBST_FILES.nostromo=	src/nhttpd/nhttpd.8 \
                         src/nhttpd/main.c \
                         conf/nhttpd.conf-dist
-SUBST_SED.nostromo+=    -e 's,${VAR_NOSTROMO},${PREFIX}/nostromo,g'
-SUBST_SED.nostromo+=    -e 's,${USR_LOCAL},${PREFIX},g'
-SUBST_STAGE.nostromo=   post-patch
+SUBST_SED.nostromo+=	-e 's,${VAR_NOSTROMO},${PREFIX}/nostromo,g'
+SUBST_SED.nostromo+=	-e 's,${USR_LOCAL},${PREFIX},g'
+SUBST_STAGE.nostromo=	post-patch
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/nhttpd/nhttpd \

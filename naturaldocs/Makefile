@@ -27,7 +27,8 @@ INSTALL_DIRS=	Info JavaScript Modules Modules/NaturalDocs Modules/NaturalDocs/Bu
 		Modules/NaturalDocs/Settings Modules/NaturalDocs/SymbolTable \
 		Modules/NaturalDocs/Topics Styles Config Help Help/example Help/images \
 		Help/images/header Help/images/menu Help/javascript
-INSTALLATION_DIRS=	${NDDIR}
+INSTALLATION_DIRS= \
+		${NDDIR}
 
 do-install:
 	cd ${WRKSRC} && pax -wr * ${DESTDIR}${NDDIR}

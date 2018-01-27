@@ -4,7 +4,7 @@ PKGNAME=	nongnu-libunwind-1.1.0
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	libunwind
-GIT_REPO.libunwind=		http://git.savannah.gnu.org/r/libunwind.git
+GIT_REPO.libunwind=	http://git.savannah.gnu.org/r/libunwind.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/libunwind/

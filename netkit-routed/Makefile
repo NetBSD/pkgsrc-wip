@@ -16,6 +16,6 @@ HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.pkg.mk"

@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.laurentconstantin.com/en/netw/
 COMMENT=	Toolbox that helps to find and solve network problems
 
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./genemake
 ONLY_FOR_PLATFORM=	NetBSD-*-i386

@@ -21,8 +21,8 @@ USE_TOOLS+=	gmake
 INFO_FILES=	yes
 EMACS_MODULES=	base
 
-CONFIGURE_ARGS+=--with-icondir=${PREFIX}/share/navi2ch/icons
-CONFIGURE_ARGS+=${CONFIGURE_ARGS.${EMACS_FLAVOR}}
+CONFIGURE_ARGS+=	--with-icondir=${PREFIX}/share/navi2ch/icons
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
 
 CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}/navi2ch
 CONFIGURE_ARGS.xemacs=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp$||}

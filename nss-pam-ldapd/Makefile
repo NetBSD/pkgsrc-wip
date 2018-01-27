@@ -92,19 +92,19 @@ PAM_LDAP_SONAME=	pam_ldap.so
 
 PLIST_SUBST+=		PAM_LDAP_SONAME=${PAM_LDAP_SONAME:Q}
 
-SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	pre-configure
-SUBST_MESSAGE.fix-paths=Fixing config file path
-SUBST_FILES.fix-paths=	man/*.[0-9] man/*.[0-9].xml
-SUBST_SED.fix-paths=	-e 's|/etc/nslcd.conf|${PKG_SYSCONFDIR}/nslcd.conf|g'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing config file path
+SUBST_FILES.fix-paths=		man/*.[0-9] man/*.[0-9].xml
+SUBST_SED.fix-paths=		-e 's|/etc/nslcd.conf|${PKG_SYSCONFDIR}/nslcd.conf|g'
 
 # Thread Local Storage seems not to work on NetBSD-4
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-4].*-*)
-SUBST_CLASSES+=		disable-tls
-SUBST_STAGE.disable-tls=post-configure
-SUBST_MESSAGE.disable-tls=disabling TLS
-SUBST_FILES.disable-tls=config.h
-SUBST_SED.disable-tls=	-e 's|/\* \#undef __thread \*/|\#define __thread /\*\*/|'
+SUBST_CLASSES+=			disable-tls
+SUBST_STAGE.disable-tls=	post-configure
+SUBST_MESSAGE.disable-tls=	disabling TLS
+SUBST_FILES.disable-tls=	config.h
+SUBST_SED.disable-tls=		-e 's|/\* \#undef __thread \*/|\#define __thread /\*\*/|'
 .endif
 
 SUBST_CLASSES+=		usergroup
