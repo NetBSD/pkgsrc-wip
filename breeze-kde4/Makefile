@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config perl
 
-CMAKE_ARGS+=    -DDATA_INSTALL_DIR=${PREFIX}/share/kde/apps
+CMAKE_ARGS+=	-DDATA_INSTALL_DIR=${PREFIX}/share/kde/apps
 CMAKE_ARGS+=	-DUSE_KDE4=ON
 
 .include "../../x11/kdelibs4/buildlink3.mk"

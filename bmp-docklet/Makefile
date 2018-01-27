@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.4 2012/09/24 17:14:36 asau Exp $
 #
 
-DISTNAME=		bmp-docklet-1.3
-PKGREVISION=		1
-CATEGORIES=		audio
+DISTNAME=	bmp-docklet-1.3
+PKGREVISION=	1
+CATEGORIES=	audio
 MASTER_SITES=	http://mark.xnull.de/bmp-docklet/
 EXTRACT_SUFX=	.tar.bz2
 

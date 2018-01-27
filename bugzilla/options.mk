@@ -11,7 +11,7 @@ PKG_SUPPORTED_OPTIONS+=	bugzilla-imagemagick bugzilla-patchviewer
 PKG_SUPPORTED_OPTIONS+=	bugzilla-descriptions bugzilla-xmlrpc
 PKG_SUPPORTED_OPTIONS+=	bugzilla-modperl radius
 PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap sqlite
-PKG_SUGGESTED_OPTIONS=	                        sqlite
+PKG_SUGGESTED_OPTIONS=	sqlite
 
 .include "../../mk/bsd.options.mk"
 

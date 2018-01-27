@@ -13,9 +13,9 @@ LICENSE=	spl-1.0 AND gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
-USE_JAVA=	yes
-USE_LANGUAGES=	# none
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
+USE_JAVA=		yes
+USE_LANGUAGES=		# none
 
 INSTALLATION_DIRS=	bin share/java
 

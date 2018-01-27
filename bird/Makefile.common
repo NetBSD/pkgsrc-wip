@@ -23,8 +23,8 @@ CONFIGURE_ARGS+=	--localstatedir=/var
 BIRD6?=			# empty
 PLIST_SUBST+=		BIRD6=${BIRD6}
 
-FILESDIR=               ${.CURDIR}/../bird/files
-PATCHDIR=               ${.CURDIR}/../bird/patches
+FILESDIR=		${.CURDIR}/../bird/files
+PATCHDIR=		${.CURDIR}/../bird/patches
 DISTINFO_FILE=		${.CURDIR}/../bird/distinfo
 PLIST_SRC=		${.CURDIR}/../bird/PLIST
 DESCR_SRC=		${.CURDIR}/../bird/DESCR

@@ -3,9 +3,9 @@ bin/annotateBed
 bin/bamToBed
 bin/bamToFastq
 bin/bed12ToBed6
-bin/bedpeToBam
 bin/bedToBam
 bin/bedToIgv
+bin/bedpeToBam
 bin/bedtools
 bin/closestBed
 bin/clusterBed

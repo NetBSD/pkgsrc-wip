@@ -12,7 +12,7 @@ HOMEPAGE=	http://bakery.sourceforge.net/
 COMMENT=	C++ Framework for creating GNOME applications using gtkmm
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

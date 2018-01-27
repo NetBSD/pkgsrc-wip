@@ -1,10 +1,10 @@
 # $NetBSD$
 
 # TODO: update to latest release
-DISTNAME=       bitcoin-0.13.1
+DISTNAME=	bitcoin-0.13.1
 CATEGORIES=	finance
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=bitcoin/}
-GITHUB_TAG=     v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=bitcoin/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://bitcoin.sourceforge.net/
@@ -14,38 +14,38 @@ LICENSE=	mit
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake
 AUTO_MKDIRS=	yes
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	c c++
 # bitcoin-core requires c++11 (but does not need manual --std=c++11).
 
 # TODO: File bug upstream - configure should add this where it is
 # needed.  Without -fPIC, linking of test_bitcoin fails.
-CFLAGS+=        -fPIC
+CFLAGS+=	-fPIC
 
 # configure does not look in PREFIX for boost unless instructed.
-CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 
-CONFIGURE_ARGS+=  --enable-hardening
+CONFIGURE_ARGS+=	--enable-hardening
 
 # pkgsrc's db4 package installs as db4_, but bitcoin looks for db_.
-BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
+BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
 
 TEST_TARGET=	check
 
 PLIST_VARS+=	qt4
 
-RCD_SCRIPTS=	bitcoind
-BUILD_DEFS+=	VARBASE
-OWN_DIRS=	${VARBASE}/bitcoin
-EGDIR=		${PREFIX}/share/examples/bitcoin
-CONF_FILES=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf
+RCD_SCRIPTS=		bitcoind
+BUILD_DEFS+=		VARBASE
+OWN_DIRS=		${VARBASE}/bitcoin
+EGDIR=			${PREFIX}/share/examples/bitcoin
+CONF_FILES=		${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf
 CONF_FILES_PERMS=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 
 # This is currently unnecessary, but it seems likely we will find a
 # file that references /usr when ${PREFIX} is appropriate.
-SUBST_CLASSES+= 	pkg
-SUBST_STAGE.pkg= 	post-patch
+SUBST_CLASSES+=		pkg
+SUBST_STAGE.pkg=	post-patch
 SUBST_SED.pkg=		-e "s|/usr/|${PREFIX}/|g"
 SUBST_MESSAGE.pkg=	Fixing /usr references to ${PREFIX}.
 

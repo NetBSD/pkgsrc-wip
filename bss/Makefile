@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.7 2012/11/25 23:32:09 othyro Exp $
 #
 
-DISTNAME=		bss-0.6
-PKGREVISION=   1
-CATEGORIES=		security
-MASTER_SITES=		http://www.secuobs.com/
+DISTNAME=	bss-0.6
+PKGREVISION=	1
+CATEGORIES=	security
+MASTER_SITES=	http://www.secuobs.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.secuobs.com/
@@ -20,7 +20,7 @@ do-build:
 		-o ${WRKSRC:Q}/replay_packet/replay_l2cap_packet
 
 
-DOC_FILES=${WRKSRC}/doc/* ${WRKSRC}/README
+DOC_FILES=	${WRKSRC}/doc/* ${WRKSRC}/README
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/bss ${DESTDIR:Q}${PREFIX:Q}/bin

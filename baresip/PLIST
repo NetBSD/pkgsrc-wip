@@ -17,8 +17,8 @@ lib/baresip/modules/g711.so
 lib/baresip/modules/g722.so
 lib/baresip/modules/g726.so
 lib/baresip/modules/gsm.so
-${PLIST.gstreamer}lib/baresip/modules/gst_video1.so
 ${PLIST.gstreamer}lib/baresip/modules/gst1.so
+${PLIST.gstreamer}lib/baresip/modules/gst_video1.so
 ${PLIST.gtk}lib/baresip/modules/gtk.so
 ${PLIST.x265}lib/baresip/modules/h265.so
 lib/baresip/modules/httpd.so

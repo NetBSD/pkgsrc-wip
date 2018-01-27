@@ -8,30 +8,30 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	http://www.linux.it/~md/software/
-COMMENT= Tool that makes graphs from BIND queries
-LICENSE= gnu-gpl-v2
+COMMENT=	Tool that makes graphs from BIND queries
+LICENSE=	gnu-gpl-v2
 
-DEPENDS+= p5-Time-Local-[0-9]*:../../time/p5-Time-Local
+DEPENDS+=	p5-Time-Local-[0-9]*:../../time/p5-Time-Local
 
 .include "../../databases/rrdtool/buildlink3.mk"
 
-USE_TOOLS+= perl
+USE_TOOLS+=	perl
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+= VARBASE
+BUILD_DEFS+=	VARBASE
 
 DBDIR?=	${VARBASE}/db/${PKGBASE}
 
-OWN_DIRS+= ${DBDIR}
+OWN_DIRS+=	${DBDIR}
 
-BG_SCRIPTS= bindgraph.cgi bindgraph.pl
+BG_SCRIPTS=	bindgraph.cgi bindgraph.pl
 
-REPLACE_PERL+= ${BG_SCRIPTS}
+REPLACE_PERL+=	${BG_SCRIPTS}
 
-RCD_SCRIPTS= bindgraph
+RCD_SCRIPTS=	bindgraph
 
-SUBST_CLASSES+= defs
+SUBST_CLASSES+=		defs
 SUBST_STAGE.defs=	pre-build
 SUBST_FILES.defs=	${BG_SCRIPTS}
 SUBST_SED.defs+=	-e 's,@RRDDIR@,${DBDIR},g'
@@ -39,7 +39,7 @@ SUBST_SED.defs+=	-e 's,@RRDDIR@,${DBDIR},g'
 SUBST_MESSAGE.defs=	Fixing defaults.
 
 INSTALLATION_DIRS+=	libexec/cgi-bin
-INSTALLATION_DIRS+= share/doc/bindgraph
+INSTALLATION_DIRS+=	share/doc/bindgraph
 
 do-build:
 

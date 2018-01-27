@@ -17,7 +17,7 @@ AUTO_MKDIRS=	yes
 
 WRKSRC=		${WRKDIR}/basepkg-1.2
 USE_LANGUAGES=	# none
-USE_TOOLS+= pax
+USE_TOOLS+=	pax
 
 INSTALLATION_DIRS+=	share/basepkg
 

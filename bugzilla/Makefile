@@ -116,7 +116,7 @@ INSTALLATION_DIRS+=	${BZDIR}/docs/en/html/api/Bugzilla
 INSTALLATION_DIRS+=	${BZDIR}/${i}
 .endfor
 
-FILES_SUBST+=   WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
+FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
                 BZDIR=${BZDIR}
 
 do-configure:

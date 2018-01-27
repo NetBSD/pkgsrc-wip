@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake:run
 USE_LANGUAGES=	c c++
 
-INFO_FILES=     yes
+INFO_FILES=	yes
 
 .include "options.mk"
 

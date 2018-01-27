@@ -11,9 +11,9 @@ HOMEPAGE=	http://bfgminer.org/
 COMMENT=	Modular ASIC/FPGA Bitcoin miner
 LICENSE=	gnu-gpl-v3
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config bash
-HAS_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config bash
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-cpumining
 CONFIGURE_ARGS+=	--enable-scrypt

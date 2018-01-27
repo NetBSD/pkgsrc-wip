@@ -16,8 +16,8 @@ USE_LANGUAGES=	# none
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl:run
 
-REPLACE_PERL=	*.pl
-REPLACE_SH=	mkdep configure
+REPLACE_PERL=		*.pl
+REPLACE_SH=		mkdep configure
 ###
 ### XXX until we have proper glue, take care to set these when
 ###	using this in a package.

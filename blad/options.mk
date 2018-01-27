@@ -1,10 +1,10 @@
 # $NetBSD: options.mk,v 1.6 2013/08/01 18:44:06 riastradh Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.blad
-PKG_SUPPORTED_OPTIONS=	gmp mpfr sage gsl
-PKG_SUGGESTED_OPTIONS=	gmp
-PKG_OPTIONS_OPTIONAL_GROUPS=    math
-PKG_OPTIONS_GROUP.math=     gmp
+PKG_OPTIONS_VAR=		PKG_OPTIONS.blad
+PKG_SUPPORTED_OPTIONS=		gmp mpfr sage gsl
+PKG_SUGGESTED_OPTIONS=		gmp
+PKG_OPTIONS_OPTIONAL_GROUPS=	math
+PKG_OPTIONS_GROUP.math=		gmp
 
 .include "../../mk/bsd.options.mk"
 

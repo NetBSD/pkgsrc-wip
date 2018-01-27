@@ -11,15 +11,15 @@ COMMENT=		Linux Bluetooth Stack utilities
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=	c
+USE_LANGUAGES=		c
 
-EGDIR=${PKG_SYSCONFDIR}/bluetooth/
-CONF_FILES=${EGDIR}/hcid.conf ${EGDIR}/rfcomm.conf
+EGDIR=		${PKG_SYSCONFDIR}/bluetooth/
+CONF_FILES=	${EGDIR}/hcid.conf ${EGDIR}/rfcomm.conf
 
-SUBST_CLASSES+=initd
-SUBST_STAGE.initd=pre-install
-SUBST_FILES.initd=scripts/Makefile
-SUBST_SED.initd=-e 's,install-data-local,,g'
+SUBST_CLASSES+=		initd
+SUBST_STAGE.initd=	pre-install
+SUBST_FILES.initd=	scripts/Makefile
+SUBST_SED.initd=	-e 's,install-data-local,,g'
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../wip/bluez-libs/Makefile.common"

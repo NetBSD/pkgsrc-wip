@@ -7,13 +7,13 @@ MASTER_SITES=	http://inac.cea.fr/L_Sim/BigDFT/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://inac.cea.fr/L_Sim/BigDFT/
-COMMENT=Massively parallel electronic structure code using a wavelet basis set
+COMMENT=	Massively parallel electronic structure code using a wavelet basis set
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP=  configure
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	bash pkg-config gmake
-USE_LANGUAGES=	c c++ fortran
+CHECK_PORTABILITY_SKIP=	configure
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		bash pkg-config gmake
+USE_LANGUAGES=		c c++ fortran
 
 PKGCONFIG_OVERRIDE+=	bigdft.pc.in
 PKGCONFIG_OVERRIDE+=	libxc-1.1.0/build/libxc.pc.in

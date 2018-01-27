@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pappso.inra.fr/bioinfo/beads/
 COMMENT=	BEADS is a program for spot detection on 2-D gel images
 
-USE_CMAKE= yes
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 SUBST_CLASSES+=		paths

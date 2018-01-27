@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	bamtools
 BAMTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.bamtools+=	bamtools>=2.4.0
-BUILDLINK_PKGSRCDIR.bamtools?=	../../wip/bamtools
+BUILDLINK_PKGSRCDIR.bamtools?=		../../wip/bamtools
 .endif	# BAMTOOLS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-bamtools

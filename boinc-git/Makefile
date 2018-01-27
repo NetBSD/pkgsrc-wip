@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake	# seems to be required only by ${WRKSRC}/_autosetup
 
 USE_LANGUAGES=	c c++ fortran
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-manager
 
 pre-configure:

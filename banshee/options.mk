@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=		gnome daap
 PLIST_VARS+=			${PKG_SUPPORTED_OPTIONS}
 
 .if !empty(PKG_OPTIONS:Mgnome)
-PLIST.gnome=	yes
+PLIST.gnome=		yes
 .else
 CONFIGURE_ARGS+=	--disable-gnome
 .endif

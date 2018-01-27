@@ -10,8 +10,8 @@ HOMEPAGE=	http://threadpool.sourceforge.net/
 COMMENT=	Cross-platform C++ thread pool library
 LICENSE=	boost-license
 
-EXTRACT_SUFX=	.zip
-WRKSRC=		${WRKDIR}/${DISTNAME}/threadpool
+EXTRACT_SUFX=		.zip
+WRKSRC=			${WRKDIR}/${DISTNAME}/threadpool
 INSTALLATION_DIRS=	include/boost
 INSTALLATION_DIRS+=	include/boost/threadpool
 INSTALLATION_DIRS+=	include/boost/threadpool/detail

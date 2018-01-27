@@ -24,7 +24,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-fuse-bindings
 GIT_REPOSITORIES=	bup
 GIT_REPO.bup=		git://github.com/bup/bup.git
 
-WRKSRC=                 ${WRKDIR}/bup
+WRKSRC=			${WRKDIR}/bup
 
 TEST_TARGET=	test
 

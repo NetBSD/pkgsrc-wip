@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2005/11/02 02:25:37 poppnk Exp $
+bin/btscanner
 etc/btscanner.dtd
 etc/btscanner.xml
-bin/btscanner
 share/oui.txt

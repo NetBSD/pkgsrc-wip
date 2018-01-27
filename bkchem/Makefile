@@ -15,13 +15,13 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 PYTHON_VERSIONED_DEPENDENCIES=	Pmw
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	intltool msgfmt
+USE_TOOLS+=		intltool msgfmt
 USE_LANGUAGES=		# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.13.0
 
-PY_EXEC=${PREFIX}/bin/python${PYVERSSUFFIX}
-PY_APPAPATH=${PREFIX}/${PYSITELIB}/bkchem/bkchem.py
+PY_EXEC=	${PREFIX}/bin/python${PYVERSSUFFIX}
+PY_APPAPATH=	${PREFIX}/${PYSITELIB}/bkchem/bkchem.py
 
 post-extract:
 	    ${CP} ${FILESDIR}/bkchem.desktop ${WRKSRC}
