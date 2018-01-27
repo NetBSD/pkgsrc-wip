@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/10/03 15:10:00 asau Exp $
 
-DISTNAME=		muscletool-2.1.0
-CATEGORIES=		security
+DISTNAME=	muscletool-2.1.0
+CATEGORIES=	security
 MASTER_SITES=	http://alioth.debian.org/download.php/1434/
 
 MAINTAINER=		evaldo@gardenali.biz

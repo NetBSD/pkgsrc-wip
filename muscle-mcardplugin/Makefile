@@ -8,7 +8,7 @@ MASTER_SITES=		http://alioth.debian.org/download.php/463/
 
 MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.linuxnet.com/
-COMMENT=		MuscleCard applet plugin for the MUSCLE framework
+COMMENT=	MuscleCard applet plugin for the MUSCLE framework
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/MCardPlugin
 GNU_CONFIGURE=		YES

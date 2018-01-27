@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.beremiz.org/documentation/the-iec-to-c-compiler
 
 MAINTAINER=	conti.ma@alice.it
 HOMEPAGE=	https://bitbucket.org/mjsousa/matiec/
-COMMENT= 	IEC61131-3 Compiler
+COMMENT=	IEC61131-3 Compiler
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	bison

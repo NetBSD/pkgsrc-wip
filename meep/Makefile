@@ -13,9 +13,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++ fortran77
 
-CONFIGURE_ARGS+=--with-libctl=${BUILDLINK_PREFIX.libctl}/share/libctl
+CONFIGURE_ARGS+=	--with-libctl=${BUILDLINK_PREFIX.libctl}/share/libctl
 
-MESSAGE_SUBST+=         PREFIX=${PREFIX:Q}
+MESSAGE_SUBST+=		PREFIX=${PREFIX:Q}
 
 TEST_TARGET=	check
 

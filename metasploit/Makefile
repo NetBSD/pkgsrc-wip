@@ -20,7 +20,7 @@ NO_BUILD=	yes
 USE_TOOLS+=	pax ln chmod
 
 INSTALLATION_DIRS+=	${PKGNAME}
-DATADIR=	${PREFIX}/${PKGNAME}
+DATADIR=		${PREFIX}/${PKGNAME}
 
 REPLACE_RUBY+=	${SCRIPTS} \
 		data/msfweb/vendor/rails/actionpack/lib/action_controller/session/drb_server.rb \

@@ -55,8 +55,8 @@ share/mplayer/DOCS/tech/translations.txt
 share/mplayer/DOCS/tech/vidix.txt
 share/mplayer/DOCS/tech/win32-codec-howto.txt
 share/mplayer/DOCS/tech/wishlist
-share/mplayer/DOCS/xml/README
 share/mplayer/DOCS/xml/Makefile
+share/mplayer/DOCS/xml/README
 share/mplayer/DOCS/xml/configure
 share/mplayer/DOCS/xml/cs/bugreports.xml
 share/mplayer/DOCS/xml/cs/documentation.xml
@@ -155,9 +155,9 @@ share/mplayer/DOCS/xml/xsl/ldp-html-chunk.xsl
 share/mplayer/DOCS/xml/xsl/ldp-html-common.xsl
 share/mplayer/DOCS/xml/xsl/ldp-html.xsl
 share/mplayer/DOCS/xml/xsl/ldp-print.xsl
-share/mplayer/DOCS/xml/zh_CN/encoding-guide.xml
 share/mplayer/DOCS/xml/zh_CN/bugreports.xml
 share/mplayer/DOCS/xml/zh_CN/documentation.xml
+share/mplayer/DOCS/xml/zh_CN/encoding-guide.xml
 share/mplayer/DOCS/xml/zh_CN/faq.xml
 share/mplayer/DOCS/xml/zh_CN/install.xml
 share/mplayer/DOCS/xml/zh_CN/mencoder.xml

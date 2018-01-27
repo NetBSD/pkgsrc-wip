@@ -14,17 +14,17 @@ DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_TOOLS+=	intltool msgfmt
+WRKSRC=			${WRKDIR}/${DISTNAME}
+USE_TOOLS+=		intltool msgfmt
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=	# none
+USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-notify, py-gtk2, py-gobject
 
 INSTALLATION_DIRS+=	bin
 
-REPLACE_PYTHON+=   ${WRKSRC}/monajat-applet
+REPLACE_PYTHON+=	${WRKSRC}/monajat-applet
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"

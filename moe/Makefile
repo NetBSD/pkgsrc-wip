@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/moe/moe.html
 COMMENT=	Moe Editor - A powerful and user-friendly text editor
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 USE_GNU_CONFIGURE_HOST=	NO
 INFO_FILES=		YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/moe
@@ -19,7 +19,7 @@ MAKE_ENV+=		INSTALL_DATA=${INSTALL_DATA:Q}
 MAKE_ENV+=		INSTALL_MAN=${INSTALL_MAN:Q}
 MAKE_ENV+=		INSTALL_DIR=${MKDIR:Q}
 LDFLAGS+=		${BUILDLINK_LDADD.ncurses:Q}
-USE_LANGUAGES=	c++
+USE_LANGUAGES=		c++
 
 CONF_FILES=		${PREFIX}/share/examples/moe/moerc \
 			${PKG_SYSCONFDIR}/moerc

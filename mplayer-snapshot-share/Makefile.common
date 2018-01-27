@@ -57,7 +57,7 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR:Q}
 
 # The configure script misdetects endianness on mipseb
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipseb"
-CONFIGURE_ARGS+=        --enable-big-endian
+CONFIGURE_ARGS+=	--enable-big-endian
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm)
@@ -72,7 +72,7 @@ SUBST_SED.arm_bswap=		-e s,\"arm/bswap.h\",\"arm/avbswap.h\",g
 SUBST_MESSAGE.arm_bswap=	Fixing "arm/bswap.h" conflict in libavutil
 
 # autodetect code enables these options on NetBSD/arm but it should not
-CONFIGURE_ARGS+=        --disable-armv5te --disable-armv6 --disable-armv6t2
+CONFIGURE_ARGS+=	--disable-armv5te --disable-armv6 --disable-armv6t2
 .endif
 
 .include "../../wip/mplayer-snapshot-share/options.mk"

@@ -22,15 +22,15 @@ USE_LANGUAGES=	c c++
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-BUILDCMD = linux
+BUILDCMD =		linux
 .elif ${MACHINE_ARCH} == "x86_64"
-BUILDCMD = linux64
+BUILDCMD =		linux64
 .else
 PKG_FAIL_REASON=	"This package is unavailable on your machine"
 .endif
 
-SUBST_CLASSES+=         script
-SUBST_STAGE.script=     post-patch
+SUBST_CLASSES+=		script
+SUBST_STAGE.script=	post-patch
 SUBST_SED.script=	-e 's|gcc|${CC}|'
 SUBST_SED.script+=	-e 's|g\+\+|${CXX}|'
 .if ${MACHINE_ARCH} == "i386"

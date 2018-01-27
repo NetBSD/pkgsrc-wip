@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/mce-dev-1.5.6.debian.orig
 
-NO_BUILD= yes
+NO_BUILD=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 

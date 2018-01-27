@@ -16,7 +16,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 # Options supported by both mplayer* or mencoder*.
 
 PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv png theora vorbis x264 debug
-PKG_SUPPORTED_OPTIONS+= dvdread dvdnav
+PKG_SUPPORTED_OPTIONS+=	dvdread dvdnav
 .if ${OSS_TYPE} != "none"
 PKG_SUPPORTED_OPTIONS+=	oss
 .endif
@@ -55,17 +55,17 @@ PKG_SUGGESTED_OPTIONS+=	v4l2
 # Platform-specific options.
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "powerpc"
-PKG_SUPPORTED_OPTIONS+= mplayer-runtime-cpudetection
+PKG_SUPPORTED_OPTIONS+=	mplayer-runtime-cpudetection
 .endif
 .if ${MACHINE_ARCH} == "i386"
-PKG_SUPPORTED_OPTIONS+= mplayer-default-cflags mplayer-win32
+PKG_SUPPORTED_OPTIONS+=	mplayer-default-cflags mplayer-win32
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	mplayer-ssse3
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
-PKG_SUPPORTED_OPTIONS+= xvid
+PKG_SUPPORTED_OPTIONS+=	xvid
 .endif
 
 # -------------------------------------------------------------------------
@@ -225,13 +225,13 @@ CONFIGURE_ARGS+=	--disable-runtime-cpudetection
 .endif
 
 .if !empty(PKG_OPTIONS:Mmplayer-win32)
-EVAL_PREFIX+=		PREFIX.win32-codecs=win32-codecs
+EVAL_PREFIX+=			PREFIX.win32-codecs=win32-codecs
 PREFIX.win32-codecs_DEFAULT=	${LOCALBASE}
-CONFIGURE_ARGS+=	--enable-win32dll
+CONFIGURE_ARGS+=		--enable-win32dll
 #CONFIGURE_ARGS+=	--win32codecsdir="${PREFIX.win32-codecs}/lib/win32"
-DEPENDS+=		win32-codecs>=011227:../../multimedia/win32-codecs
+DEPENDS+=			win32-codecs>=011227:../../multimedia/win32-codecs
 .else
-CONFIGURE_ARGS+=	--disable-win32dll
+CONFIGURE_ARGS+=		--disable-win32dll
 .endif
 
 .if !empty(PKG_OPTIONS:Mnas)

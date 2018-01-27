@@ -15,11 +15,11 @@ COMMENT=	Sound plugin for mupen64 emulator
 LDFLAGS+=	${LIBOSSAUDIO}
 CPPFLAGS+=	-fPIC
 
-SUBST_CLASSES+=	    dsp
-SUBST_STAGE.dsp=    post-patch
-SUBST_FILES.dsp=    main.c
-SUBST_SED.dsp=	    -e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.dsp=  Fixing harcoded audio device.
+SUBST_CLASSES+=		dsp
+SUBST_STAGE.dsp=	post-patch
+SUBST_FILES.dsp=	main.c
+SUBST_SED.dsp=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+SUBST_MESSAGE.dsp=	Fixing harcoded audio device.
 
 INSTALLATION_DIRS+=	share/mupen64-base/plugins
 

@@ -10,9 +10,9 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://dun.github.io/munge/
 COMMENT=	Authentication service for creating and validating credentials
 
-USE_TOOLS=	perl pkg-config
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_TOOLS=		perl pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--localstatedir=$(VARBASE)
 INSTALLATION_DIRS+=	lib/pkgconfig
 

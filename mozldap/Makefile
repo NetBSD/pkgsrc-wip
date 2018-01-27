@@ -22,10 +22,10 @@ CONFIGURE_ARGS+=	--with-system-svrcore
 CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-nss
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/mozilla/directory/c-sdk
-BINDIR=		${PREFIX}/bin
-LIBDIR=		${PREFIX}/lib
-EGDIR=		${PREFIX}/share/examples/ldapsdk
+WRKSRC=	${WRKDIR}/${DISTNAME}/mozilla/directory/c-sdk
+BINDIR=	${PREFIX}/bin
+LIBDIR=	${PREFIX}/lib
+EGDIR=	${PREFIX}/share/examples/ldapsdk
 INCDIR=	${PREFIX}/include/ldap
 
 HEADERFILES=	ldap-to-be-deprecated.h ldif.h disptmpl.h ldap.h iutil.h \

@@ -28,7 +28,7 @@ SPECIAL_PERMS+=	bin/locate root mlocate 2755
 
 BUILD_DEFS+=	VARBASE
 
-CONFIGURE_ARGS+=--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 OWN_DIRS+=	${VARBASE}/mlocate
 

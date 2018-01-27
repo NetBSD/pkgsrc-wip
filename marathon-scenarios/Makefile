@@ -4,27 +4,27 @@
 # The version number should be incremented 0.1 when a scenario is moved or
 # changed (such that its hash is different), 1.0 if one is added/removed.
 # It's rather arbitrary and only for pkgsrc's benefit.
-DISTNAME=	marathon-scenarios-1.0
-CATEGORIES=	games
+DISTNAME=				marathon-scenarios-1.0
+CATEGORIES=				games
 # Another series
-DISTFILES+=	tgi.zip
-SITES.tgi.zip=	http://ryoko.treellama.org/
-DISTFILES+=	marathonRubiconX.zip
-SITES.marathonRubiconX.zip=	http://files5.bungie.org/marathon/
+DISTFILES+=				tgi.zip
+SITES.tgi.zip=				http://ryoko.treellama.org/
+DISTFILES+=				marathonRubiconX.zip
+SITES.marathonRubiconX.zip=		http://files5.bungie.org/marathon/
 # Another series
-DISTFILES+=	Siege_of_NorKorh_-SDL-v2.zip
+DISTFILES+=				Siege_of_NorKorh_-SDL-v2.zip
 SITES.Siege_of_NorKorh_-SDL-v2.zip=	ftp://ftp2.fileball.net/fileball/marathon/aleph1/scenarios/
-DISTFILES+=	MarathonEvil.zip
-SITES.MarathonEvil.zip=	http://trilogyrelease.bungie.org/files/
+DISTFILES+=				MarathonEvil.zip
+SITES.MarathonEvil.zip=			http://trilogyrelease.bungie.org/files/
 # Standalone games
-DISTFILES+=	EternalXv103Full.zip
-SITES.EternalXv103Full.zip+=	http://eternal.bungie.org/files/_releases/
-DISTFILES+=	MarathonRED.zip
-SITES.MarathonRED.zip=	http://trilogyrelease.bungie.org/files/
-DISTFILES+=	Tempus_Irae.zip
-SITES.Tempus_Irae.zip=	http://nardofiles.bungie.org/
+DISTFILES+=				EternalXv103Full.zip
+SITES.EternalXv103Full.zip+=		http://eternal.bungie.org/files/_releases/
+DISTFILES+=				MarathonRED.zip
+SITES.MarathonRED.zip=			http://trilogyrelease.bungie.org/files/
+DISTFILES+=				Tempus_Irae.zip
+SITES.Tempus_Irae.zip=			http://nardofiles.bungie.org/
 # common extract suffix
-EXTRACT_SUFX=	.zip
+EXTRACT_SUFX=				.zip
 
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://traxus.jjaro.net/traxus/Category:Scenarios
@@ -35,17 +35,17 @@ LICENSE=	generic-nonlicense
 # played without it, though.
 #DEPENDS+=	:../../games/alephone
 
-RESTRICTED=	Individual scenarios are subject to various licenses, so play it safe.
-NO_SRC_ON_FTP=	${RESTRICTED}
+RESTRICTED=		Individual scenarios are subject to various licenses, so play it safe.
+NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 SCENARIO_BASE=		share/AlephOne/Scenarios
 .for scenario in TheGrayIncident Rubicon \
 	SiegeOfNorKorh Evil \
 	Eternal Red TempusIrae
-INSTALLATION_DIRS+= ${SCENARIO_BASE}/${scenario} ${SCENARIO_BASE}/${scenario}/Physics\ Models ${SCENARIO_BASE}/${scenario}/Scripts ${SCENARIO_BASE}/${scenario}/Themes ${SCENARIO_BASE}/${scenario}/Tracks
+INSTALLATION_DIRS+=	${SCENARIO_BASE}/${scenario} ${SCENARIO_BASE}/${scenario}/Physics\ Models ${SCENARIO_BASE}/${scenario}/Scripts ${SCENARIO_BASE}/${scenario}/Themes ${SCENARIO_BASE}/${scenario}/Tracks
 .endfor
 
 NO_CONFIGURE=	yes

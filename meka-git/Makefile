@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	meka-0.80alpha0
-CATEGORIES= 	emulators
+CATEGORIES=	emulators
 #GITHUB_TAG=	2ea7d721a6c8adf4d1c2a70303fa529810b2d72e
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocornut/}
 
@@ -15,14 +15,14 @@ BUILD_DEPENDS+=	nasm>=2.0:../../devel/nasm
 BUILD_TARGET=	exe
 
 GIT_REPOSITORIES=	meka
-GIT_REPO.meka=	git://github.com/ocornut/meka
+GIT_REPO.meka=		git://github.com/ocornut/meka
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax pkg-config
 
 WRKSRC=		${WRKDIR}/meka
 
-BUILD_DIRS=	meka/srcs
+BUILD_DIRS=		meka/srcs
 INSTALLATION_DIRS=	bin share/doc/meka share/meka
 
 do-install:

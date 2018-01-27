@@ -12,6 +12,6 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-INFO_FILES=yes
+INFO_FILES=	yes
 
 .include "../../mk/bsd.pkg.mk"

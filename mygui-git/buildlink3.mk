@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mygui-git
 MYGUI_GIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mygui-git+=	mygui-git>=20170211
-BUILDLINK_PKGSRCDIR.mygui-git?=	../../wip/mygui-git
+BUILDLINK_PKGSRCDIR.mygui-git?=		../../wip/mygui-git
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

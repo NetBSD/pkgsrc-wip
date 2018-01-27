@@ -29,11 +29,11 @@ PKGCONFIG_OVERRIDE=	msgpack.pc.in
 .include "../../mk/bsd.prefs.mk"
 
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
-SOEXT=          dylib
+SOEXT=		dylib
 .else
-SOEXT=          so
+SOEXT=		so
 .endif
-PLIST_SUBST+=   SOEXT=${SOEXT}
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "options.mk"
 

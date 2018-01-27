@@ -17,7 +17,7 @@ SUBST_CLASSES+=		wishpath
 SUBST_STAGE.wishpath=	pre-install
 SUBST_FILES.wishpath=	install.sh
 SUBST_SED.qtbindir=	's:$${PREFIX}:${PREFIX}:g'
-SUBST_MESSAGE.wishpath= Fixing Wish path
+SUBST_MESSAGE.wishpath=	Fixing Wish path
 
 INSTALLATION_DIRS=	bin
 

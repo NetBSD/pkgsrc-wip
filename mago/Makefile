@@ -14,7 +14,7 @@ DEPENDS+=	ldtp>=2.0.6:../../wip/ldtp
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
+PYDISTUTILSPKG=		yes
 REPLACE_PYTHON+=	bin/mago
 
 .include "../../lang/python/application.mk"

@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	mindy-0.0.0
-CATEGORIES=	lang
+DISTNAME=		mindy-0.0.0
+CATEGORIES=		lang
 GIT_REPOSITORIES=	mindy
 GIT_REPO.mindy=		https://github.com/project-mindy/mindy.git
 

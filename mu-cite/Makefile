@@ -9,7 +9,7 @@ HOMEPAGE=	http://emacs-21.ki.nu/application/mu-cite.html
 COMMENT=	Mail (MUA) companion to cite other's mail
 LICENSE=	gnu-gpl-v2
 
-SUBST_CLASSES+=	dest
+SUBST_CLASSES+=		dest
 SUBST_STAGE.dest=	pre-build
 SUBST_MESSAGE.dest=	replacing for dest-dir
 SUBST_SED.dest=		-e 's|@@PREFIX@@|${DESTDIR}${PREFIX}|'

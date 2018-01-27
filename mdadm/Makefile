@@ -11,14 +11,13 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cse.unsw.edu.au/~neilb/source/mdadm/ANNOUNCE
 COMMENT=		RAID management for Linux systems
 
+USE_TOOLS+=		gmake
 
-USE_TOOLS+= gmake
+ONLY_FOR_PLATFORM=	Linux-*-*
 
-ONLY_FOR_PLATFORM=Linux-*-*
-
-SUBST_CLASSES+=pfx
-SUBST_FILES.pfx=Makefile
-SUBST_STAGE.pfx=configure
-SUBST_SED.pfx=-e 's,DESTDIR\ =,DESTDIR=\"${PREFIX}\",'
+SUBST_CLASSES+=		pfx
+SUBST_FILES.pfx=	Makefile
+SUBST_STAGE.pfx=	configure
+SUBST_SED.pfx=		-e 's,DESTDIR\ =,DESTDIR=\"${PREFIX}\",'
 
 .include "../../mk/bsd.pkg.mk"

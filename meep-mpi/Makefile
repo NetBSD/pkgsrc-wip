@@ -19,10 +19,10 @@ USE_LANGUAGES=	c c++
 
 # Redirect headers and data to avoid conflict with meep.
 # Better to install whole thing to another prefix like mpi/openmpi?
-CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl \
-		--with-mpi \
-		--includedir=${PREFIX}/include/meep-mpi \
-		--datadir=${PREFIX}/share/meep-mpi
+CONFIGURE_ARGS+=	--with-libctl=${PREFIX}/share/libctl \
+			--with-mpi \
+			--includedir=${PREFIX}/include/meep-mpi \
+			--datadir=${PREFIX}/share/meep-mpi
 
 .include "../../wip/mpb/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"

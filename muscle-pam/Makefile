@@ -8,7 +8,7 @@ MASTER_SITES=		http://alioth.debian.org/download.php/463/
 
 MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.linuxnet.com/
-COMMENT=		PAM plugin for MUSCLE SmartCard framework
+COMMENT=	PAM plugin for MUSCLE SmartCard framework
 
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/MusclePAM

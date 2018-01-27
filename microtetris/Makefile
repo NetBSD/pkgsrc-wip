@@ -19,7 +19,7 @@ NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin
 
-REPLACE_PYTHON+=        ${DISTNAME}.py
+REPLACE_PYTHON+=		${DISTNAME}.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-gobject
 
 do-install:

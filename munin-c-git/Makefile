@@ -4,7 +4,7 @@ VERSION=	0.0.9
 DISTNAME=	munin-c-${VERSION}
 COMMENT=	System monitoring tool, client version and plugin in C
 CATEGORIES=	sysutils
-WRKSRC=         ${WRKDIR}/munin-c
+WRKSRC=		${WRKDIR}/munin-c
 
 MAINTAINER=	tm@core.io
 HOMEPAGE=	http://munin-monitoring.org/
@@ -17,7 +17,7 @@ GIT_MODULE.master=	munin-c
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake perl
 
-LIBS.SunOS+=    -lnsl -lsocket
+LIBS.SunOS+=	-lnsl -lsocket
 
 pre-configure:
 	cd ${WRKSRC} && \

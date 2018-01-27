@@ -16,8 +16,8 @@ USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE+=	modglue-1.19/modglue.pc.in
-CHECK_PORTABILITY_SKIP+= configure
+PKGCONFIG_OVERRIDE+=		modglue-1.19/modglue.pc.in
+CHECK_PORTABILITY_SKIP+=	configure
 
 
 .include "../../devel/libsigc++/buildlink3.mk"

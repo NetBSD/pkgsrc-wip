@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 USE_NCURSES=		yes	# Needs the <panel> library.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\
 			share/examples/multitail
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\
 CONF_FILES=	${PREFIX:Q}/share/examples/multitail/multitail.conf	\
 		${PKG_SYSCONFDIR:Q}/multitail.conf
 
-SUBST_CLASSES+=	path
+SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Adjust DESTDIR and PREFIX
 SUBST_FILES.path=	Makefile
 SUBST_STAGE.path=	post-patch

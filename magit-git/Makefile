@@ -29,14 +29,14 @@ SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 SUBST_SED.prefix+=	-e 's,share/info,info,'
 SUBST_SED.prefix+=	-e '/50magit/s,^	install,\#	install,'
 
-SUBST_CLASSES+=		buildlink
-SUBST_MESSAGE.buildlink=Add site-lisp in buildlink dir for byte-compile
-SUBST_FILES.buildlink=	Makefile
-SUBST_STAGE.buildlink=	post-patch
-SUBST_SED.buildlink=	-e 's,@@BUILDLINK_DIR@@,${BUILDLINK_DIR},'
+SUBST_CLASSES+=			buildlink
+SUBST_MESSAGE.buildlink=	Add site-lisp in buildlink dir for byte-compile
+SUBST_FILES.buildlink=		Makefile
+SUBST_STAGE.buildlink=		post-patch
+SUBST_SED.buildlink=		-e 's,@@BUILDLINK_DIR@@,${BUILDLINK_DIR},'
 
-INFO_FILES=		yes
-BUILD_TARGET=		all
+INFO_FILES=	yes
+BUILD_TARGET=	all
 TEST_TARGET=	check
 
 post-patch:

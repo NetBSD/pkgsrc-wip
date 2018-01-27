@@ -15,8 +15,8 @@ USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-CONFIGURE_ARGS+=        --disable-cxx
-CONFIGURE_ARGS+=        --disable-python
+CONFIGURE_ARGS+=	--disable-cxx
+CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--without-ldap
 INFO_FILES=		yes
 

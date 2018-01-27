@@ -3,7 +3,7 @@
 DISTNAME=	mingw-w64-v2.0
 PKGNAME=	mingw-w64-headers-2.0
 CATEGORIES=	cross
-MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-release/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-release/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

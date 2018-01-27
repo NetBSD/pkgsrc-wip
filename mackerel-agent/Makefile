@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/src/${GO_SRCPATH}
 GOPATH=		${WRKDIR}
 EXTRACT_DIR=	${WRKDIR}/src/github.com/mackerelio
 USE_TOOLS+=	gmake perl
-BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
+BUILD_DEPENDS+=	go-${GO_VERSION}*:../../lang/go
 
 INSTALLATION_DIRS+=	bin share/examples/mackerel-agent
 

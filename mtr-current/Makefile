@@ -37,7 +37,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-pointer-sign
 LIBS+=	-lresolv
 .endif
 
-SUBST_CLASSES+=	fix-version
+SUBST_CLASSES+=			fix-version
 SUBST_STAGE.fix-version=	post-patch
 SUBST_MESSAGE.fix-version=	Fixing version
 SUBST_FILES.fix-version=	configure.ac

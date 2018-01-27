@@ -16,7 +16,7 @@ PKG_SUGGESTED_OPTIONS+=	dri3
 # .endif
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= devd
+PKG_SUGGESTED_OPTIONS+=	devd
 .endif
 
 .include "../../mk/bsd.options.mk"

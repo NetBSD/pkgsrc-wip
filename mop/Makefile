@@ -13,7 +13,7 @@ LICENSE=	generic-nonlicense
 
 INSTALLATION_DIRS=	share/${PKGBASE}
 INSTALLATION_DIRS=	bin
-USE_TOOLS+=	pax
+USE_TOOLS+=		pax
 
 REPLACE_RUBY=	mop.rb
 .include "../../lang/ruby/replace.mk"

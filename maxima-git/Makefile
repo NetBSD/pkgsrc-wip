@@ -44,7 +44,7 @@ SUBST_FILES.fix-version=	configure.in
 SUBST_SED.fix-version=		-e 's:AC_INIT(\[maxima\], *\[.*\]):AC_INIT([maxima],[${PKGVERSION_NOREV}]):'
 
 PYTHON_FOR_BUILD_ONLY=	yes
-ALL_ENV+=	PYTHONBIN=$(PYTHONBIN:Q)
+ALL_ENV+=		PYTHONBIN=$(PYTHONBIN:Q)
 
 pre-configure:
 	cd ${WRKSRC}/src && ${CONFIG_SHELL} ../admin/make_share_list

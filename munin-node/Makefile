@@ -32,7 +32,7 @@ REPLACE_PERL+=		plugins/node.d/slony_lag_.in
 CONF_FILES+=		${EGDIR}/munin-node.conf ${PKG_SYSCONFDIR}/munin-node.conf
 INSTALLATION_DIRS+=	${EGDIR}
 
-CHECK_INTERPRETER_SKIP+=lib/munin/plugins/tomcat_
+CHECK_INTERPRETER_SKIP+=	lib/munin/plugins/tomcat_
 
 RCD_SCRIPTS+=		munin-node
 

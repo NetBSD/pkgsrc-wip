@@ -18,11 +18,6 @@ majordomo/bin/mj_trigger
 majordomo/bin/mj_wwwadm
 majordomo/bin/mj_wwwusr
 majordomo/lib/.mj_config
-majordomo/lib/convertdb.pl
-majordomo/lib/convertfs.pl
-majordomo/lib/convertlist.pl
-majordomo/lib/mj_cf_data.pl
-majordomo/lib/mj_cf_defs.pl
 majordomo/lib/Bf/Sender.pm
 majordomo/lib/Majordomo.pm
 majordomo/lib/Mj/Access.pm
@@ -662,6 +657,11 @@ majordomo/lib/auto/Mj/Util/str_to_offset.al
 majordomo/lib/auto/Mj/Util/str_to_time.al
 majordomo/lib/auto/Mj/Util/text_to_html.al
 majordomo/lib/auto/Mj/Util/time_to_str.al
+majordomo/lib/convertdb.pl
+majordomo/lib/convertfs.pl
+majordomo/lib/convertlist.pl
+majordomo/lib/mj_cf_data.pl
+majordomo/lib/mj_cf_defs.pl
 majordomo/lib/perllocal.pod
 majordomo/lib/setup/ask_basic.pl
 majordomo/lib/setup/ask_domain.pl

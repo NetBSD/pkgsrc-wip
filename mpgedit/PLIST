@@ -3,9 +3,9 @@ bin/mp3decoder.sh
 bin/mpgedit
 bin/mpgedit_nocurses
 bin/xmpgedit
-lib/libmpgedit_decoder.so
 lib/libdecoder_mpg123.so
 lib/libdecoder_popen.so
+lib/libmpgedit_decoder.so
 lib/libmpglib_mpgedit.so
 man/man1/decoder.so.1
 man/man1/mp3decoder.sh.1

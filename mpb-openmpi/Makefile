@@ -17,12 +17,12 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c fortran77
 
 # --prefix=${DESTDIR}... can replace patches as long as HAS_CONFIGURE is used
-CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl \
-		--with-mpi \
-		--prefix=${MPI_PREFIX:Q} \
-		--mandir=${MPI_PREFIX:Q}/man
+CONFIGURE_ARGS+=	--with-libctl=${PREFIX}/share/libctl \
+			--with-mpi \
+			--prefix=${MPI_PREFIX:Q} \
+			--mandir=${MPI_PREFIX:Q}/man
 # Prevent picking up wrong sh:
-CONFIGURE_ENV+=	SH_JOB=$(TOOLS_PATH.sh)
+CONFIGURE_ENV+=		SH_JOB=$(TOOLS_PATH.sh)
 
 CFLAGS+=	-DH5_USE_16_API=1
 

@@ -9,10 +9,10 @@ MAINTAINER=		low@ameba6.com
 HOMEPAGE=		http://menumaker.sourceforge.net/
 COMMENT=		Generates menus for X WMs by scanning for installed programs
 
-PYDISTUTILSPKG=		yes
+PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PYSETUPOPTARGS?=
-PY_PATCHPLIST=		yes
+PY_PATCHPLIST=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

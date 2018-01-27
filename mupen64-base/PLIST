@@ -7,13 +7,13 @@ share/mupen64-base/lang/english.lng
 share/mupen64-base/lang/french.lng
 share/mupen64-base/lang/german.lng
 share/mupen64-base/lang/italian.lng
-share/mupen64-base/lang/spanish.lng
 share/mupen64-base/lang/pt_BR.lng
+share/mupen64-base/lang/spanish.lng
 share/mupen64-base/logo.xpm
 share/mupen64-base/mupen64
 share/mupen64-base/mupen64.ini
-share/mupen64-base/roms/pong.v64.gz
 share/mupen64-base/roms/fire.bin.gz
+share/mupen64-base/roms/pong.v64.gz
 @pkgdir share/mupen64-base/save
 @pkgdir share/mupen64-base/scripts
 @pkgdir share/mupen64-base/plugins

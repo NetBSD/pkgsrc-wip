@@ -1,4 +1,4 @@
 @comment $NetBSD: PLIST,v 1.2 2009/08/20 21:56:21 cheusov Exp $
 bin/mpg123
-man/man1/mpg123.1
 lib/libmpg123.la
+man/man1/mpg123.1

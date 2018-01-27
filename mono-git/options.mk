@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	moonlight
 PLIST_VARS+=		moon
 
 .if !empty(PKG_OPTIONS:Mmoonlight)
-PLIST.moon=	yes
+PLIST.moon=		yes
 CONFIGURE_ARGS+=	--with-moonlight=yes
 .else
 CONFIGURE_ARGS+=	--with-moonlight=no

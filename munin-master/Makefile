@@ -60,7 +60,7 @@ CONF_FILES+=	${STATIC_EGDIR}/${f} ${PKG_SYSCONFDIR}/static/${f}
 
 INSTALLATION_DIRS+=	${EGDIR}
 
-CHECK_PORTABILITY_SKIP+=node/node.d/*
+CHECK_PORTABILITY_SKIP+=	node/node.d/*
 
 BUILD_TARGET=		build
 INSTALL_TARGET=		install-master-prime

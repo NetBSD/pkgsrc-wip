@@ -43,7 +43,7 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR:Q}
 
 # The configure script misdetects endianness on mipseb
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipseb"
-CONFIGURE_ARGS+=        --enable-big-endian
+CONFIGURE_ARGS+=	--enable-big-endian
 .endif
 
 .include "options.mk"

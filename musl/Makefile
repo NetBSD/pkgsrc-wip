@@ -9,8 +9,8 @@ HOMEPAGE=	http://www.musl-libc.org/
 COMMENT=	C standard library
 LICENSE=	mit
 
-USE_TOOLS+=	gmake
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--prefix=${PREFIX}/musl
+USE_TOOLS+=		gmake
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}/musl
 
 .include "../../mk/bsd.pkg.mk"

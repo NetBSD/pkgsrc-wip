@@ -24,7 +24,7 @@ BROKEN_READLINE_DETECTION=	yes
 CHECK_PORTABILITY_SKIP=		otherlibs/Qwt/admin/svn2package.sh
 PTHREAD_OPTS=			require native
 
-SUBST_CLASSES+=	pthread
+SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	configure
 SUBST_MESSAGE.pthread=	adjusting pthread flags
 SUBST_SED.pthread=	-e 's,-lpthread,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'

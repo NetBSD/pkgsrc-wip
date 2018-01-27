@@ -22,9 +22,9 @@ PKG_SUGGESTED_OPTIONS+=		mp3 taglib xmp
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=			${PKG_SUPPORTED_OPTIONS} mplayer totem
-PLIST.mplayer=		yes
-PLIST.totem=		yes
+PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS} mplayer totem
+PLIST.mplayer=	yes
+PLIST.totem=	yes
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
 PLIST.gstreamer=	yes

@@ -1,7 +1,7 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2007/02/20 19:59:08 briandealwis Exp $
-bin/run-mailcap
-bin/mime-edit
 bin/mime-compose
-bin/mime-see
+bin/mime-edit
 bin/mime-print
+bin/mime-see
+bin/run-mailcap
 man/man1/run-mailcap.1

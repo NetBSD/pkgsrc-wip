@@ -1,6 +1,6 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2011/04/07 03:01:53 makoto Exp $
-share/doc/mu-cite/README.en
 share/doc/mu-cite/NEWS
+share/doc/mu-cite/README.en
 share/emacs/site-lisp/mu/latex-math-symbol.el
 share/emacs/site-lisp/mu/latex-math-symbol.elc
 share/emacs/site-lisp/mu/mu-bbdb.el
