@@ -8,9 +8,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
 
-GIT_REPOSITORIES=       master
-GIT_REPO.master=        git://github.com/EttusResearch/uhd.git
-GIT_MODULE.master=      uhd
+GIT_REPOSITORIES=	master
+GIT_REPO.master=	git://github.com/EttusResearch/uhd.git
+GIT_MODULE.master=	uhd
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake

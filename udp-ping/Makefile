@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/UDPing
 USE_LANGUAGES=	c++
 NO_CONFIGURE=	YES
 
-INSTALLATION_DIRS+=	 bin sbin
+INSTALLATION_DIRS+=	bin sbin
 
 do-build:
 		cd ${WRKSRC} &&  \

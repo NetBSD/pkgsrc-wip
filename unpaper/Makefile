@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS= bin
+INSTALLATION_DIRS=	bin
 
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -38,10 +38,10 @@ COMMENT=	Library for manipulating units of physical quantities
 MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
-USE_LANGUAGES=	fortran c c++
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_LANGUAGES=		fortran c c++
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--disable-shared
 
 CONFIGURE_ENV+=	ac_cv_header_CUnit_CUnit_h=no

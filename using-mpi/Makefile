@@ -9,8 +9,8 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www-unix.mcs.anl.gov/mpi/learning.html
 COMMENT=	Sample programs from "Using MPI" (2nd ed.) book
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c fortran77 c++
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c fortran77 c++
 CONFIGURE_ARGS+=	--with-mpich=${PREFIX}/bin
 BUILD_MAKE_FLAGS+=	CXX=${PREFIX}/bin/mpicxx
 BUILD_MAKE_FLAGS+=	LIBS=-lm

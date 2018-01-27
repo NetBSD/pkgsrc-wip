@@ -15,23 +15,23 @@ LICENSE=	nethack-license
 GNU_CONFIGURE=	YES
 MAKE_JOBS_SAFE=	no
 
-CONFIGURE_ARGS+=--enable-wizmode=rhialto
-CONFIGURE_ARGS+=--enable-curses-graphics
-CONFIGURE_ARGS+=--enable-tty-graphics
+CONFIGURE_ARGS+=	--enable-wizmode=rhialto
+CONFIGURE_ARGS+=	--enable-curses-graphics
+CONFIGURE_ARGS+=	--enable-tty-graphics
 # Don't do the user/permission setting during build time.
-CONFIGURE_ENV+=	CHOWN=true
-CONFIGURE_ENV+=	CHGRP=true
+CONFIGURE_ENV+=		CHOWN=true
+CONFIGURE_ENV+=		CHGRP=true
 
 # For executable
 BUILD_TARGET=	unnethack
-INSTALL_TARGET=binfiles
+INSTALL_TARGET=	binfiles
 
 # For data files.
 # (BUG: building the datafiles first causes a double compile
 # of the game executable somehow)
-BUILD_TARGET+=	datastuff
-INSTALL_TARGET+=manpages install-dat
-INSTALLATION_DIRS=${PKGMANDIR}/man6 ${GAMEDIR}
+BUILD_TARGET+=		datastuff
+INSTALL_TARGET+=	manpages install-dat
+INSTALLATION_DIRS=	${PKGMANDIR}/man6 ${GAMEDIR}
 
 PLIST_SUBST+=	VER=$(VER)
 PLIST_VARS=	x11

@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
-LDFLAGS.SunOS+= -lresolv -lsocket -lnsl
+LDFLAGS.SunOS+=	-lresolv -lsocket -lnsl
 
 INSTALLATION_DIRS=	sbin share/examples/umurmur
 

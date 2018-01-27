@@ -25,10 +25,10 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/UPower/UPower.conf \
-		${PKG_SYSCONFDIR}/UPower/UPower.conf
-CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/dbus-1/system.d/org.freedesktop.UPower.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.UPower.conf
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/UPower/UPower.conf \
+			${PKG_SYSCONFDIR}/UPower/UPower.conf
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/dbus-1/system.d/org.freedesktop.UPower.conf \
+			${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.UPower.conf
 
 OWN_DIRS+=	${VARBASE}/lib/upower
 OWN_DIRS+=	${PKG_SYSCONFDIR}/UPower

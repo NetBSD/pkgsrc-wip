@@ -11,9 +11,9 @@ include/ubit/ubit.hpp
 include/ubit/ubit_config.h
 include/ubit/uborder.hpp
 include/ubit/ubox.hpp
-include/ubit/uboxes.hpp
 include/ubit/uboxGeom.hpp
 include/ubit/uboxLayout.hpp
+include/ubit/uboxes.hpp
 include/ubit/ubrick.hpp
 include/ubit/ubuttons.hpp
 include/ubit/ucall.hpp
@@ -39,8 +39,8 @@ include/ubit/udom.hpp
 include/ubit/uedit.hpp
 include/ubit/uerror.hpp
 include/ubit/uevent.hpp
-include/ubit/ueventflow.hpp
 include/ubit/ueventImpl.hpp
+include/ubit/ueventflow.hpp
 include/ubit/ufile.hpp
 include/ubit/ufilebox.hpp
 include/ubit/ufinder.hpp
@@ -51,7 +51,6 @@ include/ubit/ufontImpl.hpp
 include/ubit/ufontMetrics.hpp
 include/ubit/ugeom.hpp
 include/ubit/uglpane.hpp
-include/ubit/uplugpane.hpp
 include/ubit/ugraph.hpp
 include/ubit/ugroup.hpp
 include/ubit/uhtml.hpp
@@ -80,6 +79,7 @@ include/ubit/update.hpp
 include/ubit/upiemenu.hpp
 include/ubit/upix.hpp
 include/ubit/upixmaps.hpp
+include/ubit/uplugpane.hpp
 include/ubit/uprop.hpp
 include/ubit/uscrollbar.hpp
 include/ubit/uscrollpane.hpp

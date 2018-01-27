@@ -13,9 +13,9 @@ COMMENT=	Quest for the Unicorn version 5, a rogue-like game, Hard Core edition
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-WRKSRC=		${WRKDIR}/unicorn5RL
-USE_LANGUAGES=	c
-BUILD_TARGET=	unicorn5
+WRKSRC=			${WRKDIR}/unicorn5RL
+USE_LANGUAGES=		c
+BUILD_TARGET=		unicorn5
 INSTALLATION_DIRS+=	bin share/doc/unicorn
 
 post-extract:
