@@ -2,8 +2,8 @@
 bin/burlap
 bin/corduroy
 bin/felt
-bin/loom
 bin/felt-patchwork
+bin/loom
 bin/velvet
 bin/yardstick
 lib/felt/beam.defaults
@@ -14,8 +14,8 @@ lib/felt/spanish.trn
 lib/felt/truss.defaults
 man/man1/burlap.1
 man/man1/corduroy.1
-man/man1/felt.1
 man/man1/felt-patchwork.1
+man/man1/felt.1
 man/man1/velvet.1
 man/man1/yardstick.1
 man/man3/Drawing.3

@@ -10,7 +10,7 @@ PLIST_SRC+=	PLIST
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc
 .else
-PKG_SUGGESTED_OPTIONS+= pulseaudio
+PKG_SUGGESTED_OPTIONS+=	pulseaudio
 .endif
 
 PKG_SUGGESTED_OPTIONS+=	webrtc

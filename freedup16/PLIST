@@ -1,4 +1,4 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 13:25:19 draga Exp $
 bin/freedup
-man/man1/freedup.1
 bin/symharden
+man/man1/freedup.1

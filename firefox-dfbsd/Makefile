@@ -45,14 +45,14 @@ LDFLAGS.Linux=		-lnspr4
 .include "mozilla-common.mk"
 .include "options.mk"
 
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/header.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpt.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
 
-CHECK_WRKREF_SKIP+=lib/firefox/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=	lib/firefox/chrome/toolkit/content/global/buildconfig.html
 
-MOZILLA=firefox
+MOZILLA=	firefox
 MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/firefox/browser/chrome/icons/default/default48.png
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 MOZILLA_NAME=	Firefox

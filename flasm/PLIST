@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.2 2006/09/11 18:59:07 kh-p Exp $
 bin/flasm
-share/examples/flasm.ini
-share/doc/flasm.html
 share/doc/classic.css
+share/doc/flasm.html
+share/examples/flasm.ini

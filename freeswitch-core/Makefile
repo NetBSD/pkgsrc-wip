@@ -135,10 +135,10 @@ INSTALLATION_DIRS+=	freeswitch/modules
 INSTALLATION_DIRS+=	freeswitch/sounds
 INSTALLATION_DIRS+=	freeswitch/recordings
 
-CONFLICTS=      	xmlrpc-c-[0-9]*
+CONFLICTS=		xmlrpc-c-[0-9]*
 
-DEPENDS+=        	flite-[0-9]*:../../audio/flite
-DEPENDS+=        	libyaml-[0-9]*:../../textproc/libyaml
+DEPENDS+=		flite-[0-9]*:../../audio/flite
+DEPENDS+=		libyaml-[0-9]*:../../textproc/libyaml
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -147,7 +147,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	libtool */libtool */*/libtool */*/*/libtool
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
-CFLAGS+=        	-Wno-c11-extensions -Wno-deprecated-declarations \
+CFLAGS+=		-Wno-c11-extensions -Wno-deprecated-declarations \
 			-Wno-zero-length-array -Wno-incompatible-pointer-types
 .endif
 

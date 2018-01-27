@@ -13,7 +13,7 @@ COMMENT=	Mothanna is a sans-serif like Arabic OpenType font
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
-NO_BUILD=		yes
+NO_BUILD=	yes
 
 FONTS_DIRS.ttf=		lib/X11/fonts/TTF
 

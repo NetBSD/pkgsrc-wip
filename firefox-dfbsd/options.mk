@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS+=	oss dbus
 .elif ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	oss dbus
 .else
-PKG_SUGGESTED_OPTIONS+= dbus pulseaudio
+PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio
 .endif
 
 # On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.

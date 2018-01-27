@@ -9,7 +9,7 @@ PLIST_VARS+=		gnome jemalloc debug
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc dbus
 .else
-PKG_SUGGESTED_OPTIONS+= pulseaudio dbus
+PKG_SUGGESTED_OPTIONS+=	pulseaudio dbus
 .endif
 
 # On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.

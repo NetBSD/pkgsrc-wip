@@ -1,14 +1,14 @@
 @comment $NetBSD: PLIST,v 1.1 2013/06/23 18:22:25 outpaddling Exp $
 mpich/bin/fftw-wisdom
 mpich/bin/fftw-wisdom-to-conf
+mpich/include/fftw3-mpi.f03
+mpich/include/fftw3-mpi.h
 mpich/include/fftw3.f
 mpich/include/fftw3.f03
 mpich/include/fftw3.h
-mpich/include/fftw3-mpi.f03
-mpich/include/fftw3-mpi.h
+mpich/info/fftw3.info
 mpich/lib/libfftw3.la
 mpich/lib/libfftw3_mpi.la
 mpich/lib/pkgconfig/fftw3.pc
-mpich/info/fftw3.info
-mpich/man/man1/fftw-wisdom.1
 mpich/man/man1/fftw-wisdom-to-conf.1
+mpich/man/man1/fftw-wisdom.1

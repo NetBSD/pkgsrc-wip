@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.3 2014/10/09 14:06:27 thomasklausner Exp $
 #
 
-VER=	1.2.0
-PKGNAME=    fastbit-${VER}
+VER=		1.2.0
+PKGNAME=	fastbit-${VER}
 DISTNAME=	fastbit-ibis${VER}
 CATEGORIES=	databases
 MASTER_SITES=	https://codeforge.lbl.gov/frs/download.php/208/

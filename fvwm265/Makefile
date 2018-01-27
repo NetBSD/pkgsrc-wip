@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--with-imagepath=${PREFIX:Q}/lib/X11/fvwm2/pixmaps:${X11BASE:Q}
 # We don't want to have CPP from the buildlink directory
 CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP=${CPP:Q}
 # To avoid ${WRKDIR} is included in perl script
-CONFIGURE_ENV+=         ac_cv_path_PERL=${PERL5:Q}
+CONFIGURE_ENV+=		ac_cv_path_PERL=${PERL5:Q}
 
 post-extract:
 	mkdir ${WRKDIR:Q}/icons

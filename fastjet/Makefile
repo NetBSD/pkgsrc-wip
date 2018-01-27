@@ -10,12 +10,12 @@ HOMEPAGE=	http://fastjet.fr/
 COMMENT=	Software package for jet finding in pp and e+e- collisions
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP= configure plugins/SISCone/siscone/configure \
+CHECK_PORTABILITY_SKIP=	configure plugins/SISCone/siscone/configure \
 			configure.lineno
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	bash
-USE_LANGUAGES=	c c++ fortran
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash
+USE_LANGUAGES=		c c++ fortran
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash

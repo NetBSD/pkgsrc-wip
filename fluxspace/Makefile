@@ -19,7 +19,7 @@ PY_PATCHPLIST=		YES
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
-CONFIGURE_ENV+= PYTHON=${PYTHONBIN:Q}
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml
 
 .include "../../textproc/py-xml/buildlink3.mk"

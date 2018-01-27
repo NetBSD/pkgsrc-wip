@@ -84,7 +84,7 @@ SUBST_MESSAGE.config=	Fixing configuration files.
 
 .include "options.mk"
 
-EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
+EGFILES=	acct_users attrs attrs.access_reject attrs.accounting_response \
 	attrs.pre-proxy certs/README certs/bootstrap certs/ca.cnf \
 	certs/client.cnf certs/demoCA/cacert.pem certs/server.cnf \
 	certs/xpextensions clients.conf dictionary eap.conf experimental.conf \
@@ -121,7 +121,7 @@ EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
 	sql/postgresql/schema.sql \
 	sql/postgresql/update_radacct_group_trigger.sql \
 	sql/postgresql/voip-postpaid.conf sqlippool.conf templates.conf users
-EGDIRS=	certs certs/demoCA modules sql sql/mssql sql/mysql sql/oracle \
+EGDIRS=		certs certs/demoCA modules sql sql/mssql sql/mysql sql/oracle \
 	sql/postgresql sites-available sites-enabled
 
 .for f in ${EGFILES}

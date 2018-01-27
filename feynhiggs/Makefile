@@ -11,13 +11,13 @@ HOMEPAGE=	http://www.feynhiggs.de/FeynHiggs.html
 COMMENT=	Fortran code for the diagrammatic calculation of the masses
 #LICENSE=	# TODO: (see mk/license.mk)
 
-MAKE_JOBS_SAFE=NO
+MAKE_JOBS_SAFE=	NO
 
 GNU_CONFIGURE=	yes
 MAKE_FILE=	makefile
 USE_LANGUAGES=	c c++ fortran
 
-INSTALLATION_DIRS= share/doc/feynhiggs ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	share/doc/feynhiggs ${PKGMANDIR}/man1
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/api.pdf ${DESTDIR}${PREFIX}/share/doc/feynhiggs

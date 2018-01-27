@@ -7,27 +7,27 @@ PKG_SUGGESTED_OPTIONS=	freeswitch-08k freeswitch-16k freeswitch-32k freeswitch-4
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-08k)
-DISTFILES+=	freeswitch-sounds-music-8000-${VERSION}.tar.gz
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/default/8000
-SOUND_DIRS+=	8000
+DISTFILES+=		freeswitch-sounds-music-8000-${VERSION}.tar.gz
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/default/8000
+SOUND_DIRS+=		8000
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-16k)
-DISTFILES+=	freeswitch-sounds-music-16000-${VERSION}.tar.gz
-SOUND_DIRS+=	16000
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/default/16000
+DISTFILES+=		freeswitch-sounds-music-16000-${VERSION}.tar.gz
+SOUND_DIRS+=		16000
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/default/16000
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-32k)
-DISTFILES+=	freeswitch-sounds-music-32000-${VERSION}.tar.gz
-SOUND_DIRS+=	32000
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/default/32000
+DISTFILES+=		freeswitch-sounds-music-32000-${VERSION}.tar.gz
+SOUND_DIRS+=		32000
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/default/32000
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreeswitch-48k)
-DISTFILES+=	freeswitch-sounds-music-48000-${VERSION}.tar.gz
-SOUND_DIRS+=	48000
-INSTALLATION_DIRS+= share/freeswitch/sounds/music/default/48000
+DISTFILES+=		freeswitch-sounds-music-48000-${VERSION}.tar.gz
+SOUND_DIRS+=		48000
+INSTALLATION_DIRS+=	share/freeswitch/sounds/music/default/48000
 .endif
 
 .for opt in ${PKG_SUPPORTED_OPTIONS}

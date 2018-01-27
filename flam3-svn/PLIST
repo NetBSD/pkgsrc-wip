@@ -1,15 +1,15 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2010/01/31 17:25:56 rhialto Exp $
-lib/libflam3.la
-lib/pkgconfig/flam3.pc
 bin/flam3-animate
+bin/flam3-convert
 bin/flam3-genome
 bin/flam3-render
-bin/flam3-convert
 include/flam3.h
 include/isaac.h
 include/isaacs.h
+lib/libflam3.la
+lib/pkgconfig/flam3.pc
 man/man1/flam3-animate.1
+man/man1/flam3-convert.1
 man/man1/flam3-genome.1
 man/man1/flam3-render.1
-man/man1/flam3-convert.1
 share/flam3/flam3-palettes.xml

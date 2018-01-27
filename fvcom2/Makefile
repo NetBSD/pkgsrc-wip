@@ -22,9 +22,9 @@ USE_LANGUAGES=	c fortran77
 
 AUTO_MKDIRS=	yes
 
-FETCH_MESSAGE=  "Please download the files"
-FETCH_MESSAGE+= "    "${DISTFILES:Q}
-FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
+FETCH_MESSAGE=	"Please download the files"
+FETCH_MESSAGE+=	"    "${DISTFILES:Q}
+FETCH_MESSAGE+=	"manually from "${MASTER_SITES:Q}"."
 
 SUBST_CLASSES+=		log2
 SUBST_FILES.log2=	METIS_source/coarsen.c \

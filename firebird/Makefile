@@ -37,7 +37,7 @@ FBUSER?=		firebird
 FBGROUP?=		firebird
 FBHOME?=		firebird
 
-BUILD_DEFS+=            FBHOME
+BUILD_DEFS+=		FBHOME
 
 PKG_GROUPS=		${FBGROUP}
 PKG_USERS=		${FBUSER}:${FBGROUP}

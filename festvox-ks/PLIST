@@ -1,4 +1,7 @@
 @comment $NetBSD: PLIST,v 1.1 2014/10/30 13:21:27 noud4 Exp $
+share/festival/lib/etc/unknown_DebianGNULinux/.made
+share/festival/lib/etc/unknown_DebianGNULinux/audsp
+share/festival/lib/etc/unknown_DebianGNULinux/mbrola
 share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/diphlist.scm
 share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_accent_def.scm
 share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_dur.scm
@@ -19,7 +22,4 @@ share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_tobi_f0.s
 share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/festvox/pjwstk_pl_token.scm
 share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/mbrola-pl1/pl1
 share/festival/lib/voices/polish/pjwstk_pl_ks_mbrola/mbrola-pl1/pl1_phones
-share/festival/lib/etc/unknown_DebianGNULinux/.made
-share/festival/lib/etc/unknown_DebianGNULinux/audsp
-share/festival/lib/etc/unknown_DebianGNULinux/mbrola
 @pkgdir share/festival/lib/etc/unknown_DebianGNULinux/tmp

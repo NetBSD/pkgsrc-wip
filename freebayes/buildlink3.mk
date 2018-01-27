@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	freebayes
 FREEBAYES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.freebayes+=	freebayes>=65c4880d09ec21f7f2755eac9476b607011522f3
-BUILDLINK_PKGSRCDIR.freebayes?=	../../wip/freebayes
+BUILDLINK_PKGSRCDIR.freebayes?=		../../wip/freebayes
 .endif	# FREEBAYES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-freebayes

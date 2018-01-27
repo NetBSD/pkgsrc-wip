@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-bidi
 #.include "../../graphics/gdk-pixbuf/buildlink3.mk"
 # not found in pkgsrc yet (?)
 .else
-CONFIGURE_ARGS+=        --disable-gdk
+CONFIGURE_ARGS+=	--disable-gdk
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)

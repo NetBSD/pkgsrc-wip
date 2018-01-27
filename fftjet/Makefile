@@ -14,7 +14,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
 
-BUILDLINK_TRANSFORM+=    rm:-fpermissive
+BUILDLINK_TRANSFORM+=	rm:-fpermissive
 
 PKGCONFIG_OVERRIDE+=	fftjet.pc.in
 

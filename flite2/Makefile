@@ -13,10 +13,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.speech.cs.cmu.edu/flite/
 COMMENT=	Small and fast run-time synthesis engine
 
-CONFLICTS+=     flite-1.3:../../audio/flite
+CONFLICTS+=		flite-1.3:../../audio/flite
 # Error opening output file '[...]/cmu_us_kal_diphone.o': No such file or directory
-MAKE_JOBS_SAFE=	no
-CFLAGS+=        -fPIC
+MAKE_JOBS_SAFE=		no
+CFLAGS+=		-fPIC
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes

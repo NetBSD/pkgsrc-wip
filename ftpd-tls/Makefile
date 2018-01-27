@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 
 RCD_SCRIPTS=	ftpdtls
 
-SUBST_CLASSES+=	path
+SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_MESSAGE.path=	Fixing hardcoded path.
 SUBST_FILES.path=	ftpd.8.TLS pathnames.h tlsutil.c README.TLS

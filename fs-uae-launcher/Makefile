@@ -20,12 +20,12 @@ INSTALL_ENV+=	PYTHONBIN=${PYTHONBIN}
 # Imports urllib.parse which is 3+.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_PYTHON+=OpenGL/arrays/_buffers.py
-REPLACE_PYTHON+=OpenGL/arrays/buffers.py
+REPLACE_PYTHON+=	OpenGL/arrays/_buffers.py
+REPLACE_PYTHON+=	OpenGL/arrays/buffers.py
 
-PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}	# 3.5
-PLIST_SUBST+=   PYVERS=${PYPKGPREFIX:S/py//}	# py35 -> 35
-PLIST_SUBST+=   VERSION=${VERSION}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}	# 3.5
+PLIST_SUBST+=	PYVERS=${PYPKGPREFIX:S/py//}	# py35 -> 35
+PLIST_SUBST+=	VERSION=${VERSION}
 
 #DEPENDS+=	${PYPKGPREFIX}-qt4>=4.10.2nb1:../../x11/py-qt4
 # when building with qt5 it should co-exist with calibre and qbzr.

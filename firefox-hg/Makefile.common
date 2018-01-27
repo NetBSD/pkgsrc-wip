@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-application=browser
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firefox-${MOZ_BRANCH} ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 LDFLAGS.SunOS+=		-lm
 
-PLIST_SUBST+=	VERSION=${MOZ_BRANCH}
+PLIST_SUBST+=		VERSION=${MOZ_BRANCH}
 PRINT_PLIST_AWK+=	{ gsub(/${MOZ_BRANCH}/, "$${VERSION}") }
 
 ALL_ENV+=		MOZILLA_PKG_NAME=firefox
@@ -56,14 +56,14 @@ LDFLAGS.Linux=		-lnspr4
 .include "mozilla-common.mk"
 .include "options.mk"
 
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/header.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
-CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpt.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/xpt.py
 
 CHECK_WRKREF_SKIP+=	lib/firefox-${MOZ_BRANCH}/chrome/toolkit/content/global/buildconfig.html
 
-MOZILLA=firefox
+MOZILLA=	firefox
 MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/firefox/browser/chrome/icons/default/default48.png
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 MOZILLA_NAME=	Firefox

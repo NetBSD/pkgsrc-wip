@@ -32,15 +32,15 @@ MAKEFLAGS.emacs+=	EMACS=${EMACS_BIN}
 MAKEFLAGS.xemacs+=	XEMACS=${EMACS_BIN} \
 			PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
-EMACS_MODULES=	base
+EMACS_MODULES=		base
 EMACS_BUILDLINK=	# empty
 
 # string-to-int to string-to-number
-SUBST_CLASSES+=                s2i
-SUBST_MESSAGE.s2i=     string-to-int is an obsolete function; use `string-to-number' instead
-SUBST_STAGE.s2i=       post-patch
-SUBST_FILES.s2i=       mime-parse.el
-SUBST_SED.s2i=         -e s/string-to-int/string-to-number/g
+SUBST_CLASSES+=		s2i
+SUBST_MESSAGE.s2i=	string-to-int is an obsolete function; use `string-to-number' instead
+SUBST_STAGE.s2i=	post-patch
+SUBST_FILES.s2i=	mime-parse.el
+SUBST_SED.s2i=		-e s/string-to-int/string-to-number/g
 
 
 post-build:
