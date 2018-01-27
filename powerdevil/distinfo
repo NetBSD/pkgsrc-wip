@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (powerdevil-5.11.5.tar.xz) = cdaddc1bd04fce0d17057cdb72a3fcbecd5fff6d
+RMD160 (powerdevil-5.11.5.tar.xz) = 7418dd4380eac584b540677062bf34dadd69acd3
+SHA512 (powerdevil-5.11.5.tar.xz) = 8d3658b5cfe53fbe43880f6ca2346edcfb715975798b20d2059267b4daa47511fe9fb17a5b9882c21b75f80a57763a434373607a79594684fb044aae39cd0fb3
+Size (powerdevil-5.11.5.tar.xz) = 392664 bytes
+SHA1 (patch-daemon_CMakeLists.txt) = 48fd83bb322e71b87efc9ca74acba595dc6896e5

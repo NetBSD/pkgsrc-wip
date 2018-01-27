@@ -2783,6 +2783,7 @@ SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postfix-logwatch
 SUBDIR+=	postoffice
 SUBDIR+=	postr
+SUBDIR+=	powerdevil
 SUBDIR+=	povray
 SUBDIR+=	ppp
 SUBDIR+=	ppr
