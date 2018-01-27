@@ -3,8 +3,8 @@
 
 DISTNAME=	kibana-4.1.1
 CATEGORIES=	databases
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=elasticsearch/}
-GITHUB_TAG=     v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=elasticsearch/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	mbowie@rocketspace.com
 HOMEPAGE=	http://www.elasticsearch.org/overview/kibana/

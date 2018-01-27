@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kwayland
 KWAYLAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kwayland+=	kwayland>=5.6.3
-BUILDLINK_PKGSRCDIR.kwayland?=	../../wip/kwayland
+BUILDLINK_PKGSRCDIR.kwayland?=		../../wip/kwayland
 
 .include "../../wip/wayland/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

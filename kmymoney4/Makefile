@@ -4,7 +4,7 @@ DISTNAME=	kmymoney-4.6.1
 PKGREVISION=	1
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
-EXTRACT_SUFX=  .tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gary@duzan.org
 HOMEPAGE=	http://kmymoney2.sourceforge.net/
@@ -16,7 +16,7 @@ CONFLICTS+=	kmymoney2-[0-9]*
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 
 #MAKE_JOBS_SAFE=no
-BUILD_MAKE_FLAGS+= VERBOSE=yes
+BUILD_MAKE_FLAGS+=	VERBOSE=yes
 
 USE_CMAKE=		yes
 USE_TOOLS+=		msgfmt pkg-config perl

@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=		--disable-ssl
+CONFIGURE_ARGS+=	--disable-ssl
 CONFIGURE_ARGS+=	--disable-docs
 
 .include "../../textproc/libxml2/buildlink3.mk"

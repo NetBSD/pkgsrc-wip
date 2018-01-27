@@ -18,7 +18,7 @@ CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
 
-SUBST_CLASSES+= 	rpath
+SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
 SUBST_STAGE.rpath=	post-patch

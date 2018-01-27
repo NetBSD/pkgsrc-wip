@@ -10,7 +10,7 @@ COMMENT=		Console carddav client
 LICENSE=		gnu-gpl-v3
 
 GIT_REPOSITORIES=	khard
-GIT_REPO.khard= 	git://github.com/scheibler/khard.git
+GIT_REPO.khard=		git://github.com/scheibler/khard.git
 
 WRKSRC=			${WRKDIR}/khard
 

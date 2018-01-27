@@ -11,7 +11,7 @@ HOMEPAGE=	http://projects.hepforge.org/ktjet/
 COMMENT=	C++ implementation of the K clustering algorithm
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP=  configure
+CHECK_PORTABILITY_SKIP=	configure
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
