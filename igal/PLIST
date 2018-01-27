@@ -1,11 +1,11 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:46 thomasklausner Exp $
 bin/igal
 man/man1/igal.1
+share/doc/igal/COPYING
+share/doc/igal/ChangeLog
+share/doc/igal/README
+share/doc/igal/THANKS
+share/igal/igal.css
 share/igal/indextemplate.html
 share/igal/slidetemplate.html
 share/igal/tile.png
-share/igal/igal.css
-share/doc/igal/README
-share/doc/igal/THANKS
-share/doc/igal/ChangeLog
-share/doc/igal/COPYING

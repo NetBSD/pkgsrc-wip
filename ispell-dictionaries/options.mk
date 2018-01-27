@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ispell-dictionaries
 PKG_SUPPORTED_OPTIONS=	lang-ca lang-de lang-en-gb lang-es lang-fr lang-ga
-PKG_SUPPORTED_OPTIONS+= lang-lt lang-pl lang-ro lang-ru lang-ru-io lang-sk
+PKG_SUPPORTED_OPTIONS+=	lang-lt lang-pl lang-ro lang-ru lang-ru-io lang-sk
 PKG_SUPPORTED_OPTIONS+=	lang-sv
 PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
 

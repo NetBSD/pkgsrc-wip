@@ -92,7 +92,7 @@ install-desktop:
 .if ${OPSYS} == "NetBSD"
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
-CONFIGURE_ENV+= ac_cv_thread_keyword=no
+CONFIGURE_ENV+=	ac_cv_thread_keyword=no
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"

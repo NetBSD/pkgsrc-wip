@@ -15,7 +15,7 @@ USE_TOOLS+=	perl
 
 REPLACE_PERL+=	ireminder
 
-INSTALLATION_DIRS=    bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 
 .include "../../wip/libitl/buildlink3.mk"

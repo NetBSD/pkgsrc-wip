@@ -9,10 +9,10 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://imagination.sourceforge.net/
 COMMENT=	Imagination a simple and lightweight DVD slideshow maker
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool perl gmake
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config intltool perl gmake
+USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	have_ffmpeg=${BUILDLINK_PREFIX.ffmpeg1}/bin/ffmpeg1
 
 .include "../../devel/glib2/buildlink3.mk"

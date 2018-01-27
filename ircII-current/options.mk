@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.2 2015/09/30 08:25:37 tnn Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ircII
-PKG_SUPPORTED_OPTIONS=	# only socks group
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ircII
+PKG_SUPPORTED_OPTIONS=		# only socks group
 PKG_OPTIONS_OPTIONAL_GROUPS=	socks
 PKG_OPTIONS_GROUP.socks=	socks4 dante
 

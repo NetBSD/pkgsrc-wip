@@ -10,7 +10,7 @@ HOMEPAGE=		www.iolanguage.com
 COMMENT=		Regex addon for Io
 
 ADDON_NAME=			Regex
-ADDON_DEPENDS_ON_ADDONS=        Range
+ADDON_DEPENDS_ON_ADDONS=	Range
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../wip/io-base/addon.mk"

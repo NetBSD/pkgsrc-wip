@@ -12,86 +12,86 @@ PKG_SUGGESTED_OPTIONS=	route
 # Debug build
 #
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=        --enable-debug
+CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 #
 # Optimized build
 #
 .if !empty(PKG_OPTIONS:Moptimization)
-CONFIGURE_ARGS+=        --enable-optim
+CONFIGURE_ARGS+=	--enable-optim
 .endif
 
 #
 # /proc/net/dev driver
 #
 .if !empty(PKG_OPTIONS:Mproc)
-CONFIGURE_ARGS+=        --with-proc
+CONFIGURE_ARGS+=	--with-proc
 .else
-CONFIGURE_ARGS+=        --without-proc
+CONFIGURE_ARGS+=	--without-proc
 .endif
 
 #
 # kstat(3K) driver
 #
 .if !empty(PKG_OPTIONS:Mkstat)
-CONFIGURE_ARGS+=        --with-kstat
+CONFIGURE_ARGS+=	--with-kstat
 .else
-CONFIGURE_ARGS+=        --without-kstat
+CONFIGURE_ARGS+=	--without-kstat
 .endif
 
 #
 # ifmib(4) driver
 #
 .if !empty(PKG_OPTIONS:Mifmib)
-CONFIGURE_ARGS+=        --with-ifmib
+CONFIGURE_ARGS+=	--with-ifmib
 .else
-CONFIGURE_ARGS+=        --without-ifmib
+CONFIGURE_ARGS+=	--without-ifmib
 .endif
 
 #
 # ifdata ioctl driver
 #
 .if !empty(PKG_OPTIONS:Mifdata)
-CONFIGURE_ARGS+=        --with-ifdata
+CONFIGURE_ARGS+=	--with-ifdata
 .else
-CONFIGURE_ARGS+=        --without-ifdata
+CONFIGURE_ARGS+=	--without-ifdata
 .endif
 
 #
 # route(4) sysctl driver
 #
 .if !empty(PKG_OPTIONS:Mroute)
-CONFIGURE_ARGS+=        --with-route
+CONFIGURE_ARGS+=	--with-route
 .else
-CONFIGURE_ARGS+=        --without-route
+CONFIGURE_ARGS+=	--without-route
 .endif
 
 #
 # kvm(3) driver
 #
 .if !empty(PKG_OPTIONS:Mkvm)
-CONFIGURE_ARGS+=        --with-kvm
+CONFIGURE_ARGS+=	--with-kvm
 .else
-CONFIGURE_ARGS+=        --without-kvm
+CONFIGURE_ARGS+=	--without-kvm
 .endif
 
 #
 # HP DLPI driver
 #
 .if !empty(PKG_OPTIONS:Mdlpi)
-CONFIGURE_ARGS+=        --with-dlpi
+CONFIGURE_ARGS+=	--with-dlpi
 .else
-CONFIGURE_ARGS+=        --without-dlpi
+CONFIGURE_ARGS+=	--without-dlpi
 .endif
 
 #
 # Win32 driver
 #
 .if !empty(PKG_OPTIONS:Mwin32)
-CONFIGURE_ARGS+=        --with-win32
+CONFIGURE_ARGS+=	--with-win32
 .else
-CONFIGURE_ARGS+=        --without-win32
+CONFIGURE_ARGS+=	--without-win32
 .endif
 
 #
@@ -108,7 +108,7 @@ CONFIGURE_ARGS+=        --without-snmp
 # force -lcrypto linking for UCD-SNMP
 #
 .if !empty(PKG_OPTIONS:Msnmp-crypto)
-CONFIGURE_ARGS+=        --with-libcrypto
+CONFIGURE_ARGS+=	--with-libcrypto
 .else
-CONFIGURE_ARGS+=        --without-libcrypto
+CONFIGURE_ARGS+=	--without-libcrypto
 .endif

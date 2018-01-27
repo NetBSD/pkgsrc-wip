@@ -10,7 +10,7 @@ COMMENT=		Libotr (https://otr.cypherpunks.ca) support for Irssi
 LICENSE=		gnu-gpl-v2
 
 GIT_REPOSITORIES=	github
-GIT_REPO.github= 	git://github.com/cryptodotis/irssi-otr.git
+GIT_REPO.github=	git://github.com/cryptodotis/irssi-otr.git
 GIT_MODULE.github=	irssi-otr
 # v1.01 is not tagged; use a version slightly after that.
 #GIT_REVISION.github=	4ad3b7b6c85be0154ab3694fe9831796db20c4fe

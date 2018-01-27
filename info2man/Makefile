@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.cskk.ezoshosting.com/cs/css/
 COMMENT=	Info2man is a wrapper for info2pod to convert info files in man format
 LICENSE=	original-bsd # no license
 
-EXTRACT_DIR=   		${WRKDIR}/${DISTNAME}
+EXTRACT_DIR=		${WRKDIR}/${DISTNAME}
 NO_BUILD=		yes
-REPLACE_PERL=   	info2pod
+REPLACE_PERL=		info2pod
 INSTALLATION_DIRS=	bin
 INFO2MAN_PM=		Pathname.pm Misc.pm Math.pm Sink.pm IO.pm GNUInfo.pm Source.pm Object.pm DEBUG.pm
 PKGVERSION=		20001101

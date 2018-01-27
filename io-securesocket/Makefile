@@ -13,7 +13,7 @@ ADDON_NAME=			Socket
 
 .include "../../wip/io-base/addon.mk"
 
-SUBST_CLASSES+=			enable-securesocket
+SUBST_CLASSES+=				enable-securesocket
 SUBST_STAGE.enable-securesocket=	pre-configure
 SUBST_MESSAGE.enable-securesocket=	Enabling SecureSocket addon
 SUBST_FILES.enable-securesocket=	addons/CMakeLists.txt

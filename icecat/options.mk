@@ -11,8 +11,8 @@ PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Msparc) || \
 	!empty(MACHINE_ARCH:Marm)
-PKG_SUPPORTED_OPTIONS+= mozilla-jit
-PKG_SUGGESTED_OPTIONS+= mozilla-jit
+PKG_SUPPORTED_OPTIONS+=	mozilla-jit
+PKG_SUGGESTED_OPTIONS+=	mozilla-jit
 .endif
 
 .include "../../mk/bsd.options.mk"

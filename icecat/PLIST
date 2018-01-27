@@ -8,9 +8,9 @@ include/icecat/Fragmento.h
 include/icecat/ImageErrors.h
 include/icecat/ImageLogging.h
 include/icecat/LIR.h
+include/icecat/NSReg.h
 include/icecat/Native.h
 include/icecat/Nativei386.h
-include/icecat/NSReg.h
 include/icecat/RegAlloc.h
 include/icecat/VerReg.h
 include/icecat/XPCIDispatch.h

@@ -20,8 +20,8 @@ SUBST_SED.enable-addon+=	-e 's,^\# pkgsrc_disabled add_subdirectory(${i}),add_su
 pre-build:
 	cd ${WRKSRC}/addons/${ADDON_NAME} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/io ${WRKSRC}/addons/generate.io ${WRKSRC}/addons ${ADDON_NAME}
 
-BUILD_DIRS+=addons/${ADDON_NAME}
-INSTALL_DIRS+=addons/${ADDON_NAME}
+BUILD_DIRS+=	addons/${ADDON_NAME}
+INSTALL_DIRS+=	addons/${ADDON_NAME}
 
 .include "../../wip/io-vm/buildlink3.mk"
 .for i in ${ADDON_DEPENDS_ON_ADDONS}

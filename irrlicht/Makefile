@@ -26,12 +26,12 @@ CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_LIB_PNG_=1
 CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_ZLIB_=1
 CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_BZLIB_=1
 
-SUBST_CLASSES+=		dos_eol
-SUBST_MESSAGE.dos_eol=	Removing DOS line-ends
-SUBST_STAGE.dos_eol=	post-extract
-SUBST_FILES.dos_eol=	source/Irrlicht/Makefile
-SUBST_FILES.dos_eol+=	source/Irrlicht/os.cpp
-SUBST_FILES.dos_eol+=	source/Irrlicht/COSOperator.cpp
+SUBST_CLASSES+=			dos_eol
+SUBST_MESSAGE.dos_eol=		Removing DOS line-ends
+SUBST_STAGE.dos_eol=		post-extract
+SUBST_FILES.dos_eol=		source/Irrlicht/Makefile
+SUBST_FILES.dos_eol+=		source/Irrlicht/os.cpp
+SUBST_FILES.dos_eol+=		source/Irrlicht/COSOperator.cpp
 SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
 
 .include "../../archivers/bzip2/buildlink3.mk"
