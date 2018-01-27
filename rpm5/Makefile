@@ -18,12 +18,12 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=		autoconf213 bash:run gmake msgfmt perl:run pkg-config
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=        --with-db=${BDBBASE}
+CONFIGURE_ARGS+=	--with-db=${BDBBASE}
 
-BDB_ACCEPTED=           db4 db5
+BDB_ACCEPTED=		db4 db5
 
 # Needs help finding bdb.
-BUILDLINK_TRANSFORM+=   rename:-ldb:${BDB_LIBS}
+BUILDLINK_TRANSFORM+=	rename:-ldb:${BDB_LIBS}
 
 
 WRKSRC=		${WRKDIR}/${UPSTREAMNAME}-${VERSION}
@@ -39,7 +39,7 @@ pre-configure:
 	${RUN} ( cd ${WRKSRC} && autoreconf --force --verbose -i )
 
 
-RPM5_DBI_FILES= Basenames Conflictname Dirnames Group Installtid Name Packages \
+RPM5_DBI_FILES=	Basenames Conflictname Dirnames Group Installtid Name Packages \
 	        Providename Provideversion Requirename Requireversion Triggername \
 		Filemd5s Pubkeys Sha1header Sigmd5 \
 	        __db.001 __db.002 __db.003 __db.004 __db.005

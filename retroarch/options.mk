@@ -2,9 +2,9 @@
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 ffmpeg freetype x11 alsa caca pulseaudio udev
-PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype x11
+PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
+PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype x11 alsa caca pulseaudio udev
+PKG_SUGGESTED_OPTIONS+=		sdl2 ffmpeg freetype x11
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl

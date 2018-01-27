@@ -27,7 +27,7 @@ DEPENDS+=	vorbis-tools>=0:../../audio/vorbis-tools
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-RAWPART_cmd=	/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
+RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
 SUBST_CLASSES+=		fix-dev
 SUBST_STAGE.fix-dev=	do-configure
 SUBST_FILES.fix-dev=	ripit.pl ripit.1

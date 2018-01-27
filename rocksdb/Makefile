@@ -12,9 +12,9 @@ HOMEPAGE=	http://www.rocksdb.org/
 COMMENT=	RocksDB is an embeddable persistent key-value store for fast storage.
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake perl
-BUILD_TARGET=	shared_lib static_lib tools tools_lib install-shared install-static install-headers
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl
+BUILD_TARGET=		shared_lib static_lib tools tools_lib install-shared install-static install-headers
 #INSTALL_TARGET=	install-shared install-static install-headers
 PKG_DESTDIR_SUPPORT=	destdir
 

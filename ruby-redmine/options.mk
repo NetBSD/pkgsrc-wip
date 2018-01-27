@@ -52,7 +52,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-net-ldap>=0.3.1:../../databases/ruby-net-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mmarkdown)
-DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=2.3.0:../../textproc/ruby-redcarpet
+DEPENDS+=		${RUBY_PKGPREFIX}-redcarpet>=2.3.0:../../textproc/ruby-redcarpet
 OVERRIDE_GEMSPEC+=	redcarpet>=2.3.0
 .endif
 
@@ -63,8 +63,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mysql>=2.8.1:../../databases/ruby-mysql
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenid)
-DEPENDS+=	${RUBY_PKGPREFIX}-ruby-openid>=2.3.0:../../security/ruby-ruby-openid
-DEPENDS+=	${RUBY_PKGPREFIX}-rack-openid-[0-9]*:../../security/ruby-rack-openid
+DEPENDS+=		${RUBY_PKGPREFIX}-ruby-openid>=2.3.0:../../security/ruby-ruby-openid
+DEPENDS+=		${RUBY_PKGPREFIX}-rack-openid-[0-9]*:../../security/ruby-rack-openid
 OVERRIDE_GEMSPEC+=	ruby-openid>=2.3.0
 .endif
 
@@ -83,10 +83,10 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
-DEPENDS+=	${RUBY_PKGPREFIX}-shoulda>=3.3.2:../../devel/ruby-shoulda
-DEPENDS+=	${RUBY_PKGPREFIX}-mocha>=0.14:../../devel/ruby-mocha
+DEPENDS+=		${RUBY_PKGPREFIX}-shoulda>=3.3.2:../../devel/ruby-shoulda
+DEPENDS+=		${RUBY_PKGPREFIX}-mocha>=0.14:../../devel/ruby-mocha
 OVERRIDE_GEMSPEC+=	shoulda>=3.3.2
-DEPENDS+=	${RUBY_PKGPREFIX}-capybara>=2.1.0:../../www/ruby-capybara
-DEPENDS+=	${RUBY_PKGPREFIX}-selenium-webdriver-[0-9]*:../../www/ruby-selenium-webdriver
+DEPENDS+=		${RUBY_PKGPREFIX}-capybara>=2.1.0:../../www/ruby-capybara
+DEPENDS+=		${RUBY_PKGPREFIX}-selenium-webdriver-[0-9]*:../../www/ruby-selenium-webdriver
 OVERRIDE_GEMSPEC+=	capybara>=2.1.0
 .endif

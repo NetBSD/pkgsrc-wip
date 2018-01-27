@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.9 2013/06/14 07:36:56 thomasklausner Exp $
 
-DISTNAME=       diaspora-0.0.3.0
-PKGNAME=        ${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=     www
+DISTNAME=	diaspora-0.0.3.0
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+CATEGORIES=	www
 # Diaspora is not a gem.  There is no release tarball.  Perhaps one
 # can get it from github via tags, but it is not clear if that is
 # stable
@@ -11,11 +11,11 @@ MASTER_SITES=
 # For now, obtain dependencies only.
 META_PACKAGE=	yes
 
-MAINTAINER=     gdt@NetBSD.org
-HOMEPAGE=       http://diasporaproject.org/
+MAINTAINER=	gdt@NetBSD.org
+HOMEPAGE=	http://diasporaproject.org/
 #HOMEPAGE=	http://diaspora.github.com/diaspora/
-COMMENT=        Federated privacy-aware social network
-LICENSE=        gnu-agpl-v3
+COMMENT=	Federated privacy-aware social network
+LICENSE=	gnu-agpl-v3
 
 # Packaging decisions:
 #   This package will only (for now) support pgsql.

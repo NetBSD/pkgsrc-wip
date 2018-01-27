@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.rpm+=	rpm>=2.5.4nb7
 BUILDLINK_PKGSRCDIR.rpm?=	../../misc/rpm
 BUILDLINK_DEPMETHOD.rpm?=	build
 
-BUILDLINK_CPPFLAGS.rpm= -I${BUILDLINK_PREFIX.rpm}/include/rpm
+BUILDLINK_CPPFLAGS.rpm=	-I${BUILDLINK_PREFIX.rpm}/include/rpm
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

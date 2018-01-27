@@ -6,6 +6,8 @@ lib/redeclipse/data
 lib/redeclipse/doc
 lib/redeclipse/redeclipse
 lib/redeclipse/redeclipse-server
+man/man6/redeclipse-server.6
+man/man6/redeclipse.6
 share/appdata/redeclipse.appdata.xml
 share/applications/redeclipse.desktop
 share/doc/redeclipse/examples/servinit.cfg
@@ -15,8 +17,6 @@ share/icons/hicolor/16x16/apps/redeclipse.png
 share/icons/hicolor/32x32/apps/redeclipse.png
 share/icons/hicolor/48x48/apps/redeclipse.png
 share/icons/hicolor/64x64/apps/redeclipse.png
-man/man6/redeclipse-server.6
-man/man6/redeclipse.6
 share/pixmaps/redeclipse.xpm
 share/redeclipse/config/brush.cfg
 share/redeclipse/config/compass.cfg

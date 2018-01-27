@@ -14,7 +14,7 @@ LICENSE=	unlicense
 WRKSRC=		${WRKDIR}/roadfighter-1.0.1269
 #USE_TOOLS=	gmake
 USE_LANGUAGES=	c++ c
-CFLAGS+=        -Wno-write-strings
+CFLAGS+=	-Wno-write-strings
 
 SHAREDIR=		${PREFIX}/share/roadfighter
 INSTALLATION_DIRS=	bin ${SHAREDIR}

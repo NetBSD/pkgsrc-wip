@@ -14,8 +14,8 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HAS_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=--disable-builtinminiupnpc
-CONFIGURE_ARGS+=--disable-builtinzlib
+CONFIGURE_ARGS+=	--disable-builtinminiupnpc
+CONFIGURE_ARGS+=	--disable-builtinzlib
 
 CONFIGURE_ENV+=	BIN_DIR=${PREFIX}/bin
 CONFIGURE_ENV+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
@@ -37,7 +37,7 @@ CPPFLAGS+=	-DPREFIX=\"${PREFIX}\"
 # file "/usr/src/lib/libpthread/pthread_tsd.c", line 287, function "pthread_key_delete"
 # [1]   Abort trap (core dumped) retroarch
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=       --disable-thread_storage
+CONFIGURE_ARGS+=	--disable-thread_storage
 .endif
 
 .include "options.mk"

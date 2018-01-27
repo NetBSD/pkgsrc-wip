@@ -1,4 +1,4 @@
 @comment $NetBSD$
 sbin/rmilter
-share/examples/rmilter/rmilter.conf
 share/examples/rmilter/rmilter-grey.conf
+share/examples/rmilter/rmilter.conf

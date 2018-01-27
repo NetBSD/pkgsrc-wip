@@ -12,7 +12,7 @@ COMMENT=	Distributed computing with remote threads in Python
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 
 .include "../../lang/python/extension.mk"

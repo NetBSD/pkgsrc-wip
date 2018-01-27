@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rubrica2
 RUBRICA2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rubrica2+=	rubrica2>=2.0.10
-BUILDLINK_PKGSRCDIR.rubrica2?=	../../wip/rubrica2
+BUILDLINK_PKGSRCDIR.rubrica2?=		../../wip/rubrica2
 
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"

@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 
 # I know it's dirty...
 #
-RESID=resid-0.16.2-ccr
+RESID=	resid-0.16.2-ccr
 CONFIGURE_ARGS+= --with-resid=${WRKDIR}/${RESID}
 
 pre-extract:

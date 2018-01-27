@@ -1,16 +1,16 @@
 @comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:13 thomasklausner Exp $
-bin/vncserver
-bin/vncpasswd
-bin/vncviewer
-bin/vncconfig
-bin/x0vncserver
 bin/Xvnc
+bin/vncconfig
+bin/vncpasswd
+bin/vncserver
+bin/vncviewer
+bin/x0vncserver
 lib/modules/extensions/vnc.so
+man/man1/vncconfig.1
+man/man1/vncpasswd.1
+man/man1/vncserver.1
 man/man1/vncviewer.1
 man/man1/x0vncserver.1
-man/man1/vncpasswd.1
-man/man1/vncconfig.1
-man/man1/vncserver.1
 share/vnc/classes/index.vnc
 share/vnc/classes/logo150x150.gif
 share/vnc/classes/vncviewer.jar

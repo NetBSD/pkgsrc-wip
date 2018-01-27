@@ -44,10 +44,10 @@ OWN_DIRS_PERMS+=	${RUNDIR} ${RMILTER_USER} ${RMILTER_GROUP} 0755
 CONF_FILES=	${EGDIR}/rmilter.conf ${PKG_SYSCONFDIR}/rmilter.conf
 CONF_FILES+=	${EGDIR}/rmilter-grey.conf ${PKG_SYSCONFDIR}/rmilter-grey.conf
 
-SUBST_CLASSES+=         path
-SUBST_STAGE.path=       post-configure
-SUBST_FILES.path=       src/main.c
-SUBST_SED.path=         -e 's|/usr/local/etc/|${PKG_SYSCONFDIR}/|g'
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-configure
+SUBST_FILES.path=	src/main.c
+SUBST_SED.path=		-e 's|/usr/local/etc/|${PKG_SYSCONFDIR}/|g'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/rmilter.conf.sample \

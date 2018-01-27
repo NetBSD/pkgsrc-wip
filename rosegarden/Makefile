@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2014/12/30 22:51:59 makoto Exp $
 
-PKG_FAIL_REASON= "Not packaged yet (MASTER_SITES changed)"
+PKG_FAIL_REASON=	"Not packaged yet (MASTER_SITES changed)"
 
 DISTNAME=	rosegarden-14.12
 CATEGORIES=	audio

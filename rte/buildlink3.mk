@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	rte
 .if !defined(RTE_BUILDLINK3_MK)
 RTE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.rte+=		rte>=0.5.6
+BUILDLINK_API_DEPENDS.rte+=	rte>=0.5.6
 BUILDLINK_PKGSRCDIR.rte?=	../../wip/rte
 
 .include "../../devel/gettext-lib/buildlink3.mk"

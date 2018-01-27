@@ -14,7 +14,7 @@ COMMENT=	Emacs mode for reStructuredText documents
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
-NO_CONFIGURE=YES
+NO_CONFIGURE=	YES
 
 do-build:
 	cd ${WRKSRC} \

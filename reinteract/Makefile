@@ -15,8 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 GNU_CONFIGURE=	yes
 
-REPLACE_PYTHON+=	bin/reinteract.in
-PY_PATCHPLIST=	yes
+REPLACE_PYTHON+=		bin/reinteract.in
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"

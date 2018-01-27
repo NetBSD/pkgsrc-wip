@@ -11,7 +11,7 @@ COMMENT=	Program for reducing Feynman Integrals
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+= pkg-config
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 EDGDIR=	${PREFIX}/examples/reduze

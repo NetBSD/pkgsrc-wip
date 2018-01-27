@@ -16,7 +16,7 @@ BUILD_DIRS=		${WRKSRC} ${WRKSRC}/perl
 
 USE_LIBTOOL=		YES
 
-BUILD_DEPENDS+=       p5-Net-Whois-RIPE-[0-9]*:../../wip/p5-Net-Whois-RIPE
+BUILD_DEPENDS+=	p5-Net-Whois-RIPE-[0-9]*:../../wip/p5-Net-Whois-RIPE
 
 post-configure: perl5-configure
 

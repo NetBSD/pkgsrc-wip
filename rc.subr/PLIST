@@ -1,7 +1,7 @@
 @comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:13 thomasklausner Exp $
-share/examples/rc.d/SERVERS
-share/examples/rc.d/NETWORKING
-share/examples/rc.d/LOGIN
 share/examples/rc.d/DAEMON
+share/examples/rc.d/LOGIN
+share/examples/rc.d/NETWORKING
+share/examples/rc.d/SERVERS
 share/examples/rc.subr/rc.conf.example
 share/examples/rc.subr/rc.subr

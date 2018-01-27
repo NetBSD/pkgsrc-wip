@@ -6,7 +6,7 @@ PKGNAME=	rnc-mode-1.0b3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.pantor.com/
 EXTRACT_SUFX=	.tgz
-WRKSRC=			${WRKDIR}
+WRKSRC=		${WRKDIR}
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www.pantor.com/download.html
@@ -14,7 +14,7 @@ COMMENT=	Emacs mode for editing compact RELAX NG schemas
 
 USE_LANGUAGES=	# none
 
-NO_CONFIGURE=YES
+NO_CONFIGURE=	YES
 
 do-build:
 	cd ${WRKSRC} \

@@ -14,11 +14,11 @@ DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
 DEPENDS+=	${PYPKGPREFIX}-cracklib-[0-9]*:../../wip/py-cracklib
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c
-USE_TOOLS+=	gmake intltool pkg-config
-CONFIGURE_ARGS+=	GCONFTOOL=${GCONFTOOL2}
-PY_PATCHPLIST=	yes
+GNU_CONFIGURE=			yes
+USE_LANGUAGES=			c
+USE_TOOLS+=			gmake intltool pkg-config
+CONFIGURE_ARGS+=		GCONFTOOL=${GCONFTOOL2}
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2
 
 GCONF_SCHEMAS=	revelation.schemas

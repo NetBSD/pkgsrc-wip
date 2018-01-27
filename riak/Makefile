@@ -76,7 +76,7 @@ REPLACE_BASH+=		deps/yokozuna/build/${SOLR:S/.tgz//}/example/etc/create-solrtest
 REPLACE_INTERPRETER+=	escript
 REPLACE.escript.old=	.*escript
 REPLACE.escript.new=	${PREFIX}/bin/escript
-REPLACE_FILES.escript=  deps/node_package/priv/base/nodetool
+REPLACE_FILES.escript=	deps/node_package/priv/base/nodetool
 
 CHECK_PORTABILITY_SKIP=	deps/riak_search/tests/riak_search/run_all.sh
 

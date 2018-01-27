@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autopoint autoreconf intltoolize aclocal autoheader autoconf automake gmake intltool msgfmt pkg-config gettext
-USE_LIBTOOL=            yes
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-gui

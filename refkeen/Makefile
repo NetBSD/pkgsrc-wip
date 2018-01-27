@@ -14,11 +14,11 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
-REFKEEN_PROGS+= reflection-cat3d
-REFKEEN_PROGS+= reflection-catabyss
-REFKEEN_PROGS+= reflection-catapoc
-REFKEEN_PROGS+= reflection-catarm
-REFKEEN_PROGS+= reflection-kdreams
+REFKEEN_PROGS+=	reflection-cat3d
+REFKEEN_PROGS+=	reflection-catabyss
+REFKEEN_PROGS+=	reflection-catapoc
+REFKEEN_PROGS+=	reflection-catarm
+REFKEEN_PROGS+=	reflection-kdreams
 
 INSTALLATION_DIRS=	bin share/doc/${PKGNAME}
 

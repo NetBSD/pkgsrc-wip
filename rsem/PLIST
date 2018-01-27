@@ -7,8 +7,8 @@ bin/rsem-build-read-index
 bin/rsem-calculate-credibility-intervals
 bin/rsem-calculate-expression
 bin/rsem-extract-reference-transcripts
-bin/rsem-generate-data-matrix
 bin/rsem-gen-transcript-plots
+bin/rsem-generate-data-matrix
 bin/rsem-get-unique
 bin/rsem-gff3-to-gtf
 bin/rsem-parse-alignments

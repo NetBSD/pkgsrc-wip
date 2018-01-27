@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	mainline
 GIT_REPO.mainline=	git://gitorious.org/ditz/mainline.git
-WRKSRC=		${WRKDIR}/${GIT_MODULE.mainline}
+WRKSRC=			${WRKDIR}/${GIT_MODULE.mainline}
 
 GEM_SPECFILE=	${WRKSRC}/ditz.gemspec
 

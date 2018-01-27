@@ -1,8 +1,8 @@
 # $NetBSD: options.mk,v 1.2 2015/04/19 21:12:18 nbrkv Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.residualvm
-PKG_SUPPORTED_OPTIONS=	faad flac fluidsynth mad freetype png theora timidity jpeg
-PKG_SUGGESTED_OPTIONS=	faad flac fluidsynth mad freetype png theora timidity jpeg vorbis 
+PKG_OPTIONS_VAR=		PKG_OPTIONS.residualvm
+PKG_SUPPORTED_OPTIONS=		faad flac fluidsynth mad freetype png theora timidity jpeg
+PKG_SUGGESTED_OPTIONS=		faad flac fluidsynth mad freetype png theora timidity jpeg vorbis 
 # only one of tremor or ogg/vorbis
 PKG_OPTIONS_OPTIONAL_GROUPS+=	vorbis
 PKG_OPTIONS_GROUP.vorbis=	vorbis tremor

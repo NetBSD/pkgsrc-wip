@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://github.com/cowboyd/libv8
 COMMENT=	Embedded V8 Javascript
-LICENSE=        mit
+LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-libv8>=3.16:../../wip/ruby-libv8
 DEPENDS+=	${RUBY_PKGPREFIX}-ref-[0-9]*:../../devel/ruby-ref

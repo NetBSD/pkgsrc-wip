@@ -18,9 +18,9 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 1.15.1
 PYTHON_FOR_BUILD_ONLY=		yes
 
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--mandir=${PREFIX}/${PKGMANDIR}
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS=		--prefix=${PREFIX} \
+			--mandir=${PREFIX}/${PKGMANDIR}
 #CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.libLLVM}
 #CONFIGURE_ARGS+=	--python=python
 CONFIGURE_ARGS+=	--disable-jemalloc  # XXX NetBSD only?
@@ -71,7 +71,7 @@ RUST_ARCH:=		i686-apple-darwin
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_CARGO0:=		cargo-nightly-${RUST_ARCH}.tar.gz
-SITES.${RUST_CARGO0}= \
+SITES.${RUST_CARGO0}=	\
 	https://s3.amazonaws.com/rust-lang-ci/cargo-builds/${RUST_CARGO0_DISTHASH}/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
@@ -82,7 +82,7 @@ RUST_ARCH:=		x86_64-apple-darwin
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_CARGO0:=		cargo-nightly-${RUST_ARCH}.tar.gz
-SITES.${RUST_CARGO0}= \
+SITES.${RUST_CARGO0}=	\
 	https://s3.amazonaws.com/rust-lang-ci/cargo-builds/${RUST_CARGO0_DISTHASH}/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
@@ -93,7 +93,7 @@ RUST_ARCH:=		i686-unknown-linux-gnu
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_CARGO0:=		cargo-nightly-${RUST_ARCH}.tar.gz
-SITES.${RUST_CARGO0}= \
+SITES.${RUST_CARGO0}=	\
 	https://s3.amazonaws.com/rust-lang-ci/cargo-builds/${RUST_CARGO0_DISTHASH}/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
@@ -104,7 +104,7 @@ RUST_ARCH:=		x86_64-unknown-linux-gnu
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_CARGO0:=		cargo-nightly-${RUST_ARCH}.tar.gz
-SITES.${RUST_CARGO0}= \
+SITES.${RUST_CARGO0}=	\
 	https://s3.amazonaws.com/rust-lang-ci/cargo-builds/${RUST_CARGO0_DISTHASH}/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
@@ -116,7 +116,7 @@ RUST_ARCH:=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_CARGO0:=		cargo-nightly-${RUST_ARCH}.tar.gz
-SITES.${RUST_CARGO0}= \
+SITES.${RUST_CARGO0}=	\
 	https://s3.amazonaws.com/rust-lang-ci/cargo-builds/${RUST_CARGO0_DISTHASH}/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
@@ -127,7 +127,7 @@ RUST_ARCH:=		x86_64-unknown-freebsd
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_CARGO0:=		cargo-nightly-${RUST_ARCH}.tar.gz
-SITES.${RUST_CARGO0}= \
+SITES.${RUST_CARGO0}=	\
 	https://s3.amazonaws.com/rust-lang-ci/cargo-builds/${RUST_CARGO0_DISTHASH}/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
