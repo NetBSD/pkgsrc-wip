@@ -15,16 +15,16 @@ LICENSE=	2-clause-bsd
 
 WRKSRC=	${WRKDIR}/varnish-modules-0.12.1
 
-DEPENDS+=       varnish>=4.1.4:../../wip/varnish
-BUILD_DEPENDS+=         ${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+DEPENDS+=	varnish>=4.1.4:../../wip/varnish
+BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
-USE_LANGUAGES=          c
-USE_LIBTOOL=            yes
-USE_TOOLS+=             gmake
-USE_TOOLS+=             automake
-USE_TOOLS+=             pkg-config
-GNU_CONFIGURE=          yes
-CONFIGURE_ARGS+=        --with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
+USE_LANGUAGES=		c
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+USE_TOOLS+=		automake
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
 
 pre-configure:
 	cd ${WRKSRC} && ./bootstrap

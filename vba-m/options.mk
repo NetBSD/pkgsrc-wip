@@ -8,7 +8,7 @@ PLIST_VARS+=		gtk nls
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CMAKE_ARGS+=    -DENABLE_DEBUGGER=ON
+CMAKE_ARGS+=	-DENABLE_DEBUGGER=ON
 .else
 CMAKE_ARGS+=	-DENABLE_DEBUGGER=OFF
 .endif

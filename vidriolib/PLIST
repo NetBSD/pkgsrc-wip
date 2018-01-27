@@ -1,10 +1,10 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2007/07/26 14:04:31 ivaniclixx Exp $
-include/vdraction.h
 include/vdraboutwindow.h
+include/vdraction.h
 include/vdrattribute.h
 include/vdrbase.h
-include/vdrborder.h
 include/vdrbitmap.h
+include/vdrborder.h
 include/vdrcolor.h
 include/vdrdisplay.h
 include/vdrdrawable.h

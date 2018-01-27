@@ -1,4 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2012/02/04 08:50:00 shattered Exp $
+share/doc/vista-fonts/ms-ttf-license
 share/fonts/X11/TTF/CALIBRI.ttf
 share/fonts/X11/TTF/CALIBRIB.ttf
 share/fonts/X11/TTF/CALIBRII.ttf
@@ -22,4 +23,3 @@ share/fonts/X11/TTF/CORBEL.ttf
 share/fonts/X11/TTF/CORBELB.ttf
 share/fonts/X11/TTF/CORBELI.ttf
 share/fonts/X11/TTF/CORBELZ.ttf
-share/doc/vista-fonts/ms-ttf-license

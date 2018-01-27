@@ -37,7 +37,7 @@ CXXFLAGS+=	-I${LOCALBASE}/include/smithwaterman \
  		-I${LOCALBASE}/include/fastahack \
  		-I${LOCALBASE}/include/intervaltree
 MAKE_FILE=	Makefile.external-libs
-INSTALL_TARGET=		install-strip
+INSTALL_TARGET=	install-strip
 
 # PORTVERSION=	6451cf639cc7d735137218c4b08f597ba9dd6e73
 PORTVERSION=	790904320065e603c6af5b8a32f635134354467c

@@ -63,12 +63,12 @@ bin/vcfstreamsort
 bin/vcfuniq
 bin/vcfuniqalleles
 include/vcflib/BedReader.h
+include/vcflib/Variant.h
 include/vcflib/convert.h
 include/vcflib/join.h
 include/vcflib/mt19937ar.h
 include/vcflib/split.h
-include/vcflib/ssw_cpp.h
 include/vcflib/ssw.h
-include/vcflib/Variant.h
+include/vcflib/ssw_cpp.h
 lib/libvcflib.a
 lib/libvcflib.so.1

@@ -24,7 +24,7 @@ USE_TOOLS+=	gtar pkg-config bison flex perl
 
 WRKSRC=		${WRKDIR}/mirror/trunk
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
 
 .include "../../mk/bsd.prefs.mk"

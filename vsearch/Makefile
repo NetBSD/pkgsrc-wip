@@ -16,9 +16,9 @@ HOMEPAGE=	https://github.com/torognes/vsearch
 COMMENT=	Versatile open-source tool for metagenomics
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf automake autoreconf gmake
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoconf automake autoreconf gmake
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-pdfman
 
 PORTVERSION=	2.4.2

@@ -10,7 +10,7 @@ HOMEPAGE=		http://www-users.cs.umn.edu/~wburdick/
 COMMENT=		OpenGL based multipurpose image viewer
 
 GNU_CONFIGURE=		yes
-CONFIG_STATUS_OVERRIDE= # defined
+CONFIG_STATUS_OVERRIDE=	# defined
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

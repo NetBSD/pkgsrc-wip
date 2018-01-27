@@ -7,8 +7,8 @@ MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PKGVERSION_NOREV}/ \
 	http://tmp.chruetertee.ch/ \
 	http://disasterarea.chruetertee.ch/ \
 	http://download.virtualbox.org/virtualbox/${VBOX_GUEST_VER}/:guestadditions
-DISTFILES= VirtualBox-${PKGVERSION_NOREV}${EXTRACT_SUFX} ${GADISTFILES}
-EXTRACT_ONLY= VirtualBox-${PKGVERSION_NOREV}${EXTRACT_SUFX}
+DISTFILES=	VirtualBox-${PKGVERSION_NOREV}${EXTRACT_SUFX} ${GADISTFILES}
+EXTRACT_ONLY=	VirtualBox-${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,7 +27,7 @@ USE_TOOLS+=	gtar pkg-config bison flex perl
 
 WRKSRC=		${WRKDIR}/VirtualBox-${PKGVERSION_NOREV}
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
 
 .include "../../mk/bsd.prefs.mk"
