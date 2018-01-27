@@ -99,3 +99,4 @@ lib/libKF5WaylandServer.so.${PKGVERSION}
 libexec/org-kde-kf5-kwayland-testserver
 qt5/mkspecs/modules/qt_KWaylandClient.pri
 qt5/mkspecs/modules/qt_KWaylandServer.pri
+share/examples/kde-xdg/org_kde_kwayland.categories

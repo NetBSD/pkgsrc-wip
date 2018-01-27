@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install vai examples dir
+
+--- src/CMakeLists.txt.orig	2017-12-02 10:20:25.000000000 +0000
++++ src/CMakeLists.txt
+@@ -2,7 +2,7 @@ add_subdirectory(client)
+ add_subdirectory(server)
+ add_subdirectory(tools)
+ 
+-install( FILES org_kde_kwayland.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
++install( FILES org_kde_kwayland.categories DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg )
+ 
+ 
+ if(BUILD_QCH)
