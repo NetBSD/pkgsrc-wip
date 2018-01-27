@@ -9,8 +9,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../wip/kde5/plasma.mk"
 
-CONFLICTS+=	kde-workspace4-[0-9]*
-
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
@@ -24,17 +22,13 @@ RT_LIB_SCHED=	# empty
 CMAKE_ARGS+=	-DRT_LIB_SCHED=${RT_LIB_SCHED}
 CMAKE_ARGS.NetBSD+=	-DKVM_LIB=kvm
 
+CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/libksysguard
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
 CONF_FILES+=	${PREFIX}/share/examples/libksysguard/org.kde.ksysguard.processlisthelper.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf
 
 INSTALLATION_DIRS+=	share/examples/libksysguard
-
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
-
-post-install:
-	mv ${DESTDIR}/etc/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf \
-	${DESTDIR}${PREFIX}/share/examples/libksysguard/
 
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
