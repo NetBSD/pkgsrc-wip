@@ -17,7 +17,7 @@ DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 
 USE_TOOLS+=	msgmerge pkg-config
 
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/plasma-desktop
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colorschemes.knsrc \
@@ -42,11 +42,13 @@ CONF_FILES+=	${PREFIX}/share/examples/plasma-desktop/org.kde.kcontrol.kcmclock.c
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
 INSTALLATION_DIRS+=	share/examples/plasma-desktop
 
-post-install:
-	mv ${DESTDIR}/etc/dbus-1/system.d/org.kde.fontinst.conf \
-	${DESTDIR}${PREFIX}/share/examples/plasma-desktop/
-	mv ${DESTDIR}/etc/dbus-1/system.d/org.kde.kcontrol.kcmclock.conf \
-	${DESTDIR}${PREFIX}/share/examples/plasma-desktop/
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+pre-configure:
+	ln -s /usr/lib/pkgconfig/xorg-evdev.pc ${BUILDLINK_DIR}/lib/pkgconfig/
+	ln -s /usr/lib/pkgconfig/xorg-synaptics.pc ${BUILDLINK_DIR}/lib/pkgconfig/
+.endif
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
