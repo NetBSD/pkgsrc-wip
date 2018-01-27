@@ -9,7 +9,7 @@ MASTER_SITES=	http://cims.nyu.edu/~harvey/zn_poly/releases/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cims.nyu.edu/~harvey/code/zn_poly/
 COMMENT=	Libzn_poly is a C library for polynomial arithmetic in Z/nZ[x]
-LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3
+LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake

@@ -20,7 +20,7 @@ USE_JAVA2=		yes
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 CONFIGURE_ARGS+=	--with-ant-home=${LOCALBASE}
 
-DEPENDS+=	hsqldb18-[0-9]*:../../databases/hsqldb18
+DEPENDS+=		hsqldb18-[0-9]*:../../databases/hsqldb18
 CONFIGURE_ARGS+=	--with-hsqldb-jar=${LOCALBASE}/lib/java/hsqldb18/hsqldb.jar
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-java \

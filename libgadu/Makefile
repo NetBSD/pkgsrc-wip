@@ -3,7 +3,7 @@
 
 DISTNAME=	libgadu-1.12.1
 CATEGORIES=	chat
-MASTER_SITES= 	${MASTER_SITE_GITHUB:=wojtekka/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wojtekka/}
 
 MAINTAINER=	mjl@luckie.org.nz
 HOMEPAGE=	http://libgadu.net/

@@ -16,8 +16,8 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS+=	lib/pkgconfig
-BUILD_DIRS=	gme
-MAKE_ENV+=	MKDIR="${MKDIR}"
+BUILD_DIRS=		gme
+MAKE_ENV+=		MKDIR="${MKDIR}"
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}/gme/

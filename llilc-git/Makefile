@@ -21,9 +21,9 @@ CMAKE_ARG_PATH=	${WRKSRC}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-PYTHON_FOR_BUILD_ONLY=  yes
+PYTHON_FOR_BUILD_ONLY=	yes
 
-BUILDLINK_TRANSFORM+=        rm:-Werror
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
@@ -32,7 +32,7 @@ PKGSRC_COMPILER=	clang
 PKG_CC=			clang
 PKG_CXX=		clang++
 
-CHECK_PORTABILITY_SKIP= utils/buildit/build_llvm
+CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 # XXX perl is not added as a tool as it does not seem to be required
 REPLACE_PERL+=		utils/GenLibDeps.pl

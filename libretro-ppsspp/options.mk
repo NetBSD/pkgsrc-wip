@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libretro-ppsspp
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-ppsspp
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
 PKG_OPTIONS_GROUP.graphics=	opengl
 

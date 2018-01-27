@@ -67,9 +67,9 @@ CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 .endif
 
-PLIST_VARS+=	libkms	
+PLIST_VARS+=		libkms	
 .if !empty(PKG_OPTIONS:Mlibkms)
-PLIST.libkms=	yes
+PLIST.libkms=		yes
 CONFIGURE_ARGS+=	--enable-libkms
 .else
 CONFIGURE_ARGS+=	--disable-libkms

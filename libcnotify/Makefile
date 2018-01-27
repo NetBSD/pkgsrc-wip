@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.4 2014/02/03 09:23:21 othyro Exp $
 
-DISTNAME=       libcnotify-alpha-20150101
-GITHUB_PROJECT= libcnotify
-GITHUB_RELEASE= ${PKGVERSION_NOREV}
-PKGNAME=        ${DISTNAME:S/-alpha//1}
-CATEGORIES=     devel
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=libyal/}
+DISTNAME=	libcnotify-alpha-20150101
+GITHUB_PROJECT=	libcnotify
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+PKGNAME=	${DISTNAME:S/-alpha//1}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libyal/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libyal/libcnotify

@@ -22,9 +22,9 @@ SUBST_FILES.lfe=		bin/lfec
 SUBST_FILES.lfe+=		bin/lfedoc
 CHECK_INTERPRETER=		no
 
-NO_CONFIGURE=	yes
+NO_CONFIGURE=		yes
 BUILD_MAKE_FLAGS=	compile
-LICENSE=	apache-2.0
+LICENSE=		apache-2.0
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

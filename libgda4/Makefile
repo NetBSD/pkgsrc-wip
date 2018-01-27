@@ -19,11 +19,11 @@ CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
 
 CONFIGURE_ARGS+=	--disable-crypto
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIG_SHELL=	bash
+CONFIG_SHELL=		bash
 
 SUBST_CLASSES+=		local
-SUBST_STAGE.local= 	post-patch
-SUBST_FILES.local= 	configure
+SUBST_STAGE.local=	post-patch
+SUBST_FILES.local=	configure
 SUBST_SED.local+=	-e "s|@LOCAL@|${PREFIX}|g"
 SUBST_MESSAGE.local=	"Fixing configure prefix."
 

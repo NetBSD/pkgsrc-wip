@@ -9,9 +9,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.7a69ezine.org/project/libvg/
 COMMENT=		High-level ptrace library
 
-WRKSRC=		${WRKDIR}/libvg/src
-BUILD_TARGET= ${LOWER_OPSYS}
-ONLY_FOR_PLATFORM= FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
+WRKSRC=			${WRKDIR}/libvg/src
+BUILD_TARGET=		${LOWER_OPSYS}
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
 
 INSTALLATION_DIRS=	lib include
 

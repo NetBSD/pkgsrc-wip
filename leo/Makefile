@@ -14,7 +14,7 @@ DEPENDS+=		${PYPKGPREFIX}-docutils>=0.3.9:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 
-NO_BUILD=		yes
+NO_BUILD=	yes
 REPLACE_PYTHON=	src/leo.py scripts/LinixInstall.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
 

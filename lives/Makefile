@@ -22,7 +22,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	pkg-config perl gmake intltool msgfmt
+USE_TOOLS+=		pkg-config perl gmake intltool msgfmt
 
 REPLACE_PERL+=	build-lives-rfx-plugin-multi build-lives-rfx-plugin \
 		tools/autolives.pl \

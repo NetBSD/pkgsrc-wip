@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++ fortran
 
 PKGCONFIG_OVERRIDE+=	lhapdf.pc.in
 
-REPLACE_BASH+=  lhapdf-config.in
+REPLACE_BASH+=	lhapdf-config.in
 
 .include "options.mk"
 

@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	libgrass5
 LIBGRASS5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgrass5+=	libgrass5>=1.0.0
-BUILDLINK_PKGSRCDIR.libgrass5?=	../../wip/libgrass5
+BUILDLINK_PKGSRCDIR.libgrass5?=		../../wip/libgrass5
 .endif # LIBGRASS5_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libgrass5

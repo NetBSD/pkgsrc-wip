@@ -30,6 +30,6 @@ sbin/rpc.nfsd
 sbin/rpc.rquotad
 sbin/rpc.statd
 sbin/showmount
-share/examples/rc.d/nfslocking
-share/examples/rc.d/nfsd
 share/examples/rc.d/mountd
+share/examples/rc.d/nfsd
+share/examples/rc.d/nfslocking

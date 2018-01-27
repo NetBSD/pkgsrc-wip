@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/mono/libbtctl/libbtctl-sharp.pc.in
 
 GNU_CONFIGURE=		yes
 
-ONLY_FOR_PLATFORM=Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -33,7 +33,7 @@ PLIST.lastfm=		yes
 
 .if !empty(PKG_OPTIONS:Mphotobucket)
 CONFIGURE_ARGS+=	--enable-photobucket
-PLIST.photobucket=		yes
+PLIST.photobucket=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mplurk)

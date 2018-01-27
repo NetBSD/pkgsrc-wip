@@ -19,23 +19,23 @@ AUTO_MKDIRS=	yes
 HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
 
-CXXFLAGS+=	-I${BUILDLINK_PREFIX.boost-libs}/include/boost
-CFLAGS+=        -fPIC
-CXXFLAGS+= -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/litecoin -L${BUILDLINK_PREFIX.boost-libs}/lib/litecoin
+CXXFLAGS+=		-I${BUILDLINK_PREFIX.boost-libs}/include/boost
+CFLAGS+=		-fPIC
+CXXFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/litecoin -L${BUILDLINK_PREFIX.boost-libs}/lib/litecoin
 BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
-BOOST_LDFLAGS=	-Wl,-R${BUILDLINK_TRANSFORM.boost-libs}/lib -Wl,-L${BUILDLINK_PREFIX.boost-libs}/lib
-#LDFLAGS+=	${BOOST_LDFLAGS:Q}
-#LDFLAGS+=	${PREFIX}/qt4/lib
-#CPPFLAGS+=      -I${PREFIX}/qt4/include/
+BOOST_LDFLAGS=		-Wl,-R${BUILDLINK_TRANSFORM.boost-libs}/lib -Wl,-L${BUILDLINK_PREFIX.boost-libs}/lib
+#LDFLAGS+=		${BOOST_LDFLAGS:Q}
+#LDFLAGS+=		${PREFIX}/qt4/lib
+#CPPFLAGS+=     	-I${PREFIX}/qt4/include/
 
-CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
-CONFIGURE_ARGS+=  --enable-hardening
-CONFIGURE_ARGS+=  ${PREFIX}/include/db4 
-#CONFIGURE_ARGS+=  --without-gui
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_ARGS+=	--enable-hardening
+CONFIGURE_ARGS+=	${PREFIX}/include/db4 
+#CONFIGURE_ARGS+=	--without-gui
 
-LIBTOOLIZE=     ${PREFIX}/bin/libtoolize
+LIBTOOLIZE=	${PREFIX}/bin/libtoolize
 
-QMAKE_CXXFLAGS+= -stdlib=libstdc++
+QMAKE_CXXFLAGS+=	-stdlib=libstdc++
 
 QMAKE_OPTIONS+=	BOOST_INCLUDE_PATH=${PREFIX}/include/boost
 QMAKE_OPTIONS+=	BDB_INCLUDE_PATH=${PREFIX}/include/db4
@@ -47,10 +47,10 @@ QMAKE_OPTIONS+=	OPENSSL_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	LIB_RPATH=${PREFIX}/lib
 
 
-RCD_SCRIPTS=	litecoind
-OWN_DIRS=	${VARBASE}/litecoin
-EGDIR=		${PREFIX}/share/examples/litecoin
-CONF_FILES=	${EGDIR}/litecoin.conf ${PKG_SYSCONFDIR}/litecoin.conf
+RCD_SCRIPTS=		litecoind
+OWN_DIRS=		${VARBASE}/litecoin
+EGDIR=			${PREFIX}/share/examples/litecoin
+CONF_FILES=		${EGDIR}/litecoin.conf ${PKG_SYSCONFDIR}/litecoin.conf
 CONF_FILES_PERMS=	${EGDIR}/litecoin.conf ${PKG_SYSCONFDIR}/litecoin.conf ${ROOT_USER} ${ROOT_GROUP} 0600
 INSTALLATION_DIRS+=	lib share/examples/litecoin
 

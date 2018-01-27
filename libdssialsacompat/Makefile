@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES+= c
+USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	include/dssi/alsa/sound
 PKGCONFIG_OVERRIDE+=	libdssialsacompat.pc.in

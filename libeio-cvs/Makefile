@@ -17,8 +17,8 @@ USE_TOOLS+=	autoconf automake
 
 WRKSRC=		${WRKDIR}/libeio
 
-GNU_CONFIGURE_LIBSUBDIR=eio
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/eio
+GNU_CONFIGURE_LIBSUBDIR=	eio
+CONFIGURE_ARGS+=		--includedir=${PREFIX}/include/eio
 
 # password = anoncvs
 CVS_ROOT.libeio=	:pserver:anonymous@cvs.schmorp.de/schmorpforge

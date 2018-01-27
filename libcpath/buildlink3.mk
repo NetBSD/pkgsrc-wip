@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcpath
 LIBCPATH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcpath+=	libcpath>=20121225
-BUILDLINK_PKGSRCDIR.libcpath?=	../../wip/libcpath
+BUILDLINK_PKGSRCDIR.libcpath?=		../../wip/libcpath
 
 .include "../../wip/libuna/buildlink3.mk"
 .include "../../wip/libcsplit/buildlink3.mk"

@@ -11,11 +11,11 @@ HOMEPAGE=	http://lde.sourceforge.net
 COMMENT=	Curses based file system viewer/editor for Linux
 
 
-USE_NCURSES=	YES # missing function termname
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-CONFIGURE_ARGS+=--with-ncurses=${PREFIX:Q} \
-		--disable-root-sbin
+USE_NCURSES=		YES # missing function termname
+GNU_CONFIGURE=		YES
+USE_TOOLS+=		gmake
+CONFIGURE_ARGS+=	--with-ncurses=${PREFIX:Q} \
+			--disable-root-sbin
 
 .include "../../mk/bsd.prefs.mk"
 

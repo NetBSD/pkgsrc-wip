@@ -12,10 +12,10 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Folks
 COMMENT=	Library to manage contacts
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake msgfmt
-USE_PKGLOCALEDIR= yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config intltool gmake msgfmt
+USE_PKGLOCALEDIR=	yes
 
 
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/folks-dummy.pc

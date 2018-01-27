@@ -13,16 +13,16 @@ HOMEPAGE=	http://www.cs.unc.edu/Research/compgeom/gzstream/#src
 COMMENT=	Gzstream is a small C++ library, basically just a wrapper
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LIBTOOL=	 yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
 
-INSTALLATION_DIRS+= lib
+INSTALLATION_DIRS+=	lib
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE}
 
-TEST_TARGET= check
+TEST_TARGET=	check
 
 do-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib

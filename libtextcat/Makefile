@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	libtextcat-2.2
-PKGREVISION=    1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://software.wise-guys.nl/download/
 

@@ -12,9 +12,9 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake pkg-config
 
-CONFIGURE_ARGS+= --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-HAS_CONFIGURE=yes
+HAS_CONFIGURE=	yes
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

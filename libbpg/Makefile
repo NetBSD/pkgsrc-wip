@@ -9,10 +9,10 @@ HOMEPAGE=	https://bellard.org/bpg/
 COMMENT=	Library for BGP (Better Portable Graphics)
 #LICENSE=	# TODO: (see mk/license.mk)
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-MAKE_FLAGS+=	prefix=${PREFIX}
-MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+MAKE_FLAGS+=		prefix=${PREFIX}
+MAKE_FLAGS+=		DESTDIR=${DESTDIR}
 INSTALLATION_DIRS=	bin
 
 post-install:

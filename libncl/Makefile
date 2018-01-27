@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	ncl-2.1.18
-PKGNAME=lib${DISTNAME}
+PKGNAME=	lib${DISTNAME}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ncl/}
 
@@ -12,7 +12,7 @@ COMMENT=	The NEXUS Class Library is a C++ library for parsing NEXUS files
 LICENSE=	gnu-gpl-v2 AND 2-clause-bsd
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL= yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 

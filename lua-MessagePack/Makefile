@@ -3,13 +3,13 @@
 DISTNAME=	lua-MessagePack-0.3.1
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}/1}
 CATEGORIES=	devel
-MASTER_SITES=   -https://github.com/fperrad/lua-MessagePack/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	-https://github.com/fperrad/lua-MessagePack/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 HOMEPAGE=	http://fperrad.github.io/lua-MessagePack
 COMMENT=	MessagePack library for Lua
 LICENSE=	mit
 
-NO_BUILD=       yes
+NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS+=	${LUA_LDIR}

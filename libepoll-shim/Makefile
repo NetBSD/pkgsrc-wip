@@ -28,7 +28,7 @@ BUILDLINK_TRANSFORM+=	opt:-Wno-missing-variable-declarations:-Wno-missing-declar
 BUILDLINK_TRANSFORM+=	rm:-Wno-thread-safety-analysis
 .endif
 
-INSTALLATION_DIRS= lib include/libepoll-shim/sys
+INSTALLATION_DIRS=	lib include/libepoll-shim/sys
 
 post-install:
 	cp ${WRKSRC}/include/sys/*.h ${DESTDIR}${PREFIX}/include/libepoll-shim/sys

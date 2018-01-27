@@ -12,11 +12,11 @@ HOMEPAGE=	http://lastexit-player.org/index.php/Main_Page
 COMMENT=	Last Exit is streaming media player for GNOME
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	pkg-config perl intltool msgfmt gmake bash:run
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_TOOLS+=		pkg-config perl intltool msgfmt gmake bash:run
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/

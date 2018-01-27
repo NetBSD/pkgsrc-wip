@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost-system=boost_system
 CONFIGURE_ARGS+=	--with-boost-filesystem=boost_filesystem
 CONFIGURE_ARGS+=	--with-boost-thread=boost_thread

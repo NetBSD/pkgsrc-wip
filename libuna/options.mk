@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--disable-nls
 .if !empty(PKG_OPTIONS:Mstatic)
 CONFIGURE_ARGS+=	--enable-static=yes --enable-static-executables=yes
 .else
-CONFIGURE_ARGS+=        --enable-static=no --enable-static-executables=no
+CONFIGURE_ARGS+=	--enable-static=no --enable-static-executables=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mwide-curses)

@@ -10,14 +10,14 @@ HOMEPAGE=	https://github.com/lfranchi/libechonest
 COMMENT=	Libechonest is a collection of C++/Qt classes for The Echo Nest APIs
 LICENSE=	gnu-gpl-v2
 
-CMAKE_FLAGS+= DBUILD_WITH_QT4=ON
+CMAKE_FLAGS+=	DBUILD_WITH_QT4=ON
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+= cmake-[0-9]*:../../devel/cmake \
+BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake \
 		pkgconf>=0.9.10:../../devel/pkgconf
 
 .include "../../devel/qjson/buildlink3.mk"

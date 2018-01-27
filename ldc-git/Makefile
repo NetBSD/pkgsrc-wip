@@ -4,8 +4,8 @@ PKGNAME=	ldc-0.17.0
 CATEGORIES=	lang
 
 GIT_REPOSITORIES=	ldc
-GIT_REPO.ldc=	https://github.com/ldc-developers/ldc.git
-WRKSRC=	${WRKDIR}/ldc
+GIT_REPO.ldc=		https://github.com/ldc-developers/ldc.git
+WRKSRC=			${WRKDIR}/ldc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wiki.dlang.org/LDC

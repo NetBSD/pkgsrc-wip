@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libunwind
 LIBUNWIND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libunwind+=	libunwind>=3.9.0nb20151127
-BUILDLINK_PKGSRCDIR.libunwind?=	../../wip/libunwind-git
+BUILDLINK_PKGSRCDIR.libunwind?=		../../wip/libunwind-git
 
 .include "../../wip/llvm-git/buildlink3.mk"
 .endif	# LIBUNWIND_BUILDLINK3_MK

@@ -13,9 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_CMAKE=	yes
-INFO_FILES= YES
+INFO_FILES=	YES
 USE_TOOLS+=	bison flex pkg-config makeinfo
-USE_LANGUAGES=c 	c++
+USE_LANGUAGES=	c 	c++
 
 PKGCONFIG_OVERRIDE+=	ginac.pc.in
 

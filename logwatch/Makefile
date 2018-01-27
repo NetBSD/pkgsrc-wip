@@ -25,7 +25,7 @@ REPLACE_PERL+=		lib/Logwatch.pm scripts/logwatch.pl \
 			scripts/services/spamassassin
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path= 	post-patch
+SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	logwatch.8 scripts/logwatch.pl \
 			HOWTO-Customize-LogWatch README \
 			scripts/services/clam-update

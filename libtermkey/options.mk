@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.1 2015/02/21 16:22:20 jonthn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libtermkey
-PKG_OPTIONS_OPTIONAL_GROUPS=    terminfo
+PKG_OPTIONS_OPTIONAL_GROUPS=	terminfo
 PKG_OPTIONS_GROUP.terminfo=	ncurses unibilium
 PKG_SUGGESTED_OPTIONS=		unibilium
 

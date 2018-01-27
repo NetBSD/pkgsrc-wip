@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpthread-stubs
 LIBPTHREAD_STUBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpthread-stubs+=	libpthread-stubs>=0.3
-BUILDLINK_PKGSRCDIR.libpthread-stubs?=	../../devel/libpthread-stubs
+BUILDLINK_PKGSRCDIR.libpthread-stubs?=		../../devel/libpthread-stubs
 .endif	# LIBPTHREAD_STUBS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libpthread-stubs

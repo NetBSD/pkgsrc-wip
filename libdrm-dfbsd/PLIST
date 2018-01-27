@@ -37,12 +37,12 @@ include/libdrm/savage_drm.h
 include/libdrm/sis_drm.h
 include/libdrm/tegra_drm.h
 include/libdrm/vc4_drm.h
-${PLIST.libkms}include/libkms/libkms.h
 ${PLIST.arm}include/libdrm/vc4_packet.h
 ${PLIST.arm}include/libdrm/vc4_qpu_defines.h
 include/libdrm/via_drm.h
 include/libdrm/virtgpu_drm.h
 include/libdrm/vmwgfx_drm.h
+${PLIST.libkms}include/libkms/libkms.h
 include/libsync.h
 include/xf86drm.h
 include/xf86drmMode.h

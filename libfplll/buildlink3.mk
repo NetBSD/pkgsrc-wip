@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libfplll
 LIBFPLLL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfplll+=	libfplll>=3.0.12
-BUILDLINK_PKGSRCDIR.libfplll?=	../../wip/libfplll
+BUILDLINK_PKGSRCDIR.libfplll?=		../../wip/libfplll
 
 
 .include "../../devel/gmp/buildlink3.mk"

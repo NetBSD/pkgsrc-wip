@@ -67,8 +67,8 @@ CONFIGURE_ARGS+=	--disable-optimising
 CONFIGURE_ARGS+=	--with-ncsb-dir=${PREFIX}/share/fonts/urw
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-REPLACE_PYTHON+= scripts/build/yyout2grammar.py
-PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
+REPLACE_PYTHON+=		scripts/build/yyout2grammar.py
+PLIST_SUBST+=			PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2014/01/28
 
 pre-configure:

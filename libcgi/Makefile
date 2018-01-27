@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.1 2013/03/08 12:36:39 makoto Exp $
 DISTNAME=	libcgi-1.0
-CATEGORIES=     www
-MASTER_SITES=   http://prdownloads.sourceforge.net/libcgi/
+CATEGORIES=	www
+MASTER_SITES=	http://prdownloads.sourceforge.net/libcgi/
 LICENSE=	generic-nonlicense
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://libcgi.sourceforge.net/
-COMMENT=        Library for authoring cgi
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://libcgi.sourceforge.net/
+COMMENT=	Library for authoring cgi
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

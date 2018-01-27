@@ -11,11 +11,11 @@ HOMEPAGE=		http://students.ceid.upatras.gr/~sxanth/lwc/
 COMMENT=		Lightweight C++
 
 
-BUILD_TARGET= objdir/lwc
-SUBST_CLASSES+=gcc
-SUBST_STAGE.gcc=pre-build
-SUBST_FILES.gcc=Makefile
-SUBST_SED.gcc= -e 's,CCC\ \=,\#,g' -e 's,CC\ =\ ,CC+=-c ${CFLAGS}\#,' \
+BUILD_TARGET=		objdir/lwc
+SUBST_CLASSES+=		gcc
+SUBST_STAGE.gcc=	pre-build
+SUBST_FILES.gcc=	Makefile
+SUBST_SED.gcc=		-e 's,CCC\ \=,\#,g' -e 's,CC\ =\ ,CC+=-c ${CFLAGS}\#,' \
 	-e 's,$$(CCC),${CC},g'
 
 INSTALLATION_DIRS=	bin

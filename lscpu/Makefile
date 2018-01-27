@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 WRKSRC=	${WRKDIR}/lscpu-1.0.0
 
-INSTALLATION_DIRS+=bin
+INSTALLATION_DIRS+=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lscpu   ${DESTDIR}${PREFIX}/bin/lscpu

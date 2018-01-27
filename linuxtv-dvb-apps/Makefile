@@ -12,7 +12,7 @@ COMMENT=		DVB applications from LinuxTV project
 
 USE_TOOLS+=		gmake
 
-ONLY_FOR_PLATFORM= Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE}

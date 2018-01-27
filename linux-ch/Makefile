@@ -11,7 +11,7 @@ COMMENT=	Ch is an interactive C development environment
 # I have included chstandard-license for pkgsrc-wip purposes as
 # linux-ch/licenses/chstandard-license. Basically,
 # this tool is free for personal and commercial use.
-LICENSE=		chstandard-license
+LICENSE=	chstandard-license
 
 LINUX_BINPKG_FMT=	plain
 LINUX_USE_X11=		yes

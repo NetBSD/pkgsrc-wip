@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/libmobi
 
 USE_LANGUAGES=	c
 
-USE_TOOLS+= automake aclocal autoheader autoconf
+USE_TOOLS+=	automake aclocal autoheader autoconf
 GNU_CONFIGURE=	yes
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}

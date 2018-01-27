@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.4 2015/02/05 21:02:37 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libretro-parallel-n64
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-parallel-n64
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
 PKG_OPTIONS_GROUP.graphics=	opengl
 
@@ -8,19 +8,19 @@ PKG_OPTIONS_GROUP.graphics=	opengl
 
 .if !empty(MACHINE_ARCH:M*arm*)
 PKG_OPTIONS_GROUP.graphics+=	rpi
-PKG_SUPPORTED_OPTIONS+=	dynarec
-PKG_SUGGESTED_OPTIONS+=	dynarec
-N64_DYNAREC_ARCH=	arm
+PKG_SUPPORTED_OPTIONS+=		dynarec
+PKG_SUGGESTED_OPTIONS+=		dynarec
+N64_DYNAREC_ARCH=		arm
 .elif !empty(MACHINE_ARCH:Mi386)
-PKG_SUPPORTED_OPTIONS+=	dynarec
-PKG_SUGGESTED_OPTIONS+=	dynarec opengl
-N64_DYNAREC_ARCH=	x86
+PKG_SUPPORTED_OPTIONS+=		dynarec
+PKG_SUGGESTED_OPTIONS+=		dynarec opengl
+N64_DYNAREC_ARCH=		x86
 .elif !empty(MACHINE_ARCH:Mx86_64)
-PKG_SUPPORTED_OPTIONS+=	dynarec
-PKG_SUGGESTED_OPTIONS+=	dynarec opengl
-N64_DYNAREC_ARCH=	x86_64
+PKG_SUPPORTED_OPTIONS+=		dynarec
+PKG_SUGGESTED_OPTIONS+=		dynarec opengl
+N64_DYNAREC_ARCH=		x86_64
 .else
-PKG_SUGGESTED_OPTIONS+=	opengl
+PKG_SUGGESTED_OPTIONS+=		opengl
 .endif
 
 .if !empty(MACHINE_PLATFORM:MLinux-*-arm*)

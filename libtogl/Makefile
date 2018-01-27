@@ -13,7 +13,7 @@ COMMENT=	Tk OpenGL widget
 WRKSRC=		${WRKDIR}/Togl2.0
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES= c
+USE_LANGUAGES=	c
 
 INSTALLATION_DIRS=	share/doc/libtogl
 

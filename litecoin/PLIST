@@ -1,9 +1,9 @@
 @comment $NetBSD$
+bin/litecoin-cli
+bin/litecoin-tx
 lib/litecoin/libsecp256k1.la
 lib/litecoin/libsecp256k1.so
 lib/litecoin/libsecp256k1.so.0
 sbin/litecoind
-bin/litecoin-cli
-bin/litecoin-tx
 share/examples/litecoin/litecoin.conf
 share/examples/rc.d/litecoind

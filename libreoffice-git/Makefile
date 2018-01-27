@@ -4,8 +4,8 @@ DISTNAME=	libreoffice
 PKGREVISION=	1
 CATEGORIES=	misc
 
-GIT_REPOSITORIES= core
-GIT_REPO.core=    git://gerrit.libreoffice.org/core.git
+GIT_REPOSITORIES=	core
+GIT_REPO.core=		git://gerrit.libreoffice.org/core.git
 
 #MASTER_SITES=	http://dev-www.libreoffice.org/bundles/
 
@@ -25,7 +25,7 @@ GCC_REQD+=	4.6
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
-CHECK_PORTABILITY_SKIP=configure
+CHECK_PORTABILITY_SKIP=	configure
 
 DIST_SUBDIR=	libreoffice
 
@@ -108,7 +108,7 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # is a no-go with normal pkgsrc wrappers.
 # dmake is slowly beeing removed from the LibreOffice build process
 # and this option will hopefully become unneeded in the future
-WRAPPER_SKIP_TRANSFORM=yes
+WRAPPER_SKIP_TRANSFORM=	yes
 
 USE_LANGUAGES+=		c c++
 

@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=     aclocal autoconf automake
+USE_TOOLS+=	aclocal autoconf automake
 
 pre-configure:
 	cd ${WRKSRC} && aclocal && libtoolize --force && automake --foreign --add-missing && autoconf

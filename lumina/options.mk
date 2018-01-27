@@ -5,7 +5,7 @@ PKG_SUPPORTED_OPTIONS=	noxinput
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKG_OPTIONS:Mnoxinput)
-EXTRA= CONFIG+=NO_XINPUT
+EXTRA=	CONFIG+=NO_XINPUT
 .else
 EXTRA=
 .endif

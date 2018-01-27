@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcdata
 LIBCDATA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcdata+=	libcdata>=20130407
-BUILDLINK_PKGSRCDIR.libcdata?=	../../wip/libcdata
+BUILDLINK_PKGSRCDIR.libcdata?=		../../wip/libcdata
 
 .include "../../wip/libcerror/buildlink3.mk"
 .endif	# LIBCDATA_BUILDLINK3_MK

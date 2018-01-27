@@ -22,8 +22,8 @@ BUILD_DIRS+=		providers/bdb
 CONFIGURE_ARGS+=	--with-bdb=${PREFIX}				# XXX BDBBASE
 
 SUBST_CLASSES+=		bdb
-SUBST_STAGE.bdb= 	post-patch
-SUBST_FILES.bdb= 	providers/bdb/Makefile.in
+SUBST_STAGE.bdb=	post-patch
+SUBST_FILES.bdb=	providers/bdb/Makefile.in
 SUBST_SED.bdb=		-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.bdb=	"Fixing BDB prefix."
 
@@ -33,14 +33,14 @@ PLIST.bdb=		yes
 
 .if !empty(PKG_OPTIONS:Mjdbc)
 PKGCONFIG_OVERRIDE+=	libgda-jdbc-4.0.pc.in
-PKG_JVMS_ACCEPTED= 	openjdk7					# XXX openjdk7-bin sun-jdk6 a.o. (patch-ad and patch-fb)
+PKG_JVMS_ACCEPTED=	openjdk7					# XXX openjdk7-bin sun-jdk6 a.o. (patch-ad and patch-fb)
 BUILD_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
 BUILD_DIRS+=		providers/jdbc
 CONFIGURE_ARGS+=	--with-java=yes
 
 SUBST_CLASSES+=		java
-SUBST_STAGE.java= 	post-patch
-SUBST_FILES.java= 	configure providers/jdbc/Makefile.in
+SUBST_STAGE.java=	post-patch
+SUBST_FILES.java=	configure providers/jdbc/Makefile.in
 SUBST_SED.java+=	-e "s|@JAVA_HOME@|${PKG_JAVA_HOME}|g"
 SUBST_MESSAGE.java=	"Fixing configure and Java provider Makefile.in."
 
@@ -67,8 +67,8 @@ CONFIGURE_ARGS+=	--with-mdb=${PREFIX}
 CFLAGS+=		-DMDB_WITH_WRITE_SUPPORT
 
 SUBST_CLASSES+=		mdb
-SUBST_STAGE.mdb= 	post-patch
-SUBST_FILES.mdb= 	providers/mdb/Makefile.in
+SUBST_STAGE.mdb=	post-patch
+SUBST_FILES.mdb=	providers/mdb/Makefile.in
 SUBST_SED.mdb=		-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.mdb=	"Fixing MDB provider Makefile.in."
 

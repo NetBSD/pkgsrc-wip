@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.5 2014/02/03 09:15:52 othyro Exp $
 
-DISTNAME=       libclocale-alpha-20150101
-GITHUB_PROJECT= libclocale
-GITHUB_RELEASE= ${PKGVERSION_NOREV}
-PKGNAME=        ${DISTNAME:S/-alpha//1}
-CATEGORIES=     devel
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=libyal/}
+DISTNAME=	libclocale-alpha-20150101
+GITHUB_PROJECT=	libclocale
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+PKGNAME=	${DISTNAME:S/-alpha//1}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libyal/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libyal/libclocale

@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.feynarts.de/cuba/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.feynarts.de/cuba/
 COMMENT=	Library for multidimensional numerical integration
-LICENSE= 	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

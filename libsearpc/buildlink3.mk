@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsearpc
 LIBSEARPC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsearpc+=	libsearpc>=3.0
-BUILDLINK_PKGSRCDIR.libsearpc?=	../../wip/libsearpc
+BUILDLINK_PKGSRCDIR.libsearpc?=		../../wip/libsearpc
 .endif	# LIBSEARPC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libsearpc

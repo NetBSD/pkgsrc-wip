@@ -18,9 +18,9 @@ USE_TOOLS+=		gawk gmake msgfmt pkg-config printf
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=	${EGDIR}/lilyterm.conf ${PKG_SYSCONFDIR}/${PKGBASE}/lilyterm.conf
-INSTALLATION_DIRS+=     ${PKG_SYSCONFDIR}/${PKGBASE} ${EGDIR}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/lilyterm.conf ${PKG_SYSCONFDIR}/${PKGBASE}/lilyterm.conf
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/${PKGBASE} ${EGDIR}
 
 .include "options.mk"
 

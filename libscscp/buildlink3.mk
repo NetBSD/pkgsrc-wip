@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libscscp
 LIBSCSCP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libscscp+=	libscscp>=0.6.1
-BUILDLINK_PKGSRCDIR.libscscp?=	../../wip/libscscp
+BUILDLINK_PKGSRCDIR.libscscp?=		../../wip/libscscp
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif	# LIBSCSCP_BUILDLINK3_MK

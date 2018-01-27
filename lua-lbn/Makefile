@@ -24,7 +24,7 @@ TEST_TARGET=	test
 
 WRKSRC=			${WRKDIR}/bn
 MAKEFLAGS+=		G=-fPIC
-LBN_README_DIR=		 share/doc/${PKGBASE}
+LBN_README_DIR=		share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LBN_README_DIR}
 
 .include "../../lang/lua/module.mk"

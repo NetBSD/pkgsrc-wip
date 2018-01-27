@@ -10,7 +10,7 @@ HOMEPAGE=	http://people.freedesktop.org/~cbrill/libtxc_dxtn/
 COMMENT=	S3 texture compression support for MesaLib
 LICENSE=	mit
 
-RESTRICTED=	Need a valid license for s3tc
+RESTRICTED=		Need a valid license for s3tc
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

@@ -30,8 +30,8 @@ MAKE_ENV+=		LEX=${LEX:Q}
 
 .if !exists(/usr/bin/yacc)
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-YACC=			${LOCALBASE}/bin/bison -y
-MAKE_ENV+=		YACC=${YACC:Q}
+YACC=		${LOCALBASE}/bin/bison -y
+MAKE_ENV+=	YACC=${YACC:Q}
 .endif
 
 .include "../../mk/bsd.pkg.mk"

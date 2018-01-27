@@ -21,7 +21,7 @@ INSTALL_MAKE_FLAGS+=	includedir=${DESTDIR}${PREFIX}/include/itl \
 
 DOCDIR=	${PREFIX}/share/doc/libitl
 
-INSTALLATION_DIRS=  ${DOCDIR}
+INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/prayertime/doc/method-info.txt \

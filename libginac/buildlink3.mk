@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libginac
 LIBGINAC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libginac+=	libginac>=1.5.8
-BUILDLINK_PKGSRCDIR.libginac?=	../../wip/libginac
+BUILDLINK_PKGSRCDIR.libginac?=		../../wip/libginac
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../math/cln/buildlink3.mk"

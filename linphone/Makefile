@@ -9,10 +9,10 @@ HOMEPAGE=	http://www.linphone.org/
 COMMENT=	SIP-based IP telephony client
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake intltool perl pkg-config
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	YES
+GNU_CONFIGURE=		YES
+USE_TOOLS+=		gmake intltool perl pkg-config
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-osip=${BUILDLINK_PREFIX.libosip2}

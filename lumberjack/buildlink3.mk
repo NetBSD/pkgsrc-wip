@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lumberjack
 LUMBERJACK_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.lumberjack=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.lumberjack?=		build
+BUILDLINK_DEPMETHOD.lumberjack?=	build
 
 BUILDLINK_API_DEPENDS.lumberjack+=	lumberjack>=2.0
 BUILDLINK_PKGSRCDIR.lumberjack?=	../../wip/lumberjack

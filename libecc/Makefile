@@ -10,7 +10,7 @@ HOMEPAGE=	http://libecc.sourceforge.net/
 COMMENT=	C++ elliptic curve library
 #LICENSE=	# TODO: (see mk/license.mk)
 
-MAKE_JOBS_SAFE=NO
+MAKE_JOBS_SAFE=	NO
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

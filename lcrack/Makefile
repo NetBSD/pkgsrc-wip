@@ -12,7 +12,7 @@ COMMENT=		Generic password hash cracker
 WRKSRC=		${WRKDIR}/
 HAS_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=unknown  # talking with authors to solve this :)
+CONFIGURE_ARGS+=	unknown  # talking with authors to solve this :)
 
 INSTALLATION_DIRS=	bin
 

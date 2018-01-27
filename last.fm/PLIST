@@ -10,6 +10,7 @@ share/last.fm/.libs/libLastFmTools.la
 share/last.fm/.libs/libLastFmTools.so
 share/last.fm/.libs/libLastFmTools.so.1
 share/last.fm/.libs/libLastFmTools.so.1.0.0
+share/last.fm/LastFMHelper
 share/last.fm/data/about.png
 share/last.fm/data/about_generic.png
 share/last.fm/data/about_mac.png
@@ -107,7 +108,6 @@ share/last.fm/data/watermark.png
 share/last.fm/data/wizard.png
 share/last.fm/data/wizard_generic.png
 share/last.fm/data/wizard_mac.png
-share/last.fm/LastFMHelper
 share/last.fm/last.fm
 share/last.fm/last.fm.app
 share/last.fm/libLastFmTools.la

@@ -7,7 +7,7 @@ LIBFOLKS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfolks+=	libfolks>=0.3.6
 BUILDLINK_ABI_DEPENDS.libfolks+=	libfolks>=0.4.2nb4
-BUILDLINK_PKGSRCDIR.libfolks?=	../../wip/libfolks
+BUILDLINK_PKGSRCDIR.libfolks?=		../../wip/libfolks
 
 .include "../../devel/glib2/buildlink3.mk"
 #.include "../../devel/gobject-introspection/buildlink3.mk"

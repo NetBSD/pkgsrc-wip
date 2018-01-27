@@ -10,7 +10,7 @@ HOMEPAGE=	http://parchive.sourceforge.net/
 COMMENT=	Create or use PAR2 parity volumes
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=yes
+GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=		c c++
 CXXFLAGS+=		-std=c++11

@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+= --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 HAS_CONFIGURE=	yes
 

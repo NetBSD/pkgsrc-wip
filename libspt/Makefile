@@ -2,8 +2,8 @@
 
 DISTNAME=	libspt-1.1
 
-CATEGORIES=     devel
-MASTER_SITES=   http://www.j10n.org/libspt/
+CATEGORIES=	devel
+MASTER_SITES=	http://www.j10n.org/libspt/
 
 EXTRACT_SUFX=	.tar.bz2
 
@@ -13,7 +13,7 @@ COMMENT=	Provide unpriviliged secure pty
 LICENSE=	2-clause-bsd
 
 USE_LIBTOOL=	yes
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=	yes
 
 MAKE_ENV+=	SHELL=${SH}
 
