@@ -1,6 +1,6 @@
 @comment $NetBSD: PLIST.common,v 1.6 2015/03/15 14:22:19 bsiegert Exp $
-bin/gdb
 ${PLIST.gcore}bin/gcore
+bin/gdb
 ${PLIST.gdbserver}bin/gdbserver
 include/gdb/jit-reader.h
 info/annotate.info

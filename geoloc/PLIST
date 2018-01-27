@@ -1,5 +1,5 @@
 @comment $NetBSD$
-sbin/geolocd
-sbin/geolocctl
 man1/geolocctl.1
 man8/geolocd.8
+sbin/geolocctl
+sbin/geolocd

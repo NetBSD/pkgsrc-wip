@@ -9,8 +9,8 @@ BUILDLINK_API_DEPENDS.gtkglk+=	gtkglk>=0.2
 BUILDLINK_ABI_DEPENDS.gtkglk?=	gtkglk>=0.2nb2
 BUILDLINK_PKGSRCDIR.gtkglk?=	../../wip/gtkglk
 
-BUILDLINK_TRANSFORM+=   l:glk:gtkglk
-BUILDLINK_TARGETS+=     buildlink-gtkglk-hook
+BUILDLINK_TRANSFORM+=	l:glk:gtkglk
+BUILDLINK_TARGETS+=	buildlink-gtkglk-hook
 
 buildlink-gtkglk-hook:
 	${LN} -s gtkglk ${BUILDLINK_DIR}/include/glk

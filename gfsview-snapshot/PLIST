@@ -4,9 +4,9 @@ bin/gfsview2D
 bin/gfsview3D
 lib/libgfsgl2D.la
 lib/libgfsgl3D.la
+share/applications/gfsview.desktop
 share/applications/gfsview2D.desktop
 share/applications/gfsview3D.desktop
-share/applications/gfsview.desktop
 share/gfsview/fonts/Garuda.ttf
 share/gfsview/pixmaps/boundaries-16x16.png
 share/gfsview/pixmaps/cells-16x16.png

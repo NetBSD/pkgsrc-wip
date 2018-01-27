@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.linas.org/gle/
 COMMENT=	GL subroutines for drawing tubing and extrusions
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE=	platform/autoconf/gle-graphics.pc.in
 

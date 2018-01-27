@@ -24,8 +24,8 @@ UNICODE_DISTFILES= \
         Unihan.zip
 
 .for ud in ${UNICODE_DISTFILES}
-DISTFILES+=             ${ud}
-SITES.${ud}=            http://www.unicode.org/Public/10.0.0/ucd/
+DISTFILES+=		${ud}
+SITES.${ud}=		http://www.unicode.org/Public/10.0.0/ucd/
 .endfor
 
 CONFIGURE_ARGS+=	--with-unicode-data=${DISTDIR}/${DIST_SUBDIR}

@@ -233,13 +233,13 @@ lib/gnucash/libgncmod-csv-import.la
 lib/gnucash/libgncmod-customer-import.la
 lib/gnucash/libgncmod-engine.la
 lib/gnucash/libgncmod-generic-import.la
-${PLIST.ofx}lib/gnucash/libgncmod-ofx.la
 lib/gnucash/libgncmod-gnome-search.la
 lib/gnucash/libgncmod-gnome-utils.la
 lib/gnucash/libgncmod-html.la
 lib/gnucash/libgncmod-ledger-core.la
 lib/gnucash/libgncmod-locale-reports-us.la
 lib/gnucash/libgncmod-log-replay.la
+${PLIST.ofx}lib/gnucash/libgncmod-ofx.la
 lib/gnucash/libgncmod-qif-import.la
 lib/gnucash/libgncmod-qif.la
 lib/gnucash/libgncmod-register-core.la

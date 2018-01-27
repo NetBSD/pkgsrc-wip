@@ -19,7 +19,7 @@ COMMENT=	Graphical Monotone VCS Tool
 ###
 NOT_FOR_PLATFORM=	Darwin-*-*
 
-USE_LANGUAGES=          c c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 do-configure:

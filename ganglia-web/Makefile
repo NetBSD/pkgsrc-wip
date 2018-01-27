@@ -40,17 +40,16 @@ USE_LANGUAGES=	c c++
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	post-patch
 SUBST_FILES.makefile=	${WRKSRC}/Makefile
-SUBST_SED.makefile= \
-		-e 's|/usr/share/ganglia-webfrontend|${PREFIX}/${WEBDIR}|g' \
-		-e 's|/etc|${PREFIX}/etc|g' \
-		-e 's|www-data|${APACHE_USER}|g' \
-		-e 's|/var/lib/ganglia|${PREFIX}/var/lib/ganglia|g'
+SUBST_SED.makefile=	\
+	-e 's|/usr/share/ganglia-webfrontend|${PREFIX}/${WEBDIR}|g' \
+	-e 's|/etc|${PREFIX}/etc|g' \
+	-e 's|www-data|${APACHE_USER}|g' \
+	-e 's|/var/lib/ganglia|${PREFIX}/var/lib/ganglia|g'
 
 SUBST_CLASSES+=		conf_php
 SUBST_STAGE.conf_php=	post-patch
 SUBST_FILES.conf_php=	${WRKSRC}/conf_default.php
-SUBST_SED.conf_php= \
-		-e 's|/usr/bin/rrdtool|${PREFIX}/bin/rrdtool|g'
+SUBST_SED.conf_php=	-e 's|/usr/bin/rrdtool|${PREFIX}/bin/rrdtool|g'
 
 #		-e 's|/var/lib/ganglia|/var/db/ganglia|g'
 

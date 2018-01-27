@@ -7,8 +7,8 @@ PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=guichan/}
 
-MAINTAINER=		Pseudo.Statistic@gmail.com
-HOMEPAGE=		http://guichan.sourceforge.net/
+MAINTAINER=	Pseudo.Statistic@gmail.com
+HOMEPAGE=	http://guichan.sourceforge.net/
 COMMENT=	Portable C++ GUI library for games
 
 

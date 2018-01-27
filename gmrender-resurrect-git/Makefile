@@ -11,7 +11,7 @@ COMMENT=		Resource efficient UPnP/DLNA renderer
 LICENSE=		gnu-gpl-v2
 
 GIT_REPOSITORIES=		gmrender-resurrect
-GIT_REPO.gmrender-resurrect= 	git://github.com/hzeller/gmrender-resurrect.git
+GIT_REPO.gmrender-resurrect=	git://github.com/hzeller/gmrender-resurrect.git
 
 # not really hard depends, but without most of them, it's useless
 DEPENDS+=		gst-plugins1-bad-[0-9]*:../../multimedia/gst-plugins1-bad

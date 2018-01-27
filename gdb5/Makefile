@@ -18,15 +18,15 @@ COMMENT=	Symbolic debugger for multiple language frontends
 NOT_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* NetBSD-*-x86_64
 
 BROKEN_GETTEXT_DETECTION=	yes
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt
+GNU_CONFIGURE=			YES
+USE_PKGLOCALEDIR=		YES
+USE_LIBTOOL=			YES
+USE_TOOLS+=			gmake msgfmt
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-INSTALL_TARGET=		install install-info
-TEST_TARGET=		check
-INFO_FILES=		yes
-CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
+INSTALL_TARGET=			install install-info
+TEST_TARGET=			check
+INFO_FILES=			yes
+CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

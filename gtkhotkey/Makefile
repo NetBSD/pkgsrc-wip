@@ -11,11 +11,11 @@ HOMEPAGE=	https://launchpad.net/gtkhotkey/
 COMMENT=	GtkHotkey library Platform independent hotkey handling for Gtk+
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_PKGLOCALEDIR= yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool msgfmt perl
-USE_LANGUAGES+=	c c++
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config intltool msgfmt perl
+USE_LANGUAGES+=		c c++
 
 PKGCONFIG_OVERRIDE+=	gtkhotkey-1.0.pc.in
 

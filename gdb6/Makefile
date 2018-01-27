@@ -15,15 +15,15 @@ COMMENT=		The GNU Project Debugger
 # never heard of dragonfly either, and is not worth fixing.
 NOT_FOR_PLATFORM=	Darwin-*-* DragonFly-*-*
 
-USE_TOOLS+=		gmake makeinfo msgfmt
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=			gmake makeinfo msgfmt
+USE_LIBTOOL=			yes
+USE_PKGLOCALEDIR=		yes
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-GNU_CONFIGURE=		yes
-GNU_CONFIGURE_LIBSUBDIR=gdb6
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
-CONFIGURE_ARGS+=	--enable-libada
-INFO_FILES=		yes
+GNU_CONFIGURE=			yes
+GNU_CONFIGURE_LIBSUBDIR=	gdb6
+CONFIGURE_ARGS+=		--includedir=${PREFIX}/include/gdb6
+CONFIGURE_ARGS+=		--enable-libada
+INFO_FILES=			yes
 
 .include "options.mk"
 

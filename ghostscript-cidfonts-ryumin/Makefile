@@ -29,7 +29,7 @@ SUBST_VARS=	GCR_INSTALL_TYPE
 .if !empty(GS_CIDFMAP)
 SUBST_CLASSES+=		ttf_path
 SUBST_STAGE.ttf_path=	post-build
-SUBST_MESSAGE.ttf_path=Fixing ttf install directory in cidfmap
+SUBST_MESSAGE.ttf_path=	Fixing ttf install directory in cidfmap
 SUBST_FILES.ttf_path=	${GS_CIDFMAP}
 SUBST_SED.ttf_path=	-e 's|%%PREFIX%%|${PREFIX}|'
 .endif

@@ -11,10 +11,10 @@ HOMEPAGE=	http://gtksourcecomple.sourceforge.net/
 COMMENT=	GtkSourceCompletion
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_PKGLOCALEDIR= yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool msgfmt
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config gmake intltool msgfmt
 
 PKGCONFIG_OVERRIDE+=	gtksourcecompletion-1.0.pc.in
 

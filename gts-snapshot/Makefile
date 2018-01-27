@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	gts.pc.in
 
 INSTALLATION_DIRS+=	bin
 
-WRKSRC=${WRKDIR}/gts-snapshot-${SNAPDATE}
+WRKSRC=	${WRKDIR}/gts-snapshot-${SNAPDATE}
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,6 +1,6 @@
 # $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_PREFIX.gcc42:=${LOCALBASE}/gcc42
+BUILDLINK_PREFIX.gcc42:=	${LOCALBASE}/gcc42
 
 BUILDLINK_TREE+=	gcc42
 
@@ -11,12 +11,12 @@ BUILDLINK_API_DEPENDS.gcc42+=	gcc42>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc42?=	gcc42>=4.2.0
 BUILDLINK_PKGSRCDIR.gcc42?=	../../wip/gcc42
 .  if exists(${BUILDLINK_PREFIX.gcc42}/bin/gcc)
-_GNAT1!=${BUILDLINK_PREFIX.gcc42}/bin/gcc -print-prog-name=gnat1
+_GNAT1!=			${BUILDLINK_PREFIX.gcc42}/bin/gcc -print-prog-name=gnat1
 .    if exists(${_GNAT1})
-BUILDLINK_ENV+=	ADAC=${BUILDLINK_PREFIX.gcc42}/bin/gcc
+BUILDLINK_ENV+=			ADAC=${BUILDLINK_PREFIX.gcc42}/bin/gcc
 .    endif
 BUILDLINK_LIBDIRS.gcc42+=	lib
-_GCC_ARCHDIR!=	${DIRNAME} `${BUILDLINK_PREFIX.gcc42}/bin/gcc --print-libgcc-file-name`
+_GCC_ARCHDIR!=			${DIRNAME} `${BUILDLINK_PREFIX.gcc42}/bin/gcc --print-libgcc-file-name`
 .    if empty(_GCC_ARCHDIR:M*not_found*)
 BUILDLINK_LIBDIRS.gcc42+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc42}\///}/
 .      if exists(${_GNAT1})

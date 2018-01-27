@@ -7,5 +7,5 @@ share/applications/grsync.desktop
 share/grsync/grsync.glade
 share/icons/hicolor/48x48/mimetypes/application-x-grsync-session.png
 share/mime/packages/grsync.xml
-share/pixmaps/grsync.png
 share/pixmaps/grsync-busy.png
+share/pixmaps/grsync.png

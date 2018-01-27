@@ -8,8 +8,8 @@ HOMEPAGE=		http://sdr.osmocom.org/trac/wiki/GrOsmoSDR
 COMMENT=		SDR Hardware support for OsmoSDR and so many more
 LICENSE=		gnu-gpl-v2
 
-GIT_REPOSITORIES=       master
-GIT_REPO.master=        git://git.osmocom.org/gr-osmosdr
+GIT_REPOSITORIES=	master
+GIT_REPO.master=	git://git.osmocom.org/gr-osmosdr
 GIT_MODULE.master=	gr-osmosdr
 
 USE_LANGUAGES=		c c++

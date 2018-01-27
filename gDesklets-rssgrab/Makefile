@@ -14,8 +14,8 @@ DEPENDS+=	gDesklets-[0-9]*:../../wip/gDesklets
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-NAME=rssgrab
-GDESKLETSDIR=		${LOCALBASE}/share/gdesklets
+NAME=		rssgrab
+GDESKLETSDIR=	${LOCALBASE}/share/gdesklets
 
 REPLACE_PYTHON=	${NAME}/feedparser.py
 

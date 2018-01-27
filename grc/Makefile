@@ -11,7 +11,7 @@ COMMENT=	Generic colouriser
 LICENSE=	gnu-gpl-v2
 
 INSTALLATION_DIRS=	share/grc share/examples/grc bin ${PKGMANDIR}/man1
-CONF_FILES+=	${PREFIX}/share/examples/grc/grc.conf ${PKG_SYSCONFDIR}/grc.conf
+CONF_FILES+=		${PREFIX}/share/examples/grc/grc.conf ${PKG_SYSCONFDIR}/grc.conf
 
 REPLACE_PYTHON=	grc grcat
 

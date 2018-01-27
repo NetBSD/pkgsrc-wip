@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glkloader
 GLKLOADER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glkloader+=	glkloader>=0.3.2
-BUILDLINK_PKGSRCDIR.glkloader?=	../../wip/glkloader
+BUILDLINK_PKGSRCDIR.glkloader?=		../../wip/glkloader
 
 BUILDLINK_TRANSFORM+=	l:glk:glkloader
 BUILDLINK_TARGETS+=	buildlink-glkloader-hook

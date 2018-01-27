@@ -34,7 +34,7 @@ PLIST.python=		yes
 CONFIGURE_ARGS+=	--disable-python
 .endif
 
-SUBST_CLASSES+=		pkg_sysconfdir
+SUBST_CLASSES+=			pkg_sysconfdir
 SUBST_STAGE.pkg_sysconfdir=	pre-configure
 SUBST_MESSAGE.pkg_sysconfdir=	Fixing PKG_SYSCONFDIR
 SUBST_FILES.pkg_sysconfdir=	ganglia.html				\

@@ -22,11 +22,11 @@ MAKE_FILE=		GNUmakefile
 BUILD_TARGET=		docs
 INSTALL_TARGET=		install-docs
 
-SUBST_CLASSES+=		pyversion
-SUBST_STAGE.pyversion=	do-configure
-SUBST_FILES.pyversion=	GNUmakefile
-SUBST_SED.pyversion=	-e 's:python:${PYTHONBIN}:g'
-SUBST_MESSAGE.pyversion=Fixing Python Version
+SUBST_CLASSES+=			pyversion
+SUBST_STAGE.pyversion=		do-configure
+SUBST_FILES.pyversion=		GNUmakefile
+SUBST_SED.pyversion=		-e 's:python:${PYTHONBIN}:g'
+SUBST_MESSAGE.pyversion=	Fixing Python Version
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure

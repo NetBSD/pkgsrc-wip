@@ -23,7 +23,7 @@ USE_TOOLS+=	gmake
 GAUCHE_SITE_LIB_DIR!=	${PREFIX:Q}/bin/gauche-config --sitelibdir
 .endif
 PLIST_SUBST+=		GAUCHE_SITE_LIB_DIR=${GAUCHE_SITE_LIB_DIR:S|${PREFIX}/||:Q}
-PRINT_PLIST_AWK+= \
+PRINT_PLIST_AWK+=	\
 	{ gsub(/${GAUCHE_SITE_LIB_DIR:S|${PREFIX}/||:S|/|\\/|g}/, \
 	"$${GAUCHE_SITE_LIB_DIR}"); \
 	}

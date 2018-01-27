@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= nls
+PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
 .else
@@ -24,9 +24,9 @@ MULTILIB_SUPPORTED?=	unknown
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 .  if exists(/usr/include/gnu/stubs-64.h) && \
      !exists(/usr/include/gnu/stubs-32.h)
-MULTILIB_SUPPORTED=No
+MULTILIB_SUPPORTED=	No
 .  else
-MULTILIB_SUPPORTED=Yes
+MULTILIB_SUPPORTED=	Yes
 .  endif
 .endif
 .if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])
@@ -81,9 +81,9 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-ISL16 = isl-0.16.1
+ISL16 =		isl-0.16.1
 SITES.${ISL16}.tar.bz2 = ${MASTER_SITE_GNU:=gcc/infrastructure/}
-DISTFILES += ${ISL16}.tar.bz2
+DISTFILES +=	${ISL16}.tar.bz2
 .endif
 
 ###

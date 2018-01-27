@@ -12,8 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmetadom.sf.net/
 LICENSE=	gnu-lgpl-v2.1
 
-DISTINFO_FILE=          ${.CURDIR}/../../wip/gmetadom/distinfo
-PATCHDIR=               ${.CURDIR}/../../wip/gmetadom/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/gmetadom/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/gmetadom/patches
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gvariant
 GVARIANT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gvariant+=	gvariant>=0
-BUILDLINK_PKGSRCDIR.gvariant?=	../../wip/gvariant
+BUILDLINK_PKGSRCDIR.gvariant?=		../../wip/gvariant
 
 
 .include "../../devel/glib2/buildlink3.mk"

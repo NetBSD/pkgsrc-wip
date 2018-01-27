@@ -17,8 +17,8 @@ buildlink-glkterm-hook:
 	${LN} -s Make.glkterm ${BUILDLINK_DIR}/include/glk/Make.glk
 
 # uses halfkey (present since 1.6M)
-INCOMPAT_CURSES+=       NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
-INCOMPAT_CURSES+=       NetBSD-1.6[A-L]*
+INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
 
 .include "../../devel/ncurses/buildlink3.mk"
 .endif # GLKTERM_BUILDLINK3_MK

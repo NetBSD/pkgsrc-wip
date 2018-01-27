@@ -15,9 +15,9 @@ CFGFILE=		${PKG_SYSCONFDIR}/gnump3d/gnump3d.conf
 RCD_SCRIPTS=		gnump3d
 CONF_FILES=		none ${CFGFILE}
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=	gmake perl
 REPLACE_PERL=	${WRKSRC}/bin/*
-NO_BUILD=		yes
+NO_BUILD=	yes
 
 SUBST_CLASSES+=		gnump3d
 SUBST_FILES.gnump3d=	bin/gnump3d-index bin/gnump3d-top bin/gnump3d2 \

@@ -33,8 +33,8 @@
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
-MASTER_SITES=  http://s3-dist.gnuradio.org/
-MASTER_SITES=  http://gnuradio.org/releases/gnuradio/
+MASTER_SITES=	http://s3-dist.gnuradio.org/
+MASTER_SITES=	http://gnuradio.org/releases/gnuradio/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
@@ -51,7 +51,7 @@ DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
 DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/gnuradio-core/patches
 
-PYTHON_VERSIONS_INCOMPATIBLE=   34 35 36 # not yet ported as of 3.3.0
+PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36 # not yet ported as of 3.3.0
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PY_PATCHPLIST=	yes

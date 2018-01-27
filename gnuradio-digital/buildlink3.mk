@@ -7,7 +7,7 @@ GNURADIO_DIGITAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-digital+=	gnuradio-digital>=3.7.5
 BUILDLINK_ABI_DEPENDS.gnuradio-digital+=	gnuradio-digital>=3.7.5
-BUILDLINK_PKGSRCDIR.gnuradio-digital?=	../../wip/gnuradio-digital
+BUILDLINK_PKGSRCDIR.gnuradio-digital?=		../../wip/gnuradio-digital
 .endif # GNURADIO_DIGITAL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnuradio-digital

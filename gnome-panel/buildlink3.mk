@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	gnome-panel
 .if !defined(GNOME_PANEL_BUILDLINK3_MK)
 GNOME_PANEL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnome-panel+=     gnome-panel>=3.16.1
-BUILDLINK_PKGSRCDIR.gnome-panel?=       ../../wip/gnome-panel
+BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=3.16.1
+BUILDLINK_PKGSRCDIR.gnome-panel?=	../../wip/gnome-panel
 
 pkgbase:= gnome-panel
 .include "../../mk/pkg-build-options.mk"

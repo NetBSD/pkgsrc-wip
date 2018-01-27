@@ -17,9 +17,9 @@ USE_TOOLS+=	pkg-config intltool gmake
 
 INSTALLATION_DIRS=	${PREFIX}${PKGMANDIR}/man1 ${PREFIX}/share/applications/
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.gribsi
-PKG_SUPPORTED_OPTIONS=          libofx
-PKG_SUGGESTED_OPTIONS=          libofx
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gribsi
+PKG_SUPPORTED_OPTIONS=		libofx
+PKG_SUGGESTED_OPTIONS=		libofx
 
 .include "../../mk/bsd.options.mk"
 

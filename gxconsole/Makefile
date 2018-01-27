@@ -12,7 +12,7 @@ COMMENT=	Gxconsole is gtk-based reading system console messages like xconsole
 
 WRKSRC=		${WRKDIR}/gxconsole
 GNU_CONFIGURE=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

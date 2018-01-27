@@ -18,25 +18,25 @@ BOOT_VERSION:=	${PKGNAME:C/^.*-//}
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo)
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-apple-darwin.tar.xz
 DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
-SITES.${BOOT_ARCHIVE}=  https://us-east.manta.joyent.com/pkgsrc/public/distfiles-local/
+SITES.${BOOT_ARCHIVE}=	https://us-east.manta.joyent.com/pkgsrc/public/distfiles-local/
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-i386) || make(distinfo)
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-i386-unknown-solaris2.tar.xz
 DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
-SITES.${BOOT_ARCHIVE}=  https://us-east.manta.joyent.com/pkgsrc/public/distfiles-local/
+SITES.${BOOT_ARCHIVE}=	https://us-east.manta.joyent.com/pkgsrc/public/distfiles-local/
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64) || make(distinfo)
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
 DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
-SITES.${BOOT_ARCHIVE}=  https://us-east.manta.joyent.com/pkgsrc/public/distfiles-local/
+SITES.${BOOT_ARCHIVE}=	https://us-east.manta.joyent.com/pkgsrc/public/distfiles-local/
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
-SITES.${BOOT_ARCHIVE}=  ftp://ftp.netbsd.org/pub/NetBSD/misc/kamil/
+SITES.${BOOT_ARCHIVE}=	ftp://ftp.netbsd.org/pub/NetBSD/misc/kamil/
 .endif
 
 .if empty(BOOT_ARCHIVE)

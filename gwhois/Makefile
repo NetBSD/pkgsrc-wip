@@ -21,8 +21,8 @@ INSTALLATION_DIRS=		share/${PKGBASE} ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=			fix-paths
 SUBST_MESSAGE.fix-paths=	Fixing paths
-SUBST_FILES.fix-paths=	gwhois
-SUBST_FILES.fix-paths+=	gwhois.1
+SUBST_FILES.fix-paths=		gwhois
+SUBST_FILES.fix-paths+=		gwhois.1
 SUBST_SED.fix-paths+=		-e 's,/etc/gwhois,${PREFIX}/share/gwhois,g'
 SUBST_STAGE.fix-paths=		post-patch
 

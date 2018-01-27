@@ -7,7 +7,7 @@ GTKHOTKEY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkhotkey+=	gtkhotkey>=0.2.0
 BUILDLINK_ABI_DEPENDS.gtkhotkey?=	gtkhotkey>=0.2.1nb1
-BUILDLINK_PKGSRCDIR.gtkhotkey?=	../../wip/gtkhotkey
+BUILDLINK_PKGSRCDIR.gtkhotkey?=		../../wip/gtkhotkey
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

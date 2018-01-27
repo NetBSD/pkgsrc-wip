@@ -3,8 +3,8 @@ bin/ganglia-config
 bin/gmetric
 bin/gstat
 etc/gmetad.conf
-include/ganglia_gexec.h
 include/ganglia.h
+include/ganglia_gexec.h
 include/gm_metric.h
 include/gm_mmn.h
 include/gm_msg.h

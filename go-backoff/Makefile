@@ -2,10 +2,10 @@
 #
 
 DISTNAME=		go-backoff-20141124
-CATEGORIES=             devel
-MASTER_SITES=           ${MASTER_SITE_GITHUB:=cenkalti/}
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GITHUB:=cenkalti/}
 GITHUB_PROJECT=		backoff
-GITHUB_TAG=             9831e1e25c
+GITHUB_TAG=		9831e1e25c
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/cenkalti/backoff

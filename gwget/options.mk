@@ -1,14 +1,14 @@
 # $NetBSD: options.mk,v 1.1.1.1 2010/03/19 19:40:00 jihbed Exp $
 #
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.gwget
-PKG_SUPPORTED_OPTIONS=          libnotify epiphany-extension epiphany-version
-PKG_SUGGESTED_OPTIONS=          libnotify epiphany-extension epiphany-version
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gwget
+PKG_SUPPORTED_OPTIONS=		libnotify epiphany-extension epiphany-version
+PKG_SUGGESTED_OPTIONS=		libnotify epiphany-extension epiphany-version
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty (PKG_OPTIONS:Mepiphany-extension)
-DEPENDS+=	epiphany-extensions>=2.28.1:../../www/epiphany-extensions
+DEPENDS+=		epiphany-extensions>=2.28.1:../../www/epiphany-extensions
 CONFIGURE_ARGS+=	--enable-epiphany-extension
 .endif
 

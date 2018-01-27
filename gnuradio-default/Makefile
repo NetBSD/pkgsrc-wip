@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.10 2015/02/07 22:08:46 tnn2 Exp $
 
-PKGNAME=	gnuradio-default-${VERSION}
-COMMENT=	Full package of gnuradio (conflict to meta-pkgs)
-INSTALLATION_DIRS+= ${EGDIR}
+PKGNAME=		gnuradio-default-${VERSION}
+COMMENT=		Full package of gnuradio (conflict to meta-pkgs)
+INSTALLATION_DIRS+=	${EGDIR}
 
 # The half of the same target in Nocore.mk
 post-install:

@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES= c c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	glib/gvariant.pc.in
 

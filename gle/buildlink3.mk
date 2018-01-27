@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	gle
 .if !defined(GLE_BUILDLINK3_MK)
 GLE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gle+=		gle>=3.0.3
+BUILDLINK_API_DEPENDS.gle+=	gle>=3.0.3
 BUILDLINK_ABI_DEPENDS.gle+=	gle>=3.1.0nb4
 BUILDLINK_PKGSRCDIR.gle?=	../../graphics/gle
 

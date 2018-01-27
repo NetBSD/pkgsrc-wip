@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.opbyte.it/grsync/
 COMMENT=	Grsync is a GUI for rsync
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_PKGLOCALEDIR= yes
-USE_TOOLS+=	pkg-config intltool msgfmt bash:run
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config intltool msgfmt bash:run
 
 REPLACE_BASH+=	src/grsync-batch
 

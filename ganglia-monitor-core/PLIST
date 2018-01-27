@@ -3,8 +3,8 @@ bin/ganglia-config
 bin/gmetric
 bin/gstat
 etc/gmond.conf.d/modpython.conf
-include/ganglia_gexec.h
 include/ganglia.h
+include/ganglia_gexec.h
 include/gm_file.h
 include/gm_metric.h
 include/gm_mmn.h
@@ -31,7 +31,7 @@ sbin/gmetad
 sbin/gmetasnap
 sbin/gmond
 share/examples/ganglia-monitor-core/gmetad.conf
-share/examples/ganglia-monitor-core/gmond.conf
 share/examples/ganglia-monitor-core/gmetad.init.linux
+share/examples/ganglia-monitor-core/gmond.conf
 share/examples/ganglia-monitor-core/gmond.init.linux
 @pkgdir lib/ganglia/python_modules

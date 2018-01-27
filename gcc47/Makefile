@@ -75,9 +75,9 @@ CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 # on NetBSD, use the native SSP code in libc
-CONFIGURE_ARGS+=        --disable-libssp
+CONFIGURE_ARGS+=	--disable-libssp
 .else
-CONFIGURE_ARGS+=        --enable-libssp
+CONFIGURE_ARGS+=	--enable-libssp
 .endif
 
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}

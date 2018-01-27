@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.ggzgamingzone.org
 COMMENT=	GGZ Gaming Zone libraries
 
 
-CONFIGURE_ARGS+= --enable-debug-gdb
+CONFIGURE_ARGS+=	--enable-debug-gdb
 
 GNU_CONFIGURE=	yes
 

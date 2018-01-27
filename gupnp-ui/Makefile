@@ -14,7 +14,7 @@ COMMENT=	GTK+ widgets for use with GUPnP
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt
-USE_LANGUAGES= c c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	gupnp-ui-1.0.pc.in
 

@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+= --enable-debug-gdb
+CONFIGURE_ARGS+=	--enable-debug-gdb
 
 .include "../../games/libggz/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"

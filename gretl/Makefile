@@ -11,10 +11,10 @@ MAINTAINER=	asau@users.sourceforge.net
 HOMEPAGE=	http://gretl.sourceforge.net/
 COMMENT=	Gnu Regression, Econometrics and Time-series Library
 
-USE_LANGUAGES=	c fortran77	# problems with LAPACK
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
-USE_LIBTOOL=	yes
+USE_LANGUAGES=		c fortran77	# problems with LAPACK
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
 BUILD_TARGET=
 TEST_TARGET=		check
 USE_PKGLOCALEDIR=	yes

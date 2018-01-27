@@ -9,12 +9,12 @@ HOMEPAGE=	http://www.gambit-project.org/gambit13/index.html#
 COMMENT=	Software Tools for Game Theory
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP= configure
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+CHECK_PORTABILITY_SKIP=	configure
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 
-INSTALLATION_DIRS=      share/applications
+INSTALLATION_DIRS=	share/applications
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gambit.desktop \

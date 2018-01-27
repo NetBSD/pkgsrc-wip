@@ -16,6 +16,6 @@ USE_TOOLS=	gmake perl bash
 
 CONFIG_SHELL=	${TOOLS_PATH.bash}
 
-CONFIGURE_ARGS+=--enable-examples=no
+CONFIGURE_ARGS+=	--enable-examples=no
 
 .include "../../mk/bsd.pkg.mk"

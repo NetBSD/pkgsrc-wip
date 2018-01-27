@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-cpufreq
 
 EGDIR=			${PREFIX}/share/examples/gnome-applets
 
-GCONF_SCHEMAS=		charpick.schemas
+GCONF_SCHEMAS=	charpick.schemas
 GCONF_SCHEMAS+=	drivemount.schemas
 GCONF_SCHEMAS+=	geyes.schemas
 #GCONF_SCHEMAS+=	gswitchit.schemas
@@ -39,7 +39,7 @@ GCONF_SCHEMAS+=	stickynotes.schemas
 PLIST_VARS+=		battstat
 .if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
     (${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h))
-GCONF_SCHEMAS+=	battstat.schemas
+GCONF_SCHEMAS+=		battstat.schemas
 PLIST.battstat=		yes
 CONF_FILES+=		${EGDIR}/sound/events/battstat_applet.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/battstat_applet.soundlist
@@ -52,7 +52,7 @@ PRINT_PLIST_AWK+=	/examples/ { print "$${PLIST.battstat}"$$0; next; }
 
 .include "../../devel/GConf/schemas.mk"
 
-PY_PATCHPLIST=	yes
+PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	invest-applet/invest/invest-applet.py
 REPLACE_PYTHON+=	invest-applet/invest/invest-chart
 

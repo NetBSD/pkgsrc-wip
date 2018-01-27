@@ -26,11 +26,11 @@ USE_GNU_CONFIGURE_HOST=	no
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gmake patch perl:run
 
-CONFIGURE_ARGS+= 	--with-gcc=${CC:Q}
-CONFIGURE_ARGS+= 	--with-gmp-includes=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_INCDIRS.gmp:Q}
-CONFIGURE_ARGS+= 	--with-gmp-libraries=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_LIBDIRS.gmp:Q}
-CONFIGURE_ARGS+= 	--with-iconv-includes=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_INCDIRS.iconv:Q}
-CONFIGURE_ARGS+= 	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_LIBDIRS.iconv:Q}
+CONFIGURE_ARGS+=	--with-gcc=${CC:Q}
+CONFIGURE_ARGS+=	--with-gmp-includes=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_INCDIRS.gmp:Q}
+CONFIGURE_ARGS+=	--with-gmp-libraries=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_LIBDIRS.gmp:Q}
+CONFIGURE_ARGS+=	--with-iconv-includes=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_INCDIRS.iconv:Q}
+CONFIGURE_ARGS+=	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_LIBDIRS.iconv:Q}
 
 CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
 .for stage in 0 1 2

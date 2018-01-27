@@ -9,19 +9,19 @@ MAINTAINER=	schaecsn@gmx.net
 HOMEPAGE=	http://pages.cs.wisc.edu/~ghost/
 COMMENT=	Graphical interface for ghostscript
 
-LICENSE=	afpl-license
-RESTRICTED=	Commercial distribution prohibited in most cases.
+LICENSE=		afpl-license
+RESTRICTED=		Commercial distribution prohibited in most cases.
 # CDROM distribution may be acceptable in some cases, but not all, so
 # the variables are set.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_TOOLS+=     gmake pkg-config gs:run
+USE_TOOLS+=	gmake pkg-config gs:run
 
-SUBST_CLASSES+=	pstotext
+SUBST_CLASSES+=		pstotext
 SUBST_STAGE.pstotext=	do-configure
 SUBST_FILES.pstotext=	srcunx/gvxdll.c
-SUBST_SED.pstotext= 	-e 's|@PSTOTEXT_CMD@|${PSTOTEXT_DIR}/bin/pstotext|'
+SUBST_SED.pstotext=	-e 's|@PSTOTEXT_CMD@|${PSTOTEXT_DIR}/bin/pstotext|'
 
 SUBST_CLASSES+=	gs
 SUBST_STAGE.gs=	do-configure
@@ -52,7 +52,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/src/printer.ini ${DESTDIR}${EGDIR}/printer.ini
 
 
-DEPENDS+=       pstotext-[0-9]*:../../converters/pstotext
+DEPENDS+=	pstotext-[0-9]*:../../converters/pstotext
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

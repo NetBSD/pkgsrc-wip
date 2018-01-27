@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 WRKSRC=		${WRKDIR}/gl2ps-1.4.0-source
 USE_CMAKE=	yes
 
-DEPENDS+= tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"

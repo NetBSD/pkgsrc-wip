@@ -1,14 +1,14 @@
 # $NetBSD: Makefile,v 1.11 2015/03/15 14:22:19 bsiegert Exp $
 #
 
-DISTNAME=	gdb-8.0
-CATEGORIES=	devel
+DISTNAME=		gdb-8.0
+CATEGORIES=		devel
 GIT_REPOSITORIES=	gdb
 #GIT_REPO.gdb=		git://sourceware.org/git/binutils-gdb.git # broken?
 #GIT_REPO.gdb=		http://sourceware.org/git/binutils-gdb.git # broken?
 GIT_REPO.gdb=		https://github.com/wallento/binutils-gdb.git
 #GIT_DEEP_CLONE.gdb=	yes # server dies on shallow clones
-WRKSRC=         ${WRKDIR}/gdb
+WRKSRC=			${WRKDIR}/gdb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
@@ -20,15 +20,15 @@ NOT_FOR_PLATFORM+=	DragonFly-*-*
 
 USE_LANGUAGES=		c c++11
 
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt makeinfo perl:build
+GNU_CONFIGURE=			YES
+USE_PKGLOCALEDIR=		YES
+USE_LIBTOOL=			YES
+USE_TOOLS+=			gmake msgfmt makeinfo perl:build
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-INSTALL_TARGET=		install install-info
-TEST_TARGET=		check
-INFO_FILES=		yes
-CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
+INSTALL_TARGET=			install install-info
+TEST_TARGET=			check
+INFO_FILES=			yes
+CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 CONFIGURE_ARGS+=	--disable-binutils
 CONFIGURE_ARGS+=	--disable-gprof

@@ -54,15 +54,15 @@ BUILD_CXX?=		YES
 BUILD_FORTRAN?=		YES
 BUILD_OBJC?=		YES
 
-LANGS= c
+LANGS=	c
 .if !empty(BUILD_CXX:M[Yy][Ee][Ss])
-LANGS+= c++
+LANGS+=	c++
 .endif
 .if !empty(BUILD_FORTRAN:M[Yy][Ee][Ss])
-LANGS+= fortran
+LANGS+=	fortran
 .endif
 .if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
-LANGS+= objc
+LANGS+=	objc
 .endif
 
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}

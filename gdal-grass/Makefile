@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-grass=${GRASS_HOME}
 USE_LANGUAGES=		c++
 BUILD_TARGET=		default
 
-BUILDLINK_PASSTHRU_RPATHDIRS+=    ${GRASS_HOME}/lib
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${GRASS_HOME}/lib
 
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"

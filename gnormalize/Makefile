@@ -15,7 +15,7 @@ DEPENDS+=	p5-MP3-Info>=1:../../audio/p5-MP3-Info
 
 USE_TOOLS+=	perl
 NO_BUILD=	YES
-REPLACE_PERL=${WRKSRC}/gnormalize
+REPLACE_PERL=	${WRKSRC}/gnormalize
 
 INSTALLATION_DIRS=	bin
 

@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--disable-ofx
 
 .if !empty(PKG_OPTIONS:Mlibdbi)
 CONFIGURE_ARGS+=	--enable-dbi
-PLIST.dbi=	yes
+PLIST.dbi=		yes
 
 # to make a configure test happy
 BUILD_DEPENDS+=		libdbi-driver-sqlite3-[0-9]*:../../databases/libdbi-driver-sqlite3
@@ -27,11 +27,11 @@ CONFIGURE_ARGS+=	--disable-dbi
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+=	--enable-python
+CONFIGURE_ARGS+=		--enable-python
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.6.1
-REPLACE_PYTHON+=	src/python/pycons/*.py src/python/pycons/pycons
-PY_PATCHPLIST=		yes
-PLIST_SRC+=		PLIST.python
+REPLACE_PYTHON+=		src/python/pycons/*.py src/python/pycons/pycons
+PY_PATCHPLIST=			yes
+PLIST_SRC+=			PLIST.python
 
 DEPENDS+=		${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 # /usr/pkg/share/gnucash/python/pycons/console.py imports readline

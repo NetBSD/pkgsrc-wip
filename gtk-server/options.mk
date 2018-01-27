@@ -1,8 +1,8 @@
 # $NetBSD: options.mk,v 1.1 2013/01/01 01:38:05 othyro Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk-server
-PKG_SUPPORTED_OPTIONS=	gtk gtk2 openssl slang xforms #ksh93 needs includes (shell.h)
-PKG_SUGGESTED_OPTIONS+=	gtk2 openssl slang
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gtk-server
+PKG_SUPPORTED_OPTIONS=		gtk gtk2 openssl slang xforms #ksh93 needs includes (shell.h)
+PKG_SUGGESTED_OPTIONS+=		gtk2 openssl slang
 PKG_OPTIONS_OPTIONAL_GROUPS=	backend
 PKG_OPTIONS_GROUP.backend=	gtk gtk2 xforms
 

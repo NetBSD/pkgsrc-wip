@@ -19,10 +19,10 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/work
 CFLAGS+=	-I${PREFIX}/include
 
-CONFIGURE_SCRIPT=../${DISTNAME}/configure
-CONFIGURE_ARGS+=--disable-profile
-CONFIGURE_ARGS+=--enable-add-ons=linuxthreads
-CONFIGURE_ARGS+=--with-headers=${PREFIX}/include
+CONFIGURE_SCRIPT=	../${DISTNAME}/configure
+CONFIGURE_ARGS+=	--disable-profile
+CONFIGURE_ARGS+=	--enable-add-ons=linuxthreads
+CONFIGURE_ARGS+=	--with-headers=${PREFIX}/include
 
 BUILD_DEPENDS+=	linux-kernel-headers-[0-9]*:../../wip/linux-kernel-headers
 

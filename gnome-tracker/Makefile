@@ -19,18 +19,18 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config intltool gmake
 
 PKG_SYSCONFSUBDIR=	xdg/autostart
-MAKE_DIRS+=	${PKG_SYSCONFDIR}
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-extract.desktop \
-                ${PKG_SYSCONFDIR}/tracker-extract.desktop
-CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-apps.desktop \
-                ${PKG_SYSCONFDIR}/tracker-miner-apps.desktop
-CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-fs.desktop \
-                ${PKG_SYSCONFDIR}/tracker-miner-fs.desktop
-CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-user-guides.desktop \
-                ${PKG_SYSCONFDIR}/tracker-miner-user-guides.desktop
-CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-store.desktop \
-                ${PKG_SYSCONFDIR}/tracker-store.desktop
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/xdg/autostart/tracker-extract.desktop \
+			${PKG_SYSCONFDIR}/tracker-extract.desktop
+CONF_FILES+=		${EGDIR}/xdg/autostart/tracker-miner-apps.desktop \
+			${PKG_SYSCONFDIR}/tracker-miner-apps.desktop
+CONF_FILES+=		${EGDIR}/xdg/autostart/tracker-miner-fs.desktop \
+			${PKG_SYSCONFDIR}/tracker-miner-fs.desktop
+CONF_FILES+=		${EGDIR}/xdg/autostart/tracker-miner-user-guides.desktop \
+			${PKG_SYSCONFDIR}/tracker-miner-user-guides.desktop
+CONF_FILES+=		${EGDIR}/xdg/autostart/tracker-store.desktop \
+			${PKG_SYSCONFDIR}/tracker-store.desktop
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}

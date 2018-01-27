@@ -10,7 +10,7 @@ COMMENT=	GNOME canvas for creating scientific and engineering plots
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

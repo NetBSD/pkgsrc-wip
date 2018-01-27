@@ -7,7 +7,7 @@ GUPNP_UI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gupnp-ui+=	gupnp-ui>=0.1.1
 BUILDLINK_ABI_DEPENDS.gupnp-ui?=	gupnp-ui>=0.1.1nb2
-BUILDLINK_PKGSRCDIR.gupnp-ui?=	../../wip/gupnp-ui
+BUILDLINK_PKGSRCDIR.gupnp-ui?=		../../wip/gupnp-ui
 
 
 .include "../../net/gupnp/buildlink3.mk"

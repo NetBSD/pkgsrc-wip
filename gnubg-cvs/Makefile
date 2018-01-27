@@ -15,7 +15,7 @@ CVS_MODULE.gnubg=	gnubg
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=		automake autoconf bison flex gmake pkg-config
+USE_TOOLS+=	automake autoconf bison flex gmake pkg-config
 
 pre-configure:
 	cd ${WRKSRC} && sh autogen.sh

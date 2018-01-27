@@ -22,11 +22,11 @@ DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-beautifulsoup, py-gobject
 
-USE_LANGUAGES=	# none
-NO_BUILD=	YES
-USE_TOOLS+=	intltool
-PY_PATCHPLIST=	yes
-PLIST_SUBST+=	EGG_INFODIR=${DISTNAME}-py${PYVERSSUFFIX}.egg-info
+USE_LANGUAGES=		# none
+NO_BUILD=		YES
+USE_TOOLS+=		intltool
+PY_PATCHPLIST=		yes
+PLIST_SUBST+=		EGG_INFODIR=${DISTNAME}-py${PYVERSSUFFIX}.egg-info
 INSTALLATION_DIRS=	share/applications \
 			${PKGMANDIR}/man1 \
 			etc \

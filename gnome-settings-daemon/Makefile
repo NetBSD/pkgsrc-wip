@@ -19,20 +19,20 @@ USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 CONFLICTS+=	gnome-control-center<2.22.0
 
-CONFIGURE_ARGS= 	--disable-gudev
+CONFIGURE_ARGS=		--disable-gudev
 CONFIGURE_ARGS+=	--disable-rfkill
 CONFIGURE_ARGS+=	--disable-network-manager
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-GCONF_SCHEMAS+=	gnome-settings-daemon.schemas
-GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
-GCONF_SCHEMAS+=	desktop_gnome_keybindings.schemas
-GCONF_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
-GCONF_SCHEMAS+=	apps_gnome_settings_daemon_xrandr.schemas
-GCONF_SCHEMAS+=	apps_gnome_settings_daemon_housekeeping.schemas
-GCONF_SCHEMAS+=	desktop_gnome_peripherals_touchpad.schemas
-GCONF_SCHEMAS+=	desktop_gnome_peripherals_smartcard.schemas
+GCONF_SCHEMAS+=		gnome-settings-daemon.schemas
+GCONF_SCHEMAS+=		desktop_gnome_font_rendering.schemas
+GCONF_SCHEMAS+=		desktop_gnome_keybindings.schemas
+GCONF_SCHEMAS+=		apps_gnome_settings_daemon_keybindings.schemas
+GCONF_SCHEMAS+=		apps_gnome_settings_daemon_xrandr.schemas
+GCONF_SCHEMAS+=		apps_gnome_settings_daemon_housekeeping.schemas
+GCONF_SCHEMAS+=		desktop_gnome_peripherals_touchpad.schemas
+GCONF_SCHEMAS+=		desktop_gnome_peripherals_smartcard.schemas
 PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 
 .include "../../audio/pulseaudio/buildlink3.mk"

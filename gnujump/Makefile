@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=          c c++
+USE_LANGUAGES=		c c++
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

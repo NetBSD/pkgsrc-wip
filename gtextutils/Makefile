@@ -14,7 +14,7 @@ COMMENT=	Gordon text utilities
 # LICENSE=	AGPLv3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	 pkg-config
+USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -23,8 +23,8 @@ USE_TOOLS+=	bash:run perl:run pax
 TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
-GOROOT_FINAL=	${PREFIX}/go
-INSTALLATION_DIRS= bin
+GOROOT_FINAL=		${PREFIX}/go
+INSTALLATION_DIRS=	bin
 
 REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/codewalk/run

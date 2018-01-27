@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://cadaver.homeftp.net/tools/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER= 	rodo@zlug.org
+MAINTAINER=	rodo@zlug.org
 HOMEPAGE=	http://cadaver.homeftp.net/tools/
 COMMENT=	Crossplatform C64 Music Editor
 

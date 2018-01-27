@@ -10,7 +10,7 @@ HOMEPAGE=	http://bhepple.freeshell.org/gjots/
 COMMENT=	Jotter application for your Gnome desktop
 LICENSE=	gnu-gpl-v2
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 USE_TOOLS+=	bash pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2

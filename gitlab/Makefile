@@ -33,8 +33,8 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 #EPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 # Following lines are too late, passwd and groups should be made before this make
-PKG_GROUPS=	gitlab
-PKG_USERS=	git:gitlab
+PKG_GROUPS=		gitlab
+PKG_USERS=		git:gitlab
 PKG_GECOS.gitlab=	GitLab
 
 # Actual install PATH (after INSTALL.script run), this can NOT be easily changed
@@ -48,7 +48,7 @@ FILES_SUBST+=	DESTDIR_VAR=${DESTDIR:Q}${GITLAB_HOME:Q}
 FILES_SUBST+=	GITLAB_HOME=${GITLAB_HOME:Q}
 FILES_SUBST+=	RSYNC=${PREFIX:Q}/bin/rsync
 
-MESSAGE_SUBST+=        GITLAB_HOME=${GITLAB_HOME:Q}
+MESSAGE_SUBST+=	GITLAB_HOME=${GITLAB_HOME:Q}
 
 SUBST_CLASSES+=		conf.yml
 SUBST_STAGE.conf.yml=	post-build

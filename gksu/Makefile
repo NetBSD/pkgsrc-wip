@@ -11,13 +11,13 @@ COMMENT=	Authorization dialog library
 LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++ fortran
-USE_TOOLS+=	bash:run gmake gsed intltool msgfmt msgmerge perl:build
-USE_TOOLS+=	pkg-config xgettext
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c c++ fortran
+USE_TOOLS+=		bash:run gmake gsed intltool msgfmt msgmerge perl:build
+USE_TOOLS+=		pkg-config xgettext
+GNU_CONFIGURE=		yes
 
-USE_X11=YES
+USE_X11=	YES
 
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"

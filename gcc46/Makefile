@@ -58,17 +58,17 @@ CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 # 		gcc/opth-gen.awk					\
 # 		gcc/opt-functions.awk
 
-REPLACE_BASH+= contrib/dg-cmp-results.sh
-REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-patchlist
-REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-update
-REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-update-fix
-REPLACE_BASH+= contrib/reghunt/bin/reg-hunt
-REPLACE_BASH+= contrib/reghunt/bin/reg-test
-REPLACE_BASH+= contrib/reghunt/date_based/reg_periodic
-REPLACE_BASH+= contrib/reghunt/date_based/reg_search
-REPLACE_BASH+= gcc/dbgcnt.def
-REPLACE_BASH+= gcc/testsuite/gcc.test-framework/gen_directive_tests
-REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
+REPLACE_BASH+=	contrib/dg-cmp-results.sh
+REPLACE_BASH+=	contrib/reghunt/bin/gcc-svn-patchlist
+REPLACE_BASH+=	contrib/reghunt/bin/gcc-svn-update
+REPLACE_BASH+=	contrib/reghunt/bin/gcc-svn-update-fix
+REPLACE_BASH+=	contrib/reghunt/bin/reg-hunt
+REPLACE_BASH+=	contrib/reghunt/bin/reg-test
+REPLACE_BASH+=	contrib/reghunt/date_based/reg_periodic
+REPLACE_BASH+=	contrib/reghunt/date_based/reg_search
+REPLACE_BASH+=	gcc/dbgcnt.def
+REPLACE_BASH+=	gcc/testsuite/gcc.test-framework/gen_directive_tests
+REPLACE_BASH+=	libstdc++-v3/scripts/run_doxygen
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 # on NetBSD, use the native SSP code in libc
@@ -97,11 +97,11 @@ CONFIGURE_ARGS.Linux+=	--disable-libquadmath --disable-libquadmath-support
 CONFIGURE_ARGS.Darwin+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
-CONFIGURE_ARGS+=        --with-dwarf2
+CONFIGURE_ARGS+=	--with-dwarf2
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
-CONFIGURE_ARGS+=        --disable-multilib
+CONFIGURE_ARGS+=	--disable-multilib
 .endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}

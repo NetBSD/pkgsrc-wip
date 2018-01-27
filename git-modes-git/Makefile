@@ -12,13 +12,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magit/git-modes
 COMMENT=	Git-modes submodule for magit.el
 
-WRKSRC=	 	${WRKDIR}/git-modes
+WRKSRC=		${WRKDIR}/git-modes
 
 USE_TOOLS+=	gmake
 
-BUILD_TARGET=	lisp
+BUILD_TARGET=		lisp
 INSTALLATION_DIRS=	${DESTDIR}${PREFIX}/share/emacs/site-lisp/git-modes
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
 
 do-install:
 		${INSTALL_DATA_DIR}	${INSTALLATION_DIRS}

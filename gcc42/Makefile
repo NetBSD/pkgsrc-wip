@@ -15,7 +15,7 @@ GCC_VERSION=		4.2.3
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-PKG_NO_CPUFLAGS=# empty
+PKG_NO_CPUFLAGS=	# empty
 
 .undef PKG_DEVELOPER
 
@@ -24,29 +24,31 @@ PKG_NO_CPUFLAGS=# empty
 # Determine whether to use binutils
 .if ${OPSYS} == "NetBSD"
 .  if !defined(USE_BINUTILS)
-AS_PATH:=	${AS}
+AS_PATH:=		${AS}
 .    for _dir_ in ${PATH:C/\:/ /g}
 .      if empty(AS_PATH:M/*)
 .        if exists(${_dir_}/${AS})
-AS_PATH:=	${_dir_}/${AS}
+AS_PATH:=		${_dir_}/${AS}
 .        endif
 .      endif
 .    endfor
 .    if !empty(AS_PATH:M${LOCALBASE}/*)
-USE_BINUTILS=	YES
+USE_BINUTILS=		YES
 .    else
-AS_VERSION!=	${AS_PATH} --version | ${AWK} '{			\
-		    split($$3, v, /[.]/);				\
-		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
-		    exit;						\
-		}'
-USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
+AS_VERSION!= \
+	${AS_PATH} --version | ${AWK} '{			\
+	    split($$3, v, /[.]/);				\
+	    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
+	    exit;						\
+	}'
+USE_BINUTILS!= \
+	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
-MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS:Q}
+MAKEFLAGS+=		USE_BINUTILS=${USE_BINUTILS:Q}
 .  endif
 .endif
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
-DEPENDS+=	binutils>=2.14:../../devel/binutils
+DEPENDS+=		binutils>=2.14:../../devel/binutils
 CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/bin/as
 CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
@@ -78,21 +80,21 @@ BUILD_FORTRAN?=	NO
 BUILD_JAVA?=	NO
 BUILD_OBJC?=	YES
 
-LANGS='c'
+LANGS=			'c'
 #.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 #LANGS+='ada'
 #.endif
 .if !empty(BUILD_CXX:M[Yy][Ee][Ss])
-LANGS+='c++'
+LANGS+=			'c++'
 .endif
 .if !empty(BUILD_FORTRAN:M[Yy][Ee][Ss])
-LANGS+='fortran'
+LANGS+=			'fortran'
 .endif
 #.if !empty(BUILD_JAVA:M[Yy][Ee][Ss])
 #LANGS+='java'
 #.endif
 .if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
-LANGS+='objc'
+LANGS+=			'objc'
 .endif
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--with-system-zlib
@@ -167,11 +169,11 @@ GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
-CPPFLAGS+=	-I${BUILDLINK_DIR}/include
-CFLAGS+=	-I${BUILDLINK_DIR}/include
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include
+CFLAGS+=		-I${BUILDLINK_DIR}/include
 .if ${OPSYS} == "NetBSD"
 # thread / crtbegin / __cxa_atexit support depend on a "netbsd2" OS name
-GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
+GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 #ABI_BASELINE_PAIR=	${GCC_PLATFORM:C/--/-/}
 #MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}

@@ -27,7 +27,7 @@ PKGCONFIG_OVERRIDE+=	mathview-frontend-gmetadom.pc.in
 PKGCONFIG_OVERRIDE+=	mathview-frontend-libxml2-reader.pc.in
 PKGCONFIG_OVERRIDE+=	mathview-frontend-libxml2.pc.in
 
-EGDIR= 			${PREFIX}/share/examples/${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/${PKGBASE}.conf.xml \
 			${PKG_SYSCONFDIR}/${PKGBASE}.conf.xml
 PKG_SYSCONFSUBDIR=	${PKGBASE}

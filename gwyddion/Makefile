@@ -26,9 +26,9 @@ SUBST_MESSAGE.schema=	Fixing schema installation path.
 SUBST_FILES.schema+=	data/Makefile.in
 SUBST_SED.schema+=	-e "s,..sysconfdir./gconf/schemas,${PREFIX}/share/gconf/schemas/,"
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.gwyddion
-PKG_SUPPORTED_OPTIONS=          pygwy fftw3
-PKG_SUGGESTED_OPTIONS=          pygwy fftw3
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gwyddion
+PKG_SUPPORTED_OPTIONS=		pygwy fftw3
+PKG_SUGGESTED_OPTIONS=		pygwy fftw3
 
 .include "../../mk/bsd.options.mk"
 

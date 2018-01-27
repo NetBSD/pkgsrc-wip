@@ -4,7 +4,7 @@ META_PACKAGE=	yes
 
 .include	"../../wip/gnuradio-core/Makefile.version"
 
-DISTNAME=       gnuradio-${VERSION}
+DISTNAME=	gnuradio-${VERSION}
 CATEGORIES=	meta-pkgs ham
 MASTER_SITES=	# empty
 DISTFILES=	# empty

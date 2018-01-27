@@ -14,8 +14,8 @@ DEPENDS+=		glkterm-[0-9]*:../../wip/glkterm
 
 USE_TOOLS+=		perl
 
-DOCDIR=  ${PREFIX}/share/doc/glkloader
-EGDIR=	${DOCDIR}/samples
+DOCDIR=		${PREFIX}/share/doc/glkloader
+EGDIR=		${DOCDIR}/samples
 CONF_FILES=	${EGDIR}/glkloaderrc ${PKG_SYSCONFDIR}/glkloaderrc
 
 post-install:

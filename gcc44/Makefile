@@ -50,17 +50,17 @@ CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 # 		gcc/opth-gen.awk					\
 # 		gcc/opt-functions.awk
 
-REPLACE_BASH+= contrib/dg-cmp-results.sh
-REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-patchlist
-REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-update
-REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-update-fix
-REPLACE_BASH+= contrib/reghunt/bin/reg-hunt
-REPLACE_BASH+= contrib/reghunt/bin/reg-test
-REPLACE_BASH+= contrib/reghunt/date_based/reg_periodic
-REPLACE_BASH+= contrib/reghunt/date_based/reg_search
-REPLACE_BASH+= gcc/dbgcnt.def
-REPLACE_BASH+= gcc/testsuite/gcc.test-framework/gen_directive_tests
-REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
+REPLACE_BASH+=	contrib/dg-cmp-results.sh
+REPLACE_BASH+=	contrib/reghunt/bin/gcc-svn-patchlist
+REPLACE_BASH+=	contrib/reghunt/bin/gcc-svn-update
+REPLACE_BASH+=	contrib/reghunt/bin/gcc-svn-update-fix
+REPLACE_BASH+=	contrib/reghunt/bin/reg-hunt
+REPLACE_BASH+=	contrib/reghunt/bin/reg-test
+REPLACE_BASH+=	contrib/reghunt/date_based/reg_periodic
+REPLACE_BASH+=	contrib/reghunt/date_based/reg_search
+REPLACE_BASH+=	gcc/dbgcnt.def
+REPLACE_BASH+=	gcc/testsuite/gcc.test-framework/gen_directive_tests
+REPLACE_BASH+=	libstdc++-v3/scripts/run_doxygen
 
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}

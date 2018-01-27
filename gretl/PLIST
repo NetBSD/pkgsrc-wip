@@ -102,6 +102,7 @@ lib/gretl-gtk2/urcdist.la
 lib/gretl-gtk2/vif.la
 lib/libgretl-1.0.la
 lib/pkgconfig/gretl.pc
+man/man1/gretl.1
 share/gretl/data/data10-1.gdt
 share/gretl/data/data10-2.gdt
 share/gretl/data/data10-3.gdt
@@ -460,5 +461,4 @@ share/locale/pt_BR/LC_MESSAGES/gretl.mo
 share/locale/ru/LC_MESSAGES/gretl.mo
 share/locale/tr/LC_MESSAGES/gretl.mo
 share/locale/zh_TW/LC_MESSAGES/gretl.mo
-man/man1/gretl.1
 @pkgdir share/gretl/doc

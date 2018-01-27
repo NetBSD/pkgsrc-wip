@@ -19,8 +19,8 @@ USE_TOOLS=	make
 CONFIGURE_DIRS=	gui-wx/configure
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+="CFLAGS=--std=c99"	# for long long in luaconf.h -> limits.h
-CONFIGURE_ARGS+="--with-python-shlib=libpython2.7.so"
+CONFIGURE_ARGS+=	"CFLAGS=--std=c99"	# for long long in luaconf.h -> limits.h
+CONFIGURE_ARGS+=	"--with-python-shlib=libpython2.7.so"
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 #.include "../../lang/lua/buildlink3.mk" # uses its own built-in version 5.2

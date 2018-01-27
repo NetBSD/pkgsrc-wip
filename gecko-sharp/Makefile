@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=		c
+USE_LANGUAGES=	c
 
 PKGCONFIG_OVERRIDE+=	gecko-sharp-2.0.pc.in
 

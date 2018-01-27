@@ -14,13 +14,13 @@ COMMENT=		GNOME3 panel application
 #CONF_FILES+=	${PREFIX}/share/examples/gnome-panel/org.gnome.ClockApplet.Mechanism.conf \
 #		${PKG_SYSCONFDIR}/dbus-1/system.d/org.gnome.ClockApplet.Mechanism.conf
 
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE+=	bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	libpanel-applet/libpanelapplet-3.0.pc.in
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+GNU_CONFIGURE=			YES
+USE_TOOLS+=			gmake intltool msgfmt perl:run pkg-config
+USE_PKGLOCALEDIR=		YES
+USE_LIBTOOL=			YES
+PKGCONFIG_OVERRIDE+=		bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
+PKGCONFIG_OVERRIDE+=		libpanel-applet/libpanelapplet-3.0.pc.in
+CONFIGURE_ENV+=			PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2
 
 
@@ -49,7 +49,7 @@ GCONF_SCHEMAS+=	panel-object.schemas
 GCONF_SCHEMAS+=	panel-compatibility.schemas
 GCONF_SCHEMAS+=	workspace-switcher.schemas
 GCONF_SCHEMAS+=	window-list.schemas
-GCONF_ENTRIES=		panel-default-setup.entries
+GCONF_ENTRIES=	panel-default-setup.entries
 
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.15.1
 #BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0

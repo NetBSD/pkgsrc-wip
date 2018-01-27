@@ -19,9 +19,9 @@ MULTILIB_SUPPORTED?=	unknown
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 .  if exists(/usr/include/gnu/stubs-64.h) && \
      !exists(/usr/include/gnu/stubs-32.h)
-MULTILIB_SUPPORTED=No
+MULTILIB_SUPPORTED=	No
 .  else
-MULTILIB_SUPPORTED=Yes
+MULTILIB_SUPPORTED=	Yes
 .  endif
 .endif
 .if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])

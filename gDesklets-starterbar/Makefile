@@ -15,7 +15,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
-NAME=StarterBar
+NAME=		StarterBar
 GDESKLETSDIR=	${LOCALBASE}/share/gdesklets
 
 post-extract:

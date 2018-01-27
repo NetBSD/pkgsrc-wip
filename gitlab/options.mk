@@ -1,17 +1,17 @@
 # $NetBSD: options.mk,v 1.1 2014/02/13 03:39:33 makoto Exp $
 ### Set options
-PKG_OPTIONS_VAR=        PKG_OPTIONS.gitlab
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gitlab
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	database
-PKG_OPTIONS_GROUP.database= mysql postgres sqlite3
+PKG_OPTIONS_GROUP.database=	mysql postgres sqlite3
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	webserver
 PKG_OPTIONS_GROUP.webserver=	apache24 nginx
 
-PKG_OPTIONS_OPTIONAL_GROUPS+= database
-PKG_OPTIONS_GROUP.database=  mysql postgres sqlite3
-PKG_SUGGESTED_OPTIONS=  sqlite3 nginx
-PKG_SUGGESTED_OPTIONS=  sqlite3 apache24
+PKG_OPTIONS_OPTIONAL_GROUPS+=	database
+PKG_OPTIONS_GROUP.database=	mysql postgres sqlite3
+PKG_SUGGESTED_OPTIONS=		sqlite3 nginx
+PKG_SUGGESTED_OPTIONS=		sqlite3 apache24
 
 .include "../../mk/bsd.options.mk"
 
