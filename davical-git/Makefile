@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.4 2014/04/10 15:41:17 hfath Exp $
 #
 
-DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=1.1.4
-PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
-CATEGORIES=	www
-MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
+DISTNAME=		davical-${DAVICAL_VERSION}
+DAVICAL_VERSION=	1.1.4
+PKGREVISION=		${_GIT_PKGVERSION:S/.//g}
+CATEGORIES=		www
+MASTER_SITES=		http://debian.mcmillan.net.nz/packages/davical/
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://www.davical.org/
@@ -13,9 +13,9 @@ COMMENT=	Simple CalDAV server using a PostgreSQL backend
 
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
-GIT_REPOSITORIES=       master
-GIT_REPO.master=        https://gitlab.com/davical-project/davical.git
-GIT_MODULE.master=      davical
+GIT_REPOSITORIES=	master
+GIT_REPO.master=	https://gitlab.com/davical-project/davical.git
+GIT_MODULE.master=	davical
 # for "SSL certificate problem: unable to get local issuer certificate"
 GIT_ENV.master+=	GIT_SSL_NO_VERIFY=true
 
@@ -81,12 +81,12 @@ REPLACE_FILES.php+=	scripts/refresh-alarms.php
 REPLACE_FILES.php+=	scripts/sync-remote-caldav.php
 REPLACE_FILES.php+=	scripts/tz-update.php
 
-SUBST_CLASSES+=		conf-path
-SUBST_STAGE.conf-path=	pre-configure
-SUBST_FILES.conf-path=	inc/always.php.in dba/update-davical-database
-SUBST_FILES.conf-path+=	inc/davical_configuration_missing.php
-SUBST_SED.conf-path+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.conf-path=Fixing configuration path.
+SUBST_CLASSES+=			conf-path
+SUBST_STAGE.conf-path=		pre-configure
+SUBST_FILES.conf-path=		inc/always.php.in dba/update-davical-database
+SUBST_FILES.conf-path+=		inc/davical_configuration_missing.php
+SUBST_SED.conf-path+=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.conf-path=	Fixing configuration path.
 
 # See ../../devel/php-libawl/Makefile.common for the LIBAWLDIR value
 SUBST_CLASSES+=		inc-path

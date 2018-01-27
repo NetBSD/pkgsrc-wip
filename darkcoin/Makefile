@@ -1,7 +1,7 @@
 # $NetBSD$
 
 #DISTNAME=	v0.9.12.32
-DISTNAME=       v0.12.0.55
+DISTNAME=	v0.12.0.55
 #PKGNAME=	darkcoin-${DISTNAME:S/v//1}
 PKGNAME=	dash-${DISTNAME:S/v//1}
 CATEGORIES=	finance
@@ -17,18 +17,18 @@ USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake libtoolize
 USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 AUTO_MKDIRS=	yes
-HAS_CONFIGURE=  yes
-GNU_CONFIGURE=  yes
+HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 
 #CXXFLAGS+=	-std=c++0x
-CXXFLAGS+=      -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/dash -L${BUILDLINK_PREFIX.boost-libs}/lib/dash
-CXXFLAGS+=      -I${BUILDLINK_PREFIX.boost-libs}/include/boost
-CFLAGS+=                -fPIC
-BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
+CXXFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/dash -L${BUILDLINK_PREFIX.boost-libs}/lib/dash
+CXXFLAGS+=		-I${BUILDLINK_PREFIX.boost-libs}/include/boost
+CFLAGS+=		-fPIC
+BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
 
-CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
-CONFIGURE_ARGS+=  --enable-hardening
-CONFIGURE_ARGS+=  ${PREFIX}/include/db4
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_ARGS+=	--enable-hardening
+CONFIGURE_ARGS+=	${PREFIX}/include/db4
 
 QMAKE_OPTIONS+=	BOOST_INCLUDE_PATH=${PREFIX}/include/boost
 QMAKE_OPTIONS+=	BDB_INCLUDE_PATH=${PREFIX}/include/db4
@@ -39,10 +39,10 @@ QMAKE_OPTIONS+=	BDB_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	OPENSSL_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	LIB_RPATH=${PREFIX}/lib
 
-RCD_SCRIPTS=	dashd
-OWN_DIRS=	${VARBASE}/dash
-EGDIR=		${PREFIX}/share/examples/dash
-CONF_FILES=	${EGDIR}/dash.conf ${PKG_SYSCONFDIR}/dash.conf
+RCD_SCRIPTS=		dashd
+OWN_DIRS=		${VARBASE}/dash
+EGDIR=			${PREFIX}/share/examples/dash
+CONF_FILES=		${EGDIR}/dash.conf ${PKG_SYSCONFDIR}/dash.conf
 CONF_FILES_PERMS=	${EGDIR}/dash.conf ${PKG_SYSCONFDIR}/dash.conf ${ROOT_USER} ${ROOT_GROUP} 0600
 INSTALLATION_DIRS+=	share/examples/dash
 

@@ -1,11 +1,11 @@
 @comment $NetBSD$
+bin/ErrorCount.sh
+bin/ReferenceOpt.sh
+bin/Rename_SequenceFiles.sh
 bin/dDocent
 bin/dDocent_filters
-bin/ErrorCount.sh
 bin/filter_hwe_by_pop.pl
 bin/filter_missing_ind.sh
 bin/pop_missing_filter.sh
-bin/ReferenceOpt.sh
 bin/remake_reference.sh
 bin/remove.bad.hap.loci.sh
-bin/Rename_SequenceFiles.sh

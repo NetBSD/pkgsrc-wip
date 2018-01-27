@@ -1,8 +1,8 @@
 @comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:32 thomasklausner Exp $
 bin/dbf
 share/doc/dbf/BUGS
-share/doc/dbf/ChangeLog
 share/doc/dbf/CREDITS
+share/doc/dbf/ChangeLog
 share/doc/dbf/FAQ
 share/doc/dbf/INSTALL
 share/doc/dbf/MANIFEST

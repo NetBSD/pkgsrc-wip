@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison
 USE_TOOLS+=		perl
-REPLACE_PERL=   	ipfw_add ipfw_delete pfctl_add pfctl_delete
+REPLACE_PERL=		ipfw_add ipfw_delete pfctl_add pfctl_delete
 
 INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/doorman
 EGDIR=			${PREFIX}/share/examples/doorman

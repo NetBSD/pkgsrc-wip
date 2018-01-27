@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	deviceatlas-enterprise-c
 DEVICEATLAS_ENTERPRISE_C_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deviceatlas-enterprise-c+=	pcre>=0.9nb1
-BUILDLINK_PKGSRCDIR.deviceatlas-enterprise-c?=	../../wip/deviceatlas-enterprise-c
+BUILDLINK_PKGSRCDIR.deviceatlas-enterprise-c?=		../../wip/deviceatlas-enterprise-c
 .endif # DEVICEATLAS_ENTERPRISE_C_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-deviceatlas-enterprise-c

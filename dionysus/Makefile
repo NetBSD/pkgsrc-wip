@@ -14,10 +14,10 @@ INFO_FILES=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	tclsh:run
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
-INSTALLATION_DIRS+=	 bin ${PKGINFODIR} share/dionysus/databases
+INSTALLATION_DIRS+=	bin ${PKGINFODIR} share/dionysus/databases
 
 post-install:
 		${INSTALL_DATA} ${WRKSRC}/databases/*.ddb ${DESTDIR}${PREFIX}/share/dionysus/databases/

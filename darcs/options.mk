@@ -36,9 +36,9 @@ CONFIGURE_ARGS+= -f-terminfo
 # color
 #
 .if !empty(PKG_OPTIONS:Mcolor)
-CONFIGURE_ARGS+= -fcolor
+CONFIGURE_ARGS+=	-fcolor
 .else
-CONFIGURE_ARGS+= -f-color
+CONFIGURE_ARGS+=	-f-color
 .endif
 
 #

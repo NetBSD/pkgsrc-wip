@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.digitemp.com/
 COMMENT=	Reads temperature from serial and USB thermometers
 LICENSE=	gnu-gpl-v3
 
-INSTALLATION_DIRS= 	bin
+INSTALLATION_DIRS=	bin
 PKG_DESTDIR_SUPPORT=	destdir
 USE_TOOLS+=		gmake
 BUILD_TARGET=		ds9097

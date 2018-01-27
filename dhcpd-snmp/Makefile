@@ -25,7 +25,7 @@ DEPENDS+=		net-snmp-[0-9]*:../../net/net-snmp
 NET_SNMP_MIBDIR=	share/snmp/mibs
 EGDIR=			share/examples/dhcpd-snmp
 
-BUILD_DEFS+=            VARBASE NET_SNMP_MIBDIR
+BUILD_DEFS+=		VARBASE NET_SNMP_MIBDIR
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	dhcpd-snmp.conf.dist

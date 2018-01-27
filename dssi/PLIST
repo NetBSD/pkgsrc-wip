@@ -9,11 +9,11 @@ bin/less_trivial_synth
 bin/trivial_sampler
 bin/trivial_synth
 include/dssi.h
+lib/dssi/karplong.la
 lib/dssi/less_trivial_synth.la
 ${PLIST.qt}lib/dssi/less_trivial_synth/LTS_qt
-${PLIST.qt}lib/dssi/trivial_sampler/trivial_sampler_qt
-lib/dssi/karplong.la
 lib/dssi/trivial_sampler.la
+${PLIST.qt}lib/dssi/trivial_sampler/trivial_sampler_qt
 lib/dssi/trivial_synth.la
 lib/pkgconfig/dssi.pc
 man/man1/dssi_analyse_plugin.1

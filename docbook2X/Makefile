@@ -21,11 +21,11 @@ DEPENDS+=	p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-SAX-Expat-[0-9]*:../../textproc/p5-XML-SAX-Expat
 DEPENDS+=	tidy-[0-9]*:../../www/tidy
 
-GNU_CONFIGURE=	yes
-INFO_FILES=	yes
-USE_TOOLS+=	gmake makeinfo perl
+GNU_CONFIGURE=		yes
+INFO_FILES=		yes
+USE_TOOLS+=		gmake makeinfo perl
 CONFIGURE_ARGS+=	MAKEINFO=${MAKEINFO}
-TEST_TARGET=	check
+TEST_TARGET=		check
 
 XML_CATALOGS=	${PREFIX}/share/docbook2X/dtd/catalog.xml
 XML_CATALOGS+=	${PREFIX}/share/docbook2X/xslt/catalog.xml

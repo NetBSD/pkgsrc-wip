@@ -22,7 +22,7 @@ PKG_HOME.damon=	${VARBASE}/damon
 RCD_SCRIPTS+=	DaMon
 RCD_SCRIPTS+=	Probe
 
-SUBST_CLASSES+=	fix-paths
+SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	pre-install
 SUBST_MESSAGE.fix-path=	Fixing absolute paths.
 SUBST_FILES.fix-paths+=	../DaMon

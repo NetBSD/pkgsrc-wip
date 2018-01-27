@@ -10,9 +10,9 @@ COMMENT=	Iterative Solver Template Library
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-CHECK_PORTABILITY_SKIP= configure
+CHECK_PORTABILITY_SKIP=	configure
 
-LDFLAGS+=         -L${BUILDLINK_PREFIX.superlu}/lib
+LDFLAGS+=	-L${BUILDLINK_PREFIX.superlu}/lib
 
 DEPENDS+=	metis>=4.0:../../math/metis
 

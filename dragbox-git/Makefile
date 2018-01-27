@@ -10,7 +10,7 @@ HOMEPAGE=	http://users.student.lth.se/f04us/wiki/dragbox/
 COMMENT=	Command line drag-and-drop tool for GNOME
 LICENSE=	gnu-gpl-v2
 
-GIT_REPOSITORIES=       dragbox
+GIT_REPOSITORIES=	dragbox
 GIT_REPO.dragbox=	git://repo.or.cz/dragbox.git
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S|-${PKGVERSION_NOREV}||:Q}
@@ -19,8 +19,8 @@ USE_TOOLS+=	gmake
 USE_TOOLS+=	autoconf
 USE_TOOLS+=	automake
 
-REPLACE_PYTHON+=	dragbox
-PY_PATCHPLIST=	yes
+REPLACE_PYTHON+=		dragbox
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2, py-gobject
 
 pre-configure:

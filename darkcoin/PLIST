@@ -1,9 +1,9 @@
 @comment $NetBSD$
+bin/dash-cli
+bin/dash-tx
 lib/dash/libsecp256k1.la
 lib/dash/libsecp256k1.so
 lib/dash/libsecp256k1.so.0
-bin/dash-tx
-bin/dash-cli
 sbin/dashd
 share/examples/dash/dash.conf
 share/examples/rc.d/dashd

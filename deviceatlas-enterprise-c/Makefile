@@ -27,10 +27,10 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 INSTALLATION_DIRS=	lib include
 
-FETCH_MESSAGE=  "Please fetch ${DISTFILES} manually from"
-FETCH_MESSAGE+= "${HOMEPAGE}"
-FETCH_MESSAGE+= "and put into"
-FETCH_MESSAGE+= "${DISTDIR}"
+FETCH_MESSAGE=	"Please fetch ${DISTFILES} manually from"
+FETCH_MESSAGE+=	"${HOMEPAGE}"
+FETCH_MESSAGE+=	"and put into"
+FETCH_MESSAGE+=	"${DISTDIR}"
 
 pre-build:
 	cd ${WRKSRC} && cmake -DINSTALL_PREFIX=${PREFIX}

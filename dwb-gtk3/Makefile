@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2015/08/29 16:11:03 f8l Exp $
 .include "../../wip/dwb-gtk2/Makefile.common"
 
-PKGNAME=        ${DISTNAME:S/dwb/dwb-gtk3/}
+PKGNAME=	${DISTNAME:S/dwb/dwb-gtk3/}
 PKGREVISION=	1
 COMMENT=	Dynamic WebKit browser, gtk3 version
 

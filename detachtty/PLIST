@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1.1.1 2011/02/20 20:58:40 ddeus Exp $
-bin/detachtty
 bin/attachtty
-share/doc/detachtty/README
+bin/detachtty
 man/man1/detachtty.1
+share/doc/detachtty/README

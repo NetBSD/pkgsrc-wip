@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.arabeyes.org/project.php?proj=Duali
 COMMENT=	Arabic dictionary
 LICENSE=	modified-bsd
 
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	share/duali-data share/doc/duali-data

@@ -80,7 +80,7 @@ SUBST_SED.dolfinconf=	-e 's|${WRKDIR}/.buildlink|${PREFIX}|g' \
 			-e 's|${WRKDIR}/.wrapper|${PREFIX}|g'
 
 # From lang/python/extension.mk
-PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 MMVERSION=	1.2
 

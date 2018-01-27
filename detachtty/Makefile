@@ -12,10 +12,10 @@ COMMENT=	Utility that lets you run interactive programs non-interactively
 LICENSE=	gnu-gpl-v2
 USE_TOOLS=	gmake
 
-WRKSRC=	${WRKDIR}/detachtty-9
-INSTALLATION_DIRS+=bin/
-INSTALLATION_DIRS+=${PKGMANDIR}/man1/
-INSTALLATION_DIRS+=share/doc/${PKGBASE}
+WRKSRC=			${WRKDIR}/detachtty-9
+INSTALLATION_DIRS+=	bin/
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1/
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/detachtty ${WRKSRC}/attachtty ${DESTDIR}${PREFIX}/bin/

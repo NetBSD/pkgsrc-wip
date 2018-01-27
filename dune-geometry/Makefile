@@ -10,7 +10,7 @@ COMMENT=	Includes everything related to the DUNE reference elements
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-CHECK_PORTABILITY_SKIP= configure
+CHECK_PORTABILITY_SKIP=	configure
 
 PKGCONFIG_OVERRIDE+=	dune-geometry-2.2.0/PaxHeaders.17347/dune-geometry.pc.in
 PKGCONFIG_OVERRIDE+=	dune-geometry-2.2.0/dune-geometry.pc.in

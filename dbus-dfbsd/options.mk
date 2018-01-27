@@ -5,7 +5,7 @@ PKG_SUPPORTED_OPTIONS+=	debug x11 enable-in-rcvar nonroot
 PKG_SUGGESTED_OPTIONS=	x11
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= enable-in-rcvar	
+PKG_SUGGESTED_OPTIONS+=	enable-in-rcvar	
 .endif
 
 .if (${OPSYS} == "NetBSD"  ||	\
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-verbose-mode
 .endif
 
 .if !empty(PKG_OPTIONS:Mkqueue)
-CONFIGURE_ARGS+= 	--enable-kqueue
+CONFIGURE_ARGS+=	--enable-kqueue
 .else
 CONFIGURE_ARGS+=	--disable-kqueue
 .endif

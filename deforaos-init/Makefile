@@ -17,7 +17,7 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
 RCD_SCRIPTS+=	Init
 
-SUBST_CLASSES+=	fix-paths
+SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	pre-install
 SUBST_MESSAGE.fix-path=	Fixing absolute paths.
 SUBST_FILES.fix-paths+=	../Init

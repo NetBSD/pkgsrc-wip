@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	dart-1.13.0
-CATEGORIES=	lang
+DISTNAME=		dart-1.13.0
+CATEGORIES=		lang
 GIT_REPOSITORIES=	sdk
 GIT_REPO.sdk=		https://github.com/dart-lang/sdk.git
 WRKSRC=			${WRKDIR}/sdk

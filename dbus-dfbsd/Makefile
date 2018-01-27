@@ -70,7 +70,7 @@ CONFIGURE_ARGS+=	--disable-apparmor
 CONFIGURE_ARGS+=	--disable-systemd
 .endif
 
-PLIST_VARS+=    	linux launchd
+PLIST_VARS+=		linux launchd
 
 DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
 OWN_DIRS+=		${DBUS_CONF_DIR}/services

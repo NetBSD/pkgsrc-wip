@@ -11,7 +11,7 @@ MAINTAINER=	xmor61@users.sourceforge.net
 HOMEPAGE=	http://members.cox.net/rcolbert/index.htm
 COMMENT=	6502 Disassembler with Atari 2600 headers and cycle counting info
 
-NO_CONFIGURE=	YES
+NO_CONFIGURE=		YES
 EXTRACT_OPTS_ZIP=	-Laqo
 
 post-extract:

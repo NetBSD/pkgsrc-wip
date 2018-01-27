@@ -2,10 +2,10 @@
 bin/player
 bin/playerctl
 include/Desktop/Player.h
+man/man1/player.1
+man/man1/playerctl.1
 share/Player/splash.png
 share/applications/player.desktop
 share/doc/html/Player/player.html
 share/doc/html/Player/playerctl.html
 share/locale/fr/LC_MESSAGES/Player.mo
-man/man1/player.1
-man/man1/playerctl.1

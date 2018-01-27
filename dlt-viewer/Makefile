@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/dlt-viewer-2.18.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CWRAPPERS_PREPEND.cxx+= -std=c++11
+CWRAPPERS_PREPEND.cxx+=	-std=c++11
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"

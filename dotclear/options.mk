@@ -27,12 +27,12 @@ WWW_SYSCONFDIR=		${PREFIX}/etc/httpd
 ### Use nginx web server
 ###
 .if !empty(PKG_OPTIONS:Mnginx)
-DEPENDS+=		nginx-[0-9]*:../../www/nginx
-DEPENDS+=		${PHP_PKG_PREFIX}-fpm>=5.5:../../www/php-fpm
-WWW_USER?=		nginx
-WWW_GROUP?=		nginx
-WWW_CONF_FILE=		nginx.conf
-WWW_SYSCONFDIR=		${PREFIX}/etc/nginx
+DEPENDS+=	nginx-[0-9]*:../../www/nginx
+DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=5.5:../../www/php-fpm
+WWW_USER?=	nginx
+WWW_GROUP?=	nginx
+WWW_CONF_FILE=	nginx.conf
+WWW_SYSCONFDIR=	${PREFIX}/etc/nginx
 .endif
 ###
 ### Use mysql backend.

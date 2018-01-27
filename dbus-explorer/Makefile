@@ -12,7 +12,7 @@ COMMENT=	GTK+ interface for viewing D-Bus service APIs written by C\#
 #LICENSE=	# TODO
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=		pkg-config msgfmt gmake
+USE_TOOLS+=	pkg-config msgfmt gmake
 USE_LANGUAGES=	# none
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

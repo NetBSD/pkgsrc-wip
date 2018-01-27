@@ -12,13 +12,13 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	qt5-qttools>=5.5.1:../../x11/qt5-qttools
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
-USE_CMAKE=	yes
-CMAKE_ARGS+=	-DBuildTests=OFF
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-BUILD_MAKE_FLAGS+= VERBOSE=1
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+USE_CMAKE=		yes
+CMAKE_ARGS+=		-DBuildTests=OFF
+CONFIGURE_DIRS=		build
+CMAKE_ARG_PATH=		..
+BUILD_MAKE_FLAGS+=	VERBOSE=1
 
 pre-configure:
 	mkdir -p ${WRKSRC}/build

@@ -7,7 +7,7 @@ DIRECTFB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.DirectFB+=	directfb>=0.9.17
 BUILDLINK_ABI_DEPENDS.DirectFB?=	directfb>=0.9.22nb3
-BUILDLINK_PKGSRCDIR.DirectFB?=	../../wip/directfb
+BUILDLINK_PKGSRCDIR.DirectFB?=		../../wip/directfb
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

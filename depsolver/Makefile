@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
-WRKSRC=	${WRKDIR}/depSolver
+WRKSRC=		${WRKDIR}/depSolver
 USE_TOOLS+=	pax
 USE_LANGUAGES=	c c++
 
