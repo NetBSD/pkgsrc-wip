@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.64 2016/04/22 08:04:23 jperkin Exp $
 
-DISTNAME=	kde-runtime-16.04.0
+DISTNAME=	kde-runtime-17.08.3
 PKGNAME=	${DISTNAME:S/-1/4-1/}
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.04.0/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/17.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
@@ -18,9 +18,12 @@ CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.dylib
 CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.so
 .endif
 
+CMAKE_ARGS+=	-DWITH_QNtrack=OFF
+CMAKE_ARGS+=	-DWITH_NepomukCore=OFF
 CMAKE_ARGS+=	-DBUILD_khelpcenter=OFF
 CMAKE_ARGS+=	-DBUILD_kglobalaccel=OFF
 CMAKE_ARGS+=	-DBUILD_kuiserver=OFF
+CMAKE_ARGS+=	-DBUILD_drkonqi=OFF
 CMAKE_ARGS+=	-DBUILD_doc=OFF
 
 #DEPENDS+=	htdig>=3.2.0:../../www/htdig
@@ -93,7 +96,6 @@ BUILDLINK_ABI_DEPENDS.attica?=	attica>=0.1.4
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libkactivities4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
