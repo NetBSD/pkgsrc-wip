@@ -166,6 +166,7 @@ SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
 SUBDIR+=	ascii2binary
+SUBDIR+=	asciinema
 SUBDIR+=	aslc86k
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
