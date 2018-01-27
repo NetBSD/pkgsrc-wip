@@ -10,7 +10,7 @@ COMMENT=	IP/icmp based device monitoring tool
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=     gmake
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 

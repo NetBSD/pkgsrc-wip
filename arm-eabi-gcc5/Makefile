@@ -4,8 +4,8 @@ DISTNAME=		gcc-5.2.0
 PKGNAME=		cross-arm-eabi-${DISTNAME}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-5.2.0/}
-NEWLIBVER=              2.2.0
-SITES.newlib-${NEWLIBVER}.tar.gz=ftp://sources.redhat.com/pub/newlib/
+NEWLIBVER=		2.2.0
+SITES.newlib-${NEWLIBVER}.tar.gz= ftp://sources.redhat.com/pub/newlib/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			newlib-${NEWLIBVER}.tar.gz
 
@@ -17,7 +17,7 @@ EXTRACT_SUFX=		.tar.bz2
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
-_TOOLS_USE_PKGSRC.makeinfo=yes
+_TOOLS_USE_PKGSRC.makeinfo= yes
 
 DEPENDS+=	cross-arm-eabi-binutils-[0-9]*:../../wip/arm-eabi-binutils
 

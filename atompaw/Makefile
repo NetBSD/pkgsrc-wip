@@ -11,9 +11,9 @@ COMMENT=	Projector Augmented Wave code for electronic structure calculations
 LICENSE=	gnu-gpl-v3
 
 
-CHECK_PORTABILITY_SKIP= configure
+CHECK_PORTABILITY_SKIP=	configure
 GNU_CONFIGURE=		yes
-USE_LIBTOOL= 		yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=		perl
 USE_LANGUAGES=		c fortran
 

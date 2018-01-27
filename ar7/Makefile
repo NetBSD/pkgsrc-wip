@@ -10,7 +10,7 @@ HOMEPAGE=	${MASTER_SITES}
 COMMENT=	Diagnosis tool for certain ADSL modems
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 INSTALLATION_DIRS=	bin
 
 USE_FEATURES+=	getopt_long

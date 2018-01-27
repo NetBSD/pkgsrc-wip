@@ -11,7 +11,7 @@ HOMEPAGE=		http://cx4a.org/software/auto-complete/index.html
 COMMENT=		The most intelligent auto-completion extension for GNU Emacs
 LICENSE=		gnu-gpl-v3
 
-MESSAGE_SUBST+=         LISPDIR=${EMACS_LISPPREFIX:Q}
+MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE:Q}
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/${PKGBASE}
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/${PKGBASE}/ac-dict

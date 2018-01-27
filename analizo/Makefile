@@ -23,7 +23,7 @@ DEPENDS+=	p5-YAML>=0.72:../../textproc/p5-YAML
 WRKSRC=		${WRKDIR}/analizo
 
 #PERL5_PACKLIST=	auto/analizo_1.16.0/
-USE_TOOLS+= perl
+USE_TOOLS+=	perl
 USE_LANGUAGES=	c c++
 
 REPLACE_PERL+=	Makefile.PL analizo lib/Analizo/scripts/analizo-metrics 	\

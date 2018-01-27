@@ -11,8 +11,8 @@ HOMEPAGE=	http://acpiclient.sourceforge.net/
 COMMENT=	This is an acpi client for Linux
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=     gmake
+USE_TOOLS+=	gmake
 
-ONLY_FOR_PLATFORM= Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 .include "../../mk/bsd.pkg.mk"

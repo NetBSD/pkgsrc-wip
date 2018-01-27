@@ -15,8 +15,8 @@ COMMENT=	UML design tool environment with cognitive support
 DEPENDS+=	xerces-j>=1.2.0:../../textproc/xerces-j
 DEPENDS+=	jakarta-log4j-1.3a>=8:../../wip/jakarta-log4j
 
-USE_JAVA=		run
-NO_BUILD=		yes
+USE_JAVA=	run
+NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
 do-configure:

@@ -1,6 +1,5 @@
 @comment $NetBSD: PLIST,v 1.2 2012/10/31 12:55:39 othyro Exp $
 bin/Aria
-share/applications/Aria.desktop
 share/Aria/Documentation/aria120.png
 share/Aria/Documentation/bg.jpg
 share/Aria/Documentation/building.html
@@ -127,6 +126,7 @@ share/Aria/volume_low.png
 share/Aria/volume_medium.png
 share/Aria/white_border.png
 share/Aria/white_corner.png
+share/applications/Aria.desktop
 share/locale/de/LC_MESSAGES/aria_maestosa.mo
 share/locale/es/LC_MESSAGES/aria_maestosa.mo
 share/locale/fr/LC_MESSAGES/aria_maestosa.mo

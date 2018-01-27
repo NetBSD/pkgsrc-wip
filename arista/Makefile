@@ -14,7 +14,7 @@ DEPENDS+=	gst-plugins0.10-x264-[0-9]*:../../multimedia/gst-plugins0.10-x264
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	intltool msgfmt
+USE_TOOLS+=		intltool msgfmt
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=		yes

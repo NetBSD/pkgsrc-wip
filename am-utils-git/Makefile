@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.am-utils.org/
 COMMENT=		Berkeley automounter suite of utilities
 LICENSE=		original-bsd
 
-GIT_REPOSITORIES=       am-utils
+GIT_REPOSITORIES=	am-utils
 GIT_REPO.am-utils=	git://git.fsl.cs.sunysb.edu/am-utils-6.2.git
 GIT_MODULE.am-utils=	am-utils-6.2
 

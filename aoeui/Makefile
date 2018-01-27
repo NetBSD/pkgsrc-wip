@@ -13,6 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	m4
 
-BUILD_TARGET= default
+BUILD_TARGET=	default
 
 .include "../../mk/bsd.pkg.mk"

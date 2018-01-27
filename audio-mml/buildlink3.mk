@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	audio-mml
 AUDIO_MML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.audio-mml+=	audio-mml>=4.4.01
-BUILDLINK_PKGSRCDIR.audio-mml?=	../../wip/audio-mml
+BUILDLINK_PKGSRCDIR.audio-mml?=		../../wip/audio-mml
 
 .include "../../wip/common-mml/buildlink3.mk"
 .endif # AUDIO_MML_BUILDLINK3_MK

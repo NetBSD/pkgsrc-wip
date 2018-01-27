@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	alsa-lib
 ALSA_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.alsa-lib+=	alsa-lib>=1.0.18
-BUILDLINK_PKGSRCDIR.alsa-lib?=	../../audio/alsa-lib
+BUILDLINK_PKGSRCDIR.alsa-lib?=		../../audio/alsa-lib
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

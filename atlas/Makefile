@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	-Ss flapack ${PREFIX}/lib/liblapack.a
 # atlas requires distfiles from lapack
 #.include "../../math/lapack/Makefile.version"
 #CONFIGURE_ARGS+=	--with-netlib-lapack-tarfile=${DISTDIR}/${LAPACK_NAME}-${LAPACK_VERSION}${LAPACK_SUFX}
-CONFIGURE_ARGS+=       --with-netlib-lapack-tarfile=${DISTDIR}/lapack-3.5.0.tgz
+CONFIGURE_ARGS+=	--with-netlib-lapack-tarfile=${DISTDIR}/lapack-3.5.0.tgz
 
 TEST_TARGET=	check
 BUILD_TARGET=	build shared ptshared

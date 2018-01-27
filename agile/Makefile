@@ -17,8 +17,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	bash:run
 USE_LANGUAGES=	c c++ fortran
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.agile
-PKG_SUPPORTED_OPTIONS=          pyext
+PKG_OPTIONS_VAR=		PKG_OPTIONS.agile
+PKG_SUPPORTED_OPTIONS=		pyext
 #PKG_SUGGESTED_OPTIONS=      pyext
 
 .include "../../mk/bsd.options.mk"

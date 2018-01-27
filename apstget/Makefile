@@ -25,7 +25,7 @@ INSTALLATION_DIRS+=	bin libexec share/examples/apstget
 
 # AWK compatibilty stuff
 .if ${OPSYS} != "Linux"
-SUBST_SED.etc= -e "s,-W interactive,,"
+SUBST_SED.etc=	-e "s,-W interactive,,"
 .endif
 
 SUBST_CLASSES+=		etc

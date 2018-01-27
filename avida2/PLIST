@@ -1,4 +1,12 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:28 thomasklausner Exp $
+avida-2.0b1/analyze.cfg
+avida-2.0b1/environment.cfg
+avida-2.0b1/events.cfg
+avida-2.0b1/genesis
+avida-2.0b1/inst_set.default
+avida-2.0b1/organism.default
+avida-2.0b1/preset_organisms/dummy
+avida-2.0b1/primitive
 share/avida/analyze_mode.html
 share/avida/analyze_samples.html
 share/avida/code_c++_intro.html
@@ -71,11 +79,3 @@ share/avida/level_map.html
 share/avida/print_data.html
 share/avida/screen.html
 share/avida/structure.html
-avida-2.0b1/analyze.cfg
-avida-2.0b1/environment.cfg
-avida-2.0b1/events.cfg
-avida-2.0b1/genesis
-avida-2.0b1/inst_set.default
-avida-2.0b1/organism.default
-avida-2.0b1/preset_organisms/dummy
-avida-2.0b1/primitive

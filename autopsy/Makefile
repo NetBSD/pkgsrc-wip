@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2013/09/03 17:40:00 shattered Exp $
 #
 
-VERSION=2.21
+VERSION=		2.21
 DISTNAME=		autopsy-${VERSION}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=autopsy/}

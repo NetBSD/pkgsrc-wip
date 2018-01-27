@@ -30,7 +30,6 @@ bin/tripcover.pl
 bin/unnest
 bin/untype
 bin/variant.pl
-share/doc/agfl/agfl-manual-3.2.ps
 include/abase_debug.h
 include/abase_dstring.h
 include/abase_error.h
@@ -61,3 +60,4 @@ man/man1/agfl.1
 man/man1/agflintro.1
 share/agfl/abbrev.txt
 share/agfl/latin1-translate.dat
+share/doc/agfl/agfl-manual-3.2.ps

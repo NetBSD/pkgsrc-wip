@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://sourceforge.net/projects/afflib/
 COMMENT=		Advanced Forensic Format library
 
-USE_LANGUAGES= c++
+USE_LANGUAGES=	c++
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/aimage/aimage ${DESTDIR}${PREFIX}/bin

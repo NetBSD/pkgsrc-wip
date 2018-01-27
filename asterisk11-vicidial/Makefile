@@ -7,7 +7,7 @@
 DISTNAME=	asterisk-11.22.0-vici
 PKGNAME=	asterisk-11.22.0
 CATEGORIES=	comms net audio
-MASTER_SITES=   http://download.vicidial.com/required-apps/
+MASTER_SITES=	http://download.vicidial.com/required-apps/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/sounds/releases/
@@ -19,7 +19,7 @@ OWNER=		alberto.m@futurelinkcorporation.com
 HOMEPAGE=	http://www.asterisk.org/
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=         ${WRKDIR}/asterisk-11.22.0
+WRKSRC=		${WRKDIR}/asterisk-11.22.0
 
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 

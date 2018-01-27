@@ -1,9 +1,5 @@
 @comment $NetBSD: PLIST,v 1.2 2012/09/26 23:15:55 othyro Exp $
 bin/autoq3d
-share/autoq3d/lan_sp.qm
-share/autoq3d/lan_sp.ts
-share/autoq3d/qref.htm
-share/autoq3d/qref_sp.htm
 share/autoq3d/images/array.png
 share/autoq3d/images/autoscale.png
 share/autoq3d/images/cascade.png
@@ -54,5 +50,9 @@ share/autoq3d/images/vtop.png
 share/autoq3d/images/vwprop.png
 share/autoq3d/images/zoomi.png
 share/autoq3d/images/zoomim.png
+share/autoq3d/lan_sp.qm
+share/autoq3d/lan_sp.ts
+share/autoq3d/qref.htm
+share/autoq3d/qref_sp.htm
 share/pixmaps/AutoQ3D.ico
 share/pixmaps/AutoQ3D.png

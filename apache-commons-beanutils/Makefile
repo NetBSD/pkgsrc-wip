@@ -13,12 +13,12 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/commons-beanutils-1.8.3
 
-NO_BUILD=		yes
+NO_BUILD=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-USE_JAVA=	yes
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
+USE_JAVA=		yes
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
 
 INSTALLATION_DIRS=	lib/java share/doc/apache-commons-beanutils
 

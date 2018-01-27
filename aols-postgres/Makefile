@@ -15,7 +15,7 @@ MAKE_FLAGS+=	POSTGRES=${PREFIX:Q} INST=/${PREFIX:Q}/include/nsd \
 		TCL_CC=gcc
 CFLAGS+=	-I/usr/pkg/include/nsd/include
 
-USE_TOOLS+=         gmake
+USE_TOOLS+=	gmake
 
 .include "../../wip/aolserver4/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"

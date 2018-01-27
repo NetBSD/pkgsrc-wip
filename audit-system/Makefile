@@ -24,10 +24,10 @@ SYSVULNDIR=	${VARBASE}/db
 SCRIPT_DIR=	${PREFIX}/sbin
 FETCH_TOOL=	${FTP}
 
-BUILD_DEFS=	VARBASE
-CONF_FILES+=	${EGDIR}/audit-system.conf ${PKG_SYSCONFDIR}/audit-system.conf
-USE_TOOLS+=	awk cp mv ident chmod mkdir find rm echo
-MAKE_DIRS=	${SYSVULNDIR}
+BUILD_DEFS=		VARBASE
+CONF_FILES+=		${EGDIR}/audit-system.conf ${PKG_SYSCONFDIR}/audit-system.conf
+USE_TOOLS+=		awk cp mv ident chmod mkdir find rm echo
+MAKE_DIRS=		${SYSVULNDIR}
 INSTALLATION_DIRS+=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 ${EGDIR} sbin
 
 .include "../../mk/bsd.prefs.mk"

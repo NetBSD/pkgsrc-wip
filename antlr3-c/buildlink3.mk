@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	antlr3-c
 ANTLR3_C_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.antlr3-c+=	antlr3-c>=3.4
-BUILDLINK_PKGSRCDIR.antlr3-c?=	../../wip/antlr3-c
+BUILDLINK_PKGSRCDIR.antlr3-c?=		../../wip/antlr3-c
 .endif	# ANTLR3_C_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-antlr3-c

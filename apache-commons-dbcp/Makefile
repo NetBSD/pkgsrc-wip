@@ -20,9 +20,9 @@ WRKSRC=		${WRKDIR}/commons-dbcp-1.4
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
-USE_JAVA=	yes
-USE_JAVA2=	yes
-PKG_JVMS_ACCEPTED= sun-jdk6
+USE_JAVA=		yes
+USE_JAVA2=		yes
+PKG_JVMS_ACCEPTED=	sun-jdk6
 
 INSTALLATION_DIRS=	lib/java share/doc/apache-commons-dbcp
 

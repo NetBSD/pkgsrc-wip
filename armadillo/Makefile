@@ -3,14 +3,14 @@
 DISTNAME=	armadillo-4.${DIST_MINOR}.2
 PKGNAME=	armadillo-4.${PKG_MINOR}.2
 CATEGORIES=	math
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=arma/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arma/}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/arma/
 COMMENT=	C++ linear algebra library
 LICENSE=	mpl-2.0
 
-USE_LANGUAGES+= c c++
+USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 
 # OS X cannot handle components > 255 in a library version, so strip

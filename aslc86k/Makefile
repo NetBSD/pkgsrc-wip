@@ -5,12 +5,12 @@ DISTNAME=	aslc86k
 CATEGORIES=	devel
 MASTER_SITES=	http://mc.pp.se/dc/files/
 
-MAINTAINER=	tr@vispaul.me
-HOMEPAGE=	http://mc.pp.se/dc/files/
-COMMENT=	Macro assembler that can assemble programs of the Visual Memory System
-LICENSE=	mit
-WRKSRC=		${WRKDIR}/as
-USE_TOOLS+=	gmake
+MAINTAINER=		tr@vispaul.me
+HOMEPAGE=		http://mc.pp.se/dc/files/
+COMMENT=		Macro assembler that can assemble programs of the Visual Memory System
+LICENSE=		mit
+WRKSRC=			${WRKDIR}/as
+USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin
 
 do-install:

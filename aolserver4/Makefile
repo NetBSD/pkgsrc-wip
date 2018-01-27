@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-PTHREAD_OPTS+=	require
+PTHREAD_OPTS+=		require
 
 NSD_LOGDIR=		${VARBASE}/log/nsd
 NSD_PIDDIR=		${VARBASE}/run/nsd

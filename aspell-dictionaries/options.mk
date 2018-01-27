@@ -2,9 +2,9 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aspell-dictionaries
 PKG_SUPPORTED_OPTIONS=	lang-br lang-ca lang-cs lang-cy lang-da lang-de lang-el
-PKG_SUPPORTED_OPTIONS+= lang-en lang-eo lang-es lang-fi lang-fo lang-fr lang-ga
-PKG_SUPPORTED_OPTIONS+= lang-it lang-nb lang-nl lang-pl lang-pt lang-ro lang-ru
-PKG_SUPPORTED_OPTIONS+= lang-sk lang-sv lang-te lang-uk
+PKG_SUPPORTED_OPTIONS+=	lang-en lang-eo lang-es lang-fi lang-fo lang-fr lang-ga
+PKG_SUPPORTED_OPTIONS+=	lang-it lang-nb lang-nl lang-pl lang-pt lang-ro lang-ru
+PKG_SUPPORTED_OPTIONS+=	lang-sk lang-sv lang-te lang-uk
 PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
 
 .include "../../mk/bsd.options.mk"

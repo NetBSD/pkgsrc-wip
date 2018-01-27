@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	avr-binutils
 AVR_BINUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.avr-binutils+=	avr-binutils>=2.23
-BUILDLINK_PKGSRCDIR.avr-binutils?=		../../cross/avr-binutils
+BUILDLINK_PKGSRCDIR.avr-binutils?=	../../cross/avr-binutils
 #BUILDLINK_FNAME_TRANSFORM.avr-binutils+=	-e "s,${AVR_TARGET}/lib,lib/,g"
 
 .endif # AVR_BINUTILS_BUILDLINK3_MK

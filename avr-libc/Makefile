@@ -30,7 +30,7 @@ BUILD_DEPENDS+=		tex-tetex-[0-9]*:../../print/tex-tetex
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
-USE_GNU_CONFIGURE_HOST= no
+USE_GNU_CONFIGURE_HOST=	no
 
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--host=avr

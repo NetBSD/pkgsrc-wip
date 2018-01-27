@@ -14,7 +14,7 @@ DEPENDS+=	afl-[0-9]*:../../devel/afl
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON+=	afl-cov
+REPLACE_PYTHON+=		afl-cov
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.6
 
 INSTALLATION_DIRS+=	bin share/doc/afl-cov

@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aegis.sourceforge.net/
 COMMENT=	Infrastructure meta-package to develop on Aegis
 
-META_PACKAGE=   	yes
+META_PACKAGE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,7 +38,7 @@ DEPENDS+=		psutils>=1.17:../../print/psutils
 # on NetBSD rcs is in the base set. others?
 DEPENDS+=		rcs>=5.7:../../devel/rcs
 .endif
-DEPENDS+= 		rx>=1.5:../../devel/rx
+DEPENDS+=		rx>=1.5:../../devel/rx
 DEPENDS+=		sudo>=1.7.0:../../security/sudo
 DEPENDS+=		tardy>=1.17:../../wip/tardy
 .if ${OPSYS} != "NetBSD"
