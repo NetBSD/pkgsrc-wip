@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/koct9i/ioping/
 COMMENT=	Monitor I/O latency in real time
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=	${WRKDIR}/${PKGNAME:S/v//}
+WRKSRC=	${WRKDIR}/${PKGNAME_NOREV:S/v//}
 
 USE_TOOLS+=	gmake
 
