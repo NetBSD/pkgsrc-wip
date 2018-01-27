@@ -2,7 +2,6 @@
 
 COMMENT=	WIP pkgsrc packages
 
-#SUBDIR+=	.git # to silence pkglint
 SUBDIR+=	0ad
 SUBDIR+=	0ad-data
 SUBDIR+=	389-ds-base
@@ -1941,6 +1940,7 @@ SUBDIR+=	mac-icon-standard
 SUBDIR+=	mac-robber
 SUBDIR+=	macaulay2
 SUBDIR+=	mackerel-agent
+SUBDIR+=	mackerel-agent-plugins
 SUBDIR+=	magit-git
 SUBDIR+=	mago
 SUBDIR+=	mailfilter
@@ -3960,6 +3960,7 @@ SUBDIR+=	rmilter
 SUBDIR+=	rnc-mode
 SUBDIR+=	rng-tools
 SUBDIR+=	roadfighter
+SUBDIR+=	rocksdb
 SUBDIR+=	rolo
 SUBDIR+=	rootcheck
 SUBDIR+=	rootsh
