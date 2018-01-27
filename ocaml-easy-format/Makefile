@@ -12,8 +12,8 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
 
-OCAML_USE_FINDLIB=yes
-BUILD_TARGET+=	opt
+OCAML_USE_FINDLIB=	yes
+BUILD_TARGET+=		opt
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

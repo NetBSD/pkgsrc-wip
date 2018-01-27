@@ -3,7 +3,7 @@
 DISTNAME=	typerep-${VERS}
 VERS=		112.17.00
 CATEGORIES=	devel
-MASTER_SITES=   https://github.com/janestreet/typerep/archive/
+MASTER_SITES=	https://github.com/janestreet/typerep/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
 DIST_SUBDIR=	ocaml-typerep
 
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/janestreet/typerep/
 COMMENT=	Runtime types for OCaml
 LICENSE=	apache-2.0
 
-OCAML_USE_OASIS=yes
+OCAML_USE_OASIS=	yes
 
 .include "../../devel/ocaml-type_conv/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"

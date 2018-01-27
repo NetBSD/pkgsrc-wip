@@ -1,5 +1,5 @@
-PKG_OPTIONS_VAR=                PKG_OPTIONS.openblas
-PKG_SUPPORTED_OPTIONS=          avx avx2 openmp interface64 dynamic_arch
+PKG_OPTIONS_VAR=		PKG_OPTIONS.openblas
+PKG_SUPPORTED_OPTIONS=		avx avx2 openmp interface64 dynamic_arch
 PKG_SUGGESTED_OPTIONS=		dynamic_arch
 
 .include "../../mk/bsd.prefs.mk"

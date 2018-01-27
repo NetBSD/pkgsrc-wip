@@ -14,15 +14,15 @@ HOMEPAGE=	http://openttd.org/
 COMMENT=	Free and open source music data files for the game OpenTTD
 #LICENSE=	# TODO: (see mk/license.mk)
 
-INSTALLATION_DIRS=  	share/openttd/gm
+INSTALLATION_DIRS=	share/openttd/gm
 
 WRKSRC=		${WRKDIR}/openmsx-${VERSION}
 USE_LANGUAGES=	# none
 
-NO_BUILD=    	YES
+NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
-OPENTTD_GMDIR= ${DESTDIR}${PREFIX}/share/openttd/gm
+OPENTTD_GMDIR=	${DESTDIR}${PREFIX}/share/openttd/gm
 
 do-install:
 		${INSTALL_DATA} ${WRKSRC}/*.mid \

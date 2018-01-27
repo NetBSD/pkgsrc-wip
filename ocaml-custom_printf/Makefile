@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/04/17 22:25:04 jgoamakf Exp $
 
 DISTNAME=	custom_printf-112.24.00
-CATEGORIES=     devel
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	custom_printf
 GITHUB_TAG=	112.24.00

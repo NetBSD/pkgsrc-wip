@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/janestreet/pa_test/
 COMMENT=	Quotation expanders for assertions
 LICENSE=	apache-2.0
 
-OCAML_USE_OASIS=yes
+OCAML_USE_OASIS=	yes
 
 .include "../../devel/ocaml-sexplib/buildlink3.mk"
 .include "../../devel/ocaml-type_conv/buildlink3.mk"

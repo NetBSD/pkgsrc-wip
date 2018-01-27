@@ -2,10 +2,10 @@
 
 DISTNAME=	herelib-${VERS}
 VERS=		109.35.02
-CATEGORIES=     devel
-MASTER_SITES=   https://github.com/janestreet/herelib/archive/
-DISTFILES=      ${VERS}${EXTRACT_SUFX}
-DIST_SUBDIR=    ocaml-herelib
+CATEGORIES=	devel
+MASTER_SITES=	https://github.com/janestreet/herelib/archive/
+DISTFILES=	${VERS}${EXTRACT_SUFX}
+DIST_SUBDIR=	ocaml-herelib
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/herelib/

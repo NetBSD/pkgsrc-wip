@@ -9,16 +9,16 @@ HOMEPAGE=	http://logos-os.dfki.de/
 COMMENT=	Openlogos is a language translation system
 
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-USE_LIBTOOL=	YES
-GNU_CONFIGURE=	YES
-USE_JAVA=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+USE_JAVA=		yes
 CONFIGURE_ARGS+=	--with-java=${PKG_JAVA_HOME:Q}
 
-CPPFLAGS.SunOS+=  -Du_int32_t=uint32_t -D__int32_t=int32_t -Du_int16_t=uint16_t -D__int16_t=int16_t -Dstrerror_r\(x,y,z\)=strerror\(x\)
+CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t -D__int32_t=int32_t -Du_int16_t=uint16_t -D__int16_t=int16_t -Dstrerror_r\(x,y,z\)=strerror\(x\)
 
-SUBST_CLASSES+=	sysio
+SUBST_CLASSES+=		sysio
 SUBST_STAGE.sysio=	post-patch
 SUBST_FILES.sysio=	logos_libs/dbcache/CacheCompanyData.cpp \
 			logos_libs/dbcache/CacheDerivedFormData.cpp \

@@ -13,15 +13,15 @@ HOMEPAGE=	http://openttd.org/
 COMMENT=	Free and open source sound data files for the game OpenTTD
 #LICENSE=	# TODO: (see mk/license.mk)
 
-INSTALLATION_DIRS=  	share/openttd/data
+INSTALLATION_DIRS=	share/openttd/data
 
 WRKSRC=		${WRKDIR}/opensfx-${VERSION}
 USE_LANGUAGES=	# none
 
-NO_BUILD=    	YES
+NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
-OPENTTD_DATADIR= ${DESTDIR}${PREFIX}/share/openttd/data
+OPENTTD_DATADIR=	${DESTDIR}${PREFIX}/share/openttd/data
 
 do-install:
 # the readme is already bumped to the single tar version

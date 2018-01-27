@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/opensips-${VER}-tls
 
 USE_TOOLS+=		gmake
 
-CHECK_INTERPRETER_SKIP+=lib/opensips/opensipsctl/dbtextdb/dbtextdb.py
+CHECK_INTERPRETER_SKIP+= lib/opensips/opensipsctl/dbtextdb/dbtextdb.py
 REPLACE_PERL+=		scripts/osipsconsole
 
 PKG_SYSCONFSUBDIR=	opensips

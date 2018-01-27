@@ -6,7 +6,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
 # that exactly one be chosen.
 PKG_OPTIONS_REQUIRED_GROUPS=	cardreader
 PKG_OPTIONS_GROUP.cardreader=	pcsc-lite openct
-PKG_SUGGESTED_OPTIONS=	pcsc-lite
+PKG_SUGGESTED_OPTIONS=		pcsc-lite
 
 .include "../../mk/bsd.options.mk"
 

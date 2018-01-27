@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	gmake
 
 OCAML_USE_FINDLIB=	yes
-BUILD_TARGET+=	opt
+BUILD_TARGET+=		opt
 
 .include "../../wip/ocaml-easy-format/buildlink3.mk"
 .include "../../mk/ocaml.mk"

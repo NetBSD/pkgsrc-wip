@@ -26,9 +26,9 @@ openmpi/bin/ortecc
 openmpi/bin/orted
 openmpi/bin/orterun
 openmpi/etc/cshrc
-openmpi/etc/shrc
 openmpi/etc/modulefiles/openmpi/1.6.3
 openmpi/etc/openmpi-default-hostfile
+openmpi/etc/shrc
 openmpi/include/mpi-ext.h
 openmpi/include/mpi.h
 openmpi/include/mpi_portable_platform.h

@@ -2,10 +2,10 @@
 
 DISTNAME=	enumerate-${VERS}
 VERS=		111.08.00
-CATEGORIES=     devel
-MASTER_SITES=   https://github.com/janestreet/enumerate/archive/
-DISTFILES=      ${VERS}${EXTRACT_SUFX}
-DIST_SUBDIR=    ocaml-enumerate
+CATEGORIES=	devel
+MASTER_SITES=	https://github.com/janestreet/enumerate/archive/
+DISTFILES=	${VERS}${EXTRACT_SUFX}
+DIST_SUBDIR=	ocaml-enumerate
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/enumerate/

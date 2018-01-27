@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2012/10/03 21:32:46 asau Exp $
 #
 
-DISTNAME=		open21xx0.7.2
-PKGNAME=		open21xx-0.7.2
-CATEGORIES=		lang
+DISTNAME=	open21xx0.7.2
+PKGNAME=	open21xx-0.7.2
+CATEGORIES=	lang
 MASTER_SITES=	http://www3.telus.net/sharpshin/downloads/
 
 MAINTAINER=		ianzag@mail.ru

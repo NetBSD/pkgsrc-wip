@@ -21,17 +21,18 @@ USE_TOOLS+=	bash pax perl
 USE_LANGUAGES=	# none
 
 REPLACE_BASH+=	licenses/test.sh licenses/create_template.sh  \
-    licenses/buildall.sh     licenses/create_meta.sh
+		licenses/buildall.sh     licenses/create_meta.sh
 
-REPLACE_PERL+=          licenses/add_compatible.pl
+REPLACE_PERL+=		licenses/add_compatible.pl
 
-INSTALLATION_DIRS=						\
-						bin					\
-						share/applications		\
-						lib/java/oslc			\
-						lib/java/oslc/doc  		\
-						lib/java/oslc/licenses 	\
-						lib/java/oslc/resources
+INSTALLATION_DIRS= \
+	bin				\
+	share/applications		\
+	lib/java/oslc			\
+	lib/java/oslc/doc  		\
+	lib/java/oslc/licenses 		\
+	lib/java/oslc/resources
+
 do-build:
 	${ECHO} "Create oslc.desktop:"
 	${ECHO} "[Desktop Entry]" > ${WRKSRC}/oslc.desktop

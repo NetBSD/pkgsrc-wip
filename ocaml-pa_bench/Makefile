@@ -3,7 +3,7 @@
 DISTNAME=	pa_bench-${VERS}
 VERS=		112.06.00
 CATEGORIES=	devel
-MASTER_SITES=   https://github.com/janestreet/pa_bench/archive/
+MASTER_SITES=	https://github.com/janestreet/pa_bench/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
 DIST_SUBDIR=	ocaml-pa_bench
 
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/janestreet/pa_bench/
 COMMENT=	Syntax extension for inline benchmarks
 LICENSE=	apache-2.0
 
-OCAML_USE_OASIS=yes
+OCAML_USE_OASIS=	yes
 
 .include "../../wip/ocaml-pa_ounit/buildlink3.mk"
 .include "../../devel/ocaml-type_conv/buildlink3.mk"

@@ -65,7 +65,7 @@ REPLACE_PERL+=		ompi/tools/wrappers/mpijavac.pl.in
 # The same -R appears on Linux, but does not cause problems.
 # SUBST refused to edit binary files, so do it manually.
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
-SUBST_CLASSES+=	opal
+SUBST_CLASSES+=		opal
 SUBST_STAGE.opal=	post-build
 SUBST_FILES.opal=	${WRKSRC}/opal/tools/wrappers/.libs/opal_wrapper
 SUBST_SED.opal=		-e 's|-R|-L|g'

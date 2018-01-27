@@ -47,7 +47,7 @@ pre-configure:
 	${RUN} cd ${WRKSRC} && ./build-setup.sh
 
 # Skip these checks for now:
-CHECK_WRKREF_SKIP=     lib/*/hypertex lib/*/viewAlone lib/*/view2D lib/*/view3D lib/*/viewman
+CHECK_WRKREF_SKIP=	lib/*/hypertex lib/*/viewAlone lib/*/view2D lib/*/view3D lib/*/viewman
 
 
 # Get it from Subversion repository:

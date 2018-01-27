@@ -7,7 +7,7 @@ OPENVRML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openvrml+=	openvrml>=0.14.3
 BUILDLINK_ABI_DEPENDS.openvrml?=	openvrml>=0.14.3nb2
-BUILDLINK_PKGSRCDIR.openvrml?=	../../wip/openvrml
+BUILDLINK_PKGSRCDIR.openvrml?=		../../wip/openvrml
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"

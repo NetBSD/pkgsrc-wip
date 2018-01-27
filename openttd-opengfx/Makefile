@@ -14,15 +14,15 @@ HOMEPAGE=	http://openttd.org/
 COMMENT=	Free and open source graphics data files for the game OpenTTD
 #LICENSE=	# TODO: (see mk/license.mk)
 
-INSTALLATION_DIRS=  	share/openttd/data
+INSTALLATION_DIRS=	share/openttd/data
 
 WRKSRC=		${WRKDIR}/opengfx-${VERSION}
 USE_LANGUAGES=	# none
 
-NO_BUILD=     	YES
+NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
-OPENTTD_DATADIR= ${DESTDIR}${PREFIX}/share/openttd/data
+OPENTTD_DATADIR=	${DESTDIR}${PREFIX}/share/openttd/data
 
 do-install:
 #	The single tar version has been dropped	for some reason

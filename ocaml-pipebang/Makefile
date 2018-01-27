@@ -3,7 +3,7 @@
 DISTNAME=	pipebang-${VERS}
 VERS=		110.01.00
 CATEGORIES=	devel
-MASTER_SITES=   https://github.com/janestreet/pipebang/archive/
+MASTER_SITES=	https://github.com/janestreet/pipebang/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
 DIST_SUBDIR=	ocaml-pa_test
 

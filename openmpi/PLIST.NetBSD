@@ -1,6 +1,6 @@
-lib/openmpi/mca_pstat_test.la
 bin/mpiCC
 bin/orteCC
+lib/openmpi/mca_pstat_test.la
 man/man1/mpiCC.1
 man/man1/orteCC.1
 share/openmpi/mpiCC-wrapper-data.txt

@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake
 
 INFO_FILES=	yes
 
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--target=or32
 
 # rl_event_hook

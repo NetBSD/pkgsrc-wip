@@ -3,7 +3,7 @@
 DISTNAME=	variantslib-${VERS}
 VERS=		109.15.03
 CATEGORIES=	devel
-MASTER_SITES=   https://github.com/janestreet/variantslib/archive/
+MASTER_SITES=	https://github.com/janestreet/variantslib/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
 DIST_SUBDIR=	ocaml-variantslib
 

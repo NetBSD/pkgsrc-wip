@@ -8,9 +8,9 @@ PKG_SUGGESTED_OPTIONS=
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mopl3)
-CFLAGS+=-DOPLTYPE_IS_OPL3
+CFLAGS+=	-DOPLTYPE_IS_OPL3
 .endif
 
 .if !empty(PKG_OPTIONS:Mtyrian2000)
-CFLAGS+=-DTYRIAN2000
+CFLAGS+=	-DTYRIAN2000
 .endif

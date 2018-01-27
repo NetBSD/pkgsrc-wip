@@ -23,9 +23,9 @@ PLIST_VARS+=	runtime bridge
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-PLIST.runtime = yes
+PLIST.runtime =	yes
 .else
-PLIST.bridge = yes
+PLIST.bridge =	yes
 .endif
 
 pre-configure:

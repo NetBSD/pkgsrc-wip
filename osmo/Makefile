@@ -3,14 +3,14 @@
 
 DISTNAME=	osmo-0.2.12
 CATEGORIES=	misc time
-MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=osmo-pim/osmo-0.2.10/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=osmo-pim/osmo-0.2.10/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clayo.org/osmo/
 COMMENT=	Personal organizer, calendar and task manager
 LICENSE=	gnu-gpl-v2
 
-CONFIGURE_ENV+=		LIBICAL_CFLAGS="-I${BUILDLINK_PREFIX.libical}/include/libical"
+CONFIGURE_ENV+=	LIBICAL_CFLAGS="-I${BUILDLINK_PREFIX.libical}/include/libical"
 GNU_CONFIGURE=	yes
 #USE_TOOLS=	msgfmt pkg-config
 USE_TOOLS=	gmake msgfmt pkg-config

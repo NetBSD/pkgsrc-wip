@@ -9,7 +9,7 @@ HOMEPAGE=		https://github.com/dengste/org-caldav
 COMMENT=		Caldav sync for Emacs Orgmode
 
 GIT_REPOSITORIES=	org-caldav
-GIT_REPO.org-caldav= 		git://github.com/dengste/org-caldav.git
+GIT_REPO.org-caldav=	git://github.com/dengste/org-caldav.git
 
 WRKSRC=			${WRKDIR}/org-caldav
 EGG_NAME=		${DISTNAME}.dev

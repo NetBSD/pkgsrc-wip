@@ -12,11 +12,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ogre.sourceforge.net/
 COMMENT=	Object-Oriented Graphics Rendering Engine
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_CMAKE=	YES
-USE_TOOLS+=		gmake pkg-config xmkmf
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
+USE_TOOLS+=	gmake pkg-config xmkmf
+USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	CMake/Templates/OGRE-PCZ.pc.in
 PKGCONFIG_OVERRIDE+=	CMake/Templates/OGREStatic.pc.in

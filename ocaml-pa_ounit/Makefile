@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2015/04/17 22:28:58 jgoamakf Exp $
 
 DISTNAME=	pa_ounit-112.24.00
-CATEGORIES=     devel
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	pa_ounit
 GITHUB_TAG=	112.24.00

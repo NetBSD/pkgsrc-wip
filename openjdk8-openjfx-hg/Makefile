@@ -13,10 +13,10 @@ COMMENT=	JavaFX application toolkit
 #DISTFILES=	${DEFAULT_DISTFILES}
 #EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-GRADLE_ZIP=	gradle-1.8-bin.zip
+GRADLE_ZIP=		gradle-1.8-bin.zip
 SITES.${GRADLE_ZIP}=	https://services.gradle.org/distributions/
-DISTFILES+=	${GRADLE_ZIP}
-EXTRACT_ONLY+=	${GRADLE_ZIP}
+DISTFILES+=		${GRADLE_ZIP}
+EXTRACT_ONLY+=		${GRADLE_ZIP}
 
 HG_REPOSITORIES=	rt
 HG_REPO.rt=		http://hg.openjdk.java.net/openjfx/8u-dev/rt

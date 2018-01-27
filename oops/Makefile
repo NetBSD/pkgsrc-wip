@@ -26,30 +26,30 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/oops
 
 .include "../../mk/bsd.prefs.mk"
 
-OOPSVAR?=	/var/run/oops
-OOPSUSER?=	oops
-OOPSGROUP?=	oops
-PKG_GROUPS=	${OOPSGROUP}
-PKG_USERS=	${OOPSUSER}:${OOPSGROUP}::Oops\ proxy\ server
+OOPSVAR?=		/var/run/oops
+OOPSUSER?=		oops
+OOPSGROUP?=		oops
+PKG_GROUPS=		${OOPSGROUP}
+PKG_USERS=		${OOPSUSER}:${OOPSGROUP}::Oops\ proxy\ server
 OWN_DIRS_PERMS+=	${OOPSVAR} ${OOPSUSER} ${OOPSGROUP} 755
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/storages ${OOPSUSER} ${OOPSGROUP} 700
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/DB ${OOPSUSER} ${OOPSGROUP} 700
 MAKE_DIRS_PERMS+=	${PREFIX}/oops/logs ${OOPSUSER} ${OOPSGROUP} 700
 
 PKG_SYSCONFSUBDIR=	oops
-EGDIR=	${PREFIX}/share/examples/oops
-CONF_FILES=	${EGDIR}/oops.cfg ${PKG_SYSCONFDIR}/oops.cfg
-CONF_FILES+=	${EGDIR}/accel_maps ${PKG_SYSCONFDIR}/accel_maps
-CONF_FILES+=	${EGDIR}/acl_local_networks ${PKG_SYSCONFDIR}/acl_local_networks
-CONF_FILES+=	${EGDIR}/passwd ${PKG_SYSCONFDIR}/passwd
-CONF_FILES+=	${EGDIR}/redir_rules ${PKG_SYSCONFDIR}/redir_rules
-CONF_FILES+=	${EGDIR}/select.sql ${PKG_SYSCONFDIR}/select.sql
-CONF_FILES+=	${EGDIR}/auth_template.html ${PKG_SYSCONFDIR}/auth_template.html
-CONF_FILES+=	${EGDIR}/err_template.html ${PKG_SYSCONFDIR}/err_template.html
-CONF_FILES+=	${EGDIR}/redir_template.html ${PKG_SYSCONFDIR}/redir_template.html
-CONF_FILES+=	${EGDIR}/tables/koi-alt.tab ${PKG_SYSCONFDIR}/tables/koi-alt.tab
-CONF_FILES+=	${EGDIR}/tables/koi-iso.tab ${PKG_SYSCONFDIR}/tables/koi-iso.tab
-CONF_FILES+=	${EGDIR}/tables/koi-win.tab ${PKG_SYSCONFDIR}/tables/koi-win.tab
+EGDIR=			${PREFIX}/share/examples/oops
+CONF_FILES=		${EGDIR}/oops.cfg ${PKG_SYSCONFDIR}/oops.cfg
+CONF_FILES+=		${EGDIR}/accel_maps ${PKG_SYSCONFDIR}/accel_maps
+CONF_FILES+=		${EGDIR}/acl_local_networks ${PKG_SYSCONFDIR}/acl_local_networks
+CONF_FILES+=		${EGDIR}/passwd ${PKG_SYSCONFDIR}/passwd
+CONF_FILES+=		${EGDIR}/redir_rules ${PKG_SYSCONFDIR}/redir_rules
+CONF_FILES+=		${EGDIR}/select.sql ${PKG_SYSCONFDIR}/select.sql
+CONF_FILES+=		${EGDIR}/auth_template.html ${PKG_SYSCONFDIR}/auth_template.html
+CONF_FILES+=		${EGDIR}/err_template.html ${PKG_SYSCONFDIR}/err_template.html
+CONF_FILES+=		${EGDIR}/redir_template.html ${PKG_SYSCONFDIR}/redir_template.html
+CONF_FILES+=		${EGDIR}/tables/koi-alt.tab ${PKG_SYSCONFDIR}/tables/koi-alt.tab
+CONF_FILES+=		${EGDIR}/tables/koi-iso.tab ${PKG_SYSCONFDIR}/tables/koi-iso.tab
+CONF_FILES+=		${EGDIR}/tables/koi-win.tab ${PKG_SYSCONFDIR}/tables/koi-win.tab
 
 RCD_SCRIPTS=	oops
 

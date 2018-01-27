@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opennurbs
 OPENNURBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opennurbs+=	opennurbs>=20130711
-BUILDLINK_PKGSRCDIR.opennurbs?=	../../wip/opennurbs
+BUILDLINK_PKGSRCDIR.opennurbs?=		../../wip/opennurbs
 
 .include "../../devel/zlib/buildlink3.mk"
 .endif	# OPENNURBS_BUILDLINK3_MK

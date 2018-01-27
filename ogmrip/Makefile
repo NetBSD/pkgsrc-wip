@@ -6,10 +6,10 @@ DISTNAME=		ogmrip-0.13.7
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ogmrip/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ogmrip.sourceforge.net/
-COMMENT=			Application for ripping and encoding DVD into DivX/OGM files
-LICENSE=			gnu-lgpl-v2.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ogmrip.sourceforge.net/
+COMMENT=	Application for ripping and encoding DVD into DivX/OGM files
+LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=		mencoder-[0-9]*:../../multimedia/mencoder
 DEPENDS+=		mkvtoolnix-[0-9]*:../../multimedia/mkvtoolnix

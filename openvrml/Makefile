@@ -10,10 +10,10 @@ HOMEPAGE=	http://www.openvrml.org/
 COMMENT=	Portable C++ library for displaying VRML97 files
 
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	yes
-CONFIGURE_ARGS+=--disable-script-node-java --disable-script-node-javascript
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+CONFIGURE_ARGS+=	--disable-script-node-java --disable-script-node-javascript
+USE_TOOLS+=		gmake
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"

@@ -15,19 +15,19 @@ DEPENDS+=		p5-LWP-UserAgent-Determined-[0-9]*:../../www/p5-LWP-UserAgent-Determi
 DEPENDS+=		p5-MIME-Base32-[0-9]*:../../converters/p5-MIME-Base32
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 
-WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	YES
+WRKSRC=			${WRKDIR}
+NO_CONFIGURE=		YES
 OZYMAN_PERLSCRIPTS=	aska.pl droute.pl geta.pl nomde.pl
 
 USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	sbin
 
-SUBST_CLASSES+=         perlfix
-SUBST_STAGE.perlfix=    post-patch
-SUBST_MESSAGE.perlfix=  Fixing perl path
-SUBST_FILES.perlfix=    ${OZYMAN_PERLSCRIPTS}
-SUBST_SED.perlfix=      -e 's:^\#!/usr/bin/perl:\#!${PERL5}:g'
+SUBST_CLASSES+=		perlfix
+SUBST_STAGE.perlfix=	post-patch
+SUBST_MESSAGE.perlfix=	Fixing perl path
+SUBST_FILES.perlfix=	${OZYMAN_PERLSCRIPTS}
+SUBST_SED.perlfix=	-e 's:^\#!/usr/bin/perl:\#!${PERL5}:g'
 
 LIBS.SunOS+=	-lnsl # for gethostbyname
 

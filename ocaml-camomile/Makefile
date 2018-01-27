@@ -4,19 +4,19 @@ PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	camomile-0.8.4
 CATEGORIES=	converters
 MASTER_SITES=	https://github.com/downloads/yoriyuki/Camomile/
-EXTRACT_SUFX=   .tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/yoriyuki/Camomile/tree/master/Camomile
 COMMENT=	Unicode library for ocaml
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=     gmake
+USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir="${DESTDIR}${PREFIX}/lib/ocaml/site-lib"
 
-OCAML_USE_FINDLIB=yes
+OCAML_USE_FINDLIB=	yes
 
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/ocaml.mk"
