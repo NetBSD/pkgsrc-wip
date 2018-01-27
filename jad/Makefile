@@ -15,26 +15,26 @@ LICENSE=		no-commercial-use
 
 WRKSRC=		${WRKDIR}
 
-NO_BUILD=YES
+NO_BUILD=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD"
-DISTNAME=jadfb158
-JAD_OSDIR=freebsd/
-DISTINFO_FILE=${PKGDIR}/distinfo.FreeBSD
-PLIST_SRC=${PKGDIR}/PLIST.FreeBSD
+DISTNAME=	jadfb158
+JAD_OSDIR=	freebsd/
+DISTINFO_FILE=	${PKGDIR}/distinfo.FreeBSD
+PLIST_SRC=	${PKGDIR}/PLIST.FreeBSD
 .endif
 
 .if ${OPSYS} == "OpenBSD"
-DISTNAME=jadob158
-JAD_OSDIR=openbsd/
-DISTINFO_FILE=${PKGDIR}/distinfo.OpenBSD
-PLIST_SRC=${PKGDIR}/PLIST.FreeBSD
+DISTNAME=	jadob158
+JAD_OSDIR=	openbsd/
+DISTINFO_FILE=	${PKGDIR}/distinfo.OpenBSD
+PLIST_SRC=	${PKGDIR}/PLIST.FreeBSD
 .endif
 
 # TODO add support for the rest of supported archs
-ONLY_FOR_PLATFORM=Linux-*-i386 FreeBSD-*-i386 OpenBSD-2.*-i386
+ONLY_FOR_PLATFORM=	Linux-*-i386 FreeBSD-*-i386 OpenBSD-2.*-i386
 
 INSTALLATION_DIRS=	bin
 

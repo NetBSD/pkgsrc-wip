@@ -14,11 +14,11 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}
 
-NO_BUILD= yes
+NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-USE_JAVA=	yes
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
+USE_JAVA=		yes
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386  Linux-*-i386 Darwin-*-i386
 

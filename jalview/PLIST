@@ -1,6 +1,6 @@
 @comment $NetBSD: PLIST,v 1.4 2011/10/26 13:22:43 noud4 Exp $
 lib/java/jalview.jar
 lib/java/jalview_1.8.jar
-share/jalview/examples/1hdc.pfam
 share/jalview/README
+share/jalview/examples/1hdc.pfam
 share/jalview/jalview.sh

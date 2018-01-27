@@ -20,7 +20,7 @@ BUILD_DEFS=	FREEWNN_USER FREEWNN_GROUP
 INFO_FILES=	YES
 USE_LIBTOOL=	YES
 
-MAKE_JOBS_SAFE= no
+MAKE_JOBS_SAFE=	no
 
 FREEWNN_USER=	wnn
 FREEWNN_GROUP=	jserver
@@ -41,43 +41,43 @@ SPECIAL_PERMS+=	bin/Wnn4/kserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4711
 RCD_SCRIPTS=	ja_freewnn
 
 #### 1 #####
-SUBST_CLASSES+=         chown
-SUBST_STAGE.chown=      pre-configure
+SUBST_CLASSES+=		chown
+SUBST_STAGE.chown=	pre-configure
 # SPECIAL_PERMS will take care
-SUBST_MESSAGE.chown=    Replacing 'chown' to harmless 'echo'
+SUBST_MESSAGE.chown=	Replacing 'chown' to harmless 'echo'
 
-SUBST_FILES.chown+=     cdic/Makefile.in
-SUBST_FILES.chown+=     Contrib/dic/gerodic/Makefile.in
-SUBST_FILES.chown+=     cWnn/cdic/Makefile.in
-SUBST_FILES.chown+=     cWnn/tdic/Makefile.in
-SUBST_FILES.chown+=     kWnn/kdic/Makefile.in
-SUBST_FILES.chown+=     Wnn/pubdicplus/Makefile.in
-SUBST_FILES.chown+=     Wnn/wnncons/dic/Makefile.in
+SUBST_FILES.chown+=	cdic/Makefile.in
+SUBST_FILES.chown+=	Contrib/dic/gerodic/Makefile.in
+SUBST_FILES.chown+=	cWnn/cdic/Makefile.in
+SUBST_FILES.chown+=	cWnn/tdic/Makefile.in
+SUBST_FILES.chown+=	kWnn/kdic/Makefile.in
+SUBST_FILES.chown+=	Wnn/pubdicplus/Makefile.in
+SUBST_FILES.chown+=	Wnn/wnncons/dic/Makefile.in
 
-SUBST_SED.chown=        -e 's|chown |echo |'
+SUBST_SED.chown=	-e 's|chown |echo |'
 
 #### 2 #####
-SUBST_CLASSES+=         wnntouch
-SUBST_STAGE.wnntouch=   pre-configure
+SUBST_CLASSES+=		wnntouch
+SUBST_STAGE.wnntouch=	pre-configure
 # INSTALL script will take care
-SUBST_MESSAGE.wnntouch= Replacing 'wnntouch' to harmless 'echo'
+SUBST_MESSAGE.wnntouch=	Replacing 'wnntouch' to harmless 'echo'
 
-SUBST_FILES.wnntouch+=  Contrib/dic/gerodic/Makefile.in
-SUBST_FILES.wnntouch+=  cWnn/cdic/Makefile.in
-SUBST_FILES.wnntouch+=  cWnn/tdic/Makefile.in
-SUBST_FILES.wnntouch+=  kWnn/kdic/Makefile.in
-SUBST_FILES.wnntouch+=  Wnn/pubdicplus/Makefile.in
-SUBST_FILES.wnntouch+=  Wnn/wnncons/dic/Makefile.in
+SUBST_FILES.wnntouch+=	Contrib/dic/gerodic/Makefile.in
+SUBST_FILES.wnntouch+=	cWnn/cdic/Makefile.in
+SUBST_FILES.wnntouch+=	cWnn/tdic/Makefile.in
+SUBST_FILES.wnntouch+=	kWnn/kdic/Makefile.in
+SUBST_FILES.wnntouch+=	Wnn/pubdicplus/Makefile.in
+SUBST_FILES.wnntouch+=	Wnn/wnncons/dic/Makefile.in
 
-SUBST_SED.wnntouch=     -e 's|\$$(WNNTOUCH)|echo|'
-SUBST_SED.wnntouch+=    -e 's|\$${WNNTOUCH}|echo|'
+SUBST_SED.wnntouch=	-e 's|\$$(WNNTOUCH)|echo|'
+SUBST_SED.wnntouch+=	-e 's|\$${WNNTOUCH}|echo|'
 
 #### 3 #####
-SUBST_CLASSES+=         wnnowner
-SUBST_STAGE.wnnowner=   pre-configure
+SUBST_CLASSES+=		wnnowner
+SUBST_STAGE.wnnowner=	pre-configure
 # INSTALL script will take care instead
 
-SUBST_MESSAGE.wnnowner= Replacing '-o ${WNNOWER}' to empty string
+SUBST_MESSAGE.wnnowner=	Replacing '-o ${WNNOWER}' to empty string
 #   'INSTALL_FLAGS = -o ${WNNOWNER}' ->  'INSTFLAGS = '
 # 'LOCAL_INSTFLAGS = -o $(WNNOWNER)' ->  'LOCAL_INSTFLAGS = '
 

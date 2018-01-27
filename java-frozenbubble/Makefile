@@ -11,8 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://glenn.sanson.free.fr/fb/index.html
 COMMENT=		Java port of Frozen Bubble
 
-WRKSRC=${WRKDIR}
-NO_BUILD=		yes
+WRKSRC=		${WRKDIR}
+NO_BUILD=	yes
 
 JAVA_APP_TARGETS=	fb
 JAVA_APP_BIN.fb=	java-frozenbubble

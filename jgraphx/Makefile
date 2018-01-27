@@ -13,9 +13,9 @@ EXTRACT_SUFX=	.zip
 
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
-WRKSRC=	 	${WRKDIR}/${PKGBASE}
+WRKSRC=		${WRKDIR}/${PKGBASE}
 
-AUTO_MKDIRS=yes
+AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	lib/java/jgraphx
 
 do-build:

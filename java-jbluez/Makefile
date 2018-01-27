@@ -10,16 +10,16 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jbluez.sourceforge.net/
 COMMENT=		Java interface for BlueZ stack
 
-USE_TOOLS=gmake
-USE_JAVA= YES
-MAKE_ENV=JDK_HOME=${PKG_JAVA_HOME:Q}
+USE_TOOLS=	gmake
+USE_JAVA=	YES
+MAKE_ENV=	JDK_HOME=${PKG_JAVA_HOME:Q}
 
 WRKSRC=		${WRKDIR}/src
 
-SUBST_CLASSES+=jh
-SUBST_STAGE.jh=pre-build
-SUBST_FILES.jh= c/Makefile
-SUBST_SED.jh= -e 's,/usr/lib/java,${PKG_JAVA_HOME},g'
+SUBST_CLASSES+=	jh
+SUBST_STAGE.jh=	pre-build
+SUBST_FILES.jh=	c/Makefile
+SUBST_SED.jh=	-e 's,/usr/lib/java,${PKG_JAVA_HOME},g'
 
 INSTALLATION_DIRS=	lib/java
 

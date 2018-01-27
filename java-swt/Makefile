@@ -3,7 +3,7 @@
 DISTNAME=	swt-4.4-gtk-linux-x86
 DISTNAME=	swt-4.4-gtk-linux-x86_64
 PKGNAME=	java-swt-4.4
-SHLIB_VERSION=  4427
+SHLIB_VERSION=	4427
 CATEGORIES=	lang
 MASTER_SITES=	http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/
 EXTRACT_SUFX=	.zip

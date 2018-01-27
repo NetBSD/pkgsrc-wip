@@ -10,10 +10,9 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.jacorb.org/releases/${PKG_VERSION}/
 COMMENT=		Java implementation of the OMG's CORBA jar
 
-BUILD_DEPENDS+=               apache-ant>=1.5.3.1:../../devel/apache-ant
+BUILD_DEPENDS+=		apache-ant>=1.5.3.1:../../devel/apache-ant
 
-
-WRKSRC=		${WRKDIR}/JacORB_${DIST_VERSION}
+WRKSRC=			${WRKDIR}/JacORB_${DIST_VERSION}
 
 PKG_JVMS_ACCEPTED+=	sun-jdk14
 DIST_VERSION=		1_4_1

@@ -13,7 +13,7 @@ COMMENT=	Java Implementation of Speex
 
 WRKSRC=		${WRKDIR}/jspeex
 
-NO_BUILD=		yes
+NO_BUILD=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 

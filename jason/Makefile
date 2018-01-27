@@ -17,13 +17,14 @@ USE_JAVA2=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=   	bin					 \
-					lib/java/jason/bin		\
-					lib/java/jason/bin/jedit	\
-					lib/java/jason/lib		\
-				 	share/applications 		\
-					share/doc/jason 		\
-					share/examples/jason
+INSTALLATION_DIRS= \
+	bin				\
+	lib/java/jason/bin		\
+	lib/java/jason/bin/jedit	\
+	lib/java/jason/lib		\
+	share/applications 		\
+	share/doc/jason 		\
+	share/examples/jason
 
 post-extract:
 	${CP} ${FILESDIR}/jason.desktop ${WRKSRC}

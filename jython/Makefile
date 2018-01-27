@@ -21,10 +21,10 @@ USE_LANGUAGES=	# none
 
 JYTHON_NAME=	${PKGNAME}
 
-ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* FreeBSD-*-* OpenBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-* FreeBSD-*-* OpenBSD-*-*
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15
-MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15
+MAKE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME:Q}
 
 REPLACE_PYTHON+=	jython
 

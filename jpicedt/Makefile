@@ -18,7 +18,7 @@ USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
 USE_JAVA=	run
-USE_JAVA2= yes
+USE_JAVA2=	yes
 
 INSTALLATION_DIRS=	bin  share/applications   lib/java/jpicedt
 

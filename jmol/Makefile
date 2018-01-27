@@ -3,7 +3,7 @@
 
 DISTNAME=	Jmol-12.0.12-binary
 PKGNAME=	${DISTNAME:S/J/j/S/-binary//}
-CATEGORIES= biology java
+CATEGORIES=	biology java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jmol/}
 EXTRACT_SUFX=	.zip
 
@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}/jmol-12.0.12
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
 
-USE_JAVA2= yes
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
+USE_JAVA2=		yes
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
 
 JMOL_HOME=	${PREFIX}/share/jmol
 JMOL_FILES=	Jmol.jar JmolApplet.jar           \

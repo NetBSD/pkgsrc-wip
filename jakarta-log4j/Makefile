@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	logging-log4j-1.3alpha-8
-PKGNAME=		jakarta-log4j-1.3a-8
+PKGNAME=	jakarta-log4j-1.3a-8
 CATEGORIES=	www
 MASTER_SITES=	http://archive.apache.org/dist/logging/log4j/1.3alpha-8/
 
