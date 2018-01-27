@@ -9,11 +9,11 @@ HOMEPAGE=	https://qrupdate.sourceforge.io/
 COMMENT=	Library for fast updating of QR and Cholesky decompositions
 LICENSE=	gnu-gpl-v2
 
-USE_LIBTOOL=    yes
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	fortran
-USE_TOOLS=      gmake
+USE_TOOLS=	gmake
 
-MAKE_FLAGS= FC=${FC:Q} FFLAGS=${FFLAGS:Q} PREFIX=${PREFIX:Q} LIBDIR=lib
+MAKE_FLAGS=	FC=${FC:Q} FFLAGS=${FFLAGS:Q} PREFIX=${PREFIX:Q} LIBDIR=lib
 
 do-build:
 	cd ${WRKDIR}/${DISTNAME}/src && gmake ${MAKE_FLAGS} lalib

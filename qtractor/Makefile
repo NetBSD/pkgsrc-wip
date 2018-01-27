@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=     gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 QTDIR?=			${PREFIX}/qt5
 CONFIGURE_ENV+=		QTDIR=${QTDIR:Q}

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	QuantLib
 QUANTLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.QuantLib+=	QuantLib>=1.1
-BUILDLINK_PKGSRCDIR.QuantLib?=	../../wip/quantlib
+BUILDLINK_PKGSRCDIR.QuantLib?=		../../wip/quantlib
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .endif	# QUANTLIB_BUILDLINK3_MK

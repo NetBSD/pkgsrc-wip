@@ -14,7 +14,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DINSTALL_BIN=${QTDIR}/bin
-CMAKE_ARGS+=    -DINSTALL_INC=${QTDIR}/include
+CMAKE_ARGS+=	-DINSTALL_INC=${QTDIR}/include
 CMAKE_ARGS+=	-DINSTALL_LIB=${QTDIR}/lib
 
 .include "../../lang/lua51/buildlink3.mk"

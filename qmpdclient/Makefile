@@ -14,18 +14,18 @@ HOMEPAGE=	http://bitcheese.net/wiki/QMPDClient
 COMMENT=	QT4 based mpd client
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES= c c++
+USE_LANGUAGES=	c c++
 
-SUBST_CLASSES+=			fix-proj
+SUBST_CLASSES+=		fix-proj
 SUBST_STAGE.fix-proj=	post-patch
 SUBST_MESSAGE.fix-proj=	Fixing qmake project file.
 SUBST_FILES.fix-proj=	qmpdclient.pro
-SUBST_SED.fix-proj=		-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.fix-proj=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.fix-proj+=	-e 's,lrelease,${QTDIR}/bin/lrelease,g'
 SUBST_SED.fix-proj+=	-e 's,-g0 -s,,g'
 
-MAKE_FLAGS+= INSTALL_ROOT=${DESTDIR:Q}
-QMAKE_FLAGS+= QT_CONFIG=${QT_CONFIG:Q}
+MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
+QMAKE_FLAGS+=	QT_CONFIG=${QT_CONFIG:Q}
 
 # qmake isn't smart enough to integrate with lrelease. We have to run
 # it before actually invoking qmake, or lang/*.qm won't be installed.

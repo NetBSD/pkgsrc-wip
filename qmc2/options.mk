@@ -1,11 +1,11 @@
 # $NetBSD: options.mk,v 1.2 2013/12/07 00:39:22 thomasklausner Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.qmc2
-PKG_SUPPORTED_OPTIONS=	phonon sdl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.qmc2
+PKG_SUPPORTED_OPTIONS=		phonon sdl
 PKG_OPTIONS_REQUIRED_GROUPS+=	emu
-PKG_OPTIONS_GROUP.emu=	mame mess
-PKG_SUGGESTED_OPTIONS=	mame phonon sdl
-PLIST_VARS+=		mame mess
+PKG_OPTIONS_GROUP.emu=		mame mess
+PKG_SUGGESTED_OPTIONS=		mame phonon sdl
+PLIST_VARS+=			mame mess
 
 .include "../../mk/bsd.options.mk"
 

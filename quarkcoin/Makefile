@@ -17,23 +17,23 @@ USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake libtoolize
 USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:S/coin//1}
 AUTO_MKDIRS=	yes
-HAS_CONFIGURE=  yes
-GNU_CONFIGURE=  yes
+HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 
-CFLAGS+=        -fPIC
+CFLAGS+=	-fPIC
 #CXXFLAGS+=	-std=c++0x
-CXXFLAGS+= -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/quarkcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/quarkcoin
-CXXFLAGS+=      -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1
-CXXFLAGS+=      -I${BUILDLINK_PREFIX.boost-libs}/include/boost
+CXXFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/quarkcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/quarkcoin
+CXXFLAGS+=	-DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1
+CXXFLAGS+=	-I${BUILDLINK_PREFIX.boost-libs}/include/boost
 
 
-BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
+BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
 
-CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
-CONFIGURE_ARGS+=  --enable-hardening
-CONFIGURE_ARGS+=  ${PREFIX}/include/db4
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_ARGS+=	--enable-hardening
+CONFIGURE_ARGS+=	${PREFIX}/include/db4
 
-LIBTOOLIZE=     ${PREFIX}/bin/libtoolize
+LIBTOOLIZE=	${PREFIX}/bin/libtoolize
 
 
 
@@ -46,10 +46,10 @@ QMAKE_OPTIONS+=	BDB_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	OPENSSL_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	LIB_RPATH=${PREFIX}/lib
 
-RCD_SCRIPTS=	quarkcoind
-OWN_DIRS=	${VARBASE}/quarkcoin
-EGDIR=		${PREFIX}/share/examples/quarkcoin
-CONF_FILES=	${EGDIR}/quarkcoin.conf ${PKG_SYSCONFDIR}/quarkcoin.conf
+RCD_SCRIPTS=		quarkcoind
+OWN_DIRS=		${VARBASE}/quarkcoin
+EGDIR=			${PREFIX}/share/examples/quarkcoin
+CONF_FILES=		${EGDIR}/quarkcoin.conf ${PKG_SYSCONFDIR}/quarkcoin.conf
 CONF_FILES_PERMS=	${EGDIR}/quarkcoin.conf ${PKG_SYSCONFDIR}/quarkcoin.conf ${ROOT_USER} ${ROOT_GROUP} 0600
 
 pre-configure:

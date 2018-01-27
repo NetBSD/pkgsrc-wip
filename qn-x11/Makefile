@@ -2,7 +2,7 @@
 
 DISTNAME=	qnx11__-1.2.x
 PKGNAME=	qn-x11-0.1
-WRKSRC=	${WRKDIR}/gtk-qn-x11-theme-0.1
+WRKSRC=		${WRKDIR}/gtk-qn-x11-theme-0.1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.freshmeat.net/themes/qnx11__/
 

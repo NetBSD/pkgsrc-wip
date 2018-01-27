@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.35 2016/04/11 19:01:40 ryoon Exp $
 
-PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	1
+PKGNAME=		qt5-qtbase-${QTVERSION}
+PKGREVISION=		1
 GIT_REPOSITORIES=	qtproject
 GIT_REPO.qtproject=	https://github.com/qtproject/qtbase.git
 # 5.6 will go up to 5.7 and dev automatically
 GIT_BRANCH.qtproject=	5.6
-COMMENT=	C++ X GUI toolkit
+COMMENT=		C++ X GUI toolkit
 
 WRKSRC=		${WRKDIR}/qtproject
 
@@ -32,14 +32,14 @@ CONFIGURE_ARGS+=	-openssl-linked
 CONFIGURE_ARGS+=	-nomake examples
 CONFIGURE_ARGS+=	-nomake tests
 CONFIGURE_ARGS+=	-no-pch
-CONFIGURE_ARGS+=        -no-sql-db2
-CONFIGURE_ARGS+=        -no-sql-ibase
+CONFIGURE_ARGS+=	-no-sql-db2
+CONFIGURE_ARGS+=	-no-sql-ibase
 CONFIGURE_ARGS+=	-no-sql-mysql
-CONFIGURE_ARGS+=        -no-sql-oci
-CONFIGURE_ARGS+=        -no-sql-odbc
+CONFIGURE_ARGS+=	-no-sql-oci
+CONFIGURE_ARGS+=	-no-sql-odbc
 CONFIGURE_ARGS+=	-no-sql-psql
 CONFIGURE_ARGS+=	-no-sql-sqlite
-CONFIGURE_ARGS+=        -no-sql-sqlite2
+CONFIGURE_ARGS+=	-no-sql-sqlite2
 CONFIGURE_ARGS+=	-no-sql-tds
 CONFIGURE_ARGS+=	-no-strip
 CONFIGURE_ARGS+=	-system-harfbuzz
@@ -69,41 +69,41 @@ PLIST_VARS+=		egl
 .if ${OPSYS} == "SunOS"
 .  if !empty(CC_VERSION:Mgcc*)
 .    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=	-platform solaris-g++-64
+CONFIGURE_ARGS+=		-platform solaris-g++-64
 .    else
-CONFIGURE_ARGS+=	-platform solaris-g++
+CONFIGURE_ARGS+=		-platform solaris-g++
 .    endif
 .  else
 .    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=	-platform solaris-cc-64
+CONFIGURE_ARGS+=		-platform solaris-cc-64
 .    else
-CONFIGURE_ARGS+=	-platform solaris-cc
+CONFIGURE_ARGS+=		-platform solaris-cc
 .    endif
 .  endif
-SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
+SYS_LIBS=			-lresolv -lsocket -lnsl -lrt
 .elif ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=	-platform interix-g++
-CFLAGS+=		-I/usr/local/include/bind
-LDFLAGS+=		-L/usr/local/lib/bind -lbind
-BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
-SYS_LIBS=		-lbind -ldb -ldl
+CONFIGURE_ARGS+=		-platform interix-g++
+CFLAGS+=			-I/usr/local/include/bind
+LDFLAGS+=			-L/usr/local/lib/bind -lbind
+BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/bind /usr/local/lib/bind
+SYS_LIBS=			-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	-platform freebsd-g++
+CONFIGURE_ARGS+=		-platform freebsd-g++
 .elif ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	-platform macx-clang
-CONFIGURE_ARGS+=	-no-framework
+CONFIGURE_ARGS+=		-platform macx-clang
+CONFIGURE_ARGS+=		-no-framework
 .  if exists(/usr/lib/libresolv.dylib)
-LDFLAGS+=		-lresolv
+LDFLAGS+=			-lresolv
 .  endif
 .elif ${OPSYS} == "Linux"
-LDFLAGS+=		-ldl
+LDFLAGS+=			-ldl
 .elif ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 .  if exists(/usr/lib/libexecinfo.so)
-LDFLAGS+=		-lexecinfo
+LDFLAGS+=			-lexecinfo
 .  endif
 .endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-LDFLAGS+=		-lkvm	# see patch-src_corelib_io_qlockfile__unix.cpp
+LDFLAGS+=			-lkvm	# see patch-src_corelib_io_qlockfile__unix.cpp
 .endif
 
 REPLACE_PERL+=		bin/syncqt.pl
@@ -117,13 +117,13 @@ BUILD_TARGET=		sub-src
 INSTALLATION_DIRS=	${QTPREFIX}/bin lib/pkgconfig
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/echoplugin/echoplugin.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/echoplugin/plugin/plugin.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaint/plugandpaint.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaintplugins/basictools/basictools.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaintplugins/extrafilters/extrafilters.pro
-CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
-CHECK_INTERPRETER_SKIP+=qt5/mkspecs/macx-ios-clang/rename_main.sh
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/echoplugin/echoplugin.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/echoplugin/plugin/plugin.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaint/plugandpaint.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaintplugins/basictools/basictools.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/plugandpaintplugins/extrafilters/extrafilters.pro
+CHECK_INTERPRETER_SKIP+=	qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
+CHECK_INTERPRETER_SKIP+=	qt5/mkspecs/macx-ios-clang/rename_main.sh
 
 SUBST_CLASSES+=		opt path
 SUBST_STAGE.opt=	pre-configure
