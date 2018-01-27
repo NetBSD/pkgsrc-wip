@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-viper
 PY_VIPER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-viper+=	${PYPKGPREFIX}-viper>=1.0.0
-BUILDLINK_PKGSRCDIR.py-viper?=	../../wip/py-viper
+BUILDLINK_PKGSRCDIR.py-viper?=		../../wip/py-viper
 .endif	# PY_VIPER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py-viper

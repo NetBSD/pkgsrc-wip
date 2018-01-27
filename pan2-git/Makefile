@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		gnome-common>=3.6.0nb1:../../devel/gnome-common
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
 GIT_REPOSITORIES=	gnome
-GIT_REPO.gnome= 	git://git.gnome.org/pan2
+GIT_REPO.gnome=		git://git.gnome.org/pan2
 GIT_MODULE.gnome=	pan2
 WRKSRC=			${WRKDIR}/pan2
 

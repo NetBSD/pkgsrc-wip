@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=	c c++ c99
 USE_TOOLS+=	bash gmake
 
-CHECK_PORTABILITY_SKIP=	src/qt/config.tests/mac/dwarf2.test src/qt/configure
-CHECK_PORTABILITY_SKIP+=src/breakpad/src/third_party/protobuf/protobuf/post_process_dist.sh
+CHECK_PORTABILITY_SKIP=		src/qt/config.tests/mac/dwarf2.test src/qt/configure
+CHECK_PORTABILITY_SKIP+=	src/breakpad/src/third_party/protobuf/protobuf/post_process_dist.sh
 
 .include "../../mk/bsd.prefs.mk"
 

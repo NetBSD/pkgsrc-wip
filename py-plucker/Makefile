@@ -28,7 +28,7 @@ SUBST_SED.paths=	-e 's,/usr/local,${PREFIX},g'
 
 REPLACE_PYTHON=	PyPlucker/Spider.py PyPlucker/PluckerDocs.py	\
 			PyPlucker/Decode.py
-PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 
 .include "../../lang/python/application.mk"
 

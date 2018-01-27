@@ -10,8 +10,8 @@ HOMEPAGE=	http://z2pack.ethz.ch
 COMMENT=	Computation of topological numbers of band-structures
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=       ${PYPKGPREFIX}-decorator>=3.4.0:../../devel/py-decorator
-DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-decorator>=3.4.0:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 

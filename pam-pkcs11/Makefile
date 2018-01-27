@@ -21,7 +21,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
-EGDIR=        		${PREFIX}/share/examples/pam-pkcs11
+EGDIR=			${PREFIX}/share/examples/pam-pkcs11
 PKG_SYSCONFSUBDIR=	pam-pkcs11
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--docdir=${EGDIR}

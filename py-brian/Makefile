@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-sympy>=0.6.5:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_LANGUAGES=	c c++
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"

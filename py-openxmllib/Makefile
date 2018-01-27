@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	openxmllib-1.0.6
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://openxmllib.googlecode.com/files/
 

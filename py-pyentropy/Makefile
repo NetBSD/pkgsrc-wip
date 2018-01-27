@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"

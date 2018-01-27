@@ -10,7 +10,7 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/m/mave/
 COMMENT=	Library for Measurement and Verification
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=       ${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 
 WRKSRC=		${WRKDIR}/mave-0.0.1
 

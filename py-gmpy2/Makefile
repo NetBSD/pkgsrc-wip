@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/aleaxit/gmpy/
 COMMENT=	GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x
 LICENSE=	gnu-gpl-v3
 
-BUILD_TARGET= gmpy2.so
+BUILD_TARGET=	gmpy2.so
 
 BUILDLINK_API_DEPENDS.gmp+=		gmp>=4.2.1
 .include "../../devel/gmp/buildlink3.mk"

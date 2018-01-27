@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++ fortran
 
 PKGCONFIG_OVERRIDE+=	cfitsio/cfitsio.pc.in
 
-PY_PATCHPLIST=		yes
+PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 
 .include "../../devel/py-cython/buildlink3.mk"

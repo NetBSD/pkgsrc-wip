@@ -16,7 +16,7 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.2:../../www/p5-Catalyst-Runtime
 
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=	auto/Catalyst/Plugin/Unicode/Encoding/.packlist
+PERL5_PACKLIST=		auto/Catalyst/Plugin/Unicode/Encoding/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -3,7 +3,7 @@
 DISTNAME=	wasanbon-1.0.0.post9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.post9//}
 CATEGORIES=	devel python
-MASTER_SITES=	 ${MASTER_SITE_PYPI:=w/wasanbon/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/wasanbon/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.sugarsweetrobotics.com/

@@ -10,9 +10,9 @@ HOMEPAGE=	https://escher.github.io
 COMMENT=	Build, view, share, and embed pathway maps
 LICENSE=	mit
 
-DEPENDS+=       ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=       jsonschema>=2.4.0:../../textproc/py-jsonschema
-DEPENDS+=       ${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	jsonschema>=2.4.0:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 
 WRKSRC=		${WRKDIR}/Escher-1.1.2.post2
 

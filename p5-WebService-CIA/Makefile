@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.4 2013/11/24 10:00:21 thomasklausner Exp $
 
-DISTNAME=		WebService-CIA-1.4
-PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
-CATEGORIES=		www perl5
+DISTNAME=	WebService-CIA-1.4
+PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
+CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/I/IM/IMALPASS/}
 
 MAINTAINER=		jfranz@bsdprojects.net

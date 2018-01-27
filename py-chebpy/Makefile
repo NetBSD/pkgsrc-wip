@@ -2,12 +2,12 @@
 #
 
 DISTNAME=	chebpy-0.2
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chebpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://bitbucket.org/liuyxpp/chebpy
+HOMEPAGE=	https://bitbucket.org/liuyxpp/chebpy
 COMMENT=	Chebyshev polynomial based spectral methods of PDEs
 LICENSE=	2-clause-bsd
 

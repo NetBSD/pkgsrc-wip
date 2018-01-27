@@ -41,7 +41,7 @@ DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
-PHP_VERSIONS_ACCEPTED= 54 55 56
+PHP_VERSIONS_ACCEPTED=	54 55 56
 #PHP_VERSION_REQD= 56
 
 # Add line to ${PREFIX}/etc/php.ini for above

@@ -16,9 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=0.9.8:../../www/py-WebOb
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.2:../../www/py-paste
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	intltool msgfmt
-USE_LANGUAGES=		# none
+USE_PKGLOCALEDIR=		yes
+USE_TOOLS+=			intltool msgfmt
+USE_LANGUAGES=			# none
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah
 
 do-test:

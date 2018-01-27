@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	quaternions-0.3
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/quaternions/}
 EXTRACT_SUFX=	.zip#md5=fd7d74eaaed0dc3050bcebc7ac5af9e2

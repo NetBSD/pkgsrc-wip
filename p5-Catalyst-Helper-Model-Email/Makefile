@@ -14,7 +14,7 @@ EPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 DEPENDS+=	p5-ExtUtils-MakeMaker-[0-9]*:../../devel/p5-ExtUtils-MakeMaker
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Helper/Model/Email/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Helper/Model/Email/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

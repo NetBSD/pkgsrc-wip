@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=H/Hamilton/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://files.pythonhosted.org/packages/source/H/Hamilton/
-COMMENT= Visualize and control mechanic systems through solving these systems
+COMMENT=	Visualize and control mechanic systems through solving these systems
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.6:../../math/py-scipy

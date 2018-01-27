@@ -13,10 +13,10 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config
 
-NO_CONFIGURE=   yes
+NO_CONFIGURE=	yes
 MAKE_FILE=	makefile
 
-INSTALLATION_DIRS=      bin # ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin # ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/praat ${DESTDIR}${PREFIX}/bin/praat

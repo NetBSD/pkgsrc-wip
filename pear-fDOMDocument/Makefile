@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES+=	http://pear.netpirates.net/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://pear.netpirates.net/
+HOMEPAGE=	http://pear.netpirates.net/
 COMMENT=	Extension to PHP\'s standard DOM to add methods and exceptions
 LICENSE=	modified-bsd	# XXX unsure which bsd license
 

@@ -11,12 +11,12 @@ COMMENT=	The Extended Python Debugger
 
 DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.pydb
-PKG_SUPPORTED_OPTIONS=          pyreadline
-PKG_SUGGESTED_OPTIONS=          pyreadline
+PKG_OPTIONS_VAR=		PKG_OPTIONS.pydb
+PKG_SUPPORTED_OPTIONS=		pyreadline
+PKG_SUGGESTED_OPTIONS=		pyreadline
 
 .include "../../mk/bsd.options.mk"
 

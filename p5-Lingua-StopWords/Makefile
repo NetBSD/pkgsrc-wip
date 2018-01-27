@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Lingua-StopWords/
 COMMENT=	Lingua::StopWords - Stop words for several languages
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST= auto/Lingua/StopWords/.packlist
+PERL5_PACKLIST=	auto/Lingua/StopWords/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

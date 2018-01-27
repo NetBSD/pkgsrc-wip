@@ -3,7 +3,7 @@
 
 DISTNAME=	awl-${LIBAWL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-libawl-${LIBAWL_VERSION}
-PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
+PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 LIBAWL_VERSION=	0.53
 CATEGORIES=	devel
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/awl/
@@ -13,8 +13,8 @@ HOMEPAGE=	http://andrew.mcmillan.net.nz/projects/awl/
 COMMENT=	PHP Andrew's Web Libraries
 LICENSE=	gnu-gpl-v2
 
-GIT_REPOSITORIES=       awl
-GIT_REPO.awl=	        git://repo.or.cz/awl.git
+GIT_REPOSITORIES=	awl
+GIT_REPO.awl=		git://repo.or.cz/awl.git
 GIT_MODULE.awl=		awl
 
 WRKSRC=		${WRKDIR}/awl

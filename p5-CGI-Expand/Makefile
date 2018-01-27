@@ -13,7 +13,7 @@ DEPENDS+=	p5-Test-Simple>0:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Test-Exception>0:../../devel/p5-Test-Exception
 
 USE_LANGUAGES+=	# empty
-PERL5_PACKLIST= auto/CGI/Expand/.packlist
+PERL5_PACKLIST=	auto/CGI/Expand/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

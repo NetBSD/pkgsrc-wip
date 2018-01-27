@@ -15,7 +15,7 @@ COMMENT=	Algebraic multigrid solvers in Python
 
 USE_LANGUAGES=	c++
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"

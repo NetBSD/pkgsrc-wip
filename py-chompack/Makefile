@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2014/06/17 17:54:14 jihbed Exp $
 
 DISTNAME=	chompack-2.0.0
-PKGNAME=   	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chompack/}
 

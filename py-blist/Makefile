@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	blist-1.3.6
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_PYPI:=b/blist/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/blist/}
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/DanielStutzbach/blist/

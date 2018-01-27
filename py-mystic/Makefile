@@ -7,8 +7,8 @@ MASTER_SITES=	http://dev.danse.us/packages/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=        http://trac.mystic.cacr.caltech.edu/project/mystic
-COMMENT=        Simple interactive inversion analysis framework
+HOMEPAGE=	http://trac.mystic.cacr.caltech.edu/project/mystic
+COMMENT=	Simple interactive inversion analysis framework
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none

@@ -34,8 +34,8 @@ PKG_GROUPS_VARS+=	JABBER_GROUP
 
 .include "../../wip/jabberd/transports.mk"
 
-DOCDIR=                 ${PREFIX}/share/doc/punjab
-DOCFILES=               README.txt INSTALL.txt
+DOCDIR=			${PREFIX}/share/doc/punjab
+DOCFILES=		README.txt INSTALL.txt
 
 INSTALLATION_DIRS=	share/doc/punjab
 

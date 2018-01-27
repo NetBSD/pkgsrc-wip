@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	User-registration application for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=      ${PYPKGPREFIX}-django>=1.4:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=1.4:../../www/py-django
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none

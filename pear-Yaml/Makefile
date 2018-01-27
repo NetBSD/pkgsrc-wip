@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES+=	http://pear.symfony.com/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://symfony.com/components
+HOMEPAGE=	http://symfony.com/components
 COMMENT=	Symfony2 Yaml Component
 LICENSE=	mit
 

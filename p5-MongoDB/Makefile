@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MO/MONGODB/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MongoDB/
 COMMENT=	Mongo Driver for Perl
-LICENSE=        apache-2.0
+LICENSE=	apache-2.0
 
 DEPENDS+=	p5-Any-Moose>=0.18:../../devel/p5-Any-Moose
 DEPENDS+=	p5-Class-Method-Modifiers>=1.07:../../devel/p5-Class-Method-Modifiers

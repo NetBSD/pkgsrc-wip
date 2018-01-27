@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/~scresto/Sys-MemInfo/
 COMMENT=	Perl 5 module for getting memory information
 LICENSE=	${PERL5_LICENSE}
 
-PERL5_PACKLIST= auto/Sys/MemInfo/.packlist
+PERL5_PACKLIST=	auto/Sys/MemInfo/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

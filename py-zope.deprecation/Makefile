@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deprecation/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	 http://pypi.python.org/pypi/zope.deprecation
+HOMEPAGE=	http://pypi.python.org/pypi/zope.deprecation
 COMMENT=	Zope Deprecation Infrastructure
 LICENSE=	zpl-2.0
 

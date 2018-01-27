@@ -2,10 +2,10 @@
 bin/card_eventmgr
 bin/pkcs11_eventmgr
 bin/pkcs11_inspect
+bin/pkcs11_inspect
 bin/pkcs11_listcerts
 bin/pkcs11_make_hash_link
 bin/pkcs11_setup
-bin/pkcs11_inspect
 bin/pklogin_finder
 lib/pam_pkcs11/opensc_mapper.la
 lib/pam_pkcs11/openssh_mapper.la

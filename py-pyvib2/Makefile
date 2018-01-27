@@ -18,7 +18,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	Pmw
 WRKSRC=		${WRKDIR}/pyvib2-1.1
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/extension.mk"

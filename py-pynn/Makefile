@@ -12,7 +12,7 @@ COMMENT=	Python package for neuronal network models
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
 
-INSTALLATION_DIRS=     share/doc/py-pynn
+INSTALLATION_DIRS=	share/doc/py-pynn
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/py-pynn

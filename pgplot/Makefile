@@ -13,7 +13,7 @@ LICENSE=	pgplot-license
 # http://www.astro.caltech.edu/~tjp/npgplot/license.html
 
 # to build demos (see patches/patch-makemake)
-USE_LIBTOOL=yes
+USE_LIBTOOL=	yes
 
 WRKSRC=		${WRKDIR}/pgplot
 USE_LANGUAGES=	c fortran
@@ -23,10 +23,10 @@ do-configure:
 	cd ${WRKSRC} && \
 	${SETENV}  ${CONFIGURE_ENV} ./makemake . linux g77_gcc
 
-MAKE_FILE=makefile
-BUILD_MAKE_FLAGS=FCOMPL=${PKG_FC} CCOMPL=${PKG_CC} FFLAGC='-O2 -g -fPIC'
+MAKE_FILE=		makefile
+BUILD_MAKE_FLAGS=	FCOMPL=${PKG_FC} CCOMPL=${PKG_CC} FFLAGC='-O2 -g -fPIC'
 # build cpgdemo to test the library
-BUILD_TARGET=all cpg cpgdemo
+BUILD_TARGET=		all cpg cpgdemo
 
 INSTALLATION_DIRS=	bin lib include
 do-install:

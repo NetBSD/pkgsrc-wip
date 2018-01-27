@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ggventurini/python-deltasigma
 COMMENT=	Scale and map to implementable topologies delta sigma modulators
 LICENSE=	modified-bsd
 
-DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 

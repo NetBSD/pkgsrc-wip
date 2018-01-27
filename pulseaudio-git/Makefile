@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.100 2015/11/02 13:40:41 ryoon Exp $
 
-DISTNAME=	pulseaudio-9.0
-CATEGORIES=	audio
+DISTNAME=		pulseaudio-9.0
+CATEGORIES=		audio
 GIT_REPOSITORIES=	pulse
 GIT_REPO.pulse=		git://github.com/pulseaudio/pulseaudio.git
 
@@ -36,7 +36,7 @@ USE_PKGLOCALEDIR=	yes
 
 # Wrong sys/capability.h assumptions, incompatible implementation:
 .if ${OPSYS} == "FreeBSD"
-CONFIGURE_ARGS+=       --without-caps
+CONFIGURE_ARGS+=	--without-caps
 .endif
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
@@ -78,13 +78,13 @@ PULSE_GROUP_ACCESS?=	pulseacc
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
 PKG_SYSCONFSUBDIR=	pulse
-EGDIR=		${PREFIX}/share/examples/pulseaudio
-CONF_FILES=	${EGDIR}/client.conf ${PKG_SYSCONFDIR}/client.conf
-CONF_FILES+=	${EGDIR}/daemon.conf ${PKG_SYSCONFDIR}/daemon.conf
-CONF_FILES+=	${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
-CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
-CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
-		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
+EGDIR=			${PREFIX}/share/examples/pulseaudio
+CONF_FILES=		${EGDIR}/client.conf ${PKG_SYSCONFDIR}/client.conf
+CONF_FILES+=		${EGDIR}/daemon.conf ${PKG_SYSCONFDIR}/daemon.conf
+CONF_FILES+=		${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
+CONF_FILES+=		${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
+CONF_FILES+=		${EGDIR}/pulseaudio-system.conf \
+			${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
 
 PLIST_VARS+=		bonjour coreaudio evdev oss sun
 
@@ -94,7 +94,7 @@ PLIST.sun=		yes
 PLIST.oss=		yes
 .  endif
 .elif ${OPSYS} == "Darwin"
-PLIST.bonjour=	yes
+PLIST.bonjour=		yes
 PLIST.coreaudio=	yes
 .else
 PLIST.oss=		yes

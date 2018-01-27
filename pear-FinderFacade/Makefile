@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://pear.phpunit.de/
+HOMEPAGE=	http://pear.phpunit.de/
 COMMENT=	Convenience wrapper for Symfony\'s Finder component
 
 BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-phpunit-[0-9]*:../../wip/pear-channel-phpunit

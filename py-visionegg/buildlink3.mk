@@ -11,7 +11,7 @@ BUILDLINK_API_DEPENDS.pyvisionegg+=	${PYPKGPREFIX}-visionegg>=0.9.9
 BUILDLINK_ABI_DEPENDS.pyvisionegg?=	${PYPKGPREFIX}-visionegg>=0.9.9nb2
 BUILDLINK_PKGSRCDIR.pyvisionegg?=	../../wip/py-visionegg
 
-PYTHON_VERSIONS_INCOMPATIBLE=    34 35 36 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
 
 .if exists(../../mk/opengl.buildlink3.mk)
 # see PR 23845 for details

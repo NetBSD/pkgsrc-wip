@@ -12,7 +12,7 @@ COMMENT=	Essential utilities for the Iterator class
 DEPENDS+=	p5-Iterator>0:../../wip/p5-Iterator
 
 USE_LANGUAGES+=	# empty
-PERL5_PACKLIST= auto/Iterator/Util/.packlist
+PERL5_PACKLIST=	auto/Iterator/Util/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

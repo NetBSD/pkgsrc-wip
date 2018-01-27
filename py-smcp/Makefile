@@ -10,7 +10,7 @@ HOMEPAGE=	http://cvxopt.github.io/smcp
 COMMENT=	Python extension for solving sparse matrix cone programs
 LICENSE=	gnu-gpl-v3
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 DEPENDS+=	${PYPKGPREFIX}-chompack>=2.0.0:../../wip/py-chompack

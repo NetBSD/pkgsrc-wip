@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 WRKSRC=		${WRKDIR}/ChiantiPy-0.1
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "options.mk"
 

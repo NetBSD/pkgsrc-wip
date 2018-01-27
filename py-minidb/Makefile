@@ -4,7 +4,7 @@ DISTNAME=	minidb-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
-GITHUB_PROJECT= minidb
+GITHUB_PROJECT=	minidb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://thp.io/2010/minidb/

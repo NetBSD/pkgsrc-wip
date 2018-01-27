@@ -69,7 +69,7 @@ CONF_FILES+=		${EGDIR}/acl/pprprox.allow ${PKG_SYSCONFDIR}/acl/pprprox.allow
 CONF_FILES+=		${EGDIR}/acl/ppuser.allow ${PKG_SYSCONFDIR}/acl/ppuser.allow
 SUPPORT_FILES=		${EGDIR}/media.db ${PKG_SYSCONFDIR}/media.db
 
-RCD_SCRIPTS=		pprd ppr-papd papsrv lprsrv
+RCD_SCRIPTS=			pprd ppr-papd papsrv lprsrv
 RCD_SCRIPT_SRC.pprd=		# empty
 RCD_SCRIPT_SRC.ppr-papd=	# empty
 RCD_SCRIPT_SRC.papsrv=		# empty

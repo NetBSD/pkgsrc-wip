@@ -15,7 +15,7 @@ GIT_REPO.mooz=		git://github.com/mooz/percol.git
 GIT_MODULE.mooz=	percol
 WRKSRC=			${WRKDIR}/percol
 
-SUBST_CLASSES+=	migemo
+SUBST_CLASSES+=		migemo
 SUBST_STAGE.migemo=	pre-build
 SUBST_MESSAGE.migemo=	Replacing path to the migemo dictionary
 SUBST_FILES.migemo=	percol/finder.py

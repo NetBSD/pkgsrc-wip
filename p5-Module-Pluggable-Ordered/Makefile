@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Module-Pluggable>=1.9:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
 
-PERL5_PACKLIST= auto/Module/Pluggable/Ordered/.packlist
+PERL5_PACKLIST=	auto/Module/Pluggable/Ordered/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

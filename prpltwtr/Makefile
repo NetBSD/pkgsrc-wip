@@ -10,7 +10,7 @@ HOMEPAGE=		http://code.google.com/p/prpltwtr/
 COMMENT=		Treat microblogging (Twitter, etc) as IM protocols
 LICENSE=		gnu-gpl-v2
 
-GIT_REPOSITORIES=       prpltwtr
+GIT_REPOSITORIES=	prpltwtr
 GIT_REPO.prpltwtr=	git://github.com/mikeage/prpltwtr.git
 
 WRKSRC=			${WRKDIR}/prpltwtr

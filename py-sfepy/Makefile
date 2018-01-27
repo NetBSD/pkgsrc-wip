@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} runTests.py )

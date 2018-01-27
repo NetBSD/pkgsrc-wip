@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.54 2015/04/25 14:20:43 tnn Exp $
 
-DISTNAME=       poedit-1.8.6
-CATEGORIES=     editors
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=vslavik/}
-GITHUB_RELEASE= v1.8.6-oss
+DISTNAME=	poedit-1.8.6
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vslavik/}
+GITHUB_RELEASE=	v1.8.6-oss
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.poedit.net/
@@ -17,9 +17,9 @@ USE_TOOLS+=		aclocal autoconf automake gmake pkg-config zip:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		BDB_TYPE="${BDB_TYPE}"
 CONFIGURE_ENV+=		WX_CONFIG_NAME=${BUILDLINK_PREFIX.wxGTK30}/bin/wx-config
-CONFIGURE_ARGS+= --disable-legacytm
+CONFIGURE_ARGS+=	--disable-legacytm
 
-MAKE_ENV+=            wxWidgets_CONFIG_EXECUTABLE=${BUILDLINK_PREFIX.wxGTK30}/bin/wx-config
+MAKE_ENV+=	wxWidgets_CONFIG_EXECUTABLE=${BUILDLINK_PREFIX.wxGTK30}/bin/wx-config
 
 
 .include "../../mk/bdb.buildlink3.mk"

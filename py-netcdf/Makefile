@@ -11,7 +11,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/pynetcdf/0.7
 COMMENT=	Python bindings for netcdf
 #LICENSE=	cecill
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

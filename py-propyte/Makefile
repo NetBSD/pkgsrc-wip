@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	propyte-2016.7.11.1839
-PKGNAME=        ${PYPKGPREFIX}-propyte-20167111839
+PKGNAME=	${PYPKGPREFIX}-propyte-20167111839
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/18/53/60f626e6c360b66148ee160df5c65fa9b9f30cf45a8c28ecbde8069bc861/
 

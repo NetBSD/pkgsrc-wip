@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.simplistix.co.uk/software/python/xlutils
 COMMENT=	Utilities for working with Excel files
 LICENSE=	mit
 
-DEPENDS+=      ${PYPKGPREFIX}-xlrd>=0.7.1:../../textproc/py-xlrd
-DEPENDS+=      ${PYPKGPREFIX}-xlwt>=0.7.1:../../textproc/py-xlwt
+DEPENDS+=	${PYPKGPREFIX}-xlrd>=0.7.1:../../textproc/py-xlrd
+DEPENDS+=	${PYPKGPREFIX}-xlwt>=0.7.1:../../textproc/py-xlwt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xlwt
 

@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=a/acq4/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://files.pythonhosted.org/packages/source/a/acq4/
 COMMENT=	Neurophysiology acquisition and analysis platform
-LICENSE = mit
+LICENSE =	mit
 
 #DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.2.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy

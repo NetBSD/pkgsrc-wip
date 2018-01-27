@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	multitasking-0.0.4
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multitasking/}
 

@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/krypy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://github.com/andrenarchy/krypy
+HOMEPAGE=	https://github.com/andrenarchy/krypy
 COMMENT=	Krylov subspace methods for linear systems
 LICENSE=	mit
 

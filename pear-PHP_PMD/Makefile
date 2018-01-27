@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpmd.org/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://phpmd.org/
+HOMEPAGE=	http://phpmd.org/
 COMMENT=	PHP Mess Detector
 LICENSE=	original-bsd
 

@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/pygnm-0.1
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

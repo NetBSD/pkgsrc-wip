@@ -5,7 +5,7 @@ CATEGORIES=	print
 MASTER_SITES+=	http://pearhub.org/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://www.pearhub.org/projects/FPDF
+HOMEPAGE=	http://www.pearhub.org/projects/FPDF
 COMMENT=	Unofficial PEAR FPDF-library
 LICENSE=	gnu-lgpl-v3
 

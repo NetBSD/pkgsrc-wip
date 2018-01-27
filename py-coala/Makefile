@@ -11,7 +11,7 @@ HOMEPAGE=	https://coala.io/
 COMMENT=	Unified command-line interface for linting and fixing all your code
 LICENSE=	gnu-agpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=   27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALLATION_DIRS+=	${PKGMANDIR}
 

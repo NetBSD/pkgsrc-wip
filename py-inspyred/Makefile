@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inspyred/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://aarongarrett.github.io/inspyred
+HOMEPAGE=	https://aarongarrett.github.io/inspyred
 COMMENT=	Bio-inspired computational intelligence algorithms in Python
 LICENSE=	mit
 

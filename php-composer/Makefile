@@ -28,10 +28,10 @@ do-install:
 	${INSTALL} -m 0644 ${DISTDIR}/${DIST_SUBDIR}/composer.phar \
 		${DESTDIR}${PREFIX}/share/php/composer.phar
 
-SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	post-extract
-SUBST_MESSAGE.fix-paths=Fixing absolute paths.
-SUBST_FILES.fix-paths=	composer
-SUBST_SED.fix-paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		post-extract
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		composer
+SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
 
 .include "../../mk/bsd.pkg.mk"

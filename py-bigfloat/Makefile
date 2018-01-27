@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=b/bigfloat/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://files.pythonhosted.org/packages/source/b/bigfloat/
-COMMENT= Arbitrary precision correctly-rounded floating point arithmetic
+COMMENT=	Arbitrary precision correctly-rounded floating point arithmetic
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/bigfloat-0.2.1

@@ -5,7 +5,7 @@ DISTNAME=	scikits.timeseries-0.91.3
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S|s.|s_|}
 PKGREVISION=	1
-CATEGORIES= math python
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytseries/}
 
 MAINTAINER=	jihbed.research@gmail.com

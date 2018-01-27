@@ -2,7 +2,7 @@
 #
 
 PKGNAME=	p5-mha4mysql-manager-0.57
-GIT_COMMIT= 	fea77e93168c8212550c21f542fec48f5d978535
+GIT_COMMIT=	fea77e93168c8212550c21f542fec48f5d978535
 DISTNAME=	${PKGNAME}-${GIT_COMMIT}
 CATEGORIES=	databases perl5
 MASTER_SITES=	-https://github.com/yoshinorim/mha4mysql-manager/archive/${GIT_COMMIT}.tar.gz
@@ -23,7 +23,7 @@ DEPENDS+=	p5-Parallel-ForkManager>=0.7:../../devel/p5-Parallel-ForkManager
 DEPENDS+=	p5-Time-HiRes>=1:../../time/p5-Time-HiRes
 DEPENDS+=	p5-mha4mysql-node>=0.56:../../wip/p5-mha4mysql-node
 
-PERL5_PACKLIST= 	auto/mha4mysql/manager/.packlist
+PERL5_PACKLIST=		auto/mha4mysql/manager/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

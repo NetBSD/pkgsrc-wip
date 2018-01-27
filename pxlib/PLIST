@@ -1,7 +1,7 @@
 @comment $NetBSD: PLIST,v 1.4 2013/03/03 17:27:54 othyro Exp $
-include/paradox.h
 include/paradox-gsf.h
 include/paradox-mp.h
+include/paradox.h
 include/pxversion.h
 lib/libpx.la
 lib/pkgconfig/pxlib.pc

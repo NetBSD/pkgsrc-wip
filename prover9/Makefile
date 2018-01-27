@@ -11,13 +11,13 @@ HOMEPAGE=	http://www.cs.unm.edu/~mccune/prover9/
 COMMENT=	Prover9 is an automated theorem prover
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE= 	no
+MAKE_JOBS_SAFE=		no
 
 REPLACE_PYTHON=		utilities/attack utilities/gvizify utilities/looper utilities/prover9-mace4
 
 TEST_TARGET=	test1 test2 test3
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 share/examples/prover9/prover9 share/examples/prover9/mace4
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/prover9/prover9 share/examples/prover9/mace4
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/bin

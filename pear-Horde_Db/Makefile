@@ -4,7 +4,7 @@
 DISTNAME=	Horde_Db-1.2.1
 CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
-EXTRACT_USING=  bsdtar
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	http://pear.horde.org/

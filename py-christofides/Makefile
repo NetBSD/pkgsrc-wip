@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	Christofides-1.0.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:tl}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/f5/91/3cc3881ca08ad06d002b513650ed5bccafbc1c2b545601f98e16e2a57502/
 

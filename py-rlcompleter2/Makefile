@@ -15,7 +15,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=		yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

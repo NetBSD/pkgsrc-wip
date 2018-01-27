@@ -8,7 +8,7 @@ PBCOPPER_BUILDLINK3_MK:=
 BUILDLINK_DEPMETHOD.pbcopper?=	build
 
 BUILDLINK_API_DEPENDS.pbcopper+=	pbcopper>=2016.09.13
-BUILDLINK_PKGSRCDIR.pbcopper?=	../../wip/pbcopper
+BUILDLINK_PKGSRCDIR.pbcopper?=		../../wip/pbcopper
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

@@ -1,6 +1,6 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
 bin/pdftk
 man/man1/pdftk.1
+share/doc/html/pdftk/pdftk.html
 share/doc/pdftk/COPYING
 share/doc/pdftk/License-Adobe.txt
-share/doc/html/pdftk/pdftk.html

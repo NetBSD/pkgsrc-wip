@@ -5,14 +5,14 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pykrylov/}
 
-MAINTAINER=     jihbed.research@gmail.com
-HOMEPAGE=       https://github.com/dpo/pykrylov/tree/master
-COMMENT=        Python package implementing common Krylov methods
-LICENSE=        gnu-lgpl-v2.1
+MAINTAINER=	jihbed.research@gmail.com
+HOMEPAGE=	https://github.com/dpo/pykrylov/tree/master
+COMMENT=	Python package implementing common Krylov methods
+LICENSE=	gnu-lgpl-v2.1
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
-USE_LANGUAGES=  # none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"

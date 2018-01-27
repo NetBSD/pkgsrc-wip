@@ -12,7 +12,7 @@ LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 do-test:
 	${RUN} cd ${WRKSRC}/lrparsing; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test.py

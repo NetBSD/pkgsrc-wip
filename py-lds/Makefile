@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mattjj/pylds
 COMMENT=	Learning and inference for Gaussian linear dynamical systems
 LICENSE=	mit
 
-DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 PYDISTUTILSPKG=	yes
 

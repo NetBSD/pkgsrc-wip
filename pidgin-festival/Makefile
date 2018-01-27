@@ -21,7 +21,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		aclocal autoconf autoheader automake gm4 msgfmt
 USE_TOOLS+=		pkg-config xgettext
 
-CFLAGS+=                -DFESTIVAL_VOICES_PATH='"${PREFIX}/share/festival/lib/voices"'
+CFLAGS+=		-DFESTIVAL_VOICES_PATH='"${PREFIX}/share/festival/lib/voices"'
 
 INSTALLATION_DIRS=	lib/purple-2 share/locale/es/LC_MESSAGES share/locale/pt_BR/LC_MESSAGES share/locale/ru/LC_MESSAGES
 

@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=	${WRKDIR}/ecos-1.1.0
 
-BUILD_TARGET= _ecos.so
+BUILD_TARGET=	_ecos.so
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

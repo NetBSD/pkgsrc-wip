@@ -10,7 +10,7 @@ COMMENT=	SAT solver with proof and core support
 LICENSE=	mit
 
 HAS_CONFIGURE=	yes
-MAKE_FILE=		makefile
+MAKE_FILE=	makefile
 
 INCLUDIR=	${PREFIX}/include/picosat
 

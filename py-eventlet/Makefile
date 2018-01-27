@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eventlet/}
 
-MAINTAINER= 	kamel.derouiche@gmail.com
+MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://eventlet.net/
 COMMENT=	High performance network library using coroutines
 LICENSE=	mit

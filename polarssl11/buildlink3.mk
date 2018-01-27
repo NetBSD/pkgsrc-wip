@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	polarssl
 POLARSSL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.polarssl+=	polarssl>=1.1.4
-BUILDLINK_PKGSRCDIR.polarssl?=	../../wip/polarssl11
+BUILDLINK_PKGSRCDIR.polarssl?=		../../wip/polarssl11
 
 .endif	# POLARSSL_BUILDLINK3_MK
 

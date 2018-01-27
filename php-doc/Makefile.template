@@ -7,13 +7,13 @@
 #####################################################################
 
 DISTNAME=		php_manual_${PHP_DOC_LANG}
-WRKSRC=	       		${WRKDIR}
-CATEGORIES=    		misc
-MASTER_SITES=  		${PHP_DOC_MASTER_SITES}
+WRKSRC=			${WRKDIR}
+CATEGORIES=		misc
+MASTER_SITES=		${PHP_DOC_MASTER_SITES}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=      		http://www.php.net/
-COMMENT=       		${PHP_DOC_LANG_DESC} documentation for PHP
+HOMEPAGE=		http://www.php.net/
+COMMENT=		${PHP_DOC_LANG_DESC} documentation for PHP
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

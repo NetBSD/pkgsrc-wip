@@ -11,7 +11,7 @@ HOMEPAGE=	http://kochanski.org/gpk/misc/PyLapack.html
 COMMENT=	PyLapack is a python interface to LAPACK
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES= fortran77
+USE_LANGUAGES=	fortran77
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
 

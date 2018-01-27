@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/readline
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 32 34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	32 34 35 36
 
 	
 .include "../../lang/python/egg.mk"

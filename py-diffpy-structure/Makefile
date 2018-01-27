@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2014/12/31 13:58:27 thomasklausner Exp $
 
-VERS=	1.0-r3067-20090410
+VERS=		1.0-r3067-20090410
 DISTNAME=	diffpy.Structure-${VERS}
 EGG_NAME=	diffpy.Structure-1.0_r3067_20090410
 PKGNAME=	${PYPKGPREFIX}-diffpy-structure-${VERS}

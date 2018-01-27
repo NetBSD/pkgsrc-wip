@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 USE_TOOLS+=	perl
 USE_LANGUAGES=	# none
 
-REPLACE_PERL+=	Biskit/data/spectrum.pl
+REPLACE_PERL+=		Biskit/data/spectrum.pl
 REPLACE_PYTHON+=	scripts/Biskit/bis2.6 Biskit/data/pdb/remediator_python.1.56.080328.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric

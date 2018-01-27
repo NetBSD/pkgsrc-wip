@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 WRKSRC=	${WRKDIR}/nipy-0.3.0
 
-USE_LANGUAGES=  c fortran
+USE_LANGUAGES=	c fortran
 PYDISTUTILSPKG=	yes
 
 .include "../../devel/py-cython/buildlink3.mk"

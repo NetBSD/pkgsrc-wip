@@ -15,7 +15,7 @@ DEPENDS+=	p5-Test-Simple>=0:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Component/InstancePerContext/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Component/InstancePerContext/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

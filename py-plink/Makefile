@@ -12,7 +12,7 @@ HOMEPAGE=	http://math.uic.edu/~t3m/plink/
 COMMENT=	Link Projection Editor
 LICENSE=	gnu-gpl-v2
 
-VERSION= 1.1
+VERSION=	1.1
 
 USE_LANGUAGES=	# none
 

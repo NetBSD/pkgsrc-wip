@@ -20,7 +20,7 @@ DEPENDS+=	p5-JSON>0:../../converters/p5-JSON
 DEPENDS+=	p5-Data-DPath-Validator>0:../../wip/p5-Data-DPath-Validator
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Controller/DBIC/API/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Controller/DBIC/API/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/okasha-0.2.4
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

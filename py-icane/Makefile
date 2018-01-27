@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/predicador37/pyicane
 COMMENT=	Python wrapper for ICANE Statistical Data and Metadata API
 LICENSE=	apache-2.0
 
-DEPENDS+=       ${PYPKGPREFIX}-pandas>=0.16.2:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-pandas>=0.16.2:../../math/py-pandas
 
 USE_LANGUAGES=	# none
 

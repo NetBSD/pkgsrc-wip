@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Email-AddressParser/
 COMMENT=	RFC 2822 Address Parsing and Creation
 
 
-PERL5_PACKLIST= auto/Email/AddressParser/.packlist
+PERL5_PACKLIST=	auto/Email/AddressParser/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

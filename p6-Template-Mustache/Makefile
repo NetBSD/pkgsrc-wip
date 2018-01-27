@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	p6-Template-Mustache
 GITHUB_TAG=	2ffcb06e5417aadcfd3e3f663fdb2e738a165dfb
-PKGREVISION= 1
+PKGREVISION=	1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=softmoth/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/softmoth/${GITHUB_PROJECT}
 COMMENT=	Perl6 library for the Mustache template format
 LICENSE=	artistic
 
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar

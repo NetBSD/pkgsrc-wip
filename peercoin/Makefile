@@ -2,7 +2,7 @@
 
 #DISTNAME=	v0.4.0ppc
 #DISTNAME=	v0.6.2.2
-DISTNAME=       master
+DISTNAME=	master
 PKGNAME=	peercoin-${DISTNAME:C/v([0-9]\.[0-9]\.[0-9]).*/\1/1}
 CATEGORIES=	finance
 #MASTER_SITES=	https://github.com/ppcoin/ppcoin/archive/
@@ -22,10 +22,10 @@ WRKSRC=		${WRKDIR}/ppcoin-${DISTNAME:S/v//1}
 AUTO_MKDIRS=	yes
 
 #CXXFLAGS+=	-std=c++0x
-CXXFLAGS+=      -I${BUILDLINK_PREFIX.boost-libs}/include/boost
-CXXFLAGS+=      -I/usr/include
+CXXFLAGS+=	-I${BUILDLINK_PREFIX.boost-libs}/include/boost
+CXXFLAGS+=	-I/usr/include
 
-BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
+BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
 
 
 QMAKE_OPTIONS+=	BOOST_INCLUDE_PATH=${PREFIX}/include/boost
@@ -37,10 +37,10 @@ QMAKE_OPTIONS+=	BDB_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	OPENSSL_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	LIB_RPATH=${PREFIX}/lib
 
-RCD_SCRIPTS=	peercoind
-OWN_DIRS=	${VARBASE}/peercoin
-EGDIR=		${PREFIX}/share/examples/peercoin
-CONF_FILES=	${EGDIR}/peercoin.conf ${PKG_SYSCONFDIR}/peercoin.conf
+RCD_SCRIPTS=		peercoind
+OWN_DIRS=		${VARBASE}/peercoin
+EGDIR=			${PREFIX}/share/examples/peercoin
+CONF_FILES=		${EGDIR}/peercoin.conf ${PKG_SYSCONFDIR}/peercoin.conf
 CONF_FILES_PERMS=	${EGDIR}/peercoin.conf ${PKG_SYSCONFDIR}/peercoin.conf ${ROOT_USER} ${ROOT_GROUP} 0600
 
 
@@ -65,7 +65,7 @@ do-install:
 LIBS+=  -lexecinfo
 .endif
 
-DL_AUTO_VARS=           yes
+DL_AUTO_VARS=		yes
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

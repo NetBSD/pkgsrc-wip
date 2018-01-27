@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	oo-monitors
 GITHUB_TAG=	b9de07c277f0a9fa805bb18113788228f6acfd3b
-PKGREVISION= 1
+PKGREVISION=	1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jnthn/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/jnthn/oo-monitors/
 COMMENT=	A monitor provides per-instance mutual exclusion for objects
 LICENSE=	artistic
 
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar

@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.gz
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://toscawidgets.org/
 COMMENT=	Web widget creation toolkit based on TurboGears widgets
-LICENSE=  	mit
+LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=0.9.8:../../www/py-WebOb

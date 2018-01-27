@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	p5-Test-Class>=0.03:../../devel/p5-Test-Class
 
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST= auto/PluceneSimple/.packlist
+PERL5_PACKLIST=		auto/PluceneSimple/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

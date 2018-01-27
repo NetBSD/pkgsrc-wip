@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	plasma-workspace
 PLASMA_WORKSPACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasma-workspace+=	plasma-workspace>=5.6.3
-BUILDLINK_PKGSRCDIR.plasma-workspace?=	../../wip/plasma-workspace
+BUILDLINK_PKGSRCDIR.plasma-workspace?=		../../wip/plasma-workspace
 
 .include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/kxmlgui/buildlink3.mk"

@@ -7,7 +7,7 @@ MASTER_SITES=	http://nipy.sourceforge.net/data-packages/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://neuroimaging.scipy.org
-COMMENT=	 Installation script for nipy data packages
+COMMENT=	Installation script for nipy data packages
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none

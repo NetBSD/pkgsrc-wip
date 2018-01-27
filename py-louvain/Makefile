@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	louvain-0.5.3
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/python-//}
-CATEGORIES=     math python
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/61/0f/ec441b9d8ccd951dbd1ec0330cafffade67f4ebef6847ff7e5b4d004c4c9/
 
 MAINTAINER=	jihbed.research@gmail.com

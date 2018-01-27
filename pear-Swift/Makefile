@@ -5,7 +5,7 @@ CATEGORIES=	mail
 MASTER_SITES+=	http://pear.swiftmailer.org/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://swiftmailer.org/
+HOMEPAGE=	http://swiftmailer.org/
 COMMENT=	Free Feature-rich PHP Mailer
 LICENSE=	gnu-lgpl-v3
 

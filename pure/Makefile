@@ -10,10 +10,10 @@ HOMEPAGE=	http://purelang.bitbucket.org/
 COMMENT=	Modern-style functional programming language based on term rewriting
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake flex bison
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake flex bison
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-release --without-elisp
 PKGCONFIG_OVERRIDE=	pure.pc.in
 

@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gstreamer0.10, py-gobject
 
 do-test:

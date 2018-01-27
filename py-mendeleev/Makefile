@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=m/mendeleev/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://bitbucket.org/lukaszmentel/mendeleev
-COMMENT=      Database of atomic properties for elements in the periodic table
+COMMENT=	Database of atomic properties for elements in the periodic table
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.9:../../databases/py-sqlalchemy

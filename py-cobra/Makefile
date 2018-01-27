@@ -10,7 +10,7 @@ HOMEPAGE=	https://opencobra.github.io/cobrapy
 COMMENT=	Constraints-based modeling of biological networks
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 WRKSRC=	${WRKDIR}/cobra-0.4.0b1
 

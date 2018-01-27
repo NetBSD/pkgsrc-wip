@@ -16,8 +16,8 @@ MAKE_PARAMS+=	PREFIX=${PREFIX}/vicidial/asterisk-perl
 # The following  statements were taken from comms/p5-Asterisk Makefile;
 EXAMPLES_DIR=		${PREFIX}/share/examples/p5-Asterisk
 EXAMPLE_FILES=		agi-enum.agi agi-sayani.agi agi-test.agi
-EXAMPLE_FILES+= 	calleridnamelookup.agi manager-test.pl
-EXAMPLE_FILES+= 	tts-bofh.agi tts-line.agi tts-ping.agi
+EXAMPLE_FILES+=		calleridnamelookup.agi manager-test.pl
+EXAMPLE_FILES+=		tts-bofh.agi tts-line.agi tts-ping.agi
 
 .for file in ${EXAMPLE_FILES}
 REPLACE_PERL+=		${WRKSRC}/examples/${file}

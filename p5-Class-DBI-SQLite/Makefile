@@ -14,7 +14,7 @@ DEPENDS+=	p5-Ima-DBI>=0.27:../../databases/p5-Ima-DBI
 DEPENDS+=	p5-DBD-SQLite>=0.07:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-Test-Simple>=0.32:../../devel/p5-Test-Simple
 
-PERL5_PACKLIST= auto/Class/DBI/SQLite/.packlist
+PERL5_PACKLIST=	auto/Class/DBI/SQLite/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

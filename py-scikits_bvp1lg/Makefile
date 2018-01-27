@@ -14,7 +14,7 @@ COMMENT=	Boundary value problem (legacy) solvers for ODEs
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 
-USE_LANGUAGES= c fortran
+USE_LANGUAGES=	c fortran
 
 do-test:
 	${RUN} cd ${WRKSRC}/scikits/bvp1lg/tests/; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testutils.py

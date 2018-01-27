@@ -18,7 +18,7 @@ DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-Deprecatio
 
 USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
-PERL5_PACKLIST= auto/Catalyst/View/XML/Feed/.packlist
+PERL5_PACKLIST=	auto/Catalyst/View/XML/Feed/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

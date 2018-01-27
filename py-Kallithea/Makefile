@@ -54,8 +54,8 @@ DEPENDS+=	${PYPKGPREFIX}-bcrypt>=0.3.0:../../security/py-bcrypt
 REPLACE_PYTHON+=	kallithea/lib/dbmigrate/migrate/versioning/templates/*.py_tmpl
 REPLACE_PYTHON+=	kallithea/lib/dbmigrate/migrate/versioning/templates/*/*.py_tmpl
 
-USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		# none
+USE_PKGLOCALEDIR=		yes
+USE_LANGUAGES=			# none
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.2.2
 
 .include "../../lang/python/application.mk"

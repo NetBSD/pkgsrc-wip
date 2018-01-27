@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.ruffus.org.uk/index.html
 COMMENT=	Lightweight python module to run computational pipelines
 LICENSE=	mit
 
-DEPENDS+=  ${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
+DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 
 USE_LANGUAGES=	# none
 

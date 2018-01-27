@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OWSLib/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://geopython.github.io/OWSLib
+HOMEPAGE=	https://geopython.github.io/OWSLib
 COMMENT=	OGC Web Service utility library
 LICENSE=	modified-bsd
 

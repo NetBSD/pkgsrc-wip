@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	lmfit-0.9.3
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/c6/4a/75f188877264b6f9e8f2d68f213d2c7329bcb3a86be013fa11c1d256990e/
 

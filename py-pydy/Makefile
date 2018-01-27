@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-sympy>=0.1:../../math/py-sympy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 #py-cython optional dependencie
 .include "../../devel/py-cython/buildlink3.mk"

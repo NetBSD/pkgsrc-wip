@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://pear.phpunit.de
+HOMEPAGE=	http://pear.phpunit.de
 COMMENT=	A tool for quickly measuring the size of a project
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-ConsoleTools>=1.5.1:../../wip/pear-ConsoleTools

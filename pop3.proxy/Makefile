@@ -10,7 +10,7 @@ HOMEPAGE=	http://quietsche-entchen.de/cgi-bin/wiki.cgi/proxies/00-WikiIndex
 COMMENT=	The pop3.proxy is an application level proxy for POP3
 LICENSE=	gnu-gpl-v2
 
-MAKE_FILE=	makefile
+MAKE_FILE=		makefile
 INSTALLATION_DIRS=	sbin man/man1
 
 .include "../../security/clamav/buildlink3.mk"

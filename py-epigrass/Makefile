@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-mysqldb>=1.2.3:../../databases/py-mysqldb
-DEPENDS+=       ${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
-DEPENDS+=       ${PYPKGPREFIX}-redis>=2.8.0:../../databases/py-redis
+DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-redis>=2.8.0:../../databases/py-redis
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mysqldb
 

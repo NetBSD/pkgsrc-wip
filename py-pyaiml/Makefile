@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2012/11/12 16:26:49 othyro Exp $
 #
-VERS=	0.8.5
+VERS=		0.8.5
 DISTNAME=	PyAIML-${VERS}
 PKGNAME=	${PYPKGPREFIX}-pyaiml-${VERS}
 CATEGORIES=	devel

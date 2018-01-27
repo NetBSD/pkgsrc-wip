@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-pandas>=0.14.1:../../math/py-pandas
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"

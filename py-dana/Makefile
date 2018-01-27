@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=d/dana/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dana.loria.fr/
-COMMENT= Framework for distributed, asynchronous and adaptive computing
+COMMENT=	Framework for distributed, asynchronous and adaptive computing
 LICENSE=	modified-bsd
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy

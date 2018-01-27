@@ -1,15 +1,15 @@
 # $NetBSD: Makefile,v 1.2 2012/10/05 08:46:09 asau Exp $
 #
 
-DISTNAME=		pdftk-2.02-src
+DISTNAME=	pdftk-2.02-src
 PKGNAME=	${DISTNAME:S/-src//}
-CATEGORIES=		print
-MASTER_SITES=		https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
-EXTRACT_SUFX=		.zip
+CATEGORIES=	print
+MASTER_SITES=	https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=		mwicks@kettering.edu
-HOMEPAGE=		https://www.pdflabs.com/tools/pdftk-server/
-COMMENT=		Swiss army knife for PDF files
+MAINTAINER=	mwicks@kettering.edu
+HOMEPAGE=	https://www.pdflabs.com/tools/pdftk-server/
+COMMENT=	Swiss army knife for PDF files
 LICENSE=	gnu-gpl-v2
 
 BUILD_DIRS=		pdftk
@@ -19,13 +19,13 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/-src/-dist/}
 USE_TOOLS+=		gmake
 USE_LANGUAGES+=		c++
 
-SUBST_CLASSES+=		   fix-paths
-SUBST_STAGE.fix-paths=	   post-patch
-SUBST_MESSAGE.fix-paths=   Fixing absolute paths in make file
-SUBST_FILES.fix-paths=	   pdftk/Makefile.Base
-SUBST_SED.fix-paths=	   -e 's,/usr/local,${PREFIX},g'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		post-patch
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths in make file
+SUBST_FILES.fix-paths=		pdftk/Makefile.Base
+SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 
-INSTALLATION_DIRS= 	 ${PKGMANDIR}/man1 share/doc/pdftk
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/pdftk
 
 post-install:
 	${INSTALL_MAN}  ${WRKSRC}/debian/pdftk.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

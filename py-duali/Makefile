@@ -22,7 +22,7 @@ SUBST_SED.paths+=	-e 's,/etc,${PREFIX}/etc,g'
 SUBST_FILES.paths+=	setup.py duali.conf
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 INSTALLATION_DIRS=	share/doc/py-duali ${PKGMANDIR}/man1
 

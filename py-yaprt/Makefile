@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/01/31 12:11:07 jihbed Exp $
 
 DISTNAME=	yaprt-0.0.7
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yaprt/}
 

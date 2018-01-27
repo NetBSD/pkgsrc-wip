@@ -6,7 +6,7 @@ CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Fiona/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://github.com/Toblerity/Fiona
+HOMEPAGE=	https://github.com/Toblerity/Fiona
 COMMENT=	Fiona reads and writes spatial data files
 LICENSE=	modified-bsd
 

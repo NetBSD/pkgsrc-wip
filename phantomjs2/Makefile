@@ -24,8 +24,8 @@ USE_LANGUAGES=	c c++ c99
 USE_TOOLS+=	bash bison flex gmake perl pkg-config sed
 REPLACE_PERL+=	src/qt/qtwebkit/Source/WebKit2/Scripts/generate-forwarding-headers.pl
 
-CHECK_PORTABILITY_SKIP=	src/qt/config.tests/mac/dwarf2.test src/qt/configure
-CHECK_PORTABILITY_SKIP+=src/breakpad/src/third_party/protobuf/protobuf/post_process_dist.sh
+CHECK_PORTABILITY_SKIP=		src/qt/config.tests/mac/dwarf2.test src/qt/configure
+CHECK_PORTABILITY_SKIP+=	src/breakpad/src/third_party/protobuf/protobuf/post_process_dist.sh
 
 .include "../../mk/bsd.prefs.mk"
 

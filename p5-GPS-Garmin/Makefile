@@ -9,7 +9,7 @@ MAINTAINER=	uli@habel.name
 HOMEPAGE=	http://search.cpan.org/dist/perl-GPS/
 COMMENT=	GPS::Garmin access module for Perl
 
-DEPENDS+= p5-Device-SerialPort>=0.12:../../comms/p5-Device-SerialPort
+DEPENDS+=	p5-Device-SerialPort>=0.12:../../comms/p5-Device-SerialPort
 
 PERL5_PACKLIST=		auto/GPS/Garmin/.packlist
 

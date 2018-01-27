@@ -12,11 +12,11 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=       ${PYPKGPREFIX}-ipython>=2.0.0:../../devel/py-ipython
-DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-DEPENDS+=       ${PYPKGPREFIX}-astropy>=0.4.6:../../wip/py-astropy
-DEPENDS+=       ${PYPKGPREFIX}-ccdproc>=0.3.1:../../wip/py-ccdproc
-DEPENDS+=       ${PYPKGPREFIX}-msumastro>=0.8.2:../../wip/py-msumastro
+DEPENDS+=	${PYPKGPREFIX}-ipython>=2.0.0:../../devel/py-ipython
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-ccdproc>=0.3.1:../../wip/py-ccdproc
+DEPENDS+=	${PYPKGPREFIX}-msumastro>=0.8.2:../../wip/py-msumastro
 
 
 .include "../../lang/python/egg.mk"

@@ -11,7 +11,7 @@ HOMEPAGE=	http://code.google.com/p/aigo/
 COMMENT=	Analysis and Inter-comparison of Gene Ontology functional annotations
 LICENSE=	gnu-gpl-v3
 
-CONFLICTS=	 ${PYPKGPREFIX}-creole-[0-9]*
+CONFLICTS=	${PYPKGPREFIX}-creole-[0-9]*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
 

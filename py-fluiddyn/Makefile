@@ -10,8 +10,8 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/f/fluiddyn/
 COMMENT=	Framework for studying fluid dynamics.
 LICENSE=	modified-bsd
 
-DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-DEPENDS+=       ${PYPKGPREFIX}-psutil>=2.1.3:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-psutil>=2.1.3:../../sysutils/py-psutil
 
 USE_LANGUAGES=	# none
 

@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://cpan.uwinnipeg.ca/dist/Image-EXIF
 COMMENT=	Perl extension for exif library
 
-PERL5_PACKLIST= auto/Image/EXIF/.packlist
+PERL5_PACKLIST=	auto/Image/EXIF/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

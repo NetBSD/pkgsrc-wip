@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/postmarkup/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	 http://code.google.com/p/postmarkup/
+HOMEPAGE=	http://code.google.com/p/postmarkup/
 COMMENT=	BBCode to (X)HTML rendering engine
 LICENSE=	python-software-foundation
 

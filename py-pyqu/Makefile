@@ -9,13 +9,13 @@ MASTER_SITES=	http://pyqu.googlecode.com/files/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pyqu/
 COMMENT=	PyQu is an extension module for Python to implement quantum algorithms
-LICENSE=		gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	libquantum>=0.2.4:../../misc/libquantum
 
 CONFIGURE_ARGS+=	--with-libquantum-include=${LIBQUANTUM_PREFIX}/include
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 DOCDIR=	${PREFIX}/share/doc/py-pyqu
 

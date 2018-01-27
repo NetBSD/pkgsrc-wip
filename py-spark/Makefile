@@ -2,8 +2,8 @@
 #
 
 DISTNAME=	spark-0.6.1
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		textproc python
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc python
 MASTER_SITES=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

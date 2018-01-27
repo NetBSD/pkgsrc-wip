@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chinup/}
 
-MAINTAINER= kamelderouiche@yahoo.com	
+MAINTAINER=	kamelderouiche@yahoo.com	
 HOMEPAGE=	https://github.com/pagepart/chinup
 COMMENT=	Python Facebook Graph API client
 LICENSE=	mit

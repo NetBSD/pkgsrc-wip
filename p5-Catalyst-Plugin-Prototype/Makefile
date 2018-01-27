@@ -14,7 +14,7 @@ DEPENDS+=	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-HTML-Prototype>=1.30:../../www/p5-HTML-Prototype
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
-PERL5_PACKLIST= auto/Catalyst/Plugin/Prototype/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Plugin/Prototype/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -22,7 +22,7 @@ DEPENDS+=	p5-Iterator-Util>0:../../wip/p5-Iterator-Util
 DEPENDS+=	p5-Data-Dumper>0:../../devel/p5-Data-Dumper
 
 USE_LANGUAGES+=	# empty
-PERL5_PACKLIST= auto/Data/DPath/.packlist
+PERL5_PACKLIST=	auto/Data/DPath/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

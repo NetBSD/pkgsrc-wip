@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
+PYDISTUTILSPKG=		yes
 REPLACE_PYTHON+=	calverter.py
 
 INSTALLATION_DIRS=	share/doc/py-calverter

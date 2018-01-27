@@ -3,6 +3,6 @@ bin/pgdisp
 bin/pgxwin_server
 include/cpgplot.h
 lib/grfont.dat
-lib/rgb.txt
 lib/libcpgplot.a
 lib/libpgplot.a
+lib/rgb.txt

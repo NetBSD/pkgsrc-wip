@@ -9,11 +9,11 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/prayertime/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bitbucket.org/xmonader/pyprayertime/
 COMMENT=	Prayertime algorithm implementation in python
-LICENSE=		gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

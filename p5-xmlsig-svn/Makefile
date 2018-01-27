@@ -17,11 +17,11 @@ SVN_REPO.xmlsig=	http://svn.code.sf.net/p/xmlsig/code/trunk
 
 WRKSRC=		${WRKDIR}/${SVN_MODULE.xmlsig}
 
-CONFIGURE_DIRS= perl
+CONFIGURE_DIRS=	perl
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl
 
-PERL5_PACKLIST= auto/xmlsig/.packlist
+PERL5_PACKLIST=	auto/xmlsig/.packlist
 
 # swig does its thing here
 pre-configure:

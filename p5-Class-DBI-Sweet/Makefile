@@ -20,7 +20,7 @@ DEPENDS+=	p5-DBD-SQLite>=1.08:../../databases/p5-DBD-SQLite
 CHECK_PORTABILITY_SKIP+=	script/import-cdbi-tests.sh
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST= auto/Class/DBI/Sweet/.packlist
+PERL5_PACKLIST=		auto/Class/DBI/Sweet/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

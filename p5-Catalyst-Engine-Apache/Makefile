@@ -12,7 +12,7 @@ COMMENT=	Catalyst Apache Engines
 BUILD_DEPENDS+=	p5-Catalyst-Runtime>=5.50:../../www/p5-Catalyst-Runtime
 BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
-PERL5_PACKLIST= auto/Catalyst/Engine/Apache/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Engine/Apache/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

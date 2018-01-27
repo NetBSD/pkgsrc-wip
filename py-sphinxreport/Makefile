@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2014/12/31 13:58:43 thomasklausner Exp $
 
 DISTNAME=	SphinxReport-2.0
-PKGNAME=        ${PYPKGPREFIX}-sphinxreport-2.0
+PKGNAME=	${PYPKGPREFIX}-sphinxreport-2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SphinxReport/}
 
@@ -11,7 +11,7 @@ COMMENT=	Report generator in python based on Sphinx and matplotlib
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7:../../databases/py-sqlalchemy
-DEPENDS+=    	${PYPKGPREFIX}-rpy>=2.1.3:../../math/py-rpy
+DEPENDS+=	${PYPKGPREFIX}-rpy>=2.1.3:../../math/py-rpy
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=1.6.2:../../textproc/py-openpyxl
 

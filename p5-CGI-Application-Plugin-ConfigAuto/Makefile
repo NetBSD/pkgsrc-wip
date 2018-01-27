@@ -11,7 +11,7 @@ COMMENT=	Easy config file management for CGI::Application
 DEPENDS+=	p5-CGI-Application>=4.11:../../www/p5-CGI-Application
 DEPENDS+=	p5-Config-Auto>=0:../../devel/p5-Config-Auto
 
-PERL5_PACKLIST=         auto/CGI/Application/Plugin/ConfigAuto/.packlist
+PERL5_PACKLIST=		auto/CGI/Application/Plugin/ConfigAuto/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

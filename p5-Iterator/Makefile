@@ -12,7 +12,7 @@ COMMENT=	A general-purpose iterator class
 DEPENDS+=	p5-Exception-Class>0:../../devel/p5-Exception-Class
 
 USE_LANGUAGES+=	# empty
-PERL5_PACKLIST= auto/Iterator/.packlist
+PERL5_PACKLIST=	auto/Iterator/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

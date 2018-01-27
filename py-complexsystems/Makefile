@@ -5,10 +5,10 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/ComplexSystems/}
 
-MAINTAINER= jihbed.research@gmail.com
-HOMEPAGE= http://bitbucket.org/vgauthier/complex-systems/
-COMMENT= Toolbox for Complex Sytems
-LICENSE= mit
+MAINTAINER=	jihbed.research@gmail.com
+HOMEPAGE=	http://bitbucket.org/vgauthier/complex-systems/
+COMMENT=	Toolbox for Complex Sytems
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 

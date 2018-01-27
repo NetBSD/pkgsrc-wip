@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2015/02/08 22:11:58 jihbed Exp $
 
-VERSION= 0.3.1.dev-20120112
+VERSION=	0.3.1.dev-20120112
 DISTNAME=	python-algebraic-0.3.1.dev-20120112
 EGG_NAME=	python_algebraic-0.3.1.dev20120112
 PKGNAME=	${PYPKGPREFIX}-algebraic-${VERSION}

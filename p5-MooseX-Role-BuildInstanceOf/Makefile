@@ -19,7 +19,7 @@ DEPENDS+=	p5-MooseX-Role-Parameterized>0:../../devel/p5-MooseX-Role-Parameterize
 DEPENDS+=	p5-List-MoreUtils>0:../../devel/p5-List-MoreUtils
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/MooseX/Role/BuildInstanceOf/.packlist
+PERL5_PACKLIST=	auto/MooseX/Role/BuildInstanceOf/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

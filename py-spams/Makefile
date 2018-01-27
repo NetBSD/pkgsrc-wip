@@ -7,7 +7,7 @@ MASTER_SITES=	http://spams-devel.gforge.inria.fr/hitcounter2.php?file=33816/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://spams-devel.gforge.inria.fr/
-COMMENT= 	SPArse Modeling Software for solving various sparse estimation
+COMMENT=	SPArse Modeling Software for solving various sparse estimation
 LICENSE=	gnu-gpl-v3
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy

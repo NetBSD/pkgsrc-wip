@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=M/MDAnalysis/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.mdanalysis.org/
-COMMENT=   	Library to analyze and manipulate molecular dynamics trajectories
+COMMENT=	Library to analyze and manipulate molecular dynamics trajectories
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-biopython>=1.63:../../wip/biopython

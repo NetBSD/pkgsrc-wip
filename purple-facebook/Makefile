@@ -3,8 +3,8 @@
 PKGNAME=	purple-facebook-0.9.5
 CATEGORIES=	chat
 DISTNAME=	purple-facebook-0.9.5-9ff9acf9fa14
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=jgeboski/}
-GITHUB_PROJECT= purple-facebook
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jgeboski/}
+GITHUB_PROJECT=	purple-facebook
 GITHUB_RELEASE=	v0.9.5-9ff9acf9fa14
 
 MAINTAINER=	izaac@setec.org

@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/atmark-0.6.0
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -10,7 +10,7 @@ HOMEPAGE=	http://gosam.hepforge.org/
 COMMENT=	Automated One-Loop matrix element generator
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=       ${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-700//}
 

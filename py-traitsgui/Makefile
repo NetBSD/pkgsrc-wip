@@ -9,7 +9,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/GUI/gui/}
 
 HOMEPAGE=	http://code.enthought.com/projects/traits_gui/
 
-COMMENT=	 	Traits-capable windowing framework
+COMMENT=		Traits-capable windowing framework
 
 .include "../../wip/py-traits/Makefile.common"
 

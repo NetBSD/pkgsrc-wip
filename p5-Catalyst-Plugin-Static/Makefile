@@ -14,7 +14,7 @@ DEPENDS+=	p5-File-MimeInfo>=0.11:../../devel/p5-File-MimeInfo
 DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
-PERL5_PACKLIST= auto/Catalyst/Plugin/Static/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Plugin/Static/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

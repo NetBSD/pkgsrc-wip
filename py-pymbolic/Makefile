@@ -10,8 +10,8 @@ HOMEPAGE=	http://mathema.tician.de/software/pymbolic
 COMMENT=	Python package for symbolic computation
 LICENSE=	mit
 
-DEPENDS+=       ${PYPKGPREFIX}-test>=2.3.5:../../devel/py-test
-DEPENDS+=       ${PYPKGPREFIX}-pytools>=2013.5.6:../../wip/py-pytools
+DEPENDS+=	${PYPKGPREFIX}-test>=2.3.5:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-pytools>=2013.5.6:../../wip/py-pytools
 
 USE_LANGUAGES=	# none
 

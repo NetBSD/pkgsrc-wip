@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=N/NetFlowVizu/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.smallbulb.net/netflowvizu
 COMMENT=	Network flow visualizer
-LICENSE=  	mit
+LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 

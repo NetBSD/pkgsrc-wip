@@ -13,9 +13,9 @@ LICENSE=	apache-2.0
 WRKSRC=		${WRKDIR}/python-client-${PKGVERSION_NOREV}
 EGG_NAME=	neovim-${PKGVERSION_NOREV}
 
-DEPENDS+=       ${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
-DEPENDS+=       ${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
-DEPENDS+=       ${PYPKGPREFIX}-trollius-[0-9]*:../../wip/py-trollius
+DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-trollius-[0-9]*:../../wip/py-trollius
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

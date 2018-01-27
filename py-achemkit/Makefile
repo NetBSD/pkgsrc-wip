@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/AChemKit/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://github.com/afaulconbridge/PyAChemKit
+HOMEPAGE=	https://github.com/afaulconbridge/PyAChemKit
 COMMENT=	Artificial Chemistry Tookit
 LICENSE=	modified-bsd
 

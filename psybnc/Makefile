@@ -12,21 +12,21 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=	${WRKDIR}/psybnc
 
-BUILD_DEPENDS+=         glib-[0-9]*:../../devel/glib
+BUILD_DEPENDS+=		glib-[0-9]*:../../devel/glib
 
 USE_TOOLS+=	gmake
 
-CONF_FILES=             share/examples/psybnc/psybnc.conf \
+CONF_FILES=		share/examples/psybnc/psybnc.conf \
                         ${PKG_SYSCONFDIR}/psybnc.conf
 
-SUBST_CLASSES+=         prefix
-SUBST_FILES.prefix=     tools/autoconf.c
-SUBST_SED.prefix=       -e "s|@PREFIX@|${PREFIX}|g"
-SUBST_STAGE.prefix=     post-patch
-SUBST_CLASSES+=         openssl
-SUBST_FILES.openssl=     makefile.out
-SUBST_SED.openssl=       -e "s|/usr/bin/openssl|@echo openssl|g"
-SUBST_STAGE.openssl=     pre-build
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	tools/autoconf.c
+SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_STAGE.prefix=	post-patch
+SUBST_CLASSES+=		openssl
+SUBST_FILES.openssl=	makefile.out
+SUBST_SED.openssl=	-e "s|/usr/bin/openssl|@echo openssl|g"
+SUBST_STAGE.openssl=	pre-build
 
 INSTALLATION_DIRS=	bin share/examples/psybnc
 INSTALLATION_DIRS+=	share/doc/psybnc

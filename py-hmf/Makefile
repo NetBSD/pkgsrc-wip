@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	hmf-2.0.1
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/68/8b/8c566eb5fcfed49470862cbab4b173cb3d93db34494b3a915dd2dbfaa45a/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/steven-murray/hmf
 COMMENT=	Halo mass function calculator
 LICENSE=	mit
 
-DEPENDS+=     ${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 
 WRKSRC=		${WRKDIR}/hmf-2.0.1
 

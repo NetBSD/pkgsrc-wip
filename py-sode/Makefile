@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sode/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://github.com/oscarbenjamin/sode
+HOMEPAGE=	https://github.com/oscarbenjamin/sode
 COMMENT=	Python/Cython lib for solving Stochastic Ordinary Differential Equations
 LICENSE=	gnu-gpl-v3
 

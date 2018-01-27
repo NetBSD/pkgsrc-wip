@@ -10,9 +10,9 @@ HOMEPAGE=	http://mercurial.selenic.com/wiki/MozillaPushlogExtension
 COMMENT=	Mercurial extensions used by the mozilla project (incl. pushlog)
 #LICENSE=	mpl-1.1
 
-HG_REPOSITORIES=	version-control-tools
+HG_REPOSITORIES=		version-control-tools
 HG_REPO.version-control-tools=	https://hg.mozilla.org/hgcustom/version-control-tools/
-WRKSRC=		${WRKDIR}/version-control-tools/hghooks
+WRKSRC=				${WRKDIR}/version-control-tools/hghooks
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 

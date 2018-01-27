@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	knockknock-0.8
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	https://moxie.org/software/knockknock/
 

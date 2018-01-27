@@ -14,9 +14,9 @@ COMMENT=	Integer factorization with the Elliptic Curve Method (ECM)
 
 USE_LANGUAGES=	# none
 
-NO_BUILD=yes
+NO_BUILD=	yes
 
-REPLACE_PYTHON+= pycem.py
+REPLACE_PYTHON+=	pycem.py
 
 INSTALLATION_DIRS=	bin
 

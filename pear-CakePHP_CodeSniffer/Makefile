@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES+=	http://pear.cakephp.org/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://pear.cakephp.org/
+HOMEPAGE=	http://pear.cakephp.org/
 COMMENT=	CodeSniffer rules for checking code against the CakePHP coding standards
 LICENSE=	mit
 

@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=m/mark/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/mark/
-COMMENT=RDF Bookmarking Utilities
+COMMENT=	RDF Bookmarking Utilities
 LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-argparse>=1.1:../../devel/py-argparse

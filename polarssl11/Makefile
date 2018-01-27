@@ -11,9 +11,9 @@ HOMEPAGE=	https://polarssl.org/download/
 COMMENT=	Open Source embedded SSL/TLS cryptographic library
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=              gmake tar
+USE_TOOLS=		gmake tar
 
-LDFLAGS.SunOS+= -lsocket -lnsl
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 BINFILES=	ssl/ssl_client1 ssl/ssl_client2 ssl/ssl_server aes/aescrypt2 \
 		pkey/dh_client pkey/dh_genprime pkey/dh_server pkey/mpi_demo \

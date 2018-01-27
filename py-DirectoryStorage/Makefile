@@ -12,9 +12,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dirstorage.sourceforge.net/
 COMMENT=		Storage for ZODB, that uses files and directories
 
-NO_CONFIGURE=		yes
+NO_CONFIGURE=	yes
 REPLACE_PYTHON=	${TOOLS}
-PY_PATCHPLIST=		yes
+PY_PATCHPLIST=	yes
 
 AUTO_MKDIRS=		yes
 

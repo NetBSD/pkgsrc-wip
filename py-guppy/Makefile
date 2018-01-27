@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-WRKSRC=	${WRKDIR}/guppy-0.1.9
+WRKSRC=		${WRKDIR}/guppy-0.1.9
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"

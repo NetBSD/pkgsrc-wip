@@ -8,7 +8,7 @@ MASTER_SITES=	http://probcons.stanford.edu/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://probcons.stanford.edu/
-COMMENT= Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences
+COMMENT=	Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences
 
 WRKSRC=		${WRKDIR}/probcons
 

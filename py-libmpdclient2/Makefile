@@ -15,7 +15,7 @@ COMMENT=	Python bindings to the mpd access library
 WRKSRC=		${WRKDIR}/py-libmpdclient2
 
 PY_PATCHPLIST=	yes
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../audio/libmpd/buildlink3.mk"
 .include "../../lang/python/extension.mk"

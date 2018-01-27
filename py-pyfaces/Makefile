@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	pyface-4.2.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11 python
 MASTER_SITES=	https://www.enthought.com/repo/ets/
 

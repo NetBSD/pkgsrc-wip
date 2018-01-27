@@ -6,7 +6,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cligj/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://github.com/mapbox/cligj
+HOMEPAGE=	https://github.com/mapbox/cligj
 COMMENT=	Click params for commmand line interfaces to GeoJSON
 LICENSE=	modified-bsd
 

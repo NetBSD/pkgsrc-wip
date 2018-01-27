@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=f/fdasrsf/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://stat.fsu.edu/~dtucker/research.html
 COMMENT=	Functional data analysis using the square root slope framework
-LICENSE=modified-bsd
+LICENSE=	modified-bsd
 
 PYDISTUTILSPKG=	yes
 

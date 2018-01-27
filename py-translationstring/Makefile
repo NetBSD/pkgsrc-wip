@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=t/translationstring/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pylonsproject.org
-COMMENT= 	Library for i18n relied on by various Repoze and Pyramid
+COMMENT=	Library for i18n relied on by various Repoze and Pyramid
 LICENSE=	modified-bsd
 
 WRKSRC=			${WRKDIR}/translationstring-1.3

@@ -8,7 +8,7 @@ REPLACE_PERL+=	${FILTER_NAME}
 NO_BUILD=	yes
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path= 	post-patch
+SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	Makefile ${FILTER_NAME}
 SUBST_SED.path+=	-e "s|/etc/logwatch|${PKG_SYSCONFDIR}|g"
 SUBST_SED.path+=	-e "s|/usr/local|${PREFIX}|g"

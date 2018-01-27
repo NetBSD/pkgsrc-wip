@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2014/08/11 23:10:13 thomasklausner Exp $
 
-VER=4.0.1
+VER=		4.0.1
 PKGNAME=	paraview-${VER}
 DISTNAME=	ParaView-v${VER}-source
 PKGREVISION=	1
@@ -17,8 +17,8 @@ USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		gmake
 DEPENDS+=		qt4-sqlite3>=4.0:../../x11/qt4-sqlite3
 
-USE_CMAKE=				yes
-CHECK_PORTABILITY_SKIP=		Utilities/protobuf/configure
+USE_CMAKE=		yes
+CHECK_PORTABILITY_SKIP=	Utilities/protobuf/configure
 
 CMAKE_ARGS+=			-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=			-DBUILD_SHARED_LIBS=ON
@@ -44,8 +44,8 @@ CMAKE_ARGS+=			-DVTK_USE_SYSTEM_PNG=ON \
 						-DVTK_USE_SYSTEM_LIBXML2=ON \
 						-DVTK_USE_X=ON
 
-CMAKE_ARG_PATH= 		..
-CONFIGURE_DIRS= 		_ParaView_build
+CMAKE_ARG_PATH=			..
+CONFIGURE_DIRS=			_ParaView_build
 
 PY_PATCHPLIST=			yes
 

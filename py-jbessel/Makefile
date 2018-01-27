@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2014/06/01 12:49:42 thomasklausner Exp $
 
 DISTNAME=	jBessel-0.1.4
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jBessel/}
 

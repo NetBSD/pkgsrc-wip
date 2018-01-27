@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 PYDISTUTILSPKG=	yes
 
-INSTALLATION_DIRS+= share/doc/vegas
+INSTALLATION_DIRS+=	share/doc/vegas
 
 do-test:
 	${RUN} cd ${WRKSRC}/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_vegas.py

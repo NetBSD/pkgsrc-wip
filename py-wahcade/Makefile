@@ -10,11 +10,11 @@ HOMEPAGE=	http://www.anti-particle.com/wahcade.shtml
 COMMENT=	GNU/Linux-friendly clone of Minwah's MameWAH
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/wahcade
-USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		# none
-USE_TOOLS+=		bash
-PY_PATCHPLIST=		yes
+WRKSRC=				${WRKDIR}/wahcade
+USE_PKGLOCALEDIR=		yes
+USE_LANGUAGES=			# none
+USE_TOOLS+=			bash
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-imaging
 
 REPLACE_BASH+=		doc/samples/run_mess.sh

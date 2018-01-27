@@ -6,8 +6,8 @@ PKGNAME=	${PYPKGPREFIX}-aesthete-0.4.1-7
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Aesthete/}
 
-MAINTAINER= 	jihbed.research@gmail.com
-HOMEPAGE=       http://www.philtweir.co.uk/aesthete/wiki/pmwiki.php
+MAINTAINER=	jihbed.research@gmail.com
+HOMEPAGE=	http://www.philtweir.co.uk/aesthete/wiki/pmwiki.php
 COMMENT=	Integrated mathematics environment
 LICENSE=	gnu-gpl-v3
 

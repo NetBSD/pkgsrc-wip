@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=B/Booktype/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://booki-dev.flossmanuals.net/
-COMMENT= FLOSS Manuals collaborative book writing tool
+COMMENT=	FLOSS Manuals collaborative book writing tool
 LICENSE=	gnu-gpl-v3
 
 

@@ -3,7 +3,7 @@
 
 DISTNAME=	yellowhiggs-1.0a4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES= math
+CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yellowhiggs/}
 
 MAINTAINER=	jihbed.research@gmail.com

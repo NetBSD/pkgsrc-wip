@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/cocagne/txdbus
 COMMENT=	Python implementation of the DBus protocol for the Twisted
 LICENSE=	mit
 
-DEPENDS+=       ${PYPKGPREFIX}-twisted>=13.1.0:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted>=13.1.0:../../net/py-twisted
 
 USE_LANGUAGES=	# none
 

@@ -11,13 +11,13 @@ COMMENT=	Pinball using the Allegro game library
 LICENSE=	gnu-gpl-v1
 
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake aclocal automake
-USE_GAMESGROUP=	YES
-GNU_CONFIGURE=	YES
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake aclocal automake
+USE_GAMESGROUP=		YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-USE_LIBTOOL=	YES
-WRKSRC=		${WRKDIR}/${DISTNAME}
+USE_LIBTOOL=		YES
+WRKSRC=			${WRKDIR}/${DISTNAME}
 
 
 MAKE_JOBS_SAFE=	no

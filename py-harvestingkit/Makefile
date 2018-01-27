@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	HarvestingKit-0.6.6
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:tl}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc
 MASTER_SITES=	https://pypi.python.org/packages/36/59/74a881858b0c7e4c98b7f609c824cf2139cb630e90bed506e01e3e316fe3/
 

@@ -15,8 +15,8 @@ COMMENT=		Lightweight, but powerful editor for Python
 DEPENDS=	${PYPKGPREFIX}-wxWidgets>=2.4.2.4:../../x11/py-wxWidgets
 
 REPLACE_PYTHON=	pype.py
-NO_BUILD=		yes
-PY_PATCHPLIST=		yes
+NO_BUILD=	yes
+PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
 
 do-install:

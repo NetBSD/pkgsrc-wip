@@ -11,7 +11,7 @@ COMMENT=	Sparse linear algebra extension for Python
 #LICENSE=	# TODO: (see mk/license.mk)
 
 USE_LANGUAGES=	c c++ fortran77
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
 
 #.include "../../graphics/vtk-python/buildlink3.mk"

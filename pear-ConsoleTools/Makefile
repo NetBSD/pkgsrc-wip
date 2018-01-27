@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES+=	http://components.ez.no/get/
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://www.ezcomponents.org/docs/tutorials/ConsoleTools
+HOMEPAGE=	http://www.ezcomponents.org/docs/tutorials/ConsoleTools
 COMMENT=	Tools to build applications that run on a computer console
 LICENSE=	modified-bsd
 

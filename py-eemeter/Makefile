@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	eemeter-0.5.3
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
 MASTER_SITES=	https://pypi.python.org/packages/fb/06/8d0cd92b267ef962a6db224d80ea3870df03239fd34c6b25d33dbda20154/
 

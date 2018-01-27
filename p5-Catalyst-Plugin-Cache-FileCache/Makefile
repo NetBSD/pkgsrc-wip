@@ -13,7 +13,7 @@ DEPENDS+=	p5-Cache-Cache>=0:../../devel/p5-Cache-Cache
 
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST= auto/Catalyst/Plugin/Cache/FileCache/.packlist
+PERL5_PACKLIST=		auto/Catalyst/Plugin/Cache/FileCache/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

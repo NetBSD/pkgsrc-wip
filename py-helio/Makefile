@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=h/helio/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/yellowpagesgroup/Helio
-COMMENT=Componentised, hierarchical, notification driven Python web framework
+COMMENT=	Componentised, hierarchical, notification driven Python web framework
 
 WRKSRC=		${WRKDIR}/helio-1.0.0b1
 

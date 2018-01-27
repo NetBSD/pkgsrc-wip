@@ -24,7 +24,7 @@ DEPENDS+=	p5-Encode-compat>=0:../../wip/p5-Encode-compat
 BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST= auto/Plucene/.packlist
+PERL5_PACKLIST=		auto/Plucene/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

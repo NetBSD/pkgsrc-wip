@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.12 2012/10/07 13:57:26 asau Exp $
 #
 
-DISTNAME=		pcapy-0.10.5
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		net
+DISTNAME=	pcapy-0.10.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	net
 MASTER_SITES=	http://oss.corest.com/repo/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

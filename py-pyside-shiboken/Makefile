@@ -5,7 +5,7 @@ DISTNAME=	shiboken-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-pyside-shiboken-${VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PySide/}
 GITHUB_PROJECT=	Shiboken
-EXTRACT_SUFX=   .tar.gz
+EXTRACT_SUFX=	.tar.gz
 CATEGORIES=	devel
 
 MAINTAINER=	rumko@netbsd.org
@@ -18,15 +18,15 @@ WRKSRC=		${WRKDIR}/Shiboken-${VERSION}
 USE_TOOLS+=	gmake cmake pkg-config
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
-CMAKE_ARGS+=    -DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 
-PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} build

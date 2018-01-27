@@ -14,7 +14,7 @@ DEPENDS+=	p5-Lingua-Stem-Snowball>=0:../../textproc/p5-Lingua-Stem-Snowball
 DEPENDS+=	p5-Plucene>=0:../../wip/p5-Plucene
 
 
-PERL5_PACKLIST= auto/Plucene/Plugin/Analyzer/SnowballAnalyzer/.packlist
+PERL5_PACKLIST=	auto/Plucene/Plugin/Analyzer/SnowballAnalyzer/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

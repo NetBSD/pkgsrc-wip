@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	fix-yahoo-finance-0.0.19
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fix-yahoo-finance/}
 

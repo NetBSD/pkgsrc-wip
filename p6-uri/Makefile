@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	uri
 GITHUB_TAG=	bac75821337a2142c0f364a5deefc5ecbddd8ee4
-PKGREVISION= 1
+PKGREVISION=	1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=perl6-community-modules/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/perl6-community-modules/${GITHUB_PROJECT}
 COMMENT=	Perl6 realization of URI — Uniform Resource Identifiers handler
 LICENSE=	artistic
 
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar

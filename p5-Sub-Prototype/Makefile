@@ -12,9 +12,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 
-MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
-PERL5_PACKLIST=	auto/Sub/Prototype/.packlist
-USE_LANGUAGES=	c
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=		auto/Sub/Prototype/.packlist
+USE_LANGUAGES=		c
 PERL5_MODULE_TYPE=	Module::Install
 
 .include "../../lang/perl5/module.mk"

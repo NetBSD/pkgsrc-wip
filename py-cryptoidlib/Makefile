@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-tlslite>=0.3.8:../../security/py-tlslite
 DEPENDS+=	jython>=2.5.1:../../wip/jython
 DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../math/py-gmpy
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-m2crypto
 

@@ -11,10 +11,10 @@ HOMEPAGE=	http://live.gnome.org/Pessulus
 COMMENT=	Pessulus is a lockdown editor for GNOME
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_PKGLOCALEDIR= yes
-USE_TOOLS+=	pkg-config gmake intltool msgfmt
-USE_LANGUAGES=	c
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config gmake intltool msgfmt
+USE_LANGUAGES=		c
 
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2, py-gobject

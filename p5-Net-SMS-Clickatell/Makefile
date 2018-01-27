@@ -9,8 +9,8 @@ HOMEPAGE=	http://search.cpan.org/~ralamosm/Net-SMS-Clickatell/
 COMMENT=	Access to Clickatell SMS messaging service
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=  # empty
-PERL5_PACKLIST= auto/Net/SMS/Clickatell/.packlist
+USE_LANGUAGES=	# empty
+PERL5_PACKLIST=	auto/Net/SMS/Clickatell/.packlist
 
 #DEPENDS+=       p5-OptArgs>=0.1.18:../../wip/p5-OptArgs
 

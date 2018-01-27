@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	VESPA-0.4.7
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:tl}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/56/91/170b0343dd695104b070d33cf4c808c77f7dca1f2399a8c0af18a0e0f0b1/
 

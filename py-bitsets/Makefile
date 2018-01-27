@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/xflr6/bitsets
 COMMENT=	Ordered subsets over a predefined domain
 LICENSE=	mit
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run-tests.py

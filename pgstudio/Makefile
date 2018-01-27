@@ -15,7 +15,7 @@ DEPENDS+=	apache-tomcat-[0-9]*:../../www/apache-tomcat8
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
-INSTALLATION_DIRS+= share/tomcat/webapps
+INSTALLATION_DIRS+=	share/tomcat/webapps
 
 USE_LANGUAGES=	# none
 

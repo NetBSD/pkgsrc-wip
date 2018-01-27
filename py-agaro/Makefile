@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/agaro/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	 https://github.com/eddiejessup/agaro
+HOMEPAGE=	https://github.com/eddiejessup/agaro
 COMMENT=	Framework to run models
 LICENSE=	modified-bsd
 

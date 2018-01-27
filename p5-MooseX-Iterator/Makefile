@@ -14,7 +14,7 @@ DEPENDS+=	p5-ExtUtils-MakeMaker>0:../../devel/p5-ExtUtils-MakeMaker
 DEPENDS+=	p5-Moose>0:../../devel/p5-Moose
 
 USE_LANGUAGES+=	# empty
-PERL5_PACKLIST= auto/MooseX/Iterator/.packlist
+PERL5_PACKLIST=	auto/MooseX/Iterator/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

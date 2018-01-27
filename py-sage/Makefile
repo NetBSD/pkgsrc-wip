@@ -14,7 +14,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-processing>=0.52:../../wip/py-processing
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=		yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

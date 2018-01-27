@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	teng-python-2.0.0
-PKGNAME=        ${PYPKGPREFIX}-teng-2.0.0
+PKGNAME=	${PYPKGPREFIX}-teng-2.0.0
 
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=teng/}
@@ -16,8 +16,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
 
-PYDISTUTILSPKG= yes
-PY_PATCHPLIST=  yes
+PYDISTUTILSPKG=	yes
+PY_PATCHPLIST=	yes
 
 .include "../../wip/teng/buildlink3.mk"
 .include "../../lang/python/extension.mk"

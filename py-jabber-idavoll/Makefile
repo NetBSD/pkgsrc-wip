@@ -32,8 +32,8 @@ PKG_GROUPS_VARS+=	JABBER_GROUP
 
 .include "../../wip/jabberd/transports.mk"
 
-DOCDIR=                 ${PREFIX}/share/doc/idavoll
-DOCFILES=               README INSTALL NEWS LICENSE
+DOCDIR=			${PREFIX}/share/doc/idavoll
+DOCFILES=		README INSTALL NEWS LICENSE
 
 INSTALLATION_DIRS=	share/doc/idavoll
 

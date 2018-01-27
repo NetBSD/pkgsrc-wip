@@ -1,6 +1,13 @@
 @comment $NetBSD$
 bin/TransDecoder.LongOrfs
 bin/TransDecoder.Predict
+lib/TransDecoder/PerlLib/Fasta_reader.pm
+lib/TransDecoder/PerlLib/GFF3_utils.pm
+lib/TransDecoder/PerlLib/Gene_obj.pm
+lib/TransDecoder/PerlLib/Gene_obj_indexer.pm
+lib/TransDecoder/PerlLib/Longest_orf.pm
+lib/TransDecoder/PerlLib/Nuc_translator.pm
+lib/TransDecoder/PerlLib/TiedHash.pm
 libexec/TransDecoder/util/cdna_alignment_orf_to_genome_orf.pl
 libexec/TransDecoder/util/compute_base_probs.pl
 libexec/TransDecoder/util/cufflinks_gtf_genome_to_cdna_fasta.pl
@@ -17,10 +24,3 @@ libexec/TransDecoder/util/pfam_runner.pl
 libexec/TransDecoder/util/remove_eclipsed_ORFs.pl
 libexec/TransDecoder/util/score_CDS_liklihood_all_6_frames.pl
 libexec/TransDecoder/util/seq_n_baseprobs_to_logliklihood_vals.pl
-lib/TransDecoder/PerlLib/Fasta_reader.pm
-lib/TransDecoder/PerlLib/Gene_obj_indexer.pm
-lib/TransDecoder/PerlLib/Gene_obj.pm
-lib/TransDecoder/PerlLib/GFF3_utils.pm
-lib/TransDecoder/PerlLib/Longest_orf.pm
-lib/TransDecoder/PerlLib/Nuc_translator.pm
-lib/TransDecoder/PerlLib/TiedHash.pm

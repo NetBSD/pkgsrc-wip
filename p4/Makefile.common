@@ -38,19 +38,19 @@ EMUL_REQD=		netbsd>=3.0
 .  include "../../mk/bsd.prefs.mk"
 
 .  if ${EMUL_PLATFORM:Mdarwin-*}
-P4ARCH?=	darwin90u
+P4ARCH?=		darwin90u
 .  elif ${EMUL_PLATFORM} == "freebsd-i386"
-P4ARCH?=	freebsd60x86
+P4ARCH?=		freebsd60x86
 .  elif ${EMUL_PLATFORM} == "freebsd-x86_64"
-P4ARCH?=	freebsd60x86_64
+P4ARCH?=		freebsd60x86_64
 .  elif ${EMUL_PLATFORM} == "linux-i386"
-P4ARCH?=	linux26x86
+P4ARCH?=		linux26x86
 .  elif ${EMUL_PLATFORM} == "linux-x86_64"
-P4ARCH?=	linux26x86_64
+P4ARCH?=		linux26x86_64
 .  elif ${EMUL_PLATFORM} == "netbsd-i386" || ${EMUL_PLATFORM} == "netbsd-x86_64"
-P4ARCH?=	netbsd31x86
+P4ARCH?=		netbsd31x86
 .  else
-P4ARCH?=	none
+P4ARCH?=		none
 PKG_FAIL_REASON=	"no p4 binary available for ${EMUL_PLATFORM}"
 .  endif
 

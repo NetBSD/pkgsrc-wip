@@ -8,15 +8,15 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://othman.ojuba.org/
-COMMENT= Library providing access to Quranic text with a fast search index
+COMMENT=	Library providing access to Quranic text with a fast search index
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/othman-0.2.7
 
-USE_PKGLOCALEDIR= yes
-USE_TOOLS+=	intltool msgfmt
-USE_LANGUAGES=	# none
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		intltool msgfmt
+USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2

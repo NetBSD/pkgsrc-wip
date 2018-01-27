@@ -14,7 +14,7 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/concepts-0.2.2
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run-tests.py

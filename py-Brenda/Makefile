@@ -2,8 +2,8 @@
 #
 
 DISTNAME=	PyBrenda041-tar
-PKGNAME=		${PYPKGPREFIX}-Brenda-0.4.1
-CATEGORIES=		devel
+PKGNAME=	${PYPKGPREFIX}-Brenda-0.4.1
+CATEGORIES=	devel
 MASTER_SITES=	http://xml.coverpages.org/
 EXTRACT_SUFX=	.gz
 

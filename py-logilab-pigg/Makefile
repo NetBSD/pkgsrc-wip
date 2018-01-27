@@ -12,7 +12,7 @@ COMMENT=	Python Interface Generator for Gtk implementation of the MVC pattern
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"

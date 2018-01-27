@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"

@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2014/06/01 12:49:45 thomasklausner Exp $
 
 DISTNAME=	scikit-aero-v0.1.0
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/v//}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/v//}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-aero/}
 

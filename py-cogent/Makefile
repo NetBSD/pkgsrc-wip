@@ -2,19 +2,19 @@
 
 DISTNAME=	cogent-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	 biology python
+CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cogent/}
 EXTRACT_SUFX=	.tgz#md5=732d19ab6f4ded2a75a3ae77eaea9872
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://sourceforge.net/projects/pycogent
 COMMENT=	Cogent A toolkit for statistical analysis of biological sequences
-LICENSE=		gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.5.6:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-pyrex
 
 do-test:

@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	libnacl-1.5.2
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python devel
-MASTER_SITES=   ${MASTER_SITE_PYPI:=l/libnacl/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/libnacl/}
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/saltstack/libnacl

@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=       http://search.cpan.org/dist/Text-CHM/
+HOMEPAGE=	http://search.cpan.org/dist/Text-CHM/
 COMMENT=	Module that implements a support for handling CHM files
 LICENSE=	${PERL5_LICENSE}
 

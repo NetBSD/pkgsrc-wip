@@ -10,7 +10,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/fwm_ensayo/
 COMMENT=	Fortran package to work with watersheds and do hydrologic
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+= ${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy	
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy	
 
 USE_LANGUAGES=	c fortran
 

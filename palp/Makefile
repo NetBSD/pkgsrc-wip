@@ -10,8 +10,8 @@ HOMEPAGE=	http://hep.itp.tuwien.ac.at/%7Ekreuzer/CY/palp/
 COMMENT=	Analyzing lattice polytopes
 #LICENSE=	# TODO: (see mk/license.mk)
 
-WRKSRC=	${WRKDIR}/palp
-MAKE_FILE=      GNUmakefile
+WRKSRC=		${WRKDIR}/palp
+MAKE_FILE=	GNUmakefile
 
 INSTALLATION_DIRS+=	bin share/doc/palp
 

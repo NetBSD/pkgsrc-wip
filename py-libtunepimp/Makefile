@@ -15,9 +15,9 @@ COMMENT=	Python bindings for TunePimp library
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 
 PY_PATCHPLIST=	yes
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
-BUILD_DEPENDS+= libtunepimp-[0-9]*:../../audio/libtunepimp
+BUILD_DEPENDS+=	libtunepimp-[0-9]*:../../audio/libtunepimp
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	svg-plot
 GITHUB_TAG=	f867cbfe31fd3aadb5830f2acd433c2d8a1de6df
-PKGREVISION= 1
+PKGREVISION=	1
 DISTNAME=	p6-${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=moritz/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/moritz/svg-plot
 COMMENT=	A simple 2D chart plotter for Perl 6
 LICENSE=	artistic
 
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}*
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gtar
 EXTRACT_USING=	gtar

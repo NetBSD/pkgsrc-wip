@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 USE_LANGUAGES=	# empty
 
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=	auto/Test/Stub/.packlist
+PERL5_PACKLIST=		auto/Test/Stub/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

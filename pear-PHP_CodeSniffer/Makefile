@@ -4,7 +4,7 @@ DISTNAME=	PHP_CodeSniffer-1.4.7
 CATEGORIES=	devel
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE= 	http://www.squizlabs.com/php-codesniffer
+HOMEPAGE=	http://www.squizlabs.com/php-codesniffer
 COMMENT=	Detects PHP, JavaScript and CSS violations of coding standards
 LICENSE=	modified-bsd
 

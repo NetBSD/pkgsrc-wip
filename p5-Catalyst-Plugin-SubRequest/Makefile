@@ -14,7 +14,7 @@ DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
-PERL5_PACKLIST= auto/Catalyst/Plugin/SubRequest/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Plugin/SubRequest/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

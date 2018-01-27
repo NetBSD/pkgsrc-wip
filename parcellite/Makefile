@@ -13,9 +13,9 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool msgfmt msgmerge perl pkg-config xgettext
 
-EGDIR=		share/examples/xdg/autostart
+EGDIR=			share/examples/xdg/autostart
 INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart ${EGDIR}
-CONF_FILES=	${EGDIR}/parcellite-startup.desktop ${PKG_SYSCONFDIR}/xdg/autostart/parcellite-startup.desktop
+CONF_FILES=		${EGDIR}/parcellite-startup.desktop ${PKG_SYSCONFDIR}/xdg/autostart/parcellite-startup.desktop
 
 .include "options.mk"
 

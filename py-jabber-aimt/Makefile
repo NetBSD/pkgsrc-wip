@@ -24,11 +24,11 @@ DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 # HAS_CONFIGURE, USE_PKGLOCALEDIR, USE_INSTALL, TEXINFO_REQD, USE_JAVA,
 # USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
 # EXTRACT_ONLY=		# yes
-NO_BUILD=		yes
-REPLACE_PYTHON+=	PyAIMt.py
-REPLACE_PYTHON+=	tools/infodump.py
-REPLACE_PYTHON+=	tools/managessi.py
-REPLACE_PYTHON+=	tools/migrate.py
+NO_BUILD=			yes
+REPLACE_PYTHON+=		PyAIMt.py
+REPLACE_PYTHON+=		tools/infodump.py
+REPLACE_PYTHON+=		tools/managessi.py
+REPLACE_PYTHON+=		tools/migrate.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-imaging
 
 # always include bsd.prefs.mk before any .if or .ifdef statements

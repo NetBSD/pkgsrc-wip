@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2014/12/31 13:58:32 thomasklausner Exp $
 
 DISTNAME=	irco-0.9.1
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/irco/}
 

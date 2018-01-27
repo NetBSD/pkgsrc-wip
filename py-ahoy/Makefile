@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=a/ahoy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/eddiejessup/ahoy
-COMMENT=		Agent-based simulations of active particles
+COMMENT=	Agent-based simulations of active particles
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ciabatta>=0.4.0:../../wip/py-ciabatta

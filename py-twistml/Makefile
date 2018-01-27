@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=t/twistml/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=https://bitbucket.org/madmat3001/twistml.git
+HOMEPAGE=	https://bitbucket.org/madmat3001/twistml.git
 COMMENT=	TWItter STock market Machine Learning package
 LICENSE=	mit
 

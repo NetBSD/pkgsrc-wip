@@ -13,7 +13,7 @@ DEPENDS+=	p5-Email-MIME>=0:../../mail/p5-Email-MIME
 DEPENDS+=	p5-Email-Send>=0:../../mail/p5-Email-Send
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 
-PERL5_PACKLIST= auto/Catalyst/Plugin/Email/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Plugin/Email/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

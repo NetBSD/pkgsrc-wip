@@ -10,7 +10,7 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.cs.tut.fi/~ask/aspects/index.shtml
 COMMENT=	Lightweight aspect oriented programming library for Python
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

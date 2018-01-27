@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	pyraphrase-0.1
-PKGNAME=        ${PYPKGPREFIX}-raphrase-0.1
+PKGNAME=	${PYPKGPREFIX}-raphrase-0.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyraphrase/}
 

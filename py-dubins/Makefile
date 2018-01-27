@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dubins/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 https://github.com/AndrewWalker/pydubins
+HOMEPAGE=	https://github.com/AndrewWalker/pydubins
 COMMENT=	Code to generate and manipulate dubins curves
 LICENSE=	mit
 

@@ -12,8 +12,8 @@ HOMEPAGE=	http://snappy.computop.org/get/
 COMMENT=	Program for studying the topology and geometry of 3-manifolds
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=       ${PYPKGPREFIX}-sphinx>=1.2.2:../../textproc/py-sphinx
-DEPENDS+=       ${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.2:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_LANGUAGES=	c c++
 

@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/CythonGSL-0.1
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 # work for cython>=1.51.x
 .include "../../devel/py-cython/buildlink3.mk"

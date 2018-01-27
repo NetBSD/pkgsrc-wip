@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/01/31 11:52:04 jihbed Exp $
 
 DISTNAME=	cloudlib-0.3.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudlib/}
 

@@ -12,7 +12,7 @@ COMMENT=	Examine python code and detect possible errors
 
 VERSION=	20090615
 
-PYDISTUTILSPKG= 	yes
+PYDISTUTILSPKG=		yes
 
 DOCDIR=		${PREFIX}/share/doc/py-ntch
 

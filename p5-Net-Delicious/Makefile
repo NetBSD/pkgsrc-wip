@@ -21,9 +21,9 @@ DEPENDS+=	p5-IO-stringy>=2.10:../../devel/p5-IO-stringy
 DEPENDS+=	p5-YAML>=0.39:../../textproc/p5-YAML
 DEPENDS+=	p5-Config-Simple>=2:../../sysutils/p5-Config-Simple
 
-PERL5_PACKLIST= auto/Net/Delicious/.packlist
+PERL5_PACKLIST=	auto/Net/Delicious/.packlist
 
-PERL5_MODULE_TYPE= Module::Build
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

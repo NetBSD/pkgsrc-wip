@@ -26,9 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbe
 # optional, but recommended
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
-PLIST_SUBST+=	PKGBASE=${PKGBASE}
+PLIST_SUBST+=		PKGBASE=${PKGBASE}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/example.cfg ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/

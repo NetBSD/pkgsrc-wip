@@ -7,7 +7,7 @@ MASTER_SITES=	http://pywebsocket.googlecode.com/files/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/pywebsocket/
-COMMENT=  WebSocket server and extension for Apache HTTP Server for testing
+COMMENT=	WebSocket server and extension for Apache HTTP Server for testing
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/pywebsocket-0.7.9/src

@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trottersuzuki/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 http://trotter-suzuki-mpi.github.io/
+HOMEPAGE=	http://trotter-suzuki-mpi.github.io/
 COMMENT=	Massively parallel implementation of the Trotter-Suzuki decomposition
 LICENSE=	gnu-gpl-v3
 

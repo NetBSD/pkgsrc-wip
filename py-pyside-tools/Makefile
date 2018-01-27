@@ -5,7 +5,7 @@ DISTNAME=	tools-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-pyside-tools-${VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PySide/}
 GITHUB_PROJECT=	Tools
-EXTRACT_SUFX=   .tar.gz
+EXTRACT_SUFX=	.tar.gz
 CATEGORIES=	devel
 
 MAINTAINER=	rumko@netbsd.org
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/Tools-${VERSION}
 USE_TOOLS+=	gmake cmake pkg-config
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
-CMAKE_ARGS+=    -DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
 
 REPLACE_PYTHON+=	pyside-uic
 
@@ -28,8 +28,8 @@ REPLACE_PYTHON+=	pyside-uic
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
-PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} build

@@ -14,7 +14,7 @@ REPLACE_PERL+=	t/test.t
 
 DEPENDS+=	p5-Math-BigInteger-*:../../math/p5-Math-BigInteger
 
-PERL5_PACKLIST= auto/Math/FixedPrecision/.packlist
+PERL5_PACKLIST=	auto/Math/FixedPrecision/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

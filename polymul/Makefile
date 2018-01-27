@@ -11,13 +11,13 @@ HOMEPAGE=	http://code.google.com/p/polymul/
 COMMENT=	Fast multivariate polynomial multiplication in C++
 LICENSE=	mit
 
-NO_BUILD= yes
+NO_BUILD=	yes
 USE_LANGUAGES=	c++
 
 REPLACE_PYTHON+=	gentab.py
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
-INSTALLATION_DIRS= bin include share/doc/polymul
+INSTALLATION_DIRS=	bin include share/doc/polymul
 
 post-extract:
 	${MV} ${WRKSRC}/gentab.py ${WRKSRC}/gentab${PYVERSSUFFIX}

@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vispy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 http://vispy.org
+HOMEPAGE=	http://vispy.org
 COMMENT=	Interactive visualization in Python
 LICENSE=	modified-bsd
 

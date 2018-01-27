@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 13:57:26 asau Exp $
 #
 
-DISTNAME=	piquant-0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/piquant/}
-EXTRACT_SUFX=	.zip
+DISTNAME=		piquant-0.1
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=		math
+MASTER_SITES=		${MASTER_SITE_PYPI:=p/piquant/}
+EXTRACT_SUFX=		.zip
 # XXX: all text file are DOS style.
 # XXX: if future version install binary file,
 # XXX: please consider to use another method.

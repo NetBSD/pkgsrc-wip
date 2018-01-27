@@ -14,7 +14,7 @@ DEPENDS+=	p5-ExtUtils-MakeMaker>=0:../../devel/p5-ExtUtils-MakeMaker
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 
 
-PERL5_PACKLIST= auto/Catalyst/Plugin/Compress/Zlib/.packlist
+PERL5_PACKLIST=	auto/Catalyst/Plugin/Compress/Zlib/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

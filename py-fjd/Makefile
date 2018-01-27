@@ -15,7 +15,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-paramiko
 USE_TOOLS+=	bash:run
 USE_LANGUAGES=	# none
 
-REPLACE_BASH+=	 fjd/scripts/bgscreen
+REPLACE_BASH+=	fjd/scripts/bgscreen
 
 REPLACE_PYTHON+=	fjd/scripts/fjd-recruiter \
 					fjd/scripts/fjd-worker \

@@ -30,16 +30,16 @@ BUILD_DEFS+=		POSTOFFICE_GREYLIST
 	CONFIGURE_ARGS+=	--with-greylist
 .endif
 
-PKG_GROUPS=             mail
-PKG_GID.mail=           6
-PKG_USERS=              mail:mail
-PKG_UID.mail=           8
+PKG_GROUPS=		mail
+PKG_GID.mail=		6
+PKG_USERS=		mail:mail
+PKG_UID.mail=		8
 
 RCD_SCRIPTS=		postoffice
 
 INSTALLATION_DIRS=	${DESTDIR}${PREFIX}/share/examples/postoffice
-EGDIR=                  ${DESTDIR}${PREFIX}/share/examples/postoffice
-CONF_FILES=             ${EGDIR}/postoffice.cf ${PKG_SYSCONFDIR}/postoffice.cf
+EGDIR=			${DESTDIR}${PREFIX}/share/examples/postoffice
+CONF_FILES=		${EGDIR}/postoffice.cf ${PKG_SYSCONFDIR}/postoffice.cf
 
 OWN_DIRS=		${DESTDIR}${PREFIX}/sbin
 OWN_DIRS+=		${DESTDIR}${PKG_SYSCONFDIR}/virtual
@@ -48,7 +48,7 @@ OWN_DIRS+=		${VARBASE}/spool/virtual
 
 OWN_DIRS_PERMS=		${DESTDIR}${PKG_SYSCONFDIR}/virtual mail mail 0700
 OWN_DIRS_PERMS+=	${VARBASE}/spool/mqueue mail mail 0700
-OWN_DIRS_PERMS+=        ${VARBASE}/spool/virtual mail mail 0700
+OWN_DIRS_PERMS+=	${VARBASE}/spool/virtual mail mail 0700
 
 post-install:
 	sed -e 's:@PREFIX@:${PREFIX}:' \
