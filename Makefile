@@ -3925,6 +3925,7 @@ SUBDIR+=	re2-git
 SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
+SUBDIR+=	recidivm
 SUBDIR+=	recoll
 SUBDIR+=	recutils
 SUBDIR+=	redeclipse
