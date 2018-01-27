@@ -10,3 +10,4 @@ SHA1 (patch-kcms_desktoptheme_CMakeLists.txt) = 18f73dcc1b00f71f7485c8154d9a8840
 SHA1 (patch-kcms_emoticons_CMakeLists.txt) = d2edd60b36e27102efdb0d78986483c4c782633c
 SHA1 (patch-kcms_icons_CMakeLists.txt) = b6433da0618da4e099e88b06a359db698e9820b6
 SHA1 (patch-kcms_kfontinst_kcmfontinst_CMakeLists.txt) = a54f4f140227e15134d5b3d231c1f35652921df4
+SHA1 (patch-kcms_lookandfeel_CMakeLists.txt) = 69c453e8f8201b85674ad1267500b1fd8c1859b6

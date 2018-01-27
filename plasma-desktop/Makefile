@@ -28,6 +28,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/icons.knsrc \
 		${PKG_SYSCONFDIR}/xdg/icons.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kfontinst.knsrc \
 		${PKG_SYSCONFDIR}/xdg/kfontinst.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/lookandfeel.knsrc \
+		${PKG_SYSCONFDIR}/xdg/lookandfeel.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/plasma-themes.knsrc \
 		${PKG_SYSCONFDIR}/xdg/plasma-themes.knsrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/xcursor.knsrc \

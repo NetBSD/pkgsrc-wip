@@ -868,6 +868,7 @@ share/examples/kde-xdg/colorschemes.knsrc
 share/examples/kde-xdg/emoticons.knsrc
 share/examples/kde-xdg/icons.knsrc
 share/examples/kde-xdg/kfontinst.knsrc
+share/examples/kde-xdg/lookandfeel.knsrc
 share/examples/kde-xdg/plasma-themes.knsrc
 share/examples/kde-xdg/xcursor.knsrc
 share/examples/plasma-desktop/org.kde.fontinst.conf
