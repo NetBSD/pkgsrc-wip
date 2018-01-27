@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/doc
 CONFIGURE_ARGS+=	--with-pngdriver=${BUILDLINK_PREFIX.png}/lib
 
 PKG_DISTFILES_DIR=	emboss
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

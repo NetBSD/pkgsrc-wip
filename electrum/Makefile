@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONS_ACCEPTED= 27
 NO_BUILD=	yes
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-slowaes-[0-9]*:../../security/py-slowaes

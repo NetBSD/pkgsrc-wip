@@ -19,7 +19,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ENV+=		YELL_CFLAGS=-I${WRKSRC}/telepathy-yell
 CONFIGURE_ENV+=	\
-  YELL_LIBS="-L${WRKSRC}/telepathy-yell/telepathy-yell -ltelepathy-yell"
+	YELL_LIBS="-L${WRKSRC}/telepathy-yell/telepathy-yell -ltelepathy-yell"
 
 # see pkgsrc/security/mozilla-rootcerts-openssl
 CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt

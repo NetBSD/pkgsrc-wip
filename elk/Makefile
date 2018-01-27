@@ -8,15 +8,15 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://elk.sourceforge.net/
-COMMENT= 	All-electron full-potential linearised augmented-planewave
+COMMENT=	All-electron full-potential linearised augmented-planewave
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gnuplot>=4.2.6:../../graphics/gnuplot
 
 WRKSRC=		${WRKDIR}/elk
 
-MAKE_JOBS_SAFE=NO
-ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-*
+MAKE_JOBS_SAFE=		NO
+ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-*
 
 MAKEFILE_FILE=	make.inc
 USE_TOOLS+=	gmake bash:run

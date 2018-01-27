@@ -4,14 +4,14 @@
 DISTNAME=		ecb-2.40
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=		devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ecb/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecb/}
 
 MAINTAINER=		pho@cielonegro.org
 HOMEPAGE=		http://ecb.sourceforge.net/
 COMMENT=		Emacs Code Browser
 LICENSE=		gnu-gpl-v2
 
-USE_TOOLS=      find gmake makeinfo
+USE_TOOLS=		find gmake makeinfo
 INFO_FILES=		yes
 
 MAKE_FLAGS+=		EMACS=${EMACS_BIN}

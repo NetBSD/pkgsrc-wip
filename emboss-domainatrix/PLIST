@@ -31,12 +31,12 @@ share/EMBOSS/acd/fraggle.acd
 share/EMBOSS/acd/hetparse.acd
 share/EMBOSS/acd/hmmgen.acd
 share/EMBOSS/acd/interface.acd
-share/EMBOSS/acd/pdbparse.acd
 share/EMBOSS/acd/libscan.acd
-share/EMBOSS/acd/rocplot.acd
+share/EMBOSS/acd/pdbparse.acd
 share/EMBOSS/acd/pdbplus.acd
 share/EMBOSS/acd/pdbtosp.acd
 share/EMBOSS/acd/profgen.acd
+share/EMBOSS/acd/rocplot.acd
 share/EMBOSS/acd/scopalign.acd
 share/EMBOSS/acd/scopnr.acd
 share/EMBOSS/acd/scopparse.acd

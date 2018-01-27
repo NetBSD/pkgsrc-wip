@@ -1,11 +1,11 @@
 @comment $NetBSD: PLIST,v 1.1 2015/02/05 20:06:43 outpaddling Exp $
 bin/average.x
 bin/band_plot.x
-bin/bands_FS.x
 bin/bands.x
+bin/bands_FS.x
 bin/bgw2pw.x
-bin/cppp.x
 bin/cp.x
+bin/cppp.x
 bin/d3.x
 bin/dist.x
 bin/dos.x
@@ -16,8 +16,8 @@ bin/fqha.x
 bin/generate_vdW_kernel_table.x
 bin/initial_state.x
 bin/iotk
-bin/iotk_print_kinds.x
 bin/iotk.x
+bin/iotk_print_kinds.x
 bin/kpoints.x
 bin/kvecs_FS.x
 bin/lambda.x
@@ -26,8 +26,8 @@ bin/matdyn.x
 bin/neb.x
 bin/path_interpolation.x
 bin/pawplot.x
-bin/phcg.x
 bin/ph.x
+bin/phcg.x
 bin/plan_avg.x
 bin/plotband.x
 bin/plotproj.x
@@ -35,13 +35,13 @@ bin/plotrho.x
 bin/pmw.x
 bin/pp.x
 bin/projwfc.x
+bin/pw.x
 bin/pw2bgw.x
 bin/pw2gw.x
 bin/pw2wannier90.x
-bin/pwcond.x
 bin/pw_export.x
+bin/pwcond.x
 bin/pwi2xsf.x
-bin/pw.x
 bin/q2qstar.x
 bin/q2r.x
 bin/sumpdos.x

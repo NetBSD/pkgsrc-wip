@@ -13,9 +13,9 @@ CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 .if !empty(PKG_OPTIONS:Mshared)
-PLIST.shlibs=yes
+PLIST.shlibs=		yes
 CONFIGURE_ARGS+=	--enable-shared
 .else
-PLIST.statlibs=yes
+PLIST.statlibs=		yes
 CONFIGURE_ARGS+=	--disable-shared
 .endif

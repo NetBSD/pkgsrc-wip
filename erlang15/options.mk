@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.2 2015/02/24 08:54:28 fhajny Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
-PKG_SUPPORTED_OPTIONS=	java erlang-hipe
+PKG_OPTIONS_VAR=		PKG_OPTIONS.erlang
+PKG_SUPPORTED_OPTIONS=		java erlang-hipe
 PKG_OPTIONS_OPTIONAL_GROUPS=	odbc
 PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
 

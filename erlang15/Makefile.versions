@@ -66,8 +66,8 @@ _VERSIONS=					\
 PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
 
 .for name version in ${_VERSIONS}
-VERSION.${name}=${version}
-PLIST_SUBST+=	VERSION.${name}=${version}
+VERSION.${name}=	${version}
+PLIST_SUBST+=		VERSION.${name}=${version}
 .endfor
 
 # Generate PLIST

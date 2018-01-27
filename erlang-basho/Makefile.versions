@@ -65,7 +65,7 @@ _VERSIONS=					\
 PLIST_SUBST+=		VERSION=${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D_basho${DIST_VERSION_MINOR}}
 
 .for name version in ${_VERSIONS}
-VERSION.${name}=${version}
+VERSION.${name}=	${version}
 PLIST_SUBST+=		VERSION.${name}=${version}
 .endfor
 

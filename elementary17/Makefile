@@ -17,12 +17,12 @@ USE_TOOLS+=	autoconf automake gettext gmake pkg-config
 
 PKGCONFIG_OVERRIDE=	elementary.pc.in
 
-pre-configure:
-		cd ${WRKSRC} && ./autogen.sh
+MODULE_ARCH=		${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${LOWER_ARCH}
+PLIST_SUBST=		MODULE_ARCH=${MODULE_ARCH}
+PRINT_PLIST_AWK+=	{ gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 
-MODULE_ARCH=	${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${LOWER_ARCH}
-PLIST_SUBST=	MODULE_ARCH=${MODULE_ARCH}
-PRINT_PLIST_AWK+=        { gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../wip/eet/buildlink3.mk"

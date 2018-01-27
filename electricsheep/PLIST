@@ -1,12 +1,12 @@
 @comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:34 thomasklausner Exp $
 bin/electricsheep
 bin/electricsheep-voter
-bin/mpeg2dec_onroot
 bin/flam3-animate
 bin/flam3-convert
 bin/flam3-genome
 bin/flam3-render
-share/electricsheep/electricsheep-frown.png
-share/electricsheep/electricsheep-smile.png
+bin/mpeg2dec_onroot
 libexec/xscreensaver/config/electricsheep.xml
 man/man1/electricsheep.1
+share/electricsheep/electricsheep-frown.png
+share/electricsheep/electricsheep-smile.png

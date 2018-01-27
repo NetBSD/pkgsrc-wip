@@ -21,7 +21,7 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--enable-ncurses
 CONFIGURE_ARGS+=	--enable-cxx
 
-PKG_CFLAGS= 	 	# defined
+PKG_CFLAGS=		# defined
 PKGCONFIG_OVERRIDE+=	edb.pc.in
 
 CHECK_BUILTIN.db1:=	yes

@@ -5,7 +5,7 @@ DISTNAME=	espresso-5.0.2
 CATEGORIES=	science
 MASTER_SITES=	http://qe-forge.org/gf/download/frsrelease/116/403/
 # FIXME: Fetch only what's being built
-DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} \
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
                 SaX-2.0.2.tar.gz \
                 ${PLUGINS_DISTFILES}
 
@@ -23,10 +23,10 @@ USE_LANGUAGES=	c fortran
 
 # Adding -traditional to CPPFLAGS causes conftests to fail for gcc
 # CPPFLAGS+=	-P
-SUBST_CLASSES+=	cpp
-SUBST_STAGE.cpp=post-configure
-SUBST_FILES.cpp=make.sys
-SUBST_SED.cpp=	-e 's|CPPFLAGS[ \t]*=|CPPFLAGS = -P -traditional|g'
+SUBST_CLASSES+=		cpp
+SUBST_STAGE.cpp=	post-configure
+SUBST_FILES.cpp=	make.sys
+SUBST_SED.cpp=		-e 's|CPPFLAGS[ \t]*=|CPPFLAGS = -P -traditional|g'
 
 # Slave packages for gui xspectra gipaw w90 want yambo?
 # Some could be independent packages?
@@ -43,12 +43,11 @@ BUILD_TARGET=	all links
 
 # install/plugins_list
 PLUGINS_DISTFILES= \
-                atomic-5.0.2.tar.gz \
-                pwcond-5.0.2.tar.gz \
-                neb-5.0.2.tar.gz \
-                PHonon-5.0.2.tar.gz \
-                tddfpt-5.0.2.tar.gz \
-
+	atomic-5.0.2.tar.gz \
+	pwcond-5.0.2.tar.gz \
+	neb-5.0.2.tar.gz \
+	PHonon-5.0.2.tar.gz \
+	tddfpt-5.0.2.tar.gz
 DIST_SUBDIR=	espresso
 
 MASTER_SITES_BASE=	http://www.qe-forge.org/gf/download/frsrelease

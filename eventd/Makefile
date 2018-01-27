@@ -20,13 +20,13 @@ PKGCONFIG_OVERRIDE+=	server/libeventd/pkgconfig/libeventd.pc.in
 PKGCONFIG_OVERRIDE+=	server/libeventd/pkgconfig/libeventd-protocol-json.pc.in
 PKGCONFIG_OVERRIDE+=	server/libeventd-plugin/pkgconfig/libeventd-plugin.pc.in
 
-CONFIGURE_ARGS+= --disable-introspection
-CONFIGURE_ARGS+= --disable-websocket
-CONFIGURE_ARGS+= --disable-dns-sd
-CONFIGURE_ARGS+= --disable-ssdp
-CONFIGURE_ARGS+= --disable-nd-wayland
-CONFIGURE_ARGS+= --disable-im
-CONFIGURE_ARGS+= --disable-sound
+CONFIGURE_ARGS+=	--disable-introspection
+CONFIGURE_ARGS+=	--disable-websocket
+CONFIGURE_ARGS+=	--disable-dns-sd
+CONFIGURE_ARGS+=	--disable-ssdp
+CONFIGURE_ARGS+=	--disable-nd-wayland
+CONFIGURE_ARGS+=	--disable-im
+CONFIGURE_ARGS+=	--disable-sound
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.0

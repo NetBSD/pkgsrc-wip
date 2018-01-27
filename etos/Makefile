@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yesUSE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=          4.2
+GCC_REQD+=	4.2
 
 
 .include "../../graphics/glut/buildlink3.mk"

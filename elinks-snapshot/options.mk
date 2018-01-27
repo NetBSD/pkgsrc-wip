@@ -1,17 +1,17 @@
 # $NetBSD: options.mk,v 1.6 2015/08/12 19:46:44 atomicules Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
-PKG_SUPPORTED_OPTIONS+=	bittorrent nntp finger gopher
-PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-exmode expat
-PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec
-PKG_SUPPORTED_OPTIONS+=	kerberos
-PKG_SUPPORTED_OPTIONS+=	python
-PKG_OPTIONS_GROUP.tls=	gnutls ssl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.elinks
+PKG_SUPPORTED_OPTIONS+=		bittorrent nntp finger gopher
+PKG_SUPPORTED_OPTIONS+=		inet6 x11 elinks-exmode expat
+PKG_SUPPORTED_OPTIONS+=		elinks-html-highlight elinks-root-exec
+PKG_SUPPORTED_OPTIONS+=		kerberos
+PKG_SUPPORTED_OPTIONS+=		python
+PKG_OPTIONS_GROUP.tls=		gnutls ssl
 PKG_OPTIONS_GROUP.malloc=	boehm-gc elinks-fastmem
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_OPTIONS_OPTIONAL_GROUPS=	malloc
-PKG_SUGGESTED_OPTIONS=	ssl elinks-html-highlight elinks-exmode
-PKG_SUGGESTED_OPTIONS+=	expat boehm-gc inet6
+PKG_SUGGESTED_OPTIONS=		ssl elinks-html-highlight elinks-exmode
+PKG_SUGGESTED_OPTIONS+=		expat boehm-gc inet6
 
 .include "../../mk/bsd.options.mk"
 

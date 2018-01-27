@@ -8,7 +8,7 @@ MASTER_SITES=	http://gnome.eu.org/
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://gnome.eu.org/evo/index.php/Evolution_RSS_Reader_Plugin
 COMMENT=	Evolution rss reader plugin
-LICENSE=		gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gsed>=:../../textproc/gsed
 

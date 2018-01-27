@@ -22,8 +22,8 @@ do-build:
 	cd ${WRKSRC} && \
 	${EMACS_BIN} -batch -f batch-byte-compile *.el
 
-INSTALLATION_DIRS+= ${EMACS_LISPPREFIX}/elscreen
-INSTALLATION_DIRS+= share/doc/elscreen
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}/elscreen
+INSTALLATION_DIRS+=	share/doc/elscreen
 
 do-install:
 .for files in *.el *.elc

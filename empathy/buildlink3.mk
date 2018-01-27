@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	empathy
 .if !defined(EMPATHY_BUILDLINK3_MK)
 EMPATHY_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.empathy+= empathy>=3.12.10
-BUILDLINK_PKGSRCDIR.empathy?=   ../../wip/empathy
+BUILDLINK_API_DEPENDS.empathy+=	empathy>=3.12.10
+BUILDLINK_PKGSRCDIR.empathy?=	../../wip/empathy
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../wip/evolution-data-server/buildlink3.mk"

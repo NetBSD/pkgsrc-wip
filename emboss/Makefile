@@ -10,7 +10,7 @@ DISTFILES=		#empty
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://emboss.sourceforge.net/
-COMMENT=	European Molecular Biology Open Software Suite
+COMMENT=		European Molecular Biology Open Software Suite
 
 DEPENDS+=		emboss-base>=2.9.0:../../wip/emboss-base
 DEPENDS+=		emboss-domainatrix>=1.0.0:../../wip/emboss-domainatrix

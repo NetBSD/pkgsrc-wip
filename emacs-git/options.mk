@@ -6,15 +6,15 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
 PKG_SUPPORTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml
 # xaw3d is only valid with tookit = xaw
 
-PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
-PKG_OPTIONS_GROUP.window-system= x11 nextstep
+PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
+PKG_OPTIONS_GROUP.window-system=	x11 nextstep
 # tempted to have 'nox11' :-)
 
-PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
+PKG_OPTIONS_OPTIONAL_GROUPS+=	toolkit
 #  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk, gtk2,
 #                          gtk3, lucid or athena, motif, no)
 # gtk in next line implies gtk2, xaw = athena = lucid
-PKG_OPTIONS_GROUP.toolkit= gtk motif xaw lucid
+PKG_OPTIONS_GROUP.toolkit=	gtk motif xaw lucid
 # gtk is default in the logic below (even not included in SUGGESTED_=
 # gconf, gtk and xft2 will be ingnored for nextstep even shown as selected.
 

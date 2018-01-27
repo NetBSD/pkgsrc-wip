@@ -14,7 +14,7 @@ DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 
 REPLACE_PERL=	eot
 
-NO_BUILD=	yes
+NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
 
 do-install:

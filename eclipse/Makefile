@@ -11,15 +11,15 @@ HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
 LICENSE=	eclipse-license
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14 openjdk7-bin openjdk7
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14 openjdk7-bin openjdk7
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 
-USE_TOOLS+= perl
-REPLACE_PERL+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/antRun.pl
-REPLACE_PERL+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/complete-ant-cmd.pl
-REPLACE_PERL+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/runant.pl
-REPLACE_PYTHON+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/runant.py
+USE_TOOLS+=		perl
+REPLACE_PERL+=		plugins/org.apache.ant_1.8.3.v20120321-1730/bin/antRun.pl
+REPLACE_PERL+=		plugins/org.apache.ant_1.8.3.v20120321-1730/bin/complete-ant-cmd.pl
+REPLACE_PERL+=		plugins/org.apache.ant_1.8.3.v20120321-1730/bin/runant.pl
+REPLACE_PYTHON+=	plugins/org.apache.ant_1.8.3.v20120321-1730/bin/runant.py
 
 # XXX: Others might work but might need significant tweaking
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-*

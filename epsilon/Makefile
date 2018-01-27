@@ -15,7 +15,7 @@ COMMENT=	Small, display independent, and quick thumbnailing library
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config
-CONFIGURE_ARGS=		--enable-thumbnailer-xine
+CONFIGURE_ARGS=	--enable-thumbnailer-xine
 
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"

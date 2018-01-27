@@ -1,17 +1,17 @@
 # $NetBSD: Makefile,v 1.3 2012/09/28 22:07:33 asau Exp $
 #
 
-DISTNAME=		session-2.3
-PKGNAME=		emacs-${DISTNAME}
-CATEGORIES=		misc
+DISTNAME=	session-2.3
+PKGNAME=	emacs-${DISTNAME}
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=${PKGBASE}/}
 
-MAINTAINER=		pho@cielonegro.org
-HOMEPAGE=		http://emacs-session.sourceforge.net/
-COMMENT=		Session Management for Emacs
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pho@cielonegro.org
+HOMEPAGE=	http://emacs-session.sourceforge.net/
+COMMENT=	Session Management for Emacs
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/session
+WRKSRC=		${WRKDIR}/session
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS+=		${EMACS_LISPPREFIX}

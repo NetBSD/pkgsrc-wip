@@ -24,10 +24,10 @@ CVS_ROOT.emacs-w3m=	:pserver:anonymous:@cvs.namazu.org:/storage/cvsroot
 
 HAS_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=--with-emacs=${EMACS_BIN}
-CONFIGURE_ARGS+=--with-icondir=${ICONDIR}
-CONFIGURE_ARGS+=--infodir=${PREFIX}/info
-BUILD_TARGET=	default
+CONFIGURE_ARGS+=	--with-emacs=${EMACS_BIN}
+CONFIGURE_ARGS+=	--with-icondir=${ICONDIR}
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+BUILD_TARGET=		default
 INSTALL_TARGET=		install install-icons install-icons30
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -37,7 +37,7 @@ WRKSRC=			${WRKDIR}/emacs-w3m
 
 PLIST_SUBST+=		ETCDIR=${ETCDIR}
 
-SUBST_CLASSES+=	fix-icondir
+SUBST_CLASSES+=			fix-icondir
 SUBST_STAGE.fix-icondir=	pre-configure
 SUBST_FILES.fix-icondir=	Makefile.in w3m.el w3mhack.el
 SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g'
