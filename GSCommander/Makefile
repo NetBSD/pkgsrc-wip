@@ -13,8 +13,8 @@ COMMENT=	Simple Unix command monitor for GNUstep
 WRKSRC=		${WRKDIR}/GSCommander
 USE_LANGUAGES=	objc
 NO_CONFIGURE=	yes
-MAKE_FILE=GNUmakefile
-USE_TOOLS+=gmake
+MAKE_FILE=	GNUmakefile
+USE_TOOLS+=	gmake
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../x11/gnustep-gui/buildlink3.mk"

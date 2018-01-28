@@ -6,9 +6,9 @@ BUILDLINK_TREE+=	OpenGLUT
 OPENGLUT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.OpenGLUT+=	OpenGLUT>=0.6.0
-BUILDLINK_PKGSRCDIR.OpenGLUT?=	../../wip/OpenGLUT
+BUILDLINK_PKGSRCDIR.OpenGLUT?=		../../wip/OpenGLUT
 
-MESA_REQD+=     6.0
+MESA_REQD+=	6.0
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

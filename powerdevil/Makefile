@@ -23,7 +23,7 @@ CONF_FILES+=	${PREFIX}/share/examples/powerdevil/org.kde.powerdevil.backlighthel
 CONF_FILES+=	${PREFIX}/share/examples/powerdevil/org.kde.powerdevil.discretegpuhelper.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.powerdevil.discretegpuhelper.conf
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 INSTALLATION_DIRS+=	share/examples/powerdevil
 
 .include "../../devel/kidletime/buildlink3.mk"

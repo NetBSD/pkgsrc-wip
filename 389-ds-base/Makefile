@@ -21,15 +21,15 @@ DEPENDS+=	p5-mozldap-[0-9]*:../../wip/p5-mozldap
 CONFIGURE_ARGS+=	--with-netsnmp=${PREFIX}
 CONFIGURE_ARGS+=	--with-db=${PREFIX}
 CONFIGURE_ARGS+=	--with-sasl=${PREFIX}
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
-CPPFLAGS+=              -I${BUILDLINK_DIR}/include/nspr
-CFLAGS+=                -I${BUILDLINK_DIR}/include/nspr
-CPPFLAGS+=              -I${BUILDLINK_DIR}/include/nss/nss
-CFLAGS+=                -I${BUILDLINK_DIR}/include/nss/nss
-CPPFLAGS+=              -I${BUILDLINK_DIR}/include/ldap
-CFLAGS+=                -I${BUILDLINK_DIR}/include/ldap
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include/nspr
+CFLAGS+=		-I${BUILDLINK_DIR}/include/nspr
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include/nss/nss
+CFLAGS+=		-I${BUILDLINK_DIR}/include/nss/nss
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include/ldap
+CFLAGS+=		-I${BUILDLINK_DIR}/include/ldap
 
-EGDIR=                  ${PREFIX}/share/examples/389-ds-base
+EGDIR=			${PREFIX}/share/examples/389-ds-base
 CONF_FILES+=		${EGDIR}/dirsrv/config/certmap.conf ${PKG_SYSCONFDIR}/dirsrv/config/certmap.conf
 CONF_FILES+=		${EGDIR}/dirsrv/config/slapd-collations.conf ${PKG_SYSCONFDIR}/dirsrv/config/slapd-collations.conf
 CONF_FILES+=		${EGDIR}/dirsrv/schema/00core.ldif ${PKG_SYSCONFDIR}/dirsrv/schema/00core.ldif
@@ -59,7 +59,7 @@ CONF_FILES+=		${EGDIR}/dirsrv/schema/60sabayon.ldif ${PKG_SYSCONFDIR}/dirsrv/sch
 CONF_FILES+=		${EGDIR}/dirsrv/schema/60sudo.ldif ${PKG_SYSCONFDIR}/dirsrv/schema/60sudo.ldif
 CONF_FILES+=		${EGDIR}/dirsrv/schema/60trust.ldif ${PKG_SYSCONFDIR}/dirsrv/schema/60trust.ldif
 CONF_FILES+=		${EGDIR}/dirsrv/schema/99user.ldif ${PKG_SYSCONFDIR}/dirsrv/schema/99user.ldif
-INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "options.mk"
 

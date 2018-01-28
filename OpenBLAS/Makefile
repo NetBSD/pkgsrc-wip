@@ -22,12 +22,12 @@ NO_CONFIGURE=	yes
 
 # You may override the autodetected thread count limit.
 # Default is detected from build host.
-BUILD_DEFS+=    OPENBLAS_THREAD_LIMIT
+BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
 
 MAKE_ENV=	PREFIX=${PREFIX}
 MAKE_ENV+=	CC=${CCPATH}
 MAKE_ENV+=	FC=${FCPATH}
-MAKE_ENV+=     NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
+MAKE_ENV+=	NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
 
 # Those work further on MAKE_ENV.
 .include "options.mk"

@@ -35,13 +35,13 @@ AS_PATH:=		${_dir_}/${AS}
 .    if !empty(AS_PATH:M${LOCALBASE}/*)
 USE_BINUTILS=		YES
 .    else
-AS_VERSION!= \
+AS_VERSION!=		\
 	${AS_PATH} --version | ${AWK} '{			\
 	    split($$3, v, /[.]/);				\
 	    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
 	    exit;						\
 	}'
-USE_BINUTILS!= \
+USE_BINUTILS!=		\
 	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
 MAKEFLAGS+=		USE_BINUTILS=${USE_BINUTILS:Q}

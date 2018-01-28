@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.1.1.1 2009/08/26 20:36:01 udontknow Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.389-ds-base
-PKG_SUPPORTED_OPTIONS=  kerberos
+PKG_OPTIONS_VAR=	PKG_OPTIONS.389-ds-base
+PKG_SUPPORTED_OPTIONS=	kerberos
 
 .include "../../mk/bsd.options.mk"
 

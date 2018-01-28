@@ -3,7 +3,7 @@
 PKGNAME=	ARC-1.1.4
 DISTNAME=	ibest-ARC-v1.1.4-beta-0-g3831cb8
 CATEGORIES=	biology
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=ibest/ARC/tarball/master/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ibest/ARC/tarball/master/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ibest.github.io/ARC/
 COMMENT=	Genomics pipeline for de novo assemblies
@@ -29,7 +29,7 @@ REPLACE_PYTHON+=	ARC/process_runner.py
 REPLACE_PYTHON+=	ARC/spawn.py
 REPLACE_PYTHON+=	ARC/config.py
 REPLACE_PYTHON+=	ARC/functions.py
-REPLACE_PYTHON+=        bin/ARC
+REPLACE_PYTHON+=	bin/ARC
 REPLACE_PYTHON+=	test_data/unit_tests.py
 
 DEPENDS+=	blat>=3.5:../../biology/blat

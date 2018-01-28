@@ -13,7 +13,7 @@ HOMEPAGE=	http://zbackup.org/
 COMMENT=	Globally-deduplicating backup tool
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=     cmake
+USE_TOOLS+=	cmake
 
 WRKSRC=		${WRKDIR}/zbackup-1.4.4
 USE_CMAKE=	yes

@@ -52,11 +52,11 @@ SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_impl.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename.la,libglapi.la,g'
 
 # Replace /etc/drirc with ${PREFIX}/etc/drirc
-SUBST_CLASSES+=			drirc
-SUBST_STAGE.drirc=		pre-configure
-SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc references
-SUBST_FILES.drirc+=		src/mesa/drivers/dri/common/xmlconfig.c
-SUBST_SED.drirc+=		 -e 's|/etc|${PREFIX}/etc|g'
+SUBST_CLASSES+=		drirc
+SUBST_STAGE.drirc=	pre-configure
+SUBST_MESSAGE.drirc=	Fixing hardcoded /etc/drirc references
+SUBST_FILES.drirc+=	src/mesa/drivers/dri/common/xmlconfig.c
+SUBST_SED.drirc+=	-e 's|/etc|${PREFIX}/etc|g'
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
@@ -83,7 +83,7 @@ CONFIGURE_ENV+=		ac_cv_prog_PYTHON2=${PYTHONBIN}
 # which breaks the build with -Wl,--no-undefined.
 # So we piggy back on -lpthread and inject -lc after it.
 .if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
-BUILDLINK_TRANSFORM+=   l:pthread:pthread:c l:m:m:c
+BUILDLINK_TRANSFORM+=	l:pthread:pthread:c l:m:m:c
 .endif
 
 # Handle platforms without exp2
