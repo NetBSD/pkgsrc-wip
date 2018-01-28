@@ -9,7 +9,7 @@ COMMENT=	Subversion binding for Haskell
 LICENSE=	public-domain
 
 CONFIGURE_ARGS+= \
-	--configure-option=--with-subversion-prefix=${PREFIX:Q}
+	--configure-option=--with-subversion-prefix=${PREFIX}
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"

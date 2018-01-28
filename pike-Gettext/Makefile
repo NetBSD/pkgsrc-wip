@@ -12,6 +12,6 @@ MODULE_SO=	Gettext.so
 .include "../../wip/pike-core/Makefile.modules_common"
 
 .include "../../converters/libiconv/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv:Q}
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

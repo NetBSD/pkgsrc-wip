@@ -17,7 +17,7 @@ NO_BUILD=		YES
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/html2latex ${DESTDIR}${PREFIX:Q}/bin/html2latex
-	${INSTALL_MAN} ${WRKSRC:Q}/html2latex.1 ${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/html2latex ${DESTDIR}${PREFIX}/bin/html2latex
+	${INSTALL_MAN} ${WRKSRC}/html2latex.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

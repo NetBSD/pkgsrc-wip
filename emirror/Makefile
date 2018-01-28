@@ -15,7 +15,7 @@ COMMENT=	FTP mirroring tool with nice HTML logfiles
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--with-python=${PYTHONBIN:Q}
 
 post-extract:

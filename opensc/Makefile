@@ -30,7 +30,7 @@ USE_TOOLS+=		autoreconf autoconf automake
 AUTOCONF_REQD=		2.60
 AUTOMAKE_REQD=		1.10
 pre-configure:
-	cd ${WRKSRC:Q} && \
+	cd ${WRKSRC} && \
 	./bootstrap \
 		-s ${OPENSC_VERSION_SUFFIX:Q} \
 		-r ${OPENSC_VERSION_REVISION:Q}
@@ -43,7 +43,7 @@ pre-configure:
 #CONFIGURE_ARGS+=	--disable-sensitive-logging
 
 # Is this necessary (and non-default)?
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 # This is perhaps an upstream bug.
 CONFIGURE_ENV+=		PCSC_CFLAGS=-I${PREFIX}/include/PCSC

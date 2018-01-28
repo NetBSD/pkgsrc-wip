@@ -30,7 +30,7 @@ SUBST_SED.path+=	-e 's,@EGDIR@,${EGDIR},g'
 
 EGDIR=			${PREFIX}/share/examples/pal
 
-CONF_FILES=		${EGDIR:Q}/pal.conf ${PKG_SYSCONFDIR:Q}/pal.conf
+CONF_FILES=		${EGDIR}/pal.conf ${PKG_SYSCONFDIR}/pal.conf
 
 MAKE_JOBS_SAFE=		no
 
@@ -39,10 +39,10 @@ USE_NCURSES=		yes
 CFLAGS+=		-DCURSES
 
 do-build:
-	cd ${WRKSRC:Q} && make
+	cd ${WRKSRC} && make
 
 do-install:
-	cd ${WRKSRC:Q} && make install-no-rm
+	cd ${WRKSRC} && make install-no-rm
 
 
 .include "../../devel/ncurses/buildlink3.mk"

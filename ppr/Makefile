@@ -23,11 +23,11 @@ EGDIR=			${PREFIX}/share/examples
 PKG_SYSCONFSUBDIR=	ppr
 PPR_CONFDIR=		${PKG_SYSCONFDIR}
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 # Use the EGDIR here?
 #CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec

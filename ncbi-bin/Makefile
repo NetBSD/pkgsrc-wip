@@ -13,7 +13,7 @@ COMMENT=		Portable modular software for molecular biology
 
 WRKSRC=			${WRKDIR}/ncbi
 
-MAKE_ENV+=		PREFIX=${PREFIX:Q}
+MAKE_ENV+=		PREFIX=${PREFIX}
 
 INSTALLATION_DIRS=	bin libexec/cgi-bin
 

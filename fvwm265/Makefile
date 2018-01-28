@@ -30,10 +30,10 @@ INSTALLATION_DIRS+=	lib/X11/fvwm2/pixmaps
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 EVAL_PREFIX+=		XPMDIR=xpm
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/lib/X11/fvwm2
-CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/lib/X11
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
 CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR:Q}/include
-CONFIGURE_ARGS+=	--with-imagepath=${PREFIX:Q}/lib/X11/fvwm2/pixmaps:${X11BASE:Q}/include/X11/bitmaps:${X11BASE:Q}/include/X11/pixmaps
+CONFIGURE_ARGS+=	--with-imagepath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
 
 # We don't want to have CPP from the buildlink directory
 CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP=${CPP:Q}
@@ -41,24 +41,24 @@ CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP=${CPP:Q}
 CONFIGURE_ENV+=		ac_cv_path_PERL=${PERL5:Q}
 
 post-extract:
-	mkdir ${WRKDIR:Q}/icons
-	cd ${WRKDIR:Q}/icons && tar -xzf ${DISTDIR:Q}/fvwm_icons.tgz
+	mkdir ${WRKDIR}/icons
+	cd ${WRKDIR}/icons && tar -xzf ${DISTDIR}/fvwm_icons.tgz
 
 post-install:
 	${INSTALL_DATA} \
-		${WRKDIR:Q}/icons/fvwm_icons/*.xpm \
-		${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/pixmaps
+		${WRKDIR}/icons/fvwm_icons/*.xpm \
+		${DESTDIR}${PREFIX}/lib/X11/fvwm2/pixmaps
 	${INSTALL_DATA} \
-		${WRKSRC:Q}/sample.fvwmrc/decor_examples \
-		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc-sample-* \
-		${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2
+		${WRKSRC}/sample.fvwmrc/decor_examples \
+		${WRKSRC}/sample.fvwmrc/system.fvwm2rc-sample-* \
+		${DESTDIR}${PREFIX}/lib/X11/fvwm2
 	${INSTALL_DATA} \
-		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc \
-		${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example
-	if [ ! -f ${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ]; then \
+		${WRKSRC}/sample.fvwmrc/system.fvwm2rc \
+		${DESTDIR}${PREFIX}/lib/X11/fvwm2/system.fvwm2rc.example
+	if [ ! -f ${DESTDIR}${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ]; then \
 		${INSTALL_DATA} \
-			${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example \
-			${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ; \
+			${DESTDIR}${PREFIX}/lib/X11/fvwm2/system.fvwm2rc.example \
+			${DESTDIR}${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ; \
 	fi
 
 .include "options.mk"

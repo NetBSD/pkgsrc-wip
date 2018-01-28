@@ -18,7 +18,7 @@ CONFLICTS+=	joe-[0-9]*
 BUILD_DEPENDS+=	mksh-[0-9]*:../../shells/mksh
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/share/examples
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

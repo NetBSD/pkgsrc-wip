@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 USE_LIBTOOL=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 LIBS+=			${LIBOSSAUDIO}
 

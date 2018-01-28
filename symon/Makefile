@@ -7,8 +7,8 @@ MAINTAINER=		charlie@rubberduck.com
 HOMEPAGE=		http://www.xs4all.nl/~wpd/symon/
 COMMENT=		System monitoring suite
 
-MAKE_ENV+=		RRDDIR=${PREFIX:Q}
-MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MAKE_ENV+=		RRDDIR=${PREFIX}
+MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR}
 
 SYMON_HOME?=		${VARBASE}/db/symon
 EGDIR=			share/examples/symon

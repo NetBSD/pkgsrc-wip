@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-libctl=${PREFIX}/share/libctl \
 			--prefix=${MPI_PREFIX:Q} \
 			--mandir=${MPI_PREFIX:Q}/man
 
-MESSAGE_SUBST+=		PREFIX=${PREFIX:Q}
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 .include "../../wip/mpb-openmpi/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"

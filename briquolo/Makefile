@@ -25,10 +25,10 @@ CONFIGURE_ARGS+=	--includedir=${BUILDLINK_PREFIX.MesaLib}/include/GL
 post-install:
 	cd ${WRKSRC}/data/data; set -e; \
 	for FILE in `ls -A | ${GREP} -v -E '(.xvpics|Makefile)'`; do \
-		${INSTALL_DATA} "$$FILE" ${DESTDIR:Q}${PREFIX:Q}/share/briquolo/data/; \
+		${INSTALL_DATA} "$$FILE" ${DESTDIR}${PREFIX}/share/briquolo/data/; \
 	done; \
 	for FILE in .xvpics/*; do \
-		${INSTALL_DATA} $$FILE ${DESTDIR:Q}${PREFIX:Q}/share/briquolo/data/$$FILE; \
+		${INSTALL_DATA} $$FILE ${DESTDIR}${PREFIX}/share/briquolo/data/$$FILE; \
 	done
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

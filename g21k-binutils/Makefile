@@ -13,6 +13,6 @@ COMMENT=		Assemblre and linker tools for Analog Devices 21k series DSPs
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-adidsp=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-adidsp=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"

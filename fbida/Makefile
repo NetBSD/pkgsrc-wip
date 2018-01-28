@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.kraxel.org/blog/linux/fbida/
 COMMENT=		Image viewer and editor
 
 MAKE_FILE=		GNUmakefile
-MAKE_ENV+=		prefix=${PREFIX:Q}
+MAKE_ENV+=		prefix=${PREFIX}
 USE_TOOLS+=		gmake perl
 
 # The jpeg/90 directory doesn't exist yet.

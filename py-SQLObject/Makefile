@@ -12,7 +12,7 @@ HOMEPAGE=	http://sqlobject.sourceforge.net/
 COMMENT=	Allows you to translate RDBMS table rows into Python objects
 LICENSE=	gnu-lgpl-v2
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S|.tar||:Q}
+WRKSRC=		${WRKDIR}/${DISTNAME:S|.tar||}
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=		yes

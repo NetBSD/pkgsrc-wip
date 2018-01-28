@@ -32,7 +32,7 @@ USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 USE_GNU_CONFIGURE_HOST=	no
 
-CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=avr
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--disable-versioned-doc

@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libosip-prefix=${BUILDLINK_PREFIX.libosip2}
 
 EGDIR=		${PREFIX}/share/examples/siproxd

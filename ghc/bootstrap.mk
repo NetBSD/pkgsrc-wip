@@ -77,19 +77,19 @@ USE_BUILTIN.iconv=	no
 USE_TOOLS+=	gmake xzcat xz
 
 pre-configure:
-	@${TEST} -f ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE} || \
+	@${TEST} -f ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE} || \
 	${FAIL_MSG}  "Put your trusted bootstrap archive as ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE}"
 
 	@${PHASE_MSG} "Extracting bootstrapping compiler for ${PKGNAME}"
-	${RUN} ${MKDIR} ${WRKDIR:Q}/build-extract
-	${RUN} cd ${WRKDIR:Q}/build-extract && \
-		${EXTRACT_CMD_DEFAULT} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE}
+	${RUN} ${MKDIR} ${WRKDIR}/build-extract
+	${RUN} cd ${WRKDIR}/build-extract && \
+		${EXTRACT_CMD_DEFAULT} ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE}
 
 # It is important to install the stage-0 compiler with our rpath flags
 # configured, otherwise it will produce executables with no rpath and
 # fail in the configure phase.
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
-	${RUN} cd ${WRKDIR:Q}/build-extract/${PKGNAME_NOREV}-boot && \
+	${RUN} cd ${WRKDIR}/build-extract/${PKGNAME_NOREV}-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
 		${MAKE_PROGRAM} install
@@ -193,22 +193,22 @@ pre-bootstrap: wrapper
 
 ${WRKDIR}/lndir:
 	@${PHASE_MSG} "Building lndir(1) to duplicate the source tree."
-	cd ${WRKSRC:Q}/utils/lndir && \
+	cd ${WRKSRC}/utils/lndir && \
 		${PKG_CC:Q} lndir.c -o ${.TARGET}
 
 ${WRKDIR}/stamp-lndir-boot: ${WRKDIR}/lndir
 	@${PHASE_MSG} "Duplicating the source tree for bootstrapping ${PKGNAME_NOREV}"
-	${MKDIR} ${WRKDIR:Q}/build-boot
-	cd ${WRKDIR:Q}/build-boot && \
-		${WRKDIR}/lndir -silent ../${PKGNAME_NOREV:Q}
+	${MKDIR} ${WRKDIR}/build-boot
+	cd ${WRKDIR}/build-boot && \
+		${WRKDIR}/lndir -silent ../${PKGNAME_NOREV}
 	${TOUCH} ${.TARGET}
 
 # For terminfo_CONFIGURE_OPTS, see
 # https://ghc.haskell.org/trac/ghc/ticket/10096
 ${WRKDIR}/stamp-configure-boot: ${WRKDIR}/stamp-lndir-boot
 	@${PHASE_MSG} "Configuring bootstrapping compiler ${PKGNAME_NOREV}"
-	${MKDIR} ${WRKDIR:Q}/build-boot
-	cd ${WRKDIR:Q}/build-boot && \
+	${MKDIR} ${WRKDIR}/build-boot
+	cd ${WRKDIR}/build-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure ${CONFIGURE_ARGS}
 	${TOUCH} ${.TARGET}
 
@@ -216,7 +216,7 @@ ${WRKDIR}/build-boot/mk/build.mk: ${WRKDIR}/stamp-configure-boot
 	@${PHASE_MSG} "Configuring ${.TARGET}"
 	${ECHO} "BuildFlavour = quick" >${.TARGET}
 	${ECHO} "DYNAMIC_GHC_PROGRAMS = NO" >>${.TARGET}
-	${CAT} ${WRKDIR:Q}/build-boot/mk/build.mk.sample >>${.TARGET}
+	${CAT} ${WRKDIR}/build-boot/mk/build.mk.sample >>${.TARGET}
 	${ECHO} "INTEGER_LIBRARY = integer-simple" >>${.TARGET}
 	${ECHO} "BIN_DIST_NAME = ghc-\$$(ProjectVersion)-boot" >>${.TARGET}
 	${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
@@ -225,14 +225,14 @@ ${WRKDIR}/build-boot/mk/build.mk: ${WRKDIR}/stamp-configure-boot
 
 ${WRKDIR}/stamp-build-boot: ${WRKDIR}/build-boot/mk/build.mk
 	@${PHASE_MSG} "Building bootstrapping compiler ${PKGNAME_NOREV}"
-	${RUN} cd ${WRKDIR:Q}/build-boot && ${BUILD_MAKE_CMD}
+	${RUN} cd ${WRKDIR}/build-boot && ${BUILD_MAKE_CMD}
 	${TOUCH} ${.TARGET}
 
 ${WRKDIR}/${BOOT_ARCHIVE}: ${WRKDIR}/stamp-build-boot
 	@${PHASE_MSG} "Creating binary distribution of bootstrapping ${PKGNAME_NOREV}"
-	${RUN} cd ${WRKDIR:Q}/build-boot && \
+	${RUN} cd ${WRKDIR}/build-boot && \
 		${BUILD_MAKE_CMD} TAR_COMP=xz XZ_CMD="xz -9ev" binary-dist
-	${MV} -f ${WRKDIR:Q}/build-boot/${BOOT_ARCHIVE} ${.TARGET}
+	${MV} -f ${WRKDIR}/build-boot/${BOOT_ARCHIVE} ${.TARGET}
 
 .PHONY: post-bootstrap
 post-bootstrap:

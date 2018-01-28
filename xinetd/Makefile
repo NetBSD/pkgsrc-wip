@@ -22,12 +22,12 @@ CONFIGURE_ARGS+=	--with-loadavg
 BUILD_DEFS+=		XINETD_USE_TCPWRAPPER
 XINETD_USE_TCPWRAPPER?=	NO
 .if !empty(XINETD_USE_TCPWRAPPER:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers:Q}/lib
+CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}/lib
 .endif
 
 RCD_SCRIPTS=		xinetd
 # Some weird quoting in Makefile.in makes this necessary.
-CPPFLAGS+=		-DDEFAULT_CONFIG_FILE="\"${PKG_SYSCONFDIR:Q}/etc/xinetd.conf\""
+CPPFLAGS+=		-DDEFAULT_CONFIG_FILE="\"${PKG_SYSCONFDIR}/etc/xinetd.conf\""
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		xinetd/xconv.pl

@@ -114,7 +114,7 @@ CONFIGURE_ARGS+=	--enable-no-root
 .endif
 
 .if !empty(PKG_OPTIONS:Mboehm-gc)
-CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc:Q}
+CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
 .  include "../../devel/boehm-gc/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Melinks-fastmem)
 CONFIGURE_ARGS+=	--enable-fastmem

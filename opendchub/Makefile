@@ -21,18 +21,18 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	share/examples share/doc
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${EGDIR:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/Samplescripts/functestbot.plz \
-		${DESTDIR:Q}${EGDIR:Q}
+		${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/Samplescripts/subtestbot.plz \
-		${DESTDIR:Q}${EGDIR:Q}
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${DOCDIR:Q}
+		${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR:Q}
 	${INSTALL_DATA} ${WRKSRC}/Documentation/configfiles \
-		${DESTDIR:Q}${DOCDIR:Q}
+		${DESTDIR}${DOCDIR:Q}
 	${INSTALL_DATA} ${WRKSRC}/Documentation/general \
-		${DESTDIR:Q}${DOCDIR:Q}
+		${DESTDIR}${DOCDIR:Q}
 	${INSTALL_DATA} ${WRKSRC}/Documentation/scriptdoc \
-		${DESTDIR:Q}${DOCDIR:Q}
+		${DESTDIR}${DOCDIR:Q}
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"

@@ -12,7 +12,7 @@ COMMENT=	Emacs front end to the Music Player Daemon
 
 USE_TOOLS+=	gmake
 
-MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
+MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX}
 
 do-build:
 	cd ${WRKSRC} && \

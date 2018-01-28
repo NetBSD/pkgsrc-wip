@@ -19,8 +19,8 @@ INSTALLATION_DIRS+=	bin
 
 do-install:
 	set -e;								\
-	cd ${WRKSRC:Q} && for f in *.pl; do				\
-		${INSTALL_SCRIPT} "./$$f" ${DESTDIR}${PREFIX:Q}/bin/;		\
+	cd ${WRKSRC} && for f in *.pl; do				\
+		${INSTALL_SCRIPT} "./$$f" ${DESTDIR}${PREFIX}/bin/;		\
 	done
 
 .include "../../mk/bsd.pkg.mk"

@@ -40,7 +40,7 @@ REPLACE_FILES.php=	scripts/import_vtodos.php \
 	scripts/upgrades/create_missing_add_histories_sql.php
 
 MESSAGE_SUBST+=	NAGDIR=${NAGDIR:Q}
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR?=	httpd
 USE_PKGINSTALL=		YES

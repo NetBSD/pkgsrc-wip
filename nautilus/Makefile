@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	libnautilus-extension/libnautilus-extension.pc.in
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 GCONF_SCHEMAS=		apps_nautilus_preferences.schemas
 

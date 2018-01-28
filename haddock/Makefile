@@ -21,17 +21,17 @@ USE_TOOLS+=		gmake perl
 DOCDIR=			${PREFIX}/share/doc/haddock
 
 do-configure:
-	cd ${WRKSRC:Q} && runhaskell Setup.lhs configure                \
+	cd ${WRKSRC} && runhaskell Setup.lhs configure                \
 	  --ghc								\
-	  --prefix=${PREFIX:Q}						\
-	  --with-compiler=${PREFIX:Q}/bin/ghc				\
-	  --with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
+	  --prefix=${PREFIX}						\
+	  --with-compiler=${PREFIX}/bin/ghc				\
+	  --with-hc-pkg=${PREFIX}/bin/ghc-pkg
 
 do-build:
-	cd ${WRKSRC:Q} && runhaskell Setup.lhs build
+	cd ${WRKSRC} && runhaskell Setup.lhs build
 
 do-install:
-	cd ${WRKSRC:Q} && runhaskell Setup.lhs install
+	cd ${WRKSRC} && runhaskell Setup.lhs install
 
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

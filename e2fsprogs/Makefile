@@ -15,7 +15,7 @@ INFO_FILES=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 # Only build fsck(8) on platforms that need it.
 PLIST_VARS+=		fsck
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-fsck
 
 EGDIR=			${PREFIX}/share/examples/ext2fs
 CONF_FILES+=		${EGDIR}/mke2fs.conf ${PKG_SYSCONFDIR}/mke2fs.conf
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} root_sysconfdir=${EGDIR:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} root_sysconfdir=${EGDIR}
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Give correct path for man page

@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--without-matlab
-CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline:Q}
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--disable-midi
 

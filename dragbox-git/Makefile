@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 GIT_REPOSITORIES=	dragbox
 GIT_REPO.dragbox=	git://repo.or.cz/dragbox.git
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S|-${PKGVERSION_NOREV}||:Q}
+WRKSRC=		${WRKDIR}/${DISTNAME:S|-${PKGVERSION_NOREV}||}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_TOOLS+=	autoconf

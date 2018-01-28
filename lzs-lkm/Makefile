@@ -13,12 +13,12 @@ COMMENT=		NetBSD kernel module for LZS decompression with PPP
 DEPENDS+=		pppd>=2.4.3:../../net/pppd
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
-MESSAGE_SUBST+=		PREFIX=${PREFIX:Q}
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	lkm
 
-WRKSRC=			${WRKDIR:Q}/ppp-lzs-1.2
+WRKSRC=			${WRKDIR}/ppp-lzs-1.2
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,6 +51,6 @@ INSTALLATION_DIRS=	lkm
 
 do-install:
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 \
-		${WRKSRC:Q}/lkm/lzs.o ${DESTDIR}${PREFIX:Q}/lkm/lzs.o
+		${WRKSRC}/lkm/lzs.o ${DESTDIR}${PREFIX}/lkm/lzs.o
 
 .include "../../mk/bsd.pkg.mk"

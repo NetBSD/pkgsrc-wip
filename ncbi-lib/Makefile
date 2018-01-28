@@ -13,7 +13,7 @@ COMMENT=		Portable, modular software for molecular biology
 
 WRKSRC=			${WRKDIR}/ncbi
 
-MAKE_ENV+=		PREFIX=${PREFIX:Q}
+MAKE_ENV+=		PREFIX=${PREFIX}
 
 post-extract:
 	${MV} ${WRKSRC}/make/makedis.csh ${WRKSRC}/make/makedis.csh.in

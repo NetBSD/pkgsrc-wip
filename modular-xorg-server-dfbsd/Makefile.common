@@ -25,7 +25,7 @@ OWN_DIRS+=		${VARBASE}/log
 OWN_DIRS+=		${XKB_OUTPUT_DIR}
 XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
 
 # .if !empty(USE_TOOLS:Mauto*)
@@ -47,7 +47,7 @@ CONFIGURE_ENV+=		ac_cv_tls=no
 CONFIGURE_ARGS+=	--disable-glx-tls
 .  endif
 .endif
-CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
+CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM}
 
 CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts/X11
 

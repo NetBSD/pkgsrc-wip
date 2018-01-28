@@ -21,8 +21,8 @@ USE_TOOLS+=		gmake intltool perl
 CONFIGURE_ARGS+=	--disable-rebuild-man
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 
 GCONF_SCHEMAS+=	zapping.schemas
 

@@ -20,7 +20,7 @@ MAKE_ENV+=		DOC_DIR=${PREFIX}/share/doc/sysstat
 MAKE_ENV+=		NLS_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
 MAKE_ENV+=		SYSCONFIG_DIR=${PREFIX}/share/examples/sysstat
 MAKE_ENV+=		MAN_DIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=		MAN_GROUP=${MANGRP:Q}
+MAKE_ENV+=		MAN_GROUP=${MANGRP}
 MAKE_ENV+=		IOCONF=${PKG_SYSCONFDIR}/sysstat/sysstat.ioconf
 
 CONF_FILES=		${PREFIX}/share/examples/sysstat/sysstat.ioconf \

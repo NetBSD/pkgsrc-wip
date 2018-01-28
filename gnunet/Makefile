@@ -28,7 +28,7 @@ LDFLAGS+=		-lpthread -lintl
 
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=	--without-gtk
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 post-patch:
 	cd ${WRKSRC} && for f in contrib/gnunet.* src/include/gnunet_util.h doc/man/*.?; do \

@@ -46,8 +46,8 @@ MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 
 CONFIGURE_ARGS+=	--enable-samplerate
 CONFIGURE_ARGS+=	--disable-tcpwrap
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 # Use native atomic ops on NetBSD >= 5.0, otherwise
 # fallback to libatomic_ops

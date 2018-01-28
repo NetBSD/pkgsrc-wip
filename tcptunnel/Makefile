@@ -11,6 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 do-configure:
 	${RUN} cd ${WRKSRC} && \
-		${SH} ./configure --prefix=${PREFIX:Q}
+		${SH} ./configure --prefix=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"

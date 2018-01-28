@@ -38,8 +38,8 @@ PLIST_SRC=	${PKGDIR}/../emacs-git/PLIST
 WRKSRC=		${WRKDIR}/emacs
 
 CONFIGURE_ARGS+=	--without-x	# nox11
-CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 
 BUILD_DEFS+=		VARBASE
@@ -52,8 +52,8 @@ BUILD_DEFS+=		GAMEDATAMODE
 #SUBST_SED.test_equal=		-e 's/ == / = /g'
 
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
-CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE}
 
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs

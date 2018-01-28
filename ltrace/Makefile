@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 WRKSRC=				${WRKDIR}/ltrace-0.3.36
 USE_TOOLS+=			gmake
 GNU_CONFIGURE=			yes
-CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 # maybe following should be done in devel/libelf/buildlink3.mk instead
 #CFLAGS+=			-I${BUILDLINK_PREFIX.libelf}/include/libelf
 CPPFLAGS+=			-I${BUILDLINK_PREFIX.libelf}/include/libelf

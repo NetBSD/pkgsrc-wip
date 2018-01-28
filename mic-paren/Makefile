@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
-MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
+MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX}
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile ${DISTNAME}.el

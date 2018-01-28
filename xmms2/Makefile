@@ -30,7 +30,7 @@ PY_PATCHPLIST=		yes
 .include "options.mk"
 
 do-configure:
-	cd ${WRKSRC:Q} && \
+	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
 			--destdir=${DESTDIR} --prefix=${PREFIX} \
 			--conf-prefix="${EXTRA_INCLUDES}" \

@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.aolserver.com/
 COMMENT=	Postgres database access module for aolserver
 
 
-MAKE_FLAGS+=	POSTGRES=${PREFIX:Q} INST=/${PREFIX:Q}/include/nsd \
+MAKE_FLAGS+=	POSTGRES=${PREFIX} INST=/${PREFIX}/include/nsd \
 		TCL_CC=gcc
 CFLAGS+=	-I/usr/pkg/include/nsd/include
 

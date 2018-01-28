@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit

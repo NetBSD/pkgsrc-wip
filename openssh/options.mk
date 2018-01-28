@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	kerberos hpn-patch pam
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-kerberos5=${KRB5BASE:Q}
+CONFIGURE_ARGS+=	--with-kerberos5=${KRB5BASE}
 .  if ${KRB5_TYPE} == "mit-krb5"
 CONFIGURE_ENV+=		ac_cv_search_k_hasafs=no
 .  endif

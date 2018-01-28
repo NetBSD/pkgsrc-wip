@@ -35,7 +35,7 @@ do-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/usr/share/lxpanel/images/lubuntu-background.png \
 		${DESTDIR}${PREFIX}/share/lxpanel/images/netbsd-light-desktop-background.png
-	cd  ${WRKSRC:Q}/usr &&	\
+	cd  ${WRKSRC}/usr &&	\
 	pax -rw -s ',.*.orig$$,,' \
 		share/themes/NetBSD-default ${DESTDIR}${PREFIX}/
 

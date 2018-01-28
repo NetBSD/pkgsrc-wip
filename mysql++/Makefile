@@ -13,7 +13,7 @@ COMMENT=	Complex C++ API for MySQL${MYSQL_VER}
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-mysql=${BUILDLINK_PREFIX.mysql-client:Q} --disable-examples
+CONFIGURE_ARGS=	--with-mysql=${BUILDLINK_PREFIX.mysql-client} --disable-examples
 #USE_LDCONFIG=	yes
 
 USE_LANGUAGES+=	c c++

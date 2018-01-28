@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-libspf2
 .else
 .include "../../mail/libspf2/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-libspf2=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-libspf2=${PREFIX}
 .endif
 
 ###
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--disable-libGeoIP
 .else
 .include "../../net/GeoIP/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-libGeoIP=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-libGeoIP=${PREFIX}
 .endif
 
 ###
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--disable-openldap
 .include "../../www/curl/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-openldap=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-openldap=${PREFIX}
 .endif
 
 ###
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--disable-dkim
 DEPENDS+=		dkim-milter>=2.6:../../mail/dkim-milter
 .include "../../mail/dkim-milter/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-libdkim=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-libdkim=${PREFIX}
 .endif
 
 ###
@@ -78,7 +78,7 @@ CONFIGURE_ARGS+=	--disable-p0f
 .else
 DEPENDS+=		p0f-[0-9]*:../../security/p0f
 
-CONFIGURE_ARGS+=	--with-p0f=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-p0f=${PREFIX}
 .endif
 
 ###

@@ -23,8 +23,8 @@ PKG_USERS=		${OPENSCEP_USER}:${OPENSCEP_GROUP}
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR?=	openscep # it installs more subdirectories under this
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-openscep-dir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-openscep-dir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=/openscep
 CONFIGURE_ARGS+=	--with-cgi-dir=/cgi-bin/openscep
 CONFIGURE_ARGS+=	--with-html-install-dir=${PREFIX}/share/httpd/htdocs/openscep

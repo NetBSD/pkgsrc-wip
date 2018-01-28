@@ -67,7 +67,7 @@ PKG_SYSCONFSUBDIR=	ssh
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mantype=man
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR:Q}
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
@@ -190,7 +190,7 @@ post-configure:
 		${SED} -e '/HAVE_ECDSA_START/,/HAVE_ECDSA_STOP/d' \
 			${FILESDIR}/sshd.sh > ${WRKDIR}/sshd.sh; \
 	fi
-	${SED} -e 's,@VARBASE@,${VARBASE:Q},g' \
+	${SED} -e 's,@VARBASE@,${VARBASE},g' \
 		< ${FILESDIR}/org.openssh.sshd.sb.in \
 		> ${WRKDIR}/org.openssh.sshd.sb
 

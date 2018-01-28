@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--disable-device-hal --disable-device-udev \
 			--disable-mount-hal --disable-mount-udisks
 
 PKG_SYSCONFSUBDIR=	enlightenment
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/enlightenment
 CONF_FILES=		${EGDIR}/sysactions.conf \

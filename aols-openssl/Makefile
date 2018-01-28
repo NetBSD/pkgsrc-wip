@@ -14,8 +14,8 @@ COMMENT=		OpenSSL module for aolserver
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
 
-MAKE_FLAGS+=		INST=/${PREFIX:Q}/include/nsd \
-			OPENSSL=${PREFIX:Q} \
+MAKE_FLAGS+=		INST=/${PREFIX}/include/nsd \
+			OPENSSL=${PREFIX} \
 			TCL_CC=gcc
 CFLAGS+=		-I/usr/pkg/include/nsd/include
 

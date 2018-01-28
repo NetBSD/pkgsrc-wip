@@ -57,7 +57,7 @@ USE_BUILTIN.MesaLib=	yes
 .      for dep in ${BUILDLINK_API_DEPENDS.MesaLib}
 .        if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
 USE_BUILTIN.MesaLib!=							\
-	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.MesaLib:Q}; then \
+	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.MesaLib}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\

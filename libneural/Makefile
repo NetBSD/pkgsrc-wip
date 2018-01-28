@@ -10,7 +10,7 @@ COMMENT=	C++ library for creating 3-layer backpropagation neural networks
 
 
 CONFIGURE_PREFIX+=	${PREFIX}
-MAKE_FLAGS+=		prefix=${PREFIX:Q}
+MAKE_FLAGS+=		prefix=${PREFIX}
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

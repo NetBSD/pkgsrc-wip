@@ -53,16 +53,16 @@ MKDIRS=			access_control servers bp bp/functions database \
 			rbac rbac/cmds scep
 OWN_DIRS_PERMS+=	${VARBASE}/openca ${APACHE_USER} ${APACHE_GROUP} 0750
 MESSAGE_SUBST+=		OPENCA_HOST=${OPENCA_HOST:Q} \
-			PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+			PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 RCD_SCRIPTS=		openca
 
 PKG_USERS=		${OPENCA_USER:Q}:${OPENCA_GROUP:Q}::OpenCA\ user
 PKG_GROUPS=		${OPENCA_GROUP:Q}
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-lib-prefix=${PREFIX}/lib/openca
-CONFIGURE_ARGS+=	--with-var-prefix=${VARBASE:Q}/openca
-CONFIGURE_ARGS+=	--with-etc-prefix=${EGDIR:Q}
+CONFIGURE_ARGS+=	--with-var-prefix=${VARBASE}/openca
+CONFIGURE_ARGS+=	--with-etc-prefix=${EGDIR}
 CONFIGURE_ARGS+=	--with-openca-prefix=${PREFIX}/share/openca
 CONFIGURE_ARGS+=	--with-openca-user=${OPENCA_USER:Q}
 CONFIGURE_ARGS+=	--with-openca-group=${OPENCA_GROUP:Q}
@@ -75,7 +75,7 @@ CONFIGURE_ARGS+=	--disable-external-modules
 
 .for f in ${SERVERS}
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
-			${ROOT_USER:Q} ${APACHE_GROUP:Q} 0644
+			${ROOT_USER} ${APACHE_GROUP:Q} 0644
 EGFILES+=		${EGDIR}/${f}
 .endfor
 

@@ -17,16 +17,16 @@ DEPENDS+=	pkgfind>=20050804:../../pkgtools/pkgfind
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1
 
 do-extract:
-	${MKDIR} ${WRKSRC:Q}
+	${MKDIR} ${WRKSRC}
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'				\
 		-e 's,@PKGDB@,${PKG_DBDIR},g'				\
 		-e 's,@PKGSRC@,${PKGSRCDIR},g'				\
-	< ${FILESDIR:Q}/pkg_fake					\
-	> ${WRKSRC:Q}/pkg_fake
-	${CP} ${FILESDIR:Q}/pkg_fake.1 ${WRKSRC:Q}/
+	< ${FILESDIR}/pkg_fake					\
+	> ${WRKSRC}/pkg_fake
+	${CP} ${FILESDIR}/pkg_fake.1 ${WRKSRC}/
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/pkg_fake ${DESTDIR}${PREFIX:Q}/sbin/
-	${INSTALL_MAN} ${WRKSRC:Q}/pkg_fake.1 ${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man1/
+	${INSTALL_SCRIPT} ${WRKSRC}/pkg_fake ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/pkg_fake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

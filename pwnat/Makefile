@@ -22,15 +22,15 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/${PKGBASE}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
 
 post-build:
-	${PREFIX:Q}/bin/rst2man.py ${FILESDIR:Q}/pwnat.8.rst > ${WRKSRC:Q}/pwnat.8
+	${PREFIX}/bin/rst2man.py ${FILESDIR}/pwnat.8.rst > ${WRKSRC}/pwnat.8
 
 do-install:
-	${INSTALL_DATA}    ${WRKSRC:Q}/COPYING-pingtunnel ${DESTDIR:Q}${PREFIX:Q}/share/doc/${PKGBASE:Q}
-	${INSTALL_DATA}    ${WRKSRC:Q}/Changes            ${DESTDIR:Q}${PREFIX:Q}/share/doc/${PKGBASE:Q}
-	${INSTALL_DATA}    ${WRKSRC:Q}/README             ${DESTDIR:Q}${PREFIX:Q}/share/doc/${PKGBASE:Q}
-	${INSTALL_DATA}    ${WRKSRC:Q}/README-udptunnel   ${DESTDIR:Q}${PREFIX:Q}/share/doc/${PKGBASE:Q}
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/pwnat              ${DESTDIR:Q}${PREFIX:Q}/sbin
-	${INSTALL_MAN}     ${WRKSRC:Q}/pwnat.8            ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man8
+	${INSTALL_DATA}    ${WRKSRC}/COPYING-pingtunnel ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA}    ${WRKSRC}/Changes            ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA}    ${WRKSRC}/README             ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA}    ${WRKSRC}/README-udptunnel   ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_PROGRAM} ${WRKSRC}/pwnat              ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN}     ${WRKSRC}/pwnat.8            ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../wip/mk/git-package.mk"
 .include "../../lang/python/pyversion.mk"

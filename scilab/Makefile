@@ -31,13 +31,13 @@ CONFIGURE_ARGS+=	--with-tk-library=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=	--with-tk-include=${BUILDLINK_PREFIX.tk}/include
 CONFIGURE_ENV+=		TCL_CONFIG_SH=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ENV+=		TK_CONFIG_SH=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
-CONFIGURE_ENV+=		CC_LDFLAGS=${X11_LDFLAGS:Q}\ ${COMPILER_RPATH_FLAG:Q}${BUILDLINK_PREFIX.tk:Q}/lib
-CONFIGURE_ENV+=		FC_LDFLAGS=${X11_LDFLAGS:Q}\ ${COMPILER_RPATH_FLAG:Q}${BUILDLINK_PREFIX.tk:Q}/lib
+CONFIGURE_ENV+=		CC_LDFLAGS=${X11_LDFLAGS:Q}\ ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tk}/lib
+CONFIGURE_ENV+=		FC_LDFLAGS=${X11_LDFLAGS:Q}\ ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tk}/lib
 
 # override HOME to avoid picking up a bad ${HOME}/.scilab during the build
-MAKE_ENV+=		HOME=${WRKSRC:Q}
+MAKE_ENV+=		HOME=${WRKSRC}
 MAKE_ENV+=		PVM_ROOT=${PVM_ROOT:Q}
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 
 # FIXME -- this ugly hack will go away on newer versions of scilab where the build
 # system has been improved significantly see:
@@ -51,7 +51,7 @@ CFLAGS+=		-DG95_FORTRAN=1
 
 PVM_ROOT?=		${LOCALBASE}/pvm3
 CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT:Q}
-CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
+CONFIGURE_ENV+=		X11BASE=${X11BASE}
 PLIST_SUBST+=		SCIBASE=${SCIBASE:Q}
 
 UNWRAP_FILES+=		Makemex config/configuration config/Makeso.incl
@@ -125,7 +125,7 @@ GCC_REQD+=		2.95.3
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
 # fail if SCI is set to anything.
-MAKE_ENV+=	SCI=${WRKSRC:Q}
+MAKE_ENV+=	SCI=${WRKSRC}
 do-test:
 	cd ${WRKSRC}/examples && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \

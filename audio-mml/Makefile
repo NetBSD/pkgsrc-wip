@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	tclsh wish # XXX verify
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-MAKE_ENV+=	EGDIR=${EGDIR:Q}
+MAKE_ENV+=	EGDIR=${EGDIR}
 
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-tcltk=${WISH}

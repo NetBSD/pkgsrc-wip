@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.eblong.com/zarf/glulx/index.html
 COMMENT=	Interpreter for Glulx text adventures
 
 WRKSRC=		${WRKDIR}/glulxe
-MAKE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR:Q}
+MAKE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR}
 
 PKG_OPTIONS_VAR=PKG_OPTIONS.glulxe
 .include "../../wip/glkloader/glk-options.mk"

@@ -16,8 +16,8 @@ ONLY_FOR_PLATFORM=	Linux-*-*	# This is the Linux init
 
 
 USE_TOOLS+=		gmake
-MAKE_ENV+=		ROOT=${PREFIX:Q} ROOT_GROUP=${ROOT_GROUP:Q} \
-			ROOT_USER=${ROOT_USER:Q}
+MAKE_ENV+=		ROOT=${PREFIX} ROOT_GROUP=${ROOT_GROUP} \
+			ROOT_USER=${ROOT_USER}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sysvinit

@@ -20,10 +20,10 @@ DEPENDS+=		bash-[0-9]*:../../shells/bash
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
-			--with-cups-backend=${PREFIX:Q}/libexec/cups/backend \
-			--with-sane-backend=${PREFIX:Q}/lib/sane \
-			--with-sane-etc=${PREFIX:Q}/etc/sane.d \
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
+			--with-cups-backend=${PREFIX}/libexec/cups/backend \
+			--with-sane-backend=${PREFIX}/lib/sane \
+			--with-sane-etc=${PREFIX}/etc/sane.d \
 			--with-usb=libusb \
 			--without-snmp \
 			--without-qt

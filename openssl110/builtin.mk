@@ -92,7 +92,7 @@ BUILDLINK_API_DEPENDS.openssl?=	openssl>=1.0.1c
 .      for dep_ in ${BUILDLINK_API_DEPENDS.openssl}
 .        if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 USE_BUILTIN.openssl!=							\
-	if ${PKG_ADMIN} pmatch ${dep_:Q} ${BUILTIN_PKG.openssl:Q}; then \
+	if ${PKG_ADMIN} pmatch ${dep_:Q} ${BUILTIN_PKG.openssl}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\

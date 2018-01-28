@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_DATA} README.txt ${DESTDIR}${PREFIX}/share/doc/iwidgets/
 	cd ${WRKSRC}/demos && \
 	for FILE in `ls -1 | ${GREP} -v -E '(html|images)'`; do \
-		${INSTALL_DATA} "$$FILE" ${DESTDIR:Q}${PREFIX:Q}/share/examples/iwidgets/; \
+		${INSTALL_DATA} "$$FILE" ${DESTDIR}${PREFIX}/share/examples/iwidgets/; \
 	done && \
 	${INSTALL_DATA} images/* ${DESTDIR}${PREFIX}/share/examples/iwidgets/images/; \
 	cd ${WRKSRC}/demos/html && \

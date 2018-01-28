@@ -18,13 +18,13 @@ BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS=		# reset
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 GNU_CONFIGURE_LIBDIR=	${PREFIX}/cross/${CYGWIN_TARGET:Q}/lib
 GNU_CONFIGURE_INFODIR=	${PREFIX}/cross/${CYGWIN_TARGET:Q}/info
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/cross/${CYGWIN_TARGET:Q}/share
 #ONFIGURE_ARGS+=	--mandir=${PREFIX}/cross/${CYGWIN_TARGET:Q}/man
-CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q}/cross
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/cross
 CONFIGURE_ARGS+=	--target=${CYGWIN_TARGET:Q}
 # following line to avoid getting
 #    make: exec(i386--netbsdelf-ar) failed (No such file or directory)

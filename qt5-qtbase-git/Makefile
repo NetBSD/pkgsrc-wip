@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/qtproject
 
 .if defined(MAKE_JOBS)
 .  if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
-CONFIGURE_ENV+=		MAKE_FLAGS=-j${MAKE_JOBS:Q}
+CONFIGURE_ENV+=		MAKE_FLAGS=-j${MAKE_JOBS}
 .  endif
 .endif
 HAS_CONFIGURE=		yes

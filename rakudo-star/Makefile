@@ -23,7 +23,7 @@ PLIST_SRC+=		PLIST.shared
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
-CONFIGURE_ARGS=		--prefix=${PREFIX:Q} --backends=moar
+CONFIGURE_ARGS=		--prefix=${PREFIX} --backends=moar
 
 .include "../../devel/MoarVM/buildlink3.mk"
 .include "../../wip/nqp/buildlink3.mk"

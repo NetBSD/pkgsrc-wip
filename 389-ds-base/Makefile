@@ -21,7 +21,7 @@ DEPENDS+=	p5-mozldap-[0-9]*:../../wip/p5-mozldap
 CONFIGURE_ARGS+=	--with-netsnmp=${PREFIX}
 CONFIGURE_ARGS+=	--with-db=${PREFIX}
 CONFIGURE_ARGS+=	--with-sasl=${PREFIX}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include/nspr
 CFLAGS+=		-I${BUILDLINK_DIR}/include/nspr
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include/nss/nss

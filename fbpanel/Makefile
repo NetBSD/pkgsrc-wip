@@ -25,8 +25,8 @@ CONFIGURE_ARGS+=	--cpu=off
 PLIST_SUBST+=		CPUPLUGIN="@comment "
 .endif
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-MAKE_ENV+=		PKGMANDIR=${PKGMANDIR:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+MAKE_ENV+=		PKGMANDIR=${PKGMANDIR}
 MANCOMPRESSED=		yes
 
 .include "../../x11/libXmu/buildlink3.mk"

@@ -14,8 +14,8 @@ BUILD_DIRS=		src/libmpg123
 INSTALL_DIRS=		src/libmpg123
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC:Q}/libmpg123.pc \
-		${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/libmpg123.pc \
+		${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "mpg123-options.mk"

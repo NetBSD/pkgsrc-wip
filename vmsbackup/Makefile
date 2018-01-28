@@ -12,7 +12,7 @@ HOMEPAGE=		http://garbo.uwasa.fi/pub/unix/vmsbackup/
 COMMENT=		Utility to read VMS backup tapes
 
 BUILD_TARGET=		vmsbackup
-MAKE_FLAGS+=		PREFIX=${DESTDIR}${PREFIX:Q}
+MAKE_FLAGS+=		PREFIX=${DESTDIR}${PREFIX}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

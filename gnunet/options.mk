@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mbdb)
 BDB_ACCEPTED=		db4 db3 db2
 .include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-bdb=${BDBBASE:Q}
+CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 GNUNET_PLIST_ADD+=	lib/libgnunetafs_database_bdb.la
 .else
 CONFIGURE_ARGS+=	--without-bdb
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--without-gdbm
 
 .if !empty(PKG_OPTIONS:Mtdb)
 .include "../../databases/tdb/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-tdb=${BDBBASE:Q}
+CONFIGURE_ARGS+=	--with-tdb=${BDBBASE}
 GNUNET_PLIST_ADD+=	lib/libgnunetafs_database_tdb.la
 .else
 CONFIGURE_ARGS+=	--without-tdb

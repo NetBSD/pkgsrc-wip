@@ -87,7 +87,7 @@ PLIST.mysql=		yes
 .if !empty(PKG_OPTIONS:Mpostgres)
 PKGCONFIG_OVERRIDE+=	libgda-postgres-4.0.pc.in
 BUILD_DIRS+=		providers/postgres
-CONFIGURE_ARGS+=	--with-postgres=${PGSQL_PREFIX:Q}
+CONFIGURE_ARGS+=	--with-postgres=${PGSQL_PREFIX}
 .  include "../../mk/pgsql.buildlink3.mk"
 PLIST.postgres=		yes
 .else

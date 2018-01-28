@@ -25,7 +25,7 @@ SUBST_STAGE.ldl=	post-patch
 SUBST_SED.ldl=		-e 's,LIBS=,\#LIBS,'
 .endif
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 GIT_REPOSITORIES=	tcc
 GIT_REPO.tcc=		http://repo.or.cz/tinycc.git

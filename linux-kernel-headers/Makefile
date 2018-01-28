@@ -13,16 +13,16 @@ PLIST_SRC+=	${PKGDIR}/PLIST.common
 INSTALLATION_DIRS=	include
 
 do-build:
-	cd ${WRKSRC:Q} && ${SETENV} ${MAKE_ENV} ${GMAKE} include/linux/version.h
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} include/linux/version.h
 
 do-install:
-	cd ${WRKSRC:Q}/include && pax -rw -pe linux ${DESTDIR}${PREFIX:Q}/include
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/include/asm
-	${RM} ${DESTDIR}${PREFIX:Q}/include/asm-generic
-	${LN} -s ${PREFIX:Q}/include/asm ${DESTDIR}${PREFIX:Q}/include/asm-generic
-	cd ${WRKSRC:Q}/include/asm-${LOWER_ARCH:Q} && \
-		pax -rw -pe . ${DESTDIR}${PREFIX:Q}/include/asm
-	cd ${WRKSRC:Q}/include/asm-generic && \
-		pax -rw -pe . ${DESTDIR}${PREFIX:Q}/include/asm
+	cd ${WRKSRC}/include && pax -rw -pe linux ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/asm
+	${RM} ${DESTDIR}${PREFIX}/include/asm-generic
+	${LN} -s ${PREFIX}/include/asm ${DESTDIR}${PREFIX}/include/asm-generic
+	cd ${WRKSRC}/include/asm-${LOWER_ARCH:Q} && \
+		pax -rw -pe . ${DESTDIR}${PREFIX}/include/asm
+	cd ${WRKSRC}/include/asm-generic && \
+		pax -rw -pe . ${DESTDIR}${PREFIX}/include/asm
 
 .include "../../mk/bsd.pkg.mk"

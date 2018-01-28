@@ -14,22 +14,22 @@ LICENSE=	gnu-gpl-v2
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 do-configure:
-	cd ${WRKSRC:Q} &&						\
+	cd ${WRKSRC} &&						\
 	runhaskell Setup.hs configure					\
 	  --ghc								\
-	  --prefix=${PREFIX:Q}						\
-	  --with-compiler=${PREFIX:Q}/bin/ghc				\
-	  --with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
+	  --prefix=${PREFIX}						\
+	  --with-compiler=${PREFIX}/bin/ghc				\
+	  --with-hc-pkg=${PREFIX}/bin/ghc-pkg
 
 do-build:
-	cd ${WRKSRC:Q} && runhaskell Setup.hs build
+	cd ${WRKSRC} && runhaskell Setup.hs build
 
 do-install:
-	cd ${WRKSRC:Q} && runhaskell Setup.hs install
+	cd ${WRKSRC} && runhaskell Setup.hs install
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR:Q}
-	cd ${WRKSRC:Q}/c2hs/tests && ${INSTALL_DATA} * ${EGDIR:Q}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}/c2hs/tests && ${INSTALL_DATA} * ${EGDIR}
 
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

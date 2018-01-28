@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 USE_TOOLS+=	perl python
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 #CONFIGURE_ARGS+=	--disable-django
 #CONFIGURE_ARGS+=	--disable-system-openssl
 

@@ -12,7 +12,7 @@ COMMENT=		Java interface for BlueZ stack
 
 USE_TOOLS=	gmake
 USE_JAVA=	YES
-MAKE_ENV=	JDK_HOME=${PKG_JAVA_HOME:Q}
+MAKE_ENV=	JDK_HOME=${PKG_JAVA_HOME}
 
 WRKSRC=		${WRKDIR}/src
 

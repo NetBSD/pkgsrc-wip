@@ -12,7 +12,7 @@ COMMENT=		Musepack (MPC) audio file decoder
 
 USE_TOOLS+=		gmake
 
-MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
+MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO}
 
 .include "../../mk/bsd.prefs.mk"
 

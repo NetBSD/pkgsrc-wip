@@ -73,7 +73,7 @@ post-build:
 	cd ${WRKSRC} && ${RM} -f contrib/sb-cover/test-output/*
 
 do-install:
-	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR} ${SH} install.sh
+	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR} INSTALL_ROOT=${PREFIX} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
 	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/asdf-install/installer.lisp.orig
 	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/sb-posix/posix-tests.lisp.orig
 	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/sb-posix/test-output/write-test.txt

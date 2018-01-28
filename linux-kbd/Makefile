@@ -19,7 +19,7 @@ HAS_CONFIGURE=		YES
 USE_TOOLS+=		gmake msgfmt # and xgettext
 USE_PKGLOCALEDIR=	YES
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=/man
 
 .if !exists(/usr/bin/lex)

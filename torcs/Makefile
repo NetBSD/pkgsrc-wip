@@ -22,8 +22,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	bash gmake
 
-CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib${LIBABISUFFIX:Q}
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib${LIBABISUFFIX:Q}
 
 REPLACE_BASH+=	robotgen
 REPLACE_BASH+=	src/linux/torcs.in

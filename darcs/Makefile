@@ -12,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 CONFIGURE_ARGS+= -fforce-char8-encoding
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--extra-include-dirs=${PREFIX:Q}/include
-CONFIGURE_ARGS+=	--extra-lib-dirs=${PREFIX:Q}/lib
+CONFIGURE_ARGS+=	--extra-include-dirs=${PREFIX}/include
+CONFIGURE_ARGS+=	--extra-lib-dirs=${PREFIX}/lib
 
 .include "../../wip/mk/haskell.mk"
 .include "../../converters/libiconv/buildlink3.mk"

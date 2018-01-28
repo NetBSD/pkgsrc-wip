@@ -9,7 +9,7 @@ HAS_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--prefix=/usr/pkg
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR:Q}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONF_FILES=		${PREFIX}/share/doc/mxallowd/samples/mxallowd.conf ${PKG_SYSCONFDIR}/mxallowd.conf
 RCD_SCRIPTS+=		mxallowd
 

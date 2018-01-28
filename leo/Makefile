@@ -21,23 +21,23 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 post-extract:
-	${RM} -rf ${WRKSRC:Q}/scripts/CVS
-	${RM} -rf ${WRKSRC:Q}/extensions/Pmw/Pmw_1_2/tests/CVS
-	${RM} -rf ${WRKSRC:Q}/extensions/Pmw/Pmw_1_2/lib/CVS
-	${RM} -rf ${WRKSRC:Q}/extensions/Pmw/Pmw_1_2/doc/CVS
-	${RM} -rf ${WRKSRC:Q}/extensions/Pmw/Pmw_1_2/demos/CVS
-	${RM} -rf ${WRKSRC:Q}/extensions/Pmw/Pmw_1_2/contrib/CVS
-	${RM} -rf ${WRKSRC:Q}/extensions/Pmw/Pmw_1_2/bin/CVS
-	${RM} -rf ${WRKSRC:Q}/doc/html/tigris/CVS
-	${RM} -rf ${WRKSRC:Q}/doc/html/CVS
-	${RM} -rf ${WRKSRC:Q}/Icons/CVS
+	${RM} -rf ${WRKSRC}/scripts/CVS
+	${RM} -rf ${WRKSRC}/extensions/Pmw/Pmw_1_2/tests/CVS
+	${RM} -rf ${WRKSRC}/extensions/Pmw/Pmw_1_2/lib/CVS
+	${RM} -rf ${WRKSRC}/extensions/Pmw/Pmw_1_2/doc/CVS
+	${RM} -rf ${WRKSRC}/extensions/Pmw/Pmw_1_2/demos/CVS
+	${RM} -rf ${WRKSRC}/extensions/Pmw/Pmw_1_2/contrib/CVS
+	${RM} -rf ${WRKSRC}/extensions/Pmw/Pmw_1_2/bin/CVS
+	${RM} -rf ${WRKSRC}/doc/html/tigris/CVS
+	${RM} -rf ${WRKSRC}/doc/html/CVS
+	${RM} -rf ${WRKSRC}/Icons/CVS
 
 pre-install:
-	${RM} -rf ${WRKSRC:Q}/install.orig
+	${RM} -rf ${WRKSRC}/install.orig
 
 do-install:
 	cd ${WRKSRC} && ${CHMOD} 755 ./install && \
-		${SETENV} PREFIX=${PREFIX:Q} PYTHONBIN=${PYTHONBIN:Q} \
+		${SETENV} PREFIX=${PREFIX} PYTHONBIN=${PYTHONBIN:Q} \
 		./install
 
 post-install:

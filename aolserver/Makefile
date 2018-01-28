@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		America Online's open source web server
 
 
-MAKE_FLAGS+=		NSHOME=${WRKSRC:Q}
+MAKE_FLAGS+=		NSHOME=${WRKSRC}
 CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}

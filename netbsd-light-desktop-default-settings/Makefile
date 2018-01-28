@@ -66,9 +66,9 @@ do-configure:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	cd  ${WRKSRC:Q} &&	\
+	cd  ${WRKSRC} &&	\
 	pax -rw -s ',.*/CVS.*,,' -s ',.*.orig$$,,' bin share ${DESTDIR}${PREFIX}/
-	cd  ${WRKSRC:Q}/etc &&	\
+	cd  ${WRKSRC}/etc &&	\
 	pax -rw -s ',.*/CVS.*,,' -s ',.*.orig$$,,' xdg \
 		${DESTDIR}${PREFIX}/share/examples/netbsd-light-desktop/
 

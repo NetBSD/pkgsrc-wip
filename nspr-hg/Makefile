@@ -29,7 +29,7 @@ REPLACE_PERL+=		pr/src/misc/compile-et.pl
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-pthreads
-CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
+CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX}/lib/nspr
 
 .include "../../mk/bsd.prefs.mk"
 

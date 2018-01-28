@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/bin/as
 CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv:Q}
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 .endif
 
 REPLACE_AWK+=	gcc/testsuite/gcc.test-framework/test-framework.awk	\
@@ -115,7 +115,7 @@ UNLIMIT_RESOURCES+=	datasize
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 USE_TOOLS+=		chmod
-MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
+MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD}
 .endif
 
 # GNU pth is useless here
@@ -135,7 +135,7 @@ CONFIGURE_ARGS+=	--enable-threads=posix # XXX seems to be needed
 USE_TOOLS+=		gmake makeinfo msgfmt
 HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
-CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
+CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 #.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
@@ -166,7 +166,7 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 GCC_SUBPREFIX=		gcc42
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
+FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include

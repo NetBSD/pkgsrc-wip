@@ -18,7 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # obsolete; replaced by PA mixer in gnome-media>=2.26
 CONFIGURE_ARGS+=	--enable-mixer-applet
 # obsolete; replaced by gnome-power-manager>=2.24

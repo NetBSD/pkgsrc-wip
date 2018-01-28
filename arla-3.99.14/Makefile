@@ -32,7 +32,7 @@ PKG_FAIL_REASON+=	"${PKGNAME} requires kernel sources available under \$$BSDSRCD
 .  endif
 .endif
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE:Q}
 CONFIGURE_ARGS+=	--enable-shared=no
 
@@ -50,8 +50,8 @@ SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	lkmdir=${PREFIX:Q}/lkm
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
+INSTALL_MAKE_FLAGS+=	lkmdir=${PREFIX}/lkm
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 EGDIR=		${PREFIX}/share/examples/arla
 EGFILES=	CellServDB DynRootDB SuidCells ThisCell arla.conf

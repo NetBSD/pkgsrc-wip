@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.geocities.com/legion_if/scare.html
 COMMENT=		Interpreter for interactive fiction written in Adrift
 
 BUILD_TARGET=		glkscare
-MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
+MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
 DOCDIR=			${PREFIX}/share/doc/scare
 

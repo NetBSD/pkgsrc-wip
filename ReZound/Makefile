@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-jack
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--enable-portaudio
-CPPFLAGS+=		-DDEVOSSSOUND=\"${DEVOSSSOUND:Q}\"
+CPPFLAGS+=		-DDEVOSSSOUND=\"${DEVOSSSOUND}\"
 #LDFLAGS+=		-lcompat
 USE_TOOLS+=		flex gmake bison pkg-config
 USE_LANGUAGES=		c c++

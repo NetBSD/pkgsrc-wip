@@ -23,8 +23,8 @@ SCRIPTNAME=		${PREFIX}/bin/pythonol
 USE_TOOLS+=		printf pax
 
 do-build:
-	${RM} -r ${WRKSRC:Q}/sqlite
-	${PYTHONBIN} ${WRKSRC:Q}/dictionary/makedb.py
+	${RM} -r ${WRKSRC}/sqlite
+	${PYTHONBIN} ${WRKSRC}/dictionary/makedb.py
 
 do-install:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}

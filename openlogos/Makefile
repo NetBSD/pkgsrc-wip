@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_JAVA=		yes
-CONFIGURE_ARGS+=	--with-java=${PKG_JAVA_HOME:Q}
+CONFIGURE_ARGS+=	--with-java=${PKG_JAVA_HOME}
 
 CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t -D__int32_t=int32_t -Du_int16_t=uint16_t -D__int16_t=int16_t -Dstrerror_r\(x,y,z\)=strerror\(x\)
 

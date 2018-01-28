@@ -18,7 +18,7 @@ USE_TOOLS+=		perl gmake
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
-CONFIGURE_ARGS=		--prefix=${PREFIX:Q} --backends=moar
+CONFIGURE_ARGS=		--prefix=${PREFIX} --backends=moar
 
 SUBST_CLASSES+=		interp
 SUBST_STAGE.interp=	pre-configure

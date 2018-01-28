@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 RCD_SCRIPTS=		yppasswdd ypserv
 
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/sbin
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

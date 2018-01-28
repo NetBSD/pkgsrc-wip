@@ -27,7 +27,7 @@ HAS_CONFIGURE=		YES
 
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 #			--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2:${LOCALBASE}/include/cdparanoia:${LOCALBASE}/include/freetype2" \
 			--with-extralibdir="${LOCALBASE}/lib" \
 			--disable-dvdread-internal --disable-smb
@@ -37,7 +37,7 @@ ONLY_FOR_COMPILER=	gcc
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
 # TMPDIR to ${WRKDIR}
-CONFIGURE_ENV+=		TMPDIR=${WRKDIR:Q}
+CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

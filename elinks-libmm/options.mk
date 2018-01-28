@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--disable-nntp
 
 .include "../../lang/ossp-js/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-spidermonkey=${BUILDLINK_PREFIX.ossp-js:Q}
+CONFIGURE_ARGS+=	--with-spidermonkey=${BUILDLINK_PREFIX.ossp-js}
 CONFIGURE_ARGS+=	--enable-sm-scripting
 .else
 CONFIGURE_ARGS+=	--without-spidermonkey

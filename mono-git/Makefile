@@ -14,7 +14,7 @@ LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
-ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
+ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR} PLATFORM=
 WRKSRC=		${WRKDIR}/mono
 
 USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config autoconf automake autoreconf gsed
@@ -23,7 +23,7 @@ USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} --with-icu=yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --with-icu=yes
 CONFIGURE_ARGS+=	--with-preview=yes --with-libgdiplus=installed
 CONFIGURE_ARGS+=	--disable-dtrace --with-gc=none
 

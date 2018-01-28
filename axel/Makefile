@@ -11,16 +11,16 @@ COMMENT=		HTTP/FTP download accelerator
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 INSTALLATION_DIRS=	bin etc ${PKGMANDIR}/man1
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/axelrc.example ${PKG_SYSCONFDIR}/axelrc
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/axel ${DESTDIR:Q}${PREFIX:Q}/bin/
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC:Q}/axelrc.example ${DESTDIR:Q}${EGDIR}
-	${INSTALL_MAN} ${WRKSRC:Q}/axel.1 ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/axel ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/axelrc.example ${DESTDIR}${EGDIR}
+	${INSTALL_MAN} ${WRKSRC}/axel.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

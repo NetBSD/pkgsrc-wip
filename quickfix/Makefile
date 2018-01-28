@@ -24,7 +24,7 @@ PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
 
 pre-configure:
-	cd ${WRKSRC:Q} && ./bootstrap
+	cd ${WRKSRC} && ./bootstrap
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

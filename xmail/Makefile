@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	OSTYPE=${OPSYS:Q}
+MAKE_ENV+=	OSTYPE=${OPSYS}
 
 .include "../../mk/bsd.prefs.mk"
 

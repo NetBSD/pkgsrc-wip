@@ -31,7 +31,7 @@ XALAN_ENV=	XERCESCROOT="${WRKDIR}/xerces-c-3.1.1" XALANCROOT="${WRKDIR}/xalan-c-
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./runConfigure
-CONFIGURE_ARGS+=	-C --prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	-C --prefix=${PREFIX}
 CONFIGURE_ARGS+=	-p ${XALAN_PLATFORM}
 CONFIGURE_ARGS+=	-r pthread
 # 1.7.0 needs the following argument.

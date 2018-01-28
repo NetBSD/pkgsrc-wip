@@ -24,7 +24,7 @@ SUBST_SED.fix-proj=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.fix-proj+=	-e 's,lrelease,${QTDIR}/bin/lrelease,g'
 SUBST_SED.fix-proj+=	-e 's,-g0 -s,,g'
 
-MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
+MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 QMAKE_FLAGS+=	QT_CONFIG=${QT_CONFIG:Q}
 
 # qmake isn't smart enough to integrate with lrelease. We have to run

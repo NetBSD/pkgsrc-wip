@@ -33,21 +33,21 @@ CPPFLAGS+=		-DLSB_FIRST
 .endif
 
 post-extract:
-	${CP} ${FILESDIR:Q}/adam ${WRKSRC:Q}/
+	${CP} ${FILESDIR}/adam ${WRKSRC}/
 
 do-install:
 .for f in adamem cvem z80dasm snapedit
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/${f:Q} ${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f:Q} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/adamem
-	${INSTALL_DATA} ${WRKSRC:Q}/adamem.txt ${DESTDIR}${PREFIX:Q}/share/adamem
-	${INSTALL_DATA} ${WRKSRC:Q}/adamem.snd ${DESTDIR}${PREFIX:Q}/share/adamem
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adamem
+	${INSTALL_DATA} ${WRKSRC}/adamem.txt ${DESTDIR}${PREFIX}/share/adamem
+	${INSTALL_DATA} ${WRKSRC}/adamem.snd ${DESTDIR}${PREFIX}/share/adamem
 .for f in OS7 EOS WP
-	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q}.rom ${DESTDIR}${PREFIX:Q}/share/adamem
+	${INSTALL_DATA} ${WRKSRC}/${f:Q}.rom ${DESTDIR}${PREFIX}/share/adamem
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/adam ${DESTDIR}${PREFIX:Q}/bin/adam
-	${RM} -f ${DESTDIR}${PREFIX:Q}/bin/coleco
-	${LN} -s adam ${DESTDIR}${PREFIX:Q}/bin/coleco
+	${INSTALL_SCRIPT} ${WRKSRC}/adam ${DESTDIR}${PREFIX}/bin/adam
+	${RM} -f ${DESTDIR}${PREFIX}/bin/coleco
+	${LN} -s adam ${DESTDIR}${PREFIX}/bin/coleco
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

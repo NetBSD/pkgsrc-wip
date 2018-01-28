@@ -15,8 +15,8 @@ COMMENT=	Free disk space by hard linking duplicate files
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/freedup-1.3
-MAKE_ENV+=	BIN_DIR=${PREFIX:Q}/bin
-MAKE_ENV+=	MAN_DIR=${PREFIX:Q}/${PKGMANDIR}
+MAKE_ENV+=	BIN_DIR=${PREFIX}/bin
+MAKE_ENV+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 
 DEPENDS+=	coreutils>=6.9:../../sysutils/coreutils
 

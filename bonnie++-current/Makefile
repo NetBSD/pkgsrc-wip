@@ -29,6 +29,6 @@ benchmark: build
 .PHONY: results
 results: build
 	@${MKDIR} /tmp/benches/`domainname`
-	${CP} ${WRKSRC:Q}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
+	${CP} ${WRKSRC}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"
