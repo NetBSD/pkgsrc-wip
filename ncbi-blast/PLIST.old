@@ -1,6 +1,6 @@
 @comment $NetBSD: PLIST.old,v 1.1 2015/03/05 22:31:07 outpaddling Exp $
-# Diff this against the current PLIST.  A few header files are missing.
-# Are we missing a dependency?  The FreeBSD port installs many more files.
+@comment Diff this against the current PLIST.  A few header files are missing.
+@comment Are we missing a dependency?  The FreeBSD port installs many more files.
 bin/blast_formatter
 bin/blastdb_aliastool
 bin/blastdbcheck
