@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mackerelio/}
 
 MAINTAINER=	miwarin@gmail.com
 HOMEPAGE=	https://github.com/mackerelio/mackerel-agent/
-COMMENT=	The mackerel-agent is an agent program to mackerel.io
+COMMENT=	Client software for Mackerel.io
 LICENSE=	apache-2.0
 
 EXTRACT_USING=	bsdtar
