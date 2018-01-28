@@ -19,8 +19,8 @@ SUBST_MESSAGE.makefile=	Fixing config.mk...
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
-SUBST_SED.makefile+=    -e 's,^CFLAGS =,CFLAGS +=,g'
-SUBST_SED.makefile+=    -e 's,^LDFLAGS =,LDFLAGS +=,g'
+SUBST_SED.makefile+=	-e 's,^CFLAGS =,CFLAGS +=,g'
+SUBST_SED.makefile+=	-e 's,^LDFLAGS =,LDFLAGS +=,g'
 SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

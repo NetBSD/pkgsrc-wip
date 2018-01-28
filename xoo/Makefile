@@ -12,9 +12,9 @@ COMMENT=	Graphical wrapper around Xnest/Xephyr
 
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-CFLAGS=		-DPREFIX=\"${PREFIX:Q}\"
-CONFIGURE_ARGS+=CFLAGS=${CFLAGS:M*:Q}
+GNU_CONFIGURE=		yes
+CFLAGS=			-DPREFIX=\"${PREFIX:Q}\"
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}
 
 post-install:
 	${INSTALL} -m 444 ${FILESDIR}/neo1973.png ${DESTDIR}${PREFIX}/share/xoo/neo1973.png

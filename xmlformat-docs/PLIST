@@ -1,5 +1,11 @@
 @comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:25 thomasklausner Exp $
 share/doc/xmlformat/API
+share/doc/xmlformat/examples/doc1.xml
+share/doc/xmlformat/examples/doc2.conf1
+share/doc/xmlformat/examples/doc2.conf2
+share/doc/xmlformat/examples/doc2.conf3
+share/doc/xmlformat/examples/doc2.conf4
+share/doc/xmlformat/examples/doc2.xml
 share/doc/xmlformat/tutorial.html
 share/doc/xmlformat/tutorial.pdf
 share/doc/xmlformat/tutorial.xml
@@ -7,9 +13,3 @@ share/doc/xmlformat/xmlformat.conf
 share/doc/xmlformat/xmlformat.html
 share/doc/xmlformat/xmlformat.pdf
 share/doc/xmlformat/xmlformat.xml
-share/doc/xmlformat/examples/doc1.xml
-share/doc/xmlformat/examples/doc2.conf1
-share/doc/xmlformat/examples/doc2.conf2
-share/doc/xmlformat/examples/doc2.conf3
-share/doc/xmlformat/examples/doc2.conf4
-share/doc/xmlformat/examples/doc2.xml

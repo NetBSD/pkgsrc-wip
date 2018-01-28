@@ -16,7 +16,7 @@ USE_LANGUAGES+=	c c++
 
 PKGCONFIG_OVERRIDE+=	xesam-glib.pc.in
 
-BUILDLINK_API_DEPENDS.glib2+=           glib2>=2.10.0
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
 
 
 .include "../../devel/glib2/buildlink3.mk"

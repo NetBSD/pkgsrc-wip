@@ -9,8 +9,8 @@ HOMEPAGE=	http://xsi.kolabore.ath.cx/
 COMMENT=	System monitor that provides XML encoded stats
 
 
-BUILDLINK_API_DEPENDS.libxml2+=   libxml2>=2.0.0
-BUILDLINK_API_DEPENDS.zlib+=	  zlib>=1.2.0
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.0.0
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0
 
 USE_LANGUAGES+=	c c++
 
@@ -20,7 +20,7 @@ USE_LANGUAGES+=	c c++
 GNU_CONFIGURE=	YES
 #USE_LIBTOOL=	YES
 
-CONFIGURE_ARGS+= --enable-user=xsi
+CONFIGURE_ARGS+=	--enable-user=xsi
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

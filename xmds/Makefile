@@ -10,7 +10,7 @@ HOMEPAGE=	http://xmds.sourceforge.net/
 COMMENT=	XMDS is a code generator that integrates equations
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=NO
+MAKE_JOBS_SAFE=	NO
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	xorg-synaptics.pc.in
 
-ONLY_FOR_PLATFORM= Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/fdi/11-x11-synaptics.fdi \

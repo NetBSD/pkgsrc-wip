@@ -13,9 +13,9 @@ COMMENT=	Modular Xorg AMD Geode GX/LX driver
 # http://bugs.freedesktop.org/show_bug.cgi?id=23590
 ONLY_FOR_PLATFORM=	*-*-i386
 
-USE_LIBTOOL=    yes
-GNU_CONFIGURE=  yes
-USE_TOOLS+=     pkg-config
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"

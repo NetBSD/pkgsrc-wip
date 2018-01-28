@@ -26,9 +26,9 @@ CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 # DragonFly version 4.6-RELEASE, maybe other versions prior to 4.7
 # need -D_WITH_GETLINE=1 according to: 
 # https://github.com/DragonFlyBSD/DPorts/issues/184
-CFLAGS.FreeBSD+=	-D_WITH_GETLINE=1
+CFLAGS.FreeBSD+=		-D_WITH_GETLINE=1
 CONFIGURE_ENV.FreeBSD+=		xorg_cv_cc_flag__Wno_maybe_uninitialized=no
-CFLAGS.DragonFly+=	-D_WITH_GETLINE=1
+CFLAGS.DragonFly+=		-D_WITH_GETLINE=1
 CONFIGURE_ENV.DragonFly+=	xorg_cv_cc_flag__Wno_maybe_uninitialized=no
 
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7

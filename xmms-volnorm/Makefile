@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	volnorm-0.8.3
-PKGNAME=        xmms-${DISTNAME}
+PKGNAME=	xmms-${DISTNAME}
 CATEGORIES=	local
 MASTER_SITES=	http://download.sourceforge.net/volnorm/
 

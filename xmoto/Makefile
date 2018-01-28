@@ -31,7 +31,7 @@ GCC_REQD+=		3.4
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-INSTALLATION_DIRS+= share/applications share/pixmaps
+INSTALLATION_DIRS+=	share/applications share/pixmaps
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/extra/xmoto.desktop ${DESTDIR}${PREFIX}/share/applications

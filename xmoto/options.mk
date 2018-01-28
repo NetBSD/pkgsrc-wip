@@ -10,5 +10,5 @@ PLIST_VARS+=		nls
 USE_TOOLS+=		msgfmt
 PLIST.NLS=		yes
 .else
-CONFIGURE_ARGS+=        --disable-nls
+CONFIGURE_ARGS+=	--disable-nls
 .endif

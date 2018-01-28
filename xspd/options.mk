@@ -17,7 +17,7 @@ MAKE_ENV+=	SEMUN="0"
 .endif
 
 .if !empty(PKG_OPTIONS:Mbitmode64)
-BITMODE=64
+BITMODE=	64
 .else
-BITMODE=32
+BITMODE=	32
 .endif

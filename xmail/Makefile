@@ -34,7 +34,7 @@ EXT=bsd # Default one :)
 .	endif
 .endif
 
-MAKE_FILE=Makefile.${EXT}
+MAKE_FILE=	Makefile.${EXT}
 
 INSTALLATION_DIRS+=	libexec/${PKGBASE} sbin share/doc/${PKGBASE}
 

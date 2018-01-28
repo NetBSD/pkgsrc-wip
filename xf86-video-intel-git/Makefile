@@ -5,7 +5,7 @@ CATEGORIES=	x11
 
 GIT_REPOSITORIES=		xf86-video-intel
 GIT_REPO.xf86-video-intel=	git://anongit.freedesktop.org/xorg/driver/xf86-video-intel
-WRKSRC=			${WRKDIR}/${PKGBASE}
+WRKSRC=				${WRKDIR}/${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/

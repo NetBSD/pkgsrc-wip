@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.2 2008/08/09 19:47:19 leot1990 Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.xwelltris
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xwelltris
 PKG_SUPPORTED_OPTIONS=	sdl
 
 .include "../../mk/bsd.options.mk"

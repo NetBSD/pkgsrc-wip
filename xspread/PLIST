@@ -7,6 +7,7 @@ share/doc/xspread/README
 share/doc/xspread/Sample_Run
 share/doc/xspread/final_rpt
 share/doc/xspread/last_xspread
+share/doc/xspread/notes
 share/doc/xspread/prog_rpt
 share/doc/xspread/sc.changes
 share/doc/xspread/sc.readme
@@ -18,7 +19,6 @@ share/doc/xspread/xspread.ps
 share/doc/xspread/xspread.tex
 share/doc/xspread/xspread.toc
 share/doc/xspread/xspread_prog.asc
-share/doc/xspread/notes
 share/xspread/documents/progress.aux
 share/xspread/documents/progress.dvi
 share/xspread/documents/progress.log
