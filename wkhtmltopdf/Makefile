@@ -3,7 +3,7 @@
 DISTNAME=	wkhtmltox-0.12.2.1
 PKGNAME=	${DISTNAME:S/tox/topdf/}
 CATEGORIES=	textproc
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=wkhtmltopdf/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wkhtmltopdf/}
 MASTER_SITES=	http://download.gna.org/wkhtmltopdf/0.12/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 

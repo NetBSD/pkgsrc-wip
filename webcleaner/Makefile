@@ -12,11 +12,11 @@ DEPENDS+=		${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 DEPENDS+=		${PYPKGPREFIX}-imaging>=0:../../graphics/py-imaging
 
 
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-GNU_CONFIGURE=		yes
-PY_PATCHPLIST=		yes
+USE_PKGLOCALEDIR=		yes
+USE_LIBTOOL=			yes
+LIBTOOL_OVERRIDE=		${WRKSRC}/libtool
+GNU_CONFIGURE=			yes
+PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-imaging
 
 do-configure:

@@ -32,7 +32,7 @@ NO_BUILD=	yes
 
 FONTS_DIRS.ttf+=	${PREFIX}/lib/X11/fonts/TTF
 REQD_DIRS+=		${PREFIX}/lib/X11/fonts/TTF
-DOCDIR=		${PREFIX}/share/doc/wang-ttf
+DOCDIR=			${PREFIX}/share/doc/wang-ttf
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}

@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	menhir-[0-9]*:../../devel/menhir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=	gmake
 
 #CONFIGURE_ARGS+=		--enable-frama-c
 CONFIGURE_ARGS+=		--disable-ide

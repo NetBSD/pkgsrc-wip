@@ -15,15 +15,15 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.10:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-dbus>=0.80:../../sysutils/py-dbus
 DEPENDS+=	${PYPKGPREFIX}-urwid>=0.9.9:../../devel/py-urwid
 
-PY_PATCHPLIST = YES
-PYSETUP = setup.py
+PY_PATCHPLIST =	YES
+PYSETUP =	setup.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	intltool
 
-RCD_SCRIPTS=	wicd
+RCD_SCRIPTS=		wicd
 RCD_SCRIPT_SRC.wicd=	${FILESDIR}/wicd.sh
 
 # Adjust setup.py
@@ -39,7 +39,7 @@ SUBST_SED.setup+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 SUBST_SED.setup+=	-e 's,/usr/sbin/,${PREFIX}/sbin/,g'
 SUBST_SED.setup+=	-e 's,/usr/bin/python,${PYTHONBIN},g'
 
-ONLY_FOR_PLATFORM= Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 do-configure:
 	cd ${WRKSRC}; \

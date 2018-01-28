@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2
 USE_CMAKE=	yes
 
 CHECK_PORTABILITY_SKIP=	src/cli/wje
-REPLACE_SH=	src/cli/wje
+REPLACE_SH=		src/cli/wje
 
 .include "../../mk/bsd.prefs.mk"
 

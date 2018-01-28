@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	wxmaxima
 GIT_REPO.wxmaxima=	git://github.com/andrejv/wxmaxima.git
-WRKSRC=		${WRKDIR}/wxmaxima
+WRKSRC=			${WRKDIR}/wxmaxima
 
 DEPENDS+=	maxima>=5.15.0:../../math/maxima
 DEPENDS+=	gnuplot>=4.2.3:../../graphics/gnuplot

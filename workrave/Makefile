@@ -25,9 +25,9 @@ CONFIGURE_ARGS+=	--docdir="${PREFIX}/share/doc/${PKGBASE}"
 CXXFLAGS+=		-D_ISOC99_SOURCE
 
 INSTALL_MAKE_FLAGS+=	utilsdir=${EGDIR}/sound/events
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=	${EGDIR}/sound/events/workrave.soundlist \
-    		${PKG_SYSCONFDIR}/sound/events/workrave.soundlist
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/sound/events/workrave.soundlist \
+			${PKG_SYSCONFDIR}/sound/events/workrave.soundlist
 
 .include "options.mk"
 

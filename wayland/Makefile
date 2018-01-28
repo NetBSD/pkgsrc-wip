@@ -11,10 +11,10 @@ HOMEPAGE=	http://wayland.freedesktop.org
 COMMENT=	Computer display server protocol
 LICENSE=	mit
 
-USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
-USE_LANGUAGES+=	c c++
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
+USE_LANGUAGES+=		c c++
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--disable-documentation
 
 PKGCONFIG_OVERRIDE+=	src/wayland-client.pc.in

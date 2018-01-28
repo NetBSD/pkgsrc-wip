@@ -10,7 +10,7 @@ COMMENT=	Why is a software verification platform
 
 GNU_CONFIGURE=	yes
 
-USE_TOOLS+= 	gmake
+USE_TOOLS+=	gmake
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
