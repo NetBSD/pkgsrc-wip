@@ -4,7 +4,7 @@
 DISTNAME=	yafray-0.0.7
 PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES= http://yafray.org/sec/2/downloads/
+MASTER_SITES=	http://yafray.org/sec/2/downloads/
 
 MAINTAINER=	fab@gnux.info
 HOMEPAGE=	http://www.yafray.org/
@@ -19,11 +19,11 @@ DOCDIR=			${PREFIX}/share/doc/yafray
 
 PTHREAD_OPTS=		require
 
-SUBST_CLASSES+=     patch
+SUBST_CLASSES+=		patch
 SUBST_MESSAGE.patch=	Make yafray search the grammar at the right place.
-SUBST_STAGE.patch=  post-patch
-SUBST_FILES.patch=  src/loader/loader.cc
-SUBST_SED.patch=    -e "s|/usr/local/etc|${YAFRAYDIR}|"
+SUBST_STAGE.patch=	post-patch
+SUBST_FILES.patch=	src/loader/loader.cc
+SUBST_SED.patch=	-e "s|/usr/local/etc|${YAFRAYDIR}|"
 
 INSTALLATION_DIRS=	bin lib
 

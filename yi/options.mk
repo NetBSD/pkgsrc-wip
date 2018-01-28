@@ -1,14 +1,14 @@
 # $NetBSD: options.mk,v 1.1.1.1 2011/07/12 23:07:44 phonohawk Exp $
 #
 
-PKG_OPTIONS_VAR=			PKG_OPTIONS.yi
+PKG_OPTIONS_VAR=		PKG_OPTIONS.yi
 PKG_OPTIONS_NONEMPTY_SETS+=	frontend
 PKG_OPTIONS_SET.frontend=	pango vte vty
 PKG_SUGGESTED_OPTIONS=		pango vte vty
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+= pango vte vty
+PLIST_VARS+=	pango vte vty
 
 # Build with Pango frontend
 .if !empty(PKG_OPTIONS:Mpango)

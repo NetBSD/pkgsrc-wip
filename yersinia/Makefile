@@ -11,17 +11,17 @@ COMMENT=	Layer 2 vulnerability scanner (switches, spanning tree, 802.1q ...)
 LICENSE=	gnu-gpl-v2
 
 CONFIGURE_ARGS+=	--disable-gtk #for now
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=	LIBNET_CONFIG=${LIBNET_CONFIG}
 
 LIBNET_CONFIG?=	${PREFIX}/bin/libnet11-config
 
-SUBST_CLASSES+=	script
+SUBST_CLASSES+=		script
 SUBST_STAGE.script=	post-patch
 SUBST_SED.script=	-e 's|-lnet|`${LIBNET_CONFIG} --libs`|'
 SUBST_FILES.script=	src/Makefile.in
-USE_NCURSES=	yes#
+USE_NCURSES=		yes#
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 

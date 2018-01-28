@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2014/01/25 10:38:27 thomasklausner Exp $
 
 DISTNAME=	YODA-1.0.2
-PKGNAME=        yoda-1.0.2
+PKGNAME=	yoda-1.0.2
 CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/yoda/
 
@@ -10,16 +10,16 @@ HOMEPAGE=	http://yoda.hepforge.org/
 COMMENT=	Yet more Objects for Data Analysis
 LICENSE=	gnu-gpl-v2
 
-CHECK_PORTABILITY_SKIP= configure
+CHECK_PORTABILITY_SKIP=	configure
 
 MAKE_JOBS=	2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.yoda
-PKG_SUPPORTED_OPTIONS=          pyext root
-PKG_SUGGESTED_OPTIONS=          pyext
+PKG_OPTIONS_VAR=		PKG_OPTIONS.yoda
+PKG_SUPPORTED_OPTIONS=		pyext root
+PKG_SUGGESTED_OPTIONS=		pyext
 
 .include "../../mk/bsd.options.mk"
 

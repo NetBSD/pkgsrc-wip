@@ -16,8 +16,8 @@ sbin/ypxfr
 sbin/ypxfr_1perday
 sbin/ypxfr_1perhour
 sbin/ypxfr_2perday
-share/examples/rc.d/ypserv
 share/examples/rc.d/yppasswdd
+share/examples/rc.d/ypserv
 share/man/man5/netgroup.5
 share/man/man5/ypserv.conf.5
 share/man/man8/makedbm.8
