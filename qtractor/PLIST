@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/qtractor
-man/man1/qtractor.1.gz
+man/man1/qtractor.1
 share/appdata/qtractor.appdata.xml
 share/applications/qtractor.desktop
 share/icons/hicolor/32x32/apps/qtractor.png

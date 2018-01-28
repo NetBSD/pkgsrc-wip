@@ -21,7 +21,7 @@ lib/perl5/vendor_perl/man/man3/enum.3
 lib/perl5/vendor_perl/man/man3/pkgsrc::Dewey.3
 man/cat1/pkglint.0
 man/man1/pkglint.1
-man/man7/fribid.7.gz
+man/man7/fribid.7
 man/sv/man7/fribid.7.gz
 share/fribid/ui/sign.xml
 share/pkglint/deprecated.map

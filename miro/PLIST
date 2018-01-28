@@ -640,8 +640,8 @@ ${PYSITELIB}/miro/videoconversion.pyo
 ${PYSITELIB}/miro/xhtmltools.py
 ${PYSITELIB}/miro/xhtmltools.pyc
 ${PYSITELIB}/miro/xhtmltools.pyo
-man/man1/miro.1.gz
-man/man1/miro.real.1.gz
+man/man1/miro.1
+man/man1/miro.real.1
 share/applications/miro.desktop
 share/icons/hicolor/128x128/apps/miro.png
 share/icons/hicolor/24x24/apps/miro.png

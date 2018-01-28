@@ -131,8 +131,6 @@ share/icons/hicolor/72x72/apps/wicd-client.png
 share/icons/hicolor/16x16/apps/wicd-client.png
 share/icons/hicolor/36x36/apps/wicd-client.png
 share/icons/hicolor/192x192/apps/wicd-client.png
-share/icons/hicolor/96x96/apps/wicd-client.png
-share/icons/hicolor/192x192/apps/wicd-client.png
 share/wicd/wicd.glade
 man/man1/wicd-client.1
 share/doc/wicd/AUTHORS

@@ -1,6 +1,6 @@
 @comment $NetBSD: PLIST,v 1.1 2015/08/17 20:49:53 yhardy Exp $
 bin/rott
-${PKGMANDIR}/man6/rott.6
+man/man6/rott.6
 share/doc/rott/cheats.txt
 share/doc/rott/hacker.txt
 share/doc/rott/readme.txt

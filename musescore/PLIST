@@ -2,7 +2,7 @@
 bin/mscore
 bin/musescore
 man/man1/mscore.1
-man/man1/musescore.1.gz
+man/man1/musescore.1
 share/applications/mscore.desktop
 share/icons/hicolor/48x48/mimetypes/application-vnd.recordare.musicxml+xml.png
 share/icons/hicolor/48x48/mimetypes/application-vnd.recordare.musicxml.png

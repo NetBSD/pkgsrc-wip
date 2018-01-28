@@ -156,7 +156,6 @@ ${PLIST.mdb}lib/libgda-4.0/providers/libgda-mdb.la
 ${PLIST.mysql}lib/libgda-4.0/providers/libgda-mysql.la
 ${PLIST.postgres}lib/libgda-4.0/providers/libgda-postgres.la
 lib/libgda-4.0/providers/libgda-sqlite.la
-${PLIST.web}lib/libgda-4.0/providers/libgda-web.la
 lib/libgda-4.0/providers/libgda-web.la
 lib/libgda-report-4.0.la
 lib/libgda-ui-4.0.la
@@ -171,7 +170,6 @@ ${PLIST.postgres}lib/pkgconfig/libgda-postgres-4.0.pc
 lib/pkgconfig/libgda-report-4.0.pc
 lib/pkgconfig/libgda-sqlite-4.0.pc
 lib/pkgconfig/libgda-ui-4.0.pc
-${PLIST.web}lib/pkgconfig/libgda-web-4.0.pc
 lib/pkgconfig/libgda-web-4.0.pc
 ${PLIST.xslt}lib/pkgconfig/libgda-xslt-4.0.pc
 man/man1/gda-sql-4.0.1

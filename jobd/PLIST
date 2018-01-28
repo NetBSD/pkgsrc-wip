@@ -1,8 +1,8 @@
 @comment $NetBSD$
 bin/jobctl
 lib/libjob.a
-man/man1/jobcfg.1.gz
-man/man1/jobctl.1.gz
-man/man5/job.5.gz
-man/man8/jobd.8.gz
+man/man1/jobcfg.1
+man/man1/jobctl.1
+man/man5/job.5
+man/man8/jobd.8
 sbin/jobd
