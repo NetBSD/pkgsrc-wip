@@ -29,7 +29,7 @@
 #	GIT_REVISION.${id}
 #		The revision to check out.
 #
-#		Example: 4b825dc642cb6eb9a060e54bf8d69288fbee4904
+#		Example: 8a311b3069ee79731eec38ca13eb13772cc49223
 #
 #	GIT_TAG.${id}
 #		The tag to check out.
