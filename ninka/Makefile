@@ -14,12 +14,12 @@ GIT_REPO.ninka=		https://github.com/dmgerman/ninka
 GIT_REVISION.ninka=	81f185261c8863c5b84344ee31192870be939faf
 PKGREVISION=		0
 
-DEPENDS+=	p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
-DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
-DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
-DEPENDS+=	p5-Spreadsheet-WriteExcel-[0-9]*:../../math/p5-Spreadsheet-WriteExcel
-DEPENDS+=	p5-IO-CaptureOutput-[0-9]*:../../devel/p5-IO-CaptureOutput
+DEPENDS+=		p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
+DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
+DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+DEPENDS+=		p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
+DEPENDS+=		p5-Spreadsheet-WriteExcel-[0-9]*:../../math/p5-Spreadsheet-WriteExcel
+DEPENDS+=		p5-IO-CaptureOutput-[0-9]*:../../devel/p5-IO-CaptureOutput
 #BUILD_DEPENDS+=	p5-Test-Strict-[0-9]*:../../devel/p5-Test-Strict
 
 NO_CHECKSUM=	yes

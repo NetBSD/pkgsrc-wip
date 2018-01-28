@@ -85,11 +85,11 @@ DIST_SUBDIR=	libreoffice
 #SITES.${md}=		http://dev-www.libreoffice.org/src/
 #.endfor
 
-#DISTFILES+=e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip
-#SITES.e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip=http://www.numbertext.org/linux/
+#DISTFILES+=	e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip
+#SITES.e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip= http://www.numbertext.org/linux/
 
-#DISTFILES+=185d60944ea767075d27247c3162b3bc-unowinreg.dll
-#SITES.185d60944ea767075d27247c3162b3bc-unowinreg.dll=http://download.go-oo.org/extern/
+#DISTFILES+=	185d60944ea767075d27247c3162b3bc-unowinreg.dll
+#SITES.185d60944ea767075d27247c3162b3bc-unowinreg.dll= http://download.go-oo.org/extern/
 
 .include "options.mk"
 
@@ -196,8 +196,8 @@ LO_PROGRAMS=		sbase scalc sdraw simpress smath soffice swriter
 LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
 			startcenter.desktop writer.desktop
 
-#OBJDIR=			pkgsrcbuild
-#CONFIGURE_DIRS=		${OBJDIR}
+#OBJDIR=		pkgsrcbuild
+#CONFIGURE_DIRS=	${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}core/autogen.sh
 
 #LD_LIBRARY_PATH+=	${WRKSRC}/instdir/sdk/lib:${WRKSRC}/instdir/ure/lib:${WRKSRC}/instdir/program

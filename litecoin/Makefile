@@ -26,7 +26,7 @@ BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
 BOOST_LDFLAGS=		-Wl,-R${BUILDLINK_TRANSFORM.boost-libs}/lib -Wl,-L${BUILDLINK_PREFIX.boost-libs}/lib
 #LDFLAGS+=		${BOOST_LDFLAGS:Q}
 #LDFLAGS+=		${PREFIX}/qt4/lib
-#CPPFLAGS+=     	-I${PREFIX}/qt4/include/
+#CPPFLAGS+=		-I${PREFIX}/qt4/include/
 
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 CONFIGURE_ARGS+=	--enable-hardening

@@ -9,9 +9,9 @@
 
 ## Created by: Dan Siercks
 ## $FreeBSD$
-#DISTVERSIONPREFIX=      v
+#DISTVERSIONPREFIX=	v
 ## Requires libz
-#PLIST_FILES=	bin/sickle
+#PLIST_FILES=		bin/sickle
 #do-install:
 #	${INSTALL_PROGRAM} ${WRKSRC}/sickle \
 #		${DESTDIR}${PREFIX}/bin

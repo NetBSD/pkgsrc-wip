@@ -15,7 +15,7 @@ CONFLICTS+=	kmymoney2-[0-9]*
 
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 
-#MAKE_JOBS_SAFE=no
+#MAKE_JOBS_SAFE=	no
 BUILD_MAKE_FLAGS+=	VERBOSE=yes
 
 USE_CMAKE=		yes

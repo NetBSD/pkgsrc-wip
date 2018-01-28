@@ -28,7 +28,7 @@ post-extract:
 	${MV} ${WRKSRC}/bin/scitools ${WRKSRC}/bin/scitools${PYVERSSUFFIX}
 
 #optional dependency:
-#DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
+#DEPENDS+=			${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 #PYTHON_VERSIONED_DEPENDENCIES=	Pmw X
 #.include "../../lang/python/versioned_dependencies.mk"
 #PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 35 35 34 34 # py-Numeric

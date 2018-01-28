@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	src/libtracker-sparql/tracker-sparql.pc.in
 PKGCONFIG_OVERRIDE+=	src/libtracker-miner/tracker-miner.pc.in
 PKGCONFIG_OVERRIDE+=	src/libtracker-control/tracker-control.pc.in
 
-#TRACKER_VERSION= ${PKGVERSION:C/\.[0-9]+$//}
+#TRACKER_VERSION=	${PKGVERSION:C/\.[0-9]+$//}
 # strip last .digit (but not safe if it is missing)
 # PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION_NOREV:C/\.[0-9]+$//}
 

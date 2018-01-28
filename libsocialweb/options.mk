@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libsocialweb
 PKG_SUPPORTED_OPTIONS+=		facebook flickr lastfm photobucket plurk smugmug
 PKG_SUPPORTED_OPTIONS+=		twitter vimeo youtube sina myspace
-#PKG_SUPPORTED_OPTIONS+=		vala	# XXX broken
+#PKG_SUPPORTED_OPTIONS+=	vala	# XXX broken
 
 PKG_SUGGESTED_OPTIONS+=		facebook flickr lastfm photobucket plurk smugmug
 PKG_SUGGESTED_OPTIONS+=		twitter vimeo youtube sina myspace

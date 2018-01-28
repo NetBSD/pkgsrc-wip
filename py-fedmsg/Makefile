@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-zmq>=14.4.1:../../net/py-zmq
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-psutil>=2.1.3:../../sysutils/py-psutil
-#DEPENDS+=    	${PYPKGPREFIX}-cryptography>=1.0.1:../../security/py-cryptography
+#DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.0.1:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.4.2:../../time/py-arrow
 DEPENDS+=	${PYPKGPREFIX}-kitchen>=1.2.1:../../wip/py-kitchen

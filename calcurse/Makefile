@@ -14,8 +14,8 @@ GNU_CONFIGURE=	yes
 
 # force to use ncurses from pkgsrc
 #INCOMPAT_CURSES=	NetBSD-*-*
-REPLACE_PYTHON=	contrib/caldav/calcurse-caldav
-FAKE_NCURSES=	yes
+REPLACE_PYTHON=		contrib/caldav/calcurse-caldav
+FAKE_NCURSES=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"

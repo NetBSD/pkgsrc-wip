@@ -23,7 +23,7 @@ BUILD_DIRS=		src
 
 USE_TOOLS+=		bison autoconf
 GNU_CONFIGURE=		yes
-#CONFIGURE_DIRS=		src
+#CONFIGURE_DIRS=	src
 #BUILD_DIRS=		${CONFIGURE_DIRS}
 PTHREAD_OPTS+=		require
 

@@ -49,8 +49,8 @@ pre-configure:
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.fast.prefs.mk"
 
-#YESTERDAY!=	expr `date +%s` - 86399
-#MPG123_VERSION!=${DATE} -r ${YESTERDAY} +%Y%m%d
-#MPG123_TAG!=	${DATE} +%Y%m%d
+#YESTERDAY!=		expr `date +%s` - 86399
+#MPG123_VERSION!=	${DATE} -r ${YESTERDAY} +%Y%m%d
+#MPG123_TAG!=		${DATE} +%Y%m%d
 
 .include "../../mk/bsd.pkg.mk"

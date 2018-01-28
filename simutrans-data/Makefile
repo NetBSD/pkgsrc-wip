@@ -13,7 +13,7 @@ COMMENT=	Game data for Simutrans
 NO_BUILD=	yes
 
 
-#DEPENDS+=       unzip-[0-9]*:../../archivers/unzip
+#DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 post-extract:
 		${FIND} ${WRKDIR} -type f -exec ${CHMOD} 0644 {} \;

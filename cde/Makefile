@@ -33,7 +33,7 @@ IMAKE_DEFINES+=		-DCDEProjectRoot=${PREFIX}/dt
 IMAKE_DEFINES+=		-DCdeInstallationTop=${PREFIX}/dt
 IMAKE_DEFINES+=		-DCdeConfigurationTop=${PKG_SYSCONFDIR}
 IMAKE_DEFINES+=		-DCdeLogfileTop=${VARBASE}/dt
-#IMAKE_DEFINES+=		-DTclLibrary=${BUILDLINK_PREFIX.tcl}/lib
+#IMAKE_DEFINES+=	-DTclLibrary=${BUILDLINK_PREFIX.tcl}/lib
 IMAKE_DEFINES+=		-DUseInstalledX11=YES
 #IMAKE_DEFINES+=	-DKornShell=${TOOLS_PATH.ksh}
 IMAKE_DEFINES+=		-DDtKornShell=${PREFIX}/dt/bin/dtksh

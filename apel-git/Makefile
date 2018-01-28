@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	http://git.chise.org/git/elisp/apel.git
 GIT_MODULE.master=	apel
-#_GIT_FLAGS+=             --quiet --depth 1
+#_GIT_FLAGS+=		--quiet --depth 1
 
 WRKSRC=			${WRKDIR}/${PKGBASE}
 INFO_FILES=		yes

@@ -12,7 +12,7 @@ COMMENT=	Simple ODE Tools for Modelers
 ICENSE=		modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-#DEPENDS+=       ${PYPKGPREFIX}-sas7bdat>=2.0.4:../../wip/py-sas7bdat
+#DEPENDS+=	${PYPKGPREFIX}-sas7bdat>=2.0.4:../../wip/py-sas7bdat
 
 
 USE_LANGUAGES=	# none

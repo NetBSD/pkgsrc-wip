@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.bay12games.com/dwarves/
 COMMENT=	Single-player fantasy game in a randomly generated, persistent world
 LICENSE=	unlicense
 
-#UNPRIVILEGED= yes
+#UNPRIVILEGED=	yes
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base compat expat gtk2 png libSDL glx x11 locale
@@ -47,12 +47,12 @@ pre-install:
 
 # png no longer seems to be broken.
 #
-#SUBST_CLASSES+= fix-paths
-#SUBST_MESSAGE.fix-paths= Fixing pngs to bmps.
-#SUBST_STAGE.fix-paths= post-configure
-#SUBST_FILES.fix-paths= libs/Dwarf_Fortress
-#SUBST_FILES.fix-paths+= data/init/init.txt
-#SUBST_SED.fix-paths= -e 's,\.png,.bmp,g'
+#SUBST_CLASSES+=		fix-paths
+#SUBST_MESSAGE.fix-paths=	Fixing pngs to bmps.
+#SUBST_STAGE.fix-paths=		post-configure
+#SUBST_FILES.fix-paths=		libs/Dwarf_Fortress
+#SUBST_FILES.fix-paths+=	data/init/init.txt
+#SUBST_SED.fix-paths=		-e 's,\.png,.bmp,g'
 
 
 # Need import SUSE OpenAL

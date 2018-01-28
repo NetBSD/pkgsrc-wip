@@ -16,7 +16,7 @@ LICENSE=		mpl-2.0
 HG_REPOSITORIES=	nss
 HG_REPO.nss=		https://hg.mozilla.org/projects/nss
 WRKSRC=			${WRKDIR}/nss
-#WRKSRC=			${WRKDIR}
+#WRKSRC=		${WRKDIR}
 
 USE_LANGUAGES=		c c++
 

@@ -45,7 +45,7 @@ MAKE_ENV+=	G4UI_USE_TERMINAL=1
 MAKE_FLAGS+=	ECHO=echo
 
 # It should be:
-#REPLACE_CSH=	examples/extended/biasing/B02/setupPI.csh
+#REPLACE_CSH=		examples/extended/biasing/B02/setupPI.csh
 # skip it for now:
 CHECK_INTERPRETER_SKIP=	geant/examples/extended/biasing/B02/setupPI.csh \
 			geant/examples/extended/medical/electronScattering2/run.csh

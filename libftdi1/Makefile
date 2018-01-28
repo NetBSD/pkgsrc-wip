@@ -16,10 +16,10 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config #cmake
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=	libusb1-[0-9]*:../../devel/libusb1
+BUILD_DEPENDS+=		libusb1-[0-9]*:../../devel/libusb1
 # It is better off to have doxygen, but
 # clang segfaults while packaging print/luatex
-#BUILD_DEPENDS+=doxygen-[0-9]*:../../devel/doxygen
+#BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 #CONFIGURE_ARGS+=	--without-examples
 #CONFIGURE_ARGS+=	--without-docs

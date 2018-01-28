@@ -24,7 +24,7 @@ LINUXBASE?=	${PREFIX}
 # XXX can not  set LOCALBASE because
 #  PREFIX is used in patch for depmod
 #  PKG_TOOLS_BIN is changed
-#LOCALBASE=		/
+#LOCALBASE=	/
 
 NO_MTREE=	YES
 

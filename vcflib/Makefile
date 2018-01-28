@@ -44,10 +44,10 @@ PORTVERSION=	790904320065e603c6af5b8a32f635134354467c
 DATADIR=	${PREFIX}/share/vcflib
 DOCSDIR=	${PREFIX}/share/doc/vcflib
 
-#SUBST_CLASSES+=         ldflags
-#SUBST_FILES.ldflags=    ${WRKSRC}/Makefile.external-libs
-#SUBST_STAGE.ldflags=    post-patch
-#SUBST_SED.ldflags=      -e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
+#SUBST_CLASSES+=	ldflags
+#SUBST_FILES.ldflags=	${WRKSRC}/Makefile.external-libs
+#SUBST_STAGE.ldflags=	post-patch
+#SUBST_SED.ldflags=	-e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 

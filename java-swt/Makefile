@@ -23,10 +23,10 @@ USE_TOOLS=		gmake unzip
 
 PLIST_SUBST+=	SHLIB_VERSION=${SHLIB_VERSION}
 
-#SUBST_CLASSES+=	    foo
-#SUBST_STAGE.foo=    post-patch
-#SUBST_FILES.foo=    make_gtk.mak
-#SUBST_SED.foo=	    -e s,@PKG_JVM_HOME@,${PKG_JAVA_HOME},
+#SUBST_CLASSES+=	foo
+#SUBST_STAGE.foo=	post-patch
+#SUBST_FILES.foo=	make_gtk.mak
+#SUBST_SED.foo=		-e s,@PKG_JVM_HOME@,${PKG_JAVA_HOME},
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch

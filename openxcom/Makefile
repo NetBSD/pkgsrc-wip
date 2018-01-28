@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.openxcom.org/
 COMMENT=	Open-source clone of UFO: Enemy Unknown/X-Com: UFO Defense
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	timidity-[0-9]*:../../audio/timidity
+DEPENDS+=		timidity-[0-9]*:../../audio/timidity
 # Docs say this is needed, but it builds fine without
 #BUILD_DEPENDS+=	docbook2X-[0-9]*:../../wip/docbook2X
 

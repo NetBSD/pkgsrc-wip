@@ -140,7 +140,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 #DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 #RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 #RUST_CARGO0:=		cargo-nightly-${RUST_ARCH}.tar.gz
-#SITES.${RUST_CARGO0}= \
+#SITES.${RUST_CARGO0}=	\
 #	https://s3.amazonaws.com/rust-lang-ci/cargo-builds/${RUST_CARGO0_DISTHASH}/
 #.endif
 

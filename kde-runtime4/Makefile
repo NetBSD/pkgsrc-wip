@@ -50,7 +50,7 @@ PLIST.polkit=	yes
 PLIST.x11=	yes
 .endif
 
-#SUBST_CLASSES+=		htdig
+#SUBST_CLASSES+=	htdig
 #SUBST_STAGE.htdig=	post-patch
 #SUBST_MESSAGE.htdig=	Fix htdig paths.
 #SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl

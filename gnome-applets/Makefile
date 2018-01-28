@@ -26,13 +26,13 @@ CONFIGURE_ARGS+=	--disable-cpufreq
 
 EGDIR=			${PREFIX}/share/examples/gnome-applets
 
-GCONF_SCHEMAS=	charpick.schemas
-GCONF_SCHEMAS+=	drivemount.schemas
-GCONF_SCHEMAS+=	geyes.schemas
+GCONF_SCHEMAS=		charpick.schemas
+GCONF_SCHEMAS+=		drivemount.schemas
+GCONF_SCHEMAS+=		geyes.schemas
 #GCONF_SCHEMAS+=	gswitchit.schemas
-GCONF_SCHEMAS+=	mixer.schemas
-GCONF_SCHEMAS+=	multiload.schemas
-GCONF_SCHEMAS+=	stickynotes.schemas
+GCONF_SCHEMAS+=		mixer.schemas
+GCONF_SCHEMAS+=		multiload.schemas
+GCONF_SCHEMAS+=		stickynotes.schemas
 
 .include "../../mk/bsd.prefs.mk"
 

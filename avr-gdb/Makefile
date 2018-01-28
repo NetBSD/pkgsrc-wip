@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-curses
 CONFIGURE_ENV+=		gdb_cv_var_elf=yes
 MAKE_ENV+=		gdb_cv_var_elf=yes
 # Native gdb has following lines also activated
-#CONFIGURE_ENV+=		gdb_cv_struct_lwp=yes
+#CONFIGURE_ENV+=	gdb_cv_struct_lwp=yes
 #MAKE_ENV+=		gdb_cv_struct_lwp=yes
 
 

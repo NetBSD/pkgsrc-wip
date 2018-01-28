@@ -10,9 +10,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xs4all.nl/~lennartb/basic.html
 COMMENT=		Basic interpreter for Unix
 
-BUILD_TARGET=		gplbasic
-#USE_TOOLS+=		gmake
-#WRKSRC=			${WRKDIR}/bastard_src-0.17
+BUILD_TARGET=	gplbasic
+#USE_TOOLS+=	gmake
+#WRKSRC=	${WRKDIR}/bastard_src-0.17
 
 INSTALLATION_DIRS=	bin
 

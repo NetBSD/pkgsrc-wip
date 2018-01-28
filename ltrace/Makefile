@@ -12,15 +12,15 @@ COMMENT=		Track runtime library calls in dynamically linked programs
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-WRKSRC=			${WRKDIR}/ltrace-0.3.36
-USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+WRKSRC=				${WRKDIR}/ltrace-0.3.36
+USE_TOOLS+=			gmake
+GNU_CONFIGURE=			yes
+CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR:Q}
 # maybe following should be done in devel/libelf/buildlink3.mk instead
-#CFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
-#CPPFLAGS+=		-I${BUILDLINK_DIR}/include/libelf
-#CFLAGS+=		-I${BUILDLINK_DIR}/include/libelf
+#CFLAGS+=			-I${BUILDLINK_PREFIX.libelf}/include/libelf
+CPPFLAGS+=			-I${BUILDLINK_PREFIX.libelf}/include/libelf
+#CPPFLAGS+=			-I${BUILDLINK_DIR}/include/libelf
+#CFLAGS+=			-I${BUILDLINK_DIR}/include/libelf
 # if this uses BUILDLINK_INCDIRS or CFLAGS for this. the build fails because
 # it uses -I- which makes it ignore this include directory
 #BUILDLINK_INCDIRS.libelf+=	include/libelf

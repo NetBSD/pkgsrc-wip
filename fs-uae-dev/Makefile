@@ -14,7 +14,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config zip
 GNU_CONFIGURE=		yes
 
-#CONFIGURE_ARGS += --enable-lua
+#CONFIGURE_ARGS +=	--enable-lua
 # patchelf is sometimes used, for something with steam or so?
 #BUILD_DEPENDS +=	patchelf-*:../../devel/patchelf
 

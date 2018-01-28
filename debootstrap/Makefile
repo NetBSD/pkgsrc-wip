@@ -20,7 +20,7 @@ DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-#WRKSRC=		${WRKDIR}/debootstrap.git
+#WRKSRC=	${WRKDIR}/debootstrap.git
 USE_LANGUAGES=	# none
 
 USE_TOOLS+=	gmake xzcat tar bash:run

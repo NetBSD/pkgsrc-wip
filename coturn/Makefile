@@ -29,8 +29,8 @@ CONFIGURE_ENV+=		TURNDBDIR=${PREFIX}/share/turnserver
 CONFIGURE_ENV+=		TURNINCLUDEDIR=${PREFIX}/include/turn
 
 INSTALLATION_DIRS+=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples/etc share/examples/scripts share/turnserver
-#CONF_FILES+=            ${PREFIX}/etc/turnserver.conf.default
-#RCD_SCRIPTS=                  turnserver
+#CONF_FILES+=		${PREFIX}/etc/turnserver.conf.default
+#RCD_SCRIPTS=		turnserver
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 HAS_CONFIGURE=	yes

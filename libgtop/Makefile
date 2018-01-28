@@ -45,31 +45,31 @@ CPPFLAGS.NetBSD+=	-D_KMEMUSER
 .include "../../mk/bsd.prefs.mk"
 
 #INSTALL_MAKE_FLAGS+=	libgtop_postinstall=true
-#PLIST_VARS+=	server suid.h
+#PLIST_VARS+=		server suid.h
 #.if ${OPSYS} == "AIX"
-#PLIST.server=	yes
-#PLIST.suid.h=	yes
-#SPECIAL_PERMS=	bin/libgtop_server2 ${REAL_ROOT_USER} system 2755
+#PLIST.server=		yes
+#PLIST.suid.h=		yes
+#SPECIAL_PERMS=		bin/libgtop_server2 ${REAL_ROOT_USER} system 2755
 #.elif ${OPSYS} == "DragonFly" || \
 #      ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || \
 #      ${OPSYS} == "OpenBSD"
-#PLIST.server=	yes
-#PLIST.suid.h=	yes
-#SPECIAL_PERMS=	bin/libgtop_server2 ${REAL_ROOT_USER} kmem 2755
+#PLIST.server=		yes
+#PLIST.suid.h=		yes
+#SPECIAL_PERMS=		bin/libgtop_server2 ${REAL_ROOT_USER} kmem 2755
 #.elif ${OPSYS} == "Linux"
 ##PLIST.server=	no
 ##PLIST.suid.h=	no
 #.elif ${OPSYS} == "SunOS"
-#PLIST.server=	yes
-#SPECIAL_PERMS=	bin/libgtop_server2 ${REAL_ROOT_USER} sys 2755
+#PLIST.server=		yes
+#SPECIAL_PERMS=		bin/libgtop_server2 ${REAL_ROOT_USER} sys 2755
 #.elif ${OPSYS} == "Darwin"
-#PLIST.server=	yes
+#PLIST.server=		yes
 #.else
-#PLIST.server=	yes
-#PLIST.suid.h=	yes
+#PLIST.server=		yes
+#PLIST.suid.h=		yes
 #.endif
 
-#PLIST_VARS+=    glibtop_private.h
+#PLIST_VARS+=	glibtop_private.h
 #.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 #PLIST.glibtop_private.h= yes
 #.endif

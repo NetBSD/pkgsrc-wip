@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 GNU_CONFIGURE=		yes
 # Html documentation and man pages are incomplete.
 # http://rtcmix.org/reference/
-#CONFIGURE_ARGS+= --htmldir=${PREFIX}/share/doc/${PKGBASE}/html
+#CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/${PKGBASE}
 USE_LANGUAGES=		c c++
 USE_TOOLS=		gmake autoconf perl

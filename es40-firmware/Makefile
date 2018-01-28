@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://h18002.www1.hp.com/alphaserver/es40/
 COMMENT=	AlphaServer ES40 firmware image
-#LICENSE=		unknown
+#LICENSE=	unknown
 
 RESTRICTED=		No redistribution allowed
 NO_BIN_ON_CDROM=	${RESTRICTED}

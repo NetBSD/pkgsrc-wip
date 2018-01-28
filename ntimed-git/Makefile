@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 # https://github.com/bsdphk/Ntimed/issues/25
 USE_TOOLS+=		gmake
 
-REPLACE_PYTHON+=	plotgen.py
+REPLACE_PYTHON+=		plotgen.py
 #PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 20150109
 
 INSTALLATION_DIRS+=	sbin share/doc/ntimed

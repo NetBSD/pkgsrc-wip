@@ -16,7 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-#RCD_SCRIPTS=            000.firebird.sh
+#RCD_SCRIPTS=		000.firebird.sh
 
 CONFIGURE_ARGS+=	--with-editline \
 			--with-system-editline \

@@ -15,7 +15,7 @@ NO_CONFIGURE=		yes
 NO_BUILD=		yes
 USE_TOOLS+=		pax unzip
 AUTO_MKDIRS=		yes
-#EXTRACT_ONLY=   # empty
+#EXTRACT_ONLY=		# empty
 REPLACE_PERL+=		cgi-bin/*.pl
 REPLACE_PERL+=		cgi-bin/*.cgi
 INSTALLATION_DIRS=	share/collectd-web
@@ -29,8 +29,8 @@ DEPENDS+=	p5-HTTP-Parser>=0.06:../../www/p5-HTTP-Parser
 DEPENDS+=	p5-JSON>=2.94:../../converters/p5-JSON
 DEPENDS+=	p5-RRD-Simple>=1.44:../../databases/p5-RRD-Simple
 DEPENDS+=	p5-CGI>=4.36:../../www/p5-CGI
-#DEPENDS+=       cgic>=2.02:../../www/cgic
-#DEPENDS+=       fcgi>=2.4.0:../../www/fcgi
+#DEPENDS+=	cgic>=2.02:../../www/cgic
+#DEPENDS+=	fcgi>=2.4.0:../../www/fcgi
 
 do-install:
 	cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${PREFIX}/${INSTALLATION_DIRS}

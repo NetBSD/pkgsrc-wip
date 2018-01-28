@@ -45,7 +45,7 @@ SUBST_STAGE.bamtools_lib=	post-patch
 SUBST_FILES.bamtools_lib=	${WRKSRC}/src/api/CMakeLists.txt
 SUBST_SED.bamtools_lib=		-e 's|lib/bamtools|lib|g'
 
-#SUBST_CLASSES+=		bluetooth
+#SUBST_CLASSES+=	bluetooth
 #SUBST_STAGE.bluetooth=	post-patch
 #SUBST_FILES.bluetooth=	${WRKSRC}/Commands/Legoctl/Makefile
 #SUBST_SED.bluetooth=	-e 's|-lbluetooth||g'

@@ -23,7 +23,7 @@ USE_LIBTOOL=		YES
 
 GCONF_SCHEMAS=	gnome-terminal.schemas
 
-#PYTHON_FOR_BUILD_ONLY=	YES
+#PYTHON_FOR_BUILD_ONLY=		YES
 #PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.32.1
 
 .include "../../x11/gnome-desktop3/buildlink3.mk"

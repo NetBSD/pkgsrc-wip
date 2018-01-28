@@ -9,7 +9,7 @@ HOMEPAGE=	http://baller.tuxfamily.org/
 COMMENT=	Classical castle combat game
 LICENSE=	gnu-gpl-v3
 
-#USE_TOOLS+=     intltool gmake cmake pkg-config msgfmt msgmerge xgettext
+#USE_TOOLS+=	intltool gmake cmake pkg-config msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes

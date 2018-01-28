@@ -15,7 +15,7 @@ LICENSE=	mpl-2.0
 HG_REPOSITORIES=	nspr
 HG_REPO.nspr=		https://hg.mozilla.org/projects/nspr
 WRKSRC=			${WRKDIR}/nspr
-#WRKSRC=                        ${WRKDIR}
+#WRKSRC=		${WRKDIR}
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}configure

@@ -228,7 +228,7 @@ CONFIGURE_ARGS+=	--disable-runtime-cpudetection
 EVAL_PREFIX+=			PREFIX.win32-codecs=win32-codecs
 PREFIX.win32-codecs_DEFAULT=	${LOCALBASE}
 CONFIGURE_ARGS+=		--enable-win32dll
-#CONFIGURE_ARGS+=	--win32codecsdir="${PREFIX.win32-codecs}/lib/win32"
+#CONFIGURE_ARGS+=		--win32codecsdir="${PREFIX.win32-codecs}/lib/win32"
 DEPENDS+=			win32-codecs>=011227:../../multimedia/win32-codecs
 .else
 CONFIGURE_ARGS+=		--disable-win32dll

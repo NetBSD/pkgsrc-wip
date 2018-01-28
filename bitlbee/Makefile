@@ -97,7 +97,7 @@ RCD_SCRIPTS=		bitlbee
 RCD_SCRIPT_SRC.bitlbee=	${FILESDIR}/bitlbee.sh
 
 # see https://savannah.gnu.org/support/index.php?107660
-#BUILDLINK_ABI_DEPENDS.gnutls+= gnutls<2.12.0
+#BUILDLINK_ABI_DEPENDS.gnutls+=	gnutls<2.12.0
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

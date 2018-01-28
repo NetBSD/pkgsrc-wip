@@ -15,7 +15,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0
 USE_LANGUAGES+=	c c++
 
 #DEPENDS+=	libxml2>=2.0.0:../../textproc/libxml2
-#DEPENDS+=      zlib>=1.2.0:../../devel/zlib
+#DEPENDS+=	zlib>=1.2.0:../../devel/zlib
 
 GNU_CONFIGURE=	YES
 #USE_LIBTOOL=	YES

@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++ fortran77
 
-#LDFLAGS+= ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+#LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -f

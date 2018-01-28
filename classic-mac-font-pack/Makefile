@@ -7,7 +7,7 @@ CATEGORIES=	fonts
 # Cairo, Chicago, Geneva, London, Los Angeles, Monaco, New York, San
 # Francisco, Toronto, Venice), Apple Garamond, Charcoal, and Motter Tektura.
 
-#DISTFILES+=	alexandria.zip
+#DISTFILES+=			alexandria.zip
 # File is invalid?
 DISTFILES+=			Chicago.zip
 SITES.Chicago.zip=		http://moorstation.org/typoasis/designers/casady_greene/
@@ -23,23 +23,23 @@ SITES.MONACO.TTF=		http://www.webdevkungfu.com/files/
 # Cf. http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
 # This binhex file yields a StuffIt archive, which there is no practical way
 # to extract in the general case.
-#DISTFILES+=	NewYork_TT.hqx
-#SITES.NewYork_TT.hqx=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/Mac/N/
+#DISTFILES+=			NewYork_TT.hqx
+#SITES.NewYork_TT.hqx=		http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/Mac/N/
 # bmake doesn't like this filename??
-#DISTFILES+=	Fernando%20Regular%20(2).ttf
+#DISTFILES+=			Fernando%20Regular%20(2).ttf
 #SITES.Fernando%20Regular%20(2).ttf=	http://ufonts.com/bin/
 # Brampton is not yet complete.
 DISTFILES+=			Brampton.tgz
 SITES.Brampton.tgz=		http://christtrekker.users.sourceforge.net/fnt/
-#DISTFILES+=	genoa.zip
+#DISTFILES+=			genoa.zip
 
 # This next one has Apple Garamond.
 # I don't think it is freely distributable though.
-#DISTFILES+=	macfonts.tar.gz
+#DISTFILES+=		macfonts.tar.gz
 #SITES.macfonts.tar.gz=	http://ubuntu-debs.googlecode.com/files/
 DISTFILES+=		virtue.zip
 SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
-#DISTFILES+=	Mottek.zip
+#DISTFILES+=		Mottek.zip
 #SITES.Mottek.zip=	http://www.searchfreefonts.com/assets/downloads/
 
 OWNER=		christtrekker@users.sourceforge.net

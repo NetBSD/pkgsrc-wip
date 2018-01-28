@@ -6,7 +6,7 @@
 ###########################################################
 # Test new versions with Trinity before upgrading
 
-#DISTVERSIONPREFIX=v
+#DISTVERSIONPREFIX=	v
 
 DISTNAME=	rsem-${PORTVERSION}
 CATEGORIES=	biology

@@ -82,7 +82,7 @@ BUILD_OBJC?=	YES
 
 LANGS=			'c'
 #.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-#LANGS+='ada'
+#LANGS+=		'ada'
 #.endif
 .if !empty(BUILD_CXX:M[Yy][Ee][Ss])
 LANGS+=			'c++'
@@ -91,7 +91,7 @@ LANGS+=			'c++'
 LANGS+=			'fortran'
 .endif
 #.if !empty(BUILD_JAVA:M[Yy][Ee][Ss])
-#LANGS+='java'
+#LANGS+=		'java'
 #.endif
 .if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
 LANGS+=			'objc'
@@ -143,15 +143,15 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. You
 # may specify:
-#USE_GCC42ADA	=# Define to use gcc-3.4.x-ada
+#USE_GCC42ADA	=	# Define to use gcc-3.4.x-ada
 # Or, you may specify the path of any gcc/gnat Ada compiler
 # by providing the full path of the compiler (example) below:
-#ALT_GCC=	prefix/bin/gcc
+#ALT_GCC=		prefix/bin/gcc
 #.  if defined(ALT_GCC)
 #.     if exists(${ALT_GCC})
-#ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
+#ALT_GCC_RTS!=		${ALT_GCC} --print-file-name=adalib
 #.        if !empty(ALT_GCC_RTS)
-#RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+#RALT_GCC_RTS=		${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 #.        else
 #PKG_SKIP_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
 #.        endif
@@ -176,7 +176,7 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 #ABI_BASELINE_PAIR=	${GCC_PLATFORM:C/--/-/}
-#MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
+#MAKE_ENV+=		ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
 .endif # NetBSD
 
 #post-patch:

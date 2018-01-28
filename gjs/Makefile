@@ -29,7 +29,7 @@ SUBST_MESSAGE.fix-python=	Fixing dynamic python
 SUBST_FILES.fix-python+=	scripts/make-tests
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 
-#SUBST_CLASSES+=			libjs
+#SUBST_CLASSES+=		libjs
 #SUBST_STAGE.libjs=		pre-configure
 #SUBST_MESSAGE.fix-python=	Convert libjs to libmozjs24
 #SUBST_FILES.fix-python+=	scripts/make-tests

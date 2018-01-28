@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	gmake intltool msgfmt
 USE_LANGUAGES=	# none
 
-#INSTALL_MAKE_FLAGS=    PREFIX=${DESTDIR}${PREFIX}
+#INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

@@ -31,8 +31,8 @@ SUBST_SED.callcenter=		-e 's:\#applications/mod_callcenter:applications/mod_call
 
 PLIST.callcenter=		yes
 
-#CONF_FILES+=            ${EGDIR}/autoload_configs/callcenter.conf.xml \
-#			${PKG_SYSCONFDIR}/autoload_configs/callcenter.conf.xml
+#CONF_FILES+=	${EGDIR}/autoload_configs/callcenter.conf.xml \
+#		${PKG_SYSCONFDIR}/autoload_configs/callcenter.conf.xml
 .endif
 
 .if !empty(PKG_OPTIONS:Mcidlookup)
@@ -44,8 +44,8 @@ SUBST_SED.cidlookup=		-e 's:\#applications/mod_cidlookup:applications/mod_cidloo
 
 PLIST.cidlookup=		yes
 
-#CONF_FILES+=            ${EGDIR}/autoload_configs/cidlookup.conf.xml \
-#			${PKG_SYSCONFDIR}/autoload_configs/cidlookup.conf.xml
+#CONF_FILES+=	${EGDIR}/autoload_configs/cidlookup.conf.xml \
+#		${PKG_SYSCONFDIR}/autoload_configs/cidlookup.conf.xml
 .endif
 
 .if !empty(PKG_OPTIONS:Mavmd)
@@ -78,8 +78,8 @@ SUBST_SED.memcache=	-e 's:\#applications/mod_memcache:applications/mod_memcache:
 
 PLIST.memcache=		yes
 
-#CONF_FILES+=            ${EGDIR}/autoload_configs/memcache.conf.xml \
-#			${PKG_SYSCONFDIR}/autoload_configs/memcache.conf.xml
+#CONF_FILES+=	${EGDIR}/autoload_configs/memcache.conf.xml \
+#		${PKG_SYSCONFDIR}/autoload_configs/memcache.conf.xml
 .endif
 
 # TODO: Include all remaining modules in options.mk to provide a more customizable package.

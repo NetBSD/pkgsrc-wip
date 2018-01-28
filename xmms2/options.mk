@@ -256,7 +256,7 @@ WITHOUT_PLUGINS+=	tremor
 .endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
-BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
+BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
 #PLIST.valgrind=	yes
 .endif
 

@@ -20,7 +20,7 @@ AUTO_MKDIRS=	yes
 HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
 
-#CXXFLAGS+=	-std=c++0x
+#CXXFLAGS+=		-std=c++0x
 CXXFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/dash -L${BUILDLINK_PREFIX.boost-libs}/lib/dash
 CXXFLAGS+=		-I${BUILDLINK_PREFIX.boost-libs}/include/boost
 CFLAGS+=		-fPIC

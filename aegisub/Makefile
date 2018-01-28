@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
-#CONFIGURE_DIRS=		build
+#CONFIGURE_DIRS=	build
 #CONFIGURE_SCRIPT=	../configure
 PKGCONFIG_OVERRIDE+=	vendor/csri/csri.pc.in
 

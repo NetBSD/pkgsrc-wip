@@ -11,13 +11,13 @@
 ## $FreeBSD: head/science/udunits/Makefile 383158 2015-04-03 17:28:32Z sunpoet $
 #		LOCAL/sunpoet
 #OPTIONS_DEFINE=	DOCS
-#CPPFLAGS+=	-I${LOCALBASE}/include
+#CPPFLAGS+=		-I${LOCALBASE}/include
 #INSTALL_TARGET=	install-strip
-#LDFLAGS+=	-L${LOCALBASE}/lib
-#USE_LDCONFIG=	yes
-#INFO=		udunits2 udunits2lib udunits2prog
-#PORTDATA=	*
-#PORTDOCS=	*
+#LDFLAGS+=		-L${LOCALBASE}/lib
+#USE_LDCONFIG=		yes
+#INFO=			udunits2 udunits2lib udunits2prog
+#PORTDATA=		*
+#PORTDOCS=		*
 #post-patch:
 #	@${REINPLACE_CMD} -e '/install-data-hook$$/d' ${WRKSRC}/lib/Makefile.in
 #regression-test test: build

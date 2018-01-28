@@ -15,10 +15,10 @@ BUILDLINK_PKGSRCDIR.gcc44?=	../../wip/gcc44
 .if exists(${_GCC44_PREFIX}/bin/gcc)
 
 # logic for detecting the ADA compiler (not yet supported)
-#gcc44_GNAT1!=${_GCC44_PREFIX}/bin/gcc -print-prog-name=gnat1
+#gcc44_GNAT1!=		${_GCC44_PREFIX}/bin/gcc -print-prog-name=gnat1
 #.  if exists(${gcc44_GNAT1})
 #CONFIGURE_ENV+=	ADAC=${_GCC44_PREFIX}/bin/gcc
-#MAKE_ENV+=	ADAC=${_GCC44_PREFIX}/bin/gcc
+#MAKE_ENV+=		ADAC=${_GCC44_PREFIX}/bin/gcc
 #.  endif
 
 # add libraries

@@ -1,14 +1,14 @@
 # $NetBSD: Makefile,v 1.11 2015/03/15 14:22:19 bsiegert Exp $
 #
 
-DISTNAME=		binutils-gold-8.0
-CATEGORIES=		devel
-GIT_REPOSITORIES=	binutils-gold
-#GIT_REPO.binutils-gold=		git://sourceware.org/git/binutils-gdb.git # broken?
-#GIT_REPO.binutils-gold=		http://sourceware.org/git/binutils-gdb.git # broken?
-GIT_REPO.binutils-gold=	https://github.com/wallento/binutils-gdb.git
+DISTNAME=			binutils-gold-8.0
+CATEGORIES=			devel
+GIT_REPOSITORIES=		binutils-gold
+#GIT_REPO.binutils-gold=	git://sourceware.org/git/binutils-gdb.git # broken?
+#GIT_REPO.binutils-gold=	http://sourceware.org/git/binutils-gdb.git # broken?
+GIT_REPO.binutils-gold=		https://github.com/wallento/binutils-gdb.git
 #GIT_DEEP_CLONE.binutils-gold=	yes # server dies on shallow clones
-WRKSRC=			${WRKDIR}/binutils-gold
+WRKSRC=				${WRKDIR}/binutils-gold
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/binutils/

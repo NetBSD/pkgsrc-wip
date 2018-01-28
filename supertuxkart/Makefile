@@ -13,12 +13,12 @@ HOMEPAGE=	http://supertuxkart.sourceforge.net/
 COMMENT=	Free 3D kart racing game
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/supertuxkart-${VERSION}
-USE_CMAKE=	yes
-#USE_LIBTOOL=	yes
+WRKSRC=			${WRKDIR}/supertuxkart-${VERSION}
+USE_CMAKE=		yes
+#USE_LIBTOOL=		yes
 #USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	cmake
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		cmake
 
 CXXFLAGS+=	-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_
 

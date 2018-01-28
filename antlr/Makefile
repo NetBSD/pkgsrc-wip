@@ -7,17 +7,17 @@
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
 
-#CONFLICTS=	pccts-[0-9]*
-#USE_JAVA=	yes
-#JAVA_VERSION=	1.6+
+#CONFLICTS=		pccts-[0-9]*
+#USE_JAVA=		yes
+#JAVA_VERSION=		1.6+
 #PORT_CLASSPATH=	${WRKSRC}/antlrall.jar:.
-#SUB_FILES=	antlr.sh
+#SUB_FILES=		antlr.sh
 #OPTIONS_DEFINE=	PYTHON DOCS
-#OPTIONS_SUB=	yes
+#OPTIONS_SUB=		yes
 #.if ${PORT_OPTIONS:MPYTHON}
 # Unknown tool: USE_TOOLS=	python
-#PORTDOCS+=	python-runtime.html
-#ANTLR_PYTHON=	${WRKSRC}/lib/python
+#PORTDOCS+=		python-runtime.html
+#ANTLR_PYTHON=		${WRKSRC}/lib/python
 #.endif
 #post-configure:
 #.if ${PORT_OPTIONS:MPYTHON}

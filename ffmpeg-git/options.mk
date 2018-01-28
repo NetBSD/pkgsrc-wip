@@ -2,10 +2,10 @@
 
 # Global and legacy options
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	faac lame ass libvpx theora vorbis x264 xvid \
-			opencore-amr x11
-PKG_SUGGESTED_OPTIONS=	lame ass libvpx theora vorbis x264 xvid
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ffmpeg
+PKG_SUPPORTED_OPTIONS=		faac lame ass libvpx theora vorbis x264 xvid \
+				opencore-amr x11
+PKG_SUGGESTED_OPTIONS=		lame ass libvpx theora vorbis x264 xvid
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faac
 

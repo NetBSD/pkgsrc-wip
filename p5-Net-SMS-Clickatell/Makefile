@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Net/SMS/Clickatell/.packlist
 
-#DEPENDS+=       p5-OptArgs>=0.1.18:../../wip/p5-OptArgs
+#DEPENDS+=	p5-OptArgs>=0.1.18:../../wip/p5-OptArgs
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

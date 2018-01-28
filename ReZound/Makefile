@@ -12,7 +12,7 @@ COMMENT=		Audio editor with graphical interface
 LICENSE=		gnu-gpl-v2
 
 # needs real bison and not yacc
-#BUILD_DEPENDS+= 	bison-[0-9]*:../../devel/bison
+#BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-jack

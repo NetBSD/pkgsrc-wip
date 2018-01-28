@@ -42,7 +42,7 @@ PKG_SUPPORTED_OPTIONS+=	vidix
 .endif
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/videoio.h)
-PKG_SUPPORTED_OPTIONS+=	v4l2
+PKG_SUPPORTED_OPTIONS+=		v4l2
 #PKG_SUGGESTED_OPTIONS+=	v4l2
 .endif
 

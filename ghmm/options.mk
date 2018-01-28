@@ -13,7 +13,7 @@ CONFIGURE_ARGS+=	--enable-gsl
 
 .if !empty(PKG_OPTIONS:Matlas)
 CONFIGURE_ARGS+=	--enable-atlas
-#DEPENDS+=      atlas>=3.11.11:../../wip/atlas
+#DEPENDS+=		atlas>=3.11.11:../../wip/atlas
 .else
 CONFIGURE_ENV+=		ac_cv_prog_MAGICK_CONFIG=no
 .endif

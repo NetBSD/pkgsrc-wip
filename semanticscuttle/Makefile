@@ -19,7 +19,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 
 USE_TOOLS+=	pax
-#NO_BUILD=   yes
+#NO_BUILD=	yes
 
 DOCDIR=		${PREFIX}/share/doc/semanticscuttle
 EGDIR=		${PREFIX}/share/examples/semanticscuttle

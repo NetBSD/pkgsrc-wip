@@ -6,7 +6,7 @@ GITHUB_PROJECT=	sydent
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_TAG=	3d3ac5ab802ad91bbecfc0cd6a50bdd31875c1fe
-#EXTRACT_SUFX=   .zip
+#EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/matrix-org/

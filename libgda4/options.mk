@@ -1,11 +1,11 @@
 # $NetBSD: options.mk,v 1.6 2015/06/07 14:24:48 yrmt Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libgda4				# XXX libgda4, to have mk.conf options on a per libgda basis.
-PKG_SUPPORTED_OPTIONS=	bdb jdbc ldap mdb mysql postgres web
-PKG_SUPPORTED_OPTIONS+=	json
-PKG_SUPPORTED_OPTIONS+=	crypto						# XXX some wrong
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libgda4				# XXX libgda4, to have mk.conf options on a per libgda basis.
+PKG_SUPPORTED_OPTIONS=		bdb jdbc ldap mdb mysql postgres web
+PKG_SUPPORTED_OPTIONS+=		json
+PKG_SUPPORTED_OPTIONS+=		crypto						# XXX some wrong
 #PKG_SUPPORTED_OPTIONS+=	bdbsql oracle				# XXX todo
-PKG_SUPPORTED_OPTIONS+=	fam gui ui xslt
+PKG_SUPPORTED_OPTIONS+=		fam gui ui xslt
 
 .include "../../mk/bsd.options.mk"
 

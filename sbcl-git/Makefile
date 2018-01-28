@@ -57,7 +57,7 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		install.sh src/runtime/runtime.c doc/sbcl.1
 SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
-#SUBST_SED.fix-paths+=           -e 's,/var/log,${VARBASE}/log,g'
+#SUBST_SED.fix-paths+=		-e 's,/var/log,${VARBASE}/log,g'
 
 SUBST_CLASSES+=			fix-gtar
 SUBST_STAGE.fix-gtar=		pre-configure

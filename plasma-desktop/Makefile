@@ -39,7 +39,7 @@ CONF_FILES+=	${PREFIX}/share/examples/plasma-desktop/org.kde.fontinst.conf \
 CONF_FILES+=	${PREFIX}/share/examples/plasma-desktop/org.kde.kcontrol.kcmclock.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmclock.conf
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 INSTALLATION_DIRS+=	share/examples/plasma-desktop
 
 .include "../../mk/bsd.prefs.mk"
