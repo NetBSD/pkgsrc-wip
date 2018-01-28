@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--without-python
 #.endif
 
 .if defined(USE_VORBIS)
-.   include "../../audio/libvorbis/buildlink3.mk"
+.  include "../../audio/libvorbis/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-vorbis=${BUILDINK_PREFIX.libvorbis}
 .else
 CONFIGURE_ARGS+=	--without-vorbis

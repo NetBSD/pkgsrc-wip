@@ -129,9 +129,9 @@ post-install:
 	cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE} install-doc
 	cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE} install-man
 
-. 	for f in ${MKDIRS}
+.for f in ${MKDIRS}
 		${MKDIR} ${PKG_SYSCONFDIR}/${f}
-.	endfor
+.endfor
 
 	${CHOWN} ${OPENCA_USER}:${OPENCA_GROUP} \
 		${PKG_SYSCONFDIR}/access_control

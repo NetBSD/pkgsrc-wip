@@ -8,10 +8,10 @@ PKG_SUGGESTED_OPTIONS=	# blank
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk)
-. include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-. include "../../sysutils/libnotify/buildlink3.mk"
-. include "../../x11/gtk2/buildlink3.mk"
-. include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.  include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.  include "../../sysutils/libnotify/buildlink3.mk"
+.  include "../../x11/gtk2/buildlink3.mk"
+.  include "../../sysutils/desktop-file-utils/desktopdb.mk"
 CONFIGURE_ARGS+=	--with-gtk
 PLIST_SRC+=		${PKGDIR}/PLIST.gtk
 .else
@@ -28,7 +28,7 @@ USE_LANGUAGES+=		c c++
 PLIST_SRC+=		${PKGDIR}/PLIST.qt
 MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}
-. include "../../x11/qt4-tools/buildlink3.mk"
+.  include "../../x11/qt4-tools/buildlink3.mk"
 .PHONY:		build-qt-client
 post-build:	build-qt-client
 build-qt-client:

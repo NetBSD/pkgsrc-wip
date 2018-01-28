@@ -285,9 +285,9 @@ CONFLICTS+=	${_EMACS_CONFLICTS.${_EMACS_FLAVOR}}
 
 EMACS_MODULES?=
 .for _mod_ in ${EMACS_MODULES}
-.if !empty(_EMACS_PKGDEP.${_mod_})
+.  if !empty(_EMACS_PKGDEP.${_mod_})
 DEPENDS+=	${_EMACS_PKGDEP.${_mod_}}
-.endif
+.  endif
 .endfor
 
 #

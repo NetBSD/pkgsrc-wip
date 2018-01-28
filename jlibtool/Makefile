@@ -18,12 +18,12 @@ USE_FEATURES+=		snprintf
 AUTO_MKDIRS=		yes
 
 do-extract:
-.   if !exists(${WRKSRC})
+.if !exists(${WRKSRC})
 	${RUN} ${MKDIR} ${WRKSRC}
-.   endif
+.endif
 
-.   for fn in Makefile jlibtool.c
+.for fn in Makefile jlibtool.c
 	${RUN} cp ${FILESDIR}/${fn} ${WRKSRC}
-.   endfor
+.endfor
 
 .include "../../mk/bsd.pkg.mk"

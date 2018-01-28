@@ -75,7 +75,7 @@ CONFIGURE_ARGS+=	--without-x
 .endif
 
 .if !empty(PKG_OPTIONS:Mxpm)
-.if empty(PKG_OPTIONS:Mx11)
+.  if empty(PKG_OPTIONS:Mx11)
 .include "../../x11/libXpm/buildlink3.mk"
-.endif
+.  endif
 .endif

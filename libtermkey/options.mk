@@ -10,13 +10,13 @@ PKG_SUGGESTED_OPTIONS=		unibilium
 ###
 ### Use ncurses
 ###
-.  if !empty(PKG_OPTIONS:Mncurses)
+.if !empty(PKG_OPTIONS:Mncurses)
 .include "../../mk/termcap.buildlink3.mk"
-.  endif
+.endif
 
 ###
 ### Use unibilium
 ###
-.  if !empty(PKG_OPTIONS:Munibilium)
+.if !empty(PKG_OPTIONS:Munibilium)
 .include "../../wip/libunibilium/buildlink3.mk"
-.  endif
+.endif

@@ -143,12 +143,12 @@ do-install:
 	fi
 .endfor
 .for dir in ${SHADER_DIRS}
-.for type in glsl glslp md png
+.  for type in glsl glslp md png
 	if ${LS} -1 ${WRKSRC}/${dir} | ${GREP} -q .${type}$$ ; then \
 	    ${INSTALL_DATA} ${WRKSRC}/${dir}/*.${type} \
 	    ${DESTDIR}${PREFIX}/share/libretro/shaders/${dir} ; \
 	fi
-.endfor
+.  endfor
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

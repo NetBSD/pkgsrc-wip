@@ -44,9 +44,9 @@ pkgbase := gnokii
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.gnokii:Mxpm)
-.if empty(PKG_BUILD_OPTIONS.gnokii:Mx11)
+.  if empty(PKG_BUILD_OPTIONS.gnokii:Mx11)
 .include "../../x11/libXpm/buildlink3.mk"
-.endif
+.  endif
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"

@@ -28,7 +28,7 @@ PLIST_VARS+=	pam
 CONFIGURE_ARGS+=	--with-pam
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
-.if ${OPSYS} == "Linux"
+.  if ${OPSYS} == "Linux"
 PLIST.pam=	yes
-.endif
+.  endif
 .endif

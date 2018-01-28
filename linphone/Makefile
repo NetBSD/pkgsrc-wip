@@ -29,13 +29,13 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--enable-macsnd
-. if !empty(PKGSRC_COMPILER:Mgcc*)
+.  if !empty(PKGSRC_COMPILER:Mgcc*)
 SUBST_CLASSES+=			objective-c
 SUBST_STAGE.objective-c=	post-patch
 SUBST_MESSAGE.objective-c=	adding "-x objective-c" for mediastreamer2 code
 SUBST_FILES.objective-c=	mediastreamer2/src/Makefile.in
 SUBST_SED.objective-c=		-e 's/^CC = @CC@/CC = @CC@ -x objective-c/g'
-. endif
+.  endif
 SUBST_CLASSES+=			frameworks
 SUBST_STAGE.frameworks=		post-patch
 SUBST_MESSAGE.frameworks=	adding Carbon and AudioUnit frameworks

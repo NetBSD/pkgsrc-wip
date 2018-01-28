@@ -26,13 +26,13 @@ PLIST_VARS+=		dri3
 
 .if !empty(PKG_OPTIONS:Mdri)
 
-.if !empty(PKG_OPTIONS:Mdri3)
+.  if !empty(PKG_OPTIONS:Mdri3)
 CONFIGURE_ARGS+=	--enable-dri3
 PLIST.dri3=		yes
 .include "../../x11/dri3proto/buildlink3.mk"
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-dri3
-.endif
+.  endif
 
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11

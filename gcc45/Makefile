@@ -37,11 +37,11 @@ UNLIMIT_RESOURCES+=	stacksize
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		OBJDUMP=/usr/sfw/bin/gobjdump
 CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
-. if !exists(/usr/sfw/bin/gas)
+.  if !exists(/usr/sfw/bin/gas)
 CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
-. else
+.  else
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
-. endif
+.  endif
 .endif
 
 # REPLACE_AWK+=	gcc/testsuite/gcc.test-framework/test-framework.awk	\

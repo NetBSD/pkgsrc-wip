@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.ffmpeg+=	ffmpeg>=20130106.1.1
 BUILDLINK_PKGSRCDIR.ffmpeg?=	../../multimedia/ffmpeg
 
 pkgbase := ffmpeg
-.  include "../../mk/pkg-build-options.mk"
+.include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
 

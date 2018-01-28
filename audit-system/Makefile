@@ -59,9 +59,9 @@ SUBST_SED.tools+=	-e "s|@SCRIPT_DIR@|${SCRIPT_DIR}|g"
 SUBST_SED.tools+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 
 do-extract:
-.	for f in ${AS_FILES}
+.for f in ${AS_FILES}
 		${CP} ${FILESDIR}/${f} ${WRKSRC}
-.	endfor
+.endfor
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/audit-system.conf ${DESTDIR}${EGDIR}

@@ -24,11 +24,11 @@ PKG_SUGGESTED_OPTIONS=		readline
 .include "../../mk/bsd.options.mk"
 
 .for option in ${PKG_SUPPORTED_OPTIONS}
-.if !empty(PKG_OPTIONS:M${option})
+.  if !empty(PKG_OPTIONS:M${option})
 PLIST_SUBST+=	${option}=""
-.else
+.  else
 PLIST_SUBST+=	${option}="@comment "
-.endif
+.  endif
 .endfor
 
 .if !empty(PKG_OPTIONS:Mreadline)

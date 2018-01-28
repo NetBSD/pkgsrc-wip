@@ -10,10 +10,10 @@
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
-.if ${OPSYS} != "DragonFly" && ${OPSYS} != "FreeBSD"
+.  if ${OPSYS} != "DragonFly" && ${OPSYS} != "FreeBSD"
 # Enable Google widevine CDM. This requires external libwidevinecdm.so.
 CONFIGURE_ARGS+=	--enable-eme=widevine
-.endif
+.  endif
 .endif
 
 HAS_CONFIGURE=		yes

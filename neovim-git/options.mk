@@ -9,26 +9,26 @@ PKG_SUGGESTED_OPTIONS=	python ruby
 ###
 ### Support Python (add dependency)
 ###
-.  if !empty(PKG_OPTIONS:Mpython)
+.if !empty(PKG_OPTIONS:Mpython)
 DEPENDS+=	${PYPKGPREFIX}-neovim-[0-9]*:../../wip/py-neovim
 
 .include "../../lang/python/pyversion.mk"
-.  endif
+.endif
 
 ###
 ### Support Ruby (add dependency)
 ###
-.  if !empty(PKG_OPTIONS:Mruby)
+.if !empty(PKG_OPTIONS:Mruby)
 DEPENDS+=	${RUBY_PKGPREFIX}-neovim-[0-9]*:../../wip/ruby-neovim
 
 .include "../../lang/ruby/rubyversion.mk"
-.  endif
+.endif
 
 ###
 ### Use jemalloc for memory allocation
 ###
-.  if !empty(PKG_OPTIONS:Mjemalloc)
+.if !empty(PKG_OPTIONS:Mjemalloc)
 .include "../../devel/jemalloc/buildlink3.mk"
-.  else
+.else
 CMAKE_ARGS+= -DENABLE_JEMALLOC=OFF
-.  endif
+.endif

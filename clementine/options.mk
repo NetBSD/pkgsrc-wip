@@ -51,7 +51,7 @@ CMAKE_ARGS+=	-DENABLE_DEVICEKIT=OFF
 ###
 
 .if !empty(PKG_OPTIONS:Mlibmtp)
-.	include "../../devel/libmtp/buildlink3.mk"
+.  include "../../devel/libmtp/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_LIBMTP=ON
 .else
 CMAKE_ARGS+=	-DENABLE_LIBMTP=OFF
@@ -72,9 +72,9 @@ CMAKE_ARGS+=	-DENABLE_GIO=OFF
 ###
 
 .if !empty(PKG_OPTIONS:Mlibgpod)
-.	include "../../audio/libgpod/buildlink3.mk"
-.	include "../libusbmuxd/buildlink3.mk" # Will be moved to comms/
-.	include "../../textproc/libplist/buildlink3.mk"
+.  include "../../audio/libgpod/buildlink3.mk"
+.  include "../libusbmuxd/buildlink3.mk" # Will be moved to comms/
+.  include "../../textproc/libplist/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_LIBGPOD=ON
 .else
 CMAKE_ARGS+=	-DENABLE_LIBGPOD=OFF
@@ -85,7 +85,7 @@ CMAKE_ARGS+=	-DENABLE_LIBGPOD=OFF
 ###
 
 .if !empty(PKG_OPTIONS:Maudiocd)
-.	include "../../misc/libcdio/buildlink3.mk"
+.  include "../../misc/libcdio/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_AUDIOCD=ON
 .else
 CMAKE_ARGS+=	-DENABLE_AUDIOCD=OFF
@@ -117,7 +117,7 @@ CMAKE_ARGS+=	-DENABLE_MOODBAR=OFF
 ###
 
 .if !empty(PKG_OPTIONS:Mlastfm)
-.	include "../../audio/liblastfm/buildlink3.mk"
+.  include "../../audio/liblastfm/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_LIBLASTFM=ON
 .else
 CMAKE_ARGS+=	-DENABLE_LIBLASTFM=OFF
@@ -198,7 +198,7 @@ CMAKE_ARGS+=	-DENABLE_VK=OFF
 ###
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
-.	include "../../audio/pulseaudio/buildlink3.mk"
+.  include "../../audio/pulseaudio/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_LIBPULSE=ON
 DEPENDS+=	gst-plugins1-pulse>=1.4.0:../../audio/gst-plugins1-pulse
 .else

@@ -79,7 +79,7 @@ CONFIGURE_ARGS+=	--without-motif
 .if !empty(PKG_OPTIONS:Mmysql)
 CONFIGURE_ARGS+=	--with-mysql
 PLIST.mysql=		yes
-. include "../../mk/mysql.buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-mysql
 .endif
@@ -95,7 +95,7 @@ CONFIGURE_ARGS+=	--without-opengl
 .if !empty(PKG_OPTIONS:Mpgsql)
 CONFIGURE_ARGS+=	--with-postgres
 PLIST.pgsql=		yes
-. include "../../mk/pgsql.buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-postgres
 .endif

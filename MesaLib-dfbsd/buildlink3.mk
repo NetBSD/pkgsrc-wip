@@ -14,9 +14,9 @@ BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 .if ${X11_TYPE} == "modular"
 BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=13
 # This is needed to avoid linking conflicting libstdc++ versions
-.if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mc++)
+.  if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mc++)
 GCC_REQD+=	4.2
-.endif
+.  endif
 .endif
 
 # See <http://developer.apple.com/qa/qa2007/qa1567.html>.

@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	openssl
 .if !defined(OPENSSL_BUILDLINK3_MK)
 OPENSSL_BUILDLINK3_MK:=
 
-.  include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.1.0f
 BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=1.1.0f

@@ -41,13 +41,13 @@ BUILDLINK_PASSTHRU_DIRS+=	/usr/local/lib/bind
 CONFIGURE_ENV+=			ac_cv_func_openpty=no
 CONFIGURE_ENV+=			ac_cv_type_struct_timespec=yes
 CPPFLAGS+=			-DIOV_MAX=16 # default is INT_MAX, way too large
-.if exists(/usr/local/include/bind/resolv.h)
+.  if exists(/usr/local/include/bind/resolv.h)
 CPPFLAGS+=			-I/usr/local/include/bind
 BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/bind
-.elif exists(/usr/local/bind/include/resolv.h)
+.  elif exists(/usr/local/bind/include/resolv.h)
 CPPFLAGS+=			-I/usr/local/bind/include
 BUILDLINK_PASSTHRU_DIRS+=	/usr/local/bind/include
-.endif
+.  endif
 LDFLAGS+=			-L/usr/local/lib/bind
 LIBS+=				-lbind -ldb -lcrypt
 

@@ -12,7 +12,7 @@ LIBBSD.only_for_platform=	Linux-*-*
 
 .include "../../mk/bsd.prefs.mk"
 .for p in ${LIBBSD.only_for_platform}
-.    if !empty(MACHINE_PLATFORM:M${p})
+.  if !empty(MACHINE_PLATFORM:M${p})
 USE_LIBBSD=		yes
-.    endif
+.  endif
 .endfor

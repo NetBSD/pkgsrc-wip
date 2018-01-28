@@ -42,11 +42,11 @@ INSTALLATION_DIRS+=	share/retroarch/assets/${i}
 
 do-install:
 .for dir in ${RA_ASSET_DIRS}
-.for type in ttf png
+.  for type in ttf png
 	if ${LS} -1 ${WRKSRC}/assets/${dir} | ${GREP} -q .${type}$$; then \
 		${INSTALL_DATA} ${WRKSRC}/assets/${dir}/*.${type} \
 		    ${DESTDIR}${PREFIX}/share/retroarch/assets/${dir}; fi
-.endfor
+.  endfor
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

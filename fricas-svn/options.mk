@@ -47,17 +47,17 @@ PRINT_PLIST_AWK+=	{if ($$0 ~ /\.o$$/) {$$0 = "$${ecl}" $$0;}}
 PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/share\/viewports\// || $$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
 # ...where "util.ht" is false positive.
 # files in lib/.../bin
-.for _file_ in htadd hypertex viewAlone
+.  for _file_ in htadd hypertex viewAlone
 PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/bin\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
-.endfor
+.  endfor
 # files in lib/.../lib
-.for _file_ in ex2ht hthits htsearch presea spadbuf view2D view3D viewman
+.  for _file_ in ex2ht hthits htsearch presea spadbuf view2D view3D viewman
 PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/lib\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
-.endfor
+.  endfor
 # files in lib/.../bitmaps
-.for _file_ in door ht_icon
+.  for _file_ in door ht_icon
 PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/bitmaps\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
-.endfor
+.  endfor
 # Postscript files in lib/.../lib/graph:
 PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/lib\/graph\/.*\.ps$$/) {$$0 = "$${x11}" $$0;}}
 .endif

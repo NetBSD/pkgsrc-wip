@@ -80,9 +80,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DESTDIR}${DOCDIR}
 
-. for d in ${PAXDIRS}
+.for d in ${PAXDIRS}
 		cd ${WRKSRC}/${d} && pax -rwpma . ${DESTDIR}${NAGDIR}/${d}
-. endfor
+.endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${NAGDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${NAGDIR}

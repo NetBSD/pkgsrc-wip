@@ -16,7 +16,7 @@ GNU_CONFIGURE=	YES
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-.if exists(/Developer/Applications/Xcode.app)
+.  if exists(/Developer/Applications/Xcode.app)
 SUBST_CLASSES+=			xcode
 SUBST_FILES.xcode=		configure
 SUBST_MESSAGE.xcode=		adapting Xcode install path
@@ -25,7 +25,7 @@ SUBST_SED.xcode+=		-e "s|head -1|tail -1|g"
 SUBST_SED.xcode+=		-e "s|/Applications/Xcode.app/|/Developer/Applications/Xcode.app/|g"
 SUBST_STAGE.xcode=		post-patch
 BUILDLINK_PASSTHRU_DIRS+=	/Developer
-.endif
+.  endif
 .else
 BUILDLINK_PASSTHRU_DIRS+=	/Applications/Xcode.app
 .endif

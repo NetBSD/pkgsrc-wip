@@ -33,11 +33,11 @@ INSTALL_UNSTRIPPED=	yes	# don't strip AXIOMsys, it breaks FFI
 .endif
 
 .if 1 # extract from Subversion
-.if !empty(PKG_OPTIONS:Mx11)
+.  if !empty(PKG_OPTIONS:Mx11)
 post-build:
 # This should start Xvfb temporarily (1024x768x24 resolution recommended):
 	cd ${WRKSRC}/src/paste && ${MAKE_PROGRAM} gphts
-.endif
+.  endif
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	fricas

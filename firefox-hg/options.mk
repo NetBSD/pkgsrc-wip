@@ -57,23 +57,23 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
-.if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
+.  if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
 # Modern gcc does not run any "tracking" passes when compiling with -O0,
 # which makes the generated debug info mostly useless. So explicitly
 # request them.
 O0TRACKING=-fvar-tracking-assignments -fvar-tracking
-.endif
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}" --enable-debug-symbols --disable-optimize
 CONFIGURE_ARGS+=	--disable-install-strip
 .else
-.if !empty(PKG_OPTIONS:Mdebug-info)
+.  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-debug-symbols
-.endif
+.  endif
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip

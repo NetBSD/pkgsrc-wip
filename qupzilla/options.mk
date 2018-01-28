@@ -19,9 +19,9 @@ PKG_SUGGESTED_OPTIONS=	qt4 dbus
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 DEPENDS+=qt4-sqlite3>=4.7:../../x11/qt4-sqlite3
-.if !empty(PKG_OPTIONS:Mdbus)
+.  if !empty(PKG_OPTIONS:Mdbus)
 .include "../../x11/qt4-qdbus/buildlink3.mk"
-.else
+.  else
 MAKE_ENV+= DISABLE_DBUS=${TRUE}
-.endif
+.  endif
 .endif

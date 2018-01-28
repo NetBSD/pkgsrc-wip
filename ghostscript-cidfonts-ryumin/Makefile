@@ -69,15 +69,15 @@ NO_CONFIGURE=	yes
 
 # Following logic is flaky, for looking at PKG_OPTIONS.gs_type now NOT at build time
 .if   !empty(PKG_BUILD_OPTIONS.ghostscript:Mghostscript-agpl)
-. include	"../../print/ghostscript-agpl/Makefile.common"
-. if empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mdisable-compile-inits)
+.  include	"../../print/ghostscript-agpl/Makefile.common"
+.  if empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mdisable-compile-inits)
 PKG_FAIL_REASON+=	'(agpl) You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
-. endif
+.  endif
 .else
-. include	"../../print/ghostscript-gpl/Makefile.common"
-. if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits)
+.  include	"../../print/ghostscript-gpl/Makefile.common"
+.  if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits)
 PKG_FAIL_REASON+=	'(gpl) You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
-. endif
+.  endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"

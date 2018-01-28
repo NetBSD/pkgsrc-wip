@@ -32,13 +32,13 @@ USE_TOOLS+=		pkg-config
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-graphcairo-xcb
 .else
-.if !empty(PKG_OPTIONS:Mgraphcairo-xlib)
+.  if !empty(PKG_OPTIONS:Mgraphcairo-xlib)
 USE_TOOLS+=		pkg-config
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-graphcairo-xlib
-.endif
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Midn)

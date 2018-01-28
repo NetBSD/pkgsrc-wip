@@ -11,13 +11,13 @@ PKG_SUGGESTED_OPTIONS=
 .include "../../mk/bsd.options.mk"
 
 .if ${OPSYS} == "DragonFly"
-.if !empty(OS_VERSION:M[0-2].*) || !empty(OS_VERSION:M3.0*)
+.  if !empty(OS_VERSION:M[0-2].*) || !empty(OS_VERSION:M3.0*)
 PKG_SUGGESTED_OPTIONS+=	dflyusb 
-.else
+.  else
 # Assume Dragonfly 3.1 - 3.6 users built U4B stack
 # 3.8 and after U4B is the default
 PKG_SUGGESTED_OPTIONS+=	dflyu4b 
-.endif
+.  endif
 .endif
 
 .if ${OPSYS} == "FreeBSD"

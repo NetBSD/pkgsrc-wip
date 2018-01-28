@@ -12,9 +12,9 @@ LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
 
 pkgbase := llvm
 .include "../../mk/pkg-build-options.mk"
-.  if !empty(PKG_BUILD_OPTIONS.llvm:Mterminfo)
+.if !empty(PKG_BUILD_OPTIONS.llvm:Mterminfo)
 .include "../../mk/terminfo.buildlink3.mk"
-.  endif
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .endif	# LLVM_BUILDLINK3_MK

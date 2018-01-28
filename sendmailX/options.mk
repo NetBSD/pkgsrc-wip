@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	tls sasl pmilter
 ### Use OpenSSL libraries for SMTP STARTTLS support
 ###
 .if !empty(PKG_OPTIONS:Mtls)
-.	include "../../security/openssl/buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	-enable-TLS
 CFLAGS+=		-DSM_USE_TLS
 .else
@@ -21,7 +21,7 @@ CONFIGURE_ENV+=		ac_cv_header_openssl_ssl_h=no
 ### Use SASLv2 for SMTP AUTH
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.	include "../../security/cyrus-sasl/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	-enable-SASL
 CFLAGS+=		-DSM_USE_SASL
 .else

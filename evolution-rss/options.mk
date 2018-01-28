@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	dbus
 
 
 .if !empty(PKG_OPTIONS:Mdbus)
-.   include "../../sysutils/dbus/buildlink3.mk"
+.  include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-dbus
 #.endif
 
 .if !empty(PKG_OPTIONS:Mwebkit )
-.   include "../../www/webkit24-gtk/buildlink3.mk"
+.  include "../../www/webkit24-gtk/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webkit
 .else
 CONFIGURE_ARGS+=	--disable-webkit

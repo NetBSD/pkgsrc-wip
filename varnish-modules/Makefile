@@ -34,6 +34,6 @@ pre-configure:
 .include "../../mk/bsd.pkg.mk"
 
 .include "../../mk/compiler.mk"
-. if !empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(PKGSRC_COMPILER:Mgcc)
 DEPENDS+=       ${_GCC_DEPENDENCY}
 .endif

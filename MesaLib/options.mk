@@ -43,12 +43,12 @@ PLIST_VARS+=	gbm wayland xatracker
 
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-egl
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 CFLAGS+=		-DHAVE_DRI3
 CONFIGURE_ARGS+=	--enable-dri3
 CONFIGURE_ARGS+=	--enable-gbm
 PLIST.gbm=		yes
-.endif
+.  endif
 CONFIGURE_ARGS+=	--enable-gles1
 CONFIGURE_ARGS+=	--enable-gles2
 
@@ -56,25 +56,25 @@ CONFIGURE_ARGS+=	--enable-gles2
 # XXX Fixme
 #	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||
 #	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||
-.if \
+.  if \
 	!empty(MACHINE_PLATFORM:MLinux-*-i386) ||		\
 	!empty(MACHINE_PLATFORM:MLinux-*-x86_64) ||		\
 	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
 	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
 CONFIGURE_ARGS+=	--enable-glx-tls
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-glx-tls
-.endif
+.  endif
 
 # DRI on Linux needs either sysfs or udev
 CONFIGURE_ARGS.Linux+=	--enable-sysfs
 
 PLIST.dri=	yes
 
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
-.endif
+.  endif
 .include "../../graphics/MesaLib/dri.mk"
 
 DRI_DRIVERS=		#
@@ -83,13 +83,13 @@ GALLIUM_DRIVERS=	#
 # Software rasterizer
 PLIST.swrast_dri=	yes
 DRI_DRIVERS+=		swrast
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 PLIST.swrast=		yes
 GALLIUM_DRIVERS+=	swrast
-.endif
+.  endif
 
 # x86 only drivers
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "Darwin"
+.  if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "Darwin"
 # svga / VMWare driver
 PLIST.svga=		yes
 GALLIUM_DRIVERS+=	svga
@@ -106,10 +106,10 @@ GALLIUM_DRIVERS+=	ilo
 
 PLIST.i965_dri=		yes
 DRI_DRIVERS+=		i965
-.endif
+.  endif
 
 # ARM drivers
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 # Qualcomm SnapDragon, libdrm_freedreno.pc
 GALLIUM_DRIVERS+=	freedreno
 PLIST.freedreno=	yes
@@ -117,17 +117,17 @@ PLIST.freedreno=	yes
 # Broadcom VideoCore 4
 GALLIUM_DRIVERS+=	vc4
 PLIST.vc4=		yes
-.endif
+.  endif
 
 # qemu Linux guest driver
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.  if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 # XXX test this
 #GALLIUM_DRIVERS+=	virgl
 #PLIST.virgl=		yes
-.endif
+.  endif
 
 # theoretically cross platform PCI drivers, but don't build on ARM
-.if ${OPSYS} != "Darwin" && empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+.  if ${OPSYS} != "Darwin" && empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 
 # AMD Radeon r600
 PLIST.r600=		yes
@@ -148,22 +148,22 @@ DRI_DRIVERS+=		r200
 # classic DRI nouveau
 PLIST.nouveau_dri=	yes
 DRI_DRIVERS+=		nouveau
-.endif
+.  endif
 
-.if ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-egl-platforms=x11
 #.elif ${OPSYS} == "Linux"
 #.include "../../wip/wayland/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-egl-platforms=x11,drm,wayland
 #PLIST.wayland=		yes
-.else
+.  else
 CONFIGURE_ARGS+=	--with-egl-platforms=x11,drm
-.endif
+.  endif
 
 CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
 CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_DRIVERS:ts,}
 
-.if !empty(PKG_OPTIONS:Mllvm)
+.  if !empty(PKG_OPTIONS:Mllvm)
 # XA is useful for accelerating xf86-video-vmware
 CONFIGURE_ARGS+=	--enable-xa
 PLIST.xatracker=	yes
@@ -179,11 +179,11 @@ CONFIGURE_ARGS+=	--enable-r600-llvm-compiler
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
 .include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
-.else # !llvm
+.  else # !llvm
 CONFIGURE_ARGS+=	--disable-xa
 CONFIGURE_ARGS+=	--disable-gallium-llvm
 CONFIGURE_ARGS+=	--disable-r600-llvm-compiler
-.endif # llvm
+.  endif # llvm
 .else # !dri
 CONFIGURE_ARGS+=	--with-gallium-drivers=
 CONFIGURE_ARGS+=	--with-dri-drivers=
@@ -194,7 +194,7 @@ CONFIGURE_ARGS+=	--disable-gbm
 CONFIGURE_ARGS+=	--disable-gles1
 CONFIGURE_ARGS+=	--disable-gles2
 CONFIGURE_ARGS+=	--enable-xlib-glx
-.if !empty(PKG_OPTIONS:Mllvm)
+.  if !empty(PKG_OPTIONS:Mllvm)
 PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
-.endif
+.  endif
 .endif

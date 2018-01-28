@@ -124,16 +124,16 @@ do-install:
 		find . -name .gitignore -exec rm -f \{\} \; && \
 		pax -rwpam . ${DESTDIR}${DOCDIR}
 
-.	for f in COPYING CREDITS ChangeLog INSTALL README TODO VERSION
+.for f in COPYING CREDITS ChangeLog INSTALL README TODO VERSION
 		cd ${WRKSRC} && \
 		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
-.	endfor
+.endfor
 
-.	for d in ${PAXDIRS}
+.for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${DESTDIR}${DAVICALDIR}/${d}
 		cd ${WRKSRC}/${d} && find . -name .gitignore -exec rm -f \{\} \;
 		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${DAVICALDIR}/${d}
-.	endfor
+.endfor
 
 	cd ${WRKSRC}/config && for f in *; do				\
 		${INSTALL_DATA} $$f ${DESTDIR}${EGDIR}/config/$$f;	\

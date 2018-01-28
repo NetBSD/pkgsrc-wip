@@ -17,12 +17,12 @@ DESCR_SRC=		${.CURDIR}/DESCR.common ${.CURDIR}/DESCR
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xmlformat
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xmlformat/examples
-.	for _dtype in xml html pdf
+.for _dtype in xml html pdf
 	${INSTALL_DATA} ${WRKSRC}/docs/tutorial.${_dtype} \
 		${DESTDIR}${PREFIX}/share/doc/xmlformat
 	${INSTALL_DATA} ${WRKSRC}/docs/xmlformat.${_dtype} \
 		${DESTDIR}${PREFIX}/share/doc/xmlformat
-.	endfor
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/docs/API ${DESTDIR}${PREFIX}/share/doc/xmlformat
 	${INSTALL_DATA} ${WRKSRC}/docs/xmlformat.conf \
 		${DESTDIR}${PREFIX}/share/doc/xmlformat

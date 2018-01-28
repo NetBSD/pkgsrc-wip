@@ -35,13 +35,13 @@ CONFIGURE_ARGS+=	--without-dbus
 ###
 ### Support XML2
 ###
-.  if !empty(PKG_OPTIONS:Mxml)
+.if !empty(PKG_OPTIONS:Mxml)
 USE_TOOLS+=             pkg-config
 BUILDLINK_API_DEPENDS.libxml2+= libxml2>=2.6.17
 .include "../../textproc/libxml2/buildlink3.mk"
-.  else
+.else
 CONFIGURE_ARGS+=        --without-xml2
-.  endif
+.endif
 
 ###
 ### Support gnutls
