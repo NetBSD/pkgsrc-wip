@@ -4352,6 +4352,7 @@ SUBDIR+=	tor-dev
 SUBDIR+=	torcs
 SUBDIR+=	torque2d
 SUBDIR+=	torque3d
+SUBDIR+=	torsocks
 SUBDIR+=	torsocks-git
 SUBDIR+=	tortunnel
 SUBDIR+=	totem
