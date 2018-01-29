@@ -2,5 +2,4 @@
   kosher to call `getcap /usr/bin/foo'
 - Is LIBC_PATH usage via CONFIGURE_ARGS correct, needed and portable?
 - Adjust any possible hardcoded path in man pages
-- Add support for tests
 - Test it via net/tor torify(1)

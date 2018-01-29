@@ -60,6 +60,8 @@ SUBST_FILES.lib=	src/lib/torsocks.h
 SUBST_SED.lib=		-e '/LIBC_GETHOSTBYADDR_SIG/ s/const void \*addr/const char *addr/'
 .endif
 
+TEST_TARGET=	check
+
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/torsocks.conf \
