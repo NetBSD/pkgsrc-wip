@@ -6,6 +6,7 @@ bin/keyserver
 bin/storeserver
 bin/upbox
 bin/upspin
+bin/upspin-audit
 bin/upspin-setupstorage
 bin/upspinfs
 bin/upspinserver
@@ -128,11 +129,13 @@ gopkg/src/upspin.io/client/clientutil/readall.go
 gopkg/src/upspin.io/client/file/file.go
 gopkg/src/upspin.io/client/file/file_test.go
 gopkg/src/upspin.io/cloud/https/https.go
+gopkg/src/upspin.io/cloud/mail/logger.go
 gopkg/src/upspin.io/cloud/mail/mail.go
 gopkg/src/upspin.io/cloud/mail/sendgrid/all_test.go
 gopkg/src/upspin.io/cloud/mail/sendgrid/sendgrid.go
 gopkg/src/upspin.io/cloud/storage/disk/convert.go
 gopkg/src/upspin.io/cloud/storage/disk/disk.go
+gopkg/src/upspin.io/cloud/storage/disk/disk_test.go
 gopkg/src/upspin.io/cloud/storage/disk/internal/local/path.go
 gopkg/src/upspin.io/cloud/storage/disk/internal/local/path_test.go
 gopkg/src/upspin.io/cloud/storage/storage.go
@@ -150,6 +153,12 @@ gopkg/src/upspin.io/cmd/frontend/frontend.go
 gopkg/src/upspin.io/cmd/keyserver/main.go
 gopkg/src/upspin.io/cmd/storeserver/main.go
 gopkg/src/upspin.io/cmd/upbox/main.go
+gopkg/src/upspin.io/cmd/upspin-audit/bytesize.go
+gopkg/src/upspin.io/cmd/upspin-audit/deletegarbage.go
+gopkg/src/upspin.io/cmd/upspin-audit/findgarbage.go
+gopkg/src/upspin.io/cmd/upspin-audit/main.go
+gopkg/src/upspin.io/cmd/upspin-audit/scandir.go
+gopkg/src/upspin.io/cmd/upspin-audit/scanstore.go
 gopkg/src/upspin.io/cmd/upspin-setupstorage/setupstorage.go
 gopkg/src/upspin.io/cmd/upspin/allcmds_test.go
 gopkg/src/upspin.io/cmd/upspin/cmd_test.go
@@ -159,6 +168,7 @@ gopkg/src/upspin.io/cmd/upspin/cp.go
 gopkg/src/upspin.io/cmd/upspin/createsuffixeduser.go
 gopkg/src/upspin.io/cmd/upspin/deletestorage.go
 gopkg/src/upspin.io/cmd/upspin/doc.go
+gopkg/src/upspin.io/cmd/upspin/findbinaries.go
 gopkg/src/upspin.io/cmd/upspin/gendoc.go
 gopkg/src/upspin.io/cmd/upspin/get.go
 gopkg/src/upspin.io/cmd/upspin/getref.go
@@ -171,6 +181,8 @@ gopkg/src/upspin.io/cmd/upspin/main.go
 gopkg/src/upspin.io/cmd/upspin/metric.go
 gopkg/src/upspin.io/cmd/upspin/mkdir.go
 gopkg/src/upspin.io/cmd/upspin/mkdoc.sh
+gopkg/src/upspin.io/cmd/upspin/plan9.go
+gopkg/src/upspin.io/cmd/upspin/plan9_test.go
 gopkg/src/upspin.io/cmd/upspin/put.go
 gopkg/src/upspin.io/cmd/upspin/repack.go
 gopkg/src/upspin.io/cmd/upspin/rm.go
@@ -200,6 +212,7 @@ gopkg/src/upspin.io/cmd/upspinfs/scripts/fstabfortest
 gopkg/src/upspin.io/cmd/upspinfs/scripts/mount_darwin
 gopkg/src/upspin.io/cmd/upspinfs/scripts/mount_linux
 gopkg/src/upspin.io/cmd/upspinfs/upspinfs_test.go
+gopkg/src/upspin.io/cmd/upspinfs/watch.go
 gopkg/src/upspin.io/cmd/upspinserver/main.go
 gopkg/src/upspin.io/config/initconfig.go
 gopkg/src/upspin.io/config/initconfig_test.go
@@ -248,6 +261,8 @@ gopkg/src/upspin.io/doc/images/arch/user.png
 gopkg/src/upspin.io/doc/images/augie-transparent.png
 gopkg/src/upspin.io/doc/images/augie.jpg
 gopkg/src/upspin.io/doc/images/augie.zip
+gopkg/src/upspin.io/doc/images/dropbox/allow.png
+gopkg/src/upspin.io/doc/images/dropbox/code.png
 gopkg/src/upspin.io/doc/images/favicon-32x32.png
 gopkg/src/upspin.io/doc/images/txt_dns.png
 gopkg/src/upspin.io/doc/index.md
@@ -256,6 +271,8 @@ gopkg/src/upspin.io/doc/overview.md
 gopkg/src/upspin.io/doc/security.md
 gopkg/src/upspin.io/doc/server_setup.md
 gopkg/src/upspin.io/doc/server_setup_aws.md
+gopkg/src/upspin.io/doc/server_setup_drive.md
+gopkg/src/upspin.io/doc/server_setup_dropbox.md
 gopkg/src/upspin.io/doc/server_setup_gcp.md
 gopkg/src/upspin.io/doc/server_setup_ubuntu.md
 gopkg/src/upspin.io/doc/signup.md
@@ -292,6 +309,7 @@ gopkg/src/upspin.io/flags/flags_test.go
 gopkg/src/upspin.io/key/inprocess/key.go
 gopkg/src/upspin.io/key/inprocess/key_test.go
 gopkg/src/upspin.io/key/keygen/keygen.go
+gopkg/src/upspin.io/key/keygen/keygen_test.go
 gopkg/src/upspin.io/key/proquint/proquint.go
 gopkg/src/upspin.io/key/proquint/proquint_test.go
 gopkg/src/upspin.io/key/remote/remote.go
@@ -375,12 +393,12 @@ gopkg/src/upspin.io/rpc/testdata/key.pem
 gopkg/src/upspin.io/rpc/testdata/proto.go
 gopkg/src/upspin.io/rpc/testdata/testserver.pb.go
 gopkg/src/upspin.io/rpc/testdata/testserver.proto
+gopkg/src/upspin.io/serverutil/addr.go
 gopkg/src/upspin.io/serverutil/dirserver/main.go
 gopkg/src/upspin.io/serverutil/frontend/download.go
 gopkg/src/upspin.io/serverutil/frontend/frontend.go
 gopkg/src/upspin.io/serverutil/frontend/frontend_test.go
-gopkg/src/upspin.io/serverutil/frontend/templates/base.tmpl
-gopkg/src/upspin.io/serverutil/frontend/templates/doc.tmpl
+gopkg/src/upspin.io/serverutil/frontend/redirect.go
 gopkg/src/upspin.io/serverutil/frontend/testdata/doc/doc.md
 gopkg/src/upspin.io/serverutil/frontend/testdata/doc/index.md
 gopkg/src/upspin.io/serverutil/frontend/testdata/doc/templates/base.tmpl
@@ -391,6 +409,7 @@ gopkg/src/upspin.io/serverutil/glob.go
 gopkg/src/upspin.io/serverutil/glob_test.go
 gopkg/src/upspin.io/serverutil/keyserver/log.go
 gopkg/src/upspin.io/serverutil/keyserver/main.go
+gopkg/src/upspin.io/serverutil/keyserver/main_test.go
 gopkg/src/upspin.io/serverutil/perm/dir.go
 gopkg/src/upspin.io/serverutil/perm/dir_test.go
 gopkg/src/upspin.io/serverutil/perm/perm.go
@@ -405,12 +424,14 @@ gopkg/src/upspin.io/serverutil/signup/signup.go
 gopkg/src/upspin.io/serverutil/signup/signup_test.go
 gopkg/src/upspin.io/serverutil/storeserver/main.go
 gopkg/src/upspin.io/serverutil/upspinserver/main.go
+gopkg/src/upspin.io/serverutil/upspinserver/main_test.go
 gopkg/src/upspin.io/serverutil/web/web.go
 gopkg/src/upspin.io/shutdown/shutdown.go
 gopkg/src/upspin.io/shutdown/shutdown_test.go
 gopkg/src/upspin.io/store/.gitignore
 gopkg/src/upspin.io/store/inprocess/store.go
 gopkg/src/upspin.io/store/remote/remote.go
+gopkg/src/upspin.io/store/server/list_test.go
 gopkg/src/upspin.io/store/server/server.go
 gopkg/src/upspin.io/store/server/server_test.go
 gopkg/src/upspin.io/store/storecache/cache.go
