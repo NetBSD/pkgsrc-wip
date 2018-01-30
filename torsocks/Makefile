@@ -46,20 +46,6 @@ SUBST_SED.conffile=		-e '/DEFAULT_CONF_FILE/ s;"/tor/";"/";'
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX: gethostbyaddr(3) in NetBSD < 7.0 prototype is:
-# XXX:     struct hostent *
-# XXX:     gethostbyaddr(const char *addr, socklen_t len, int type);
-# XXX: torsocks and The Open Group expects:
-# XXX:     struct hostent *
-# XXX:     gethostbyaddr(const void *addr, socklen_t len, int type);
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-6].*)
-SUBST_CLASSES+=		lib
-SUBST_STAGE.lib=	pre-configure
-SUBST_MESSAGE.lib=	Fixing gethostbyaddr() prototype
-SUBST_FILES.lib=	src/lib/torsocks.h
-SUBST_SED.lib=		-e '/LIBC_GETHOSTBYADDR_SIG/ s/const void \*addr/const char *addr/'
-.endif
-
 TEST_TARGET=	check
 
 post-install:
