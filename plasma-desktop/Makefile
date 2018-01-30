@@ -19,6 +19,19 @@ USE_TOOLS+=	msgmerge pkg-config
 
 CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/plasma-desktop
 
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	kcms/colors/CMakeLists.txt
+SUBST_FILES.xdg+=	kcms/cursortheme/CMakeLists.txt
+SUBST_FILES.xdg+=	kcms/desktoptheme/CMakeLists.txt
+SUBST_FILES.xdg+=	kcms/emoticons/CMakeLists.txt
+SUBST_FILES.xdg+=	kcms/icons/CMakeLists.txt
+SUBST_FILES.xdg+=	kcms/kfontinst/kcmfontinst/CMakeLists.txt
+SUBST_FILES.xdg+=	kcms/lookandfeel/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+SUBST_SED.xdg+=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colorschemes.knsrc \
 		${PKG_SYSCONFDIR}/xdg/colorschemes.knsrc
