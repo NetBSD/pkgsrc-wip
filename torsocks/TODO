@@ -1,5 +1,3 @@
-- Figure out getcap(1) usage in src/bin/torsocks.in, at least on NetBSD isn't
-  kosher to call `getcap /usr/bin/foo'
 - Is LIBC_PATH usage via CONFIGURE_ARGS correct, needed and portable?
 - Adjust any possible hardcoded path in man pages
 - Test it via net/tor torify(1)
