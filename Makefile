@@ -1561,6 +1561,7 @@ SUBDIR+=	kde-baseapps4
 SUBDIR+=	kde-cli-tools
 SUBDIR+=	kde-gtk-config
 SUBDIR+=	kde-runtime4
+SUBDIR+=	kdebugsettings
 SUBDIR+=	kde5
 SUBDIR+=	kdecoration
 SUBDIR+=	keepassx-git
