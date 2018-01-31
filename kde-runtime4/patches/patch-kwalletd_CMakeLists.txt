@@ -1,0 +1,19 @@
+$NetBSD$
+
+Don't define HAVE_QGPGME if we dont.
+
+--- kwalletd/CMakeLists.txt.orig	2017-10-01 01:02:55.000000000 +0000
++++ kwalletd/CMakeLists.txt
+@@ -10,11 +10,11 @@ find_package(Gpgmepp) # provided by gpgm
+ endif (NOT QGPGME_FOUND)
+ 
+ if ((GPGME_FOUND AND QGPGME_FOUND) OR Gpgmepp_FOUND)
+-    add_definitions(-DHAVE_QGPGME)
+     include_directories(${GPGME_INCLUDES})
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_ENABLE_EXCEPTIONS}")
+ endif((GPGME_FOUND AND QGPGME_FOUND) OR Gpgmepp_FOUND)
+ if (GPGME_FOUND AND QGPGME_FOUND)
++    add_definitions(-DHAVE_QGPGME)
+     include_directories(${QGPGME_INCLUDE_DIR})
+ endif (GPGME_FOUND AND QGPGME_FOUND)
+ if (Gpgmepp_FOUND)

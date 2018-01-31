@@ -15,6 +15,7 @@ SHA1 (patch-ak) = 4fee3877613afddf179a7a8376586a6391b53c89
 SHA1 (patch-doc_kcontrol_CMakeLists.txt) = c6300735d29c009322e4fdb4d58a606940fb0c62
 SHA1 (patch-kioslave_nfs_rpc__nfs2__prot__xdr.c) = f1d8dc8224e68ef323f06602bf4b856c785f15e4
 SHA1 (patch-kioslave_thumbnail_CMakeLists.txt) = ce0ff3d346ebf093bbb35a7edbfc069809472d6f
+SHA1 (patch-kwalletd_CMakeLists.txt) = 002a32ce12f19a560568ed92e046956daa856ef7
 SHA1 (patch-kwalletd_backend_blowfish.h) = 23bd9bf9671a770d203a10c46dc602145d2b9457
 SHA1 (patch-plasma_declarativeimports_CMakeLists.txt) = 0f5a7747cd207598ca92f5200b7d79ba537fcba5
 SHA1 (patch-plasma_declarativeimports_graphicswidgets_graphicswidgetsbindingsplugin.cpp) = 6b0852831f56207f7b55454a29ca95ad408fd120
