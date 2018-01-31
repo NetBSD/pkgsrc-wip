@@ -1575,6 +1575,7 @@ SUBDIR+=	khelpcenter
 SUBDIR+=	khotkeys
 SUBDIR+=	kibana
 SUBDIR+=	kimagemapeditor
+SUBDIR+=	kimap
 SUBDIR+=	kinfocenter
 SUBDIR+=	kino
 SUBDIR+=	kio-extras
