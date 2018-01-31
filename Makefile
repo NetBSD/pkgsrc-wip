@@ -84,6 +84,7 @@ SUBDIR+=	ags
 SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
+SUBDIR+=	akonadi
 SUBDIR+=	alac_decoder
 SUBDIR+=	alberta
 SUBDIR+=	aldo

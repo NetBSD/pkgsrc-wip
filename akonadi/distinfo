@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (akonadi-17.12.1.tar.xz) = 72008d0653f6d0eed5f8b93bc8b5ee99396a8cac
+RMD160 (akonadi-17.12.1.tar.xz) = 15778f4eefaa79b071a15b190ee0f1f150a3d583
+SHA512 (akonadi-17.12.1.tar.xz) = 5e6ea993b98ee72a5c65156e13734da3b8b34438a1a6b791f616e50eb6274328d9f6331bf2b4b9cd2216ce7977a875174757fbd7c7d1d366759303ce89be8ea5
+Size (akonadi-17.12.1.tar.xz) = 1521928 bytes
+SHA1 (patch-CMakeLists.txt) = 34816f6eb8e3afe441030beb09343542ff726e06
+SHA1 (patch-src_server_CMakeLists.txt) = ee772c1b3ba8c0e1b5bb7a209a5958681073a5cf
