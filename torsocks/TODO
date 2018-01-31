@@ -1,3 +1,2 @@
 - Is LIBC_PATH usage via CONFIGURE_ARGS correct, needed and portable?
 - Adjust any possible hardcoded path in man pages
-- Test it via net/tor torify(1)
