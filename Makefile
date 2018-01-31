@@ -1582,6 +1582,7 @@ SUBDIR+=	kissme
 SUBDIR+=	klayout
 SUBDIR+=	kmag
 SUBDIR+=	kmenuedit
+SUBDIR+=	kmime
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
 SUBDIR+=	kodi
