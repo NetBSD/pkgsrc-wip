@@ -50,6 +50,7 @@ TEST_TARGET=	check
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	cd ${DESTDIR}${PREFIX} && ${RM} -fr share/doc
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/torsocks.conf \
 	    ${DESTDIR}${EGDIR}/torsocks.conf
 
