@@ -1555,6 +1555,7 @@ SUBDIR+=	kactivitymanagerd
 SUBDIR+=	kahakai
 SUBDIR+=	kallisto
 SUBDIR+=	kannel-gateway
+SUBDIR+=	kate
 SUBDIR+=	kawa
 SUBDIR+=	kcalc
 SUBDIR+=	kde-baseapps4
