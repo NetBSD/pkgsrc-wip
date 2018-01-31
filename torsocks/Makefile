@@ -44,6 +44,12 @@ SUBST_MESSAGE.conffile=		Adjusting DEFAULT_CONF_FILE
 SUBST_FILES.conffile=		src/common/defaults.h
 SUBST_SED.conffile=		-e '/DEFAULT_CONF_FILE/ s;"/tor/";"/";'
 
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fix hardcoded paths in man pages
+SUBST_FILES.man=	doc/torsocks.1 doc/torsocks.8 doc/torsocks.conf.5
+SUBST_SED.man=		-e 's;/etc/tor;${PKG_SYSCONFDIR};g'
+
 .include "../../mk/bsd.prefs.mk"
 
 TEST_TARGET=	check
