@@ -19,9 +19,6 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-conf=${PKG_SYSCONFDIR}/torsocks.conf
 
-# XXX: Is this portable?
-CONFIGURE_ENV+=	LIBC_PATH=/lib/libc.so
-
 EGDIR=		${PREFIX}/share/examples/torsocks
 CONF_FILES=	${EGDIR}/torsocks.conf \
 		${PKG_SYSCONFDIR}/torsocks.conf
