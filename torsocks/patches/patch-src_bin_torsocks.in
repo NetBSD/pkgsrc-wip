@@ -1,6 +1,6 @@
 $NetBSD$
 
-- Add missing quotes to variable in torsocks.in.
+- Add missing quotes to variables in torsocks.in.
   From upstream commit 5a5b72fa0aef2315c369cedc5f448ee473be5e4f.
 - Discard stderr when invoking getcap(1).
   Not all platforms support it.
