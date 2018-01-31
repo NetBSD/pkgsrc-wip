@@ -1578,6 +1578,7 @@ SUBDIR+=	kino
 SUBDIR+=	kio-extras
 SUBDIR+=	kissme
 SUBDIR+=	klayout
+SUBDIR+=	kmag
 SUBDIR+=	kmenuedit
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
