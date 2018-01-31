@@ -10,9 +10,9 @@ LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1
 .include "../../wip/kde5/plasma.mk"
 
 DEPENDS+=	noto-ttf-[0-9]*:../../fonts/noto-ttf
-# fonthack rather than oxygen-fonts
-DEPENDS+=	oxygen-fonts-[0-9]*:../../fonts/oxygen-fonts
+DEPENDS+=	Hack-ttf-[0-9]*:../../fonts/Hack-ttf
 DEPENDS+=	breeze-[0-9]*:../../wip/breeze
+DEPENDS+=	qqc2-desktop-style-[0-9]*:../../x11/qqc2-desktop-style
 
 USE_TOOLS+=	msgmerge
 
