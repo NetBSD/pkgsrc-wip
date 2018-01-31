@@ -1574,6 +1574,7 @@ SUBDIR+=	khard-git
 SUBDIR+=	khelpcenter
 SUBDIR+=	khotkeys
 SUBDIR+=	kibana
+SUBDIR+=	kimagemapeditor
 SUBDIR+=	kinfocenter
 SUBDIR+=	kino
 SUBDIR+=	kio-extras
