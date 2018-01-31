@@ -23,10 +23,7 @@ PKG_USERS=		${BAREOS_DIR_USER}:${BAREOS_GROUP}
 PKG_USERS+=		${BAREOS_SD_USER}:${BAREOS_GROUP}
 PKG_GROUPS=		${BAREOS_GROUP}
 
-CONF_FILES+=		${EXAMPLESDIR}/bareos-fd.conf ${PKG_SYSCONFDIR}/bareos-fd.conf
 CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
-CONF_FILES+=		${EXAMPLESDIR}/bareos-dir.conf ${PKG_SYSCONFDIR}/bareos-dir.conf
-CONF_FILES+=		${EXAMPLESDIR}/bareos-sd.conf ${PKG_SYSCONFDIR}/bareos-sd.conf
 
 RCD_SCRIPTS=		bareos bareos-dir bareos-sd bareos-fd
 

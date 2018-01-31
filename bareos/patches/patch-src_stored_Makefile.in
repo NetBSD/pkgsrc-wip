@@ -1,27 +1,11 @@
-$NetBSD$
-
---- src/stored/Makefile.in	2016-01-04 21:36:52.000000000 +0100
-+++ src/stored/Makefile.in.old	2016-01-04 21:36:19.000000000 +0100
-@@ -243,17 +243,17 @@
- 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bscan $(DESTDIR)$(sbindir)/bscan
+--- src/stored/Makefile.in.old	2017-12-30 10:09:58.000000000 +0100
++++ src/stored/Makefile.in	2017-12-30 10:10:23.000000000 +0100
+@@ -247,7 +247,7 @@
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) btape $(DESTDIR)$(sbindir)/btape
- 	@srcconf=bareos-sd.conf; \
--	$(MKDIR) ${DESTDIR}${confdir}/bareos-sd.d/; \
--	if  test -f ${DESTDIR}${confdir}/$$srcconf; then \
-+	$(MKDIR) ${DESTDIR}%%EXAMPLESDIR%%/bareos-sd.d/; \
-+	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
- 	   destconf=$$srcconf.new; \
- 	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
- 	else \
- 	   destconf=$$srcconf; \
- 	fi; \
--	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${confdir}/$$destconf"; \
--	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${confdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
- 	-@if test "x${sd_group}" != "x"; then \
--	   chgrp -f ${sd_group} ${DESTDIR}${confdir}/$$destconf; \
-+	   chgrp -f ${sd_group} ${DESTDIR}%%EXAMPLESDIR%%/$$destconf; \
- 	fi
- 	@if test -f static-bareos-sd; then \
- 	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bareos-sd $(DESTDIR)$(sbindir)/static-bareos-sd; \
+ 	# copy configuration resource files to directory structure
+ 	@SRCCONFDIR=../defaultconfigs/bareos-sd.d/; \
+-	DESTCONFDIR=${DESTDIR}${configtemplatedir}/bareos-sd.d/; \
++	DESTCONFDIR=${DESTDIR}%%EXAMPLESDIR%%/bareos-sd.d/; \
+ 	echo "installing configuration resource files to $$DESTCONFDIR"; \
+ 	$(MKDIR) $$DESTCONFDIR; \
+ 	for RESTYPE in $(STORED_RESTYPES); do \

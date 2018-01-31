@@ -1,27 +1,20 @@
-$NetBSD$
-
---- src/dird/Makefile.in	2016-01-04 21:35:13.000000000 +0100
-+++ src/dird/Makefile.in.old	2016-01-04 21:34:24.000000000 +0100
-@@ -142,17 +142,17 @@
- 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bareos-dir $(DESTDIR)$(sbindir)/bareos-dir
+--- src/dird/Makefile.in.old	2017-12-30 10:03:42.000000000 +0100
++++ src/dird/Makefile.in	2017-12-30 10:04:38.000000000 +0100
+@@ -151,7 +151,7 @@
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bareos-dbcheck $(DESTDIR)$(sbindir)/bareos-dbcheck
- 	@srcconf=bareos-dir.conf; \
--	   $(MKDIR) ${DESTDIR}${confdir}/bareos-dir.d/; \
--	   if  test -f ${DESTDIR}${confdir}/$$srcconf; then \
-+	   $(MKDIR) ${DESTDIR}%%EXAMPLESDIR%%/bareos-dir.d/; \
-+	   if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
- 	      destconf=$$srcconf.new; \
- 	      echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
- 	   else \
- 	      destconf=$$srcconf; \
- 	   fi; \
--	   echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${confdir}/$$destconf"; \
--	   ${INSTALL_CONFIG} $$srcconf ${DESTDIR}${confdir}/$$destconf
-+	   echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	   ${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
- 	   -@if test "x${dir_group}" != "x"; then \
--	      chgrp -f ${dir_group} ${DESTDIR}${confdir}/$$destconf ; \
-+	      chgrp -f ${dir_group} ${DESTDIR}%%EXAMPLESDIR%%/$$destconf ; \
- 	   fi
+ 	# copy configuration resource files to directory structure
+ 	@SRCCONFDIR=../defaultconfigs/bareos-dir.d/; \
+-	DESTCONFDIR=${DESTDIR}${configtemplatedir}/bareos-dir.d/; \
++	DESTCONFDIR=${DESTDIR}%%EXAMPLESDIR%%/bareos-dir.d/; \
+ 	echo "installing configuration resource files to $$DESTCONFDIR"; \
+ 	$(MKDIR) $$DESTCONFDIR; \
+ 	for RESTYPE in $(DIRD_RESTYPES); do \
+@@ -174,7 +174,7 @@
+ 	      fi; \
+ 	   done; \
+ 	done
+-	$(MKDIR) ${DESTDIR}${confdir}/bareos-dir-export/client/
++	$(MKDIR) ${DESTDIR}%%EXAMPLESDIR%%/bareos-dir-export/client/
  	@if  test -f ${DESTDIR}${scriptdir}/query.sql; then \
  	   echo "  ==> Saving existing query.sql to query.sql.old"; \
+ 	   $(MV) -f ${DESTDIR}${scriptdir}/query.sql ${DESTDIR}${scriptdir}/query.sql.old; \

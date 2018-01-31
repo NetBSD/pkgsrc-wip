@@ -5,18 +5,13 @@ bin/bsmtp
 bin/bwild
 lib/BareosDirPluginBaseclass.py
 lib/BareosDirWrapper.py
-lib/BareosFdPluginBaseclass.py
-lib/BareosFdPluginLocalFileset.py
-lib/BareosFdWrapper.py
+lib/BareosSdPluginBaseclass.py
+lib/BareosSdWrapper.py
 lib/autoxflate-sd.so
 lib/bareos-dir-class-plugin.py
 lib/bareos-dir.py.template
-lib/bareos-fd-local-fileset.py
-lib/bareos-fd-mock-test.py
-lib/bareos-fd.py.template
 lib/bareos-sd.py.template
 lib/bareos_dir_consts.py
-lib/bareos_fd_consts.py
 lib/bareos_sd_consts.py
 lib/bpipe-fd.so
 lib/libbareos.la
@@ -37,7 +32,6 @@ libexec/bareos/bareos-ctl-funcs
 libexec/bareos/bareos-ctl-sd
 libexec/bareos/bareos-explorer
 libexec/bareos/bareos_config
-libexec/bareos/bconsole
 libexec/bareos/btraceback.dbx
 libexec/bareos/btraceback.gdb
 libexec/bareos/btraceback.mdb
@@ -54,6 +48,8 @@ libexec/bareos/ddl/updates/${BAREOS_DB}.14_2001.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.2001_2002.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.2002_2003.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.2003_2004.sql
+libexec/bareos/ddl/updates/${BAREOS_DB}.2004_2171.sql
+libexec/bareos/ddl/updates/${BAREOS_DB}.bee.1017_2004.sql
 libexec/bareos/ddl/versions.map
 libexec/bareos/delete_catalog_backup
 libexec/bareos/disk-changer
@@ -67,7 +63,6 @@ libexec/bareos/mtx-changer
 libexec/bareos/query.sql
 libexec/bareos/update_bareos_tables
 man/man1/bareos-tray-monitor.1
-man/man1/bat.1
 man/man1/bconsole.1
 man/man1/bregex.1
 man/man1/bsmtp.1
@@ -101,14 +96,10 @@ sbin/bsmtp
 sbin/btape
 sbin/btraceback
 sbin/bwild
-share/examples/bareos/bareos-dir.conf
-share/examples/bareos/bareos-fd.conf
-share/examples/bareos/bareos-sd.conf
-share/examples/bareos/bconsole.conf
+@pkgdir etc/bareos/bareos-sd.d
+@pkgdir etc/bareos/bareos-dir.d
 @pkgdir var/bareos/logs
 @pkgdir share/examples/bareos
 @pkgdir libexec/bareos/ddl/grants
 @pkgdir libexec/bareos/ddl/updates
 @pkgdir libexec/bareos/ddl/drops
-@pkgdir etc/bareos/bareos-sd.d
-@pkgdir etc/bareos/bareos-dir.d
