@@ -1581,6 +1581,7 @@ SUBDIR+=	kino
 SUBDIR+=	kio-extras
 SUBDIR+=	kissme
 SUBDIR+=	klayout
+SUBDIR+=	kldap
 SUBDIR+=	kmag
 SUBDIR+=	kmenuedit
 SUBDIR+=	kmime
