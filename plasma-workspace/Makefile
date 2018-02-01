@@ -55,6 +55,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 
 .include "../../math/cln/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
+.include "../../graphics/prison/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../sysutils/baloo5/buildlink3.mk"
@@ -70,6 +71,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 .include "../../net/kxmlrpcclient/buildlink3.mk"
 .include "../../wip/libkscreen/buildlink3.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
+.include "../../wip/kholidays/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
