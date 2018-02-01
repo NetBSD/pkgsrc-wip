@@ -1,0 +1,9 @@
+This library provides access to KAlarm calendar data, but not to the storage
+of the data, which is handled by Akonadi (or by build option, KResources).
+The main class, KAEvent represents a KAlarm event, and contains both the
+event definition including the main alarm and optional subsidiary alarms, and
+status information about the event.
+
+Calendar format information is accessed through the KACalendar class, which
+provides read and write access to the calendar format version and
+iCalendar product ID.
