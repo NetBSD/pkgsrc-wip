@@ -4,7 +4,7 @@ DISTNAME=	akonadi-search-${KAPPSVER}
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
-COMMENT=	Akonadi calendar integration
+COMMENT=	Libraries and daemons to implement searching in Akonadi
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
 .include "../../wip/kde5/applications.mk"
