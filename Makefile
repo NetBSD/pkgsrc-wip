@@ -1581,6 +1581,7 @@ SUBDIR+=	khard-git
 SUBDIR+=	khelpcenter
 SUBDIR+=	khotkeys
 SUBDIR+=	kibana
+SUBDIR+=	kidentitymanagement
 SUBDIR+=	kimagemapeditor
 SUBDIR+=	kimap
 SUBDIR+=	kinfocenter
