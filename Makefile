@@ -1600,6 +1600,7 @@ SUBDIR+=	koffice
 SUBDIR+=	koha
 SUBDIR+=	konsole
 SUBDIR+=	korelib
+SUBDIR+=	kpimtextedit
 SUBDIR+=	krusader
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
