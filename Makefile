@@ -310,7 +310,6 @@ SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
-SUBDIR+=	calibre3
 SUBDIR+=	calligra
 SUBDIR+=	calypso-git
 SUBDIR+=	canna
