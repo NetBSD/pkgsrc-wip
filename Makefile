@@ -1596,6 +1596,7 @@ SUBDIR+=	klayout
 SUBDIR+=	kldap
 SUBDIR+=	kmag
 SUBDIR+=	kmailtransport
+SUBDIR+=	kmbox
 SUBDIR+=	kmenuedit
 SUBDIR+=	kmime
 SUBDIR+=	kmymoney-git
