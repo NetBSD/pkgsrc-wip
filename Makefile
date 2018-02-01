@@ -1597,6 +1597,7 @@ SUBDIR+=	krusader
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
 SUBDIR+=	ksshaskpass
+SUBDIR+=	ksmtp
 SUBDIR+=	kstest
 SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
