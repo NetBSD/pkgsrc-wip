@@ -1567,6 +1567,7 @@ SUBDIR+=	kcalc
 SUBDIR+=	kcalcore
 SUBDIR+=	kcalutils
 SUBDIR+=	kcontacts
+SUBDIR+=	kdav
 SUBDIR+=	kde-baseapps4
 SUBDIR+=	kde-cli-tools
 SUBDIR+=	kde-gtk-config
