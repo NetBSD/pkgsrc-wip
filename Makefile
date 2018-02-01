@@ -85,6 +85,7 @@ SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
 SUBDIR+=	akonadi
+SUBDIR+=	akonadi-contacts
 SUBDIR+=	akonadi-mime
 SUBDIR+=	akonadi-notes
 SUBDIR+=	alac_decoder
