@@ -1562,6 +1562,7 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kate
 SUBDIR+=	kawa
 SUBDIR+=	kcalc
+SUBDIR+=	kcalcore
 SUBDIR+=	kcalutils
 SUBDIR+=	kcontacts
 SUBDIR+=	kde-baseapps4
