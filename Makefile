@@ -2275,6 +2275,7 @@ SUBDIR+=	ocamlweb
 SUBDIR+=	ocserv
 SUBDIR+=	ogmrip
 SUBDIR+=	ogre
+SUBDIR+=	okular
 SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omnispeak
