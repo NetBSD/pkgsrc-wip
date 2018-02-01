@@ -89,6 +89,7 @@ SUBDIR+=	akonadi-calendar
 SUBDIR+=	akonadi-contacts
 SUBDIR+=	akonadi-mime
 SUBDIR+=	akonadi-notes
+SUBDIR+=	akonadi-search
 SUBDIR+=	alac_decoder
 SUBDIR+=	alberta
 SUBDIR+=	aldo
