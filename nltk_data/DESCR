@@ -1,0 +1,2 @@
+NLTK comes with many corpora, toy grammars, trained models, etc. This
+package provides the entire collection of the NLTK data.
