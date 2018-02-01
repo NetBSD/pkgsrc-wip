@@ -2752,6 +2752,7 @@ SUBDIR+=	pike-core
 SUBDIR+=	pike-gdbm
 SUBDIR+=	pike-mime
 SUBDIR+=	pilemc-svn
+SUBDIR+=	pimcommon
 SUBDIR+=	pinball
 SUBDIR+=	pinkpony
 SUBDIR+=	pioneer
