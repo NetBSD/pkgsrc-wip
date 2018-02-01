@@ -10,6 +10,7 @@ BUILDLINK_PKGSRCDIR.kimap?=	../../wip/kimap
 
 .include "../../devel/kio/buildlink3.mk"
 .include "../../wip/kmime/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# KIMAP_BUILDLINK3_MK
 
