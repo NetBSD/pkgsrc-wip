@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_netbsd_interceptors_ioctl.inc.orig	2018-01-25 11:26:34.535850674 +0000
+--- lib/sanitizer_common/sanitizer_netbsd_interceptors_ioctl.inc.orig	2018-02-01 15:29:51.351827181 +0000
 +++ lib/sanitizer_common/sanitizer_netbsd_interceptors_ioctl.inc
 @@ -0,0 +1,1490 @@
 +//===-- sanitizer_common_interceptors_ioctl.inc -----------------*- C++ -*-===//

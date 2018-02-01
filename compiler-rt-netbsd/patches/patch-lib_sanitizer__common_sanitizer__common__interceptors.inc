@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-01-23 23:09:21.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-01 15:29:10.523078240 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -132,7 +132,7 @@ $NetBSD$
  INTERCEPTOR(int, ioctl, int d, unsigned long request, ...) {
    // We need a frame pointer, because we call into ioctl_common_[pre|post] which
    // can trigger a report and we need to be able to unwind through this
-@@ -3188,7 +3213,14 @@ INTERCEPTOR(char *, setlocale, int categ
+@@ -3189,7 +3214,14 @@ INTERCEPTOR(char *, setlocale, int categ
    if (locale)
      COMMON_INTERCEPTOR_READ_RANGE(ctx, locale, REAL(strlen)(locale) + 1);
    char *res = REAL(setlocale)(category, locale);
@@ -148,7 +148,7 @@ $NetBSD$
    return res;
  }
  
-@@ -6275,6 +6307,22 @@ INTERCEPTOR(int, stat, const char *path,
+@@ -6276,6 +6308,22 @@ INTERCEPTOR(int, stat, const char *path,
  #define INIT_STAT
  #endif
  
@@ -171,8 +171,8 @@ $NetBSD$
  #if SANITIZER_INTERCEPT___XSTAT
  INTERCEPTOR(int, __xstat, int version, const char *path, void *buf) {
    void *ctx;
-@@ -6631,6 +6679,937 @@ INTERCEPTOR(int, getgroupmembership, con
- #define INIT_GETGROUPLIST
+@@ -6724,6 +6772,937 @@ INTERCEPTOR(int, open_by_handle_at, int 
+ #define INIT_OPEN_BY_HANDLE_AT
  #endif
  
 +#if SANITIZER_INTERCEPT_KVM
@@ -1109,7 +1109,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6833,6 +7812,7 @@ static void InitializeCommonInterceptors
+@@ -6926,6 +7905,7 @@ static void InitializeCommonInterceptors
    INIT_SEND_SENDTO;
    INIT_STAT;
    INIT_EVENTFD_READ_WRITE;
@@ -1117,10 +1117,11 @@ $NetBSD$
    INIT___XSTAT;
    INIT___XSTAT64;
    INIT___LXSTAT;
-@@ -6851,6 +7831,18 @@ static void InitializeCommonInterceptors
-   INIT_ACCESS;
-   INIT_FACCESSAT;
+@@ -6946,7 +7926,18 @@ static void InitializeCommonInterceptors
    INIT_GETGROUPLIST;
+   INIT_READLINK;
+   INIT_READLINKAT;
+-
 +  INIT_KVM;
 +  INIT_DEVNAME;
 +  INIT_SYSCTL;
@@ -1133,6 +1134,6 @@ $NetBSD$
 +  INIT_FTS;
 +  INIT_STRMODE;
 +  INIT_REGEX;
+   INIT_NAME_TO_HANDLE_AT;
+   INIT_OPEN_BY_HANDLE_AT;
  
- #if SANITIZER_NETBSD
-   COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);
