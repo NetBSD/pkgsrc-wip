@@ -171,27 +171,6 @@ $NetBSD$
  #if SANITIZER_INTERCEPT___XSTAT
  INTERCEPTOR(int, __xstat, int version, const char *path, void *buf) {
    void *ctx;
-@@ -6741,16 +6789,15 @@ INTERCEPTOR(SIZE_T, strlcpy, char *dst, 
- 
- INTERCEPTOR(SIZE_T, strlcat, char *dst, char *src, SIZE_T size) {
-   void *ctx;
-+  SIZE_T len = 0;
-   COMMON_INTERCEPTOR_ENTER(ctx, strlcat, dst, src, size);
-   // src is checked in the strlcpy() interceptor
-   if (dst) {
--    SIZE_T len = REAL(strnlen)(dst, size);
-+    len = REAL(strnlen)(dst, size);
-     COMMON_INTERCEPTOR_READ_STRING(ctx, dst, Min(len, size - 1) + 1);
--    // Reuse the rest of the code in the strlcpy() interceptor
--    dst += len;
--    size -= len;
-   }
--  return WRAP(strlcpy)(dst, src, size);
-+  // Reuse the rest of the code in the strlcpy() interceptor
-+  return len + WRAP(strlcpy)(dst + len, src, size - len);
- }
- #define INIT_STRLCPY \
-   COMMON_INTERCEPT_FUNCTION(strlcpy); \
 @@ -6759,6 +6806,897 @@ INTERCEPTOR(SIZE_T, strlcat, char *dst, 
  #define INIT_STRLCPY
  #endif
