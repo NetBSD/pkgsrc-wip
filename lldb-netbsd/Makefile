@@ -1,11 +1,11 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	lldb-6.0.0
+PKGNAME=	lldb-7.0.0
 CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	lldb
 SVN_REPO.lldb=		http://llvm.org/svn/llvm-project/lldb/trunk
-SVN_REVISION.lldb=	320165
+SVN_REVISION.lldb=	324121
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
@@ -84,10 +84,10 @@ post-extract:
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-netbsd
-.include "../../wip/clang-netbsd/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
-.include "../../wip/llvm-netbsd/buildlink3.mk"
+#DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-netbsd
+#.include "../../wip/clang-netbsd/buildlink3.mk"
+#DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
+#.include "../../wip/llvm-netbsd/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/extension.mk"
