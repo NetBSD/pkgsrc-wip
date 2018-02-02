@@ -4206,6 +4206,7 @@ SUBDIR+=	spamd-devel
 SUBDIR+=	sparse
 SUBDIR+=	spatt
 SUBDIR+=	spe
+SUBDIR+=	spectacle
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	spidermonkey185
