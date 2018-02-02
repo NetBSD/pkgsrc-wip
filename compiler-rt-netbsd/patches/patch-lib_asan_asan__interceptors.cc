@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/asan/asan_interceptors.cc.orig	2017-10-17 18:35:47.000000000 +0000
+--- lib/asan/asan_interceptors.cc.orig	2018-02-01 23:46:05.000000000 +0000
 +++ lib/asan/asan_interceptors.cc
 @@ -178,6 +178,7 @@ DECLARE_REAL_AND_INTERCEPTOR(void, free,
      (void)(s);                                \

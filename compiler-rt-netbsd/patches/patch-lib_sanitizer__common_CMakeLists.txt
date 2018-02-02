@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/CMakeLists.txt.orig	2018-01-08 15:33:13.000000000 +0000
+--- lib/sanitizer_common/CMakeLists.txt.orig	2018-02-01 23:46:05.000000000 +0000
 +++ lib/sanitizer_common/CMakeLists.txt
 @@ -119,6 +119,7 @@ set(SANITIZER_HEADERS
    sanitizer_list.h

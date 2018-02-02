@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors_ioctl.inc.orig	2017-12-21 18:53:10.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors_ioctl.inc.orig	2018-02-01 23:46:05.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors_ioctl.inc
 @@ -10,6 +10,8 @@
  // Ioctl handling in common sanitizer interceptors.

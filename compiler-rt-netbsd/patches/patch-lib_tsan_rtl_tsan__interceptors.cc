@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/tsan/rtl/tsan_interceptors.cc.orig	2018-02-01 15:29:09.002365645 +0000
+--- lib/tsan/rtl/tsan_interceptors.cc.orig	2018-02-01 23:46:00.000000000 +0000
 +++ lib/tsan/rtl/tsan_interceptors.cc
 @@ -2426,7 +2426,7 @@ struct ScopedSyscall {
    }

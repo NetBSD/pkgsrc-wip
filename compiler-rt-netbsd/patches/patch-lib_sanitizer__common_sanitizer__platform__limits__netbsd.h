@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-01-15 06:00:16.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-02-01 23:46:05.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
 @@ -57,33 +57,45 @@ extern unsigned ucontext_t_sz;
  extern unsigned struct_rlimit_sz;

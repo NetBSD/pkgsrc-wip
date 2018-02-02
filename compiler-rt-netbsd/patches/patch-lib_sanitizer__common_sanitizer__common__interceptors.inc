@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-01 15:29:10.523078240 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-02 00:08:32.539460964 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -171,8 +171,8 @@ $NetBSD$
  #if SANITIZER_INTERCEPT___XSTAT
  INTERCEPTOR(int, __xstat, int version, const char *path, void *buf) {
    void *ctx;
-@@ -6724,6 +6772,937 @@ INTERCEPTOR(int, open_by_handle_at, int 
- #define INIT_OPEN_BY_HANDLE_AT
+@@ -6759,6 +6807,937 @@ INTERCEPTOR(SIZE_T, strlcat, char *dst, 
+ #define INIT_STRLCPY
  #endif
  
 +#if SANITIZER_INTERCEPT_KVM
@@ -1109,7 +1109,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6926,6 +7905,7 @@ static void InitializeCommonInterceptors
+@@ -6961,6 +7940,7 @@ static void InitializeCommonInterceptors
    INIT_SEND_SENDTO;
    INIT_STAT;
    INIT_EVENTFD_READ_WRITE;
@@ -1117,11 +1117,10 @@ $NetBSD$
    INIT___XSTAT;
    INIT___XSTAT64;
    INIT___LXSTAT;
-@@ -6946,7 +7926,18 @@ static void InitializeCommonInterceptors
-   INIT_GETGROUPLIST;
-   INIT_READLINK;
-   INIT_READLINKAT;
--
+@@ -6984,6 +7964,18 @@ static void InitializeCommonInterceptors
+   INIT_NAME_TO_HANDLE_AT;
+   INIT_OPEN_BY_HANDLE_AT;
+   INIT_STRLCPY;
 +  INIT_KVM;
 +  INIT_DEVNAME;
 +  INIT_SYSCTL;
@@ -1134,6 +1133,6 @@ $NetBSD$
 +  INIT_FTS;
 +  INIT_STRMODE;
 +  INIT_REGEX;
-   INIT_NAME_TO_HANDLE_AT;
-   INIT_OPEN_BY_HANDLE_AT;
  
+ #if SANITIZER_NETBSD
+   COMMON_INTERCEPT_FUNCTION(__libc_mutex_lock);

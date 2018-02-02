@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/CMakeLists.txt.orig	2017-12-21 18:53:10.000000000 +0000
+--- include/CMakeLists.txt.orig	2018-02-01 23:45:59.000000000 +0000
 +++ include/CMakeLists.txt
 @@ -10,6 +10,7 @@ if (COMPILER_RT_BUILD_SANITIZERS)
      sanitizer/linux_syscall_hooks.h
