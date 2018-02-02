@@ -1576,6 +1576,7 @@ SUBDIR+=	kde5
 SUBDIR+=	kdebugsettings
 SUBDIR+=	keepassx-git
 SUBDIR+=	kdecoration
+SUBDIR+=	kdegraphics-mobipocket
 SUBDIR+=	kdegraphics-thumbnailers
 SUBDIR+=	kgamma5
 SUBDIR+=	kget
