@@ -1742,6 +1742,7 @@ SUBDIR+=	libircclient
 SUBDIR+=	libitl
 SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
+SUBDIR+=	libkdcraw
 SUBDIR+=	libkdepim
 SUBDIR+=	libkexiv2
 SUBDIR+=	libkscreen
