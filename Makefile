@@ -1606,6 +1606,7 @@ SUBDIR+=	kmymoney4
 SUBDIR+=	kodi
 SUBDIR+=	koffice
 SUBDIR+=	koha
+SUBDIR+=	kolourpaint
 SUBDIR+=	konsole
 SUBDIR+=	korelib
 SUBDIR+=	kpimtextedit
