@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-02-02 00:08:32.539912357 +0000
+--- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-02-02 00:08:32.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_interceptors.h
 @@ -406,6 +406,7 @@
  

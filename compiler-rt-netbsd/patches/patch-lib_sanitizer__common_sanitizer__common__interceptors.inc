@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-02 00:08:32.539460964 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-02 00:08:32.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -171,7 +171,28 @@ $NetBSD$
  #if SANITIZER_INTERCEPT___XSTAT
  INTERCEPTOR(int, __xstat, int version, const char *path, void *buf) {
    void *ctx;
-@@ -6759,6 +6807,937 @@ INTERCEPTOR(SIZE_T, strlcat, char *dst, 
+@@ -6741,16 +6789,15 @@ INTERCEPTOR(SIZE_T, strlcpy, char *dst, 
+ 
+ INTERCEPTOR(SIZE_T, strlcat, char *dst, char *src, SIZE_T size) {
+   void *ctx;
++  SIZE_T len = 0;
+   COMMON_INTERCEPTOR_ENTER(ctx, strlcat, dst, src, size);
+   // src is checked in the strlcpy() interceptor
+   if (dst) {
+-    SIZE_T len = REAL(strnlen)(dst, size);
++    len = REAL(strnlen)(dst, size);
+     COMMON_INTERCEPTOR_READ_STRING(ctx, dst, Min(len, size - 1) + 1);
+-    // Reuse the rest of the code in the strlcpy() interceptor
+-    dst += len;
+-    size -= len;
+   }
+-  return WRAP(strlcpy)(dst, src, size);
++  // Reuse the rest of the code in the strlcpy() interceptor
++  return len + WRAP(strlcpy)(dst + len, src, size - len);
+ }
+ #define INIT_STRLCPY \
+   COMMON_INTERCEPT_FUNCTION(strlcpy); \
+@@ -6759,6 +6806,897 @@ INTERCEPTOR(SIZE_T, strlcat, char *dst, 
  #define INIT_STRLCPY
  #endif
  
@@ -644,46 +665,6 @@ $NetBSD$
 +#define INIT_SYSCTL
 +#endif
 +
-+#if SANITIZER_INTERCEPT_STRLCPY
-+INTERCEPTOR(SIZE_T, strlcpy, char *dst, char *src, SIZE_T size) {
-+  void *ctx;
-+  SIZE_T res;
-+  COMMON_INTERCEPTOR_ENTER(ctx, strlcpy, dst, src, size);
-+  if (src) {
-+    SIZE_T len = REAL(strnlen)(src, size);
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
-+  }
-+  res = REAL(strlcpy)(dst, src, size);
-+  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst) + 1);
-+  return res;
-+}
-+
-+INTERCEPTOR(SIZE_T, strlcat, char *dst, char *src, SIZE_T size) {
-+  void *ctx;
-+  SIZE_T res;
-+  COMMON_INTERCEPTOR_ENTER(ctx, strlcat, dst, src, size);
-+  if (src) {
-+    SIZE_T len = REAL(strnlen)(src, size);
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, src, len >= size ? size : len + 1);
-+  }
-+  if (dst) {
-+    SIZE_T len = REAL(strnlen)(dst, size);
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, dst, len >= size ? size : len + 1);
-+    // Simplify WRITE_RANGE
-+    dst += len;
-+    size -= len;
-+  }
-+  res = REAL(strlcpy)(dst, src, size);
-+  COMMON_INTERCEPTOR_WRITE_RANGE(ctx, dst, REAL(strlen)(dst) + 1);
-+  return res;
-+}
-+#define INIT_STRLCPY \
-+  COMMON_INTERCEPT_FUNCTION(strlcpy); \
-+  COMMON_INTERCEPT_FUNCTION(strlcat);
-+#else
-+#define INIT_STRLCPY
-+#endif
-+
 +#if SANITIZER_INTERCEPT_ATOF
 +INTERCEPTOR(double, atof, char *nptr) {
 +  void *ctx;
@@ -1109,7 +1090,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6961,6 +7940,7 @@ static void InitializeCommonInterceptors
+@@ -6961,6 +7899,7 @@ static void InitializeCommonInterceptors
    INIT_SEND_SENDTO;
    INIT_STAT;
    INIT_EVENTFD_READ_WRITE;
@@ -1117,7 +1098,7 @@ $NetBSD$
    INIT___XSTAT;
    INIT___XSTAT64;
    INIT___LXSTAT;
-@@ -6984,6 +7964,18 @@ static void InitializeCommonInterceptors
+@@ -6984,6 +7923,18 @@ static void InitializeCommonInterceptors
    INIT_NAME_TO_HANDLE_AT;
    INIT_OPEN_BY_HANDLE_AT;
    INIT_STRLCPY;
