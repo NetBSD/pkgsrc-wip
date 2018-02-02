@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-02 19:10:23.884232247 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-02 19:10:23.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL
@@ -171,7 +171,7 @@ $NetBSD$
  #if SANITIZER_INTERCEPT___XSTAT
  INTERCEPTOR(int, __xstat, int version, const char *path, void *buf) {
    void *ctx;
-@@ -6788,6 +6836,897 @@ INTERCEPTOR(int, devname_r, u64 dev, u32
+@@ -6788,6 +6836,869 @@ INTERCEPTOR(int, devname_r, u64 dev, u32
  #define INIT_DEVNAME_R
  #endif
  
@@ -495,34 +495,6 @@ $NetBSD$
 +  COMMON_INTERCEPT_FUNCTION(kvm_write);
 +#else
 +#define INIT_KVM
-+#endif
-+
-+#if SANITIZER_INTERCEPT_DEVNAME
-+INTERCEPTOR(char *, devname, u64 dev, u32 type) {
-+  void *ctx;
-+  char *name;
-+  COMMON_INTERCEPTOR_ENTER(ctx, devname, dev, type);
-+  name = REAL(devname)(dev, type);
-+  if (name)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, name, REAL(strlen)(name) + 1);
-+  return name;
-+}
-+
-+INTERCEPTOR(int, devname_r, u64 dev, u32 type, const char *path, uptr len) {
-+  void *ctx;
-+  int res;
-+  COMMON_INTERCEPTOR_ENTER(ctx, devname_r, dev, type, path, len);
-+  res = REAL(devname_r)(dev, type, path, len);
-+  if (!res)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, path, REAL(strlen)(path) + 1);
-+  return res;
-+}
-+
-+#define INIT_DEVNAME \
-+  COMMON_INTERCEPT_FUNCTION(devname); \
-+  COMMON_INTERCEPT_FUNCTION(devname_r)
-+#else
-+#define INIT_DEVNAME
 +#endif
 +
 +#if SANITIZER_INTERCEPT_SYSCTL
@@ -1069,7 +1041,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -6990,6 +7929,7 @@ static void InitializeCommonInterceptors
+@@ -6990,6 +7901,7 @@ static void InitializeCommonInterceptors
    INIT_SEND_SENDTO;
    INIT_STAT;
    INIT_EVENTFD_READ_WRITE;
@@ -1077,7 +1049,7 @@ $NetBSD$
    INIT___XSTAT;
    INIT___XSTAT64;
    INIT___LXSTAT;
-@@ -7015,6 +7955,16 @@ static void InitializeCommonInterceptors
+@@ -7015,6 +7927,16 @@ static void InitializeCommonInterceptors
    INIT_STRLCPY;
    INIT_DEVNAME;
    INIT_DEVNAME_R;
