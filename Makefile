@@ -1747,6 +1747,7 @@ SUBDIR+=	libjingle
 SUBDIR+=	libkdcraw
 SUBDIR+=	libkdepim
 SUBDIR+=	libkexiv2
+SUBDIR+=	libksane
 SUBDIR+=	libkscreen
 SUBDIR+=	libksysguard
 SUBDIR+=	liblingoteach
