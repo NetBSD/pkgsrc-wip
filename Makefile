@@ -1611,6 +1611,7 @@ SUBDIR+=	kolourpaint
 SUBDIR+=	konsole
 SUBDIR+=	korelib
 SUBDIR+=	kpimtextedit
+SUBDIR+=	kruler
 SUBDIR+=	krusader
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
