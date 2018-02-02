@@ -1743,6 +1743,7 @@ SUBDIR+=	libitl
 SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
 SUBDIR+=	libkdepim
+SUBDIR+=	libkexiv2
 SUBDIR+=	libkscreen
 SUBDIR+=	libksysguard
 SUBDIR+=	liblingoteach
