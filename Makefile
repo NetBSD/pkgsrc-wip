@@ -1566,6 +1566,7 @@ SUBDIR+=	kawa
 SUBDIR+=	kcalc
 SUBDIR+=	kcalcore
 SUBDIR+=	kcalutils
+SUBDIR+=	kcolorchooser
 SUBDIR+=	kcontacts
 SUBDIR+=	kdav
 SUBDIR+=	kde-baseapps4
