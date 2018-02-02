@@ -14,8 +14,6 @@ DEPENDS+=	kimageformats>=5.19.0:../../graphics/kimageformats
 
 USE_TOOLS+=	msgmerge pkg-config
 
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
-
 .include "../../devel/cfitsio/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -23,7 +21,7 @@ BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 .include "../../sysutils/baloo5/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
-#.include "../../wip/libkdcraw5/buildlink3.mk"
+.include "../../wip/libkdcraw/buildlink3.mk"
 #.include "../../wip/libkipi5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtimageformats/buildlink3.mk"
