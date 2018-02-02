@@ -1,0 +1,5 @@
+@comment $NetBSD$
+qt5/plugins/gsthumbnail.so
+qt5/plugins/rawthumbnail.so
+share/kservices5/gsthumbnail.desktop
+share/kservices5/rawthumbnail.desktop
