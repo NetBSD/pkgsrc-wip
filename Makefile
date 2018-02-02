@@ -4261,6 +4261,7 @@ SUBDIR+=	suse131_fpc
 SUBDIR+=	suse131_gcc
 SUBDIR+=	sushi
 SUBDIR+=	svgalib
+SUBDIR+=	svgpart
 SUBDIR+=	svkbd
 SUBDIR+=	svnup
 SUBDIR+=	svrcore
