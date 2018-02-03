@@ -6,4 +6,3 @@ SHA512 (kinfocenter-5.11.5.tar.xz) = d64cf466b4b883c9a57a0dddfe5a1d1cae068765589
 Size (kinfocenter-5.11.5.tar.xz) = 1302960 bytes
 SHA1 (patch-Modules_base_info__netbsd.cpp) = 3c4c886757d473518874a3d79f58cbb4ca365fc0
 SHA1 (patch-Modules_nics_nic.cpp) = d759de60f074d8e35d759cef3426c2f84ad9768e
-SHA1 (patch-kcontrol_menus_CMakeLists.txt) = d55591620116acf72649026f7eaab878838621e9
