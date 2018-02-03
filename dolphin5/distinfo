@@ -4,4 +4,3 @@ SHA1 (dolphin-17.12.1.tar.xz) = 02200a2a67fb25f84154c4f9c7d214f406f7555b
 RMD160 (dolphin-17.12.1.tar.xz) = 5d5b9e89fe03c7df769c78aaea790a106f0e7ce0
 SHA512 (dolphin-17.12.1.tar.xz) = 0780eeb1bb730ac797532cf52411ad1036633565ed1e098b35828252f1a393554489367a136029b5b43f4783c4b5f16dbde1ab38314df997f206a91ddb540837
 Size (dolphin-17.12.1.tar.xz) = 4840748 bytes
-SHA1 (patch-src_CMakeLists.txt) = 981b8cac13f673ca0a482c59fd431eb228afea75
