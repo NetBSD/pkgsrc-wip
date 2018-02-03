@@ -3404,7 +3404,6 @@ SUBDIR+=	py-moksha-hub
 SUBDIR+=	py-monad
 SUBDIR+=	py-monty
 SUBDIR+=	py-mote
-SUBDIR+=	py-mox
 SUBDIR+=	py-moya
 SUBDIR+=	py-mpi4py
 SUBDIR+=	py-mplh5canvas
