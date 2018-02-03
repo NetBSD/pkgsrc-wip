@@ -1570,6 +1570,7 @@ SUBDIR+=	kawa
 SUBDIR+=	kcalc
 SUBDIR+=	kcalcore
 SUBDIR+=	kcalutils
+SUBDIR+=	kcharselect
 SUBDIR+=	kcolorchooser
 SUBDIR+=	kcontacts
 SUBDIR+=	kdav
