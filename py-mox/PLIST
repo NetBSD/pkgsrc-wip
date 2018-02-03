@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/13 13:39:12 jihbed Exp $
-${PYSITELIB}/mox.py
-${PYSITELIB}/mox.pyc
-${PYSITELIB}/mox.pyo
-${PYSITELIB}/stubout.py
-${PYSITELIB}/stubout.pyc
-${PYSITELIB}/stubout.pyo
