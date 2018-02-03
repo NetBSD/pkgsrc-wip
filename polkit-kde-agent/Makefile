@@ -14,8 +14,14 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{AUTOSTART_INSTALL_DIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
-CONF_FILES+=	${PREFIX}/share/examples/kde-polkit/polkit-kde-authentication-agent-1.desktop \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/polkit-kde-authentication-agent-1.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/polkit-kde-authentication-agent-1.desktop
 
 .include "../../devel/kcrash/buildlink3.mk"

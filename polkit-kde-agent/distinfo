@@ -4,4 +4,3 @@ SHA1 (polkit-kde-agent-1-5.11.5.tar.xz) = 4d4b0a26919f2062863dffc52e21c810eab5e6
 RMD160 (polkit-kde-agent-1-5.11.5.tar.xz) = ce05f73d28ba27f175a090dd14e420c86db50ef7
 SHA512 (polkit-kde-agent-1-5.11.5.tar.xz) = 63a6696fa5961c4757b9ee13db8d9de67d0ff8c15f72448c05f2728fc57f19717adfe09aba38d7990bbaf3bd67a3674300397fd2f988f0d27b5e13b22902966f
 Size (polkit-kde-agent-1-5.11.5.tar.xz) = 44320 bytes
-SHA1 (patch-CMakeLists.txt) = c886c3126030d201cb9bdd5ab19c6c2b31f8da8f

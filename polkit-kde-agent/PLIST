@@ -1,6 +1,6 @@
 @comment $NetBSD$
 libexec/polkit-kde-authentication-agent-1
-share/examples/kde-polkit/polkit-kde-authentication-agent-1.desktop
+share/examples/kde-xdg/autostart/polkit-kde-authentication-agent-1.desktop
 share/knotifications5/policykit1-kde.notifyrc
 share/locale/ar/LC_MESSAGES/polkit-kde-authentication-agent-1.mo
 share/locale/ast/LC_MESSAGES/polkit-kde-authentication-agent-1.mo
