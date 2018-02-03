@@ -1550,6 +1550,7 @@ SUBDIR+=	jruby
 SUBDIR+=	js-Gallery
 SUBDIR+=	jsl
 SUBDIR+=	jsoncpp-git
+SUBDIR+=	juk
 SUBDIR+=	julia
 SUBDIR+=	jumpnbump
 SUBDIR+=	junit
