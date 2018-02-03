@@ -1,7 +1,5 @@
 $NetBSD$
 
-Install via examples dir
-
 --- kcmkwin/kwincompositing/CMakeLists.txt.orig	2016-04-19 11:12:37.000000000 +0000
 +++ kcmkwin/kwincompositing/CMakeLists.txt
 @@ -41,6 +41,7 @@ target_link_libraries(kwincompositing
@@ -12,10 +10,3 @@ Install via examples dir
      kwin4_effect_builtins
  )
  
-@@ -79,5 +80,5 @@ target_link_libraries(effectModelTest
- INSTALL(DIRECTORY qml DESTINATION ${DATA_INSTALL_DIR}/kwincompositing)
- INSTALL(TARGETS kwincompositing DESTINATION ${PLUGIN_INSTALL_DIR})
- install(FILES kwincompositing.desktop kcmkwineffects.desktop  DESTINATION  ${SERVICES_INSTALL_DIR})
--install(FILES kwineffect.knsrc DESTINATION ${CONFIG_INSTALL_DIR})
-+install(FILES kwineffect.knsrc DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg)
- ################# list the subdirectories #################

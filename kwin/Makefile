@@ -9,8 +9,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../wip/kde5/plasma.mk"
 
-CONFLICTS+=	kde-workspace4-[0-9]*
-
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.21.0:../../x11/kinit
 
@@ -26,6 +24,17 @@ SUBST_FILES.fix-moc+=	_KDE_build/kcmkwin/kwinscreenedges/CMakeFiles/kcm_kwinscre
 SUBST_FILES.fix-moc+=	_KDE_build/kcmkwin/kwinscreenedges/CMakeFiles/kcm_kwintouchscreen_autogen.dir/AutogenInfo.cmake
 SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/kwin_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	data/CMakeLists.txt
+SUBST_FILES.xdg+=	kcmkwin/kwincompositing/CMakeLists.txt
+SUBST_FILES.xdg+=	kcmkwin/kwinscripts/CMakeLists.txt
+SUBST_FILES.xdg+=	kcmkwin/kwintabbox/CMakeLists.txt
+SUBST_FILES.xdg+=	plugins/kdecorations/aurorae/src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+SUBST_SED.xdg+=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/aurorae.knsrc \
