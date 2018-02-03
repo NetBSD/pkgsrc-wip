@@ -1579,6 +1579,7 @@ SUBDIR+=	kde-gtk-config
 SUBDIR+=	kde-runtime4
 SUBDIR+=	kde5
 SUBDIR+=	kdebugsettings
+SUBDIR+=	keditbookmarks
 SUBDIR+=	keepassx-git
 SUBDIR+=	kdecoration
 SUBDIR+=	kdegraphics-mobipocket
