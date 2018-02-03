@@ -610,6 +610,7 @@ SUBDIR+=	dovecot-antispam
 SUBDIR+=	downtimed
 SUBDIR+=	dpic
 SUBDIR+=	dragbox-git
+SUBDIR+=	dragon
 SUBDIR+=	drkonqi
 SUBDIR+=	dropbox
 SUBDIR+=	drow
