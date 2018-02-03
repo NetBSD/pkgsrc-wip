@@ -141,6 +141,10 @@ qt5/plugins/plasma_containmentactions_paste.so
 qt5/plugins/plasma_containmentactions_switchactivity.so
 qt5/plugins/plasma_containmentactions_switchdesktop.so
 qt5/plugins/plasma_containmentactions_switchwindow.so
+qt5/plugins/plasmacalendarplugins/holidaysevents.so
+qt5/plugins/plasmacalendarplugins/holidays/HolidaysConfig.qml
+qt5/qml/org/kde/holidayeventshelperplugin/libholidayeventshelperplugin.so
+qt5/qml/org/kde/holidayeventshelperplugin/qmldir
 qt5/qml/org/kde/plasma/private/appmenu/libappmenuplugin.so
 qt5/qml/org/kde/plasma/private/appmenu/qmldir
 qt5/qml/org/kde/plasma/private/digitalclock/libdigitalclockplugin.so
