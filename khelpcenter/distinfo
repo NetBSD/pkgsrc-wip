@@ -4,4 +4,3 @@ SHA1 (khelpcenter-17.12.1.tar.xz) = 3f5200c50e215b12846c040012c02bdf0586b4ba
 RMD160 (khelpcenter-17.12.1.tar.xz) = e538556f261dee0ba28a5f7cea3366fd52790ad0
 SHA512 (khelpcenter-17.12.1.tar.xz) = 1dee188045d1761410057772af5becb3d4dc18224266faa3b76cd5041847bfe023c8b869c1c09c16e91b952d78aa8fe8a4b9511a5527635e19257e1845ebcf46
 Size (khelpcenter-17.12.1.tar.xz) = 3024796 bytes
-SHA1 (patch-CMakeLists.txt) = a498185b6bcea90f95c07679639150a83dddc0a5
