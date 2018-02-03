@@ -4,4 +4,3 @@ SHA1 (kwrited-5.11.5.tar.xz) = a9c5ea1d6b3b2c340ca489222e5269624d4d24dd
 RMD160 (kwrited-5.11.5.tar.xz) = fecc657ff850f5570472079f8f9ef8dd74e22108
 SHA512 (kwrited-5.11.5.tar.xz) = a8ef4c899aa4b38265c470cbdb0c1b47951567f2637255837febec344cb79920986dda6838c60723aa9474e5d632fb8209e6b3090c52a723b1618e134ecb6246
 Size (kwrited-5.11.5.tar.xz) = 20672 bytes
-SHA1 (patch-CMakeLists.txt) = 5b7cd708939b1f54bf5746690c4e4681c83da6bf
