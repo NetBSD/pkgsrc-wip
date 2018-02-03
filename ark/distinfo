@@ -4,4 +4,3 @@ SHA1 (ark-17.12.1.tar.xz) = 3bc6cf9fc6d2cf1cf5515f4a75ef59c22ea0649b
 RMD160 (ark-17.12.1.tar.xz) = 2e92cad4e2c4213ff516e2c2ebf078025a9d6448
 SHA512 (ark-17.12.1.tar.xz) = 445b98bc1fe6484cb5f2b6fb78a2d33e6d0d1898968fbcea43574567af3b3d8847fe674a2bdb342bf8ca96b862bb2de25b4f06e82715a3d99899d1279b8a9fca
 Size (ark-17.12.1.tar.xz) = 1970844 bytes
-SHA1 (patch-CMakeLists.txt) = d35fb1c97af3e0fb4119a0f7b2db7205d9cfd1fe
