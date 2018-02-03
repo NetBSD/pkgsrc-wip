@@ -4,5 +4,4 @@ SHA1 (kde-gtk-config-5.11.5.tar.xz) = f14d50e6d071424c30303ba719c9c9b82c39cf66
 RMD160 (kde-gtk-config-5.11.5.tar.xz) = a44a40863b73eff702d50590d4bc2b035d97ccf3
 SHA512 (kde-gtk-config-5.11.5.tar.xz) = bcaf0e8c6495fa2418caa92e4fa30f6369b7ed6d45ed288a6f4d071661cefad9240e990c57727aa709e398c1947a4caa6bcf77f3ef53c24127a5696186c989df
 Size (kde-gtk-config-5.11.5.tar.xz) = 159700 bytes
-SHA1 (patch-CMakeLists.txt) = 4d198f86ad4d23b524dd4ef6bdd38118f29f8aee
 SHA1 (patch-cmake_modules_FindGTK2.cmake) = 00edb6b5608e290511edb0de22cf410207b0ec94
