@@ -19,7 +19,7 @@ DEPENDS+=	plasma-integration>=${PLASMAVER}:../../wip/plasma-integration
 
 USE_TOOLS+=	msgmerge pkg-config
 
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
 # generation of ksmserver.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
@@ -34,6 +34,20 @@ SUBST_CLASSES+=		qtpath
 SUBST_FILES.qtpath=	startkde/startkde.cmake
 SUBST_VARS.qtpath=	QTDIR
 SUBST_STAGE.qtpath=	post-patch
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	components/shellprivate/CMakeLists.txt
+SUBST_FILES.xdg+=	klipper/CMakeLists.txt
+SUBST_FILES.xdg+=	krunner/CMakeLists.txt
+SUBST_FILES.xdg+=	kuiserver/CMakeLists.txt
+SUBST_FILES.xdg+=	libtaskmanager/CMakeLists.txt
+SUBST_FILES.xdg+=	shell/CMakeLists.txt
+SUBST_FILES.xdg+=	wallpapers/image/CMakeLists.txt
+SUBST_FILES.xdg+=	xembed-sni-proxy/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+SUBST_SED.xdg+=		-e 's:{KDE_INSTALL_AUTOSTARTDIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/krunner.desktop \
