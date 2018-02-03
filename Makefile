@@ -1590,6 +1590,7 @@ SUBDIR+=	keepassx-git
 SUBDIR+=	kfind
 SUBDIR+=	kgamma5
 SUBDIR+=	kget
+SUBDIR+=	kgpg
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	khard-git
