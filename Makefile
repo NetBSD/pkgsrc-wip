@@ -1583,6 +1583,7 @@ SUBDIR+=	keepassx-git
 SUBDIR+=	kdecoration
 SUBDIR+=	kdegraphics-mobipocket
 SUBDIR+=	kdegraphics-thumbnailers
+SUBDIR+=	kdialog
 SUBDIR+=	kgamma5
 SUBDIR+=	kget
 SUBDIR+=	kgrab
