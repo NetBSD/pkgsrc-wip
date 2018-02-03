@@ -1602,6 +1602,7 @@ SUBDIR+=	kmag
 SUBDIR+=	kmailtransport
 SUBDIR+=	kmbox
 SUBDIR+=	kmenuedit
+SUBDIR+=	kmix
 SUBDIR+=	kmime
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
