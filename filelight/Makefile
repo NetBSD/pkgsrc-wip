@@ -13,6 +13,12 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	misc/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/filelightrc \
 		${PKG_SYSCONFDIR}/xdg/filelightrc

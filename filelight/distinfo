@@ -4,4 +4,3 @@ SHA1 (filelight-17.12.1.tar.xz) = 7f43aad4f8392fc1b7b63b04800f716b01a2dfb9
 RMD160 (filelight-17.12.1.tar.xz) = 884f016a523f42216f6763ebdf675d5a0f590fee
 SHA512 (filelight-17.12.1.tar.xz) = 9282dd4ed14ae8880af5ea97760ceea2011af5c6789fb166855afbdc8da002017153988549d7b49a1e38d184da2f92a6bace907858dadd9f04738456b882439e
 Size (filelight-17.12.1.tar.xz) = 654724 bytes
-SHA1 (patch-misc_CMakeLists.txt) = 81211dbdf815aac037ecd39a84f091953fdb2711
