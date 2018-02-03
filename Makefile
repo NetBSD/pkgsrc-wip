@@ -1630,6 +1630,7 @@ SUBDIR+=	ksshaskpass
 SUBDIR+=	ksmtp
 SUBDIR+=	kstest
 SUBDIR+=	ksysguard
+SUBDIR+=	ktimer
 SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
