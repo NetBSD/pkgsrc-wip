@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	qutebrowser-0.8.2
+DISTNAME=	qutebrowser-1.1.1
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=The-Compiler/}
-GITHUB_RELEASE=	v0.8.2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=qutebrowser/}
+GITHUB_TAG=	v1.1.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://qutebrowser.org/
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-PEG2-[0-9]*:../../wip/py-PEG2
+DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 #DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-cssutils-[0-9]*:../../textproc/py-cssutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
