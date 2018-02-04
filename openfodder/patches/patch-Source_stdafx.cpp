@@ -4,9 +4,9 @@ Check argc before accessing argv.
 
 Use PREFIX when searching for data.
 
---- ./Source/stdafx.cpp.orig	2015-11-08 06:10:34.000000000 +0000
-+++ ./Source/stdafx.cpp
-@@ -32,7 +32,7 @@ int main(int argc, char *args[]) {
+--- Source/stdafx.cpp.orig	2018-02-01 19:54:26.000000000 +0000
++++ Source/stdafx.cpp
+@@ -39,7 +39,7 @@ int main(int argc, char *args[]) {
  		if (strcmp( args[1], "skipintro" ) == 0)
  			SkipIntro = true;
  
@@ -15,12 +15,27 @@ Use PREFIX when searching for data.
  			MapNumber = atoi( args[3] );
  		}
  	}
-@@ -51,6 +51,8 @@ int main(int argc, char *args[]) {
- std::string local_PathGenerate( const std::string& pFile, const std::string& pPath, bool pData = true ) {
- 	std::stringstream	 filePathFinal;
+@@ -110,14 +110,19 @@ std::string local_PathGenerate( const st
+             if (path) {
+                 FinalPath = path;
+                 FinalPath.append("/.local/share/");
++                filePathFinal << FinalPath << "OpenFodder/";
++                if (!local_FileExists(filePathFinal.str())) {
++                    FinalPath = "";
++                    filePathFinal.str("");
++                }
+             }
+         }
  
-+	filePathFinal << OPENFODDER_DATADIR << "/";
-+
- 	if (pData)
- 		filePathFinal << "Data/";
- 	else
+         // Fall back just incase
+-        if(!FinalPath.size())
+-            FinalPath = "/usr/local/share/";
+-
+-        filePathFinal << FinalPath << "OpenFodder/";
++        if(!FinalPath.size()) {
++            FinalPath = OPENFODDER_DATADIR;
++            filePathFinal << FinalPath << "OpenFodder/";
++        }
+ 
+     #endif
+ 
