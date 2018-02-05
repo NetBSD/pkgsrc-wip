@@ -13,13 +13,13 @@
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 #
 
-LLVM_VERSION=	6.0.0
+LLVM_VERSION=	7.0.0
 
 CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	llvm
 SVN_REPO.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
-SVN_REVISION.llvm=	320228
+SVN_REVISION.llvm=	324234
 
 WRKSRC=			${WRKDIR}/llvm
 
