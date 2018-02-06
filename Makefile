@@ -2271,7 +2271,6 @@ SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
 SUBDIR+=	obconf-qt
-SUBDIR+=	objfw
 SUBDIR+=	objfw-git
 SUBDIR+=	obmenu
 SUBDIR+=	ocaml-bin_prot
