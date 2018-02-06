@@ -8,6 +8,8 @@ lib/csv${PKGVERSION}/examples/crepl.c
 lib/csv${PKGVERSION}/examples/csocket.c
 lib/csv${PKGVERSION}/examples/def.ss
 lib/csv${PKGVERSION}/examples/edit.ss
+lib/csv${PKGVERSION}/examples/ez-grammar-test.ss
+lib/csv${PKGVERSION}/examples/ez-grammar.ss
 lib/csv${PKGVERSION}/examples/fact.ss
 lib/csv${PKGVERSION}/examples/fatfib.ss
 lib/csv${PKGVERSION}/examples/fft.ss
