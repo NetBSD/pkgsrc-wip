@@ -11,7 +11,7 @@ HOMEPAGE=		http://php.net/manual/en/intro.zmq.php
 COMMENT=		PHP bindings to the functions of ZeroMQ
 LICENSE=		modified-bsd
 
-PHP_VERSIONS_ACCEPTED=	56 70 71
+PHP_VERSIONS_ACCEPTED=	56 70 71 72
 
 TEST_TARGET=		test
 TEST_ENV=		NO_INTERACTION=set
