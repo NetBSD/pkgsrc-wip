@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/06/21 20:43:50 cfkoch Exp $
+$NetBSD$
 
-SHA1 (sophia-version_1.2.3.tar.gz) = 343ad1cda205b9c413664410efa17c66316ca6d7
-RMD160 (sophia-version_1.2.3.tar.gz) = c10530de52dba18524454ab1911ef45adde0f2c1
-Size (sophia-version_1.2.3.tar.gz) = 231483 bytes
+SHA1 (sophia-version_2.1.tar.gz) = 667263ecbca4c711c265c8bc00e2dbe5db0c4c7e
+RMD160 (sophia-version_2.1.tar.gz) = cd01318efaa4a9c6c7ba3e624d6c217c6f0e2b6a
+SHA512 (sophia-version_2.1.tar.gz) = eef29f81ce54bae0ce684bb4091399d22216ce0d594575c43493310812439152fd9a036ffb77e0b42f7cbc63fdbe899e8b73930b42b8699b02646430053bb201
+Size (sophia-version_2.1.tar.gz) = 944144 bytes
+SHA1 (patch-sophia_std_ss_stdvfc.c) = 2e4e8219f58984297027a4fb12a7e2d71f962373
