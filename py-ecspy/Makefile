@@ -12,11 +12,11 @@ LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-pp>=1.6.0:../../wip/py-pp
 
 USE_LANGUAGES=	# none
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

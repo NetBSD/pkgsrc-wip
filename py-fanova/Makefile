@@ -11,10 +11,10 @@ COMMENT=	Functional ANOVA
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 PKG_JVMS_ACCEPTED=	sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/java-vm.mk"

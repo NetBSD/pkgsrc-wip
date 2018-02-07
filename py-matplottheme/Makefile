@@ -10,8 +10,9 @@ HOMEPAGE=	https://github.com/James-Yu/MatPlotTheme
 COMMENT=	MatPlotTheme is a theming library for MatPlotLib
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+
 USE_LANGUAGES=	# none
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

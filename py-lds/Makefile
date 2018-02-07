@@ -10,12 +10,12 @@ HOMEPAGE=	https://github.com/mattjj/pylds
 COMMENT=	Learning and inference for Gaussian linear dynamical systems
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 PYDISTUTILSPKG=	yes
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

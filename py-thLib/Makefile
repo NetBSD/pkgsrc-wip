@@ -10,10 +10,11 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://work.thaslwanter.at/
 COMMENT=	Collection of Python utilities for signal analysis
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"

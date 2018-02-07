@@ -11,6 +11,8 @@ HOMEPAGE=	https://wiki.fysik.dtu.dk/ase/
 COMMENT=	Atomic Simulation Environment
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-gobject
@@ -25,7 +27,6 @@ post-extract:
 ## It is highly recommended (but not required) to install also these:
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 
 ##required for basic ASE functionality

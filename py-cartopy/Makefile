@@ -10,11 +10,12 @@ HOMEPAGE=	http://scitools.org.uk/cartopy/docs/latest/
 COMMENT=	Cartographic python library with matplotlib support for visualisation
 LICENSE=	gnu-lgpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+
 USE_LANGUAGES=	c c++
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

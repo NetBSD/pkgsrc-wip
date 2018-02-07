@@ -1,5 +1,4 @@
 # $NetBSD$
-#
 
 DISTNAME=	freecad-0.16
 CATEGORIES=	cad
@@ -34,7 +33,6 @@ SUBST_STAGE.eol=	post-extract
 SUBST_FILES.eol=	src/App/Application.cpp src/App/FreeCADInit.py src/Main/CMakeLists.txt src/Main/Main*.cpp src/Mod/Inspection/CMakeLists.txt src/Mod/Start/StartPage/CMakeLists.txt
 SUBST_FILTER_CMD.eol=	${TR} -d '\r'
 
-
 REPLACE_PYTHON+=	src/Tools/wiki2qhelp.py src/Tools/PythonToCPP.py src/Tools/githubstats.py src/Tools/updatefromcrowdin.py src/Tools/updatecrowdin.py src/Tools/updateppa.py
 REPLACE_PYTHON+=	src/Tools/generateBase/generateModel_Module.py src/Tools/generateBase/generateDS.py
 REPLACE_PYTHON+=	src/Mod/Test/testmakeWireString.py src/Mod/Test/testPathArray.py src/Mod/Test/testPathArraySel.py src/Mod/Test/unittestgui.py
@@ -49,7 +47,7 @@ REPLACE_PYTHON+=	src/Mod/Robot/MovieTool.py src/Mod/OpenSCAD/prototype.py
 #.include "../../wip/calculix/buildlink3.mk"
 
 # Plot module deps
-#.include "../../graphics/py-matplotlib/buildlink3.mk"
+#DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 .include "../../lang/python/application.mk"
 .include "../../wip/orocos-kdl/buildlink3.mk"

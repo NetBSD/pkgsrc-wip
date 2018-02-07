@@ -12,6 +12,7 @@ COMMENT=	Analysis and Inter-comparison of Gene Ontology functional annotations
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	${PYPKGPREFIX}-creole-[0-9]*
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
 
@@ -21,7 +22,6 @@ post-extract:
 do-test:
 	${RUN} cd ${WRKSRC}/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testAIGO.py
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"

@@ -11,8 +11,9 @@ HOMEPAGE=	http://pypedal.sourceforge.net/
 COMMENT=	Tools for pedigree analysis
 LICENSE=	gnu-lgpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-networkx>=1.0.1:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-dot>=1.0.2:../../graphics/py-dot
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-networkx>=1.0.1:../../math/py-networkx
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mxDateTime
 
@@ -26,7 +27,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/PyPedal/doc/pypedal.pdf	${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/egg.mk"
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

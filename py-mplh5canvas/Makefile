@@ -10,10 +10,10 @@ HOMEPAGE=	http://code.google.com/p/mplh5canvas/
 COMMENT=	Matplotlib backend based on HTML5 Canvas
 LICENSE=	2-clause-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGRPEFIX}-websocket>=0.7.9:../../wip/py-websocket
 
 USE_LANGUAGES=	# none
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

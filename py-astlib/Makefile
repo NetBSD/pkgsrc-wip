@@ -10,10 +10,11 @@ HOMEPAGE=	http://astlib.sourceforge.net/
 COMMENT=	Set of python modules for producing simple plots, statistics
 LICENSE=	gnu-lgpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
+
 PYDISTUTILSPKG=	yes
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=		${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"

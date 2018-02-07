@@ -10,6 +10,9 @@ HOMEPAGE=	http://numerics.kaust.edu.sa/nodepy/
 COMMENT=	Numerical ODE solvers in Python
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.2:../../math/py-sympy
+
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
@@ -17,8 +20,6 @@ PYDISTUTILSPKG=	yes
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} unit_tests.py
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.2:../../math/py-sympy
 .include "../../mk/bsd.pkg.mk"

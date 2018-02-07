@@ -12,13 +12,13 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-mysqldb>=1.2.3:../../databases/py-mysqldb
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-redis>=2.8.0:../../databases/py-redis
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mysqldb
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

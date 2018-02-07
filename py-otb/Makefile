@@ -10,11 +10,12 @@ HOMEPAGE=	http://bitbucket.org/forieux/otb/
 COMMENT=	Utility functions for scientific numerical computation
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

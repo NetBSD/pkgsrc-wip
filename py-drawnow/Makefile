@@ -10,8 +10,9 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/d/drawnow/
 COMMENT=	MATLAB-like drawnow
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+
 USE_LANGUAGES=	# none
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

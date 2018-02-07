@@ -10,11 +10,10 @@ HOMEPAGE=	https://github.com/robertjw/
 COMMENT=	Calculus of Variations Solver
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/cva-0.9.4
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	# none
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
