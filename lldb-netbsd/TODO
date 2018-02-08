@@ -1,5 +1,5 @@
 Debugging to a file:
-    log enable -STagnpstv -f /tmp/log.txt lldb all
+    log enable -STanpstv -f /tmp/log.txt lldb all
 
 Debugging GDB remote protocol commands:
     log enable gdb-remote packets
@@ -9,6 +9,7 @@ Debugging GDB remote protocol commands:
 Debugging with gdb(1):
     Start the server:
         gdb --args lldb-server g *:1234 -- ./signal
+        gdb --args lldb-server g *:1234 -- /usr/bin/look
 
     Start the client:
         lldb
