@@ -1,0 +1,8 @@
+$NetBSD$
+
+From https://bugzilla.gnome.org/show_bug.cgi?id=792884
+
+--- gnucash/ugly-hack/CMakeLists.txt.orig	2018-02-09 20:30:58.475024471 +0000
++++ gnucash/ugly-hack/CMakeLists.txt
+@@ -0,0 +1 @@
++install(CODE "execute_process(COMMAND ${GLIB_COMPILE_SCHEMAS} ${CMAKE_INSTALL_FULL_DATADIR}/glib-2.0/schemas)")

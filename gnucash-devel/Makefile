@@ -53,8 +53,11 @@ CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONF
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 
 # for CMake build
-#pre-build:
-#	${MKDIR} -p ${WRKDIR}/.home/.local/share
+pre-patch:
+	${MKDIR} -p ${WRKSRC}/gnucash/ugly-hack
+
+pre-build:
+	${MKDIR} -p ${WRKDIR}/.home/.local/share
 
 .include "options.mk"
 
