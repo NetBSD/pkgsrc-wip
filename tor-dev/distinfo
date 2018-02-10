@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (tor-0.3.3.1-alpha.tar.gz) = 78efad1f5dfb6d463156136bcc7a31c4a48804fe
-RMD160 (tor-0.3.3.1-alpha.tar.gz) = 4bd5a6e4664646ee0b63840eb5075e346446ff7e
-SHA512 (tor-0.3.3.1-alpha.tar.gz) = 796deb6c31d78e3424aed72d3c9a0958c77a28fc883da77e724e94bb92376858ae094c73acf166a5415587186667d4ea3e87c0578e42f4a59b8397365d782314
-Size (tor-0.3.3.1-alpha.tar.gz) = 6317585 bytes
+SHA1 (tor-0.3.3.2-alpha.tar.gz) = 14f93d8f16dbdf45f3c33d91620932c5ba6551ed
+RMD160 (tor-0.3.3.2-alpha.tar.gz) = 9f4c08ec3afb7f2aadabd4935771f8d3fdaaa8ca
+SHA512 (tor-0.3.3.2-alpha.tar.gz) = 60d7d30b24bf6c4201a5653cb6ae80d82f0f5a877c6cd1f6418cd3536259f62dbdf38cc02cf438180a6625d66adf76a64a685ca308b0e7a0a7095cb083b2cf8a
+Size (tor-0.3.3.2-alpha.tar.gz) = 6487418 bytes
 SHA1 (patch-Makefile.in) = cc7a58817fcc0294dc6a301e01a4e5076ce531b2
 SHA1 (patch-src_or_config.c) = 8e4905833ca6722651b52b83c910b1e96d1ca756
