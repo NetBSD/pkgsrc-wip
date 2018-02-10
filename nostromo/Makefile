@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	ast@NetBSD.org
 HOMEPAGE=	http://www.nazgul.ch/dev_nostromo.html
 COMMENT=	Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
-LICENSE=	modified-bsd
+LICENSE=	isc
 
 USE_TOOLS+=	sed
 MAKE_FILE=	GNUmakefile
