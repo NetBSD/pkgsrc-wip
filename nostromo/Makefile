@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	nostromo-1.9.5
-PKGREVISION=	2
+DISTNAME=	nostromo-1.9.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.nazgul.ch/dev/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -12,51 +12,32 @@ COMMENT=	Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	sed
-USE_TOOLS+=	perl
-REPLACE_PERL=	htdocs/cgi-bin/printenv
+MAKE_FILE=	GNUmakefile
 
 RCD_SCRIPTS=	nostromo
-EGDIR=		${DESTDIR}/${PREFIX}/nostromo
+EGDIR=		share/examples/nostromo
 
-USR_LOCAL=	/usr/local
-VAR_NOSTROMO=	/var/nostromo
-
-INSTALLATION_DIRS=	sbin
-INSTALLATION_DIRS+=	var/nostromo
-INSTALLATION_DIRS+=	${PKGMANDIR}/man8
+INSTALLATION_DIRS=	sbin share/examples/rc.d ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	${EGDIR}
-INSTALLATION_DIRS+=	${EGDIR}/logs
+INSTALLATION_DIRS+=	${EGDIR}/conf
 INSTALLATION_DIRS+=	${EGDIR}/icons
-INSTALLATION_DIRS+=	${EGDIR}/htdocs
-INSTALLATION_DIRS+=	${EGDIR}/htdocs/cgi-bin
+INSTALLATION_DIRS+=	${EGDIR}/htdocs ${EGDIR}/htdocs/cgi-bin
 
 SUBST_CLASSES+=		nostromo
-SUBST_FILES.nostromo=	src/nhttpd/nhttpd.8 \
-                        src/nhttpd/main.c \
-                        conf/nhttpd.conf-dist
-SUBST_SED.nostromo+=	-e 's,${VAR_NOSTROMO},${PREFIX}/nostromo,g'
-SUBST_SED.nostromo+=	-e 's,${USR_LOCAL},${PREFIX},g'
-SUBST_STAGE.nostromo=	post-patch
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/src/nhttpd/nhttpd \
-            ${DESTDIR}${PREFIX}/sbin/
-	${INSTALL_SCRIPT} ${WRKSRC}/src/tools/crypt \
-            ${DESTDIR}${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/src/nhttpd/nhttpd.8 \
-            ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
-	${MKDIR} -m 0775 ${EGDIR}/logs
-	${MKDIR} ${EGDIR}/conf
-	${INSTALL_DATA} ${WRKSRC}/conf/mimes ${EGDIR}/conf/
-	${INSTALL_DATA} ${WRKSRC}/conf/nhttpd.conf-dist ${EGDIR}/conf/
-	${MKDIR} ${EGDIR}/htdocs
-	${INSTALL_DATA} ${WRKSRC}/htdocs/index.html ${EGDIR}/htdocs/
-	${INSTALL_DATA} ${WRKSRC}/htdocs/nostromo.gif ${EGDIR}/htdocs/
-	${MKDIR} ${EGDIR}/htdocs/cgi-bin
-	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/cgi-bin/printenv \
-            ${EGDIR}/htdocs/cgi-bin/
-	${MKDIR} ${EGDIR}/icons
-	${INSTALL_DATA} ${WRKSRC}/icons/dir.gif ${EGDIR}/icons/
-	${INSTALL_DATA} ${WRKSRC}/icons/file.gif ${EGDIR}/icons/
+SUBST_MESSAGE.nostromo=	Fixing GNUmakefile src/nhttpd/GNUmakefile
+SUBST_STAGE.nostromo=	pre-patch
+SUBST_FILES.nostromo=	GNUmakefile \
+			src/nhttpd/GNUmakefile \
+			src/tools/GNUmakefile \
+			src/libbsd/GNUmakefile \
+			src/libmy/GNUmakefile
+SUBST_SED.nostromo+=	-e '/install -d -o root -g daemon -m 755/d'
+SUBST_SED.nostromo+=	-e 's,cc ${CCFLAGS},${CC} ${CCFLAGS},g'
+SUBST_SED.nostromo+=	-e 's,install -c -o root -g bin -m 555,${INSTALL},g'
+SUBST_SED.nostromo+=	-e 's,install -c -o root -g bin -m 444,${INSTALL_MAN},g'
+SUBST_SED.nostromo+=	-e 's,install -c -o root -g bin -m 644,${INSTALL_DATA},g'
+SUBST_SED.nostromo+=	-e 's,/usr/local,${DESTDIR}${PREFIX},g'
+SUBST_SED.nostromo+=	-e 's,/usr/share/man,${DESTDIR}${PREFIX}/${PKGMANDIR},g'
+SUBST_SED.nostromo+=	-e 's,/var/nostromo,${DESTDIR}${PREFIX}/${EGDIR},g'
 
 .include "../../mk/bsd.pkg.mk"

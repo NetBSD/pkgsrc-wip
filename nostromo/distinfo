@@ -1,10 +1,6 @@
 $NetBSD$
 
-SHA1 (nostromo-1.9.5.tar.gz) = fae4a2655749d7ca04c5b87bead55578ec6705cc
-RMD160 (nostromo-1.9.5.tar.gz) = 8b9c17c854f7ed5c721d188c3cd3bd0510fb841f
-SHA512 (nostromo-1.9.5.tar.gz) = 04ce045a75c44a02f70a8281aff3d8ada8275f99cd4728b81dca57dbcb7dbd895ae25d6b9f017c6ad13b669cf5254baad4a913a66b97bca4244c60452db28edf
-Size (nostromo-1.9.5.tar.gz) = 47798 bytes
-SHA1 (patch-src-http_path-extern) = 73cbbc5dc9c4d9cd1c5afeef39048de41ef9f471
-SHA1 (patch-src-http_path-http) = 23b5bcfc73ba55897b444bbf8e08ec6def97a1f5
-SHA1 (patch-src-http_path-main) = f3060eef5c01fb348f5eed02d7b1bfb77ea4d712
-SHA1 (patch-src-libmy-strb64d) = 4e58fd82a299e269c404870165daa7677e1e6e76
+SHA1 (nostromo-1.9.6.tar.gz) = 6f3d8ebc15486398f819ac55a9d2a9ac14c3b35e
+RMD160 (nostromo-1.9.6.tar.gz) = 6817ac77c7645ab2bef3e73469d2f376448af868
+SHA512 (nostromo-1.9.6.tar.gz) = baf68f492653937b80629f1281a1243026ee2def9f5b092934474148f97306ef0796c4fecffb3d6061907d8fdc1beb0a34333dfe8738dec70acdd3975347d6ea
+Size (nostromo-1.9.6.tar.gz) = 50937 bytes
