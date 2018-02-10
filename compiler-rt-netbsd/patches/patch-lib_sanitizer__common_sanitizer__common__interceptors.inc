@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-06 15:16:27.867133351 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-06 15:16:27.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -36,6 +36,7 @@
  //   COMMON_INTERCEPTOR_MEMCPY_IMPL

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-02-01 23:46:05.000000000 +0000
+--- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-02-10 18:57:25.232382620 +0000
 +++ lib/sanitizer_common/sanitizer_linux.cc
 @@ -89,6 +89,7 @@ extern char **environ;  // provided by c
  
@@ -10,8 +10,3 @@ $NetBSD$
  #include <sys/sysctl.h>
  extern char **environ;  // provided by crt1
  #include <sys/exec.h>
-@@ -1898,4 +1899,3 @@ bool GetRandom(void *buffer, uptr length
- 
- #endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD ||
-         // SANITIZER_SOLARIS
--

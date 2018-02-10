@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/tsan/rtl/tsan_interceptors.cc.orig	2018-02-01 23:46:00.000000000 +0000
+--- lib/tsan/rtl/tsan_interceptors.cc.orig	2018-02-10 18:57:25.045360215 +0000
 +++ lib/tsan/rtl/tsan_interceptors.cc
-@@ -2426,7 +2426,7 @@ struct ScopedSyscall {
+@@ -2424,7 +2424,7 @@ struct ScopedSyscall {
    }
  };
  
@@ -11,7 +11,7 @@ $NetBSD$
  static void syscall_access_range(uptr pc, uptr p, uptr s, bool write) {
    TSAN_SYSCALL();
    MemoryAccessRange(thr, pc, p, s, write);
-@@ -2519,6 +2519,7 @@ static void syscall_post_fork(uptr pc, i
+@@ -2517,6 +2517,7 @@ static void syscall_post_fork(uptr pc, i
    syscall_post_fork(GET_CALLER_PC(), res)
  
  #include "sanitizer_common/sanitizer_common_syscalls.inc"
