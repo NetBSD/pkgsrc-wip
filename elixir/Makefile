@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	elixir-1.5.3
+DISTNAME=	elixir-1.6.1
 PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elixir-lang/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DEPENDS+=	erlang>=18.0:../../lang/erlang
+DEPENDS+=	erlang>=19.0:../../lang/erlang
 
 WRKSRC=				${WRKDIR}/${PKGBASE}-${PKGVERSION_NOREV}
 CHECK_INTERPRETER_SKIP+=	bin/mix

@@ -2,17 +2,17 @@ $NetBSD$
 
 add SED to use gsed for -i, fix man paths, and do not install .orig
 
---- Makefile.orig	2017-08-01 15:09:01.000000000 +0000
+--- Makefile.orig	2018-01-29 19:47:48.000000000 +0000
 +++ Makefile
 @@ -1,6 +1,7 @@
  REBAR ?= "$(CURDIR)/rebar"
  PREFIX ?= /usr/local
  SHARE_PREFIX ?= $(PREFIX)/share
 +SED ?= sed
- CANONICAL := v1.5/
+ CANONICAL := v1.6/
  ELIXIRC := bin/elixirc --verbose --ignore-module-conflict
  ERLC := erlc -I lib/elixir/include
-@@ -107,7 +108,7 @@ install: compile
+@@ -101,7 +102,7 @@ install: compile
  		$(INSTALL_DATA) $$dir/ebin/* "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/$$dir/ebin"; \
  	done
  	$(Q) $(INSTALL_DIR) "$(DESTDIR)$(PREFIX)/$(LIBDIR)/elixir/bin"
@@ -21,11 +21,11 @@ add SED to use gsed for -i, fix man paths, and do not install .orig
  	$(Q) $(INSTALL_DIR) "$(DESTDIR)$(PREFIX)/$(BINDIR)"
  	$(Q) for file in "$(DESTDIR)$(PREFIX)"/$(LIBDIR)/elixir/bin/*; do \
  		ln -sf "../$(LIBDIR)/elixir/bin/$${file##*/}" "$(DESTDIR)$(PREFIX)/$(BINDIR)/"; \
-@@ -250,14 +251,14 @@ build_man: man/iex.1 man/elixir.1
+@@ -243,14 +244,14 @@ build_man: man/iex.1 man/elixir.1
  
  man/iex.1:
  	$(Q) cp man/iex.1.in man/iex.1
--	$(Q) sed -i.bak "/{COMMON}/r common" man/iex.1
+-	$(Q) sed -i.bak "/{COMMON}/r man/common" man/iex.1
 -	$(Q) sed -i.bak "/{COMMON}/d" man/iex.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/r common" man/iex.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/d" man/iex.1
@@ -33,14 +33,14 @@ add SED to use gsed for -i, fix man paths, and do not install .orig
  
  man/elixir.1:
  	$(Q) cp man/elixir.1.in man/elixir.1
--	$(Q) sed -i.bak "/{COMMON}/r common" man/elixir.1
+-	$(Q) sed -i.bak "/{COMMON}/r man/common" man/elixir.1
 -	$(Q) sed -i.bak "/{COMMON}/d" man/elixir.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/r common" man/elixir.1
 +	$(Q) $(SED) -i.bak "/{COMMON}/d" man/elixir.1
  	$(Q) rm -f man/elixir.1.bak
  
  clean_man:
-@@ -267,9 +268,9 @@ clean_man:
+@@ -260,9 +261,9 @@ clean_man:
  	rm -f man/iex.1.bak
  
  install_man: build_man

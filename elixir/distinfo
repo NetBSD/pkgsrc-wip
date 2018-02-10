@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (elixir-1.5.3.zip) = a81305e24c5e01d34adaf3fe1be81887b1c926db
-RMD160 (elixir-1.5.3.zip) = 114b20b7bde2418f3201dc719d015164fa87ff1b
-SHA512 (elixir-1.5.3.zip) = 6bc37c832f4b1bab4fe5c59476a6927b5e8dcfa9398457fde88c3c9162c319a63bbc6a48ac4ef3d4b871542596f0e09092a6d4c889fb1dc6c3be1d571c8f7ae2
-Size (elixir-1.5.3.zip) = 2193792 bytes
-SHA1 (patch-Makefile) = b662b04a61ac558007db7907d1432c4e57d7d65e
+SHA1 (elixir-1.6.1.zip) = 836870d9e82a60735cfba5730f8d86f5d498c11e
+RMD160 (elixir-1.6.1.zip) = 66b37274fa871a711084a6ff91c8ae89f50e7885
+SHA512 (elixir-1.6.1.zip) = 6507425e323fd73664925bbc1dfeb12ea4d5cdc61be12151aac744b3e1f1762f6b87908982405a90484c714d1f7e61428f83bf9cd89b2e0440fc2e9fd1be2c19
+Size (elixir-1.6.1.zip) = 2325009 bytes
+SHA1 (patch-Makefile) = 12c6b1760841060c2f50f5f89cba4a0cb212a262
