@@ -1,0 +1,14 @@
+$NetBSD$
+
+On NetBSD, expose ptsname_r prototype from stdlib.h
+
+--- configure.ac.orig	2016-11-09 20:40:33.000000000 +0100
++++ configure.ac	2018-02-11 09:24:29.454059400 +0100
+@@ -57,6 +57,7 @@
+              #ifndef _GNU_SOURCE
+              #define _GNU_SOURCE
+              #endif
++             #define _NETBSD_SOURCE
+              #include <stdlib.h>],
+             [char buf[10]; ptsname_r(0, buf, sizeof(buf));],
+             [AC_DEFINE(HAVE_PTSNAME_R, 1,

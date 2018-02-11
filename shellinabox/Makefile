@@ -21,7 +21,7 @@ USE_TOOLS+=	gtar aclocal automake autoconf gm4 gmake autoheader
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 SIB_USER?=              shellinabox
@@ -52,7 +52,5 @@ pre-configure:
 		autoheader && \
 		autoconf && \
 		automake --copy --add-missing --foreign
-
-.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
