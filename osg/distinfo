@@ -1,14 +1,13 @@
 $NetBSD: distinfo,v 1.10 2015/11/03 21:34:11 agc Exp $
 
-SHA1 (OpenSceneGraph-3.4.0.zip) = 20b51f2c428fcef2687169dbb69ea170393ad69d
-RMD160 (OpenSceneGraph-3.4.0.zip) = 6043321fc1c9b23f0e536c4e18a96a97d8b16c30
-SHA512 (OpenSceneGraph-3.4.0.zip) = b598a7d68c9e5bf840d7b0a59a334037c3b6efe4d2dce333280b63a8ccef1b9a37cd5ff32b98f18e110ff9cbc48226f588e143cb1d68405edda3c60ab2f3f73a
-Size (OpenSceneGraph-3.4.0.zip) = 7975023 bytes
+SHA1 (osg-3.4.1.tar.gz) = 6fc56846f5790d85dd8139aecb958701f4f4e630
+RMD160 (osg-3.4.1.tar.gz) = 299ab7131433e7f36f0da10eb102014bce26ec83
+SHA512 (osg-3.4.1.tar.gz) = 4a65625e208d24256b5564bbe9d6f557758b51fae0acf85d1f71968a237fec299088536830fc862d25e02039de9ea13176b298a68aaa644eac958acbe1f4e143
+Size (osg-3.4.1.tar.gz) = 5686385 bytes
 SHA1 (patch-ab) = 3e9a591b271317623c15bde750fafe27951ddec7
 SHA1 (patch-ad) = d710056fead22adb11b265c2667873ab8b541115
 SHA1 (patch-ae) = ca2f8a6cd509a914f9b643429e8384faf476f2c8
-SHA1 (patch-applications_present3D_Cluster.cpp) = ccbc1d524562d6f655a38c0ea3ff4c9549718be2
+SHA1 (patch-applications_present3D_Cluster.cpp) = 1b05be4da6632356200192d8f5aa5f08270f68d8
 SHA1 (patch-src_osgPlugins_osc_ip_posix_NetworkingUtils.cpp) = 5748636ed17d23a0a595d38b2b392e773840a102
 SHA1 (patch-src_osgPlugins_osc_osc_OscHostEndianness.h) = d8e9efa88898e240775ead76c5c9df4c86cd562c
 SHA1 (patch-src_osg_GLExtensions.cpp) = 5fc04fa162c5cf8aa34ddfb0152092b02e8eec08
-SHA1 (patch-src_osg_Texture.cpp) = 9d89e5f5d66d5fb3df974709064cd4c911d9dcac
