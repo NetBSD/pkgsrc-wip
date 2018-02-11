@@ -3,7 +3,7 @@
 PKGBASE=	shellinabox
 SIB_VER=	v2.20
 DISTNAME=	${PKGBASE}-${SIB_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shellinabox/}
@@ -21,7 +21,10 @@ USE_TOOLS+=	gtar aclocal automake autoconf gm4 gmake autoheader
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
+
+# see patches/patch-service-ssh-rm-rsa-options
+CFLAGS+=	-DOMIT_RSA_OPTIONS_FROM_SSH_SERVICE
 
 .include "../../mk/bsd.prefs.mk"
 SIB_USER?=              shellinabox

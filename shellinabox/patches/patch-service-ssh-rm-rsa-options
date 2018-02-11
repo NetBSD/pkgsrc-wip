@@ -1,0 +1,21 @@
+$NetBSD$
+
+Support OMIT_RSA_OPTIONS_FROM_SSH_SERVICE for SSH service
+
+--- shellinabox/service.c.orig  2018-02-11 11:55:47.286232266 +0100
++++ shellinabox/service.c       2018-02-11 11:56:36.378209088 +0100
+@@ -175,8 +175,14 @@
+           "-oHostbasedAuthentication=no -oIdentitiesOnly=yes "
+           "-oKbdInteractiveAuthentication=yes -oPasswordAuthentication=yes "
+           "-oPreferredAuthentications=keyboard-interactive,password "
++#if defined(OMIT_RSA_OPTIONS_FROM_SSH_SERVICE)
++          "-oPubkeyAuthentication=no "
++          "-oStrictHostKeyChecking=no -oTunnel=no "
++#else
+           "-oPubkeyAuthentication=no -oRhostsRSAAuthentication=no "
+           "-oRSAAuthentication=no -oStrictHostKeyChecking=no -oTunnel=no "
++#endif
++          "-oStrictHostKeyChecking=no -oTunnel=no "
+           "-oUserKnownHostsFile=/dev/null -oVerifyHostKeyDNS=no "
+ // beewoolie-2012.03.30: while it would be nice to disable this
+ //          feature, we cannot be sure that it is available on the
