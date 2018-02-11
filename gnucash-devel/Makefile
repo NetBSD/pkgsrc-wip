@@ -50,7 +50,11 @@ PLIST_SRC=		PLIST
 PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
-INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
+INSTALLATION_DIRS=	share/examples/gnucash/gnucash
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/config ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/config
+	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/environment
 
 # for CMake build
 pre-patch:

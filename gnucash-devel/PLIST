@@ -5,8 +5,6 @@ bin/gnc-fq-helper
 bin/gnc-fq-update
 bin/gnucash
 bin/gnucash-valgrind
-etc/gnucash/config
-etc/gnucash/environment
 include/gnucash/Account.h
 include/gnucash/FreqSpec.h
 include/gnucash/Query.h
@@ -480,6 +478,8 @@ share/doc/gnucash/quicktest.qif
 share/doc/gnucash/swipe.qif
 share/doc/gnucash/taxreport.gnucash
 share/doc/gnucash/web.qif
+share/examples/gnucash/gnucash/config
+share/examples/gnucash/gnucash/environment
 share/glib-2.0/schemas/org.gnucash.dialogs.business.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.checkprinting.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.commodities.gschema.xml
