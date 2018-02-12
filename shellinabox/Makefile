@@ -15,7 +15,7 @@ HOMEPAGE=	https://code.google.com/archive/p/shellinabox/
 COMMENT=	JavaScript/CSS web server instrumentation for terminal emulation
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 USE_TOOLS+=	gtar aclocal automake autoconf gm4 gmake autoheader
 USE_LANGUAGES=	c
