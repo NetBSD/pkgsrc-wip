@@ -12,7 +12,7 @@ GITHUB_TAG=	${SIB_VER}
 
 MAINTAINER=	ast@NetBSD.org
 HOMEPAGE=	https://code.google.com/archive/p/shellinabox/
-COMMENT=	Shell In A Box implements a web server for terminal emulation
+COMMENT=	JavaScript/CSS web server instrumentation for terminal emulation
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	gtar
