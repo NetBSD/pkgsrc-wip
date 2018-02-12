@@ -26,13 +26,12 @@ GNU_CONFIGURE=	yes
 # see patches/patch-service-ssh-rm-rsa-options
 CFLAGS+=	-DOMIT_RSA_OPTIONS_FROM_SSH_SERVICE
 
-.include "../../mk/bsd.prefs.mk"
-SIB_USER?=              shellinabox
-SIB_GROUP?=             shellinabox
-PKG_GROUPS=             ${SIB_GROUP}
-PKG_USERS=              ${SIB_USER}:${SIB_GROUP}
-PKG_GROUPS_VARS=        SIB_USER
-PKG_USERS_VARS=         SIB_GROUP
+SIB_USER?=		shellinabox
+SIB_GROUP?=		shellinabox
+PKG_GROUPS=		${SIB_GROUP}
+PKG_USERS=		${SIB_USER}:${SIB_GROUP}
+PKG_GROUPS_VARS=	SIB_USER
+PKG_USERS_VARS=		SIB_GROUP
 
 RCD_SCRIPTS+=		shellinaboxd
 RCD_SCRIPT_SRC.shellinaboxd = ${WRKSRC}/shellinaboxd.in
