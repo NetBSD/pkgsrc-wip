@@ -28,11 +28,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/okular.categories \
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/generators/djvu/CMakeFiles/okularGenerator_djvu_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/generators/chm/CMakeFiles/okularGenerator_chmlib_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/generators/tiff/CMakeFiles/okularGenerator_tiff_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/generators/plucker/CMakeFiles/okularGenerator_plucker_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/generators/epub/CMakeFiles/okularGenerator_epub_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc=	_KDE_build/generators/*/CMakeFiles/okularGenerator_*_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/okularpart_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../devel/chmlib/buildlink3.mk"
@@ -41,6 +38,7 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 .include "../../devel/threadweaver/buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../wip/libkexiv2/buildlink3.mk"
 .include "../../www/kjs/buildlink3.mk"
 .include "../../www/khtml/buildlink3.mk"
