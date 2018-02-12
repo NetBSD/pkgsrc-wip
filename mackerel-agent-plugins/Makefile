@@ -15,13 +15,13 @@ GO_SRCPATH=	github.com/mackerelio/${DISTNAME}
 GOPATH=		${WRKDIR}
 USE_TOOLS+=	gmake perl
 
-INSTALLATION_DIRS+=	libexec/mackerel-agent-plugins
+INSTALLATION_DIRS+=	libexec/mackerel-agent
 
 do-build:
 	cd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH}:${GOPATH}/bin ${MAKE_PROGRAM} build
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build/${LOWER_OPSYS}/${GOARCH}/* ${DESTDIR}${PREFIX}/libexec/mackerel-agent-plugins
+	${INSTALL_PROGRAM} ${WRKSRC}/build/${LOWER_OPSYS}/${GOARCH}/* ${DESTDIR}${PREFIX}/libexec/mackerel-agent
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
