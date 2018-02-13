@@ -1,3 +1,3 @@
 @comment $NetBSD$
-bin/mackerel-agent
-share/examples/mackerel-agent/mackerel-agent.sample.conf
+bin/mackerelagent
+share/examples/mackerelagent/mackerelagent.sample.conf
