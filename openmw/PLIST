@@ -2,17 +2,17 @@
 bin/bsatool
 bin/esmtool
 bin/openmw
-bin/openmw-cs
+${PLIST.gui}bin/openmw-cs
 bin/openmw-essimporter
 bin/openmw-iniimporter
-bin/openmw-launcher
-bin/openmw-wizard
+${PLIST.gui}bin/openmw-launcher
+${PLIST.gui}bin/openmw-wizard
 etc/openmw/gamecontrollerdb.txt
-etc/openmw/openmw-cs.cfg
+${PLIST.gui}etc/openmw/openmw-cs.cfg
 etc/openmw/openmw.cfg
 etc/openmw/settings-default.cfg
 etc/openmw/version
-share/applications/openmw-cs.desktop
+${PLIST.gui}share/applications/openmw-cs.desktop
 share/applications/openmw.desktop
 share/games/openmw/resources/defaultfilters
 share/games/openmw/resources/mygui/DejaVuLGCSansMono.ttf
@@ -55,6 +55,7 @@ share/games/openmw/resources/mygui/openmw_hud_box.skin.xml
 share/games/openmw/resources/mygui/openmw_hud_energybar.skin.xml
 share/games/openmw/resources/mygui/openmw_infobox.layout
 share/games/openmw/resources/mygui/openmw_interactive_messagebox.layout
+share/games/openmw/resources/mygui/openmw_interactive_messagebox_notransp.layout
 share/games/openmw/resources/mygui/openmw_inventory_window.layout
 share/games/openmw/resources/mygui/openmw_itemselection_dialog.layout
 share/games/openmw/resources/mygui/openmw_jail_screen.layout
@@ -112,6 +113,6 @@ share/games/openmw/resources/shaders/water_vertex.glsl
 share/games/openmw/resources/version
 share/licenses/openmw/DejaVu Font License.txt
 share/metainfo/openmw.appdata.xml
-share/pixmaps/openmw-cs.png
+${PLIST.gui}share/pixmaps/openmw-cs.png
 share/pixmaps/openmw.png
 @pkgdir share/games/openmw/data

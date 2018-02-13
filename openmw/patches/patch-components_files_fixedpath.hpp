@@ -2,7 +2,7 @@ $NetBSD$
 
 Support NetBSD.
 
---- components/files/fixedpath.hpp.orig	2016-12-19 14:28:49.000000000 +0000
+--- components/files/fixedpath.hpp.orig	2017-11-15 17:20:40.000000000 +0000
 +++ components/files/fixedpath.hpp
 @@ -4,7 +4,7 @@
  #include <string>

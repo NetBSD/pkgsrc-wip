@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	openmw-0.42.0
+DISTNAME=	openmw-0.43.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenMW/}
 
@@ -17,8 +17,7 @@ USE_TOOLS+=	pkg-config
 DEPENDS+=	bullet>=2.83:../../wip/bullet
 DEPENDS+=	osg>=3.3.4:../../wip/osg
 
-CMAKE_ARGS+=	-DDESIRED_QT_VERSION=5
-
+.include "options.mk"
 .include "../../archivers/unshield/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
@@ -27,7 +26,6 @@ CMAKE_ARGS+=	-DDESIRED_QT_VERSION=5
 .include "../../wip/bullet/buildlink3.mk" # XXX requires version in wip
 .include "../../wip/mygui-git/buildlink3.mk" # XXX
 .include "../../wip/osg/buildlink3.mk" # XXX requires version in wip
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

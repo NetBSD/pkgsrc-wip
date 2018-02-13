@@ -2,7 +2,7 @@ $NetBSD$
 
 Support NetBSD.
 
---- components/files/linuxpath.hpp.orig	2016-12-19 14:28:49.000000000 +0000
+--- components/files/linuxpath.hpp.orig	2017-11-15 17:20:40.000000000 +0000
 +++ components/files/linuxpath.hpp
 @@ -1,7 +1,7 @@
  #ifndef COMPONENTS_FILES_LINUXPATH_H

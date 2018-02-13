@@ -2,7 +2,7 @@ $NetBSD$
 
 Support NetBSD.
 
---- apps/openmw/crashcatcher.cpp.orig	2016-12-19 14:28:49.000000000 +0000
+--- apps/openmw/crashcatcher.cpp.orig	2017-11-15 17:20:40.000000000 +0000
 +++ apps/openmw/crashcatcher.cpp
 @@ -24,7 +24,7 @@
  #ifndef PR_SET_PTRACER
