@@ -84,6 +84,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 #.include "../../lang/python/application.mk"
 # not the libssh the package wants
 #.include "../../security/libssh/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
