@@ -5,7 +5,7 @@ CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscenegraph/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openscenegraph.org
+HOMEPAGE=	http://www.openscenegraph.org/
 COMMENT=	High performance 3D graphics toolkit
 LICENSE=	gnu-lgpl-v2.1
 

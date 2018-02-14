@@ -1,5 +1,7 @@
 $NetBSD: patch-ad,v 1.2 2012/03/07 16:27:35 adam Exp $
 
+Support NetBSD.
+
 --- src/OpenThreads/pthreads/PThread.cpp.orig	2015-04-07 18:01:12.000000000 +0000
 +++ src/OpenThreads/pthreads/PThread.cpp
 @@ -135,6 +135,15 @@ private:
