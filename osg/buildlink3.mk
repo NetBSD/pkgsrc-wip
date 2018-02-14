@@ -20,6 +20,7 @@ BUILDLINK_PKGSRCDIR.osg?=	../../wip/osg
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .endif
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 
 .endif	# OSG_BUILDLINK3_MK
