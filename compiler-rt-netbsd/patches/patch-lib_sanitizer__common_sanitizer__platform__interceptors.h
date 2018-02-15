@@ -1,16 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-02-02 19:10:23.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-02-15 04:24:49.767378479 +0000
 +++ lib/sanitizer_common/sanitizer_platform_interceptors.h
-@@ -406,6 +406,7 @@
- 
- #define SANITIZER_INTERCEPT_STAT \
-   (SI_FREEBSD || SI_MAC || SI_ANDROID || SI_NETBSD || SI_SOLARIS)
-+#define SANITIZER_INTERCEPT_LSTAT SI_NETBSD
- #define SANITIZER_INTERCEPT___XSTAT (!SANITIZER_INTERCEPT_STAT && SI_POSIX)
- #define SANITIZER_INTERCEPT___XSTAT64 SI_LINUX_NOT_ANDROID
- #define SANITIZER_INTERCEPT___LXSTAT SANITIZER_INTERCEPT___XSTAT
-@@ -442,6 +443,16 @@
+@@ -443,6 +443,16 @@
  #define SANITIZER_INTERCEPT_FACCESSAT SI_NETBSD
  #define SANITIZER_INTERCEPT_GETGROUPLIST SI_NETBSD
  #define SANITIZER_INTERCEPT_STRLCPY SI_NETBSD

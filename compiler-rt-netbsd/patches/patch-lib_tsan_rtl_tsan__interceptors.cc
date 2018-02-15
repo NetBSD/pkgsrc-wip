@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/tsan/rtl/tsan_interceptors.cc.orig	2018-02-10 18:57:25.045360215 +0000
+--- lib/tsan/rtl/tsan_interceptors.cc.orig	2018-02-15 04:24:50.078973737 +0000
 +++ lib/tsan/rtl/tsan_interceptors.cc
 @@ -2424,7 +2424,7 @@ struct ScopedSyscall {
    }
@@ -11,11 +11,3 @@ $NetBSD$
  static void syscall_access_range(uptr pc, uptr p, uptr s, bool write) {
    TSAN_SYSCALL();
    MemoryAccessRange(thr, pc, p, s, write);
-@@ -2517,6 +2517,7 @@ static void syscall_post_fork(uptr pc, i
-   syscall_post_fork(GET_CALLER_PC(), res)
- 
- #include "sanitizer_common/sanitizer_common_syscalls.inc"
-+#include "sanitizer_common/sanitizer_netbsd_syscalls.inc"
- 
- #ifdef NEED_TLS_GET_ADDR
- // Define own interceptor instead of sanitizer_common's for three reasons:

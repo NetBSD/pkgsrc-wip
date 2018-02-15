@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-02-10 18:57:25.232382620 +0000
+--- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-02-10 18:57:25.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux.cc
 @@ -89,6 +89,7 @@ extern char **environ;  // provided by c
  

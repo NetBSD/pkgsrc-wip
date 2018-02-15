@@ -1,20 +1,11 @@
 $NetBSD$
 
---- utils/generate_netbsd_ioctls.awk.orig	2018-02-10 18:57:38.725381657 +0000
+--- utils/generate_netbsd_ioctls.awk.orig	2018-02-15 04:24:48.871860403 +0000
 +++ utils/generate_netbsd_ioctls.awk
-@@ -0,0 +1,755 @@
-+#!/usr/bin/awk -f
-+
-+#===-- generate_netbsd_ioctls.awk ------------------------------------------===#
-+#
-+#                     The LLVM Compiler Infrastructure
-+#
-+# This file is distributed under the University of Illinois Open Source
-+# License. See LICENSE.TXT for details.
-+#
-+#===------------------------------------------------------------------------===#
-+#
-+# This file is a generator of:
+@@ -10,6 +10,761 @@
+ #===------------------------------------------------------------------------===#
+ #
+ # This file is a generator of:
 +#  - include/sanitizer/sanitizer_netbsd_interceptors_ioctl.inc
 +#
 +# This script reads public headers from a NetBSD host.
@@ -758,3 +749,18 @@ $NetBSD$
 +
 +  return string
 +}
++#!/usr/bin/awk -f
++
++#===-- generate_netbsd_ioctls.awk ------------------------------------------===#
++#
++#                     The LLVM Compiler Infrastructure
++#
++# This file is distributed under the University of Illinois Open Source
++# License. See LICENSE.TXT for details.
++#
++#===------------------------------------------------------------------------===#
++#
++# This file is a generator of:
+ #  - include/sanitizer/sanitizer_interceptors_ioctl_netbsd.inc
+ #
+ # This script reads public headers from a NetBSD host.
