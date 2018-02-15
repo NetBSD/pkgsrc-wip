@@ -34,6 +34,10 @@ CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DCMAKE_CXX_FLAGS="-Wno-deprecated-declarations"
+#CFLAGS+=		-Wno-error
+#CXXFLAGS+=		-Wno-error
+#CMAKE_ARGS+=		-DCMAKE_C_FLAGS=${CFLAGS:Q}
+#CMAKE_ARGS+=		-DCMAKE_CXX_FLAGS=${CXXFLAGS:Q}
 #CMAKE_ARGS+=		-GNinja
 #BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 
