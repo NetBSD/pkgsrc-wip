@@ -43,6 +43,8 @@ CMAKE_ARGS+=		-DCMAKE_CXX_FLAGS="-Wno-deprecated-declarations"
 
 #do-build:
 #	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ninja
+#do-install:
+#	cd ${WRKSRC}; ${SETENV} ${INSTALL_ENV} ninja install
 
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
