@@ -18,4 +18,4 @@ SHA1 (patch-test_lsan_lit.common.cfg) = b09b4ab3a97dc881b701a3583b0b126b8206cfe2
 SHA1 (patch-test_sanitizer__common_TestCases_NetBSD_kvm__open.cc) = f9253e16ce5bd38e24a174c0d76f45e6b01ea310
 SHA1 (patch-test_sanitizer__common_TestCases_NetBSD_kvm__openfiles.cc) = a6004120ec1353ba8b605413c9ff2fda7664a653
 SHA1 (patch-test_scudo_lit.cfg) = 35e4f0524a8fd26e90e5d968b73d75f277da3779
-SHA1 (patch-test_xray_lit.cfg) = ebab42bf1210ed63e42b0d774bd524714300f8d4
+SHA1 (patch-test_xray_lit.cfg) = deec5f88b3b63dcc4ca3558ed699bc2324e5c1f8
