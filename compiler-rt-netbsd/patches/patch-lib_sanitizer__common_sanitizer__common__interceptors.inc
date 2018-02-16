@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-15 04:24:49.766953774 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-15 04:24:49.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -76,6 +76,11 @@
  #define ctime __ctime50
