@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2016/06/15 20:10:50 rumko Exp $
 #
 
-DISTNAME=	bullet-2.86.1
+DISTNAME=	bullet-2.87
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bulletphysics/}
 
@@ -11,7 +11,7 @@ COMMENT=	Collision detection, soft body and rigid body dynamics library
 LICENSE=	mit
 
 GITHUB_PROJECT=	bullet3
-GITHUB_TAG=	2.86.1
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
