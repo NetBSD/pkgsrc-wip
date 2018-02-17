@@ -72,10 +72,6 @@ go/doc/devel/weekly.html
 go/doc/diagnostics.html
 go/doc/docs.html
 go/doc/editors.html
-go/doc/editors/go-plus.png
-go/doc/editors/goland.png
-go/doc/editors/vimgo.png
-go/doc/editors/vscodego.png
 go/doc/effective_go.html
 go/doc/gccgo_contribute.html
 go/doc/gccgo_install.html
@@ -277,7 +273,6 @@ go/misc/cgo/test/issue17537.go
 go/misc/cgo/test/issue18126.go
 go/misc/cgo/test/issue18146.go
 go/misc/cgo/test/issue18720.go
-go/misc/cgo/test/issue19832.go
 go/misc/cgo/test/issue20129.go
 go/misc/cgo/test/issue20266.go
 go/misc/cgo/test/issue20266/issue20266.h
@@ -1992,6 +1987,8 @@ go/src/cmd/go/internal/work/exec.go
 go/src/cmd/go/internal/work/gc.go
 go/src/cmd/go/internal/work/gccgo.go
 go/src/cmd/go/internal/work/init.go
+go/src/cmd/go/internal/work/security.go
+go/src/cmd/go/internal/work/security_test.go
 go/src/cmd/go/internal/work/testgo.go
 go/src/cmd/go/main.go
 go/src/cmd/go/mkalldocs.sh
@@ -5527,6 +5524,7 @@ go/src/runtime/testdata/testprogcgo/numgoroutine.go
 go/src/runtime/testdata/testprogcgo/pprof.go
 go/src/runtime/testdata/testprogcgo/raceprof.go
 go/src/runtime/testdata/testprogcgo/racesig.go
+go/src/runtime/testdata/testprogcgo/sigpanic.go
 go/src/runtime/testdata/testprogcgo/sigstack.go
 go/src/runtime/testdata/testprogcgo/stack_windows.go
 go/src/runtime/testdata/testprogcgo/threadpanic.go
@@ -7349,6 +7347,9 @@ go/test/fixedbugs/issue23179.dir/b.go
 go/test/fixedbugs/issue23179.go
 go/test/fixedbugs/issue23305.go
 go/test/fixedbugs/issue23522.go
+go/test/fixedbugs/issue23545.go
+go/test/fixedbugs/issue23719.go
+go/test/fixedbugs/issue23812.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go
