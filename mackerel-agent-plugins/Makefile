@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mackerelio/}
 
 MAINTAINER=	miwarin@gmail.com
 HOMEPAGE=	https://github.com/mackerelio/mackerel-agent-plugins
-COMMENT=	This is the official plugin pack for mackerel-agent
+COMMENT=	Plugin pack for mackerel-agent
 LICENSE=	apache-2.0
 
 EXTRACT_USING=	bsdtar
