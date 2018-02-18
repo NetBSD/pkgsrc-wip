@@ -14,20 +14,20 @@ EXTRACT_USING=	bsdtar
 GO_SRCPATH=	github.com/mackerelio/${DISTNAME}
 GOPATH=		${WRKDIR}
 USE_TOOLS+=	gmake perl
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=	VARBASE
 
 MACKEREL_USER=	mackerelagent
 MACKEREL_GROUP=	mackerelagent
-PKG_GROUPS= ${MACKEREL_GROUP}
+PKG_GROUPS=	${MACKEREL_GROUP}
 PKG_USERS=	${MACKEREL_USER}:${MACKEREL_GROUP}
 
 INSTALLATION_DIRS+=	bin share/examples/mackerelagent
 
-EGDIR=        ${PREFIX}/share/examples/mackerelagent
-CONF_FILES=   ${EGDIR}/mackerelagent.sample.conf ${PKG_SYSCONFDIR}/mackerelagent.sample.conf
+EGDIR=		${PREFIX}/share/examples/mackerelagent
+CONF_FILES=	${EGDIR}/mackerelagent.sample.conf ${PKG_SYSCONFDIR}/mackerelagent.sample.conf
 
-MACKEREL_ROOTDIR= ${VARBASE}/lib/mackerelagent
-MAKE_DIRS=	${MACKEREL_ROOTDIR}
+MACKEREL_ROOTDIR=	${VARBASE}/lib/mackerelagent
+MAKE_DIRS=		${MACKEREL_ROOTDIR}
 MAKE_DIRS_PERMS=	${MACKEREL_ROOTDIR} ${MACKEREL_USER} ${MACKEREL_GROUP} 0755
 
 RCD_SCRIPTS+=		mackerelagent
