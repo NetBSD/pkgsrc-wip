@@ -1,0 +1,19 @@
+$NetBSD$
+--- CMakeLists.txt.orig	2014-02-02 06:55:04.000000000 -0800
++++ CMakeLists.txt	2018-02-18 04:28:05.951626549 -0800
+@@ -38,9 +38,14 @@
+         ${GLFW_LIBRARIES} ${CURL_LIBRARIES})
+ endif()
+ 
++find_library(LIBDL dl)
++
+ if(UNIX)
+-    target_link_libraries(craft dl glfw
++    target_link_libraries(craft glfw
+         ${GLFW_LIBRARIES} ${CURL_LIBRARIES})
++    if (${LIBDL})
++        target_link_libraries(craft ${LIBDL})
++    endif()
+ endif()
+ 
+ if(MINGW)

@@ -1,2 +1,0 @@
-- Tested only on Darwin so far
-- Avoid building the built-in SQLite3 if possible
