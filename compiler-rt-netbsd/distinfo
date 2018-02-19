@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-SHA1 (patch-cmake_config-ix.cmake) = 537d4eb92fa618be3fe334adc339348424ba60d4
+SHA1 (patch-cmake_config-ix.cmake) = efbacbaae705ca71158614b3653bd158b88785b5
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = 766b817c2ede73ca90d6e25a4b8330ed3d38b84b
 SHA1 (patch-lib_msan_msan__interceptors.cc) = 2bd1fb8c0c65ad044095f67c49829656197b3f98
 SHA1 (patch-lib_msan_msan__linux.cc) = 6fd2ada4a84d1e1cc47ec8f4e1f0608861c73c1a
@@ -13,9 +13,7 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = 12593
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__freebsd.cc) = c6459f21789a5ef13e37714487c09110062c9c5d
 SHA1 (patch-lib_sanitizer__common_sanitizer__unwind__linux__libcdep.cc) = e520ec1e0fefb3cf9fb1d872ebf81952599a6c49
 SHA1 (patch-lib_scudo_scudo__platform.h) = 119d7ad8f8ca9d3e846dbdd7f805ca771e30e410
-SHA1 (patch-lib_xray_xray__x86__64.cc) = 088f35ff65f690509a8cba33ea885edec936d32d
 SHA1 (patch-test_lsan_lit.common.cfg) = b09b4ab3a97dc881b701a3583b0b126b8206cfe2
 SHA1 (patch-test_sanitizer__common_TestCases_NetBSD_kvm__open.cc) = f9253e16ce5bd38e24a174c0d76f45e6b01ea310
 SHA1 (patch-test_sanitizer__common_TestCases_NetBSD_kvm__openfiles.cc) = a6004120ec1353ba8b605413c9ff2fda7664a653
 SHA1 (patch-test_scudo_lit.cfg) = 35e4f0524a8fd26e90e5d968b73d75f277da3779
-SHA1 (patch-test_xray_lit.cfg) = deec5f88b3b63dcc4ca3558ed699bc2324e5c1f8
