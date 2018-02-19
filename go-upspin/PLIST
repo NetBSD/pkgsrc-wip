@@ -216,6 +216,7 @@ gopkg/src/upspin.io/cmd/upspinfs/watch.go
 gopkg/src/upspin.io/cmd/upspinserver/main.go
 gopkg/src/upspin.io/config/initconfig.go
 gopkg/src/upspin.io/config/initconfig_test.go
+gopkg/src/upspin.io/config/localname.go
 gopkg/src/upspin.io/config/user.go
 gopkg/src/upspin.io/dir/dircache/dump.go
 gopkg/src/upspin.io/dir/dircache/dumpmain.go
@@ -375,7 +376,6 @@ gopkg/src/upspin.io/pack/plain/plain_test.go
 gopkg/src/upspin.io/path/path.go
 gopkg/src/upspin.io/path/path_test.go
 gopkg/src/upspin.io/rpc/all_test.go
-gopkg/src/upspin.io/rpc/cache.go
 gopkg/src/upspin.io/rpc/certpool.go
 gopkg/src/upspin.io/rpc/client.go
 gopkg/src/upspin.io/rpc/dirserver/server.go
