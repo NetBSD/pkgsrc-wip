@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake perl
 INSTALLATION_DIRS+=	libexec/mackerelagent
 
 do-build:
-	cd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH}:${GOPATH}/bin ${MAKE_PROGRAM} build
+	cd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH:Q}:${GOPATH}/bin ${MAKE_PROGRAM} build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/${LOWER_OPSYS}/${GOARCH}/* ${DESTDIR}${PREFIX}/libexec/mackerelagent
