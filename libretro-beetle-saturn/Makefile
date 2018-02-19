@@ -3,14 +3,13 @@
 DISTNAME=	libretro-beetle-saturn-20171209
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	beetle-saturn-libretro
+GITHUB_TAG=	b5ee7662683051ba11a4c383734d9ddaf3b1e37a
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/beetle_saturn/
 COMMENT=	Libretro core based on the Mednafen Sega Saturn emulator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	beetle-saturn-libretro
-GITHUB_TAG=	b5ee7662683051ba11a4c383734d9ddaf3b1e37a
 
 EXTRACT_USING=	bsdtar
 

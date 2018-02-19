@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
-
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes

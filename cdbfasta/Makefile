@@ -9,7 +9,6 @@ CATEGORIES=	biology
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	bacon@NetBSD.org
-
 COMMENT=	Fast indexing and retrieval of fasta records from flat file databases
 # LICENSE=	Unspecified
 

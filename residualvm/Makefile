@@ -2,8 +2,8 @@
 
 DISTNAME=	residualvm-0.2.1-sources
 PKGNAME=	${DISTNAME:S/-sources//}
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=residualvm/}
 CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=residualvm/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

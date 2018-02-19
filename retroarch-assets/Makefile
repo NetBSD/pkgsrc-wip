@@ -1,10 +1,10 @@
 # $NetBSD$
 
-PKGNAME=		retroarch-assets-1.7.0
 DISTNAME=		RetroArch
-EXTRACT_SUFX=		.7z
+PKGNAME=		retroarch-assets-1.7.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://buildbot.libretro.com/stable/${PKGVERSION_NOREV}/windows-msvc2010/x86_64/
+EXTRACT_SUFX=		.7z
 
 MAINTAINER=		nia.alarie@gmail.com
 HOMEPAGE=		http://www.retroarch.com/

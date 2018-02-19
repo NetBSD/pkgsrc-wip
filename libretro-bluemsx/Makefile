@@ -3,13 +3,12 @@
 DISTNAME=	libretro-bluemsx-20171116
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	blueMSX-libretro
+GITHUB_TAG=	cb6133979ea624c7ce1247051bc185a42fa9d342
 
 HOMEPAGE=	https://docs.libretro.com/library/bluemsx/
 COMMENT=	Libretro core for accurate MSX/MSX2/ColecoVision/SVI/SG-1000 emulation
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	blueMSX-libretro
-GITHUB_TAG=	cb6133979ea624c7ce1247051bc185a42fa9d342
 
 EXTRACT_USING=	bsdtar
 MAKE_FILE=	Makefile.libretro

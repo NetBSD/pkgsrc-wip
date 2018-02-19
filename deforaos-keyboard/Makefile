@@ -9,7 +9,6 @@ MASTER_SITES=	https://www.defora.org/os/download/download/3696/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop virtual keyboard
-
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	gnome-control-center>=2.20.1

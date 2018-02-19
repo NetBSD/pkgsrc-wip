@@ -7,8 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=justinmeza/}
 GITHUB_TAG=	v0.11.2
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	A LOLCODE interpreter written in C
 HOMEPAGE=	http://lolcode.org/
+COMMENT=	A LOLCODE interpreter written in C
 LICENSE=	gnu-gpl-v3
 
 EXTRACT_USING=	gtar

@@ -8,7 +8,6 @@ MASTER_SITES=	http://google-perftools.googlecode.com/files/
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://google-perftools.googlecode.com/
 COMMENT=	Multi-threaded malloc() and nifty performance analysis tools
-
 LICENSE=	modified-bsd
 
 USE_TOOLS+=		perl:run

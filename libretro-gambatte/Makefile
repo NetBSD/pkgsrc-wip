@@ -3,14 +3,13 @@
 DISTNAME=	libretro-gambatte-20171024
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	gambatte-libretro
+GITHUB_TAG=	bcfd2df6d946c200fc6e50b0956b209582221492
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/gambatte/
 COMMENT=	Libretro core based on the Gambatte Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	gambatte-libretro
-GITHUB_TAG=	bcfd2df6d946c200fc6e50b0956b209582221492
 
 USE_LANGUAGES=	c c++
 MAKE_FILE=	Makefile.libretro

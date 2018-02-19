@@ -1,10 +1,10 @@
 # $NetBSD$
 
 PKGNAME=	gtk2-engines-aurora-1.5.1
-DISTFILES=	gtk2-engines-aurora_${PKGVERSION_NOREV}.orig.tar.gz	\
-		gtk2-engines-aurora_${PKGVERSION_NOREV}.orig-Aurora.tar.bz2
 CATEGORIES=	x11
 MASTER_SITES=	http://archive.ubuntu.com/ubuntu/pool/universe/g/gtk2-engines-aurora/
+DISTFILES=	gtk2-engines-aurora_${PKGVERSION_NOREV}.orig.tar.gz	\
+		gtk2-engines-aurora_${PKGVERSION_NOREV}.orig-Aurora.tar.bz2
 
 MAINTAINER=	js@heap.zone
 COMMENT=	Aurora Gtk+ 2 theme engine

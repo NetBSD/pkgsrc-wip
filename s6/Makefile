@@ -3,11 +3,11 @@
 DISTNAME=	s6-2.6.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://skarnet.org/software/s6/
-LICENSE=	isc
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	The s6 supervision suite
 HOMEPAGE=	http://skarnet.org/software/s6/
+COMMENT=	The s6 supervision suite
+LICENSE=	isc
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes

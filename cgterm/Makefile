@@ -8,9 +8,7 @@ MASTER_SITES=	http://www.paradroid.net/cgterm/
 MAINTAINER=	rodo@zlug.org
 HOMEPAGE=	http://www.paradroid.net/cgterm/
 COMMENT=	Commodore Graphics Telnet Client
-#LICENSE=	# TODO: (see mk/license.mk)
-
-LICENSE=		2-clause-bsd
+LICENSE=	2-clause-bsd
 
 NO_CONFIGURE=	yes
 

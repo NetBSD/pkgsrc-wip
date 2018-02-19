@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	Data encode/decode and storage library
-
 LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config

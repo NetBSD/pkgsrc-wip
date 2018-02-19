@@ -3,14 +3,13 @@
 DISTNAME=	osg-3.4.1
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscenegraph/}
+GITHUB_PROJECT=	OpenSceneGraph
+GITHUB_TAG=	OpenSceneGraph-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openscenegraph.org/
 COMMENT=	High performance 3D graphics toolkit
 LICENSE=	gnu-lgpl-v2.1
-
-GITHUB_PROJECT=		OpenSceneGraph
-GITHUB_TAG=		OpenSceneGraph-${PKGVERSION_NOREV}
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++

@@ -6,6 +6,7 @@ PKGNAME=		jemboss-standalone-2.9.0
 PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/old/2.9.0/
+DIST_SUBDIR=		emboss/emboss-2.9.0
 
 MAINTAINER=	dprice@cs.nmsu.edu
 HOMEPAGE=	http://www.emboss.org/
@@ -16,9 +17,6 @@ DEPENDS+=	emboss-java>=0.0.3:../../wip/emboss-java
 DEPENDS+=	xerces-j>=1.2.0:../../textproc/xerces-j
 #DEPENDS+=	iasp>=2.1.1:../../www/iasp
 DEPENDS+=	apache-ant>=1.5.3.1:../../devel/apache-ant
-
-DIST_SUBDIR=		emboss/emboss-2.9.0
-
 
 PKG_DEFAULT_JVM=	sun-jdk13
 

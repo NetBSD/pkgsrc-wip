@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.8 2012/09/29 00:50:35 asau Exp $
 #
 
-PKGNAME=	gmp-${DISTNAME}
 DISTNAME=	ecm-6.2.2
+PKGNAME=	gmp-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	http://gforge.inria.fr/frs/download.php/4663/
 

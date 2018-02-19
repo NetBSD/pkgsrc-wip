@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.1 2013/03/29 22:23:30 florian-geiges Exp $
 #
 
-PKGNAME=		libifstat-1.1
 DISTNAME=		ifstat-1.1
+PKGNAME=		libifstat-1.1
 CATEGORIES=		net devel
 MASTER_SITES=		${HOMEPAGE}
 

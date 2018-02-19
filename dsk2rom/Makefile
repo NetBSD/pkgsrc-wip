@@ -4,8 +4,8 @@ DISTNAME=	dsk2rom-0.80
 CATEGORIES=	converters
 MASTER_SITES=	http://home.kabelfoon.nl/~vincentd/download/
 
-COMMENT=	MSX disk image conversion utility
 HOMEPAGE=	http://home.kabelfoon.nl/~vincentd/
+COMMENT=	MSX disk image conversion utility
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++

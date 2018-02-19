@@ -12,7 +12,6 @@ MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
-
 COMMENT=	Dresden assembler for long read DNA projects
 # Double-check this
 LICENSE=	modified-bsd

@@ -1,8 +1,7 @@
 # $NetBSD$
 
-DISTNAME=		devkitARM-buildrules-45
-CATEGORIES=		cross
-
+DISTNAME=	devkitARM-buildrules-45
+CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=devkitPro/}
 GITHUB_PROJECT=	buildscripts
 GITHUB_TAG=	v20151213

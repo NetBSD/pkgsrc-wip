@@ -4,8 +4,8 @@ DISTNAME=	libzrtp
 PKGNAME=	${DISTNAME}-0.7.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=traviscross/}
-EXTRACT_SUFX=	.zip
 GITHUB_TAG=	4cb5110147d2bb7e0466eec8ec838d8372ef54c9
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	angelmadames@gmail.com
 HOMEPAGE=	https://github.com/traviscross/libzrtp/

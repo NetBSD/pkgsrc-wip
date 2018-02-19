@@ -12,7 +12,6 @@ MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
-
 COMMENT=	Find all significant local alignments between reads
 # Double-check this
 LICENSE=	modified-bsd

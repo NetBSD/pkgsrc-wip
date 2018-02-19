@@ -1,6 +1,5 @@
 # $NetBSD: Makefile,v 1.3 2015/01/27 00:10:05 khorben Exp $
 
-
 DISTNAME=	Init-0.0.0
 PKGNAME=	deforaos-init-0.0.0
 CATEGORIES=	net
@@ -9,7 +8,6 @@ MASTER_SITES=	https://www.defora.org/os/download/download/3337/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS system session
-
 LICENSE=	gnu-gpl-v3
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}

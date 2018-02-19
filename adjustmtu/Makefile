@@ -5,11 +5,11 @@ DISTNAME=	adjustmtu-1.00
 PKGNAME=	${DISTNAME:S/00/0/}
 CATEGORIES=	net
 MASTER_SITES=	http://www.nerv.org/~ryo/files/programs/adjustmtu/
-LICENSE=	2-clause-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}
 COMMENT=	Detect MTU size and set MTU size of routing table
+LICENSE=	2-clause-bsd
 
 #ONLY_FOR_PLATFORM=	FreeBSD-* NetBSD-* OpenBSD-*
 

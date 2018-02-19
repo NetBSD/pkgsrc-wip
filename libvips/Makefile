@@ -1,17 +1,16 @@
 # $NetBSD$
 
-DISTNAME= vips-8.6.2
-PKGNAME= lib${DISTNAME}
+DISTNAME=	vips-8.6.2
+PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcupitt/}
+GITHUB_PROJECT=	libvips
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	base@atomicules.co.uk
 HOMEPAGE=	http://jcupitt.github.io/libvips/
 COMMENT=	Libvips is a demand-driven, horizontally threaded image processing lib
 LICENSE=	gnu-lgpl-v2.1
-
-GITHUB_PROJECT=	libvips
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

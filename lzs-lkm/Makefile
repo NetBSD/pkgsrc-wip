@@ -9,10 +9,11 @@ MAINTAINER=		plunky@rya-online.net
 HOMEPAGE=		http://homepages.rya-online.net/plunky/lzs.html
 COMMENT=		NetBSD kernel module for LZS decompression with PPP
 
+ONLY_FOR_PLATFORM=	NetBSD-*-*
+
 # TODO - verify version (nbsomething most likely)
 DEPENDS+=		pppd>=2.4.3:../../net/pppd
 
-ONLY_FOR_PLATFORM=	NetBSD-*-*
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 NO_CONFIGURE=		yes

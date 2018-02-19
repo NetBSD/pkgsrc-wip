@@ -3,14 +3,13 @@
 DISTNAME=	libretro-genesis-plus-gx-20171128
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	Genesis-Plus-GX
+GITHUB_TAG=	4e1b797e86f5f4d1113063037a69ef5dc351aca7
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/genesis_plus_gx/
 COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	picodrive-license
-
-GITHUB_PROJECT=	Genesis-Plus-GX
-GITHUB_TAG=	4e1b797e86f5f4d1113063037a69ef5dc351aca7
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS=	gmake

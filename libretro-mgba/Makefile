@@ -3,13 +3,12 @@
 DISTNAME=	libretro-mgba-0.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
+GITHUB_PROJECT=	mgba
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://mgba.io/
 COMMENT=	Libretro core based on the mGBA emulator
 LICENSE=	mpl-2.0
-
-GITHUB_PROJECT=	mgba
 
 WRKSRC=		${WRKDIR}/mgba-${PKGVERSION_NOREV}
 

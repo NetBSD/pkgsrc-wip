@@ -3,9 +3,9 @@
 DISTNAME=		mule-p20151011
 #                                 mule-p20151011 -> mule11-20151011
 PKGNAME=		${DISTNAME:C/e-p/e11-/}
+CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
 GITHUB_PROJECT=		mule1.1-netbsd
-CATEGORIES=		editors
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		https://github.com/tsutsui/mule1.1-netbsd

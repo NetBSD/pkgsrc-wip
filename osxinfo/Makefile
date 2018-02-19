@@ -3,14 +3,13 @@
 DISTNAME=	osxinfo-0.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nbyouri/}
+GITHUB_PROJECT=	osxinfo
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/nbyouri/osxinfo
 COMMENT=	Small Mac OS X Info Program
 LICENSE=	mit
-
-GITHUB_PROJECT=	osxinfo
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 

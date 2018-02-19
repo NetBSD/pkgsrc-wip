@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2014/11/21 06:01:35 jgoamakf Exp $
 
-PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	biniou-1.0.9
+PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://mjambon.com/releases/biniou/
 

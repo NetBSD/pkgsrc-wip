@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.4 2012/10/07 17:34:22 asau Exp $
 #
 
-PKGNAME=	vee-0.9.9
 DISTNAME=	vee-0.9.9-zeta
+PKGNAME=	vee-0.9.9
 CATEGORIES=	www
 MASTER_SITES=	http://vee.googlecode.com/files/
 EXTRACT_SUFX=	.tgz

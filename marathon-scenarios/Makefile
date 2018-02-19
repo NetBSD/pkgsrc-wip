@@ -36,10 +36,10 @@ LICENSE=	generic-nonlicense
 #DEPENDS+=	:../../games/alephone
 
 RESTRICTED=		Individual scenarios are subject to various licenses, so play it safe.
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 SCENARIO_BASE=		share/AlephOne/Scenarios
 .for scenario in TheGrayIncident Rubicon \

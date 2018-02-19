@@ -8,7 +8,6 @@ MASTER_SITES=	https://www.defora.org/os/download/download/3700/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS Accessories
-
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config

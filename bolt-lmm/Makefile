@@ -14,7 +14,6 @@ MASTER_SITES=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/ \
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/
 COMMENT=	Statistics for testing association between phenotype and genotypes
-
 # Check this
 LICENSE=	gnu-gpl-v3
 

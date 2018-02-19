@@ -1,14 +1,15 @@
 # $NetBSD$
 
-PKGNAME=	aslc86k-1.9
 DISTNAME=	aslc86k
+PKGNAME=	aslc86k-1.9
 CATEGORIES=	devel
 MASTER_SITES=	http://mc.pp.se/dc/files/
 
-MAINTAINER=		tr@vispaul.me
-HOMEPAGE=		http://mc.pp.se/dc/files/
-COMMENT=		Macro assembler that can assemble programs of the Visual Memory System
-LICENSE=		mit
+MAINTAINER=	tr@vispaul.me
+HOMEPAGE=	http://mc.pp.se/dc/files/
+COMMENT=	Macro assembler that can assemble programs of the Visual Memory System
+LICENSE=	mit
+
 WRKSRC=			${WRKDIR}/as
 USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin

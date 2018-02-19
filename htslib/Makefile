@@ -8,14 +8,13 @@
 DISTNAME=	htslib-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
+GITHUB_PROJECT=	htslib
+GITHUB_TAG=	${PORTVERSION}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
 LICENSE=	mit
-
-GITHUB_PROJECT=	htslib
-GITHUB_TAG=	${PORTVERSION}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake perl
 GNU_CONFIGURE=	yes

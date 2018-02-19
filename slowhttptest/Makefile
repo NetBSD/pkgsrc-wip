@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2015/06/10 13:43:17 ahp-nils Exp $
 
 DISTNAME=	slowhttptest-1.7
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shekyan/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nils@NetBSD.org
 HOMEPAGE=	https://github.com/shekyan/slowhttptest

@@ -6,8 +6,8 @@ MASTER_SITES=	http://nl.dl.xonotic.org/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	The free and fast arena shooter
 HOMEPAGE=	http://xonotic.org/
+COMMENT=	The free and fast arena shooter
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake

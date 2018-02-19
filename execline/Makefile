@@ -3,11 +3,11 @@
 DISTNAME=	execline-2.3.0.3
 CATEGORIES=	devel
 MASTER_SITES=	http://skarnet.org/software/execline/
-LICENSE=	isc
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	The execline scripting language
 HOMEPAGE=	http://skarnet.org/software/execline/
+COMMENT=	The execline scripting language
+LICENSE=	isc
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes

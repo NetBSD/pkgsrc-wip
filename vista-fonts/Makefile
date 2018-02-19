@@ -13,12 +13,11 @@ HOMEPAGE=	http://www.microsoft.com/download/en/details.aspx?id=6
 COMMENT=	TrueType fonts from Microsoft Windows Vista
 LICENSE=	ms-ttf-license
 
-RESTRICTED=	No redistribution in altered form
-
-BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
-
+RESTRICTED=		No redistribution in altered form
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

@@ -9,9 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tinycc.org/
 COMMENT=	The Smallest ANSI C compiler
 
-ONLY_FOR_PLATFORM=	*-*-i386
 NOT_FOR_PLATFORM=	NetBSD-1.6.2-*
-
+ONLY_FOR_PLATFORM=	*-*-i386
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes

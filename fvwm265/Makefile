@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2013/01/20 09:46:48 makoto Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		http://www.fvwm.org/generated/icon_download/
@@ -12,7 +13,6 @@ COMMENT=	Newer version of X11 Virtual window manager
 LICENSE=	gnu-gpl-v2
 
 #DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
-PKGREVISION=	1
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]* xpmroot-[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz

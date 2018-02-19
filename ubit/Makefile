@@ -4,7 +4,6 @@
 DISTNAME=	ubit-5.5.0
 PKGREVISION=	2
 CATEGORIES=	x11
-
 MASTER_SITES=	ftp://ftp.enst.fr/pub/ubit/
 DISTFILES=	${DISTNAME}.tar.gz
 #EXTRACT_SUFX=	.tar.gz
@@ -12,7 +11,6 @@ DISTFILES=	${DISTNAME}.tar.gz
 MAINTAINER=	dauphin@enst.fr
 HOMEPAGE=	http://perso.enst.fr/~elc/ubit/
 COMMENT=	Ubiquitous Brick Interactive Toolkit
-
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes

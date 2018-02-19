@@ -2,8 +2,8 @@
 #
 
 DISTNAME=	xerces-c-src_2_8_0
-PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/-src_/-/:S/_/./g}
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_APACHE:=xerces/c/2/sources/}
 

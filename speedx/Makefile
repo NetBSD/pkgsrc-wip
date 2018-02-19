@@ -6,13 +6,11 @@ PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=speedx/}
 DISTFILES=	${DEFAULT_DISTFILES} mercrain.s3m.zip
+SITES.mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://medernac.home.cern.ch/medernac/SpeedX/index_en.html
 COMMENT=	Car racing game for X
-
-SITES.mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
-
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

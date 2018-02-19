@@ -3,7 +3,6 @@
 DISTNAME=	libretro-pcsx-rearmed-20170901
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
-
 GITHUB_PROJECT=	pcsx_rearmed
 GITHUB_TAG=	09d454e73bc251b44848abba4026efcd452df752
 

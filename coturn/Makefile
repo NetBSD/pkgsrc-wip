@@ -2,8 +2,8 @@
 
 DISTNAME=	coturn-4.5.0.6
 CATEGORIES=	net
-GITHUB_PROJECT=	coturn
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
+GITHUB_PROJECT=	coturn
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com

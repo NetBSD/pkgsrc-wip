@@ -3,13 +3,12 @@
 DISTNAME=	libretro-tyrquake-20170802
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	tyrquake
+GITHUB_TAG=	4525ad4dcd58e402f548b3adb8800b9c4b076e40
 
 HOMEPAGE=	https://docs.libretro.com/library/tyrquake/
 COMMENT=	Libretro core for the TyrQuake interpreter for Quake and Quakeworld
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	tyrquake
-GITHUB_TAG=	4525ad4dcd58e402f548b3adb8800b9c4b076e40
 
 USE_TOOLS=	gmake
 

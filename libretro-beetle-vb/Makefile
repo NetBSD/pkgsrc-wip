@@ -3,13 +3,12 @@
 DISTNAME=	libretro-beetle-vb-20171024
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	beetle-vb-libretro
+GITHUB_TAG=	2b8353257abd61786b80ad5a7de006f65521a8ba
 
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_VB
 COMMENT=	Libretro core based on the Mednafen VirtualBoy emulator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	beetle-vb-libretro
-GITHUB_TAG=	2b8353257abd61786b80ad5a7de006f65521a8ba
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++

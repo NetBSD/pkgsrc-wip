@@ -4,14 +4,13 @@ DISTNAME=	elixir-1.6.1
 PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elixir-lang/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://elixir-lang.org/
 COMMENT=	Functional, meta-programming aware language built on top of Erlang VM
 LICENSE=	apache-2.0
-
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	erlang>=19.0:../../lang/erlang
 

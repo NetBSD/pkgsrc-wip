@@ -3,8 +3,8 @@
 DISTNAME=	quickfix-1.14.4
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=quickfix/}
-GITHUB_TAG=	v.${PKGVERSION}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
+GITHUB_TAG=	v.${PKGVERSION}
 
 MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	http://www.quickfixengine.org/

@@ -2,14 +2,13 @@
 #
 
 DISTNAME=	openbsc-0.9.13
-EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	devel
 MASTER_SITES=	http://openbsc.osmocom.org/trac/raw-attachment/wiki/Tarballs/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://openbsc.osmocom.org/
 COMMENT=	Free software implementation for GSM/3GPP protocol stack and elements
-
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake

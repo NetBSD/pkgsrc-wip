@@ -9,9 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://johannes.sipsolutions.net/Projects/dovecot-antispam
 COMMENT=	Antispam plugin for Dovecot
-
 LICENSE=	gnu-gpl-v2
-
 
 USE_TOOLS+=		gmake
 #MAKE_DIRS+=		lib/dovecot/imap

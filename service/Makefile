@@ -1,12 +1,13 @@
 # $NetBSD: Makefile,v 1.2 2012/10/07 16:22:56 asau Exp $
 
-PKGNAME=		service-0.8
 DISTNAME=		# empty
-COMMENT=		Small tool to handle rc.d service scripts
+PKGNAME=		service-0.8
 CATEGORIES=		sysutils
 
 MAINTAINER=		adam.hoka@gmail.com
 HOMEPAGE=		http://irkmaffia.com/~replaced/
+COMMENT=		Small tool to handle rc.d service scripts
+
 NO_CHECKSUM=		yes
 
 INSTALLATION_DIRS=	bin

@@ -5,8 +5,8 @@ PKGNAME=		elinks-0.13
 PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://elinks.or.cz/download/
-EXTRACT_SUFX=		.tar.bz2
 DIST_SUBDIR=		elinks-libmm
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://elinks.or.cz/

@@ -25,7 +25,6 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Math-Random-ISAAC-[0-9]*:../../math/p5-Math-Random-ISAAC
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
-
 DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
 DEPENDS+=	p5-Chart-[0-9]*:../../graphics/p5-Chart
 DEPENDS+=	libwww-[0-9]*:../../www/libwww

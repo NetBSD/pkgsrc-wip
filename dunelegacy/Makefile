@@ -3,9 +3,9 @@
 
 DISTNAME=		dunelegacy-0.96.2-src
 PKGNAME=		${DISTNAME:S/-src//}
+CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dunelegacy/}
 EXTRACT_SUFX=		.tar.bz2
-CATEGORIES=		games
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dunelegacy.sourceforge.net/

@@ -2,14 +2,13 @@
 #
 
 DISTNAME=	libosmocore-0.1.30
-EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	devel
 MASTER_SITES=	http://openbsc.osmocom.org/trac/raw-attachment/wiki/Tarballs/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.osmocom.org/
 COMMENT=	This is the libosmocore library
-
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake

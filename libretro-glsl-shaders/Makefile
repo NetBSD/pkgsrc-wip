@@ -3,12 +3,11 @@
 DISTNAME=	libretro-glsl-shaders-20171011
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	glsl-shaders
+GITHUB_TAG=	6565f3d5e9a34103a7dce34eec8a7f5332d6f9d1
 
 MAINTAINER=	nia.alarie@gmail.com
 COMMENT=	Libretro GLSL shaders
-
-GITHUB_PROJECT=	glsl-shaders
-GITHUB_TAG=	6565f3d5e9a34103a7dce34eec8a7f5332d6f9d1
 
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none

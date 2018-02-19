@@ -3,14 +3,13 @@
 DISTNAME=	libretro-stella-20170124
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	stella-libretro
+GITHUB_TAG=	cdbc9cc4e105ef884ac441cbd3f14d2d4eb47ba4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/stella/
 COMMENT=	Libretro core based on the Stella Atari 2600 (VCS) emulator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	stella-libretro
-GITHUB_TAG=	cdbc9cc4e105ef884ac441cbd3f14d2d4eb47ba4
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

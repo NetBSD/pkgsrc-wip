@@ -1,14 +1,14 @@
 # $NetBSD$
 
-PKGNAME=	xxhash-0.6.2
 DISTNAME=	xxHash-${PKGVERSION_NOREV}
+PKGNAME=	xxhash-0.6.2
 CATEGORIES=	misc
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	Extremely fast non-cryptographic hash algorithm
 HOMEPAGE=	https://github.com/Cyan4973/xxHash/
+COMMENT=	Extremely fast non-cryptographic hash algorithm
 LICENSE=	2-clause-bsd AND gnu-gpl-v2
 
 EXTRACT_USING=	gtar

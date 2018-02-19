@@ -3,12 +3,11 @@
 DISTNAME=	libretro-o2em-20170124
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_TAG=	1d62d4ed86e6c1a7d65dff49e4368edb30690665
 
 HOMEPAGE=	https://docs.libretro.com/library/o2em/
 COMMENT=	Libretro core for Magnavox Odyssey 2 and VideoPac emulation
 LICENSE=	artistic
-
-GITHUB_TAG=	1d62d4ed86e6c1a7d65dff49e4368edb30690665
 
 USE_TOOLS=	gmake
 

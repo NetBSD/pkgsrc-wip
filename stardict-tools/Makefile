@@ -10,8 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://stardict.sourceforge.net/
 COMMENT=	StarDict tools for dictionary conversions
-
-LICENSE=		gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes

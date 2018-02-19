@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.9 2015/08/18 20:48:41 yhardy Exp $
 #
 
-PKGNAME=	fs2_open-3.7.4
 DISTNAME=	fs2_open_${PKGVERSION_NOREV:S/./_/g}_src
+PKGNAME=	fs2_open-3.7.4
 CATEGORIES=	games
 MASTER_SITES=	http://swc.fs2downloads.com/builds/
 EXTRACT_SUFX=	.tgz

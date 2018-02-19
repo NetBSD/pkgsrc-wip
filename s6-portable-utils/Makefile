@@ -5,8 +5,8 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.skarnet.org/software/s6-portable-utils/
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	Tiny portable generic utilties
 HOMEPAGE=	http://www.skarnet.org/software/s6-portable-utils/
+COMMENT=	Tiny portable generic utilties
 LICENSE=	isc
 
 USE_TOOLS+=		gmake

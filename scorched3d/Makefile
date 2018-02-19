@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.6 2012/11/12 16:51:39 othyro Exp $
 #
 
-PKGNAME=	scorched3d-42.1
 DISTNAME=	Scorched3D-42.1-src
+PKGNAME=	scorched3d-42.1
 PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scorched3d/}

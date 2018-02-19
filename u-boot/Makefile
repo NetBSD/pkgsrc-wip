@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://www.denx.de/wiki/UBoot
 COMMENT=	The mkimage utility of the u-boot bootloader
-
 LICENSE=	gnu-gpl-v2
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}

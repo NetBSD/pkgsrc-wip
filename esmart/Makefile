@@ -5,8 +5,8 @@ DISTNAME=	esmart-0.9.0.042
 PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ezunix.org/pkgsrc/e17/snapshots/2008-09-25/
-
 EXTRACT_SUFX=	.tar.bz2
+
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Collection of evas smart objects

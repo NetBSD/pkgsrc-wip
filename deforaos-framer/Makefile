@@ -9,7 +9,6 @@ MASTER_SITES=	https://www.defora.org/os/download/download/3291/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop window manager
-
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config

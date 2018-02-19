@@ -8,7 +8,6 @@ MASTER_SITES=	https://www.defora.org/os/download/download/3335/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS system monitoring infrastructure
-
 LICENSE=	gnu-gpl-v3
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}

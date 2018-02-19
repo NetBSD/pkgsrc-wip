@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.3 2014/06/01 12:49:34 thomasklausner Exp $
 #
 
-GITHUB_TAG=	v1.10
 GITHUB_PROJECT=	beanstalkd
+GITHUB_TAG=	v1.10
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}${DISTNAME:S/v/-/1}
 CATEGORIES=	net

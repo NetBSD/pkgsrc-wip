@@ -3,14 +3,13 @@
 DISTNAME=	libretro-beetle-pce-fast-20171202
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	beetle-pce-fast-libretro
+GITHUB_TAG=	0f1326a24a6cc802f7a6ece75a3d95232101f240
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/beetle_pce_fast/
 COMMENT=	Libretro core based on the Mednafen PC Engine emulator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	beetle-pce-fast-libretro
-GITHUB_TAG=	0f1326a24a6cc802f7a6ece75a3d95232101f240
 
 EXTRACT_USING=	bsdtar
 

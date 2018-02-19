@@ -8,9 +8,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scottweber.com/projects/gtk/gtuxnes/
 COMMENT=		Graphical launcher for TuxNES
 
-DEPENDS+=		tuxnes>=0.75:../../emulators/tuxnes
-
 ONLY_FOR_PLATFORM=	*-*-i386
+
+DEPENDS+=		tuxnes>=0.75:../../emulators/tuxnes
 
 BUILD_TARGET=		${EMPTY}
 

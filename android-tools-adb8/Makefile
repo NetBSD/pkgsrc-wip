@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.4 2015/03/07 21:39:40 tnn2 Exp $
 
-MASTER_SITES=	https://github.com/android/
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	android-tools-adb-8.0.0.r11
 CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=android/}
 GITHUB_PROJECT=	platform_system_core
 GITHUB_TAG=	android-8.0.0_r11
 

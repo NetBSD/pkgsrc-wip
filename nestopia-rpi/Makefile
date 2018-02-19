@@ -8,7 +8,6 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nestopia/}
 EXTRACT_SUFX=	.zip
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} nst140_lnx_release_h.zip
-
 SITES.nst140_lnx_release_h.zip=	http://rbelmont.mameworld.info/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -3,8 +3,8 @@
 DISTNAME=	unimrcp-1.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unispeech/}
-EXTRACT_SUFX=	.zip
 GITHUB_TAG=	unimrcp-${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	angelmadames@gmail.com
 HOMEPAGE=	https://github.com/unispeech/unimrcp/

@@ -3,12 +3,12 @@
 DISTNAME=	FallingTime-${GITHUB_TAG}
 PKGNAME=	fallingtime-${GITHUB_TAG}
 CATEGORIES=	games
-GITHUB_TAG=	1.0.1	
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cxong/}
+GITHUB_TAG=	1.0.1
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	Arcade game inspired by Fall Down
 HOMEPAGE=	https://github.com/cxong/FallingTime/
+COMMENT=	Arcade game inspired by Fall Down
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	gtar

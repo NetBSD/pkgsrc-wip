@@ -3,12 +3,12 @@
 DISTNAME=	libretro-prboom-20170707
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_TAG=	1b5c4e469fb87fa87c0f130f53096ebe78268cad
 
 HOMEPAGE=	https://docs.libretro.com/library/prboom/
 COMMENT=	Libretro core for Doom
 LICENSE=	gnu-gpl-v2
 
-GITHUB_TAG=	1b5c4e469fb87fa87c0f130f53096ebe78268cad
 EXTRACT_USING=	bsdtar
 
 USE_TOOLS=	gmake

@@ -2,11 +2,10 @@
 
 DISTNAME=	ldapuseradd-0.9.2
 CATEGORIES=	databases
+MASTER_SITES=	http://ftp.unixdev.net/pub/unixdev/ldapuseradd/0.9.2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	inittab@unixdev.net
-MASTER_SITES=	http://ftp.unixdev.net/pub/unixdev/ldapuseradd/0.9.2/
-
 HOMEPAGE=	http://www.unixdev.net/projects/ldapuseradd/
 COMMENT=	LDAP User/Group Management Toolset
 

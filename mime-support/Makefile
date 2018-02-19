@@ -3,8 +3,8 @@
 
 DISTNAME=		mime-support_3.9-1.3
 PKGNAME=		mime-support-3.9
-MASTER_SITES=		http://security.debian.org/pool/updates/main/m/mime-support/
 CATEGORIES=		mail
+MASTER_SITES=		http://security.debian.org/pool/updates/main/m/mime-support/
 
 MAINTAINER=		bsd@cs.ubc.ca
 COMMENT=		Support commands for manipulating files using MIME and mailcap

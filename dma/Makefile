@@ -4,14 +4,13 @@ DISTNAME=	dma-${GITHUB_TAG}
 PKGNAME=	dma-0.11
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=corecode/}
+GITHUB_PROJECT=	dma
+GITHUB_TAG=	v0.11
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://github.com/corecode/dma
 COMMENT=	The DragonFly Mail Agent
 LICENSE=	modified-bsd
-
-GITHUB_PROJECT=	dma
-GITHUB_TAG=	v0.11
 
 BUILD_DEFS+=		VARBASE
 

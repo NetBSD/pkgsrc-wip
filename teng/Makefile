@@ -4,7 +4,6 @@
 DISTNAME=	teng-2.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=teng/}
-
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ondrej.tuma@firma.seznam.cz

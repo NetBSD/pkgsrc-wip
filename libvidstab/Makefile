@@ -1,13 +1,12 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	vid.stab
 DISTNAME=	release-0.98b
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 PKGNAME=	libvidstab-0.98b
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=georgmartius/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_PROJECT=	vid.stab
 GITHUB_TAG=	${DISTNAME}
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://public.hronopik.de/vid.stab/

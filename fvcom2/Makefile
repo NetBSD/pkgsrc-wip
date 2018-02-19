@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.7 2013/01/27 22:12:38 outpaddling Exp $
 #
 
-PKGNAME=	fvcom-2.7.1
 DISTNAME=	sourcecode1
+PKGNAME=	fvcom-2.7.1
 CATEGORIES=	science
 MASTER_SITES=	http://fvcom.smast.umassd.edu/FVCOM/password_required/t2/
 

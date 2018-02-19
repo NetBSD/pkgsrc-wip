@@ -4,14 +4,13 @@ DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	testssl-2.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drwetter/}
+GITHUB_PROJECT=	testssl.sh
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://testssl.sh/
 COMMENT=	Checks servers for TLS/SSL flaws
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	testssl.sh
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 

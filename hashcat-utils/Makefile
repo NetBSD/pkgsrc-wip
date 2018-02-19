@@ -3,13 +3,12 @@
 DISTNAME=	hashcat-utils-1.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashcat/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hashcat/hashcat/
 COMMENT=	Set of small utilities that are useful in advanced password cracking
 LICENSE=	mit
-
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_TOOLS+=	perl
 BUILD_DIRS=	src

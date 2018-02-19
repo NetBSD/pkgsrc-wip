@@ -5,11 +5,10 @@ DISTNAME=	QuantLib-1.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quantlib/}
 
-COMMENT=	Framework for quantitative finance
-LICENSE=	modified-bsd
-
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://quantlib.sourceforge.net/
+COMMENT=	Framework for quantitative finance
+LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2015/07/12 00:35:40 thomasklausner Exp $
 
-PKGNAME=	${DISTNAME:C/source-//:C/-beta/b/}
 DISTNAME=	xtrkcad-source-4.2.0-beta1
+PKGNAME=	${DISTNAME:C/source-//:C/-beta/b/}
 CATEGORIES=	cad
 MASTER_SITES=	http://sourceforge.net/projects/xtrkcad-fork/files/XTrackCad/Version%204.2.0-beta1/
 

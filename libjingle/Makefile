@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	yacht@users.sourceforge.net
 HOMEPAGE=	http://code.google.com/p/libjingle/
 COMMENT=	Google Talk Voice and P2P Interoperability Library
-
 LICENSE=	modified-bsd
 
 #GNU_CONFIGURE=	yes

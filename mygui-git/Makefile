@@ -3,13 +3,12 @@
 DISTNAME=	mygui-git-20171012
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MyGUI/}
+GITHUB_PROJECT=	mygui
+GITHUB_TAG=	b1e4bc802a63fef015fc1d213d45a520eddc99b3
 
 HOMEPAGE=	http://mygui.info/
 COMMENT=	Cross-platform library for creating GUIs for games and 3D programs
 LICENSE=	mit
-
-GITHUB_PROJECT=	mygui
-GITHUB_TAG=	b1e4bc802a63fef015fc1d213d45a520eddc99b3
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

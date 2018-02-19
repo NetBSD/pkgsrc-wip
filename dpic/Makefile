@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.5 2012/09/28 21:24:38 asau Exp $
 #
 
-PKGNAME=		dpic-07.2.2
 DISTNAME=		dpic
+PKGNAME=		dpic-07.2.2
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.ece.uwaterloo.ca/~aplevich/dpic/
 

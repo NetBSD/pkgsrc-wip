@@ -12,7 +12,6 @@ MASTER_SITES=	http://faculty.cse.tamu.edu/davis/SuiteSparse/
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
-
 # Actually uses a combination of gpl and lgpl
 # Not sure how to specify 2 licenses, so just listing the stricter one
 LICENSE=	gnu-gpl-v2

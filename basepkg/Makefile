@@ -1,7 +1,5 @@
 # $NetBSD$
 
-DEPENDS+=	pkg_install>=20170419:../../pkgtools/pkg_install
-
 DISTNAME=	basepkg-1.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
@@ -10,6 +8,8 @@ MAINTAINER=	mail@e-yuuki.org
 HOMEPAGE=	https://github.com/user340/
 COMMENT=	Framework of system packages of NetBSD
 LICENSE=	2-clause-bsd
+
+DEPENDS+=	pkg_install>=20170419:../../pkgtools/pkg_install
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

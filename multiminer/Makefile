@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2014/10/26 18:25:41 noud4 Exp $
 
 DISTNAME=	multiminer-3.6.2
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nwoolls/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	https://github.com/nwoolls/MultiMiner

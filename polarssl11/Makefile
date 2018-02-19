@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.2 2014/06/01 12:49:38 thomasklausner Exp $
 
 DISTNAME=	polarssl-1.1.4
-DISTFILES=	polarssl-1.1.4-gpl.tgz
 CATEGORIES=	security
 MASTER_SITES=	http://polarssl.org/code/download/
 EXTRACT_SUFX=	.tgz
+DISTFILES=	polarssl-1.1.4-gpl.tgz
 
 MAINTAINER=	wongk@apt.homeunix.net
 HOMEPAGE=	https://polarssl.org/download/

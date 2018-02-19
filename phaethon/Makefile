@@ -3,12 +3,12 @@
 DISTNAME=	phaethon-${GITHUB_TAG}
 PKGNAME=	phaethon-${GITHUB_TAG:S/v//}
 CATEGORIES=	games devel
-GITHUB_TAG=	v0.0.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
+GITHUB_TAG=	v0.0.4
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	"A FLOSS resource explorer for BioWare's Aurora engine games"
 HOMEPAGE=	https://xoreos.org/
+COMMENT=	"A FLOSS resource explorer for BioWare's Aurora engine games"
 LICENSE=	gnu-lgpl-v2.1
 
 EXTRACT_USING=	gtar

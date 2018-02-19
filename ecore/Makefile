@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Event Abstraction and Modular Convenience Library
-
 LICENSE=	2-clause-bsd
 
 PKGCONFIG_OVERRIDE=	ecore-con.pc.in ecore-evas.pc.in ecore-file.pc.in \

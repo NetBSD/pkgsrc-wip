@@ -8,7 +8,6 @@ MASTER_SITES=	http://www.olsr.org/releases/0.6/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.olsr.org/
 COMMENT=	Ad-hoc wireless mesh routing daemon
-
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	bison

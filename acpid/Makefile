@@ -2,9 +2,9 @@
 #
 
 DISTNAME=		acpid-1.0.4
+PKGREVISION=		2
 CATEGORIES=		linux sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=acpid/}
-PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://acpid.sourceforge.net/

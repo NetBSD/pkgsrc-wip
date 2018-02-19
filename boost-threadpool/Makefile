@@ -4,13 +4,13 @@ DISTNAME=	threadpool-0_2_5-src
 PKGNAME=	boost-${DISTNAME:S/_/./g:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=threadpool/}
+EXTRACT_SUFX=		.zip
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://threadpool.sourceforge.net/
 COMMENT=	Cross-platform C++ thread pool library
 LICENSE=	boost-license
 
-EXTRACT_SUFX=		.zip
 WRKSRC=			${WRKDIR}/${DISTNAME}/threadpool
 INSTALLATION_DIRS=	include/boost
 INSTALLATION_DIRS+=	include/boost/threadpool

@@ -13,12 +13,11 @@
 # .include <bsd.port.post.mk>
 
 DISTNAME=	bowtie-1.0.1
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-
 COMMENT=	Ultrafast, memory-efficient short read aligner
 LICENSE=	artistic
 

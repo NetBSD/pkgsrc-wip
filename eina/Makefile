@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Core data structure library
-
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes

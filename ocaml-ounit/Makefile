@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2014/10/21 06:41:57 jgoamakf Exp $
 
-PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	ounit-2.0.0
+PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1258/
 

@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Visualization Tool for compiler graphs
-
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no

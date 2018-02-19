@@ -4,6 +4,7 @@ DISTNAME=	v1.2.1
 PKGNAME=	${DISTNAME:S/v/zmap-/}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/zmap/zmap/archive/
+DIST_SUBDIR=	zmap
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://zmap.io/
@@ -11,8 +12,6 @@ COMMENT=	Network scanner that scales to Internet-wide network studies
 LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	gengetopt-[0-9]*:../../devel/gengetopt
-
-DIST_SUBDIR=	zmap
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

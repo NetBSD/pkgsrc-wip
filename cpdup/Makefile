@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	matthias@rampke.de
 HOMEPAGE=	http://apollo.backplane.com/FreeSrc/
 COMMENT=	Designed to make exact mirrors of directory trees
-
 LICENSE=	2-clause-bsd
 
 WRKSRC=	${WRKDIR}/cpdup

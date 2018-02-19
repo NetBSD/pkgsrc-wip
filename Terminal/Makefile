@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.5 2012/09/24 16:56:29 asau Exp $
 #
 
-PKGNAME=	Terminal-0.9.4
 DISTNAME=	terminal.app_0.9.4+cvs20051125.orig
+PKGNAME=	Terminal-0.9.4
 PKGREVISION=	2
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	ftp://ftp.it.debian.org/debian/pool/main/t/terminal.app/

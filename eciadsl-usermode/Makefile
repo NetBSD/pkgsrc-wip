@@ -8,9 +8,9 @@ MASTER_SITES=		http://benoit.is-a-geek.net/bsd-tmp/
 MAINTAINER=		imil@gcu.info
 COMMENT=		Driver for Globespan chipset-based ADSL USB modems
 
-BUILD_DEPENDS+=		userppp>=001107:../../net/userppp
-
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+BUILD_DEPENDS+=		userppp>=001107:../../net/userppp
 
 CHECK_PORTABILITY_SKIP=	configure.sav
 

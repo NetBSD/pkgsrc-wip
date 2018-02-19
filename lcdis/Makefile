@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	lcdis-1.04
 DISTNAME=	LCDISSRC
+PKGNAME=	lcdis-1.04
 CATEGORIES=	devel
 MASTER_SITES=	https://travispaul.me/distfiles/
 EXTRACT_SUFX=	.ZIP
@@ -10,6 +10,7 @@ MAINTAINER=		tr@vispaul.me
 HOMEPAGE=		https://web.archive.org/web/20110927100411/http://www.maushammer.com/vmu.html
 COMMENT=		Disassembler for the Sega VMU/VMS
 LICENSE=		gnu-gpl-v2
+
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin
 

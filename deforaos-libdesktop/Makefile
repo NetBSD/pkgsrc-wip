@@ -9,7 +9,6 @@ MASTER_SITES=	https://www.defora.org/os/download/download/4355/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop library
-
 LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config

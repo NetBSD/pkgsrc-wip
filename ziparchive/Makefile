@@ -5,14 +5,13 @@ DISTNAME=	ziparchive
 PKGNAME=	ziparchive-4.1.0
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.artpol-software.com/Downloads/
+DIST_SUBDIR=	ziparchive-4.1.0
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.artpol-software.com/Download.aspx
 COMMENT=	Library for ZIP compression and decompression
 LICENSE=	gnu-gpl-v2
-
-DIST_SUBDIR=		ziparchive-4.1.0
 
 WRKSRC=		${WRKDIR} # More than one possibility -- please check manually.
 USE_LANGUAGES=	c c++

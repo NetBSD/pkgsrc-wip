@@ -2,15 +2,14 @@
 #
 
 DISTNAME=	evas_generic_loaders-1.7.9
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
-PKGREVISION=	1
 
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	Extra loaders for GPL loaders and unstable libraries
-
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++

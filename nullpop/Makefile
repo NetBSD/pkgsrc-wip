@@ -4,9 +4,8 @@ DISTNAME=	nullpop-0.3
 CATEGORIES=	mail
 MASTER_SITES=	http://thewalter.net/stef/software/nullpop/
 
-HOMEPAGE=	http://thewalter.net/stef/software/nullpop/
-
 MAINTAINER=	shaun@inerd.com
+HOMEPAGE=	http://thewalter.net/stef/software/nullpop/
 COMMENT=	POP3 server that allows logins, but never returns any email
 
 GNU_CONFIGURE=	yes

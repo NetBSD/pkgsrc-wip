@@ -9,7 +9,6 @@ CATEGORIES=	biology
 MASTER_SITES=	https://github.com/agordon/libgtextutils/releases/download/0.7/
 
 MAINTAINER=	bacon@NetBSD.org
-
 COMMENT=	Gordon text utilities
 # LICENSE=	AGPLv3
 

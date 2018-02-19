@@ -2,8 +2,7 @@
 
 DISTNAME=	mac-icon-standard-201401
 CATEGORIES=	fonts
-
-DISTFILES+=	mac-icon-standard.ttf
+DISTFILES=	mac-icon-standard.ttf
 SITES.mac-icon-standard.ttf=	http://images.apple.com/v/30-years/a/fonts/mac-icons/
 
 MAINTAINER=	christtrekker@users.sourceforge.net

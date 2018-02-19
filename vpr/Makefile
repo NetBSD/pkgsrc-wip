@@ -5,12 +5,12 @@ DISTNAME=	vpr-4.30
 PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.eecg.toronto.edu/~vaughn/vpr/downloadfiles/
+DISTFILES=	vpr_430_tar.gz
 
 MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://www.eecg.toronto.edu/~vaughn/vpr/vpr.html
 COMMENT=	Classic place and route tool for FPGAs
 
-DISTFILES=	vpr_430_tar.gz
 EXTRACT_OPTS+=	-d ${WRKSRC}
 
 BUILD_DIRS=	t-vpack vpr

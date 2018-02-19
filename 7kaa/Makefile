@@ -2,12 +2,12 @@
 
 DISTNAME=	7kaa-2.14.6
 CATEGORIES=	games
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=the3dfxdude/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	Seven Kingdoms: Ancient Adversaries
 HOMEPAGE=	https://7kfans.com/
+COMMENT=	Seven Kingdoms: Ancient Adversaries
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4

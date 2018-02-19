@@ -1,17 +1,17 @@
 # $NetBSD$
 
 PKGNAME=	netbsd-build-tools-7.0.2
+CATEGORIES=	cross
 MASTER_SITES=	http://cdn.netbsd.org/pub/NetBSD/NetBSD-${PKGVERSION_NOREV}/source/sets/
 EXTRACT_SUFX=	.tgz
 DISTFILES+=	gnusrc${EXTRACT_SUFX}
 DISTFILES+=	sharesrc${EXTRACT_SUFX}
 DISTFILES+=	src${EXTRACT_SUFX}
 DISTFILES+=	syssrc${EXTRACT_SUFX}
-CATEGORIES=	cross
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	NetBSD cross-toolchain
 HOMEPAGE=	http://netbsd.org/
+COMMENT=	NetBSD cross-toolchain
 
 WRKSRC=		${WRKDIR}/usr/src
 NO_CONFIGURE=	yes

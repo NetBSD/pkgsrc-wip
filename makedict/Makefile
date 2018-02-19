@@ -9,8 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdxf/}
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/xdxf/
 COMMENT=	Dictionary converting tool
-
-LICENSE=		gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
 USE_TOOLS=		pkg-config

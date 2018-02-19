@@ -4,14 +4,14 @@
 DISTNAME=	bullet-2.87
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bulletphysics/}
+GITHUB_PROJECT=	bullet3
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bulletphysics.org/wordpress/
 COMMENT=	Collision detection, soft body and rigid body dynamics library
 LICENSE=	mit
 
-GITHUB_PROJECT=	bullet3
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes

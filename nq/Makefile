@@ -6,8 +6,8 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=christiank/}
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	Command line queueing utility
 HOMEPAGE=	https://github.com/chneukirchen/nq/
+COMMENT=	Command line queueing utility
 LICENSE=	public-domain
 
 EXTRACT_USING=	gtar

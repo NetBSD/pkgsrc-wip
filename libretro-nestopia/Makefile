@@ -3,13 +3,12 @@
 DISTNAME=	libretro-nestopia-1.48
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rdanbrook/}
+GITHUB_PROJECT=	nestopia
 
 MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://0ldsk00l.ca/nestopia
 COMMENT=	Libretro core based on the Nestopia UE emulator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	nestopia
 
 BUILD_DIRS=	libretro
 USE_LANGUAGES=	c c++

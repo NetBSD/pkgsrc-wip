@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	cblas-1.0
 DISTNAME=	cblas
+PKGNAME=	cblas-1.0
 CATEGORIES=	math
 MASTER_SITES=	http://www.netlib.org/blas/blast-forum/
 EXTRACT_SUFX=	.tgz

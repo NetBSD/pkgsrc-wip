@@ -8,7 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://gpe.linuxtogo.org/
 COMMENT=	Gtk+ 2 third-button emulation library
-
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config

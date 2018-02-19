@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2014/11/21 06:14:26 jgoamakf Exp $
 
-PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	camomile-0.8.4
+PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	https://github.com/downloads/yoriyuki/Camomile/
 EXTRACT_SUFX=	.tar.bz2

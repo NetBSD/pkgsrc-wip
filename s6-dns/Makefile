@@ -5,8 +5,8 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.skarnet.org/software/s6-dns/
 
 MAINTAINER=	cfkoch@edgebsd.org
-COMMENT=	Suite of DNS client programs and libraries
 HOMEPAGE=	http://www.skarnet.org/software/s6-dns/
+COMMENT=	Suite of DNS client programs and libraries
 LICENSE=	isc
 
 USE_TOOLS+=		gmake

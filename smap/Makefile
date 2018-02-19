@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/04/30 06:46:46 gschwarz Exp $
 
-PKGNAME=	smap-0.6.0
 DISTNAME=	smap-20081016
+PKGNAME=	smap-0.6.0
 CATEGORIES=	security
 MASTER_SITES=	https://downloads.openwrt.org/sources/
 MASTER_SITES+=	http://mirror2.openwrt.org/sources/

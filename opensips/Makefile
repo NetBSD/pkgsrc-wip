@@ -8,7 +8,6 @@ MASTER_SITES=		http://opensips.org/pub/opensips/${VER}/src/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opensips.org/
 COMMENT=		Open Source implementation of a SIP server
-
 LICENSE=		gnu-gpl-v2
 
 VER=			1.6.2

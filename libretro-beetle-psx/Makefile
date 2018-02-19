@@ -3,14 +3,13 @@
 DISTNAME=	libretro-beetle-psx-20171207
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	beetle-psx-libretro
+GITHUB_TAG=	c9a566475e4cc2ba072a97cbae315c97fe971867
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/beetle_psx/
 COMMENT=	Libretro core based on the Mednafen PlayStation emulator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	beetle-psx-libretro
-GITHUB_TAG=	c9a566475e4cc2ba072a97cbae315c97fe971867
 
 EXTRACT_USING=	bsdtar
 
