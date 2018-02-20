@@ -21,23 +21,18 @@ DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
 USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool makeinfo msgfmt perl:run pkg-config
-# for ninja
-#USE_TOOLS+=		intltool makeinfo msgfmt perl:run pkg-config
-
 INFO_FILES=		yes
+USE_TOOLS+=		intltool makeinfo msgfmt perl:run pkg-config
+# remove when using ninja
+USE_TOOLS+=		gmake
 
 MAKE_ENV+=		GUILE_AUTO_COMPILE=0
-USE_CMAKE=		yes
 CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DCMAKE_CXX_FLAGS="-Wno-deprecated-declarations"
-#CFLAGS+=		-Wno-error
-#CXXFLAGS+=		-Wno-error
-#CMAKE_ARGS+=		-DCMAKE_C_FLAGS=${CFLAGS:Q}
-#CMAKE_ARGS+=		-DCMAKE_CXX_FLAGS=${CXXFLAGS:Q}
 #CMAKE_ARGS+=		-GNinja
 #BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 
@@ -62,12 +57,9 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/config ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/config
 	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/environment
 
-# for CMake build
+# remove after 2.7.5
 pre-patch:
 	${MKDIR} -p ${WRKSRC}/gnucash/ugly-hack
-
-pre-build:
-	${MKDIR} -p ${WRKDIR}/.home/.local/share
 
 .include "options.mk"
 
