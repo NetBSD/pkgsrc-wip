@@ -102,7 +102,7 @@ INSTALLATION_DIRS+=	share/vlc/skins2
 CONFIGURE_ARGS+=	--disable-skins2
 .endif
 
-## X11 dependency and QT4 frontend
+## X11 dependency and QT5 frontend
 
 PLIST_VARS+=		egl
 .if !empty(PKG_OPTIONS:Mx11)
@@ -118,7 +118,8 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-qt \
 			--with-x
 PLIST.x11=		yes
