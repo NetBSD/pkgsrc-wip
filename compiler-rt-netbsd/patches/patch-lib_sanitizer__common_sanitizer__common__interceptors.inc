@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-15 04:24:49.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-20 18:23:53.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -76,6 +76,11 @@
  #define ctime __ctime50
@@ -40,8 +40,8 @@ $NetBSD$
    return res;
  }
  
-@@ -6807,6 +6822,869 @@ INTERCEPTOR(int, devname_r, u64 dev, u32
- #define INIT_DEVNAME_R
+@@ -6836,6 +6851,839 @@ INTERCEPTOR(void, strmode, u32 mode, cha
+ #define INIT_STRMODE
  #endif
  
 +#if SANITIZER_INTERCEPT_KVM
@@ -549,23 +549,6 @@ $NetBSD$
 +#define INIT_GETTTYENT
 +#endif
 +
-+#if SANITIZER_INTERCEPT_FGETLN
-+INTERCEPTOR(char *, fgetln, __sanitizer_FILE *stream, SIZE_T *len) {
-+  void *ctx;
-+  char *str;
-+  COMMON_INTERCEPTOR_ENTER(ctx, fgetln, stream, len);
-+  str = REAL(fgetln)(stream, len);
-+  if (str && len) {
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, len, sizeof(*len));
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, str, *len);
-+  }
-+  return str;
-+}
-+#define INIT_FGETLN COMMON_INTERCEPT_FUNCTION(fgetln)
-+#else
-+#define INIT_FGETLN
-+#endif
-+
 +#if SANITIZER_INTERCEPT_GETPROTOENT
 +INTERCEPTOR(struct __sanitizer_protoent *, getprotoent) {
 +  void *ctx;
@@ -797,19 +780,6 @@ $NetBSD$
 +#define INIT_FTS
 +#endif
 +
-+#if SANITIZER_INTERCEPT_STRMODE
-+INTERCEPTOR(void, strmode, u32 mode, char *bp) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, strmode, mode, bp);
-+  REAL(strmode)(mode, bp);
-+  if (bp)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, bp, REAL(strlen)(bp) + 1);
-+}
-+#define INIT_STRMODE COMMON_INTERCEPT_FUNCTION(strmode)
-+#else
-+#define INIT_STRMODE
-+#endif
-+
 +#if SANITIZER_INTERCEPT_REGEX
 +INTERCEPTOR(int, regcomp, void *preg, const char *pattern, int cflags) {
 +  void *ctx;
@@ -910,19 +880,17 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7035,6 +7913,16 @@ static void InitializeCommonInterceptors
-   INIT_STRLCPY;
-   INIT_DEVNAME;
+@@ -7066,6 +7914,14 @@ static void InitializeCommonInterceptors
    INIT_DEVNAME_R;
+   INIT_FGETLN;
+   INIT_STRMODE;
 +  INIT_KVM;
 +  INIT_SYSCTL;
 +  INIT_ATOF;
 +  INIT_GETTTYENT;
-+  INIT_FGETLN;
 +  INIT_GETPROTOENT;
 +  INIT_GETNETENT;
 +  INIT_FTS;
-+  INIT_STRMODE;
 +  INIT_REGEX;
  
  #if SANITIZER_NETBSD

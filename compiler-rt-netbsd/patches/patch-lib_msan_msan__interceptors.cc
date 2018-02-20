@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/msan/msan_interceptors.cc.orig	2018-02-15 04:24:49.000000000 +0000
+--- lib/msan/msan_interceptors.cc.orig	2018-02-20 18:23:53.000000000 +0000
 +++ lib/msan/msan_interceptors.cc
 @@ -33,11 +33,13 @@
  #include "sanitizer_common/sanitizer_libc.h"
@@ -124,7 +124,7 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1560,6 +1630,9 @@ namespace __msan {
+@@ -1574,6 +1644,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -134,7 +134,7 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1675,6 +1748,7 @@ void InitializeInterceptors() {
+@@ -1689,6 +1762,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);
