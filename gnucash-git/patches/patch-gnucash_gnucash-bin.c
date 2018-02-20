@@ -4,7 +4,7 @@ Allow starting gnucash in the background.
 python's readline module causes a SIGTTOU to be sent and if this
 is not handled (even by ignoring it), it stops the process.
 
---- gnucash/gnucash-bin.c.orig	2017-10-31 07:17:55.000000000 +0000
+--- gnucash/gnucash-bin.c.orig	2017-10-28 21:23:58.000000000 +0000
 +++ gnucash/gnucash-bin.c
 @@ -22,6 +22,7 @@
   */

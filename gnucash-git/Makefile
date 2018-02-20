@@ -20,48 +20,54 @@ DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
-# for autoreconf
-BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
-BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
-
 GIT_REPOSITORIES=	github
 GIT_MODULE.github=	gnucash
 GIT_REPO.github=	git://github.com/Gnucash/gnucash.git
 WRKSRC=			${WRKDIR}/gnucash
 
 USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool makeinfo msgfmt perl:run pkg-config
-USE_TOOLS+=		autoconf automake autoreconf
-GNU_CONFIGURE=		yes
-INFO_FILES=		YES
+INFO_FILES=		yes
+USE_TOOLS+=		intltool makeinfo msgfmt perl:run pkg-config
+# remove when using ninja
+USE_TOOLS+=		gmake
 
-CONFIGURE_ARGS+=	--disable-error-on-warning
-CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
-CONFIGURE_ARGS+=	GTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
-CONFIGURE_ARGS+=	GMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnucash
+CXXFLAGS+=		-Wno-deprecated-declarations
 
-REPLACE_PERL+=		bindings/python/example_scripts/get_quotes.pl
+MAKE_ENV+=		GUILE_AUTO_COMPILE=0
+CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
+CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
+CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
+CMAKE_ARGS+=		-DPERL_EXECUTABLE=${LOCALBASE}/bin/perl
+#CMAKE_ARGS+=		-GNinja
+#BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
+
+#do-build:
+#	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ninja
+#do-install:
+#	cd ${WRKSRC}; ${SETENV} ${INSTALL_ENV} ninja install
+
 REPLACE_PERL+=		common/gnc-test-env.pl
-REPLACE_PERL+=		doc/examples/create-bogus-data.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
-REPLACE_PERL+=		libgnucash/engine/xlate.pl
 REPLACE_PERL+=		libgnucash/quotes/gnc-fq-dump
-REPLACE_PERL+=		s/Quote_example.pl
-REPLACE_PERL+=		util/check-po.pl
 REPLACE_PERL+=		util/elegant-sort.pl
-REPLACE_PERL+=		util/fix-license.pl
 
 PLIST_SRC=		PLIST
 
 PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
-INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
+INSTALLATION_DIRS=	share/examples/gnucash/gnucash
 
-pre-configure:
-	cd ${WRKSRC} && ${SH} autogen.sh
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/config ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/config
+	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/environment
+
+# remove after 2.7.5
+pre-patch:
+	${MKDIR} -p ${WRKSRC}/gnucash/ugly-hack
 
 .include "options.mk"
 

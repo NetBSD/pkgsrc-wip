@@ -1,0 +1,26 @@
+$NetBSD$
+
+From https://bugzilla.gnome.org/show_bug.cgi?id=792884
+
+--- gnucash/CMakeLists.txt.orig	2018-02-03 15:01:36.000000000 +0000
++++ gnucash/CMakeLists.txt
+@@ -27,6 +27,9 @@ ADD_SUBDIRECTORY (import-export)
+ ADD_SUBDIRECTORY (python)
+ ADD_SUBDIRECTORY (register)
+ ADD_SUBDIRECTORY (report)
++#This needs to go last so that glib-compile-schemas runs after all of
++#the schema files are installed.
++ADD_SUBDIRECTORY (ugly-hack)
+ 
+ ADD_DEFINITIONS (-DHAVE_CONFIG_H)
+ 
+@@ -257,9 +260,6 @@ add_custom_command(
+ 
+ add_custom_target(compiled-schemas ALL DEPENDS ${SCHEMADIR_BUILD}/gschemas.compiled)
+ 
+-install(FILES ${SCHEMADIR_BUILD}/gschemas.compiled DESTINATION ${CMAKE_INSTALL_DATADIR}/glib-2.0/schemas)
+-
+-
+ # The GResource Files are absolute paths but SET_LOCAL_DIST requires
+ # relative paths.
+ FOREACH(gres_file ${gresource_files})
