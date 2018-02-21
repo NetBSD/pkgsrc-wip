@@ -1283,7 +1283,6 @@ go/pkg/${GO_PLATFORM}/internal/nettrace.a
 go/pkg/${GO_PLATFORM}/internal/poll.a
 go/pkg/${GO_PLATFORM}/internal/race.a
 go/pkg/${GO_PLATFORM}/internal/singleflight.a
-go/pkg/${GO_PLATFORM}/internal/syscall/unix.a
 go/pkg/${GO_PLATFORM}/internal/syscall/windows.a
 go/pkg/${GO_PLATFORM}/internal/syscall/windows/registry.a
 go/pkg/${GO_PLATFORM}/internal/syscall/windows/sysdll.a
