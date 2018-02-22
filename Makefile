@@ -3886,6 +3886,7 @@ SUBDIR+=	py-wpull
 SUBDIR+=	py-wqio
 SUBDIR+=	py-wsgi-intercept
 SUBDIR+=	py-wsgiref
+SUBDIR+=	py-wsproto
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xarray
 SUBDIR+=	py-xcal-raman
