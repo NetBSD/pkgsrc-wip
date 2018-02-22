@@ -4,9 +4,9 @@ Add minimal NetBSD support.
 Don't override CC nor optimisation flags in CFLAGS.
 Use custom VERSION_TAG.
 
---- src/Makefile.orig	2017-11-07 09:15:03.000000000 +0000
+--- src/Makefile.orig	2018-02-21 09:50:24.000000000 +0000
 +++ src/Makefile
-@@ -21,7 +21,7 @@ UNAME                   := $(patsubst MS
+@@ -22,7 +22,7 @@ UNAME                   := $(patsubst MS
  UNAME                   := $(patsubst MINGW32_NT-%,MSYS2,$(UNAME))
  UNAME                   := $(patsubst MINGW64_NT-%,MSYS2,$(UNAME))
  
@@ -15,19 +15,7 @@ Use custom VERSION_TAG.
  $(error "! Your Operating System ($(UNAME)) is not supported by this Makefile")
  endif
  
-@@ -57,7 +57,11 @@ DOCUMENT_FOLDER         ?= $(SHARED_ROOT
- ##
- 
- HASHCAT_FRONTEND        := hashcat
-+ifeq ($(UNAME),Darwin)
-+HASHCAT_LIBRARY         := libhashcat.dylib
-+else
- HASHCAT_LIBRARY         := libhashcat.so
-+endif
- 
- ifeq ($(UNAME),CYGWIN)
- HASHCAT_FRONTEND        := hashcat.exe
-@@ -81,24 +85,12 @@ OPENCL_HEADERS_KHRONOS  := deps/OpenCL-H
+@@ -44,7 +44,6 @@ endif
  ## Native compiler paths
  ##
  
@@ -35,33 +23,34 @@ Use custom VERSION_TAG.
  FIND                    := find
  INSTALL                 := install
  RM                      := rm
- SED                     := sed
+@@ -52,16 +51,9 @@ SED                     := sed
  SED_IN_PLACE            := -i
  
--ifeq ($(UNAME),Darwin)
+ ifeq ($(UNAME),Darwin)
 -CC                      := clang
 -# the sed -i option of macOS requires a parameter for the backup file (we just use "")
 -SED_IN_PLACE            := -i ""
--endif
--
+ PROD_VERS               := $(shell sw_vers -productVersion | cut -d. -f2)
+ endif
+ 
 -ifeq ($(UNAME),FreeBSD)
 -CC                      := cc
 -SED                     := gsed
 -endif
--
- ##
- ## Cross compiler paths
- ##
-@@ -128,7 +120,7 @@ COMPTIME                := $(shell date 
- # the value will be something like this: "tag: vX.Y.Z, refs/pull/K/head" or "HEAD -> master, tag: vX.Y.Z"
- 
- VERSION_EXPORT          := HEAD -> master, tag: v4.0.1
--VERSION_TAG             := $(shell test -d .git && git describe --tags --dirty=+ || echo "$(VERSION_EXPORT)" | $(SED) 's/.*: v\([\.0-9]*\).*/v\1/')
-+VERSION_TAG             := @VERSION_TAG@
  
  ##
- ## General compiler and linker options
-@@ -177,7 +169,6 @@ endif
+ ## Version
+@@ -96,6 +88,9 @@ LIBRARY_DEV_FOLDER      ?= $(LIBRARY_DEV
+ 
+ HASHCAT_FRONTEND        := hashcat
+ HASHCAT_LIBRARY         := libhashcat.so.$(VERSION_PURE)
++ifeq ($(UNAME),Darwin)
++HASHCAT_LIBRARY         := libhashcat.$(VERSION_PURE).dylib
++endif
+ 
+ ifeq ($(UNAME),CYGWIN)
+ HASHCAT_FRONTEND        := hashcat.exe
+@@ -186,7 +181,6 @@ endif
  LFLAGS                  := $(LDFLAGS)
  
  ifeq ($(DEBUG),0)
@@ -69,7 +58,7 @@ Use custom VERSION_TAG.
  LFLAGS                  += -s
  else
  ifeq ($(DEBUG),1)
-@@ -212,6 +203,13 @@ LFLAGS_NATIVE           += -lpthread
+@@ -222,6 +216,13 @@ LFLAGS_NATIVE           += -lpthread
  endif
  endif # FreeBSD
  
