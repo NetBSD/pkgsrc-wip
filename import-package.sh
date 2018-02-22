@@ -86,7 +86,7 @@ if [ "${CATEGORY}" = "wip" ]; then
 	if ! git fetch; then
 	    echo "$0: git fetch failed"
 	fi
-	if ! git status -u no | grep "Your branch is up-to-date" > /dev/null; then
+	if ! git status -u no | egrep "Your branch is (up-to-date|up to date)" > /dev/null; then
 		echo "$0: git repository does not appear to be up to date." 1>&2
 		echo "$0: You should probably run 'git pull --rebase'" 1>&2
 		echo "$0: and 'git push' (if you have unpushed work)" 1>&2
