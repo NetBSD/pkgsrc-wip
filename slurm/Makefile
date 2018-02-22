@@ -1,25 +1,36 @@
 # $NetBSD: Makefile,v 1.8 2015/04/29 12:40:50 outpaddling Exp $
 
-DISTNAME=	slurm-15.08.12
+DISTNAME=	slurm-17.11.3
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \
 		http://www.schedmd.com/download/development/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	asau@inbox.ru
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
+
 LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
+BUILD_DEPENDS+=	man2html-[0-9]*:../../wip/man2html
 
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	perl pkg-config
+USE_TOOLS+=	gmake perl pkg-config
 USE_LIBTOOL=	yes
 
+# Help find pkgsrc man2html
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
+# Add mysql option
+CONFIGURE_ARGS+=	--with-mysql_config=/nonexistent
+CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
+
+LDFLAGS+=		-llz4
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
 REPLACE_PYTHON+=	doc/man/man2html.py
@@ -38,39 +49,58 @@ RCD_SCRIPTS+=		slurmd slurmctld
 SUBST_CLASSES+=		linuxinit
 SUBST_STAGE.linuxinit=	post-patch
 SUBST_FILES.linuxinit=	${WRKSRC}/etc/init.d.slurm.in
-SUBST_SED.linuxinit+=	-e 's|@bindir@|${PREFIX}/bin|'
-SUBST_SED.linuxinit+=	-e 's|@sbindir@|${PREFIX}/sbin|'
-SUBST_SED.linuxinit+=	-e 's|@libdir@|${PREFIX}/lib|'
-SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|${PREFIX}/etc|'
+SUBST_SED.linuxinit=	-e 's|^exec_prefix=|&${PREFIX}|'
+SUBST_SED.linuxinit+=	-e 's|^prefix=|&${PREFIX}|'
+SUBST_SED.linuxinit+=	-e 's|@bindir@|$${exec_prefix}/bin|'
+SUBST_SED.linuxinit+=	-e 's|@sbindir@|$${exec_prefix}/sbin|'
+SUBST_SED.linuxinit+=	-e 's|@libdir@|$${exec_prefix}/lib|'
+SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|$${prefix}/etc|'
 
-SUBST_CLASSES+=		configure
-SUBST_STAGE.configure=	post-patch
-SUBST_FILES.configure=	configure
-SUBST_SED.configure=	-e 's|/usr/local|${PREFIX}|g'
-# Disable OFED check unless option is enabled
-SUBST_SED.configure+=	-e 's|_x_ac_ofed_dirs="/usr /usr/pkg"|_x_ac_ofed_dirs=""|g'
+SUBST_CLASSES+=		gtk
+SUBST_STAGE.gtk=	post-patch
+SUBST_SED.gtk=		-e 's|min_gtk_version=.*|min_gtk_version=2000.0.0|'
+SUBST_FILES.gtk=	${WRKSRC}/configure
+
+SUBST_CLASSES+=		make-ex
+SUBST_STAGE.make-ex=	post-install
+SUBST_FILES.make-ex=	etc/Makefile
+SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == NetBSD
+SUBST_CLASSES+=		undef1
+SUBST_STAGE.undef1=	post-configure
+SUBST_FILES.undef1=	src/plugins/acct_gather_profile/hdf5/sh5util/Makefile
+SUBST_SED.undef1=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L${WRKSRC}/src/api/.libs -lslurmfull -o|'
+
+SUBST_CLASSES+=		undef2
+SUBST_STAGE.undef2=	post-configure
+SUBST_FILES.undef2+=	src/*/Makefile
+SUBST_FILES.undef2+=	src/*/*/Makefile
+SUBST_SED.undef2=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L${WRKSRC}/src/api/.libs -lslurmfull -L${WRKSRC}/src/db_api/.libs -lslurmdb -o|'
+.endif
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
 post-install:
 	${RM} -f ${WRKSRC}/etc/init.d.slurm.in.orig
-	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
-	${CHMOD} 755 ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/init.d.slurm
+	${INSTALL_DATA} ${WRKSRC}/etc/* \
+		${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
 
+.include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../wip/munge/buildlink3.mk" # optional
+.include "../../security/munge/buildlink3.mk" # optional
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../databases/mysql57-client/buildlink3.mk"
+# vuln in 55 and 56 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
-# Package openpam-20130907 has a security-bypass vulnerability, see http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3879
-# .include "../../mk/pam.buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.if ${OPSYS} == Linux
-.include "../../wip/numactl/buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
