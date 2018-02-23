@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://bitcoin.sourceforge.net/
+HOMEPAGE=	https://github.com/bitcoin/bitcoin/
 COMMENT=	P2P electronic cash system
 LICENSE=	mit
 
