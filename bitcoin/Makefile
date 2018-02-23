@@ -1,7 +1,7 @@
 # $NetBSD$
 
 # TODO: update to latest release
-DISTNAME=	bitcoin-0.14.2
+DISTNAME=	bitcoin-0.15.0
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
