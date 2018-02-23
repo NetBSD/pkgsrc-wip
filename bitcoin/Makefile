@@ -1,7 +1,7 @@
 # $NetBSD$
 
 # TODO: update to latest release
-DISTNAME=	bitcoin-0.13.1
+DISTNAME=	bitcoin-0.14.1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -61,7 +61,7 @@ INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 src/univalue
 
 # Install the Debian example config file.
 post-install:
-	${INSTALL_DATA} -m 600 ${WRKSRC}/contrib/debian/examples/bitcoin.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} -m 644 ${WRKSRC}/contrib/debian/examples/bitcoin.conf ${DESTDIR}${EGDIR}
 
 .include "options.mk"
 
