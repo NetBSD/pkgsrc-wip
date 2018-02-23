@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (bitcoin-0.15.0.tar.gz) = 1667e369404a03edf40811093b985c5acf55835f
-RMD160 (bitcoin-0.15.0.tar.gz) = 93774b907926283f0f1da79c6812ee05be0b1c4e
-SHA512 (bitcoin-0.15.0.tar.gz) = e553c3ac613cfd6fa3898c414ac81208fef34d88a930c07a26be8bf9359b330df7f213ea87e8ed631feeb4251297735afdb50ff6c235b1ed9c662a86a29ec2c6
-Size (bitcoin-0.15.0.tar.gz) = 7509893 bytes
+SHA1 (bitcoin-0.15.1.tar.gz) = 2184a52d1a601e1019ac1a9252f4277a07429499
+RMD160 (bitcoin-0.15.1.tar.gz) = 0f621fee91e3b2515476df3b6d35b0c4270d4535
+SHA512 (bitcoin-0.15.1.tar.gz) = 08370229da9b21f386c2476d472fcc3a06790f9ba657dbfdf6730ceb7505aa33a964119418031f512c124dce02afc79452cef8cb3066ca1349048554c8ef1769
+Size (bitcoin-0.15.1.tar.gz) = 7547736 bytes
 SHA1 (patch-src_leveldb_port_port__posix.h) = 6a3cde12951b9801e8ffe19b6134ca48ad0d876c
 SHA1 (patch-src_netbase.cpp) = c1357ce9437fab87651df9fd4ca12dd24c59830c
 SHA1 (patch-src_secp256k1_configure.ac) = 688e13e1da110bf15557434f19507f43290be8ef
