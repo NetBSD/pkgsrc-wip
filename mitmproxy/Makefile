@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2017/09/03 08:53:12 wiz Exp $
 
-DISTNAME=	mitmproxy-3.0.0
+DISTNAME=	mitmproxy-3.0.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
