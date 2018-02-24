@@ -4069,6 +4069,7 @@ SUBDIR+=	s6
 SUBDIR+=	s6-dns
 SUBDIR+=	s6-portable-utils
 SUBDIR+=	sabnzbdplus
+SUBDIR+=	sacc
 SUBDIR+=	safekeep
 SUBDIR+=	sailor
 SUBDIR+=	sais
