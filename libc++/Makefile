@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	libcxx-4.0.0.src
-PKGNAME=	libc++-4.0.0
+DISTNAME=	libcxx-5.0.1.src
+PKGNAME=	${DISTNAME:S/cxx/c++/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

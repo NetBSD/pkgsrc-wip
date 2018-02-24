@@ -12,7 +12,6 @@ include/c++/v1/__libcpp_version
 include/c++/v1/__locale
 include/c++/v1/__mutex_base
 include/c++/v1/__nullptr
-include/c++/v1/__refstring
 include/c++/v1/__split_buffer
 include/c++/v1/__sso_allocator
 include/c++/v1/__std_stream
@@ -20,7 +19,7 @@ include/c++/v1/__string
 include/c++/v1/__threading_support
 include/c++/v1/__tree
 include/c++/v1/__tuple
-include/c++/v1/__undef_min_max
+include/c++/v1/__undef_macros
 include/c++/v1/algorithm
 include/c++/v1/any
 include/c++/v1/array
@@ -64,6 +63,7 @@ include/c++/v1/experimental/__memory
 include/c++/v1/experimental/algorithm
 include/c++/v1/experimental/any
 include/c++/v1/experimental/chrono
+include/c++/v1/experimental/coroutine
 include/c++/v1/experimental/deque
 include/c++/v1/experimental/dynarray
 include/c++/v1/experimental/filesystem
@@ -140,6 +140,7 @@ include/c++/v1/string.h
 include/c++/v1/string_view
 include/c++/v1/strstream
 include/c++/v1/support/android/locale_bionic.h
+include/c++/v1/support/fuchsia/xlocale.h
 include/c++/v1/support/ibm/limits.h
 include/c++/v1/support/ibm/locale_mgmt_aix.h
 include/c++/v1/support/ibm/support.h
@@ -149,10 +150,8 @@ include/c++/v1/support/newlib/xlocale.h
 include/c++/v1/support/solaris/floatingpoint.h
 include/c++/v1/support/solaris/wchar.h
 include/c++/v1/support/solaris/xlocale.h
-include/c++/v1/support/win32/limits_win32.h
-include/c++/v1/support/win32/locale_mgmt_win32.h
+include/c++/v1/support/win32/limits_msvc_win32.h
 include/c++/v1/support/win32/locale_win32.h
-include/c++/v1/support/win32/support.h
 include/c++/v1/support/xlocale/__nop_locale_mgmt.h
 include/c++/v1/support/xlocale/__posix_l_fallback.h
 include/c++/v1/support/xlocale/__strtonum_fallback.h
