@@ -2,6 +2,7 @@
 
 DISTNAME=	pxz-4.999.9b4
 CATEGORIES=	archivers
+GIT_REPO=	https://github.com/jnovy/pxz.git
 
 MAINTAINER=	ishit@users.sourceforge.net
 HOMEPAGE=	http://jnovy.fedorapeople.org/pxz/
@@ -10,15 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	xz>=5:../../archivers/xz
 
-GIT_REPOSITORIES=		master
-GIT_REPO.master=		https://github.com/jnovy/pxz.git
-GIT_MODULE.master=		pxz
-_GIT_FLAGS?=			--depth 1
-#PKGSRC_SETENV=			GIT_SSL_NO_VERIFY=true
-
-INSTALLATION_DIRS=		bin ${PKGMANDIR}/man1
-
-WRKSRC=	${WRKDIR}/pxz
+_GIT_FLAGS?=	--depth 1
+AUTO_MKDIRS=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pxz ${DESTDIR}${PREFIX}/bin
