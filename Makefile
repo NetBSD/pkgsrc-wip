@@ -1830,6 +1830,7 @@ SUBDIR+=	libretro-desmume
 SUBDIR+=	libretro-fbalpha
 SUBDIR+=	libretro-fceumm
 SUBDIR+=	libretro-fmsx
+SUBDIR+=	libretro-freeintv
 SUBDIR+=	libretro-fuse
 SUBDIR+=	libretro-gambatte
 SUBDIR+=	libretro-genesis-plus-gx
