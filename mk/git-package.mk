@@ -8,6 +8,9 @@
 # GIT_REPO
 #	The URL of the Git repository.
 #
+#	If the package needs more than one repository, see GIT_REPOSITORIES
+#	below.
+#
 #	Examples:
 #		https://github.com/NetBSD/pkgsrc
 #		git://git@github.com:NetBSD/pkgsrc.git
@@ -60,6 +63,15 @@
 #		GIT_MODULE.second=	second
 #		GIT_REPO.second=	git://git@github.com:NetBSD/pkgsrc.git
 #		GIT_BRANCH.second=	master
+#
+# Variables set by this file:
+#
+# DISTFILES
+#	Defaults to an empty list, which means that MASTER_SITES does not
+#	need to be defined.
+#
+# PKGREVISION
+#	Defaults to the current date in the format yyyymmdd, e.g. 20180225.
 #
 # Keywords: git github
 
