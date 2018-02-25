@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2017/09/03 08:53:12 wiz Exp $
 
-DISTNAME=	mitmproxy-3.0.2
+DISTNAME=	mitmproxy-3.0.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,8 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-kaitaistruct>=0.7:../../devel/py-kaitaistruct
 DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.4:../../databases/py-ldap3
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.5:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.3:../../devel/py-pyparsing
-DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.5.22:../../x11/py-pyperclip
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.9.1:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.5.22:../../x11/py-pyperclip	# XXX: should be updated to 1.6.0 before updating
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.9.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.13.2:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.5.4:../../devel/py-sortedcontainers
