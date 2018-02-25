@@ -41,6 +41,7 @@ share/libretro/info/fbalpha_libretro.info
 share/libretro/info/fceumm_libretro.info
 share/libretro/info/ffmpeg_libretro.info
 share/libretro/info/fmsx_libretro.info
+share/libretro/info/freeintv_libretro.info
 share/libretro/info/freej2me_libretro.info
 share/libretro/info/fsuae_libretro.info
 share/libretro/info/fuse_libretro.info
@@ -77,6 +78,7 @@ share/libretro/info/mednafen_supergrafx_libretro.info
 share/libretro/info/mednafen_vb_libretro.info
 share/libretro/info/mednafen_wswan_libretro.info
 share/libretro/info/melonds_libretro.info
+share/libretro/info/mesen_libretro.info
 share/libretro/info/mess2014_libretro.info
 share/libretro/info/meteor_libretro.info
 share/libretro/info/mgba_libretro.info
@@ -144,6 +146,7 @@ share/libretro/info/uzem_libretro.info
 share/libretro/info/vba_next_libretro.info
 share/libretro/info/vbam_libretro.info
 share/libretro/info/vecx_libretro.info
+share/libretro/info/vemulator_libretro.info
 share/libretro/info/vice_x128_libretro.info
 share/libretro/info/vice_x64_libretro.info
 share/libretro/info/vice_xplus4_libretro.info
