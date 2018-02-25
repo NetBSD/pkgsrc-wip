@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-20 18:23:53.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-25 10:48:27.591396903 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -76,6 +76,11 @@
  #define ctime __ctime50
@@ -14,33 +14,7 @@ $NetBSD$
  #define getitimer __getitimer50
  #define getpwent __getpwent50
  #define getpwnam __getpwnam50
-@@ -110,6 +115,9 @@
- #define times __times13
- #define wait3 __wait350
- #define wait4 __wait450
-+extern const unsigned short *_ctype_tab_;
-+extern const short *_toupper_tab_;
-+extern const short *_tolower_tab_;
- #endif
- 
- // Platform-specific options.
-@@ -3192,7 +3200,14 @@ INTERCEPTOR(char *, setlocale, int categ
-   if (locale)
-     COMMON_INTERCEPTOR_READ_RANGE(ctx, locale, REAL(strlen)(locale) + 1);
-   char *res = REAL(setlocale)(category, locale);
--  if (res) COMMON_INTERCEPTOR_WRITE_RANGE(ctx, res, REAL(strlen)(res) + 1);
-+  if (res) {
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, res, REAL(strlen)(res) + 1);
-+#if SANITIZER_NETBSD
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, _ctype_tab_, 257 * sizeof(short));
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, _toupper_tab_, 257 * sizeof(short));
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, _tolower_tab_, 257 * sizeof(short));
-+#endif
-+  }
-   return res;
- }
- 
-@@ -6836,6 +6851,839 @@ INTERCEPTOR(void, strmode, u32 mode, cha
+@@ -6851,6 +6856,839 @@ INTERCEPTOR(void, strmode, u32 mode, cha
  #define INIT_STRMODE
  #endif
  
@@ -880,7 +854,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7066,6 +7914,14 @@ static void InitializeCommonInterceptors
+@@ -7081,6 +7919,14 @@ static void InitializeCommonInterceptors
    INIT_DEVNAME_R;
    INIT_FGETLN;
    INIT_STRMODE;
