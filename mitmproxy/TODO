@@ -1,0 +1,8 @@
+Before updating net/mitmproxy the following steps are needed:
+
+ - Update x11/py-perclip
+ - Adjust Makefile and patches/patch-setup.py to requests pyperclip>=1.6.0
+   (not >=1.5.22!)
+ - Import wip/py-h11 as www/py-h11
+ - Import wip/py-wsproto as www/py-wsproto
+ - Adjust py-h11 and py-wsproto DEPENDS in Makefile
