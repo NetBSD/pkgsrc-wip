@@ -2,5 +2,7 @@
 bin/retroarch
 man/man6/retroarch.6
 share/applications/retroarch.desktop
+share/doc/retroarch/COPYING
+share/doc/retroarch/README.md
 share/examples/retroarch/retroarch.cfg
 share/pixmaps/retroarch.svg
