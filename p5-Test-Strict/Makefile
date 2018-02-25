@@ -10,7 +10,6 @@ HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MA/MANWAR/
 COMMENT=	Check syntax, presence of use strict; and test coverage
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Devel-Cover>=0.43:../../devel/p5-Devel-Cover
 DEPENDS+=	p5-File-Temp>=0.01:../../devel/p5-File-Temp
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 
