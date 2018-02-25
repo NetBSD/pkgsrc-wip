@@ -2,7 +2,7 @@ $NetBSD$
 
 Fix build on NetBSD (symbol collisions...)
 
---- sound/mame/driver.h.orig	2017-10-21 10:00:34.000000000 +0000
+--- sound/mame/driver.h.orig	2018-02-06 05:21:51.000000000 +0000
 +++ sound/mame/driver.h
 @@ -8,17 +8,7 @@
  #define HAS_Y8950  1
@@ -13,9 +13,9 @@ Fix build on NetBSD (symbol collisions...)
 -#pragma warning(disable: 4245)
 -#define INLINE __inline static
 -#elif defined(__BORLANDC__)
--#define INLINE __inline
+-#define INLINE __inline static
 -#elif defined(__GNUC__)
--#define INLINE __inline__
+-#define INLINE __inline__ static
 -#else
 -#define INLINE static
 -#endif
