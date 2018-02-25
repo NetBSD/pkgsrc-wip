@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2012/10/04 18:42:21 asau Exp $
 
-DISTNAME=	MongoDB-v1.8.0
+DISTNAME=	MongoDB-v1.8.1
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MO/MONGODB/}

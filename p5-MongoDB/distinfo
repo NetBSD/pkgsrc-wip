@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/03/14 21:51:11 bubuchka Exp $
 
-SHA1 (MongoDB-v1.8.0.tar.gz) = 3dd4a008cd276edda126e8e95125891450218693
-RMD160 (MongoDB-v1.8.0.tar.gz) = ce0cb9381bcc648759e97c39b501b53c481809e8
-SHA512 (MongoDB-v1.8.0.tar.gz) = 1346a1c82528f409f467e77cb713af856d8dcd90ff57d07ce9312d60a16c7b7922dc99fb23a5374447ba61a082de43eccd495c779cd8a32463a039a6a13fa427
-Size (MongoDB-v1.8.0.tar.gz) = 521237 bytes
+SHA1 (MongoDB-v1.8.1.tar.gz) = 77b4dc0cccd787babeefe51c390275d126069717
+RMD160 (MongoDB-v1.8.1.tar.gz) = 5f4b021fd0a24432794bd3ca657d3ffa9cd7f466
+SHA512 (MongoDB-v1.8.1.tar.gz) = 64724d07d2f0b65c033c3824b97c8fa4d86c167cd8f087638c8957db61a4c8fef37d2bd3b726a5310c77420a2fc420d2524b9415388a1ec18be39a69c9519a93
+Size (MongoDB-v1.8.1.tar.gz) = 528885 bytes
