@@ -2,7 +2,7 @@
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
-MASTER_SITES=		http://download.savannah.gnu.org/releases/simulavr/
+GIT_REPO=		git://git.savannah.nongnu.org/simulavr.git
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/simulavr/
@@ -12,9 +12,6 @@ LICENSE=		gnu-gpl-v2
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 BUILD_DEPENDS+=		avr-libc-[0-9]*:../../wip/avr-libc
 
-GIT_REPOSITORIES=	master
-GIT_MODULE.master=	simulavr
-GIT_REPO.master=	git://git.savannah.nongnu.org/simulavr.git
 GIT_FLAGS?=		--depth 1
 
 USE_LANGUAGES+=		c c++
@@ -24,7 +21,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_PKGLOCALEDIR=	yes
-WRKSRC=			${WRKDIR}/${PKGBASE}
 
 CONFIGURE_ARGS+=	--enable-python=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr

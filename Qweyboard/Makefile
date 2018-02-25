@@ -2,11 +2,7 @@
 
 DISTNAME=	Qweyboard-0.0.0
 CATEGORIES=	inputmethod
-MASTER_SITES=	${MASTER_SITE_GITHUB:=kqr/}
-
-GIT_REPOSITORIES=	qweyboard
-GIT_REPO.qweyboard=	https://github.com/kqr/qweyboard.git
-WRKSRC=			${WRKDIR}/qweyboard
+GIT_REPO=	https://github.com/kqr/qweyboard.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kqr/qweyboard

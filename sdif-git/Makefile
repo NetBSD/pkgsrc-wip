@@ -2,18 +2,14 @@
 
 DISTNAME=	sdif-1.0
 CATEGORIES=	devel
+GIT_REPO=	https://github.com/kaz-utashiro/sdif
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kaz-utashiro.github.io/sdif/
 COMMENT=	Side-by-side diff viewer (for ANSI color terminal)
 LICENSE=	mit
 
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	https://github.com/kaz-utashiro/sdif
-GIT_MODULE.master=	sdif
-
 DEPENDS+=	p5-Text-Glob-[0-9]*:../../textproc/p5-Text-Glob
-WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_TOOLS+=	perl:run
 USE_LANGUAGES=	# none
 

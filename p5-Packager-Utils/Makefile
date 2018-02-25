@@ -8,8 +8,8 @@ MAINTAINER=	sno@NetBSD.org
 HOMEPAGE=	https://github.com/rehsack/Packager-Utils
 COMMENT=	Support packagers managing packages and upstream mapping
 
-GIT_REPOSITORIES=		Packager-Utils
-GIT_REPO.Packager-Utils=	https://github.com/rehsack/Packager-Utils.git
+GIT_REPO=	https://github.com/rehsack/Packager-Utils.git
+
 .include "../../wip/mk/git-package.mk"
 
 # fatal: unable to access 'http://github.com/...': SSL certificate problem: unable to get local issuer certificate
@@ -18,7 +18,6 @@ PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
 
 INSTALLATION_DIRS=	share/examples/p5-Packager-Utils
 
-WRKSRC=			${WRKDIR}/Packager-Utils
 PERL5_MODULE_TYPE=	MakeMaker
 PERL5_PACKLIST=		auto/Packager/Utils/.packlist
 

@@ -9,12 +9,9 @@ HOMEPAGE=	http://git.chise.org/elisp/apel/
 COMMENT=	Portable Emacs library
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	http://git.chise.org/git/elisp/apel.git
-GIT_MODULE.master=	apel
-#_GIT_FLAGS+=		--quiet --depth 1
+GIT_REPO=	http://git.chise.org/git/elisp/apel.git
+#_GIT_FLAGS+=	--quiet --depth 1
 
-WRKSRC=			${WRKDIR}/${PKGBASE}
 INFO_FILES=		yes
 USE_LANGUAGES=		# none
 USE_TOOLS+=		gmake makeinfo

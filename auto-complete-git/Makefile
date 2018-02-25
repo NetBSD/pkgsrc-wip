@@ -3,6 +3,7 @@
 
 DISTNAME=	auto-complete-0
 CATEGORIES=	editors
+GIT_REPO=	git://github.com/auto-complete/auto-complete.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cx4a.org/software/auto-complete/
@@ -11,12 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}fuzzy-el-[0-9]*:../../wip/fuzzy-el-current
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}popup-el-[0-9]*:../../wip/popup-el-current
-
-GIT_REPOSITORIES=	auto-complete
-GIT_REPO.auto-complete=	git://github.com/auto-complete/auto-complete.git
-.include "../../wip/mk/git-package.mk"
-
-WRKSRC=			${WRKDIR}/auto-complete
 
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX}
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
@@ -35,4 +30,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/auto-complete
 
 .include "../../editors/emacs/modules.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

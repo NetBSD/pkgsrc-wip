@@ -4,16 +4,12 @@
 DISTNAME=	percol-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
+GIT_REPO=	git://github.com/mooz/percol.git
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://github.com/mooz/percol
 COMMENT=	Filter lines interactively in a pipeline
 LICENSE=	mit
-
-GIT_REPOSITORIES=	mooz
-GIT_REPO.mooz=		git://github.com/mooz/percol.git
-GIT_MODULE.mooz=	percol
-WRKSRC=			${WRKDIR}/percol
 
 SUBST_CLASSES+=		migemo
 SUBST_STAGE.migemo=	pre-build

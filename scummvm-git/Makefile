@@ -2,6 +2,7 @@
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
+GIT_REPO=	git@github.com:scummvm/scummvm.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scummvm.sourceforge.net/
@@ -15,14 +16,8 @@ USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--mandir=${LOCALBASE}/${PKGMANDIR}
-WRKSRC=			${WRKDIR}/scummvm
 
 .include "options.mk"
-
-GIT_REPOSITORIES=	scummvm
-GIT_REPO.scummvm=	git@github.com:scummvm/scummvm.git
-
-.include "../../wip/mk/git-package.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,4 +37,5 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0.4
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

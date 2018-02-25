@@ -4,9 +4,7 @@ DISTNAME=	boinc-7.9.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BOINC/}
 
-GIT_REPOSITORIES=	boinc
-GIT_REPO.boinc=		https://github.com/BOINC/boinc.git
-WRKSRC=			${WRKDIR}/boinc
+GIT_REPO=	https://github.com/BOINC/boinc.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://boinc.berkeley.edu/

@@ -1,11 +1,8 @@
 # $NetBSD: Makefile,v 1.3 2015/04/25 10:01:54 krytarowski Exp $
 
-GIT_REPOSITORIES=	cli
-GIT_REPO.cli=		https://github.com/dotnet/cli.git
-
-DISTNAME=	cli
-PKGNAME=	cli-0.0.0
+DISTNAME=	cli-0.0.0
 CATEGORIES=	devel
+GIT_REPO=	https://github.com/dotnet/cli.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dotnet/cli
@@ -19,7 +16,7 @@ USE_TOOLS+=	bash
 REPLACE_BASH+=	build.sh
 
 do-build:
-		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
+	${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"

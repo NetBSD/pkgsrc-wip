@@ -2,11 +2,7 @@
 
 DISTNAME=	toxcore-0.2.0
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=toktok/}
-
-GIT_REPOSITORIES=	c-toxcore
-GIT_REPO.c-toxcore=	http://github.com/toktok/c-toxcore.git
-WRKSRC=			${WRKDIR}/c-toxcore
+GIT_REPO=	https://github.com/toktok/c-toxcore.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tox.chat/
