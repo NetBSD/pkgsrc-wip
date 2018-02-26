@@ -1,5 +1,0 @@
-Before updating net/mitmproxy the following steps are needed:
-
- - Import wip/py-h11 as www/py-h11
- - Import wip/py-wsproto as www/py-wsproto
- - Adjust py-h11 and py-wsproto DEPENDS in Makefile

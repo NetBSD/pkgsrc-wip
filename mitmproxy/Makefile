@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.10.0:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-construct>=2.5.2:../../devel/py-construct
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.1.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-cssutils>=1.0.1:../../textproc/py-cssutils
-DEPENDS+=	${PYPKGPREFIX}-h11>=0.7.0:../../wip/py-h11
+DEPENDS+=	${PYPKGPREFIX}-h11>=0.7.0:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-h2>=3.0.1:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-hpack>=2.1.0:../../net/py-hpack
 DEPENDS+=	${PYPKGPREFIX}-html2text>=2016.1.8:../../textproc/py-html2text
@@ -36,7 +36,7 @@ DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.5.4:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.0.1:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.8.3:../../sysutils/py-watchdog
-DEPENDS+=	${PYPKGPREFIX}-wsproto>=0.11.0:../../wip/py-wsproto
+DEPENDS+=	${PYPKGPREFIX}-wsproto>=0.11.0:../../www/py-wsproto
 
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
