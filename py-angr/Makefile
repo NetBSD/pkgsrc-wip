@@ -15,6 +15,8 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
 
+MAKE_FLAGS+=	LIBDIR=${LIBDIR:Q}
+
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
@@ -26,7 +28,6 @@ DEPENDS+=	${PYPKGPREFIX}-pyvex-[0-9]*:../../wip/py-pyvex
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../emulators/unicorn/buildlink3.mk"
 .include "../../wip/py-pyvex/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
