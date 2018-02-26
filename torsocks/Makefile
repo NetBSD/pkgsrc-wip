@@ -47,8 +47,6 @@ SUBST_MESSAGE.man=	Fix hardcoded paths in man pages
 SUBST_FILES.man=	doc/torsocks.1 doc/torsocks.8 doc/torsocks.conf.5
 SUBST_SED.man=		-e 's;/etc/tor;${PKG_SYSCONFDIR};g'
 
-.include "../../mk/bsd.prefs.mk"
-
 TEST_TARGET=	check
 
 post-install:
