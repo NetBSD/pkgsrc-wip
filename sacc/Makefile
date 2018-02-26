@@ -13,6 +13,7 @@ LICENSE=	isc
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
 MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}/man1"
+MAKE_FLAGS+=	LIBS=${BUILDLINK_LDADD.terminfo}
 
-.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
