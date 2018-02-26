@@ -8,7 +8,7 @@ LIBDJCONSOLE_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libdjconsole+=	libdjconsole>=0.1.3nb1
 BUILDLINK_PKGSRCDIR.libdjconsole?=	../../wip/libdjconsole
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../mk/libusb.mk"
 .endif	# LIBDJCONSOLE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libdjconsole

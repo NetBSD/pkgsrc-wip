@@ -16,7 +16,7 @@ pkgbase := gnokii
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.gnokii:Mlibusb)
-.include "../../devel/libusb/buildlink3.mk"
+.include "../mk/libusb.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.gnokii:Mmysql)
