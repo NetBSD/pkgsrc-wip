@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://labs.o-hand.com/sources/xoo/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://labs.o-hand.com/xoo/
+HOMEPAGE=	https://github.com/freedesktop/xoo
 COMMENT=	Graphical wrapper around Xnest/Xephyr
 
 LICENSE=	gnu-gpl-v2
