@@ -1,0 +1,16 @@
+$NetBSD$
+
+Add support for NetBSD.
+
+--- native/Makefile.orig	2018-02-25 22:30:58.000000000 +0000
++++ native/Makefile
+@@ -5,6 +5,9 @@ endif
+ ifeq ($(UNAME), Linux)
+ 	LIB_ANGR_NATIVE=angr_native.so
+ endif
++ifeq ($(UNAME), NetBSD)
++	LIB_ANGR_NATIVE=angr_native.so
++endif
+ 
+ CC := gcc
+ C++C := g++

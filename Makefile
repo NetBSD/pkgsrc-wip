@@ -2918,6 +2918,7 @@ SUBDIR+=	py-algopy
 SUBDIR+=	py-amqpipe
 SUBDIR+=	py-amqplib
 SUBDIR+=	py-anfft
+SUBDIR+=	py-angr
 SUBDIR+=	py-annarchy
 SUBDIR+=	py-antlr3
 SUBDIR+=	py-aopython
