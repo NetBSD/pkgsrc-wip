@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-genesis-plus-gx-20171128
+DISTNAME=	libretro-genesis-plus-gx-20180218
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	Genesis-Plus-GX
-GITHUB_TAG=	4e1b797e86f5f4d1113063037a69ef5dc351aca7
+GITHUB_TAG=	6ba9e05419be9aac338e152a9e3fd27b6f3e2297
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/genesis_plus_gx/
