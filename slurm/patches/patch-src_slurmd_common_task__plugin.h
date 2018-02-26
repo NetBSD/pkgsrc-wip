@@ -1,5 +1,7 @@
 $NetBSD$
 
+# cpuset functions not standardized across platforms
+
 --- src/slurmd/common/task_plugin.h.orig	2018-01-04 21:15:01.000000000 +0000
 +++ src/slurmd/common/task_plugin.h
 @@ -42,6 +42,16 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+# cpuset functions not standardized across platforms
+
 --- src/slurmd/slurmd/slurmd.h.orig	2018-01-04 21:15:01.000000000 +0000
 +++ src/slurmd/slurmd/slurmd.h
 @@ -48,6 +48,16 @@

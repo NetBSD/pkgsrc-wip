@@ -1,5 +1,7 @@
 $NetBSD$
 
+# cpuset functions not standardized across platforms
+
 --- src/slurmd/common/task_plugin.c.orig	2018-01-05 18:03:10.000000000 +0000
 +++ src/slurmd/common/task_plugin.c
 @@ -542,7 +542,11 @@ extern void task_slurm_chkaffinity(cpu_s

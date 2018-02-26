@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Portability
+
 --- src/slurmd/slurmstepd/io.c.orig	2018-01-05 23:43:03.000000000 +0000
 +++ src/slurmd/slurmstepd/io.c
 @@ -45,6 +45,7 @@

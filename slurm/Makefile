@@ -19,15 +19,13 @@ BUILD_DEPENDS+=	man2html-[0-9]*:../../wip/man2html
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl pkg-config
+USE_TOOLS+=	perl pkg-config
 USE_LIBTOOL=	yes
 
 # Help find pkgsrc man2html
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
-# Add mysql option
-CONFIGURE_ARGS+=	--with-mysql_config=/nonexistent
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 
 LDFLAGS+=		-llz4
@@ -69,6 +67,7 @@ SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD
+CONFIGURE_ARGS+=	--with-mysql_config=/nonexistent
 SUBST_CLASSES+=		undef1
 SUBST_STAGE.undef1=	post-configure
 SUBST_FILES.undef1=	src/plugins/acct_gather_profile/hdf5/sh5util/Makefile
@@ -97,10 +96,11 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../databases/mysql57-client/buildlink3.mk"
-# vuln in 55 and 56 .include "../../mk/mysql.buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.if ${OPSYS} == Linux
+.include "../../mk/mysql.buildlink3.mk"
+.endif
 .include "../../mk/pam.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
