@@ -1,30 +1,33 @@
+# $NetBSD$
+#
 # This file provides simple access to svn repositories, so that packages
 # can be created from svn instead of from released tarballs.
 #
-# A package using this file shall define the following variables:
+# Package-settable variables:
 #
-#	SVN_REPOSITORIES
-#		A list of unique identifiers /id/ for which appropriate
-#		SVN_REPO must be defined.
+# SVN_REPOSITORIES (required)
+#	A list of unique identifiers /id/ for which appropriate
+#	SVN_REPO must be defined.
 #
-#	SVN_REPO.${id}
-#		The svn repository
+# SVN_REPO.${id} (required)
+#	The svn repository
 #
-#	SVN_MODULE.${id}
-#		The svn module to check out.
+# SVN_MODULE.${id} (optional)
+#	The svn module to check out.
 #
-#               Default value: ${id}
+#	Default value: ${id}
 #
-# It may define the following variables:
+# SVN_BRANCH.${id} (optional)
+#	The branch to check out. Whenever possible, a fixed revision should
+#	be used instead of a branch.
 #
-#	SVN_BRANCH.${id}
-#		The branch to check out.
+# SVN_REVISION.${id} (optional)
+#	The revision to check out.
 #
-#	SVN_REVISION.${id}
-#		The revision to check out.
+# SVN_ENV.${id} (optional)
+#	The environment for the svn command.
 #
-#	SVN_ENV.${id}
-#		The environment for svn
+# Keywords: svn subversion
 
 .if !defined(_PKG_MK_SVN_PACKAGE_MK)
 _PKG_MK_SVN_PACKAGE_MK=	# defined
@@ -132,6 +135,20 @@ do-svn-extract:
 	${_SVN_EXTRACT_CACHED.${_repo_}};					\
 	${_SVN_FETCH_REPO.${_repo_}};						\
 	${_SVN_CREATE_CACHE.${_repo_}};
+.endfor
+
+# Debug info for show-all and show-all-svn
+_VARGROUPS+=	svn
+_PKG_VARS.svn+=	SVN_REPOSITORIES
+_SYS_VARS.svn+=	DISTFILES PKGREVISION
+_SYS_VARS.svn+=	_SVN_PKGVERSION _SVN_DISTDIR
+.for repo in ${SVN_REPOSITORIES}
+.  for varbase in SVN_REPO SVN_MODULE SVN_REVISION SVN_CERTS
+_PKG_VARS.svn+=	${varbase}.${repo}
+.  endfor
+.  for varbase in _SVN_FLAG _SVN_DISTFILE
+_SYS_VARS.svn+=	${varbase}.${repo}
+.  endfor
 .endfor
 
 .endif

@@ -118,20 +118,6 @@ PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
 
-# Debug info for show-all and show-all-git
-_VARGROUPS+=		git
-_PKG_VARS.git=		GIT_REPOSITORIES
-_PKG_VARS.git+=		GIT_REPO GIT_MODULE GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
-.for repo in ${GIT_REPOSITORIES}
-.  for pkgvar in GIT_REPO GIT_MODULE GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
-_PKG_VARS.git+=		${pkgvar}.${repo}
-.  endfor
-.  for sysvar in _GIT_FLAG _GIT_DISTFILE
-_SYS_VARS.git+=		${sysvar}.${repo}
-.  endfor
-.endfor
-_SYS_VARS.git=		DISTFILES PKGREVISION WRKSRC
-
 #
 # Internal variables
 #
@@ -223,6 +209,20 @@ do-git-extract:
 	${_GIT_FETCH_REPO.${repo}};						\
 	${_GIT_CREATE_CACHE.${repo}};
 
+.endfor
+
+# Debug info for show-all and show-all-git
+_VARGROUPS+=		git
+_PKG_VARS.git=		GIT_REPOSITORIES
+_PKG_VARS.git+=		GIT_REPO GIT_MODULE GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
+_SYS_VARS.git=		DISTFILES PKGREVISION WRKSRC
+.for repo in ${GIT_REPOSITORIES}
+.  for varbase in GIT_REPO GIT_MODULE GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
+_PKG_VARS.git+=		${varbase}.${repo}
+.  endfor
+.  for varbase in _GIT_FLAG _GIT_DISTFILE
+_SYS_VARS.git+=		${varbase}.${repo}
+.  endfor
 .endfor
 
 .endif

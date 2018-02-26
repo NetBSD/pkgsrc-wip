@@ -1,5 +1,5 @@
-# $Id: hg-package.mk,v 1.9 2013/02/19 10:28:14 fhajny Exp $
-
+# $NetBSD$
+#
 # This file provides simple access to Mercurial repositories, so that packages
 # can be created from Mercurial instead of from released tarballs.
 #
@@ -14,22 +14,24 @@
 #
 # === Package-settable variables ===
 #
-# A package using this file shall define the following variables:
+# HG_REPOSITORIES (required)
+#	A list of unique identifiers /id/ for which appropriate
+#	HG_REPO must be defined.
 #
-#	HG_REPOSITORIES
-#		A list of unique identifiers /id/ for which appropriate
-#		HG_REPO must be defined.
+# HG_REPO.${id} (required)
+#	The Mercurial repository URL.
 #
-#	HG_REPO.${id}
-#		The Mercurial repository
+#	Example: https://hg.mozilla.org/projects/nspr
 #
-# It may define the following variables:
+# HG_TAG.${id} (optional)
+#	The Mercurial tag to check out.
 #
-#	HG_TAG
-#		The HG tag to check out (default: HEAD).
+#	Default: ${HG_TAG}
 #
-#	HG_TAG.${id}
-#		Overridable HG tag for a repository.
+# HG_TAG (optional)
+#	The fallback Mercurial tag to check out.
+#
+#	Default: HEAD
 #
 
 .if !defined(_PKG_MK_HG_PACKAGE_MK)
@@ -171,6 +173,21 @@ do-hg-extract:
 		${SETENV} ${_HG_ENV}					\
 			${_HG_CMD} update -C ${_HG_FLAGS})		\
 	fi
+.endfor
+
+# Debug info for show-all and show-all-hg
+_VARGROUPS+=	hg
+_USR_VARS.hg+=	HG_DISTDIR
+_PKG_VARS.hg+=	HG_TAG CHECKOUT_DATE HG_REPOSITORIES
+_SYS_VARS.hg+=	DISTFILES PKGNAME PKGREVISION HG_ROOT_SOURCEFORGE HG_PROJECT
+_SYS_VARS.hg+=	_HG_PKGVERSION
+.for repo in ${HG_REPOSITORIES}
+.  for varbase in HG_REPO HG_MODULE HG_TAG
+_PKG_VARS.hg+=	${varbase}.${repo}
+.  endfor
+.  for varbase in _HG_TAG_FLAG _HG_TAG _HG_DISTFILE
+_SYS_VARS.hg+=	${varbase}.${repo}
+.  endfor
 .endfor
 
 .endif

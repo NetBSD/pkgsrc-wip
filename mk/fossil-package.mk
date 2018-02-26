@@ -1,28 +1,28 @@
+# $NetBSD$
+#
 # This file provides simple access to Fossil repositories, so that packages
 # can be created from Fossil instead of from released tarballs.
 #
-# A package using this file shall define the following variables:
+# Package-settable variables:
 #
-#	FOSSIL_REPOSITORIES
-#		A list of unique identifiers /id/ for which appropriate
-#		FOSSIL_REPO must be defined.
+# FOSSIL_REPOSITORIES (required)
+#	A list of unique identifiers /id/ for which appropriate
+#	FOSSIL_REPO must be defined.
 #
-#	FOSSIL_REPO.${id}
-#		The fossil repository
+# FOSSIL_REPO.${id} (required)
+#	The fossil repository
 #
-# It may define the following variables:
+# FOSSIL_BRANCH.${id} (optional)
+#	The branch to check out.
 #
-#	FOSSIL_BRANCH.${id}
-#		The branch to check out.
+# FOSSIL_REVISION.${id} (optional)
+#	The revision to check out.
 #
-#	FOSSIL_REVISION.${id}
-#		The revision to check out.
+# FOSSIL_TAG.${id} (optional)
+#	Overridable FOSSIL tag for a repository.
 #
-#	FOSSIL_TAG.${id}
-#		Overridable FOSSIL tag for a repository.
-#
-#	FOSSIL_ENV.${id}
-#		The environment for fossil, to set e.g. FOSSIL_SSL_NO_VERIFY=true
+# FOSSIL_ENV.${id} (optional)
+#	The environment for fossil, to set e.g. FOSSIL_SSL_NO_VERIFY=true
 
 .if !defined(_PKG_MK_FOSSIL_PACKAGE_MK)
 _PKG_MK_FOSSIL_PACKAGE_MK=	# defined
@@ -142,6 +142,20 @@ do-fossil-extract:
 	${_FOSSIL_OPEN_REPO.${_repo_}};						\
 	${_FOSSIL_PULL_VERSION.${_repo_}};
 
+.endfor
+
+# Debug info for show-all and show-all-fossil
+_VARGROUPS+=		fossil
+_PKG_VARS.fossil+=	FOSSIL_REPOSITORIES
+_SYS_VARS.fossil+=	DISTFILES PKGREVISION
+_SYS_VARS.fossil+=	_FOSSIL_PKGVERSION _FOSSIL_DISTDIR
+.for repo in ${FOSSIL_REPOSITORIES}
+.  for varbase in FOSSIL_REPO FOSSIL_MODULE FOSSIL_ENV FOSSIL_BRANCH FOSSIL_REVISION FOSSIL_TAG
+_PKG_VARS.fossil+=	${varbase}.${repo}
+.  endfor
+.  for varbase in _FOSSIL_ENV _FOSSIL_FLAG _FOSSIL_DISTFILE _FOSSIL_CLONE
+_SYS_VARS.fossil+=	${varbase}.${repo}
+.  endfor
 .endfor
 
 .endif

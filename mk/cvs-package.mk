@@ -1,25 +1,13 @@
-# $Id: cvs-package.mk,v 1.44 2013/02/19 10:28:14 fhajny Exp $
-
+# $NetBSD$
+#
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
 # package is fetched from CVS, an archive is created from it and saved
 # in ${DISTDIR}/cvs-packages, to save bandwidth.
 #
-# === User-settable variables ===
-#
-# CHECKOUT_DATE
-#	Date to check out in ISO format (YYYY-MM-DD).
-#
 # === Package-settable variables ===
 #
-# A package using this file shall define the following variables:
-#
-# CVS_REPOSITORIES
-#	A list of unique identifiers. For each of those identifiers, the
-#	following variables define the details of how to access the
-#	CVS repository.
-#
-# CVS_ROOT.${id}
+# CVS_ROOT (required)
 #	The CVSROOT for the CVS repository, including anoncvs password,
 #	if applicable.
 #
@@ -27,23 +15,48 @@
 #		${CVS_ROOT_GNU}/emacs
 #		:pserver:anoncvs:@anoncvs.example.com:/cvsroot/project
 #
-# CVS_MODULE.${id}
+# CVS_MODULE (optional)
+#	The CVS module to check out. This typically corresponds to one
+#	of the directories below CVS_ROOT.
+#
+#	Default: ${PKGBASE}
+#
+# CVS_TAG (optional)
+#	The CVS tag that is checked out. If no tag is specified, the
+#	latest daily version is checked out, influencing the PKGREVISION.
+#
+#	Default: (today at midnight)
+#	Example: v1.0.0
+#
+# CHECKOUT_DATE (optional)
+#	Date to check out in ISO format (YYYY-MM-DD).
+#
+# If a package needs to checkout from more than one CVS repository, the
+# setup is a little more complicated, using parameterized variables as
+# variants of the above variables.
+#
+# CVS_REPOSITORIES (required)
+#	A list of unique identifiers. For each of those identifiers, the
+#	following variables define the details of how to access the
+#	CVS repository.
+#
+# CVS_ROOT.${id} (required)
+#	The CVSROOT for the CVS repository, including anoncvs password,
+#	if applicable.
+#
+#	Examples:
+#		${CVS_ROOT_GNU}/emacs
+#		:pserver:anoncvs:@anoncvs.example.com:/cvsroot/project
+#
+# CVS_MODULE.${id} (optional)
 #	The CVS module to check out.
 #
 #	Default value: ${id}
 #
-# It may define the following variables:
-#
-# CVS_TAG.${id}
-#	Overridable CVS tag for a repository.
+# CVS_TAG.${id} (optional)
+#	The CVS tag to check out.
 #
 #	Default: ${CVS_TAG} (today at midnight)
-#
-# CVS_TAG
-#	The default CVS tag that is checked out. May be overridden by
-#	CVS_TAG.${id}.
-#
-#	Default value: today at midnight.
 #
 # CVS_PROJECT
 #	The project name to be used in CVS_ROOT_SOURCEFORGE.
@@ -93,9 +106,9 @@ PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-cvs-${_CVS_PKGVERSION}
 # Enforce PKGREVISION unless CVS_TAG is set:
 .if empty(CVS_TAG)
 . if defined(CHECKOUT_DATE)
-PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
+PKGREVISION?=		${CHECKOUT_DATE:S/-//g}
 . else
-PKGREVISION?=		$(_CVS_PKGVERSION:S/.//g)
+PKGREVISION?=		${_CVS_PKGVERSION:S/.//g}
 . endif
 .endif
 
@@ -116,6 +129,17 @@ CVS_PROJECT?=		${PKGBASE}
 #
 # Input validation
 #
+
+# The common case of a single CVS repository.
+.if defined(CVS_ROOT)
+CVS_REPOSITORIES+=	_default
+.  for varbase in CVS_ROOT CVS_MODULE CVS_TAG
+.    if defined(${varbase})
+${varbase}._default=	${${varbase}}
+.    endif
+.  endfor
+.endif
+
 
 .if !defined(CVS_REPOSITORIES)
 PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORIES must be set."
@@ -176,9 +200,9 @@ _CVS_DISTFILE.${repo}=	${PKGBASE}-${CVS_MODULE.${repo}}-${_CVS_TAG.${repo}}.tar.
 
 #   command to extract cache file
 _CVS_EXTRACT_CACHED.${repo}=	\
-	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then		\
+	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then	\
 	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
-	  gzip -d -c ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} | pax -r;	\
+	  gzip -d -c ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} | pax -r; \
 	  exit 0;							\
 	fi
 
@@ -194,9 +218,9 @@ pre-extract: do-cvs-extract
 do-cvs-extract: .PHONY
 .for repo in ${CVS_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
-	if [ ! -d ${_CVS_DISTDIR} ]; then mkdir -p ${_CVS_DISTDIR:Q}; fi;	\
+	if [ ! -d ${_CVS_DISTDIR} ]; then mkdir -p ${_CVS_DISTDIR:Q}; fi; \
 	${_CVS_EXTRACT_CACHED.${repo}};					\
-	p="$$(cd ${_CVS_DISTDIR} && ls -t ${PKGBASE}-${CVS_MODULE.${repo}}-* | head -n 1)";	\
+	p="$$(cd ${_CVS_DISTDIR} && ls -t ${PKGBASE}-${CVS_MODULE.${repo}}-* | head -n 1)"; \
 	if [ -n "$$p" ]; then						\
 	  ${STEP_MSG} "Extracting cached CVS archive \"""$$p\".";	\
 	  pax -r -z -f ${_CVS_DISTDIR:Q}/"$$p";				\
@@ -214,8 +238,23 @@ do-cvs-extract: .PHONY
 	${SETENV} ${_CVS_ENV}						\
 	  ${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${repo}:Q}		\
 	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${repo}}	\
-	      -d ${repo} ${CVS_MODULE.${repo}:Q};				\
+	      -d ${repo} ${CVS_MODULE.${repo}:Q};			\
 	${_CVS_CREATE_CACHE.${repo}}
+.endfor
+
+# Debug info for show-all and show-all-cvs
+_VARGROUPS+=		cvs
+_PKG_VARS.cvs+=		CVS_ROOT CVS_MODULE CVS_TAG CHECKOUT_DATE CVS_REPOSITORIES
+_SYS_VARS.cvs+=		DISTFILES PKGNAME PKGREVISION
+_SYS_VARS.cvs+=		CVS_ROOT_GNU CVS_ROOT_NONGNU CVS_ROOT_SOURCEFORGE CVS_PROJECT
+_SYS_VARS.cvs+=		_CVS_DISTDIR _CVS_PKGVERSION
+.for repo in ${CVS_REPOSITORIES}
+.  for pkgvar in CVS_ROOT CVS_MODULE CVS_TAG
+_PKG_VARS.cvs+=		${pkgvar}.${repo}
+.  endfor
+.  for sysvar in _CVS_DISTFILE
+_SYS_VARS.cvs+=		${sysvar}.${repo}
+.  endfor
 .endfor
 
 .endif
