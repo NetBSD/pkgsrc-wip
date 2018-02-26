@@ -1,9 +1,10 @@
 $NetBSD$
 
 Add support for NetBSD.
+Correct the syntax for GCC in C99 mode.
 
---- /home/khorben/Projects/EdgeBSD/pkgsrc/work/devel/py-pyvex/work/pyvex-29e88cbd20d628421a903e3dfec0027dd01be233/pyvex_c/Makefile.orig	2018-02-26 00:34:40.853208566 +0000
-+++ /home/khorben/Projects/EdgeBSD/pkgsrc/work/devel/py-pyvex/work/pyvex-29e88cbd20d628421a903e3dfec0027dd01be233/pyvex_c/Makefile
+--- pyvex_c/Makefile.orig	2018-02-21 22:03:16.000000000 +0000
++++ pyvex_c/Makefile
 @@ -9,6 +9,11 @@ ifeq ($(UNAME), Linux)
  	STATIC_LIBRARY_FILE=libpyvex.a
  	LDFLAGS=-Wl,-soname,$(LIBRARY_FILE)
@@ -16,3 +17,12 @@ Add support for NetBSD.
  ifeq ($(findstring MINGW,$(UNAME)), MINGW)
  	LIBRARY_FILE=pyvex.dll
  	STATIC_LIBRARY_FILE=libpyvex.a
+@@ -18,7 +23,7 @@ endif
+ CC=gcc
+ AR=ar
+ INCFLAGS=-I $(VEX_INCLUDE_PATH)
+-CFLAGS=-g -O2 -shared -fPIC --std=c99 $(INCFLAGS)
++CFLAGS=-g -O2 -shared -fPIC -std=c99 $(INCFLAGS)
+ 
+ OBJECTS=pyvex.o logging.o
+ 
