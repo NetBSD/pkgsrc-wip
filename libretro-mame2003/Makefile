@@ -15,8 +15,10 @@ EXTRACT_USING=	bsdtar
 
 .include "../../mk/endian.mk"
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 .if ${MACHINE_ENDIAN} == "big"
-BUILD_MAKE_FLAGS+=	BIGENDIAN=1
+MAKE_FLAGS+=	BIGENDIAN=1
 .endif
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro

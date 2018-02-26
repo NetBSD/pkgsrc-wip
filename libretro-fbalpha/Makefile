@@ -12,10 +12,10 @@ COMMENT=	Libretro core based on the FB Alpha arcade emulator
 LICENSE=	no-commercial-use
 
 USE_TOOLS=	gmake
-
 MAKE_FILE=	makefile.libretro
-
 USE_LANGUAGES=	c c++
+
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 .include "../../mk/endian.mk"
 

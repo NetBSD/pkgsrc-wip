@@ -13,6 +13,8 @@ USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
 EXTRACT_USING=	bsdtar
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 .include "options.mk"

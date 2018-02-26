@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 .include "../../mk/endian.mk"
 
 .if ${MACHINE_ENDIAN} == "big"

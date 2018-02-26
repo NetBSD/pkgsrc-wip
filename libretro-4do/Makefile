@@ -10,6 +10,7 @@ HOMEPAGE=	https://wiki.libretro.com/index.php?title=4DO
 COMMENT=	Libretro core for 3DO emulation
 
 USE_TOOLS=	gmake
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 .include "../../mk/endian.mk"
 

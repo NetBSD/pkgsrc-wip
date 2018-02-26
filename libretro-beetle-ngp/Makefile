@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 .include "../../mk/endian.mk"
 
@@ -20,6 +21,7 @@ USE_LANGUAGES=	c c++
 CFLAGS+=	-DMSB_FIRST
 .endif
 
+BUILD_MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:

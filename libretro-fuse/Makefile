@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS=	gmake
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 .include "../../mk/endian.mk"
 
 .if ${MACHINE_ENDIAN} == "big"

@@ -12,6 +12,8 @@ LICENSE=	no-commercial-use
 
 USE_TOOLS=	gmake
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:

@@ -24,6 +24,8 @@ WRKSRC=		${WRKDIR}/picodrive-${PICODRIVE_TAG}
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 .include "../../mk/bsd.fast.prefs.mk"
 
 NOT_FOR_PLATFORM=	${BIGENDIANPLATFORMS}

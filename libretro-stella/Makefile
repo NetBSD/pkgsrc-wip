@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:

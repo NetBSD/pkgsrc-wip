@@ -18,6 +18,8 @@ MAKE_FILE=	Makefile.libretro
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 .include "../../mk/bsd.prefs.mk"
 
 # The networking code currently uses non-portable Linux-specific calls.

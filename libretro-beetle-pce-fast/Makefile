@@ -16,6 +16,8 @@ EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
 PKGCONFIG_OVERRIDE+=	mednafen/tremor/vorbisidec.pc.in
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro

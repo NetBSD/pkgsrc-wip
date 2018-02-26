@@ -10,8 +10,9 @@ COMMENT=	Libretro core for Vectrex emulation
 LICENSE=	gnu-gpl-v3
 
 MAKE_FILE=	Makefile.libretro
-
 USE_TOOLS=	gmake
+
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
