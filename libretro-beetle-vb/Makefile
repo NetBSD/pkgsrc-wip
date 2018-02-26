@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-vb-libretro
 GITHUB_TAG=	2b8353257abd61786b80ad5a7de006f65521a8ba
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_VB
+HOMEPAGE=	https://docs.libretro.com/library/beetle_vb/
 COMMENT=	Libretro core based on the Mednafen VirtualBoy emulator
 LICENSE=	gnu-gpl-v2
 

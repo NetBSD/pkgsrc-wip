@@ -5,7 +5,7 @@ DISTNAME=	libretro-np2kai-0.${NP2KAI_REV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AZO234/}
 
-HOMEPAGE=	https://github.com/AZO234/NP2kai
+HOMEPAGE=	https://docs.libretro.com/library/neko_project_ii_kai/
 COMMENT=	Libretro core based on the Neko Project II PC-9801 emulator
 LICENSE=	mit
 
