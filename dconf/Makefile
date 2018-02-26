@@ -21,9 +21,12 @@ SUBST_STAGE.sysdir=	post-configure
 SUBST_FILES.sysdir+=	engine/dconf-engine-source-system.c
 SUBST_FILES.sysdir+=	engine/dconf-engine-profile.c
 SUBST_FILES.sysdir+=	tests/engine.c
-SUBST_FILES.sysdir+=	bin/dconf-update.c
 SUBST_FILES.sysdir+=	bin/dconf-update.vala
 SUBST_SED.sysdir=	-e s,/etc,${PKG_SYSCONFDIR},g
+
+# wants to run dconf-scan, but that does not find its library libdconf.so.1
+#MESON_ARGS+=		-D enable-gtk-doc=true
+MESON_ARGS+=		-D enable-man=true
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,6 +45,7 @@ BUILDLINK_DEPMETHOD.vala=	build
 BUILDLINK_API_DEPENDS.vala+=	vala>=0.18.0
 .include "../../lang/vala/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
+#.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/py-meson/build.mk"
