@@ -57,17 +57,11 @@ REPLACE_PERL+=		util/elegant-sort.pl
 PLIST_SRC=		PLIST
 
 PKG_SYSCONFSUBDIR=	gnucash
-CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
-CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
-INSTALLATION_DIRS=	share/examples/gnucash/gnucash
+CONF_FILES+=		${PREFIX}/share/examples/gnucash/environment ${PKG_SYSCONFDIR}/environment
+INSTALLATION_DIRS=	share/examples/gnucash
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/config ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/config
-	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/gnucash/environment
-
-# remove after 2.7.5
-pre-patch:
-	${MKDIR} -p ${WRKSRC}/gnucash/ugly-hack
+	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/environment
 
 .include "options.mk"
 
