@@ -13,5 +13,5 @@ fetch-inplace-vex:
 
 extract-inplace-vex:
 	(${MAKE} -f vex.mk WRKDIR=${WRKSRC}/.devel.vex EXTRACT_DIR=${WRKSRC} \
-		WRKSRC='$${EXTRACT_DIR}/$${DISTNAME:C/a$$//}' SKIP_DEPENDS=YES patch)
+		WRKSRC='$${EXTRACT_DIR}/$${DISTNAME:C/a$$//}' SKIP_DEPENDS=YES extract)
 	${MV} ${WRKSRC}/vex-* ${WRKSRC}/vex
