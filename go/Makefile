@@ -69,6 +69,7 @@ CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/compile
 CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/link
 # also does not support SSP at this time
 CHECK_SSP_SKIP=			${CHECK_RELRO_SKIP}
+CHECK_SSP_SKIP+=		go/pkg/bootstrap/bin/cgo
 
 # uses /bin/rc (for Plan 9)
 CHECK_INTERPRETER_SKIP+=	go/include/plan9/mklibc.rc
@@ -82,7 +83,11 @@ GOROOT_BOOTSTRAP=	${PREFIX}/go14
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	route
+PLIST_VARS+=	pty route
+
+.if ${OPSYS} != "SunOS"
+PLIST.pty=	yes
+.endif
 
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PLIST.route=	yes

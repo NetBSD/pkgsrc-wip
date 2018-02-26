@@ -1321,7 +1321,7 @@ go/pkg/${GO_PLATFORM}/net/url.a
 go/pkg/${GO_PLATFORM}/os.a
 go/pkg/${GO_PLATFORM}/os/exec.a
 go/pkg/${GO_PLATFORM}/os/signal.a
-go/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
+${PLIST.pty}go/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
 go/pkg/${GO_PLATFORM}/os/user.a
 go/pkg/${GO_PLATFORM}/path.a
 go/pkg/${GO_PLATFORM}/path/filepath.a
