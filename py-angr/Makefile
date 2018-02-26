@@ -27,5 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-pyvex-[0-9]*:../../wip/py-pyvex
 PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../emulators/unicorn/buildlink3.mk"
+.include "../../wip/py-pyvex/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
