@@ -4,4 +4,4 @@ SHA1 (mitmproxy-3.0.3.tar.gz) = 73c5df44ec8ebfe7bef672234578f31473cc714d
 RMD160 (mitmproxy-3.0.3.tar.gz) = 071de5dfd7b519d4be0c910127e749b46f663987
 SHA512 (mitmproxy-3.0.3.tar.gz) = 5477b8ac438b8f2ea40e658c50988881ef0f3eeda3178b2fbed9618d2a490c28f59b32174e150d8cbeb1b04b4b868a64029bde6499983dff782d4204aa0f8d37
 Size (mitmproxy-3.0.3.tar.gz) = 27171521 bytes
-SHA1 (patch-setup.py) = 0e5f67a06971016da1ab8c766dece23d06a95f8e
+SHA1 (patch-setup.py) = e692d17abb332a61d4cfec52ab17d0c93d84180a

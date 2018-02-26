@@ -2,13 +2,6 @@ $NetBSD: patch-setup.py,v 1.5 2017/04/14 13:15:04 leot Exp $
 
 Avoid too strict version requirements.
 
-XXX: pyperclip>=1.5.22 is just a kludge to avoid updating x11/py-pyperclip.
-XXX: Before updating net/mitmproxy the requirement should be bumped to 1.6.0
-XXX: here and in Makefile accordingly.
-XXX: Please see:
-XXX:  <https://github.com/mitmproxy/mitmproxy/commit/d1ecf9df9431397e5e7e6fee58c7b04c6f37a44b>
-XXX: if you are more interested.
-
 --- setup.py.orig	2018-02-22 12:17:33.000000000 +0000
 +++ setup.py
 @@ -61,47 +61,47 @@ setup(
@@ -49,7 +42,7 @@ XXX: if you are more interested.
 +        "pyasn1>=0.3.1",
 +        "pyOpenSSL>=17.5",
 +        "pyparsing>=2.1.3",
-+        "pyperclip>=1.5.22",
++        "pyperclip>=1.6.0",
 +        "requests>=2.9.1",
 +        "ruamel.yaml>=0.13.2",
 +        "sortedcontainers>=1.5.4",
