@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/02/05 16:57:53 wiz Exp $
 
-PKGNAME=	libretro-picodrive-20171021
+PKGNAME=	libretro-picodrive-20180131
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://docs.libretro.com/library/picodrive/
 COMMENT=	Libretro core for emulating Sega 8/16-bit consoles & 32X
 LICENSE=	picodrive-license
 
-PICODRIVE_TAG=	084a4f24258cce81fb248739494ebee7339b7761
+PICODRIVE_TAG=	f5d7a8de11ea60fa319a20277c9c502d82911d81
 CYCLONE_TAG=	b889883d36b2d247488c82d79d1eaab4dd41d236
 
 DISTFILES+=	${PICODRIVE_TAG}.tar.gz
