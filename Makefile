@@ -3251,7 +3251,6 @@ SUBDIR+=	py-guppy
 SUBDIR+=	py-gvar
 SUBDIR+=	py-gwpy
 SUBDIR+=	py-gwsurrogate
-SUBDIR+=	py-h11
 SUBDIR+=	py-hamilton
 SUBDIR+=	py-hamnonlineng
 SUBDIR+=	py-hamopy
