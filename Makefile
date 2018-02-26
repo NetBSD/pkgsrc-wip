@@ -2064,7 +2064,6 @@ SUBDIR+=	mipscope
 SUBDIR+=	miracl
 SUBDIR+=	mirage
 SUBDIR+=	miro
-SUBDIR+=	mitmproxy
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 #SUBDIR+=	mk 		# not a package
