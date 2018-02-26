@@ -1,0 +1,18 @@
+$NetBSD$
+
+Add support for NetBSD.
+
+--- /home/khorben/Projects/EdgeBSD/pkgsrc/work/devel/py-pyvex/work/pyvex-29e88cbd20d628421a903e3dfec0027dd01be233/pyvex_c/Makefile.orig	2018-02-26 00:34:40.853208566 +0000
++++ /home/khorben/Projects/EdgeBSD/pkgsrc/work/devel/py-pyvex/work/pyvex-29e88cbd20d628421a903e3dfec0027dd01be233/pyvex_c/Makefile
+@@ -9,6 +9,11 @@ ifeq ($(UNAME), Linux)
+ 	STATIC_LIBRARY_FILE=libpyvex.a
+ 	LDFLAGS=-Wl,-soname,$(LIBRARY_FILE)
+ endif
++ifeq ($(UNAME), NetBSD)
++	LIBRARY_FILE=libpyvex.so
++	STATIC_LIBRARY_FILE=libpyvex.a
++	LDFLAGS=-Wl,-soname,$(LIBRARY_FILE)
++endif
+ ifeq ($(findstring MINGW,$(UNAME)), MINGW)
+ 	LIBRARY_FILE=pyvex.dll
+ 	STATIC_LIBRARY_FILE=libpyvex.a
