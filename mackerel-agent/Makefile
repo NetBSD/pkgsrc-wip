@@ -24,7 +24,7 @@ PKG_USERS=	${MACKEREL_USER}:${MACKEREL_GROUP}
 INSTALLATION_DIRS+=	bin share/examples/mackerelagent
 
 EGDIR=		${PREFIX}/share/examples/mackerelagent
-CONF_FILES=	${EGDIR}/mackerelagent.sample.conf ${PKG_SYSCONFDIR}/mackerelagent.sample.conf
+CONF_FILES=	${EGDIR}/mackerelagent.sample.conf ${PKG_SYSCONFDIR}/mackerelagent.conf
 
 MACKEREL_ROOTDIR=	${VARBASE}/lib/mackerelagent
 MAKE_DIRS=		${MACKEREL_ROOTDIR}
