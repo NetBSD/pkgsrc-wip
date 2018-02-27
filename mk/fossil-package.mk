@@ -5,6 +5,18 @@
 #
 # Package-settable variables:
 #
+# FOSSIL_REPO (required)
+#	The URL of the Fossil repository.
+#
+# FOSSIL_REVISION (optional)
+#	The revision, tag or branch to check out.
+#
+#	Default: --latest
+#
+# Packages that access more than one Fossil repository have to list the
+# repositories in FOSSIL_REPOSITORIES and configure the remaining variables
+# for each repository individually.
+#
 # FOSSIL_REPOSITORIES (required)
 #	A list of unique identifiers /id/ for which appropriate
 #	FOSSIL_REPO must be defined.
@@ -43,6 +55,13 @@ PKGREVISION?=		${_FOSSIL_PKGVERSION:S/.//g}
 #
 # Input validation
 #
+
+.if defined(FOSSIL_REPO)
+FOSSIL_REPOSITORIES+=	_default
+FOSSIL_REPO._default=	${FOSSIL_REPO}
+FOSSIL_MODULE._default=	${FOSSIL_REPO:S,/$,,:T}
+WRKSRC?=		${WRKDIR}/${FOSSIL_MODULE._default}
+.endif
 
 .if !defined(FOSSIL_REPOSITORIES)
 PKG_FAIL_REASON+=	"[fossil-package.mk] FOSSIL_REPOSITORIES must be set."
@@ -146,8 +165,8 @@ do-fossil-extract:
 
 # Debug info for show-all and show-all-fossil
 _VARGROUPS+=		fossil
-_PKG_VARS.fossil+=	FOSSIL_REPOSITORIES
-_SYS_VARS.fossil+=	DISTFILES PKGREVISION
+_PKG_VARS.fossil+=	FOSSIL_REPO FOSSIL_MODULE FOSSIL_REPOSITORIES
+_SYS_VARS.fossil+=	DISTFILES PKGREVISION WRKSRC
 _SYS_VARS.fossil+=	_FOSSIL_PKGVERSION _FOSSIL_DISTDIR
 .for repo in ${FOSSIL_REPOSITORIES}
 .  for varbase in FOSSIL_REPO FOSSIL_MODULE FOSSIL_ENV FOSSIL_BRANCH FOSSIL_REVISION FOSSIL_TAG

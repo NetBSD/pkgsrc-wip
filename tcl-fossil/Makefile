@@ -3,8 +3,7 @@
 PKGNAME=	tcl-${TCL_VERSION}
 CATEGORIES=	lang
 
-FOSSIL_REPOSITORIES=	tcl
-FOSSIL_REPO.tcl=	http://core.tcl.tk/tcl/
+FOSSIL_REPO=	http://core.tcl.tk/tcl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
@@ -12,8 +11,6 @@ COMMENT=	Tool Command Language, a dynamic language
 LICENSE=	2-clause-bsd
 
 .include "../../lang/tcl/Makefile.version"
-
-WRKSRC=			${WRKDIR}/tcl
 
 USE_GCC_RUNTIME=	yes
 
