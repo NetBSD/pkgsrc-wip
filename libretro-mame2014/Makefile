@@ -1,20 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mame2014-20170805
+DISTNAME=	libretro-mame2014-20171231
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	mame2014-libretro
+GITHUB_TAG=	62a932c9435ef89fdb9a1b0c41deadd7f04f53f3
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=MAME_2014
 COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.159)
 LICENSE=	no-commercial-use
 
-GITHUB_PROJECT=	mame2014-libretro
-GITHUB_TAG=	0d8726c9df1e7d20d13f84b31e9b361170806d51
-
 EXTRACT_USING=	bsdtar
 USE_TOOLS=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
@@ -50,7 +49,7 @@ do-install:
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
