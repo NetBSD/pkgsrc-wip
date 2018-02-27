@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-snes9x2010-20171112
+DISTNAME=	libretro-snes9x2010-20180218
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	snes9x2010
-GITHUB_TAG=	cdc2a1f30a08b9e46c14d64de89b250907ec46c7
+GITHUB_TAG=	b9be098d2ea37a5af672e3580d463fc3a89f3902
 
 HOMEPAGE=	https://docs.libretro.com/library/snes9x_2010/
 COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
