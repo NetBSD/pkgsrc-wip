@@ -21,7 +21,8 @@ do-build:
 	cd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH:Q}:${GOPATH}/bin ${MAKE_PROGRAM} build
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build/${LOWER_OPSYS}/${GOARCH}/* ${DESTDIR}${PREFIX}/libexec/mackerelagent
+	${INSTALL_PROGRAM} ${WRKSRC}/build/${LOWER_OPSYS}/${GOARCH}/* \
+		${DESTDIR}${PREFIX}/libexec/mackerelagent
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -39,8 +39,10 @@ do-test:
 	cd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH:Q}:${GOPATH}/bin ${MAKE_PROGRAM} test
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build/mackerel-agent ${DESTDIR}${PREFIX}/bin/mackerelagent
-	${INSTALL_DATA} ${WRKSRC}/mackerel-agent.sample.conf ${DESTDIR}${EGDIR}/mackerelagent.sample.conf
+	${INSTALL_PROGRAM} ${WRKSRC}/build/mackerel-agent \
+		${DESTDIR}${PREFIX}/bin/mackerelagent
+	${INSTALL_DATA} ${WRKSRC}/mackerel-agent.sample.conf \
+		${DESTDIR}${EGDIR}/mackerelagent.sample.conf
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
