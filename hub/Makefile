@@ -15,6 +15,15 @@ GO_SRCPATH=		github.com/github/hub
 
 DEPENDS+=		git-base>=1.7.3:../../devel/git-base
 
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fix hub name in hub(1) man page
+SUBST_FILES.man=	man/hub.1
+SUBST_SED.man+=		-e 's/\\fBgit/\\fBhub/g'
+SUBST_SED.man+=		-e 's/\$$ git/$$ hub/'
+SUBST_SED.man+=		-e '/\$$ GITHUB_HOST=/ s/ git clone / hub clone /'
+SUBST_SED.man+=		-e 's/\.SS "git/.SS "hub/'
+
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 CHECK_RELRO_SKIP+=	bin/hub
