@@ -29,3 +29,38 @@ $NetBSD$
  
  VLC_USED
  static inline unsigned (parity)(unsigned x)
+@@ -602,13 +607,16 @@ static inline unsigned (parity)(unsigned
+ #endif
+ }
+ 
++#ifndef HAVE_BSWAP16
+ /** Byte swap (16 bits) */
+ VLC_USED
+ static inline uint16_t (bswap16)(uint16_t x)
+ {
+     return (x << 8) | (x >> 8);
+ }
++#endif
+ 
++#ifndef HAVE_BSWAP32
+ /** Byte swap (32 bits) */
+ VLC_USED
+ static inline uint32_t (bswap32)(uint32_t x)
+@@ -622,7 +630,9 @@ static inline uint32_t (bswap32)(uint32_
+          | ((x & 0xFF000000) >> 24);
+ #endif
+ }
++#endif
+ 
++#ifndef HAVE_BSWAP64
+ /** Byte swap (64 bits) */
+ VLC_USED
+ static inline uint64_t (bswap64)(uint64_t x)
+@@ -649,6 +659,7 @@ static inline uint64_t (bswap64)(uint64_
+          | ((x & 0xFF00000000000000ULL) >> 56);
+ #endif
+ }
++#endif
+ 
+ /* Integer overflow */
+ static inline bool uadd_overflow(unsigned a, unsigned b, unsigned *res)
