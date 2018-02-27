@@ -3,6 +3,7 @@
 DISTNAME=		pan2-2
 CATEGORIES=		news
 MASTER_SITES=		http://github.com/lostcoder/pan2
+GIT_REPO=		git://git.gnome.org/pan2
 
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://pan.rebelbase.com/
@@ -11,11 +12,6 @@ LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		gnome-common>=3.6.0nb1:../../devel/gnome-common
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
-
-GIT_REPOSITORIES=	gnome
-GIT_REPO.gnome=		git://git.gnome.org/pan2
-GIT_MODULE.gnome=	pan2
-WRKSRC=			${WRKDIR}/pan2
 
 USE_TOOLS+=		autoconf automake gettext-m4 gmake perl pkg-config
 USE_LIBTOOL=		yes

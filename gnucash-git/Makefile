@@ -3,6 +3,7 @@
 DISTNAME=		gnucash-2.7.99
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
+GIT_REPO=		git://github.com/Gnucash/gnucash.git
 EXTRACT_SUFX=		.tar.bz2
 # take copy mirrored on ftp.NetBSD.org for devel/googletest
 # for better DISTNAME
@@ -19,11 +20,6 @@ DEPENDS+=		guile22-slib>=3.2.1:../../devel/guile22-slib
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
-
-GIT_REPOSITORIES=	github
-GIT_MODULE.github=	gnucash
-GIT_REPO.github=	git://github.com/Gnucash/gnucash.git
-WRKSRC=			${WRKDIR}/gnucash
 
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes

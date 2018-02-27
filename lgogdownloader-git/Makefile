@@ -2,7 +2,7 @@
 
 DISTNAME=	lgogdownloader-3.3
 CATEGORIES=	games
-MASTER_SITES=	#
+GIT_REPO=	git://github.com/Sude-/lgogdownloader.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Sude-/lgogdownloader
@@ -11,10 +11,6 @@ COMMENT=	Download games from GOG
 
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
-GIT_REPOSITORIES=		lgogdownloader
-GIT_REPO.lgogdownloader=	git://github.com/Sude-/lgogdownloader.git
-
-WRKSRC=		${WRKDIR}/lgogdownloader
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config

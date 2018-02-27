@@ -4,16 +4,13 @@
 DISTNAME=	emacs-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 PKGNAME=	emacs27-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 CATEGORIES=	editors
-MASTER_SITES=	#
+GIT_REPO=	git://git.sv.gnu.org/emacs.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/emacs/
 COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
-GIT_REPOSITORIES=	master
-GIT_MODULE.master=	emacs
-GIT_REPO.master=	git://git.sv.gnu.org/emacs.git
 _GIT_FLAGS?=		--depth 1
 
 WRKSRC=		${WRKDIR}/emacs
