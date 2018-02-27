@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-02-15 04:24:49.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-02-27 02:50:00.131312840 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
 @@ -15,9 +15,15 @@
  #include "sanitizer_platform.h"
@@ -26,7 +26,7 @@ $NetBSD$
  #include <dev/biovar.h>
  #include <dev/bluetooth/btdev.h>
  #include <dev/bluetooth/btsco.h>
-@@ -203,6 +208,10 @@
+@@ -204,6 +209,10 @@
  #include <utmpx.h>
  #include <wchar.h>
  #include <wordexp.h>
@@ -37,7 +37,7 @@ $NetBSD$
  
  // Include these after system headers to avoid name clashes and ambiguities.
  #include "sanitizer_internal_defs.h"
-@@ -237,6 +246,10 @@ unsigned struct_rlimit_sz = sizeof(struc
+@@ -238,6 +247,10 @@ unsigned struct_rlimit_sz = sizeof(struc
  unsigned struct_timespec_sz = sizeof(struct timespec);
  unsigned struct_sembuf_sz = sizeof(struct sembuf);
  unsigned struct_kevent_sz = sizeof(struct kevent);
@@ -48,9 +48,9 @@ $NetBSD$
  unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
  unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
  unsigned struct_timex_sz = sizeof(struct timex);
-@@ -338,6 +351,11 @@ int glob_altdirfunc = GLOB_ALTDIRFUNC;
+@@ -341,6 +354,11 @@ unsigned path_max = PATH_MAX;
  
- unsigned path_max = PATH_MAX;
+ int struct_ttyent_sz = sizeof(struct ttyent);
  
 +int struct_kinfo_proc_sz = sizeof(struct kinfo_proc);
 +int struct_kinfo_proc2_sz = sizeof(struct kinfo_proc2);

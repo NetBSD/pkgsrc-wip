@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-02-15 04:24:49.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-02-27 02:50:00.133905896 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
 @@ -60,6 +60,15 @@ extern unsigned struct_timespec_sz;
  extern unsigned struct_sembuf_sz;
@@ -18,8 +18,8 @@ $NetBSD$
  
  union __sanitizer_sigval {
    int sival_int;
-@@ -113,6 +122,19 @@ struct __sanitizer_shmid_ds {
-   void *_shm_internal;
+@@ -126,6 +135,19 @@ struct __sanitizer_netent {
+   u32 n_net;
  };
  
 +struct __sanitizer_protoent {
@@ -38,9 +38,9 @@ $NetBSD$
  extern unsigned struct_msqid_ds_sz;
  extern unsigned struct_mq_attr_sz;
  extern unsigned struct_timex_sz;
-@@ -362,6 +384,11 @@ extern int glob_altdirfunc;
+@@ -377,6 +399,11 @@ extern unsigned path_max;
  
- extern unsigned path_max;
+ extern int struct_ttyent_sz;
  
 +extern int struct_kinfo_proc_sz;
 +extern int struct_kinfo_proc2_sz;
@@ -50,7 +50,7 @@ $NetBSD$
  extern int ptrace_pt_io;
  extern int ptrace_pt_lwpinfo;
  extern int ptrace_pt_set_event_mask;
-@@ -383,6 +410,7 @@ extern int ptrace_pt_getfpregs;
+@@ -398,6 +425,7 @@ extern int ptrace_pt_getfpregs;
  extern int ptrace_pt_setdbregs;
  extern int ptrace_pt_getdbregs;
  
@@ -58,8 +58,8 @@ $NetBSD$
  struct __sanitizer_ptrace_io_desc {
    int piod_op;
    void *piod_offs;
-@@ -437,6 +465,53 @@ struct __sanitizer_ifconf {
-   } ifc_ifcu;
+@@ -462,6 +490,53 @@ struct __sanitizer_ttyent {
+   char *ty_class;
  };
  
 +
