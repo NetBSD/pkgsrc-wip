@@ -5,6 +5,16 @@
 # package is fetched from CVS, an archive is created from it and saved
 # in ${DISTDIR}/cvs-packages, to save bandwidth.
 #
+# User-settable variables:
+#
+# CHECKOUT_DATE (optional)
+#	Date to check out in ISO format (YYYY-MM-DD).
+#
+#	When a package doesn't specify a CVS_TAG, it is checked out from
+#	the HEAD revision, and the PKGREVISION is set based on the date.
+#	To keep this date stable during a bulk build (which may span
+#	one or more midnights), this can be set to a fixed date.
+#
 # === Package-settable variables ===
 #
 # CVS_ROOT (required)
@@ -28,9 +38,6 @@
 #	Default: (today at midnight)
 #	Example: v1.0.0
 #
-# CHECKOUT_DATE (optional)
-#	Date to check out in ISO format (YYYY-MM-DD).
-#
 # CVS_EXTRACTDIR (optional)
 #	The directory relative to WRKDIR where the files from the CVS
 #	repository are extracted.
@@ -38,8 +45,8 @@
 #	Default: ${CVS_MODULE}
 #
 # If a package needs to checkout from more than one CVS repository, the
-# setup is a little more complicated, using parameterized variables as
-# variants of the above variables.
+# setup is a little more complicated, using parameterized variants of
+# the above variables.
 #
 # CVS_REPOSITORIES (required)
 #	A list of unique identifiers. For each of those identifiers, the
@@ -146,6 +153,7 @@ CVS_PROJECT?=		${PKGBASE}
 .if defined(CVS_ROOT)
 CVS_MODULE?=		${PKGBASE:S,-cvs$,,}
 CVS_REPOSITORIES+=	_default
+WRKSRC?=		${WRKDIR}/${CVS_MODULE}
 .  for varbase in CVS_ROOT CVS_MODULE CVS_TAG CVS_EXTRACTDIR
 .    if defined(${varbase})
 ${varbase}._default=	${${varbase}}
@@ -181,8 +189,8 @@ _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _CVS_TODAY=		${_CVS_TODAY_CMD:sh}
-_CVS_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
-_CVS_PKGVERSION=	${_CVS_PKGVERSION_CMD:sh}
+_CVS_PKGVERSION_CMD=	${DATE} -u +'%y.%m.%d.%H.%M.%S'
+_CVS_PKGVERSION?=	${_CVS_PKGVERSION_CMD:sh}
 _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
 #
@@ -259,7 +267,7 @@ do-cvs-extract: .PHONY
 # Debug info for show-all and show-all-cvs
 _VARGROUPS+=		cvs
 _PKG_VARS.cvs+=		CVS_ROOT CVS_MODULE CVS_TAG CHECKOUT_DATE CVS_EXTRACTDIR CVS_REPOSITORIES
-_SYS_VARS.cvs+=		DISTFILES PKGNAME PKGREVISION
+_SYS_VARS.cvs+=		DISTFILES PKGNAME PKGREVISION WRKSRC
 _SYS_VARS.cvs+=		CVS_ROOT_GNU CVS_ROOT_NONGNU CVS_ROOT_SOURCEFORGE CVS_PROJECT
 _SYS_VARS.cvs+=		_CVS_DISTDIR _CVS_PKGVERSION
 .for repo in ${CVS_REPOSITORIES}
