@@ -1,15 +1,17 @@
 # $NetBSD$
 
+CATEGORIES=	net
+
+COMMENT=	Monitor I/O latency in real time
+LICENSE=	gnu-gpl-v3
+
 GITHUB_PROJECT=	ioping
 GITHUB_TAG=	v1.0
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
-CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=koct9i/}
 
 MAINTAINER=	miwarin@gmail.com
 HOMEPAGE=	https://github.com/koct9i/ioping/
-COMMENT=	Monitor I/O latency in real time
-LICENSE=	gnu-gpl-v3
 
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV:S/v//}
 
