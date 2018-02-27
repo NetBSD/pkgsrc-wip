@@ -2,13 +2,7 @@
 
 DISTNAME=		vlc-${VLC_VERSION}
 CATEGORIES=		multimedia
-GIT_REPOSITORIES=	vlc
-GIT_REPO.vlc=		https://git.videolan.org/git/vlc/vlc-3.0.git
-#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/}
-#MASTER_SITES+=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
-#EXTRACT_SUFX=		.tar.xz
-
-WRKSRC=			${WRKDIR}/${PKGBASE}
+GIT_REPO=		https://git.videolan.org/git/vlc.git
 
 VLC_VERSION=		3.0.0
 
