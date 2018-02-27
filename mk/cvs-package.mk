@@ -189,7 +189,7 @@ _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _CVS_TODAY=		${_CVS_TODAY_CMD:sh}
-_CVS_PKGVERSION_CMD=	${DATE} -u +'%y.%m.%d.%H.%M.%S'
+_CVS_PKGVERSION_CMD=	${DATE} -u +'%y.%m.%d'
 _CVS_PKGVERSION?=	${_CVS_PKGVERSION_CMD:sh}
 _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
