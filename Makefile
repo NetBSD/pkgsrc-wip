@@ -3117,7 +3117,6 @@ SUBDIR+=	py-django-markwhat
 SUBDIR+=	py-django-mathjax
 SUBDIR+=	py-django-nose
 SUBDIR+=	py-django-quran
-SUBDIR+=	py-django-registration
 SUBDIR+=	py-django-uuidfield
 SUBDIR+=	py-djangopypi2
 SUBDIR+=	py-djvulibre

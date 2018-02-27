@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/01/14 06:52:51 makoto Exp $
-
-SHA1 (django-registration-1.0.tar.gz) = f713f3dac80b56a4f27fe7764f63243aca746033
-RMD160 (django-registration-1.0.tar.gz) = ba9311d320773124683fbef753a894940f033df1
-Size (django-registration-1.0.tar.gz) = 276715 bytes
