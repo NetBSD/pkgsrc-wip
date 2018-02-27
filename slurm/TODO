@@ -1,1 +1,5 @@
-Clean up and test
+Try
+
+static libs only
+autoreconf
+MAKE_JOBS_UNSAFE
