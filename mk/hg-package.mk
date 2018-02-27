@@ -14,6 +14,20 @@
 #
 # === Package-settable variables ===
 #
+# HG_REPO (required)
+#	The Mercurial repository URL.
+#
+#	Example: https://hg.mozilla.org/projects/nspr
+#
+# HG_TAG (optional)
+#	The Mercurial tag to check out.
+#
+#	Default: HEAD
+#
+# If a package needs to checkout from more than one Mercurial repository,
+# the setup is a little more complicated, using parameterized variants of
+# the above variables.
+#
 # HG_REPOSITORIES (required)
 #	A list of unique identifiers /id/ for which appropriate
 #	HG_REPO must be defined.
@@ -58,13 +72,18 @@ PKGREVISION?=		${_HG_PKGVERSION:S/.//g}
 # definition of user-visible output variables
 #
 
-# commonly used repositories
-HG_ROOT_SOURCEFORGE?=	http://${HG_PROJECT}.hg.sourceforge.net:/cvsroot/${HG_PROJECT}
-HG_PROJECT?=		${PKGBASE}
-
 #
 # End of the interface part. Start of the implementation part.
 #
+
+# The common case of a single repository.
+.if defined(HG_REPO)
+HG_MODULE?=		${HG_REPO:S,/$,,:T}
+HG_REPOSITORIES+=	_default
+HG_REPO._default=	${HG_REPO}
+HG_MODULE._default=	${HG_MODULE}
+WRKSRC?=		${WRKDIR}/${HG_MODULE}
+.endif
 
 #
 # Input validation
@@ -177,9 +196,9 @@ do-hg-extract:
 
 # Debug info for show-all and show-all-hg
 _VARGROUPS+=	hg
-_USR_VARS.hg+=	HG_DISTDIR
-_PKG_VARS.hg+=	HG_TAG CHECKOUT_DATE HG_REPOSITORIES
-_SYS_VARS.hg+=	DISTFILES PKGNAME PKGREVISION HG_ROOT_SOURCEFORGE HG_PROJECT
+_USR_VARS.hg+=	CHECKOUT_DATE HG_DISTDIR
+_PKG_VARS.hg+=	HG_REPO HG_MODULE HG_TAG HG_REPOSITORIES
+_SYS_VARS.hg+=	DISTFILES PKGNAME PKGREVISION WRKSRC
 _SYS_VARS.hg+=	_HG_PKGVERSION
 .for repo in ${HG_REPOSITORIES}
 .  for varbase in HG_REPO HG_MODULE HG_TAG

@@ -1,21 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2015/06/06 14:31:26 thomasklausner Exp $
+# $NetBSD$
 
-# necessary because hg-package.mk would override it
-PKGNAME=	nspr-${NSPR_RELEASE}
-DISTNAME=	nspr-${NSPR_RELEASE}
 NSPR_RELEASE=	4.14beta1
+DISTNAME=	nspr-${NSPR_RELEASE}
+PKGNAME=	${DISTNAME} # to prevent hg-package.mk from overriding it
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE}/src/}
+HG_REPO=	https://hg.mozilla.org/projects/nspr
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
 COMMENT=	Platform-neutral API for system level and libc like functions (hg version)
 LICENSE=	mpl-2.0
-
-HG_REPOSITORIES=	nspr
-HG_REPO.nspr=		https://hg.mozilla.org/projects/nspr
-WRKSRC=			${WRKDIR}/nspr
-#WRKSRC=		${WRKDIR}
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}configure

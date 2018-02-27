@@ -5,6 +5,24 @@
 #
 # Package-settable variables:
 #
+# SVN_REPO (required)
+#	The URL of the Subversion repository.
+#
+#	Example: http://svn.code.sf.net/p/projectname/code/trunk
+#
+# SVN_REVISION (optional)
+#	The revision to check out.
+#
+#	Example: 12345
+#
+# SVN_BRANCH (optional)
+#	The branch to check out. Whenever possible, a fixed revision should
+#	be used instead of a branch.
+#
+# If a package needs to checkout from more than one Subversion repository,
+# the setup is a little more complicated, using parameterized variants of
+# the above variables.
+#
 # SVN_REPOSITORIES (required)
 #	A list of unique identifiers /id/ for which appropriate
 #	SVN_REPO must be defined.
@@ -44,6 +62,15 @@ PKGREVISION?=		${_SVN_PKGVERSION:S/.//g}
 #
 # End of the interface part. Start of the implementation part.
 #
+
+# The common case of a single repository.
+.if defined(SVN_REPO)
+SVN_MODULE?=		${SVN_REPO:S,/$,,:S,/trunk,,:S,/code,,:T}
+SVN_REPOSITORIES+=	_default
+SVN_REPO._default=	${SVN_REPO}
+SVN_MODULE._default=	${SVN_MODULE}
+WRKSRC?=		${WRKDIR}/${SVN_MODULE}
+.endif
 
 #
 # Input validation
