@@ -1415,7 +1415,6 @@ SUBDIR+=	html2latex
 SUBDIR+=	htslib
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
-SUBDIR+=	hub
 SUBDIR+=	hungrycat
 SUBDIR+=	hunspell-dictionaries
 SUBDIR+=	hunspell-uk_UA
