@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-snes9x2005-20170826
+DISTNAME=	libretro-snes9x2005-20180221
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	snes9x2005
-GITHUB_TAG=	12b1ae1a13434dd0bdc5305d36811643306d8e3e
+GITHUB_TAG=	ea4775801b424594e309a3413815b67cc53d6ac1
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/snes9x_2005/
