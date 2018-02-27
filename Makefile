@@ -526,6 +526,7 @@ SUBDIR+=	debian_x11
 SUBDIR+=	debootstrap
 SUBDIR+=	debugger-git
 SUBDIR+=	dee
+SUBDIR+=	deepstate
 SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-browser
 SUBDIR+=	deforaos-camera
