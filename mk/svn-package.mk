@@ -15,10 +15,6 @@
 #
 #	Example: 12345
 #
-# SVN_BRANCH (optional)
-#	The branch to check out. Whenever possible, a fixed revision should
-#	be used instead of a branch.
-#
 # If a package needs to checkout from more than one Subversion repository,
 # the setup is a little more complicated, using parameterized variants of
 # the above variables.
@@ -34,10 +30,6 @@
 #	The svn module to check out.
 #
 #	Default value: ${id}
-#
-# SVN_BRANCH.${id} (optional)
-#	The branch to check out. Whenever possible, a fixed revision should
-#	be used instead of a branch.
 #
 # SVN_REVISION.${id} (optional)
 #	The revision to check out.
