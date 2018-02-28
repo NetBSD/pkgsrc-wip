@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-psx-20171207
+DISTNAME=	libretro-beetle-psx-20180223
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-psx-libretro
-GITHUB_TAG=	c9a566475e4cc2ba072a97cbae315c97fe971867
+GITHUB_TAG=	7a7ae882ff2204ac14eeb7ffc3187eb913785fbc
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/beetle_psx/
