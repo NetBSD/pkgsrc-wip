@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-02-27 02:50:00.131312840 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-02-27 02:50:00.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
 @@ -15,9 +15,15 @@
  #include "sanitizer_platform.h"
@@ -48,14 +48,12 @@ $NetBSD$
  unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
  unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
  unsigned struct_timex_sz = sizeof(struct timex);
-@@ -341,6 +354,11 @@ unsigned path_max = PATH_MAX;
+@@ -341,6 +354,9 @@ unsigned path_max = PATH_MAX;
  
  int struct_ttyent_sz = sizeof(struct ttyent);
  
 +int struct_kinfo_proc_sz = sizeof(struct kinfo_proc);
 +int struct_kinfo_proc2_sz = sizeof(struct kinfo_proc2);
-+
-+int struct_ttyent_sz = sizeof(struct ttyent);
 +
  // ioctl arguments
  unsigned struct_altqreq_sz = sizeof(altqreq);
