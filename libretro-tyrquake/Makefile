@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-tyrquake-20170802
+DISTNAME=	libretro-tyrquake-20180222
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	tyrquake
-GITHUB_TAG=	4525ad4dcd58e402f548b3adb8800b9c4b076e40
+GITHUB_TAG=	9db6a3bedd081b9105d2371550ee8238440f8e87
 
 HOMEPAGE=	https://docs.libretro.com/library/tyrquake/
 COMMENT=	Libretro core for the TyrQuake interpreter for Quake and Quakeworld
