@@ -115,6 +115,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/src/citra_libretro/citra_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/citra_libretro.so
 
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
