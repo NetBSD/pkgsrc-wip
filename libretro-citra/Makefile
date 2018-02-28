@@ -41,7 +41,7 @@ SITES.${BOOST_TAG}.tar.gz= \
     ${MASTER_SITE_GITHUB:=citra-emu/ext-boost/archive/}
 
 SITES.${CATCH_TAG}.tar.gz= \
-    ${MASTER_SITE_GITHUB:=philsquared/Catch2/archive/}
+    ${MASTER_SITE_GITHUB:=catchorg/Catch2/archive/}
 
 SITES.${CPR_TAG}.tar.gz= \
     ${MASTER_SITE_GITHUB:=whoshuu/cpr/archive/}
