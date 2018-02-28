@@ -1824,6 +1824,7 @@ SUBDIR+=	libretro-bsnes-mercury
 SUBDIR+=	libretro-bsnes-mercury-accuracy
 SUBDIR+=	libretro-bsnes-mercury-performance
 SUBDIR+=	libretro-cap32
+SUBDIR+=	libretro-citra
 SUBDIR+=	libretro-core-info
 SUBDIR+=	libretro-database
 SUBDIR+=	libretro-desmume
