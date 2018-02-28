@@ -3,7 +3,7 @@
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
 # package is fetched from CVS, an archive is created from it and saved
-# in ${DISTDIR}/cvs-packages, to save bandwidth.
+# below ${DISTDIR}, to save bandwidth.
 #
 # User-settable variables:
 #
@@ -15,10 +15,10 @@
 #	To keep this date stable during a bulk build (which may span
 #	one or more midnights), this can be set to a fixed date.
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # CVS_ROOT (required)
-#	The CVSROOT for the CVS repository, including anoncvs password,
+#	The CVSROOT of the CVS repository, including anoncvs password,
 #	if applicable.
 #
 #	Examples:
@@ -82,9 +82,7 @@
 #
 #	Default: ${PKGBASE}
 #
-# === Variables defined here ===
-#
-# This file defines the following variables:
+# Variables set by this file:
 #
 # CVS_ROOT_GNU
 # CVS_ROOT_NONGNU
@@ -92,26 +90,23 @@
 #	Common CVS repository locations for use in the CVS_ROOT
 #	variables.
 #
-# It also provides default values for the following variables, differing
-# from the system-wide defaults:
-#
 # DISTFILES
-#	Is set to an empty list, since that is the right choice for most
-#	of the CVS packages.
+#	Defaults to an empty list.
+#	This means that MASTER_SITES does not need to be defined.
 #
 # PKGNAME
-#	Is set to consist of the package name from DISTNAME, combined
+#	Defaults to the package name from DISTNAME, combined
 #	with the current date. This is useful when no CVS_TAG variables
 #	are defined. When they are defined (and there may be multiple
 #	ones), the package author should define PKGNAME explicitly.
 #
 # PKGREVISION
-#	If PKGREVISION is not set, set it to today's date.  This is
-#	useful for packages that automatically grab the latest code
-#	from CVS every time they are built.
+#	If the package doesn't set a specific CVS_TAG, this defaults
+#	to today in the format yyyymmdd, e.g. 20180225.
+#	This keeps the packages distinguishable since the HEAD might
+#	change anytime.
 #
 # Keywords: cvs
-#
 
 .if !defined(_PKG_MK_CVS_PACKAGE_MK)
 _PKG_MK_CVS_PACKAGE_MK=	# defined
@@ -124,11 +119,11 @@ DISTFILES?=		# empty
 PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-cvs-${_CVS_PKGVERSION}
 # Enforce PKGREVISION unless CVS_TAG is set:
 .if empty(CVS_TAG)
-. if defined(CHECKOUT_DATE)
+.  if defined(CHECKOUT_DATE)
 PKGREVISION?=		${CHECKOUT_DATE:S/-//g}
-. else
+.  else
 PKGREVISION?=		${_CVS_PKGVERSION:S/.//g}
-. endif
+.  endif
 .endif
 
 #
@@ -145,10 +140,6 @@ CVS_PROJECT?=		${PKGBASE}
 # End of the interface part. Start of the implementation part.
 #
 
-#
-# Input validation
-#
-
 # The common case of a single CVS repository.
 .if defined(CVS_ROOT)
 CVS_MODULE?=		${PKGBASE:S,-cvs$,,}
@@ -161,6 +152,9 @@ ${varbase}._default=	${${varbase}}
 .  endfor
 .endif
 
+#
+# Input validation
+#
 
 .if !defined(CVS_REPOSITORIES)
 PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORIES must be set."
@@ -169,7 +163,7 @@ CVS_REPOSITORIES?=	# none
 
 .for repo in ${CVS_REPOSITORIES}
 .  if !defined(CVS_ROOT.${repo})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT.${repo} must be set."
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${repo:Q}" must be set."
 .  endif
 .endfor
 
@@ -185,6 +179,7 @@ _CVS_ENV=		# empty
 _CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
 _CVS_FLAGS=		-Q -z3
+_CVS_CMDLINE=		${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS}
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
@@ -216,52 +211,59 @@ _CVS_TAG_FLAG.${repo}=	'-D${_CVS_TODAY} 00:00 +0000'
 _CVS_TAG.${repo}=	${_CVS_TODAY:Q}
 .  endif
 
-# Cache support:
-#   cache file name
+# The cached archive
 _CVS_DISTFILE.${repo}=	${PKGBASE}-${CVS_MODULE.${repo}}-${_CVS_TAG.${repo}}.tar.gz
 
-#   command to extract cache file
-_CVS_EXTRACT_CACHED.${repo}=	\
-	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then	\
-	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
-	  gzip -d -c ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} | pax -r; \
+# Define the shell variables used by the following commands
+_CVS_CMD.vars.${repo}= \
+	root=${CVS_ROOT.${repo}:Q}; \
+	module=${CVS_MODULE.${repo}:Q}; \
+	archive=${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q}
+
+# Extract the cached archive
+_CVS_CMD.extract_archive.${repo}= \
+	if [ -f "$$archive" ]; then	\
+	  ${STEP_MSG} "Extracting cached CVS archive $${archive\#\#*/}."; \
+	  gzip -d -c "$$archive" | pax -r;				\
 	  exit 0;							\
 	fi
 
-#   create cache archive
-_CVS_CREATE_CACHE.${repo}=	\
-	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_CVS_DISTDIR:Q};					\
-	pax -w ${CVS_MODULE.${repo}:Q} | gzip > ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q}
+# Log in to a repository
+.  if !empty(CVS_ROOT.${repo}:M\:pserver\:*)
+_CVS_CMD.login.${repo}= \
+	${TOUCH} ${_CVS_PASSFILE};					\
+	${STEP_MSG} "Logging in to $$root.";				\
+	${_CVS_CMDLINE} -d "$$root" login
+.  else
+_CVS_CMD.login.${repo}= \
+	${DO_NADA}
+.  endif
+
+# Check out a repository
+_CVS_CMD.checkout.${repo}= \
+	${STEP_MSG} "Checking out $$module from $$root.";		\
+	${_CVS_CMDLINE} -d "$$root"					\
+	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${repo}}	\
+	      -d ${CVS_EXTRACTDIR.${repo}:Q} "$$module"
+
+# Create the cached archive from the checked out repository
+_CVS_CMD.create_archive.${repo}= \
+	${STEP_MSG} "Creating cached CVS archive $${archive\#\#*/}.";	\
+	${MKDIR} "$${archive%/*}";					\
+	pax -w ${CVS_EXTRACTDIR.${repo}:Q} | gzip > "$$archive"
 .endfor
 
 pre-extract: do-cvs-extract
 
 do-cvs-extract: .PHONY
 .for repo in ${CVS_REPOSITORIES}
-	${RUN} cd ${WRKDIR};						\
-	if [ ! -d ${_CVS_DISTDIR} ]; then mkdir -p ${_CVS_DISTDIR:Q}; fi; \
-	${_CVS_EXTRACT_CACHED.${repo}};					\
-	p="$$(cd ${_CVS_DISTDIR} && ls -t ${PKGBASE}-${CVS_MODULE.${repo}}-* | head -n 1)"; \
-	if [ -n "$$p" ]; then						\
-	  ${STEP_MSG} "Extracting cached CVS archive \"""$$p\".";	\
-	  pax -r -z -f ${_CVS_DISTDIR:Q}/"$$p";				\
-	fi;								\
-	case ${CVS_ROOT.${repo}:Q} in					\
-	  :pserver:*)							\
-	    [ -f ${_CVS_PASSFILE} ] || ${TOUCH} ${_CVS_PASSFILE};	\
-	    ${STEP_MSG} "Logging in to "${CVS_ROOT.${repo}:Q}".";	\
-	    ${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS} 		\
-		-d ${CVS_ROOT.${repo}:Q} login				\
-	  ;;								\
-	  *) ;;								\
-	esac;								\
-	${STEP_MSG} "Downloading "${CVS_MODULE.${repo}:Q}" from "${CVS_ROOT.${repo}:Q}"."; \
-	${SETENV} ${_CVS_ENV}						\
-	  ${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${repo}:Q}		\
-	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${repo}}	\
-	      -d ${CVS_EXTRACTDIR.${repo}:Q} ${CVS_MODULE.${repo}:Q};	\
-	${_CVS_CREATE_CACHE.${repo}}
+	${RUN} \
+	cd ${WRKDIR}; \
+	${_CVS_CMD.vars.${repo}}; \
+	${_CVS_CMD.extract_archive.${repo}}; \
+	${_CVS_CMD.login.${repo}}; \
+	${_CVS_CMD.checkout.${repo}}; \
+	${_CVS_CMD.create_archive.${repo}}
 .endfor
 
 # Debug info for show-all and show-all-cvs
@@ -271,11 +273,11 @@ _SYS_VARS.cvs+=		DISTFILES PKGNAME PKGREVISION WRKSRC
 _SYS_VARS.cvs+=		CVS_ROOT_GNU CVS_ROOT_NONGNU CVS_ROOT_SOURCEFORGE CVS_PROJECT
 _SYS_VARS.cvs+=		_CVS_DISTDIR _CVS_PKGVERSION
 .for repo in ${CVS_REPOSITORIES}
-.  for pkgvar in CVS_ROOT CVS_MODULE CVS_TAG CVS_EXTRACTDIR
-_PKG_VARS.cvs+=		${pkgvar}.${repo}
+.  for varbase in CVS_ROOT CVS_MODULE CVS_TAG CVS_EXTRACTDIR
+_PKG_VARS.cvs+=		${varbase}.${repo}
 .  endfor
-.  for sysvar in _CVS_DISTFILE
-_SYS_VARS.cvs+=		${sysvar}.${repo}
+.  for varbase in _CVS_DISTFILE
+_SYS_VARS.cvs+=		${varbase}.${repo}
 .  endfor
 .endfor
 
