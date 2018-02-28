@@ -1586,6 +1586,7 @@ SUBDIR+=	kdf
 SUBDIR+=	kdialog
 SUBDIR+=	keditbookmarks
 SUBDIR+=	keepassx-git
+SUBDIR+=	keepassxc
 SUBDIR+=	kfind
 SUBDIR+=	kgamma5
 SUBDIR+=	kget

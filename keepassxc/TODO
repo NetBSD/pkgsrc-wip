@@ -1,0 +1,4 @@
+Starts and runs fine, but auto-type plugin reports an error during startup:
+
+Unable to load auto-type plugin:
+Cannot resolve symbol "qt_plugin_instance" in /usr/pkg/lib/keepassxc/libkeepassx-autotype-xcb.so: (Undefined symbol "qt_plugin_instance")
