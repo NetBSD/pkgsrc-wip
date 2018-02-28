@@ -38,12 +38,6 @@
 #	Default: (today at midnight)
 #	Example: v1.0.0
 #
-# CVS_EXTRACTDIR (optional)
-#	The directory relative to WRKDIR where the files from the CVS
-#	repository are extracted.
-#
-#	Default: ${CVS_MODULE}
-#
 # If a package needs to checkout from more than one CVS repository, the
 # setup is a little more complicated, using parameterized variants of
 # the above variables.
@@ -70,12 +64,6 @@
 #	The CVS tag to check out.
 #
 #	Default: ${CVS_TAG} (today at midnight)
-#
-# CVS_EXTRACTDIR.${id} (optional)
-#	The directory relative to WRKDIR where the files from the CVS
-#	repository are extracted.
-#
-#	Default: ${id}
 #
 # CVS_PROJECT
 #	The project name to be used in CVS_ROOT_SOURCEFORGE.
@@ -140,12 +128,12 @@ CVS_PROJECT?=		${PKGBASE}
 # End of the interface part. Start of the implementation part.
 #
 
-# The common case of a single CVS repository.
+# The common case of a single repository
 .if defined(CVS_ROOT)
 CVS_MODULE?=		${PKGBASE:S,-cvs$,,}
 CVS_REPOSITORIES+=	_default
 WRKSRC?=		${WRKDIR}/${CVS_MODULE}
-.  for varbase in CVS_ROOT CVS_MODULE CVS_TAG CVS_EXTRACTDIR
+.  for varbase in CVS_ROOT CVS_MODULE CVS_TAG
 .    if defined(${varbase})
 ${varbase}._default=	${${varbase}}
 .    endif
@@ -194,7 +182,6 @@ _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
 .for repo in ${CVS_REPOSITORIES}
 CVS_MODULE.${repo}?=		${repo}
-CVS_EXTRACTDIR.${repo}?=	${CVS_MODULE.${repo}}
 
 # determine appropriate checkout date or tag
 .  if defined(CVS_TAG.${repo})
@@ -222,7 +209,7 @@ _CVS_CMD.vars.${repo}= \
 
 # Extract the cached archive
 _CVS_CMD.extract_archive.${repo}= \
-	if [ -f "$$archive" ]; then	\
+	if [ -f "$$archive" ]; then					\
 	  ${STEP_MSG} "Extracting cached CVS archive $${archive\#\#*/}."; \
 	  gzip -d -c "$$archive" | pax -r;				\
 	  exit 0;							\
@@ -244,13 +231,14 @@ _CVS_CMD.checkout.${repo}= \
 	${STEP_MSG} "Checking out $$module from $$root.";		\
 	${_CVS_CMDLINE} -d "$$root"					\
 	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${repo}}	\
-	      -d ${CVS_EXTRACTDIR.${repo}:Q} "$$module"
+	      -d "$$module" "$$module"
 
 # Create the cached archive from the checked out repository
 _CVS_CMD.create_archive.${repo}= \
 	${STEP_MSG} "Creating cached CVS archive $${archive\#\#*/}.";	\
 	${MKDIR} "$${archive%/*}";					\
-	pax -w ${CVS_EXTRACTDIR.${repo}:Q} | gzip > "$$archive"
+	pax -w "$$module" | gzip > "$$archive.tmp";			\
+	${MV} "$$archive.tmp" "$$archive"
 .endfor
 
 pre-extract: do-cvs-extract
@@ -268,12 +256,12 @@ do-cvs-extract: .PHONY
 
 # Debug info for show-all and show-all-cvs
 _VARGROUPS+=		cvs
-_PKG_VARS.cvs+=		CVS_ROOT CVS_MODULE CVS_TAG CHECKOUT_DATE CVS_EXTRACTDIR CVS_REPOSITORIES
+_PKG_VARS.cvs+=		CVS_ROOT CVS_MODULE CVS_TAG CHECKOUT_DATE CVS_REPOSITORIES
 _SYS_VARS.cvs+=		DISTFILES PKGNAME PKGREVISION WRKSRC
 _SYS_VARS.cvs+=		CVS_ROOT_GNU CVS_ROOT_NONGNU CVS_ROOT_SOURCEFORGE CVS_PROJECT
 _SYS_VARS.cvs+=		_CVS_DISTDIR _CVS_PKGVERSION
 .for repo in ${CVS_REPOSITORIES}
-.  for varbase in CVS_ROOT CVS_MODULE CVS_TAG CVS_EXTRACTDIR
+.  for varbase in CVS_ROOT CVS_MODULE CVS_TAG
 _PKG_VARS.cvs+=		${varbase}.${repo}
 .  endfor
 .  for varbase in _CVS_DISTFILE

@@ -1,11 +1,13 @@
 # $NetBSD$
 #
 # This file provides simple access to Git repositories, so that packages
-# can be created from Git instead of from released tarballs.
+# can be created from Git instead of from released tarballs. Whenever a
+# package is fetched from Git, an archive is created from it and saved
+# below ${DISTDIR}, to save bandwidth.
 #
 # Package-settable variables:
 #
-# GIT_REPO
+# GIT_REPO (required)
 #	The URL of the Git repository.
 #
 #	If the package needs more than one repository, see GIT_REPOSITORIES
@@ -55,23 +57,24 @@
 #	above GIT_REPO.
 #
 #	Example:
-#
-#		GIT_REPOSITORIES=	first second
-#		GIT_MODULE.first=	first
-#		GIT_REPO.first=		git://git@github.com:NetBSD/pkgsrc.git
-#		GIT_REVISION.first=	8a311b3069ee79731eec38ca13eb13772cc49223
-#		GIT_MODULE.second=	second
-#		GIT_REPO.second=	git://git@github.com:NetBSD/pkgsrc.git
-#		GIT_BRANCH.second=	master
+#	GIT_REPOSITORIES=	first second
+#	GIT_MODULE.first=	first
+#	GIT_REPO.first=		git://git@github.com:NetBSD/pkgsrc.git
+#	GIT_REVISION.first=	8a311b3069ee79731eec38ca13eb13772cc49223
+#	GIT_MODULE.second=	second
+#	GIT_REPO.second=	git://git@github.com:NetBSD/pkgsrc.git
+#	GIT_BRANCH.second=	master
 #
 # Variables set by this file:
 #
 # DISTFILES
-#	Defaults to an empty list, which means that MASTER_SITES does not
-#	need to be defined.
+#	Defaults to an empty list.
+#	This means that MASTER_SITES does not need to be defined.
 #
 # PKGREVISION
-#	Defaults to the current date in the format yyyymmdd, e.g. 20180225.
+#	Defaults to today in the format yyyymmdd, e.g. 20180225.
+#	This keeps the packages distinguishable since the HEAD might
+#	change anytime.
 #
 # Keywords: git github
 
@@ -91,16 +94,16 @@ PKGREVISION?=		${_GIT_PKGVERSION:S/.//g}
 # End of the interface part. Start of the implementation part.
 #
 
-# The standard case of a single repository
+# The common case of a single repository
 .if defined(GIT_REPO)
+GIT_MODULE._default?=	${GIT_REPO:T:.git=}
 GIT_REPOSITORIES+=	_default
+WRKSRC?=		${WRKDIR}/${GIT_MODULE._default}
 .  for varbase in GIT_REPO GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
 .    if defined(${varbase})
 ${varbase}._default=	${${varbase}}
 .    endif
 .  endfor
-GIT_MODULE._default?=	${GIT_REPO:T:.git=}
-WRKSRC?=		${WRKDIR}/${GIT_MODULE._default}
 .endif
 
 #
@@ -132,11 +135,13 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 
 #
 # Generation of repository-specific variables
-
+#
 
 .for repo in ${GIT_REPOSITORIES}
 GIT_MODULE.${repo}?=	${repo}
 _GIT_ENV.${repo}=	${GIT_ENV.${repo}}
+
+_GIT_CMDLINE.${repo}=	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD}
 
 # determine appropriate checkout branch or tag
 .  if defined(GIT_BRANCH.${repo})
@@ -158,57 +163,63 @@ _GIT_FETCH_FLAGS.${repo}+=	--depth 1
 _GIT_CLONE_FLAGS.${repo}+=	--depth 1
 . endif
 
-# Cache support:
-#   cache file name
+# The cached archive
 _GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-gitarchive.tar.gz
 
-#   command to extract cache file
-_GIT_EXTRACT_CACHED.${repo}=	\
-	if [ -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} ]; then		\
-	  ${STEP_MSG} "Extracting cached Git archive "${_GIT_DISTFILE.${repo}:Q}"."; \
-	  gzip -d -c ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} | pax -r;	\
+# Define the shell variables used by the following commands
+_GIT_CMD.vars.${repo}= \
+	repo=${GIT_REPO.${repo}:Q}; \
+	module=${GIT_MODULE.${repo}:Q}; \
+	archive=${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}
+
+# Extract the cached archive
+_GIT_CMD.extract_archive.${repo}= \
+	if [ -f "$$archive" ]; then					\
+	  ${STEP_MSG} "Extracting cached Git archive $${archive\#\#*/}."; \
+	  gzip -d -c "$$archive" | pax -r;				\
 	fi
 
-#   create cache archive
-_GIT_CREATE_CACHE.${repo}=	\
-	${STEP_MSG} "Creating cached Git archive "${_GIT_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_GIT_DISTDIR:Q};					\
-	pax -w ${GIT_MODULE.${repo}:Q} | gzip > ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp;	\
-	${MV} '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp' '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}'
+# Check out and update the repository
+_GIT_CMD.checkout.${repo}= \
+	if [ ! -d "$$module" ]; then					\
+	  ${STEP_MSG} "Cloning Git archive $$module.";			\
+	  ${_GIT_CMDLINE.${repo}}					\
+	    clone ${_GIT_CLONE_FLAGS.${repo}} "$$repo" "$$module";	\
+	fi;								\
+	\
+	${STEP_MSG} "Fetching remote branches of "${_GIT_FLAG.${repo}:Q}"."; \
+	${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	  remote set-branches origin '*';				\
+	\
+	${STEP_MSG} "Updating Git archive $$module.";			\
+	${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	  fetch ${_GIT_FETCH_FLAGS.${repo}};				\
+	\
+	${STEP_MSG} "Checking out Git "${_GIT_FLAG.${repo}:Q}".";	\
+	${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q};	\
+	\
+	${STEP_MSG} "Updating submodules of $$module.";			\
+	${_GIT_CMDLINE.${repo}} -C "$$module" submodule update --recursive
 
-#   fetch Git repo or update cached one
-_GIT_FETCH_REPO.${repo}=	\
-	if [ ! -d ${GIT_MODULE.${repo}:Q} ]; then				\
-	  ${STEP_MSG} "Cloning Git archive "${GIT_MODULE.${repo}:Q}".";		\
-	  ${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD}				\
-	    clone ${_GIT_CLONE_FLAGS.${repo}}					\
-	    ${GIT_REPO.${repo}:Q} ${GIT_MODULE.${repo}:Q};			\
-	fi;									\
-	${STEP_MSG} "Fetching remote branches of "${_GIT_FLAG.${repo}:Q}".";	\
-	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
-	  remote set-branches origin '*';					\
-	${STEP_MSG} "Updating Git archive "${GIT_MODULE.${repo}:Q}".";		\
-	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
-	  fetch ${_GIT_FETCH_FLAGS.${repo}};					\
-	${STEP_MSG} "Checking out Git "${_GIT_FLAG.${repo}:Q}".";		\
-	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
-	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q};		\
-	${STEP_MSG} "Updating submodules of "${_GIT_FLAG.${repo}:Q}".";		\
-	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
-	  submodule update --recursive
+# Create the cached archive from the checked out repository
+_GIT_CMD.create_archive.${repo}= \
+	${STEP_MSG} "Creating cached Git archive $${archive\#\#*/}.";	\
+	${MKDIR} "$${archive%/*}";					\
+	pax -w "$$module" | gzip > "$$archive.tmp";			\
+	${MV} "$$archive.tmp" "$$archive"
 .endfor
 
 pre-extract: do-git-extract
 
-.PHONY: do-git-extract
-do-git-extract:
+do-git-extract: .PHONY
 .for repo in ${GIT_REPOSITORIES}
-	${RUN} cd ${WRKDIR};							\
-	if [ ! -d ${_GIT_DISTDIR:Q} ]; then mkdir -p ${_GIT_DISTDIR:Q}; fi;	\
-	${_GIT_EXTRACT_CACHED.${repo}};						\
-	${_GIT_FETCH_REPO.${repo}};						\
-	${_GIT_CREATE_CACHE.${repo}};
-
+	${RUN} \
+	cd ${WRKDIR}; \
+	${_GIT_CMD.vars.${repo}}; \
+	${_GIT_CMD.extract_archive.${repo}}; \
+	${_GIT_CMD.checkout.${repo}}; \
+	${_GIT_CMD.create_archive.${repo}}
 .endfor
 
 # Debug info for show-all and show-all-git
