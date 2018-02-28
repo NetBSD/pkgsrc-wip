@@ -1,0 +1,3 @@
+Fails to build on NetBSD.
+
+Might require gcc>6.
