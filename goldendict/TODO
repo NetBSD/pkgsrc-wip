@@ -1,0 +1,5 @@
+* remove liconv
+* groupcombobox (or qt4(???)) problem
+* BGL dicts problem
+* check dependencies
+* remove obsolete patches
