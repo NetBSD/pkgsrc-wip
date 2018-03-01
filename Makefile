@@ -1718,6 +1718,7 @@ SUBDIR+=	libepc
 SUBDIR+=	libepoll-shim
 SUBDIR+=	libeps
 SUBDIR+=	libevhtp
+SUBDIR+=	libexact
 SUBDIR+=	libffi-git
 SUBDIR+=	libfirm-git
 SUBDIR+=	libfolks
