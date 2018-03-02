@@ -1,0 +1,671 @@
+=> Bootstrap dependency digest>=20010302: found digest-20160304
+===> Checking for vulnerabilities in slurm-17.11.3
+=> Checksum SHA1 OK for slurm-17.11.3.tar.bz2
+=> Checksum RMD160 OK for slurm-17.11.3.tar.bz2
+=> Checksum SHA512 OK for slurm-17.11.3.tar.bz2
+===> Installing dependencies for slurm-17.11.3
+==========================================================================
+The following variables will affect the build process of this package,
+slurm-17.11.3.  Their current value is shown below:
+
+        * CURSES_DEFAULT = curses
+        * KRB5_DEFAULT = heimdal
+        * PAM_DEFAULT = openpam
+        * PYTHON_VERSION_DEFAULT = 27
+        * SSLBASE = /usr
+        * SSLCERTS = /etc/openssl/certs
+        * SSLDIR = /etc/openssl
+        * SSLKEYS = /etc/openssl/private
+
+Based on these variables, the following variables have been set:
+
+        * CURSES_TYPE = curses
+        * KRB5BASE (defined, but empty)
+        * KRB5_TYPE = heimdal
+        * PAMBASE (defined, but empty)
+        * PYPACKAGE = python27
+        * TERMCAP_TYPE = termcap
+
+You may want to abort the process now with CTRL-C and change their value
+before continuing.  Be sure to run `/usr/bin/make clean' after
+the changes.
+==========================================================================
+=> Tool dependency libtool-base>=2.4.2nb9: found libtool-base-2.4.6
+=> Tool dependency perl>=5.0: found perl-5.26.1nb2
+=> Tool dependency pkgconf-[0-9]*: found pkgconf-1.4.1nb1
+=> Build dependency libtool-base-[0-9]*: found libtool-base-2.4.6
+=> Build dependency man2html-[0-9]*: found man2html-3.0.1
+=> Build dependency cwrappers>=20150314: found cwrappers-20171108
+=> Full dependency curl>=7.57.0nb1: found curl-7.58.0
+=> Full dependency python27>=2.7.1nb2: found python27-2.7.14
+=> Full dependency munge>=0.5.10: found munge-0.5.11nb7
+=> Full dependency hwloc>=1.4: found hwloc-1.11.7
+=> Full dependency hdf5>=1.8.11: found hdf5-1.10.1nb1
+=> Full dependency readline>=6.0: found readline-7.0
+=> Full dependency lz4>=1.7.3<100: found lz4-1.8.1.2
+=> Full dependency json-c>=0.12: found json-c-0.12.1
+===> Overriding tools for slurm-17.11.3
+===> Extracting for slurm-17.11.3
+===> Patching for slurm-17.11.3
+=> Applying pkgsrc patches for slurm-17.11.3
+=> Substituting "linuxinit" in /usr/pkgsrc/wip/slurm/work/slurm-17.11.3/etc/init.d.slurm.in
+=> Substituting "gtk" in /usr/pkgsrc/wip/slurm/work/slurm-17.11.3/configure
+===> Creating toolchain wrappers for slurm-17.11.3
+===> Configuring for slurm-17.11.3
+=> Modifying GNU configure scripts to avoid --recheck
+=> Replacing config-guess with pkgsrc versions
+=> Replacing config-sub with pkgsrc versions
+=> Replacing install-sh with pkgsrc version
+checking build system type... x86_64--netbsd
+checking host system type... x86_64--netbsd
+checking target system type... x86_64--netbsd
+checking for a BSD-compatible install... /usr/bin/install -c -o root -g wheel
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... auxdir/install-sh -c -d
+checking for gawk... /usr/bin/awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether to include rpath in build... yes
+checking for style of include used by make... GNU
+checking for x86_64--netbsd-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for mysql_config... no
+checking for mariadb_config... no
+configure: WARNING: *** mysql_config not found. Evidently no MySQL development libs installed on system.
+checking whether BG is explicitly disabled... no
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking dependency style of c++... gcc3
+checking for x86_64--netbsd-gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether c++ accepts -g... (cached) yes
+checking dependency style of c++... (cached) gcc3
+checking whether make sets $(MAKE)... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... (cached) /usr/bin/grep
+checking for egrep... (cached) /usr/bin/egrep
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld
+checking if the linker (/usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 262144
+checking how to convert x86_64--netbsd file names to x86_64--netbsd format... func_convert_file_noop
+checking how to convert x86_64--netbsd file names to toolchain format... func_convert_file_noop
+checking for /usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld option to reload object files... -r
+checking for x86_64--netbsd-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... match_pattern /lib[^/]+(\.so|_pic\.a)$
+checking for x86_64--netbsd-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64--netbsd-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64--netbsd-strip... no
+checking for strip... strip
+checking for x86_64--netbsd-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64--netbsd-mt... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... rm: conftest*: No such file or directory
+yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... rm: conftest*: No such file or directory
+no
+checking dynamic linker characteristics... NetBSD ld.elf_so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... c++ -E
+checking for ld used by c++... /usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld
+checking if the linker (/usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld) is GNU ld... yes
+checking whether the c++ linker (/usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld) supports shared libraries... yes
+checking for c++ option to produce PIC... -fPIC -DPIC
+checking if c++ PIC flag -fPIC -DPIC works... yes
+checking if c++ static flag -static works... yes
+checking if c++ supports -c -o file.o... rm: conftest*: No such file or directory
+yes
+checking if c++ supports -c -o file.o... (cached) yes
+checking whether the c++ linker (/usr/pkgsrc/wip/slurm/work/.cwrapper/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... NetBSD ld.elf_so
+checking how to hardcode library paths into programs... immediate
+checking pkg-config is at least version 0.9.0... yes
+checking for sleep... /bin/sleep
+checking for su... /usr/bin/su
+checking for library containing socket... none required
+checking for library containing gethostbyname... none required
+checking for library containing hstrerror... none required
+checking for library containing kstat_open... no
+checking mcheck.h usability... no
+checking mcheck.h presence... no
+checking for mcheck.h... no
+checking values.h usability... no
+checking values.h presence... no
+checking for values.h... no
+checking socket.h usability... no
+checking socket.h presence... no
+checking for socket.h... no
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking sys/ipc.h usability... yes
+checking sys/ipc.h presence... yes
+checking for sys/ipc.h... yes
+checking sys/shm.h usability... yes
+checking sys/shm.h presence... yes
+checking for sys/shm.h... yes
+checking sys/sem.h usability... yes
+checking sys/sem.h presence... yes
+checking for sys/sem.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking for stdlib.h... (cached) yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking sys/prctl.h usability... no
+checking sys/prctl.h presence... no
+checking for sys/prctl.h... no
+checking sysint.h usability... no
+checking sysint.h presence... no
+checking for sysint.h... no
+checking for inttypes.h... (cached) yes
+checking termcap.h usability... yes
+checking termcap.h presence... yes
+checking for termcap.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking for sys/socket.h... (cached) yes
+checking sys/systemcfg.h usability... no
+checking sys/systemcfg.h presence... no
+checking for sys/systemcfg.h... no
+checking ncurses.h usability... no
+checking ncurses.h presence... no
+checking for ncurses.h... no
+checking curses.h usability... yes
+checking curses.h presence... yes
+checking for curses.h... yes
+checking sys/dr.h usability... no
+checking sys/dr.h presence... no
+checking for sys/dr.h... no
+checking sys/vfs.h usability... no
+checking sys/vfs.h presence... no
+checking for sys/vfs.h... no
+checking pam/pam_appl.h usability... no
+checking pam/pam_appl.h presence... no
+checking for pam/pam_appl.h... no
+checking security/pam_appl.h usability... yes
+checking security/pam_appl.h presence... yes
+checking for security/pam_appl.h... yes
+checking sys/sysctl.h usability... yes
+checking sys/sysctl.h presence... yes
+checking for sys/sysctl.h... yes
+checking pty.h usability... no
+checking pty.h presence... no
+checking for pty.h... no
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking sys/syslog.h usability... yes
+checking sys/syslog.h presence... yes
+checking for sys/syslog.h... yes
+checking linux/sched.h usability... no
+checking linux/sched.h presence... no
+checking for linux/sched.h... no
+checking kstat.h usability... no
+checking kstat.h presence... no
+checking for kstat.h... no
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking sys/statfs.h usability... no
+checking sys/statfs.h presence... no
+checking for sys/statfs.h... no
+checking sys/ptrace.h usability... yes
+checking sys/ptrace.h presence... yes
+checking for sys/ptrace.h... yes
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for ANSI C header files... (cached) yes
+checking whether sys/types.h defines makedev... yes
+checking library containing dlopen... checking for dlopen in -l... no
+checking for dlopen in -ldl... no
+checking for dlopen in -lsvdl... no
+checking for program_invocation_name... no
+checking for ptrace64... no
+checking for sched_setaffinity... no
+checking for numa_available in -lnuma... no
+configure: WARNING: unable to locate NUMA memory affinity functions
+checking whether to enable PAM support... yes
+checking for pam_get_user in -lpam... yes
+checking for misc_conv in -lpam_misc... no
+configure: WARNING: unable to locate PAM libraries
+checking Link to libslurm.so instead of libslurm.o... ./configure: LIB_SLURM+= -L$(top_builddir)/src/api/.libs -lslurmfull: not found
+./configure: LIB_SLURMDB+= -L$(top_builddir)/src/api/.libs -L$(top_builddir)/src/db_api/.libs -lslurmdb -lslurmfull: not found
+shared
+checking whether to enable ISO 8601 time format support... yes
+checking whether sbatch --get-user-env option should load .login... no
+checking whether byte ordering is bigendian... no
+checking for uid_t and gid_t data sizes)... yes
+checking for json installation... /usr/pkg
+checking whether gcc needs -traditional... no
+checking for __builtin_clzll... yes
+checking for __builtin_ctzll... yes
+checking for __builtin_popcountll... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... no
+checking for fdatasync... yes
+checking for hstrerror... yes
+checking for strerror... yes
+checking for mtrace... no
+checking for strndup... yes
+checking for strlcpy... yes
+checking for strsignal... yes
+checking for inet_aton... yes
+checking for inet_ntop... yes
+checking for inet_pton... yes
+checking for setproctitle... yes
+checking for sysctlbyname... yes
+checking for cfmakeraw... yes
+checking for setresuid... no
+checking for get_current_dir_name... no
+checking for faccessat... yes
+checking for eaccess... no
+checking for statvfs... yes
+checking for statfs... yes
+checking whether hstrerror is declared... no
+checking whether strsignal is declared... yes
+checking whether sys_siglist is declared... yes
+checking for pthread_join in LIBS= with CFLAGS= -pthread ... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... no
+checking System dimensions... not set
+checking for ofed installation... 
+configure: WARNING: unable to locate ofed installation
+checking for h5cc... /usr/pkg/bin/h5cc
+checking for HDF5 type... serial
+checking for HDF5 libraries... yes (version 1.10.1)
+checking hdf5.h usability... yes
+checking hdf5.h presence... yes
+checking for hdf5.h... yes
+checking for H5Fcreate in -lhdf5... yes
+checking for main in -lhdf5_hl... yes
+checking for matching HDF5 Fortran wrapper... no
+checking if zlib is wanted... yes
+checking for inflateEnd in -lz... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking if lz4 is installed... yes /usr/local /usr /opt/local /sw
+checking for LZ4_compress_destSize in -llz4... yes
+checking lz4.h usability... yes
+checking lz4.h presence... yes
+checking for lz4.h... yes
+LZ4 test program built properly.
+checking for hwloc installation... /usr/pkg
+checking for pmix installation... 
+configure: WARNING: unable to locate pmix installation
+checking for freeipmi installation... 
+configure: WARNING: unable to locate freeipmi installation
+checking for rrdtool installation... 
+configure: WARNING: unable to locate rrdtool installation
+configure: support for ucx disabled
+checking whether Slurm internal X11 support is enabled... yes
+checking for libssh2 installation... 
+configure: WARNING: unable to locate libssh2 installation
+configure: WARNING: Slurm internal X11 support disabled
+checking for initscr in -lncurses... no
+checking for initscr in -lcurses... yes
+checking for tgetent in -ltinfo... no
+NCURSES test program built properly.
+checking for CHECK... no
+checking pkg-config is at least version 0.16... yes
+checking for GLIB - version >= 2.7.1... no
+*** Could not run GLIB test program, checking why...
+*** The test program failed to compile or link. See the file config.log for the
+*** exact error that occured. This usually means GLIB is incorrectly installed.
+checking pkg-config is at least version 0.7... yes
+checking for GTK+ - version >= 2000.0.0... no
+*** Could not run GTK+ test program, checking why...
+*** The test program failed to compile or link. See the file config.log for the
+*** exact error that occured. This usually means GTK+ is incorrectly installed.
+configure: WARNING: cannot build sview without gtk library
+checking whether this is a Cray XT or XE system... Unable to locate Cray APIs (usually in /opt/cray/alpscomm and /opt/cray/job)
+checking for datawarp installation... 
+configure: WARNING: unable to locate DataWarp installation
+checking for __progname... yes
+checking whether optimizations are enabled... yes
+checking whether or not developer options are enabled... no
+checking whether debugging is enabled... checking whether C compiler accepts -ggdb3... yes
+yes
+checking whether memory leak debugging is enabled... no
+checking whether to enable slurmd operation on a front-end... no
+checking whether debugger partial attach enabled... no
+checking whether salloc should kill child processes at job termination... no
+checking whether to disable salloc execution in the background... no
+checking for slurmctld default port... 6817
+checking for slurmd default port... 6818
+checking for slurmdbd default port... 6819
+checking for slurmctld default port count... 1
+checking Checking NRT and PERMAPI header files... no
+configure: Cannot support IBM NRT without nrt.h and permapi.h
+checking whether to enable IBM NRT support... no
+checking for job_attachpid in -ljob... no
+checking for SGI job container support... no
+checking for netloc installation... 
+configure: WARNING: unable to locate netloc installation
+checking for lua... no
+configure: WARNING: unable to locate lua package
+checking whether man2html is available... checking for man2html... yes
+checking for support of printf("%s", NULL)... yes
+checking for whether to include readline suport... yes
+checking for OpenSSL directory... /usr
+checking for systemd presence... no
+checking for munge installation... /usr/pkg
+checking whether to enable multiple-slurmd support... no
+checking for openpty in -lutil... yes
+checking for gawk... (cached) /usr/bin/awk
+checking for curl-config... /usr/pkg/bin/curl-config
+checking for the version of libcurl... 7.58.0
+checking whether libcurl is usable... yes
+checking for curl_free... yes
+checking whether deprecated options are enabled... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating auxdir/Makefile
+config.status: creating contribs/Makefile
+config.status: creating contribs/cray/Makefile
+config.status: creating contribs/cray/csm/Makefile
+config.status: creating contribs/lua/Makefile
+config.status: creating contribs/mic/Makefile
+config.status: creating contribs/pam/Makefile
+config.status: creating contribs/pam_slurm_adopt/Makefile
+config.status: creating contribs/perlapi/Makefile
+config.status: creating contribs/perlapi/libslurm/Makefile
+config.status: creating contribs/perlapi/libslurm/perl/Makefile.PL
+config.status: creating contribs/perlapi/libslurmdb/Makefile
+config.status: creating contribs/perlapi/libslurmdb/perl/Makefile.PL
+config.status: creating contribs/seff/Makefile
+config.status: creating contribs/torque/Makefile
+config.status: creating contribs/openlava/Makefile
+config.status: creating contribs/sgather/Makefile
+config.status: creating contribs/sgi/Makefile
+config.status: creating contribs/sjobexit/Makefile
+config.status: creating contribs/pmi2/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/man/Makefile
+config.status: creating doc/man/man1/Makefile
+config.status: creating doc/man/man3/Makefile
+config.status: creating doc/man/man5/Makefile
+config.status: creating doc/man/man8/Makefile
+config.status: creating doc/html/Makefile
+config.status: creating doc/html/configurator.html
+config.status: creating doc/html/configurator.easy.html
+config.status: creating etc/Makefile
+config.status: creating src/Makefile
+config.status: creating src/api/Makefile
+config.status: creating src/bcast/Makefile
+config.status: creating src/common/Makefile
+config.status: creating src/db_api/Makefile
+config.status: creating src/layouts/Makefile
+config.status: creating src/layouts/power/Makefile
+config.status: creating src/layouts/unit/Makefile
+config.status: creating src/database/Makefile
+config.status: creating src/sacct/Makefile
+config.status: creating src/sacctmgr/Makefile
+config.status: creating src/sreport/Makefile
+config.status: creating src/salloc/Makefile
+config.status: creating src/sbatch/Makefile
+config.status: creating src/sbcast/Makefile
+config.status: creating src/sattach/Makefile
+config.status: creating src/scancel/Makefile
+config.status: creating src/scontrol/Makefile
+config.status: creating src/sdiag/Makefile
+config.status: creating src/sinfo/Makefile
+config.status: creating src/slurmctld/Makefile
+config.status: creating src/slurmd/Makefile
+config.status: creating src/slurmd/common/Makefile
+config.status: creating src/slurmd/slurmd/Makefile
+config.status: creating src/slurmd/slurmstepd/Makefile
+config.status: creating src/slurmdbd/Makefile
+config.status: creating src/smap/Makefile
+config.status: creating src/smd/Makefile
+config.status: creating src/sprio/Makefile
+config.status: creating src/squeue/Makefile
+config.status: creating src/srun/Makefile
+config.status: creating src/srun/libsrun/Makefile
+config.status: creating src/srun_cr/Makefile
+config.status: creating src/sshare/Makefile
+config.status: creating src/sstat/Makefile
+config.status: creating src/strigger/Makefile
+config.status: creating src/sview/Makefile
+config.status: creating src/plugins/Makefile
+config.status: creating src/plugins/accounting_storage/Makefile
+config.status: creating src/plugins/accounting_storage/common/Makefile
+config.status: creating src/plugins/accounting_storage/filetxt/Makefile
+config.status: creating src/plugins/accounting_storage/mysql/Makefile
+config.status: creating src/plugins/accounting_storage/none/Makefile
+config.status: creating src/plugins/accounting_storage/slurmdbd/Makefile
+config.status: creating src/plugins/acct_gather_energy/Makefile
+config.status: creating src/plugins/acct_gather_energy/cray/Makefile
+config.status: creating src/plugins/acct_gather_energy/rapl/Makefile
+config.status: creating src/plugins/acct_gather_energy/ibmaem/Makefile
+config.status: creating src/plugins/acct_gather_energy/ipmi/Makefile
+config.status: creating src/plugins/acct_gather_energy/none/Makefile
+config.status: creating src/plugins/acct_gather_interconnect/Makefile
+config.status: creating src/plugins/acct_gather_interconnect/ofed/Makefile
+config.status: creating src/plugins/acct_gather_interconnect/none/Makefile
+config.status: creating src/plugins/acct_gather_filesystem/Makefile
+config.status: creating src/plugins/acct_gather_filesystem/lustre/Makefile
+config.status: creating src/plugins/acct_gather_filesystem/none/Makefile
+config.status: creating src/plugins/acct_gather_profile/Makefile
+config.status: creating src/plugins/acct_gather_profile/hdf5/Makefile
+config.status: creating src/plugins/acct_gather_profile/hdf5/sh5util/Makefile
+config.status: creating src/plugins/acct_gather_profile/none/Makefile
+config.status: creating src/plugins/auth/Makefile
+config.status: creating src/plugins/auth/munge/Makefile
+config.status: creating src/plugins/auth/none/Makefile
+config.status: creating src/plugins/burst_buffer/Makefile
+config.status: creating src/plugins/burst_buffer/common/Makefile
+config.status: creating src/plugins/burst_buffer/cray/Makefile
+config.status: creating src/plugins/burst_buffer/generic/Makefile
+config.status: creating src/plugins/checkpoint/Makefile
+config.status: creating src/plugins/checkpoint/blcr/Makefile
+config.status: creating src/plugins/checkpoint/blcr/cr_checkpoint.sh
+config.status: creating src/plugins/checkpoint/blcr/cr_restart.sh
+config.status: creating src/plugins/checkpoint/none/Makefile
+config.status: creating src/plugins/checkpoint/ompi/Makefile
+config.status: creating src/plugins/core_spec/Makefile
+config.status: creating src/plugins/core_spec/cray/Makefile
+config.status: creating src/plugins/core_spec/none/Makefile
+config.status: creating src/plugins/crypto/Makefile
+config.status: creating src/plugins/crypto/munge/Makefile
+config.status: creating src/plugins/crypto/openssl/Makefile
+config.status: creating src/plugins/ext_sensors/Makefile
+config.status: creating src/plugins/ext_sensors/rrd/Makefile
+config.status: creating src/plugins/ext_sensors/none/Makefile
+config.status: creating src/plugins/gres/Makefile
+config.status: creating src/plugins/gres/common/Makefile
+config.status: creating src/plugins/gres/gpu/Makefile
+config.status: creating src/plugins/gres/nic/Makefile
+config.status: creating src/plugins/gres/mic/Makefile
+config.status: creating src/plugins/jobacct_gather/Makefile
+config.status: creating src/plugins/jobacct_gather/common/Makefile
+config.status: creating src/plugins/jobacct_gather/linux/Makefile
+config.status: creating src/plugins/jobacct_gather/cgroup/Makefile
+config.status: creating src/plugins/jobacct_gather/none/Makefile
+config.status: creating src/plugins/jobcomp/Makefile
+config.status: creating src/plugins/jobcomp/elasticsearch/Makefile
+config.status: creating src/plugins/jobcomp/filetxt/Makefile
+config.status: creating src/plugins/jobcomp/none/Makefile
+config.status: creating src/plugins/jobcomp/script/Makefile
+config.status: creating src/plugins/jobcomp/mysql/Makefile
+config.status: creating src/plugins/job_container/Makefile
+config.status: creating src/plugins/job_container/cncu/Makefile
+config.status: creating src/plugins/job_container/none/Makefile
+config.status: creating src/plugins/job_submit/Makefile
+config.status: creating src/plugins/job_submit/all_partitions/Makefile
+config.status: creating src/plugins/job_submit/cray/Makefile
+config.status: creating src/plugins/job_submit/defaults/Makefile
+config.status: creating src/plugins/job_submit/logging/Makefile
+config.status: creating src/plugins/job_submit/lua/Makefile
+config.status: creating src/plugins/job_submit/partition/Makefile
+config.status: creating src/plugins/job_submit/pbs/Makefile
+config.status: creating src/plugins/job_submit/require_timelimit/Makefile
+config.status: creating src/plugins/job_submit/throttle/Makefile
+config.status: creating src/plugins/launch/Makefile
+config.status: creating src/plugins/launch/aprun/Makefile
+config.status: creating src/plugins/launch/poe/Makefile
+config.status: creating src/plugins/launch/runjob/Makefile
+config.status: creating src/plugins/launch/slurm/Makefile
+config.status: creating src/plugins/mcs/Makefile
+config.status: creating src/plugins/mcs/account/Makefile
+config.status: creating src/plugins/mcs/group/Makefile
+config.status: creating src/plugins/mcs/none/Makefile
+config.status: creating src/plugins/mcs/user/Makefile
+config.status: creating src/plugins/node_features/Makefile
+config.status: creating src/plugins/node_features/knl_cray/Makefile
+config.status: creating src/plugins/node_features/knl_generic/Makefile
+config.status: creating src/plugins/power/Makefile
+config.status: creating src/plugins/power/common/Makefile
+config.status: creating src/plugins/power/cray/Makefile
+config.status: creating src/plugins/power/none/Makefile
+config.status: creating src/plugins/preempt/Makefile
+config.status: creating src/plugins/preempt/job_prio/Makefile
+config.status: creating src/plugins/preempt/none/Makefile
+config.status: creating src/plugins/preempt/partition_prio/Makefile
+config.status: creating src/plugins/preempt/qos/Makefile
+config.status: creating src/plugins/priority/Makefile
+config.status: creating src/plugins/priority/basic/Makefile
+config.status: creating src/plugins/priority/multifactor/Makefile
+config.status: creating src/plugins/proctrack/Makefile
+config.status: creating src/plugins/proctrack/cray/Makefile
+config.status: creating src/plugins/proctrack/cgroup/Makefile
+config.status: creating src/plugins/proctrack/pgid/Makefile
+config.status: creating src/plugins/proctrack/linuxproc/Makefile
+config.status: creating src/plugins/proctrack/sgi_job/Makefile
+config.status: creating src/plugins/proctrack/lua/Makefile
+config.status: creating src/plugins/route/Makefile
+config.status: creating src/plugins/route/default/Makefile
+config.status: creating src/plugins/route/topology/Makefile
+config.status: creating src/plugins/sched/Makefile
+config.status: creating src/plugins/sched/backfill/Makefile
+config.status: creating src/plugins/sched/builtin/Makefile
+config.status: creating src/plugins/sched/hold/Makefile
+config.status: creating src/plugins/select/Makefile
+config.status: creating src/plugins/select/alps/Makefile
+config.status: creating src/plugins/select/alps/libalps/Makefile
+config.status: creating src/plugins/select/alps/libemulate/Makefile
+config.status: creating src/plugins/select/bluegene/Makefile
+config.status: creating src/plugins/select/bluegene/ba_bgq/Makefile
+config.status: creating src/plugins/select/bluegene/bl_bgq/Makefile
+config.status: creating src/plugins/select/bluegene/sfree/Makefile
+config.status: creating src/plugins/select/cons_res/Makefile
+config.status: creating src/plugins/select/cray/Makefile
+config.status: creating src/plugins/select/linear/Makefile
+config.status: creating src/plugins/select/other/Makefile
+config.status: creating src/plugins/select/serial/Makefile
+config.status: creating src/plugins/slurmctld/Makefile
+config.status: creating src/plugins/slurmctld/nonstop/Makefile
+config.status: creating src/plugins/switch/Makefile
+config.status: creating src/plugins/switch/cray/Makefile
+config.status: creating src/plugins/switch/generic/Makefile
+config.status: creating src/plugins/switch/none/Makefile
+config.status: creating src/plugins/switch/nrt/Makefile
+config.status: creating src/plugins/switch/nrt/libpermapi/Makefile
+config.status: creating src/plugins/mpi/Makefile
+config.status: creating src/plugins/mpi/none/Makefile
+config.status: creating src/plugins/mpi/openmpi/Makefile
+config.status: creating src/plugins/mpi/pmi2/Makefile
+config.status: creating src/plugins/mpi/pmix/Makefile
+config.status: creating src/plugins/task/Makefile
+config.status: creating src/plugins/task/affinity/Makefile
+config.status: creating src/plugins/task/cgroup/Makefile
+config.status: creating src/plugins/task/cray/Makefile
+config.status: creating src/plugins/task/none/Makefile
+config.status: creating src/plugins/topology/Makefile
+config.status: creating src/plugins/topology/3d_torus/Makefile
+config.status: creating src/plugins/topology/hypercube/Makefile
+config.status: creating src/plugins/topology/node_rank/Makefile
+config.status: creating src/plugins/topology/none/Makefile
+config.status: creating src/plugins/topology/tree/Makefile
+config.status: creating testsuite/Makefile
+config.status: creating testsuite/expect/Makefile
+config.status: creating testsuite/slurm_unit/Makefile
+config.status: creating testsuite/slurm_unit/api/Makefile
+config.status: creating testsuite/slurm_unit/api/manual/Makefile
+config.status: creating testsuite/slurm_unit/common/Makefile
+config.status: creating testsuite/slurm_unit/common/slurm_protocol_pack/Makefile
+config.status: creating testsuite/slurm_unit/common/slurmdb_pack/Makefile
+config.status: creating config.h
+config.status: creating slurm/slurm.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+rm: libtoolT: No such file or directory
+=> Modifying libtool scripts to use pkgsrc libtool
+=> Modifying libtool scripts to use pkgsrc depcomp
