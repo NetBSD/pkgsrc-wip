@@ -36,8 +36,8 @@ CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
-CONFIGURE_ARGS+=	--with-hdf5=no
-CONFIGURE_ARGS+=	--enable-pam=no
+#CONFIGURE_ARGS+=	--with-hdf5=no
+#CONFIGURE_ARGS+=	--enable-pam=no
 
 LDFLAGS+=		-llz4
 
@@ -112,7 +112,7 @@ post-install:
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 # For job profiling
-# .include "../../devel/hdf5/buildlink3.mk"
+.include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
@@ -120,7 +120,7 @@ post-install:
 .include "../../mk/mysql.buildlink3.mk"
 .endif
 # For limiting user access to compute nodes
-# .include "../../mk/pam.buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

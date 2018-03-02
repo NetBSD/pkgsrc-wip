@@ -28,6 +28,7 @@ lib/libpmi.la
 lib/libslurm.la
 lib/libslurmdb.la
 lib/slurm/accounting_storage_filetxt.la
+lib/slurm/accounting_storage_mysql.la
 lib/slurm/accounting_storage_none.la
 lib/slurm/accounting_storage_slurmdbd.la
 lib/slurm/acct_gather_energy_cray.la
@@ -41,6 +42,7 @@ lib/slurm/acct_gather_profile_hdf5.la
 lib/slurm/acct_gather_profile_none.la
 lib/slurm/auth_munge.la
 lib/slurm/auth_none.la
+lib/slurm/burst_buffer_cray.la
 lib/slurm/burst_buffer_generic.la
 lib/slurm/checkpoint_none.la
 lib/slurm/checkpoint_ompi.la
@@ -67,6 +69,7 @@ lib/slurm/jobacct_gather_linux.la
 lib/slurm/jobacct_gather_none.la
 lib/slurm/jobcomp_elasticsearch.la
 lib/slurm/jobcomp_filetxt.la
+lib/slurm/jobcomp_mysql.la
 lib/slurm/jobcomp_none.la
 lib/slurm/jobcomp_script.la
 lib/slurm/launch_slurm.la
@@ -81,7 +84,9 @@ lib/slurm/mcs_user.la
 lib/slurm/mpi_none.la
 lib/slurm/mpi_openmpi.la
 lib/slurm/mpi_pmi2.la
+lib/slurm/node_features_knl_cray.la
 lib/slurm/node_features_knl_generic.la
+lib/slurm/power_cray.la
 lib/slurm/power_none.la
 lib/slurm/preempt_job_prio.la
 lib/slurm/preempt_none.la
