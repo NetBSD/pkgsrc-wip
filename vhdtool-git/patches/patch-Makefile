@@ -1,0 +1,16 @@
+$NetBSD$
+
+Make the Makefile honor CC/CFLAGS/LDFLAGS.
+
+--- Makefile.orig	2018-03-02 01:52:07.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+-CC	:= gcc
+-CFLAGS	:= -O2 -Wall -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -g2
+-LDFLAGS := -luuid
++CC	?= gcc
++CFLAGS	?= -O2 -Wall -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -g2
++LDFLAGS ?= -luuid
+ 
+ all: vhdtool
+ 

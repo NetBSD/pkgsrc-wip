@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-Makefile) = fc1e7dd9987d1fbf9983af5727670f40f07c9de2
+SHA1 (patch-vhdtool.c) = 24884496f7873cff84b9143fdc828d3a6a1fd57c

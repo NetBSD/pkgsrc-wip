@@ -4531,6 +4531,7 @@ SUBDIR+=	vdesk
 SUBDIR+=	vee
 SUBDIR+=	verbiste
 SUBDIR+=	verilator
+SUBDIR+=	vhdtool-git
 SUBDIR+=	vidalia
 SUBDIR+=	vidalia-devel
 SUBDIR+=	vidrioclock

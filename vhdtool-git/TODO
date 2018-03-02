@@ -1,0 +1,17 @@
+- The #ifdef mess used in patch-vhdtool.c is pretty hacky and there's
+  likely a better way to deal with platform differences.
+
+- Given the above, testing is also needed to make sure large files
+  actually work on various platforms.
+
+- Fix build on macOS: For some strange reason, buildlink isn't pulling
+  in libuuid as a dep (despite the existence of `.buildlink_libuuid_done').
+
+- Remove ONLY_FOR_PLATFORM: It'd probably build/work fine for macOS once the
+  libuuid issue is reolved. And for 64-bit NetBSD it builds fine if we
+  define lseek64 as lseek, but it hasn't been tested or verified if that's
+  the correct thing to do.
+
+- Write a proper DESCR so that it isn't just a copy of COMMENT.
+
+- See if `converters' is the best CATEGORY for this kind of tool.
