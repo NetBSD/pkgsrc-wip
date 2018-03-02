@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2017/07/11 19:41:20 joerg Exp $
 
-DISTNAME=	klayout-0.25
+DISTNAME=	klayout-0.25.1
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -9,7 +9,8 @@ HOMEPAGE=	http://www.klayout.de/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		Makefile:337: recipe for target 'tlClassRegistry.lo' failed
+# in build-release/gsi/gsi/Makefile:
+BROKEN=	Makefile:390: recipe for target 'gsiDeclBasic.lo' failed
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash
