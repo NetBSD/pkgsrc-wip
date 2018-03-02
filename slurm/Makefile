@@ -19,16 +19,8 @@ BUILD_DEPENDS+=	man2html-[0-9]*:../../wip/man2html
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
-# Does not prevent undefined ref errors
-# USE_TOOLS+=	autoconf automake autoreconf perl pkg-config
 USE_TOOLS+=	perl pkg-config
 USE_LIBTOOL=	yes
-
-# Does not prevent unefined reference errors
-# FORTIFY_SUPPORTED=	no
-
-# Does not prevent undefined reference errors
-# MAKE_JOBS_SAFE=	no
 
 # Help find pkgsrc man2html
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
@@ -36,8 +28,6 @@ CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
-#CONFIGURE_ARGS+=	--with-hdf5=no
-#CONFIGURE_ARGS+=	--enable-pam=no
 
 LDFLAGS+=		-llz4
 
@@ -57,7 +47,7 @@ RCD_SCRIPTS+=		slurmd slurmctld
 
 SUBST_CLASSES+=		linuxinit
 SUBST_STAGE.linuxinit=	post-patch
-SUBST_FILES.linuxinit=	${WRKSRC}/etc/init.d.slurm.in
+SUBST_FILES.linuxinit=	etc/init.d.slurm.in
 SUBST_SED.linuxinit=	-e 's|^exec_prefix=|&${PREFIX}|'
 SUBST_SED.linuxinit+=	-e 's|^prefix=|&${PREFIX}|'
 SUBST_SED.linuxinit+=	-e 's|@bindir@|$${exec_prefix}/bin|'
@@ -68,7 +58,7 @@ SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|$${prefix}/etc|'
 SUBST_CLASSES+=		gtk
 SUBST_STAGE.gtk=	post-patch
 SUBST_SED.gtk=		-e 's|min_gtk_version=.*|min_gtk_version=2000.0.0|'
-SUBST_FILES.gtk=	${WRKSRC}/configure
+SUBST_FILES.gtk=	configure
 
 SUBST_CLASSES+=		make-ex
 SUBST_STAGE.make-ex=	post-install
@@ -78,28 +68,12 @@ SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD
-CONFIGURE_ARGS+=	--with-mysql_config=/nonexistent
-#CONFIGURE_ARGS+=	--enable-shared=no
 
-# Hacks to get around undefined reference errors
-# Have not determined when these flags are missing from the generated Makefile
-#SUBST_CLASSES+=		undef1
-#SUBST_STAGE.undef1=	post-configure
-#SUBST_FILES.undef1=	src/plugins/acct_gather_profile/hdf5/sh5util/Makefile
-#SUBST_SED.undef1=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L${WRKSRC}/src/api/.libs -lslurmfull -o|'
-
-#SUBST_CLASSES+=		undef2
-#SUBST_STAGE.undef2=	post-configure
-#SUBST_FILES.undef2+=	src/*/Makefile
-#SUBST_FILES.undef2+=	src/*/*/Makefile
-#SUBST_SED.undef2=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L${WRKSRC}/src/api/.libs -lslurmfull -L${WRKSRC}/src/db_api/.libs -lslurmdb -o|'
+# Workaround for configure not finding libslurmfull on NetBSD
+CONFIGURE_ARGS+=	--with-shared-libslurm=no
 .endif
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
-
-# Does not prevent undefined ref errors
-# pre-configure:
-#	cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
 	${RM} -f ${WRKSRC}/etc/init.d.slurm.in.orig
@@ -116,9 +90,7 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
-.if ${OPSYS} == Linux
 .include "../../mk/mysql.buildlink3.mk"
-.endif
 # For limiting user access to compute nodes
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

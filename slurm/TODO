@@ -1,5 +1,13 @@
-Try
+Fix configure for NetBSD so --with-shared-libslurm=no can be removed
+# Workaround for configure not finding libslurmfull on NetBSD
+# Causes LIB_SLURM and LIB_SLURMDB to lack
+# -L$(top_builddir)/src/db_api/.libs -lslurmdb -lslurmfull'
+# Look for failure to find libslurmful in configure output
 
-static libs only
-autoreconf
-MAKE_JOBS_UNSAFE
+Get cpu affinity working on NetBSD
+
+SUBST_CLASSES+=		affin
+SUBST_STAGE.affin=	post-patch
+SUBST_SED.affin=	-e 's|"sched_setaffinity"|"sched_setaffinity_np"|g'
+SUBST_SED.affin+=	-e 's|sched_getaffinity(|sched_getaffinity_np("|g'
+SUBST_FILES.affin=	configure
