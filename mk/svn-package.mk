@@ -86,7 +86,7 @@ _SVN_DISTDIR=		${DISTDIR}/svn-packages
 .for repo in ${SVN_REPOSITORIES}
 SVN_MODULE.${repo}?=	${repo}
 .  if defined(CHECKOUT_DATE)
-SVN_REVISION.${repo}?=	{${CHECKOUT_DATE}}
+SVN_REVISION.${repo}?=	{${CHECKOUT_DATE}T00:00:00Z}
 .  else
 SVN_REVISION.${repo}?=	HEAD
 .  endif
@@ -121,11 +121,11 @@ _SVN_CMD.install_certs.${repo}= \
 # Check out the repository or update the cached one
 _SVN_CMD.fetch_repo.${repo}= \
 	if [ ! -d "$$module" ]; then			\
-	  ${STEP_MSG} "Checking out Subversion repository $$repo.";	\
+	  ${STEP_MSG} "Checking out revision $$revision from repository $$repo."; \
 	  ${_SVN_CMD} checkout -r "$$revision" ${SVN_CHECKOUT_FLAGS}	\
 	    "$$repo" "$$module";					\
 	else								\
-	  ${STEP_MSG} "Updating Subversion repository $$repo.";		\
+	  ${STEP_MSG} "Updating to revision $$revision."; \
 	  ${_SVN_CMD} update -r "$$revision" ${SVN_CHECKOUT_FLAGS} "$$module"; \
 	fi
 

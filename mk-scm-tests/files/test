@@ -17,31 +17,35 @@ setup_cvs_repository() {
 	# CVS doesn't let the user fake the dates, therefore it was easier
 	# to just manipulate the internal repository representation.
 	cat <<EOF >"$repodir/pkgbase/today,v"
-head	1.2;
+head	1.3;
 access;
-symbols;
+symbols
+	v2017:1.1;
 locks; strict;
 comment	@# @;
 
 
-1.2
+1.3
 date	2018.03.01.00.00.00;	author rillig;	state Exp;
 branches;
-next	1.1;
-commitid	b4clY6GJWjcPmVsA;
+next	1.2;
 
-1.1
+1.2
 date	2018.01.01.00.00.00;	author rillig;	state Exp;
 branches;
+next	1.1;
+
+1.1
+date	2017.01.01.00.00.00;	author rillig;	state Exp;
+branches;
 next	;
-commitid	eFoplWznEAOOmVsA;
 
 
 desc
 @@
 
 
-1.2
+1.3
 log
 @today is 2018-03-01
 @
@@ -50,7 +54,7 @@ text
 @
 
 
-1.1
+1.2
 log
 @today is 2018-01-01
 @
@@ -61,14 +65,30 @@ a1 1
 @
 
 
+1.1
+log
+@today is 2017-01-01
+@
+text
+@d1 1
+a1 1
+2017-01-01
+@
+
+
 EOF
 }
 
 setup_fossil_repository() {
 	mkdir -p "$repodir/pkgbase"
 	pushd "$repodir/pkgbase"
-	fossil init --date-override "2018-01-01" pkgbase.fossil
+	fossil init --date-override "2017-01-01" pkgbase.fossil
 	fossil open "pkgbase.fossil"
+
+	echo "2017-01-01" > today
+	fossil add today
+	fossil commit -m "today is 2017-01-01" --date-override "2017-01-01" --hash -- today
+	fossil tag add --date-override "2017-01-01 00:00:01" v2017 tip
 
 	echo "2018-01-01" > today
 	fossil add today
@@ -83,6 +103,12 @@ setup_fossil_repository() {
 setup_git_repository() {
 	git init "$repodir/pkgbase"
 	pushd "$repodir/pkgbase"
+
+	echo "2017-01-01" > today
+	git add today
+	GIT_AUTHOR_DATE="2017-01-01T00:00:00Z" GIT_COMMITTER_DATE="2017-01-01T00:00:00Z" \
+		git commit -m "today is 2017-01-01" -- today
+	git tag v2017
 
 	echo "2018-01-01" > today
 	git add today
@@ -99,6 +125,11 @@ setup_git_repository() {
 setup_hg_repository() {
 	hg init "$repodir/pkgbase"
 	pushd "$repodir/pkgbase"
+
+	echo "2017-01-01" > today
+	hg add today
+	hg commit -m "today is 2017-01-01" -d "2017-01-01T00:00:00Z" -u "user" -- today
+	hg tag -u "user" v2017
 
 	echo "2018-01-01" > today
 	hg add today
@@ -118,14 +149,23 @@ setup_svn_repository() {
 	chmod +x "$hook"
 	svn checkout "file://$repodir/pkgbase" "$basedir/svnwork"
 	pushd "$basedir/svnwork"
+	mkdir "trunk"
+	cd "trunk"
+
+	echo "2017-01-01" > today
+	svn add .
+	svn commit -m "today is 2017-01-01"
+	svn propset "svn:date" --revprop -r HEAD "2017-01-01T00:00:00.000000Z"
+
+	svn -m "v2017" --parents copy "file://$repodir/pkgbase/trunk" "file://$repodir/pkgbase/tags/v2017"
+	svn propset "svn:date" --revprop -r HEAD "2017-01-01T00:00:00.000001Z"
 
 	echo "2018-01-01" > today
-	svn add today
-	svn commit -m "today is 2018-01-01" -- today
+	svn commit -m "today is 2018-01-01"
 	svn propset "svn:date" --revprop -r HEAD "2018-01-01T00:00:00.000000Z"
 
 	echo "2018-03-01" > today
-	svn commit -m "today is 2018-03-01" -- today
+	svn commit -m "today is 2018-03-01"
 	svn propset "svn:date" --revprop -r HEAD "2018-03-01T00:00:00.000000Z"
 
 	popd
@@ -148,14 +188,16 @@ assert_that() {
 
 test_scm() { # usage: test_scm scm-name
 	case "$1" in
-	(cvs)		scm_display_name="CVS"		;;
-	(fossil)	scm_display_name="Fossil"	;;
-	(git)		scm_display_name="Git"		;;
-	(hg)		scm_display_name="Mercurial"	;;
-	(svn)		scm_display_name="Subversion"	;;
+	(cvs)		scm_display_name="CVS"		scm_tag_varname="CVS_TAG"	;;
+	(fossil)	scm_display_name="Fossil"	scm_tag_varname="FOSSIL_VERSION";;
+	(git)		scm_display_name="Git"		scm_tag_varname="GIT_TAG"	;;
+	(hg)		scm_display_name="Mercurial"	scm_tag_varname="HG_TAG"	;;
+	(svn)		scm_display_name="Subversion"	scm_tag_varname=""		;;
 	esac
 
 	# Sets up a repository in $repodir, with these commits:
+	# - at 2017-01-01TZ, the file "today" contains "2017-01-01".
+	#   - this commit is tagged v2017.
 	# - at 2018-01-01TZ, the file "today" contains "2018-01-01".
 	# - at 2018-03-01TZ, the file "today" contains "2018-03-01".
 	#
@@ -176,9 +218,16 @@ test_scm() { # usage: test_scm scm-name
 
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-01-01"
 
-	SCM_UNDER_TEST="$1" pkgsrc_make clean
+	if [ "$scm_tag_varname" ]; then
+		step "Testing $scm_display_name with tagged checkout"
+		SCM_UNDER_TEST="$1" pkgsrc_make clean
+		eval "SCM_UNDER_TEST=\"\$1\" $scm_tag_varname=\"v2017\" pkgsrc_make patch"
+
+		assert_that --file "$wrkdir/pkgbase/today" --has-content "2017-01-01"
+	fi
 
 	step "Dumping API variables for $scm_display_name (for manual inspection)"
+	SCM_UNDER_TEST="$1" pkgsrc_make clean
 	SCM_UNDER_TEST="$1" pkgsrc_make "show-all-$1"
 }
 

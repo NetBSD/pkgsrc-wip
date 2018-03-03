@@ -48,7 +48,7 @@ HG_REPO=	${.CURDIR}/tmp/repo/pkgbase
 .endif
 
 .if ${SCM_UNDER_TEST} == svn
-SVN_REPO=	file://${.CURDIR}/tmp/repo/pkgbase
+SVN_REPO=	file://${.CURDIR}/tmp/repo/pkgbase/trunk
 .include "../../wip/mk/svn-package.mk"
 .endif
 
