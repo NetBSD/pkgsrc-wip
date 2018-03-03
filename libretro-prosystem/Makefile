@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/prosystem/
 COMMENT=	Libretro core based on the ProSystem Atari 7800 emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

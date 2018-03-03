@@ -12,7 +12,7 @@ LICENSE=	no-commercial-use
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 BUILD_DIRS=	libretro
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro

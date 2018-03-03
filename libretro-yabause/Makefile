@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 BUILD_DIRS=	libretro
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"

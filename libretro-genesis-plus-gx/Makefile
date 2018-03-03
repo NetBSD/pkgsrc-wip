@@ -12,7 +12,7 @@ COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 LICENSE=	picodrive-license
 
 EXTRACT_USING=	bsdtar
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FILE=	Makefile.libretro
 

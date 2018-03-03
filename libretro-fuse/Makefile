@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/fuse/
 COMMENT=	Libretro core based on the FUSE ZX Spectrum emulator
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

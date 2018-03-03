@@ -9,7 +9,7 @@ HOMEPAGE=	https://docs.libretro.com/library/caprice32/
 COMMENT=	Libretro core based on the Caprice32 Amstrad CPC emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 .include "../../mk/endian.mk"
 

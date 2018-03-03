@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/melonds/
 COMMENT=	Libretro core based on the melonDS emulator
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"

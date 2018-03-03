@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/mame_2003/
 COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.78)
 LICENSE=	no-commercial-use
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 EXTRACT_USING=	bsdtar
 
 .include "../../mk/endian.mk"

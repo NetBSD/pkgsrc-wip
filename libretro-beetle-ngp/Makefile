@@ -11,7 +11,7 @@ HOMEPAGE=	https://docs.libretro.com/library/beetle_neopop/
 COMMENT=	Libretro core based on the Mednafen Neo Geo Pocket emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

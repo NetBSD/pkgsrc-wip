@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/virtual_jaguar/
 COMMENT=	Libretro core for Atari Jaguar emulation
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

@@ -12,7 +12,7 @@ COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.159)
 LICENSE=	no-commercial-use
 
 EXTRACT_USING=	bsdtar
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++03
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"

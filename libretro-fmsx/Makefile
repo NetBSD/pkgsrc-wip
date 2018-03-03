@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/fmsx/
 COMMENT=	Libretro core for emulation of the MSX family of home computers
 LICENSE=	no-commercial-use
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

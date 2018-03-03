@@ -11,7 +11,7 @@ HOMEPAGE=	https://docs.libretro.com/library/snes9x_2005/
 COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 LICENSE=	no-commercial-use
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

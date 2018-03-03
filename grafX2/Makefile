@@ -14,7 +14,7 @@ GITLAB_REV=	v${PKGVERSION_NOREV}
 
 WRKSRC=		${WRKDIR}/${GITLAB_PROJECT}-${GITLAB_REV}-${GITLAB_TAG}/src
 
-USE_TOOLS=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake
 
 MAKE_FLAGS+=	prefix=${PREFIX}
 CFLAGS+=	-DPREFIX=\"${PREFIX}\"

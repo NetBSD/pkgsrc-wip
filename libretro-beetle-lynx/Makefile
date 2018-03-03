@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/beetle_handy/
 COMMENT=	Libretro core based on the Mednafen Atari Lynx emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

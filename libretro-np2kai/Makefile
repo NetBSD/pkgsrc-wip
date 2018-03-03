@@ -15,7 +15,7 @@ GITHUB_TAG=	rev.${NP2KAI_REV}
 BUILD_DIRS=	sdl2
 MAKE_FILE=	Makefile.libretro
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"

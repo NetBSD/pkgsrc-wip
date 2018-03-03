@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/freeintv/
 COMMENT=	Libretro core for Mattel Intellivision emulation
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"

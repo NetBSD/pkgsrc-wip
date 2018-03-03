@@ -32,7 +32,7 @@ SITES.${SPRIV_TAG}.tar.gz= \
 WRKSRC=		${WRKDIR}/libretro-ppsspp-${PPSSPP_TAG}
 BUILD_DIRS=	libretro
 
-USE_TOOLS=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 EXTRACT_USING=	bsdtar
 

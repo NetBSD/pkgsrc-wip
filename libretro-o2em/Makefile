@@ -9,7 +9,7 @@ HOMEPAGE=	https://docs.libretro.com/library/o2em/
 COMMENT=	Libretro core for Magnavox Odyssey 2 and VideoPac emulation
 LICENSE=	artistic
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 

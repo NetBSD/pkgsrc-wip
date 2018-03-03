@@ -9,7 +9,7 @@ COMMENT=	MSX disk image conversion utility
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/dsk2rom
 

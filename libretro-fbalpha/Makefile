@@ -11,7 +11,7 @@ HOMEPAGE=	https://wiki.libretro.com/index.php?title=Final_Burn_Alpha
 COMMENT=	Libretro core based on the FB Alpha arcade emulator
 LICENSE=	no-commercial-use
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 MAKE_FILE=	makefile.libretro
 USE_LANGUAGES=	c c++
 

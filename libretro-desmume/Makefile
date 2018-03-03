@@ -13,7 +13,7 @@ GITHUB_TAG=	63ed05bbf02fa841adbdfd158cdc96033b48ddc0
 
 WRKSRC=		${WRKDIR}/desmume-${GITHUB_TAG}/desmume
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FILE=	Makefile.libretro
 

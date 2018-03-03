@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.libretro.com/library/tyrquake/
 COMMENT=	Libretro core for the TyrQuake interpreter for Quake and Quakeworld
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
