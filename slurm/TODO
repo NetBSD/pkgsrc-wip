@@ -1,9 +1,3 @@
-Fix configure for NetBSD so --with-shared-libslurm=no can be removed
-# Workaround for configure not finding libslurmfull on NetBSD
-# Causes LIB_SLURM and LIB_SLURMDB to lack
-# -L$(top_builddir)/src/db_api/.libs -lslurmdb -lslurmfull'
-# Look for failure to find libslurmful in configure output
-
 Get cpu affinity working on NetBSD
 
 SUBST_CLASSES+=		affin

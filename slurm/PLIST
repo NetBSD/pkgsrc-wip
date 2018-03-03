@@ -60,6 +60,7 @@ lib/slurm/job_submit_all_partitions.la
 lib/slurm/job_submit_cray.la
 lib/slurm/job_submit_defaults.la
 lib/slurm/job_submit_logging.la
+lib/slurm/job_submit_lua.la
 lib/slurm/job_submit_partition.la
 lib/slurm/job_submit_pbs.la
 lib/slurm/job_submit_require_timelimit.la
@@ -96,6 +97,7 @@ lib/slurm/priority_basic.la
 lib/slurm/priority_multifactor.la
 lib/slurm/proctrack_cgroup.la
 lib/slurm/proctrack_linuxproc.la
+lib/slurm/proctrack_lua.la
 lib/slurm/proctrack_pgid.la
 lib/slurm/route_default.la
 lib/slurm/route_topology.la

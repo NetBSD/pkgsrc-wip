@@ -19,15 +19,18 @@ BUILD_DEPENDS+=	man2html-[0-9]*:../../wip/man2html
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	perl pkg-config
+USE_TOOLS+=	bash perl pkg-config
 USE_LIBTOOL=	yes
 
 # Help find pkgsrc man2html
+CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
+# CONFIGURE_ARGS+=	--with-rrdtool=${PREFIX}
+CONFIGURE_ARGS+=	--with-libssh2=${PREFIX}
 
 LDFLAGS+=		-llz4
 
@@ -65,13 +68,11 @@ SUBST_STAGE.make-ex=	post-install
 SUBST_FILES.make-ex=	etc/Makefile
 SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == NetBSD
-
+# .include "../../mk/bsd.prefs.mk"
+# .if ${OPSYS} == NetBSD
 # Workaround for configure not finding libslurmfull on NetBSD
-CONFIGURE_ARGS+=	--with-shared-libslurm=no
-.endif
+# CONFIGURE_ARGS+=	--with-shared-libslurm=no
+# .endif
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
@@ -90,9 +91,11 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
+# Rather big dependencies
+# .include "../../databases/rrdtool/buildlink3.mk"
+.include "../../security/libssh2/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
-# For limiting user access to compute nodes
-.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
