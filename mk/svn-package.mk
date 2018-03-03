@@ -22,8 +22,15 @@
 #
 #	Example: https://svn.code.sf.net/p/projectname/code/trunk
 #
-# SVN_MODULE (optional)
-#	The directory where the files are extracted, relative to WRKDIR.
+# SVN_EXTRACTDIR (optional)
+#	The directory where the repository is checked out, relative to
+#	${WRKDIR}.
+#
+#	Default:
+#		For SVN_EXTRACTDIR, the default value is derived
+#		from the last path component of GIT_REPO (so for
+#		git://git@github.com:NetBSD/pkgsrc.git, it becomes pkgsrc).
+#		For SVN_EXTRACTDIR.${repo}, the default is ${repo}.
 #
 # SVN_REVISION (optional)
 #	The revision to check out.
@@ -38,9 +45,7 @@
 #	Example:
 #	SVN_REPOSITORIES=	stable latest
 #	SVN_REPO.stable=	https://svn.code.sf.net/p/project/code/tag/1.0.0
-#	SVN_MODULE.stable=	stable
 #	SVN_REPO.latest=	https://svn.code.sf.net/p/project/code/trunk
-#	SVN_MODULE.latest=	latest
 #
 # Keywords: svn subversion
 
@@ -56,16 +61,16 @@ PKGREVISION?=		${_SVN_PKGREVISION_CMD:sh}
 
 # The common case of a single repository
 .if defined(SVN_REPO)
-SVN_MODULE?=		${SVN_REPO:S,/$,,:S,/trunk$,,:S,/code$,,:T}
+SVN_EXTRACTDIR?=	${SVN_REPO:S,/$,,:S,/trunk$,,:S,/code$,,:T}
 SVN_REPOSITORIES+=	default
 SVN_REPO.default=	${SVN_REPO}
-SVN_MODULE.default=	${SVN_MODULE}
+SVN_EXTRACTDIR.default=	${SVN_EXTRACTDIR}
 .  for varbase in SVN_REVISION
 .    if defined(${varbase})
 ${varbase}.default=	${${varbase}}
 .    endif
 .  endfor
-WRKSRC?=		${WRKDIR}/${SVN_MODULE}
+WRKSRC?=		${WRKDIR}/${SVN_EXTRACTDIR}
 .endif
 
 SVN_REPOSITORIES?=	# none
@@ -89,20 +94,20 @@ _SVN_DISTDIR=		${DISTDIR}/svn-packages
 
 # Definition of repository-specific variables
 .for repo in ${SVN_REPOSITORIES}
-SVN_MODULE.${repo}?=	${repo}
+SVN_EXTRACTDIR.${repo}?=	${repo}
 .  if defined(CHECKOUT_DATE)
-SVN_REVISION.${repo}?=	{${CHECKOUT_DATE}T00:00:00Z}
+SVN_REVISION.${repo}?=		{${CHECKOUT_DATE}T00:00:00Z}
 .  else
-SVN_REVISION.${repo}?=	HEAD
+SVN_REVISION.${repo}?=		HEAD
 .  endif
 
 # The cached archive
-_SVN_DISTFILE.${repo}=	${PKGBASE}-${SVN_MODULE.${repo}}-svnarchive.tar.gz
+_SVN_DISTFILE.${repo}=	${PKGBASE}-${repo}-svnarchive.tar.gz
 
 # Define the shell variables used by the following commands
 _SVN_CMD.vars.${repo}= \
 	repo=${SVN_REPO.${repo}:Q}; \
-	module=${SVN_MODULE.${repo}:Q}; \
+	extractdir=${SVN_EXTRACTDIR.${repo}:Q}; \
 	archive=${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q}; \
 	revision=${SVN_REVISION.${repo}:Q}
 
@@ -125,20 +130,20 @@ _SVN_CMD.install_certs.${repo}= \
 
 # Check out the repository or update the cached one
 _SVN_CMD.fetch_repo.${repo}= \
-	if [ ! -d "$$module" ]; then			\
+	if [ ! -d "$$extractdir" ]; then				\
 	  ${STEP_MSG} "Checking out revision $$revision from repository $$repo."; \
 	  ${_SVN_CMD} checkout -r "$$revision" ${SVN_CHECKOUT_FLAGS}	\
-	    "$$repo" "$$module";					\
+	    "$$repo" "$$extractdir";					\
 	else								\
 	  ${STEP_MSG} "Updating to revision $$revision."; \
-	  ${_SVN_CMD} update -r "$$revision" ${SVN_CHECKOUT_FLAGS} "$$module"; \
+	  ${_SVN_CMD} update -r "$$revision" ${SVN_CHECKOUT_FLAGS} "$$extractdir"; \
 	fi
 
 # Create the cached archive from the checked out repository
 _SVN_CMD.create_archive.${repo}= \
 	${STEP_MSG} "Creating cached Subversion archive $${archive\#\#*/}."; \
 	${MKDIR} "$${archive%/*}";					\
-	pax -w "$$module" | gzip > "$$archive.tmp";			\
+	pax -w "$$extractdir" | gzip > "$$archive.tmp";			\
 	${MV} "$$archive.tmp" "$$archive"
 .endfor
 
@@ -157,11 +162,11 @@ do-svn-extract: .PHONY
 
 # Debug info for show-all and show-all-svn
 _VARGROUPS+=	svn
-_PKG_VARS.svn+=	SVN_REPO SVN_REVISION SVN_REPOSITORIES
+_PKG_VARS.svn+=	SVN_REPO SVN_REVISION SVN_EXTRACTDIR SVN_REPOSITORIES
 _SYS_VARS.svn+=	DISTFILES PKGREVISION
 _SYS_VARS.svn+=	_SVN_DISTDIR
 .for repo in ${SVN_REPOSITORIES}
-.  for varbase in SVN_REPO SVN_MODULE SVN_REVISION SVN_CERTS
+.  for varbase in SVN_REPO SVN_EXTRACTDIR SVN_REVISION SVN_CERTS
 _PKG_VARS.svn+=	${varbase}.${repo}
 .  endfor
 .  for varbase in _SVN_DISTFILE

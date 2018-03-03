@@ -23,7 +23,7 @@
 #	If the package needs more than one repository, see
 #	FOSSIL_REPOSITORIES below.
 #
-# FOSSIL_MODULE (optional)
+# FOSSIL_EXTRACTDIR (optional)
 #	The directory where the files are extracted, relative to WRKDIR.
 #
 #	Default: ${DISTNAME} without the version number
@@ -38,14 +38,14 @@
 #	is the list of repository IDs. For each of these repositories,
 #	parameterized variants of the above variables are defined.
 #
+#	The default value for FOSSIL_EXTRACTDIR.${repo} is ${repo},
+#	the repository ID.
+#
 #	Example:
 #	FOSSIL_REPOSITORIES=	stable latest
 #	FOSSIL_REPO.stable=	http://core.tcl.tk/tcl/
-#	FOSSIL_MODULE.stable=	stable
 #	FOSSIL_VERSION.stable=	v1.2.3
 #	FOSSIL_REPO.latest=	http://core.tcl.tk/tcl/
-#	FOSSIL_MODULE.latest=	latest
-#	FOSSIL_VERSION.latest=	--latest
 #
 # Variables set by this file:
 #
@@ -72,13 +72,13 @@ PKGREVISION?=		${${DATE} -u +'%Y%m%d':L:sh}
 .endif
 
 .if defined(FOSSIL_REPO)
-FOSSIL_REPOSITORIES+=	default
-FOSSIL_REPO.default=	${FOSSIL_REPO}
-FOSSIL_MODULE.default=	${DISTNAME:C,-[0-9].*,,}
+FOSSIL_REPOSITORIES+=		default
+FOSSIL_REPO.default=		${FOSSIL_REPO}
+FOSSIL_EXTRACTDIR.default=	${DISTNAME:C,-[0-9].*,,}
 .  if defined(FOSSIL_VERSION)
-FOSSIL_VERSION.default=	${FOSSIL_VERSION}
+FOSSIL_VERSION.default=		${FOSSIL_VERSION}
 .  endif
-WRKSRC?=		${WRKDIR}/${FOSSIL_MODULE.default}
+WRKSRC?=			${WRKDIR}/${FOSSIL_EXTRACTDIR.default}
 .endif
 
 FOSSIL_REPOSITORIES?=	# none
@@ -98,16 +98,16 @@ _FOSSIL_CMD=		${PREFIX}/bin/fossil
 _FOSSIL_DISTDIR=	${DISTDIR}/fossil-packages
 
 .for repo in ${FOSSIL_REPOSITORIES}
-FOSSIL_MODULE.${repo}?=		${repo}
+FOSSIL_EXTRACTDIR.${repo}?=	${repo}
 FOSSIL_VERSION.${repo}?=	--latest
 
 # The cached archive
-_FOSSIL_DISTFILE.${repo}=	${PKGBASE}-${FOSSIL_MODULE.${repo}}.clone
+_FOSSIL_DISTFILE.${repo}=	${PKGBASE}-${repo}.clone
 
 # Define the shell variables used by the following commands
 _FOSSIL_CMD.vars.${repo}= \
 	repo=${FOSSIL_REPO.${repo}:Q}; \
-	module=${FOSSIL_MODULE.${repo}:Q}; \
+	extractdir=${FOSSIL_EXTRACTDIR.${repo}:Q}; \
 	archive=${_FOSSIL_DISTDIR}/${_FOSSIL_DISTFILE.${repo}:Q}; \
 	version=${FOSSIL_VERSION.${repo}:Q}
 
@@ -121,8 +121,8 @@ _FOSSIL_CMD.clone_repo.${repo}= \
 # Open the cloned repository
 _FOSSIL_CMD.open_repo.${repo}= \
 	${STEP_MSG} "Opening Fossil repo $${archive\#\#*/}.";		\
-	${MKDIR} "$$module";						\
-	cd "$$module";							\
+	${MKDIR} "$$extractdir";					\
+	cd "$$extractdir";						\
 	${_FOSSIL_CMD} open "$$archive"
 
 # Pull changes from remote repository and save them in local repository
@@ -151,11 +151,11 @@ do-fossil-extract: .PHONY
 
 # Debug info for show-all and show-all-fossil
 _VARGROUPS+=		fossil
-_PKG_VARS.fossil+=	FOSSIL_REPO FOSSIL_MODULE FOSSIL_VERSION FOSSIL_REPOSITORIES
+_PKG_VARS.fossil+=	FOSSIL_REPO FOSSIL_EXTRACTDIR FOSSIL_VERSION FOSSIL_REPOSITORIES
 _SYS_VARS.fossil+=	DISTFILES PKGREVISION WRKSRC
 _SYS_VARS.fossil+=	_FOSSIL_DISTDIR
 .for repo in ${FOSSIL_REPOSITORIES}
-.  for varbase in FOSSIL_REPO FOSSIL_MODULE FOSSIL_VERSION
+.  for varbase in FOSSIL_REPO FOSSIL_EXTRACTDIR FOSSIL_VERSION
 _PKG_VARS.fossil+=	${varbase}.${repo}
 .  endfor
 .  for varbase in _FOSSIL_DISTFILE

@@ -110,7 +110,7 @@ _HG_TAG.${repo}=	${_HG_TODAY:Q}
 
 # Cache support:
 #   cache file name
-_HG_DISTFILE.${repo}=	${PKGBASE}-${HG_MODULE.${repo}}-${_HG_TAG.${repo}}.tar.gz
+_HG_DISTFILE.${repo}=	${PKGBASE}-${repo}-${_HG_TAG.${repo}}.tar.gz
 
 # Define the shell variables used by the following commands
 _HG_CMD.vars.${repo}= \

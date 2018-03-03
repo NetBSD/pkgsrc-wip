@@ -28,16 +28,15 @@
 #		git://git@github.com:NetBSD/pkgsrc.git
 #		git@github.com:NetBSD/pkgsrc.git
 #
-# GIT_MODULE (optional)
-#	The name of the Git module.
-#
-#	This is where the repository gets extracted.
+# GIT_EXTRACTDIR (optional)
+#	The directory where the repository is checked out, relative to
+#	${WRKDIR}.
 #
 #	Default:
-#		For the GIT_MODULE variable, the default value is derived
+#		For GIT_EXTRACTDIR, the default value is derived
 #		from the last path component of GIT_REPO (so for
 #		git://git@github.com:NetBSD/pkgsrc.git, it becomes pkgsrc).
-#		For the GIT_MODULE.${repo} variables, the default is ${repo}.
+#		For GIT_EXTRACTDIR.${repo}, the default is ${repo}.
 #
 # GIT_BRANCH (optional)
 #	The branch to check out.
@@ -68,10 +67,8 @@
 #
 #	Example:
 #	GIT_REPOSITORIES=	first second
-#	GIT_MODULE.first=	first
 #	GIT_REPO.first=		git://git@github.com:NetBSD/pkgsrc.git
 #	GIT_REVISION.first=	8a311b3069ee79731eec38ca13eb13772cc49223
-#	GIT_MODULE.second=	second
 #	GIT_REPO.second=	git://git@github.com:NetBSD/pkgsrc.git
 #	GIT_BRANCH.second=	master
 #
@@ -100,12 +97,12 @@ PKGREVISION?=		${_GIT_PKGVERSION:S/.//g}
 
 # The common case of a single repository
 .if defined(GIT_REPO)
-GIT_REPOSITORIES+=	default
-GIT_MODULE.default?=	${GIT_REPO:T:.git=}
-WRKSRC?=		${WRKDIR}/${GIT_MODULE.default}
+GIT_REPOSITORIES+=		default
+GIT_EXTRACTDIR.default?=	${GIT_REPO:T:.git=}
+WRKSRC?=			${WRKDIR}/${GIT_EXTRACTDIR.default}
 .  for varbase in GIT_REPO GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
 .    if defined(${varbase})
-${varbase}.default=	${${varbase}}
+${varbase}.default=		${${varbase}}
 .    endif
 .  endfor
 .endif
@@ -131,8 +128,11 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 
 # Definition of repository-specific variables
 .for repo in ${GIT_REPOSITORIES}
-GIT_MODULE.${repo}?=	${repo}
-_GIT_ENV.${repo}=	${GIT_ENV.${repo}}
+.if defined(GIT_MODULE.${repo}) # for backwards compatibility
+GIT_EXTRACTDIR.${repo}?=	${GIT_MODULE.${repo}}
+.endif
+GIT_EXTRACTDIR.${repo}?=	${repo}
+_GIT_ENV.${repo}=		${GIT_ENV.${repo}}
 
 _GIT_CMDLINE.${repo}=	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD}
 
@@ -157,12 +157,12 @@ _GIT_CLONE_FLAGS.${repo}+=	--depth 1
 .  endif
 
 # The cached archive
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-gitarchive.tar.gz
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${repo}-gitarchive.tar.gz
 
 # Define the shell variables used by the following commands
 _GIT_CMD.vars.${repo}= \
 	repo=${GIT_REPO.${repo}:Q}; \
-	module=${GIT_MODULE.${repo}:Q}; \
+	extractdir=${GIT_EXTRACTDIR.${repo}:Q}; \
 	archive=${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}
 
 # Extract the cached archive
@@ -174,43 +174,43 @@ _GIT_CMD.extract_archive.${repo}= \
 
 # Check out and update the repository
 _GIT_CMD.checkout.${repo}= \
-	if [ ! -d "$$module" ]; then					\
-	  ${STEP_MSG} "Cloning Git archive $$module.";			\
+	if [ ! -d "$$extractdir" ]; then				\
+	  ${STEP_MSG} "Cloning Git repository $$repo.";			\
 	  ${_GIT_CMDLINE.${repo}}					\
-	    clone ${_GIT_CLONE_FLAGS.${repo}} "$$repo" "$$module";	\
+	    clone ${_GIT_CLONE_FLAGS.${repo}} "$$repo" "$$extractdir";	\
 	fi;								\
 	\
-	${STEP_MSG} "Fetching remote branches of $$module.";		\
-	${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	${STEP_MSG} "Fetching remote branches.";			\
+	${_GIT_CMDLINE.${repo}} -C "$$extractdir"			\
 	  remote set-branches origin '*';				\
 	\
-	${STEP_MSG} "Updating Git working area $$module.";		\
-	${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	${STEP_MSG} "Updating Git working area $$extractdir.";		\
+	${_GIT_CMDLINE.${repo}} -C "$$extractdir"			\
 	  fetch ${_GIT_FETCH_FLAGS.${repo}};				\
 	\
 	revision=${_GIT_REV.${repo}:Q};					\
 	checkout_date=${CHECKOUT_DATE:Q};				\
 	if [ "$$checkout_date" ]; then					\
 	  ${STEP_MSG} "Checking out $$revision at $$checkout_date.";	\
-	  ref=`${_GIT_CMDLINE.${repo}} -C "$$module" rev-list -n 1 --before="$${checkout_date}T00:00:01Z" "$$revision"`; \
-	  [ "$$ref" ] || ${FAIL_MSG} "[git-package.mk] Cannot find commit for module $$module revision $$revision at $$checkout_date"; \
-	  ${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	  ref=`${_GIT_CMDLINE.${repo}} -C "$$extractdir" rev-list -n 1 --before="$${checkout_date}T00:00:01Z" "$$revision"`; \
+	  [ "$$ref" ] || ${FAIL_MSG} "[git-package.mk] Cannot find commit for repository "${repo:Q}" revision $$revision at $$checkout_date"; \
+	  ${_GIT_CMDLINE.${repo}} -C "$$extractdir"			\
 	    checkout ${_GIT_CHECKOUT_FLAGS} "$$ref";			\
 	else								\
 	  ${STEP_MSG} "Checking out $$revision.";			\
-	  ${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	  ${_GIT_CMDLINE.${repo}} -C "$$extractdir"			\
 	    checkout ${_GIT_CHECKOUT_FLAGS} "$$revision";		\
 	fi;								\
 	\
-	${STEP_MSG} "Updating submodules of $$module.";			\
+	${STEP_MSG} "Updating submodules of $$extractdir.";		\
 	: "XXX: The revision of the submodules is not correct";		\
-	${_GIT_CMDLINE.${repo}} -C "$$module" submodule update --recursive
+	${_GIT_CMDLINE.${repo}} -C "$$extractdir" submodule update --recursive
 
 # Create the cached archive from the checked out repository
 _GIT_CMD.create_archive.${repo}= \
 	${STEP_MSG} "Creating cached Git archive $${archive\#\#*/}.";	\
 	${MKDIR} "$${archive%/*}";					\
-	pax -w "$$module" | gzip > "$$archive.tmp";			\
+	pax -w "$$extractdir" | gzip > "$$archive.tmp";			\
 	${MV} "$$archive.tmp" "$$archive"
 .endfor
 
@@ -229,10 +229,10 @@ do-git-extract: .PHONY
 # Debug info for show-all and show-all-git
 _VARGROUPS+=		git
 _PKG_VARS.git=		GIT_REPOSITORIES
-_PKG_VARS.git+=		GIT_REPO GIT_MODULE GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
+_PKG_VARS.git+=		GIT_REPO GIT_EXTRACTDIR GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
 _SYS_VARS.git=		DISTFILES PKGREVISION WRKSRC
 .for repo in ${GIT_REPOSITORIES}
-.  for varbase in GIT_REPO GIT_MODULE GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
+.  for varbase in GIT_REPO GIT_EXTRACTDIR GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
 _PKG_VARS.git+=		${varbase}.${repo}
 .  endfor
 .  for varbase in _GIT_REV _GIT_DISTFILE

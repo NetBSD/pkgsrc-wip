@@ -206,11 +206,19 @@ test_scm() { # usage: test_scm scm-name
 	setup_${1}_repository
 	wrkdir=`pkgsrc_make show-var VARNAME=WRKDIR`
 
+	step "Dumping API variables for $scm_display_name (for manual inspection)"
+	SCM_UNDER_TEST="$1" pkgsrc_make clean
+	SCM_UNDER_TEST="$1" pkgsrc_make "show-all-$1"
+	:
+	: "needs to be inspected manually"
+
 	step "Testing $scm_display_name"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
 	SCM_UNDER_TEST="$1" pkgsrc_make patch
 	:
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"
+	assert_that --file "$wrkdir/2017/today"    --has-content "2017-01-01"
+	assert_that --file "$wrkdir/current/today" --has-content "2018-03-01"
 
 	step "Testing $scm_display_name with CHECKOUT_DATE"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
@@ -225,11 +233,7 @@ test_scm() { # usage: test_scm scm-name
 	:
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2017-01-01"
 
-	step "Dumping API variables for $scm_display_name (for manual inspection)"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
-	SCM_UNDER_TEST="$1" pkgsrc_make "show-all-$1"
-	:
-	: "needs to be inspected manually"
 }
 
 main() {
