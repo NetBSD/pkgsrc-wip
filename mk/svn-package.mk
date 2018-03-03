@@ -10,7 +10,7 @@
 # CHECKOUT_DATE (optional)
 #	Date to check out in ISO format (YYYY-MM-DD).
 #
-#	When a package doesn't specify a CVS_TAG, it is checked out from
+#	When a package doesn't specify a SVN_REVISION, it is checked out from
 #	the HEAD revision, and the PKGREVISION is set based on the date.
 #	To keep this date stable during a bulk build (which may span
 #	one or more midnights), this can be set to a fixed date.

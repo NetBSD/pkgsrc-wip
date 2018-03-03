@@ -54,7 +54,7 @@
 #	This means that MASTER_SITES does not need to be defined.
 #
 # PKGREVISION
-#	If the package doesn't set a specific CVS_TAG, this defaults
+#	If the package doesn't set a specific FOSSIL_VERSION, this defaults
 #	to today in the format yyyymmdd, e.g. 20180225.
 #	This keeps the packages distinguishable since the HEAD might
 #	change anytime.
