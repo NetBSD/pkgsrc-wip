@@ -2,16 +2,11 @@
 
 PKGNAME=	libvterm-0.0.0
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/neovim/livterm/archive/
+GIT_REPO=	git://github.com/neovim/libvterm.git
 
 HOMEPAGE=	http://www.leonerd.org.uk/code/libvterm/
 COMMENT=	Abstract VT220/Xterm/ECMA-48 emulation library
 LICENSE=	mit
-
-GIT_REPOSITORIES=	libvterm
-GIT_REPO.libvterm=	git://github.com/neovim/libvterm.git
-GIT_MODULE.libvterm=	libvterm
-WRKSRC=			${WRKDIR}/${GIT_MODULE.libvterm}
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config gmake perl

@@ -3,7 +3,7 @@
 DISTNAME=	emacs-nox11-24.0.90
 PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	editors
-MASTER_SITES=	#
+GIT_REPO=	git://repo.or.cz/emacs.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
@@ -17,12 +17,6 @@ AUTOCONF_REQUIRED=	2.65
 CONFLICTS=	emacs-[0-9]*
 
 BUILD_TARGET=	bootstrap
-
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	git://repo.or.cz/emacs.git
-_GIT_FLAGS?=		--depth 1
-GIT_MODULE=		emacs
-GIT_MODULE.master=	emacs
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes

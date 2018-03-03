@@ -1,11 +1,9 @@
 # $NetBSD: Makefile,v 1.4 2014/04/10 15:41:17 hfath Exp $
 #
 
-DISTNAME=		davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=	1.1.4
-PKGREVISION=		${_GIT_PKGVERSION:S/.//g}
-CATEGORIES=		www
-MASTER_SITES=		http://debian.mcmillan.net.nz/packages/davical/
+DISTNAME=	davical-1.1.4
+CATEGORIES=	www
+GIT_REPO=	https://gitlab.com/davical-project/davical.git
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://www.davical.org/
@@ -13,11 +11,8 @@ COMMENT=	Simple CalDAV server using a PostgreSQL backend
 
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	https://gitlab.com/davical-project/davical.git
-GIT_MODULE.master=	davical
 # for "SSL certificate problem: unable to get local issuer certificate"
-GIT_ENV.master+=	GIT_SSL_NO_VERIFY=true
+#GIT_ENV.master+=	GIT_SSL_NO_VERIFY=true
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical
@@ -30,7 +25,6 @@ DAVICAL_USER?=	${PGUSER}
 DAVICAL_GROUP?=	${PGGROUP}
 
 USE_TOOLS=	gmake pax msgfmt perl:build
-WRKSRC=		${WRKDIR}/${PKGBASE}
 
 PAXDIRS=	htdocs inc dba po scripts
 

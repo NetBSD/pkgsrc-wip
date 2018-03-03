@@ -3,19 +3,15 @@
 DISTNAME=	elscreen-current-0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	misc
-
-CONFLICTS+=	elscreen-[0-9]*
+GIT_REPO=	git://github.com/knu/elscreen.git
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://github.com/knu/elscreen
 COMMENT=	Window manager within Emacs
 LICENSE=	gnu-gpl-v2
 
-GIT_REPOSITORIES=	knu
-GIT_REPO.knu=		git://github.com/knu/elscreen.git
-GIT_MODULE.knu=		elscreen
+CONFLICTS+=	elscreen-[0-9]*
 
-WRKSRC=		${WRKDIR}/elscreen
 USE_LANGUAGES=	# none
 
 do-build:

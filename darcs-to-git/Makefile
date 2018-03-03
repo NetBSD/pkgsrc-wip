@@ -2,17 +2,13 @@
 
 DISTNAME=	darcs-to-git-0.1
 CATEGORIES=	devel
+GIT_REPO=	git://github.com/purcell/${PKGBASE}.git
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://github.com/purcell/${PKGBASE}
 COMMENT=	Convert a Darcs repository into a Git repository
 LICENSE=	mit
 
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	git://github.com/purcell/${PKGBASE}.git
-GIT_MODULE.master=	darcs-to-git
-
-WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 

@@ -2,22 +2,17 @@
 
 DISTNAME=		gr-fcdproplus-3.7
 CATEGORIES=		ham
+GIT_REPO=		https://github.com/dl1ksv/gr-fcdproplus
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/dl1ksv/gr-fcdproplus
 COMMENT=		Addon for funcube dongle pro+ to GNU Radio
 LICENSE=		gnu-gpl-v2
 
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	https://github.com/dl1ksv/gr-fcdproplus
-GIT_MODULE.master=	gr-fcdproplus
-GIT_ENV.master+=	GIT_SSL_NO_VERIFY=true
-
 USE_LANGUAGES=		c c++
-USE_TOOLS=		cmake
+USE_TOOLS+=		cmake
 USE_CMAKE=		yes
 
-WRKSRC=			${WRKDIR}/gr-fcdproplus
 CXXFLAGS+=		-I${PREFIX}/include/libusb-1.0
 
 # Suppress warning for developer
@@ -33,7 +28,7 @@ SUBST_MESSAGE.libusb=	Fix for "libusb.h not found"
 
 .include	"../../wip/mk/git-package.mk"
 # you need place after above line for now.
-_GIT_FLAGS=		# set empty, --depth 1 seems harmfull
+#_GIT_FLAGS=		# set empty, --depth 1 seems harmfull
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"

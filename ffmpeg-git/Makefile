@@ -1,15 +1,11 @@
 # $NetBSD: Makefile,v 1.2 2013/05/10 16:51:09 shattered Exp $
 
 DISTNAME=	ffmpeg-${PKGREVISION}
+GIT_REPO=	git://source.ffmpeg.org/ffmpeg.git
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software
-
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	git://source.ffmpeg.org/ffmpeg.git
-GIT_MODULE.master=	ffmpeg
-# _GIT_FLAGS?=		--depth 1
-WRKSRC=			${WRKDIR}/ffmpeg
 
 CONFIGURE_ARGS+=	--enable-avfilter
 #CONFIGURE_ARGS+=	--enable-avfilter-lavf
