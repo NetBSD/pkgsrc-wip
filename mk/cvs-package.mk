@@ -143,33 +143,28 @@ _CVS_FLAGS=		-Q -z3
 _CVS_CMDLINE=		${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS}
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
-_CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
-_CVS_TODAY=		${_CVS_TODAY_CMD:sh}
-_CVS_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
-_CVS_PKGVERSION?=	${_CVS_PKGVERSION_CMD:sh}
+_CVS_PKGVERSION?=	${${DATE} -u +'%Y.%m.%d':L:sh}
 _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
 .for repo in ${CVS_REPOSITORIES}
 CVS_MODULE.${repo}?=		${repo}
 CVS_EXTRACTDIR.${repo}?=	${repo}
+.  if defined(CVS_TAG)
+CVS_TAG.${repo}?=		${CVS_TAG}
+.  endif
 
 # Determine appropriate checkout date or tag
 .  if defined(CVS_TAG.${repo})
-_CVS_TAG_FLAG.${repo}=	-r${CVS_TAG.${repo}}
-_CVS_TAG.${repo}=	${CVS_TAG.${repo}}
-.  elif defined(CVS_TAG)
-_CVS_TAG_FLAG.${repo}=	-r${CVS_TAG}
-_CVS_TAG.${repo}=	${CVS_TAG}
-.  elif defined(CHECKOUT_DATE)
-_CVS_TAG_FLAG.${repo}=	-D${CHECKOUT_DATE:Q}
-_CVS_TAG.${repo}=	${CHECKOUT_DATE:Q}
+_CVS_REV_ARGS.${repo}=	-r ${CVS_TAG.${repo}:Q}
+_CVS_REV.${repo}=	${CVS_TAG.${repo}}
 .  else
-_CVS_TAG_FLAG.${repo}=	'-D${_CVS_TODAY} 00:00 +0000'
-_CVS_TAG.${repo}=	${_CVS_TODAY:Q}
+_CVS_DATE.${repo}=	${CHECKOUT_DATE:U${${DATE} -u +'%Y-%m-%d':L:sh}}
+_CVS_REV_ARGS.${repo}=	-D ${_CVS_DATE.${repo}}\ 00:00:00\ +0000
+_CVS_REV.${repo}=	${_CVS_DATE.${repo}}
 .  endif
 
 # The cached archive
-_CVS_DISTFILE.${repo}=	${PKGBASE}-${repo}-${_CVS_TAG.${repo}}.tar.gz
+_CVS_DISTFILE.${repo}=	${PKGBASE}-${repo}-${_CVS_REV.${repo}}.tar.gz
 
 # Define the shell variables used by the following commands
 _CVS_CMD.vars.${repo}= \
@@ -201,7 +196,7 @@ _CVS_CMD.login.${repo}= \
 _CVS_CMD.checkout.${repo}= \
 	${STEP_MSG} "Checking out $$module from $$root.";		\
 	${_CVS_CMDLINE} -d "$$root"					\
-	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${repo}}	\
+	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_REV_ARGS.${repo}}	\
 	      -d "$$extractdir" "$$module"
 
 # Create the cached archive from the checked out repository
@@ -238,6 +233,9 @@ _PKG_VARS.cvs+=		${varbase}.${repo}
 .  endfor
 .  for varbase in _CVS_DISTFILE
 _SYS_VARS.cvs+=		${varbase}.${repo}
+.  endfor
+.  for varbase in _CVS_REV_ARGS _CVS_REV
+_DEF_VARS.cvs+=		${varbase}.${repo}
 .  endfor
 .endfor
 _USE_VARS.cvs+=		DISTNAME
