@@ -5,6 +5,16 @@
 # tarballs. Whenever a package is fetched from Subversion, an archive
 # is created from it and saved below ${DISTDIR}, to save bandwidth.
 #
+# User-settable variables:
+#
+# CHECKOUT_DATE (optional)
+#	Date to check out in ISO format (YYYY-MM-DD).
+#
+#	When a package doesn't specify a CVS_TAG, it is checked out from
+#	the HEAD revision, and the PKGREVISION is set based on the date.
+#	To keep this date stable during a bulk build (which may span
+#	one or more midnights), this can be set to a fixed date.
+#
 # Package-settable variables:
 #
 # SVN_REPO (required)
@@ -20,15 +30,10 @@
 #
 #	Example: 12345
 #
-# If a package needs to checkout from more than one Subversion repository,
-# the setup is a little more complicated, using parameterized variants of
-# the above variables.
-#
 # SVN_REPOSITORIES (optional)
-#	For packages that need multiple Subversion repositories, this is the list
-#	of repository IDs. Each of these repositories is configured separately,
-#	using parameterized variables like SVN_REPO.${repo} instead of the
-#	above SVN_REPO.
+#	If the package needs multiple Subversion repositories, this
+#	is the list of repository IDs. For each of these repositories,
+#	parameterized variants of the above variables are defined.
 #
 #	Example:
 #	SVN_REPOSITORIES=	stable latest
@@ -37,28 +42,19 @@
 #	SVN_REPO.latest=	https://svn.code.sf.net/p/project/code/trunk
 #	SVN_MODULE.latest=	latest
 #
-# SVN_ENV.${id} (optional)
-#	The environment for the svn command.
-#
 # Keywords: svn subversion
-
-.if !defined(_PKG_MK_SVN_PACKAGE_MK)
-_PKG_MK_SVN_PACKAGE_MK=	# defined
 
 BUILD_DEPENDS+=		subversion-base-[0-9]*:../../devel/subversion-base
 
-#
-# defaults for user-visible input variables
-#
-
+# Defaults for package-settable variables
 DISTFILES?=		# empty
+.if defined(CHECKOUT_DATE)
+PKGREVISION?=		${CHECKOUT_DATE:S/-//g}
+.else
 PKGREVISION?=		${_SVN_PKGREVISION_CMD:sh}
+.endif
 
-#
-# End of the interface part. Start of the implementation part.
-#
-
-# The common case of a single repository.
+# The common case of a single repository
 .if defined(SVN_REPO)
 SVN_MODULE?=		${SVN_REPO:S,/$,,:S,/trunk$,,:S,/code$,,:T}
 SVN_REPOSITORIES+=	_default
@@ -67,24 +63,16 @@ SVN_MODULE._default=	${SVN_MODULE}
 WRKSRC?=		${WRKDIR}/${SVN_MODULE}
 .endif
 
-#
-# Input validation
-#
-
-.if !defined(SVN_REPOSITORIES)
-PKG_FAIL_REASON+=	"[svn-package.mk] SVN_REPOSITORIES must be set."
 SVN_REPOSITORIES?=	# none
+.if empty(SVN_REPOSITORIES)
+PKG_FAIL_REASON+=	"[svn-package.mk] SVN_REPOSITORIES must be set."
 .endif
 
 .for repo in ${SVN_REPOSITORIES}
-.  if !defined(SVN_REPO.${repo})
+.  if empty(SVN_REPO.${repo})
 PKG_FAIL_REASON+=	"[svn-package.mk] SVN_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
-
-#
-# Internal variables
-#
 
 USE_TOOLS+=		date pax
 
@@ -94,14 +82,14 @@ _SVN_CHECKOUT_FLAGS=	--config-dir=${_SVN_CONFIG_DIR} --non-interactive
 _SVN_PKGREVISION_CMD=	${DATE} -u +'%Y%m%d'
 _SVN_DISTDIR=		${DISTDIR}/svn-packages
 
-#
-# Generation of repository-specific variables
-#
-
+# Definition of repository-specific variables
 .for repo in ${SVN_REPOSITORIES}
 SVN_MODULE.${repo}?=	${repo}
+.  if defined(CHECKOUT_DATE)
+SVN_REVISION.${repo}?=	{${CHECKOUT_DATE}}
+.  else
 SVN_REVISION.${repo}?=	HEAD
-_SVN_ENV.${repo}=	${SVN_ENV.${repo}}
+.  endif
 
 # The cached archive
 _SVN_DISTFILE.${repo}=	${PKGBASE}-${SVN_MODULE.${repo}}-svnarchive.tar.gz
@@ -120,20 +108,28 @@ _SVN_CMD.extract_archive.${repo}= \
 	  gzip -d -c "$$archive" | pax -r;				\
 	fi
 
+# Install client certificates for authentication
+.if !empty(SVN_CERTS.${repo})
+_SVN_CMD.install_certs.${repo}= \
+	${MKDIR} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server;		\
+	${CP} ${SVN_CERTS.${repo}} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
+.else
+_SVN_CMD.install_certs.${repo}= \
+	${DO_NADA}
+.endif
+
 # Check out the repository or update the cached one
 _SVN_CMD.fetch_repo.${repo}= \
 	if [ ! -d "$$module" ]; then			\
 	  ${STEP_MSG} "Checking out Subversion repository $$repo.";	\
-	  ${SETENV} ${_SVN_ENV.${repo}} ${_SVN_CMD}			\
-	    checkout -r "$$revision" ${SVN_CHECKOUT_FLAGS}		\
+	  ${_SVN_CMD} checkout -r "$$revision" ${SVN_CHECKOUT_FLAGS}	\
 	    "$$repo" "$$module";					\
 	else								\
 	  ${STEP_MSG} "Updating Subversion repository $$repo.";		\
-	  ${SETENV} ${_SVN_ENV.${repo}} ${_SVN_CMD}			\
-	    update -r "$$revision" ${SVN_CHECKOUT_FLAGS} "$$module";	\
+	  ${_SVN_CMD} update -r "$$revision" ${SVN_CHECKOUT_FLAGS} "$$module"; \
 	fi
 
-# Create the cached archive
+# Create the cached archive from the checked out repository
 _SVN_CMD.create_archive.${repo}= \
 	${STEP_MSG} "Creating cached Subversion archive $${archive\#\#*/}."; \
 	${MKDIR} "$${archive%/*}";					\
@@ -145,17 +141,13 @@ pre-extract: do-svn-extract
 
 do-svn-extract: .PHONY
 .for repo in ${SVN_REPOSITORIES}
-.if defined(SVN_CERTS.${repo}) && !empty(SVN_CERTS.${repo})
-	${RUN} ${MKDIR} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
-	${RUN} ${CP} ${SVN_CERTS.${repo}} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
-.endif
 	${RUN} \
 	cd ${WRKDIR}; \
-	${MKDIR} ${_SVN_DISTDIR:Q}; \
 	${_SVN_CMD.vars.${repo}}; \
+	${_SVN_CMD.install_certs.${repo}}; \
 	${_SVN_CMD.extract_archive.${repo}}; \
 	${_SVN_CMD.fetch_repo.${repo}}; \
-	${_SVN_CMD.create_archive.${repo}};
+	${_SVN_CMD.create_archive.${repo}}
 .endfor
 
 # Debug info for show-all and show-all-svn
@@ -171,5 +163,3 @@ _PKG_VARS.svn+=	${varbase}.${repo}
 _SYS_VARS.svn+=	${varbase}.${repo}
 .  endfor
 .endfor
-
-.endif

@@ -5,6 +5,16 @@
 # repository is fetched from Fossil, a copy of it is saved below ${DISTDIR},
 # to save bandwidth.
 #
+# User-settable variables:
+#
+# CHECKOUT_DATE (optional)
+#	Date to check out in ISO format (YYYY-MM-DD).
+#
+#	When a package doesn't specify a FOSSIL_VERSION, the latest commit
+#	is used, and the PKGREVISION is set based on the current date.
+#	To keep this date stable during a bulk build (which may span
+#	one or more midnights), this can be set to a fixed date.
+#
 # Package-settable variables:
 #
 # FOSSIL_REPO (required)
@@ -19,13 +29,9 @@
 #	Default: ${DISTNAME} without the version number
 #
 # FOSSIL_VERSION (optional)
-#	The revision, tag or branch to check out.
+#	The revision, tag, date or branch to check out.
 #
 #	Default: --latest
-#
-# Packages that access more than one Fossil repository have to list the
-# repositories in FOSSIL_REPOSITORIES and configure the remaining variables
-# for each repository individually.
 #
 # FOSSIL_REPOSITORIES (optional)
 #	If the package needs multiple Fossil repositories, this
@@ -41,60 +47,55 @@
 #	FOSSIL_MODULE.latest=	latest
 #	FOSSIL_VERSION.latest=	--latest
 #
+# Variables set by this file:
+#
+# DISTFILES
+#	Defaults to an empty list.
+#	This means that MASTER_SITES does not need to be defined.
+#
+# PKGREVISION
+#	If the package doesn't set a specific CVS_TAG, this defaults
+#	to today in the format yyyymmdd, e.g. 20180225.
+#	This keeps the packages distinguishable since the HEAD might
+#	change anytime.
+#
 # Keywords: fossil
-
-.if !defined(_PKG_MK_FOSSIL_PACKAGE_MK)
-_PKG_MK_FOSSIL_PACKAGE_MK=	# defined
 
 BUILD_DEPENDS+=		fossil-[0-9]*:../../devel/fossil
 
-#
-# defaults for user-visible input variables
-#
-
 DISTFILES?=		# empty
-PKGREVISION?=		${_FOSSIL_PKGREVISION_CMD:sh}
-
-#
-# End of the interface part. Start of the implementation part.
-#
-
-# The common case of a single repository.
-.if defined(FOSSIL_REPO)
-FOSSIL_REPOSITORIES+=	_default
-FOSSIL_REPO._default=	${FOSSIL_REPO}
-FOSSIL_MODULE._default=	${FOSSIL_REPO:S,/$,,:T}
-WRKSRC?=		${WRKDIR}/${FOSSIL_MODULE._default}
+.if defined(CHECKOUT_DATE)
+PKGREVISION?=		${CHECKOUT_DATE:S/-//g}
+FOSSIL_VERSION?=	${CHECKOUT_DATE}
+.else
+PKGREVISION?=		${${DATE} -u +'%Y%m%d':L:sh}
 .endif
 
-#
-# Input validation
-#
+.if defined(FOSSIL_REPO)
+FOSSIL_REPOSITORIES+=	default
+FOSSIL_REPO.default=	${FOSSIL_REPO}
+FOSSIL_MODULE.default=	${DISTNAME:C,-[0-9].*,,}
+.if defined(FOSSIL_VERSION)
+FOSSIL_VERSION.default=	${FOSSIL_VERSION}
+.endif
+WRKSRC?=		${WRKDIR}/${FOSSIL_MODULE.default}
+.endif
 
-.if !defined(FOSSIL_REPOSITORIES)
-PKG_FAIL_REASON+=	"[fossil-package.mk] FOSSIL_REPOSITORIES must be set."
 FOSSIL_REPOSITORIES?=	# none
+.if empty(FOSSIL_REPOSITORIES)
+PKG_FAIL_REASON+=	"[fossil-package.mk] FOSSIL_REPOSITORIES must be set."
 .endif
 
 .for repo in ${FOSSIL_REPOSITORIES}
-.  if !defined(FOSSIL_REPO.${repo})
+.  if empty(FOSSIL_REPO.${repo})
 PKG_FAIL_REASON+=	"[fossil-package.mk] FOSSIL_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
 
-#
-# Internal variables
-#
+USE_TOOLS+=		date pax
 
-USE_TOOLS+=			date pax
-
-_FOSSIL_CMD=			fossil
-_FOSSIL_PKGREVISION_CMD=	${DATE} -u +'%Y%m%d'
-_FOSSIL_DISTDIR=		${DISTDIR}/fossil-packages
-
-#
-# Generation of repository-specific variables
-#
+_FOSSIL_CMD=		${PREFIX}/bin/fossil
+_FOSSIL_DISTDIR=	${DISTDIR}/fossil-packages
 
 .for repo in ${FOSSIL_REPOSITORIES}
 FOSSIL_MODULE.${repo}?=		${repo}
@@ -122,22 +123,17 @@ _FOSSIL_CMD.open_repo.${repo}= \
 	${STEP_MSG} "Opening Fossil repo $${archive\#\#*/}.";		\
 	${MKDIR} "$$module";						\
 	cd "$$module";							\
-	${_FOSSIL_CMD} open "$$archive";				\
-	cd ${WRKDIR}
+	${_FOSSIL_CMD} open "$$archive"
 
 # Pull changes from remote repository and save them in local repository
 _FOSSIL_CMD.pull.${repo}= \
 	${STEP_MSG} "Pulling changes from $$repo.";			\
-	cd "$$module";							\
-	${_FOSSIL_CMD} pull "$$repo";					\
-	cd ${WRKDIR}
+	${_FOSSIL_CMD} pull "$$repo"
 
 # Check out the desired version from the local repository
 _FOSSIL_CMD.checkout.${repo}= \
 	${STEP_MSG} "Checking out $$version.";				\
-	cd "$$module";							\
-	${_FOSSIL_CMD} checkout --force "$$version";			\
-	cd ${WRKDIR}
+	${_FOSSIL_CMD} checkout --force "$$version"
 .endfor
 
 pre-extract: do-fossil-extract
@@ -166,5 +162,3 @@ _PKG_VARS.fossil+=	${varbase}.${repo}
 _SYS_VARS.fossil+=	${varbase}.${repo}
 .  endfor
 .endfor
-
-.endif

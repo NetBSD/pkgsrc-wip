@@ -5,6 +5,16 @@
 # package is fetched from Git, an archive is created from it and saved
 # below ${DISTDIR}, to save bandwidth.
 #
+# User-settable variables:
+#
+# CHECKOUT_DATE (optional)
+#	Date to check out in ISO format (YYYY-MM-DD).
+#
+#	When a package doesn't specify a GIT_TAG, it is checked out from
+#	the HEAD revision, and the PKGREVISION is set based on the date.
+#	To keep this date stable during a bulk build (which may span
+#	one or more midnights), this can be set to a fixed date.
+#
 # Package-settable variables:
 #
 # GIT_REPO (required)
@@ -32,7 +42,7 @@
 # GIT_BRANCH (optional)
 #	The branch to check out.
 #
-#	This should seldomly be used since it prevents the build from being
+#	This should seldom be used since it prevents the build from being
 #	reproducible. Prefer a tag or a revision instead.
 #
 # GIT_REVISION (optional)
@@ -78,52 +88,38 @@
 #
 # Keywords: git github
 
-.if !defined(_PKG_MK_GIT_PACKAGE_MK)
-_PKG_MK_GIT_PACKAGE_MK=	# defined
-
 BUILD_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
 
-#
-# defaults for user-visible input variables
-#
-
+# Defaults for package-settable variables
 DISTFILES?=		# empty
+.if defined(CHECKOUT_DATE)
+PKGREVISION?=		${CHECKOUT_DATE:S/-//g}
+.else
 PKGREVISION?=		${_GIT_PKGVERSION:S/.//g}
-
-#
-# End of the interface part. Start of the implementation part.
-#
+.endif
 
 # The common case of a single repository
 .if defined(GIT_REPO)
-GIT_MODULE._default?=	${GIT_REPO:T:.git=}
-GIT_REPOSITORIES+=	_default
-WRKSRC?=		${WRKDIR}/${GIT_MODULE._default}
+GIT_REPOSITORIES+=	default
+GIT_MODULE.default?=	${GIT_REPO:T:.git=}
+WRKSRC?=		${WRKDIR}/${GIT_MODULE.default}
 .  for varbase in GIT_REPO GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
 .    if defined(${varbase})
-${varbase}._default=	${${varbase}}
+${varbase}.default=	${${varbase}}
 .    endif
 .  endfor
 .endif
 
-#
-# Input validation
-#
-
-.if !defined(GIT_REPOSITORIES)
-PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPOSITORIES must be set."
 GIT_REPOSITORIES?=	# none
+.if empty(GIT_REPOSITORIES)
+PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPOSITORIES must be set."
 .endif
 
 .for repo in ${GIT_REPOSITORIES}
-.  if !defined(GIT_REPO.${repo})
+.  if empty(GIT_REPO.${repo})
 PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
-
-#
-# Internal variables
-#
 
 USE_TOOLS+=		date pax
 
@@ -133,10 +129,7 @@ _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _GIT_PKGVERSION=	${_GIT_PKGVERSION_CMD:sh}
 _GIT_DISTDIR=		${DISTDIR}/git-packages
 
-#
-# Generation of repository-specific variables
-#
-
+# Definition of repository-specific variables
 .for repo in ${GIT_REPOSITORIES}
 GIT_MODULE.${repo}?=	${repo}
 _GIT_ENV.${repo}=	${GIT_ENV.${repo}}
@@ -145,13 +138,13 @@ _GIT_CMDLINE.${repo}=	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD}
 
 # determine appropriate checkout branch or tag
 .  if defined(GIT_BRANCH.${repo})
-_GIT_FLAG.${repo}=	origin/${GIT_BRANCH.${repo}}
+_GIT_REV.${repo}=	origin/${GIT_BRANCH.${repo}}
 .  elif defined(GIT_REVISION.${repo})
-_GIT_FLAG.${repo}=	${GIT_REVISION.${repo}}
+_GIT_REV.${repo}=	${GIT_REVISION.${repo}}
 .  elif defined(GIT_TAG.${repo})
-_GIT_FLAG.${repo}=	tags/${GIT_TAG.${repo}}
+_GIT_REV.${repo}=	tags/${GIT_TAG.${repo}}
 .  else
-_GIT_FLAG.${repo}=	origin/HEAD
+_GIT_REV.${repo}=	origin/HEAD
 .  endif
 
 _GIT_FETCH_FLAGS.${repo}=	--quiet --recurse-submodules=yes --tags
@@ -187,19 +180,33 @@ _GIT_CMD.checkout.${repo}= \
 	    clone ${_GIT_CLONE_FLAGS.${repo}} "$$repo" "$$module";	\
 	fi;								\
 	\
-	${STEP_MSG} "Fetching remote branches of "${_GIT_FLAG.${repo}:Q}"."; \
+	${STEP_MSG} "Fetching remote branches of $$module.";		\
 	${_GIT_CMDLINE.${repo}} -C "$$module"				\
 	  remote set-branches origin '*';				\
 	\
-	${STEP_MSG} "Updating Git archive $$module.";			\
+	${STEP_MSG} "Updating Git working area $$module.";		\
 	${_GIT_CMDLINE.${repo}} -C "$$module"				\
 	  fetch ${_GIT_FETCH_FLAGS.${repo}};				\
 	\
-	${STEP_MSG} "Checking out Git "${_GIT_FLAG.${repo}:Q}".";	\
-	${_GIT_CMDLINE.${repo}} -C "$$module"				\
-	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q};	\
+	revision=${_GIT_REV.${repo}:Q};					\
+	checkout_date=${CHECKOUT_DATE:Q};				\
+	if [ "$$checkout_date" ]; then					\
+	  ${STEP_MSG} "Checking out $$revision at $$checkout_date.";	\
+	  echo "rev=$$revision";\
+	  echo "date=$$checkout_date";\
+	  ref=`${_GIT_CMDLINE.${repo}} -C "$$module" rev-list -n 1 --before="$${checkout_date}T00:00:01Z" "$$revision"`; \
+	  echo "ref=$$ref"; \
+	  [ "$$ref" ] || ${FAIL_MSG} "[git-package.mk] Cannot find commit for module $$module revision $$revision at $$checkout_date"; \
+	  ${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	    checkout ${_GIT_CHECKOUT_FLAGS} "$$ref";			\
+	else								\
+	  ${STEP_MSG} "Checking out $$revision.";			\
+	  ${_GIT_CMDLINE.${repo}} -C "$$module"				\
+	    checkout ${_GIT_CHECKOUT_FLAGS} "$$revision";		\
+	fi;								\
 	\
 	${STEP_MSG} "Updating submodules of $$module.";			\
+	: "XXX: The revision of the submodules is not correct";		\
 	${_GIT_CMDLINE.${repo}} -C "$$module" submodule update --recursive
 
 # Create the cached archive from the checked out repository
@@ -231,9 +238,7 @@ _SYS_VARS.git=		DISTFILES PKGREVISION WRKSRC
 .  for varbase in GIT_REPO GIT_MODULE GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
 _PKG_VARS.git+=		${varbase}.${repo}
 .  endfor
-.  for varbase in _GIT_FLAG _GIT_DISTFILE
+.  for varbase in _GIT_REV _GIT_DISTFILE
 _SYS_VARS.git+=		${varbase}.${repo}
 .  endfor
 .endfor
-
-.endif

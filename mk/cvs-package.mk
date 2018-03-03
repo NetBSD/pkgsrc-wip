@@ -38,32 +38,18 @@
 #	Default: (today at midnight)
 #	Example: v1.0.0
 #
-# If a package needs to checkout from more than one CVS repository, the
-# setup is a little more complicated, using parameterized variants of
-# the above variables.
+# CVS_REPOSITORIES (optional)
+#	If the package needs multiple CVS repositories, this
+#	is the list of repository IDs. For each of these repositories,
+#	parameterized variants of the above variables are defined.
 #
-# CVS_REPOSITORIES (required)
-#	A list of unique identifiers. For each of those identifiers, the
-#	following variables define the details of how to access the
-#	CVS repository.
-#
-# CVS_ROOT.${id} (required)
-#	The CVSROOT for the CVS repository, including anoncvs password,
-#	if applicable.
-#
-#	Examples:
-#		${CVS_ROOT_GNU}/emacs
-#		:pserver:anoncvs:@anoncvs.example.com:/cvsroot/project
-#
-# CVS_MODULE.${id} (optional)
-#	The CVS module to check out.
-#
-#	Default value: ${id}
-#
-# CVS_TAG.${id} (optional)
-#	The CVS tag to check out.
-#
-#	Default: ${CVS_TAG} (today at midnight)
+#	Example:
+#	CVS_REPOSITORIES=	stable latest
+#	CVS_ROOT.stable=	${CVS_GNU_ROOT}/project
+#	CVS_MODULE.stable=	stable
+#	CVS_TAG.stable=		v1.2.3
+#	CVS_ROOT.latest=	${CVS_GNU_ROOT}/project/trunk
+#	CVS_MODULE.latest=	latest
 #
 # CVS_PROJECT
 #	The project name to be used in CVS_ROOT_SOURCEFORGE.
@@ -96,13 +82,7 @@
 #
 # Keywords: cvs
 
-.if !defined(_PKG_MK_CVS_PACKAGE_MK)
-_PKG_MK_CVS_PACKAGE_MK=	# defined
-
-#
-# defaults for user-visible input variables
-#
-
+# Defaults for package-settable variables
 DISTFILES?=		# empty
 PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-cvs-${_CVS_PKGVERSION}
 # Enforce PKGREVISION unless CVS_TAG is set:
@@ -113,20 +93,6 @@ PKGREVISION?=		${CHECKOUT_DATE:S/-//g}
 PKGREVISION?=		${_CVS_PKGVERSION:S/.//g}
 .  endif
 .endif
-
-#
-# definition of user-visible output variables
-#
-
-# commonly used repositories
-CVS_ROOT_GNU=		:pserver:anonymous:@cvs.savannah.gnu.org:/sources
-CVS_ROOT_NONGNU=	${CVS_ROOT_GNU}
-CVS_ROOT_SOURCEFORGE=	:pserver:anonymous:@${CVS_PROJECT}.cvs.sourceforge.net:/cvsroot/${CVS_PROJECT}
-CVS_PROJECT?=		${PKGBASE}
-
-#
-# End of the interface part. Start of the implementation part.
-#
 
 # The common case of a single repository
 .if defined(CVS_ROOT)
@@ -140,24 +106,22 @@ ${varbase}._default=	${${varbase}}
 .  endfor
 .endif
 
-#
-# Input validation
-#
+# Commonly used repositories
+CVS_ROOT_GNU=		:pserver:anonymous:@cvs.savannah.gnu.org:/sources
+CVS_ROOT_NONGNU=	${CVS_ROOT_GNU}
+CVS_ROOT_SOURCEFORGE=	:pserver:anonymous:@${CVS_PROJECT}.cvs.sourceforge.net:/cvsroot/${CVS_PROJECT}
+CVS_PROJECT?=		${PKGBASE}
 
-.if !defined(CVS_REPOSITORIES)
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORIES must be set."
 CVS_REPOSITORIES?=	# none
+.if empty(CVS_REPOSITORIES)
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORIES must be set."
 .endif
 
 .for repo in ${CVS_REPOSITORIES}
-.  if !defined(CVS_ROOT.${repo})
+.  if empty(CVS_ROOT.${repo})
 PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${repo:Q}" must be set."
 .  endif
 .endfor
-
-#
-# Internal variables
-#
 
 USE_TOOLS+=		date pax
 
@@ -176,14 +140,10 @@ _CVS_PKGVERSION_CMD=	${DATE} -u +'%y.%m.%d'
 _CVS_PKGVERSION?=	${_CVS_PKGVERSION_CMD:sh}
 _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
-#
-# Generation of repository-specific variables
-#
-
 .for repo in ${CVS_REPOSITORIES}
 CVS_MODULE.${repo}?=		${repo}
 
-# determine appropriate checkout date or tag
+# Determine appropriate checkout date or tag
 .  if defined(CVS_TAG.${repo})
 _CVS_TAG_FLAG.${repo}=	-r${CVS_TAG.${repo}}
 _CVS_TAG.${repo}=	${CVS_TAG.${repo}}
@@ -268,5 +228,3 @@ _PKG_VARS.cvs+=		${varbase}.${repo}
 _SYS_VARS.cvs+=		${varbase}.${repo}
 .  endfor
 .endfor
-
-.endif
