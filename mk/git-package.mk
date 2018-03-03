@@ -121,9 +121,9 @@ PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
 
-USE_TOOLS+=		date pax
+USE_TOOLS+=		date gzip pax
 
-_GIT_CMD=		git
+_GIT_CMD=		${PREFIX}/bin/git
 _GIT_CHECKOUT_FLAGS=	--quiet
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _GIT_PKGVERSION=	${_GIT_PKGVERSION_CMD:sh}
@@ -151,10 +151,10 @@ _GIT_FETCH_FLAGS.${repo}=	--quiet --recurse-submodules=yes --tags
 _GIT_CLONE_FLAGS.${repo}=	--quiet --recursive
 
 # For revision checkout we need deep copy
-. if !defined(GIT_REVISION.${repo}) && !empty(GIT_DEEP_CLONE.${repo}:M[yY][eE][sS])
+.  if !defined(GIT_REVISION.${repo}) && !empty(GIT_DEEP_CLONE.${repo}:M[yY][eE][sS])
 _GIT_FETCH_FLAGS.${repo}+=	--depth 1
 _GIT_CLONE_FLAGS.${repo}+=	--depth 1
-. endif
+.  endif
 
 # The cached archive
 _GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-gitarchive.tar.gz

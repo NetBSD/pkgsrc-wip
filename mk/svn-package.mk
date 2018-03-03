@@ -57,9 +57,9 @@ PKGREVISION?=		${_SVN_PKGREVISION_CMD:sh}
 # The common case of a single repository
 .if defined(SVN_REPO)
 SVN_MODULE?=		${SVN_REPO:S,/$,,:S,/trunk$,,:S,/code$,,:T}
-SVN_REPOSITORIES+=	_default
-SVN_REPO._default=	${SVN_REPO}
-SVN_MODULE._default=	${SVN_MODULE}
+SVN_REPOSITORIES+=	default
+SVN_REPO.default=	${SVN_REPO}
+SVN_MODULE.default=	${SVN_MODULE}
 WRKSRC?=		${WRKDIR}/${SVN_MODULE}
 .endif
 
@@ -74,9 +74,9 @@ PKG_FAIL_REASON+=	"[svn-package.mk] SVN_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
 
-USE_TOOLS+=		date pax
+USE_TOOLS+=		date gzip pax
 
-_SVN_CMD=		svn
+_SVN_CMD=		${PREFIX}/bin/svn
 _SVN_CONFIG_DIR=	${WRKDIR}/.subversion
 _SVN_CHECKOUT_FLAGS=	--config-dir=${_SVN_CONFIG_DIR} --non-interactive
 _SVN_PKGREVISION_CMD=	${DATE} -u +'%Y%m%d'
@@ -109,14 +109,14 @@ _SVN_CMD.extract_archive.${repo}= \
 	fi
 
 # Install client certificates for authentication
-.if !empty(SVN_CERTS.${repo})
+.  if !empty(SVN_CERTS.${repo})
 _SVN_CMD.install_certs.${repo}= \
 	${MKDIR} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server;		\
 	${CP} ${SVN_CERTS.${repo}} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
-.else
+.  else
 _SVN_CMD.install_certs.${repo}= \
 	${DO_NADA}
-.endif
+.  endif
 
 # Check out the repository or update the cached one
 _SVN_CMD.fetch_repo.${repo}= \

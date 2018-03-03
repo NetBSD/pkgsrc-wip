@@ -97,11 +97,11 @@ PKGREVISION?=		${_CVS_PKGVERSION:S/.//g}
 # The common case of a single repository
 .if defined(CVS_ROOT)
 CVS_MODULE?=		${PKGBASE:S,-cvs$,,}
-CVS_REPOSITORIES+=	_default
+CVS_REPOSITORIES+=	default
 WRKSRC?=		${WRKDIR}/${CVS_MODULE}
 .  for varbase in CVS_ROOT CVS_MODULE CVS_TAG
 .    if defined(${varbase})
-${varbase}._default=	${${varbase}}
+${varbase}.default=	${${varbase}}
 .    endif
 .  endfor
 .endif
@@ -123,7 +123,7 @@ PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${repo:Q}" must be set."
 .  endif
 .endfor
 
-USE_TOOLS+=		date pax
+USE_TOOLS+=		date gzip pax
 
 _CVS_RSH=		ssh
 _CVS_CMD=		cvs
@@ -136,7 +136,7 @@ _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _CVS_TODAY=		${_CVS_TODAY_CMD:sh}
-_CVS_PKGVERSION_CMD=	${DATE} -u +'%y.%m.%d'
+_CVS_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _CVS_PKGVERSION?=	${_CVS_PKGVERSION_CMD:sh}
 _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 

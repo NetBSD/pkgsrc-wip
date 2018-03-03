@@ -9,6 +9,8 @@ HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	System tests for wip/mk infrastructure
 LICENSE=	2-clause-bsd
 
+SCM_UNDER_TEST?=	# none; is set by files/test
+
 .if empty(SCM_UNDER_TEST)
 DISTNAME=	mk-scm-tests-1.0
 DISTFILES=	# none
@@ -25,29 +27,27 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-SCM_UNDER_TEST?=	# none; is set by files/test
-
-.if ${SCM_UNDER_TEST} == CVS
+.if ${SCM_UNDER_TEST} == cvs
 CVS_ROOT=	${.CURDIR}/tmp/repo
 .include "../../wip/mk/cvs-package.mk"
 .endif
 
-.if ${SCM_UNDER_TEST} == Fossil
+.if ${SCM_UNDER_TEST} == fossil
 FOSSIL_REPO=	${.CURDIR}/tmp/repo/pkgbase/pkgbase.fossil
 .include "../../wip/mk/fossil-package.mk"
 .endif
 
-.if ${SCM_UNDER_TEST} == Git
+.if ${SCM_UNDER_TEST} == git
 GIT_REPO=	${.CURDIR}/tmp/repo/pkgbase
 .include "../../wip/mk/git-package.mk"
 .endif
 
-.if ${SCM_UNDER_TEST} == Mercurial
+.if ${SCM_UNDER_TEST} == hg
 HG_REPO=	${.CURDIR}/tmp/repo/pkgbase
 .include "../../wip/mk/hg-package.mk"
 .endif
 
-.if ${SCM_UNDER_TEST} == Subversion
+.if ${SCM_UNDER_TEST} == svn
 SVN_REPO=	file://${.CURDIR}/tmp/repo/pkgbase
 .include "../../wip/mk/svn-package.mk"
 .endif

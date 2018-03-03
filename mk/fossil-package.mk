@@ -75,9 +75,9 @@ PKGREVISION?=		${${DATE} -u +'%Y%m%d':L:sh}
 FOSSIL_REPOSITORIES+=	default
 FOSSIL_REPO.default=	${FOSSIL_REPO}
 FOSSIL_MODULE.default=	${DISTNAME:C,-[0-9].*,,}
-.if defined(FOSSIL_VERSION)
+.  if defined(FOSSIL_VERSION)
 FOSSIL_VERSION.default=	${FOSSIL_VERSION}
-.endif
+.  endif
 WRKSRC?=		${WRKDIR}/${FOSSIL_MODULE.default}
 .endif
 

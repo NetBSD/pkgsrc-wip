@@ -75,7 +75,7 @@ PKG_FAIL_REASON+=	"[hg-package.mk] HG_REPO."${repo:Q}" must be set."
 .  endif
 .endfor
 
-USE_TOOLS+=		date pax
+USE_TOOLS+=		date gzip pax
 
 _HG_CMD=		${PREFIX}/bin/hg
 _HG_FLAGS=		-q
@@ -135,7 +135,8 @@ _HG_CMD.checkout.${repo}= \
 _HG_CMD.create_archive.${repo}= \
 	${STEP_MSG} "Creating cached Mercurial archive $${archive\#\#*/}."; \
 	${MKDIR} "$${archive%/*}";					\
-	pax -w "$$module" | gzip > "$$archive"
+	pax -w "$$module" | gzip > "$$archive.tmp";			\
+	${MV} "$$archive.tmp" "$$archive"
 .endfor
 
 hg-cleandir: .PHONY

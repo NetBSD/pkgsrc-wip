@@ -11,22 +11,6 @@ die() {
 	exit 1
 }
 
-# Sets up a repository in $repodir, with these commits:
-# - at 2018-01-01TZ, the file "today" contains "2018-01-01".
-# - at 2018-03-01TZ, the file "today" contains "2018-03-01".
-setup_repository() {
-	rm -rf "$repodir"
-
-	case "$1" in
-	(CVS)		setup_cvs_repository	;;
-	(Fossil)	setup_fossil_repository	;;
-	(Git)		setup_git_repository	;;
-	(Mercurial)	setup_hg_repository	;;
-	(Subversion)	setup_svn_repository	;;
-	(*)		die "setup_repository $1"
-	esac
-}
-
 setup_cvs_repository() {
 	cvs -d "$repodir" init
 	mkdir "$repodir/pkgbase"
@@ -148,8 +132,8 @@ setup_svn_repository() {
 }
 
 pkgsrc_make() {
-	DISTDIR="$basedir/distfiles" \
-	`type "bmake" 1>/dev/null 2>&1 && echo "bmake" || echo "make"` "$@"
+	bmake=`type "bmake" 1>/dev/null 2>&1 && echo "bmake" || echo "make"`
+	DISTDIR="$basedir/distfiles" "$bmake" "$@"
 }
 
 assert_that() {
@@ -163,23 +147,39 @@ assert_that() {
 }
 
 test_scm() { # usage: test_scm scm-name
-	step "Setting up $1 repository"
-	setup_repository "$1"
+	case "$1" in
+	(cvs)		scm_display_name="CVS"		;;
+	(fossil)	scm_display_name="Fossil"	;;
+	(git)		scm_display_name="Git"		;;
+	(hg)		scm_display_name="Mercurial"	;;
+	(svn)		scm_display_name="Subversion"	;;
+	esac
+
+	# Sets up a repository in $repodir, with these commits:
+	# - at 2018-01-01TZ, the file "today" contains "2018-01-01".
+	# - at 2018-03-01TZ, the file "today" contains "2018-03-01".
+	#
+	step "Setting up $scm_display_name repository"
+	rm -rf "$repodir"
+	setup_${1}_repository
 	wrkdir=`pkgsrc_make show-var VARNAME=WRKDIR`
 
-	step "Testing $1"
+	step "Testing $scm_display_name"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
 	SCM_UNDER_TEST="$1" pkgsrc_make patch
 
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"
 
-	step "Testing $1 with CHECKOUT_DATE"
+	step "Testing $scm_display_name with CHECKOUT_DATE"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
 	SCM_UNDER_TEST="$1" CHECKOUT_DATE="2018-02-01" pkgsrc_make patch
 
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-01-01"
 
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
+
+	step "Dumping API variables for $scm_display_name (for manual inspection)"
+	SCM_UNDER_TEST="$1" pkgsrc_make "show-all-$1"
 }
 
 main() {
@@ -188,11 +188,11 @@ main() {
 	rm -rf "$basedir"
 	mkdir "$basedir"
 
-	test_scm "CVS"
-	test_scm "Fossil"
-	test_scm "Git"
-	test_scm "Mercurial"
-	test_scm "Subversion"
+	test_scm "cvs"
+	test_scm "fossil"
+	test_scm "git"
+	test_scm "hg"
+	test_scm "svn"
 
 	rm -rf "$basedir"
 	step "OK"
