@@ -60,6 +60,11 @@ SVN_MODULE?=		${SVN_REPO:S,/$,,:S,/trunk$,,:S,/code$,,:T}
 SVN_REPOSITORIES+=	default
 SVN_REPO.default=	${SVN_REPO}
 SVN_MODULE.default=	${SVN_MODULE}
+.  for varbase in SVN_REVISION
+.    if defined(${varbase})
+${varbase}.default=	${${varbase}}
+.    endif
+.  endfor
 WRKSRC?=		${WRKDIR}/${SVN_MODULE}
 .endif
 

@@ -192,7 +192,7 @@ test_scm() { # usage: test_scm scm-name
 	(fossil)	scm_display_name="Fossil"	scm_tag_varname="FOSSIL_VERSION";;
 	(git)		scm_display_name="Git"		scm_tag_varname="GIT_TAG"	;;
 	(hg)		scm_display_name="Mercurial"	scm_tag_varname="HG_TAG"	;;
-	(svn)		scm_display_name="Subversion"	scm_tag_varname=""		;;
+	(svn)		scm_display_name="Subversion"	scm_tag_varname="SVN_REVISION"	;;
 	esac
 
 	# Sets up a repository in $repodir, with these commits:
@@ -209,26 +209,27 @@ test_scm() { # usage: test_scm scm-name
 	step "Testing $scm_display_name"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
 	SCM_UNDER_TEST="$1" pkgsrc_make patch
-
+	:
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"
 
 	step "Testing $scm_display_name with CHECKOUT_DATE"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
 	SCM_UNDER_TEST="$1" CHECKOUT_DATE="2018-02-01" pkgsrc_make patch
-
+	:
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-01-01"
 
-	if [ "$scm_tag_varname" ]; then
-		step "Testing $scm_display_name with tagged checkout"
-		SCM_UNDER_TEST="$1" pkgsrc_make clean
-		eval "SCM_UNDER_TEST=\"\$1\" $scm_tag_varname=\"v2017\" pkgsrc_make patch"
-
-		assert_that --file "$wrkdir/pkgbase/today" --has-content "2017-01-01"
-	fi
+	step "Testing $scm_display_name with tagged checkout"
+	SCM_UNDER_TEST="$1" pkgsrc_make clean
+	tag_value="v2017"; test "$1" = "svn" && tag_value="1"
+	eval "SCM_UNDER_TEST=\"\$1\" $scm_tag_varname=\"\$tag_value\" pkgsrc_make patch"
+	:
+	assert_that --file "$wrkdir/pkgbase/today" --has-content "2017-01-01"
 
 	step "Dumping API variables for $scm_display_name (for manual inspection)"
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
 	SCM_UNDER_TEST="$1" pkgsrc_make "show-all-$1"
+	:
+	: "needs to be inspected manually"
 }
 
 main() {
