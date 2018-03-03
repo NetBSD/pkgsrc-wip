@@ -114,7 +114,11 @@ PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPOSITORIES must be set."
 
 .for repo in ${GIT_REPOSITORIES}
 .  if empty(GIT_REPO.${repo})
-PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${repo:Q}" must be set."
+WARNINGS+=		"[git-package.mk] GIT_REPO."${repo:Q}" must be set."
+.  endif
+.  if defined(GIT_MODULE.${repo}) # To be removed after 2019-01-01
+WARNINGS+=		"[git-package.mk] GIT_MODULE.* is obsolete; use GIT_EXTRACTDIR.${repo} instead."
+GIT_EXTRACTDIR.${repo}?= ${GIT_MODULE.${repo}}
 .  endif
 .endfor
 
@@ -228,6 +232,7 @@ do-git-extract: .PHONY
 
 # Debug info for show-all and show-all-git
 _VARGROUPS+=		git
+_USER_VARS.git+=	CHECKOUT_DATE
 _PKG_VARS.git=		GIT_REPOSITORIES
 _PKG_VARS.git+=		GIT_REPO GIT_EXTRACTDIR GIT_BRANCH GIT_REVISION GIT_TAG GIT_ENV
 _SYS_VARS.git=		DISTFILES PKGREVISION WRKSRC

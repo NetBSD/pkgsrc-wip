@@ -82,6 +82,13 @@ PKG_FAIL_REASON+=	"[svn-package.mk] SVN_REPOSITORIES must be set."
 .  if empty(SVN_REPO.${repo})
 PKG_FAIL_REASON+=	"[svn-package.mk] SVN_REPO."${repo:Q}" must be set."
 .  endif
+.  if defined(SVN_MODULE.${repo}) # To be removed after 2019-01-01
+WARNINGS+=		"[svn-package.mk] SVN_MODULE.* is obsolete; use SVN_EXTRACTDIR.${repo} instead."
+SVN_EXTRACTDIR.${repo}?= ${SVN_MODULE.${repo}}
+.  endif
+.  if defined(SVN_ENV.${repo}) # To be removed after 2019-01-01
+WARNINGS+=		"[svn-package.mk] SVN_ENV.* is obsolete."
+.  endif
 .endfor
 
 USE_TOOLS+=		date gzip pax
@@ -161,15 +168,16 @@ do-svn-extract: .PHONY
 .endfor
 
 # Debug info for show-all and show-all-svn
-_VARGROUPS+=	svn
-_PKG_VARS.svn+=	SVN_REPO SVN_REVISION SVN_EXTRACTDIR SVN_REPOSITORIES
-_SYS_VARS.svn+=	DISTFILES PKGREVISION
-_SYS_VARS.svn+=	_SVN_DISTDIR
+_VARGROUPS+=		svn
+_USER_VARS.svn+=	CHECKOUT_DATE
+_PKG_VARS.svn+=		SVN_REPO SVN_REVISION SVN_EXTRACTDIR SVN_REPOSITORIES
+_SYS_VARS.svn+=		DISTFILES PKGREVISION
+_SYS_VARS.svn+=		_SVN_DISTDIR
 .for repo in ${SVN_REPOSITORIES}
 .  for varbase in SVN_REPO SVN_EXTRACTDIR SVN_REVISION SVN_CERTS
-_PKG_VARS.svn+=	${varbase}.${repo}
+_PKG_VARS.svn+=		${varbase}.${repo}
 .  endfor
 .  for varbase in _SVN_DISTFILE
-_SYS_VARS.svn+=	${varbase}.${repo}
+_SYS_VARS.svn+=		${varbase}.${repo}
 .  endfor
 .endfor

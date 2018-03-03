@@ -227,6 +227,7 @@ do-cvs-extract: .PHONY
 
 # Debug info for show-all and show-all-cvs
 _VARGROUPS+=		cvs
+_USER_VARS.cvs+=	CHECKOUT_DATE
 _PKG_VARS.cvs+=		CVS_ROOT CVS_MODULE CVS_TAG CHECKOUT_DATE CVS_EXTRACTDIR CVS_REPOSITORIES
 _SYS_VARS.cvs+=		DISTFILES PKGNAME PKGREVISION WRKSRC
 _SYS_VARS.cvs+=		CVS_ROOT_GNU CVS_ROOT_NONGNU CVS_ROOT_SOURCEFORGE CVS_PROJECT
@@ -239,3 +240,4 @@ _PKG_VARS.cvs+=		${varbase}.${repo}
 _SYS_VARS.cvs+=		${varbase}.${repo}
 .  endfor
 .endfor
+_USE_VARS.cvs+=		DISTNAME

@@ -57,11 +57,11 @@ PKGREVISION?=		${_HG_PKGVERSION:S/.//g}
 
 # The common case of a single repository
 .if defined(HG_REPO)
-HG_MODULE?=		${HG_REPO:S,/$,,:T}
+HG_EXTRACTDIR?=		${HG_REPO:S,/$,,:T}
 HG_REPOSITORIES+=	default
 HG_REPO.default=	${HG_REPO}
-HG_MODULE.default=	${HG_MODULE}
-WRKSRC?=		${WRKDIR}/${HG_MODULE}
+HG_EXTRACTDIR.default=	${HG_EXTRACTDIR}
+WRKSRC?=		${WRKDIR}/${HG_EXTRACTDIR}
 .endif
 
 HG_REPOSITORIES?=	# none
@@ -71,7 +71,11 @@ PKG_FAIL_REASON+=	"[hg-package.mk] HG_REPOSITORIES must be set."
 
 .for repo in ${HG_REPOSITORIES}
 .  if empty(HG_REPO.${repo})
-PKG_FAIL_REASON+=	"[hg-package.mk] HG_REPO."${repo:Q}" must be set."
+WARNINGS+=		"[hg-package.mk] HG_REPO."${repo:Q}" must be set."
+.  endif
+.  if defined(HG_MODULE.${repo}) # To be removed after 2019-01-01
+WARNINGS+=		"[hg-package.mk] HG_MODULE is obsolete; use HG_EXTRACTDIR.${repo} instead."
+HG_EXTRACTDIR.${repo}?=	${HG_MODULE.${repo}}
 .  endif
 .endfor
 
@@ -91,7 +95,7 @@ _HG_DISTDIR?=		${DISTDIR}/hg-packages
 #
 
 .for repo in ${HG_REPOSITORIES}
-HG_MODULE.${repo}?=	${repo}
+HG_EXTRACTDIR.${repo}?=	${repo}
 
 # determine appropriate checkout date or tag
 .  if defined(HG_TAG.${repo})
@@ -115,7 +119,7 @@ _HG_DISTFILE.${repo}=	${PKGBASE}-${repo}-${_HG_TAG.${repo}}.tar.gz
 # Define the shell variables used by the following commands
 _HG_CMD.vars.${repo}= \
 	repo=${HG_REPO.${repo}:Q};					\
-	module=${HG_MODULE.${repo}:Q};					\
+	extractdir=${HG_EXTRACTDIR.${repo}:Q};					\
 	archive=${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q}
 
 # Extract the cached archive
@@ -127,23 +131,23 @@ _HG_CMD.extract_archive.${repo}= \
 	fi
 
 _HG_CMD.checkout.${repo}= \
-	${STEP_MSG} "Checking out $$module from $$repo.";		\
-	${_HG_CMD} clone ${_HG_FLAGS} "$$repo" "$$module";		\
-	${_HG_CMD} --cwd "$$module" update ${_HG_FLAGS} ${_HG_TAG_FLAG.${repo}:Q}
+	${STEP_MSG} "Checking out $$extractdir from $$repo.";		\
+	${_HG_CMD} clone ${_HG_FLAGS} "$$repo" "$$extractdir";		\
+	${_HG_CMD} --cwd "$$extractdir" update ${_HG_FLAGS} ${_HG_TAG_FLAG.${repo}:Q}
 
 # Create the cached archive from the checked out repository
 _HG_CMD.create_archive.${repo}= \
 	${STEP_MSG} "Creating cached Mercurial archive $${archive\#\#*/}."; \
 	${MKDIR} "$${archive%/*}";					\
-	pax -w "$$module" | gzip > "$$archive.tmp";			\
+	pax -w "$$extractdir" | gzip > "$$archive.tmp";			\
 	${MV} "$$archive.tmp" "$$archive"
 .endfor
 
 hg-cleandir: .PHONY
 .for repo in ${HG_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
-	if [ -d ${HG_MODULE.${repo}:Q} ]; then				\
-		cd ${HG_MODULE.${repo}:Q} && rm -rf *;			\
+	if [ -d ${HG_EXTRACTDIR.${repo}:Q} ]; then				\
+		cd ${HG_EXTRACTDIR.${repo}:Q} && rm -rf *;			\
 	fi
 .endfor
 	${RUN} cd ${WRKDIR} && rm -f .*_done && rm -rf .cwrapper
@@ -155,12 +159,12 @@ do-hg-extract: .PHONY
 	${RUN}								\
 	cd ${WRKDIR};							\
 	${_HG_CMD.vars.${repo}};					\
-	if [ ! -d "$$module/.hg" ]; then				\
+	if [ ! -d "$$extractdir/.hg" ]; then				\
 		${_HG_CMD.extract_archive.${repo}};			\
 		${_HG_CMD.checkout.${repo}};				\
 		${_HG_CMD.create_archive.${repo}};			\
 	else								\
-		cd "$$module";						\
+		cd "$$extractdir";						\
 		${_HG_CMD} pull ${_HG_FLAGS};				\
 		${_HG_CMD} update -C ${_HG_FLAGS};			\
 	fi
@@ -168,15 +172,16 @@ do-hg-extract: .PHONY
 
 # Debug info for show-all and show-all-hg
 _VARGROUPS+=	hg
-_USR_VARS.hg+=	CHECKOUT_DATE
-_PKG_VARS.hg+=	HG_REPO HG_MODULE HG_TAG HG_REPOSITORIES
+_USER_VARS.hg+=	CHECKOUT_DATE
+_PKG_VARS.hg+=	HG_REPO HG_EXTRACTDIR HG_TAG HG_REPOSITORIES
 _SYS_VARS.hg+=	DISTFILES PKGNAME PKGREVISION WRKSRC
 _SYS_VARS.hg+=	_HG_PKGVERSION _HG_DISTDIR
 .for repo in ${HG_REPOSITORIES}
-.  for varbase in HG_REPO HG_MODULE HG_TAG
+.  for varbase in HG_REPO HG_EXTRACTDIR HG_TAG
 _PKG_VARS.hg+=	${varbase}.${repo}
 .  endfor
 .  for varbase in _HG_TAG_FLAG _HG_TAG _HG_DISTFILE
 _SYS_VARS.hg+=	${varbase}.${repo}
 .  endfor
 .endfor
+_USE_VARS.hg+=	DISTNAME

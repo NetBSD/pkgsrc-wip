@@ -74,7 +74,7 @@ PKGREVISION?=		${${DATE} -u +'%Y%m%d':L:sh}
 .if defined(FOSSIL_REPO)
 FOSSIL_REPOSITORIES+=		default
 FOSSIL_REPO.default=		${FOSSIL_REPO}
-FOSSIL_EXTRACTDIR.default=	${DISTNAME:C,-[0-9].*,,}
+FOSSIL_EXTRACTDIR.default=	${DISTNAME:U${PKGNAME}:C,-[0-9].*,,}
 .  if defined(FOSSIL_VERSION)
 FOSSIL_VERSION.default=		${FOSSIL_VERSION}
 .  endif
@@ -90,6 +90,17 @@ PKG_FAIL_REASON+=	"[fossil-package.mk] FOSSIL_REPOSITORIES must be set."
 .  if empty(FOSSIL_REPO.${repo})
 PKG_FAIL_REASON+=	"[fossil-package.mk] FOSSIL_REPO."${repo:Q}" must be set."
 .  endif
+.  for varbase in FOSSIL_BRANCH FOSSIL_REVISION FOSSIL_TAG # To be removed after 2019-01-01
+.    if defined(${varbase}.${repo})
+WARNINGS+=		"[fossil-package.mk] ${varbase}.* is obsolete; use FOSSIL_VERSION.${repo} instead."
+FOSSIL_VERSION.${repo}?= ${${varbase}.${repo}}
+.    endif
+.  endfor
+.  for varbase in FOSSIL_ENV # To be removed after 2019-01-01
+.    if defined(${varbase}.${repo})
+WARNINGS+=		"[fossil-package.mk] ${varbase}.* is obsolete."
+.    endif
+.  endfor
 .endfor
 
 USE_TOOLS+=		date pax
@@ -151,6 +162,7 @@ do-fossil-extract: .PHONY
 
 # Debug info for show-all and show-all-fossil
 _VARGROUPS+=		fossil
+_USER_VARS.fossil+=	CHECKOUT_DATE
 _PKG_VARS.fossil+=	FOSSIL_REPO FOSSIL_EXTRACTDIR FOSSIL_VERSION FOSSIL_REPOSITORIES
 _SYS_VARS.fossil+=	DISTFILES PKGREVISION WRKSRC
 _SYS_VARS.fossil+=	_FOSSIL_DISTDIR
@@ -162,3 +174,4 @@ _PKG_VARS.fossil+=	${varbase}.${repo}
 _SYS_VARS.fossil+=	${varbase}.${repo}
 .  endfor
 .endfor
+_USE_VARS.fossil+=	DISTNAME PKGNAME
