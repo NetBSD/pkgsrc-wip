@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	msgmerge
 
-#SUBST_CLASSES+=		xdg
+#SUBST_CLASSES+=	xdg
 #SUBST_STAGE.xdg=	post-patch
 #SUBST_MESSAGE.xdg=	Install via examples dir.
 #SUBST_FILES.xdg=	CMakeLists.txt

@@ -4,7 +4,7 @@ DISTNAME=	threadpool-0_2_5-src
 PKGNAME=	boost-${DISTNAME:S/_/./g:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=threadpool/}
-EXTRACT_SUFX=		.zip
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://threadpool.sourceforge.net/

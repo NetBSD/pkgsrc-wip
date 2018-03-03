@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pimcommon
 PIMCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pimcommon+=	pimcommon>=17.12.1
-BUILDLINK_PKGSRCDIR.pimcommon?=	../../wip/pimcommon
+BUILDLINK_PKGSRCDIR.pimcommon?=		../../wip/pimcommon
 
 .include "../../wip/kimap/buildlink3.mk"
 .include "../../wip/kpimtextedit/buildlink3.mk"

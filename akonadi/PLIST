@@ -353,8 +353,8 @@ share/dbus-1/interfaces/org.freedesktop.Akonadi.TracerNotification.xml
 share/dbus-1/services/org.freedesktop.Akonadi.Control.service
 share/examples/kde-xdg/akonadi.categories
 share/examples/kde-xdg/akonadi.renamecategories
-share/examples/kde-xdg/akonadi/mysql-global.conf
 share/examples/kde-xdg/akonadi/mysql-global-mobile.conf
+share/examples/kde-xdg/akonadi/mysql-global.conf
 share/icons/hicolor/128x128/apps/akonadi.png
 share/icons/hicolor/16x16/apps/akonadi.png
 share/icons/hicolor/22x22/apps/akonadi.png

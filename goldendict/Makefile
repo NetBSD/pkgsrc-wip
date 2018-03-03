@@ -1,13 +1,13 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	goldendict
-DISTNAME=		goldendict-1.5.0rc2
-CATEGORIES=		lang
+DISTNAME=	goldendict-1.5.0rc2
+CATEGORIES=	lang
 MASTER_SITES=	-https://github.com/${GITHUB_PROJECT}/${DIST_SUBDIR}/archive/1.5.0-RC2.tar.gz
 DIST_SUBDIR=	${GITHUB_PROJECT}
-WRKSRC=			${WRKDIR}/goldendict-1.5.0-RC2
+WRKSRC=		${WRKDIR}/goldendict-1.5.0-RC2
 
-QMAKE= ${QTDIR}/bin/qmake
+QMAKE=	${QTDIR}/bin/qmake
 
 MAINTAINER=	jake.slazenger@yandex.com
 HOMEPAGE=	https://github.com/goldendict/goldendict/

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkdcraw
 LIBKDCRAW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=17.12.1
-BUILDLINK_PKGSRCDIR.libkdcraw?=	../../wip/libkdcraw
+BUILDLINK_PKGSRCDIR.libkdcraw?=		../../wip/libkdcraw
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# LIBKDCRAW_BUILDLINK3_MK

@@ -47,9 +47,9 @@ qt5/plugins/akonadi/emailsearchstore.so
 qt5/plugins/akonadi/notesearchstore.so
 qt5/plugins/kcm_krunner_pimcontacts.so
 qt5/plugins/krunner_pimcontacts.so
+share/akonadi/agents/akonadiindexingagent.desktop
 share/examples/kde-xdg/akonadi-search.categories
 share/examples/kde-xdg/akonadi-search.renamecategories
-share/akonadi/agents/akonadiindexingagent.desktop
 share/kservices5/plasma-krunner-pimcontacts.desktop
 share/kservices5/plasma-krunner-pimcontacts_config.desktop
 share/locale/ar/LC_MESSAGES/akonadi_search.mo

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kalarmcal
 KALARMCAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kalarmcal+=	kalarmcal>=17.12.1
-BUILDLINK_PKGSRCDIR.kalarmcal?=	../../wip/kalarmcal
+BUILDLINK_PKGSRCDIR.kalarmcal?=		../../wip/kalarmcal
 
 .include "../../wip/akonadi/buildlink3.mk"
 .include "../../wip/kcalcore/buildlink3.mk"

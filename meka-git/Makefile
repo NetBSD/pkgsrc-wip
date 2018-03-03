@@ -3,7 +3,7 @@
 DISTNAME=	meka-0.80alpha0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocornut/}
-GIT_REPO=		git://github.com/ocornut/meka
+GIT_REPO=	git://github.com/ocornut/meka
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	http://smspower.org/

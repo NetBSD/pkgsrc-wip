@@ -38,7 +38,7 @@ CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DPERL_EXECUTABLE=${LOCALBASE}/bin/perl
 #CMAKE_ARGS+=		-GNinja
-#BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
+#BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 #do-build:
 #	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ninja

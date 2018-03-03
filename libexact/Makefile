@@ -9,7 +9,7 @@ HOMEPAGE=	http://pottonen.kapsi.fi/libexact.html
 COMMENT=	Solve combinatorial exact covering problems
 LICENSE=	gnu-gpl-v2
 
-TEST_TARGET=	check
+TEST_TARGET=		check
 INSTALLATION_DIRS=	bin include lib share/doc/libexact
 
 do-install:
