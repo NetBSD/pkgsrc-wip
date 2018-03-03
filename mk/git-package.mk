@@ -192,10 +192,7 @@ _GIT_CMD.checkout.${repo}= \
 	checkout_date=${CHECKOUT_DATE:Q};				\
 	if [ "$$checkout_date" ]; then					\
 	  ${STEP_MSG} "Checking out $$revision at $$checkout_date.";	\
-	  echo "rev=$$revision";\
-	  echo "date=$$checkout_date";\
 	  ref=`${_GIT_CMDLINE.${repo}} -C "$$module" rev-list -n 1 --before="$${checkout_date}T00:00:01Z" "$$revision"`; \
-	  echo "ref=$$ref"; \
 	  [ "$$ref" ] || ${FAIL_MSG} "[git-package.mk] Cannot find commit for module $$module revision $$revision at $$checkout_date"; \
 	  ${_GIT_CMDLINE.${repo}} -C "$$module"				\
 	    checkout ${_GIT_CHECKOUT_FLAGS} "$$ref";			\
