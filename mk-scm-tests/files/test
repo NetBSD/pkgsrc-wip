@@ -1,4 +1,4 @@
-#! /usr/pkg/bin/bash
+#! /bin/bash
 set -eu
 
 step() {
@@ -11,72 +11,40 @@ die() {
 	exit 1
 }
 
+# There didn't seem to be a pre-built tool doing this.
+cvs_admin_set_date() {
+	awk	'
+		BEGIN { FS = "\t"; OFS = FS }
+		now && $1 == "date" { now = 0; $2 = "'"$3"';" }
+		$0 == "'"$2"'" { now = 1 }
+		{ print }
+		' \
+		"$1" > "$1.tmp"
+	mv -f "$1.tmp" "$1"
+}
+
 setup_cvs_repository() {
 	cvs -d "$repodir" init
 	mkdir "$repodir/pkgbase"
-	# CVS doesn't let the user fake the dates, therefore it was easier
-	# to just manipulate the internal repository representation.
-	cat <<EOF >"$repodir/pkgbase/today,v"
-head	1.3;
-access;
-symbols
-	v2017:1.1;
-locks; strict;
-comment	@# @;
 
+	cvs -d "$repodir" checkout -d "$basedir/pkgbase" "pkgbase"
+	pushd "$basedir/pkgbase"
 
-1.3
-date	2018.03.01.00.00.00;	author rillig;	state Exp;
-branches;
-next	1.2;
+	echo "2017-01-01" > today
+	cvs add today
+	cvs commit -m "today is 2017-01-01" today
+	cvs_admin_set_date "$repodir/pkgbase/today,v" "1.1" "2017.01.01.00.00.00"
+	cvs tag v2017 .
 
-1.2
-date	2018.01.01.00.00.00;	author rillig;	state Exp;
-branches;
-next	1.1;
+	echo "2018-01-01" > today
+	cvs commit -m "today is 2018-01-01" today
+	cvs_admin_set_date "$repodir/pkgbase/today,v" "1.2" "2018.01.01.00.00.00"
 
-1.1
-date	2017.01.01.00.00.00;	author rillig;	state Exp;
-branches;
-next	;
+	echo "2018-03-01" > today
+	cvs commit -m "today is 2018-03-01" today
+	cvs_admin_set_date "$repodir/pkgbase/today,v" "1.3" "2018.03.01.00.00.00"
 
-
-desc
-@@
-
-
-1.3
-log
-@today is 2018-03-01
-@
-text
-@2018-03-01
-@
-
-
-1.2
-log
-@today is 2018-01-01
-@
-text
-@d1 1
-a1 1
-2018-01-01
-@
-
-
-1.1
-log
-@today is 2017-01-01
-@
-text
-@d1 1
-a1 1
-2017-01-01
-@
-
-
-EOF
+	popd
 }
 
 setup_fossil_repository() {
@@ -186,7 +154,7 @@ assert_that() {
 	esac
 }
 
-test_scm() { # usage: test_scm scm-name
+test_scm() {
 	case "$1" in
 	(cvs)		scm_display_name="CVS"		scm_tag_varname="CVS_TAG"	;;
 	(fossil)	scm_display_name="Fossil"	scm_tag_varname="FOSSIL_VERSION";;
