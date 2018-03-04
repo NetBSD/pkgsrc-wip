@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.67 2016/03/05 11:29:03 jperkin Exp $
-#
 
 DISTNAME=		ekiga-4.0.1
 CATEGORIES=		net comms
@@ -7,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ekiga/4.0/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ekiga.org/
+HOMEPAGE=		https://www.ekiga.org/
 COMMENT=		VoIP and video conferencing application for GNOME
 LICENSE=		gnu-gpl-v2
 
