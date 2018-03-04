@@ -1,19 +1,20 @@
 # $NetBSD$
 
-DISTNAME=	pkgbase-1.0
+.include "../../mk/bsd.prefs.mk"
+
+SCM_UNDER_TEST?=	# none; set by files/test
+.if empty(SCM_UNDER_TEST)
+
+DISTNAME=	mk-scm-tests-1.0
 CATEGORIES=	pkgtools
 PLIST_SRC=	# none
+DISTFILES=	# none
 
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	System tests for wip/mk infrastructure
 LICENSE=	2-clause-bsd
 
-SCM_UNDER_TEST?=	# none; is set by files/test
-
-.if empty(SCM_UNDER_TEST)
-DISTNAME=	mk-scm-tests-1.0
-DISTFILES=	# none
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_TOOLS+=	bash
@@ -23,9 +24,14 @@ run-tests: .PHONY
 
 do-install:
 	${DO_NADA}
-.endif
 
-.include "../../mk/bsd.prefs.mk"
+.else
+
+DISTNAME=	pkgbase-1.0
+CATEGORIES=	pkgtools
+PLIST_SRC=	# none
+
+.endif
 
 .if ${SCM_UNDER_TEST} == cvs
 CVS_ROOT=		${.CURDIR}/tmp/repo
