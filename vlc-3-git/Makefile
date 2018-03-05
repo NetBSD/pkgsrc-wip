@@ -2,9 +2,10 @@
 
 DISTNAME=		vlc-${VLC_VERSION}
 CATEGORIES=		multimedia
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/}
-MASTER_SITES+=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
-EXTRACT_SUFX=		.tar.xz
+#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/}
+#MASTER_SITES+=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
+#EXTRACT_SUFX=		.tar.xz
+GIT_REPO=		https://git.videolan.org/git/vlc/vlc-3.0.git
 
 VLC_VERSION=		3.0.0
 
@@ -16,7 +17,7 @@ LICENSE=		gnu-gpl-v2
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config autoreconf autoconf automake bison autopoint
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -139,6 +140,11 @@ SUBST_MESSAGE.fnt=	Fixing hardcoded font paths.
 # VLC embeds the build environment info to help debuging.
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so*
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${SH} ./bootstrap
+
+.include "../../wip/mk/git-package.mk"
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
