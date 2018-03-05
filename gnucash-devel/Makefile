@@ -57,6 +57,7 @@ INSTALLATION_DIRS=	share/examples/gnucash
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/environment
+	${RM} -f ${DESTDIR}${PREFIX}/share/gnucash/pixmaps/Makefile
 
 .include "options.mk"
 

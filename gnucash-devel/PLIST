@@ -1003,7 +1003,6 @@ share/gnucash/jqplot/jquery.jqplot.js
 share/gnucash/jqplot/jquery.min.js
 share/gnucash/make-prefs-migration-script.xsl
 share/gnucash/migratable-prefs.xml
-share/gnucash/pixmaps/Makefile
 share/gnucash/pixmaps/gnucash-icon-48x48.bmp
 share/gnucash/pixmaps/gnucash-icon.ico
 share/gnucash/pixmaps/gnucash_splash.png
