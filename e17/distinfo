@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.22 2013/11/09 14:56:29 roelants Exp $
-
-SHA1 (enlightenment-0.17.5.tar.bz2) = f11b6fd762e4f32650c9d2ecb595c40ee707100e
-RMD160 (enlightenment-0.17.5.tar.bz2) = 32e7c7e077376030d3deeac6d6a2e3f0f3ad55a3
-Size (enlightenment-0.17.5.tar.bz2) = 29505809 bytes
-SHA1 (patch-data_etc_Makefile.in) = 0f8b66046a37998a47263f89ca25876a6136ad9f
-SHA1 (patch-src_bin_e__border.c) = c0840dd7b3a13fe7e37a8a05afea5c3f3219154c
-SHA1 (patch-src_bin_e__init.c) = 3e3c7d5d25b9e9533138c911074090050c6051b2
-SHA1 (patch-src_modules_temperature_e_mod_main.c) = caab7f4f95fd7ba86cb7966992350ce28c57c9bf

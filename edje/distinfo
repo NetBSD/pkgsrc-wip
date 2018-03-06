@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.16 2013/11/09 14:35:28 roelants Exp $
-
-SHA1 (edje-1.7.9.tar.bz2) = 6bc96db7fd88bacf5a262d51ebf4a4360b752f0e
-RMD160 (edje-1.7.9.tar.bz2) = 38f67293adf3bdd8b72cb5b915d34512cc778f9d
-Size (edje-1.7.9.tar.bz2) = 1120824 bytes

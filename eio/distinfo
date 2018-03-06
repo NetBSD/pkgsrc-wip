@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2013/11/09 14:34:06 roelants Exp $
-
-SHA1 (eio-1.7.9.tar.bz2) = 4133d0967addc654036cd0d79a8d75998c539c73
-RMD160 (eio-1.7.9.tar.bz2) = 734bbc21d7b5d66812b94c0e7e8707635bcb34d3
-Size (eio-1.7.9.tar.bz2) = 362141 bytes
-SHA1 (patch-src_lib_eio__file.c) = 62598ac54628b287814bb9540ab99f5172c550ac

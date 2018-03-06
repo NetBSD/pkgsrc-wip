@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/30 19:42:14 roelants Exp $
-include/eio-1/Eio.h
-include/eio-1/eio_inline_helper.x
-lib/libeio.la
-lib/pkgconfig/eio.pc
-@pkgdir share/eio/examples

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/30 19:30:48 roelants Exp $
-include/evas-1/Evas_Engine_Software_X11.h
-lib/evas/modules/engines/software_x11/${MODULE_ARCH}/module.la
-lib/pkgconfig/evas-software-x11.pc

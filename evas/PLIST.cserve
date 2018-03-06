@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.cserve,v 1.1 2012/12/30 19:28:50 roelants Exp $
-bin/evas_cserve
-bin/evas_cserve_tool
