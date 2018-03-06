@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mame2003-20171204
+DISTNAME=	libretro-mame2003-20180305
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	mame2003-libretro
-GITHUB_TAG=	830402e63d645e5477b3be84e0c11db36d620498
+GITHUB_TAG=	68d5898290448c758ec1f331672046460cd88dc8
 
 HOMEPAGE=	https://docs.libretro.com/library/mame_2003/
 COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.78)
@@ -15,6 +15,8 @@ EXTRACT_USING=	bsdtar
 
 .include "../../mk/endian.mk"
 
+MAKE_FLAGS+=	platform=unix	# doesn't work like other libretro cores weirdly
+				# defaults to windows
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 .if ${MACHINE_ENDIAN} == "big"
