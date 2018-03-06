@@ -9248,6 +9248,7 @@ share/libretro/cheats/Sony - PlayStation/Chippoke Ralph no Daibouken (Japan) (Ga
 share/libretro/cheats/Sony - PlayStation/Chocobo Racing (USA, Europe) (Game Buster).cht
 share/libretro/cheats/Sony - PlayStation/Chocobo Racing (USA, Europe) (GameShark).cht
 share/libretro/cheats/Sony - PlayStation/Chocobo's Dungeon 2 (USA) (GameShark).cht
+share/libretro/cheats/Sony - PlayStation/Chrono Cross (USA).cht
 share/libretro/cheats/Sony - PlayStation/Circuit Breakers (USA, Europe) (Game Buster).cht
 share/libretro/cheats/Sony - PlayStation/Circuit Breakers (USA, Europe) (GameShark).cht
 share/libretro/cheats/Sony - PlayStation/Civilization II (World) (Game Buster).cht
@@ -10876,6 +10877,7 @@ share/libretro/database/cursors/list_all_ps1_games_with_an_edge_rating_of_9_out_
 share/libretro/database/cursors/list_all_ps1_games_with_uk_origin.dbc
 share/libretro/database/cursors/list_all_snes_games_released_on_october_1995.dbc
 share/libretro/database/cursors/list_all_snes_streetfighter_games.dbc
+share/libretro/database/rdb/Amstrad - CPC.rdb
 share/libretro/database/rdb/Atari - 2600.rdb
 share/libretro/database/rdb/Atari - 5200.rdb
 share/libretro/database/rdb/Atari - 7800.rdb
@@ -10911,9 +10913,11 @@ share/libretro/database/rdb/MAME 2010.rdb
 share/libretro/database/rdb/MAME 2014.rdb
 share/libretro/database/rdb/MAME.rdb
 share/libretro/database/rdb/Magnavox - Odyssey2.rdb
+share/libretro/database/rdb/Mattel - Intellivision.rdb
 share/libretro/database/rdb/Microsoft - MSX.rdb
 share/libretro/database/rdb/Microsoft - MSX2.rdb
 share/libretro/database/rdb/Microsoft - Xbox.rdb
+share/libretro/database/rdb/MrBoom.rdb
 share/libretro/database/rdb/NEC - PC Engine - TurboGrafx 16.rdb
 share/libretro/database/rdb/NEC - PC Engine CD - TurboGrafx-CD.rdb
 share/libretro/database/rdb/NEC - PC Engine SuperGrafx.rdb
@@ -10971,6 +10975,7 @@ share/libretro/database/rdb/Sony - PlayStation 2.rdb
 share/libretro/database/rdb/Sony - PlayStation 3 (DLC).rdb
 share/libretro/database/rdb/Sony - PlayStation 3 (Downloadable).rdb
 share/libretro/database/rdb/Sony - PlayStation 3 (PSN).rdb
+share/libretro/database/rdb/Sony - PlayStation 3.rdb
 share/libretro/database/rdb/Sony - PlayStation Portable (DLC).rdb
 share/libretro/database/rdb/Sony - PlayStation Portable (PSX2PSP).rdb
 share/libretro/database/rdb/Sony - PlayStation Portable (UMD Music).rdb
