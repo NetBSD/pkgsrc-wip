@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/09/04 21:00:30 anielski Exp $
-
-SHA1 (e16-1.0.14.tar.gz) = b8ef9fc8c1ce94d99a8bb41ccf18f9115b153e54
-RMD160 (e16-1.0.14.tar.gz) = 9a3b71c6745372ffbf8e424fe0221fd810fe56b8
-Size (e16-1.0.14.tar.gz) = 2340182 bytes
-SHA1 (patch-e_gen_menu) = e98fc7b8ef4cb8e1c42f7f6234eba7d8a69009f3
-SHA1 (patch-randr-fps) = d68448226d7277d52860db38fd228ab6df24e7f7

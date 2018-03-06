@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/28 05:37:33 bsadewitz Exp $
-
-SHA1 (edb-1.0.5.042.tar.bz2) = 2ad249312a8dab6b59ef2f9440649082df75f722
-RMD160 (edb-1.0.5.042.tar.bz2) = a04dea5cc51b9c71f19e33d996e4dce024bdb812
-Size (edb-1.0.5.042.tar.bz2) = 492293 bytes
-SHA1 (patch-aa) = 1d256b3246cad1854a6883eb422983e73ea0fa16

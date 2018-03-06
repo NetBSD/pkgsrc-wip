@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/08/06 19:10:40 yazzy Exp $
-
-SHA1 (epeg-0.9.1.042.tar.gz) = 402ded2be4acc8c3ce59c9c9f3b5afee37185f02
-RMD160 (epeg-0.9.1.042.tar.gz) = 0b0ff7e48c15df2a6b0cf8751a9d092f93e823f9
-Size (epeg-0.9.1.042.tar.gz) = 276746 bytes

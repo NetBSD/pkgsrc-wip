@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/06 09:32:55 netcap Exp $
-bin/epeg
-include/Epeg.h
-lib/libepeg.la
-lib/pkgconfig/epeg.pc
