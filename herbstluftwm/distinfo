@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/06/05 23:55:48 yrmt Exp $
 
-SHA1 (herbstluftwm-0.6.2.tar.gz) = 2310c4b07978cbe465ec608a6d9a018ebbdb4692
-RMD160 (herbstluftwm-0.6.2.tar.gz) = dd6303e34c5ac72b712dce375922289844919f40
-Size (herbstluftwm-0.6.2.tar.gz) = 224191 bytes
+SHA1 (herbstluftwm-0.7.0.tar.gz) = 07894165f3777d400c0ed266132711a9401c6a8a
+RMD160 (herbstluftwm-0.7.0.tar.gz) = 260baee6376280df6a4c036a75340af68a61fddf
+SHA512 (herbstluftwm-0.7.0.tar.gz) = 792e517dff5cfb075b8b5a42b076a7809e983953620212de6d571d3d606c573c83606a0f7694e25d3351c288473f5129191a416fe8977db8438c1016503eacd8
+Size (herbstluftwm-0.7.0.tar.gz) = 247469 bytes
