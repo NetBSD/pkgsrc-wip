@@ -2252,6 +2252,7 @@ SUBDIR+=	nzbget
 SUBDIR+=	obconf-qt
 SUBDIR+=	objfw-git
 SUBDIR+=	obmenu
+SUBDIR+=	obnc
 SUBDIR+=	ocaml-bin_prot
 SUBDIR+=	ocaml-biniou
 SUBDIR+=	ocaml-camomile
