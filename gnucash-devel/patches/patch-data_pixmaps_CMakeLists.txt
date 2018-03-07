@@ -1,0 +1,24 @@
+$NetBSD$
+
+Avoid installing a Makefile.
+https://github.com/Gnucash/gnucash/commit/2acb6da2b846e06e345b92f50a30d2d998bbeeb0
+
+--- data/pixmaps/CMakeLists.txt.orig	2018-02-24 22:14:00.000000000 +0000
++++ data/pixmaps/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ 
+ INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} DESTINATION ${CMAKE_INSTALL_DATADIR}/gnucash
+-    PATTERN Makefile.* EXCLUDE
++    PATTERN Makefile* EXCLUDE
+     PATTERN CMake* EXCLUDE
+     PATTERN CTest* EXCLUDE
+     PATTERN cmake* EXCLUDE
+@@ -8,7 +8,7 @@ INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE
+ )
+ FILE(COPY ${CMAKE_CURRENT_SOURCE_DIR}
+     DESTINATION ${DATADIR_BUILD}/gnucash
+-    PATTERN Makefile.* EXCLUDE
++    PATTERN Makefile* EXCLUDE
+     PATTERN CMake* EXCLUDE
+     PATTERN CTest* EXCLUDE
+     PATTERN cmake* EXCLUDE
