@@ -4,4 +4,4 @@ SHA1 (munge-0.5.13.tar.xz) = bcb0b89e44c5c0ec21f4bcfaacb4493b82aace61
 RMD160 (munge-0.5.13.tar.xz) = 77c6e9df935ddc1ffe6cd481e015f59e2f74e1b7
 SHA512 (munge-0.5.13.tar.xz) = 2e024c0438f9208379a037daabd1c31f206820ab74a410e2bb69870755e99f9c9fbf60c294c96941008bc43425fbb31dd2374e5f088b7978479e7c65816e9002
 Size (munge-0.5.13.tar.xz) = 389952 bytes
-SHA1 (patch-src_etc_Makefile.in) = 5790d36ff17167f4f71b452737688d99ea10c05a
+SHA1 (patch-src_etc_Makefile.in) = 0bb6713d0d403e2df89043e9f6bb251642211384
