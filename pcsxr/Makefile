@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2013/11/12 12:26:33 othyro Exp $
-#
 
 DISTNAME=	pcsxr-1.9.93
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://pcsxr.codeplex.com/downloads/get/722114
 EXTRACT_SUFX=	.tar.bz2
@@ -35,7 +35,7 @@ BUILDLINK_DEPMETHOD.libXcursor=	build
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

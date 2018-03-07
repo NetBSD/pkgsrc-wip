@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	lander-0.6.4
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.nickg.me.uk/files/
 
@@ -28,5 +29,5 @@ CONFIGURE_ARGS+=	--with-boost="${PREFIX}"\
 .include "../../audio/SDL_sound/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

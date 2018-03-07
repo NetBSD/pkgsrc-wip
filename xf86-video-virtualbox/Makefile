@@ -2,6 +2,7 @@
 
 DISTNAME=	VirtualBox-5.0.14
 PKGNAME=	${DISTNAME:S/VirtualBox/xf86-video-virtualbox/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,8 +32,7 @@ pre-configure:
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXext?=   build
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

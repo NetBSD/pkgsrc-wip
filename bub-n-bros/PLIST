@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/06/14 01:16:12 othyro Exp $
+@comment $NetBSD$
 games/bubbros/BubBob.icns
 games/bubbros/BubBob.py
 games/bubbros/BubBob.pyo
@@ -221,9 +221,13 @@ games/bubbros/bubbob/sounds/yippee.wav
 games/bubbros/bubbob/sprmap.py
 games/bubbros/bubbob/sprmap.pyo
 games/bubbros/bubbob/statesaver.c
+games/bubbros/bubbob/statesaver.py
+games/bubbros/bubbob/statesaver.pyo
 games/bubbros/bubbob/statesaver.so
 games/bubbros/bubbob/test_rnglevel.py
 games/bubbros/bubbob/test_rnglevel.pyo
+games/bubbros/bubbob/test_statesaver.py
+games/bubbros/bubbob/test_statesaver.pyo
 games/bubbros/bubbob/tmp/pat00.ppm
 games/bubbros/bubbob/tmp/pat01.ppm
 games/bubbros/bubbob/tmp/pat02.ppm
@@ -309,13 +313,9 @@ games/bubbros/display/xshm.c
 games/bubbros/display/xshm.so
 games/bubbros/doc/BubBob.py.1
 games/bubbros/doc/Client.py.1
-games/bubbros/doc/Introduction.html
 games/bubbros/doc/Makefile
-games/bubbros/doc/authors.html
 games/bubbros/doc/bb.py.1
 games/bubbros/doc/crazybonuses.html
-games/bubbros/doc/download.html
-games/bubbros/doc/help.html
 games/bubbros/doc/sshots.html
 games/bubbros/http2/data/bab.png
 games/bubbros/http2/data/baub.png

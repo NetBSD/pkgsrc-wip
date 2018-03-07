@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.27 2016/11/17 08:06:52 wiz Exp $
 
 DISTNAME=	xf86-input-mouse-1.9.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,10 +18,6 @@ CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 .include "options.mk"
 
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
-.include "../../x11/kbproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

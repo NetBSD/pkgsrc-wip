@@ -1,8 +1,8 @@
 # $NetBSD: options.mk,v 1.3 2013/11/13 02:28:18 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fceux
-PKG_SUPPORTED_OPTIONS=	debug gd gtk2 gtk3 lua opengl sdl x11 zlib
-PKG_SUGGESTED_OPTIONS=	gtk2 lua opengl sdl x11 zlib
+PKG_SUPPORTED_OPTIONS=	debug gd gtk2 gtk3 opengl sdl x11 zlib
+PKG_SUGGESTED_OPTIONS=	gtk2 opengl sdl x11 zlib
 
 .include "../../mk/bsd.options.mk"
 
@@ -35,14 +35,14 @@ MAKE_ENV+=		GTK3=1 GTK=0
 MAKE_ENV+=		GTK3=0
 .endif
 
-.if !empty(PKG_OPTIONS:Mlua)
-#PLIST.lua=		yes
-LUA_VERSION_REQD=	51
-.include "../../lang/lua/buildlink3.mk"
-MAKE_ENV+=		LUA=1
-.else
-MAKE_ENV+=		LUA=0
-.endif
+#.if !empty(PKG_OPTIONS:Mlua)
+##PLIST.lua=		yes
+#LUA_VERSION_REQD=	51
+#.include "../../lang/lua/buildlink3.mk"
+#MAKE_ENV+=		LUA=1
+#.else
+#MAKE_ENV+=		LUA=0
+#.endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
 #PLIST.opengl=           yes
@@ -61,7 +61,7 @@ MAKE_ENV+=		CREATE_AVI=0 LOGO=0
 
 .if !empty(PKG_OPTIONS:Mx11)
 #PLIST.x11=              yes
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

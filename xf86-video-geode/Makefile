@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2012/10/07 20:11:09 asau Exp $
-#
 
 DISTNAME=	xf86-video-geode-2.11.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,5 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
-.include "../../x11/fontsproto/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

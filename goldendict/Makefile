@@ -2,6 +2,7 @@
 
 GITHUB_PROJECT=	goldendict
 DISTNAME=	goldendict-1.5.0rc2
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	-https://github.com/${GITHUB_PROJECT}/${DIST_SUBDIR}/archive/1.5.0-RC2.tar.gz
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -37,7 +38,7 @@ do-configure:
 .include "../../textproc/eb/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/recordproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 

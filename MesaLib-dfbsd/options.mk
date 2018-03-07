@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	--enable-egl
 CFLAGS+=		-DHAVE_DRI3
 CONFIGURE_ARGS+=	--enable-dri3
 .    if ${X11_TYPE} == "modular"
-.include "../../x11/dri3proto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .    endif
 .  else
 CONFIGURE_ARGS+=	--disable-dri3

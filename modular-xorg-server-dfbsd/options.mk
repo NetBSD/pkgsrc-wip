@@ -29,7 +29,7 @@ PLIST_VARS+=		dri3
 .  if !empty(PKG_OPTIONS:Mdri3)
 CONFIGURE_ARGS+=	--enable-dri3
 PLIST.dri3=		yes
-.include "../../x11/dri3proto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--disable-dri3
 .  endif
@@ -37,12 +37,9 @@ CONFIGURE_ARGS+=	--disable-dri3
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxshmfence/buildlink3.mk"
-.include "../../x11/presentproto/buildlink3.mk"
-.include "../../x11/xf86driproto/buildlink3.mk"
 PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-dri2

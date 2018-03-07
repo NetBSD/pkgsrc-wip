@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.9 2014/10/09 14:06:27 thomasklausner Exp $
 
 DISTNAME=	libdmx-1.1.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +17,5 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	dmx.pc.in
 
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../wip/dmxproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

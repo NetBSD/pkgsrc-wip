@@ -10,6 +10,7 @@ PORTNAME=	xf86-video-intel
 
 DISTNAME=	${PORTNAME}-${COMMIT_ID}
 PKGNAME=	${PORTNAME}-2.99.917
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://cgit.freedesktop.org/xorg/driver/${PORTNAME}/snapshot/
 EXTRACT_SUFX=	.tar.xz
@@ -60,7 +61,7 @@ CONFIGURE_ARGS+=	--with-default-accel=uxa
 
 .if !empty(PKG_OPTIONS:Mdri3)
 CONFIGURE_ARGS+=	--enable-dri3
-.include "../../x11/dri3proto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-dri3
 .endif

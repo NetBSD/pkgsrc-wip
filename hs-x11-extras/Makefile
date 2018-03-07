@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.7 2014/05/21 21:04:46 szptvlfn Exp $
-#
 
 DISTNAME=	X11-extras-${VERSION}
 PKGNAME=	hs-x11-extras-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://hackage.haskell.org/packages/archive/X11-extras/${VERSION}/
 
@@ -59,6 +58,6 @@ do-install:
 
 .include "../../x11/hs-X11/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

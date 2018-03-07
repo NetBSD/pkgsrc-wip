@@ -2,6 +2,7 @@
 
 DISTNAME=	VirtualBox-5.0.14
 PKGNAME=	${DISTNAME:S/VirtualBox/xf86-input-vboxmouse/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,9 +30,6 @@ pre-configure:
 	cd ${WRKSRC}/${VBOXMOUSE_DIR} && autoreconf -vif
 
 .include "../../devel/xorg-util-macros/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
-.include "../../x11/kbproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

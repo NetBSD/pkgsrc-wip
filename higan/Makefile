@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.1 2013/02/07 21:23:33 othyro Exp $
-#
 
 DISTNAME=	higan_v092-source
 PKGNAME=	${DISTNAME:S/_v0/-0./1:S/-source//1}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://higan.googlecode.com/files/
 EXTRACT_SUFX=	.tar.xz
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/higan/data/cheats.bml ${DESTDIR}${PREFIX}/share/doc/higan
 
 .include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

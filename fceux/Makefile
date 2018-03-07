@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.8 2013/11/13 02:28:18 othyro Exp $
-#
 
 DISTNAME=	fceux-2.2.2.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -37,5 +36,6 @@ do-install:
 		${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/scons install --prefix=${DESTDIR}${PREFIX}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

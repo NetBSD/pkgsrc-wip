@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2014/02/03 11:30:10 othyro Exp $
-#
 
 DISTNAME=	unagi-0.3.4
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	https://projects.mini-dweeb.org/attachments/download/114/
 
@@ -32,7 +32,7 @@ post-install:
 		${RM} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/unagi.conf
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xcb-util036/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"

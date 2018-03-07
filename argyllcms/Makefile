@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	Argyll_V1.8.3_src
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.argyllcms.com/
 EXTRACT_SUFX=	.zip
@@ -42,7 +43,7 @@ post-install:
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

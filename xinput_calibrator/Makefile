@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	xinput_calibrator-0.7.5
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://github.com/downloads/tias/xinput_calibrator/
 
@@ -19,5 +20,5 @@ USE_TOOLS+=	pkg-config
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

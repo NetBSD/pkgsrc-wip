@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-avahi
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--disable-x11

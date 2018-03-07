@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
-#
 
 DISTNAME=	tile-0.8.4.0
 PKGNAME=	tk${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tktable/}
 
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
