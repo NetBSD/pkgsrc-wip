@@ -16,13 +16,17 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
-OWN_DIRS=	${VARBASE}/lib/munge ${VARBASE}/log/munge ${VARBASE}/run/munge
+OWN_DIRS=	${VARBASE}/lib/munge
+OWN_DIRS+=	${VARBASE}/log/munge
+OWN_DIRS+=	${VARBASE}/run/munge
+OWN_DIRS+=	etc/munge
 
 RCD_SCRIPTS+=	munge
 
 SUBST_CLASSES+=		init
 SUBST_STAGE.init=	post-build
 SUBST_FILES.init=	${WRKSRC}/src/etc/munge.init
+SUBST_FILES.init+=	${WRKSRC}/src/etc/munge.sysconfig
 SUBST_SED.init=		-e 's|USER="munge"|USER="daemon"|g'
 SUBST_SED.init+=	-e 's|GROUP="munge"|GROUP="daemon"|g'
 
