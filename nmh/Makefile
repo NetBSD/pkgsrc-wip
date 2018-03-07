@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.94 2018/01/01 21:18:40 adam Exp $
 
-DISTNAME=		nmh-1.7.1-RC3
-PKGNAME=		nmh-1.7.1rc3	# XXX: not needed for non-RC
+DISTNAME=		nmh-1.7.1
 CATEGORIES=		mail
 MASTER_SITES=		https://download.savannah.nongnu.org/releases/nmh/
 
