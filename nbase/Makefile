@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	nbase-7.0.0.2
+DISTNAME=	nbase-7.0.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cheusov/}
 
@@ -10,12 +10,10 @@ HOMEPAGE=	https://github.com/cheusov/nbase
 COMMENT=	NetBSD userlevel portable to other UNIX-like systems
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=	nbase
-DEPENDS+=	mk-configure>=0.29.1:../../devel/mk-configure
+NOT_FOR_PLATFORM=	SunOS-*-*
 
-# BUILD_TARGET=		all-fgen
-# INSTALL_TARGET=		install-fgen
-# CONFIGURE_TARGET=	errorcheck-fgen
+GITHUB_PROJECT=	nbase
+BUILD_DEPENDS+=	mk-configure>=0.30.0:../../devel/mk-configure
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		yacc lex
@@ -28,4 +26,7 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}/nbase \
 		MANDIR=${PREFIX}/nbase/${PKGMANDIR} \
 		LINKSPREFIX=${PREFIX}
 
+.include "../../mk/curses.buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
