@@ -1,13 +1,20 @@
 $NetBSD$
 
 # Respect env
---- Makefile.orig	2015-06-17 19:10:21 UTC
+
+--- Makefile.orig	2017-11-07 19:42:14.000000000 +0000
 +++ Makefile
-@@ -1,5 +1,5 @@
+@@ -1,10 +1,10 @@
 -CC=gcc
 -CFLAGS=-g -Wall -O2 -Wno-unused-function
-+CC ?=		gcc
-+CFLAGS ?=	-g -Wall -O2 -Wno-unused-function
++CC	?= gcc
++CFLAGS	?= -g -Wall -O2 -Wno-unused-function
  
- all:seqtk trimadap
+ all:seqtk
  
+ seqtk:seqtk.c khash.h kseq.h
+-		$(CC) $(CFLAGS) seqtk.c -o $@ -lz -lm
++		$(CC) $(CFLAGS) seqtk.c -o $@ $(LDFLAGS) -lz -lm
+ 
+ clean:
+ 		rm -fr gmon.out *.o ext/*.o a.out seqtk trimadap *~ *.a *.dSYM session*
