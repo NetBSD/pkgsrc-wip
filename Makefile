@@ -3321,7 +3321,6 @@ SUBDIR+=	py-lib
 SUBDIR+=	py-libclang-py3
 SUBDIR+=	py-liblzma
 SUBDIR+=	py-libmpdclient2
-SUBDIR+=	py-libnacl
 SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-librabbitmq
 SUBDIR+=	py-libtextcat
