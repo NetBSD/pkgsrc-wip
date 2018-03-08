@@ -4,7 +4,7 @@ DISTNAME=	herbstluftwm-0.7.0
 CATEGORIES=	wm
 MASTER_SITES=	http://herbstluftwm.org/tarballs/
 
-MAINTAINER=	youri.mout@gmail.com
+MAINTAINER=	jake.slazenger@yandex.com
 HOMEPAGE=	http://herbstluftwm.org/
 COMMENT=	Manual tiling window manager for X11 using Xlib and Glib
 LICENSE=	modified-bsd
