@@ -1,0 +1,12 @@
+#! /bin/sh
+. "./test.subr"
+
+setup_package "fossil-multi.mk"
+setup_fossil_repository
+
+step "Testing Fossil with multiple repositories"
+package_make patch
+
+assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"
+assert_that --file "$wrkdir/2017/today"    --has-content "2017-01-01"
+assert_that --file "$wrkdir/current/today" --has-content "2018-03-01"

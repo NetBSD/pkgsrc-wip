@@ -1,0 +1,10 @@
+#! /bin/sh
+. "./test.subr"
+
+setup_package "fossil-single.mk"
+setup_fossil_repository
+
+step "Testing Fossil with a single repository"
+package_make patch
+
+assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"

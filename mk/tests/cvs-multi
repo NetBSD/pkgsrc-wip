@@ -1,0 +1,12 @@
+#! /bin/sh
+. "./test.subr"
+
+setup_package "cvs-multi.mk"
+setup_cvs_repository
+
+step "Testing CVS with multiple repositories"
+package_make patch
+
+assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"
+assert_that --file "$wrkdir/2017/today"    --has-content "2017-01-01"
+assert_that --file "$wrkdir/current/today" --has-content "2018-03-01"

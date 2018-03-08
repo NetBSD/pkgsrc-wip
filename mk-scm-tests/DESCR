@@ -1,3 +1,0 @@
-This pseudo package ensures that the various source code management
-systems in wip/mk work similarly to each other and handle the typical use
-cases correctly.

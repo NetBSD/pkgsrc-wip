@@ -1,8 +1,8 @@
-#! /bin/bash
+#! /bin/sh
 set -eu
 
 step() {
-	echo ""
+	echo "" 1>&2
 	echo "T: $*" 1>&2
 }
 
@@ -23,12 +23,39 @@ cvs_admin_set_date() {
 	mv -f "$1.tmp" "$1"
 }
 
+setup_package() {
+	pkgsrcdir=`cd "$PWD/../../.." && exec pwd`
+	test -f "$pkgsrcdir/mk/bsd.pkg.mk" || die "This test must be run from inside pkgsrc"
+
+	pkgdir="$pkgsrcdir/mk-scm-tests/mk-scm-tests"
+	rm -rf "$pkgdir"
+	mkdir -p "$pkgdir"
+	cp "$1" "$pkgdir/Makefile"
+	echo "Dummy description." > "$pkgdir/DESCR"
+	echo "@comment $""NetBSD""$" > "$pkgdir/PLIST"
+	cd "$pkgdir"
+
+	repodir="$pkgdir/files/repo"
+	mkdir -p "${repodir%/*}"
+
+	tmpdir="$pkgdir/tmp"
+	mkdir -p "$tmpdir"
+
+	wrkdir=`package_make show-var VARNAME=WRKDIR`
+}
+
+# The standard test repository contains these commits:
+# - at 2017-01-01TZ, the file "today" contains "2017-01-01".
+#   - this commit is tagged v2017.
+# - at 2018-01-01TZ, the file "today" contains "2018-01-01".
+# - at 2018-03-01TZ, the file "today" contains "2018-03-01".
+
 setup_cvs_repository() {
 	cvs -d "$repodir" init
 	mkdir "$repodir/pkgbase"
 
-	cvs -d "$repodir" checkout -d "$basedir/pkgbase" "pkgbase"
-	pushd "$basedir/pkgbase"
+	cvs -d "$repodir" checkout -d "$tmpdir/pkgbase" "pkgbase"
+	cd "$tmpdir/pkgbase"
 
 	echo "2017-01-01" > today
 	cvs add today
@@ -43,13 +70,11 @@ setup_cvs_repository() {
 	echo "2018-03-01" > today
 	cvs commit -m "today is 2018-03-01" today
 	cvs_admin_set_date "$repodir/pkgbase/today,v" "1.3" "2018.03.01.00.00.00"
-
-	popd
 }
 
 setup_fossil_repository() {
-	mkdir -p "$repodir/pkgbase"
-	pushd "$repodir/pkgbase"
+	mkdir -p "$repodir"
+	cd "$repodir"
 	fossil init --date-override "2017-01-01" pkgbase.fossil
 	fossil open "pkgbase.fossil"
 
@@ -64,13 +89,11 @@ setup_fossil_repository() {
 
 	echo "2018-03-01" > today
 	fossil commit -m "today is 2018-03-01" --date-override "2018-03-01" --hash -- today
-
-	popd
 }
 
 setup_git_repository() {
 	git init "$repodir/pkgbase"
-	pushd "$repodir/pkgbase"
+	cd "$repodir/pkgbase"
 
 	echo "2017-01-01" > today
 	git add today
@@ -86,13 +109,11 @@ setup_git_repository() {
 	echo "2018-03-01" > today
 	GIT_AUTHOR_DATE="2018-03-01T00:00:00Z" GIT_COMMITTER_DATE="2018-03-01T00:00:00Z" \
 		git commit -m "today is 2018-03-01" -- today
-
-	popd
 }
 
 setup_hg_repository() {
 	hg init "$repodir/pkgbase"
-	pushd "$repodir/pkgbase"
+	cd "$repodir/pkgbase"
 
 	echo "2017-01-01" > today
 	hg add today
@@ -100,13 +121,10 @@ setup_hg_repository() {
 	hg tag -u "user" v2017
 
 	echo "2018-01-01" > today
-	hg add today
 	hg commit -m "today is 2018-01-01" -d "2018-01-01T00:00:00Z" -u "user" -- today
 
 	echo "2018-03-01" > today
 	hg commit -m "today is 2018-03-01" -d "2018-03-01T00:00:00Z" -u "user" -- today
-
-	popd
 }
 
 setup_svn_repository() {
@@ -115,8 +133,8 @@ setup_svn_repository() {
 	hook="$repodir/pkgbase/hooks/pre-revprop-change"
 	printf '%s\n' '#! /bin/sh' '# allow everything' > "$hook"
 	chmod +x "$hook"
-	svn checkout "file://$repodir/pkgbase" "$basedir/svnwork"
-	pushd "$basedir/svnwork"
+	svn checkout "file://$repodir/pkgbase" "$tmpdir/svnwork"
+	cd "$tmpdir/svnwork"
 	mkdir "trunk"
 	cd "trunk"
 
@@ -135,13 +153,12 @@ setup_svn_repository() {
 	echo "2018-03-01" > today
 	svn commit -m "today is 2018-03-01"
 	svn propset "svn:date" --revprop -r HEAD "2018-03-01T00:00:00.000000Z"
-
-	popd
 }
 
-pkgsrc_make() {
+package_make() {
+	cd "$pkgdir"
 	bmake=`type "bmake" 1>/dev/null 2>&1 && echo "bmake" || echo "make"`
-	DISTDIR="$basedir/distfiles" "$bmake" "$@"
+	DISTDIR="$tmpdir/distfiles" "$bmake" "$@"
 }
 
 assert_that() {
@@ -163,26 +180,23 @@ test_scm() {
 	(svn)		scm_display_name="Subversion"	scm_tag_varname="SVN_REVISION"	;;
 	esac
 
-	# Sets up a repository in $repodir, with these commits:
-	# - at 2017-01-01TZ, the file "today" contains "2017-01-01".
-	#   - this commit is tagged v2017.
-	# - at 2018-01-01TZ, the file "today" contains "2018-01-01".
-	# - at 2018-03-01TZ, the file "today" contains "2018-03-01".
-	#
 	step "Setting up $scm_display_name repository"
 	rm -rf "$repodir"
 	setup_${1}_repository
 	wrkdir=`pkgsrc_make show-var VARNAME=WRKDIR`
 
-	step "Dumping API variables for $scm_display_name (for manual inspection)"
-	SCM_UNDER_TEST="$1" pkgsrc_make clean
-	SCM_UNDER_TEST="$1" pkgsrc_make "show-all-$1"
+	: step "Dumping API variables for $scm_display_name (for manual inspection)"
+	: SCM_UNDER_TEST="$1" pkgsrc_make clean
+	: SCM_UNDER_TEST="$1" pkgsrc_make "show-all-$1"
 	:
 	: "needs to be inspected manually"
 
 	step "Testing $scm_display_name"
-	SCM_UNDER_TEST="$1" pkgsrc_make clean
-	SCM_UNDER_TEST="$1" pkgsrc_make patch
+	: pkgsrc_make clean
+	PKG_DEBUG_LEVEL=0 pkgsrc_make -f "$1-1-single.mk" clean
+	PKG_DEBUG_LEVEL=0 pkgsrc_make -f "$1-1-single.mk" build
+	#PKG_DEBUG_LEVEL=0 pkgsrc_make -f "$1-1-single.mk" do-build
+	exit 1
 	:
 	assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"
 	assert_that --file "$wrkdir/2017/today"    --has-content "2017-01-01"
@@ -203,21 +217,3 @@ test_scm() {
 
 	SCM_UNDER_TEST="$1" pkgsrc_make clean
 }
-
-main() {
-	basedir="$PWD/tmp"
-	repodir="$basedir/repo"
-	rm -rf "$basedir"
-	mkdir "$basedir"
-
-	test_scm "cvs"
-	test_scm "fossil"
-	test_scm "git"
-	test_scm "hg"
-	test_scm "svn"
-
-	rm -rf "$basedir"
-	step "OK"
-}
-
-main
