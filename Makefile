@@ -4703,6 +4703,7 @@ SUBDIR+=	you-get
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
+SUBDIR+=	z3
 SUBDIR+=	zapping
 SUBDIR+=	zbackup
 SUBDIR+=	zbar
