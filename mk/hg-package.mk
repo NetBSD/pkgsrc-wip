@@ -119,12 +119,12 @@ _HG_DISTFILE.${repo}=	${PKGBASE}-${repo}-${_HG_TAG.${repo}}.tar.gz
 # Define the shell variables used by the following commands
 _HG_CMD.vars.${repo}= \
 	repo=${HG_REPO.${repo}:Q};					\
-	extractdir=${HG_EXTRACTDIR.${repo}:Q};					\
+	extractdir=${HG_EXTRACTDIR.${repo}:Q};				\
 	archive=${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q}
 
 # Extract the cached archive
 _HG_CMD.extract_archive.${repo}= \
-	if [ -f "$$archive" ]; then		\
+	if [ -f "$$archive" ]; then					\
 	  ${STEP_MSG} "Extracting cached Mercurial archive $${archive\#\#*/}."; \
 	  gzip -d -c "$$archive" | pax -r;				\
 	  exit 0;							\
@@ -146,8 +146,8 @@ _HG_CMD.create_archive.${repo}= \
 hg-cleandir: .PHONY
 .for repo in ${HG_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
-	if [ -d ${HG_EXTRACTDIR.${repo}:Q} ]; then				\
-		cd ${HG_EXTRACTDIR.${repo}:Q} && rm -rf *;			\
+	if [ -d ${HG_EXTRACTDIR.${repo}:Q} ]; then			\
+		cd ${HG_EXTRACTDIR.${repo}:Q} && rm -rf *;		\
 	fi
 .endfor
 	${RUN} cd ${WRKDIR} && rm -f .*_done && rm -rf .cwrapper
@@ -164,7 +164,7 @@ do-hg-extract: .PHONY
 		${_HG_CMD.checkout.${repo}};				\
 		${_HG_CMD.create_archive.${repo}};			\
 	else								\
-		cd "$$extractdir";						\
+		cd "$$extractdir";					\
 		${_HG_CMD} pull ${_HG_FLAGS};				\
 		${_HG_CMD} update -C ${_HG_FLAGS};			\
 	fi
