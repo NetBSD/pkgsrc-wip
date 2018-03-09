@@ -1,3 +1,5 @@
+# $NetBSD$
+
 BUILDLINK_TREE+=	z3
 
 .if !defined(Z3_BUILDLINK3_MK)
