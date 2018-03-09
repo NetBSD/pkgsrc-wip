@@ -27,10 +27,13 @@ cvs_admin_set_date() {
 }
 
 setup_package() {
+	trap clean_up EXIT
+
 	pkgsrcdir=`cd "$srcdir/../../.." && exec pwd`
 	test -f "$pkgsrcdir/mk/bsd.pkg.mk" || die "This test must be run from inside pkgsrc"
 
-	pkgdir="$pkgsrcdir/mk-scm-tests/mk-scm-tests"
+	category=`uuidgen 2>/dev/null || echo "wip-mk-scm-${RANDOM-4}"`
+	pkgdir="$pkgsrcdir/$category/mk-scm-tests"
 	rm -rf "$pkgdir"
 	mkdir -p "$pkgdir"
 	cp "$srcdir/$1" "$pkgdir/Makefile"
@@ -45,6 +48,12 @@ setup_package() {
 	mkdir -p "$tmpdir"
 
 	wrkdir=`package_make show-var VARNAME=WRKDIR`
+}
+
+clean_up() {
+	if [ "${category-}" ]; then
+		rm -rf "$pkgsrcdir/$category"
+	fi
 }
 
 # The standard test repository contains these commits:
