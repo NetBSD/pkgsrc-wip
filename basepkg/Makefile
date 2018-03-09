@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	basepkg-1.3
+DISTNAME=	basepkg-1.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
-MAINTAINER=	mail@e-yuuki.org
+MAINTAINER=	uki@e-yuuki.org
 HOMEPAGE=	https://github.com/user340/
 COMMENT=	Framework of system packages of NetBSD
 LICENSE=	2-clause-bsd
@@ -15,21 +15,23 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
-WRKSRC=		${WRKDIR}/basepkg-1.3
+WRKSRC=		${WRKDIR}/basepkg-1.4
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
-INSTALLATION_DIRS+=	share/basepkg
+INSTALLATION_DIRS+=	basepkg basepkg/sets ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/basepkg.sh ${DESTDIR}${PREFIX}/share/basepkg
-	${INSTALL_SCRIPT} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/basepkg
-	${INSTALL_DATA} ${WRKSRC}/sets/comments ${DESTDIR}${PREFIX}/share/basepkg/sets
-	${INSTALL_DATA} ${WRKSRC}/sets/deps ${DESTDIR}${PREFIX}/share/basepkg/sets
-	${INSTALL_DATA} ${WRKSRC}/sets/descrs ${DESTDIR}${PREFIX}/share/basepkg/sets
-	${INSTALL_DATA} ${WRKSRC}/sets/install ${DESTDIR}${PREFIX}/share/basepkg/sets
-	${INSTALL_DATA} ${WRKSRC}/sets/deinstall ${DESTDIR}${PREFIX}/share/basepkg/sets
-	${INSTALL_DATA} ${WRKSRC}/sets/essentials ${DESTDIR}${PREFIX}/share/basepkg/sets
-	cd ${WRKSRC}/sets && ${PAX} -wr lists ${DESTDIR}${PREFIX}/share/basepkg/sets
+	${INSTALL_SCRIPT} ${WRKSRC}/basepkg.sh ${DESTDIR}${PREFIX}/basepkg
+	${INSTALL_SCRIPT} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/basepkg
+	${INSTALL_MAN} ${WRKSRC}/man/man1/basepkg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/basepkg.sh.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/sets/comments ${DESTDIR}${PREFIX}/basepkg/sets/comments
+	${INSTALL_DATA} ${WRKSRC}/sets/deps ${DESTDIR}${PREFIX}/basepkg/sets/deps
+	${INSTALL_DATA} ${WRKSRC}/sets/descrs ${DESTDIR}${PREFIX}/basepkg/sets/descrs
+	${INSTALL_DATA} ${WRKSRC}/sets/install ${DESTDIR}${PREFIX}/basepkg/sets/install
+	${INSTALL_DATA} ${WRKSRC}/sets/deinstall ${DESTDIR}${PREFIX}/basepkg/sets/deinstall
+	${INSTALL_DATA} ${WRKSRC}/sets/essentials ${DESTDIR}${PREFIX}/basepkg/sets/essentials
+	cd ${WRKSRC}/sets && ${PAX} -wr lists ${DESTDIR}${PREFIX}/basepkg/sets
 
 .include "../../mk/bsd.pkg.mk"
