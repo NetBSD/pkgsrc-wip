@@ -10,6 +10,10 @@ include/obnc/OBNC.h
 include/obnc/OBNCConfig.h
 lib/obnc/OBNC.env
 lib/obnc/OBNC.o
+man/man1/obnc-compile.1
+man/man1/obnc-path.1
+man/man1/obnc.1
+man/man1/obncdoc.1
 share/doc/obnc/oberon-report.html
 share/doc/obnc/obncdoc/index.html
 share/doc/obnc/obncdoc/obnc/Files.def
@@ -29,7 +33,3 @@ share/doc/obnc/obncdoc/obnc/XYplane.def.html
 share/doc/obnc/obncdoc/obnc/index.html
 share/doc/obnc/obncdoc/obnc/style.css
 share/doc/obnc/obncdoc/style.css
-share/man/man1/obnc-compile.1
-share/man/man1/obnc-path.1
-share/man/man1/obnc.1
-share/man/man1/obncdoc.1

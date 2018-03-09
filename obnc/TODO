@@ -12,8 +12,6 @@
   framework to selectively-enable using it (which'll probably require patching
   the ./install script).
 
-- Install manpages into ${PREFIX}/man instead of ${PREFIX}/share/man.
-
 - Update DESCR so it's not just a copy of COMMENT.
 
 - Investigate the Standard Library tarball from <http://miasap.se/obnc/>,
