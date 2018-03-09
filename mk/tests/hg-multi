@@ -1,5 +1,5 @@
 #! /bin/sh
-. "./test.subr"
+. "${0%/*}/test.subr"
 
 setup_package "hg-multi.mk"
 setup_hg_repository

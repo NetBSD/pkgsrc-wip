@@ -1,5 +1,8 @@
 #! /bin/sh
+
 set -eu
+
+srcdir="${0%/*}"
 
 step() {
 	echo "" 1>&2
@@ -24,13 +27,13 @@ cvs_admin_set_date() {
 }
 
 setup_package() {
-	pkgsrcdir=`cd "$PWD/../../.." && exec pwd`
+	pkgsrcdir=`cd "$srcdir/../../.." && exec pwd`
 	test -f "$pkgsrcdir/mk/bsd.pkg.mk" || die "This test must be run from inside pkgsrc"
 
 	pkgdir="$pkgsrcdir/mk-scm-tests/mk-scm-tests"
 	rm -rf "$pkgdir"
 	mkdir -p "$pkgdir"
-	cp "$1" "$pkgdir/Makefile"
+	cp "$srcdir/$1" "$pkgdir/Makefile"
 	echo "Dummy description." > "$pkgdir/DESCR"
 	echo "@comment $""NetBSD""$" > "$pkgdir/PLIST"
 	cd "$pkgdir"
@@ -104,17 +107,20 @@ setup_git_repository() {
 	echo "2017-01-01" > today
 	git add today
 	GIT_AUTHOR_DATE="2017-01-01T00:00:00Z" GIT_COMMITTER_DATE="2017-01-01T00:00:00Z" \
-		git commit -m "today is 2017-01-01" -- today
+		git -c user.name="User" -c user.email="user@example.org" \
+			commit -m "today is 2017-01-01" today
 	git tag v2017
 
 	echo "2018-01-01" > today
 	git add today
 	GIT_AUTHOR_DATE="2018-01-01T00:00:00Z" GIT_COMMITTER_DATE="2018-01-01T00:00:00Z" \
-		git commit -m "today is 2018-01-01" -- today
+		git -c user.name="User" -c user.email="user@example.org" \
+			commit -m "today is 2018-01-01" today
 
 	echo "2018-03-01" > today
 	GIT_AUTHOR_DATE="2018-03-01T00:00:00Z" GIT_COMMITTER_DATE="2018-03-01T00:00:00Z" \
-		git commit -m "today is 2018-03-01" -- today
+		git -c user.name="User" -c user.email="user@example.org" \
+			commit -m "today is 2018-03-01" today
 }
 
 setup_hg_repository() {

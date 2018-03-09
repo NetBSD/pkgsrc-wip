@@ -1,5 +1,5 @@
 #! /bin/sh
-. "./test.subr"
+. "${0%/*}/test.subr"
 
 setup_package "cvs-multi.mk"
 setup_cvs_repository

@@ -1,6 +1,8 @@
 #! /bin/sh
 set -eu
 
+cd "${0%/*}"
+
 # Ensures that the tests and the code don't contain obvious
 # copy-and-paste errors.
 

@@ -1,5 +1,5 @@
 #! /bin/sh
-. "./test.subr"
+. "${0%/*}/test.subr"
 
 setup_package "fossil-single.mk"
 setup_fossil_repository

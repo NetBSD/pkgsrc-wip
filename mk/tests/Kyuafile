@@ -3,10 +3,7 @@ syntax(2)
 test_suite("pkgsrc_wip_mk_scm")
 
 local function test(name)
-	-- Currently doesn't work because test.subr is not copied to the
-	-- temporary directory.
-	--
-	-- plain_test_program { name = name, required_files = "test.subr" }
+	plain_test_program { name = name }
 end
 
 test "cvs-show-all"
