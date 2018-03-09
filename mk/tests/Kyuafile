@@ -9,17 +9,29 @@ local function test(name)
 	-- plain_test_program { name = name, required_files = "test.subr" }
 end
 
+test "cvs-show-all"
 test "cvs-single"
+test "cvs-checkout_date"
 test "cvs-multi"
 
+test "fossil-show-all"
 test "fossil-single"
+test "fossil-checkout_date"
 test "fossil-multi"
 
+test "git-show-all"
 test "git-single"
+test "git-checkout_date"
 test "git-multi"
 
+test "hg-show-all"
 test "hg-single"
+test "hg-checkout_date"
 test "hg-multi"
 
+test "svn-show-all"
 test "svn-single"
+test "svn-checkout_date"
 test "svn-multi"
+
+test "zzz-copy-paste"

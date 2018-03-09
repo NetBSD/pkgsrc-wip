@@ -51,6 +51,8 @@ setup_package() {
 # - at 2018-03-01TZ, the file "today" contains "2018-03-01".
 
 setup_cvs_repository() {
+	step "Setting up CVS repository"
+
 	cvs -d "$repodir" init
 	mkdir "$repodir/pkgbase"
 
@@ -73,6 +75,8 @@ setup_cvs_repository() {
 }
 
 setup_fossil_repository() {
+	step "Setting up Fossil repository"
+
 	mkdir -p "$repodir"
 	cd "$repodir"
 	fossil init --date-override "2017-01-01" pkgbase.fossil
@@ -92,6 +96,8 @@ setup_fossil_repository() {
 }
 
 setup_git_repository() {
+	step "Setting up Git repository"
+
 	git init "$repodir/pkgbase"
 	cd "$repodir/pkgbase"
 
@@ -112,6 +118,8 @@ setup_git_repository() {
 }
 
 setup_hg_repository() {
+	step "Setting up Mercurial repository"
+
 	hg init "$repodir/pkgbase"
 	cd "$repodir/pkgbase"
 
@@ -128,6 +136,8 @@ setup_hg_repository() {
 }
 
 setup_svn_repository() {
+	step "Setting up Subversion repository"
+
 	mkdir "$repodir"
 	svnadmin create "$repodir/pkgbase"
 	hook="$repodir/pkgbase/hooks/pre-revprop-change"

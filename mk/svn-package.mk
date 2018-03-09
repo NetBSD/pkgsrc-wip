@@ -27,9 +27,10 @@
 #	${WRKDIR}.
 #
 #	Default:
-#		For SVN_EXTRACTDIR, the default value is derived
-#		from the last path component of GIT_REPO (so for
-#		git://git@github.com:NetBSD/pkgsrc.git, it becomes pkgsrc).
+#		For SVN_EXTRACTDIR, the default value is derived from SVN_REPO
+#		(so for https://svn.example.org/repos/project/trunk, it becomes
+#		project).
+#
 #		For SVN_EXTRACTDIR.${repo}, the default is ${repo}.
 #
 # SVN_REVISION (optional)

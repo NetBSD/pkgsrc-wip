@@ -1,0 +1,51 @@
+#! /bin/sh
+set -eu
+
+# Ensures that the tests and the code don't contain obvious
+# copy-and-paste errors.
+
+scms="cvs fossil git hg svn"
+keywords_hg="Mercurial"
+keywords_svn="Subversion"
+
+for haystack in $scms; do
+	for needle in $scms; do
+		if [ "$haystack" != "$needle" ]; then
+			eval "keywords=\"\${keywords_$needle-} $needle\""
+
+			for keyword in $keywords; do
+				eval "filemask=./\${filemask_$haystack:-$haystack}-*"
+
+				for file in $filemask ../$haystack-package.mk; do
+					if grep -Hi "$keyword" "$file"; then
+						error=1
+					fi
+				done
+			done
+		fi
+	done
+done
+
+tests="show_all single multi checkout_date"
+filemask_show_all="show-all"
+keywords_show_all="show-all"
+
+for haystack in $tests; do
+	for needle in $tests; do
+		if [ "$needle" != "$haystack" ]; then
+			eval "keywords=\"\${keywords_$needle-} $needle\""
+
+			for keyword in $keywords; do
+				eval "filemask=./*-\${filemask_$haystack:-$haystack}*"
+
+				for file in $filemask; do
+					if grep -Hi "$keyword" "$file"; then
+						error=1
+					fi
+				done
+			done
+		fi
+	done
+done
+
+exit ${error-0}

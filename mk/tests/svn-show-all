@@ -1,0 +1,8 @@
+#! /bin/sh
+. "./test.subr"
+
+setup_package "svn-show-all.mk"
+setup_svn_repository
+
+step "Testing show-all-svn"
+package_make show-all-svn

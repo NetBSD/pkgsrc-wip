@@ -1,0 +1,10 @@
+#! /bin/sh
+. "./test.subr"
+
+setup_package "hg-checkout_date.mk"
+setup_hg_repository
+
+step "Testing Mercurial with CHECKOUT_DATE"
+CHECKOUT_DATE="2018-02-01" package_make patch
+
+assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-01-01"

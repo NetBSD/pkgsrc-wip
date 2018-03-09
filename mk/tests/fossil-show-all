@@ -1,0 +1,8 @@
+#! /bin/sh
+. "./test.subr"
+
+setup_package "fossil-show-all.mk"
+setup_fossil_repository
+
+step "Testing show-all-fossil"
+package_make show-all-fossil

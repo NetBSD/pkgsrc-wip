@@ -5,7 +5,7 @@ CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	https://www.pkgsrc.org/
-COMMENT=	Test for Subversion with multiple repositories
+COMMENT=	Test for show-all-svn
 LICENSE=	2-clause-bsd
 
 NO_CHECKSUM=	yes

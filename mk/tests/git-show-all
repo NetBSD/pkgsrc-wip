@@ -1,0 +1,8 @@
+#! /bin/sh
+. "./test.subr"
+
+setup_package "git-show-all.mk"
+setup_git_repository
+
+step "Testing show-all-git"
+package_make show-all-git
