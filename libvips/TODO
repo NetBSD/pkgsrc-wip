@@ -18,3 +18,6 @@ options.mk:
 
 - Should add in all the optional dependencies.
 
+This package has known vulnerabilities, please investigate and fix if possible:
+
+- CVE-2018-7998
