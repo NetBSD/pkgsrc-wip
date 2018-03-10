@@ -1,0 +1,6 @@
+Remove from WIP
+
+This exists in Pkgsrc proper now and can be removed from here soon (once some
+Makefile changes have been pulled across).
+
+As soon as the locale stuff appears in lang/elixir we can remove this from here.
