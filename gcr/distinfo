@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.21 2015/11/04 03:28:30 agc Exp $
 
-SHA1 (gcr-3.18.0.tar.xz) = 993ba9263cb4554b8710ab6df6abd0576878f8b3
-RMD160 (gcr-3.18.0.tar.xz) = 4a31fc41abd22fcb399c546b13ac1a3bf90dc95d
-SHA512 (gcr-3.18.0.tar.xz) = 3733a462c23b0cf1d3579ea4b0b6eea9b5e3eb98e81e7c0e0364e540ec60a7a7bc567d1d159c674df280fb20c305cbaef796dffef73801ece4f4474352786e6b
-Size (gcr-3.18.0.tar.xz) = 1311368 bytes
+SHA1 (gcr-3.20.0.tar.xz) = 4556e4c752520320baee8fd608d82164d34c13d6
+RMD160 (gcr-3.20.0.tar.xz) = 7ece08c6fa1545ff498c4225171f505324ae65ff
+SHA512 (gcr-3.20.0.tar.xz) = 0acd0fb085a38507b1cc895ac773f91c6f4e14d2ea7e27b8e74c85ef78426597b6ea08ebee696452b0651939ec4a0d8a4a2523c41b3a8a0bd1b0d7b338b1d9c7
+Size (gcr-3.20.0.tar.xz) = 1324216 bytes
 SHA1 (patch-configure.ac) = 3f09919dc392e00d88555d4949fe920e2daa25a3
 SHA1 (patch-egg_egg-armor.c) = 19f79aad00dbad9f89305d29433d5cd7bbeb3e9e
 SHA1 (patch-egg_egg-asn1x.h) = a172af2a79febc165d9585566068b0975412deb0

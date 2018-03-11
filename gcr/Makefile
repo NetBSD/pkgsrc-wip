@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.67 2015/12/05 21:26:08 adam Exp $
 
-DISTNAME=		gcr-3.18.0
+DISTNAME=		gcr-3.20.0
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcr/3.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcr/3.20/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -11,27 +11,24 @@ COMMENT=		Library for crypto UI and related tasks
 LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
 
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config \
-			aclocal autoconf autoheader automake
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		autoreconf autoconf automake
 
-USE_LIBTOOL=		YES
-
-PKGCONFIG_OVERRIDE+=	gck-1.pc.in    	 \
-			gcr-base-3.pc.in \
-			gcr-ui.pc.in  	 \
-			gcr-3.pc.in
+PKGCONFIG_OVERRIDE+=	gck-1.pc.in
+PKGCONFIG_OVERRIDE+=	gcr-base-3.pc.in
+PKGCONFIG_OVERRIDE+=	gcr-ui.pc.in
+PKGCONFIG_OVERRIDE+=	gcr-3.pc.in
 
 post-patch:
-		cp ${FILESDIR}/memrchr.c ${WRKSRC}/egg/
+	cp ${FILESDIR}/memrchr.c ${WRKSRC}/egg/
 
 pre-configure:
-	${RUN} cd ${WRKSRC} &&	\
-		autoconf &&	\
-		autoheader &&	\
-		automake
+	${RUN} cd ${WRKSRC} &&autoreconf
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
