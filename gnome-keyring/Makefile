@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.83 2015/04/25 14:24:48 tnn Exp $
 
-DISTNAME=	gnome-keyring-3.18.3
+DISTNAME=	gnome-keyring-3.20.1
 CATEGORIES=	security gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/3.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/3.20/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,10 +10,11 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME password and secret manager
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	gcr/gcr.pc.in
 PKGCONFIG_OVERRIDE+=	gp11/gp11.pc.in
@@ -26,6 +27,7 @@ CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
 CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
 
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	ac_cv_header_security_pam_modules_h=yes
 .endif
