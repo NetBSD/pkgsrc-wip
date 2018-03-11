@@ -1,8 +1,0 @@
-Remove from WIP
-
-This exists in Pkgsrc proper now and can be removed from here soon (once some
-Makefile changes have been pulled across).
-
-As soon as the locale stuff appears in lang/elixir we can remove this from here.
-
-EDIT: Turns out the locale stuff is not really necessary. It purely removes the warnings during build. Will remove this from WIP
