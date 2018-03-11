@@ -1149,6 +1149,7 @@ SUBDIR+=	habak
 SUBDIR+=	haddock
 SUBDIR+=	hammer
 SUBDIR+=	hanazono-ttf
+SUBDIR+=	harmony
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
 SUBDIR+=	hashcat
