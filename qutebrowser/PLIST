@@ -167,14 +167,11 @@ ${PYSITELIB}/qutebrowser/browser/webkit/network/networkmanager.pyo
 ${PYSITELIB}/qutebrowser/browser/webkit/network/networkmanager.pyc
 ${PYSITELIB}/qutebrowser/browser/webkit/network/networkreply.pyo
 ${PYSITELIB}/qutebrowser/browser/webkit/network/networkreply.pyc
-${PYSITELIB}/qutebrowser/browser/webkit/network/schemehandler.pyo
-${PYSITELIB}/qutebrowser/browser/webkit/network/schemehandler.pyc
 ${PYSITELIB}/qutebrowser/browser/webkit/network/webkitqutescheme.pyo
 ${PYSITELIB}/qutebrowser/browser/webkit/network/webkitqutescheme.pyc
 ${PYSITELIB}/qutebrowser/browser/webkit/network/filescheme.py
 ${PYSITELIB}/qutebrowser/browser/webkit/network/networkmanager.py
 ${PYSITELIB}/qutebrowser/browser/webkit/network/networkreply.py
-${PYSITELIB}/qutebrowser/browser/webkit/network/schemehandler.py
 ${PYSITELIB}/qutebrowser/browser/webkit/network/webkitqutescheme.py
 ${PYSITELIB}/qutebrowser/browser/webkit/rfc6266.py
 ${PYSITELIB}/qutebrowser/browser/webkit/tabhistory.py
@@ -261,6 +258,8 @@ ${PYSITELIB}/qutebrowser/config/configinit.pyo
 ${PYSITELIB}/qutebrowser/config/configinit.pyc
 ${PYSITELIB}/qutebrowser/config/configtypes.pyo
 ${PYSITELIB}/qutebrowser/config/configtypes.pyc
+${PYSITELIB}/qutebrowser/config/configutils.pyo
+${PYSITELIB}/qutebrowser/config/configutils.pyc
 ${PYSITELIB}/qutebrowser/config/websettings.pyo
 ${PYSITELIB}/qutebrowser/config/websettings.pyc
 ${PYSITELIB}/qutebrowser/config/config.py
@@ -272,10 +271,12 @@ ${PYSITELIB}/qutebrowser/config/configexc.py
 ${PYSITELIB}/qutebrowser/config/configfiles.py
 ${PYSITELIB}/qutebrowser/config/configinit.py
 ${PYSITELIB}/qutebrowser/config/configtypes.py
+${PYSITELIB}/qutebrowser/config/configutils.py
 ${PYSITELIB}/qutebrowser/config/websettings.py
 ${PYSITELIB}/qutebrowser/git-commit-id
 ${PYSITELIB}/qutebrowser/html/back.html
 ${PYSITELIB}/qutebrowser/html/base.html
+${PYSITELIB}/qutebrowser/html/bindings.html
 ${PYSITELIB}/qutebrowser/html/bookmarks.html
 ${PYSITELIB}/qutebrowser/html/dirbrowser.html
 ${PYSITELIB}/qutebrowser/html/error.html
@@ -286,11 +287,12 @@ ${PYSITELIB}/qutebrowser/html/no_pdfjs.html
 ${PYSITELIB}/qutebrowser/html/pre.html
 ${PYSITELIB}/qutebrowser/html/settings.html
 ${PYSITELIB}/qutebrowser/html/styled.html
-${PYSITELIB}/qutebrowser/html/undef_error.html
+${PYSITELIB}/qutebrowser/html/tabs.html
 ${PYSITELIB}/qutebrowser/html/version.html
 ${PYSITELIB}/qutebrowser/img/broken_qutebrowser_logo.png
 ${PYSITELIB}/qutebrowser/img/file.svg
 ${PYSITELIB}/qutebrowser/img/folder.svg
+${PYSITELIB}/qutebrowser/javascript/caret.js
 ${PYSITELIB}/qutebrowser/javascript/greasemonkey_wrapper.js
 ${PYSITELIB}/qutebrowser/javascript/history.js
 ${PYSITELIB}/qutebrowser/javascript/pac_utils.js
@@ -303,8 +305,8 @@ ${PYSITELIB}/qutebrowser/keyinput/__init__.pyo
 ${PYSITELIB}/qutebrowser/keyinput/__init__.pyc
 ${PYSITELIB}/qutebrowser/keyinput/basekeyparser.pyo
 ${PYSITELIB}/qutebrowser/keyinput/basekeyparser.pyc
-${PYSITELIB}/qutebrowser/keyinput/keyparser.pyo
-${PYSITELIB}/qutebrowser/keyinput/keyparser.pyc
+${PYSITELIB}/qutebrowser/keyinput/keyutils.pyo
+${PYSITELIB}/qutebrowser/keyinput/keyutils.pyc
 ${PYSITELIB}/qutebrowser/keyinput/macros.pyo
 ${PYSITELIB}/qutebrowser/keyinput/macros.pyc
 ${PYSITELIB}/qutebrowser/keyinput/modeman.pyo
@@ -312,7 +314,7 @@ ${PYSITELIB}/qutebrowser/keyinput/modeman.pyc
 ${PYSITELIB}/qutebrowser/keyinput/modeparsers.pyo
 ${PYSITELIB}/qutebrowser/keyinput/modeparsers.pyc
 ${PYSITELIB}/qutebrowser/keyinput/basekeyparser.py
-${PYSITELIB}/qutebrowser/keyinput/keyparser.py
+${PYSITELIB}/qutebrowser/keyinput/keyutils.py
 ${PYSITELIB}/qutebrowser/keyinput/macros.py
 ${PYSITELIB}/qutebrowser/keyinput/modeman.py
 ${PYSITELIB}/qutebrowser/keyinput/modeparsers.py
@@ -467,6 +469,8 @@ ${PYSITELIB}/qutebrowser/utils/qtutils.pyo
 ${PYSITELIB}/qutebrowser/utils/qtutils.pyc
 ${PYSITELIB}/qutebrowser/utils/standarddir.pyo
 ${PYSITELIB}/qutebrowser/utils/standarddir.pyc
+${PYSITELIB}/qutebrowser/utils/urlmatch.pyo
+${PYSITELIB}/qutebrowser/utils/urlmatch.pyc
 ${PYSITELIB}/qutebrowser/utils/urlutils.pyo
 ${PYSITELIB}/qutebrowser/utils/urlutils.pyc
 ${PYSITELIB}/qutebrowser/utils/usertypes.pyo
@@ -486,6 +490,7 @@ ${PYSITELIB}/qutebrowser/utils/objreg.py
 ${PYSITELIB}/qutebrowser/utils/qtutils.py
 ${PYSITELIB}/qutebrowser/utils/standarddir.py
 ${PYSITELIB}/qutebrowser/utils/testfile
+${PYSITELIB}/qutebrowser/utils/urlmatch.py
 ${PYSITELIB}/qutebrowser/utils/urlutils.py
 ${PYSITELIB}/qutebrowser/utils/usertypes.py
 ${PYSITELIB}/qutebrowser/utils/utils.py
