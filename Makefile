@@ -2164,7 +2164,6 @@ SUBDIR+=	nautilus-search-tool
 SUBDIR+=	nautilus-sound-converter
 SUBDIR+=	nauty
 SUBDIR+=	navi2ch-current
-SUBDIR+=	nbase
 SUBDIR+=	nbfc
 SUBDIR+=	ncbi
 SUBDIR+=	ncbi-bin
