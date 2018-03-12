@@ -1,0 +1,115 @@
+# $NetBSD: Makefile.common,v 1.61 2018/01/28 16:51:50 wiz Exp $
+#
+# used by devel/glib2/Makefile
+# used by devel/gdbus-codegen/Makefile
+# used by devel/glib2-tools/Makefile
+# used by sysutils/gio-fam/Makefile
+
+# When updating this package, please apply patch-ak to configure.in and
+# then run a matching version of autoconf to regen patch-aa.
+DISTNAME=	glib-2.54.3
+PKGNAME=	${DISTNAME:S/glib/glib2/}
+CATEGORIES=	# empty; redefined in Makefile
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	prlw1@cam.ac.uk
+HOMEPAGE=	https://developer.gnome.org/glib/
+COMMENT=	# empty; redefined in Makefile
+LICENSE=	gnu-lgpl-v2.1
+
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES=		c c++ c99
+USE_LIBTOOL=		yes
+TEST_TARGET=		check
+
+DISTINFO_FILE=		${.CURDIR}/../../devel/glib2/distinfo
+PATCHDIR=		${.CURDIR}/../../devel/glib2/patches
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ARGS+=	--disable-fam	# See sysutils/gio-fam.
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
+CONFIGURE_ARGS+=	--with-pcre=system
+CONFIGURE_ARGS+=	--disable-dtrace
+CONFIGURE_ARGS+=	--disable-man  # Requires xsltproc and Docbook.
+# Avoid unnecessary autotools invocation.
+CONFIGURE_ARGS+=	--disable-maintainer-mode
+# Avoid linux dependency on libmount-dev
+CONFIGURE_ARGS.Linux+=	--disable-libmount
+
+# When ICONV_TYPE=gnu ensure we explicitly use the GNU version, to avoid
+# conflicts between iconv.h from converters/libiconv and builtin libiconv
+# which may be non-GNU.
+CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
+
+CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
+CPPFLAGS+=		-DPKGLOCALEDIR="\"${PKGLOCALEDIR}\""
+CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+
+.if ${OPSYS} == "FreeBSD"
+SUBST_CLASSES+=		thr
+SUBST_STAGE.thr=	post-patch
+SUBST_FILES.thr=	gthread/Makefile.in
+.  if ${OS_VERSION:R} >= 5
+SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-lpthread|g"
+.  else
+SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
+.  endif
+SUBST_MESSAGE.thr=	Fixing libgthread.
+
+.endif
+
+# glib-2.48.0 dropped support for OSX < 10.9.0 just to add notification
+# support, so we just disable that feature for older releases, and work
+# around some ObjC detection.
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-9].*) || \
+    !empty(MACHINE_PLATFORM:MDarwin-1[012].*)
+SUBST_CLASSES+=		gcocoa
+SUBST_STAGE.gcocoa=	pre-configure
+SUBST_FILES.gcocoa=	configure
+SUBST_FILES.gcocoa+=	gio/Makefile.in gio/giomodule.c
+SUBST_SED.gcocoa=	-e 's,10.9.0,10.0.0,g'
+SUBST_SED.gcocoa+=	-e 's,gcocoanotificationbackend.c,,g'
+SUBST_SED.gcocoa+=	-e 's,gnextstepsettingsbackend.c,gnextstepsettingsbackend.m,g'
+SUBST_SED.gcocoa+=	-e '/gcocoanotificationbackend/d'
+SUBST_SED.gcocoa+=	-e '/g_type_ensure.*g_cocoa_notification/d'
+SUBST_SED.gcocoa+=	-e '/-xobjective-c/d'
+
+pre-configure:
+	${MV} ${WRKSRC}/gio/gnextstepsettingsbackend.c \
+	    ${WRKSRC}/gio/gnextstepsettingsbackend.m
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
+CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
+.endif
+
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Werror=missing-prototypes
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror=format=2
+
+CONFIGURE_ENV.HPUX+=		ac_cv_func_mmap_fixed_mapped=yes
+
+.include "../../mk/dlopen.buildlink3.mk"
+
+.if !empty(MACHINE_PLATFORM:MIRIX-5*)
+CONFIGURE_ARGS+=	--disable-threads
+.else
+.include "../../mk/pthread.buildlink3.mk"
+.endif
+
+BUILD_DEFS+=		VARBASE
+SUBST_CLASSES+=		dbusdb
+SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
+SUBST_STAGE.dbusdb=	post-patch
+SUBST_FILES.dbusdb=	gio/gdbusconnection.c
+SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
+SUBST_FILES.dbusdb+=	po/glib20.pot
+SUBST_FILES.dbusdb+=	po/*.po
+SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
