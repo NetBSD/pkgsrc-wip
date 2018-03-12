@@ -12,7 +12,6 @@ COMMENT=	Foreign function interface
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--includedir=${PREFIX}/include
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config autoconf automake makeinfo gmake
 USE_LANGUAGES=	c c++
@@ -56,8 +55,7 @@ MAKE_FLAGS+=SHELL=${TOOLS_DIR}/bin/bash
 
 FRIDA_SUBPREFIX=	frida
 FRIDA_PREFIX=		${PREFIX}/${FRIDA_SUBPREFIX}
-
-CONFIGURE_ARGS+=	--prefix=${FRIDA_PREFIX:Q}
+GNU_CONFIGURE_PREFIX=	${FRIDA_PREFIX}
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -fiv
