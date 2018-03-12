@@ -1,7 +1,7 @@
-$NetBSD: patch-src_m88k_elfbsd.S,v 1.1 2013/11/03 23:51:51 jklos Exp $
+$NetBSD: patch-src_vax_elfbsd.S,v 1.1 2013/11/03 23:51:51 jklos Exp $
 
---- src/m88k/elfbsd.S.orig	2013-11-03 22:57:57.000000000 +0000
-+++ src/m88k/elfbsd.S
+--- src/vax/elfbsd.S.orig	2013-11-03 23:01:39.000000000 +0000
++++ src/vax/elfbsd.S
 @@ -0,0 +1,195 @@
 +/*
 + * Copyright (c) 2013 Miodrag Vallat.  <miod@openbsd.org>
