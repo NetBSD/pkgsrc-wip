@@ -1,10 +1,8 @@
-$NetBSD: patch-glib_gthread-posix.c,v 1.2 2014/09/14 23:35:23 prlw1 Exp $
+$NetBSD$
 
-https://bugzilla.gnome.org/show_bug.cgi?id=736651
-
---- glib/gthread-posix.c.orig	2014-02-22 15:29:07.000000000 +0000
+--- glib/gthread-posix.c.orig	2018-01-18 18:56:06.000000000 +0000
 +++ glib/gthread-posix.c
-@@ -644,6 +644,7 @@ g_cond_impl_new (void)
+@@ -716,6 +716,7 @@ g_cond_impl_new (void)
  #elif defined (HAVE_PTHREAD_CONDATTR_SETCLOCK) && defined (CLOCK_MONOTONIC)
    if G_UNLIKELY ((status = pthread_condattr_setclock (&attr, CLOCK_MONOTONIC)) != 0)
      g_thread_abort (status, "pthread_condattr_setclock");
@@ -12,7 +10,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=736651
  #else
  #error Cannot support GCond on your platform.
  #endif
-@@ -892,6 +893,21 @@ g_cond_wait_until (GCond  *cond,
+@@ -970,6 +971,21 @@ g_cond_wait_until (GCond  *cond,
      if ((status = pthread_cond_timedwait (g_cond_get_impl (cond), g_mutex_get_impl (mutex), &ts)) == 0)
        return TRUE;
    }

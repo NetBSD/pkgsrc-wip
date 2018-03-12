@@ -8,10 +8,12 @@
 # When updating this package, please apply patch-ak to configure.in and
 # then run a matching version of autoconf to regen patch-aa.
 DISTNAME=	glib-2.54.3
-PKGNAME=	${DISTNAME:S/glib/glib2/}
+PKGNAME=	frida-${DISTNAME:S/glib/glib2/}
 CATEGORIES=	# empty; redefined in Makefile
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=frida/}
+GITHUB_TAG=     d8a2acabac5c04d3ca5eb4f0aa050582b8a9c7ac
+
+GITHUB_PROJECT=	glib
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://developer.gnome.org/glib/
@@ -24,8 +26,8 @@ USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
-DISTINFO_FILE=		${.CURDIR}/../../devel/glib2/distinfo
-PATCHDIR=		${.CURDIR}/../../devel/glib2/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/frida-glib2/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/frida-glib2/patches
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}

@@ -6,7 +6,7 @@ CATEGORIES=		devel gnome
 
 COMMENT=		Some useful routines for C programming (glib2)
 
-USE_TOOLS+=		msgfmt perl:run readlink
+USE_TOOLS+=		msgfmt perl:run readlink automake autoconf
 
 PKGCONFIG_OVERRIDE+=	glib-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-2.0.pc.in
@@ -61,10 +61,14 @@ CONFIGURE_ENV+=	ac_cv_prog_GTKDOC_CHECK= \
 		ac_cv_path_GTKDOC_REBASE= \
 		ac_cv_path_GTKDOC_MKPDF=
 
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${SH} autogen.sh
+
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PYTHON_FOR_BUILD_ONLY?=	yes
 .include "../../lang/python/pyversion.mk"
+
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
