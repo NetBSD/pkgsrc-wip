@@ -1,26 +1,6 @@
 $NetBSD: distinfo,v 1.34 2014/06/11 11:45:04 joerg Exp $
 
-SHA1 (libffi-3.0.13.tar.gz) = f5230890dc0be42fb5c58fbf793da253155de106
-RMD160 (libffi-3.0.13.tar.gz) = 03f0627c0fcc800d38636258a2fab2d6bb8b6625
-Size (libffi-3.0.13.tar.gz) = 845747 bytes
-SHA1 (patch-Makefile.am) = 01109a0d5708835162a2d007a26decac5bb0bbac
-SHA1 (patch-aa) = 79cc45c6051705bde3f3229aca4e0fa49ff149b9
-SHA1 (patch-ac) = f3c6324f4334d23e684b4eca25173a13be5d37eb
-SHA1 (patch-ad) = 8901a00abe25422e3e35f321a5fb89311185fc0b
-SHA1 (patch-ae) = 3d8cd3bcd834876f6e60ae519dca8c0b0ba0d4d1
-SHA1 (patch-af) = 2c7ca79ef980a2561333bf79a18df1ecb0bbb9f7
-SHA1 (patch-ag) = 6333317170f6e92f89db966315276dcd8e3484f2
-SHA1 (patch-ah) = e9580069ede90cd616da7bc230b28acbf5d204a6
-SHA1 (patch-ai) = f85a6cb64d4a9d7c3e56b47b7092fce10a744b5b
-SHA1 (patch-aj) = d130b2b20b94ca26c70dcc46614e36c6d0ac9153
-SHA1 (patch-configure.ac) = 080d79b5ada93c5073df7dd09c5131fcfe72ce86
-SHA1 (patch-fficonfig.h.in) = fd85fa767bc057c843ff71cc61bedfcff84def43
-SHA1 (patch-src_arm_sysv.S) = c7c8b33bb019c0f41b6866368096a7594314efea
-SHA1 (patch-src_m88k_elfbsd.S) = fae3e425dcff3e924ef195eab165f9bbc6ec4077
-SHA1 (patch-src_m88k_ffi.c) = e4b7382c3d6e253b8c1c6054150c530c21d018de
-SHA1 (patch-src_m88k_ffitarget.h) = e8479bc3aa876f5e6d52a4d578c5da88291c6646
-SHA1 (patch-src_vax_elfbsd.S) = abf284bd1db086a12608b7243344af30e4a314ca
-SHA1 (patch-src_vax_ffi.c) = f47ced03388e9744afa44d6bb5e14d5f4285cfbf
-SHA1 (patch-src_vax_ffitarget.h) = 388f3a58e37dd8af5c194b5be77a6ea6f9beef4b
-SHA1 (patch-src_x86_ffi.c) = b9ac64a53a92de663a339212e22c1286fa41c1d5
-SHA1 (patch-src_x86_win64.S) = 5b6836bae6c73743b925de4d11bc241c783bffd6
+SHA1 (libffi-3.0.13-808ca2c69269f6df3ee6d33e22515d11739ffd5c.tar.gz) = a2d3530b2146bddedc71fa414cb43410f101d6b2
+RMD160 (libffi-3.0.13-808ca2c69269f6df3ee6d33e22515d11739ffd5c.tar.gz) = 30ee4d1a863f732d21feb2a498e5d786b22e73f7
+SHA512 (libffi-3.0.13-808ca2c69269f6df3ee6d33e22515d11739ffd5c.tar.gz) = 896981a96814073c7e488926e8cd7e5fb92bb6203e9e380046dfa46b20247db95844024f3e48ebc4e325d6c15420d200055be3bc52010f490184f1c5da82d033
+Size (libffi-3.0.13-808ca2c69269f6df3ee6d33e22515d11739ffd5c.tar.gz) = 448696 bytes
