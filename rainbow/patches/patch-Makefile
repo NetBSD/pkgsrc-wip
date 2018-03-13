@@ -1,5 +1,6 @@
 $NetBSD$
 
+Allow environment to specify CC & CFLAGS.
 --- Makefile.orig	2015-07-27 18:28:54 UTC
 +++ Makefile
 @@ -1,5 +1,5 @@

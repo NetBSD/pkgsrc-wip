@@ -13,15 +13,13 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bio-rainbow/}
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/bio-rainbow/
 COMMENT=	Short reads clustering and local assembly
-# LICENSE=	unspecified
+LICENSE=	gnu-gpl-v3
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 PORTVERSION=	2.0.4
-DATADIR=	${PREFIX}/share/rainbow
-DOCSDIR=	${PREFIX}/share/doc/rainbow
 
 INSTALLATION_DIRS=	bin
 
