@@ -2,6 +2,7 @@
 
 DISTNAME=	upspin
 PKGNAME=	go-${DISTNAME}-1902201801
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=upspin/}
 GITHUB_TAG=	aba3aa6116812981c0faa6d1c50fada371ab9934
@@ -23,6 +24,9 @@ REPLACE_BASH+=	cmd/upspinfs/scripts/mount_linux
 
 post-patch:
 	${FIND} ${WRKSRC} -type f -name \*.orig -delete
+
+do-install:
+	cd ${WRKDIR}; ${PAX} -rw bin ${DESTDIR}${PREFIX}
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
