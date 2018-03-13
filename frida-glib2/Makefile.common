@@ -32,7 +32,7 @@ PATCHDIR=		${.CURDIR}/../../wip/frida-glib2/patches
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--disable-fam	# See sysutils/gio-fam.
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/frida/include/glib
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS+=	--with-pcre=system
 CONFIGURE_ARGS+=	--disable-dtrace
@@ -115,3 +115,7 @@ SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
 SUBST_FILES.dbusdb+=	po/glib20.pot
 SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
+
+FRIDA_SUBPREFIX=	frida
+FRIDA_PREFIX=		${PREFIX}/${FRIDA_SUBPREFIX}
+GNU_CONFIGURE_PREFIX=	${FRIDA_PREFIX}
