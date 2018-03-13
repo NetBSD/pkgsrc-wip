@@ -1,9 +1,0 @@
-$NetBSD$
-
-SHA1 (z3-4.5.0.tar.gz) = 6f4e94e025fcc2fa2896524d8fbb9de0b3033854
-RMD160 (z3-4.5.0.tar.gz) = 81121307ac83f42989da49efda31964a94f7f5d5
-SHA512 (z3-4.5.0.tar.gz) = 1ebc2c908d90b6b879f1e819c864ff894613276af47a440f27cf94968c195656952434754c3eb20f4bdbdd8497d227d22e1b4821c0d320b11052b5648d9e2dc7
-Size (z3-4.5.0.tar.gz) = 3573695 bytes
-SHA1 (patch-configure) = 8d5fe787f15fe781c3c23cee27058f898de8c95e
-SHA1 (patch-scripts_mk__util.py) = f0a7cfabdbf9b6c1eb92e75f381d8a3f8a088d35
-SHA1 (patch-src_util_stopwatch.h) = dbeab175ed4f507d5378f1966f8ed173c4c9a9a7
