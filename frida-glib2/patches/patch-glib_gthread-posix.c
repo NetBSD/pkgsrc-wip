@@ -32,3 +32,86 @@ $NetBSD$
  #else
  #error Cannot support GCond on your platform.
  #endif
+@@ -1659,6 +1675,82 @@ g_thread_lifetime_beacon_check (GThreadB
+   return status == -1 && errno == ESRCH;
+ }
+ 
++#elif defined(__NetBSD__)
++
++#include <sys/types.h>
++#include <sys/sysctl.h>
++#include <lwp.h>
++
++struct _GThreadBeacon
++{
++  pid_t process_id;
++  lwpid_t thread_id;
++};
++
++GThreadBeacon *
++g_thread_lifetime_beacon_new (void)
++{
++  GThreadBeacon *beacon;
++
++  beacon = g_slice_new (GThreadBeacon);
++  beacon->process_id = getpid ();
++  beacon->thread_id = _lwp_self();
++
++  return beacon;
++}
++
++void
++g_thread_lifetime_beacon_free (GThreadBeacon *beacon)
++{
++  g_slice_free (GThreadBeacon, beacon);
++}
++
++gboolean
++g_thread_lifetime_beacon_check (GThreadBeacon *beacon)
++{
++  int st;
++  int mib[5];
++  size_t size, nlwps, i;
++  struct kinfo_lwp *kl;
++  int found = 0;
++
++  mib[0] = CTL_KERN;
++  mib[1] = KERN_LWP;
++  mib[2] = beacon->process_id;
++  mib[3] = sizeof(struct kinfo_lwp);
++  mib[4] = 0;
++
++  st = sysctl(mib, 5, NULL, &size, NULL, 0);
++  if (st == -1 || size == 0)
++    return FALSE;
++
++  mib[4] = size / sizeof(struct kinfo_lwp);
++
++  kl = (struct kinfo_lwp *)malloc(mib[4]);
++  if (!kl)
++    return FALSE;
++
++  st = sysctl(mib, 5, kl, &size, NULL, 0);
++  if (st == -1 || size == 0)
++    goto fail;
++
++  nlwps = size / sizeof(struct kinfo_lwp);
++  for (i = 0; i < nlwps; i++) {
++    if ((kl + i)->l_lid == beacon->thread_id) {
++      found = 1;
++      break;
++    }
++  }
++
++  free(kl);
++
++  return found ? TRUE : FALSE;
++
++fail:
++  free(kl);
++  return TRUE;
++}
++
+ #else
+ #error Please implement for your OS
+ #endif
