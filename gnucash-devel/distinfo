@@ -1,12 +1,11 @@
 $NetBSD: distinfo,v 1.82 2017/07/03 11:49:37 wiz Exp $
 
-SHA1 (gnucash-2.7.5.tar.bz2) = df2c53c733b9e08904f5cbd508e20d5abeb40579
-RMD160 (gnucash-2.7.5.tar.bz2) = baf2c5cb39516d86d5109fe03e768662a68700bd
-SHA512 (gnucash-2.7.5.tar.bz2) = 68cd6e6f61a43b8837e9efe693d22f62ebe10a8bb7d593814fb6a12d035d74ec1e444f53010ad53c6b1adf28c75aa482403c06052314a91636c2a8baa30e09af
-Size (gnucash-2.7.5.tar.bz2) = 13330271 bytes
+SHA1 (gnucash-2.7.6.tar.bz2) = c9f27303bb178a02de5d8f03cba7bcc700cdb532
+RMD160 (gnucash-2.7.6.tar.bz2) = 3421835c146af80bffb082f9832ccfd9f57434fe
+SHA512 (gnucash-2.7.6.tar.bz2) = 4bf813f68987bcd8784e5cba3662b544bf2c28bad8dad71c728fda67970c1b2c221b027ab9c3fffd1c7e4024fd46ba054cbc9b8fa6de91ad50915610b1fd77f4
+Size (gnucash-2.7.6.tar.bz2) = 13340295 bytes
 SHA1 (googletest-1.8.0.tar.gz) = e7e646a6204638fe8e87e165292b8dd9cd4c36ed
 RMD160 (googletest-1.8.0.tar.gz) = b0a9e48874df3291a261ed85a0c0a4d677b01dc1
 SHA512 (googletest-1.8.0.tar.gz) = 1dbece324473e53a83a60601b02c92c089f5d314761351974e097b2cf4d24af4296f9eb8653b6b03b1e363d9c5f793897acae1f0c7ac40149216035c4d395d9d
 Size (googletest-1.8.0.tar.gz) = 1281617 bytes
-SHA1 (patch-data_pixmaps_CMakeLists.txt) = 34a560e80d9ad336e6a1e0a0baa4e404a1797eca
 SHA1 (patch-gnucash_gnucash-bin.c) = 4178d8f06685b42bd4ac9c4290085257b78935c8

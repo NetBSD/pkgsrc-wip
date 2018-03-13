@@ -6,10 +6,8 @@ PKG_SUGGESTED_OPTIONS=	libdbi libofx
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	dbi ofx
-
 .if !empty(PKG_OPTIONS:Mlibofx)
-PLIST.ofx=	yes
+PLIST_SRC+=	PLIST.ofx
 .include "../../finance/libofx/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ofx
@@ -17,7 +15,7 @@ CONFIGURE_ARGS+=	--disable-ofx
 
 .if !empty(PKG_OPTIONS:Mlibdbi)
 CONFIGURE_ARGS+=	--enable-dbi
-PLIST.dbi=		yes
+PLIST_SRC+=		PLIST.dbi
 
 # to make a configure test happy
 BUILD_DEPENDS+=		libdbi-driver-sqlite3-[0-9]*:../../databases/libdbi-driver-sqlite3
