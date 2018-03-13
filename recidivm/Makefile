@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	recidivm-0.1.3
+DISTNAME=	recidivm-0.1.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
-GITHUB_RELEASE=	0.1.3
+GITHUB_RELEASE=	0.1.4
 
 MAINTAINER=	tr@vispaul.me
 HOMEPAGE=	http://jwilk.net/software/recidivm
