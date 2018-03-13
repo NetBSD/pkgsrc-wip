@@ -1,11 +1,8 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	delve
-GITHUB_TAG=	v0.12.1
-DISTNAME=	delve-0.12.1
+DISTNAME=	delve-1.0.0
 CATEGORIES=	wip devel
-MASTER_SITES=	https://github.com/derekparker/
-DIST_SUBDIR=	${GITHUB_PROJECT}
+MASTER_SITES=	https://github.com/derekparker/delve/files/1738674/
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=derekparker/delve/}
