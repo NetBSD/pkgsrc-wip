@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/i2pd
+etc/i2pd/i2pd.conf
+etc/i2pd/tunnels.conf
+man/man1/i2pd.1
