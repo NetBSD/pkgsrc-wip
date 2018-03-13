@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.1 2015/07/10 21:24:03 travis-paul Exp $
 
-SHA1 (sds/master-d86a9b85cb4fb96430c7479ae6c956f2b605bbd1.zip) = 382c40a241dc22c7a36430cf33cbc3073425b58e
-RMD160 (sds/master-d86a9b85cb4fb96430c7479ae6c956f2b605bbd1.zip) = 9a9e5d576e6db258365ac56f54ba2299a419aaa2
-Size (sds/master-d86a9b85cb4fb96430c7479ae6c956f2b605bbd1.zip) = 24051 bytes
+SHA1 (sds/974b5d11f9e17a6659f591bcc07a8bd981acdfd0.tar.gz) = c9347a0653718cb0e988835d0e385ddaf14b46b5
+RMD160 (sds/974b5d11f9e17a6659f591bcc07a8bd981acdfd0.tar.gz) = 0eff4a9dd92b25e982400c14abea4c075f8ff0ea
+SHA512 (sds/974b5d11f9e17a6659f591bcc07a8bd981acdfd0.tar.gz) = b8b4cdfb6d7c0b28e3c8304f82204e31f22332a4d2be219df7659b32c5aeabfb462fec3f21e3b72a98b368e0a33793b39245f7660662cdd7a930d35dfe994764
+Size (sds/974b5d11f9e17a6659f591bcc07a8bd981acdfd0.tar.gz) = 25641 bytes
 SHA1 (patch-Makefile) = 95d581795ef4adb3ad2fe2cfdd566666bccb0540
