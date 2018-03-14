@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (frida-gum-0-c41abae2a2b29de3aad7a4fd9daac3e0b150cb54.tar.gz) = 3de994ba2c5f6802a8161650d5db6497efc197e8
+RMD160 (frida-gum-0-c41abae2a2b29de3aad7a4fd9daac3e0b150cb54.tar.gz) = 88330d01a8404f46e0c795e1b6cb92fce159fe5c
+SHA512 (frida-gum-0-c41abae2a2b29de3aad7a4fd9daac3e0b150cb54.tar.gz) = 607c5319c5fffb06a7f2beed9769cad29e32c9384de9d7b74ff791e03e2e10f720db3b29dcb6c7a7ec81e057368fe6b5887cc1ddb1207fdf3977825353dd5dfb
+Size (frida-gum-0-c41abae2a2b29de3aad7a4fd9daac3e0b150cb54.tar.gz) = 12573451 bytes
+SHA1 (patch-config.h.in) = 9d7f701ba8577e6501e4d64e80adef397255e46a
+SHA1 (patch-gum_gumdefs.h) = cb24f98c906572196228ee0d09c2cd2dcaa5c306
+SHA1 (patch-gum_gumprocess.c) = 915a233f242186a45b375ef2690cf534d8ad39f2
