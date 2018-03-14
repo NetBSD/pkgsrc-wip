@@ -59,9 +59,6 @@ CONFIGURE_ARGS+=	--disable-vnc
 CONFIGURE_ARGS+=	--disable-vsxu
 CONFIGURE_ARGS+=	--disable-zvbi
 
-CFLAGS+=		-fPIC
-CXXFLAGS+=		-fPIC
-
 # which platforms support OSSv4?
 .if ${MACHINE_PLATFORM:MNetBSD-[789]*-*}
 PLIST.oss=		yes
