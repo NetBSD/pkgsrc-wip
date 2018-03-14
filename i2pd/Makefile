@@ -1,10 +1,9 @@
 # $NetBSD$
+.include	"../../wip/libi2pd/Makefile.common"
 
 PKGNAME=	i2pd-${I2PD_VERSION}
 
 COMMENT=	Full-featured C++ implementation of I2P client
-
-.include	"../../wip/libi2pd/Makefile.common"
 
 CMAKE_ARGS+=	-DWITH_BINARY=yes
 CMAKE_ARGS+=	-DWITH_LIBRARY=no
@@ -19,6 +18,7 @@ PKG_USERS=	${I2PD_USER}:${I2PD_GROUP}
 PKG_GROUPS=	${I2PD_GROUP}
 
 I2PD_SOURCESDIR=${WRKSRC}/..
+PKG_SYSCONFSUBDIR=i2pd
 I2PD_CONFDIR=${DESTDIR}/${PKG_SYSCONFBASE}/i2pd
 
 MAKE_DIRS+=${VARBASE}/db/i2pd
@@ -26,8 +26,10 @@ MAKE_DIRS+=${VARBASE}/log/i2pd
 MAKE_DIRS+=${VARBASE}/run/i2pd
 
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/examples/i2pd
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PKG_SYSCONFBASE}/i2pd
+INSTALLATION_DIRS+=	var/i2pd/
 
 MAKE_DIRS_PERMS+=${I2PD_CONFDIR} \
 				 ${I2PD_USER} ${I2PD_GROUP} 0755
@@ -44,8 +46,8 @@ post-install:
 	${INSTALL_DATA} ${I2PD_SOURCESDIR}/contrib/i2pd.conf \
 		${I2PD_CONFDIR}/
 	${INSTALL_DATA} ${I2PD_SOURCESDIR}/contrib/tunnels.conf \
-		${I2PD_CONFDIR}/
-	${INSTALL_DATA_DIR} ${I2PD_SOURCESDIR}/contrib/certificates \
-		${I2PD_CONFDIR}/
+		${DESTDIR}/${PREFIX}/share/examples/i2pd/
+	cp -Rv ${I2PD_SOURCESDIR}/contrib/certificates \
+		${DESTDIR}/${PREFIX}/var/i2pd
 
 .include "../../mk/bsd.pkg.mk"
