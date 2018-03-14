@@ -64,6 +64,10 @@ CONFIGURE_ENV+=	ac_cv_prog_GTKDOC_CHECK= \
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SH} autogen.sh
 
+# Hack, something is broken with --localedir
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/share
+
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PYTHON_FOR_BUILD_ONLY?=	yes
