@@ -2,9 +2,6 @@
 
 DISTNAME=		vlc-${VLC_VERSION}
 CATEGORIES=		multimedia
-#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/}
-#MASTER_SITES+=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
-#EXTRACT_SUFX=		.tar.xz
 GIT_REPO=		https://git.videolan.org/git/vlc/vlc-3.0.git
 
 VLC_VERSION=		3.0.0
@@ -61,9 +58,6 @@ CONFIGURE_ARGS+=	--disable-udev
 CONFIGURE_ARGS+=	--disable-vnc
 CONFIGURE_ARGS+=	--disable-vsxu
 CONFIGURE_ARGS+=	--disable-zvbi
-
-CFLAGS+=		-fPIC
-CXXFLAGS+=		-fPIC
 
 # which platforms support OSSv4?
 .if ${MACHINE_PLATFORM:MNetBSD-[789]*-*}
