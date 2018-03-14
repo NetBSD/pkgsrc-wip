@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- modules/codec/Makefile.am.orig	2018-03-14 06:17:49.000000000 +0000
++++ modules/codec/Makefile.am
+@@ -370,7 +370,7 @@ libavcodec_common_la_SOURCES = codec/avc
+ 	codec/avcodec/chroma.c codec/avcodec/chroma.h \
+ 	codec/avcodec/avcommon_compat.h
+ libavcodec_common_la_CFLAGS = $(AVCODEC_CFLAGS) $(AM_CFLAGS)
+-libavcodec_common_la_LDFLAGS = -static
++libavcodec_common_la_LDFLAGS =
+ 
+ libavcodec_plugin_la_SOURCES = \
+ 	codec/avcodec/video.c \
+@@ -424,7 +424,7 @@ endif
+ 
+ libd3d9_common_la_SOURCES = video_chroma/d3d9_fmt.c video_chroma/d3d9_fmt.h \
+ 	video_chroma/dxgi_fmt.c video_chroma/dxgi_fmt.h
+-libd3d9_common_la_LDFLAGS = -static
++libd3d9_common_la_LDFLAGS =
+ if HAVE_WIN32_DESKTOP
+ noinst_LTLIBRARIES += libd3d9_common.la
+ endif
+@@ -441,7 +441,7 @@ endif
+ 
+ libd3d11_common_la_SOURCES = video_chroma/d3d11_fmt.c video_chroma/d3d11_fmt.h \
+ 	video_chroma/dxgi_fmt.c video_chroma/dxgi_fmt.h
+-libd3d11_common_la_LDFLAGS = -static
++libd3d11_common_la_LDFLAGS =
+ if HAVE_WIN32
+ noinst_LTLIBRARIES += libd3d11_common.la
+ endif

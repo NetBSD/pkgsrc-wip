@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- modules/control/Makefile.am.orig	2018-03-14 06:17:49.000000000 +0000
++++ modules/control/Makefile.am
+@@ -27,7 +27,7 @@ if HAVE_DARWIN
+ libvlc_motion_la_SOURCES += control/unimotion.c control/unimotion.h
+ libvlc_motion_la_CFLAGS = $(AM_CFLAGS) -fconstant-cfstrings
+ endif
+-libvlc_motion_la_LDFLAGS = -static
++libvlc_motion_la_LDFLAGS =
+ noinst_LTLIBRARIES += libvlc_motion.la
+ 
+ libmotion_plugin_la_SOURCES = control/motion.c

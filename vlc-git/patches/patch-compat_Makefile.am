@@ -1,6 +1,6 @@
 $NetBSD$
 
---- compat/Makefile.am.orig	2018-03-14 05:22:09.000000000 +0000
+--- compat/Makefile.am.orig	2018-03-14 06:17:49.000000000 +0000
 +++ compat/Makefile.am
 @@ -1,7 +1,7 @@
 -pkglib_LTLIBRARIES = libcompat.la
