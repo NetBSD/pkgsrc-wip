@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.4 2017/01/28 21:47:55 maya Exp $
+
+Use USE_AMD64_IOPL (actually x86_64_iopl) on NetBSD/amd64.
+(c.f. patch-hw_xfree86_os-support_bsd_i386.c)
+
+for netbsd, force pass pthread configure checks (pthread not needed)
+
+--- configure.orig	2015-02-10 22:49:52.000000000 +0000
++++ configure
+@@ -23235,7 +23235,7 @@ $as_echo "#define USE_DEV_IO 1" >>confde
+ $as_echo "#define USE_DEV_IO 1" >>confdefs.h
+  ;;
+ 		*netbsd*)
+-$as_echo "#define USE_I386_IOPL 1" >>confdefs.h
++$as_echo "#define USE_AMD64_IOPL 1" >>confdefs.h
+ 
+ 				SYS_LIBS=-lx86_64
+ 				;;
+@@ -25079,7 +25079,8 @@ case ${host_os} in
+ 	netbsd*)
+ 	# use libc stubs, don't link against libpthread, to allow
+ 	# dynamic loading
+-	ax_pthread_flags=""
++	ax_pthread_flags="none"
++	ax_pthread_ok="yes"
+ 	;;
+ esac
+ 

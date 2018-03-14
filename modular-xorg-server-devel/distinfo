@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.87 2018/01/25 15:06:10 jperkin Exp $
+
+SHA1 (xorg-server-1.19.99.901.tar.bz2) = 3d366be05b15ef6dadd4c48fd78ed19b0b8a5de5
+RMD160 (xorg-server-1.19.99.901.tar.bz2) = b32ace81d250bfbbcd5583bbff245861f1627fbd
+SHA512 (xorg-server-1.19.99.901.tar.bz2) = c2fbe4868788cd0d6d5fe546acb8c2ddec39ac3e851f352ee438a785a248a048a87073972f51ff98ef36a35a6753f8c2f22c2ecfc719d47dd9bb3c453fdb3ae5
+Size (xorg-server-1.19.99.901.tar.bz2) = 6131851 bytes
+SHA1 (patch-configure) = 9e9f497f14d563ef66f25c637a14b0bea2243c3f
+SHA1 (patch-hw_xfree86_common_xf86pciBus.c) = 896825ba12646431cba603938d118acbdde305dd
+SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
+SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
+SHA1 (patch-hw_xfree86_drivers_modesetting_driver.c) = fbd861dd32c1b5a96b0e2318f17ad2c5009dc245
+SHA1 (patch-hw_xfree86_os-support_bsd_arm__video.c) = 9c03b24f44eafc5fabe27e9d6cc6c54b607e47c3
+SHA1 (patch-hw_xfree86_os-support_bsd_bsd__VTsw.c) = 90343f694c27a6fdd5070e1167687943bd056a99
+SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = f2c72562a40c0e3109991453aff9c2c082526b1b
+SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060ec4df3a60
+SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
+SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
+SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
+SHA1 (patch-hw_xfree86_sdksyms.sh) = c403149ad35ffb70ee44f70de94b4497b751c118
+SHA1 (patch-os_xstrans.c) = 489a4f4b226ecd361b922895204fb9041b065d4e
