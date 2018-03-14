@@ -20,12 +20,14 @@ DEPENDS+=		guile22-slib>=3.2.1:../../devel/guile22-slib
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
+# instead of USE_TOOLS+=msgfmt, since we need a newer version
+TOOL_DEPENDS+=		gettext-tools>=0.19.6:../../devel/gettext-tools
 
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
-USE_TOOLS+=		intltool makeinfo msgfmt perl:run pkg-config
+USE_TOOLS+=		perl:run pkg-config
 # remove when using ninja
 USE_TOOLS+=		gmake
 
@@ -36,7 +38,7 @@ MAKE_ENV+=		GUILE_AUTO_COMPILE=0
 CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
-CMAKE_ARGS+=		-DPERL_EXECUTABLE=${LOCALBASE}/bin/perl
+CMAKE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
 #CMAKE_ARGS+=		-GNinja
 #BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
