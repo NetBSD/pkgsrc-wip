@@ -15,6 +15,8 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config
 
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/capstone/buildlink3.mk"
 .include "../../wip/frida-glib2/buildlink3.mk"
 .include "../../wip/frida-libffi/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
