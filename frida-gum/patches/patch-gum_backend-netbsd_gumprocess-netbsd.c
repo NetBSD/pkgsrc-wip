@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gum/backend-netbsd/gumprocess-netbsd.c.orig	2018-03-15 02:54:36.265318075 +0000
+--- gum/backend-netbsd/gumprocess-netbsd.c.orig	2018-03-15 03:39:53.673565915 +0000
 +++ gum/backend-netbsd/gumprocess-netbsd.c
-@@ -0,0 +1,630 @@
+@@ -0,0 +1,633 @@
 +/*
 + * Copyright (C) 2010-2018 Ole André Vadla Ravnås <oleavr@nowsecure.com>
 + *
@@ -32,6 +32,7 @@ $NetBSD$
 +#include <sys/uio.h>
 +#include <sys/wait.h>
 +#include <link.h>
++#include <lwp.h>
 +
 +typedef struct _GumModifyThreadContext GumModifyThreadContext;
 +typedef guint8 GumModifyThreadAck;
@@ -151,6 +152,8 @@ $NetBSD$
 +  guint seg_not_present : 1;
 +  guint useable : 1;
 +};
++
++typedef void *GumRegs;
 +
 +static gint gum_do_modify_thread (gpointer data);
 +static gboolean gum_await_ack (gint fd, GumModifyThreadAck expected_ack);

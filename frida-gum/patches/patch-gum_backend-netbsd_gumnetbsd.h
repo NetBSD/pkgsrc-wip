@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gum/backend-netbsd/gumnetbsd.h.orig	2018-03-15 02:54:36.264206001 +0000
+--- gum/backend-netbsd/gumnetbsd.h.orig	2018-03-15 03:39:53.666438410 +0000
 +++ gum/backend-netbsd/gumnetbsd.h
 @@ -0,0 +1,29 @@
 +/*
