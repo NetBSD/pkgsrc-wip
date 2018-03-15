@@ -73,10 +73,13 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PYTHON_FOR_BUILD_ONLY?=	yes
 .include "../../lang/python/pyversion.mk"
 
+IGNORE_PKG.libffi=	yes
+
+_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig:${BUILDLINK_DIR}/frida/lib/pkgconfig
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/libffi/buildlink3.mk"
+.include "../../wip/frida-libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

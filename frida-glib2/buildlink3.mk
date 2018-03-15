@@ -5,8 +5,6 @@ BUILDLINK_TREE+=	frida-glib2
 .if !defined(FRIDA_GLIB2_BUILDLINK3_MK)
 FRIDA_GLIB2_BUILDLINK3_MK:=
 
-_PKG_CONFIG_LIBDIR=			${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig:${BUILDLINK_DIR}/frida/lib/pkgconfig
-
 BUILDLINK_API_DEPENDS.frida-glib2+=	frida-glib2>=2.54.3
 BUILDLINK_PKGSRCDIR.frida-glib2?=	../../wip/frida-glib2
 
