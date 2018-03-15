@@ -3604,7 +3604,6 @@ SUBDIR+=	py-python-application
 SUBDIR+=	py-python-gnutls
 SUBDIR+=	py-pytkgen
 SUBDIR+=	py-pytools
-SUBDIR+=	py-pyvex
 SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qalsadi
 SUBDIR+=	py-qecalc
