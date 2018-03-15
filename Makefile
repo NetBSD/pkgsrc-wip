@@ -2997,7 +2997,6 @@ SUBDIR+=	py-christofides
 SUBDIR+=	py-ciabatta
 SUBDIR+=	py-cinfony
 SUBDIR+=	py-cito
-SUBDIR+=	py-claripy
 SUBDIR+=	py-cle
 SUBDIR+=	py-cli
 SUBDIR+=	py-clickatell

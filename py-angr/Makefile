@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
 DEPENDS+=	${PYPKGPREFIX}-unicorn-[0-9]*:../../emulators/py-unicorn
-DEPENDS+=	${PYPKGPREFIX}-claripy-[0-9]*:../../wip/py-claripy
+DEPENDS+=	${PYPKGPREFIX}-claripy-[0-9]*:../../math/py-claripy
 DEPENDS+=	${PYPKGPREFIX}-cle-[0-9]*:../../wip/py-cle
 DEPENDS+=	${PYPKGPREFIX}-pyvex-[0-9]*:../../wip/py-pyvex
 
