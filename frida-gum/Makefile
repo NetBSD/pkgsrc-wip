@@ -29,10 +29,11 @@ pre-build:
 
 IGNORE_PKG.glib2=	yes
 IGNORE_PKG.libffi=	yes
+IGNORE_PKG.capstone=	yes
 
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
-.include "../../devel/capstone/buildlink3.mk"
+.include "../../wip/frida-capstone/buildlink3.mk"
 .include "../../wip/frida-glib2/buildlink3.mk"
 .include "../../wip/frida-libffi/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
