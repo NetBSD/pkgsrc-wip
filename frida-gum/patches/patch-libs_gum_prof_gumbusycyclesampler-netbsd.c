@@ -1,6 +1,6 @@
 $NetBSD$
 
---- libs/gum/prof/gumbusycyclesampler-netbsd.c.orig	2018-03-15 03:39:53.700265712 +0000
+--- libs/gum/prof/gumbusycyclesampler-netbsd.c.orig	2018-03-15 03:53:19.250967215 +0000
 +++ libs/gum/prof/gumbusycyclesampler-netbsd.c
 @@ -0,0 +1,60 @@
 +/*

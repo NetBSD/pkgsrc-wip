@@ -31,6 +31,15 @@ IGNORE_PKG.glib2=	yes
 IGNORE_PKG.libffi=	yes
 IGNORE_PKG.capstone=	yes
 
+_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig:${BUILDLINK_DIR}/frida/lib/pkgconfig
+
+# Pass RPATH out of standard prefix
+LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/frida/lib
+
+# Allow RPATH out of standard prefix
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/frida
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/frida
+
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../wip/frida-capstone/buildlink3.mk"

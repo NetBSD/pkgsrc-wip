@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- meson.build.orig	2018-03-12 19:53:33.000000000 +0000
++++ meson.build
+@@ -168,6 +168,10 @@ else
+   have_libdwarf = false
+ endif
+ 
++if host_os_family == 'netbsd'
++  extra_libs_private += ['-lelf', '-lz']
++endif
++
+ if get_option('enable_gumpp')
+   cdata.set('HAVE_GUMPP', 1)
+ endif
