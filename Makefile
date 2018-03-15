@@ -2910,7 +2910,6 @@ SUBDIR+=	py-aopython
 SUBDIR+=	py-applpy
 SUBDIR+=	py-aqopa
 SUBDIR+=	py-arabic
-SUBDIR+=	py-archinfo
 SUBDIR+=	py-argh
 SUBDIR+=	py-ars
 SUBDIR+=	py-arxiv2bib
