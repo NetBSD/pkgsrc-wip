@@ -1,19 +1,10 @@
 $NetBSD$
 
-Don't allow to install source and license files.
+Don't allow source and license files installing.
 Also change destination for headers of i2pd library
 
 --- CMakeLists.txt	2018-01-30 16:14:29.000000000 +0000
 +++ CMakeLists.txt
-@@ -23,7 +23,7 @@ option(WITH_I2LUA "Build for i2lua" OFF)
- option(WITH_WEBSOCKETS "Build with websocket ui" OFF)
- 
- # paths
--set ( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake_modules" )
-+set (CMAKE_MODULE_PATH "/usr/pkgsrc/pkgsrc-2017-Q4/wip/libi2pd/work/.buildlink/cmake-Modules" "${CMAKE_CURRENT_SOURCE_DIR}/cmake_modules" )
- set ( CMAKE_SOURCE_DIR ".." )
- 
- # architecture
 @@ -466,10 +466,10 @@ if (WITH_BINARY)
    endif ()
  endif ()
