@@ -15,6 +15,22 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config
 
+PREFER.xz=	pkgsrc # required .pc, missing in NetBSD-base
+
+pre-build:
+	${RUN} cd ${WRKSRC}/tests/core && \
+		CFLAGS="-fPIC" \
+		STRIP=strip \
+		CC=${CC} \
+		CONFIG_SITE=$PWD \
+		PKG_CONFIG=pkg-config \
+		LDFLAGS="-fPIC -DPIC" \
+		sh build-targetfunctions.sh netbsd x86_64
+
+IGNORE_PKG.glib2=	yes
+IGNORE_PKG.libffi=	yes
+
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/capstone/buildlink3.mk"
 .include "../../wip/frida-glib2/buildlink3.mk"
