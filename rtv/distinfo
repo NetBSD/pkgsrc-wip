@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (rtv-1.22.0.tar.gz) = ca99383b17d35cd0921d4837ed4e12379f76d190
-RMD160 (rtv-1.22.0.tar.gz) = 6fa5ff5d88258b96e4bbef5065b7493a8006b939
-SHA512 (rtv-1.22.0.tar.gz) = acc2db4210bd6a99b8b2b6c32db3dc3c38e23c30b37b270bed5ca44b619d5e57c0ff02e04e507d1bc9c034565f73c9e943a65389c8f0f6f9e78140d943cb20f6
-Size (rtv-1.22.0.tar.gz) = 141067 bytes
+SHA1 (rtv-1.22.1.tar.gz) = 2c7f875ad3486e915ea74b2ff46c0efecb68a552
+RMD160 (rtv-1.22.1.tar.gz) = 7af43f6f9584bac94d0c9c719b4c27c62a54c4b4
+SHA512 (rtv-1.22.1.tar.gz) = fc61adbdde9ab4b7c353d6b5ed95df7871ab8d3d6eaa5b98f67fb533e62e2e63b875d361371dcfc7afa1a1b831fa4547c19c2d65f93f19075cec311074cbdc65
+Size (rtv-1.22.1.tar.gz) = 141179 bytes
