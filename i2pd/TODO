@@ -1,4 +1,1 @@
-* Problems with default i2pd.conf:
-	* i2pd works well without any config, but if set default one,
-	i2pd starts giving tons of errors.
-* change I2PD_CONFDIR to PKG_SYSCONFDIR.i2pd
+* Write rc script
