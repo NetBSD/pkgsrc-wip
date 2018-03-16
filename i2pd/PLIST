@@ -1,7 +1,8 @@
 @comment $NetBSD$
 bin/i2pd
-etc/i2pd/i2pd.conf
 man/man1/i2pd.1
+share/examples/i2pd/i2pd.conf
+share/examples/i2pd/i2pd.conf.NetBSD
 share/examples/i2pd/tunnels.conf
 var/i2pd/certificates/family/gostcoin.crt
 var/i2pd/certificates/family/i2p-dev.crt
@@ -19,3 +20,4 @@ var/i2pd/certificates/reseed/meeh_at_mail.i2p.crt
 var/i2pd/certificates/reseed/r4sas-reseed_at_mail.i2p.crt
 var/i2pd/certificates/reseed/zmx_at_mail.i2p.crt
 var/i2pd/certificates/router/orignal_at_mail.i2p.crt
+@pkgdir etc/i2pd
