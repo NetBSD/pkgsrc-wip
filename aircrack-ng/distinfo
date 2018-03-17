@@ -1,14 +1,10 @@
 $NetBSD: distinfo,v 1.16 2015/02/07 01:35:37 tnn2 Exp $
 
-SHA1 (aircrack-ng-1.2-rc4.tar.gz) = 2b2fbe50fedb606b3bd96a34d49f07760e8e618a
-RMD160 (aircrack-ng-1.2-rc4.tar.gz) = ed14c05762ba68598819238ed0152fc7c727a929
-SHA512 (aircrack-ng-1.2-rc4.tar.gz) = f1e1d465813a5f00fd8f8b287353033ea30b657a4c3a9fe81281ab2546d3238690f0659076bff53703fbc796ba40efb16115804d21f8516adca2c774fefea20c
-Size (aircrack-ng-1.2-rc4.tar.gz) = 4379880 bytes
-SHA1 (patch-common.mak) = 762d4a51355e8c7eb27a5838d9b0d9df3acc459f
-SHA1 (patch-manpages_Makefile) = 74db41de7072ec83d55e8fd1c7b2b96419b18b80
+SHA1 (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = bda98c83fe57ca556e2cb3c0197de395dcfb6c2e
+RMD160 (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = c542db3f03e68c74b4cf5b1b1aee8c435bce3291
+SHA512 (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = 2300e11a4ddbd070f54425ae9dfb584f1488437b272ba4ef3b2bb8b56c049bd6faf5691f8c36df0d63c8b2aa95e3fd63a035ed05ee3ca4bf7e65bf2e95832b6b
+Size (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = 4193272 bytes
 SHA1 (patch-scripts_airodump-ng-oui-update) = 5879806f2c151e1836db9e08efadfd97aa4b28c8
-SHA1 (patch-src_Makefile) = ec4f4b0b1059dd19f1eac437831bc30bc53a12a1
 SHA1 (patch-src_aireplay-ng.c) = 7be1893de71edde4395f185c35a1608c8509e4d4
 SHA1 (patch-src_airserv-ng.c) = b006b0c26bcbe81a458890fd6fff97ac20ae4fc5
-SHA1 (patch-src_osdep_Makefile) = 8a0608b4a109210f0af40c4f676ba6b74dcc4bd8
 SHA1 (patch-src_osdep_byteorder.h) = 0102f44ff184d3b1253d6a849ba04e8a9a46e5af

@@ -1,16 +1,22 @@
-@comment $NetBSD: PLIST,v 1.9 2013/09/06 14:34:01 tnn2 Exp $
+@comment $NetBSD$
 bin/aircrack-ng
 bin/airdecap-ng
 bin/airdecloak-ng
+bin/airolib-ng
 bin/besside-ng-crawler
 bin/ivstools
 bin/kstats
 bin/makeivs-ng
 bin/packetforge-ng
 bin/wpaclean
+libexec/aircrack-ng/aircrack-ng--avx
+libexec/aircrack-ng/aircrack-ng--avx2
+libexec/aircrack-ng/aircrack-ng--generic
+libexec/aircrack-ng/aircrack-ng--sse2
 man/man1/aircrack-ng.1
 man/man1/airdecap-ng.1
 man/man1/airdecloak-ng.1
+man/man1/airolib-ng.1
 man/man1/besside-ng-crawler.1
 man/man1/ivstools.1
 man/man1/kstats.1
@@ -19,15 +25,14 @@ man/man1/packetforge-ng.1
 man/man1/wpaclean.1
 man/man8/airbase-ng.8
 man/man8/aireplay-ng.8
-man/man8/airmon-ng.8
 man/man8/airodump-ng-oui-update.8
 man/man8/airodump-ng.8
 man/man8/airserv-ng.8
 man/man8/airtun-ng.8
-man/man8/besside-ng.8
 sbin/airbase-ng
 sbin/aireplay-ng
 sbin/airodump-ng
 sbin/airodump-ng-oui-update
 sbin/airserv-ng
 sbin/airtun-ng
+sbin/airventriloquist-ng
