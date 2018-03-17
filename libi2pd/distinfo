@@ -6,3 +6,4 @@ SHA512 (i2pd/i2pd-2.18.0.tar.gz) = dc8e0f4df25188e4d72ea6ffa2c36e48a7d2103d02573
 Size (i2pd/i2pd-2.18.0.tar.gz) = 1868440 bytes
 SHA1 (patch-CMakeLists.txt) = 2a8dcce71bbd25eccfbf2af01902d8b6ad97b9a5
 SHA1 (patch-I2PEndian.h) = 805898295f9a1152c449376fbf74a339033f832f
+SHA1 (patch-NTCPSession.cpp) = 77e7110d9cf09ef409edb54639147b3f52438709
