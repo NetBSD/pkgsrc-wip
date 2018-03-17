@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-beetle-saturn-20171209-b5ee7662683051ba11a4c383734d9ddaf3b1e37a.tar.gz) = 30f53a1d26d1e7450392bc443be87e6c57b97bf7
-RMD160 (libretro-beetle-saturn-20171209-b5ee7662683051ba11a4c383734d9ddaf3b1e37a.tar.gz) = 2dea2aedbb2e0d15e2365d0735127d94ca827403
-SHA512 (libretro-beetle-saturn-20171209-b5ee7662683051ba11a4c383734d9ddaf3b1e37a.tar.gz) = 7442393860e85b76b5781a21a4530408d9ce5469281ab5c12ea483ebbb597af50bb339227f0b6e3f550fafeb888ee7c0128052e1db4517a24726a7be3513cdbf
-Size (libretro-beetle-saturn-20171209-b5ee7662683051ba11a4c383734d9ddaf3b1e37a.tar.gz) = 1621572 bytes
+SHA1 (libretro-beetle-saturn-20180311-4d5edd684b0dd23dfbbdc7fceec6013d753c4f86.tar.gz) = 93fe522b63719d61ae5ce8598a27d3a54a863293
+RMD160 (libretro-beetle-saturn-20180311-4d5edd684b0dd23dfbbdc7fceec6013d753c4f86.tar.gz) = 7a0b7b8ecf06f974dc1e41102088b730a78db4e3
+SHA512 (libretro-beetle-saturn-20180311-4d5edd684b0dd23dfbbdc7fceec6013d753c4f86.tar.gz) = 2070aff44a6d12cb0fba1b48d03d310975d92aefe3e1e81047ea89752ba0a81ebe324c6eb32a3dc51a4f94a50a6b9ef63a423ba273c76d23f38079ca3da170a7
+Size (libretro-beetle-saturn-20180311-4d5edd684b0dd23dfbbdc7fceec6013d753c4f86.tar.gz) = 1417593 bytes
