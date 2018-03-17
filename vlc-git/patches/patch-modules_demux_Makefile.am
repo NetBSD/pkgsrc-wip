@@ -1,6 +1,6 @@
 $NetBSD$
 
---- modules/demux/Makefile.am.orig	2018-03-14 06:17:49.000000000 +0000
+--- modules/demux/Makefile.am.orig	2018-03-17 20:50:20.000000000 +0000
 +++ modules/demux/Makefile.am
 @@ -2,7 +2,7 @@ demuxdir = $(pluginsdir)/demux
  demux_LTLIBRARIES =
@@ -10,4 +10,4 @@ $NetBSD$
 +libxiph_metadata_la_LDFLAGS =
  noinst_LTLIBRARIES += libxiph_metadata.la
  
- libflacsys_plugin_la_SOURCES = demux/flac.c
+ libflacsys_plugin_la_SOURCES = demux/flac.c packetizer/flac.h
