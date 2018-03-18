@@ -5,6 +5,5 @@ RMD160 (vlc-3.0.0.tar.xz) = c0ad23fdf03ae5c9524ed05c7bc0d63745587287
 SHA512 (vlc-3.0.0.tar.xz) = 9bdc64e16ddd2e8d2693179f2fcac8462d7defff186262a049ba325ef00882fbd75a9d323b506ba06876a8168fd5e90319837c8dcd136b206161e67748c2a9f7
 Size (vlc-3.0.0.tar.xz) = 25191148 bytes
 SHA1 (patch-compat_Makefile.am) = 9f796bf1bc044527092d4ca35f51087618e14cf0
-SHA1 (patch-configure.ac) = c64e217af5097b24b17e1b134d640a9477e3e5d5
 SHA1 (patch-modules_access_http_Makefile.am) = 522b08c778ba967e5c86e25d40914b5f55f2a37a
 SHA1 (patch-modules_codec_x264.c) = 575c0efc3d3cbf17c99cd7dcdbc34b84e9e52191
