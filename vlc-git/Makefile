@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config autoreconf autoconf automake bison autopoint
+USE_TOOLS+=		gmake perl pkg-config autoreconf autoconf automake bison autopoint realpath
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -134,6 +134,10 @@ SUBST_MESSAGE.fnt=	Fixing hardcoded font paths.
 # VLC embeds the build environment info to help debuging.
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so*
+
+#BUILD_MAKE_FLAGS=		V=1
+
+LIBTOOL_FLAGS=		--tag=disable-static
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SH} ./bootstrap
