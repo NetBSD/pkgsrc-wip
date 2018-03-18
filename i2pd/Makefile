@@ -40,6 +40,7 @@ CONF_FILES+= ${EGDIR}/i2pd.conf \
 .endif
 
 RCD_SCRIPTS+=i2pd
+RCD_SCRIPT_SRC.i2pd=${FILESDIR}/i2pd.in
 
 MAKE_DIRS+=${VARBASE}/log/i2pd
 MAKE_DIRS+=${VARBASE}/run/i2pd
@@ -48,13 +49,13 @@ MAKE_DIRS_PERMS+=${VARBASE}/log/i2pd \
 				 ${I2PD_USER} ${I2PD_GROUP} 0755
 
 MAKE_DIRS_PERMS+=${VARBASE}/run/i2pd \
-				 ${I2PD_USER} ${I2PD_GROUP} 0755
+				 ${I2PD_USER} ${I2PD_GROUP} 0700
 
 MAKE_DIRS_PERMS+=${PREFIX}/var/i2pd \
-				 ${I2PD_USER} ${I2PD_GROUP} 0755
+				 ${I2PD_USER} ${I2PD_GROUP} 0700
 
 MAKE_DIRS_PERMS+=${PREFIX}/var/i2pd/certificates \
-				 ${I2PD_USER} ${I2PD_GROUP} 0755
+				 ${I2PD_USER} ${I2PD_GROUP} 0700
 
 post-install:
 	${INSTALL_MAN} ${I2PD_SOURCESDIR}/debian/i2pd.1 \
