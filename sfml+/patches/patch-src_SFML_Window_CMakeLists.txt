@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/SFML/Window/CMakeLists.txt.orig	2015-08-24 16:01:06.000000000 +0000
+--- src/SFML/Window/CMakeLists.txt.orig	2017-02-08 11:29:16.000000000 +0000
 +++ src/SFML/Window/CMakeLists.txt
 @@ -69,7 +69,7 @@ if(SFML_OS_WINDOWS)
  
@@ -11,7 +11,7 @@ $NetBSD$
      set(PLATFORM_SRC
          ${SRCROOT}/Unix/Display.cpp
          ${SRCROOT}/Unix/Display.hpp
-@@ -98,7 +98,7 @@ elseif(SFML_OS_LINUX OR SFML_OS_FREEBSD)
+@@ -96,7 +96,7 @@ elseif(SFML_OS_LINUX OR SFML_OS_FREEBSD)
              ${SRCROOT}/Unix/JoystickImpl.cpp
              ${SRCROOT}/Unix/JoystickImpl.hpp
          )
@@ -20,7 +20,7 @@ $NetBSD$
          set(PLATFORM_SRC
              ${PLATFORM_SRC}
              ${SRCROOT}/FreeBSD/JoystickImpl.cpp
-@@ -188,7 +188,7 @@ elseif(SFML_OS_ANDROID)
+@@ -193,7 +193,7 @@ elseif(SFML_OS_ANDROID)
  endif()
  
  # find external libraries
@@ -29,21 +29,12 @@ $NetBSD$
      find_package(X11 REQUIRED)
      if(NOT X11_FOUND)
          message(FATAL_ERROR "X11 library not found")
-@@ -198,7 +198,7 @@ endif()
- if(NOT SFML_OPENGL_ES)
-     find_package(OpenGL REQUIRED)
-     include_directories(${OPENGL_INCLUDE_DIR})
--    if(SFML_OS_LINUX OR SFML_OS_FREEBSD)
-+    if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_NETBSD)
-         find_package(XCB COMPONENTS xlib_xcb image randr REQUIRED)
-         if(NOT LIBXCB_FOUND)
-             message(FATAL_ERROR "Xcb library not found")
-@@ -225,7 +225,7 @@ if(SFML_OS_WINDOWS)
+@@ -226,7 +226,7 @@ if(SFML_OS_WINDOWS)
      list(APPEND WINDOW_EXT_LIBS winmm gdi32)
  elseif(SFML_OS_LINUX)
-     list(APPEND WINDOW_EXT_LIBS ${X11_X11_LIB} ${LIBXCB_LIBRARIES} ${UDEV_LIBRARIES})
+     list(APPEND WINDOW_EXT_LIBS ${X11_X11_LIB} ${X11_Xrandr_LIB} ${UDEV_LIBRARIES})
 -elseif(SFML_OS_FREEBSD)
 +elseif(SFML_OS_FREEBSD OR SFML_OS_NETBSD)
-     list(APPEND WINDOW_EXT_LIBS ${X11_X11_LIB} ${LIBXCB_LIBRARIES} usbhid)
+     list(APPEND WINDOW_EXT_LIBS ${X11_X11_LIB} ${X11_Xrandr_LIB} usbhid)
  elseif(SFML_OS_MACOSX)
      list(APPEND WINDOW_EXT_LIBS "-framework Foundation -framework AppKit -framework IOKit -framework Carbon")

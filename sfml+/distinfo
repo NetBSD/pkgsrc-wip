@@ -1,16 +1,17 @@
 $NetBSD: distinfo,v 1.1 2012/10/03 15:05:59 othyro Exp $
 
-SHA1 (SFML-2.3.2-sources.zip) = 762f287d2347382bc036760dbfa0da73ff8c2a1d
-RMD160 (SFML-2.3.2-sources.zip) = 9745cb27914e3d29ca16d82414429d32e47be728
-SHA512 (SFML-2.3.2-sources.zip) = d35456f442c059f4438bf4ccc9fe363069d1f4caee3202a4ab2885b14a3db56c39f0fb6f03a8145c47d8ec71cf083710df87bac5b1f183430be6c6f66b2c477c
-Size (SFML-2.3.2-sources.zip) = 22586862 bytes
-SHA1 (patch-CMakeLists.txt) = 3b78c865d707f0e5c275c343ff461b3475f63e40
-SHA1 (patch-cmake_Config.cmake) = f9544531e9cd75ec6d244d2c5d87f5ed449eb8a9
+SHA1 (SFML-2.4.2-sources.zip) = 9cb3cdf2f679a4979f71d36041c950a82a31178a
+RMD160 (SFML-2.4.2-sources.zip) = 02c872a6937e59a710d3b1be97d7d2731b53f143
+SHA512 (SFML-2.4.2-sources.zip) = 14f2b9f244bbff681d1992581f20012f3073456e4baed0fb2bf2cf82538e9c5ddd8ce01b0cfb3874af47091ec19654aa23c426df04fe1ffcfa209623dc362f85
+Size (SFML-2.4.2-sources.zip) = 24961872 bytes
+SHA1 (patch-CMakeLists.txt) = 562f20c12b99c394f8cb0f28d04fdf1f5d129c91
+SHA1 (patch-cmake_Config.cmake) = 81e539daa3b13c2e93c31eec8de1f6177a2d6d43
 SHA1 (patch-include_SFML_Config.hpp) = 2ef6d01309fa039804dbaa73258e6eee4cf6a5f7
 SHA1 (patch-include_SFML_OpenGL.hpp) = 1320361b147b0baf5e882772ea5bcb7643680285
 SHA1 (patch-include_SFML_Window_WindowHandle.hpp) = feb03e491f89c2b48e32956821d005f3b32d1cda
 SHA1 (patch-src_SFML_System_CMakeLists.txt) = 2cfc1f05b414105549769c7658699972c9e88f86
-SHA1 (patch-src_SFML_Window_CMakeLists.txt) = 40fdc7be081d94c19932a48efd32ad221fe1a940
+SHA1 (patch-src_SFML_Window_CMakeLists.txt) = ebc3841486a587b006e03e2edc7c2a5a26cc3499
+SHA1 (patch-src_SFML_Window_FreeBSD_JoystickImpl.cpp) = 46e882a29624d86043ab15c239e20e70a97c116b
 SHA1 (patch-src_SFML_Window_FreeBSD_JoystickImpl.hpp) = a4eb1a07b937d0ad7677cff53b946a8d5a6546ab
 SHA1 (patch-src_SFML_Window_GlContext.cpp) = 1419707c8b71e1bfdfd29f049b6aac418713ccd6
 SHA1 (patch-src_SFML_Window_InputImpl.hpp) = 3cee9ad1eb3efe282f1044dfd1815a1a17323a1d
