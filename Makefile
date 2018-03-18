@@ -4562,6 +4562,7 @@ SUBDIR+=	weland
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	which
+SUBDIR+=	witchblast
 SUBDIR+=	why
 SUBDIR+=	why3
 SUBDIR+=	wicd
