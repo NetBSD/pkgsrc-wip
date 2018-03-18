@@ -1,1 +1,5 @@
 * Write rc script
+* i2pd.conf bug:
+	* https://github.com/PurpleI2P/i2pd/issues/1148
+	* When i2pd starting as --service, client reads /var/lib/i2pd directory
+	instead path that set in 'datadir' value, in i2pd.conf.
