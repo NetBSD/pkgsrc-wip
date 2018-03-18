@@ -1,6 +1,7 @@
 @comment $NetBSD: PLIST,v 1.2 2015/04/19 21:12:18 nbrkv Exp $
 bin/residualvm
 man/man6/residualvm.6
+share/applications/residualvm.desktop
 share/doc/residualvm/AUTHORS
 share/doc/residualvm/COPYING
 share/doc/residualvm/COPYING.BSD
@@ -17,4 +18,7 @@ share/doc/residualvm/README.md
 share/icons/hicolor/scalable/apps/residualvm.svg
 share/pixmaps/residualvm.xpm
 share/residualvm/modern.zip
+share/residualvm/myst3.dat
+share/residualvm/residualvm-emi-patch.m4b
 share/residualvm/residualvm-grim-patch.lab
+share/residualvm/translations.dat

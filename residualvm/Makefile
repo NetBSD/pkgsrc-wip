@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.3 2015/04/19 21:12:18 nbrkv Exp $
 
-DISTNAME=	residualvm-0.2.1-sources
+DISTNAME=	residualvm-0.3.0-sources
 PKGNAME=	${DISTNAME:S/-sources//}
+MASTER_SITES=	http://www.residualvm.org/downloads/release/${PKGVERSION_NOREV}/
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=residualvm/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 CONFIGURE_ARGS+=	--disable-nasm
 
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0.4
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
