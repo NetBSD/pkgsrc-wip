@@ -1,5 +1,5 @@
-- Colors doesn't seem to work on NetBSD when built with curses(3) (it's just
-  mostly monochrome).
+- Colors don't seem to work on NetBSD when built with curses(3) (it's just
+  mostly monochrome despite using the `default' theme).
   Investigate why that happens and if possible fix that.
 
   As a possible workaround please use `--monochrome' option.
