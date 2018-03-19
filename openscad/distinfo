@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.6 2016/12/16 11:13:27 plunky Exp $
+
+SHA1 (openscad-master.zip) = 78a2ced47e740bcec3a0c941f8a778f7e5ab05a1
+RMD160 (openscad-master.zip) = 0c689a516629509c3e230cc159a4caa23d59fca8
+SHA512 (openscad-master.zip) = 593bb7acb1c6de1941dbb2c78122c554c0759b874be88705401c350a7437723962aaa4461c1b25a391e9c0e280b9b53dd358aaa5becb0011afcaedfed3a78d10
+Size (openscad-master.zip) = 14843991 bytes
+SHA1 (patch-openscad.pro) = 8b4250254ea66338ecafdac437ce9a69deb2fe27
+SHA1 (patch-src_ModuleCache.cc) = 039b77f4a065c700e2b3c1d0240b167f3cc5a661
+SHA1 (patch-src_StatCache.cc) = f502ac3b1b10b548f5174197a1dbf5af37b9c6c3
+SHA1 (patch-src_colormap.h) = cc48b16629ec8106d1b2c9686f90251e3d5d093d
+SHA1 (patch-src_scintillaeditor.h) = a94e87fa6eb410b77ade37b42b39971de7400229
