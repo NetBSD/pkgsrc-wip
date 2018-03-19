@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.248 2017/07/03 11:49:37 wiz Exp $
 
-DISTNAME=		gnucash-2.7.6
+DISTNAME=		gnucash-2.7.7
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -38,6 +38,7 @@ CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
+CMAKE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
 #CMAKE_ARGS+=		-GNinja
 #BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
