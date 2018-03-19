@@ -1,3 +1,18 @@
+- If curses(3) is used on NetBSD it will be probably problematic because a
+  subwindow could not contain another subwindow.
+  To reproduce that:
+
+    | import curses
+    | 
+    | stdscr = curses.initscr()
+    | subwin = stdscr.derwin(0, 0, 0, 0)
+    | subsubwin = subwin.derwin(0, 0, 0, 0)
+
+  <roy> fixed that via src/lib/libcurses/newwin.c,r1.15 but is not in netbsd-8.
+  Should we request a pullup for it?
+
+    -- leot (2018/03/19)
+
 - Colors don't seem to work on NetBSD when built with curses(3) (it's just
   mostly monochrome despite using the `default' theme).
   Investigate why that happens and if possible fix that.
@@ -7,4 +22,4 @@
     -- leot (2018/03/19)
 
 - This package has known vulnerabilities, please investigate and fix if possible:
- CVE-2017-17516
+   CVE-2017-17516
