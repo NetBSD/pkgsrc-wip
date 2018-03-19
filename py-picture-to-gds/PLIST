@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/picToGDS.py
+picture-to-gds/share/LICENSE
+picture-to-gds/share/README.md
