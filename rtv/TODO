@@ -4,7 +4,7 @@
 
   As a possible workaround please use `--monochrome' option.
 
-    -- leot (2017/12/08)
+    -- leot (2018/03/19)
 
 - This package has known vulnerabilities, please investigate and fix if possible:
  CVE-2017-17516
