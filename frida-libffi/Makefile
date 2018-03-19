@@ -6,6 +6,8 @@ CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=frida/}
 GITHUB_TAG=	808ca2c69269f6df3ee6d33e22515d11739ffd5c
 
+GITHUB_PROJECT=	libffi
+
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://www.sourceware.org/libffi/
 COMMENT=	Foreign function interface
