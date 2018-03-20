@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/}
 MASTER_SITES+=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.xz
 
-VLC_VERSION=		3.0.0
+VLC_VERSION=		3.0.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
