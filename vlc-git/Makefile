@@ -135,10 +135,6 @@ SUBST_MESSAGE.fnt=	Fixing hardcoded font paths.
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so*
 
-#BUILD_MAKE_FLAGS=		V=1
-
-LIBTOOL_FLAGS=		--tag=disable-static
-
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SH} ./bootstrap
 
