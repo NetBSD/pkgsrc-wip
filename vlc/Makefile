@@ -34,7 +34,6 @@ CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--enable-flac
 CONFIGURE_ARGS+=	--enable-theora
 CONFIGURE_ARGS+=	--disable-bluray
-CONFIGURE_ARGS+=	--disable-bonjour
 CONFIGURE_ARGS+=	--disable-caca
 CONFIGURE_ARGS+=	--disable-chromaprint
 CONFIGURE_ARGS+=	--disable-dc1394
@@ -43,9 +42,7 @@ CONFIGURE_ARGS+=	--disable-dv1394
 CONFIGURE_ARGS+=	--disable-freerdp
 CONFIGURE_ARGS+=	--disable-goom
 CONFIGURE_ARGS+=	--disable-gst-decode
-CONFIGURE_ARGS+=	--disable-lua
 CONFIGURE_ARGS+=	--disable-mfx
-CONFIGURE_ARGS+=	--disable-mmal-codec
 CONFIGURE_ARGS+=	--disable-notify
 CONFIGURE_ARGS+=	--disable-opencv
 CONFIGURE_ARGS+=	--disable-projectm
@@ -193,5 +190,6 @@ BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .if "${OPSYS}" == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
+.include "../../lang/lua52/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

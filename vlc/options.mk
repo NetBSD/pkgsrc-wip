@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		dbus debug dts faad gnome jack live pulseaudio
-PKG_SUPPORTED_OPTIONS+=		sdl vlc-skins x11
+PKG_SUPPORTED_OPTIONS+=		vlc-skins x11
 PKG_SUGGESTED_OPTIONS=		dbus x11
 
 .include "../../mk/bsd.prefs.mk"
@@ -50,29 +50,6 @@ CONFIGURE_ARGS+=	--enable-jack
 PLIST.jack=		yes
 .else
 CONFIGURE_ARGS+=	--disable-jack
-.endif
-
-## SDL backend support
-
-.if !empty(PKG_OPTIONS:Msdl)
-CONFIGURE_ARGS+=	--enable-sdl
-CONFIGURE_ARGS+=	--enable-sdl-image
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
-PLIST.sdl=		yes
-.else
-CONFIGURE_ARGS+=	--disable-sdl
-CONFIGURE_ARGS+=	--disable-sdl-image
-.endif
-
-## gnome integration
-
-.if !empty(PKG_OPTIONS:Mgnome)
-CONFIGURE_ARGS+=	--enable-gnomevfs
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
-PLIST.gnome=	yes
-.else
-CONFIGURE_ARGS+=	--disable-gnomevfs
 .endif
 
 ## DBUS message bus support
