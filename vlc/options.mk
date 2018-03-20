@@ -100,9 +100,9 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 CONFIGURE_ARGS+=	--enable-qt \
 			--with-x
 PLIST.x11=		yes
-.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+.  if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
 PLIST.egl=		yes
-.endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-x \
 			--disable-xcb \
