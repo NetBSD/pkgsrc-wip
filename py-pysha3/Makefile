@@ -2,7 +2,7 @@
 
 DISTNAME=	pysha3-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-CATEGORIES=	math
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysha3/}
 
 MAINTAINER=	khorben@defora.org
