@@ -1,5 +1,7 @@
 $NetBSD$
 
+Remove undefined references to missing symbol.
+
 --- lib/video.c.orig	2017-11-24 15:29:17.000000000 +0000
 +++ lib/video.c
 @@ -719,7 +719,7 @@ static int get_filter_str( vlc_object_t 

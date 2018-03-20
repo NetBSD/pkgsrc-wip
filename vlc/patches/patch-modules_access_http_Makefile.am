@@ -1,5 +1,7 @@
 $NetBSD$
 
+Remove doubled symbols in libcompat in the vlc_http module.
+
 --- modules/access/http/Makefile.am.orig	2017-11-24 15:29:17.000000000 +0000
 +++ modules/access/http/Makefile.am
 @@ -16,7 +16,7 @@ libvlc_http_la_SOURCES = \

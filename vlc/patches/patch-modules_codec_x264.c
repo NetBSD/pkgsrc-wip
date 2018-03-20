@@ -1,5 +1,7 @@
 $NetBSD$
 
+Disable X264 incompatible code for X264_BUILD >= 153.
+
 --- modules/codec/x264.c.orig	2017-11-29 23:35:29.000000000 +0000
 +++ modules/codec/x264.c
 @@ -842,7 +842,7 @@ static int  Open ( vlc_object_t *p_this 

@@ -337,9 +337,7 @@ lib/vlc/plugins/keystore/libmemory_keystore_plugin.la
 lib/vlc/plugins/logger/libconsole_logger_plugin.la
 lib/vlc/plugins/logger/libfile_logger_plugin.la
 lib/vlc/plugins/logger/libsyslog_plugin.la
-lib/vlc/plugins/lua/liblua_plugin.a
 lib/vlc/plugins/lua/liblua_plugin.la
-lib/vlc/plugins/lua/liblua_plugin.so
 lib/vlc/plugins/meta_engine/libfolder_plugin.la
 lib/vlc/plugins/meta_engine/libtaglib_plugin.la
 lib/vlc/plugins/misc/libaddonsfsstorage_plugin.la

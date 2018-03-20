@@ -1,5 +1,8 @@
 $NetBSD$
 
+libcompat must be prebuilt with PIC properties in order to be linked
+into PIC libraries.
+
 --- compat/Makefile.am.orig	2017-11-24 15:29:17.000000000 +0000
 +++ compat/Makefile.am
 @@ -1,7 +1,7 @@

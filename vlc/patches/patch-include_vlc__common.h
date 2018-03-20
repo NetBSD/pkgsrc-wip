@@ -1,5 +1,8 @@
 $NetBSD$
 
+Backport patch merged upstream: disable bswap* and popcount*
+functions for NetBSD, as they are part of libc.
+
 --- include/vlc_common.h.orig	2017-12-21 09:51:16.000000000 +0000
 +++ include/vlc_common.h
 @@ -556,6 +556,7 @@ static inline unsigned (ctz)(unsigned x)
