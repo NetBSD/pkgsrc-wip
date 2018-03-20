@@ -70,8 +70,10 @@ post-install:
 
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+PY_PATCHPLIST=		yes
 PYTHON_FOR_BUILD_ONLY?=	yes
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/python/extension.mk"
 
 IGNORE_PKG.libffi=	yes
 
