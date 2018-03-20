@@ -3559,6 +3559,7 @@ SUBDIR+=	py-pydy
 SUBDIR+=	py-pydy-viz
 SUBDIR+=	py-pyec
 SUBDIR+=	py-pyecm
+SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pyentropy
 SUBDIR+=	py-pyevolve
 SUBDIR+=	py-pyfaces
