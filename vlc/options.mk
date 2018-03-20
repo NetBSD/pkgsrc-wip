@@ -107,7 +107,8 @@ PLIST.egl=		yes
 CONFIGURE_ARGS+=	--without-x \
 			--disable-xcb \
 			--disable-qt \
-			--disable-freetype
+			--disable-freetype \
+			--disable-vdpau
 .endif
 
 .if !empty(PKG_OPTIONS:Mfaad)
