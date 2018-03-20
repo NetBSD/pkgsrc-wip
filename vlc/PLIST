@@ -121,6 +121,7 @@ lib/libvlc.la
 lib/libvlccore.la
 lib/pkgconfig/libvlc.pc
 lib/pkgconfig/vlc-plugin.pc
+${PLIST.pulseaudio}lib/vlc/libvlc_pulse.la
 ${PLIST.x11}lib/vlc/libvlc_vdpau.la
 ${PLIST.x11}lib/vlc/libvlc_xcb_events.la
 lib/vlc/lua/extensions/VLSub.luac
@@ -172,7 +173,6 @@ lib/vlc/plugins/access/libdvdnav_plugin.la
 lib/vlc/plugins/access/libdvdread_plugin.la
 lib/vlc/plugins/access/libfilesystem_plugin.la
 lib/vlc/plugins/access/libftp_plugin.la
-${PLIST.gnome}lib/vlc/plugins/access/libgnomevfs_plugin.la
 lib/vlc/plugins/access/libhttp_plugin.la
 lib/vlc/plugins/access/libhttps_plugin.la
 lib/vlc/plugins/access/libidummy_plugin.la

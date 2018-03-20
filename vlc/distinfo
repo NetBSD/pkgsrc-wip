@@ -11,3 +11,4 @@ SHA1 (patch-lib_video.c) = 6d6b46f46bc103a7548bf1dae84e76b57ba7aa5d
 SHA1 (patch-m4_dolt.m4) = f567605ca51069a681516016066ef0009787c904
 SHA1 (patch-modules_access_http_Makefile.am) = 1c28d851d4aae5007dc89511975d9c9f1c39c944
 SHA1 (patch-modules_codec_x264.c) = 7fd2fd2801b4a4f35e67bca8766b42a17528d503
+SHA1 (patch-share_Makefile.am) = d0b31ec5414382dbf93456bdeb24c1069d21f1d3

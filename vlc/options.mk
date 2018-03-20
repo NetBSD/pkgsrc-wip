@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.32 2017/05/15 11:07:20 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		dbus debug dts faad gnome jack live pulseaudio
+PKG_SUPPORTED_OPTIONS=		dbus debug dts faad jack live pulseaudio
 PKG_SUPPORTED_OPTIONS+=		vlc-skins x11
 PKG_SUGGESTED_OPTIONS=		dbus x11
 

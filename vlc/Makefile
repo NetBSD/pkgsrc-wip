@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config autoreconf autoconf automake bison autopoint realpath
+USE_TOOLS+=		gmake perl pkg-config autoreconf autoconf automake bison autopoint realpath msgfmt
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
