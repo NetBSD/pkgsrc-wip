@@ -200,7 +200,6 @@ lib/vlc/plugins/audio_filter/libaudiobargraph_a_plugin.la
 lib/vlc/plugins/audio_filter/libchorus_flanger_plugin.la
 lib/vlc/plugins/audio_filter/libcompressor_plugin.la
 lib/vlc/plugins/audio_filter/libdolby_surround_decoder_plugin.la
-${PLIST.dts}lib/vlc/plugins/audio_filter/libdtstofloat32_plugin.la
 lib/vlc/plugins/audio_filter/libequalizer_plugin.la
 lib/vlc/plugins/audio_filter/libgain_plugin.la
 lib/vlc/plugins/audio_filter/libheadphone_channel_mixer_plugin.la
@@ -235,6 +234,7 @@ lib/vlc/plugins/codec/libavcodec_plugin.la
 lib/vlc/plugins/codec/libcc_plugin.la
 lib/vlc/plugins/codec/libcdg_plugin.la
 lib/vlc/plugins/codec/libcvdsub_plugin.la
+${PLIST.dts}lib/vlc/plugins/codec/libdca_plugin.la
 lib/vlc/plugins/codec/libddummy_plugin.la
 lib/vlc/plugins/codec/libdvbsub_plugin.la
 lib/vlc/plugins/codec/libedummy_plugin.la
@@ -332,7 +332,7 @@ lib/vlc/plugins/demux/libxa_plugin.la
 ${PLIST.x11}lib/vlc/plugins/gui/libqt_plugin.la
 ${PLIST.vlc-skins}lib/vlc/plugins/gui/libskins2_plugin.la
 lib/vlc/plugins/keystore/libfile_keystore_plugin.la
-${PLIST.x11}lib/vlc/plugins/keystore/libkwallet_plugin.la
+${PLIST.dbus}lib/vlc/plugins/keystore/libkwallet_plugin.la
 lib/vlc/plugins/keystore/libmemory_keystore_plugin.la
 lib/vlc/plugins/logger/libconsole_logger_plugin.la
 lib/vlc/plugins/logger/libfile_logger_plugin.la
@@ -422,7 +422,7 @@ lib/vlc/plugins/stream_out/libstream_out_transcode_plugin.la
 ${PLIST.x11}lib/vlc/plugins/text_renderer/libfreetype_plugin.la
 lib/vlc/plugins/text_renderer/libsvg_plugin.la
 lib/vlc/plugins/text_renderer/libtdummy_plugin.la
-${PLIST.x11}lib/vlc/plugins/vaapi/libvaapi_filters_plugin.la
+${PLIST.vaapi}lib/vlc/plugins/vaapi/libvaapi_filters_plugin.la
 ${PLIST.x11}lib/vlc/plugins/vdpau/libvdpau_adjust_plugin.la
 ${PLIST.x11}lib/vlc/plugins/vdpau/libvdpau_avcodec_plugin.la
 ${PLIST.x11}lib/vlc/plugins/vdpau/libvdpau_chroma_plugin.la
