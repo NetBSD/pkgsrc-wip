@@ -16,7 +16,7 @@ LICENSE=		gnu-gpl-v2
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config autoreconf autoconf automake bison autopoint realpath
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -60,9 +60,6 @@ CONFIGURE_ARGS+=	--disable-udev
 CONFIGURE_ARGS+=	--disable-vnc
 CONFIGURE_ARGS+=	--disable-vsxu
 CONFIGURE_ARGS+=	--disable-zvbi
-
-CFLAGS+=		-fPIC
-CXXFLAGS+=		-fPIC
 
 # which platforms support OSSv4?
 .if ${MACHINE_PLATFORM:MNetBSD-[789]*-*}
@@ -139,6 +136,9 @@ SUBST_MESSAGE.fnt=	Fixing hardcoded font paths.
 # VLC embeds the build environment info to help debuging.
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so*
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${SH} ./bootstrap
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
