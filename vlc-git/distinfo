@@ -6,6 +6,7 @@ SHA512 (vlc-3.0.0.tar.xz) = 9bdc64e16ddd2e8d2693179f2fcac8462d7defff186262a049ba
 Size (vlc-3.0.0.tar.xz) = 25191148 bytes
 SHA1 (patch-compat_Makefile.am) = 9f796bf1bc044527092d4ca35f51087618e14cf0
 SHA1 (patch-lib_core.c) = 7b1b659abdaee1c3f87582d948ec08a87d48faeb
+SHA1 (patch-lib_video.c) = 5931b855faf3ad1c6fa7fea27497e536edab13a4
 SHA1 (patch-m4_dolt.m4) = ff3bd892430ecc856f1a108559245b474f67a9af
 SHA1 (patch-modules_access_http_Makefile.am) = 522b08c778ba967e5c86e25d40914b5f55f2a37a
 SHA1 (patch-modules_codec_x264.c) = 575c0efc3d3cbf17c99cd7dcdbc34b84e9e52191
