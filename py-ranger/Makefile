@@ -32,6 +32,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths
 SUBST_FILES.fix-paths=		${WRKSRC}/doc/ranger.1
+SUBST_FILES.fix-paths+=		${WRKSRC}/ranger/ext/img_display.py
 SUBST_SED.fix-paths=		-e 's,/usr/share,${PREFIX}/share,g'
 SUBST_SED.fix-paths+=		-e 's,/usr/lib,${PREFIX}/libexec,g'
 
