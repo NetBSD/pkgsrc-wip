@@ -20,8 +20,9 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/picture-to-gds-${DISTNAME}
 INSTALL_DIR=	${PREFIX}/bin
 SHARE_DIR=	${PREFIX}/picture-to-gds/share
-
 USE_LANGUAGES=	# empty
+
+PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36
 
 do-install:
 	( cd ${WRKSRC};\
