@@ -39,6 +39,7 @@ bin/po2txt
 bin/po2web2py
 bin/po2wordfast
 bin/po2xliff
+bin/po2yaml
 bin/poclean
 bin/pocommentclean
 bin/pocompendium
@@ -75,6 +76,7 @@ bin/web2py2po
 bin/xliff2odf
 bin/xliff2oo
 bin/xliff2po
+bin/yaml2po
 ${PYSITELIB}/translate/COPYING
 ${PYSITELIB}/translate/README.rst
 ${PYSITELIB}/translate/__init__.py
@@ -215,9 +217,9 @@ ${PYSITELIB}/translate/convert/po2wordfast.pyo
 ${PYSITELIB}/translate/convert/po2xliff.py
 ${PYSITELIB}/translate/convert/po2xliff.pyc
 ${PYSITELIB}/translate/convert/po2xliff.pyo
-${PYSITELIB}/translate/convert/poreplace.py
-${PYSITELIB}/translate/convert/poreplace.pyc
-${PYSITELIB}/translate/convert/poreplace.pyo
+${PYSITELIB}/translate/convert/po2yaml.py
+${PYSITELIB}/translate/convert/po2yaml.pyc
+${PYSITELIB}/translate/convert/po2yaml.pyo
 ${PYSITELIB}/translate/convert/pot2po.py
 ${PYSITELIB}/translate/convert/pot2po.pyc
 ${PYSITELIB}/translate/convert/pot2po.pyo
@@ -257,6 +259,12 @@ ${PYSITELIB}/translate/convert/test_dtd2po.pyo
 ${PYSITELIB}/translate/convert/test_html2po.py
 ${PYSITELIB}/translate/convert/test_html2po.pyc
 ${PYSITELIB}/translate/convert/test_html2po.pyo
+${PYSITELIB}/translate/convert/test_ical2po.py
+${PYSITELIB}/translate/convert/test_ical2po.pyc
+${PYSITELIB}/translate/convert/test_ical2po.pyo
+${PYSITELIB}/translate/convert/test_ini2po.py
+${PYSITELIB}/translate/convert/test_ini2po.pyc
+${PYSITELIB}/translate/convert/test_ini2po.pyo
 ${PYSITELIB}/translate/convert/test_json2po.py
 ${PYSITELIB}/translate/convert/test_json2po.pyc
 ${PYSITELIB}/translate/convert/test_json2po.pyo
@@ -338,6 +346,9 @@ ${PYSITELIB}/translate/convert/test_po2txt.pyo
 ${PYSITELIB}/translate/convert/test_po2xliff.py
 ${PYSITELIB}/translate/convert/test_po2xliff.pyc
 ${PYSITELIB}/translate/convert/test_po2xliff.pyo
+${PYSITELIB}/translate/convert/test_po2yaml.py
+${PYSITELIB}/translate/convert/test_po2yaml.pyc
+${PYSITELIB}/translate/convert/test_po2yaml.pyo
 ${PYSITELIB}/translate/convert/test_pot2po.py
 ${PYSITELIB}/translate/convert/test_pot2po.pyc
 ${PYSITELIB}/translate/convert/test_pot2po.pyo
@@ -362,6 +373,9 @@ ${PYSITELIB}/translate/convert/test_txt2po.pyo
 ${PYSITELIB}/translate/convert/test_xliff2po.py
 ${PYSITELIB}/translate/convert/test_xliff2po.pyc
 ${PYSITELIB}/translate/convert/test_xliff2po.pyo
+${PYSITELIB}/translate/convert/test_yaml2po.py
+${PYSITELIB}/translate/convert/test_yaml2po.pyc
+${PYSITELIB}/translate/convert/test_yaml2po.pyo
 ${PYSITELIB}/translate/convert/tiki2po.py
 ${PYSITELIB}/translate/convert/tiki2po.pyc
 ${PYSITELIB}/translate/convert/tiki2po.pyo
@@ -383,6 +397,9 @@ ${PYSITELIB}/translate/convert/xliff2oo.pyo
 ${PYSITELIB}/translate/convert/xliff2po.py
 ${PYSITELIB}/translate/convert/xliff2po.pyc
 ${PYSITELIB}/translate/convert/xliff2po.pyo
+${PYSITELIB}/translate/convert/yaml2po.py
+${PYSITELIB}/translate/convert/yaml2po.pyc
+${PYSITELIB}/translate/convert/yaml2po.pyo
 ${PYSITELIB}/translate/filters/__init__.py
 ${PYSITELIB}/translate/filters/__init__.pyc
 ${PYSITELIB}/translate/filters/__init__.pyo

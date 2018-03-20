@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	translate-toolkit-2.2.5
+DISTNAME=	translate-toolkit-2.3.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
 GITHUB_PROJECT=	translate
