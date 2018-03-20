@@ -3590,6 +3590,7 @@ SUBDIR+=	py-pysal
 SUBDIR+=	py-pysaml2
 SUBDIR+=	py-pysb
 SUBDIR+=	py-pyscard
+SUBDIR+=	py-pysha3
 SUBDIR+=	py-pyside
 SUBDIR+=	py-pyside-shiboken
 SUBDIR+=	py-pyside-tools
