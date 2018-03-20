@@ -3889,6 +3889,7 @@ SUBDIR+=	py-yapsy
 SUBDIR+=	py-yellowhiggs
 SUBDIR+=	py-yt
 SUBDIR+=	py-z2pack
+SUBDIR+=	py-z3solver
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zenity
 SUBDIR+=	py-zipline
