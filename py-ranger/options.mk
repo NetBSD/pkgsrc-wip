@@ -87,7 +87,7 @@ DEPENDS+=	highlight-[0-9]*:../../textproc/highlight
 ### atool support.
 ###
 .if !empty(PKG_OPTIONS:Matool)
-DEPENDS+=	atool-[0-9]*:../../wip/atool
+DEPENDS+=	atool-[0-9]*:../../archivers/atool
 .endif
 
 ###
