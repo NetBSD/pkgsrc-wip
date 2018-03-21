@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.afflib.org/downloads/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://sourceforge.net/projects/afflib/
 COMMENT=		Advanced Forensic Format library
+LICENSE=	original-bsd
 
 USE_LANGUAGES=	c++
 
