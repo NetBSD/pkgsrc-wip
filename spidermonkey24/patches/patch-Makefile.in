@@ -1,7 +1,7 @@
 $NetBSD: patch-Makefile.in,v 1.1 2014/02/06 15:12:18 fhajny Exp $
 
---- Makefile.in.orig	2013-11-19 19:42:43.000000000 +0000
-+++ Makefile.in
+--- js/src/Makefile.in.orig	2013-11-19 19:42:43.000000000 +0000
++++ js/src/Makefile.in
 @@ -237,10 +237,14 @@ endif
  # ICU headers need to be available whether we build with the complete
  # Internationalization API or not - ICU stubs rely on them.

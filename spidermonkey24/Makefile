@@ -11,11 +11,15 @@ HOMEPAGE=	https://developer.mozilla.org/en/SpiderMonkey
 COMMENT=	Standalone JavaScript implementation in C
 LICENSE=	mpl-2.0
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/js/src
+# Spidermonkey 24 never worked here and unlikely will
+# https://bugzilla.mozilla.org/show_bug.cgi?id=577056
+BROKEN_ON_PLATFORM=	SunOS-*-x86_64
 
 USE_TOOLS+=		pkg-config perl:build gmake
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+
+CONFIGURE_DIRS=		js/src
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-strip
@@ -24,10 +28,12 @@ CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--enable-threadsafe
 CONFIGURE_ARGS+=	--with-system-nspr
 
-PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
-PKGCONFIG_OVERRIDE+=	js.pc.in
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
-CHECK_PORTABILITY_SKIP+=	tests/update-test262.sh
+PKGCONFIG_OVERRIDE+=	js/src/ctypes/libffi/libffi.pc.in
+PKGCONFIG_OVERRIDE+=	js/src/js.pc.in
+
+CHECK_PORTABILITY_SKIP+=	js/src/tests/update-test262.sh
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		yes
