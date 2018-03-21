@@ -1081,6 +1081,7 @@ SUBDIR+=	graveman
 SUBDIR+=	grc
 SUBDIR+=	greenbone-security-assistant
 SUBDIR+=	gretl
+SUBDIR+=	greybird-theme
 SUBDIR+=	grilo-plugins
 SUBDIR+=	grisbi
 SUBDIR+=	groku
