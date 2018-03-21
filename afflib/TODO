@@ -1,2 +1,1 @@
-* Fix CFLAGS...-g and -I doesn't have to be forced
-* use ranlib for .a?
+* HOMEPAGE move to https://github.com/simsong/AFFLIBv3
