@@ -15,6 +15,12 @@ CMAKE_ARGS+=	-DWITH_LIBRARY=no
 I2PD_SOURCESDIR=${WRKSRC}/..
 EGDIR=			share/examples/i2pd
 
+SUBST_CLASSES+=	fix-paths
+SUBST_STAGE.fix-paths=	pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing hardcoded path for datadir
+SUBST_FILES.fix-paths=	${I2PD_SOURCESDIR}/libi2pd/FS.cpp
+SUBST_SED.fix-paths=	-e 's,/var/lib,${PREFIX}/var,g'
+
 I2PD_USER=		i2pd
 I2PD_GROUP=		i2pd
 PKG_HOME.${I2PD_USER}= ${PREFIX}/var/i2pd
