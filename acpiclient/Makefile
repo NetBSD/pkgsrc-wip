@@ -5,6 +5,7 @@ DISTNAME=	acpi-1.5
 PKGREVISION=	1
 CATEGORIES=	linux sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=acpiclient/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://acpiclient.sourceforge.net/
