@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.aegisub.org/
 COMMENT=	Free, cross-platform tool for creating and modifying subtitles
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	original-bsd
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
