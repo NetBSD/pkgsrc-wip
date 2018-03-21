@@ -14,7 +14,7 @@ COMMENT=	Simple Linux Utility for Resource Management
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
-BUILD_DEPENDS+=	man2html-[0-9]*:../../wip/man2html
+BUILD_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
 
 USE_LANGUAGES=	c c++
 
