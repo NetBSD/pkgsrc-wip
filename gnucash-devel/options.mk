@@ -17,6 +17,7 @@ CMAKE_ARGS+=	-DWITH_OFX=OFF
 .if !empty(PKG_OPTIONS:Mlibdbi)
 CMAKE_ARGS+=	-DWITH_SQL=ON
 PLIST_SRC+=	PLIST.dbi
+BUILD_DEPENDS+=	libdbi-driver-sqlite3-[0-9]*:../../databases/libdbi-driver-sqlite3
 .include "../../databases/libdbi/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWITH_SQL=OFF

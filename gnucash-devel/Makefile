@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.248 2017/07/03 11:49:37 wiz Exp $
 
 DISTNAME=		gnucash-2.7.7
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -73,10 +74,6 @@ BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/guile22/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.6
-.include "../../security/gnome-keyring/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsecret+=	libsecret>=0.18
-.include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
