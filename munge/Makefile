@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
 GITHUB_RELEASE=	${DISTNAME}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	asau@inbox.ru
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://dun.github.io/munge/
 COMMENT=	Authentication service for creating and validating credentials
 
