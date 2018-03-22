@@ -7,17 +7,12 @@
 DISTNAME=	rainbow_${PORTVERSION}
 PKGNAME=	rainbow-${PORTVERSION}
 CATEGORIES=	biology
-# FreeBSD MASTER_SITES: SF/bio-rainbow
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bio-rainbow/}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/bio-rainbow/
 COMMENT=	Short reads clustering and local assembly
 LICENSE=	gnu-gpl-v3
-
-# Just assuming C and C++: Adjust this!
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
 
 PORTVERSION=	2.0.4
 
