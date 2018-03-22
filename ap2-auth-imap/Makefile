@@ -5,6 +5,7 @@ PKGNAME=	ap2-auth-imap-2.2.0
 PKGREVISION=	3
 CATEGORIES=	www mail
 MASTER_SITES=	http://ben.brillat.net/files/projects/mod_auth_imap2/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	cg@cgall.de
 HOMEPAGE=	http://ben.brillat.net/projects/mod_auth_imap/
