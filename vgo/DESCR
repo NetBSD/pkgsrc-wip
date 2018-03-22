@@ -1,0 +1,4 @@
+This package contains a prototype of what the go command might look like with
+integrated support for package versioning.
+
+See https://research.swtch.com/vgo for documents about the design.

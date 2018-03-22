@@ -4514,6 +4514,7 @@ SUBDIR+=	vdesk
 SUBDIR+=	vee
 SUBDIR+=	verbiste
 SUBDIR+=	verilator
+SUBDIR+=	vgo
 SUBDIR+=	vhdtool-git
 SUBDIR+=	vidalia
 SUBDIR+=	vidalia-devel
