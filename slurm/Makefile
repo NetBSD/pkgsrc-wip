@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.8 2015/04/29 12:40:50 outpaddling Exp $
 
-DISTNAME=	slurm-17.11.3
+DISTNAME=	slurm-17.11.5
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.schedmd.com/download/archive/ \
-		http://www.schedmd.com/download/latest/ \
-		http://www.schedmd.com/download/development/
+MASTER_SITES=	http://www.schedmd.com/download/archive/
+MASTER_SITES+=	http://www.schedmd.com/download/latest/
+MASTER_SITES+=	http://www.schedmd.com/download/development/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
@@ -16,13 +16,11 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 BUILD_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
 
-USE_LANGUAGES=	c c++
-
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	bash perl pkg-config
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+USE_TOOLS+=	bash perl pkg-config
 
-# Help find pkgsrc man2html
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
@@ -58,6 +56,7 @@ SUBST_SED.linuxinit+=	-e 's|@sbindir@|$${exec_prefix}/sbin|'
 SUBST_SED.linuxinit+=	-e 's|@libdir@|$${exec_prefix}/lib|'
 SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|$${prefix}/etc|'
 
+# Configure flag to disable gtk does not work, so set an impossible requirement
 SUBST_CLASSES+=		gtk
 SUBST_STAGE.gtk=	post-patch
 SUBST_SED.gtk=		-e 's|min_gtk_version=.*|min_gtk_version=2000.0.0|'
@@ -67,12 +66,6 @@ SUBST_CLASSES+=		make-ex
 SUBST_STAGE.make-ex=	post-install
 SUBST_FILES.make-ex=	etc/Makefile
 SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
-
-# .include "../../mk/bsd.prefs.mk"
-# .if ${OPSYS} == NetBSD
-# Workaround for configure not finding libslurmfull on NetBSD
-# CONFIGURE_ARGS+=	--with-shared-libslurm=no
-# .endif
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
@@ -86,13 +79,10 @@ post-install:
 .include "../../security/munge/buildlink3.mk" # optional
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-# For job profiling
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
-# Rather big dependencies
-# .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
