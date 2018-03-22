@@ -2,8 +2,8 @@ $NetBSD$
 
 Adding NetBSD-specific macro (send this patch to the upstream)
 
---- ../libi2pd/I2PEndian.h	2018-01-30 16:14:29.000000000 +0000
-+++ ../libi2pd/I2PEndian.h
+--- libi2pd/I2PEndian.h	2018-01-30 16:14:29.000000000 +0000
++++ libi2pd/I2PEndian.h
 @@ -3,7 +3,7 @@
  #include <inttypes.h>
  #include <string.h>

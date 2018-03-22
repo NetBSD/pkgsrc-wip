@@ -3,8 +3,8 @@ $NetBSD$
 >"due the bug in gcc 4.7. std::shared_future.get() is not const"
 github.com/PurpleI2P/i2pd/commit/30fb0f5a942cc5195c725feae25ab38f88b08436
 
---- ../libi2pd/NTCPSession.cpp	2018-01-30 16:14:29.000000000 +0000
-+++ ../libi2pd/NTCPSession.cpp
+--- libi2pd/NTCPSession.cpp	2018-01-30 16:14:29.000000000 +0000
++++ libi2pd/NTCPSession.cpp
 @@ -171,7 +171,7 @@ namespace transport
  					return;
  				}

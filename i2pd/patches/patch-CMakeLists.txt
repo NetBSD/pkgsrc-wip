@@ -5,8 +5,8 @@ Don't allow to install source, header and license files for the i2pd client.
 Also fix problem with WITH_LIBRARY option that doesn't work (known problem,
 fixed in the upstream: github.com/PurpleI2P/i2pd/issues/1146).
 
---- work/i2pd-2.18.0/build/CMakeLists.txt	2018-01-30 16:14:29.000000000 +0000
-+++ CMakeLists.txt
+--- build/CMakeLists.txt	2018-01-30 16:14:29.000000000 +0000
++++ build/CMakeLists.txt
 @@ -93,13 +93,16 @@ endif()
  
  add_library(libi2pd ${LIBI2PD_SRC})

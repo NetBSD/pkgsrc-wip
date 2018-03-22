@@ -3,8 +3,8 @@ $NetBSD$
 Don't allow source and license files installing.
 Also change destination for headers of i2pd library
 
---- CMakeLists.txt	2018-01-30 16:14:29.000000000 +0000
-+++ CMakeLists.txt
+--- build/CMakeLists.txt	2018-01-30 16:14:29.000000000 +0000
++++ build/CMakeLists.txt
 @@ -466,10 +466,10 @@ if (WITH_BINARY)
    endif ()
  endif ()

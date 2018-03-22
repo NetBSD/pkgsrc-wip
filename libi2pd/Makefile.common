@@ -8,7 +8,8 @@ DISTNAME=		i2pd-${I2PD_VERSION}
 CATEGORIES=		net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PurpleI2P/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-WRKSRC=			${WRKDIR}/i2pd-2.18.0/build
+WRKSRC=			${WRKDIR}/${DISTNAME}/
+CMAKE_ARG_PATH=		build/
 
 MAINTAINER=		jake.slazenger@yandex.com
 HOMEPAGE=		https://github.com/PurpleI2P/i2pd/
