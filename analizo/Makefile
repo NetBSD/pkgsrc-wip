@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://analizo.org/
 COMMENT=	Extensible source code analysis and visualization toolkit
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	p5-Class-Accessor>=0.34:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Test-Class>=0.36:../../devel/p5-Test-Class
