@@ -1,8 +1,6 @@
 $NetBSD$
-
-# Needed for type definitions on FreeBSD
-
---- src/api/internal/io/TcpSocketEngine_unix_p.cpp.orig	2015-06-16 16:50:53 UTC
+#add netinit
+--- src/api/internal/io/TcpSocketEngine_unix_p.cpp.orig	2018-03-12 15:14:05.061616533 +0000
 +++ src/api/internal/io/TcpSocketEngine_unix_p.cpp
 @@ -12,6 +12,8 @@
  using namespace BamTools;
@@ -11,5 +9,5 @@ $NetBSD$
 +#include <netinet/in.h>
 +
  #ifdef SUN_OS
- #include <sys/filio.h> 
+ #include <sys/filio.h>
  #endif

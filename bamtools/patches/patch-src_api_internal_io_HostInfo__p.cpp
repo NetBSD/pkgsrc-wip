@@ -1,8 +1,6 @@
 $NetBSD$
-
-# Needed for type definitions on FreeBSD
-
---- src/api/internal/io/HostInfo_p.cpp.orig	2015-06-16 16:50:53 UTC
+#add netinit
+--- src/api/internal/io/HostInfo_p.cpp.orig	2018-03-12 15:13:26.429616632 +0000
 +++ src/api/internal/io/HostInfo_p.cpp
 @@ -11,6 +11,8 @@
  using namespace BamTools;
@@ -12,4 +10,4 @@ $NetBSD$
 +
  // platorm-specifics
  #ifdef _WIN32
- #  include "api/internal/io/NetWin_p.h"
+ #include "api/internal/io/NetWin_p.h"
