@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/pearRM
+man/man1/pearRM.1

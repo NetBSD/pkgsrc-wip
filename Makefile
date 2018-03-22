@@ -2704,6 +2704,7 @@ SUBDIR+=	pear-channel-swiftmailer
 SUBDIR+=	pear-channel-symfony
 SUBDIR+=	pear-channel-theseer
 SUBDIR+=	pear-fDOMDocument
+SUBDIR+=	pear-merger
 SUBDIR+=	pear-phpcpd
 SUBDIR+=	pear-phpdcd
 SUBDIR+=	pear-phploc
