@@ -15,12 +15,12 @@ MAKEFLAGS+=	PREFIX=${PREFIX}
 MAKEFLAGS+=	SYSCONFDIR=${PREFIX}/share
 MAKEFLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
-CFLAGS.NetBSD+= -D_NETBSD_SOURCE
-CFLAGS+= -I${PREFIX}/include/glib/glib-2.0
-CFLAGS+= -I${PREFIX}/lib/glib-2.0/include
-CFLAGS+= ${X11_LDFLAGS}
-CFLAGS+= -L${PREFIX}/lib -lglib-2.0 -R${PREFIX}/lib
-LDFLAGS+= -lglib-2.0 -L${PREFIX}/lib -R${PREFIX}/lib
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CFLAGS+=	-I${PREFIX}/include/glib/glib-2.0
+CFLAGS+=	-I${PREFIX}/lib/glib-2.0/include
+CFLAGS+=	${X11_LDFLAGS}
+CFLAGS+=	-L${PREFIX}/lib -lglib-2.0 -R${PREFIX}/lib
+LDFLAGS+=	-lglib-2.0 -L${PREFIX}/lib -R${PREFIX}/lib
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
