@@ -1,6 +1,8 @@
 $NetBSD$
 
---- Makefile.orig	2015-02-22 22:33:17.000000000 +0000
+# Use portable shell path, respect env
+
+--- Makefile.orig	2018-03-22 23:06:52.521063536 +0000
 +++ Makefile
 @@ -4,7 +4,7 @@
  # (c) 2009 Aaron Quinlan
@@ -11,48 +13,40 @@ $NetBSD$
  
  VERSION_FILE=./src/utils/version/version_git.h
  RELEASED_VERSION_FILE=./src/utils/version/version_release.txt
-@@ -12,20 +12,21 @@ RELEASED_VERSION_FILE=./src/utils/versio
- 
- 
- # define our object and binary directories
--export OBJ_DIR	= obj
--export BIN_DIR	= bin
--export SRC_DIR	= src
--export UTIL_DIR	= src/utils
+@@ -16,11 +16,11 @@ export OBJ_DIR	= obj
+ export BIN_DIR	= bin
+ export SRC_DIR	= src
+ export UTIL_DIR	= src/utils
 -export CXX		= g++
-+OBJ_DIR	= obj
-+BIN_DIR	= bin
-+SRC_DIR	= src
-+UTIL_DIR	= src/utils
-+CXX		?= g++
- #ifeq ($(DEBUG),1)
--#export CXXFLAGS = -Wall -O0 -g -fno-inline -fkeep-inline-functions -D_FILE_OFFSET_BITS=64 -fPIC -DDEBUG -D_DEBUG
-+#CXXFLAGS = -Wall -O0 -g -fno-inline -fkeep-inline-functions -D_FILE_OFFSET_BITS=64 -fPIC -DDEBUG -D_DEBUG
- #else
++export CXX		?= g++
+ ifeq ($(DEBUG),1)
+-export CXXFLAGS = -Wall -Wextra -DDEBUG -D_DEBUG -g -O0 -D_FILE_OFFSET_BITS=64 -fPIC $(INCLUDES)
++#export CXXFLAGS = -Wall -Wextra -DDEBUG -D_DEBUG -g -O0 -D_FILE_OFFSET_BITS=64 -fPIC $(INCLUDES)
+ else
 -export CXXFLAGS = -Wall -O2 -D_FILE_OFFSET_BITS=64 -fPIC $(INCLUDES)
-+CXXFLAGS ?= -Wall -O2
-+CXXFLAGS += -D_FILE_OFFSET_BITS=64 -fPIC $(INCLUDES)
- #endif
--export LIBS		= -lz
--export BT_ROOT  = src/utils/BamTools/
-+LIBS		= -lz
-+BT_ROOT  = src/utils/BamTools/
++export CXXFLAGS += -D_FILE_OFFSET_BITS=64 -fPIC $(INCLUDES)
+ endif
  
--prefix = /usr/local
+ # If the user has specified to do so, tell the compile to use rand() (instead of mt19937).
+@@ -33,7 +33,7 @@ endif
+ export LIBS		= -lz
+ export BT_ROOT  = src/utils/BamTools/
+ 
+-prefix ?= /usr/local
 +PREFIX ?= /usr/local
  
  SUBDIRS = $(SRC_DIR)/annotateBed \
  		  $(SRC_DIR)/bamToBed \
-@@ -105,7 +106,7 @@ all: print_banner $(OBJ_DIR) $(BIN_DIR) 
+@@ -148,7 +148,7 @@ all: print_banner $(OBJ_DIR) $(BIN_DIR)
  	@echo "done."
- 	
+ 
  	@echo "- Creating executables for old CLI."
 -	@python scripts/makeBashScripts.py
-+	@${PYTHONBIN} scripts/makeBashScripts.py
++	scripts/makeBashScripts.py
  	@chmod +x bin/*
  	@echo "done."
- 	
-@@ -113,9 +114,9 @@ all: print_banner $(OBJ_DIR) $(BIN_DIR) 
+ 
+@@ -156,9 +156,9 @@ all: print_banner $(OBJ_DIR) $(BIN_DIR)
  .PHONY: all
  
  install: all
