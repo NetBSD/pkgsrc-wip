@@ -5,6 +5,7 @@ PKGNAME=	ap2-zeroconf-0.3
 PKGREVISION=	3
 CATEGORIES=	www net
 MASTER_SITES=	http://people.apache.org/~sctemme/Apcon2003/TU10/
+LICENSE=	apache-2.0
 
 MAINTAINER=	eggert@macvaerk.dtu.dk
 HOMEPAGE=	http://www.temme.net/sander/mod_zeroconf/
