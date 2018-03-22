@@ -32,7 +32,7 @@ SUBST_SED.prefix=	-e 's|%%PREFIX%%|${PREFIX}|g'
 
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot \
 		cdhit>=4.6:../../biology/cdhit \
-		parallel>=0:../../wip/parallel \
+		parallel>=0:../../parallel/parallel \
 		gawk>=0:../../lang/gawk \
 		vcftools>=0.1.11:../../wip/vcftools \
 		stacks>=0:../../wip/stacks \

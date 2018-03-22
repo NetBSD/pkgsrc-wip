@@ -2607,7 +2607,6 @@ SUBDIR+=	panda
 SUBDIR+=	pandoc
 SUBDIR+=	pangoterm
 SUBDIR+=	parafly
-SUBDIR+=	parallel
 SUBDIR+=	paraview
 SUBDIR+=	parcellite
 SUBDIR+=	parted
