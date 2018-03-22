@@ -16,16 +16,12 @@ HOMEPAGE=	https://github.com/lh3/seqtk
 COMMENT=	Tool for processing sequences in FASTA/FASTQ format
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-
 PORTVERSION=	1.2.20171107
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/seqtk \
-		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/seqtk ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
