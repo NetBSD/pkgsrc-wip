@@ -6,6 +6,7 @@ PKGNAME=	argouml-0.14
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://argouml.tigris.org/files/documents/4/0/argouml-0.14/
+LICENSE=	epl-v1.0
 
 MAINTAINER=	hdp@cs.nmsu.edu
 HOMEPAGE=	http://argouml.tigris.org/
