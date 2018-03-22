@@ -1,14 +1,14 @@
 $NetBSD$
 
-# No eventfd on NetBSD 7
-
---- src/plugins/task/cgroup/task_cgroup_memory.c.orig	2018-02-26 19:16:37.000000000 +0000
+# Guard Linuxism?
+--- src/plugins/task/cgroup/task_cgroup_memory.c.orig	2018-03-15 18:57:29.000000000 +0000
 +++ src/plugins/task/cgroup/task_cgroup_memory.c
-@@ -39,7 +39,9 @@
+@@ -39,7 +39,10 @@
  #include <poll.h>
  #include <signal.h>
  #include <stdlib.h>		/* getenv */
-+#ifndef __NetBSD__
++// Should this be defined(__Linux__)?
++#if !defined(__NetBSD__) && !defined(__FreeBSD__)
  #include <sys/eventfd.h>
 +#endif
  #include <sys/types.h>
