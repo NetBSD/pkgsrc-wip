@@ -10,7 +10,7 @@ MASTER_SITES=	http://pam.sourceforge.net/mod_auth_pam/dist/
 MAINTAINER=	lkundrak@skosi.org
 HOMEPAGE=	http://pam.sourceforge.net/mod_auth_pam/
 COMMENT=	Apache2 module for PAM authentification
-
+LICENSE=	original-bsd AND gnu-gpl-v2
 
 APACHE_MODULE_NAME=	mod_auth_pam
 USE_LIBTOOL=		yes
