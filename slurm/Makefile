@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
-# CONFIGURE_ARGS+=	--with-rrdtool=${PREFIX}
 CONFIGURE_ARGS+=	--with-libssh2=${PREFIX}
 
 LDFLAGS+=		-llz4
