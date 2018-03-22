@@ -1,8 +1,8 @@
 # $NetBSD$
-.include		"Makefile.common"
+.include	"Makefile.common"
 
-PKGNAME=		libi2pd-${I2PD_VERSION}
-COMMENT=		i2pd library
+PKGNAME=	libi2pd-${I2PD_VERSION}
+COMMENT=	i2pd library
 
 CMAKE_ARGS+=	-DWITH_LIBRARY=yes
 CMAKE_ARGS+=	-DWITH_BINARY=no

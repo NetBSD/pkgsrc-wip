@@ -4,18 +4,18 @@
 
 GITHUB_PROJECT=	i2pd
 I2PD_VERSION=	2.18.0
-DISTNAME=		i2pd-${I2PD_VERSION}
-CATEGORIES=		net
+DISTNAME=	i2pd-${I2PD_VERSION}
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PurpleI2P/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-WRKSRC=			${WRKDIR}/${DISTNAME}/
-CMAKE_ARG_PATH=		build/
+WRKSRC=		${WRKDIR}/${DISTNAME}/
+CMAKE_ARG_PATH=	build/
 
-MAINTAINER=		jake.slazenger@yandex.com
-HOMEPAGE=		https://github.com/PurpleI2P/i2pd/
-LICENSE=		modified-bsd
+MAINTAINER=	jake.slazenger@yandex.com
+HOMEPAGE=	https://github.com/PurpleI2P/i2pd/
+LICENSE=	modified-bsd
 
-USE_CMAKE=		yes
+USE_CMAKE=	yes
 
 USE_LANGUAGES=	c c++11
 
