@@ -1,13 +1,13 @@
 @comment $NetBSD$
 bin/clone_filter
+bin/count_fixed_catalog_snps.py
 bin/cstacks
 bin/denovo_map.pl
-bin/estacks
 bin/exec_velvet.pl
 bin/export_sql.pl
 bin/genotypes
-bin/hstacks
 bin/index_radtags.pl
+bin/integrate_alignments.py
 bin/kmer_filter
 bin/load_radtags.pl
 bin/load_sequences.pl
@@ -59,6 +59,7 @@ share/stacks/php/stacks.css
 share/stacks/php/stacks.js
 share/stacks/php/stacks_functions.php
 share/stacks/php/sumstat_view.php
+share/stacks/php/tag.php
 share/stacks/php/tags.php
 share/stacks/php/version.php
 share/stacks/php/view_sequence.php
@@ -67,3 +68,9 @@ share/stacks/sql/chr_index.sql
 share/stacks/sql/mysql.cnf.dist
 share/stacks/sql/stacks.sql
 share/stacks/sql/tag_index.sql
+@pkgdir share/stacks/php/export
+@pkgdir share/examples
+@pkgdir share/doc
+@pkgdir man/man1
+@pkgdir lib
+@pkgdir include
