@@ -6,6 +6,7 @@
 ###########################################################
 
 DISTNAME=	vcftools_${DISTVERSION}
+PKGNAME=	vcftools-${DISTVERSION}
 DISTVERSION=	0.1.15
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcftools/}
