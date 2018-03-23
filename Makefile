@@ -3496,7 +3496,6 @@ SUBDIR+=	py-param
 SUBDIR+=	py-parameters
 SUBDIR+=	py-paramz
 SUBDIR+=	py-parserutils
-SUBDIR+=	py-path.py
 SUBDIR+=	py-pattyrn
 SUBDIR+=	py-pbfalcon
 SUBDIR+=	py-pcapy
