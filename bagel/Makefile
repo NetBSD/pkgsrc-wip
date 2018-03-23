@@ -4,6 +4,7 @@
 DISTNAME=	bagel-2.0.0
 CATEGORIES=	math
 MASTER_SITES=	http://www2.ph.ed.ac.uk/~paboyle/bagel/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www2.ph.ed.ac.uk/~paboyle/bagel/
