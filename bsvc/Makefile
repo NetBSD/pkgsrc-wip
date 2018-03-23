@@ -8,7 +8,7 @@ EXTRACT_SUFX=	-src.tar.gz
 MAINTAINER=	nocker.bk@gmail.com
 HOMEPAGE=	http://www4.ncsu.edu/~bwmott/bsvc/
 COMMENT=	Extensible hardware simulation framework with MC68K support
-#LICENSE=	# TODO
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tk>=8.4:../../x11/tk
 
