@@ -1,7 +1,1 @@
-$NetBSD$
-
-SHA1 (ddocent-2015.11.30.tar.xz) = f28e87ae4b4c26d5a771f71cb05e5ba03433d7ee
-RMD160 (ddocent-2015.11.30.tar.xz) = e1b45882d611208bdf68badae4bd9a7e93ecae05
-SHA512 (ddocent-2015.11.30.tar.xz) = a19751347fa503351182260bff2688e89c418f6f62e5de63658df6e90a4ecf7dae1d677b7416332ba61335ad04a0203b788c43e8b392f61fb40be20bd5b3b102
-Size (ddocent-2015.11.30.tar.xz) = 47672 bytes
-SHA1 (patch-dDocent) = f7de578aa81fcd0680a9b221bf47cdd44b353763
+SHA1 (patch-dDocent) = b78a93e5f78b8a6c291244f5290c73372c0aa202
