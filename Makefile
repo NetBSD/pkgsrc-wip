@@ -4695,6 +4695,7 @@ SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	xxhash
 SUBDIR+=	yabar
+SUBDIR+=	yad
 SUBDIR+=	yafray
 SUBDIR+=	yaggo
 SUBDIR+=	yakuake
