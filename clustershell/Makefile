@@ -5,6 +5,7 @@ DISTNAME=	clustershell-1.2.83
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clustershell/}
 EXTRACT_SUFX=	.tgz
+LICENSE=	gnu-lgpl-v2.1 # or later
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://clustershell.sourceforge.net/
