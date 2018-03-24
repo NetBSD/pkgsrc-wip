@@ -7,7 +7,7 @@ MASTER_SITES=	https://github.com/Swordifish90/cool-old-term
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Swordifish90/cool-old-term
 COMMENT=	Good looking terminal emulator which mimics the old cathode display
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	cool-old-term
 GIT_REPO.cool-old-term=	git://github.com/Swordifish90/cool-old-term.git
