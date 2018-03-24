@@ -6,6 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cycle/}
 EXTRACT_SUFX=	.tar.bz2
 NO_BUILD=	yes
+LICENSE=	gnu-gpl-v2 # or later
 
 MAINTAINER=	ckoeni@gmail.com
 HOMEPAGE=	http://cycle.sourceforge.net/
