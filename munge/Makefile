@@ -10,9 +10,9 @@ MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://dun.github.io/munge/
 COMMENT=	Authentication service for creating and validating credentials
 
-USE_TOOLS=	perl pkg-config
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_TOOLS+=		perl pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
@@ -20,6 +20,8 @@ OWN_DIRS=	${VARBASE}/lib/munge
 OWN_DIRS+=	${VARBASE}/log/munge
 OWN_DIRS+=	${VARBASE}/run/munge
 OWN_DIRS+=	etc/munge
+
+BUILD_DEFS+=	VARBASE
 
 RCD_SCRIPTS+=	munge
 
