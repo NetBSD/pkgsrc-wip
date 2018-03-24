@@ -31,4 +31,3 @@ sbin/munged
 @pkgdir var/run/munge
 @pkgdir var/log/munge
 @pkgdir var/lib/munge
-@pkgdir share/examples/munge
