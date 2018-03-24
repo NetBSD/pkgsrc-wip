@@ -1726,6 +1726,7 @@ SUBDIR+=	libgnome-java
 SUBDIR+=	libgnomekbd
 SUBDIR+=	libgraphqlparser
 SUBDIR+=	libgrass5
+SUBDIR+=	libgringotts
 SUBDIR+=	libgrss
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java

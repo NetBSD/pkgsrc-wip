@@ -1,0 +1,6 @@
+libGringotts is a small, easy-to-use, thread-safe C library originally developed
+for Gringotts; its purpose is to encapsulate data (generic: ASCII, but also
+binary data) in an encrypted and compressed structure, to be written to a file
+or used elseway. It uses strong encryption algorithms, to ensure the data are as
+safe as possible, and allows the user to have the complete control over all the
+algorithms used in the process
