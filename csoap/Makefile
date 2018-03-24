@@ -4,6 +4,7 @@ DISTNAME=	libsoap-1.1.0
 PKGNAME=	csoap-1.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=csoap/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://csoap.sourceforge.net/
