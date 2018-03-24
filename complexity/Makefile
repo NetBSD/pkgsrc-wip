@@ -4,6 +4,7 @@ DISTNAME=	complexity-1.10
 CATEGORIES=	nih
 MASTER_SITES=	https://ftp.gnu.org/gnu/complexity/
 EXTRACT_SUFX=	.tar.xz
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/complexity/
