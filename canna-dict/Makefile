@@ -6,6 +6,8 @@ MAKE_JOBS_SAFE=	no
 
 .include "../../wip/canna/Makefile.common"
 
+LICENSE=	mit
+
 BUILD_DEPENDS+=	Canna-server>=${CANNA_VERSION}:../../wip/canna-server
 
 EVAL_PREFIX+=	CANNASERVERBINDIR=Canna-server
