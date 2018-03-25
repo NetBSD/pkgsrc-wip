@@ -2964,8 +2964,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/old-emacs-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/old-emacs-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/options.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/options.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/patcomp.el.gz
