@@ -39,6 +39,7 @@ CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
 CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
+CMAKE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
 #CMAKE_ARGS+=		-GNinja
 #BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
@@ -73,10 +74,6 @@ BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/guile22/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.6
-.include "../../security/gnome-keyring/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsecret+=	libsecret>=0.18
-.include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

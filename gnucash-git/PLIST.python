@@ -1,9 +1,8 @@
 @comment $NetBSD$
-lib/gnucash/libgncmod-app-utils-python.la
-lib/gnucash/libgncmod-python.la
-lib/libgnc-core-utils-python.la
 ${PYSITELIB}/gnucash/__init__.py
-${PYSITELIB}/gnucash/_gnucash_core_c.la
+${PYSITELIB}/gnucash/_gnucash_core_c.so
+${PYSITELIB}/gnucash/_sw_app_utils.so
+${PYSITELIB}/gnucash/_sw_core_utils.so
 ${PYSITELIB}/gnucash/function_class.py
 ${PYSITELIB}/gnucash/gnucash_business.py
 ${PYSITELIB}/gnucash/gnucash_core.py

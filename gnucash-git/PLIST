@@ -227,7 +227,6 @@ include/gnucash/tree-view-utils.h
 include/gnucash/window-main-summarybar.h
 include/gnucash/window-report.h
 lib/gnucash/libgncmod-app-utils.so
-${PLIST.dbi}lib/gnucash/libgncmod-backend-dbi.so
 lib/gnucash/libgncmod-backend-xml.so
 lib/gnucash/libgncmod-bi-import.so
 lib/gnucash/libgncmod-csv-export.so
@@ -241,7 +240,6 @@ lib/gnucash/libgncmod-html.so
 lib/gnucash/libgncmod-ledger-core.so
 lib/gnucash/libgncmod-locale-reports-us.so
 lib/gnucash/libgncmod-log-replay.so
-${PLIST.ofx}lib/gnucash/libgncmod-ofx.so
 lib/gnucash/libgncmod-qif-import.so
 lib/gnucash/libgncmod-qif.so
 lib/gnucash/libgncmod-register-core.so
@@ -481,7 +479,6 @@ share/glib-2.0/schemas/org.gnucash.dialogs.export.csv.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.import.csv.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.import.generic.gschema.xml
-${PLIST.ofx}share/glib-2.0/schemas/org.gnucash.dialogs.import.ofx.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.import.qif.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.reconcile.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.sxs.gschema.xml
@@ -814,9 +811,13 @@ share/gnucash/accounts/pt_PT/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_auto.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_autoloan.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_common.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_homeloan.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_kids.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_otherloan.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_carloan.gnucash-xea
@@ -1003,7 +1004,6 @@ share/gnucash/jqplot/jquery.jqplot.js
 share/gnucash/jqplot/jquery.min.js
 share/gnucash/make-prefs-migration-script.xsl
 share/gnucash/migratable-prefs.xml
-share/gnucash/pixmaps/Makefile
 share/gnucash/pixmaps/gnucash-icon-48x48.bmp
 share/gnucash/pixmaps/gnucash-icon.ico
 share/gnucash/pixmaps/gnucash_splash.png
@@ -1180,7 +1180,6 @@ share/gnucash/ui/gnc-plugin-csv-import-ui.xml
 share/gnucash/ui/gnc-plugin-customer-import-ui.xml
 share/gnucash/ui/gnc-plugin-file-history-ui.xml
 share/gnucash/ui/gnc-plugin-log-replay-ui.xml
-${PLIST.ofx}share/gnucash/ui/gnc-plugin-ofx-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree2-ui.xml
 share/gnucash/ui/gnc-plugin-page-budget-ui.xml
