@@ -5,6 +5,7 @@ CANNA_MODULE=	canuum
 .include "../../wip/canna/Makefile.common"
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
+LICENSE=	gnu-gpl-v2
 
 INSTALLATION_DIRS=	${PKGMANDIR}/ja_JP.EUC/man1
 
