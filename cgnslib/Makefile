@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgns/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.cgns.org/
 COMMENT=	CFD General Notation System library code
-LICENSE=	png-license
+LICENSE=	zlib
 
 WRKSRC=		${WRKDIR}/cgnslib_3.1.3
 
