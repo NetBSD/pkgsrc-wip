@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.math.ethz.ch/users/fukudak/cdd/
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	https://www.inf.ethz.ch/personal/fukudak/cdd_home/
 COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
