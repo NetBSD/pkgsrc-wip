@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/misc/} \
 MAINTAINER=		lkundrak@skosi.org
 HOMEPAGE=		http://freshmeat.net/projects/util-linux/
 COMMENT=		The enhanced Discordian date program
-#LICENSE=		# GPL, but which version?
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
