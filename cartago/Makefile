@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://alice.unibo.it/xwiki/bin/view/CARTAGO/
 COMMENT=	Framework for programming and executing environments in multi-agent
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2.1 # or later
 
 USE_TOOLS+=	pax
 NO_BUILD=	yes
