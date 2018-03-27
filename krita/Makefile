@@ -28,7 +28,6 @@ DEPENDS+=	kitemmodels-[0-9]*:../../devel/kitemmodels
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--fatal-warnings
 
 BUILDLINK_TRANSFORM+=		rm:-Werror=implicit-function-declaration
-BUILDLINK_TRANSFORM+=		rm:-fvisibility=hidden
 
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
