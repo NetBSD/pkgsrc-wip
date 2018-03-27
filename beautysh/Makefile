@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/bemeurer/beautysh/
 COMMENT=	Bash beautifier for the masses
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 PYSETUP=	setup.py
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
