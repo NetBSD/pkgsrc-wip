@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (ncbi-blast-2.7.1+-src.tar.gz) = d04a25f01c386abd8515957a2ce1dabf376743f8
+RMD160 (ncbi-blast-2.7.1+-src.tar.gz) = 7277419e16fb215aae4136a16e13bec963b70cbd
+SHA512 (ncbi-blast-2.7.1+-src.tar.gz) = e4b3914f51165ae4c82051068ed9d3470687a4e0f1df6274018c0ba14b241666a570d72265c7d167b8ce2a9075652744244a00e3e95c00c4252da0fbd80d17c6
+Size (ncbi-blast-2.7.1+-src.tar.gz) = 23254824 bytes
+SHA1 (patch-compilers_xcode30__prj_configure) = d6bf60c1a12ef1ddd93af1bce87543a1d5156bea
+SHA1 (patch-src_algo_blast_core_blast__kappa.c) = 0d0492bbb93d9ac48a9456bb5762c923ae84ffb9
+SHA1 (patch-src_build-system_Makefile.in.top) = 6e263f9eb1ba2a1b00a76ca0201e608531826d7b
+SHA1 (patch-src_build-system_cmake_cmake-configure) = e120568c934342c8003f89470d78b28f87ae48c4
+SHA1 (patch-src_build-system_configure) = cd2cffb73da34806c189f871799960f78a1a5a4d
