@@ -14,7 +14,7 @@ CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PORTVERSION}/
 
-MAINTAINER=	jwb@FreeBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
 LICENSE=	public-domain
@@ -39,13 +39,11 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 
 # The test for amq can hang, but amq is not needed so just avoid the test
 # configure chooses /usr/local/bin/ar with no flags
-# FreeBSD boost port flagged by configure as untested version
+# Resolve a conflict with libproj by moving libs to a subdir
 CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
 
-CFLAGS+=	-fopenmp
-CXXFLAGS+=	-fopenmp
 MAKE_JOBS_SAFE=	no	# Intermittent issues
 
 PORTVERSION=	2.7.1
@@ -58,8 +56,6 @@ PORTVERSION=	2.7.1
 CONFIGURE_ENV+=         ac_cv_func_statfs=no
 .endif
 
-# --libdir=${PREFIX}/lib/ncbi-tools++ doesn't respect DESTDIR, so do
-# a postinstall mv.
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
