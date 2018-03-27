@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	qtwebengine-opensource-src-${QTVERSION}
+DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
 COMMENT=	Qt5 WebEngine module
+MASTER_SITES+=	https://download.qt.io/archive/qt/5.10/5.10.1/submodules/
 
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
@@ -14,7 +15,7 @@ MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
-.include "../../wip/qt5-qtbase/Makefile.common"
+.include "../../x11/qt5-qtbase/Makefile.common"
 
 #.if ${_USE_CWRAPPERS} == "yes"
 #BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
@@ -65,11 +66,11 @@ post-install:
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
-.include "../../wip/qt5-qtdeclarative/buildlink3.mk"
-.include "../../wip/qt5-qtlocation/buildlink3.mk"
-.include "../../wip/qt5-qtmultimedia/buildlink3.mk"
-.include "../../wip/qt5-qtsensors/buildlink3.mk"
-.include "../../wip/qt5-qtwebchannel/buildlink3.mk"
+.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qtlocation/buildlink3.mk"
+.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.include "../../x11/qt5-qtsensors/buildlink3.mk"
+.include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../lang/python/tool.mk"
