@@ -1,10 +1,10 @@
 $NetBSD$
 
-# Add destdir support
+# Add destdir suppot and fix perms on installed files
 
---- src/build-system/Makefile.in.top.orig	2018-03-27 13:10:52.497034627 +0000
+--- src/build-system/Makefile.in.top.orig	2017-02-01 16:52:02.000000000 +0000
 +++ src/build-system/Makefile.in.top
-@@ -37,21 +37,21 @@ check: $(PROJECTS)
+@@ -37,22 +37,26 @@ check: $(PROJECTS)
  	fi
  
  install-toolkit:
@@ -14,7 +14,7 @@ $NetBSD$
 -	$(INSTALL) -m 644 $(llibdir)/*.* $(libdir)
 +	-$(RMDIR) $(DESTDIR)$(pincludedir)
 +	$(INSTALL) -d $(DESTDIR)$(bindir) $(DESTDIR)$(libdir) $(DESTDIR)$(pincludedir)
-+	$(INSTALL) $(lbindir)/* $(DESTDIR)$(bindir)
++	$(INSTALL) -m 755 $(lbindir)/* $(DESTDIR)$(bindir)
 +	$(INSTALL) -m 644 $(llibdir)/*.* $(DESTDIR)$(libdir)
  	if test -d $(llibdir)/ncbi; then \
 -	    cp -pPR $(llibdir)/ncbi $(libdir)/; \
@@ -27,10 +27,15 @@ $NetBSD$
  	    for x in *.a; do \
  	        $(LN_S) "$$x" "`$(BASENAME) \"$$x\" .a`-static.a"; \
  	    done
++	find $(DESTDIR)$(libdir) -name '*.a' -exec chmod 644 '{}' \;
++	find $(DESTDIR)$(libdir) -name '*.so*' -exec chmod 755 '{}' \;
  	for d in $(includedir0) $(incdir); do \
  	    cd $$d && find * -name .svn -prune -o -print | \
 -                cpio -pd $(pincludedir) ; \
 +                cpio -pd $(DESTDIR)$(pincludedir) ; \
  	done
++	find $(DESTDIR)$(pincludedir) -type f -exec chmod 644 '{}' \;
++	find $(DESTDIR)$(pincludedir) -type d -exec chmod 755 '{}' \;
  ## set up appropriate build and status directories somewhere under $(libdir)?
  
+ install-gbench:
