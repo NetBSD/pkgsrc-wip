@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	smithwaterman-0.0.0p20160702
+DISTNAME=	smithwaterman-0.0.0.20160702
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekg/}
 
