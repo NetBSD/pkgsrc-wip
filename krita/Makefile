@@ -27,8 +27,8 @@ DEPENDS+=	kitemmodels-[0-9]*:../../devel/kitemmodels
 # librpcsvc.so deprecation warnings
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--fatal-warnings
 
-# XXX is this necessary
 BUILDLINK_TRANSFORM+=		rm:-Werror=implicit-function-declaration
+BUILDLINK_TRANSFORM+=		rm:-fvisibility=hidden
 
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
@@ -41,8 +41,10 @@ BUILDLINK_TRANSFORM+=		rm:-Werror=implicit-function-declaration
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/ki18n/buildlink3.mk"
+.include "../../devel/kio/buildlink3.mk"
 .include "../../devel/kconfig/buildlink3.mk"
 .include "../../devel/kcoreaddons/buildlink3.mk"
+.include "../../devel/kcrash/buildlink3.mk"
 .include "../../textproc/kcompletion/buildlink3.mk"
 .include "../../x11/kitemviews/buildlink3.mk"
 .include "../../x11/kguiaddons/buildlink3.mk"
@@ -50,9 +52,12 @@ BUILDLINK_TRANSFORM+=		rm:-Werror=implicit-function-declaration
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
+.include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../wip/opencolorio/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

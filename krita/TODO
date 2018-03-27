@@ -1,2 +1,1 @@
-- Complains about LittleCMS (LCMS) missing at startup
-- Unclear link errors
+- Crashes at startup, looks like linking black magic is wrong.
