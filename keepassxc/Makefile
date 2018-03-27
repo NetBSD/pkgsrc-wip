@@ -15,6 +15,9 @@ CMAKE_ARG_PATH=	..
 CMAKE_ARGS+=	-DKEEPASSXC_BUILD_TYPE=Release
 CONFIGURE_DIRS=	build
 
+# various issues with symbols such at qt_plugin_instance not being visible.
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+
 .PHONY: qmake-bin-add
 pre-configure: qmake-bin-add
 
