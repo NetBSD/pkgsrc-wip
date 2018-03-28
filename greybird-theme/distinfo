@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (Greybird-3.22.7.tar.gz) = 79752472641c5d6ada7a284616a299114a2f4a25
-RMD160 (Greybird-3.22.7.tar.gz) = c288a306946cebbaffba29f1e74313fc1685804e
-SHA512 (Greybird-3.22.7.tar.gz) = 0e9fef6a76960279685e49ee326e58b8f3ed8df1c3f4c936efab4fcdc6442a208d04376e1989e9cfb396f5002b3fc597d79a6e4c7e2917a88114a535ea4419ab
-Size (Greybird-3.22.7.tar.gz) = 205724 bytes
+SHA1 (Greybird-3.22.8.tar.gz) = 2382d8b6da52d7cc9ac2db7318eaa46b1fac1fb1
+RMD160 (Greybird-3.22.8.tar.gz) = 766fc850db8775101dfc40b8b5339310bef4770d
+SHA512 (Greybird-3.22.8.tar.gz) = c6ac0dafc926ec2a0b01b4d44f602e533f97f806be32096208c08461502cadcda3f1e63012ad78ffaaa9c791c5af72ce2b7e0578b1f7c0d3ab407763bc40f94b
+Size (Greybird-3.22.8.tar.gz) = 211084 bytes

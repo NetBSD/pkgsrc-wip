@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	greybird-theme-3.22.7
+PKGNAME=	greybird-theme-3.22.8
 DISTNAME=	Greybird-${PKGVERSION_NOREV}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/}
