@@ -17,5 +17,8 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/jedisct1/dnscrypt-proxy/
 GO_DIST_BASE=	${DISTNAME}
 
+do-install:
+	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
+
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
