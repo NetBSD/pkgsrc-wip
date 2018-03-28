@@ -9,6 +9,8 @@ COMMENT=	DNS proxy with support for encrypted protocols
 HOMEPAGE=	https://github.com/jedisct1/dnscrypt-proxy
 LICENSE=	isc
 
+EXTRACT_USING=	bsdtar
+
 GITHUB_PROJECT=	dnscrypt-proxy
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
