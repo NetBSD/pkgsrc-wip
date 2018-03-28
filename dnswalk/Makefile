@@ -4,6 +4,7 @@
 DISTNAME=	dnswalk-2.0.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dnswalk/}
+LICENSE=	artistic
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dnswalk.sourceforge.net/
