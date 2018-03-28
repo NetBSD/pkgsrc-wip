@@ -25,4 +25,5 @@ post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
 .include "../../devel/libusb1/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
