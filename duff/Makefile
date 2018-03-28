@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://duff.sourceforge.net/
 COMMENT=	Quickly finds duplicates in a given set of files
-LICENSE=	png-license
+LICENSE=	zlib
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
