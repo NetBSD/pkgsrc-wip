@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=emirror/} \
 MAINTAINER=	holger@zedat.fu-berlin.de
 HOMEPAGE=	http://sourceforge.net/projects/emirror/
 COMMENT=	FTP mirroring tool with nice HTML logfiles
-
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
