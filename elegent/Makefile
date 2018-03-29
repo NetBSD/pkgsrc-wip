@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.hepforge.org/archive/elegent/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://elegent.hepforge.org/
 COMMENT=	Generator of elastic (anti)proton-proton collisions
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}
 
