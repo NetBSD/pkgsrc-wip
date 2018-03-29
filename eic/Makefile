@@ -7,6 +7,7 @@ WRKSRC=			${WRKDIR}/EiC/
 CATEGORIES=		lang
 MASTER_SITES=		http://rpm.rutgers.edu/repository/solaris/SOURCES/
 EXTRACT_SUFX=		.tgz
+LICENSE=	artistic
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		C style scripting lang
