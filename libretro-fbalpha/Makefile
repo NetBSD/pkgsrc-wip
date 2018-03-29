@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-fbalpha-0.2.97.42.20171123
+DISTNAME=	libretro-fbalpha-0.2.97.42.20180326
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	fbalpha
-GITHUB_TAG=	7332926d40c376a716c973bb1ea39171e4437b53
+GITHUB_TAG=	91e24354d50f685b13e39ecfe8159fd9042de894
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=Final_Burn_Alpha
