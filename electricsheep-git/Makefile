@@ -4,6 +4,7 @@ PKGNAME=		electricsheep-2.7
 DISTNAME=		electricsheep
 CATEGORIES=		x11
 MASTER_SITES=		http://electricsheep.org/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://electricsheep.org/
