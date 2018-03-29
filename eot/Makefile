@@ -8,6 +8,7 @@ MASTER_SITES=		http://gwolf.org/soft/eot/
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://gwolf.org/soft/eot/
 COMMENT=		Expire Old Threads
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Mail-Box>=2.038:../../mail/p5-Mail-Box
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
