@@ -4,6 +4,7 @@ DISTNAME=		emacs-pr-el-0.0.1
 CATEGORIES=		misc
 MASTER_SITES=		# empty
 DISTFILES=		# empty
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		#
