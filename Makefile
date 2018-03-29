@@ -3993,6 +3993,7 @@ SUBDIR+=	riak14
 SUBDIR+=	ricochet
 SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
+SUBDIR+=	ripgrep
 SUBDIR+=	ripole
 SUBDIR+=	rippled
 SUBDIR+=	rk
