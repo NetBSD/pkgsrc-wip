@@ -2890,6 +2890,7 @@ SUBDIR+=	py-Soya
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-achemkit
 SUBDIR+=	py-acq4
+SUBDIR+=	py-adb
 SUBDIR+=	py-addons
 SUBDIR+=	py-adsbibdesk
 SUBDIR+=	py-aerocalc

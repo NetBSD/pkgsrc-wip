@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 12:10:26 leot Exp $
+
+SHA1 (adb-1.2.0.tar.gz) = 2674959cf57597ef91e3c659678936b2e0db3a9e
+RMD160 (adb-1.2.0.tar.gz) = a1d428cbef5058ccf6e0ee7df624efa5ee4f510b
+SHA512 (adb-1.2.0.tar.gz) = 2bb02adbd43602471a48f8de92fd660835b9f0dfc41df30ebdbf6408f410ff56fc7e073b0e636ac1f1ed44aa98719e10ed64f646f5e5477d321a676c7f2f1708
+Size (adb-1.2.0.tar.gz) = 20508 bytes
