@@ -3334,6 +3334,7 @@ SUBDIR+=	py-librabbitmq
 SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
 SUBDIR+=	py-libtunepimp
+SUBDIR+=	py-libusb1
 SUBDIR+=	py-lifelines
 SUBDIR+=	py-linearalgebra
 SUBDIR+=	py-lingpy
