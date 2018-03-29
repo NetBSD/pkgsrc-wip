@@ -9,6 +9,7 @@ PKGNAME=		emboss-meme-2.3.1
 PKGREVISION=		1
 
 COMMENT=		Motif detection tool for EMBOSS
+LICENSE=	gnu-gpl-v2
 
 DIST_SUBDIR=		emboss/meme-2.3.1-20041107
 BUILD_TARGET=		#empty

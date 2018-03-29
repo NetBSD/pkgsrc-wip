@@ -8,6 +8,7 @@ DISTNAME=	MSE-1.0.0
 PKGNAME=	emboss-mse-1.0.0
 
 COMMENT=	Multiple Sequence Editor for EMBOSS
+LICENSE=	gnu-gpl-v2
 
 #ncurses required because:
 #mse.c: In function `Initscr':

@@ -9,6 +9,7 @@ PKGNAME=		emboss-phylip-3.57c
 PKGREVISION=		1
 
 COMMENT=		Package of programs for inferring phylogenies
+LICENSE=	gnu-gpl-v2
 
 DIST_SUBDIR=		emboss/phylip-3.57c-20041107
 BUILD_TARGET=		#empty

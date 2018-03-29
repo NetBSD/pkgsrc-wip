@@ -9,6 +9,7 @@ PKGNAME=		emboss-hmmer-2.1.1
 PKGREVISION=		2
 
 COMMENT=		Collection of bioinformatic programs supplimenting the EMBOSS package
+LICENSE=	gnu-gpl-v2
 
 DIST_SUBDIR=		emboss/hmmer-2.1.1-20041107
 BUILD_TARGET=		#EMPTY

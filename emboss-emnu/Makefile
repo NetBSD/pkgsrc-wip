@@ -9,6 +9,7 @@ PKGNAME=		emboss-emnu-1.05
 PKGREVISION=		1
 
 COMMENT=		Simple menu for EMBOSS applications
+LICENSE=	gnu-gpl-v2
 
 BUILD_TARGET=		#empty
 DIST_SUBDIR=		emboss/emnu-1.05-20041107

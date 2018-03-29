@@ -9,6 +9,7 @@ PKGNAME=		emboss-domainatrix-1.0.0
 PKGREVISION=		1
 
 COMMENT=		Collection of bioinformatic programs for EMBOSS
+LICENSE=	gnu-gpl-v2
 
 BUILD_TARGET=		#empty
 DIST_SUBDIR=		emboss/domainatrix-1.0.0-20040715

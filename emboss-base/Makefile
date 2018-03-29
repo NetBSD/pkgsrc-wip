@@ -6,6 +6,7 @@ PKGNAME=		emboss-base-2.9.0
 PKGREVISION=		2
 
 COMMENT=	European Molecular Biology Open Software Suite
+LICENSE=	gnu-gpl-v2
 
 DIST_SUBDIR=		emboss/emboss-2.9.0
 
