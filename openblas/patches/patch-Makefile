@@ -1,0 +1,71 @@
+$NetBSD$
+
+# Avoid name collision on ARCH
+# Also remove special library names.
+--- Makefile.orig	2015-10-27 20:44:50 UTC
++++ Makefile
+@@ -89,7 +89,6 @@
+ ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android))
+ 	@$(MAKE) -C exports so
+ 	@ln -fs $(LIBSONAME) $(LIBPREFIX).so
+-	@ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
+ endif
+ ifeq ($(OSNAME), FreeBSD)
+ 	@$(MAKE) -C exports so
+@@ -101,7 +100,6 @@
+ endif
+ ifeq ($(OSNAME), Darwin)
+ 	@$(MAKE) -C exports dyn
+-	@ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib
+ endif
+ ifeq ($(OSNAME), WINNT)
+ 	@$(MAKE) -C exports dll
+@@ -135,7 +133,6 @@
+ 	$(error OpenBLAS: neither static nor shared are enabled.)
+ endif
+ endif
+-	@-ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
+ 	@for d in $(SUBDIRS) ; \
+ 	do if test -d $$d; then \
+ 	  $(MAKE) -C $$d $(@F) || exit 1 ; \
+@@ -166,7 +163,6 @@
+ prof : prof_blas prof_lapack
+ 
+ prof_blas :
+-	ln -fs $(LIBNAME_P) $(LIBPREFIX)_p.$(LIBSUFFIX)
+ 	for d in $(SUBDIRS) ; \
+ 	do if test -d $$d; then \
+ 	  $(MAKE) -C $$d prof || exit 1 ; \
+@@ -177,7 +173,6 @@
+ endif
+ 
+ blas :
+-	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
+ 	for d in $(BLASDIRS) ; \
+ 	do if test -d $$d; then \
+ 	  $(MAKE) -C $$d libs || exit 1 ; \
+@@ -185,7 +180,6 @@
+ 	done
+ 
+ hpl :
+-	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
+ 	for d in $(BLASDIRS) ../laswp exports ; \
+ 	do if test -d $$d; then \
+ 	  $(MAKE) -C $$d $(@F) || exit 1 ; \
+@@ -199,7 +193,6 @@
+ endif
+ 
+ hpl_p :
+-	ln -fs $(LIBNAME_P) $(LIBPREFIX)_p.$(LIBSUFFIX)
+ 	for d in $(SUBDIRS) ../laswp exports ; \
+ 	do if test -d $$d; then \
+ 	  $(MAKE) -C $$d $(@F) || exit 1 ; \
+@@ -238,7 +238,7 @@ ifndef NOFORTRAN
+ 	-@echo "LOADOPTS    = $(FFLAGS) $(EXTRALIB)" >> $(NETLIB_LAPACK_DIR)/make.inc
+ 	-@echo "CC          = $(CC)" >> $(NETLIB_LAPACK_DIR)/make.inc
+ 	-@echo "override CFLAGS      = $(LAPACK_CFLAGS)" >> $(NETLIB_LAPACK_DIR)/make.inc
+-	-@echo "ARCH        = $(AR)" >> $(NETLIB_LAPACK_DIR)/make.inc
++	-@echo "ARCH_       = $(AR)" >> $(NETLIB_LAPACK_DIR)/make.inc
+ 	-@echo "ARCHFLAGS   = -ru" >> $(NETLIB_LAPACK_DIR)/make.inc
+ 	-@echo "RANLIB      = $(RANLIB)" >> $(NETLIB_LAPACK_DIR)/make.inc
+ 	-@echo "LAPACKLIB   = ../$(LIBNAME)" >> $(NETLIB_LAPACK_DIR)/make.inc
