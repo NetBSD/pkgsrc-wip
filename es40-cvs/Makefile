@@ -11,6 +11,7 @@ SITES.${VGABIOS}=	http://savannah.gnu.org/download/vgabios/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.es40.org/
 COMMENT=	AlphaServer ES40 emulator
+LICENSE=	gnu-gpl-v2
 
 CVS_REPOSITORIES=	es40
 CVS_ROOT.es40=		:pserver:anonymous:@es40.cvs.sourceforge.net:/cvsroot/es40
