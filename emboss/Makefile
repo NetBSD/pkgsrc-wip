@@ -7,6 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		#empty
 DISTFILES=		#empty
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://emboss.sourceforge.net/
