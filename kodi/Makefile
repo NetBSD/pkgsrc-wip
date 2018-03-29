@@ -69,7 +69,7 @@ do-build:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/crossguid/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"

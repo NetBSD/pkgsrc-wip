@@ -43,7 +43,7 @@ REPLACE_PYTHON=		python/examples/*.py
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/confuse/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../lang/python/application.mk"

@@ -8,7 +8,7 @@ LIBFTDI1_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libftdi1+=	libftdi1>=1.2
 BUILDLINK_PKGSRCDIR.libftdi1?=		../../wip/libftdi1
 
-.include "../mk/libusb.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .endif	# LIBFTDI1_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libftdi1

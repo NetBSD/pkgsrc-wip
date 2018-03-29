@@ -15,5 +15,5 @@ WRKSRC=			${WRKDIR}/p2kmoto-0.1
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

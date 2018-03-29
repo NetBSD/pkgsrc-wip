@@ -24,5 +24,5 @@ INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/udev/rules.d/ ${EGDIR}
 
 
 BUILDLINK_ABI_DEPENDS.libusb+=	libusb>=0.1.11
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
