@@ -1,0 +1,11 @@
+# $NetBSD$
+BUILDLINK_TREE+=	freebayes
+
+.if !defined(FREEBAYES_BUILDLINK3_MK)
+FREEBAYES_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.freebayes+=	freebayes>=2018.03.23
+BUILDLINK_PKGSRCDIR.freebayes?=		../../wip/freebayes
+.endif	# FREEBAYES_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-freebayes
