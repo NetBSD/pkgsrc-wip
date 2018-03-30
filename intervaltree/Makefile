@@ -24,10 +24,10 @@
 # .endif
 # .include <bsd.port.post.mk>
 
-DISTNAME=	intervaltree-${PORTVERSION}
+DISTNAME=	intervaltree-0.0.0.20151213
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekg/}
-GITHUB_TAG=	${PORTVERSION}
+GITHUB_TAG=	8fc4be91866237995e1105689d84bece619f4663
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ekg/intervaltree
@@ -42,15 +42,12 @@ MAKE_JOBS_SAFE=	no
 USE_LANGUAGES=	c c++
 
 # Adapt REINPLACE commands to SUBST:
-SUBST_CLASSES+=		
-SUBST_STAGE.=	post-patch
-SUBST_MESSAGE.=	
-SUBST_FILES.=	
-SUBST_SED.=	
-INSTALL_TARGET=	install-strip
+#SUBST_CLASSES+=
+#SUBST_STAGE.=	post-patch
+#SUBST_MESSAGE.=
+#SUBST_FILES.=
+#SUBST_SED.=
 
-PORTVERSION=	49a0e290efaaa760e0b03e52ca18ac03e7582f23
-DATADIR=	${PREFIX}/share/intervaltree
-DOCSDIR=	${PREFIX}/share/doc/intervaltree
+INSTALL_TARGET=	install-strip
 
 .include "../../mk/bsd.pkg.mk"
