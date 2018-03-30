@@ -16,11 +16,9 @@ HOMEPAGE=	https://github.com/ekg/tabixpp
 COMMENT=	C++ wrapper to tabix indexer
 LICENSE=	mit
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 
 CXXFLAGS+=	-I${PREFIX}/include
-# Check this
 MAKE_ENV+=	HTS_HEADERS='' LIBPATH=-L${PREFIX}/lib HTS_LIB=''
 INSTALL_TARGET=	install-strip
 
