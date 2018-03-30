@@ -14,22 +14,8 @@ HOMEPAGE=	https://github.com/vcflib/vcflib
 COMMENT=	C++ library and CLI tools for parsing and manipulating VCF files
 LICENSE=	mit
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
-
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-# FreeBSD's SHEBANG_FILES may include bash, perl, python, etc.
-# I don't know which is which, so you'll have to finish.
-# Add bash, etc. to USE_TOOLS if used below.
-#
-# REPLACE_SH=
-# REPLACE_BASH=
-# REPLACE_CSH=
-# REPLACE_KSH=
-# REPLACE_PERL=
-# REPLACE_PYTHON=
 
 pre-configure:
 	${CP} ${FILESDIR}/Makefile.external-libs ${WRKSRC}
@@ -49,16 +35,15 @@ INSTALL_TARGET=	install-strip
 
 PORTVERSION=	0.0.0.20180208
 
-#SUBST_CLASSES+=	ldflags
-#SUBST_FILES.ldflags=	${WRKSRC}/Makefile.external-libs
-#SUBST_STAGE.ldflags=	post-patch
-#SUBST_SED.ldflags=	-e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
+SUBST_CLASSES+=	ldflags
+SUBST_FILES.ldflags=	${WRKSRC}/Makefile.external-libs
+SUBST_STAGE.ldflags=	post-patch
+SUBST_SED.ldflags=	-e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
-#MAKE_FLAGS=	LIB_PATH+=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+MAKE_FLAGS=	LIB_PATH+=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
-# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
 .include "../../mk/bsd.prefs.mk"
 
 # GCC disables sse2 by default on i386, but it's required for vcflib
