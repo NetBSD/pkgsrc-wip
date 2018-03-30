@@ -14,9 +14,9 @@ HOMEPAGE=	https://github.com/ekg/multichoose
 COMMENT=	Generate multiset combinations (n multichoose k)
 LICENSE=	mit
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 REPLACE_PYTHON=	*.py
+
 INSTALL_TARGET=	install-strip
 
 pre-configure:
