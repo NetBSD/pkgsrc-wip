@@ -59,10 +59,10 @@ $(LIB): $(OBJS)
 	$(AR) rs $(LIB) $(OBJS)
 
 $(SLIB): $(OBJS)
-	$(CXX) -shared -Wl,-soname,$(SLIB) -o $(SLIB) $(OBJS)
+	$(CXX) $(LDFLAGS) -shared -Wl,-soname,$(SLIB) -o $(SLIB) $(OBJS)
 
 tabix++: $(OBJS) main.cpp $(HTS_LIB)
-	$(CXX) $(CXXFLAGS) -o $@ main.cpp $(OBJS) $(INCLUDES) $(LIBPATH) \
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ main.cpp $(OBJS) $(INCLUDES) $(LIBPATH) \
 		-lhts -lpthread -lm -lz
 
 install: all
@@ -70,8 +70,9 @@ install: all
 	$(MKDIR) $(DESTDIR)$(PREFIX)/include
 	$(MKDIR) $(DESTDIR)$(PREFIX)/lib
 	$(INSTALL) $(BIN) $(DESTDIR)$(PREFIX)/bin
-	$(INSTALL) *.hpp $(DESTDIR)$(PREFIX)/include
-	$(INSTALL) $(LIB) $(SLIB) $(DESTDIR)$(PREFIX)/lib
+	$(INSTALL) -m644 *.hpp $(DESTDIR)$(PREFIX)/include
+	$(INSTALL) $(SLIB) $(DESTDIR)$(PREFIX)/lib
+	$(INSTALL) -m644 $(LIB) $(DESTDIR)$(PREFIX)/lib
 
 install-strip: install
 	$(STRIP) $(DESTDIR)$(PREFIX)/bin/$(BIN) $(DESTDIR)$(PREFIX)/lib/$(SLIB)

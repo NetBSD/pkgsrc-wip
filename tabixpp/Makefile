@@ -26,12 +26,11 @@ INSTALL_TARGET=	install-strip
 
 PORTVERSION=	1.0.0.20171116
 
-post-patch:
+pre-configure:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
 post-install:
-	${CP} ${DESTDIR}${PREFIX}/lib/libtabix.so.1 \
-		${DESTDIR}${PREFIX}/lib/libtabix.so
+	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s libtabix.so.1 libtabix.so
 
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
