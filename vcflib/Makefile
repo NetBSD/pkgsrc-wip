@@ -6,11 +6,11 @@
 
 DISTNAME=	vcflib-${PORTVERSION}
 CATEGORIES=	biology
-MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	${PORTVERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vcflib/}
+GITHUB_TAG=	7e3d8066a6c6c0f22191a70d050ead23f9c453b3
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://example.com
+HOMEPAGE=	https://github.com/vcflib/vcflib
 COMMENT=	C++ library and CLI tools for parsing and manipulating VCF files
 LICENSE=	mit
 
@@ -23,26 +23,31 @@ USE_TOOLS+=	gmake
 # FreeBSD's SHEBANG_FILES may include bash, perl, python, etc.
 # I don't know which is which, so you'll have to finish.
 # Add bash, etc. to USE_TOOLS if used below.
-# 
-# REPLACE_SH=	
-# REPLACE_BASH=	
-# REPLACE_CSH=	
-# REPLACE_KSH=	
-# REPLACE_PERL=	
-# REPLACE_PYTHON=	
+#
+# REPLACE_SH=
+# REPLACE_BASH=
+# REPLACE_CSH=
+# REPLACE_KSH=
+# REPLACE_PERL=
+# REPLACE_PYTHON=
 
-CXXFLAGS+=	-I${LOCALBASE}/include/smithwaterman \
- 		-I${LOCALBASE}/include/multichoose \
- 		-I${LOCALBASE}/include/filevercmp \
- 		-I${LOCALBASE}/include/fastahack \
- 		-I${LOCALBASE}/include/intervaltree
+pre-configure:
+	${CP} ${FILESDIR}/Makefile.external-libs ${WRKSRC}
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s libvcflib.so.1 libvcflib.so
+
+CXXFLAGS+=	-I${PREFIX}/include/smithwaterman \
+ 		-I${PREFIX}/include/multichoose \
+ 		-I${PREFIX}/include/filevercmp \
+ 		-I${PREFIX}/include/fastahack \
+ 		-I${PREFIX}/include/intervaltree \
+		-DVERSION='"${PORTVERSION}"'
+
 MAKE_FILE=	Makefile.external-libs
 INSTALL_TARGET=	install-strip
 
-# PORTVERSION=	6451cf639cc7d735137218c4b08f597ba9dd6e73
-PORTVERSION=	790904320065e603c6af5b8a32f635134354467c
-DATADIR=	${PREFIX}/share/vcflib
-DOCSDIR=	${PREFIX}/share/doc/vcflib
+PORTVERSION=	0.0.0.20180208
 
 #SUBST_CLASSES+=	ldflags
 #SUBST_FILES.ldflags=	${WRKSRC}/Makefile.external-libs
