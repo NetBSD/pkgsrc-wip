@@ -5,24 +5,19 @@
 #              Thu Mar 22 18:28:27 CDT 2018               #
 ###########################################################
 
-PKGNAME=	dDocent-${PORTVERSION}
+DISTNAME=	dDocent-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jpuritz/}
 GITHUB_PROJECT=	dDocent
 GITHUB_TAG=	v${PORTVERSION}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://ddocent.com
+HOMEPAGE=	http://ddocent.com/
 COMMENT=	Bash pipeline for RAD sequencing
 LICENSE=	mit
 
-# Notes on 2015.11.30 snapshot:
 # bedtools version: https://github.com/jpuritz/dDocent/issues/15
 # New ddocent works with 2.23.0 or >= 2.26.0
-# vcftools 0.1.14 does not report version the same as 0.1.11, so
-# dDocent script fails to recognize it.  Should be easy to patch
-# assuming 0.1.14 is usable.
-# 0.1.15 reports version properly.
 # Do we really need trimadap?  It used to be part of seqtk.
 # ddocent test data do not unpack with FreeBSD 11.1 /usr/bin/unzip
 DEPENDS=	mawk>=0:../../lang/mawk \
@@ -34,51 +29,52 @@ DEPENDS=	mawk>=0:../../lang/mawk \
 		samtools>=1.3:../../wip/samtools \
 		vcftools>=0.1.15:../../wip/vcftools \
 		Trimmomatic>=0:../../wip/trimmomatic \
-		bamtools>=0:../../wip/bamtools \
 		stacks>=0:../../wip/stacks \
 		rainbow>=0:../../wip/rainbow \
 		trimadap>=0:../../wip/trimadap \
 		seqtk>=0:../../wip/seqtk \
 		bedtools2>=2.26.0:../../wip/bedtools2 \
 		pear-merger>=0:../../wip/pear-merger \
-		freebayes:../../wip/freebayes \
-		vcflib>=0:../../wip/vcflib
+
+#		freebayes>=0:../../wip/freebayes
 
 ## These follow patch-dDocent, so don't apply them within the source tree,
 ## or they'll get picked up by patch generators and hard-code PREFIX
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-install
-SUBST_SED.prefix+=	-i ''
 SUBST_SED.prefix+=	-e 's|%%PREFIX%%|${PREFIX}|g'
 SUBST_SED.prefix+=	-e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g'
 SUBST_FILES.prefix+=	${DESTDIR}${PREFIX}/bin/dDocent
 
-USE_LANGUAGES=	# None
-REPLACE_BASH=	scripts/*.sh scripts/dDocent_filters dDocent
+USE_LANGUAGES=	# none
+REPLACE_BASH=	dDocent *.sh
+REPLACE_BASH+=	scripts/ddocent-test* scripts/*.sh scripts/dDocent_filters
 REPLACE_PERL=	scripts/*.pl
 REPLACE_PYTHON=	scripts/*.py
 NO_BUILD=	yes
 USE_TOOLS=	bash perl unzip
+
+ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/usr/pkgsrc/wip/ddocent/work/.destdir/usr/pkg/bin/ddocent-test" is not allowed.
 
 PORTVERSION=	2.2.25
 JAVAJARDIR=	${PREFIX}/share/java/classes
 
 INSTALLATION_DIRS=	bin
 
+post-extract:
+	${CP} ${FILESDIR}/ddocent-test ${FILESDIR}/ddocent-test-cleanup \
+		${WRKSRC}/scripts
+
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} \
 		${WRKSRC}/dDocent \
 		${WRKSRC}/*.sh \
-		${FILESDIR}/ddocent-test \
-		${FILESDIR}/ddocent-test-cleanup \
+		${WRKSRC}/scripts/ddocent-test* \
 		${WRKSRC}/scripts/*.sh \
 		${WRKSRC}/scripts/*.pl \
 		${WRKSRC}/scripts/dDocent_filters \
 		${DESTDIR}${PREFIX}/bin
 
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
-# Linux doesn't have zlib in the base, so just in case...
-# .include "../../devel/zlib/buildlink3.mk"
+.include "../../wip/vcflib/buildlink3.mk"
+.include "../../wip/bamtools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

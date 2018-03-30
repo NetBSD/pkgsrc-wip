@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Locate tools installed via pkgsrc
+
 --- dDocent.orig	2018-03-06 14:22:03 UTC
 +++ dDocent
 @@ -27,15 +27,15 @@ do
