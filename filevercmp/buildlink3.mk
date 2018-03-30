@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	filevercmp
 FILEVERCMP_BUILDLINK3_MK:=
 BUILDLINK_DEPMETHOD.filevercmp?=	build
 
-BUILDLINK_API_DEPENDS.filevercmp+=	filevercmp>=261142f1529f6b7464f6ad96d0c77872ff919849
+BUILDLINK_API_DEPENDS.filevercmp+=	filevercmp>=0.0.0.20151117
 BUILDLINK_PKGSRCDIR.filevercmp?=	../../wip/filevercmp
 .endif	# FILEVERCMP_BUILDLINK3_MK
 
