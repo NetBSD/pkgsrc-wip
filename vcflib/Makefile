@@ -17,11 +17,10 @@ LICENSE=	mit
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-pre-configure:
-	${CP} ${FILESDIR}/Makefile.external-libs ${WRKSRC}
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s libvcflib.so.1 libvcflib.so
+SUBST_CLASSES+=	ldflags
+SUBST_FILES.ldflags=	${WRKSRC}/Makefile.external-libs
+SUBST_STAGE.ldflags=	post-patch
+SUBST_SED.ldflags=	-e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
 
 CXXFLAGS+=	-I${PREFIX}/include/smithwaterman \
  		-I${PREFIX}/include/multichoose \
@@ -29,20 +28,12 @@ CXXFLAGS+=	-I${PREFIX}/include/smithwaterman \
  		-I${PREFIX}/include/fastahack \
  		-I${PREFIX}/include/intervaltree \
 		-DVERSION='"${PORTVERSION}"'
-
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
+MAKE_FLAGS=	LIB_PATH+=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_FILE=	Makefile.external-libs
 INSTALL_TARGET=	install-strip
 
 PORTVERSION=	0.0.0.20180208
-
-SUBST_CLASSES+=	ldflags
-SUBST_FILES.ldflags=	${WRKSRC}/Makefile.external-libs
-SUBST_STAGE.ldflags=	post-patch
-SUBST_SED.ldflags=	-e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
-
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
-
-MAKE_FLAGS=	LIB_PATH+=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,6 +41,12 @@ MAKE_FLAGS=	LIB_PATH+=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 .if ${MACHINE_ARCH} == i386
 CFLAGS+=	-msse2
 .endif
+
+pre-configure:
+	${CP} ${FILESDIR}/Makefile.external-libs ${WRKSRC}
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s libvcflib.so.1 libvcflib.so
 
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../wip/tabixpp/buildlink3.mk"
