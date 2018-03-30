@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/06/06 18:49:33 krytarowski Exp $
 
-DISTNAME=	yelp-tools-3.16.1
-CATEGORIES=	misc
+DISTNAME=	yelp-tools-3.28.0
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config autoreconf autoconf automake gmake
-USE_LANGUAGES=	# none
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && \

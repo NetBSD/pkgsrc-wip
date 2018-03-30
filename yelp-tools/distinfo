@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/06/06 18:49:33 krytarowski Exp $
 
-SHA1 (yelp-tools-3.16.1.tar.gz) = 59029f1e744ee43f12ed02010a8edc8b2deff3a1
-RMD160 (yelp-tools-3.16.1.tar.gz) = 0a4f12a7693eecafdc3b408753c72d58b6399011
-Size (yelp-tools-3.16.1.tar.gz) = 34082 bytes
+SHA1 (yelp-tools-3.28.0.tar.gz) = 2dba792076017fdf02179b54a5b9d61db5f51f97
+RMD160 (yelp-tools-3.28.0.tar.gz) = 1b88807a3a091e4d76c9cab506212ecf630259b4
+SHA512 (yelp-tools-3.28.0.tar.gz) = 8f01b5e47aad38660b38491fb4c9037a7aad8f61f3121ef9712f7ec2b56dce7ae50366193723a51c5ecbfac07521c46dec7b12a19103a3f6275d46ca146a540b
+Size (yelp-tools-3.28.0.tar.gz) = 40602 bytes
