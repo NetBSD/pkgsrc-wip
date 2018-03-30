@@ -14,6 +14,8 @@ HOMEPAGE=	https://github.com/ekg/filevercmp
 COMMENT=	Filevercmp function as in sort --version-sort
 LICENSE=	gnu-gpl-v3
 
+INSTALL_TARGET=	install-strip
+
 pre-configure:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
