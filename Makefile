@@ -4123,6 +4123,7 @@ SUBDIR+=	shed
 SUBDIR+=	shell-fm
 SUBDIR+=	shellinabox
 SUBDIR+=	shoutcast
+SUBDIR+=	shotwell
 SUBDIR+=	showfont
 SUBDIR+=	showmesh
 SUBDIR+=	shttpd
