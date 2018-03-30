@@ -14,10 +14,6 @@ HOMEPAGE=	https://github.com/ekg/fastahack
 COMMENT=	Utilities for indexing and sequence extraction from FASTA files
 LICENSE=	gnu-gpl-v2
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
-
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 INSTALL_TARGET=	install-strip
 
