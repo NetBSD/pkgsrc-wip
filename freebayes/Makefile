@@ -4,7 +4,7 @@ DISTNAME=	freebayes-2018.03.23
 CATEGORIES=	biology
 MASTER_SITES=	https://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	dsiercks@uwm.edu
+MAINTAINER=	weinertw@uwm.edu
 HOMEPAGE=	https://github.com/ekg/freebayes
 COMMENT=	Bayesian haplotype-based polymorphism discovery and genotyping
 LICENSE=	mit
@@ -17,10 +17,10 @@ USE_TOOLS+=	gmake
 
 MAKE_JOBS_SAFE=	no
 
-# SUBST_CLASSES+=           compile
-# SUBST_FILES.compile=      ${WRKSRC}/src/Makefile.external-libs
-# SUBST_STAGE.compile=      post-patch
-# SUBST_SED.compile+=       -e "s|-lm|-lm -rpath=${PREFIX}/lib|g"
+SUBST_CLASSES+=           compile
+SUBST_FILES.compile=      ${WRKSRC}/src/Makefile.external-libs
+SUBST_STAGE.compile=      post-patch
+SUBST_SED.compile+=       -e "s|-lm|-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
 
 .include "../../mk/bsd.prefs.mk"
 
