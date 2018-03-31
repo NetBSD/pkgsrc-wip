@@ -35,8 +35,7 @@ DEPENDS=	mawk>=0:../../lang/mawk \
 		seqtk>=0:../../wip/seqtk \
 		bedtools2>=2.26.0:../../wip/bedtools2 \
 		pear-merger>=0:../../wip/pear-merger \
-
-#		freebayes>=0:../../wip/freebayes
+		freebayes>=0:../../wip/freebayes
 
 ## These follow patch-dDocent, so don't apply them within the source tree,
 ## or they'll get picked up by patch generators and hard-code PREFIX

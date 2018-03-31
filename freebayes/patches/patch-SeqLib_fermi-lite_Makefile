@@ -1,7 +1,8 @@
 $NetBSD$
 
-Allow makefile variable overrides.
---- SeqLib/fermi-lite/Makefile.orig	2018-03-23 18:50:25 UTC
+# Respect LDFLAGS from pkgsrc
+
+--- SeqLib/fermi-lite/Makefile.orig	2018-03-23 14:01:29.000000000 +0000
 +++ SeqLib/fermi-lite/Makefile
 @@ -1,6 +1,6 @@
 -CC=			gcc
@@ -13,3 +14,12 @@ Allow makefile variable overrides.
  INCLUDES=	
  OBJS=		kthread.o misc.o \
  			bseq.o htab.o bfc.o \
+@@ -17,7 +17,7 @@ LIBS=		-lm -lz -lpthread
+ all:$(PROG)
+ 
+ fml-asm:libfml.a example.o
+-		$(CC) $(CFLAGS) $^ -o $@ -L. -lfml $(LIBS)
++		$(CC) $(CFLAGS) $^ -o $@ -L. $(LDFLAGS) -lfml $(LIBS)
+ 
+ libfml.a:$(OBJS)
+ 		$(AR) -csru $@ $(OBJS)

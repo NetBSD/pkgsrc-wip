@@ -1,0 +1,15 @@
+$NetBSD$
+
+# Respect LDFLAGS from pkgsrc
+
+--- vcflib/tabixpp/Makefile.orig	2018-03-31 13:42:56.711911472 +0000
++++ vcflib/tabixpp/Makefile
+@@ -39,7 +39,7 @@ htslib/libhts.a:
+ 
+ tabix++: tabix.o main.cpp $(HTS_LIB)
+ 	$(CXX) $(CXXFLAGS) -o $@ main.cpp tabix.o $(INCLUDES) $(LIBPATH) \
+-		-lhts -lpthread -lm -lz
++		$(LDFLAGS) -lhts -lpthread -lm -lz
+ 
+ cleanlocal:
+ 	rm -fr gmon.out *.o a.out *.dSYM $(PROG) *~ *.a tabix.aux tabix.log \

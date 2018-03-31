@@ -1,7 +1,8 @@
 $NetBSD$
 
-Allow makefile variable overrides.
---- SeqLib/bwa/Makefile.orig	2018-03-23 18:47:04 UTC
+# Respect LDFLAGS from pkgsrc
+
+--- SeqLib/bwa/Makefile.orig	2018-03-23 14:01:29.000000000 +0000
 +++ SeqLib/bwa/Makefile
 @@ -1,8 +1,8 @@
 -CC=			gcc
@@ -15,3 +16,16 @@ Allow makefile variable overrides.
  DFLAGS=		-DHAVE_PTHREAD $(WRAP_MALLOC)
  ## moved is.o bwtiindex.o rope.o to LOBJS
  LOBJS=		utils.o kthread.o ksw.o bwt.o bntseq.o bwa.o bwamem.o bwamem_pair.o \
+@@ -28,10 +28,10 @@ endif
+ all:$(PROG)
+ 
+ bwa:libbwa.a $(AOBJS) main.o
+-		$(CC) $(CFLAGS) $(DFLAGS) $(AOBJS) main.o -o $@ -L. -lbwa $(LIBS)
++	$(CC) $(CFLAGS) $(DFLAGS) $(AOBJS) main.o -o $@ -L. $(LDFLAGS) -lbwa $(LIBS)
+ 
+ bwamem-lite:libbwa.a example.o
+-		$(CC) $(CFLAGS) $(DFLAGS) example.o -o $@ -L. -lbwa $(LIBS)
++	$(CC) $(CFLAGS) $(DFLAGS) example.o -o $@ -L. $(LDFLAGS) -lbwa $(LIBS)
+ 
+ libbwa.a:$(LOBJS)
+ 		$(AR) -csru $@ $(LOBJS)

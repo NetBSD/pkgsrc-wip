@@ -17,10 +17,10 @@ USE_TOOLS+=	gmake
 
 MAKE_JOBS_SAFE=	no
 
-SUBST_CLASSES+=           compile
-SUBST_FILES.compile=      ${WRKSRC}/src/Makefile.external-libs
-SUBST_STAGE.compile=      post-patch
-SUBST_SED.compile+=       -e "s|-lm|-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
+#SUBST_CLASSES+=           compile
+#SUBST_FILES.compile=      ${WRKSRC}/src/Makefile.external-libs
+#SUBST_STAGE.compile=      post-patch
+#SUBST_SED.compile+=       -e "s|-lm|-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
 
 .include "../../mk/bsd.prefs.mk"
 
