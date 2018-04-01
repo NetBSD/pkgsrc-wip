@@ -1,3 +1,2 @@
 @comment $NetBSD$
 bin/dnscrypt-proxy
-@pkgdir gopkg
