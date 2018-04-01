@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	newsboat-2.11
+DISTNAME=	newsboat-2.11.1
 CATEGORIES=	news
-MASTER_SITES=	https://newsboat.org/releases/2.11/
+MASTER_SITES=	https://newsboat.org/releases/2.11.1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
