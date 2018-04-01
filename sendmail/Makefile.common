@@ -39,8 +39,6 @@ MAKE_ENV+=	M4=${TOOLS_M4}
 
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=	-I../include -I../
-
 .if ${OPSYS} == "SunOS" && exists(/usr/include/paths.h)
 CFLAGS+=	-DSOLARIS_HAS_PATHS_H
 .endif
