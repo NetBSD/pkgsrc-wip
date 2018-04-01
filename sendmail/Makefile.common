@@ -1,0 +1,71 @@
+# $NetBSD: Makefile.common,v 1.65 2017/01/19 18:52:17 agc Exp $
+#
+# used by mail/libmilter/Makefile
+# used by mail/sendmail/Makefile
+# used by mail/sendmail-qtool/Makefile
+# used by mail/sendmail-cidrexpand/Makefile
+#
+
+DISTNAME=	sendmail.${DIST_VERS}
+CATEGORIES=	mail
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/snapshots/
+MASTER_SITES+=	ftp://ftp.sendmail.org/pub/sendmail/
+MASTER_SITES+=	ftp://ftp.sendmail.org/pub/sendmail/past-releases/
+MASTER_SITES+=	ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/
+
+OWNER?=		jnemeth@NetBSD.org
+HOMEPAGE=	http://www.sendmail.org/
+LICENSE=	sendmail-license
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/sendmail/distinfo
+FILESDIR=	${.CURDIR}/../../wip/sendmail/files
+PATCHDIR=	${.CURDIR}/../../wip/sendmail/patches
+
+USE_LANGUAGES=	c99
+
+DIST_VERS=	8.16.0.21
+
+MAKE_ENV+=	BSD_BINOWN=${BINOWN} BSD_BINGRP=${BINGRP} \
+		BSD_MANOWN=${MANOWN} BSD_MANGRP=${MANGRP} \
+		BUILDLINK_DIR=${BUILDLINK_DIR} \
+		SMRSH_CMDDIR=${SMRSH_CMDDIR}
+SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
+
+BUILD_DEFS+=	SMRSH_CMDDIR
+
+WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
+USE_TOOLS+=	gm4
+MAKE_ENV+=	M4=${TOOLS_M4}
+
+.include "../../mk/bsd.prefs.mk"
+
+CFLAGS+=	-I../include -I../
+
+.if ${OPSYS} == "SunOS" && exists(/usr/include/paths.h)
+CFLAGS+=	-DSOLARIS_HAS_PATHS_H
+.endif
+
+pre-configure:
+	cp ${FILESDIR}/sm_os_netbsd.h ${WRKSRC}/include/sm/os/sm_os_netbsd.h
+
+.PHONY: make-sendmail-siteconfig
+make-sendmail-siteconfig:
+	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
+	${CHMOD} +w ${SITECONFIG}
+
+.if !empty(PKG_OPTIONS:Minet6)
+	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
+.  if (${OPSYS} != "SunOS") && (${OPSYS} != "BSDOS") && \
+      (${OPSYS} != "DragonFly") && (${OPSYS} != "FreeBSD")
+	${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
+.  endif
+.endif
+
+	${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}
+.if ${OPSYS} == "SunOS"
+	${CAT} ${FILESDIR}/site.config.m4-fpic >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-libresolv >>${SITECONFIG}
+.  if exists(/usr/include/stdbool.h)
+	${CAT} ${FILESDIR}/site.config.m4-stdbool >>${SITECONFIG}
+.  endif
+.endif

@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.9 2014/06/15 20:48:50 jnemeth Exp $
+
+--- sendmail/mci.c.orig	2017-02-17 03:44:29.000000000 +0900
++++ sendmail/mci.c	2018-04-01 06:42:03.039662553 +0900
+@@ -20,6 +20,8 @@ SM_RCSID("@(#)$Id: mci.c,v 8.225 2013-11
+ #endif /* NETINET || NETINET6 */
+ 
+ #include <dirent.h>
++#include <limits.h>
++
+ #if STARTTLS
+ # include <tls.h>
+ #endif
+@@ -788,7 +790,11 @@ mci_lock_host_statfile(mci)
+ {
+ 	int save_errno = errno;
+ 	int retVal = EX_OK;
++#if defined(PATH_MAX)
++	char fname[PATH_MAX];
++#else
+ 	char fname[MAXPATHLEN];
++#endif
+ 
+ 	if (HostStatDir == NULL || mci->mci_host == NULL)
+ 		return EX_OK;

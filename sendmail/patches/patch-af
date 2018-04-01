@@ -1,0 +1,43 @@
+$NetBSD: patch-af,v 1.12 2014/06/15 20:48:50 jnemeth Exp $
+
+--- sendmail/conf.c.orig	2017-02-17 03:44:29.000000000 +0900
++++ sendmail/conf.c	2018-04-01 06:41:02.126385724 +0900
+@@ -43,6 +43,11 @@ SM_RCSID("@(#)$Id: conf.c,v 8.1192 2014-
+ #if HASULIMIT && defined(HPUX11)
+ # include <ulimit.h>
+ #endif /* HASULIMIT && defined(HPUX11) */
++
++#if !HAS_GETHOSTBYNAME2
++extern struct __res_state sm_res;
++#endif
++
+ #if STARTTLS
+ # include "tls.h"
+ #endif
+@@ -4267,13 +4272,13 @@ sm_getipnodebyname(name, family, flags, 
+ 	if (family == AF_INET6)
+ 	{
+ 		/* From RFC2133, section 6.1 */
+-		resv6 = bitset(RES_USE_INET6, _res.options);
+-		_res.options |= RES_USE_INET6;
++		resv6 = bitset(RES_USE_INET6, sm_res.options);
++		sm_res.options |= RES_USE_INET6;
+ 	}
+ 	SM_SET_H_ERRNO(0);
+ 	h = gethostbyname(name);
+ 	if (!resv6)
+-		_res.options &= ~RES_USE_INET6;
++		sm_res.options &= ~RES_USE_INET6;
+ 
+ 	/* the function is supposed to return only the requested family */
+ 	if (h != NULL && h->h_addrtype != family)
+@@ -4488,7 +4493,8 @@ sm_gethostbyaddr(addr, len, type)
+ 
+ #if NETINET6
+ 	if (type == AF_INET6 &&
+-	    IN6_IS_ADDR_UNSPECIFIED((struct in6_addr *) addr))
++	    (IN6_IS_ADDR_UNSPECIFIED((struct in6_addr *) addr) ||
++	    IN6_IS_ADDR_LINKLOCAL((struct in6_addr *) addr)))
+ 	{
+ 		/* Avoid reverse lookup for IPv6 unspecified address */
+ 		SM_SET_H_ERRNO(HOST_NOT_FOUND);

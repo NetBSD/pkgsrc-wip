@@ -1,0 +1,33 @@
+$NetBSD: distinfo,v 1.57 2015/11/03 23:27:20 agc Exp $
+
+SHA1 (sendmail.8.16.0.21.tar.gz) = cc58262708f1daed2365ee761ec9aa11b4bd07fe
+RMD160 (sendmail.8.16.0.21.tar.gz) = 0dc9db2a5f1e355578aa5434af778f7e59ff9a91
+SHA512 (sendmail.8.16.0.21.tar.gz) = faf6477255dea310cf5f8598f7ded9a3596abca92b538d9b4b09f757cbf8498855fb25ba8452994fb9ecea7928da4992da97a0456444f769cd05c304861ceddb
+Size (sendmail.8.16.0.21.tar.gz) = 2222770 bytes
+SHA1 (patch-aa) = bd1ab754f7146d002eaf8c0347e114b4049a7776
+SHA1 (patch-af) = d1a85e0004d55e203395ecbc55e8c98040626e08
+SHA1 (patch-ag) = f76de45c7e8d16207670e151265b7edbca4c045c
+SHA1 (patch-ah) = e6be09008b9230ffdd1560aaacbdbb2ee4fb8028
+SHA1 (patch-ai) = b8251931369bfc9c1ea534e7981bddf2e458fd11
+SHA1 (patch-aj) = e65e6fe44380de2f9c397c1a97677eb4ad285433
+SHA1 (patch-an) = 588dd34235b3fd0555bb4c645a441db721fc7c3e
+SHA1 (patch-ao) = 88dd76b71ad57a8d0efdb6e8518ff01689ecf634
+SHA1 (patch-ap) = 9c83d9ed1b4d8c851c106597638763515923a4ab
+SHA1 (patch-aq) = 4f6eea288f5ce146df67464d7ad8aa395eef3e3e
+SHA1 (patch-ar) = c519f1a9d0064de64343cbd5e369307263f33892
+SHA1 (patch-as) = 2aff1d452ef6fcc9e42a1c0175eac833f60f11d3
+SHA1 (patch-at) = 9b39751e19309928501ca9ad67d54f270708acaa
+SHA1 (patch-au) = ff5c2c274db49be75e532d7db3dbedde86948a1e
+SHA1 (patch-av) = 1b6bd4547930507ab67427bcf8a390c0afce0fb0
+SHA1 (patch-aw) = 9077b9fc4063bd1a66500b203d246bcddae8eb0f
+SHA1 (patch-ax) = adba9177404e10d5f461e1e8f0c4dd5840d78dd1
+SHA1 (patch-ay) = e6ba6b0fdb4c1d1df5dd7175d4d581ad9a76faae
+SHA1 (patch-az) = 592ec93f700723485a5969ae1f1836c64975d1d0
+SHA1 (patch-ba) = c190b11b9874f00a18b9c75b6e734f4a9dd3f68f
+SHA1 (patch-bb) = 6c86a60af25b02fc0389f1d40f59c5031d9679f1
+SHA1 (patch-bc) = 9e7346342dfe1ca5d84053b913df4be41a979683
+SHA1 (patch-bd) = 1a6d035c585838e771a1a677892b95bb82000a7b
+SHA1 (patch-be) = d2f3397b7880f23f8cbd5d3c4eb5ccfe6a6ca75b
+SHA1 (patch-bf) = 9c5faf5b38c18623e5ce4ffafc00a4430965e41a
+SHA1 (patch-bg) = 17b750d84333eacd39a23aa313d5ba24dc7d2156
+SHA1 (patch-libsm_notify.c) = 68f51ee752e5f1e948853053e6d72624ca73b475

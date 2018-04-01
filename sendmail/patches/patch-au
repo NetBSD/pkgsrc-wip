@@ -1,0 +1,87 @@
+$NetBSD: patch-au,v 1.2 2014/06/20 05:24:32 jnemeth Exp $
+
+--- sendmail/main.c.orig	2017-02-17 03:44:29.000000000 +0900
++++ sendmail/main.c	2018-04-01 06:57:00.542982374 +0900
+@@ -150,6 +150,10 @@ int		SyslogPrefixLen; /* estimated lengt
+ 	}								\
+ }
+ 
++#if NAMED_BIND
++struct __res_state sm_res;
++#endif
++
+ int
+ main(argc, argv, envp)
+ 	int argc;
+@@ -211,6 +215,14 @@ main(argc, argv, envp)
+ #if USE_ENVIRON
+ 	envp = environ;
+ #endif
++#if NAMED_BIND
++# if NAMED_RESN
++	sm_res = *(struct __res_state *)sm_malloc(sizeof(struct __res_state));
++	memset(&sm_res, 0, sizeof(struct __res_state));
++# else
++	sm_res = _res;
++# endif
++#endif
+ 
+ 	/* turn off profiling */
+ 	SM_PROF(0);
+@@ -694,21 +706,26 @@ main(argc, argv, envp)
+ 	*/
+ 
+ #if NAMED_BIND
+-	if (!bitset(RES_INIT, _res.options))
++	if (!bitset(RES_INIT, sm_res.options))
++
++# if NAMED_RESN
++		(void) res_ninit(&sm_res);
++# else
+ 		(void) res_init();
++# endif
+ 	if (tTd(8, 8))
+-		_res.options |= RES_DEBUG;
++		sm_res.options |= RES_DEBUG;
+ 	else
+-		_res.options &= ~RES_DEBUG;
++		sm_res.options &= ~RES_DEBUG;
+ # ifdef RES_NOALIASES
+ 	_res.options |= RES_NOALIASES;
+ # endif
+-	TimeOuts.res_retry[RES_TO_DEFAULT] = _res.retry;
++	TimeOuts.res_retry[RES_TO_DEFAULT] = sm_res.retry;
+ 	TimeOuts.res_retry[RES_TO_FIRST] = _res.retry;
+-	TimeOuts.res_retry[RES_TO_NORMAL] = _res.retry;
+-	TimeOuts.res_retrans[RES_TO_DEFAULT] = _res.retrans;
+-	TimeOuts.res_retrans[RES_TO_FIRST] = _res.retrans;
+-	TimeOuts.res_retrans[RES_TO_NORMAL] = _res.retrans;
++	TimeOuts.res_retry[RES_TO_NORMAL] = sm_res.retry;
++	TimeOuts.res_retrans[RES_TO_DEFAULT] = sm_res.retrans;
++	TimeOuts.res_retrans[RES_TO_FIRST] = sm_res.retrans;
++	TimeOuts.res_retrans[RES_TO_NORMAL] = sm_res.retrans;
+ #endif /* NAMED_BIND */
+ 
+ 	errno = 0;
+@@ -1397,8 +1414,8 @@ main(argc, argv, envp)
+ 	}
+ 
+ #if NAMED_BIND
+-	_res.retry = TimeOuts.res_retry[RES_TO_DEFAULT];
+-	_res.retrans = TimeOuts.res_retrans[RES_TO_DEFAULT];
++	sm_res.retry = TimeOuts.res_retry[RES_TO_DEFAULT];
++	sm_res.retrans = TimeOuts.res_retrans[RES_TO_DEFAULT];
+ #endif
+ 
+ 	/*
+@@ -2933,8 +2950,8 @@ main(argc, argv, envp)
+ 		sm_getla();
+ 		GrabTo = false;
+ #if NAMED_BIND
+-		_res.retry = TimeOuts.res_retry[RES_TO_FIRST];
+-		_res.retrans = TimeOuts.res_retrans[RES_TO_FIRST];
++		sm_res.retry = TimeOuts.res_retry[RES_TO_FIRST];
++		sm_res.retrans = TimeOuts.res_retrans[RES_TO_FIRST];
+ #endif
+ 		next = e->e_sibling;
+ 		e->e_sibling = NULL;
