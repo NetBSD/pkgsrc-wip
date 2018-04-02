@@ -4,6 +4,7 @@
 DISTNAME=	fastrpc-1.0.13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fastrpc/}
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	ondrej.tuma@firma.seznam.cz
 HOMEPAGE=	http://downloads.sourceforge.net/sourceforge/fastrpc/
