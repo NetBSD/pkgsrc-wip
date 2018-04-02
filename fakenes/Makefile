@@ -5,6 +5,7 @@ DISTNAME=		fakenes-0.5.4
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fakenes/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		zlib
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fakenes.sourceforge.net/
