@@ -6,6 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://dl.exactcode.de/oss/exact-image/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.exactcode.de/site/open_source/exactimage/
