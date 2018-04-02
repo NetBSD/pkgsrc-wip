@@ -1,0 +1,6 @@
+gmake[4]: Entering directory '/scratch/wip/modular-xorg-server-devel/work/xorg-server-1.19.99.902/hw/xfree86'
+  CC       sdksyms.o
+sdksyms.c:1773:15: error: expected expression before ',' token
+     (void *) &,                                                  /* ../../dri3/dri3.h:110 */
+               ^
+Makefile:821: recipe for target 'sdksyms.o' failed
