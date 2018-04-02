@@ -9,7 +9,7 @@ MASTER_SITES=	http://wwwth.mppmu.mpg.de/members/heinemey/feynhiggs/newversion/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.feynhiggs.de/FeynHiggs.html
 COMMENT=	Fortran code for the diagrammatic calculation of the masses
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 MAKE_JOBS_SAFE=	NO
 
