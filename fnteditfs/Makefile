@@ -4,6 +4,7 @@ DISTNAME=	fnteditfs-1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fonteditfs/}
 EXTRACT_SUFX=	.tgz
+LICENSE=	original-bsd
 
 MAINTAINER=	lkundrak@skosi.org
 HOMEPAGE=	http://fonteditfs.sourceforge.net/
