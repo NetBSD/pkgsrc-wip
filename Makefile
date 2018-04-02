@@ -1573,7 +1573,6 @@ SUBDIR+=	kdegraphics-thumbnailers
 SUBDIR+=	kdf
 SUBDIR+=	kdialog
 SUBDIR+=	keditbookmarks
-SUBDIR+=	keepassx-git
 SUBDIR+=	kfind
 SUBDIR+=	kgamma5
 SUBDIR+=	kget
