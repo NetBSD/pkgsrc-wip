@@ -4,6 +4,7 @@
 DISTNAME=		ethtool-1.6
 CATEGORIES=		net linux
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gkernel/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gkernel.sourceforge.net/
