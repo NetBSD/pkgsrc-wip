@@ -5,6 +5,7 @@ PKGNAME=	${DISTNAME:S/_/-/}
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://flyback.googlecode.com/files/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/flyback/
