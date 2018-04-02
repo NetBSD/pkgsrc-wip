@@ -4,6 +4,7 @@ DISTNAME=		fluxspace-0.0.3
 PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fluxspace/}
+LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		poff@sixbit.org
 HOMEPAGE=		http://fluxspace.sourceforge.net/
