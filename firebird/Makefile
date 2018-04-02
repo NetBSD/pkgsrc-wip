@@ -7,6 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=firebird/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		mpl-1.1
 
 MAINTAINER=		nel@soraneko.com, adam.hoka@gmail.com
 HOMEPAGE=		http://www.firebirdsql.org/
