@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine libc++ C++ standard library
-LICENSE=	modified-bsd
+LICENSE=	mit
 
 USE_LANGUAGES=		c c++ c++11
 USE_CMAKE=		yes
