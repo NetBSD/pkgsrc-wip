@@ -5,6 +5,7 @@ DISTNAME=	fluxbox-1.3.7
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	mit
 
 MAINTAINER=	loki.vt@gmail.com
 HOMEPAGE=	http://fluxbox.sourceforge.net/
