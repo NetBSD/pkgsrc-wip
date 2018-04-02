@@ -8,7 +8,7 @@ MASTER_SITES=		http://faculty.virginia.edu/wrpearson/fasta/fasta36/
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://fasta.bioch.virginia.edu/
 COMMENT=		FASTA sequence comparison programs
-LICENSE=		no-commercial-use
+LICENSE=		apache-2.0
 
 BUILD_DIRS=		src
 MAKE_FILE=		../make/Makefile.NetBSD
