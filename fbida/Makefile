@@ -5,6 +5,7 @@ DISTNAME=		fbida-2.09
 PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.kraxel.org/releases/fbida/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kraxel.org/blog/linux/fbida/
