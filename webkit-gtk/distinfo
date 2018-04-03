@@ -17,6 +17,7 @@ SHA1 (patch-Source_WTF_wtf_dtoa_utils.h) = 192bb016ef584f26967de94d29ee5e43db6fb
 SHA1 (patch-Source_WebCore_platform_FileSystem.cpp) = adef1a42c4e210f0a3dcb82807e2d2039684a0ec
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebKit2_NetworkProcess_cache_NetworkCacheFileSystem.cpp) = 99192d0551e18f3373324d5be8bbeab00a2f79e8
+SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = 9c58253868e06b3dd3cac936651ba7e6a1437fc6
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 03b72552414e7114bfa7ddc2d68fd97009a5ff7d
 SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 8eb8e9c2c9aeaed86cd95c61c86e0f3786385ac9
 SHA1 (patch-aj) = cd9a280c3bbab82c1a7aeb62a27ee6eb96c67ec2
