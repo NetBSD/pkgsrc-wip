@@ -6,6 +6,7 @@ PKGNAME=		fuse-sshfs-1.4
 PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fuse.sourceforge.net/
