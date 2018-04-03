@@ -8,7 +8,7 @@ MASTER_SITES=	/usr/pkgsrc/distfiles/
 MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	https://github.com/jcline/fuse-google-drive
 COMMENT=	FUSE filesystem wrapper for Google Drive
-LICENSE=	gplv2
+LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	fuse-google-drive
 GIT_REPO.fuse-google-drive=	http://github.com/jcline/fuse-google-drive.git
