@@ -6,6 +6,7 @@ PKGNAME=	freedup-1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://freedup.org/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	hallmann@ahatec.de
 HOMEPAGE=	http://freedup.org/
