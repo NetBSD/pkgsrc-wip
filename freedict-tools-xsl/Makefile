@@ -6,6 +6,7 @@ PKGNAME=	freedict-tools-xsl-0.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.freedict.org/
