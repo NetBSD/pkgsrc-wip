@@ -6,6 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fprobe/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://fprobe.sourceforge.net/
