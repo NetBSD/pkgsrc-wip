@@ -6,6 +6,7 @@ PKGNAME=	gcc42-${GCC_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://gcc.gnu.org/
