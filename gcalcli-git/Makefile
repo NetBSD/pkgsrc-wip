@@ -3,6 +3,7 @@
 DISTNAME=	gcalcli-3.4.0
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/insanum/gcalcli/
+LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/insanum/gcalcli/
