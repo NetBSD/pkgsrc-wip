@@ -16,4 +16,5 @@ SHA1 (ChezScheme/zlib-1.2.11.tar.gz) = 56559d4c03beaedb0be1c7481d6a371e2458a496
 RMD160 (ChezScheme/zlib-1.2.11.tar.gz) = 7fe2ff01eab9693ee5dca244161ff595b4372b9b
 SHA512 (ChezScheme/zlib-1.2.11.tar.gz) = 104c62ed1228b5f1199bc037081861576900eb0697a226cafa62a35c4c890b5cb46622e399f9aad82ee5dfb475bae26ae75e2bd6da3d261361b1c8b996970faf
 Size (ChezScheme/zlib-1.2.11.tar.gz) = 644492 bytes
+SHA1 (patch-c_expeditor.c) = ade00ada170bfda042cd5868de02e59382285ed1
 SHA1 (patch-configure) = 7b772b0a4ae04e9f7c786d7e170ecd8af5a5c0db
