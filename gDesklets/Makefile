@@ -6,6 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://gdesklets.de/files/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://gdesklets.de/
