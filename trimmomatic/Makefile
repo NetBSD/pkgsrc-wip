@@ -14,10 +14,8 @@ HOMEPAGE=	http://www.usadellab.org/cms/?page=trimmomatic
 COMMENT=	Flexible read trimming tool for Illumina NGS data
 LICENSE=	gnu-gpl-v3
 
-# Use Yum's java for now
-# USE_JAVA=	run
+USE_JAVA=	run
 
-# Just assuming C and C++: Adjust this!
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
@@ -26,7 +24,7 @@ WRKSRC=		${WRKDIR}/Trimmomatic-${PORTVERSION}
 PORTVERSION=	0.35
 DATADIR=	${PREFIX}/share/Trimmomatic
 
-INSTALLATION_DIRS=	bin lib/java share/Trimmomatic
+INSTALLATION_DIRS=	lib/java share/Trimmomatic
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/trimmomatic-0.35.jar ${DESTDIR}${PREFIX}/lib/java/trimmomatic.jar
