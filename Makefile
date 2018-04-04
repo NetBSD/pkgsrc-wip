@@ -3172,6 +3172,7 @@ SUBDIR+=	py-fitsarray
 SUBDIR+=	py-fix-yahoo-finance
 SUBDIR+=	py-fjd
 SUBDIR+=	py-flask-migrate
+SUBDIR+=	py-flask-restful
 SUBDIR+=	py-flavio
 SUBDIR+=	py-flipper
 SUBDIR+=	py-fluiddyn
