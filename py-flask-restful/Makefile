@@ -15,6 +15,7 @@ DEPENDS+=       ${PYPKGPREFIX}-sphinx>=1.6.3:../../textproc/py-sphinx
 DEPENDS+=       ${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
 DEPENDS+=       ${PYPKGPREFIX}-flask>=0.10:../../www/py-flask
 DEPENDS+=       ${PYPKGPREFIX}-six>=1.3.0:../../lang/py-six
+DEPENDS+=       ${PYPKGPREFIX}-aniso8601>=0.82:../../wip/py-aniso8601
 DEPENDS+=       ${PYPKGPREFIX}-six>=[0-9]*:../../time/py-pytz
 
 .include "../../lang/python/egg.mk"
