@@ -3374,6 +3374,7 @@ SUBDIR+=	py-mailingstats
 SUBDIR+=	py-mailq
 SUBDIR+=	py-mark
 SUBDIR+=	py-markovchain
+SUBDIR+=	py-marshmallow
 SUBDIR+=	py-math-snappy
 SUBDIR+=	py-mathjspy
 SUBDIR+=	py-matplottheme
