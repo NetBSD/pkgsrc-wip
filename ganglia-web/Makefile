@@ -23,7 +23,7 @@ MASTER_SITES=	http://downloads.sourceforge.net/project/ganglia/ganglia-web/${POR
 MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Ganglia network monitor web interface
-#LICENSE=	BSD3CLAUSE
+LICENSE=	original-bsd
 
 # Pessimistic assumption.  Test and change if possible.
 MAKE_JOBS_SAFE=	no
