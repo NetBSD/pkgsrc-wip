@@ -4,6 +4,7 @@
 DISTNAME=		Gauche-fastcgi-0.1
 CATEGORIES=		lang
 MASTER_SITES=		http://prdownloads.sourceforge.jp/gauche/8004/
+LICENSE=		modified-bsd
 
 MAINTAINER=		nel@soraneko.com
 HOMEPAGE=		http://sourceforge.jp/projects/gauche/
