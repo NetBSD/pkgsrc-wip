@@ -5,6 +5,7 @@ DISTNAME=		ganglia-3.1.9
 PKGNAME=		ganglia-monitor-core-3.1.9
 CATEGORIES=		net parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
+LICENSE=		original-bsd
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
