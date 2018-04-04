@@ -3610,6 +3610,7 @@ SUBDIR+=	py-pyswisseph
 SUBDIR+=	py-pythia
 SUBDIR+=	py-pythics
 SUBDIR+=	py-python-application
+SUBDIR+=	py-python-decouple
 SUBDIR+=	py-python-gnutls
 SUBDIR+=	py-pytkgen
 SUBDIR+=	py-pytools
