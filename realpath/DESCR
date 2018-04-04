@@ -1,0 +1,2 @@
+Some platforms, namely MacOS, realpath is not shiped with the system.
+This package provides a version from DragonFly BSD.
