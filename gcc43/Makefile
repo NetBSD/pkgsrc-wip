@@ -6,6 +6,7 @@ PKGNAME=		gcc43-${GCC_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-gpl-v3 AND gnu-lgpl-v3
 
 MAINTAINER=		blair.sadewitz@gmail.com
 HOMEPAGE=		http://gcc.gnu.org/
