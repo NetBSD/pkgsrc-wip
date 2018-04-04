@@ -2910,6 +2910,7 @@ SUBDIR+=	py-algebraixlib
 SUBDIR+=	py-algopy
 SUBDIR+=	py-amqpipe
 SUBDIR+=	py-amqplib
+SUBDIR+=	py-aniso8601
 SUBDIR+=	py-anfft
 SUBDIR+=	py-anki2-devel
 SUBDIR+=	py-annarchy
