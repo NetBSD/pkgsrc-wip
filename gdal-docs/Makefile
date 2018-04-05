@@ -6,6 +6,7 @@ PKGNAME=		gdal-docs-1.3.1
 PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		http://gdal.org/dl/
+LICENSE=		x11 AND mit
 
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://gdal.org/
