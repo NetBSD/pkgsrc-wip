@@ -8,6 +8,7 @@ PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glade/2.0/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://glade.gnome.org/
