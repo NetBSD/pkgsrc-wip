@@ -3,6 +3,7 @@
 DISTNAME=	gforth-0.7.99
 PKGNAME=	gforth-0.7.99 # needed because of cvs-package.mk
 CATEGORIES=	lang
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.complang.tuwien.ac.at/forth/gforth/
