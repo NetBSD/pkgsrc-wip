@@ -5,6 +5,7 @@ DISTNAME=	gdb-5.3
 PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
