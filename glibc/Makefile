@@ -5,6 +5,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=glibc/}
 DISTFILES=	glibc-${VERSION}${EXTRACT_SUFX} \
 		glibc-linuxthreads-${VERSION}${EXTRACT_SUFX}
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libc/libc.html
