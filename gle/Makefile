@@ -5,6 +5,7 @@ PKGNAME=	${DISTNAME:S/-graphics//:S/-src//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glx/} \
 		http://www.linas.org/gle/pub/
+LICENSE=	modified-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linas.org/gle/
