@@ -4,6 +4,7 @@ DISTNAME=	gimmie-0.2.8
 PKGREVISION=	3
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://www.beatniksoftware.com/gimmie/releases/
+LICENSE=	gnu-lgpl-v2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://beatniksoftware.com/gimmie/
