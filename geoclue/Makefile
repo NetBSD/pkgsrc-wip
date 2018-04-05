@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/GeoClue
 COMMENT=	Geoinformation service API and base providers
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2 # or later
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
