@@ -6,6 +6,7 @@ PKGREVISION=		8
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gdb/gdb.html
