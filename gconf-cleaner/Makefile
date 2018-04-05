@@ -5,8 +5,9 @@ DISTNAME=	gconf-cleaner-0.0.3
 PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gconf-cleaner.googlecode.com/files/
+LICENSE=	gnu-gpl-v2
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/gconf-cleaner/
 COMMENT=	Cleaning tool for GConf
 
