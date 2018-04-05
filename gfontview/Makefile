@@ -4,6 +4,7 @@
 DISTNAME=		gfontview-0.5.0
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gfontview/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://gfontview.sourceforge.net/
