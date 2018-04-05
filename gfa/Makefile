@@ -5,6 +5,7 @@ DISTNAME=	gfa-0.4.1
 PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gfa/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gfa.sourceforge.net/
