@@ -4,6 +4,7 @@
 DISTNAME=		gnormalize-0.35
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnormalize/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gnormalize.sourceforge.net/
