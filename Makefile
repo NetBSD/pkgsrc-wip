@@ -2888,6 +2888,7 @@ SUBDIR+=	py-Robinhood
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
 SUBDIR+=	py-Xlib
+SUBDIR+=	py-absl-py
 SUBDIR+=	py-achemkit
 SUBDIR+=	py-acq4
 SUBDIR+=	py-adb
