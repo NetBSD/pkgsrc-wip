@@ -4,6 +4,7 @@ DISTNAME=		gnome-applets-3.18.2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/3.18/}
 EXTRACT_SUFX=		.tar.xz
+LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/
