@@ -5,6 +5,7 @@ DISTNAME=		gnump3d-2.9.7
 CATEGORIES=		audio
 MASTER_SITES=		http://savannah.gnu.org/download/gnump3d/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gnump3d/
