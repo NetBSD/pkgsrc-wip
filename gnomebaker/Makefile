@@ -4,6 +4,7 @@ DISTNAME=	gnomebaker-0.6.4
 PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomebaker/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	leuzi@trash.net
 HOMEPAGE=	http://gnomebaker.sourceforge.net/v2/
