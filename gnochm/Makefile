@@ -3,6 +3,7 @@
 DISTNAME=	gnochm-0.9.11
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnochm/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnochm.sourceforge.net/
