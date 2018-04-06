@@ -3193,6 +3193,7 @@ SUBDIR+=	py-fyzz
 SUBDIR+=	py-galry
 SUBDIR+=	py-gammafit
 SUBDIR+=	py-gaphas
+SUBDIR+=	py-gast
 SUBDIR+=	py-gato
 SUBDIR+=	py-gatspy
 SUBDIR+=	py-gauss
