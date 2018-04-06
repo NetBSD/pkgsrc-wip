@@ -5,6 +5,7 @@ DISTNAME=	gnocchi-0.35
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnocchi/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	MarkoSchuetz@web.de
 HOMEPAGE=	http://www.muftor.com/Wikka/wikka.php?wakka=Gnocchi
