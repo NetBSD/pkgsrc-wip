@@ -6,6 +6,7 @@ PKGNAME=	glulxe-0.3.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/glulx/interpreters/glulxe/}
 EXTRACT_SUFX=	.tar.Z
+LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eblong.com/zarf/glulx/index.html
