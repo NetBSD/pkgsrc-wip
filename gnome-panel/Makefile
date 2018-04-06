@@ -4,6 +4,7 @@ DISTNAME=		gnome-panel-3.16.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/3.16/}
 EXTRACT_SUFX=		.tar.xz
+LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/
