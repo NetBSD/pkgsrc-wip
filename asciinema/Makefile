@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	asciinema-1.4.0
+DISTNAME=	asciinema-2.0.1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciinema/}
 

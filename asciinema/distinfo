@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (asciinema-1.4.0.tar.gz) = 80ceb47761fd8da9a1e98aaaad9c3e15153a2345
-RMD160 (asciinema-1.4.0.tar.gz) = 55767bcda5420e325b11778d0b952f68dce24d28
-SHA512 (asciinema-1.4.0.tar.gz) = d4737e2fa175f663dd89bb9d409a7e81c787439b7be648adaed658eb9fde283eb75f6e6753bd1fdaafad73d8c041b4560453553c1e55beb5f5fa1cf86940274a
-Size (asciinema-1.4.0.tar.gz) = 9980 bytes
+SHA1 (asciinema-2.0.1.tar.gz) = b263f4753cc701826313dfd1f695109af1e59a1e
+RMD160 (asciinema-2.0.1.tar.gz) = 2333a8c4d0c9c196d5f48a6c69213649d9aaaa0c
+SHA512 (asciinema-2.0.1.tar.gz) = dc6892b068161f111c53724f0de8bd82bbd9341f278733fc4de775a574ba5841e695115cadbbbe77ef58990f7b4059526c7c1438d4067ff9b3108eb71200b097
+Size (asciinema-2.0.1.tar.gz) = 17413 bytes
