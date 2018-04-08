@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_TOOLS+=	gmake
 
 MAKE_FILE=	Makefile.libretro
-MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+MAKE_FLAGS+=	GIT_VERSION=" \(pkgsrc\)"
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
