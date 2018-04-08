@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=   ${MASTER_SITE_PYPI:=g/grpcio/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://grpc.io
+HOMEPAGE=	https://grpc.io/
 COMMENT=	HTTP/2-based RPC framework
 LICENSE=	apache-2.0
 
@@ -29,5 +29,4 @@ DEPENDS+=       ${PYPKGPREFIX}-enum34>=1.0.4:../../devel/py-enum34
 .endif
 
 .include "../../lang/python/egg.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
