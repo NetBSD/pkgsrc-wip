@@ -835,6 +835,7 @@ SUBDIR+=	freeradius2
 SUBDIR+=	freeswitch-core
 SUBDIR+=	freeswitch-music
 SUBDIR+=	freesynd
+SUBDIR+=	freetalk
 SUBDIR+=	freevrrpd
 SUBDIR+=	fribid
 SUBDIR+=	fricas-svn
