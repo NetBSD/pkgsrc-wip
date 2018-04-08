@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2013/03/19 01:22:55 bubuchka Exp $
+# $NetBSD$
 
-CATEGORIES=	devel math
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://cran.r-project.org/web/packages/iterators/index.html
-COMMENT=	Iterator construct for R
+HOMEPAGE=	${R_HOMEPAGE_BASE}/iterators/
+COMMENT=	Provides Iterator Construct for R
 LICENSE=	apache-2.0
 
 R_PKGNAME=	iterators
-R_PKGVER=	1.0.6
+R_PKGVER=	1.0.9
+
+USE_LANGUAGES=	# none
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.5.0
-
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
