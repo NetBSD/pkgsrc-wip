@@ -21,4 +21,5 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/craft_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/craft_libretro.so
 
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
