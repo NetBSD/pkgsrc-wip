@@ -33,7 +33,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vimb.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vimb3.1
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

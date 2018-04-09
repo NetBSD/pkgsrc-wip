@@ -64,7 +64,7 @@ post-build:	teardownx
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../wip/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

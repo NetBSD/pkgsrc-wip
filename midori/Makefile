@@ -55,7 +55,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/midori
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
-.include "../../wip/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

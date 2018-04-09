@@ -78,7 +78,7 @@ BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../wip/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
