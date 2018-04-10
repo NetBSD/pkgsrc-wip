@@ -5,6 +5,7 @@ DISTNAME=		gpsdrive-2.10pre4
 PKGREVISION=		3
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gpsdrive.de/gpsdrive.tar/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		alnix@phear.org
 HOMEPAGE=		http://www.gpsdrive.de/
