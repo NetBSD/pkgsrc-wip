@@ -4,6 +4,7 @@ DISTNAME=		grass-${GRASS_VERSION}
 PKGREVISION=		6
 CATEGORIES=		geography
 MASTER_SITES=		http://grass.itc.it/grass64/source/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://grass.itc.it/
