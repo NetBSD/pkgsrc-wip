@@ -1,8 +1,0 @@
-$NetBSD: patch-ostream,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
-
---- ostream.orig	2014-09-28 09:03:34.000000000 +0000
-+++ ostream
-@@ -0,0 +1,3 @@
-+#pragma GCC visibility push(default)
-+#include_next <ostream>
-+#pragma GCC visibility pop

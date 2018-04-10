@@ -1,7 +1,0 @@
-At runtime, it warns about:
-
-(process:28642): GLib-CRITICAL **: g_path_get_basename: assertion 'file_name != NULL' failed
-[Child 28642] ###!!! ABORT: Aborting on channel error.: file /scratch/wip/firefox-hg/work/mozilla/ipc/glue/MessageChannel.cpp, line 2046
-[Child 28642] ###!!! ABORT: Aborting on channel error.: file /scratch/wip/firefox-hg/work/mozilla/ipc/glue/MessageChannel.cpp, line 2046
-
--- wiz 20160430
