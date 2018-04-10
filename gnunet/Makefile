@@ -8,6 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www2.cddc.vt.edu/gnu/ftp/gnu/gnunet/
 # http://www.gnunet.org/download/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnunet.org/
