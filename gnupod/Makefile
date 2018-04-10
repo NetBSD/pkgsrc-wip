@@ -6,6 +6,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		http://download.savannah.gnu.org/releases/gnupod/ \
 			http://blinkenlights.ch/gnupod-dist/stable/
 EXTRACT_SUFX=		.tgz
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gnupod/
