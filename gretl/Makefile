@@ -6,6 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gretl/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	asau@users.sourceforge.net
 HOMEPAGE=	http://gretl.sourceforge.net/
