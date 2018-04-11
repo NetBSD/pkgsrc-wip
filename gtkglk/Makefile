@@ -5,6 +5,7 @@ DISTNAME=	gtkglk-0.2
 PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/glk/implementations/}
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ifarchive.org/indexes/if-archiveXprogrammingXglkXimplementations.html
