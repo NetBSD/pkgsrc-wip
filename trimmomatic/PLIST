@@ -1,8 +1,8 @@
 @comment $NetBSD$
 lib/java/trimmomatic.jar
-share/Trimmomatic/adapters/NexteraPE-PE.fa
-share/Trimmomatic/adapters/TruSeq2-PE.fa
-share/Trimmomatic/adapters/TruSeq2-SE.fa
-share/Trimmomatic/adapters/TruSeq3-PE-2.fa
-share/Trimmomatic/adapters/TruSeq3-PE.fa
-share/Trimmomatic/adapters/TruSeq3-SE.fa
+share/trimmomatic/adapters/NexteraPE-PE.fa
+share/trimmomatic/adapters/TruSeq2-PE.fa
+share/trimmomatic/adapters/TruSeq2-SE.fa
+share/trimmomatic/adapters/TruSeq3-PE-2.fa
+share/trimmomatic/adapters/TruSeq3-PE.fa
+share/trimmomatic/adapters/TruSeq3-SE.fa

@@ -22,9 +22,9 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/Trimmomatic-${PORTVERSION}
 
 PORTVERSION=	0.35
-DATADIR=	${PREFIX}/share/Trimmomatic
+DATADIR=	${PREFIX}/share/trimmomatic
 
-INSTALLATION_DIRS=	lib/java share/Trimmomatic
+INSTALLATION_DIRS=	lib/java share/trimmomatic
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/trimmomatic-0.35.jar ${DESTDIR}${PREFIX}/lib/java/trimmomatic.jar
