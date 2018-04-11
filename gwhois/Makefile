@@ -5,6 +5,7 @@ PKGNAME=			${DISTNAME:S/_/-/g}
 PKGREVISION=			1
 CATEGORIES=			net
 MASTER_SITES=			http://gwhois.de/gwhois/
+LICENSE=			gnu-gpl-v2
 
 MAINTAINER=			mj@mjturner.net
 HOMEPAGE=			http://gwhois.de/gwhois/
