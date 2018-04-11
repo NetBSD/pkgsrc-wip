@@ -4,6 +4,7 @@ DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
 PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		# not defined
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		lars.nordlund@hem.utfors.se
 HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
