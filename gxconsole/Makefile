@@ -5,6 +5,7 @@ DISTNAME=	gxconsole-0.3.1
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxconsole/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://gxconsole.sourceforge.net/
