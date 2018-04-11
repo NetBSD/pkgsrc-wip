@@ -10,7 +10,7 @@ MASTER_SITES=	https://github.com/agordon/libgtextutils/releases/download/0.7/
 
 MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Gordon text utilities
-# LICENSE=	AGPLv3
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
