@@ -5,6 +5,7 @@ DISTNAME=	gupnp-ui-0.1.1
 PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.gupnp.org/sources/gupnp-ui/
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.gupnp.org/
