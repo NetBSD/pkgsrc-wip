@@ -8,6 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Manfred/}
 GITHUB_PROJECT=	gtk-engines-dwerg
 GITHUB_TAG=	03a9c43f2979cb4ccd59f5c12581c4a032ec246a
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Manfred/gtk-engines-dwerg
