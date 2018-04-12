@@ -1,13 +1,13 @@
 @comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:23 thomasklausner Exp $
 bin/tuxtype2
-share/doc/html/tuxtype2/index-1.html
-share/doc/html/tuxtype2/index-2.html
-share/doc/html/tuxtype2/index-3.html
-share/doc/html/tuxtype2/index-4.html
-share/doc/html/tuxtype2/index-5.html
-share/doc/html/tuxtype2/index-6.html
-share/doc/html/tuxtype2/index.html
 share/doc/tuxtype2/README
+share/doc/tuxtype2/index-1.html
+share/doc/tuxtype2/index-2.html
+share/doc/tuxtype2/index-3.html
+share/doc/tuxtype2/index-4.html
+share/doc/tuxtype2/index-5.html
+share/doc/tuxtype2/index-6.html
+share/doc/tuxtype2/index.html
 share/doc/tuxtype2/tuxtype.lsm
 share/tuxtype2/data/fonts/letters.ttf
 share/tuxtype2/data/fonts/menu.ttf
