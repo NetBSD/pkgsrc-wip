@@ -4,6 +4,7 @@ DISTNAME=		haskell-mode-2.7.0
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		http://projects.haskell.org/haskellmode-emacs/
+LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.haskell.org/haskell-mode/
