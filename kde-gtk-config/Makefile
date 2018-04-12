@@ -7,16 +7,16 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	Plasma5 GTK2 and GTK3 Configurator
 LICENSE=	gnu-lgpl-v2.1
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 CMAKE_ARGS+=	-DBUILDLINK_DIR=${BUILDLINK_DIR}
 
-DEPENDS+=	kde-cli-tools-[0-9]*:../../wip/kde-cli-tools
+DEPENDS+=	kde-cli-tools>=${PLASMAVER}:../../wip/kde-cli-tools
 
 USE_TOOLS+=	msgmerge pkg-config
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
@@ -28,8 +28,9 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cgctheme.knsrc \
 		${PKG_SYSCONFDIR}/xdg/cgctheme.knsrc
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
