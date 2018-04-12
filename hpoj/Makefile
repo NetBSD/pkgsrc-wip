@@ -6,6 +6,7 @@ PKGREVISION=		4
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hpoj/}
 EXTRACT_SUFX=		.tgz
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		domg@users.sourceforge.net
 HOMEPAGE=		http://hpoj.sourceforge.net/
