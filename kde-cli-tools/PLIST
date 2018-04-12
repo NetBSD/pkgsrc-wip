@@ -25,7 +25,6 @@ man/pt/man1/kdesu.1
 man/pt_BR/man1/kdesu.1
 man/sr/man1/kdesu.1
 man/sr@latin/man1/kdesu.1
-man/sv/man1/kdesu.1
 man/uk/man1/kdesu.1
 qt5/plugins/kcm_filetypes.so
 share/doc/HTML/ca/kcontrol5/filetypes/index.cache.bz2
@@ -70,10 +69,6 @@ share/doc/HTML/sr@latin/kcontrol5/filetypes/index.cache.bz2
 share/doc/HTML/sr@latin/kcontrol5/filetypes/index.docbook
 share/doc/HTML/sr@latin/kdesu/index.cache.bz2
 share/doc/HTML/sr@latin/kdesu/index.docbook
-share/doc/HTML/sv/kcontrol5/filetypes/index.cache.bz2
-share/doc/HTML/sv/kcontrol5/filetypes/index.docbook
-share/doc/HTML/sv/kdesu/index.cache.bz2
-share/doc/HTML/sv/kdesu/index.docbook
 share/doc/HTML/uk/kcontrol5/filetypes/index.cache.bz2
 share/doc/HTML/uk/kcontrol5/filetypes/index.docbook
 share/doc/HTML/uk/kdesu/index.cache.bz2
