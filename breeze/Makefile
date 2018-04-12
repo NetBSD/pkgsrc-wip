@@ -7,7 +7,7 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	Artwork, styles and assets for the Breeze visual style for the Plasma Desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v3
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 DEPENDS+=	breeze-icons>=5.19.0:../../graphics/breeze-icons
 
