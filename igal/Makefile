@@ -3,6 +3,7 @@
 DISTNAME=	igal-1.4.7-wt
 CATEGORIES=	www graphics
 MASTER_SITES=	http://trexler.at/igal/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	drue@users.sf.net
 HOMEPAGE=	http://trexler.at/igal/
