@@ -7,7 +7,7 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	KDE Window manager
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.21.0:../../x11/kinit
@@ -26,7 +26,7 @@ SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/kwin_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	data/CMakeLists.txt
 SUBST_FILES.xdg+=	kcmkwin/kwincompositing/CMakeLists.txt
