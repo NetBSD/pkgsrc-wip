@@ -32,8 +32,6 @@ share/doc/HTML/sr/kinfocenter/index.cache.bz2
 share/doc/HTML/sr/kinfocenter/index.docbook
 share/doc/HTML/sr@latin/kinfocenter/index.cache.bz2
 share/doc/HTML/sr@latin/kinfocenter/index.docbook
-share/doc/HTML/sv/kinfocenter/index.cache.bz2
-share/doc/HTML/sv/kinfocenter/index.docbook
 share/doc/HTML/uk/kinfocenter/index.cache.bz2
 share/doc/HTML/uk/kinfocenter/index.docbook
 share/examples/kde-xdg/menus/kinfocenter.menu
@@ -270,6 +268,7 @@ share/locale/et/LC_MESSAGES/kcmusb.mo
 share/locale/et/LC_MESSAGES/kcmview1394.mo
 share/locale/et/LC_MESSAGES/kinfocenter.mo
 share/locale/eu/LC_MESSAGES/kcm-about-distro.mo
+share/locale/eu/LC_MESSAGES/kcm_fileindexermonitor.mo
 share/locale/eu/LC_MESSAGES/kcm_energyinfo.mo
 share/locale/eu/LC_MESSAGES/kcm_memory.mo
 share/locale/eu/LC_MESSAGES/kcm_pci.mo

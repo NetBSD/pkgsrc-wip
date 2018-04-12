@@ -7,14 +7,14 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	Utility that provides information about a computer system
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	kcontrol/menus/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{SYSCONF_INSTALL_DIR}/xdg:{KDE_INSTALL_XDG_EX_DIR}:'
