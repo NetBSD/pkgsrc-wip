@@ -2,6 +2,7 @@
 bin/kscreen-console
 qt5/plugins/kcm_kscreen.so
 qt5/plugins/kf5/kded/kscreen.so
+share/examples/kde-xdg/kscreen.categories
 share/icons/hicolor/48x48/actions/kdocumentinfo.png
 share/icons/hicolor/scalable/actions/kdocumentinfo.svgz
 share/kcm_kscreen/qml/Output.qml
@@ -61,6 +62,7 @@ share/locale/he/LC_MESSAGES/kcm_displayconfiguration.mo
 share/locale/he/LC_MESSAGES/kscreen.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.kscreen.mo
 share/locale/hu/LC_MESSAGES/kcm_displayconfiguration.mo
+share/locale/hu/LC_MESSAGES/kscreen.mo
 share/locale/ia/LC_MESSAGES/kcm_displayconfiguration.mo
 share/locale/ia/LC_MESSAGES/kscreen.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_org.kde.plasma.kscreen.mo
