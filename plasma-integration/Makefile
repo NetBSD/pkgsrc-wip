@@ -7,7 +7,7 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	Integration of Qt application with KDE workspaces
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 DEPENDS+=	noto-ttf-[0-9]*:../../fonts/noto-ttf
 DEPENDS+=	Hack-ttf-[0-9]*:../../fonts/Hack-ttf
@@ -20,6 +20,6 @@ REPLACE_PERL+=	src/platformtheme/*.pl
 
 .include "../../devel/kio/buildlink3.mk"
 .include "../../wip/kwayland/buildlink3.mk"
-.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
