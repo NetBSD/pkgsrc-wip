@@ -7,7 +7,7 @@ HOMEPAGE=	https://community.kde.org/KDE_PIM
 COMMENT=	KDE library for regional holiday information
 LICENSE=	gnu-lgpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge
 

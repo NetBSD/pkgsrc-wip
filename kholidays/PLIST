@@ -22,7 +22,7 @@ lib/cmake/KF5Holidays/KF5HolidaysTargets-noconfig.cmake
 lib/cmake/KF5Holidays/KF5HolidaysTargets.cmake
 lib/libKF5Holidays.so
 lib/libKF5Holidays.so.5
-lib/libKF5Holidays.so.5.7.1
+lib/libKF5Holidays.so.5.7.3
 qt5/mkspecs/modules/qt_KHolidays.pri
 qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 qt5/qml/org/kde/kholidays/qmldir
