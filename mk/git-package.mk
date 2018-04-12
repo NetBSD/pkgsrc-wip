@@ -202,8 +202,10 @@ _GIT_CMD.checkout.${repo}= \
 	    checkout ${_GIT_CHECKOUT_FLAGS} "$$ref";			\
 	else								\
 	  ${STEP_MSG} "Checking out $$revision.";			\
+	  rev_before=`${_GIT_CMDLINE.${repo}} -C "$$extractdir" show-ref HEAD`; \
 	  ${_GIT_CMDLINE.${repo}} -C "$$extractdir"			\
 	    checkout ${_GIT_CHECKOUT_FLAGS} "$$revision";		\
+	  rev_after=`${_GIT_CMDLINE.${repo}} -C "$$extractdir" show-ref HEAD`; \
 	fi;								\
 	\
 	${STEP_MSG} "Updating submodules of $$extractdir.";		\
@@ -212,10 +214,12 @@ _GIT_CMD.checkout.${repo}= \
 
 # Create the cached archive from the checked out repository
 _GIT_CMD.create_archive.${repo}= \
-	${STEP_MSG} "Creating cached Git archive $${archive\#\#*/}.";	\
-	${MKDIR} "$${archive%/*}";					\
-	pax -w "$$extractdir" | gzip > "$$archive.tmp";			\
-	${MV} "$$archive.tmp" "$$archive"
+	if [ "$${rev_before-unknown}" != "$${rev_after-unknown}" ]; then \
+	  ${STEP_MSG} "Creating cached Git archive $${archive\#\#*/}.";	\
+	  ${MKDIR} "$${archive%/*}";					\
+	  pax -w "$$extractdir" | gzip > "$$archive.tmp";		\
+	  ${MV} "$$archive.tmp" "$$archive";				\
+	fi
 .endfor
 
 pre-extract: do-git-extract
