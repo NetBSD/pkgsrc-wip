@@ -7,7 +7,7 @@ HOMEPAGE=	https://userbase.kde.org/KSysGuard
 COMMENT=	Library to track and control the processes running in your system
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
