@@ -5,6 +5,7 @@ DISTNAME=	HepMCVisual-1.1.6
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.hepforge.org/archive/hepmcvisual/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/hepmcvisual/
