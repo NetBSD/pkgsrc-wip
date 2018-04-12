@@ -4,6 +4,7 @@
 DISTNAME=	ices-0.2.3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.icecast.org/releases/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
