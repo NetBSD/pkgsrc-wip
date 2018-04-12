@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brian/}
-EXTRACT_SUFX=	.zip#md5=1061bf5db014c9194c232e37b5715e46
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.briansimulator.org/

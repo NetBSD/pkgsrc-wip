@@ -4,7 +4,7 @@ DISTNAME=	thermostat-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
 MASTER_SITES=	https://pypi.python.org/packages/19/2d/181ae49bfe59b604a0fabde3c47f9d88c0187130f2f15b58262b7798e5a5/
-EXTRACT_SUFX=	.zip#md5=1e1c261cbeaa39111f2a8993866e6819
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/EPAENERGYSTAR/epathermostat

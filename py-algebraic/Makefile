@@ -6,7 +6,7 @@ EGG_NAME=	python_algebraic-0.3.1.dev20120112
 PKGNAME=	${PYPKGPREFIX}-algebraic-${VERSION}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-algebraic/}
-EXTRACT_SUFX=	.zip#md5=cbf55e6cefe57b36cdb962a2d5926a45
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/python-algebraic/

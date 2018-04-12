@@ -5,7 +5,7 @@ DISTNAME=	scikits.optimization-0.1
 PKGNAME=	${PYPKGPREFIX}-scikits_optimization-0.1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.optimization/}
-EXTRACT_SUFX=	.zip#md5=033ccd3056942d8a226aeb0eb8fbab45
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.scipy.org/scipy/scikits

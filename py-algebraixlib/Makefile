@@ -4,7 +4,7 @@ DISTNAME=	algebraixlib-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/algebraixlib/}
-EXTRACT_SUFX=	.zip#md5=9219b5fbb1acc17ee637a60c2877a7c9
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/AlgebraixData/algebraixlib

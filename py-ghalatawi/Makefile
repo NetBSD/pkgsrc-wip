@@ -5,7 +5,7 @@ DISTNAME=	ghalatawi-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/ghalatawi/}
-EXTRACT_SUFX=	.zip#md5=7afa6950e1786db9729f2582c451a2a9
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://ghalatawi.sourceforge.net/

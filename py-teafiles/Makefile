@@ -5,7 +5,7 @@ DISTNAME=	teafiles-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math finance
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/teafiles/}
-EXTRACT_SUFX=	.zip#md5=c6a4cca7fff1e5a5d01c2c59b3339b04
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://discretelogics.com/

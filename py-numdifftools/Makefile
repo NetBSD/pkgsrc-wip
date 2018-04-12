@@ -4,7 +4,7 @@ DISTNAME=	Numdifftools-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/N/n/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=N/Numdifftools/}
-EXTRACT_SUFX=	.zip#md5=944981e22d56ff299f73124ea1e62edc
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/numdifftools/

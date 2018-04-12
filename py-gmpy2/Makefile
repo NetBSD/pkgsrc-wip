@@ -4,7 +4,7 @@ DISTNAME=	gmpy2-2.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gmpy2/}
-EXTRACT_SUFX=	.zip#md5=95f008bcab6372164358123f43e3f490
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/aleaxit/gmpy/
