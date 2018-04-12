@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp.orig	2018-02-02 18:39:18.800930947 +0000
+--- source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp.orig	2018-02-23 22:54:35.000000000 +0000
 +++ source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp
-@@ -52,6 +52,7 @@ namespace {
+@@ -53,6 +53,7 @@ namespace {
  const char *const LLDB_NT_OWNER_FREEBSD = "FreeBSD";
  const char *const LLDB_NT_OWNER_GNU = "GNU";
  const char *const LLDB_NT_OWNER_NETBSD = "NetBSD";
@@ -10,7 +10,7 @@ $NetBSD$
  const char *const LLDB_NT_OWNER_OPENBSD = "OpenBSD";
  const char *const LLDB_NT_OWNER_CSR = "csr";
  const char *const LLDB_NT_OWNER_ANDROID = "Android";
-@@ -67,8 +68,10 @@ const elf_word LLDB_NT_GNU_ABI_SIZE = 16
+@@ -68,8 +69,10 @@ const elf_word LLDB_NT_GNU_ABI_SIZE = 16
  
  const elf_word LLDB_NT_GNU_BUILD_ID_TAG = 0x03;
  
@@ -23,7 +23,7 @@ $NetBSD$
  
  // GNU ABI note OS constants
  const elf_word LLDB_NT_GNU_ABI_OS_LINUX = 0x00;
-@@ -1341,25 +1344,41 @@ ObjectFileELF::RefineModuleDetailsFromNo
+@@ -1297,25 +1300,41 @@ ObjectFileELF::RefineModuleDetailsFromNo
          // The note.n_name == LLDB_NT_OWNER_GNU is valid for Linux platform
          arch_spec.GetTriple().setOS(llvm::Triple::OSType::Linux);
      }
