@@ -7,7 +7,7 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	KDE Plasma Workspace
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	breeze>=${PLASMAVER}:../../wip/breeze
@@ -36,7 +36,7 @@ SUBST_VARS.qtpath=	QTDIR
 SUBST_STAGE.qtpath=	post-patch
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	components/shellprivate/CMakeLists.txt
 SUBST_FILES.xdg+=	klipper/CMakeLists.txt
