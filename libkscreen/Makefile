@@ -7,13 +7,11 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	KDE screen management software
 LICENSE=	gnu-gpl-v2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	src/kscreen2.pc.in
-
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 .include "../../wip/kwayland/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
