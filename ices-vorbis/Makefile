@@ -6,6 +6,7 @@ PKGNAME=		ices-vorbis-${ICES_VERSION}
 ICES_VERSION=		2.0.1
 CATEGORIES=		audio
 MASTER_SITES=		http://svn.xiph.org/releases/ices/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		peter.schuller@infidyne.com
 HOMEPAGE=		http://www.icecast.org/ices.php
