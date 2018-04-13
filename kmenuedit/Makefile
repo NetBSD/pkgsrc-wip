@@ -7,14 +7,12 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	KDE menu editor
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	khotkeys>=${PLASMAVER}:../../wip/khotkeys
 
 USE_TOOLS+=	msgmerge
-
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
