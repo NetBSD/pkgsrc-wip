@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-discosrv-0.14.42
+PKGNAME=	syncthing-discosrv-0.14.46
 CATEGORIES=	net
-DISTNAME=	syncthing-0.14.42
+DISTNAME=	syncthing-0.14.46
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
