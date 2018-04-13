@@ -11,8 +11,9 @@ LICENSE=	apache-2.0
 R_PKGNAME=	foreach
 R_PKGVER=	1.4.3
 
+DEPENDS+=	R-iterators-[0-9]*:../../devel/R-iterators
+
 BUILDLINK_API_DEPENDS.R+=	R>=2.5.0
 
 .include "../../math/R/Makefile.extension"
-.include "../../wip/R-iterators/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

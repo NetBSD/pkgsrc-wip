@@ -11,9 +11,10 @@ LICENSE=	gnu-gpl-v2
 R_PKGNAME=	doParallel
 R_PKGVER=	1.0.10
 
+DEPENDS+=	R-iterators-[0-9]*:../../devel/R-iterators
+
 BUILDLINK_API_DEPENDS.R+=	R>=2.14.0
 
 .include "../../math/R/Makefile.extension"
 .include "../../wip/R-foreach/buildlink3.mk"
-.include "../../wip/R-iterators/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

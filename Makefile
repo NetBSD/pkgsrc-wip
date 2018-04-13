@@ -47,7 +47,6 @@ SUBDIR+=	R-foreach
 SUBDIR+=	R-gmp
 SUBDIR+=	R-graph
 SUBDIR+=	R-gsl
-SUBDIR+=	R-iterators
 SUBDIR+=	R-mclust
 SUBDIR+=	R-moonsun
 SUBDIR+=	R-rgdal
