@@ -7,6 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/ironpython/
 EXTRACT_SUFX=	.zip
+LICENSE=	apache-2.0
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.codeplex.com/IronPython
