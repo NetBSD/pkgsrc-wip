@@ -4,6 +4,7 @@ DISTNAME=	imagination-1.0
 PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=imagination/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://imagination.sourceforge.net/
