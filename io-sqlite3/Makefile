@@ -4,9 +4,10 @@
 
 PKGNAME=		io-sqlite3-${IO_VERSION}
 CATEGORIES=		databases
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		SQLite3 addon for Io
 
 ADDON_NAME=		SQLite3

@@ -4,6 +4,7 @@
 
 PKGNAME=		${DISTNAME:S/io-/&vm-/}
 CATEGORIES=		lang
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		http://www.iolanguage.com/

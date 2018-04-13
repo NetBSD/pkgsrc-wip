@@ -4,9 +4,10 @@
 
 PKGNAME=		io-thread-${IO_VERSION}
 CATEGORIES=		devel
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Thread addon for Io
 
 ADDON_NAME=		Thread

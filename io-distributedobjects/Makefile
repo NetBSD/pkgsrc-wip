@@ -4,9 +4,10 @@
 
 PKGNAME=		io-distributedobjects-${IO_VERSION}
 CATEGORIES=		devel
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		DistributedObjects addon for Io
 
 ADDON_NAME=		DistributedObjects

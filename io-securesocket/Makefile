@@ -4,9 +4,10 @@
 
 PKGNAME=		io-securesocket-${IO_VERSION}
 CATEGORIES=		devel
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		SSL socket addon for Io
 
 ADDON_NAME=			Socket

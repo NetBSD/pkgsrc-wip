@@ -4,9 +4,10 @@
 
 PKGNAME=		${DISTNAME:S/io-/&socket-/}
 CATEGORIES=		net
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Socket addon for Io
 
 ADDON_NAME=		Socket

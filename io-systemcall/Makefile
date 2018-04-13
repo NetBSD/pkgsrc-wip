@@ -4,9 +4,10 @@
 
 PKGNAME=		io-systemcall-${IO_VERSION}
 CATEGORIES=		sysutils
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		SystemCall addon for Io
 
 ADDON_NAME=		SystemCall

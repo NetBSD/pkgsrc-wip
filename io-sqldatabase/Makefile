@@ -4,9 +4,10 @@
 
 PKGNAME=		io-sqldatabase-${IO_VERSION}
 CATEGORIES=		databases
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		SqlDatabase addon for Io
 
 ADDON_NAME=		SqlDatabase

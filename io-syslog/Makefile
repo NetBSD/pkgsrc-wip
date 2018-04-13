@@ -4,9 +4,10 @@
 
 PKGNAME=		io-syslog-${IO_VERSION}
 CATEGORIES=		sysutils
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Syslog addon for Io
 
 ADDON_NAME=		Syslog

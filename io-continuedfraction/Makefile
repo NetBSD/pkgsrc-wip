@@ -4,9 +4,10 @@
 
 PKGNAME=		io-continuedfraction-${IO_VERSION}
 CATEGORIES=		math
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		ContinuedFraction addon for Io
 
 ADDON_NAME=		ContinuedFraction

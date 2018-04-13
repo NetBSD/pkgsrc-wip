@@ -4,9 +4,10 @@
 
 PKGNAME=		io-md5-${IO_VERSION}
 CATEGORIES=		devel
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		MD5 addon for Io
 
 ADDON_NAME=		MD5

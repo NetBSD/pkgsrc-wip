@@ -7,9 +7,10 @@ META_PACKAGE=	# empty
 DISTNAME =	io-${IO_VERSION}
 PKGNAME =	io-base-${IO_VERSION}
 CATEGORIES =	meta-pkgs lang devel
+LICENSE=	modified-bsd
 
 MAINTAINER=	milos.negovanovic@googlemail.com
-HOMEPAGE=	www.iolanguage.com
+HOMEPAGE=	http://www.iolanguage.com/
 COMMENT=	All base Io addons
 
 DEPENDS+=	io-vm>=${IO_VERSION}:../../wip/io-vm

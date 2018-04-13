@@ -4,9 +4,10 @@
 
 PKGNAME=		io-user-${IO_VERSION}
 CATEGORIES=		sysutils
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		User addon for Io
 
 ADDON_NAME=		User

@@ -4,9 +4,10 @@
 
 PKGNAME=		io-zlib-${IO_VERSION}
 CATEGORIES=		archivers
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Zlib addon for Io
 
 ADDON_NAME=		Zlib

@@ -4,9 +4,10 @@
 
 PKGNAME=		io-regex-${IO_VERSION}
 CATEGORIES=		devel
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Regex addon for Io
 
 ADDON_NAME=			Regex

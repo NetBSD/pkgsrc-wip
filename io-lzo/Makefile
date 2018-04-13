@@ -4,9 +4,10 @@
 
 PKGNAME=		io-lzo-${IO_VERSION}
 CATEGORIES=		archivers
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		LZO addon for Io
 
 ADDON_NAME=		LZO

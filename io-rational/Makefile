@@ -4,9 +4,10 @@
 
 PKGNAME=		io-rational-${IO_VERSION}
 CATEGORIES=		math
+LICENSE=		modified-bsd
 
 MAINTAINER=		milos.negovanovic@googlemail.com
-HOMEPAGE=		www.iolanguage.com
+HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Rational math addon for Io
 
 ADDON_NAME=		Rational
