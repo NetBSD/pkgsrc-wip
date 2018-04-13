@@ -7,7 +7,7 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	KDE Plasma Desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	ksysguard>=${PLASMAVER}:../../wip/ksysguard
@@ -20,7 +20,7 @@ USE_TOOLS+=	msgmerge pkg-config
 CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/plasma-desktop
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	kcms/colors/CMakeLists.txt
 SUBST_FILES.xdg+=	kcms/cursortheme/CMakeLists.txt
@@ -65,20 +65,20 @@ pre-configure:
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/kpeople/buildlink3.mk"
+.include "../../devel/krunner/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/baloo5/buildlink3.mk"
+.include "../../wip/systemsettings/buildlink3.mk"
 .include "../../x11/kactivities-stats/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
-.include "../../devel/knotifyconfig/buildlink3.mk"
-.include "../../devel/kpeople/buildlink3.mk"
-.include "../../devel/krunner/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../wip/plasma-workspace/buildlink3.mk"
-.include "../../wip/systemsettings/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
