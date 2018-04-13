@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ksshaskpass-5.11.5.tar.xz) = 8711f514a7ea9941580c167ef32839ada99ce66b
-RMD160 (ksshaskpass-5.11.5.tar.xz) = c149ee01a2b5917a8139109c67dfab6a32d4480c
-SHA512 (ksshaskpass-5.11.5.tar.xz) = 34a8fe5da983a0fcc6d5d223120f2d23e0168a534d29941e83024110eafe981d6c46ee503abfb7bf8e072dc64060eea373c191ef0f8dbc5051cb2d968e6d49d3
-Size (ksshaskpass-5.11.5.tar.xz) = 23168 bytes
+SHA1 (ksshaskpass-5.12.4.tar.xz) = adbc9763226f57f9c2c4148985538a9d9e853a70
+RMD160 (ksshaskpass-5.12.4.tar.xz) = f7758500c98607d41e239e65853bac1458d68ebb
+SHA512 (ksshaskpass-5.12.4.tar.xz) = 12b0cd5270509325d60060b3ee3a6a03fda27063fa25af6e6fbec190319a836dd11d73b202909c733137e95528e0e23b4cc35dbe2c6ad3148ad2bb63e21363fb
+Size (ksshaskpass-5.12.4.tar.xz) = 21060 bytes

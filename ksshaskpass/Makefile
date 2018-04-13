@@ -7,7 +7,7 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	ssh-add helper that uses kwallet and kpassworddialog
 LICENSE=	gnu-gpl-v2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
