@@ -7,7 +7,7 @@ HOMEPAGE=	https://userbase.kde.org/KSysGuard
 COMMENT=	Track and control the processes running in your system
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 CONFLICTS+=	kde-workspace4-[0-9]*
 
@@ -24,7 +24,7 @@ SUBST_SED.eat-std=	-e 's, -std=iso9899:1990 , ,g'
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	example/CMakeLists.txt
 SUBST_FILES.xdg+=	gui/CMakeLists.txt
@@ -38,9 +38,9 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ksysguard.knsrc \
 		${PKG_SYSCONFDIR}/xdg/ksysguard.knsrc
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
-.include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
