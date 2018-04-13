@@ -5,6 +5,7 @@ DISTNAME=	IlohaMail-0.8.14-rc3
 PKGNAME=	ilohamail-0.8.14rc3
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilohamail/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blog.ilohamail.org/
