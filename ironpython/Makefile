@@ -7,12 +7,11 @@ PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/ironpython/
 EXTRACT_SUFX=	.zip
-LICENSE=	apache-2.0
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.codeplex.com/IronPython
 COMMENT=	Python implementation targeting the .NET and Mono platforms
-#LICENSE=	LICENSE
+LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/IronPython-1.0.1
 USE_TOOLS+=	gmake
