@@ -8,14 +8,14 @@ HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
 COMMENT=	Daemon providing a polkit authentication UI for KDE
 LICENSE=	gnu-gpl-v2
 
-.include "../../wip/kde5/plasma.mk"
+.include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{AUTOSTART_INSTALL_DIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
@@ -25,7 +25,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/polkit-kde-authenticatio
 		${PKG_SYSCONFDIR}/xdg/autostart/polkit-kde-authentication-agent-1.desktop
 
 .include "../../devel/kcrash/buildlink3.mk"
-.include "../../sysutils/kdbusaddons/buildlink3.mk"
 .include "../../graphics/kiconthemes/buildlink3.mk"
+.include "../../sysutils/kdbusaddons/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
