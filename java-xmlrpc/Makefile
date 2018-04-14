@@ -7,6 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://apache.rediris.es/ws/xmlrpc/v1.2-b1/ \
 			http://nagoya.apache.org/mirror/ws/xmlrpc/ \
 			${MASTER_SITE_APACHE:=ws/xmlrpc/}
+LICENSE=		apache-2.0
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ws.apache.org/xmlrpc/
