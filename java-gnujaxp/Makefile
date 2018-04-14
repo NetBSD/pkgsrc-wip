@@ -6,6 +6,7 @@ PKGNAME=		java-gnujaxp-1.0b1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=classpathx/}
 EXTRACT_SUFX=		.zip
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/classpathx/jaxp/
