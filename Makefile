@@ -4198,6 +4198,7 @@ SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	smw
+SUBDIR+=	snallygaster-git
 SUBDIR+=	snark
 SUBDIR+=	sndio
 SUBDIR+=	snes9express
