@@ -1,5 +1,6 @@
 @comment $NetBSD$
 libexec/drkonqi
+share/applications/org.kde.drkonqi.desktop
 share/drkonqi/debuggers/external/gdbrc
 share/drkonqi/debuggers/external/kdbgrc
 share/drkonqi/debuggers/internal/dbxrc
