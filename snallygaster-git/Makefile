@@ -7,7 +7,7 @@ MASTER_SITES=	# none
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hannob/snallygaster
 COMMENT=	Tool to scan for secret files on HTTP servers
-LICENSE=	public-domain
+LICENSE=	cc0-1.0-universal
 
 GIT_REPOSITORIES=	snallygaster
 GIT_REPO.snallygaster=	git://github.com/hannob/snallygaster.git
