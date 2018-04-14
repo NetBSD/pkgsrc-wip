@@ -6,6 +6,7 @@ PKGNAME=	java-${DISTNAME}
 CATEGORIES=	audio java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jspeex/}
 EXTRACT_SUFX=	.zip
+LICENSE=	modified-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jspeex.sourceforge.net/
