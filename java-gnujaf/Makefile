@@ -5,6 +5,7 @@ DISTNAME=	activation-1.1.1
 PKGNAME=	java-gnujaf-1.1.1
 CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/classpathx/
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ftp.gnu.org/gnu/classpathx/
