@@ -5,6 +5,7 @@ DISTNAME=		jc-1.2.3
 PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jcvm/}
+LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jcvm.sourceforge.net/
