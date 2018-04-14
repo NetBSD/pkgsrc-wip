@@ -5,6 +5,7 @@ DISTNAME=		jbluez-1.0
 PKGNAME=		java-${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jbluez/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jbluez.sourceforge.net/
