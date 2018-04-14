@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	kholidays
 .if !defined(KHOLIDAYS_BUILDLINK3_MK)
 KHOLIDAYS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.kholidays+=	kholidays>=17.12.1
+BUILDLINK_API_DEPENDS.kholidays+=	kholidays>=5.44.0
 BUILDLINK_PKGSRCDIR.kholidays?=		../../wip/kholidays
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
