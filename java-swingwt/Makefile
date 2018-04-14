@@ -5,6 +5,7 @@ DISTNAME=		swingwt-0.82
 PKGNAME=		java-swingswt-0.82
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swingwt/}
+LICENSE=		cpl-1.0 AND gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://swingwt.sourceforge.net/
