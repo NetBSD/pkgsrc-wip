@@ -5,6 +5,7 @@ DISTNAME=		java-getopt-1.0.9
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.urbanophile.com/pub/arenn/software/sources/
 EXTRACT_SUFX=		.jar
+LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.urbanophile.com/arenn/hacking/download.html
