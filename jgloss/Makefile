@@ -5,6 +5,7 @@ DISTNAME=		jgloss-1.0.10
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jgloss/}
 EXTRACT_SUFX=		.tgz
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jgloss.sourceforge.net/
