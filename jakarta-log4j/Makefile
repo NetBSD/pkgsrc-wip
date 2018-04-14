@@ -9,7 +9,7 @@ MASTER_SITES=	http://archive.apache.org/dist/logging/log4j/1.3alpha-8/
 MAINTAINER=	drue@users.sourceforge.net
 HOMEPAGE=	http://logging.apache.org/log4j/docs/
 COMMENT=	Logging facility for Java
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	apache-2.0
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
