@@ -7,6 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/old/2.9.0/
 DIST_SUBDIR=		emboss/emboss-2.9.0
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=	dprice@cs.nmsu.edu
 HOMEPAGE=	http://www.emboss.org/
