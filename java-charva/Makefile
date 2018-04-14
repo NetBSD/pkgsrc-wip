@@ -6,6 +6,7 @@ PKGNAME=		java-charva-1.1.0
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.pitman.co.za/projects/download/
+LICENSE=		gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pitman.co.za/projects/charva/
