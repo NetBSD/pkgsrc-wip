@@ -7,6 +7,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 USE_TOOLS+=	automake autoreconf
 
 DEPENDS+=	gst-plugins1-soup-[0-9]*:../../net/gst-plugins1-soup
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 COMMENT=	(using GStreamer)
 
@@ -23,7 +24,6 @@ CONFIGURE_ARGS+=	--disable-browser-plugins
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libpeas/buildlink3.mk"
-.include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../net/grilo/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
