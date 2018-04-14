@@ -6,6 +6,7 @@ PKGNAME=		java-frozenbubble-0.9.5
 CATEGORIES=		games
 MASTER_SITES=		http://glenn.sanson.free.fr/fb/
 EXTRACT_SUFX=		.jar
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://glenn.sanson.free.fr/fb/index.html
