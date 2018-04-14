@@ -3319,7 +3319,6 @@ SUBDIR+=	py-khayyam
 SUBDIR+=	py-kineticlib
 SUBDIR+=	py-kitchen
 SUBDIR+=	py-kivy
-SUBDIR+=	py-kiwisolver
 SUBDIR+=	py-knnimpute
 SUBDIR+=	py-knockknock
 SUBDIR+=	py-krylov
