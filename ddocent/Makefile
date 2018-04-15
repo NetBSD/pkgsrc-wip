@@ -44,6 +44,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-install
 SUBST_SED.prefix+=	-e 's|%%PREFIX%%|${PREFIX}|g'
 SUBST_SED.prefix+=	-e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g'
+SUBST_SED.prefix+=	-e 's|python|${PYTHON_CMD}|g'
 SUBST_FILES.prefix+=	${DESTDIR}${PREFIX}/bin/dDocent
 
 USE_LANGUAGES=	# none
@@ -75,6 +76,7 @@ do-install:
 		${WRKSRC}/scripts/dDocent_filters \
 		${DESTDIR}${PREFIX}/bin
 
+.include "../../lang/python/tool.mk"
 .include "../../wip/vcflib/buildlink3.mk"
 .include "../../wip/bamtools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

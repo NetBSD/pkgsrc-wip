@@ -51,6 +51,15 @@ $NetBSD$
  	if [ "$BWAV" -lt "13" ]; then
          	echo "The version of bwa installed in your" '$PATH' "is not optimized for dDocent."
          	echo "Please install at least version 0.7.13"
+@@ -107,7 +111,7 @@ BTC=$( bedtools --version | mawk '{print
+ 		exit 1	
+ 	fi
+ 		
+-if ! awk --version | fgrep -v GNU &>/dev/null; then
++if ! awk --version | fgrep GNU &>/dev/null; then
+          awk=gawk
+     else
+          awk=awk
 @@ -388,10 +392,10 @@ if [ "$SNP" != "no" ]; then
  	}
  	export -f call_genos
