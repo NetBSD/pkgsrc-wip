@@ -4,6 +4,7 @@
 DISTNAME=		libavc1394-0.4.1
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libavc1394/}
+LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://sourceforge.net/projects/libavc1394/
