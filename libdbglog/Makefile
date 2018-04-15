@@ -5,6 +5,7 @@ DISTNAME=	libdbglog-1.5.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dbglog/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	ondrej.tuma@firma.seznam.cz
 HOMEPAGE=	http://opensource.seznam.cz/DBGlog
