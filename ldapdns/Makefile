@@ -5,6 +5,7 @@ PKGNAME=	ldapdns-cvs-0.0.1
 WRKSRC=		${WRKDIR}/ldapdns/
 CATEGORIES=	net
 MASTER_SITES=	http://ldapdns.sourceforge.net/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ldapdns.sourceforge.net
