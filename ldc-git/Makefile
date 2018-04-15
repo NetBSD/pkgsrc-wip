@@ -10,7 +10,7 @@ WRKSRC=			${WRKDIR}/ldc
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wiki.dlang.org/LDC
 COMMENT=	D compiler based on LLVM
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
