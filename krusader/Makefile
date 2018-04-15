@@ -6,6 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	kde sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=krusader/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://krusader.sourceforge.net/
