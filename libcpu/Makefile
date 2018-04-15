@@ -5,6 +5,7 @@ DISTNAME=	# git package
 PKGNAME=	libcpu-0
 CATEGORIES=	devel
 MASTER_SITES=	# git package
+LICENSE=	2-clause-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libcpu/libcpu
