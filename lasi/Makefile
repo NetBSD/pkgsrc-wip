@@ -6,6 +6,7 @@ PKGNAME=	liblasi-1.1.0
 PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lasi/}
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://lasi.sourceforge.net/
