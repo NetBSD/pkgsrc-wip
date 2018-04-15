@@ -14,6 +14,7 @@ HOMEPAGE=	http://www.usadellab.org/cms/?page=trimmomatic
 COMMENT=	Flexible read trimming tool for Illumina NGS data
 LICENSE=	gnu-gpl-v3
 
+# FIXME: Should at least error out if no jvm available on Linux
 USE_JAVA=	run
 
 USE_TOOLS+=	pax
