@@ -7,7 +7,7 @@ MASTER_SITES=	https://bellard.org/bpg/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bellard.org/bpg/
 COMMENT=	Library for BGP (Better Portable Graphics)
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
