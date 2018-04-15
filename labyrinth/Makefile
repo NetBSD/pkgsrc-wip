@@ -5,6 +5,7 @@ PKGNAME=	labyrinth-0.4.1
 PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	http://labyrinth.googlecode.com/files/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://www.gnome.org/~dscorgie/labyrinth.html
