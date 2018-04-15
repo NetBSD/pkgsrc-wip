@@ -4,6 +4,7 @@
 DISTNAME=	lcdproc-0.5.3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcdproc/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://lcdproc.org/
