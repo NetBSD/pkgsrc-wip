@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (oranchelo-icon-theme-0.7.6.6.tar.gz) = adafb7a6b7663b8e2208e15b489f9026eda5b13f
+RMD160 (oranchelo-icon-theme-0.7.6.6.tar.gz) = 5e0a1ca803b56cfc0d2d83d97bdd3f6111542bb5
+SHA512 (oranchelo-icon-theme-0.7.6.6.tar.gz) = 116bab40a9f0410bfb144cea9c4e9e71f76a0d117b1c925ca3e390c7e05d7e383b124c25bfccb20d5d9c0b9a5e20291c7445c38185e6ce9a03a9fe44ea273414
+Size (oranchelo-icon-theme-0.7.6.6.tar.gz) = 4645600 bytes
+SHA1 (patch-Makefile) = cd304c8267f168f058d4fe52ff417a2ac0ad71af
