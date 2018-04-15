@@ -1,11 +1,22 @@
 $NetBSD$
 
 Allow overriding PREFIX.
---- Makefile.orig	2018-03-25 18:21:09.000000000 +0000
+--- Makefile.orig	2018-03-25 20:21:09.000000000 +0200
 +++ Makefile
-@@ -1,4 +1,4 @@
+@@ -1,13 +1,13 @@
 -INSTALLDIR=$(DESTDIR)/usr/share/icons
 +INSTALLDIR=$(DESTDIR)$(PREFIX)/share/icons
  THEMES_BASE_NAME=Oranchelo
  
  install:
+ 	# Removing icons execute permissions
+-	find -type f -executable -exec chmod -x {} \;
++	find . -type f -exec chmod -x {} \;
+ 
+ 	# Installing Oranchelo
+ 	mkdir -p $(INSTALLDIR)
+-	cp -r $(THEMES_BASE_NAME)* $(INSTALLDIR)
++	pax -rw $(THEMES_BASE_NAME)* $(INSTALLDIR)
+ 
+ uninstall:
+ 	# Removing Oranchelo
