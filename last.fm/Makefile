@@ -7,6 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	audio net
 MASTER_SITES=	http://cdn.last.fm/client/src/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	https://www.last.fm/
