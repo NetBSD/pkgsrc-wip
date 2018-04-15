@@ -44,7 +44,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-install
 SUBST_SED.prefix+=	-e 's|%%PREFIX%%|${PREFIX}|g'
 SUBST_SED.prefix+=	-e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g'
-SUBST_SED.prefix+=	-e 's|python|${PYTHON_CMD}|g'
+SUBST_SED.prefix+=	-e 's|python|${PYTHONBIN}|g'
 SUBST_FILES.prefix+=	${DESTDIR}${PREFIX}/bin/dDocent
 
 USE_LANGUAGES=	# none
