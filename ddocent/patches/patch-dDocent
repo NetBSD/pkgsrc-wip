@@ -1,10 +1,20 @@
 $NetBSD$
 
-# Locate tools installed via pkgsrc
+# Use pkgsrc trimmomatic path, support additional platforms
 
---- dDocent.orig	2018-03-06 14:22:03 UTC
+--- dDocent.orig	2017-11-29 17:09:13.000000000 +0000
 +++ dDocent
-@@ -27,15 +27,15 @@ do
+@@ -1,6 +1,9 @@
+ #!/usr/bin/env bash
+ export LC_ALL=en_US.UTF-8
+ 
++# GNU Parallel uses $SHELL and has issues with [t]csh
++export SHELL=%%PREFIX%%/bin/bash
++
+ ##########dDocent##########
+ VERSION='2.2.25'
+ #This script serves as an interactive bash wrapper to QC, assemble, map, and call SNPs from double digest RAD (SE or PE), ezRAD (SE or PE) data, or SE RAD data.
+@@ -27,15 +30,15 @@ do
  	fi
  done
  
@@ -24,7 +34,7 @@ $NetBSD$
  	else
      echo "The file listing adapters (included with trimmomatic) is not installed or is not in your" '$PATH'"."
      NUMDEP=$((NUMDEP + 1))
-@@ -80,6 +80,7 @@ FREEB=(`freebayes | grep -oh 'v[0-9].*' 
+@@ -80,6 +83,7 @@ FREEB=(`freebayes | grep -oh 'v[0-9].*'
          	exit 1
          fi         	
  VCFTV=$(vcftools | grep VCF | grep -oh '[0-9]*[a-z]*)$' | sed 's/[a-z)]//')
@@ -32,7 +42,7 @@ $NetBSD$
  	if [ "$VCFTV" -lt "10" ]; then
          	echo "The version of VCFtools installed in your" '$PATH' "is not optimized for dDocent."
          	echo "Please install at least version 0.1.11"
-@@ -89,7 +90,7 @@ VCFTV=$(vcftools | grep VCF | grep -oh '
+@@ -89,7 +93,7 @@ VCFTV=$(vcftools | grep VCF | grep -oh '
          elif [ "$VCFTV" -ge "12" ]; then
                  VCFGTFLAG="--max-missing"
  	fi
@@ -41,7 +51,7 @@ $NetBSD$
  	if [ "$BWAV" -lt "13" ]; then
          	echo "The version of bwa installed in your" '$PATH' "is not optimized for dDocent."
          	echo "Please install at least version 0.7.13"
-@@ -747,7 +748,14 @@ else
+@@ -747,7 +751,14 @@ else
  fi
  
  #Tries to get number of processors, if not asks user
@@ -57,7 +67,7 @@ $NetBSD$
  NUMProc=$(($NUMProc + 0)) 
  
  echo "dDocent detects $NUMProc processors available on this system."
-@@ -764,7 +772,15 @@ if [ $NUMProc -lt 1 ]; then
+@@ -764,7 +775,15 @@ if [ $NUMProc -lt 1 ]; then
  fi
  
  #Tries to get maximum system memory, if not asks user
