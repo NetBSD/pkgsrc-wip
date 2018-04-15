@@ -4,6 +4,7 @@
 DISTNAME=		libGenome-0.5.2
 CATEGORIES=		biology
 MASTER_SITES=		http://pages.cs.wisc.edu/~darling/libgenome/releases/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://pages.cs.wisc.edu/~darling/libgenome/
