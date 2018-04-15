@@ -2344,6 +2344,7 @@ SUBDIR+=	openxcom
 SUBDIR+=	ophcrack
 SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
+SUBDIR+=	oranchelo-icon-theme
 SUBDIR+=	orbifolder
 SUBDIR+=	org-caldav-git
 SUBDIR+=	orion
