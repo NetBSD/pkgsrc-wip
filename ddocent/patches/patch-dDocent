@@ -29,8 +29,8 @@ $NetBSD$
  
 -if find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | grep -q 'Tru' ; then
 -	ADAPTERS=$(find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | head -1)
-+if [ -e %%PREFIX%%/share/trimmomatic/adapters ]; then
-+       ADAPTERS=%%PREFIX%%/share/trimmomatic/adapters
++if [ -e %%PREFIX%%/share/trimmomatic/adapters/TruSeq2-PE.fa ]; then
++       ADAPTERS=%%PREFIX%%/share/trimmomatic/adapters/TruSeq2-PE.fa
  	else
      echo "The file listing adapters (included with trimmomatic) is not installed or is not in your" '$PATH'"."
      NUMDEP=$((NUMDEP + 1))
@@ -51,6 +51,31 @@ $NetBSD$
  	if [ "$BWAV" -lt "13" ]; then
          	echo "The version of bwa installed in your" '$PATH' "is not optimized for dDocent."
          	echo "Please install at least version 0.7.13"
+@@ -388,10 +392,10 @@ if [ "$SNP" != "no" ]; then
+ 	}
+ 	export -f call_genos
+ 
+-	ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | shuf | parallel --env call_genos --memfree $MAXMemory -j $NUMProc --no-notice call_genos {}
++	ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | gshuf | parallel --env call_genos --memfree $MAXMemory -j $NUMProc --no-notice call_genos {}
+ ####	
+-	#ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | shuf | parallel --memfree $MAXMemory -j $FB1 --no-notice --delay 1 freebayes -L bamlist.list -t mapped.{}.bed -v raw.{}.vcf -f reference.fasta -m 5 -q 5 -E 3 --min-repeat-entropy 1 -V --populations popmap -n 10
+-	#ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | shuf | parallel --memfree $MAXMemory -j $FB1 --no-notice "samtools view -b -L mapped.{}.bed | freebayes -c -t mapped.{}.bed -v raw.{}.vcf -f reference.fasta -m 5 -q 5 -E 3 --min-repeat-entropy 1 -V --populations popmap -n 10"
++	#ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | gshuf | parallel --memfree $MAXMemory -j $FB1 --no-notice --delay 1 freebayes -L bamlist.list -t mapped.{}.bed -v raw.{}.vcf -f reference.fasta -m 5 -q 5 -E 3 --min-repeat-entropy 1 -V --populations popmap -n 10
++	#ls mapped.*.bed | sed 's/mapped.//g' | sed 's/.bed//g' | gshuf | parallel --memfree $MAXMemory -j $FB1 --no-notice "samtools view -b -L mapped.{}.bed | freebayes -c -t mapped.{}.bed -v raw.{}.vcf -f reference.fasta -m 5 -q 5 -E 3 --min-repeat-entropy 1 -V --populations popmap -n 10"
+ 
+ 
+ 	rm mapped.*.bed 
+@@ -447,8 +451,8 @@ fi
+ 
+ #Function for trimming reads using trimmomatic
+ trim_reads(){
+-	TRIMMOMATIC=$(find ${PATH//:/ } -maxdepth 1 -name trimmomatic*jar 2> /dev/null | head -1)
+-    ADAPTERS=$(find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | head -1)
++       TRIMMOMATIC=%%JAVAJARDIR%%/trimmomatic.jar
++       ADAPTERS=%%PREFIX%%/share/trimmomatic/adapters/TruSeq2-PE.fa
+ 
+ 	if [ -f $1.R.fq.gz ]; then	
+ 		java -Xmx2g -jar $TRIMMOMATIC PE -threads 2 -phred33 $1.F.fq.gz $1.R.fq.gz $1.R1.fq.gz $1.unpairedF.fq.gz $1.R2.fq.gz $1.unpairedR.fq.gz ILLUMINACLIP:$ADAPTERS:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:5:10 $TW &> $1.trim.log
 @@ -747,7 +751,14 @@ else
  fi
  

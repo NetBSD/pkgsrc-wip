@@ -22,6 +22,7 @@ LICENSE=	mit
 # ddocent test data do not unpack with FreeBSD 11.1 /usr/bin/unzip
 DEPENDS=	mawk>=0:../../lang/mawk \
 		gawk>=0:../../lang/gawk \
+		coreutils>=0:../../sysutils/coreutils \
 		gnuplot>=0:../../graphics/gnuplot \
 		parallel>=0:../../parallel/parallel \
 		bwa>=0.7.13:../../biology/bwa \
