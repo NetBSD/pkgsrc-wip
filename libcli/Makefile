@@ -4,6 +4,7 @@
 DISTNAME=	libcli-1.8.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcli/}
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	haaaad@gmail.com
 HOMEPAGE=	http://libcli.sourceforge.net/
