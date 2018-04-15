@@ -3,6 +3,7 @@
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
 MASTER_SITES=	http://l2tpd.sourceforge.net/l2tpd.org/downloads/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://l2tpd.sourceforge.net/
