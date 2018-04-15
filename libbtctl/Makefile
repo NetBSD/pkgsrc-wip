@@ -5,6 +5,7 @@ DISTNAME=		libbtctl-0.6.0
 PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/libbtctl/0.6/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://live.gnome.org/GnomeBluetooth
