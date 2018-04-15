@@ -4,6 +4,7 @@ DISTNAME=	koha-2.2.9
 PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/koha/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://koha.org/
