@@ -4,6 +4,7 @@
 DISTNAME=	libharu-2.2.1
 CATEGORIES=	print
 MASTER_SITES=	http://libharu.org/files/
+LICENSE=	zlib
 
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://libharu.org/
