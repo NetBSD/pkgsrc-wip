@@ -6,6 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade-java/2.10/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://java-gnome.sourceforge.net/
