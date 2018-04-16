@@ -1123,6 +1123,7 @@ SUBDIR+=	gtkaml
 SUBDIR+=	gtkfontsel
 SUBDIR+=	gtkglextmm
 SUBDIR+=	gtkglk
+SUBDIR+=	gtkhash
 SUBDIR+=	gtkhotkey
 SUBDIR+=	gtkmathview
 SUBDIR+=	gtkmmorse
