@@ -6,6 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtkhtml-java/2.6/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://java-gnome.sourceforge.net/
