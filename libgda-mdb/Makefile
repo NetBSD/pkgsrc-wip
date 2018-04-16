@@ -1,6 +1,8 @@
 # $NetBSD: Makefile,v 1.3 2013/06/25 13:46:20 noud4 Exp $
 #
 
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
+
 LIBGDA_PROVIDER=	mdb
 
 .include "../../databases/libgda/Makefile.common"
