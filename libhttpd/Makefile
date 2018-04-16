@@ -4,6 +4,7 @@
 DISTNAME=		libhttpd-1.4
 CATEGORIES=		www
 MASTER_SITES=		http://www.hughes.com.au/products/libhttpd/
+LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hughes.com.au/products/libhttpd/
