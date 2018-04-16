@@ -10,3 +10,4 @@ bin/upspin-audit
 bin/upspin-setupstorage
 bin/upspinfs
 bin/upspinserver
+@pkgdir gopkg
