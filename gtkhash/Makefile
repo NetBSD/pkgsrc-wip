@@ -14,9 +14,9 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool pkg-config
 
 CONFIGURE_ARGS+=	--enable-mbedtls
-CONFIGURE_ARGS+=	--enable-mhash
+#CONFIGURE_ARGS+=	--enable-mhash		# commented out due to segmentation fault
 CONFIGURE_ARGS+=	--enable-nettle
-CONFIGURE_ARGS+=	--disable-blake2 # at present, not available in the pkgsrc collection
+CONFIGURE_ARGS+=	--disable-blake2	# at present, not available in the pkgsrc collection
 
 .include "options.mk"
 
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-blake2 # at present, not available in the pkgsrc coll
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/mbedtls/buildlink3.mk"
-.include "../../security/mhash/buildlink3.mk"
+#.include "../../security/mhash/buildlink3.mk"	# commented out due to segmentation fault
 .include "../../security/nettle/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
