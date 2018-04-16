@@ -6,6 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=panotools/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		kirtai@users.sourceforge.net
 HOMEPAGE=		http://panotools.sourceforge.net/
