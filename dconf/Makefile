@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.38 2017/10/15 22:31:02 prlw1 Exp $
 
-DISTNAME=	dconf-0.27.1
+DISTNAME=	dconf-0.28.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -9,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/dconf
 COMMENT=	Backend for gsettings
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config gmake
@@ -24,9 +28,13 @@ SUBST_FILES.sysdir+=	tests/engine.c
 SUBST_FILES.sysdir+=	bin/dconf-update.vala
 SUBST_SED.sysdir=	-e s,/etc,${PKG_SYSCONFDIR},g
 
-# wants to run dconf-scan, but that does not find its library libdconf.so.1
+# gtk-doc wants to run dconf-scan, but that does not find its library libdconf.so.1
 #MESON_ARGS+=		-D enable-gtk-doc=true
-MESON_ARGS+=		-D enable-man=true
+# man option does not work without gtk-doc option
+#MESON_ARGS+=		-D enable-man=true
+
+PKGCONFIG_OVERRIDE=		output/meson-private/dconf.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,12 +45,7 @@ SUBST_FILES.libname+=	gsettings/Makefile.in
 SUBST_SED.libname=	-e "s|-Wl,-soname=|-install_name ${PREFIX}/lib/|g"
 SUBST_SED.libname+=	-e "/^libdconfsettings_so_LDFLAGS/s,$$, -install_name ${PREFIX}/lib/gio/modules/libdconfsettings.so,g"
 
-TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-
 BUILDLINK_DEPMETHOD.vala=	build
-BUILDLINK_API_DEPENDS.vala+=	vala>=0.18.0
 .include "../../lang/vala/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 #.include "../../textproc/gtk-doc/buildlink3.mk"

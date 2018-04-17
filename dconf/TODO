@@ -1,5 +1,0 @@
-0.27.1 switched to meson build system. At least the following problems exist:
-
-* .pc file is broken: it contains "${prefix}//usr/pkg/lib" and misses -Wl,R
-
-* man pages and gtk-doc is not installed any longer 
