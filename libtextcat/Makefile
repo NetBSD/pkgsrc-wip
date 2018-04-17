@@ -5,6 +5,7 @@ DISTNAME=	libtextcat-2.2
 PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://software.wise-guys.nl/download/
+LICENSE=	2-clause-bsd
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://software.wise-guys.nl/libtextcat/
