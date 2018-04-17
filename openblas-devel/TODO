@@ -1,3 +1,0 @@
-Implement INTERFACE64, OPENMP options
-Disable DYNAMIC_ARCH if not package-building
-Implement AVX, AVX2 for x86

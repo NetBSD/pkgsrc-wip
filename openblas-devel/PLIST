@@ -1,7 +1,0 @@
-@comment $NetBSD$
-lib/libopenblas.a
-lib/libopenblas.so
-lib/libopenblas.so.0
-lib/libopenblasp.a
-lib/libopenblasp.so
-lib/libopenblasp.so.0
