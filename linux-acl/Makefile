@@ -5,6 +5,7 @@ DISTNAME=		acl-2.2.52.src
 PKGNAME=		linux-${DISTNAME:S/.src//}
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.savannah.nongnu.org/releases/acl/
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc@blackmouse.biz
 HOMEPAGE=		https://savannah.nongnu.org/projects/acl
