@@ -6,6 +6,7 @@ PKGNAME=		linux-${DISTNAME:S/.src//}
 PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.savannah.nongnu.org/releases/attr/
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc@blackmouse.biz
 HOMEPAGE=		https://savannah.nongnu.org/projects/attr
