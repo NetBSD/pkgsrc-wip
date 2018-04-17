@@ -6,6 +6,7 @@ PKGNAME=		${DISTNAME:S/links/links1/}
 PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		http://artax.karlin.mff.cuni.cz/~mikulas/links/download/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://artax.karlin.mff.cuni.cz/~mikulas/links/
