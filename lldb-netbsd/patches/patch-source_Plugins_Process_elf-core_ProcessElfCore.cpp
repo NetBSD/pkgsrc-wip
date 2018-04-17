@@ -52,7 +52,7 @@ $NetBSD$
  }
  
  static void ParseOpenBSDProcInfo(ThreadData &thread_data,
-@@ -550,35 +577,113 @@ llvm::Error ProcessElfCore::parseFreeBSD
+@@ -550,35 +577,103 @@ llvm::Error ProcessElfCore::parseFreeBSD
  
  llvm::Error ProcessElfCore::parseNetBSDNotes(llvm::ArrayRef<CoreNote> notes) {
    ThreadData thread_data;
@@ -112,12 +112,7 @@ $NetBSD$
 +          m_thread_data.back().gpregset = note.data;
 +          m_thread_data.back().tid = tid;
 +        } else if (note.info.n_type == NETBSD::AMD64::NT_FPREGS) {
-+#if notyet
-+          if (m_thread_data.empty() || tid != m_thread_data.back().tid)
-+            return Status("Error parsing NetBSD core(5) notes: Unexpected order "
-+                         "of NOTEs PT_GETFPREG before PT_GETREG").ToError();
-+          m_thread_data.back().fpregset = note.data;
-+#endif
++          m_thread_data.back().notes.push_back(note);
 +        } else {
 +          return Status(
 +              "Error parsing NetBSD core(5) notes: Unsupported AMD64 NOTE").ToError();
@@ -131,12 +126,7 @@ $NetBSD$
 +          m_thread_data.back().gpregset = note.data;
 +          m_thread_data.back().tid = tid;
 +        } else if (note.info.n_type == NETBSD::AARCH64::NT_FPREGS) {
-+#if notyet
-+          if (m_thread_data.empty() || tid != m_thread_data.back().tid)
-+            return Status("Error parsing NetBSD core(5) notes: Unexpected order "
-+                         "of NOTEs PT_GETFPREG before PT_GETREG").ToError();
-+          m_thread_data.back().fpregset = note.data;
-+#endif
++          m_thread_data.back().notes.push_back(note); // We need to implement an extractor of 128bit integers
 +        } else {
 +          return Status(
 +              "Error parsing NetBSD core(5) notes: Unsupported EVBARM NOTE").ToError();
