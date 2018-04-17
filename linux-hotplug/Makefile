@@ -11,6 +11,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=linux-hotplug/}	\
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://linux-hotplug.sourceforge.net/
 COMMENT=		Hardware autoconfiguration for Linux
-
+LICENSE=		gnu-gpl-v2
 
 .include "../../mk/bsd.pkg.mk"
