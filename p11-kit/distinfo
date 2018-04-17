@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:17:53 agc Exp $
-
-SHA1 (p11-kit-0.23.2.tar.gz) = 4da0d7b47935b6cb0f321dd00358b063ae42df71
-RMD160 (p11-kit-0.23.2.tar.gz) = eb72fa079c985801b2ecc91846aaaf51816af824
-SHA512 (p11-kit-0.23.2.tar.gz) = b665d89f0d752a41b01ec53e29c801c4fdcaf3f21fce524984b10acef0477ad5dbac085edd35ffb747423d0e1e09660b8d29501c979cf54937d3b9d2561cf18f
-Size (p11-kit-0.23.2.tar.gz) = 1022733 bytes

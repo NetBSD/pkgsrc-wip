@@ -33,7 +33,7 @@ pre-configure:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/p11-kit/buildlink3.mk"
+.include "../../security/p11-kit/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
