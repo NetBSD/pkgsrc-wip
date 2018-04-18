@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
 SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 9d229074c8e36be37176349971667817b227eaa5
-SHA1 (patch-lib_Driver_ToolChains_NetBSD.cpp) = e9fa3adccfb3ddfc24b83d51ced5dfa9ac17938e
+SHA1 (patch-lib_Driver_ToolChains_NetBSD.cpp) = 35117f4a3d6bb7b3bc46f06885e5a5f1d2ec5210
 SHA1 (patch-test_Sema_128bitfloat.cpp) = cc11582dd9495b603a22ef73609ab04f65324da2
 SHA1 (patch-tools_clang-format_CMakeLists.txt) = f119d2a94cbfb8c00a285d1aa7789ed26f8309cf

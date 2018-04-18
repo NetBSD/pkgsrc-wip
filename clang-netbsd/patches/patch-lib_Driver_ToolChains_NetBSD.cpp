@@ -1,39 +1,8 @@
 $NetBSD$
 
---- lib/Driver/ToolChains/NetBSD.cpp.orig	2018-02-16 03:40:05.438666489 +0000
+--- lib/Driver/ToolChains/NetBSD.cpp.orig	2018-02-16 03:40:05.000000000 +0000
 +++ lib/Driver/ToolChains/NetBSD.cpp
-@@ -24,6 +24,30 @@ using namespace clang::driver::toolchain
- using namespace clang;
- using namespace llvm::opt;
- 
-+static bool addXRayRuntime(const ToolChain &TC, const ArgList &Args,
-+                           ArgStringList &CmdArgs) {
-+  if (Args.hasArg(options::OPT_shared))
-+    return false;
-+
-+  if (Args.hasFlag(options::OPT_fxray_instrument,
-+                   options::OPT_fnoxray_instrument, false)) {
-+    CmdArgs.push_back("-whole-archive");
-+    CmdArgs.push_back(TC.getCompilerRTArgString(Args, "xray", false));
-+    CmdArgs.push_back("-no-whole-archive");
-+    return true;
-+  }
-+
-+  return false;
-+}
-+
-+static void linkXRayRuntimeDeps(const ToolChain &TC, const ArgList &Args,
-+                                ArgStringList &CmdArgs) {
-+  CmdArgs.push_back("--no-as-needed");
-+  CmdArgs.push_back("-pthread");
-+  CmdArgs.push_back("-lrt");
-+  CmdArgs.push_back("-lm");
-+}
-+
- void netbsd::Assembler::ConstructJob(Compilation &C, const JobAction &JA,
-                                      const InputInfo &Output,
-                                      const InputInfoList &Inputs,
-@@ -112,7 +136,9 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -112,7 +112,9 @@ void netbsd::Linker::ConstructJob(Compil
                                    const InputInfoList &Inputs,
                                    const ArgList &Args,
                                    const char *LinkingOutput) const {
@@ -44,7 +13,7 @@ $NetBSD$
    ArgStringList CmdArgs;
  
    if (!D.SysRoot.empty())
-@@ -135,7 +161,7 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -135,7 +137,7 @@ void netbsd::Linker::ConstructJob(Compil
  
    // Many NetBSD architectures support more than one ABI.
    // Determine the correct emulation for ld.
@@ -53,7 +22,7 @@ $NetBSD$
    case llvm::Triple::x86:
      CmdArgs.push_back("-m");
      CmdArgs.push_back("elf_i386");
-@@ -143,7 +169,7 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -143,7 +145,7 @@ void netbsd::Linker::ConstructJob(Compil
    case llvm::Triple::arm:
    case llvm::Triple::thumb:
      CmdArgs.push_back("-m");
@@ -62,7 +31,7 @@ $NetBSD$
      case llvm::Triple::EABI:
      case llvm::Triple::GNUEABI:
        CmdArgs.push_back("armelf_nbsd_eabi");
-@@ -159,9 +185,9 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -159,9 +161,9 @@ void netbsd::Linker::ConstructJob(Compil
      break;
    case llvm::Triple::armeb:
    case llvm::Triple::thumbeb:
@@ -74,7 +43,7 @@ $NetBSD$
      case llvm::Triple::EABI:
      case llvm::Triple::GNUEABI:
        CmdArgs.push_back("armelfb_nbsd_eabi");
-@@ -179,13 +205,13 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -179,13 +181,13 @@ void netbsd::Linker::ConstructJob(Compil
    case llvm::Triple::mips64el:
      if (mips::hasMipsAbiArg(Args, "32")) {
        CmdArgs.push_back("-m");
@@ -90,7 +59,7 @@ $NetBSD$
          CmdArgs.push_back("elf64btsmip");
        else
          CmdArgs.push_back("elf64ltsmip");
-@@ -226,16 +252,16 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -226,16 +228,16 @@ void netbsd::Linker::ConstructJob(Compil
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
      if (!Args.hasArg(options::OPT_shared)) {
        CmdArgs.push_back(
@@ -111,7 +80,7 @@ $NetBSD$
      }
    }
  
-@@ -248,13 +274,14 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -248,13 +250,14 @@ void netbsd::Linker::ConstructJob(Compil
    Args.AddAllArgs(CmdArgs, options::OPT_r);
  
    bool NeedsSanitizerDeps = addSanitizerRuntimes(getToolChain(), Args, CmdArgs);
@@ -128,7 +97,7 @@ $NetBSD$
      case llvm::Triple::aarch64:
      case llvm::Triple::aarch64_be:
      case llvm::Triple::arm:
-@@ -278,12 +305,14 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -278,12 +281,14 @@ void netbsd::Linker::ConstructJob(Compil
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs)) {
      addOpenMPRuntime(CmdArgs, getToolChain(), Args);
      if (D.CCCIsCXX()) {
@@ -145,7 +114,7 @@ $NetBSD$
      if (Args.hasArg(options::OPT_pthread))
        CmdArgs.push_back("-lpthread");
      CmdArgs.push_back("-lc");
-@@ -308,16 +337,16 @@ void netbsd::Linker::ConstructJob(Compil
+@@ -308,16 +313,16 @@ void netbsd::Linker::ConstructJob(Compil
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
      if (Args.hasArg(options::OPT_shared) || Args.hasArg(options::OPT_pie))
        CmdArgs.push_back(
