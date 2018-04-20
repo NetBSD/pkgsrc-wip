@@ -6,6 +6,7 @@ PKGNAME=		linux-${DISTNAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.kernel.org/pub/linux/kernel/people/rusty/modules/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.kernel.org/pub/linux/kernel/people/rusty/modules/
