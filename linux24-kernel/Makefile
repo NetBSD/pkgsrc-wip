@@ -5,6 +5,7 @@
 
 PKGNAME=	linux-kernel-${LINUX_VERSION}
 COMMENT=	The Linux kernel
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	linux-modutils-[0-9]*:../../wip/linux-modutils
 

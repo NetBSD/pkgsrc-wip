@@ -5,6 +5,7 @@
 
 PKGNAME=	linux-kernel-headers-${LINUX_VERSION}
 COMMENT=	Linux kernel headers
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# empty
 
