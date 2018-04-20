@@ -6,6 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ftp.kernel.org/pub/linux/utils/kernel/modutils/v2.4/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.kernel.org/
