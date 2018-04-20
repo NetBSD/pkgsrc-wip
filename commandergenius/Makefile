@@ -2,15 +2,11 @@
 
 GITHUB_PROJECT=	Commander-Genius
 DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-2.0.0
+PKGNAME=	${GITHUB_PROJECT}-${GITHUB_TAG:S/^v//}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gerstrong/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_TAG=	v200Release
-DISTFILES=	${DEFAULT_DISTFILES} GsKit-${GSKIT_VER}.tar.gz
-GSKIT_VER=	f925d1362f0bc99598141a97d5a200d5e6a41391
-SITES.GsKit-${GSKIT_VER}.tar.gz= \
-		-https://github.com/gerstrong/GsKit/archive/${GSKIT_VER}.tar.gz
+GITHUB_TAG=	v2.2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clonekeenplus.sourceforge.net/
@@ -31,9 +27,6 @@ INSTALLATION_DIRS=	bin share/doc/commandergenius
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-post-extract:
-	${MV} ${WRKDIR}/GsKit-${GSKIT_VER}/* ${WRKSRC}/GsKit/
-
 post-install:
 	cd ${WRKSRC}/vfsroot && ${FIND} . -type d | while read d; do \
 		${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/share/commandergenius/$$d" || exit 1; \
@@ -43,8 +36,10 @@ post-install:
 	done
 
 .include "options.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
