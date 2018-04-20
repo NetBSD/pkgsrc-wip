@@ -5,6 +5,7 @@ DISTNAME=		ltrace_0.3.36.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=		sysutils devel
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/l/ltrace/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://ltrace.alioth.debian.org/
