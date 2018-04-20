@@ -5,6 +5,7 @@ DISTNAME=		linuxtv-dvb-apps-1.1.1
 CATEGORIES=		linux
 MASTER_SITES=		https://www.linuxtv.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.linuxtv.org/
