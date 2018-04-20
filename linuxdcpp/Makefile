@@ -5,6 +5,7 @@ PKGREVISION=		2
 CATEGORIES=		net x11
 MASTER_SITES=		http://launchpad.net/linuxdcpp/1.0/1.0.3/+download/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://launchpad.net/linuxdcpp/
