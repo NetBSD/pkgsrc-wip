@@ -21,7 +21,6 @@
 PGSQL_MASTER_SITES=	http://www.postgresql.org/ftpsite/source/v${PGSQL_DIST_VERS}/ \
 	       		ftp://ftp.postgresql.org/pub/source/v${PGSQL_DIST_VERS}/ \
        			ftp://ftp.de.postgresql.org/mirror/postgresql/source/v${PGSQL_DIST_VERS}/ \
-       		       	ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/v${PGSQL_DIST_VERS}/ \
        	       		ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${PGSQL_DIST_VERS}/ \
        	       		ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${PGSQL_DIST_VERS}/
 		
