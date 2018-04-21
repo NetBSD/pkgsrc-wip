@@ -15,5 +15,5 @@ SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060e
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
-SHA1 (patch-hw_xfree86_sdksyms.sh) = e7cd03a3bb55f757ff4b24d4377452f5f100ba40
+SHA1 (patch-hw_xfree86_sdksyms.sh) = deb79139bb1974f8c8cb160c45398480c64be98e
 SHA1 (patch-os_xstrans.c) = 489a4f4b226ecd361b922895204fb9041b065d4e
