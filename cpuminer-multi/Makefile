@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cpuminer-multi-1.3.1
+DISTNAME=	cpuminer-multi-1.3.3
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tpruvot/}
 GITHUB_PROJECT=	cpuminer-multi

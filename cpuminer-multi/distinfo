@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (cpuminer-multi-1.3.1.tar.gz) = af1613c9c39bd9098861875cf2dfcdc37cb67789
-RMD160 (cpuminer-multi-1.3.1.tar.gz) = 39b32ec654d60623463f10e70b35f7a0c75b47d0
-SHA512 (cpuminer-multi-1.3.1.tar.gz) = c74fe3b9d7b2b0235aedf1344d196396d2f81439f4db9ccf3bbca7d2144c0d84800f8e5af4def899085fe76d414ceec1f5c2510d1ed6850c11fd711cf5d57efa
-Size (cpuminer-multi-1.3.1.tar.gz) = 16506358 bytes
+SHA1 (cpuminer-multi-1.3.3.tar.gz) = fa6af0a7a917cd1b9a049aeae5b3d294a2cb4edc
+RMD160 (cpuminer-multi-1.3.3.tar.gz) = c7c3fab34aad0e040467c533b7841c3d65917733
+SHA512 (cpuminer-multi-1.3.3.tar.gz) = 0cfda6da468ebf97fe00dc39a4f396ce2d9b50c57dc42e89ec90d66267f36bbc85fa4063f6f24f06f7ab04b1607a818b2698b158584365e69fff6766035f7503
+Size (cpuminer-multi-1.3.3.tar.gz) = 16509552 bytes
 SHA1 (patch-aa) = f3bb5b25ce67ad2ddcce8ce263d7a4f959ff44a2
