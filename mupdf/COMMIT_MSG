@@ -1,0 +1,16 @@
+mupdf: Update print/mupdf to 1.13.0
+
+pkgsrc changes:
+ - Directly override VERSION in files/mupdf.pc in the post-build phase
+   (to avoid an extra manual step for every mupdf update)
+ - Get rid of OPJ_STATIC patch hunk in patches/patch-source_fitz_load-jpx.c (it
+   is no more needed, because the `-DOPJ_STATIC' is now passed in Makefile-s
+   when the bundled openjpeg is used).
+
+Changes:
+1.13.0
+------
+* This is primarily a bugfix release.
+* New "mutool sign" tool for showing and verifying digital signatures.
+* Chinese, Japanese, Korean, Cyrillic, and Greek font support in mutool create.
+* Improvements to annotation editing API.
