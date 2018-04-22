@@ -15,7 +15,6 @@ basepkg/sets/lists/base/ad.m68k
 basepkg/sets/lists/base/ad.m68k.shl
 basepkg/sets/lists/base/ad.mips
 basepkg/sets/lists/base/ad.powerpc
-basepkg/sets/lists/base/ad.riscv
 basepkg/sets/lists/base/md.acorn32
 basepkg/sets/lists/base/md.alpha
 basepkg/sets/lists/base/md.amd64
@@ -33,7 +32,6 @@ basepkg/sets/lists/base/md.hpcmips
 basepkg/sets/lists/base/md.hpcsh
 basepkg/sets/lists/base/md.hppa
 basepkg/sets/lists/base/md.i386
-basepkg/sets/lists/base/md.ia64
 basepkg/sets/lists/base/md.landisk
 basepkg/sets/lists/base/md.luna68k
 basepkg/sets/lists/base/md.mac68k
@@ -83,7 +81,6 @@ basepkg/sets/lists/comp/ad.m68k
 basepkg/sets/lists/comp/ad.m68k.shl
 basepkg/sets/lists/comp/ad.mips
 basepkg/sets/lists/comp/ad.powerpc
-basepkg/sets/lists/comp/ad.riscv
 basepkg/sets/lists/comp/ad.sh3
 basepkg/sets/lists/comp/md.algor
 basepkg/sets/lists/comp/md.alpha
@@ -107,7 +104,6 @@ basepkg/sets/lists/comp/md.hpcmips
 basepkg/sets/lists/comp/md.hpcsh
 basepkg/sets/lists/comp/md.hppa
 basepkg/sets/lists/comp/md.i386
-basepkg/sets/lists/comp/md.ia64
 basepkg/sets/lists/comp/md.ibmnws
 basepkg/sets/lists/comp/md.landisk
 basepkg/sets/lists/comp/md.luna68k
@@ -121,7 +117,6 @@ basepkg/sets/lists/comp/md.news68k
 basepkg/sets/lists/comp/md.newsmips
 basepkg/sets/lists/comp/md.next68k
 basepkg/sets/lists/comp/md.ofppc
-basepkg/sets/lists/comp/md.or1k
 basepkg/sets/lists/comp/md.playstation2
 basepkg/sets/lists/comp/md.pmax
 basepkg/sets/lists/comp/md.prep
@@ -144,7 +139,6 @@ basepkg/sets/lists/debug/ad.m68k
 basepkg/sets/lists/debug/ad.m68k.shl
 basepkg/sets/lists/debug/ad.mips
 basepkg/sets/lists/debug/ad.powerpc
-basepkg/sets/lists/debug/ad.riscv
 basepkg/sets/lists/debug/md.alpha
 basepkg/sets/lists/debug/md.amd64
 basepkg/sets/lists/debug/md.amiga
@@ -158,7 +152,6 @@ basepkg/sets/lists/debug/md.hpcmips
 basepkg/sets/lists/debug/md.hpcsh
 basepkg/sets/lists/debug/md.hppa
 basepkg/sets/lists/debug/md.i386
-basepkg/sets/lists/debug/md.ia64
 basepkg/sets/lists/debug/md.luna68k
 basepkg/sets/lists/debug/md.mac68k
 basepkg/sets/lists/debug/md.macppc
@@ -202,21 +195,16 @@ basepkg/sets/lists/modules/md.evbppc.powerpc
 basepkg/sets/lists/modules/md.hppa
 basepkg/sets/lists/modules/md.i386
 basepkg/sets/lists/modules/md.ia64
-basepkg/sets/lists/modules/md.prep
-basepkg/sets/lists/modules/md.sgimips
 basepkg/sets/lists/modules/md.sparc
 basepkg/sets/lists/modules/md.sparc64
 basepkg/sets/lists/modules/md.vax
 basepkg/sets/lists/modules/mi
 basepkg/sets/lists/tests/ad.aarch64
-basepkg/sets/lists/tests/md.amd64
-basepkg/sets/lists/tests/md.i386
 basepkg/sets/lists/tests/mi
 basepkg/sets/lists/tests/module.mi
 basepkg/sets/lists/tests/shl.mi
 basepkg/sets/lists/text/mi
 basepkg/sets/lists/xbase/md.amd64
-basepkg/sets/lists/xbase/md.evbarm
 basepkg/sets/lists/xbase/md.i386
 basepkg/sets/lists/xbase/mi
 basepkg/sets/lists/xbase/shl.mi
@@ -227,7 +215,6 @@ basepkg/sets/lists/xcomp/md.amiga
 basepkg/sets/lists/xcomp/md.atari
 basepkg/sets/lists/xcomp/md.cats
 basepkg/sets/lists/xcomp/md.dreamcast
-basepkg/sets/lists/xcomp/md.evbarm
 basepkg/sets/lists/xcomp/md.evbmips
 basepkg/sets/lists/xcomp/md.ews4800mips
 basepkg/sets/lists/xcomp/md.hp300
@@ -268,7 +255,6 @@ basepkg/sets/lists/xdebug/md.hpcarm
 basepkg/sets/lists/xdebug/md.hpcmips
 basepkg/sets/lists/xdebug/md.hpcsh
 basepkg/sets/lists/xdebug/md.i386
-basepkg/sets/lists/xdebug/md.ibmnws
 basepkg/sets/lists/xdebug/md.luna68k
 basepkg/sets/lists/xdebug/md.mac68k
 basepkg/sets/lists/xdebug/md.macppc
@@ -310,7 +296,6 @@ basepkg/sets/lists/xserver/md.hpcarm
 basepkg/sets/lists/xserver/md.hpcmips
 basepkg/sets/lists/xserver/md.hpcsh
 basepkg/sets/lists/xserver/md.i386
-basepkg/sets/lists/xserver/md.ibmnws
 basepkg/sets/lists/xserver/md.luna68k
 basepkg/sets/lists/xserver/md.mac68k
 basepkg/sets/lists/xserver/md.macppc
