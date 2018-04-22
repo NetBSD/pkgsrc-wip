@@ -4361,6 +4361,7 @@ SUBDIR+=	tex-changes-doc
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-mathtools-doc
+SUBDIR+=	tex-pgfgantt
 SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
 SUBDIR+=	texlive
