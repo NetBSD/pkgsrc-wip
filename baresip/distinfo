@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.1 2014/08/10 00:26:01 thomasklausner Exp $
 
-SHA1 (baresip-0.5.8.tar.gz) = 93af06b22e0f7b124b786aa71cf75e37fdb31e9f
-RMD160 (baresip-0.5.8.tar.gz) = 42da362bfe81d5ea8b1b6055d4271ab51b619cf1
-SHA512 (baresip-0.5.8.tar.gz) = 234e2331e1195eb2ecf8142e75a6a32eee4f68dd709bbb32b31570dedd43f95940cd513139ea151f7255863751508ee733d4e6a57990075807552fa873057343
-Size (baresip-0.5.8.tar.gz) = 584406 bytes
+SHA1 (baresip-0.5.9.tar.gz) = 0c850636ab6a1fbf138b61d0b217f6f2f98e7257
+RMD160 (baresip-0.5.9.tar.gz) = a3b23b09b5d47eb48f1911f5ec6c54ad2113a417
+SHA512 (baresip-0.5.9.tar.gz) = 36a446b1bcf6163194c23c48c42aab5cc01e68302411b6b243e5ec5071a21b9300840a6892b28df0b3a4d0265e2d3010db83c5d8a3a8c326a62e5bc63961684a
+Size (baresip-0.5.9.tar.gz) = 589680 bytes
 SHA1 (patch-mk_modules.mk) = 12c295c1765f721e2a44d0d6835c2474ebc82e78
 SHA1 (patch-modules_ilbc_ilbc.c) = b19d181f41d84ad5cdc2a6e93c5004dab25e6c32
 SHA1 (patch-modules_v4l2_v4l2.c) = 71ba2d1e5c8ba61eb011bd2b6b9e0d9cdaec5797
