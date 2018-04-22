@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.7 2015/03/15 14:37:03 othyro Exp $
 
-SHA1 (re-0.5.7.tar.gz) = 562c49f778094f8ff7f825ec65c33bea85d4ba39
-RMD160 (re-0.5.7.tar.gz) = 8f3ffabd75a30d5971c2cfd4a9ebbb3c9e233a27
-SHA512 (re-0.5.7.tar.gz) = 7e899ee7b315a459f21989cfece7d9a0251cffd5633e74c632b6cec3dd2f1fbb356bb77159bb11c4483c617a4ed630cc9d381eb81c8f47f336a6347aa0a03715
-Size (re-0.5.7.tar.gz) = 299678 bytes
+SHA1 (re-0.5.8.tar.gz) = 3580e56756b6c9b1dd91e339bffb931f2bdd31fd
+RMD160 (re-0.5.8.tar.gz) = 79d08cb2637b8e531eb6892a2c5f0db1b0953b0a
+SHA512 (re-0.5.8.tar.gz) = 052e1b9b5fc7365ad4dc2b9caaac2ea8da71864fa4d6593a3f90a7315109937bb40200eb707b7177b992bcdcdbea526acdbf6fff2f69f61b8c94804032c30082
+Size (re-0.5.8.tar.gz) = 301351 bytes
