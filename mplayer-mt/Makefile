@@ -4,6 +4,7 @@ PKGNAME=	mplayer-mt-20090720
 PKGREVISION=	1
 DISTNAME=	mplayer-svn-mt
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 COMMENT=	Software-only MPEG-1/2/4 video decoder
 
