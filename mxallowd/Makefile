@@ -4,6 +4,7 @@ CATEGORIES=	mail
 DISTNAME=	mxallowd-1.7
 HOMEPAGE=	http://michael.stapelberg.de/mxallowd
 COMMENT=	Anti-Spam-Daemon using pf/pflog
+LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=		YES
 USE_TOOLS+=		gmake
