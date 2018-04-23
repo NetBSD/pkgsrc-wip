@@ -5,6 +5,7 @@ PKGNAME=	milter-greylist-devel-${VERSION}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
+LICENSE=	modified-bsd
 
 OWNER=		pettai@nordu.net
 HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
