@@ -3,6 +3,7 @@
 DISTNAME=		metalog-0.8-rc1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=metalog/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		nel@soraneko.com
 HOMEPAGE=		http://metalog.sourceforge.net/
