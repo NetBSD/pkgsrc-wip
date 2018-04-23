@@ -4,6 +4,7 @@
 DISTNAME=		mozplugger-1.5.2
 CATEGORIES=		www
 MASTER_SITES=		http://downloads.mozdev.org/mozplugger/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://mozplugger.mozdev.org/
