@@ -10,6 +10,7 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	Free Nintendo 64(TM) emulator for unix-like OS
+LICENSE=	gnu-gpl-v2
 
 META_PACKAGE=	yes
 
