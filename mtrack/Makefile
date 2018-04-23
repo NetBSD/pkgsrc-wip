@@ -4,6 +4,7 @@
 DISTNAME=		mtrack-0.3
 CATEGORIES=		ham x11
 MASTER_SITES=		http://www.qsl.net/g4klx/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		dawszy@arhea.pl
 HOMEPAGE=		http://www.qsl.net/g4klx/
