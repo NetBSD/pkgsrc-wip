@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://web.archive.org/web/20071226080243/http://bachue.com/matanza/
 #HOMEPAGE=		http://bachue.com/matanza/
 COMMENT=		Multiplayer space shooter ascii-art game
-
+LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
