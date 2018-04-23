@@ -6,6 +6,7 @@ PKGNAME=		multisync-syncml-moto-0.82
 COMMENT=		SyncML module for Multisync (Motorola EZX)
 
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/syncml_plugin/
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		multisync-syncml-[0-9]*
 

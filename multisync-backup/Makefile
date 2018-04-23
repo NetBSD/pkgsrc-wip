@@ -5,6 +5,7 @@ PKGNAME=		multisync-backup-0.82
 PKGREVISION=		3
 
 COMMENT=		Module for Multisync to backup your PIM data
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/backup_plugin/
 

@@ -5,6 +5,7 @@ PKGNAME=		multisync-ldap-0.82
 PKGREVISION=		4
 
 COMMENT=		LDAP module for Multisync
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/ldap_plugin/
 DEPENDS+=		multisync>=0.82:../../wip/multisync

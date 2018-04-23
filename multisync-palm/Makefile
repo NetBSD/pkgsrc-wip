@@ -5,6 +5,7 @@ PKGNAME=		multisync-palm-0.82
 PKGREVISION=		4
 
 COMMENT=		Module for synchronization with Palm devices
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/palm_sync/
 DEPENDS+=		multisync>=0.82:../../wip/multisync

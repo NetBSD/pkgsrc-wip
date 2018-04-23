@@ -4,6 +4,7 @@
 PKGNAME=		multisync-0.82
 PKGREVISION=		4
 COMMENT=		Modular program to synchronize PIM data
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/multisync-0.82
 USE_TOOLS+=		aclocal autoconf autoheader automake

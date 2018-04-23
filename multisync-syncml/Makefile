@@ -5,6 +5,7 @@ PKGNAME=		multisync-syncml-0.82
 PKGREVISION=		4
 
 COMMENT=		SyncML module for Multisync
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		multisync-syncml-moto-[0-9]*
 
