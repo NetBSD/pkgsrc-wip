@@ -5,6 +5,7 @@ DISTNAME=	marsyas-0.2.16
 PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=marsyas/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://marsyas.sourceforge.net/
