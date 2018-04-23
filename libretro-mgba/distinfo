@@ -6,4 +6,4 @@ SHA512 (libretro-mgba-0.6.3.tar.gz) = d646af7869dbcf8df671a75ecfd8c270950c013b82
 Size (libretro-mgba-0.6.3.tar.gz) = 7442154 bytes
 SHA1 (patch-CMakeLists.txt) = 5b9dfe03254ba3cbd6757bd0caa700c79842f2a1
 SHA1 (patch-include_mgba-util_math.h) = 448ca1bb3bbe2812e7d9482917c488ddcf3b48f0
-SHA1 (patch-version.cmake) = 9b2a0413f686d7fa8f0ffea043bed0a6319e4dfe
+SHA1 (patch-version.cmake) = 973e3b397b807be1c228e96d559f98a4d1091bae

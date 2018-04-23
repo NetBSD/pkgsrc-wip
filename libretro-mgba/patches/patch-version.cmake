@@ -2,9 +2,17 @@ $NetBSD$
 
 Avoid looking for git to determine the version string.
 
---- version.cmake.orig	2018-04-04 04:10:29.000000000 +0000
+Correct version string.
+
+--- version.cmake.orig	2018-04-14 20:49:19.000000000 +0000
 +++ version.cmake
-@@ -8,15 +8,6 @@ set(LIB_VERSION_ABI 0.6)
+@@ -3,20 +3,11 @@ if(NOT PROJECT_NAME)
+ endif()
+ set(LIB_VERSION_MAJOR 0)
+ set(LIB_VERSION_MINOR 6)
+-set(LIB_VERSION_PATCH 1)
++set(LIB_VERSION_PATCH 3)
+ set(LIB_VERSION_ABI 0.6)
  set(LIB_VERSION_STRING ${LIB_VERSION_MAJOR}.${LIB_VERSION_MINOR}.${LIB_VERSION_PATCH})
  set(SUMMARY "${PROJECT_NAME} Game Boy Advance Emulator")
  
