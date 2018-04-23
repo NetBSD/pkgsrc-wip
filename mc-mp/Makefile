@@ -6,6 +6,7 @@ PKGNAME=		mc-mp-4.1.39.99.9
 PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://mc.linuxinside.com/Releases/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mc.linuxinside.com/cgi-bin/dir.cgi
