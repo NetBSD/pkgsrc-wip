@@ -5,6 +5,7 @@ DISTNAME=		mutt_vc_query-002
 PKGNAME=		muttvcquery-002
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rolo/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rolo.sourceforge.net/
