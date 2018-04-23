@@ -6,6 +6,7 @@ CATEGORIES=		sysutils linux
 MASTER_SITES=		http://www.cse.unsw.edu.au/~neilb/source/mdadm/ \
 			http://www.kernel.org/pub/linux/utils/raid/mdadm/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cse.unsw.edu.au/~neilb/source/mdadm/ANNOUNCE
