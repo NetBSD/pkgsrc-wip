@@ -4,6 +4,7 @@
 DISTNAME=		mac-robber-1.00
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mac-robber/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sleuthkit.org/mac-robber/
