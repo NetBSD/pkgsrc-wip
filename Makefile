@@ -2774,6 +2774,7 @@ SUBDIR+=	pinball
 SUBDIR+=	pinkpony
 SUBDIR+=	pioneer
 SUBDIR+=	piwik
+SUBDIR+=	pipes-c
 SUBDIR+=	pixz
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
