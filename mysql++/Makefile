@@ -5,6 +5,7 @@ DISTNAME=	mysql++-2.1.1
 PKGNAME=	mysql++-2.1.1-mysql${MYSQL_VER}
 CATEGORIES=	databases devel
 MASTER_SITES=	http://tangentsoft.net/mysql++/releases/
+LICENSE=	gnu-lgpl-v2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tangentsoft.net/mysql++/
