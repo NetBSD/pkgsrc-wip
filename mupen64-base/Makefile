@@ -7,6 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64.emulation64.com/files/0.4/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
