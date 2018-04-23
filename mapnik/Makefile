@@ -7,6 +7,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mapnik/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-lgpl-v2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mapnik.org/
