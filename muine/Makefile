@@ -5,6 +5,7 @@ DISTNAME=	muine-0.8.11
 PKGREVISION=	4
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/muine/0.8/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://muine-player.org/wiki/Main_Page
