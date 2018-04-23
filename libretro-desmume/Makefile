@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-desmume-20180303
+DISTNAME=	libretro-desmume-20180416
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	desmume
-GITHUB_TAG=	d0d804c21166aa2f0dd8c13be2ef1f0ef681a3c9
+GITHUB_TAG=	9fb1e8c1f4ccd819f15b29e2114a05e45140fec0
 
 HOMEPAGE=	https://docs.libretro.com/library/desmume/
 COMMENT=	Libretro core based on the Desmume Nintendo DS emulator
