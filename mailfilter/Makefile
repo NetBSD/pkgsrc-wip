@@ -4,6 +4,7 @@
 DISTNAME=	mailfilter-0.7.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailfilter/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://mailfilter.sourceforge.net/
