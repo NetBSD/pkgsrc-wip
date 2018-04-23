@@ -4,6 +4,7 @@
 DISTNAME=	mkcabal-0.4.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
+LICENSE=	gnu-lgpl-v2.1
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Generate cabal files for a Haskell project
