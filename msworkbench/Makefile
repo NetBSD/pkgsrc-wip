@@ -4,6 +4,7 @@
 DISTNAME=		msworkbench-0.3
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=msworkbench/}
+LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://msworkbench.sourceforge.net/
