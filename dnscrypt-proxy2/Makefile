@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	dnscrypt-proxy2-2.0.9
+PKGNAME=	dnscrypt-proxy2-2.0.10
 DISTNAME=	dnscrypt-proxy-${PKGVERSION_NOREV}
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jedisct1/}
