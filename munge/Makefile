@@ -5,6 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
 GITHUB_RELEASE=	${DISTNAME}
 EXTRACT_SUFX=	.tar.xz
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://dun.github.io/munge/
