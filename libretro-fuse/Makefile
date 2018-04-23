@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-fuse-20171202
+DISTNAME=	libretro-fuse-20180419
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	fuse-libretro
-GITHUB_TAG=	a990e57c5fc3f425fa5185d627723a6525eeba16
+GITHUB_TAG=	fa6ecc43754be89ec5a156877f04adb8f9cc7a09
 
 HOMEPAGE=	https://docs.libretro.com/library/fuse/
 COMMENT=	Libretro core based on the FUSE ZX Spectrum emulator
