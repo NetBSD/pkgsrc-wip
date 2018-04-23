@@ -3,6 +3,7 @@
 DISTNAME=	min12xxw-0.0.9
 CATEGORIES=	print
 MASTER_SITES=	http://www.hinterbergen.de/mala/min12xxw/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://www.hinterbergen.de/mala/min12xxw/
