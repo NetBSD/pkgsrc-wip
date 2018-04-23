@@ -3,6 +3,7 @@
 DISTNAME=		mmm-mode-0.4.8
 CATEGORIES=		textproc editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mmm-mode/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mmm-mode.sourceforge.net/
