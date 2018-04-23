@@ -5,6 +5,7 @@ DISTNAME=	mcats-0.1.0
 PKGNAME=	${DISTNAME:S/-/-iodbc-/}
 CATEGORIES=	converters
 MASTER_SITES=	http://mcats.net/files/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pehr@mcats.net
 HOMEPAGE=	http://mcats.net/
