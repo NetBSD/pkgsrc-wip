@@ -6,6 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=microtetris/}
 EXTRACT_SUFX=	.py
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://microtetris.sourceforge.net/
