@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/ark
-lib/libkerfuffle.so.17
-lib/libkerfuffle.so.${PKGVERSION}
+lib/libkerfuffle.so.18
+lib/libkerfuffle.so.18.4.0
 man/ca/man1/ark.1
 man/de/man1/ark.1
 man/es/man1/ark.1
@@ -138,4 +138,3 @@ share/locale/uk/LC_MESSAGES/ark.mo
 share/locale/zh_CN/LC_MESSAGES/ark.mo
 share/locale/zh_TW/LC_MESSAGES/ark.mo
 share/metainfo/org.kde.ark.appdata.xml
-share/mime/packages/kerfuffle.xml
