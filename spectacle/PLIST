@@ -16,6 +16,11 @@ share/doc/HTML/en/spectacle/index.cache.bz2
 share/doc/HTML/en/spectacle/index.docbook
 share/doc/HTML/es/spectacle/index.cache.bz2
 share/doc/HTML/es/spectacle/index.docbook
+share/doc/HTML/id/spectacle/ApplicationPreferences.png
+share/doc/HTML/id/spectacle/MainWindow.png
+share/doc/HTML/id/spectacle/SaveOptions.png
+share/doc/HTML/id/spectacle/index.cache.bz2
+share/doc/HTML/id/spectacle/index.docbook
 share/doc/HTML/it/spectacle/index.cache.bz2
 share/doc/HTML/it/spectacle/index.docbook
 share/doc/HTML/nl/spectacle/index.cache.bz2
@@ -54,6 +59,7 @@ share/locale/fi/LC_MESSAGES/spectacle.mo
 share/locale/fr/LC_MESSAGES/spectacle.mo
 share/locale/gl/LC_MESSAGES/spectacle.mo
 share/locale/he/LC_MESSAGES/spectacle.mo
+share/locale/hu/LC_MESSAGES/spectacle.mo
 share/locale/ia/LC_MESSAGES/spectacle.mo
 share/locale/id/LC_MESSAGES/spectacle.mo
 share/locale/it/LC_MESSAGES/spectacle.mo
