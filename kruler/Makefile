@@ -7,7 +7,7 @@ HOMEPAGE=	https://kde.org/applications/graphics/kruler/
 COMMENT=	KDE screen ruler
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
