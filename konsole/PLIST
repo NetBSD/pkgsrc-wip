@@ -2,7 +2,7 @@
 bin/konsole
 bin/konsoleprofile
 lib/libkdeinit5_konsole.so
-lib/libkonsoleprivate.so.17
+lib/libkonsoleprivate.so.18
 lib/libkonsoleprivate.so.${PKGVERSION}
 qt5/plugins/konsolepart.so
 share/applications/org.kde.konsole.desktop
@@ -29,6 +29,7 @@ share/doc/HTML/sv/konsole/index.cache.bz2
 share/doc/HTML/sv/konsole/index.docbook
 share/doc/HTML/uk/konsole/index.cache.bz2
 share/doc/HTML/uk/konsole/index.docbook
+share/examples/kde-xdg/konsole.knsrc
 share/knotifications5/konsole.notifyrc
 share/konsole/BlackOnLightYellow.colorscheme
 share/konsole/BlackOnRandomLight.colorscheme

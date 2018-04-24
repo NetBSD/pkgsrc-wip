@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (konsole-17.12.1.tar.xz) = a24a63a6c2ca23eba039c932086082bbc11539d2
-RMD160 (konsole-17.12.1.tar.xz) = e8793f4d9b513aff8a991bc1ee6303d263f6e594
-SHA512 (konsole-17.12.1.tar.xz) = af1e2e0ecb18a213de0ab452ed7db5b17ac477571b9d5ebaadad407714733e80f379f7ee6a506312c42e9bfe5990087b6f63655d18dc1cb302ff1bd446c2dfdb
-Size (konsole-17.12.1.tar.xz) = 1026684 bytes
-SHA1 (patch-src_ProcessInfo.cpp) = bc29390b58f44c6281ef459895ceb1260969b4e1
+SHA1 (konsole-18.04.0.tar.xz) = b7b3ef35d3575d6a544e8b9f8a3f37d201f6f77c
+RMD160 (konsole-18.04.0.tar.xz) = b0eb99a7b3d5b32a1185e0963cb69d711a599536
+SHA512 (konsole-18.04.0.tar.xz) = bbfe004a2cc75e761cd80ebd08e5c86aedf3c43fa9d4273008f0bbda59277f85650a9d59201c3591f2112698159da4ea4e72b02583130a20a048b31e67353396
+Size (konsole-18.04.0.tar.xz) = 1039396 bytes
+SHA1 (patch-src_ProcessInfo.cpp) = a445ec5ea3cf0fff5ed90707e641e3a02d8a9a82

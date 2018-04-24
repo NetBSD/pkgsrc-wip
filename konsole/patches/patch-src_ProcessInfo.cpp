@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/ProcessInfo.cpp.orig	2018-01-08 05:04:18.000000000 +0000
+--- src/ProcessInfo.cpp.orig	2018-04-10 14:05:33.000000000 +0000
 +++ src/ProcessInfo.cpp
 @@ -982,6 +982,163 @@ private:
          return false;
@@ -166,12 +166,12 @@ $NetBSD$
  #endif
  
  SSHProcessInfo::SSHProcessInfo(const ProcessInfo &process) :
-@@ -1165,6 +1322,8 @@ ProcessInfo *ProcessInfo::newInstance(in
-     info = new LinuxProcessInfo(aPid, titleFormat);
- #elif defined(Q_OS_SOLARIS)
-     info = new SolarisProcessInfo(aPid, titleFormat);
-+#elif defined(Q_OS_NETBSD)
-+    return new NetBSDProcessInfo(aPid, titleFormat);
- #elif defined(Q_OS_MACOS)
-     info = new MacProcessInfo(aPid, titleFormat);
+@@ -1169,6 +1326,8 @@ ProcessInfo *ProcessInfo::newInstance(in
+     info = new MacProcessInfo(pid, titleFormat);
  #elif defined(Q_OS_FREEBSD)
+     info = new FreeBSDProcessInfo(pid, titleFormat);
++#elif defined(Q_OS_NETBSD)
++    info = new NetBSDProcessInfo(pid, titleFormat);
+ #elif defined(Q_OS_OPENBSD)
+     info = new OpenBSDProcessInfo(pid, titleFormat);
+ #else
