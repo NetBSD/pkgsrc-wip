@@ -7,13 +7,11 @@ HOMEPAGE=	http://kde.org/applications/internet/
 COMMENT=	Additional components to increase the functionality of KIO
 LICENSE=	gnu-gpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config perl:run
-
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 REPLACE_PERL+=	info/kde-info2html
 
@@ -28,9 +26,10 @@ SUBST_FILES.fix-moc=	_KDE_build/man/CMakeFiles/kmanpart_autogen.dir/AutogenInfo.
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/kpty/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
-.include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../net/kdnssd/buildlink3.mk"
