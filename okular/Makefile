@@ -7,15 +7,14 @@ HOMEPAGE=	https://kde.org/applications/graphics/okular/
 COMMENT=	KDE universal document viewer
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
-#DEPENDS+=	kactivities5>=5.19.0:../../x11/libkactivities5
 
 USE_TOOLS+=	msgmerge pkg-config
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
@@ -38,17 +37,17 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 .include "../../devel/threadweaver/buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../wip/kdegraphics-mobipocket/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../wip/libkexiv2/buildlink3.mk"
-.include "../../www/kjs/buildlink3.mk"
-.include "../../www/khtml/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/ebook-tools/buildlink3.mk"
+.include "../../www/kjs/buildlink3.mk"
+.include "../../www/khtml/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
 .include "../../x11/kirigami2/buildlink3.mk"
-.include "../../wip/kdegraphics-mobipocket/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
