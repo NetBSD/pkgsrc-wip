@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libksane-17.12.1.tar.xz) = 4da462ecbe9ed233745446b4db1df9ac3d3ca7b9
-RMD160 (libksane-17.12.1.tar.xz) = 87538d4f8c3a2520263dfbecde747f7486f2cec9
-SHA512 (libksane-17.12.1.tar.xz) = 9acbe0e5ad82d21919b4b56ba8f13092dd9edcf6450811f4461fa9eb319a9e06062937ef909febbadd3fd02752438e99fc888fa109ad17d8f67d2a0bb42cf8f0
-Size (libksane-17.12.1.tar.xz) = 137112 bytes
+SHA1 (libksane-18.04.0.tar.xz) = 9b73005aa9c340bd40cbf98a64ff12ac92336233
+RMD160 (libksane-18.04.0.tar.xz) = 11b4a806faee62ac58ddd2bc6c4847184356ce05
+SHA512 (libksane-18.04.0.tar.xz) = e73ddfccbc28f7afefb058f65dc4313372cdcecf0e149d7b6c5d603b468e8955712f85114401648bdcee1c88ec26fe16dc2b9b3ccd01abbebb9fe5e0593309c0
+Size (libksane-18.04.0.tar.xz) = 137260 bytes
