@@ -7,17 +7,13 @@ HOMEPAGE=	http://kde.org/applications/internet/kget/
 COMMENT=	download manager for KDE
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	pkg-config msgmerge
 
 REPLACE_PERL+=	conf/kget_sensitive.pl conf/kget_limitdownloads.pl
-
-#MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-#CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ark.categories \
-#		${PKG_SYSCONFDIR}/xdg/ark.categories
 
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
@@ -36,5 +32,6 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
+.include "../../wip/plasma-workspace/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
