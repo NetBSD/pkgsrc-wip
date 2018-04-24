@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libkexiv2-17.12.1.tar.xz) = 9755024f88e2767a61f92d61870154461abd5b79
-RMD160 (libkexiv2-17.12.1.tar.xz) = e2902c7eea2c29e4448d5779c8c675aa5721cecb
-SHA512 (libkexiv2-17.12.1.tar.xz) = 574fe6bc2f1e8ac32d468220679172b9dea0c85a0377d3b3cfc3e7e8327f41a9f9285b38d7c68b37ac3e91ae915c42a9733b99b1e13a20fe4690ec059eaa0b71
-Size (libkexiv2-17.12.1.tar.xz) = 64312 bytes
+SHA1 (libkexiv2-18.04.0.tar.xz) = 51b656405137e3ff309cf6291bc0e8f8246ec5a6
+RMD160 (libkexiv2-18.04.0.tar.xz) = ba0839a2f2d747728c4471bbe916e8eb70da847c
+SHA512 (libkexiv2-18.04.0.tar.xz) = a97320eb046bbc211856648625c2b8b02dfaaea0cdcf27bf5b788221bdb40f0cb31ddb27ea9157b7b74cde80099b96f8465a4bfa9dd7913a7d76aa701eeae05b
+Size (libkexiv2-18.04.0.tar.xz) = 64320 bytes
