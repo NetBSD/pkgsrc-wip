@@ -7,7 +7,7 @@ HOMEPAGE=	https://kde.org/applications/multimedia/kmix/
 COMMENT=	KDE's soundcard mixer program
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.19.0:../../x11/kinit
@@ -15,7 +15,7 @@ DEPENDS+=	kinit>=5.19.0:../../x11/kinit
 USE_TOOLS+=	msgmerge pkg-config
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_AUTOSTARTDIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
