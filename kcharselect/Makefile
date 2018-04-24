@@ -7,7 +7,7 @@ HOMEPAGE=	https://kde.org/applications/utilities/kcharselect/
 COMMENT=	KDE character selector
 LICENSE=	gnu-gpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
