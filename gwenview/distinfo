@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (gwenview-17.12.1.tar.xz) = ffecd0f856bab085a9bedc99e3ddaabd502db294
-RMD160 (gwenview-17.12.1.tar.xz) = 9bc8384a81ce503a6f5780c2933a511fe150cb00
-SHA512 (gwenview-17.12.1.tar.xz) = cc436e6fb99fa41f58c7f93856c1ce2abcbcfb986cb45705fdf34b85dd85b27a0c0c7cdf7b2df06694a271ba3119a6f5b933b90346c4f1fb8668e12df78137f8
-Size (gwenview-17.12.1.tar.xz) = 6021296 bytes
+SHA1 (gwenview-18.04.0.tar.xz) = 359431c0e737804929eb403a9b77b559f3533f84
+RMD160 (gwenview-18.04.0.tar.xz) = c9f70f913272add9526aa3b2f27bf50c00259799
+SHA512 (gwenview-18.04.0.tar.xz) = fa2b9cb4418907a7e73d21d9e61b0caea7143847af1c2ee8d8474062b2f46ccd8a0f4eaf01f39c7e09ecacf0950372901ab79dcc3846c8572bbde037473c1b36
+Size (gwenview-18.04.0.tar.xz) = 6050924 bytes

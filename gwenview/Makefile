@@ -7,7 +7,7 @@ HOMEPAGE=	http://kde.org/applications/graphics/gwenview/
 COMMENT=	KDE image viewer
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kimageformats>=5.19.0:../../graphics/kimageformats
