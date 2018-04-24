@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libkdcraw-17.12.1.tar.xz) = 0f9520e1b2486d10f7905148c7b64f4e185d951c
-RMD160 (libkdcraw-17.12.1.tar.xz) = 76efa6f66a7f0a435bff248275906806c89b53c5
-SHA512 (libkdcraw-17.12.1.tar.xz) = 4e3d57e10e07c47c43559773918852553cfc214cd7b051b495351fa5c85bb3a003fc5e194ad13f0ce81bf5006c195d19c05e2759f14ef4484ccc6225a2da486f
-Size (libkdcraw-17.12.1.tar.xz) = 41828 bytes
+SHA1 (libkdcraw-18.04.0.tar.xz) = d4589144b08d5f04514f56868896155929a07010
+RMD160 (libkdcraw-18.04.0.tar.xz) = 815b591f735b0eabee1ff9317ba1bdadc3e2bf08
+SHA512 (libkdcraw-18.04.0.tar.xz) = fe56475f8e9e544e85a31f88dc1987548aa27c5f5ed944b40503092d0914e3851e2e4a729ea06b6a651d5fbc8ce9d166afd861e87fee8b1da1bc17161bc4c013
+Size (libkdcraw-18.04.0.tar.xz) = 41856 bytes
