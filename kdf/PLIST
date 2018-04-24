@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/kdf
 bin/kwikdisk
-lib/libkdfprivate.so.17
+lib/libkdfprivate.so.18
 lib/libkdfprivate.so.${PKGVERSION}
 qt5/plugins/libkcm_kdf.so
 share/applications/org.kde.kdf.desktop
