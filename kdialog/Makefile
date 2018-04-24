@@ -7,7 +7,7 @@ HOMEPAGE=	https://www.kde.org/
 COMMENT=	KDE utility for displaying dialog boxes from shell scripts
 LICENSE=	gnu-gpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge
 
