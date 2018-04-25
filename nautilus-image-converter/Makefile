@@ -6,6 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	sysutils graphics gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/nautilus-image-converter/0.3/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.bitron.ch/software/nautilus-image-converter.php
