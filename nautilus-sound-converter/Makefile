@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://code.google.com/p/nautilus-sound-converter/
 COMMENT=	Nautilus extension to convert audio files
 
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
