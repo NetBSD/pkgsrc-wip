@@ -7,7 +7,7 @@ HOMEPAGE=	https://kde.org/applications/multimedia/
 COMMENT=	FFmpeg-based thumbnail creator for video files
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	pkg-config
 
