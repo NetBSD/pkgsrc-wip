@@ -20,7 +20,7 @@ SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
 SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
 
-USE_TOOLS+=	gmake strip
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 REPLACE_BASH=	compilers/xcode30_prj/configure
@@ -33,7 +33,7 @@ REPLACE_PYTHON=	src/app/winmasker/windowmasker_2.2.22_adapter.py
 CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
-MAKE_JOBS_SAFE=		no	# Intermittent issues
+# MAKE_JOBS_SAFE=		no	# Intermittent issues
 WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 
 .include "../../mk/bsd.prefs.mk"
