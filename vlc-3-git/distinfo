@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.74 2017/05/26 13:26:37 maya Exp $
-
-SHA1 (vlc-3.0.0.tar.xz) = 50610841b060321242793cf6ad3d58759dc5973b
-RMD160 (vlc-3.0.0.tar.xz) = c0ad23fdf03ae5c9524ed05c7bc0d63745587287
-SHA512 (vlc-3.0.0.tar.xz) = 9bdc64e16ddd2e8d2693179f2fcac8462d7defff186262a049ba325ef00882fbd75a9d323b506ba06876a8168fd5e90319837c8dcd136b206161e67748c2a9f7
-Size (vlc-3.0.0.tar.xz) = 25191148 bytes
-SHA1 (patch-compat_Makefile.am) = 56fe777db0626d9d5f0d38d5d3213247219f9eb4
