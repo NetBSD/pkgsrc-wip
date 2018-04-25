@@ -7,7 +7,7 @@ HOMEPAGE=	https://community.kde.org/KDE_PIM
 COMMENT=	Libraries and daemons to implement management of notes in Akonadi
 LICENSE=	gnu-lgpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge
 
