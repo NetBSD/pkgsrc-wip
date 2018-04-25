@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ksmtp-17.12.1.tar.xz) = f9bd49c92759e511f5a45a69c9b474f9002db87f
-RMD160 (ksmtp-17.12.1.tar.xz) = b532cf4f4be59cc2168b3ec30e8edf93dbd7e4ca
-SHA512 (ksmtp-17.12.1.tar.xz) = b3d5aaf1bb9030615fffa9af0ed80a97096c80fb40c64e921d125f2809ed282ea2cb07e88f6d2134e154534751ab3ea6bf2067576f7b89398ca274955fac1a20
-Size (ksmtp-17.12.1.tar.xz) = 38384 bytes
+SHA1 (ksmtp-18.04.0.tar.xz) = ab23deaeb0d491f2fde3495d37a5813277bd7839
+RMD160 (ksmtp-18.04.0.tar.xz) = 1f2c13513c451c981c17208f2bc786d885df2ba7
+SHA512 (ksmtp-18.04.0.tar.xz) = 741c86b15cc4256788cc9476db67436af17563dbd0e87918096c95b992885cbc9bc7d43f3c8b6f52626d8e6aac4d3b071ac01adc651db7f5fa5dbeb263b260dd
+Size (ksmtp-18.04.0.tar.xz) = 37812 bytes
