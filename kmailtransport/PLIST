@@ -39,7 +39,6 @@ include/KF5/mailtransportakonadi/sentactionattribute.h
 include/KF5/mailtransportakonadi/sentbehaviourattribute.h
 include/KF5/mailtransportakonadi/transportattribute.h
 include/KF5/mailtransportakonadi_version.h
-lib/cmake/KF5MailTransport/FindSasl2.cmake
 lib/cmake/KF5MailTransport/KF5MailTransportConfig.cmake
 lib/cmake/KF5MailTransport/KF5MailTransportConfigVersion.cmake
 lib/cmake/KF5MailTransport/KF5MailTransportTargets-noconfig.cmake
@@ -50,10 +49,10 @@ lib/cmake/KF5MailTransportAkonadi/KF5MailTransportAkonadiTargets-noconfig.cmake
 lib/cmake/KF5MailTransportAkonadi/KF5MailTransportAkonadiTargets.cmake
 lib/libKF5MailTransport.so
 lib/libKF5MailTransport.so.5
-lib/libKF5MailTransport.so.5.7.1
+lib/libKF5MailTransport.so.5.8.0
 lib/libKF5MailTransportAkonadi.so
 lib/libKF5MailTransportAkonadi.so.5
-lib/libKF5MailTransportAkonadi.so.5.7.1
+lib/libKF5MailTransportAkonadi.so.5.8.0
 qt5/mkspecs/modules/qt_KMailTransport.pri
 qt5/mkspecs/modules/qt_KMailTransportAkonadi.pri
 qt5/plugins/kcm_mailtransport.so
