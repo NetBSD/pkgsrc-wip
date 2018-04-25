@@ -17,5 +17,7 @@ PLIST_VARS+=	sqlite
 .	include "../../databases/sqlite3/buildlink3.mk"
 CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE:BOOL=ON
 CMAKE_ARGS+=	-DDATABASE_BACKEND=SQLITE
+CMAKE_ARGS+=	-DSQLITE_INCLUDE_DIR=${BUILDLINK_PREFIX.sqlite3}/include
+CMAKE_ARGS+=	-DSQLITE_LIBRARIES=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
 PLIST.sqlite=	yes
 .endif
