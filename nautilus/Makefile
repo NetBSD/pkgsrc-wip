@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.xz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://live.gnome.org/Nautilus
 COMMENT=		Nautilus file manager for GNOME3
-#LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2 AND TRADEMARK_NOTICE
+LICENSE=		gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
