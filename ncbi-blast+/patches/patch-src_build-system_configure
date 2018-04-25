@@ -1,6 +1,7 @@
 $NetBSD$
 
 # Fix support for localstatedir
+
 --- src/build-system/configure.orig	2018-02-19 01:32:40 UTC
 +++ src/build-system/configure
 @@ -1755,7 +1755,7 @@ for x_arg in "$@" ; do

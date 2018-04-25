@@ -1,6 +1,7 @@
 $NetBSD$
 
 # Fix portability issue
+
 --- src/build-system/cmake/cmake-configure.orig	2018-03-26 14:13:44.229849356 +0000
 +++ src/build-system/cmake/cmake-configure
 @@ -468,7 +468,7 @@ fi
