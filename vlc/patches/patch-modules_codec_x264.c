@@ -1,5 +1,15 @@
 $NetBSD$
 
+Cherry-pick upstream patch:
+
+x264: drop <148 build support and fix 10bit support
+
+Drop old #if as 148 is not that recent anymore.
+
+fixes #19581
+
+https://git.videolan.org/?p=vlc.git;a=commit;h=a8953ba707cca1f2de372ca24513296bcfcdaaa8
+
 --- modules/codec/x264.c.orig	2017-11-29 23:35:29.000000000 +0000
 +++ modules/codec/x264.c
 @@ -84,13 +84,7 @@ static void x264_log( void *, int i_leve
