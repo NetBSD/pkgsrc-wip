@@ -5,6 +5,7 @@ DISTNAME=	nautilus-search-tool-0.3.0
 PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nautsearchtool/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://nautsearchtool.sourceforge.net/
