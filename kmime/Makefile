@@ -7,7 +7,7 @@ HOMEPAGE=	https://community.kde.org/KDE_PIM
 COMMENT=	Library for handling mail messages and newsgroup articles
 LICENSE=	gnu-lgpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge
 
