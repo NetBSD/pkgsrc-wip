@@ -71,5 +71,7 @@ lib/cmake/KF5CalendarCore/KF5CalendarCoreTargets-noconfig.cmake
 lib/cmake/KF5CalendarCore/KF5CalendarCoreTargets.cmake
 lib/libKF5CalendarCore.so
 lib/libKF5CalendarCore.so.5
-lib/libKF5CalendarCore.so.5.7.1
+lib/libKF5CalendarCore.so.5.8.0
 qt5/mkspecs/modules/qt_KCalCore.pri
+share/examples/kde-xdg/kcalcore.categories
+share/examples/kde-xdg/kcalcore.renamecategories
