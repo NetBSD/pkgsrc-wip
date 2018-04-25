@@ -41,7 +41,7 @@ post-install:
 	${CHMOD} g-w ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*
 
 .include "../../math/nlopt/buildlink3.mk"
-.include "../../wip/openblas-devel/buildlink3.mk"
+.include "../../wip/openblas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
