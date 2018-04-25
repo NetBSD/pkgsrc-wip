@@ -5,6 +5,7 @@ man/de/man1/dragon.1
 man/es/man1/dragon.1
 man/et/man1/dragon.1
 man/fr/man1/dragon.1
+man/id/man1/dragon.1
 man/it/man1/dragon.1
 man/man1/dragon.1
 man/nl/man1/dragon.1
@@ -36,6 +37,10 @@ share/doc/HTML/fr/dragonplayer/index.cache.bz2
 share/doc/HTML/fr/dragonplayer/index.docbook
 share/doc/HTML/gl/dragonplayer/index.cache.bz2
 share/doc/HTML/gl/dragonplayer/index.docbook
+share/doc/HTML/id/dragonplayer/index.cache.bz2
+share/doc/HTML/id/dragonplayer/index.docbook
+share/doc/HTML/id/dragonplayer/main.png
+share/doc/HTML/id/dragonplayer/playmedia.png
 share/doc/HTML/it/dragonplayer/index.cache.bz2
 share/doc/HTML/it/dragonplayer/index.docbook
 share/doc/HTML/nl/dragonplayer/index.cache.bz2
@@ -101,6 +106,7 @@ share/locale/he/LC_MESSAGES/dragonplayer.mo
 share/locale/hr/LC_MESSAGES/dragonplayer.mo
 share/locale/hu/LC_MESSAGES/dragonplayer.mo
 share/locale/ia/LC_MESSAGES/dragonplayer.mo
+share/locale/id/LC_MESSAGES/dragonplayer.mo
 share/locale/is/LC_MESSAGES/dragonplayer.mo
 share/locale/it/LC_MESSAGES/dragonplayer.mo
 share/locale/ja/LC_MESSAGES/dragonplayer.mo
