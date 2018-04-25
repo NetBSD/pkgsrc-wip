@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2015/03/05 22:31:07 outpaddling Exp $
-
-SHA1 (ncbi-blast-2.2.30+-src.tar.gz) = 2b4a36559dc06ef0321f81d2615f429f2ab5fb21
-RMD160 (ncbi-blast-2.2.30+-src.tar.gz) = af8b04f0bb6ae6c58195aa9d2ae8d467483450eb
-Size (ncbi-blast-2.2.30+-src.tar.gz) = 18985378 bytes
-SHA1 (patch-src_build-system_Makefile.in.top) = 1948585a8609045bafb7c6e2e4a6444836e10c83
-SHA1 (patch-src_build-system_configure) = be7784de4737194aff2bda483ffc266ed9d40cb1
