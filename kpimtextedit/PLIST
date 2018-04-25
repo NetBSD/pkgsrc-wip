@@ -76,7 +76,7 @@ lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets-noconfig.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets.cmake
 lib/libKF5PimTextEdit.so
 lib/libKF5PimTextEdit.so.5
-lib/libKF5PimTextEdit.so.5.7.1
+lib/libKF5PimTextEdit.so.5.8.0
 qt5/mkspecs/modules/qt_KPIMTextEdit.pri
 qt5/plugins/designer/kpimtexteditwidgets.so
 share/examples/kde-xdg/kpimtextedit.categories

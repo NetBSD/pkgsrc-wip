@@ -7,14 +7,14 @@ HOMEPAGE=	https://community.kde.org/KDE_PIM
 COMMENT=	Textedit with PIM-specific features
 LICENSE=	gnu-lgpl-v2
 
-.include "../../wip/kde5/applications.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
 DEPENDS+=	kdesignerplugin-[0-9]*:../../x11/kdesignerplugin
 
 USE_TOOLS+=	msgmerge
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
