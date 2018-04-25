@@ -1561,7 +1561,6 @@ SUBDIR+=	kde-baseapps4
 SUBDIR+=	kde-cli-tools
 SUBDIR+=	kde-gtk-config
 SUBDIR+=	kde-runtime4
-SUBDIR+=	kde5
 SUBDIR+=	kdebugsettings
 SUBDIR+=	kdecoration
 SUBDIR+=	kdegraphics-mobipocket
