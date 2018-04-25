@@ -69,8 +69,10 @@ lib/cmake/KF5Contacts/KF5ContactsTargets-noconfig.cmake
 lib/cmake/KF5Contacts/KF5ContactsTargets.cmake
 lib/libKF5Contacts.so
 lib/libKF5Contacts.so.5
-lib/libKF5Contacts.so.5.7.1
+lib/libKF5Contacts.so.5.8.0
 qt5/mkspecs/modules/qt_KContacts.pri
+share/examples/kde-xdg/kcontacts.categories
+share/examples/kde-xdg/kcontacts.renamecategories
 share/kf5/kcontacts/countrytransl.map
 share/locale/ar/LC_MESSAGES/kcontacts5.mo
 share/locale/ast/LC_MESSAGES/kcontacts5.mo
