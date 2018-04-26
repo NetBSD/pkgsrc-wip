@@ -4585,6 +4585,7 @@ SUBDIR+=	webcleaner
 SUBDIR+=	weland
 SUBDIR+=	weplab
 SUBDIR+=	west
+SUBDIR+=	wgrib2
 SUBDIR+=	which
 SUBDIR+=	why
 SUBDIR+=	why3
