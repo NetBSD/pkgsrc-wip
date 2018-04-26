@@ -4,6 +4,7 @@ DISTNAME=		netrik-1.15.4
 PKGREVISION=		1
 CATEGORIES=		www net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netrik/}
+LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		lkundrak@skosi.org
 HOMEPAGE=		http://netrik.sourceforge.net/
