@@ -15,8 +15,8 @@ USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
 
+DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../devel/py-angr
 DEPENDS+=	${PYPKGPREFIX}-manticore-[0-9]*:../../devel/py-manticore
-DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../wip/py-angr
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
