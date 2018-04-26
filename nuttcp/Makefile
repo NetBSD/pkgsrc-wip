@@ -7,6 +7,7 @@ MASTER_SITES=	http://nuttcp.net/nuttcp/ \
 		http://www.lcp.nrl.navy.mil/nuttcp/ \
 		ftp://ftp.lcp.nrl.navy.mil/pub/nuttcp/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.lcp.nrl.navy.mil/nuttcp/
