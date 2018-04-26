@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=		RetroArch
-PKGNAME=		retroarch-assets-1.7.1
+PKGNAME=		retroarch-assets-1.7.2
 CATEGORIES=		emulators
 MASTER_SITES=		http://buildbot.libretro.com/stable/${PKGVERSION_NOREV}/windows-msvc2010/x86_64/
 EXTRACT_SUFX=		.7z
@@ -21,6 +21,8 @@ RA_ASSET_DIRS+=		glui
 RA_ASSET_DIRS+=		xmb
 RA_ASSET_DIRS+=		xmb/dot-art
 RA_ASSET_DIRS+=		xmb/dot-art/png
+RA_ASSET_DIRS+=		xmb/emojiactive
+RA_ASSET_DIRS+=		xmb/emojiactive/png
 RA_ASSET_DIRS+=		xmb/flatui
 RA_ASSET_DIRS+=		xmb/flatui/png
 RA_ASSET_DIRS+=		xmb/monochrome
