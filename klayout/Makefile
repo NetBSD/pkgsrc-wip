@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2017/07/11 19:41:20 joerg Exp $
 
-DISTNAME=	klayout-0.25.1
+DISTNAME=	klayout-0.25.2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -17,7 +17,6 @@ USE_TOOLS+=	gmake bash
 
 CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
 NO_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}
 
 SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file

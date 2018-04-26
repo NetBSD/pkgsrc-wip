@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (klayout-0.25.1.tar.gz) = 6e4a5d4b186e6ae8d0e00d96e86271635b54e358
-RMD160 (klayout-0.25.1.tar.gz) = 85d5bdf441eff871962ce54c959d9153263da244
-SHA512 (klayout-0.25.1.tar.gz) = e519dca57a4813d3187f87e99ff63908d1ad05e99b742b52c56c3fe1ab98d01dcf36007e27d115a2f5eb7ca33d9a9f821bafe931ad74be1520ed98ff065c4a38
-Size (klayout-0.25.1.tar.gz) = 18502994 bytes
+SHA1 (klayout-0.25.2.tar.gz) = b9ffc42244955b8986c184e958414acfcda72b60
+RMD160 (klayout-0.25.2.tar.gz) = da12058c1149cf3898d358b65c69ebdea8cdd00a
+SHA512 (klayout-0.25.2.tar.gz) = 371dae004a3652319bcac42fdf1abca3eb33bbab5994ede1d0424a0114c47a514958211022dfdc6f6a4797f4816e0cfbf22b9708fbedd6542128127e30c37e7b
+Size (klayout-0.25.2.tar.gz) = 18660507 bytes
 SHA1 (patch-config_Makefile_conf_freebsd-32-gcc-release) = 8ee1a6f42465ef650fbd26ec6dcdea4db249d018
 SHA1 (patch-config_Makefile_conf_netbsd-32-gcc-release) = 1fd264f8a25d4410cd48fcfbbbfbf149e65e3b22
 SHA1 (patch-src_layApplication.cc) = fa42542213519e8c04820ab08ce5c1385bf8b860
