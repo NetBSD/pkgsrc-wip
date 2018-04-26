@@ -2154,7 +2154,6 @@ SUBDIR+=	mvsis
 SUBDIR+=	mxallowd
 SUBDIR+=	myfitter
 SUBDIR+=	mygui-git
-SUBDIR+=	myman
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs
 SUBDIR+=	mysql-proxy

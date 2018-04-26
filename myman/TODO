@@ -1,5 +1,0 @@
-===> Installing for myman-0.7.0
-=> Generating pre-install file lists
-creating myman.txt from myman.6
-col: Invalid or incomplete multibyte or wide character
-make: [makefile.cp:4146: myman.txt] Error 1 (ignored)
