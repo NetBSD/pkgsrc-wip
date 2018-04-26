@@ -5,6 +5,7 @@ PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://download.berlios.de/oolite-linux/ \
 		http://download2.berlios.de/oolite-linux/
+LICENSE=	gnu-gpl-v2
 
 DISTFILES=	${DISTNAME}-src${EXTRACT_SUFX}
 DISTFILES+=	${DISTNAME}-data${EXTRACT_SUFX}
