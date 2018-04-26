@@ -6,6 +6,7 @@ PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	http://helac-phegas.web.cern.ch/helac-phegas/tar-files/
 EXTRACT_SUFX=	.tgz
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://helac-phegas.web.cern.ch/helac-phegas/OneLOop.html
