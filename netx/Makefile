@@ -6,6 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jnlp/}
 EXTRACT_SUFX=	.jar
 VERSION=	0.5
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jnlp.sourceforge.net/netx/
