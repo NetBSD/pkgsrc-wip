@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/04/25 14:20:47 tnn Exp $
 
-DISTNAME=	retroarch-1.7.1
+DISTNAME=	retroarch-1.7.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -16,6 +16,7 @@ HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--disable-builtinminiupnpc
 CONFIGURE_ARGS+=	--disable-builtinzlib
+CONFIGURE_ARGS+=	--disable-builtinflac
 
 CONFIGURE_ENV+=	BIN_DIR=${PREFIX}/bin
 CONFIGURE_ENV+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
@@ -43,6 +44,7 @@ CONFIGURE_ARGS+=	--disable-thread_storage
 .endif
 
 .include "options.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
