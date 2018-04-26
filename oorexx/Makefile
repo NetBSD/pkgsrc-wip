@@ -5,6 +5,7 @@ DISTNAME=	ooRexx-3.2.0
 PKGNAME=	${DISTNAME:S/R/r/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oorexx/}
+LICENSE=	gnu-gpl-v2 AND cpl-1.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oorexx.sourceforge.net/
