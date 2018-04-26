@@ -5,6 +5,7 @@ PKGREVISION=	2
 CATEGORIES=	net audio x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nicotine-plus/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://www.nicotine-plus.org/
