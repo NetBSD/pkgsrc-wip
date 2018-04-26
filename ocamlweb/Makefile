@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/ocamlweb/
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.lri.fr/~filliatr/ocamlweb/
 COMMENT=	Ocamlweb is a literate programming tool for Objective Caml
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2
 
 #DEPENDS+=	teTeX>=3.0:../../print/teTeX
 DEPENDS+=	hevea>=1.10:../../textproc/hevea
