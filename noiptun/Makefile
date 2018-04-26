@@ -5,6 +5,7 @@ DISTNAME=		noiptun-1.0
 PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=noiptun/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://noiptun.sourceforge.net/
