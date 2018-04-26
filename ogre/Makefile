@@ -7,6 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogre/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ogre.sourceforge.net/
