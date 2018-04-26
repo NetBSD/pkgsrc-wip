@@ -3,6 +3,7 @@
 DISTNAME=	nullpop-0.3
 CATEGORIES=	mail
 MASTER_SITES=	http://thewalter.net/stef/software/nullpop/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	shaun@inerd.com
 HOMEPAGE=	http://thewalter.net/stef/software/nullpop/
