@@ -18,10 +18,12 @@ share/libretro/info/bsnes_mercury_performance_libretro.info
 share/libretro/info/bsnes_performance_libretro.info
 share/libretro/info/cap32_libretro.info
 share/libretro/info/chailove_libretro.info
+share/libretro/info/citra_canary_libretro.info
 share/libretro/info/citra_libretro.info
 share/libretro/info/craft_libretro.info
 share/libretro/info/crocods_libretro.info
 share/libretro/info/cruzes_libretro.info
+share/libretro/info/desmume2015_libretro.info
 share/libretro/info/desmume_libretro.info
 share/libretro/info/dinothawr_libretro.info
 share/libretro/info/dolphin_launcher_libretro.info
@@ -43,10 +45,12 @@ share/libretro/info/ffmpeg_libretro.info
 share/libretro/info/fmsx_libretro.info
 share/libretro/info/freeintv_libretro.info
 share/libretro/info/freej2me_libretro.info
+share/libretro/info/frodo_libretro.info
 share/libretro/info/fsuae_libretro.info
 share/libretro/info/fuse_libretro.info
 share/libretro/info/gambatte_libretro.info
 share/libretro/info/gearboy_libretro.info
+share/libretro/info/gearsystem_libretro.info
 share/libretro/info/genesis_plus_gx_libretro.info
 share/libretro/info/gme_libretro.info
 share/libretro/info/gpsp_libretro.info
@@ -60,6 +64,7 @@ share/libretro/info/lutro_libretro.info
 share/libretro/info/mame2000_libretro.info
 share/libretro/info/mame2003_libretro.info
 share/libretro/info/mame2003_midway_libretro.info
+share/libretro/info/mame2003_plus_libretro.info
 share/libretro/info/mame2009_libretro.info
 share/libretro/info/mame2010_libretro.info
 share/libretro/info/mame2014_libretro.info
@@ -139,6 +144,7 @@ share/libretro/info/testsw_vram_libretro.info
 share/libretro/info/testvulkan_async_compute_libretro.info
 share/libretro/info/testvulkan_libretro.info
 share/libretro/info/tgbdual_libretro.info
+share/libretro/info/thepowdertoy_libretro.info
 share/libretro/info/tyrquake_libretro.info
 share/libretro/info/uae4arm_libretro.info
 share/libretro/info/ume2014_libretro.info
