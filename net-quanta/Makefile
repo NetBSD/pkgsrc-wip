@@ -5,6 +5,7 @@ PKGNAME=		net-quanta-0.3
 WRKSRC=			${WRKDIR}/QUANTA_0.3
 CATEGORIES=		net
 MASTER_SITES=		http://www.evl.uic.edu/cavern/quanta/downloads/
+LICENSE=		gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.evl.uic.edu/cavern/quanta/
