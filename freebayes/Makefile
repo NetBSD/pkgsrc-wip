@@ -15,12 +15,10 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
-MAKE_JOBS_SAFE=	no
+CFLAGS+=	-msse2
+CXXFLAGS+=	-std=c++11
 
-#SUBST_CLASSES+=           compile
-#SUBST_FILES.compile=      ${WRKSRC}/src/Makefile.external-libs
-#SUBST_STAGE.compile=      post-patch
-#SUBST_SED.compile+=       -e "s|-lm|-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,6 +26,10 @@ MAKE_JOBS_SAFE=	no
 MAKE_FLAGS=	EXTRALIBS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 .else
 MAKE_FLAGS+=	EXTRALIBS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+.endif
+
+.if ${MACHINE_ARCH} == i386
+CFLAGS+=	-msse2
 .endif
 
 INSTALLATION_DIRS+=	bin
