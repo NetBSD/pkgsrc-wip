@@ -6,6 +6,7 @@ PKGNAME=		openaxiom-1.4.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-axiom/}
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		modified-bsd
 
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://www.open-axiom.org/
