@@ -3,6 +3,7 @@
 DISTNAME=		org-caldav-0.0
 CATEGORIES=		time net
 MASTER_SITES=		https://github.com/dengste/org-caldav
+LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/dengste/org-caldav
