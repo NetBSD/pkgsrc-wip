@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	elentirmo.gilgalad@gmail.com
 HOMEPAGE=	http://openttd.org/
 COMMENT=	Free and open source music data files for the game OpenTTD
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 INSTALLATION_DIRS=	share/openttd/gm
 
