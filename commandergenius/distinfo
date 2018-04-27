@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 21:21:53 yhardy Exp $
 
-SHA1 (Commander-Genius/v2.2.1.tar.gz) = c4dc168ea443ff4ae69dd787121c12dc13267091
-RMD160 (Commander-Genius/v2.2.1.tar.gz) = 102e64bff29c09daebf975d476715c48ce817a86
-SHA512 (Commander-Genius/v2.2.1.tar.gz) = c593dd9e0f8ababadbefeab9f5467fd8499ee36b03fb989d6ee19b5a68e84be208bebf2071db91babad74187dce020cf8e35e61e42c6cd627f81dda484e28270
-Size (Commander-Genius/v2.2.1.tar.gz) = 61044202 bytes
+SHA1 (Commander-Genius/v2.2.2.tar.gz) = 214dfad3a576bbc5dfea09ba10b6aac2875ebb4e
+RMD160 (Commander-Genius/v2.2.2.tar.gz) = 63e880f2a8886ec44c3fcf16e3ea9c822fe8ad57
+SHA512 (Commander-Genius/v2.2.2.tar.gz) = a4c3a7e48fb6c9bffb8bb0e3ad2106e63416d960ba375c08e92dc1ec23ffe0b08d625e520c8d0ffc795257a5992ca620d99e515ad874d9e3b3ee3ea51e6e902e
+Size (Commander-Genius/v2.2.2.tar.gz) = 61044975 bytes
 SHA1 (patch-GsKit_base_video_scaler_scalebit.cpp) = 390a892f4bdece12bcb6b36f84dee5ac2cec0c90
 SHA1 (patch-src_engine_unzip_ioapi.h) = 80366fc999aae516da6ce0279e8049532c3df247
 SHA1 (patch-src_engine_unzip_miniunz.c) = 8c83c6e2e927e587533d248cb478797c3e15eae7

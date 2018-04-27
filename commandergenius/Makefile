@@ -6,7 +6,7 @@ PKGNAME=	${GITHUB_PROJECT}-${GITHUB_TAG:S/^v//}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gerstrong/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_TAG=	v2.2.1
+GITHUB_TAG=	v2.2.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clonekeenplus.sourceforge.net/
