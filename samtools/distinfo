@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (samtools-1.6.tar.gz) = d44b49e0b9bd6324c2cd21de31edb2f199720a28
-RMD160 (samtools-1.6.tar.gz) = ff4814f1399e63196ff62bce0aef085d2105bda7
-SHA512 (samtools-1.6.tar.gz) = c7729f7f0caecc1347f76f4e3375b5b6e6506488c65dbc068a7f62509bd17b1ee177cef6c828fb9d4a430f711051170f60f593aaca3969b1be3c6cefbae21726
-Size (samtools-1.6.tar.gz) = 4014195 bytes
+SHA1 (samtools-1.8.tar.gz) = 5ac70ba4c324c223398ab4c0689933564985303c
+RMD160 (samtools-1.8.tar.gz) = 47e4fde82a686669322fd330374aa37b148b7954
+SHA512 (samtools-1.8.tar.gz) = 82e4d5f855f944cc989902154a99eada2b4c81939bd936fa1d471cf9ff01e03c8a7f773928ae55ef691f2827aa4076126678940bb89a322fa56d83c517677d0c
+Size (samtools-1.8.tar.gz) = 4047378 bytes

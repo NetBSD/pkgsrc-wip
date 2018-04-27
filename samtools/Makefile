@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	samtools-${PORTVERSION}
+DISTNAME=	samtools-${PV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_PROJECT=	samtools
-GITHUB_TAG=	${PORTVERSION}
+GITHUB_TAG=	${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.htslib.org/
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/*.pl misc/plot-bamstats test/test.pl
 REPLACE_PYTHON=	misc/*.py
 
-PORTVERSION=	1.6
+PV=	1.8
 
 post-patch:
 	${CP} ${FILESDIR}/ax_with_htslib.m4 ${WRKSRC}/
