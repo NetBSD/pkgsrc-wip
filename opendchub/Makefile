@@ -4,6 +4,7 @@
 DISTNAME=		opendchub-0.7.15
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opendchub/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://opendchub.sourceforge.net/
