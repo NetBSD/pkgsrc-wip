@@ -9,3 +9,4 @@ SHA1 (patch-src_algo_blast_core_blast__kappa.c) = a580a5fb2d5a3af04c27dd63a7edd3
 SHA1 (patch-src_build-system_Makefile.in.top) = 71d5246867a8c985c1175c338fb0af664094ca01
 SHA1 (patch-src_build-system_cmake_cmake-configure) = 7b9a10447b1dd665200ee73a2180b3210f586b97
 SHA1 (patch-src_build-system_configure) = 90becd948f8aca87fd68081e689bdc8c49b419c6
+SHA1 (patch-src_build-system_helpers_Makefile.run__with__lock.app) = 0fb99ac4e582938fd47e66c146da71695f009b98
