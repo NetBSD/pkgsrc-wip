@@ -6,6 +6,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.7/downloads/ \
 		http://www.open-mpi.org/nightly/v1.7/
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	modified-bsd
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.open-mpi.org/
