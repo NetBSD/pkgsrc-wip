@@ -1,15 +1,15 @@
 $NetBSD$
 
-# Fix portibility
+# Nonportable extension
 
---- compilers/xcode30_prj/configure.orig	2018-03-26 14:12:13.368983690 +0000
+--- compilers/xcode30_prj/configure.orig	2018-04-27 14:19:43.000000000 +0000
 +++ compilers/xcode30_prj/configure
-@@ -1,2 +1,2 @@
--#!/bin/sh
-+/bin/bash: indent: command not found
+@@ -280,7 +280,7 @@ arch=`arch`
+ platform=`xcodebuild -version 2>/dev/null | grep 'Xcode [0-9][0-9]*' | sed -e 's/[ .]//g'`
  
-@@ -282,3 +282,3 @@ platform=`xcodebuild -version 2>/dev/nul
  # ------- target architecture
 -if test "$use_64" == "yes"; then
 +if test "$use_64" = "yes"; then
    use_arch="x86_64"
+ else
+   use_arch="i386"

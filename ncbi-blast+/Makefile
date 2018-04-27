@@ -23,7 +23,7 @@ SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-REPLACE_BASH=	compilers/xcode30_prj/configure
+# REPLACE_BASH=	compilers/xcode30_prj/configure
 REPLACE_PERL=	src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
 REPLACE_PYTHON=	src/app/winmasker/windowmasker_2.2.22_adapter.py
 
