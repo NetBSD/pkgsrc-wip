@@ -4,3 +4,5 @@ SHA1 (grpcio-1.10.1.tar.gz) = 0f8f4dcdff2ae57f13cf431bb8378e2f3a25ef35
 RMD160 (grpcio-1.10.1.tar.gz) = 7a152d3653440fdd2ea43d007b63a1ef0655c2e4
 SHA512 (grpcio-1.10.1.tar.gz) = d3300998437f7ee36026e1a7f0903f0c4a26c3fb919b5dbd397cf6ded88bf8ceca95bd48e11f6084a14a182d6b7c9f8dfa4af89eadd39d19877c25674111849e
 Size (grpcio-1.10.1.tar.gz) = 13998215 bytes
+SHA1 (patch-setup.py) = 99f45057b37643d2e6598c20a7a85dfe138fa0fb
+SHA1 (patch-src_python_grpcio_commands.py) = e84c0ddb13d9d9a3d2c90fe93c9db72264176512
