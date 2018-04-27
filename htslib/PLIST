@@ -33,6 +33,7 @@ lib/libhts.so
 lib/libhts.so.${PKGVERSION}
 lib/libhts.so.2
 lib/pkgconfig/htslib.pc
+man/man1/bgzip.1
 man/man1/htsfile.1
 man/man1/tabix.1
 man/man5/faidx.5
