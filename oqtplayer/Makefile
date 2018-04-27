@@ -7,6 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openquicktime/}
 EXTRACT_SUFX=		.tgz
+LICENSE=		gnu-gpl-v3 AND gnu-lgpl-v3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openquicktime.org/
