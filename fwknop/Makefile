@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
-USE_TOOLS+=	aclocal autoconf automake autoheader
+USE_TOOLS+=	aclocal autoconf automake autoheader makeinfo
 GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/fwknop-2.6.9
