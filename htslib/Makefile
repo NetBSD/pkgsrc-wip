@@ -17,8 +17,8 @@ REPLACE_PERL=	test/compare_sam.pl test/test.pl
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	post-patch
-SUBST_SED.version+=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PV}]|"
-SUBST_FILES.version+=	${WRKSRC}/configure.ac
+SUBST_SED.version=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PV}]|"
+SUBST_FILES.version=	${WRKSRC}/configure.ac
 
 PKGCONFIG_OVERRIDE=	htslib.pc.in
 
