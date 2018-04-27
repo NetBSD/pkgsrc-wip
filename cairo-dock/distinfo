@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/07/15 20:14:21 thomasklausner Exp $
+$NetBSD$
 
-SHA1 (cairo-dock-3.2.1.tar.gz) = 54b380cbcb5d7b3ad876c3f0dd0352da95ad4bc9
-RMD160 (cairo-dock-3.2.1.tar.gz) = 68ce8b915d01617b961604863fcedad04fdb0bb7
-Size (cairo-dock-3.2.1.tar.gz) = 2593954 bytes
-SHA1 (patch-data_man_CMakeLists.txt) = a9ab94177f0db5fbe5d0e2e4b2fd4f8f9e74c226
-SHA1 (patch-src_gldit_cairo-dock-config.c) = 160a8f419a381477f8b8c76135463e7bc887c4a9
+SHA1 (cairo-dock-3.4.1.tar.gz) = 033d44511b51620e709080cd21ae9fc3acae139d
+RMD160 (cairo-dock-3.4.1.tar.gz) = c65fa8eb5e1fdd1c846c42f3fd11112b2388e14f
+SHA512 (cairo-dock-3.4.1.tar.gz) = 265026eabfee72f11bef02ae72c965ede230c141af7fd9568278e30ef39f36fa00718cb6f7f7484d92579fe075de9c37772d96f09b079b903f83df89d5207e9d
+Size (cairo-dock-3.4.1.tar.gz) = 2895151 bytes
+SHA1 (patch-src_gldit_cairo-dock-config.c) = c98b658bf734b050db159e93f1f065e23d352b73
+SHA1 (patch-src_gldit_cairo-dock-file-manager.c) = 4a8213481930fba573e6bfb00b8cdb5ed294fd55
