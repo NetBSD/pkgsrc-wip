@@ -1,1 +1,11 @@
 @comment $NetBSD$
+bin/fwknop
+etc/fwknop/access.conf
+etc/fwknop/fwknopd.conf
+include/fko.h
+lib/libfko.la
+man/man8/fwknop.8
+man/man8/fwknopd.8
+sbin/fwknopd
+share/info/dir
+share/info/libfko.info
