@@ -4,6 +4,7 @@ DISTNAME=		openscep-0.4.2
 PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://openscep.othello.ch/download/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		carton@Ivy.NET
 HOMEPAGE=		http://openscep.othello.ch/
