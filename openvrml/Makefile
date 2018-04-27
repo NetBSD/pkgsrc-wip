@@ -4,6 +4,7 @@ DISTNAME=	openvrml-0.14.3
 PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openvrml/}
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvrml.org/
