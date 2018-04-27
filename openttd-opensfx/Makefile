@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	elentirmo.gilgalad@gmail.com
 HOMEPAGE=	http://openttd.org/
 COMMENT=	Free and open source sound data files for the game OpenTTD
-#LICENSE=	# TODO: (see mk/license.mk)
+#LICENSE=	Creative Commons Sampling Plus 1.0
 
 INSTALLATION_DIRS=	share/openttd/data
 
