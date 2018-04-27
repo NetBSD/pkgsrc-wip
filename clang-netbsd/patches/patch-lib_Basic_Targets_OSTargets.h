@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/Basic/Targets/OSTargets.h.orig	2017-12-08 22:12:36.236521252 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2018-04-27 13:37:59.000000000 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -358,12 +358,23 @@ protected:
+@@ -364,12 +364,23 @@ protected:
      Builder.defineMacro("__ELF__");
      if (Opts.POSIXThreads)
        Builder.defineMacro("_REENTRANT");

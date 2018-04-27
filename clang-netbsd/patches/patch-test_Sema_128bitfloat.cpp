@@ -1,6 +1,6 @@
 $NetBSD$
 
---- test/Sema/128bitfloat.cpp.orig	2017-05-29 10:06:54.000000000 +0000
+--- test/Sema/128bitfloat.cpp.orig	2018-04-27 13:42:08.000000000 +0000
 +++ test/Sema/128bitfloat.cpp
 @@ -4,6 +4,8 @@
  // RUN: %clang_cc1 -triple i686-windows-gnu -verify -std=c++11 %s

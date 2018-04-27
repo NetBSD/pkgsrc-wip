@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/Driver/ToolChains/NetBSD.cpp.orig	2018-02-16 03:40:05.000000000 +0000
+--- lib/Driver/ToolChains/NetBSD.cpp.orig	2018-04-27 13:38:11.000000000 +0000
 +++ lib/Driver/ToolChains/NetBSD.cpp
 @@ -112,7 +112,9 @@ void netbsd::Linker::ConstructJob(Compil
                                    const InputInfoList &Inputs,
@@ -110,7 +110,7 @@ $NetBSD$
      if (NeedsSanitizerDeps)
        linkSanitizerRuntimeDeps(getToolChain(), CmdArgs);
 +    if (NeedsXRayDeps)
-+      linkXRayRuntimeDeps(ToolChain, Args, CmdArgs);
++      linkXRayRuntimeDeps(ToolChain, CmdArgs);
      if (Args.hasArg(options::OPT_pthread))
        CmdArgs.push_back("-lpthread");
      CmdArgs.push_back("-lc");
