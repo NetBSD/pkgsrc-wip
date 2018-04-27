@@ -4,6 +4,7 @@
 DISTNAME=		owl-2.1.11
 CATEGORIES=		chat
 MASTER_SITES=		http://www.ktools.org/dist/owl/
+LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		http://www.ktools.org/dist/owl/
