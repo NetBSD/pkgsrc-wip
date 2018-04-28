@@ -3234,7 +3234,6 @@ SUBDIR+=	py-graphsim
 SUBDIR+=	py-gratelpy
 SUBDIR+=	py-gravipy
 SUBDIR+=	py-griddata
-SUBDIR+=	py-grpcio
 SUBDIR+=	py-grpy
 SUBDIR+=	py-gsl
 SUBDIR+=	py-gslodeiv2
