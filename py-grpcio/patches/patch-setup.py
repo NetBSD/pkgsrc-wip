@@ -2,18 +2,18 @@ $NetBSD$
 
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2018-04-05 20:19:07.000000000 +0000
+--- setup.py.orig	2018-04-13 19:56:08.000000000 +0000
 +++ setup.py
-@@ -150,7 +150,7 @@ EXTENSION_INCLUDE_DIRECTORIES = (
+@@ -152,7 +152,7 @@ EXTENSION_INCLUDE_DIRECTORIES = (
      (PYTHON_STEM,) + CORE_INCLUDE + BORINGSSL_INCLUDE + ZLIB_INCLUDE +
-     CARES_INCLUDE)
+     CARES_INCLUDE + ADDRESS_SORTING_INCLUDE)
  
 -EXTENSION_LIBRARIES = ()
 +EXTENSION_LIBRARIES = ('cares', 'crypto', 'gpr', 'grpc', 'ssl')
  if "linux" in sys.platform:
    EXTENSION_LIBRARIES += ('rt',)
  if not "win32" in sys.platform:
-@@ -203,7 +203,7 @@ def cython_extensions_and_necessity():
+@@ -205,7 +205,7 @@ def cython_extensions_and_necessity():
                    for name in CYTHON_EXTENSION_MODULE_NAMES]
    config = os.environ.get('CONFIG', 'opt')
    prefix = 'libs/' + config + '/'
@@ -22,7 +22,7 @@ Use dependencies in pkgsrc.
      extra_objects = [prefix + 'libares.a',
                       prefix + 'libboringssl.a',
                       prefix + 'libgpr.a',
-@@ -215,7 +215,7 @@ def cython_extensions_and_necessity():
+@@ -217,7 +217,7 @@ def cython_extensions_and_necessity():
    extensions = [
        _extension.Extension(
            name=module_name,

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	grpcio-1.10.1
+DISTNAME=	grpcio-1.11.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=   ${MASTER_SITE_PYPI:=g/grpcio/}
@@ -23,7 +23,6 @@ USE_LANGUAGES+=	c99 c++11
 USE_TOOLS+=	gmake pkg-config
 
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.grpc+=    grpc>=${PKGVERSION_NOREV}
 .include "../../net/grpc/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
