@@ -6,6 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/S/O/o/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/AddOns/}
 EXTRACT_SUFX=	.zip
+LICENSE=	python-software-foundation # or ZPL
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/AddOns
