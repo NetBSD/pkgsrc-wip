@@ -6,6 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		print
 MASTER_SITES=		http://www.stacken.kth.se/project/pptout/files/
 EXTRACT_SUFX=		.tar.bz2
+LICENSE=		2-clause-bsd
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.stacken.kth.se/project/pptout/
