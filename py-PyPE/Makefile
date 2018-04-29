@@ -7,6 +7,7 @@ WRKSRC=			${WRKDIR}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pype/}
 EXTRACT_SUFX=		.zip
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pype.sourceforge.net/
