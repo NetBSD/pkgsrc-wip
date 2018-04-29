@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.briansimulator.org/
 COMMENT=	Simulator for spiking neural networks
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	cecill-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
