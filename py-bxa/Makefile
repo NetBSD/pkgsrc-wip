@@ -4,6 +4,7 @@ DISTNAME=	bxa-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bxa/}
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/JohannesBuchner/BXA/
