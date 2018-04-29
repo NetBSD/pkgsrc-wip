@@ -5,6 +5,7 @@ DISTNAME=		pxview_0.1.4.orig
 PKGNAME=		pxview-0.1.4
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pxlib/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pxlib.sourceforge.net/
