@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.math.uic.edu/~culler/chaos/
 COMMENT=	UIC REU on Chaos, Fractals and Complex Dynamics
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
