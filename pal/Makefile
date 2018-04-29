@@ -6,6 +6,7 @@ DISTNAME=		pal-0.4.3
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=palcal/}
 EXTRACT_SUFX=		.tgz
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://palcal.sourceforge.net/
