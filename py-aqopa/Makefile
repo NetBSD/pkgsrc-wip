@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=A/AQoPA/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://qopml.org/aqopa/
 COMMENT=	Automated Quality of Protection Analysis Tool for QoP-ML models
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd AND gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
