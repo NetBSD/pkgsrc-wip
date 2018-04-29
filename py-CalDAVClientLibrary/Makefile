@@ -8,7 +8,7 @@ MASTER_SITES=	# manually packaged from SVN
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://trac.calendarserver.org/
 COMMENT=	CalDAV library for python used by CalendarServer
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/CalDAVClientLibrary
 USE_LANGUAGES=	# none
