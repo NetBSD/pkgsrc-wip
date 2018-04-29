@@ -3,6 +3,7 @@
 DISTNAME=	pts-0.20a
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ptns/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://ptns.sourceforge.net
