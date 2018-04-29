@@ -3,6 +3,7 @@
 #
 
 PKGNAME=		php-doc-${PHP_DOC_LANG}-20120323
+#LICENSE=		cc-by-v3.0
 
 PHP_DOC_LANG=		tr
 PHP_DOC_LANG_DESC=	Turkish
