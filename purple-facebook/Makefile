@@ -10,7 +10,7 @@ GITHUB_RELEASE=	v0.9.5-9ff9acf9fa14
 MAINTAINER=	izaac@setec.org
 HOMEPAGE=	https://github.com/dequis/purple-facebook
 COMMENT=	Facebook protocol plugin for libpurple
-LICENSE=	gplv2
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
