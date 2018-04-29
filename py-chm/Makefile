@@ -5,6 +5,7 @@ DISTNAME=	pychm-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnochm/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gnochm.sourceforge.net/
