@@ -8,7 +8,7 @@ MASTER_SITES=	https://pypi.python.org/packages/8f/e0/b1860a9e79ed84831eed6320c3b
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://chainer.org/
 COMMENT=	Flexible framework of neural networks
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=2.6.1:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
