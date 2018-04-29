@@ -6,6 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-Brenda-0.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://xml.coverpages.org/
 EXTRACT_SUFX=	.gz
+LICENSE=	artistic
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wiki.python.org/moin/PyBrenda
