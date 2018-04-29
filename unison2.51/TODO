@@ -1,0 +1,16 @@
+ocamlc -g -unsafe-string -I lwt -I ubase -I system -I fsmonitor -I fsmonitor/linux -I fsmonitor/windows -I system/generic -I lwt/generic -I /usr/pkg/lib/ocaml/site-lib/lablgtk2 -custom -g -c .../work/unison-2.51.2/src/ubase/util.ml
+STATIC = false
+OSTYPE =
+OSARCH = NetBSD
+File ".../work/unison-2.51.2/src/system.ml", line 1:
+Error: The implementation .../work/unison-2.51.2/src/system.ml
+       does not match the interface system.cmi:
+       Values do not match:
+         val symlink : string -> string -> unit
+       is not included in
+         val symlink : ?to_dir:bool -> string -> fspath -> unit
+       File ".../work/unison-2.51.2/src/system/system_intf.ml", line 23, characters 0-54:
+         Expected declaration
+       File ".../work/unison-2.51.2/src/system/system_generic.ml", line 61, characters 4-11:
+         Actual declaration
+ocamlc: ubase/uarg.ml ---> ubase/uarg.cmo
