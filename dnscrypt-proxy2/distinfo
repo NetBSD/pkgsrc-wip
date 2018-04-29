@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (dnscrypt-proxy-2.0.10.tar.gz) = b2cfb1b1fbe3d64f758c01dd376aeebc0db84c7b
-RMD160 (dnscrypt-proxy-2.0.10.tar.gz) = a50ccaab2dbaf496a25803755766ee0a792847ff
-SHA512 (dnscrypt-proxy-2.0.10.tar.gz) = b28bbce986bace9c4ee1acfe5b372b9f847d5a0a199b085ead31813ad697753b6a25cead72a90a1967bd473bb4bcb591a384765b2de9af817af0dde3d33dcb58
-Size (dnscrypt-proxy-2.0.10.tar.gz) = 2773118 bytes
+SHA1 (dnscrypt-proxy-2.0.11.tar.gz) = e746705e013d5efe3647637546d0fb37b3095f09
+RMD160 (dnscrypt-proxy-2.0.11.tar.gz) = a9ec8c460f7051cf098b48a54b817dca7872d3e2
+SHA512 (dnscrypt-proxy-2.0.11.tar.gz) = 5e306c3bff65d0375b650666e2191c6f54e72bb0d2d2f6f8f7b941ffc063eb7eb244a52eb69b0b008dc566e9a6ce8a8f75929edb6762fad4751d966aa2da98a0
+Size (dnscrypt-proxy-2.0.11.tar.gz) = 2774458 bytes
