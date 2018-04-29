@@ -5,6 +5,7 @@ DISTNAME=		pointless-0.5
 PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pointless/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pih@xbase.dk
 HOMEPAGE=		http://pointless.sourceforge.net/
