@@ -5,6 +5,7 @@ PKGNAME=	pokerth-1.1.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pokerth/}
 EXTRACT_SUFX=	.tar.bz2
+#LICENSE=	Affero General Public License, version 3
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://pokerth.sourceforge.net/
