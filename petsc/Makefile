@@ -9,7 +9,7 @@ MASTER_SITES=	http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.mcs.anl.gov/petsc/petsc-as/
 COMMENT=	Portable, Extensible Toolkit for  Scientific Computation
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	2-clause-bsd
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
