@@ -5,6 +5,7 @@ DISTNAME=	plugger-5.0
 PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://fredrik.hubbe.net/plugger/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fredrik.hubbe.net/plugger.html
