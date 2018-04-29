@@ -6,6 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://www.object-craft.com.au/projects/albatross/download/
+LICENSE=	modified-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.object-craft.com.au/projects/albatross/
