@@ -3956,7 +3956,6 @@ SUBDIR+=	r8s
 SUBDIR+=	radare2-git
 SUBDIR+=	radiotray
 SUBDIR+=	rainbow
-SUBDIR+=	rakudo
 SUBDIR+=	rakudo-star
 SUBDIR+=	ranmacgen
 SUBDIR+=	rapidxml
