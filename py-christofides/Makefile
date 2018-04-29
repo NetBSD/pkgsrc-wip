@@ -8,7 +8,7 @@ MASTER_SITES=	https://pypi.python.org/packages/f5/91/3cc3881ca08ad06d002b513650e
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/Christofides/
 COMMENT=	Christofides Algorithm for TSP
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
