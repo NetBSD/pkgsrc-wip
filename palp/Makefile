@@ -8,7 +8,7 @@ MASTER_SITES=	http://hep.itp.tuwien.ac.at/%7Ekreuzer/CY/palp/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://hep.itp.tuwien.ac.at/%7Ekreuzer/CY/palp/
 COMMENT=	Analyzing lattice polytopes
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/palp
 MAKE_FILE=	GNUmakefile
