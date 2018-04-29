@@ -4,6 +4,7 @@ DISTNAME=		Pike-v8.0.276
 PKGNAME=		${DISTNAME:tl:S/-v//}
 CATEGORIES=		lang
 MASTER_SITES=		http://pike.lysator.liu.se/pub/pike/latest-stable/
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mpl-1.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://pike.lysator.liu.se/
