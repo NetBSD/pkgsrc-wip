@@ -4,6 +4,7 @@
 DISTNAME=	plplot-5.9.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=plplot/}
+LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://plplot.sourceforge.net/
