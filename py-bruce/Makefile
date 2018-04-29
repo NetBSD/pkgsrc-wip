@@ -8,7 +8,7 @@ MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/co
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/bruce-tpt/
 COMMENT=	Bruce, the Presentation Tool, puts reStructuredText in your projector
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
