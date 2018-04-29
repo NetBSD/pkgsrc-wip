@@ -6,6 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/B/b/S/A/a/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/BytecodeAssembler/}
 EXTRACT_SUFX=	.zip
+LICENSE=	zpl-2.1
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/BytecodeAssembler
