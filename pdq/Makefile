@@ -7,6 +7,7 @@ COMMENT=		Flexible printing subsystem
 CONFIGURE_ENV+=		GLIB_CONFIG=NO # make sure xpdq is not built
 
 CONF_FILES=		${PREFIX}/share/pdq/printrc.example ${PKG_SYSCONFDIR}/printrc
+LICENSE=		gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
