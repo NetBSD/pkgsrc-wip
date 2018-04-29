@@ -5,6 +5,7 @@ CATEGORIES=		sysutils
 # this sourceforge project doesn't appear to be at normal sf.net sites
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=procps/}
 MASTER_SITES=		http://procps.sourceforge.net/
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://procps.sourceforge.net/
