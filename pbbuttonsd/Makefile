@@ -4,6 +4,7 @@
 DISTNAME=		pbbuttonsd-0.7.2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pbbuttons/}
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pbbuttons.berlios.de/
