@@ -6,6 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pizzacompiler/}
 EXTRACT_SUFX=		.jar
+LICENSE=		artistic
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pizzacompiler.sourceforge.net/
