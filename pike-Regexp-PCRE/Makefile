@@ -3,6 +3,7 @@
 PKGNAME=	pike-Regexp_PCRE-${PIKE_VERSION}
 CATEGORIES=	lang
 COMMENT=	Regexp_PCRE module for Pike programming language
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mpl-1.1
 
 MODULE_NAMES=	_Regexp_PCRE
 MODULE_DIRS=	modules/_Regexp_PCRE

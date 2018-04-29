@@ -3,6 +3,7 @@
 PKGNAME=	pike-gdbm-${PIKE_VERSION}
 CATEGORIES=	lang
 COMMENT=	GDBM module for Pike programming language
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mpl-1.1
 
 MODULE_NAMES=	Gdbm
 MODULE_DIRS=	modules/Gdbm

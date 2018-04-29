@@ -4,6 +4,7 @@
 PKGNAME=	pike-core-${PIKE_VERSION}
 CATEGORIES=	lang
 COMMENT=	Dynamic programming language with a syntax similar to C++
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mpl-1.1
 
 MODULE_NAMES=	_ADT _math _Charset files system Nettle Gmp Math Parser \
 		Regexp sprintf Unicode Locale

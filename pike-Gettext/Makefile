@@ -3,6 +3,7 @@
 PKGNAME=	pike-Gettext-${PIKE_VERSION}
 CATEGORIES=	lang
 COMMENT=	Gettext module for Pike programming language
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mpl-1.1
 
 MODULE_NAMES=	Gettext
 MODULE_DIRS=	modules/Gettext
