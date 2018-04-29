@@ -9,6 +9,7 @@ GITHUB_TAG=		${DISTNAME}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pps.univ-paris-diderot.fr/~jch/software/polipo/
 COMMENT=		Small and fast caching web proxy
+LICENSE=		mit
 
 USE_TOOLS+=	makeinfo
 
