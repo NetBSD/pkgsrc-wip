@@ -8,7 +8,7 @@ MASTER_SITES=	https://pypi.python.org/packages/18/53/60f626e6c360b66148ee160df5c
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/wdbm/propyte
 COMMENT=	Template Python program
-LICENSE=	gnu-gplv-3
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.2:../../devel/py-docopt
 DEPENDS+=	${PYPKGPREFIX}-prel-[0-9]*:../../wip/py-prel
