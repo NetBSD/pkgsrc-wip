@@ -5,6 +5,7 @@ DISTNAME=	MySQL-python-0.9.2
 PKGNAME=	py-mysqldb-docs-0.9.2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
+#LICENSE	GPL or the original license based on Python 1.5.2's license. (at the time python's license is CNRI)
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mysql-python
