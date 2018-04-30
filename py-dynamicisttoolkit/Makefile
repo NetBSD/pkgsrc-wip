@@ -8,7 +8,7 @@ MASTER_SITES=	https://pypi.python.org/packages/1e/ed/2be1322f723ef11f959581c7082
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/moorepants/DynamicistToolKit
 COMMENT=	Various tools for theoretical and experimental dynamics
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	unlicense
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.18.1:../../math/py-pandas
