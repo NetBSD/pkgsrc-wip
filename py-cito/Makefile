@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/cito/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/tunnell/cito
 COMMENT=	Generic particle-physics software trigger with flash ADCs
-#LICENSE=	modified-bsd
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
 
