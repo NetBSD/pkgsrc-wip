@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.unixuser.org/~euske/python/pyntch/
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.unixuser.org/~euske/python/pyntch/index.html
 COMMENT=	Examine python code and detect possible errors
-#LICENSE=	LICENSE
+LICENSE=	mit
 
 VERSION=	20090615
 
