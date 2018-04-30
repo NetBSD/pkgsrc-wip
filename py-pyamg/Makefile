@@ -9,7 +9,7 @@ MASTER_SITES=	http://pyamg.googlecode.com/files/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pyamg
 COMMENT=	Algebraic multigrid solvers in Python
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 
