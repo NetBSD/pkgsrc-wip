@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/EasyModeler
 COMMENT=	Simple ODE Tools for Modelers
-ICENSE=		modified-bsd
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
