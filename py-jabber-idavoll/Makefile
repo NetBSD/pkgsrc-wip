@@ -4,6 +4,7 @@ DISTNAME=	idavoll-0.9.1
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	http://idavoll.ik.nu/releases/0.9.1/
+LICENSE=	mit
 
 MAINTAINER=	eric@cirr.com
 #HOMEPAGE=	http://idavoll.ik.nu/
