@@ -7,6 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/repoze.tm2/}
 EXTRACT_SUFX=	.gz
+LICENSE=	original-bsd
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.repoze.org/
