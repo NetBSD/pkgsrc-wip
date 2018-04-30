@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfmmlib/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/inducer/pyfmmlib
 COMMENT=	Python wrappers for particle FMMs
-#LICENSE=	gnu-gpl-v2 AND mit
+LICENSE=	modified-bsd AND mit
 
 USE_LANGUAGES=	c fortran
 
