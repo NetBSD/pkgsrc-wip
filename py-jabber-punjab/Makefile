@@ -7,7 +7,7 @@ CATEGORIES=	chat python
 # MASTER_SITES=	http://code.stanziq.com/punjab/export/38/releases/
 # MASTER_SITES=	http://code.stanziq.com/cgit/punjab/punjab/snapshot/
 MASTER_SITES=	https://github.com/twonds/punjab/archive/master.zip
-
+LICENSE=	mit
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	https://github.com/twonds/punjab
