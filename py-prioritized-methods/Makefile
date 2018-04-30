@@ -7,6 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-prioritized-methods-0.2.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prioritized_methods/}
 EXTRACT_SUFX=	.gz
+LICENSE=	mit
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://toscawidgets.org/download
