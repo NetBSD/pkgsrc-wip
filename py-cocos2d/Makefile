@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/los-cocos/
 COMMENT=	2D framework for games and multimedia
-#LICENSE=	2-claused-bsd
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pyglet>=1.1.4:../../wip/py-pyglet
 
