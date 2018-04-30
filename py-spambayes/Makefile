@@ -5,6 +5,7 @@ DISTNAME=		spambayes-1.1b1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=spambayes/}
+LICENSE=		python-software-foundation
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://spambayes.sourceforge.net/
