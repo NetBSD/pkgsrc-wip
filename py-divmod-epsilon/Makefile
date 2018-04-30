@@ -5,6 +5,7 @@ DISTNAME=		Epsilon-${EPSILON_VERSION}
 PKGNAME=		${PYPKGPREFIX}-divmod-epsilon-${EPSILON_VERSION}
 CATEGORIES=		time devel python
 MASTER_SITES=		ftp://ftp.osuosl.org/pub/nslu2/sources/
+LICENSE=		mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodNevow
