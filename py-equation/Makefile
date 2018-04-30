@@ -5,6 +5,7 @@ EGG_NAME=	Equation-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/Equation/}
+#LICENSE=	AlphaOmega Technology Open License Version 1.0
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/alphaomega-technology/Equation
