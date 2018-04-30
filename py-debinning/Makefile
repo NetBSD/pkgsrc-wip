@@ -8,7 +8,7 @@ MASTER_SITES=	https://www.hepforge.org/archive/debinning/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://debinning.hepforge.org/
 COMMENT=	The bias inherent when binning data  into histograms
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 #DEPENDS+=	root>=:../../misc/root
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
