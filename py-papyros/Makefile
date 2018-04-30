@@ -7,6 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://papyros.googlecode.com/files/
 EXTRACT_SUFX=	.zip
+LICENSE=	modified-bsd
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/papyros/
