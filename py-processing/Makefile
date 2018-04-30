@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pyprocessing.berlios.de/
 COMMENT=	Library for running multiple Python processes using the threading API
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 PYDISTUTILSPKG=	yes
 
