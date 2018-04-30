@@ -4,6 +4,7 @@ DISTNAME=	multimethods-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multimethods/}
+LICENSE=	2-clause-bsd
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://github.com/weissjeffm/multimethods
