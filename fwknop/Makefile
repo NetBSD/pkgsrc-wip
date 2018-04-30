@@ -13,7 +13,9 @@ DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_TOOLS+=	aclocal autoconf automake autoheader makeinfo
+
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
 WRKSRC=		${WRKDIR}/fwknop-2.6.9
 
