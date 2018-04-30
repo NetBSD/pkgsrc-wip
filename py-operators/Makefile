@@ -4,6 +4,7 @@ DISTNAME=	pyoperators-0.13.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyoperators/}
+#LICENSE=	CeCILL-B
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pchanial.github.com/pyoperators/
