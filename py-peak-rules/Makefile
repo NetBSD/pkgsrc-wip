@@ -7,6 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-peak-rules-0.5a1
 PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	http://peak.telecommunity.com/snapshots/
+LICENSE=	zpl-2.1
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://peak.telecommunity.com/snapshots/
