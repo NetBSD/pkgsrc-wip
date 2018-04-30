@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.language-binding.net/
 COMMENT=	Python package for easy C++ declarations navigation
-#LICENSE=	boost-licence
+LICENSE=	boost-licence
 
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
