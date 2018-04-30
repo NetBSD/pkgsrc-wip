@@ -16,6 +16,7 @@ USE_TOOLS+=	aclocal autoconf automake autoheader makeinfo
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
+INFO_FILES=	yes
 
 WRKSRC=		${WRKDIR}/fwknop-2.6.9
 
