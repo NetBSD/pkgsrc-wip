@@ -4,6 +4,7 @@ DISTNAME=	Model-Builder-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/M/m/S/B/b/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=model-builder/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://model-builder.sourceforge.net/
