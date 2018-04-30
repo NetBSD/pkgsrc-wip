@@ -7,6 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	biology python
 MASTER_SITES=	http://psychopy.googlecode.com/files/
 EXTRACT_SUFX=	.zip
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/psychopy/
