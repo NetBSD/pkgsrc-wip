@@ -4,6 +4,7 @@ DISTNAME=	PyNN-0.7.5
 PKGNAME=	${PYPKGPREFIX}-pynn-0.7.5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyNN/}
+LICENSE=	cecill-2.1
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://neuralensemble.org/trac/PyNN/wiki
