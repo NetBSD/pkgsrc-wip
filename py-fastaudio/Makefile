@@ -8,6 +8,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.freenet.org.nz/python/pyPortAudio/ \
 			http://www.portaudio.com/archives/
 DISTFILES=		${DEFAULT_DISTFILES} portaudio_v18_1.zip
+LICENSE=		mit
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freenet.org.nz/python/pyPortAudio/
