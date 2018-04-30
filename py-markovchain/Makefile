@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyMarkovChain/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://files.pythonhosted.org/packages/source/P/PyMarkovChain/
 COMMENT=	Simple markov chain implementation
-#LICENSE=	# TODO: (see mk/license.mk)
+#LICENSE=	Beerware
 
 USE_LANGUAGES=	# none
 
