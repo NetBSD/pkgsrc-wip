@@ -4,6 +4,7 @@ DISTNAME=	PySPH-0.9beta
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySPH/}
+LICENSE=	modified-bsd
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pysph.googlecode.com/
