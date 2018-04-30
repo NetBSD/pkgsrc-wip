@@ -4506,7 +4506,6 @@ SUBDIR+=	urlwatch
 SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
-SUBDIR+=	utf8proc
 SUBDIR+=	uthash
 SUBDIR+=	util-linux
 SUBDIR+=	uzbl

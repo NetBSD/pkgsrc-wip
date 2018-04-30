@@ -1,5 +1,0 @@
-@comment $NetBSD$
-include/utf8proc.h
-lib/libutf8proc.so
-lib/libutf8proc.so.2
-lib/libutf8proc.so.${PKGVERSION}
