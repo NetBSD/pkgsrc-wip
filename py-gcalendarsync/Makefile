@@ -4,6 +4,7 @@ DISTNAME=	googlecalendarsync-0.4
 PKGNAME=	${PYPKGPREFIX}-gcalendarsync-0.4
 CATEGORIES=	www python
 MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/googlecalendarsync/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/googlecalendarsync/
