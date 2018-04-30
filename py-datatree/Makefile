@@ -5,6 +5,7 @@ DISTNAME=	datatree-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/datatree/}
+LICENSE=	apache-2.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/bigjason/datatree
