@@ -5,6 +5,7 @@ PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 PKGREVISION=		1
 CATEGORIES=		chat python
 MASTER_SITES=		https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/pyaimt/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://code.google.com/p/pyaimt/
