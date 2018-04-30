@@ -7,6 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/E/e/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/Extremes/}
 EXTRACT_SUFX=	.zip
+LICENSE=	python-software-foundation # or ZPL
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/Extremes
