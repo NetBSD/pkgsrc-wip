@@ -6,6 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mcint/}
 EXTRACT_SUFX=	.zip
+#LICENSE=	CC BY-NC-SA 3.0
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/mcint/
