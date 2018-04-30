@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=H/Helmholtz/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.dbunic.cnrs-gif.fr/helmholtz/
 COMMENT=	Framework for creating neuroscience databases
-#LICENSE=	cecill
+LICENSE=	cecill-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
