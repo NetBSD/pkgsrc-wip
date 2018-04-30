@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=s/semidbm/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://files.pythonhosted.org/packages/source/s/semidbm/
 COMMENT=	Cross platform (fast) DBM interface in python
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/semidbm-0.5.1
 
