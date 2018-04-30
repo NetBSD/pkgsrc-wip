@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.talkbox/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.scipy.org/scipy/scikits
 COMMENT=	Talkbox, a set of python modules for speech/signal processing
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
 WRKSRC=	${WRKDIR}/scikits.talkbox-0.2.5
 
