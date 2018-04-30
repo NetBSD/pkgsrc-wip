@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdopkg/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/redhat-openstack/rdopkg
 COMMENT=	RDO packaging utility
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
