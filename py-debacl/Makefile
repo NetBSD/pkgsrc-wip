@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=d/debacl/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/CoAxLab/DeBaCl
 COMMENT=	Density-Based Clustering
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.11.0:../../math/py-pandas
