@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysparse/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pysparse.sourceforge.net/
 COMMENT=	Sparse linear algebra extension for Python
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++ fortran77
 PYDISTUTILSPKG=	yes
