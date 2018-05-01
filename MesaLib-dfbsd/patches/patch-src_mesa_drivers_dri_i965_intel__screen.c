@@ -6,25 +6,25 @@ to a two argument ALIGN.
 
 Fix build on older NetBSD w/o _SC_PHYS_PAGES.
 
---- src/mesa/drivers/dri/i965/intel_screen.c.orig	2017-05-10 14:13:57.000000000 +0000
+--- src/mesa/drivers/dri/i965/intel_screen.c.orig	2017-11-10 23:18:56.000000000 +0000
 +++ src/mesa/drivers/dri/i965/intel_screen.c
 @@ -27,6 +27,11 @@
  #include <errno.h>
  #include <time.h>
  #include <unistd.h>
 +
-+#ifdef HAVE_SYS_SYSCTL_H
++#if defined(HAVE_SYS_SYSCTL_H) && defined(__NetBSD__)
 +# include <sys/sysctl.h>
 +#endif
 +
  #include "main/context.h"
  #include "main/framebuffer.h"
  #include "main/renderbuffer.h"
-@@ -1019,6 +1024,13 @@ brw_query_renderer_integer(__DRIscreen *
+@@ -1220,6 +1225,13 @@ brw_query_renderer_integer(__DRIscreen *
        const unsigned gpu_mappable_megabytes =
           screen->aperture_threshold / (1024 * 1024);
  
-+#if defined(HW_PHYSMEM64)
++#if defined(HW_PHYSMEM64) && defined(__NetBSD__)
 +      int mib[2] = { CTL_HW, HW_PHYSMEM64 };
 +      const uint64_t system_memory_bytes;
 +      size_t len = sizeof(system_memory_bytes);
@@ -34,7 +34,7 @@ Fix build on older NetBSD w/o _SC_PHYS_PAGES.
        const long system_memory_pages = sysconf(_SC_PHYS_PAGES);
        const long system_page_size = sysconf(_SC_PAGE_SIZE);
  
-@@ -1027,6 +1039,7 @@ brw_query_renderer_integer(__DRIscreen *
+@@ -1228,6 +1240,7 @@ brw_query_renderer_integer(__DRIscreen *
  
        const uint64_t system_memory_bytes = (uint64_t) system_memory_pages
           * (uint64_t) system_page_size;

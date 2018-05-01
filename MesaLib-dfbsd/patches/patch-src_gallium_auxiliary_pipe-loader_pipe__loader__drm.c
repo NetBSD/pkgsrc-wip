@@ -1,6 +1,6 @@
 $NetBSD$
 
-From FreeBSD ports / DragonFly dports, email addresses expunged:
+* From FreeBSD ports / DragonFly dports graphics/mesa-dri
 
 Revert the following commit.
 
@@ -23,13 +23,15 @@ headless system that is used for opencl.
 
 v2: Clarify the linking topic in the commit message.
 
+* Extended for NetBSD.
+
 --- src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c.orig	2017-02-06 13:49:09.000000000 +0000
 +++ src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c
 @@ -224,6 +224,16 @@ pipe_loader_drm_probe_fd(struct pipe_loa
     return false;
  }
- 
-+#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
 +static int
 +open_drm_minor(int minor)
 +{
@@ -46,7 +48,7 @@ v2: Clarify the linking topic in the commit message.
  int
  pipe_loader_drm_probe(struct pipe_loader_device **devs, int ndev)
  {
-+#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
 +   int i, k, fd, num_render_node_devs;
 +   int j = 0;
 +
@@ -65,8 +67,8 @@ v2: Clarify the linking topic in the commit message.
 @@ -251,6 +273,11 @@ pipe_loader_drm_probe(struct pipe_loader
           continue;
        }
- 
-+#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
 +      render_node_devs[j].vendor_id = dev->u.pci.vendor_id;
 +      render_node_devs[j].chip_id = dev->u.pci.chip_id;
 +
@@ -77,8 +79,8 @@ v2: Clarify the linking topic in the commit message.
 @@ -260,6 +287,48 @@ pipe_loader_drm_probe(struct pipe_loader
        j++;
     }
- 
-+#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
 +   num_render_node_devs = j;
 +
 +   /* Next look for drm devices. */

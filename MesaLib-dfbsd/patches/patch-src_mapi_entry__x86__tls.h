@@ -5,17 +5,17 @@ with dlopen(3) at the moment.
 
 Fix --enable-glx-tls with clang. From FreeBSD.
 
-HACK: Renamed non-linking table_noop_array to locally created
-netbsd_table_noop_array.
+table_noop_array is only defined for shared-glapi.
+es1api and es2api are not going to be patched for NetBSD.
 
---- src/mapi/entry_x86_tls.h.orig	2016-11-10 22:05:17.000000000 +0000
+--- src/mapi/entry_x86_tls.h.orig	2018-01-18 21:30:29.000000000 +0000
 +++ src/mapi/entry_x86_tls.h
 @@ -56,10 +56,27 @@ __asm__(".balign 16\n"
     ".balign 16\n"                \
     func ":"
  
-+#if defined(__NetBSD__) && defined(GLX_USE_TLS)
-+extern const mapi_func netbsd_table_noop_array[];
++#if defined(__NetBSD__) && defined(MAPI_MODE_GLAPI)
++extern const mapi_func table_noop_array[];
  #define STUB_ASM_CODE(slot)      \
     "call x86_current_tls\n\t"    \
     "movl %gs:(%eax), %eax\n\t"   \
@@ -27,7 +27,7 @@ netbsd_table_noop_array.
 +   "2:\n\t"                      \
 +   "popl %eax\n\t"               \
 +   "addl $_GLOBAL_OFFSET_TABLE_+[.-1b], %eax\n\t" \
-+   "movl netbsd_table_noop_array@GOT(%eax), %eax\n\t" \
++   "movl table_noop_array@GOT(%eax), %eax\n\t" \
     "jmp *(4 * " slot ")(%eax)"
 +#else
 +#define STUB_ASM_CODE(slot)      \

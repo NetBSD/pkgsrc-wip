@@ -5,10 +5,10 @@ Interim fix for toolchain/50277.
 NetBSD only supports zero-initialized initial-exec tls variables in conjuction
 with dlopen(3) at the moment.
 
---- src/glx/glxcurrent.c.orig	2015-09-02 17:06:23.000000000 +0000
+--- src/glx/glxcurrent.c.orig	2018-02-09 02:17:59.000000000 +0000
 +++ src/glx/glxcurrent.c
 @@ -40,6 +40,18 @@
- #include "glapi.h"
+ #include "glx_error.h"
  
  /*
 + * MASSIVE KLUDGE!

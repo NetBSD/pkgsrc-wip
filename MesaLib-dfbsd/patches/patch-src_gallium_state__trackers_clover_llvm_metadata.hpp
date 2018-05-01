@@ -11,7 +11,7 @@ From FreeBSD ports graphics/libGL mesa 13.0.5
           get_kernel_nodes(const ::llvm::Module &mod) {
              if (const ::llvm::NamedMDNode *n =
                     mod.getNamedMetadata("opencl.kernels"))
-+#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +               return { n->getOperand(0), n->getOperand(n->getNumOperands()) };
 +#else
                 return { n->op_begin(), n->op_end() };

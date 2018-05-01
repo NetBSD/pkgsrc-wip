@@ -1,8 +1,12 @@
 Copy port to graphics/MesaLib, do not install from wip.
 
-fix bitrot that broke GLX TLS on NetBSD, replace hack
-see if libLLVM 3.9 on FreeBSD can build nouveau
-test OSX quartz, check if bug 90311 patch needs regen
-test Solaris
-test Linux
-test NetBSD 7
+* Debug crash on NetBSD amd64 for radeonsi
+     when invoking gvim or xfce Terminal settings.
+* Debug forced webgl acceleration leaving blank screen
+     for radeonsi Firefox 52 esr on DragonFly.
+* See what can be done on NetBSD build for glesv1 and glesv2
+* See if libLLVM 3.9+ on FreeBSD can build nouveau
+* Test OSX quartz, check if bug 90311 patch needs regen
+* Test Solaris
+* Test Linux
+* Fully port Vulkan support from FreeBSD ports. 

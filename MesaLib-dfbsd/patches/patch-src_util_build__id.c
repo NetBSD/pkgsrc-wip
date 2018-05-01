@@ -1,6 +1,8 @@
 $NetBSD$
 
-Patch taken from FreeBSD ports graphics/mesa-dri mesa 17.1.0
+Patch taken from FreeBSD ports graphics/mesa-dri mesa 17.1.0.
+
+# Elf_ doesn't exist, use Elf32_ or Elf64_.
 
 --- src/util/build_id.c.orig	2017-05-25 07:13:13.000000000 +0000
 +++ src/util/build_id.c
@@ -8,7 +10,7 @@ Patch taken from FreeBSD ports graphics/mesa-dri mesa 17.1.0
  #endif
  
  #ifndef ElfW
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#ifdef __LP64__
 +#define ElfW(type) Elf64_##type
 +#else
