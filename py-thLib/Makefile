@@ -5,6 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/thLib/}
 EXTRACT_SUFX=	.zip
+LICENSE=	2-clause-bsd
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://work.thaslwanter.at/
