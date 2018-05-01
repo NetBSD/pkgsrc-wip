@@ -5,9 +5,9 @@ Use USE_AMD64_IOPL (actually x86_64_iopl) on NetBSD/amd64.
 
 for netbsd, force pass pthread configure checks (pthread not needed)
 
---- configure.orig	2015-02-10 22:49:52.000000000 +0000
+--- configure.orig	2017-12-20 20:32:47.000000000 +0000
 +++ configure
-@@ -23235,7 +23235,7 @@ $as_echo "#define USE_DEV_IO 1" >>confde
+@@ -23305,7 +23305,7 @@ $as_echo "#define USE_DEV_IO 1" >>confde
  $as_echo "#define USE_DEV_IO 1" >>confdefs.h
   ;;
  		*netbsd*)
@@ -16,7 +16,7 @@ for netbsd, force pass pthread configure checks (pthread not needed)
  
  				SYS_LIBS=-lx86_64
  				;;
-@@ -25079,7 +25079,8 @@ case ${host_os} in
+@@ -25149,7 +25149,8 @@ case ${host_os} in
  	netbsd*)
  	# use libc stubs, don't link against libpthread, to allow
  	# dynamic loading

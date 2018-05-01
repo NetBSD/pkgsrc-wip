@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.17 2017/04/10 13:10:19 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.21 2018/03/07 11:57:38 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-XORG_VERSION=	1.19.3
+XORG_VERSION=	1.19.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c99
 
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
@@ -25,12 +25,12 @@ OWN_DIRS+=		${VARBASE}/log
 OWN_DIRS+=		${XKB_OUTPUT_DIR}
 XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
 
-# .if !empty(USE_TOOLS:Mauto*)
-# TOOLS_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
-# .endif
+.if !empty(USE_TOOLS:Mauto*)
+TOOLS_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
+.endif
 
 DEPENDS+=	xkbcomp-[0-9]*:../../x11/xkbcomp
 DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
@@ -47,7 +47,7 @@ CONFIGURE_ENV+=		ac_cv_tls=no
 CONFIGURE_ARGS+=	--disable-glx-tls
 .  endif
 .endif
-CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM}
+CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
 
 CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts/X11
 
@@ -111,7 +111,6 @@ BUILDLINK_API_DEPENDS.xfont+=		xfont>=1.4.2
 BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.21.8
 
 BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-BUILD_DEPENDS+=		font-util-[0-9]*:../../fonts/font-util
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig" || ${OPSYS} == "MirBSD"
@@ -121,26 +120,20 @@ CONFIGURE_ARGS+=	--with-sha1=libc
 CONFIGURE_ARGS+=	--with-sha1=libnettle
 .endif
 
-.include "../../devel/xorg-util-macros/buildlink3.mk"
-
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXdmcp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXfont2/buildlink3.mk"
-.include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
@@ -149,5 +142,6 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

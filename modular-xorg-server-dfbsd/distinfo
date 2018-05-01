@@ -1,19 +1,18 @@
-$NetBSD: distinfo,v 1.83 2017/07/28 21:10:00 wiz Exp $
+$NetBSD: distinfo,v 1.87 2018/01/25 15:06:10 jperkin Exp $
 
-SHA1 (xorg-server-1.19.3.tar.bz2) = 77f580ffa22a8bbcc3536e74e19114e446417a9c
-RMD160 (xorg-server-1.19.3.tar.bz2) = afa8708054016d4fa3632bf1db0bc462731717b4
-SHA512 (xorg-server-1.19.3.tar.bz2) = b988897418399e1361fdcca9465a781f55f8f6fbfdc5a59edfaee9046a0c6ad7a76f348d88b6004ce3d3fb3966b4c5af0b854f6549c32b2b8d7a43758809f669
-Size (xorg-server-1.19.3.tar.bz2) = 6050221 bytes
-SHA1 (patch-Xi_sendexev.c) = 46a165049d4b15c472736d3863aa4efad39418bc
+SHA1 (xorg-server-1.19.6.tar.bz2) = 2dd560ac49bdbda7f67166546af43541fabf517f
+RMD160 (xorg-server-1.19.6.tar.bz2) = c2b6f9fe3957c99cddd44bc3ae38343a1c4f314e
+SHA512 (xorg-server-1.19.6.tar.bz2) = 38519a8d0af9dd034045fc346959496dd718fa59b6188307974797a1cd9c349deb54987f6232ea8396baf810dcc710c0ff191f76ed2186cae4d44921b3680412
+Size (xorg-server-1.19.6.tar.bz2) = 5984528 bytes
 SHA1 (patch-config_config-backends.h) = f44868caa51e972a76949f73ac6083640af2c351
 SHA1 (patch-config_config.c) = 5a3fe4cb6c2170335ab547f438386cff77a9c152
-SHA1 (patch-config_devd.c) = c4f968f66903c858e0bb65cafb5229be77f10a2f
-SHA1 (patch-configure) = 9e9f497f14d563ef66f25c637a14b0bea2243c3f
-SHA1 (patch-dix_events.c) = a7ede761198583f1d59c4def49db48725a46bd21
-SHA1 (patch-dix_swapreq.c) = 66643fbd396d0b4222ba4a3f09c4bbe3f0083a33
+SHA1 (patch-config_devd.c) = 4e4cf2f61507e350cccdc04742b7d985aa84844f
+SHA1 (patch-configure) = 1f476fd71d97b84bc2e581f9b8e7d582eaece023
+SHA1 (patch-glx_glxscreens.c) = 1e8861f49537e4a23295128289dd3ede4ecb2035
+SHA1 (patch-hw_xfree86_common_xf86AutoConfig.c) = 765bbc7c8c61a0ffa5da54099e212cb981ef3bd0
 SHA1 (patch-hw_xfree86_common_xf86Config.c) = 7964ac8d32d4fcea113c8950661ab921c63ad9d0
 SHA1 (patch-hw_xfree86_common_xf86Globals.c) = 870100ea740b2c0bc1261355d3fcdf17ec50f64f
-SHA1 (patch-hw_xfree86_common_xf86Xinput.c) = 5217a62409708b085a1f83bb0401376e030fb34f
+SHA1 (patch-hw_xfree86_common_xf86Xinput.c) = 5c39ab681afa54ba24465fb9243b8fc2e71fd0ab
 SHA1 (patch-hw_xfree86_common_xf86pciBus.c) = 896825ba12646431cba603938d118acbdde305dd
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 44aa2e3d15a8985e2541a405b8a5ec7b7813b29f
@@ -21,6 +20,7 @@ SHA1 (patch-hw_xfree86_os-support_bsd_arm__video.c) = 9c03b24f44eafc5fabe27e9d6c
 SHA1 (patch-hw_xfree86_os-support_bsd_bsd__VTsw.c) = 90343f694c27a6fdd5070e1167687943bd056a99
 SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = 9bd30fa3ed7c73afd0b15e5cf5286de439f19351
 SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060ec4df3a60
+SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
 SHA1 (patch-hw_xfree86_sdksyms.sh) = c403149ad35ffb70ee44f70de94b4497b751c118

@@ -1,22 +1,22 @@
-# $NetBSD: options.mk,v 1.17 2017/02/21 14:56:14 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2018/03/07 11:57:38 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace
-PKG_SUPPORTED_OPTIONS+=	devd
 PKG_SUGGESTED_OPTIONS=	inet6
-.if ${X11_TYPE} == "modular"
-PKG_SUPPORTED_OPTIONS+=	dri dri3
-PKG_SUGGESTED_OPTIONS+=	dri
-PKG_SUGGESTED_OPTIONS+=	dri3
+
+PKG_SUPPORTED_OPTIONS+=	devd
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+= devd
 .endif
 
+.if ${X11_TYPE} == "modular"
+PKG_SUPPORTED_OPTIONS+=	dri
+PKG_SUGGESTED_OPTIONS+=	dri
+PKG_SUPPORTED_OPTIONS+=	dri3
 # dri3 requires kernel support for dma_buf
-# .if ${OPSYS} == "Linux"
-# PKG_SUGGESTED_OPTIONS+=	dri3
-# .endif
-
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	devd
+.if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=	dri3
+.endif
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -26,13 +26,12 @@ PLIST_VARS+=		dri3
 
 .if !empty(PKG_OPTIONS:Mdri)
 
-.  if !empty(PKG_OPTIONS:Mdri3)
+.if !empty(PKG_OPTIONS:Mdri3)
 CONFIGURE_ARGS+=	--enable-dri3
 PLIST.dri3=		yes
-.include "../../x11/xorgproto/buildlink3.mk"
-.  else
+.else
 CONFIGURE_ARGS+=	--disable-dri3
-.  endif
+.endif
 
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
@@ -85,7 +84,7 @@ CONFIGURE_ARGS+=	--without-dtrace
 
 .if !empty(PKG_OPTIONS:Mdevd)
 SUBST_CLASSES+=			devd_config
-SUBST_STAGE.devd_config=	pre-build
+SUBST_STAGE.devd_config=	post-configure	
 SUBST_MESSAGE.devd_config=	Patching config/Makefile for devd
 SUBST_FILES.devd_config+=	config/Makefile
 SUBST_SED.devd_config+=		-e 's|config\.c|config.c devd.c|g'

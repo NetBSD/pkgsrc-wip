@@ -1,12 +1,10 @@
 $NetBSD$
 
-devd support to detect devices from FreeBSD ports / DragonFly dports
+From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 
-Further fix to use SetNotifyFd / RemoveNotifyFd
-
---- config/devd.c.orig	2017-02-27 17:13:49.368381000 +0000
+--- config/devd.c.orig	2018-01-06 18:38:25.992174000 +0000
 +++ config/devd.c
-@@ -0,0 +1,571 @@
+@@ -0,0 +1,643 @@
 +/*
 + * Copyright (c) 2012 Baptiste Daroussin
 + * Copyright (c) 2013, 2014 Alex Kozlov
@@ -66,8 +64,9 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +
 +#define DEVD_EVENT_ADD		'+'
 +#define DEVD_EVENT_REMOVE	'-'
++#define DEVD_EVENT_NOTIFY	'!'
 +
-+#define RECONNECT_DELAY		5 * 1000
++#define RECONNECT_DELAY		(5 * 1000)
 +
 +static int sock_devd;
 +static bool is_console_kbd = false;
@@ -112,6 +111,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +
 +	if (ret == 0 && len > 0) {
 +		snprintf(devname, devname_len, "%s%i", device->driver, unit);
++		DebugF("[config/devd]: sysctl_exists: true for sysctlname (%s), devname (%s)\n", sysctlname, devname);
 +		return true;
 +	}
 +
@@ -138,6 +138,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	free(devpath);
 +
 +	if (ret == 0) {
++		DebugF("[config/devd]: devpath_exists true for devpath (%s)\n", devpath);
 +		strncpy(devname, device->driver, devname_len);
 +		return true;
 +	}
@@ -184,6 +185,8 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	int i;
 +	int fd;
 +
++	DebugF("[config/devd]: begin device_added: devname (%s)\n", devname);
++
 +	for (i = 0; hw_types[i].driver != NULL; i++) {
 +		size_t len;
 +
@@ -199,6 +202,8 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	if (hw_types[i].driver == NULL || hw_types[i].xdriver == NULL) {
 +		LogMessage(X_INFO, "config/devd: ignoring device %s\n",
 +				devname);
++		DebugF("[config/devd]: ignoring device %s\n",
++				devname);
 +		return;
 +	}
 +
@@ -206,10 +211,13 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	if (is_kbdmux && is_console_kbd && hw_types[i].flag & ATTR_KEYBOARD) {
 +		LogMessage(X_INFO, "config/devd: kbdmux is enabled, ignoring device %s\n",
 +				devname);
++		DebugF("[config/devd]: kbdmux is enabled, ignoring device %s\n",
++				devname);
 +		return;
 +	}
 +
 +	snprintf(path, sizeof(path), "/dev/%s", devname);
++	DebugF("[config/devd]: device_added: devname full path (%s)\n", path);
 +
 +	options = input_option_new(NULL, "_source", "server/devd");
 +	if (!options)
@@ -217,11 +225,14 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +
 +	snprintf(sysctlname, sizeof(sysctlname), "dev.%s.%s.%%desc",
 +	    hw_types[i].driver, devname + strlen(hw_types[i].driver));
++	DebugF("[config/devd]: device_added: try sysctl name (%s)\n", sysctlname);
 +	vendor = sysctl_get_str(sysctlname);
 +	if (vendor == NULL) {
++		DebugF("[config/devd]: device_added: input_option_new([name], devname (%s))\n", devname);
 +		options = input_option_new(options, "name", devname);
 +	}
 +	else {
++		DebugF("[config/devd]: device_added: read full vendor (%s)\n", vendor);
 +		if ((walk = strchr(vendor, ' ')) != NULL) {
 +			walk[0] = '\0';
 +			walk++;
@@ -232,10 +243,12 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +
 +		attrs.vendor = strdup(vendor);
 +		if (product) {
++			DebugF("[config/devd]: device_added: input_option_new([name], product (%s))\n", product);
 +			attrs.product = strdup(product);
 +			options = input_option_new(options, "name", product);
 +		}
 +		else
++			DebugF("[config/devd]: device_added: input_option_new([name], [(unnamed)])\n");
 +			options = input_option_new(options, "name", "(unnamed)");
 +
 +		free(vendor);
@@ -245,9 +258,11 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	attrs.usb_id = NULL;
 +	attrs.device = strdup(path);
 +	options = input_option_new(options, "driver", hw_types[i].xdriver);
++	DebugF("[config/devd]: device_added: input_option_new ([driver], (%s))\n", hw_types[i].xdriver);
 +
 +	fd = open(path, O_RDONLY);
-+	if (fd > 0) {
++	if (fd >= 0) {
++		DebugF("[config/devd]: device_added: input_option_new ([device], (%s)), fd (%d)\n", path, fd);
 +		close(fd);
 +		options = input_option_new(options, "device", path);
 +	}
@@ -255,6 +270,8 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +		if (attrs.flags & ~ATTR_KEYBOARD) {
 +			LogMessage(X_INFO, "config/devd: device %s already opened\n",
 +					 path);
++			DebugF("[config/devd]: device_added: device (%s) already opened: flags (0x%x), fd (%d)\n",
++					 path, attrs.flags, fd);
 +
 +			/*
 +			 * Fail if cannot open device, it breaks AllowMouseOpenFail,
@@ -271,9 +288,12 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +			LogMessage(X_WARNING, "config/devd: console keyboard is "
 +					"already added, ignoring %s (%s)\n",
 +					attrs.product, path);
++			DebugF("[config/devd]: device_added: console keyboard is "
++					"already added, ignoring %s, path (%s): fd (%d)\n",
++					attrs.product, path, fd);
 +			goto unwind;
 +		}
-+		else
++		else {
 +			/*
 +			 * Don't pass "device" option if the keyboard is already
 +			 * attached to the console (ie. open() fails).
@@ -281,7 +301,11 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +			 * Prevent any other attached to console keyboards being
 +			 * processed. There can be only one such device.
 +			 */
++			DebugF("[config/devd]: device_added: keyboard already attached to console "
++					"is_console_kbd = true, ignoring %s, path (%s): fd (%d)\n",
++					attrs.product, path, fd);
 +			is_console_kbd = true;
++		}
 +	}
 +
 +	if (asprintf(&config_info, "devd:%s", devname) == -1) {
@@ -292,14 +316,22 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	if (device_is_duplicate(config_info)) {
 +		LogMessage(X_WARNING, "config/devd: device %s (%s) already added. "
 +				"ignoring\n", attrs.product, path);
++		DebugF("[config/devd]: device %s (%s) already added. "
++				"ignoring\n", attrs.product, path);
 +		goto unwind;
 +	}
 +
++	DebugF("[config/devd]: device_added: input_option_new ([config_info], (%s))\n", config_info);
 +	options = input_option_new(options, "config_info", config_info);
 +	LogMessage(X_INFO, "config/devd: adding input device %s (%s)\n",
 +			attrs.product, path);
++	DebugF("[config/devd]: device_added: before   NewInputDeviceRequest for device %s (%s)\n",
++			attrs.product, path);
 +
 +	NewInputDeviceRequest(options, &attrs, &dev);
++	
++	DebugF("[config/devd]: device_added: finished NewInputDeviceRequest for device %s (%s)\n",
++			attrs.product, path);
 +
 +unwind:
 +	free(config_info);
@@ -314,6 +346,8 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +device_removed(char *devname)
 +{
 +	char *config_info;
++
++	DebugF("[config/devd]: removing device (%s)\n", devname);
 +
 +	if (asprintf(&config_info, "devd:%s", devname) == -1)
 +		return;
@@ -332,17 +366,20 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	int fd;
 +
 +	fd = open(device, O_RDONLY);
++	DebugF("[config/devd]: is_kbdmux_enabled: device (%s) opened, fd (%d)\n", device, fd);
 +
 +	if (fd < 0)
 +		return false;
 +
 +	if (ioctl(fd, KDGKBINFO, &info) == -1) {
++		DebugF("[config/devd]: is_kbdmux_enabled: ioctl KDGKBINFO failed (%s)\n", strerror(errno));
 +		close(fd);
 +		return false;
 +	}
 +
 +	close(fd);
 +
++	DebugF("[config/devd]: is_kbdmux_enabled: info.kb_name (%s)\n", info.kb_name);
 +	if (!strncmp(info.kb_name, "kbdmux", 6))
 +		return true;
 +
@@ -352,6 +389,9 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +static void
 +disconnect_devd(int sock)
 +{
++	LogMessage(X_INFO, "config/devd: disconnect socket (%d)\n", sock);
++	DebugF("[config/devd]: disconnect socket (%d)\n", sock);
++
 +	if (sock >= 0) {
 +		RemoveNotifyFd(sock);
 +		close(sock);
@@ -359,7 +399,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +}
 +
 +static void
-+devdInputHandlerNotify(int sock, int read, void *data);
++socket_handler(int sock, int ready, void *data);
 +
 +static int
 +connect_devd(void)
@@ -367,22 +407,30 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	struct sockaddr_un devd;
 +	int sock;
 +
++	DebugF("[config/devd]: connecting ... \n");
++
 +	sock = socket(AF_UNIX, SOCK_STREAM, 0);
 +	if (sock < 0) {
-+		LogMessage(X_ERROR, "config/devd: fail opening stream socket\n");
++		LogMessage(X_ERROR, "[config/devd]: failed opening stream socket: %s\n", strerror(errno));
++		DebugF("[config/devd]: connect_devd: failed opening stream socket: %s\n", strerror(errno));
 +		return -1;
 +	}
++
++	DebugF("[config/devd]: opened stream socket (%d)\n", sock);
 +
 +	devd.sun_family = AF_UNIX;
 +	strlcpy(devd.sun_path, DEVD_SOCK_PATH, sizeof(devd.sun_path));
 +
 +	if (connect(sock, (struct sockaddr *) &devd, sizeof(devd)) < 0) {
 +		close(sock);
-+		LogMessage(X_ERROR, "config/devd: fail to connect to devd\n");
++		LogMessage(X_ERROR, "[config/devd]: failed to connect to devd: %s\n", strerror(errno));
++		DebugF("[config/devd]: connect_devd: failed to connect to devd: %s\n", strerror(errno));
 +		return -1;
 +	}
 +
-+	SetNotifyFd(sock, devdInputHandlerNotify, X_NOTIFY_READ, NULL);
++	DebugF("[config/devd]: connected to devd, sock (%d), pid file (%s)\n", sock, DEVD_SOCK_PATH);
++
++	SetNotifyFd(sock, socket_handler, X_NOTIFY_READ, NULL);
 +
 +	return	sock;
 +}
@@ -392,13 +440,15 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +{
 +	int newsock;
 +
-+	if ((newsock = connect_devd()) > 0) {
++	if ((newsock = connect_devd()) >= 0) {
 +		sock_devd = newsock;
 +		TimerFree(rtimer);
 +		rtimer = NULL;
 +		LogMessage(X_INFO, "config/devd: reopening devd socket\n");
++		DebugF("[config/devd]: reconnect_handler: RECONNECTED using socket (%d)\n", sock_devd);
 +		return 0;
 +	}
++	DebugF("[config/devd]: reconnect_handler FAILED to reconnect returned (%d)\n", newsock);
 +
 +	/* Try again after RECONNECT_DELAY */
 +	return RECONNECT_DELAY;
@@ -410,6 +460,8 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	char *buf, *newbuf;
 +	ssize_t ret, cap, sz = 0;
 +	char c;
++
++	*out = NULL;
 +
 +	cap = 1024;
 +	buf = malloc(cap * sizeof(char));
@@ -428,6 +480,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +			disconnect_devd(sock_devd);
 +			rtimer = TimerSet(NULL, 0, 1, reconnect_handler, NULL);
 +			LogMessage(X_WARNING, "config/devd: devd socket is lost\n");
++			DebugF("[config/devd]: socket_getline: EOF devd socket (%d) is LOST\n", sock_devd);
 +			free(buf);
 +			return -1;
 +		}
@@ -489,13 +542,22 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +#endif
 +
 +static void
-+devdInputHandlerNotify(int sock, int read, void *data)
++socket_handler(int sock, int ready, void *data)
 +{
 +	char *line = NULL;
 +	char *walk;
++	ssize_t sz;
 +
-+	if (socket_getline(sock, &line) < 0)
++	DebugF("[config/devd]: socket_handler: sock_devd (%d), sock (%d), ready (%d)\n", sock_devd, sock, ready);
++	
++	sz = socket_getline(sock_devd, &line);
++	if (sz < 0)
 +		return;
++	if (sz == 0) {
++		free(line);
++		return;
++	}
++	DebugF("[config/devd]: socket_handler: socket_getline (%s)\n", line);
 +
 +	walk = strchr(line + 1, ' ');
 +	if (walk != NULL)
@@ -503,10 +565,15 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +
 +	switch (*line) {
 +	case DEVD_EVENT_ADD:
++		DebugF("[config/devd]: socket_handler: DEVD_EVENT_ADD line (%s)\n", line);
 +		device_added(line + 1);
 +		break;
 +	case DEVD_EVENT_REMOVE:
++		DebugF("[config/devd]: socket_handler: DEVD_EVENT_REMOVE line (%s)\n", line);
 +		device_removed(line + 1);
++		break;
++	case DEVD_EVENT_NOTIFY:
++		DebugF("[config/devd]: socket_handler: DEVD_EVENT_NOTIFY line (%s)\n", line);
 +		break;
 +	default:
 +		break;
@@ -528,6 +595,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	int i, j;
 +
 +	LogMessage(X_INFO, "config/devd: probing input devices...\n");
++	DebugF("[config/devd]: config_devd_init: probing input devices...\n");
 +
 +	/*
 +	 * Add fake keyboard and give up on keyboards management
@@ -554,6 +622,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +#if 0
 +	RegisterBlockAndWakeupHandlers(block_handler, wakeup_handler, NULL);
 +#endif
++	DebugF("[config/devd]: config_devd_init: devices probed, sock_devd (%d)\n", sock_devd);
 +
 +	return 1;
 +}
@@ -562,6 +631,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +config_devd_fini(void)
 +{
 +	LogMessage(X_INFO, "config/devd: terminating backend...\n");
++	DebugF("[config/devd]: terminating backend...\n");
 +
 +	if (rtimer) {
 +		TimerFree(rtimer);
