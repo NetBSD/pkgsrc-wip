@@ -1652,6 +1652,7 @@ SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
 SUBDIR+=	libLLVM38
+SUBDIR+=	libLLVM-dfbsd
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
 SUBDIR+=	libavc1394
