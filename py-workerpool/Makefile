@@ -4,6 +4,7 @@ DISTNAME=	workerpool-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://workerpool.googlecode.com/files/
+LICENSE=	mit
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/workerpool/
