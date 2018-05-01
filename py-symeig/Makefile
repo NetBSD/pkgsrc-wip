@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mdp-toolkit/}
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mdp-toolkit.sourceforge.net/symeig.html
 COMMENT=	Symmetrical eigenvalue routines for NumPy
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c fortran
 PYDISTUTILSPKG=	yes
