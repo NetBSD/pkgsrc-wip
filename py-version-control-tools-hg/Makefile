@@ -8,7 +8,7 @@ MASTER_SITES=	#
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mercurial.selenic.com/wiki/MozillaPushlogExtension
 COMMENT=	Mercurial extensions used by the mozilla project (incl. pushlog)
-#LICENSE=	mpl-1.1
+LICENSE=	gnu-gpl-v2
 
 HG_REPOSITORIES=		version-control-tools
 HG_REPO.version-control-tools=	https://hg.mozilla.org/hgcustom/version-control-tools/
