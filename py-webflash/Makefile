@@ -7,6 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/W/w/S/F/f/S/.tar//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebFlash/}
 EXTRACT_SUFX=	.gz
+LICENSE=	mit
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://python-rum.org/wiki/WebFlash
