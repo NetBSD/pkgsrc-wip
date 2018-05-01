@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.math.uic.edu/~t3m/
 COMMENT=	Tinker toys for topologists
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
