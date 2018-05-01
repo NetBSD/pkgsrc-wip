@@ -6,6 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	audio
 MASTER_SITES=	http://download.berlios.de/namingmuse/ \
 		http://download2.berlios.de/namingmuse/
+LICENSE=	gnu-lgpl-v3 AND mpl-1.1
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://developer.kde.org/~wheeler/taglib.html
