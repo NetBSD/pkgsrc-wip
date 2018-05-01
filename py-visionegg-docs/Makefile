@@ -4,6 +4,7 @@ DISTNAME=		visionegg-0.9.9-demo
 PKGNAME=		py-visionegg-docs-0.9.9
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=visionegg/}
+LICENSE=		gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://visionegg.sourceforge.net/
