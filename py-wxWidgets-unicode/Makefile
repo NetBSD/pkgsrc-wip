@@ -6,6 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 EXTRACT_SUFX=	.tar.bz2
+#LICENSE=	wxWindows Library Licence
 
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://wxpython.org/
