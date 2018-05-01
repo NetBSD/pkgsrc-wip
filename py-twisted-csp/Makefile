@@ -4,6 +4,7 @@ DISTNAME=	twisted-csp-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twisted-csp/}
+LICENSE=	epl-v1.0
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/ubolonton/twisted-csp
