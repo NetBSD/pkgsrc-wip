@@ -5,6 +5,7 @@ DISTNAME=	Tranquil-0.2dev
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/dev//}
 CATEGORIES=	databases python
 MASTER_SITES=	http://tranquil.googlecode.com/files/
+LICENSE=	modified-bsd
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/tranquil/
