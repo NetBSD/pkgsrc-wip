@@ -866,7 +866,6 @@ SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
 SUBDIR+=	fvwm1-tch
 SUBDIR+=	fvwm265
-SUBDIR+=	fwknop
 SUBDIR+=	fxrays
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
