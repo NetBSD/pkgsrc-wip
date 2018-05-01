@@ -4,6 +4,7 @@ DISTNAME=	pydb-1.26
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bashdb/}
 EXTRACT_SUFX=	.tar.bz2
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	splitscreen@users.sourceforge.net
 HOMEPAGE=	http://sourceforge.net/projects/bashdb/
