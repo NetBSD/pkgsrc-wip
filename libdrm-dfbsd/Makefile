@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2017/05/26 09:28:14 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2018/03/07 12:12:35 wiz Exp $
 
-DISTNAME=		libdrm-2.4.81
+DISTNAME=		libdrm-2.4.91
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
 			Linux-*-* SunOS-*-*
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
 PKGCONFIG_OVERRIDE+=	libkms.pc.in
@@ -31,8 +31,11 @@ ATOMIC_OPS_CHECK=	0
 .if exists(${CROSS_DESTDIR}/usr/include/sys/atomic.h)
 ATOMIC_OPS_CHECK=	1
 .else
+# Intel driver no longer needs libatomic_ops
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != x86_64
 .  include "../../devel/libatomic_ops/buildlink3.mk"
 CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
+.endif
 .endif
 
 CONFIGURE_ARGS+=	--disable-manpages
@@ -60,6 +63,9 @@ PKG_SUGGESTED_OPTIONS+=	pthreadstubs
 PKG_SUGGESTED_OPTIONS+=	libkms
 .endif
 
+# avoid circular dependency in case cairo supports OpenGL (cairo->mesa-libs->libdrm->cairo)
+CONFIGURE_ARGS+=	--disable-cairo-tests
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpthreadstubs)
@@ -67,9 +73,9 @@ CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 .endif
 
-PLIST_VARS+=		libkms	
+PLIST_VARS+=	libkms	
 .if !empty(PKG_OPTIONS:Mlibkms)
-PLIST.libkms=		yes
+PLIST.libkms=	yes
 CONFIGURE_ARGS+=	--enable-libkms
 .else
 CONFIGURE_ARGS+=	--disable-libkms
