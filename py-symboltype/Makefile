@@ -7,6 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/S/T/t/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SymbolType/}
 EXTRACT_SUFX=	.zip
+LICENSE=	python-software-foundation # or ZPL
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://peak.telecommunity.com/DevCenter/SymbolType
