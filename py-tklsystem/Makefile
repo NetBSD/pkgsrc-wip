@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/yasar11732/tklsystem
 COMMENT=	Tkinter interface to work with L-System equations
-#LICENSE=	# TODO: (see mk/license.mk)
+#LICENSE=	CC BY-SA 4.0
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-liblzma>=0.5.3:../../wip/py-liblzma
