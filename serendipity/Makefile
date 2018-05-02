@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=php-blog/}
 MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://s9y.org/
 COMMENT=		Blogging tool written in php
+LICENSE=		modified-bsd
 
 USE_TOOLS+=		pax find rm
 
