@@ -8,7 +8,7 @@ MASTER_SITES=		http://0xcc.net/scmail/
 MAINTAINER=		nel@soraneko.com
 HOMEPAGE=		http://0xcc.net/scmail/
 COMMENT=		The scmail is a mail filter using Gauche
-
+LICENSE=		modified-bsd
 
 .include "../../lang/gauche/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
