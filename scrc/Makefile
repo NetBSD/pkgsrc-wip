@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.cecs.uci.edu/pub/specc/reference/
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://www.cecs.uci.edu/~specc/reference/
 COMMENT=		SpecC Reference Compiler
+LICENSE=		modified-bsd
+
 USE_LANGUAGES+=		c++
 USE_LANGUAGES+=		c
 
