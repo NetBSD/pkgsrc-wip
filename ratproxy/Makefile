@@ -9,6 +9,7 @@ MASTER_SITES=	http://ratproxy.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ratproxy
 COMMENT=	Passive web application security assessment tool
+LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/ratproxy
 
