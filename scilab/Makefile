@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.scilab.org/download/5.5.2/
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
+LICENSE=	cecill-2.1 AND modified-bsd
 
 MAKE_JOBS_SAFE=	no
 
