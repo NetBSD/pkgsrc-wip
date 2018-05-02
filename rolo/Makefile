@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rolo/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rolo.sourceforge.net/
 COMMENT=		Text-based contact manager
-
+LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
