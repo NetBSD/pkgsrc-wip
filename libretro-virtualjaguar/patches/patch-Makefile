@@ -1,0 +1,16 @@
+$NetBSD$
+
+libretro-virtualjaguar is not written in C++, so don't link it with a
+C++ compiler.
+
+--- Makefile.orig	2018-04-25 12:06:26.000000000 +0000
++++ Makefile
+@@ -524,7 +524,7 @@ ifneq (,$(findstring msvc,$(platform)))
+ 	LINKOUT = -out:
+ 	LD = link.exe
+ else
+-	LD = $(CXX)
++	LD = $(CC)
+ endif
+ 
+ %.o: %.cpp
