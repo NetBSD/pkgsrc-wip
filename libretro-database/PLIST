@@ -1,700 +1,6 @@
 @comment $NetBSD$
 share/libretro/cheats/Computer - Games/DOOM.cht
 share/libretro/cheats/Computer - Games/Quake.cht
-share/libretro/cheats/Nintendo - Game Boy/Addams Family, The (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Addams Family, The (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Addams Family, The (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Addams Family, The - Pugsley's Scavenger Hunt (USA, Europe) (Game Genie) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Addams Family, The - Pugsley's Scavenger Hunt (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Addams Family, The - Pugsley's Scavenger Hunt (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventure Island (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventure Island (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventure Island (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventure Island II - Aliens in Paradise (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventure Island II - Aliens in Paradise (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventures of Lolo (Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventures of Lolo (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventures of Rocky and Bullwinkle and Friends, The (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventures of Star Saver, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Adventures of Star Saver, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Aerostar (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Aerostar (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/After Burst (Japan) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Akumajou Dracula - Shikkoku Taru Zensoukyoku - Dark Night Prelude (Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Akumajou Dracula - Shikkoku Taru Zensoukyoku - Dark Night Prelude (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Aladdin (Europe, USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Aladdin (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Aladdin (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Alfred Chicken (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Alfred Chicken (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Alien 3 (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Alien 3 (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Alien vs Predator (Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Alien vs Predator (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/All-Star Baseball 99 (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Alleyway (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Altered Space - A 3-D Alien Adventure (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Altered Space - A 3-D Alien Adventure (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Amazing Penguin (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Amazing Penguin (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (Xploder) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Amida (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Animaniacs (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Animaniacs (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 1 - Asteroids _ Missile Command (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 1 - Asteroids _ Missile Command (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 2 - Centipede _ Millipede (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 4 - Defender _ Joust (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Asterix (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Asteroids (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Asteroids (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Astro Rabby (Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Astro Rabby (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Astro Rabby (Japan) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Atomic Punk (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Atomic Punk (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Attack of the Killer Tomatoes (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Attack of the Killer Tomatoes (World) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Attack of the Killer Tomatoes (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Avenging Spirit (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Avenging Spirit (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Balloon Kid (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Balloon Kid (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Banishing Racer (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Barbie - Game Girl (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Barbie - Game Girl (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Barbie - Game Girl (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Bart Simpson's Escape from Camp Deadly (USA, Europe).cht
-share/libretro/cheats/Nintendo - Game Boy/Baseball (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Baseball (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Bases Loaded for Game Boy (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bases Loaded for Game Boy (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Batman - The Video Game (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Batman Forever (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Batman Forever (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Battle Arena Toshinden (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Battle Bull (USA, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Battle Bull (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/BattleCity (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Battleship (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Battletoads (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Battletoads (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Battletoads in Ragnarok's World (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Battletoads-Double Dragon (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Battletoads-Double Dragon (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Beavis and Butt-Head (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Beethoven (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Beetlejuice (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Beetlejuice (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Best of the Best - Championship Karate (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bill Elliott's NASCAR Fast Tracks (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bill _ Ted's Excellent Game Boy Adventure (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bill _ Ted's Excellent Game Boy Adventure (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bill _ Ted's Excellent Game Boy Adventure (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Bionic Battler (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bionic Commando (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bionic Commando (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bionic Commando (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Black Bass - Lure Fishing (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Black Bass - Lure Fishing (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Blades of Steel (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Blaster Master Boy (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Blues Brothers, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Blues Brothers, The - Jukebox Adventure (Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Boggle Plus (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bomber Boy (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bomber King - Scenario 2 (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bomber Man GB 3 (Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bomberman GB (USA, Europe) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Bomberman GB (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bonk's Adventure (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bonk's Adventure (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bonk's Revenge (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bonk's Revenge (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Boomer's Adventure in ASMIK World (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Boomer's Adventure in ASMIK World (USA) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Boulder Dash (Europe, Japan) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Bram Stoker's Dracula (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bram Stoker's Dracula (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/BreakThru! (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble Part 2 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble Part 2 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bubsy II (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bubsy II (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle 2, The (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle 2, The (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle, The (USA, Europe) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Burai Fighter (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Burai Fighter Deluxe (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/BurgerTime Deluxe (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/BurgerTime Deluxe (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Burning Paper (Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Burning Paper (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Burning Paper (Japan) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Caesars Palace (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Captain America and the Avengers (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Casper (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Castelian (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Castelian (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Castelian (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Castlevania - The Adventure (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Castlevania - The Adventure (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Castlevania II - Belmont's Revenge (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Castlevania II - Belmont's Revenge (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Castlevania II - Belmont's Revenge (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Castlevania Legends (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Castlevania Legends (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Centipede (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Centipede (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Centipede (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Chase H.Q. (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Choplifter III (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Contra - The Alien Wars (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Contra - The Alien Wars (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Contra Spirits (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Crystal Quest (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/CutThroat Island (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Cyraid (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Cyraid (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Daedalian Opus (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Daffy Duck (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Daffy Duck (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Daffy Duck (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Darkman (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Darkman (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Darkwing Duck (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Darkwing Duck (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (Europe, USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (USA, Europe) (Game Genie) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Days of Thunder (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Dead Heat Scramble (USA, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Desert Strike - Return to the Gulf (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dexterity (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Dick Tracy (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dig Dug (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Dig Dug (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land 2 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land 2 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land 2 (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land III (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land III (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Double Dragon (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Double Dragon 3 - The Arcade Game (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Double Dragon 3 - The Arcade Game (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Double Dragon II (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Double Dragon II (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Double Dribble - 5 on 5 (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Dr. Franken (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dr. Franken II (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dr. Mario (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dracula (Possibly Fake) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dragon's Lair (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dropzone (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Druaga no Tou (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/DuckTales (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/DuckTales 2 (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Dynablaster (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Earthworm Jim (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Earthworm Jim (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Elevator Action (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Extra Bases! (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/F-1 Race (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/F-1 Race (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/F-15 Strike Eagle (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/F1 Boy (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/F1 Pole Position (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Faceball 2000 (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Famista _ Famista 2 (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Fastest Lap (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Felix the Cat (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ferrari Grand Prix Challenge (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Ferrari Grand Prix Challenge (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Fighting Simulator 2 in 1 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Fighting Simulator 2 in 1 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Adventure (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Adventure (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Adventure (USA) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Legend II (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Legend III (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Legend, The (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Fire Fighter (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Fish Dude (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Fish Dude (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Fist of the North Star (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Fist of the North Star (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Flappy Special (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Flash, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Flash, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Flintstones, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Fortified Zone (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Frogger (USA) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Funny Field (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Galaga _ Galaxian (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Galaga _ Galaxian (Possibly Fake) (Japan) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Game Boy Wars 1 _ Game Boy Wars Turbo (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Game _ Watch Gallery (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Game of Harmony, The (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Gargoyle's Quest (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Gauntlet II (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Gauntlet II (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Gauntlet II (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/George Foreman's KO Boxing (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Ghostbusters II (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Go! Go! Tank (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Goal! (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Godzilla (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Godzilla (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Golf (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Golf (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Golf (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Gradius - The Interstellar Assault (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Gradius - The Interstellar Assault (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Gremlins 2 - The New Batch (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Gremlins 2 - The New Batch (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Harvest Moon GB (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Harvest Moon GB (USA) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Head On (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Heavyweight Championship Boxing (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Heavyweight Championship Boxing (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/High Stakes (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Hit the Ice - VHL - The Official Video Hockey League (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Home Alone (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Home Alone (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Home Alone 2 - Lost In New York (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Home Alone 2 - Lost In New York (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Hook (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Hugo (Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Humans, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Hunt For Red October, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Hyper Lode Runner (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Hyper Lode Runner (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/In Your Face (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Incredible Crash Dummies, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Incredible Crash Dummies, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/J.League Winning Goal (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/James Bond 007 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Jeep Jamboree (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Jetsons, The - Robot Panic (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Jetsons, The - Robot Panic (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Joe _ Mac (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Joe _ Mac (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Jordan vs Bird - One on One (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Judge Dredd (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Jungle Book, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Jurassic Park (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Jurassic Park Part 2 - The Chaos Continues (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kattobi Road (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ken Griffey Jr. Presents Major League Baseball (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Kid Dracula (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kid Dracula (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Kid Icarus - Of Myths and Monsters (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kid Icarus - Of Myths and Monsters (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Killer Instinct (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Killer Instinct (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Killer Instinct (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/King of Fighters '95, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Kingdom Crusade (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Block Ball (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land (USA, Europe) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land 2 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land 2 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Pinball Land (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kirby's Pinball Land (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Knight Quest (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Krusty's Fun House (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kung-Fu Master (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Kwirk - He's A-maze-ing! (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Lamborghini American Challenge (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Last Action Hero (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Legend of Zelda, The - Link's Awakening (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Legend of the River King GB (USA, Australia) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Lemmings (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Lemmings (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Lethal Weapon (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Lethal Weapon (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Lion King, The (USA) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Lion King, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Little Mermaid, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Little Mermaid, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Lock n' Chase ~ Lock 'n' Chase (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Looney Tunes (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Looney Tunes (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Loopz (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Lost World, The - Jurassic Park (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Lost World, The - Jurassic Park (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Lucky Luke (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Lunar Lander (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/MTV Sports - Skateboarding featuring Andy MacDonald (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Madden '95 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Malibu Beach Volleyball (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Malibu Beach Volleyball (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Marble Madness (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Mario's Picross (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Maru's Mission (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Master Karateka (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Maui Mallard (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Maui Mallard (USA) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Maui Mallard (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/McDonaldland (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man - Dr. Wily's Revenge (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man - Dr. Wily's Revenge (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man II (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man II (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man III (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man III (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man III (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man IV (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man IV (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man V (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Man V (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mega Memory Card (Saving Device) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mercenary Force (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Metal Gear - Ghost Babel (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Metroid II - Return of Samus (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mickey Mouse (Europe, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Micro Machines 2 - Turbo Tournament (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mighty Morphin Power Rangers (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mighty Morphin Power Rangers - The Movie (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Milon's Secret Castle (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Miner 2049er Starring Bounty Bob (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Miner 2049er Starring Bounty Bob (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Minesweeper - Soukaitei (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Missile Command (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Missile Command (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Mole Mania (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mole Mania (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Monster Rancher Explorer (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Monster Rancher Explorer (USA) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Montezuma's Return! (Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat 3 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat 3 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat II (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat II (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Motocross Maniacs (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Motocross Maniacs (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Motocross Maniacs (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Mouse Trap Hotel (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mouse Trap Hotel (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mr. Chin's Gourmet Paradise (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mr. Do! (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Ms. Pac-Man (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mulan (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mulan (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mysterium (USA, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Mystic Quest (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Mystical Ninja Starring Goemon (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/NBA All Star Challenge 2 (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/NBA Jam - Tournament Edition (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/NFL Football (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/NFL Football (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Nail'n Scale (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Navy SEALs (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Nemesis (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Nigel Mansell's World Championship (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ninja Boy (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Ninja Boy (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ninja Boy 2 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Ninja Boy 2 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ninja Gaiden Shadow (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ninja Ryuuken Den - Matenrou Kessen (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Nintendo World Cup (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Nobunaga's Ambition (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Oddworld Adventures (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Operation C (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Operation C (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Out of Gas (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pac-In-Time (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pac-Man (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pagemaster, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pang (Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Paperboy (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Paperboy (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Paperboy 2 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Paperboy 2 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Parasol Stars - Rainbow Islands II (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Parodius (Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Parodius (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Parodius Da! (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Penguin Land (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pinball - Revenge of the 'Gator (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pinball - Revenge of the 'Gator (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pinball Dreams (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pinball Fantasies (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pinocchio (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Pipe Dream (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pit Fighter (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Play Action Football (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pocahontas (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pocket Bomberman (Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Pokemon (Unknown) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Popeye (Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Popeye 2 (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Popeye 2 (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Pri Pri - Primitive Princess! (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Primal Rage (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Prince of Persia (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Probotector (Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Prophecy - The Viking Child (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Pyramids of Ra (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Q Billion (USA, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Q-Bert 2 (Possibly Fake) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Q-bert for Game Boy (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Q-bert for Game Boy (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/QIX (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/QIX (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/QIX (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Quarth (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/R-Type (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/R-Type (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/R-Type (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/R-Type II (Europe, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/R-Type II (Europe, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/R-Type II (Europe, Japan) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Raging Fighter (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Rampart (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Rampart (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Real Ghostbusters, The (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Rebound Mission (GameBooster's Built-in Game) (Unl) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ren _ Stimpy Show, The - Space Cadet Adventures (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Ren _ Stimpy Show, The - Space Cadet Adventures (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ren _ Stimpy Show, The - Veediots! (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Ring Rage (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Road Rash (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/RoboCop vs. The Terminator (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Rockman World (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Roger Clemens' MVP Baseball (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Rolan's Curse (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Rolan's Curse II (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Rolan's Curse II (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Rubble Saver II (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Rugrats Movie, The (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Rut (Possibly Fake) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Saigo no Nindou (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Samurai Shodown (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Samurai Shodown (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/SeaQuest DSV (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/SeaQuest DSV (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Serpent (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Shadow Warriors (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Shippo de Bun (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Simpsons Itchy _ Scratchy, The - Miniature Golf Madness (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Simpsons Itchy _ Scratchy, The - Miniature Golf Madness (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Simpsons, The - Bart _ the Beanstalk (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Simpsons, The - Bart _ the Beanstalk (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Simpsons, The - Bart vs. the Juggernauts (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Skate or Die - Bad 'N Rad (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Skate or Die - Bad 'N Rad (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Skate or Die - Tour de Thrash (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Small Soldiers (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Smurfs Nightmare, The (Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Smurfs Nightmare, The (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Smurfs Travel the World, The (Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Smurfs Travel the World, The (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Smurfs, The (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Smurfs, The (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Snoopy - Magic Show (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Snoopy - Magic Show (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Snow Bros. Jr. (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Snow Bros. Jr. (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Soccer Boy (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Soccer Mania (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Solitaire FunPak (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Solomon's Club (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Sonic 3D Blast 5 (Pirated) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Space Invaders (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Space Invaders (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Space Invaders (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Spanky's Quest (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Speedball 2 - Brutal Deluxe (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Speedball 2 - Brutal Deluxe (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Speedy Gonzales (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Speedy Gonzales (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Spider-Man - X-Men (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Spider-Man - X-Men (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Spider-Man 2 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Spider-Man 2 (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Spider-Man 3 - Invasion of the Spider-Slayers (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Spider-Man 3 - Invasion of the Spider-Slayers (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Sports Illustrated for Kids - The Ultimate Triple Dare! (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Spot - The Cool Adventure (USA, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Spot - The Cool Adventure (USA, Japan) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Spot - The Cool Adventure (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Spud's Adventure (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Square Deal - The Game of Two-Dimensional Poker (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Hawk (Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Hawk (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek - 25th Anniversary (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek - 25th Anniversary (USA, Europe) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek - 25th Anniversary (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek - The Next Generation (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA, Europe) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Wars (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Wars (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Wars - The Empire Strikes Back (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Star Wars - The Empire Strikes Back (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Stargate (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Stop That Roach! (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Stop That Roach! (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Street Fighter II (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Street Fighter II (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Street Racer (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Sumo Fighter (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Battletank (Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Breakout (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Chase H.Q. (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Chase H.Q. (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Chinese Land 1.2.3' (Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Chinese Land 2 (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Chinese Land 3 (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Hunchback (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Hunchback (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Kick Off (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Mario Land (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Mario Land (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Mario Land 2 - 6 Golden Coins (USA, Europe) (Game Genie) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Mario Land 2 - 6 Golden Coins (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Mario Land 2 - 6 Golden Coins (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Off Road (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Off Road (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super R.C. Pro-Am (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super R.C. Pro-Am (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Star Wars - Return of the Jedi (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Star Wars - Return of the Jedi (USA, Europe) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Super Star Wars - Return of the Jedi (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Superman (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Swamp Thing (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Sword of Hope II, The (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Sword of Hope II, The (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Sword of Hope, The (USA, Germany, Spain, Sweden) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/T2 - The Arcade Game (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/T2 - The Arcade Game (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tail 'Gator (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tail 'Gator (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tail 'Gator (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/TaleSpin (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/TaleSpin (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tamagotchi (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tarzan (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tarzan (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tarzan (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Tasmania Story (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tasmania Story (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Taz-Mania (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Taz-Mania (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Taz-Mania (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Taz-Mania 2 (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Taz-Mania 2 (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tecmo Bowl (USA, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles - Fall of the Foot Clan (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles - Fall of the Foot Clan (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles 2 (Japan) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles II - Back from the Sewers (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles II - Back from the Sewers (USA) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles II - Back from the Sewers (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles III - Radical Rescue (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles III - Radical Rescue (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles III - Radical Rescue (USA) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Tennis (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tennis (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Terminator 2 - Judgment Day (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Terminator 2 - Judgment Day (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Tetris (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tetris (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tetris 2 (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tetris Attack (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tetris Plus (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures - Babs' Big Break (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures - Babs' Big Break (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures 2 - Montana's Movie Madness (USA, Europe) (Game Genie) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures 2 - Montana's Movie Madness (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Titus the Fox to Marrakech and Back (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Titus the Fox to Marrakech and Back (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Titus the Fox to Marrakech and Back (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Tom _ Jerry (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tom and Jerry - Frantic Antics! (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Top Gun - Guts _ Glory (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Total Carnage (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Toxic Crusaders (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Toxic Crusaders (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Toy Story (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Toy Story (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Track _ Field (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Trax (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Trax (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Trip World (Europe, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/True Lies (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/True Lies (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Tumble Pop (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Tumble Pop (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Turn and Burn (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Turok - Battle of the Bionosaurs (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Turok - Battle of the Bionosaurs (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Turok - Battle of the Bionosaurs (World) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Turrican (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Turrican (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Turrican (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Ultima - Runes of Virtue (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Universal Soldier (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Universal Soldier (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/WCW Main Event (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/WWF King of the Ring (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/WWF King of the Ring (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/WWF Raw (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/WWF Superstars 2 (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/WWF War Zone (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Wario Blast featuring Bomberman! (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Wario Blast featuring Bomberman! (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Wario Land - Super Mario Land 3 (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Wario Land - Super Mario Land 3 (World) (GameShark) (diff).cht
-share/libretro/cheats/Nintendo - Game Boy/Wario Land - Super Mario Land 3 (World) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Water World (Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Wave Race (USA, Europe) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/We're Back! - A Dinosaur's Story (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Wild Snake (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Wizards _ Warriors Chapter X - The Fortress of Fear (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/WordZap (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/World Bowling (USA, Japan) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/World Bowling (USA, Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/World Circuit Series (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Xenon 2 - Megablast (USA, Europe) (Xploder).cht
-share/libretro/cheats/Nintendo - Game Boy/Xenon 2 - Megablast (World) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Yogi Bear in Yogi Bear's Goldrush (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Yoshi (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Game Boy/Yoshi (USA) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Yoshi's Cookie (USA, Europe) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Yousei Monogatari - Rod Land (Japan) (GameShark).cht
-share/libretro/cheats/Nintendo - Game Boy/Zen - Intergalactic Ninja (USA, Europe) (Game Genie).cht
 share/libretro/cheats/Nintendo - Game Boy Advance/007 - Everything or Nothing (World) (Code Breaker).cht
 share/libretro/cheats/Nintendo - Game Boy Advance/007 - NightFire (USA, Europe) (Code Breaker).cht
 share/libretro/cheats/Nintendo - Game Boy Advance/2 Games in 1 - SpongeBob SquarePants - Battle for Bikini Bottom (Unknown) (Code Breaker).cht
@@ -1665,6 +971,701 @@ share/libretro/cheats/Nintendo - Game Boy Color/Yoda Stories (USA, Europe) (Xplo
 share/libretro/cheats/Nintendo - Game Boy Color/Yogi Bear - Great Balloon Blast (USA) (GameShark).cht
 share/libretro/cheats/Nintendo - Game Boy Color/Yu-Gi-Oh! - Dark Duel Stories (USA, Europe) (GameShark).cht
 share/libretro/cheats/Nintendo - Game Boy Color/Zoboomafoo - Playtime in Zobooland (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Addams Family, The (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Addams Family, The (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Addams Family, The (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Addams Family, The - Pugsley's Scavenger Hunt (USA, Europe) (Game Genie) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Addams Family, The - Pugsley's Scavenger Hunt (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Addams Family, The - Pugsley's Scavenger Hunt (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventure Island (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventure Island (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventure Island (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventure Island II - Aliens in Paradise (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventure Island II - Aliens in Paradise (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventures of Lolo (Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventures of Lolo (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventures of Rocky and Bullwinkle and Friends, The (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventures of Star Saver, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Adventures of Star Saver, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Aerostar (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Aerostar (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/After Burst (Japan) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Akumajou Dracula - Shikkoku Taru Zensoukyoku - Dark Night Prelude (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Akumajou Dracula - Shikkoku Taru Zensoukyoku - Dark Night Prelude (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Aladdin (Europe, USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Aladdin (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Aladdin (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Alfred Chicken (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Alfred Chicken (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Alien 3 (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Alien 3 (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Alien vs Predator (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Alien vs Predator (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/All-Star Baseball 99 (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Alleyway (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Altered Space - A 3-D Alien Adventure (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Altered Space - A 3-D Alien Adventure (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Amazing Penguin (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Amazing Penguin (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (Xploder) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Amazing Spider-Man, The (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Amida (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Animaniacs (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Animaniacs (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 1 - Asteroids _ Missile Command (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 1 - Asteroids _ Missile Command (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 2 - Centipede _ Millipede (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Arcade Classic No. 4 - Defender _ Joust (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Asterix (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Asteroids (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Asteroids (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Astro Rabby (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Astro Rabby (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Astro Rabby (Japan) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Atomic Punk (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Atomic Punk (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Attack of the Killer Tomatoes (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Attack of the Killer Tomatoes (World) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Attack of the Killer Tomatoes (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Avenging Spirit (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Avenging Spirit (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Balloon Kid (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Balloon Kid (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Banishing Racer (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Barbie - Game Girl (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Barbie - Game Girl (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Barbie - Game Girl (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Bart Simpson's Escape from Camp Deadly (USA, Europe).cht
+share/libretro/cheats/Nintendo - Game Boy/Baseball (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Baseball (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Bases Loaded for Game Boy (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bases Loaded for Game Boy (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Batman - Return of the Joker (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Batman - The Video Game (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Batman Forever (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Batman Forever (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Battle Arena Toshinden (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Battle Bull (USA, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Battle Bull (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/BattleCity (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Battleship (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Battletoads (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Battletoads (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Battletoads in Ragnarok's World (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Battletoads-Double Dragon (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Battletoads-Double Dragon (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Beavis and Butt-Head (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Beethoven (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Beetlejuice (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Beetlejuice (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Best of the Best - Championship Karate (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bill Elliott's NASCAR Fast Tracks (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bill _ Ted's Excellent Game Boy Adventure (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bill _ Ted's Excellent Game Boy Adventure (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bill _ Ted's Excellent Game Boy Adventure (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Bionic Battler (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bionic Commando (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bionic Commando (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bionic Commando (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Black Bass - Lure Fishing (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Black Bass - Lure Fishing (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Blades of Steel (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Blaster Master Boy (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Blues Brothers, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Blues Brothers, The - Jukebox Adventure (Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Boggle Plus (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bomber Boy (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bomber King - Scenario 2 (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bomber Man GB 3 (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bomberman GB (USA, Europe) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Bomberman GB (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bonk's Adventure (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bonk's Adventure (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bonk's Revenge (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bonk's Revenge (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Boomer's Adventure in ASMIK World (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Boomer's Adventure in ASMIK World (USA) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Boulder Dash (Europe, Japan) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Bram Stoker's Dracula (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bram Stoker's Dracula (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/BreakThru! (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble Part 2 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bubble Bobble Part 2 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bubsy II (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bubsy II (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle 2, The (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle 2, The (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle, The (USA, Europe) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Bugs Bunny Crazy Castle, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Burai Fighter (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Burai Fighter Deluxe (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/BurgerTime Deluxe (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/BurgerTime Deluxe (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Burning Paper (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Burning Paper (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Burning Paper (Japan) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Caesars Palace (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Captain America and the Avengers (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Casper (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Castelian (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Castelian (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Castelian (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Castlevania - The Adventure (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Castlevania - The Adventure (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Castlevania II - Belmont's Revenge (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Castlevania II - Belmont's Revenge (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Castlevania II - Belmont's Revenge (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Castlevania Legends (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Castlevania Legends (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Centipede (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Centipede (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Centipede (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Chase H.Q. (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Choplifter III (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Contra - The Alien Wars (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Contra - The Alien Wars (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Contra Spirits (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Crystal Quest (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/CutThroat Island (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Cyraid (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Cyraid (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Daedalian Opus (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Daffy Duck (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Daffy Duck (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Daffy Duck (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Darkman (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Darkman (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Darkwing Duck (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Darkwing Duck (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (Europe, USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (USA, Europe) (Game Genie) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/David Crane's The Rescue of Princess Blobette Starring A Boy and His Blob (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Days of Thunder (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Dead Heat Scramble (USA, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Desert Strike - Return to the Gulf (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dexterity (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Dick Tracy (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dig Dug (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Dig Dug (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land 2 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land 2 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land 2 (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land III (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Donkey Kong Land III (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Double Dragon (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Double Dragon 3 - The Arcade Game (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Double Dragon 3 - The Arcade Game (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Double Dragon II (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Double Dragon II (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Double Dribble - 5 on 5 (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Dr. Franken (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dr. Franken II (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dr. Mario (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dracula (Possibly Fake) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dragon's Lair (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dropzone (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Druaga no Tou (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/DuckTales (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/DuckTales 2 (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Dynablaster (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Earthworm Jim (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Earthworm Jim (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Elevator Action (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Extra Bases! (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/F-1 Race (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/F-1 Race (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/F-15 Strike Eagle (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/F1 Boy (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/F1 Pole Position (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Faceball 2000 (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Famista _ Famista 2 (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Fastest Lap (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Felix the Cat (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ferrari Grand Prix Challenge (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Ferrari Grand Prix Challenge (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Fighting Simulator 2 in 1 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Fighting Simulator 2 in 1 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Adventure (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Adventure (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Adventure (USA) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Legend II (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Legend III (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Final Fantasy Legend, The (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Fire Fighter (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Fish Dude (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Fish Dude (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Fist of the North Star (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Fist of the North Star (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Flappy Special (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Flash, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Flash, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Flintstones, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Fortified Zone (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Frogger (USA) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Funny Field (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Galaga _ Galaxian (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Galaga _ Galaxian (Possibly Fake) (Japan) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Game Boy Wars 1 _ Game Boy Wars Turbo (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Game _ Watch Gallery (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Game of Harmony, The (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Gargoyle's Quest (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Gauntlet II (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Gauntlet II (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Gauntlet II (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/George Foreman's KO Boxing (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Ghostbusters II (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Go! Go! Tank (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Goal! (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Godzilla (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Godzilla (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Golf (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Golf (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Golf (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Gradius - The Interstellar Assault (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Gradius - The Interstellar Assault (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Gremlins 2 - The New Batch (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Gremlins 2 - The New Batch (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Harvest Moon GB (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Harvest Moon GB (USA) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Head On (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Heavyweight Championship Boxing (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Heavyweight Championship Boxing (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/High Stakes (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Hit the Ice - VHL - The Official Video Hockey League (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Home Alone (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Home Alone (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Home Alone 2 - Lost In New York (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Home Alone 2 - Lost In New York (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Hook (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Hugo (Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Humans, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Hunt For Red October, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Hyper Lode Runner (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Hyper Lode Runner (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/In Your Face (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Incredible Crash Dummies, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Incredible Crash Dummies, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/J.League Winning Goal (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/James Bond 007 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Jeep Jamboree (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Jetsons, The - Robot Panic (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Jetsons, The - Robot Panic (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Joe _ Mac (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Joe _ Mac (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Jordan vs Bird - One on One (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Judge Dredd (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Jungle Book, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Jurassic Park (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Jurassic Park Part 2 - The Chaos Continues (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kattobi Road (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ken Griffey Jr. Presents Major League Baseball (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Kid Dracula (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kid Dracula (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Kid Icarus - Of Myths and Monsters (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kid Icarus - Of Myths and Monsters (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Killer Instinct (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Killer Instinct (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Killer Instinct (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/King of Fighters '95, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Kingdom Crusade (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Block Ball (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land (USA, Europe) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land 2 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Dream Land 2 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Pinball Land (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kirby's Pinball Land (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Knight Quest (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Krusty's Fun House (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kung-Fu Master (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Kwirk - He's A-maze-ing! (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lamborghini American Challenge (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Last Action Hero (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lazlos' Leap (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Legend of Zelda, The - Link's Awakening (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Legend of the River King GB (USA, Australia) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Lemmings (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lemmings (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Lethal Weapon (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Lethal Weapon (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lion King, The (USA) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Lion King, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Little Mermaid, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Little Mermaid, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lock n' Chase - Lock 'n' Chase (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Looney Tunes (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Looney Tunes (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Loopz (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lost World, The - Jurassic Park (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Lost World, The - Jurassic Park (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lucky Luke (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Lunar Lander (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/MTV Sports - Skateboarding featuring Andy MacDonald (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Madden '95 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Malibu Beach Volleyball (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Malibu Beach Volleyball (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Marble Madness (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Mario's Picross (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Maru's Mission (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Master Karateka (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Maui Mallard (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Maui Mallard (USA) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Maui Mallard (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/McDonaldland (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man - Dr. Wily's Revenge (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man - Dr. Wily's Revenge (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man II (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man II (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man III (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man III (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man III (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man IV (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man IV (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man V (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Man V (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mega Memory Card (Saving Device) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mercenary Force (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Metal Gear - Ghost Babel (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Metroid II - Return of Samus (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mickey Mouse (Europe, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Micro Machines 2 - Turbo Tournament (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mighty Morphin Power Rangers (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mighty Morphin Power Rangers - The Movie (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Milon's Secret Castle (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Miner 2049er Starring Bounty Bob (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Miner 2049er Starring Bounty Bob (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Minesweeper - Soukaitei (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Missile Command (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Missile Command (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Mole Mania (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mole Mania (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Monster Rancher Explorer (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Monster Rancher Explorer (USA) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Montezuma's Return! (Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat 3 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat 3 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat II (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mortal Kombat II (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Motocross Maniacs (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Motocross Maniacs (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Motocross Maniacs (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Mouse Trap Hotel (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mouse Trap Hotel (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mr. Chin's Gourmet Paradise (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mr. Do! (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Ms. Pac-Man (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mulan (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mulan (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mysterium (USA, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Mystic Quest (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Mystical Ninja Starring Goemon (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/NBA All Star Challenge 2 (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/NBA Jam - Tournament Edition (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/NFL Football (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/NFL Football (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Nail'n Scale (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Navy SEALs (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Nemesis (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Nigel Mansell's World Championship (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ninja Boy (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Ninja Boy (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ninja Boy 2 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Ninja Boy 2 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ninja Gaiden Shadow (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ninja Ryuuken Den - Matenrou Kessen (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Nintendo World Cup (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Nobunaga's Ambition (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Oddworld Adventures (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Operation C (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Operation C (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Out of Gas (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pac-In-Time (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pac-Man (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pagemaster, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pang (Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Paperboy (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Paperboy (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Paperboy 2 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Paperboy 2 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Parasol Stars - Rainbow Islands II (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Parodius (Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Parodius (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Parodius Da! (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Penguin Land (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pinball - Revenge of the 'Gator (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pinball - Revenge of the 'Gator (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pinball Dreams (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pinball Fantasies (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pinocchio (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Pipe Dream (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pit Fighter (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Play Action Football (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pocahontas (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pocket Bomberman (Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Pokemon (Unknown) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Popeye (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Popeye 2 (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Popeye 2 (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Pri Pri - Primitive Princess! (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Primal Rage (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Prince of Persia (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Probotector (Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Prophecy - The Viking Child (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Pyramids of Ra (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Q Billion (USA, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Q-Bert 2 (Possibly Fake) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Q-bert for Game Boy (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Q-bert for Game Boy (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/QIX (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/QIX (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/QIX (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Quarth (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/R-Type (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/R-Type (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/R-Type (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/R-Type II (Europe, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/R-Type II (Europe, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/R-Type II (Europe, Japan) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Raging Fighter (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Rampart (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Rampart (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Real Ghostbusters, The (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Rebound Mission (GameBooster's Built-in Game) (Unl) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ren _ Stimpy Show, The - Space Cadet Adventures (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Ren _ Stimpy Show, The - Space Cadet Adventures (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ren _ Stimpy Show, The - Veediots! (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Ring Rage (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Road Rash (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/RoboCop vs. The Terminator (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Rockman World (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Roger Clemens' MVP Baseball (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Rolan's Curse (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Rolan's Curse II (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Rolan's Curse II (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Rubble Saver II (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Rugrats Movie, The (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Rut (Possibly Fake) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Saigo no Nindou (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Samurai Shodown (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Samurai Shodown (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/SeaQuest DSV (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/SeaQuest DSV (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Serpent (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Shadow Warriors (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Shippo de Bun (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Simpsons Itchy _ Scratchy, The - Miniature Golf Madness (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Simpsons Itchy _ Scratchy, The - Miniature Golf Madness (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Simpsons, The - Bart _ the Beanstalk (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Simpsons, The - Bart _ the Beanstalk (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Simpsons, The - Bart vs. the Juggernauts (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Skate or Die - Bad 'N Rad (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Skate or Die - Bad 'N Rad (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Skate or Die - Tour de Thrash (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Small Soldiers (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Smurfs Nightmare, The (Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Smurfs Nightmare, The (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Smurfs Travel the World, The (Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Smurfs Travel the World, The (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Smurfs, The (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Smurfs, The (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Snoopy - Magic Show (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Snoopy - Magic Show (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Snow Bros. Jr. (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Snow Bros. Jr. (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Soccer Boy (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Soccer Mania (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/SolarStriker (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Solitaire FunPak (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Solomon's Club (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Sonic 3D Blast 5 (Pirated) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Space Invaders (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Space Invaders (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Space Invaders (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Spanky's Quest (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Speedball 2 - Brutal Deluxe (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Speedball 2 - Brutal Deluxe (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Speedy Gonzales (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Speedy Gonzales (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Spider-Man - X-Men (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Spider-Man - X-Men (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Spider-Man 2 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Spider-Man 2 (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Spider-Man 3 - Invasion of the Spider-Slayers (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Spider-Man 3 - Invasion of the Spider-Slayers (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Sports Illustrated for Kids - The Ultimate Triple Dare! (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Spot - The Cool Adventure (USA, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Spot - The Cool Adventure (USA, Japan) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Spot - The Cool Adventure (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Spud's Adventure (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Square Deal - The Game of Two-Dimensional Poker (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Hawk (Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Hawk (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek - 25th Anniversary (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek - 25th Anniversary (USA, Europe) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek - 25th Anniversary (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek - The Next Generation (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA, Europe) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Trek Generations - Beyond the Nexus (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Wars (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Wars (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Wars - The Empire Strikes Back (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Star Wars - The Empire Strikes Back (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Stargate (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Stop That Roach! (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Stop That Roach! (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Street Fighter II (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Street Fighter II (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Street Racer (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Sumo Fighter (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Battletank (Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Breakout (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Chase H.Q. (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Chase H.Q. (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Chinese Land 1.2.3' (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Chinese Land 2 (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Chinese Land 3 (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Hunchback (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Hunchback (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Kick Off (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Mario Land (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Mario Land (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Mario Land 2 - 6 Golden Coins (USA, Europe) (Game Genie) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Mario Land 2 - 6 Golden Coins (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Mario Land 2 - 6 Golden Coins (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Off Road (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Off Road (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super R.C. Pro-Am (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super R.C. Pro-Am (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Star Wars - Return of the Jedi (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Star Wars - Return of the Jedi (USA, Europe) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Super Star Wars - Return of the Jedi (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Superman (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Swamp Thing (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Sword of Hope II, The (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Sword of Hope II, The (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Sword of Hope, The (USA, Germany, Spain, Sweden) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/T2 - The Arcade Game (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/T2 - The Arcade Game (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tail 'Gator (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tail 'Gator (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tail 'Gator (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/TaleSpin (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/TaleSpin (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tamagotchi (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tarzan (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tarzan (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tarzan (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Tasmania Story (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tasmania Story (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Taz-Mania (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Taz-Mania (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Taz-Mania (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Taz-Mania 2 (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Taz-Mania 2 (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tecmo Bowl (USA, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles - Fall of the Foot Clan (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles - Fall of the Foot Clan (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles 2 (Japan) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles II - Back from the Sewers (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles II - Back from the Sewers (USA) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles II - Back from the Sewers (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles III - Radical Rescue (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles III - Radical Rescue (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Teenage Mutant Ninja Turtles III - Radical Rescue (USA) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Tennis (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tennis (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Terminator 2 - Judgment Day (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Terminator 2 - Judgment Day (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Tetris (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tetris (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tetris 2 (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tetris Attack (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tetris Plus (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures - Babs' Big Break (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures - Babs' Big Break (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures 2 - Montana's Movie Madness (USA, Europe) (Game Genie) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Tiny Toon Adventures 2 - Montana's Movie Madness (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Titus the Fox to Marrakech and Back (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Titus the Fox to Marrakech and Back (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Titus the Fox to Marrakech and Back (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Tom _ Jerry (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tom and Jerry - Frantic Antics! (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Top Gun - Guts _ Glory (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Total Carnage (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Toxic Crusaders (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Toxic Crusaders (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Toy Story (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Toy Story (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Track _ Field (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Trax (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Trax (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Trip World (Europe, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/True Lies (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/True Lies (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Tumble Pop (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Tumble Pop (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Turn and Burn (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Turok - Battle of the Bionosaurs (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Turok - Battle of the Bionosaurs (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Turok - Battle of the Bionosaurs (World) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Turrican (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Turrican (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Turrican (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Ultima - Runes of Virtue (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Universal Soldier (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Universal Soldier (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/WCW Main Event (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/WWF King of the Ring (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/WWF King of the Ring (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/WWF Raw (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/WWF Superstars 2 (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/WWF War Zone (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Wario Blast featuring Bomberman! (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Wario Blast featuring Bomberman! (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Wario Land - Super Mario Land 3 (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Wario Land - Super Mario Land 3 (World) (GameShark) (diff).cht
+share/libretro/cheats/Nintendo - Game Boy/Wario Land - Super Mario Land 3 (World) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Water World (Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Wave Race (USA, Europe) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/We're Back! - A Dinosaur's Story (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Wild Snake (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Wizards _ Warriors Chapter X - The Fortress of Fear (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/WordZap (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/World Bowling (USA, Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/World Bowling (USA, Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/World Circuit Series (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Xenon 2 - Megablast (USA, Europe) (Xploder).cht
+share/libretro/cheats/Nintendo - Game Boy/Xenon 2 - Megablast (World) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Yogi Bear in Yogi Bear's Goldrush (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Yoshi (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Game Boy/Yoshi (USA) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Yoshi's Cookie (USA, Europe) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Yousei Monogatari - Rod Land (Japan) (GameShark).cht
+share/libretro/cheats/Nintendo - Game Boy/Zen - Intergalactic Ninja (USA, Europe) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo 64/007 The World is Not Enough (E).cht
 share/libretro/cheats/Nintendo - Nintendo 64/1080 SNOWBOARDING.cht
 share/libretro/cheats/Nintendo - Nintendo 64/40 WINKS.cht
@@ -3016,8 +3017,8 @@ share/libretro/cheats/Nintendo - Nintendo DS/Finding Nemo - Touch de Nemo (J).ch
 share/libretro/cheats/Nintendo - Nintendo DS/Fire Emblem Shadow Dragon (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fire Emblem Shadow Dragon (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fire Emblem Shin Ankoku Ryu to Hikari no Ken (J).cht
-share/libretro/cheats/Nintendo - Nintendo DS/Fire Emblem Shin Monshou no Nazo ~Hikari to Kage no Eiyuu~ (J) [English Patched v3.01].cht
-share/libretro/cheats/Nintendo - Nintendo DS/Fire Emblem Shin Monshou no Nazo ~Hikari to Kage no Eiyuu~ (J).cht
+share/libretro/cheats/Nintendo - Nintendo DS/Fire Emblem Shin Monshou no Nazo -Hikari to Kage no Eiyuu- (J) [English Patched v3.01].cht
+share/libretro/cheats/Nintendo - Nintendo DS/Fire Emblem Shin Monshou no Nazo -Hikari to Kage no Eiyuu- (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fish Tycoon (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fish Tycoon (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fishdom (E) [Multi].cht
@@ -3064,7 +3065,7 @@ share/libretro/cheats/Nintendo - Nintendo DS/Fushigi Kagaku Nazotoki Quiz Traini
 share/libretro/cheats/Nintendo - Nintendo DS/Fushigi Yuugi DS (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fushigi no Dungeon Fuurai no Shiren 4 - Kami no Hitomi to Akuma no Heso (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fushigi no Dungeon Fuurai no Shiren 5 - Fortun Tower to Unmei no Dice (J).cht
-share/libretro/cheats/Nintendo - Nintendo DS/Futari ha Pretty Cure Max Heart ~ Danzen DS De Pretty Cure Chikara wo Awasete Dai-Battle (J).cht
+share/libretro/cheats/Nintendo - Nintendo DS/Futari ha Pretty Cure Max Heart - Danzen DS De Pretty Cure Chikara wo Awasete Dai-Battle (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/FutureU The Prep Game For SAT (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fuurai no Shiren DS 2 Sabaku no Majou (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Fuuun Dairoujou (J).cht
@@ -3105,7 +3106,7 @@ share/libretro/cheats/Nintendo - Nintendo DS/Gauntlet (U) [DEMO].cht
 share/libretro/cheats/Nintendo - Nintendo DS/Gauntlet (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Gekitou Custom Robo (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Gem Quest 4 Elements (U).cht
-share/libretro/cheats/Nintendo - Nintendo DS/Gendai Daisenryaku DS ~Isshoku Sokuhatsu - Gunji Balance Houkai~ (J).cht
+share/libretro/cheats/Nintendo - Nintendo DS/Gendai Daisenryaku DS -Isshoku Sokuhatsu - Gunji Balance Houkai- (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Generator Rex Agent of Providence (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Gensou Suikoden Tierkreis (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Geojisui Yunmugok Rondo (K).cht
@@ -3535,7 +3536,7 @@ share/libretro/cheats/Nintendo - Nintendo DS/Keroro RPG Kishi to Musha to Denset
 share/libretro/cheats/Nintendo - Nintendo DS/Keshikasu-kun Battle Castival (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Ketsui Death Label (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Kilari - Become A Star (E).cht
-share/libretro/cheats/Nintendo - Nintendo DS/Kilari ~Na-san, Mon Meilleur Ami~ (E).cht
+share/libretro/cheats/Nintendo - Nintendo DS/Kilari -Na-san, Mon Meilleur Ami- (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Kim Possible Kimmunicator (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Kimi ni Todoke Sodateru Omoi (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Kimi ni Todoke Tsutaeru Kimochi (J).cht
@@ -4541,7 +4542,7 @@ share/libretro/cheats/Nintendo - Nintendo DS/Puzzler World 2013 (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/QuickSpot (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Quiz Kirameki Star Road (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Quiz Magic Academy DS (J).cht
-share/libretro/cheats/Nintendo - Nintendo DS/Quiz Magic Academy DS ~Futatsu no Jikuseki~ (J).cht
+share/libretro/cheats/Nintendo - Nintendo DS/Quiz Magic Academy DS -Futatsu no Jikuseki- (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Quiz Taxi Deutschland Tour (D).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Race Driver Create and Race (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Race Driver Create and Race (U).cht
@@ -5218,7 +5219,7 @@ share/libretro/cheats/Nintendo - Nintendo DS/Treasure Report Kikai Jikake no Isa
 share/libretro/cheats/Nintendo - Nintendo DS/Treasure World (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Treasure of the Dolphins (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Treasures of Montezuma 2, The (E).cht
-share/libretro/cheats/Nintendo - Nintendo DS/Trick DS-han ~Kakushi Kami no Sumukan~ (J).cht
+share/libretro/cheats/Nintendo - Nintendo DS/Trick DS-han -Kakushi Kami no Sumukan- (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Trioncube (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Tropical Lost Island (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/True Swing Golf (U).cht
@@ -5333,9 +5334,9 @@ share/libretro/cheats/Nintendo - Nintendo DS/Witch's Wish (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Witches And Vampires The Secrets of Ashburry (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Witches And Vampires The Secrets of Ashburry (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Wizard of Oz Beyond the Yellow Brick Road (U).cht
+share/libretro/cheats/Nintendo - Nintendo DS/Wizardry -Boukyaku no Isan- (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Wizardry Asterisk - Hiiro no Fuuin (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Wizardry Inochi no Kusabi (J).cht
-share/libretro/cheats/Nintendo - Nintendo DS/Wizardry ~Boukyaku no Isan~ (J).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Wizards of Waverly Place (U).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Wizards of Waverly Place Spellbound (E).cht
 share/libretro/cheats/Nintendo - Nintendo DS/Wizards of Waverly Place Spellbound (U).cht
@@ -5576,6 +5577,7 @@ share/libretro/cheats/Nintendo - Nintendo Entertainment System/Cobra Triangle (U
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Code Name - Viper (USA) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Commando (USA) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Conquest of the Crystal Palace (USA) (Game Genie).cht
+share/libretro/cheats/Nintendo - Nintendo Entertainment System/Contra (USA) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Contra Force (USA) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Cool World (USA) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Cowboy Kid (USA) (Game Genie).cht
@@ -5653,6 +5655,7 @@ share/libretro/cheats/Nintendo - Nintendo Entertainment System/Faxanadu (World) 
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Felix The Cat (USA, Europe) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Fester's Quest (USA, Europe) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Fighting Road (Japan) (Game Genie).cht
+share/libretro/cheats/Nintendo - Nintendo Entertainment System/Final Fantasy (USA) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Final Fantasy II (USA, Japan) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Final Fantasy III (Japan) (Game Genie).cht
 share/libretro/cheats/Nintendo - Nintendo Entertainment System/Fire Hawk (USA) (Game Genie).cht
@@ -6678,7 +6681,7 @@ share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Madden NFL 
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Madden NFL 95 (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Madden NFL 95 (USA, Europe) (Game Genie).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Madden NFL 96 (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Maerchen Adventure Cotton 100% (Japan) (Action Replay).cht
+share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Maerchen Adventure Cotton 100- (Japan) (Action Replay).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Magic Knight Rayearth (Japan) (Action Replay).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Magic Sword (World) (Action Replay).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Magic Sword (World) (Game Genie).cht
@@ -6891,7 +6894,7 @@ share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rock n' Rol
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rock n' Roll Racing (World) (Game Genie).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rocketeer, The (USA) (Action Replay).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rocketeer, The (USA) (Game Genie).cht
-share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rockman 9 Yabou no Fukkatsu ~Rockman _ Forte~ (Japan) (Action Replay).cht
+share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rockman 9 Yabou no Fukkatsu -Rockman _ Forte- (Japan) (Action Replay).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rockman _ Forte (Japan) (Game Genie).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rocko's Modern Life - Spunky's Dangerous Day (USA) (Action Replay).cht
 share/libretro/cheats/Nintendo - Super Nintendo Entertainment System/Rocky Rodent (USA, Europe) (Game Genie).cht
@@ -7304,10 +7307,10 @@ share/libretro/cheats/Sega - Game Gear/Ax Battler - A Legend of Golden Axe (USA,
 share/libretro/cheats/Sega - Game Gear/Ayrton Senna's Super Monaco GP II (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Game Gear/Ayrton Senna's Super Monaco GP II (World) (Game Genie).cht
 share/libretro/cheats/Sega - Game Gear/Baku Baku Animal (USA, Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Game Gear/Bare Knuckle II ~ Streets of Rage 2 ~ Streets of Rage II (World) (Action Replay).cht
-share/libretro/cheats/Sega - Game Gear/Bare Knuckle II ~ Streets of Rage 2 ~ Streets of Rage II (World) (Game Genie).cht
-share/libretro/cheats/Sega - Game Gear/Bare Knuckle ~ Streets of Rage (World) (Action Replay).cht
-share/libretro/cheats/Sega - Game Gear/Bare Knuckle ~ Streets of Rage (World) (Game Genie).cht
+share/libretro/cheats/Sega - Game Gear/Bare Knuckle - Streets of Rage (World) (Action Replay).cht
+share/libretro/cheats/Sega - Game Gear/Bare Knuckle - Streets of Rage (World) (Game Genie).cht
+share/libretro/cheats/Sega - Game Gear/Bare Knuckle II - Streets of Rage 2 - Streets of Rage II (World) (Action Replay).cht
+share/libretro/cheats/Sega - Game Gear/Bare Knuckle II - Streets of Rage 2 - Streets of Rage II (World) (Game Genie).cht
 share/libretro/cheats/Sega - Game Gear/Bartman Meets Radioactive Man (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Game Gear/Bartman Meets Radioactive Man (USA) (Game Genie).cht
 share/libretro/cheats/Sega - Game Gear/Batman Forever (World) (Action Replay).cht
@@ -7396,7 +7399,7 @@ share/libretro/cheats/Sega - Game Gear/From TV Animation - Slam Dunk - Shouri e 
 share/libretro/cheats/Sega - Game Gear/G-LOC - Air Battle (World) (Action Replay).cht
 share/libretro/cheats/Sega - Game Gear/G-LOC - Air Battle (World) (Game Genie).cht
 share/libretro/cheats/Sega - Game Gear/GG Aleste (Japan) (Action Replay).cht
-share/libretro/cheats/Sega - Game Gear/GG Aleste II ~ Power Strike II (Japan, Europe) (Action Replay).cht
+share/libretro/cheats/Sega - Game Gear/GG Aleste II - Power Strike II (Japan, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Game Gear/GG Doraemon - Noranosuke no Yabou (Japan) (Action Replay).cht
 share/libretro/cheats/Sega - Game Gear/GP Rider (World) (Action Replay).cht
 share/libretro/cheats/Sega - Game Gear/GP Rider (World) (Game Genie).cht
@@ -7984,7 +7987,7 @@ share/libretro/cheats/Sega - Master System - Mark III/Zillion (World) (Action Re
 share/libretro/cheats/Sega - Master System - Mark III/Zillion II - The Tri Formation (World) (Action Replay).cht
 share/libretro/cheats/Sega - Master System - Mark III/Zool - Ninja of the 'Nth' Dimension (Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/3 Ninjas Kick Back (USA) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/98 Gedou Wang sega ~King of Fighters '98~ (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/98 Gedou Wang sega -King of Fighters '98- (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/ATP Tour Championship Tennis (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/AWS Pro Moves Soccer (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Aa Harimanada (Japan) (Action Replay).cht
@@ -8033,10 +8036,10 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/B.O.B. (USA, Europe) (Action R
 share/libretro/cheats/Sega - Mega Drive - Genesis/Baby's Day Out (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Back to the Future Part III (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Ball Jacks (Japan, Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Ballz 3D - Fighting at Its Ballziest ~ Ballz 3D - The Battle of the Ballz (USA, Europe) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Ballz 3D - Fighting at Its Ballziest - Ballz 3D - The Battle of the Ballz (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Barbie Super Model (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Barbie Vacation Adventure (USA) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Bare Knuckle - Ikari no Tetsuken ~ Streets of Rage (World) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Bare Knuckle - Ikari no Tetsuken - Streets of Rage (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Bare Knuckle III (Japan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Barkley Shut Up and Jam 2 (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Barkley Shut Up and Jam! (USA, Europe) (Action Replay).cht
@@ -8139,7 +8142,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Cyberball (World) (Action Repl
 share/libretro/cheats/Sega - Mega Drive - Genesis/DEcapAttack (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/DJ Boy (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Daffy Duck in Hollywood (Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Daisenpuu ~ Twin Hawk (Japan, Europe) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Daisenpuu - Twin Hawk (Japan, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Darius II (Japan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Dark Castle (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Darwin 4081 (Japan, Korea) (Action Replay).cht
@@ -8147,7 +8150,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Dashin' Desperadoes (USA) (Act
 share/libretro/cheats/Sega - Mega Drive - Genesis/David Crane's Amazing Tennis (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/David Robinson's Supreme Court (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Davis Cup II (USA) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Davis Cup Tennis ~ Davis Cup World Tour (USA, Europe) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Davis Cup Tennis - Davis Cup World Tour (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Daze Before Christmas (Australia) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Deadly Moves (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Death Duel (USA) (Action Replay).cht
@@ -8208,7 +8211,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/FIFA Soccer 2000 Gold Edition 
 share/libretro/cheats/Sega - Mega Drive - Genesis/FIFA Soccer 95 (USA, Europe, Korea) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/FIFA Soccer 96 (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/FIFA Soccer 97 Gold Edition (USA, Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/FZ Senki Axis ~ Final Zone (Japan, USA) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/FZ Senki Axis - Final Zone (Japan, USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Faery Tale Adventure, The (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Family Feud (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Fantasia (World) (Action Replay).cht
@@ -8310,7 +8313,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Joe _ Mac (USA) (Action Replay
 share/libretro/cheats/Sega - Mega Drive - Genesis/John Madden Football (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Jordan vs Bird - One on One (Japan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Joshua _ the Battle of Jericho (USA) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/JuJu Densetsu ~ Toki - Going Ape Spit (World) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/JuJu Densetsu - Toki - Going Ape Spit (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Judge Dredd (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Junction (Japan, USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Jungle Book, The (USA, Europe) (Action Replay).cht
@@ -8345,9 +8348,9 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Lethal Enforcers II - Gun Figh
 share/libretro/cheats/Sega - Mega Drive - Genesis/Liberty or Death (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Light Crusader (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Lightening Force - Quest for the Darkstar (USA) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Ling Huan Daoshi ~Revenge of Fu Manchu~ (Taiwan) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Ling Huan Daoshi -Revenge of Fu Manchu- (Taiwan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Lion King, The (World) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Long ~Link Dragon~ (China) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Long -Link Dragon- (China) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Lost Vikings, The (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Lost World, The - Jurassic Park (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Lotus II (USA, Europe) (Action Replay).cht
@@ -8391,7 +8394,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Mighty Morphin Power Rangers -
 share/libretro/cheats/Sega - Mega Drive - Genesis/Monopoly (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Monster World IV (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Mortal Kombat 3 (USA, Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Mortal Kombat 5 ~Sub Zero~ (Unknown) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Mortal Kombat 5 -Sub Zero- (Unknown) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Mortal Kombat II (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Mr. Nutz (Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Ms. Pac-Man (USA, Europe) (Action Replay).cht
@@ -8460,7 +8463,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Phantasy Star II (USA, Europe,
 share/libretro/cheats/Sega - Mega Drive - Genesis/Phantasy Star III - Generations of Doom (USA, Europe, Brazil) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Phantom 2040 (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Phelios (World) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Pikaqiu II ~Pocket Monster II~ (Taiwan) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Pikaqiu II -Pocket Monster II- (Taiwan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Pink Goes to Hollywood (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Pinocchio (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Pirates of Dark Water, The (USA, Europe) (Action Replay).cht
@@ -8481,7 +8484,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Psycho Pinball (Europe) (Actio
 share/libretro/cheats/Sega - Mega Drive - Genesis/Puggsy (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Pulseman (Japan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Punisher, The (USA, Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/QuackShot Starring Donald Duck ~ QuackShot - I Love Donald Duck - Guruzia Ou no Hihou (World) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/QuackShot Starring Donald Duck - QuackShot - I Love Donald Duck - Guruzia Ou no Hihou (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Quad Challenge (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/R.B.I. Baseball '93 (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/R.B.I. Baseball '94 (USA, Europe) Action Replay).cht
@@ -8490,7 +8493,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/R.B.I. Baseball 4 (USA, Japan)
 share/libretro/cheats/Sega - Mega Drive - Genesis/Race Drivin (USA, Europe) (Game Genie).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Race Drivin' (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Radical Rex (USA, Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Raiden Densetsu ~ Raiden Trad (USA, Japan) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Raiden Densetsu - Raiden Trad (USA, Japan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Rainbow Islands Extra (Japan) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Rambo III (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Rampart (USA, Japan, Korea) (Action Replay).cht
@@ -8528,7 +8531,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Saturday Night Slammasters (US
 share/libretro/cheats/Sega - Mega Drive - Genesis/Scrabble (Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/SeaQuest DSV (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Second Samurai (Europe) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Senjou no Ookami II ~ Mercs (World) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Senjou no Ookami II - Mercs (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Sensible Soccer (Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Sensible Soccer - International Edition (Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Shadow Blasters (USA) (Action Replay).cht
@@ -8626,7 +8629,7 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/TaleSpin (USA, Europe) (Action
 share/libretro/cheats/Sega - Mega Drive - Genesis/Talmit's Adventure (Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Target Earth (USA) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Task Force Harrier EX (USA, Japan) (Action Replay).cht
-share/libretro/cheats/Sega - Mega Drive - Genesis/Tatsujin ~ Truxton (World) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/Tatsujin - Truxton (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Taz in Escape from Mars (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Taz-Mania (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Team USA Basketball (USA) (Action Replay).cht
@@ -8654,6 +8657,8 @@ share/libretro/cheats/Sega - Mega Drive - Genesis/Tintin au Tibet (Europe) (Acti
 share/libretro/cheats/Sega - Mega Drive - Genesis/Tiny Toon Adventures - Acme All-Stars (USA, Europe, Korea) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Tiny Toon Adventures - Buster's Hidden Treasure (USA, Europe) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Todd's Adventures in Slime World (USA) (Action Replay).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/ToeJam & Earl (World) (Game Genie).cht
+share/libretro/cheats/Sega - Mega Drive - Genesis/ToeJam & Earl (World) (Rev A) (Game Genie).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/ToeJam _ Earl (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/ToeJam _ Earl in Panic on Funkotron (World) (Action Replay).cht
 share/libretro/cheats/Sega - Mega Drive - Genesis/Tom Mason's Dinosaurs for Hire (USA) (Action Replay).cht
@@ -10664,7 +10669,7 @@ share/libretro/cheats/Sony - PlayStation/Super Pang Collection (Europe) (GameSha
 share/libretro/cheats/Sony - PlayStation/Super Puzzle Fighter II Turbo (USA, Europe) (GameShark).cht
 share/libretro/cheats/Sony - PlayStation/Super Shot Soccer (USA) (GameShark).cht
 share/libretro/cheats/Sony - PlayStation/SuperCross Circuit (USA) (GameShark).cht
-share/libretro/cheats/Sony - PlayStation/Superstar Dance Club - #1 Hits!!! (USA, Europe) (GameShark).cht
+share/libretro/cheats/Sony - PlayStation/Superstar Dance Club - -1 Hits!!! (USA, Europe) (GameShark).cht
 share/libretro/cheats/Sony - PlayStation/Surf Riders (USA, Europe) (GameShark).cht
 share/libretro/cheats/Sony - PlayStation/Swagman (USA, Europe) (GameShark).cht
 share/libretro/cheats/Sony - PlayStation/Sydney 2000 (World) (GameShark).cht
@@ -10944,7 +10949,6 @@ share/libretro/database/rdb/Nintendo - Nintendo Wii (DLC).rdb
 share/libretro/database/rdb/Nintendo - Pokemon Mini.rdb
 share/libretro/database/rdb/Nintendo - Satellaview.rdb
 share/libretro/database/rdb/Nintendo - Sufami Turbo.rdb
-share/libretro/database/rdb/Nintendo - Super Nintendo Entertainment System Hacks.rdb
 share/libretro/database/rdb/Nintendo - Super Nintendo Entertainment System.rdb
 share/libretro/database/rdb/Nintendo - Virtual Boy.rdb
 share/libretro/database/rdb/Nintendo - Wii.rdb

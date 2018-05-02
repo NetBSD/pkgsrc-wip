@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-database-20180224-a80f0f08ca392f83af5155892b3ddb427aa3957a.tar.gz) = f4b90e95c137ae971c67ecc6141b5f807e89aff7
-RMD160 (libretro-database-20180224-a80f0f08ca392f83af5155892b3ddb427aa3957a.tar.gz) = 34dfd6fe0cfd5244ecea28a7ac2f994543e3c034
-SHA512 (libretro-database-20180224-a80f0f08ca392f83af5155892b3ddb427aa3957a.tar.gz) = 6ebe597bf912b4d324d04543c0b37c09ccd70fe9651b5f961991d5d68cbce4f53b8950f65818549a68e0c60b162af60ae0d374f47d93af76859dd3a5182444aa
-Size (libretro-database-20180224-a80f0f08ca392f83af5155892b3ddb427aa3957a.tar.gz) = 104019515 bytes
+SHA1 (libretro-database-1.7.2.tar.gz) = 9d91c947795d58f9420e04e25b3f6212f5964086
+RMD160 (libretro-database-1.7.2.tar.gz) = 606df7eb73ac7c1f046a7eb20d31deb530be7af7
+SHA512 (libretro-database-1.7.2.tar.gz) = 83b00f4c87cfa960e94f3a3d3ba09975460f89216b1d63e5d09b12ce38466435996274881f3ca50c5840d725c87de1aa4fdabeccb4c1e8da717ba1c7000764b4
+Size (libretro-database-1.7.2.tar.gz) = 105914609 bytes
