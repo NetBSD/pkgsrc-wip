@@ -8,7 +8,7 @@ DISTNAME=	Another-World-Bytecode-Interpreter
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiensanglard/}
 EXTRACT_SUFX=	.zip
-#LICENSE=	#
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	http://fabiensanglard.net/anotherWorld_code_review/index.php/
