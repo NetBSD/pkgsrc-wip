@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ricochet.im/
 COMMENT=	Anonymous instant messaging for real privacy
+LICENSE=	modified-bsd
 
 DEPENDS+=	tor-[0-9]*:../../net/tor
 
