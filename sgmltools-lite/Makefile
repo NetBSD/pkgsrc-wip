@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sgmltools-lite/}
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://sgmltools-lite.sourceforge.net/
 COMMENT=	Friendly Python interface to SGML software
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	openjade-[0-9]*:../../textproc/openjade
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
