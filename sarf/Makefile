@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.jar
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://sourceforge.net/projects/sarf/
 COMMENT=	Arabic Morphology System
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 
