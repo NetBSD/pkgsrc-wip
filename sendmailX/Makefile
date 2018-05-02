@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/sm-X/
 COMMENT=	Modular Mail Transfer Agent
-
+LICENSE=	sendmail-license
 
 CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 GNU_CONFIGURE=	YES
