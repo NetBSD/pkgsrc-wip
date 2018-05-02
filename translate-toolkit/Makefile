@@ -21,6 +21,8 @@ USE_LANGUAGES=	c
 REPLACE_BASH=	tools/*
 USE_TOOLS+=	bash:run
 
+PYTHON_VERSIONS_ACCEPTED=       36 35 34 27
+
 post-extract:
 	${RM} ${WRKSRC}/tools/mozilla/build_firefox.sh
 	${RM} ${WRKSRC}/tools/mozilla/buildxpi.py
