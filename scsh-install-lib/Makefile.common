@@ -1,4 +1,3 @@
-#
 # $NetBSD: Makefile.common,v 1.6 2008/05/24 15:34:14 tnn2 Exp $
 #
 # Common Makefile for packages that are installed using scsh-install-lib

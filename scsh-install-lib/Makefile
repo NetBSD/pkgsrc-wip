@@ -1,4 +1,3 @@
-#
 # $NetBSD: Makefile,v 1.3 2012/10/07 16:22:54 asau Exp $
 #
 
@@ -9,6 +8,7 @@ MASTER_SITES=		http://lamp.epfl.ch/~schinz/scsh_packages/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lamp.epfl.ch/~schinz/scsh_packages/
 COMMENT=		SCSH installation library for third-party libraries
+LICENSE=		modified-bsd
 
 BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
 
