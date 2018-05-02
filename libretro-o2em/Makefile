@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	libretro-o2em-20170124
+DISTNAME=	libretro-o2em-20180501
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
-GITHUB_TAG=	1d62d4ed86e6c1a7d65dff49e4368edb30690665
+GITHUB_TAG=	728b63583ca44e526ab5f4f7bd71406aa7b5a1df
 
 HOMEPAGE=	https://docs.libretro.com/library/o2em/
 COMMENT=	Libretro core for Magnavox Odyssey 2 and VideoPac emulation
