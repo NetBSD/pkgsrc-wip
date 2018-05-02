@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	lars.nordlund@hem.utfors.se
 HOMEPAGE=	http://rigelseven.com/schism/
 COMMENT=	Music tracker similar to Impulse Tracker
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
