@@ -15,7 +15,7 @@ MAINTAINER=	bacon@NetBSD.org
 PORTVERSION=	0.1.19
 
 COMMENT=	Generic format for storing large nucleotide sequence alignments
-# LICENSE=	
+LICENSE=	mit
 
 USE_TOOLS+=	gmake perl
 USE_ZLIB=	yes
