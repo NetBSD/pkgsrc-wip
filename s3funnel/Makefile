@@ -8,6 +8,7 @@ MASTER_SITES=	http://s3funnel.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/s3funnel/
 COMMENT=	Multithreaded tool for performing operations on Amazon S3
+LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-boto>=1.9:../../net/py-boto
 DEPENDS+=	${PYPKGPREFIX}-workerpool-[0-9]*:../../wip/py-workerpool
