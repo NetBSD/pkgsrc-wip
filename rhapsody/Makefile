@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rhapsody.sourceforge.net
 COMMENT=		IRC client for Unix operating systems
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 USE_PKGLOCALEDIR=	yes
