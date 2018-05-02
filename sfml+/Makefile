@@ -4,12 +4,12 @@ DISTNAME=	SFML-2.4.2-sources
 PKGNAME=	sfml+-2.4.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.sfml-dev.org/files/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sfml-dev.org/
 COMMENT=	Free multimedia C++ API
 LICENSE=	zlib
-EXTRACT_SUFX=	.zip
 
 WRKSRC=			${WRKDIR}/SFML-2.4.2
 USE_CMAKE=		yes
