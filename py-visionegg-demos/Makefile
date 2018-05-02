@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=visionegg/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Demonstration programs for py-visionegg
+LICENSE=		gnu-lgpl-v2.1
 
 NO_BUILD=		yes
 USE_TOOLS+=		pax
