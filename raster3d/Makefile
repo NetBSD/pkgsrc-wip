@@ -10,6 +10,7 @@ MASTER_SITES=	http://skuld.bmsc.washington.edu/raster3d/
 MAINTAINER=	shaun@inerd.com
 HOMEPAGE=	http://skuld.bmsc.washington.edu/raster3d/
 COMMENT=	Set of tools for generating raster images of proteins and molecules
+LICENSE=	artistic-2.0
 
 USE_LANGUAGES=	c fortran77
 USE_TOOLS+=	gunzip:run
