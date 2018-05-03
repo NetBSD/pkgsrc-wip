@@ -2793,6 +2793,7 @@ SUBDIR+=	plasti
 SUBDIR+=	plconfig
 SUBDIR+=	plibsys
 SUBDIR+=	plink
+SUBDIR+=	plink2
 SUBDIR+=	plod
 SUBDIR+=	plover-git
 SUBDIR+=	plover-wxgtk
