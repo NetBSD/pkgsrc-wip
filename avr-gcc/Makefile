@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.10 2015/08/12 19:59:50 tnn2 Exp $
 
-DISTNAME=		gcc-4.9.1
+DISTNAME=		gcc-4.8.3
 PKGNAME=		${DISTNAME:C/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/releases/${DISTNAME}/}

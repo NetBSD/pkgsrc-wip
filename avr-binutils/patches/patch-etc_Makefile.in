@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- etc/Makefile.in.orig	2018-01-13 13:31:15.000000000 +0000
++++ etc/Makefile.in
+@@ -68,7 +68,7 @@ config.status: $(srcdir)/configure
+ dist:
+ check:
+ info html dvi ps pdf:
+-install install-strip install-info install-html install-pdf:
++install install-strip install-html install-pdf:
+ installcheck:
+ uninstall:
+ TAGS:
