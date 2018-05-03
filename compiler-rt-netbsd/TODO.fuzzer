@@ -13,90 +13,53 @@ Do we need llvm-cov for libFuzzer?
   profiling. But I still think they are necessary for libFuzzer itself.
 
 
+$ make check-fuzzer
 
+********************
+Testing Time: 694.80s
+********************
+Failing Tests (21):
+    LLVMFuzzer :: cxxstring.test
+    LLVMFuzzer :: equivalence-signals.test
+    LLVMFuzzer :: equivalence.test
+    LLVMFuzzer :: fuzzer-leak.test
+    LLVMFuzzer :: fuzzer-oom.test
+    LLVMFuzzer :: fuzzer-timeout.test
+    LLVMFuzzer :: memcmp.test
+    LLVMFuzzer :: memcmp64.test
+    LLVMFuzzer :: merge-posix.test
+    LLVMFuzzer :: recommended-dictionary.test
+    LLVMFuzzer :: strcmp.test
+    LLVMFuzzer :: strncmp.test
+    LLVMFuzzer :: strstr.test
+    LLVMFuzzer :: trace-malloc-threaded.test
+    LLVMFuzzer :: trace-malloc-unbalanced.test
+    LLVMFuzzer :: value-profile-cmp.test
+    LLVMFuzzer :: value-profile-load.test
+    LLVMFuzzer :: value-profile-mem.test
+    LLVMFuzzer :: value-profile-set.test
+    LLVMFuzzer :: value-profile-strcmp.test
+    LLVMFuzzer :: value-profile-strncmp.test
+
+  Expected Passes    : 87
+  Unsupported Tests  : 6
+  Unexpected Failures: 21
 
 libFuzzer Failed cases (make check-fuzzer):
-I. "pthread_tsd" Category
-  All of these cases can be reproduced by commands like:
-      % clang -fsanitize=address,fuzzer -special_flags source_file
-      % ./a.out
-  If there are multiple source files, they should be compiled and run separately. The results will be like:
-      INFO: Seed: 2796805091
-      INFO: Loaded 1 modules   (10 inline 8-bit counters): 10 [0x763b70, 0x763b7a),
-      INFO: Loaded 1 PC tables (10 PCs): 10 [0x543a70,0x543b10),
-      assertion "pthread__tsd_destructors[key] != NULL" failed: file "/usr/src/lib/libpthread/pthread_tsd.c", line 176, function "pthread__add_specific"
-      [1]   Abort trap              ./a.out
+I. kernel panic
+  fuzzer-oom.test kills the kernel (panic due to lack of memory)
 
-  ID. case_name, source_file, special_flags_if_exist".
-  1. bad-strcmp.test, BadStrcmpTest.cpp
-  2. cleanse.test, CleanseTest.cpp
-  3. disable-leaks.test, AccumulateAllocationsTest.cpp
-  4. exit-report.test, SimpleTest.cpp
-  5. fuzzer-custommutator.test, CustomMutatorTest.cpp, -Icompiler-rt-source/lib/fuzzer
-  6. fuzzer-customcrossoverandmutate.test, CustomCrossOverAndMutateTest.cpp, -Icompiler-rt-source/lib/fuzzer
-  7. equivalence.test, EquivalenceATest.cpp
-  8. cxxstring.test, CxxStringEqTest.cpp
-  9. caller-callee.test, CallerCalleeTest.cpp
-  10. fuzzer-dirs.test, SimpleTest.cpp
-  11. fuzzer-dict.test, SimpleDictionaryTest.cpp
-  12. exit_on_src_pos.test, SimpleTest.cpp
-  13. fuzzer-fdmask.test, SpamyTest.cpp
-  14. fuzzer-customcrossover.test, CustomCrossOverTest.cpp
-  15. fuzzer-finalstats.test, SimpleTest.cpp
-  16. max-number-of-runs.test, AccumulateAllocationsTest.cpp
-  17. memcmp64.test, Memcmp64BytesTest.cpp
-  18. fuzzer-flags.test, FlagsTest.cpp
-  19. fuzzer-runs.test, NthRunCrashTest.cpp
-  20. fuzzer-seed.test, NullDerefTest.cpp
-  21. fuzzer-segv.test, NullDerefTest.cpp
-  22. memcmp.test, MemcmpTest.cpp
-  23. fuzzer-timeout.test, TimeoutTest.cpp
-  24. fuzzer-printcovpcs.test, SimpleTest.cpp
-  25. fuzzer-ubsan.test, SignedIntOverflowTest.cpp
-  26. inline-8bit-counters.test, SimpleTest.cpp
-  27. fuzzer-leak.test, LeakTest.cpp:ThreadedLeakTest.cpp:LeakTimeoutTest.cpp
-  28. recommended-dictionary.test, RepeatedMemcmp.cpp
-  29. fuzzer-threaded.test, ThreadedTest.cpp
-  30. merge-control-file.test, FullCoverageSetTest.cpp
-  31. merge-posix.test, FullCoverageSetTest.cpp
-  32. merge-summary.test, FullCoverageSetTest.cpp
-  33. merge.test, FullCoverageSetTest.cpp
-  34. shrink.test, ShrinkControlFlowTest.cpp:ShrinkValueProfileTest.cpp
-  35. reduce_inputs.test, ShrinkControlFlowSimpleTest.cpp:ShrinkControlFlowTest.cpp
-  36. minimize_two_crashes.test, TwoDifferentBugsTest.cpp
-  37. overwrite-input.test, OverwriteInputTest.cpp
-  38. fuzzer-singleinputs.test, NullDerefTest.cpp:SimpleTest.cpp
-  39. print-func.test, PrintFuncTest.cpp
-  40. minimize_crash.test, NullDerefTest.cpp:SingleByteInputTest.cpp
-  41. simple-cmp.test, SimpleCmpTest.cpp
-  42. strcmp.test, StrcmpTest.cpp
-  43. merge-sigusr.test, SleepOneSecondTest.cpp
-  44. strncmp.test, StrncmpTest.test
-  45. swap-cmp.test, SwapCmpTest.cpp
-  46. repeated-bytes.test, RepeatedBytesTest.cpp
-  47. fuzzer-oom.test, OutOfMemoryTest.cpp:OutOfMemorySingleLargeMalloc.cpp:AccumulateAllocationsTest.cpp
-  48. value-profile-cmp3.test, AbsNegAndConstantTest.cpp
-  49. value-profile-cmp4.test, AbsNegAndConstant64Test.cpp
-  50. value-profile-cmp.test, SimpleCmpTest.cpp
-  51. value-profile-mem.test, SingleMemcmpTest.cpp
-  52. strstr.test, StrstrTest.cpp
-  53. sigusr.test, SleepOneSecondTest.cpp
-  54. value-profile-strcmp.test, SingleStrcmpTest.cpp
-  55. value-profile-strncmp.test, SingleStrncmpTest.cpp
-  56. trace-malloc-2.test, TraceMallocTest.cpp
-  57. trace-malloc-unbalanced.test, TraceMallocTest.cpp
-  58. value-profile-switch.test, SwitchTest.cpp:Switch2Test.cpp
-  59. trace-pc.test, SimpleTest.cpp
-  60. trace-malloc.test, TraceMallocTest.cpp
-  61. ulimit.test, SimpleTest.cpp
-  62. value-profile-div.test, DivTest.cpp
-  63. value-profile-load.test, LoadTest.cpp
-  64. trace-malloc-threaded.test, TraceMallocThreadedTest.cpp
-  65. value-profile-set.test, FourIndependentBranchesTest.cpp
-  66. equivalence-signals.test, EquivalenceATest.cpp
-  67. dump_coverage.test, NullDerefTest.cpp
-  68. coverage.test, NUllDerefTest.cpp
-  69. fuzzer.test, FullCoverageSetTest.cpp
-II. Complex One
+  workaround: kill it quickly or disable
+
+II. hangs
+  fuzzer-timeout.test
+  value-profile*
+
+  workaround: kill with pkill(1) or kill(1)
+
+III. Complex One
   70. afl-driver-extra-stats.test
     Not sure yet.
+
+IV. Unknown
+  the rest
