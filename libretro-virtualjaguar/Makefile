@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-virtualjaguar-20180425
+DISTNAME=	libretro-virtualjaguar-20180502
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	virtualjaguar-libretro
-GITHUB_TAG=	0418a44f35c9bea4fa8145e66b10073547b5a9be
+GITHUB_TAG=	2ce1ec0a5f3e8d357795a3b5cfeffc8d91cdd52a
 
 HOMEPAGE=	https://docs.libretro.com/library/virtual_jaguar/
 COMMENT=	Libretro core for Atari Jaguar emulation
