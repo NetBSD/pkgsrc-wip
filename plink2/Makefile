@@ -17,10 +17,6 @@ COMMENT=	Whole genome association analysis toolset
 # Check this
 LICENSE=	gnu-gpl-v2
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
-
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake
 GCC_REQD+=	5.0

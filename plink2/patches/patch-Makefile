@@ -1,0 +1,13 @@
+$NetBSD$
+
+# Remove assumptions about advanced cpu features
+
+--- Makefile.orig	2018-05-04 14:35:29.570866273 +0000
++++ Makefile
+@@ -1,4 +1,5 @@
+-BASEFLAGS=-mavx2 -mbmi -mbmi2 -mlzcnt -DNDEBUG -DZSTD_MULTITHREAD
++BASEFLAGS=-DNDEBUG -DZSTD_MULTITHREAD
++# BASEFLAGS=-mavx2 -mbmi -mbmi2 -mlzcnt -DNDEBUG -DZSTD_MULTITHREAD
+ # BASEFLAGS=-mavx2 -mbmi -mbmi2 -mlzcnt -DZSTD_MULTITHREAD
+ # BASEFLAGS=-msse4.2 -DNDEBUG -DZSTD_MULTITHREAD
+ 
