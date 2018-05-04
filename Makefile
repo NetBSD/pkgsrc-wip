@@ -3762,6 +3762,7 @@ SUBDIR+=	py-sshpt
 SUBDIR+=	py-ssp
 SUBDIR+=	py-stache
 SUBDIR+=	py-statgrap
+SUBDIR+=	py-statsd
 SUBDIR+=	py-stem
 SUBDIR+=	py-storm
 SUBDIR+=	py-strategies
