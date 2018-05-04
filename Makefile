@@ -3131,6 +3131,7 @@ SUBDIR+=	py-ecos
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-eemeter
 SUBDIR+=	py-eigency
+SUBDIR+=	py-email-reply-parser
 SUBDIR+=	py-embedc
 SUBDIR+=	py-emcee
 SUBDIR+=	py-emmsa
