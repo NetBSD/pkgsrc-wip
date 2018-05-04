@@ -3264,6 +3264,7 @@ SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hgapi
 SUBDIR+=	py-hidapi-git
 SUBDIR+=	py-hieroglyph
+SUBDIR+=	py-hiredis
 SUBDIR+=	py-hmf
 SUBDIR+=	py-holoviews
 SUBDIR+=	py-honcho
