@@ -3828,6 +3828,7 @@ SUBDIR+=	py-txZMQ
 SUBDIR+=	py-txdbus
 SUBDIR+=	py-typedecorator
 SUBDIR+=	py-ufl
+SUBDIR+=	py-ua-parser
 SUBDIR+=	py-umalqurra
 SUBDIR+=	py-uncertainties
 SUBDIR+=	py-unidiff
