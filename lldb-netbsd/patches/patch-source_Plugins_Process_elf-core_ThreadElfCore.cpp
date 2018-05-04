@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/elf-core/ThreadElfCore.cpp.orig	2018-02-02 18:39:12.000000000 +0000
+--- source/Plugins/Process/elf-core/ThreadElfCore.cpp.orig	2018-05-04 16:30:00.737965891 +0000
 +++ source/Plugins/Process/elf-core/ThreadElfCore.cpp
 @@ -118,6 +118,9 @@ ThreadElfCore::CreateRegisterContextForF
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp.orig	2018-02-23 22:54:35.000000000 +0000
+--- source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp.orig	2018-05-04 16:30:02.190747122 +0000
 +++ source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp
 @@ -53,6 +53,7 @@ namespace {
  const char *const LLDB_NT_OWNER_FREEBSD = "FreeBSD";
@@ -23,7 +23,7 @@ $NetBSD$
  
  // GNU ABI note OS constants
  const elf_word LLDB_NT_GNU_ABI_OS_LINUX = 0x00;
-@@ -1297,25 +1300,41 @@ ObjectFileELF::RefineModuleDetailsFromNo
+@@ -1294,25 +1297,41 @@ ObjectFileELF::RefineModuleDetailsFromNo
          // The note.n_name == LLDB_NT_OWNER_GNU is valid for Linux platform
          arch_spec.GetTriple().setOS(llvm::Triple::OSType::Linux);
      }

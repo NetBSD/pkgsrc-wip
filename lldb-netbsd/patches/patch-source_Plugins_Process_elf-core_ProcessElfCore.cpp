@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/elf-core/ProcessElfCore.cpp.orig	2018-02-19 18:10:15.000000000 +0000
+--- source/Plugins/Process/elf-core/ProcessElfCore.cpp.orig	2018-05-04 16:30:00.745959198 +0000
 +++ source/Plugins/Process/elf-core/ProcessElfCore.cpp
 @@ -453,16 +453,43 @@ static void ParseFreeBSDPrStatus(ThreadD
    thread_data.gpregset = DataExtractor(data, offset, len);
@@ -52,15 +52,23 @@ $NetBSD$
  }
  
  static void ParseOpenBSDProcInfo(ThreadData &thread_data,
-@@ -550,35 +577,103 @@ llvm::Error ProcessElfCore::parseFreeBSD
+@@ -550,35 +577,99 @@ llvm::Error ProcessElfCore::parseFreeBSD
  
  llvm::Error ProcessElfCore::parseNetBSDNotes(llvm::ArrayRef<CoreNote> notes) {
    ThreadData thread_data;
 -  for (const auto &note : notes) {
--    // NetBSD per-thread information is stored in notes named
--    // "NetBSD-CORE@nnn" so match on the initial part of the string.
+-    // NetBSD per-thread information is stored in notes named "NetBSD-CORE@nnn"
+-    // so match on the initial part of the string.
 -    if (!llvm::StringRef(note.info.n_name).startswith("NetBSD-CORE"))
 -      continue;
++  ArchSpec arch = GetArchitecture();
++  /*
++   * To be extracted from struct netbsd_elfcore_procinfo
++   * Used to sanity check of the LWPs of the process
++   */
++  uint32_t nlwps = 0;
++  uint32_t signo;  /* killing signal */
++  uint32_t siglwp; /* LWP target of killing signal */
  
 -    switch (note.info.n_type) {
 -    case NETBSD::NT_PROCINFO:
@@ -69,7 +77,8 @@ $NetBSD$
 -    case NETBSD::NT_AUXV:
 -      m_auxv = note.data;
 -      break;
-+  ArchSpec arch = GetArchitecture();
++  for (const auto &note : notes) {
++    llvm::StringRef name = note.info.n_name;
  
 -    case NETBSD::NT_AMD64_REGS:
 -      if (GetArchitecture().GetMachine() == llvm::Triple::x86_64)
@@ -78,17 +87,6 @@ $NetBSD$
 -    default:
 -      thread_data.notes.push_back(note);
 -      break;
-+  /*
-+   * To be extracted from struct netbsd_elfcore_procinfo
-+   * Used to sanity check of the LWPs of the process
-+   */
-+  uint32_t nlwps = 0;
-+  uint32_t signo;  /* killing signal */
-+  uint32_t siglwp; /* LWP target of killing signal */
-+
-+  for (const auto &note : notes) {
-+    llvm::StringRef name = note.info.n_name;
-+
 +    if (name == "NetBSD-CORE") {
 +      if (note.info.n_type == NETBSD::NT_PROCINFO) {
 +        Status error = ParseNetBSDProcInfo(note.data, nlwps, signo, siglwp);
@@ -120,7 +118,6 @@ $NetBSD$
 +      } break;
 +      case llvm::Triple::aarch64: {
 +        /* Assume order PT_GETREGS, PT_GETFPREGS */
-+	{FILE *fp = fopen("/tmp/log.txt", "a");fprintf(fp, "%s() %s:%d note.info.n_type=%d\n", __func__, __FILE__, __LINE__, note.info.n_type);fflush(fp);fclose(fp);}
 +        if (note.info.n_type == NETBSD::AARCH64::NT_REGS) {
 +          m_thread_data.push_back(ThreadData());
 +          m_thread_data.back().gpregset = note.data;
@@ -138,12 +135,8 @@ $NetBSD$
 +      }
 +    } else {
 +      return Status("Error parsing NetBSD core(5) notes: Unrecognized note").ToError();
-     }
-   }
--  if (thread_data.gpregset.GetByteSize() == 0) {
--    return llvm::make_error<llvm::StringError>(
--        "Could not find general purpose registers note in core file.",
--        llvm::inconvertibleErrorCode());
++     }
++   }
 +
 +  if (m_thread_data.empty())
 +    return Status("Error parsing NetBSD core(5) notes: No threads information "
@@ -169,14 +162,19 @@ $NetBSD$
 +        passed = true;
 +        break;
 +      }
-+    }
+     }
+-  }
+-  if (thread_data.gpregset.GetByteSize() == 0) {
+-    return llvm::make_error<llvm::StringError>(
+-        "Could not find general purpose registers note in core file.",
+-        llvm::inconvertibleErrorCode());
+-  }
+-  m_thread_data.push_back(thread_data);
 +
 +    if (!passed)
 +      return Status(
 +          "Error parsing NetBSD core(5) notes: Signal passed to unknown LWP").ToError();
-   }
--  m_thread_data.push_back(thread_data);
-+
++   }
    return llvm::Error::success();
  }
  
