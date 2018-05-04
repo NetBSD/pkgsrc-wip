@@ -36,9 +36,10 @@ post-extract:
 
 post-build:
 	${MKDIR} ${WRKSRC}/shared-lib
+	${CHMOD} a-x ${WRKSRC}/lib/libcblas.a
 	cd ${WRKSRC}/shared-lib && \
 		${AR} x ../lib/libcblas.a && \
-		${FC} -shared -o ../lib/libcblas.so *.o
+		${FC} ${LDFLAGS} -shared -o ../lib/libcblas.so *.o
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/lib/libcblas.* ${DESTDIR}${PREFIX}/lib
