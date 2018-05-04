@@ -3641,6 +3641,7 @@ SUBDIR+=	py-radontea
 SUBDIR+=	py-ranger
 SUBDIR+=	py-raphrase
 SUBDIR+=	py-rasterio
+SUBDIR+=	py-rb
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdf
 SUBDIR+=	py-rdfextras
