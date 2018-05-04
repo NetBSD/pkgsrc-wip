@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (printrun-1.6.0.tar.gz) = d23d01f99c81309461c57c93f93c0beb4caa48b4
+RMD160 (printrun-1.6.0.tar.gz) = fac489b47000347e11c1a3a5e7330489c944217e
+SHA512 (printrun-1.6.0.tar.gz) = 52951fef540d65c40f360c2fa64e84f866fe22c5b424d27eba3008ccd0b046f6e590fb091c2500b465b62b5495bc7964d2009aa7994d5d7018cd30ecfecf2dbd
+Size (printrun-1.6.0.tar.gz) = 922999 bytes
+SHA1 (patch-printrun_utils.py) = fcc80aa1386ebb8ec7d9ac0c7a80b73e06c2672c
