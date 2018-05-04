@@ -3652,6 +3652,7 @@ SUBDIR+=	py-rebound
 SUBDIR+=	py-recluse
 SUBDIR+=	py-recommonmark
 SUBDIR+=	py-redbaron
+SUBDIR+=	py-redis-cluster
 SUBDIR+=	py-reducer
 SUBDIR+=	py-remctl
 SUBDIR+=	py-report
