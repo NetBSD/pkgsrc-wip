@@ -3787,6 +3787,7 @@ SUBDIR+=	py-technicolor
 SUBDIR+=	py-telepathy
 SUBDIR+=	py-teng
 SUBDIR+=	py-teradata
+SUBDIR+=	py-test-metadata
 SUBDIR+=	py-texml
 SUBDIR+=	py-textblob
 SUBDIR+=	py-thLib
