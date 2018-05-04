@@ -13,6 +13,7 @@ EXTRACT_ONLY=		${DISTNAME}_source.zip ${DISTNAME}_game.zip
 MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://smclone.sourceforge.net/
 COMMENT=		Super Mario (World) Clone using pretty 2D graphics
+LICENSE=		gnu-gpl-v3
 
 GCC_REQD=		3.2
 
