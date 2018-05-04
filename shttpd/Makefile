@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=shttpd/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://shttpd.sourceforge.net/
 COMMENT=	Lightweight, easy to use web server
-#LICENSE=	shttpd-license
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src
 
