@@ -10,7 +10,7 @@ Summary:
 Do we need llvm-cov for libFuzzer?
   I don't think so. It seems there is no relationship between these two. However, there is something named
   "SanitizerCoverage"(https://clang.llvm.org/docs/SanitizerCoverage.html) utilizing sanitizer to help with
-  profiling. But I still think they are necessary for libFuzzer itself.
+  profiling. But I still don't think they are necessary for libFuzzer itself.
 
 
 $ make check-fuzzer
@@ -57,9 +57,25 @@ II. hangs
 
   workaround: kill with pkill(1) or kill(1)
 
-III. Complex One
-  70. afl-driver-extra-stats.test
-    Not sure yet.
+III. *semaphore* NULL pointer error
+  Description:
+    This category results from null pointer error in semaphore interfaces like sem_unlink or sem_trywait from shared library libpthread.so.
+    Error log:
+      ==23411==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7b6db2206a0e bp 0x7f7fff62f340 sp 0x7f7fff62f288 T0)
+      ==23411==The signal is caused by a READ memory access.
+      ==23411==Hint: address points to the zero page.
+        #0 0x7b6db2206a0d in sem_unlink (/usr/lib/libpthread.so.1+0x6a0d)
+        #1 0x424ff4 in WaitClient /public/llvm/projects/compiler-rt/lib/fuzzer/FuzzerShmem.h:32:22
+    	#2 0x424ff4 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /public/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:676
+    	#3 0x43d472 in main /public/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+ 	#4 0x41f2b5 in ___start (/public/llvm-build/projects/compiler-rt/test/fuzzer/Output/equivalence.test.tmp-EquivalenceATest+0x41f2b5)
+
+  Test cases:
+    equivalence-signals.test
+    equivalence.test
+  Reproduce:
+    clang --driver-mode=g++ -std=c++11 -lstdc++ -O2 -gline-tables-only -fsanitize=address,fuzzer EquivalenceATest.cpp
+    ./a.out -run_equivalence_server=EQUIV_SIG_TEST
 
 IV. Unknown
   the rest
