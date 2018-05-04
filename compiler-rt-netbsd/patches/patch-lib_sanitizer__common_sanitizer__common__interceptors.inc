@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-02-27 02:50:00.133153771 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-05-04 08:00:15.541116903 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
-@@ -76,6 +76,11 @@
+@@ -77,6 +77,11 @@
  #define ctime __ctime50
  #define ctime_r __ctime_r50
  #define devname __devname50
@@ -14,7 +14,7 @@ $NetBSD$
  #define getitimer __getitimer50
  #define getpwent __getpwent50
  #define getpwnam __getpwnam50
-@@ -7025,6 +7030,625 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7161,6 +7166,625 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -640,7 +640,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7258,6 +7882,11 @@ static void InitializeCommonInterceptors
+@@ -7402,6 +8026,11 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;

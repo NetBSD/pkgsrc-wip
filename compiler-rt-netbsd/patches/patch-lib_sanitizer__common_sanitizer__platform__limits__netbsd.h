@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-02-27 02:50:00.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-05-04 08:00:15.477300193 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
 @@ -60,6 +60,15 @@ extern unsigned struct_timespec_sz;
  extern unsigned struct_sembuf_sz;
@@ -28,7 +28,7 @@ $NetBSD$
  extern int ptrace_pt_io;
  extern int ptrace_pt_lwpinfo;
  extern int ptrace_pt_set_event_mask;
-@@ -398,6 +410,7 @@ extern int ptrace_pt_getfpregs;
+@@ -396,6 +408,7 @@ extern int ptrace_pt_getfpregs;
  extern int ptrace_pt_setdbregs;
  extern int ptrace_pt_getdbregs;
  
@@ -36,7 +36,7 @@ $NetBSD$
  struct __sanitizer_ptrace_io_desc {
    int piod_op;
    void *piod_offs;
-@@ -462,6 +475,43 @@ struct __sanitizer_ttyent {
+@@ -460,6 +473,43 @@ struct __sanitizer_ttyent {
    char *ty_class;
  };
  
