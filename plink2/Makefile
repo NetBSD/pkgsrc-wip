@@ -23,6 +23,7 @@ LICENSE=	gnu-gpl-v2
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake
+GCC_REQD+=	5.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/2.0
 
@@ -30,12 +31,15 @@ CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
 CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
 
 # Check this
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas_pthread"
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas"
 # INSTALL_TARGET=	install-strip
 
 PORTVERSION=	0.0.0.20180503
+# PREFER.zlib=pkgsrc	# Requires newer version than NetBSD 7.1 provides
 
-.include "../../wip/openblas_pthread/buildlink3.mk"
+#.include "../../wip/openblas_pthread/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
+.include "../../math/lapack/buildlink3.mk"
 .include "../../wip/cblas/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
