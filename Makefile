@@ -3266,6 +3266,7 @@ SUBDIR+=	py-hidapi-git
 SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-hmf
 SUBDIR+=	py-holoviews
+SUBDIR+=	py-honcho
 SUBDIR+=	py-hope
 SUBDIR+=	py-hostlist
 SUBDIR+=	py-html
