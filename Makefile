@@ -3108,6 +3108,7 @@ SUBDIR+=	py-django-idmap
 SUBDIR+=	py-django-markwhat
 SUBDIR+=	py-django-mathjax
 SUBDIR+=	py-django-nose
+SUBDIR+=	py-django-sudo
 SUBDIR+=	py-django-templatetag-sugar
 SUBDIR+=	py-django-quran
 SUBDIR+=	py-django-uuidfield
