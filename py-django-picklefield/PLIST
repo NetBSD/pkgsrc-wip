@@ -1,0 +1,20 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/picklefield/__init__.py
+${PYSITELIB}/picklefield/__init__.pyc
+${PYSITELIB}/picklefield/__init__.pyo
+${PYSITELIB}/picklefield/compat.py
+${PYSITELIB}/picklefield/compat.pyc
+${PYSITELIB}/picklefield/compat.pyo
+${PYSITELIB}/picklefield/fields.py
+${PYSITELIB}/picklefield/fields.pyc
+${PYSITELIB}/picklefield/fields.pyo
+${PYSITELIB}/picklefield/models.py
+${PYSITELIB}/picklefield/models.pyc
+${PYSITELIB}/picklefield/models.pyo
+${PYSITELIB}/picklefield/tests.py
+${PYSITELIB}/picklefield/tests.pyc
+${PYSITELIB}/picklefield/tests.pyo
