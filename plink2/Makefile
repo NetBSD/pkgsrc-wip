@@ -31,7 +31,8 @@ CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
 CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
 
 # Check this
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas"
+# MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas"
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
 # INSTALL_TARGET=	install-strip
 
 PORTVERSION=	0.0.0.20180503
