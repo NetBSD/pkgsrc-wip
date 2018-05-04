@@ -3804,6 +3804,7 @@ SUBDIR+=	py-toeplitz
 SUBDIR+=	py-toolz
 SUBDIR+=	py-topkapi
 SUBDIR+=	py-toro
+SUBDIR+=	py-toronado
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-tqdm
 SUBDIR+=	py-tracks
