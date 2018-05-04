@@ -3105,6 +3105,7 @@ SUBDIR+=	py-django-audiofield
 SUBDIR+=	py-django-gitrevision
 SUBDIR+=	py-django-helmholtz
 SUBDIR+=	py-django-idmap
+SUBDIR+=	py-django-jsonfield
 SUBDIR+=	py-django-markwhat
 SUBDIR+=	py-django-mathjax
 SUBDIR+=	py-django-nose
