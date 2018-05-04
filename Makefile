@@ -3521,6 +3521,7 @@ SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
 SUBDIR+=	py-peng
 SUBDIR+=	py-percol
+SUBDIR+=	py-percy
 SUBDIR+=	py-periodictable
 SUBDIR+=	py-peru
 SUBDIR+=	py-pet
