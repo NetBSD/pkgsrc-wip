@@ -6,10 +6,10 @@
 ###########################################################
 
 DISTNAME=	plink-ng-${PORTVERSION}
-CATEGORIES=	wip biology
+CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
-GITHUB_TAG=	d046d8dfbbba50065644bbe9647edbe94a29b1a2
+GITHUB_TAG=	e81056a32d67cd73a69579e2dbb374d16196f305
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
@@ -26,14 +26,14 @@ USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/2.0
 
-CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include
-CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include
+CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
+CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
 
 # Check this
 MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas_pthread"
-INSTALL_TARGET=	install-strip
+# INSTALL_TARGET=	install-strip
 
-PORTVERSION=	g20180428
+PORTVERSION=	0.0.0.20180503
 
 .include "../../wip/openblas_pthread/buildlink3.mk"
 .include "../../wip/cblas/buildlink3.mk"
