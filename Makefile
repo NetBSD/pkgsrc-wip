@@ -2747,6 +2747,7 @@ SUBDIR+=	php-msgpack
 SUBDIR+=	php-tclink
 SUBDIR+=	php-xdiff
 SUBDIR+=	php-zmq
+SUBDIR+=	pick
 SUBDIR+=	picolisp
 SUBDIR+=	picolisp64
 SUBDIR+=	picosat
