@@ -1,0 +1,1004 @@
+$ make help|grep check|grep -v check-llvm|grep -v check-lldb|grep -v check-clang
+... check-all
+... check-builtins
+... check-interception
+... check-lsan
+... check-ubsan
+... check-cfi
+... check-cfi-and-supported
+... check-sanitizer
+... check-fuzzer-default
+... check-fuzzer
+... check-fuzzer-unit
+... check-asan
+... check-asan-dynamic
+... check-msan
+... check-tsan
+... check-safestack
+... check-scudo
+... check-ubsan-minimal
+... check-profile
+... check-xray
+... check-shadowcallstack
+... clang-check
+... environment_check
+... prepare-check-lit
+... check-lit
+... check
+
+$ make check-builtins
+
+********************
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 48.04s
+********************
+Failing Tests (5):
+    Builtins-i386-netbsd :: clear_cache_test.c
+    Builtins-i386-netbsd :: enable_execute_stack_test.c
+    Builtins-i386-netbsd :: muldc3_test.c
+    Builtins-x86_64-netbsd :: clear_cache_test.c
+    Builtins-x86_64-netbsd :: enable_execute_stack_test.c
+
+  Expected Passes    : 343
+  Expected Failures  : 4
+  Unsupported Tests  : 36
+  Unexpected Failures: 5
+
+$ check-interception
+
+-- Testing: 0 tests, 0 threads --
+Testing Time: 0.00s
+
+$ check-lsan
+
+********************
+Testing Time: 9.61s
+********************
+Failing Tests (106):
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/allocator_returns_null.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/default_options.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/disabler.c
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/disabler.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/do_leak_check_override.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/high_allocator_contention.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/ignore_object.c
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/ignore_object_errors.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/leak_check_at_exit.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/leak_check_before_thread_started.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/link_turned_off.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/many_tls_keys.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/new_array_with_dtor_0.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/pointer_to_self.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/print_suppressions.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/recoverable_leak_check.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/register_root_region.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/suppressions_default.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/suppressions_file.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/swapcontext.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_after_return.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_globals_initialized.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_globals_uninitialized.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_poisoned_asan.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_registers.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_stacks.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_stacks_threaded.cc
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_unaligned.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/allocator_returns_null.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/default_options.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/disabler.c
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/disabler.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/do_leak_check_override.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/ignore_object.c
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/leak_check_at_exit.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/link_turned_off.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/many_tls_keys.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/pointer_to_self.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/print_suppressions.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/recoverable_leak_check.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/register_root_region.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/suppressions_default.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/suppressions_file.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/swapcontext.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_after_return.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_globals_initialized.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_globals_uninitialized.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_poisoned_asan.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_registers.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_stacks.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_stacks_threaded.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_unaligned.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/default_options.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/disabler.c
+    LeakSanitizer-Standalone-i386 :: TestCases/disabler.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/do_leak_check_override.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/high_allocator_contention.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/ignore_object.c
+    LeakSanitizer-Standalone-i386 :: TestCases/ignore_object_errors.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/leak_check_at_exit.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/leak_check_before_thread_started.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/link_turned_off.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/many_tls_keys.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/new_array_with_dtor_0.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/pointer_to_self.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/print_suppressions.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/recoverable_leak_check.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/register_root_region.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/sanity_check_pure_c.c
+    LeakSanitizer-Standalone-i386 :: TestCases/suppressions_default.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/suppressions_file.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/swapcontext.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/use_after_return.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/use_globals_initialized.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/use_globals_uninitialized.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/use_registers.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/use_stacks.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/use_stacks_threaded.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/use_unaligned.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/default_options.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/disabler.c
+    LeakSanitizer-Standalone-x86_64 :: TestCases/disabler.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/do_leak_check_override.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/high_allocator_contention.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/ignore_object.c
+    LeakSanitizer-Standalone-x86_64 :: TestCases/ignore_object_errors.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/leak_check_at_exit.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/leak_check_before_thread_started.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/link_turned_off.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/many_tls_keys.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/new_array_with_dtor_0.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/pointer_to_self.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/print_suppressions.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/recoverable_leak_check.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/register_root_region.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/sanity_check_pure_c.c
+    LeakSanitizer-Standalone-x86_64 :: TestCases/suppressions_default.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/suppressions_file.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/swapcontext.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/use_after_return.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/use_globals_initialized.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/use_globals_uninitialized.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/use_registers.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/use_stacks.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/use_stacks_threaded.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/use_unaligned.cc
+
+  Expected Passes    : 6
+  Unsupported Tests  : 60
+  Unexpected Failures: 106
+
+$ check-ubsan
+
+********************
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 47.07s
+********************
+Failing Tests (39):
+    UBSan-AddressSanitizer-i386 :: TestCases/Float/cast-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/add-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/div-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/div-zero.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/incdec-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/mul-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/negate-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/no-recover.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/shift.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/sub-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/summary.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/suppressions.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/uadd-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/uincdec-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/umul-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Integer/usub-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/bool.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/bounds.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/coverage-levels.cc
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/deduplication.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/enum.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/log-path_test.cc
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/missing_return.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/nonnull-arg.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/nonnull.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/nullability.c
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/unreachable.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Misc/vla.c
+    UBSan-AddressSanitizer-i386 :: TestCases/Pointer/index-overflow.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/Pointer/unsigned-index-expression.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/PR33221.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/misaligned.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/null.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/vptr-corrupted-vtable-itanium.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/vptr-non-unique-typeinfo.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/vptr-virtual-base-construction.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/vptr-virtual-base.cpp
+    UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/vptr.cpp
+    UBSan-Standalone-i386 :: TestCases/TypeCheck/vptr-non-unique-typeinfo.cpp
+
+  Expected Passes    : 192
+  Expected Failures  : 1
+  Unsupported Tests  : 32
+  Unexpected Failures: 39
+
+$ check-cfi
+
+-- Testing: 232 tests, 8 threads --
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 0.12s
+  Unsupported Tests  : 232
+
+$ check-cfi-and-supported
+
+BaseException: Tests unsupported
+
+$ make check-sanitizer
+
+********************
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 46.60s
+********************
+Failing Tests (81):
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/faccessat.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/getgrouplist.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/getgroupmembership.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/gid_from_group.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/group_from_gid.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/netent.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/paccept.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/protoent.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/strmode.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/ttyent.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/uid_from_user.cc
+    SanitizerCommon-asan-i386-NetBSD :: NetBSD/user_from_uid.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/access.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/dedup_token_length_test.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/devname.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/devname_r.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/dump_instruction_bytes.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/fgetln.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/getpass.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/illegal_read_test.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/illegal_write_test.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/lstat.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/mmap_test.c
+    SanitizerCommon-asan-i386-NetBSD :: Posix/readlink.c
+    SanitizerCommon-asan-i386-NetBSD :: Posix/readlinkat.c
+    SanitizerCommon-asan-i386-NetBSD :: Posix/sanitizer_set_death_callback_test.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/sanitizer_set_report_fd_test.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/strlcat.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/strlcpy.cc
+    SanitizerCommon-asan-i386-NetBSD :: Posix/strxfrm.c
+    SanitizerCommon-asan-i386-NetBSD :: Posix/wcsxfrm.c
+    SanitizerCommon-asan-i386-NetBSD :: Posix/weak_hook_test.cc
+    SanitizerCommon-asan-i386-NetBSD :: corelimit.cc
+    SanitizerCommon-asan-i386-NetBSD :: ctype.c
+    SanitizerCommon-asan-i386-NetBSD :: fopen_nullptr.c
+    SanitizerCommon-asan-i386-NetBSD :: get_module_and_offset_for_pc.cc
+    SanitizerCommon-asan-i386-NetBSD :: malloc_hook.cc
+    SanitizerCommon-asan-i386-NetBSD :: options-help.cc
+    SanitizerCommon-asan-i386-NetBSD :: options-include.cc
+    SanitizerCommon-asan-i386-NetBSD :: options-invalid.cc
+    SanitizerCommon-asan-i386-NetBSD :: print-stack-trace.cc
+    SanitizerCommon-asan-i386-NetBSD :: printf-ldbl.c
+    SanitizerCommon-asan-i386-NetBSD :: pthread_mutexattr_get.cc
+    SanitizerCommon-asan-i386-NetBSD :: sanitizer_coverage_inline8bit_counter.cc
+    SanitizerCommon-asan-i386-NetBSD :: sanitizer_coverage_stack_depth.cc
+    SanitizerCommon-asan-i386-NetBSD :: sanitizer_coverage_trace_pc_guard-dso.cc
+    SanitizerCommon-asan-i386-NetBSD :: sanitizer_coverage_trace_pc_guard.cc
+    SanitizerCommon-asan-i386-NetBSD :: scanf-ldbl.c
+    SanitizerCommon-asan-i386-NetBSD :: strcasestr.c
+    SanitizerCommon-asan-i386-NetBSD :: strcspn.c
+    SanitizerCommon-asan-i386-NetBSD :: strnlen.c
+    SanitizerCommon-asan-i386-NetBSD :: strpbrk.c
+    SanitizerCommon-asan-i386-NetBSD :: strspn.c
+    SanitizerCommon-asan-i386-NetBSD :: strstr.c
+    SanitizerCommon-asan-i386-NetBSD :: symbolize_pc.cc
+    SanitizerCommon-asan-i386-NetBSD :: symbolize_stack.cc
+    SanitizerCommon-asan-x86_64-NetBSD :: Posix/devname_r.cc
+    SanitizerCommon-asan-x86_64-NetBSD :: Posix/weak_hook_test.cc
+    SanitizerCommon-asan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
+    SanitizerCommon-asan-x86_64-NetBSD :: pthread_mutexattr_get.cc
+    SanitizerCommon-asan-x86_64-NetBSD :: sanitizer_coverage_trace_pc_guard.cc
+    SanitizerCommon-msan-x86_64-NetBSD :: NetBSD/getgroupmembership.cc
+    SanitizerCommon-msan-x86_64-NetBSD :: Posix/dedup_token_length_test.cc
+    SanitizerCommon-msan-x86_64-NetBSD :: Posix/devname_r.cc
+    SanitizerCommon-msan-x86_64-NetBSD :: Posix/weak_hook_test.cc
+    SanitizerCommon-msan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
+    SanitizerCommon-msan-x86_64-NetBSD :: pthread_mutexattr_get.cc
+    SanitizerCommon-msan-x86_64-NetBSD :: sanitizer_coverage_trace_pc_guard.cc
+    SanitizerCommon-tsan-x86_64-NetBSD :: Posix/dedup_token_length_test.cc
+    SanitizerCommon-tsan-x86_64-NetBSD :: Posix/devname_r.cc
+    SanitizerCommon-tsan-x86_64-NetBSD :: Posix/weak_hook_test.cc
+    SanitizerCommon-tsan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
+    SanitizerCommon-tsan-x86_64-NetBSD :: pthread_mutexattr_get.cc
+    SanitizerCommon-ubsan-i386-NetBSD :: Posix/dedup_token_length_test.cc
+    SanitizerCommon-ubsan-i386-NetBSD :: Posix/devname_r.cc
+    SanitizerCommon-ubsan-i386-NetBSD :: get_module_and_offset_for_pc.cc
+    SanitizerCommon-ubsan-i386-NetBSD :: pthread_mutexattr_get.cc
+    SanitizerCommon-ubsan-x86_64-NetBSD :: Posix/dedup_token_length_test.cc
+    SanitizerCommon-ubsan-x86_64-NetBSD :: Posix/devname_r.cc
+    SanitizerCommon-ubsan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
+    SanitizerCommon-ubsan-x86_64-NetBSD :: pthread_mutexattr_get.cc
+
+  Expected Passes    : 526
+  Expected Failures  : 13
+  Unsupported Tests  : 206
+  Unexpected Failures: 81
+
+$ check-fuzzer-default
+
+********************
+Testing Time: 87.15s
+********************
+Failing Tests (20):
+    LLVMFuzzer :: cxxstring.test
+    LLVMFuzzer :: equivalence-signals.test
+    LLVMFuzzer :: equivalence.test
+    LLVMFuzzer :: fuzzer-oom.test
+    LLVMFuzzer :: fuzzer-timeout.test
+    LLVMFuzzer :: memcmp.test
+    LLVMFuzzer :: memcmp64.test
+    LLVMFuzzer :: merge-posix.test
+    LLVMFuzzer :: recommended-dictionary.test
+    LLVMFuzzer :: strcmp.test
+    LLVMFuzzer :: strncmp.test
+    LLVMFuzzer :: strstr.test
+    LLVMFuzzer :: trace-malloc-threaded.test
+    LLVMFuzzer :: trace-malloc-unbalanced.test
+    LLVMFuzzer :: value-profile-cmp.test
+    LLVMFuzzer :: value-profile-load.test
+    LLVMFuzzer :: value-profile-mem.test
+    LLVMFuzzer :: value-profile-set.test
+    LLVMFuzzer :: value-profile-strcmp.test
+    LLVMFuzzer :: value-profile-strncmp.test
+
+  Expected Passes    : 87
+  Unsupported Tests  : 8
+  Unexpected Failures: 20
+
+$ check-fuzzer
+
+********************
+Testing Time: 101.74s
+********************
+Failing Tests (20):
+    LLVMFuzzer :: cxxstring.test
+    LLVMFuzzer :: equivalence-signals.test
+    LLVMFuzzer :: equivalence.test
+    LLVMFuzzer :: fuzzer-oom.test
+    LLVMFuzzer :: fuzzer-timeout.test
+    LLVMFuzzer :: memcmp.test
+    LLVMFuzzer :: memcmp64.test
+    LLVMFuzzer :: merge-posix.test
+    LLVMFuzzer :: recommended-dictionary.test
+    LLVMFuzzer :: strcmp.test
+    LLVMFuzzer :: strncmp.test
+    LLVMFuzzer :: strstr.test
+    LLVMFuzzer :: trace-malloc-threaded.test
+    LLVMFuzzer :: trace-malloc-unbalanced.test
+    LLVMFuzzer :: value-profile-cmp.test
+    LLVMFuzzer :: value-profile-load.test
+    LLVMFuzzer :: value-profile-mem.test
+    LLVMFuzzer :: value-profile-set.test
+    LLVMFuzzer :: value-profile-strcmp.test
+    LLVMFuzzer :: value-profile-strncmp.test
+
+  Expected Passes    : 87
+  Unsupported Tests  : 8
+  Unexpected Failures: 20
+
+$ check-fuzzer-unit
+
+-- Testing: 35 tests, 8 threads --
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 0.44s
+  Expected Passes    : 35
+
+$ check-asan
+
+********************
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+
+6 warning(s) in tests.
+Testing Time: 137.65s
+********************
+Failing Tests (213):
+    AddressSanitizer-Unit :: ./Asan-x86_64-calls-Test/AddressSanitizerInterface.ManyThreadsWithStatsStressTest
+    AddressSanitizer-Unit :: ./Asan-x86_64-inline-Test/AddressSanitizerInterface.ManyThreadsWithStatsStressTest
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/asan-sigbus.cpp
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/asan-symbolize-sanity-test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/asprintf.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/assign_large_valloc_to_global.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/closed-fds.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/concurrent_overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/coverage-fork.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/coverage-module-unloaded.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/coverage-reset.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/coverage.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/current_allocated_bytes.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/deep_call_stack.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/deep_thread_stack.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/dlclose-test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/fread_fwrite.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/free_hook_realloc.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/gc-test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/glob.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/global-registration.c
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/halt_on_error-signals.c
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/halt_on_error-torture.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/halt_on_error_suppress_equal_pcs.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/handle_abort_on_error.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/init-order-pthread-create.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/interception-in-shared-lib-test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/invalid-pointer-pairs-threads.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/ioctl.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/large_allocator_unpoisons_on_free.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/mmap_limit_mb.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/new_array_cookie_with_new_from_class.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/posix_memalign-alignment.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/print_cmdline.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/readv.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/shared-lib-test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/stack-overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/stack-use-after-return.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/start-deactivated.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/strchr.c
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/strerror_r_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/strndup_oob_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/strndup_oob_test2.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/tsd_dtor_leak.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/wait.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/wait3.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/wait4.cc
+    AddressSanitizer-i386-netbsd :: TestCases/Posix/waitid.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_big_alignment.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_constant_size.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_detect_custom_size_.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_instruments_all_paddings.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_loop_unpoisoning.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_overflow_partial.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_overflow_right.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_safe_access.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_underflow_left.cc
+    AddressSanitizer-i386-netbsd :: TestCases/alloca_vla_interact.cc
+    AddressSanitizer-i386-netbsd :: TestCases/allocator_returns_null.cc
+    AddressSanitizer-i386-netbsd :: TestCases/asan_and_llvm_coverage_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/asan_options-help.cc
+    AddressSanitizer-i386-netbsd :: TestCases/atexit_stats.cc
+    AddressSanitizer-i386-netbsd :: TestCases/atoi_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/atol_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/atoll_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/blacklist.cc
+    AddressSanitizer-i386-netbsd :: TestCases/calloc-overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/contiguous_container.cc
+    AddressSanitizer-i386-netbsd :: TestCases/contiguous_container_crash.cc
+    AddressSanitizer-i386-netbsd :: TestCases/coverage-disabled.cc
+    AddressSanitizer-i386-netbsd :: TestCases/coverage-trace-pc.cc
+    AddressSanitizer-i386-netbsd :: TestCases/debug_double_free.cc
+    AddressSanitizer-i386-netbsd :: TestCases/debug_locate.cc
+    AddressSanitizer-i386-netbsd :: TestCases/debug_mapping.cc
+    AddressSanitizer-i386-netbsd :: TestCases/debug_report.cc
+    AddressSanitizer-i386-netbsd :: TestCases/debug_stacks.cc
+    AddressSanitizer-i386-netbsd :: TestCases/deep_stack_uaf.cc
+    AddressSanitizer-i386-netbsd :: TestCases/deep_tail_call.cc
+    AddressSanitizer-i386-netbsd :: TestCases/default_options.cc
+    AddressSanitizer-i386-netbsd :: TestCases/describe_address.cc
+    AddressSanitizer-i386-netbsd :: TestCases/double-free.cc
+    AddressSanitizer-i386-netbsd :: TestCases/error_report_callback.cc
+    AddressSanitizer-i386-netbsd :: TestCases/exitcode.cc
+    AddressSanitizer-i386-netbsd :: TestCases/force_inline_opt0.cc
+    AddressSanitizer-i386-netbsd :: TestCases/frexp_interceptor.cc
+    AddressSanitizer-i386-netbsd :: TestCases/global-address.cpp
+    AddressSanitizer-i386-netbsd :: TestCases/global-demangle.cc
+    AddressSanitizer-i386-netbsd :: TestCases/global-location.cc
+    AddressSanitizer-i386-netbsd :: TestCases/global-overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/global-underflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/halt_on_error-1.c
+    AddressSanitizer-i386-netbsd :: TestCases/handle_noreturn_bug.cc
+    AddressSanitizer-i386-netbsd :: TestCases/heap-overflow-large.cc
+    AddressSanitizer-i386-netbsd :: TestCases/heap-overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/heavy_uar_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/huge_negative_hea_oob.cc
+    AddressSanitizer-i386-netbsd :: TestCases/ill.cc
+    AddressSanitizer-i386-netbsd :: TestCases/init-order-atexit.cc
+    AddressSanitizer-i386-netbsd :: TestCases/initialization-blacklist.cc
+    AddressSanitizer-i386-netbsd :: TestCases/initialization-bug.cc
+    AddressSanitizer-i386-netbsd :: TestCases/initialization-constexpr.cc
+    AddressSanitizer-i386-netbsd :: TestCases/initialization-nobug.cc
+    AddressSanitizer-i386-netbsd :: TestCases/inline.cc
+    AddressSanitizer-i386-netbsd :: TestCases/intercept-rethrow-exception.cc
+    AddressSanitizer-i386-netbsd :: TestCases/interface_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/invalid-free.cc
+    AddressSanitizer-i386-netbsd :: TestCases/invalid-pointer-pairs-compare-errors.cc
+    AddressSanitizer-i386-netbsd :: TestCases/invalid-pointer-pairs-compare-null.cc
+    AddressSanitizer-i386-netbsd :: TestCases/invalid-pointer-pairs-compare-success.cc
+    AddressSanitizer-i386-netbsd :: TestCases/invalid-pointer-pairs-subtract-errors.cc
+    AddressSanitizer-i386-netbsd :: TestCases/invalid-pointer-pairs-subtract-success.cc
+    AddressSanitizer-i386-netbsd :: TestCases/invalid-pointer-pairs.cc
+    AddressSanitizer-i386-netbsd :: TestCases/large_func_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/log-path_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/longjmp.cc
+    AddressSanitizer-i386-netbsd :: TestCases/lsan_annotations.cc
+    AddressSanitizer-i386-netbsd :: TestCases/malloc-size-too-big.cc
+    AddressSanitizer-i386-netbsd :: TestCases/malloc_context_size.cc
+    AddressSanitizer-i386-netbsd :: TestCases/malloc_fill.cc
+    AddressSanitizer-i386-netbsd :: TestCases/max_redzone.cc
+    AddressSanitizer-i386-netbsd :: TestCases/memcmp_strict_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/memcmp_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/memset_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/null_deref.cc
+    AddressSanitizer-i386-netbsd :: TestCases/on_error_callback.cc
+    AddressSanitizer-i386-netbsd :: TestCases/partial_right.cc
+    AddressSanitizer-i386-netbsd :: TestCases/pass-object-byval.cc
+    AddressSanitizer-i386-netbsd :: TestCases/pass-struct-byval.cc
+    AddressSanitizer-i386-netbsd :: TestCases/poison_partial.cc
+    AddressSanitizer-i386-netbsd :: TestCases/pr33372.cc
+    AddressSanitizer-i386-netbsd :: TestCases/print_summary.cc
+    AddressSanitizer-i386-netbsd :: TestCases/printf-1.c
+    AddressSanitizer-i386-netbsd :: TestCases/printf-2.c
+    AddressSanitizer-i386-netbsd :: TestCases/printf-3.c
+    AddressSanitizer-i386-netbsd :: TestCases/printf-4.c
+    AddressSanitizer-i386-netbsd :: TestCases/printf-5.c
+    AddressSanitizer-i386-netbsd :: TestCases/printf-m.c
+    AddressSanitizer-i386-netbsd :: TestCases/realloc.cc
+    AddressSanitizer-i386-netbsd :: TestCases/sanity_check_pure_c.c
+    AddressSanitizer-i386-netbsd :: TestCases/set_shadow_test.c
+    AddressSanitizer-i386-netbsd :: TestCases/sleep_after_init.c
+    AddressSanitizer-i386-netbsd :: TestCases/small_memcpy_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/speculative_load.cc
+    AddressSanitizer-i386-netbsd :: TestCases/speculative_load2.cc
+    AddressSanitizer-i386-netbsd :: TestCases/stack-buffer-overflow-with-position.cc
+    AddressSanitizer-i386-netbsd :: TestCases/stack-buffer-overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/stack-frame-demangle.cc
+    AddressSanitizer-i386-netbsd :: TestCases/stack-oob-frames.cc
+    AddressSanitizer-i386-netbsd :: TestCases/strcasestr-1.c
+    AddressSanitizer-i386-netbsd :: TestCases/strcasestr-2.c
+    AddressSanitizer-i386-netbsd :: TestCases/strcasestr_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strcat_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strchr_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strcmp_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strcpy-overlap.cc
+    AddressSanitizer-i386-netbsd :: TestCases/strcspn-1.c
+    AddressSanitizer-i386-netbsd :: TestCases/strcspn-2.c
+    AddressSanitizer-i386-netbsd :: TestCases/strcspn_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strdup_oob_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/strip_path_prefix.c
+    AddressSanitizer-i386-netbsd :: TestCases/strncasecmp_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strncat-overlap.cc
+    AddressSanitizer-i386-netbsd :: TestCases/strncat_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strncmp_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strncpy-overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/strncpy-overlap.cc
+    AddressSanitizer-i386-netbsd :: TestCases/strpbrk-1.c
+    AddressSanitizer-i386-netbsd :: TestCases/strpbrk-2.c
+    AddressSanitizer-i386-netbsd :: TestCases/strpbrk_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strspn-1.c
+    AddressSanitizer-i386-netbsd :: TestCases/strspn-2.c
+    AddressSanitizer-i386-netbsd :: TestCases/strspn_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strstr-1.c
+    AddressSanitizer-i386-netbsd :: TestCases/strstr-2.c
+    AddressSanitizer-i386-netbsd :: TestCases/strstr_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strtok.c
+    AddressSanitizer-i386-netbsd :: TestCases/strtol_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/strtoll_strict.c
+    AddressSanitizer-i386-netbsd :: TestCases/suppressions-exec-relative-location.cc
+    AddressSanitizer-i386-netbsd :: TestCases/suppressions-function.cc
+    AddressSanitizer-i386-netbsd :: TestCases/suppressions-interceptor.cc
+    AddressSanitizer-i386-netbsd :: TestCases/suppressions-library.cc
+    AddressSanitizer-i386-netbsd :: TestCases/throw_call_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/throw_catch.cc
+    AddressSanitizer-i386-netbsd :: TestCases/throw_invoke_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/time_interceptor.cc
+    AddressSanitizer-i386-netbsd :: TestCases/uar_and_exceptions.cc
+    AddressSanitizer-i386-netbsd :: TestCases/unaligned_loads_and_stores.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-delete.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-free-right.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-free.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-poison.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-capture.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-dtor-order.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-goto.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-if.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-inlined.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-loop-bug.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-loop-removed.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-loop.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-nobug.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-temp.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-temp2.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope-types.cc
+    AddressSanitizer-i386-netbsd :: TestCases/use-after-scope.cc
+    AddressSanitizer-i386-netbsd :: TestCases/verbose-log-path_test.cc
+    AddressSanitizer-i386-netbsd :: TestCases/vla_chrome_testcase.cc
+    AddressSanitizer-i386-netbsd :: TestCases/vla_condition_overflow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/vla_loop_overfow.cc
+    AddressSanitizer-i386-netbsd :: TestCases/zero_page_pc.cc
+    AddressSanitizer-x86_64-netbsd :: TestCases/Posix/stack-use-after-return.cc
+    AddressSanitizer-x86_64-netbsd :: TestCases/Posix/tsd_dtor_leak.cc
+    AddressSanitizer-x86_64-netbsd :: TestCases/intercept-rethrow-exception.cc
+
+  Expected Passes    : 405
+  Expected Failures  : 4
+  Unsupported Tests  : 440
+  Unexpected Failures: 213
+
+$ check-asan-dynamic
+
+********************
+Testing Time: 203.57s
+********************
+Unexpected Passing Tests (1):
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/interception_failure_test.cc
+
+********************
+Failing Tests (224):
+    AddressSanitizer-Unit :: ./Asan-i386-calls-Dynamic-Test/AddressSanitizer.BufferOverflowAfterManyFrees
+    AddressSanitizer-Unit :: ./Asan-i386-inline-Dynamic-Test/AddressSanitizer.BufferOverflowAfterManyFrees
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/concurrent_overflow.cc
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/coverage-reset.cc
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/coverage.cc
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/dlclose-test.cc
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/interception-in-shared-lib-test.cc
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/stack-use-after-return.cc
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/intercept-rethrow-exception.cc
+    AddressSanitizer-i386-netbsd-dynamic :: TestCases/suppressions-library.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/asan-sigbus.cpp
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/asan-symbolize-sanity-test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/asprintf.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/assign_large_valloc_to_global.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/closed-fds.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/concurrent_overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/coverage-fork.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/coverage-module-unloaded.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/coverage-reset.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/coverage.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/current_allocated_bytes.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/deep_call_stack.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/deep_thread_stack.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/dlclose-test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/fread_fwrite.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/free_hook_realloc.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/freopen.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/gc-test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/glob.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/global-registration.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/halt_on_error-signals.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/halt_on_error-torture.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/halt_on_error_suppress_equal_pcs.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/handle_abort_on_error.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/init-order-pthread-create.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/interception-in-shared-lib-test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/invalid-pointer-pairs-threads.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/ioctl.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/large_allocator_unpoisons_on_free.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/mmap_limit_mb.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/new_array_cookie_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/new_array_cookie_uaf_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/new_array_cookie_with_new_from_class.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/posix_memalign-alignment.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/print_cmdline.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/readv.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/shared-lib-test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/stack-overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/stack-use-after-return.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/start-deactivated.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/strchr.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/strerror_r_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/strndup_oob_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/strndup_oob_test2.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/tsd_dtor_leak.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/wait.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/wait3.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/wait4.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/waitid.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_big_alignment.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_constant_size.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_detect_custom_size_.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_instruments_all_paddings.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_loop_unpoisoning.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_overflow_partial.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_overflow_right.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_safe_access.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_underflow_left.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_vla_interact.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/allocator_returns_null.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/asan_and_llvm_coverage_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/asan_options-help.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/atexit_stats.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/atoi_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/atol_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/atoll_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/blacklist.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/calloc-overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/contiguous_container.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/contiguous_container_crash.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/coverage-disabled.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/coverage-trace-pc.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/debug_double_free.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/debug_locate.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/debug_mapping.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/debug_report.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/debug_stacks.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/deep_stack_uaf.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/deep_tail_call.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/default_options.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/describe_address.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/double-free.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/error_report_callback.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/exitcode.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/force_inline_opt0.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/frexp_interceptor.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/global-address.cpp
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/global-demangle.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/global-location.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/global-overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/global-underflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/halt_on_error-1.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/handle_noreturn_bug.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/heap-overflow-large.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/heap-overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/heavy_uar_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/huge_negative_hea_oob.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/ill.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/init-order-atexit.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/initialization-blacklist.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/initialization-bug.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/initialization-constexpr.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/initialization-nobug.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/inline.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/intercept-rethrow-exception.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/interface_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/intra-object-overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/invalid-free.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/invalid-pointer-pairs-compare-errors.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/invalid-pointer-pairs-compare-null.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/invalid-pointer-pairs-compare-success.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/invalid-pointer-pairs-subtract-errors.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/invalid-pointer-pairs-subtract-success.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/invalid-pointer-pairs.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/large_func_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/log-path_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/longjmp.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/lsan_annotations.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/malloc-size-too-big.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/malloc_context_size.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/malloc_fill.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/max_redzone.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/memcmp_strict_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/memcmp_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/memset_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/null_deref.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/on_error_callback.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/partial_right.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/pass-object-byval.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/pass-struct-byval.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/poison_partial.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/pr33372.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/print_summary.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/printf-1.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/printf-2.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/printf-3.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/printf-4.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/printf-5.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/printf-m.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/realloc.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/sanity_check_pure_c.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/scariness_score_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/set_shadow_test.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/sleep_after_init.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/sleep_before_dying.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/small_memcpy_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/speculative_load.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/speculative_load2.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/stack-buffer-overflow-with-position.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/stack-buffer-overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/stack-frame-demangle.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/stack-oob-frames.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcasestr-1.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcasestr-2.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcasestr_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcat_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strchr_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcmp_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcpy-overlap.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcspn-1.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcspn-2.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcspn_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strdup_oob_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strip_path_prefix.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncasecmp_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncat-overlap.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncat_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncmp_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncpy-overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncpy-overlap.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strpbrk-1.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strpbrk-2.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strpbrk_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strspn-1.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strspn-2.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strspn_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strstr-1.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strstr-2.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strstr_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strtok.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strtol_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strtoll_strict.c
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/suppressions-exec-relative-location.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/suppressions-function.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/suppressions-interceptor.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/suppressions-library.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/throw_call_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/throw_catch.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/throw_invoke_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/time_interceptor.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/uar_and_exceptions.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/unaligned_loads_and_stores.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-delete.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-free-right.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-free.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-poison.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-capture.cc
+    AddressSanitizer-x86_64-n
+2 warning(s) in tests.
+etbsd-dynamic :: TestCases/use-after-scope-dtor-order.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-goto.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-if.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-inlined.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop-bug.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop-removed.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-nobug.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-temp.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-temp2.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-types.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/verbose-log-path_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/vla_chrome_testcase.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/vla_condition_overflow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/vla_loop_overfow.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/zero_page_pc.cc
+
+  Expected Passes    : 392
+  Expected Failures  : 3
+  Unsupported Tests  : 440
+  Unexpected Passes  : 1
+  Unexpected Failures: 224
+
+$ check-msan
+
+********************
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 42.84s
+********************
+Failing Tests (4):
+    MemorySanitizer-X86_64 :: chained_origin_with_signals.cc
+    MemorySanitizer-X86_64 :: dtls_test.c
+    MemorySanitizer-X86_64 :: ioctl_custom.cc
+    MemorySanitizer-X86_64 :: signal_stress_test.cc
+
+  Expected Passes    : 102
+  Expected Failures  : 1
+  Unsupported Tests  : 30
+  Unexpected Failures: 4
+
+$ check-tsan
+
+********************
+Testing Time: 124.79s
+********************
+Failing Tests (8):
+    ThreadSanitizer-x86_64 :: dtls.c
+    ThreadSanitizer-x86_64 :: getline_nohang.cc
+    ThreadSanitizer-x86_64 :: ignore_lib5.cc
+    ThreadSanitizer-x86_64 :: ignored-interceptors-mmap.cc
+    ThreadSanitizer-x86_64 :: mutex_lock_destroyed.cc
+    ThreadSanitizer-x86_64 :: signal_block.cc
+    ThreadSanitizer-x86_64 :: strerror_r.cc
+    ThreadSanitizer-x86_64 :: vfork.cc
+
+  Expected Passes    : 288
+  Expected Failures  : 1
+  Unsupported Tests  : 84
+  Unexpected Failures: 8
+
+$ check-safestack
+
+-- Testing: 8 tests, 8 threads --
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 1.55s
+  Expected Passes    : 7
+  Unsupported Tests  : 1
+
+
+$ check-scudo
+
+********************
+Testing Time: 3.87s
+********************
+Failing Tests (28):
+    Scudo-i386 :: memalign.c
+    Scudo-i386 :: preload.cpp
+    Scudo-i386 :: rss.c
+    Scudo-i386 :: secondary.c
+    Scudo-i386 :: threads.c
+    Scudo-i386 :: tsd_destruction.c
+    Scudo-i386 :: valloc.c
+    Scudo-x86_64 :: alignment.c
+    Scudo-x86_64 :: double-free.cpp
+    Scudo-x86_64 :: interface.cpp
+    Scudo-x86_64 :: malloc.cpp
+    Scudo-x86_64 :: memalign.c
+    Scudo-x86_64 :: mismatch.cpp
+    Scudo-x86_64 :: options.cpp
+    Scudo-x86_64 :: overflow.c
+    Scudo-x86_64 :: preinit.c
+    Scudo-x86_64 :: preload.cpp
+    Scudo-x86_64 :: quarantine.c
+    Scudo-x86_64 :: random_shuffle.cpp
+    Scudo-x86_64 :: realloc.cpp
+    Scudo-x86_64 :: rss.c
+    Scudo-x86_64 :: secondary.c
+    Scudo-x86_64 :: sized-delete.cpp
+    Scudo-x86_64 :: sizes.cpp
+    Scudo-x86_64 :: stats.c
+    Scudo-x86_64 :: threads.c
+    Scudo-x86_64 :: tsd_destruction.c
+    Scudo-x86_64 :: valloc.c
+
+  Expected Passes    : 14
+  Unexpected Failures: 28
+
+$ check-ubsan-minimal
+
+-- Testing: 8 tests, 8 threads --
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 1.00s
+  Expected Passes    : 6
+  Unsupported Tests  : 2
+
+
+$ check-profile
+
+-- Testing: 116 tests, 8 threads --
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 0.12s
+  Unsupported Tests  : 116
+
+$ check-xray
+
+********************
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 2.10s
+********************
+Failing Tests (21):
+    XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.MultiThreadedCycling
+    XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.Multiple
+    XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.Simple
+    XRay-x86_64-netbsd :: TestCases/Posix/always-never-instrument.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/arg1-arg0-logging.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/arg1-logger.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/arg1-logging-implicit-this.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/argv0-log-file-name.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/basic-filtering.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/common-trampoline-alignment.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/coverage-sample.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/custom-event-handler-alignment.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/fdr-mode.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/fdr-single-thread.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/fdr-thread-order.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/fixedsize-logging.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/func-id-utils.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/logging-modes.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/optional-inmemory-log.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/patching-unpatching.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/pic_test.cc
+
+  Expected Passes    : 21
+  Unsupported Tests  : 1
+  Unexpected Failures: 21
+
+$ check-shadowcallstack
+
+-- Testing: 4 tests, 4 threads --
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 0.11s
+  Unsupported Tests  : 4
