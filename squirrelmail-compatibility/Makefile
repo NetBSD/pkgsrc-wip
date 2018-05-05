@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.squirrelmail.org/plugins/
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Previous version compatibility plugin for SquirrelMail
-
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 
