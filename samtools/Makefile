@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	samtools-${PV}
+DISTNAME=	samtools-1.8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_PROJECT=	samtools
-GITHUB_TAG=	${PV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.htslib.org/
@@ -17,14 +17,12 @@ GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/*.pl misc/plot-bamstats test/test.pl
 REPLACE_PYTHON=	misc/*.py
 
-PV=	1.8
-
-post-patch:
-	${CP} ${FILESDIR}/ax_with_htslib.m4 ${WRKSRC}/
-	${CP} ${FILESDIR}/ax_with_curses.m4 ${WRKSRC}/
+#post-patch:
+#	${CP} ${FILESDIR}/ax_with_htslib.m4 ${WRKSRC}/
+#	${CP} ${FILESDIR}/ax_with_curses.m4 ${WRKSRC}/
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -if
+	cd ${WRKSRC} && autoreconf
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/python/application.mk"
