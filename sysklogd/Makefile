@@ -9,6 +9,7 @@ MASTER_SITES+=		http://www.infodrom.org/projects/sysklogd/download/
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.infodrom.org/projects/sysklogd/
 COMMENT=		System and kernel log daemons for Linux
+LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-*-*	# This has Linux klogd
 
