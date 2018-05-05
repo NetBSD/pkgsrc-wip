@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake autoconf automake
 USE_LANGUAGES=	c c++
 
+TEST_TARGET=	check
+
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
