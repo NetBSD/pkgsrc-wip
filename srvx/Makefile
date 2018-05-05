@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=srvx/}
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://srvx.sourceforge.net/
 COMMENT=	Srvx IRC services
-
+LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
