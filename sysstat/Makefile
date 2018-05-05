@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/status/}
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://perso.orange.fr/sebastien.godard/
 COMMENT=		System performance tools for Linux
-
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 # uses msgfmt
