@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-05-04 08:00:15.553459333 +0000
+--- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-04-25 21:13:40.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux.cc
 @@ -93,6 +93,7 @@ extern "C" {
  

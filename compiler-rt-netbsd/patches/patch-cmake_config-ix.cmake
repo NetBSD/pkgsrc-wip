@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/config-ix.cmake.orig	2018-05-04 08:00:10.159967293 +0000
+--- cmake/config-ix.cmake.orig	2018-04-25 21:13:41.000000000 +0000
 +++ cmake/config-ix.cmake
 @@ -551,7 +551,7 @@ else()
  endif()

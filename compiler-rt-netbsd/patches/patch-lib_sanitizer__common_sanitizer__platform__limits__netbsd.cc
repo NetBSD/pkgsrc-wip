@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-05-04 08:00:15.526146093 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-04-25 21:13:40.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
 @@ -15,9 +15,15 @@
  #include "sanitizer_platform.h"
