@@ -1,4 +1,5 @@
 @comment $NetBSD$
+basepkg/README.html
 basepkg/README.md
 basepkg/basepkg.sh
 basepkg/sets/comments

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	basepkg-1.4.1
+DISTNAME=	basepkg-1.5
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
@@ -15,7 +15,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
-WRKSRC=		${WRKDIR}/basepkg-1.4.1
+WRKSRC=		${WRKDIR}/basepkg-1.5
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
@@ -24,6 +24,7 @@ INSTALLATION_DIRS+=	basepkg basepkg/sets ${PKGMANDIR}/man1
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/basepkg.sh ${DESTDIR}${PREFIX}/basepkg
 	${INSTALL_SCRIPT} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/basepkg
+	${INSTALL_SCRIPT} ${WRKSRC}/README.html ${DESTDIR}${PREFIX}/basepkg
 	${INSTALL_MAN} ${WRKSRC}/man/man1/basepkg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/man1/basepkg.sh.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/sets/comments ${DESTDIR}${PREFIX}/basepkg/sets/comments

@@ -1,6 +1,9 @@
-The basepkg is a framework for NetBSD base system packages.
-The features of basepkg include:
+The basepkg is a build framework for NetBSD base system packages.
+It aims which makes it possible to managing NetBSD base system based on package
+like as Debian apt, RHEL yum, and others.
 
-- Making packages of NetBSD base system.
+The basepkg.sh builds all categories packages into the "packages" directory.
+We can manage these packages to own NetBSD system using pkg_add(1),
+pkg_delete(1) and pkg_info(1) same as pkgsrc(7).
 
-Please read share/basepkg/README.md for use it.
+Please read README for detail.
