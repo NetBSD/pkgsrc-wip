@@ -8,6 +8,7 @@ MASTER_SITES=	http://downloads.sxemacs.org/releases/
 MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.sxemacs.org/
 COMMENT=	SXEmacs text editor version 22
+LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	gnuclient-[0-9]*
 CONFLICTS+=	xemacs-[0-9]*
