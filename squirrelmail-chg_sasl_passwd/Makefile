@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.squirrelmail.org/plugins/
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	SASL password changing plugin for SquirrelMail
+LICENSE=	gnu-gpl-v2
 
 NO_CONFIGURE=	YES
 
