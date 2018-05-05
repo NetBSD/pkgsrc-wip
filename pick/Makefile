@@ -11,6 +11,5 @@ COMMENT=	A fuzzy search tool for the command-line
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoconf pkgconf	
 
 .include "../../mk/bsd.pkg.mk"
