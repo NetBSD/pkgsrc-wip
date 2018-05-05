@@ -11,6 +11,7 @@ MASTER_SITES=	http://www.spamassassin.org/devel/		\
 MAINTAINER=	tom@replic8.net
 HOMEPAGE=	http://spamassassin.apache.org/
 COMMENT=	Mail filter to identify spam (CVS snapshot)
+LICENSE=	apache-2.0
 
 DEPENDS+=	p5-Net-DNS>=0.29:../../net/p5-Net-DNS
 DEPENDS+=	p5-HTML-Parser>=3.29:../../www/p5-HTML-Parser
