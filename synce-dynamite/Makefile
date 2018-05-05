@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.synce.org/oldwiki/index.php/Dynamite
 COMMENT=		Microsoft cabinet file extraction library
+LICENSE=		mit
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.synce.org/oldwiki/index.php/Orange
 COMMENT=		Extract installable files from self-extracting installers
-
+LICENSE=		mit
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
