@@ -293,6 +293,7 @@ ${PYSITELIB}/qutebrowser/img/broken_qutebrowser_logo.png
 ${PYSITELIB}/qutebrowser/img/file.svg
 ${PYSITELIB}/qutebrowser/img/folder.svg
 ${PYSITELIB}/qutebrowser/javascript/caret.js
+${PYSITELIB}/qutebrowser/javascript/global_wrapper.js
 ${PYSITELIB}/qutebrowser/javascript/greasemonkey_wrapper.js
 ${PYSITELIB}/qutebrowser/javascript/history.js
 ${PYSITELIB}/qutebrowser/javascript/pac_utils.js
