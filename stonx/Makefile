@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stonx/}
 MAINTAINER=		xmor61@users.sourceforge.net
 HOMEPAGE=		http://stonx.sourceforge.net/
 COMMENT=		Atari ST Emulator
-
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 
