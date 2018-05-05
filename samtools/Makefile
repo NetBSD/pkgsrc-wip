@@ -17,15 +17,11 @@ GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/*.pl misc/plot-bamstats test/test.pl
 REPLACE_PYTHON=	misc/*.py
 
-#post-patch:
-#	${CP} ${FILESDIR}/ax_with_htslib.m4 ${WRKSRC}/
-#	${CP} ${FILESDIR}/ax_with_curses.m4 ${WRKSRC}/
-
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
