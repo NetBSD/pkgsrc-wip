@@ -8,10 +8,24 @@ II. -pg
 Summary:
   The basic units of profiling are different. llvm-cov/gcov is line-based, while gprof is function-based.
 Do we need llvm-cov for libFuzzer?
-  I don't think so. It seems there is no relationship between these two. However, there is something named
-  "SanitizerCoverage"(https://clang.llvm.org/docs/SanitizerCoverage.html) utilizing sanitizer to help with
-  profiling. But I still don't think they are necessary for libFuzzer itself.
+  I don't think so. It seems there is no relationship between these two.
+III. SanitizerCoverage (https://clang.llvm.org/docs/SanitizerCoverage.html)
+  There are command line arguments like:
+    -fsanitize-coverage=trace-pc-guard,indirect-calls,trace-gep,trace-div,trace-cmp
+  We would like to cover them in llvm / clang tests (wherever applicable). At least covering
+  the netbsd--x86_64 target.
+  Examples of tests: clang/test/Driver/fsanitize-coverage.c clang/test/Driver/fuzzer.c
+  It seams that these features aren't functional on NetBSD for unknown reason.
+  SanitizerCoverage is required for at least a part of the libfuzzer functionality.
 
+sanitizers:
+ - ASan (amd64, i386), UBSan (all ports), MSan (amd64), TSan (amd64) - ported and mostly functional
+ - LSan - in progresss (scheduled after ptrace(2) kernel fixes)
+ - src/ integration - TODO:
+  * import compiler-rt into src/
+  * add Makefile glue to build and install compiler-rt features (check cmake/config-ix.cmake)
+    along the MKLLVM target
+  * add MKSANITIZER build option, to prebuild libraries and programs with a desired sanitizer
 
 $ make check-fuzzer
 
@@ -56,5 +70,14 @@ II. hangs
 
   workaround: kill with pkill(1) or kill(1)
 
-III. Unknown
+III. SanitizerCoverage tests
+  At least 'trace-cmp' ones don't work for unknown reason.
+
+IV. Unknown
   the rest
+
+TODO:
+ - ASan 32-bit restoration (assignee: kamil)
+ - oom-killer, research a crasher and share with kernel developers
+ - oom-killer, add a new ATF test to check oom-killer
+ - upstream semaphore fixes to reviews.llvm.org
