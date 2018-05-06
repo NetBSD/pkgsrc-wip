@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tleenx/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tleenx.sourceforge.net/
 COMMENT=	Client to tlen.pl - polish IM / chat system
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

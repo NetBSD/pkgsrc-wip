@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tleenx/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tleenx.sourceforge.net/
 COMMENT=		Polish IM communication client
+LICENSE=	gnu-gpl-v2
 
 
 GNU_CONFIGURE=		yes
