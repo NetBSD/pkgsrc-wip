@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxtype/}
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://tuxtype.sourceforge.net/
 COMMENT=	Educational typing tutorial game for children
+LICENSE=	gnu-gpl-v2
 
 VERSION=	1.5.0
 
