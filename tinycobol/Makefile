@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tiny-cobol/}
 MAINTAINER=		lrfurtado@yahoo.com.br
 HOMEPAGE=		http://tiny-cobol.sourceforge.net/
 COMMENT=		Tiny COBOL compiler for IA32 platforms
-
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFIGURE_ARGS+=	--with-libdb=2
 
