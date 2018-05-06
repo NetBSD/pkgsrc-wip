@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=talksoup/}
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://talksoup.sourceforge.net/
 COMMENT=	IRC client for GNUstep and MacOSX
+LICENSE=	gnu-gpl-v2
 
 
 USE_LANGUAGES=		objc
