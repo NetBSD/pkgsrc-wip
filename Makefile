@@ -4023,7 +4023,6 @@ SUBDIR+=	riak
 SUBDIR+=	riak14
 SUBDIR+=	ricochet
 SUBDIR+=	ripe-rpsl-objectlibrary
-SUBDIR+=	ripgrep
 SUBDIR+=	ripit
 SUBDIR+=	ripole
 SUBDIR+=	rippled
