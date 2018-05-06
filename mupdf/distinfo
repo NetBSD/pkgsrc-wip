@@ -9,5 +9,6 @@ SHA1 (patch-ab) = 5ca9de36a7f38cdcf0578cded98cdd54bed78ab5
 SHA1 (patch-ac) = 0c140ee7f0a86bc300c91845da0bd3bf5f0b7c14
 SHA1 (patch-ae) = c6b113818b32cb4470e8549c00a16e0b2f364ede
 SHA1 (patch-platform_gl_gl-app.h) = 6e5e547df27ecb2b82cadd71489d2eb9138c1ce2
+SHA1 (patch-platform_gl_gl-main.c) = 526c3e8c1c548490ef97f59e491b237f803f250e
 SHA1 (patch-source_fitz_load-jpx.c) = b507c1ebab027167af363c9f0f64d8690ea75ff3
 SHA1 (patch-thirdparty_mujs_Makefile) = d3e163bcc4e3d2509401b87e5da8eddb35394dc9

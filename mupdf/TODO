@@ -1,4 +1,2 @@
-- Test `curl' and `opengl' options.
-
 After updating print/mupdf:
  - print/zathura-pdf-mupdf needs a PKGREVISION++
