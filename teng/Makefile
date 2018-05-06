@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ondrej.tuma@firma.seznam.cz
 HOMEPAGE=	http://teng.sourceforge.net/
 COMMENT=	Teng is a general purpose templating engine (whence Teng)
+LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
