@@ -15,6 +15,7 @@ MASTER_SITES=	# not defined
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://trac-hacks.org/wiki/TimingAndEstimationPlugin
 COMMENT=	TimingAndEstimation plugin for Trac
+LICENSE=	mit
 
 DEPENDS+=	trac>=0.12:../../www/trac
 

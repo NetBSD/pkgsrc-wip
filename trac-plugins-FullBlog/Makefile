@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	https://trac-hacks.org/wiki/FullBlogPlugin
 COMMENT=	Blog plugin for Trac
+LICENSE=	modified-bsd
 
 DEPENDS+=	trac>=0.11:../../www/trac
 
