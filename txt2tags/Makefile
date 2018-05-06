@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=			dbolgheroni@unifei.edu.br
 HOMEPAGE=			http://txt2tags.sourceforge.net/
 COMMENT=			Text formatting and conversion tool
+LICENSE=	gnu-gpl-v2
 
 REPLACE_PYTHON=		txt2tags
 
