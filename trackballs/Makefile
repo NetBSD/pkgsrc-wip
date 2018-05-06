@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trackballs/}
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://trackballs.sourceforge.net/
 COMMENT=	SDL-based Marble Madness clone
-
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
