@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-core-info-1.7.2.tar.gz) = 221b4117f574a5b44c453c33aa12e3afc9d2ca3b
-RMD160 (libretro-core-info-1.7.2.tar.gz) = 763ac9d9e23d31232d50588e326cf3094a599911
-SHA512 (libretro-core-info-1.7.2.tar.gz) = 48168b89d1be631d8ccc67919f805cf61dbb6c771dcd7cbaefb5fb3907c1b1699c983db8c472a2872765e041ee8e17b0f04691e7a9642803b4cbbdba52fd782f
-Size (libretro-core-info-1.7.2.tar.gz) = 21095 bytes
+SHA1 (libretro-core-info-1.7.3.tar.gz) = 5e8d2cf410dae69a1cc499216f5c04a65c7f01e9
+RMD160 (libretro-core-info-1.7.3.tar.gz) = bfa791e7a795d75b35ffd38dc61bd7f3cb0fd9de
+SHA512 (libretro-core-info-1.7.3.tar.gz) = 9846c044ec45d2b78493d50596e959a9ff38a1ac4ecd99edcf27b67443c140d5b6496b5a3aacde9179e7983dbe48d6f3b18d79582bfecd6ed29671f1436c788f
+Size (libretro-core-info-1.7.3.tar.gz) = 21208 bytes

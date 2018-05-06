@@ -144,6 +144,7 @@ share/libretro/info/testsw_vram_libretro.info
 share/libretro/info/testvulkan_async_compute_libretro.info
 share/libretro/info/testvulkan_libretro.info
 share/libretro/info/tgbdual_libretro.info
+share/libretro/info/theodore_libretro.info
 share/libretro/info/thepowdertoy_libretro.info
 share/libretro/info/tyrquake_libretro.info
 share/libretro/info/uae4arm_libretro.info
