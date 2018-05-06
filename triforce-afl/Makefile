@@ -10,7 +10,7 @@ GIT_COMMIT=	73ec279d5ee3aa84fd7e4e8c3818428d437d8fa7
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	https://github.com/nccgroup/
 COMMENT=	AFL/QEMU fuzzing with full-system emulation
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	apache-2.0
 
 EXTRACT_USING=	gtar
 WRKSRC=		${WRKDIR}/TriforceAFL-${GIT_COMMIT}
