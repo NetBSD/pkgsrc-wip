@@ -728,6 +728,8 @@ share/retroarch/assets/xmb/emojiactive/png/undo.png
 share/retroarch/assets/xmb/emojiactive/png/wifi.png
 share/retroarch/assets/xmb/emojiactive/png/zip.png
 share/retroarch/assets/xmb/flatui/font.ttf
+share/retroarch/assets/xmb/flatui/png/Arcade-content.png
+share/retroarch/assets/xmb/flatui/png/Arcade.png
 share/retroarch/assets/xmb/flatui/png/Atari - 2600-content.png
 share/retroarch/assets/xmb/flatui/png/Atari - 2600.png
 share/retroarch/assets/xmb/flatui/png/Atari - 7800-content.png
@@ -792,8 +794,12 @@ share/retroarch/assets/xmb/flatui/png/Nintendo - Virtual Boy.png
 share/retroarch/assets/xmb/flatui/png/Nintendo - Wii-content.png
 share/retroarch/assets/xmb/flatui/png/Nintendo - Wii.png
 share/retroarch/assets/xmb/flatui/png/Nintendo GameCube-content.png
+share/retroarch/assets/xmb/flatui/png/Rick Dangerous-content.png
+share/retroarch/assets/xmb/flatui/png/Rick Dangerous.png
 share/retroarch/assets/xmb/flatui/png/SNK - Neo Geo Pocket Color-content.png
 share/retroarch/assets/xmb/flatui/png/SNK - Neo Geo Pocket Color.png
+share/retroarch/assets/xmb/flatui/png/Sega - Game Gear-content.png
+share/retroarch/assets/xmb/flatui/png/Sega - Game Gear.png
 share/retroarch/assets/xmb/flatui/png/Sega - Master System - Mark III-content.png
 share/retroarch/assets/xmb/flatui/png/Sega - Master System - Mark III.png
 share/retroarch/assets/xmb/flatui/png/Sega - Mega Drive - Genesis-content.png
