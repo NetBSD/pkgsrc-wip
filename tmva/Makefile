@@ -8,9 +8,9 @@ MASTER_SITES=	http://tmva.sourceforge.net/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://tmva.sourceforge.net
+HOMEPAGE=	http://tmva.sourceforge.net/
 COMMENT=	Toolkit for Multivariate Data Analysis with ROOT
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++
