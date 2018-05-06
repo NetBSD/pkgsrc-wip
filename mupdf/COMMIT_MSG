@@ -6,6 +6,7 @@ pkgsrc changes:
  - Get rid of OPJ_STATIC patch hunk in patches/patch-source_fitz_load-jpx.c (it
    is no more needed, because the `-DOPJ_STATIC' is now passed in Makefile-s
    when the bundled openjpeg is used).
+ - Pass HAVE_LIBCRYPTO=no to avoid requiring openssl>=1.1.0.
 
 Changes:
 1.13.0
