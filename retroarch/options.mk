@@ -3,7 +3,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype x11 alsa caca pulseaudio udev
+PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype qt5 x11 alsa caca pulseaudio udev libusb-1 libxml2
 PKG_SUGGESTED_OPTIONS+=		sdl2 ffmpeg freetype x11
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
@@ -41,6 +41,27 @@ CONFIGURE_ARGS+=	--disable-neon
 .  endif
 .endif
 
+.if !empty(PKG_OPTIONS:Mqt5)
+CONFIGURE_ARGS+=	--enable-qt
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-qt
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibxml2)
+CONFIGURE_ARGS+=	--enable-libxml2
+.include "../../textproc/libxml2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libxml2
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibusb-1)
+CONFIGURE_ARGS+=	--enable-libusb
+.include "../../devel/libusb1/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libusb
+.endif
+
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--enable-opengl
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -74,6 +95,7 @@ SUBST_STAGE.vc=		pre-configure
 SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		qb/config.libs.sh
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
+
 CONFIGURE_ARGS+=	--enable-opengles
 .endif
 
