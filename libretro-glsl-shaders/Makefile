@@ -1,17 +1,18 @@
 # $NetBSD$
 
-DISTNAME=	libretro-glsl-shaders-20180228
+PKGNAME=	libretro-glsl-shaders-1.7.3
+DISTNAME=	retroarch-assets-${PKGVERSION_NOREV}
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
-GITHUB_PROJECT=	glsl-shaders
-GITHUB_TAG=	403abc416bbcee4ec05a46999cc9196c44dcdaa3
+MASTER_SITES=	-http://buildbot.libretro.com/stable/${PKGVERSION_NOREV}/windows-msvc2010/x86_64/RetroArch.7z
+EXTRACT_SUFX=	.7z
 
 MAINTAINER=	nia.alarie@gmail.com
 COMMENT=	Libretro GLSL shaders
 
-EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
+
+WRKSRC=		${WRKDIR}/shaders/shaders_glsl
 
 SHADER_DIRS+=	3dfx
 SHADER_DIRS+=	3dfx/shaders

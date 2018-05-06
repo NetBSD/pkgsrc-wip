@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-glsl-shaders-20180228-403abc416bbcee4ec05a46999cc9196c44dcdaa3.tar.gz) = 64cbccbdd76ccc5cdcbd1f432a422deecfa3d344
-RMD160 (libretro-glsl-shaders-20180228-403abc416bbcee4ec05a46999cc9196c44dcdaa3.tar.gz) = ed0845c24dbd1164ad62b02a7543f4f7f441d9a5
-SHA512 (libretro-glsl-shaders-20180228-403abc416bbcee4ec05a46999cc9196c44dcdaa3.tar.gz) = 5363ccea37a3b55959ae4728f07f14b8f7a80c15101d3c7e37c15c00940df49359f0ee98800f4b16cd6659efb55db077162fb06be931f1cdd6504cd01c1e121a
-Size (libretro-glsl-shaders-20180228-403abc416bbcee4ec05a46999cc9196c44dcdaa3.tar.gz) = 22601894 bytes
+SHA1 (retroarch-assets-1.7.3.7z) = 5a4993c047c6a34037acc937aa9d71ca12adfddb
+RMD160 (retroarch-assets-1.7.3.7z) = ff63d6f2959823783320092cb76164509a319515
+SHA512 (retroarch-assets-1.7.3.7z) = 5b355e3652c804a6641edb314ad44049db3d03581faa4d05bec3cbc1bedf5d6631ab6a8526c8b9303f0e4b6dc96d31851afef540637e90b7a4f0213cbf180cef
+Size (retroarch-assets-1.7.3.7z) = 154934601 bytes
