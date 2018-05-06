@@ -9,7 +9,7 @@ DISTNAME=	plink-ng-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
-GITHUB_TAG=	e81056a32d67cd73a69579e2dbb374d16196f305
+GITHUB_TAG=	16230ed1c386312ab233ac98e414f67e28f72b4d
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
@@ -23,16 +23,19 @@ GCC_REQD+=	5.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/2.0
 
-CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
-CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -g
+CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
+CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 
 # Check this
 # MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas"
 MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
+# Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
-PORTVERSION=	0.0.0.20180503
+PORTVERSION=	0.0.0.20180504
 # PREFER.zlib=pkgsrc	# Requires newer version than NetBSD 7.1 provides
+
+.include "options.mk"
 
 #.include "../../wip/openblas_pthread/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
