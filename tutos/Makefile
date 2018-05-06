@@ -10,6 +10,7 @@ MASTER_SITES=	http://www.tutos.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tutos.org/homepage/about.html
 COMMENT=	Time and team management software
+LICENSE=	gnu-gpl-v2
 
 TUTOS_USER?=	tutos
 TUTOS_GROUP?=	${TUTOS_USER}
