@@ -8,6 +8,7 @@ MASTER_SITES=	http://www-rocq.inria.fr/~acohen/tuareg/mode/
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://www-rocq.inria.fr/~acohen/tuareg/
 COMMENT=	GNU Emacs/XEmacs major mode for editing Caml and OCaml programs
+LICENSE=	gnu-gpl-v2
 
 NO_BUILD=	yes
 
