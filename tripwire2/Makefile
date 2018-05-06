@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tripwire/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/tripwire/
 COMMENT=	File and directory integrity checker
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/
 CONFLICTS+=		tripwire-1*
