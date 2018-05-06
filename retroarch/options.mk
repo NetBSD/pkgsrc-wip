@@ -62,13 +62,6 @@ CONFIGURE_ARGS+=	--enable-libusb
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
 
-.if !empty(PKG_OPTIONS:Mopengl)
-CONFIGURE_ARGS+=	--enable-opengl
-.include "../../graphics/MesaLib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-opengl
-.endif
-
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--enable-x11
 .include "../../x11/libX11/buildlink3.mk"
@@ -88,7 +81,18 @@ CONFIGURE_ARGS+=	--enable-caca
 CONFIGURE_ARGS+=	--disable-caca
 .endif
 
-.if !empty(PKG_OPTIONS:Mrpi)
+#
+# Graphics acceleration options
+#
+
+# Use standard Mesa OpenGL
+.if !empty(PKG_OPTIONS:Mopengl)
+.include "../../graphics/MesaLib/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-opengl
+USE_RETROARCH_GL=	yes
+
+# Enable use of the Raspberry Pi GPU driver
+.elif !empty(PKG_OPTIONS:Mrpi)
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure
@@ -97,6 +101,28 @@ SUBST_FILES.vc=		qb/config.libs.sh
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
 CONFIGURE_ARGS+=	--enable-opengles
+USE_RETROARCH_GL=	yes
+
+# Enable use of the Linux binary Mali GPU driver (framebuffer version)
+.elif !empty(PKG_OPTIONS:Msunxi-mali-fb)
+.include "../../wip/sunxi-mali-fb/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-opengles
+CONFIGURE_ARGS+=	--enable-mali_fbdev
+USE_RETROARCH_GL=	yes
+
+# Disable any graphics acceleration library
+.else
+CONFIGURE_ARGS+=	--disable-egl
+CONFIGURE_ARGS+=	--disable-opengl
+CONFIGURE_ARGS+=	--disable-vulkan
+CONFIGURE_ARGS+=	--disable-vulkan_display
+CONFIGURE_ARGS+=	--disable-wayland
+USE_RETROARCH_GL=	no
+.endif
+
+.if ${USE_RETROARCH_GL} == "yes"
+DEPENDS+=	retroarch-assets>=${PKGVERSION_NOREV}:../../wip/retroarch-assets
+DEPENDS+=	libretro-glsl-shaders>0:../../wip/libretro-glsl-shaders
 .endif
 
 #
@@ -104,15 +130,6 @@ CONFIGURE_ARGS+=	--enable-opengles
 #
 .if !empty(PKG_OPTIONS:Msunxi-g2d)
 CONFIGURE_ARGS+=	--enable-sunxi
-.endif
-
-#
-# Enable use of the Linux binary Mali GPU driver (framebuffer version)
-#
-.if !empty(PKG_OPTIONS:Msunxi-mali-fb)
-.include "../../wip/sunxi-mali-fb/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-opengles
-CONFIGURE_ARGS+=	--enable-mali_fbdev
 .endif
 
 .if !empty(PKG_OPTIONS:Mudev)

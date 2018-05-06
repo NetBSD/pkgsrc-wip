@@ -26,10 +26,8 @@ USE_TOOLS+=	pkg-config gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
-DEPENDS+=	libretro-database>0:../../wip/libretro-database
-DEPENDS+=	libretro-core-info>0:../../wip/libretro-core-info
-DEPENDS+=	libretro-glsl-shaders>0:../../wip/libretro-glsl-shaders
-DEPENDS+=	retroarch-assets>0:../../wip/retroarch-assets
+DEPENDS+=	libretro-database>=${PKGVERSION_NOREV}:../../wip/libretro-database
+DEPENDS+=	libretro-core-info>=${PKGVERSION_NOREV}:../../wip/libretro-core-info
 
 CPPFLAGS+=	-DPREFIX=\"${PREFIX}\"
 
