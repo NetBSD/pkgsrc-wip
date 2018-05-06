@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MAINTAINER=	rumcic@gmail.com
 HOMEPAGE=	http://www.tinycc.org/
 COMMENT=	The Smallest ANSI C compiler
-
+LICENSE=	mit
 
 USE_TOOLS+=	gmake
 HAS_CONFIGURE=	yes
