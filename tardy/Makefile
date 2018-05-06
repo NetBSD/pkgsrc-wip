@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tardy/}
 MAINTAINER=		MarkoSchuetz@web.de
 HOMEPAGE=		http://tardy.sourceforge.net/
 COMMENT=		Manipulate attributes of files within tar archives
+LICENSE=		gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c++ c
