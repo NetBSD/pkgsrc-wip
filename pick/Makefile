@@ -3,7 +3,8 @@
 DISTNAME=	pick-2.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mptre/}
-GITHUB_RELEASE=	v2.0.2
+GITHUB_PROJECT=	pick
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	dbotw@gmx.net
 HOMEPAGE=	https://github.com/mptre/pick/
