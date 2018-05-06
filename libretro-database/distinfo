@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-database-1.7.2.tar.gz) = 9d91c947795d58f9420e04e25b3f6212f5964086
-RMD160 (libretro-database-1.7.2.tar.gz) = 606df7eb73ac7c1f046a7eb20d31deb530be7af7
-SHA512 (libretro-database-1.7.2.tar.gz) = 83b00f4c87cfa960e94f3a3d3ba09975460f89216b1d63e5d09b12ce38466435996274881f3ca50c5840d725c87de1aa4fdabeccb4c1e8da717ba1c7000764b4
-Size (libretro-database-1.7.2.tar.gz) = 105914609 bytes
+SHA1 (retroarch-assets-1.7.3.7z) = 5a4993c047c6a34037acc937aa9d71ca12adfddb
+RMD160 (retroarch-assets-1.7.3.7z) = ff63d6f2959823783320092cb76164509a319515
+SHA512 (retroarch-assets-1.7.3.7z) = 5b355e3652c804a6641edb314ad44049db3d03581faa4d05bec3cbc1bedf5d6631ab6a8526c8b9303f0e4b6dc96d31851afef540637e90b7a4f0213cbf180cef
+Size (retroarch-assets-1.7.3.7z) = 154934601 bytes
