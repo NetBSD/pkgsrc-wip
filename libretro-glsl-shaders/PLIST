@@ -3,6 +3,7 @@ share/libretro/shaders/3dfx/3dfx_4x1.glslp
 share/libretro/shaders/3dfx/shaders/3dfx_pass_0.glsl
 share/libretro/shaders/3dfx/shaders/3dfx_pass_1.glsl
 share/libretro/shaders/3dfx/shaders/3dfx_pass_2.glsl
+share/libretro/shaders/Makefile
 share/libretro/shaders/anti-aliasing/aa-shader-4.0-level2.glslp
 share/libretro/shaders/anti-aliasing/aa-shader-4.0.glslp
 share/libretro/shaders/anti-aliasing/advanced-aa.glslp
@@ -131,6 +132,7 @@ share/libretro/shaders/cel/shaders/MMJ_Cel_Shader_MP_Blur_H.glsl
 share/libretro/shaders/cel/shaders/MMJ_Cel_Shader_MP_Blur_V.glsl
 share/libretro/shaders/cel/shaders/MMJ_Cel_Shader_MP_Color.glsl
 share/libretro/shaders/cel/shaders/MMJ_Cel_Shader_MP_Outline.glsl
+share/libretro/shaders/configure
 share/libretro/shaders/crt/crt-aperture.glslp
 share/libretro/shaders/crt/crt-caligari.glslp
 share/libretro/shaders/crt/crt-cgwg-fast.glslp
@@ -194,6 +196,9 @@ share/libretro/shaders/crt/shaders/crt-pi.glsl
 share/libretro/shaders/crt/shaders/crt-potato/resources/crt-potato-thick.png
 share/libretro/shaders/crt/shaders/crt-potato/resources/crt-potato-thin.png
 share/libretro/shaders/crt/shaders/crt-potato/shader-files/crt-potato.glsl
+share/libretro/shaders/crt/shaders/crt-royale/LICENSE.TXT
+share/libretro/shaders/crt/shaders/crt-royale/README.TXT
+share/libretro/shaders/crt/shaders/crt-royale/THANKS.TXT
 share/libretro/shaders/crt/shaders/crt-royale/TileableLinearApertureGrille15Wide8And5d5Spacing.png
 share/libretro/shaders/crt/shaders/crt-royale/TileableLinearApertureGrille15Wide8And5d5SpacingResizeTo64.png
 share/libretro/shaders/crt/shaders/crt-royale/TileableLinearShadowMask.png
@@ -202,7 +207,18 @@ share/libretro/shaders/crt/shaders/crt-royale/TileableLinearShadowMaskEDPResizeT
 share/libretro/shaders/crt/shaders/crt-royale/TileableLinearShadowMaskResizeTo64.png
 share/libretro/shaders/crt/shaders/crt-royale/TileableLinearSlotMaskTall15Wide9And4d5Horizontal9d14VerticalSpacing.png
 share/libretro/shaders/crt/shaders/crt-royale/TileableLinearSlotMaskTall15Wide9And4d5Horizontal9d14VerticalSpacingResizeTo64.png
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/bind-shader-params.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/bloom-functions.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/blur-functions.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/derived-settings-and-constants.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/gamma-management.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/geometry-functions.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/phosphor-mask-resizing.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/quad-pixel-communication.h
 share/libretro/shaders/crt/shaders/crt-royale/port-helpers/royale-template.glsl
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/scanline-functions.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/special-functions.h
+share/libretro/shaders/crt/shaders/crt-royale/port-helpers/tex2Dantialias.h
 share/libretro/shaders/crt/shaders/crt-royale/src/crt-royale-bloom-approx-fake-bloom-intel.glsl
 share/libretro/shaders/crt/shaders/crt-royale/src/crt-royale-bloom-approx-fake-bloom.glsl
 share/libretro/shaders/crt/shaders/crt-royale/src/crt-royale-bloom-approx.glsl
@@ -506,6 +522,7 @@ share/libretro/shaders/handheld/shaders/mgba/ags001.glsl
 share/libretro/shaders/handheld/shaders/sameboy-lcd.glsl
 share/libretro/shaders/handheld/shaders/simpletex_lcd/png/2k/textured_paper.png
 share/libretro/shaders/handheld/shaders/simpletex_lcd/png/4k/textured_paper.png
+share/libretro/shaders/handheld/shaders/simpletex_lcd/png/readme.txt
 share/libretro/shaders/handheld/shaders/simpletex_lcd/simpletex_lcd+gba-color-4k.glsl
 share/libretro/shaders/handheld/shaders/simpletex_lcd/simpletex_lcd+gba-color.glsl
 share/libretro/shaders/handheld/shaders/simpletex_lcd/simpletex_lcd+gbc-color-4k.glsl
@@ -571,6 +588,7 @@ share/libretro/shaders/nedi/shaders/nedi-jinc.glsl
 share/libretro/shaders/nedi/shaders/nedi-pass0.glsl
 share/libretro/shaders/nedi/shaders/nedi-pass1.glsl
 share/libretro/shaders/nedi/shaders/nedi-pass2.glsl
+share/libretro/shaders/nnedi3/LICENSE
 share/libretro/shaders/nnedi3/README.md
 share/libretro/shaders/nnedi3/nnedi3-nns16-2x-luma.glslp
 share/libretro/shaders/nnedi3/nnedi3-nns16-2x-rgb.glslp
@@ -695,6 +713,8 @@ share/libretro/shaders/procedural/ciberxtrem-portal.glsl
 share/libretro/shaders/procedural/dakrunch-manta-ray/dakrunch-manta-ray.glsl
 share/libretro/shaders/procedural/dakrunch-manta-ray/dakrunch-manta-ray.glslp
 share/libretro/shaders/procedural/dakrunch-manta-ray/iChannel0.png
+share/libretro/shaders/procedural/dakrunch-manta-ray/iChannel1.jpg
+share/libretro/shaders/procedural/dakrunch-manta-ray/iChannel3.jpg
 share/libretro/shaders/procedural/dave_hoskins-frozen-wasteland.glsl
 share/libretro/shaders/procedural/dave_hoskins-galaxy-of-universes.glsl
 share/libretro/shaders/procedural/dave_hoskins-ray-q-bert.glsl
@@ -731,7 +751,10 @@ share/libretro/shaders/procedural/iocc-fan-bounce.glsl
 share/libretro/shaders/procedural/iq-analytical-normals-3d.glsl
 share/libretro/shaders/procedural/iq-apple.glsl
 share/libretro/shaders/procedural/iq-batman.glsl
+share/libretro/shaders/procedural/iq-canyon/iChannel0.jpg
+share/libretro/shaders/procedural/iq-canyon/iChannel1.jpg
 share/libretro/shaders/procedural/iq-canyon/iChannel2.png
+share/libretro/shaders/procedural/iq-canyon/iChannel3.jpg
 share/libretro/shaders/procedural/iq-canyon/iq-canyon.glsl
 share/libretro/shaders/procedural/iq-canyon/iq-canyon.glslp
 share/libretro/shaders/procedural/iq-clover.glsl
@@ -742,8 +765,10 @@ share/libretro/shaders/procedural/iq-julia-quaternion.glsl
 share/libretro/shaders/procedural/iq-mandelbulb-derivative.glsl
 share/libretro/shaders/procedural/iq-oscilomushroom.glsl
 share/libretro/shaders/procedural/iq-raymarching-primitives.glsl
+share/libretro/shaders/procedural/iq-repelling/iChannel0.jpg
 share/libretro/shaders/procedural/iq-repelling/iq-repelling.glsl
 share/libretro/shaders/procedural/iq-repelling/iq-repelling.glslp
+share/libretro/shaders/procedural/iq-warping-texture/iChannel0.jpg
 share/libretro/shaders/procedural/iq-warping-texture/iq-warping-texture.glsl
 share/libretro/shaders/procedural/iq-warping-texture/iq-warping-texture.glslp
 share/libretro/shaders/procedural/jasminpatry-are-gee-be.glsl
@@ -776,8 +801,12 @@ share/libretro/shaders/procedural/nrx-voxel-pacman.glsl
 share/libretro/shaders/procedural/otaviogood-alien-beacon.glsl
 share/libretro/shaders/procedural/otaviogood-iceberg.glsl
 share/libretro/shaders/procedural/otaviogood-skyline.glsl
+share/libretro/shaders/procedural/pmalin-waterfalls-hd/iChannel0.jpg
+share/libretro/shaders/procedural/pmalin-waterfalls-hd/iChannel1.jpg
 share/libretro/shaders/procedural/pmalin-waterfalls-hd/pmalin-waterfalls-hd.glsl
 share/libretro/shaders/procedural/pmalin-waterfalls-hd/pmalin-waterfalls-hd.glslp
+share/libretro/shaders/procedural/pmalin-waterfalls/iChannel0.jpg
+share/libretro/shaders/procedural/pmalin-waterfalls/iChannel1.jpg
 share/libretro/shaders/procedural/pmalin-waterfalls/pmalin-waterfalls.glsl
 share/libretro/shaders/procedural/pmalin-waterfalls/pmalin-waterfalls.glslp
 share/libretro/shaders/procedural/pmalin-where-the-river-goes-textureless-hd.glsl
@@ -788,6 +817,8 @@ share/libretro/shaders/procedural/reinder-tokyo.glsl
 share/libretro/shaders/procedural/reinder-wolfenstein3d.glsl
 share/libretro/shaders/procedural/romainguy-physically-based-sdf.glsl
 share/libretro/shaders/procedural/sdf-platform.glsl
+share/libretro/shaders/procedural/shane-abstract-corridor/iChannel0.jpg
+share/libretro/shaders/procedural/shane-abstract-corridor/iChannel1.jpg
 share/libretro/shaders/procedural/shane-abstract-corridor/shane-abstract-corridor.glsl
 share/libretro/shaders/procedural/shane-abstract-corridor/shane-abstract-corridor.glslp
 share/libretro/shaders/procedural/shane-latticetutorial.glsl
@@ -802,9 +833,11 @@ share/libretro/shaders/procedural/srtuss-star-swirl.glsl
 share/libretro/shaders/procedural/srtuss-the-eye.glsl
 share/libretro/shaders/procedural/stellabialek-moonlight-sillyness.glsl
 share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world-2/iChannel0.png
+share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world-2/iChannel1.jpg
 share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world-2/sudonhim-cloudy-voxel-world.glsl
 share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world-2/sudonhim-cloudy-voxel-world.glslp
 share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world/iChannel0.png
+share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world/iChannel1.jpg
 share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world/sudonhim-cloudy-voxel-world.glsl
 share/libretro/shaders/procedural/sudonhim-cloudy-voxel-world/sudonhim-cloudy-voxel-world.glslp
 share/libretro/shaders/procedural/sw-cloud-2d.glsl
