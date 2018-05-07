@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.el
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www.emacswiki.org/emacs/UndoTree
 COMMENT=	Treat Emacs undo history as a tree
+LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
