@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.xs4all.nl/~shalafi/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdlemu.ngemu.com/
 COMMENT=		Jaguar emulator based on SDL
+LICENSE=		gnu-gpl-v2
 
 INSTALLATION_DIRS=	bin share/doc/vj share/examples/vj
 MAKE_JOBS_SAFE=		no
