@@ -3292,6 +3292,7 @@ SUBDIR+=	py-hybridlfpy
 SUBDIR+=	py-hyperspy
 SUBDIR+=	py-ibis
 SUBDIR+=	py-icane
+SUBDIR+=	py-idalink
 SUBDIR+=	py-ift-nifty
 SUBDIR+=	py-igraph
 SUBDIR+=	py-iisignature
