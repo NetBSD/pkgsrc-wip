@@ -10,6 +10,7 @@ EXTRACT_SUFX=		# nothing to extract
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://0pointer.de/lennart/projects/xbelmark/
 COMMENT=		XBEL XML bookmarks to readable HTML converter
+LICENSE=		gnu-gpl-v2
 
 DEPENDS=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
