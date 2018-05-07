@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vamps/}
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://vamps.sourceforge.net/
 COMMENT=		Requantizer for shrinking DVDs
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 
