@@ -28,7 +28,7 @@ GITHUB_TAG=	v${PORTVERSION}
 MAINTAINER=	dsiercks@uwm.edu
 HOMEPAGE=	http://vcg.isti.cnr.it/vcglib/
 COMMENT=	Template library for manipulation of triangle meshes
-# LICENSE=	
+LICENSE=	gnu-gpl-v3
 
 # Test and change if necessary.
 # MAKE_JOBS_SAFE=	no
