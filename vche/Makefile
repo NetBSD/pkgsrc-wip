@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.grigna.com/diego/linux/vche/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.grigna.com/diego/linux/vche/
 COMMENT=		Hex Editor for console
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 BUILD_DIRS=		src
