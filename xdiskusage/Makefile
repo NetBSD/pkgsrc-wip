@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://xdiskusage.sourceforge.net/
 COMMENT=		Graphical space disk viewer
-
+LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
