@@ -24,6 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-ana-[0-9]*:../../wip/py-ana
 DEPENDS+=	${PYPKGPREFIX}-bitstring-[0-9]*:../../wip/py-bitstring
 DEPENDS+=	${PYPKGPREFIX}-cooldict-[0-9]*:../../wip/py-cooldict
 DEPENDS+=	${PYPKGPREFIX}-git-[0-9]*:../../wip/py-git
+DEPENDS+=	${PYPKGPREFIX}-idalink-[0-9]*:../../wip/py-idalink
 DEPENDS+=	${PYPKGPREFIX}-mulpyplexer-[0-9]*:../../wip/py-mulpyplexer
 DEPENDS+=	${PYPKGPREFIX}-progressbar-[0-9]*:../../wip/py-progressbar
 DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../wip/py-rpyc
