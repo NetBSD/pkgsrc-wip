@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	x400@msfu.ru
 HOMEPAGE=	http://www.soft-switch.org/
 COMMENT=	Media streaming library
-
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/vale-0.0.1
 GNU_CONFIGURE=	yes
