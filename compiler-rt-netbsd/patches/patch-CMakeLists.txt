@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2018-04-25 21:13:40.000000000 +0000
++++ CMakeLists.txt
+@@ -353,7 +353,7 @@ foreach(path IN ITEMS ${LLVM_MAIN_SRC_DI
+                       ${LLVM_MAIN_SRC_DIR}/../libcxx
+                       ${LLVM_EXTERNAL_LIBCXX_SOURCE_DIR})
+   if(IS_DIRECTORY ${path})
+-    set(COMPILER_RT_LIBCXX_PATH ${path})
++#    set(COMPILER_RT_LIBCXX_PATH ${path})
+     break()
+   endif()
+ endforeach()

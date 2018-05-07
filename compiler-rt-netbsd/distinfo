@@ -1,7 +1,10 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
+SHA1 (patch-CMakeLists.txt) = f84dd8cb370dce65de45e089d85598f15774fa18
 SHA1 (patch-cmake_config-ix.cmake) = 91ffb8c1e65394c7c6e9956379373b28348e3f1f
+SHA1 (patch-lib_asan_asan__mapping.h) = 1975314eb61f14b9fabbcfee20de63dc724d809c
 SHA1 (patch-lib_asan_asan__posix.cc) = 0f596061c078eaab0b5b4b183550aa7820677f46
+SHA1 (patch-lib_asan_asan__thread.cc) = 6408c904c1f3adbebff56aaf63f953f5b8b02bef
 SHA1 (patch-lib_fuzzer_FuzzerShmemPosix.cpp) = e2540a9385d641c77a2b5da49a2ac66313db8a94
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = 0e559ebb791942cba9c83f3098d7752f91e1f187
 SHA1 (patch-lib_msan_msan__interceptors.cc) = 79bfe137923597d79bb467d0f282d57221079a85
