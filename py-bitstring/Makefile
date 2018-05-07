@@ -4,11 +4,11 @@
 DISTNAME=	bitstring-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://python-bitstring.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitstring/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://code.google.com/p/python-bitstring/
+HOMEPAGE=	http://scott-griffiths.github.io/bitstring/
 COMMENT=	Tools for analysis and modification of binary data in python
 LICENSE=	mit
 
