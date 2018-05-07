@@ -10,6 +10,7 @@ DISTFILES=	# empty
 MAINTAINER=		reed@reedmedia.net
 #HOMEPAGE=
 COMMENT=		Locate a command
+LICENSE=		modified-bsd
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
