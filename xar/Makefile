@@ -9,7 +9,7 @@ MASTER_SITES=		http://xar.googlecode.com/files/
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://code.google.com/p/xar/
 COMMENT=		The eXtensible ARchiver
-
+LICENSE=		modified-bsd
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
