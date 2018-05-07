@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/lariza
+man/man1/lariza.1
+man/man1/lariza.usage.1

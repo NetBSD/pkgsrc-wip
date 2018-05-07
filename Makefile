@@ -1627,6 +1627,7 @@ SUBDIR+=	l2tpd
 SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
 SUBDIR+=	lander
+SUBDIR+=	lariza
 SUBDIR+=	lasi
 SUBDIR+=	last-exit
 SUBDIR+=	last.fm
