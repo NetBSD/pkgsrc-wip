@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/ana/__init__.py
+${PYSITELIB}/ana/__init__.pyc
+${PYSITELIB}/ana/__init__.pyo
+${PYSITELIB}/ana/d.py
+${PYSITELIB}/ana/d.pyc
+${PYSITELIB}/ana/d.pyo
+${PYSITELIB}/ana/datalayer.py
+${PYSITELIB}/ana/datalayer.pyc
+${PYSITELIB}/ana/datalayer.pyo
+${PYSITELIB}/ana/errors.py
+${PYSITELIB}/ana/errors.pyc
+${PYSITELIB}/ana/errors.pyo
+${PYSITELIB}/ana/storable.py
+${PYSITELIB}/ana/storable.pyc
+${PYSITELIB}/ana/storable.pyo
