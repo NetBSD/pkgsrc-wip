@@ -77,7 +77,7 @@ IV. Unknown
   the rest
 
 TODO:
- - ASan 32-bit restoration (assignee: kamil)
  - oom-killer, research a crasher and share with kernel developers
  - oom-killer, add a new ATF test to check oom-killer
  - upstream semaphore fixes to reviews.llvm.org
+ - getrusage(2) fix pullup to -8 or find a workaround for 8.0
