@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=workrave/}
 MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://www.workrave.org/
 COMMENT=		Wrist break reminder program for prevention of RSI
-
+LICENSE=		gnu-gpl-v3
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pkg-config intltool
