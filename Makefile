@@ -3046,6 +3046,7 @@ SUBDIR+=	py-confire
 SUBDIR+=	py-consensus
 SUBDIR+=	py-constraint
 SUBDIR+=	py-control
+SUBDIR+=	py-cooldict
 SUBDIR+=	py-corpus
 SUBDIR+=	py-corrfitter
 SUBDIR+=	py-cosat

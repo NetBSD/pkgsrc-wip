@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (cooldict-1.02.tar.gz) = 4197731fc1383aed4f03b74c6a9d7dfe92305563
+RMD160 (cooldict-1.02.tar.gz) = 961770f9968d41ace9258e3097543bcd9c1a2cd7
+SHA512 (cooldict-1.02.tar.gz) = d5d3ed177be24ba4381f09e2a10bc7a6101d3a59f0f521d2dc081d3f676b518b4edc0ceb13e779d9936d490085ceb358a2529f766e020bd447857c459e52ebe1
+Size (cooldict-1.02.tar.gz) = 4745 bytes
+SHA1 (patch-setup.py) = daec0d16da285a3f4cd02e8ed124caa1f401dd07
