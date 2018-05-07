@@ -8,6 +8,7 @@ MASTER_SITES=		http://xmailserver.org/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmailserver.org/ussp-push.html
 COMMENT=		OBEX object pusher for BlueZ
+LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
