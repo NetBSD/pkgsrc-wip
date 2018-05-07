@@ -1,8 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	openafs-1.9pre0
-#GIT_REPO=	git://git.openafs.org/openafs.git
-GIT_REPO=	/raid0i/jakllsch/openafs
+GIT_REPO=	git://git.openafs.org/openafs.git
 CATEGORIES=	filesystems net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
