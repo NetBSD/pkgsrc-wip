@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vacuum/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apocalypse.rulez.org/vacuum
 COMMENT=	Vacuum Magic, a fast-paced action game
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-SDL>=1.20.0:../../devel/p5-SDL
 DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
