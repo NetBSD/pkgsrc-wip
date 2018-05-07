@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://wgetpro.sourceforge.net/
 COMMENT=	Wget with "PRO" features
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
