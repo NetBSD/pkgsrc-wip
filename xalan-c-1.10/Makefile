@@ -13,6 +13,7 @@ SITES.xerces-c-src_2_8_0.tar.gz=	${MASTER_SITE_APACHE:=xerces/c/2/sources/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/xalan-c/l
 COMMENT=	XSLT processor of the Apache Project
+LICENSE=	apache-2.0
 
 MAKE_JOBS_SAFE=		no
 
