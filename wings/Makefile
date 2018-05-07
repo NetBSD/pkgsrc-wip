@@ -5,10 +5,10 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wings/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAIER=		ghen@NetBSD.org
+MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.wings3d.com/
 COMMENT=		3D modeling program with a friendly interface
-
+#LICENSE=		gnu-gpl-v2 AND Tcl/Tk-License
 
 USE_TOOLS+=		gmake
 
