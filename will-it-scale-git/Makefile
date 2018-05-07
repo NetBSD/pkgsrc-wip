@@ -7,7 +7,7 @@ GIT_REPO=	git@github.com:antonblanchard/will-it-scale.git
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/antonblanchard/will-it-scale/
 COMMENT=	hwloc benchmark
-#LICENSE=	# none
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
