@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	loic-hoguin@users.sourceforge.net
 HOMEPAGE=	http://xbnbt.sourceforge.net/
 COMMENT=	Alternative BitTorrent tracker written in C++
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/xbnbt/bnbt/src
 
