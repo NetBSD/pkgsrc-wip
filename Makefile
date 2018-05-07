@@ -2300,6 +2300,7 @@ SUBDIR+=	opal
 SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
+SUBDIR+=	openafs-git
 SUBDIR+=	openaxiom-svn
 SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
