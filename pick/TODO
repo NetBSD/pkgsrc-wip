@@ -1,1 +1,9 @@
+Little, just cosmetic possible changes:
+
+ - Should we change the CATEGORIES to misc? Possible similar packages
+   AFAIK are: misc/fzy, sysutils/fzf so it is a bit difficult to decide
+   that! :)
+ - `pkglint -Wall' warns about the COMMENT beginning with `A ', we
+   can probably delete it as suggested.
+
 Package ready for review/import.
