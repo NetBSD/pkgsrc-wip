@@ -1,0 +1,15 @@
+# $NetBSD$
+#
+# used by wip/deepstate/Makefile
+# user by wip/py-deepstate/Makefile
+
+DISTNAME=	deepstate-0.0.0
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
+GITHUB_PROJECT=	deepstate
+GITHUB_TAG=	ca5fada9f4653b6c808fc079907c9a90fb5b057b
+
+MAINTAINER=	khorben@defora.org
+HOMEPAGE=	https://github.com/trailofbits/deepstate/
+COMMENT=	Augments C/C++ Test-Driven Development with Symbolic Execution
+LICENSE=	apache-2.0
