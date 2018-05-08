@@ -3,7 +3,6 @@
 DISTNAME=	pick-2.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mptre/}
-GITHUB_PROJECT=	pick
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	dbotw@gmx.net
@@ -13,4 +12,7 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 
+CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE	# reallocarray(3), strtonum(3)
+
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

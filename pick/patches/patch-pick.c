@@ -1,5 +1,8 @@
 $NetBSD$
 
+tparm(3) expects a `const char *' as first argument, adjust tty_parm1()
+accordingly.
+
 --- pick.c.orig	2018-04-10 19:52:06.000000000 +0000
 +++ pick.c
 @@ -90,7 +90,7 @@ static void			 toggle_sigwinch(int);
