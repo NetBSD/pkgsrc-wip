@@ -15,5 +15,5 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	xterm-[0-9]*:../../x11/xterm
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
