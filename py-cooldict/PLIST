@@ -1,9 +1,5 @@
 @comment $NetBSD$
-${PYSITELIB}/cooldict-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/cooldict-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/cooldict-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/cooldict-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/cooldict-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/cooldict.py
 ${PYSITELIB}/cooldict.pyc
 ${PYSITELIB}/cooldict.pyo

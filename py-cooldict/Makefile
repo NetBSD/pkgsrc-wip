@@ -11,5 +11,5 @@ COMMENT=	Some useful dict-like structures
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
