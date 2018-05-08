@@ -3132,6 +3132,7 @@ SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-dns-clientsubnetoption
 SUBDIR+=	py-dolo
 SUBDIR+=	py-downhill
+SUBDIR+=	py-dpkt-fix
 SUBDIR+=	py-drawille
 SUBDIR+=	py-drawnow
 SUBDIR+=	py-dreampie
