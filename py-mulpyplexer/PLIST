@@ -1,8 +1,5 @@
 @comment $NetBSD$
-${PYSITELIB}/mulpyplexer-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/mulpyplexer-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/mulpyplexer-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/mulpyplexer-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mulpyplexer.py
 ${PYSITELIB}/mulpyplexer.pyc
 ${PYSITELIB}/mulpyplexer.pyo
