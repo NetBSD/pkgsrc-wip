@@ -3601,6 +3601,7 @@ SUBDIR+=	py-pyentropy
 SUBDIR+=	py-pyevolve
 SUBDIR+=	py-pyfaces
 SUBDIR+=	py-pyflation
+SUBDIR+=	py-pygit
 SUBDIR+=	py-pyglet
 SUBDIR+=	py-pygr
 SUBDIR+=	py-pykit-sci
