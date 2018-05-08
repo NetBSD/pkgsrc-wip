@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (oksh-OpenBSD-6.3/OpenBSD-6.3.tar.gz) = 7d6bd44f77fb558666f0d13a254d249a05a284d0
-RMD160 (oksh-OpenBSD-6.3/OpenBSD-6.3.tar.gz) = 84cc0f01e52c7dc57c4cfcf50f411eb9feb25f38
-SHA512 (oksh-OpenBSD-6.3/OpenBSD-6.3.tar.gz) = c75f1841ac9d4a8bf9d96f54ab7202522f2affaf71c3ccc52ddc5bca31dbd2c10d79af9bf73ec4d73c2fdfe671bf88fd61e0d2a29f7deb36016e5412b805cd66
-Size (oksh-OpenBSD-6.3/OpenBSD-6.3.tar.gz) = 297638 bytes
+SHA1 (oksh-20180502.tar.gz) = f80aa0337e49b174ca51967d65882589edc041f1
+RMD160 (oksh-20180502.tar.gz) = 480f26335ca0183d324ad9936dc2d4dc73073875
+SHA512 (oksh-20180502.tar.gz) = 2e588bc2fc3cf70cdf020c885de9e728c31ee4f7ead7b4f766ec7cccd324f0bd565bca5302eca7458d8cd3afefe97c564d7a1b0b37ccb06ede8b905ec6db2285
+Size (oksh-20180502.tar.gz) = 297807 bytes

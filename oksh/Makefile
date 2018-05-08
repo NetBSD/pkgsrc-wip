@@ -1,15 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	oksh
-GITHUB_TAG=	OpenBSD-6.3
-DISTNAME=       ${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+DISTNAME=	oksh-20180502
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ibara/}
-DIST_SUBDIR=	${PKGNAME}
+MASTER_SITES=	http://devio.us/%7Ebcallah/oksh/
 
 MAINTAINER=	pkgsrc-users@pkgsrc.org
-HOMEPAGE=	https://github.com/ibara/oksh/
+HOMEPAGE=	http://devio.us/%7Ebcallah/oksh/
 COMMENT=	Portable OpenBSD ksh(1)
 WRKSRC=		${WRKDIR}/${PKGNAME}
 LICENSE=	original-bsd
