@@ -1,9 +1,5 @@
 @comment $NetBSD$
-${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/ana-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ana/__init__.py
 ${PYSITELIB}/ana/__init__.pyc
 ${PYSITELIB}/ana/__init__.pyo
