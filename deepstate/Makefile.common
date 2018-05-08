@@ -13,3 +13,5 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/trailofbits/deepstate/
 COMMENT=	Augments C/C++ Test-Driven Development with Symbolic Execution
 LICENSE=	apache-2.0
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/deepstate/distinfo
