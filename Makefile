@@ -2962,6 +2962,7 @@ SUBDIR+=	py-bibtexparser3
 SUBDIR+=	py-bicho
 SUBDIR+=	py-bidict
 SUBDIR+=	py-bigfloat
+SUBDIR+=	py-bintrees
 SUBDIR+=	py-biofrills
 SUBDIR+=	py-bip
 SUBDIR+=	py-biskit
