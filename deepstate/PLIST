@@ -1,7 +1,4 @@
 @comment $NetBSD$
-bin/deepstate
-bin/deepstate-angr
-bin/deepstate-manticore
 bin/futurize
 bin/pasteurize
 include/deepstate/Compiler.h

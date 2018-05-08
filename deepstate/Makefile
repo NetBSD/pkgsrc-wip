@@ -44,11 +44,7 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 post-install:
-	${MV} ${FAKEHOMEDIR}/.local/bin/deepstate ${DESTDIR}${PREFIX}/bin
-	${MV} ${FAKEHOMEDIR}/.local/bin/deepstate-angr ${DESTDIR}${PREFIX}/bin
-	${MV} ${FAKEHOMEDIR}/.local/bin/deepstate-manticore ${DESTDIR}${PREFIX}/bin
 	${MV} ${FAKEHOMEDIR}/.local/bin/futurize ${DESTDIR}${PREFIX}/bin
-	${RM} ${FAKEHOMEDIR}/.local/bin/manticore
 	${MV} ${FAKEHOMEDIR}/.local/bin/pasteurize ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/extension.mk"

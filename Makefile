@@ -3089,6 +3089,7 @@ SUBDIR+=	py-decimalfp
 SUBDIR+=	py-decimalpy
 SUBDIR+=	py-decode
 SUBDIR+=	py-decoratortools
+SUBDIR+=	py-deepstate
 SUBDIR+=	py-delay
 SUBDIR+=	py-delny
 SUBDIR+=	py-deltasigma

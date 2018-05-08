@@ -1,0 +1,22 @@
+@comment $NetBSD$
+bin/deepstate
+bin/deepstate-angr
+bin/deepstate-manticore
+${PYSITELIB}/deepstate-0.1-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/deepstate-0.1-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/deepstate-0.1-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/deepstate-0.1-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/deepstate-0.1-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/deepstate-0.1-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/deepstate/__init__.py
+${PYSITELIB}/deepstate/__init__.pyc
+${PYSITELIB}/deepstate/__init__.pyo
+${PYSITELIB}/deepstate/common.py
+${PYSITELIB}/deepstate/common.pyc
+${PYSITELIB}/deepstate/common.pyo
+${PYSITELIB}/deepstate/main_angr.py
+${PYSITELIB}/deepstate/main_angr.pyc
+${PYSITELIB}/deepstate/main_angr.pyo
+${PYSITELIB}/deepstate/main_manticore.py
+${PYSITELIB}/deepstate/main_manticore.pyc
+${PYSITELIB}/deepstate/main_manticore.pyo
