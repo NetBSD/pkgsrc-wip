@@ -1,13 +1,13 @@
 # $NetBSD$
 
 DISTNAME=	pick-2.0.2
-CATEGORIES=	sysutils
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mptre/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	dbotw@gmx.net
 HOMEPAGE=	https://github.com/mptre/pick/
-COMMENT=	A fuzzy search tool for the command-line
+COMMENT=	Fuzzy search tool for the command-line
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
