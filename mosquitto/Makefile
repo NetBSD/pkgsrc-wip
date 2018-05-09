@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	mosquitto-${VERSION}
-VERSION=	1.4.14
+VERSION=	1.4.15
 CATEGORIES=	net
 MASTER_SITES=	http://mosquitto.org/files/source/
 
@@ -12,6 +12,8 @@ LICENSE=	epl-v1.0
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	cmake gmake
+
+TEST_TARGET=	test
 
 CONF_FILES=	share/examples/mosquitto/pskfile.example \
 		share/examples/mosquitto/pwfile.example \
