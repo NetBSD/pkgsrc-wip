@@ -8,7 +8,7 @@ MASTER_SITES=	http://mosquitto.org/files/source/
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	http://mosquitto.org/
 COMMENT=	Open Source MQTT broker
-LICENSE=	eclipse-license
+LICENSE=	epl-v1.0
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	cmake gmake
