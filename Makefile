@@ -3548,6 +3548,7 @@ SUBDIR+=	py-percy
 SUBDIR+=	py-periodictable
 SUBDIR+=	py-peru
 SUBDIR+=	py-pet
+SUBDIR+=	py-petname
 SUBDIR+=	py-pgmpy
 SUBDIR+=	py-pickleshare
 SUBDIR+=	py-picture-to-gds
