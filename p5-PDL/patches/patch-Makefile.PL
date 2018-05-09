@@ -1,6 +1,7 @@
 $NetBSD$
 
 Honor LDFLAGS.
+https://github.com/PDLPorters/pdl/pull/235
 
 --- Makefile.PL.orig	2017-04-30 16:32:41.000000000 +0000
 +++ Makefile.PL
