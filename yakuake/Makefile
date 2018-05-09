@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	drjumba@bigmir.net
 HOMEPAGE=	http://extragear.kde.org/apps/yakuake/
 COMMENT=	Drop-down terminal emulator based on KDE Konsole technology
+LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
