@@ -1,6 +1,7 @@
 $NetBSD: patch-eg_sh__script,v 1.1 2015/03/11 15:06:47 uccwen Exp $
 
 Fix unportable test(1) operator.
+https://github.com/trwyant/perl-Astro-SpaceTrack/pull/1
 
 --- eg/sh_script.orig	2015-03-11 22:43:17.000000000 +0000
 +++ eg/sh_script
