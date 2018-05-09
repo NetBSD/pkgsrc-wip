@@ -1,7 +1,7 @@
 # $NetBSD$
+
+DISTNAME=	mosquitto-${VERSION}
 VERSION=	1.4.14
-PKGNAME=	mosquitto-${VERSION}
-DISTNAME=	${PKGNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://mosquitto.org/files/source/
 
