@@ -3799,6 +3799,7 @@ SUBDIR+=	py-sunpy
 SUBDIR+=	py-swiginac
 SUBDIR+=	py-sydent
 SUBDIR+=	py-symath
+SUBDIR+=	py-symbolic
 SUBDIR+=	py-symboltype
 SUBDIR+=	py-symcxx
 SUBDIR+=	py-symeig
