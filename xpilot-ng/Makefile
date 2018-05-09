@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xpilot/}
 MAINTAINER=	vnorrman@cc.hut.fi
 HOMEPAGE=	http://xpilot.sourceforge.net/
 COMMENT=	Enhanced version of XPilot network space battle
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 
