@@ -27,6 +27,7 @@ BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/PDL/.packlist
 MAKE_JOBS_SAFE=		no
+REPLACE_PERL+=		Perldl2/pdl2
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
