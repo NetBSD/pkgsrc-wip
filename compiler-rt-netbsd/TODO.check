@@ -239,64 +239,40 @@ Failing Tests (31):
 $ check-fuzzer-default
 
 ********************
-Testing Time: 87.15s
+Testing Time: 94.86s
 ********************
-Failing Tests (20):
-    LLVMFuzzer :: cxxstring.test
-    LLVMFuzzer :: equivalence-signals.test
-    LLVMFuzzer :: equivalence.test
-    LLVMFuzzer :: fuzzer-oom.test
-    LLVMFuzzer :: fuzzer-timeout.test
-    LLVMFuzzer :: memcmp.test
-    LLVMFuzzer :: memcmp64.test
+Failing Tests (8):
     LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: recommended-dictionary.test
-    LLVMFuzzer :: strcmp.test
     LLVMFuzzer :: strncmp.test
-    LLVMFuzzer :: strstr.test
     LLVMFuzzer :: trace-malloc-threaded.test
     LLVMFuzzer :: trace-malloc-unbalanced.test
     LLVMFuzzer :: value-profile-cmp.test
     LLVMFuzzer :: value-profile-load.test
-    LLVMFuzzer :: value-profile-mem.test
     LLVMFuzzer :: value-profile-set.test
-    LLVMFuzzer :: value-profile-strcmp.test
-    LLVMFuzzer :: value-profile-strncmp.test
+    LLVMFuzzer :: value-profile-switch.test
 
-  Expected Passes    : 87
+  Expected Passes    : 99
   Unsupported Tests  : 8
-  Unexpected Failures: 20
+  Unexpected Failures: 8
 
 $ check-fuzzer
 
 ********************
-Testing Time: 101.74s
+Testing Time: 141.30s
 ********************
-Failing Tests (20):
-    LLVMFuzzer :: cxxstring.test
-    LLVMFuzzer :: equivalence-signals.test
-    LLVMFuzzer :: equivalence.test
-    LLVMFuzzer :: fuzzer-oom.test
-    LLVMFuzzer :: fuzzer-timeout.test
-    LLVMFuzzer :: memcmp.test
-    LLVMFuzzer :: memcmp64.test
+Failing Tests (8):
     LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: recommended-dictionary.test
-    LLVMFuzzer :: strcmp.test
     LLVMFuzzer :: strncmp.test
-    LLVMFuzzer :: strstr.test
     LLVMFuzzer :: trace-malloc-threaded.test
     LLVMFuzzer :: trace-malloc-unbalanced.test
     LLVMFuzzer :: value-profile-cmp.test
     LLVMFuzzer :: value-profile-load.test
-    LLVMFuzzer :: value-profile-mem.test
     LLVMFuzzer :: value-profile-set.test
-    LLVMFuzzer :: value-profile-strcmp.test
-    LLVMFuzzer :: value-profile-strncmp.test
+    LLVMFuzzer :: value-profile-switch.test
 
-  Expected Passes    : 87
+  Expected Passes    : 99
   Unsupported Tests  : 8
-  Unexpected Failures: 20
+  Unexpected Failures: 8
 
 $ check-fuzzer-unit
 

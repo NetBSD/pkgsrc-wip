@@ -15,7 +15,6 @@ III. SanitizerCoverage (https://clang.llvm.org/docs/SanitizerCoverage.html)
   We would like to cover them in llvm / clang tests (wherever applicable). At least covering
   the netbsd--x86_64 target.
   Examples of tests: clang/test/Driver/fsanitize-coverage.c clang/test/Driver/fuzzer.c
-  It seams that these features aren't functional on NetBSD for unknown reason.
   SanitizerCoverage is required for at least a part of the libfuzzer functionality.
 
 sanitizers:
@@ -30,54 +29,72 @@ sanitizers:
 $ make check-fuzzer
 
 ********************
-Testing Time: 328.39s
+Testing Time: 94.86s
 ********************
-Failing Tests (19):
-    LLVMFuzzer :: cxxstring.test
-    LLVMFuzzer :: fuzzer-leak.test
-    LLVMFuzzer :: fuzzer-oom.test
-    LLVMFuzzer :: fuzzer-timeout.test
-    LLVMFuzzer :: memcmp.test
-    LLVMFuzzer :: memcmp64.test
+Failing Tests (8):
     LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: recommended-dictionary.test
-    LLVMFuzzer :: strcmp.test
     LLVMFuzzer :: strncmp.test
-    LLVMFuzzer :: strstr.test
     LLVMFuzzer :: trace-malloc-threaded.test
     LLVMFuzzer :: trace-malloc-unbalanced.test
     LLVMFuzzer :: value-profile-cmp.test
     LLVMFuzzer :: value-profile-load.test
-    LLVMFuzzer :: value-profile-mem.test
     LLVMFuzzer :: value-profile-set.test
-    LLVMFuzzer :: value-profile-strcmp.test
-    LLVMFuzzer :: value-profile-strncmp.test
+    LLVMFuzzer :: value-profile-switch.test
 
-  Expected Passes    : 90
-  Unsupported Tests  : 6
-  Unexpected Failures: 19
+  Expected Passes    : 99
+  Unsupported Tests  : 8
+  Unexpected Failures: 8
 
 
 libFuzzer Failed cases (make check-fuzzer):
-I. kernel panic
-  fuzzer-oom.test kills the kernel (panic due to lack of memory)
+I. hang of fuzzer-timeout.test
 
-  workaround: kill it quickly or disable
+  kamil: It seems to be an issue with Thread-Local-Storage in the
+  SIGALARM signal handler... but it's not reproducible for me
+  out of the libfuzzer context.
 
-II. hangs
-  fuzzer-timeout.test
-  value-profile*
+  With the following workaround the tests passes:
+
+```
+diff --git a/lib/fuzzer/FuzzerLoop.cpp b/lib/fuzzer/FuzzerLoop.cpp
+index 6cc220d97..a67431c71 100644
+--- a/lib/fuzzer/FuzzerLoop.cpp
++++ b/lib/fuzzer/FuzzerLoop.cpp
+@@ -274,7 +274,7 @@ NO_SANITIZE_MEMORY
+ void Fuzzer::AlarmCallback() {
+   assert(Options.UnitTimeoutSec > 0);
+   // In Windows Alarm callback is executed by a different thread.
+-#if !LIBFUZZER_WINDOWS
++#if !LIBFUZZER_WINDOWS && !LIBFUZZER_NETBSD
+   if (!InFuzzingThread())
+     return;
+ #endif
+```
+
+  Under investigation.
+
+II. unknown hangs
+
+    LLVMFuzzer :: value-profile-cmp.test
+    LLVMFuzzer :: value-profile-load.test
+    LLVMFuzzer :: value-profile-set.test
+    LLVMFuzzer :: value-profile-switch.test
+    LLVMFuzzer :: strncmp.test
 
   workaround: kill with pkill(1) or kill(1)
 
-III. SanitizerCoverage tests
-  At least 'trace-cmp' ones don't work for unknown reason.
+  reason unknown
+
+III. SIGXFSZ handler bug?
+    LLVMFuzzer :: merge-posix.test
 
 IV. Unknown
-  the rest
+    LLVMFuzzer :: trace-malloc-threaded.test
+    LLVMFuzzer :: trace-malloc-unbalanced.test
 
 TODO:
- - oom-killer, research a crasher and share with kernel developers
- - oom-killer, add a new ATF test to check oom-killer
- - upstream semaphore fixes to reviews.llvm.org
- - getrusage(2) fix pullup to -8 or find a workaround for 8.0
+ - research the remaining failures (assignee: kamil)
+ - oom-killer, research a crasher and share with kernel developers (assignee: plusun)
+ - oom-killer, add a new ATF test to check oom-killer (assignee: plusun)
+ - upstream semaphore fixes to reviews.llvm.org (assignee: plusun)
+ - getrusage(2) fix pullup to -8 or find a workaround for 8.0 (assignee: christos?)
