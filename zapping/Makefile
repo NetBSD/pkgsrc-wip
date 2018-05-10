@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://zapping.sourceforge.net/Zapping/
 COMMENT=		TV viewer for the Gnome desktop
-
+LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
