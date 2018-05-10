@@ -1,99 +1,53 @@
-compiler-rt profile v.s. -pg
-I. compiler-rt profile
-  Similar to GCC gcov tool, LLVM can provide llvm-cov to interpret profiling data for each line of code.
-  One can add "--coverage" or "-fcoverage-mapping" flags to generate necessary information for this tool.
-  This is pure software method, which means the information is generated from AST or something else.
-II. -pg
-  This flag is usually used to collect information for gprof. The unit is function instead of source line.
-Summary:
-  The basic units of profiling are different. llvm-cov/gcov is line-based, while gprof is function-based.
-Do we need llvm-cov for libFuzzer?
-  I don't think so. It seems there is no relationship between these two.
-III. SanitizerCoverage (https://clang.llvm.org/docs/SanitizerCoverage.html)
-  There are command line arguments like:
-    -fsanitize-coverage=trace-pc-guard,indirect-calls,trace-gep,trace-div,trace-cmp
-  We would like to cover them in llvm / clang tests (wherever applicable). At least covering
-  the netbsd--x86_64 target.
-  Examples of tests: clang/test/Driver/fsanitize-coverage.c clang/test/Driver/fuzzer.c
-  SanitizerCoverage is required for at least a part of the libfuzzer functionality.
+Algorithm of libfuzzer & sanitizers porting for userland (by joerg)
 
-sanitizers:
- - ASan (amd64, i386), UBSan (all ports), MSan (amd64), TSan (amd64) - ported and mostly functional
- - LSan - in progresss (scheduled after ptrace(2) kernel fixes)
- - src/ integration - TODO:
-  * import compiler-rt into src/
-  * add Makefile glue to build and install compiler-rt features (check cmake/config-ix.cmake)
-    along the MKLLVM target
-  * add MKSANITIZER build option, to prebuild libraries and programs with a desired sanitizer
+(1) Run build.sh -T somewhere -V MKLLVM=yes ... tools
+(2) Replace somewhere/bin/TARGET-clang with a symlink to a normally
+(via cmake) built clang binary.
+(3) Run build.sh -T somewhereelse -V MKLLVM=yes -V EXTERNAL_TOOLCHAIN=somewhere ... release
+
+Expectations:
+ - prepare a bootstrap.sh script to build a distribution with compiler-rt
+   features, that is using EXTERNAL_TOOLCHAIN
+ - ship compiler-rt in basesystem
+ - add MKSANITIZER build option to prebuild libraries and programs with a
+   desired sanitizer
 
 $ make check-fuzzer
 
 ********************
-Testing Time: 94.86s
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90..
+Testing Time: 56.25s
 ********************
-Failing Tests (8):
+Failing Tests (2):
     LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: strncmp.test
     LLVMFuzzer :: trace-malloc-threaded.test
-    LLVMFuzzer :: trace-malloc-unbalanced.test
-    LLVMFuzzer :: value-profile-cmp.test
-    LLVMFuzzer :: value-profile-load.test
-    LLVMFuzzer :: value-profile-set.test
-    LLVMFuzzer :: value-profile-switch.test
 
-  Expected Passes    : 99
+  Expected Passes    : 105
   Unsupported Tests  : 8
-  Unexpected Failures: 8
+  Unexpected Failures: 2
 
+Reason unknown of failures (environment mismatch?) and ignored.
 
-libFuzzer Failed cases (make check-fuzzer):
-I. hang of fuzzer-timeout.test
+A local WIP kernel patch for tests:
 
-  kamil: It seems to be an issue with Thread-Local-Storage in the
-  SIGALARM signal handler... but it's not reproducible for me
-  out of the libfuzzer context.
+Index: sys/uvm/uvm_map.c
+===================================================================
+RCS file: /cvsroot/src/sys/uvm/uvm_map.c,v
+retrieving revision 1.354
+diff -u -r1.354 uvm_map.c
+--- sys/uvm/uvm_map.c	6 Feb 2018 09:20:29 -0000	1.354
++++ sys/uvm/uvm_map.c	10 May 2018 01:21:10 -0000
+@@ -4972,7 +4972,7 @@
+ 		return EINVAL;
 
-  With the following workaround the tests passes:
-
-```
-diff --git a/lib/fuzzer/FuzzerLoop.cpp b/lib/fuzzer/FuzzerLoop.cpp
-index 6cc220d97..a67431c71 100644
---- a/lib/fuzzer/FuzzerLoop.cpp
-+++ b/lib/fuzzer/FuzzerLoop.cpp
-@@ -274,7 +274,7 @@ NO_SANITIZE_MEMORY
- void Fuzzer::AlarmCallback() {
-   assert(Options.UnitTimeoutSec > 0);
-   // In Windows Alarm callback is executed by a different thread.
--#if !LIBFUZZER_WINDOWS
-+#if !LIBFUZZER_WINDOWS && !LIBFUZZER_NETBSD
-   if (!InFuzzingThread())
-     return;
- #endif
-```
-
-  Under investigation.
-
-II. unknown hangs
-
-    LLVMFuzzer :: value-profile-cmp.test
-    LLVMFuzzer :: value-profile-load.test
-    LLVMFuzzer :: value-profile-set.test
-    LLVMFuzzer :: value-profile-switch.test
-    LLVMFuzzer :: strncmp.test
-
-  workaround: kill with pkill(1) or kill(1)
-
-  reason unknown
-
-III. SIGXFSZ handler bug?
-    LLVMFuzzer :: merge-posix.test
-
-IV. Unknown
-    LLVMFuzzer :: trace-malloc-threaded.test
-    LLVMFuzzer :: trace-malloc-unbalanced.test
+ 	if (oldp) {
+-		if (*oldlenp > 1024 * 1024)
++		if (*oldlenp > 10 * 1024 * 1024)
+ 			return E2BIG;
+ 		count = *oldlenp / elem_size;
+ 		if (count == 0)
 
 TODO:
- - research the remaining failures (assignee: kamil)
  - oom-killer, research a crasher and share with kernel developers (assignee: plusun)
  - oom-killer, add a new ATF test to check oom-killer (assignee: plusun)
  - upstream semaphore fixes to reviews.llvm.org (assignee: plusun)

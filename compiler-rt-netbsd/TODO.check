@@ -239,40 +239,30 @@ Failing Tests (31):
 $ check-fuzzer-default
 
 ********************
-Testing Time: 94.86s
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 54.91s
 ********************
-Failing Tests (8):
+Failing Tests (2):
     LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: strncmp.test
     LLVMFuzzer :: trace-malloc-threaded.test
-    LLVMFuzzer :: trace-malloc-unbalanced.test
-    LLVMFuzzer :: value-profile-cmp.test
-    LLVMFuzzer :: value-profile-load.test
-    LLVMFuzzer :: value-profile-set.test
-    LLVMFuzzer :: value-profile-switch.test
 
-  Expected Passes    : 99
+  Expected Passes    : 105
   Unsupported Tests  : 8
-  Unexpected Failures: 8
+  Unexpected Failures: 2
 
 $ check-fuzzer
 
 ********************
-Testing Time: 141.30s
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 54.82s
 ********************
-Failing Tests (8):
+Failing Tests (2):
     LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: strncmp.test
     LLVMFuzzer :: trace-malloc-threaded.test
-    LLVMFuzzer :: trace-malloc-unbalanced.test
-    LLVMFuzzer :: value-profile-cmp.test
-    LLVMFuzzer :: value-profile-load.test
-    LLVMFuzzer :: value-profile-set.test
-    LLVMFuzzer :: value-profile-switch.test
 
-  Expected Passes    : 99
+  Expected Passes    : 105
   Unsupported Tests  : 8
-  Unexpected Failures: 8
+  Unexpected Failures: 2
 
 $ check-fuzzer-unit
 
@@ -596,7 +586,6 @@ Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90..
 Testing Time: 1.55s
   Expected Passes    : 7
   Unsupported Tests  : 1
-
 
 $ check-scudo
 
