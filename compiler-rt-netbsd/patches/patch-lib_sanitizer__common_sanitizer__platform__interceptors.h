@@ -1,18 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-04-25 21:13:40.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-05-10 23:16:36.443785252 +0000
 +++ lib/sanitizer_common/sanitizer_platform_interceptors.h
-@@ -425,7 +425,8 @@
-   (SI_LINUX || SI_MAC || SI_FREEBSD || SI_NETBSD || SI_OPENBSD || SI_SOLARIS)
- #define SANITIZER_INTERCEPT_CTERMID_R (SI_MAC || SI_FREEBSD || SI_SOLARIS)
- 
--#define SANITIZER_INTERCEPTOR_HOOKS (SI_LINUX || SI_MAC || SI_WINDOWS)
-+#define SANITIZER_INTERCEPTOR_HOOKS \
-+  (SI_LINUX || SI_MAC || SI_WINDOWS || SI_NETBSD)
- #define SANITIZER_INTERCEPT_RECV_RECVFROM SI_POSIX
- #define SANITIZER_INTERCEPT_SEND_SENDTO SI_POSIX
- #define SANITIZER_INTERCEPT_EVENTFD_READ_WRITE SI_LINUX
-@@ -495,4 +496,10 @@
+@@ -496,4 +496,10 @@
  #define SANITIZER_INTERCEPT_PROTOENT SI_NETBSD
  #define SANITIZER_INTERCEPT_NETENT SI_NETBSD
  
