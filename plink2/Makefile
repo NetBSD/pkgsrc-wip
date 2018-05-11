@@ -27,8 +27,8 @@ CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 
 # Check this
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas"
-# MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
+# MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas"
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
 # Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
@@ -37,9 +37,9 @@ USE_BUILTIN.zlib=	no
 
 .include "options.mk"
 
-.include "../../wip/openblas/buildlink3.mk"
-# .include "../../math/blas/buildlink3.mk"
-# .include "../../math/lapack/buildlink3.mk"
+# .include "../../wip/openblas/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
+.include "../../math/lapack/buildlink3.mk"
 .include "../../wip/cblas/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
