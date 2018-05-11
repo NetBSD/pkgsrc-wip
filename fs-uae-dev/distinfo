@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.10 2015/06/22 16:21:18 rhialto Exp $
 
-SHA1 (fs-uae-2.8.0u3.tar.gz) = 793a13531984440b0a0d58db29d7e2ac586ac5e8
-RMD160 (fs-uae-2.8.0u3.tar.gz) = e5a96db0de62f5c4618e8c2ceba2f061256f7d3b
-SHA512 (fs-uae-2.8.0u3.tar.gz) = 3ce868814de0e1c389cc3b1fc8a8df3a78496839c676a2a1c53f4d9f4bcda035abc273338a6d1f74d39783d775b32016f32b7f92446b9f150d6161ca0c502229
-Size (fs-uae-2.8.0u3.tar.gz) = 5011079 bytes
+SHA1 (fs-uae-2.9.7dev2.tar.gz) = 784ed8550cbfb1d6ea584a67e2d60d323740bfb5
+RMD160 (fs-uae-2.9.7dev2.tar.gz) = de40371818b351de947332d25ddcb47083520997
+SHA512 (fs-uae-2.9.7dev2.tar.gz) = 8204e26bfd6f824520c44b14008f0df2800d042b44f0603b1a455f323ca46232e5d8b90e3026dd5ead5f83722731d2ef581c46d6efd4624c8ac97df13b621f91
+Size (fs-uae-2.9.7dev2.tar.gz) = 5042147 bytes
 SHA1 (patch-libfsemu_src_ml_x11.c) = c491fd844b08d23744a138890c0b370307dd84c2
 SHA1 (patch-manymouse_x11__xinput2.c) = 9b2891d1ce62affb694ac11b2386115799ed6fa9
 SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = 48ac2f90004b2f9442daa58ed725548f5cbe3fec
