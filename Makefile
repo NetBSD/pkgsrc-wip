@@ -2069,7 +2069,6 @@ SUBDIR+=	mmm-mode
 SUBDIR+=	mnogosearch
 SUBDIR+=	modglue
 SUBDIR+=	modplugplay
-SUBDIR+=	modular-xorg-server-devel
 SUBDIR+=	modular-xorg-server-dfbsd
 SUBDIR+=	moe
 SUBDIR+=	monajat
