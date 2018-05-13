@@ -9,7 +9,7 @@ DISTNAME=	plink-ng-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
-GITHUB_TAG=	16230ed1c386312ab233ac98e414f67e28f72b4d
+GITHUB_TAG=	aabd8ab97667e47373ce0411a3799d9310c92a83
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
@@ -32,7 +32,7 @@ MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
 # Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
-PORTVERSION=	0.0.0.20180504
+PORTVERSION=	0.0.0.20180511
 USE_BUILTIN.zlib=	no
 
 .include "options.mk"
