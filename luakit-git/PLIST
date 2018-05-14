@@ -2,6 +2,7 @@
 bin/luakit
 etc/xdg/luakit/rc.lua
 etc/xdg/luakit/theme.lua
+lib/luakit/luakit.so
 man/man1/luakit.1
 share/applications/luakit.desktop
 share/doc/luakit/AUTHORS
@@ -34,6 +35,7 @@ share/doc/luakit/index.html
 share/doc/luakit/modules/adblock.html
 share/doc/luakit/modules/adblock_chrome.html
 share/doc/luakit/modules/binds.html
+share/doc/luakit/modules/binds_chrome.html
 share/doc/luakit/modules/bookmarks.html
 share/doc/luakit/modules/bookmarks_chrome.html
 share/doc/luakit/modules/chrome.html
@@ -57,6 +59,7 @@ share/doc/luakit/modules/history_chrome.html
 share/doc/luakit/modules/image_css.html
 share/doc/luakit/modules/introspector_chrome.html
 share/doc/luakit/modules/ipc.html
+share/doc/luakit/modules/keysym.html
 share/doc/luakit/modules/log_chrome.html
 share/doc/luakit/modules/lousy.bind.html
 share/doc/luakit/modules/lousy.load.html
@@ -95,6 +98,7 @@ share/doc/luakit/modules/select.html
 share/doc/luakit/modules/select_wm.html
 share/doc/luakit/modules/session.html
 share/doc/luakit/modules/settings.html
+share/doc/luakit/modules/settings_chrome.html
 share/doc/luakit/modules/soup.html
 share/doc/luakit/modules/styles.html
 share/doc/luakit/modules/tab_favicons.html
@@ -104,6 +108,7 @@ share/doc/luakit/modules/tests.lib.html
 share/doc/luakit/modules/undoclose.html
 share/doc/luakit/modules/unique_instance.html
 share/doc/luakit/modules/userscripts.html
+share/doc/luakit/modules/utf8.html
 share/doc/luakit/modules/vertical_tabs.html
 share/doc/luakit/modules/view_source.html
 share/doc/luakit/modules/viewpdf.html
@@ -122,6 +127,7 @@ share/luakit/lib/adblock.lua
 share/luakit/lib/adblock_chrome.lua
 share/luakit/lib/adblock_wm.lua
 share/luakit/lib/binds.lua
+share/luakit/lib/binds_chrome.lua
 share/luakit/lib/bookmarks.lua
 share/luakit/lib/bookmarks_chrome.lua
 share/luakit/lib/chrome.lua
@@ -150,7 +156,7 @@ share/luakit/lib/history_chrome.lua
 share/luakit/lib/image_css.lua
 share/luakit/lib/image_css_wm.lua
 share/luakit/lib/introspector_chrome.lua
-share/luakit/lib/jquery.min.js
+share/luakit/lib/keysym.lua
 share/luakit/lib/log_chrome.lua
 share/luakit/lib/lousy/bind.lua
 share/luakit/lib/lousy/init.lua
@@ -188,6 +194,7 @@ share/luakit/lib/select.lua
 share/luakit/lib/select_wm.lua
 share/luakit/lib/session.lua
 share/luakit/lib/settings.lua
+share/luakit/lib/settings_chrome.lua
 share/luakit/lib/styles.lua
 share/luakit/lib/tab_favicons.lua
 share/luakit/lib/tabhistory.lua
@@ -202,7 +209,6 @@ share/luakit/lib/webinspector.lua
 share/luakit/lib/webview.lua
 share/luakit/lib/webview_wm.lua
 share/luakit/lib/window.lua
-share/luakit/luakit.so
 share/luakit/resources/icons/COPYING
 share/luakit/resources/icons/tab-icon-chrome.png
 share/luakit/resources/icons/tab-icon-chrome@2x.png

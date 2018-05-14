@@ -62,6 +62,9 @@ teardownx:
 pre-build:	setupx
 post-build:	teardownx
 
+pre-install:
+	${RM} -f ${WRKSRC}/lib/*.orig
+
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
