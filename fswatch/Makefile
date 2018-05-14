@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/05/10 07:41:59 thomasklausner Exp $
 
-DISTNAME=	fswatch-1.11.2
+DISTNAME=	fswatch-1.11.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emcrisostomo/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/emcrisostomo/fswatch
 COMMENT=	Cross-platform file change monitor with multiple backends
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake autoconf automake makeinfo
 INFO_FILES=	yes
 GNU_CONFIGURE=	yes
