@@ -41,27 +41,6 @@ CONFIGURE_ARGS+=	--disable-neon
 .  endif
 .endif
 
-.if !empty(PKG_OPTIONS:Mqt5)
-CONFIGURE_ARGS+=	--enable-qt
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-qt
-.endif
-
-.if !empty(PKG_OPTIONS:Mlibxml2)
-CONFIGURE_ARGS+=	--enable-libxml2
-.include "../../textproc/libxml2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libxml2
-.endif
-
-.if !empty(PKG_OPTIONS:Mlibusb-1)
-CONFIGURE_ARGS+=	--enable-libusb
-.include "../../devel/libusb1/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libusb
-.endif
-
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--enable-x11
 .include "../../x11/libX11/buildlink3.mk"
@@ -72,13 +51,6 @@ CONFIGURE_ARGS+=	--enable-x11
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-x11
-.endif
-
-.if !empty(PKG_OPTIONS:Mcaca)
-CONFIGURE_ARGS+=	--enable-caca
-.include "../../graphics/libcaca/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-caca
 .endif
 
 #
@@ -175,4 +147,32 @@ CONFIGURE_ARGS+=	--enable-pulse
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pulse
+.endif
+
+.if !empty(PKG_OPTIONS:Mqt5)
+CONFIGURE_ARGS+=	--enable-qt
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-qt
+.endif
+
+.if !empty(PKG_OPTIONS:Mcaca)
+CONFIGURE_ARGS+=	--enable-caca
+.include "../../graphics/libcaca/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-caca
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibxml2)
+CONFIGURE_ARGS+=	--enable-libxml2
+.include "../../textproc/libxml2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libxml2
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibusb-1)
+CONFIGURE_ARGS+=	--enable-libusb
+.include "../../devel/libusb1/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libusb
 .endif
