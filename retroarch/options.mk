@@ -151,7 +151,7 @@ CONFIGURE_ARGS+=	--disable-sdl2
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 CONFIGURE_ARGS+=	--enable-ffmpeg
-.include "../../multimedia/ffmpeg3/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ffmpeg
 .endif
