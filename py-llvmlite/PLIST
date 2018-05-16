@@ -2,7 +2,7 @@
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/llvmlite/__init__.py
 ${PYSITELIB}/llvmlite/__init__.pyc
@@ -13,6 +13,9 @@ ${PYSITELIB}/llvmlite/_version.pyo
 ${PYSITELIB}/llvmlite/binding/__init__.py
 ${PYSITELIB}/llvmlite/binding/__init__.pyc
 ${PYSITELIB}/llvmlite/binding/__init__.pyo
+${PYSITELIB}/llvmlite/binding/analysis.py
+${PYSITELIB}/llvmlite/binding/analysis.pyc
+${PYSITELIB}/llvmlite/binding/analysis.pyo
 ${PYSITELIB}/llvmlite/binding/common.py
 ${PYSITELIB}/llvmlite/binding/common.pyc
 ${PYSITELIB}/llvmlite/binding/common.pyo
@@ -35,6 +38,9 @@ ${PYSITELIB}/llvmlite/binding/linker.pyo
 ${PYSITELIB}/llvmlite/binding/module.py
 ${PYSITELIB}/llvmlite/binding/module.pyc
 ${PYSITELIB}/llvmlite/binding/module.pyo
+${PYSITELIB}/llvmlite/binding/object_file.py
+${PYSITELIB}/llvmlite/binding/object_file.pyc
+${PYSITELIB}/llvmlite/binding/object_file.pyo
 ${PYSITELIB}/llvmlite/binding/options.py
 ${PYSITELIB}/llvmlite/binding/options.pyc
 ${PYSITELIB}/llvmlite/binding/options.pyo

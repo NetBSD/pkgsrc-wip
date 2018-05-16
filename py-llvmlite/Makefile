@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	llvmlite-0.14.0.dev
+DISTNAME=	llvmlite-0.22.0
 GITHUB_PROJECT=	llvmlite
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
@@ -14,11 +14,12 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c++
 
+.include "../../lang/python/pyversion.mk"
+.if "${PYPKGPREFIX}" == "py27"
 DEPENDS+=	${PYPKGPREFIX}-enum-[0-9]*:../../devel/py-enum
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+.endif
 
-EGG_NAME=	llvmlite-0.13.0
-
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=5.0.0
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
