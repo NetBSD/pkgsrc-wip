@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	numba-0.29.0.dev
+DISTNAME=	numba-0.37.0
 GITHUB_PROJECT=	numba
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://numba.pydata.org/
 COMMENT=	NumPy aware dynamic Python compiler using LLVM
 LICENSE=	2-clause-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.22:../../wip/py-llvmlite
 
 USE_LANGUAGES=	c c++
 
