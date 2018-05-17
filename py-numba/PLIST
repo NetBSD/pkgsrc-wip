@@ -1023,8 +1023,8 @@ ${PYSITELIB}/numba/tests/__init__.py
 ${PYSITELIB}/numba/tests/__init__.pyc
 ${PYSITELIB}/numba/tests/__init__.pyo
 ${PYSITELIB}/numba/tests/annotation_usecases.py
-${PLIST.py2x}${PYSITELIB}/numba/tests/annotation_usecases.pyc
-${PLIST.py2x}${PYSITELIB}/numba/tests/annotation_usecases.pyo
+${PLIST.py3x}${PYSITELIB}/numba/tests/annotation_usecases.pyc
+${PLIST.py3x}${PYSITELIB}/numba/tests/annotation_usecases.pyo
 ${PYSITELIB}/numba/tests/cache_usecases.py
 ${PYSITELIB}/numba/tests/cache_usecases.pyc
 ${PYSITELIB}/numba/tests/cache_usecases.pyo
