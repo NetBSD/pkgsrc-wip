@@ -11,7 +11,7 @@ HOMEPAGE=	http://numba.pydata.org/
 COMMENT=	NumPy aware dynamic Python compiler using LLVM
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.22:../../wip/py-llvmlite
+DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.22:../../devel/py-llvmlite
 
 USE_LANGUAGES=	c c++
 

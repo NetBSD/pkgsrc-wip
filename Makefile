@@ -3372,7 +3372,6 @@ SUBDIR+=	py-liveplots
 SUBDIR+=	py-llfuse
 SUBDIR+=	py-llvm-lit-git
 SUBDIR+=	py-llvm-lit-netbsd
-SUBDIR+=	py-llvmlite
 SUBDIR+=	py-lmfit
 SUBDIR+=	py-locustio
 SUBDIR+=	py-loggly
