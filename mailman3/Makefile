@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mailman-3.1.0b5
+DISTNAME=	mailman-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman/}
@@ -12,14 +12,14 @@ LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONS_ACCEPTED=	36 35 34
 
-DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.0a5:../../mail/py-aiosmtpd
+DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.0.0:../../mail/py-aiosmtpd
 DEPENDS+=	${PYPKGPREFIX}-alembic-[0-9]*:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.14.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-falcon>=1.0.0rc1:../../devel/py-falcon
 DEPENDS+=	${PYPKGPREFIX}-flufl.bounce-[0-9]*:../../mail/py-flufl.bounce
-DEPENDS+=	${PYPKGPREFIX}-flufl.i18n-[0-9]*:../../devel/py-flufl.i18n
-DEPENDS+=	${PYPKGPREFIX}-flufl.lock-[0-9]*:../../devel/py-flufl.lock
+DEPENDS+=	${PYPKGPREFIX}-flufl.i18n>=2.0.1:../../devel/py-flufl.i18n
+DEPENDS+=	${PYPKGPREFIX}-flufl.lock>=3.1:../../devel/py-flufl.lock
 DEPENDS+=	${PYPKGPREFIX}-lazr.config-[0-9]*:../../devel/py-lazr.config
 DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
