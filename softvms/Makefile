@@ -1,10 +1,10 @@
 # $NetBSD$
 
-PKGNAME=		softvms-1.9
-DISTNAME=		softvms
-CATEGORIES=		emulators
-MASTER_SITES=		https://mc.pp.se/dc/files/
-MASTER_SITE_BACKUP=	https://travispaul.me/distfiles/
+PKGNAME=	softvms-1.9
+DISTNAME=	softvms
+CATEGORIES=	emulators
+MASTER_SITES=	https://mc.pp.se/dc/files/
+MASTER_SITES+=	https://travispaul.me/distfiles/
 
 MAINTAINER=	tr@vispaul.me
 HOMEPAGE=	https://mc.pp.se/dc/sw.html
@@ -25,5 +25,3 @@ do-install:
 .include "../../audio/SDL_sound/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
-
-
