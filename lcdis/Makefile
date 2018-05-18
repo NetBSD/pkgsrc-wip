@@ -11,6 +11,8 @@ HOMEPAGE=		https://web.archive.org/web/20110927100411/http://www.maushammer.com/
 COMMENT=		Disassembler for the Sega VMU/VMS
 LICENSE=		gnu-gpl-v2
 
+USE_TOOLS+=		unzip
+
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin
 
