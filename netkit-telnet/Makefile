@@ -14,9 +14,10 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
-ONLY_FOR_PLATFORM=	Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-* Darwin-*-*
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--installroot=${DESTDIR}
 
 SUBST_CLASSES+=		warn
 SUBST_STAGE.warn=	pre-configure
