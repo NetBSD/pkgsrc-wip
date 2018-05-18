@@ -3490,7 +3490,6 @@ SUBDIR+=	py-nptdms
 SUBDIR+=	py-nsim
 SUBDIR+=	py-ntch
 SUBDIR+=	py-nuitka
-SUBDIR+=	py-numba
 SUBDIR+=	py-numberjack
 SUBDIR+=	py-numdifftools
 SUBDIR+=	py-numericalunits
