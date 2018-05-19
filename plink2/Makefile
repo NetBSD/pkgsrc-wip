@@ -19,7 +19,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake
-GCC_REQD+=	5.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/2.0
 
