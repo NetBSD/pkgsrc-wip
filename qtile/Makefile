@@ -21,5 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
 .endif
 DEPENDS+=	${PYPKGPREFIX}-trollius-[0-9]*:../../wip/py-trollius # XXX
 
+.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
