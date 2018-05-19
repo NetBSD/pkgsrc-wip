@@ -14,7 +14,7 @@ Don't assume sysfs is present.
 -            return bats[0]
 -        else:
 -            return 'BAT0'
-+        if os.path.isfile(BAT_DIR):
++        if os.path.isdir(BAT_DIR):
 +            bats = [f for f in os.listdir(BAT_DIR) if f.startswith('BAT')]
 +            if bats:
 +                return bats[0]
