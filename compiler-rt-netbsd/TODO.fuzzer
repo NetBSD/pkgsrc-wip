@@ -50,5 +50,4 @@ diff -u -r1.354 uvm_map.c
 TODO:
  - oom-killer, research a crasher and share with kernel developers (assignee: plusun)
  - oom-killer, add a new ATF test to check oom-killer (assignee: plusun)
- - upstream semaphore fixes to reviews.llvm.org (assignee: plusun)
  - getrusage(2) fix pullup to -8 or find a workaround for 8.0 (assignee: christos?)
