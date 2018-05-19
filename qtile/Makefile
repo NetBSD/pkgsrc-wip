@@ -14,7 +14,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-cairocffi-[0-9]*:../../graphics/py-cairocffi
+DEPENDS+=	${PYPKGPREFIX}-cairocffi-[0-9]*:../../wip/py-cairocffi
 DEPENDS+=	${PYPKGPREFIX}-xcffib-[0-9]*:../../wip/py-xcffib # XXX
 .if ${PYVERSSUFFIX} == 2.7
 DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
