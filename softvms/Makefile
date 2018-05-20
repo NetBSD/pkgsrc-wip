@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	softvms-1.9
 DISTNAME=	softvms
+PKGNAME=	softvms-1.9
 CATEGORIES=	emulators
 MASTER_SITES=	https://mc.pp.se/dc/files/
 MASTER_SITES+=	https://travispaul.me/distfiles/
