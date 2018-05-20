@@ -1,0 +1,15 @@
+$NetBSD$
+
+Honor LDFLAGS.
+
+--- Makefile.orig	2000-04-27 22:25:21.000000000 +0000
++++ Makefile
+@@ -20,7 +20,7 @@ clean :
+ 	-$(RM) aglexer.c aggram.c aggram.h
+ 
+ $(TARGET) : $(OBJS)
+-	$(CC) $^ -o $@
++	$(CC) $(LDFLAGS) $^ -o $@
+ 
+ sieve : sieve.o
+ 
