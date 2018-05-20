@@ -3,12 +3,12 @@
 DISTNAME=	softvms
 PKGNAME=	softvms-1.9
 CATEGORIES=	emulators
-MASTER_SITES=	https://mc.pp.se/dc/files/
+MASTER_SITES=	http://mc.pp.se/dc/files/
 MASTER_SITES+=	https://travispaul.me/distfiles/
 
 MAINTAINER=	tr@vispaul.me
-HOMEPAGE=	https://mc.pp.se/dc/sw.html
-COMMENT=	Emulator capable of running some VMS games
+HOMEPAGE=	http://mc.pp.se/dc/sw.html
+COMMENT=	Emulator capable of running some Sega VMS games
 LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/vms
