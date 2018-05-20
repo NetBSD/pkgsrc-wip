@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin
 
 do-build:
-	${CC} ${CFLAGS} -o ${WRKSRC}/lcdis ${WRKSRC}/LCDIS.C
+	${CC} ${LDFLAGS} ${CFLAGS} -o ${WRKSRC}/lcdis ${WRKSRC}/LCDIS.C
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lcdis ${DESTDIR}${PREFIX}/bin/lcdis
