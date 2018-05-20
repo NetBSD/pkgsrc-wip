@@ -8,7 +8,7 @@ GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
 DIST_SUBDIR=	ocaml-gen
 
 MAINTAINER=	alnsn@NetBSD.org
-HOMEPAGE=	https://github.com/c-cube/gen/archve/
+HOMEPAGE=	https://github.com/c-cube/gen/
 COMMENT=	Simple, efficient iterators for OCaml
 LICENSE=	2-clause-bsd
 
