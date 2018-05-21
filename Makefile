@@ -1636,7 +1636,6 @@ SUBDIR+=	lastfm-sharp
 SUBDIR+=	lat
 SUBDIR+=	lbt
 SUBDIR+=	lcalc
-SUBDIR+=	lcdis
 SUBDIR+=	lcdproc
 SUBDIR+=	lci
 SUBDIR+=	lcov-git
