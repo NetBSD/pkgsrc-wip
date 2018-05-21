@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/tqdm
+bin/tqdm${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,6 +14,9 @@ ${PYSITELIB}/tqdm/__main__.pyo
 ${PYSITELIB}/tqdm/_main.py
 ${PYSITELIB}/tqdm/_main.pyc
 ${PYSITELIB}/tqdm/_main.pyo
+${PYSITELIB}/tqdm/_monitor.py
+${PYSITELIB}/tqdm/_monitor.pyc
+${PYSITELIB}/tqdm/_monitor.pyo
 ${PYSITELIB}/tqdm/_tqdm.py
 ${PYSITELIB}/tqdm/_tqdm.pyc
 ${PYSITELIB}/tqdm/_tqdm.pyo
@@ -32,3 +35,4 @@ ${PYSITELIB}/tqdm/_utils.pyo
 ${PYSITELIB}/tqdm/_version.py
 ${PYSITELIB}/tqdm/_version.pyc
 ${PYSITELIB}/tqdm/_version.pyo
+man/man1/tqdm.1
