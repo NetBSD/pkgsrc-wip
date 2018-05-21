@@ -13,15 +13,15 @@ LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/vms
 GNU_CONFIGURE=		yes
-BUILD_TARGET=		vms
 USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vms ${DESTDIR}${PREFIX}/bin/vms
+BUILD_TARGET=		vms
 
 .include "../../x11/libX11/buildlink3.mk"
-
 .include "../../audio/SDL_sound/buildlink3.mk"
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/vms ${DESTDIR}${PREFIX}/bin/vms
 
 .include "../../mk/bsd.pkg.mk"
