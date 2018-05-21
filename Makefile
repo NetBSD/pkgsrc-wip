@@ -3834,7 +3834,6 @@ SUBDIR+=	py-topkapi
 SUBDIR+=	py-toro
 SUBDIR+=	py-toronado
 SUBDIR+=	py-toscawidgets
-SUBDIR+=	py-tqdm
 SUBDIR+=	py-tracks
 SUBDIR+=	py-traits
 SUBDIR+=	py-traitsgui

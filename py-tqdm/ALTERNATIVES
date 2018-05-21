@@ -1,1 +1,0 @@
-bin/tqdm @PREFIX@/bin/tqdm@PYVERSSUFFIX@
