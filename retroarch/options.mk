@@ -5,7 +5,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype qt5 x11 alsa caca pulseaudio udev libusb-1 libxml2
 PKG_SUGGESTED_OPTIONS+=		sdl2 ffmpeg freetype x11
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio udev
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
 
