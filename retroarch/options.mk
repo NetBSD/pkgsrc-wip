@@ -3,9 +3,15 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype qt5 x11 alsa caca pulseaudio udev libusb-1 libxml2
-PKG_SUGGESTED_OPTIONS+=		sdl2 ffmpeg freetype x11
+
+PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype qt5 x11 caca
+PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio libusb-1
+PKG_SUPPORTED_OPTIONS+=		libxml2 # Deprecated
+PKG_SUGGESTED_OPTIONS+=		sdl2 ffmpeg freetype x11 openal
+
+PKG_SUPPORTED_OPTIONS.Linux+=	udev
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio udev
+
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
 
@@ -140,6 +146,20 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
+.endif
+
+.if !empty(PKG_OPTIONS:Mjack)
+CONFIGURE_ARGS+=	--enable-jack
+.include "../../audio/jack/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-jack
+.endif
+
+.if !empty(PKG_OPTIONS:Mopenal)
+CONFIGURE_ARGS+=	--enable-al
+.include "../../audio/openal-soft/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-al
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
