@@ -4475,6 +4475,7 @@ SUBDIR+=	trinity
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
 SUBDIR+=	tsh
+SUBDIR+=	tslib
 SUBDIR+=	tsm
 SUBDIR+=	tsm62
 SUBDIR+=	ttf-indic-fonts
