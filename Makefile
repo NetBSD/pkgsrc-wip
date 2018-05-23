@@ -877,6 +877,7 @@ SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambatte-dev
 SUBDIR+=	gambit
 SUBDIR+=	ganglia-monitor-core
+SUBDIR+=	ganglia-monitor-core-devel
 SUBDIR+=	ganglia-web
 SUBDIR+=	gappa
 SUBDIR+=	garden
