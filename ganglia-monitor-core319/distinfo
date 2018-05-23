@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/11/21 14:56:16 outpaddling Exp $
-
-SHA1 (ganglia-3.1.9.tar.gz) = 13c38b8e703507a0d177e369a90cf0b74a4362e1
-RMD160 (ganglia-3.1.9.tar.gz) = eefb10bd07d738dac7e939bc198929f37452dea2
-Size (ganglia-3.1.9.tar.gz) = 1120483 bytes
-SHA1 (patch-aa) = e258e4efb1ae012db51901de87e614cede78812c
-SHA1 (patch-ab) = 260a78711c2c7f1111ce8c4b0d54d2edd60dde08
-SHA1 (patch-ac) = a7d4251eed047cb6ffb89c23d87b0db1dbe7b5f4
-SHA1 (patch-lib__gm_protocol_dr.c) = 9d17d79bb1a6426a2547c00006819483aff47363
