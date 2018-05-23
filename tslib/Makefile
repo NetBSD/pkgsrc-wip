@@ -22,13 +22,19 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=		input waveshare
+
 .if ${OPSYS} != "Linux" && ${OPSYS} != "FreeBSD"
 # Disable /dev/input/eventN support
 CONFIGURE_ARGS+=	--disable-input
+.else
+PLIST.input=		yes
 .endif
 
 .if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--disable-waveshare
+.else
+PLIST.waveshare=	yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/ts_calibrate
+bin/ts_finddev
+bin/ts_harvest
+bin/ts_print
+bin/ts_print_mt
+bin/ts_print_raw
+bin/ts_test
+bin/ts_test_mt
+bin/ts_uinput
+bin/ts_verify
