@@ -9,7 +9,7 @@ $NetBSD$
  #  define FOPEN_WB "w"
  #  define FOPEN_AB "a"
 -#  ifdef __APPLE__
-+#  if defined(__APPLE__) || defined(__FreeBSD__)
++#  if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
 +#    define fread_unlocked fread
 +#    define fwrite_unlocked fwrite
 +#  endif

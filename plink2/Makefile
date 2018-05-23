@@ -14,7 +14,6 @@ GITHUB_TAG=	f758bbd77e04eb0cb46fbc633be60b22b8b3cc2d
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
 COMMENT=	Whole genome association analysis toolset
-# Check this
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++ fortran
@@ -25,7 +24,6 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/2.0
 CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 
-# Check this
 # MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas"
 MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
 # Keep debug info until at least next beta
@@ -34,7 +32,7 @@ MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
 PORTVERSION=	0.0.0.20180518
 USE_BUILTIN.zlib=	no
 
-.include "options.mk"
+MAKE_FILE=	${FILESDIR}/Makefile.generic
 
 # .include "../../wip/openblas/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
