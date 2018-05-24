@@ -694,7 +694,6 @@ SUBDIR+=	es40-cvs
 SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
 SUBDIR+=	espeak
-SUBDIR+=	espresso
 SUBDIR+=	ethtool
 SUBDIR+=	etoile
 SUBDIR+=	etoile-core
