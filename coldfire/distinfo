@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/03 22:58:23 nocker Exp $
-
-SHA1 (coldfire-0.3.1.tar.gz) = 4d4f88540552b2b667751135866846491b74ee73
-RMD160 (coldfire-0.3.1.tar.gz) = 8ddde663740cd139c7784627ef6a9ffefe77d841
-Size (coldfire-0.3.1.tar.gz) = 142964 bytes
-SHA1 (patch-aa) = 7e57fc12447c789adf8984d66b7b804e990550b5
-SHA1 (patch-ab) = 8ca46ce83dfe98c9a3222468d7063ff63ee62f10

@@ -410,7 +410,6 @@ SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
 SUBDIR+=	cmusfm
 SUBDIR+=	coccinelle
-SUBDIR+=	coldfire
 SUBDIR+=	collectd-CGP
 SUBDIR+=	collectd-haproxy
 SUBDIR+=	collectd-redis
