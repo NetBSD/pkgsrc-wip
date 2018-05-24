@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/29 23:44:14 pettai Exp $
-
-SHA1 (tools-0.3.tar.gz) = dfc691e5cc972197f54d9f6a0e3e977dff60d430
-RMD160 (tools-0.3.tar.gz) = 293db37021eea0de9d2cfd3fcdb0d4451d0ceda2
-Size (tools-0.3.tar.gz) = 9151 bytes

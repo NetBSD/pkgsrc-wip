@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:31 thomasklausner Exp $
-share/cacti/plugins/tools/LICENSE
-share/cacti/plugins/tools/README
-share/cacti/plugins/tools/index.php
-share/cacti/plugins/tools/setup.php
-share/cacti/plugins/tools/tools.php

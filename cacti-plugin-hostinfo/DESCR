@@ -1,3 +1,0 @@
-Host info is a small but neat plugin to cacti, that shows helpful info
-about the host that cacti is running on. It shows all packages and
-versions that cacti relys on.
