@@ -368,7 +368,6 @@ SUBDIR+=	cinnamon-desktop
 SUBDIR+=	cinnamon-menus
 SUBDIR+=	cinnamon-nemo
 SUBDIR+=	cinnamon-settings-daemon
-SUBDIR+=	circe2
 SUBDIR+=	ciwiki
 SUBDIR+=	cjs
 SUBDIR+=	cl-alexandria
