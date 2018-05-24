@@ -834,7 +834,6 @@ SUBDIR+=	fstobdf
 SUBDIR+=	fswatch
 SUBDIR+=	fswebcam
 SUBDIR+=	ftgl
-SUBDIR+=	ftpd-tls
 SUBDIR+=	ftpsesame
 SUBDIR+=	fuse-cryfs
 SUBDIR+=	fuse-google-drive-git

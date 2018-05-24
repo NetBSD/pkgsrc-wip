@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/09/28 06:41:14 rillig Exp $
-
-SHA1 (ftpd-tls-20031008.tar.gz) = 409facd3d105bd20c82fed06591687375ac2ac1e
-RMD160 (ftpd-tls-20031008.tar.gz) = 67ac41a85c20899c0b1a609e06eda026376a290c
-Size (ftpd-tls-20031008.tar.gz) = 202139 bytes
-SHA1 (patch-aa) = 738da533c2dff8ccc64492c7ded566cc31327ae6
-SHA1 (patch-ab) = 5ea4d375ef9fcd7a8dbe251613806c3611d2d0a5
