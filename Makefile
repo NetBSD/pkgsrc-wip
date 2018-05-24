@@ -497,7 +497,6 @@ SUBDIR+=	darkcoin
 SUBDIR+=	dart-git
 SUBDIR+=	dasht
 SUBDIR+=	datamash
-SUBDIR+=	datapipe
 SUBDIR+=	dates
 SUBDIR+=	davical-git
 SUBDIR+=	dazz_db
