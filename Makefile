@@ -320,6 +320,7 @@ SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
 SUBDIR+=	canto-curses
 SUBDIR+=	canto-daemon
+SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	cardpeek
 SUBDIR+=	cargo
