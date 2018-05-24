@@ -795,7 +795,6 @@ SUBDIR+=	flyback
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	fogleman-craft
-SUBDIR+=	font-bitstream-speedo
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
 SUBDIR+=	foxtrotgps
