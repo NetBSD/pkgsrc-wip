@@ -465,7 +465,6 @@ SUBDIR+=	cryptcat
 SUBDIR+=	csmith
 SUBDIR+=	csoap
 SUBDIR+=	csp2b
-SUBDIR+=	cspchecker
 SUBDIR+=	csstidy
 SUBDIR+=	csv-mode
 SUBDIR+=	ctags-git
