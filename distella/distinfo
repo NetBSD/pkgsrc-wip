@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:10 rillig Exp $
-
-SHA1 (distella.zip) = f8074bc5454a49e76c26910200730cb0c17a78ab
-RMD160 (distella.zip) = 85f41bec970ed28aa3f865d1985b5ca3567bbd90
-Size (distella.zip) = 27566 bytes
-SHA1 (patch-aa) = 29fcafc9d24f4f1a0abcbb29a88e1b1745e955f8

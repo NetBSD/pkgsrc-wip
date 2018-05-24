@@ -566,7 +566,6 @@ SUBDIR+=	discident-glib
 SUBDIR+=	dispred
 SUBDIR+=	disque
 SUBDIR+=	distbb-git
-SUBDIR+=	distella
 SUBDIR+=	ditz-commander
 SUBDIR+=	diveintopython
 SUBDIR+=	dlpoly-classic
