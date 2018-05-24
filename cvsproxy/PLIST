@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/06 19:12:12 thomasklausner Exp $
-libexec/cvsproxy
-man/man8/cvsproxy.8

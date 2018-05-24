@@ -479,7 +479,6 @@ SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs2darcs
 SUBDIR+=	cvsanaly
 SUBDIR+=	cvsnt
-SUBDIR+=	cvsproxy
 SUBDIR+=	cvstrac
 SUBDIR+=	cwebx
 SUBDIR+=	cwm
