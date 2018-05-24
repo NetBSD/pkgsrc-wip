@@ -38,7 +38,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.4.4:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0.8:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.6.1:../../math/py-statsmodels
-DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../wip/py-toolz
+DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34
 

@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/dask/dask/
 COMMENT=	Dask is a flexible parallel computing library for analytics
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-toolz>=0.7.1:../../wip/py-toolz
+DEPENDS+=	${PYPKGPREFIX}-toolz>=0.7.1:../../devel/py-toolz
 
 WRKSRC=		${WRKDIR}/dask-0.11.0
 
