@@ -633,7 +633,6 @@ SUBDIR+=	dzen-git
 SUBDIR+=	dzen2
 SUBDIR+=	e00pg
 SUBDIR+=	e2fsprogs
-SUBDIR+=	e3
 SUBDIR+=	easy-rsa
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
