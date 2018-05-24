@@ -688,7 +688,6 @@ SUBDIR+=	eor
 SUBDIR+=	eot
 SUBDIR+=	epacts
 SUBDIR+=	epiphany
-SUBDIR+=	erc
 SUBDIR+=	erlang-basho
 SUBDIR+=	erlang15
 SUBDIR+=	es40-cvs
