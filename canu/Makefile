@@ -34,7 +34,7 @@ SUBST_FILES.jar=	${WRKSRC}/pipelines/canu/OverlapMhap.pm
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	post-patch
-SUBST_SED.perl=		-e 's|RealBin/lib|RealBin/../${SITE_PERL_REL}|g'
+SUBST_SED.perl=		-e 's|$$FindBin::RealBin/../lib/site_perl|${PREFIX}/${SITE_PERL_REL}|g'
 SUBST_FILES.perl=	${WRKSRC}/pipelines/canu.pl
 
 REPLACE_PERL+=	bogart/*.pl \
