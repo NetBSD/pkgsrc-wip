@@ -1,5 +1,0 @@
-- sometimes just freezes when executing a command (e.g., ls) using
-  emelfm2's built-in command line.
-- also freezes when one selects a filetype for which no internal
-  viewer is set.
-- dumps core on NetBSD 2.1.0/i386 (pthread problem, it seems).

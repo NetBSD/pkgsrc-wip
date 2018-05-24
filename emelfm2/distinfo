@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/11/23 18:16:14 leonardschmidt Exp $
-
-SHA1 (emelfm2-0.1.3.tar.gz) = 0333c4ca135b50b3e2a95c4a1177afc281dcad78
-RMD160 (emelfm2-0.1.3.tar.gz) = 7fbc2fc00465a42c1fa0017b2a325805c43b6079
-Size (emelfm2-0.1.3.tar.gz) = 649951 bytes
-SHA1 (patch-aa) = 7a608cc2e44e7049628ffe0a6a0b4e11bad01acb

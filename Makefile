@@ -676,7 +676,6 @@ SUBDIR+=	emboss-meme
 SUBDIR+=	emboss-mse
 SUBDIR+=	emboss-phylip
 SUBDIR+=	emboss-topo
-SUBDIR+=	emelfm2
 SUBDIR+=	emerald
 SUBDIR+=	emerald-themes
 SUBDIR+=	emirror
