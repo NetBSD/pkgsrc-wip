@@ -779,7 +779,6 @@ SUBDIR+=	flam3-svn
 SUBDIR+=	flang-git
 SUBDIR+=	flashrom
 SUBDIR+=	flasm
-SUBDIR+=	flc
 SUBDIR+=	flexdock
 SUBDIR+=	flexdump
 SUBDIR+=	flightgear
