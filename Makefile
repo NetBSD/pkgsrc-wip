@@ -3811,7 +3811,6 @@ SUBDIR+=	py-tklsystem
 SUBDIR+=	py-tmatrix
 SUBDIR+=	py-tmux
 SUBDIR+=	py-toeplitz
-SUBDIR+=	py-toolz
 SUBDIR+=	py-topkapi
 SUBDIR+=	py-toro
 SUBDIR+=	py-toronado

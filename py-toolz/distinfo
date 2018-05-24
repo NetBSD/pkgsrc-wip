@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/02/14 09:24:01 jihbed Exp $
-
-SHA1 (toolz-0.8.2.tar.gz) = cfa6b57c1422b5e62f16937c1127b4598081d95e
-RMD160 (toolz-0.8.2.tar.gz) = ac5efeabc29a8a48fb431b7a24b2a728eeb0b62d
-SHA512 (toolz-0.8.2.tar.gz) = b03968b5f31474b2b5fd944d282b620861184cd26b256f6f92a141aa0f25c20baf2be6b1424bc945778fa05781730b477b16551c9f302c284d54c8be64f2699f
-Size (toolz-0.8.2.tar.gz) = 45486 bytes
