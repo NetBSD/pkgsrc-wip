@@ -476,7 +476,6 @@ SUBDIR+=	cursor-dmz-theme
 SUBDIR+=	cutecom
 SUBDIR+=	cvc3
 SUBDIR+=	cvs-syncmail
-SUBDIR+=	cvs20hg
 SUBDIR+=	cvs2darcs
 SUBDIR+=	cvsanaly
 SUBDIR+=	cvsnt
