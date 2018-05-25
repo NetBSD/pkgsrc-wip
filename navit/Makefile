@@ -1,19 +1,15 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	navit
-DISTNAME=	v0.5.1
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=    1
+DISTNAME=	navit-0.5.1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=navit-gps/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	fekete.zoltan@minux.hu
 HOMEPAGE=	https://github.com/navit-gps/navit/
 COMMENT=	GPS car navigation system
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/navit-0.5.1
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
