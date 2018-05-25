@@ -4187,7 +4187,6 @@ SUBDIR+=	slashem
 SUBDIR+=	slate
 SUBDIR+=	slclust
 SUBDIR+=	slideml
-SUBDIR+=	slim
 SUBDIR+=	slime
 SUBDIR+=	slowhttptest
 SUBDIR+=	slrn-devel

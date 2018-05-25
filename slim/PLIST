@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/11/22 23:16:00 shindenmorr Exp $
-man/man1/slim.1
-sbin/slim
-share/examples/rc.d/slim
-share/examples/slim/slim.conf
-share/slim/themes/default/background.jpg
-share/slim/themes/default/panel.png
-share/slim/themes/default/slim.theme
