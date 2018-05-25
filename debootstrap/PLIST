@@ -9,12 +9,15 @@ share/debootstrap/libfakesyscall.c
 share/debootstrap/scripts/aequorea
 share/debootstrap/scripts/artful
 share/debootstrap/scripts/bartholomea
+share/debootstrap/scripts/bionic
 share/debootstrap/scripts/breezy
 share/debootstrap/scripts/bullseye
 share/debootstrap/scripts/buster
 share/debootstrap/scripts/chromodoris
+share/debootstrap/scripts/cosmic
 share/debootstrap/scripts/dapper
 share/debootstrap/scripts/dasyatis
+share/debootstrap/scripts/debian-common
 share/debootstrap/scripts/edgy
 share/debootstrap/scripts/etch
 share/debootstrap/scripts/etch-m68k
@@ -27,6 +30,10 @@ share/debootstrap/scripts/intrepid
 share/debootstrap/scripts/jaunty
 share/debootstrap/scripts/jessie
 share/debootstrap/scripts/jessie-kfreebsd
+share/debootstrap/scripts/kali
+share/debootstrap/scripts/kali-dev
+share/debootstrap/scripts/kali-last-snapshot
+share/debootstrap/scripts/kali-rolling
 share/debootstrap/scripts/karmic
 share/debootstrap/scripts/lenny
 share/debootstrap/scripts/lucid

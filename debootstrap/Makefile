@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=			debootstrap_1.0.90
+DISTNAME=			debootstrap_1.0.100
 PKGNAME=			${DISTNAME:S/_/-/}
 CATEGORIES=			sysutils emulators
 MASTER_SITES=			${MASTER_SITE_DEBIAN:=pool/main/d/debootstrap/}
