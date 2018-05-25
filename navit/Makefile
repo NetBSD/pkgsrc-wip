@@ -19,19 +19,16 @@ USE_TOOLS+=		cmake gettext
 
 # LIBS.Linux+= -ldl
 
-DEPENDS+=       png>=1.6:../../graphics/png
-DEPENDS+=       freetype2>=2.9:../../graphics/freetype2
-DEPENDS+=       glib2>=2.0:../../devel/glib2
-DEPENDS+=       python27-[0-9]*:../../lang/python27
-DEPENDS+=       gtk2-[0-9]*:../../x11/gtk2
-
 BUILD_DEPENDS+=gettext-lib-[0-9]*:../../devel/gettext-lib
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.png+=	png>=1.6
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python27/buildlink3.mk"
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.9
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
