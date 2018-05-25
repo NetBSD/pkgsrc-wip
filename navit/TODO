@@ -2,3 +2,16 @@
 2. Solve NetBSD porting problem (runtime issues).
 3. Find and set default options for the package.
 4. Create additional package options.
+
+On NetBSD-current the build fails due undefined __BYTE_ORDER and
+__*_ENDIAN, e.g.:
+
+> .../navit-0.5.1/navit/map/binfile/binfile.c:1737:5: warning: "__BYTE_ORDER" is not defined [-Wundef]
+>  #if __BYTE_ORDER == __BIG_ENDIAN
+>      ^~~~~~~~~~~~
+> .../navit-0.5.1/navit/map/binfile/binfile.c:1737:21: warning: "__BIG_ENDIAN" is not defined [-Wundef]
+>  #if __BYTE_ORDER == __BIG_ENDIAN
+>                      ^~~~~~~~~~~~
+
+Adding `CFLAGS.NetBSD+= -DUSE_SYS_ENDIAN_H' seems to workaround
+that but it also sounds pretty kludgy!
