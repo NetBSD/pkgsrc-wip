@@ -1,0 +1,4 @@
+1. Fix glib.h include problem. Remove the corresponding patch.
+2. Solve NetBSD porting problem (runtime issues).
+3. Find and set default options for the package.
+4. Create additional package options.
