@@ -1099,7 +1099,6 @@ SUBDIR+=	gtkmathview
 SUBDIR+=	gtkmmorse
 SUBDIR+=	gtksourcecompletion
 SUBDIR+=	gts-snapshot
-SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
 SUBDIR+=	guichan
