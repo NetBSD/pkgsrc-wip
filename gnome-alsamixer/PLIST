@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
-bin/gnome-alsamixer
-share/pixmaps/gnome-alsamixer/gnome-alsamixer-icon.png

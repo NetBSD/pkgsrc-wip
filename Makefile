@@ -956,7 +956,6 @@ SUBDIR+=	gnochm
 SUBDIR+=	gnokii
 SUBDIR+=	gnomad2
 SUBDIR+=	gnome-activity-journal
-SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-applets
 SUBDIR+=	gnome-apps
 SUBDIR+=	gnome-backgrounds

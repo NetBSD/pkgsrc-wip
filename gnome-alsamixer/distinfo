@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
-
-SHA1 (gnome-alsamixer-0.9.6.tar.gz) = faece601a4329d2b01b9efe65200021538fc066d
-RMD160 (gnome-alsamixer-0.9.6.tar.gz) = 3653444fc6b65f8fc10e06499c2bdd735ee71943
-Size (gnome-alsamixer-0.9.6.tar.gz) = 93557 bytes
