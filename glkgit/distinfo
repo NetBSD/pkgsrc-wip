@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/03/07 15:24:22 dillo Exp $
-
-SHA1 (git-110.zip) = b7ec9196f2f155d5f23eefe9be6b4a7587b36110
-RMD160 (git-110.zip) = b968540a22ff484deb01a0cfb145086ec74eef74
-Size (git-110.zip) = 76928 bytes
-SHA1 (patch-aa) = 30f21ee0d8caf26ba05b314186c45c83c0dd8b33
