@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:13 thomasklausner Exp $
-bin/glista
-share/applications/glista.desktop
-share/glista/glista-icon.png
-share/glista/glista.ui
