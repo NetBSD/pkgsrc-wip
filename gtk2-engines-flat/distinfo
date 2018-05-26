@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/05/25 20:14:34 ekamperi Exp $
-
-SHA1 (gtk2flat-default.tar.gz) = 652fa7ba0df8cfa67dd4fb2199dd597ff801f9a8
-RMD160 (gtk2flat-default.tar.gz) = aa9b79da98802cbc4f6f9267af369929ad6121ae
-Size (gtk2flat-default.tar.gz) = 167554 bytes

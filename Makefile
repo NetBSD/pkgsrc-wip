@@ -1085,7 +1085,6 @@ SUBDIR+=	gtk-server
 SUBDIR+=	gtk-theme-switch
 SUBDIR+=	gtk2-engines-aurora
 SUBDIR+=	gtk2-engines-dwerg
-SUBDIR+=	gtk2-engines-flat
 SUBDIR+=	gtk2-engines-galaxy
 SUBDIR+=	gtk2-engines-magicchicken
 SUBDIR+=	gtk2-murrina-fancy-clearlooks
