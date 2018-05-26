@@ -1091,7 +1091,6 @@ SUBDIR+=	gtk2-murrina-fancy-clearlooks
 SUBDIR+=	gtk2-theme-pack
 SUBDIR+=	gtk2hs-buildtools
 SUBDIR+=	gtkaml
-SUBDIR+=	gtkfontsel
 SUBDIR+=	gtkglextmm
 SUBDIR+=	gtkglk
 SUBDIR+=	gtkhash
