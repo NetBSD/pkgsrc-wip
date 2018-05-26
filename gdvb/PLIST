@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:38 thomasklausner Exp $
-bin/gdvb
-share/gdvb/gdvb.jar
-share/gdvb/icons/cfg.png
-share/gdvb/icons/dir.png
-share/gdvb/icons/gdvb.png
-share/gdvb/icons/sat.png
-share/gdvb/icons/sch.png

@@ -888,7 +888,6 @@ SUBDIR+=	gdb5
 SUBDIR+=	gdb6
 SUBDIR+=	gde
 SUBDIR+=	gdm
-SUBDIR+=	gdvb
 SUBDIR+=	geant
 SUBDIR+=	gecko-sharp
 SUBDIR+=	gecode
