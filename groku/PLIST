@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
-bin/groku
-share/applications/groku.desktop
-share/groku/groku.glade
-share/pixmaps/groku.png

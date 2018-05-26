@@ -1055,7 +1055,6 @@ SUBDIR+=	gretl
 SUBDIR+=	greybird-theme
 SUBDIR+=	grilo-plugins
 SUBDIR+=	grisbi
-SUBDIR+=	groku
 SUBDIR+=	groovy
 SUBDIR+=	grpc-java
 SUBDIR+=	grsync
