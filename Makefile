@@ -1103,7 +1103,6 @@ SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
 SUBDIR+=	guichan
 SUBDIR+=	guile-scsh
-SUBDIR+=	guilerxspencer
 SUBDIR+=	guitone
 SUBDIR+=	gune
 SUBDIR+=	gupnp-ui
