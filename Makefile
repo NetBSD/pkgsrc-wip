@@ -944,7 +944,6 @@ SUBDIR+=	glkterm
 SUBDIR+=	globulation2
 SUBDIR+=	glulxe
 SUBDIR+=	gmap
-SUBDIR+=	gmc2mid
 SUBDIR+=	gmetadom
 SUBDIR+=	gmic
 SUBDIR+=	gmm
