@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/12 10:36:38 koifren Exp $
-bin/fusesmb
-bin/fusesmb.cache
-man/man1/fusesmb.1
-man/man5/fusesmb.conf.5
