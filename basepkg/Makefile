@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	basepkg-1.5
+DISTNAME=	basepkg-1.5.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
@@ -15,7 +15,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
-WRKSRC=		${WRKDIR}/basepkg-1.5
+WRKSRC=		${WRKDIR}/basepkg-1.5.1
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
