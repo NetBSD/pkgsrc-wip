@@ -907,7 +907,6 @@ SUBDIR+=	gfa
 SUBDIR+=	gfan
 SUBDIR+=	gfeedline
 SUBDIR+=	gfontview
-SUBDIR+=	gforge
 SUBDIR+=	gforth-git
 SUBDIR+=	gfsview-snapshot
 SUBDIR+=	ggz-gtk-client
