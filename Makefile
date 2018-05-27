@@ -1454,7 +1454,6 @@ SUBDIR+=	java-asm
 SUBDIR+=	java-basicplayer
 SUBDIR+=	java-bcel
 SUBDIR+=	java-charva
-SUBDIR+=	java-crimson
 SUBDIR+=	java-frozenbubble
 SUBDIR+=	java-getopt
 SUBDIR+=	java-gnucrypto
