@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/25 13:41:23 leot1990 Exp $
+@comment $NetBSD$
 bin/espeak
 include/espeak/speak_lib.h
 lib/libespeak.a

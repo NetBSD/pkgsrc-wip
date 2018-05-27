@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/08/25 13:41:23 leot1990 Exp $
 #
 
-DISTNAME=	espeak-${ESPEAK_VERSION}${ESPEAK_MINOR}-source
+DISTNAME=	espeak-1.48.04-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=espeak/}
@@ -17,9 +17,6 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
-
-ESPEAK_VERSION=	1.48
-ESPEAK_MINOR=	.04
 
 SUBST_CLASSES+=		datadir
 SUBST_MESSAGE.datadir=	Replacing hardcoded DATADIR path

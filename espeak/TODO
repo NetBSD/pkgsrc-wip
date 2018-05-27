@@ -1,4 +1,3 @@
 - Adjust permission of data files (probably they do not need execute
   permissions!)
-- ESPEAK_VERSION in PLIST is hardcoded now
 - Function is tested only on 6.0-ish/i386 for now.
