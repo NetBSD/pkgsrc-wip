@@ -1446,7 +1446,6 @@ SUBDIR+=	ja-ptex
 SUBDIR+=	jabref
 SUBDIR+=	jabref3
 SUBDIR+=	jacorb-lib
-SUBDIR+=	jad
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	jakarta-struts
 SUBDIR+=	jalview
