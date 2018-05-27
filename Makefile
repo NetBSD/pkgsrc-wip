@@ -1498,7 +1498,6 @@ SUBDIR+=	julia
 SUBDIR+=	jumpnbump
 SUBDIR+=	junit
 SUBDIR+=	jupp
-SUBDIR+=	just
 SUBDIR+=	jython
 SUBDIR+=	kacst-one
 SUBDIR+=	kacst-ttf
