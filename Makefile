@@ -1383,7 +1383,6 @@ SUBDIR+=	ices-vorbis
 SUBDIR+=	icestorm-git
 SUBDIR+=	icmpchat
 SUBDIR+=	id3
-SUBDIR+=	idled
 SUBDIR+=	ifstat
 SUBDIR+=	ifuse
 SUBDIR+=	igal

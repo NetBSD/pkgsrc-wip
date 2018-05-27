@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:46 thomasklausner Exp $
-libexec/idled
-man/man5/idled.cf.5
-man/man8/idled.8
-share/examples/idled/idled.cf.template
