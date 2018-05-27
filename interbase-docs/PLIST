@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.2 2009/08/25 11:56:45 thomasklausner Exp $
+share/doc/interbase-docs-6.0/ApiGuide.pdf
+share/doc/interbase-docs-6.0/DataDef.pdf
+share/doc/interbase-docs-6.0/DevGuide.pdf
+share/doc/interbase-docs-6.0/EmbedSQL.pdf
+share/doc/interbase-docs-6.0/GetStart.pdf
+share/doc/interbase-docs-6.0/LANGREF.PDF
+share/doc/interbase-docs-6.0/OpGuide.pdf
