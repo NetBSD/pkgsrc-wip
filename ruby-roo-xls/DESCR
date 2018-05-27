@@ -1,0 +1,8 @@
+This library extends math/ruby-roo to add support for handling
+class Excel files, including:
+
+* .xls files
+* .xml files in the SpreadsheetML format (circa 2003)
+
+There is no support for formulas in Roo for .xls files - you can
+get the result of a formula but not the formula itself.

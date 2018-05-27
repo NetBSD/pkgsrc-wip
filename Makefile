@@ -4052,6 +4052,7 @@ SUBDIR+=	ruby-neovim
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-review
+SUBDIR+=	ruby-roo-xls
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
