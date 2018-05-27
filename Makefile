@@ -1443,7 +1443,6 @@ SUBDIR+=	itools
 SUBDIR+=	ja-freewnn-cvs
 SUBDIR+=	ja-ptex
 #SUBDIR+=	jabberd			# not a real package
-SUBDIR+=	jabberd-aim
 SUBDIR+=	jabref
 SUBDIR+=	jabref3
 SUBDIR+=	jacorb-lib

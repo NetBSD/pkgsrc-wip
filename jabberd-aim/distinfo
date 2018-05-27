@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:22 rillig Exp $
-
-SHA1 (aim-transport-stable-20040131.tar.gz) = 626aaee20ca5c52671406a875ca83b5c5dfe28ed
-RMD160 (aim-transport-stable-20040131.tar.gz) = 71c244d69c57c989369f5e91c02fe3ac2e439663
-Size (aim-transport-stable-20040131.tar.gz) = 245641 bytes
