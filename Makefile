@@ -1398,7 +1398,6 @@ SUBDIR+=	inetdxtra
 SUBDIR+=	info2man
 SUBDIR+=	infraarcana
 SUBDIR+=	intel-gpu-tools
-SUBDIR+=	interbase-docs
 SUBDIR+=	intervaltree
 SUBDIR+=	io-base
 SUBDIR+=	io-blowfish
