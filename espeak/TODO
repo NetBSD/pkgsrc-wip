@@ -1,3 +1,0 @@
-- Adjust permission of data files (probably they do not need execute
-  permissions!)
-- Function is tested only on 6.0-ish/i386 for now.

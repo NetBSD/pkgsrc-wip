@@ -17,13 +17,17 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	DATADIR=${PREFIX}/share/espeak-data
 
 SUBST_CLASSES+=		datadir
 SUBST_MESSAGE.datadir=	Replacing hardcoded DATADIR path
 SUBST_STAGE.datadir=	post-patch
-SUBST_VARS.datadir=	PREFIX
-SUBST_FILES.datadir=	Makefile speech.h
+SUBST_FILES.datadir=	speech.h
 SUBST_SED.datadir=	-e 's|/usr/share|${PREFIX}/share|'
+
+post-install:
+	cd ${WRKSRC} && ${FIND} ${DESTDIR}${PREFIX}/share -type f \
+	    -exec ${CHMOD} ${SHAREMODE} {} \;
 
 # Using v18 (v19 will get undefined reference to `Pa_StreamActive')
 .include "../../audio/portaudio/buildlink3.mk"
