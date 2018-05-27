@@ -1427,7 +1427,6 @@ SUBDIR+=	ion3
 SUBDIR+=	ioquake3-snapshot
 SUBDIR+=	ipamjfont
 SUBDIR+=	ipax0208font-ttf
-SUBDIR+=	ipfm
 SUBDIR+=	ipsvd
 SUBDIR+=	iptables
 SUBDIR+=	iptstate
