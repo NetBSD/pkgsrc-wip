@@ -1559,7 +1559,6 @@ SUBDIR+=	koffice
 SUBDIR+=	koha
 SUBDIR+=	kolourpaint
 SUBDIR+=	konsole
-SUBDIR+=	korelib
 SUBDIR+=	kpimtextedit
 SUBDIR+=	kruler
 SUBDIR+=	krusader
