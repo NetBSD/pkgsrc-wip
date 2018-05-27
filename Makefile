@@ -1449,7 +1449,6 @@ SUBDIR+=	jacorb-lib
 SUBDIR+=	jakarta-log4j
 SUBDIR+=	jakarta-struts
 SUBDIR+=	jalview
-SUBDIR+=	jamaica
 SUBDIR+=	jason
 SUBDIR+=	java-asm
 SUBDIR+=	java-basicplayer
