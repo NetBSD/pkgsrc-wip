@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:23 rillig Exp $
-
-SHA1 (jep-2.24.tar.gz) = 895c87277a213699c2dc1e696c6b370707f6501b
-RMD160 (jep-2.24.tar.gz) = 28a64cdaeea70e9ac61bda47746b6925af735e0a
-Size (jep-2.24.tar.gz) = 235880 bytes

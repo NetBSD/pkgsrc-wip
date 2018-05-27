@@ -1461,7 +1461,6 @@ SUBDIR+=	java-gnujaf
 SUBDIR+=	java-gnujaxp
 SUBDIR+=	java-iText-RUPS
 SUBDIR+=	java-jbluez
-SUBDIR+=	java-jep
 SUBDIR+=	java-jlayer
 SUBDIR+=	java-jspeex
 SUBDIR+=	java-mp3spi
