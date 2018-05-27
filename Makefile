@@ -1542,7 +1542,6 @@ SUBDIR+=	kidentitymanagement
 SUBDIR+=	kimagemapeditor
 SUBDIR+=	kimap
 SUBDIR+=	kinfocenter
-SUBDIR+=	kino
 SUBDIR+=	kio-extras
 SUBDIR+=	kissme
 SUBDIR+=	klayout
