@@ -1,5 +1,8 @@
 $NetBSD: patch-ac,v 1.2 2015/08/25 13:41:24 leot1990 Exp $
 
+- Adjust LIBS* flags
+- Install static library without execute permissions
+
 --- Makefile.orig	2014-02-02 10:58:11.000000000 +0000
 +++ Makefile
 @@ -81,17 +81,21 @@ libespeak_SOURCES = speak_lib.cpp compil
@@ -26,3 +29,12 @@ $NetBSD: patch-ac,v 1.2 2015/08/25 13:41:24 leot1990 Exp $
  
  CXXFLAGS=-O2
  
+@@ -143,7 +147,7 @@ install: all
+ 	# Install shared library
+ 	$(INSTALL) -m 755 $(LIB_NAME).$(LIBTAG) $(DESTDIR)$(LIBDIR)
+ 	# Install static library
+-	$(INSTALL) -m 755 $(STATIC_LIB_NAME) $(DESTDIR)$(LIBDIR)
++	$(INSTALL) -m 644 $(STATIC_LIB_NAME) $(DESTDIR)$(LIBDIR)
+ 	$(LN_SF) $(LIB_NAME).$(LIBTAG) $(DESTDIR)$(LIBDIR)/$(LIB_NAME).$(LIB_VERSION)
+ 	$(LN_SF) $(LIB_NAME).$(LIB_VERSION) $(DESTDIR)$(LIBDIR)/$(LIB_NAME)
+ 	# Install development headers
