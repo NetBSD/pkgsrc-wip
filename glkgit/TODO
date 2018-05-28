@@ -1,0 +1,5 @@
+Should be imported as glkgit if ready.
+
+Doesn't work on 4.99.55:
+  Program terminated with signal 11, Segmentation fault.
+  #0  0xbbb61d97 in _malloc_prefork () from /usr/lib/libc.so.12
