@@ -22,22 +22,16 @@ CMAKE_ARGS+=	-DSAMPLE_MAP=0
 CMAKE_ARGS+=	-DSVG2PNG=0
 CMAKE_ARGS+=	-DUSE_NATIVE_LANGUAGE_SUPPORT=0		
 
-DEPENDS+=       png>=1.6:../../graphics/png
-DEPENDS+=       freetype2>=2.9:../../graphics/freetype2
-DEPENDS+=       glib2>=2.0:../../devel/glib2
-DEPENDS+=       python27-[0-9]*:../../lang/python27
-DEPENDS+=       gtk2-[0-9]*:../../x11/gtk2
-DEPENDS+=       librsvg-[0-9]*:../../graphics/librsvg
-DEPENDS+=       imlib-[0-9]*:../../graphics/imlib2
-
-
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
++BUILDLINK_API_DEPENDS.png+=		   png>=1.6
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/python27/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
++BUILDLINK_API_DEPENDS.freetype2+=		 freetype2>=2.9
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=		  glib2>=2.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=opt:-ldl:${BUILDLINK_LDADD.dl:M*}
