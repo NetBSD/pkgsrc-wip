@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+CFLAGS.NetBSD+= -DUSE_SYS_ENDIAN_H
+
 USE_TOOLS+=	cmake pkg-config
 
 CMAKE_ARGS+=    -DLIB_DIR=${PREFIX}/lib/navit
