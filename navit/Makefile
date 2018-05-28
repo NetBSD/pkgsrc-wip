@@ -17,8 +17,6 @@ WRKSRC=		${WRKDIR}/navit-0.5.1
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-#USE_LIBTOOL=		yes
-#USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		cmake pkg-config
 
 CMAKE_ARGS+=    -DLIB_DIR=${PREFIX}/lib/navit \
