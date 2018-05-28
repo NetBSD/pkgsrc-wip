@@ -3,8 +3,8 @@ bin/maptool
 bin/navit
 lib/navit/libfib.a
 lib/navit/libsupport_shapefile.a
-man/maptool.1
-man/navit.1
+man/man1/maptool.1
+man/man1/navit.1
 share/applications/navit.desktop
 share/icons/hicolor/108x108/apps/navit.png
 share/icons/hicolor/128x128/apps/navit.png
