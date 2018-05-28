@@ -1,10 +1,8 @@
 # $NetBSD$
 
-
 DISTNAME=	navit-0.5.1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=navit-gps/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	fekete.zoltan@minux.hu
@@ -15,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=		cmake pkg-config
+USE_TOOLS+=	cmake pkg-config
 
 CMAKE_ARGS+=    -DLIB_DIR=${PREFIX}/lib/navit
 CMAKE_ARGS+=    -DMAN_DIR=${PREFIX}/${PKGMANDIR}
