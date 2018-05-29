@@ -24,6 +24,7 @@ CMAKE_ARGS+=	-DSAMPLE_MAP=0
 CMAKE_ARGS+=	-DSVG2PNG=0
 CMAKE_ARGS+=	-DUSE_NATIVE_LANGUAGE_SUPPORT=0		
 
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 +BUILDLINK_API_DEPENDS.png+=		   png>=1.6
@@ -37,4 +38,6 @@ BUILDLINK_API_DEPENDS.glib2+=		  glib2>=2.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+.include "../../geography/gpsd/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
