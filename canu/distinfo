@@ -4,5 +4,5 @@ SHA1 (canu-1.7.tar.gz) = aaaafd8516be5e4d725af407bc84b3c6f178b2ac
 RMD160 (canu-1.7.tar.gz) = bd394bb6dcebd43d2793ca1aa9bd60ec6be75beb
 SHA512 (canu-1.7.tar.gz) = dbc1dca4df4117521143843bb781227f4dfde5ba7068e47b51ccf9e9dba45eb2629b5773531e4f362f1df05eab3f1a62088c5fa231d3624af23f11d97e7a4edf
 Size (canu-1.7.tar.gz) = 2533016 bytes
-SHA1 (patch-pipelines_canu_Defaults.pm) = e6136febb18e50c90f4935248ee84c0d18199fb1
-SHA1 (patch-pipelines_canu_Execution.pm) = 265a8a9794a879bc80624921ecb6ebf6e4a40b53
+SHA1 (patch-pipelines_canu_Defaults.pm) = 7364fae68e26140b31e89c5a7cd238d0922e5310
+SHA1 (patch-pipelines_canu_Execution.pm) = 91ba9e00a61af96a911c7601689b97e4fc9a725a
