@@ -48,13 +48,3 @@ $NetBSD$
  unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
  unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
  unsigned struct_timex_sz = sizeof(struct timex);
-@@ -339,6 +352,9 @@ unsigned path_max = PATH_MAX;
- 
- int struct_ttyent_sz = sizeof(struct ttyent);
- 
-+int struct_kinfo_proc_sz = sizeof(struct kinfo_proc);
-+int struct_kinfo_proc2_sz = sizeof(struct kinfo_proc2);
-+
- // ioctl arguments
- unsigned struct_altqreq_sz = sizeof(altqreq);
- unsigned struct_amr_user_ioctl_sz = sizeof(amr_user_ioctl);
