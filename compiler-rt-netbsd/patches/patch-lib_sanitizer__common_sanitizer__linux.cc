@@ -1,8 +1,16 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-06-01 09:47:10.441087020 +0000
+--- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-06-01 09:39:33.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux.cc
-@@ -1955,6 +1955,30 @@ void MaybeReexec() {
+@@ -81,6 +81,7 @@
+ 
+ #if SANITIZER_FREEBSD
+ #include <sys/exec.h>
++#define sysctl _sysctl
+ #include <sys/sysctl.h>
+ #include <machine/atomic.h>
+ extern "C" {
+@@ -1954,6 +1955,30 @@ void MaybeReexec() {
    // No need to re-exec on Linux.
  }
  
