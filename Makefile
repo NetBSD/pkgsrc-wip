@@ -4147,6 +4147,7 @@ SUBDIR+=	simulavr-git
 SUBDIR+=	simutrans
 SUBDIR+=	simutrans-data
 SUBDIR+=	singular
+SUBDIR+=	singularity
 SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	siptoolbox
