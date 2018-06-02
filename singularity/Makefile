@@ -13,7 +13,7 @@ GITHUB_TAG=	${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/singularityware/singularity
-COMMENT=	Container
+COMMENT=	Application container for Linux
 LICENSE=	modified-bsd
 
 REPLACE_PYTHON=		libexec/helpers/*/*.py
