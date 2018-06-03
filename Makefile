@@ -591,6 +591,7 @@ SUBDIR+=	dolphin-emu
 SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
 SUBDIR+=	doorman
+SUBDIR+=	dosbox-x
 SUBDIR+=	dosemu2
 SUBDIR+=	dosfstools
 SUBDIR+=	dotclear

@@ -1,0 +1,41 @@
+$NetBSD$
+
+Fix == test in configure script.
+
+--- configure.ac.orig	2018-06-01 19:29:54.000000000 +0000
++++ configure.ac
+@@ -159,14 +159,14 @@ AC_ARG_ENABLE(hx-dos,AC_HELP_STRING([--e
+ dnl Some stuff for the icon.
+ case "$host" in
+     *-*-cygwin* | *-*-mingw32*)
+-    if test x$enable_hx == xyes; then
++    if test x$enable_hx = xyes; then
+         CXXFLAGS="$CXXFLAGS -DHX_DOS"
+         AC_DEFINE(C_HX_DOS,1,[Targeting HX DOS extender])
+     fi
+     ;;
+ esac
+ 
+-if test x$enable_force_menu_sdldraw == xyes; then
++if test x$enable_force_menu_sdldraw = xyes; then
+     CXXFLAGS="$CXXFLAGS -DFORCE_SDLDRAW"
+     AC_DEFINE(C_FORCE_MENU_SDLDRAW,1,[Force SDL drawn menus])
+ fi
+@@ -359,7 +359,7 @@ case "$host" in
+        ;;
+ esac
+ 
+-AM_CONDITIONAL(MACOSX, test x"$macosx" == x"1")
++AM_CONDITIONAL(MACOSX, test x"$macosx" = x"1")
+ 
+ dnl The target cpu checks for dynamic cores
+ AH_TEMPLATE(C_TARGETCPU,[The type of cpu this target has])
+@@ -534,7 +534,7 @@ else
+   enable_mt32=no
+   AC_MSG_RESULT(no)
+ fi 
+-AM_CONDITIONAL(C_MT32, test "x$enable_mt32" == "xyes")
++AM_CONDITIONAL(C_MT32, test "x$enable_mt32" = "xyes")
+ 
+ dnl FEATURE: DEBUG and HEAVY DEBUG options (debugger)
+ AH_TEMPLATE(C_DEBUG,[Define to 1 to enable internal debugger, requires libcurses])
