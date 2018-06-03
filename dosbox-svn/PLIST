@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/dosbox
+man/man1/dosbox.1
+share/doc/dosbox/README

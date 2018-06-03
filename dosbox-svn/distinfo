@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-src_Makefile.am) = e70fa0b90c0293632cbdcff0a9c54a77c9823c8b
+SHA1 (patch-src_dosbox.cpp) = 2b91506da13b36e0c1bfdc300c546d6850ef3b69
