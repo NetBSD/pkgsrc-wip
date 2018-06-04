@@ -1,8 +1,8 @@
 $NetBSD$
 
---- cmake/config-ix.cmake.orig	2018-04-25 21:13:41.000000000 +0000
+--- cmake/config-ix.cmake.orig	2018-06-01 09:39:33.000000000 +0000
 +++ cmake/config-ix.cmake
-@@ -551,7 +551,7 @@ else()
+@@ -547,7 +547,7 @@ else()
  endif()
  
  if (PROFILE_SUPPORTED_ARCH AND NOT LLVM_USE_SANITIZER AND
@@ -11,7 +11,7 @@ $NetBSD$
    set(COMPILER_RT_HAS_PROFILE TRUE)
  else()
    set(COMPILER_RT_HAS_PROFILE FALSE)
-@@ -599,7 +599,7 @@ else()
+@@ -595,7 +595,7 @@ else()
  endif()
  
  if (COMPILER_RT_HAS_SANITIZER_COMMON AND SCUDO_SUPPORTED_ARCH AND

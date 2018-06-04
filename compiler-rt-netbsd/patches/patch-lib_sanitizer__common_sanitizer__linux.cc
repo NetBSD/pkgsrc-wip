@@ -2,14 +2,14 @@ $NetBSD$
 
 --- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-06-01 09:39:33.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux.cc
-@@ -81,6 +81,7 @@
+@@ -93,6 +93,7 @@ extern "C" {
  
- #if SANITIZER_FREEBSD
- #include <sys/exec.h>
+ #if SANITIZER_NETBSD
+ #include <limits.h>  // For NAME_MAX
 +#define sysctl _sysctl
  #include <sys/sysctl.h>
- #include <machine/atomic.h>
- extern "C" {
+ #include <sys/exec.h>
+ extern struct ps_strings *__ps_strings;
 @@ -1954,6 +1955,30 @@ void MaybeReexec() {
    // No need to re-exec on Linux.
  }
