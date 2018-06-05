@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-saturn-20180311
+DISTNAME=	libretro-beetle-saturn-20180504
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-saturn-libretro
-GITHUB_TAG=	4d5edd684b0dd23dfbbdc7fceec6013d753c4f86
+GITHUB_TAG=	884f71fa8b0fe0a5ce8dcd20b3d43c935c50016f
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/beetle_saturn/
