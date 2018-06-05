@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	libretro-citra-20180227
+PKGNAME=	libretro-citra-20180519
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,15 +8,15 @@ HOMEPAGE=	https://docs.libretro.com/library/citra/
 COMMENT=	Libretro core based on the Citra Nintendo 3DS emulator
 LICENSE=	gnu-gpl-v2
 
-CITRA_TAG=	9b6f6a96fa8e6203e912f52b757155420cb00cbd
+CITRA_TAG=	85e47f1ea7013eb9a0f27ec4b946d71e04f970c1
 BOOST_TAG=	7310c95e2320ed262b0600315fa2f762c4b6cc54
 CATCH_TAG=	62dae592c330ab74cea30c897255ee9518639c3f
-CPR_TAG=	b5758fbc88021437f968fe5174f121b8b92f5d5c
-CRYPTOPP_TAG=	b6c6684451f925ab2e0b99acbaf66fd487ebfbd5
+CRYPTOPP_TAG=	5be140bcea453a00f7f2fec09fb9e37849d65d98
 DYNARMIC_TAG=	d1d4705364031512cb89333aebc00b8d75a2f732
 ENET_TAG=	39a72ab1990014eb399cee9d538fd529df99c6a0
-FMT_TAG=	ac5484c4e7365b59d8c7e14db6778de26635e428
+FMT_TAG=	5859e58ba17073cf1c16536205450528f3530df0
 INIH_TAG=	56edbbbef9ba432521442ee47ba7d1c8de37e63d
+LIBRESSL_TAG=	cbb1dcab9a566d0aa0036339f21f2e37012b2507
 NIHSTRO_TAG=	fd69de1a1b960ec296cc67d32257b0f9e2d89ac6
 SOUNDTOUCH_TAG=	019d2089bbadf70d73ba85aa8ea51490b071262c
 XBYAK_TAG=	c5da3778e7f84013fe8c26fcf18a67881bd1e825
@@ -24,12 +24,12 @@ XBYAK_TAG=	c5da3778e7f84013fe8c26fcf18a67881bd1e825
 DISTFILES+=	${CITRA_TAG}.tar.gz
 DISTFILES+=	${BOOST_TAG}.tar.gz
 DISTFILES+=	${CATCH_TAG}.tar.gz
-DISTFILES+=	${CPR_TAG}.tar.gz
 DISTFILES+=	${CRYPTOPP_TAG}.tar.gz
 DISTFILES+=	${DYNARMIC_TAG}.tar.gz
 DISTFILES+=	${ENET_TAG}.tar.gz
 DISTFILES+=	${FMT_TAG}.tar.gz
 DISTFILES+=	${INIH_TAG}.tar.gz
+DISTFILES+=	${LIBRESSL_TAG}.tar.gz
 DISTFILES+=	${NIHSTRO_TAG}.tar.gz
 DISTFILES+=	${SOUNDTOUCH_TAG}.tar.gz
 DISTFILES+=	${XBYAK_TAG}.tar.gz
@@ -42,9 +42,6 @@ SITES.${BOOST_TAG}.tar.gz= \
 
 SITES.${CATCH_TAG}.tar.gz= \
     ${MASTER_SITE_GITHUB:=catchorg/Catch2/archive/}
-
-SITES.${CPR_TAG}.tar.gz= \
-    ${MASTER_SITE_GITHUB:=whoshuu/cpr/archive/}
 
 SITES.${CRYPTOPP_TAG}.tar.gz= \
     ${MASTER_SITE_GITHUB:=weidai11/cryptopp/archive/}
@@ -60,6 +57,9 @@ SITES.${FMT_TAG}.tar.gz= \
 
 SITES.${INIH_TAG}.tar.gz= \
     ${MASTER_SITE_GITHUB:=benhoyt/inih/archive/}
+
+SITES.${LIBRESSL_TAG}.tar.gz= \
+    ${MASTER_SITE_GITHUB:=citra-emu/ext-libressl-portable/archive/}
 
 SITES.${NIHSTRO_TAG}.tar.gz= \
     ${MASTER_SITE_GITHUB:=neobrain/nihstro/archive/}
@@ -83,6 +83,9 @@ CMAKE_ARGS+=	-DENABLE_WEB_SERVICE=OFF
 # error: unrecognized command line option '-msha'
 CMAKE_ARGS+=	-DCRYPTOPP_DISABLE_ASM=ON
 
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_ARGS+=	--target citra_libretro
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 post-extract:
@@ -92,8 +95,6 @@ post-extract:
 	${TOUCH} ${WRKSRC}/externals/catch/.git
 	${MV} ${WRKDIR}/cryptopp-${CRYPTOPP_TAG}/* ${WRKSRC}/externals/cryptopp/cryptopp/
 	${TOUCH} ${WRKSRC}/externals/cryptopp/cryptopp/.git
-	${MV} ${WRKDIR}/cpr-${CPR_TAG}/* ${WRKSRC}/externals/cpr/
-	${TOUCH} ${WRKSRC}/externals/cpr/.git
 	${MV} ${WRKDIR}/dynarmic-${DYNARMIC_TAG}/* ${WRKSRC}/externals/dynarmic/
 	${TOUCH} ${WRKSRC}/externals/dynarmic/.git
 	${MV} ${WRKDIR}/enet-${ENET_TAG}/* ${WRKSRC}/externals/enet/
@@ -107,6 +108,8 @@ post-extract:
 	${MV} ${WRKDIR}/inih-${INIH_TAG}/* ${WRKSRC}/externals/inih/inih/
 	${TOUCH} ${WRKSRC}/externals/inih/inih/.git
 	${MV} ${WRKDIR}/nihstro-${NIHSTRO_TAG}/* ${WRKSRC}/externals/nihstro/
+	${TOUCH} ${WRKSRC}/externals/libressl/.git
+	${MV} ${WRKDIR}/ext-libressl-portable-${LIBRESSL_TAG}/* ${WRKSRC}/externals/libressl/
 	${TOUCH} ${WRKSRC}/externals/nihstro/.git
 	${MV} ${WRKDIR}/xbyak-${XBYAK_TAG}/* ${WRKSRC}/externals/xbyak/
 	${TOUCH} ${WRKSRC}/externals/xbyak/.git
@@ -115,8 +118,6 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/src/citra_libretro/citra_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/citra_libretro.so
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
