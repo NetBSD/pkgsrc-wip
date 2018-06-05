@@ -75,6 +75,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake
 
+GCC_REQD=	7.3.0
+
 CMAKE_ARGS+=	-DENABLE_SDL2=OFF
 CMAKE_ARGS+=	-DENABLE_QT=OFF
 CMAKE_ARGS+=	-DENABLE_LIBRETRO=ON
@@ -83,7 +85,6 @@ CMAKE_ARGS+=	-DENABLE_WEB_SERVICE=OFF
 # error: unrecognized command line option '-msha'
 CMAKE_ARGS+=	-DCRYPTOPP_DISABLE_ASM=ON
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	--target citra_libretro
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
@@ -118,6 +119,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/src/citra_libretro/citra_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/citra_libretro.so
 
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
