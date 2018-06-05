@@ -46,7 +46,6 @@ SUBDIR+=	R-gmp
 SUBDIR+=	R-graph
 SUBDIR+=	R-gsl
 SUBDIR+=	R-mclust
-SUBDIR+=	R-moonsun
 SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
 SUBDIR+=	R-tuneR
