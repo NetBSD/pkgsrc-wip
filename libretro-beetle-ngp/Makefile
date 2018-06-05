@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-beetle-ngp-20171024
+DISTNAME=	libretro-beetle-ngp-20180419
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-ngp-libretro
-GITHUB_TAG=	ab5d1d5933134c97d4c04a9a045887bf3bdb5aba
+GITHUB_TAG=	b2b5c2c421df5784791ced965b1e373b9ffd5ab6
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/beetle_neopop/

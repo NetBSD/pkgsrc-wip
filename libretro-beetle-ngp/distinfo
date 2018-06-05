@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-beetle-ngp-20171024-ab5d1d5933134c97d4c04a9a045887bf3bdb5aba.tar.gz) = c0eadeb41c6875609356ceb9de0f851c918cdca2
-RMD160 (libretro-beetle-ngp-20171024-ab5d1d5933134c97d4c04a9a045887bf3bdb5aba.tar.gz) = 0fd50b5d44c2916d734c2b4c9ff8260b55985cc2
-SHA512 (libretro-beetle-ngp-20171024-ab5d1d5933134c97d4c04a9a045887bf3bdb5aba.tar.gz) = 024dfa73d8d4b546ba4881ca05ccdf16adf7535a647c66fe015cfce9df53cefaf03fd765383c3d1c04726343c3abae92583c9f4559741c2b17c61e55f7ef90d2
-Size (libretro-beetle-ngp-20171024-ab5d1d5933134c97d4c04a9a045887bf3bdb5aba.tar.gz) = 165348 bytes
+SHA1 (libretro-beetle-ngp-20180419-b2b5c2c421df5784791ced965b1e373b9ffd5ab6.tar.gz) = 3b5ecb4643f11abfcada5e37d2b6566307af3fd4
+RMD160 (libretro-beetle-ngp-20180419-b2b5c2c421df5784791ced965b1e373b9ffd5ab6.tar.gz) = 7264b9b8488befeab779ee8402a1c60c50a48c1e
+SHA512 (libretro-beetle-ngp-20180419-b2b5c2c421df5784791ced965b1e373b9ffd5ab6.tar.gz) = 9f4251b39f29bc170865abcbea0317705ca6b0f0249f3259e7252ee1638b28d628e49d1eac80ebc32b72ab0fd81937fe829edee615c1f3f476c89697fb2b527c
+Size (libretro-beetle-ngp-20180419-b2b5c2c421df5784791ced965b1e373b9ffd5ab6.tar.gz) = 179095 bytes
