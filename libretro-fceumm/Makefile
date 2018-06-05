@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2015/02/04 22:57:29 jmcneill Exp $
 
-DISTNAME=	libretro-fceumm-20180306
+DISTNAME=	libretro-fceumm-20180418
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	libretro-fceumm
-GITHUB_TAG=	16170cdfa741e5e0f41adce5d1c379314407126a
+GITHUB_TAG=	82fd24e28d47c96aff0f3ebf370ea3afc06d6bd1
 
 MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://docs.libretro.com/library/fceumm/
