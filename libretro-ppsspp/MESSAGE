@@ -8,11 +8,12 @@ MPROTECT must be disabled for RetroArch for this core to be usable.
 
 -----
 
-All of the required asset files can be downloaded or cloned with git:
+Prior to using libretro-ppsspp:
 
-git clone https://github.com/orbea/libretro-ppsspp-assets PPSSPP
-
-They must be placed in the RetroArch system directory or content directory,
-in a subdirectory named "PPSSPP".
+1. `cd` to RetroArch's System (where your BIOS files are) or RetroArch's
+Content directory (where your PSP ROMs are).
+2. `mkdir PPSSPP`
+2. `git clone https://github.com/hrydgard/ppsspp ppsspp-master`
+3. `cp -R ppsspp-master/assets/* PPSSPP/`
 
 ===========================================================================
