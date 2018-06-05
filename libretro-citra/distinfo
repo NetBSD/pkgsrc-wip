@@ -50,3 +50,4 @@ SHA512 (fd69de1a1b960ec296cc67d32257b0f9e2d89ac6.tar.gz) = 2bfe22a83054871ac5409
 Size (fd69de1a1b960ec296cc67d32257b0f9e2d89ac6.tar.gz) = 110454 bytes
 SHA1 (patch-externals_cryptopp_cryptopp_config.h) = d11cc8324caeb5c13e40715b1bb970307c40f80b
 SHA1 (patch-externals_dynarmic_CMakeLists.txt) = 6e1fe92e7a8793e45e6d4fcd009164be16c39a9c
+SHA1 (patch-src_common_string__util.cpp) = 57f0015b0f78a0c33d79ca9323ab2cb5491ae873
