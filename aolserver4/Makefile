@@ -5,7 +5,7 @@ DISTNAME=		aolserver-4.0.10-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aolserver/}
-LICENSE=	mpl-1.1
+LICENSE=		mpl-1.1
 
 MAINTAINER=		iharding@destinydata.com
 HOMEPAGE=		http://www.aolserver.com/

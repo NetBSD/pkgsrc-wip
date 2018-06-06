@@ -5,7 +5,7 @@ DISTFILES=		${DEBS}
 PKGNAME=		debian_glib-1.2.10.9
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/g/glib1.2/}
-LICENSE=	gnu-lgpl-v2
+LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.debian.org/

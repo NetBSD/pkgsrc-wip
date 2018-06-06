@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	email_reply_parser-0.1.1
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/_/-/}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/_/-/}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/email_reply_parser/}
 

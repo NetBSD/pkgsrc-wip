@@ -14,9 +14,9 @@ CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	rx-[0-9]*
 
 .if 0
-MAKE_JOBS_SAFE=no
+MAKE_JOBS_SAFE=	no
 .else
-USE_TOOLS+=		gmake
+USE_TOOLS+=	gmake
 .endif
 
 GNU_CONFIGURE=		yes
@@ -30,9 +30,9 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-roken=internal
 
-USE_GNU_CONFIGURE_HOST= no
+USE_GNU_CONFIGURE_HOST=	no
 
-WRKSRC=         ${WRKDIR}/openafs
+WRKSRC=		${WRKDIR}/openafs
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 OWN_DIRS+=		${PKG_SYSCONFDIR}/openafs
@@ -43,7 +43,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/openafs/db ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
 
 FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q}
 
-BUILD_DEFS+= VARBASE
+BUILD_DEFS+=	VARBASE
 
 #
 # Rename liblwp.a to libafslwp.a to avoid conflict with the lwp package.

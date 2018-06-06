@@ -50,7 +50,7 @@ REPLACE_PERL+=	bogart/*.pl \
 		*.pl
 
 # May work on other 64-bit processors, but untested
-ONLY_FOR_PLATFORM=	 *-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-x86_64
 
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
@@ -63,9 +63,9 @@ MAKE_ENV+=	DESTDIR=${WRKSRC}
 
 PV=		1.7
 
-TMP_INST=	${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
-SITE_PERL_REL=	lib/perl5/site_perl
-JAVAJARDIR=	share/java/classes
+TMP_INST=		${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
+SITE_PERL_REL=		lib/perl5/site_perl
+JAVAJARDIR=		share/java/classes
 INSTALLATION_DIRS=	bin ${JAVAJARDIR}
 
 post-extract:

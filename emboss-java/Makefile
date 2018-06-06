@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://emboss.sourceforge.net/
 COMMENT=		Interface between emboss and jemboss
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=		gnu-lgpl-v2.1
 
 DEPENDS+=		emboss-base>=2.9.0:../../wip/emboss-base
 

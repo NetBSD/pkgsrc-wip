@@ -29,7 +29,7 @@ MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
 # Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
-PORTVERSION=	0.0.0.20180518
+PORTVERSION=		0.0.0.20180518
 USE_BUILTIN.zlib=	no
 
 MAKE_FILE=	${FILESDIR}/Makefile.generic

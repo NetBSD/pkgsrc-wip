@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
-USE_LANGUAGE=c
+USE_LANGUAGE=	c
 
 do-build:
 	cd ${WRKSRC} && \

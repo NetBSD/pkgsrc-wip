@@ -10,8 +10,8 @@
 DISTNAME=	glib-2.54.3
 PKGNAME=	frida-${DISTNAME:S/glib/glib2/}
 CATEGORIES=	# empty; redefined in Makefile
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=frida/}
-GITHUB_TAG=     d8a2acabac5c04d3ca5eb4f0aa050582b8a9c7ac
+MASTER_SITES=	${MASTER_SITE_GITHUB:=frida/}
+GITHUB_TAG=	d8a2acabac5c04d3ca5eb4f0aa050582b8a9c7ac
 
 GITHUB_PROJECT=	glib
 

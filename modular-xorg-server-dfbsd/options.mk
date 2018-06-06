@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 PKG_SUPPORTED_OPTIONS+=	devd
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= devd
+PKG_SUGGESTED_OPTIONS+=	devd
 .endif
 
 .if ${X11_TYPE} == "modular"

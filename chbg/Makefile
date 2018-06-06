@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chbg/}
 EXTRACT_SUFX=		.tgz
-LICENSE=	gnu-gpl-v2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://chbg.sourceforge.net/

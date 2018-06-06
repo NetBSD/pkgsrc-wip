@@ -25,8 +25,8 @@ USE_TOOLS+=	autoconf automake autoreconf bash
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
-PV=		2.5.1
-CONFIG_SHELL=	${BASH}
+PV=			2.5.1
+CONFIG_SHELL=		${BASH}
 CHECK_PORTABILITY_SKIP=	configure
 
 # Requires clone()
@@ -34,10 +34,10 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 PKG_SYSCONFSUBDIR=	${PKGBASE}
-CONF_FILES+=	${EGDIR}/default-nsswitch.conf ${PKG_SYSCONFDIR}/default-nsswitch.conf
-CONF_FILES+=	${EGDIR}/init ${PKG_SYSCONFDIR}/init
-CONF_FILES+=	${EGDIR}/nvliblist.conf ${PKG_SYSCONFDIR}/nvliblist.conf
-CONF_FILES+=	${EGDIR}/singularity.conf ${PKG_SYSCONFDIR}/singularity.conf
+CONF_FILES+=		${EGDIR}/default-nsswitch.conf ${PKG_SYSCONFDIR}/default-nsswitch.conf
+CONF_FILES+=		${EGDIR}/init ${PKG_SYSCONFDIR}/init
+CONF_FILES+=		${EGDIR}/nvliblist.conf ${PKG_SYSCONFDIR}/nvliblist.conf
+CONF_FILES+=		${EGDIR}/singularity.conf ${PKG_SYSCONFDIR}/singularity.conf
 
 INSTALLATION_DIRS=	${EGDIR}
 

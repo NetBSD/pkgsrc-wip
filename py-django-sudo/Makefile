@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	django-sudo-2.1.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	secutiry python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sudo/}
 

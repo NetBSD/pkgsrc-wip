@@ -4,15 +4,15 @@
 .include "../emboss-base/Makefile.common"
 .include "../emboss/Makefile.common"
 
-DISTNAME=		DOMAINATRIX-1.0.0
-PKGNAME=		emboss-domainatrix-1.0.0
-PKGREVISION=		1
+DISTNAME=	DOMAINATRIX-1.0.0
+PKGNAME=	emboss-domainatrix-1.0.0
+PKGREVISION=	1
 
-COMMENT=		Collection of bioinformatic programs for EMBOSS
+COMMENT=	Collection of bioinformatic programs for EMBOSS
 LICENSE=	gnu-gpl-v2
 
-BUILD_TARGET=		#empty
-DIST_SUBDIR=		emboss/domainatrix-1.0.0-20040715
+BUILD_TARGET=	#empty
+DIST_SUBDIR=	emboss/domainatrix-1.0.0-20040715
 
 pre-configure:
 	${SED} -e 's|../../../plplot/libplplot.la|${PREFIX}/lib/libplplot.la|' \

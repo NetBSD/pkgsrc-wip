@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	hiredis-0.2.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hiredis/}
 

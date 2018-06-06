@@ -10,6 +10,6 @@ COMMENT=	Portable OpenBSD ksh(1)
 WRKSRC=		${WRKDIR}/${PKGNAME}
 LICENSE=	original-bsd
 
-GNU_CONFIGURE=          yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

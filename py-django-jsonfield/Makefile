@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	django-jsonfield-1.0.1
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-jsonfield/}
 

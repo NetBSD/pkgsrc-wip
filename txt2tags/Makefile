@@ -6,9 +6,9 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://txt2tags.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=			dbolgheroni@unifei.edu.br
-HOMEPAGE=			http://txt2tags.sourceforge.net/
-COMMENT=			Text formatting and conversion tool
+MAINTAINER=	dbolgheroni@unifei.edu.br
+HOMEPAGE=	http://txt2tags.sourceforge.net/
+COMMENT=	Text formatting and conversion tool
 LICENSE=	gnu-gpl-v2
 
 REPLACE_PYTHON=		txt2tags
@@ -17,10 +17,10 @@ USE_PKGLOCALEDIR=	yes
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
 
-DOC_DIR=			${PREFIX}/share/doc/${PKGBASE}
-SAMPLES_DIR=			${PREFIX}/share/examples/${PKGBASE}
-INSTALLATION_DIRS+=		${DOC_DIR} ${SAMPLES_DIR}
-INSTALLATION_DIRS+=		bin ${PKGMANDIR}/man1
+DOC_DIR=		${PREFIX}/share/doc/${PKGBASE}
+SAMPLES_DIR=		${PREFIX}/share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	${DOC_DIR} ${SAMPLES_DIR}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR} ${SAMPLES_DIR} ${DESTDIR}${SAMPLES_DIR}/img

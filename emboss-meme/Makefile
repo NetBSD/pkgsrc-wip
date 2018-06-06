@@ -4,15 +4,15 @@
 .include "../emboss-base/Makefile.common"
 .include "../emboss/Makefile.common"
 
-DISTNAME=		MEME-2.3.1
-PKGNAME=		emboss-meme-2.3.1
-PKGREVISION=		1
+DISTNAME=	MEME-2.3.1
+PKGNAME=	emboss-meme-2.3.1
+PKGREVISION=	1
 
-COMMENT=		Motif detection tool for EMBOSS
+COMMENT=	Motif detection tool for EMBOSS
 LICENSE=	gnu-gpl-v2
 
-DIST_SUBDIR=		emboss/meme-2.3.1-20041107
-BUILD_TARGET=		#empty
+DIST_SUBDIR=	emboss/meme-2.3.1-20041107
+BUILD_TARGET=	#empty
 
 pre-configure:
 	${SED} -e 's|@EMBOSSLIB@|${PREFIX}/lib|' \

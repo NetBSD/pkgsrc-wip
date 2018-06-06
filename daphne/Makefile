@@ -10,7 +10,7 @@ MASTER_SITES+=		http://daphne.rulecity.com/download/old/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.daphne-emu.com/site3/
 COMMENT=		Emulator for Laserdisc arcade games
-LICENSE=	gnu-gpl-v2 # or later
+LICENSE=		gnu-gpl-v2 # or later
 
 WRKSRC=			${WRKDIR}/daphne
 USE_TOOLS+=		gmake

@@ -39,7 +39,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
 
-NO_CONFIGURE=   yes
+NO_CONFIGURE=	yes
 
 TEST_TARGET=	tests
 
@@ -51,22 +51,22 @@ MAKE_FLAGS+=	FFLAGS=${FFLAGS:Q}
 
 # You may override the autodetected thread count limit.
 # Default is detected from build host.
-BUILD_DEFS+=    OPENBLAS_THREAD_LIMIT
+BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
 
 # Default checks number of cores of build host.
 # Do we want a pkgsrc-wide default?
 .if !empty(OPENBLAS_THREAD_LIMIT)
-MAKE_FLAGS+=	NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
+MAKE_FLAGS+=		NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
 .endif
 BENCHMARK_MAXTHREADS?=	8
 .if ${MACHINE_ARCH:M*64} == ""
-MAKE_FLAGS+=	BINARY32=1
+MAKE_FLAGS+=		BINARY32=1
 .else
-MAKE_FLAGS+=	BINARY64=1
+MAKE_FLAGS+=		BINARY64=1
 .endif
 # Those come in separate BLAS-agnostic packages.
 # ... except we start headaches about ILP64?
-MAKE_FLAGS+=	NO_CBLAS=1 NO_LAPACKE=1
+MAKE_FLAGS+=		NO_CBLAS=1 NO_LAPACKE=1
 
 # Separate headers and cmake stuff.
 MAKE_FLAGS+=	OPENBLAS_INCLUDE_DIR=${PREFIX}/include/${OPENBLAS_VARIANT}
@@ -138,9 +138,9 @@ SUBST_FILES.threads+=	${WRKSRC}/ctest/Makefile
 
 # Fix up pkgconfig file installation.
 SUBST_CLASSES+=		pc
-SUBST_STAGE.pc=	post-patch
-SUBST_SED.pc+=	-e 's+-lopenblas+-l${OPENBLAS_VARIANT}+'
-SUBST_SED.pc+=	-e 's+openblas.pc$$+${OPENBLAS_VARIANT}.pc+'
+SUBST_STAGE.pc=		post-patch
+SUBST_SED.pc+=		-e 's+-lopenblas+-l${OPENBLAS_VARIANT}+'
+SUBST_SED.pc+=		-e 's+openblas.pc$$+${OPENBLAS_VARIANT}.pc+'
 SUBST_FILES.pc+=	Makefile.install openblas.pc.in
 
 post-extract:

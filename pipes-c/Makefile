@@ -12,6 +12,6 @@ HOMEPAGE=	https://github.com/pipeseroni/pipes.c/
 COMMENT=	Mimics the "pipes" screensaver in a terminal window
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=  yes
+GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"

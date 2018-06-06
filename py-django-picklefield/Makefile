@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	django-picklefield-1.0.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=   ${MASTER_SITE_PYPI:=d/django-picklefield/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-picklefield/}
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/gintas/django-picklefield	

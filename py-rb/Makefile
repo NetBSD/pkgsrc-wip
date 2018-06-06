@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	rb-1.7
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rb/}
 
@@ -11,7 +11,7 @@ COMMENT=	The redis blaster
 LICENSE=	apache-2.0
 
 
-DEPENDS+=       redis>=4.0.9:../../databases/redis
+DEPENDS+=	redis>=4.0.9:../../databases/redis
 
 .include "../../lang/python/egg.mk"
 USE_LANGUAGES=	# none

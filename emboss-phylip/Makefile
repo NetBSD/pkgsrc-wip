@@ -4,15 +4,15 @@
 .include "../emboss-base/Makefile.common"
 .include "../emboss/Makefile.common"
 
-DISTNAME=		PHYLIP-3.57c
-PKGNAME=		emboss-phylip-3.57c
-PKGREVISION=		1
+DISTNAME=	PHYLIP-3.57c
+PKGNAME=	emboss-phylip-3.57c
+PKGREVISION=	1
 
-COMMENT=		Package of programs for inferring phylogenies
+COMMENT=	Package of programs for inferring phylogenies
 LICENSE=	gnu-gpl-v2
 
-DIST_SUBDIR=		emboss/phylip-3.57c-20041107
-BUILD_TARGET=		#empty
+DIST_SUBDIR=	emboss/phylip-3.57c-20041107
+BUILD_TARGET=	#empty
 
 pre-configure:
 	${SED} -e 's|../../../ajax/libajax.la|${PREFIX}/lib/libajax.la|' \

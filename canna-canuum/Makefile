@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.3 2012/09/24 18:26:51 asau Exp $
 
-CANNA_MODULE=	canuum
+CANNA_MODULE=		canuum
 
 .include "../../wip/canna/Makefile.common"
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-LICENSE=	gnu-gpl-v2
+LICENSE=		gnu-gpl-v2
 
 INSTALLATION_DIRS=	${PKGMANDIR}/ja_JP.EUC/man1
 

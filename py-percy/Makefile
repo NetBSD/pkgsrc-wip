@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	percy-1.1.2
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=   ${MASTER_SITE_PYPI:=p/percy/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/percy/}
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/percy/python-percy-client

@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-SUBST_CLASSES+=	ldflags
+SUBST_CLASSES+=		ldflags
 SUBST_FILES.ldflags=	${WRKSRC}/Makefile.external-libs
 SUBST_STAGE.ldflags=	post-patch
 SUBST_SED.ldflags=	-e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"

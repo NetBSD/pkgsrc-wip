@@ -37,11 +37,11 @@ INSTALLATION_DIRS+=	var/i2pd
 INSTALLATION_DIRS+=	var/i2pd/certificates
 
 .if ${OPSYS} == "NetBSD" # NetBSD-specific config
-CONF_FILES+= ${EGDIR}/i2pd.conf.NetBSD \
-		${PREFIX}/${PKG_SYSCONFDIR}/i2pd.conf
+CONF_FILES+=	${EGDIR}/i2pd.conf.NetBSD \
+		   ${PREFIX}/${PKG_SYSCONFDIR}/i2pd.conf
 .else
-CONF_FILES+= ${EGDIR}/i2pd.conf \
-		${PREFIX}/${PKG_SYSCONFDIR}/i2pd.conf
+CONF_FILES+=	${EGDIR}/i2pd.conf \
+		   ${PREFIX}/${PKG_SYSCONFDIR}/i2pd.conf
 .endif
 
 RCD_SCRIPTS+=		i2pd
@@ -51,16 +51,16 @@ MAKE_DIRS+=	${VARBASE}/log/i2pd
 MAKE_DIRS+=	${VARBASE}/run/i2pd
 
 MAKE_DIRS_PERMS+=	${VARBASE}/log/i2pd \
-		${I2PD_USER} ${I2PD_GROUP} 0755
+			${I2PD_USER} ${I2PD_GROUP} 0755
 
 MAKE_DIRS_PERMS+=	${VARBASE}/run/i2pd \
-		${I2PD_USER} ${I2PD_GROUP} 0700
+			${I2PD_USER} ${I2PD_GROUP} 0700
 
 MAKE_DIRS_PERMS+=	${PREFIX}/var/i2pd \
-		${I2PD_USER} ${I2PD_GROUP} 0700
+			${I2PD_USER} ${I2PD_GROUP} 0700
 
 MAKE_DIRS_PERMS+=	${PREFIX}/var/i2pd/certificates \
-		${I2PD_USER} ${I2PD_GROUP} 0700
+			${I2PD_USER} ${I2PD_GROUP} 0700
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/debian/i2pd.1 \

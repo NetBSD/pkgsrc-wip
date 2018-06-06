@@ -3,7 +3,7 @@
 DISTNAME=	libffi-3.0.13
 PKGNAME=	frida-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=frida/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=frida/}
 GITHUB_TAG=	808ca2c69269f6df3ee6d33e22515d11739ffd5c
 
 GITHUB_PROJECT=	libffi
@@ -47,13 +47,13 @@ LIBS+=	-lm68k
 
 # fix http://gnats.netbsd.org/42865
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
-CPPFLAGS += -D__PIC__
+CPPFLAGS +=	-D__PIC__
 .endif
 
 # irix fixes from PR 48587
 .if !empty(OPSYS:MIRIX)
-USE_TOOLS+=     bash gmake
-MAKE_FLAGS+=SHELL=${TOOLS_DIR}/bin/bash
+USE_TOOLS+=	bash gmake
+MAKE_FLAGS+=	SHELL=${TOOLS_DIR}/bin/bash
 .endif
 
 FRIDA_SUBPREFIX=	frida

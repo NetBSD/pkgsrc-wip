@@ -4,15 +4,15 @@
 .include "../emboss-base/Makefile.common"
 .include "../emboss/Makefile.common"
 
-DISTNAME=		TOPO-1.0.0
-PKGNAME=		emboss-topo-1.0.0
-PKGREVISION=		1
+DISTNAME=	TOPO-1.0.0
+PKGNAME=	emboss-topo-1.0.0
+PKGREVISION=	1
 
-COMMENT=		Draws an image of a transmembrane protein
+COMMENT=	Draws an image of a transmembrane protein
 LICENSE=	gnu-gpl-v2
 
-DIST_SUBDIR=		${PKG_DISTFILES_DIR}/topo-1.0.0-20041107
-BUILD_TARGET=		#empty
+DIST_SUBDIR=	${PKG_DISTFILES_DIR}/topo-1.0.0-20041107
+BUILD_TARGET=	#empty
 
 pre-configure:
 	${SED} -e 's|@X116@|-Wl,-R${X11BASE}/lib|' \

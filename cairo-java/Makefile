@@ -5,7 +5,7 @@ DISTNAME=		cairo-java-1.0.1
 PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/cairo-java/1.0/}
-LICENSE=	gnu-gpl-v2
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://java-gnome.sourceforge.net/

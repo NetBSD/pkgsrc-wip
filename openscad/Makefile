@@ -17,7 +17,7 @@ USE_LIBTOOL=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
-CHECK_PORTABILITY_SKIP+=tests/compare-bitmaps.sh
+CHECK_PORTABILITY_SKIP+=	tests/compare-bitmaps.sh
 
 REPLACE_PYTHON=	libraries/MCAD/get_submodules.py
 .include "../../lang/python/application.mk"

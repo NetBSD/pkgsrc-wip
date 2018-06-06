@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	milksnake-0.1.5
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/milksnake/}
 EXTRACT_SUFX=	.zip
@@ -12,7 +12,7 @@ COMMENT=	Library that extends setuptools for binary extensions
 LICENSE=	apache-2.0
 
 
-DEPENDS+=       ${PYPKGPREFIX}-cffi>=1.6.0:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.6.0:../../devel/py-cffi
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

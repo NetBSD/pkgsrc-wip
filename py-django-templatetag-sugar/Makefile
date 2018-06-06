@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	django-templatetag-sugar-1.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-templatetag-sugar/}
 

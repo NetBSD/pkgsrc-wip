@@ -12,9 +12,9 @@ HOMEPAGE=	https://github.com/OrancheloTeam/oranchelo-icon-theme/
 COMMENT=	Flat icon theme for XFCE
 LICENSE=	gnu-gpl-v3
 
-ICON_THEMES=	yes
-NO_BUILD=	yes
-USE_LANGUAGES=	# none
+ICON_THEMES=		yes
+NO_BUILD=		yes
+USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	share/icons
 
 
