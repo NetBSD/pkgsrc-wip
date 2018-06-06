@@ -3592,6 +3592,7 @@ SUBDIR+=	py-pyside-tools
 SUBDIR+=	py-pyslha
 SUBDIR+=	py-pysph
 SUBDIR+=	py-pysphere
+SUBDIR+=	py-pystatsd
 SUBDIR+=	py-pyswisseph
 SUBDIR+=	py-pythia
 SUBDIR+=	py-pythics

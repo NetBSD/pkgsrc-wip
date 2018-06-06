@@ -1,0 +1,3 @@
+pystatsd is a client and server implementation of Etsy's statsd
+server, a front end/proxy for the Graphite stats collection and
+graphing server.
