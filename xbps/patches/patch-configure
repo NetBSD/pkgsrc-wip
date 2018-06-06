@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.orig	2018-04-16 12:00:30.000000000 +0000
++++ configure
+@@ -266,7 +266,7 @@ fi
+ #
+ # Check for some compiler warning flags.
+ #
+-for f in all extra error shadow "format=2" missing-prototypes \
++for f in all extra shadow "format=2" missing-prototypes \
+ 	missing-declarations nested-externs vla no-overlength-strings \
+ 	unsafe-loop-optimizations undef sign-compare \
+ 	missing-include-dirs old-style-definition \

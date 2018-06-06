@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	xbps-0.51
+DISTNAME=	xbps-0.52
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=voidlinux/}
 
