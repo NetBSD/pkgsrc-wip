@@ -3870,6 +3870,7 @@ SUBDIR+=	py-websocket
 SUBDIR+=	py-whelk
 SUBDIR+=	py-wifite
 SUBDIR+=	py-willow
+SUBDIR+=	py-word2vec
 SUBDIR+=	py-wordpress-xmlrpc
 SUBDIR+=	py-workerpool
 SUBDIR+=	py-wpull
