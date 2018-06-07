@@ -7,7 +7,7 @@ $ make help|grep check|grep -v check-llvm|grep -v check-lldb|grep -v check-clang
 ... check-cfi
 ... check-cfi-and-supported
 ... check-sanitizer
-... check-fuzzer-default
+... check-fuzzer-default-x86_64
 ... check-fuzzer
 ... check-fuzzer-unit
 ... check-asan
@@ -52,22 +52,19 @@ Testing Time: 0.00s
 $ check-lsan
 
 ********************
-Testing Time: 9.61s
+Testing Time: 7.91s
 ********************
-Failing Tests (106):
+Failing Tests (108):
+    LeakSanitizer-AddressSanitizer-i386 :: TestCases/Posix/posix_memalign-alignment.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/allocator_returns_null.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/default_options.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/disabler.c
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/disabler.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/do_leak_check_override.cc
-    LeakSanitizer-AddressSanitizer-i386 :: TestCases/high_allocator_contention.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/ignore_object.c
-    LeakSanitizer-AddressSanitizer-i386 :: TestCases/ignore_object_errors.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/leak_check_at_exit.cc
-    LeakSanitizer-AddressSanitizer-i386 :: TestCases/leak_check_before_thread_started.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/link_turned_off.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/many_tls_keys.cc
-    LeakSanitizer-AddressSanitizer-i386 :: TestCases/new_array_with_dtor_0.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/pointer_to_self.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/print_suppressions.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/recoverable_leak_check.cc
@@ -83,6 +80,7 @@ Failing Tests (106):
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_stacks.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_stacks_threaded.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_unaligned.cc
+    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/Posix/posix_memalign-alignment.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/allocator_returns_null.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/default_options.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/disabler.c
@@ -107,6 +105,8 @@ Failing Tests (106):
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_stacks.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_stacks_threaded.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_unaligned.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/Posix/posix_memalign-alignment.cc
+    LeakSanitizer-Standalone-i386 :: TestCases/allocator_returns_null.cc
     LeakSanitizer-Standalone-i386 :: TestCases/default_options.cc
     LeakSanitizer-Standalone-i386 :: TestCases/disabler.c
     LeakSanitizer-Standalone-i386 :: TestCases/disabler.cc
@@ -134,6 +134,8 @@ Failing Tests (106):
     LeakSanitizer-Standalone-i386 :: TestCases/use_stacks.cc
     LeakSanitizer-Standalone-i386 :: TestCases/use_stacks_threaded.cc
     LeakSanitizer-Standalone-i386 :: TestCases/use_unaligned.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/Posix/posix_memalign-alignment.cc
+    LeakSanitizer-Standalone-x86_64 :: TestCases/allocator_returns_null.cc
     LeakSanitizer-Standalone-x86_64 :: TestCases/default_options.cc
     LeakSanitizer-Standalone-x86_64 :: TestCases/disabler.c
     LeakSanitizer-Standalone-x86_64 :: TestCases/disabler.cc
@@ -162,9 +164,9 @@ Failing Tests (106):
     LeakSanitizer-Standalone-x86_64 :: TestCases/use_stacks_threaded.cc
     LeakSanitizer-Standalone-x86_64 :: TestCases/use_unaligned.cc
 
-  Expected Passes    : 6
-  Unsupported Tests  : 60
-  Unexpected Failures: 106
+  Expected Passes    : 10
+  Unsupported Tests  : 66
+  Unexpected Failures: 108
 
 $ check-ubsan
 
@@ -236,40 +238,41 @@ Failing Tests (31):
   Unsupported Tests  : 206
   Unexpected Failures: 31
 
-$ check-fuzzer-default
+$ check-fuzzer-default-x86_64
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 54.91s
+Testing Time: 38.20s
 ********************
 Failing Tests (2):
     LLVMFuzzer :: merge-posix.test
     LLVMFuzzer :: trace-malloc-threaded.test
 
-  Expected Passes    : 105
-  Unsupported Tests  : 8
+  Expected Passes    : 114
+  Unsupported Tests  : 12
   Unexpected Failures: 2
 
 $ check-fuzzer
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 54.82s
+Testing Time: 37.68s
 ********************
 Failing Tests (2):
     LLVMFuzzer :: merge-posix.test
     LLVMFuzzer :: trace-malloc-threaded.test
 
-  Expected Passes    : 105
-  Unsupported Tests  : 8
+  Expected Passes    : 114
+  Unsupported Tests  : 12
   Unexpected Failures: 2
+
 
 $ check-fuzzer-unit
 
--- Testing: 35 tests, 8 threads --
+-- Testing: 36 tests, 8 threads --
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
 Testing Time: 0.44s
-  Expected Passes    : 35
+  Expected Passes    : 36
 
 $ check-asan
 
@@ -295,7 +298,7 @@ Failing Tests (16):
     AddressSanitizer-x86_64-netbsd :: TestCases/Posix/tsd_dtor_leak.cc
     AddressSanitizer-x86_64-netbsd :: TestCases/intercept-rethrow-exception.cc
 
-  Expected Passes    : 852
+  Expected Passes    : 850
   Expected Failures  : 4
   Unsupported Tests  : 440
   Unexpected Failures: 16
@@ -304,13 +307,13 @@ $ check-asan-dynamic
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 95.77s
+Testing Time: 385.30s
 ********************
 Unexpected Passing Tests (1):
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/interception_failure_test.cc
 
 ********************
-Failing Tests (222):
+Failing Tests (221):
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/concurrent_overflow.cc
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/coverage-reset.cc
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/coverage.cc
@@ -481,7 +484,6 @@ Failing Tests (222):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcspn-1.c
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcspn-2.c
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strcspn_strict.c
-    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strdup_oob_test.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strip_path_prefix.c
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncasecmp_strict.c
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/strncat-overlap.cc
@@ -519,9 +521,9 @@ Failing Tests (222):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-dtor-order.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-goto.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-if.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-i
 2 warning(s) in tests.
-
-    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-inlined.cc
+nlined.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop-bug.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop-removed.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop.cc
@@ -536,17 +538,17 @@ Failing Tests (222):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/vla_loop_overfow.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/zero_page_pc.cc
 
-  Expected Passes    : 394
+  Expected Passes    : 393
   Expected Failures  : 3
   Unsupported Tests  : 440
   Unexpected Passes  : 1
-  Unexpected Failures: 222
+  Unexpected Failures: 221
 
 $ check-msan
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 42.84s
+Testing Time: 40.93s
 ********************
 Failing Tests (4):
     MemorySanitizer-X86_64 :: chained_origin_with_signals.cc
@@ -554,7 +556,7 @@ Failing Tests (4):
     MemorySanitizer-X86_64 :: ioctl_custom.cc
     MemorySanitizer-X86_64 :: signal_stress_test.cc
 
-  Expected Passes    : 102
+  Expected Passes    : 103
   Expected Failures  : 1
   Unsupported Tests  : 30
   Unexpected Failures: 4
@@ -562,7 +564,7 @@ Failing Tests (4):
 $ check-tsan
 
 ********************
-Testing Time: 124.79s
+Testing Time: 1336.74s
 ********************
 Failing Tests (8):
     ThreadSanitizer-x86_64 :: dtls.c
@@ -576,7 +578,7 @@ Failing Tests (8):
 
   Expected Passes    : 288
   Expected Failures  : 1
-  Unsupported Tests  : 84
+  Unsupported Tests  : 85
   Unexpected Failures: 8
 
 $ check-safestack
@@ -590,12 +592,11 @@ Testing Time: 1.55s
 $ check-scudo
 
 ********************
-Testing Time: 3.87s
+Testing Time: 6.06s
 ********************
-Failing Tests (28):
+Failing Tests (27):
     Scudo-i386 :: memalign.c
     Scudo-i386 :: preload.cpp
-    Scudo-i386 :: rss.c
     Scudo-i386 :: secondary.c
     Scudo-i386 :: threads.c
     Scudo-i386 :: tsd_destruction.c
@@ -622,8 +623,8 @@ Failing Tests (28):
     Scudo-x86_64 :: tsd_destruction.c
     Scudo-x86_64 :: valloc.c
 
-  Expected Passes    : 14
-  Unexpected Failures: 28
+  Expected Passes    : 15
+  Unexpected Failures: 27
 
 $ check-ubsan-minimal
 
@@ -645,13 +646,12 @@ $ check-xray
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 2.10s
+Testing Time: 1.33s
 ********************
 Failing Tests (21):
     XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.MultiThreadedCycling
     XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.Multiple
     XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.Simple
-    XRay-x86_64-netbsd :: TestCases/Posix/always-never-instrument.cc
     XRay-x86_64-netbsd :: TestCases/Posix/arg1-arg0-logging.cc
     XRay-x86_64-netbsd :: TestCases/Posix/arg1-logger.cc
     XRay-x86_64-netbsd :: TestCases/Posix/arg1-logging-implicit-this.cc
@@ -660,6 +660,7 @@ Failing Tests (21):
     XRay-x86_64-netbsd :: TestCases/Posix/common-trampoline-alignment.cc
     XRay-x86_64-netbsd :: TestCases/Posix/coverage-sample.cc
     XRay-x86_64-netbsd :: TestCases/Posix/custom-event-handler-alignment.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/fdr-mode-inmemory.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fdr-mode.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fdr-single-thread.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fdr-thread-order.cc
@@ -670,7 +671,7 @@ Failing Tests (21):
     XRay-x86_64-netbsd :: TestCases/Posix/patching-unpatching.cc
     XRay-x86_64-netbsd :: TestCases/Posix/pic_test.cc
 
-  Expected Passes    : 21
+  Expected Passes    : 33
   Unsupported Tests  : 1
   Unexpected Failures: 21
 
