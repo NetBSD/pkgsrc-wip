@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/msan/msan_interceptors.cc.orig	2018-06-07 08:27:17.744691167 +0000
+--- lib/msan/msan_interceptors.cc.orig	2018-06-07 08:27:17.000000000 +0000
 +++ lib/msan/msan_interceptors.cc
 @@ -33,11 +33,13 @@
  #include "sanitizer_common/sanitizer_libc.h"
