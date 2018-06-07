@@ -1,10 +1,11 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	libcxx-4.0.0
+PKGNAME=	libcxx-7.0.0
 CATEGORIES=	lang devel
 
-GIT_REPOSITORIES=	libcxx
-GIT_REPO.libcxx=	https://github.com/llvm-mirror/libcxx.git
+SVN_REPOSITORIES=		libcxx
+SVN_REPO.libcxx=		http://llvm.org/svn/llvm-project/libcxx/trunk
+SVN_REVISION.libcxx=		334168
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libcxx.llvm.org/
@@ -26,7 +27,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
-.include "../../wip/mk/git-package.mk"
-DEPENDS+=       llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
-.include "../../wip/llvm-git/buildlink3.mk"
+.include "../../wip/mk/svn-package.mk"
+#DEPENDS+=       llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
+#.include "../../wip/llvm-netbsd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
