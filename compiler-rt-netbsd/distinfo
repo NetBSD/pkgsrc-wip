@@ -12,6 +12,7 @@ SHA1 (patch-lib_msan_msan__linux.cc) = 6fd2ada4a84d1e1cc47ec8f4e1f0608861c73c1a
 SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 29c7d1fe89a358098d5a68f83a2940f46c77ccc6
 SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = 9ffcb3ae5ccfcb99d842efe55f6d698cd2e02846
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 83636321cef6a17281a27e2ed3dd1b71e5429a6a
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cc) = c1ce6657580cc0865808dd713d1f28afc3baaaa7
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = 085ebe6709bf834a6c663c845e0f0e118f759b05
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cc) = c77fa6e013e776a48ed43b1c244b4430e7590c50
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = c47538580572ffdae14b095df76739a603a63a32
