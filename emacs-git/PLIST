@@ -3414,6 +3414,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/executable.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/executable.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/f90.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/f90.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/flymake-cc.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/flymake-cc.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/flymake-proc.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/flymake-proc.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/flymake.el.gz
