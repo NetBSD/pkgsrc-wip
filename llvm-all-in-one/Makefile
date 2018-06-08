@@ -1,10 +1,10 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-LLVM_VERSION=	6.0.0
+LLVM_VERSION=	7.0.0
 
 CATEGORIES=	lang devel
 
-LLVM_SVN_REV=		318584
+LLVM_SVN_REV=		334168
 
 SVN_REPOSITORIES=		llvm
 SVN_REPO.llvm=			http://llvm.org/svn/llvm-project/llvm/trunk
