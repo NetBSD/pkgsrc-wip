@@ -2,7 +2,18 @@ $NetBSD$
 
 --- CMakeLists.txt.orig	2018-06-01 09:39:33.000000000 +0000
 +++ CMakeLists.txt
-@@ -330,6 +330,10 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuch
+@@ -313,9 +313,7 @@ append_list_if(COMPILER_RT_HAS_WD4800_FL
+ # Set common link flags.
+ append_list_if(COMPILER_RT_HAS_NODEFAULTLIBS_FLAG -nodefaultlibs SANITIZER_COMMON_LINK_FLAGS)
+ 
+-if (COMPILER_RT_RUNTIME_LIBRARY STREQUAL "builtins")
+-  list(APPEND SANITIZER_COMMON_LINK_LIBS ${COMPILER_RT_BUILTINS_LIBRARY})
+-else()
++if (NOT COMPILER_RT_RUNTIME_LIBRARY STREQUAL "builtins")
+   if (ANDROID)
+     append_list_if(COMPILER_RT_HAS_GCC_LIB gcc SANITIZER_COMMON_LINK_LIBS)
+   else()
+@@ -330,6 +328,10 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuch
    list(APPEND SANITIZER_COMMON_LINK_LIBS zircon)
  endif()
  
@@ -13,7 +24,7 @@ $NetBSD$
  if (SANITIZER_CXX_ABI_LIBNAME STREQUAL "libc++")
    if (SANITIZER_CXX_ABI_INTREE)
      if (NOT LIBCXXABI_ENABLE_STATIC_UNWINDER AND (TARGET unwind_shared OR HAVE_LIBUNWIND))
-@@ -370,7 +374,7 @@ foreach(path IN ITEMS ${LLVM_MAIN_SRC_DI
+@@ -370,7 +372,7 @@ foreach(path IN ITEMS ${LLVM_MAIN_SRC_DI
                        ${LLVM_MAIN_SRC_DIR}/../libcxx
                        ${LLVM_EXTERNAL_LIBCXX_SOURCE_DIR})
    if(IS_DIRECTORY ${path})
