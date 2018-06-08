@@ -2,7 +2,18 @@ $NetBSD$
 
 --- CMakeLists.txt.orig	2018-06-01 09:39:33.000000000 +0000
 +++ CMakeLists.txt
-@@ -370,7 +370,7 @@ foreach(path IN ITEMS ${LLVM_MAIN_SRC_DI
+@@ -330,6 +330,10 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuch
+   list(APPEND SANITIZER_COMMON_LINK_LIBS zircon)
+ endif()
+ 
++if("${CMAKE_SYSTEM_NAME}" STREQUAL "NetBSD")
++  list(APPEND SANITIZER_COMMON_LINK_LIBS execinfo)
++endif()
++
+ if (SANITIZER_CXX_ABI_LIBNAME STREQUAL "libc++")
+   if (SANITIZER_CXX_ABI_INTREE)
+     if (NOT LIBCXXABI_ENABLE_STATIC_UNWINDER AND (TARGET unwind_shared OR HAVE_LIBUNWIND))
+@@ -370,7 +374,7 @@ foreach(path IN ITEMS ${LLVM_MAIN_SRC_DI
                        ${LLVM_MAIN_SRC_DIR}/../libcxx
                        ${LLVM_EXTERNAL_LIBCXX_SOURCE_DIR})
    if(IS_DIRECTORY ${path})

@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-SHA1 (patch-CMakeLists.txt) = b80970b86107f4e17f994433e743f83160f71428
+SHA1 (patch-CMakeLists.txt) = 79d5b0e64ab46624b544ee84734e7a31a8de41df
 SHA1 (patch-cmake_config-ix.cmake) = c2ac835eb5cddaf2d4820b0d21e36e18d29bd1a5
 SHA1 (patch-lib_asan_asan__posix.cc) = 0f596061c078eaab0b5b4b183550aa7820677f46
 SHA1 (patch-lib_esan_esan__interceptors.cpp) = d65c31b0d44330c669bf6d81a3cfa51954078c32
