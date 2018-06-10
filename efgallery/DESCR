@@ -1,4 +1,4 @@
-Efgallery is a static photo gallery generator in Perl with a minimalist
+Efgallery is a static photo gallery generator in Perl with a simple
 look and feel: it shows your photos, and optionally detects faces
 so they aren't cropped in the thumbnails.
 
