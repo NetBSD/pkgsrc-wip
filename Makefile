@@ -4499,6 +4499,7 @@ SUBDIR+=	ups-monitor
 SUBDIR+=	uptimed
 SUBDIR+=	uqwk
 SUBDIR+=	urlwatch
+SUBDIR+=	urw-base35-ttf
 SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
