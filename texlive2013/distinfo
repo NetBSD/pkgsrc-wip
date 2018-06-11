@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/11/02 13:01:38 makoto Exp $
-
-SHA1 (texlive-20130530-source.tar.xz) = 42f0a6fa3f49435991182f14e01276b2ee3fce61
-RMD160 (texlive-20130530-source.tar.xz) = 2d779ae5de979be86a9258b224dfc15cbcd76b18
-Size (texlive-20130530-source.tar.xz) = 179963948 bytes
-SHA1 (patch-configure) = 4d02eafddd55361fd8352c20966c05b240befa9e
-SHA1 (patch-libs_zziplib_zziplib-0.13.62_configure) = 4390516d26fbed5faee117b3af8a7894053fd71a
-SHA1 (patch-texk_web2c_configure) = 5b9762c7dd65eb20716ab9584780e92fb0157d9d

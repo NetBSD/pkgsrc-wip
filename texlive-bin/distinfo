@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/11/06 06:53:47 airhead Exp $
-
-SHA1 (texlive_base-2007-src.tar.bz2) = f6f0192c200473c361aedfa8d34691a99e4f7065
-RMD160 (texlive_base-2007-src.tar.bz2) = edc7ea74058884ad6da12046e9e2e350c33a9c75
-Size (texlive_base-2007-src.tar.bz2) = 31107749 bytes
-SHA1 (patch-aa) = 329646c7acf101f5d4e1ccc7c3160d73f0a97f2d
