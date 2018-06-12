@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:08:30 gavan Exp $
+
+SHA1 (gitea-1.4.2.tar.gz) = 40d347dd2e3c3224583c0ce513a269c8984e16b2
+RMD160 (gitea-1.4.2.tar.gz) = 2677785f6a1ddaa4aa334a6fb0d100c129550b20
+SHA512 (gitea-1.4.2.tar.gz) = ab4cd43753afffec53a46c093bf92a9c31a633f9c8b5d730e8782eceee1e581cce673945005aaa6a94428d8acfcf2e6618f3abcc49f2ac5439aa8a4fb910b550
+Size (gitea-1.4.2.tar.gz) = 14987215 bytes
