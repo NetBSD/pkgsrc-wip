@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-06-01 09:36:54.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-06-14 12:14:39.819761270 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -77,6 +77,11 @@
  #define ctime __ctime50
@@ -23,7 +23,7 @@ $NetBSD$
  extern const unsigned short *_ctype_tab_;
  extern const short *_toupper_tab_;
  extern const short *_tolower_tab_;
-@@ -3301,14 +3308,14 @@ INTERCEPTOR(INTMAX_T, strtoimax, const c
+@@ -3345,14 +3352,14 @@ INTERCEPTOR(INTMAX_T, strtoimax, const c
    return res;
  }
  
@@ -40,7 +40,7 @@ $NetBSD$
    StrtolFixAndCheck(ctx, nptr, endptr, real_endptr, base);
    return res;
  }
-@@ -4196,7 +4203,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
+@@ -4240,7 +4247,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
  #endif
  
  #if SANITIZER_INTERCEPT_STATVFS
@@ -49,7 +49,7 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7190,6 +7197,1534 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7234,6 +7241,1534 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -1584,7 +1584,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7436,6 +8971,28 @@ static void InitializeCommonInterceptors
+@@ -7483,6 +9018,28 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;

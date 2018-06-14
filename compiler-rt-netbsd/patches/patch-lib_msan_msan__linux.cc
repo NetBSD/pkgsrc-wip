@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/msan/msan_linux.cc.orig	2018-02-01 23:45:59.000000000 +0000
+--- lib/msan/msan_linux.cc.orig	2018-06-14 12:14:39.633338965 +0000
 +++ lib/msan/msan_linux.cc
-@@ -30,6 +30,7 @@
+@@ -31,6 +31,7 @@
  #include <sys/time.h>
  #include <sys/resource.h>
  
@@ -10,7 +10,7 @@ $NetBSD$
  #include "sanitizer_common/sanitizer_common.h"
  #include "sanitizer_common/sanitizer_procmaps.h"
  
-@@ -174,13 +175,28 @@ void InstallAtExitHandler() {
+@@ -175,13 +176,28 @@ void InstallAtExitHandler() {
  
  // ---------------------- TSD ---------------- {{{1
  
@@ -39,7 +39,7 @@ $NetBSD$
  }
  
  static THREADLOCAL MsanThread* msan_current_thread;
-@@ -195,16 +211,20 @@ void SetCurrentThread(MsanThread *t) {
+@@ -196,16 +212,20 @@ void SetCurrentThread(MsanThread *t) {
    msan_current_thread = t;
    // Make sure that MsanTSDDtor gets called at the end.
    CHECK(tsd_key_inited);
