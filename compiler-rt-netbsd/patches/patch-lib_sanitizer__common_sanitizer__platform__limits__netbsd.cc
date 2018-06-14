@@ -91,7 +91,7 @@ $NetBSD$
  unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
  unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
  unsigned struct_timex_sz = sizeof(struct timex);
-@@ -2063,6 +2085,38 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
+@@ -2063,6 +2085,39 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
  
  const int si_SEGV_MAPERR = SEGV_MAPERR;
  const int si_SEGV_ACCERR = SEGV_ACCERR;
@@ -127,10 +127,11 @@ $NetBSD$
 +const int modctl_stat = MODCTL_STAT;
 +const int modctl_exists = MODCTL_EXISTS;
 +const unsigned fpos_t_sz = sizeof(fpos_t);
++const int setvbuf_bufsiz = BUFSIZ;
  }  // namespace __sanitizer
  
  using namespace __sanitizer;
-@@ -2224,4 +2278,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
+@@ -2224,4 +2279,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
  CHECK_SIZE_AND_OFFSET(group, gr_gid);
  CHECK_SIZE_AND_OFFSET(group, gr_mem);
  

@@ -49,7 +49,7 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7234,6 +7241,1514 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7234,6 +7241,1605 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -1561,10 +1561,101 @@ $NetBSD$
 +#define INIT_SHA2
 +#endif
 +
++#if SANITIZER_INTERCEPT_GETCHAR
++INTERCEPTOR(int, fgetc, __sanitizer_FILE *stream) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, fgetc, stream);
++  return REAL(fgetc)(stream);
++}
++INTERCEPTOR(int, getc, __sanitizer_FILE *stream) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, getc, stream);
++  return REAL(getc)(stream);
++}
++
++INTERCEPTOR(int, getchar) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, getchar);
++  return REAL(getchar)();
++}
++
++INTERCEPTOR(int, getc_unlocked, __sanitizer_FILE *stream) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, getc_unlocked, stream);
++  return REAL(getc_unlocked)(stream);
++}
++
++INTERCEPTOR(int, getchar_unlocked) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, getchar_unlocked);
++  return REAL(getchar_unlocked)();
++}
++
++#define INIT_GETCHAR \
++  COMMON_INTERCEPT_FUNCTION(fgetc); \
++  COMMON_INTERCEPT_FUNCTION(getc); \
++  COMMON_INTERCEPT_FUNCTION(getchar); \
++  COMMON_INTERCEPT_FUNCTION(getc_unlocked); \
++  COMMON_INTERCEPT_FUNCTION(getchar_unlocked)
++#else
++#define INIT_GETCHAR
++#endif
++
++#if SANITIZER_INTERCEPT_SETVBUF
++
++INTERCEPTOR(void, setbuf, __sanitizer_FILE *stream, char *buf) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, setbuf, stream, buf);
++  REAL(setbuf)(stream, buf);
++  if (buf)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, buf, setvbuf_bufsiz);
++}
++
++INTERCEPTOR(int, setvbuf, __sanitizer_FILE *stream, char *buf, int mode, SIZE_T size) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, setvbuf, stream, buf, mode, size);
++  int ret = REAL(setvbuf)(stream, buf, mode, size);
++  if (buf)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, buf, size);
++  return ret;
++}
++
++INTERCEPTOR(void, setbuffer, __sanitizer_FILE *stream, char *buf, SIZE_T size) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, setbuffer, stream, buf, size);
++  REAL(setbuffer)(stream, buf, size);
++  if (buf)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, buf, size);
++}
++
++#define INIT_SETVBUF \
++  COMMON_INTERCEPT_FUNCTION(setbuf); \
++  COMMON_INTERCEPT_FUNCTION(setbuffer); \
++  COMMON_INTERCEPT_FUNCTION(setvbuf)
++#else
++#define INIT_SETVBUF
++#endif
++
++#if SANITIZER_INTERCEPT_MI_VECTOR_HASH
++INTERCEPTOR(void, mi_vector_hash, const void *key, SIZE_T len, u32 seed,
++            u32 hashes[3]) {
++  void *ctx;
++  COMMON_INTERCEPTOR_ENTER(ctx, mi_vector_hash, key, len, seed, hashes);
++  if (key)
++    COMMON_INTERCEPTOR_READ_RANGE(ctx, key, len);
++  REAL(mi_vector_hash)(key, len, seed, hashes);
++  if (hashes)
++    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, hashes, sizeof(hashes[0]) * 3);
++}
++#define INIT_MI_VECTOR_HASH COMMON_INTERCEPT_FUNCTION(mi_vector_hash)
++#else
++#define INIT_MI_VECTOR_HASH
++#endif
++
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7483,6 +8998,27 @@ static void InitializeCommonInterceptors
+@@ -7483,6 +9089,30 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;
@@ -1589,6 +1680,9 @@ $NetBSD$
 +  INIT_CDBR;
 +  INIT_RMD160;
 +  INIT_SHA2;
++  INIT_GETCHAR;
++  INIT_SETVBUF;
++  INIT_MI_VECTOR_HASH;
  
    INIT___PRINTF_CHK;
  }
