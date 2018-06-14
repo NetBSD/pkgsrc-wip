@@ -103,7 +103,6 @@ SUBDIR+=	amaya
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	android-tools-adb
-SUBDIR+=	android-tools-adb8
 SUBDIR+=	angelscript
 SUBDIR+=	ann
 SUBDIR+=	ansible

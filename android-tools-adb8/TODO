@@ -1,3 +1,0 @@
-- Descend into adb/client (right now cd'ing and running 'make')
-- Endless build errors
-- XXXs in adb/client makefile
