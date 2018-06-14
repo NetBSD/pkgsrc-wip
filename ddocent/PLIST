@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/ErrorCount.sh
 bin/RefMapOpt.sh
-bin/ReferenceOpt.hyb.sh
 bin/ReferenceOpt.sh
 bin/Rename_SequenceFiles.sh
 bin/Rename_for_dDocent.sh

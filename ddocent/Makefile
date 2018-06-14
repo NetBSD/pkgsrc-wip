@@ -57,7 +57,7 @@ USE_TOOLS=	bash perl unzip
 
 ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/usr/pkgsrc/wip/ddocent/work/.destdir/usr/pkg/bin/ddocent-test" is not allowed.
 
-PORTVERSION=	2.2.25
+PORTVERSION=	2.5.2
 JAVAJARDIR=	${PREFIX}/lib/java
 
 INSTALLATION_DIRS=	bin
