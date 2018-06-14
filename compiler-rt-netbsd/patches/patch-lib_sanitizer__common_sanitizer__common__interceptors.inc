@@ -49,7 +49,7 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7234,6 +7241,1605 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7234,6 +7241,1606 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -1611,7 +1611,8 @@ $NetBSD$
 +    COMMON_INTERCEPTOR_READ_RANGE(ctx, buf, setvbuf_bufsiz);
 +}
 +
-+INTERCEPTOR(int, setvbuf, __sanitizer_FILE *stream, char *buf, int mode, SIZE_T size) {
++INTERCEPTOR(int, setvbuf, __sanitizer_FILE *stream, char *buf, int mode,
++  SIZE_T size) {
 +  void *ctx;
 +  COMMON_INTERCEPTOR_ENTER(ctx, setvbuf, stream, buf, mode, size);
 +  int ret = REAL(setvbuf)(stream, buf, mode, size);
@@ -1655,7 +1656,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7483,6 +9089,30 @@ static void InitializeCommonInterceptors
+@@ -7483,6 +9090,30 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;
