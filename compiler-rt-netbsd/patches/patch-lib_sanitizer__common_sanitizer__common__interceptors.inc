@@ -49,7 +49,7 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7234,6 +7241,1510 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7234,6 +7241,1514 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -1408,13 +1408,13 @@ $NetBSD$
 +  return ret;
 +}
 +
-+#define INIT_RMD160                                                              \
-+  COMMON_INTERCEPT_FUNCTION(RMD160Init);                                         \
-+  COMMON_INTERCEPT_FUNCTION(RMD160Update);                                       \
-+  COMMON_INTERCEPT_FUNCTION(RMD160Final);                                        \
-+  COMMON_INTERCEPT_FUNCTION(RMD160Transform);                                    \
-+  COMMON_INTERCEPT_FUNCTION(RMD160End);                                          \
-+  COMMON_INTERCEPT_FUNCTION(RMD160File);                                         \
++#define INIT_RMD160                                                            \
++  COMMON_INTERCEPT_FUNCTION(RMD160Init);                                       \
++  COMMON_INTERCEPT_FUNCTION(RMD160Update);                                     \
++  COMMON_INTERCEPT_FUNCTION(RMD160Final);                                      \
++  COMMON_INTERCEPT_FUNCTION(RMD160Transform);                                  \
++  COMMON_INTERCEPT_FUNCTION(RMD160End);                                        \
++  COMMON_INTERCEPT_FUNCTION(RMD160File);                                       \
 +  COMMON_INTERCEPT_FUNCTION(RMD160Data)
 +#else
 +#define INIT_RMD160
@@ -1446,13 +1446,15 @@ $NetBSD$
 +      COMMON_INTERCEPTOR_READ_RANGE(ctx, context, SHA##LEN##_CTX_sz); \
 +    REAL(SHA##LEN##_Pad)(context); \
 +  } \
-+  INTERCEPTOR(void, SHA##LEN##_Final, u8 digest[SHA##LEN##_digest_length], void *context) { \
++  INTERCEPTOR(void, SHA##LEN##_Final, u8 digest[SHA##LEN##_digest_length], \
++  void *context) { \
 +    void *ctx; \
 +    COMMON_INTERCEPTOR_ENTER(ctx, SHA##LEN##_Final, digest, context); \
 +    REAL(SHA##LEN##_Final)(digest, context); \
 +    if (digest) \
 +      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, digest, \
-+                                     sizeof(digest[0]) * SHA##LEN##_digest_length); \
++                                     sizeof(digest[0]) * \
++  SHA##LEN##_digest_length); \
 +  } \
 +  INTERCEPTOR(void, SHA##LEN##_Transform, SHA2_STATE_T state[8], \
 +              const u8 buffer[SHA##LEN##_block_length]) { \
@@ -1462,7 +1464,8 @@ $NetBSD$
 +      COMMON_INTERCEPTOR_READ_RANGE(ctx, state, sizeof(state[0]) * 8); \
 +    if (buffer) \
 +      COMMON_INTERCEPTOR_READ_RANGE(ctx, buffer, \
-+                                    sizeof(buffer[0]) * SHA##LEN##_block_length); \
++                                    sizeof(buffer[0]) * \
++  SHA##LEN##_block_length); \
 +    REAL(SHA##LEN##_Transform)(state, buffer); \
 +  } \
 +  INTERCEPTOR(char *, SHA##LEN##_End, void *context, char *buf) { \
@@ -1479,7 +1482,7 @@ $NetBSD$
 +    void *ctx; \
 +    COMMON_INTERCEPTOR_ENTER(ctx, SHA##LEN##_File, filename, buf); \
 +    if (filename) \
-+      COMMON_INTERCEPTOR_READ_RANGE(ctx, filename, REAL(strlen)(filename) + 1); \
++      COMMON_INTERCEPTOR_READ_RANGE(ctx, filename, REAL(strlen)(filename) + 1);\
 +    char *ret = REAL(SHA##LEN##_File)(filename, buf); \
 +    if (ret) \
 +      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, ret, SHA##LEN##_return_length); \
@@ -1488,9 +1491,10 @@ $NetBSD$
 +  INTERCEPTOR(char *, SHA##LEN##_FileChunk, const char *filename, char *buf, \
 +              OFF_T offset, OFF_T length) { \
 +    void *ctx; \
-+    COMMON_INTERCEPTOR_ENTER(ctx, SHA##LEN##_FileChunk, filename, buf, offset, length); \
++    COMMON_INTERCEPTOR_ENTER(ctx, SHA##LEN##_FileChunk, filename, buf, offset, \
++  length); \
 +    if (filename) \
-+      COMMON_INTERCEPTOR_READ_RANGE(ctx, filename, REAL(strlen)(filename) + 1); \
++      COMMON_INTERCEPTOR_READ_RANGE(ctx, filename, REAL(strlen)(filename) + 1);\
 +    char *ret = REAL(SHA##LEN##_FileChunk)(filename, buf, offset, length); \
 +    if (ret) \
 +      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, ret, SHA##LEN##_return_length); \
@@ -1560,7 +1564,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7483,6 +8994,27 @@ static void InitializeCommonInterceptors
+@@ -7483,6 +8998,27 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;
