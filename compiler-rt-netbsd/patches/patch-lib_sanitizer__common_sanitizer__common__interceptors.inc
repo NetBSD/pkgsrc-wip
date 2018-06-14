@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-06-14 12:14:39.819761270 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-06-14 12:14:39.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -77,6 +77,11 @@
  #define ctime __ctime50
@@ -49,7 +49,7 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7234,6 +7241,1534 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7234,6 +7241,1510 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -723,30 +723,6 @@ $NetBSD$
 +#define INIT_GETMNTINFO COMMON_INTERCEPT_FUNCTION(getmntinfo)
 +#else
 +#define INIT_GETMNTINFO
-+#endif
-+
-+#if SANITIZER_INTERCEPT_PUTS
-+INTERCEPTOR(int, puts, const char *str) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, puts, str);
-+  if (str)
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, str, REAL(strlen)(str) + 1);
-+  int ret = REAL(puts)(str);
-+  return ret;
-+}
-+INTERCEPTOR(int, fputs, const char *str, __sanitizer_FILE *stream) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, fputs, str, stream);
-+  if (str)
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, str, REAL(strlen)(str) + 1);
-+  int ret = REAL(fputs)(str, stream);
-+  return ret;
-+}
-+#define INIT_PUTS                                                              \
-+  COMMON_INTERCEPT_FUNCTION(puts);                                             \
-+  COMMON_INTERCEPT_FUNCTION(fputs)
-+#else
-+#define INIT_PUTS
 +#endif
 +
 +#if SANITIZER_INTERCEPT_SHA1
@@ -1584,7 +1560,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7483,6 +9018,28 @@ static void InitializeCommonInterceptors
+@@ -7483,6 +8994,27 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;
@@ -1595,7 +1571,6 @@ $NetBSD$
 +  INIT_STRTONUM;
 +  INIT_VIS;
 +  INIT_GETMNTINFO;
-+  INIT_PUTS;
 +  INIT_SHA1;
 +  INIT_MD2;
 +  INIT_MD4;

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-06-14 12:14:40.207391924 +0000
+--- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-06-14 12:14:40.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_interceptors.h
-@@ -510,4 +510,27 @@
+@@ -510,4 +510,26 @@
  #define SANITIZER_INTERCEPT_PROTOENT SI_NETBSD
  #define SANITIZER_INTERCEPT_NETENT SI_NETBSD
  
@@ -13,7 +13,6 @@ $NetBSD$
 +#define SANITIZER_INTERCEPT_STRTONUM SI_NETBSD
 +#define SANITIZER_INTERCEPT_VIS SI_NETBSD
 +#define SANITIZER_INTERCEPT_GETMNTINFO SI_NETBSD
-+#define SANITIZER_INTERCEPT_PUTS SI_POSIX
 +#define SANITIZER_INTERCEPT_SHA1 SI_NETBSD
 +#define SANITIZER_INTERCEPT_MD2 SI_NETBSD
 +#define SANITIZER_INTERCEPT_MD4 SI_NETBSD

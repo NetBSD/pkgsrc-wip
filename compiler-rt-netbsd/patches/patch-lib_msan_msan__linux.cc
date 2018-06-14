@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/msan/msan_linux.cc.orig	2018-06-14 12:14:39.633338965 +0000
+--- lib/msan/msan_linux.cc.orig	2018-06-14 12:14:39.000000000 +0000
 +++ lib/msan/msan_linux.cc
 @@ -31,6 +31,7 @@
  #include <sys/time.h>
