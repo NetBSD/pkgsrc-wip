@@ -78,3 +78,5 @@ CPPFLAGS+=	-DTERMINFO
 post-extract:
 	cp ${.CURDIR}/../../wip/emacs26/files/site-init.el ${WRKSRC}/lisp
 	${CHMOD} -R go-w ${WRKSRC}
+
+.include "../../devel/libgetopt/buildlink3.mk"

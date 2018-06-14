@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	--without-xml2
 ###
 .if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/p11-kit/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-gnutls
 .endif
