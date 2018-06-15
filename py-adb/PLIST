@@ -1,7 +1,10 @@
 @comment $NetBSD$
+bin/pyadb-${PYVERSSUFFIX}
+bin/pyfastboot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/adb/__init__.py
@@ -34,6 +37,9 @@ ${PYSITELIB}/adb/filesync_protocol.pyo
 ${PYSITELIB}/adb/sign_m2crypto.py
 ${PYSITELIB}/adb/sign_m2crypto.pyc
 ${PYSITELIB}/adb/sign_m2crypto.pyo
+${PYSITELIB}/adb/sign_pycryptodome.py
+${PYSITELIB}/adb/sign_pycryptodome.pyc
+${PYSITELIB}/adb/sign_pycryptodome.pyo
 ${PYSITELIB}/adb/sign_pythonrsa.py
 ${PYSITELIB}/adb/sign_pythonrsa.pyc
 ${PYSITELIB}/adb/sign_pythonrsa.pyo
