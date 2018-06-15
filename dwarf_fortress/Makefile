@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	df_44_06_linux
-PKGNAME=	dwarf_fortress-44.06
+DISTNAME=	df_44_10_linux
+PKGNAME=	dwarf_fortress-44.10
 CATEGORIES=	games
 MASTER_SITES=	http://www.bay12games.com/dwarves/
 EXTRACT_SUFX=	.tar.bz2
