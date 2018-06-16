@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/04/19 21:12:18 nbrkv Exp $
 
-DISTNAME=	residualvm-0.3.0-sources
+DISTNAME=	residualvm-0.3.1-sources
 PKGNAME=	${DISTNAME:S/-sources//}
 MASTER_SITES=	http://www.residualvm.org/downloads/release/${PKGVERSION_NOREV}/
 CATEGORIES=	games

@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.3 2015/04/19 21:12:18 nbrkv Exp $
 
-SHA1 (residualvm-0.3.0-sources.tar.bz2) = dde1466977b58366aaa1d1b9f1358430d5ea1af1
-RMD160 (residualvm-0.3.0-sources.tar.bz2) = 084fb235444f79e7b2dfdabfce24222b5893b9c9
-SHA512 (residualvm-0.3.0-sources.tar.bz2) = 3f171c1b842db497b54083e22772606c7173cb977949de5cb467a171d83b0e32a0f961a9f082821a29d2e03511fdf7e1ff750b75939d07ba67c8dbf6326b515f
-Size (residualvm-0.3.0-sources.tar.bz2) = 6712167 bytes
+SHA1 (residualvm-0.3.1-sources.tar.bz2) = 4a1d80203ca3b43ef9e87e0a78a4216fd8d69296
+RMD160 (residualvm-0.3.1-sources.tar.bz2) = 2499b686327bf0c0073cd625f356c4918e534902
+SHA512 (residualvm-0.3.1-sources.tar.bz2) = 491a77f1775718795d93f099fa39ec5888755ac1df610089c17209334b98ae783271078ed03a61ced09835aa327446804a55522d4b83f618dd3b843c231444a0
+Size (residualvm-0.3.1-sources.tar.bz2) = 6711799 bytes
