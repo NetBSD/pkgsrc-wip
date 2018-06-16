@@ -557,6 +557,7 @@ SUBDIR+=	dict-est-rus
 SUBDIR+=	dict-freedict-eng-ara
 SUBDIR+=	dict-freedict-eng-fra
 SUBDIR+=	digitemp
+SUBDIR+=	din
 SUBDIR+=	ding
 SUBDIR+=	dionysus
 SUBDIR+=	dir2ogg
