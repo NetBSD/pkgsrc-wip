@@ -22,7 +22,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../x11/kactivities5/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../wip/libkdcraw/buildlink3.mk"
-#.include "../../wip/libkipi5/buildlink3.mk"
+.include "../../wip/libkipi/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtimageformats/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
