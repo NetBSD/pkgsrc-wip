@@ -1,0 +1,24 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/McKael/madon.a
+gopkg/src/github.com/McKael/madon/LICENSE
+gopkg/src/github.com/McKael/madon/README.md
+gopkg/src/github.com/McKael/madon/account.go
+gopkg/src/github.com/McKael/madon/api.go
+gopkg/src/github.com/McKael/madon/app.go
+gopkg/src/github.com/McKael/madon/domain.go
+gopkg/src/github.com/McKael/madon/emoji.go
+gopkg/src/github.com/McKael/madon/favourites.go
+gopkg/src/github.com/McKael/madon/instance.go
+gopkg/src/github.com/McKael/madon/lists.go
+gopkg/src/github.com/McKael/madon/login.go
+gopkg/src/github.com/McKael/madon/madon.go
+gopkg/src/github.com/McKael/madon/madon_test.go
+gopkg/src/github.com/McKael/madon/media.go
+gopkg/src/github.com/McKael/madon/notifications.go
+gopkg/src/github.com/McKael/madon/report.go
+gopkg/src/github.com/McKael/madon/search.go
+gopkg/src/github.com/McKael/madon/status.go
+gopkg/src/github.com/McKael/madon/streams.go
+gopkg/src/github.com/McKael/madon/timelines.go
+gopkg/src/github.com/McKael/madon/types.go
+@pkgdir bin

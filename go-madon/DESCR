@@ -1,0 +1,6 @@
+madon is a Go library to access the Mastondon REST API.
+
+This implementation covers 100% of the current API, including the
+streaming API.
+
+The madonctl console client uses this library exhaustively.
