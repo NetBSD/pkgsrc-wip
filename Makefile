@@ -3120,6 +3120,7 @@ SUBDIR+=	py-email-reply-parser
 SUBDIR+=	py-embedc
 SUBDIR+=	py-emcee
 SUBDIR+=	py-emmsa
+SUBDIR+=	py-emoji
 SUBDIR+=	py-empirical
 SUBDIR+=	py-engfmt
 SUBDIR+=	py-enre
