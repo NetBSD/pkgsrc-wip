@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (rclone-1.41.tar.gz) = d1693226b422f1c3dffd36a8d76612768c26a5f0
-RMD160 (rclone-1.41.tar.gz) = 92b340f7b893f5ee270fafca274d04aca458e85d
-SHA512 (rclone-1.41.tar.gz) = efce2827a659d83c2fce74c50e6d4182dc5916ba8e47a335f2719cce5c3eb4a9622ee0f53c5923af1ed84b340b6dd7ac00bcf48dbb3de53644dc3f2298523112
-Size (rclone-1.41.tar.gz) = 48197335 bytes
+SHA1 (rclone-1.42.tar.gz) = 60bbdbf2e670cbb912a0217d79a0a5cdadd2461b
+RMD160 (rclone-1.42.tar.gz) = 0aa6c22edc173525f973922a900119c0e12b6b81
+SHA512 (rclone-1.42.tar.gz) = 69fadc1bc661e6278e461a16b49fb473bf2e35ceb85704c2b92e252422d372fbbbbb9d188cf9cb58d55b6d6c8267c599ea0d8a79fb4edb4a7bc0bac61de3eae1
+Size (rclone-1.42.tar.gz) = 52702474 bytes
