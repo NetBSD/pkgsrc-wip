@@ -14,6 +14,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoreconf pkg-config gmake
 GNU_CONFIGURE=	yes
 
+LDFLAGS+=	-ltcl -lSDL -lGL -lpthread
+
 .include "options.mk"
 
 .include "../../devel/boost-libs/buildlink3.mk"
