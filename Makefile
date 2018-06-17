@@ -3004,6 +3004,7 @@ SUBDIR+=	py-cocos2d
 SUBDIR+=	py-codepy
 SUBDIR+=	py-cogapp
 SUBDIR+=	py-cogent
+SUBDIR+=	py-colored
 SUBDIR+=	py-colorlog
 SUBDIR+=	py-colormath
 SUBDIR+=	py-colorpy
