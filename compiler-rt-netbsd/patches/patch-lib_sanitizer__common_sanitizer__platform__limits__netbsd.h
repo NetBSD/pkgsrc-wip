@@ -26,7 +26,7 @@ $NetBSD$
  struct __sanitizer_ptrace_io_desc {
    int piod_op;
    void *piod_offs;
-@@ -2194,6 +2204,71 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
+@@ -2194,6 +2204,80 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
  
  extern const int si_SEGV_MAPERR;
  extern const int si_SEGV_ACCERR;
@@ -95,6 +95,15 @@ $NetBSD$
 +};
 +
 +extern const int setvbuf_bufsiz;
++
++struct __sanitizer_sockaddr_storage {
++  u8 ss_len;
++  u8 ss_family;
++  char *__ss_pad1[sizeof(u64) - 2];
++  u64 __ss_align;
++  char __ss_pad2[128 - 2 - (sizeof(u64) - 2) - sizeof(u64)];
++};
++
  }  // namespace __sanitizer
  
  #define CHECK_TYPE_SIZE(TYPE) \

@@ -23,7 +23,45 @@ $NetBSD$
  extern const unsigned short *_ctype_tab_;
  extern const short *_toupper_tab_;
  extern const short *_tolower_tab_;
-@@ -3345,14 +3352,14 @@ INTERCEPTOR(INTMAX_T, strtoimax, const c
+@@ -3060,17 +3067,28 @@ INTERCEPTOR(int, sendmmsg, int fd, struc
+ #endif
+ 
+ #if SANITIZER_INTERCEPT_GETPEERNAME
+-INTERCEPTOR(int, getpeername, int sockfd, void *addr, unsigned *addrlen) {
++INTERCEPTOR(int, getpeername, int sockfd, void *addr,
++  __sanitizer_socklen_t *addrlen) {
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, getpeername, sockfd, addr, addrlen);
+-  unsigned addr_sz;
+-  if (addrlen) addr_sz = *addrlen;
+-  // FIXME: under ASan the call below may write to freed memory and corrupt
+-  // its metadata. See
+-  // https://github.com/google/sanitizers/issues/321.
+-  int res = REAL(getpeername)(sockfd, addr, addrlen);
+-  if (!res && addr && addrlen)
+-    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, addr, Min(addr_sz, *addrlen));
++  __sanitizer_socklen_t taddrlen;
++  if (addrlen)
++    taddrlen = *addrlen;
++  else
++    taddrlen = 0;
++  __sanitizer_sockaddr_storage taddr;
++  int res = REAL(getpeername)(sockfd, addr ? &taddr : 0,
++                              addrlen ? &taddrlen : 0);
++  if (!res) {
++    if (addr && addrlen)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, addr, taddrlen);
++    if (addrlen)
++      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, addrlen, sizeof(*addrlen));
++  }
++  if (addr && addrlen)
++    memcpy(addr, &taddr, taddrlen);
++  if (addrlen)
++    *addrlen = taddrlen;
+   return res;
+ }
+ #define INIT_GETPEERNAME COMMON_INTERCEPT_FUNCTION(getpeername);
+@@ -3345,14 +3363,14 @@ INTERCEPTOR(INTMAX_T, strtoimax, const c
    return res;
  }
  
@@ -40,7 +78,7 @@ $NetBSD$
    StrtolFixAndCheck(ctx, nptr, endptr, real_endptr, base);
    return res;
  }
-@@ -4240,7 +4247,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
+@@ -4240,7 +4258,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
  #endif
  
  #if SANITIZER_INTERCEPT_STATVFS
@@ -49,7 +87,7 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7234,6 +7241,1606 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7234,6 +7252,1606 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -1656,7 +1694,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7483,6 +9090,30 @@ static void InitializeCommonInterceptors
+@@ -7483,6 +9101,30 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;
