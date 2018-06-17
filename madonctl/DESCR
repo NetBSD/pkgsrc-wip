@@ -1,0 +1,6 @@
+madonctl is a command line client for the Mastodon distributed social
+network API.
+
+The Mastodon 1.3 API has a 100% coverage.
+
+madonctl uses the Madon Golang Mastodon API library implementation.
