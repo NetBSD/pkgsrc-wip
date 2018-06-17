@@ -20,6 +20,12 @@ CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		..
 BUILD_MAKE_FLAGS+=	VERBOSE=1
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD"
+CFLAGS+=		-Wno-error=undefined-func-template
+.endif
+
 pre-configure:
 	mkdir -p ${WRKSRC}/build
 
