@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/examples
+gopkg/pkg/${GO_PLATFORM}/github.com/sendgrid/rest.a
+gopkg/src/github.com/sendgrid/rest/CHANGELOG.md
+gopkg/src/github.com/sendgrid/rest/CODE_OF_CONDUCT.md
+gopkg/src/github.com/sendgrid/rest/CONTRIBUTING.md
+gopkg/src/github.com/sendgrid/rest/LICENSE.txt
+gopkg/src/github.com/sendgrid/rest/README.md
+gopkg/src/github.com/sendgrid/rest/TROUBLESHOOTING.md
+gopkg/src/github.com/sendgrid/rest/USAGE.md
+gopkg/src/github.com/sendgrid/rest/examples/example.go
+gopkg/src/github.com/sendgrid/rest/rest.go
+gopkg/src/github.com/sendgrid/rest/rest_test.go
