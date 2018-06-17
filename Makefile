@@ -4400,6 +4400,7 @@ SUBDIR+=	tnt
 SUBDIR+=	todotxt-git
 SUBDIR+=	tome
 SUBDIR+=	tome2
+SUBDIR+=	tootstream
 SUBDIR+=	tophat
 SUBDIR+=	tops-bin
 SUBDIR+=	tor-dev
