@@ -49,7 +49,7 @@ SUBST_FILES.prefix+=	${DESTDIR}${PREFIX}/bin/dDocent
 
 USE_LANGUAGES=	# none
 REPLACE_BASH=	dDocent *.sh
-REPLACE_BASH+=	scripts/ddocent-test* scripts/*.sh scripts/dDocent_filters
+REPLACE_BASH+=	scripts/ddocent-assembly-test* scripts/*.sh scripts/dDocent_filters
 REPLACE_PERL=	scripts/*.pl
 REPLACE_PYTHON=	scripts/*.py
 NO_BUILD=	yes
@@ -63,14 +63,15 @@ JAVAJARDIR=	${PREFIX}/lib/java
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	${CP} ${FILESDIR}/ddocent-test ${FILESDIR}/ddocent-test-cleanup \
+	${CP} ${FILESDIR}/ddocent-assembly-test ${FILESDIR}/ddocent-assembly-test-cleanup \
 		${WRKSRC}/scripts
 
 do-install:
 	${INSTALL_SCRIPT} \
 		${WRKSRC}/dDocent \
 		${WRKSRC}/*.sh \
-		${WRKSRC}/scripts/ddocent-test* \
+		${WRKSRC}/scripts/ddocent-assembly-test \
+		${WRKSRC}/scripts/ddocent-assembly-test-cleanup \
 		${WRKSRC}/scripts/*.sh \
 		${WRKSRC}/scripts/*.pl \
 		${WRKSRC}/scripts/dDocent_filters \

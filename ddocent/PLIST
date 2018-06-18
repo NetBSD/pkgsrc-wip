@@ -8,8 +8,8 @@ bin/Rename_for_dDocent_with-INDEX.sh
 bin/dDocent
 bin/dDocent_filters
 bin/dDocent_ngs.sh
-bin/ddocent-test
-bin/ddocent-test-cleanup
+bin/ddocent-assembly-test
+bin/ddocent-assembly-test-cleanup
 bin/filter_hwe_by_pop.pl
 bin/filter_missing_ind.sh
 bin/pop_missing_filter.sh
