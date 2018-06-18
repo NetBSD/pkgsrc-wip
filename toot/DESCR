@@ -1,1 +1,9 @@
-Toot is a a Mastodon CLI client.
+toot is a command line microblogging client for interacting with Mastodon
+instances on the distributed social network known as the 'Fediverse'.
+
+It supports regular and two-factor authentication, and has commands for
+showing an account's timeline, searching, posting 'toots' (messages),
+uploading images or video files, and following and unfollowing, muting
+and unmuting, and blocking and unblocking accounts.
+
+toot also includes an experimental curses interface.
