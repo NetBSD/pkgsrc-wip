@@ -13,8 +13,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/pyversion.mk"
-
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colored-[0-9]*:../../wip/py-colored # XXX
 DEPENDS+=	${PYPKGPREFIX}-emoji-[0-9]*:../../wip/py-emoji # XXX

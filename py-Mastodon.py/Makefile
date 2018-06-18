@@ -12,8 +12,6 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
