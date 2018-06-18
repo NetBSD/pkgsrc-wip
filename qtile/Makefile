@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.qtile.org/
 COMMENT=	Fully-featured, pure-Python tiling window manager
 LICENSE=	mit
 
+USE_LANGUAGES=	# none
+
 .include "../../lang/python/pyversion.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six

@@ -9,6 +9,7 @@ HOMEPAGE=	https://bitbucket.org/enovance/trollius/
 COMMENT=	Module asyncio, for writing single-threaded concurrent code
 LICENSE=	apache-2.0
 
+USE_LANGUAGES=	# none
 EGG_NAME=	${DISTNAME}
 PLIST_VARS+=	pre33
 
