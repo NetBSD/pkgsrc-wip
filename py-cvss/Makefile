@@ -1,0 +1,21 @@
+# $NetBSD$
+
+DISTNAME=	cvss-1.7
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	security python
+MASTER_SITES=	${MASTER_SITE_GITHUB:=skontar/}
+GITHUB_PROJECT=	cvss
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/skontar/cvss
+COMMENT=	CVSS2/3 library with interactive calculator
+LICENSE=	gnu-lgpl-v3
+
+USE_LANGUAGES=	# none
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/cvss_calculator ${DESTDIR}${PREFIX}/bin/cvss_calculator-${PYVERSSUFFIX} || ${TRUE}
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -3036,6 +3036,7 @@ SUBDIR+=	py-cubicweb
 SUBDIR+=	py-cutadapt
 SUBDIR+=	py-cva
 SUBDIR+=	py-cvf
+SUBDIR+=	py-cvss
 SUBDIR+=	py-cvxpy
 SUBDIR+=	py-cxnet
 SUBDIR+=	py-cxvpy
