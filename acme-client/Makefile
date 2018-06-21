@@ -1,10 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	acme-client-0.1.16
+DISTNAME=	acme-client-portable-${GITHUB_TAG}
+PKGNAME=	${DISTNAME:S/-portable//:S/VERSION_//:S/_/./g}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kristapsdz/}
 GITHUB_PROJECT=	acme-client-portable
-GITHUB_TAG=	VERSION_${PKGVERSION_NOREV:S/./_/g}
+GITHUB_TAG=	VERSION_0_1_16
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/kristapsdz/acme-client/
