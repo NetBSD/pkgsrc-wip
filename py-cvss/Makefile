@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=skontar/}
 GITHUB_PROJECT=	cvss
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/skontar/cvss
 COMMENT=	CVSS2/3 library with interactive calculator
 LICENSE=	gnu-lgpl-v3
