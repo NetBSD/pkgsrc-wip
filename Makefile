@@ -1544,7 +1544,6 @@ SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	khard-git
 SUBDIR+=	khelpcenter
-SUBDIR+=	kholidays
 SUBDIR+=	khotkeys
 SUBDIR+=	kibana
 SUBDIR+=	kidentitymanagement
