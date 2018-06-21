@@ -14,6 +14,10 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
+do-test:
+	${RUN} cd ${WRKSRC}/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_cvss2.py
+	${RUN} cd ${WRKSRC}/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_cvss3.py
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/cvss_calculator ${DESTDIR}${PREFIX}/bin/cvss_calculator-${PYVERSSUFFIX} || ${TRUE}
 
