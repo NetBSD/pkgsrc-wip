@@ -1,0 +1,8 @@
+@comment $NetBSD$
+${PYSITELIB}/pam.pyo
+${PYSITELIB}/pam.pyc
+${PYSITELIB}/pam.py
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt

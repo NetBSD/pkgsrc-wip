@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/02/19 21:21:12 jihbed Exp $
+
+SHA1 (xapps-1.2.1.tar.gz) = 72d3a4a3c26c24d556449360ba6ff5f232159bdb
+RMD160 (xapps-1.2.1.tar.gz) = 45b191cc16684f03ad0b0f3422a8349eb4c191f5
+SHA512 (xapps-1.2.1.tar.gz) = 9348771dff831b879c2ef5f24ebba7c43c5dc4a8e0b417082e79221bd6de419fdf2cd3d8e4f72f1542b936deb12398065bbd63bcf596eb20ad13ad7e5b0fc45f
+Size (xapps-1.2.1.tar.gz) = 48003 bytes
+SHA1 (patch-files_meson.build) = bbe8ea87eaf7ab7e60060ee3baac49f9f55f1c51
+SHA1 (patch-pygobject_meson.build) = 2585e921bfef7a6814da46d62e8d36a133b20a9d

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/02/19 17:04:55 jihbed Exp $
+
+SHA1 (cinnamon-screensaver-3.8.1.tar.gz) = 5a12a7d7848f94556f0bd90917bcb28ad1d9a5f3
+RMD160 (cinnamon-screensaver-3.8.1.tar.gz) = 83794bc879d580cdf00de7351ef12e466033f3ab
+SHA512 (cinnamon-screensaver-3.8.1.tar.gz) = a8ec1473b8931c5a6a5af410080f7857f655b9fced4be952a64cf05e9176e79e131fcc5cc2365054f086d570d843e127bfb1a2a98be62d8ba72835ebb98b753c
+Size (cinnamon-screensaver-3.8.1.tar.gz) = 161303 bytes
+SHA1 (patch-files_Makefile.in) = 3124d41563de9c5a158a32c3d849bb1538e2fee8

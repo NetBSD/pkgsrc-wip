@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.1 2015/02/19 17:04:55 jihbed Exp $
 
-SHA1 (3.0.2.tar.gz) = a79595448e846eae28df5cfc8a98daac0c6239f9
-RMD160 (3.0.2.tar.gz) = e999e426269ac985dcb5b389893186b5b59a17a4
-SHA512 (3.0.2.tar.gz) = 0adcc7bd9f9dace245a7d7528893f729947228e4c454e423cdb1d3ac2ae3c04d010226e340d5d9315cc45a84f96f7b0bb173ee1589169ddcfbfadba59e0787a6
-Size (3.0.2.tar.gz) = 577776 bytes
-SHA1 (patch-files_Makefile.am) = 349724eb13da390de2603bcbe2679171a879ee1c
-SHA1 (patch-libcinnamon-desktop_Makefile.am) = 9739ba04d803e41dd0b9ce0aa21e9cbb9634010b
+SHA1 (cinnamon-desktop-3.8.1.tar.gz) = 77de9f9a141de17471f1c7263e51231093407cb3
+RMD160 (cinnamon-desktop-3.8.1.tar.gz) = a4b973e837d403423b01357f51413819435ef6e6
+SHA512 (cinnamon-desktop-3.8.1.tar.gz) = d4b5e6d848a4cb01e811410da8b07d2a400f6632abba9cc0ed74e5321ba3fafd1ec9ac90307eb56ba7047dbfabbad9526e1348533c6207c9a7756c24751da933
+Size (cinnamon-desktop-3.8.1.tar.gz) = 489295 bytes
+SHA1 (patch-libcinnamon-desktop_cdesktop-enums.h) = de429f814c46e767abc023d2dafada44b90e76e3
+SHA1 (patch-schemas_org.cinnamon.desktop.session.gschema.xml.in.in) = 5a7c99cacc2ec7964f07ec762a9e628948b6eeed

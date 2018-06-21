@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/cinnamon-desktop-migrate-mediakeys
 include/cinnamon-desktop/libcinnamon-desktop/cdesktop-enums.h
 include/cinnamon-desktop/libcinnamon-desktop/gnome-bg-crossfade.h
 include/cinnamon-desktop/libcinnamon-desktop/gnome-bg.h
@@ -19,17 +20,20 @@ include/cinnamon-desktop/libcvc/gvc-mixer-source-output.h
 include/cinnamon-desktop/libcvc/gvc-mixer-source.h
 include/cinnamon-desktop/libcvc/gvc-mixer-stream.h
 include/cinnamon-desktop/libcvc/gvc-mixer-ui-device.h
-${PLIST.introspection}lib/girepository-1.0/CDesktopEnums-3.0.typelib
-${PLIST.introspection}lib/girepository-1.0/CinnamonDesktop-3.0.typelib
-${PLIST.introspection}lib/girepository-1.0/Cvc-1.0.typelib
-lib/libcinnamon-desktop.la
-lib/libcvc.la
+lib/girepository-1.0/CDesktopEnums-3.0.typelib
+lib/girepository-1.0/CinnamonDesktop-3.0.typelib
+lib/girepository-1.0/Cvc-1.0.typelib
+lib/libcinnamon-desktop.so
+lib/libcinnamon-desktop.so.4
+lib/libcinnamon-desktop.so.4.0.0
+lib/libcvc.so
+lib/libcvc.so.0
+lib/libcvc.so.0.0.0
 lib/pkgconfig/cinnamon-desktop.pc
 lib/pkgconfig/cvc.pc
-libexec/cinnamon-rr-debug
-${PLIST.introspection}share/gir-1.0/CDesktopEnums-3.0.gir
-${PLIST.introspection}share/gir-1.0/CinnamonDesktop-3.0.gir
-${PLIST.introspection}share/gir-1.0/Cvc-1.0.gir
+share/gir-1.0/CDesktopEnums-3.0.gir
+share/gir-1.0/CinnamonDesktop-3.0.gir
+share/gir-1.0/Cvc-1.0.gir
 share/glib-2.0/schemas/org.cinnamon.desktop.a11y.applications.gschema.xml
 share/glib-2.0/schemas/org.cinnamon.desktop.a11y.keyboard.gschema.xml
 share/glib-2.0/schemas/org.cinnamon.desktop.a11y.magnifier.gschema.xml

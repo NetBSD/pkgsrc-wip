@@ -1,0 +1,14 @@
+$NetBSD$
+
+Disable systemd media key manager.
+
+--- plugins/Makefile.am.orig	2018-05-16 17:41:09.000000000 +0000
++++ plugins/Makefile.am
+@@ -13,7 +13,6 @@ enabled_plugins =	\
+ 	power		\
+ 	housekeeping    \
+ 	keyboard	\
+-	media-keys	\
+ 	mouse		\
+ 	orientation	\
+ 	screensaver-proxy \

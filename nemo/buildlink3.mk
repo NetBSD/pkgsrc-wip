@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	nemo
+
+.if !defined(NEMO_BUILDLINK3_MK)
+NEMO_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.nemo+=	nemo>=3.6.5
+BUILDLINK_PKGSRCDIR.nemo?=	../../wip/nemo
+
+.endif	# NEMO_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-nemo

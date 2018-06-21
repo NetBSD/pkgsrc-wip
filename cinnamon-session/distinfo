@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/02/19 21:21:12 jihbed Exp $
+
+SHA1 (cinnamon-session-3.8.1.tar.gz) = 14aefe40d345b8e25f1b25969c61997efddc56d3
+RMD160 (cinnamon-session-3.8.1.tar.gz) = eafab91839723a733bbfea85d2b9e4667dd1efb8
+SHA512 (cinnamon-session-3.8.1.tar.gz) = df7d153b8247155476d216ef97e09951e0343c3afccc1dec9f7e6dca3c69d6a78a5667a935b150a002df6260ec28a986619e43fc152965d13d285437b2b3c390
+Size (cinnamon-session-3.8.1.tar.gz) = 198058 bytes
+SHA1 (patch-cinnamon-session_csm-manager.c) = c0410e4147f428b335958d77fee70778d6baa1ed
+SHA1 (patch-meson.build) = 88c3bab34753cdec1d8feee0cb1c992df2ebf10f

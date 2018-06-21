@@ -1,0 +1,15 @@
+$NetBSD$
+
+Adapt for CONF_FILES.
+
+--- shell/Makefile.am.orig	2018-04-17 11:44:10.000000000 +0000
++++ shell/Makefile.am
+@@ -79,7 +79,7 @@ AM_CPPFLAGS +=							\
+ 	-DMENUDIR="\"$(menudir)\""				\
+ 	-DPANELS_DIR="\"$(PANELS_DIR)\""
+ 
+-menudir = $(sysconfdir)/xdg/menus
++menudir = $(datadir)/examples/menus
+ menu_DATA = cinnamoncc.menu
+ 
+ cinnamoncc.menu: cinnamoncc.menu.in

@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	cinnamon-desktop
 .if !defined(CINNAMON_DESKTOP_BUILDLINK3_MK)
 CINNAMON_DESKTOP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.cinnamon-desktop+=	cinnamon-desktop>=3.0.2
+BUILDLINK_API_DEPENDS.cinnamon-desktop+=	cinnamon-desktop>=3.6.1
 BUILDLINK_PKGSRCDIR.cinnamon-desktop?=		../../wip/cinnamon-desktop
 
 .include "../../x11/gtk3/buildlink3.mk"
