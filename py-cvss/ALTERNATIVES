@@ -1,0 +1,1 @@
+bin/cvss_calculator @PREFIX@/bin/cvss_calculator-@PYVERSSUFFIX@
