@@ -85,7 +85,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 .include "../../net/kxmlrpcclient/buildlink3.mk"
 .include "../../wip/libkscreen/buildlink3.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
-.include "../../wip/kholidays/buildlink3.mk"
+.include "../../time/kholidays/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
