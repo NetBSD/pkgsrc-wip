@@ -28,7 +28,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kalarmcal.renamecategories \
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/akonadi/buildlink3.mk"
 .include "../../wip/kcalutils/buildlink3.mk"
-.include "../../wip/kholidays/buildlink3.mk"
+.include "../../time/kholidays/buildlink3.mk"
 .include "../../wip/kidentitymanagement/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
