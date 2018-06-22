@@ -3,6 +3,8 @@ $NetBSD$
 Pick up `cvss' module from the parent directory in order to properly
 run the tests without having the cvss module installed.
 
+Merged upstream as part of https://github.com/skontar/cvss/pull/15
+
 --- tests/test_cvss2.py.orig	2017-01-11 09:11:40.000000000 +0000
 +++ tests/test_cvss2.py
 @@ -2,6 +2,8 @@ from os import path
