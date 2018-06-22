@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	rt-1.0.9
+DISTNAME=	rt-1.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rt/}
 
 MAINTAINER=	leot@NetBSD.org
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DIST_SUBDIR=	py-rt	# XXX: avoid possible conflicts with devel/rt{3,}
 
+DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
