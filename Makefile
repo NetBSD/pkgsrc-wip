@@ -3704,6 +3704,7 @@ SUBDIR+=	py-seeds
 SUBDIR+=	py-selection
 SUBDIR+=	py-semidbm
 SUBDIR+=	py-sempy
+SUBDIR+=	py-semver
 SUBDIR+=	py-sentry
 SUBDIR+=	py-sep
 SUBDIR+=	py-setupdocs

@@ -2,11 +2,12 @@
 ${PYSITELIB}/numbergen/__init__.py
 ${PYSITELIB}/numbergen/__init__.pyc
 ${PYSITELIB}/numbergen/__init__.pyo
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/pbr.json
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/param/.version
 ${PYSITELIB}/param/__init__.py
 ${PYSITELIB}/param/__init__.pyc
 ${PYSITELIB}/param/__init__.pyo

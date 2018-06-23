@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	param-1.5.0
+DISTNAME=	param-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/d4/2f/6a9b9d53c1f64f774a9da5083fab8ec8bf95c795e6a70640f7ff3336fb68/
+MASTER_SITES=	https://files.pythonhosted.org/packages/1e/a0/717611ea36c6d8188eef8d6b70f61de84048fd284d3f63b57caea224a54d/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://ioam.github.com/param/
@@ -12,5 +12,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
