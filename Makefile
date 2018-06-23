@@ -4065,6 +4065,7 @@ SUBDIR+=	ruby-review
 SUBDIR+=	ruby-rinku
 SUBDIR+=	ruby-roo-xls
 SUBDIR+=	ruby-simple-navigation
+SUBDIR+=	ruby-sinatra-simple-navigation
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer

@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.textile
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/sinatra/simple-navigation.rb
+${GEM_LIBDIR}/lib/sinatra/simple_navigation.rb
+${GEM_LIBDIR}/lib/sinatra/simple_navigation/version.rb
+${GEM_LIBDIR}/sinatra-simple-navigation.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.4.0/extensions
+@pkgdir lib/ruby/gems/2.4.0/build_info
