@@ -56,12 +56,11 @@ SUBST_STAGE.tc-pre=	pre-configure
 SUBST_FILES.tc-pre+=	lisp/tc-pre.el
 SUBST_SED.tc-pre+=	-e s\|/usr/local/share\|${PREFIX}/share\|g
 
-# Usually said: Nothing changed. (but hope to help some situation ;-)
 SUBST_CLASSES+=		texinfo
-SUBST_MESSAGE.texinfo=	Unknown problem fix at the stage of generating doc/tc.texinfo
+SUBST_MESSAGE.texinfo=	Fix problem: /usr/pkgsrc/wip/tc-git/work/tc/doc/-I does not exist!
 SUBST_STAGE.texinfo=	post-configure
 SUBST_FILES.texinfo=	doc/Makefile
-SUBST_SED.texinfo=	-e '/if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLAGS\) -I $$\(srcdir\)/s/ -I ./tc.texinfo/'
+SUBST_SED.texinfo=	-e '/$$(MAKEINFO) $$(AM_MAKEINFOFLAGS) $$(MAKEINFOFLAGS) -I $$(srcdir)/s/-I $$(srcdir)/ -I. tc.texinfo ; echo disable following line /'
 
 # string-to-int to string-to-number
 SUBST_CLASSES+=		s2i

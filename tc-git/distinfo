@@ -4,6 +4,7 @@ SHA1 (patch-BATCH-SORT) = fed628d0f512638934ca16b4b7d0906d4be650c9
 SHA1 (patch-bushu-util_bushu2canna) = 9573de81b6f9ef7a225fc954b618f7905e648821
 SHA1 (patch-bushu-util_where) = 07bd3faf178ef57b9cc0afae20f56dbf83cc1d6d
 SHA1 (patch-configure.ac) = 4174e3674e2cc7dbb6daf5de56fa76f24273edf9
+SHA1 (patch-doc_Makefile.am) = fa69f7e5a4a49ad38479929549740f1c9e1a37fb
 SHA1 (patch-etc_Makefile.am) = 368d4cc39ca7572dd3a1bb632e4ded3046cf2c42
 SHA1 (patch-etc_Makefile.in) = 5d17622136ce9960dcc5dc43f4763d3e315241b1
 SHA1 (patch-etc_bushu.rev) = 53259ef27da2b3e57ff9834957c8ee9b2fe4f833
