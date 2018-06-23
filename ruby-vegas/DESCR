@@ -1,0 +1,4 @@
+= vegas: Sinatra/Rack app wrapper.
+
+Vegas aims to solve the simple problem of creating executable
+versions of Sinatra/Rack apps.
