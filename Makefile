@@ -4044,6 +4044,7 @@ SUBDIR+=	rtspdump
 SUBDIR+=	rtv
 SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
+SUBDIR+=	ruby-blockenspiel
 SUBDIR+=	ruby-cabin
 SUBDIR+=	ruby-chawan
 SUBDIR+=	ruby-delegate_it
