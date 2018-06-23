@@ -2823,12 +2823,8 @@ share/emacs/${PKGVERSION}/lisp/net/soap-inspect.el.gz
 share/emacs/${PKGVERSION}/lisp/net/soap-inspect.elc
 share/emacs/${PKGVERSION}/lisp/net/socks.el.gz
 share/emacs/${PKGVERSION}/lisp/net/socks.elc
-share/emacs/${PKGVERSION}/lisp/net/starttls.el.gz
-share/emacs/${PKGVERSION}/lisp/net/starttls.elc
 share/emacs/${PKGVERSION}/lisp/net/telnet.el.gz
 share/emacs/${PKGVERSION}/lisp/net/telnet.elc
-share/emacs/${PKGVERSION}/lisp/net/tls.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tls.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-adb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-adb.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-archive.el.gz
@@ -2991,10 +2987,14 @@ share/emacs/${PKGVERSION}/lisp/obsolete/s-region.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/starttls.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/starttls.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/terminal.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/terminal.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/tls.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/tls.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-edt.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-edt.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-extras.el.gz
