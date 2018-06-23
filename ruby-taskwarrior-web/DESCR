@@ -1,0 +1,4 @@
+= taskwarrior-web: Web interface for Taskwarrior
+
+A lightweight, Sinatra-based web interface for the wonderful
+Taskwarrior todo application.
