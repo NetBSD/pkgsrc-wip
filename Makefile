@@ -4062,6 +4062,7 @@ SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-review
+SUBDIR+=	ruby-rinku
 SUBDIR+=	ruby-roo-xls
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
