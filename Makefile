@@ -4071,6 +4071,7 @@ SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-vegas
+SUBDIR+=	ruby-versionomy
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runit
