@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2015/07/07 01:22:57 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	holoviews-1.3.2
+DISTNAME=	holoviews-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	cad
-MASTER_SITES=	${MASTER_SITE_PYPI:=h/holoviews/}
+CATEGORIES=	math
+MASTER_SITES=	https://pypi.python.org/packages/d5/9c/d4617468008aa576462d69391a20ce67a95455cd40091915e0f5bfbc878a/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://ioam.github.com/holoviews/
-COMMENT=	Declarative data structures for building complex visualizations
+COMMENT=	Stop plotting your data - annotate your data
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-param>=1.3.2:../../wip/py-param
+DEPENDS+=	${PYPKGPREFIX}-param>=1.5.0:../../wip/py-param
 
 USE_LANGUAGES=	# none
 

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/07 01:22:57 jihbed Exp $
+$NetBSD$
 
-SHA1 (holoviews-1.3.2.tar.gz) = ae1156697eec5a7f37f5338980e0d422275ba696
-RMD160 (holoviews-1.3.2.tar.gz) = 2c8a721abd6198bf58873b7ac333abb1f327e648
-Size (holoviews-1.3.2.tar.gz) = 1048543 bytes
+SHA1 (holoviews-1.6.2.tar.gz) = e41191421425b3a39cb6284326c77c8d25a40f1c
+RMD160 (holoviews-1.6.2.tar.gz) = f19bcec8e7787a4eec00532ab3599207c5d9c778
+SHA512 (holoviews-1.6.2.tar.gz) = fd654c1a8ac8ae78ff7de73553d8451ada70888ef41277ec99e262d546493ee1aead176500303594569fbf74563f5f37f34e990b7b9a232c99cd988384d343ec
+Size (holoviews-1.6.2.tar.gz) = 1192303 bytes

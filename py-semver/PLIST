@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/semver.py
+${PYSITELIB}/semver.pyc
+${PYSITELIB}/semver.pyo
