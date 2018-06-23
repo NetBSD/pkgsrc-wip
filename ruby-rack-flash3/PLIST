@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION.yml
+${GEM_LIBDIR}/example/base_app.ru
+${GEM_LIBDIR}/example/sinatra_app.rb
+${GEM_LIBDIR}/example/views/index.erb
+${GEM_LIBDIR}/example/views/layout.erb
+${GEM_LIBDIR}/example/views/show.erb
+${GEM_LIBDIR}/lib/rack-flash.rb
+${GEM_LIBDIR}/lib/rack/flash.rb
+${GEM_LIBDIR}/lib/rack/flash/test.rb
+${GEM_LIBDIR}/rack-flash3.gemspec
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_flash.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.4.0/extensions
+@pkgdir lib/ruby/gems/2.4.0/build_info

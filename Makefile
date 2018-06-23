@@ -4058,6 +4058,7 @@ SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-libv8
 SUBDIR+=	ruby-neovim
 SUBDIR+=	ruby-passenger
+SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-review
 SUBDIR+=	ruby-roo-xls
