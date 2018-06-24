@@ -596,7 +596,6 @@ SUBDIR+=	doorman
 SUBDIR+=	dosbox-svn
 SUBDIR+=	dosbox-x
 SUBDIR+=	dosemu2
-SUBDIR+=	dosfstools
 SUBDIR+=	dotclear
 SUBDIR+=	dotproject
 SUBDIR+=	double-conversion
