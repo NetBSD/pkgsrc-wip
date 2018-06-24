@@ -21,6 +21,21 @@ DEPENDS+=	p5-Try-Tiny>=0.09:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-boolean>=0.28:../../devel/p5-boolean
 DEPENDS+=	p5-Config-AutoConf-[0-9]*:../../devel/p5-Config-AutoConf
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
+
+TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+
+# Authen::SCRAM::Client is not installed (version '0.009' required)
+# BSON::Decimal128 is not installed (version '1' required)
+# BSON::Types is not installed (any version required)
+# Class::XSAccessor is not installed (any version required)
+# Safe::Isa is not installed (any version required)
+# Type::Library is not installed (any version required)
+# Type::Tiny is not installed (version '1' required)
+# Type::Tiny::XS is not installed (any version required)
+# Type::Utils is not installed (any version required)
+# Types::Standard is not installed (any version required)
+
 
 MAKE_JOBS_SAFE=	no
 PERL5_PACKLIST=	auto/MongoDB/.packlist
