@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	oranchelo-icon-theme
-GITHUB_TAG=	v0.7.6.6
+GITHUB_TAG=	v0.7.7.1
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OrancheloTeam/}
