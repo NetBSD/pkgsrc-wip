@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (taskwarrior-web-1.1.2.gem) = 17ef2678208cbe70a6300daefaa8a020adba2e56
-RMD160 (taskwarrior-web-1.1.2.gem) = 0ff150c913f7282c61b55f977407028e99d2c637
-SHA512 (taskwarrior-web-1.1.2.gem) = aeb60d183b77e01033b785cbdb475cb30f7a1de58f27a074553fd86c73282336e16918426afc494dc87d1eb73f19a6844527cfb4d19d8886216e00c4ef756597
-Size (taskwarrior-web-1.1.2.gem) = 117760 bytes
+SHA1 (taskwarrior-web-1.1.12.gem) = 644364a283175416bd0defadfffa8ab7f97694e4
+RMD160 (taskwarrior-web-1.1.12.gem) = 7b71ccee2d913a214df73989289970986cd0d971
+SHA512 (taskwarrior-web-1.1.12.gem) = 9913cd82f58532cc94da8234b8427adea11b9797683b6b44df10d0cd217caec4f3467489977e0299d4de6b761bbd2357ab4393769535613a3148b8f45659602f
+Size (taskwarrior-web-1.1.12.gem) = 283648 bytes

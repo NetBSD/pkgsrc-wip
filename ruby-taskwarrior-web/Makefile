@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	taskwarrior-web-1.1.2
+DISTNAME=	taskwarrior-web-1.1.12
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +19,7 @@ DEPENDS+=       ${RUBY_PKGPREFIX}-sinatra>=2.0.0:../../www/ruby-sinatra
 DEPENDS+=       ${RUBY_PKGPREFIX}-sinatra-simple-navigation:../../wip/ruby-sinatra-simple-navigation
 DEPENDS+=       ${RUBY_PKGPREFIX}-vegas:../../wip/ruby-vegas
 DEPENDS+=       ${RUBY_PKGPREFIX}-versionomy:../../wip/ruby-versionomy
+DEPENDS+=       taskwarrior-[0-9]*:../../time/taskwarrior
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
