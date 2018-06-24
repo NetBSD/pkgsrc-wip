@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2013/06/08 11:36:04 bsiegert Exp $
 
-SHA1 (paxmirabilis-20120606.cpio.gz) = 1bb41d402fc64368e4c6db3de96964db7882d1cb
-RMD160 (paxmirabilis-20120606.cpio.gz) = 42f61ca92949c0d7a5a423b74a75f50d88b2bad3
-Size (paxmirabilis-20120606.cpio.gz) = 140360 bytes
+SHA1 (paxmirabilis-20171021.cpio.gz) = d576cc7b1051bccfeaadefe762398fa69f101e6d
+RMD160 (paxmirabilis-20171021.cpio.gz) = c3dc05bc211456f7c5af5aec5e00f034fc807e16
+SHA512 (paxmirabilis-20171021.cpio.gz) = 3c3db32cc875325b38e16ce67827f465ea6494428d6e77c1117a10d73ea9f890135b4f8993df880ca9be8f68f5783c27a4e0d78d91833945d446819d6b6cfeae
+Size (paxmirabilis-20171021.cpio.gz) = 148431 bytes
