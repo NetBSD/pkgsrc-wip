@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 DIST_SUBDIR=	py-rt	# XXX: avoid possible conflicts with devel/rt{3,}
 
-DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
