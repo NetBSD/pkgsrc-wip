@@ -4,5 +4,5 @@ SHA1 (py-rt/rt-1.0.10.tar.gz) = 84469322e28d6bb8cd3b6fb1c972014a6b011211
 RMD160 (py-rt/rt-1.0.10.tar.gz) = c33668195117608d33daf8a306f6385689dfd999
 SHA512 (py-rt/rt-1.0.10.tar.gz) = ef09818c927eb6b3c6a9b183f92a5ce2424f334dc62d098cc06cd63c5adc8d11e55f9356db6122d2dde0f841d2cfaa713161ba5ce7746e8f509fab89b832dc60
 Size (py-rt/rt-1.0.10.tar.gz) = 35402 bytes
-SHA1 (patch-rt.py) = 2747d2606e94294f247919460e2ed26e041b49f2
+SHA1 (patch-rt.py) = 87d4c67fad913fbebf50356afc80e073f4c5d9fc
 SHA1 (patch-setup.py) = 8028e89a8a51e939fdb7ebfb9814518ee3173ad3

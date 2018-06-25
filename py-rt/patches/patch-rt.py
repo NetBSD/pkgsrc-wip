@@ -2,6 +2,8 @@ $NetBSD$
 
 Permit to also pass possible `format' field to search().
 
+Merged upstream as part of https://github.com/CZ-NIC/python-rt/pull/17
+
 --- rt.py.orig	2017-12-01 12:25:41.000000000 +0000
 +++ rt.py
 @@ -392,7 +392,7 @@ class Rt:
