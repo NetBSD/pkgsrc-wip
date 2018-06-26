@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	napalm-base-0.23.3
+DISTNAME=	napalm-base-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=napalm-automation/}
