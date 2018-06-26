@@ -8,7 +8,7 @@ $NetBSD$
  #include <stdio.h>
  #include <stdlib.h>
  #include <unistd.h>
-+#ifdef __NetBSD__
++#ifndef __linux__
 +#include <sys/filio.h>
 +#endif
  #include <sys/ioctl.h>

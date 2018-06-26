@@ -23,6 +23,7 @@ PLIST_VARS+=		python
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ganglia
 PKG_SUPPORTED_OPTIONS=	python		# Gmond support for python modules
+BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
