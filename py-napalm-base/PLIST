@@ -1,7 +1,4 @@
 @comment $NetBSD$
-bin/cl_napalm_configure
-bin/cl_napalm_test
-bin/cl_napalm_validate
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -17,6 +14,9 @@ ${PYSITELIB}/napalm_base/base.pyo
 ${PYSITELIB}/napalm_base/clitools/__init__.py
 ${PYSITELIB}/napalm_base/clitools/__init__.pyc
 ${PYSITELIB}/napalm_base/clitools/__init__.pyo
+${PYSITELIB}/napalm_base/clitools/cl_napalm.py
+${PYSITELIB}/napalm_base/clitools/cl_napalm.pyc
+${PYSITELIB}/napalm_base/clitools/cl_napalm.pyo
 ${PYSITELIB}/napalm_base/clitools/cl_napalm_configure.py
 ${PYSITELIB}/napalm_base/clitools/cl_napalm_configure.pyc
 ${PYSITELIB}/napalm_base/clitools/cl_napalm_configure.pyo
@@ -38,6 +38,9 @@ ${PYSITELIB}/napalm_base/exceptions.pyo
 ${PYSITELIB}/napalm_base/helpers.py
 ${PYSITELIB}/napalm_base/helpers.pyc
 ${PYSITELIB}/napalm_base/helpers.pyo
+${PYSITELIB}/napalm_base/mock.py
+${PYSITELIB}/napalm_base/mock.pyc
+${PYSITELIB}/napalm_base/mock.pyo
 ${PYSITELIB}/napalm_base/test/__init__.py
 ${PYSITELIB}/napalm_base/test/__init__.pyc
 ${PYSITELIB}/napalm_base/test/__init__.pyo
@@ -74,3 +77,8 @@ ${PYSITELIB}/napalm_base/utils/string_parsers.pyo
 ${PYSITELIB}/napalm_base/validate.py
 ${PYSITELIB}/napalm_base/validate.pyc
 ${PYSITELIB}/napalm_base/validate.pyo
+bin/cl_napalm_configure
+bin/cl_napalm_test
+bin/cl_napalm_validate
+bin/napalm
+
