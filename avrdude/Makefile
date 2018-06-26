@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/01/18 07:50:32 makoto Exp $
 
-DISTNAME=		avrdude-6.1
+DISTNAME=		avrdude-6.3
 CATEGORIES=		cross
 MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
@@ -9,24 +9,18 @@ HOMEPAGE=		http://www.nongnu.org/avrdude/
 COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
-
 # make: make: don't know how to make ./libavrdude.a. Stop
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-TEXINFO_REQD=		4.9
-USE_TOOLS+=		autoconf automake autoreconf makeinfo texi2html yacc lex
+USE_TOOLS+=		autoconf automake autoreconf
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
 CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
-CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		DEFAULT_SER_PORT=${DEFAULT_SERIAL_DEVICE:Q}
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
@@ -36,11 +30,7 @@ PLIST_SUBST+=		DISTNAME=${DISTNAME}
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
 
-# DragonFly has stripped makeinfo in the base - without texi2dvi.
-.if ${OPSYS} == "DragonFly"
-BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
-.endif
-
+.include "options.mk"
 .include "../../devel/libftdi/buildlink3.mk"
 .include "../../devel/libhid/buildlink3.mk"
 .include "../../wip/libftdi1/buildlink3.mk"
