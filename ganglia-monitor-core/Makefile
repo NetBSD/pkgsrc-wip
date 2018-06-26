@@ -14,7 +14,7 @@ MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Ganglia cluster monitor, monitoring daemon
 LICENSE=	modified-bsd
 
-SET_LIBDIR=		yes
+SET_LIBDIR=	yes
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
