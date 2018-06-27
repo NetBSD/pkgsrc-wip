@@ -3104,6 +3104,7 @@ SUBDIR+=	py-djangopypi2
 SUBDIR+=	py-djvulibre
 SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-dns-clientsubnetoption
+SUBDIR+=	py-doh-proxy
 SUBDIR+=	py-dolo
 SUBDIR+=	py-downhill
 SUBDIR+=	py-dpkt-fix
