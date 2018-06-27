@@ -1,0 +1,9 @@
+Crystal is a programming language with the goals of having a syntax
+similar to Ruby (but compatibility with it is not a goal), being
+statically type-checked, but without having to specify the type of
+variables or method arguments, being able to call C code by writing
+bindings to it in Crystal, having compile-time evaluation and
+generation of code, to avoid boilerplate code, and compiling to
+efficient native code.
+
+This package installs a released binary.

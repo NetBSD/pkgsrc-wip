@@ -465,6 +465,7 @@ SUBDIR+=	crossguid
 SUBDIR+=	crossroads-io
 SUBDIR+=	crrcsim
 SUBDIR+=	cryptcat
+SUBDIR+=	crystal-bin
 SUBDIR+=	csmith
 SUBDIR+=	csoap
 SUBDIR+=	csp2b
