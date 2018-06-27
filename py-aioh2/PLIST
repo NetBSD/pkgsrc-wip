@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/aioh2/__init__.py
+${PYSITELIB}/aioh2/__init__.pyc
+${PYSITELIB}/aioh2/__init__.pyo
+${PYSITELIB}/aioh2/exceptions.py
+${PYSITELIB}/aioh2/exceptions.pyc
+${PYSITELIB}/aioh2/exceptions.pyo
+${PYSITELIB}/aioh2/helper.py
+${PYSITELIB}/aioh2/helper.pyc
+${PYSITELIB}/aioh2/helper.pyo
+${PYSITELIB}/aioh2/protocol.py
+${PYSITELIB}/aioh2/protocol.pyc
+${PYSITELIB}/aioh2/protocol.pyo

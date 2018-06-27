@@ -2880,6 +2880,7 @@ SUBDIR+=	py-agaro
 SUBDIR+=	py-ahoy
 SUBDIR+=	py-aigo
 SUBDIR+=	py-aikif
+SUBDIR+=	py-aioh2
 SUBDIR+=	py-aipy
 SUBDIR+=	py-albatross
 SUBDIR+=	py-alfanous
