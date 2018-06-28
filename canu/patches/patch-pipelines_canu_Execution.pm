@@ -1,8 +1,8 @@
 $NetBSD$
 
-# Add slurm job limits
+# Add resource limits for SLURM
 
---- pipelines/canu/Execution.pm.orig	2018-02-27 13:46:07 UTC
+--- pipelines/canu/Execution.pm.orig	2018-06-22 08:20:52.000000000 +0000
 +++ pipelines/canu/Execution.pm
 @@ -303,10 +303,6 @@ sub skipStage ($$@) {
  sub getInstallDirectory () {
@@ -26,7 +26,7 @@ $NetBSD$
      my  $off = 0;
  
      #  In some grids (SGE)   this is the maximum size of an array job.
-@@ -725,8 +721,30 @@ sub buildGridArray ($$$$) {
+@@ -725,8 +721,42 @@ sub buildGridArray ($$$$) {
          $off = "-F \"$off\"";
      }
  
@@ -34,32 +34,44 @@ $NetBSD$
 -    $opt =~ s/ARRAY_JOBS/$bgn-$end/g;    #  Replace ARRAY_JOBS with 'bgn-end'
 +    if( $opt =~ m/(ARRAY_NAME)/ )
 +    {
-+       $opt =~ s/$1/$name/; # Replace ARRAY_NAME with 'job name'
++	$opt =~ s/$1/$name/; # Replace ARRAY_NAME with 'job name'
 +    }
 +    elsif( $opt =~ m/(ARRAY_JOBS)/ )
 +    {
-+       $opt =~ s/$1/$bgn-$end/; # Replace ARRAY_JOBS with 'bgn-end'
++	$opt =~ s/$1/$bgn-$end/; # Replace ARRAY_JOBS with 'bgn-end'
 +
-+       if( lc( getGlobal( 'gridEngine' ) ) eq 'slurm' && $end > 1 )
-+       {
-+           if( $name =~ m/mhap/i && defined getGlobal( 'slurmCormhapTaskLimit' ) )
-+           {
-+               $opt .= '%' . getGlobal( 'slurmCormhapTaskLimit' );
-+           }
-+           elsif( defined getGlobal( 'slurmArrayTaskLimit' ) )
-+           {
-+               $opt .= '%' . getGlobal( 'slurmArrayTaskLimit' );
-+           }
-+           elsif( defined getGlobal( 'slurmArrayCoreLimit' ) )
-+           {
-+               $opt .= '%' . int( getGlobal( 'slurmArrayCoreLimit' ) / $thr );
-+           }
-+       }
++	if( lc( getGlobal( 'gridEngine' ) ) eq 'slurm' && $end > 1 )
++	{
++	    if( $name =~ m/^cormhap_/i && defined getGlobal( 'slurmCormhapCoreLimit' ) )
++	    {
++		$opt .= '%' . int( getGlobal( 'slurmCormhapCoreLimit' ) / $thr );
++	    }
++	    elsif( $name =~ m/^ovb_/i && defined getGlobal( 'slurmOvbCoreLimit' ) )
++	    {
++		$opt .= '%' . getGlobal( 'slurmOvbCoreLimit' );
++	    }
++	    elsif( $name =~ m/^ovs_/i && defined getGlobal( 'slurmOvsCoreLimit' ) )
++	    {
++		$opt .= '%' . getGlobal( 'slurmOvsCoreLimit' );
++	    }
++	    elsif( $name =~ m/^red_/i && defined getGlobal( 'slurmRedCoreLimit' ) )
++	    {
++		$opt .= '%' . int( getGlobal( 'slurmRedCoreLimit' ) / $thr );
++	    }
++	    elsif( defined getGlobal( 'slurmArrayTaskLimit' ) )
++	    {
++		$opt .= '%' . getGlobal( 'slurmArrayTaskLimit' );
++	    }
++	    elsif( defined getGlobal( 'slurmArrayCoreLimit' ) )
++	    {
++		$opt .= '%' . int( getGlobal( 'slurmArrayCoreLimit' ) / $thr );
++	    }
++	}
 +    }
  
      return($opt, $off);
  }
-@@ -870,7 +888,7 @@ sub buildGridJob ($$$$$$$$$) {
+@@ -870,7 +900,7 @@ sub buildGridJob ($$$$$$$$$) {
      my $jobNameT               = makeUniqueJobName($jobType, $asm);
  
      my ($jobName,  $jobOff)    = buildGridArray($jobNameT, $bgnJob, $endJob, getGlobal("gridEngineArrayName"));

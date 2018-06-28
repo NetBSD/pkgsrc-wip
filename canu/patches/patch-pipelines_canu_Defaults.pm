@@ -1,22 +1,23 @@
 $NetBSD$
 
-# Add slurm job limits
+# Add resource limits for SLURM
 
---- pipelines/canu/Defaults.pm.orig	2018-02-27 13:46:07 UTC
+--- pipelines/canu/Defaults.pm.orig	2018-06-22 08:20:52.000000000 +0000
 +++ pipelines/canu/Defaults.pm
-@@ -637,6 +637,15 @@ sub setExecDefaults ($$) {
-     my $tag         = shift @_;
-     my $name        = shift @_;
+@@ -812,6 +812,16 @@ sub setDefaults () {
+     setDefault("gridEngineArraySubmitID",             undef, "Grid engine configuration, not documented");
+     setDefault("gridEngineJobID",                     undef, "Grid engine configuration, not documented");
  
-+    $global{"slurmCormhapTaskLimit"}  = undef;
-+    $synops{"slurmCormhapTaskLimit"}  = "Max corhmap tasks that can run at once";
++    #####  Slurm-specific parameters for controlling the number of
++    #####  cores / tasks dispatched per step or globally (WIP)
 +
-+    $global{"slurmArrayTaskLimit"}  = undef;
-+    $synops{"slurmArrayTaskLimit"}  = "Max tasks that can run at once";
++    setDefault( 'slurmCormhapCoreLimit', undef, 'Maximum number of cores allocated for MHAP pre-computing and alignment within the correction phase' );
++    setDefault( 'slurmOvbCoreLimit', undef, 'Maximum number of single-core tasks dispatched for the ovlStore bucketizing step within the trimming phase' );
++    setDefault( 'slurmOvsCoreLimit', undef, 'Maximum number of single-core tasks dispatched for the ovlStore sorting step within the trimming phase' );
++    setDefault( 'slurmRedCoreLimit', undef, 'Maximum number of cores allocated for read error detection within the unitigging phase' );
++    setDefault( 'slurmArrayTaskLimit', undef, 'Maximum number of tasks permitted for each step throughout assembly' );
++    setDefault( 'slurmArrayCoreLimit', undef, 'Maximum number of cores allocated for each step throughout assembly' );
 +
-+    $global{"slurmArrayCoreLimit"}  = undef;
-+    $synops{"slurmArrayCoreLimit"}  = "Max cores we can allocate at once";
-+
-     $global{"gridOptions${tag}"}   = undef;
-     $synops{"gridOptions${tag}"}   = "Grid engine options applied to $name jobs";
+     #####  Grid Engine Pipeline
  
+     setDefault("useGrid", 1, "If 'true', enable grid-based execution; if 'false', run all jobs on the local machine; if 'remote', create jobs for grid execution but do not submit; default 'true'");

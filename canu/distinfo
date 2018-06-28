@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (canu-1.7.tar.gz) = aaaafd8516be5e4d725af407bc84b3c6f178b2ac
-RMD160 (canu-1.7.tar.gz) = bd394bb6dcebd43d2793ca1aa9bd60ec6be75beb
-SHA512 (canu-1.7.tar.gz) = dbc1dca4df4117521143843bb781227f4dfde5ba7068e47b51ccf9e9dba45eb2629b5773531e4f362f1df05eab3f1a62088c5fa231d3624af23f11d97e7a4edf
-Size (canu-1.7.tar.gz) = 2533016 bytes
-SHA1 (patch-pipelines_canu_Defaults.pm) = 7364fae68e26140b31e89c5a7cd238d0922e5310
-SHA1 (patch-pipelines_canu_Execution.pm) = 91ba9e00a61af96a911c7601689b97e4fc9a725a
+SHA1 (canu-1.7.1.tar.gz) = 9f3d0d07d9cf3b5430d4321f152565cc5196cb86
+RMD160 (canu-1.7.1.tar.gz) = 14f3b48584e2ffce8de3910f348fb0b5802910e6
+SHA512 (canu-1.7.1.tar.gz) = 50b2219b284292248b001c72adf80dee2fde375bc1b84e6007842b89f0a5995b862cba1dcaf40284a8f77719da035a98b36005e2958cd4397553c0878c38910c
+Size (canu-1.7.1.tar.gz) = 2535055 bytes
+SHA1 (patch-pipelines_canu_Defaults.pm) = 987c1e370bc81381824f86001f70da66ea251524
+SHA1 (patch-pipelines_canu_Execution.pm) = 4c8ad9a3be08a8e5885e3ef35dca33e85c344547

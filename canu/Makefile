@@ -61,7 +61,7 @@ GCC_REQD+=	4.8
 WRKSRC=		${WRKDIR}/canu-${PV}/src
 MAKE_ENV+=	DESTDIR=${WRKSRC}
 
-PV=		1.7
+PV=		1.7.1
 
 TMP_INST=		${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
 SITE_PERL_REL=		lib/perl5/site_perl
