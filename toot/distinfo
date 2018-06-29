@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (toot-0.18.0.tar.gz) = 16618b190434aff57734e74e7a72e18e44ff75ca
-RMD160 (toot-0.18.0.tar.gz) = 7e0c8ac8d7267f9e642c21e0c7c0d277b271b1ce
-SHA512 (toot-0.18.0.tar.gz) = bf67bad87ecf2b99842b12294be1e00b5b07df7d1e5f76566a0571c5a0af0d197c6ccd7b8bb4c606a0d0e6600df3d0bfd9339a9c36e8c707c2c7811bc6f8d080
-Size (toot-0.18.0.tar.gz) = 22295 bytes
+SHA1 (toot-0.19.0.tar.gz) = dc59d63f631a9c637d9405bd247cafc290f7d375
+RMD160 (toot-0.19.0.tar.gz) = b2131d1422f51a6c912618fc922dcdcffd93b608
+SHA512 (toot-0.19.0.tar.gz) = 69188df155d2f7d0e118bb2c34a0c641f6ad75357b9e52e5508bc728da3552986ac35ee73c34c06ae0bf8abf14faf876c0ea5944501662450db4128c9cc6eaa8
+Size (toot-0.19.0.tar.gz) = 21486 bytes
