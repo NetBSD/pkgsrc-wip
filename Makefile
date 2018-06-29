@@ -1159,6 +1159,7 @@ SUBDIR+=	higan
 SUBDIR+=	higgsbounds
 SUBDIR+=	hijra
 SUBDIR+=	hlint
+SUBDIR+=	honggfuzz
 SUBDIR+=	hoogle
 SUBDIR+=	howdoi
 SUBDIR+=	hpoj
