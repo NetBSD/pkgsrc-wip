@@ -2,7 +2,7 @@ $NetBSD$
 
 Fix == test in configure script.
 
---- configure.ac.orig	2018-06-01 19:29:54.000000000 +0000
+--- configure.ac.orig	2018-07-01 16:48:05.000000000 +0000
 +++ configure.ac
 @@ -159,14 +159,14 @@ AC_ARG_ENABLE(hx-dos,AC_HELP_STRING([--e
  dnl Some stuff for the icon.
@@ -30,7 +30,16 @@ Fix == test in configure script.
  
  dnl The target cpu checks for dynamic cores
  AH_TEMPLATE(C_TARGETCPU,[The type of cpu this target has])
-@@ -534,7 +534,7 @@ else
+@@ -497,7 +497,7 @@ fi
+ dnl FEATURE: xBRZ
+ AH_TEMPLATE(C_XBRZ,[Define to 1 to enable XBRZ scaler])
+ AC_ARG_ENABLE(xbrz,AC_HELP_STRING([--enable-xbrz],[compile with xBRZ scaler (default yes)]),enable_xbrz=$enableval,enable_xbrz=yes)
+-AM_CONDITIONAL(C_XBRZ, test "x$enable_xbrz" == "xyes")
++AM_CONDITIONAL(C_XBRZ, test "x$enable_xbrz" = "xyes")
+ if test x$enable_xbrz = xyes; then
+ AC_DEFINE(C_XBRZ,1)
+ fi
+@@ -542,7 +542,7 @@ else
    enable_mt32=no
    AC_MSG_RESULT(no)
  fi 
