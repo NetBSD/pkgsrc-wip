@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	crystal-0.25.0-1-${LOWER_OPSYS}-${MACHINE_ARCH}
-PKGNAME=	crystal-bin-0.25.0
+DISTNAME=	crystal-0.25.1-1-${LOWER_OPSYS}-${MACHINE_ARCH}
+PKGNAME=	crystal-bin-0.25.1
 CATEGORIES=	lang
-MASTER_SITES=	https://github.com/crystal-lang/crystal/releases/download/0.25.0/
+MASTER_SITES=	https://github.com/crystal-lang/crystal/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://crystal-lang.org/
@@ -15,7 +15,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 NO_BUILD=	yes
 USE_TOOLS+=	bash:run pax
-WRKSRC=		${WRKDIR}/crystal-0.25.0-1
+WRKSRC=		${WRKDIR}/crystal-${PKGVERSION_NOREV}-1
 
 REPLACE_BASH=	bin/crystal
 REPLACE_PYTHON=	embedded/bin/event_rpcgen.py

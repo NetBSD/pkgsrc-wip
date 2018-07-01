@@ -763,9 +763,9 @@ crystal/src/json/lexer.cr
 crystal/src/json/lexer/io_based.cr
 crystal/src/json/lexer/string_based.cr
 crystal/src/json/mapping.cr
-crystal/src/json/next/serialization.cr
 crystal/src/json/parser.cr
 crystal/src/json/pull_parser.cr
+crystal/src/json/serialization.cr
 crystal/src/json/to_json.cr
 crystal/src/json/token.cr
 crystal/src/kernel.cr
@@ -1294,7 +1294,6 @@ crystal/src/yaml/enums.cr
 crystal/src/yaml/from_yaml.cr
 crystal/src/yaml/lib_yaml.cr
 crystal/src/yaml/mapping.cr
-crystal/src/yaml/next/serialization.cr
 crystal/src/yaml/nodes.cr
 crystal/src/yaml/nodes/builder.cr
 crystal/src/yaml/nodes/nodes.cr
@@ -1305,6 +1304,7 @@ crystal/src/yaml/pull_parser.cr
 crystal/src/yaml/schema/core.cr
 crystal/src/yaml/schema/core/parser.cr
 crystal/src/yaml/schema/fail_safe.cr
+crystal/src/yaml/serialization.cr
 crystal/src/yaml/to_yaml.cr
 crystal/src/zip/checksum_reader.cr
 crystal/src/zip/checksum_writer.cr
