@@ -10,15 +10,22 @@ HOMEPAGE=	https://crystal-lang.org/
 COMMENT=	Language with Ruby-like syntax and static type checking
 LICENSE=	apache-2.0
 
-ONLY_FOR_PLATFORM=	Darwin-*-x86_64
+ONLY_FOR_PLATFORM=		Darwin-*-x86_64
+PYTHON_VERSIONS_ACCEPTED=	27
 
 NO_BUILD=	yes
+USE_TOOLS+=	bash:run pax
 WRKSRC=		${WRKDIR}/crystal-0.25.0-1
 
-INSTALLATION_DIRS=	bin
+REPLACE_BASH=	bin/crystal
+REPLACE_PYTHON=	embedded/bin/event_rpcgen.py
+
+INSTALLATION_DIRS=	bin crystal
+
+.include "../../lang/python/application.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/embedded/bin/crystal \
-		${DESTDIR}${PREFIX}/bin/
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/crystal
+	ln -sf ${PREFIX}/crystal/bin/crystal ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
