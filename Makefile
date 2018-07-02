@@ -2549,6 +2549,7 @@ SUBDIR+=	p5-WebService-GData
 SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-RSS-LibXML
+SUBDIR+=	p5-XML-Twig
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-mha4mysql-manager
 SUBDIR+=	p5-mha4mysql-node
