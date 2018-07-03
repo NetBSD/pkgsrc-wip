@@ -15,6 +15,8 @@ ${PYSITELIB}/qutebrowser/__main__.pyo
 ${PYSITELIB}/qutebrowser/__main__.pyc
 ${PYSITELIB}/qutebrowser/app.pyo
 ${PYSITELIB}/qutebrowser/app.pyc
+${PYSITELIB}/qutebrowser/qt.pyo
+${PYSITELIB}/qutebrowser/qt.pyc
 ${PYSITELIB}/qutebrowser/qutebrowser.pyo
 ${PYSITELIB}/qutebrowser/qutebrowser.pyc
 ${PYSITELIB}/qutebrowser/resources.pyo
@@ -91,6 +93,8 @@ ${PYSITELIB}/qutebrowser/browser/webengine/__init__.pyo
 ${PYSITELIB}/qutebrowser/browser/webengine/__init__.pyc
 ${PYSITELIB}/qutebrowser/browser/webengine/certificateerror.pyo
 ${PYSITELIB}/qutebrowser/browser/webengine/certificateerror.pyc
+${PYSITELIB}/qutebrowser/browser/webengine/cookies.pyo
+${PYSITELIB}/qutebrowser/browser/webengine/cookies.pyc
 ${PYSITELIB}/qutebrowser/browser/webengine/interceptor.pyo
 ${PYSITELIB}/qutebrowser/browser/webengine/interceptor.pyc
 ${PYSITELIB}/qutebrowser/browser/webengine/spell.pyo
@@ -112,6 +116,7 @@ ${PYSITELIB}/qutebrowser/browser/webengine/webenginetab.pyc
 ${PYSITELIB}/qutebrowser/browser/webengine/webview.pyo
 ${PYSITELIB}/qutebrowser/browser/webengine/webview.pyc
 ${PYSITELIB}/qutebrowser/browser/webengine/certificateerror.py
+${PYSITELIB}/qutebrowser/browser/webengine/cookies.py
 ${PYSITELIB}/qutebrowser/browser/webengine/interceptor.py
 ${PYSITELIB}/qutebrowser/browser/webengine/spell.py
 ${PYSITELIB}/qutebrowser/browser/webengine/tabhistory.py
@@ -298,6 +303,7 @@ ${PYSITELIB}/qutebrowser/javascript/greasemonkey_wrapper.js
 ${PYSITELIB}/qutebrowser/javascript/history.js
 ${PYSITELIB}/qutebrowser/javascript/pac_utils.js
 ${PYSITELIB}/qutebrowser/javascript/position_caret.js
+${PYSITELIB}/qutebrowser/javascript/print.js
 ${PYSITELIB}/qutebrowser/javascript/scroll.js
 ${PYSITELIB}/qutebrowser/javascript/stylesheet.js
 ${PYSITELIB}/qutebrowser/javascript/webelem.js
@@ -445,6 +451,7 @@ ${PYSITELIB}/qutebrowser/misc/sessions.py
 ${PYSITELIB}/qutebrowser/misc/split.py
 ${PYSITELIB}/qutebrowser/misc/sql.py
 ${PYSITELIB}/qutebrowser/misc/utilcmds.py
+${PYSITELIB}/qutebrowser/qt.py
 ${PYSITELIB}/qutebrowser/qutebrowser.py
 ${PYSITELIB}/qutebrowser/resources.py
 ${PYSITELIB}/qutebrowser/utils/__init__.py
