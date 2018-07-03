@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-notify>=0.2.1:../../sysutils/py-notify
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 REPLACE_PYTHON+=		bleachbit.py
 
 INSTALLATION_DIRS+=	bin share/applications share/pixmaps

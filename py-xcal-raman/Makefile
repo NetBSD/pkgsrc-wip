@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.1.5
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.1.5
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"

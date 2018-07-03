@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-pyswisseph-[0-9]*:../../wip/py-pyswisseph
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-astropy
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-astropy
 
 USE_LANGUAGES=	# none
 

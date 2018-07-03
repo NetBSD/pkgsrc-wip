@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 WRKSRC=		${WRKDIR}/sshpt
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-m2crypto, py-paramiko
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-m2crypto, py-paramiko
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

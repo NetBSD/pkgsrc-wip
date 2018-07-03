@@ -14,7 +14,7 @@ BUILD_DEPENDS=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-pyrex
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/fltk/buildlink3.mk"

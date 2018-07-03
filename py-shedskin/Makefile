@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.9.4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.9.4
 
 post-extract:
 	cd ${WRKSRC}/scripts && ${MV} shedskin shedskin${PYVERSSUFFIX}

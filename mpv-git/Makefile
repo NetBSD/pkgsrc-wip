@@ -18,7 +18,7 @@ GIT_REPO.mpv=		git://github.com/mpv-player/mpv.git
 WRKSRC=			${WRKDIR}/mpv
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-docutils
 
 USE_TOOLS+=	perl pkg-config
 

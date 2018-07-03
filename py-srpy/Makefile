@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pyro4>=-3.4:../../devel/py-Pyro
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.2.3
 
 HTMLDIR=	${PREFIX}/share/doc/html/py-srpy
 

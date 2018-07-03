@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++ fortran77
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-Numeric
 
 #.include "../../graphics/vtk-python/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"

@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 34 35 36 # py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	 34 35 36 37 # py-imaging
 
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../lang/python/extension.mk"

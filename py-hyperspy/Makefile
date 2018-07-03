@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.7.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.7.2
 
 post-extract:
 	${MV} ${WRKSRC}/bin/hyperspy ${WRKSRC}/bin/hyperspy${PYVERSSUFFIX}

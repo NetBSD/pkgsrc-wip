@@ -13,7 +13,7 @@ COMMENT=	Nice, configureable info bot in Python
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=1.1.1rc1:../../net/py-twisted
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.6.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.6.3
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

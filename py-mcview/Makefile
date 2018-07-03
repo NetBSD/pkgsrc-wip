@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.4.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.4.0
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} mcview mcview-${PYVERSSUFFIX}

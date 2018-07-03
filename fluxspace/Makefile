@@ -21,7 +21,7 @@ PY_PATCHPLIST=		YES
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-xml
 
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"

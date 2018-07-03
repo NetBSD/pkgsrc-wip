@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0.9:../../databases/py-sqlalchemy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.4.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.4.1
 USE_LANGUAGES=	# none
 
 post-extract:

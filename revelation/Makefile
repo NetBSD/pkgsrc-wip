@@ -19,7 +19,7 @@ USE_LANGUAGES=			c
 USE_TOOLS+=			gmake intltool pkg-config
 CONFIGURE_ARGS+=		GCONFTOOL=${GCONFTOOL2}
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2, py-gtk2
 
 GCONF_SCHEMAS=	revelation.schemas
 

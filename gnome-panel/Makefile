@@ -22,7 +22,7 @@ USE_LIBTOOL=			YES
 PKGCONFIG_OVERRIDE+=		bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
 PKGCONFIG_OVERRIDE+=		libpanel-applet/libpanelapplet-3.0.pc.in
 CONFIGURE_ENV+=			PYTHON=${PYTHONBIN}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2
 
 
 # Horrible hack because the package uses libgweather wrong

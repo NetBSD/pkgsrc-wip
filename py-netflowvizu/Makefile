@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-xml
 
 post-extract:
 	${MV} ${WRKSRC}/net_flow_vizu_dia.py ${WRKSRC}/net_flow_vizu_dia.py${PYVERSSUFFIX}

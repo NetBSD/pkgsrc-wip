@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 
 MAKE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-Numeric
 REPLACE_PYTHON+=		check-config.py
 REPLACE_PYTHON+=		test/display_dc_restoration.py
 REPLACE_PYTHON+=		test/opengl_info.py

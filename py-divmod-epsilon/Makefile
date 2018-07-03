@@ -13,7 +13,7 @@ COMMENT=	Python utilities package, most famous for its Time class
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.5.12
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.5.12
 EGG_NAME=	${DISTNAME}_r17222
 
 .include "../../lang/python/distutils.mk"

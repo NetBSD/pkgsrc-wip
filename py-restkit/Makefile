@@ -24,7 +24,7 @@ REPLACE_PYTHON+=	restkit/contrib/webob_api.py
 DOCDIR=			share/doc/${PKGBASE:S/${PYPKGPREFIX}/py/1}
 INSTALLATION_DIRS+=	${DOCDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-socketpool
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-socketpool
 
 post-install:
 	${INSTALL_DATA} ${DESTDIR}${PREFIX}/restkit/README.rst \

@@ -13,7 +13,7 @@ LICENSE=	cpl-1.0
 
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-Numeric
 
 do-test:
 	${RUN} cd ${WRKSRC}/tests/Symbolic; ${SETENV} ${TEST_ENV} ${PYTHONBIN} SymbolicTests.py

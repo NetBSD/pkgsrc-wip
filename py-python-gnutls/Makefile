@@ -17,7 +17,7 @@ SUBST_SED.gnutls=	-e 's/26/28/g'
 SUBST_SED.gnutls+=	-e "s|/usr/local/lib']|${PREFIX}/lib']|1"
 SUBST_STAGE.gnutls=	post-patch
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.0.1
 
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.1.4
 .include "../../security/gnutls/buildlink3.mk"

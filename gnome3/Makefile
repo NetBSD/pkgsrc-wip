@@ -10,7 +10,7 @@ COMMENT=	Meta-package for the GNOME desktop
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2 via py-gtksourceview
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2, py-gtk2 via py-gtksourceview
 
 .include "../../lang/python/pyversion.mk"
 

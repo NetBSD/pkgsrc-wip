@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-yapps2>=2.1.1:../../wip/py-yapps2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-yapps2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-yapps2
 
 PYDISTUTILSPKG=	yes
 

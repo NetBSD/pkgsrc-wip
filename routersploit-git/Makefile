@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-snmp>=4.3.2:../../wip/py-snmp
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.2.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.2.1
 
 post-extract:
 	${CP} ${FILESDIR}/setup.py ${WRKSRC}

@@ -14,7 +14,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-xlrd>=0.7.1:../../textproc/py-xlrd
 DEPENDS+=	${PYPKGPREFIX}-xlwt>=0.7.1:../../textproc/py-xlwt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xlwt
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-xlwt
 
 .include "../../lang/python/egg.mk"
 .include "../../wip/py-errorhandler/buildlink3.mk"

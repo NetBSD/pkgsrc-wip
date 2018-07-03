@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 USE_LANGUAGES=	c
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-imaging, py-gstreamer0.10, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-imaging, py-gstreamer0.10, py-gobject
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-game/buildlink3.mk"

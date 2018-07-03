@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.2.0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.2.0.1
 
 USE_LANGUAGES=	# none
 

@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2 via py-matplotlib-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2 via py-matplotlib-gtk2
 
 post-extract:
 	gzip -d ${WRKSRC}/doc/man/man1/*.gz

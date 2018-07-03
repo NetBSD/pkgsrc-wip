@@ -13,7 +13,7 @@ LICENSE=		gnu-lgpl-v2.1
 
 DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.2
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shtoom/ui/gnomeui/shtoom.glade \

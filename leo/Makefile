@@ -16,7 +16,7 @@ DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 NO_BUILD=	yes
 REPLACE_PYTHON=	src/leo.py scripts/LinixInstall.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-docutils
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 

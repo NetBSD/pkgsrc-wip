@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-dicom>=0.9.8:../../wip/py-dicom
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-fuse-bindings
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-fuse-bindings
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"

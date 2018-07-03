@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-cython>=0.14:../../devel/py-cython
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 
 REPLACE_PYTHON+=	cups/xpraforwarder
 REPLACE_PYTHON+=	*/*.py

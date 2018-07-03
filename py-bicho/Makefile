@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3.2:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-storm>=0.20:../../wip/py-storm
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-storm
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-storm
 USE_LANGUAGES=	# none
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 

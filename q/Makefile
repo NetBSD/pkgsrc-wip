@@ -13,7 +13,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of q-1.5.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of q-1.5.0
 
 REPLACE_PYTHON+=	bin/q
 INSTALLATION_DIRS+=	bin share/doc/q

@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.1a4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.1a4
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

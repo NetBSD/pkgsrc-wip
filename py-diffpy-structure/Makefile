@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pycifrw>=3.1.4:../../wip/py-pycifrw
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-yapps2 via py-pycifrw
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-yapps2 via py-pycifrw
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

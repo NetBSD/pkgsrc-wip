@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/pyevent
 COMMENT=	Python extension module for libevent
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.4.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.4.3
 BROKEN=		touches libevent internals
 # event.c:4157:87: error: dereferencing pointer to incomplete type 'struct evbuffer'
 

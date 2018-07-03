@@ -19,7 +19,7 @@ USE_TOOLS=		gmake
 NO_CONFIGURE=		YES
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/${PKGBASE}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-docutils
 
 post-build:
 	${PREFIX}/bin/rst2man.py ${FILESDIR}/pwnat.8.rst > ${WRKSRC}/pwnat.8

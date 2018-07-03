@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-genesis-[0-9]*:../../wip/py-genesis
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-django-tagging
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-django-tagging
 
 INSTALLATION_DIRS=	share/doc/py-sumatra
 

@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.6.1:../../converters/py-simplejson
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.1.2 (uses urllib2)
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.1.2 (uses urllib2)
 
 USE_LANGUAGES=	# none
 

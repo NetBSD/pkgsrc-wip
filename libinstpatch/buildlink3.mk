@@ -20,7 +20,7 @@ pkgbase := libinstpatch
 .endif
 
 .include "../../devel/py-gobject/buildlink3.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

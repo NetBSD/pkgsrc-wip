@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v3
 
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.2.dev-r803, uses ConfigParser
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.2.dev-r803, uses ConfigParser
 
 USE_LANGUAGES=	c c++
 

@@ -11,7 +11,7 @@ BUILDLINK_API_DEPENDS.py-notify+=	${PYPKGPREFIX}-notify>=0.2.0
 BUILDLINK_ABI_DEPENDS.py-notify+=	${PYPKGPREFIX}-notify>=0.2.0
 BUILDLINK_PKGSRCDIR.py-notify?=		../../sysutils/py-notify
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 .include "../../x11/py-gtk2/buildlink3.mk"
 .endif # PY_NOTIFY_BUILDLINK3_MK
 

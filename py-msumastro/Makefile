@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../wip/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-ccdproc>=0.3.1:../../wip/py-ccdproc
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-astropy
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-astropy
 
 USE_LANGUAGES=	# none
 

@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 PY_PATCHPLIST=			yes
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

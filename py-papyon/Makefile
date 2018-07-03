@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gstreamer0.10, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gstreamer0.10, py-gobject
 
 do-test:
 	( cd ${WRKSRC} &&  ${PYTHONBIN} test.py }

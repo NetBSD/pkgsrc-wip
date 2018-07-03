@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-docutils
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

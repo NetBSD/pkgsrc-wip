@@ -10,7 +10,7 @@ PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 35 35 34 34 # py-mysqldb
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-mysqldb
 PLIST.mysql=	yes
 .endif
 
@@ -25,12 +25,12 @@ PLIST.psycopg1=	yes
 
 .if !empty(PKG_OPTIONS:Msqlite)
 DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 35 35 34 34 # py-sqlite2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-sqlite2
 PLIST.sqlite=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msybase)
 DEPENDS+=	${PYPKGPREFIX}-sybase>=0.36:../../databases/py-sybase
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 35 35 34 34 # py-sybase
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-sybase
 PLIST.sybase=	yes
 .endif

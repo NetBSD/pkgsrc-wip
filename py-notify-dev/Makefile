@@ -11,7 +11,7 @@ COMMENT=	Python bindings for libnotify - development branch
 LICENSE=	gnu-lgpl-v2.1
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 
 CONFLICTS+=	${PYPKGPREFIX}-notify-[0-9]*
 

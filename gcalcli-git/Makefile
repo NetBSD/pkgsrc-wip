@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime-[0-9]*:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gflags
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gflags
 
 .include "../../lang/python/egg.mk"
 .include "../../wip/mk/git-package.mk"

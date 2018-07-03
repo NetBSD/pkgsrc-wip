@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3:../../wip/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-h5py>=2.2.1:../../devel/py-h5py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-astropy
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-astropy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

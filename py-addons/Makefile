@@ -15,7 +15,7 @@ COMMENT=	Dynamically extend other objects with AddOns
 DEPENDS+=	${PYPKGPREFIX}-decoratortools>=1.8:../../wip/py-decoratortools
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-decoratortools
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-decoratortools
 
 DOCDIR=	${PREFIX}/share/doc/py-addons
 

@@ -16,7 +16,7 @@ WRKSRC=				${WRKDIR}/version-control-tools/hghooks
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mercurial
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-mercurial
 
 REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	*/*.py

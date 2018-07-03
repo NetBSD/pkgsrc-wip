@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gdata, py-elementtree
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gdata, py-elementtree
 
 DOCDIR=	${PREFIX}/share/doc/${PKGNAME}
 

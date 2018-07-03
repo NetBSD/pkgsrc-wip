@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-oauth-[0-9]*:../../security/py-oauth
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-beautifulsoup, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-beautifulsoup, py-gobject
 
 USE_LANGUAGES=		# none
 NO_BUILD=		YES

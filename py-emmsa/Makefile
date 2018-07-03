@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/EMMSA-0.0.3
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-sqlite2 via py-elixir
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-sqlite2 via py-elixir
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

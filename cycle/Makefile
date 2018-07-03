@@ -12,7 +12,7 @@ MAINTAINER=	ckoeni@gmail.com
 HOMEPAGE=	http://cycle.sourceforge.net/
 COMMENT=	Cycle is a fertility calendar program for women
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 REPLACE_PYTHON=	cycle.py
 
 INSTALLATION_DIRS=	lib/cycle lib/cycle/bitmaps \

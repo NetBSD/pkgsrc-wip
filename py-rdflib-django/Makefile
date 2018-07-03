@@ -15,7 +15,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-rdflib-[0-9]*:../../textproc/py-rdflib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.2.dev-201210061248
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.2.dev-201210061248
 
 USE_LANGUAGES=	# none
 

@@ -69,7 +69,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 REPLACE_PYTHON+=		scripts/build/yyout2grammar.py
 PLIST_SUBST+=			PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2014/01/28
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2014/01/28
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh

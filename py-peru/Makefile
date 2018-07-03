@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 USE_TOOLS+=	bash
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	34 35 36
+PYTHON_VERSIONS_ACCEPTED=	34 35 36 37
 
 REPLACE_BASH+=		peru/resources/plugins/rsync/rsync_plugin.sh
 

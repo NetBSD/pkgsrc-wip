@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-djvulibre-[0-9]*:../../wip/py-djvulibre
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	pre-configure

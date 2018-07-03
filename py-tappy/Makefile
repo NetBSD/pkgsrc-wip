@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.8.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.8.3
 
 post-extract:
 	${MV} ${WRKSRC}/tappy.py  ${WRKSRC}/tappy${PYVERSSUFFIX}

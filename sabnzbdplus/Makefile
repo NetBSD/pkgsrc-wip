@@ -20,7 +20,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/SABnzbd-${DISTVERSION}
 USE_TOOLS=	pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah, py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah, py-xml
 
 .include "options.mk"
 

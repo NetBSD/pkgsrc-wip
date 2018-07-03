@@ -12,7 +12,7 @@ LICENSE=	isc
 
 USE_LANGUAGES+=			c c++
 USE_TOOLS+=			gmake pkg-config bison gawk flex
-PYTHON_VERSIONS_ACCEPTED=	36 35 34
+PYTHON_VERSIONS_ACCEPTED=	37 36 35 34
 PKGCONFIG_CONFIG=		${PKG_CONFIG:Q}
 DEPENDS+=			py27-mercurial-[0-9]*:../../devel/py-mercurial
 

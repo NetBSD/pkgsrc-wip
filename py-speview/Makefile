@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-xcal-raman>=0.1.5:../../wip/py-xcal-raman
 DEPENDS+=	${PYPKGPREFIX}-zenity>=0.1.4:../../wip/py-zenity
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xcal-raman
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-xcal-raman
 
 post-extract:
 	${MV} ${WRKSRC}/speview.py ${WRKSRC}/speview.py${PYVERSSUFFIX}

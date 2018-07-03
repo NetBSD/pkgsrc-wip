@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 
 BUILDLINK_PKGSRCDIR.libsexy?=	../../devel/libsexy
 .include "../../devel/libsexy/buildlink3.mk"

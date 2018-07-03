@@ -12,7 +12,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/DecoratorTools
 COMMENT=	Class, function, and metaclass decorators
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.8
 
 DOCDIR=	${PREFIX}/share/doc/py-decoratortools
 

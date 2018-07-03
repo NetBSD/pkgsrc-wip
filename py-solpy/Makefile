@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/nrcharles/solpy
 COMMENT=	Solar Performance and Design library
 LICENSE=	gnu-lgpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.5.1:../../math/py-ephem
 DEPENDS+=	${PYPKGPREFIX}-geopy>=0.12.1:../../wip/py-geopy

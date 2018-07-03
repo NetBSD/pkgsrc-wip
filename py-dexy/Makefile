@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-inflection>=0.2.0:../../wip/py-inflection
 WRKSRC=		${WRKDIR}/dexy-0.9.9.5
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-docutils
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

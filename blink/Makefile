@@ -22,7 +22,7 @@ USE_LANGUAGES=	c
 REPLACE_PYTHON+=		resources/chat/styles/Smooth\ Operator/test/view.py
 REPLACE_PYTHON+=		resources/chat/styles/Stockholm/test/view.py
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-python-application, py-python-gnutls
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-python-application, py-python-gnutls
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/blink \

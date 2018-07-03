@@ -25,7 +25,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlparse-[0-9]*:../../databases/py-sqlparse
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-m2crypto via py-lscsoft-glue
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-m2crypto via py-lscsoft-glue
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

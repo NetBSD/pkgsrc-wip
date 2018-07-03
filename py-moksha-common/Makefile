@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-kitchen>=1.2.1:../../wip/py-kitchen
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 1.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 1.2.3
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

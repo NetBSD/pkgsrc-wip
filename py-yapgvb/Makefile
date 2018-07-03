@@ -22,7 +22,7 @@ SUBST_SED.fix-paths+=		-e 's,boost_python,boost_python-mt,g'
 USE_LANGUAGES=	c c++
 EGG_NAME=	${DISTNAME:S/-source//}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.2.3
 
 .include "../../devel/py-boost/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"

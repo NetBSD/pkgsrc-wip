@@ -13,7 +13,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=		src/gtimelog/main.py src/gtimelog/test_gtimelog.py scripts/*.py
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

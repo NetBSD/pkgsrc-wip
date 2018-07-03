@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
 .endif
 
 USE_TOOLS+=	gmake
-PYTHON_VERSIONS_ACCEPTED= 36 35 34 27
+PYTHON_VERSIONS_ACCEPTED= 37 36 35 34 27
 
 EGDIR=		${PREFIX}/share/examples/ansible
 

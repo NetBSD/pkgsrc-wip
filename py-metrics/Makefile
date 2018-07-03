@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.8.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.8.1
 
 post-extract:
 	${MV} ${WRKSRC}/pymetrics ${WRKSRC}/pymetrics${PYVERSSUFFIX}

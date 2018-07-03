@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 PYDISTUTILSPKG=	yes
 USE_TOOLS+=	bash pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2
 
 REPLACE_BASH+=	bin/gjots2lpr
 

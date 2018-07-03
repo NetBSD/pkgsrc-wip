@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-openopt>=0.31:../../wip/py-openopt
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=		share/doc/py-bip/html
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-multiprocess and py-gnuplot via py-liveplots
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-multiprocess and py-gnuplot via py-liveplots
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/html/* ${DESTDIR}${PREFIX}/share/doc/py-bip/html

@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.2:../../www/py-paste
 USE_PKGLOCALEDIR=		yes
 USE_TOOLS+=			intltool msgfmt
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests/conftest.py

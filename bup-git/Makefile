@@ -19,7 +19,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 BUILD_DEPENDS+=	rsync>=3.0:../../net/rsync
 BUILD_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-fuse-bindings
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-fuse-bindings
 
 GIT_REPO=	git://github.com/bup/bup.git
 

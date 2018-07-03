@@ -16,7 +16,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	trac>=0.11:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-openid>=2.2.4:../../security/py-openid
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-openid
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-openid
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

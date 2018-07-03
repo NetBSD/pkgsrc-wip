@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-dot>=1.0.2:../../graphics/py-dot
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.0.1:../../math/py-networkx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-mxDateTime
 
 USE_LANGUAGES=	# none
 

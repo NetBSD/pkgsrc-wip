@@ -13,7 +13,7 @@ COMMENT=	Graphical ODE simulator
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 
 USE_LANGUAGES=	# none
 

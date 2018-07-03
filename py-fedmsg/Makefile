@@ -25,7 +25,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_BASH+=	fedmsg/tests/test_certs/rebuild-all-fedmsg-certs
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-moksha-common via py-moksha-hub
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-moksha-common via py-moksha-hub
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

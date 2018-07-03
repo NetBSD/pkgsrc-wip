@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.7.4:../../devel/py-subvertpy
 DIST_SUBDIR=	hgsubversion
 WRKSRC=		${WRKDIR}/durin42-hgsubversion-dde1ade36a49
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mercurial
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-mercurial
 EGG_NAME=		hgsubversion-${DISTNAME}
 
 .include "../../lang/python/egg.mk"

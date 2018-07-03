@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-checker-[0-9]*:../../devel/py-checker
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-[a-z]+.*//}
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 
 REPLACE_PYTHON=	_spe/SPE.py _spe/SPE_DEBUG.py
 

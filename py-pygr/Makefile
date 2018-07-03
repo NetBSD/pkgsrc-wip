@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
 USE_LANGUAGES=	c c++
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mysqldb, py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-mysqldb, py-pyrex
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../lang/python/egg.mk"

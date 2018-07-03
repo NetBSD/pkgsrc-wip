@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake intltool
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2, py-gobject, py-storm
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2, py-gtk2, py-gobject, py-storm
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

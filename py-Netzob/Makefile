@@ -25,7 +25,7 @@ DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 REPLACE_PYTHON=	src/netzob/ExternalLibs/xdot.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gobject
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"

@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=13.1.0:../../net/py-twisted
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not ported as of 1.0.8
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not ported as of 1.0.8
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -11,7 +11,7 @@ COMMENT=	Logilab utilities for database manipulation
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-mxDateTime
 
 .include "options.mk"
 

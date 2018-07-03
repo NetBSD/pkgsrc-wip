@@ -13,7 +13,7 @@ COMMENT=	NINJA-IDE is a cross-platform integrated development environment
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/ninja-ide-2.3
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.3
 
 USE_LANGUAGES=	# none
 

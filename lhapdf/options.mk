@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-lhaglue
 .if !empty(PKG_OPTIONS:Mpython)
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=  lhapdf.in
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 .  include "../../lang/python/application.mk"
 .  include "../../lang/python/extension.mk"
 .  include "../../devel/py-cython/buildlink3.mk"

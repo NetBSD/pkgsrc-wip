@@ -128,7 +128,7 @@ CONFIGURE_ARGS+=	--without-odbc
 # XXX - requires new version of wxWidgets
 .if !empty(PKG_OPTIONS:MwxWidgets)
 CONFIGURE_ARGS+=	--with-wxwidgets=${PREFIX}/bin/wx-config
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 .include "../../x11/py-wxWidgets/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-wxwidgets

@@ -14,7 +14,7 @@ LICENSE=	gnu-agpl-v3 # Patches are from AGPLv3 version
 
 USE_LANGUAGES=			# none
 USE_TOOLS+=			gsed:run perl:run pax
-PYTHON_VERSIONS_ACCEPTED=	36 35
+PYTHON_VERSIONS_ACCEPTED=	37 36 35
 NO_BUILD=			yes
 
 REPLACE_PYTHON=		data.py

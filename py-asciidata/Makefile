@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-fits>=2.3.1:../../graphics/py-fits
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-numarray
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-numarray
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"

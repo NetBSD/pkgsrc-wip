@@ -13,6 +13,6 @@ PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 .endif
 
 .if !empty(PKG_OPTIONS:Mwx)
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 .  include "../../x11/py-wxWidgets/buildlink3.mk"
 .endif

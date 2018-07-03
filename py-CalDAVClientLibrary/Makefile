@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/CalDAVClientLibrary
 USE_LANGUAGES=	# none
 EGG_NAME=	UNKNOWN-0.0.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 13824
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 13824
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

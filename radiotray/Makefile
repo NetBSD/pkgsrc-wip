@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 #DEPENDS+=	notification-daemon-[0-9]*:../../sysutils/notification-daemon
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-notify, py-gtk2, py-gstreamer0.10, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-notify, py-gtk2, py-gstreamer0.10, py-gobject
 
 USE_TOOLS+=	xgettext
 

@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-automat-[0-9]*:../../devel/py-automat
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 1.2.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 1.2.0
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

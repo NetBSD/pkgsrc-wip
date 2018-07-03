@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-diffpy-structure-[0-9]*:../../wip/py-diffpy-structure
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-yapps2 via py-pycifrw via py-diffpy-structure
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-yapps2 via py-pycifrw via py-diffpy-structure
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

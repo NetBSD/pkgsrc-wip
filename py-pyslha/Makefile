@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 1.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 1.2.3
 
 post-extract:
 	${MV} ${WRKSRC}/isawig2slha ${WRKSRC}/isawig2slha${PYVERSSUFFIX}

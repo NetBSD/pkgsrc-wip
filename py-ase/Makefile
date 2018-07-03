@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2, py-gobject
 
 post-extract:
 	${MV} ${WRKSRC}/tools/ase-build ${WRKSRC}/tools/ase-build${PYVERSSUFFIX}

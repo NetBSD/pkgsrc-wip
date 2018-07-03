@@ -14,7 +14,7 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/Yapps-2.1.1
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.1.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.1.1
 
 PYDISTUTILSPKG=	yes
 

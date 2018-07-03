@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-pylons>=0.1:../../wip/py-pylons
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=0.9.8:../../www/py-WebOb
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah via py-pylons
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah via py-pylons
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -18,7 +18,7 @@ DEPENDS+=		${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-vorbis, py-EditObj2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-vorbis, py-EditObj2
 
 PYSETUPINSTALLARGS=	--install-lib ${PYSITELIB} --install-scripts ${PREFIX}/bin --install-data ${PREFIX}/share/
 

@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.9.1:../../x11/py-wxWidgets
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 
 SUBST_CLASSES+=		fix-cdll
 SUBST_STAGE.fix-cdll=	pre-configure

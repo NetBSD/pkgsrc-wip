@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 REPLACE_PYTHON=	pkshared/scripts/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.1.11
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.1.11
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

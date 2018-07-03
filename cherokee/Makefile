@@ -37,7 +37,7 @@ CONF_FILES+=		${EGDIR}/cherokee/cherokee.conf \
 
 RCD_SCRIPTS=		cherokee
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.2.101
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.2.101
 
 .include "options.mk"
 

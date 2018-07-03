@@ -38,7 +38,7 @@ DEPENDS+=	memcached-[0-9]*:../../devel/memcached
 DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml via py-nevow, py-psutil, py-Kerberos, py-ldap
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-xml via py-nevow, py-psutil, py-Kerberos, py-ldap
 
 USE_TOOLS+=	bash:run
 
