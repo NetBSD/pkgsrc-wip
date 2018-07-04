@@ -228,14 +228,11 @@ MAKE_FLAGS+=	USE_SNDIO=
 .if !empty(PKG_OPTIONS:Mspeex)
 PLIST.speex=	yes
 MAKE_FLAGS+=	HAVE_SPEEXDSP=yes
-MAKE_FLAGS+=	USE_SPEEX=yes
 MAKE_FLAGS+=	USE_SPEEX_AEC=yes
 MAKE_FLAGS+=	USE_SPEEX_PP=yes
-.include "../../audio/speex/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .else
 MAKE_FLAGS+=	HAVE_SPEEXDSP=
-MAKE_FLAGS+=	USE_SPEEX=
 MAKE_FLAGS+=	USE_SPEEX_AEC=
 MAKE_FLAGS+=	USE_SPEEX_PP=
 .endif

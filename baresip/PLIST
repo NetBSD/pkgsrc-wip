@@ -8,6 +8,7 @@ lib/baresip/modules/aufile.so
 lib/baresip/modules/auloop.so
 ${PLIST.ffmpeg}lib/baresip/modules/avcodec.so
 ${PLIST.ffmpeg}lib/baresip/modules/avformat.so
+lib/baresip/modules/b2bua.so
 ${PLIST.cairo}lib/baresip/modules/cairo.so
 lib/baresip/modules/cons.so
 lib/baresip/modules/contact.so
@@ -41,7 +42,6 @@ ${PLIST.sdl}lib/baresip/modules/sdl.so
 ${PLIST.sdl2}lib/baresip/modules/sdl2.so
 lib/baresip/modules/selfview.so
 ${PLIST.sndfile}lib/baresip/modules/sndfile.so
-${PLIST.speex}lib/baresip/modules/speex.so
 ${PLIST.speex}lib/baresip/modules/speex_aec.so
 ${PLIST.speex}lib/baresip/modules/speex_pp.so
 lib/baresip/modules/srtp.so
