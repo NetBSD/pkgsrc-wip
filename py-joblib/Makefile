@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	joblib-0.11
+DISTNAME=	joblib-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/joblib/}
