@@ -5,7 +5,6 @@ PKGNAME=	vcftools-${DISTVERSION}
 DISTVERSION=	0.1.15
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcftools/}
-GITHUB_PROJECT=	vcftools
 GITHUB_TAG=	v${DISTVERSION}
 
 MAINTAINER=	bacon@NetBSD.org
@@ -19,7 +18,7 @@ GNU_CONFIGURE=	yes
 REPLACE_PERL=	src/perl/*
 
 # No zlib.pc on FreeBSD 9.x
-CONFIGURE_ENV=	ZLIB_CFLAGS=" " ZLIB_LIBS="-lz"
+CONFIGURE_ENV+=	ZLIB_CFLAGS=" " ZLIB_LIBS="-lz"
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
