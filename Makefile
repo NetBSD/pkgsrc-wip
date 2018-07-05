@@ -4102,7 +4102,6 @@ SUBDIR+=	sailor
 SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
 SUBDIR+=	samhain
-SUBDIR+=	samtools
 SUBDIR+=	samtools0119
 SUBDIR+=	sara
 SUBDIR+=	sarf
