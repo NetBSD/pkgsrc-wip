@@ -11,7 +11,7 @@ COMMENT=	Calculating cosmological perturbations during an inflationary
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-tables>=2.4.0:../../math/py-pytables
+DEPENDS+=	${PYPKGPREFIX}-tables>=2.4.0:../../math/py-tables
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 0.2.3
 
