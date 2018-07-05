@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/01/26 21:21:52 jihbed Exp $
 
-SHA1 (Theano-0.9.0.tar.gz) = 0b01e8a2454b9b7209466acf8267a5894fe49d6a
-RMD160 (Theano-0.9.0.tar.gz) = 668f68ff2333d1c0f259761288b7accc07993a6b
-SHA512 (Theano-0.9.0.tar.gz) = e0e59256d2442f929fb120b4b21cab735e0a8ba087c4ea7d7caeabe8fa30cc19a46181fe1b4e268e778344fb3506eb20d8090dfc8d2a499c1bf84b07352686ab
-Size (Theano-0.9.0.tar.gz) = 3116713 bytes
+SHA1 (Theano-1.0.2.tar.gz) = 906b9e1c75fe0f068f358d409bf15e3a37886ecc
+RMD160 (Theano-1.0.2.tar.gz) = ca27d476104ba2e1d6f240986473d6e13d7e03ea
+SHA512 (Theano-1.0.2.tar.gz) = 02bcb13fc69ff445a9d893e1fe3935bcd6f5e1efc8b4ab2f2ecfe19234a68f8a4b8e701444d619dc90d2414aa54f485aa86d09e2f08a753f179bd9607985920b
+Size (Theano-1.0.2.tar.gz) = 13056284 bytes

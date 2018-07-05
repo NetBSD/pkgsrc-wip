@@ -1,9 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	Theano-0.9.0
+DISTNAME=	Theano-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/28/03/6af9ff242da966f89de6ab81164db0d1a36fd89379b7370f07043de62f10/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Theano/}
+GITHUB_PROJECT=	Theano
+GITHUB_TAG=	rel-${PKGVERSION_NOREV}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://deeplearning.net/software/theano/
