@@ -27,7 +27,7 @@ DEPENDS=	mawk>=0:../../lang/mawk \
 		parallel>=0:../../parallel/parallel \
 		bwa>=0.7.13:../../biology/bwa \
 		cdhit>=0:../../biology/cdhit \
-		samtools>=1.3:../../wip/samtools \
+		samtools>=1.3:../../biology/samtools \
 		vcftools>=0.1.15:../../wip/vcftools \
 		Trimmomatic>=0:../../wip/trimmomatic \
 		stacks>=0:../../wip/stacks \
