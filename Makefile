@@ -3296,7 +3296,6 @@ SUBDIR+=	py-jbessel
 SUBDIR+=	py-jelly
 SUBDIR+=	py-jewish
 SUBDIR+=	py-jitcode
-SUBDIR+=	py-joblib
 SUBDIR+=	py-jokosher
 SUBDIR+=	py-jsonpath
 SUBDIR+=	py-jsonpickle
