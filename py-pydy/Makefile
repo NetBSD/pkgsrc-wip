@@ -12,8 +12,8 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.1:../../math/py-sympy
-#theano optional dependencie
-#DEPENDS+=	${PYPKGPREFIX}-theano>=0.7.0:../../wip/py-theano
+# Theano optional dependencie
+#DEPENDS+=	${PYPKGPREFIX}-Theano>=0.7.0:../../math/py-Theano
 
 
 USE_LANGUAGES=	# none

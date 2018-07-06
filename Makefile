@@ -3798,7 +3798,6 @@ SUBDIR+=	py-test-metadata
 SUBDIR+=	py-texml
 SUBDIR+=	py-textblob
 SUBDIR+=	py-thLib
-SUBDIR+=	py-theano
 SUBDIR+=	py-thermistor
 SUBDIR+=	py-thermopy
 SUBDIR+=	py-thermostat
