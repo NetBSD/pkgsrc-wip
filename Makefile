@@ -234,7 +234,6 @@ SUBDIR+=	bioruby
 SUBDIR+=	bip
 SUBDIR+=	bird
 SUBDIR+=	bird6
-SUBDIR+=	bitcoin
 SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee
 SUBDIR+=	bkchem
