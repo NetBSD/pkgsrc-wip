@@ -31,7 +31,7 @@ PKG_SYSCONFSUBDIR=	gnats
 
 EGDIR=			share/examples/gnats
 
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/gnats
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
 CONF_FILES=		${PREFIX}/${EGDIR}/send-pr.NetBSD.conf \
 			${PKG_SYSCONFDIR}/send-pr.conf
 CONF_FILES+=		${PREFIX}/${EGDIR}/netbsd-template \
