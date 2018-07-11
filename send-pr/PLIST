@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2011/05/29 13:55:06 cheusov Exp $
+@comment $NetBSD$
 bin/install-sid
 bin/send-pr
 man/man1/send-pr.1
 man/man8/install-sid.8
+share/examples/gnats/netbsd-template
 share/examples/gnats/send-pr.NetBSD.conf
 share/examples/gnats/send-pr.conf
 share/gnats/dist/INSTALL.send-pr

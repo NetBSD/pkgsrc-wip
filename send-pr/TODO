@@ -1,5 +1,2 @@
-- configure send-pr to send PRs to gnats.NetBSD.org by default
-  (TEMPLATE variable in config file?)
-
 - maybe remove send-pr from database/gnats and depend on this instead
   (and get rid of any CONFLICTs)
