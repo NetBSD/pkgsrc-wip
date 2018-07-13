@@ -7,9 +7,11 @@ share/golly/Help/Algorithms/Generations.html
 share/golly/Help/Algorithms/HashLife.html
 share/golly/Help/Algorithms/JvN.html
 share/golly/Help/Algorithms/Larger_than_Life.html
+share/golly/Help/Algorithms/NC.png
+share/golly/Help/Algorithms/NM.png
+share/golly/Help/Algorithms/NN.png
 share/golly/Help/Algorithms/QuickLife.html
 share/golly/Help/Algorithms/RuleLoader.html
-share/golly/Help/Algorithms/extended.png
 share/golly/Help/Algorithms/hensel.png
 share/golly/Help/Lexicon/lex.htm
 share/golly/Help/Lexicon/lex_1.htm
@@ -169,6 +171,7 @@ share/golly/Patterns/Life/Breeders/slide-breeder.rle
 share/golly/Patterns/Life/Breeders/spacefiller.rle
 share/golly/Patterns/Life/Breeders/switch-engine-breeder-MR.rle
 share/golly/Patterns/Life/Breeders/switch-engine-breeder.rle
+share/golly/Patterns/Life/Breeders/switch-engine-ping-pong.rle
 share/golly/Patterns/Life/Guns/2c5-spaceship-gun-p416.rle
 share/golly/Patterns/Life/Guns/2c5-spaceship-gun-p690.rle
 share/golly/Patterns/Life/Guns/7-in-a-row-Cordership-V-gun.rle
@@ -214,6 +217,7 @@ share/golly/Patterns/Life/Oscillators/DRH-oscillators.rle
 share/golly/Patterns/Life/Oscillators/billiard-table.rle
 share/golly/Patterns/Life/Oscillators/extensible-low-period.rle
 share/golly/Patterns/Life/Oscillators/glider-stream-crystal.rle
+share/golly/Patterns/Life/Oscillators/honey-farm-hasslers.rle
 share/golly/Patterns/Life/Oscillators/low-period.rle
 share/golly/Patterns/Life/Oscillators/p103079214841.rle
 share/golly/Patterns/Life/Oscillators/p138.rle
@@ -240,6 +244,7 @@ share/golly/Patterns/Life/Rakes/c5-adjustable-rake.rle
 share/golly/Patterns/Life/Rakes/forward-LWSS-rake-p90.rle
 share/golly/Patterns/Life/Rakes/p270-frothing-puffer-rake.rle
 share/golly/Patterns/Life/Rakes/spider-rake.rle
+share/golly/Patterns/Life/Rakes/weekender-distaff.rle.gz
 share/golly/Patterns/Life/Signal-Circuitry/Turing-Machine-3-state.rle
 share/golly/Patterns/Life/Signal-Circuitry/Unit-Life-Cell-512x512.rle
 share/golly/Patterns/Life/Signal-Circuitry/Unit-Life-Deep-Cell.rle
@@ -286,7 +291,6 @@ share/golly/Patterns/Life/Syntheses/29-still-lifes.rle
 share/golly/Patterns/Life/Syntheses/blockish-and-blockic-seeds.rle
 share/golly/Patterns/Life/Syntheses/life-integer-constructions.rle
 share/golly/Patterns/Life/Syntheses/make-harbor.rle
-share/golly/Patterns/Life/Syntheses/make-lightbulb.rle
 share/golly/Patterns/Life/Syntheses/make-osc-p3.rle
 share/golly/Patterns/Life/Syntheses/make-osc-p4.rle
 share/golly/Patterns/Life/Syntheses/make-osc-p5-plus.rle
@@ -294,7 +298,9 @@ share/golly/Patterns/Life/Syntheses/make-p11.rle
 share/golly/Patterns/Life/Syntheses/make-p18.rle
 share/golly/Patterns/Life/Syntheses/make-p33.rle
 share/golly/Patterns/Life/Syntheses/oscillator-syntheses.rle
+share/golly/Patterns/Life/Syntheses/slow-salvo-MWSS-oscillator.rle.gz
 share/golly/Patterns/Life/Syntheses/slow-salvo-eater-recipes.rle
+share/golly/Patterns/Life/Syntheses/syntheses-of-c2-spaceships.rle.gz
 share/golly/Patterns/Life/Syntheses/two-glider-collisions.rle
 share/golly/Patterns/Loops/Byl-Loop.rle
 share/golly/Patterns/Loops/Chou-Reggia-Loop-1.rle
@@ -373,6 +379,7 @@ share/golly/Patterns/Self-Rep/Devore/Devore-rep.rle
 share/golly/Patterns/Self-Rep/Devore/crossover.rle
 share/golly/Patterns/Self-Rep/Devore/discriminator.rle
 share/golly/Patterns/Self-Rep/JvN/Boustrophedon-replicator.rle
+share/golly/Patterns/Self-Rep/JvN/CY_Lee_computer.zip
 share/golly/Patterns/Self-Rep/JvN/Hutton-replicator.rle
 share/golly/Patterns/Self-Rep/JvN/JvN-loop-replicator.rle.gz
 share/golly/Patterns/Self-Rep/JvN/N-compressed-replicator.rle
@@ -471,9 +478,11 @@ share/golly/Rules/Worm-1252121.rule
 share/golly/Rules/Worm-1525115.rule
 share/golly/Rules/Worm-complement.rule
 share/golly/Rules/Worm-shared.rule
+share/golly/Scripts/Lua/3D.lua
 share/golly/Scripts/Lua/breakout.lua
 share/golly/Scripts/Lua/bricklayer.lua
 share/golly/Scripts/Lua/browse-patterns.lua
+share/golly/Scripts/Lua/credits.lua
 share/golly/Scripts/Lua/density.lua
 share/golly/Scripts/Lua/draw-lines.lua
 share/golly/Scripts/Lua/envelope.lua
