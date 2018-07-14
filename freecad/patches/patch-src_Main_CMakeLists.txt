@@ -1,6 +1,6 @@
 $NetBSD$
 
-Fix build on fbsd, link against libcompat
+Fix build on FreeBSD (link against libcompat)
 
 --- src/Main/CMakeLists.txt.orig	2016-04-07 01:39:34.000000000 +0000
 +++ src/Main/CMakeLists.txt
