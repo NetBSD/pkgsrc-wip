@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/glista
+share/applications/glista.desktop
+share/glista/glista-icon.png
+share/glista/glista.ui
+share/pixmaps/glista-icon.png
+@dirrm share/glista

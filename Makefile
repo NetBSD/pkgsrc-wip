@@ -941,6 +941,7 @@ SUBDIR+=	glib-java
 SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glimmerm
+SUBDIR+=	glista
 SUBDIR+=	glkgit
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
