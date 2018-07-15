@@ -1,5 +1,2 @@
-Glista to be a very simple personal to-do list manager.
-Written in C and is based on the Gtk+ grapical toolkit and Glib.
-cross-desktop and cross-platform. Currently it is known to runs on
-different flavours of GNU/Linux, but should be easily portable
-to other UNIX-like systems, and also to Mac OS X and Microsoft Windows
+Glista is a very simple personal to-do list manager.
+It is written in C and is based on the Gtk+ graphical toolkit and Glib.
