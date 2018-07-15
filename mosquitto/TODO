@@ -19,3 +19,6 @@ upstream is inappropriate.
 Figure out why the soname is different on sunos, and if this is an
 upstream bug.  Perhaps resolve, or perhaps use a PLIST variable to
 avoid having a second copy.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+ CVE-2017-7653, CVE-2017-7654
