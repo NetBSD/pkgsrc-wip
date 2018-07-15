@@ -1,6 +1,7 @@
 $NetBSD$
 
 Honor LDFLAGS
+Upstream PR (merged): https://github.com/jozip/cdirip/pull/1
 
 --- Makefile.orig	2015-08-01 00:12:30.000000000 +0000
 +++ Makefile
