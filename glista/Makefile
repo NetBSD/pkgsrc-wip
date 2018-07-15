@@ -3,7 +3,7 @@
 
 DISTNAME=	glista-0.3
 CATEGORIES=	time gnome
-MASTER_SITES=	http://glista.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/glista/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://prematureoptimization.org/glista/
