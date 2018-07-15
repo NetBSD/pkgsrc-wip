@@ -582,7 +582,6 @@ SUBDIR+=	dmd-bin
 SUBDIR+=	dmt-ux
 SUBDIR+=	dnrd
 SUBDIR+=	dns2tcp
-SUBDIR+=	dnscrypt-proxy2
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook2X
