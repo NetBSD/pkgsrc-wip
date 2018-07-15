@@ -1,2 +1,3 @@
-http://secunia.com/advisories/53450/
-http://secunia.com/advisories/63321/
+This package has known vulnerabilities, please investigate and fix if possible:
+ http://secunia.com/advisories/53450/ http://secunia.com/advisories/63321/
+ CVE-2018-14056
