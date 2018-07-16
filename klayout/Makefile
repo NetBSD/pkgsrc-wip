@@ -9,9 +9,6 @@ HOMEPAGE=	http://www.klayout.de/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 
-# in build-release/gsi/gsi/Makefile:
-BROKEN=	Makefile:390: recipe for target 'gsiDeclBasic.lo' failed
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash
 
