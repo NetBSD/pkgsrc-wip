@@ -19,6 +19,3 @@ fit option keeps patterns sized to the window.  Full screen option (no
 menu/status/tool/scroll bars).  Supports multiple layers, including
 cloned layers.  HTML-based help with an integrated Life Lexicon.
 Scriptable via Lua or Python.
-
-NOTE: BUILDS AND RUNS FOR ME BUT DOES NOT SHOW THE WORLD.
-      YET ANOTHER GL PROBLEM?
