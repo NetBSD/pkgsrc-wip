@@ -28,14 +28,20 @@ INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
 INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib
 REL_DIR=		build-release
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MAKE_JOBS)
+MAKE_JOBS_FLAG=		-option -j${MAKE_JOBS}
+.endif
+
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${BASH} build.sh \
 	-python python${PYVERSSUFFIX} \
 	-qt5 \
 	-qmake ${PREFIX}/qt5/bin/qmake \
 	-ruby ${PREFIX}/bin/${RUBY_NAME} \
-	-prefix ${PREFIX} \
-	-option -j${MAKE_JOBS}
+	${MAKE_JOBS_FLAG} \
+	-prefix ${PREFIX}
 
 do-install:
 	cd ${WRKSRC} && \
