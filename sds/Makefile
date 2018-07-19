@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=antirez/sds/archive/}
 DIST_SUBDIR=	sds
 WRKSRC=		${WRKDIR}/sds-${GHCOMMIT}
 
-MAINTAINER=	tr@vispaul.me
+MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	https://github.com/antirez/sds/
 COMMENT=	Simple dynamic strings library for C
 LICENSE=	2-clause-bsd
