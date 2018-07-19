@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
 GITHUB_RELEASE=	0.1.4
 
-MAINTAINER=	tr@vispaul.me
+MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	http://jwilk.net/software/recidivm
 COMMENT=	Estimates a program's peak virtual memory use
 LICENSE=	mit
