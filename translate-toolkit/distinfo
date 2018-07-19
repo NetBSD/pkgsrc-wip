@@ -4,5 +4,5 @@ SHA1 (translate-toolkit-2.3.0.tar.gz) = 92e5df209a133215976f595b5b61ea39891fec99
 RMD160 (translate-toolkit-2.3.0.tar.gz) = 90aeefb3404760d9b63a471389e32957c35f6124
 SHA512 (translate-toolkit-2.3.0.tar.gz) = 04c335d17c989c12343b7cd6fdad98252931d1096f47c18591b578f241878e6c956280f35062676c9a976b4f065d79fe359f57f4444b2dbc44b894a82ff9c82d
 Size (translate-toolkit-2.3.0.tar.gz) = 7635702 bytes
-SHA1 (patch-setup.cfg) = 801180bfe2a38a0489b719f512d951c05d961cdc
-SHA1 (patch-setup.py) = 6c756e2b606283d3cc30360b700f00b35d5c7a34
+SHA1 (patch-setup.cfg) = 0003d00a7d6225b6b7229acdebbddbdb222d78fb
+SHA1 (patch-setup.py) = b6d82dfc90c0ab8c0efba24991381c025ab9ac2c

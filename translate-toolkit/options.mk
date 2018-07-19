@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.translate-toolkit
-PKG_SUPPORTED_OPTIONS+=		lxml levenshtein chardet tradostm pycountry doc
+PKG_SUPPORTED_OPTIONS+=		lxml levenshtein chardet tradostm pycountry doc ical
 PKG_SUGGESTED_OPTIONS=		lxml levenshtein chardet tradostm pycountry doc
 PLIST_VARS+=			doc
 
@@ -26,6 +26,10 @@ DEPENDS+=	${PYPKGPREFIX}-country>=1.10:../../geography/py-country
 
 .if !empty(PKG_OPTIONS:Mtradostm)
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3:../../www/py-beautifulsoup4
+.endif
+
+.if !empty(PKG_OPTIONS:Mtradostm)
+DEPENDS+=	${PYPKGPREFIX}-vobject>=0.9.6:../../textproc/py-vobject
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)

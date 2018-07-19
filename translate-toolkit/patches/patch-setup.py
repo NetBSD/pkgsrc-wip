@@ -1,5 +1,7 @@
 $NetBSD$
 
+Mozilla/firefox project specific scripts.
+
 --- setup.py.orig	2016-11-02 19:01:16.000000000 +0000
 +++ setup.py
 @@ -145,9 +145,6 @@ translatescripts = [

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	translate-toolkit-2.3.0
-CATEGORIES=	misc
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
 GITHUB_PROJECT=	translate
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,10 +16,10 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1.9.0:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-diff-match-patch>=0:../../textproc/py-diff-match-patch/
 
-USE_LANGUAGES=	c
+#USE_LANGUAGES=	c
 
-REPLACE_BASH=	tools/*
 USE_TOOLS+=	bash:run
+REPLACE_BASH=	tools/*
 
 PYTHON_VERSIONS_ACCEPTED=	37 36 35 34 27
 
@@ -30,6 +30,6 @@ post-extract:
 	${RMDIR} ${WRKSRC}/tools/mozilla/
 
 .include "options.mk"
-.include "../../lang/python/application.mk"
+#.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
