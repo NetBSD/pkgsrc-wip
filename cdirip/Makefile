@@ -1,12 +1,11 @@
 # $NetBSD$
-# vim: noexpandtab:
 
 DISTNAME=	cdirip-0.6.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jozip/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	tr@vispaul.me
+MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	https://github.com/jozip/cdirip/
 COMMENT=	Program for extracting tracks from a CDI (DiscJuggler) image
 LICENSE=	gnu-gpl-v2
