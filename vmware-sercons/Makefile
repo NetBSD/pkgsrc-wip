@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jclulow/vmware-sercons/archive/}
 DIST_SUBDIR=	vmware-sercons
 WRKSRC=		${WRKDIR}/vmware-sercons-${GHCOMMIT}
 
-MAINTAINER=	tr@vispaul.me
+MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	https://github.com/jclulow/vmware-sercons
 COMMENT=	Tool for attaching simply to VMware Fusion Serial Consoles
 LICENSE=	mit
