@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
 GITHUB_RELEASE=	0.4.1
 
-MAINTAINER=	tr@vispaul.me
+MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	https://github.com/jwilk/hungrycat/
 COMMENT=	Prints file contents, while freeing disk space occupied by the file
 LICENSE=	mit
