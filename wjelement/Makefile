@@ -1,12 +1,11 @@
 # $NetBSD$
-# vim: noexpandtab:
 
 DISTNAME=	wjelement-1.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=netmail-open/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	tr@vispaul.me
+MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	https://github.com/netmail-open/wjelement/
 COMMENT=	Flexible JSON manipulation and schema validataion in C
 LICENSE=	gnu-lgpl-v2
