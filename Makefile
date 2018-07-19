@@ -4223,7 +4223,6 @@ SUBDIR+=	sndio
 SUBDIR+=	snes9express
 SUBDIR+=	socklog
 SUBDIR+=	softflowd
-SUBDIR+=	softvms
 SUBDIR+=	soil
 SUBDIR+=	solarus-zsdx
 SUBDIR+=	sollya
