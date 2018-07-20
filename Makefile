@@ -503,6 +503,7 @@ SUBDIR+=	datamash
 SUBDIR+=	dates
 SUBDIR+=	davical-git
 SUBDIR+=	dazz_db
+SUBDIR+=	dcdis
 SUBDIR+=	dbf
 SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer

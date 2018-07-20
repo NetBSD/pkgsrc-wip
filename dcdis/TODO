@@ -1,0 +1,16 @@
+do-install shouldnt' be needed
+
+Support RELRO
+
+Figure out what to do about this license:
+
+/* dcdis.c - very simple Dreamcast(tm) disassembler
+ *
+ * Copyright (C) 1999-2004 Lars Olsson
+ *
+ * This file is part of dcdis
+ *
+ * dcdis is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+*/
