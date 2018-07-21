@@ -12,6 +12,7 @@ COMMENT=	Use geometric objects as matplotlib paths and patches
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/descartes-1.0
+PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36 37
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} descartes/tests.py
