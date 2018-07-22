@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.15 2017/01/04 18:16:32 roy Exp $
 
-DISTNAME=	tig-2.3.0
+DISTNAME=	tig-2.4.0
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
 GITHUB_RELEASE=	${DISTNAME}

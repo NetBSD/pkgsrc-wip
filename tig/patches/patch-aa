@@ -3,10 +3,10 @@ $NetBSD: patch-aa,v 1.6 2014/04/04 21:00:24 ryoon Exp $
 - Don't make/install PDF.
 - Do not install tigrc, this is handled via CONF_FILES by pkgsrc.
 
---- Makefile.orig	2017-09-29 15:15:29.000000000 +0000
+--- Makefile.orig	2018-07-21 19:09:21.000000000 +0000
 +++ Makefile
 @@ -51,7 +51,7 @@ TOOLS	= test/tools/test-graph tools/doc-
- TXTDOC	= doc/tig.1.adoc doc/tigrc.5.adoc doc/manual.adoc NEWS.adoc README.adoc INSTALL.adoc
+ TXTDOC	= doc/tig.1.adoc doc/tigrc.5.adoc doc/manual.adoc NEWS.adoc README.adoc INSTALL.adoc test/API.adoc
  MANDOC	= doc/tig.1 doc/tigrc.5 doc/tigmanual.7
  HTMLDOC = doc/tig.1.html doc/tigrc.5.html doc/manual.html README.html INSTALL.html NEWS.html
 -ALLDOC	= $(MANDOC) $(HTMLDOC) doc/manual.html-chunked doc/manual.pdf
