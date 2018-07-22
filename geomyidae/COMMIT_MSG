@@ -1,0 +1,96 @@
+geomyidae: Import geomyidae-0.32.2 as wip/geomyidae
+
+Based on net/Geomyidae.
+
+pkgsrc changes:
+ - Update DISTNAME, PKGNAME, MASTER_SITES and HOMEPAGE
+ - Avoid NO_CONFIGURE=yes, also if a package does not provide a configure script
+   it is not needed and can lead to confusion due the several configure targets
+   that are removed
+ - Add several variable to BUILD_DEFS
+ - Honor GEOMYIDAE_USER, GEOMYIDAE_GROUP and GEOMYIDAE_ROOTDIR variables that
+   will respectively set the user, group and rootdir of geomyidae
+ - Instead of copypasting several rc scripts write a new ones ad-hoc for pkgsrc
+   that will run geomyidae unprivileged honoring the several GEOMYIDAE_*
+   variables
+ - Do not install a LICENSE file (we have the LICENSE variable for it!)
+
+
+Changes:
+Geomyidae v0.32.2 fixes release
+-------------------------------
+Another fixes release for geomyidae is out. Now hopefully the OpenBSD people
+fixed the whole pledge support in geomyidae.
+
+
+Geomyidae v0.32.1 fixes release
+-------------------------------
+Soon after the v0.32 release I received patches, which I do not want to miss
+in mainline.
+
+* Fix and make OpenBSD pledge support better.
+* Fix a typo in the slackware init script.
+
+Thanks for all who sent in patches! All further patches are welcome!
+
+
+Geomyidae v0.32 Release
+-----------------------
+I am glad to announce the release of geomyidae v0.32. Thanks to all the
+contributors and people giving ideas!
+
+Here is what changed:
+        * Minor fixed in the manpage, CGI handling and tools.
+        * Add example for tt escaping in the manpage.
+        * Add nocgi flag, which disables CGI execution.
+        * Add OpenBSD pledge support.
+
+
+Geomyidae v0.31.1 release
+-------------------------
+
+There has been a geomyidae v0.31.1 release which fixes a major issue of the
+pending bytes logic from v0.31.
+
+Have fun!
+
+
+Geomyidae v0.31 release
+-----------------------
+I  am proud to announce the geomyidae v0.31 release. There were
+some major issues fixed, so a new release is necessary:
+
+* There is now gph vim syntax highlighting files in the archive.
+* Gopher+ compatibility mode.
+* No sockets are left behind anymore.
+* New log format of geomyidae is now documented in the manpage.
+* There was some ugly bug with curl connecting to a Linux system, where after
+  close() some bytes were lost. Now some check is added to be sure all data
+  has been sent to the client. If you want to have bad dreams, look at the
+  curl sourcecode.
+
+Thanks for everyone contributing!
+
+
+Geomyidae 0.29 release
+----------------------
+I am happy to announce the 0.29 release of geomyidae, a simple gopher server.
+What has been changed:
+
+* the OpenBSD rc.d files have been fixed due to arg.h fixes
+* index.bin support added
+        * Create a file with the raw gopher menu content in a directory and is
+          served by geomyidae.
+        * This is useful for scripts generating static gopher content
+        * This is useful for serving a backup of a gopherhole.
+* show errors on fork, in case there are constraints on process resources
+* care for send errors
+* huge speed up on different platforms when transferring huge binary files
+        * Linux is using sendfile(2) and TCP_CORK
+        * FreeBSD and DragonflyBSD are using sendfile(2)
+        * TCP_NOPUSH is used on all BSDs
+        * TCP_NODELAY is disabled on nearly all platforms
+        * other platforms (like OpenBSD) have a speed increase due to an
+          alignment of the send buffer to blocksize of the socket
+
+I want to thank all contributors! All patches are welcome!

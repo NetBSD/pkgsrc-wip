@@ -1,0 +1,3 @@
+- Contact the MAINTAINER in order to review/discuss these changes
+- In COMMIT_MSG some release changelog are missing, it is worth to investigate
+  and fill them accordingly before updating net/Geomyidae
