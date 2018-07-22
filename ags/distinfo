@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.2 2015/09/14 22:26:14 yhardy Exp $
 
-SHA1 (ags-3.4.1.13.tar.gz) = ff836825d5ddaa4e28e618ab872b7925f58183f6
-RMD160 (ags-3.4.1.13.tar.gz) = 7a0d8f37ad1ad9091cc7c01068204aa21a2e6310
-SHA512 (ags-3.4.1.13.tar.gz) = 157e37ffb725f7f0dda9721d1c94eae4cac6c3c3005789096fe9ff0180b5f40467e471ac96b446c09710a13f5cf7b42df117a592033b3a18263fb229a9fe4451
-Size (ags-3.4.1.13.tar.gz) = 9451204 bytes
+SHA1 (ags-3.4.1.14.tar.gz) = 3ca322c4c64e41f64b7ea5992779186c25a87936
+RMD160 (ags-3.4.1.14.tar.gz) = 1e9c03511a9342c1339bfc02e914b457c708d33a
+SHA512 (ags-3.4.1.14.tar.gz) = 2fff3d8fd08262ad94901edcfa3054b7d3a8ec9d72f42dc0796bfbf490318e0f428601e9c0f05eb418be8990b141628f5a0a3b973ad72c1d9f0aef32333b45fd
+Size (ags-3.4.1.14.tar.gz) = 9455542 bytes
 SHA1 (patch-Common_core_endianness.h) = 2c5c1b5d3b80711c1eadec3652f18a4cede9c8eb
 SHA1 (patch-Engine_Makefile-defs.linux) = 17e59df466f4879f8603c4b3c400d008ce228bd3
 SHA1 (patch-Engine_libsrc_libcda-0.5_linux.c) = 6272b02ee98f79a57f8b72167d4aa8bceff34992
