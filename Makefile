@@ -92,6 +92,7 @@ SUBDIR+=	alberta
 SUBDIR+=	aldo
 SUBDIR+=	alive
 SUBDIR+=	allegro52
+SUBDIR+=	alpine
 SUBDIR+=	alsa-lib-git
 SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-plugins-jack
