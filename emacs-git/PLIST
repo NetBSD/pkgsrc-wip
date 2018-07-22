@@ -2325,6 +2325,8 @@ share/emacs/${PKGVERSION}/lisp/jka-compr.el.gz
 share/emacs/${PKGVERSION}/lisp/jka-compr.elc
 share/emacs/${PKGVERSION}/lisp/json.el.gz
 share/emacs/${PKGVERSION}/lisp/json.elc
+share/emacs/${PKGVERSION}/lisp/jsonrpc.el.gz
+share/emacs/${PKGVERSION}/lisp/jsonrpc.elc
 share/emacs/${PKGVERSION}/lisp/kermit.el.gz
 share/emacs/${PKGVERSION}/lisp/kermit.elc
 share/emacs/${PKGVERSION}/lisp/kmacro.el.gz
