@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/28 15:33:54 thomasklausner Exp $
+@comment $NetBSD$
 bin/psl
 include/libpsl.h
 lib/libpsl.la
 lib/pkgconfig/libpsl.pc
-share/libpsl/effective_tld_names.dat
-share/libpsl/test_psl.txt
+man/man1/psl-make-dafsa.1
+man/man1/psl.1

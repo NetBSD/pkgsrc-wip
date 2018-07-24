@@ -1,5 +1,11 @@
 $NetBSD: distinfo,v 1.2 2014/10/28 15:33:55 thomasklausner Exp $
 
-SHA1 (libpsl-0.6.0.tar.gz) = e70febdc2822b57484bcb4b67722c445cd8af834
-RMD160 (libpsl-0.6.0.tar.gz) = b176281a4298c2d59d529510d91c73fd0547a384
-Size (libpsl-0.6.0.tar.gz) = 85334 bytes
+SHA1 (libpsl-0.20.2/libpsl-0.20.2.tar.gz) = 0789ec8d11283ba278d5fcfc313d098d30ba713c
+RMD160 (libpsl-0.20.2/libpsl-0.20.2.tar.gz) = b7e75358026d0ce0da0da408ca478f23cf396c96
+SHA512 (libpsl-0.20.2/libpsl-0.20.2.tar.gz) = 45c014fcc8c1ffc491dfb4ee26e3416f4f7d731abeb3a3b3e6af090b273b391d737297fce60baf82cad03ae996b3bbd9600df7e4a95931b0ed3d3107a712ea06
+Size (libpsl-0.20.2/libpsl-0.20.2.tar.gz) = 8589843 bytes
+SHA1 (libpsl-0.20.2/public_suffix_list.dat) = 10874c9b721d6c812aebbdd29008acfea9e8ecb9
+RMD160 (libpsl-0.20.2/public_suffix_list.dat) = eb156a05ff2f8f25e3f24459a12bc4b5020f46f2
+SHA512 (libpsl-0.20.2/public_suffix_list.dat) = 2a220da79699c31c01cd72ead7f8024e36ac826afd3f0742def463f83da5f227749523a75dfabf97ac2236765d845330607f017eeb2f7c451d9b9a55c67b99a1
+Size (libpsl-0.20.2/public_suffix_list.dat) = 202091 bytes
+SHA1 (patch-autogen.sh) = be0fa47afc7d1174b4825b08863a4b896524d131
