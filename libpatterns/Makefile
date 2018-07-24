@@ -2,7 +2,7 @@
 
 DISTNAME=	libpatterns-0.1.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=christiank/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
 
 HOMEPAGE=	https://github.com/christiank/libpatterns/
 COMMENT=	Pattern matching from Lua as a library
