@@ -1,5 +1,4 @@
-decode-dimms is a small utility that displays the contents of DIMM memory
-SPD ROMs in human-readable form.
-
-This version of decode-dimms can even directly read the SPD ROM data from
-the sysctl variables created by the spdmem device driver (NetBSD-only).
+The decode-dimms utility provides a human-readable display of the contents
+of the SPD ROMs on memory DIMMs.  On NetBSD, it can use spdmem(4) as the
+source of the ROM data.  Output formats include a side-by-side HTML table
+for multiple DIMMs so you can easily compare them.
