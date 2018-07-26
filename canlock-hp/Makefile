@@ -16,4 +16,6 @@ USE_LANGUAGES+=	c99
 
 USE_TOOLS+=	lex yacc
 
+TEST_TARGET=	test
+
 .include "../../mk/bsd.pkg.mk"
