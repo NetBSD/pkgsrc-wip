@@ -312,6 +312,7 @@ SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	calligra
 SUBDIR+=	calypso-git
+SUBDIR+=	canlock-hp
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
