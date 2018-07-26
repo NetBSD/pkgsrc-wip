@@ -1,0 +1,30 @@
+1) General
+libcanlock is a standalone implementation without external dependencies.
+If your program already uses a library that contains functions for hash and
+base64 algorithms (e.g. OpenSSL), it is recommended that you use them instead
+(to avoid code duplication).
+
+
+2) System requirements
+- POSIX.1-2001 compliant operating system
+- C99 compiler with 'int' data type of at least 32 bit width
+
+
+3) API
+Since version 3 there is a new API available (hash algorithm independent).
+Man pages for this API are installed together with the library.
+
+Anything that is not documented should be considered as internal and not
+part of the API. There is no portable way to hide all the internal stuff
+completely, but expect that a future version may no longer export it without
+notice.
+
+
+4) Backward compatibility
+The old API from version 2 is still emulated, but it is now deprecated and
+undocumented.
+
+Including the header file from the new location, recompile and relink should
+be sufficient to port an existing application to version 3 of the library.
+It is also possible to install both version 2 and version 3 of the library
+in parallel.
