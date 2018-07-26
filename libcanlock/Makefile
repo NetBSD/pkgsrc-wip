@@ -15,4 +15,6 @@ USE_LANGUAGES+=	c99
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+TEST_TARGET=	test
+
 .include "../../mk/bsd.pkg.mk"
