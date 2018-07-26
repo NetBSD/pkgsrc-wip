@@ -1,0 +1,17 @@
+1) General
+libcanlock contains no header parser because some programs already have one.
+If your program uses libcanlock (e.g. via canlock frontend in a script) and has
+no header parser, the utilities in this package can be used to fill the gap.
+
+
+2) System requirements
+- POSIX.1-2001 conformant operating system
+- POSIX C-Language Development Utilities (c99, lex, yacc)
+
+flex and bison are automatically detected as replacements for lex and yacc.
+
+
+Note:
+Because it would add additional dependencies and make porting to non-POSIX
+operating systems harder, the utilities in this package are not included
+in the libcanlock package.
