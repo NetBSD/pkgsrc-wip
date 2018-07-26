@@ -793,6 +793,7 @@ SUBDIR+=	flim
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
 SUBDIR+=	flite2
+SUBDIR+=	flnews
 SUBDIR+=	flpsed
 SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace
