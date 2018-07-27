@@ -3756,7 +3756,6 @@ SUBDIR+=	py-speex
 SUBDIR+=	py-speview
 SUBDIR+=	py-spfpm
 SUBDIR+=	py-sphereTS
-SUBDIR+=	py-sphinxcontrib-bibtex
 SUBDIR+=	py-sphinxreport
 SUBDIR+=	py-sphviewer
 SUBDIR+=	py-spm1d
