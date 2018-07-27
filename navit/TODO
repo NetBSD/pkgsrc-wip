@@ -1,10 +1,5 @@
-1. Find and set default options for the package.
-2. Create additional package options.
-
-3. Check if there is a solution for this warning:
+1. Check if there is a solution for this warning:
 
 /usr/pkgsrc/wip/navit/work/navit-0.5.1/navit/endianess.h:49:5: warning:
 "HAVE_BYTESWAP_H" is not defined [-Wundef]
  #if HAVE_BYTESWAP_H
- 
- 
