@@ -6,5 +6,5 @@
 - This package has known vulnerabilities, please investigate and fix
   if possible, see:
   http://secunia.com/advisories/45363/
-  CVE-2011-5325, CVE-2014-9645, CVE-2017-15873, CVE-2017-15874,
+  CVE-2011-5325, CVE-2014-9645, CVE-2015-9261, CVE-2017-15873, CVE-2017-15874,
   CVE-2017-16544, CVE-2018-1000500, CVE-2018-1000517
