@@ -29,7 +29,7 @@ MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX}
 INFO_FILES=		YES
 
 GIT_REPOSITORIES=	tc
-GIT_REPO.tc=		http://github.com/kanchoku/tc.git
+GIT_REPO.tc=		http://github.com/makoto-fujiwara/tc.git
 # fatal: unable to access 'http://github.com/kanchoku/tc.git/': SSL certificate problem: unable to get local issuer certificate
 # Add "-c http.sslVerify=false" to git command or,
 PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true

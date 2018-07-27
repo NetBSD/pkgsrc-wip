@@ -3,9 +3,9 @@ $NetBSD: patch-etc_Makefile.in,v 1.2 2013/04/08 23:35:31 makoto Exp $
 Supporting to add following argment for configure.
  --enable-symbol-rev 
 
---- etc/Makefile.in.orig	2013-04-09 08:22:32.000000000 +0900
-+++ etc/Makefile.in	2013-04-09 08:26:40.000000000 +0900
-@@ -159,6 +159,7 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
+--- etc/Makefile.in.orig	2018-07-27 22:40:27.530745543 +0900
++++ etc/Makefile.in	2018-07-27 22:43:20.684600231 +0900
+@@ -145,6 +145,7 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
  SET_MAKE = @SET_MAKE@
  SHELL = /bin/sh
  STRIP = @STRIP@
@@ -13,7 +13,7 @@ Supporting to add following argment for configure.
  TEXI2HTML = @TEXI2HTML@
  TEXI2HTML_FLAGS = @TEXI2HTML_FLAGS@
  VERSION = @VERSION@
-@@ -208,6 +209,8 @@ top_srcdir = @top_srcdir@
+@@ -194,6 +195,8 @@ top_srcdir = @top_srcdir@
  DISTDATA = EELLLTXT EELLLTXT.tut bushu.rev symbol.rev tc-bitmap-8x16
  pkgdata_DATA = $(DISTDATA) bushu.expand bushu.index2
  EXTRA_DIST = $(DISTDATA) mk-bdic
@@ -22,14 +22,14 @@ Supporting to add following argment for configure.
  all: all-am
  
  .SUFFIXES:
-@@ -415,13 +418,24 @@ uninstall-am: uninstall-pkgdataDATA
- 	uninstall-pkgdataDATA
+@@ -401,10 +404,19 @@ uninstall-am: uninstall-pkgdataDATA
+ 	mostlyclean mostlyclean-generic pdf pdf-am ps ps-am uninstall \
+ 	uninstall-am uninstall-pkgdataDATA
  
- 
+-
 -bushu.expand bushu.index2: bushu.rev
 -	@echo '*** compiling bushu dictionary ***'
 -	@echo '*** this may take a few minutes ***'
-+
 +bushu.expand bushu.index2: bushu.rev $(BATCH_SORT)
 +	@echo ' *** Taking care bushu.rev and sorting it'
 +	@if [ .${SYMBOLREV} = ."yes" ]; then \
@@ -46,8 +46,3 @@ Supporting to add following argment for configure.
  	$(EMACS) -q -no-site-file -batch -l $(srcdir)/mk-bdic
  
  clean:
--	$(RM) bushu.expand bushu.index2
-+	$(RM) -f bushu.expand bushu.index2
- 
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
