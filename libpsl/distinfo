@@ -8,4 +8,4 @@ SHA1 (libpsl-0.20.2/public_suffix_list.dat) = 10874c9b721d6c812aebbdd29008acfea9
 RMD160 (libpsl-0.20.2/public_suffix_list.dat) = eb156a05ff2f8f25e3f24459a12bc4b5020f46f2
 SHA512 (libpsl-0.20.2/public_suffix_list.dat) = 2a220da79699c31c01cd72ead7f8024e36ac826afd3f0742def463f83da5f227749523a75dfabf97ac2236765d845330607f017eeb2f7c451d9b9a55c67b99a1
 Size (libpsl-0.20.2/public_suffix_list.dat) = 202091 bytes
-SHA1 (patch-autogen.sh) = be0fa47afc7d1174b4825b08863a4b896524d131
+SHA1 (patch-autogen.sh) = 23520b372ab58f217fba371318a66cec88128403

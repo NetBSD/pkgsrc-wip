@@ -1,5 +1,6 @@
 $NetBSD$
 
+Skip use of gtk-doc.
 --- autogen.sh.orig	2018-04-26 18:18:39.000000000 +0000
 +++ autogen.sh
 @@ -15,17 +15,12 @@ fi
