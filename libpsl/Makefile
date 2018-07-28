@@ -2,10 +2,11 @@
 
 DISTNAME=	libpsl-0.20.2
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/rockdaboot/libpsl/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rockdaboot/}
+GITHUB_RELEASE=	${DISTNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES} public_suffix_list.dat
 SITES.public_suffix_list.dat=	https://raw.githubusercontent.com/publicsuffix/list/c45eff1c741d197778430e64e5d6f8bb0d7e9c8d/
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rockdaboot/libpsl/
@@ -19,7 +20,6 @@ USE_TOOLS+=	gmake pkg-config autoconf automake
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}/libpsl-${DISTNAME}
 
 PKGCONFIG_OVERRIDE+=	libpsl.pc.in
 
