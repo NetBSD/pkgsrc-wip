@@ -1,7 +1,0 @@
-@comment $NetBSD$
-bin/psl
-include/libpsl.h
-lib/libpsl.la
-lib/pkgconfig/libpsl.pc
-man/man1/psl-make-dafsa.1
-man/man1/psl.1
