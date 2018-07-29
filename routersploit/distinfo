@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.3 2017/09/14 12:43:54 leot Exp $
 
-SHA1 (routersploit-2.2.1.tar.gz) = 2c03ee4459869258226a74e7e1cc5fc263bf93fe
-RMD160 (routersploit-2.2.1.tar.gz) = 4931a2b61ee1d518b44126f1c3aaf7990c68b934
-SHA512 (routersploit-2.2.1.tar.gz) = 59262588fb1004a22c72f6f551f455f82bc461c2768dd001694c8a395cf11796138627f9bf94f45da1f289910b9119bcbabd1deb74f97e2649220631a59bcb4a
-Size (routersploit-2.2.1.tar.gz) = 80925 bytes
+SHA1 (routersploit-3.3.0.tar.gz) = dab95597688bdf1bdf22e7ae9a26ecb01414158e
+RMD160 (routersploit-3.3.0.tar.gz) = eaa39a4753c874b1ed438811af660afc6b9395ee
+SHA512 (routersploit-3.3.0.tar.gz) = fc43c9df65a543f6fff95a2e6b3c65f1c96e06bcfbe7c6d6b6fc319a2c57f57a999ca9f320e3cbba335f470ac4d8d4cacc7712b44c25888d80ac85355bc0136e
+Size (routersploit-3.3.0.tar.gz) = 454798 bytes
+SHA1 (patch-setup.py) = b58c5b6a56036cfd27a7ae3fc2262fcebe767893

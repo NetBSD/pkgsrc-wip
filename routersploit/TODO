@@ -1,9 +1,0 @@
-On Darwin routersploit will depends on `gnureadline' for
-routersploit<=2.2.1.
-
-This was fixed in the following upstream commits:
-
- - <https://github.com/reverse-shell/routersploit/commit/88551596cc04c0985bc96bb7069650048fc3ce15.patch>
- - <https://github.com/reverse-shell/routersploit/commit/ea4f4676663fbad8c1c108583975d60613f8f8b9.patch>
-
-...and needs to backported in order to avoid possible issues on Darwin.

@@ -1,26 +1,43 @@
 # $NetBSD: Makefile,v 1.4 2017/09/14 12:43:54 leot Exp $
 
-DISTNAME=	routersploit-2.2.1
+DISTNAME=	routersploit-3.3.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=reverse-shell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/reverse-shell/routersploit
-COMMENT=	The Router Exploitation Framework
+COMMENT=	Exploitation Framework for Embedded Devices
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.9.1:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.16.0:../../security/py-paramiko
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.4.1:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-snmp>=4.3.2:../../wip/py-snmp
+DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
+DEPENDS+=	${PYPKGPREFIX}-snmp-[0-9]*:../../wip/py-snmp
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.2.1
+REPLACE_PYTHON+=	rsf.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}
+	${RUN} cd ${WRKSRC} && ${TOUCH} routersploit/resources/__init__.py
+
+post-install:
+	${INSTALL_DATA_DIR} \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/ssh_keys
+	${INSTALL_DATA} ${WRKSRC}/routersploit/resources/ssh_keys/* \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/ssh_keys
+	${INSTALL_DATA_DIR} \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/vendors
+	${INSTALL_DATA} ${WRKSRC}/routersploit/resources/vendors/* \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/vendors
+	${INSTALL_DATA_DIR} \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/wordlists
+	${INSTALL_DATA} ${WRKSRC}/routersploit/resources/wordlists/*.txt \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/wordlists
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
