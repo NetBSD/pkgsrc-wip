@@ -1,0 +1,20 @@
+$NetBSD: patch-etc_mk-bdic,v 1.2 2013/12/23 03:13:49 makoto Exp $
+
+Make it as a function shape, otherwise just loading may
+stall at completion
+
+--- etc/mk-bdic.orig	2013-12-23 11:26:57.000000000 +0900
++++ etc/mk-bdic	2013-12-23 12:09:25.000000000 +0900
+@@ -1,4 +1,6 @@
+ ; -*-emacs-lisp-*-
++(provide 'mk-bdic)
++(defun mk-bdic ()
+ (and (fboundp 'set-language-environment)
+      (set-language-environment "Japanese"))
+ (setq load-path (cons "../lisp" load-path))
+@@ -15,4 +17,4 @@
+     (tcode-bushu-init 999))
+   (tcode-save-dictionaries)
+   (message "making bushu dictionary...done"))
+-(kill-emacs)
++)

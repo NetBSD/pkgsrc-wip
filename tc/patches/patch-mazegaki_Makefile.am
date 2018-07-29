@@ -1,0 +1,21 @@
+$NetBSD: patch-mazegaki_Makefile.am,v 1.1 2013/01/22 13:54:22 makoto Exp $
+
+To sort mazegaki.dic in emacs-internal-code order
+
+--- mazegaki/Makefile.am.orig	2011-04-16 11:35:10.000000000 +0900
++++ mazegaki/Makefile.am	2011-04-16 21:34:16.000000000 +0900
+@@ -14,11 +14,14 @@
+              $(DISTDATA)
+ 
+ DICS = greece.maz jukujiku.maz itaiji.maz
++BATCH_SORT       = ../BATCH-SORT
+ RM = /bin/rm
+ 
+ mazegaki.dic: $(DICS)
+ 	$(RM) -f $@
+ 	$(EMACS) -q -no-site-file -batch -l $(srcdir)/mk-mzdic
++	mv mazegaki.dic mazegaki.dic.tmp
++	$(EMACS) -q -no-site-file -batch -l $(BATCH_SORT) -f batch-sort-file mazegaki.dic.tmp mazegaki.dic euc-japan euc-japan
+ 
+ # pd_kihon.yom: step1
+ # 	./step2.pl

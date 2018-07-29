@@ -1,0 +1,47 @@
+$NetBSD: patch-etc_Makefile.in,v 1.2 2013/04/08 23:35:31 makoto Exp $
+
+Supporting to add following argment for configure.
+ --enable-symbol-rev 
+ 
+--- etc/Makefile.in.orig	2013-02-28 06:23:19.000000000 +0900
++++ etc/Makefile.in	2018-07-29 10:52:41.946584874 +0900
+@@ -159,6 +159,7 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
+ SET_MAKE = @SET_MAKE@
+ SHELL = /bin/sh
+ STRIP = @STRIP@
++SYMBOLREV = @SYMBOLREV@
+ TEXI2HTML = @TEXI2HTML@
+ TEXI2HTML_FLAGS = @TEXI2HTML_FLAGS@
+ VERSION = @VERSION@
+@@ -208,6 +209,8 @@ top_srcdir = @top_srcdir@
+ DISTDATA = EELLLTXT EELLLTXT.tut bushu.rev symbol.rev tc-bitmap-8x16
+ pkgdata_DATA = $(DISTDATA) bushu.expand bushu.index2
+ EXTRA_DIST = $(DISTDATA) mk-bdic
++BATCH_SORT = ../BATCH-SORT
++RM = ${RM}
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -415,9 +418,19 @@ uninstall-am: uninstall-pkgdataDATA
+ 	uninstall-pkgdataDATA
+ 
+ 
+-bushu.expand bushu.index2: bushu.rev
+-	@echo '*** compiling bushu dictionary ***'
+-	@echo '*** this may take a few minutes ***'
++bushu.expand bushu.index2: bushu.rev $(BATCH_SORT)
++	@echo ' *** Taking care bushu.rev and sorting it'
++	@if [ .${SYMBOLREV} = ."yes" ]; then \
++	cat bushu.rev symbol.rev > bushu.rev.tmp ;\
++	echo ' *** symbol.rev will be included in bushu.rev ***'; \
++	else \
++	mv bushu.rev bushu.rev.tmp ;\
++	echo ' *** symbol.rev will NOT be included in bushu.rev ***'; \
++	fi
++	$(EMACS) -q -no-site-file -batch -l $(BATCH_SORT) -f batch-sort-file bushu.rev.tmp bushu.rev euc-japan euc-japan 
++	ls -l bushu.rev*
++	@echo ' *** compiling bushu dictionary ***'
++	@echo ' *** this may take a few minutes ***'
+ 	$(EMACS) -q -no-site-file -batch -l $(srcdir)/mk-bdic
+ 
+ clean:

@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.9 2014/10/08 03:57:37 makoto Exp $
+
+SHA1 (tc-2.99.3.tar.gz) = 7212a46febc7eb5ef1beb44a950d7179bfb3696b
+RMD160 (tc-2.99.3.tar.gz) = bde546dc95bad875c62c57222e6733a75cf5215b
+SHA512 (tc-2.99.3.tar.gz) = 274cc5eb6a385cef6ae755af931a47acd56553e9be9a81345ade6d2d3dfae5ff864ab6fc4b27cb02fb7c08f014052c68f5dea93db299feadc95b5999b0afbd1e
+Size (tc-2.99.3.tar.gz) = 1115797 bytes
+SHA1 (patch-BATCH-SORT) = fed628d0f512638934ca16b4b7d0906d4be650c9
+SHA1 (patch-bushu-util_bushu2canna) = 9573de81b6f9ef7a225fc954b618f7905e648821
+SHA1 (patch-bushu-util_where) = 07bd3faf178ef57b9cc0afae20f56dbf83cc1d6d
+SHA1 (patch-configure.ac) = 4174e3674e2cc7dbb6daf5de56fa76f24273edf9
+SHA1 (patch-doc_Makefile.am) = fa69f7e5a4a49ad38479929549740f1c9e1a37fb
+SHA1 (patch-etc_Makefile.am) = 6deba811aa9aaa72feb9029c674277b4ad3ecb1b
+SHA1 (patch-etc_Makefile.in) = 7d4fa3c402ac7875ef147a1e37143cd0b94dd5cd
+SHA1 (patch-etc_bushu.rev) = 53259ef27da2b3e57ff9834957c8ee9b2fe4f833
+SHA1 (patch-etc_mk-bdic) = 37a5ed85e1bff4b06ac35ae2e3208fac977233ef
+SHA1 (patch-lisp_Makefile.am) = b80c93ae0ed60e8816a7cae452f5d300d9964781
+SHA1 (patch-lisp_Makefile.in) = 1bf559a29f2b186fa274fc5d7ce4289e6f6c3ba8
+SHA1 (patch-lisp_eelll.el) = c0fbebc9bfd444eadf5ff183978f618d961bbd8e
+SHA1 (patch-lisp_tc-pre-base.in) = 9b057ed2639f5badce5c1ee8ba20ad3229ff5108
+SHA1 (patch-lisp_tc-recover.el) = 8426353463fb59723597604e1cbbda30c635ee5a
+SHA1 (patch-lisp_tc-sysdep.el) = 28ad243d0d77ddb8e2325807e06a8df181508658
+SHA1 (patch-mazegaki_Makefile.am) = ee718aa68c9947f1a923dcad4211314ae219b0ce
+SHA1 (patch-mazegaki_mkcertain.pl) = d2b525316863aee93d2072b094adc45aba0fc55a

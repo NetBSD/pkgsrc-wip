@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2014/02/24 10:00:01 makoto Exp $
+;; (1) README file in Japanese is at ${PREFIX}/share/tc/README.euc.
+;;     Please note the email address mentioned is obsolete now.
+;; (2) setup file may be at ~/.tc and the sample is at
+;;    ${PREFIX}/share/examples/tc/sample.tc
+;;
+;; (3) You may have following line in Emacs init file.
+   (set-language-environment 'Japanese) ;; afraid of obsolete for recent
+   (require 'tc-setup)
+;; (4) You may need LANG environment set to ja_JP.UTF-8 on invocation
+;;     of emacs (check if merge-by-bushu (77) works or not).
+;; (5)  use C-\ to toggle Japanese/Alphanumeric input
+;; (6) Info at M-x info RET mT-code RET
+;; (7) The personal setting may be at the value of tcode-data-directory.
+===========================================================================
