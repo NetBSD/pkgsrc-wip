@@ -1,6 +1,5 @@
 # $NetBSD$
 
-# PKGBASE=        navit-git
 DISTNAME=	navit-gps
 PKGNAME=	navit-0
 CATEGORIES=	geography
