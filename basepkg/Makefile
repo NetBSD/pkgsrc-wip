@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	basepkg-1.5.2
+DISTNAME=	basepkg-1.5.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
 MAINTAINER=	uki@e-yuuki.org
 HOMEPAGE=	https://github.com/user340/
-COMMENT=	Framework of system packages of NetBSD
+COMMENT=	NetBSD system packages
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	pkg_install>=20170419:../../pkgtools/pkg_install
