@@ -1,3 +1,0 @@
-Mastodon.py is a Python wrapper for the Mastodon
-(https://github.com/tootsuite/mastodon/) API. It is feature complete
-for public API as of Mastodon version 2.4.0 and easy to get started with.
