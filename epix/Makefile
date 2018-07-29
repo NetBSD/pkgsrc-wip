@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	epix-1.2.6
+DISTNAME=	epix-1.2.18
 CATEGORIES=	graphics
 MASTER_SITES=	http://math.holycross.edu/~ahwang/epix/
 
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS=      	gmake
 INFO_FILES=     	yes
-PKG_DESTDIR_SUPPORT=  	user-destdir
 
-.include "../../print/teTeX/module.mk"
+BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+
 .include "../../mk/bsd.pkg.mk"

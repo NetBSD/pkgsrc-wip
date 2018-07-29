@@ -112,8 +112,3 @@ share/doc/epix/notes/README
 share/doc/epix/notes/THANKS
 share/doc/epix/notes/VERSION
 share/doc/epix/sample_src.tar.gz
-@dirrm share/doc/epix/notes
-@dirrm share/doc/epix/config
-@dirrm share/doc/epix
-@dirrm lib/epix
-@dirrm include/epix
