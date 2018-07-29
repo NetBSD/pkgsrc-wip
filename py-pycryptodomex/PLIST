@@ -38,9 +38,6 @@ ${PYSITELIB}/Cryptodome/Cipher/__init__.py
 ${PYSITELIB}/Cryptodome/Cipher/__init__.pyc
 ${PYSITELIB}/Cryptodome/Cipher/__init__.pyo
 ${PYSITELIB}/Cryptodome/Cipher/_chacha20.so
-${PYSITELIB}/Cryptodome/Cipher/_errors.py
-${PYSITELIB}/Cryptodome/Cipher/_errors.pyc
-${PYSITELIB}/Cryptodome/Cipher/_errors.pyo
 ${PYSITELIB}/Cryptodome/Cipher/_mode_cbc.py
 ${PYSITELIB}/Cryptodome/Cipher/_mode_cbc.pyc
 ${PYSITELIB}/Cryptodome/Cipher/_mode_cbc.pyo
@@ -75,7 +72,6 @@ ${PYSITELIB}/Cryptodome/Cipher/_mode_siv.py
 ${PYSITELIB}/Cryptodome/Cipher/_mode_siv.pyc
 ${PYSITELIB}/Cryptodome/Cipher/_mode_siv.pyo
 ${PYSITELIB}/Cryptodome/Cipher/_raw_aes.so
-${PYSITELIB}/Cryptodome/Cipher/_raw_aesni.so
 ${PYSITELIB}/Cryptodome/Cipher/_raw_arc2.so
 ${PYSITELIB}/Cryptodome/Cipher/_raw_blowfish.so
 ${PYSITELIB}/Cryptodome/Cipher/_raw_cast.so
@@ -154,7 +150,9 @@ ${PYSITELIB}/Cryptodome/Hash/_BLAKE2b.so
 ${PYSITELIB}/Cryptodome/Hash/_BLAKE2s.so
 ${PYSITELIB}/Cryptodome/Hash/_MD2.so
 ${PYSITELIB}/Cryptodome/Hash/_MD4.so
+${PYSITELIB}/Cryptodome/Hash/_MD5.so
 ${PYSITELIB}/Cryptodome/Hash/_RIPEMD160.so
+${PYSITELIB}/Cryptodome/Hash/_SHA1.so
 ${PYSITELIB}/Cryptodome/Hash/_SHA224.so
 ${PYSITELIB}/Cryptodome/Hash/_SHA256.so
 ${PYSITELIB}/Cryptodome/Hash/_SHA384.so
@@ -162,6 +160,7 @@ ${PYSITELIB}/Cryptodome/Hash/_SHA512.so
 ${PYSITELIB}/Cryptodome/Hash/__init__.py
 ${PYSITELIB}/Cryptodome/Hash/__init__.pyc
 ${PYSITELIB}/Cryptodome/Hash/__init__.pyo
+${PYSITELIB}/Cryptodome/Hash/_ghash_portable.so
 ${PYSITELIB}/Cryptodome/Hash/_keccak.so
 ${PYSITELIB}/Cryptodome/Hash/keccak.py
 ${PYSITELIB}/Cryptodome/Hash/keccak.pyc
@@ -184,6 +183,9 @@ ${PYSITELIB}/Cryptodome/Math/Numbers.pyo
 ${PYSITELIB}/Cryptodome/Math/Primality.py
 ${PYSITELIB}/Cryptodome/Math/Primality.pyc
 ${PYSITELIB}/Cryptodome/Math/Primality.pyo
+${PYSITELIB}/Cryptodome/Math/_Numbers_custom.py
+${PYSITELIB}/Cryptodome/Math/_Numbers_custom.pyc
+${PYSITELIB}/Cryptodome/Math/_Numbers_custom.pyo
 ${PYSITELIB}/Cryptodome/Math/_Numbers_gmp.py
 ${PYSITELIB}/Cryptodome/Math/_Numbers_gmp.pyc
 ${PYSITELIB}/Cryptodome/Math/_Numbers_gmp.pyo
@@ -193,6 +195,7 @@ ${PYSITELIB}/Cryptodome/Math/_Numbers_int.pyo
 ${PYSITELIB}/Cryptodome/Math/__init__.py
 ${PYSITELIB}/Cryptodome/Math/__init__.pyc
 ${PYSITELIB}/Cryptodome/Math/__init__.pyo
+${PYSITELIB}/Cryptodome/Math/_montgomery.so
 ${PYSITELIB}/Cryptodome/Protocol/KDF.py
 ${PYSITELIB}/Cryptodome/Protocol/KDF.pyc
 ${PYSITELIB}/Cryptodome/Protocol/KDF.pyo
@@ -397,6 +400,9 @@ ${PYSITELIB}/Cryptodome/SelfTest/Cipher/test_vectors/TDES/TOFBpermop.rsp
 ${PYSITELIB}/Cryptodome/SelfTest/Cipher/test_vectors/TDES/TOFBsubtab.rsp
 ${PYSITELIB}/Cryptodome/SelfTest/Cipher/test_vectors/TDES/TOFBvarkey.rsp
 ${PYSITELIB}/Cryptodome/SelfTest/Cipher/test_vectors/TDES/TOFBvartext.rsp
+${PYSITELIB}/Cryptodome/SelfTest/Cipher/test_vectors/wycheproof/aes_eax_test.json
+${PYSITELIB}/Cryptodome/SelfTest/Cipher/test_vectors/wycheproof/aes_gcm_test.json
+${PYSITELIB}/Cryptodome/SelfTest/Cipher/test_vectors/wycheproof/aes_siv_cmac_test.json
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/__init__.py
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/__init__.pyc
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/__init__.pyo
@@ -463,6 +469,10 @@ ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/BLAKE2b/tv2.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/BLAKE2s/blake2s-test.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/BLAKE2s/tv1.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/BLAKE2s/tv2.txt
+${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/SHA1/SHA1ShortMsg.rsp
+${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/SHA2/SHA512ShortMsg.rsp
+${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/SHA2/SHA512_224ShortMsg.rsp
+${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/SHA2/SHA512_256ShortMsg.rsp
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/SHA3/ShortMsgKAT_SHA3-224.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/SHA3/ShortMsgKAT_SHA3-256.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/SHA3/ShortMsgKAT_SHA3-384.txt
@@ -482,6 +492,7 @@ ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/keccak/ShortMsgKAT_256.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/keccak/ShortMsgKAT_384.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/keccak/ShortMsgKAT_512.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/keccak/readme.txt
+${PYSITELIB}/Cryptodome/SelfTest/Hash/test_vectors/wycheproof/aes_cmac_test.json
 ${PYSITELIB}/Cryptodome/SelfTest/IO/__init__.py
 ${PYSITELIB}/Cryptodome/SelfTest/IO/__init__.pyc
 ${PYSITELIB}/Cryptodome/SelfTest/IO/__init__.pyo
@@ -500,6 +511,9 @@ ${PYSITELIB}/Cryptodome/SelfTest/Math/test_Numbers.pyo
 ${PYSITELIB}/Cryptodome/SelfTest/Math/test_Primality.py
 ${PYSITELIB}/Cryptodome/SelfTest/Math/test_Primality.pyc
 ${PYSITELIB}/Cryptodome/SelfTest/Math/test_Primality.pyo
+${PYSITELIB}/Cryptodome/SelfTest/Math/test_modexp.py
+${PYSITELIB}/Cryptodome/SelfTest/Math/test_modexp.pyc
+${PYSITELIB}/Cryptodome/SelfTest/Math/test_modexp.pyo
 ${PYSITELIB}/Cryptodome/SelfTest/Protocol/__init__.py
 ${PYSITELIB}/Cryptodome/SelfTest/Protocol/__init__.pyc
 ${PYSITELIB}/Cryptodome/SelfTest/Protocol/__init__.pyo
@@ -549,6 +563,8 @@ ${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_p8_
 ${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_p8_clear.pem
 ${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public.der
 ${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public.pem
+${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public_compressed.der
+${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public_compressed.pem
 ${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public_openssh.txt
 ${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_x509.der
 ${PYSITELIB}/Cryptodome/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_x509.pem
@@ -584,6 +600,10 @@ ${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/PKCS1-PSS/SigVerPSS_186-
 ${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/PKCS1-v1.5/SigGen15_186-2.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/PKCS1-v1.5/SigGen15_186-3.txt
 ${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/PKCS1-v1.5/SigVer15_186-3.rsp
+${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/wycheproof/dsa_test.json
+${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/wycheproof/ecdsa_secp256r1_sha256_test.json
+${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/wycheproof/ecdsa_test.json
+${PYSITELIB}/Cryptodome/SelfTest/Signature/test_vectors/wycheproof/rsa_signature_test.json
 ${PYSITELIB}/Cryptodome/SelfTest/Util/__init__.py
 ${PYSITELIB}/Cryptodome/SelfTest/Util/__init__.pyc
 ${PYSITELIB}/Cryptodome/SelfTest/Util/__init__.pyo
@@ -644,14 +664,13 @@ ${PYSITELIB}/Cryptodome/Util/RFC1751.pyo
 ${PYSITELIB}/Cryptodome/Util/__init__.py
 ${PYSITELIB}/Cryptodome/Util/__init__.pyc
 ${PYSITELIB}/Cryptodome/Util/__init__.pyo
-${PYSITELIB}/Cryptodome/Util/_cpuid.so
+${PYSITELIB}/Cryptodome/Util/_cpu_features.py
+${PYSITELIB}/Cryptodome/Util/_cpu_features.pyc
+${PYSITELIB}/Cryptodome/Util/_cpu_features.pyo
+${PYSITELIB}/Cryptodome/Util/_cpuid_c.so
 ${PYSITELIB}/Cryptodome/Util/_file_system.py
 ${PYSITELIB}/Cryptodome/Util/_file_system.pyc
 ${PYSITELIB}/Cryptodome/Util/_file_system.pyo
-${PYSITELIB}/Cryptodome/Util/_galois.so
-${PYSITELIB}/Cryptodome/Util/_number_new.py
-${PYSITELIB}/Cryptodome/Util/_number_new.pyc
-${PYSITELIB}/Cryptodome/Util/_number_new.pyo
 ${PYSITELIB}/Cryptodome/Util/_raw_api.py
 ${PYSITELIB}/Cryptodome/Util/_raw_api.pyc
 ${PYSITELIB}/Cryptodome/Util/_raw_api.pyo
@@ -674,4 +693,5 @@ ${PYSITELIB}/Cryptodome/__init__.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt

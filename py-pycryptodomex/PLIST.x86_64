@@ -1,0 +1,2 @@
+@comment $NetBSD$
+${PYSITELIB}/Cryptodome/Cipher/_raw_aesni.so
