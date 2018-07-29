@@ -7,7 +7,7 @@ MASTER_SITES=		${HOMEPAGE}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://sorting.cr.yp.to/
 COMMENT=		Library for sorting arrays of integers
-#LICENSE=		# TODO: (see mk/license.mk)
+LICENSE=		public-domain
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
