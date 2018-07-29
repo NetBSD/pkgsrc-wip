@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKGBASE=        navit-current
+# PKGBASE=        navit-git
 DISTNAME=	navit-gps
-PKGNAME=	navit-current-0
+PKGNAME=	navit-0
 CATEGORIES=	geography
 
 MAINTAINER=	fekete.zoltan@minux.hu
@@ -12,7 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=   navit-gps
 GIT_REPO.navit-gps= https://github.com/navit-gps/navit.git
-GIT_REVISION.navit-gps= d2413503fc583c1d96e3247f2d1621dc4f50b362
+GIT_REVISION=       d2413503fc583c1d96e3247f2d1621dc4f50b362
+_GIT_FLAGS?=        --depth 1
 
 CONFLICTS=	navit-[0-9]*
 
