@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (tin-2.4.2.tar.xz) = 675004c453548e926a261a071e0715e23a05c609
+RMD160 (tin-2.4.2.tar.xz) = e691275597cb1886ae9e66343493cf96acbd2bfe
+SHA512 (tin-2.4.2.tar.xz) = 70a9957d5bf5af1bb182a3f4e62795cd5862b7282b7fc0c231c3bd02d83950cdbdd502d8a2cc5eae20b29af584e4f794f03378742b47ed93fc5c61ac5bbb01b6
+Size (tin-2.4.2.tar.xz) = 1491388 bytes
+SHA1 (patch-Makefile) = 640f9adf99d9867259876c8ca0584f3fcc8ec971
+SHA1 (patch-configure) = dd738e58ffe3b39396928ebb881b7b269bf21315
+SHA1 (patch-include_tin.h) = 557a75eeff1114018dca247e15eceddf70af8b91
+SHA1 (patch-src_Makefile.in) = 41f97bb05e12fe4b897d6e515be745f611c44f20
