@@ -22,22 +22,15 @@ REPLACE_PYTHON+=	rsf.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+#
+# - Add a MANIFEST.in in order to install all routersploit/resources package
+#   data files
+# - Add an (empty) __init__.py in order to correctly pick up Python code in
+#   routersploit/resources subdirectories
+#
 post-extract:
+	${CP} ${FILESDIR}/MANIFEST.in ${WRKSRC}
 	${RUN} cd ${WRKSRC} && ${TOUCH} routersploit/resources/__init__.py
-
-post-install:
-	${INSTALL_DATA_DIR} \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/ssh_keys
-	${INSTALL_DATA} ${WRKSRC}/routersploit/resources/ssh_keys/* \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/ssh_keys
-	${INSTALL_DATA_DIR} \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/vendors
-	${INSTALL_DATA} ${WRKSRC}/routersploit/resources/vendors/* \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/vendors
-	${INSTALL_DATA_DIR} \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/wordlists
-	${INSTALL_DATA} ${WRKSRC}/routersploit/resources/wordlists/*.txt \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/routersploit/resources/wordlists
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
