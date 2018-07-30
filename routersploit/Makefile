@@ -28,6 +28,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # - Add an (empty) __init__.py in order to correctly pick up Python code in
 #   routersploit/resources subdirectories
 #
+# Shared upstream via <https://github.com/threat9/routersploit/pull/494>
+#
 post-extract:
 	${CP} ${FILESDIR}/MANIFEST.in ${WRKSRC}
 	${RUN} cd ${WRKSRC} && ${TOUCH} routersploit/resources/__init__.py
