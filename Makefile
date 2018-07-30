@@ -2210,6 +2210,7 @@ SUBDIR+=	nomadio
 SUBDIR+=	nongnu-libunwind-git
 SUBDIR+=	noor
 SUBDIR+=	nos-tun
+SUBDIR+=	nostt
 SUBDIR+=	notify-sharp
 SUBDIR+=	noto-cjk
 SUBDIR+=	nq
