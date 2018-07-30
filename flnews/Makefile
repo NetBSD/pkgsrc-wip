@@ -2,9 +2,9 @@
 
 DISTNAME=	flnews-0.15
 CATEGORIES=	news
-MASTER_SITES=	http://micha.freeshell.org/flnews/src/ \
-		http://www.ybtra.de/flnews-mirror/src/ \
-		http://www.southcity.de/flnews/src/
+MASTER_SITES=	http://micha.freeshell.org/flnews/src/
+MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
+MASTER_SITES+=	http://www.southcity.de/flnews/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	michael.baeuerle@gmx.net

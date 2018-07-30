@@ -20,7 +20,6 @@ FLNEWS_OPT_DISABLE_IP6=		1
 # Note: Only locales with UTF-8, ISO-8859-1 or US-ASCII codeset are supported!
 PLIST_VARS+=	nls
 .if !empty(PKG_OPTIONS:Mnls)
-#USE_TOOLS+=	gencat
 PLIST.nls=	yes
 FLNEWS_OPT_DISABLE_NLS=		0
 .else
