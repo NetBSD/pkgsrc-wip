@@ -2,11 +2,11 @@
 
 DISTNAME=	routersploit-3.3.0
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=reverse-shell/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=threat9/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://github.com/reverse-shell/routersploit
+HOMEPAGE=	https://github.com/threat9/routersploit
 COMMENT=	Exploitation Framework for Embedded Devices
 LICENSE=	modified-bsd
 
