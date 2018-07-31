@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Test-Strict-0.45
+DISTNAME=	Test-Strict-0.47
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MANWAR/

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (Test-Strict-0.45.tar.gz) = 560c33bb1b2e97f78a8a8c2a923601f0ea623dac
-RMD160 (Test-Strict-0.45.tar.gz) = fe8c07383df025325502aef77ce8a717af8ab4cc
-SHA512 (Test-Strict-0.45.tar.gz) = 62645350b29edd962d6ba2d3734fec7626c9cdb1610f3c464c3bd9918cfd3b2036e6fef8773c9a528109864fe8741081a62e1c1744e16f9fbd5c8a75035ab4d0
-Size (Test-Strict-0.45.tar.gz) = 20427 bytes
+SHA1 (Test-Strict-0.47.tar.gz) = 567b46694ab5ad808d7d59f849dd0f55d7a0f9c1
+RMD160 (Test-Strict-0.47.tar.gz) = 44bfaf2c5dce70be1df8a5edb61fb383d6f61647
+SHA512 (Test-Strict-0.47.tar.gz) = 56ffc488cb2502af228ad03f3da7bf11f04c0cacc7f1ea13b3aa8e0578f0df36a9be092f71db973748c8db15f45873a384f2e24844468b9a300d2386692c21b9
+Size (Test-Strict-0.47.tar.gz) = 20679 bytes
