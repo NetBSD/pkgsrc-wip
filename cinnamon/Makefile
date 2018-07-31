@@ -8,7 +8,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/linuxmint/cinnamon
-COMMENT=	Javascript bindings based on gobject-introspection
+COMMENT=	Desktop Environment with layout similar to Gnome
 LICENSE=	gnu-gpl-v2
 
 NOT_PAX_MPROTECT_SAFE=	bin/cinnamon
