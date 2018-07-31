@@ -78,9 +78,13 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/desktop.rules \
 		${DESTDIR}${PREFIX}/share/polkit-1/rules.d/desktop.rules
 
+.include "../../mk/bsd.prefs.mk"
+
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
+.if ${OPSYS} != "SunOS"
 DEPENDS+=	${PYPKGPREFIX}-pyinotify-[0-9]*:../../sysutils/py-pyinotify
+.endif
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-pam-[0-9]*:../../cinnamon/py-pam
 DEPENDS+=	caribou-[0-9]*:../../x11/caribou
