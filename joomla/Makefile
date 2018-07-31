@@ -1,18 +1,22 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/20 03:03:57 wen Exp $
 
-DISTNAME=	Joomla_1.5.15-Stable-Full_Package
-PKGNAME=	joomla-1.5.15
+DISTNAME=	Joomla_3.8.10-Stable-Full_Package
+PKGNAME=	joomla-3.8.10
 CATEGORIES=	www
-MASTER_SITES=	http://joomlacode.org/gf/download/frsrelease/11396/45608/
+MASTER_SITES=	https://downloads.joomla.org/cms/joomla3/3-8-10/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	wen@NetBSD.org
 HOMEPAGE=	http://www.joomla.org/
 COMMENT=	Dynamic web content management system (CMS)
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.10:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.6.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.6.0:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.6.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.6.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.6.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.6.0:../../archivers/php-zlib
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -47,7 +51,6 @@ SUBST_SED.paths=	-e "s,@JOOMLADIR@,${JOOMLADIR},g"
 
 post-extract:
 	${CP} ${FILESDIR}/joomla.conf ${WRKDIR}/joomla.conf
-	${MV} ${WRKSRC}/installation ${WRKSRC}/installation.disabled
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${JOOMLADIR}
