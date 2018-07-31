@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 USE_TOOLS+=	gmake pkg-config intltool msgfmt
 
 BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../wip/xapps/buildlink3.mk"
 
@@ -34,4 +37,5 @@ BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
