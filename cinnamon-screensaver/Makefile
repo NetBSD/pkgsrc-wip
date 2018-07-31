@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
 GITHUB_PROJECT=	cinnamon-screensaver
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	youri@gmail.com
+MAINTAINER=	youri@NetBSD.com
 HOMEPAGE=	https://github.com/linuxmint/cinnamon-screensaver
 COMMENT=	Cinnamon screensaver
 LICENSE=	gnu-gpl-v2
