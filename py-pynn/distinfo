@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/09/20 10:12:02 jihbed Exp $
 
-SHA1 (PyNN-0.7.5.tar.gz) = 34bc1cbe7cd3b77a384a18e6ebc65467229dae9c
-RMD160 (PyNN-0.7.5.tar.gz) = 9fabed6cb8f4846e110eaf6b735c3b1087146e38
-Size (PyNN-0.7.5.tar.gz) = 263487 bytes
+SHA1 (PyNN-0.9.2.tar.gz) = 3215a00760fe047c6aa67099ab9e4ef8e807671e
+RMD160 (PyNN-0.9.2.tar.gz) = f62e628dcafda51f778ac2ca5e9eb2096759888d
+SHA512 (PyNN-0.9.2.tar.gz) = aa8e41e58ecd1ae613b7504039fcd2fd1e55556e98d13a65cc2771a677cbd58ee98dfcb9d21fe9e9bfe14b13a07849a06aa7b6291bda9da5029b0ccb3bcf5afe
+Size (PyNN-0.9.2.tar.gz) = 358128 bytes

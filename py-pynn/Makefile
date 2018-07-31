@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2014/06/01 12:49:44 thomasklausner Exp $
 
-DISTNAME=	PyNN-0.7.5
-PKGNAME=	${PYPKGPREFIX}-pynn-0.7.5
+DISTNAME=	PyNN-0.9.2
+PKGNAME=	${PYPKGPREFIX}-pynn-0.9.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyNN/}
 LICENSE=	cecill-2.1
