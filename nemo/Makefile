@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake bash pkg-config intltool autoconf automake autoreconf
+USE_TOOLS+=		gmake bash pkg-config intltool autoconf automake autoreconf xgettext
 CONFIGURE_ARGS+=	--disable-selinux
 
 SUBST_CLASSES=		prefix
@@ -26,6 +26,7 @@ SUBST_SED.prefix=	-e 's,/usr/share,${PREFIX}/share,g'
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	gvfs-[0-9]*:../../sysutils/gvfs
 BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 REPLACE_PYTHON=	data/merge_action_strings \
