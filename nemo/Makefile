@@ -26,6 +26,7 @@ SUBST_SED.prefix=	-e 's,/usr/share,${PREFIX}/share,g'
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	gvfs-[0-9]*:../../sysutils/gvfs
 BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 REPLACE_PYTHON=	data/merge_action_strings \
 		files/usr/share/nemo/actions/myaction.py \
@@ -49,6 +50,7 @@ pre-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../multimedia/ffmpegthumbnailer/buildlink3.mk"
 .include "../../sysutils/accountsservice/buildlink3.mk"
