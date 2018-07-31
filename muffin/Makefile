@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool automake msgfmt pkg-config autoreconf
 
 BUILD_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
+BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=		zenity-[0-9]*:../../x11/zenity
 
 pre-configure:
