@@ -1,0 +1,15 @@
+$NetBSD$
+
+Don't add non-portable ld arguments.
+
+--- libxapp/meson.build.orig	2018-05-06 13:34:47.000000000 +0000
++++ libxapp/meson.build
+@@ -31,7 +31,7 @@ libxapp = library('xapp',
+     soversion: '1',
+     dependencies: libdeps,
+     c_args: ['-Wno-declaration-after-statement'],
+-    link_args: [ '-Wl,-Bsymbolic', '-Wl,-z,relro', '-Wl,-z,now', ],
++    link_args: [ '-Wl,-Bsymbolic' ],
+     install: true
+ )
+ 

@@ -11,13 +11,16 @@ HOMEPAGE=	https://github.com/linuxmint/xapps
 COMMENT=	Components which are common to multiple desktop environments
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
 SUBST_CLASSES=		pypath
 SUBST_STAGE.pypath=	post-patch
 SUBST_FILES.pypath=	pygobject/meson.build files/meson.build
 SUBST_VARS.pypath=	PREFIX PYTHONBIN
 
-
 PY_PATCHPLIST=	yes
+
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libxapp
 
 USE_TOOLS+=	gmake bash pkg-config intltool msgfmt
 
@@ -26,6 +29,9 @@ REPLACE_PYTHON=	schemas/meson_install_schemas.py	\
 		files/usr/bin/upload-system-info
 
 REPLACE_BASH=	files/usr/bin/xfce4-set-wallpaper
+
+pre-install:
+	${CHMOD} +x ${WRKSRC}/schemas/meson_install_schemas.py
 
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
@@ -38,7 +44,6 @@ REPLACE_BASH=	files/usr/bin/xfce4-set-wallpaper
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/libgnomekbd/buildlink3.mk"
-
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
