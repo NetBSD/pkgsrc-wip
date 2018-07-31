@@ -17,6 +17,14 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config automake autoreconf intltool msgfmt
 
+PLIST_VARS+=	pam
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=        --disable-pam
+.else
+PLIST.pam=		yes
 CONFIGURE_ARGS+=	--with-pam-prefix=/etc/pam.d \
 			--without-systemd
 
@@ -40,12 +48,12 @@ pamd:
 MAKE_DIRS+=	/etc/pam.d
 CONF_FILES+=	${PREFIX}/share/examples/pam.d/cinnamon-screensaver \
 		/etc/pam.d/cinnamon-screensaver
-
+.endif
 
 BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 BUILD_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
-DEPENDS+=	${PYPKGPREFIX}-xapp>=1.2.0:../../cinnamon/py-xapp
+DEPENDS+=	${PYPKGPREFIX}-xapp>=1.2.0:../../wip/py-xapp
 DEPENDS+=	${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 
 
@@ -58,6 +66,7 @@ pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
