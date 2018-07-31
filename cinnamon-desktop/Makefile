@@ -23,6 +23,11 @@ PKGCONFIG_OVERRIDE+=	libcinnamon-desktop/cinnamon-desktop.pc.in
 
 BUILD_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libcinnamon-desktop
+
+pre-install:
+	${CHMOD} +x ${WRKSRC}/install-scripts/meson_install_schemas.py
+
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../lang/python/application.mk"
