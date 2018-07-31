@@ -15,5 +15,5 @@ LICENSE=	mit
 PY_PATCHPLIST=	yes
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
