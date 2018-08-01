@@ -7,8 +7,10 @@ include/mosquitto_plugin.h
 include/mosquittopp.h
 lib/libmosquitto.so
 lib/libmosquitto.so.1
+lib/libmosquitto.so.${PKGVERSION}
 lib/libmosquittopp.so
 lib/libmosquittopp.so.1
+lib/libmosquittopp.so.${PKGVERSION}
 man/man1/mosquitto_passwd.1
 man/man1/mosquitto_pub.1
 man/man1/mosquitto_sub.1
