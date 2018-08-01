@@ -1,11 +1,19 @@
+* update
+
+update to 1.5
+
 * conf files
 
 Decide on if a mosquitto config file should be installed in etc, or if
 a user should take a few lines from the (large) example as needed.
 
+Document our strategy for modifying the example file, explaining if it
+is reflecting compiled-in defaults, or some other reasons.
+
 * build tools
 
-Figure out cmake vs gmake.  Perhaps this is just gdt being confused.
+Depending on response from upstream, document our approach to using
+cmake always.
 
 * patches
 
@@ -14,11 +22,19 @@ Rename to standard filenames a la mkpatches.
 For each, document why and file upstream/include ref or explain why
 upstream is inappropriate.
 
+** ldconfig
+
+Upstream appears to run ldconfig on "UNIX", which is incorrect.  File
+a bug about this.
+
 * sunos shlib
 
 Figure out why the soname is different on sunos, and if this is an
 upstream bug.  Perhaps resolve, or perhaps use a PLIST variable to
 avoid having a second copy.
+
+
+* security
 
 This package has known vulnerabilities, please investigate and fix if possible:
  CVE-2017-7653, CVE-2017-7654
