@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2009/11/28 20:25:40 pgoyette Exp $
+@comment $NetBSD$
 bin/decode-dimms
-man/man1/decode-dimms.1
