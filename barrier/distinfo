@@ -1,0 +1,15 @@
+$NetBSD$
+
+SHA1 (barrier/v2.1.1.tar.gz) = 99390e36f995321d2c9ad4ca2ee26e26dca88b8b
+RMD160 (barrier/v2.1.1.tar.gz) = 4b6e8bbe9ee7e7f8aad4d21602220720050e283b
+SHA512 (barrier/v2.1.1.tar.gz) = 668a19ba5fc2570e4eaf268f0754b894bce30008226f4cd36e182b748cbb08179d8867c7f882446f5f267c9064e12ea0dc7575e49996b4ba72bfcf396054edd8
+Size (barrier/v2.1.1.tar.gz) = 7229581 bytes
+SHA1 (patch-CMakeLists.txt) = 6066cb3d74d135a8a9e817f9f6cfe7e432e885ba
+SHA1 (patch-src_gui_CMakeLists.txt) = 6bf7547878c8d9d3e697e0407fa12e0545f4a2cf
+SHA1 (patch-src_gui_src_ActionDialog.cpp) = 017eeec39d195f2216d68f122fc471988a772442
+SHA1 (patch-src_gui_src_ScreenSetupView.cpp) = ed7be508ecfa6ce19f25072ec4559caf147f56a9
+SHA1 (patch-src_lib_arch_CMakeLists.txt) = 8d098c9e1a7fe4865acff32b9c1b38bd5e592342
+SHA1 (patch-tools_gmock-1.6.0_configure) = 0a3a23076b15858b79a8b3c2a9144ddaaad7ebe3
+SHA1 (patch-tools_gmock-1.6.0_include_gmock_internal_gmock-port.h) = 70d0f775e952a67b2680c480f757e60eb183e5be
+SHA1 (patch-tools_gtest-1.6.0_configure) = df73a2566790e23501795af54f9c17324e7a6c83
+SHA1 (patch-tools_gtest-1.6.0_include_gtest_internal_gtest-port.h) = ee496a203a5372a06a83a3d73d6d87b1b0c58157
