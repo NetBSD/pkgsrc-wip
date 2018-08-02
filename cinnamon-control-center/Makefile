@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config automake intltool msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-networkmanager \
@@ -27,6 +28,8 @@ CONF_FILES=	share/examples/menus/cinnamoncc.menu \
 		${PKG_SYSCONFDIR}/menus/cinnamoncc.menu
 
 BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 #DEPENDS+=	cheese-[0-9]*:../../graphics/cheese
 
@@ -46,6 +49,7 @@ pre-configure:
 #.include "../../net/gnome-online-accounts/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
+.include "../../textproc/libxslt/xsltproc-nonet.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/colord/buildlink3.mk"
 .include "../../sysutils/accountsservice/buildlink3.mk"
