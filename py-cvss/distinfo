@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (cvss-1.8.tar.gz) = 145280b2e55ecf157cea8ee260db861b3741eb5f
-RMD160 (cvss-1.8.tar.gz) = c1d7d980b349fd135fea9c44ca0327800cc481bb
-SHA512 (cvss-1.8.tar.gz) = bb53ea0fe2dc64bc56e5af63fbdef7664c1e1b7d8d583f4c36a11388afcd5e4dc78be0fe8b073813713424828dc10ebd98862d2b43123b0e77835d0d2d05e579
-Size (cvss-1.8.tar.gz) = 3178843 bytes
+SHA1 (cvss-1.9.tar.gz) = 71219eb29d7e9093287830bbfbc61b6b35d935c2
+RMD160 (cvss-1.9.tar.gz) = 5cb9256209c28b780c4e62a3dabacaac0adbed52
+SHA512 (cvss-1.9.tar.gz) = d14eecf3b9adceed834aacb551ef9bfce699797088ab8477131432f10d71030a40094652b655f24de812857f8201f641e4c19db0da0ff74114537d5a7dd97dca
+Size (cvss-1.9.tar.gz) = 3179892 bytes

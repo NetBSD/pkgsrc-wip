@@ -29,3 +29,6 @@ ${PYSITELIB}/cvss/exceptions.pyo
 ${PYSITELIB}/cvss/interactive.py
 ${PYSITELIB}/cvss/interactive.pyc
 ${PYSITELIB}/cvss/interactive.pyo
+${PYSITELIB}/cvss/parser.py
+${PYSITELIB}/cvss/parser.pyc
+${PYSITELIB}/cvss/parser.pyo
