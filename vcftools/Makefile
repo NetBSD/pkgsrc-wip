@@ -17,13 +17,8 @@ USE_TOOLS+=	autoconf automake autoreconf gmake perl pkg-config
 GNU_CONFIGURE=	yes
 REPLACE_PERL=	src/perl/*
 
-# No zlib.pc on FreeBSD 9.x
-CONFIGURE_ENV+=	ZLIB_CFLAGS=" " ZLIB_LIBS="-lz"
-
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
 .include "../../devel/zlib/buildlink3.mk"
-# Causes configure to fail.  Perl modules are prebuilt.
-#.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
