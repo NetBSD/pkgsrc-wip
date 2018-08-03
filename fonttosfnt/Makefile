@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2012/09/28 23:21:48 asau Exp $
 
-DISTNAME=	fonttosfnt-1.0.4
-PKGREVISION=	1
+DISTNAME=	fonttosfnt-1.0.5
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
