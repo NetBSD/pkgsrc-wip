@@ -2,4 +2,4 @@ Alpha software, wait for release.
 Decide on FLIF vs. flif.
 
 This package has known vulnerabilities, please investigate and fix if possible:
- CVE-2018-10971, CVE-2018-10972, CVE-2018-11507, CVE-2018-12109
+ CVE-2018-10971, CVE-2018-10972, CVE-2018-11507, CVE-2018-12109, CVE-2018-14876
