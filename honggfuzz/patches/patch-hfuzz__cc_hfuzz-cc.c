@@ -7,10 +7,10 @@ $NetBSD$
  }
  
 +static int
-+hf_execvp(const char *file, char *const argv[])
++hf_execvp(const char *file, char *argv[])
 +{
-+	argv[0] = file;
-+	execvp(file, argv);
++	argv[0] = (char *)file;
++	return execvp(file, argv);
 +}
 +
  static int execCC(int argc, char** argv) {
