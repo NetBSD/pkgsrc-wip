@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (honggfuzz-1.6.tar.gz) = e6ab2a411fe8726e57815209d6fb1b6f4268538c
+RMD160 (honggfuzz-1.6.tar.gz) = 8ef15a0e38cd09a26f82a3683da6a363257ddce1
+SHA512 (honggfuzz-1.6.tar.gz) = db4f0f31d36080db983068435be82b3e1132145e0bad5c4e8e6504563f10ce66df4f977fbd0a9f1cbcd262e479f635a68ab7c1df70d23e8437164734ea562c90
+Size (honggfuzz-1.6.tar.gz) = 79322453 bytes
+SHA1 (patch-hfuzz__cc_hfuzz-cc.c) = 1351c251a5aa58cfbe510de6f92362cc4c465e4e
