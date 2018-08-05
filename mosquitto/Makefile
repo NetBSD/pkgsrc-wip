@@ -4,11 +4,11 @@ VERSION=	1.4.15
 DISTNAME=	mosquitto-${VERSION}
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://mosquitto.org/files/source/
+MASTER_SITES=	https://mosquitto.org/files/source/
 
 #MAINTAINER=	amoibos@gmail.com
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://mosquitto.org/
+HOMEPAGE=	https://mosquitto.org/
 COMMENT=	Open Source MQTT broker
 LICENSE=	epl-v1.0
 
