@@ -3011,7 +3011,6 @@ SUBDIR+=	py-coala_utils
 SUBDIR+=	py-cobra
 SUBDIR+=	py-cocos2d
 SUBDIR+=	py-codepy
-SUBDIR+=	py-cogapp
 SUBDIR+=	py-cogent
 SUBDIR+=	py-colorlog
 SUBDIR+=	py-colormath
