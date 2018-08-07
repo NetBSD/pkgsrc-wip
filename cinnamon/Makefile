@@ -16,7 +16,7 @@ NOT_PAX_MPROTECT_SAFE=	bin/cinnamon
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake bash pkg-config automake intltool
+USE_TOOLS+=	gmake bash pkg-config automake intltool xgettext
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=		yes
@@ -97,6 +97,7 @@ DEPENDS+=	gnome-icon-theme-[0-9]*:../../graphics/gnome-icon-theme
 #DEPENDS+=	gnome-terminal->=3.0.0:../../cinnamon/gnome-terminal
 DEPENDS+=	mate-polkit-[0-9]*:../../security/mate-polkit
 DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
+BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/schemas.mk"
