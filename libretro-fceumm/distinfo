@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:30:59 agc Exp $
-
-SHA1 (libretro-fceumm-20180418-82fd24e28d47c96aff0f3ebf370ea3afc06d6bd1.tar.gz) = 533948df200bebc31f11996fa57e7ee5422da7ce
-RMD160 (libretro-fceumm-20180418-82fd24e28d47c96aff0f3ebf370ea3afc06d6bd1.tar.gz) = e3a581db6ef21441a33e78643d92ffc91f2faa8c
-SHA512 (libretro-fceumm-20180418-82fd24e28d47c96aff0f3ebf370ea3afc06d6bd1.tar.gz) = f1a85d203cba6caf2c9a39b07e6a134fcff0a4e45f3d00e51167de2805391b39c3c306656846ad5e978fc4622e415d8c3207bb1c576ede258f9814c2c589c648
-Size (libretro-fceumm-20180418-82fd24e28d47c96aff0f3ebf370ea3afc06d6bd1.tar.gz) = 392616 bytes

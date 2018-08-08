@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:31:00 agc Exp $
-
-SHA1 (libretro-stella-20170124-cdbc9cc4e105ef884ac441cbd3f14d2d4eb47ba4.tar.gz) = d66dc3fb70635d97a0027ef043c3cbf7ce69b36b
-RMD160 (libretro-stella-20170124-cdbc9cc4e105ef884ac441cbd3f14d2d4eb47ba4.tar.gz) = d4e0c378157bafc936528554f198ee7ed828a12c
-SHA512 (libretro-stella-20170124-cdbc9cc4e105ef884ac441cbd3f14d2d4eb47ba4.tar.gz) = d7e7d38b0a24f42c7f8055f623c8816c0efd281a5e26abe0f9bc036e06460a3696bec1c3777f55d90a315dc008ee995c66b67027cfd29359018d366b9e0ed33c
-Size (libretro-stella-20170124-cdbc9cc4e105ef884ac441cbd3f14d2d4eb47ba4.tar.gz) = 695348 bytes
