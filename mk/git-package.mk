@@ -214,7 +214,7 @@ _GIT_CMD.checkout.${repo}= \
 
 # Create the cached archive from the checked out repository
 _GIT_CMD.create_archive.${repo}= \
-	if [ "$${rev_before-unknown}" != "$${rev_after-unknown}" ]; then \
+	if [ ! -f "$$archive" -o  "$${rev_before-unknown}" != "$${rev_after-unknown}" ]; then \
 	  ${STEP_MSG} "Creating cached Git archive $${archive\#\#*/}.";	\
 	  ${MKDIR} "$${archive%/*}";					\
 	  pax -w "$$extractdir" | gzip > "$$archive.tmp";		\
