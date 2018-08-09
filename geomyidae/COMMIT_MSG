@@ -72,6 +72,29 @@ some major issues fixed, so a new release is necessary:
 Thanks for everyone contributing!
 
 
+Geomyidae v0.30 release
+-----------------------
+What is new?
+
+ * The gph format now allows escaping of '|' characters. See the example
+   index.gph file in the distribution for how to or the manpage.
+ * Geomyidae has happy helping snowman support to help you with your dynamic
+   gph content generation in geomyidae. In case you add some spurious tab,
+   this little guy will appear and inform you about what happened.
+ * There is now a Links file for links to software related to application
+   development for geomyidae.
+ * The gentoo init.d script has been fixed.
+ * A slackware rc file was added.
+ * The makefile is now POSIX-compliant.
+ * The log format has been changed to be easier parsable for all kind of log
+   analyzers. (`[YYYY-MM-DD HH:mm:SS +ZZZZ|client|clientport|status] selector')
+ * A flag to not perform reverse lookups in log files has been added.
+ * Implement some CGI variables for cgi and dcgi. See the manpage for which
+   ones are available. Here you can see REMOTE_ADDR in action:
+
+        gopher://bitreich.org/0/ip
+
+
 Geomyidae 0.29 release
 ----------------------
 I am happy to announce the 0.29 release of geomyidae, a simple gopher server.
@@ -94,3 +117,30 @@ What has been changed:
           alignment of the send buffer to blocksize of the socket
 
 I want to thank all contributors! All patches are welcome!
+
+
+Geomyidae 0.28 release
+----------------------
+What's new in geomyidae?
+
+  * The parsing of gph files is now more liberal. When you do something wrong,
+    it will most of the time just display the line.
+  * DCGI speed was increased massively.
+  * Error messages are now more useful.
+  * More files are now handled as text files automatically.
+  * The OpenBSD rc.d file was fixed to modern days.
+  * Typos have been fixed.
+
+
+Geomyidae 0.27 release
+----------------------
+I am proud to announce the 0.27 release of geomyidae.
+
+ * dramatic improvement of serving speed
+ * security fixes
+ * a OpenBSD rc.d file was added
+ * the manpage has been updated to the current state
+ * there is no support for index.gph, index.dcgi and index.cgi,
+   which helps to write more REST-friendly apps
+
+I want to thank all contributors. All patches are welcome!
