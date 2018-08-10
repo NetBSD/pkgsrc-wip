@@ -11,17 +11,12 @@ name="geomyidae"
 rcvar=$name
 command="@PREFIX@/sbin/geomyidae"
 
-_geomyidae_user="@GEOMYIDAE_USER@"
-_geomyidae_group="@GEOMYIDAE_GROUP@"
-_geomyidae_rootdir="@GEOMYIDAE_ROOTDIR@"
-
-command_args="-u \"${_geomyidae_user}\" -g \"${_geomyidae_group}\" -b \"${_geomyidae_rootdir}\""
-required_dirs="${_geomyidae_rootdir}"
+geomyidae_flags=${geomyidae_flags-"-u @GEOMYIDAE_USER@ -g @GEOMYIDAE_GROUP@ -b @GEOMYIDAE_ROOTDIR@"}
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
 	echo -n "${name}"
-	${command} ${command_args} ${geomyidae_flags} 
+	${command} ${geomyidae_flags} ${command_args} 
 fi
