@@ -4,6 +4,7 @@ Based on net/Geomyidae.
 
 pkgsrc changes:
  - Update DISTNAME, PKGNAME, MASTER_SITES and HOMEPAGE
+ - Remove (not so useful) MESSAGE
  - Avoid NO_CONFIGURE=yes, also if a package does not provide a configure script
    it is not needed and can lead to confusion due the several configure targets
    that are removed
