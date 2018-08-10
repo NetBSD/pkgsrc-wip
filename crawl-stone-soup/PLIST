@@ -78,6 +78,7 @@ share/${PKGNAME}/dat/des/branches/temple_compat.des
 share/${PKGNAME}/dat/des/branches/tomb.des
 share/${PKGNAME}/dat/des/branches/vaults.des
 share/${PKGNAME}/dat/des/branches/vaults_rooms_empty.des
+share/${PKGNAME}/dat/des/branches/vaults_rooms_ghost.des
 share/${PKGNAME}/dat/des/branches/vaults_rooms_hard.des
 share/${PKGNAME}/dat/des/branches/vaults_rooms_standard.des
 share/${PKGNAME}/dat/des/branches/zot.des
@@ -159,6 +160,7 @@ share/${PKGNAME}/dat/des/variable/compat.des
 share/${PKGNAME}/dat/des/variable/d_encompass.des
 share/${PKGNAME}/dat/des/variable/float.des
 share/${PKGNAME}/dat/des/variable/geyser.des
+share/${PKGNAME}/dat/des/variable/ghost.des
 share/${PKGNAME}/dat/des/variable/grated_community.des
 share/${PKGNAME}/dat/des/variable/large_abstract.des
 share/${PKGNAME}/dat/des/variable/large_themed.des
@@ -435,6 +437,7 @@ share/${PKGNAME}/dat/descript/zh/unrand.txt
 share/${PKGNAME}/dat/dlua/debug.lua
 share/${PKGNAME}/dat/dlua/dungeon.lua
 share/${PKGNAME}/dat/dlua/fnwrap.lua
+share/${PKGNAME}/dat/dlua/ghost.lua
 share/${PKGNAME}/dat/dlua/init.lua
 share/${PKGNAME}/dat/dlua/iter.lua
 share/${PKGNAME}/dat/dlua/layout/geoelf.lua
@@ -565,6 +568,7 @@ share/${PKGNAME}/settings/dvorak_command_keys.txt
 share/${PKGNAME}/settings/ibm_glyphs.txt
 share/${PKGNAME}/settings/init.txt
 share/${PKGNAME}/settings/mac/Crawl profile.terminal
+share/${PKGNAME}/settings/neo_command_keys.txt
 share/${PKGNAME}/settings/no_vi_command_keys.txt
 share/${PKGNAME}/settings/old_unicode_glyphs.txt
 share/${PKGNAME}/settings/safe_move_shift.txt
