@@ -1,6 +1,4 @@
-geomyidae: Import geomyidae-0.32.2 as wip/geomyidae
-
-Based on net/Geomyidae.
+Geomyidae: Update net/Geomyidae to 0.32.2
 
 pkgsrc changes:
  - Update DISTNAME, PKGNAME, MASTER_SITES and HOMEPAGE
