@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://bitreich.org/releases/geomyidae/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jgw@sdf.org
-HOMEPAGE=	http://git.r-36.net/geomyidae/
+HOMEPAGE=	gopher://bitreich.org/1/scm/geomyidae
 COMMENT=	Gopher daemon for Linux/BSD
 LICENSE=	mit AND x11
 
