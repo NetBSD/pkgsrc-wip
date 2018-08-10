@@ -11,7 +11,7 @@ pkgsrc changes:
  - Add several variable to BUILD_DEFS
  - Honor GEOMYIDAE_USER, GEOMYIDAE_GROUP and GEOMYIDAE_ROOTDIR variables that
    will respectively set the user, group and rootdir of geomyidae
- - Instead of copypasting several rc scripts write a new ones ad-hoc for pkgsrc
+ - Instead of copypasting several rc scripts write a new one ad-hoc for pkgsrc
    that will run geomyidae unprivileged honoring the several GEOMYIDAE_*
    variables
  - Do not install a LICENSE file (we have the LICENSE variable for it!)
