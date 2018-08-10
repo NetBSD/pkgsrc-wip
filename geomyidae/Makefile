@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/geomyidae/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jgw@sdf.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	gopher://bitreich.org/1/scm/geomyidae
 COMMENT=	Gopher daemon for Linux/BSD
 LICENSE=	mit AND x11
