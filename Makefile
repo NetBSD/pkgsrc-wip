@@ -903,7 +903,6 @@ SUBDIR+=	genus2reduction
 SUBDIR+=	geoclue
 SUBDIR+=	geocode-glib
 SUBDIR+=	geoloc
-SUBDIR+=	geomyidae
 SUBDIR+=	gerris
 SUBDIR+=	gerris-snapshot
 SUBDIR+=	getdns
