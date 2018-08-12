@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (howdoi-1.1.11.tar.gz) = 46d04a9b4836a7a00c0ef3305a138e38d7ce4bc6
-RMD160 (howdoi-1.1.11.tar.gz) = d6bad79e34618039ffc3aa3f121253070112776b
-SHA512 (howdoi-1.1.11.tar.gz) = 88a2da83d3195b230fd3387da3c5290727e8cd257291716cce271b990b4a0bb0e05d18d1be785cfdf2f8b31d88054adfe0cba62be8cf5e59e2947e161f269748
-Size (howdoi-1.1.11.tar.gz) = 7982 bytes
+SHA1 (howdoi-1.1.13.tar.gz) = 1a4ef4a4560fa3152611914d49e3e6c4a17e7ec3
+RMD160 (howdoi-1.1.13.tar.gz) = 5c8c1165a21ef97f8661c53dd1f031dceaf3de27
+SHA512 (howdoi-1.1.13.tar.gz) = d7c3f495762e2c2ea1de1d565e5dcc687b9bb33dd33710bea59c2b47b9dc53d7f4cb2b327f0a0902ae392ee7a88f438db77234cd2a587e9e1cce0b80c2bf0c72
+Size (howdoi-1.1.13.tar.gz) = 8384 bytes
