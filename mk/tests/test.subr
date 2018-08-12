@@ -3,6 +3,7 @@
 set -eu
 
 srcdir="${0%/*}"
+testname="${0##*/}"
 
 step() {
 	echo "" 1>&2
@@ -33,12 +34,12 @@ setup_package() {
 	test -f "$pkgsrcdir/mk/bsd.pkg.mk" || die "This test must be run from inside pkgsrc"
 
 	category=`uuidgen 2>/dev/null || echo "wip-mk-scm-${RANDOM-4}"`
-	pkgdir="$pkgsrcdir/$category/mk-scm-tests"
+	pkgdir="$pkgsrcdir/$category/$testname"
 	rm -rf "$pkgdir"
 	mkdir -p "$pkgdir"
 	cp "$srcdir/$1" "$pkgdir/Makefile"
 	echo "Dummy description." > "$pkgdir/DESCR"
-	echo "@comment $""NetBSD""$" > "$pkgdir/PLIST"
+	echo "@comment \$""NetBSD""\$" > "$pkgdir/PLIST"
 	cd "$pkgdir"
 
 	repodir="$pkgdir/files/repo"
@@ -46,6 +47,10 @@ setup_package() {
 
 	tmpdir="$pkgdir/tmp"
 	mkdir -p "$tmpdir"
+
+	# Install the VCS if necessary; needed by setup_*_repository.
+	package_make depends
+	package_make clean
 
 	wrkdir=`package_make show-var VARNAME=WRKDIR`
 }
