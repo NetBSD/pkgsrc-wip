@@ -3,6 +3,7 @@ SRCS!= echo *.f
 PREFIX?=		/usr/pkg
 LIBDIR?=		${PREFIX}/lib
 SHLIBINSTALLDIR?=	${PREFIX}/lib
+INSTPRIV=		-U
 
 LIB=		slicot
 LDADD+=		-llapack -lblas

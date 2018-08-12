@@ -20,7 +20,6 @@ pre-build:
 	cp ${FILESDIR}/Makefile ${WRKSRC}/Makefile
 	cp ${FILESDIR}/shlib_version ${WRKSRC}/shlib_version
 
-
 .include "../../math/lapack/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
