@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (libretro-nestopia-1.48.tar.gz) = 5e1938241cdac92bae05fb68ba950ba045b934aa
-RMD160 (libretro-nestopia-1.48.tar.gz) = 4d3e8bc0b4b79883ca9d8b7601c6086a348c07f4
-SHA512 (libretro-nestopia-1.48.tar.gz) = 3b873c6fcc994365a183ba20b095b714371c47cc9de265abed43ec78babe87af5f608cf77a9092d2745fc324a418714c709b45fb4663b96a06329532d50afb09
-Size (libretro-nestopia-1.48.tar.gz) = 1263143 bytes
-SHA1 (patch-libretro_libretro.cpp) = bfcb5e6abd9918431c4a8cd042ef3758cb1fa518

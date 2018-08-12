@@ -1,9 +1,0 @@
-$NetBSD$
-
-SHA1 (libretro-bsnes-mercury-20170917-069aa038a1cdd055ae4c866be67ee05c5a020437.tar.gz) = 48decbe316b880ae1f7508b7174a99d8e67b0b55
-RMD160 (libretro-bsnes-mercury-20170917-069aa038a1cdd055ae4c866be67ee05c5a020437.tar.gz) = 1109e306eda59b875c5be679427334581bdf5947
-SHA512 (libretro-bsnes-mercury-20170917-069aa038a1cdd055ae4c866be67ee05c5a020437.tar.gz) = f6e8e58e90be89a80d14ab80700c8781f9373a97f10d0c5dd78111dd3f0d0727093955ce87a95050d8d8024ee71e54ea40de7d9b228e12dabaa83b48d434e5c0
-Size (libretro-bsnes-mercury-20170917-069aa038a1cdd055ae4c866be67ee05c5a020437.tar.gz) = 1335197 bytes
-SHA1 (patch-Makefile) = 47a1a32b152aa9472d5a4b65cbf03c5bfe9e7345
-SHA1 (patch-nall_platform.hpp) = 5a3765fcc9e4bce71b234b033d6b2401843e0232
-SHA1 (patch-target-libretro_Makefile) = f24752a781c4e9f62fbe9ab67d3240806f887cc6

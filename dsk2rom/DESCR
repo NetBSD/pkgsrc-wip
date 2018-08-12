@@ -1,4 +1,0 @@
-dsk2rom is a utility for converting MSX disk images (.dsk) to MSX ROM
-images (.rom).
-
-This allows them to be easily played in emulators such as libretro-fmsx.

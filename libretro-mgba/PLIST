@@ -1,5 +1,0 @@
-@comment $NetBSD$
-include/mgba/flags.h
-lib/libretro/mgba_libretro.so
-share/doc/mGBA/CHANGES
-share/doc/mGBA/README.md

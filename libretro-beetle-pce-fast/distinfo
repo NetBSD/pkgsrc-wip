@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/02/08 00:02:18 joerg Exp $
-
-SHA1 (libretro-beetle-pce-fast-20171202-0f1326a24a6cc802f7a6ece75a3d95232101f240.tar.gz) = 8f87347cd46b6626fa8a3b2214818faaa3a49125
-RMD160 (libretro-beetle-pce-fast-20171202-0f1326a24a6cc802f7a6ece75a3d95232101f240.tar.gz) = 7886a08e01bfab03abbfaa2290c9103eea852eac
-SHA512 (libretro-beetle-pce-fast-20171202-0f1326a24a6cc802f7a6ece75a3d95232101f240.tar.gz) = a2e79b079ba69ac4bf8d23999b0ca90bf5313ca204952ccc00d353bdf7452ac4230828872e6c2d9317cb5622fe5e6c473e1b0d55cb46a3c8fc08b514802e8f4d
-Size (libretro-beetle-pce-fast-20171202-0f1326a24a6cc802f7a6ece75a3d95232101f240.tar.gz) = 1151663 bytes
