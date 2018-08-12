@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (slicot_5.0+20101122.orig.tar.gz) = ec240abbf6d3d60da3a7dc21d22104abdfd86bd8
+RMD160 (slicot_5.0+20101122.orig.tar.gz) = fbddbb43452ffb2fcbbf8d049864974f4e624ffa
+SHA512 (slicot_5.0+20101122.orig.tar.gz) = bef2707bf484636a5c58325561e3f342f08887458020c4922a2b346b88047b48e3f2d372c5c984226856be5c327f2535c32cf299baa553b8bf0fbeea896d6c9b
+Size (slicot_5.0+20101122.orig.tar.gz) = 2489463 bytes
+SHA1 (patch-make.inc) = 0961b09f5ca313f9a7a61fee59a32d3eeccbef8d
