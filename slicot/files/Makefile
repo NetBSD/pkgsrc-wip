@@ -8,6 +8,4 @@ LIB=		slicot
 LDADD+=		-llapack -lblas
 LDFLAGS+=	-L${LIBDIR} -Wl,-R,${LIBDIR}
 
-MKUNPRIVED=	yes
-
 .include <bsd.lib.mk>

@@ -10,11 +10,11 @@ HOMEPAGE=	http://ftp.debian.org/debian/pool/main/s/slicot/
 COMMENT=	numerical algorithms from systems and control theory
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/slicot-5.0+20101122
+WRKSRC=		${WRKDIR}/${PKGNAME}/src
 USE_LANGUAGES=	fortran
 USE_TOOLS+=	mkstemp
 
-WRKSRC=		${WRKDIR}/${PKGNAME}/src
+INSTALLATION_DIRS+=	lib
 
 pre-build:
 	cp ${FILESDIR}/Makefile ${WRKSRC}/Makefile
