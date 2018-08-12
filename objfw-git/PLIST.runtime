@@ -1,2 +1,6 @@
 @comment $NetBSD$
-include/ObjFW/runtime.h
+include/ObjFW_RT/ObjFW_RT.h
+lib/libobjfw_rt.a
+lib/libobjfw_rt.so
+lib/libobjfw_rt.so.0
+lib/libobjfw_rt.so.0.0

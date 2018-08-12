@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/08/23 17:14:18 midar Exp $
+# $NetBSD$
 
-DISTNAME=	objfw-0.9
+DISTNAME=	objfw-0.91
 CATEGORIES=	devel
 
 COMMENT=	Portable, lightweight framework for the Objective-C language
@@ -9,7 +9,7 @@ HOMEPAGE=	https://heap.zone/objfw/
 MAINTAINER=	js@heap.zone
 
 GIT_REPOSITORIES=	objfw
-GIT_REPO.objfw=		https://heap.zone/git/objfw.git
+GIT_REPO.objfw=		https://github.com/ObjFW/ObjFW.git
 
 WRKSRC=			${WRKDIR}/objfw
 USE_TOOLS=		aclocal automake
@@ -24,8 +24,6 @@ PLIST_VARS+=	runtime bridge
 
 .if ${OPSYS} != "Darwin"
 PLIST.runtime =	yes
-.else
-PLIST.bridge =	yes
 .endif
 
 pre-configure:
