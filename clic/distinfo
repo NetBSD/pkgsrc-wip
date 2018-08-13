@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/02/26 16:52:21 leot Exp $
+
+SHA1 (clic-v1.01.tgz) = 58dc15228af54518765ba8b07915ff089c834bc3
+RMD160 (clic-v1.01.tgz) = 8f09b0b3938b0c3965cacc3433cd15add36d50fb
+SHA512 (clic-v1.01.tgz) = f08645e5e1953ae80275132fcc65887cdc6e018bead8ae69cf26b39fdc21d65a4042c4d3d47babbfc1bbf6327de33c9605495e982aeb541c265b0b7f6f3e8446
+Size (clic-v1.01.tgz) = 10550 bytes
+SHA1 (patch-Makefile) = 2caad90c2aedd3955b19f31d90c895f97eedb9bf

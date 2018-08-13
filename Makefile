@@ -401,6 +401,7 @@ SUBDIR+=	clementine
 SUBDIR+=	clfswm
 SUBDIR+=	clhep
 SUBDIR+=	cli-git
+SUBDIR+=	clic
 SUBDIR+=	cliquer
 SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
