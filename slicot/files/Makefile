@@ -10,3 +10,5 @@ LDADD+=		-llapack -lblas
 LDFLAGS+=	-L${LIBDIR} -Wl,-R,${LIBDIR}
 
 .include <bsd.lib.mk>
+
+LIBCC:=			${FC}

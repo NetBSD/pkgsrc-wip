@@ -1,2 +1,0 @@
-- using GCC-as-linker means we use base GCC, not pkgsrc gfortran which finds libgfortran.so
-Now libslicot doesn't know where libgfortran.so is (and it's dynamically linked against it)
