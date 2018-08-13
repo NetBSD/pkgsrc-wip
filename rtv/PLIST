@@ -94,6 +94,7 @@ ${PYSITELIB}/rtv/terminal.pyo
 ${PYSITELIB}/rtv/theme.py
 ${PYSITELIB}/rtv/theme.pyc
 ${PYSITELIB}/rtv/theme.pyo
+${PYSITELIB}/rtv/themes/colorblind-dark.cfg
 ${PYSITELIB}/rtv/themes/default.cfg.example
 ${PYSITELIB}/rtv/themes/molokai.cfg
 ${PYSITELIB}/rtv/themes/papercolor.cfg
