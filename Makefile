@@ -4182,6 +4182,7 @@ SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slashem
 SUBDIR+=	slate
 SUBDIR+=	slclust
+SUBDIR+=	slicot
 SUBDIR+=	slideml
 SUBDIR+=	slime
 SUBDIR+=	slowhttptest
