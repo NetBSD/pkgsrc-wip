@@ -16,5 +16,5 @@ SHA1 (ppsspp-1.6.3.tar.gz) = 5a4ec3f99dcb50840d26a2c738ff1ce4a37e7433
 RMD160 (ppsspp-1.6.3.tar.gz) = 0b0ea6c86aad60a7d9d176332ea62a88d23411fa
 SHA512 (ppsspp-1.6.3.tar.gz) = fe592c81a3b22ba0fff3dbd403ad2f6b9639c39d036db31132147a91a25793acb8698174a1c139b7dced01a9101777b5c53a1e5db6b5da0b7727f480ef597b8e
 Size (ppsspp-1.6.3.tar.gz) = 19477643 bytes
-SHA1 (patch-libretro_Makefile) = 3ae57acd3dfe2fbc696ee58126006fe4c813f6e1
-SHA1 (patch-libretro_Makefile.common) = 27b8a25a2ab882a90f09fd24f656eb6ac6b9d79e
+SHA1 (patch-libretro_Makefile) = ff14d98bb21d87b5a27f40b180d73beef7ab2f74
+SHA1 (patch-libretro_Makefile.common) = 5bce7657a4b6703903b71e7d33317dcb284e2759

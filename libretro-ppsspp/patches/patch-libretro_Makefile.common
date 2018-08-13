@@ -1,6 +1,6 @@
 $NetBSD$
 
-Fix "Build error: undefined references"
+Fix "Build error: undefined references".
 
 https://github.com/libretro/ppsspp/commit/68634705b9d6b5bc8db2232bc92b6ae06f0b31d8
 

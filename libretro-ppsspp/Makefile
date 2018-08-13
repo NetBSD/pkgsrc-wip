@@ -4,6 +4,7 @@ V=		1.6.3
 DISTNAME=	libretro-ppsspp-${V}
 CATEGORIES=	emulators
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/ppsspp/
 COMMENT=	Libretro core based on the PPSSPP PlayStation Portable emulator
 LICENSE=	gnu-gpl-v2
@@ -33,21 +34,19 @@ WRKSRC=		${WRKDIR}/ppsspp-${PKGVERSION_NOREV}
 BUILD_DIRS=	libretro
 
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 EXTRACT_USING=	bsdtar
 
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_ARCH:M*arm*)
 CFLAGS+=		-marm
-BUILD_MAKE_FLAGS+=	TARGET_ARCH=arm
+MAKE_FLAGS+=		TARGET_ARCH=arm
 .elif !empty(MACHINE_ARCH:M*x86_64*)
-BUILD_MAKE_FLAGS+=	TARGET_ARCH=x86_64
+MAKE_FLAGS+=		TARGET_ARCH=x86_64
 .elif !empty(MACHINE_ARCH:M*i386*)
-BUILD_MAKE_FLAGS+=	TARGET_ARCH=x86
+MAKE_FLAGS+=		TARGET_ARCH=x86
 .endif
-
-BUILD_MAKE_FLAGS+=	FFMPEGLDFLAGS="`pkg-config --libs libavformat libavcodec libavutil libswresample libswscale`"
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
@@ -63,8 +62,8 @@ do-install:
 .include "options.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
