@@ -11,7 +11,7 @@ COMMENT=	numerical algorithms from systems and control theory
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME}/src
-USE_LANGUAGES=	fortran c
+USE_LANGUAGES=	fortran
 USE_TOOLS+=	mkstemp
 
 INSTALLATION_DIRS+=	lib
