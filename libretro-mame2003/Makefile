@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	mame2003-libretro
 GITHUB_TAG=	58b3fedcf108647d4a78176c7ad2e763f6c32239
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/mame_2003/
 COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.78)
 LICENSE=	no-commercial-use
