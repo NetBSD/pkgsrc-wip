@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (libretro-np2kai-0.15.tar.gz) = ddc44119f0b9f809160a75130be7c416a94fa1e9
-RMD160 (libretro-np2kai-0.15.tar.gz) = f5ba8b508f7cd7869571edc6203a7a94b3ad1cc2
-SHA512 (libretro-np2kai-0.15.tar.gz) = 587d55863d3fb99f94706f112520b4db09db922efec6ebe358b7df01cd7a242d1e3cb96c04da6e3893b7d33a58f247740970e50aeed120545d584fafcba06852
-Size (libretro-np2kai-0.15.tar.gz) = 1944027 bytes
-SHA1 (patch-sound_mame_driver.h) = 5aee26309b33dbebd29580fdc2d6d99fc2aaf669

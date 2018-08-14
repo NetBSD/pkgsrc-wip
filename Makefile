@@ -1777,7 +1777,6 @@ SUBDIR+=	libretro-gearsystem
 SUBDIR+=	libretro-mame2003
 SUBDIR+=	libretro-mame2014
 SUBDIR+=	libretro-melonds
-SUBDIR+=	libretro-np2kai
 SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-pcsx-rearmed
 SUBDIR+=	libretro-prboom
