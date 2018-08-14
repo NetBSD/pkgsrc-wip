@@ -6,3 +6,6 @@ The options.mk should have a comment about what the ldap option does.
 
 The pcsc-lite option is now on by default, and it seems that it is
 non-optional.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  <https://www.x41-dsec.de/lab/advisories/x41-2018-003-pam_pkcs11/>
