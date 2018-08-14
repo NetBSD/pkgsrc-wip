@@ -1780,7 +1780,6 @@ SUBDIR+=	libretro-melonds
 SUBDIR+=	libretro-np2kai
 SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-pcsx-rearmed
-SUBDIR+=	libretro-ppsspp
 SUBDIR+=	libretro-prboom
 SUBDIR+=	libretro-px68k
 SUBDIR+=	libretro-tyrquake
