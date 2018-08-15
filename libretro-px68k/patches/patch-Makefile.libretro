@@ -1,8 +1,8 @@
 $NetBSD$
 
-Don't override CFLAGS
+Don't override CFLAGS.
 
---- Makefile.libretro.orig	2017-07-31 10:39:04.000000000 +0000
+--- Makefile.libretro.orig	2017-08-06 14:04:20.000000000 +0000
 +++ Makefile.libretro
 @@ -39,8 +39,7 @@ ENDIANNESS_DEFINES :=
  CORE_DIR := .
@@ -14,3 +14,11 @@ Don't override CFLAGS
  	TARGET := $(TARGET_NAME)_libretro.so
  	fpic := -fPIC
  	SHARED := -shared -Wl,--no-undefined -Wl,--version-script=link.T
+@@ -121,7 +120,6 @@ OBJECTS := $(SOURCES_CXX:.cpp=.o) $(SOUR
+ all: $(TARGET)
+ 
+ ifeq ($(DEBUG), 0)
+-   FLAGS += -O3 -ffast-math -fomit-frame-pointer
+ else
+    FLAGS += -O0 -g
+ endif
