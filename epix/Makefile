@@ -20,6 +20,6 @@ BUILD_DEPENDS+=		tex-amsmath-[0-9]*:../../print/tex-amsmath
 BUILD_DEPENDS+=		tex-eepic-[0-9]*:../../graphics/tex-eepic
 BUILD_DEPENDS+=		tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 BUILD_DEPENDS+=		tex-xcolor-[0-9]*:../../print/tex-xcolor
-BUILD_DEPENDS+=		tex-comment-[0-9]*:../../graphics/tex-comment
+BUILD_DEPENDS+=		tex-comment-[0-9]*:../../print/tex-comment
 
 .include "../../mk/bsd.pkg.mk"
