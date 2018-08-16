@@ -996,8 +996,6 @@ share/emacs/${PKGVERSION}/lisp/autorevert.el.gz
 share/emacs/${PKGVERSION}/lisp/autorevert.elc
 share/emacs/${PKGVERSION}/lisp/avoid.el.gz
 share/emacs/${PKGVERSION}/lisp/avoid.elc
-share/emacs/${PKGVERSION}/lisp/backtrace.el.gz
-share/emacs/${PKGVERSION}/lisp/backtrace.elc
 share/emacs/${PKGVERSION}/lisp/battery.el.gz
 share/emacs/${PKGVERSION}/lisp/battery.elc
 share/emacs/${PKGVERSION}/lisp/bindings.el.gz
@@ -1559,6 +1557,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/avl-tree.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/avl-tree.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/backquote.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/backquote.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/backtrace.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/backtrace.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/benchmark.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/benchmark.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/bindat.el.gz
