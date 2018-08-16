@@ -13,6 +13,8 @@ include/epix/Color_Neutral.h
 include/epix/Color_RGB.h
 include/epix/Color_Sep.h
 include/epix/Color_Utils.h
+include/epix/Complex.h
+include/epix/Sline.h
 include/epix/active_screen.h
 include/epix/affine.h
 include/epix/angle_units.h
@@ -90,7 +92,6 @@ include/epix/triples.h
 include/epix/utils.h
 include/epix/verbatim.h
 info/epix.info
-lib/epix/epix-lib.sh
 lib/epix/libepix.a
 man/man1/elaps.1
 man/man1/epix.1
@@ -112,3 +113,4 @@ share/doc/epix/notes/README
 share/doc/epix/notes/THANKS
 share/doc/epix/notes/VERSION
 share/doc/epix/sample_src.tar.gz
+share/epix/epix-lib.sh
