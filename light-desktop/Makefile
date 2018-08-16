@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.9 2013/04/21 18:04:04 kristerw Exp $
-#
 
 DISTNAME=	light-desktop-0.0
 PKGREVISION=	4
@@ -50,7 +49,7 @@ DEPENDS+=	evince>=2.32:../../print/evince
 DEPENDS+=	file-roller>=2.32:../../archivers/file-roller
 DEPENDS+=	galculator>=1.3:../../math/galculator
 DEPENDS+=	gnome-system-tools>=0:../../sysutils/gnome-system-tools
-DEPENDS+=	gnumeric>=1.10:../../math/gnumeric110
+DEPENDS+=	gnumeric>=1.12:../../math/gnumeric112
 DEPENDS+=	gpicview>=0:../../graphics/gpicview
 DEPENDS+=	mtpaint>=0:../../wip/mtpaint
 DEPENDS+=	gutenprint-lib>=0:../../print/gutenprint-lib
