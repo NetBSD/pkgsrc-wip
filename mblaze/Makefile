@@ -15,5 +15,9 @@ USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q} BINDIR=${PREFIX:Q}/bin MANDIR=${PREFIX:Q}/${PKGMANDIR}
 
+TEST_DEPENDS+=	perl-[0-9]*:../../lang/perl5
+
+TEST_TARGET=	check
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
