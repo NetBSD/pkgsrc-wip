@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2015/07/04 02:41:41 jihbed Exp $
 
-DISTNAME=	smmap2-2.0.3
+DISTNAME=	smmap2-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap2/}
