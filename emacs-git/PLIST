@@ -996,6 +996,8 @@ share/emacs/${PKGVERSION}/lisp/autorevert.el.gz
 share/emacs/${PKGVERSION}/lisp/autorevert.elc
 share/emacs/${PKGVERSION}/lisp/avoid.el.gz
 share/emacs/${PKGVERSION}/lisp/avoid.elc
+share/emacs/${PKGVERSION}/lisp/backtrace.el.gz
+share/emacs/${PKGVERSION}/lisp/backtrace.elc
 share/emacs/${PKGVERSION}/lisp/battery.el.gz
 share/emacs/${PKGVERSION}/lisp/battery.elc
 share/emacs/${PKGVERSION}/lisp/bindings.el.gz
