@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mblaze-0.3.2
+DISTNAME=	mblaze-0.4
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chneukirchen/}

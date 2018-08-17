@@ -22,6 +22,7 @@ bin/mnext
 bin/mpick
 bin/mprev
 bin/mquote
+bin/mrefile
 bin/mrep
 bin/mscan
 bin/msed
@@ -48,6 +49,7 @@ man/man1/mlist.1
 man/man1/mmime.1
 man/man1/mmkdir.1
 man/man1/mpick.1
+man/man1/mrefile.1
 man/man1/mrep.1
 man/man1/mscan.1
 man/man1/msed.1
