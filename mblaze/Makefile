@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	mblaze-0.4
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chneukirchen/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	sunil@nimmagadda.net
 HOMEPAGE=	https://github.com/chneukirchen/mblaze/
