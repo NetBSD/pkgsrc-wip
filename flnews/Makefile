@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	michael.baeuerle@gmx.net
 HOMEPAGE=	http://micha.freeshell.org/flnews/
 COMMENT=	Fast and lightweight USENET newsreader with GUI
-#LICENSE=	flnews-license
+LICENSE=	modified-bsd AND 2-clause-bsd AND unicode
 
 USE_LANGUAGES=	c c++
 
@@ -61,7 +61,6 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
 # OpenSSL 1.1 API is required for signature algorithm negotiation
 # OpenSSL 1.1 API is required for TLSv1.2 FFDHE group check
-# At least version 1.1.1 is required for TLSv1.3 prototcol
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 .include "../../security/openssl/buildlink3.mk"
 # FLTK must be compiled with multithreading support
