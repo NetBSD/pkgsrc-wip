@@ -15,6 +15,7 @@ USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q} BINDIR=${PREFIX:Q}/bin MANDIR=${PREFIX:Q}/${PKGMANDIR}
 
+# Needs prove
 TEST_DEPENDS+=	perl-[0-9]*:../../lang/perl5
 
 TEST_TARGET=	check
