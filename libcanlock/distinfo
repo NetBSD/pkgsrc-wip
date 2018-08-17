@@ -4,3 +4,5 @@ SHA1 (libcanlock-3.0.1.tar.bz2) = 609f3c5e6e5cefbe9c806c0372e258cb5a57d553
 RMD160 (libcanlock-3.0.1.tar.bz2) = c118b3ee8ac981e08102ebc105daaeba9d82b51b
 SHA512 (libcanlock-3.0.1.tar.bz2) = ccd4d81c49ab054359885eb1f8e65f1e978c4591a01dc280b029a5d8850b2b92895bd2c34c010da697946b27220f67f36346a6e2439b4e91a9da0c54bf08927c
 Size (libcanlock-3.0.1.tar.bz2) = 316579 bytes
+SHA1 (patch-test_canlocktest.c) = d04b6011f588c580d566e8f9ac6908df45d5ba71
+SHA1 (patch-test_canlocktest__legacy.c) = c6d8788b35d81c43c8cc447b04b912525ea4db44
