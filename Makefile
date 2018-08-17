@@ -2019,6 +2019,7 @@ SUBDIR+=	moregroupware
 SUBDIR+=	morse
 SUBDIR+=	mosquitto
 SUBDIR+=	motion
+SUBDIR+=	mothur
 SUBDIR+=	motti
 SUBDIR+=	mousetweaks
 SUBDIR+=	mozart

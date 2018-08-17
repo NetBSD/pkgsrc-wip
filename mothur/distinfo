@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (mothur-1.40.5.tar.gz) = 071027d188b7bd7aab2dbde918e6f5b57c642619
+RMD160 (mothur-1.40.5.tar.gz) = 07275246cdd3b5c23fde81b11942d33cbb8f6cbe
+SHA512 (mothur-1.40.5.tar.gz) = 569405703a72a1efc9c006a49aeb79b1f126d3f8078a6381056c8cf959f8326cbdd2db98cb50e1da985aa9e01480b94ca73dbbdbc96ab0b679a3662c583f34a8
+Size (mothur-1.40.5.tar.gz) = 1821436 bytes
+SHA1 (patch-Makefile) = 0858dd50719816fb960f1760daf19a7e7587503f
