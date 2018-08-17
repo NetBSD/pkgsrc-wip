@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	crystal-0.25.1-1-${LOWER_OPSYS}-${MACHINE_ARCH}
-PKGNAME=	crystal-bin-0.25.1
+DISTNAME=	crystal-0.26.0-1-${LOWER_OPSYS}-${MACHINE_ARCH}
+PKGNAME=	crystal-bin-0.26.0
 CATEGORIES=	lang
 MASTER_SITES=	https://github.com/crystal-lang/crystal/releases/download/${PKGVERSION_NOREV}/
 
