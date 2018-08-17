@@ -1946,7 +1946,6 @@ SUBDIR+=	mawk-rxspencer
 SUBDIR+=	mawk-tre
 SUBDIR+=	mawk-uxre
 SUBDIR+=	maxima-git
-SUBDIR+=	mblaze
 SUBDIR+=	mc-mp
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
