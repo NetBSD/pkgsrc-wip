@@ -5,23 +5,8 @@
 #              Tue Jul 31 12:32:39 CDT 2018               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-## $FreeBSD$
-# BUILD_DEPENDS=	bash:shells/bash
-#SHEBANG_FILES=	mk
-#PLIST_FILES=	bin/uchime
-#post-patch:
-# 	${REINPLACE_CMD} -e 's|g++|${CXX}|g' ${WRKSRC}/mk
-
-
-#do-install:
-#	${INSTALL_PROGRAM} ${WRKSRC}/uchime ${DESTDIR}${PREFIX}/bin
-#.include <bsd.port.mk>
-
-DISTNAME=	uchime4.2.40_src
-PKGNAME=	uchime-${PORTVERSION}
+DISTNAME=	uchime${PV}_src
+PKGNAME=	uchime-${PV}
 CATEGORIES=	biology
 MASTER_SITES=	http://drive5.com/uchime/
 
@@ -31,40 +16,10 @@ COMMENT=	Algorithm for detecting chimeric sequences
 # Check this
 LICENSE=	public-domain
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
 MAKE_FILE=	${FILESDIR}/Makefile
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
-# FreeBSD's SHEBANG_FILES may include bash, perl, python, etc.
-# I don't know which is which, so you'll have to finish.
-# Add bash, etc. to USE_TOOLS if used below.
-# 
-BUILD_TARGET=	 uchime
 
-PORTVERSION=	4.2.40
-DATADIR=	${PREFIX}/share/uchime
-DOCSDIR=	${PREFIX}/share/doc/uchime
-EXAMPLESDIR=	${PREFIX}/share/examples/uchime
+PV=	4.2.40
 
-SUBST_CLASSES+=                1
-SUBST_STAGE.1= post-patch
-SUBST_SED.1+=  -e 's|g++|${CXX}|g'
-SUBST_FILES.1+=        ${WRKSRC}/mk
-
-# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
-# .include "../../mk/bsd.prefs.mk"
-
-# Keep this if there are user-selectable options.
-# .include "options.mk"
-
-# Specify which directories to create before install.
-# You should only need this if using your own install target.
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
-
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
-# Linux doesn't have zlib in the base, so just in case...
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
