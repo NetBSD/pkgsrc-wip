@@ -22,7 +22,7 @@
 
 DISTNAME=	uchime4.2.40_src
 PKGNAME=	uchime-${PORTVERSION}
-CATEGORIES=	wip
+CATEGORIES=	biology
 MASTER_SITES=	http://drive5.com/uchime/
 
 MAINTAINER=	dsiercks@uwm.edu
@@ -33,6 +33,7 @@ LICENSE=	public-domain
 
 # Test and change if necessary.
 # MAKE_JOBS_SAFE=	no
+MAKE_FILE=	${FILESDIR}/Makefile
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
