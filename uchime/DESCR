@@ -1,0 +1,2 @@
+UCHIME is an algorithm for detecting chimeric sequences. It is implemented in
+the uchime_ref and uchime_denovo commands.

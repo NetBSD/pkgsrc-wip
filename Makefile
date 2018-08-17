@@ -4452,6 +4452,7 @@ SUBDIR+=	u-boot-full
 SUBDIR+=	uTox-git
 SUBDIR+=	uade
 SUBDIR+=	ubit
+SUBDIR+=	uchime
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	udp-ping
