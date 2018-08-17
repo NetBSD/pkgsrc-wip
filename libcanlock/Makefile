@@ -17,4 +17,11 @@ USE_LIBTOOL=	yes
 
 TEST_TARGET=	test
 
+# Disable obsolete Version 2 API
+SUBST_CLASSES+=			edit-header
+SUBST_STAGE.edit-header=	pre-configure
+SUBST_MESSAGE.edit-header=	Prepare header file
+SUBST_FILES.edit-header=	include/canlock.h
+SUBST_SED.edit-header=		-e 's,CL_API_V2  1,CL_API_V2  0,g'
+
 .include "../../mk/bsd.pkg.mk"
