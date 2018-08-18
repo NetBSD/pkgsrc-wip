@@ -1973,6 +1973,7 @@ SUBDIR+=	mic-paren
 SUBDIR+=	microbiomeutil
 SUBDIR+=	microblog-purple
 SUBDIR+=	microcom
+SUBDIR+=	micropolis
 SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
 SUBDIR+=	midori
