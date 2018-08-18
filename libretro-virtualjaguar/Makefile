@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libretro-virtualjaguar-20180502
+DISTNAME=	libretro-virtualjaguar-20180812
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	virtualjaguar-libretro
-GITHUB_TAG=	2ce1ec0a5f3e8d357795a3b5cfeffc8d91cdd52a
+GITHUB_TAG=	f3cf607b20ee69e78dbfd80010d3f485fdf67283
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/virtual_jaguar/
