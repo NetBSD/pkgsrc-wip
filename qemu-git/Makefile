@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.172 2017/08/30 21:00:46 kamil Exp $
 
-DISTNAME=	qemu-2.10.0
+DISTNAME=	qemu-3.0
 CATEGORIES=	emulators
 
 GIT_REPOSITORIES=	qemu
-GIT_REPO.qemu=		git://git.qemu-project.org/qemu.git
+GIT_REPO.qemu=		https://github.com/qemu/qemu.git
 
 WRKSRC=		${WRKDIR}/qemu
 

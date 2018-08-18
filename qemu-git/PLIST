@@ -62,6 +62,7 @@ ${PLIST.x86_64}bin/qemu-x86_64
 man/man1/qemu-img.1
 man/man1/qemu.1
 man/man7/qemu-block-drivers.7
+man/man7/qemu-cpu-models.7
 man/man7/qemu-ga-ref.7
 man/man7/qemu-qmp-ref.7
 man/man8/qemu-ga.8
