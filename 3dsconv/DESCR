@@ -1,0 +1,6 @@
+3dsconv.py is a Python 3 script that converts Nintendo 3DS CTR
+Cart Image files (CCI, ".cci", ".3ds") to the CTR Importable Archive
+format (CIA).
+
+3dsconv can detect if a CCI is decrypted, encrypted using original
+NCCH (slot 0x2C), or encrypted using zerokey.
