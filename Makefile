@@ -1774,7 +1774,6 @@ SUBDIR+=	libretro-4do
 SUBDIR+=	libretro-beetle-lynx
 SUBDIR+=	libretro-cap32
 SUBDIR+=	libretro-citra
-SUBDIR+=	libretro-fbalpha
 SUBDIR+=	libretro-fmsx
 SUBDIR+=	libretro-gearboy
 SUBDIR+=	libretro-gearsystem
