@@ -1,5 +1,5 @@
 nss-pam-ldapd provides a Name Service Switch (NSS) module that
-allows a LDAP server to provide user account, group, host name,
+allows an LDAP server to provide user account, group, host name,
 alias, netgroup, and basically any other information that you
 would normally get from /etc flat files or NIS.
 It also provides a Pluggable Authentication Module (PAM) to do
