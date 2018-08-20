@@ -139,6 +139,8 @@ ${PYSITELIB}/stem/util/term.py
 ${PYSITELIB}/stem/util/term.pyc
 ${PYSITELIB}/stem/util/term.pyo
 ${PYSITELIB}/stem/util/test_tools.py
+${PYSITELIB}/stem/util/test_tools.pyc
+${PYSITELIB}/stem/util/test_tools.pyo
 ${PYSITELIB}/stem/util/tor_tools.py
 ${PYSITELIB}/stem/util/tor_tools.pyc
 ${PYSITELIB}/stem/util/tor_tools.pyo
