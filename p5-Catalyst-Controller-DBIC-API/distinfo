@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/11/15 12:07:48 noud4 Exp $
 
-SHA1 (Catalyst-Controller-DBIC-API-2.006002.tar.gz) = b5f81b66b08e66d7934d569591924f21954db3e9
-RMD160 (Catalyst-Controller-DBIC-API-2.006002.tar.gz) = 4c32605e0d2b768e8669306177812dc57be7d733
-Size (Catalyst-Controller-DBIC-API-2.006002.tar.gz) = 53899 bytes
+SHA1 (Catalyst-Controller-DBIC-API-2.007002.tar.gz) = 01bad331b2882b2480c40c7f2b749b1cf343b03b
+RMD160 (Catalyst-Controller-DBIC-API-2.007002.tar.gz) = 488e61674e12b4ee7c7b7cbd5072a504e817e25d
+SHA512 (Catalyst-Controller-DBIC-API-2.007002.tar.gz) = e9648b0d36d3b4330db6ee4d09178528641e122ad46d521e51f02798f8532dffcef7571d9de1873a7061ab76d8643aa857c0d713e6a6c54c2a26fa9810f1c925
+Size (Catalyst-Controller-DBIC-API-2.007002.tar.gz) = 55372 bytes
