@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/Transforms/Instrumentation/AddressSanitizer.cpp.orig	2018-05-11 01:06:43.059844428 +0000
+--- lib/Transforms/Instrumentation/AddressSanitizer.cpp.orig	2018-08-20 14:06:28.442123766 +0000
 +++ lib/Transforms/Instrumentation/AddressSanitizer.cpp
 @@ -109,6 +109,7 @@ static const uint64_t kFreeBSD_ShadowOff
  static const uint64_t kFreeBSD_ShadowOffset64 = 1ULL << 46;
@@ -10,14 +10,14 @@ $NetBSD$
  static const uint64_t kPS4CPU_ShadowOffset64 = 1ULL << 40;
  static const uint64_t kWindowsShadowOffset32 = 3ULL << 28;
  
-@@ -529,9 +530,12 @@ static ShadowMapping getShadowMapping(Tr
+@@ -540,9 +541,12 @@ static ShadowMapping getShadowMapping(Tr
        Mapping.Offset = kSystemZ_ShadowOffset64;
-     else if (IsFreeBSD)
+     else if (IsFreeBSD && !IsMIPS64)
        Mapping.Offset = kFreeBSD_ShadowOffset64;
 -    else if (IsNetBSD)
 -      Mapping.Offset = kNetBSD_ShadowOffset64;
 -    else if (IsPS4CPU)
-+    else if (IsNetBSD && IsX86_64) {
++    else if (IsNetBSD) {
 +      if (IsKasan)
 +        Mapping.Offset = kNetBSDKasan_ShadowOffset64;
 +      else
