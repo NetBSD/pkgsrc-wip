@@ -5,7 +5,7 @@ CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=		libcxx
 SVN_REPO.libcxx=		http://llvm.org/svn/llvm-project/libcxx/trunk
-SVN_REVISION.libcxx=		334168
+SVN_REVISION.libcxx=		340319
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libcxx.llvm.org/
