@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-SHA1 (patch-lib_Basic_Targets_OSTargets.h) = b6acc576a95305931338c54b18e02fe9813796cf
+SHA1 (patch-lib_Basic_Targets_OSTargets.h) = f757d5e0b4ec4f79a6bd0f455b5003d69d7c77ad
 SHA1 (patch-test_Sema_128bitfloat.cpp) = badf88253b37f921c588f568fb8841be8556c5f3
 SHA1 (patch-tools_clang-format_CMakeLists.txt) = 9ba2acd056dcac4b6cd72bc335f192134ecad125

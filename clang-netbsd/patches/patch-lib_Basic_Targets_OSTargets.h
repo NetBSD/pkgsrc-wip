@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/Basic/Targets/OSTargets.h.orig	2018-04-27 13:37:59.000000000 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2018-08-21 21:14:38.937511396 +0000
 +++ lib/Basic/Targets/OSTargets.h
 @@ -364,12 +364,23 @@ protected:
      Builder.defineMacro("__ELF__");
@@ -13,7 +13,7 @@ $NetBSD$
  public:
    NetBSDTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
        : OSTargetInfo<Target>(Triple, Opts) {
-     this->MCountName = "_mcount";
+     this->MCountName = "__mcount";
 +
 +    switch (Triple.getArch()) {
 +    default:
