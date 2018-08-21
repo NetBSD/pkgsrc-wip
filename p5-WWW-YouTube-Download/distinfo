@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/02/17 09:10:08 jgoamakf Exp $
 
-SHA1 (WWW-YouTube-Download-0.59.tar.gz) = dfac369241ac4e22299be539ef5c86fe27b1bd09
-RMD160 (WWW-YouTube-Download-0.59.tar.gz) = 511bad7c7179233dfc6058bec3f08921841ccf4d
-SHA512 (WWW-YouTube-Download-0.59.tar.gz) = 2e2d8aa4e82ea99b67ada3fb35266ce83d45d9b79ce370ef2c5f009c3aecc029a999b3f38b94f2c39af89b224b4cb978b1a17cc7abd55792aac3bafd13a5b274
-Size (WWW-YouTube-Download-0.59.tar.gz) = 23481 bytes
+SHA1 (WWW-YouTube-Download-0.60.tar.gz) = 380c03bae8650bdac5014effe871e5bebd8cfd34
+RMD160 (WWW-YouTube-Download-0.60.tar.gz) = f432b61721a787b73e65d976dedb64444cf9828a
+SHA512 (WWW-YouTube-Download-0.60.tar.gz) = 5b5da44b469bde6444c4d02b7377080025a620bac4a570dc7bc1bc6ff5e6c6eced727ac94fef800bd7eef30e1fa512281d424fb2cca191c3d018d150cf71c778
+Size (WWW-YouTube-Download-0.60.tar.gz) = 23587 bytes

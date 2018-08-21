@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2014/02/17 09:10:08 jgoamakf Exp $
 
-DISTNAME=	WWW-YouTube-Download-0.59
+DISTNAME=	WWW-YouTube-Download-0.60
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/O/OA/OALDERS/
