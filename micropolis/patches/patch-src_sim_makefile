@@ -2,7 +2,7 @@ $NetBSD$
 
 configure SDL_mixer and remove undefined include
 
---- src/sim/makefile.orig	2018-07-27 06:20:19.363556471 +0000
+--- src/sim/makefile.orig	2018-08-21 05:12:24.952808425 +0000
 +++ src/sim/makefile
 @@ -5,8 +5,8 @@ TCLXHOME = ../tclx
  TCLLIBRARY = /usr/local/lib/tcl
@@ -15,7 +15,14 @@ configure SDL_mixer and remove undefined include
  
  CC = gcc
  
-@@ -31,7 +31,6 @@ INSTALL = install -s
+@@ -25,13 +25,12 @@ DEFINES = -DIS_LINUX -DORIGINAL_MONSTER_
+ CFLAGS += $(OPTFLAGS) $(DEFINES) -Wall
+ 
+ #LDFLAGS = -Bstatic
+-LDFLAGS=-L/usr/X11/lib -L/usr/X11R6/lib
++LDFLAGS+=-L/usr/X11/lib -L/usr/X11R6/lib
+ 
+ INSTALL = install -s
  
  INCLUDES = \
  	-Iheaders \

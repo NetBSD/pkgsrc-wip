@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.donhopkins.com/home/micropolis/
 COMMENT=	City-building simulation
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	bash:run pkg-config
 
 PATCH_SITES=	http://git.zerfleddert.de/micropolis/patches/
 PATCHFILES=	micropolis_git-1530263971-cc31822e4ebe54c0109623ac0c5cdf0e3acad755.patch
@@ -33,7 +33,10 @@ SUBST_MESSAGE.fix-x11-ldflags=	Fixing X11 ldflags.
 SUBST_FILES.fix-x11-ldflags=	src/sim/makefile src/tclx/config.mk src/tk/makefile
 SUBST_SED.fix-x11-ldflags=	-e 's|-L/usr/X11R6/lib|${X11_LDFLAGS}|g'
 
+REPLACE_BASH=	res/sounds/player
+
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
