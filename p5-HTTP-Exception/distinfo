@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/05/04 02:41:59 jgoamakf Exp $
 
-SHA1 (HTTP-Exception-0.04006.tar.gz) = 8cb7575d85dbf3c0dfca2c423422699dc29dd512
-RMD160 (HTTP-Exception-0.04006.tar.gz) = 3063ee4c4da8e0718210f5adda16aeef3dba8d8a
-SHA512 (HTTP-Exception-0.04006.tar.gz) = 3af50573a4e0df8571ca8cbcd5a44da82e6a01e26fb296664613bf3a600a108afad59e42cfd81e5cc6c15e479a05280dfeed42c9bc212cac6c4a3674da096178
-Size (HTTP-Exception-0.04006.tar.gz) = 25023 bytes
+SHA1 (HTTP-Exception-0.04007.tar.gz) = 0e43592d00f3b164d57da39df76fcd5074fa4f3f
+RMD160 (HTTP-Exception-0.04007.tar.gz) = bb1b8f9b74ee70cf1f365ce032681925cb6cbc2d
+SHA512 (HTTP-Exception-0.04007.tar.gz) = eec109a4e71eb73ff67f1b60364e096cf0493bec6b4a305dc2043e45e28a1cdc4c27c6739f9ec08dfe689c5f5310304b0884bc902d7fe9d886254fa4b5e72452
+Size (HTTP-Exception-0.04007.tar.gz) = 26198 bytes
