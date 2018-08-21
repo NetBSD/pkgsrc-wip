@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-04-25 21:13:40.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-08-21 21:25:40.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
 @@ -15,9 +15,15 @@
  #include "sanitizer_platform.h"
@@ -91,7 +91,16 @@ $NetBSD$
  unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
  unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
  unsigned struct_timex_sz = sizeof(struct timex);
-@@ -2063,6 +2085,39 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
+@@ -1804,8 +1826,6 @@ unsigned IOCTL_MTIOCSLOCATE = MTIOCSLOCA
+ unsigned IOCTL_MTIOCHLOCATE = MTIOCHLOCATE;
+ unsigned IOCTL_POWER_EVENT_RECVDICT = POWER_EVENT_RECVDICT;
+ unsigned IOCTL_POWER_IOC_GET_TYPE = POWER_IOC_GET_TYPE;
+-unsigned IOCTL_POWER_IOC_GET_TYPE_WITH_LOSSAGE =
+-    POWER_IOC_GET_TYPE_WITH_LOSSAGE;
+ unsigned IOCTL_RIOCGINFO = RIOCGINFO;
+ unsigned IOCTL_RIOCSINFO = RIOCSINFO;
+ unsigned IOCTL_RIOCSSRCH = RIOCSSRCH;
+@@ -2063,6 +2083,39 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
  
  const int si_SEGV_MAPERR = SEGV_MAPERR;
  const int si_SEGV_ACCERR = SEGV_ACCERR;
@@ -131,7 +140,7 @@ $NetBSD$
  }  // namespace __sanitizer
  
  using namespace __sanitizer;
-@@ -2224,4 +2279,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
+@@ -2224,4 +2277,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
  CHECK_SIZE_AND_OFFSET(group, gr_gid);
  CHECK_SIZE_AND_OFFSET(group, gr_mem);
  
