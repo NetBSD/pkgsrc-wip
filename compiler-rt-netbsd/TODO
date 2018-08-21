@@ -1,8 +1,3 @@
-- Add alert (Printf() & Die()) that if ASLR/NetBSD is detected, tsan isn't possible.
-  Technically we can workaround it with ReExec() and similar tricks
-  but since it can be disabled on per-application basis - require it on NetBSD for
-  tsan aware applications.
-  This might be comparable in future for msan/NetBSD.
 - FreeBSD reports issue in AsanTSDInit(), it calls pthread_key_create() while
   libthr.so is not loaded, and that causes pthread_key_create() to always return
   ENOSYS. https://reviews.llvm.org/D39254
