@@ -1,0 +1,6 @@
+Modifications compared to current pkgsrc package:
+- Master site updated
+- Updated to version 10.00beta3
+- Makefile rewritten for new autotools build system
+- Sent some patches required to built on NetBSD to upstream
+- Let pkgsrc select implementation of the Athena Widgets via XAW_TYPE

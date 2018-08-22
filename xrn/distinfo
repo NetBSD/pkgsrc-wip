@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.9 2015/11/02 23:49:48 agc Exp $
+
+SHA1 (xrn/10.00.tar.gz) = 1f54457b9fb544a7b88a1b0dc8e1f7f1c1c137da
+RMD160 (xrn/10.00.tar.gz) = 99d30371be693a8c5edde6f562e8e87d6f1f8954
+SHA512 (xrn/10.00.tar.gz) = a6aa2547add7198936f91ea67738ecc42f46c8caacffb94d14ab1b83180eafb856d1646e908a2bbbcb8f589002d110331760d1d6e5513bc24ed1a9077d4925e3
+Size (xrn/10.00.tar.gz) = 439107 bytes
+SHA1 (patch-clientlib.c) = b0f4f7b4c4c66b526f67d3f7ba1e2a1334ffa166
+SHA1 (patch-compose.c) = d3760e0bca4cea9a55631796c6e59c1a5420e942
+SHA1 (patch-config.h) = 6b32ec0ce14c4cfc99d2c940e895fd5ab343816f
+SHA1 (patch-error__hnds.c) = 1ec3ceb6731f626a25ffacdf46f98254c237b91e
+SHA1 (patch-file__cache.c) = ab8f2eb0f542319b32240d70adee5f14ce17ea4a
+SHA1 (patch-getdate.y) = a508f2206432b6238b202e3c6e27a401328c49b6
+SHA1 (patch-internals.c) = 721ada641f172e2483884aacc60a5791fb354d14
+SHA1 (patch-news.h) = 2b0a7fc36c61484d0cb9d45edfd31f0e53c09ee2
+SHA1 (patch-refile.c) = 208b277391475e4d97a897cc98eebc58bb8e9027
+SHA1 (patch-resources.c) = 04992241f39ab01784883182d19425cd8c254bc2
+SHA1 (patch-save.c) = b5b61a3461687b4d813aba8f6a57d48738a4755a
+SHA1 (patch-server.c) = 902fe2dea7492a7b8e9ddf94bdadcef318061ef5
+SHA1 (patch-tempnam.c) = 60de971e125f11003bcd4b1c4320c740d366f639

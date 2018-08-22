@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:07 joerg Exp $
+bin/xrn
+man/man1/xrn.1
+etc/X11/app-defaults/XRn
+share/doc/xrn/COMMON-PROBLMS
+share/doc/xrn/COPYRIGHT
+share/doc/xrn/CREDITS
+share/doc/xrn/ChangeLog
