@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	honggfuzz-1.6
+DISTNAME=	honggfuzz-1.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 
@@ -12,4 +12,5 @@ LICENSE=	apache-2.0
 USE_TOOLS+=	bash:run gmake
 
 .include "../../lang/libBlocksRuntime/buildlink3.mk"
+.include "../../devel/capstone/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
