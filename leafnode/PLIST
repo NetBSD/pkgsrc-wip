@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.6 2014/09/12 21:58:44 shattered Exp $
+bin/leafnode-version
+bin/newsq
+man/man1/leafnode-version.1
+man/man1/newsq.1
+man/man8/applyfilter.8
+man/man8/checkgroups.8
+man/man8/fetchnews.8
+man/man8/leafnode.8
+man/man8/texpire.8
+sbin/applyfilter
+sbin/checkgroups
+sbin/fetchnews
+sbin/leafnode
+sbin/texpire
+share/doc/leafnode/README
+share/doc/leafnode/README-FQDN
+share/doc/leafnode/README-MAINTAINER
+share/doc/leafnode/README-daemontools
+share/examples/leafnode/config.example
