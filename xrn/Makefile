@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	xrn-10.1
+DISTNAME=	xrn-10.11
 CATEGORIES=	news
 MASTER_SITES=	ftp://rtfm.mit.edu/pub/xrn/
 
@@ -30,9 +30,6 @@ XAW_TYPE=	standard
 #buildlink-Xaw3d-inc-hack: buildlink-directories
 #	cd ${BUILDLINK_DIR}/include/X11 && mv Xaw Xaw.standard && ln -s Xaw3d Xaw
 #.endif
-
-post-patch:
-	${CP} ${FILESDIR}/xrn.spec.in ${WRKSRC}
 
 pre-install:
 	for f in COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog; do \
