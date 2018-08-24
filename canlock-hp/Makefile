@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	canlock-hp-0.0.2
+DISTNAME=	canlock-hp-0.0.3
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/canlock-hp/src/
 EXTRACT_SUFX=	.tar.bz2
