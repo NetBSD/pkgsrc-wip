@@ -5,7 +5,7 @@ CATEGORIES=	news
 MASTER_SITES=	ftp://rtfm.mit.edu/pub/xrn/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mit.edu/people/jik/software/xrn.html
+HOMEPAGE=	https://stuff.mit.edu/~jik/software/xrn.html
 COMMENT=	USENET Newsreader for the X window system
 LICENSE=	modified-bsd
 
