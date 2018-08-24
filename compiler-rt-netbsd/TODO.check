@@ -52,11 +52,9 @@ Testing Time: 0.00s
 $ check-lsan
 
 ********************
-Testing Time: 7.91s
+Testing Time: 10.08s
 ********************
-Failing Tests (108):
-    LeakSanitizer-AddressSanitizer-i386 :: TestCases/Posix/posix_memalign-alignment.cc
-    LeakSanitizer-AddressSanitizer-i386 :: TestCases/allocator_returns_null.cc
+Failing Tests (100):
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/default_options.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/disabler.c
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/disabler.cc
@@ -80,8 +78,6 @@ Failing Tests (108):
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_stacks.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_stacks_threaded.cc
     LeakSanitizer-AddressSanitizer-i386 :: TestCases/use_unaligned.cc
-    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/Posix/posix_memalign-alignment.cc
-    LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/allocator_returns_null.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/default_options.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/disabler.c
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/disabler.cc
@@ -105,8 +101,6 @@ Failing Tests (108):
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_stacks.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_stacks_threaded.cc
     LeakSanitizer-AddressSanitizer-x86_64 :: TestCases/use_unaligned.cc
-    LeakSanitizer-Standalone-i386 :: TestCases/Posix/posix_memalign-alignment.cc
-    LeakSanitizer-Standalone-i386 :: TestCases/allocator_returns_null.cc
     LeakSanitizer-Standalone-i386 :: TestCases/default_options.cc
     LeakSanitizer-Standalone-i386 :: TestCases/disabler.c
     LeakSanitizer-Standalone-i386 :: TestCases/disabler.cc
@@ -134,8 +128,6 @@ Failing Tests (108):
     LeakSanitizer-Standalone-i386 :: TestCases/use_stacks.cc
     LeakSanitizer-Standalone-i386 :: TestCases/use_stacks_threaded.cc
     LeakSanitizer-Standalone-i386 :: TestCases/use_unaligned.cc
-    LeakSanitizer-Standalone-x86_64 :: TestCases/Posix/posix_memalign-alignment.cc
-    LeakSanitizer-Standalone-x86_64 :: TestCases/allocator_returns_null.cc
     LeakSanitizer-Standalone-x86_64 :: TestCases/default_options.cc
     LeakSanitizer-Standalone-x86_64 :: TestCases/disabler.c
     LeakSanitizer-Standalone-x86_64 :: TestCases/disabler.cc
@@ -165,30 +157,42 @@ Failing Tests (108):
     LeakSanitizer-Standalone-x86_64 :: TestCases/use_unaligned.cc
 
   Expected Passes    : 10
-  Unsupported Tests  : 66
-  Unexpected Failures: 108
+  Unsupported Tests  : 62
+  Unexpected Failures: 100
 
 $ check-ubsan
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 67.68s
+Testing Time: 67.85s
 ********************
-Failing Tests (2):
+Failing Tests (14):
+    UBSan-AddressSanitizer-i386 :: TestCases/ImplicitConversion/integer-conversion.c
+    UBSan-AddressSanitizer-i386 :: TestCases/ImplicitConversion/integer-truncation.c
     UBSan-AddressSanitizer-i386 :: TestCases/TypeCheck/vptr-non-unique-typeinfo.cpp
+    UBSan-AddressSanitizer-x86_64 :: TestCases/ImplicitConversion/integer-conversion.c
+    UBSan-AddressSanitizer-x86_64 :: TestCases/ImplicitConversion/integer-truncation.c
+    UBSan-MemorySanitizer-x86_64 :: TestCases/ImplicitConversion/integer-conversion.c
+    UBSan-MemorySanitizer-x86_64 :: TestCases/ImplicitConversion/integer-truncation.c
+    UBSan-Standalone-i386 :: TestCases/ImplicitConversion/integer-conversion.c
+    UBSan-Standalone-i386 :: TestCases/ImplicitConversion/integer-truncation.c
     UBSan-Standalone-i386 :: TestCases/TypeCheck/vptr-non-unique-typeinfo.cpp
+    UBSan-Standalone-x86_64 :: TestCases/ImplicitConversion/integer-conversion.c
+    UBSan-Standalone-x86_64 :: TestCases/ImplicitConversion/integer-truncation.c
+    UBSan-ThreadSanitizer-x86_64 :: TestCases/ImplicitConversion/integer-conversion.c
+    UBSan-ThreadSanitizer-x86_64 :: TestCases/ImplicitConversion/integer-truncation.c
 
-  Expected Passes    : 229
+  Expected Passes    : 245
   Expected Failures  : 1
-  Unsupported Tests  : 32
-  Unexpected Failures: 2
+  Unsupported Tests  : 34
+  Unexpected Failures: 14
 
 $ check-cfi
 
--- Testing: 232 tests, 8 threads --
+-- Testing: 496 tests, 8 threads --
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 0.12s
-  Unsupported Tests  : 232
+Testing Time: 0.23s
+  Unsupported Tests  : 496
 
 $ check-cfi-and-supported
 
@@ -198,30 +202,26 @@ $ make check-sanitizer
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 45.49s
+Testing Time: 44.59s
 ********************
-Failing Tests (31):
+Failing Tests (27):
     SanitizerCommon-asan-i386-NetBSD :: Posix/devname_r.cc
     SanitizerCommon-asan-i386-NetBSD :: Posix/readlinkat.c
-    SanitizerCommon-asan-i386-NetBSD :: Posix/weak_hook_test.cc
     SanitizerCommon-asan-i386-NetBSD :: get_module_and_offset_for_pc.cc
     SanitizerCommon-asan-i386-NetBSD :: pthread_mutexattr_get.cc
     SanitizerCommon-asan-i386-NetBSD :: sanitizer_coverage_trace_pc_guard.cc
     SanitizerCommon-asan-x86_64-NetBSD :: Posix/devname_r.cc
-    SanitizerCommon-asan-x86_64-NetBSD :: Posix/weak_hook_test.cc
     SanitizerCommon-asan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
     SanitizerCommon-asan-x86_64-NetBSD :: pthread_mutexattr_get.cc
     SanitizerCommon-asan-x86_64-NetBSD :: sanitizer_coverage_trace_pc_guard.cc
     SanitizerCommon-msan-x86_64-NetBSD :: NetBSD/getgroupmembership.cc
     SanitizerCommon-msan-x86_64-NetBSD :: Posix/dedup_token_length_test.cc
     SanitizerCommon-msan-x86_64-NetBSD :: Posix/devname_r.cc
-    SanitizerCommon-msan-x86_64-NetBSD :: Posix/weak_hook_test.cc
     SanitizerCommon-msan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
     SanitizerCommon-msan-x86_64-NetBSD :: pthread_mutexattr_get.cc
     SanitizerCommon-msan-x86_64-NetBSD :: sanitizer_coverage_trace_pc_guard.cc
     SanitizerCommon-tsan-x86_64-NetBSD :: Posix/dedup_token_length_test.cc
     SanitizerCommon-tsan-x86_64-NetBSD :: Posix/devname_r.cc
-    SanitizerCommon-tsan-x86_64-NetBSD :: Posix/weak_hook_test.cc
     SanitizerCommon-tsan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
     SanitizerCommon-tsan-x86_64-NetBSD :: pthread_mutexattr_get.cc
     SanitizerCommon-ubsan-i386-NetBSD :: Posix/dedup_token_length_test.cc
@@ -233,39 +233,42 @@ Failing Tests (31):
     SanitizerCommon-ubsan-x86_64-NetBSD :: get_module_and_offset_for_pc.cc
     SanitizerCommon-ubsan-x86_64-NetBSD :: pthread_mutexattr_get.cc
 
-  Expected Passes    : 576
+  Expected Passes    : 688
   Expected Failures  : 13
-  Unsupported Tests  : 206
-  Unexpected Failures: 31
+  Unsupported Tests  : 228
+  Unexpected Failures: 27
 
 $ check-fuzzer-default-x86_64
 
 ********************
-Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 38.20s
+Testing Time: 65.05s
 ********************
-Failing Tests (2):
-    LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: trace-malloc-threaded.test
+Failing Tests (5):
+    libFuzzer :: handle-unstable.test
+    libFuzzer :: trace-malloc-threaded.test
+    libFuzzer :: value-profile-cmp.test
+    libFuzzer :: value-profile-mem.test
+    libFuzzer :: value-profile-strcmp.test
 
-  Expected Passes    : 114
+  Expected Passes    : 81
   Unsupported Tests  : 12
-  Unexpected Failures: 2
+  Unexpected Failures: 5
 
 $ check-fuzzer
 
 ********************
-Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 37.68s
+Testing Time: 50.02s
 ********************
-Failing Tests (2):
-    LLVMFuzzer :: merge-posix.test
-    LLVMFuzzer :: trace-malloc-threaded.test
+Failing Tests (5):
+    libFuzzer :: handle-unstable.test
+    libFuzzer :: trace-malloc-threaded.test
+    libFuzzer :: value-profile-cmp.test
+    libFuzzer :: value-profile-mem.test
+    libFuzzer :: value-profile-strcmp.test
 
-  Expected Passes    : 114
+  Expected Passes    : 81
   Unsupported Tests  : 12
-  Unexpected Failures: 2
-
+  Unexpected Failures: 5
 
 $ check-fuzzer-unit
 
@@ -278,7 +281,7 @@ $ check-asan
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 194.09s
+Testing Time: 140.02s
 ********************
 Failing Tests (16):
     AddressSanitizer-Unit :: ./Asan-i386-calls-Noinst-Test/AddressSanitizer.ThreadedQuarantineTest
@@ -298,23 +301,22 @@ Failing Tests (16):
     AddressSanitizer-x86_64-netbsd :: TestCases/Posix/tsd_dtor_leak.cc
     AddressSanitizer-x86_64-netbsd :: TestCases/intercept-rethrow-exception.cc
 
-  Expected Passes    : 850
+  Expected Passes    : 851
   Expected Failures  : 4
-  Unsupported Tests  : 440
+  Unsupported Tests  : 437
   Unexpected Failures: 16
 
 $ check-asan-dynamic
 
 ********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 385.30s
+Testing Time: 74.22s
 ********************
 Unexpected Passing Tests (1):
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/interception_failure_test.cc
 
 ********************
-Failing Tests (221):
-    AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/concurrent_overflow.cc
+Failing Tests (220):
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/coverage-reset.cc
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/coverage.cc
     AddressSanitizer-i386-netbsd-dynamic :: TestCases/Posix/dlclose-test.cc
@@ -336,6 +338,7 @@ Failing Tests (221):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/deep_call_stack.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/deep_thread_stack.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/dlclose-test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/fgets_fputs.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/fread_fwrite.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/free_hook_realloc.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/freopen.cc
@@ -355,7 +358,6 @@ Failing Tests (221):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/new_array_cookie_test.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/new_array_cookie_uaf_test.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/new_array_cookie_with_new_from_class.cc
-    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/posix_memalign-alignment.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/print_cmdline.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/readv.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/Posix/shared-lib-test.cc
@@ -381,7 +383,6 @@ Failing Tests (221):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_safe_access.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_underflow_left.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/alloca_vla_interact.cc
-    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/allocator_returns_null.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/asan_and_llvm_coverage_test.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/asan_options-help.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/atexit_stats.cc
@@ -447,6 +448,7 @@ Failing Tests (221):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/memcmp_strict_test.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/memcmp_test.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/memset_test.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/non-executable-pc.cpp
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/null_deref.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/on_error_callback.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/partial_right.cc
@@ -521,11 +523,11 @@ Failing Tests (221):
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-dtor-order.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-goto.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-if.cc
-    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-i
-2 warning(s) in tests.
-nlined.cc
+    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-inlined.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop-bug.cc
-    AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop-removed.cc
+    Add
+2 warning(s) in tests.
+ressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop-removed.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-loop.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-nobug.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/use-after-scope-temp.cc
@@ -538,71 +540,78 @@ nlined.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/vla_loop_overfow.cc
     AddressSanitizer-x86_64-netbsd-dynamic :: TestCases/zero_page_pc.cc
 
-  Expected Passes    : 393
+  Expected Passes    : 395
   Expected Failures  : 3
-  Unsupported Tests  : 440
+  Unsupported Tests  : 437
   Unexpected Passes  : 1
-  Unexpected Failures: 221
+  Unexpected Failures: 220
 
 $ check-msan
 
 ********************
-Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 40.93s
+Testing Time: 51.40s
 ********************
-Failing Tests (4):
+Failing Tests (5):
     MemorySanitizer-X86_64 :: chained_origin_with_signals.cc
     MemorySanitizer-X86_64 :: dtls_test.c
+    MemorySanitizer-X86_64 :: fork.cc
     MemorySanitizer-X86_64 :: ioctl_custom.cc
     MemorySanitizer-X86_64 :: signal_stress_test.cc
 
   Expected Passes    : 103
   Expected Failures  : 1
-  Unsupported Tests  : 30
-  Unexpected Failures: 4
+  Unsupported Tests  : 29
+  Unexpected Failures: 5
 
 $ check-tsan
 
 ********************
-Testing Time: 1336.74s
+Testing Time: 61.81s
 ********************
-Failing Tests (8):
+Failing Tests (7):
     ThreadSanitizer-x86_64 :: dtls.c
     ThreadSanitizer-x86_64 :: getline_nohang.cc
     ThreadSanitizer-x86_64 :: ignore_lib5.cc
     ThreadSanitizer-x86_64 :: ignored-interceptors-mmap.cc
     ThreadSanitizer-x86_64 :: mutex_lock_destroyed.cc
-    ThreadSanitizer-x86_64 :: signal_block.cc
     ThreadSanitizer-x86_64 :: strerror_r.cc
     ThreadSanitizer-x86_64 :: vfork.cc
 
   Expected Passes    : 288
   Expected Failures  : 1
-  Unsupported Tests  : 85
-  Unexpected Failures: 8
+  Unsupported Tests  : 86
+  Unexpected Failures: 7
 
 $ check-safestack
 
--- Testing: 8 tests, 8 threads --
+********************
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 1.55s
+Testing Time: 0.56s
+********************
+Failing Tests (1):
+    SafeStack :: pthread-cleanup.c
+
   Expected Passes    : 7
   Unsupported Tests  : 1
+  Unexpected Failures: 1
 
 $ check-scudo
 
 ********************
-Testing Time: 6.06s
+Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
+Testing Time: 5.65s
 ********************
-Failing Tests (27):
+Failing Tests (29):
     Scudo-i386 :: memalign.c
     Scudo-i386 :: preload.cpp
     Scudo-i386 :: secondary.c
     Scudo-i386 :: threads.c
     Scudo-i386 :: tsd_destruction.c
     Scudo-i386 :: valloc.c
+    Scudo-x86_64 :: aligned-new.cpp
     Scudo-x86_64 :: alignment.c
     Scudo-x86_64 :: double-free.cpp
+    Scudo-x86_64 :: fsanitize.c
     Scudo-x86_64 :: interface.cpp
     Scudo-x86_64 :: malloc.cpp
     Scudo-x86_64 :: memalign.c
@@ -623,57 +632,59 @@ Failing Tests (27):
     Scudo-x86_64 :: tsd_destruction.c
     Scudo-x86_64 :: valloc.c
 
-  Expected Passes    : 15
-  Unexpected Failures: 27
+  Expected Passes    : 21
+  Unexpected Failures: 29
 
 $ check-ubsan-minimal
 
--- Testing: 8 tests, 8 threads --
+-- Testing: 10 tests, 8 threads --
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 1.00s
-  Expected Passes    : 6
+Testing Time: 0.50s
+  Expected Passes    : 8
   Unsupported Tests  : 2
-
 
 $ check-profile
 
--- Testing: 116 tests, 8 threads --
+-- Testing: 138 tests, 8 threads --
 Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
 Testing Time: 0.12s
-  Unsupported Tests  : 116
+  Unsupported Tests  : 138
 
 $ check-xray
 
 ********************
-Testing: 0 .. 10.. 20.. 30.. 40.. 50.. 60.. 70.. 80.. 90.. 
-Testing Time: 1.33s
+
+7 warning(s) in tests.
+Testing Time: 5.98s
 ********************
-Failing Tests (21):
-    XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.MultiThreadedCycling
-    XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.Multiple
-    XRay-Unit :: unit/./XRayFDRLoggingTest-x86_64-Test/FDRLoggingTest.Simple
+Failing Tests (23):
     XRay-x86_64-netbsd :: TestCases/Posix/arg1-arg0-logging.cc
     XRay-x86_64-netbsd :: TestCases/Posix/arg1-logger.cc
     XRay-x86_64-netbsd :: TestCases/Posix/arg1-logging-implicit-this.cc
     XRay-x86_64-netbsd :: TestCases/Posix/argv0-log-file-name.cc
     XRay-x86_64-netbsd :: TestCases/Posix/basic-filtering.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/c-test.cc
     XRay-x86_64-netbsd :: TestCases/Posix/common-trampoline-alignment.cc
     XRay-x86_64-netbsd :: TestCases/Posix/coverage-sample.cc
     XRay-x86_64-netbsd :: TestCases/Posix/custom-event-handler-alignment.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fdr-mode-inmemory.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/fdr-mode-multiple.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fdr-mode.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fdr-single-thread.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fdr-thread-order.cc
     XRay-x86_64-netbsd :: TestCases/Posix/fixedsize-logging.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/fork_basic_logging.cc
     XRay-x86_64-netbsd :: TestCases/Posix/func-id-utils.cc
     XRay-x86_64-netbsd :: TestCases/Posix/logging-modes.cc
     XRay-x86_64-netbsd :: TestCases/Posix/optional-inmemory-log.cc
     XRay-x86_64-netbsd :: TestCases/Posix/patching-unpatching.cc
     XRay-x86_64-netbsd :: TestCases/Posix/pic_test.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/profiling-multi-threaded.cc
+    XRay-x86_64-netbsd :: TestCases/Posix/profiling-single-threaded.cc
 
-  Expected Passes    : 33
+  Expected Passes    : 2
   Unsupported Tests  : 1
-  Unexpected Failures: 21
+  Unexpected Failures: 23
 
 $ check-shadowcallstack
 
