@@ -32,7 +32,7 @@ XAW_TYPE=	standard
 #.endif
 
 pre-install:
-	for f in COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog; do \
+	for f in COMMON-PROBLMS COPYRIGHT CREDITS; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/share/doc/xrn; \
 	done
 
