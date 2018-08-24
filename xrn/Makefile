@@ -16,6 +16,8 @@ USE_TOOLS+=	gmake lex pkg-config yacc
 DOCDIR=		share/doc/xrn
 INSTALLATION_DIRS+=	${DOCDIR}
 
+CONF_FILES=	${WRKSRC}/XRn ${PREFIX}/etc/X11/app-defaults/XRn
+
 .include "../../mk/bsd.prefs.mk"
 
 # Standard Xaw is the only variant supported by upstream
@@ -35,6 +37,9 @@ pre-install:
 	for f in COMMON-PROBLMS COPYRIGHT CREDITS; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/share/doc/xrn; \
 	done
+
+post-install:
+	rm ${DESTDIR}${PREFIX}/etc/X11/app-defaults/XRn
 
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
