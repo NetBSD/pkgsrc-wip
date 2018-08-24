@@ -18,13 +18,3 @@ Anything that is not documented should be considered as internal and not
 part of the API. There is no portable way to hide all the internal stuff
 completely, but expect that a future version may no longer export it without
 notice.
-
-
-4) Backward compatibility
-The old API from version 2 is still emulated, but it is now deprecated and
-undocumented.
-
-Including the header file from the new location, recompile and relink should
-be sufficient to port an existing application to version 3 of the library.
-It is also possible to install both version 2 and version 3 of the library
-in parallel.

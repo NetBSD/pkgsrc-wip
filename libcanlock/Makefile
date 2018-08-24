@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libcanlock-3.0.1
+DISTNAME=	libcanlock-3.0.2
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,11 +17,6 @@ USE_LIBTOOL=	yes
 
 TEST_TARGET=	test
 
-# Disable obsolete Version 2 API
-SUBST_CLASSES+=			edit-header
-SUBST_STAGE.edit-header=	post-patch
-SUBST_MESSAGE.edit-header=	Prepare header file
-SUBST_FILES.edit-header=	include/canlock.h
-SUBST_SED.edit-header=		-e 's,CL_API_V2  1,CL_API_V2  0,g'
+CONFIGURE_ARGS+=	--disable-legacy-api
 
 .include "../../mk/bsd.pkg.mk"
