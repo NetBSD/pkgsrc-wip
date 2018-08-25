@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2012/01/02 20:02:32 gduzan Exp $
 
-SHA1 (137323-libalkimia-4.3.1.tar.bz2) = a8381bf4def252425aca31d0929e31b1aa82d0b5
-RMD160 (137323-libalkimia-4.3.1.tar.bz2) = 94d4e1a6d9e03ca8d5dbf70f51d7f20af31b246f
-Size (137323-libalkimia-4.3.1.tar.bz2) = 30529 bytes
+SHA1 (libalkimia-5.0.0.tar.xz) = 8db0dc78a3ae6f5a277e53a0f46f828cd04d59d8
+RMD160 (libalkimia-5.0.0.tar.xz) = 3c48b68e0f0e02117ac9d67c5a96921962e3657b
+SHA512 (libalkimia-5.0.0.tar.xz) = 9ba205f5726f237389b9ea928ef37fc3b38161aaec5988dcc64afa3d8e53575a055b248e3c27e738db13f9e6af231f493e1374bbc50d0672729b0cdb391ce99f
+Size (libalkimia-5.0.0.tar.xz) = 28400 bytes

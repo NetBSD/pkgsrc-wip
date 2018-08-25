@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	libalkimia
 .if !defined(LIBALKIMIA_BUILDLINK3_MK)
 LIBALKIMIA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libalkimia+=	libalkimia>=4.0.0
-BUILDLINK_ABI_DEPENDS.libalkimia?=	libalkimia>=4.3.1
+BUILDLINK_API_DEPENDS.libalkimia+=	libalkimia>=5.0.0
+BUILDLINK_ABI_DEPENDS.libalkimia?=	libalkimia>=5.0.0
 BUILDLINK_PKGSRCDIR.libalkimia?=	../../wip/libalkimia
 
 .include "../../devel/gmp/buildlink3.mk"
