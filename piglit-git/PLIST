@@ -1,5 +1,4 @@
-@comment $NetBSD$
 bin/piglit
 share/doc/piglit/COPYING
-share/doc/piglit/README
+share/doc/piglit/README.md
 share/doc/piglit/RELEASE
