@@ -49,4 +49,5 @@ BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.5.0
 .include "../../x11/kdelibs4/buildlink3.mk"
 #.include "../../x11/libX11/buildlink3.mk"
 #.include "../../x11/qt4-libs/buildlink3.mk"
+DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 .include "../../mk/bsd.pkg.mk"
