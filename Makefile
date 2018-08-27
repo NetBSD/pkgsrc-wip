@@ -616,6 +616,7 @@ SUBDIR+=	drpython
 SUBDIR+=	drumpiler
 SUBDIR+=	ds2
 SUBDIR+=	dscan
+SUBDIR+=	dsniff
 SUBDIR+=	dspdfviewer
 SUBDIR+=	dssi
 SUBDIR+=	dtc
