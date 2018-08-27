@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.16 2016/04/18 08:34:35 leot Exp $
 
-.include "../../security/dsniff/Makefile.common"
+.include "../../wip/dsniff/Makefile.common"
 
 PKGNAME=	dsniff-nox11-${VERS}
 PKGREVISION=	9
