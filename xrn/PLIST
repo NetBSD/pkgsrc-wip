@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:07 joerg Exp $
+@comment $NetBSD$
 bin/xrn
 man/man1/xrn.1
 share/doc/xrn/COMMON-PROBLMS
 share/doc/xrn/COPYRIGHT
 share/doc/xrn/CREDITS
+share/examples/xrn/Xrn

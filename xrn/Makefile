@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake lex pkg-config yacc
 DOCDIR=		share/doc/xrn
 INSTALLATION_DIRS+=	${DOCDIR}
 
-CONF_FILES=	${WRKSRC}/XRn ${PREFIX}/etc/X11/app-defaults/XRn
+CONF_FILES=	${PREFIX}/share/examples/xrn/Xrn ${PREFIX}/etc/X11/app-defaults/XRn
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,7 +39,9 @@ pre-install:
 	done
 
 post-install:
-	rm ${DESTDIR}${PREFIX}/etc/X11/app-defaults/XRn
+	mkdir ${DESTDIR}${PREFIX}/share/examples
+	mkdir ${DESTDIR}${PREFIX}/share/examples/xrn
+	mv ${DESTDIR}${PREFIX}/etc/X11/app-defaults/XRn ${DESTDIR}${PREFIX}/share/examples/xrn/Xrn
 
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
