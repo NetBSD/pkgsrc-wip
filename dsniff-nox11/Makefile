@@ -3,7 +3,7 @@
 .include "../../wip/dsniff/Makefile.common"
 
 PKGNAME=	dsniff-nox11-${VERS}
-PKGREVISION=	9
+PKGREVISION=	10
 COMMENT=	Password sniffer
 
 CONFIGURE_ARGS+=	--without-x

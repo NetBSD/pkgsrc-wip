@@ -21,7 +21,6 @@ sbin/filesnarf
 sbin/macof
 sbin/mailsnarf
 sbin/msgsnarf
-sbin/sshmitm
 sbin/tcpkill
 sbin/tcpnice
 sbin/urlsnarf
