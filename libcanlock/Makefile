@@ -17,7 +17,7 @@ USE_LIBTOOL=	yes
 
 TEST_TARGET=	test
 
-# Recent NetBSD has a namespace clash its implementation defined extensions
+# Recent NetBSD has a namespace clash with its implementation defined extensions
 CFLAGS+=	-D_POSIX_C_SOURCE=200112L
 
 CONFIGURE_ARGS+=	--disable-legacy-api
