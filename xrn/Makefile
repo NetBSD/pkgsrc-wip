@@ -16,7 +16,6 @@ USE_TOOLS+=	gmake lex pkg-config yacc
 DOCDIR=		share/doc/xrn
 INSTALLATION_DIRS+=	${DOCDIR}
 INSTALLATION_DIRS+=	share/examples/xrn
-INSTALLATION_DIRS+=	etc/X11/app-defaults/
 
 MAKE_DIRS+=	${PREFIX}/etc/X11/app-defaults
 CONF_FILES=	${PREFIX}/share/examples/xrn/Xrn ${PREFIX}/etc/X11/app-defaults/XRn
