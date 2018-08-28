@@ -3,7 +3,6 @@
 DISTNAME=	gitea-1.5.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
 CATEGORIES=	www
-GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	tuxillo@quantumachine.net
@@ -11,13 +10,14 @@ HOMEPAGE=	https://gitea.io/
 COMMENT=	Compact self-hosted GIT service
 LICENSE=	mit
 
-GO_DIST_BASE=		${GITHUB_PROJECT}-${PKGVERSION}
+GO_DIST_BASE=		${DISTNAME}
 GO_SRCPATH=		code.gitea.io/gitea
 GO_BUILD_PATTERN+=	-tags ${GO_TAGS}
 GO_BUILD_PATTERN+=	${GO_SRCPATH}
 
 BUILD_DEFS+=	VARBASE GITEA_USER GITEA_GROUP
 
+EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pax
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
