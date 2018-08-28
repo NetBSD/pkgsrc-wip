@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=		canlock ssl
 ### canlock support
 ###
 .if !empty(PKG_OPTIONS:Mcanlock)
-.  include "../../wip/libcanlock/buildlink3.mk"
+.  include "../../news/libcanlock/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-canlock=${BUILDLINK_PREFIX.libcanlock}
 .else
 CONFIGURE_ARGS+=	--without-canlock

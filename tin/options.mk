@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=		canlock inet6 nls termcap # see PR #51819
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcanlock)
-.include "../../wip/libcanlock/buildlink3.mk"
+.include "../../news/libcanlock/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cancel-locks
 .endif
 
