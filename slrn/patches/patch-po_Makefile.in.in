@@ -4,7 +4,7 @@ Directly use INSTALL_DATA as ${mkdir_p}.
 
 --- po/Makefile.in.in.orig	2008-02-11 19:04:23.000000000 +0100
 +++ po/Makefile.in.in
-@@ -46,7 +46,7 @@ INSTALL_DATA = @INSTALL_DATA@
+@@ -47,7 +47,7 @@ INSTALL_DATA = @INSTALL_DATA@
  # versions, $(mkinstalldirs) and $(install_sh) are unused.
  #mkinstalldirs = $(SHELL) @install_sh@ -d
  #install_sh = $(SHELL) @install_sh@
