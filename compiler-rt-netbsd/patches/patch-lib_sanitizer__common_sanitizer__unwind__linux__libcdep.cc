@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_unwind_linux_libcdep.cc.orig	2018-05-10 23:16:36.000000000 +0000
+--- lib/sanitizer_common/sanitizer_unwind_linux_libcdep.cc.orig	2018-08-21 21:25:40.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_unwind_linux_libcdep.cc
 @@ -97,7 +97,7 @@ uptr Unwind_GetIP(struct _Unwind_Context
    // Clear the Thumb bit.

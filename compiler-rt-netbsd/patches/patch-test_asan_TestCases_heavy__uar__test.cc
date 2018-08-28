@@ -1,6 +1,6 @@
 $NetBSD$
 
---- test/asan/TestCases/heavy_uar_test.cc.orig	2018-06-01 09:39:33.000000000 +0000
+--- test/asan/TestCases/heavy_uar_test.cc.orig	2018-08-21 21:25:29.000000000 +0000
 +++ test/asan/TestCases/heavy_uar_test.cc
 @@ -53,8 +53,8 @@ int main(int argc, char **argv) {
      RecursiveFunctionWithStackFrame<1024>(depth);

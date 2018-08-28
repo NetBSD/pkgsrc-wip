@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/Modules/HandleCompilerRT.cmake.orig	2018-06-01 09:36:57.000000000 +0000
+--- cmake/Modules/HandleCompilerRT.cmake.orig	2018-08-21 21:25:36.000000000 +0000
 +++ cmake/Modules/HandleCompilerRT.cmake
 @@ -1,5 +1,5 @@
  function(find_compiler_rt_library name variable)

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/tsan/CMakeLists.txt.orig	2018-04-25 21:13:39.000000000 +0000
+--- lib/tsan/CMakeLists.txt.orig	2018-08-21 21:25:37.000000000 +0000
 +++ lib/tsan/CMakeLists.txt
-@@ -206,7 +206,7 @@ endif()
+@@ -215,7 +215,7 @@ endif()
  # in the base system due to incompatibilities between FreeBSD's and Clang's
  # versions. As a workaround do not use --sysroot=. on FreeBSD until this is
  # addressed.

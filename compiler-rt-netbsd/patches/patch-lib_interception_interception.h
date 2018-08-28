@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/interception/interception.h.orig	2018-06-01 09:36:54.000000000 +0000
+--- lib/interception/interception.h.orig	2018-08-21 21:25:37.000000000 +0000
 +++ lib/interception/interception.h
 @@ -29,6 +29,7 @@ typedef __sanitizer::uptr    SIZE_T;
  typedef __sanitizer::sptr    SSIZE_T;

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2018-04-25 21:13:40.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2018-08-21 21:25:39.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_posix.h
 @@ -1504,6 +1504,7 @@ struct __sanitizer_cookie_io_functions_t
  

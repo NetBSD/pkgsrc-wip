@@ -1,6 +1,6 @@
 $NetBSD$
 
---- test/asan/TestCases/interception_failure_test.cc.orig	2018-02-01 23:45:56.000000000 +0000
+--- test/asan/TestCases/interception_failure_test.cc.orig	2018-08-21 21:25:31.000000000 +0000
 +++ test/asan/TestCases/interception_failure_test.cc
 @@ -5,7 +5,7 @@
  // RUN: %clangxx_asan -O1 %s -o %t && %run %t 2>&1 | FileCheck %s
