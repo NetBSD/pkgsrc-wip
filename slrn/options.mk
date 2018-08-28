@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.slrn
 PKG_SUPPORTED_OPTIONS=		canlock ssl uulib
-PKG_SUGGESTED_OPTIONS=		canlock ssl
+PKG_SUGGESTED_OPTIONS=		canlock ssl uulib
 
 .include "../../mk/bsd.options.mk"
 
