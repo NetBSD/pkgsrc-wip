@@ -866,7 +866,6 @@ SUBDIR+=	galib
 SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambatte-dev
 SUBDIR+=	gambit
-SUBDIR+=	ganglia-web
 SUBDIR+=	gappa
 SUBDIR+=	garden
 SUBDIR+=	gat
