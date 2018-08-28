@@ -44,5 +44,7 @@ post-install:
 	mv ${DESTDIR}${PREFIX}/etc/X11/app-defaults/XRn ${DESTDIR}${PREFIX}/share/examples/xrn/Xrn
 
 .include "../../mk/xaw.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
