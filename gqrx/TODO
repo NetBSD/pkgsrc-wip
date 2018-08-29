@@ -1,3 +1,10 @@
+2018-08-29
+================
+Does not work with ASLR, blaming gnuradio.
+
+
+
+================
 * File bug upstream (or fix the README) about the boost requirement.
 
 * test

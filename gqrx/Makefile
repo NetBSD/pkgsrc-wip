@@ -1,8 +1,8 @@
 # $NetBSD$
 
-VERSION=	2.5.3
+VERSION=	2.11.5
 
-DISTNAME=	gqrx-sdr-src-${VERSION}
+DISTNAME=	gqrx-sdr-${VERSION}-src
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=csete/}
 GITHUB_PROJECT=	gqrx
@@ -17,6 +17,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/gqrx-sdr-${VERSION}
 USE_CMAKE=	yes
+#CMAKE_ARGS+=	-DTRY_SHM_VMCIRCBUF=ON
 USE_LANGUAGES=	c c++
 
 ## These dependencies are organized according to upstream's README
@@ -39,9 +40,12 @@ USE_LANGUAGES=	c c++
 # These are drivers for particular hardware.  They are smallish and
 # therefore not optional.  (Also, gr-osmosdr depends on them, so
 # avoiding dependencies would not save space.)
-.include "../../ham/gnuradio-fcd/buildlink3.mk"
+
+#broken
+#.include "../../ham/gnuradio-fcd/buildlink3.mk"
 .include "../../ham/gnuradio-uhd/buildlink3.mk"
-.include "../../ham/gr-fcdproplus/buildlink3.mk"
+#broken
+#.include "../../ham/gr-fcdproplus/buildlink3.mk"
 .include "../../ham/rtl-sdr/buildlink3.mk"
 .include "../../ham/osmo-sdr/buildlink3.mk"
 .include "../../ham/hackrf/buildlink3.mk"
@@ -55,6 +59,3 @@ USE_LANGUAGES=	c c++
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
-
-# Pointers to other packaging systems:
-# https://www.freshports.org/comms/gqrx/
