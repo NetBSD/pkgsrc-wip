@@ -12,12 +12,13 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-CMAKE_ARGS+=	-DDUMB=OFF -DDYNLOAD=OFF -DFLUIDSYNTH=OFF -DMODPLUG=ON
+CMAKE_ARGS+=	-DDUMB=OFF -DDYNLOAD=OFF -DMODPLUG=ON
 
 PKGCONFIG_OVERRIDE+=	alure-static.pc.in
 PKGCONFIG_OVERRIDE+=	alure.pc.in
 
 .include "../../audio/flac/buildlink3.mk"
+.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
