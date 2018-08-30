@@ -2,14 +2,14 @@ $NetBSD: patch-aa,v 1.2 2012/07/19 13:24:03 bubuchka Exp $
 
 The powl(3) actually can be avoided in this particular case.
 
---- src/bigmemory.cpp.orig	2011-07-26 16:35:38.000000000 +0000
+--- src/bigmemory.cpp.orig	2018-08-30 07:23:28.000000000 +0000
 +++ src/bigmemory.cpp
-@@ -39,7 +39,7 @@ string ttos<char>(char i)
+@@ -60,7 +60,7 @@ string ttos<char>(char i)
  
  bool TooManyRIndices( index_type val )
  {
--  return val > (powl(2, 31)-1);
-+  return val > (index_type)0xffffffff;	/* 2^31 - 1 */
+-  return double(val) > pow(2.0, 31.0)-1.0;
++  return double(val) > (index_type)0xffffffff; /* 2^31 - 1 */
  }
  
  template<typename CType, typename RType, typename BMAccessorType>

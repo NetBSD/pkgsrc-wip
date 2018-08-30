@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.4 2012/11/15 23:16:08 bubuchka Exp $
 
-SHA1 (R/bigmemory_4.5.19.tar.gz) = fc44f70f1dac9ff679a860be62af5d38263d3613
-RMD160 (R/bigmemory_4.5.19.tar.gz) = 4c72e54b9061e8c90a49b51c9ff3075f6e27f614
-SHA512 (R/bigmemory_4.5.19.tar.gz) = c990386c5c36c28e21c41a62f5a283d33f3e6c5049d4406cea00cff4e74821766b3fcf2ce0d8ff61a68ff959217f6a918dd0d0e736eae729bab61a9620f49107
-Size (R/bigmemory_4.5.19.tar.gz) = 236680 bytes
-SHA1 (patch-aa) = 4c71d8c440ba3df515f6bc1373d4dd66ecd7eac4
+SHA1 (R/bigmemory_4.5.33.tar.gz) = 6cd6272299b51f36c587f9afb59348a23681f1d9
+RMD160 (R/bigmemory_4.5.33.tar.gz) = 5fd529ec1f740aa29b79bbdf9540973cb7b4bb7d
+SHA512 (R/bigmemory_4.5.33.tar.gz) = e864f55e4f3ee672d0e57cc85721fe06705f297ad41d0c72f66518077e575866aca653f90cbb9345e9fe10f55cf402373ec2f21f4b9cc2cc93c3f68ee5ec0a9c
+Size (R/bigmemory_4.5.33.tar.gz) = 243135 bytes
+SHA1 (patch-aa) = 02adcc82e5673df1c2a8f135e098e3217ef2fb3f
