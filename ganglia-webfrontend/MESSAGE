@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.4 2016/02/16 13:14:07 fhajny Exp $
+
+The Ganglia Web Frontend has been installed in the directory
+${PREFIX}/${DOCROOT}
+
+You must add appropriate configuration directives to your
+web server configuration file. You can use this example
+include line, for Apache:
+
+  Include ${PKG_SYSCONFDIR}/apache.conf
+
+or for Nginx:
+
+  include ${PKG_SYSCONFDIR}/nginx.conf;
+
+===========================================================================
