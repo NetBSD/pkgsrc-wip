@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/08/18 18:36:32 yhardy Exp $
 
-DISTNAME=	urlwatch-2.13
+DISTNAME=	urlwatch-2.14
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
 
@@ -10,6 +10,7 @@ COMMENT=	Watch web pages and arbitrary URLs for changes
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
 DEPENDS+=	${PYPKGPREFIX}-minidb-[0-9]*:../../wip/py-minidb
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
