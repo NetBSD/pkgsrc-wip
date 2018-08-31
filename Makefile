@@ -1026,6 +1026,7 @@ SUBDIR+=	go-collectd
 SUBDIR+=	go-flags
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-ghodss-yaml
+SUBDIR+=	go-gopacket
 SUBDIR+=	go-humanize
 SUBDIR+=	go-kr-text
 SUBDIR+=	go-log

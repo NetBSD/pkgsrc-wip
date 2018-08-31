@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:20:57 gavan Exp $
+
+SHA1 (gopacket-1.1.14.tar.gz) = ba94a8caeffa94664d9e6f8dc18c5c26372623de
+RMD160 (gopacket-1.1.14.tar.gz) = 47ccba7e0237b1fee92b5df7f8358a243d4b4992
+SHA512 (gopacket-1.1.14.tar.gz) = fda58ad503e2547b0e09e511a2ffe5b2e6fa7ba1df3cbf26ae6e08075420586f0f1f553914ee969fcfbdd0a344e240a0d11ae85266c926f138d3efe6afa250b2
+Size (gopacket-1.1.14.tar.gz) = 748336 bytes
