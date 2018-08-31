@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-08-21 21:25:40.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-08-31 08:13:42.913618270 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -77,6 +77,11 @@
  #define ctime __ctime50
@@ -61,23 +61,6 @@ $NetBSD$
    return res;
  }
  #define INIT_GETPEERNAME COMMON_INTERCEPT_FUNCTION(getpeername);
-@@ -3345,14 +3363,14 @@ INTERCEPTOR(INTMAX_T, strtoimax, const c
-   return res;
- }
- 
--INTERCEPTOR(INTMAX_T, strtoumax, const char *nptr, char **endptr, int base) {
-+INTERCEPTOR(UINTMAX_T, strtoumax, const char *nptr, char **endptr, int base) {
-   void *ctx;
-   COMMON_INTERCEPTOR_ENTER(ctx, strtoumax, nptr, endptr, base);
-   // FIXME: under ASan the call below may write to freed memory and corrupt
-   // its metadata. See
-   // https://github.com/google/sanitizers/issues/321.
-   char *real_endptr;
--  INTMAX_T res = REAL(strtoumax)(nptr, &real_endptr, base);
-+  UINTMAX_T res = REAL(strtoumax)(nptr, &real_endptr, base);
-   StrtolFixAndCheck(ctx, nptr, endptr, real_endptr, base);
-   return res;
- }
 @@ -4240,7 +4258,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
  #endif
  

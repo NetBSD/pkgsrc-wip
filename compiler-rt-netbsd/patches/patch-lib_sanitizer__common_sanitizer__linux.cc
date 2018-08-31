@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-08-21 21:25:39.000000000 +0000
+--- lib/sanitizer_common/sanitizer_linux.cc.orig	2018-08-31 08:13:43.281423466 +0000
 +++ lib/sanitizer_common/sanitizer_linux.cc
-@@ -155,7 +155,20 @@ extern void internal_sigreturn();
+@@ -158,7 +158,20 @@ extern void internal_sigreturn();
  # else
  #   define SANITIZER_USE_GETENTROPY 0
  # endif
@@ -24,7 +24,7 @@ $NetBSD$
  
  namespace __sanitizer {
  
-@@ -169,12 +182,37 @@ namespace __sanitizer {
+@@ -172,12 +185,37 @@ namespace __sanitizer {
  #include "sanitizer_syscall_generic.inc"
  #endif
  
@@ -63,7 +63,7 @@ $NetBSD$
    return internal_syscall64(SYSCALL(mmap), addr, length, prot, flags, fd,
                                (long)0, offset);
  #elif SANITIZER_FREEBSD || SANITIZER_LINUX_USES_64BIT_SYSCALLS
-@@ -191,20 +229,52 @@ uptr internal_mmap(void *addr, uptr leng
+@@ -194,20 +232,52 @@ uptr internal_mmap(void *addr, uptr leng
  
  #if !SANITIZER_OPENBSD
  uptr internal_munmap(void *addr, uptr length) {
@@ -117,7 +117,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(openat), AT_FDCWD, (uptr)filename, flags);
  #else
    return internal_syscall_ptr(SYSCALL(open), (uptr)filename, flags);
-@@ -212,7 +282,13 @@ uptr internal_open(const char *filename,
+@@ -215,7 +285,13 @@ uptr internal_open(const char *filename,
  }
  
  uptr internal_open(const char *filename, int flags, u32 mode) {
@@ -132,7 +132,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(openat), AT_FDCWD, (uptr)filename, flags,
                            mode);
  #else
-@@ -222,21 +298,45 @@ uptr internal_open(const char *filename,
+@@ -225,21 +301,45 @@ uptr internal_open(const char *filename,
  
  uptr internal_read(fd_t fd, void *buf, uptr count) {
    sptr res;
@@ -178,7 +178,7 @@ $NetBSD$
    HANDLE_EINTR(res, internal_syscall64(SYSCALL(ftruncate), fd, 0, (s64)size));
  #else
    HANDLE_EINTR(res, (sptr)internal_syscall(SYSCALL(ftruncate), fd,
-@@ -313,7 +413,14 @@ static void kernel_stat_to_stat(struct k
+@@ -316,7 +416,14 @@ static void kernel_stat_to_stat(struct k
  #endif
  
  uptr internal_stat(const char *path, void *buf) {
@@ -194,7 +194,7 @@ $NetBSD$
    return internal_syscall_ptr(SYSCALL(fstatat), AT_FDCWD, (uptr)path, (uptr)buf,
                                0);
  #elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
-@@ -339,6 +446,14 @@ uptr internal_stat(const char *path, voi
+@@ -342,6 +449,14 @@ uptr internal_stat(const char *path, voi
  
  uptr internal_lstat(const char *path, void *buf) {
  #if SANITIZER_NETBSD
@@ -209,7 +209,7 @@ $NetBSD$
    return internal_syscall_ptr(SYSCALL(lstat), path, buf);
  #elif SANITIZER_FREEBSD || SANITIZER_OPENBSD
    return internal_syscall(SYSCALL(fstatat), AT_FDCWD, (uptr)path, (uptr)buf,
-@@ -365,7 +480,14 @@ uptr internal_lstat(const char *path, vo
+@@ -368,7 +483,14 @@ uptr internal_lstat(const char *path, vo
  }
  
  uptr internal_fstat(fd_t fd, void *buf) {
@@ -225,7 +225,7 @@ $NetBSD$
      SANITIZER_LINUX_USES_64BIT_SYSCALLS
  #if SANITIZER_MIPS64 && !SANITIZER_NETBSD && !SANITIZER_OPENBSD
    // For mips64, fstat syscall fills buffer in the format of kernel_stat
-@@ -392,7 +514,14 @@ uptr internal_filesize(fd_t fd) {
+@@ -395,7 +517,14 @@ uptr internal_filesize(fd_t fd) {
  }
  
  uptr internal_dup2(int oldfd, int newfd) {
@@ -241,7 +241,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(dup3), oldfd, newfd, 0);
  #else
    return internal_syscall(SYSCALL(dup2), oldfd, newfd);
-@@ -400,7 +529,15 @@ uptr internal_dup2(int oldfd, int newfd)
+@@ -403,7 +532,15 @@ uptr internal_dup2(int oldfd, int newfd)
  }
  
  uptr internal_readlink(const char *path, char *buf, uptr bufsize) {
@@ -258,7 +258,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(readlinkat), AT_FDCWD, (uptr)path, (uptr)buf,
                            bufsize);
  #elif SANITIZER_OPENBSD
-@@ -412,7 +549,14 @@ uptr internal_readlink(const char *path,
+@@ -415,7 +552,14 @@ uptr internal_readlink(const char *path,
  }
  
  uptr internal_unlink(const char *path) {
@@ -274,7 +274,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(unlinkat), AT_FDCWD, (uptr)path, 0);
  #else
    return internal_syscall_ptr(SYSCALL(unlink), (uptr)path);
-@@ -420,7 +564,15 @@ uptr internal_unlink(const char *path) {
+@@ -423,7 +567,15 @@ uptr internal_unlink(const char *path) {
  }
  
  uptr internal_rename(const char *oldpath, const char *newpath) {
@@ -291,7 +291,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(renameat), AT_FDCWD, (uptr)oldpath, AT_FDCWD,
                            (uptr)newpath);
  #else
-@@ -429,11 +581,27 @@ uptr internal_rename(const char *oldpath
+@@ -432,11 +584,27 @@ uptr internal_rename(const char *oldpath
  }
  
  uptr internal_sched_yield() {
@@ -320,7 +320,7 @@ $NetBSD$
    internal_syscall(SYSCALL(exit), exitcode);
  #else
    internal_syscall(SYSCALL(exit_group), exitcode);
-@@ -442,18 +610,38 @@ void internal__exit(int exitcode) {
+@@ -445,18 +613,38 @@ void internal__exit(int exitcode) {
  }
  
  unsigned int internal_sleep(unsigned int seconds) {
@@ -359,7 +359,7 @@ $NetBSD$
  }
  #endif // !SANITIZER_SOLARIS
  
-@@ -511,12 +699,32 @@ u64 NanoTime() {
+@@ -514,12 +702,32 @@ u64 NanoTime() {
    kernel_timeval tv;
  #endif
    internal_memset(&tv, 0, sizeof(tv));
@@ -392,7 +392,7 @@ $NetBSD$
  }
  #endif // !SANITIZER_SOLARIS
  
-@@ -524,7 +732,7 @@ uptr internal_clock_gettime(__sanitizer_
+@@ -527,7 +735,7 @@ uptr internal_clock_gettime(__sanitizer_
  // 'environ' array (on some others) and does not use libc. This function
  // should be called first inside __asan_init.
  const char *GetEnv(const char *name) {
@@ -401,20 +401,7 @@ $NetBSD$
      SANITIZER_SOLARIS
    if (::environ != 0) {
      uptr NameLen = internal_strlen(name);
-@@ -645,10 +853,10 @@ void ReExec() {
-     CTL_KERN, KERN_PROC_ARGS, -1, KERN_PROC_PATHNAME,
-   };
-   char path[400];
--  size_t len;
-+  uptr len;
- 
-   len = sizeof(path);
--  if (sysctl(name, ARRAY_SIZE(name), path, &len, NULL, 0) != -1)
-+  if (internal_sysctl(name, ARRAY_SIZE(name), path, &len, NULL, 0) != -1)
-     pathname = path;
- #elif SANITIZER_SOLARIS
-   pathname = getexecname();
-@@ -763,20 +971,55 @@ uptr internal_ptrace(int request, int pi
+@@ -767,20 +975,55 @@ uptr internal_ptrace(int request, int pi
  }
  
  uptr internal_waitpid(int pid, int *status, int options) {
@@ -471,7 +458,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(getdirentries), fd, (uptr)dirp, count, NULL);
  #elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
    return internal_syscall(SYSCALL(getdents64), fd, (uptr)dirp, count);
-@@ -787,6 +1030,14 @@ uptr internal_getdents(fd_t fd, struct l
+@@ -791,6 +1034,14 @@ uptr internal_getdents(fd_t fd, struct l
  
  uptr internal_lseek(fd_t fd, OFF_T offset, int whence) {
  #if SANITIZER_NETBSD
@@ -486,7 +473,7 @@ $NetBSD$
    return internal_syscall64(SYSCALL(lseek), fd, 0, offset, whence);
  #else
    return internal_syscall(SYSCALL(lseek), fd, offset, whence);
-@@ -800,17 +1051,52 @@ uptr internal_prctl(int option, uptr arg
+@@ -804,11 +1055,28 @@ uptr internal_prctl(int option, uptr arg
  #endif
  
  uptr internal_sigaltstack(const void *ss, void *oss) {
@@ -516,31 +503,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(clone), SIGCHLD, 0);
  #else
    return internal_syscall(SYSCALL(fork));
- #endif
- }
- 
-+#if SANITIZER_FREEBSD || SANITIZER_NETBSD || SANITIZER_OPENBSD
-+int internal_sysctl(const int *name, unsigned int namelen, void *oldp,
-+                    uptr *oldlenp, const void *newp, uptr newlen) {
-+#if SANITIZER_NETBSD
-+  static int (*real_sysctl)(const int *a, unsigned int b, void *c, uptr *d,
-+                            const void *e, uptr f) = NULL;
-+  if (!real_sysctl) {
-+    real_sysctl = (int(*)(const int *a, unsigned int b, void *c, uptr *d,
-+                          const void *e, uptr f))GetRealLibcAddress("sysctl");
-+  }
-+  CHECK(real_sysctl);
-+  return (*real_sysctl)(name, namelen, oldp, oldlenp, newp, newlen);
-+#else
-+  return sysctl(name, namelen, oldp, oldlenp, newp, newlen);
-+#endif
-+}
-+#endif
-+
- #if SANITIZER_LINUX
- #define SA_RESTORER 0x04000000
- // Doesn't set sa_restorer if the caller did not set it, so use with caution
-@@ -880,7 +1166,15 @@ int internal_sigaction_syscall(int signu
+@@ -891,7 +1159,15 @@ int internal_sigaction_syscall(int signu
  
  uptr internal_sigprocmask(int how, __sanitizer_sigset_t *set,
                            __sanitizer_sigset_t *oldset) {
@@ -557,31 +520,3 @@ $NetBSD$
    return internal_syscall_ptr(SYSCALL(sigprocmask), how, set, oldset);
  #else
    __sanitizer_kernel_sigset_t *k_set = (__sanitizer_kernel_sigset_t *)set;
-@@ -1110,8 +1404,9 @@ uptr ReadBinaryName(/*out*/char *buf, up
-   const int Mib[4] = {CTL_KERN, KERN_PROC_ARGS, -1, KERN_PROC_PATHNAME};
- #endif
-   const char *default_module_name = "kern.proc.pathname";
--  size_t Size = buf_len;
--  bool IsErr = (sysctl(Mib, ARRAY_SIZE(Mib), buf, &Size, NULL, 0) != 0);
-+  uptr Size = buf_len;
-+  bool IsErr = (internal_sysctl(Mib, ARRAY_SIZE(Mib), buf, &Size, NULL, 0)
-+                != 0);
-   int readlink_error = IsErr ? errno : 0;
-   uptr module_name_len = Size;
- #else
-@@ -1976,13 +2271,13 @@ void CheckASLR() {
- #if SANITIZER_NETBSD
-   int mib[3];
-   int paxflags;
--  size_t len = sizeof(paxflags);
-+  uptr len = sizeof(paxflags);
- 
-   mib[0] = CTL_PROC;
-   mib[1] = internal_getpid();
-   mib[2] = PROC_PID_PAXFLAGS;
- 
--  if (UNLIKELY(sysctl(mib, 3, &paxflags, &len, NULL, 0) == -1)) {
-+  if (UNLIKELY(internal_sysctl(mib, 3, &paxflags, &len, NULL, 0) == -1)) {
-     Printf("sysctl failed\n");
-     Die();
-   }
