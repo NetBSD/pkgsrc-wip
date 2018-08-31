@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux_libcdep.cc.orig	2018-08-31 08:13:43.283495237 +0000
+--- lib/sanitizer_common/sanitizer_linux_libcdep.cc.orig	2018-08-31 08:13:43.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux_libcdep.cc
 @@ -25,6 +25,7 @@
  #include "sanitizer_freebsd.h"

@@ -1,19 +1,19 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-SHA1 (patch-CMakeLists.txt) = bce32bd256b9e57e9cadc51cf6adcf269445bcb3
+SHA1 (patch-CMakeLists.txt) = 41a98b874a62c46fb83b899d547c72c817be8127
 SHA1 (patch-cmake_Modules_HandleCompilerRT.cmake) = fde0a4b440a257dec40c4f106c2352d5efecceef
-SHA1 (patch-cmake_config-ix.cmake) = 1456a6d244727885d51b68d333de7119523d1d6d
+SHA1 (patch-cmake_config-ix.cmake) = 9edb16aff65429d088082d1869b6034019abed33
 SHA1 (patch-lib_asan_asan__posix.cc) = be7e47c252e30184639f7ed1c98c75a8667fd261
-SHA1 (patch-lib_fuzzer_FuzzerLoop.cpp) = 18ec3311ab74dc12321579a3b01adc900af2a3a9
-SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = 8f3afca11a9f45a7e843db7c65eeee292292b8bf
+SHA1 (patch-lib_fuzzer_FuzzerLoop.cpp) = b2e226a0d7b230cc8598a0591ae6f688527c6b2d
+SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = c3d8a78f96566e5b8d2d8a5cbaba60990bfd6efe
 SHA1 (patch-lib_msan_msan__interceptors.cc) = 7af07c88b0ddf650f3df5dea4f6664ff9393d963
 SHA1 (patch-lib_msan_msan__linux.cc) = b5df0f4f5930d7c1681b1ad867c893d01d6e5cf7
-SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 92f45b328972b6459b90d4d53c44943d43910312
+SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = d48fd71509c2adfb5fc5aacfec1dc8fd07640414
 SHA1 (patch-lib_sanitizer__common_sanitizer__interceptors__ioctl__netbsd.inc) = 1c6e8c4a755af57d523d06b12f08a1946f1aef25
 SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = e231d87d8e04d528f73275f5de7000c2b395a9c4
-SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 80e1809e4c394b3cc1b790fffc8159e2deb4cee2
-SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cc) = 175a6c188beda1d3933dd326692ea54fe5ce5139
-SHA1 (patch-lib_sanitizer__common_sanitizer__openbsd.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 858b68b4e472cc0fc90f88406c3d159ae107e38c
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cc) = 8d156e4b51961bab6bae3ee30df8e18aea632b5d
+SHA1 (patch-lib_sanitizer__common_sanitizer__mac.cc) = 6f1b9ae0ee35166f32b0865c82cfdd6eca5c1047
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = 87684ad05a8e3a5ab2f1c9cf00cbecab4823eeb3
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cc) = b52e02792201d54d1f9e9336a8cf74ff8c9eca68
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = e8a0d9389f3ddd41f911e00f8ff62e214441296d
@@ -23,8 +23,6 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__bsd.cc) = c4ef1f0bd0f297c
 SHA1 (patch-lib_sanitizer__common_sanitizer__unwind__linux__libcdep.cc) = 86d53010debaf2cc5c9793d83186db2db76b280f
 SHA1 (patch-lib_scudo_scudo__platform.h) = 68f33b18d913984c3a459597ef62f63d36184ca9
 SHA1 (patch-lib_tsan_CMakeLists.txt) = 11fda934da12d046350463076bed2c209ec682e9
-SHA1 (patch-lib_xray_xray__flags.h) = b5abd9ee12c7c96514564dd17225f864c9489c8e
-SHA1 (patch-lib_xray_xray__profiling.cc) = c8653c7bd11b535f9066a3d7f4f975a6a2e5bfa0
 SHA1 (patch-test_asan_TestCases_Posix_stack-use-after-return.cc) = 474bfca0e8891bb777a81ae926c89c3d56f7cdb9
 SHA1 (patch-test_asan_TestCases_heavy__uar__test.cc) = fce8bfec44d93bb606920dba9ddd7165f127d23a
 SHA1 (patch-test_asan_TestCases_interception__failure__test.cc) = 0a359141e3c30b672842904b32d1542170b03ab1
