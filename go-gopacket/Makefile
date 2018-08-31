@@ -16,6 +16,7 @@ GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	${HOMEPAGE:S,https://,,}
 
 .include "../../devel/go-sys/buildlink3.mk"
+.include "../../net/go-net/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 
