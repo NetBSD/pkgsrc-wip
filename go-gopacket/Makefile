@@ -21,6 +21,14 @@ SUBST_MESSAGE.ldflags=	Set LDFLAGS for cgo.
 SUBST_FILES.ldflags=	pcap/pcap.go
 SUBST_SED.ldflags=	-e 's, LDFLAGS:, LDFLAGS: -L${BUILDLINK_PREFIX.libpcap}/lib,g'
 
+PLIST_VARS+=	bsdbpf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS:M*BSD} || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly"
+PLIST.bsdbpf=	yes
+.endif
+
 .include "../../devel/go-sys/buildlink3.mk"
 .include "../../net/go-net/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

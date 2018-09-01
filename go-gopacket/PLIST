@@ -10,7 +10,7 @@ bin/reassemblydump
 bin/statsassembly
 bin/synscan
 gopkg/pkg/${GO_PLATFORM}/github.com/google/gopacket.a
-gopkg/pkg/${GO_PLATFORM}/github.com/google/gopacket/bsdbpf.a
+${PLIST.bsdbpf}gopkg/pkg/${GO_PLATFORM}/github.com/google/gopacket/bsdbpf.a
 gopkg/pkg/${GO_PLATFORM}/github.com/google/gopacket/bytediff.a
 gopkg/pkg/${GO_PLATFORM}/github.com/google/gopacket/dumpcommand.a
 gopkg/pkg/${GO_PLATFORM}/github.com/google/gopacket/examples/util.a
