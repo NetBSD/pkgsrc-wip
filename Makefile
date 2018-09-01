@@ -810,6 +810,7 @@ SUBDIR+=	foxtrotgps
 SUBDIR+=	fplll
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
+SUBDIR+=	free42
 SUBDIR+=	freebayes
 SUBDIR+=	freebsd-svn
 SUBDIR+=	freecad

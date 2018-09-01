@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.2 2017/03/23 17:06:49 joerg Exp $
+
+SHA1 (free42-2.0.21/free42.tgz) = c5bb4179050e208b84298a2874cd4ac16e7514f1
+RMD160 (free42-2.0.21/free42.tgz) = c95ca9554d42dce9de813a2b05ccbf8ed654d259
+SHA512 (free42-2.0.21/free42.tgz) = 3d63d0d414a4519d50c019731ade33414b23f0fbd1a868bb6b6121a7d8ddf47e5221fead2542d42eea86f78dcb5d8a95221af7d8ae8b95de4179737b1d697463
+Size (free42-2.0.21/free42.tgz) = 52170086 bytes
+SHA1 (patch-android_jni_build-intel-lib.sh) = 184aba4123d17592f899741d8a272353bfc3d9e3
+SHA1 (patch-gtk_Makefile) = 1830fc000df2fe5383e89536d24926204ff15907
+SHA1 (patch-gtk_README) = 83ab97efb8f9046cba6056798344b76128562d5d

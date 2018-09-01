@@ -1,0 +1,10 @@
+This is wip to udpate free42 to recent upstream.  Now, upstream uses
+an intel bcd library, which does not straightforwardly build on
+NetBSD.
+
+* hook intel library into the build
+
+* make intel library adequatly portable (or make it its own package)
+
+* consider using the "upstream" distribution tarballs, which are
+  versioned, and do not have the hp-logo skin
