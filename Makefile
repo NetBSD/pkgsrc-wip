@@ -1037,6 +1037,7 @@ SUBDIR+=	go-pass
 SUBDIR+=	go-pty
 SUBDIR+=	go-rateio
 SUBDIR+=	go-rest
+SUBDIR+=	go-trie
 SUBDIR+=	go-upspin
 SUBDIR+=	goattracker
 SUBDIR+=	godura

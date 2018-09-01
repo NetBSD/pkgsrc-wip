@@ -1,0 +1,2 @@
+A Trie (Prefix Index) implementation in Go. It works fine with all
+unicode characters.

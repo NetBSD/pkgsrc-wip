@@ -1,0 +1,10 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/fvbock/trie.a
+gopkg/src/github.com/fvbock/trie/LICENSE
+gopkg/src/github.com/fvbock/trie/README.md
+gopkg/src/github.com/fvbock/trie/branch.go
+gopkg/src/github.com/fvbock/trie/doc.go
+gopkg/src/github.com/fvbock/trie/init.go
+gopkg/src/github.com/fvbock/trie/testfiles/empty
+gopkg/src/github.com/fvbock/trie/trie.go
+gopkg/src/github.com/fvbock/trie/trie_test.go
