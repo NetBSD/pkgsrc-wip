@@ -15,6 +15,12 @@ LICENSE=	modified-bsd
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	${HOMEPAGE:S,https://,,}
 
+SUBST_CLASSES+=		ldflags
+SUBST_STAGE.ldflags=	pre-configure
+SUBST_MESSAGE.ldflags=	Set LDFLAGS for cgo.
+SUBST_FILES.ldflags=	pcap/pcap.go
+SUBST_SED.ldflags=	-e 's, LDFLAGS:, LDFLAGS: -L${BUILDLINK_PREFIX.libpcap}/lib,g'
+
 .include "../../devel/go-sys/buildlink3.mk"
 .include "../../net/go-net/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
