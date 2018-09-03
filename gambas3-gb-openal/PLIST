@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.openal.component
+lib/gambas3/gb.openal.la
+share/gambas3/info/gb.openal.info
+share/gambas3/info/gb.openal.list

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.inotify.component
+lib/gambas3/gb.inotify.la
+share/gambas3/info/gb.inotify.info
+share/gambas3/info/gb.inotify.list

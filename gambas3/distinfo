@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gambas-a24dc9807f3d8342a67db051ade89e23ca79d8fc.tar.gz) = 280594f72c4cefb999aa6085f54f83f88251328f
+RMD160 (gambas-a24dc9807f3d8342a67db051ade89e23ca79d8fc.tar.gz) = 3a1a2824ca9dd30e304ae6507718da0c38c3f789
+SHA512 (gambas-a24dc9807f3d8342a67db051ade89e23ca79d8fc.tar.gz) = f488f7dcc00f89fddb55aef046f989a4a812a32cd81ab81187d9c9164ae2cacc2f6768e59ef530d934698ff2be5822acb70d6c10eda82bbba2c5490c84d9d9f3
+Size (gambas-a24dc9807f3d8342a67db051ade89e23ca79d8fc.tar.gz) = 14971800 bytes
+SHA1 (patch-gb.v4l_configure.ac) = c03073a9e9db26145ef05674019d7aaa572901c5

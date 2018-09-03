@@ -1,0 +1,49 @@
+# $NetBSD$
+# used by wip/gambas3/Makefile
+# used by wip/gambas3-devel/Makefile
+# used by wip/gambas3-gb-inotify/Makefile
+# used by wip/gambas3-gb-openal/Makefile
+# used by wip/gambas3-gb-v4l/Makefile
+# used by wip/gambas3-runtime/Makefile
+
+GB_VERSION=		a24dc9807f3d8342a67db051ade89e23ca79d8fc
+DISTNAME=		gambas-${GB_VERSION}
+CATEGORIES=		lang
+MASTER_SITES=		https://gitlab.com/gambas/gambas/-/archive/${GB_VERSION}/
+
+HOMEPAGE=		http://gambas.sourceforge.net/
+LICENSE=		gnu-gpl-v2
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/gambas3/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/gambas3/patches
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoreconf automake aclocal pkg-config
+CONFIGURE_DIRS!=	echo ${BUILD_DIRS} | cut -d/ -f1
+
+.if "${BUILD_DIRS}" != "main/gbc"
+BUILD_DEPENDS+=		gambas3-devel-${GB_VERSION}:../../wip/gambas3-devel
+
+pre-install:
+	cd ${DESTDIR}${PREFIX}; \
+	mkdir -p bin; \
+	ln -s ${PREFIX}/bin/gba3 bin/gba3; \
+	ln -s ${PREFIX}/bin/gbc3 bin/gbc3; \
+	ln -s ${PREFIX}/bin/gbi3 bin/gbi3
+
+post-install:
+	cd ${DESTDIR}${PREFIX}; \
+	rm bin/gba3; \
+	rm bin/gbc3; \
+	rm bin/gbi3; \
+	rmdir bin || true
+.endif
+
+pre-configure:
+.for d in ${CONFIGURE_DIRS}
+	cd ${WRKSRC}/${d}; \
+	./reconf
+.endfor
