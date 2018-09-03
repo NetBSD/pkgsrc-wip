@@ -19,9 +19,9 @@ PKGCONFIG_OVERRIDE+=	lib/libalpm/libalpm.pc.in
 
 EGDIR=      ${PREFIX}/share/examples/pacman
 
-CONF_FILES= ${DESTDIR}${EGDIR}/pacman.conf ${PKG_SYSCONFDIR}/pacman.conf \
-            ${DESTDIR}${EGDIR}/makepkg.conf ${PKG_SYSCONFDIR}/makepkg.conf \
-            ${DESTDIR}${EGDIR}/bash_completion-pacman \
+CONF_FILES= ${EGDIR}/pacman.conf ${PKG_SYSCONFDIR}/pacman.conf \
+            ${EGDIR}/makepkg.conf ${PKG_SYSCONFDIR}/makepkg.conf \
+            ${EGDIR}/bash_completion-pacman \
               ${PKG_SYSCONFDIR}/bash_completion.d/pacman
 
 post-install:

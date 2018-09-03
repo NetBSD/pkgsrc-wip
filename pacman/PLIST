@@ -219,6 +219,7 @@ share/pacman/PKGBUILD-vcs.proto
 share/pacman/PKGBUILD.proto
 share/pacman/proto.install
 share/zsh/site-functions/_pacman
+@pkgdir etc/bash_completion.d
 @pkgdir var/lib/pacman
 @pkgdir var/cache/pacman/pkg
 @pkgdir share/makepkg-template
