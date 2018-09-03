@@ -8,6 +8,7 @@ MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://www.archlinux.org/pacman/
 COMMENT=	Simple library-based package manager
 LICENSE=	gnu-gpl-v2
+PKGREVISION= 	2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
