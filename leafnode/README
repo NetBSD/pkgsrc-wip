@@ -1,2 +1,2 @@
-Patches "patch-checkpeerlocal.c" and "patch-xoverutil.c" (already merged
-upstream) can be removed for version 1.11.12 (not released yet).
+Patches "patch-checkpeerlocal.c" and "patch-xoverutil.c" are merged upstream.
+They can be removed for version 1.11.12 (not released yet).
