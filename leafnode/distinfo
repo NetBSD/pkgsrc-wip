@@ -6,3 +6,4 @@ SHA512 (leafnode-1.11.11.tar.bz2) = 3a476a32f2e59ed0812379efc2ad1964347094417e7f
 Size (leafnode-1.11.11.tar.bz2) = 500482 bytes
 SHA1 (patch-Makefile.in) = 5ca379bc986a971c27c3287559c7294f7a4e92de
 SHA1 (patch-checkpeerlocal.c) = a2754f43c6153ce2f781880ed5bac3b90e72954c
+SHA1 (patch-xoverutil.c) = eb7c181aa033a587f53d66cd4d05791c60f49a7c
