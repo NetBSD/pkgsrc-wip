@@ -8,7 +8,6 @@ ALURE_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.alure+=	alure>=1.2
 BUILDLINK_PKGSRCDIR.alure?=	../../audio/alure
 
-.include "options.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .endif	# ALURE_BUILDLINK3_MK
 
