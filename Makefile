@@ -4317,7 +4317,6 @@ SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
 SUBDIR+=	taskcoach
-SUBDIR+=	taskd
 SUBDIR+=	tasks
 SUBDIR+=	tc
 SUBDIR+=	tc-git
