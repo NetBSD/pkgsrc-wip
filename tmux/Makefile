@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV:S/rc//}	# XXX: Delete for non-rc release!
 #GITHUB_RELEASE=	${PKGVERSION_NOREV}	# XXX: Uncomment for non-rc release!
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://tmux.github.io/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 LICENSE=	modified-bsd
