@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.20 2018/06/17 09:16:40 wiz Exp $
+
+SHA1 (pygobject-3.30.0.tar.xz) = 62a096f11d938cab7a70ac5bfd392dd9491e509e
+RMD160 (pygobject-3.30.0.tar.xz) = f3561d0df880f131a09bca50ee88f6e5c87eac71
+SHA512 (pygobject-3.30.0.tar.xz) = 532d0552b792f402d5fc235299c2b5b08ee07ba4d5cbfc3b472659d7543f8ab26d2979c328de60135cd424d2dfa3fc3e3c24c1e6289c54a76a6334fd33c4f2f1
+Size (pygobject-3.30.0.tar.xz) = 546212 bytes
