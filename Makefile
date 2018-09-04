@@ -1629,7 +1629,6 @@ SUBDIR+=	ldc-git
 SUBDIR+=	lde
 SUBDIR+=	ldtp
 SUBDIR+=	le
-SUBDIR+=	leafnode
 SUBDIR+=	leo
 SUBDIR+=	lfe
 SUBDIR+=	lgogdownloader-git
