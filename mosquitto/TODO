@@ -8,8 +8,6 @@ is reflecting compiled-in defaults, or some other reasons.
 
 * patches
 
-Rename to standard filenames a la mkpatches.
-
 For each, document why and file upstream/include ref or explain why
 upstream is inappropriate.
 
