@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.dbus.component
+lib/gambas3/gb.dbus.gambas
+lib/gambas3/gb.dbus.la
+share/gambas3/info/gb.dbus.info
+share/gambas3/info/gb.dbus.list

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.form.editor.component
+lib/gambas3/gb.form.editor.gambas
+share/gambas3/control/gb.form.editor/texteditor.png
+share/gambas3/info/gb.form.editor.info
+share/gambas3/info/gb.form.editor.list

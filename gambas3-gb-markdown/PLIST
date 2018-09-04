@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.markdown.component
+lib/gambas3/gb.markdown.gambas
+share/gambas3/info/gb.markdown.info
+share/gambas3/info/gb.markdown.list

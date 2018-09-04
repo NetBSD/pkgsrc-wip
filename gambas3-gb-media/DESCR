@@ -1,0 +1,7 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This package is a simplified interface to the GStreamer library. It allows to
+play, convert and transform multimedia data from any source to any format by
+linking plugins together.

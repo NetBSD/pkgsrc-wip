@@ -1,0 +1,6 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+Cairo is a 2D graphics library with support for multiple output devices:
+Images, PDF, PS or SVG files. This package includes Gambas bindings for cairo.

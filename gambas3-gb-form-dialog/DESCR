@@ -1,0 +1,6 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component defines new enhanced versions of the standard dialogs, based on
+the controls defined in the gambas3-gb-form component.

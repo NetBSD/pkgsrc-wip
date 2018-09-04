@@ -1,0 +1,12 @@
+@comment $NetBSD$
+lib/gambas3/gb.db.form.component
+lib/gambas3/gb.db.form.gambas
+share/gambas3/control/gb.db.form/databrowser.png
+share/gambas3/control/gb.db.form/datacheckbox.png
+share/gambas3/control/gb.db.form/datacombo.png
+share/gambas3/control/gb.db.form/datacomboview.png
+share/gambas3/control/gb.db.form/datacontrol.png
+share/gambas3/control/gb.db.form/datasource.png
+share/gambas3/control/gb.db.form/dataview.png
+share/gambas3/info/gb.db.form.info
+share/gambas3/info/gb.db.form.list

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.db.odbc.component
+lib/gambas3/gb.db.odbc.la
+share/gambas3/info/gb.db.odbc.info
+share/gambas3/info/gb.db.odbc.list

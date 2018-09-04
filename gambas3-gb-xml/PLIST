@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.xml.component
+lib/gambas3/gb.xml.gambas
+lib/gambas3/gb.xml.la
+share/gambas3/info/gb.xml.info
+share/gambas3/info/gb.xml.list

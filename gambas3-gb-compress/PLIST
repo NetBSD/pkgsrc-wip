@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.compress.component
+lib/gambas3/gb.compress.la
+share/gambas3/info/gb.compress.info
+share/gambas3/info/gb.compress.list

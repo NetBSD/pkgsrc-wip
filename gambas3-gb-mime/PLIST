@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.mime.component
+lib/gambas3/gb.mime.la
+share/gambas3/info/gb.mime.info
+share/gambas3/info/gb.mime.list

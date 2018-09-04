@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.desktop.component
+lib/gambas3/gb.desktop.gambas
+share/gambas3/control/gb.desktop/desktopwatcher.png
+share/gambas3/info/gb.desktop.info
+share/gambas3/info/gb.desktop.list

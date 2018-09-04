@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.crypt.component
+lib/gambas3/gb.crypt.la
+share/gambas3/info/gb.crypt.info
+share/gambas3/info/gb.crypt.list

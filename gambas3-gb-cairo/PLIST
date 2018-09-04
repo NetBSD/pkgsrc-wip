@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.cairo.component
+lib/gambas3/gb.cairo.la
+share/gambas3/info/gb.cairo.info
+share/gambas3/info/gb.cairo.list

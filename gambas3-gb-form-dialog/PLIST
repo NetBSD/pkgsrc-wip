@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.form.dialog.component
+lib/gambas3/gb.form.dialog.gambas
+share/gambas3/info/gb.form.dialog.info
+share/gambas3/info/gb.form.dialog.list

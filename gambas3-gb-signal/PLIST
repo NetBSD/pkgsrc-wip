@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.signal.component
+lib/gambas3/gb.signal.la
+share/gambas3/info/gb.signal.info
+share/gambas3/info/gb.signal.list

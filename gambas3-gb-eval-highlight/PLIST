@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.eval.highlight.component
+lib/gambas3/gb.eval.highlight.gambas
+share/gambas3/info/gb.eval.highlight.info
+share/gambas3/info/gb.eval.highlight.list

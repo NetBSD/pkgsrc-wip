@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/gambas3/gb.form.mdi.component
+lib/gambas3/gb.form.mdi.gambas
+share/gambas3/control/gb.form.mdi/toolbar.png
+share/gambas3/control/gb.form.mdi/workspace.png
+share/gambas3/info/gb.form.mdi.info
+share/gambas3/info/gb.form.mdi.list

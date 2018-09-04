@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.form.terminal.component
+lib/gambas3/gb.form.terminal.gambas
+share/gambas3/control/gb.form.terminal/terminalview.png
+share/gambas3/info/gb.form.terminal.info
+share/gambas3/info/gb.form.terminal.list

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.db.postgresql.component
+lib/gambas3/gb.db.postgresql.la
+share/gambas3/info/gb.db.postgresql.info
+share/gambas3/info/gb.db.postgresql.list

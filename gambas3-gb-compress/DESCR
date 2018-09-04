@@ -1,0 +1,7 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component allows you to compress and uncompress files, and to read and
+write compressed files using standard stream methods. It allows you to compress
+and uncompress strings in memory, too.

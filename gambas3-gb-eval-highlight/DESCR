@@ -1,0 +1,7 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component provides classes for highlighting source code. At the moment,
+the following highlighters are implemented: Gambas, C, C++, JavaScript, SQL and
+HTML.

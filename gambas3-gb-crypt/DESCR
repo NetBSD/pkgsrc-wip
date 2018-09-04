@@ -1,0 +1,6 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component allows you to encrypt a password and to compare encrypted
+passwords by using the DES or MD5 algoritm implemented in the GNU libc library.

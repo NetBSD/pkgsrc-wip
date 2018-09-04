@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.net.curl.component
+lib/gambas3/gb.net.curl.gambas
+lib/gambas3/gb.net.curl.la
+share/gambas3/info/gb.net.curl.info
+share/gambas3/info/gb.net.curl.list
