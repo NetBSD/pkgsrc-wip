@@ -17,6 +17,12 @@ USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
+# config.mk is in theory used by only the non-cmake build.  Remove it,
+# to force a failure if it somehow becomes used.
+post-patch:
+	${RM} ${WRKRSC}/config.mk
+
+
 CONF_FILES=	share/examples/mosquitto/pskfile.example \
 		share/examples/mosquitto/pwfile.example \
 		share/examples/mosquitto/mosquitto.conf \
@@ -30,12 +36,6 @@ SUBST_FILES.ldconfig=		lib/CMakeLists.txt \
 				lib/cpp/CMakeLists.txt \
 				src/CMakeLists.txt
 SUBST_SED.ldconfig=		-E -e '/EXEC_PROGRAM\(\/sbin\/ldconfig/d'
-
-# \todo Perhaps delete as no longer needed
-SUBST_STAGE.strip=		post-extract
-SUBST_MESSAGE.strip=		removing unportable cross strip
-SUBST_FILES.strip=		lib/Makefile src/Makefile lib/cpp/Makefile client/Makefile
-SUBST_SED.strip=		-E -e '/--strip-program=\$${CROSS_COMPILE}\$${STRIP}/d'
 
 post-install:
 	mkdir ${DESTDIR}${PREFIX}/share/examples/mosquitto
