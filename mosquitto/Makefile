@@ -21,13 +21,22 @@ CONF_FILES=	share/examples/mosquitto/pskfile.example \
 		share/examples/mosquitto/mosquitto.conf \
 		share/examples/mosquitto/aclfile.example
 
-SUBST_CLASSES+=			ldconfig
+SUBST_CLASSES+=			ldconfig strip
+
 SUBST_STAGE.ldconfig=		post-extract
 SUBST_MESSAGE.ldconfig=		Removing non-portable ldconfig invocations
 SUBST_FILES.ldconfig=		lib/CMakeLists.txt \
 				lib/cpp/CMakeLists.txt \
 				src/CMakeLists.txt
 SUBST_SED.ldconfig=		-E -e '/EXEC_PROGRAM\(\/sbin\/ldconfig/d'
+
+SUBST_STAGE.strip=		post-extract
+SUBST_MESSAGE.strip=		removing unportable cross strip
+SUBST_FILES.strip=		lib/Makefile src/Makefile lib/cpp/Makefile client/Makefile
+SUBST_SED.strip=		-E -e '/--strip-program=\$${CROSS_COMPILE}\$${STRIP}/d'
+
+-strip-program=${CROSS_COMPILE}${STRIP}
+
 
 post-install:
 	mkdir ${DESTDIR}${PREFIX}/share/examples/mosquitto
