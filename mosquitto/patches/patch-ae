@@ -6,9 +6,9 @@ For uuid, insist on library, not just header (why?).
 
 Omit ldconfig (from OpenBSD).
 
---- src/CMakeLists.txt.orig	2017-02-20 22:06:57.000000000 +0000
-+++ src/CMakeLists.txt	2017-02-25 12:18:04.360077118 +0000
-@@ -95,6 +95,8 @@
+--- src/CMakeLists.txt.orig	2018-09-04 01:33:51.000000000 +0000
++++ src/CMakeLists.txt
+@@ -125,6 +125,8 @@ endif (HAVE_GETADDRINFO_A)
  if (UNIX)
  	if (APPLE)
  		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
@@ -17,7 +17,7 @@ Omit ldconfig (from OpenBSD).
  	else (APPLE)
  		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
  		find_library(LIBRT rt)
-@@ -115,10 +117,11 @@
+@@ -153,10 +155,11 @@ endif (${WITH_WEBSOCKETS} STREQUAL ON)
  # Simple detect libuuid
  if(NOT APPLE)
  	FIND_PATH(UUID_HEADER uuid/uuid.h)
@@ -28,7 +28,7 @@ Omit ldconfig (from OpenBSD).
 -		set (MOSQ_LIBS ${MOSQ_LIBS} uuid)
 -	endif (UUID_HEADER)
 +		set (MOSQ_LIBS ${MOSQ_LIBS} ${UUID_LIBRARY})
-+	endif ()
++	endif (UUID_HEADER AND UUID_LIBRARY)
  endif(NOT APPLE)
  
- target_link_libraries(mosquitto ${MOSQ_LIBS})
+ add_executable(mosquitto ${MOSQ_SRCS})

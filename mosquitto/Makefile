@@ -1,8 +1,7 @@
 # $NetBSD$
 
-VERSION=	1.4.15
+VERSION=	1.5.1
 DISTNAME=	mosquitto-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
 
@@ -13,6 +12,8 @@ COMMENT=	Open Source MQTT broker
 LICENSE=	epl-v1.0
 
 USE_LANGUAGES+=	c c++
+# Upstream documents that "unix" should use make, but Mac cmake.
+# After asking and receiving no guidance, choose to always use cmake.
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
@@ -21,7 +22,7 @@ CONF_FILES=	share/examples/mosquitto/pskfile.example \
 		share/examples/mosquitto/mosquitto.conf \
 		share/examples/mosquitto/aclfile.example
 
-SUBST_CLASSES+=			ldconfig strip
+SUBST_CLASSES+=			ldconfig
 
 SUBST_STAGE.ldconfig=		post-extract
 SUBST_MESSAGE.ldconfig=		Removing non-portable ldconfig invocations
@@ -30,13 +31,11 @@ SUBST_FILES.ldconfig=		lib/CMakeLists.txt \
 				src/CMakeLists.txt
 SUBST_SED.ldconfig=		-E -e '/EXEC_PROGRAM\(\/sbin\/ldconfig/d'
 
+# \todo Perhaps delete as no longer needed
 SUBST_STAGE.strip=		post-extract
 SUBST_MESSAGE.strip=		removing unportable cross strip
 SUBST_FILES.strip=		lib/Makefile src/Makefile lib/cpp/Makefile client/Makefile
 SUBST_SED.strip=		-E -e '/--strip-program=\$${CROSS_COMPILE}\$${STRIP}/d'
-
--strip-program=${CROSS_COMPILE}${STRIP}
-
 
 post-install:
 	mkdir ${DESTDIR}${PREFIX}/share/examples/mosquitto

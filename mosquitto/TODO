@@ -1,7 +1,3 @@
-* update
-
-update to 1.5
-
 * conf files
 
 Decide on if a mosquitto config file should be installed in etc, or if
@@ -9,11 +5,6 @@ a user should take a few lines from the (large) example as needed.
 
 Document our strategy for modifying the example file, explaining if it
 is reflecting compiled-in defaults, or some other reasons.
-
-* build tools
-
-Depending on response from upstream, document our approach to using
-cmake always.
 
 * patches
 
@@ -26,13 +17,6 @@ upstream is inappropriate.
 
 Upstream appears to run ldconfig on "UNIX", which is incorrect.  File
 a bug about this.
-
-* sunos shlib
-
-Figure out why the soname is different on sunos, and if this is an
-upstream bug.  Perhaps resolve, or perhaps use a PLIST variable to
-avoid having a second copy.
-
 
 * security
 

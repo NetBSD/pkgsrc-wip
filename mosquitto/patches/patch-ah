@@ -1,19 +1,10 @@
 $NetBSD$
 
-Include NetBSD with Free/Open in not including -ldl (from FreeBSD).
+Set prefix, etc. to pkgsrc norms.
 
---- config.mk.orig	2016-06-02 21:20:22.000000000 +0000
-+++ config.mk	2016-08-28 15:27:03.968104814 +0000
-@@ -115,7 +115,7 @@
- BROKER_CFLAGS:=${LIB_CFLAGS} ${CPPFLAGS} -DVERSION="\"${VERSION}\"" -DTIMESTAMP="\"${TIMESTAMP}\"" -DWITH_BROKER
- CLIENT_CFLAGS:=${CFLAGS} ${CPPFLAGS} -I../lib -DVERSION="\"${VERSION}\""
- 
--ifneq ($(or $(findstring $(UNAME),FreeBSD), $(findstring $(UNAME),OpenBSD)),)
-+ifneq ($(or $(findstring $(UNAME),FreeBSD), $(findstring $(UNAME),OpenBSD), $(findstring $(UNAME),NetBSD)),)
- 	BROKER_LIBS:=-lm
- else
- 	BROKER_LIBS:=-ldl -lm
-@@ -241,7 +241,7 @@
+--- config.mk.orig	2018-08-16 16:05:26.000000000 +0000
++++ config.mk
+@@ -272,9 +272,9 @@ ifeq ($(WITH_WEBSOCKETS),static)
  endif
  
  INSTALL?=install
@@ -24,3 +15,5 @@ Include NetBSD with Free/Open in not including -ldl (from FreeBSD).
 +mandir=${PREFIX}/man
 +localedir=${PREFIX}/share/locale
  STRIP?=strip
+ 
+ ifeq ($(WITH_STRIP),yes)

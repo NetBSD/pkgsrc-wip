@@ -3,6 +3,7 @@ bin/mosquitto_passwd
 bin/mosquitto_pub
 bin/mosquitto_sub
 include/mosquitto.h
+include/mosquitto_broker.h
 include/mosquitto_plugin.h
 include/mosquittopp.h
 lib/libmosquitto.so
@@ -11,6 +12,8 @@ lib/libmosquitto.so.${PKGVERSION}
 lib/libmosquittopp.so
 lib/libmosquittopp.so.1
 lib/libmosquittopp.so.${PKGVERSION}
+lib/pkgconfig/libmosquitto.pc
+lib/pkgconfig/libmosquittopp.pc
 man/man1/mosquitto_passwd.1
 man/man1/mosquitto_pub.1
 man/man1/mosquitto_sub.1
