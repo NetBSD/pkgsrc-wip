@@ -1,5 +1,7 @@
 $NetBSD$
-BSDs don't support long options
+
+See patch-ak.
+
 --- lib/cpp/Makefile.orig	2016-08-29 21:50:11.282837830 +0000
 +++ lib/cpp/Makefile	2016-08-29 21:50:41.337564781 +0000
 @@ -10,7 +10,7 @@

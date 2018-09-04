@@ -1,5 +1,11 @@
 $NetBSD$
-Supports NetBSD detection
+
+On NetBSD, do not include librt.  (Why?  All other "UNIX" does, except Mac.)
+
+Do not invoke ldconfig after installation, because it's unportable
+(and systems that need it should do it separately, rather than
+expecting it to be part of builds).   (From OpenBSD.)
+
 --- lib/CMakeLists.txt.orig	2017-02-20 22:06:57.000000000 +0000
 +++ lib/CMakeLists.txt	2017-02-25 12:06:08.924946745 +0000
 @@ -48,12 +48,12 @@

@@ -1,5 +1,8 @@
 $NetBSD$
-Better defaults for configuration, inspired by FreeBSD
+
+Better defaults for configuration, inspired by FreeBSD.
+\todo Rethink if we should be deviating from upstream.
+
 --- mosquitto.conf.orig	2016-06-02 21:20:22.000000000 +0000
 +++ mosquitto.conf	2016-08-28 15:28:28.495612360 +0000
 @@ -32,7 +32,7 @@

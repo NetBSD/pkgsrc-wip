@@ -1,5 +1,7 @@
 $NetBSD$
-Copying from OpenBSD 
+
+In cmake build, adjust paths to pkgsrc norms.  (From OpenBSD.)
+
 --- CMakeLists.txt.orig	2016-06-02 21:20:22.000000000 +0000
 +++ CMakeLists.txt	2016-08-28 15:50:53.430205374 +0000
 @@ -37,18 +40,12 @@
