@@ -23,10 +23,3 @@ expecting it to be part of builds).   (From OpenBSD.)
  
  if (WIN32)
  	set (LIBRARIES ${LIBRARIES} ws2_32)
-@@ -81,6 +81,3 @@
- install(TARGETS libmosquitto RUNTIME DESTINATION "${BINDIR}" LIBRARY DESTINATION "${LIBDIR}")
- install(FILES mosquitto.h DESTINATION "${INCLUDEDIR}")
- 
--if (UNIX)
--	install(CODE "EXEC_PROGRAM(/sbin/ldconfig)")
--endif (UNIX)

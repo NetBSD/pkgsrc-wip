@@ -32,11 +32,3 @@ Omit ldconfig (from OpenBSD).
  endif(NOT APPLE)
  
  target_link_libraries(mosquitto ${MOSQ_LIBS})
-@@ -140,7 +143,3 @@
- 	install(TARGETS mosquitto_passwd RUNTIME DESTINATION "${BINDIR}" LIBRARY DESTINATION "${LIBDIR}")
- endif (${WITH_TLS} STREQUAL ON)
- 
--if (UNIX)
--	install(CODE "EXEC_PROGRAM(/sbin/ldconfig)")
--endif (UNIX)
--

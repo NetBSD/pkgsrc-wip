@@ -16,12 +16,18 @@ USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
-TEST_TARGET=	test
-
 CONF_FILES=	share/examples/mosquitto/pskfile.example \
 		share/examples/mosquitto/pwfile.example \
 		share/examples/mosquitto/mosquitto.conf \
 		share/examples/mosquitto/aclfile.example
+
+SUBST_CLASSES+=			ldconfig
+SUBST_STAGE.ldconfig=		post-extract
+SUBST_MESSAGE.ldconfig=		Removing non-portable ldconfig invocations
+SUBST_FILES.ldconfig=		lib/CMakeLists.txt \
+				lib/cpp/CMakeLists.txt \
+				src/CMakeLists.txt
+SUBST_SED.ldconfig=		-E -e '/EXEC_PROGRAM\(\/sbin\/ldconfig/d'
 
 post-install:
 	mkdir ${DESTDIR}${PREFIX}/share/examples/mosquitto
