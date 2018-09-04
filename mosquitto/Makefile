@@ -19,9 +19,8 @@ USE_TOOLS+=	gmake
 
 # config.mk is in theory used by only the non-cmake build.  Remove it,
 # to force a failure if it somehow becomes used.
-post-patch:
-	${RM} ${WRKRSC}/config.mk
-
+post-extract:
+	${RM} ${WRKSRC}/config.mk
 
 CONF_FILES=	share/examples/mosquitto/pskfile.example \
 		share/examples/mosquitto/pwfile.example \
@@ -42,5 +41,6 @@ post-install:
 	${INSTALL_DATA}	${WRKSRC}/pskfile.example ${WRKSRC}/pwfile.example ${WRKSRC}/mosquitto.conf ${WRKSRC}/aclfile.example ${DESTDIR}${PREFIX}/share/examples/mosquitto
 
 .include "../../devel/libuuid/buildlink3.mk"
+# ?needed
 .include "../../net/libcares/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
