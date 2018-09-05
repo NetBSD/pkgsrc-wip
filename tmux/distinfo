@@ -4,5 +4,5 @@ SHA1 (tmux-2.8-rc.tar.gz) = 1838a1f79b4c900b175be1c07e9733cc074a1f6a
 RMD160 (tmux-2.8-rc.tar.gz) = 4d28ec01780e6ab4e2bdb257e713c16e17c272ea
 SHA512 (tmux-2.8-rc.tar.gz) = 3e961450c7ce48671a4ccf7f053e4387c02b677f308531f78dc6f162304c1493ad2f927abd07ec1b9f9678c7fbc64f557a2c2e269e059c9610ae7571581fe3f4
 Size (tmux-2.8-rc.tar.gz) = 491679 bytes
-SHA1 (patch-Makefile.in) = fa9ec654cf6dad2b49b10ab981275d193d8b97c8
-SHA1 (patch-tty-term.c) = 486b64b5762a35986ca39a93efd1d29a79920193
+SHA1 (patch-Makefile.in) = dc8a351b06bf2f9f96b3dc4d944a174ef3c8d9db
+SHA1 (patch-tty-term.c) = 20bf235e61e6650bec3e7e94ea79859898039eba
