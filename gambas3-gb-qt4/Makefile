@@ -9,5 +9,4 @@ MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	Qt4 toolkit implementation for Gambas
 
 .include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

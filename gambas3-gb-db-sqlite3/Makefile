@@ -8,5 +8,6 @@ PKGNAME=	gambas3-gb-db-sqlite3-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	SQLite driver for Gambas
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

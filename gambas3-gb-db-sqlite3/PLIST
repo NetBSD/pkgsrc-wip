@@ -1,1 +1,5 @@
 @comment $NetBSD$
+lib/gambas3/gb.db.sqlite3.component
+lib/gambas3/gb.db.sqlite3.la
+share/gambas3/info/gb.db.sqlite3.info
+share/gambas3/info/gb.db.sqlite3.list
