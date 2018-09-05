@@ -2,11 +2,11 @@
 
 DISTNAME=	sentry-8.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sentry/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://www.getsentry.com
+HOMEPAGE=	https://www.getsentry.com/
 COMMENT=	Realtime logging and aggregation server
 LICENSE=	modified-bsd
 
@@ -38,7 +38,6 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=4.2.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-memcached>=1.59:../../devel/py-memcached
 DEPENDS+=	${PYPKGPREFIX}-mmh3>=2.5.1:../../wip/py-mmh3
 DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
-DEPENDS+=	${PYPKGPREFIX}-oauth2>=1.5.211:../../security/py-oauth2
 DEPENDS+=	${PYPKGPREFIX}-openid>=2.2.5:../../security/py-openid
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=5.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-percy>=1.1.2:../../wip/py-percy
@@ -69,6 +68,8 @@ DEPENDS+=	${PYPKGPREFIX}-u2flib-server>=5.0.0:../../wip/py-u2flib-server
 DEPENDS+=	${PYPKGPREFIX}-ua-parser>=0.8.0:../../wip/py-ua-parser
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.22:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-uwsgi>=2.0.17:../../www/py-uwsgi
+
+PYTHON_VERSIONS_ACCEPTED=	27  # py-openid
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

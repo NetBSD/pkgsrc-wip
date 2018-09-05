@@ -31,10 +31,9 @@ DEPENDS+=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
-DEPENDS+=	${PYPKGPREFIX}-oauth-[0-9]*:../../security/py-oauth
 DEPENDS+=	${PYPKGPREFIX}-gnome2-extras-[0-9]*:../../x11/py-gnome2-extras
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2, py-mxDateTime, py-imaging, py-notify, py-gtk2, py-gtk2 via py-webkit
+PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2, py-mxDateTime, py-imaging, py-notify, py-gtk2, py-gtk2 via py-webkit
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
