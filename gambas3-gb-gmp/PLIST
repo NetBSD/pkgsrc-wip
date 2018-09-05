@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.gmp.component
+lib/gambas3/gb.gmp.la
+share/gambas3/info/gb.gmp.info
+share/gambas3/info/gb.gmp.list

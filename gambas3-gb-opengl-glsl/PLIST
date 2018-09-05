@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.opengl.glsl.component
+lib/gambas3/gb.opengl.glsl.la
+share/gambas3/info/gb.opengl.glsl.info
+share/gambas3/info/gb.opengl.glsl.list

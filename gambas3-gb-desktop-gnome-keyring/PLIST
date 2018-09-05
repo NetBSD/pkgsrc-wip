@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.desktop.gnome.keyring.component
+lib/gambas3/gb.desktop.gnome.keyring.la
+share/gambas3/info/gb.desktop.gnome.keyring.info
+share/gambas3/info/gb.desktop.gnome.keyring.list

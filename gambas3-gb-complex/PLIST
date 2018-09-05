@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.complex.component
+lib/gambas3/gb.complex.la
+share/gambas3/info/gb.complex.info
+share/gambas3/info/gb.complex.list

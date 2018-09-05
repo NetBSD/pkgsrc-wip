@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.net.smtp.component
+lib/gambas3/gb.net.smtp.gambas
+share/gambas3/control/gb.net.smtp/smtpclient.png
+share/gambas3/info/gb.net.smtp.info
+share/gambas3/info/gb.net.smtp.list

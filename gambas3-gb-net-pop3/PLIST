@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.net.pop3.component
+lib/gambas3/gb.net.pop3.gambas
+share/gambas3/control/gb.net.pop3/pop3client.png
+share/gambas3/info/gb.net.pop3.info
+share/gambas3/info/gb.net.pop3.list

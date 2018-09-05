@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.qt4.opengl.component
+lib/gambas3/gb.qt4.opengl.la
+share/gambas3/info/gb.qt4.opengl.info
+share/gambas3/info/gb.qt4.opengl.list

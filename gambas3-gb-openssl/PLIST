@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.openssl.component
+lib/gambas3/gb.openssl.la
+share/gambas3/info/gb.openssl.info
+share/gambas3/info/gb.openssl.list
