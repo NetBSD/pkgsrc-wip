@@ -1,0 +1,7 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component provides implementations of various Abstract Datatypes (ADT).
+Those are data containers with a well-defined interface but variable
+implementation. All the classes are built around the Variant datatype of Gambas.

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.image.effect.component
+lib/gambas3/gb.image.effect.la
+share/gambas3/info/gb.image.effect.info
+share/gambas3/info/gb.image.effect.list

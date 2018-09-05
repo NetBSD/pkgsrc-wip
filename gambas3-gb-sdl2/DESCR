@@ -1,0 +1,8 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component allows to use the SDL2 library. The Simple DirectMedia Layer
+(SDL) library is a cross-platform development library designed to provide low
+level access to audio, keyboard, mouse, joystick, and graphics hardware via
+OpenGL and Direct3D (on Windows).

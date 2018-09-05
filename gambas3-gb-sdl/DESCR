@@ -1,0 +1,8 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This package uses the ttf fonts parts of the SDL library. If opengl drivers are
+installed it uses them to accelerate 2D and 3D drawing.
+
+This component is deprecated.

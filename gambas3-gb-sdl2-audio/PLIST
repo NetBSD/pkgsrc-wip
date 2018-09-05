@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.sdl2.audio.component
+lib/gambas3/gb.sdl2.audio.la
+share/gambas3/info/gb.sdl2.audio.info
+share/gambas3/info/gb.sdl2.audio.list

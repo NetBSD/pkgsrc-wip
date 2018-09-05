@@ -1,0 +1,8 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component implements a command-line arguments parser based on the GNU
+getopt() function.
+
+This component is deprecated. Use gambas3-gb-args instead.

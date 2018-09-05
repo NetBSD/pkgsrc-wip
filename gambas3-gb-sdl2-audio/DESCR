@@ -1,0 +1,9 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component is an interface to the SDL2 mixer library. The SDL2 mixer library
+is a sound mixing library that is used with the SDL2 library. It allows a
+programmer to use multiple samples along with music without having to code a
+mixing algorithm themselves. It also simplyfies the handling of loading and
+playing samples and music from all sorts of file formats.
