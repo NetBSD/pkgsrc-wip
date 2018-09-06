@@ -1,6 +1,6 @@
 # $NetBSD$
 
-BUILD_DIRS=	main
+BUILD_DIRS=	main comp
 .include "../../wip/gambas3/Makefile.common"
 
 PKGNAME=	gambas3-runtime-${GB_VERSION}

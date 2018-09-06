@@ -22,7 +22,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoreconf automake aclocal pkg-config
-CONFIGURE_DIRS!=	echo ${BUILD_DIRS} | cut -d/ -f1
+CONFIGURE_DIRS!=	for d in ${BUILD_DIRS}; do echo $$d | cut -d/ -f1; done
 
 .if "${BUILD_DIRS}" != "main/gbc"
 BUILD_DEPENDS+=		gambas3-devel-${GB_VERSION}:../../wip/gambas3-devel
