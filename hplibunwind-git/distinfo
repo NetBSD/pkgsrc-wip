@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
+
+SHA1 (cfe-3.6.2.src.tar.xz) = 7ba809c9c17819a16b668640a642ed134d7052f0
+RMD160 (cfe-3.6.2.src.tar.xz) = 10d913b4d5317f8c2520e5fc6117df30937317a8
+Size (cfe-3.6.2.src.tar.xz) = 8617576 bytes
+SHA1 (compiler-rt-3.6.2.src.tar.xz) = c6c52d2923a60f1a2ca2f22fea1770fd2e25728d
+RMD160 (compiler-rt-3.6.2.src.tar.xz) = 9b68a32d49d4bef4603d550934192f39fea42895
+Size (compiler-rt-3.6.2.src.tar.xz) = 1128080 bytes
+SHA1 (libcxx-3.6.2.src.tar.xz) = 6c5aee9f05ecf17d1e3ecb1add34a33a5a904469
+RMD160 (libcxx-3.6.2.src.tar.xz) = 42b8832d01d4e6b553babc93cb5dbd4ce2bb1931
+Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
+SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
+RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
+Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
+SHA1 (patch-configure.ac) = b989360cb443b8ce31499e84ea6f84192b9fc305
+SHA1 (patch-include_tdep-x86__64_jmpbuf.h) = a2c8f1894c3476e6efb4e3f47145a235a31d2e83
+SHA1 (patch-include_tdep-x86__64_libunwind__i.h) = cc36cb94e9b807794c041096fd8eadfd4cb45da5
+SHA1 (patch-src_Makefile.am) = 663e12ea40e58058a2e0473c5ef5f6b8ed1e6881
+SHA1 (patch-src_coredump___UCD__create.c) = 154b87069833adb922f4d1353ac62e2ebac8879e
+SHA1 (patch-src_os-netbsd.c) = 65bf98a33289a21a6af012a62631faf9ceff568a
+SHA1 (patch-src_ptrace___UPT__access__fpreg.c) = be943875cdc5049e6ff2bb59beda63ce9be1379b
+SHA1 (patch-src_ptrace___UPT__access__reg.c) = 0341a6a879905852814ee233452e305840af1c6b
+SHA1 (patch-src_ptrace___UPT__reg__offset.c) = d8ba12ce138cba7f7dd909291c0a64411755a36f
+SHA1 (patch-src_setjmp_siglongjmp.c) = 03e2b4328662d44bed16c58916a772b26b5c6577
+SHA1 (patch-src_x86_Gos-netbsd.c) = c9310e02439b731e6d5ecec7d84875abe4cdc6b1
+SHA1 (patch-src_x86_Los-netbsd.c) = 3a1a888bde4c416ddc355cb6b5e776401561ee0a
+SHA1 (patch-src_x86__64_Gos-netbsd.c) = ff6e1f76f50a988f5be288047d27095cf322c16c
+SHA1 (patch-src_x86__64_Los-netbsd.c) = bf3ff9f374076b358458886d78c260e9806f6799
+SHA1 (patch-src_x86__64_getcontext.S) = 4ddd6b53f432488ac85e7c3067d331ca429f79b6
+SHA1 (patch-src_x86__64_setcontext.S) = 0be36e0ffc09cff8d4a2822aa966675e6ee089e1
+SHA1 (patch-src_x86__64_ucontext__i.h) = 34ca3b15d5cde083c410a401348733a251fa1417
+SHA1 (patch-src_x86_getcontext-netbsd.S) = c88ae78218abee5cb37fbb7a547502519ccef1b0
