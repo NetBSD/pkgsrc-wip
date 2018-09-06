@@ -13,7 +13,7 @@ Find package without pkg-config
    ncurses, NCURSES, gb.ncurses, [src],
 -  ncurses panel)
 +  [GB_FIND(ncurses.h panel.h, $prefix /usr/lib /usr, include)],
-+  [GB_FIND(libncurses.$SHLIBEXT libpanel.$SHLIBEXT, $prefix /usr/local /usr, lib)],
++  [GB_FIND(libncurses.$SHLIBEXT libgnupanel.$SHLIBEXT, $prefix /usr/local /usr, lib)],
 +  [-lpanel -lncurses])
  
  AC_OUTPUT( \
