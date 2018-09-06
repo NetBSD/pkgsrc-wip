@@ -7,5 +7,5 @@ PKGNAME=	gambas3-gb-ncurses-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	NCurses library for Gambas
 
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
