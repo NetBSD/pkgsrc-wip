@@ -6,7 +6,7 @@ GB_DEPENDS=	gambas3-gb-desktop
 
 PKGNAME=	gambas3-gb-desktop-gnome-keyring-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
-COMMENT=	Gnome keyring support for Gambas desktop management component (deprecated)
+COMMENT=	Gnome keyring support for Gambas desktop component (deprecated)
 
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

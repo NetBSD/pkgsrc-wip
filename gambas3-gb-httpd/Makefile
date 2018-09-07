@@ -5,6 +5,6 @@ BUILD_DIRS=	gb.httpd
 
 PKGNAME=	gambas3-gb-httpd-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
-COMMENT=	An HTTP server for Gambas
+COMMENT=	HTTP server for Gambas
 
 .include "../../mk/bsd.pkg.mk"

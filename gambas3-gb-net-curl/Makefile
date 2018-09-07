@@ -6,7 +6,7 @@ GB_DEPENDS=	gambas3-runtime gambas3-gb-net
 
 PKGNAME=	gambas3-gb-net-curl-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
-COMMENT=	Network high-level protocol management for Gambas based on the Curl library
+COMMENT=	Network high-level protocol management for Gambas based on libcurl
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

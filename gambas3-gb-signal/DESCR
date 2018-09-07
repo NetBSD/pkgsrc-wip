@@ -2,4 +2,5 @@ Gambas is a free development environment and a full powerful development
 platform based on a Basic interpreter with object extensions, as easy as Visual
 Basic.
 
-This component allows you to ignore POSIX signals, or intercept them inside an event handler.
+This component allows you to ignore POSIX signals, or intercept them inside an
+event handler.

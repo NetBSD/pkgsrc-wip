@@ -5,6 +5,6 @@ BUILD_DIRS=	main/lib/term
 
 PKGNAME=	gambas3-gb-term-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
-COMMENT=	A terminal manager for Gambas
+COMMENT=	Terminal manager for Gambas
 
 .include "../../mk/bsd.pkg.mk"

@@ -26,6 +26,7 @@ CONFIGURE_DIRS!=	for d in ${BUILD_DIRS}; do echo $$d | cut -d/ -f1; done
 
 .if "${BUILD_DIRS}" != "main/gbc"
 BUILD_DEPENDS+=		gambas3-devel-${GB_VERSION}:../../wip/gambas3-devel
+BUILD_DEPENDS+=		xdg-utils-1.*:../../misc/xdg-utils
 
 .  for comp in ${GB_DEPENDS}
 DEPENDS+=		${comp}-${GB_VERSION}:../../wip/${comp}
@@ -40,15 +41,15 @@ pre-install:
 	ln -s ${PREFIX}/bin/gba3 bin/gba3; \
 	ln -s ${PREFIX}/bin/gbc3 bin/gbc3; \
 	ln -s ${PREFIX}/bin/gbi3 bin/gbi3; \
-	${CP} -r ${PREFIX}/lib/gambas3 lib || true; \
-	${CP} -r ${PREFIX}/share/gambas3 share || true
+	${CP} -r ${PREFIX}/lib/gambas3 lib || ${TRUE}; \
+	${CP} -r ${PREFIX}/share/gambas3 share || ${TRUE}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}; \
 	rm bin/gba3; \
 	rm bin/gbc3; \
 	rm bin/gbi3; \
-	rmdir bin || true
+	rmdir bin || ${TRUE}
 .endif
 
 pre-configure:
