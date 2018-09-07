@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.2 2017/04/14 19:10:23 leot Exp $
+
+SHA1 (miniircd-1.2.1.tar.gz) = 39a49111ff0f3737573441755af0b66b3eb8cf8a
+RMD160 (miniircd-1.2.1.tar.gz) = ad2da2fa9392428bbb0e3b7aac2f8d77720301d8
+SHA512 (miniircd-1.2.1.tar.gz) = 45838138e93f24fedb496d2032a1c772f0dc32d56efc913f624f32351e56b5416bf50fc787d16081e0790747cf91f603de7c2d8618bd29f3da17892a59b822a8
+Size (miniircd-1.2.1.tar.gz) = 21178 bytes
+SHA1 (patch-subliminal_subtitles_____init____.py) = 253b44d1421f51bc91abdbf960dbf759517e3f28
+SHA1 (patch-subliminal_subtitles_subrip.py) = 4e44270d77605812537a7549195c8667b083cf0e

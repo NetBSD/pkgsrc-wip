@@ -1,0 +1,2 @@
+- Test and adjust rc.d script (there are probably some issue in the pidfile
+  handling!)
