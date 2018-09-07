@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/gambas3
+bin/gambas3.gambas
 share/appdata/gambas3.appdata.xml
-share/gambas3/icons/application-x-gambas3.png
 share/gambas3/template/console/.directory
 share/gambas3/template/console/.gitignore
 share/gambas3/template/console/.icon.png

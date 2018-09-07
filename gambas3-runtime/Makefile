@@ -6,8 +6,8 @@ BUILD_DIRS=	main comp
 PKGNAME=	gambas3-runtime-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	Gambas interpreter and basic runtime
-BUILD_DEPENDS+=	gambas3-gb-qt4-${GB_VERSION}:../../wip/gambas3-gb-qt4-opengl
-BUILD_DEPENDS+=	gambas3-gb-qt4-${GB_VERSION}:../../wip/gambas3-gb-qt4-webkit
+BUILD_DEPENDS+=	gambas3-gb-qt4-opengl-${GB_VERSION}:../../wip/gambas3-gb-qt4-opengl
+BUILD_DEPENDS+=	gambas3-gb-qt4-webkit-${GB_VERSION}:../../wip/gambas3-gb-qt4-webkit
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
