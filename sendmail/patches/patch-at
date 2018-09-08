@@ -1,9 +1,8 @@
 $NetBSD$
 
-
---- sendmail/domain.c.orig	2017-02-17 03:44:29.000000000 +0900
-+++ sendmail/domain.c	2018-04-01 22:31:20.121274241 +0900
-@@ -43,7 +43,7 @@ static char	MXHostBuf[MXHOSTBUFSIZE];
+--- sendmail/domain.c.orig	2018-08-23 21:52:20.000000000 +0900
++++ sendmail/domain.c	2018-09-08 21:22:29.906315766 +0900
+@@ -45,7 +45,7 @@ static char	MXHostBuf[MXHOSTBUFSIZE];
  # endif /* ! MAXDNSRCH */
  
  # ifndef RES_DNSRCH_VARIABLE
@@ -12,7 +11,7 @@ $NetBSD$
  # endif /* ! RES_DNSRCH_VARIABLE */
  
  # ifndef NO_DATA
-@@ -62,6 +62,8 @@ static char	MXHostBuf[MXHOSTBUFSIZE];
+@@ -64,6 +64,8 @@ static char	MXHostBuf[MXHOSTBUFSIZE];
  #  define RES_UNC_T	unsigned char *
  # endif /* defined(__RES) && (__RES >= 19940415) */
  
@@ -21,7 +20,7 @@ $NetBSD$
  static int	mxrand __P((char *));
  static int	fallbackmxrr __P((int, unsigned short *, char **));
  
-@@ -436,12 +438,10 @@ getmxrr(host, mxhosts, mxprefs, flags, r
+@@ -439,12 +441,10 @@ getmxrr(host, mxhosts, mxprefs, flags, r
  	char *fallbackMX = FallbackMX;
  	bool trycanon = false;
  	unsigned short *prefs;
@@ -34,7 +33,7 @@ $NetBSD$
  
  	if (tTd(8, 2))
  		sm_dprintf("getmxrr(%s, droplocalhost=%d)\n",
-@@ -479,15 +479,24 @@ getmxrr(host, mxhosts, mxprefs, flags, r
+@@ -482,15 +482,24 @@ getmxrr(host, mxhosts, mxprefs, flags, r
  
  	if (!UseNameServer)
  		goto punt;
@@ -65,7 +64,7 @@ $NetBSD$
  	if (n < 0)
  	{
  		if (tTd(8, 1))
-@@ -575,7 +584,7 @@ getmxrr(host, mxhosts, mxprefs, flags, r
+@@ -578,7 +587,7 @@ getmxrr(host, mxhosts, mxprefs, flags, r
  		GETSHORT(n, cp);	/* rdlength */
  		if (type != T_MX)
  		{
@@ -74,7 +73,7 @@ $NetBSD$
  # if _FFR_TLSA_DANE
  			    && type != T_RRSIG
  # endif
-@@ -891,7 +900,7 @@ bestmx_map_lookup(map, name, av, statp)
+@@ -890,7 +899,7 @@ bestmx_map_lookup(map, name, av, statp)
  	int *statp;
  {
  	int nmx;
@@ -83,7 +82,7 @@ $NetBSD$
  	int i;
  	ssize_t len = 0;
  	char *result;
-@@ -903,9 +912,9 @@ bestmx_map_lookup(map, name, av, statp)
+@@ -902,9 +911,9 @@ bestmx_map_lookup(map, name, av, statp)
  	char buf[PSBUFSIZE / 2];
  #endif /* _FFR_BESTMX_BETTER_TRUNCATION */
  
@@ -95,7 +94,7 @@ $NetBSD$
  	if (nmx <= 0)
  		return NULL;
  	if (bitset(MF_MATCHONLY, map->map_mflags))
-@@ -1045,8 +1054,13 @@ dns_getcanonname(host, hbsize, trymx, st
+@@ -1050,8 +1059,13 @@ dns_getcanonname(host, hbsize, trymx, st
  	if (tTd(8, 2))
  		sm_dprintf("dns_getcanonname(%s, trymx=%d)\n", host, trymx);
  
@@ -111,28 +110,25 @@ $NetBSD$
  		*statp = EX_UNAVAILABLE;
  		return HOST_NOTFOUND;
  	}
-@@ -1086,7 +1100,7 @@ cnameloop:
- 	dp = searchlist;
- 	if (n > 0)
- 		*dp++ = "";
+@@ -1098,7 +1112,7 @@ cnameloop:
+ 		searchlist[sli++] = NameSearchList;
+ 	}
+ #endif
 -	if (n >= 0 && *--cp != '.' && bitset(RES_DNSRCH, _res.options))
 +	if (n >= 0 && *--cp != '.' && bitset(RES_DNSRCH, sm_res.options))
  	{
  		/* make sure there are less than MAXDNSRCH domains */
  		for (domain = RES_DNSRCH_VARIABLE, ret = 0;
-@@ -1094,9 +1108,9 @@ cnameloop:
+@@ -1106,7 +1120,7 @@ cnameloop:
  		     ret++)
- 			*dp++ = *domain++;
+ 			searchlist[sli++] = *domain++;
  	}
 -	else if (n == 0 && bitset(RES_DEFNAMES, _res.options))
 +	else if (n == 0 && bitset(RES_DEFNAMES, sm_res.options))
  	{
--		*dp++ = _res.defdname;
-+		*dp++ = sm_res.defdname;
- 	}
- 	else if (*cp == '.')
- 	{
-@@ -1132,8 +1146,13 @@ cnameloop:
+ 		SM_ASSERT(sli < SLSIZE);
+ 		searchlist[sli++] = _res.defdname;
+@@ -1149,8 +1163,13 @@ cnameloop:
  				"???");
  		errno = 0;
  		hp = (HEADER *) &answer;
@@ -140,9 +136,9 @@ $NetBSD$
 +		ret = res_nquerydomain(&sm_res, host, *dp, C_IN, qtype,
 +				      answer.qb2, sizeof(answer.qb2));
 +# else
- 		ret = res_querydomain(host, *dp, C_IN, qtype,
+ 		ret = res_querydomain(host, dp, C_IN, qtype,
  				      answer.qb2, sizeof(answer.qb2));
-+#endif
++# endif
  		if (ret <= 0)
  		{
  			int save_errno = errno;
