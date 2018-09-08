@@ -42,10 +42,6 @@ MESALIB_SUPPORTS_EGL=	yes
 MESALIB_SUPPORTS_EGL=	no
 .endif
 
-.if ${X11_TYPE} == "modular"
-.include "../../devel/libpthread-stubs/buildlink3.mk"
-.endif
-
 .include "../../x11/libXext/buildlink3.mk"
 .endif # MESALIB_BUILDLINK3_MK
 

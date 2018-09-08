@@ -116,8 +116,6 @@ INSTALLATION_DIRS+=	share/examples/MesaLib
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/util/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
 
-# devel/libpthread-stubs needs to be promoted from wip to pkgsrc
-.include "../../devel/libpthread-stubs/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
