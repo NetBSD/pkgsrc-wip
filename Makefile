@@ -4126,7 +4126,6 @@ SUBDIR+=	seqtk
 SUBDIR+=	serendipity
 SUBDIR+=	service
 SUBDIR+=	seturgent
-SUBDIR+=	sfeed
 SUBDIR+=	sflphoned
 SUBDIR+=	sfml+
 SUBDIR+=	sgmltools-lite
