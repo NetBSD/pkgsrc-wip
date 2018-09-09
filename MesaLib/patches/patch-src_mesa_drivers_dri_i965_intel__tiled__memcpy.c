@@ -1,5 +1,7 @@
 $NetBSD$
 
+From wip/MesaLib 13.0.1.
+
 --- src/mesa/drivers/dri/i965/intel_tiled_memcpy.c.orig	2016-11-10 22:05:17.000000000 +0000
 +++ src/mesa/drivers/dri/i965/intel_tiled_memcpy.c
 @@ -64,6 +64,7 @@ ror(uint32_t n, uint32_t d)

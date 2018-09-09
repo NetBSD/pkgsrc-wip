@@ -1,8 +1,0 @@
-drmGetDevice() is not supported in libdrm on NetBSD, need alternate
-  implementation of loader_get_pci_id_for_fd() in src/loader/loader.c
-investigate applicability of FreeBSD DEVQ patch
-fix bitrot that broke GLX TLS on NetBSD
-test OSX quartz, check if bug 90311 patch needs regen
-test Solaris
-test Linux
-test NetBSD 7

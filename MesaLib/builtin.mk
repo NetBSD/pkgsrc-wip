@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.20 2014/03/22 08:19:24 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.21 2018/01/14 14:58:38 rillig Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -22,7 +22,7 @@ IS_BUILTIN.MesaLib=	yes
 IS_BUILTIN.MesaLib=	no
 .  endif
 .endif
-MAKEVARS+=		IS_BUILTIN.MesaLib
+MAKEVARS+=	IS_BUILTIN.MesaLib
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -67,7 +67,7 @@ USE_BUILTIN.MesaLib!=							\
 .    endif
 .  endif  # PREFER.MesaLib
 .endif
-MAKEVARS+=		USE_BUILTIN.MesaLib
+MAKEVARS+=	USE_BUILTIN.MesaLib
 
 ###
 ### The section below only applies if we are not including this file

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.129 2016/10/20 12:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2018/01/25 10:44:51 jperkin Exp $
 
-DISTNAME=	mesa-13.0.1
+DISTNAME=	mesa-18.2.0
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/
+# MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,10 +17,7 @@ USE_TOOLS+=	bison pkg-config gmake flex
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
 
-GCC_REQD+=	4.2
-
 PKGCONFIG_OVERRIDE+=	src/egl/main/egl.pc.in
-PKGCONFIG_OVERRIDE+=	src/egl/wayland/wayland-egl/wayland-egl.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/d3dadapter9/d3d.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/xa/xatracker.pc.in
@@ -42,20 +40,28 @@ SUBST_FILES.wrapper-bug=	src/gbm/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/glx/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.in
+SUBST_FILES.wrapper-bug+=	src/mesa/drivers/osmesa/Makefile.in
 SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapi_tmp_rename.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_impl.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename.la,libglapi.la,g'
 
 # Replace /etc/drirc with ${PREFIX}/etc/drirc
-SUBST_CLASSES+=		drirc
-SUBST_STAGE.drirc=	pre-configure
-SUBST_MESSAGE.drirc=	Fixing hardcoded /etc/drirc references
-SUBST_FILES.drirc+=	src/mesa/drivers/dri/common/xmlconfig.c
-SUBST_SED.drirc+=	-e 's|/etc/|${PREFIX}/etc/|g'
+SUBST_CLASSES+=			drirc
+SUBST_STAGE.drirc=		pre-configure
+SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc references
+SUBST_FILES.drirc+=		src/util/xmlconfig.c
+SUBST_SED.drirc+=		 -e 's|/etc|${PREFIX}/etc|g'
+
+# Required due to clang defaulting to strict C standard by default (no strdup).
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 .include "options.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--enable-glx-read-only-text
+.endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 SUBST_CLASSES+=		tr1
@@ -78,7 +84,7 @@ CONFIGURE_ENV+=		ac_cv_prog_PYTHON2=${PYTHONBIN}
 # which breaks the build with -Wl,--no-undefined.
 # So we piggy back on -lpthread and inject -lc after it.
 .if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
-BUILDLINK_TRANSFORM+=	l:pthread:pthread:c l:m:m:c
+BUILDLINK_TRANSFORM+=   l:pthread:pthread:c l:m:m:c
 .endif
 
 # Handle platforms without exp2
@@ -99,9 +105,9 @@ ${WRKDIR}/.manual_patch_done:
 INSTALLATION_DIRS+=	share/examples/MesaLib
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/mesa/drivers/dri/common/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
+	${INSTALL_DATA} ${WRKSRC}/src/util/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
 
-.include "../../wip/libpthread-stubs/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"

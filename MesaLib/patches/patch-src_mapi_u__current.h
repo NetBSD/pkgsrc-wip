@@ -6,7 +6,7 @@ with dlopen(3) at the moment.
 --- src/mapi/u_current.h.orig	2015-09-02 17:06:23.000000000 +0000
 +++ src/mapi/u_current.h
 @@ -68,7 +68,7 @@ u_current_get_context_internal(void);
- static inline const struct mapi_table *
+ static inline const struct _glapi_table *
  u_current_get_table(void)
  {
 -#ifdef GLX_USE_TLS
