@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.ac.orig	2018-08-17 21:48:52.000000000 +0000
++++ configure.ac
+@@ -751,7 +751,7 @@ AC_SUBST(systemd_dbus_prefix)
+ AC_ARG_WITH([systemdunitdir],
+          AS_HELP_STRING([--with-systemdunitdir=DIR],[path to systemd user services directory]),
+          [USER_SESSION_DIR=${withval}])
+-if test "$want_systemd" == "no"; then
++if test "$want_systemd" = "no"; then
+   have_systemd_user_session="no"
+ elif test -n "${USER_SESSION_DIR}"; then
+   have_systemd_user_session="yes"

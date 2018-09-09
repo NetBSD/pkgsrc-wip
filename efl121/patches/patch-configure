@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.orig	2018-08-17 21:49:57.000000000 +0000
++++ configure
+@@ -28013,7 +28013,7 @@ if test "${with_systemdunitdir+set}" = s
+   withval=$with_systemdunitdir; USER_SESSION_DIR=${withval}
+ fi
+ 
+-if test "$want_systemd" == "no"; then
++if test "$want_systemd" = "no"; then
+   have_systemd_user_session="no"
+ elif test -n "${USER_SESSION_DIR}"; then
+   have_systemd_user_session="yes"
