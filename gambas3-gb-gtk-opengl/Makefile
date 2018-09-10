@@ -4,7 +4,7 @@ BUILD_DIRS=	gb.gtk/src/opengl
 GB_DEPENDS=	gambas3-gb-gtk gambas3-gb-opengl
 .include "../../wip/gambas3/Makefile.common"
 
-PKGNAME=	gambas3-gb-gtk-${GB_VERSION}
+PKGNAME=	gambas3-gb-gtk-opengl-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	OpenGL library interface for Gambas
 
