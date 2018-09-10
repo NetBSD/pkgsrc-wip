@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/gbs3
+bin/gbs3.gambas
+bin/gbw3

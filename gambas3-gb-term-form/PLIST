@@ -1,0 +1,17 @@
+@comment $NetBSD$
+lib/gambas3/gb.term.form.component
+lib/gambas3/gb.term.form.gambas
+share/gambas3/control/gb.term.form/termbutton.png
+share/gambas3/control/gb.term.form/termcheckbox.png
+share/gambas3/control/gb.term.form/termframe.png
+share/gambas3/control/gb.term.form/termhbox.png
+share/gambas3/control/gb.term.form/termlabel.png
+share/gambas3/control/gb.term.form/termlistbox.png
+share/gambas3/control/gb.term.form/termpanel.png
+share/gambas3/control/gb.term.form/termpicturebox.png
+share/gambas3/control/gb.term.form/termradiobutton.png
+share/gambas3/control/gb.term.form/termscrollbar.png
+share/gambas3/control/gb.term.form/termtextbox.png
+share/gambas3/control/gb.term.form/termvbox.png
+share/gambas3/info/gb.term.form.info
+share/gambas3/info/gb.term.form.list

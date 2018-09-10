@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.map.component
+lib/gambas3/gb.map.gambas
+share/gambas3/control/gb.map/mapview.png
+share/gambas3/info/gb.map.info
+share/gambas3/info/gb.map.list

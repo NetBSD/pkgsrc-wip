@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.dbus.trayicon.component
+lib/gambas3/gb.dbus.trayicon.gambas
+share/gambas3/info/gb.dbus.trayicon.info
+share/gambas3/info/gb.dbus.trayicon.list

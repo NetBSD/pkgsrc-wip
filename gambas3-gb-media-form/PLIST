@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.media.form.component
+lib/gambas3/gb.media.form.gambas
+share/gambas3/control/gb.media.form/mediaview.png
+share/gambas3/info/gb.media.form.info
+share/gambas3/info/gb.media.form.list

@@ -1,0 +1,18 @@
+@comment $NetBSD$
+lib/gambas3/gb.report.component
+lib/gambas3/gb.report.gambas
+share/gambas3/control/gb.report/reportdrawingarea.png
+share/gambas3/control/gb.report/reportgridview.png
+share/gambas3/control/gb.report/reporthbox.png
+share/gambas3/control/gb.report/reportimage.png
+share/gambas3/control/gb.report/reportlabel.png
+share/gambas3/control/gb.report/reportline.png
+share/gambas3/control/gb.report/reportpagebreak.png
+share/gambas3/control/gb.report/reportpanel.png
+share/gambas3/control/gb.report/reportsvgimage.png
+share/gambas3/control/gb.report/reporttextlabel.png
+share/gambas3/control/gb.report/reportvbox.png
+share/gambas3/control/gb.report/reportview.png
+share/gambas3/control/gb.report/reportvpanel.png
+share/gambas3/info/gb.report.info
+share/gambas3/info/gb.report.list

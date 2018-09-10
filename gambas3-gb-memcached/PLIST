@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.memcached.component
+lib/gambas3/gb.memcached.gambas
+share/gambas3/info/gb.memcached.info
+share/gambas3/info/gb.memcached.list

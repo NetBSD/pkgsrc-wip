@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.scanner.component
+lib/gambas3/gb.scanner.gambas
+share/gambas3/info/gb.scanner.info
+share/gambas3/info/gb.scanner.list

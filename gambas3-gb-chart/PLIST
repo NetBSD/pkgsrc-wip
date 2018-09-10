@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.chart.component
+lib/gambas3/gb.chart.gambas
+share/gambas3/info/gb.chart.info
+share/gambas3/info/gb.chart.list

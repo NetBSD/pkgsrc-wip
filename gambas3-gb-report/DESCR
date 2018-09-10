@@ -1,0 +1,7 @@
+Gambas is a free development environment and a full powerful development
+platform based on a Basic interpreter with object extensions, as easy as Visual
+Basic.
+
+This component implements Gambas Report classes.
+
+This component is deprecated. Use gambas3-gb-report2 instead.

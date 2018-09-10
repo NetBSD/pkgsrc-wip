@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.xml.rpc.component
+lib/gambas3/gb.xml.rpc.gambas
+share/gambas3/info/gb.xml.rpc.info
+share/gambas3/info/gb.xml.rpc.list

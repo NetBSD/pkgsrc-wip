@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/gambas3/gb.util.web.component
+lib/gambas3/gb.util.web.gambas
+share/gambas3/control/gb.util.web/ccontainer.png
+share/gambas3/control/gb.util.web/ccontrol.png
+share/gambas3/info/gb.util.web.info
+share/gambas3/info/gb.util.web.list

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.web.feed.component
+lib/gambas3/gb.web.feed.gambas
+share/gambas3/info/gb.web.feed.info
+share/gambas3/info/gb.web.feed.list

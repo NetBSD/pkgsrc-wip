@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.mysql.component
+lib/gambas3/gb.mysql.gambas
+share/gambas3/info/gb.mysql.info
+share/gambas3/info/gb.mysql.list
