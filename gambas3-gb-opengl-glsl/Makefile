@@ -8,6 +8,6 @@ PKGNAME=	gambas3-gb-opengl-glsl-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	OpenGL Shading Language for Gambas
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
