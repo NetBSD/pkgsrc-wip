@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.6.4
+DISTNAME=	vips-8.6.5
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcupitt/}
