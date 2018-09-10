@@ -1,2 +1,5 @@
 @comment $NetBSD$
-TODO
+lib/gambas3/gb.ncurses.component
+lib/gambas3/gb.ncurses.la
+share/gambas3/info/gb.ncurses.info
+share/gambas3/info/gb.ncurses.list
