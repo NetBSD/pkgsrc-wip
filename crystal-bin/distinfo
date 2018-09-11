@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (crystal-0.26.0-1-darwin-x86_64.tar.gz) = 00a18ac3c9eaa92c54a022960dde45131c3d752b
-RMD160 (crystal-0.26.0-1-darwin-x86_64.tar.gz) = f8b59137647c643e2436ad63edc47765c097e177
-SHA512 (crystal-0.26.0-1-darwin-x86_64.tar.gz) = 4dff43ecaf14843c2b793989ef429e551b0782aca36b6e8917dabcf47e3c3eb42507a60472356dbc5a49bb3b6e489346ce8d1399104c2f56c83c9ea4a5f7967c
-Size (crystal-0.26.0-1-darwin-x86_64.tar.gz) = 15294361 bytes
+SHA1 (crystal-0.26.1-1-darwin-x86_64.tar.gz) = ee70d5cfe04365d9e0dea8d68d97ae6a75f3070c
+RMD160 (crystal-0.26.1-1-darwin-x86_64.tar.gz) = f5f481a1d5214b1184588142bf747832b7a7d376
+SHA512 (crystal-0.26.1-1-darwin-x86_64.tar.gz) = 78ac456ce9af35463267e49929d69de40e2c527a40aa0cd727df7e72e90f79e42c9b35f6cc2d894a74aed89662f8424cd363a4245254f9a720463bc85bfa11f7
+Size (crystal-0.26.1-1-darwin-x86_64.tar.gz) = 15225143 bytes
