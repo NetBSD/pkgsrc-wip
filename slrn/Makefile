@@ -10,6 +10,7 @@ HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 LICENSE=	gnu-gpl-v2
 
+EXTRACT_USING=	bsdtar
 MAKE_JOBS_SAFE=	no
 
 USE_PKGLOCALEDIR=	yes
