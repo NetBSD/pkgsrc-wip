@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=		slrn-1.0.3
+DISTNAME=		slrn-1.0.3a
 PKGNAME=		cleanscore-0.9.8.1
 PKGREVISION=		9
 CATEGORIES=		news
 MASTER_SITES=		http://jedsoft.org/releases/slrn/
-EXTRACT_SUFX=		a.tar.bz2
+EXTRACT_SUFX=		.tar.bz2
 
 #MAINTAINER=		is@NetBSD.org
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -16,6 +16,8 @@ LICENSE=		gnu-gpl-v2
 EXTRACT_USING=		bsdtar
 USE_TOOLS=		perl
 REPLACE_PERL=		contrib/cleanscore
+
+WRKSRC=			${WRKDIR}/slrn-1.0.3
 
 NO_BUILD=		yes
 
