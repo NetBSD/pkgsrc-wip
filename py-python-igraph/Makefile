@@ -10,10 +10,6 @@ HOMEPAGE=	http://igraph.org/python/
 COMMENT=	Library for creating and manipulating graphs
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=       igraph-[0-9]*:../../wip/igraph
-
-USE_LANGUAGES=	c
-
 .include "../../wip/igraph/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
