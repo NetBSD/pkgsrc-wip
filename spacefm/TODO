@@ -1,0 +1,4 @@
+NetBSD cant configure/build spacefm, while: XClearWindow in -lX11... no
+x11/libX11 dont support XClearWindow
+
+Current work is get the package on linux systems working.
