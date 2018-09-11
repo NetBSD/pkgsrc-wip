@@ -2,7 +2,7 @@
 
 DISTNAME=	slrn-1.0.3
 CATEGORIES=	news
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slrn/}
+MASTER_SITES=	http://jedsoft.org/releases/slrn/
 EXTRACT_SUFX=	a.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
