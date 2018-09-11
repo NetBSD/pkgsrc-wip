@@ -1,0 +1,29 @@
+# $NetBSD$
+
+DISTNAME=		slrn-1.0.3
+PKGNAME=		cleanscore-0.9.8.1
+PKGREVISION=		9
+CATEGORIES=		news
+MASTER_SITES=		http://jedsoft.org/releases/slrn/
+EXTRACT_SUFX=		a.tar.bz2
+
+#MAINTAINER=		is@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://slrn.sourceforge.net/
+COMMENT=		Clean SLRN's score file
+LICENSE=		gnu-gpl-v2
+
+EXTRACT_USING=		bsdtar
+USE_TOOLS=		perl
+REPLACE_PERL=		contrib/cleanscore
+
+NO_BUILD=		yes
+
+INSTALLATION_DIRS+=	bin share/doc/cleanscore
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/cleanscore ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/contrib/README.cleanscore ${DESTDIR}${PREFIX}/share/doc/cleanscore
+	${INSTALL_DATA} ${WRKSRC}/contrib/NEWS.cleanscore ${DESTDIR}${PREFIX}/share/doc/cleanscore
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:51 rillig Exp $
+bin/cleanscore
+share/doc/cleanscore/NEWS.cleanscore
+share/doc/cleanscore/README.cleanscore
