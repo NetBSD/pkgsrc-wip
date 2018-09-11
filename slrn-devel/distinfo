@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2010/11/30 20:41:45 anielski Exp $
-
-SHA1 (slrn-pre1.0.0-26.tar.gz) = 8344bb839332e88fcae5b76e9bb1a75a89fff32e
-RMD160 (slrn-pre1.0.0-26.tar.gz) = b9a6ae51de7119e65fc81a096f260e8956bf3137
-Size (slrn-pre1.0.0-26.tar.gz) = 1518821 bytes
-SHA1 (patch-af) = 0dbe90431bf4f4e7b8cec6c23da1ce7458a2ca38
