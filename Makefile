@@ -4181,7 +4181,6 @@ SUBDIR+=	slideml
 SUBDIR+=	slime
 SUBDIR+=	slowhttptest
 SUBDIR+=	slrn
-SUBDIR+=	slrn-devel
 SUBDIR+=	slune
 SUBDIR+=	slurm
 SUBDIR+=	slurm-spank-x11
