@@ -31,6 +31,7 @@ DEPENDS+=		pulseaudio-[0-9]*:../../audio/pulseaudio
 DEPENDS+=		bullet-[0-9]*:../../devel/bullet
 DEPENDS+=		gst-plugins1-base-[0-9]*:../../multimedia/gst-plugins1-base
 DEPENDS+=		libuuid-[0-9]*:../../devel/libuuid
+#DEPENDS+=		linux-utils-[0-9]*:../util-linux
 
 #PKG_OPTIONS.efl-1.21.0=	systemd
 
@@ -78,4 +79,5 @@ ICON_THEMES=		yes
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
+#.include "../util-linux/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
