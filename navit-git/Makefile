@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=   navit-gps
 GIT_REPO.navit-gps= https://github.com/navit-gps/navit.git
-GIT_REVISION=       d2413503fc583c1d96e3247f2d1621dc4f50b362
+GIT_REVISION=       07de185df5dc96356a21016b544137b84b4fc023
 _GIT_FLAGS?=        --depth 1
 
 CONFLICTS=	navit-[0-9]*
