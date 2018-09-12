@@ -15,6 +15,7 @@ COMMENT=	Lightweight Tox client for the desktop
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
+TEST_TARGET=	test
 
 .include "../../chat/toxcore/buildlink3.mk"
 .include "../../wip/filter_audio-git/buildlink3.mk"
