@@ -77,7 +77,6 @@ man/man1/ebrowse.1
 man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
-share/appdata/emacs.appdata.xml
 share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
@@ -1716,8 +1715,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/testcover.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/testcover.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/text-property-search.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/text-property-search.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/thread.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/thread.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/thunk.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/thunk.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/timer-list.el.gz
@@ -3750,6 +3747,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/underline.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/underline.elc
 share/emacs/${PKGVERSION}/lisp/thingatpt.el.gz
 share/emacs/${PKGVERSION}/lisp/thingatpt.elc
+share/emacs/${PKGVERSION}/lisp/thread.el.gz
+share/emacs/${PKGVERSION}/lisp/thread.elc
 share/emacs/${PKGVERSION}/lisp/thumbs.el.gz
 share/emacs/${PKGVERSION}/lisp/thumbs.elc
 share/emacs/${PKGVERSION}/lisp/time-stamp.el.gz
@@ -3975,3 +3974,4 @@ share/icons/hicolor/scalable/apps/emacs.ico
 share/icons/hicolor/scalable/apps/emacs.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document23.svg
+share/metainfo/emacs.appdata.xml
