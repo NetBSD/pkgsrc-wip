@@ -40,6 +40,8 @@ DATADIR=	${PREFIX}/share/mothur
 DOCSDIR=	${PREFIX}/share/doc/mothur
 EXAMPLESDIR=	${PREFIX}/share/examples/mothur
 
+DEPENDS+=	vsearch>=0:../../wip/vsearch
+
 
 SUBST_CLASSES+=                thread1
 SUBST_STAGE.thread1= post-patch
