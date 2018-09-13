@@ -4082,6 +4082,7 @@ SUBDIR+=	safekeep
 SUBDIR+=	sailor
 SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
+SUBDIR+=	salmon
 SUBDIR+=	samhain
 SUBDIR+=	samtools0119
 SUBDIR+=	sara
