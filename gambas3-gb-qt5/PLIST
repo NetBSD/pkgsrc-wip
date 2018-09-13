@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/gambas3/gb.qt5.component
+lib/gambas3/gb.qt5.la
+share/gambas3/info/gb.qt5.info
+share/gambas3/info/gb.qt5.list
