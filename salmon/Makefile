@@ -41,7 +41,8 @@ SUBST_FILES.staden+=	${WRKSRC}/CMakeFiles/libstadenio.dir/build.make
 # MAKE_JOBS_SAFE=	no
 
 DEPENDS=	bash>=0:../../shells/bash \
-		autoconf>=0:../../devel/autoconf
+		autoconf>=0:../../devel/autoconf \
+		unzip>=0:../../archivers/unzip
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake gmake
