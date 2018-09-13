@@ -19,8 +19,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=COMBINE-lab/} \
 		https://github.com/COMBINE-lab/staden-io_lib/archive/
 DISTFILES=	salmon-0.11.3.tar.gz salmon-v0.11.3.zip v1.1.tar.gz v1.14.8.1.tar.gz
 EXTRACT_ONLY=	salmon-0.11.3.tar.gz v1.14.8.1.tar.gz
-#GITHUB_PROJECT=	salmon
-#GITHUB_TAG=	v${PV}
+GITHUB_PROJECT=	salmon
+GITHUB_TAG=	v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/COMBINE-lab/salmon
