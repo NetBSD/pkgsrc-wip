@@ -4331,6 +4331,7 @@ SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
+SUBDIR+=	tbb
 SUBDIR+=	tc
 SUBDIR+=	tc-git
 SUBDIR+=	tc-hasida-table

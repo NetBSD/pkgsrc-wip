@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	tbb
+
+.if !defined(TBB_BUILDLINK3_MK)
+TBB_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.tbb+=	tbb>=2018.5
+BUILDLINK_PKGSRCDIR.tbb?=	../../wip/tbb
+.endif	# TBB_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-tbb

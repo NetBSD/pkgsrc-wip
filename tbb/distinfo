@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (tbb-2018.5.tar.gz) = b277fbfbac9c12825ac1522212fad899c41dabfa
+RMD160 (tbb-2018.5.tar.gz) = cb9c0f1a77b37765a1fcd7e743d531215339873e
+SHA512 (tbb-2018.5.tar.gz) = 3e8d20276ccb1b50099f96b6cf968e3d0ada53caea1fa836ecb8652f1dca236fbbbf2c783e64ea2f761f7f21725064d19b72d176e35e4dc29706b8a30965153b
+Size (tbb-2018.5.tar.gz) = 2922517 bytes
+SHA1 (patch-FreeBSD.gcc.inc) = a69fca97794a406d994464b190e3c4d0e0970e84
+SHA1 (patch-build-FreeBSD.inc) = 2eaa909e16130f169b2a58c7ce6f052f192dd92e
+SHA1 (patch-include-tbb-tbb_config.h) = bfb4162aa8ffdc091d0e807a7595352c40526cb2
