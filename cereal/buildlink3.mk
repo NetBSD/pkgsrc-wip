@@ -1,0 +1,14 @@
+# $NetBSD$
+BUILDLINK_DEPMETHOD.cereal?=	build
+
+BUILDLINK_TREE+=	cereal
+
+.if !defined(CEREAL_BUILDLINK3_MK)
+CEREAL_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.cereal+=	cereal>=1.2.2
+BUILDLINK_PKGSRCDIR.cereal?=	../../wip/cereal
+
+.endif	# CEREAL_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-cereal
