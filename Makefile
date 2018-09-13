@@ -2282,6 +2282,7 @@ SUBDIR+=	openmw
 SUBDIR+=	openmx-openmpi
 SUBDIR+=	opennurbs
 SUBDIR+=	openra
+SUBDIR+=	openrct2
 SUBDIR+=	openrw-git
 SUBDIR+=	opensc
 SUBDIR+=	openscad

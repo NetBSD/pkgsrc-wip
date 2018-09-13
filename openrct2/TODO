@@ -1,0 +1,2 @@
+With gcc-6.4.0 (nb2 20180327) fails because `<string_view>' is not
+available. Probably needs a newer compiler.
