@@ -341,6 +341,7 @@ SUBDIR+=	cdirip
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
+SUBDIR+=	cereal
 SUBDIR+=	cgal
 SUBDIR+=	cglib
 SUBDIR+=	cgnslib
