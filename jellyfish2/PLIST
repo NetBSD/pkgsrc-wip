@@ -36,7 +36,9 @@ include/${PKGNAME}/jellyfish/mer_overlap_sequence_parser.hpp
 include/${PKGNAME}/jellyfish/mer_qual_iterator.hpp
 include/${PKGNAME}/jellyfish/misc.hpp
 include/${PKGNAME}/jellyfish/offsets_key_value.hpp
+include/${PKGNAME}/jellyfish/parser_common.hpp
 include/${PKGNAME}/jellyfish/rectangular_binary_matrix.hpp
+include/${PKGNAME}/jellyfish/sam_format.hpp
 include/${PKGNAME}/jellyfish/simple_circular_buffer.hpp
 include/${PKGNAME}/jellyfish/sorted_dumper.hpp
 include/${PKGNAME}/jellyfish/stdio_filebuf.hpp
