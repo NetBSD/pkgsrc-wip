@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (p5-transdecoder-2.0.1.tar.gz) = 1a36aa7ecb3af9e984eb9bee818871093fa1ab74
-RMD160 (p5-transdecoder-2.0.1.tar.gz) = d59644fc9f44f428ae5f001543e33ca3b7539aec
-SHA512 (p5-transdecoder-2.0.1.tar.gz) = fd12aeda089a12036e288e58eb0a3c3b9bb1f104f6821102d84ba6ddaec1a9dd32ec7937cd87129ff9814c7c8e26b6b98d27c6af8edd7ed6b5335c4878f649de
-Size (p5-transdecoder-2.0.1.tar.gz) = 9925281 bytes
+SHA1 (p5-transdecoder-5.3.0.tar.gz) = a615b4004aa81ebcc59472feeefafde09755b093
+RMD160 (p5-transdecoder-5.3.0.tar.gz) = bbf692ecba4a2eb2b45733badfc22dc636cd07c4
+SHA512 (p5-transdecoder-5.3.0.tar.gz) = c8f6458ca09831d91a583c0abdb09398493fa1dbc4d63c5f859db12a8005b1b7861c3b6836f59a4947a9b17b660adcc496e7c3805457a21a2572ecbd05de0449
+Size (p5-transdecoder-5.3.0.tar.gz) = 15699957 bytes

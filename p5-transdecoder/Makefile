@@ -8,11 +8,11 @@
 # p5-URI-ESC?
 # FIXME: Check use statements in all perl scripts for more deps
 
-DISTNAME=	p5-transdecoder-${PORTVERSION}
+DISTNAME=	p5-transdecoder-${PV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TransDecoder/}
 GITHUB_PROJECT=	TransDecoder
-GITHUB_TAG=	${PORTVERSION}
+GITHUB_TAG=	TransDecoder-v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://transdecoder.github.io/
@@ -27,23 +27,23 @@ SUBST_SED.path+=	-e 's|$$FindBin::RealBin/util|${PREFIX}/libexec/TransDecoder/ut
 SUBST_FILES.path+=	${WRKSRC}/TransDecoder*
 SUBST_FILES.path+=	${WRKSRC}/util/*.pl
 
-DEPENDS=	cdhit>=4.6.1:../../biology/cdhit \
+DEPENDS=	cdhit>=4.6.8:../../wip/cdhit \
 		p5-URI>=0:../../www/p5-URI
 
 USE_TOOLS=	perl
 REPLACE_BASH=	sample_data/runMe.sh util/pfam_mpi.pbs
-REPLACE_PERL=	util/*.pl sample_data/*.pl PerlLib/*.pm \
+REPLACE_PERL=	util/*.pl sample_data/*.pl PerlLib/*.pm PerlLib/*.ph \
 		TransDecoder.LongOrfs TransDecoder.Predict
 NO_BUILD=	yes
 
-PORTVERSION=	2.0.1
+PV=		5.3.0
 
 INSTALLATION_DIRS=	bin lib/TransDecoder/PerlLib libexec/TransDecoder/util
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/PerlLib/* \
 		${DESTDIR}${PREFIX}/lib/TransDecoder/PerlLib
-	${INSTALL_SCRIPT} ${WRKSRC}/TransDecoder* ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/TransDecoder.LongOrfs ${WRKSRC}/TransDecoder.Predict ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/util/*.pl \
 		${DESTDIR}${PREFIX}/libexec/TransDecoder/util
 
