@@ -31,7 +31,7 @@ SUBST_FILES.lock_guard=	hit.h log.h
 SUBST_SED.lock_guard=	-e 's|lock_guard<MUTEX_T>|tthread::lock_guard<MUTEX_T>|g'
 
 DATADIR=	${PREFIX}/share/bowtie
-DOCSDIR=	${PREFIX}/share/docs/bowtie
+DOCSDIR=	${PREFIX}/share/doc/bowtie
 
 INSTALLATION_DIRS=	bin share/bowtie share/docs/bowtie
 
