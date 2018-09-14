@@ -1,1 +1,1 @@
-Add support for more platforms.
+Fix PLIST for non-Darwin platforms.
