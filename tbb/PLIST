@@ -112,6 +112,8 @@ lib/libtbb.so
 lib/libtbb.so.2
 lib/libtbbmalloc.so
 lib/libtbbmalloc.so.2
+lib/libtbbmalloc_proxy.so
+lib/libtbbmalloc_proxy.so.2
 share/doc/tbb/a00002.html
 share/doc/tbb/a00004.html
 share/doc/tbb/a00006.html

@@ -7,6 +7,7 @@
 
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
+# Some of this may be useful for NetBSD and FreeBSD builds
 
 #SUB_FILES=	tbb.pc
 #SUB_LIST=	prefix="${PREFIX}" \
@@ -46,7 +47,6 @@ USE_TOOLS+=	gmake pax
 BUILD_TARGET=	default
 
 PV=		2018.5
-DOCSDIR=	${PREFIX}/share/doc/tbb
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -60,19 +60,24 @@ INSTALLATION_DIRS=	include/tbb lib share/doc/tbb
 
 do-install:
 	cd ${WRKSRC}; \
-	${INSTALL_LIB} build/\${BUILD_OPSYS}*release/libtbb.so \
-		${DESTDIR}${PREFIX}/lib/libtbb.so.2; \
+	${INSTALL_LIB} build/${BUILD_OPSYS}*release/libtbb.so.2 \
+		${DESTDIR}${PREFIX}/lib; \
 	${LN} -sf libtbb.so.2 \
 		${DESTDIR}${PREFIX}/lib/libtbb.so; \
-	${INSTALL_LIB} build/\${BUILD_OPSYS}*release/libtbbmalloc.so \
-		${DESTDIR}${PREFIX}/lib/libtbbmalloc.so.2; \
+	${INSTALL_LIB} build/${BUILD_OPSYS}*release/libtbbmalloc.so.2 \
+		${DESTDIR}${PREFIX}/lib; \
 	${LN} -sf libtbbmalloc.so.2 \
 		${DESTDIR}${PREFIX}/lib/libtbbmalloc.so; \
+	${INSTALL_LIB} build/${BUILD_OPSYS}*release/libtbbmalloc_proxy.so.2 \
+		${DESTDIR}${PREFIX}/lib; \
+	${LN} -sf libtbbmalloc_proxy.so.2 \
+		${DESTDIR}${PREFIX}/lib/libtbbmalloc_proxy.so; \
 	cd include/tbb/ && pax -rw . ${DESTDIR}${PREFIX}/include/tbb/
-	cd ${WRKSRC}/doc/html && pax -rw . ${DESTDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc/html && pax -rw . ${DESTDIR}${PREFIX}/share/doc/tbb
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/tbb/*.orig
+	${CHMOD} -R g-w ${DESTDIR}${PREFIX}
 # 	${INSTALL_DATA} ${WRKDIR}/tbb.pc ${DESTDIR}${PREFIX}/libdata/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
