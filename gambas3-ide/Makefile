@@ -20,4 +20,6 @@ CHECK_FILES_SKIP+=	${PREFIX}/bin/gb.*
 .include "options.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -69,6 +69,7 @@
 # used by wip/gambas3-gb-qt4-ext/Makefile
 # used by wip/gambas3-gb-qt4-opengl/Makefile
 # used by wip/gambas3-gb-qt4-webkit/Makefile
+# used by wip/gambas3-gb-qt5/Makefile
 # used by wip/gambas3-gb-report/Makefile
 # used by wip/gambas3-gb-report2/Makefile
 # used by wip/gambas3-gb-scanner/Makefile
@@ -110,7 +111,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		autoreconf automake aclocal pkg-config
+USE_TOOLS+=		autoreconf automake aclocal pkg-config intltool
 CONFIGURE_DIRS!=	for d in ${BUILD_DIRS}; do echo $$d | cut -d/ -f1; done
 
 .if "${BUILD_DIRS}" != "main/gbc"
