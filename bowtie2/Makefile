@@ -5,11 +5,11 @@
 #              Wed Mar  2 08:06:07 CST 2016               #
 ###########################################################
 
-DISTNAME=	bowtie2-${PORTVERSION}
+DISTNAME=	bowtie2-${PV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 GITHUB_PROJECT=	bowtie2
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_TAG=	v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://bowtie-bio.sourceforge.net/index.shtml
@@ -21,12 +21,12 @@ USE_TOOLS+=	gmake perl:run pax
 REPLACE_PERL=	scripts/*.pl bowtie2
 REPLACE_PYTHON=	bowtie2-build bowtie2-inspect
 
-PORTVERSION=	2.2.7
+PV=		2.3.4.2
 DATADIR=	${PREFIX}/share/bowtie2
 DOCSDIR=	${PREFIX}/share/doc/bowtie2
 EXAMPLESDIR=	${PREFIX}/share/examples/bowtie2
 
-INSTALLATION_DIRS=	share/bowtie2/doc share/bowtie2/examples share/bowtie2/scripts
+INSTALLATION_DIRS=	share/bowtie2/scripts
 
 post-install:
 	${INSTALL_PROGRAM} \
@@ -45,4 +45,6 @@ post-install:
 	cd ${WRKSRC}/doc && pax -rw * ${DESTDIR}${DOCSDIR}
 
 .include "../../lang/python/application.mk"
+.include "../../wip/tbb/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

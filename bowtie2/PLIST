@@ -36,7 +36,6 @@ share/doc/bowtie2/images/sflogo.png
 share/doc/bowtie2/images/university.small.horizontal.white.png
 share/doc/bowtie2/manual.html
 share/doc/bowtie2/release.txt
-share/doc/bowtie2/strip_markdown.pl
 share/doc/bowtie2/style.css
 share/doc/bowtie2/website/faq.shtml
 share/doc/bowtie2/website/faq.ssi
@@ -59,6 +58,7 @@ share/examples/bowtie2/index/lambda_virus.3.bt2
 share/examples/bowtie2/index/lambda_virus.4.bt2
 share/examples/bowtie2/index/lambda_virus.rev.1.bt2
 share/examples/bowtie2/index/lambda_virus.rev.2.bt2
+share/examples/bowtie2/reads/combined_reads.bam
 share/examples/bowtie2/reads/longreads.fq
 share/examples/bowtie2/reads/reads_1.fq
 share/examples/bowtie2/reads/reads_2.fq
