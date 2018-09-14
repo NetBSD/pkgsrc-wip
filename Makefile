@@ -4441,6 +4441,7 @@ SUBDIR+=	trelby
 SUBDIR+=	triangle
 SUBDIR+=	triforce-afl
 SUBDIR+=	trimadap
+SUBDIR+=	trimmomatic
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
