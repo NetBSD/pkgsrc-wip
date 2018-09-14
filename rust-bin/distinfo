@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (rust-1.28.0-x86_64-apple-darwin.tar.gz) = ac439a54988a471e1e7652596307a9b54a253dd7
-RMD160 (rust-1.28.0-x86_64-apple-darwin.tar.gz) = 47479635f259e33218ee0e63b389e7f2c83278e5
-SHA512 (rust-1.28.0-x86_64-apple-darwin.tar.gz) = 99a3a5c5d0d09aa7ae8b52e5c71df56ead2d9c730921120c668daf6dcd6b9856e775735533ffc6f52f9481f591800ab81d0d7b43f534d2fa32e80d2a7dec8cde
-Size (rust-1.28.0-x86_64-apple-darwin.tar.gz) = 186975346 bytes
+SHA1 (rust-1.29.0-x86_64-apple-darwin.tar.gz) = 7f130514eeb1dab7b097b8916b4583c56cebd312
+RMD160 (rust-1.29.0-x86_64-apple-darwin.tar.gz) = 04be89d3fcace87163bc2dea867d47d67f51542a
+SHA512 (rust-1.29.0-x86_64-apple-darwin.tar.gz) = 834975c0a61ca355786885b774ee836e5aee2a197ff168c9a726c210a41010a33d0d4e376f0596f74ae7aa998b04aad1c58f1fc2a4c5848d8ef5629f3642f5ce
+Size (rust-1.29.0-x86_64-apple-darwin.tar.gz) = 198252025 bytes
 SHA1 (patch-install.sh) = 4dc4edcbda3c9d2b60ea51b5f83cadd5992ba786

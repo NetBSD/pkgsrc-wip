@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rust-1.28.0-${MACHINE_ARCH}-apple-${LOWER_OPSYS}
+DISTNAME=	rust-1.29.0-${MACHINE_ARCH}-apple-${LOWER_OPSYS}
 PKGNAME=	${DISTNAME:S/rust/rust-bin/:C/([0-9])-.*/\1/}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
