@@ -13,7 +13,11 @@ GB_DEPENDS+=	gambas3-gb-signal gambas3-gb-term gambas3-gb-util gambas3-gb-jit
 PKGNAME=	gambas3-ide-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	Integrated Development Environment for the Gambas programming language
+DEPENDS+=	gtar-base-1.*:../../archivers/gtar-base
 
 CHECK_FILES_SKIP+=	${PREFIX}/bin/gb.*
 
+.include "options.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
