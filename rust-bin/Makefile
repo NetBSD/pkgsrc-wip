@@ -61,8 +61,7 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
 
 do-build:
-	cd ${WRKSRC}/rustc && \
-	ls lib/lib*.${SHLIB_TYPE} > ${WRKDIR}/PLIST.lib
+	cd ${WRKSRC}/rustc && ls lib/lib* > ${WRKDIR}/PLIST.lib
 	cd ${WRKSRC}/rust-analysis-${RUST_ARCH} && \
 	ls lib/rustlib/${RUST_ARCH}/analysis/* \
 		>> ${WRKDIR}/PLIST.lib
