@@ -8,7 +8,7 @@ PLIST_VARS+=		gui
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk2)
-BUILD_DEPENDS+=	gambas3-gb-gtk-${GB_VERSION}:../../wip/gambas3-gb-gtk
+BUILD_DEPENDS+=	gambas3-gb-gtk-opengl-${GB_VERSION}:../../wip/gambas3-gb-gtk-opengl
 PLIST.gui=	yes
 .endif
 
