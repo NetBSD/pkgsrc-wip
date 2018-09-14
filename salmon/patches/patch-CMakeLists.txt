@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Unbundle deps, eliminate build phase downloads
 --- CMakeLists.txt.orig	2018-08-29 22:38:43.000000000 +0000
 +++ CMakeLists.txt
 @@ -47,7 +47,7 @@ set(CPACK_PACKAGE_NAME

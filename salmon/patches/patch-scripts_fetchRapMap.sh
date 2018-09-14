@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Eliminate build phase download
 --- scripts/fetchRapMap.sh.orig	2018-09-11 14:54:51 UTC
 +++ scripts/fetchRapMap.sh
 @@ -30,7 +30,7 @@ EXPECTED_SHA256=b863548383448c21a862cc56

@@ -5,11 +5,6 @@
 #              Thu Sep 13 14:20:25 CDT 2018               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-#LIBS+=		-L${PREFIX}/lib -lthr
-
 DISTNAME=	salmon-${PV}
 DIST_SUBDIR=	salmon
 CATEGORIES=	biology
@@ -46,37 +41,16 @@ DEPENDS=	bash>=0:../../shells/bash \
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake gmake
-# FreeBSD's SHEBANG_FILES may include bash, perl, python, etc.
-# I don't know which is which, so you'll have to finish.
-# Add bash, etc. to USE_TOOLS if used below.
-# 
 REPLACE_BASH=	scripts/*.sh
 REPLACE_PYTHON=	scripts/*.py
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DDISTDIR:PATH=${DISTDIR} \
-		https://github.com/COMBINE-lab/libgff/archive/ \
-		https://github.com/COMBINE-lab/staden-io_lib/archive/
+CMAKE_ARGS+=	-DDISTDIR:PATH=${DISTDIR} -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 CONFIGURE_ENV+=	DISTDIR=${DISTDIR} DIST_SUBDIR=salmon
-#MAKE_ENV+=	WRKDIR=${WRKDIR} DISTDIR=${DISTDIR} DIST_SUBDIR=salmon
 LDFLAGS+=	-lz
 
 PV=		0.11.3
-DATADIR=	${PREFIX}/share/salmon
-DOCSDIR=	${PREFIX}/share/doc/salmon
-EXAMPLESDIR=	${PREFIX}/share/examples/salmon
 
-# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
-# .include "../../mk/bsd.prefs.mk"
-
-# Keep this if there are user-selectable options.
-# .include "options.mk"
-
-# Specify which directories to create before install.
-# You should only need this if using your own install target.
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
-
-# Convert any _DEPENDS above that have a buildlink3.mk
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

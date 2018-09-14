@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Unbundle deps
 --- src/CMakeLists.txt.orig	2018-09-10 20:40:46 UTC
 +++ src/CMakeLists.txt
 @@ -2,7 +2,7 @@ include_directories(
