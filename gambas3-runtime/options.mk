@@ -3,6 +3,7 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gambas3-runtime
 PKG_SUPPORTED_OPTIONS=	qt4 gtk2 gtk3
 PKG_SUGGESTED_OPTIONS=	qt4
+PLIST_VARS+=		gui
 
 .include "../../mk/bsd.options.mk"
 
