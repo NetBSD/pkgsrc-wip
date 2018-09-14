@@ -10,9 +10,8 @@
 # .if ${ARCH} == i386
 # MAKE_ENV+=	POPCNT_CAPABILITY=0
 # .endif
-# .include <bsd.port.post.mk>
 
-DISTNAME=	bowtie-1.0.1
+DISTNAME=	bowtie-1.1.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,38 +20,33 @@ MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Ultrafast, memory-efficient short read aligner
 LICENSE=	artistic
 
-# Pessimistic assumption.  Test and change if possible.
-MAKE_JOBS_SAFE=	no
-
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl:run pax
+REPLACE_PYTHON=	bowtie bowtie-build bowtie-inspect
 REPLACE_PERL=	scripts/*.pl
 
-# Adapt REINPLACE commands to SUBST:
 SUBST_CLASSES+=		lock_guard
 SUBST_STAGE.lock_guard=	post-patch
 SUBST_FILES.lock_guard=	hit.h log.h
 SUBST_SED.lock_guard=	-e 's|lock_guard<MUTEX_T>|tthread::lock_guard<MUTEX_T>|g'
 
 DATADIR=	${PREFIX}/share/bowtie
+DOCSDIR=	${PREFIX}/share/docs/bowtie
 
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS=	bin share/bowtie share/docs/bowtie
 
 do-install:
-	${INSTALL_PROGRAM} \
+	${INSTALL_PROGRAM} ${WRKSRC}/bowtie-*-[ls] ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} \
 		${WRKSRC}/bowtie \
 		${WRKSRC}/bowtie-build \
 		${WRKSRC}/bowtie-inspect \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} \
 		${WRKSRC}/scripts/*.sh \
 		${WRKSRC}/scripts/*.pl \
 		${DESTDIR}${PREFIX}/bin
 	${MKDIR} ${DESTDIR}${DATADIR}
-	cd ${WRKSRC} && ${PAX} -wr genomes indexes reads \
-		${DESTDIR}${DATADIR}
-	cd ${WRKSRC}/doc && ${PAX} -wr * \
-		${DESTDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${PAX} -wr genomes indexes reads ${DESTDIR}${DATADIR})
+	(cd ${WRKSRC}/doc && ${PAX} -wr * ${DESTDIR}${DOCSDIR})
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
