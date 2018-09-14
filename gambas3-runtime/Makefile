@@ -6,6 +6,7 @@ BUILD_DIRS=	main comp
 PKGNAME=	gambas3-runtime-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	Gambas interpreter and basic runtime
+PLIST_VARS+=	gui
 
 .include "options.mk"
 .include "../../devel/libffi/buildlink3.mk"

@@ -10,8 +10,8 @@ lib/gambas3/gb.draw.la
 lib/gambas3/gb.eval.component
 lib/gambas3/gb.eval.la
 lib/gambas3/gb.geom.la
-lib/gambas3/gb.gui.base.component
-lib/gambas3/gb.gui.base.gambas
+${PLIST.gui}lib/gambas3/gb.gui.base.component
+${PLIST.gui}lib/gambas3/gb.gui.base.gambas
 lib/gambas3/gb.gui.component
 lib/gambas3/gb.gui.la
 lib/gambas3/gb.gui.opengl.component
@@ -29,8 +29,8 @@ share/gambas3/info/gb.debug.info
 share/gambas3/info/gb.debug.list
 share/gambas3/info/gb.eval.info
 share/gambas3/info/gb.eval.list
-share/gambas3/info/gb.gui.base.info
-share/gambas3/info/gb.gui.base.list
+${PLIST.gui}share/gambas3/info/gb.gui.base.info
+${PLIST.gui}share/gambas3/info/gb.gui.base.list
 share/gambas3/info/gb.gui.info
 share/gambas3/info/gb.gui.list
 share/gambas3/info/gb.gui.opengl.info
