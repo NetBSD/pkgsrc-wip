@@ -2,4 +2,7 @@ $NetBSD$
 
 SHA1 (fswebcam-20140113.tar.gz) = 8140e275be75304bdd408500e73c007333bafa81
 RMD160 (fswebcam-20140113.tar.gz) = 559932a176eaf4d1b2af14b88030d0edeb75a4cc
+SHA512 (fswebcam-20140113.tar.gz) = 5d10d74f8ef705c6dc31f1781ca6af178e3aa3c64c625cbac1158c48ffdd9cbfc613ad6c08b69edee8297a099be08a844fb3ecbf21733124cd8b6163190af5db
 Size (fswebcam-20140113.tar.gz) = 113226 bytes
+SHA1 (patch-Makefile.in) = 220d06a01d260f3027fe792ef4077c88626da3af
+SHA1 (patch-videodev2.h) = e13ef80d4daad0750fd4727235aa3231245a3818

@@ -2,16 +2,16 @@
 
 DISTNAME=	fswebcam-20140113
 CATEGORIES=	graphics www
-MASTER_SITES=	http://www.firestorm.cx/fswebcam/files/
+MASTER_SITES=	https://www.sanslogic.co.uk/fswebcam/files/
 
 MAINTAINER=	catskillmarina@gmail.com
-HOMEPAGE=	http://www.firestorm.cx/fswebcam/files/
+HOMEPAGE=	https://www.sanslogic.co.uk/fswebcam/
 COMMENT=	Pulls single images off of webcams without graphic bloat
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.pkg.mk"
-.include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+CONFIGURE_ARGS+=	--disable-v4l1
 
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

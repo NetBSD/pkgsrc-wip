@@ -1,0 +1,22 @@
+$NetBSD$
+
+Do not compress man pages.
+
+--- Makefile.in.orig	2014-01-13 19:15:06.000000000 +0000
++++ Makefile.in
+@@ -17,13 +17,13 @@ OBJS  = fswebcam.o log.o effects.o parse
+ OBJS += dec_rgb.o dec_yuv.o dec_grey.o dec_bayer.o dec_jpeg.o dec_png.o
+ OBJS += dec_s561.o
+ 
+-all: fswebcam fswebcam.1.gz
++all: fswebcam
+ 
+ install: all
+ 	mkdir -p ${DESTDIR}${bindir}
+ 	mkdir -p ${DESTDIR}${mandir}/man1
+ 	install -m 755 fswebcam ${DESTDIR}${bindir}
+-	install -m 644 fswebcam.1.gz ${DESTDIR}${mandir}/man1
++	install -m 644 fswebcam.1 ${DESTDIR}${mandir}/man1
+ 
+ fswebcam: $(OBJS)
+ 	$(CC) -o fswebcam $(OBJS) $(LDFLAGS)
