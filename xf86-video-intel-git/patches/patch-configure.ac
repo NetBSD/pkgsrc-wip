@@ -1,0 +1,37 @@
+$NetBSD$
+
+Work around configure fail:
+xorg-server.h must be included first for _XORGSERVER64, else we have
+conflicting types:
+
+
+/home/fly/pkgsrc/wip/xf86-video-intel-git/work/.buildlink/include/X11/extensions/randrproto.h:53:17: error: conflicting types for 'CARD32'
+ #define RRLease CARD32
+                 ^
+/home/fly/pkgsrc/wip/xf86-video-intel-git/work/.buildlink/include/xorg/randrstr.h:66:13: note: in expansion of macro 'RRLease'
+ typedef XID RRLease;
+             ^~~~~~~
+In file included from /home/fly/pkgsrc/wip/xf86-video-intel-git/work/.buildlink/include/xorg/misc.h:76:0,
+                 from /home/fly/pkgsrc/wip/xf86-video-intel-git/work/.buildlink/include/xorg/xf86str.h:37,
+                 from conftest.c:55:
+/home/fly/pkgsrc/wip/xf86-video-intel-git/work/.buildlink/include/X11/Xmd.h:108:22: note: previous declaration of 'CARD32' was here
+ typedef unsigned int CARD32;
+                      ^~~~~~
+
+
+--- configure.ac.orig	2018-09-14 02:26:58.000000000 +0000
++++ configure.ac
+@@ -495,10 +495,10 @@ if test "x$_EXT_CHECK" != "xno" -a "x$DR
+         CFLAGS="$CFLAGS $XORG_CFLAGS $DRI1_CFLAGS $DRM_CFLAGS"
+         CPPFLAGS="$CPPFLAGS $XORG_CFLAGS $DRI1_CFLAGS $DRM_CFLAGS"
+         AC_CHECK_HEADERS([dri.h sarea.h dristruct.h], [], [have_dri1=no],
+-                [/* for dri.h */
+-                 #include <xf86str.h>
+-                 /* for dristruct.h */
++                [/* for dristruct.h */
+                  #include <xorg-server.h>
++                 /* for dri.h */
++                 #include <xf86str.h>
+                  #ifdef HAVE_DRI_H
+                  # include <dri.h>
+                  #endif

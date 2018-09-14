@@ -36,6 +36,7 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
