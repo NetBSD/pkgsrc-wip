@@ -4443,6 +4443,7 @@ SUBDIR+=	triforce-afl
 SUBDIR+=	trimadap
 SUBDIR+=	trimmomatic
 SUBDIR+=	trinity
+SUBDIR+=	trinity-devel
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
 SUBDIR+=	tsh
