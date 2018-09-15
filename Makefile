@@ -3659,7 +3659,6 @@ SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rpyc
 SUBDIR+=	py-rql
 SUBDIR+=	py-rsistent
-SUBDIR+=	py-rt
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-safety
 SUBDIR+=	py-sage
