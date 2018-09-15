@@ -1,8 +1,6 @@
 $NetBSD$
 
-SHA1 (py-rt/rt-1.0.10.tar.gz) = 84469322e28d6bb8cd3b6fb1c972014a6b011211
-RMD160 (py-rt/rt-1.0.10.tar.gz) = c33668195117608d33daf8a306f6385689dfd999
-SHA512 (py-rt/rt-1.0.10.tar.gz) = ef09818c927eb6b3c6a9b183f92a5ce2424f334dc62d098cc06cd63c5adc8d11e55f9356db6122d2dde0f841d2cfaa713161ba5ce7746e8f509fab89b832dc60
-Size (py-rt/rt-1.0.10.tar.gz) = 35402 bytes
-SHA1 (patch-rt.py) = 87d4c67fad913fbebf50356afc80e073f4c5d9fc
-SHA1 (patch-setup.py) = 8028e89a8a51e939fdb7ebfb9814518ee3173ad3
+SHA1 (py-rt/rt-1.0.11.tar.gz) = 2a919c9df7a7aec75aa9f1f19df9fbc81341e784
+RMD160 (py-rt/rt-1.0.11.tar.gz) = cd0ee2929ede3c878e21bf0750e4fe262550ded5
+SHA512 (py-rt/rt-1.0.11.tar.gz) = 00007710d152472bf25e656b6298502e0b571932c8c3f4c498074fe7a849d575fd2deaad91a4814a7aece4dbfa847c913045e927830a8e0a02d3d13876562696
+Size (py-rt/rt-1.0.11.tar.gz) = 35084 bytes
