@@ -1,0 +1,14 @@
+$NetBSD$
+
+# Respect env
+--- trinity-plugins/seqtk-trinity-0.0.2/Makefile.orig	2018-09-16 14:53:41.191563645 +0000
++++ trinity-plugins/seqtk-trinity-0.0.2/Makefile
+@@ -4,7 +4,7 @@ CFLAGS=-g -Wall -O2 -Wno-unused-function
+ all:seqtk-trinity
+ 
+ seqtk-trinity:seqtk.c khash.h kseq.h
+-		$(CC) $(CFLAGS) seqtk.c -o $@ -lz -lm
++		$(CC) $(CFLAGS) seqtk.c -o $@ $(LDFLAGS) -lz -lm
+ 
+ clean:
+ 		rm -fr gmon.out *.o ext/*.o a.out seqtk trimadap *~ *.a *.dSYM session*

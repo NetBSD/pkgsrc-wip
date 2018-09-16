@@ -43,17 +43,14 @@ HOMEPAGE=	http://trinityrnaseq.github.io/
 COMMENT=	Assembles transcript sequences from Illumina RNA-Seq data
 LICENSE=	modified-bsd
 
-# MAKE_JOBS_SAFE=	no
-
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
-USE_TOOLS+=	cmake gmake pax
-USE_CMAKE=	yes
+USE_TOOLS+=	cmake gmake pax perl
 
 REPLACE_BASH=	util/*/*.sh
 REPLACE_BASH+=	util/misc/alt_GG_read_partitioning_JCornish/genwig.sh
 REPLACE_BASH+=	Analysis/DifferentialExpression/cluster_sample_data/runMe.sh
-REPLACE_PERL=	util/*/*.pl Chrysalis/analysis/*.pl 
+REPLACE_PERL=	Trinity util/*.pl util/*/*.pl util/*/*/*.pl Chrysalis/analysis/*.pl 
 REPLACE_PYTHON=	util/support_scripts/trinity_installer.py
 REPLACE_PYTHON+=util/misc/alt_GG_read_partitioning_JCornish/genwig2.py
 REPLACE_PYTHON+=util/misc/sim_test_framework/run_Trinity_eval.sh
@@ -115,20 +112,17 @@ PLUGINS_DIR=	${LIBEXEC_DIR}/trinity-plugins
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
 # .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
+INSTALLATION_DIRS=	bin libexec/trinity/Chrysalis/bin libexec/trinity/Inchworm/bin libexec/trinity/Butterfly libexec/trinity/trinity-plugins/scaffold_iworm_contigs libexec/trinity/trinity-plugins/BIN share/examples
 
 # FIXME: More may need to be installed
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Trinity ${DESTDIR}${PREFIX}/bin
-	@${MKDIR} ${DESTDIR}${LIBEXEC_DIR}/Chrysalis/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/Chrysalis/bin/* \
 		${DESTDIR}${LIBEXEC_DIR}/Chrysalis/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/Chrysalis/analysis/ReadsToComponents.pl \
 		${DESTDIR}${LIBEXEC_DIR}/Chrysalis/bin
-	@${MKDIR} ${DESTDIR}${LIBEXEC_DIR}/Inchworm/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/Inchworm/bin/* \
 		${DESTDIR}${LIBEXEC_DIR}/Inchworm/bin
-	@${MKDIR} ${DESTDIR}${LIBEXEC_DIR}/Butterfly
 	${INSTALL_SCRIPT} ${WRKSRC}/Butterfly/Butterfly.jar \
 		${DESTDIR}${LIBEXEC_DIR}/Butterfly
 	cd ${WRKSRC} && pax -rw PerlLib \
@@ -137,19 +131,16 @@ do-install:
 		${DESTDIR}${LIBEXEC_DIR}
 	cd ${WRKSRC} && pax -rw Analysis \
 		${DESTDIR}${LIBEXEC_DIR}
-	@${MKDIR} ${DESTDIR}${PLUGINS_DIR}/scaffold_iworm_contigs
 	${INSTALL_PROGRAM} ${WRKSRC}/trinity-plugins/scaffold_iworm_contigs/scaffold_iworm_contigs \
 		${DESTDIR}${PLUGINS_DIR}/scaffold_iworm_contigs
-	@${MKDIR} ${DESTDIR}${PLUGINS_DIR}/BIN
 	${INSTALL_PROGRAM} ${WRKSRC}/trinity-plugins/BIN/seqtk-trinity \
 		${DESTDIR}${PLUGINS_DIR}/BIN
-	cd ${WRKSRC}/sample_data && pax -rw \* \
+	cd ${WRKSRC}/sample_data && pax -rw * \
 		${DESTDIR}${EXAMPLESDIR}
-	${RLN} ${DESTDIR}${PREFIX}/bin/Trinity \
+	${LN} -fs ${PREFIX}/bin/Trinity \
 		${DESTDIR}${PREFIX}/libexec/trinity/Trinity
 
 .include "../../lang/python/application.mk"
 .include "../../biology/htslib/buildlink3.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

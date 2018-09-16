@@ -11,4 +11,5 @@ SHA1 (patch-Inchworm_Makefile) = 4aa9e682648484976e9cc611e2715b7fb9109e45
 SHA1 (patch-Makefile) = 07ca4b2a3f9157b822e9e05cf4f70b437b7fb5de
 SHA1 (patch-trinity-plugins_Makefile) = 173d54aa7a80edc3c429fe145cab841cdf4dca01
 SHA1 (patch-trinity-plugins_scaffold__iworm__contigs_Makefile) = e946e46209d0654c285f829017e5753eb3444fa0
+SHA1 (patch-trinity-plugins_seqtk-trinity-0.0.2_Makefile) = 30946c32223ae06311e7315a467af5c5de626f0c
 SHA1 (patch-util_support__scripts_plugin__install__tests.sh) = 5da1d3872d6632ffb33a84f4cd4ee57c367130f3
