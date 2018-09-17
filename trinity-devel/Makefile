@@ -24,7 +24,7 @@ DEPENDS+=	salmon>=0:../../wip/salmon
 DEPENDS+=	bowtie>=0:../../wip/bowtie
 DEPENDS+=	bowtie2>=0:../../wip/bowtie2
 DEPENDS+=	samtools>=1.3:../../biology/samtools
-DEPENDS+=	jellyfish>=2.1.4:../../wip/jellyfish
+DEPENDS+=	jellyfish>=2.1.4:../../wip/jellyfish2
 DEPENDS+=	parafly>=0:../../wip/parafly
 DEPENDS+=	fastool>=0:../../wip/fastool
 DEPENDS+=	p5-transdecoder>=0:../../wip/p5-transdecoder
