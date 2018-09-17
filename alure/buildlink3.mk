@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	alure
 ALURE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.alure+=	alure>=1.2
-BUILDLINK_PKGSRCDIR.alure?=	../../audio/alure
+BUILDLINK_PKGSRCDIR.alure?=	../../wip/alure
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .endif	# ALURE_BUILDLINK3_MK
