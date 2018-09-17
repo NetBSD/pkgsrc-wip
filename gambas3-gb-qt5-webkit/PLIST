@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/gambas3/gb.qt5.webkit.component
+lib/gambas3/gb.qt5.webkit.la
+share/gambas3/control/gb.qt5.webkit/webview.png
+share/gambas3/info/gb.qt5.webkit.info
+share/gambas3/info/gb.qt5.webkit.list
