@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Unbundle slclust
 --- util/support_scripts/plugin_install_tests.sh.orig	2018-09-01 15:43:40 UTC
 +++ util/support_scripts/plugin_install_tests.sh
 @@ -3,7 +3,7 @@

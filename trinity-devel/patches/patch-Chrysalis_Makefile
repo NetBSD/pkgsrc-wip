@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Must use gmake
 --- Chrysalis/Makefile.orig	2018-09-01 15:20:04 UTC
 +++ Chrysalis/Makefile
 @@ -1,13 +1,13 @@

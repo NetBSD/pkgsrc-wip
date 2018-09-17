@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Unbundle deps, build scaffold_iworm_contigs
 --- trinity-plugins/Makefile.orig	2018-08-22 01:25:08 UTC
 +++ trinity-plugins/Makefile
 @@ -9,12 +9,11 @@ TRIMMOMATIC_CODE=Trimmomatic-0.36

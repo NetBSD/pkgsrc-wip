@@ -484,7 +484,6 @@ libexec/trinity/util/support_scripts/outfmt6_add_percent_match_length.pl
 libexec/trinity/util/support_scripts/partition_chrysalis_graphs_n_reads.pl
 libexec/trinity/util/support_scripts/partitioned_trinity_aggregator.pl
 libexec/trinity/util/support_scripts/plugin_install_tests.sh
-libexec/trinity/util/support_scripts/plugin_install_tests.sh.orig
 libexec/trinity/util/support_scripts/prep_rnaseq_alignments_for_genome_assisted_assembly.pl
 libexec/trinity/util/support_scripts/print_butterfly_assemblies.pl
 libexec/trinity/util/support_scripts/process_GMAP_alignments_gff3_chimeras_ok.pl

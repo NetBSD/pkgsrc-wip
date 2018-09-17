@@ -19,7 +19,6 @@
 # Should salmon use bl3?
 # bowtie should not have bl3
 DEPENDS=	coreutils>=0:../../sysutils/coreutils
-DEPENDS+=	bash>=0:../../shells/bash
 DEPENDS+=	slclust>=0:../../wip/slclust
 DEPENDS+=	salmon>=0:../../wip/salmon
 DEPENDS+=	bowtie>=0:../../wip/bowtie
@@ -45,24 +44,25 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
-USE_TOOLS+=	cmake gmake pax perl
+USE_TOOLS+=	bash cmake gmake pax perl
 
 REPLACE_BASH=	util/*/*.sh
-REPLACE_BASH+=	util/misc/alt_GG_read_partitioning_JCornish/genwig.sh
-REPLACE_BASH+=	Analysis/DifferentialExpression/cluster_sample_data/runMe.sh
-REPLACE_PERL=	Trinity util/*.pl util/*/*.pl util/*/*/*.pl Chrysalis/analysis/*.pl 
+REPLACE_BASH+=	util/*/*/*.sh
+REPLACE_BASH+=	Analysis/*/*/*.sh
+REPLACE_PERL=	Trinity util/misc/Monarch
+REPLACE_PERL+=	util/*.pl util/*/*.pl util/*/*/*.pl util/*/*/*/*.pl
+REPLACE_PERL+=	Chrysalis/analysis/*.pl
+REPLACE_PERL+=	Analysis/*/*.pl Analysis/*/*/*.pl Analysis/*/*/*/*.pl
+REPLACE_PERL+=	Analysis/*/*.cgi Analysis/*/PtR
+REPLACE_PERL+=	PerlLib/*.pm PerlLib/*/*.pm PerlLib/*.ph PerlLib/*.pl
 REPLACE_PYTHON=	util/support_scripts/trinity_installer.py
 REPLACE_PYTHON+=util/misc/alt_GG_read_partitioning_JCornish/genwig2.py
 REPLACE_PYTHON+=util/misc/sim_test_framework/run_Trinity_eval.sh
 REPLACE_PYTHON+=util/misc/TPM_weighted_gene_length.py
 REPLACE_PYTHON+=Analysis/SuperTranscripts/*.py
 REPLACE_PYTHON+=Analysis/SuperTranscripts/*/*.py
-
-SUBST_CLASSES+=		compiler
-SUBST_STAGE.compiler=	post-patch
-SUBST_SED.compiler+=	-e "s|gcc|${CC}|g"
-SUBST_SED.compiler+=	-e "s|g++|${CXX}|g"
-SUBST_FILES.compiler+=	${WRKSRC}/Chrysalis/Makefile*
+REPLACE_RSCRIPT+=	Analysis/*/*.Rscript
+REPLACE_RSCRIPT+=	util/misc/*.Rscript
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
@@ -70,7 +70,7 @@ SUBST_SED.paths+=	-e 's|$$FindBin::Bin|$$FindBin::Bin/../libexec/trinity|g'
 SUBST_SED.paths+=	-e 's|$$FindBin::RealBin|$$FindBin::RealBin/../libexec/trinity|g'
 SUBST_SED.paths+=	-e 's|$$ROOTDIR/trinity-plugins/BIN/ParaFly|ParaFly|g'
 SUBST_SED.paths+=	-e 's|$$ROOTDIR/trinity-plugins/Trimmomatic/trimmomatic.jar|${JAVAJARDIR}/trimmomatic.jar|g'
-SUBST_SED.paths+=	-e 's|$$ROOTDIR/trinity-plugins/Trimmomatic|${LOCALBASE}/share/Trimmomatic|g'
+SUBST_SED.paths+=	-e 's|$$ROOTDIR/trinity-plugins/Trimmomatic|${PREFIX}/share/Trimmomatic|g'
 SUBST_FILES.paths+=	${WRKSRC}/Trinity
 
 SUBST_CLASSES+=		jelly
@@ -101,18 +101,25 @@ SUBST_FILES.build+=	${WRKSRC}/trinity-plugins/COLLECTL/collectl/collectl
 SUBST_FILES.build+=	${WRKSRC}/trinity-plugins/COLLECTL/collectl/*.pl
 
 CFLAGS+=	-fopenmp
-CXXFLAGS=	-fopenmp 
-FFLAGS=		-fopenmp 
+CXXFLAGS=	-fopenmp
 
 PV=		2.8.3
 EXAMPLESDIR=	${PREFIX}/share/examples/trinity
 LIBEXEC_DIR=	${PREFIX}/libexec/trinity
 PLUGINS_DIR=	${LIBEXEC_DIR}/trinity-plugins
 
+REPLACE_INTERPRETER+=	Rscript
+REPLACE.Rscript.old=	.*Rscript
+REPLACE.Rscript.new=	${PREFIX}/bin/Rscript
+REPLACE_FILES.Rscript=	${REPLACE_RSCRIPT}
+
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
 # .include "../../mk/bsd.prefs.mk"
 
 INSTALLATION_DIRS=	bin libexec/trinity/Chrysalis/bin libexec/trinity/Inchworm/bin libexec/trinity/Butterfly libexec/trinity/trinity-plugins/scaffold_iworm_contigs libexec/trinity/trinity-plugins/BIN share/examples
+
+post-extract:
+	${CHMOD} -R g-w ${WRKSRC}
 
 # FIXME: More may need to be installed
 do-install:
@@ -139,6 +146,7 @@ do-install:
 		${DESTDIR}${EXAMPLESDIR}
 	${LN} -fs ${PREFIX}/bin/Trinity \
 		${DESTDIR}${PREFIX}/libexec/trinity/Trinity
+	${RM} ${DESTDIR}${PREFIX}/libexec/trinity/util/support_scripts/plugin_install_tests.sh.orig
 
 .include "../../lang/python/application.mk"
 .include "../../biology/htslib/buildlink3.mk"

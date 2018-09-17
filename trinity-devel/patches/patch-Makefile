@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Build plugins
 --- Makefile.orig	2018-09-01 14:38:58 UTC
 +++ Makefile
 @@ -17,7 +17,7 @@ else

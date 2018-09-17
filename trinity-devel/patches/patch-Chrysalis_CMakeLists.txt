@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Portability
 --- Chrysalis/CMakeLists.txt.orig	2018-09-01 15:19:53 UTC
 +++ Chrysalis/CMakeLists.txt
 @@ -18,7 +18,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} 

@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Must use gmake
 --- Inchworm/Makefile.orig	2018-09-01 15:18:14 UTC
 +++ Inchworm/Makefile
 @@ -1,8 +1,8 @@
