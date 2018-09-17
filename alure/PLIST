@@ -1,7 +1,4 @@
 @comment $NetBSD$
-bin/alurecdplay
-bin/alureplay
-bin/alurestream
 include/AL/alure.h
 lib/libalure-static.a
 lib/libalure.so
