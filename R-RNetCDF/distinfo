@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:33:29 agc Exp $
-
-SHA1 (R/RNetCDF_1.8-2.tar.gz) = 65b7f1af251e268e8642a811fc372543d4824402
-RMD160 (R/RNetCDF_1.8-2.tar.gz) = 8cad08c163fb4d0fcdb150318ee7948f2bdad91f
-SHA512 (R/RNetCDF_1.8-2.tar.gz) = 93a5f540143bd81926fbc4b94a8e6f0d7064d91cd6ba83ad4da93957b3ea43446740baf37acd7ad12e5467b4690f2a808e172836683ec6b066a2b6bdf4b4cbbe
-Size (R/RNetCDF_1.8-2.tar.gz) = 95693 bytes
-SHA1 (patch-configure) = 62e98e78ae4338ce7bad04dbcb69fdb60cef5b8f
