@@ -63,16 +63,6 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 CONFIGURE_ARGS+=	--enable-glx-read-only-text
 .endif
 
-.if !empty(PKGSRC_COMPILER:Mclang)
-SUBST_CLASSES+=		tr1
-SUBST_STAGE.tr1=	pre-configure
-SUBST_MESSAGE.tr1=	Fixing TR1 C++ namespace
-SUBST_FILES.tr1=	src/gallium/drivers/nouveau/codegen/*.h
-SUBST_FILES.tr1+=	src/gallium/drivers/nouveau/codegen/*.cpp
-SUBST_SED.tr1=		-e 's,std::tr1::,std::,g'
-SUBST_SED.tr1+=		-e 's,include <tr1/,include <,g'
-.endif
-
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 11.2.2
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
