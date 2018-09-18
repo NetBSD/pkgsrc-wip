@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2015/08/18 21:15:41 yhardy Exp $
 
-DISTNAME=	stone_soup-0.22.0-nodeps
-PKGNAME=	dungeon-crawl-stone-soup-0.22.0
+DISTNAME=	stone_soup-0.22.1-nodeps
+PKGNAME=	dungeon-crawl-stone-soup-0.22.1
 CATEGORIES=	games
 MASTER_SITES=	http://crawl.develz.org/release/0.22/
 EXTRACT_SUFX=	.tar.xz
