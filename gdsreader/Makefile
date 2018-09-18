@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	GDSreader-0.4.0
+DISTNAME=	GDSreader-0.4.2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makoto-fujiwara/}
-#GITHUB_RELEASE= 0.4.0
 
 MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	https://github.com/makoto-fujiwara/
