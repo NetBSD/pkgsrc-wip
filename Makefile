@@ -4178,6 +4178,7 @@ SUBDIR+=	sais-demo-data
 SUBDIR+=	salmon
 SUBDIR+=	samhain
 SUBDIR+=	samtools0119
+SUBDIR+=	samtools
 SUBDIR+=	sara
 SUBDIR+=	sarf
 SUBDIR+=	sawfish
