@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/ganglia/ganglia-web
 COMMENT=	PHP based frontend for the Ganglia Cluster Monitor
 LICENSE=	modified-bsd
 
-DEPENDS+=	ganglia-monitor-core>=3.7.2:../../parallel/ganglia-monitor-core
+DEPENDS+=	ganglia-monitor-core>=3.7.2:../../wip/ganglia-monitor-core
 
 USE_TOOLS+=	pax
 
