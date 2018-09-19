@@ -1,19 +1,19 @@
-$NetBSD: patch-Makefile,v 1.1 2016/02/16 13:05:23 fhajny Exp $
+$NetBSD$
 
-Assert proper paths.
+# Assert proper paths
 
---- Makefile.orig	2015-10-01 15:47:41.000000000 +0000
+--- Makefile.orig	2018-09-19 20:38:59.201524924 +0000
 +++ Makefile
-@@ -33,7 +33,7 @@ clean:
+@@ -66,7 +66,7 @@ clean:
  	rm -rf $(TARGETS) $(DIST_DIR) $(DIST_TARBALL) rpmbuild
  
  conf_default.php:	conf_default.php.in
 -	sed -e "s|@vargmetadir@|$(GMETAD_ROOTDIR)|" -e "s|@vargwebstatedir@|$(GWEB_STATEDIR)|g" conf_default.php.in > conf_default.php
-+	sed -e "s|@etcdir@|$(GCONFDIR)|" -e "s|@vargmetadir@|$(GMETAD_ROOTDIR)|" -e "s|@vargwebstatedir@|$(GWEB_STATEDIR)|g" conf_default.php.in > conf_default.php
++	sed -e "s|@etcdir@|$(GCONFDIR)|" -e "s|@vargwebstatedir@|$(GWEB_STATEDIR)|g" conf_default.php.in > conf_default.php
  
  ganglia-web.spec:	ganglia-web.spec.in
  	sed -e s/@GWEB_VERSION@/$(GWEB_VERSION)/ -e "s|@vargwebdir@|$(GWEB_STATEDIR)|" -e "s|@varapacheuser@|$(APACHE_USER)|g" -e "s|@etcdir@|$(GCONFDIR)|g" ganglia-web.spec.in > ganglia-web.spec
-@@ -51,10 +51,9 @@ install:	dist-dir
+@@ -84,10 +84,9 @@ install:	dist-dir
  	mkdir -p $(DESTDIR)/$(GWEB_STATEDIR)/dwoo/compiled && \
  	mkdir -p $(DESTDIR)/$(GWEB_STATEDIR)/dwoo/cache && \
  	mkdir -p $(DESTDIR)/$(GWEB_STATEDIR) && \
@@ -21,7 +21,7 @@ Assert proper paths.
 +	rsync -a $(DIST_DIR)/conf $(DESTDIR)/$(GCONFDIR) && \
  	mkdir -p $(DESTDIR)/$(GDESTDIR) && \
 -	rsync --exclude "conf" -a $(DIST_DIR)/* $(DESTDIR)/$(GDESTDIR) && \
--	chown -R $(APACHE_USER):$(APACHE_USER) $(DESTDIR)/$(GWEB_STATEDIR)
+-	chown -R $(APACHE_USER):$(APACHE_GROUP) $(DESTDIR)/$(GWEB_STATEDIR)
 +	rsync --exclude "conf" -a $(DIST_DIR)/* $(DESTDIR)/$(GDESTDIR)
  
  dist-gzip:	dist-dir

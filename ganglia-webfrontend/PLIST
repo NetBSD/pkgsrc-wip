@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/06/17 12:09:08 fhajny Exp $
+@comment $NetBSD$
 share/examples/ganglia/apache.conf
 share/examples/ganglia/conf.php
 share/examples/ganglia/default.json
@@ -6,6 +6,7 @@ share/examples/ganglia/event_color.json
 share/examples/ganglia/events.json
 share/examples/ganglia/nginx.conf
 share/examples/ganglia/sql/ganglia.mysql
+share/examples/ganglia/sql/ganglia.sqlite
 share/examples/ganglia/view_default.json
 share/ganglia/actions.php
 share/ganglia/aggregate_graphs.php
@@ -108,6 +109,7 @@ share/ganglia/dwoo/Dwoo/Security/Policy.php
 share/ganglia/dwoo/Dwoo/Smarty/Adapter.php
 share/ganglia/dwoo/Dwoo/Template/File.php
 share/ganglia/dwoo/Dwoo/Template/String.php
+share/ganglia/dwoo/LICENSE
 share/ganglia/dwoo/dwooAutoload.php
 share/ganglia/dwoo/plugins/builtin/blocks/a.php
 share/ganglia/dwoo/plugins/builtin/blocks/auto_escape.php
@@ -187,11 +189,17 @@ share/ganglia/graph.d/apache_report.json
 share/ganglia/graph.d/apache_response_report.json
 share/ganglia/graph.d/cpu_report.json
 share/ganglia/graph.d/cpu_report.php
+share/ganglia/graph.d/disk_report.json
+share/ganglia/graph.d/disk_report.php
+share/ganglia/graph.d/io_report.json
 share/ganglia/graph.d/load_all_report.json
 share/ganglia/graph.d/load_report.json
 share/ganglia/graph.d/mem_report.json
 share/ganglia/graph.d/mem_report.php
 share/ganglia/graph.d/metric.php
+share/ganglia/graph.d/moab_cores_report.json
+share/ganglia/graph.d/moab_jobs_report.json
+share/ganglia/graph.d/moab_nodes_report.json
 share/ganglia/graph.d/network_report.json
 share/ganglia/graph.d/nfs_v3_client_report.json
 share/ganglia/graph.d/packet_report.json
@@ -219,15 +227,17 @@ share/ganglia/js/combobox.js
 share/ganglia/js/create-flot-graphs.js
 share/ganglia/js/excanvas.js
 share/ganglia/js/excanvas.min.js
+share/ganglia/js/flot_graph.js
 share/ganglia/js/fullcalendar.js
 share/ganglia/js/ganglia.js
 share/ganglia/js/jquery-ui-timepicker-addon.js
 share/ganglia/js/jquery-ui.min.js
 share/ganglia/js/jquery.ba-bbq.js
 share/ganglia/js/jquery.ba-bbq.min.js
-share/ganglia/js/jquery.buttonsetv.js
 share/ganglia/js/jquery.cookie.js
+share/ganglia/js/jquery.flot.dashes.js
 share/ganglia/js/jquery.flot.events.js
+share/ganglia/js/jquery.flot.ganglia-time.js
 share/ganglia/js/jquery.flot.js
 share/ganglia/js/jquery.gangZoom.js
 share/ganglia/js/jquery.livesearch.js
@@ -243,6 +253,7 @@ share/ganglia/lib/Cache/Driver_Json.php
 share/ganglia/lib/Cache/Driver_Memcache.php
 share/ganglia/lib/Events/Driver_Json.php
 share/ganglia/lib/Events/Driver_Mdb2.php
+share/ganglia/lib/Events/Driver_Pdo.php
 share/ganglia/lib/GangliaAcl.php
 share/ganglia/lib/GangliaAuth.php
 share/ganglia/lib/Services/JSON.php
@@ -301,6 +312,7 @@ share/ganglia/templates/default/cluster_view.tpl
 share/ganglia/templates/default/compare_hosts.tpl
 share/ganglia/templates/default/decompose_graph.tpl
 share/ganglia/templates/default/footer.tpl
+share/ganglia/templates/default/graph_all_periods.tpl
 share/ganglia/templates/default/grid_tree.tpl
 share/ganglia/templates/default/header-nobanner.tpl
 share/ganglia/templates/default/header.tpl
@@ -330,11 +342,13 @@ share/ganglia/templates/default/meta_view.tpl
 share/ganglia/templates/default/metric_group_view.tpl
 share/ganglia/templates/default/node_extra.tpl
 share/ganglia/templates/default/physical_view.tpl
+share/ganglia/templates/default/scripts.tpl
 share/ganglia/templates/default/show_node.tpl
 share/ganglia/templates/default/view_content.tpl
 share/ganglia/templates/default/views_view.tpl
 share/ganglia/test/GangliaAclTest.php
 share/ganglia/test/GangliaAuthTest.php
+share/ganglia/test/TestCase.php
 share/ganglia/test/phpcs-ganglia-web.xml
 share/ganglia/trend_navigation.php
 share/ganglia/version.php
