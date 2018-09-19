@@ -19,17 +19,17 @@
 # Should salmon use bl3?
 # bowtie should not have bl3
 DEPENDS=	coreutils>=0:../../sysutils/coreutils
-DEPENDS+=	slclust>=0:../../wip/slclust
-DEPENDS+=	salmon>=0:../../wip/salmon
-DEPENDS+=	bowtie>=0:../../wip/bowtie
-DEPENDS+=	bowtie2>=0:../../wip/bowtie2
-DEPENDS+=	samtools>=1.3:../../biology/samtools
-DEPENDS+=	jellyfish>=2.1.4:../../wip/jellyfish2
-DEPENDS+=	parafly>=0:../../wip/parafly
-DEPENDS+=	fastool>=0:../../wip/fastool
-DEPENDS+=	p5-transdecoder>=0:../../wip/p5-transdecoder
+DEPENDS+=	slclust>=0.0.0.20100202:../../wip/slclust
+DEPENDS+=	salmon>=0.11.3:../../wip/salmon
+DEPENDS+=	bowtie>=1.1.2:../../wip/bowtie
+DEPENDS+=	bowtie2>=2.3.4.2:../../wip/bowtie2
+DEPENDS+=	samtools>=1.9:../../wip/samtools
+DEPENDS+=	jellyfish>=2.2.10:../../wip/jellyfish2
+DEPENDS+=	parafly>=2013.01.21:../../wip/parafly
+DEPENDS+=	fastool>=0.1.4:../../wip/fastool
+DEPENDS+=	p5-transdecoder>=5.3.0:../../wip/p5-transdecoder
 DEPENDS+=	Trimmomatic>=0.38:../../wip/trimmomatic
-DEPENDS+=	rsem>=1.2.27:../../wip/rsem
+DEPENDS+=	rsem>=1.2.30:../../wip/rsem
 
 DISTNAME=	trinity-${PV}
 CATEGORIES=	biology
@@ -149,6 +149,6 @@ do-install:
 	${RM} ${DESTDIR}${PREFIX}/libexec/trinity/util/support_scripts/plugin_install_tests.sh.orig
 
 .include "../../lang/python/application.mk"
-.include "../../biology/htslib/buildlink3.mk"
+.include "../../wip/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
