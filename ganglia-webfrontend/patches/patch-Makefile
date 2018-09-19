@@ -2,14 +2,14 @@ $NetBSD$
 
 # Assert proper paths
 
---- Makefile.orig	2018-09-19 20:38:59.201524924 +0000
+--- Makefile.orig	2018-03-13 20:37:09.000000000 +0000
 +++ Makefile
 @@ -66,7 +66,7 @@ clean:
  	rm -rf $(TARGETS) $(DIST_DIR) $(DIST_TARBALL) rpmbuild
  
  conf_default.php:	conf_default.php.in
 -	sed -e "s|@vargmetadir@|$(GMETAD_ROOTDIR)|" -e "s|@vargwebstatedir@|$(GWEB_STATEDIR)|g" conf_default.php.in > conf_default.php
-+	sed -e "s|@etcdir@|$(GCONFDIR)|" -e "s|@vargwebstatedir@|$(GWEB_STATEDIR)|g" conf_default.php.in > conf_default.php
++	sed -e "s|@etcdir@|$(GCONFDIR)|" -e "s|@vargmetadir@|$(GMETAD_ROOTDIR)|" -e "s|@vargwebstatedir@|$(GWEB_STATEDIR)|g" conf_default.php.in > conf_default.php
  
  ganglia-web.spec:	ganglia-web.spec.in
  	sed -e s/@GWEB_VERSION@/$(GWEB_VERSION)/ -e "s|@vargwebdir@|$(GWEB_STATEDIR)|" -e "s|@varapacheuser@|$(APACHE_USER)|g" -e "s|@etcdir@|$(GCONFDIR)|g" ganglia-web.spec.in > ganglia-web.spec
