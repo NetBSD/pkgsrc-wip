@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	htslib-1.8
+DISTNAME=	htslib-1.9
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_PROJECT=	htslib
@@ -28,4 +28,5 @@ pre-configure:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
