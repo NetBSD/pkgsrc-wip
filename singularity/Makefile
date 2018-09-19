@@ -16,6 +16,8 @@ HOMEPAGE=	https://github.com/singularityware/singularity
 COMMENT=	Application container for Linux
 LICENSE=	modified-bsd
 
+DEPENDS+=	squashfs>=0:../../filesystems/squashfs
+
 REPLACE_PYTHON=		libexec/helpers/*/*.py
 REPLACE_PYTHON+=	libexec/python/*.py
 REPLACE_PYTHON+=	libexec/python/*/*.py
