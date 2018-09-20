@@ -1,5 +1,6 @@
 # $NetBSD: Makefile,v 1.19 2017/03/12 07:20:52 maya Exp $
 #
+# Ganglia is prone to regressions.  Test thoroughly before upgrading!
 
 DISTNAME=	3.7.4
 PKGNAME=	ganglia-web-3.7.4

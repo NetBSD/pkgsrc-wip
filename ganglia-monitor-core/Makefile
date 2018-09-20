@@ -1,5 +1,6 @@
 # $NetBSD: Makefile,v 1.60 2018/07/04 13:40:31 jperkin Exp $
 #
+# Ganglia is prone to regressions.  Test thoroughly before upgrading!
 
 DISTNAME=		ganglia-3.7.2
 PKGNAME=		ganglia-monitor-core-3.7.2
