@@ -80,6 +80,4 @@ do-install:
 		${INSTALL_MAN} ${WRKSRC}/sh/bosh.1 			\
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1;		\
 
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
