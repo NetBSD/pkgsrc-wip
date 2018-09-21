@@ -1,8 +1,0 @@
-This package contains slrn 1.0.3a patched for the libcanlock V3 API.
-pkgsrc option "canlock" added.
-
-The Cancel-Lock hash algorithm can now be configured with the "canlock_algo"
-variable (default value: SHA256).
-Updated documentation is installed (see Section 6.7.1 of manual).
-
-Patches (rewritten for 1.0.4) sent to upstream.
