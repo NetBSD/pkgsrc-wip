@@ -23,9 +23,9 @@ DEPENDS+=	osg>=3.3.4:../../wip/osg
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/osg/buildlink3.mk"
 .include "../../wip/bullet/buildlink3.mk" # XXX requires version in wip
 .include "../../wip/mygui-git/buildlink3.mk" # XXX
-.include "../../wip/osg/buildlink3.mk" # XXX requires version in wip
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
