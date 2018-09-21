@@ -13,6 +13,7 @@ R_PKGVER=	0.7-1
 
 USE_LANGUAGES=	c c++
 
+DEPENDS+=	R-gmp>=0.5.13.2:../../wip/R-gmp
 BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=4.0.1
 
 .include "../../math/R/Makefile.extension"
