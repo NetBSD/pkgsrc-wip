@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (din-36.tar.gz) = af6d9e7a755faa5731810078192a550a17467f41
-RMD160 (din-36.tar.gz) = fe0bf372fdc572164a687525086173603a5487c2
-SHA512 (din-36.tar.gz) = e70424f0e437394746ee4bd0ae7d515c1a9421dfb09cc91cadef0849a297d28e262bf7947e970e2ae65824d211ec9d896d963b17715259063b3fc8ad3635f8d3
-Size (din-36.tar.gz) = 3616547 bytes
+SHA1 (din-37a.tar.gz) = e1e6557b1effa46ea2cf8ccb37bdd3c807f57e4d
+RMD160 (din-37a.tar.gz) = 5594f41467e2ff5ea03b5a488188de0ccdae004d
+SHA512 (din-37a.tar.gz) = 796bc85def6813ee1d50989933e80094dc2d85e9580113b20a5471366e1937a162fc7cdd85e3d9b407a1e8269b2e8c69211d4c24b196006cf7a856df546e146f
+Size (din-37a.tar.gz) = 3617906 bytes
 SHA1 (patch-src_Makefile.am) = bb22b57b55cb6301bc00563c932ae2bb9c3333f2
 SHA1 (patch-src_Makefile.in) = 6b071dc18bfb2d964192638813342037fe7832ce
 SHA1 (patch-src_main.cc) = 21a55217a2e03a49ccbae4e46994e6da68f83d92
