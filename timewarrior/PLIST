@@ -13,3 +13,8 @@ share/doc/timew/doc/holidays/holidays.en-US
 share/doc/timew/doc/holidays/refresh
 share/doc/timew/doc/themes/README
 share/doc/timew/doc/themes/dark.theme
+share/doc/timew/doc/themes/dark_blue.theme
+share/doc/timew/doc/themes/dark_green.theme
+share/doc/timew/doc/themes/dark_red.theme
+share/doc/timew/ext/on-modify.timewarrior
+share/doc/timew/ext/totals.py

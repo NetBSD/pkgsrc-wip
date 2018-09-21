@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	timew-1.0.0.beta1
+DISTNAME=	timew-1.1.1
 PKGNAME=	${DISTNAME:S/timew/timewarrior/}
 CATEGORIES=	time
 MASTER_SITES=	https://taskwarrior.org/download/
