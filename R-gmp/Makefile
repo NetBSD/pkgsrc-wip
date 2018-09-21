@@ -9,7 +9,7 @@ COMMENT=	Multiple Precision Arithmetic for R
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	gmp
-R_PKGVER=	0.5-12
+R_PKGVER=	0.5-13.2
 
 USE_LANGUAGES=	c c++
 
