@@ -1,4 +1,0 @@
-Trinity represents a novel method for the efficient and robust de novo
-reconstruction of transcriptomes from RNA-seq data.  Trinity combines three
-independent software modules: Inchworm, Chrysalis, and Butterfly, applied
-sequentially to process large volumes of RNA-seq reads.
