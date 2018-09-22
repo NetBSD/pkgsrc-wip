@@ -972,7 +972,6 @@ SUBDIR+=	gambas3-runtime
 SUBDIR+=	gambas3-scripter
 SUBDIR+=	gambatte-dev
 SUBDIR+=	gambit
-SUBDIR+=	ganglia-monitor-core
 SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	gappa
 SUBDIR+=	garden
