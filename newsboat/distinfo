@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (newsboat-2.12.tar.xz) = 59da1802bd4a86805f120661d37c65e46b8fc90f
-RMD160 (newsboat-2.12.tar.xz) = 57b44e1ce0c248cc4c1905e71bdc66af4ffbce5c
-SHA512 (newsboat-2.12.tar.xz) = 211024288c58ac467e1953f2cd6e7cf1cf7d36ae3d1051d8845692a016232a7662b4b6a816663bd0a2a911c89198fac56e674dbca20df45bcbd7f2cbccbce311
-Size (newsboat-2.12.tar.xz) = 442132 bytes
+SHA1 (newsboat-2.13.tar.xz) = cf50d04a69b360864cf9ae31b831fa2bfd281971
+RMD160 (newsboat-2.13.tar.xz) = 3c6d62fef4221bc6aecb9685f1530ed074454f38
+SHA512 (newsboat-2.13.tar.xz) = f7ce9717540e1c38809a44d531d28b26d5f9759479d311c127adec1ed6f3f6e8ad68799559ed31e9ecde7a988a683b0c9f58ff10e8dd4b2de60d75b7f8efe3da
+Size (newsboat-2.13.tar.xz) = 460076 bytes
 SHA1 (patch-config.sh) = 3451c0ad9507c76950860f9d9992791199851819
-SHA1 (patch-src_controller.cpp) = 7209d36b10f2afdc1157dc6fda54e72ca5caa6d7
+SHA1 (patch-newsboat.cpp) = 3ef8b249ba1c25f1a3fb99a742b73706b06e4688
