@@ -1,0 +1,17 @@
+$NetBSD$
+
+Add dependency on scripts.h to input.o to avoid build failure.
+
+From upstream commit d2664c07b5b41293f3786f6c292be6186f8cfb14.
+
+--- src/Makefile.orig	2018-06-16 20:47:57.000000000 +0000
++++ src/Makefile
+@@ -16,6 +16,8 @@ vimb.so: $(OBJ)
+ 
+ $(OBJ): config.h ../config.mk
+ 
++input.o: scripts/scripts.h
++
+ normal.o: scripts/scripts.h
+ 
+ setting.o: scripts/scripts.h

@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:S/vimb/vimb3/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 GITHUB_PROJECT=	vimb
-GITHUB_TAG=	3.1.0
+GITHUB_TAG=	3.2.0
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://fanglingsu.github.io/vimb/
