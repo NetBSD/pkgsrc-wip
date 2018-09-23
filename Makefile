@@ -580,6 +580,7 @@ SUBDIR+=	dispred
 SUBDIR+=	disque
 SUBDIR+=	distbb-git
 SUBDIR+=	ditz-commander
+SUBDIR+=	divecmd
 SUBDIR+=	diveintopython
 SUBDIR+=	dlpoly-classic
 SUBDIR+=	dlt-daemon

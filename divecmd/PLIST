@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/dcmd
+bin/dcmd2csv
+bin/dcmd2grap
+bin/dcmd2json
+bin/dcmd2pdf
+bin/dcmd2ps
+bin/dcmdedit
+bin/dcmdfind
+bin/dcmdls
+bin/dcmdterm
+bin/ssrf2dcmd
+man/man1/dcmd.1
+man/man1/dcmd2csv.1
+man/man1/dcmd2grap.1
+man/man1/dcmd2json.1
+man/man1/dcmd2pdf.1
+man/man1/dcmd2ps.1
+man/man1/dcmdedit.1
+man/man1/dcmdfind.1
+man/man1/dcmdls.1
+man/man1/dcmdterm.1
+man/man1/ssrf2dcmd.1

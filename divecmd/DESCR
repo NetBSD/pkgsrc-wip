@@ -1,0 +1,5 @@
+divecmd is a suite of open source command-line UNIX tools to extract and
+manipulate dives from dive computers. Why use it instead of, say,
+Subsurface? Because it's built to work in a command-line workflow with other
+command-line tools for processing, such as grap(1) piped into groff(1) or
+LaTeX.
