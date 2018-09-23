@@ -11,7 +11,9 @@ LICENSE=	openssl
 
 WRKSRC=		${WRKDIR}/boringssl
 
-BUILD_DEPENDS+=	go>=1.4:../../lang/go
+.include "../../lang/go/version.mk"
+
+BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
 
 USE_TOOLS+=	cmake perl
 USE_LANGUAGES+=	c gnu++11
@@ -22,6 +24,10 @@ AUTO_MKDIRS=	yes
 
 CFLAGS+=	-D_XOPEN_SOURCE=600 -D_NETBSD_SOURCE
 
+SUBST_CLASSES+=		go
+SUBST_STAGE.go=		post-patch
+SUBST_FILES.go=		CMakeLists.txt
+SUBST_SED.go=		-e '/find_program.GO_EXECUTABLE/s,go,${GO},'
 
 post-extract:
 		${RUN} mkdir -p ${WRKDIR}/build
