@@ -1,0 +1,6 @@
+- During the build swi-prolog SIGABRT due:
+
+   [...] swi-prolog - - - buffer overflow detected; terminated
+
+  ...investigate that! (and yes, the PLIST will probably mismatch because we do
+  not want to install the `.core'!)

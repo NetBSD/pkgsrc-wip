@@ -4396,6 +4396,7 @@ SUBDIR+=	swarp
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	swi-prolog-lite
+SUBDIR+=	swi-prolog-packages
 SUBDIR+=	swift
 SUBDIR+=	swift-git
 SUBDIR+=	swisseph
