@@ -10,7 +10,6 @@ BUILDLINK_ABI_DEPENDS.swi-prolog-lite+=	swi-prolog-lite>=6.6.6nb2
 BUILDLINK_PKGSRCDIR.swi-prolog-lite?=	../../lang/swi-prolog-lite
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 #.include "../../devel/gmp/buildlink3.mk" ?
 .endif	# SWI_PROLOG_LITE_BUILDLINK3_MK
 

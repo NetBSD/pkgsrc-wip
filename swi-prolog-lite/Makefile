@@ -31,8 +31,6 @@ REPLACE_FILES.swipl+=	library/dialect/sicstus/swipl-lfr.pl
 TEST_TARGET=		check
 
 .include "../../devel/ncurses/buildlink3.mk"
-# uses rl_event_hook() interface
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
