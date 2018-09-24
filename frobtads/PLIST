@@ -2,6 +2,7 @@
 bin/frob
 bin/t3make
 bin/tadsc
+bin/tadsrsc
 share/frobtads/tads2/adv.t
 share/frobtads/tads2/gameinfo.t
 share/frobtads/tads2/std.t

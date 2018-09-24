@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/08/17 21:11:24 yhardy Exp $
 
-SHA1 (frobtads-1.2.3.tar.gz) = 330217c0b6ee298bf9db986bc4ce84b86aa5e3e2
-RMD160 (frobtads-1.2.3.tar.gz) = 3e22c7db6dabc0544c84a09edbde618a18b35e1e
-Size (frobtads-1.2.3.tar.gz) = 5227704 bytes
-SHA1 (patch-src_osfrobtads.h) = 07179068d063628a08c8de5a6d3158ada6ca5605
+SHA1 (frobtads/1.2.4.tar.gz) = 87fc1d5ebdd7f8badd8a8b8586de8e32784ed0fd
+RMD160 (frobtads/1.2.4.tar.gz) = b6ddc44f24c7a9ea905dfe1201e72e79654a6174
+SHA512 (frobtads/1.2.4.tar.gz) = 6738625afcced1d6e821f96d3ec4b4c4be153323fe80e4dcf389c4fdc6fb9771ff32b84c108630ff9393717332b687ccc554dc8c8ec86001801c7672e81398be
+Size (frobtads/1.2.4.tar.gz) = 5096812 bytes
