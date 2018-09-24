@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	xoreos-tools
-PKGNAME=	xoreos-tools-${GITHUB_TAG:S/v//}
+DISTNAME=	xoreos-tools-0.0.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
-GITHUB_TAG=	v0.0.4
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	http://xoreos.org/
@@ -17,7 +16,8 @@ USE_CMAKE=	yes
 CXXFLAGS+=	-fpermissive
 
 pre-install:
-	mkdir -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/man/man1
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/man/man1
 
 do-install:
 	for prog in ${WRKSRC}/bin/*; do \
@@ -28,5 +28,7 @@ do-install:
 	done
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
