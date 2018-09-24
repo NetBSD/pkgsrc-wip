@@ -10,5 +10,4 @@
 [ ] Test with Intel compiler
 [ ] Test with SunPro compiler
 [ ] Test with non-NetBSD operating systems
-[ ] Schily libraries dynamically linked (as separate packages)?
 [ ] Add obosh and pbosh variants to this package?

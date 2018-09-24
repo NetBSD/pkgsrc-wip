@@ -53,8 +53,6 @@ do-configure:
 	${CP} -fp i386-darwin-clang.rul x86_64-darwin-clang.rul
 	cd ${WRKSRC}/inc && ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
-# The libraries may be split into their own packages to dynamically link them
-# (and to share them with other schily tools from this source tree)
 do-build:
 	cd ${WRKSRC}; for library in					\
 		libschily libxtermcap libfind libgetopt libshedit;	\
