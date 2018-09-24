@@ -24,6 +24,7 @@ SUBDIR+=	MesaLib-dfbsd
 SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenGLUT
 SUBDIR+=	OpenIPMI
+SUBDIR+=	OpenTESArena
 SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
 SUBDIR+=	PatternPaint

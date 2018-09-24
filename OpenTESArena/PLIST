@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/TESArena
+share/OpenTESArena/data/icon.bmp
+share/OpenTESArena/data/text/aExeStrings.txt
+share/OpenTESArena/options/options-default.txt
+share/doc/OpenTESArena/README.md

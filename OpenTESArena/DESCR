@@ -1,0 +1,5 @@
+This open-source project aims to be a modern engine re-implementation
+for "The Elder Scrolls: Arena" by Bethesda Softworks.
+
+The game data is needed to run the game, see share/doc/OpenTESArena/README.md
+for information on how to obtain the game data.
