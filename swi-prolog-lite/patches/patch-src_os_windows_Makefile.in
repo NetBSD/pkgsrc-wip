@@ -1,0 +1,15 @@
+$NetBSD$
+
+Do not ignore CFLAGS.
+
+--- src/os/windows/Makefile.in.orig	2018-01-12 12:04:38.000000000 +0000
++++ src/os/windows/Makefile.in
+@@ -17,7 +17,7 @@ CWFLAGS=@CWFLAGS@
+ CIFLAGS=@CIFLAGS@
+ CMFLAGS=@CMFLAGS@
+ CPFLAGS=
+-CFLAGS=	$(CWFLAGS) $(COFLAGS) $(CIFLAGS) $(CMFLAGS) $(CPFLAGS)
++CFLAGS+=	$(CWFLAGS) $(COFLAGS) $(CIFLAGS) $(CMFLAGS) $(CPFLAGS)
+ LDFLAGS=@LDFLAGS@ $(CPFLAGS)
+ 
+ PLHOME=../../..
