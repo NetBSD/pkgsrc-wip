@@ -13,6 +13,7 @@ HOMEPAGE=	https://davidgow.net/keen/omnispeak.html
 COMMENT=	Open-source re-implementation of "Commander Keen in Goodbye Galaxy"
 LICENSE=	gnu-gpl-v2
 
+MAKE_JOBS_SAFE=	NO
 USE_LANGUAGES+=	c++
 USE_TOOLS+=	gmake
 
