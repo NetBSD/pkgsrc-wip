@@ -16,6 +16,7 @@ MAKE_FLAGS+=	GMAKE_NOWARN=true
 
 USE_TOOLS+=	gmake tbl
 
+PKG_SHELL=	bin/bosh
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
