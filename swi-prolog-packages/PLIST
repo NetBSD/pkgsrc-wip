@@ -12,7 +12,6 @@ lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/hashstream.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/http_stream.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/isub.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/json.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/md54pl.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/memfile.so
 lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/ntriples.so
@@ -112,7 +111,6 @@ lib/swi-prolog-${PKGVERSION}/library/doc_files.pl
 lib/swi-prolog-${PKGVERSION}/library/doc_http.pl
 lib/swi-prolog-${PKGVERSION}/library/doc_latex.pl
 lib/swi-prolog-${PKGVERSION}/library/double_metaphone.pl
-lib/swi-prolog-${PKGVERSION}/library/editline.pl
 lib/swi-prolog-${PKGVERSION}/library/filesex.pl
 lib/swi-prolog-${PKGVERSION}/library/hash_stream.pl
 lib/swi-prolog-${PKGVERSION}/library/http/INDEX.pl
