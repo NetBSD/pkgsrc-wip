@@ -9,4 +9,5 @@ SHA1 (patch-source_darkplaces_hmac.c) = 2fae84c009f8808c814e4b68ba8c5640a001f699
 SHA1 (patch-source_darkplaces_hmac.h) = 62e3c7a657b8bef5a0dbb7fb0367379bcaae6347
 SHA1 (patch-source_darkplaces_makefile.inc) = 15ce0ee293bb255cae90ec5682881c2ad9ecef3b
 SHA1 (patch-source_gmqcc_Makefile) = 40716c8fd9b46307bf7996300151822a704e6c48
+SHA1 (patch-source_gmqcc_fold.c) = d27caff578075a14c04d5865b4e924ad40598748
 SHA1 (patch-source_gmqcc_gmqcc.h) = 1703136b3022637885bfa51a3e08ec8a86d20b05
