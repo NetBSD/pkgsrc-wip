@@ -1,6 +1,5 @@
 @comment $NetBSD$
 include/angelscript.h
 lib/libangelscript.a
-lib/libangelscript_s-2.30.2.so
-lib/libangelscript_s.so
-lib/libangelscript_s.so.2.30.2
+lib/libangelscript.so
+lib/libangelscript.so.2.32.0

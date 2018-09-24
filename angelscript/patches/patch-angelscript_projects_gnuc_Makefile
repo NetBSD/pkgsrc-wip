@@ -1,40 +1,13 @@
-# $NetBSD$
---- angelscript/projects/gnuc/Makefile.orig	2014-11-17 19:20:42.000000000 -0800
-+++ angelscript/projects/gnuc/Makefile	2015-10-17 17:12:16.000000000 -0700
-@@ -25,8 +25,8 @@
- ifeq ($(PREFIX),)
- PREFIX=/usr/local
- endif
--INCLUDEDEST=$(PREFIX)/include/
--LIBRARYDEST=$(PREFIX)/lib/
-+INCLUDEDEST=$(DESTDIR)$(PREFIX)/include/
-+LIBRARYDEST=$(DESTDIR)$(PREFIX)/lib/
+$NetBSD$
+Use a more portable invocation of cp(1) which does not follow symlinks.
+--- angelscript/projects/gnuc/Makefile.orig	2018-09-23 19:11:04.669903070 -0700
++++ angelscript/projects/gnuc/Makefile	2018-09-23 19:11:18.281487151 -0700
+@@ -43,7 +43,7 @@
+ INSTALL_SHLIB = $(INSTALL) -m 755
+ INSTALL_ARLIB = $(INSTALL) -m 644
+ INSTALL_HEADER = $(INSTALL) -m 644
+-CP_SYMLINK = cp --no-dereference --preserve=links
++CP_SYMLINK = cp -P
+ CP_R = cp -R
  
- HEADER = angelscript.h
- SRCDIR = ../../source
-@@ -142,11 +142,11 @@
- 	$(CXX) $(CXXFLAGS) -o $@ -c $<
- 
- install_shared:
--	@ver=`awk -F\" '/#define ANGELSCRIPT_VERSION_STRING/{print $$2}' ../../include/angelscript.h | cut -d" " -f1`; \
-+	@ver=`awk -F\" '/#define ANGELSCRIPT_VERSION_STRING/{print $$2}' $(INCDIR)/angelscript.h | cut -d" " -f1`; \
- 	if [ "$$ver" = "" ]; then \
- 		echo "Skipping creation of symbolic links..."; \
- 	else \
--		( install -Dm 755 $(LIBDIR)/$(SHLIB) $(LIBRARYDEST)$(LIBNAME)_s-$$ver.so && \
-+		( install -m 755 $(LIBDIR)/$(SHLIB) $(LIBRARYDEST)$(LIBNAME)_s-$$ver.so && \
- 		ln -fs $(LIBRARYDEST)$(LIBNAME)_s-$$ver.so $(LIBRARYDEST)$(SHLIB) && \
- 		ln -fs $(LIBRARYDEST)$(LIBNAME)_s-$$ver.so $(LIBRARYDEST)$(SHLIB).$$ver ) \
- 	fi ;
-@@ -158,9 +158,8 @@
- install: $(LIBDIR)/$(ARLIB) $(LIBDIR)/$(SHLIB)
- 	@echo Installing to: $(LIBRARYDEST) and $(INCLUDEDEST)...
- 	@echo -------------------------------------------------------------------
--	install -Dm 644 $(LIBDIR)/$(ARLIB) $(LIBRARYDEST)$(ARLIB)
--	install -Dm 644 $(INCDIR)/$(HEADER) $(INCLUDEDEST)$(HEADER)
--	$(MAKE) install_shared
-+	install -m 644 $(LIBDIR)/$(ARLIB) $(LIBRARYDEST)$(ARLIB)
-+	install -m 644 $(INCDIR)/$(HEADER) $(INCLUDEDEST)$(HEADER)
- 	@echo -------------------------------------------------------------------
- 	@echo Angelscript library installed. Enjoy!
  
