@@ -70,6 +70,9 @@
 # used by wip/gambas3-gb-qt4-opengl/Makefile
 # used by wip/gambas3-gb-qt4-webkit/Makefile
 # used by wip/gambas3-gb-qt5/Makefile
+# used by wip/gambas3-gb-qt5-ext/Makefile
+# used by wip/gambas3-gb-qt5-opengl/Makefile
+# used by wip/gambas3-gb-qt5-webkit/Makefile
 # used by wip/gambas3-gb-report/Makefile
 # used by wip/gambas3-gb-report2/Makefile
 # used by wip/gambas3-gb-scanner/Makefile
@@ -96,7 +99,7 @@
 # used by wip/gambas3-runtime/Makefile
 # used by wip/gambas3-scripter/Makefile
 
-GB_VERSION=		6ad1333324bbe489b8179bbe9aa96b1bb74e1fd3
+GB_VERSION=		6619f592
 DISTNAME=		gambas-${GB_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		https://gitlab.com/gambas/gambas/-/archive/${GB_VERSION}/
