@@ -1,0 +1,6 @@
+- Review JIT support for NetBSD:
+   * patches/patch-Source_JavaScriptCore_runtime_MachineContext.h
+   * patches/patch-Source_WTF_wtf_Platform.h
+  Only amd64 was actually tested and arm, arm64 and mips really need a
+  double-check.
+- Enable webkit-jit option
