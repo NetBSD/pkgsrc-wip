@@ -19,8 +19,16 @@ PKG_SHELL=		bin/posh
 WRKSRC=			${WRKDIR}/posh
 INSTALLATION_DIRS=	share/doc/posh
 
-# Testsuite eats up all memory and never finish
 TEST_TARGET=	check
+
+.include "../../mk/bsd.prefs.mk"
+
+# On GNU based systems only: Use GNU getopt() as written by Debian
+# This Debian code leads to undefined behaviour with POSIX getopt()
+# On NetBSD e.g. "command -v ls" enters an infinite loop and eats up all memory
+.if ${OPSYS} == "Linux" || ${OPSYS} == "GNUkFreeBSD"
+CFLAGS+=	-DPKGSRC_GNU_GETOPT=1
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
