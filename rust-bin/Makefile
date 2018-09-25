@@ -2,7 +2,7 @@
 
 DISTNAME=	rust-1.29.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 
@@ -73,6 +73,9 @@ do-build:
 do-install:
 	cd ${WRKSRC} && env PKGMANDIR=${PKGMANDIR} bash ./install.sh \
 	--destdir=${DESTDIR} --prefix=${PREFIX}
+	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/install.log
+	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/manifest-*
+	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/uninstall.sh
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
