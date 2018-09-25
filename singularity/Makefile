@@ -22,6 +22,12 @@ REPLACE_PYTHON=		libexec/helpers/*/*.py
 REPLACE_PYTHON+=	libexec/python/*.py
 REPLACE_PYTHON+=	libexec/python/*/*.py
 REPLACE_PYTHON+=	libexec/python/*/*/*.py
+REPLACE_BASH+=		bin/singularity.in
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	bin/singularity.in
+SUBST_SED.path=		-e 's|/usr/local|${PREFIX}|g'
 
 USE_TOOLS+=	autoconf automake autoreconf bash
 USE_LIBTOOL=	yes
@@ -29,7 +35,7 @@ GNU_CONFIGURE=	yes
 
 PV=			2.5.1
 CONFIG_SHELL=		${BASH}
-CHECK_PORTABILITY_SKIP=	configure
+# CHECK_PORTABILITY_SKIP=	configure
 
 # Requires clone()
 ONLY_FOR_PLATFORM=	Linux-*-*
@@ -50,6 +56,7 @@ pre-configure:
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/*.conf ${DESTDIR}${EGDIR}
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/init ${DESTDIR}${EGDIR}
+	${CHMOD} a-w ${DESTDIR}${PREFIX}/libexec/singularity/bin/*-suid
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

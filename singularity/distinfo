@@ -4,3 +4,4 @@ SHA1 (singularity-2.5.1.tar.gz) = 29e72052f901218b1996fec32f7990b14135329a
 RMD160 (singularity-2.5.1.tar.gz) = eb957981be467e375b0d21c39b6c9f995d7c2e5f
 SHA512 (singularity-2.5.1.tar.gz) = cbe5ca50eaf349a73702c3e8ec2d9493fa3a2309b195a1be261843f70edbab36b97dae575c56da0fb1ab2b465abb8f2b004fc72e7e2a966c71cc7bf685e4e96e
 Size (singularity-2.5.1.tar.gz) = 236497 bytes
+SHA1 (patch-configure.ac) = e2b38e24670d0518aa851eab1606f60868b3ff6b

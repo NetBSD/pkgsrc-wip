@@ -1,0 +1,15 @@
+$NetBSD$
+
+# Portability
+
+--- configure.ac.orig	2018-09-25 14:38:34.635766268 +0000
++++ configure.ac
+@@ -296,7 +296,7 @@ AC_MSG_CHECKING([--with-slurm])
+ AC_ARG_WITH([slurm],
+             AS_HELP_STRING([--with-slurm], [This feature will no longer be part of Singularity proper]),
+            )
+-AS_IF([test "x$with_slurm" == "xyes"],
++AS_IF([test "x$with_slurm" = "xyes"],
+     [
+         AC_MSG_RESULT([yes])
+         echo
