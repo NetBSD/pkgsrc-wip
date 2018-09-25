@@ -1,4 +1,5 @@
 [X] Removed patch for GCC 2, request a C99 compiler
     => Other parts of the code are not C90 conformant too
 [X] Provide GNU getopt via gnulib
-[ ] Analyze errors in testsuite
+[X] Analyze errors in testsuite
+   => Testsuite now executes without unexpected errors
