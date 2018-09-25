@@ -1,0 +1,24 @@
+$NetBSD$
+
+Init gnulib.
+
+--- configure.ac.orig	2015-06-07 19:14:42.000000000 +0000
++++ configure.ac
+@@ -11,6 +11,7 @@ AC_PROG_MAKE_SET
+ dnl
+ dnl
+ AC_PROG_CC
++gl_EARLY
+ AC_PROG_GCC_TRADITIONAL
+ AC_PROG_CPP
+ dnl
+@@ -234,5 +235,8 @@ if test X"$LDSTATIC" != X; then
+   LDFLAGS=`echo -- "$LDFLAGS" | sed -e 's/^-- //' -e 's?$LDSTATIC?\$(LDSTATIC)?'`
+ fi
+ dnl
+-AC_CONFIG_FILES(Makefile src/Makefile tests/Makefile)
++AC_CONFIG_FILES(Makefile src/Makefile tests/Makefile lib/Makefile)
++
++gl_INIT
++
+ AC_OUTPUT

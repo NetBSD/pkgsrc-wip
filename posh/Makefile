@@ -9,7 +9,8 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/posh
 COMMENT=	Debian Policy-compliant Ordinary SHell
-LICENSE=	gnu-gpl-v2
+# Gnulib is V3 and the Debian parts are "V2 or later" => Use V3 for all parts
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	perl autoconf automake
@@ -23,17 +24,19 @@ TEST_TARGET=	check
 
 .include "../../mk/bsd.prefs.mk"
 
-# On GNU based systems only: Use GNU getopt() as written by Debian
-# This Debian code leads to undefined behaviour with POSIX getopt()
-# On NetBSD e.g. "command -v ls" enters an infinite loop and eats up all memory
-.if ${OPSYS} == "Linux" || ${OPSYS} == "GNUkFreeBSD"
-CFLAGS+=	-DPKGSRC_GNU_GETOPT=1
-.endif
+# posh doesn't work with POSIX getopt!
+# This adds the "getopt-gnu" module of gnulib
+# The utility "tempfile" (required by testsuite) is taken from debianutils
+post-extract:
+	${CP} -R -P ${FILESDIR}/gnulib_getopt-gnu/* ${WRKSRC}
+	${MKDIR} ${WRKSRC}/debianutils
+	${CP} ${FILESDIR}/debianutils_tempfile/tempfile.c ${WRKSRC}/debianutils
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} ; autoreconf -fi
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/debian/changelog ${DESTDIR}${PREFIX}/share/doc/posh
+	${RM} ${DESTDIR}${PREFIX}/bin/tempfile
 
 .include "../../mk/bsd.pkg.mk"

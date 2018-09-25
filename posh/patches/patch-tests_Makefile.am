@@ -1,15 +1,12 @@
 $NetBSD$
 
-Remove debian specific tests.
+Add testfile utility to PATH.
 
 --- tests/Makefile.am.orig	2014-02-10 00:38:21.000000000 +0000
 +++ tests/Makefile.am
-@@ -4,7 +4,7 @@ EXTRA_DIST = exec.t quoting.t th Makefil
- 	     utilities.t arithmetic.t # ttylovers.t
- 
- SHELL_TO_TEST = ../posh$(exe_suffix)
--CATEGORIES_TO_TEST = sh,posix,pdksh,posh,debian,no-history,no-typeset,no-aliases,no-arrays,no-coprocs,no-herestrings,no-ulimit
-+CATEGORIES_TO_TEST = sh,posix,pdksh,posh,no-history,no-typeset,no-aliases,no-arrays,no-coprocs,no-herestrings,no-ulimit
+@@ -7,4 +7,4 @@ SHELL_TO_TEST = ../posh$(exe_suffix)
+ CATEGORIES_TO_TEST = sh,posix,pdksh,posh,debian,no-history,no-typeset,no-aliases,no-arrays,no-coprocs,no-herestrings,no-ulimit
  
  check test:
- 	$(srcdir)/th-sh $(srcdir)/th -s $(srcdir) -p $(SHELL_TO_TEST) -C $(CATEGORIES_TO_TEST) $(TESTARGS)
+-	$(srcdir)/th-sh $(srcdir)/th -s $(srcdir) -p $(SHELL_TO_TEST) -C $(CATEGORIES_TO_TEST) $(TESTARGS)
++	export PATH=$$(cd $(srcdir) ; pwd)/../debianutils:$(PATH) ; $(srcdir)/th-sh $(srcdir)/th -s $(srcdir) -p $(SHELL_TO_TEST) -C $(CATEGORIES_TO_TEST) $(TESTARGS)

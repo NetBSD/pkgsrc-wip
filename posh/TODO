@@ -1,5 +1,4 @@
 [X] Removed patch for GCC 2, request a C99 compiler
     => Other parts of the code are not C90 conformant too
-[X] Provide PKGSRC_GNU_GETOPT for GNU systems only
-    => This avoids undefined behaviour on systems with POSIX getopt()
-[ ] Analyze testsuite failures
+[X] Provide GNU getopt via gnulib
+[ ] Analyze errors in testsuite
