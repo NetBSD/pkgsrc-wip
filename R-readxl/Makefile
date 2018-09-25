@@ -13,9 +13,9 @@ R_PKGVER=	1.1.0
 
 USE_LANGUAGES=	c c++
 
-DEPENDS+=	R-Rcpp>=0.12.17:../../devel/R-Rcpp
 DEPENDS+=	R-tibble>=1.4.2:../../math/R-tibble
-DEPENDS+=       R-cellranger>=1.1.0:../../wip/R-cellranger
+DEPENDS+=	R-cellranger>=1.1.0:../../wip/R-cellranger
 
+.include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
