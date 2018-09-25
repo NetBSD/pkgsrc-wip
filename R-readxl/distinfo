@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (R/readxl_1.1.0.tar.gz) = c29efd9e2229c65996e00b414ddbc008dacefce9
+RMD160 (R/readxl_1.1.0.tar.gz) = 20a69ca2ba692b215779d72dd8dcf8996344bec1
+SHA512 (R/readxl_1.1.0.tar.gz) = 030a71ff1ac97574053db34e4b194f0c1d0105cb678002b6b6e74e217c29a56436bf9f42ca955775e1f2eda12e4c60628c01772ef129ad19d3716a4dd16ec982
+Size (R/readxl_1.1.0.tar.gz) = 2036680 bytes
+SHA1 (patch-work_readxl_src_Makevars) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc

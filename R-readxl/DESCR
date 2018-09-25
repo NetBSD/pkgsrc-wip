@@ -1,0 +1,2 @@
+Import excel files into R. Supports '.xls' via the embedded 'libxls' C library
+and '.xlsx' via the embedded 'RapidXML' C++ library.

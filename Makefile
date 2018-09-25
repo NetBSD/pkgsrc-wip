@@ -50,6 +50,7 @@ SUBDIR+=	R-graph
 SUBDIR+=	R-gsl
 SUBDIR+=	R-mclust
 SUBDIR+=	R-mpfr
+SUBDIR+=	R-readxl
 SUBDIR+=	R-rematch
 SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
