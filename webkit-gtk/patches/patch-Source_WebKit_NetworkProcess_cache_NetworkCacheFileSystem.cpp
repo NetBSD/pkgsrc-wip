@@ -2,12 +2,12 @@ $NetBSD: patch-Source_WebKit_NetworkProcess_cache_NetworkCacheFileSystem.cpp,v 1
 
 SunOS does not support DT_{DIR,REG}
 
---- Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2018-02-19 07:45:32.000000000 +0000
+--- Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2018-07-25 11:56:32.000000000 +0000
 +++ Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp
-@@ -50,6 +50,12 @@ namespace NetworkCache {
- 
+@@ -54,6 +54,12 @@ namespace NetworkCache {
  static DirectoryEntryType directoryEntryType(uint8_t dtype)
  {
+ #if !OS(WINDOWS)
 +#ifndef DT_DIR
 +#define DT_DIR	S_IFDIR
 +#endif
@@ -17,10 +17,10 @@ SunOS does not support DT_{DIR,REG}
      switch (dtype) {
      case DT_DIR:
          return DirectoryEntryType::Directory;
-@@ -63,12 +69,20 @@ static DirectoryEntryType directoryEntry
- 
+@@ -71,12 +77,20 @@ static DirectoryEntryType directoryEntry
  void traverseDirectory(const String& path, const Function<void (const String&, DirectoryEntryType)>& function)
  {
+ #if !OS(WINDOWS)
 +#ifdef __sun
 +    struct stat s;
 +#endif
@@ -38,7 +38,7 @@ SunOS does not support DT_{DIR,REG}
              continue;
          const char* name = dp->d_name;
          if (!strcmp(name, ".") || !strcmp(name, ".."))
-@@ -76,7 +90,11 @@ void traverseDirectory(const String& pat
+@@ -84,7 +98,11 @@ void traverseDirectory(const String& pat
          auto nameString = String::fromUTF8(name);
          if (nameString.isNull())
              continue;
@@ -49,4 +49,4 @@ SunOS does not support DT_{DIR,REG}
 +#endif
      }
      closedir(dir);
- }
+ #else
