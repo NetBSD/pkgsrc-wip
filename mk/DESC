@@ -49,3 +49,6 @@ yesno.mk - Standardizes how to specify boolean values in Makefiles, both
    universal and actual first-class words (there's nothing special about
    them otherwise).  Eliminates subtle inconsistencies (does this variable
    support "YES" uppercase or not?) and significantly DRYs up code.
+
+fonts.mk - Standardizes where fonts are installed. Avoids needless
+duplication across all the Makefiles for font packages.
