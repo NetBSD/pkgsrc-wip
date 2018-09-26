@@ -4398,6 +4398,7 @@ SUBDIR+=	swami
 SUBDIR+=	swarp
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
+SUBDIR+=	swi-prolog-jpl
 SUBDIR+=	swi-prolog-lite
 SUBDIR+=	swi-prolog-packages
 SUBDIR+=	swift
