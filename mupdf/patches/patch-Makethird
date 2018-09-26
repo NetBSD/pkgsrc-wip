@@ -1,0 +1,17 @@
+$NetBSD: patch-Makethird,v 1.8 2017/12/18 15:06:34 leot Exp $
+
+- mujs building support with libtool
+- Avoid the internal lcms2 version provided and honors SYS_LCMS2_{CFLAGS,LIBS}.
+  These are handled in patches/patch-ab.
+
+--- Makethird.orig	2018-09-25 12:39:17.000000000 +0000
++++ Makethird
+@@ -229,7 +229,7 @@ else
+ THIRD_SRC += thirdparty/mujs/one.c
+ THIRD_CFLAGS += -Ithirdparty/mujs
+ 
+-$(OUT)/thirdparty/mujs/%.o: thirdparty/mujs/%.c
++$(OUT)/thirdparty/mujs/%.lo: thirdparty/mujs/%.c
+ 	$(CC_CMD)
+ 
+ endif
