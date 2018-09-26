@@ -1,0 +1,5 @@
+- Test `curl' option
+- Test `opengl' option
+- Some tools in bin/* are no longer present... what happened to them? Please
+  investigate!
+- Prepare a COMMIT_MSG
