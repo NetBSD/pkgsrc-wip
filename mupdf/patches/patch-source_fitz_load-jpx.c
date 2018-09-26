@@ -1,5 +1,18 @@
 $NetBSD$
 
+- MuPDF does some locking around its allocation calls; it overrides openjpeg's
+  allocators to do this locking too. However mupdf tries to manually align things
+  in a way that doesn't match what openjpeg does, which we noticed when frees
+  were segfaulting because the addresses didn't match up.
+
+  In the case of the openjpeg port it's relying on malloc(3)'s guarantee
+  "The allocated space is suitably aligned (after possible pointer coercion)
+  for storage of any type of object" so patch mupdf to do the same.
+
+  Fixes crash noticed by jca@ in https://www.broadband-forum.org/technical/download/TR-177.pdf
+
+  From OpenBSD ports textproc/mupdf/patch-source_fitz_load-jpx_c,v 1.5.
+
 --- source/fitz/load-jpx.c.orig	2018-09-25 12:39:17.000000000 +0000
 +++ source/fitz/load-jpx.c
 @@ -577,19 +577,7 @@ void opj_free(void *ptr)
