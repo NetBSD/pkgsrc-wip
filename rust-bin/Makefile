@@ -2,7 +2,7 @@
 
 DISTNAME=	rust-1.29.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 
@@ -98,6 +98,21 @@ fix-darwin-install-name:
 			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
 			    $$f;					\
 		done;							\
+	done
+.  endfor
+.elif ${OPSYS} == "Linux"
+BUILD_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
+
+.PHONY: fix-relative-rpath
+post-install: fix-relative-rpath
+fix-relative-rpath:
+.  for bin in clippy-driver rls rustc rustdoc
+	${PREFIX}/bin/patchelf --set-rpath ${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
+.  endfor
+.  for lib in lib lib/rustlib/${RUST_ARCH}/lib lib/rustlib/${RUST_ARCH}/codegen-backends
+	for f in ${DESTDIR}${PREFIX}/${lib}/lib*.so; do			\
+		[ ! -f $$f ] && continue;				\
+		${PREFIX}/bin/patchelf --set-rpath ${PREFIX}/lib $$f;			\
 	done
 .  endfor
 .endif
