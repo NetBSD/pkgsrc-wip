@@ -1,6 +1,9 @@
 @comment $NetBSD$
+bin/mjsgen
+bin/mujstest
 bin/mupdf
 ${PLIST.opengl}bin/mupdf-gl
+bin/muraster
 bin/mutool
 include/mupdf/fitz.h
 include/mupdf/fitz/annotation.h

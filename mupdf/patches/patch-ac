@@ -294,10 +294,11 @@ $NetBSD: patch-ac,v 1.19 2018/05/06 13:19:10 leot Exp $
  
  # --- Format man pages ---
  
-@@ -337,27 +341,29 @@ extra-apps: $(EXTRA_APPS)
+@@ -336,28 +340,30 @@ apps: $(INSTALL_APPS)
+ extra-apps: $(EXTRA_APPS)
  extra: extra-libs extra-apps
  
- install: libs apps
+-install: libs apps
 -	install -d $(DESTDIR)$(incdir)/mupdf
 -	install -d $(DESTDIR)$(incdir)/mupdf/fitz
 -	install -d $(DESTDIR)$(incdir)/mupdf/pdf
@@ -319,6 +320,7 @@ $NetBSD: patch-ac,v 1.19 2018/05/06 13:19:10 leot Exp $
 -	install README COPYING CHANGES $(DESTDIR)$(docdir)
 -	install docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
 -	install docs/examples/* $(DESTDIR)$(docdir)/examples
++install: libs apps extra-apps
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir) $(DESTDIR)$(incdir)/mupdf $(DESTDIR)$(incdir)/mupdf/fitz $(DESTDIR)$(incdir)/mupdf/pdf
 +	${BSD_INSTALL_DATA} include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
 +	${BSD_INSTALL_DATA} include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
@@ -330,7 +332,7 @@ $NetBSD: patch-ac,v 1.19 2018/05/06 13:19:10 leot Exp $
 +	done
 +
 +	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(bindir)
-+	for f in $(INSTALL_APPS); do \
++	for f in $(INSTALL_APPS) $(EXTRA_APPS); do \
 +		${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $$f $(DESTDIR)$(bindir); \
 +	done
 +
