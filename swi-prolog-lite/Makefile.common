@@ -16,3 +16,5 @@ LICENSE=		gnu-lgpl-v2.1
 DIST_SUBDIR=		swi-prolog
 DISTINFO_FILE=		${.CURDIR}/../../wip/swi-prolog-lite/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
+
+CFLAGS+=		-fPIC
