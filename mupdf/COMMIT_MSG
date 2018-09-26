@@ -1,0 +1,10 @@
+mupdf: Update print/mupdf to 1.14.0
+
+pkgsrc changes:
+ - Pass USE_SYSTEM_LIBS=yes via MAKE_ENV in order to honor system (pkgsrc)
+   packages {C,LD}FLAGS
+ - Rewrite the logic to disable lcms2 in patch-ab and inject -DNO_ICC
+   directly via CFLAGS
+
+Changes:
+TODO: probably better to just fill them when 1.14.0 will be released
