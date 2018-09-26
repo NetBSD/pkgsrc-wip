@@ -1,0 +1,52 @@
+# $NetBSD$
+# used by wip/smake/Makefile
+# used by wip/bosh/Makefile
+
+# All packages based on the schilytools tarball should include this Makefile
+# fragment to inherit and share the same pkgsrc specific platform hacks.
+
+# Map PKGSRC_COMPILER to CCOM used by schilytools build system.
+.if !empty(PKGSRC_COMPILER:Mgcc)
+MAKE_FLAGS+=	CCOM=gcc
+.elif !empty(PKGSRC_COMPILER:Mclang)
+MAKE_FLAGS+=	CCOM=clang
+# The following compilers are untested
+.elif !empty(PKGSRC_COMPILER:Micc)
+MAKE_FLAGS+=	CCOM=icc
+.else
+MAKE_FLAGS+=	CCOM=cc
+.endif
+
+pre-configure:
+
+# OS rules (including ones from old packages to not break what was there before)
+pre-configure:
+	set +e; cd ${WRKSRC}/RULES &&					\
+		 for i in arm mipsel x86_64 sparc64 powerpc;		\
+		 do							\
+			${LN} -sf i386-netbsd-gcc.rul "$$i"-netbsd-gcc.rul; \
+			${LN} -sf i386-netbsd-cc.rul "$$i"-netbsd-cc.rul; \
+		 done
+	set +e; cd ${WRKSRC}/RULES &&					\
+		${LN} -sf i586-linux-gcc.rul x86_64-linux-gcc.rul;	\
+		${LN} -sf i586-linux-cc.rul x86_64-linux-cc.rul;	\
+		${LN} -sf i386-freebsd-gcc.rul x86_64-freebsd-gcc.rul;	\
+		${LN} -sf i386-freebsd-cc.rul x86_64-freebsd-cc.rul;	\
+		${LN} -sf i386-freebsd-gcc.rul amd64-freebsd-gcc.rul;	\
+		${LN} -sf i386-freebsd-cc.rul amd64-freebsd-cc.rul;	\
+		${LN} -sf x86_64-netbsd-cc.rul amd64-openbsd-cc.rul;	\
+		${LN} -sf sun4-sunos5-cc.rul sun4v-sunos5-cc.rul;	\
+		${LN} -sf sun4-sunos5-gcc.rul sun4v-sunos5-gcc.rul;	\
+		${LN} -sf i386-darwin-clang.rul x86_64-darwin-clang.rul
+	set -e; cd ${WRKSRC}/RULES &&					\
+		for suffix in netbsd-clang.rul netbsd-cc.rul netbsd-gcc.rul; \
+		do							\
+			if [ ! -f ${MACHINE}-$$suffix ]; then		\
+				${LN} -s i386-$$suffix ${MACHINE}-$$suffix; \
+			fi;						\
+		done
+	set -e; cd ${WRKSRC}/RULES &&					\
+		if [ ! -f i386-netbsd-clang.rul ]; then			\
+			${SED} -e 's/cc-gcc.rul/cc-$$(C_ARCH).rul/'	\
+				i386-netbsd-gcc.rul >i386-netbsd-clang.rul; \
+		fi
