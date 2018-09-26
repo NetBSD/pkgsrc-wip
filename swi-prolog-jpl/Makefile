@@ -47,7 +47,5 @@ post-configure:
 .include "../../mk/java-vm.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-# uses rl_event_hook() interface
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
