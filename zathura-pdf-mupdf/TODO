@@ -1,6 +1,6 @@
-Fail at run time with:
+- PDF are not correctly rendered... and a lot of:
 
- % zathura
- error: Could not load plugin '/usr/pkg/lib/zathura/libpdf-mupdf.so' (/usr/pkg/lib/libmupdf.so.0: Undefined PLT symbol "opj_stream_set_user_data" (symnum = 83)).
+   error: Rendering failed (page ...)
 
-Investigate that!
+  errors are printed... investigate that! (this is probably a
+  mistake in 1.14.0 port)
