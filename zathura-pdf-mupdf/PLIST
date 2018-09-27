@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/zathura/libpdf-mupdf.so
+share/applications/org.pwmt.zathura-pdf-mupdf.desktop
+share/metainfo/org.pwmt.zathura-pdf-mupdf.metainfo.xml

@@ -4857,6 +4857,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zathura
+SUBDIR+=	zathura-pdf-mupdf
 SUBDIR+=	zbackup
 SUBDIR+=	zbar
 SUBDIR+=	zenity

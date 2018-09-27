@@ -1,0 +1,6 @@
+Fail at run time with:
+
+ % zathura
+ error: Could not load plugin '/usr/pkg/lib/zathura/libpdf-mupdf.so' (/usr/pkg/lib/libmupdf.so.0: Undefined PLT symbol "opj_stream_set_user_data" (symnum = 83)).
+
+Investigate that!
