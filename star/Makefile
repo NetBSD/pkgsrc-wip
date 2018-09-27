@@ -13,11 +13,9 @@ LICENSE=	cddl-1.0
 
 MAKE_JOBS_SAFE=	no
 
-#USE_TOOLS+=	tbl
+USE_TOOLS+=	tbl
 TOOL_DEPENDS+=	smake-[0-9]*:../../wip/smake
 SMAKE=		MAKEFLAGS= smake
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,13 +34,15 @@ do-build:
 	cd ${WRKSRC}/star && ${SMAKE}
 
 # Process tables in manpage
-#post-build:
-#	cd ${WRKSRC} && ${TBL} sh/sh.1 >sh/sh.1.tmp;			\
-#		${MV} -f sh/sh.1.tmp sh/bosh.1
+post-build:
+	cd ${WRKSRC} && ${TBL} star/spax.1 >star/spax.1.tmp &&		\
+		${MV} -f star/spax.1.tmp star/spax.1
+	cd ${WRKSRC} && ${TBL} star/star.4 >star/star.4.tmp &&		\
+		${MV} -f star/star.4.tmp star/star.4
 
 do-test:
 	cd ${WRKSRC}/star &&						\
-		cd tests; ${SMAKE} test
+		cd tests; ${SMAKE} tests
 
 # Documentation is in ${WRKSRC}/README.compile
 do-install:
