@@ -19,10 +19,10 @@ MAKE_FLAGS+=	CCOM=cc
 # Some rules were copied from old packages (that are now part of schilytools
 # too) to not break what people have done in the past.
 pre-configure:
-	@printf "Create OS rules...\n"
-	@cd ${WRKSRC}/RULES && . ${WRKSRC}/RULES/MKLINKS
-	@printf "Create pkgsrc OS rules...\n"
-	@cd ${WRKSRC}/RULES && unset r ;				\
+	printf "Create OS rules...\n"
+	cd ${WRKSRC}/RULES && . ${WRKSRC}/RULES/MKLINKS
+	printf "Create pkgsrc OS rules...\n"
+	cd ${WRKSRC}/RULES && unset r ;				\
 	for i in arm mipsel x86_64 sparc64 powerpc ;			\
 	do								\
 		r="$$r i386-netbsd-gcc.rul@$$i-netbsd-gcc.rul" ;	\
@@ -40,16 +40,16 @@ pre-configure:
 									\
 	for i in $$r ;							\
 	do								\
-		existing=$$(printf "%s\n" $$i | ${SED} -e 's/@.*//') ;	\
-		target=$$(printf "%s\n" $$i | ${SED} -e 's/.*@//') ;	\
+		existing=`printf "%s\\n" $$i | ${SED} -e 's/@.*//'` ;	\
+		target=`printf "%s\\n" $$i | ${SED} -e 's/.*@//'` ;	\
 		printf "%s " "$$target";				\
-		if ! test -e "$$existing" ;				\
+		if ! ${TEST} -e "$$existing" ;				\
 		then							\
 			printf "(Link target %s not present)\n"		\
 				"$$existing";				\
 			continue ;					\
 		fi;							\
-		if ! test -e "$$target" ;				\
+		if ! ${TEST} -e "$$target" ;				\
 		then							\
 			${LN} -s "$$existing" "$$target" ;		\
 			printf "(created)\n" ;				\
