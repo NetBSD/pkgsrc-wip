@@ -15,9 +15,6 @@ CONFLICTS+=	zathura-pdf-poppler-[0-9]*
 
 USE_TOOLS+=	pkg-config
 
-#TOOL_DEPENDS+=	gettext-tools>=0.15:../../devel/gettext-tools
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-
 CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
 MAKE_ENV+=	MUPDF_LIB="-lmupdf"
