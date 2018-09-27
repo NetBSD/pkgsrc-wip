@@ -1,7 +1,10 @@
 $NetBSD$
 
 - Also depends on openjpeg, jpeg and jbig2dec to avoid missing PLT symbols at
-  run time
+  run time. Please note that this was addressed upstream via:
+
+   <https://git.pwmt.org/pwmt/zathura-pdf-mupdf/commit/8d27748c525691268305c6760c7d4668d0560313>
+
 - Adjust library name of mupdf-third for mupdf>=1.14.0.
 
 --- meson.build.orig	2018-03-17 19:47:01.000000000 +0000
