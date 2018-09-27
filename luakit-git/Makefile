@@ -9,7 +9,7 @@ HOMEPAGE=	http://luakit.org/
 COMMENT=	Webkit based browser framework extensible by Lua
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 GIT_REPOSITORIES=	luakit
 GIT_BRANCH.luakit=	develop
