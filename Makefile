@@ -1041,6 +1041,7 @@ SUBDIR+=	giggle
 SUBDIR+=	gimmie
 SUBDIR+=	gimp-dds
 SUBDIR+=	gin
+SUBDIR+=	girara
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-modes-git
 SUBDIR+=	git-spindle
