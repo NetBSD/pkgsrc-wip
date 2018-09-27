@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.1 2015/08/18 20:24:52 yhardy Exp $
 
-DISTNAME=	brogue-1.7.4
+DISTNAME=	brogue-1.7.5
 CATEGORIES=	games
-MASTER_SITES=	-https://sites.google.com/site/broguegame/brogue-1.7.4-linux-i386.tbz2?attredirects=0&d=1
+MASTER_SITES=	-https://sites.google.com/site/broguegame/brogue-1.7.5-linux-amd64.tbz2?attredirects=0&d=1
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ HOMEPAGE=	https://sites.google.com/site/broguegame/
 COMMENT=	Brogue is a modern Roguelike game
 LICENSE=	gnu-agpl-v3
 
-WRKSRC=		${WRKDIR}/brogue-1.7.4
+WRKSRC=		${WRKDIR}/brogue-1.7.5
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake
@@ -58,9 +58,11 @@ SRCS=	src/libtcod-1.5.2/src/bresenham_c.c \
 	src/brogue/MainMenu.c \
 	src/brogue/Monsters.c \
 	src/brogue/Movement.c \
+	src/brogue/PowerTables.c \
 	src/brogue/Random.c \
 	src/brogue/Recordings.c \
 	src/brogue/RogueMain.c \
+	src/brogue/Sqrt.c \
 	src/brogue/Time.c \
 	src/platform/curses-platform.c \
 	src/platform/main.c \
@@ -82,6 +84,10 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/brogue
 INSTALLATION_DIRS+=	share/brogue/fonts
 
+REQD_FILES_PERMS+=	share/brogue/BrogueHighScores.empty \
+			share/brogue/BrogueHighScores.txt \
+			${GAMEDATA_PERMS}
+
 do-build:
 	mkdir ${WRKSRC}/build
 	for i in ${SRCS}; do \
@@ -93,7 +99,7 @@ do-build:
 
 do-install:
 	${INSTALL_GAME} ${WRKSRC}/bin/brogue ${DESTDIR}${PREFIX}/bin
-	${INSTALL_GAME_DATA} ${WRKSRC}/bin/BrogueHighScores.txt ${DESTDIR}${PREFIX}/share/brogue
+	${INSTALL_GAME_DATA} ${WRKSRC}/bin/BrogueHighScores.txt ${DESTDIR}${PREFIX}/share/brogue/BrogueHighScores.empty
 	for i in ${WRKSRC}/bin/fonts/*; do \
 		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/share/brogue/fonts; \
 	done

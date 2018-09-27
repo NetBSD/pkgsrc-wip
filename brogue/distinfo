@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.1 2015/08/18 20:24:52 yhardy Exp $
 
-SHA1 (brogue-1.7.4.tar.bz2) = c4c5af40497640ac1bd1857e626f143b6bc177b8
-RMD160 (brogue-1.7.4.tar.bz2) = 5a68c4bc102e867d22cf6f1c2de768e00ff43cde
-Size (brogue-1.7.4.tar.bz2) = 3453678 bytes
+SHA1 (brogue-1.7.5.tar.bz2) = af8ddcad7730177083ccc1ee8cd077dbe5d1fc82
+RMD160 (brogue-1.7.5.tar.bz2) = 5cf9c362291bd3c21b5205d7d025826e9143b8ac
+SHA512 (brogue-1.7.5.tar.bz2) = b69952b1acca5bc624fa914d7a75ea3bc98fe6ebf80322b3bc9dcf02a388be2d886668d6e85b7e1cfa20223a9c22970d60a284fc5eee06de3bfc5c32295b6ed6
+Size (brogue-1.7.5.tar.bz2) = 3566514 bytes
 SHA1 (patch-src_libtcod_src_console_c.c) = 1932518953db1b76045cd157ab248889e2d3897c
 SHA1 (patch-src_libtcod_src_sys_c.c) = 717b880867012f70f7f6c1885cd969b880d5e180
 SHA1 (patch-src_platform_curses-platform.c) = cd4de249f80a4cd6fba3eda05ac753467121ab0a
