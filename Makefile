@@ -4858,6 +4858,7 @@ SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zathura
 SUBDIR+=	zathura-pdf-mupdf
+SUBDIR+=	zathura-pdf-poppler
 SUBDIR+=	zbackup
 SUBDIR+=	zbar
 SUBDIR+=	zenity

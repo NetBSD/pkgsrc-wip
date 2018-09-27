@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/zathura/libpdf-poppler.so
+share/applications/org.pwmt.zathura-pdf-poppler.desktop
+share/metainfo/org.pwmt.zathura-pdf-poppler.metainfo.xml
