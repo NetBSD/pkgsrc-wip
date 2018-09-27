@@ -4859,6 +4859,7 @@ SUBDIR+=	zapping
 SUBDIR+=	zathura
 SUBDIR+=	zathura-pdf-mupdf
 SUBDIR+=	zathura-pdf-poppler
+SUBDIR+=	zathura-ps
 SUBDIR+=	zbackup
 SUBDIR+=	zbar
 SUBDIR+=	zenity

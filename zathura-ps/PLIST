@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/zathura/libps.so
+share/applications/org.pwmt.zathura-ps.desktop
+share/metainfo/org.pwmt.zathura-ps.metainfo.xml
