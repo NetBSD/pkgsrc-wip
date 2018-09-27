@@ -7,4 +7,4 @@
     => Different behaviour (compared to ash and bash) is documented
 [X] Add obosh and pbosh variants to this package?
     => No, use separate packages
-[ ] Use smake for build
+[X] Use smake for build

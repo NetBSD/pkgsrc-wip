@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	schily-2018-09-26
-PKGNAME=	bosh-20160524
+PKGNAME=	bosh-20180926
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,8 +13,9 @@ LICENSE=	cddl-1.0
 
 MAKE_JOBS_SAFE=	no
 
-USE_TOOLS+=	gmake tbl
-MAKE_FLAGS+=	GMAKE_NOWARN=true
+USE_TOOLS+=	tbl
+TOOL_DEPENDS+=	smake-[0-9]*:../../wip/smake
+SMAKE=		MAKEFLAGS= smake
 
 PKG_SHELL=	bin/bosh
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -25,25 +26,24 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../wip/smake/Makefile.common"
 
 do-configure:
-	cd ${WRKSRC}/inc && ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	cd ${WRKSRC}/inc && ${SMAKE}
 
 do-build:
 	cd ${WRKSRC} && for library in					\
 		libschily libxtermcap libfind libgetopt libshedit;	\
 	do								\
-		cd ${WRKSRC}/$${library} &&				\
-			${MAKE_PROGRAM} ${MAKE_FLAGS};			\
+		cd ${WRKSRC}/$${library} && ${SMAKE};			\
 	done
-	cd ${WRKSRC}/sh && ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	cd ${WRKSRC}/sh && ${SMAKE}
 
 # Process tables in manpage
 post-build:
 	cd ${WRKSRC} && ${TBL} sh/sh.1 >sh/sh.1.tmp;			\
-		mv -f sh/sh.1.tmp sh/bosh.1
+		${MV} -f sh/sh.1.tmp sh/bosh.1
 
 do-test:
 	cd ${WRKSRC}/sh &&						\
-		cd tests; ${MAKE_PROGRAM} ${MAKE_FLAGS} tests
+		cd tests; ${SMAKE} test
 
 do-install:
 	cd ${WRKSRC}/sh &&						\
