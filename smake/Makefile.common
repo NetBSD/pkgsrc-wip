@@ -1,6 +1,8 @@
 # $NetBSD$
-# used by wip/smake/Makefile
 # used by wip/bosh/Makefile
+# used by wip/pbosh/Makefile
+# used by wip/smake/Makefile
+# used by wip/star/Makefile
 
 # All packages based on the schilytools tarball should include this Makefile
 # fragment to inherit and share the same pkgsrc platform specific code.
