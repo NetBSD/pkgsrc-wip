@@ -2,7 +2,9 @@
     Reason: NetBSD od has trailing whitespace in its output
     => Fix added for current version
     => Reported to upstream, next release will contain a workaround
+    => Updated to release 2018-09-26 and patch removed
 [X] Analyze keyboard behaviour for Delete and Backspace
     => Different behaviour (compared to ash and bash) is documented
 [X] Add obosh and pbosh variants to this package?
     => No, use separate packages
+[ ] Use smake for build

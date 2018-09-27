@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	schily-2018-09-04
-PKGNAME=	${DISTNAME:S/schily/bosh/}
+DISTNAME=	schily-2018-09-26
+PKGNAME=	bosh-20160524
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,25 +13,19 @@ LICENSE=	cddl-1.0
 
 MAKE_JOBS_SAFE=	no
 
-USE_TOOLS+=	smake tbl
+USE_TOOLS+=	gmake tbl
+MAKE_FLAGS+=	GMAKE_NOWARN=true
 
 PKG_SHELL=	bin/bosh
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
-# Fix testsuite (NetBSD od creates whitespace at the end of output lines)
-SUBST_CLASSES+=		od
-SUBST_STAGE.od=		post-patch
-SUBST_FILES.od=		sh/tests/shelltests/printf/printf.sh
-SUBST_SED.od=		-e "s,-e \\\\\"s/\^\[ 	]\*//\\\[\"],-e \\\\\"s/^[ 	]*//\\\\\" -e \\\\\"s/[ 	]*$$//\\\\\",g"
-SUBST_MESSAGE.od=	Fix processing of output from od.
-
 # Shared platform specific hacks for schilytools (provided by smake package)
 .include "../../wip/smake/Makefile.common"
 
 do-configure:
-	cd ${WRKSRC}/inc && MAKEFLAGS=${MAKEFLAGS:S/:_MAKE/_PKGSRC_MAKE/} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	cd ${WRKSRC}/inc && ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-build:
 	cd ${WRKSRC} && for library in					\
