@@ -43,7 +43,7 @@ post-build:
 
 do-test:
 	cd ${WRKSRC}/sh &&						\
-		cd tests; ${SMAKE} test
+		cd tests; ${SMAKE} tests
 
 do-install:
 	cd ${WRKSRC}/sh &&						\
