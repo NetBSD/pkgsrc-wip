@@ -4856,6 +4856,7 @@ SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
+SUBDIR+=	zathura
 SUBDIR+=	zbackup
 SUBDIR+=	zbar
 SUBDIR+=	zenity
