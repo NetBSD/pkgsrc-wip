@@ -17,8 +17,6 @@ USE_TOOLS+=	pkg-config
 
 CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
-MAKE_ENV+=	MUPDF_LIB="-lmupdf"
-
 .include "../../devel/py-meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../wip/mupdf/buildlink3.mk"
