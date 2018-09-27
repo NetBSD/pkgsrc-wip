@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
-# Shared platform specific hacks for schilytools (provided by smake package)
+# Shared platform specific code for schilytools (provided by smake package)
 .include "../../wip/smake/Makefile.common"
 
 do-configure:
