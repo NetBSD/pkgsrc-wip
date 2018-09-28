@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.9 2017/04/26 10:27:43 wiz Exp $
 
-SHA1 (qtwebengine-everywhere-src-5.10.1.tar.xz) = b1253958b8399f287a0497642d096de8554a5ae6
-RMD160 (qtwebengine-everywhere-src-5.10.1.tar.xz) = 02a127721700daa6ffc0778b743abbff8640318f
-SHA512 (qtwebengine-everywhere-src-5.10.1.tar.xz) = dc1b15eb857cb9ff3ef98a2f90cfec8c40429eea292bbed6a323cf1c4b044f3b73efaf51833fe8d9ca2ecc4f99d7092590a1a34248a9ab14fa5a38d4335f4925
-Size (qtwebengine-everywhere-src-5.10.1.tar.xz) = 209844952 bytes
+SHA1 (qtwebengine-everywhere-src-5.11.1.tar.xz) = cbea98f39b064ad4f656b76086f88d5ee5269f75
+RMD160 (qtwebengine-everywhere-src-5.11.1.tar.xz) = 783d24997f0a802fc2763cf3f183672fad79e84a
+SHA512 (qtwebengine-everywhere-src-5.11.1.tar.xz) = 3e17f88b690c06f6d28c30d8d43588eaad9b0b214434b219c3d8fe11969cca515a68c731d176cf640940fd3db12e95de8f723d3717555504c5b95d135fa4a596
+Size (qtwebengine-everywhere-src-5.11.1.tar.xz) = 233633572 bytes
 SHA1 (patch-src_3rdparty_chromium_build_toolchain_mac_BUILD.gn) = a8f779d78d8e5ea22c60851d0ec724b356a28e34
 SHA1 (patch-src_3rdparty_chromium_tools_gn_bootstrap_build_mac.ninja.template) = 637fa297a90b33f22e13e5f692f4841ed3b45a2d

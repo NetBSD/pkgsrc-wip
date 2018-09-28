@@ -3,7 +3,6 @@
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
 COMMENT=	Qt5 WebEngine module
-MASTER_SITES+=	https://download.qt.io/archive/qt/5.10/5.10.1/submodules/
 
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
