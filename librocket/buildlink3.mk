@@ -2,7 +2,7 @@
 
 BUILDLINK_TREE+=	librocket
 
-if !defined(LIBROCKET_BUILDLINK3_MK)
+.if !defined(LIBROCKET_BUILDLINK3_MK)
 LIBROCKET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.librocket+=	librocket>=1.3.0.0
