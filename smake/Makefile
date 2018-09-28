@@ -36,6 +36,7 @@ do-build:
 # Documentation is in ${WRKSRC}/README.compile
 do-install:
 	cd ${WRKSRC}/smake && ${MAKE_PROGRAM} ${MAKE_FLAGS}		\
-		INS_BASE=${PREFIX} DEFMANBASE=. DESTDIR=${DESTDIR} install
+		INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}	\
+			DESTDIR=${DESTDIR} install
 
 .include "../../mk/bsd.pkg.mk"
