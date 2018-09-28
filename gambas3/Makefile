@@ -26,5 +26,6 @@ GB_DEPENDS+=	gambas3-gb-xml-xslt gambas3-ide gambas3-scripter
 PKGNAME=	gambas3-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	Complete Gambas development environment
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
