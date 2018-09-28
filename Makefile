@@ -3489,6 +3489,7 @@ SUBDIR+=	py-meshio
 SUBDIR+=	py-metrics
 SUBDIR+=	py-metropack
 SUBDIR+=	py-milksnake
+SUBDIR+=	py-minecraft
 SUBDIR+=	py-minepy
 SUBDIR+=	py-minidb
 SUBDIR+=	py-mipp
