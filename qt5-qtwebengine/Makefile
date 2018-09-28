@@ -53,6 +53,7 @@ post-install:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/nss/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
