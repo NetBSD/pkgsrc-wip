@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=minio/}
 GITHUB_PROJECT=	minio
 GITHUB_TAG=	RELEASE.2018-09-12T18-49-56Z
 
-MAINTAINER=	cfkoch@edegbsd.org
+MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://minio.io
 COMMENT=	High performance distributed object storage server
 LICENSE=	apache-2.0
