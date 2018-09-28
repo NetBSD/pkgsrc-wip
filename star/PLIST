@@ -59,3 +59,4 @@ share/doc/star/testscripts/ustar-bad-filetypes.tar
 share/doc/star/testscripts/ustar-bad-signedsum.tar
 share/doc/star/testscripts/ustar-big-2g.tar.bz2
 share/doc/star/testscripts/ustar-big-8g.tar.bz2
+share/examples/star/star

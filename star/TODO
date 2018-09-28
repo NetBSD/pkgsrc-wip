@@ -1,2 +1,3 @@
 [X] Compilation works
 [X] Installation rule and PLIST
+[ ] MAKE_DIRS_PERMS doesn't work

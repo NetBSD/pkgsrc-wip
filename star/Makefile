@@ -16,6 +16,12 @@ MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	tbl
 TOOL_DEPENDS+=	smake-[0-9]*:../../wip/smake
 SMAKE=		MAKEFLAGS= smake
+MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
+
+# This creates strange "shift: can't shift that many" errors
+#MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/default/star 0755
+CONF_FILES=	${PREFIX}/share/examples/star/star ${PKG_SYSCONFDIR}/default/star
+AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,30 +29,32 @@ SMAKE=		MAKEFLAGS= smake
 .include "../../wip/smake/Makefile.common"
 
 do-configure:
-	cd ${WRKSRC}/inc && ${SMAKE}
+	cd ${WRKSRC}/inc && ${SMAKE} ${MAKE_FLAGS}
 
 do-build:
 	cd ${WRKSRC} && for library in					\
 		libschily libdeflt libfind librmt;			\
 	do								\
-		cd ${WRKSRC}/$${library} && ${SMAKE};			\
+		cd ${WRKSRC}/$${library} && ${SMAKE} ${MAKE_FLAGS};	\
 	done
-	cd ${WRKSRC}/star && ${SMAKE}
+	cd ${WRKSRC}/star && ${SMAKE} ${MAKE_FLAGS}
 
 # Process tables in manpage
 post-build:
-	cd ${WRKSRC} && ${TBL} star/spax.1 >star/spax.1.tmp &&		\
-		${MV} -f star/spax.1.tmp star/spax.1
-	cd ${WRKSRC} && ${TBL} star/star.4 >star/star.4.tmp &&		\
-		${MV} -f star/star.4.tmp star/star.4
+	cd ${WRKSRC} && if ! ${TEST} -f star/pkgsrc_tbl.done; then	\
+		${TBL} star/spax.1 >star/spax.1.tmp &&			\
+		${MV} -f star/spax.1.tmp star/spax.1 &&			\
+		${TBL} star/star.4 >star/star.4.tmp &&			\
+		${MV} -f star/star.4.tmp star/star.4 &&			\
+		${TOUCH} star/pkgsrc_tbl.done;				\
+	fi
 
 do-test:
-	cd ${WRKSRC}/star &&						\
-		cd tests; ${SMAKE} tests
+	cd ${WRKSRC}/star && cd tests ; ${SMAKE} ${MAKE_FLAGS} tests
 
-# Documentation is in ${WRKSRC}/README.compile
 do-install:
-	cd ${WRKSRC}/star && ${SMAKE}					\
-		INS_BASE=${PREFIX} DEFMANBASE=. DESTDIR=${DESTDIR} install
+	cd ${WRKSRC}/star && ${SMAKE} ${MAKE_FLAGS} install
+	${INSTALL_DATA} ${WRKSRC}/star/star.dfl				\
+		${DESTDIR}${PREFIX}/share/examples/star/star
 
 .include "../../mk/bsd.pkg.mk"
