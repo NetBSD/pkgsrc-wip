@@ -1,0 +1,23 @@
+girara: Update graphics/girara to 0.3.1
+
+pkgsrc changes:
+ - Adjust to meson build system
+
+Changes:
+0.3.1
+-----
+- Various fixes and improvements
+
+0.3.0
+-----
+- Various fixes and improvements
+- Make colors changeable during runtime
+- Various fixes and improvements
+- Update translations
+
+0.2.9
+-----
+- Replace deprecated GTK+ 3 functions
+- Replace build system with meson
+- Various fixes and improvements
+- Update translations
