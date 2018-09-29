@@ -1,0 +1,27 @@
+zathura: Update print/zathura to 0.4.1
+
+pkgsrc changes:
+ - Adjust to meson build system
+
+Changes:
+0.4.1
+-----
+- Add bash and zsh completions
+- Add RTL layout of pages
+- Various fixes and improvements
+- Updated translations
+
+0.4.0
+-----
+- Port to newer libsynctex
+- Various fixes and improvements
+- Updated translations
+
+0.3.9
+-----
+- Improved HiDPI support
+- Display page labels
+- Add experimental seccomp filters
+- Replace build system with meson
+- Various fixes and improvements
+- Updated translations
