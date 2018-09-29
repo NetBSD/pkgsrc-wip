@@ -1,0 +1,5 @@
+- "make system-install" seems to unconditionally install _everything_
+  underneat these data directories, which are actually Git submodules in
+  this release. Therefore, we're installing several '.git' directories when
+  we really shouldn't.
+  

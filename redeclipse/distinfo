@@ -1,6 +1,3 @@
 $NetBSD$
 
-SHA1 (red-eclipse-v1.5.3.tar.gz) = d59f5079df920319ddf55b12925d625627aefdcf
-RMD160 (red-eclipse-v1.5.3.tar.gz) = b5540a5d73ab9a2d840ec7e43abb50e1e75f8e21
-Size (red-eclipse-v1.5.3.tar.gz) = 828050797 bytes
 SHA1 (patch-src_system-install.mk) = 4880fb97c7c6e4a27b9b50b3e8fb5d40c3acbef0
