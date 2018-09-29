@@ -8,6 +8,7 @@ SHA1 (patch-src_bionics.cpp) = b715ced76ae573b4f1c4053cb8a607ca21c81fa9
 SHA1 (patch-src_crafting.cpp) = eb9ccc4d57b3620127b4c6d5a124a6906e8b12e9
 SHA1 (patch-src_editmap.cpp) = a97da923caf9be218b3f4ae60d60200d8a2f8f1e
 SHA1 (patch-src_line.h) = b551e0ec68e975badd80f23d8db9d4fab151769e
+SHA1 (patch-src_mission__start.cpp) = 20190cd9e49f2f4b45e16192e6409d4aa031f6d8
 SHA1 (patch-src_mod__manager.cpp) = 31b5788af55d43dffa855fa12a22e7a8257e32eb
 SHA1 (patch-src_monattack.cpp) = ac61c07cce58d5a94b934c2574f5e4f0220dfc5d
 SHA1 (patch-src_mondeath.cpp) = 293ab32df372cd024ea78375f4704688a7954332
