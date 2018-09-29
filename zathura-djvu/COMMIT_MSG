@@ -1,0 +1,9 @@
+zathura-djvu: Update graphics/zathura-djvu to 0.2.8
+
+pkgsrc changes:
+ - Adjust to meson build system
+
+Changes:
+0.2.8
+-----
+Replace build system with meson
