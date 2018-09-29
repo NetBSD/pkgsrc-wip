@@ -1,0 +1,10 @@
+zathura-pdf-mupdf: Update print/zathura-pdf-mupdf to 0.3.3
+
+pkgsrc changes:
+ - Adjust to meson build system
+
+Changes:
+0.3.3
+-----
+- Replace build system with meson
+- Various fixes and improvements
