@@ -1744,6 +1744,7 @@ SUBDIR+=	libLLVM-dfbsd
 SUBDIR+=	libLLVM38
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
+SUBDIR+=	libaom
 SUBDIR+=	libavc1394
 SUBDIR+=	libbfio
 SUBDIR+=	libbpg
