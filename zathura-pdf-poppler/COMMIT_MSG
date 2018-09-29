@@ -1,0 +1,10 @@
+zathura-pdf-poppler: Update print/zathura-pdf-poppler to 0.2.9
+
+pkgsrc changes:
+ - Adjust to meson build system
+
+Changes:
+0.2.9
+-----
+- Provide page labels
+- Replace build system with meson
