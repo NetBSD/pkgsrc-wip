@@ -7,3 +7,6 @@
 - Could the NetBSD logic in
   patches/patch-Source_JavaScriptCore_runtime_MachineContext.h be rewritten
   using ucontext(2) _UC_MACHINE_* macros instead?
+- Would it be useful to define HAVE_BACKTRACE and HAVE_BACKTRACE_SYMBOLS?
+  (these are not probably per-OS but just a matter of include devel/libexecinfo
+  and adjust Source/WTF/wtf/Platform.h)
