@@ -14,7 +14,7 @@ COMMENT=	Portable TADS toolkit
 #LICENSE=	tads3
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	autoconf automake libtool
 
 pre-configure:
