@@ -1,0 +1,9 @@
+zathura-ps: Update print/zathura-ps to 0.2.6
+
+pkgsrc changes:
+ - Adjust to meson build system
+
+Changes:
+0.2.6
+-----
+- Replace build system with meson
