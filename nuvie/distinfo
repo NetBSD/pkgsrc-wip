@@ -3,6 +3,12 @@ $NetBSD: distinfo,v 1.1 2015/08/17 21:22:15 yhardy Exp $
 SHA1 (nuvie-0.5.tgz) = d4de34d0d9a01bfa1f5cd895d4e31b394dee19fc
 RMD160 (nuvie-0.5.tgz) = 3dec5d61888ff7c06eed1b1179f0dccfc32c3d69
 Size (nuvie-0.5.tgz) = 1656332 bytes
+SHA1 (patch-Effect.cpp) = 3f40d8001378bf8ae2c3010f924019ee23e4cb2b
+SHA1 (patch-Look.cpp) = 1fe19b491c040096005c6e8e9786626993506f58
+SHA1 (patch-Map.cpp) = 318ecd2928a65a5e8405acd1c3c8b453a6b7a0ca
+SHA1 (patch-MapWindow.cpp) = 142aa76f332a4c30e2e48c9811adcdf978178359
 SHA1 (patch-configure) = 9e2b302469c070c36c670a70f6987fed22d27771
 SHA1 (patch-configure.ac) = ebb7c28a7893c544ba96c88c25dad9974f69479d
-SHA1 (patch-nuvieDefs.h) = 24b6a928b0840ceb96d7e92d3bf39bdec08074df
+SHA1 (patch-nuvieDefs.h) = 22b72f19a2eb82ce23b39e683fe2e0340c97cf8b
+SHA1 (patch-screen_Screen.cpp) = d0ce8e8b2551fc398a2f0fbd5b4de80c2809916b
+SHA1 (patch-sound_adplug_OplClass.cpp) = fe8c8814e9f46cee10db39414c420aa6d0ed7e1d
