@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (patch-document.c) = b7d3c8c23148f7eb5f034586c2da4995a5cf2b5d
+SHA1 (patch-meson.build) = a6e57e646cb96b430564ac5cdbf18d67b62f8f0b
+SHA1 (patch-zathura-pdf-mupdf_page.c) = bfce420f9396025a23b7c8a78ff962b834d6746a
+SHA1 (patch-zathura-pdf-mupdf_render.c) = a551478679d14906482673e60bd52cfd6cf74f7a
+SHA1 (patch-zathura-pdf-mupdf_search.c) = 9d21523e2768436fe2e00bc4765d21643d996c0c
+SHA1 (patch-zathura-pdf-mupdf_utils.c) = 92655c0684c72ca42954936f72795d85f4c3a318

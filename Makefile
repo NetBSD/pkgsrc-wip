@@ -4866,6 +4866,7 @@ SUBDIR+=	zathura
 SUBDIR+=	zathura-cb
 SUBDIR+=	zathura-djvu
 SUBDIR+=	zathura-pdf-mupdf
+SUBDIR+=	zathura-pdf-mupdf-git
 SUBDIR+=	zathura-pdf-poppler
 SUBDIR+=	zathura-ps
 SUBDIR+=	zbackup
