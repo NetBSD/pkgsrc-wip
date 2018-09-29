@@ -1,6 +1,10 @@
-- PDF are not correctly rendered... and a lot of:
+PDF are not correctly rendered... and a lot of:
 
-   error: Rendering failed (page ...)
+ error: Rendering failed (page ...)
 
-  errors are printed... investigate that! (this is probably a
-  mistake in 1.14.0 port)
+errors are printed...
+
+Putting a breakpoint on pdf_page_render_to_buffer() function that
+is invoked as part of render_job() (defined in zathura)
+ZATHURA_ERROR_UNKNOWN is always returned because `image' argument
+is always NULL (hence `image == NULL' is true).
