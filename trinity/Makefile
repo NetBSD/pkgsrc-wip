@@ -30,6 +30,7 @@ DEPENDS+=	fastool>=0.1.4:../../wip/fastool
 DEPENDS+=	p5-transdecoder>=5.3.0:../../wip/p5-transdecoder
 DEPENDS+=	Trimmomatic>=0.38:../../wip/trimmomatic
 DEPENDS+=	rsem>=1.2.30:../../wip/rsem
+DEPENDS+=       ncbi-blast+>=2.7.1:../../biology/ncbi-blast+
 
 DISTNAME=	trinity-${PV}
 CATEGORIES=	biology
