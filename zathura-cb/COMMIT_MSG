@@ -1,0 +1,9 @@
+zathura-cb: Update graphics/zathura-cb to 0.1.8
+
+pkgsrc changes:
+ - Adjust to meson build system
+
+Changes:
+0.1.8
+-----
+Replace build system with meson
