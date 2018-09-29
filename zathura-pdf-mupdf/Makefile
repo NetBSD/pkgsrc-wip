@@ -11,8 +11,6 @@ HOMEPAGE=	https://pwmt.org/projects/zathura-pdf-mupdf/
 COMMENT=	Add PDF support to zathura using mupdf rendering engine
 LICENSE=	zlib
 
-CONFLICTS+=	zathura-pdf-poppler-[0-9]*
-
 USE_TOOLS+=	pkg-config
 
 CPPFLAGS+=	-D_XOPEN_SOURCE=600

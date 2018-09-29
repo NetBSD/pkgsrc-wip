@@ -10,8 +10,6 @@ HOMEPAGE=	https://pwmt.org/projects/zathura/
 COMMENT=	Add PDF support to zathura using poppler rendering engine
 LICENSE=	zlib
 
-CONFLICTS+=	zathura-pdf-mupdf-[0-9]*
-
 USE_TOOLS+=	pkg-config
 
 .include "../../devel/py-meson/build.mk"
