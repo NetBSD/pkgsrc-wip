@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.webkit-gtk?=	webkit-gtk>=2.20.3nb1
 BUILDLINK_PKGSRCDIR.webkit-gtk?=	../../wip/webkit-gtk
 
 # This is necessary to match the package requirement.
-GCC_REQD+=	5.0
+GCC_REQD+=	6.0
 
 pkgbase := webkit-gtk
 .include "../../mk/pkg-build-options.mk"

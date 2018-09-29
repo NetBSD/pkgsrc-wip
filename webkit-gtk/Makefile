@@ -21,7 +21,7 @@ USE_LANGUAGES=	c c++11
 #USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 
-GCC_REQD+=	5.0
+GCC_REQD+=	6.0
 
 # Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
 # versions of ld.gold.
