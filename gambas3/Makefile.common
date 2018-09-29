@@ -99,7 +99,7 @@
 # used by wip/gambas3-runtime/Makefile
 # used by wip/gambas3-scripter/Makefile
 
-GB_VERSION=		6619f592
+GB_VERSION=		e0ae5899
 DISTNAME=		gambas-${GB_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		https://gitlab.com/gambas/gambas/-/archive/${GB_VERSION}/
