@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libaom
+
+.if !defined(LIBAOM_BUILDLINK3_MK)
+LIBAOM_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libaom+=	libaom>=1.0.0
+BUILDLINK_PKGSRCDIR.libaom?=	../../wip/libaom
+.endif	# LIBAOM_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libaom
