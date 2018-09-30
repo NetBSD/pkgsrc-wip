@@ -1,0 +1,4 @@
+- Avoid conflicts with devel/libtai
+- Link with devel/libtai
+- Add rc.d script
+- Consider TAI-vs-UTC differences (see also FreeBSD files/pkg-message.in)
