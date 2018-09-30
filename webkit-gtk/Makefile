@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 # shm_open(3) and shm_unlink(3) appeared in NetBSD 7.0
 NOT_FOR_PLATFORM=	NetBSD-[1-6]*-*
 
-BUILD_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
+TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
