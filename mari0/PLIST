@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/mari0
+share/games/mari0_${PKGVERSION}.love
