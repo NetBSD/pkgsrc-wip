@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (Barony-2.0.4.tar.gz) = 6658e62c245dca01bb96f4faaef98c2ef1a12c14
-RMD160 (Barony-2.0.4.tar.gz) = d6a65e10b7d2209176df0317d68d846edc324c97
-SHA512 (Barony-2.0.4.tar.gz) = 1425c30da2dd6caf288f086045f479c71eb0138a3c5986c24edf4e1e2c91ee5db013610ecbae3e868cbb54faece9b41234827ca6b623d7d080ef97e0c20764c2
-Size (Barony-2.0.4.tar.gz) = 47148917 bytes
+SHA1 (Barony-3.2.2.tar.gz) = b09e43049f46f6d53eabef7316fe460c0fdd9325
+RMD160 (Barony-3.2.2.tar.gz) = 3530207755d983fffe5a31ae2d892c240309ee5b
+SHA512 (Barony-3.2.2.tar.gz) = e9e5e6e8fc174226751a05dc9886f5138e2a2dd75bc2ed736c54ea76480b7b48df41b985fb8cbdb86b0fc5068ea0ce62bf366de058f0c8f5b540ca244d52a108
+Size (Barony-3.2.2.tar.gz) = 53418154 bytes

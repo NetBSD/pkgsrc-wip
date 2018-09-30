@@ -1,1 +1,5 @@
 @comment $NetBSD$
+bin/barony
+bin/barony-editor
+share/barony/lang/en.ttf
+share/barony/lang/en.txt
