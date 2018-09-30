@@ -18,7 +18,6 @@ TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
-#USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 
 GCC_REQD+=	6.0
