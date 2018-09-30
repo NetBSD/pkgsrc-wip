@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stabyourself.net/notpacman
 COMMENT=	Gravity-controlled pacman
-LICENSE=	wtfpl
+LICENSE=	public-domain
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
