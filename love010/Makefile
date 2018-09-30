@@ -22,8 +22,10 @@ LUA_VERSIONS_INCOMPATIBLE=	52
 # JIT needs WX mappings
 NOT_PAX_MPROTECT_SAFE+=		love0.10/bin/love
 
-GNU_CONFIGURE_PREFIX=	${PREFIX}/love0.10
-GNU_CONFIGURE_MANDIR=	${PREFIX}/love0.10/${PKGMANDIR}/
+GNU_CONFIGURE_PREFIX=		${PREFIX}/love0.10
+GNU_CONFIGURE_MANDIR=		${PREFIX}/love0.10/${PKGMANDIR}/
+BUILDLINK_PASSTHRU_DIRS+=	${GNU_CONFIGURE_PREFIX}/lib
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${GNU_CONFIGURE_PREFIX}/lib
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
