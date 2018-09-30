@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/08/10 05:51:35 devnexen Exp $
 
 EXTRACT_SUFX=	.zip
-DISTNAME=	deviceatlas-enterprise-c-2.1
+DISTNAME=	deviceatlas-enterprise-c-2.1.4
 PKGREVISION=	5
 CATEGORIES=	net devel
 MASTER_SITES=	#
@@ -26,6 +26,9 @@ PKG_DESTDIR_SUPPORT=	destdir
 .include "../../mk/bsd.prefs.mk"
 
 INSTALLATION_DIRS=	lib include
+
+CMAKE_ARGS+=		-DSKIP_INSTALL_RPATH=ON \
+			-DBUILD_WITH_INSTALL_RPATH=ON
 
 FETCH_MESSAGE=	"Please fetch ${DISTFILES} manually from"
 FETCH_MESSAGE+=	"${HOMEPAGE}"

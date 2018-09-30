@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- Examples/CMakeLists.txt.orig	2018-09-30 18:30:05.000000000 +0000
++++ Examples/CMakeLists.txt
+@@ -16,3 +16,5 @@ endwhile()
+ 
+ add_executable(ci-example ci-example.c "ci-example.c")
+ target_link_libraries(ci-example ci)
++file(GLOB EXAMPLES *.c *.h)
++install(FILES ${EXAMPLES} DESTINATION ${INSTALL_PREFIX}/share/doc/deviceatlas-enterprise-c/examples)

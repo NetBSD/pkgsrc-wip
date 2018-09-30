@@ -1,0 +1,27 @@
+$NetBSD$
+
+--- Src/CMakeLists.txt.orig	2018-09-30 18:30:05.000000000 +0000
++++ Src/CMakeLists.txt
+@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 2.6)
+ set(DA_API_VERSION 2.1.4)
+ set(CI_API_VERSION 1.1.0)
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules")
++set(CMAKE_INSTALL_RPATH "${INSTALL_PREFIX}/lib")
+ 
+ find_package(pcre REQUIRED)
+ include(Checkbool)
+@@ -33,11 +34,11 @@ set_target_properties(ci PROPERTIES SOVE
+ 
+ if(UNIX)
+     if(NOT APPLE)
+-        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libda.so ${CMAKE_CURRENT_BINARY_DIR}/libda.so.${DA_API_VERSION} DESTINATION /usr/local/lib)
+-        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libci.so ${CMAKE_CURRENT_BINARY_DIR}/libci.so.${CI_API_VERSION} DESTINATION /usr/local/lib)
++	    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libda.so ${CMAKE_CURRENT_BINARY_DIR}/libda.so.${DA_API_VERSION} DESTINATION ${INSTALL_PREFIX}/lib)
++	    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libci.so ${CMAKE_CURRENT_BINARY_DIR}/libci.so.${CI_API_VERSION} DESTINATION ${INSTALL_PREFIX}/lib)
+     else()
+         install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libda.dylib ${CMAKE_CURRENT_BINARY_DIR}/libda.${DA_API_VERSION}.dylib DESTINATION /usr/local/lib)
+         install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libci.dylib ${CMAKE_CURRENT_BINARY_DIR}/libci.${CI_API_VERSION}.dylib DESTINATION /usr/local/lib)
+     endif()
+-    install(FILES dac.h dac_json.h ci.h ci_priv.h ci_fwd.h DESTINATION /usr/local/include)
++    install(FILES dac.h dac_json.h ci.h ci_priv.h ci_fwd.h DESTINATION ${INSTALL_PREFIX}/include)
+ endif()
