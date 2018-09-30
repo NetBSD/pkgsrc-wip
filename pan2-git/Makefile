@@ -2,8 +2,8 @@
 
 DISTNAME=		pan2-2
 CATEGORIES=		news
-MASTER_SITES=		http://github.com/lostcoder/pan2
-GIT_REPO=		git://git.gnome.org/pan2
+MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan
+GIT_REPO=		https://gitlab.gnome.org/GNOME/pan.git
 
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://pan.rebelbase.com/
