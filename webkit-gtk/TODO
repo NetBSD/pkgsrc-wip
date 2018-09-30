@@ -1,6 +1,6 @@
 - Is patches/patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp relevant
-  for NetBSD? (probably not, `!defined(__NetBSD__)' can be probably removed
-  after testing it)
+  for NetBSD? (probably not, `&& !defined(__FreeBSD__) && !defined(__NetBSD__)'
+  can be probably removed after testing it)
 - Review JIT support for NetBSD:
    * patches/patch-Source_JavaScriptCore_runtime_MachineContext.h
    * patches/patch-Source_WTF_wtf_Platform.h
