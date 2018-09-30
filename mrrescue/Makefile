@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.love
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tangramgames.dk/games/mrrescue/
 COMMENT=	Arcade-style fire fighting game
-LICENSE=	zlib
+LICENSE=	zlib AND cc-by-sa-v3.0
 
 do-extract:
 	${MKDIR} ${WRKSRC}
