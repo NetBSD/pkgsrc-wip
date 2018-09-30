@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stabyourself.net/mari0
 COMMENT=	Recreation of Super Mario Bros
-LICENSE=	cc-by-nc-sa-v3.0-license
+LICENSE=	mit # https://github.com/Stabyourself/mari0/blob/master/README.md
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
