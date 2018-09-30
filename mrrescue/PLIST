@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/mrrescue
-share/games/mrrescue${PKGVERSION}.love
