@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.love
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tangramgames.dk/games/sienna/
 COMMENT=	One button platformer
-LICENSE=	zlib
+LICENSE=	zlib AND cc-by-nc-nd-v3.0-license
 
 do-extract:
 	${MKDIR} ${WRKSRC}
