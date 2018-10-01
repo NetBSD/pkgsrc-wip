@@ -17,4 +17,5 @@ DIST_SUBDIR=		swi-prolog
 DISTINFO_FILE=		${.CURDIR}/../../wip/swi-prolog-lite/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
 
-CFLAGS+=		-fPIC
+CONFIGURE_ENV+=		CMFLAGS="-fPIC"
+CONFIGURE_ENV+=		COFLAGS=${CFLAGS:M*:Q}

@@ -1,19 +1,7 @@
 $NetBSD: patch-packages_Dialect.defs.in,v 1.1 2014/05/28 10:29:12 markd Exp $
 
-Pass -fPIC (needed by swi-prolog-jpl).
-Do not ignore CFLAGS.
-
 --- packages/Dialect.defs.in.orig	2014-05-27 12:23:38.000000000 +0000
 +++ packages/Dialect.defs.in
-@@ -44,7 +44,7 @@ SO=@SO_EXT@
- SO_PATH=@SO_PATH@
- COFLAGS=@COFLAGS@
- CWFLAGS=@CWFLAGS@
--CMFLAGS=@CMFLAGS@
-+CMFLAGS=@CMFLAGS@ -fPIC
- CIFLAGS=@CIFLAGS@ -I@abs_top_builddir@/../include
- DEFS=@DEFS@ -D__SWI_PROLOG__
- CFLAGS=$(COFLAGS) $(CWFLAGS) $(CMFLAGS) $(CIFLAGS) $(PKGCFLAGS) $(DEFS)
 @@ -57,7 +57,7 @@ else
  LIBPLSO=$(LIBPLEMBED)
  endif
