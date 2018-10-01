@@ -18,10 +18,27 @@ TOOL_DEPENDS+=	smake-[0-9]*:../../wip/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 
-# This creates strange "shift: can't shift that many" errors
-#MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/default/star 0755
-CONF_FILES=	${PREFIX}/share/examples/star/star ${PKG_SYSCONFDIR}/default/star
+# The default location is /etc/default/star
+# We patch the documentation appropriately. Additionally, we also provide a
+# MESSAGE stating the reasons we do this, as required by the license.
+STAR_CONF?=	${PKG_SYSCONFDIR}/star
+
+.if ${STAR_CONF} != "/etc/default/star"
+MESSAGE_SRC+=	MESSAGE.star
+MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
+MESSAGE_SUBST+=	STAR_CONF=${STAR_CONF:Q}
+.endif
+
+CONF_FILES=	${PREFIX}/share/examples/star/star ${STAR_CONF}
 AUTO_MKDIRS=	yes
+
+SUBST_CLASSES+=		fix
+SUBST_STAGE.fix=	post-patch
+SUBST_FILES.fix+=	star/star.1
+SUBST_FILES.fix+=	star/star.dfl
+SUBST_FILES.fix+=	star/defaults.c
+SUBST_SED.fix=		-e "s,/etc/default/star,${STAR_CONF},g"
+SUBST_MESSAGE.fix=	Replace defaults file paths.
 
 .include "../../mk/bsd.prefs.mk"
 
