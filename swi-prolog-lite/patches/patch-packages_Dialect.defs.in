@@ -1,5 +1,8 @@
 $NetBSD: patch-packages_Dialect.defs.in,v 1.1 2014/05/28 10:29:12 markd Exp $
 
+Pass -fPIC (needed by swi-prolog-jpl).
+Do not ignore CFLAGS.
+
 --- packages/Dialect.defs.in.orig	2014-05-27 12:23:38.000000000 +0000
 +++ packages/Dialect.defs.in
 @@ -44,7 +44,7 @@ SO=@SO_EXT@
