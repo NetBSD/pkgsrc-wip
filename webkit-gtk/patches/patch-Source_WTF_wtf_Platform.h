@@ -1,10 +1,22 @@
 $NetBSD$
 
-Add support for NetBSD.
+- Avoid flock() on SunOS, not supported on older platforms.
+- Add support for NetBSD.
 
 --- Source/WTF/wtf/Platform.h.orig	2018-09-21 19:59:47.000000000 +0000
 +++ Source/WTF/wtf/Platform.h
-@@ -697,7 +697,7 @@
+@@ -567,8 +567,10 @@
+ #define USE_HARFBUZZ 1
+ #define USE_SOUP 1
+ #define USE_WEBP 1
++#ifndef __sun
+ #define USE_FILE_LOCK 1
+ #endif
++#endif
+ 
+ #if PLATFORM(GTK)
+ #define GLIB_VERSION_MIN_REQUIRED GLIB_VERSION_2_36
+@@ -697,7 +699,7 @@
  #define HAVE_CFNETWORK_STORAGE_PARTITIONING 1
  #endif
  
@@ -13,7 +25,7 @@ Add support for NetBSD.
  #define HAVE_MACHINE_CONTEXT 1
  #endif
  
-@@ -786,11 +786,11 @@
+@@ -786,11 +788,11 @@
  
  #if !defined(ENABLE_DFG_JIT) && ENABLE(JIT)
  /* Enable the DFG JIT on X86 and X86_64. */
