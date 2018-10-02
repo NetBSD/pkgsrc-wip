@@ -1,3 +1,4 @@
 [X] Compilation works
 [X] Installation rule and PLIST
 [X] Use defaults file from ${PKG_SYSCONFDIR} and modify documentation
+[X] Honor CPPFLAGS, CFLAGS and LDFLAGS

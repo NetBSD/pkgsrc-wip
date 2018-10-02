@@ -24,7 +24,7 @@ pre-configure:
 	printf "Create OS rules...\n"
 	cd ${WRKSRC}/RULES && . ${WRKSRC}/RULES/MKLINKS
 	printf "Create pkgsrc OS rules...\n"
-	cd ${WRKSRC}/RULES && unset r ;				\
+	cd ${WRKSRC}/RULES && unset r ;					\
 	for i in arm mipsel x86_64 sparc64 powerpc ;			\
 	do								\
 		r="$$r i386-netbsd-gcc.rul@$$i-netbsd-gcc.rul" ;	\
@@ -45,17 +45,17 @@ pre-configure:
 		existing=`printf "%s\\n" $$i | ${SED} -e 's/@.*//'` ;	\
 		target=`printf "%s\\n" $$i | ${SED} -e 's/.*@//'` ;	\
 		printf "%s " "$$target";				\
-		if ! ${TEST} -e "$$existing" ;				\
-		then							\
+		if ${TEST} -e "$$existing" ; then : ;			\
+		else							\
 			printf "(Link target %s not present)\n"		\
 				"$$existing";				\
 			continue ;					\
 		fi;							\
-		if ! ${TEST} -e "$$target" ;				\
+		if ${TEST} -e "$$target" ;				\
 		then							\
+			printf "(already present)\n" ;			\
+		else							\
 			${LN} -s "$$existing" "$$target" ;		\
 			printf "(created)\n" ;				\
-		else							\
-			printf "(already present)\n" ;			\
 		fi;							\
 	done

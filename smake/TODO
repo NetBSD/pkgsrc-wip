@@ -7,6 +7,7 @@
 [X] Test with clang compiler
 [X] Add smake as tool for use with USE_TOOLS
     => Idea rejected, use it via TOOL_DEPENDS.
+[X] Honor CPPFLAGS, CFLAGS and LDFLAGS
 
 [ ] Test with Intel compiler
 [ ] Test commercial UNIX compilers

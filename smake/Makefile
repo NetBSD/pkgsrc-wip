@@ -14,6 +14,9 @@ MAKE_JOBS_SAFE=	no
 MAKE_FLAGS+=	GMAKE_NOWARN=true
 
 USE_TOOLS+=	gmake
+MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q} INS_BASE=${PREFIX:Q} DEFMANBASE=. MANDIR=${PKGMANDIR:Q}
+# Honor CPPFLAGS, CFLAGS and LDFLAGS
+MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,7 +24,7 @@ USE_TOOLS+=	gmake
 .include "../../wip/smake/Makefile.common"
 
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	smake/smake.1
 SUBST_SED.man=		-e "s,/opt/schily/share/lib/smake/defaults.smk,${PREFIX}/share/lib/smake/defaults.smk,g"
 SUBST_MESSAGE.man=	Fix path for default rules in manpage.
@@ -35,8 +38,6 @@ do-build:
 
 # Documentation is in ${WRKSRC}/README.compile
 do-install:
-	cd ${WRKSRC}/smake && ${MAKE_PROGRAM} ${MAKE_FLAGS}		\
-		INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}	\
-			DESTDIR=${DESTDIR} install
+	cd ${WRKSRC}/smake && ${MAKE_PROGRAM} ${MAKE_FLAGS} install
 
 .include "../../mk/bsd.pkg.mk"
