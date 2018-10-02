@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- lib/xray/tests/CMakeLists.txt.orig	2018-10-01 21:40:24.000000000 +0000
++++ lib/xray/tests/CMakeLists.txt
+@@ -70,6 +70,7 @@ if (NOT APPLE)
+     list(APPEND XRAY_UNITTEST_LINK_FLAGS -lLLVMXRay -lLLVMSupport -lLLVMTestingSupport)
+   endif()
+ 
++  list(APPEND XRAY_UNITTEST_LINK_FLAGS -lterminfo -lexecinfo -lLLVMDemangle)
+   append_list_if(COMPILER_RT_HAS_LIBM -lm XRAY_UNITTEST_LINK_FLAGS)
+   append_list_if(COMPILER_RT_HAS_LIBRT -lrt XRAY_UNITTEST_LINK_FLAGS)
+   append_list_if(COMPILER_RT_HAS_LIBDL -ldl XRAY_UNITTEST_LINK_FLAGS)
