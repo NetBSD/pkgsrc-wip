@@ -1135,6 +1135,7 @@ SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	go-backoff
 SUBDIR+=	go-collectd
+SUBDIR+=	go-dotenv
 SUBDIR+=	go-flags
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-ghodss-yaml
