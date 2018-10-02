@@ -7,7 +7,6 @@
 - Add support for OS(SOLARIS) and add it to the WTF_OS_UNIX list:
   the logic should be probably added in Source/WTF/wtf/Platform.h
   by adding a WTF_OS_SOLARIS definition.
-- Review all __OS__ ifdef usage, can they be all converted to OS(...) instead?
 - Could the NetBSD logic in
   patches/patch-Source_JavaScriptCore_runtime_MachineContext.h be rewritten
   using ucontext(2) _UC_MACHINE_* macros instead?

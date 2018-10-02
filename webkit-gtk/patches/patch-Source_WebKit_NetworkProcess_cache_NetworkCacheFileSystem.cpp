@@ -21,7 +21,7 @@ SunOS does not support DT_{DIR,REG}
  void traverseDirectory(const String& path, const Function<void (const String&, DirectoryEntryType)>& function)
  {
  #if !OS(WINDOWS)
-+#ifdef __sun
++#if OS(SOLARIS)
 +    struct stat s;
 +#endif
      DIR* dir = opendir(WebCore::FileSystem::fileSystemRepresentation(path).data());
@@ -29,7 +29,7 @@ SunOS does not support DT_{DIR,REG}
          return;
      dirent* dp;
      while ((dp = readdir(dir))) {
-+#ifdef __sun
++#if OS(SOLARIS)
 +        stat(dp->d_name, &s);
 +        if (s.st_mode != S_IFDIR && s.st_mode != S_IFREG)
 +#else
@@ -42,7 +42,7 @@ SunOS does not support DT_{DIR,REG}
          auto nameString = String::fromUTF8(name);
          if (nameString.isNull())
              continue;
-+#ifdef __sun
++#if OS(SOLARIS)
 +        function(nameString, directoryEntryType(s.st_mode));
 +#else
          function(nameString, directoryEntryType(dp->d_type));

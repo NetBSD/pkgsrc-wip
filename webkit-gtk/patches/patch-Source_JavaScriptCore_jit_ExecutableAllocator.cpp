@@ -13,7 +13,7 @@ From OpenBSD ports.
  #elif CPU(ARM64)
  static const size_t fixedExecutableMemoryPoolSize = 64 * 1024 * 1024;
 -#elif CPU(X86_64)
-+#elif CPU(X86_64) && !defined(__OpenBSD__)
++#elif CPU(X86_64) && !OS(OPENBSD)
  static const size_t fixedExecutableMemoryPoolSize = 1024 * 1024 * 1024;
  #else
  static const size_t fixedExecutableMemoryPoolSize = 32 * 1024 * 1024;
