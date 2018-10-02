@@ -1,0 +1,6 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/direnv/go-dotenv.a
+gopkg/src/github.com/direnv/go-dotenv/LICENSE.md
+gopkg/src/github.com/direnv/go-dotenv/README.md
+gopkg/src/github.com/direnv/go-dotenv/parse.go
+gopkg/src/github.com/direnv/go-dotenv/parse_test.go
