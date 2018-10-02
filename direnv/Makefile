@@ -10,9 +10,11 @@ HOMEPAGE=	http://direnv.net/
 COMMENT=	Environment switcher for the shell
 LICENSE=	mit
 
-BUILD_DEPENDS+=	go>=1.6:../../lang/go
+BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
 
 USE_TOOLS+=	gmake
+
+MAKE_ENV+=	GO=${GO:Q}
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
@@ -20,4 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/direnv ${DESTDIR}/${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../lang/go/version.mk"
 .include "../../mk/bsd.pkg.mk"

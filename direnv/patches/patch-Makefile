@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- Makefile.orig	2016-04-04 17:39:36.000000000 +0000
++++ Makefile
+@@ -2,6 +2,7 @@ DESTDIR ?= /usr/local
+ 
+ MAN_MD = $(wildcard man/*.md)
+ ROFFS = $(MAN_MD:.md=)
++GO ?= go
+ 
+ ifeq ($(shell uname), Darwin)
+ 	# Fixes DYLD_INSERT_LIBRARIES issues
+@@ -19,8 +20,8 @@ stdlib.go: stdlib.sh
+ 	cat $< | ./script/str2go main STDLIB $< > $@
+ 
+ direnv: stdlib.go *.go
+-	go fmt
+-	go build $(GO_FLAGS) -o direnv
++	${GO} fmt
++	${GO} build $(GO_FLAGS) -o direnv
+ 
+ clean:
+ 	rm -f direnv
+@@ -32,7 +33,7 @@ clean:
+ man: $(ROFFS)
+ 
+ test: build
+-	go test
++	${GO} test
+ 	./test/direnv-test.sh
+ 
+ install: all
+@@ -42,6 +43,6 @@ install: all
+ 	cp -R man/*.1 $(DESTDIR)/share/man/man1
+ 
+ dist:
+-	go get github.com/mitchellh/gox
++	${GO} get github.com/mitchellh/gox
+ 	gox -output "dist/direnv.{{.OS}}-{{.Arch}}"
+ 
