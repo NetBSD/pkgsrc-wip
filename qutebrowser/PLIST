@@ -249,6 +249,8 @@ ${PYSITELIB}/qutebrowser/config/__init__.pyo
 ${PYSITELIB}/qutebrowser/config/__init__.pyc
 ${PYSITELIB}/qutebrowser/config/config.pyo
 ${PYSITELIB}/qutebrowser/config/config.pyc
+${PYSITELIB}/qutebrowser/config/configcache.pyo
+${PYSITELIB}/qutebrowser/config/configcache.pyc
 ${PYSITELIB}/qutebrowser/config/configcommands.pyo
 ${PYSITELIB}/qutebrowser/config/configcommands.pyc
 ${PYSITELIB}/qutebrowser/config/configdata.pyo
@@ -268,6 +270,7 @@ ${PYSITELIB}/qutebrowser/config/configutils.pyc
 ${PYSITELIB}/qutebrowser/config/websettings.pyo
 ${PYSITELIB}/qutebrowser/config/websettings.pyc
 ${PYSITELIB}/qutebrowser/config/config.py
+${PYSITELIB}/qutebrowser/config/configcache.py
 ${PYSITELIB}/qutebrowser/config/configcommands.py
 ${PYSITELIB}/qutebrowser/config/configdata.py
 ${PYSITELIB}/qutebrowser/config/configdata.yml
@@ -294,6 +297,8 @@ ${PYSITELIB}/qutebrowser/html/settings.html
 ${PYSITELIB}/qutebrowser/html/styled.html
 ${PYSITELIB}/qutebrowser/html/tabs.html
 ${PYSITELIB}/qutebrowser/html/version.html
+${PYSITELIB}/qutebrowser/html/warning-old-qt.html
+${PYSITELIB}/qutebrowser/html/warning-webkit.html
 ${PYSITELIB}/qutebrowser/img/broken_qutebrowser_logo.png
 ${PYSITELIB}/qutebrowser/img/file.svg
 ${PYSITELIB}/qutebrowser/img/folder.svg
