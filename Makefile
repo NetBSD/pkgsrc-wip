@@ -364,6 +364,7 @@ SUBDIR+=	chems
 SUBDIR+=	cherokee
 SUBDIR+=	chezscheme
 SUBDIR+=	chibi-scheme
+SUBDIR+=	chicken5
 SUBDIR+=	chocolate-doom
 SUBDIR+=	choosefont
 SUBDIR+=	chora
