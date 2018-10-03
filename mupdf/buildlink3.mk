@@ -5,8 +5,7 @@ BUILDLINK_TREE+=	mupdf
 .if !defined(MUPDF_BUILDLINK3_MK)
 MUPDF_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.13.0
-BUILDLINK_ABI_DEPENDS.mupdf?=	mupdf>=1.13.0nb1
+BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.14.0
 BUILDLINK_PKGSRCDIR.mupdf?=	../../wip/mupdf
 
 pkgbase := mupdf
