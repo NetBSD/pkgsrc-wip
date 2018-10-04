@@ -1,3 +1,4 @@
 $NetBSD$
 
 SHA1 (patch-document.c) = 680106636f8fb2ac57ff2a03496ed70b3516b26b
+SHA1 (patch-zathura-pdf-mupdf_render.c) = a758609ebd7993d7bbab8e2c0df8471ae3c0a724
