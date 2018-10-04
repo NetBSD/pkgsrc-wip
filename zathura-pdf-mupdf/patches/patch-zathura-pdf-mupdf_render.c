@@ -1,7 +1,8 @@
 $NetBSD$
 
 - Ignore separations in order to avoid upstream issue #1 and #2
-- Port to mupdf-1.14.0
+  (backported from upstream)
+- Port to mupdf-1.14.0 (backported from upstream)
 
 --- zathura-pdf-mupdf/render.c.orig	2018-10-04 11:55:20.017813225 +0000
 +++ zathura-pdf-mupdf/render.c

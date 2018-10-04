@@ -1,6 +1,6 @@
 $NetBSD$
 
-Port to mupdf-1.14.0
+Port to mupdf-1.14.0 (backported from upstream)
 
 --- zathura-pdf-mupdf/utils.c.orig	2018-03-17 19:47:01.000000000 +0000
 +++ zathura-pdf-mupdf/utils.c
