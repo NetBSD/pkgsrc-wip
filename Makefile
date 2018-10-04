@@ -4863,7 +4863,6 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zathura
-SUBDIR+=	zathura-djvu
 SUBDIR+=	zathura-pdf-mupdf
 SUBDIR+=	zathura-pdf-mupdf-git
 SUBDIR+=	zathura-pdf-poppler
