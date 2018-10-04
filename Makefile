@@ -1825,6 +1825,7 @@ SUBDIR+=	libgtop
 SUBDIR+=	libgweather
 SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
+SUBDIR+=	libguestfs-appliance
 SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libi2pd
