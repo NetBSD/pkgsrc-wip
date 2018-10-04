@@ -1,8 +1,9 @@
 $NetBSD$
 
-Port to mupdf-1.14.0
+- Ignore separations in order to avoid upstream issue #1 and #2
+- Port to mupdf-1.14.0
 
---- zathura-pdf-mupdf/render.c.orig	2018-03-17 19:47:01.000000000 +0000
+--- zathura-pdf-mupdf/render.c.orig	2018-10-04 11:55:20.017813225 +0000
 +++ zathura-pdf-mupdf/render.c
 @@ -18,13 +18,16 @@ pdf_page_render_to_buffer(mupdf_document
      return ZATHURA_ERROR_UNKNOWN;
@@ -24,7 +25,7 @@ Port to mupdf-1.14.0
    } fz_catch (mupdf_document->ctx) {
      return ZATHURA_ERROR_UNKNOWN;
    }
-@@ -32,16 +35,13 @@ pdf_page_render_to_buffer(mupdf_document
+@@ -32,22 +35,18 @@ pdf_page_render_to_buffer(mupdf_document
    fz_close_device(mupdf_page->ctx, device);
    fz_drop_device(mupdf_page->ctx, device);
  
@@ -32,9 +33,10 @@ Port to mupdf-1.14.0
 -  fz_rect rect = { .x1 = page_width, .y1 = page_height };
 -
    fz_colorspace* colorspace = fz_device_bgr(mupdf_document->ctx);
-   fz_separations* seps= fz_page_separations(mupdf_page->ctx, mupdf_page->page);
+-  fz_separations* seps= fz_page_separations(mupdf_page->ctx, mupdf_page->page);
 -  fz_pixmap* pixmap = fz_new_pixmap_with_bbox_and_data(mupdf_page->ctx, colorspace, &irect, seps, 1, image);
-+  fz_pixmap* pixmap = fz_new_pixmap_with_bbox_and_data(mupdf_page->ctx, colorspace, irect, seps, 1, image);
++  /* TODO: What are separations used for? */
++  fz_pixmap* pixmap = fz_new_pixmap_with_bbox_and_data(mupdf_page->ctx, colorspace, irect, NULL, 1, image);
    fz_clear_pixmap_with_value(mupdf_page->ctx, pixmap, 0xFF);
  
 -  device = fz_new_draw_device(mupdf_page->ctx, NULL, pixmap);
@@ -44,3 +46,9 @@ Port to mupdf-1.14.0
    fz_close_device(mupdf_page->ctx, device);
    fz_drop_device(mupdf_page->ctx, device);
  
+   fz_drop_pixmap(mupdf_page->ctx, pixmap);
+   fz_drop_display_list(mupdf_page->ctx, display_list);
+-  fz_drop_separations(mupdf_page->ctx, seps);
+ 
+   return ZATHURA_ERROR_OK;
+ }
