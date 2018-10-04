@@ -25,8 +25,8 @@ CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
 .include "../../devel/py-meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../wip/mupdf/buildlink3.mk"
-.include "../../wip/zathura/buildlink3.mk"
+.include "../../print/mupdf/buildlink3.mk"
+.include "../../print/zathura/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
