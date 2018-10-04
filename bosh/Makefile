@@ -16,6 +16,9 @@ MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	tbl
 TOOL_DEPENDS+=	smake-[0-9]*:../../wip/smake
 SMAKE=		MAKEFLAGS= smake
+MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q} INS_BASE=${PREFIX:Q} DEFMANBASE=. MANDIR=${PKGMANDIR:Q}
+# Honor CPPFLAGS, CFLAGS and LDFLAGS
+MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
 
 PKG_SHELL=	bin/bosh
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -26,15 +29,15 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../wip/smake/Makefile.common"
 
 do-configure:
-	cd ${WRKSRC}/inc && ${SMAKE}
+	cd ${WRKSRC}/inc && ${SMAKE} ${MAKE_FLAGS}
 
 do-build:
 	cd ${WRKSRC} && for library in					\
 		libschily libxtermcap libfind libgetopt libshedit;	\
 	do								\
-		cd ${WRKSRC}/$${library} && ${SMAKE};			\
+		cd ${WRKSRC}/$${library} && ${SMAKE} ${MAKE_FLAGS};	\
 	done
-	cd ${WRKSRC}/sh && ${SMAKE}
+	cd ${WRKSRC}/sh && ${SMAKE} ${MAKE_FLAGS}
 
 # Process tables in manpage
 post-build:
@@ -43,7 +46,7 @@ post-build:
 
 do-test:
 	cd ${WRKSRC}/sh &&						\
-		cd tests; ${SMAKE} tests
+		cd tests; ${SMAKE} ${MAKE_FLAGS} tests
 
 do-install:
 	cd ${WRKSRC}/sh &&						\
