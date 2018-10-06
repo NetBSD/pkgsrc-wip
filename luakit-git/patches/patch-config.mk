@@ -4,6 +4,10 @@ Improve DESTDIR support and use it only in install and deinstall target.
 The various paths are used in buildopts.h and there having the
 DESTDIR is not desiderable.
 
+Reported uptsream via:
+
+ <https://github.com/luakit/luakit/pull/727>
+
 --- config.mk.orig	2018-09-22 23:42:41.000000000 +0000
 +++ config.mk
 @@ -25,14 +25,6 @@ PIXMAPDIR  ?= $(PREFIX)/share/pixmaps
