@@ -8,6 +8,10 @@ events). To workaround this problem avoid to call view:destroy().
 
 XXX: I'm not sure if it's the correct fix.
 
+Reported uptsream via:
+
+ <https://github.com/luakit/luakit/pull/726>
+
 --- config/window.lua.orig	2017-08-10 09:50:15.000000000 +0000
 +++ config/window.lua
 @@ -519,7 +519,6 @@ window.methods = {
