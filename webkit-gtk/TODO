@@ -3,8 +3,6 @@
    * patches/patch-Source_WTF_wtf_Platform.h
   Only amd64 was actually tested and arm, arm64 and mips really need a
   double-check.
-- Enable webkit-jit option
-- Sync options.mk `webkit-jit' option with platforms that has JIT support
 - Could the NetBSD logic in
   patches/patch-Source_JavaScriptCore_runtime_MachineContext.h be rewritten
   using ucontext(2) _UC_MACHINE_* macros instead?
