@@ -1,0 +1,29 @@
+webkit-gtk: Update www/webkit-gtk to 2.22.2
+
+pkgsrc changes:
+TODO
+
+Changes:
+WebKitGTK+ 2.22.2
+=================
+  - Several fixes for video playback with media source extensions (MSE).
+    This allows using WebM support for YouTube, which no longer works through
+    regular video source. Note that MSE is still disabled by default and
+    webkit_settings_set_enable_mediasource() has to be used to enable the
+    feature.
+  - Fix the build when only Wayland support is enabled and X11 headers are
+    not available.
+
+WebKitGTK+ 2.22.1
+=================
+  - Fix printing in landscape.
+  - Fix the build in several platforms: s390x, ppc64le, armv7hl.
+  - Fix the build with a11y disabled.
+  - Fix the build with video disabled.
+  - Fix several crashes and rendering issues.
+
+WebKitGTK+ 2.22.0
+==================
+  - Add warn_unused_result attribute to some JavaScriptCore GLib APIs.
+  - Make pinch to zoom scale the page without changing the layout.
+  - Fix the build in mips64.
