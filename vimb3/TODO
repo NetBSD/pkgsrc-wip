@@ -1,0 +1,3 @@
+- The webkit extension seems to be not loaded making vimb not very usable:
+
+   <https://github.com/fanglingsu/vimb/issues/438>
