@@ -4,7 +4,7 @@ PKGNAME=	luakit-0.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luakit/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://luakit.org/
 COMMENT=	Webkit based browser framework extensible by Lua
 LICENSE=	gnu-gpl-v3
