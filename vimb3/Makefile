@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 GITHUB_PROJECT=	vimb
 GITHUB_TAG=	3.2.0
 
-MAINTAINER=	leot@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fanglingsu.github.io/vimb/
 COMMENT=	Vim-like webkit browser
 LICENSE=	gnu-gpl-v3
