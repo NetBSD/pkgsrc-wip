@@ -1,7 +1,25 @@
 webkit-gtk: Update www/webkit-gtk to 2.22.2
 
 pkgsrc changes:
-TODO
+ - Bump GCC_REQD to 6.0 (now gcc 6.0.0 or newer is needed)
+ - Add NetBSD support for JavaScript JIT on x86_64, i386, arm,
+   aarch64 and mips
+ - Improve handling of `webkit-jit' by introducing a
+   WEBKIT_JIT_MACHINE_PLATFORMS list that contain all MACHINE_PLATFORMs
+   triplets that have `webkit-jit' option as suggested one.
+ - Always use OS(...) and BOS(...) macros instead of __Os__ macros for
+   consistency with webkit code.
+ - Add definition for BOS(SOLARIS) and OS(SOLARIS) and use them consistently
+   instead of using `__sun' macro.
+ - Limit patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp to
+   OpenBSD. It is no longer present on FreeBSD ports and it is not
+   problematic on NetBSD.
+ - Remove no longer needed patch-Source_WTF_wtf_ThreadSpecific.h:
+   NetBSD 5.x was already part of NOT_FOR_PLATFORM.
+ - Sync patch-CMakeLists.txt with FreeBSD ports.
+   Please note that this also remove WTF_CPU_SPARC64 definition that was
+   unused.
+ - Use globbing for REPLACE_{PERL,PYTHON} where possible
 
 Changes:
 WebKitGTK+ 2.22.2
