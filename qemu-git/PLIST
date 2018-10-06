@@ -25,6 +25,7 @@ ${PLIST.sh4eb}bin/qemu-sh4eb
 ${PLIST.sparc}bin/qemu-sparc
 ${PLIST.sparc32plus}bin/qemu-sparc32plus
 ${PLIST.sparc64}bin/qemu-sparc64
+bin/qemu-edid
 bin/qemu-system-aarch64
 bin/qemu-system-alpha
 bin/qemu-system-arm
@@ -44,7 +45,6 @@ bin/qemu-system-nios2
 bin/qemu-system-or1k
 bin/qemu-system-ppc
 bin/qemu-system-ppc64
-bin/qemu-system-ppcemb
 bin/qemu-system-riscv32
 bin/qemu-system-riscv64
 bin/qemu-system-s390x
