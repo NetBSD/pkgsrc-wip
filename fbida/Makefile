@@ -19,12 +19,15 @@ USE_TOOLS+=		gmake perl
 # Populate it ourselves.
 post-extract:
 	cd ${WRKDIR}/${DISTNAME} && \
-	    tar xvzf ${DISTDIR}/jpegsrc.v9.tar.gz && \
+	    tar xvzf ${DISTDIR}/jpeg-9c-v2/jpegsrc.v9c.tar.gz && \
 	    mkdir jpeg/90 && \
 	    for f in jinclude.h jpegint.h jpeglib.h transupp.c transupp.h; \
 	    do \
-		cp jpeg-9/$$f jpeg/90; \
+		cp jpeg-9c/$$f jpeg/90; \
 	    done
+
+# Depend on this, purely for fetching the distfile.
+DEPENDS+= jpeg-9c:../../graphics/jpeg
 
 # not used, even though the configure output claims it
 #.include "../../graphics/ImageMagick/buildlink3.mk"
