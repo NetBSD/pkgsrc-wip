@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.2 2012/10/07 16:22:56 asau Exp $
 #
 
-DISTNAME=	seturgent-1.4
+DISTNAME=	seturgent-1.5
 CATEGORIES=	x11
-MASTER_SITES=	http://www.codemadness.nl/downloads/projects/seturgent/
+MASTER_SITES=	http://codemadness.org/releases/seturgent/
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://www.codemadness.nl/downloads/projects/seturgent/
+HOMEPAGE=	http://codemadness.org/git/seturgent/file/README.html
 COMMENT=	Set an application urgency hint using x11
 LICENSE=	mit
 
