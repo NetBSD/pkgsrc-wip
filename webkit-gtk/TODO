@@ -1,3 +1,6 @@
+- For OS(NETBSD) in Source/WTF/wtf/Platform.h we can probably define:
+   #define HAVE_MADV_FREE 1
+   #define HAVE_MADV_DONTNEED 1
 - Review JIT support for NetBSD:
    * patches/patch-Source_JavaScriptCore_runtime_MachineContext.h
    * patches/patch-Source_WTF_wtf_Platform.h
@@ -12,3 +15,5 @@
 - Would it be useful to define HAVE_BACKTRACE and HAVE_BACKTRACE_SYMBOLS?
   (these are not probably per-OS but just a matter of include devel/libexecinfo
   and adjust Source/WTF/wtf/Platform.h)
+- Possible other HAVE_* that we can define in Source/WTF/wtf/Platform.h:
+   #define HAVE_READLINE 1    (add readline(3) support to jsc)
