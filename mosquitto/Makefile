@@ -43,4 +43,5 @@ post-install:
 .include "../../devel/libuuid/buildlink3.mk"
 # ?needed
 .include "../../net/libcares/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
