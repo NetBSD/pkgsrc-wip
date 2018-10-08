@@ -2,6 +2,8 @@ $NetBSD$
 
 - Add OS(SOLARIS) definition and add them to Unix systems.
 - Avoid flock() on SunOS, not supported on older platforms.
+- madvise(2) on {Free,Net,OpenBSD} support both MADV_DONTNEED and
+  MADV_FREE.
 - Add support for NetBSD.
 
 --- Source/WTF/wtf/Platform.h.orig	2018-09-21 19:59:47.000000000 +0000
@@ -37,7 +39,16 @@ $NetBSD$
  
  #if PLATFORM(GTK)
  #define GLIB_VERSION_MIN_REQUIRED GLIB_VERSION_2_36
-@@ -697,7 +705,7 @@
+@@ -693,11 +701,16 @@
+ 
+ #endif /* OS(DARWIN) */
+ 
++#if OS(FREEBSD) || OS(NETBSD) || OS(OPENBSD)
++#define HAVE_MADV_FREE 1
++#define HAVE_MADV_DONTNEED 1
++#endif
++
+ #if PLATFORM(COCOA)
  #define HAVE_CFNETWORK_STORAGE_PARTITIONING 1
  #endif
  
@@ -46,7 +57,7 @@ $NetBSD$
  #define HAVE_MACHINE_CONTEXT 1
  #endif
  
-@@ -786,11 +794,11 @@
+@@ -786,11 +799,11 @@
  
  #if !defined(ENABLE_DFG_JIT) && ENABLE(JIT)
  /* Enable the DFG JIT on X86 and X86_64. */

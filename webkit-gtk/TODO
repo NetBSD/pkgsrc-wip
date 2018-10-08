@@ -16,9 +16,6 @@
   leads to the same results.
   (The webkit-gtk browsers probably don't need any NOT_PAX_MPROTECT_SAFE
   because they use WebKitWebProcess)
-- For OS(NETBSD) in Source/WTF/wtf/Platform.h we can probably define:
-   #define HAVE_MADV_FREE 1
-   #define HAVE_MADV_DONTNEED 1
 - Review JIT support for NetBSD:
    * patches/patch-Source_JavaScriptCore_runtime_MachineContext.h
    * patches/patch-Source_WTF_wtf_Platform.h
