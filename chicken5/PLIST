@@ -130,6 +130,7 @@ share/doc/${PKGNAME}/manual/Module (chicken syntax).html
 share/doc/${PKGNAME}/manual/Module (chicken tcp).html
 share/doc/${PKGNAME}/manual/Module (chicken time posix).html
 share/doc/${PKGNAME}/manual/Module (chicken time).html
+share/doc/${PKGNAME}/manual/Module (chicken type).html
 share/doc/${PKGNAME}/manual/Module r4rs.html
 share/doc/${PKGNAME}/manual/Module r5rs.html
 share/doc/${PKGNAME}/manual/Module scheme.html
