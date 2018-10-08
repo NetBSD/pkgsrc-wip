@@ -92,6 +92,9 @@ CXXFLAGS+=	-Wno-c++11-narrowing
 # This does not disable optimisations, merely avoids #error if there are none.
 CFLAGS+=	-DRELEASE_WITHOUT_OPTIMIZATIONS
 
+NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.0/WebKitWebProcess
+NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.0/jsc
+
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
