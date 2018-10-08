@@ -10,13 +10,9 @@ HOMEPAGE=	https://gitweb.torproject.org/torsocks.git
 COMMENT=	Library to torify applications
 LICENSE=	gnu-gpl-v2
 
-
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://git.torproject.org/torsocks.git
 GIT_MODULE.master=	torsocks
-
-
-DIST_SUBDIR=	torsocks
 
 USE_TOOLS+=	autoreconf autoconf automake
 GNU_CONFIGURE=	yes
@@ -44,8 +40,6 @@ SUBST_MESSAGE.lib=	Fixing src/lib/torsocks.h
 SUBST_FILES.lib=	src/lib/torsocks.h
 SUBST_SED.lib=		-e '/LIBC_GETHOSTBYADDR_SIG/ s/const void \*addr/const char *addr/'
 .endif
-PKG_ARGS_ADD += -v
-PKGBASE_FROM_BSD_MK = ${PKGNAME:C/-[^-]*$//}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
