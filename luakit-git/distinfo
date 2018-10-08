@@ -6,4 +6,4 @@ SHA512 (luakit/2aecefe95c99808121edbf3903c3947779f8c4d4-2aecefe95c99808121edbf39
 Size (luakit/2aecefe95c99808121edbf3903c3947779f8c4d4-2aecefe95c99808121edbf3903c3947779f8c4d4.zip) = 518360 bytes
 SHA1 (patch-Makefile) = 6a62050e0b65604b893dbd9d2b21bb19d2855916
 SHA1 (patch-config.mk) = 0818316651f9cda2cc149a3eaa4f84eb2923ee6d
-SHA1 (patch-lib_window.lua) = 7a2a41610b20cc18e8ff5a4bd7f0ed06994c2ce8
+SHA1 (patch-lib_window.lua) = c63cbfb636a70688e68b90bbcb362a09bf068383

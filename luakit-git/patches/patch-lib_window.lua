@@ -1,24 +1,23 @@
 $NetBSD$
 
-Do not destroy() the current view.
+Do not destroy() the view if there is only one tab.
 
 When just one tab is present it leads to an high CPU usage and luakit completely
 stuck (although start luakit via `--log=DEBUG' option shows that it responds to
-events). To workaround this problem avoid to call view:destroy().
-
-XXX: I'm not sure if it's the correct fix.
+events).
 
 Reported uptsream via:
 
  <https://github.com/luakit/luakit/pull/726>
 
---- lib/window.lua.orig	2017-08-10 09:50:15.000000000 +0000
+--- lib/window.lua.orig	2018-09-22 23:42:41.000000000 +0000
 +++ lib/window.lua
-@@ -519,7 +519,6 @@ window.methods = {
+@@ -481,7 +481,7 @@ _M.methods = {
          view = view or w.view
          w:emit_signal("close-tab", view)
          w:detach_tab(view, blank_last)
 -        view:destroy()
++        if w.tabs:count() > 1 then view:destroy() end
      end,
  
      attach_tab = function (w, view, switch, order)
