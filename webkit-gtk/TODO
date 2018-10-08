@@ -1,3 +1,21 @@
+- On NetBSD/amd64, running SunSpider 1.0.2 JavaScript Benchmark
+  (<https://webkit.org/perf/sunspider/sunspider.html>) with MiniBrowser
+  and security.pax.mprotect.global=1:
+
+    Total:                 1006.9ms +/- 0.7%
+
+  ...while with security.pax.mprotect.global=0:
+
+    Total:                 322.3ms +/- 3.0%
+
+  Test if just adding:
+
+   NOT_PAX_MPROTECT_SAFE+= libexec/webkit2gtk-4.0/jsc
+   NOT_PAX_MPROTECT_SAFE+= libexec/webkit2gtk-4.0/WebKitWebProcess
+
+  leads to the same results.
+  (The webkit-gtk browsers probably don't need any NOT_PAX_MPROTECT_SAFE
+  because they use WebKitWebProcess)
 - For OS(NETBSD) in Source/WTF/wtf/Platform.h we can probably define:
    #define HAVE_MADV_FREE 1
    #define HAVE_MADV_DONTNEED 1
