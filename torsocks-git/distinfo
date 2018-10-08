@@ -1,0 +1,5 @@
+$NetBSD$
+
+SHA1 (patch-configure.ac) = 97b6239a07a0090ac18bd98db3351f4b6850d4c2
+SHA1 (patch-src_lib_accept.c) = 4b56eafc8ab87a93bf53e6df628258226cd514de
+SHA1 (patch-src_lib_torsocks.h) = 1b876b023bec6cc2b6758a9c3bf741d493e758c8

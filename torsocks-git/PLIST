@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/15 20:59:39 leot1990 Exp $
+@comment $NetBSD$
 bin/torsocks
 etc/tor/torsocks.conf
 lib/torsocks/libtorsocks.la

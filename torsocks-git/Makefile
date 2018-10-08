@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/05/24 13:55:43 i3enedek Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/13 13:55:43 i3enedek, tmotyl Exp $
 
+TORSOCKS_VERSION = 0
 DISTNAME=	torsocks
+PKGNAME=	torsocks-${TORSOCKS_VERSION}
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -42,6 +44,8 @@ SUBST_MESSAGE.lib=	Fixing src/lib/torsocks.h
 SUBST_FILES.lib=	src/lib/torsocks.h
 SUBST_SED.lib=		-e '/LIBC_GETHOSTBYADDR_SIG/ s/const void \*addr/const char *addr/'
 .endif
+PKG_ARGS_ADD += -v
+PKGBASE_FROM_BSD_MK = ${PKGNAME:C/-[^-]*$//}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
