@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2018/08/13 13:55:43 i3enedek, tmotyl Exp $
 
-TORSOCKS_VERSION = 0
 DISTNAME=	torsocks
-PKGNAME=	torsocks-${TORSOCKS_VERSION}
+PKGNAME=	torsocks-0
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

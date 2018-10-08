@@ -1,3 +1,4 @@
 Config file needs fixing.
 
 Builds fine, any intercepted exec segfaults though.
+Not using CONF_FILES framework for torsocks.conf.
