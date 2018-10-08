@@ -9,8 +9,8 @@ pkgsrc changes:
    triplets that have `webkit-jit' option as suggested one.
  - Always use OS(...) and BOS(...) macros instead of __Os__ macros for
    consistency with webkit code.
- - Add definition for BOS(SOLARIS) and OS(SOLARIS) and use them consistently
-   instead of using `__sun' macro.
+ - Add definition for BOS(SOLARIS) and OS(SOLARIS) and add it to the
+   OS(UNIX) OSes list.
  - Limit patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp to
    OpenBSD. It is no longer present on FreeBSD ports and it is not
    problematic on NetBSD.
