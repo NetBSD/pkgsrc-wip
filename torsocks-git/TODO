@@ -1,4 +1,3 @@
-Config file needs fixing.
-
-Builds fine, any intercepted exec segfaults though.
-Not using CONF_FILES framework for torsocks.conf.
+- Not using CONF_FILES framework for torsocks.conf.
+  Please see net/torsocks for a possible way to do it.
+- Builds fine, any intercepted exec segfaults though.
