@@ -2,7 +2,6 @@ $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
 SHA1 (patch-CMakeLists.txt) = 43d2c38f405b7096775fdd3036c7ba6be82c3d07
 SHA1 (patch-cmake_Modules_HandleCompilerRT.cmake) = fde0a4b440a257dec40c4f106c2352d5efecceef
-SHA1 (patch-cmake_config-ix.cmake) = dbd96cf8317e947850aacd01535053619a82b9bf
 SHA1 (patch-lib_asan_asan__posix.cc) = be7e47c252e30184639f7ed1c98c75a8667fd261
 SHA1 (patch-lib_fuzzer_FuzzerLoop.cpp) = b2e226a0d7b230cc8598a0591ae6f688527c6b2d
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = c3d8a78f96566e5b8d2d8a5cbaba60990bfd6efe
@@ -21,11 +20,5 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__unwind__linux__libcdep.cc) = 86d530
 SHA1 (patch-lib_scudo_scudo__platform.h) = 68f33b18d913984c3a459597ef62f63d36184ca9
 SHA1 (patch-lib_tsan_CMakeLists.txt) = 4d8f8081ff2a3249565df26e67a35b5b3509e0b0
 SHA1 (patch-lib_xray_tests_CMakeLists.txt) = bb52916184d8e829395dd40d6d1b8b7eac40da92
-SHA1 (patch-test_asan_TestCases_Posix_stack-use-after-return.cc) = 474bfca0e8891bb777a81ae926c89c3d56f7cdb9
-SHA1 (patch-test_asan_TestCases_heavy__uar__test.cc) = fce8bfec44d93bb606920dba9ddd7165f127d23a
 SHA1 (patch-test_asan_TestCases_interception__failure__test.cc) = 0a359141e3c30b672842904b32d1542170b03ab1
-SHA1 (patch-test_fuzzer_NullDerefTest.cpp) = 32b012ffd94a935cbdf9d8f53402f79743ccca74
-SHA1 (patch-test_fuzzer_lit.cfg) = 20f060b479ffefeed9241f53faee0a22adb0ade8
-SHA1 (patch-test_lsan_lit.common.cfg) = 4e0a0f71dfb7c19b62747abaa5f265e0f0dc1e05
-SHA1 (patch-test_scudo_lit.cfg) = 708c7bcf31b5fbf1c5b48da8882978c25908362c
 SHA1 (patch-utils_generate__netbsd__ioctls.awk) = 56c92131aa95b64765af3e9b60fd7d7cc55facbc
