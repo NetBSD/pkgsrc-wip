@@ -23,7 +23,7 @@
 		      <envvar name='GITEA_WORK_DIR' value='@GITEA_SHARE_DIR@'/>
 		      <envvar name='GITEA_CUSTOM' value='@PKG_SYSCONFDIR@'/>
 		      <envvar name='HOME' value='@GITEA_USER_HOME@'/>
-		      <envvar name='PATH' value='@PREFIX@/bin:${PATH}'/>
+		      <envvar name='PATH' value='/usr/local/sbin:/usr/local/bin:@PREFIX@/bin:@PREFIX@/sbin:/usr/sbin:/usr/bin:/sbin'/>
 		      <envvar name='USER' value='@GITEA_USER@'/>
 		    </method_environment>
 		  </method_context>
