@@ -1,10 +1,20 @@
 $NetBSD$
 
-In cmake build, adjust paths to pkgsrc norms.  (From OpenBSD.)
+In cmake build, adjust paths to pkgsrc norms.  (Originally from
+OpenBSD.)
 
---- CMakeLists.txt.orig	2018-08-16 16:05:26.000000000 +0000
+--- CMakeLists.txt.orig	2018-09-25 15:27:43.000000000 +0000
 +++ CMakeLists.txt
-@@ -30,17 +30,12 @@ if (WIN32)
+@@ -15,6 +15,8 @@ set (VERSION 1.5.3)
+ 
+ add_definitions (-DCMAKE -DVERSION=\"${VERSION}\")
+ 
++include(GNUInstallDirs)
++
+ if (WIN32)
+ 	set (BINDIR .)
+ 	set (SBINDIR .)
+@@ -30,17 +32,12 @@ if (WIN32)
  else (WIN32)
  	set (BINDIR bin)
  	set (SBINDIR sbin)
@@ -20,7 +30,7 @@ In cmake build, adjust paths to pkgsrc norms.  (From OpenBSD.)
  	set (INCLUDEDIR include)
  	set (DATAROOTDIR share)
 -	set (MANDIR "${DATAROOTDIR}/man")
-+	set (MANDIR "man")
++	set (MANDIR ${CMAKE_INSTALL_MANDIR})
  	set (SHAREDIR "${DATAROOTDIR}/mosquitto")
  	set (PKGCONFIGDIR "${LIBDIR}/pkgconfig")
  endif (WIN32)
