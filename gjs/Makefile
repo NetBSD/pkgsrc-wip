@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Gjs
-COMMENT=	Javascript binding for GNOME besed on Spidermonkey
+COMMENT=	Javascript binding for GNOME based on Spidermonkey
 LICENSE=	mit
 
 MAKE_JOBS_SAFE=		NO
