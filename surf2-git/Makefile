@@ -12,7 +12,6 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 MAKE_JOBS_SAFE=	no
-AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=		configmk
 SUBST_STAGE.configmk=	pre-configure
