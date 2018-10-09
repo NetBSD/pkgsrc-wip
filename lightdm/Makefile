@@ -60,6 +60,7 @@ post-install:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../security/openpam/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
