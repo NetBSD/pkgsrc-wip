@@ -1,3 +1,7 @@
 - The webkit extension seems to be not loaded making vimb not very usable:
 
    <https://github.com/fanglingsu/vimb/issues/438>
+
+  The issue needs further investigation but at the moment
+  patches/patch-src_ext-proxy.c and patches/patch-src_webextension_ext-main.c
+  workaround this problem.
