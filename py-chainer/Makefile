@@ -2,7 +2,7 @@
 
 DISTNAME=	chainer-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
+CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/8f/e0/b1860a9e79ed84831eed6320c3b810d44f99536346d99d05f3694c5cf0d3/
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=2.6.1:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-filelock>=2.0.6:../../wip/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-filelock>=2.0.6:../../devel/py-filelock
 
 USE_LANGUAGES=	c++
 
