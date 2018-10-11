@@ -14,7 +14,6 @@ GIT_REPOSITORIES=	vimb
 GIT_REPO.vimb=		git://github.com/fanglingsu/vimb.git
 WRKSRC=			${WRKDIR}/vimb
 
-NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c99
 
