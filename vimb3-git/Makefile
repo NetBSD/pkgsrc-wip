@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:S/vimb/vimb3/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://fanglingsu.github.io/vimb/
 COMMENT=	Vim-like webkit browser
 LICENSE=	gnu-gpl-v3
