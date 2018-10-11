@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/tabbed
+bin/xembed
+man/man1/tabbed.1
+man/man1/xembed.1
