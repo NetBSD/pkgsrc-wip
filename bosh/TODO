@@ -8,3 +8,4 @@
 [X] Add obosh and pbosh variants to this package?
     => No, use separate packages
 [X] Use smake for build
+[ ] Analyze keyboard behaviour for special characters like umlauts
