@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	0.16pre13
+FLNEWS_VERSION=	0.16pre14
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -8,6 +8,7 @@ MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
 MASTER_SITES+=	http://www.southcity.de/flnews/src/
 EXTRACT_SUFX=	.tar.bz2
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	michael.baeuerle@gmx.net
 HOMEPAGE=	http://micha.freeshell.org/flnews/

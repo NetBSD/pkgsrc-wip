@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flnews
 PKG_SUPPORTED_OPTIONS=	inet6 nls xdbe xdg-utils
-PKG_SUGGESTED_OPTIONS=	inet6 xdbe xdg-utils
+PKG_SUGGESTED_OPTIONS=	inet6 nls xdbe xdg-utils
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
