@@ -1,0 +1,3 @@
+This package is based on www/dillo and patched to use wip/fltk14-devel.
+If FLTK 1.4 is compiled with the pango option, glyph substitution is supported
+on X11 platform.
