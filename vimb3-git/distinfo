@@ -1,4 +1,2 @@
 $NetBSD$
 
-SHA1 (patch-src_ext-proxy.c) = 108eea1fa1ec4972e729ab68f20557e740161a82
-SHA1 (patch-src_webextension_ext-main.c) = 91a83a97eb7abd4a385f6e665886f87544c9200d
