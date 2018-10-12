@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	basepkg-1.5.3
+DISTNAME=	basepkg-1.6
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
@@ -19,14 +19,16 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
-INSTALLATION_DIRS+=	basepkg basepkg/sets ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	basepkg basepkg/sets basepkg/distrib/www.must-have-coffee.gen.nz/lloyd ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/basepkg.sh ${DESTDIR}${PREFIX}/basepkg
-	${INSTALL_SCRIPT} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/basepkg
-	${INSTALL_SCRIPT} ${WRKSRC}/README.html ${DESTDIR}${PREFIX}/basepkg
 	${INSTALL_MAN} ${WRKSRC}/man/man1/basepkg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/man1/basepkg.sh.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/basepkg/README
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/basepkg/LICENSE
+	${INSTALL_DATA} ${WRKSRC}/distrib/www.must-have-coffee.gen.nz/lloyd/README ${DESTDIR}${PREFIX}/basepkg/distrib/www.must-have-coffee.gen.nz/lloyd
+	${INSTALL_DATA} ${WRKSRC}/distrib/www.must-have-coffee.gen.nz/lloyd/syspkg-fixes-6.diff ${DESTDIR}${PREFIX}/basepkg/distrib/www.must-have-coffee.gen.nz/lloyd
 	${INSTALL_DATA} ${WRKSRC}/sets/comments ${DESTDIR}${PREFIX}/basepkg/sets/comments
 	${INSTALL_DATA} ${WRKSRC}/sets/deps ${DESTDIR}${PREFIX}/basepkg/sets/deps
 	${INSTALL_DATA} ${WRKSRC}/sets/descrs ${DESTDIR}${PREFIX}/basepkg/sets/descrs
