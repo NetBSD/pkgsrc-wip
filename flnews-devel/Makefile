@@ -58,7 +58,6 @@ SUBST_SED.edit-config+=		-e 's,@FORCE_IP6@,0,g'
 # Old SunPro compilers cannot create dependencies with the "-M" option
 # => Use makedepend instead for all SunPro compilers
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER:Msunpro}
-BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
 SUBST_SED.edit-config+=		-e 's,@DEP_MD@,,g'
 SUBST_SED.edit-config+=		-e 's,@DEP_COMP@,\#,g'
 .else
@@ -69,6 +68,10 @@ SUBST_SED.edit-config+=		-e 's,@DEP_COMP@,,g'
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} config
 
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER:Msunpro}
+BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
+.endif
+
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
 # OpenSSL 1.1 API is required for signature algorithm negotiation
@@ -78,6 +81,7 @@ BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 .include "../../security/openssl/buildlink3.mk"
 # FLTK must be compiled with multithreading support
 # FLTK version 1.4 is supported (should be compiled with pango support)
-.include "../../x11/fltk13/buildlink3.mk"
+#.include "../../x11/fltk13/buildlink3.mk"
+.include "../../wip/fltk14-devel/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
