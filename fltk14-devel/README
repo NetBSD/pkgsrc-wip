@@ -1,0 +1,4 @@
+FLTK 1.4.x development snapshot
+(intended to test X11 glyph substitution via pango)
+
+This allows applications to render text using multiple fonts.
