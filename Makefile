@@ -1904,7 +1904,6 @@ SUBDIR+=	libretro-pcsx-rearmed
 SUBDIR+=	libretro-prboom
 SUBDIR+=	libretro-px68k
 SUBDIR+=	libretro-tyrquake
-SUBDIR+=	libretro-virtualjaguar
 SUBDIR+=	libretro-yabause
 SUBDIR+=	librocket
 SUBDIR+=	libscscp
