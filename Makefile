@@ -1891,7 +1891,6 @@ SUBDIR+=	librem
 SUBDIR+=	libreoffice-git
 SUBDIR+=	libretro-4do
 SUBDIR+=	libretro-beetle-lynx
-SUBDIR+=	libretro-cap32
 SUBDIR+=	libretro-citra
 SUBDIR+=	libretro-fmsx
 SUBDIR+=	libretro-gearboy
