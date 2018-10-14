@@ -11,5 +11,6 @@ Tests fail because a invalid variable identifier is tried to be exported:
  |   0 (0.00%) tests failed
  | export: .MAKE.LEVEL.ENV: bad variable name
 
-I think we can safely not pass it but it should be investigated
-who is the responsible for injecting such environment variable.
+.MAKE.LEVEL.ENV is used internally by make(1) (not gmake!) and due the `.'
+it is not a valid identifier for shell variable, hence the corresponding
+export fails.
