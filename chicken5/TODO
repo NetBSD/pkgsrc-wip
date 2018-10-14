@@ -14,3 +14,5 @@ Tests fail because a invalid variable identifier is tried to be exported:
 .MAKE.LEVEL.ENV is used internally by make(1) (not gmake!) and due the `.'
 it is not a valid identifier for shell variable, hence the corresponding
 export fails.
+
+This happens because `export -p' is used.
