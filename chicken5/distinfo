@@ -4,3 +4,4 @@ SHA1 (chicken-5.0.0rc3.tar.gz) = 573a56320dbda9572a4895df937e1fd29527f526
 RMD160 (chicken-5.0.0rc3.tar.gz) = 40a4b5834c19129972f00e8c51cb3372c7c613db
 SHA512 (chicken-5.0.0rc3.tar.gz) = 14e6b8d9902486f534613b27f4c31eeadd8d018b090e2cb59bfea527e4fadfcf66c5ecc507d7178e4835889d34c41d633a124a8eac73222878339b50e6321d4b
 Size (chicken-5.0.0rc3.tar.gz) = 4002579 bytes
+SHA1 (patch-tests_runtests.sh) = c2bcee720a56cc399c6acdb1e002dbcd82ea272e
