@@ -1,1 +1,15 @@
-- Check if there are any regressions via `test' target 
+Tests fail because a invalid variable identifier is tried to be exported:
+
+ | ===> Testing for chicken-5.0.0rc3
+ | cd tests; sh runtests.sh
+ | ======================================== repository search path ...
+ | (/usr/pkg/lib/chicken/9)
+ | (PASS) (repository-path) contains something by default
+ |  TOTALS:
+ |   1 tests completed in 0.272 seconds
+ |   1 (100.00%) tests passed
+ |   0 (0.00%) tests failed
+ | export: .MAKE.LEVEL.ENV: bad variable name
+
+I think we can safely not pass it but it should be investigated
+who is the responsible for injecting such environment variable.
