@@ -1,0 +1,214 @@
+@comment $NetBSD$
+bin/pki
+etc/ipsec.conf
+etc/ipsec.secrets
+etc/strongswan.conf
+etc/strongswan.d/charon-logging.conf
+etc/strongswan.d/charon.conf
+etc/strongswan.d/charon/addrblock.conf
+etc/strongswan.d/charon/aes.conf
+etc/strongswan.d/charon/attr.conf
+etc/strongswan.d/charon/blowfish.conf
+etc/strongswan.d/charon/cmac.conf
+etc/strongswan.d/charon/constraints.conf
+etc/strongswan.d/charon/counters.conf
+etc/strongswan.d/charon/curve25519.conf
+etc/strongswan.d/charon/des.conf
+etc/strongswan.d/charon/dnskey.conf
+etc/strongswan.d/charon/eap-identity.conf
+etc/strongswan.d/charon/eap-mschapv2.conf
+etc/strongswan.d/charon/eap-peap.conf
+etc/strongswan.d/charon/eap-tls.conf
+etc/strongswan.d/charon/eap-ttls.conf
+etc/strongswan.d/charon/fips-prf.conf
+etc/strongswan.d/charon/gmp.conf
+etc/strongswan.d/charon/hmac.conf
+etc/strongswan.d/charon/kernel-pfkey.conf
+etc/strongswan.d/charon/kernel-pfroute.conf
+etc/strongswan.d/charon/md5.conf
+etc/strongswan.d/charon/mgf1.conf
+etc/strongswan.d/charon/nonce.conf
+etc/strongswan.d/charon/openssl.conf
+etc/strongswan.d/charon/pem.conf
+etc/strongswan.d/charon/pgp.conf
+etc/strongswan.d/charon/pkcs1.conf
+etc/strongswan.d/charon/pkcs12.conf
+etc/strongswan.d/charon/pkcs7.conf
+etc/strongswan.d/charon/pkcs8.conf
+etc/strongswan.d/charon/pubkey.conf
+etc/strongswan.d/charon/random.conf
+etc/strongswan.d/charon/rc2.conf
+etc/strongswan.d/charon/resolve.conf
+etc/strongswan.d/charon/revocation.conf
+etc/strongswan.d/charon/sha1.conf
+etc/strongswan.d/charon/sha2.conf
+etc/strongswan.d/charon/socket-default.conf
+etc/strongswan.d/charon/sshkey.conf
+etc/strongswan.d/charon/stroke.conf
+etc/strongswan.d/charon/updown.conf
+etc/strongswan.d/charon/vici.conf
+etc/strongswan.d/charon/whitelist.conf
+etc/strongswan.d/charon/x509.conf
+etc/strongswan.d/charon/xauth-generic.conf
+etc/strongswan.d/charon/xcbc.conf
+etc/strongswan.d/pki.conf
+etc/strongswan.d/scepclient.conf
+etc/strongswan.d/starter.conf
+etc/strongswan.d/swanctl.conf
+etc/swanctl/swanctl.conf
+lib/ipsec/libcharon.la
+lib/ipsec/libstrongswan.la
+lib/ipsec/libtls.la
+lib/ipsec/libvici.la
+lib/ipsec/plugins/libstrongswan-addrblock.la
+lib/ipsec/plugins/libstrongswan-aes.la
+lib/ipsec/plugins/libstrongswan-attr.la
+lib/ipsec/plugins/libstrongswan-blowfish.la
+lib/ipsec/plugins/libstrongswan-cmac.la
+lib/ipsec/plugins/libstrongswan-constraints.la
+lib/ipsec/plugins/libstrongswan-counters.la
+lib/ipsec/plugins/libstrongswan-curve25519.la
+lib/ipsec/plugins/libstrongswan-des.la
+lib/ipsec/plugins/libstrongswan-dnskey.la
+lib/ipsec/plugins/libstrongswan-eap-identity.la
+lib/ipsec/plugins/libstrongswan-eap-mschapv2.la
+lib/ipsec/plugins/libstrongswan-eap-peap.la
+lib/ipsec/plugins/libstrongswan-eap-tls.la
+lib/ipsec/plugins/libstrongswan-eap-ttls.la
+lib/ipsec/plugins/libstrongswan-fips-prf.la
+lib/ipsec/plugins/libstrongswan-gmp.la
+lib/ipsec/plugins/libstrongswan-hmac.la
+lib/ipsec/plugins/libstrongswan-kernel-pfkey.la
+lib/ipsec/plugins/libstrongswan-kernel-pfroute.la
+lib/ipsec/plugins/libstrongswan-md5.la
+lib/ipsec/plugins/libstrongswan-mgf1.la
+lib/ipsec/plugins/libstrongswan-nonce.la
+lib/ipsec/plugins/libstrongswan-openssl.la
+lib/ipsec/plugins/libstrongswan-pem.la
+lib/ipsec/plugins/libstrongswan-pgp.la
+lib/ipsec/plugins/libstrongswan-pkcs1.la
+lib/ipsec/plugins/libstrongswan-pkcs12.la
+lib/ipsec/plugins/libstrongswan-pkcs7.la
+lib/ipsec/plugins/libstrongswan-pkcs8.la
+lib/ipsec/plugins/libstrongswan-pubkey.la
+lib/ipsec/plugins/libstrongswan-random.la
+lib/ipsec/plugins/libstrongswan-rc2.la
+lib/ipsec/plugins/libstrongswan-resolve.la
+lib/ipsec/plugins/libstrongswan-revocation.la
+lib/ipsec/plugins/libstrongswan-sha1.la
+lib/ipsec/plugins/libstrongswan-sha2.la
+lib/ipsec/plugins/libstrongswan-socket-default.la
+lib/ipsec/plugins/libstrongswan-sshkey.la
+lib/ipsec/plugins/libstrongswan-stroke.la
+lib/ipsec/plugins/libstrongswan-updown.la
+lib/ipsec/plugins/libstrongswan-vici.la
+lib/ipsec/plugins/libstrongswan-whitelist.la
+lib/ipsec/plugins/libstrongswan-x509.la
+lib/ipsec/plugins/libstrongswan-xauth-generic.la
+lib/ipsec/plugins/libstrongswan-xcbc.la
+libexec/ipsec/_copyright
+libexec/ipsec/_updown
+libexec/ipsec/charon
+libexec/ipsec/scepclient
+libexec/ipsec/starter
+libexec/ipsec/stroke
+libexec/ipsec/whitelist
+man/man1/pki---acert.1
+man/man1/pki---dn.1
+man/man1/pki---gen.1
+man/man1/pki---issue.1
+man/man1/pki---keyid.1
+man/man1/pki---pkcs7.1
+man/man1/pki---print.1
+man/man1/pki---pub.1
+man/man1/pki---req.1
+man/man1/pki---self.1
+man/man1/pki---signcrl.1
+man/man1/pki---verify.1
+man/man1/pki.1
+man/man5/ipsec.conf.5
+man/man5/ipsec.secrets.5
+man/man5/strongswan.conf.5
+man/man5/swanctl.conf.5
+man/man8/charon-cmd.8
+man/man8/ipsec.8
+man/man8/scepclient.8
+man/man8/swanctl.8
+sbin/charon-cmd
+sbin/ipsec
+sbin/swanctl
+share/strongswan/templates/config/plugins/addrblock.conf
+share/strongswan/templates/config/plugins/aes.conf
+share/strongswan/templates/config/plugins/attr.conf
+share/strongswan/templates/config/plugins/blowfish.conf
+share/strongswan/templates/config/plugins/cmac.conf
+share/strongswan/templates/config/plugins/constraints.conf
+share/strongswan/templates/config/plugins/counters.conf
+share/strongswan/templates/config/plugins/curve25519.conf
+share/strongswan/templates/config/plugins/des.conf
+share/strongswan/templates/config/plugins/dnskey.conf
+share/strongswan/templates/config/plugins/eap-identity.conf
+share/strongswan/templates/config/plugins/eap-mschapv2.conf
+share/strongswan/templates/config/plugins/eap-peap.conf
+share/strongswan/templates/config/plugins/eap-tls.conf
+share/strongswan/templates/config/plugins/eap-ttls.conf
+share/strongswan/templates/config/plugins/fips-prf.conf
+share/strongswan/templates/config/plugins/gmp.conf
+share/strongswan/templates/config/plugins/hmac.conf
+share/strongswan/templates/config/plugins/kernel-pfkey.conf
+share/strongswan/templates/config/plugins/kernel-pfroute.conf
+share/strongswan/templates/config/plugins/md5.conf
+share/strongswan/templates/config/plugins/mgf1.conf
+share/strongswan/templates/config/plugins/nonce.conf
+share/strongswan/templates/config/plugins/openssl.conf
+share/strongswan/templates/config/plugins/pem.conf
+share/strongswan/templates/config/plugins/pgp.conf
+share/strongswan/templates/config/plugins/pkcs1.conf
+share/strongswan/templates/config/plugins/pkcs12.conf
+share/strongswan/templates/config/plugins/pkcs7.conf
+share/strongswan/templates/config/plugins/pkcs8.conf
+share/strongswan/templates/config/plugins/pubkey.conf
+share/strongswan/templates/config/plugins/random.conf
+share/strongswan/templates/config/plugins/rc2.conf
+share/strongswan/templates/config/plugins/resolve.conf
+share/strongswan/templates/config/plugins/revocation.conf
+share/strongswan/templates/config/plugins/sha1.conf
+share/strongswan/templates/config/plugins/sha2.conf
+share/strongswan/templates/config/plugins/socket-default.conf
+share/strongswan/templates/config/plugins/sshkey.conf
+share/strongswan/templates/config/plugins/stroke.conf
+share/strongswan/templates/config/plugins/updown.conf
+share/strongswan/templates/config/plugins/vici.conf
+share/strongswan/templates/config/plugins/whitelist.conf
+share/strongswan/templates/config/plugins/x509.conf
+share/strongswan/templates/config/plugins/xauth-generic.conf
+share/strongswan/templates/config/plugins/xcbc.conf
+share/strongswan/templates/config/strongswan.conf
+share/strongswan/templates/config/strongswan.d/charon-logging.conf
+share/strongswan/templates/config/strongswan.d/charon.conf
+share/strongswan/templates/config/strongswan.d/pki.conf
+share/strongswan/templates/config/strongswan.d/scepclient.conf
+share/strongswan/templates/config/strongswan.d/starter.conf
+share/strongswan/templates/config/strongswan.d/swanctl.conf
+@pkgdir etc/swanctl/x509ocsp
+@pkgdir etc/swanctl/x509crl
+@pkgdir etc/swanctl/x509ca
+@pkgdir etc/swanctl/x509ac
+@pkgdir etc/swanctl/x509aa
+@pkgdir etc/swanctl/x509
+@pkgdir etc/swanctl/rsa
+@pkgdir etc/swanctl/pubkey
+@pkgdir etc/swanctl/private
+@pkgdir etc/swanctl/pkcs8
+@pkgdir etc/swanctl/pkcs12
+@pkgdir etc/swanctl/ecdsa
+@pkgdir etc/swanctl/conf.d
+@pkgdir etc/swanctl/bliss
+@pkgdir etc/ipsec.d/reqs
+@pkgdir etc/ipsec.d/private
+@pkgdir etc/ipsec.d/ocspcerts
+@pkgdir etc/ipsec.d/crls
+@pkgdir etc/ipsec.d/certs
+@pkgdir etc/ipsec.d/cacerts
+@pkgdir etc/ipsec.d/acerts
+@pkgdir etc/ipsec.d/aacerts
