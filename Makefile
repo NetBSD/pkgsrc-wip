@@ -4372,6 +4372,7 @@ SUBDIR+=	stmpclean
 SUBDIR+=	stonx
 SUBDIR+=	stress
 SUBDIR+=	stress-ng
+SUBDIR+=	strongswan
 SUBDIR+=	structure
 SUBDIR+=	stumpwm
 SUBDIR+=	suitesparse
