@@ -2,10 +2,6 @@
 
    <https://github.com/fanglingsu/vimb/issues/438>
 
-  The issue needs further investigation but at the moment
-  patches/patch-src_ext-proxy.c and patches/patch-src_webextension_ext-main.c
-  workaround this problem.
-
-  Probably this issue is fixed by the following patch:
+  This issue is fixed by the following patch:
 
    <https://www.NetBSD.org/~leot/pkgsrc-patches/glib2-2.56.2-gcreds.patch>
