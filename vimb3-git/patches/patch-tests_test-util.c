@@ -9,6 +9,10 @@ the passwd file if not set.
 On the other hand, `~user' is expanded always by checking the passwd
 file, adjust test_expand_tilde_user() accordingly.
 
+Patch shared upstream via:
+
+ <https://github.com/fanglingsu/vimb/pull/524>
+
 --- tests/test-util.c.orig	2018-09-25 22:49:33.000000000 +0000
 +++ tests/test-util.c
 @@ -17,6 +17,7 @@
