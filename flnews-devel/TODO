@@ -6,4 +6,5 @@
 [X] Suggest option nls?
     Yes => Even without NLS the FILTER module limits supported locale codesets
 [X] Execute "make config" part of build in the pkgsrc configure phase
+[ ] Check handling of CPPFLAGS
 [ ] Import final flnews 0.16 release
