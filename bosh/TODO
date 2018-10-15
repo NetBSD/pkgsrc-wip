@@ -8,4 +8,8 @@
 [X] Add obosh and pbosh variants to this package?
     => No, use separate packages
 [X] Use smake for build
-[ ] Analyze keyboard behaviour for special characters like umlauts
+[X] Analyze keyboard behaviour for special characters like umlauts
+    => setlocale() is not called by the shell (and therefore iswprint() fails)
+       Reason: "/usr/lib/locale" is expected to exist, but not there on NetBSD
+    => Patch added
+    => Problem reported upstream
