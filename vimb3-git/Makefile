@@ -25,6 +25,8 @@ MAKE_FLAGS+=	EXAMPLEPREFIX="${DESTDIR}${EGDIR}"
 MAKE_FLAGS+=	MANPREFIX="${DESTDIR}${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	RUNPREFIX="${PREFIX}"
 
+TEST_TARGET=	test
+
 # Avoid conflicts with www/vimb
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/vimb ${DESTDIR}${PREFIX}/bin/vimb3
