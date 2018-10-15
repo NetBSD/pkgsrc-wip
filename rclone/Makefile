@@ -1,6 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	rclone-1.43.1
+# XXX: When updating changelog is available in
+# XXX: ${WRKSRC}/docs/content/changelog.md
+DISTNAME=	rclone-1.44
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ncw/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
