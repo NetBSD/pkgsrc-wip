@@ -4,7 +4,17 @@ ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/stem/__init__.py
 ${PYSITELIB}/stem/__init__.pyc
 ${PYSITELIB}/stem/__init__.pyo
-${PYSITELIB}/stem/cached_tor_manual.sqlite
+${PYSITELIB}/stem/cached_fallbacks.cfg
+${PYSITELIB}/stem/cached_manual.sqlite
+${PYSITELIB}/stem/client/__init__.py
+${PYSITELIB}/stem/client/__init__.pyc
+${PYSITELIB}/stem/client/__init__.pyo
+${PYSITELIB}/stem/client/cell.py
+${PYSITELIB}/stem/client/cell.pyc
+${PYSITELIB}/stem/client/cell.pyo
+${PYSITELIB}/stem/client/datatype.py
+${PYSITELIB}/stem/client/datatype.pyc
+${PYSITELIB}/stem/client/datatype.pyo
 ${PYSITELIB}/stem/connection.py
 ${PYSITELIB}/stem/connection.pyc
 ${PYSITELIB}/stem/connection.pyo
@@ -23,7 +33,6 @@ ${PYSITELIB}/stem/descriptor/export.pyo
 ${PYSITELIB}/stem/descriptor/extrainfo_descriptor.py
 ${PYSITELIB}/stem/descriptor/extrainfo_descriptor.pyc
 ${PYSITELIB}/stem/descriptor/extrainfo_descriptor.pyo
-${PYSITELIB}/stem/descriptor/fallback_directories.cfg
 ${PYSITELIB}/stem/descriptor/hidden_service_descriptor.py
 ${PYSITELIB}/stem/descriptor/hidden_service_descriptor.pyc
 ${PYSITELIB}/stem/descriptor/hidden_service_descriptor.pyo
@@ -48,6 +57,9 @@ ${PYSITELIB}/stem/descriptor/server_descriptor.pyo
 ${PYSITELIB}/stem/descriptor/tordnsel.py
 ${PYSITELIB}/stem/descriptor/tordnsel.pyc
 ${PYSITELIB}/stem/descriptor/tordnsel.pyo
+${PYSITELIB}/stem/directory.py
+${PYSITELIB}/stem/directory.pyc
+${PYSITELIB}/stem/directory.pyo
 ${PYSITELIB}/stem/exit_policy.py
 ${PYSITELIB}/stem/exit_policy.pyc
 ${PYSITELIB}/stem/exit_policy.pyo
