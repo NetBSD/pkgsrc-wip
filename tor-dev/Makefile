@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tor-0.3.4.7-rc
+DISTNAME=	tor-0.3.5.2-alpha
 PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 CATEGORIES=	net security
 MASTER_SITES=	http://www.torproject.org/dist/
@@ -44,7 +44,7 @@ OWN_DIRS_PERMS+=	${PKG_HOME.${TOR_USER}} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-CONF_FILES+=		${PREFIX}/share/examples/tordev/torrc.sample	\
+CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample	\
 			${PKG_SYSCONFDIR}/torrc
 
 PRINT_PLIST_AWK+=	/^man\/man/ { $$0 = "$${PLIST.doc}" $$0 }
