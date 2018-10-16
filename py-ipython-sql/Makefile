@@ -15,10 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.9:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.1.14:../../databases/py-sqlparse
 DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-prettytable>=0.7.2:../../textproc/py-prettytable
-
-
-WRKSRC=		${WRKDIR}/ipython-sql-0.3.6
+DEPENDS+=	${PYPKGPREFIX}-ptable>=0.7.2:../../textproc/py-ptable
 
 USE_LANGUAGES=	# none
 

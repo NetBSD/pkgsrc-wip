@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.4 2015/06/26 23:03:28 othyro Exp $
-#
 
 DISTNAME=	logtools-0.8.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/logtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +11,7 @@ COMMENT=	Log files analysis/filtering framework written in Python
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-prettytable>=0.5:../../textproc/py-prettytable
+DEPENDS+=	${PYPKGPREFIX}-ptable>=0.5:../../textproc/py-ptable
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.9:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlsoup>=0.9.0:../../databases/py-sqlsoup
 DEPENDS+=	${PYPKGPREFIX}-acora>=1.7:../../textproc/py-acora

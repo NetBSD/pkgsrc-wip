@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/cloudnull/cloudlib
 COMMENT=	General purpose library for in application use
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-ptable>=0.7.2:../../textproc/py-ptable
+
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
 .include "../../lang/python/egg.mk"
-DEPENDS+=	${PYPKGPREFIX}-prettytable>=0.7.2:../../textproc/py-prettytable
 .include "../../mk/bsd.pkg.mk"
