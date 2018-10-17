@@ -588,6 +588,7 @@ SUBDIR+=	distbb-git
 SUBDIR+=	ditz-commander
 SUBDIR+=	divecmd
 SUBDIR+=	diveintopython
+SUBDIR+=	dlib
 SUBDIR+=	dlpoly-classic
 SUBDIR+=	dlt-daemon
 SUBDIR+=	dlt-viewer
