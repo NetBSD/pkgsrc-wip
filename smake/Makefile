@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	schily-2018-09-26
+DISTNAME=	schily-2018-10-11
 PKGNAME=	smake-1.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
