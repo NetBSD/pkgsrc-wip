@@ -4,3 +4,5 @@ SHA1 (tor-0.3.5.3-alpha.tar.gz) = a9b2678ce9ff0ef6263d1c8874226e8fa59b1d11
 RMD160 (tor-0.3.5.3-alpha.tar.gz) = cc2ce021d690b95b04b98f8dc3dc75a991b259e5
 SHA512 (tor-0.3.5.3-alpha.tar.gz) = fdbbf5a69f9c0708afa4bb9e4925db4f7384997d7f497f1298d0106b76944c060c858fd061aa292310384e7b35f0ac41570cd89bb8c7e8208c832908fa3288af
 Size (tor-0.3.5.3-alpha.tar.gz) = 6862572 bytes
+SHA1 (patch-Makefile.in) = c190295f4702bd1e69531cab1ac61dbab451e48b
+SHA1 (patch-src_app_config_config.c) = bac106e382207cdf22c84a52b45c791de2bdf0f8

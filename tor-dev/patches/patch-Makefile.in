@@ -1,0 +1,17 @@
+$NetBSD$
+
+tor -> tordev.
+
+--- Makefile.in.orig	2018-10-19 17:40:17.567965433 +0000
++++ Makefile.in
+@@ -4626,8 +4626,8 @@ src_tools_tor_print_ed_signing_cert_LDAD
+ @BUILD_LIBTORRUNNER_TRUE@        src/tools/tor_runner.c \
+ @BUILD_LIBTORRUNNER_TRUE@        src/feature/api/tor_api.c
+ 
+-confdir = $(sysconfdir)/tor
+-tordatadir = $(datadir)/tor
++confdir = $(sysconfdir)/tordev
++tordatadir = $(datadir)/tordev
+ conf_DATA = src/config/torrc.sample
+ tordata_DATA = src/config/geoip src/config/geoip6
+ 
