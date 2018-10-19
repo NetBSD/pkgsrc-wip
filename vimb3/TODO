@@ -1,7 +1,0 @@
-- The webkit extension seems to be not loaded making vimb not very usable:
-
-   <https://github.com/fanglingsu/vimb/issues/438>
-
-  Probably this issue is fixed by the following patch:
-
-   <https://www.NetBSD.org/~leot/pkgsrc-patches/glib2-2.56.2-gcreds.patch>
