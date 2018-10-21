@@ -2004,6 +2004,7 @@ SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-luafilesystem
 SUBDIR+=	lua-mpack
 SUBDIR+=	lua-penlight
+SUBDIR+=	luabind
 SUBDIR+=	luakit
 SUBDIR+=	luakit-git
 SUBDIR+=	lucene
