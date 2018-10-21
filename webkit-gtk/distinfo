@@ -5,8 +5,8 @@ RMD160 (webkitgtk-2.22.2.tar.xz) = f8f16a72800debdf9b74a03151299f16f69fcc1c
 SHA512 (webkitgtk-2.22.2.tar.xz) = 0bb885726872f128a0e0d71cbc75ba076e5c0c928c40e71e030c87444a7068568c568587514407d6549c27d0bfe121dc33f96f0c516d2ae1c6801e005ad52756
 Size (webkitgtk-2.22.2.tar.xz) = 16769120 bytes
 SHA1 (patch-CMakeLists.txt) = 2f05f3682bda601c99544dafd8e79bd622dfc5a5
-SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = aad458e8b062c0833193f354ca96e7b3082f1ec7
-SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = f78e6150ed8901b3fe046b2ef182f50f1c7500a4
+SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = bae08310572c2e23c69cbf6aa9760a67345dcfe3
+SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = ab75ef8714e5071fcd094735717a2f5d0321c747
 SHA1 (patch-Source_JavaScriptCore_heap_MarkedSpace.cpp) = e6a23d5ef22bddd0a9606fb0e472960e4cf5673e
 SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = 36d29a5db03c2413ae93224ac391f3ff248983e8
 SHA1 (patch-Source_JavaScriptCore_runtime_MachineContext.h) = 23bc86a389f8009ec829c3ee0fe3effe3f20b012
@@ -25,4 +25,4 @@ SHA1 (patch-Source_WebKit_Platform_classifier_ResourceLoadStatisticsClassifier.c
 SHA1 (patch-Source_bmalloc_bmalloc_BPlatform.h) = ad6c6f93732a4bb355ac2b65bff8968aae0460ba
 SHA1 (patch-Source_bmalloc_bmalloc_VMAllocate.h) = 7bbf23f5ac92173dcce9743c5a115bdf0bf7c0ea
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 03b72552414e7114bfa7ddc2d68fd97009a5ff7d
-SHA1 (patch-aj) = 403aef1a8c594e8117f8f3fd2fe5afa52a9c8c64
+SHA1 (patch-aj) = ec60907df4336b755d1d1924c026b3041805f431
