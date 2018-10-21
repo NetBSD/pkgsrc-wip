@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/06 12:16:17 hasso Exp $
-bin/tmux
-man/man1/tmux.1
