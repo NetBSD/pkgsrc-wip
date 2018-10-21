@@ -1,15 +1,6 @@
 $NetBSD$
 
-Add support for NetBSD
-
-XXX:
-XXX: Only CPU(X86_64) was tested and all other CPU should be reviewed and maybe
-XXX: adjusted (especially ARM, ARM64 and MIPS!).
-XXX:
-XXX: Probably using `OS(FUCHSIA) || defined(__GLIBC__) || defined(__BIONIC__)'
-XXX: can be a good way to adapt it and then check
-XXX: src/sys/arch/*/include/mcontext.h for the corresponding registers.
-XXX:
+Add support for NetBSD.
 
 --- Source/JavaScriptCore/runtime/MachineContext.h.orig	2018-08-21 16:06:10.000000000 +0000
 +++ Source/JavaScriptCore/runtime/MachineContext.h
