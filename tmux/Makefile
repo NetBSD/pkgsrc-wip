@@ -1,11 +1,9 @@
 # $NetBSD: Makefile,v 1.45 2018/06/09 11:23:05 leot Exp $
 
-DISTNAME=	tmux-2.8-rc
-PKGNAME=	tmux-2.8rc	# XXX: Delete for non-rc release!
+DISTNAME=	tmux-2.8
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV:S/rc//}	# XXX: Delete for non-rc release!
-#GITHUB_RELEASE=	${PKGVERSION_NOREV}	# XXX: Uncomment for non-rc release!
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://tmux.github.io/
