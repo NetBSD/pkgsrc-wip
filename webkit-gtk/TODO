@@ -1,8 +1,8 @@
 - Review JIT support for NetBSD:
    * patches/patch-Source_JavaScriptCore_runtime_MachineContext.h
    * patches/patch-Source_WTF_wtf_Platform.h
-  Only amd64 was actually tested and arm, arm64 and mips really need a
-  double-check.
+  Only amd64 and i386 was actually tested and it would be nice if arm, arm64
+  and mips can get some testing.
 - Could the NetBSD logic in
   patches/patch-Source_JavaScriptCore_runtime_MachineContext.h be rewritten
   using ucontext(2) _UC_MACHINE_* macros instead?
