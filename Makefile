@@ -1649,6 +1649,7 @@ SUBDIR+=	kawa
 SUBDIR+=	kcalc
 SUBDIR+=	kcalcore
 SUBDIR+=	kcalutils
+SUBDIR+=	kcgi
 SUBDIR+=	kcharselect
 SUBDIR+=	kcolorchooser
 SUBDIR+=	kcontacts

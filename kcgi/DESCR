@@ -1,0 +1,3 @@
+kcgi is an open source CGI and FastCGI library for C/C++ web applications.
+It is minimal, secure, and auditable -- a useful addition to your BCHS
+application stack.
