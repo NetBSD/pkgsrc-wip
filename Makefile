@@ -329,7 +329,6 @@ SUBDIR+=	canto-daemon
 SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	cardpeek
-SUBDIR+=	cargo
 SUBDIR+=	caribou
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
