@@ -3812,6 +3812,7 @@ SUBDIR+=	py-semver
 SUBDIR+=	py-sentry
 SUBDIR+=	py-sep
 SUBDIR+=	py-setupdocs
+SUBDIR+=	py-setuptools-rust
 SUBDIR+=	py-setuptools_git
 SUBDIR+=	py-sexy
 SUBDIR+=	py-sfepy
