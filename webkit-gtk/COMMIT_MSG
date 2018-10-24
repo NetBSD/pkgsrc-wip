@@ -7,16 +7,15 @@ pkgsrc changes:
  - Add WebKitWebProcess and jsc to NOT_PAX_MPROTECT_SAFE.
    At least on NetBSD/amd64, running SunSpider 1.0.2 JavaScript Benchmark
    (<https://webkit.org/perf/sunspider/sunspider.html>) with MiniBrowser
-   and security.pax.mprotect.global=1 needed around:
+   before `paxctl +m'-ing them needed:
     Total:                 1006.9ms +/- 0.7%
-   ...while after temporary setting security.pax.mprotect.global=0:
+   ...while after `paxctl +m'-ing them:
     Total:                 322.3ms +/- 3.0%
    (Probably EACCESS due PaX MPROTECT are handled gracefully and
    silently instead of failing hard at runtime.)
-   Add WebKitWebProcess and jsc to NOT_PAX_MPROTECT_SAFE to obtain
-   the same.  Please also note that webkit-gtk browsers should not
-   need any NOT_PAX_MPROTECT_SAFE because WebKitWebProcess is used
-   and already had that.
+   Please also note that webkit-gtk browsers should not need any
+   NOT_PAX_MPROTECT_SAFE because WebKitWebProcess is used and already
+   have that.
  - Improve handling of `webkit-jit' by introducing a
    WEBKIT_JIT_MACHINE_PLATFORMS list that contain all MACHINE_PLATFORMs
    triplets that have `webkit-jit' option as suggested one.
@@ -25,17 +24,17 @@ pkgsrc changes:
  - Add definition for BOS(SOLARIS) and OS(SOLARIS) and add it to the
    OS(UNIX) OSes list.
  - Limit patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp to
-   OpenBSD. It is no longer present on FreeBSD ports and it is not
-   problematic on NetBSD.
+   OpenBSD. It is no longer present in FreeBSD ports and it is not
+   problematic in NetBSD.
  - Remove no longer needed patch-Source_WTF_wtf_ThreadSpecific.h:
    NetBSD 5.x was already part of NOT_FOR_PLATFORM.
  - Sync patch-CMakeLists.txt with FreeBSD ports.
-   Please note that this also remove WTF_CPU_SPARC64 definition that was
+   Please note that this also removes WTF_CPU_SPARC64 definition that was
    unused.
- - madvise(2) on {Free,DragonFly,Net,Open}BSD has MADV_FREE and
+ - madvise(2) on {Free,DragonFly,Net,Open}BSD supports MADV_FREE and
    MADV_DONTNEED flags. Define the corresponding HAVE_* via
    patch-Source_WTF_wtf_Platform.h.
- - Use globbing for REPLACE_{PERL,PYTHON} where possible
+ - Use globbing for REPLACE_{PERL,PYTHON} where possible.
 
 Changes:
 WebKitGTK+ 2.22.2
