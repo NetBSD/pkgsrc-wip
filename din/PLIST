@@ -310,18 +310,17 @@ share/din/factory/d_superformula
 share/din/factory/d_warper
 share/din/factory/d_waveform_display
 share/din/factory/daccel.crv
-share/din/factory/dam.crv
 share/din/factory/dash.crv
 share/din/factory/decay.crv
 share/din/factory/decay.ed
 share/din/factory/decay.lib
 share/din/factory/delay.ed
-share/din/factory/dfm.crv
 share/din/factory/din.hlp
 share/din/factory/din.osc
 share/din/factory/din_info
-share/din/factory/donate.tcl
 share/din/factory/dot.crv
+share/din/factory/drone-mod-am.crv
+share/din/factory/drone-mod-fm.crv
 share/din/factory/drone-modulation.ed
 share/din/factory/drone.crv
 share/din/factory/drone.ed
@@ -363,6 +362,7 @@ share/din/factory/jag.fnt
 share/din/factory/just-intonation.tuning
 share/din/factory/key.help.tcl
 share/din/factory/keyboard-keyboard.hlp
+share/din/factory/keyboard-keyboard.settings
 share/din/factory/laser.fnt
 share/din/factory/letter.crv
 share/din/factory/letter_space.crv
@@ -404,6 +404,9 @@ share/din/factory/p_Spiraler
 share/din/factory/p_Starrer
 share/din/factory/p_Superformula
 share/din/factory/pythagoras.tuning
+share/din/factory/range-mod-height.crv
+share/din/factory/range-mod-width.crv
+share/din/factory/range-modulation.ed
 share/din/factory/rose_milker.scr
 share/din/factory/rose_milker_cos.crv
 share/din/factory/rose_milker_cos.ed
@@ -449,7 +452,6 @@ share/din/factory/start-end.help.tcl
 share/din/factory/start-end.patch.tcl
 share/din/factory/swav.crv
 share/din/factory/swav.ed
-share/din/factory/tips.tcl
 share/din/factory/tuning.help.tcl
 share/din/factory/velocity.crv
 share/din/factory/velocity.ed
@@ -467,5 +469,6 @@ share/din/factory/waveforms.lib
 share/din/factory/window
 share/din/factory/word.crv
 share/din/factory/word_space.crv
+share/din/factory/write-svg.help.tcl
 share/icons/hicolor/scalable/apps/din.svg
 share/pixmaps/din.png

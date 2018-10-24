@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	din-37a
+DISTNAME=	din-38
 PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://archive.org/download/dinisnoise_source_code/
