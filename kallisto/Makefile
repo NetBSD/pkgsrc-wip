@@ -5,11 +5,11 @@
 #              Thu Oct 19 20:40:39 CDT 2017               #
 ###########################################################
 
-DISTNAME=	kallisto-${PORTVERSION}
+DISTNAME=	kallisto-${PV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pachterlab/}
 GITHUB_PROJECT=	kallisto
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_TAG=	v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pachterlab.github.io/kallisto/about.html
@@ -27,7 +27,7 @@ USE_CMAKE=	yes
 
 CXXFLAGS+=	-I${PREFIX}/include
 
-PORTVERSION=	0.42.4
+PV=		0.44.0
 DATADIR=	${PREFIX}/share/kallisto
 
 # Specify which directories to create before install.

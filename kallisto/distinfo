@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kallisto-0.42.4.tar.gz) = 0f9f4460127540828b620eeec585d53abf169a36
-RMD160 (kallisto-0.42.4.tar.gz) = ddf7bd0730f5465e451403077b44f5154633060f
-SHA512 (kallisto-0.42.4.tar.gz) = 12d339947c129f21ec4983136afd765f1715c8a4eb007b9662c006de0d183b8210d176b5169991bc7aa4b3b82c894ba53f39a6d37254cce829dd065f51473385
-Size (kallisto-0.42.4.tar.gz) = 1059785 bytes
+SHA1 (kallisto-0.44.0.tar.gz) = 77f4e5ec4f94ed222ece07fee2792dfe0e8f096f
+RMD160 (kallisto-0.44.0.tar.gz) = 15888692b43c7aed659d27e7d21659b54d51aece
+SHA512 (kallisto-0.44.0.tar.gz) = 7809257c2aa9ccca98e34cb16e12ce00ceb691600430ae689d4fdcdd7a43850ec940b6868550399bf3cef1136af8a6e6320ecd5215ee4aee6a136d1e27c062c2
+Size (kallisto-0.44.0.tar.gz) = 2242173 bytes
