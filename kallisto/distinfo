@@ -4,3 +4,5 @@ SHA1 (kallisto-0.44.0.tar.gz) = 77f4e5ec4f94ed222ece07fee2792dfe0e8f096f
 RMD160 (kallisto-0.44.0.tar.gz) = 15888692b43c7aed659d27e7d21659b54d51aece
 SHA512 (kallisto-0.44.0.tar.gz) = 7809257c2aa9ccca98e34cb16e12ce00ceb691600430ae689d4fdcdd7a43850ec940b6868550399bf3cef1136af8a6e6320ecd5215ee4aee6a136d1e27c062c2
 Size (kallisto-0.44.0.tar.gz) = 2242173 bytes
+SHA1 (patch-CMakeLists.txt) = 6624f6dd544d3d310dc103c64d5bada17e8c2381
+SHA1 (patch-src_CMakeLists.txt) = 2ef72024591c5216fbf44fb7cdfa4a8330b0c81a
