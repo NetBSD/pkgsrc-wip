@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.5 2009/10/12 19:56:04 ahoka Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enchant
-PKG_SUPPORTED_OPTIONS=	aspell enchant-zemberek hunspell ispell
+PKG_SUPPORTED_OPTIONS=	aspell enchant-zemberek hunspell
 # Package also supports the following:
 # hspell - Hebrew spelling
 # uspell - Yiddish spelling
@@ -12,35 +12,27 @@ PKG_SUGGESTED_OPTIONS=	hunspell
 
 PLIST_VARS+=            aspell
 .if !empty(PKG_OPTIONS:Maspell)
-CONFIGURE_ARGS+=	--enable-aspell
+CONFIGURE_ARGS+=	--with-aspell
 .include "../../textproc/aspell/buildlink3.mk"
 PLIST.aspell=		yes
 .else
-CONFIGURE_ARGS+=	--disable-aspell
+CONFIGURE_ARGS+=	--without-aspell
 .endif
 
 .if !empty(PKG_OPTIONS:Menchant-zemberek)
-CONFIGURE_ARGS+=	--enable-zemberek
+CONFIGURE_ARGS+=	--with-zemberek
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-zemberek
+CONFIGURE_ARGS+=	--without-zemberek
 .endif
 
 PLIST_VARS+=            hunspell
 .if !empty(PKG_OPTIONS:Mhunspell)
-CONFIGURE_ARGS+=	--enable-myspell
+CONFIGURE_ARGS+=	--with-hunspell
+CONFIGURE_ARGS+=	--with-hunspell-dir=${BUILDLINK_PREFIX.hunspell}/share/hunspell
 .include "../../textproc/hunspell/buildlink3.mk"
 DEPENDS+=		hunspell-en_US-[0-9]*:../../textproc/hunspell-en_US
 PLIST.hunspell=		yes
 .else
-CONFIGURE_ARGS+=	--disable-myspell
-.endif
-
-PLIST_VARS+=            ispell
-.if !empty(PKG_OPTIONS:Mispell)
-CONFIGURE_ARGS+=	--enable-ispell
-PLIST.ispell=		yes
-DEPENDS+=		ispell-base>=3.3.02:../../textproc/ispell-base
-.else
-CONFIGURE_ARGS+=	--disable-ispell
+CONFIGURE_ARGS+=	--without-hunspell
 .endif
