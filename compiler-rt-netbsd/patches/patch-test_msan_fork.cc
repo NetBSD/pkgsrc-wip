@@ -1,10 +1,10 @@
 $NetBSD$
 
---- test/msan/fork.cc.orig	2018-08-21 21:25:23.000000000 +0000
+--- test/msan/fork.cc.orig	2018-10-25 20:11:47.383363157 +0000
 +++ test/msan/fork.cc
-@@ -14,6 +14,9 @@
- // UNSUPPORTED: powerpc64-target-arch
- // UNSUPPORTED: powerpc64le-target-arch
+@@ -17,6 +17,9 @@
+ // Sometimes hangs
+ // UNSUPPORTED: netbsd
  
 +// Somtimes hangs
 +// UNSUPPORTED: netbsd
