@@ -19,9 +19,11 @@ PLIST.aspell=		yes
 CONFIGURE_ARGS+=	--without-aspell
 .endif
 
+PLIST_VARS+=            zemberek
 .if !empty(PKG_OPTIONS:Menchant-zemberek)
 CONFIGURE_ARGS+=	--with-zemberek
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+PLIST.zemberek=		yes
 .else
 CONFIGURE_ARGS+=	--without-zemberek
 .endif

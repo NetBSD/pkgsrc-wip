@@ -4,8 +4,9 @@ bin/enchant-lsmod-2
 include/enchant-2/enchant++.h
 include/enchant-2/enchant-provider.h
 include/enchant-2/enchant.h
-${PLIST.aspell}lib/enchant-2/libenchant_aspell.la
+${PLIST.aspell}lib/enchant-2/enchant_aspell.la
 ${PLIST.hunspell}lib/enchant-2/enchant_hunspell.la
+${PLIST.zemberek}lib/enchant-2/enchant_zemberek.la
 lib/libenchant-2.la
 lib/pkgconfig/enchant-2.pc
 man/man1/enchant-2.1
