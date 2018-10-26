@@ -1,0 +1,23 @@
+Running the test target can lead to a `rm -rf /'!:
+
+ |    /usr/bin/make libenchant-copy
+ |    rm -rf /
+
+All `rm -rf' incantantions should be inspected.
+After a quick skim of the code it seems that, in tests/Makefile.am:
+
+    35  libenchant-copy:
+    36          rm -rf $(libdir_subdir)/
+    37          $(MKDIR_P) $(libdir_subdir)/enchant-@ENCHANT_MAJOR_VERSION@
+    38          cp -r $(top_builddir)/src/@objdir@ $(libdir_subdir)/
+    39          cp $(top_builddir)/src/libenchant-@ENCHANT_MAJOR_VERSION@.la $(libdir_subdir)/
+
+...and in tests/enchant_providers/Makefile.am
+
+    30  libenchant-copy:
+    31          rm -rf $(libdir_subdir)/
+    32          $(MKDIR_P) $(libdir_subdir)/enchant-@ENCHANT_MAJOR_VERSION@
+    33          cp -r $(top_builddir)/src/@objdir@ $(libdir_subdir)/
+    34          cp $(top_builddir)/src/libenchant-@ENCHANT_MAJOR_VERSION@.la $(libdir_subdir)/
+
+Both `rm -rf' can be problematic if $(libdir_subdir) is not defined.
