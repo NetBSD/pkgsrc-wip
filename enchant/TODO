@@ -21,3 +21,10 @@ After a quick skim of the code it seems that, in tests/Makefile.am:
     34          cp $(top_builddir)/src/libenchant-@ENCHANT_MAJOR_VERSION@.la $(libdir_subdir)/
 
 Both `rm -rf' can be problematic if $(libdir_subdir) is not defined.
+
+
+It seems that this was reported upstream via:
+
+ <https://github.com/AbiWord/enchant/issues/185>
+
+...but probably still not properly fixed (at least in 2.2.3).
