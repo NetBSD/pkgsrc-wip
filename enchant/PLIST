@@ -11,4 +11,4 @@ lib/libenchant-2.la
 lib/pkgconfig/enchant-2.pc
 man/man1/enchant-2.1
 man/man1/enchant-lsmod-2.1
-share/enchant/enchant.ordering
+share/examples/enchant.ordering

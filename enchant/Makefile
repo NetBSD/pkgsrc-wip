@@ -18,6 +18,9 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
+INSTALLATION_DIRS+=	share/examples
+MAKE_DIRS+=		${PREFIX}/share/enchant
+CONF_FILES=		${PREFIX}/share/examples/enchant.ordering ${PREFIX}/share/enchant/enchant.ordering
 
 #
 # XXX: DO NOT ADD A TEST_TARGET!
@@ -28,6 +31,10 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 # XXX:
 # XXX: Please investigate why this happens!
 #
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/share && ${MV} enchant/enchant.ordering examples/enchant.ordering
+
 
 .include "options.mk"
 
