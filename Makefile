@@ -4619,6 +4619,7 @@ SUBDIR+=	unimrcp
 SUBDIR+=	unimrcp-apr
 SUBDIR+=	unimrcp-aprutil
 SUBDIR+=	unimrcp-sofiasip
+SUBDIR+=	unittest-cpp
 SUBDIR+=	universalcodegrep
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
