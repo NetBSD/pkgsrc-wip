@@ -2210,6 +2210,7 @@ SUBDIR+=	mupen64-plugin-sound
 SUBDIR+=	mupen64-plugin-video
 SUBDIR+=	mupen64plus
 SUBDIR+=	mupen64plus-extraplugins
+SUBDIR+=	muscle
 SUBDIR+=	muscle-cflexplugin
 SUBDIR+=	muscle-mcardplugin
 SUBDIR+=	muscle-pam
