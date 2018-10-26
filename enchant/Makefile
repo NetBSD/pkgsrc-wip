@@ -19,6 +19,16 @@ PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
+#
+# XXX: DO NOT ADD A TEST_TARGET!
+# XXX: IT SEEMS THAT CAN LEAD TO `rm -rf /', i.e.:
+# XXX:
+# XXX:    /usr/bin/make libenchant-copy
+# XXX:    rm -rf /
+# XXX:
+# XXX: Please investigate why this happens!
+#
+
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
