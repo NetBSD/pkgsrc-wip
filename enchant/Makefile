@@ -3,7 +3,8 @@
 
 DISTNAME=		enchant-2.2.3
 CATEGORIES=		textproc
-MASTER_SITES=		https://github.com/AbiWord/enchant/releases/download/v${PKGVERSION_NOREV}/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=AbiWord/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://abiword.github.io/enchant/
