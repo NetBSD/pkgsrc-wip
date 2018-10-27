@@ -22,15 +22,8 @@ INSTALLATION_DIRS+=	share/examples
 MAKE_DIRS+=		${PREFIX}/share/enchant
 CONF_FILES=		${PREFIX}/share/examples/enchant.ordering ${PREFIX}/share/enchant/enchant.ordering
 
-#
-# XXX: DO NOT ADD A TEST_TARGET!
-# XXX: IT SEEMS THAT CAN LEAD TO `rm -rf /', i.e.:
-# XXX:
-# XXX:    /usr/bin/make libenchant-copy
-# XXX:    rm -rf /
-# XXX:
-# XXX: Please investigate why this happens!
-#
+# XXX: needs unittest-cpp as a test dependency
+#TEST_TARGET=		check
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/share && ${MV} enchant/enchant.ordering examples/enchant.ordering
@@ -39,4 +32,6 @@ post-install:
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
+#BUILDLINK_DEPMETHOD.unittest-cpp=	build	# XXX: for tests
+#.include "../../wip/unittest-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
