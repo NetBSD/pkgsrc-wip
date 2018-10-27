@@ -19,16 +19,17 @@ MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.drive5.com/muscle/
 COMMENT=	MUltiple Sequence Comparison by Log-Expectation
 
-DEPENDS+=	dos2unix:../../converters/dos2unix
+DEPENDS+=	dos2unix>0:../../converters/dos2unix
 
-# LICENSE=	
+LICENSE=	public-domain
 
 ONLY_FOR_PLATFORM=	 *-*-x86_64 *-*-i386
 
 USE_LANGUAGES=	c c++
 
 WRKSRC=		${WRKDIR}/muscle${PV}/src
-BUILD_TARGET=	 muscle
+MAKE_FILE=	${FILESDIR}/Makefile
+CXXFLAGS+=	-std=c++11
 
 PV=		3.8.31
 
@@ -40,6 +41,4 @@ pre-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/muscle ${DESTDIR}${PREFIX}/bin
 
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

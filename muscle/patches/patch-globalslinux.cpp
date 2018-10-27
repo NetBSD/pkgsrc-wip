@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Portability
+
 --- globalslinux.cpp.orig	Tue Nov 30 05:09:50 2004
 +++ globalslinux.cpp	Mon Jul  4 11:13:18 2005
 @@ -7,6 +7,12 @@
