@@ -1,0 +1,15 @@
+This is the fastest Internet port scanner. It can scan the entire
+Internet in under 6 minutes, transmitting 10 million packets per
+second.
+
+It produces results similar to nmap, the most famous port scanner.
+Internally, it operates more like scanrand, unicornscan, and ZMap,
+using asynchronous transmission. The major difference is that it's
+faster than these other scanners. In addition, it's more flexible,
+allowing arbitrary address ranges and port ranges.
+
+NOTE: masscan uses a custom TCP/IP stack. Anything other than simple
+port scans will cause conflict with the local TCP/IP stack. This
+means you need to either use the -S option to use a separate IP
+address, or configure your operating system to firewall the ports
+that masscan uses.

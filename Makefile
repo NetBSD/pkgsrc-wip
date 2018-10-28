@@ -2057,6 +2057,7 @@ SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
 SUBDIR+=	marsyas
+SUBDIR+=	masscan
 SUBDIR+=	mashpodder
 SUBDIR+=	mat
 SUBDIR+=	matanza
