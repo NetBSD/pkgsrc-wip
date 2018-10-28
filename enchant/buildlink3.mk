@@ -5,9 +5,9 @@ BUILDLINK_TREE+=	enchant2
 .if !defined(ENCHANT_BUILDLINK3_MK)
 ENCHANT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.enchant+=	enchant2>=2
-BUILDLINK_ABI_DEPENDS.enchant+=	enchant>=2.2.3
-BUILDLINK_PKGSRCDIR.enchant?=	../../wip/enchant2
+BUILDLINK_API_DEPENDS.enchant2+=	enchant2>=2
+BUILDLINK_ABI_DEPENDS.enchant2+=	enchant2>=2.2.3
+BUILDLINK_PKGSRCDIR.enchant2?=	../../wip/enchant2
 
 # spelling libraries are loaded dynamically and do not need
 # to be included here
