@@ -17,6 +17,9 @@ ${PYSITELIB}/pafy/backend_shared.pyo
 ${PYSITELIB}/pafy/backend_youtube_dl.py
 ${PYSITELIB}/pafy/backend_youtube_dl.pyc
 ${PYSITELIB}/pafy/backend_youtube_dl.pyo
+${PYSITELIB}/pafy/channel.py
+${PYSITELIB}/pafy/channel.pyc
+${PYSITELIB}/pafy/channel.pyo
 ${PYSITELIB}/pafy/g.py
 ${PYSITELIB}/pafy/g.pyc
 ${PYSITELIB}/pafy/g.pyo
