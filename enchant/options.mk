@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.5 2009/10/12 19:56:04 ahoka Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.enchant
+PKG_OPTIONS_VAR=	PKG_OPTIONS.enchant2
 PKG_SUPPORTED_OPTIONS=	aspell enchant-zemberek hunspell
 # Package also supports the following:
 # hspell - Hebrew spelling
