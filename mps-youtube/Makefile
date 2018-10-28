@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mps-youtube-0.2.7.1
+DISTNAME=	mps-youtube-0.2.8
 CATEGORIES=	multimedia net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mps-youtube/}
 
