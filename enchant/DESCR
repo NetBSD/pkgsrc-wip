@@ -2,10 +2,9 @@ The project aims to provide an efficient extensible abstraction
 for dealing with different spell checking libraries.
 
 Enchant is meant to provide a generic interface into various existing
-spell checking libaries. These include, but are not limited to:
+spell checking libraries. These include, but are not limited to:
 	* Aspell/Pspell (intends to replace Ispell)
-	* Ispell (old as sin, could be interpreted as a defacto standard)
-	* MySpell/Hunspell (an OOo project, also used by Mozilla)
+	* Hunspell (an OOo project, also used by Mozilla)
 	* Uspell (primarily Yiddish, Hebrew, and Eastern European
 	  languages - hosted in AbiWord's CVS under the module "uspell")
 	* Hspell (Hebrew)
