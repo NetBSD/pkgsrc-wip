@@ -2916,6 +2916,7 @@ SUBDIR+=	printrun
 SUBDIR+=	probcons
 SUBDIR+=	probe
 SUBDIR+=	procps
+SUBDIR+=	prodigal
 SUBDIR+=	profanity
 SUBDIR+=	progreiserfs
 SUBDIR+=	proplib
