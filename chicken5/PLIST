@@ -57,6 +57,7 @@ lib/chicken/9/types.db
 lib/libchicken.a
 lib/libchicken.so
 lib/libchicken.so.9
+man/man1/chicken-do.1
 man/man1/chicken-install.1
 man/man1/chicken-profile.1
 man/man1/chicken-status.1
