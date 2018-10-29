@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-08-21 21:25:40.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-10-26 19:38:22.297584747 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
 @@ -15,9 +15,15 @@
  #include "sanitizer_platform.h"
@@ -26,7 +26,7 @@ $NetBSD$
  #include <dev/biovar.h>
  #include <dev/bluetooth/btdev.h>
  #include <dev/bluetooth/btsco.h>
-@@ -115,6 +120,9 @@
+@@ -115,8 +120,10 @@
  #include <dev/vndvar.h>
  #include <dev/wscons/wsconsio.h>
  #include <dev/wscons/wsdisplay_usl_io.h>
@@ -34,11 +34,15 @@ $NetBSD$
 +#include <md4.h>
 +#include <md5.h>
  #include <net/bpf.h>
- #include <net/if_atm.h>
+-#include <net/if_atm.h>
  #include <net/if_gre.h>
-@@ -134,10 +142,12 @@
+ #include <net/if_ppp.h>
+ #include <net/if_pppoe.h>
+@@ -132,12 +139,13 @@
+ #include <netinet/ip_proxy.h>
+ #include <netinet6/in6_var.h>
  #include <netinet6/nd6.h>
- #include <netnatm/natm.h>
+-#include <netnatm/natm.h>
  #include <netsmb/smb_dev.h>
 +#include <rmd160.h>
  #include <soundcard.h>
@@ -49,7 +53,7 @@ $NetBSD$
  #include <sys/cdio.h>
  #include <sys/chio.h>
  #include <sys/clockctl.h>
-@@ -173,6 +183,7 @@
+@@ -173,6 +181,7 @@
  #include <sys/filio.h>
  #include <sys/ipc.h>
  #include <sys/mman.h>
@@ -57,7 +61,7 @@ $NetBSD$
  #include <sys/mount.h>
  #include <sys/mqueue.h>
  #include <sys/msg.h>
-@@ -180,6 +191,8 @@
+@@ -180,6 +189,8 @@
  #include <sys/ptrace.h>
  #include <sys/resource.h>
  #include <sys/sem.h>
@@ -66,7 +70,7 @@ $NetBSD$
  #include <sys/shm.h>
  #include <sys/signal.h>
  #include <sys/socket.h>
-@@ -202,8 +215,13 @@
+@@ -202,8 +213,13 @@
  #include <utime.h>
  #include <utmp.h>
  #include <utmpx.h>
@@ -80,7 +84,7 @@ $NetBSD$
  
  // Include these after system headers to avoid name clashes and ambiguities.
  #include "sanitizer_internal_defs.h"
-@@ -238,6 +256,10 @@ unsigned struct_rlimit_sz = sizeof(struc
+@@ -238,6 +254,10 @@ unsigned struct_rlimit_sz = sizeof(struc
  unsigned struct_timespec_sz = sizeof(struct timespec);
  unsigned struct_sembuf_sz = sizeof(struct sembuf);
  unsigned struct_kevent_sz = sizeof(struct kevent);
@@ -91,7 +95,37 @@ $NetBSD$
  unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
  unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
  unsigned struct_timex_sz = sizeof(struct timex);
-@@ -1451,14 +1473,14 @@ unsigned IOCTL_PPPIOCGMTU = PPPIOCGMTU;
+@@ -350,7 +370,6 @@ unsigned struct_atabusiodetach_args_sz =
+ unsigned struct_atabusioscan_args_sz = sizeof(atabusioscan_args);
+ unsigned struct_ath_diag_sz = sizeof(ath_diag);
+ unsigned struct_atm_flowmap_sz = sizeof(atm_flowmap);
+-unsigned struct_atm_pseudoioctl_sz = sizeof(atm_pseudoioctl);
+ unsigned struct_audio_buf_info_sz = sizeof(audio_buf_info);
+ unsigned struct_audio_device_sz = sizeof(audio_device);
+ unsigned struct_audio_encoding_sz = sizeof(audio_encoding);
+@@ -596,7 +615,6 @@ unsigned struct_priq_delete_filter_sz = 
+ unsigned struct_priq_interface_sz = sizeof(priq_interface);
+ unsigned struct_priq_modify_class_sz = sizeof(priq_modify_class);
+ unsigned struct_ptmget_sz = sizeof(ptmget);
+-unsigned struct_pvctxreq_sz = sizeof(pvctxreq);
+ unsigned struct_radio_info_sz = sizeof(radio_info);
+ unsigned struct_red_conf_sz = sizeof(red_conf);
+ unsigned struct_red_interface_sz = sizeof(red_interface);
+@@ -1414,13 +1432,6 @@ unsigned IOCTL_BIOCSRTIMEOUT = BIOCSRTIM
+ unsigned IOCTL_BIOCGRTIMEOUT = BIOCGRTIMEOUT;
+ unsigned IOCTL_BIOCGFEEDBACK = BIOCGFEEDBACK;
+ unsigned IOCTL_BIOCSFEEDBACK = BIOCSFEEDBACK;
+-unsigned IOCTL_SIOCRAWATM = SIOCRAWATM;
+-unsigned IOCTL_SIOCATMENA = SIOCATMENA;
+-unsigned IOCTL_SIOCATMDIS = SIOCATMDIS;
+-unsigned IOCTL_SIOCSPVCTX = SIOCSPVCTX;
+-unsigned IOCTL_SIOCGPVCTX = SIOCGPVCTX;
+-unsigned IOCTL_SIOCSPVCSIF = SIOCSPVCSIF;
+-unsigned IOCTL_SIOCGPVCSIF = SIOCGPVCSIF;
+ unsigned IOCTL_GRESADDRS = GRESADDRS;
+ unsigned IOCTL_GRESADDRD = GRESADDRD;
+ unsigned IOCTL_GREGADDRS = GREGADDRS;
+@@ -1451,14 +1462,14 @@ unsigned IOCTL_PPPIOCGMTU = PPPIOCGMTU;
  unsigned IOCTL_PPPIOCSMTU = PPPIOCSMTU;
  unsigned IOCTL_SIOCGPPPSTATS = SIOCGPPPSTATS;
  unsigned IOCTL_SIOCGPPPCSTATS = SIOCGPPPCSTATS;
@@ -114,7 +148,7 @@ $NetBSD$
  unsigned IOCTL_PPPOESETPARMS = PPPOESETPARMS;
  unsigned IOCTL_PPPOEGETPARMS = PPPOEGETPARMS;
  unsigned IOCTL_PPPOEGETSESSION = PPPOEGETSESSION;
-@@ -1804,8 +1826,6 @@ unsigned IOCTL_MTIOCSLOCATE = MTIOCSLOCA
+@@ -1804,8 +1815,6 @@ unsigned IOCTL_MTIOCSLOCATE = MTIOCSLOCA
  unsigned IOCTL_MTIOCHLOCATE = MTIOCHLOCATE;
  unsigned IOCTL_POWER_EVENT_RECVDICT = POWER_EVENT_RECVDICT;
  unsigned IOCTL_POWER_IOC_GET_TYPE = POWER_IOC_GET_TYPE;
@@ -123,7 +157,7 @@ $NetBSD$
  unsigned IOCTL_RIOCGINFO = RIOCGINFO;
  unsigned IOCTL_RIOCSINFO = RIOCSINFO;
  unsigned IOCTL_RIOCSSRCH = RIOCSSRCH;
-@@ -2063,6 +2083,39 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
+@@ -2063,6 +2072,39 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
  
  const int si_SEGV_MAPERR = SEGV_MAPERR;
  const int si_SEGV_ACCERR = SEGV_ACCERR;
@@ -163,7 +197,7 @@ $NetBSD$
  }  // namespace __sanitizer
  
  using namespace __sanitizer;
-@@ -2224,4 +2277,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
+@@ -2224,4 +2266,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
  CHECK_SIZE_AND_OFFSET(group, gr_gid);
  CHECK_SIZE_AND_OFFSET(group, gr_mem);
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-08-21 21:25:38.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-10-26 19:38:23.831747259 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
 @@ -60,6 +60,15 @@ extern unsigned struct_timespec_sz;
  extern unsigned struct_sembuf_sz;

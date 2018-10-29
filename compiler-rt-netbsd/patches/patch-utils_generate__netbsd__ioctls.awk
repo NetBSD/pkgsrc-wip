@@ -1,6 +1,6 @@
 $NetBSD$
 
---- utils/generate_netbsd_ioctls.awk.orig	2018-08-21 21:25:37.000000000 +0000
+--- utils/generate_netbsd_ioctls.awk.orig	2018-10-26 19:41:22.632082148 +0000
 +++ utils/generate_netbsd_ioctls.awk
 @@ -314,6 +314,7 @@ FNR == 1 {
        $0 ~ /PRIQ_IF_DETACH/ ||

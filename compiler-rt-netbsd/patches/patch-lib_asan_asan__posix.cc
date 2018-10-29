@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/asan/asan_posix.cc.orig	2018-08-21 21:25:41.000000000 +0000
+--- lib/asan/asan_posix.cc.orig	2018-10-26 19:38:24.429968751 +0000
 +++ lib/asan/asan_posix.cc
 @@ -40,31 +40,35 @@ void AsanOnDeadlySignal(int signo, void 
  

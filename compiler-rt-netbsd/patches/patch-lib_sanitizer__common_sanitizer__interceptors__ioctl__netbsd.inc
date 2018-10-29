@@ -1,8 +1,23 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_interceptors_ioctl_netbsd.inc.orig	2018-08-21 21:25:40.000000000 +0000
+--- lib/sanitizer_common/sanitizer_interceptors_ioctl_netbsd.inc.orig	2018-10-26 19:38:13.731945818 +0000
 +++ lib/sanitizer_common/sanitizer_interceptors_ioctl_netbsd.inc
-@@ -713,14 +713,14 @@ static void ioctl_table_fill() {
+@@ -672,14 +672,6 @@ static void ioctl_table_fill() {
+   _(BIOCGRTIMEOUT, WRITE, struct_timeval_sz);
+   _(BIOCGFEEDBACK, WRITE, sizeof(unsigned int));
+   _(BIOCSFEEDBACK, READ, sizeof(unsigned int));
+-  /* Entries from file: net/if_atm.h */
+-  _(SIOCRAWATM, READWRITE, sizeof(int));
+-  _(SIOCATMENA, READWRITE, struct_atm_pseudoioctl_sz);
+-  _(SIOCATMDIS, READWRITE, struct_atm_pseudoioctl_sz);
+-  _(SIOCSPVCTX, READWRITE, struct_pvctxreq_sz);
+-  _(SIOCGPVCTX, READWRITE, struct_pvctxreq_sz);
+-  _(SIOCSPVCSIF, READWRITE, struct_ifreq_sz);
+-  _(SIOCGPVCSIF, READWRITE, struct_ifreq_sz);
+   /* Entries from file: net/if_gre.h */
+   _(GRESADDRS, READ, struct_ifreq_sz);
+   _(GRESADDRD, READ, struct_ifreq_sz);
+@@ -713,14 +705,14 @@ static void ioctl_table_fill() {
    _(SIOCGPPPSTATS, READWRITE, struct_ifpppstatsreq_sz);
    _(SIOCGPPPCSTATS, READWRITE, struct_ifpppcstatsreq_sz);
    /* Entries from file: net/npf.h */
@@ -25,7 +40,7 @@ $NetBSD$
    /* Entries from file: net/if_pppoe.h */
    _(PPPOESETPARMS, READ, struct_pppoediscparms_sz);
    _(PPPOEGETPARMS, READWRITE, struct_pppoediscparms_sz);
-@@ -1095,7 +1095,6 @@ static void ioctl_table_fill() {
+@@ -1095,7 +1087,6 @@ static void ioctl_table_fill() {
    /* Entries from file: sys/power.h */
    _(POWER_EVENT_RECVDICT, READWRITE, struct_plistref_sz);
    _(POWER_IOC_GET_TYPE, WRITE, struct_power_type_sz);
