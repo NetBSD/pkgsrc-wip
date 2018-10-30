@@ -1517,6 +1517,7 @@ SUBDIR+=	icecat
 SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
 SUBDIR+=	icestorm-git
+SUBDIR+=	icewm14
 SUBDIR+=	icmpchat
 SUBDIR+=	id3
 SUBDIR+=	ifstat
