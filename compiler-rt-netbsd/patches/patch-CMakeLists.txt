@@ -1,6 +1,6 @@
 $NetBSD$
 
---- CMakeLists.txt.orig	2018-10-30 08:42:09.431723770 +0000
+--- CMakeLists.txt.orig	2018-10-30 08:42:09.000000000 +0000
 +++ CMakeLists.txt
 @@ -391,6 +391,10 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuch
    list(APPEND SANITIZER_COMMON_LINK_LIBS zircon)
