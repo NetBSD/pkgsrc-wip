@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/xray/tests/CMakeLists.txt.orig	2018-10-26 19:38:30.564890159 +0000
+--- lib/xray/tests/CMakeLists.txt.orig	2018-10-01 21:40:24.000000000 +0000
 +++ lib/xray/tests/CMakeLists.txt
 @@ -70,6 +70,7 @@ if (NOT APPLE)
      list(APPEND XRAY_UNITTEST_LINK_FLAGS -lLLVMXRay -lLLVMSupport -lLLVMTestingSupport)

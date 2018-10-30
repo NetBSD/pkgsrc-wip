@@ -1,8 +1,8 @@
 $NetBSD$
 
---- CMakeLists.txt.orig	2018-10-26 19:39:08.374027424 +0000
+--- CMakeLists.txt.orig	2018-10-30 08:42:09.431723770 +0000
 +++ CMakeLists.txt
-@@ -390,6 +390,10 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuch
+@@ -391,6 +391,10 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuch
    list(APPEND SANITIZER_COMMON_LINK_LIBS zircon)
  endif()
  
@@ -13,7 +13,7 @@ $NetBSD$
  if (SANITIZER_CXX_ABI_LIBNAME STREQUAL "libc++")
    if (SANITIZER_CXX_ABI_INTREE)
      if (NOT LIBCXXABI_ENABLE_STATIC_UNWINDER AND (TARGET unwind_shared OR HAVE_LIBUNWIND))
-@@ -432,7 +436,7 @@ foreach(path IN ITEMS ${LLVM_MAIN_SRC_DI
+@@ -433,7 +437,7 @@ foreach(path IN ITEMS ${LLVM_MAIN_SRC_DI
                        ${LLVM_MAIN_SRC_DIR}/../libcxx
                        ${LLVM_EXTERNAL_LIBCXX_SOURCE_DIR})
    if(IS_DIRECTORY ${path})

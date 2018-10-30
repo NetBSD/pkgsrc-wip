@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/msan/msan_interceptors.cc.orig	2018-10-26 19:37:51.451921192 +0000
+--- lib/msan/msan_interceptors.cc.orig	2018-10-30 08:42:08.583936715 +0000
 +++ lib/msan/msan_interceptors.cc
-@@ -34,11 +34,13 @@
+@@ -34,6 +34,7 @@
  #include "sanitizer_common/sanitizer_libc.h"
  #include "sanitizer_common/sanitizer_linux.h"
  #include "sanitizer_common/sanitizer_tls_get_addr.h"
@@ -10,13 +10,7 @@ $NetBSD$
  
  #if SANITIZER_NETBSD
  #define fstat __fstat50
- #define gettimeofday __gettimeofday50
- #define getrusage __getrusage50
-+#define tzset __tzset50
- #endif
- 
- #include <stdarg.h>
-@@ -1069,6 +1071,18 @@ INTERCEPTOR(int, pthread_join, void *th,
+@@ -1070,6 +1071,18 @@ INTERCEPTOR(int, pthread_join, void *th,
  
  extern char *tzname[2];
  
@@ -35,7 +29,7 @@ $NetBSD$
  INTERCEPTOR(void, tzset, int fake) {
    ENSURE_MSAN_INITED();
    REAL(tzset)(fake);
-@@ -1078,29 +1092,85 @@ INTERCEPTOR(void, tzset, int fake) {
+@@ -1079,29 +1092,85 @@ INTERCEPTOR(void, tzset, int fake) {
      __msan_unpoison(tzname[1], REAL(strlen)(tzname[1]) + 1);
    return;
  }
@@ -124,7 +118,7 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1520,6 +1590,9 @@ namespace __msan {
+@@ -1521,6 +1590,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -134,7 +128,7 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1629,6 +1702,7 @@ void InitializeInterceptors() {
+@@ -1630,6 +1702,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);

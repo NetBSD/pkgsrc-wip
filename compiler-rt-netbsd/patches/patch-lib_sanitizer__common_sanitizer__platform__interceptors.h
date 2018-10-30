@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-10-26 19:38:22.451626392 +0000
+--- lib/sanitizer_common/sanitizer_platform_interceptors.h.orig	2018-08-21 21:25:40.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_interceptors.h
 @@ -207,9 +207,13 @@
  #define SANITIZER_INTERCEPT_GETPWENT                                          \

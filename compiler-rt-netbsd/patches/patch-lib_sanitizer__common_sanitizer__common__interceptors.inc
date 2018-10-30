@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-10-26 19:38:13.931205082 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-10-30 08:42:09.015511978 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -77,6 +77,11 @@
  #define ctime __ctime50
@@ -101,7 +101,7 @@ $NetBSD$
  #endif
  
  #if SANITIZER_INTERCEPT_SETPWENT
-@@ -3060,17 +3079,28 @@ INTERCEPTOR(int, sendmmsg, int fd, struc
+@@ -3062,17 +3081,28 @@ INTERCEPTOR(int, sendmmsg, int fd, struc
  #endif
  
  #if SANITIZER_INTERCEPT_GETPEERNAME
@@ -139,7 +139,7 @@ $NetBSD$
    return res;
  }
  #define INIT_GETPEERNAME COMMON_INTERCEPT_FUNCTION(getpeername);
-@@ -4240,7 +4270,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
+@@ -4242,7 +4272,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
  #endif
  
  #if SANITIZER_INTERCEPT_STATVFS
@@ -148,7 +148,7 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -4819,6 +4849,14 @@ INTERCEPTOR(float, remquof, float x, flo
+@@ -4821,6 +4851,14 @@ INTERCEPTOR(float, remquof, float x, flo
    if (quo) COMMON_INTERCEPTOR_WRITE_RANGE(ctx, quo, sizeof(*quo));
    return res;
  }
@@ -163,7 +163,7 @@ $NetBSD$
  INTERCEPTOR(long double, remquol, long double x, long double y, int *quo) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, remquol, x, y, quo);
-@@ -4829,12 +4867,10 @@ INTERCEPTOR(long double, remquol, long d
+@@ -4831,12 +4869,10 @@ INTERCEPTOR(long double, remquol, long d
    if (quo) COMMON_INTERCEPTOR_WRITE_RANGE(ctx, quo, sizeof(*quo));
    return res;
  }
@@ -178,7 +178,7 @@ $NetBSD$
  #endif
  
  #if SANITIZER_INTERCEPT_LGAMMA
-@@ -4853,6 +4889,14 @@ INTERCEPTOR(float, lgammaf, float x) {
+@@ -4855,6 +4891,14 @@ INTERCEPTOR(float, lgammaf, float x) {
    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, &signgam, sizeof(signgam));
    return res;
  }
@@ -193,7 +193,7 @@ $NetBSD$
  INTERCEPTOR(long double, lgammal, long double x) {
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, lgammal, x);
-@@ -4860,12 +4904,10 @@ INTERCEPTOR(long double, lgammal, long d
+@@ -4862,12 +4906,10 @@ INTERCEPTOR(long double, lgammal, long d
    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, &signgam, sizeof(signgam));
    return res;
  }
@@ -209,7 +209,7 @@ $NetBSD$
  #endif
  
  #if SANITIZER_INTERCEPT_LGAMMA_R
-@@ -7235,6 +7277,1602 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7237,6 +7279,1602 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -1812,7 +1812,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7299,6 +8937,8 @@ static void InitializeCommonInterceptors
+@@ -7301,6 +8939,8 @@ static void InitializeCommonInterceptors
    INIT_GETPWENT;
    INIT_FGETPWENT;
    INIT_GETPWENT_R;
@@ -1821,7 +1821,7 @@ $NetBSD$
    INIT_SETPWENT;
    INIT_CLOCK_GETTIME;
    INIT_GETITIMER;
-@@ -7408,7 +9048,9 @@ static void InitializeCommonInterceptors
+@@ -7410,7 +9050,9 @@ static void InitializeCommonInterceptors
    INIT_PTHREAD_GETNAME_NP;
    INIT_SINCOS;
    INIT_REMQUO;
@@ -1831,7 +1831,7 @@ $NetBSD$
    INIT_LGAMMA_R;
    INIT_LGAMMAL_R;
    INIT_DRAND48_R;
-@@ -7484,6 +9126,30 @@ static void InitializeCommonInterceptors
+@@ -7486,6 +9128,30 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;

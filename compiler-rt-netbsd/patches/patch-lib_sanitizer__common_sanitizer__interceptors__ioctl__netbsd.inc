@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_interceptors_ioctl_netbsd.inc.orig	2018-10-26 19:38:13.731945818 +0000
+--- lib/sanitizer_common/sanitizer_interceptors_ioctl_netbsd.inc.orig	2018-08-21 21:25:40.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_interceptors_ioctl_netbsd.inc
 @@ -672,14 +672,6 @@ static void ioctl_table_fill() {
    _(BIOCGRTIMEOUT, WRITE, struct_timeval_sz);

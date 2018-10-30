@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_posix.cc.orig	2018-10-26 19:38:08.580505412 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_posix.cc.orig	2018-09-26 10:51:26.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_posix.cc
 @@ -945,6 +945,7 @@ unsigned struct_ElfW_Phdr_sz = sizeof(El
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/fuzzer/FuzzerLoop.cpp.orig	2018-10-26 19:38:37.382745571 +0000
+--- lib/fuzzer/FuzzerLoop.cpp.orig	2018-08-31 08:13:42.000000000 +0000
 +++ lib/fuzzer/FuzzerLoop.cpp
 @@ -275,7 +275,7 @@ NO_SANITIZE_MEMORY
  void Fuzzer::AlarmCallback() {
