@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ukbgene_linkset.tar) = 4fd2ab4ac29a64615ad9e3f50363d79097baf62e
+RMD160 (ukbgene_linkset.tar) = a310928fcbdad9811fbedb20d556f3140cda098d
+SHA512 (ukbgene_linkset.tar) = ef49e29b3265231f16eb8471758158bff25a2f3ddbac0095f86636a19cefa6c3a68daf7b379635a62324c4d028ba3af856e0d79eb6f669ab1a279a6e55a31c2d
+Size (ukbgene_linkset.tar) = 788480 bytes
+SHA1 (patch-Makefile) = 690e389a75df512ee5c698fa3132bb7beaf2c01e

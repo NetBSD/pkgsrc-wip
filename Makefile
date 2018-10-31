@@ -1967,6 +1967,7 @@ SUBDIR+=	linux-module-init-tools
 SUBDIR+=	linux-modutils
 SUBDIR+=	linux-modutils-old
 SUBDIR+=	linux-nfs-utils
+SUBDIR+=	linux-ukbgene
 SUBDIR+=	linux-wlan-ng
 SUBDIR+=	linux24-kernel
 SUBDIR+=	linux24-kernel-headers
