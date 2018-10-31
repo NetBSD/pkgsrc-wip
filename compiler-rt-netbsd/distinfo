@@ -16,6 +16,5 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cc) = 4689
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = e8a0d9389f3ddd41f911e00f8ff62e214441296d
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = 7c16ba866352f3a695a544094ca46f0f561c43c5
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.h) = 9f535e84c3e1ab5704b11e388ac240439a9900d6
-SHA1 (patch-lib_scudo_scudo__platform.h) = 68f33b18d913984c3a459597ef62f63d36184ca9
 SHA1 (patch-lib_tsan_CMakeLists.txt) = 4d8f8081ff2a3249565df26e67a35b5b3509e0b0
 SHA1 (patch-lib_xray_tests_CMakeLists.txt) = bb52916184d8e829395dd40d6d1b8b7eac40da92
