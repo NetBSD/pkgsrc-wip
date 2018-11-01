@@ -275,6 +275,7 @@ SUBDIR+=	bosh
 SUBDIR+=	bowtie
 SUBDIR+=	bowtie2
 SUBDIR+=	bpcscripts
+SUBDIR+=	breakpad
 SUBDIR+=	breeze
 SUBDIR+=	breeze-gtk
 SUBDIR+=	breeze-kde4
