@@ -42,6 +42,7 @@ SUBDIR+=	R-bigmemory.sri
 SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-bnlearn
 SUBDIR+=	R-cellranger
+SUBDIR+=	R-cubature
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-entropy
 SUBDIR+=	R-foreach
