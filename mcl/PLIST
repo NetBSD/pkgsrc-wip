@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/01 20:46:00 jihbed Exp $
+@comment $NetBSD$
 bin/clm
 bin/clmformat
+bin/clxdo
 bin/mcl
 bin/mclcm
 bin/mclpipeline
@@ -19,8 +20,10 @@ man/man1/clmdist.1
 man/man1/clmformat.1
 man/man1/clmimac.1
 man/man1/clminfo.1
+man/man1/clminfo2.1
 man/man1/clmmate.1
 man/man1/clmmeet.1
+man/man1/clmoptics.1
 man/man1/clmorder.1
 man/man1/clmresidue.1
 man/man1/clmvol.1
@@ -62,10 +65,14 @@ share/doc/mcl/clmimac.html
 share/doc/mcl/clmimac.ps
 share/doc/mcl/clminfo.html
 share/doc/mcl/clminfo.ps
+share/doc/mcl/clminfo2.html
+share/doc/mcl/clminfo2.ps
 share/doc/mcl/clmmate.html
 share/doc/mcl/clmmate.ps
 share/doc/mcl/clmmeet.html
 share/doc/mcl/clmmeet.ps
+share/doc/mcl/clmoptics.html
+share/doc/mcl/clmoptics.ps
 share/doc/mcl/clmorder.html
 share/doc/mcl/clmorder.ps
 share/doc/mcl/clmprotocols.html
@@ -100,6 +107,7 @@ share/doc/mcl/examples/friends
 share/doc/mcl/examples/fznyy.mci
 share/doc/mcl/examples/fznyy.tab
 share/doc/mcl/examples/honey.mci
+share/doc/mcl/examples/infinity.mci
 share/doc/mcl/examples/lattice.mci
 share/doc/mcl/examples/make-falkner.pl
 share/doc/mcl/examples/matula.mci
