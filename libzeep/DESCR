@@ -1,0 +1,7 @@
+Libzeep was developed to make it easy to create SOAP servers. And since working
+with SOAP means working with XML and no decent C++ XML library existed on my
+radar I've created a full XML library as well.
+The XML part of libzeep consists of a validating parser, a DOM(-like) node
+implementation, an XPath search engine and a XML writer/formatter. The
+validation works based on DOCTYPE definitions, XML schema support will be added
+in a later release.

@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (libzeep-3.0.3.tar.gz) = 3599984075c29ecdd814c46105f12e10079defc9
+RMD160 (libzeep-3.0.3.tar.gz) = 1e7cdac244280225ec0122996fbc6af874dd6a68
+SHA512 (libzeep-3.0.3.tar.gz) = a544fe2af293323de17f91fe89741a7a14480bcc7c4a351816394e7d2f23d5206dabda69864fe70fb61b4ca58d9ef2033a25da4635871e1d3e08f7391633fd7e
+Size (libzeep-3.0.3.tar.gz) = 973481 bytes
+SHA1 (patch-makefile) = bbad894e78fb91f2bed59179c1ec558faa337f2b
+SHA1 (patch-src_preforked-http-server.cpp) = 4502237331d860ae71d0001f28cc5e6fa3ac3902
