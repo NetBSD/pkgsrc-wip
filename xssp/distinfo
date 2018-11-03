@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (xssp-3.0.1.tar.gz) = dd5070de72f55aaaefb9235c37c1332675fb169b
+RMD160 (xssp-3.0.1.tar.gz) = 36768c5b6c3cc5246e745d26c543df066d73d35f
+SHA512 (xssp-3.0.1.tar.gz) = f7edd906884a104b5692ee0fe0e6ba5a7fbe6e5ae018060c1a2743267e0e002eb36000a4bc6319aa75c25e5119f61d5eced71e9b63709ed2b3efd0cc2a2ee660
+Size (xssp-3.0.1.tar.gz) = 168033 bytes
+SHA1 (patch-src_hssp-nt.cpp) = 021e7e67b59a448f3c78c531ade6a87ae2223bb3
+SHA1 (patch-src_mas.h) = 45fd280429e265e5bd756c45037873bfee5f67fd
+SHA1 (patch-src_progress.h) = ee7c4c71971e7f84b35cbd1c3485f284d084cccf

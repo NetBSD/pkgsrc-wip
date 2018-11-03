@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/hsspconv
+bin/mkdssp
+bin/mkhssp
+bin/test_conv
+bin/test_fasta
+bin/test_readpdb

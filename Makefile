@@ -4848,6 +4848,7 @@ SUBDIR+=	xrn
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
+SUBDIR+=	xssp
 SUBDIR+=	xtags
 SUBDIR+=	xtraceroute
 SUBDIR+=	xtrackcad
