@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/msan/msan_interceptors.cc.orig	2018-10-30 08:42:08.000000000 +0000
+--- lib/msan/msan_interceptors.cc.orig	2018-11-04 15:43:06.000000000 +0000
 +++ lib/msan/msan_interceptors.cc
 @@ -34,6 +34,7 @@
  #include "sanitizer_common/sanitizer_libc.h"
@@ -10,33 +10,7 @@ $NetBSD$
  
  #if SANITIZER_NETBSD
  #define fstat __fstat50
-@@ -1070,6 +1071,18 @@ INTERCEPTOR(int, pthread_join, void *th,
- 
- extern char *tzname[2];
- 
-+#if SANITIZER_NETBSD
-+INTERCEPTOR(void, tzset, void) {
-+  ENSURE_MSAN_INITED();
-+  InterceptorScope interceptor_scope;
-+  REAL(tzset)();
-+  if (tzname[0])
-+    __msan_unpoison(tzname[0], REAL(strlen)(tzname[0]) + 1);
-+  if (tzname[1])
-+    __msan_unpoison(tzname[1], REAL(strlen)(tzname[1]) + 1);
-+  return;
-+}
-+#else
- INTERCEPTOR(void, tzset, int fake) {
-   ENSURE_MSAN_INITED();
-   REAL(tzset)(fake);
-@@ -1079,29 +1092,85 @@ INTERCEPTOR(void, tzset, int fake) {
-     __msan_unpoison(tzname[1], REAL(strlen)(tzname[1]) + 1);
-   return;
- }
-+#endif
- 
- struct MSanAtExitRecord {
-   void (*func)(void *arg);
+@@ -1086,23 +1087,78 @@ struct MSanAtExitRecord {
    void *arg;
  };
  
@@ -118,7 +92,7 @@ $NetBSD$
  }
  
  static void BeforeFork() {
-@@ -1521,6 +1590,9 @@ namespace __msan {
+@@ -1522,6 +1578,9 @@ namespace __msan {
  void InitializeInterceptors() {
    static int inited = 0;
    CHECK_EQ(inited, 0);
@@ -128,7 +102,7 @@ $NetBSD$
    InitializeCommonInterceptors();
    InitializeSignalInterceptors();
  
-@@ -1630,6 +1702,7 @@ void InitializeInterceptors() {
+@@ -1631,6 +1690,7 @@ void InitializeInterceptors() {
  
    INTERCEPT_FUNCTION(pthread_join);
    INTERCEPT_FUNCTION(tzset);
