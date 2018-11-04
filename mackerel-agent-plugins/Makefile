@@ -2,6 +2,7 @@
 
 DISTNAME=	mackerel-agent-plugins-0.51.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mackerelio/}
 

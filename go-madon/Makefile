@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	go-madon-2.3.0
+PKGREVISION=	1
 CATEGORIES=	devel net chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=McKael/}
 GITHUB_PROJECT=	madon

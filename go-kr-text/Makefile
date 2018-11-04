@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	go-kr-text-0.1.0
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kr/}
 GITHUB_PROJECT=	text
