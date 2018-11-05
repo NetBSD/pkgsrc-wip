@@ -53,6 +53,7 @@ SUBDIR+=	R-gsl
 SUBDIR+=	R-mclust
 SUBDIR+=	R-mpfr
 SUBDIR+=	R-np
+SUBDIR+=	R-optparse
 SUBDIR+=	R-quantreg
 SUBDIR+=	R-readxl
 SUBDIR+=	R-rematch
