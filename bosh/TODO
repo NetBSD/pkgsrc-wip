@@ -13,3 +13,4 @@
        Reason: "/usr/lib/locale" is expected to exist, but not there on NetBSD
     => Patch added
     => Problem reported upstream
+[X] Patch removed (merged upstream)
