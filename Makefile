@@ -46,6 +46,7 @@ SUBDIR+=	R-cubature
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-entropy
 SUBDIR+=	R-foreach
+SUBDIR+=	R-getopt
 SUBDIR+=	R-gmp
 SUBDIR+=	R-graph
 SUBDIR+=	R-gsl
