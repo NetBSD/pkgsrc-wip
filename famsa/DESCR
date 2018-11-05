@@ -1,0 +1,4 @@
+FAMSA is a progressive algorithm designed for fast and accurate alignment of
+thousands of protein sequences. Its features include the utilization of the
+longest common subsequence measure for determining pairwise similarities, a
+novel method of evaluating gap costs, and a new iterative refinement scheme.

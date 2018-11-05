@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (FAMSA-1.2.4.tar.gz) = 6eeeb08ef9122c4cdfa18001dc5c1dea5c6a5385
+RMD160 (FAMSA-1.2.4.tar.gz) = c9495a684cb5de5326f38d65f20255cf6a5c02b8
+SHA512 (FAMSA-1.2.4.tar.gz) = a192ff4edc8a21a4f97c10b0790168394611d46e4671dabbb8adc3ff9af25a2a8a777600a1eb619a62203e6da39cfe1cee0c26ab0879bb684b1444a270bdab27
+Size (FAMSA-1.2.4.tar.gz) = 3729827 bytes
+SHA1 (patch-core_profile.h) = e28e2c3e55059e8bc357a3f6afeaa7af609cc96e
+SHA1 (patch-makefile) = 9cc7305f62f3570b3b3a68a12776f50d2fc520af
