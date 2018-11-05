@@ -3850,6 +3850,7 @@ SUBDIR+=	py-smell
 SUBDIR+=	py-smi
 SUBDIR+=	py-smmap2
 SUBDIR+=	py-smop
+SUBDIR+=	py-snakemake
 SUBDIR+=	py-snappy
 SUBDIR+=	py-snmp
 SUBDIR+=	py-sode
