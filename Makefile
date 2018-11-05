@@ -3233,6 +3233,7 @@ SUBDIR+=	py-easymodeler
 SUBDIR+=	py-ecos
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-eemeter
+SUBDIR+=	py-eggnog-mapper
 SUBDIR+=	py-eigency
 SUBDIR+=	py-email-reply-parser
 SUBDIR+=	py-embedc
