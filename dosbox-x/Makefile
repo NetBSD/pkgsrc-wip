@@ -1,18 +1,18 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	dosbox-x
-PKGNAME=	dosbox-x-0.82.9
+PKGNAME=	dosbox-x-0.82.10
 DISTNAME=	${GITHUB_TAG}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
-GITHUB_TAG=	dosbox-x-windows-v0.82.9
+GITHUB_TAG=	v0.82.10
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dosbox-x.com/
 COMMENT=	DOSBox with accurate emulation and wide testing
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/dosbox-x-${GITHUB_TAG}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 # dosbox-x uses a modified SDL1 or system SDL2
 CONFIGURE_ARGS+=	--enable-sdl2

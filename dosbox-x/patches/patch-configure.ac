@@ -2,9 +2,26 @@ $NetBSD$
 
 Fix == test in configure script.
 
---- configure.ac.orig	2018-07-01 16:48:05.000000000 +0000
+--- configure.ac.orig	2018-11-04 05:04:23.000000000 +0000
 +++ configure.ac
-@@ -159,14 +159,14 @@ AC_ARG_ENABLE(hx-dos,AC_HELP_STRING([--e
+@@ -168,7 +168,7 @@ CFLAGS=["`echo $CFLAGS' ' | sed -e 's/-O
+ CXXFLAGS=["`echo $CXXFLAGS' ' | sed -e 's/-O[^ ]* //g'`"]
+ 
+ if test x$enable_optimize != xno; then
+-    if test x$enable_emscripten == xyes; then
++    if test x$enable_emscripten = xyes; then
+ 	    CFLAGS="$CFLAGS -Os"
+ 	    CXXFLAGS="$CXXFLAGS -Os"
+     else
+@@ -177,21 +177,21 @@ if test x$enable_optimize != xno; then
+     fi
+ fi
+ 
+-if test x$enable_emscripten == xyes; then
++if test x$enable_emscripten = xyes; then
+ 	AC_DEFINE(C_EMSCRIPTEN,1,[Targeting Emscripten])
+ fi
+ 
  dnl Some stuff for the icon.
  case "$host" in
      *-*-cygwin* | *-*-mingw32*)
@@ -21,25 +38,36 @@ Fix == test in configure script.
      CXXFLAGS="$CXXFLAGS -DFORCE_SDLDRAW"
      AC_DEFINE(C_FORCE_MENU_SDLDRAW,1,[Force SDL drawn menus])
  fi
-@@ -359,7 +359,7 @@ case "$host" in
+@@ -287,7 +287,7 @@ case "$host" in
         ;;
  esac
  
+-if test x$enable_emscripten == xyes; then
++if test x$enable_emscripten = xyes; then
+     CXXFLAGS="$CXXFLAGS"
+ else
+     dnl Some default CPU flags
+@@ -390,8 +390,8 @@ case "$host" in
+ esac
+ fi
+ 
 -AM_CONDITIONAL(MACOSX, test x"$macosx" == x"1")
+-AM_CONDITIONAL(EMSCRIPTEN, test x"$enable_emscripten" == x"yes")
 +AM_CONDITIONAL(MACOSX, test x"$macosx" = x"1")
++AM_CONDITIONAL(EMSCRIPTEN, test x"$enable_emscripten" = x"yes")
  
  dnl The target cpu checks for dynamic cores
  AH_TEMPLATE(C_TARGETCPU,[The type of cpu this target has])
-@@ -497,7 +497,7 @@ fi
+@@ -531,7 +531,7 @@ fi
  dnl FEATURE: xBRZ
  AH_TEMPLATE(C_XBRZ,[Define to 1 to enable XBRZ scaler])
  AC_ARG_ENABLE(xbrz,AC_HELP_STRING([--enable-xbrz],[compile with xBRZ scaler (default yes)]),enable_xbrz=$enableval,enable_xbrz=yes)
 -AM_CONDITIONAL(C_XBRZ, test "x$enable_xbrz" == "xyes")
 +AM_CONDITIONAL(C_XBRZ, test "x$enable_xbrz" = "xyes")
- if test x$enable_xbrz = xyes; then
- AC_DEFINE(C_XBRZ,1)
- fi
-@@ -542,7 +542,7 @@ else
+ if test x$enable_emscripten != xyes; then
+   if test x$enable_xbrz = xyes; then
+     AC_DEFINE(C_XBRZ,1)
+@@ -578,7 +578,7 @@ else
    enable_mt32=no
    AC_MSG_RESULT(no)
  fi 
