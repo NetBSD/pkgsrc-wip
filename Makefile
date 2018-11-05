@@ -3047,6 +3047,7 @@ SUBDIR+=	py-bidict
 SUBDIR+=	py-bigfloat
 SUBDIR+=	py-bintrees
 SUBDIR+=	py-biofrills
+SUBDIR+=	py-biopython
 SUBDIR+=	py-bip
 SUBDIR+=	py-biskit
 SUBDIR+=	py-bitarray
