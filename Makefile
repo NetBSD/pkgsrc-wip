@@ -3247,6 +3247,7 @@ SUBDIR+=	py-epipy
 SUBDIR+=	py-equation
 SUBDIR+=	py-errorhandler
 SUBDIR+=	py-escher
+SUBDIR+=	py-ete3
 SUBDIR+=	py-etk-docking
 SUBDIR+=	py-etmtk
 SUBDIR+=	py-event
