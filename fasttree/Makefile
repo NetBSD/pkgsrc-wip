@@ -17,7 +17,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 
-CFLAGS=		-fopenmp
+CFLAGS=		-fopenmp -DNO_SSE
 
 PORTVERSION=	2.1.10
 
