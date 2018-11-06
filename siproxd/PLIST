@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.7 2013/12/28 15:22:18 imilh Exp $
+@comment $NetBSD$
+lib/siproxd/plugin_codecfilter.la
 lib/siproxd/plugin_defaulttarget.la
 lib/siproxd/plugin_demo.la
+lib/siproxd/plugin_fix_DTAG.la
 lib/siproxd/plugin_fix_bogus_via.la
+lib/siproxd/plugin_fix_fbox_anoncall.la
 lib/siproxd/plugin_logcall.la
 lib/siproxd/plugin_prefix.la
 lib/siproxd/plugin_regex.la
 lib/siproxd/plugin_shortdial.la
+lib/siproxd/plugin_siptrunk.la
+lib/siproxd/plugin_stripheader.la
 lib/siproxd/plugin_stun.la
 sbin/siproxd
 share/examples/siproxd/siproxd.conf.example
 share/examples/siproxd/siproxd_passwd.cfg
+@pkgdir share/doc/siproxd
