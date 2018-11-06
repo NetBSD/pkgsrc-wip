@@ -24,7 +24,7 @@ COMMENT=	Analysis and visualization platform for 'omics data
 LICENSE=	gnu-gpl-v3
 
 DEPENDS=	samtools>0:../../biology/samtools \
-		hmmer>0:../../biology/hmmer \
+		hmmer>0:../../wip/hmmer \
 		FastTree>0:../../wip/fasttree \
 		muscle>0:../../wip/muscle \
 		R>0:../../math/R \
@@ -47,11 +47,10 @@ DEPENDS=	samtools>0:../../biology/samtools \
 		xssp>0:../../wip/xssp \
 		FAMSA>0:../../wip/famsa \
 		R-optparse>0:../../wip/R-optparse \
+		${PYPKGPREFIX}-pysam>0:../../wip/py-pysam \
 		${PYPKGPREFIX}-ete3>0:../../wip/py-ete3 \
 		${PYPKGPREFIX}-eggnog-mapper>0:../../wip/py-eggnog-mapper \
 		${PYPKGPREFIX}-snakemake>0:../../wip/py-snakemake
-
-#		${PYPKGPREFIX}-pysam>0:../../wip/py-pysam \
 
 USE_TOOLS=	bash
 REPLACE_BASH=	anvio/workflows/metagenomics/test/*.sh tests/*.sh tests/*/*.sh
