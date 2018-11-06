@@ -131,7 +131,7 @@ $NetBSD$
  #endif
  
  #if SANITIZER_INTERCEPT_LGAMMA_R
-@@ -7252,6 +7282,1602 @@ INTERCEPTOR(struct __sanitizer_netent *,
+@@ -7252,6 +7282,1588 @@ INTERCEPTOR(struct __sanitizer_netent *,
  #define INIT_NETENT
  #endif
  
@@ -252,20 +252,6 @@ $NetBSD$
 +  COMMON_INTERCEPT_FUNCTION(asysctlbyname);
 +#else
 +#define INIT_SYSCTL
-+#endif
-+
-+#if SANITIZER_INTERCEPT_ATOF
-+INTERCEPTOR(double, atof, char *nptr) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, atof, nptr);
-+  if (nptr) {
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, nptr, REAL(strlen)(nptr) + 1);
-+  }
-+  return REAL(atof)(nptr); // strtof // todo atoi atol
-+}
-+#define INIT_ATOF COMMON_INTERCEPT_FUNCTION(atof)
-+#else
-+#define INIT_ATOF
 +#endif
 +
 +#if SANITIZER_INTERCEPT_FTS
@@ -1734,7 +1720,7 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7427,7 +9053,9 @@ static void InitializeCommonInterceptors
+@@ -7427,7 +9039,9 @@ static void InitializeCommonInterceptors
    INIT_PTHREAD_GETNAME_NP;
    INIT_SINCOS;
    INIT_REMQUO;
@@ -1744,7 +1730,7 @@ $NetBSD$
    INIT_LGAMMA_R;
    INIT_LGAMMAL_R;
    INIT_DRAND48_R;
-@@ -7503,6 +9131,30 @@ static void InitializeCommonInterceptors
+@@ -7503,6 +9117,30 @@ static void InitializeCommonInterceptors
    INIT_TTYENT;
    INIT_PROTOENT;
    INIT_NETENT;

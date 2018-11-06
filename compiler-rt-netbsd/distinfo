@@ -1,21 +1,15 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-SHA1 (patch-CMakeLists.txt) = 1b1dadaae195fd040ebde7428a8af8915c35d2c1
-SHA1 (patch-cmake_Modules_HandleCompilerRT.cmake) = fde0a4b440a257dec40c4f106c2352d5efecceef
 SHA1 (patch-lib_asan_asan__posix.cc) = be7e47c252e30184639f7ed1c98c75a8667fd261
-SHA1 (patch-lib_fuzzer_FuzzerLoop.cpp) = b2e226a0d7b230cc8598a0591ae6f688527c6b2d
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = 2a81399dddc19de5bd51e77ef52b8b5cd61b7dc4
 SHA1 (patch-lib_msan_msan__interceptors.cc) = a5098beb0035b34239c39ee517a554b2b84458d1
 SHA1 (patch-lib_msan_msan__linux.cc) = b5df0f4f5930d7c1681b1ad867c893d01d6e5cf7
-SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 80ba348d0fa17ad408a96c47dcdfa082ad87d482
-SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = 9475c8018dadbc4d865b52a03e43f9eae2011c3e
+SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 56499f43d0c8f318cbbcaa74c3d6240b1996e9b7
+SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = 9d66da7ddda773f8eddd97b54e93fb78421e3fdb
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cc) = 58a1dea6a852a4de20f23cd90900c387fe555dce
-SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = f0733196629f3750a214b801fb24305c86095dd1
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = fe524f686bf0af26dc44759717585248d6de2171
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cc) = 9e4e6625f756f248650f1f17d30b3e0bd6b7559e
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = eb112d60396d34a25ed4d150bf5282bc4265f738
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = 7c16ba866352f3a695a544094ca46f0f561c43c5
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.h) = 9f535e84c3e1ab5704b11e388ac240439a9900d6
-SHA1 (patch-lib_tsan_CMakeLists.txt) = 4d8f8081ff2a3249565df26e67a35b5b3509e0b0
 SHA1 (patch-lib_xray_tests_CMakeLists.txt) = 3e36be790ac2e03a6873d502486f2d4e21a4a1a0
-SHA1 (patch-lib_xray_xray__init.cc) = 734a67f9daef2a675a04e5fe3a5ace0b2d38c991
-SHA1 (patch-test_xray_TestCases_Posix_fork__basic__logging.cc) = fb1af8ec67bcd775614050f39e793020bcb280e4
