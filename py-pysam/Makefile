@@ -17,9 +17,10 @@ LICENSE=	mit
 
 USE_TOOLS+=	gmake
 
-# Succeed in altering link commands, but do not help
-# LDFLAGS+=	-L${PREFIX}/lib/python2.7/site-packages/pysam/libcutils.so
-# LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/python2.7/site-packages/pysam/libcutils.so
+# FIXME: Why is this necessary?
+LDFLAGS+=	-L${DESTDIR}${PREFIX}/lib/python2.7/site-packages/pysam
+# Can probably remove this
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/python2.7/site-packages/pysam
 
 PV=		0.15.1
 
