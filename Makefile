@@ -3007,6 +3007,7 @@ SUBDIR+=	py-aniso8601
 SUBDIR+=	py-anki2-devel
 SUBDIR+=	py-annarchy
 SUBDIR+=	py-antlr3
+SUBDIR+=	py-anvio
 SUBDIR+=	py-aopython
 SUBDIR+=	py-applpy
 SUBDIR+=	py-aqopa
