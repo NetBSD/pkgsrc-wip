@@ -1287,6 +1287,7 @@ SUBDIR+=	higan
 SUBDIR+=	higgsbounds
 SUBDIR+=	hijra
 SUBDIR+=	hlint
+SUBDIR+=	hmmer
 SUBDIR+=	honggfuzz-git
 SUBDIR+=	hoogle
 SUBDIR+=	howdoi
