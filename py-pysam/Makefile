@@ -18,9 +18,8 @@ LICENSE=	mit
 USE_TOOLS+=	gmake
 
 # FIXME: Why is this necessary?
-LDFLAGS+=	-L${DESTDIR}${PREFIX}/lib/python2.7/site-packages/pysam
-# Can probably remove this
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/python2.7/site-packages/pysam
+LDFLAGS+=	-L${DESTDIR}${PREFIX}/${PYSITELIB}/pysam
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PYSITELIB}/pysam
 
 PV=		0.15.1
 
