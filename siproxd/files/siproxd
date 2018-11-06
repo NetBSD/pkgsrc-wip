@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# $NetBSD$
+#
+
+# PROVIDE: siproxd
+# REQUIRE: DAEMON
+# BEFORE:  LOGIN
+
+$_rc_subr_loaded . /etc/rc.subr
+
+name="siproxd"
+rcvar=$name
+command="/usr/pkg/sbin/${name}"
+pidfile="/var/run/${name}/${name}.pid"
+required_files="/etc/pkg/siproxd.conf"
+start_precmd="siproxd_precmd"
+
+siproxd_precmd()
+{
+        rc_flags="-p ${pidfile} $rc_flags"
+
+        local piddir="$(dirname "${pidfile}")"
+        mkdir -p "${piddir}"
+        chown siproxd:siproxd "${piddir}"
+}
+
+load_rc_config $name
+run_rc_command "$1"
