@@ -68,6 +68,7 @@ man/man1/csi.1
 man/man1/feathers.1
 share/chicken/feathers.tcl
 share/chicken/setup.defaults
+share/doc/${PKGNAME}/DEPRECATED
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/manual/Accessing external objects.html

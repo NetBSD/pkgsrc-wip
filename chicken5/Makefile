@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.58 2018/01/01 18:16:36 rillig Exp $
 
-DISTNAME=	chicken-5.0.0rc4
+DISTNAME=	chicken-5.0.0
 CATEGORIES=	lang
-MASTER_SITES=	http://code.call-cc.org/dev-snapshots/2018/10/29/
+MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
