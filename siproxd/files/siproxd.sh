@@ -11,9 +11,9 @@ $_rc_subr_loaded . /etc/rc.subr
 
 name="siproxd"
 rcvar=$name
-command="/usr/pkg/sbin/${name}"
-pidfile="/var/run/${name}/${name}.pid"
-required_files="/etc/pkg/siproxd.conf"
+command="@PREFIX@/sbin/${name}"
+pidfile="@VARBASE@/run/${name}/${name}.pid"
+required_files="@PKG_SYSCONFDIR@/siproxd.conf"
 start_precmd="siproxd_precmd"
 
 siproxd_precmd()
@@ -22,7 +22,7 @@ siproxd_precmd()
 
         local piddir="$(dirname "${pidfile}")"
         mkdir -p "${piddir}"
-        chown siproxd:siproxd "${piddir}"
+        chown @SIPROXD_USER@:@SIPROXD_GROUP@ "${piddir}"
 }
 
 load_rc_config $name

@@ -13,6 +13,13 @@ lib/siproxd/plugin_siptrunk.la
 lib/siproxd/plugin_stripheader.la
 lib/siproxd/plugin_stun.la
 sbin/siproxd
+share/doc/siproxd/FAQ
+share/doc/siproxd/KNOWN_BUGS
+share/doc/siproxd/README
+share/doc/siproxd/RELNOTES
+share/doc/siproxd/RFC3261_compliance.txt
+share/examples/siproxd/sample_asterisk.txt
+share/examples/siproxd/sample_cfg_budgetone.txt
+share/examples/siproxd/sample_cfg_x-lite.txt
 share/examples/siproxd/siproxd.conf.example
 share/examples/siproxd/siproxd_passwd.cfg
-@pkgdir share/doc/siproxd

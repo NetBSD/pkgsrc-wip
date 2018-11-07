@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.23 2013/12/28 14:42:28 imilh Exp $
 
 DISTNAME=	siproxd-0.8.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
@@ -12,16 +13,56 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		VARBASE
+
+SIPROXD_USER?=		siproxd
+SIPROXD_GROUP?=		siproxd
+SIPROXD_HOME?=		${VARBASE}/chroot/${PKGBASE}
+
+PKG_GROUPS=		${SIPROXD_GROUP}
+PKG_USERS=		${SIPROXD_USER}:${SIPROXD_GROUP}
+
+PKG_GECOS.${SIPROXD_USER}= SIP proxy
+PKG_HOME.${SIPROXD_USER}=  ${SIPROXD_HOME}
+
+PKG_GROUPS_VARS+=	SIPROXD_GROUP
+PKG_USERS_VARS+=	SIPROXD_USER
+
+FILES_SUBST+=		SIPROXD_USER=${SIPROXD_USER:Q}
+FILES_SUBST+=		SIPROXD_GROUP=${SIPROXD_GROUP:Q}
+FILES_SUBST+=		SIPROXD_HOME=${SIPROXD_HOME:Q}
+
+RCD_SCRIPTS+=		siproxd
+PKG_SYSCONFSUBDIR=	siproxd
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libosip-prefix=${BUILDLINK_PREFIX.libosip2}
 
-EGDIR=		${PREFIX}/share/examples/siproxd
+DOCDIR=		share/doc/siproxd
+EGDIR=		share/examples/siproxd
 
-CONF_FILES=	${EGDIR}/siproxd.conf.example ${PKG_SYSCONFDIR}/siproxd.conf \
-		${EGDIR}/siproxd_passwd.cfg \
-		${PKG_SYSCONFDIR}/siproxd_passwd.cfg
+CONF_FILES=	${PREFIX}/${EGDIR}/siproxd.conf.example \
+			${PKG_SYSCONFDIR}/siproxd.conf
+CONF_FILES+=	${PREFIX}/${EGDIR}/siproxd_passwd.cfg \
+			${PKG_SYSCONFDIR}/siproxd_passwd.cfg
 
-INSTALLATION_DIRS=	sbin share/examples/siproxd
+INSTALLATION_DIRS=	sbin ${DOCDIR} ${EGDIR}
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=      doc/siproxd.conf.example
+SUBST_MESSAGE.paths=    performing pathname substitutions
+SUBST_VARS.paths=       VARBASE PKG_SYSCONFDIR SIPROXD_USER SIPROXD_HOME
+
+post-install:
+.for ff in README RELNOTES doc/FAQ doc/KNOWN_BUGS doc/RFC3261_compliance.txt
+	${INSTALL_DATA} ${WRKSRC}/${ff} ${DESTDIR}${PREFIX}/${DOCDIR}/
+.endfor
+.for ff in sample_asterisk.txt sample_cfg_budgetone.txt sample_cfg_x-lite.txt
+	${INSTALL_DATA} ${WRKSRC}/doc/${ff} ${DESTDIR}${PREFIX}/${EGDIR}/
+.endfor
 
 .include "../../mk/pthread.buildlink3.mk"
 PTHREAD_LIBS+=	${PTHREAD_LDFLAGS}
