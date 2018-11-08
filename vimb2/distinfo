@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/04/12 13:25:11 leot Exp $
+
+SHA1 (vimb-2.12.tar.gz) = 57212aa4c283ad275a4dc3d2ecec7d4c4ae688d4
+RMD160 (vimb-2.12.tar.gz) = 5d9ab7e53f562e9eef1797d720d7e3b3fb6a4db7
+SHA512 (vimb-2.12.tar.gz) = cd11bc73c089c5e9fa2d2c9cd1a3bc5e7ac8a79cbf7261b7f9f89316cf656669419914b1a0aac023020c4e37842045aa6f7dfe971368a682ff662a9412577839
+Size (vimb-2.12.tar.gz) = 132958 bytes
