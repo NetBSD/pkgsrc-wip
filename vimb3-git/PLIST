@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/vimb3
-lib/vimb/webext_main.so
-man/man1/vimb3.1
-share/applications/vimb3.desktop
