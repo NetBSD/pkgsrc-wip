@@ -54,7 +54,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=      doc/siproxd.conf.example
 SUBST_MESSAGE.paths=    performing pathname substitutions
-SUBST_VARS.paths=       VARBASE PKG_SYSCONFDIR SIPROXD_USER SIPROXD_HOME
+SUBST_VARS.paths=       VARBASE PREFIX PKG_SYSCONFDIR SIPROXD_USER SIPROXD_HOME
 
 post-install:
 .for ff in README RELNOTES doc/FAQ doc/KNOWN_BUGS doc/RFC3261_compliance.txt

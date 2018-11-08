@@ -1,6 +1,4 @@
 TODOs for wip/siproxd
 
-o install files from doc
 o optionally install html and pdf documentation (siproxd-doc package?)
-o patch paths in siproxd.conf.sample
-o provide siproxd rc.d file
+o run in chroot
