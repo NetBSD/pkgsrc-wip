@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.21 2015/08/22 12:26:27 leot1990 Exp $
 
-DISTNAME=	vimb-3.2.0
-PKGNAME=	${DISTNAME:S/vimb/vimb3/}
+DISTNAME=	vimb-3.3.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
@@ -26,12 +25,6 @@ MAKE_FLAGS+=	MANPREFIX="${DESTDIR}${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	RUNPREFIX="${PREFIX}"
 
 TEST_TARGET=	test
-
-# Avoid conflicts with www/vimb
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/vimb ${DESTDIR}${PREFIX}/bin/vimb3
-	${MV} ${DESTDIR}${PREFIX}/share/applications/vimb.desktop ${DESTDIR}${PREFIX}/share/applications/vimb3.desktop
-	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vimb.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vimb3.1
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
