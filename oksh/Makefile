@@ -1,14 +1,16 @@
 # $NetBSD$
 
 DISTNAME=	oksh-20181009
-CATEGORIES=	wip
-MASTER_SITES=	https://github.com/ibara/oksh/releases/download/20181009/
+CATEGORIES=	shells
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ibara/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@pkgsrc.org
 HOMEPAGE=	https://github.com/ibara/oksh/
 COMMENT=	Portable OpenBSD ksh(1)
-WRKSRC=		${WRKDIR}/${PKGNAME}
 LICENSE=	original-bsd
+
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
 
