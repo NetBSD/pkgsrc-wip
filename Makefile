@@ -4121,7 +4121,6 @@ SUBDIR+=	regexxer
 SUBDIR+=	reinteract
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
-SUBDIR+=	renameutils
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	resin
