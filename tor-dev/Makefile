@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tor-0.3.5.3-alpha
+DISTNAME=	tor-0.3.5.4-alpha
 PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 PKGREVISION=	1
 CATEGORIES=	net security
