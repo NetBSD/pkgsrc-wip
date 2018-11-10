@@ -1206,6 +1206,7 @@ SUBDIR+=	gsmartcontrol
 SUBDIR+=	gst-inspector
 SUBDIR+=	gst-plugins0.10-farsight
 SUBDIR+=	gst-plugins1-aalib
+SUBDIR+=	gst-plugins1-dash
 SUBDIR+=	gst-plugins1-fluidsynth
 SUBDIR+=	gst-plugins1-hls
 SUBDIR+=	gst-plugins1-modplug
