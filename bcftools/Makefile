@@ -28,7 +28,7 @@ REPLACE_PYTHON=	misc/*.py
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
-SUBST_SED.version+=	-e 's|@PV@|${PV}|g'
+SUBST_SED.version+=	-e 's|@PORTVERSION@|${PV}|g'
 SUBST_FILES.version+=	${WRKSRC}/configure.ac
 
 USE_LANGUAGES=	c c++
