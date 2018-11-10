@@ -1,7 +1,0 @@
-@comment $NetBSD$
-bin/xrn
-lib/X11/app-defaults/XRn
-man/man1/xrn.1
-share/doc/xrn/COMMON-PROBLMS
-share/doc/xrn/COPYRIGHT
-share/doc/xrn/CREDITS
