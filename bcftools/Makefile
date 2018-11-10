@@ -20,7 +20,7 @@ GITHUB_TAG=	${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.htslib.org/
-COMMENT=	Tools for manipulating next-generation sequencing data
+COMMENT=	Tools for manipulating BCF (binary VCF) sequence files
 LICENSE=	mit
 
 REPLACE_PERL=	misc/*.pl misc/plot-vcfstats test/test.pl
