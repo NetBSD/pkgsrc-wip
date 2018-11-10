@@ -1,0 +1,26 @@
+swi-prolog*: Update lang/swi-prolog* to 7.6.4
+
+pkgsrc changes:
+- TODO
+
+Changes:
+7.6.x
+-----
+Major release. Multi-argument indexing, better multi-threaded
+performance, threaded global GC (atoms and clauses), mode-directed
+tabling, restored same expand and directive semantics for initial
+load and reloading files, cleaner initializatin and command line
+handling.
+
+7.4.x
+-----
+Major release. More robust and better scalable support for multi-core
+hardware, tabling, engines. Many enhancements to the RDF, HTTP and
+SSL libraries. This is the first release licensed under the Simplified
+BSD (BSD-2) license.
+
+7.2.x
+-----
+Major release, providing native key-value support by means of dicts,
+native strings using "hello world" syntax, web-accessible Prolog
+engines (Pengines) and a high level SQL library called CQL.
