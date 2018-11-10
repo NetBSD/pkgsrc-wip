@@ -17,9 +17,11 @@ MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	tbl
 TOOL_DEPENDS+=	smake-[0-9]*:../../wip/smake
 SMAKE=		MAKEFLAGS= smake
-MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q} INS_BASE=${PREFIX:Q} DEFMANBASE=. MANDIR=${PKGMANDIR:Q}
+MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
 MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
+
+.include "../../mk/bsd.prefs.mk"
 
 # The default location is /etc/default/star
 # We patch the documentation appropriately. Additionally, we also provide a
@@ -28,7 +30,7 @@ STAR_CONF?=	${PKG_SYSCONFDIR}/star
 
 .if ${STAR_CONF} != "/etc/default/star"
 MESSAGE_SRC+=	MESSAGE.star
-MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
+MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV}
 MESSAGE_SUBST+=	STAR_CONF=${STAR_CONF:Q}
 .endif
 
@@ -42,8 +44,6 @@ SUBST_FILES.fix+=	star/star.dfl
 SUBST_FILES.fix+=	star/defaults.c
 SUBST_SED.fix=		-e "s,/etc/default/star,${STAR_CONF},g"
 SUBST_MESSAGE.fix=	Replace defaults file paths.
-
-.include "../../mk/bsd.prefs.mk"
 
 # Shared platform specific code for schilytools (provided by smake package)
 .include "../../wip/smake/Makefile.common"
