@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/wyeb
+lib/wyebrowser/ext.so
+share/applications/wyeb.desktop
+share/pixmaps/wyeb.png
