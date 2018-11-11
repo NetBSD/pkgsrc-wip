@@ -25,6 +25,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/wyeb.desktop ${DESTDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/wyeb.png ${DESTDIR}${PREFIX}/share/pixmaps/
 
+# only used in main configuration file, should these dependencies be optional?
+DEPENDS+=	p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
+.include "../../textproc/discount/buildlink3.mk"
+
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
