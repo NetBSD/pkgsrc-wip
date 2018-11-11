@@ -1,6 +1,6 @@
 $NetBSD: distinfo, v 0.99 2017/05/11 18:41:32 uki Exp $
 
-SHA1 (basepkg-1.6.1.tar.gz) = 09df5099de452d8c0e5b0a368402ed10c5dbd581
-RMD160 (basepkg-1.6.1.tar.gz) = fc49286d9a37cd8327e27b54a8c69534134644c5
-SHA512 (basepkg-1.6.1.tar.gz) = 1d5c77f20fa84befd66558942a2d7cda5e689f8cb88439441d47a38adefe66ec453f5efcee8f25695c4b3add993578007b1ffe09f01f145aac0ca2741ebc5f71
-Size (basepkg-1.6.1.tar.gz) = 608928 bytes
+SHA1 (basepkg-1.6.2.tar.gz) = f194adc312d08d0529f0b6e867070c0c04f34e4a
+RMD160 (basepkg-1.6.2.tar.gz) = 513c862d1f170b079aef760d9c5ec547b717e983
+SHA512 (basepkg-1.6.2.tar.gz) = 38cfa35aca78e44110d74a82c5dc7dba5075289fec342181a41fb25fff85d8cb965c877dcc228c409e982e57fba68624328133ea8a893438aff284b172276147
+Size (basepkg-1.6.2.tar.gz) = 647736 bytes
