@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	gnome-control-center-3.16.3
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/3.16/}
 EXTRACT_SUFX=	.tar.xz

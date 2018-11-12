@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	gnome-todo-3.20.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-todo/3.20/}
 EXTRACT_SUFX=	.tar.xz

@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	zenity-3.18.1
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/3.18/}
 EXTRACT_SUFX=	.tar.xz

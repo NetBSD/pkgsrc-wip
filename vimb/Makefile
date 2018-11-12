@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	vimb-3.3.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 

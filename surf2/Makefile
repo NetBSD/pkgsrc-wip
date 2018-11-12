@@ -2,6 +2,7 @@
 
 DISTNAME=	surf-2.0
 PKGNAME=	${DISTNAME:S/surf/surf2/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://dl.suckless.org/surf/
 
