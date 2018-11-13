@@ -44,6 +44,7 @@ SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-bnlearn
 SUBDIR+=	R-cellranger
 SUBDIR+=	R-cubature
+SUBDIR+=	R-data.table
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-entropy
 SUBDIR+=	R-foreach
