@@ -6,6 +6,7 @@
 # PROVIDE: siproxd
 # REQUIRE: DAEMON
 # BEFORE:  LOGIN
+# KEYWORD: chrootdir
 
 $_rc_subr_loaded . /etc/rc.subr
 
@@ -21,8 +22,19 @@ siproxd_precmd()
         rc_flags="-p ${pidfile} $rc_flags"
 
         local piddir="$(dirname "${pidfile}")"
-        mkdir -p "${piddir}"
-        chown @SIPROXD_USER@:@SIPROXD_GROUP@ "${piddir}"
+
+        # Make sure @VARBASE@/run/siproxd exists
+        mkdir -p "${siproxd_chrootdir}${piddir}"
+	chown @SIPROXD_USER@:@SIPROXD_GROUP@ "${siproxd_chrootdir}${piddir}"
+
+	# If chrooted, provide a link to the pid and registrations file
+	# Note: siproxd chroots itself, if so configured
+
+        if [ -n "${siproxd_chrootdir}" ]; then
+	        ln -snf "${siproxd_chrootdir}${piddir}" "${piddir}"
+	fi
+
+        return 0
 }
 
 load_rc_config $name

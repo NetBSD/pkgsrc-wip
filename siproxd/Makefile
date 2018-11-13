@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.23 2013/12/28 14:42:28 imilh Exp $
 
 DISTNAME=	siproxd-0.8.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
@@ -19,7 +19,7 @@ BUILD_DEFS+=		VARBASE
 
 SIPROXD_USER?=		siproxd
 SIPROXD_GROUP?=		siproxd
-SIPROXD_HOME?=		${VARBASE}/chroot/${PKGBASE}
+SIPROXD_HOME?=		${VARBASE}/chroot/siproxd
 
 PKG_GROUPS=		${SIPROXD_GROUP}
 PKG_USERS=		${SIPROXD_USER}:${SIPROXD_GROUP}
@@ -34,19 +34,23 @@ FILES_SUBST+=		SIPROXD_USER=${SIPROXD_USER:Q}
 FILES_SUBST+=		SIPROXD_GROUP=${SIPROXD_GROUP:Q}
 FILES_SUBST+=		SIPROXD_HOME=${SIPROXD_HOME:Q}
 
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+
 RCD_SCRIPTS+=		siproxd
 PKG_SYSCONFSUBDIR=	siproxd
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libosip-prefix=${BUILDLINK_PREFIX.libosip2}
 
-DOCDIR=		share/doc/siproxd
-EGDIR=		share/examples/siproxd
+DOCDIR=			share/doc/siproxd
+EGDIR=			share/examples/siproxd
 
-CONF_FILES=	${PREFIX}/${EGDIR}/siproxd.conf.example \
-			${PKG_SYSCONFDIR}/siproxd.conf
-CONF_FILES+=	${PREFIX}/${EGDIR}/siproxd_passwd.cfg \
-			${PKG_SYSCONFDIR}/siproxd_passwd.cfg
+CONF_FILES=		${PREFIX}/${EGDIR}/siproxd.conf.example \
+				${PKG_SYSCONFDIR}/siproxd.conf
+CONF_FILES+=		${PREFIX}/${EGDIR}/siproxd_passwd.cfg \
+				${PKG_SYSCONFDIR}/siproxd_passwd.cfg
+
+OWN_DIRS+=		${SIPROXD_HOME}
 
 INSTALLATION_DIRS=	sbin ${DOCDIR} ${EGDIR}
 
@@ -65,8 +69,8 @@ post-install:
 .endfor
 
 .include "../../mk/pthread.buildlink3.mk"
+# siproxd's configure does not check for PTHREAD_LDFLAGS
 PTHREAD_LIBS+=	${PTHREAD_LDFLAGS}
-# needed since siproxd's configure does not check for PTHREAD_LDFLAGS
 
 .include "../../devel/libosip/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"

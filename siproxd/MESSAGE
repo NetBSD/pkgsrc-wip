@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD$
+
+To run siproxd chrooted on NetBSD, in ${PKG_SYSCONFDIR}/siproxd.conf
+set 'chrootjail', and in /etc/rc.conf set 'siproxd_chroot' accordingly.
+
+===========================================================================
