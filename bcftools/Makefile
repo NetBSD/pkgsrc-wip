@@ -56,7 +56,7 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/
 	${RMDIR} ${DESTDIR}${PREFIX}/bin/samtools_misc/
 
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
