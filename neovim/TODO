@@ -1,2 +1,6 @@
 - _FORTFIY_SOURCE should not be redefined! Investigate why it is redefined and
   if possible adjust it in order to avoid a lot of noise in the build output.
+- Probably more dependencies are needed (despite it seems it run fine):
+   lua-bitopt, lua-busted
+ (According: <https://packages.debian.org/sid/source/neovim>, via:
+  <https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites>)
