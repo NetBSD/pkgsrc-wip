@@ -1,0 +1,2 @@
+- _FORTFIY_SOURCE should not be redefined! Investigate why it is redefined and
+  if possible adjust it in order to avoid a lot of noise in the build output.

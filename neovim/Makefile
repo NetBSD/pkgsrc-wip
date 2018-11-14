@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	neovim-0.2.2
+DISTNAME=	neovim-0.3.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,15 +17,14 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
-
 # should follow the LuaJIT API compatibility
 LUA_VERSION_REQD=	51
 
-DEPENDS+=	${LUA_PKGPREFIX}-MessagePack-[0-9]*:../../wip/lua-MessagePack
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	${LUA_PKGPREFIX}-mpack-[0-9]*:../../wip/lua-mpack
+
+post-extract:
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/jemalloc/buildlink3.mk"

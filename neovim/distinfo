@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (neovim-0.2.2.tar.gz) = 84a3c38e82f94725366f1423af85c78867d2ec25
-RMD160 (neovim-0.2.2.tar.gz) = fb2a0f232deafc02fa348513c4c76a0e02b421ca
-SHA512 (neovim-0.2.2.tar.gz) = 5609defe86ac98356f1b9ae9adc6049bb4df920a9a2ae3104f761d52d4dd54cbc84d2596231595dd9b0aa97201fef2121e6c5c86a19267ab6b871dbf4b568209
-Size (neovim-0.2.2.tar.gz) = 8325879 bytes
+SHA1 (neovim-0.3.1.tar.gz) = 2438945dff619f86543d15f8ff92eb958ddd23ea
+RMD160 (neovim-0.3.1.tar.gz) = 2de598d87f5b89ab440f17bfb084d078c8b44bb9
+SHA512 (neovim-0.3.1.tar.gz) = 42c541608509dc0335203ee1c008045f0eaeebce8e18dffc554ab22a029da700bba9b8c721bd9d68337ddb4a56f8cf034fad2a3eb88d36baf8295e6648fce506
+Size (neovim-0.3.1.tar.gz) = 8937900 bytes
