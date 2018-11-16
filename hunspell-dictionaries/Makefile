@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	hunspell-dictionaries-1.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs textproc
 MASTER_SITES=	# blank
 DISTFILES=	# empty

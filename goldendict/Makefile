@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	goldendict
 DISTNAME=	goldendict-1.5.0rc2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	-https://github.com/${GITHUB_PROJECT}/${DIST_SUBDIR}/archive/1.5.0-RC2.tar.gz
 DIST_SUBDIR=	${GITHUB_PROJECT}

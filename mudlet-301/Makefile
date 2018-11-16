@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	Mudlet-3.0.1
+PKGREVISION=	1
 CATEGORIES=	wip
 MASTER_SITES=	https://www.mudlet.org/wp-content/files/
 EXTRACT_SUFX=	.tar.xz
