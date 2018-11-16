@@ -3,9 +3,9 @@ $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 SHA1 (patch-lib_asan_asan__posix.cc) = be7e47c252e30184639f7ed1c98c75a8667fd261
 SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = 2a81399dddc19de5bd51e77ef52b8b5cd61b7dc4
 SHA1 (patch-lib_msan_msan__linux.cc) = b5df0f4f5930d7c1681b1ad867c893d01d6e5cf7
-SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 9b231748b4e1f97dc9b96d5f9dd4106fee4883cb
+SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = 63af4752c6696475ada66c9c40c425a2a8fbeee3
 SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = 845a516a43bbaa82b2522c395965fd8f64e09bdb
-SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = 7c08be2280466995e8ba8ff42e804c11ff2f4b82
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = 71136713c3a88b5d21bbf601adce810223915a14
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cc) = 9e4e6625f756f248650f1f17d30b3e0bd6b7559e
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = eb112d60396d34a25ed4d150bf5282bc4265f738
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = 7c16ba866352f3a695a544094ca46f0f561c43c5

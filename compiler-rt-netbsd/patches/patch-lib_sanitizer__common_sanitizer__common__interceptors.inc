@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-11-07 20:58:31.924162314 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-11-16 20:22:47.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -77,6 +77,11 @@
  #define ctime __ctime50
@@ -12,18 +12,17 @@ $NetBSD$
 +#define fts_read __fts_read60
 +#define fts_set __fts_set60
  #define getitimer __getitimer50
+ #define getmntinfo __getmntinfo13
  #define getpwent __getpwent50
- #define getpwnam __getpwnam50
-@@ -111,6 +116,8 @@
+@@ -112,6 +117,7 @@
  #define times __times13
  #define wait3 __wait350
  #define wait4 __wait450
-+#define getmntinfo __getmntinfo13
 +#define mount __mount50
  extern const unsigned short *_ctype_tab_;
  extern const short *_toupper_tab_;
  extern const short *_tolower_tab_;
-@@ -3077,17 +3084,28 @@ INTERCEPTOR(int, sendmmsg, int fd, struc
+@@ -3078,17 +3084,28 @@ INTERCEPTOR(int, sendmmsg, int fd, struc
  #endif
  
  #if SANITIZER_INTERCEPT_GETPEERNAME
@@ -61,7 +60,7 @@ $NetBSD$
    return res;
  }
  #define INIT_GETPEERNAME COMMON_INTERCEPT_FUNCTION(getpeername);
-@@ -4257,7 +4275,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
+@@ -4258,7 +4275,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
  #endif
  
  #if SANITIZER_INTERCEPT_STATVFS
@@ -70,8 +69,8 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7264,6 +7282,1588 @@ INTERCEPTOR(struct __sanitizer_netent *,
- #define INIT_NETENT
+@@ -7298,6 +7315,1553 @@ INTERCEPTOR(void, mi_vector_hash, const 
+ #define INIT_MI_VECTOR_HASH
  #endif
  
 +#if SANITIZER_INTERCEPT_SYSCTL
@@ -714,26 +713,7 @@ $NetBSD$
 +#define INIT_VIS
 +#endif
 +
-+#if SANITIZER_INTERCEPT_GETMNTINFO
-+INTERCEPTOR(int, getmntinfo, void **mntbufp, int flags) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, getmntinfo, mntbufp, flags);
-+  int cnt = REAL(getmntinfo)(mntbufp, flags);
-+  if (cnt > 0 && mntbufp) {
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, mntbufp, sizeof(void *));
-+    if (*mntbufp)
-+      COMMON_INTERCEPTOR_WRITE_RANGE(ctx, *mntbufp, cnt * struct_statvfs_sz);
-+  }
-+  return cnt;
-+}
-+
-+#define INIT_GETMNTINFO COMMON_INTERCEPT_FUNCTION(getmntinfo)
-+#else
-+#define INIT_GETMNTINFO
-+#endif
-+
 +#if SANITIZER_INTERCEPT_SHA1
-+
 +INTERCEPTOR(void, SHA1Init, void *context) {
 +  void *ctx;
 +  COMMON_INTERCEPTOR_ENTER(ctx, SHA1Init, context);
@@ -1640,35 +1620,18 @@ $NetBSD$
 +#define INIT_SETVBUF
 +#endif
 +
-+#if SANITIZER_INTERCEPT_MI_VECTOR_HASH
-+INTERCEPTOR(void, mi_vector_hash, const void *key, SIZE_T len, u32 seed,
-+            u32 hashes[3]) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, mi_vector_hash, key, len, seed, hashes);
-+  if (key)
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, key, len);
-+  REAL(mi_vector_hash)(key, len, seed, hashes);
-+  if (hashes)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, hashes, sizeof(hashes[0]) * 3);
-+}
-+#define INIT_MI_VECTOR_HASH COMMON_INTERCEPT_FUNCTION(mi_vector_hash)
-+#else
-+#define INIT_MI_VECTOR_HASH
-+#endif
-+
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7517,6 +9117,29 @@ static void InitializeCommonInterceptors
-   INIT_TTYENT;
-   INIT_PROTOENT;
+@@ -7553,6 +9117,27 @@ static void InitializeCommonInterceptors
    INIT_NETENT;
+   INIT_GETMNTINFO;
+   INIT_MI_VECTOR_HASH;
 +  INIT_SYSCTL;
 +  INIT_FTS;
 +  INIT_REGEX;
 +  INIT_STRTONUM;
 +  INIT_VIS;
-+  INIT_GETMNTINFO;
 +  INIT_SHA1;
 +  INIT_MD2;
 +  INIT_MD4;
@@ -1685,7 +1648,6 @@ $NetBSD$
 +  INIT_SHA2;
 +  INIT_GETCHAR;
 +  INIT_SETVBUF;
-+  INIT_MI_VECTOR_HASH;
  
    INIT___PRINTF_CHK;
  }
