@@ -2,10 +2,10 @@ swi-prolog*: Update lang/swi-prolog* to 7.6.4
 
 pkgsrc changes:
  - Add patches/patch-src_os_pl-files.c to avoid overlapping `src'
-   and `dst' in srtcpy(3).  It is an undefined behaviour and it lead to build
-   issue in swi-prolog-packages on platforms that used SSP.
- - No longer readline dependency for swi-prolog-lite.
-   The readline functionality are now provided as a package via
+   and `dst' in srtcpy(3).  It is an undefined behaviour and it leads to build
+   issue in swi-prolog-packages on platforms that uses SSP.
+ - readline dependency is no longer needed for swi-prolog-lite.
+   The readline functionality is now provided as a package via
    swi-prolog-packages.
  - Inject CFLAGS via COFLAGS and pass -fPIC via CMFLAGS so that
    swi-prolog-jpl will link
