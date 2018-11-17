@@ -4,7 +4,7 @@ DISTNAME=	chicken-5.0.0
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 
-MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.call-cc.org/
 COMMENT=	Scheme to C compiler, handling R5RS
 LICENSE=	modified-bsd
