@@ -1,6 +1,20 @@
-chicken: Update lang/chicken to 5.0.0
+chicken5: Import chicken-5.0.0 as lang/chicken5
 
-Changes:
+CHICKEN is a Scheme-to-C compiler supporting most of the language
+features as defined in the Revised^5 Report on Scheme.  CHICKEN
+generates quite portable C code, and files compiled by it (including
+itself) should work without any changes on most platforms.
+
+The whole package is distributed under a BSD license and as such free
+to use and modify as long as you adhere to its terms (see the manual).
+Linkage to C modules and C-library functions is straightforward, so
+it's easy to access C from Scheme.  Compiled code can be embedded into
+existing C programs without problems.  The generated code supports
+full tail-recursion, first-class continuations, multiple values and
+dynamic-wind.
+
+
+Changes since chicken-4.13.0:
 5.0.0
 -----
 - Runtime system
