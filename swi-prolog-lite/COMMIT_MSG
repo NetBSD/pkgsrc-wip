@@ -1,7 +1,17 @@
 swi-prolog*: Update lang/swi-prolog* to 7.6.4
 
 pkgsrc changes:
-- TODO
+ - Add patches/patch-src_os_pl-files.c to avoid overlapping `src'
+   and `dst' in srtcpy(3).  It is an undefined behaviour and it lead to build
+   issue in swi-prolog-packages on platforms that used SSP.
+ - No longer readline dependency for swi-prolog-lite.
+   The readline functionality are now provided as a package via
+   swi-prolog-packages.
+ - Inject CFLAGS via COFLAGS and pass -fPIC via CMFLAGS so that
+   swi-prolog-jpl will link
+ - Add patches/patch-src_pl-rsort.c to use FreeBSD qsort_r(3)
+   instead of using nested functions. This is probably more portable
+   and has less problems (e.g. does no need for PaX MPROTECT).
 
 Changes:
 7.6.x
