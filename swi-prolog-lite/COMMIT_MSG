@@ -34,3 +34,9 @@ BSD (BSD-2) license.
 Major release, providing native key-value support by means of dicts,
 native strings using "hello world" syntax, web-accessible Prolog
 engines (Pengines) and a high level SQL library called CQL.
+
+
+Please note that this is just a summary of the most important changes,
+for more information please give a look to:
+
+ <http://www.swi-prolog.org/ChangeLog?branch=stable>
