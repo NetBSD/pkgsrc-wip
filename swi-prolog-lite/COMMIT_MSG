@@ -11,7 +11,7 @@ pkgsrc changes:
    swi-prolog-jpl will link
  - Add patches/patch-src_pl-rsort.c to use FreeBSD qsort_r(3)
    instead of using nested functions. This is probably more portable
-   and has less problems (e.g. does no need for PaX MPROTECT).
+   and has less problems (e.g. does not need for PaX MPROTECT).
 
 Changes:
 7.6.x
