@@ -2941,6 +2941,7 @@ SUBDIR+=	prozilla
 SUBDIR+=	prpltwtr
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
+SUBDIR+=	psi
 SUBDIR+=	psybnc
 SUBDIR+=	pt-ttf
 SUBDIR+=	ptlib
