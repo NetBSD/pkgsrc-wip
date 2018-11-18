@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.86 2018/07/18 00:06:11 joerg Exp $
 
-DISTNAME=	psi-0.15
-PKGREVISION=	11
+DISTNAME=	psi-1.3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	schnoebe@NetBSD.org
 HOMEPAGE=	http://psi-im.org/
