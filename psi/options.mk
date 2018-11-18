@@ -1,8 +1,8 @@
 # $NetBSD: options.mk,v 1.2 2012/12/07 23:52:09 schnoebe Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.psi
-PKG_SUPPORTED_OPTIONS+=	aspell enchant dbus whiteboard xscreensaver
-PKG_SUGGESTED_OPTIONS+=	aspell enchant
+PKG_SUPPORTED_OPTIONS+=	hunspell enchant
+PKG_SUGGESTED_OPTIONS+=	enchant
 
 # from an idea stolen from ../../misc/openoffice3.
 PSI_SUPPORTED_LANGUAGES=be cs de eo es es-es fr it ja mk pl pt-br ru \
@@ -27,42 +27,18 @@ PLIST.${lang} = yes
 . endif
 .endfor
 
-# enable aspell
-.if !empty(PKG_OPTIONS:Maspell)
-CONFIGURE_ARGS+=	--with-aspell-inc=${BUILDLINK_PREFIX.aspell}/include
-CONFIGURE_ARGS+=	--with-aspell-lib=${BUILDLINK_PREFIX.aspell}/lib
-.include "../../textproc/aspell/buildlink3.mk"
+# enable hunspell
+.if !empty(PKG_OPTIONS:Mhunspell)
+CMAKE_ARGS+=	-DUSE_HUNSPELL:BOOL=TRUE
+.include "../../textproc/hunspell/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-aspell
+CMAKE_ARGS+=	-DUSE_HUNSPELL:BOOL=FALSE
 .endif
 
 # enable enchant
 .if !empty(PKG_OPTIONS:Menchant)
+CMAKE_ARGS+=	-DUSE_ENCHANT:BOOL=TRUE
 .include "../../textproc/enchant2/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-enchant
+CMAKE_ARGS+=	-DUSE_ENCHANT:BOOL=FALSE
 .endif
-
-# enable qdbus
-.if !empty(PKG_OPTIONS:Mdbus)
-.include "../../x11/qt4-qdbus/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-qdbus
-.endif
-
-# enable whiteboarding
-.if !empty(PKG_OPTIONS:Mwhiteboard)
-CONFIGURE_ARGS+=	--enable-whiteboarding
-.endif
-
-# enable xscreensaver extension
-.if empty(PKG_OPTIONS:Mxscreensaver)
-CONFIGURE_ARGS+=	--disable-xss
-.endif
-
-# enable growl
-# .if empty(PKG_OPTIONS:Mgrowl)
-# CONFIGURE_ARGS+=	--with-growl=${BUILDLINK_PREFIX.growl}
-# .else
-# CONFIGURE_ARGS+=	--disable-growl
-# .endif

@@ -15,19 +15,11 @@ DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 DIST_SUBDIR=	${DISTNAME}
 DISTFILES=	${DEFAULT_DISTFILES}
 
+USE_CMAKE=	yes
 USE_TOOLS+=	gmake unzip pkg-config
-USE_LANGUAGES=	c c++03
-USE_LIBTOOL=	yes
-HAS_CONFIGURE=	yes
+USE_LANGUAGES=	c c++11
 
 CONFIG_SHELL=	${SH}
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--qtdir=${QTDIR}
-CONFIGURE_ARGS+=	--with-zlib-inc=${BUILDLINK_PREFIX.zlib}/include
-CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--with-qca-lib=${BUILDLINK_PREFIX.qca2}/lib
-CONFIGURE_ARGS+=	--with-qca-inc=${BUILDLINK_PREFIX.qca2}/include
 
 #
 # a group of scripts that aren't to be installed, and aren't used
@@ -73,7 +65,10 @@ post-install:
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/qca2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.7.0
-.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../security/qca2-qt5/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
