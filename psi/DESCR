@@ -1,0 +1,24 @@
+XMPP is an open, XML based, distributed, Instant Messaging system
+that seeks to be the standard IM network.
+
+Psi is a client for the Jabber system. Written in C++ and based on
+the Qt library, there are versions available for NetBSD, Linux (and
+other flavors of Unix/X11), Microsoft Windows, and Apple MacOS X.
+Psi is released under the GNU General Public License.
+
+Features:
+* Message (ICQ-style) and Chat (AIM-style) modes
+* Drag and drop to send to multiple contacts
+* Full Unicode support
+* Secure connections
+* Saving contact list locally, and server sync on login
+* Icon Themes
+* Agent registration and searching
+* Retrieving and updating User Info
+* Sound support for incoming events
+* Auto-away after a configurable amount of time
+* Tray/dock icon for KDE/GNOME environments
+* Language plugins
+* OpenPGP integration (via GnuPG via security/qca2-gnupg)
+* Groupchat invites / private-messaging
+* File transfer
