@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-11-16 20:22:47.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-11-19 23:14:50.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -77,6 +77,11 @@
  #define ctime __ctime50
@@ -69,8 +69,8 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7298,6 +7315,1553 @@ INTERCEPTOR(void, mi_vector_hash, const 
- #define INIT_MI_VECTOR_HASH
+@@ -7313,6 +7330,1517 @@ INTERCEPTOR(int, setvbuf, __sanitizer_FI
+ #define INIT_SETVBUF
  #endif
  
 +#if SANITIZER_INTERCEPT_SYSCTL
@@ -1584,49 +1584,13 @@ $NetBSD$
 +#define INIT_GETCHAR
 +#endif
 +
-+#if SANITIZER_INTERCEPT_SETVBUF
-+
-+INTERCEPTOR(void, setbuf, __sanitizer_FILE *stream, char *buf) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, setbuf, stream, buf);
-+  REAL(setbuf)(stream, buf);
-+  if (buf)
-+    COMMON_INTERCEPTOR_READ_RANGE(ctx, buf, setvbuf_bufsiz);
-+}
-+
-+INTERCEPTOR(int, setvbuf, __sanitizer_FILE *stream, char *buf, int mode,
-+  SIZE_T size) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, setvbuf, stream, buf, mode, size);
-+  int ret = REAL(setvbuf)(stream, buf, mode, size);
-+  if (buf)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, buf, size);
-+  return ret;
-+}
-+
-+INTERCEPTOR(void, setbuffer, __sanitizer_FILE *stream, char *buf, SIZE_T size) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, setbuffer, stream, buf, size);
-+  REAL(setbuffer)(stream, buf, size);
-+  if (buf)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, buf, size);
-+}
-+
-+#define INIT_SETVBUF \
-+  COMMON_INTERCEPT_FUNCTION(setbuf); \
-+  COMMON_INTERCEPT_FUNCTION(setbuffer); \
-+  COMMON_INTERCEPT_FUNCTION(setvbuf)
-+#else
-+#define INIT_SETVBUF
-+#endif
-+
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7553,6 +9117,27 @@ static void InitializeCommonInterceptors
-   INIT_NETENT;
+@@ -7569,6 +9097,26 @@ static void InitializeCommonInterceptors
    INIT_GETMNTINFO;
    INIT_MI_VECTOR_HASH;
+   INIT_SETVBUF;
 +  INIT_SYSCTL;
 +  INIT_FTS;
 +  INIT_REGEX;
@@ -1647,7 +1611,6 @@ $NetBSD$
 +  INIT_RMD160;
 +  INIT_SHA2;
 +  INIT_GETCHAR;
-+  INIT_SETVBUF;
  
    INIT___PRINTF_CHK;
  }

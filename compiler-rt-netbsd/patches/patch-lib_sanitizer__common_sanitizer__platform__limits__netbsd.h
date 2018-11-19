@@ -26,7 +26,7 @@ $NetBSD$
  struct __sanitizer_ptrace_io_desc {
    int piod_op;
    void *piod_offs;
-@@ -2200,6 +2210,80 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
+@@ -2200,6 +2210,78 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
  
  extern const int si_SEGV_MAPERR;
  extern const int si_SEGV_ACCERR;
@@ -93,8 +93,6 @@ $NetBSD$
 +  u8 entries_s1, entries_s2;
 +  u8 entries_index_s1, entries_index_s2;
 +};
-+
-+extern const int setvbuf_bufsiz;
 +
 +struct __sanitizer_sockaddr_storage {
 +  u8 ss_len;
