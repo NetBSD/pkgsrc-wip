@@ -10,13 +10,13 @@ HOMEPAGE=	http://psi-im.org/
 COMMENT=	Psi XMPP/Jabber Client
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
+#DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
 DIST_SUBDIR=	${DISTNAME}
 DISTFILES=	${DEFAULT_DISTFILES}
 
 USE_CMAKE=	yes
-USE_TOOLS+=	gmake unzip pkg-config
+USE_TOOLS+=	unzip pkg-config
 USE_LANGUAGES=	c c++11
 
 CONFIG_SHELL=	${SH}

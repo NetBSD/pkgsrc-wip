@@ -5,4 +5,5 @@ RMD160 (psi-1.3/psi-1.3.tar.xz) = 699e9c0442efccbd54296978c1e6fc6ed641f40b
 SHA512 (psi-1.3/psi-1.3.tar.xz) = b1b0f8d0c8326d486cb908d7b7de8f48579a2775f4cad0721ebeb646abd35e890712df176dd8676bf6c6089db88e73cf1b0423bd7a0ea0054661bdcea89349fe
 Size (psi-1.3/psi-1.3.tar.xz) = 2143076 bytes
 SHA1 (patch-ad) = 3ee21a1cb17637ed650b6b58e5575c8fa246a4f0
+SHA1 (patch-cmake_modules_FindEnchant.cmake) = 9a6f3746139ab3d6a9269ca86dbeefed966836d8
 SHA1 (patch-iris_src_jdns_src_jdns_jdns__sys.c) = bbbeceda6d4ec9005058da46185af471ca02f86d
