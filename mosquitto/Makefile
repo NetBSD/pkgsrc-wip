@@ -14,6 +14,7 @@ LICENSE=	epl-v1.0
 USE_LANGUAGES+=	c c++
 # Upstream documents that "unix" should use make, but Mac cmake.
 # After asking and receiving no guidance, choose to always use cmake.
+# https://github.com/eclipse/mosquitto/issues/1041
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
@@ -27,8 +28,9 @@ CONF_FILES=	${PREFIX}/share/examples/mosquitto/pskfile.example \
 		${PREFIX}/share/examples/mosquitto/mosquitto.conf \
 		${PREFIX}/share/examples/mosquitto/aclfile.example
 
+# The upstream code uses ldconfig.
+# https://github.com/eclipse/mosquitto/issues/1048
 SUBST_CLASSES+=			ldconfig
-
 SUBST_STAGE.ldconfig=		post-extract
 SUBST_MESSAGE.ldconfig=		Removing non-portable ldconfig invocations
 SUBST_FILES.ldconfig=		lib/CMakeLists.txt \
