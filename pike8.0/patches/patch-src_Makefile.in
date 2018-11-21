@@ -1,0 +1,33 @@
+$NetBSD$
+
+--- src/Makefile.in.orig	2015-12-31 19:50:31.000000000 +0000
++++ src/Makefile.in
+@@ -66,6 +66,8 @@ INSTALLARGS = --new-style
+ YACC=@YACC@
+ YFLAGS=-d -v
+ 
++PAXCTL=/usr/sbin/paxctl
++
+ #
+ # This may be -pg
+ #
+@@ -347,6 +349,9 @@ tpike-real: main.o $(CORE_OBJ) tmodule.o
+ 	$(LD) $(LDFLAGS) main.o $(CORE_OBJ) tmodule.o \
+ 	  `cat modules/linker_options` \
+ 	  $(LIBS) -o tpike@EXEEXT@
++	if [ -x ${PAXCTL} ] ; then \
++	  ${PAXCTL} +m tpike@EXEEXT@ ; \
++	fi
+ 
+ # Only want tpike to exist for use with $(RUNPIKE) in the modules. We
+ # don't want to require it actually being up-to-date.
+@@ -377,6 +382,9 @@ pike@EXEEXT@ pike.lib: main.o $(OBJ) mas
+ 	$(LD) $(LDFLAGS) main.o $(OBJ) \
+ 	  `cat modules/linker_options @STATIC_POST_MODULES_LINKOPTS@` \
+ 	  $(LIBS) @PIKE_ICON_RES@ -o pike
++	if [ -x $(PAXCTL) ] ; then \
++	  $(PAXCTL) +m pike@EXEEXT@ ; \
++	fi
+ 	@MT_FIX_PIKE_EXE@
+ # The dumped modules are removed whenever Pike is relinked since some
+ # of the bytecode methods (e.g. ia32) store absolute addresses to

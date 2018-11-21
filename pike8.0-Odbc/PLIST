@@ -1,0 +1,3 @@
+@comment $NetBSD$
+lib/pike8.0/modules/Odbc.so
+@pkgdir share/doc/pike8.0-Odbc

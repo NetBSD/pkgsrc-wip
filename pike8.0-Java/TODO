@@ -1,0 +1,4 @@
+NetBSD 8.0 enables restrictions on memprotect by default. This causes configure tests 
+for Java to fail because the autoconf-generated test programs won't be permitted to
+make memory pages executable (which the JVM requires). We need to make a patch for the
+configure tests so that paxctl +w conftext is executed before the test program is run.

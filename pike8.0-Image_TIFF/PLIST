@@ -1,0 +1,3 @@
+@comment $NetBSD$
+lib/pike8.0/modules/____Image_TIFF.so
+@pkgdir share/doc/pike8.0-Image_TIFF

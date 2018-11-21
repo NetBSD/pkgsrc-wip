@@ -1,0 +1,18 @@
+# $NetBSD: INSTALL,v 1.2 2006/06/15 20:40:16 jlam Exp $
+NAME=@NAME@
+PIKE=${PREFIX}/bin/${NAME}
+MODULE_DIR=${PREFIX}/lib/${NAME}
+case ${STAGE} in
+  DEINSTALL)
+  ${ECHO} "Removing precompiled modules.";
+  cd ${MODULE_DIR} &&
+  {
+    IFS=" "
+    DIRS="modules 7.8 7.6"
+    for x in ${DIRS} ; do
+      ${ECHO} "Removing precompiled files in $x..."
+      find ${MODULE_DIR}/${x} -type f | ${SED} -n -e '/\.pmod.o$/p' -e '/\.pike.o$/p' | xargs -n 5 rm -f 
+    done
+  } 
+  ;;
+esac
