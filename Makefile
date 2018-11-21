@@ -4493,6 +4493,7 @@ SUBDIR+=	tcptunnel
 SUBDIR+=	tcpxtract
 SUBDIR+=	tctool
 SUBDIR+=	tde
+SUBDIR+=	tealdeer
 SUBDIR+=	teamspeak
 SUBDIR+=	teco
 SUBDIR+=	telepathy-butterfly
