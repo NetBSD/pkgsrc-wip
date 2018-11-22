@@ -2397,6 +2397,7 @@ SUBDIR+=	opendchub
 SUBDIR+=	openerp-server
 SUBDIR+=	openfodder
 SUBDIR+=	openh264
+SUBDIR+=	openjazz
 SUBDIR+=	openjdk8-openjfx-hg
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
