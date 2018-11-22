@@ -1,0 +1,4 @@
+This game, like seemingly every other, suffers from requiring some files to
+be in the same directory (or a path relative to) the main executable.
+
+Will come up with solution like I've got in wip/fallingtime.

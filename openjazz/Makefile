@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	openjazz
-PKGNAME=	openjazz-20180522
+DISTNAME=	openjazz-20180522
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AlisterT/}
 GITHUB_PROJECT=	openjazz
