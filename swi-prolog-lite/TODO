@@ -1,2 +1,6 @@
 - Is patches/patch-packages_Dialect.defs.in really needed?  If yes, why?
   (Please document the patch!)
+- Probably buildlink3.mk should not include ncurses bl3 (no .so are directly
+  provided as part of swi-prolog-lite)
+- Investigate if it is possible/better to use curses.buildlink3.mk (instead of
+  ncurses bl3)
