@@ -495,7 +495,6 @@ SUBDIR+=	cubature
 SUBDIR+=	cufflinks
 SUBDIR+=	cufflinks-2.2.1
 SUBDIR+=	cup
-SUBDIR+=	cursor-dmz-theme
 SUBDIR+=	cutecom
 SUBDIR+=	cvc3
 SUBDIR+=	cvs-syncmail
