@@ -1,0 +1,4 @@
+HAXM is a hardware-assisted virtualization engine (hypervisor) that uses Intel
+Virtualization Technology to speed up IA (x86/ x86_64) emulation on a host
+machine running Windows or macOS. It started as an Android SDK component, but
+has recently transformed itself into a general accelerator for QEMU.
