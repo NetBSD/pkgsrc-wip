@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		vis-0.3
+DISTNAME=		vis-0.5
 PKGNAME=		${DISTNAME:S/vis/vis-editor/}
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sharedir=${PREFIX}/share
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE	# XXX: needed for memrchr(3)
+
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=			fix-paths
@@ -41,7 +43,10 @@ SUBST_SED.fix-paths+=		-e "s,$${SHAREPREFIX}/${DISTBASE},$${SHAREPREFIX}/${PKGBA
 SUBST_CLASSES+=			binary-names
 SUBST_STAGE.binary-names=	pre-build
 SUBST_MESSAGE.binary-names=	Fixing binary names.
-SUBST_FILES.binary-names=	vis-complete vis-open man/*.1 lua/plugins/*.lua vis.c vis.h
+SUBST_FILES.binary-names+=	man/*.1
+SUBST_FILES.binary-names+=	lua/plugins/*.lua
+SUBST_FILES.binary-names+=	main.c vis-menu.c vis-registers.c vis.h 
+SUBST_FILES.binary-names+=	vis-complete vis-open
 SUBST_SED.binary-names=		-e 's,'${DISTBASE}'-\(open\),'${PKGBASE}'-\1,g'
 SUBST_SED.binary-names+=	-e 's,'${DISTBASE}'-\(clipboard\),'${PKGBASE}'-\1,g'
 SUBST_SED.binary-names+=	-e 's,'${DISTBASE}'-\(complete\),'${PKGBASE}'-\1,g'
@@ -64,7 +69,7 @@ post-install:
 
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 .include "../../lang/lua/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../wip/libtermkey/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
