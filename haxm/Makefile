@@ -13,4 +13,13 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/haxm-${GITHUB_TAG}
 
+PKG_FAIL_REASON=	"Build manually and install manually:"
+PKG_FAIL_REASON+=	"cd platforms/netbsd && make"
+PKG_FAIL_REASON+=	"modload ./intel-hax"
+PKG_FAIL_REASON+=	"cd /dev && mknod HAX c 220 0"
+PKG_FAIL_REASON+=	"cd /dev && mkdir hax_vm hax_vm00"
+PKG_FAIL_REASON+=	"cd /dev/hax_vm && mknod vm00 c 222 0"
+PKG_FAIL_REASON+=	"cd /dev/hax_vm00 && mknod vcpu00 c 221 0"
+PKG_FAIL_REASON+=	"qemu-system-x86_64 --enable-hax"
+
 .include "../../mk/bsd.pkg.mk"
