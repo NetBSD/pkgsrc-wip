@@ -50,6 +50,7 @@ ${PLIST.nls}share/locale/lt/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/or_IN/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/uget.mo
+${PLIST.nls}share/locale/ro/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/sk_SK/LC_MESSAGES/uget.mo
 ${PLIST.nls}share/locale/sr/LC_MESSAGES/uget.mo
