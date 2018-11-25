@@ -12,8 +12,8 @@ Reported uptsream via:
 
  <https://github.com/luakit/luakit/pull/726>
 
---- config/window.lua.orig	2017-08-10 09:50:15.000000000 +0000
-+++ config/window.lua
+--- lib/window.lua.orig	2017-08-10 09:50:15.000000000 +0000
++++ lib/window.lua
 @@ -519,7 +519,6 @@ window.methods = {
          view = view or w.view
          w:emit_signal("close-tab", view)

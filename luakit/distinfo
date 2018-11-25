@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (luakit-2017.08.10.tar.gz) = 9700901e09ec91f598df188e82972c0d2578aaed
-RMD160 (luakit-2017.08.10.tar.gz) = 144c400c408bdfc3385ee1c3b569351f1f0ae1af
-SHA512 (luakit-2017.08.10.tar.gz) = 6cceb241ca5a7ad7dfbb3964888318b5f2c5f734175ea7ecd5178419d037d58dc5e0aba00a7ed8ca3dd811cc5af953c353b0cd203be95a15c6a78c396f9230c8
-Size (luakit-2017.08.10.tar.gz) = 399564 bytes
-SHA1 (patch-config_window.lua) = 68676f1a203c2f6790ea6e502218449824b9bc80
+SHA1 (luakit/2.1.tar.gz) = fe0d7d52e76aae598639ff6f2b4834cdc5670740
+RMD160 (luakit/2.1.tar.gz) = a462c13895d62ad2f45c10805fdb39cf84307bdb
+SHA512 (luakit/2.1.tar.gz) = 1daee7fe4bf5fad0f2c70d714c316914c601467facafdb22e4f27c18a691e249cefd5680ede834bcc555041afdc5d7e70610e2cd5e33db1ad8d9f2fe0327ccac
+Size (luakit/2.1.tar.gz) = 485605 bytes
+SHA1 (patch-lib_window.lua) = 7a2a41610b20cc18e8ff5a4bd7f0ed06994c2ce8
 SHA1 (patch-widgets_webview.c) = 25550c4dc7fcacf6a8e486afdbe38e19a8df3bb4

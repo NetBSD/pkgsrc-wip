@@ -1,9 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	luakit-2017.08.10
-PKGREVISION=	1
+PKGNAME=	luakit-${GITHUB_TAG}
+DISTNAME=	${GITHUB_TAG}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luakit/}
+GITHUB_PROJECT=	luakit
+GITHUB_TAG=	2.1
+DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://luakit.org/
@@ -13,11 +16,11 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake pkg-config
 
 LUAKIT_MAKE_FLAGS+=	DEVELOPMENT_PATHS=0
-LUAKIT_MAKE_FLAGS+=	APPDIR=${DESTDIR}${PREFIX}/share/applications
-LUAKIT_MAKE_FLAGS+=	DOCDIR=${DESTDIR}${PREFIX}/share/doc/luakit
-LUAKIT_MAKE_FLAGS+=	MANPREFIX=${DESTDIR}${PREFIX}/${PKGMANDIR}
-LUAKIT_MAKE_FLAGS+=	PIXMAPDIR=${DESTDIR}${PREFIX}/share/pixmaps
-LUAKIT_MAKE_FLAGS+=	XDGPREFIX=${DESTDIR}${PREFIX}/etc/xdg
+LUAKIT_MAKE_FLAGS+=	APPDIR=${PREFIX}/share/applications
+LUAKIT_MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/luakit
+LUAKIT_MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
+LUAKIT_MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/pixmaps
+LUAKIT_MAKE_FLAGS+=	XDGPREFIX=${PREFIX}/etc/xdg
 LUAKIT_MAKE_FLAGS+=	USE_LUAJIT=0
 BUILD_MAKE_FLAGS+=	${LUAKIT_MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	${LUAKIT_MAKE_FLAGS}
@@ -51,6 +54,9 @@ teardownx:
 
 pre-build:	setupx
 post-build:	teardownx
+
+pre-install:
+	${RM} -f ${WRKSRC}/lib/*.orig
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
