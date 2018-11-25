@@ -2,10 +2,10 @@ $NetBSD$
 
 Include the correct endian.h on NetBSD.
 
---- include/byteorder.h.orig	2018-03-01 04:56:27.000000000 +0000
+--- include/byteorder.h.orig	2018-11-22 06:17:27.000000000 +0000
 +++ include/byteorder.h
-@@ -105,11 +105,11 @@
- 
+@@ -115,11 +115,11 @@
+ #define _BSD_SOURCE
  #include <endian.h>
  
 -#elif defined(__OpenBSD__)
