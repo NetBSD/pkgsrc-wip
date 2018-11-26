@@ -635,7 +635,6 @@ SUBDIR+=	ds2
 SUBDIR+=	dscan
 SUBDIR+=	dsniff
 SUBDIR+=	dsniff-nox11
-SUBDIR+=	dspdfviewer
 SUBDIR+=	dssi
 SUBDIR+=	dtc
 SUBDIR+=	duali-data
