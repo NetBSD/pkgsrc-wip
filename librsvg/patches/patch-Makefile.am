@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- Makefile.am.orig	2018-09-27 16:29:30.000000000 +0000
++++ Makefile.am
+@@ -130,7 +130,7 @@ RUST_EXTRA = 						\
+ if DEBUG_RELEASE
+ CARGO_RELEASE_ARGS=
+ else
+-CARGO_RELEASE_ARGS=--release
++CARGO_RELEASE_ARGS=--release --frozen
+ endif
+ 
+ if CROSS_COMPILING
+@@ -160,12 +160,6 @@ distcheck-hook:
+ 		exit 1;								\
+ 	fi
+ 
+-dist-hook:
+-	(cd $(distdir) &&							\
+-	cargo vendor -q &&							\
+-	mkdir .cargo &&								\
+-	cp cargo-vendor-config .cargo/config)
+-
+ $(RUST_LIB): $(RUST_SRC)
+ 	+cd $(top_srcdir)/rsvg_internals &&					\
+ 	PKG_CONFIG_ALLOW_CROSS=1						\
