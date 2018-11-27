@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	evolution-rss-0.2.1
+PKGREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://gnome.eu.org/
 
