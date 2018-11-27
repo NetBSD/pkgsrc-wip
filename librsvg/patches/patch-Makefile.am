@@ -11,6 +11,15 @@ $NetBSD$
  endif
  
  if CROSS_COMPILING
+@@ -142,7 +142,7 @@ cargo_verbose_ = $(cargo_verbose_$(AM_DE
+ cargo_verbose_0 =
+ cargo_verbose_1 = --verbose
+ 
+-RUST_LIB=@abs_top_builddir@/target/@RUST_TARGET_SUBDIR@/librsvg_internals.a
++RUST_LIB=@abs_top_builddir@/target/@RUST_TARGET_SUBDIR@/librsvg_internals.so
+ CARGO_TARGET_DIR=@abs_top_builddir@/target
+ 
+ check-local:
 @@ -160,12 +160,6 @@ distcheck-hook:
  		exit 1;								\
  	fi
