@@ -1,0 +1,2 @@
+This distribution installs libffi so that it can be used by other Perl
+distributions.

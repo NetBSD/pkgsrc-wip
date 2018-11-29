@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2018/08/21 09:54:04 wiz Exp $
+
+SHA1 (Alien-FFI-0.22.tar.gz) = 9cd62219f899774eb4f6f4aa2da9e9cfacf243bb
+RMD160 (Alien-FFI-0.22.tar.gz) = 8437f7eae2c02b5eab9975ccc820fe79219d659a
+SHA512 (Alien-FFI-0.22.tar.gz) = 989b61a7fc8856216616987ff78c1b18914da5ab8b64a5466852c8f107540f0369a35fce4e12fc6bda61b527da82c18c213d7e9b6b62412d54760f63af4efce2
+Size (Alien-FFI-0.22.tar.gz) = 17206 bytes
