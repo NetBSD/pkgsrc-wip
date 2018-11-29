@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.130 2018/09/02 07:55:30 wiz Exp $
+
+SHA1 (Mojolicious-Plugin-OAuth2-Server-0.42.tar.gz) = f24646fcfcf894d89b4a46d9d2f1f10cf106194c
+RMD160 (Mojolicious-Plugin-OAuth2-Server-0.42.tar.gz) = 24d763c3c5d44e0b7741bf5eade9cfe847cf4732
+SHA512 (Mojolicious-Plugin-OAuth2-Server-0.42.tar.gz) = bd41326fdbcdc396a5a9ece573276011b0fd42cbe61707ce8b702b457e38399c314abca190b227d441cf2838575ea9626200bf99deb8d40aa777f7b19166c4ea
+Size (Mojolicious-Plugin-OAuth2-Server-0.42.tar.gz) = 20742 bytes
