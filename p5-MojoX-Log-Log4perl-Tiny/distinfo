@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.130 2018/09/02 07:55:30 wiz Exp $
+
+SHA1 (MojoX-Log-Log4perl-Tiny-0.01.tar.gz) = 27c9c457af1671e6dbf3fbc4388d31dd9c863dbd
+RMD160 (MojoX-Log-Log4perl-Tiny-0.01.tar.gz) = d4f0bedde34eaeaf093b6de404086fad5c32ff01
+SHA512 (MojoX-Log-Log4perl-Tiny-0.01.tar.gz) = f2f6b63837b75b7afbe0735301d7152d1ba320780ae54a85cc75a3423c4099e54270920aa3ab62782dcae7f4c035640a6fdf8a102dee0a36af6d81fc0a88153c
+Size (MojoX-Log-Log4perl-Tiny-0.01.tar.gz) = 10271 bytes
