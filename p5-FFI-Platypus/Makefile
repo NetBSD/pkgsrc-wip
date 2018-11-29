@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PL/PLICEASE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~plicease/FFI-Platypus/
-COMMENT=	Write Perl bindings to non-Perl libraries with FFI.
+COMMENT=	Write Perl bindings to non-Perl libraries with FFI
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		c
