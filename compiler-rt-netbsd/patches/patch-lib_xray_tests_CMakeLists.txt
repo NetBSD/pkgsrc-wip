@@ -6,7 +6,7 @@ $NetBSD$
      list(APPEND XRAY_UNITTEST_LINK_FLAGS -lLLVMXRay -lLLVMSupport -lLLVMTestingSupport)
    endif()
  
-+  list(APPEND XRAY_UNITTEST_LINK_FLAGS -lterminfo -lexecinfo -lLLVMDemangle)
++  list(APPEND XRAY_UNITTEST_LINK_FLAGS -lexecinfo -lLLVMDemangle)
    append_list_if(COMPILER_RT_HAS_LIBM -lm XRAY_UNITTEST_LINK_FLAGS)
    append_list_if(COMPILER_RT_HAS_LIBRT -lrt XRAY_UNITTEST_LINK_FLAGS)
    append_list_if(COMPILER_RT_HAS_LIBDL -ldl XRAY_UNITTEST_LINK_FLAGS)

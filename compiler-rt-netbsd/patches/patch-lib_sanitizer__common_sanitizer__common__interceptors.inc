@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-11-19 23:14:50.000000000 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-11-30 20:02:43.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -77,6 +77,11 @@
  #define ctime __ctime50
@@ -69,8 +69,8 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7313,6 +7330,1517 @@ INTERCEPTOR(int, setvbuf, __sanitizer_FI
- #define INIT_SETVBUF
+@@ -7362,6 +7379,1503 @@ INTERCEPTOR(int, getvfsstat, void *buf, 
+ #define INIT_GETVFSSTAT
  #endif
  
 +#if SANITIZER_INTERCEPT_SYSCTL
@@ -1013,20 +1013,6 @@ $NetBSD$
 +#define INIT_MD5
 +#endif
 +
-+#if SANITIZER_INTERCEPT_GETVFSSTAT
-+INTERCEPTOR(int, getvfsstat, void *buf, SIZE_T bufsize, int flags) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, getvfsstat, buf, bufsize, flags);
-+  int ret = REAL(getvfsstat)(buf, bufsize, flags);
-+  if (buf && ret > 0)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, buf, ret * struct_statvfs_sz);
-+  return ret;
-+}
-+#define INIT_GETVFSSTAT COMMON_INTERCEPT_FUNCTION(getvfsstat)
-+#else
-+#define INIT_GETVFSSTAT
-+#endif
-+
 +#if SANITIZER_INTERCEPT_NL_LANGINFO
 +INTERCEPTOR(char *, nl_langinfo, long item) {
 +  void *ctx;
@@ -1587,10 +1573,10 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7569,6 +9097,26 @@ static void InitializeCommonInterceptors
-   INIT_GETMNTINFO;
+@@ -7619,6 +9133,25 @@ static void InitializeCommonInterceptors
    INIT_MI_VECTOR_HASH;
    INIT_SETVBUF;
+   INIT_GETVFSSTAT;
 +  INIT_SYSCTL;
 +  INIT_FTS;
 +  INIT_REGEX;
@@ -1600,7 +1586,6 @@ $NetBSD$
 +  INIT_MD2;
 +  INIT_MD4;
 +  INIT_MD5;
-+  INIT_GETVFSSTAT;
 +  INIT_NL_LANGINFO;
 +  INIT_FPARSELN;
 +  INIT_MODCTL;

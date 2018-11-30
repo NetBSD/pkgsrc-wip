@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_posix.cc.orig	2018-09-26 10:51:26.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_posix.cc.orig	2018-11-30 20:02:43.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_posix.cc
-@@ -945,6 +945,7 @@ unsigned struct_ElfW_Phdr_sz = sizeof(El
+@@ -948,6 +948,7 @@ unsigned struct_ElfW_Phdr_sz = sizeof(El
  
    const int si_SEGV_MAPERR = SEGV_MAPERR;
    const int si_SEGV_ACCERR = SEGV_ACCERR;

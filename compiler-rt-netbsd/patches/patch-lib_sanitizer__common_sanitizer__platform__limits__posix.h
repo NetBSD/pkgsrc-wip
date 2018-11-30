@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2018-08-21 21:25:39.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2018-11-30 20:02:43.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_posix.h
-@@ -1504,6 +1504,7 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1506,6 +1506,7 @@ struct __sanitizer_cookie_io_functions_t
  
    extern const int si_SEGV_MAPERR;
    extern const int si_SEGV_ACCERR;

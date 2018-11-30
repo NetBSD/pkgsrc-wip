@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-10-31 22:51:05.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-11-30 20:02:43.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
 @@ -60,6 +60,15 @@ extern unsigned struct_timespec_sz;
  extern unsigned struct_sembuf_sz;
@@ -26,7 +26,7 @@ $NetBSD$
  struct __sanitizer_ptrace_io_desc {
    int piod_op;
    void *piod_offs;
-@@ -2200,6 +2210,78 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
+@@ -2202,6 +2212,78 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
  
  extern const int si_SEGV_MAPERR;
  extern const int si_SEGV_ACCERR;
