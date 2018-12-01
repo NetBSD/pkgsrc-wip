@@ -4387,6 +4387,7 @@ SUBDIR+=	sselp
 SUBDIR+=	ssh-chat
 SUBDIR+=	ssid
 SUBDIR+=	ssu
+SUBDIR+=	st-term-git
 SUBDIR+=	stacks
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
