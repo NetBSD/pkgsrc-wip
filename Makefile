@@ -655,6 +655,7 @@ SUBDIR+=	dwb-gtk2-git
 SUBDIR+=	dwb-gtk3
 SUBDIR+=	dwb-gtk3-git
 SUBDIR+=	dwepcrack
+SUBDIR+=	dwm-git
 SUBDIR+=	dxmake
 SUBDIR+=	dzen-git
 SUBDIR+=	dzen2
