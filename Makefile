@@ -602,6 +602,7 @@ SUBDIR+=	dma
 SUBDIR+=	dmapd
 SUBDIR+=	dmd
 SUBDIR+=	dmd-bin
+SUBDIR+=	dmenu-git
 SUBDIR+=	dmt-ux
 SUBDIR+=	dnrd
 SUBDIR+=	dns2tcp
