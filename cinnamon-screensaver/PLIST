@@ -106,11 +106,6 @@ share/cinnamon-screensaver/pamhelper/authClient.pyc
 share/cinnamon-screensaver/pamhelper/authClient.py
 share/cinnamon-screensaver/passwordEntry.py
 share/cinnamon-screensaver/playerControl.py
-share/cinnamon-screensaver/screensavers/webkit@cinnamon.org/main
-share/cinnamon-screensaver/screensavers/webkit@cinnamon.org/webkit-stars@cinnamon.org/index.html
-share/cinnamon-screensaver/screensavers/webkit@cinnamon.org/webkit-stars@cinnamon.org/metadata.json
-share/cinnamon-screensaver/screensavers/xscreensaver@cinnamon.org/main
-share/cinnamon-screensaver/screensavers/xscreensaver@cinnamon.org/safechild
 share/cinnamon-screensaver/service.py
 share/cinnamon-screensaver/singletons.py
 share/cinnamon-screensaver/stage.py
@@ -166,10 +161,9 @@ share/cinnamon-screensaver/widgets/powerWidget.py
 share/cinnamon-screensaver/widgets/transparentButton.py
 share/cinnamon-screensaver/widgets/volumeSlider.py
 share/dbus-1/services/org.cinnamon.ScreenSaver.service
-${PLIST.pam}share/examples/pam.d/cinnamon-screensaver
+share/examples/pam.d/cinnamon-screensaver
 share/gir-1.0/CScreensaver-1.0.gir
 share/icons/hicolor/scalable/actions/screensaver-switch-users-symbolic.svg
 share/icons/hicolor/scalable/actions/screensaver-unlock-symbolic.svg
 share/icons/hicolor/scalable/status/screensaver-blank.svg
 share/icons/hicolor/scalable/status/screensaver-notification-symbolic.svg
-@pkgdir etc/pam.d
