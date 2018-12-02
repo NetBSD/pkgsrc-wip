@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.1 2015/02/19 21:21:12 jihbed Exp $
 
-SHA1 (xapps-1.4.1.tar.gz) = 1ddcae6d60228714d93639f38530deffc49cb5ef
-RMD160 (xapps-1.4.1.tar.gz) = a7134128aa352e60d222b682a927d85f1bcd3863
-SHA512 (xapps-1.4.1.tar.gz) = 7a2719cb5ba2e4bd477b396de950dc31121e1ecaac485ed22c8e13b6ff868fd4c246ed9f1de695f184d8513472e6644c07fc25a9eb4452a8200453431a7cf3d2
-Size (xapps-1.4.1.tar.gz) = 66071 bytes
+SHA1 (xapps-1.4.4.tar.gz) = ef283e8698cf4046d8595b3ede7532a7f169ca40
+RMD160 (xapps-1.4.4.tar.gz) = 6f173c86a9b05ed757bdadd0218eeb838fe99c98
+SHA512 (xapps-1.4.4.tar.gz) = 314f04875d4659596f3bfcc1f7bc045e8c9e478ce0e86e798a0c12a75f961a1ccd97266aac761f37ca3f78b385845b069425785bf3c14ae4cd410c94fd00ac41
+Size (xapps-1.4.4.tar.gz) = 80232 bytes
 SHA1 (patch-files_meson.build) = bbe8ea87eaf7ab7e60060ee3baac49f9f55f1c51
-SHA1 (patch-libxapp_meson.build) = 21da1f8b58afa04fa88607ad2980e0a828838afe
+SHA1 (patch-libxapp_meson.build) = 6746e7a6a211ce61cfc38bbce1f834fa0e2d763d
 SHA1 (patch-pygobject_meson.build) = 2585e921bfef7a6814da46d62e8d36a133b20a9d
