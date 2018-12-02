@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (libvirt-4.9.0.tar.xz) = 68d344295461b78b69dd2c27c42f2d410bc878fc
+RMD160 (libvirt-4.9.0.tar.xz) = 9866b57bbfe31b5b0d86d55b893cd69efdfcf53d
+SHA512 (libvirt-4.9.0.tar.xz) = 3cfada940f9de6cc4b0504e089f41aa03d9986f0163344dd3b3ab8e6c4eb556a56996dc8f24bca913b036862c75b256628ea9ab7674ef0a57b87f47c58689e90
+Size (libvirt-4.9.0.tar.xz) = 14744184 bytes
+SHA1 (patch-linux_virnetdev.c) = 876c30ed8ef0d57390facae128ff92a223f22e48
