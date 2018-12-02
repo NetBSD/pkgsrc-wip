@@ -5,6 +5,7 @@ include/cjs-1.0/cjs/context.h
 include/cjs-1.0/cjs/coverage.h
 include/cjs-1.0/cjs/gjs.h
 include/cjs-1.0/cjs/macros.h
+include/cjs-1.0/cjs/profiler.h
 include/cjs-1.0/util/error.h
 lib/cjs/girepository-1.0/CjsPrivate-1.0.typelib
 lib/libcjs.la
