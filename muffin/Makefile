@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.17 2013/06/17 12:45:12 thomasklausner Exp $
 
-DISTNAME=	muffin-3.8.1
+#DISTNAME=	muffin-4.0.3
+DISTNAME=	muffin-3.8.3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
 GITHUB_PROJECT=	muffin
