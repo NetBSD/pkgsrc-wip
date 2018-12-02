@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config intltool
-CONFIGURE_ARGS+=	--disable-selinux
+MESON_ARGS+=		--buildtype=debug
 
 SUBST_CLASSES=		prefix
 SUBST_MESSAGE.prefix=	Fix prefix references
@@ -35,8 +35,10 @@ REPLACE_PYTHON=	data/merge_action_strings \
 		install-scripts/meson_update_icon_cache.py \
 		install-scripts/meson_update_mime_database.py
 
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-private
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-extension
+# helps build but creates typelib with wrong path! (libcvc/libnemo-private.so instead of path/lib/lib.so)
+# check /usr/pkg/share/gir-1.0 for dubious lib paths
+#MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-private
+#MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-extension
 
 .include "../../devel/py-meson/build.mk"
 .include "../../lang/python/application.mk"

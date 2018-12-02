@@ -1,8 +1,8 @@
 $NetBSD$
 
-Fix build on non-linux platforms.
+Fix build on non-linux platforms and disable btime support for now.
 
---- libnemo-private/nemo-statx.c.orig	2018-11-12 15:11:10.000000000 +0000
+--- libnemo-private/nemo-statx.c.orig	2018-11-27 17:20:59.000000000 +0000
 +++ libnemo-private/nemo-statx.c
 @@ -21,10 +21,17 @@
  #define _ATFILE_SOURCE
@@ -51,7 +51,19 @@ Fix build on non-linux platforms.
      unsigned int mask = STATX_BTIME;
      struct statx stxbuf;
      long ret = 0;
-@@ -129,4 +150,4 @@ get_file_btime (const char *path)
+@@ -113,7 +134,11 @@ get_file_btime (const char *path)
+     memset (&stxbuf, 0xbf, sizeof(stxbuf));
+     errno = 0;
+ 
++#ifdef __NetBSD__
++    ret = -1;
++#else
+     ret = statx (AT_FDCWD, path, flags, mask, &stxbuf);
++#endif
+ 
+     if (ret < 0)
+     {
+@@ -129,4 +154,4 @@ get_file_btime (const char *path)
      btime = (&stxbuf)->stx_btime.tv_sec;
  
      return btime;

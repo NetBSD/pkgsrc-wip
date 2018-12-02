@@ -9,8 +9,6 @@ bin/cinnamon-launcher
 bin/cinnamon-looking-glass
 bin/cinnamon-menu-editor
 bin/cinnamon-preview-gtk-theme
-bin/cinnamon-schema-install
-bin/cinnamon-schema-remove
 bin/cinnamon-screensaver-lock-dialog
 bin/cinnamon-session-cinnamon
 bin/cinnamon-session-cinnamon2d
@@ -632,8 +630,6 @@ share/gtk-doc/html/cinnamon/right.png
 share/gtk-doc/html/cinnamon/style.css
 share/gtk-doc/html/cinnamon/up-insensitive.png
 share/gtk-doc/html/cinnamon/up.png
-share/icons/hicolor/16x16/categories/cs-backgrounds.svg
-share/icons/hicolor/16x16/categories/cs-desklets.svg
 share/icons/hicolor/scalable/actions/caps-lock-off-symbolic.svg
 share/icons/hicolor/scalable/actions/caps-lock-symbolic.svg
 share/icons/hicolor/scalable/actions/list-edit-symbolic.svg
@@ -715,8 +711,6 @@ share/icons/hicolor/scalable/emblems/cs-xlet-installed.svg
 share/icons/hicolor/scalable/emblems/cs-xlet-running.svg
 share/icons/hicolor/scalable/emblems/cs-xlet-system.svg
 share/icons/hicolor/scalable/emblems/cs-xlet-update.svg
-share/polkit-1/actions/org.cinnamon.schema-install.policy
-share/polkit-1/actions/org.cinnamon.schema-remove.policy
 share/polkit-1/actions/org.cinnamon.settings-users.policy
 share/polkit-1/rules.d/desktop.rules
 share/xsessions/cinnamon.desktop

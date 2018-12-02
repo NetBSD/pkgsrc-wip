@@ -4,4 +4,4 @@ SHA1 (nemo-4.0.3.tar.gz) = 4853322ee616b843d2b8c3403367fdf8a4c1e38d
 RMD160 (nemo-4.0.3.tar.gz) = 82570f11b9d7ff1b8594b1c57e22f6d92e6ac7d8
 SHA512 (nemo-4.0.3.tar.gz) = d3290146a49b0b42347f189132115c5be5e1a15ae7933f1d4ab71be245c78aefea7c27afa9ef8c4bb6116f917d57b7b2e50a6f97ee7f997988113f244f5a6cd4
 Size (nemo-4.0.3.tar.gz) = 1448190 bytes
-SHA1 (patch-libnemo-private_nemo-statx.c) = caa46a0e2d348ba82620e0a96cbb112e6e84b22b
+SHA1 (patch-libnemo-private_nemo-statx.c) = 44282262749166e20e2d84b4980c9465b5b4b2c4
