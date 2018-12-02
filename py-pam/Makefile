@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
 
-DISTNAME=	python-pam-1.8.3
-PKGNAME=	${PYPKGPREFIX}-pam-1.8.3
+DISTNAME=	python-pam-1.8.4
+PKGNAME=	${PYPKGPREFIX}-pam-1.8.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FireFighterBlu3/}
 GITHUB_PROJECT=	python-pam
