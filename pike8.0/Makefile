@@ -2,7 +2,7 @@
 
 PIKEVERSUFFIX=	8.0
 
-.include 	"../../lang/pike${PIKEVERSUFFIX}/version.mk"
+.include 	"../../wip/pike${PIKEVERSUFFIX}/version.mk"
 
 NAME=		pike${PIKEVERSUFFIX}
 PKGNAME=        ${NAME}-${PIKE_VERSION}

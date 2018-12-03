@@ -6,7 +6,7 @@ PIKE8.0_BUILTIN_MODULE_MK:=
 
 PIKEVERSUFFIX= 	8.0
 
-.include 	"../../lang/pike${PIKEVERSUFFIX}/version.mk"
+.include 	"../../wip/pike${PIKEVERSUFFIX}/version.mk"
 
 INTERNAL_MODULENAME?=	${MODULENAME}
 MODULE_TYPE?=	module
