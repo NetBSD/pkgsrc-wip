@@ -1,7 +1,0 @@
-Get cpu affinity working on NetBSD
-
-SUBST_CLASSES+=		affin
-SUBST_STAGE.affin=	post-patch
-SUBST_SED.affin=	-e 's|"sched_setaffinity"|"sched_setaffinity_np"|g'
-SUBST_SED.affin+=	-e 's|sched_getaffinity(|sched_getaffinity_np("|g'
-SUBST_FILES.affin=	configure
