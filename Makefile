@@ -627,6 +627,7 @@ SUBDIR+=	downtimed
 SUBDIR+=	dpic
 SUBDIR+=	dragbox-git
 SUBDIR+=	dragon
+SUBDIR+=	drist
 SUBDIR+=	drkonqi
 SUBDIR+=	dropbox
 SUBDIR+=	drow
