@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	asciinema-2.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciinema/}
 
@@ -11,6 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=			# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/asciinema ${DESTDIR}${PREFIX}/bin/asciinema${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
