@@ -1,19 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-11-30 20:02:43.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-04 02:10:16.132427259 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -253,6 +253,10 @@ unsigned struct_rlimit_sz = sizeof(struc
- unsigned struct_timespec_sz = sizeof(struct timespec);
- unsigned struct_sembuf_sz = sizeof(struct sembuf);
- unsigned struct_kevent_sz = sizeof(struct kevent);
-+unsigned struct_FTS_sz = sizeof(FTS);
-+unsigned struct_FTSENT_sz = sizeof(FTSENT);
-+unsigned struct_regex_sz = sizeof(regex_t);
-+unsigned struct_regmatch_sz = sizeof(regmatch_t);
- unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
- unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
- unsigned struct_timex_sz = sizeof(struct timex);
-@@ -2092,6 +2096,38 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
+@@ -2096,6 +2096,38 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
  
  const int si_SEGV_MAPERR = SEGV_MAPERR;
  const int si_SEGV_ACCERR = SEGV_ACCERR;
@@ -52,7 +41,7 @@ $NetBSD$
  }  // namespace __sanitizer
  
  using namespace __sanitizer;
-@@ -2253,4 +2289,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
+@@ -2257,4 +2289,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
  CHECK_SIZE_AND_OFFSET(group, gr_gid);
  CHECK_SIZE_AND_OFFSET(group, gr_mem);
  
