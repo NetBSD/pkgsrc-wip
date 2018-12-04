@@ -4,9 +4,9 @@ Add minimal NetBSD support.
 Don't override CC nor optimisation flags in CFLAGS.
 Remove sed magic; we'll use nbsed.
 
---- src/Makefile.orig	2018-08-02 18:47:17.000000000 +0000
+--- src/Makefile.orig	2018-10-28 16:29:39.000000000 +0000
 +++ src/Makefile
-@@ -22,7 +22,7 @@ UNAME                   := $(patsubst MS
+@@ -23,7 +23,7 @@ UNAME                   := $(patsubst MS
  UNAME                   := $(patsubst MINGW32_NT-%,MSYS2,$(UNAME))
  UNAME                   := $(patsubst MINGW64_NT-%,MSYS2,$(UNAME))
  
@@ -15,7 +15,7 @@ Remove sed magic; we'll use nbsed.
  $(error "! Your Operating System ($(UNAME)) is not supported by this Makefile")
  endif
  
-@@ -44,7 +44,6 @@ endif
+@@ -45,7 +45,6 @@ endif
  ## Native compiler paths
  ##
  
@@ -23,7 +23,7 @@ Remove sed magic; we'll use nbsed.
  FIND                    := find
  INSTALL                 := install
  RM                      := rm
-@@ -52,17 +51,9 @@ SED                     := sed
+@@ -53,17 +52,9 @@ SED                     := sed
  SED_IN_PLACE            := -i
  
  ifeq ($(UNAME),Darwin)
@@ -41,7 +41,7 @@ Remove sed magic; we'll use nbsed.
  
  ##
  ## Version
-@@ -97,6 +88,9 @@ LIBRARY_DEV_FOLDER      ?= $(LIBRARY_DEV
+@@ -98,6 +89,9 @@ LIBRARY_DEV_FOLDER      ?= $(LIBRARY_DEV
  
  HASHCAT_FRONTEND        := hashcat
  HASHCAT_LIBRARY         := libhashcat.so.$(VERSION_PURE)
@@ -51,15 +51,15 @@ Remove sed magic; we'll use nbsed.
  
  ifeq ($(UNAME),Darwin)
  HASHCAT_LIBRARY         := libhashcat.$(VERSION_PURE).dylib
-@@ -201,7 +195,6 @@ endif
- LFLAGS                  := $(LDFLAGS)
+@@ -161,7 +155,6 @@ CFLAGS                  += -Wextra
+ endif
  
  ifeq ($(DEBUG),0)
 -CFLAGS                  += -O2
  ifneq ($(UNAME),Darwin)
  LFLAGS                  += -s
  endif
-@@ -241,6 +234,13 @@ LFLAGS_NATIVE           += -lm
+@@ -217,6 +210,13 @@ LFLAGS_NATIVE           += -lm
  endif
  endif # FreeBSD
  
