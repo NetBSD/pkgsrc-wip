@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-12-04 02:10:16.133279323 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-12-04 23:26:02.105248262 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -117,6 +117,7 @@
  #define times __times13
@@ -57,9 +57,9 @@ $NetBSD$
    void *ctx;
    COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
    if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7653,6 +7665,1220 @@ INTERCEPTOR(void *, asysctlbyname, const
- #define INIT_SYSCTL
+@@ -7665,6 +7677,1220 @@ INTERCEPTOR(int, sysctlgetmibinfo, char 
  #endif
+ 
  
 +#if SANITIZER_INTERCEPT_STRTONUM
 +INTERCEPTOR(long long, strtonum, const char *nptr, long long minval,
@@ -1278,10 +1278,10 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7913,6 +9139,22 @@ static void InitializeCommonInterceptors
-   INIT_REGEX;
-   INIT_FTS;
+@@ -7927,6 +9153,22 @@ static void InitializeCommonInterceptors
    INIT_SYSCTL;
+   INIT_ASYSCTL;
+   INIT_SYSCTLGETMIBINFO;
 +  INIT_STRTONUM;
 +  INIT_VIS;
 +  INIT_SHA1;

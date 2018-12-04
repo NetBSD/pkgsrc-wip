@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-04 02:10:16.134662809 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-04 02:10:16.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
 @@ -2212,6 +2212,78 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
  
