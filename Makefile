@@ -4422,6 +4422,7 @@ SUBDIR+=	suse121_libgcrypt
 SUBDIR+=	suse121_libgpg-error
 SUBDIR+=	suse131_fpc
 SUBDIR+=	suse131_gcc
+SUBDIR+=	suse131_libbz2
 SUBDIR+=	sushi
 SUBDIR+=	svgalib
 SUBDIR+=	svgpart
