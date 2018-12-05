@@ -10,4 +10,3 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.h) = 8bd78
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = ff76b8b19863cdb28f243580ece33db5abd03a80
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.h) = 21b7becbd2289e9b29d3bae94b8dd83e828965fb
 SHA1 (patch-lib_xray_tests_CMakeLists.txt) = a5bee64ac6e4c0ff43aad200072d15c128ca03ad
-SHA1 (patch-test_sanitizer__common_TestCases_get__module__and__offset__for__pc.cc) = b80b00233a663a1b754c9ca428bee5e8593597e7
