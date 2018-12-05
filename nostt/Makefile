@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	nostt
-DISTNAME=	1.0
+DISTNAME=	1.1
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sjmulder/}
@@ -13,11 +13,7 @@ HOMEPAGE=	https://github.com/sjmulder/nostt/
 COMMENT=	Command line NOS Teletekst reader
 LICENSE=	2-clause-bsd
 
-WRKSRC=	${WRKDIR}/nostt-1.0
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nostt ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/nostt.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+WRKSRC=	${WRKDIR}/nostt-1.1
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
