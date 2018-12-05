@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-12-04 23:26:02.105248262 +0000
+--- lib/sanitizer_common/sanitizer_common_interceptors.inc.orig	2018-12-05 15:17:53.888571701 +0000
 +++ lib/sanitizer_common/sanitizer_common_interceptors.inc
 @@ -117,6 +117,7 @@
  #define times __times13
@@ -48,18 +48,9 @@ $NetBSD$
    return res;
  }
  #define INIT_GETPEERNAME COMMON_INTERCEPT_FUNCTION(getpeername);
-@@ -4263,7 +4275,7 @@ INTERCEPTOR(int, fstatfs64, int fd, void
+@@ -7724,6 +7736,1160 @@ INTERCEPTOR(int, modctl, int operation, 
+ #define INIT_MODCTL
  #endif
- 
- #if SANITIZER_INTERCEPT_STATVFS
--INTERCEPTOR(int, statvfs, char *path, void *buf) {
-+INTERCEPTOR(int, statvfs, const char *path, void *buf) {
-   void *ctx;
-   COMMON_INTERCEPTOR_ENTER(ctx, statvfs, path, buf);
-   if (path) COMMON_INTERCEPTOR_READ_RANGE(ctx, path, REAL(strlen)(path) + 1);
-@@ -7665,6 +7677,1220 @@ INTERCEPTOR(int, sysctlgetmibinfo, char 
- #endif
- 
  
 +#if SANITIZER_INTERCEPT_STRTONUM
 +INTERCEPTOR(long long, strtonum, const char *nptr, long long minval,
@@ -718,20 +709,6 @@ $NetBSD$
 +#define INIT_MD5
 +#endif
 +
-+#if SANITIZER_INTERCEPT_NL_LANGINFO
-+INTERCEPTOR(char *, nl_langinfo, long item) {
-+  void *ctx;
-+  COMMON_INTERCEPTOR_ENTER(ctx, nl_langinfo, item);
-+  char *ret = REAL(nl_langinfo)(item);
-+  if (ret)
-+    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, ret, REAL(strlen)(ret) + 1);
-+  return ret;
-+}
-+#define INIT_NL_LANGINFO COMMON_INTERCEPT_FUNCTION(nl_langinfo)
-+#else
-+#define INIT_NL_LANGINFO
-+#endif
-+
 +#if SANITIZER_INTERCEPT_FPARSELN
 +INTERCEPTOR(char *, fparseln, __sanitizer_FILE *stream, SIZE_T *len,
 +            SIZE_T *lineno, const char delim[3], int flags) {
@@ -751,52 +728,6 @@ $NetBSD$
 +#define INIT_FPARSELN COMMON_INTERCEPT_FUNCTION(fparseln)
 +#else
 +#define INIT_FPARSELN
-+#endif
-+
-+#if SANITIZER_INTERCEPT_MODCTL
-+INTERCEPTOR(int, modctl, int operation, void *argp) {
-+  void *ctx;
-+  int ret;
-+  COMMON_INTERCEPTOR_ENTER(ctx, modctl, operation, argp);
-+
-+  if (operation == modctl_load) {
-+    if (argp) {
-+      __sanitizer_modctl_load_t *ml = (__sanitizer_modctl_load_t *)argp;
-+      COMMON_INTERCEPTOR_READ_RANGE(ctx, ml, sizeof(*ml));
-+      if (ml->ml_filename)
-+        COMMON_INTERCEPTOR_READ_RANGE(ctx, ml->ml_filename,
-+                                      REAL(strlen)(ml->ml_filename) + 1);
-+      if (ml->ml_props)
-+        COMMON_INTERCEPTOR_READ_RANGE(ctx, ml->ml_props, ml->ml_propslen);
-+    }
-+    ret = REAL(modctl)(operation, argp);
-+  } else if (operation == modctl_unload) {
-+    if (argp) {
-+      const char *name = (const char *)argp;
-+      COMMON_INTERCEPTOR_READ_RANGE(ctx, name, REAL(strlen)(name) + 1);
-+    }
-+    ret = REAL(modctl)(operation, argp);
-+  } else if (operation == modctl_stat) {
-+    uptr iov_len;
-+    struct __sanitizer_iovec *iov = (struct __sanitizer_iovec *)argp;
-+    if (iov) {
-+      COMMON_INTERCEPTOR_READ_RANGE(ctx, iov, sizeof(*iov));
-+      iov_len = iov->iov_len;
-+    }
-+    ret = REAL(modctl)(operation, argp);
-+    if (iov)
-+      COMMON_INTERCEPTOR_WRITE_RANGE(
-+          ctx, iov->iov_base, iov_len < iov->iov_len ? iov_len : iov->iov_len);
-+  } else if (operation == modctl_exists)
-+    ret = REAL(modctl)(operation, argp);
-+  else
-+    ret = REAL(modctl)(operation, argp);
-+
-+  return ret;
-+}
-+#define INIT_MODCTL COMMON_INTERCEPT_FUNCTION(modctl)
-+#else
-+#define INIT_MODCTL
 +#endif
 +
 +#if SANITIZER_INTERCEPT_STATVFS1
@@ -1278,19 +1209,17 @@ $NetBSD$
  static void InitializeCommonInterceptors() {
    static u64 metadata_mem[sizeof(MetadataHashMap) / sizeof(u64) + 1];
    interceptor_metadata_map = new((void *)&metadata_mem) MetadataHashMap();
-@@ -7927,6 +9153,22 @@ static void InitializeCommonInterceptors
-   INIT_SYSCTL;
-   INIT_ASYSCTL;
-   INIT_SYSCTLGETMIBINFO;
+@@ -7989,5 +9155,20 @@ static void InitializeCommonInterceptors
+   INIT_NL_LANGINFO;
+   INIT_MODCTL;
+ 
 +  INIT_STRTONUM;
 +  INIT_VIS;
 +  INIT_SHA1;
 +  INIT_MD2;
 +  INIT_MD4;
 +  INIT_MD5;
-+  INIT_NL_LANGINFO;
 +  INIT_FPARSELN;
-+  INIT_MODCTL;
 +  INIT_STATVFS1;
 +  INIT_NETBSD_MOUNT;
 +  INIT_FSEEK;
@@ -1298,6 +1227,6 @@ $NetBSD$
 +  INIT_RMD160;
 +  INIT_SHA2;
 +  INIT_GETCHAR;
- 
++
    INIT___PRINTF_CHK;
  }

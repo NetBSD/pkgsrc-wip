@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-04 02:10:16.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-05 15:17:53.889431418 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -2212,6 +2212,78 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
+@@ -2223,6 +2223,68 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
  
  extern const int si_SEGV_MAPERR;
  extern const int si_SEGV_ACCERR;
@@ -34,16 +34,6 @@ $NetBSD$
 +extern const int unvis_valid;
 +extern const int unvis_validpush;
 +
-+typedef struct __sanitizer_modctl_load {
-+  const char *ml_filename;
-+  int ml_flags;
-+  const char *ml_props;
-+  uptr ml_propslen;
-+} __sanitizer_modctl_load_t;
-+extern const int modctl_load;
-+extern const int modctl_unload;
-+extern const int modctl_stat;
-+extern const int modctl_exists;
 +extern const unsigned fpos_t_sz;
 +
 +struct __sanitizer_cdbr {

@@ -1,11 +1,11 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-04 02:10:16.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-05 15:17:53.889846309 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -2096,6 +2096,38 @@ unsigned IOCTL_SNDCTL_DSP_SILENCE = SNDC
- 
- const int si_SEGV_MAPERR = SEGV_MAPERR;
- const int si_SEGV_ACCERR = SEGV_ACCERR;
+@@ -2101,6 +2101,35 @@ const int modctl_load = MODCTL_LOAD;
+ const int modctl_unload = MODCTL_UNLOAD;
+ const int modctl_stat = MODCTL_STAT;
+ const int modctl_exists = MODCTL_EXISTS;
 +
 +const unsigned SHA1_CTX_sz = sizeof(SHA1_CTX);
 +const unsigned SHA1_return_length = SHA1_DIGEST_STRING_LENGTH; // 41
@@ -33,22 +33,8 @@ $NetBSD$
 +
 +const int unvis_valid = UNVIS_VALID;
 +const int unvis_validpush = UNVIS_VALIDPUSH;
-+const int modctl_load = MODCTL_LOAD;
-+const int modctl_unload = MODCTL_UNLOAD;
-+const int modctl_stat = MODCTL_STAT;
-+const int modctl_exists = MODCTL_EXISTS;
++
 +const unsigned fpos_t_sz = sizeof(fpos_t);
  }  // namespace __sanitizer
  
  using namespace __sanitizer;
-@@ -2257,4 +2289,10 @@ CHECK_SIZE_AND_OFFSET(group, gr_passwd);
- CHECK_SIZE_AND_OFFSET(group, gr_gid);
- CHECK_SIZE_AND_OFFSET(group, gr_mem);
- 
-+CHECK_TYPE_SIZE(modctl_load_t);
-+CHECK_SIZE_AND_OFFSET(modctl_load_t, ml_filename);
-+CHECK_SIZE_AND_OFFSET(modctl_load_t, ml_flags);
-+CHECK_SIZE_AND_OFFSET(modctl_load_t, ml_props);
-+CHECK_SIZE_AND_OFFSET(modctl_load_t, ml_propslen);
-+
- #endif  // SANITIZER_NETBSD
