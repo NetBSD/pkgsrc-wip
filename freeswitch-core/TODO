@@ -21,3 +21,6 @@
 	This will replace previous patch-modules.conf used (which was not ideal).
 	Since modules are bundled it is not possible to build them separately.
 	Not all modules were included. Work in progress.
+
+* This package has known vulnerabilities, please investigate and fix if possible:
+   CVE-2018-19911
