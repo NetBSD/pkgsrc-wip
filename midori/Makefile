@@ -1,18 +1,19 @@
 # $NetBSD: Makefile,v 1.111 2018/11/09 09:17:07 abs Exp $
 
-DISTNAME=	midori_0.5.11_all_
-PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
-PKGREVISION=	27
+DISTNAME=	midori-v7.0
+PKGNAME=	${DISTNAME:S/v//}
 CATEGORIES=	www
-MASTER_SITES=	http://midori-browser.org/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=midori-browser/}
+GITHUB_PROJECT=	core
+GITHUB_RELEASE=	v7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://midori-browser.org/
 COMMENT=	Lightweight web browser using WebKit
 LICENSE=	gnu-lgpl-v2.1
-EXTRACT_SUFX=	.tar.bz2
+#EXTRACT_SUFX=	.tar.bz2
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+#WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
@@ -29,25 +30,28 @@ BUILD_DEPENDS+=		librsvg>=2.18:../../graphics/librsvg
 
 DEPENDS+=		gnome-themes-standard-[0-9]*:../../graphics/gnome-themes-standard
 
-EGDIR=			${PREFIX}/share/examples/midori
-OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/midori
-CONF_FILES=		${EGDIR}/search ${PKG_SYSCONFDIR}/xdg/midori/search
+#EGDIR=			${PREFIX}/share/examples/midori
+#OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/midori
+#CONF_FILES=		${EGDIR}/search ${PKG_SYSCONFDIR}/xdg/midori/search
 
 # Otherwise build chokes on .orig files
 pre-configure:
 	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
 .include "../../mk/bsd.prefs.mk"
 
-OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock
-CONF_FILES+=	${EGDIR}/extensions/adblock/config \
-		${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock/config
+#OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock
+#CONF_FILES+=	${EGDIR}/extensions/adblock/config \
+#		${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock/config
 
 CONFIGURE_ENV=	VALAC=${VALAC}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/libpeas/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
@@ -60,4 +64,5 @@ CONFIGURE_ENV=	VALAC=${VALAC}
 .include "../../www/webkit-gtk/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
+.include "../../wip/gcr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
