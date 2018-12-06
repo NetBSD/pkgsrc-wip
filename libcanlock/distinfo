@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/08/27 15:14:03 wiz Exp $
+
+SHA1 (libcanlock-3.0.3.tar.bz2) = 3a0e8fb6ba7a3c84a33ec5e7c0b130ab13d53d34
+RMD160 (libcanlock-3.0.3.tar.bz2) = 145ffc2142cbee86c8cf6801d3e413044eebff8c
+SHA512 (libcanlock-3.0.3.tar.bz2) = 121a451f08363e84bee140cdbe804fe2834aa5b3d30481ac6bfda1679e5ec4976bf1f1f6403ed0a91fe5166ced1b8d8401b488d2c4974388815b79fe97a32d03
+Size (libcanlock-3.0.3.tar.bz2) = 317727 bytes
+SHA1 (patch-src_secret.c) = c5319326b518bd9de4a4763acdbf3d848a3e238c
