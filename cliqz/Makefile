@@ -65,6 +65,7 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./magic_build_and_package.sh
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=       libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
