@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (slurm-18.08.3.tar.bz2) = ce9191b8699c15904198a608f2566ab16c79b577
+RMD160 (slurm-18.08.3.tar.bz2) = 4f58926bf538bb3f209fea2eef2fa2f37c4f7d2c
+SHA512 (slurm-18.08.3.tar.bz2) = 2d1018e5b1520a5d71825d548d91d06d0f0a8df92b33f87d21a2238a5245a1199ca588370aea1df6ad9d09242df9a6af19ea80357dae41a0337812617721c8bf
+Size (slurm-18.08.3.tar.bz2) = 6092020 bytes
+SHA1 (patch-etc_init.d.slurm.in) = beaedd5385b4aad04583d2bc5a23557519f74ec5
+SHA1 (patch-src_slurmd_common_task__plugin.c) = 0d6680b10b45648703fe7a57411e605992fd9040
+SHA1 (patch-src_slurmd_common_task__plugin.h) = d4ad9f350efe1e873809adfe9dc4f559634e9ba2
+SHA1 (patch-src_slurmd_slurmd_slurmd.c) = 67cac6d8b4545c9053b655a4da77db63f5de7e63
+SHA1 (patch-src_slurmd_slurmd_slurmd.h) = a610b0bbe5b6b04be70eb2f8eac2a231139e6d1a
+SHA1 (patch-src_slurmd_slurmstepd_io.c) = b56782887621edb539be70d53dff8029a89e90ed
+SHA1 (patch-src_slurmd_slurmstepd_task.c) = 7948c76ce65b0e5211486d2e7b1901664c1f7016
