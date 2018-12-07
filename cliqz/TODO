@@ -1,7 +1,70 @@
-1. Investigate build failures with --enable-gconf
-2. Investigate build failures with --disable-gconf
-3. Investigate tools/components/find (nsFind.cpp) failure when
-   build with --disable-gconf
+The build fails with:
+
+ 22:18.73 In file included from /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/mozilla-release/toolkit/components/find/nsFind.h:13:0,       
+ 22:18.73                  from /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/mozilla-release/toolkit/components/find/nsFind.cpp:9,        
+ 22:18.73                  from /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/toolkit/components/find/Unified_cpp_components_find0.cpp:2:                                
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/mozilla-release/toolkit/components/find/nsFind.cpp: In member function 'virtual void nsFind::cycleCollection::Unlink(void*)':                          
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/nsCycleCollectionParticipant.h:460:40: error: expected unqualified-id before ')' token              
+ 22:18.73    ImplCycleCollectionUnlink(tmp->_field);                 
+ 22:18.73                                         ^
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:65:40: note: in expansion of macro 'NS_IMPL_CYCLE_COLLECTION_UNLINK_HELPER'  
+ 22:18.73  #define MOZ_FOR_EACH_HELPER_GLUE(a, b) a b                
+ 22:18.73                                         ^
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:67:3: note: in expansion of macro 'MOZ_FOR_EACH_HELPER_GLUE'                 
+ 22:18.73    MOZ_FOR_EACH_HELPER_GLUE( \                             
+ 22:18.73    ^~~~~~~~~~~~~~~~~~~~~~~~
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:73:3: note: in expansion of macro 'MOZ_FOR_EACH_HELPER'                      
+ 22:18.73    MOZ_FOR_EACH_HELPER(m, fa, a)                           
+ 22:18.73    ^~~~~~~~~~~~~~~~~~~
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:56:33: note: in expansion of macro 'MOZ_FOR_EACH_1'                          
+ 22:18.73  #define MOZ_FOR_EACH_GLUE(a, b) a b                       
+ 22:18.73                                  ^
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:58:3: note: in expansion of macro 'MOZ_FOR_EACH_GLUE'                        
+ 22:18.73    MOZ_FOR_EACH_GLUE( \  
+ 22:18.73    ^~~~~~~~~~~~~~~~~
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:63:3: note: in expansion of macro 'MOZ_FOR_EACH_SEPARATED'                   
+ 22:18.73    MOZ_FOR_EACH_SEPARATED(aMacro, (), aFixedArgs, aArgs)   
+ 22:18.73    ^~~~~~~~~~~~~~~~~~~~~~
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/nsCycleCollectionParticipant.h:463:3: note: in expansion of macro 'MOZ_FOR_EACH'                    
+ 22:18.73    MOZ_FOR_EACH(NS_IMPL_CYCLE_COLLECTION_UNLINK_HELPER, (), (__VA_ARGS__))                                                     
+ 22:18.73    ^~~~~~~~~~~~
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/nsCycleCollectionParticipant.h:935:3: note: in expansion of macro 'NS_IMPL_CYCLE_COLLECTION_UNLINK' 
+ 22:18.73    NS_IMPL_CYCLE_COLLECTION_UNLINK(__VA_ARGS__)                                 \                                              
+ 22:18.73    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/mozilla-release/toolkit/components/find/nsFind.cpp:62:1: note: in expansion of macro 'NS_IMPL_CYCLE_COLLECTION'      
+ 22:18.73  NS_IMPL_CYCLE_COLLECTION(nsFind)                          
+ 22:18.73  ^
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/mozilla-release/toolkit/components/find/nsFind.cpp: In member function 'virtual nsresult nsFind::cycleCollection::TraverseNative(void*, nsCycleCollectionTraversalCallback&)':                                             
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/nsCycleCollectionParticipant.h:511:46: error: expected unqualified-id before ',' token              
+ 22:18.73    ImplCycleCollectionTraverse(cb, tmp->_field, #_field, 0);                                                                   
+ 22:18.73                                               ^
+ 22:18.73 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:65:40: note: in expansion of macro 'NS_IMPL_CYCLE_COLLECTION_TRAVERSE_HELPER'                                  
+ 22:18.74  #define MOZ_FOR_EACH_HELPER_GLUE(a, b) a b                
+ 22:18.74                                         ^
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:67:3: note: in expansion of macro 'MOZ_FOR_EACH_HELPER_GLUE'                 
+ 22:18.74    MOZ_FOR_EACH_HELPER_GLUE( \                             
+ 22:18.74    ^~~~~~~~~~~~~~~~~~~~~~~~
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:73:3: note: in expansion of macro 'MOZ_FOR_EACH_HELPER'                      
+ 22:18.74    MOZ_FOR_EACH_HELPER(m, fa, a)                           
+ 22:18.74    ^~~~~~~~~~~~~~~~~~~
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:56:33: note: in expansion of macro 'MOZ_FOR_EACH_1'                          
+ 22:18.74  #define MOZ_FOR_EACH_GLUE(a, b) a b                       
+ 22:18.74                                  ^
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:58:3: note: in expansion of macro 'MOZ_FOR_EACH_GLUE'                        
+ 22:18.74    MOZ_FOR_EACH_GLUE( \  
+ 22:18.74    ^~~~~~~~~~~~~~~~~
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/mozilla/MacroForEach.h:63:3: note: in expansion of macro 'MOZ_FOR_EACH_SEPARATED'                   
+ 22:18.74    MOZ_FOR_EACH_SEPARATED(aMacro, (), aFixedArgs, aArgs)   
+ 22:18.74    ^~~~~~~~~~~~~~~~~~~~~~
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/nsCycleCollectionParticipant.h:514:3: note: in expansion of macro 'MOZ_FOR_EACH'                    
+ 22:18.74    MOZ_FOR_EACH(NS_IMPL_CYCLE_COLLECTION_TRAVERSE_HELPER, (), (__VA_ARGS__))                                                   
+ 22:18.74    ^~~~~~~~~~~~
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/obj/dist/include/nsCycleCollectionParticipant.h:938:3: note: in expansion of macro 'NS_IMPL_CYCLE_COLLECTION_TRAVERSE'                                 
+ 22:18.74    NS_IMPL_CYCLE_COLLECTION_TRAVERSE(__VA_ARGS__)                               \                                              
+ 22:18.74    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 22:18.74 /tmp/pkgsrc/wip/cliqz/work/browser-f-1.23.3/mozilla-release/toolkit/components/find/nsFind.cpp:62:1: note: in expansion of macro 'NS_IMPL_CYCLE_COLLECTION'      
+ 22:18.74  NS_IMPL_CYCLE_COLLECTION(nsFind)                          
+ 22:18.74  ^
    
 The browser builds outside the pkgsrc environment as expected and
 produces a binary.
