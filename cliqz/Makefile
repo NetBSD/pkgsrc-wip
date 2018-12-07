@@ -14,8 +14,7 @@ HOMEPAGE=	https://cliqz.com/en/desktop
 COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT} \
-		python37-[0-9]*:../../lang/python37 \
+TOOL_DEPENDS+=	python37-[0-9]*:../../lang/python37 \
 		cbindgen-[0-9]*:../../devel/cbindgen \
 		nodejs-[0-9]*:../../lang/nodejs \
 
@@ -55,35 +54,6 @@ USE_PKGSRC_GCC_RUNTIME=	yes
 CFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
 CXXFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
-
-.include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
-.include "../../devel/libevent/buildlink3.mk"
-.include "../../devel/libffi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.19
-.include "../../devel/nspr/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=     nss>=3.38
-.include "../../devel/nss/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-BUILDLINK_DEPMETHOD.clang=	build
-BUILDLINK_API_DEPENDS.clang+=	clang>=6.0.1nb1
-.include "../../lang/clang/buildlink3.mk"
-BUILDLINK_DEPMETHOD.rust=	build
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.24.0
-.include "../../lang/rust/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
-.include "../../net/libIDL/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.25.2
-.include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
 
 pre-fetch:
 	${ECHO} ${LDFLAGS}
