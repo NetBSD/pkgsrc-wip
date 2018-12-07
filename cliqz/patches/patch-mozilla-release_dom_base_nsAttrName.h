@@ -1,5 +1,8 @@
 $NetBSD$
 
+cbindgen gets confused by NetBSD's types being macros too
+https://mail-index.netbsd.org/tech-pkg/2018/10/25/msg020395.html
+
 --- mozilla-release/dom/base/nsAttrName.h.orig	2018-11-16 08:40:07.000000000 +0000
 +++ mozilla-release/dom/base/nsAttrName.h
 @@ -16,6 +16,11 @@
