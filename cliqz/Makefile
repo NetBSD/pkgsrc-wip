@@ -47,6 +47,8 @@ CHECK_PORTABILITY_SKIP+=	mozilla-release/modules/pdfium/update.sh
 CHECK_PORTABILITY_SKIP+=	mozilla-release/security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	mozilla-release/security/nss/tests/multinit/multinit.sh
 
+REPLACE_BASH+=	magic_build_and_package.sh
+
 # for lang/gcc6
 GCC_REQD+=	6.1
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]**-*) || \

@@ -4,7 +4,6 @@ SHA1 (cliqz-1.23.3.tar.gz) = 7fccc68b51f3923409d887ccc2f56fdae935de53
 RMD160 (cliqz-1.23.3.tar.gz) = d82459eb5018441a81826741a6d8d475031991a3
 SHA512 (cliqz-1.23.3.tar.gz) = 0e649ea09b27b638608ceec6b5d2cd7b25a3e60022dd63dc56aa09b56a22db2bd520d0ad61d296305eeaa52cabbe5b84721689a05b7c13021f795b5d88d3526f
 Size (cliqz-1.23.3.tar.gz) = 400171513 bytes
-SHA1 (patch-magic__build__and__package.sh) = 8dbd241f545688df0c8b8b2337eb2166dc880470
 SHA1 (patch-mozilla-release_browser_config_cliqz.mozconfig) = 997534b7573564cdd0eb71b94527fe395fb29f69
 SHA1 (patch-mozilla-release_dom_base_nsAttrName.h) = b171688beb296089d582f264c91456aaaa4b6657
 SHA1 (patch-mozilla-release_servo_components_style_build__gecko.rs) = 391f26051857c224b54eec560b84c844f3027266
