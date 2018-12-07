@@ -1,0 +1,9 @@
+1. Investigate build failures with --enable-gconf
+2. Investigate build failures with --disable-gconf
+3. Investigate tools/components/find (nsFind.cpp) failure when
+   build with --disable-gconf
+   
+The browser builds outside the pkgsrc environment as expected and
+produces a binary.
+
+NOTE: This package is currently broken and does not build.

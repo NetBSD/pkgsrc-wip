@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- mozilla-release/browser/config/cliqz.mozconfig.orig	2018-11-16 08:40:07.000000000 +0000
++++ mozilla-release/browser/config/cliqz.mozconfig
+@@ -8,9 +8,25 @@ ac_add_options --enable-signmar
+ ac_add_options --with-branding=browser/branding/cliqz
+ ac_add_options --enable-official-branding
+ ac_add_options --with-app-name=cliqz  # name for binaries
+-ac_add_options --enable-crashreporter
+ ac_add_options --enable-js-shell
+ 
++# NetBSD Options
++ac_add_options --disable-crashreporter
++ac_add_options --disable-updater
++ac_add_options --disable-debug
++ac_add_options --disable-debug-symbols
++ac_add_options --disable-tests
++ac_add_options --with-system-icu
++ac_add_options --disable-webrtc
++ac_add_options --enable-default-toolkit=cairo-gtk3
++ac_add_options --enable-system-pixman
++ac_add_options --disable-pulseaudio
++#ac_add_options --disable-gconf
++ac_add_options --enable-dbus
++
++ac_add_options --target=x86_64--netbsd 
++ac_add_options --host=x86_64--netbsd
++
+ export MOZ_APP_PROFILE=CLIQZ
+ export MOZ_AUTOMATION_UPLOAD=1
+ 
