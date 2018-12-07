@@ -62,5 +62,32 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./magic_build_and_package.sh
 
+.include "../../archivers/bzip2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libevent+=       libevent>=1.1
+.include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
+BUILDLINK_API_DEPENDS.nspr+=   nspr>=4.19
+.include "../../devel/nspr/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+BUILDLINK_API_DEPENDS.nss+=     nss>=3.38
+.include "../../devel/nss/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+BUILDLINK_DEPMETHOD.clang=     build
+BUILDLINK_API_DEPENDS.clang+=  clang>=6.0.1nb1
+.include "../../lang/clang/buildlink3.mk"
+BUILDLINK_DEPMETHOD.rust=      build
+BUILDLINK_API_DEPENDS.rust+=   rust>=1.24.0
+.include "../../lang/rust/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libvpx+= libvpx>=1.3.0
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../net/libIDL/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
+.include "../../x11/pixman/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
