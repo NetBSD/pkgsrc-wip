@@ -14,9 +14,9 @@ HOMEPAGE=	https://cliqz.com/en/desktop
 COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	python37-[0-9]*:../../lang/python37 \
-		cbindgen-[0-9]*:../../devel/cbindgen \
-		nodejs-[0-9]*:../../lang/nodejs \
+TOOL_DEPENDS+=	python37-[0-9]*:../../lang/python37
+TOOL_DEPENDS+=	cbindgen-[0-9]*:../../devel/cbindgen
+TOOL_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 BUILD_DEPENDS+=	yasm>=1.1:../../devel/yasm 
 
@@ -49,7 +49,11 @@ CHECK_PORTABILITY_SKIP+=	mozilla-release/security/nss/tests/multinit/multinit.sh
 
 # for lang/gcc6
 GCC_REQD+=	6.1
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]**-*) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8]*-*)
 USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
+
 
 CFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
 CXXFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
