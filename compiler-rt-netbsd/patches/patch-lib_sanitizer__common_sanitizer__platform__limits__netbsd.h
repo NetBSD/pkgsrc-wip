@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-05 15:17:53.889431418 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-07 22:43:42.615556581 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -2223,6 +2223,68 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
+@@ -2225,6 +2225,68 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
  
  extern const int si_SEGV_MAPERR;
  extern const int si_SEGV_ACCERR;

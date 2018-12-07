@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-05 15:17:53.889846309 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-05 15:17:53.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
 @@ -2101,6 +2101,35 @@ const int modctl_load = MODCTL_LOAD;
  const int modctl_unload = MODCTL_UNLOAD;
