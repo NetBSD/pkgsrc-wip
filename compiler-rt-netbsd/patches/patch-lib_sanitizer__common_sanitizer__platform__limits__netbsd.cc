@@ -1,11 +1,14 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-08 02:06:46.221494609 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-08 02:06:46.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -2113,6 +2113,24 @@ const unsigned RMD160_return_length = RM
+@@ -2113,6 +2113,27 @@ const unsigned RMD160_return_length = RM
  
  const unsigned MD5_CTX_sz = sizeof(MD5_CTX);
  const unsigned MD5_return_length = MD5_DIGEST_STRING_LENGTH;
++
++const unsigned MD2_CTX_sz = sizeof(MD2_CTX);
++const unsigned MD2_return_length = MD2_DIGEST_STRING_LENGTH; // 33
 +
 +#define SHA2_CONST(LEN) \
 +  const unsigned SHA##LEN##_CTX_sz = sizeof(SHA##LEN##_CTX); \

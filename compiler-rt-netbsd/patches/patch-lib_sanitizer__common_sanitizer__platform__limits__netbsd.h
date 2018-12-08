@@ -1,11 +1,14 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-08 02:06:46.221060404 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-08 02:54:41.150740836 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -2237,6 +2237,56 @@ extern const unsigned RMD160_return_leng
+@@ -2235,6 +2235,59 @@ extern const unsigned RMD160_return_leng
  
  extern const unsigned MD5_CTX_sz;
  extern const unsigned MD5_return_length;
++
++extern const unsigned MD2_CTX_sz;
++extern const unsigned MD2_return_length;
 +
 +#define SHA2_EXTERN(LEN) \
 +  extern const unsigned SHA##LEN##_CTX_sz; \
