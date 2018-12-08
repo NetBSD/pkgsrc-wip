@@ -1,22 +1,11 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-05 15:17:53.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc.orig	2018-12-08 02:06:46.221494609 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.cc
-@@ -2101,6 +2101,35 @@ const int modctl_load = MODCTL_LOAD;
- const int modctl_unload = MODCTL_UNLOAD;
- const int modctl_stat = MODCTL_STAT;
- const int modctl_exists = MODCTL_EXISTS;
-+
-+const unsigned SHA1_CTX_sz = sizeof(SHA1_CTX);
-+const unsigned SHA1_return_length = SHA1_DIGEST_STRING_LENGTH; // 41
-+const unsigned MD2_CTX_sz = sizeof(MD2_CTX);
-+const unsigned MD2_return_length = MD2_DIGEST_STRING_LENGTH; // 33
-+const unsigned MD4_CTX_sz = sizeof(MD4_CTX);
-+const unsigned MD4_return_length = 33;
-+const unsigned MD5_CTX_sz = sizeof(MD5_CTX);
-+const unsigned MD5_return_length = MD5_DIGEST_STRING_LENGTH; // 33
-+const unsigned RMD160_CTX_sz = sizeof(RMD160_CTX);
-+const unsigned RMD160_return_length = RMD160_DIGEST_STRING_LENGTH;// 41
+@@ -2113,6 +2113,24 @@ const unsigned RMD160_return_length = RM
+ 
+ const unsigned MD5_CTX_sz = sizeof(MD5_CTX);
+ const unsigned MD5_return_length = MD5_DIGEST_STRING_LENGTH;
 +
 +#define SHA2_CONST(LEN) \
 +  const unsigned SHA##LEN##_CTX_sz = sizeof(SHA##LEN##_CTX); \

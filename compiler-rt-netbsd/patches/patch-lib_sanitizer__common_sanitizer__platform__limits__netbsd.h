@@ -1,24 +1,13 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-07 22:43:42.615556581 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-08 02:06:46.221060404 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -2225,6 +2225,68 @@ extern unsigned IOCTL_SNDCTL_DSP_SILENCE
+@@ -2237,6 +2237,56 @@ extern const unsigned RMD160_return_leng
  
- extern const int si_SEGV_MAPERR;
- extern const int si_SEGV_ACCERR;
+ extern const unsigned MD5_CTX_sz;
+ extern const unsigned MD5_return_length;
 +
-+extern const unsigned SHA1_CTX_sz;
-+extern const unsigned SHA1_return_length;
-+extern const unsigned MD2_CTX_sz;
-+extern const unsigned MD2_return_length;
-+extern const unsigned MD4_CTX_sz;
-+extern const unsigned MD4_return_length;
-+extern const unsigned MD5_CTX_sz;
-+extern const unsigned MD5_return_length;
-+extern const unsigned RMD160_CTX_sz;
-+extern const unsigned RMD160_return_length;
-+
-+#define SHA2_EXTERN(LEN)\
++#define SHA2_EXTERN(LEN) \
 +  extern const unsigned SHA##LEN##_CTX_sz; \
 +  extern const unsigned SHA##LEN##_return_length; \
 +  extern const unsigned SHA##LEN##_block_length; \
@@ -67,7 +56,6 @@ $NetBSD$
 +  u64 __ss_align;
 +  char __ss_pad2[128 - 2 - (sizeof(u64) - 2) - sizeof(u64)];
 +};
-+
  }  // namespace __sanitizer
  
  #define CHECK_TYPE_SIZE(TYPE) \
