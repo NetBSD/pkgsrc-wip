@@ -25,6 +25,8 @@ PKGCONFIG_OVERRIDE+=	gcr-base-3.pc.in
 PKGCONFIG_OVERRIDE+=	gcr-ui.pc.in
 PKGCONFIG_OVERRIDE+=	gcr-3.pc.in
 
+TEST_TARGET=		check
+
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
