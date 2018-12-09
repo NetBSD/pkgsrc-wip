@@ -20,8 +20,6 @@ CHECK_PORTABILITY_SKIP+=	win32/makedist/makedist.midori
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-.include "../../mk/bsd.prefs.mk"
-
 CONFIGURE_ENV=	VALAC=${VALAC}
 
 .include "../../databases/sqlite3/buildlink3.mk"
