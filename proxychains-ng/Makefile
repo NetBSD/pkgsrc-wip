@@ -3,7 +3,6 @@
 CATEGORIES=	net
 PKGBASE=	proxychains-ng
 PKGVERSION=	4.11
-#PKGREVISION=	0
 
 DISTNAME=	${PKGBASE}-${PKGVERSION}
 MASTER_SITES=	https://github.com/rofl0r/proxychains-ng/releases/download/v${PKGVERSION}/

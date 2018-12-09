@@ -8,7 +8,6 @@ PKGNAME=	${GCC_PKGNAME}-${GCC8S_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc7-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
-#PKGREVISION=	1
 CATEGORIES=	lang
 #MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC8S_DIST_VERSION}/}
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/${GCC8S_DIST_VERSION}/

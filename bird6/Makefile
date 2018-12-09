@@ -3,5 +3,4 @@
 CONFIGURE_ARGS+=	--enable-ipv6
 BIRD6=			6
 
-#PKGREVISION= 1
 .include "../bird/Makefile.common"

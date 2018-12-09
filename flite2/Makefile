@@ -3,7 +3,6 @@
 
 DISTNAME=	flite-2.0.0-release
 PKGNAME=	${DISTNAME:S/-release//}
-#PKGREVISION=	3
 CATEGORIES=	audio
 #MASTER_SITES=	http://www.speech.cs.cmu.edu/flite/packed/flite-1.3/
 MASTER_SITES=	http://festvox.org/flite/packed/flite-2.0/	

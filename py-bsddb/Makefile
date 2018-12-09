@@ -2,7 +2,6 @@
 #
 
 PKGNAME=	${PYPKGPREFIX}-bsddb-${PY_DISTVERSION}
-#PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

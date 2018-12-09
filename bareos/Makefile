@@ -1,13 +1,10 @@
 # $NetBSD$
 
-#PKGREVISION=		1
-
 .include "options.mk"
 
 PLIST_SUBST+=		BAREOS_DB=${BAREOS_DB}
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
-
 
 # For make_catalog_backup.pl.in.
 USE_TOOLS+=		perl:run

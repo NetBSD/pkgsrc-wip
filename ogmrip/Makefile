@@ -2,7 +2,6 @@
 #
 
 DISTNAME=		ogmrip-0.13.7
-#PKGREVISION=		2
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ogmrip/}
 

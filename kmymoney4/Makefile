@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2012/10/01 21:57:40 asau Exp $
 
 DISTNAME=	kmymoney-4.8.2
-#PKGREVISION=	1
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_KDE:=kmymoney/4.8.2/src/}
 EXTRACT_SUFX=	.tar.xz
