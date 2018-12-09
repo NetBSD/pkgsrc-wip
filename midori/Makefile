@@ -15,9 +15,6 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CMAKE=	yes
 USE_TOOLS+=	intltool msgfmt pkg-config
 
-CHECK_PORTABILITY_SKIP+=	win32/old/x86-mingw32-opensuse/install.sh
-CHECK_PORTABILITY_SKIP+=	win32/makedist/makedist.midori
-
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CONFIGURE_ENV=	VALAC=${VALAC}
