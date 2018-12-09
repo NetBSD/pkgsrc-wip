@@ -27,14 +27,14 @@ PKGCONFIG_OVERRIDE+=	gcr-3.pc.in
 
 TEST_TARGET=		check
 
-.include "../../lang/vala/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../security/p11-kit/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/p11-kit/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
