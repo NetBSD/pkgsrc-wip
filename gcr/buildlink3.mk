@@ -8,6 +8,7 @@ GCR_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.gcr+=	gcr>=3.18.0
 BUILDLINK_PKGSRCDIR.gcr?=	../../wip/gcr
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
