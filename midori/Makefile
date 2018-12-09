@@ -17,7 +17,7 @@ USE_TOOLS+=	intltool msgfmt pkg-config
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-CONFIGURE_ENV=	VALAC=${VALAC}
+CONFIGURE_ENV+=	VALAC=${VALAC}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
