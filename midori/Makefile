@@ -18,8 +18,6 @@ USE_TOOLS+=	intltool msgfmt pkg-config
 CHECK_PORTABILITY_SKIP+=	win32/old/x86-mingw32-opensuse/install.sh
 CHECK_PORTABILITY_SKIP+=	win32/makedist/makedist.midori
 
-DEPENDS+=		gnome-themes-standard-[0-9]*:../../graphics/gnome-themes-standard
-
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.prefs.mk"
@@ -29,8 +27,8 @@ CONFIGURE_ENV=	VALAC=${VALAC}
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libpeas/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
