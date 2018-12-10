@@ -581,7 +581,6 @@ SUBDIR+=	dict-freedict-eng-ara
 SUBDIR+=	dict-freedict-eng-fra
 SUBDIR+=	digitemp
 SUBDIR+=	dillo-devel
-SUBDIR+=	din
 SUBDIR+=	ding
 SUBDIR+=	dionysus
 SUBDIR+=	dir2ogg
