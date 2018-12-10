@@ -1,3 +1,0 @@
-- On NetBSD there are warnings about implicit declaration of fopen64, probably
-  a `|| defined(__NetBSD__)' in third_party/minizip/ioapi.h:53 needs to be
-  added.

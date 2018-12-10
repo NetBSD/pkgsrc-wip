@@ -15,6 +15,8 @@ USE_LANGUAGES+=	c c++
 
 MAKE_FLAGS+=	V=1
 MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}
+# prevent minizip from assuming fopen64 and friends exist
+CFLAGS+=	-DIOAPI_NO_64
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
