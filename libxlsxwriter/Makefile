@@ -3,7 +3,7 @@
 DISTNAME=	libxlsxwriter-0.8.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmcnamara/}
-GITHUB_TAG=	RELEASE_${PKGVERSION}
+GITHUB_TAG=	RELEASE_${PKGVERSION_NOREV}
 
 MAINTAINER=	ik@sjmulder.nl
 HOMEPAGE=	https://libxlsxwriter.github.io/
