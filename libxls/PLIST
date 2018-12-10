@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/xls2csv
+include/libxls/brdb.c.h
+include/libxls/brdb.h
+include/libxls/ole.h
+include/libxls/xlsstruct.h
+include/libxls/xlstool.h
+include/libxls/xlstypes.h
+include/xls.h
+lib/libxlsreader.la
