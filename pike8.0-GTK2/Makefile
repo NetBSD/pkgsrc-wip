@@ -4,7 +4,7 @@ MODULENAME=	GTK2
 PIKEVERSUFFIX=	8.0
 MODULE_TYPE=	post_module
 
-.include 	"../../lang/pike${PIKEVERSUFFIX}/builtin_module.mk"
+.include 	"../../wip/pike${PIKEVERSUFFIX}/builtin_module.mk"
 
 CFLAGS+=	-I../..
 EXTRACT_ELEMENTS+= ${DISTNAME}/src/modules/Image

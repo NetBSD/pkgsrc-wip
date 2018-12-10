@@ -7,7 +7,7 @@ PIKEVERSUFFIX=	8.0
 
 EXTRACT_ELEMENTS+= ${DISTNAME}/src/modules/Image
 
-.include 	"../../lang/pike${PIKEVERSUFFIX}/builtin_module.mk"
+.include 	"../../wip/pike${PIKEVERSUFFIX}/builtin_module.mk"
 
 #PIKE_MODULE_OVERLAPPING_FILES+= lib/pike${PIKEVERSUFFIX}/modules/GTK2.pmod
 
