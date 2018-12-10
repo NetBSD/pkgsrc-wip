@@ -10,4 +10,4 @@ SHA1 (patch-packages_clib_sha1_brg_endian.h) = e7bc21953cedafce67e0070b9ec326446
 SHA1 (patch-src_os_pl-files.c) = 222a9a4682808fc62e410b01f38e31c4dcc62f53
 SHA1 (patch-src_pl-funcs.h) = fd821e245ca49a42e595096d05a21ee20d25c41c
 SHA1 (patch-src_pl-rsort.c) = 233430c9ead3e1361f40ae541d0527408a141d6e
-SHA1 (patch-src_pl-thread.c) = 204e9afd776cbb3c9213ec41ac373b02b3fde8ac
+SHA1 (patch-src_pl-thread.c) = d45bb808e8fc80ab0766720415677328bd9bee1c

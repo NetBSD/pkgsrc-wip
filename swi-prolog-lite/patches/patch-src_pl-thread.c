@@ -9,7 +9,7 @@ Add support for NetBSD pthread_setname_np(3).
      return TRUE;
  #else
 +#if defined(__NetBSD__)
-+  if ( pthread_setname_np(pthread_self(), name, NULL) == 0 )
++  if ( pthread_setname_np(pthread_self(), "%s", (void *)name) == 0 )
 +    return TRUE;
 +#else
    if ( pthread_setname_np(pthread_self(), name) == 0 )
