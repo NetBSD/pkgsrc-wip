@@ -15,7 +15,7 @@ LICENSE=	original-bsd
 .include "../../mk/bsd.prefs.mk"
 
 # pkg-config to avoid broken Makefile self-configuration
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config yacc
 # gnuplot is invoked through the shell, no need to check at compile time
 CFLAGS+=	-DGNUPLOT
 # defaults to sc-im
