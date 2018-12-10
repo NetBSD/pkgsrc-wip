@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (din-38.tar.gz) = 5a0e71f8d03c9c5ea001d31bbce64eba94c222aa
-RMD160 (din-38.tar.gz) = 955768113e21409c0407cf91ffc03e60a8f78c84
-SHA512 (din-38.tar.gz) = d731e78b75c8ceda8de47399371ad61c02ef757f0c9ec915b0a924687e7a35878b937a02b658e0d5c9e025b2211ce7e950827e76823ad056e2bcd3f6b6abe155
-Size (din-38.tar.gz) = 3619200 bytes
-SHA1 (patch-src_Makefile.am) = 652aefcb5d654896283545ddf0b96dabb0baa8ca
-SHA1 (patch-src_Makefile.in) = 6abe0ee6b73e61451b8258603167cee8c5d46cb7
