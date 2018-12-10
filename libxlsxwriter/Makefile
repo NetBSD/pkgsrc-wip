@@ -13,10 +13,11 @@ LICENSE=	2-clause-bsd AND original-bsd AND zlib AND mpl-2.0
 USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c c++
 
+# more verbose output
 MAKE_FLAGS+=	V=1
 MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}
-# prevent minizip from assuming fopen64 and friends exist
-CFLAGS+=	-DIOAPI_NO_64
+# minizip/ioapi.c has broken logic for checking for fopen64 etc
+CFLAGS+=	-DIOAPI_NO_64 -D_FILE_OFFSET_BITS=64
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
