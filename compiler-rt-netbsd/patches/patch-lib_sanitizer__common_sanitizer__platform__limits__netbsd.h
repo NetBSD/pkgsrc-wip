@@ -1,32 +1,14 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-08 02:54:41.150740836 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_netbsd.h.orig	2018-12-10 09:29:18.792198294 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_netbsd.h
-@@ -2235,6 +2235,59 @@ extern const unsigned RMD160_return_leng
+@@ -2253,6 +2253,41 @@ SHA2_EXTERN(384);
+ SHA2_EXTERN(512);
  
- extern const unsigned MD5_CTX_sz;
- extern const unsigned MD5_return_length;
-+
-+extern const unsigned MD2_CTX_sz;
-+extern const unsigned MD2_return_length;
-+
-+#define SHA2_EXTERN(LEN) \
-+  extern const unsigned SHA##LEN##_CTX_sz; \
-+  extern const unsigned SHA##LEN##_return_length; \
-+  extern const unsigned SHA##LEN##_block_length; \
-+  extern const unsigned SHA##LEN##_digest_length
-+
-+SHA2_EXTERN(224);
-+SHA2_EXTERN(256);
-+SHA2_EXTERN(384);
-+SHA2_EXTERN(512);
-+
-+#undef SHA2_EXTERN
+ #undef SHA2_EXTERN
 +
 +extern const int unvis_valid;
 +extern const int unvis_validpush;
-+
-+extern const unsigned fpos_t_sz;
 +
 +struct __sanitizer_cdbr {
 +  void (*unmap)(void *, void *, uptr);
