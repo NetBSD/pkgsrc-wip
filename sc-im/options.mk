@@ -2,6 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sc-im
 PKG_SUPPORTED_OPTIONS+=	xls xlsx lua
+PKG_SUGGESTED_OPTIONS+=	xls xlsx lua
 
 .include "../../mk/bsd.options.mk"
 

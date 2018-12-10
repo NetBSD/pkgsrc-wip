@@ -3,14 +3,15 @@
 DISTNAME=	sc-im-0.7.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andmarti1424/}
-GITHUB_TAG=	v${PKGVERSION}
-BUILD_DIRS=	src
-INSTALL_DIRS=	src
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ik@sjmulder.nl
 HOMEPAGE=	https://github.com/andmarti1424/sc-im/
 COMMENT=	Curses-based spreadsheet program based on sc
 LICENSE=	original-bsd
+
+BUILD_DIRS=	src
+INSTALL_DIRS=	src
 
 .include "../../mk/bsd.prefs.mk"
 
