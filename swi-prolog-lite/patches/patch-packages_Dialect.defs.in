@@ -1,5 +1,7 @@
 $NetBSD: patch-packages_Dialect.defs.in,v 1.1 2014/05/28 10:29:12 markd Exp $
 
+Adjust LDFLAGS to link with installed libraries.
+
 --- packages/Dialect.defs.in.orig	2014-05-27 12:23:38.000000000 +0000
 +++ packages/Dialect.defs.in
 @@ -57,7 +57,7 @@ else
