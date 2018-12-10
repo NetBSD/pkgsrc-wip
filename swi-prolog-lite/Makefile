@@ -30,7 +30,7 @@ REPLACE_FILES.swipl+=	library/dialect/sicstus/swipl-lfr.pl
 
 TEST_TARGET=		check
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -46,6 +46,6 @@ post-configure:
 .include "../../wip/swi-prolog-lite/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
