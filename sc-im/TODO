@@ -1,0 +1,2 @@
+- xlsx export (requires libxlsexport package)
+- xls option (requires xlsreader package)

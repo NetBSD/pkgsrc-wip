@@ -12,10 +12,18 @@ HOMEPAGE=	https://github.com/andmarti1424/sc-im/
 COMMENT=	Curses-based spreadsheet program based on sc
 LICENSE=	original-bsd
 
+.include "../../mk/bsd.prefs.mk"
+
+# pkg-config to avoid broken Makefile self-configuration
 USE_TOOLS+=	gmake pkg-config
+# gnuplot is invoked through the shell, no need to check at compile time
+CFLAGS+=	-DGNUPLOT
+# defaults to sc-im
 MAKE_FLAGS+=	name=sc-im
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
+
+.include "options.mk"
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
