@@ -1,0 +1,15 @@
+$NetBSD$
+
+NetBSD does not need -ldl. Actually the whole thing needs to be made more
+portable.
+
+--- src/Makefile.orig
++++ src/Makefile
+@@ -89,7 +89,6 @@ endif
+
+ # dynamic linking (should not be used in FreeBSD
+ ifneq ($(shell uname -s),FreeBSD)
+-  LDLIBS += -ldl
+ endif
+
+ ifneq (, $(shell which pkg-config))
