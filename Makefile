@@ -2396,6 +2396,7 @@ SUBDIR+=	openclonk
 SUBDIR+=	opendchub
 SUBDIR+=	openerp-server
 SUBDIR+=	openfodder
+SUBDIR+=	openfodder-data
 SUBDIR+=	openh264
 SUBDIR+=	openjazz
 SUBDIR+=	openjdk8-openjfx-hg
