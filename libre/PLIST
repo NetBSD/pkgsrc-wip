@@ -28,6 +28,7 @@ include/re/re_msg.h
 include/re/re_natbd.h
 include/re/re_net.h
 include/re/re_odict.h
+include/re/re_rtmp.h
 include/re/re_rtp.h
 include/re/re_sa.h
 include/re/re_sdp.h
