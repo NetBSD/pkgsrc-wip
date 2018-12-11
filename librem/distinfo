@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/08/10 00:06:55 thomasklausner Exp $
 
-SHA1 (rem-0.5.3.tar.gz) = f7081991dd2e535673cc053c22819d20ae0b7788
-RMD160 (rem-0.5.3.tar.gz) = e3c189cc36035ed7223189f2bd33160c73c83cfb
-SHA512 (rem-0.5.3.tar.gz) = 6f0fa23982e9c8f53a65f3b867030eb1f218613db278c8a0e1e6bed7a40466bb6017d87432a10c3a834b6c99b4bbe96e0fdd7e5ff7f41cd3bdf39d40564e9c61
-Size (rem-0.5.3.tar.gz) = 40417 bytes
+SHA1 (rem-0.6.0.tar.gz) = 6abb8876fcca34a675c0fa52bc962e2d7acf9281
+RMD160 (rem-0.6.0.tar.gz) = 88c0dba6716f448994141138daeb533a958b5b4f
+SHA512 (rem-0.6.0.tar.gz) = 4f7daa7c2765b686afb1e5e7bcc51e74fe3337b1e408f498f95a0d16835a967e4e572359a8950bf945f57c028c0b00855ba8158ed3bd8eea2c5e89be2f9685c1
+Size (rem-0.6.0.tar.gz) = 41585 bytes

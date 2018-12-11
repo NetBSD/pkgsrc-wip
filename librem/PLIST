@@ -8,9 +8,11 @@ include/rem/rem_aufile.h
 include/rem/rem_aumix.h
 include/rem/rem_auresamp.h
 include/rem/rem_autone.h
+include/rem/rem_avc.h
 include/rem/rem_dsp.h
 include/rem/rem_dtmf.h
 include/rem/rem_fir.h
+include/rem/rem_flv.h
 include/rem/rem_g711.h
 include/rem/rem_goertzel.h
 include/rem/rem_vid.h
