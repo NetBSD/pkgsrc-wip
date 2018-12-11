@@ -65,9 +65,9 @@ MAKE_FLAGS+=	USE_GTK=
 .if !empty(PKG_OPTIONS:Mx265)
 PLIST.x265=	yes
 MAKE_FLAGS+=	USE_H265=yes
-LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg3}/${BUILDLINK_LIBDIRS.ffmpeg3}
-LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg3}/${BUILDLINK_LIBDIRS.ffmpeg3}
-.include "../../multimedia/ffmpeg3/buildlink3.mk"
+LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
+LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_H265=
@@ -80,9 +80,9 @@ MAKE_FLAGS+=	USE_H265=
 PLIST.ffmpeg=	yes
 MAKE_FLAGS+=	USE_AVCODEC=yes
 MAKE_FLAGS+=	USE_AVFORMAT=yes
-LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg3}/${BUILDLINK_LIBDIRS.ffmpeg3}
-LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg3}/${BUILDLINK_LIBDIRS.ffmpeg3}
-.include "../../multimedia/ffmpeg3/buildlink3.mk"
+LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
+LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_AVCODEC=
