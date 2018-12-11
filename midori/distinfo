@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.25 2015/10/25 13:50:22 jmcneill Exp $
-
-SHA1 (midori-v7.0.tar.gz) = 802ceb76483bf6b9d1dfe94561fb42568e398200
-RMD160 (midori-v7.0.tar.gz) = c9b2bb0734db3ddabd5d5f71ab610e4b788804cf
-SHA512 (midori-v7.0.tar.gz) = 4110d1566ba8b0979c29f1c3a95af3da4cba884f44a1305403d8951f7f2dfb17946c3c7326eebafc111738950c907d06cc6c54ce670cde321da890d8b9ced051
-Size (midori-v7.0.tar.gz) = 1827341 bytes
