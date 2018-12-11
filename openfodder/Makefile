@@ -1,18 +1,14 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	openfodder
-DISTNAME=	1.4.0
+DISTNAME=	1.5
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=segrax/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenFodder/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	data-${PKGVERSION_NOREV}.zip
-SITES.data-1.4.0.zip= \
-		-https://github.com/OpenFodder/data/releases/download/1.4/OpenFodder.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/segrax/openfodder/
+HOMEPAGE=	http://openfodder.com
 COMMENT=	Engine for the Cannon Fodder game
 LICENSE=	gnu-gpl-v3
 
@@ -26,22 +22,20 @@ LIBS+=		`sdl2-config --libs`
 LIBS+=		-lSDL2_mixer
 LIBS+=		${X11_LDFLAGS}
 
+DEPENDS+=	openfodder-data-${DISTNAME}:../../wip/openfodder-data
+
 FODDER_SRCDIRS=	Source Source/Amiga Source/PC Source/Structures
 FODDER_SRCS=	${FODDER_SRCDIRS:=/*.cpp}
 
-INSTALLATION_DIRS+=	bin share/OpenFodder
+INSTALLATION_DIRS+=	bin share/doc/OpenFodder
 
 do-build:
+	${ECHO} 'const char* gitversion="pkgsrc-${PKGVERSION_NOREV}";' > ${WRKSRC}/Source/gitver.hpp
 	cd ${WRKSRC} && ${CXX} ${CXXFLAGS} -o OpenFodder ${FODDER_SRCS} ${LIBS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/OpenFodder ${DESTDIR}${PREFIX}/bin
-	cd ${WRKDIR}/OpenFodder && ${FIND} . -type d | while read d; do \
-		${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/share/OpenFodder/$$d" || exit 1; \
-	done
-	cd ${WRKDIR}/OpenFodder && ${FIND} . -type f | while read f; do \
-		${INSTALL_DATA} "$$f" "${DESTDIR}${PREFIX}/share/OpenFodder/$${f%/*}" || exit 1; \
-	done
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/OpenFodder/
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
