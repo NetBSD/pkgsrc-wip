@@ -1,0 +1,15 @@
+# $NetBSD$
+
+Have the Makefile use our suffixed py.test.
+
+--- Makefile.orig	2018-12-11 09:27:13.020452878 +0100
++++ Makefile	2018-12-11 09:28:13.394456837 +0100
+@@ -58,7 +58,7 @@
+ # Run the functional tests.
+ test_functional : all
+ 	$(Q)$(MAKE) -C test/functional/src
+-	$(Q)py.test test/functional -v
++	$(Q)py.test$(PYSUFFIX) test/functional -v
+ 
+ # Run all tests.
+ test_unit :
