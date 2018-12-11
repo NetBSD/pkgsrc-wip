@@ -16,7 +16,6 @@ TEST_TARGET=	test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES+=	c c++
 
 .include "../../lang/python/pyversion.mk"
 
