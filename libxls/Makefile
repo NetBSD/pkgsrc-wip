@@ -14,5 +14,7 @@ WRKSRC=		${WRKDIR}/libxls
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_LANGUAGES+=	c c++
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

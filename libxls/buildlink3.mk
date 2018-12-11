@@ -7,6 +7,8 @@ LIBXLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxls+=	libxls>=1.4.0
 BUILDLINK_PKGSRCDIR.libxls?=	../../wip/libxls
+
+.include "../../converters/libiconv/buildlink3.mk"
 .endif
 
 BUILDLINK_TREE+=	-libxls
