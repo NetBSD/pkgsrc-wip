@@ -22,7 +22,7 @@ USE_LANGUAGES+=	c c++
 
 # more verbose output
 MAKE_ENV+=	V=1
-MAKE_ENV+=	PYSUFFIX=-${PYVERSSUFFIX}
+MAKE_ENV+=	PYTEST=py.test-${PYVERSSUFFIX}
 MAKE_ENV+=	INSTALL_DIR=${DESTDIR}${PREFIX}
 # minizip/ioapi.c has broken logic for checking for fopen64 etc
 CFLAGS+=	-DIOAPI_NO_64 -D_FILE_OFFSET_BITS=64
