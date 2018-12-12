@@ -22,6 +22,5 @@ LDFLAGS+=	-lxlsxwriter
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
-CFLAGS+=	-DXLUA
 .include "../../lang/lua51/buildlink3.mk"
 .endif
