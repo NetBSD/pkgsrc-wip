@@ -17,14 +17,20 @@ INSTALL_DIRS=	src
 
 # pkg-config to avoid broken Makefile self-configuration
 USE_TOOLS+=	gmake pkg-config yacc
+
 # gnuplot is invoked through the shell, no need to check at compile time
 CFLAGS+=	-DGNUPLOT
+
 # defaults to sc-im
 MAKE_FLAGS+=	name=sc-im
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
+# replace hardcoded -ldl with whatever dlopen.buildlink3.mk gives us
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+
 .include "options.mk"
 
 .include "../../devel/ncursesw/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
