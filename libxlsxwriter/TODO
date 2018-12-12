@@ -1,0 +1,11 @@
+stage-install fails on macOS:
+
+  => Checking for missing run-time search paths in libxlsxwriter-0.8.4
+  ERROR: lib/libxlsxwriter.dylib: missing library: /usr/lib/libxlsxwriter.dylib
+
+Seems to be caused by this bit in src/Makefile:
+
+  SOFLAGS = -dynamiclib $(FPIC) -install_name /usr/lib/$(LIBXLSXWRITER_SO)
+
+Upstream issue:
+https://github.com/jmcnamara/libxlsxwriter/issues/205
