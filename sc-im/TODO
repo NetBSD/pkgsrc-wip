@@ -1,4 +1,5 @@
-lua options breaks the build on Void Linux (musl-libc):
+Enabling the lua option on Void Linux, which pulls in the lua51
+buildlink, causes -lncursesw to resolve to -l__nonexistent__:
 
   cc -L/usr/pkg/lib -Wl,-R/usr/pkg/lib xlsx.o cmds_edit.o cmds_visual.o
     history.o marks.o lex.o trigger.o maps.o color.o input.o range.o
