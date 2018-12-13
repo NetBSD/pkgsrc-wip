@@ -21,7 +21,7 @@ USE_TOOLS+=	gmake pkg-config yacc
 # gnuplot is invoked through the shell, no need to check at compile time
 CFLAGS+=	-DGNUPLOT
 
-# defaults to sc-im
+# defaults to scim
 MAKE_FLAGS+=	name=sc-im
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
