@@ -1,9 +1,25 @@
-Upstream PR:
+$NetBSD$
+
+Remove hardcoded -ldl and fix permissions.
+
+Upstream PR for permissions:
 https://github.com/andmarti1424/sc-im/pull/305
 
---- src/Makefile.orig
+--- src/Makefile
 +++ src/Makefile
-@@ -141,8 +141,8 @@ install :
+@@ -87,11 +87,6 @@ ifneq (, $(shell which gnuplot))
+   CFLAGS += -DGNUPLOT
+ endif
+ 
+-# dynamic linking (should not be used in FreeBSD
+-ifneq ($(shell uname -s),FreeBSD)
+-  LDLIBS += -ldl
+-endif
+-
+ ifneq (, $(shell which pkg-config))
+   # Any system with pkg-config
+ 
+@@ -141,8 +136,8 @@ install :
  	install -d $(DESTDIR)$(prefix)/bin
  	install $(name) $(DESTDIR)$(prefix)/bin/$(name)
  	install -d $(DESTDIR)$(HELPDIR)
