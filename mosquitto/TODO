@@ -24,6 +24,3 @@ Check if these are really fixed in 1.5.1:
 
 Query sent to list on 20180904.  It seems likely that they are fixed
 but that it is not clearly documented.
-
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2018-20145
