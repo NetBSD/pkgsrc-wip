@@ -8,4 +8,4 @@ Seems to be caused by this bit in src/Makefile:
   SOFLAGS = -dynamiclib $(FPIC) -install_name /usr/lib/$(LIBXLSXWRITER_SO)
 
 Upstream issue:
-https://github.com/jmcnamara/libxlsxwriter/issues/205
+https://github.com/jmcnamara/libxlsxwriter/issues/209
