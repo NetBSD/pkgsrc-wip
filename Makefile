@@ -4623,7 +4623,6 @@ SUBDIR+=	tvmet
 SUBDIR+=	twemproxy
 SUBDIR+=	twitim
 SUBDIR+=	twitmail
-SUBDIR+=	twittering-mode
 SUBDIR+=	twittering-mode-git
 SUBDIR+=	txt2tags
 SUBDIR+=	typespeed
