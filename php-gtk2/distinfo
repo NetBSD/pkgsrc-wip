@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/08 12:24:10 khorben Exp $
-
-SHA1 (php-php_gtk2/php-gtk-2.0.1.tar.gz) = a4f42c715b51554c1322de4beb3054012ec58696
-RMD160 (php-php_gtk2/php-gtk-2.0.1.tar.gz) = 2e305f45d95a2c1abbe8cd551c794823dfc3d919
-Size (php-php_gtk2/php-gtk-2.0.1.tar.gz) = 1254316 bytes
