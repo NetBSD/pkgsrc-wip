@@ -22,7 +22,6 @@ LICENSE=	mpl-2.0
 USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash bsdtar
 USE_LANGUAGES+=	c99 gnu++14
 
-PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			python27-[0-9]*:../../lang/python27
