@@ -7,7 +7,7 @@ MASTER_SITES=	http://garr.dl.sourceforge.net/project/gfs/gerris/0.9.2/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://gfs.sourceforge.net/wiki/index.php/Main_Page
-COMMENT=	Software the solution of the PDE describing fluid flow
+COMMENT=	Software solution of the PDE describing fluid flow
 #LICENSE=	# TODO: (see mk/license.mk)
 
 GNU_CONFIGURE=	yes
