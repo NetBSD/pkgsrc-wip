@@ -9,7 +9,8 @@ MASTER_SITES=		http://www.ece.uwaterloo.ca/~aplevich/dpic/
 MAINTAINER=		mwicks@kettering.edu
 HOMEPAGE=		http://www.ece.uwaterloo.ca/~aplevich/dpic/
 COMMENT=		Replacement for pic/gpic that supports more output formats
-LICENSE=		2-clause-bsd gnu-gpl-v3 # also creative commons v3
+# also creative commons v3
+LICENSE=		2-clause-bsd AND gnu-gpl-v3
 
 BUILD_TARGET=		dpic
 INSTALLATION_DIRS+=	share/doc/dpic
