@@ -1243,7 +1243,6 @@ SUBDIR+=	gts-snapshot
 SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
 SUBDIR+=	guichan
-SUBDIR+=	guile-scsh
 SUBDIR+=	guitone
 SUBDIR+=	gupnp-ui
 SUBDIR+=	gurlchecker
