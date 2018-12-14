@@ -10,12 +10,12 @@ HOMEPAGE=       https://download.enlightenment.org/rel/apps/terminology/
 COMMENT=        Enlightenment terminal
 LICENSE=        2-clause-bsd
 
-DEPENDS+=       efl121-[0-9]*:../../wip/ecore121/
+DEPENDS+=       efl121-[0-9]*:../../wip/efl121
 
 INSTALLATION_DIRS=      share/doc/terminology
 
 post-install:
-        ${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING \
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING \
             ${DESTDIR}${PREFIX}/share/doc/terminology
 
 .include "../efl121/buildlink3.mk"
