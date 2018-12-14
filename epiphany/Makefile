@@ -40,7 +40,7 @@ TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 .include "../../net/avahi/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../wip/gcr/buildlink3.mk"
+.include "../../security/gcr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"

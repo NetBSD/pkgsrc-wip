@@ -38,7 +38,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../devel/glib2/schemas.mk"
-.include "../../wip/gcr/buildlink3.mk"
+.include "../../security/gcr/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"

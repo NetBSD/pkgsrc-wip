@@ -43,7 +43,7 @@ XSLTPROC_PATH=		${LOCALBASE}/share/doc/dbus
 .include "../../chat/telepathy-farstream/buildlink3.mk"
 .include "../../wip/telepathy-logger/buildlink3.mk"
 .include "../../wip/libfolks/buildlink3.mk"
-.include "../../wip/gcr/buildlink3.mk"
+.include "../../security/gcr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.37.6
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"

@@ -72,7 +72,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
-.include "../../wip/gcr/buildlink3.mk"
+.include "../../security/gcr/buildlink3.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
