@@ -63,7 +63,6 @@ post-extract:
 	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
-.include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
