@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
-lib/enlightenment/modules/ng/VeraBd.ttf
-lib/enlightenment/modules/ng/e-module-ng.edj
-lib/enlightenment/modules/ng/module.desktop
-lib/enlightenment/modules/ng/module_icon.png
-lib/enlightenment/modules/ng/${LOWER_OPSYS}${APPEND_ELF}-${MACHINE_ARCH}/module.la
-lib/enlightenment/modules/ng/ng.edc
-lib/enlightenment/modules/ng/ng.edj
