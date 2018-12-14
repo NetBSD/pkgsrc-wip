@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
-
-SHA1 (guile-scsh-2.0.1.tar.gz) = bf9d7e24dbcb5e2a85ad1371b941148b1c1aebae
-RMD160 (guile-scsh-2.0.1.tar.gz) = 66ded4d33732498715374288850437ba3a7044e9
-Size (guile-scsh-2.0.1.tar.gz) = 184852 bytes
