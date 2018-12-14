@@ -1700,7 +1700,6 @@ SUBDIR+=	kmix
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
 SUBDIR+=	kodi
-SUBDIR+=	koffice
 SUBDIR+=	koha
 SUBDIR+=	kolourpaint
 SUBDIR+=	konsole
