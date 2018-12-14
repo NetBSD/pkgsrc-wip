@@ -28,5 +28,5 @@ CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
-.include "../../lang/libc++/buildlink3.mk"
+.include "../../wip/libc++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
