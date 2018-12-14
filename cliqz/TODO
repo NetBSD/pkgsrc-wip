@@ -2,6 +2,8 @@ Build was fixed with a change from c++14 to gnu++14 in the USE_LANGUAGES.
 
 Build not yet tested on i386.
 
+NOTE: Work on do-install section to improve it
+
 NOTE: Got a successful run on NetBSD/amd64
 
-NOTE: Audio has not been tested
+NOTE: With PulseAudio there was successful Audio output

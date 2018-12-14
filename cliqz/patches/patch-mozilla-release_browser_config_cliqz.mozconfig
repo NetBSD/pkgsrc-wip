@@ -1,6 +1,6 @@
 $NetBSD$
 
-Remove the crash reporter option, this is not handled from within
+Remove the crash reporter option, this is now handled from within
 mozilla-common.mk
 
 --- mozilla-release/browser/config/cliqz.mozconfig.orig	2018-11-16 08:40:07.000000000 +0000
