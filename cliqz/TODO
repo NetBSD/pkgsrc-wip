@@ -2,13 +2,6 @@ Build was fixed with a change from c++14 to gnu++14 in the USE_LANGUAGES.
 
 Build not yet tested on i386.
 
-Fix the linker warnings
-*** This can be due to fox's NetBSD installation ***
+NOTE: Got a successful run on NetBSD/amd64
 
-/usr/bin/ld: warning: libstdc++.so.8, needed by /usr/pkgsrc-current/wip/cliqz/work/.buildlink/lib/libicui18n.so, may conflict with libstdc++.so.7
-/usr/bin/ld: warning: libstdc++.so.8, needed by /usr/pkgsrc-current/wip/cliqz/work/.buildlink/lib/libicui18n.so, may conflict with libstdc++.so.7
-/usr/bin/ld: warning: libfontconfig.so.1, needed by /usr/pkgsrc-current/wip/cliqz/work/.buildlink/lib/libpangocairo-1.0.so, may conflict with libfontconfig.so.2
-/usr/bin/ld: warning: libfreetype.so.6, needed by /usr/pkgsrc-current/wip/cliqz/work/.buildlink/lib/libpangocairo-1.0.so, may conflict with libfreetype.so.18
-
-NOTE: Binaries have not been tested in a GUI environment.
-
+NOTE: Audio has not been tested
