@@ -26,13 +26,6 @@ SUBST_MESSAGE.share=	Fixing DATADIR.
 SUBST_SED.share=	-e "s|os.getcwd()|'${PREFIX}/share/games/wahcade/'|1"
 SUBST_STAGE.share=	post-patch
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} && ${PYTHONBIN} setup.py build
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} && \
-		${PYTHONBIN} setup.py install --root=${DESTDIR}
-
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/wahcade*.py
 	${LN} -fs ${DESTDIR}${PREFIX}/share/games/wahcade/wahcade.py \
