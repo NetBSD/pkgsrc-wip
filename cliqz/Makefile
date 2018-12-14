@@ -19,12 +19,15 @@ HOMEPAGE=	https://cliqz.com/en/desktop
 COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	mpl-2.0
 
-USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash pax
+USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash bsdtar
 USE_LANGUAGES+=	c99 gnu++14
 
-TOOL_DEPENDS+=	python37-[0-9]*:../../lang/python37
-TOOL_DEPENDS+=	cbindgen-[0-9]*:../../devel/cbindgen
-TOOL_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_FOR_BUILD_ONLY=		tool
+TOOL_DEPENDS+=			python27-[0-9]*:../../lang/python27
+TOOL_DEPENDS+=			cbindgen-[0-9]*:../../devel/cbindgen
+TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
@@ -89,41 +92,16 @@ do-build:
 
 INSTALLATION_DIRS+=	share/applications share/pixmaps bin lib/cliqz
 do-install:
-	cd ${WRKSRC}/obj/dist/cliqz && ${PAX} -wr * ${DESTDIR}${PREFIX}/lib/cliqz
-	${FIND} . \(	-name \*.png -or \
-			-name \*.gif -or \
-			-name \*.jpg -or \
-			-name \*.js  -or \
-			-name \*.jsm -or \
-			-name \*.xhtml -or \
+	cd ${WRKSRC}/obj/dist && \
+		bsdtar -xjf ${DISTNAME}*${LOWER_OPSYS}-${MACHINE_ARCH}.tar.bz2 \
+		-C ${DESTDIR}${PREFIX}/lib
+	${FIND} . \(	-name \*.js  -or \
 			-name \*.html -or \
-			-name \*.css -or \
-			-name \*.txt -or \
-			-name \*.svg -or \
-			-name \*.dic -or \
-			-name \*.ftl -or \
-			-name \*.xul -or \
 			-name \*.xml -or \
-			-name \*.bcmap -or \
-			-name \*.wav -or \
-			-name \*.aff -or \
-			-name \*.ent -or \
-			-name \*.dtd -or \
-			-name \*.ico -or \
-			-name \*.cur -or \
-			-name \*.xsl -or \
-			-name \*.js.mem -or \
-			-name LICENSE_THIRDPARTY -or \
-			-name LICENSE -or \
-			-name permissions -or \
-			-name \*.json \
+			-name \*.svg \
 		\) \
 	-type f \
 	-exec ${CHMOD} 0644 '{}' \;
-	${FIND} . \(	-name responsive.html \
-		\) \
-	-type f \
-	-exec ${CHMOD} 0755 '{}' \;
 
 post-install:
 	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/cliqz
@@ -132,6 +110,7 @@ post-install:
 	${INSTALL_DATA} ${CLIQZ_DESKTOP} ${DESTDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${CLIQZ_ICON_SRC} ${DESTDIR}${PREFIX}/share/pixmaps/${CLIQZ_ICON}
 
+.include "../../lang/python/pyversion.mk"
 BUILDLINK_DEPMETHOD.clang=     build
 BUILDLINK_API_DEPENDS.clang+=  clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"

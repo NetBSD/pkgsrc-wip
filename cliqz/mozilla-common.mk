@@ -10,10 +10,10 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../mk/bsd.prefs.mk"
 
 # for lang/gcc6
-GCC_REQD+=	6.1
+GCC_REQD+=	6
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-7].*-*) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8]*-*)
+	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8].*-*)
 USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
 
