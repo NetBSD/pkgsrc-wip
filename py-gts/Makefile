@@ -28,5 +28,5 @@ post-install:
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../wip/gts/buildlink3.mk"
+.include "../../graphics/gts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
