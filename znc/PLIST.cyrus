@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.cyrus,v 1.1 2013/03/29 21:17:02 florian-geiges Exp $
+@comment $NetBSD$
 lib/znc/cyrusauth.so

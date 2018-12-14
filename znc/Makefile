@@ -1,29 +1,25 @@
-# $NetBSD: Makefile,v 1.7 2013/11/11 12:14:47 obache Exp $
-#
+# $NetBSD$
 
-DISTNAME=		znc-1.6.3
-CATEGORIES=		net
-MASTER_SITES=		http://znc.in/releases/archive/
+DISTNAME=	znc-1.7.1
+CATEGORIES=	net
+MASTER_SITES=	http://znc.in/releases/archive/
 
-MAINTAINER=		florian@geiges.net
-HOMEPAGE=		http://znc.in/
-COMMENT=		Advanced IRC bouncer with IPv6 and SSL support
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	florian@geiges.net
+HOMEPAGE=	http://znc.in/
+COMMENT=	Advanced IRC bouncer with IPv6 and SSL support
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+PKGCONFIG_OVERRIDE+=	znc.pc.in
 
 PLIST_SRC=		PLIST
 PLIST_SUBST+=		ZNC_USER="${ZNC_USER}"
 PLIST_SUBST+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 PLIST_SUBST+=		PKG_PREFIX="${PREFIX}"
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-PKGCONFIG_OVERRIDE+=	znc.pc.in
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
@@ -54,7 +50,8 @@ OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${ZNC_USER} ${ZNC_GROUP} 0755
 
 MANCOMPRESSED=		yes
 
-.include		"./options.mk"
+.include "options.mk"
 
-.include 		"../../devel/libgetopt/buildlink3.mk"
-.include		"../../mk/bsd.pkg.mk"
+.include "../../devel/libgetopt/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

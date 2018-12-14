@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.python,v 1.1 2013/11/10 13:07:07 obache Exp $
+@comment $NetBSD$
 lib/znc/modpython.so
 lib/znc/modpython/_znc_core.so
 lib/znc/modpython/znc.py
 lib/znc/modpython/znc_core.py
+lib/znc/pyeval.py

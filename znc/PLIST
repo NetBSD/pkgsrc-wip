@@ -13,6 +13,7 @@ include/znc/IRCNetwork.h
 include/znc/IRCSock.h
 include/znc/Listener.h
 include/znc/MD5.h
+include/znc/Message.h
 include/znc/Modules.h
 include/znc/Nick.h
 include/znc/Query.h
@@ -22,6 +23,7 @@ include/znc/Server.h
 include/znc/Socket.h
 include/znc/Template.h
 include/znc/Threads.h
+include/znc/Translation.h
 include/znc/User.h
 include/znc/Utils.h
 include/znc/WebModules.h
@@ -33,6 +35,7 @@ include/znc/version.h
 include/znc/znc.h
 include/znc/zncconfig.h
 lib/pkgconfig/znc.pc
+lib/znc/admindebug.so
 lib/znc/adminlog.so
 lib/znc/alias.so
 lib/znc/autoattach.so
@@ -76,6 +79,7 @@ lib/znc/q.so
 lib/znc/raw.so
 lib/znc/route_replies.so
 lib/znc/sample.so
+lib/znc/samplewebapi.so
 lib/znc/sasl.so
 lib/znc/savebuff.so
 lib/znc/schat.so
@@ -83,6 +87,7 @@ lib/znc/send_raw.so
 lib/znc/shell.so
 lib/znc/simple_away.so
 lib/znc/stickychan.so
+lib/znc/stripcontrols.so
 lib/znc/watch.so
 lib/znc/webadmin.so
 man/man1/znc-buildmod.1
@@ -97,6 +102,8 @@ share/znc/modules/notes/files/trash.gif
 share/znc/modules/notes/tmpl/index.tmpl
 share/znc/modules/perform/tmpl/index.tmpl
 share/znc/modules/q/tmpl/index.tmpl
+share/znc/modules/samplewebapi/tmpl/index.tmpl
+share/znc/modules/sasl/tmpl/index.tmpl
 share/znc/modules/send_raw/files/select.js
 share/znc/modules/send_raw/tmpl/index.tmpl
 share/znc/modules/stickychan/tmpl/index.tmpl
@@ -119,7 +126,14 @@ share/znc/webskins/_default_/pub/favicon.ico
 share/znc/webskins/_default_/pub/global.css
 share/znc/webskins/_default_/pub/jquery-1.11.2.js
 share/znc/webskins/_default_/pub/jquery-1.11.2.min.js
+share/znc/webskins/_default_/pub/jquery-ui-sortable.1.11.4.css
+share/znc/webskins/_default_/pub/jquery-ui-sortable.1.11.4.js
+share/znc/webskins/_default_/pub/jquery-ui-sortable.1.11.4.min.css
+share/znc/webskins/_default_/pub/jquery-ui-sortable.1.11.4.min.js
 share/znc/webskins/_default_/pub/robots.txt
+share/znc/webskins/_default_/pub/selectize-0.12.1.css
+share/znc/webskins/_default_/pub/selectize-standalone-0.12.1.js
+share/znc/webskins/_default_/pub/selectize-standalone-0.12.1.min.js
 share/znc/webskins/_default_/tmpl/Banner.tmpl
 share/znc/webskins/_default_/tmpl/BaseHeader.tmpl
 share/znc/webskins/_default_/tmpl/BreadCrumbs.tmpl

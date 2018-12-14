@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.perl,v 1.1 2013/03/29 21:17:02 florian-geiges Exp $
+@comment $NetBSD$
 lib/znc/modperl.so
 lib/znc/modperl/ZNC.pm
 lib/znc/modperl/ZNC.so
