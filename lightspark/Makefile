@@ -52,7 +52,7 @@ BUILDLINK_API_DEPENDS.xz+=	xz>=5.0.5
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../wip/llvm-rtlib/buildlink3.mk"
+.include "../../lang/compiler-rt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
