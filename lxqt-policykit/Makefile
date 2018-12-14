@@ -12,6 +12,6 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config
 
 .include "../../wip/liblxqt/buildlink3.mk"
-.include "../../wip/polkit-qt5/buildlink3.mk"
+.include "../../security/polkit-qt5/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
