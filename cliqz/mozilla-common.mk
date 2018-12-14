@@ -12,7 +12,7 @@ UNLIMIT_RESOURCES+=	datasize
 # for lang/gcc6
 GCC_REQD+=	6.1
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]**-*) || \
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7].*-*) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8]*-*)
 USE_PKGSRC_GCC_RUNTIME=	yes
 .endif

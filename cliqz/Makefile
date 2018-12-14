@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	cliqz-${DISTVERSION}
-DISTVERSION=	1.23.3
+DISTNAME=	cliqz-1.23.3
 CATEGORIES=	www
-MASTER_SITES+=	${MASTER_SITE_GITHUB:=cliqz-oss/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
 GITHUB_TAG=	${PKGVERSION_NOREV}
 DISTFILES=	adult-domains.bin \
@@ -20,18 +19,18 @@ HOMEPAGE=	https://cliqz.com/en/desktop
 COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	mpl-2.0
 
-USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip bash pax
-USE_LANGUAGES+=		c99 gnu++14
+USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash pax
+USE_LANGUAGES+=	c99 gnu++14
 
 TOOL_DEPENDS+=	python37-[0-9]*:../../lang/python37
 TOOL_DEPENDS+=	cbindgen-[0-9]*:../../devel/cbindgen
 TOOL_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTVERSION}
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 CLIQZ_CHANNEL=		release
-# If the DISTVERSION is updated, make sure to update the last build id from
-# fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/lastbuildid
+# If the PKGVERSION_NOREV is updated, make sure to update the last build id from
+# fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
 CLIQZ_LAST_BUILD_ID=	20181116003917
 CLIQZ_ICON=		cliqz.png
 CLIQZ_ICON_SRC=		${WRKSRC}/mozilla-release/browser/branding/cliqz/default48.png
@@ -42,11 +41,11 @@ CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 SITES.adult-domains.bin= \
 	https://s3.amazonaws.com/cdn.cliqz.com/browser-f/APT/
 SITES.cliqz${CLIQZ_PLUGIN_SUFX}= \
-	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/${CLIQZ_LAST_BUILD_ID}/
+	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
 SITES.https-everywhere${CLIQZ_PLUGIN_SUFX}= \
-	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/${CLIQZ_LAST_BUILD_ID}/
+	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
 SITES.gdprtool${CLIQZ_PLUGIN_SUFX}= \
-	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/${CLIQZ_LAST_BUILD_ID}/
+	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
 
 MAKE_ENV+=	CQZ_RELEASE_CHANNEL=${CLIQZ_CHANNEL}
 MAKE_ENV+=	CQZ_BUILD_ID=${CLIQZ_LAST_BUILD_ID}

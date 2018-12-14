@@ -15,16 +15,6 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-alsa"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --disable-alsa"
 .endif
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mgcc)
-.  if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
-# Modern gcc does not run any "tracking" passes when compiling with -O0,
-# which makes the generated debug info mostly useless. So explicitly
-# request them.
-O0TRACKING=-fvar-tracking-assignments -fvar-tracking
-.  endif
-.endif
-
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-pulseaudio"
