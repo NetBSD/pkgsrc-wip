@@ -110,7 +110,7 @@ do-build:
 .include "../../net/avahi/buildlink3.mk"
 # builtin for now
 #.include "../../net/libupnp/buildlink3.mk"
-.include "../../archivers/libunrar/buildlink3.mk" # XXX new bl3
+.include "../../archivers/libunrar/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 
 # XXX still builtin, still undefined reference

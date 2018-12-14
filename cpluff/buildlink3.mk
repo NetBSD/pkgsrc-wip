@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	cpluff
 CPLUFF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cpluff+=	cpluff>=0.1.4
-BUILDLINK_PKGSRCDIR.cpluff?=	../../devel/cpluff
+BUILDLINK_PKGSRCDIR.cpluff?=	../../wip/cpluff
 .endif	# CPLUFF_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-cpluff
