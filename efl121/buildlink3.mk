@@ -39,3 +39,5 @@ BUILDLINK_PKGSRCDIR.efl?=     ../../wip/efl121
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
+
+BUILDLINK_TREE+=	-efl
