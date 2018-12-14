@@ -2833,7 +2833,6 @@ SUBDIR+=	php-doc-ro
 SUBDIR+=	php-doc-ru
 SUBDIR+=	php-doc-tr
 SUBDIR+=	php-doc-zh
-SUBDIR+=	php-gtk2
 SUBDIR+=	php-imagick-imagick6
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
