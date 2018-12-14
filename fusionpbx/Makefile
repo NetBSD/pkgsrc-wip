@@ -39,7 +39,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql-[0-9]*:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 
-.if (${PHP_VERSION_DEFAULT} == "56")
+.include "../../lang/php/common.mk"
+
+.if ${PHP_VERSION_DEFAULT} == "56"
 DEPENDS+=	${PHP_PKG_PREFIX}-memcache-[0-9]*:../../devel/php-memcache
 DEPENDS+=	${PHP_PKG_PREFIX}-memcached-[0-9]*:../../devel/php-memcached
 .endif
@@ -49,6 +51,5 @@ do-install:
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../databases/php-pdo/buildlink3.mk"
-.include "../../lang/php/common.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
