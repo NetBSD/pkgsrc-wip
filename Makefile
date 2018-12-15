@@ -227,7 +227,6 @@ SUBDIR+=	barrier
 SUBDIR+=	basepkg
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
-SUBDIR+=	bcal
 SUBDIR+=	bcftools
 SUBDIR+=	beads
 SUBDIR+=	beanstalkd

@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/bcal
-man/man1/bcal.1
-share/doc/bcal/README.md
