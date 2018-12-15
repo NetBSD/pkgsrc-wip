@@ -4602,6 +4602,7 @@ SUBDIR+=	trimmomatic
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
+SUBDIR+=	tscrape-git
 SUBDIR+=	tsh
 SUBDIR+=	tslib
 SUBDIR+=	tsm
