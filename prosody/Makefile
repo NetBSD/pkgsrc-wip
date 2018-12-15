@@ -5,7 +5,7 @@ DISTNAME=		prosody-0.10.0
 CATEGORIES=		chat
 MASTER_SITES=		http://prosody.im/downloads/source/
 
-MAINTAINER=		filip@joyent.com
+MAINTAINER=		fhajny@NetBSD.org
 HOMEPAGE=		http://prosody.im/
 COMMENT=		Flexible communications server for Jabber/XMPP written in Lua
 LICENSE=		mit

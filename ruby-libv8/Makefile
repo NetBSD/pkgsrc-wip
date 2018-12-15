@@ -4,7 +4,7 @@ DISTNAME=	libv8-3.16.14.15
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://github.com/cowboyd/libv8
 COMMENT=	Ruby distribution wrapper for the V8 JavaScript engine
 LICENSE=	mit

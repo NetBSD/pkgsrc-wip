@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://bitbucket.org/ariya/phantomjs/downloads/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://www.phantomjs.org/
 COMMENT=	Headless WebKit with JavaScript API
 LICENSE=	modified-bsd

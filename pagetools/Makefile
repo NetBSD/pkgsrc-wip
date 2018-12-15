@@ -5,7 +5,7 @@ PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pagetools/}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://pagetools.sourceforge.net/
 COMMENT=	Automatic deskew and bounding box determination for scanned pages
 LICENSE=	gnu-gpl-v2

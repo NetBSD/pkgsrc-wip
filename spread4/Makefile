@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://www.spread.org/
 COMMENT=	Group communication system providing a number of messaging services
 
