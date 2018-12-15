@@ -124,7 +124,7 @@ lib/xmms2/libxmms_equalizer.so
 ${PLIST.faad}lib/xmms2/libxmms_faad.so
 ${PLIST.flac}lib/xmms2/libxmms_flac.so
 lib/xmms2/libxmms_flv.so
-${PLIST.libgme}lib/xmms2/libxmms_gme.so
+${PLIST.game-music-emu}lib/xmms2/libxmms_gme.so
 lib/xmms2/libxmms_gvfs.so
 lib/xmms2/libxmms_html.so
 ${PLIST.shout}lib/xmms2/libxmms_ices.so

@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	alsa avahi boost curl ecore faad ffmpeg flac fftw gamin
-PKG_SUPPORTED_OPTIONS+=	gnomevfs jack libao libcdio libdiscid libgme libmms
+PKG_SUPPORTED_OPTIONS+=	gnomevfs jack libao libcdio libdiscid game-music-emu libmms
 PKG_SUPPORTED_OPTIONS+=	libmpg123 libofa libvisual mad modplug musepack pyrex ruby
 PKG_SUPPORTED_OPTIONS+=	pulseaudio python readline samba shout sidplay
 PKG_SUPPORTED_OPTIONS+=	sndfile speex tremor valgrind vorbis wavpack
@@ -122,9 +122,9 @@ PLIST.cdda=		yes
 WITHOUT_PLUGINS+=	cdda
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibgme)
-.include "../../wip/libgme/buildlink3.mk"
-PLIST.libgme=		yes
+.if !empty(PKG_OPTIONS:Mgame-music-emu)
+.include "../../audio/game-music-emu/buildlink3.mk"
+PLIST.game-music-emu=		yes
 .else
 WITHOUT_PLUGINS+=	gme
 .endif
