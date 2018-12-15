@@ -1,0 +1,3 @@
+- c++ can be probably removed from USE_LANGUAGES
+- When compiling src/endian.c it ends up in the `NO ENDIAN' warning and logic.
+  Can it be adjusted?
