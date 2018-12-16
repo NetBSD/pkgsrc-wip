@@ -1,0 +1,7 @@
+Compiler warnings in NetBSD:
+
+ - wrong format string specifiers in show_stats()
+   https://github.com/jarun/nnn/issues/164
+
+ - "array subscript is above array bounds"
+   https://github.com/jarun/nnn/issues/165

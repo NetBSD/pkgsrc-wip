@@ -1,0 +1,55 @@
+$NetBSD$
+
+ - Remove CPPFLAGS since C++ is not used
+ - Make curses flags configurable
+ - Also use pkg-config for regular ncurses
+ - Make optimization flags configurable
+
+Upstream PR:
+https://github.com/jarun/nnn/pull/166
+
+--- Makefile
++++ Makefile
+@@ -6,16 +6,24 @@ STRIP ?= strip
+ PKG_CONFIG ?= pkg-config
+ INSTALL ?= install
+ 
+-CFLAGS ?= -O3
+-CFLAGS += -Wall -Wextra -Wno-unused-parameter
++CFLAGS_OPTIMIZATION ?= -O3
+ 
+ ifeq ($(shell $(PKG_CONFIG) ncursesw && echo 1),1)
+-	CFLAGS += $(shell $(PKG_CONFIG) --cflags ncursesw)
+-	LDLIBS += $(shell $(PKG_CONFIG) --libs   ncursesw)
++	CFLAGS_CURSES ?= $(shell $(PKG_CONFIG) --cflags ncursesw)
++	LDLIBS_CURSES ?= $(shell $(PKG_CONFIG) --libs   ncursesw)
++else ifeq ($(shell $(PKG_CONFIG) ncurses && echo 1),1)
++	CFLAGS_CURSES ?= $(shell $(PKG_CONFIG) --cflags ncurses)
++	LDLIBS_CURSES ?= $(shell $(PKG_CONFIG) --libs   ncurses)
+ else
+-	LDLIBS += -lncurses
++	LDLIBS_CURSES ?= -lncurses
+ endif
+ 
++CFLAGS += -Wall -Wextra -Wno-unused-parameter
++CFLAGS += $(CFLAGS_OPTIMIZATION)
++CFLAGS += $(CFLAGS_CURSES)
++
++LDLIBS += $(LDLIBS_CURSES)
++
+ DISTFILES = src nnn.1 Makefile README.md LICENSE
+ SRC = src/nnn.c
+ BIN = nnn
+@@ -25,10 +33,10 @@ all: $(BIN)
+ $(SRC): src/nnn.h
+ 
+ $(BIN): $(SRC)
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ debug: $(SRC)
+-	$(CC) -DDEBUGMODE -g $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o $(BIN) $^ $(LDLIBS)
++	$(CC) -DDEBUGMODE -g $(CFLAGS) $(LDFLAGS) -o $(BIN) $^ $(LDLIBS)
+ 
+ install: all
+ 	$(INSTALL) -m 0755 -d $(DESTDIR)$(PREFIX)/bin
