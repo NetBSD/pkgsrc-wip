@@ -1,4 +1,4 @@
-# $NetBSD$
+$NetBSD$
 
 Make the py.test name configurable.
 

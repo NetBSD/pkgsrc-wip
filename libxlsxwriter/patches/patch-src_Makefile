@@ -1,4 +1,4 @@
-# $NetBSD$
+$NetBSD$
 
 Fix hardcoded prefix for macOS build.
 
