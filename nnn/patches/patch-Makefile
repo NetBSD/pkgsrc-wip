@@ -1,6 +1,5 @@
 $NetBSD$
 
- - Remove CPPFLAGS since C++ is not used
  - Make curses flags configurable
  - Also use pkg-config for regular ncurses
  - Make optimization flags configurable
@@ -40,16 +39,3 @@ https://github.com/jarun/nnn/pull/166
  DISTFILES = src nnn.1 Makefile README.md LICENSE
  SRC = src/nnn.c
  BIN = nnn
-@@ -25,10 +33,10 @@ all: $(BIN)
- $(SRC): src/nnn.h
- 
- $(BIN): $(SRC)
--	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
- 
- debug: $(SRC)
--	$(CC) -DDEBUGMODE -g $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o $(BIN) $^ $(LDLIBS)
-+	$(CC) -DDEBUGMODE -g $(CFLAGS) $(LDFLAGS) -o $(BIN) $^ $(LDLIBS)
- 
- install: all
- 	$(INSTALL) -m 0755 -d $(DESTDIR)$(PREFIX)/bin
