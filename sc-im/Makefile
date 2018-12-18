@@ -17,10 +17,13 @@ INSTALL_DIRS=	src
 
 # pkg-config to avoid broken Makefile self-configuration
 USE_TOOLS+=	gmake pkg-config yacc
+USE_CURSES=	wide
 
 # gnuplot is invoked through the shell, no need to check at compile time
 CFLAGS+=	-DGNUPLOT
 
+MAKE_ENV+=	CFLAGS_CURSES=
+MAKE_ENV+=	LDLIBS_CURSES=-lncursesw
 MAKE_ENV+=	CFLAGS_DL=${BUILDLINK_CFLAGS.dl:Q}
 MAKE_ENV+=	LDLIBS_DL=${BUILDLINK_LDADD.dl:Q}
 
@@ -31,13 +34,6 @@ MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 .include "options.mk"
 
-# doesn't work with NetBSD curses so explicitly link ncursesw.
-#
-# hardcodes -lncurses on macOS which is expected to have wide char
-# support, so use system ncurses there
-.if ${OPSYS} != "Darwin"
 .include "../../devel/ncursesw/buildlink3.mk"
-.endif
-
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
