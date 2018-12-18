@@ -3,6 +3,8 @@ $NetBSD$
 Only signal "mime-type-decision" for a succesful response.
 https://github.com/luakit/luakit/pull/737
 
+This pull request has been merged.
+
 --- widgets/webview.c.orig	2018-10-07 06:06:13.000000000 +0000
 +++ widgets/webview.c
 @@ -487,6 +487,9 @@ decide_policy_cb(WebKitWebView* UNUSED(v
