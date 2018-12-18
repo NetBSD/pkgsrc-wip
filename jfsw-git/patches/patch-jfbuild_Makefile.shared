@@ -1,0 +1,19 @@
+$NetBSD$
+
+Recognize more BSD's.
+
+--- jfbuild/Makefile.shared.orig	2018-12-18 11:55:00.000000000 +0000
++++ jfbuild/Makefile.shared
+@@ -32,6 +32,12 @@ ifndef PLATFORM
+ 	ifneq (,$(findstring -freebsd,$(machine)))
+ 		PLATFORM=BSD
+ 	endif
++	ifneq (,$(findstring -netbsd,$(machine)))
++		PLATFORM=BSD
++	endif
++	ifneq (,$(findstring -openbsd,$(machine)))
++		PLATFORM=BSD
++	endif
+ 	ifneq (,$(findstring -mingw32,$(machine)))
+ 		PLATFORM=WINDOWS
+ 	endif

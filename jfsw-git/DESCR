@@ -1,0 +1,7 @@
+Native Windows and Linux port using JonoF's Build engine port.
+ * OpenGL rendering support.
+ * True-colour textures support.
+
+The aim of this port is to present Shadow Warrior as closely as possible
+to the original game while adding optional features to expand the
+possibilities of the game.

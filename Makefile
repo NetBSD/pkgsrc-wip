@@ -1620,6 +1620,7 @@ SUBDIR+=	jedit
 SUBDIR+=	jellyfish
 SUBDIR+=	jellyfish2
 SUBDIR+=	jemboss-standalone
+SUBDIR+=	jfsw-git
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
 SUBDIR+=	jitsi

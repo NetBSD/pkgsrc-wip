@@ -1,0 +1,31 @@
+$NetBSD$
+
+Set LIBS for BSD.
+Add LDFLAGS so that the X11 library paths can be used.
+
+--- Makefile.orig	2018-12-18 11:54:38.000000000 +0000
++++ Makefile
+@@ -163,6 +163,10 @@ EDITOROBJS=$(SRC)/jnstub.$o \
+ 
+ include $(EROOT)/Makefile.shared
+ 
++ifeq ($(PLATFORM),BSD)
++	NASMFLAGS+= -f elf
++	GAMELIBS+= $(JFAUDIOLIB_LDFLAGS)
++endif
+ ifeq ($(PLATFORM),LINUX)
+ 	NASMFLAGS+= -f elf
+ 	GAMELIBS+= $(JFAUDIOLIB_LDFLAGS)
+@@ -227,10 +231,10 @@ endif
+ all: sw$(EXESUFFIX) build$(EXESUFFIX)
+ 
+ sw$(EXESUFFIX): $(GAMEOBJS) $(ELIB)/$(ENGINELIB) $(AUDIOLIBROOT)/$(JFAUDIOLIB)
+-	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) -Wl,-Map=$@.map
++	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) $(LDFLAGS) -Wl,-Map=$@.map
+ 
+ build$(EXESUFFIX): $(EDITOROBJS) $(ELIB)/$(EDITORLIB) $(ELIB)/$(ENGINELIB)
+-	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) -Wl,-Map=$@.map
++	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(LDFLAGS) -Wl,-Map=$@.map
+ 
+ include Makefile.deps
+ 
