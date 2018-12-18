@@ -2,11 +2,11 @@ $NetBSD$
 
 - Fix install permissions
   https://github.com/andmarti1424/sc-im/pull/305
-- Make libdl and curses flags overridable
+- Make libdl flags overridable
 
 --- src/Makefile
 +++ src/Makefile
-@@ -89,25 +89,27 @@ endif
+@@ -89,9 +89,12 @@ endif
  
  # dynamic linking (should not be used in FreeBSD
  ifneq ($(shell uname -s),FreeBSD)
@@ -14,48 +14,13 @@ $NetBSD$
 +  LDLIBS_DL ?= -ldl
  endif
  
++CFLAGS += $(CFLAGS_DL)
 +LDLIBS += $(LDLIBS_DL)
 +
  ifneq (, $(shell which pkg-config))
    # Any system with pkg-config
  
-   # NOTE: ncursesw (required)
-   ifeq ($(shell uname -s),Darwin)
-     # macOS' ncurses is built with wide-char support
--    LDFLAGS += -lncurses
-+    LDLIBS_CURSES ?= -lncurses
-   else ifneq ($(shell pkg-config --exists ncursesw || echo 'no'),no)
--    CFLAGS += $(shell pkg-config --cflags ncursesw)
--    LDLIBS += $(shell pkg-config --libs ncursesw)
-+    CFLAGS_CURSES ?= $(shell pkg-config --cflags ncursesw)
-+    LDLIBS_CURSES ?= $(shell pkg-config --libs ncursesw)
-   else ifneq ($(shell pkg-config --exists ncurses || echo 'no'),no)
-     # hopefully this includes wide character support then
--    CFLAGS += $(shell pkg-config --cflags ncurses)
--    LDLIBS += $(shell pkg-config --libs ncurses)
-+    CFLAGS_CURSES ?= $(shell pkg-config --cflags ncurses)
-+    LDLIBS_CURSES ?= $(shell pkg-config --libs ncurses)
-   else
--    LDLIBS += -lncursesw
-+    LDLIBS_CURSES ?= -lncursesw
-   endif
- 
-   # NOTE: libxml and libzip are required for xlsx file import support
-@@ -128,9 +130,12 @@ else ifeq ($(shell uname -s),Darwin)
-   # macOS without pkg-config
- 
-   # macOS' ncurses is built with wide-char support
--  LDFLAGS += -lncurses
-+  LDLIBS_CURSES += -lncurses
- endif
- 
-+CFLAGS += $(CFLAGS_CURSES)
-+LDLIBS += $(LDLIBS_CURSES)
-+
- OBJS = $(patsubst %.c, %.o, $(wildcard *.c) $(wildcard utils/*.c)) gram.o
- 
- .PHONY : all clean install docs man_install man_uninstall
-@@ -141,8 +146,8 @@ install :
+@@ -141,8 +144,8 @@ install :
  	install -d $(DESTDIR)$(prefix)/bin
  	install $(name) $(DESTDIR)$(prefix)/bin/$(name)
  	install -d $(DESTDIR)$(HELPDIR)
