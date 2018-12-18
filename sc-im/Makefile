@@ -31,7 +31,13 @@ MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 .include "options.mk"
 
-# doesn't work with NetBSD curses
+# doesn't work with NetBSD curses so explicitly link ncursesw.
+#
+# hardcodes -lncurses on macOS which is expected to have wide char
+# support, so use system ncurses there
+.if ${OPSYS} != "Darwin"
 .include "../../devel/ncursesw/buildlink3.mk"
+.endif
+
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
