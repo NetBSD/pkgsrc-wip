@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.6 2015/06/13 11:48:57 fhajny Exp $
-#
 
 DISTNAME=	umurmur-0.2.16
 PKGREVISION=	1
@@ -7,7 +6,7 @@ CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=umurmur/}
 
 MAINTAINER=	ahoka@NetBSD.org
-HOMEPAGE=	http://umurmur.googlecode.com/
+HOMEPAGE=	http://umurmur.net/
 COMMENT=	Mumble (murmur) server for embedded systems
 LICENSE=	modified-bsd
 
