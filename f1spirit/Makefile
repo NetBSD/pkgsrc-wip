@@ -12,8 +12,8 @@ COMMENT=	Remake the Konami MSX1 classic F-1 Spirit
 LICENSE=	unlicense
 
 WRKSRC=		${WRKDIR}/f1spirit-0.rc9.1615
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c++ c
+#USE_TOOLS+=	make
+USE_LANGUAGES=	c++03 c
 
 #LDFLAGS+=	-nostartfiles
 CFLAGS+=	-Wno-write-strings
@@ -29,6 +29,7 @@ SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
 
 pre-patch:
 	${CP} ${FILESDIR}/f1spirit ${WRKSRC}/f1spirit.sh
+	${MV} ${WRKSRC}/sources/* ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/f1spirit.sh \
@@ -51,6 +52,4 @@ do-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

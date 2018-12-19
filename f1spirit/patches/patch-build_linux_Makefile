@@ -10,7 +10,56 @@ $NetBSD$
  EXTRADIR = ./build/linux
  
  GAMEDIR = $(PREFIX)/games
-@@ -40,8 +40,9 @@ OBJS = \
+@@ -14,34 +14,35 @@ ICON = f1spirit.png
+ DESKTOP = f1spirit.desktop
+ 
+ OBJS = \
+-	$(SRC)/2DCMC.o					$(SRC)/auxiliar.o				\
+-	$(SRC)/CCar.o					$(SRC)/CPlayer.o				\
+-	$(SRC)/debug.o					$(SRC)/EnemyCCar.o				\
+-	$(SRC)/F1SComputer.o			$(SRC)/F1Shttp.o				\
+-	$(SRC)/F1SpiritApp.o			$(SRC)/F1Spirit-auxiliar.o		\
+-	$(SRC)/F1SpiritGame.o			$(SRC)/F1SpiritTrackViewer.o	\
+-	$(SRC)/GameParameters.o			$(SRC)/geometrics.o				\
+-	$(SRC)/GLTile.o					$(SRC)/GLtile-f1.o				\
+-	$(SRC)/keyboardstate.o			$(SRC)/main.o					\
+-	$(SRC)/PlacedGLTile.o			$(SRC)/PlayerCCar.o				\
+-	$(SRC)/RacingCCar.o				$(SRC)/ranrotb.o				\
+-	$(SRC)/ReplayInfo.o				$(SRC)/RoadPiece.o				\
+-	$(SRC)/RotatedGLTile.o			$(SRC)/SDL_glutaux.o			\
+-	$(SRC)/sound.o					$(SRC)/state_disclaimer.o		\
+-	$(SRC)/state_endsequence.o		$(SRC)/state_gameoptions.o		\
+-	$(SRC)/state_gamestart.o		$(SRC)/state_hiscore.o			\
+-	$(SRC)/state_konami.o			$(SRC)/state_menu.o				\
+-	$(SRC)/state_menu_create_menu.o	$(SRC)/state_menu_draw.o		\
+-	$(SRC)/state_race.o				$(SRC)/state_race_result.o		\
+-	$(SRC)/state_replaymanager.o	$(SRC)/state_title.o			\
+-	$(SRC)/state_trackload.o		$(SRC)/track.o					\
+-	$(SRC)/Vector.o					$(SRC)/weather.o				\
+-	$(SRC)/filehandling.o			$(SRC)/CarEngineSound.o
++	2DCMC.o					auxiliar.o				\
++	CCar.o					CPlayer.o				\
++	debug.o					EnemyCCar.o				\
++	F1SComputer.o			F1Shttp.o				\
++	F1SpiritApp.o			F1Spirit-auxiliar.o		\
++	F1SpiritGame.o			F1SpiritTrackViewer.o	\
++	GameParameters.o			geometrics.o				\
++	GLTile.o					GLtile-f1.o				\
++	keyboardstate.o			main.o					\
++	PlacedGLTile.o			PlayerCCar.o				\
++	RacingCCar.o				ranrotb.o				\
++	ReplayInfo.o				RoadPiece.o				\
++	RotatedGLTile.o			SDL_glutaux.o			\
++	sound.o					state_disclaimer.o		\
++	state_endsequence.o		state_gameoptions.o		\
++	state_gamestart.o		state_hiscore.o			\
++	state_konami.o			state_menu.o				\
++	state_menu_create_menu.o	state_menu_draw.o		\
++	state_race.o				state_race_result.o		\
++	state_replaymanager.o	state_title.o			\
++	state_trackload.o		track.o					\
++	Vector.o					weather.o				\
++	filehandling.o			CarEngineSound.o
  
  CC = gcc
  #CFLAGS = -g3 -O3 -Wall `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
@@ -22,3 +71,13 @@ $NetBSD$
  RM = rm -f
  CP = cp -r
  MD = mkdir -p
+@@ -49,7 +50,8 @@ ECHO = echo
+ CHMOD = chmod
+ STRIP = strip
+ 
+-all: $(EXE)
++all: $(OBJS)
++	$(CC) -o $(EXE) $(LDFLAGS) $(OBJS) $(LIBS)
+ 
+ %.o: %.cpp
+ 	$(CC) $(CFLAGS) -c $< -o $@
