@@ -3354,6 +3354,7 @@ SUBDIR+=	py-gpaw
 SUBDIR+=	py-gpkit
 SUBDIR+=	py-gpy
 SUBDIR+=	py-grab
+SUBDIR+=	py-graph-tool
 SUBDIR+=	py-graphmin
 SUBDIR+=	py-graphpath
 SUBDIR+=	py-graphs
