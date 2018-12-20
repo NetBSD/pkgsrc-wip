@@ -2853,6 +2853,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-sh.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-sudoedit.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-sudoedit.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-uu.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-uu.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp.el.gz
