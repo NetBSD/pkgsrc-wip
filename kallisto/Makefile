@@ -14,13 +14,21 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 USE_CMAKE=	yes
 
+SUBST_CLASSES+=		test
+SUBST_STAGE.test=	post-build
+SUBST_FILES.test=	kallisto-test
+SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
+
 PV=		0.45.0
 DATADIR=	${PREFIX}/share/kallisto
 
 INSTALLATION_DIRS=	bin ${DATADIR}
 
+post-extract:
+	${CP} ${FILESDIR}/kallisto-test ${WRKSRC}
+
 post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/kallisto-test ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/kallisto-test ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw test ${DESTDIR}${DATADIR}
 
 .include "../../biology/htslib/buildlink3.mk"
