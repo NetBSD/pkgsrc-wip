@@ -5,6 +5,7 @@ bin/_stack_lib.sh
 bin/blackbox_addadmin
 bin/blackbox_cat
 bin/blackbox_decrypt_all_files
+bin/blackbox_decrypt_file
 bin/blackbox_deregister_file
 bin/blackbox_diff
 bin/blackbox_edit
@@ -20,4 +21,5 @@ bin/blackbox_register_new_file
 bin/blackbox_removeadmin
 bin/blackbox_shred_all_files
 bin/blackbox_update_all_files
+bin/blackbox_view
 bin/blackbox_whatsnew
