@@ -1638,6 +1638,7 @@ SUBDIR+=	js-Gallery
 SUBDIR+=	jsl
 SUBDIR+=	json-glib
 SUBDIR+=	jsoncpp-git
+SUBDIR+=	judy
 SUBDIR+=	juk
 SUBDIR+=	julia
 SUBDIR+=	jumpnbump
