@@ -4686,6 +4686,7 @@ SUBDIR+=	v8-316
 SUBDIR+=	vacuum
 SUBDIR+=	vagalume
 SUBDIR+=	vale-current
+SUBDIR+=	validns
 SUBDIR+=	vamp
 SUBDIR+=	vamps
 SUBDIR+=	vanitygen
