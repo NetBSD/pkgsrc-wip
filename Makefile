@@ -1785,6 +1785,7 @@ SUBDIR+=	libcue
 SUBDIR+=	libcxx-git
 SUBDIR+=	libcxx-netbsd
 SUBDIR+=	libcxxabi-netbsd
+SUBDIR+=	libdazzle
 SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
 SUBDIR+=	libdialog
