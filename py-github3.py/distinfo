@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (github3.py-1.0.0a4.tar.gz) = ecf94c189605a34d27f28aeb0d374c18f7b99c56
-RMD160 (github3.py-1.0.0a4.tar.gz) = 858f70789656759d9e8b529e3aa2c33366fd3da2
-SHA512 (github3.py-1.0.0a4.tar.gz) = 21c81f643398b90015a93982f3c186c6e6d210b3ce74d4bcab7fdb459a56edb243c36fd291256b6f938aec04d16a35d59746a914f59c9a1247d533b3fad53de1
-Size (github3.py-1.0.0a4.tar.gz) = 3466297 bytes
-SHA1 (patch-setup.py) = 8be7ed5e79e7b1250b0fd2255bc5bfa2bbf658a7
+SHA1 (github3.py-1.2.0.tar.gz) = 928ab64d6961b8e890dd37eb50651282aaf79a71
+RMD160 (github3.py-1.2.0.tar.gz) = 9831eee20f18e18cf1b2f5816982768cb3754c7e
+SHA512 (github3.py-1.2.0.tar.gz) = affe356fc146edc2646760dbe39c5e720f0cc9e28c238152b65041e70050110c19e2b145eb61631468c50e2cf8ac29e808a1b0f18f9fd3be825e0da0a962978a
+Size (github3.py-1.2.0.tar.gz) = 35254394 bytes
