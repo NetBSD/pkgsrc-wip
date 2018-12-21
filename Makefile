@@ -3436,6 +3436,7 @@ SUBDIR+=	py-jswebkit
 SUBDIR+=	py-jtextfsm
 SUBDIR+=	py-julio
 SUBDIR+=	py-junos-netconify
+SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-kabuki
 SUBDIR+=	py-karta
 SUBDIR+=	py-kcs11
