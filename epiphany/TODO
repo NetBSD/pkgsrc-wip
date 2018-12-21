@@ -1,2 +1,5 @@
-- Saw occasional core dumps and leaks.
-  Old webkit may be the problem?
+Crashes at run time with:
+
+(epiphany:...): GLib-GIO-ERROR **: ...: Settings schema 'org.gnome.Epiphany.state' is not installed
+
+Trace/BPT trap (core dumped)
