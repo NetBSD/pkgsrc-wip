@@ -13,9 +13,11 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 
 MESON_ARGS+=	-D enable_tests=false
+# XXX: Build fails with that, please see TODO
+MESON_ARGS+=	-D with_introspection=false
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
+#.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
