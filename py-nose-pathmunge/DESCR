@@ -1,0 +1,3 @@
+nose-pathmunge is a plugin to the nose test framework which
+provides a method to add directories to the sys.path of
+nose, which is inherited by the tests running within nose.
