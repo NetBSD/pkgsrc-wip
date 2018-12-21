@@ -1649,7 +1649,6 @@ SUBDIR+=	kacst-ttf
 SUBDIR+=	kactivitymanagerd
 SUBDIR+=	kahakai
 SUBDIR+=	kalarmcal
-SUBDIR+=	kallisto
 SUBDIR+=	kamera
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kate
