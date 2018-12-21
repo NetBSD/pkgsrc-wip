@@ -10,8 +10,9 @@ COMMENT=	Software pipeline for building loci from short-read sequences
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	yes
+GCC_REQD=	6
 
 REPLACE_BASH=	scripts/stacks-integrate-alignments scripts/stacks-gdb
 REPLACE_BASH+=	scripts/stacks-dist-extract
