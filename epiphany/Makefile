@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2016/01/06 10:46:50 adam Exp $
+# $NetBSD$
 
 DISTNAME=	epiphany-3.30.2
 CATEGORIES=	www gnome
@@ -17,13 +17,16 @@ LDFLAGS+=	-L${PREFIX}/lib/epiphany ${COMPILER_RPATH_FLAG}${PREFIX}/lib/epiphany
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
