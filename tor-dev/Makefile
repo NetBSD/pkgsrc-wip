@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	tor-0.3.5.5-alpha
-PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
+DISTNAME=	tor-0.3.5.6-rc
+PKGNAME=	${DISTNAME:S/tor/tordev/:S/-rc//:S/-rc/rc0/}
 CATEGORIES=	net security
 MASTER_SITES=	http://www.torproject.org/dist/
 
