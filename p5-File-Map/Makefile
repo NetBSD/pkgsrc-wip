@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.5 2014/01/04 14:10:49 uccwen Exp $
 
-DISTNAME=	File-Map-0.65
+DISTNAME=	File-Map-0.66
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
 
-MAINTAINER=	wenheping@gmail.com
+MAINTAINER=	wen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Map
 COMMENT=	Memory mapping made simple and safe
 LICENSE=	${PERL5_LICENSE}
