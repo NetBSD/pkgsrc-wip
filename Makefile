@@ -4405,7 +4405,6 @@ SUBDIR+=	ssid
 SUBDIR+=	ssu
 SUBDIR+=	st-term-git
 SUBDIR+=	stacks
-SUBDIR+=	stacks2
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	starfighter
