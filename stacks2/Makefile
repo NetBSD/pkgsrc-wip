@@ -10,7 +10,7 @@ COMMENT=	Software pipeline for building loci from short-read sequences
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++14
-GCC_REQD=	6
+GCC_REQD+=	4.9
 USE_TOOLS+=	bash perl:run
 GNU_CONFIGURE=	yes
 
