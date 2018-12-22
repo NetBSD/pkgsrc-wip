@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (neko-2.2.0.tar.gz) = 5edf252759c156625cd226f5594bdf64663fe782
+RMD160 (neko-2.2.0.tar.gz) = a91e97a7234e4d8d54156f38cb6192d61296d399
+SHA512 (neko-2.2.0.tar.gz) = 4bc89fddf4a5ae94e73843b06a3b6fe8de59d72922764276a5bd9d56daf6570525e842039bf704598b41e1de4a5fe08931adc4ca9730fe3333be0beb7a1ccaed
+Size (neko-2.2.0.tar.gz) = 510643 bytes
+SHA1 (patch-CMakeLists.txt) = 76c56efa8c8f5a2f6d04932085592c606dee03c5
