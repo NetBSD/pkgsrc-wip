@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rust-1.31.0
+DISTNAME=	rust-1.31.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
