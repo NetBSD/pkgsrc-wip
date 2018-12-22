@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2018/10/31 12:29:44 wen Exp $
 
-SHA1 (FFI-Platypus-0.58.tar.gz) = 43d9d92a4fde3fbec798f205ca049bd5228b8542
-RMD160 (FFI-Platypus-0.58.tar.gz) = c25bcfadd3ad23508db9614b11d038de5f53af84
-SHA512 (FFI-Platypus-0.58.tar.gz) = 0b60619b189abc634f93f5e5031c0f44edbacd7f818714758005713352b88d1cdc12891c9a086b753e90881ef60e0ff961cb79cc42be1199dea47145c5d8c47f
-Size (FFI-Platypus-0.58.tar.gz) = 210515 bytes
+SHA1 (FFI-Platypus-0.59.tar.gz) = b3617e65ddfce9c7ff5ff5f5ac33954d16ec0396
+RMD160 (FFI-Platypus-0.59.tar.gz) = 2f82bed2741897e697f8bbc31fe80f0be3ae3514
+SHA512 (FFI-Platypus-0.59.tar.gz) = 6dbaef06c5d297ce22d02c2cd05ad20c3b3f65ca920017d2cb0dd7d1feee50f400f619b15fec466e5305e458bd77b7cfabb0b2f99d5e59cc6e83e38368237dbf
+Size (FFI-Platypus-0.59.tar.gz) = 215635 bytes

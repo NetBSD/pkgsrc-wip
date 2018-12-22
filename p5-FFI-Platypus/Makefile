@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2018/10/31 12:29:44 wen Exp $
 
-DISTNAME=	FFI-Platypus-0.58
+DISTNAME=	FFI-Platypus-0.59
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PL/PLICEASE/}
