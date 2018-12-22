@@ -9,17 +9,16 @@ HOMEPAGE=	http://catchenlab.life.illinois.edu/stacks/
 COMMENT=	Software pipeline for building loci from short-read sequences
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	perl:run
+USE_LANGUAGES=	c c++14
+USE_TOOLS+=	bash perl:run
 GNU_CONFIGURE=	yes
-GCC_REQD=	6
 
 REPLACE_BASH=	scripts/stacks-integrate-alignments scripts/stacks-gdb
 REPLACE_BASH+=	scripts/stacks-dist-extract
 REPLACE_PERL=	scripts/*.pl
 REPLACE_PYTHON=	scripts/*.py
 
-CFLAGS=		-fopenmp
+CFLAGS+=	-fopenmp
 
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
