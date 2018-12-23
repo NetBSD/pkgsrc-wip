@@ -37,5 +37,5 @@ USE_TOOLS+=		perl
 TEST_MAKE_FLAGS+=	MPIRUN=$(PREFIX}/mpich/bin/mpirun
 .endif
 
-.include "../../wip/mpi-ch/buildlink3.mk"
+.include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

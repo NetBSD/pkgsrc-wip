@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 DEPENDS+=	bullet>=2.83:../../wip/bullet
-DEPENDS+=	osg>=3.3.4:../../wip/osg
+DEPENDS+=	osg>=3.3.4:../../graphics/osg
 
 .include "options.mk"
 .include "../../archivers/unshield/buildlink3.mk"
