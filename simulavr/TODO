@@ -1,4 +1,0 @@
-- In configuration, seeing following message:
-  build verilog modul avr.vpi = no
-- examples/python is not activated.
-  az_python_use=true seems to do that, but not.
