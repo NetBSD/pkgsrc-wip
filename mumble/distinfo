@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/05 16:01:32 ggergely Exp $
-
-SHA1 (mumble/mumble-1.2.15.tar.gz) = 277813ad7a352d8505e57ecd8671204f21483d5c
-RMD160 (mumble/mumble-1.2.15.tar.gz) = 305459afbe64d0ba311e8527000b269a64036c99
-SHA512 (mumble/mumble-1.2.15.tar.gz) = 026ebec9f8f2427ca161b4ac81137522d8afc956f054e543ddc7d5279d246183d27404e2d8b2991073673dc95d3862d19c13edb593ca359b9e0656059de26e23
-Size (mumble/mumble-1.2.15.tar.gz) = 3321745 bytes

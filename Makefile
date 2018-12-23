@@ -2196,7 +2196,6 @@ SUBDIR+=	multisync-palm
 SUBDIR+=	multisync-syncml
 SUBDIR+=	multisync-syncml-moto
 SUBDIR+=	multitail
-SUBDIR+=	mumble
 SUBDIR+=	munin-c-git
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
@@ -4875,7 +4874,6 @@ SUBDIR+=	zip-devel
 SUBDIR+=	ziparchive
 SUBDIR+=	zipios
 SUBDIR+=	zmap
-SUBDIR+=	znc
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:

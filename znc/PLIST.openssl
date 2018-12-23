@@ -1,7 +1,0 @@
-@comment $NetBSD$
-lib/znc/awaystore.so
-lib/znc/cert.so
-lib/znc/certauth.so
-lib/znc/crypt.so
-lib/znc/savebuff.so
-lib/znc/schat.so
