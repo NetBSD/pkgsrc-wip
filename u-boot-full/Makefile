@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 # Require the linux device tree compiler
-BUILD_DEPENDS=	dtc>=1.4.1:../../wip/dtc
+BUILD_DEPENDS=	dtc>=1.4.1:../../sysutils/dtc
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
