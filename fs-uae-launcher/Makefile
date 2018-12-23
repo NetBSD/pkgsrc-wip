@@ -32,7 +32,7 @@ PLIST_SUBST+=	VERSION=${VERSION}
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=20:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-lhafile>=0:../../wip/py-lhafile
+DEPENDS+=	${PYPKGPREFIX}-lhafile>=0:../../archivers/py-lhafile
 
 # Use the normal "gmake install" to install; not setup.py via "../../lang/python/extension.mk".
 
