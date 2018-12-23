@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/08/11 21:43:24 jihbed Exp $
-
-SHA1 (scikit-image-0.11.3.tar.gz) = aeeb7b0a3d559ec6bf9fe85e10f8b91e5933078b
-RMD160 (scikit-image-0.11.3.tar.gz) = cc7afd2c65daabde4a4ff699b477e10cb9dd6e68
-Size (scikit-image-0.11.3.tar.gz) = 18589296 bytes

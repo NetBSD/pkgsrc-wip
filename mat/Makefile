@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-ext
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
-DEPENDS+=	${PYPKGPREFIX}-pdfrw-[0-9]*:../../wip/py-pdfrw
+DEPENDS+=	${PYPKGPREFIX}-pdfrw-[0-9]*:../../textproc/py-pdfrw
 
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	pre-patch

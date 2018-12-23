@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyglet>=1.1:../../wip/py-pyglet
 DEPENDS+=	${PYPKGPREFIX}-cairo>=1.8.8:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-cairosvg>=1.0.9:../../converters/py27-cairosvg
 #Meh linux sleep thing same with the dbus req.
-#DEPENDS+=	${PYPKGPREFIX}-psutil>=5.2.2:../../sysutil/py-psutil
+#DEPENDS+=	${PYPKGPREFIX}-psutil>=5.2.2:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.14.0:../../devel/py-gobject
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.9.1:../../textproc/py-libxml2
 

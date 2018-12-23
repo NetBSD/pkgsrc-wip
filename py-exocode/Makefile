@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-scikit-image>=0.11.3:../../wip/py-scikit-image
+DEPENDS+=	${PYPKGPREFIX}-scikit-image>=0.11.3:../../math/py-scikit-image
 
 USE_LANGUAGES=	# none
 

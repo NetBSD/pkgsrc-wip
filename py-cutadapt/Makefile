@@ -14,7 +14,7 @@ MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Finds and removes adapter sequences, primers, poly-A tails, etc
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-xopen>=0:../../wip/py-xopen
+DEPENDS+=	${PYPKGPREFIX}-xopen>=0:../../devel/py-xopen
 
 USE_LANGUAGES=	c
 PYDISTUTILSPKG=	yes

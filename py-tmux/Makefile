@@ -11,7 +11,7 @@ COMMENT=	Simple wrapper for tmux
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.1:../../devel/py-docopt
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=1.1.0:../../wip/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=1.1.0:../../textproc/py-jsonschema
 
 USE_LANGUAGES=	# none
 
