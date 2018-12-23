@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/01 23:04:57 jihbed Exp $
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/ordereddict.py
-${PYSITELIB}/ordereddict.pyc
-${PYSITELIB}/ordereddict.pyo
