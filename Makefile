@@ -4057,7 +4057,6 @@ SUBDIR+=	py-z2pack
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zenity
 SUBDIR+=	py-zipline
-SUBDIR+=	py-zope.deprecation
 SUBDIR+=	pydance
 SUBDIR+=	pydb
 SUBDIR+=	pypanel
