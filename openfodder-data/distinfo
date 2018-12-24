@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (data/Data.Pack.1.5.zip) = eef927b6803ac00fb15a87c347d51c4deaefa456
-RMD160 (data/Data.Pack.1.5.zip) = 8f8cb3ae04b308aaf3fced11f8c20ff5f3b1eebb
-SHA512 (data/Data.Pack.1.5.zip) = c37c586fc97c018ccdfb2d140b16529ae7942b4664a7e2ecc1ec22bcbff75af5ef41847576ba3743b56b2fb9faf2c6aea570f30cbf8af5c3c967bfcca2c8eddc
-Size (data/Data.Pack.1.5.zip) = 34716145 bytes
+SHA1 (data/Data.Pack.1.5.1.zip) = 4eefadd6267e6d35f14bc267f5758c5bdc6a544a
+RMD160 (data/Data.Pack.1.5.1.zip) = 8be780bcf59db84ad2246da3d053b39301be26b9
+SHA512 (data/Data.Pack.1.5.1.zip) = 5f2ba427e948edc7063b349fe44f353d4f96bfa5f6d95b6daf2e8e5347207c4cbd725d0c593afec2b39eb201b909e58221fada36e8d89eff7fedb6a57a42d041
+Size (data/Data.Pack.1.5.1.zip) = 34782075 bytes
