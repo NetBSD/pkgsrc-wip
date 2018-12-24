@@ -14,12 +14,12 @@ share/commandergenius/cache/perilous.png
 share/commandergenius/cache/silcar1.bmp
 share/commandergenius/cglogo512.png
 share/commandergenius/cglogo512old.png
-share/commandergenius/gameCatalogue.xml
 share/commandergenius/global/1.png
 share/commandergenius/global/2.png
 share/commandergenius/global/3.png
 share/commandergenius/global/4.png
 share/commandergenius/global/HELPTEXT.CKP
+share/commandergenius/global/bckgrnd.png
 share/commandergenius/global/confirm.png
 share/commandergenius/global/dpad.png
 share/commandergenius/global/gfx/CGLogo.bmp
@@ -50,4 +50,3 @@ share/doc/commandergenius/cache/keen4special.png
 share/doc/commandergenius/cache/keen7.png
 share/doc/commandergenius/cache/perilous.png
 share/doc/commandergenius/changelog.txt
-share/doc/commandergenius/gameCatalogue.xml
