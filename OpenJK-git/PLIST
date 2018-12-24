@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/openjk
+bin/openjk_sp
+bin/openjkded
+bin/openjo_sp
+share/JediAcademy/OpenJK/cgame${MACHINE_ARCH}.so
+share/JediAcademy/OpenJK/jagame${MACHINE_ARCH}.so
+share/JediAcademy/OpenJK/jampgame${MACHINE_ARCH}.so
+share/JediAcademy/OpenJK/ui${MACHINE_ARCH}.so
+share/JediAcademy/base/cgame${MACHINE_ARCH}.so
+share/JediAcademy/base/jampgame${MACHINE_ARCH}.so
+share/JediAcademy/base/ui${MACHINE_ARCH}.so
+share/JediAcademy/openjk.${MACHINE_ARCH}
+share/JediAcademy/openjk_sp.${MACHINE_ARCH}
+share/JediAcademy/openjkded.${MACHINE_ARCH}
+share/JediAcademy/rd-vanilla_${MACHINE_ARCH}.so
+share/JediAcademy/rdsp-vanilla_${MACHINE_ARCH}.so
+share/JediOutcast/OpenJK/jospgame${MACHINE_ARCH}.so
+share/JediOutcast/openjo_sp.${MACHINE_ARCH}
+share/JediOutcast/rdjosp-vanilla_${MACHINE_ARCH}.so

@@ -25,6 +25,7 @@ SUBDIR+=	MesaLib-dfbsd
 SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenGLUT
 SUBDIR+=	OpenIPMI
+SUBDIR+=	OpenJK-git
 SUBDIR+=	OpenTESArena
 SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
