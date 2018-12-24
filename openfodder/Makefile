@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	openfodder
-DISTNAME=	1.5
+DISTNAME=	1.5.3
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenFodder/}
@@ -22,7 +22,7 @@ LIBS+=		`sdl2-config --libs`
 LIBS+=		-lSDL2_mixer
 LIBS+=		${X11_LDFLAGS}
 
-DEPENDS+=	openfodder-data-${DISTNAME}:../../wip/openfodder-data
+DEPENDS+=	openfodder-data-1.5.1:../../wip/openfodder-data
 
 FODDER_SRCDIRS=	Source Source/Amiga Source/PC Source/Structures
 FODDER_SRCS=	${FODDER_SRCDIRS:=/*.cpp}
