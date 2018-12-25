@@ -2,9 +2,17 @@ $NetBSD$
 
 Avoid linuxisms and don't use bundled libraries.
 
---- Makefile.orig	2017-07-22 21:19:48.000000000 +0000
+--- Makefile.orig	2017-12-31 00:16:01.000000000 +0000
 +++ Makefile
-@@ -100,21 +100,6 @@ endif
+@@ -87,7 +87,6 @@ CPPONLYFLAGS = -fpermissive
+ CPPONLYFLAGS += $(CORE_DEFINE)
+ # LDFLAGS are used generally; LDFLAGSEMULATOR are additional
+ # flags only used when linking the core emulator
+-LDFLAGS =
+ LDFLAGSEMULATOR =
+ 
+ CCOMFLAGS  += -D__LIBRETRO__
+@@ -100,21 +99,6 @@ endif
  $(info CFLAGS = $(CONLYFLAGS))
  $(info CPPFLAGS = $(CPPONLYFLAGS))
  
@@ -26,7 +34,7 @@ Avoid linuxisms and don't use bundled libraries.
  # uncomment next line to build PortMidi as part of MAME/MESS build
  #BUILD_MIDILIB = 1
  VRENDER ?= soft
-@@ -135,13 +120,13 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -135,13 +119,13 @@ ifneq (,$(findstring unix,$(platform)))
     REALCC ?= gcc
     NATIVECC ?= g++
     NATIVECFLAGS ?= -std=gnu99
@@ -42,7 +50,7 @@ Avoid linuxisms and don't use bundled libraries.
     ifeq ($(firstword $(filter x86_64,$(UNAME))),x86_64)
        PTR64 = 1
     endif
-@@ -764,7 +749,7 @@ endif
+@@ -764,7 +748,7 @@ endif
  
  ifneq (,$(findstring clang,$(CC)))
  ifneq ($(platform), android)
