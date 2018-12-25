@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2018/02/14 14:06:02 adam Exp $
+
+SHA1 (backports.csv-1.0.6.tar.gz) = af3cf55fecdd9217bc192b10da32558864ae2b34
+RMD160 (backports.csv-1.0.6.tar.gz) = 1dcbaf1c901755107c273f3a64bc75d71ae085a8
+SHA512 (backports.csv-1.0.6.tar.gz) = b4219219d27c98b98b7f5af124ed3fed8ab7754f450d588e09525aafed6dc03c4bb732e9cddb125d7d9a853ea48255f277e9eb1f05fc55b8e9e7ea4a1f69131a
+Size (backports.csv-1.0.6.tar.gz) = 12127 bytes
