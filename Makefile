@@ -53,6 +53,7 @@ SUBDIR+=	R-getopt
 SUBDIR+=	R-gmp
 SUBDIR+=	R-graph
 SUBDIR+=	R-gsl
+SUBDIR+=	R-hms
 SUBDIR+=	R-mclust
 SUBDIR+=	R-mpfr
 SUBDIR+=	R-np
