@@ -58,6 +58,7 @@ SUBDIR+=	R-mclust
 SUBDIR+=	R-mpfr
 SUBDIR+=	R-np
 SUBDIR+=	R-optparse
+SUBDIR+=	R-progress
 SUBDIR+=	R-quantreg
 SUBDIR+=	R-readxl
 SUBDIR+=	R-rematch
