@@ -1,9 +1,9 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.translate-toolkit
-PKG_SUPPORTED_OPTIONS+=		lxml levenshtein chardet tradostm pycountry doc ical ini
-PKG_SUGGESTED_OPTIONS=		lxml levenshtein chardet tradostm pycountry doc
-PLIST_VARS+=			doc
+PKG_SUPPORTED_OPTIONS+=		lxml levenshtein chardet tradostm pycountry doc ical ini csv
+PKG_SUGGESTED_OPTIONS=		lxml levenshtein chardet tradostm pycountry doc ical ini csv
+PLIST_VARS+=			csv doc
 
 
 .include "../../mk/bsd.options.mk"
@@ -33,7 +33,16 @@ DEPENDS+=	${PYPKGPREFIX}-vobject>=0.9.6:../../textproc/py-vobject
 .endif
 
 .if !empty(PKG_OPTIONS:Mini)
+.  if empty(_PYTHON_VERSION:M3*)
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
+.  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mcsv)
+.  if empty(_PYTHON_VERSION:M3*)
+DEPENDS+=	${PYPKGPREFIX}-backports.csv>=1.0.6:../../wip/py-backports.csv
+PLIST.csv=	yes
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
@@ -47,11 +56,11 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 PLIST.doc=		yes
 
 pre-build:
-		cd ${WRKSRC}/docs && ${MAKE} man
+	cd ${WRKSRC}/docs && ${MAKE} man
 pre-install:
-		${INSTALL_MAN} ${WRKSRC}/docs/_build/man/translatetoolkit.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-		${RM} -rf ${WRKSRC}/docs
-		${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/translate/docs/
+	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/translatetoolkit.1 \
+	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${RM} -rf ${WRKSRC}/docs
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/translate/docs/
 
 .endif

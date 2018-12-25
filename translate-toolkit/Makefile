@@ -1,11 +1,23 @@
 # $NetBSD$
 
-DISTNAME=	translate-toolkit-2.3.0
+#*grumble about reasons for not having nice things*
+GIT_PKG=	translate-toolkit
+GIT_LEVEL=	2.3.1
+
+DISTNAME=	${GIT_LEVEL}
+PKGNAME=	${GIT_PKG}-${GIT_LEVEL}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
-GITHUB_PROJECT=	translate
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	https://github.com/translate/translate/archive/
+WRKSRC=		${WRKDIR}/translate-${GIT_LEVEL}
+
+
+
+#DISTNAME=		translate-toolkit-2.3.0
+#CATEGORIES=		textproc
+#MASTER_SITES=		${MASTER_SITE_GITHUB:=translate/}
+#GITHUB_PROJECT=	translate
+#GITHUB_RELEASE=	${PKGVERSION_NOREV}
+#EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://toolkit.translatehouse.org/
@@ -23,10 +35,10 @@ REPLACE_BASH=	tools/*
 
 PYTHON_VERSIONS_ACCEPTED=	37 36 35 34 27
 
+# We do not want to setup a build env to translate
+# Firefox and Firefox Mobile.
 post-extract:
-	${RM} ${WRKSRC}/tools/mozilla/build_firefox.sh
-	${RM} ${WRKSRC}/tools/mozilla/buildxpi.py
-	${RM} ${WRKSRC}/tools/mozilla/get_moz_enUS.py
+	${RM} ${WRKSRC}/tools/mozilla/*
 	${RMDIR} ${WRKSRC}/tools/mozilla/
 
 .include "options.mk"
