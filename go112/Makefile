@@ -52,6 +52,7 @@ REPLACE_BASH+=	src/cmd/vendor/github.com/google/pprof/internal/binutils/testdata
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
+REPLACE_BASH+=	src/internal/x/fiximports.bash
 REPLACE_BASH+=	src/iostest.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/naclmake.bash
