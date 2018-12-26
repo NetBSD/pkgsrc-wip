@@ -1,9 +1,11 @@
 # $NetBSD: Makefile,v 1.3 2018/10/02 18:19:56 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
+# TODO move to version.mk
+GO112_VERSION?=	1.12beta1
 
-DISTNAME=	go${GO111_VERSION}.src
-PKGNAME=	go111-${GO111_VERSION}
+DISTNAME=	go${GO112_VERSION}.src
+PKGNAME=	go112-${GO112_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	bsdtar
@@ -13,7 +15,7 @@ HOMEPAGE=	http://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
 
-GOVERSSUFFIX=	111
+GOVERSSUFFIX=	112
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
 
@@ -111,7 +113,7 @@ do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}
 	find ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} -name \*.orig -exec rm {} \;
 .for cmd in go gofmt
-	${LN} -sf ${PREFIX}/go111/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
+	${LN} -sf ${PREFIX}/go112/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
 .endfor
 
 do-test:
