@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/08/10 18:59:28 jonthn Exp $
+# $NetBSD$
 
-DISTNAME=	ctags-5.8
+DISTNAME=	ctags-2712201801
 CATEGORIES=	devel
-GIT_REPO=	git://github.com/universal-ctags/ctags
+MASTER_SITES= 	${MASTER_SITE_GITHUB:=universal-ctags/}
+GITHUB_TAG= 	5728abe4112092437a517e94e30e139ccda63d5a
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctags.io/
@@ -11,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 USE_TOOLS=		aclocal autoreconf autoconf automake autoheader
-USE_TOOLS+=		bash gmake perl
+USE_TOOLS+=		bash gmake perl pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	RST2MAN=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
@@ -29,5 +30,4 @@ pre-configure:
 .include "options.mk"
 
 .include "../../lang/python/pyversion.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
