@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
-
-SHA1 (patch-lib_asan_asan__posix.cc) = 76056a2dca1eee0d16a79b9da39d8ddb53108de4
-SHA1 (patch-lib_fuzzer_tests_CMakeLists.txt) = 7210cbe6a3a65846a4229349b9a610a83ff3632f
-SHA1 (patch-lib_msan_msan__linux.cc) = e0a8034e63a0e9a571acdaca956e5002cf14dfe0
-SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = a444a0c9bef59dcde9a46191a0579bc39855f5ea
-SHA1 (patch-test_msan_pthread__getname__np.cc) = 54247b192a2f6a6fd078bee6b9188739f6edeae8
