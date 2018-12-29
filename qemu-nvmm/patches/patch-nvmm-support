@@ -427,8 +427,8 @@ Add NVMM support.
  obj-$(CONFIG_WHPX) += whpx-all.o
 +obj-$(CONFIG_NVMM) += nvmm-all.o
 --- target/i386/nvmm-all.c	1970-01-01 01:00:00.000000000 +0100
-+++ target/i386/nvmm-all.c	2018-12-15 14:48:22.478267925 +0100
-@@ -0,0 +1,1064 @@
++++ target/i386/nvmm-all.c	2018-12-29 16:39:37.626985638 +0100
+@@ -0,0 +1,1081 @@
 +/*
 + * Copyright (c) 2018 The NetBSD Foundation, Inc.
 + * All rights reserved.
@@ -897,36 +897,51 @@ Add NVMM support.
 +/* -------------------------------------------------------------------------- */
 +
 +static void
++nvmm_io_callback(struct nvmm_io *io)
++{
++	MemTxAttrs attrs = { 0 };
++	int ret;
++
++	ret = address_space_rw(&address_space_io, io->port, attrs, io->data,
++	    io->size, !io->in);
++	if (ret != MEMTX_OK) {
++		error_report("NVMM: I/O Transaction Failed "
++		    "[%s, port=%lu, size=%zu]", (io->in ? "in" : "out"),
++		    io->port, io->size);
++	}
++}
++
++static void
 +nvmm_mem_callback(struct nvmm_mem *mem)
 +{
 +	cpu_physical_memory_rw(mem->gpa, mem->data, mem->size, mem->write);
 +}
++
++static const struct nvmm_callbacks nvmm_callbacks = {
++	.io = nvmm_io_callback,
++	.mem = nvmm_mem_callback
++};
++
++/* -------------------------------------------------------------------------- */
++
 +static int
 +nvmm_handle_mem(struct nvmm_machine *mach, struct nvmm_vcpu *vcpu,
 +    struct nvmm_exit *exit)
 +{
-+	return nvmm_assist_mem(mach, vcpu->cpuid, exit, nvmm_mem_callback);
++	return nvmm_assist_mem(mach, vcpu->cpuid, exit);
 +}
 +
-+static void
-+nvmm_io_callback(struct nvmm_io *io)
-+{
-+	MemTxAttrs attrs = { 0 };
-+	address_space_rw(&address_space_io, io->port, attrs, io->data,
-+	    io->size, !io->in);
-+}
 +static int
 +nvmm_handle_io(struct nvmm_machine *mach, struct nvmm_vcpu *vcpu,
 +    struct nvmm_exit *exit)
 +{
-+	return nvmm_assist_io(mach, vcpu->cpuid, exit, nvmm_io_callback);
++	return nvmm_assist_io(mach, vcpu->cpuid, exit);
 +}
 +
 +static int
 +nvmm_handle_msr(struct nvmm_machine *mach, CPUState *cpu,
 +    struct nvmm_exit *exit)
 +{
-+	struct CPUX86State *env = (CPUArchState *)(cpu->env_ptr);
 +	struct nvmm_vcpu *vcpu = get_nvmm_vcpu(cpu);
 +	X86CPU *x86_cpu = X86_CPU(cpu);
 +	struct nvmm_x64_state state;
@@ -1455,6 +1470,8 @@ Add NVMM support.
 +		    errno);
 +		return -ENOSPC;
 +	}
++
++	nvmm_callbacks_register(&nvmm_callbacks);
 +
 +	memory_listener_register(&nvmm_memory_listener, &address_space_memory);
 +	ram_block_notifier_add(&nvmm_ram_notifier);
