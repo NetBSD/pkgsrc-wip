@@ -18,7 +18,13 @@ INSTALL_ENV+=	DESTDIR=${DESTDIR}
 INSTALL_ENV+=	PYTHONBIN=${PYTHONBIN}
 
 # Imports urllib.parse which is 3+.
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# byte-compiling /pkg_comp/obj/pkgsrc/wip/fs-uae-launcher/default/.destdir/usr/pkg/share/fs-uae-launcher/OpenGL/GL/SGIX/async.py to async.cpython-37.pyc
+#   File "/usr/pkg/share/fs-uae-launcher/OpenGL/GL/SGIX/async.py", line 58
+#       from OpenGL.raw.GL.SGIX.async import *
+#                                       ^
+#                                       SyntaxError: invalid syntax
+# (async keyword is new in python 3.7)
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 REPLACE_PYTHON+=	OpenGL/arrays/_buffers.py
 REPLACE_PYTHON+=	OpenGL/arrays/buffers.py
