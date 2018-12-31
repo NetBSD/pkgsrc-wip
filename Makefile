@@ -3016,7 +3016,6 @@ SUBDIR+=	py-arxiv2bib
 SUBDIR+=	py-arxvier
 SUBDIR+=	py-asciidata
 SUBDIR+=	py-asciimathml
-SUBDIR+=	py-asciinema
 SUBDIR+=	py-ase
 SUBDIR+=	py-aspects
 SUBDIR+=	py-aspell
