@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	qutebrowser-1.5.1
+DISTNAME=	qutebrowser-1.5.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qutebrowser/}
-GITHUB_TAG=	v1.5.1
+GITHUB_TAG=	v1.5.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://qutebrowser.org/
