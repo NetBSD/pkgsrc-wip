@@ -2,12 +2,13 @@
 
 DISTNAME=	le-1.16.5
 CATEGORIES=	editors
-MASTER_SITES=	http://lav.yar.ru/download/le/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lavv17/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lav.yar.ru/programs.html
+MAINTAINER=	fred@statdns.com
+HOMEPAGE=	https://github.com/lavv17/le/
 COMMENT=	Full screen text editor inspired by Norton Editor
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
