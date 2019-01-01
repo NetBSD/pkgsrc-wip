@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gdl-3.28.0.tar.xz) = db94f1953e083efd4c235310dfab93a05ad9d557
+RMD160 (gdl-3.28.0.tar.xz) = 80b379e41f6923efe3998886b51adacffaba95f4
+SHA512 (gdl-3.28.0.tar.xz) = d6a697b8cd098abfcb560d8b6c8a326b05f6f22211a3bc92ea458d643170abc514acd4105e372fb61777d2a5dd09709d7e3d6d3ad75215fffdf2809b3df3c471
+Size (gdl-3.28.0.tar.xz) = 541252 bytes
+SHA1 (patch-gdl_gdl-dock-bar.c) = 28a672363d29ac70a5da263135dd46be48703443
