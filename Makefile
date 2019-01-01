@@ -2281,6 +2281,7 @@ SUBDIR+=	netwmpager
 SUBDIR+=	netwox
 SUBDIR+=	netx
 SUBDIR+=	newsboat
+SUBDIR+=	newsboat213
 SUBDIR+=	nicotine+
 SUBDIR+=	nightfall
 SUBDIR+=	nih-current
