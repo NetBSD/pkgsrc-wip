@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (suse131/gconf2-3.2.6-2.1.3.i586.rpm) = a1b9b99e71a586f8aeec33eaeb411691e5025bba
+RMD160 (suse131/gconf2-3.2.6-2.1.3.i586.rpm) = 675f72931d04da802dbe9dcbc3d46f3be93f3a45
+SHA512 (suse131/gconf2-3.2.6-2.1.3.i586.rpm) = 29e9e96c71b06b9bca7e3445b70af9b24f92c8eeb8ab404fbf43c54abd127572cdb7c1d0e21d9444fa19dd8e3ad273f305bfa1ccd93604dfa1e6e6059385cd18
+Size (suse131/gconf2-3.2.6-2.1.3.i586.rpm) = 445751 bytes
+SHA1 (suse131/gconf2-3.2.6-2.1.3.x86_64.rpm) = 5963e4bf478b0182e04f5f120c337ca566ecff32
+RMD160 (suse131/gconf2-3.2.6-2.1.3.x86_64.rpm) = ea10c97ccaee7c2cd708571bb3b09612c761cdae
+SHA512 (suse131/gconf2-3.2.6-2.1.3.x86_64.rpm) = d0a4523fce08ec8bf7adacace9d19edb08129102b72c327bf02662d9571e392f62f419f16c68402438deef68b1eafd98ba2cef3367d43793aee7c5fde721df3b
+Size (suse131/gconf2-3.2.6-2.1.3.x86_64.rpm) = 449617 bytes
