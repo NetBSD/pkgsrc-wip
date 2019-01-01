@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.orig	2018-12-29 13:07:06.000000000 +0000
++++ Makefile
+@@ -62,7 +62,7 @@ NEWSBOATLIB_OUTPUT=target/release/libnew
+ LDFLAGS+=-L.//target/release
+ CARGO_FLAGS+=--release
+ endif
+-LDFLAGS+=-lnewsboat -lpthread -ldl
++LDFLAGS+=-lnewsboat ${PTHREAD_LDFLAGS} ${DL_LDFLAGS}
+ 
+ PODBOAT=podboat
+ PODBOAT_SOURCES:=$(shell cat mk/podboat.deps)
