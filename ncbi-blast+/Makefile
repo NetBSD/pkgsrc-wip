@@ -20,7 +20,8 @@ SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
 SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
 
-# Can't use a patch due to RCS tags in the script
+# Can't use a static patch due to RCS tags in the script
+# Allow REPLACE_BASH to determine platform-dependent final path
 SUBST_CLASSES+=		random
 SUBST_STAGE.random=	pre-configure
 SUBST_SED.random=	-e 's|/bin/sh|/usr/bin/env bash|'
@@ -39,7 +40,6 @@ REPLACE_PYTHON=	src/app/winmasker/windowmasker_2.2.22_adapter.py
 CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
-# MAKE_JOBS_SAFE=		no	# Intermittent issues
 WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 
 .include "../../mk/bsd.prefs.mk"
