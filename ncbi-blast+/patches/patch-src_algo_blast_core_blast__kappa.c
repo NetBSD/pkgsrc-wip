@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Macro chokes on NetBSD's way of defining stderr
+
 --- src/algo/blast/core/blast_kappa.c.orig	2019-01-02 04:00:17.000000000 +0000
 +++ src/algo/blast/core/blast_kappa.c
 @@ -32,6 +32,7 @@

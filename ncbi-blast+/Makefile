@@ -20,9 +20,16 @@ SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
 SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
 
-USE_TOOLS+=	gmake
+# Can't use a patch due to RCS tags in the script
+SUBST_CLASSES+=		random
+SUBST_STAGE.random=	pre-configure
+SUBST_SED.random=	-e 's|/bin/sh|/usr/bin/env bash|'
+SUBST_FILES.random=	${WRKSRC}/scripts/common/impl/define_random_macros.sh
+
+USE_TOOLS+=	bash gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
+REPLACE_BASH=	scripts/common/impl/define_random_macros.sh
 REPLACE_PERL=	src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
 REPLACE_PYTHON=	src/app/winmasker/windowmasker_2.2.22_adapter.py
 
