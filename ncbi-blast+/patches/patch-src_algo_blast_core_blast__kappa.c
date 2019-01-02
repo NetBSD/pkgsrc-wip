@@ -1,6 +1,6 @@
-$NetBSD$
+$NetBSD: patch-src_algo_blast_core_blast__kappa.c,v 1.1 2018/04/27 20:28:28 bacon Exp $
 
-# Macro chokes on NetBSD's way of defining stderr
+# Work around NetBSD stderr def choking macro
 
 --- src/algo/blast/core/blast_kappa.c.orig	2019-01-02 04:00:17.000000000 +0000
 +++ src/algo/blast/core/blast_kappa.c
