@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.4 2018/07/20 03:34:03 ryoon Exp $
 
-DISTNAME=	ncbi-blast-${PV}+-src
-PKGNAME=	ncbi-blast+-${PV}
+DISTNAME=	ncbi-blast-2.8.1+-src
+PKGNAME=	ncbi-blast+-${PKGVERSION_NOREV}
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
-		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PV}/
+		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
@@ -20,17 +20,11 @@ SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
 SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
 
-# Can't use a static patch due to RCS tags in the script
-# Allow REPLACE_BASH to determine platform-dependent final path
-SUBST_CLASSES+=		random
-SUBST_STAGE.random=	pre-configure
-SUBST_SED.random=	-e 's|/bin/sh|/usr/bin/env bash|'
-SUBST_FILES.random=	${WRKSRC}/scripts/common/impl/define_random_macros.sh
-
 USE_TOOLS+=	bash gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 REPLACE_BASH=	scripts/common/impl/define_random_macros.sh
+REPLACE_BASH+=	src/app/blast/get_species_taxids.sh
 REPLACE_PERL=	src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
 REPLACE_PYTHON=	src/app/winmasker/windowmasker_2.2.22_adapter.py
 
@@ -49,8 +43,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 # configure checks only for undefined reference, not for usability
 CONFIGURE_ENV+=		ac_cv_func_statfs=no
 .endif
-
-PV=	2.8.1
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra

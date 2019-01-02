@@ -4186,4 +4186,3 @@ lib/ncbi-tools++/libxutil-static.a
 lib/ncbi-tools++/libxutil.a
 lib/ncbi-tools++/libxxconnect-static.a
 lib/ncbi-tools++/libxxconnect.a
-@pkgdir include/ncbi-tools++/objtools/data_loaders/genbank/psg
