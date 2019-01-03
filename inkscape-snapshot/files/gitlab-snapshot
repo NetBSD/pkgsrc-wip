@@ -1,0 +1,28 @@
+1.
+   n3150-4dc@makoto 08:59:11/190103(/export/git-work)% pwd
+   /export/git-work
+2.
+   n3150-4dc@makoto 08:59:50/190103(/export/git-work)% cat inkscape/.git/config 
+   [core]
+           repositoryformatversion = 0
+           filemode = true
+           bare = false
+           logallrefupdates = true
+   [remote "origin"]
+           url = https://gitlab.com/inkscape/inkscape
+           fetch = +refs/heads/*:refs/remotes/origin/*
+   [branch "master"]
+           remote = origin
+           merge = refs/heads/master
+
+
+3.
+n3150-4dc@makoto 13:06:07/190103(..git-work/inkscape)% git g -- . |head -2
+---------------
+* f26608d5cc [2018-12-29 17:57:00 +0000] (HEAD -> master, origin/master, origin/HEAD) Fix permission on non-executable file @Alexander Valavanis
+* d558a7a9b9 [2018-12-29 17:39:19 +0000] Fix namespace naming consistency @Alexander Valavanis
+---------------
+
+4.
+   tar zJcf /tmp/inkscape-20190102.tar.xz inkscape
+

@@ -1,0 +1,48 @@
+------------------------------------------------------------------------
+Configuration Summary
+------------------------------------------------------------------------
+PROJECT_NAME:            inkscape
+INKSCAPE_VERSION:        0.92+devel
+INKSCAPE_DIST_PREFIX:    inkscape-0.92+devel
+INKSCAPE_CPACK_PREFIX:   inkscape-0.92+devel__
+
+CMAKE_BINARY_DIR:        /export/WRKOBJDIR/wip/inkscape-snapshot/work/inkscape
+CMAKE_INSTALL_PREFIX:    /usr/pkg
+PACKAGE_LOCALE_DIR       /usr/pkg/share/locale
+CMAKE_SYSTEM_NAME:       NetBSD
+CMAKE_SYSTEM_VERSION:    8.99.29
+CMAKE_SYSTEM_PROCESSOR:  x86_64
+CMAKE_C_COMPILER:        /export/WRKOBJDIR/wip/inkscape-snapshot/work/.cwrapper/bin/gcc
+CMAKE_CXX_COMPILER:      /export/WRKOBJDIR/wip/inkscape-snapshot/work/.cwrapper/bin/c++
+CMAKE_BUILD_TYPE:        Release
+
+ENABLE_LCMS:             ON
+ENABLE_POPPLER:          ON
+ENABLE_POPPLER_CAIRO:    ON
+GMOCK_PRESENT:           OFF
+WITH_DBUS:               OFF
+WITH_GTKSPELL:           OFF
+WITH_IMAGE_MAGICK:       OFF
+WITH_GRAPHICS_MAGICK:    OFF
+WITH_LIBCDR:             ON
+WITH_LIBVISIO:           ON
+WITH_LIBWPG:             ON
+WITH_NLS:                ON
+WITH_OPENMP:             OFF
+WITH_PROFILING:          OFF
+WITH_YAML:               OFF
+WITH_JEMALLOC:           OFF
+------------------------------------------------------------------------
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_INSTALL_LIBDIR
+    CMAKE_INSTALL_LOCALEDIR
+    CMAKE_INSTALL_MANDIR
+    PYTHON_EXECUTABLE
+    PYTHON_INCLUDE_DIR
+    PYTHON_INCLUDE_PATH
+    PYVERSSUFFIX
+    WITH_GNOME_VFS

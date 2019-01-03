@@ -1,0 +1,15 @@
+$NetBSD$
+
+convert python executable
+
+--- src/extension/implementation/script.cpp.orig	2018-12-31 23:36:06.000000000 +0900
++++ src/extension/implementation/script.cpp	2019-01-03 09:44:15.009685466 +0900
+@@ -90,7 +90,7 @@ Script::interpreter_t const Script::inte
+ #ifdef _WIN32
+         {"python", "python-interpreter", "pythonw" },
+ #else
+-        {"python", "python-interpreter", "python" },
++        {"python", "python-interpreter", "@PYTHONBIN@" },
+ #endif
+         {"ruby",   "ruby-interpreter",   "ruby"   },
+         {"shell",  "shell-interpreter",  "sh"     },

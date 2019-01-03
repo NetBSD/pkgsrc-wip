@@ -1,0 +1,15 @@
+$NetBSD$
+
+library goes to lib
+
+--- src/CMakeLists.txt.orig	2018-12-31 23:36:06.000000000 +0900
++++ src/CMakeLists.txt	2019-01-03 10:14:51.973945479 +0900
+@@ -384,7 +384,7 @@
+     inkview 
+     RUNTIME DESTINATION bin)
+   if(BUILD_SHARED_LIBS)
+-    install(TARGETS inkscape_base LIBRARY DESTINATION lib/inkscape)
++    install(TARGETS inkscape_base LIBRARY DESTINATION lib)
+   endif()
+ else()
+   install(TARGETS
