@@ -10,7 +10,7 @@ PKGNAME=	inkscape-0.92.3.50
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.inkscape.org/
 COMMENT=	Scalable Vector Graphics (SVG) editor
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/inkscape
 
@@ -73,6 +73,8 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
+CMAKE_ARGS+=		-DWITH_DBUS=ON
+
 # gnome-vfs support for the inkscape file open window.
 .if !empty(PKG_OPTIONS:Mgnome)
 CMAKE_ARGS+=		-DWITH_GNOME_VFS=ON
@@ -101,6 +103,8 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
