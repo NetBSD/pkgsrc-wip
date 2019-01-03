@@ -13,5 +13,5 @@ SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_usb_dev-mtp.c) = 66543b5559d92f8e2fa9a6eb85e5dfe7c1ad3339
-SHA1 (patch-nvmm-support) = 434efdf8ec5ceb05f42318324d7c3df59a124cfa
+SHA1 (patch-nvmm-support) = efb5cf245a9ea19bd392156979a009e3eca2b5af
 SHA1 (patch-tests_Makefile.include) = 42345d697cb2e324dccf1d68bd8d61e8001c6162
