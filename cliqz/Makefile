@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cliqz-1.23.3
+DISTNAME=	cliqz-1.24.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -31,7 +31,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20181116003917
+CLIQZ_LAST_BUILD_ID=	20181223141940
 CLIQZ_ICON=		cliqz.png
 CLIQZ_ICON_SRC=		${WRKSRC}/mozilla-release/browser/branding/cliqz/default48.png
 MOZ_DESKTOP=		${WRKSRC}/mozilla-release/toolkit/mozapps/installer/linux/rpm/mozilla.desktop
@@ -49,6 +49,7 @@ SITES.gdprtool${CLIQZ_PLUGIN_SUFX}= \
 
 MAKE_ENV+=	CQZ_RELEASE_CHANNEL=${CLIQZ_CHANNEL}
 MAKE_ENV+=	CQZ_BUILD_ID=${CLIQZ_LAST_BUILD_ID}
+MAKE_ENV+=	MOZBUILD_STATE_PATH=${WRKDIR}/.home/.mozbuild
 
 .include "mozilla-common.mk"
 .include "options.mk"

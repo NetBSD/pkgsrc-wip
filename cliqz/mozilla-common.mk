@@ -64,7 +64,6 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-pixman"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-webrender=build"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-rust-simd"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-ffi"
-MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-pie"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-chrome-format=flat"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-gconf"
 
