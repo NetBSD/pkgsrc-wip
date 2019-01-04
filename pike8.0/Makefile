@@ -1,8 +1,6 @@
 # $NetBSD$
 
-PIKEVERSUFFIX=	8.0
-
-.include 	"../../wip/pike${PIKEVERSUFFIX}/version.mk"
+.include 	"./version.mk"
 
 NAME=		pike${PIKEVERSUFFIX}
 PKGNAME=        ${NAME}-${PIKE_VERSION}
@@ -18,9 +16,9 @@ HOMEPAGE=       http://pike.lysator.liu.se/
 COMMENT=        Dynamic language with a syntax similar to Java and C
 
 CHECK_SSP=	no
-.if defined(PKGSRC_USE_SSP) 
- # do not add flags to everything 
-PKGSRC_USE_SSP= no 
+.if defined(PKGSRC_USE_SSP)
+# do not add flags to everything
+PKGSRC_USE_SSP= no
 .endif
 
 BUILD_DEPENDS+=	 pkgconf-[0-9]*:../../devel/pkgconf
@@ -29,8 +27,8 @@ MAKE_JOBS_SAFE= no
 GNU_CONFIGURE= yes
 CONFIGURE_SCRIPT=	src/configure
 #CONFIGURE_ARGS+= --without-machine-code
-CFLAGS+=	-O 
-BUILD_MAKE_FLAGS+= 
+CFLAGS+=	-O
+BUILD_MAKE_FLAGS+=
 USE_TOOLS+=gmake
 USE_LANGUAGES=  c c++
 
@@ -66,7 +64,7 @@ post-configure:
 	cp ${WRKSRC}/src/backend.c ${WRKSRC}/src/backend.cmod.c
 	cp ${WRKSRC}/src/builtin.c ${WRKSRC}/src/builtin.cmod.c
 	cp ${WRKSRC}/src/iterators.c ${WRKSRC}/src/iterators.cmod.c
-	touch ${WRKSRC}/src/backend.c 
+	touch ${WRKSRC}/src/backend.c
 	touch ${WRKSRC}/src/builtin.c
 	touch ${WRKSRC}/src/iterators.c
 
@@ -137,5 +135,5 @@ install-shared-docs:
 print-vars:
 	${ECHO} vars
 .for x in ${MAKEVARS}
-        ${ECHO} ${x}: ${${x}}
+	${ECHO} ${x}: ${${x}}
 .endfor

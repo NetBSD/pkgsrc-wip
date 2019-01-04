@@ -15,8 +15,8 @@ MODULE_TYPE?=	module
 # in the main pike build, so it's not usually necessary to include a second one.
 MAKE_MODREF?=	no
 
-# should the build process check to make sure that the resulting module.so contains 
-# some elements? empty modules usually indicate a configure-time problem, so this 
+# should the build process check to make sure that the resulting module.so contains
+# some elements? empty modules usually indicate a configure-time problem, so this
 # is a good way to check that all of the libs were found and enabled.
 CHECK_MODULE_ENABLED?=	yes
 
@@ -30,9 +30,9 @@ DISTNAME=       Pike-v${PIKE_VERSION}
 PIKE_EXECUTABLE = pike${PIKEVERSUFFIX}
 
 CHECK_SSP=	no
-.if defined(PKGSRC_USE_SSP) 
- # do not add flags to everything 
-PKGSRC_USE_SSP= no 
+.if defined(PKGSRC_USE_SSP)
+# do not add flags to everything
+PKGSRC_USE_SSP= no
 .endif
 
 CATEGORIES=     lang
@@ -78,7 +78,7 @@ do-build:
 # run some build checks and make the module modref if desired.
 post-build:
 .if(${CHECK_MODULE_ENABLED} != "no")
-	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} -e 'return !sizeof(indices(load_module("./module.so"))+indices(load_module("./module.so")()));' || (echo "Module empty, configure problem?" && exit 1)
+	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} -e 'return !sizeof(indices(load_module("./module.so"))+indices(load_module("./module.so")()));' || (${ECHO} "Module empty, configure problem?" && exit 1)
 .endif
 .if(${MAKE_MODREF} != "no")
 	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} -x module SYSTEM_DOC_PATH=${SYSTEM_DOC_PATH} module_modref
@@ -96,7 +96,7 @@ remove-main-package-files:
 	cd ${DESTDIR}/${PREFIX} && \
 	  if [ "x${PIKE_MODULE_OVERLAPPING_FILES}" != "x" ] ; then \
 	    for remove in ${PIKE_MODULE_OVERLAPPING_FILES} ; do \
-	      echo removing $${remove} ; \
+	      ${ECHO} removing $${remove} ; \
 	      rm $${remove} ; \
 	    done ; \
 	  fi
