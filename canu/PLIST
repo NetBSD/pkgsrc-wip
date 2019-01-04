@@ -3,7 +3,6 @@ bin/alignGFA
 bin/bogart
 bin/bogus
 bin/canu
-bin/canu.defaults
 bin/correctOverlaps
 bin/dumpBlob
 bin/edalign
@@ -54,7 +53,6 @@ bin/tgTigDisplay
 bin/trimReads
 bin/utgcns
 bin/wtdbgConvert
-lib/libcanu.a
 lib/perl5/site_perl/canu/Configure.pm
 lib/perl5/site_perl/canu/Consensus.pm
 lib/perl5/site_perl/canu/CorrectReads.pm

@@ -1,6 +1,7 @@
 $NetBSD$
 
-# Requires platform-specific defaults
+# Template Makefile requires platform-specific defaults for each OS
+# To be sent upstream following commit
 
 --- Makefile.orig	2018-10-22 16:47:31.000000000 +0000
 +++ Makefile

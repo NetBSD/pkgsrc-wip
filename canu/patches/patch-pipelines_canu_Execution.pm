@@ -1,6 +1,7 @@
 $NetBSD$
 
 # Add resource limits for SLURM
+# Upstream is considering a scheduler-independent approach to this feature
 
 --- pipelines/canu/Execution.pm.orig	2018-06-22 08:20:52.000000000 +0000
 +++ pipelines/canu/Execution.pm

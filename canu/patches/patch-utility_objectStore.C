@@ -1,6 +1,8 @@
 $NetBSD$
 
-# Portability
+# NetBSD does not provide WEXITED
+# Empty bitmask should suffice in this case
+
 --- utility/objectStore.C.orig	2018-12-23 01:57:06.000000000 +0000
 +++ utility/objectStore.C
 @@ -286,6 +286,11 @@ fetchFromObjectStore(char *requested) {
