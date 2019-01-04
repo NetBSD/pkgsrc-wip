@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/01/16 01:57:37 makoto Exp $
-
-SHA1 (sawfish_1.11.tar.xz) = a2a0190ed11c5e3e8d0ca30a6a3d533efaa1b470
-RMD160 (sawfish_1.11.tar.xz) = 185a54b8a683d7c608519eeb468bad9ac3074b4b
-Size (sawfish_1.11.tar.xz) = 2751904 bytes
-SHA1 (patch-aa) = 4ab1def3b142d3eb2a56385b2a3e39819290e36b
-SHA1 (patch-ab) = 21a89c87afa9cb5fdf3b028109b0db9c5991fb1e
-SHA1 (patch-themes_Makefile.in) = 6484654d6d1fc9126f989a075b6fbf4b5ffb045d

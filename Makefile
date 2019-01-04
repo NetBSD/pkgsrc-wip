@@ -4197,7 +4197,6 @@ SUBDIR+=	samhain
 SUBDIR+=	samtools0119
 SUBDIR+=	sara
 SUBDIR+=	sarf
-SUBDIR+=	sawfish
 SUBDIR+=	sbcl-git
 SUBDIR+=	sc-im
 SUBDIR+=	scantailor
