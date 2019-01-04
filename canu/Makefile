@@ -16,9 +16,12 @@ DEPENDS=	gnuplot>0:../../graphics/gnuplot
 # Makefile compiles directly into ${DESTDIR}${PREFIX}
 SUBST_CLASSES+=		optimize
 SUBST_STAGE.optimize=	pre-configure
-SUBST_SED.optimize+=	-e 's|-O4|-O2|g'
+SUBST_SED.optimize=	-e 's|-g3||g'
+SUBST_SED.optimize+=	-e 's|-O3||g'
+SUBST_SED.optimize+=	-e 's|-O4||g'
 SUBST_SED.optimize+=	-e 's|-funroll-loops||g'
 SUBST_SED.optimize+=	-e 's|-fexpensive-optimizations||g'
+SUBST_SED.optimize+=	-e 's|-finline-functions||g'
 SUBST_FILES.optimize+=	${WRKSRC}/Makefile
 
 SUBST_CLASSES+=		jar
