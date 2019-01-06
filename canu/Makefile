@@ -16,7 +16,7 @@ DEPENDS=	gnuplot>0:../../graphics/gnuplot
 # Makefile compiles directly into ${DESTDIR}${PREFIX}
 SUBST_CLASSES+=		optimize
 SUBST_STAGE.optimize=	pre-configure
-SUBST_SED.optimize=	-e 's|-g3||g'
+SUBST_SED.optimize+=	-e 's|-g3||g'
 SUBST_SED.optimize+=	-e 's|-O3||g'
 SUBST_SED.optimize+=	-e 's|-O4||g'
 SUBST_SED.optimize+=	-e 's|-funroll-loops||g'
@@ -26,15 +26,15 @@ SUBST_FILES.optimize+=	${WRKSRC}/Makefile
 
 SUBST_CLASSES+=		jar
 SUBST_STAGE.jar=	pre-configure
-SUBST_SED.jar=		-e 's|\\$$bin/mhap-|${PREFIX}/${JAVAJARDIR}/mhap-|g'
-SUBST_FILES.jar=	${WRKSRC}/pipelines/canu/OverlapMhap.pm
+SUBST_SED.jar+=		-e 's|\\$$bin/mhap-|${PREFIX}/${JAVAJARDIR}/mhap-|g'
+SUBST_FILES.jar+=	${WRKSRC}/pipelines/canu/OverlapMhap.pm
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
-SUBST_SED.perl=		-e 's|$$FindBin::RealBin/../lib/site_perl|${PREFIX}/${SITE_PERL_REL}|g'
-SUBST_FILES.perl=	${WRKSRC}/pipelines/canu.pl
+SUBST_SED.perl+=	-e 's|$$FindBin::RealBin/../lib/site_perl|${PREFIX}/${SITE_PERL_REL}|g'
+SUBST_FILES.perl+=	${WRKSRC}/pipelines/canu.pl
 
-REPLACE_PERL=	bogart/*.pl
+REPLACE_PERL+=	bogart/*.pl
 REPLACE_PERL+=	pipelines/*.pl
 REPLACE_PERL+=	bogus/*.pl
 REPLACE_PERL+=	bogart-analysis/*.pl
@@ -52,13 +52,13 @@ ONLY_FOR_PLATFORM=	*-*-x86_64
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
 USE_JAVA2=	8
-USE_TOOLS=	gmake pax perl
+USE_TOOLS+=	gmake pax perl
 GCC_REQD+=	4.8
 
 WRKSRC=		${WRKDIR}/canu-${PKGVERSION_NOREV}/src
 MAKE_ENV+=	DESTDIR=${WRKSRC}
 
-TMP_INST=		${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
+TMP_INST=	${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
 SITE_PERL_REL=		lib/perl5/site_perl
 JAVAJARDIR=		share/java/classes
 INSTALLATION_DIRS=	bin ${JAVAJARDIR}
