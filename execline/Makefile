@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	execline-2.3.0.3
-PKGREVISION=	1
+DISTNAME=	execline-2.5.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://skarnet.org/software/execline/
 

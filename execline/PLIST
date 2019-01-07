@@ -29,7 +29,6 @@ bin/if
 bin/ifelse
 bin/ifte
 bin/ifthenelse
-bin/import
 bin/importas
 bin/loopwhilex
 bin/multidefine
