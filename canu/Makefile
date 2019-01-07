@@ -8,10 +8,9 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://canu.readthedocs.io/
 COMMENT=	Single molecule sequence assembler for genomes large and small
-
 LICENSE=	gnu-gpl-v2
 
-DEPENDS=	gnuplot>0:../../graphics/gnuplot
+DEPENDS+=	gnuplot>0:../../graphics/gnuplot
 
 # Makefile compiles directly into ${DESTDIR}${PREFIX}
 SUBST_CLASSES+=		optimize
