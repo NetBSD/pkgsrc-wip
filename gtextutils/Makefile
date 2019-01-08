@@ -6,7 +6,7 @@
 
 DISTNAME=	libgtextutils-0.7
 CATEGORIES=	biology
-MASTER_SITES=	https://github.com/agordon/libgtextutils/releases/download/0.7/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=agordon/}
 
 MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Gordon text utilities
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"
