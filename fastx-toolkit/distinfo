@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (fastx_toolkit-0.0.14.tar.gz) = ce008d34469afd48f4012d37797f91972a8f72cf
+RMD160 (fastx_toolkit-0.0.14.tar.gz) = 759a34c6e30f96eeef415dc832ec4a518866be09
+SHA512 (fastx_toolkit-0.0.14.tar.gz) = d8e18a3622dcdb5b543fcb787818ac468b26341d5d4409326c951b504862eb44226f625228985bec6fb2e02c45f9a127591a312dadd53415337a7c09f6229708
+Size (fastx_toolkit-0.0.14.tar.gz) = 259576 bytes
+SHA1 (patch-src_libfastx_fastx.h) = 5a387ac575a5269bc03e3f09ab752889efb8870c

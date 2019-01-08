@@ -758,6 +758,7 @@ SUBDIR+=	fastool
 SUBDIR+=	fastqc
 SUBDIR+=	fastrpc
 SUBDIR+=	fasttree
+SUBDIR+=	fastx-toolkit
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
