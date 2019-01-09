@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/01/22 22:45:00 schnoebe Exp $
 
-SHA1 (xtrkcad-source-4.2.0-beta1.tar.gz) = c0db10bb4582c36935fba10f6304f8ab6169b6bd
-RMD160 (xtrkcad-source-4.2.0-beta1.tar.gz) = 0aec600bb19fc0f5fec83d56efd8b9817ebe0713
-Size (xtrkcad-source-4.2.0-beta1.tar.gz) = 3542183 bytes
-SHA1 (patch-app_bin_CMakeLists.txt) = 0395724e2505b42d2fb7b72d8b2866c7894b43fd
-SHA1 (patch-docs_doxygen_CMakeLists.txt) = a99ce25590762d55edb3e30ccd36856b93f41db6
+SHA1 (xtrkcad-source-5.1.2a.tar.gz) = 262850f2ee3b12e635178a01352588e608567343
+RMD160 (xtrkcad-source-5.1.2a.tar.gz) = 884d68b4dcf722a57d7efe774e6dd574ad974826
+SHA512 (xtrkcad-source-5.1.2a.tar.gz) = 1962d90cef666588bda400db089ba5174e621b929d6ec24d1b9935e013ccec308768cbc37ada7cdd06bd292908499b2016d4738a52669959a44d588465d5e55b
+Size (xtrkcad-source-5.1.2a.tar.gz) = 12667102 bytes
