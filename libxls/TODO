@@ -1,2 +1,8 @@
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2018-20450, CVE-2018-20452
+Several known vulnerabilities, but fixed upstream. Patches need to be
+incorporated.
+
+CVE-2017-12110 https://github.com/evanmiller/libxls/issues/2
+CVE-2017-12111 https://github.com/evanmiller/libxls/issues/3
+CVE-2017-2919 https://github.com/evanmiller/libxls/issues/4
+CVE-2017-2897 https://github.com/evanmiller/libxls/issues/5
+CVE-2017-2896 https://github.com/evanmiller/libxls/issues/6
