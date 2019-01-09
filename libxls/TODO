@@ -6,3 +6,20 @@ CVE-2017-12111 https://github.com/evanmiller/libxls/issues/3
 CVE-2017-2919 https://github.com/evanmiller/libxls/issues/4
 CVE-2017-2897 https://github.com/evanmiller/libxls/issues/5
 CVE-2017-2896 https://github.com/evanmiller/libxls/issues/6
+
+Additionally, these non-CVE issues are or may be security related (most
+fixed upstream):
+
+https://github.com/evanmiller/libxls/issues/13
+https://github.com/evanmiller/libxls/issues/14
+https://github.com/evanmiller/libxls/issues/17
+https://github.com/evanmiller/libxls/issues/20
+https://github.com/evanmiller/libxls/issues/31
+https://github.com/evanmiller/libxls/issues/34
+https://github.com/evanmiller/libxls/issues/35
+https://github.com/evanmiller/libxls/issues/36
+https://github.com/evanmiller/libxls/issues/37
+
+Looks like there may be a new release soon:
+
+https://github.com/evanmiller/libxls/issues/25
