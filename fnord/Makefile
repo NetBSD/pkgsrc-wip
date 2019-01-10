@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 # web server Gatling running at www.fefe.de is incompatible with BSD ftp
 # cf. PR#45516
 USE_TOOLS+=	gmake
-DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
+DEPENDS+=	{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
 
 CFLAGS+=	${CPPFLAGS}
 MAKE_ENV+=	RANLIB=${RANLIB:Q} LIBS=${LIBS:Q}
