@@ -1,0 +1,9 @@
+posh package in pkgsrc doesn't work with POSIX getopt().
+Likely it works with GNU getopt() only.
+Note: It can be compiled, but fails horribly at runtime e.g. on NetBSD.
+
+To make this more obvious, I have first enabled the testsuite for "make test".
+This package solves the problems by using getopt() from gnulib.
+
+Import of this approach was rejected by wiz@ because it's hard to maintain.
+I leave this package in wip for reference.
