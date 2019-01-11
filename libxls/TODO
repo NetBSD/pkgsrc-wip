@@ -7,6 +7,11 @@ CVE-2017-2919 https://github.com/evanmiller/libxls/issues/4
 CVE-2017-2897 https://github.com/evanmiller/libxls/issues/5
 CVE-2017-2896 https://github.com/evanmiller/libxls/issues/6
 
+Several known vulnerabilites, not fixed upstream:
+
+CVE-2018-20450 https://github.com/evanmiller/libxls/issues/34
+CVE-2018-20452 https://github.com/evanmiller/libxls/issues/35
+
 Additionally, these non-CVE issues are or may be security related (most
 fixed upstream):
 
@@ -15,8 +20,6 @@ https://github.com/evanmiller/libxls/issues/14
 https://github.com/evanmiller/libxls/issues/17
 https://github.com/evanmiller/libxls/issues/20
 https://github.com/evanmiller/libxls/issues/31
-https://github.com/evanmiller/libxls/issues/34
-https://github.com/evanmiller/libxls/issues/35
 https://github.com/evanmiller/libxls/issues/36
 https://github.com/evanmiller/libxls/issues/37
 
