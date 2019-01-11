@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/08/20 12:57:34 wiz Exp $
+# $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flnews
 PKG_SUPPORTED_OPTIONS=	inet6 nls xdbe xdg-utils

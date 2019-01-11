@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/20 12:57:34 wiz Exp $
+@comment $NetBSD$
 bin/flnews
 man/man1/flnews.1
 share/flnews/license.txt
