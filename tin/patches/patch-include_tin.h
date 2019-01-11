@@ -2,9 +2,9 @@ $NetBSD$
 
 Use system libcanlock.
 
---- include/tin.h.orig	2017-12-08 07:52:23.000000000 +0000
+--- include/tin.h.orig
 +++ include/tin.h
-@@ -2366,7 +2366,7 @@ extern struct tm *localtime(time_t *);
+@@ -2394,7 +2394,7 @@ extern struct tm *localtime(time_t *);
  
  /* libcanlock */
  #ifdef USE_CANLOCK

@@ -2,9 +2,9 @@ $NetBSD$
 
 Skip missing include directories.
 
---- configure.orig	2017-12-24 11:52:06.000000000 +0000
+--- configure.orig
 +++ configure
-@@ -9202,6 +9202,9 @@ echo "$ac_t""$cf_cv_ncurses_h2" 1>&6
+@@ -11429,6 +11429,9 @@ echo "$ac_t""$cf_cv_ncurses_h2" 1>&6
  if test -n "$cf_1st_incdir" ; then
    for cf_add_incdir in $cf_1st_incdir
    do
