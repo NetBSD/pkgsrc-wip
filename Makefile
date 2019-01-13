@@ -1277,6 +1277,7 @@ SUBDIR+=	hgsubversion
 SUBDIR+=	higan
 SUBDIR+=	higgsbounds
 SUBDIR+=	hijra
+SUBDIR+=	hisat2
 SUBDIR+=	hlint
 SUBDIR+=	hmmer
 SUBDIR+=	honggfuzz-git
