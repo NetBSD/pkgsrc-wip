@@ -1,23 +1,21 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mame2014-20171231
+DISTNAME=	libretro-mame2014-20190109
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	mame2014-libretro
-GITHUB_TAG=	62a932c9435ef89fdb9a1b0c41deadd7f04f53f3
+GITHUB_TAG=	64e396842aeef97647217bfab70c2eb948e3cd97
 
-MAINTAINER=	nia.alarie@gmail.com
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=MAME_2014
-COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.159)
-LICENSE=	no-commercial-use
+COMMENT=	Libretro core based on the MAME 0.159 arcade game emulator
+LICENSE=	mame-license
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++03
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,6 +1,6 @@
 $NetBSD$
 
-Avoid linuxisms and don't use bundled libraries.
+Don't use bundled libraries or override LDFLAGS.
 
 --- Makefile.orig	2017-12-31 00:16:01.000000000 +0000
 +++ Makefile

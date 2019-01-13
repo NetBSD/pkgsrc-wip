@@ -5,4 +5,5 @@ open to others so that they can run these pluggable emulator and game cores
 also in their own programs or devices.
 
 MAME is the  Multiple Arcade Machine Emulator. This is based on version 0.159
-with backported patches for performance and compatibility improvements.
+with backported patches for performance and compatibility improvements, and
+is compatible with MAME 0.159 romsets.
