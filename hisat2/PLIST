@@ -80,8 +80,3 @@ libexec/hisat2/run_extract_ILMN.sh
 libexec/hisat2/run_genotype_build.sh
 libexec/hisat2/run_hisat2_build.sh
 libexec/hisat2/run_type_CP.sh
-@pkgdir share/examples
-@pkgdir share/doc
-@pkgdir man/man1
-@pkgdir lib
-@pkgdir include
