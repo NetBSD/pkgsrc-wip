@@ -29,7 +29,9 @@ REPLACE_PERL=		hisat2 scripts/*.sh scripts/*.pl
 REPLACE_PYTHON=		*.py hisat2-build hisat2-inspect
 REPLACE_PYTHON+=	hisatgenotype_modules/*.py hisatgenotype_scripts/*.py
 
-MAKE_FILE=	${FILESDIR}/Makefile.pkg
+MAKE_FILE=		${FILESDIR}/Makefile.pkg
+PTHREAD_AUTO_VARS=	yes
 
 .include "../../lang/python/application.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
