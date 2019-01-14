@@ -7,8 +7,7 @@ CATEGORIES=		news
 MASTER_SITES=		http://jedsoft.org/releases/slrn/
 EXTRACT_SUFX=		.tar.bz2
 
-#MAINTAINER=		is@NetBSD.org
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://slrn.sourceforge.net/
 COMMENT=		Clean SLRN's score file
 LICENSE=		gnu-gpl-v2
