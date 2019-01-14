@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_OPTIONS_REQUIRED_GROUPS=	display
-PKG_OPTIONS_GROUP.display=	curses wide-curses termcap
+PKG_OPTIONS_GROUP.display=	curses termcap # wide-curses removed, see below
 PKG_SUPPORTED_OPTIONS=		canlock icu inet6 nls tin-use-inn-spool
 PKG_SUGGESTED_OPTIONS=		canlock inet6 nls termcap # see PR #51819
 # untested
@@ -15,7 +15,9 @@ PKG_SUGGESTED_OPTIONS=		canlock inet6 nls termcap # see PR #51819
 CONFIGURE_ARGS+=	--enable-cancel-locks
 .endif
 
-.if !empty(PKG_OPTIONS:Mcurses) || !empty(PKG_OPTIONS:Mwide-curses)
+# Option wide-curses removed
+# Use curses option and set CURSES_DEFAULT in mk.conf to select type
+.if !empty(PKG_OPTIONS:Mcurses)
 .include "../../mk/curses.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-screen=${CURSES_TYPE}
 CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.curses}
