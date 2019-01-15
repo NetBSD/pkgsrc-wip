@@ -1,9 +1,5 @@
 # $NetBSD$
 
-# What's the canonical way to specify github commits in PKGNAME?
-# Using post-release commit # here
-# git describe --tags 20f333e2cfe7ff4d1362b248912893e2644683d7
-# 0f01dc6397a-23-g20f333e
 DISTNAME=	hisat2-2.1.0.23
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=infphilo/}
