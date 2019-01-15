@@ -1,5 +1,5 @@
 [X] Update to latest release 2.4.3
 [X] Rework patches to apply without offset
-[ ] Test package
-[ ] Suggest option "termcap" for "mk/defaults/options.description"
+[X] Test package
+[X] Suggest option "termcap" for "mk/defaults/options.description"
     (from pkglint warning)
