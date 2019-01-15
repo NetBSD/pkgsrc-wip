@@ -1,5 +1,0 @@
-[X] Add pango option to support glyph substitution on X11
-[X] Suggest pango option as default
-[X] Port patches from 1.3.4
-[X] Make build work
-[X] Update PLIST
