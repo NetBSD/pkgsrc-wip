@@ -1,6 +1,6 @@
 @comment $NetBSD: PLIST,v 1.27 2015/09/17 07:06:48 tron Exp $
 bin/irc
-bin/irc-current
+bin/irc-${VERS}
 bin/ircbug
 bin/ircflush
 libexec/ircio
@@ -131,6 +131,10 @@ share/irc/help/input${GZSUFFIX}
 share/irc/help/intro${GZSUFFIX}
 share/irc/help/invite${GZSUFFIX}
 share/irc/help/ircii/copyright${GZSUFFIX}
+share/irc/help/ircii/command_line_args${GZSUFFIX}
+share/irc/help/ircii/environment_vars${GZSUFFIX}
+share/irc/help/ircii/programming${GZSUFFIX}
+share/irc/help/ircii/server_lists${GZSUFFIX}
 share/irc/help/ison${GZSUFFIX}
 share/irc/help/join${GZSUFFIX}
 share/irc/help/kick${GZSUFFIX}
@@ -290,11 +294,9 @@ share/irc/help/on/send_dcc_chat${GZSUFFIX}
 share/irc/help/on/send_msg${GZSUFFIX}
 share/irc/help/on/send_notice${GZSUFFIX}
 share/irc/help/on/send_public${GZSUFFIX}
-share/irc/help/on/send_talk${GZSUFFIX}
 share/irc/help/on/serial_numbers${GZSUFFIX}
 share/irc/help/on/server_notice${GZSUFFIX}
 share/irc/help/on/signoff${GZSUFFIX}
-share/irc/help/on/talk${GZSUFFIX}
 share/irc/help/on/timer${GZSUFFIX}
 share/irc/help/on/topic${GZSUFFIX}
 share/irc/help/on/wall${GZSUFFIX}

@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.74 2015/12/07 06:44:23 mrg Exp $
 
 DISTNAME=		ircii-current
-PKGNAME=		ircII-current
+PKGNAME=		ircII-${VERS}
 CATEGORIES=		chat
 MASTER_SITES=		http://ircii.warped.com/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,6 +13,7 @@ LICENSE=		modified-bsd
 
 CONFLICTS=		blackened-[0-9]*
 
+VERS=		20190115
 PLIST_SUBST+=	VERS=${VERS:Q}
 
 .include "../../mk/bsd.prefs.mk"
@@ -23,24 +24,17 @@ PLIST_SUBST+=	VERS=${VERS:Q}
 # this in pkgsrc, we have to set CONFIGURE_HAS_MANDIR=no so that
 # we don't pass --mandir=${PREFIX}/man as well, last.
 CONFIGURE_HAS_MANDIR=	no
-CONFIGURE_ARGS+=	--mandir=${DESTDIR}${PREFIX}/man
+CONFIGURE_ARGS+=	--mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 WRKSRC=			${WRKDIR}/ircii
 GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER:Q}
 .endif
-USE_TOOLS+=		chmod gawk	# see post-extract
+USE_TOOLS+=		chmod	# see post-extract
 
 # This pkg auto-detects IPv6.
 BUILD_DEFS+=		IPV6_READY
-
-# Change version to current
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	post-patch
-SUBST_FILES.version=	Makefile
-SUBST_SED.version=	-e 's/VERSION = .*/VERSION = current'
-
 
 .include "options.mk"
 
@@ -51,9 +45,7 @@ CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 LDFLAGS.SunOS+=	-lsocket -lnsl
 LDFLAGS+=	${BUILDLINK_LDADD.iconv}
 
-.if ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=	--with-non-blocking=none
-.endif
+CONFIGURE_ARGS.Interix+=	--with-non-blocking=none
 
 # Optionally install compressed help files if MANZ is defined.
 .if defined(MANZ)
