@@ -67,6 +67,13 @@ MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-system-ffi"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-chrome-format=flat"
 MOZ_CONFIGURE_ARGS+=	"ac_add_options --enable-gconf"
 
+# Fix binary path
+SUBST_CLASSES+=			prefix
+SUBST_STAGE.prefix=		pre-configure
+SUBST_MESSAGE.prefix=		Setting PREFIX
+SUBST_FILES.prefix+=		${WRKSRC}/mozilla-release/xpcom/build/BinaryPath.h
+SUBST_VARS.prefix+=		PREFIX
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=       libevent>=1.1
