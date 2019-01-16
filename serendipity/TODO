@@ -1,6 +1,3 @@
-http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8603 
-https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-9681
-https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10737
-https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-5475
-https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-5609
-https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-1000129
+This package has known vulnerabilities, please investigate and fix if possible:
+ CVE-2015-8603, CVE-2016-9681, CVE-2016-10737, CVE-2017-5475, CVE-2017-5609,
+ CVE-2017-1000129
