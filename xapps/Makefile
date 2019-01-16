@@ -20,7 +20,7 @@ SUBST_VARS.pypath=	PREFIX PYTHONBIN
 
 PY_PATCHPLIST=	yes
 
-#MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libxapp
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libxapp
 
 USE_TOOLS+=	gmake bash pkg-config intltool msgfmt
 

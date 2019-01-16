@@ -37,8 +37,8 @@ REPLACE_PYTHON=	data/merge_action_strings \
 
 # helps build but creates typelib with wrong path! (libcvc/libnemo-private.so instead of path/lib/lib.so)
 # check /usr/pkg/share/gir-1.0 for dubious lib paths
-#MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-private
-#MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-extension
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-private
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-extension
 
 .include "../../devel/py-meson/build.mk"
 .include "../../lang/python/application.mk"

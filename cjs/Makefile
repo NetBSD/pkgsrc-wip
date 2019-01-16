@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
+# $NetBSD$: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
 
 DISTNAME=	cjs-4.0.0
 CATEGORIES=	sysutils
