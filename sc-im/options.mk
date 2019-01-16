@@ -12,7 +12,6 @@ LDFLAGS+=	-lxlsreader
 .include "../../wip/libxls/buildlink3.mk"
 .endif
 
-# reader only, writer needs libxlsxwriter
 .if !empty(PKG_OPTIONS:Mxlsx)
 CFLAGS+=	-DXLSX -DXLSX_EXPORT
 LDFLAGS+=	-lxlsxwriter
