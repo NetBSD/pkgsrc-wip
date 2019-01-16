@@ -22,8 +22,8 @@ USE_CURSES=	wide
 # gnuplot is invoked through the shell, no need to check at compile time
 CFLAGS+=	-DGNUPLOT
 
-MAKE_ENV+=	CFLAGS_CURSES=
-MAKE_ENV+=	LDLIBS_CURSES=-lncursesw
+MAKE_ENV+=	CFLAGS_CURSES=${BUILDLINK_CFLAGS.ncursesw:Q}
+MAKE_ENV+=	LDLIBS_CURSES=${BUILDLINK_LDADD.ncursesw:Q}
 MAKE_ENV+=	CFLAGS_DL=${BUILDLINK_CFLAGS.dl:Q}
 MAKE_ENV+=	LDLIBS_DL=${BUILDLINK_LDADD.dl:Q}
 
