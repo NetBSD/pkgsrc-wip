@@ -17,5 +17,5 @@ ncursesw 6.1 on xterm-256color terminals:
 
   https://github.com/andmarti1424/sc-im/issues/304
 
-An xls option can be added once libxls hits 0.5 and is included in
-pkgsrc. Version 0.4 has many vulnerabilities.
+An xls option can be added once libxls hits 1.5 and is included in
+pkgsrc. Version 1.4 has many vulnerabilities.
