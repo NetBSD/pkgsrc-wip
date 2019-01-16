@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
 
-DISTNAME=	xapps-1.4.4
+DISTNAME=	xapps-1.4.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
 GITHUB_PROJECT=	xapps
