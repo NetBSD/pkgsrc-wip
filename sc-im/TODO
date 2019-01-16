@@ -19,3 +19,9 @@ ncursesw 6.1 on xterm-256color terminals:
 
 An xls option can be added once libxls hits 1.5 and is included in
 pkgsrc. Version 1.4 has many vulnerabilities.
+
+
+- Is mk/bsd.prefs.mk still needed? (probably was used/needed previously but no
+  longer needed)
+- Can CFLAGS_CURSES and LDLIBS_CURSES reuse BUILDLINK_CFLAGS.ncursesw and
+  BUILDLINK_LDADD.ncursesw?
