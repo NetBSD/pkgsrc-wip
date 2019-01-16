@@ -19,8 +19,6 @@ USE_TOOLS+=	gmake
 
 .include "../../lang/python/pyversion.mk"
 
-# more verbose output
-MAKE_ENV+=	V=1
 MAKE_ENV+=	PYTEST=py.test-${PYVERSSUFFIX}
 MAKE_ENV+=	INSTALL_DIR=${DESTDIR}${PREFIX}
 # minizip/ioapi.c has broken logic for checking for fopen64 etc
