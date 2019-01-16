@@ -11,3 +11,8 @@ buildlink, causes -lncursesw to resolve to -l__nonexistent__:
     -pthread -ldl -L/usr/pkg/lib -lncursesw  -Wl,-R/usr/pkg/lib
     -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -llua5.1 -lm  -Wl,--export-dynamic
   /usr/bin/ld: cannot find -l__nonexistent__
+
+There are some graphical glitches when built against pkgsrc's
+ncursesw 6.1 on xterm-256color terminals:
+
+  https://github.com/andmarti1424/sc-im/issues/304
