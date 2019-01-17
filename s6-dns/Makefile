@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	s6-dns-2.1.0.0
+DISTNAME=	s6-dns-2.3.0.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.skarnet.org/software/s6-dns/
 

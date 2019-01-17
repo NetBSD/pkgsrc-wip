@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (s6-dns-2.1.0.0.tar.gz) = f1771145ed02ec990707361ca73d3e63f221bd94
-RMD160 (s6-dns-2.1.0.0.tar.gz) = e67b470bf4d99a9e3da3ba4f04eca1777d54ef3c
-SHA512 (s6-dns-2.1.0.0.tar.gz) = c75722b3ddd9d1646116654983558efde22d0d5d3ff1c296a8d5e2ba44abe0d5a86fc86804cf90bea2ee8c3e82028e182d28cdbf5155d46c6b3d8f4d1c3387fc
-Size (s6-dns-2.1.0.0.tar.gz) = 77415 bytes
+SHA1 (s6-dns-2.3.0.1.tar.gz) = e25ed2406bdcbc349fca5a9be841e3af5acfc4c4
+RMD160 (s6-dns-2.3.0.1.tar.gz) = 9e940e1bbadf59bbfd30993c08c72fc7de1a69b4
+SHA512 (s6-dns-2.3.0.1.tar.gz) = 69ae32f9b4ff22a5d38e3a2c950357d8c8032a649c1d81e4a4e5f474ae5c1bb1072555baa1a34f955293aa0f66a93f51f2cc8efd8aa56704b906e0b0979f8157
+Size (s6-dns-2.3.0.1.tar.gz) = 77836 bytes
