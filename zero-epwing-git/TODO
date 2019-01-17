@@ -12,8 +12,5 @@
   code, since (at least at a cursory glance) it didn't look like too much would need to
   be changed.
 
-- A kind and wise man has suggested that perhaps it *is* a good idea to
-  make the fork of libeb included with the source code into its own pkg
-  here on pkgsrc-wip.
-
-  It'd certainly make things easier to work with if we did.
+- There seems to be a lot of new documentation files in doc/ that we might be
+  interested in installing.
