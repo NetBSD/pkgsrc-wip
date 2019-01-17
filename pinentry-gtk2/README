@@ -1,0 +1,30 @@
+If FLTK is installed (make configure):
+--------------------------------------------------------------------------------
+
+        Pinentry v1.1.0 has been configured as follows:
+
+        Revision:  02df3d2  (735)
+        Platform:  x86_64--netbsd
+
+        Curses Pinentry ..: no
+        TTY Pinentry .....: maybe
+        Emacs Pinentry ...: no
+        GTK+-2 Pinentry ..: yes
+        GNOME 3 Pinentry .: no
+        Qt Pinentry ......: no
+        TQt Pinentry .....: no
+        W32 Pinentry .....: no
+=>      FLTK Pinentry ....: yes
+
+        Fallback to Curses: yes
+        Emacs integration : yes
+
+        libsecret ........: no
+
+        Default Pinentry .: pinentry-gtk-2
+
+--------------------------------------------------------------------------------
+Should be disabled for GTK2 package.
+
+[X] Added configure option to disable FLTK
+[X] Bumped PKGREVISION
