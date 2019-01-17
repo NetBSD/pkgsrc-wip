@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cliqz
 
-PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
+PKG_SUPPORTED_OPTIONS=	alsa pulseaudio dbus
 
 PKG_SUGGESTED_OPTIONS+=	pulseaudio dbus
 

@@ -10,6 +10,22 @@ DISTFILES=	adult-domains.bin \
 		https-everywhere@cliqz.com.xpi \
 		gdprtool@cliqz.com.xpi \
 		${DISTNAME}${EXTRACT_SUFX}
+DIST_SUBDIR=	${PKGBASE}
+
+CLIQZ_CHANNEL=		release
+# If the PKGVERSION_NOREV is updated, make sure to update the last build id from
+# fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
+CLIQZ_LAST_BUILD_ID=	20181223141940
+CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
+
+SITES.adult-domains.bin= \
+	https://s3.amazonaws.com/cdn.cliqz.com/browser-f/APT/
+SITES.cliqz${CLIQZ_PLUGIN_SUFX}= \
+	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
+SITES.https-everywhere${CLIQZ_PLUGIN_SUFX}= \
+	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
+SITES.gdprtool${CLIQZ_PLUGIN_SUFX}= \
+	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
 
 EXTRACT_USING=	bsdtar
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -28,24 +44,10 @@ TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
-CLIQZ_CHANNEL=		release
-# If the PKGVERSION_NOREV is updated, make sure to update the last build id from
-# fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20181223141940
 CLIQZ_ICON=		cliqz.png
 CLIQZ_ICON_SRC=		${WRKSRC}/mozilla-release/browser/branding/cliqz/default48.png
 MOZ_DESKTOP=		${WRKSRC}/mozilla-release/toolkit/mozapps/installer/linux/rpm/mozilla.desktop
 CLIQZ_DESKTOP=		${WRKSRC}/mozilla-release/toolkit/mozapps/installer/linux/rpm/cliqz.desktop
-CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
-
-SITES.adult-domains.bin= \
-	https://s3.amazonaws.com/cdn.cliqz.com/browser-f/APT/
-SITES.cliqz${CLIQZ_PLUGIN_SUFX}= \
-	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
-SITES.https-everywhere${CLIQZ_PLUGIN_SUFX}= \
-	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
-SITES.gdprtool${CLIQZ_PLUGIN_SUFX}= \
-	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
 
 MAKE_ENV+=	CQZ_RELEASE_CHANNEL=${CLIQZ_CHANNEL}
 MAKE_ENV+=	CQZ_BUILD_ID=${CLIQZ_LAST_BUILD_ID}
@@ -61,9 +63,9 @@ REPLACE_BASH+=	magic_build_and_package.sh
 CFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/cliqz ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
-NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz
-NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz-bin
-NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/plugin-container
+#NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz
+#NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz-bin
+#NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/plugin-container
 
 post-extract:
 	${CP} ${DISTDIR}/adult-domains.bin ${WRKSRC}
@@ -93,17 +95,18 @@ do-install:
 	cd ${WRKSRC}/obj/dist && \
 		bsdtar -xjf ${DISTNAME}*${LOWER_OPSYS}-${MACHINE_ARCH}.tar.bz2 \
 		-C ${DESTDIR}${PREFIX}/lib
-	${FIND} . \(	-name \*.js  -or \
-			-name \*.html -or \
-			-name \*.xml -or \
-			-name \*.svg \
-		\) \
-	-type f \
-	-exec ${CHMOD} 0644 '{}' \;
+	cd ${DESTDIR}${PREFIX}/lib && \
+		${FIND} . \(	-name \*.js  -or \
+				-name \*.html -or \
+				-name \*.xml -or \
+				-name \*.svg \
+			\) \
+			-type f \
+			-exec ${CHMOD} 0644 '{}' \;
 
 post-install:
 	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/cliqz
-	${ECHO} '${PREFIX}/lib/cliqz/cliqz "$$@"' >> ${DESTDIR}${PREFIX}/bin/cliqz
+	${ECHO} 'exec ${PREFIX}/lib/cliqz/cliqz "$$@"' >> ${DESTDIR}${PREFIX}/bin/cliqz
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/cliqz
 	${INSTALL_DATA} ${CLIQZ_DESKTOP} ${DESTDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${CLIQZ_ICON_SRC} ${DESTDIR}${PREFIX}/share/pixmaps/${CLIQZ_ICON}
