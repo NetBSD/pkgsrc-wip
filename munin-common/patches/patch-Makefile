@@ -1,14 +1,14 @@
-$NetBSD: patch-Makefile,v 1.2 2015/01/14 15:22:23 fhajny Exp $
+$NetBSD$
 
 Installation fixed to use all essential files, populate
 PKG_SYSCONFDIR as expected by the Munin scripts.
 
---- Makefile.orig	2014-11-24 21:46:24.000000000 +0000
+--- Makefile.orig	2018-12-19 20:56:49.000000000 +0000
 +++ Makefile
-@@ -67,50 +67,37 @@ tags:
+@@ -95,50 +95,37 @@ tags:
  install: install-master-prime install-common-prime install-node-prime install-plugins-prime $(JAVA_INSTALL) install-man install-async-prime
  
- install-pre: Makefile Makefile.config
+ install-pre: $(MAKEFILES)
 -	@$(CHECKUSER)
 -	mkdir -p $(LOGDIR)
 -	mkdir -p $(STATEDIR)
@@ -66,10 +66,10 @@ PKG_SYSCONFDIR as expected by the Munin scripts.
  
  	$(INSTALL) -m 0755 build/master/_bin/munin-cron $(BINDIR)/
  	$(INSTALL) -m 0755 build/master/_bin/munin-check $(BINDIR)/
-@@ -137,16 +124,7 @@ HPUXONLY=true ||
- endif
+@@ -157,16 +144,7 @@ install-master-prime: $(INFILES_MASTER)
+ install-node-plugins: install-plugins-prime
  
- install-plugins-prime: install-plugins build $(PLUGINS) Makefile Makefile.config
+ install-plugins-prime: install-plugins build $(PLUGINS) $(MAKEFILES)
 -	@$(CHECKGROUP)
 -
 -	mkdir -p $(CONFDIR)/plugins
@@ -81,9 +81,9 @@ PKG_SYSCONFDIR as expected by the Munin scripts.
 -	$(CHMOD) 0755 $(PLUGSTATE)
 -	$(CHMOD) 0755 $(CONFDIR)/plugin-conf.d
  
- 	for p in build/plugins/node.d/* build/plugins/node.d.$(OSTYPE)/* ; do \
- 	    if test -f "$$p" ; then                            \
-@@ -183,7 +161,7 @@ install-async:
+	@# Process the OS specific plugins at the end. Otherwise they would be overridden by the
+	@# generic ones.
+@@ -206,7 +184,7 @@ install-async:
  install-node-prime: install-node-pre install-node
  
  install-node-pre: build/node/munin-node.conf install-pre
