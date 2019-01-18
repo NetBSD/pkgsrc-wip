@@ -1,0 +1,15 @@
+@comment $NetBSD$
+bin/trader
+man/man6/trader.6
+share/applications/trader.desktop
+share/icons/hicolor/128x128/apps/trader.png
+share/icons/hicolor/16x16/apps/trader.png
+share/icons/hicolor/22x22/apps/trader.png
+share/icons/hicolor/24x24/apps/trader.png
+share/icons/hicolor/256x256/apps/trader.png
+share/icons/hicolor/32x32/apps/trader.png
+share/icons/hicolor/48x48/apps/trader.png
+share/icons/hicolor/512x512/apps/trader.png
+share/icons/hicolor/64x64/apps/trader.png
+share/icons/hicolor/96x96/apps/trader.png
+share/icons/hicolor/scalable/apps/trader.svg
