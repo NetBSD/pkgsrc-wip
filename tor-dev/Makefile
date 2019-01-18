@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	tor-0.3.5.6-rc
-PKGNAME=	${DISTNAME:S/tor/tordev/:S/-rc//:S/-rc/rc0/}
+DISTNAME=	tor-0.4.0.1-alpha
+PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 CATEGORIES=	net security
 MASTER_SITES=	http://www.torproject.org/dist/
 
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ENV+=		CPP=${CPP:Q}
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
@@ -66,8 +68,6 @@ CFLAGS+=		-c99
 BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 ## We include this after other b3.mk files since we use PTHREAD_TYPE.

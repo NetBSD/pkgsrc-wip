@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/tor-dev
-bin/tor-gencert-dev
+${PLIST.openssl}bin/tor-gencert-dev
 bin/tor-print-ed-signing-cert-dev
 bin/tor-resolve-dev
 bin/torify-dev

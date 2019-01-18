@@ -1,12 +1,15 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.tordev
-PKG_SUPPORTED_OPTIONS=	doc
-PKG_SUGGESTED_OPTIONS+=	doc
+# XXX Add rust to supported options.
+PKG_OPTIONS_VAR=		PKG_OPTIONS.tordev
+PKG_SUPPORTED_OPTIONS=		doc
+PKG_OPTIONS_REQUIRED_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=		nss openssl
+PKG_SUGGESTED_OPTIONS+=		doc openssl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		doc
+PLIST_VARS+=		doc openssl
 
 ###
 ### This enables the build of manual pages. It requires asciidoc
@@ -20,3 +23,19 @@ PLIST.doc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-asciidoc
 .endif
+
+.if !empty(PKG_OPTIONS:Mopenssl)
+PLIST.openssl=		yes
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0
+.include "../../security/openssl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mnss)
+CONFIGURE_ARGS+=	--enable-nss
+.include "../../devel/nss/buildlink3.mk"
+.endif
+
+#.if !empty(PKG_OPTIONS:Mrust)
+#CONFIGURE_ARGS+=	--enable-rust
+#.include "../../lang/rust/buildlink3.mk"
+#.endif
