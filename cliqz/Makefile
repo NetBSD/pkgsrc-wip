@@ -10,7 +10,7 @@ DISTFILES=	adult-domains.bin \
 		https-everywhere@cliqz.com.xpi \
 		gdprtool@cliqz.com.xpi \
 		${DISTNAME}${EXTRACT_SUFX}
-DIST_SUBDIR=	${PKGBASE}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
@@ -56,7 +56,7 @@ MAKE_ENV+=	MOZBUILD_STATE_PATH=${WRKDIR}/.home/.mozbuild
 .include "mozilla-common.mk"
 .include "options.mk"
 
-CHECK_WRKREF_SKIP+=		lib/cliqz/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=	lib/cliqz/chrome/toolkit/content/global/buildconfig.html
 
 REPLACE_BASH+=	magic_build_and_package.sh
 
@@ -94,7 +94,8 @@ INSTALLATION_DIRS+=	share/applications share/pixmaps bin lib/cliqz
 do-install:
 	cd ${WRKSRC}/obj/dist && \
 		bsdtar -xjf ${DISTNAME}*${LOWER_OPSYS}-${MACHINE_ARCH}.tar.bz2 \
-		-C ${DESTDIR}${PREFIX}/lib
+		-C ${DESTDIR}${PREFIX}/lib && \
+		${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${PREFIX}/lib/*
 	cd ${DESTDIR}${PREFIX}/lib && \
 		${FIND} . \(	-name \*.js  -or \
 				-name \*.html -or \
