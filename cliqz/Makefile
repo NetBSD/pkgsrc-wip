@@ -63,9 +63,9 @@ REPLACE_BASH+=	magic_build_and_package.sh
 CFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/cliqz ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
-#NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz
-#NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz-bin
-#NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/plugin-container
+NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz
+NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/plugin-container
 
 post-extract:
 	${CP} ${DISTDIR}/adult-domains.bin ${WRKSRC}
