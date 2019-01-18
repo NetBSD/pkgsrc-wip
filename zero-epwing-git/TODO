@@ -12,5 +12,4 @@
   code, since (at least at a cursory glance) it didn't look like too much would need to
   be changed.
 
-- There seems to be a lot of new documentation files in doc/ that we might be
-  interested in installing.
+- The bundled libjansson shouldn't be built, since we use the pkgsrc-supplied one.
