@@ -4214,7 +4214,6 @@ SUBDIR+=	scimark
 SUBDIR+=	scintilla
 SUBDIR+=	scite
 SUBDIR+=	scm
-SUBDIR+=	scm-blackbox
 SUBDIR+=	scmail
 SUBDIR+=	scorched3d
 SUBDIR+=	scourge
