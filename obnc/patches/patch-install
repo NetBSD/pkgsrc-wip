@@ -2,10 +2,10 @@ $NetBSD$
 
 1) Install manpages into $PREFIX/man instead of $PREFIX/share/man
 
---- install.orig	2018-01-01 12:38:47.000000000 +0000
+--- install.orig	2019-01-19 05:55:40.000000000 +0000
 +++ install
-@@ -90,9 +90,9 @@ Install()
- 	cd - >/dev/null
+@@ -103,9 +103,9 @@ Install()
+ 	rm -r lib/obnc/obncdoc
  
  	#install man pages
 -	EchoAndRun mkdir -p "$destdir$prefix/share/man/man1"
@@ -14,14 +14,5 @@ $NetBSD$
 -		EchoAndRun cp "share/man/man1/$file" "$destdir$prefix/share/man/man1"
 +		EchoAndRun cp "share/man/man1/$file" "$destdir$prefix/man/man1"
  	done
- }
  
-@@ -131,7 +131,7 @@ Uninstall()
- 
- 	#delete man pages
- 	for file in $man1Files; do
--		EchoAndRun rm -f "$destdir$prefix/share/man/man1/$file"
-+		EchoAndRun rm -f "$destdir$prefix/man/man1/$file"
- 	done
- }
- 
+ 	#install obncdoc style file
