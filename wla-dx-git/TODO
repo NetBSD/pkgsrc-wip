@@ -1,1 +1,7 @@
-DESCR could be more helpful and explanatory.
+- DESCR could be more helpful and explanatory.
+
+- Documentation is now maintained as *.rst files in doc/, and are supposed to be
+  processed by sphinx-build to be turned into manpages or HTML docs.
+
+  Until we can get sphinx and documentation conversion working, we'll just install
+  the *.rst files straight-up as they're plaintext and perfectly human-readable.
