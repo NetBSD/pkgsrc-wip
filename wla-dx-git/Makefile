@@ -1,5 +1,6 @@
 # $NetBSD$
-PKGNAME=		wla-dx-9.6
+
+PKGNAME=		wla-dx-9.7
 CATEGORIES=		devel
 
 GIT_REPOSITORIES=		wla-dx
