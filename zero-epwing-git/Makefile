@@ -10,14 +10,12 @@ COMMENT=	Tool that converts EPWING files to JSON
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99 c++
 
 USE_TOOLS+=	gmake perl # required for the bundled libeb
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
-
-CFLAGS+=	-std=gnu99
 
 
 do-install:

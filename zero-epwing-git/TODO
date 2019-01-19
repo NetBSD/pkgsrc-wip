@@ -1,15 +1,4 @@
-- Haven't tested how Linux/FreeBSD/OpenBSD will react to the
-  exclusion of linking libintl via |UNIX AND NOT APPLE| in CMakeLists.txt.
-  But for now, it works on both NetBSD and macOS.
-
 - Internal (lib)eb doesn't seem to honor CFLAGS.
 
-- On NetBSD, `-std={c99,gnu99}' is required in CFLAGS for the build to succeed.
-  However, it's not required for macOS/clang, and it in fact causes the build to fail
-  on that platform.
-
-  We could either set CFLAGS depending on the platform/compiler, or patch the zero-epwing
-  code, since (at least at a cursory glance) it didn't look like too much would need to
-  be changed.
-
-- The bundled libjansson shouldn't be built, since we use the pkgsrc-supplied one.
+- Currently the bundled libjansson is built and statically linked. We should avoid
+  building it and dynamically link the pkgsrc-supplied libjansson instead.
