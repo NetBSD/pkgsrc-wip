@@ -24,21 +24,8 @@ USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
-DISTINFO_FILE=		${.CURDIR}/../../devel/glib2/distinfo
-PATCHDIR=		${.CURDIR}/../../devel/glib2/patches
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
-CONFIGURE_ARGS+=	--disable-fam	# See sysutils/gio-fam.
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
-CONFIGURE_ARGS+=	--with-pcre=system
-CONFIGURE_ARGS+=	--disable-dtrace
-CONFIGURE_ARGS+=	--disable-man  # Requires xsltproc and Docbook.
-# Avoid unnecessary autotools invocation.
-CONFIGURE_ARGS+=	--disable-maintainer-mode
-# Avoid linux dependency on libmount-dev
-CONFIGURE_ARGS.Linux+=	--disable-libmount
+#DISTINFO_FILE=		${.CURDIR}/../../devel/glib2/distinfo
+#PATCHDIR=		${.CURDIR}/../../devel/glib2/patches
 
 # When ICONV_TYPE=gnu ensure we explicitly use the GNU version, to avoid
 # conflicts between iconv.h from converters/libiconv and builtin libiconv
