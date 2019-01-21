@@ -2857,6 +2857,7 @@ SUBDIR+=	pike8.0-Odbc
 SUBDIR+=	pilemc-svn
 SUBDIR+=	pimcommon
 SUBDIR+=	pinball
+SUBDIR+=	pinentry-fltk
 SUBDIR+=	pinkpony
 SUBDIR+=	pioneer
 SUBDIR+=	pipes-c
