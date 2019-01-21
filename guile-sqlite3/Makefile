@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	v0.1.0
-PKGNAME=        guile-sqlite3
+PKGNAME=        guile-sqlite3-${DISTNAME:S/v//}
 CATEGORIES=	databases
 MASTER_SITES=	https://notabug.org/guile-sqlite3/guile-sqlite3/archive/
 
@@ -11,22 +11,16 @@ COMMENT=	Guile bindings for the SQLite3 database engine
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/guile-sqlite3
-USE_LANGUAGES=	guile c
-# USE_LIBTOOL=    YES
-
-CONFIGURE_ARGS+= --prefix=${PREFIX}
-GNU_CONFIGURE=  YES
+USE_LANGUAGES=	c
 USE_TOOLS+=     automake autoconf autoreconf pkg-config
+GNU_CONFIGURE=  YES
 
-# CONFIGURE_ENV+= SQLITE_LIBS="${PREFIX}/lib"
-# CONFIGURE_ENV+= SQLITE_LIBS=${BUILDLINK_PREFIX.sqlite3}
-#CONFIGURE_ARGS+=   --with-sqlite-incdir=${BUILDLINK_PREFIX.sqlite}/include
-#CONFIGURE_ARGS+=   --with-sqlite-libdir=${BUILDLINK_PREFIX.sqlite}/lib
+# not all sqlite3.pc files provide the pkg-config variable, set path manually
+# see also patch-configure.ac
+CONFIGURE_ARGS+=	SQLITE_LIBDIR=${BUILDLINK_PREFIX.sqlite3}/lib
+
 pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -I${LOCALBASE}/guile/2.2/share/aclocal -vif
-
-DEPENDS+= guile>=2.2:../../lang/guile22
-DEPENDS+= sqlite3:../../databases/sqlite3
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -I${PREFIX}/guile/2.2/share/aclocal -vif
 
 .include "../../lang/guile22/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
