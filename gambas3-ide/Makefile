@@ -17,6 +17,11 @@ DEPENDS+=	gtar-base-1.*:../../archivers/gtar-base
 
 CHECK_FILES_SKIP+=	${PREFIX}/bin/gb.*
 
+post-install:
+	cd ${WRKSRC}/app; \
+	xdg-icon-resource install --novendor --size 48 desktop/gambas3.png; \
+	xdg-desktop-menu  install --novendor desktop/gambas3.desktop
+
 .include "options.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
