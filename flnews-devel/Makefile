@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	0.16rc2
+FLNEWS_VERSION=	0.17pre1
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -8,7 +8,7 @@ MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
 MASTER_SITES+=	http://www.southcity.de/flnews/src/
 EXTRACT_SUFX=	.tar.bz2
-EXTRACT_USING=	bsdtar
+#EXTRACT_USING=	bsdtar
 
 MAINTAINER=	michael.baeuerle@gmx.net
 HOMEPAGE=	http://micha.freeshell.org/flnews/
@@ -24,7 +24,7 @@ FLNEWS_MAINTAINER=	${MAINTAINER}
 
 .include "options.mk"
 
-post-patch:
+post-extract:
 	${CP} ${FILESDIR}/CONFIG ${WRKSRC}
 
 # Prepare CONFIG file
@@ -69,7 +69,7 @@ do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} config
 
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER:Msunpro}
-BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
+BUILD_DEPENDS+=			makedepend-[0-9]*:../../devel/makedepend
 .endif
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3

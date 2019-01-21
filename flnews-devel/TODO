@@ -1,12 +1,4 @@
-[X] Create reproducible build
-[X] Include mk/pthread.buildlink3.mk (similar to FLTK)
-[X] Force POSIX.1 IP6 on NetBSD (if inet6 option is selected)
-    Reason: Autodetect via POSIX sysconf(_SC_IPV6) doesn't work on NetBSD
-[X] Suggest option inet6
-[X] Add help message for NLS (supported locale codesets)
-[X] Suggest option nls?
-    Yes => Even without NLS the FILTER module limits supported locale codesets
-[X] Execute "make config" part of build in the pkgsrc configure phase
-[ ] Check handling of CPPFLAGS
-[ ] Import final flnews 0.16 release
+[X] Track 0.17 development branch
+[X] Make doxygen LaTeX/PDF documentation build again
+[ ] Import final flnews 0.17 release
 [ ] Switch back to FLTK version from pkgsrc current
