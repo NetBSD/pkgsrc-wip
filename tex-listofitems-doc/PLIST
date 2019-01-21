@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/listofitems/listofitems-en.pdf
+share/texmf-dist/doc/latex/listofitems/listofitems-en.tex
+share/texmf-dist/doc/latex/listofitems/listofitems-fr.pdf
+share/texmf-dist/doc/latex/listofitems/listofitems-fr.tex
