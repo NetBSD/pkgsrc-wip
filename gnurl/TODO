@@ -1,0 +1,4 @@
+- Is "../../security/gnutls/libgnutls-config.mk" really needed? (according a
+  code inspection of configure.log, the configure script and .work.log it
+  seems that gnutls is picked up via pkg-config and libgnutls-config is not
+  needed)
