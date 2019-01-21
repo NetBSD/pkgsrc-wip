@@ -24,7 +24,7 @@ do-install:
 		listofitems-fr.pdf listofitems-fr.tex; \
 	do \
 		${INSTALL_DATA} $$f \
-		${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/listofitems/$$f; \
+		${DESTDIR}${PREFIX}/share/texmf-dist/doc/latex/listofitems/$$f; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
