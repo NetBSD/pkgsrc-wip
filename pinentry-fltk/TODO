@@ -1,1 +1,2 @@
-[ ] Keyboard shortcut handling (via '_') doesn't work yet
+[X] Keyboard shortcut handling (via '_') doesn't work yet
+    => Patch added
