@@ -36,8 +36,7 @@ SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
 SUBST_CLASSES+=		epstopdf
 SUBST_STAGE.epstopdf=	pre-configure
 SUBST_MESSAGE.epstopdf=	Fixing path to epstopdf
-SUBST_FILES.epstopdf=	src/diagram.cpp src/docparser.cpp src/dot.cpp \
-			src/msc.cpp
+SUBST_FILES.epstopdf=	src/diagram.cpp src/docparser.cpp src/msc.cpp
 SUBST_SED.epstopdf=	-e 's,"epstopdf","${PREFIX}/bin/epstopdf",g'
 
 .include "../../mk/bsd.prefs.mk"
