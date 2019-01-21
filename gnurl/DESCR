@@ -1,6 +1,25 @@
-gnurl is a command line tool for transferring files with URL syntax, supporting
-FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. gnurl supports
-HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload,
-proxies, cookies, user+password authentication (Basic, Digest, NTLM, Negotiate,
-kerberos...), file transfer resume, proxy tunneling and a busload of other
-useful tricks.
+libgnurl is a fork of libcurl with the following major changes:
+
+Compilation requirements:
+* libgnurl must be compiled so that it supports only HTTP and HTTPS
+  (remove Gopher, SSH, IMAP, etc.)
+* libgnurl must be compiled so that it supports only GnuTLS
+  (remove CaySSL, QsoSSL, GSKit, etc.)
+* removed support for NTLM, GSSAPI, SPNEGO, LDAP, metalink, HTTP2
+* We recommend to build GnuTLS with DANE support, provided by 'unbound'.
+  This is optional.
+
+Changes to the code:
+* renamed the library binary from 'libcurl' to 'lignurl'
+* renamed files to ensure a system-wide installation of
+  libgnurl does not result in namespace collisions with libcurl
+* adjustments to the testsuite to address the gnurl specific build
+
+The reasons for gnurl can be read at https://gnunet.org/gnurl. The
+main motivations are technical ones:
+The goal of the cURL project is clearly to support many crypto
+backends and many protocols..
+The goal for libgnurl is to support only HTTP and HTTPS
+(and only HTTP 1.x) with a single crypto backend (GnuTLS) to ensure a
+small footprint and uniform experience for developers regardless of
+how libcurl was compiled.
