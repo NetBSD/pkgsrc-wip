@@ -31,7 +31,10 @@
     => Removed alternative *.dot files for option "nopangocairo"
     => Removed man pages for uninstalled programs
 [X] Test on GNU/Linux
-[ ] Test on NetBSD
+[X] Test on NetBSD
     HTML documentation contains references to working directory
+    => Removed dollar signs to prevent variable expansion
+[X] pklint complains about man vs. ${PKGMANDIR}
+    => Fixed
 [ ] Export of PKG_OPTIONS.graphviz in graphics/graphviz bl3 can be removed
     (if no other package need it)

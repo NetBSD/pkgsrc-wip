@@ -63,7 +63,7 @@ CONFIGURE_ARGS.DragonFly+=	-platform freebsd-g++
 LDFLAGS+=		${BUILDLINK_LDADD.iconv}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/man/man1; \
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
 		${RM} doxyindexer.1; \
 		${RM} doxysearch.1; \
 		${RM} doxywizard.1
