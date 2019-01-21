@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ng0@n0.is
 HOMEPAGE=	https://gnunet.org/gnurl
-COMMENT=	Client that groks URLs
+COMMENT=	Client that groks URLs (curl fork)
 # not completely, but near enough
 LICENSE=	mit
 
