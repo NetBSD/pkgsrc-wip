@@ -39,6 +39,17 @@ SUBST_MESSAGE.epstopdf=	Fixing path to epstopdf
 SUBST_FILES.epstopdf=	src/diagram.cpp src/docparser.cpp src/msc.cpp
 SUBST_SED.epstopdf=	-e 's,"epstopdf","${PREFIX}/bin/epstopdf",g'
 
+# Fixing $PWD / $(PWD) / $(HOME) for documentation
+# The dollar sign should be inserted literally in the documentation
+# doxygen always inserted the path => Completely remove dollar sign
+SUBST_CLASSES+=		changelog
+SUBST_STAGE.changelog=	pre-configure
+SUBST_MESSAGE.changelog=Fixing dollar sign for documentation
+SUBST_FILES.changelog=	doc/changelog.doc
+SUBST_SED.changelog=	-e 's,$$PWD,PWD,g'
+SUBST_SED.changelog+=	-e 's,$$(PWD,(PWD,g'
+SUBST_SED.changelog+=	-e 's,$$(HOME,(HOME,g'
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
