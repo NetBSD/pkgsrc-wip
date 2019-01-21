@@ -1,0 +1,426 @@
+doxygen: Updated to 1.8.15
+
+- Master site updated
+- Patch "patch-src_xmlgen.cpp" removed (merged upstream)
+- Option "latex" reenabled
+  Dependencies updated/added
+- Dependency graphviz no longer has option "pangocairo"
+  Handling of that build option removed from Makefile
+- Set c++11 in USE_LANGUAGES
+  C++11 is now used by doxygen (see changelog below)
+
+HTML-Menus are now working without JavaScript again (HTML_DYNAMIC_MENUS = NO).
+
+Changelog for Release 1.8.15 (release date 2017-12-27):
+--------------------------------------------------------------------------------
+Bug 851 - A function cannot be documented as related to two classes.
+Bug 1041 - <a href> doesn't allow <img> as visible part?
+Bug 1601 - Missing warning of undocumented member in member group
+Bug 2274 - Tooltips are not shown in dot-generated graphsand,
+Bug 2354 - caller graph can be improved by having caller on left & callee on
+           right
+Bug 2478 - Handling of unnamed parameters (C/C++) unclear
+Bug 2655 - cond/endcond cannot be used in aliases
+Bug 2859 - Unnamed parameters parsed incorrectly
+Bug 3206 - Fortran: Does not recognize backslash at end of documentation line
+Bug 3361 - Merging of consecutive repeated commands creates poorly-structured
+           HTML
+Bug 3677 - <![CDATA[ is not handled inside C# comments
+Bug 3691 - C# keywords 'get' and 'set' are highlighted as reserved words in C++
+           documentation source browser.
+Bug 3892 - @var in php is not documented
+Bug 3958 - \cond after @string literal containing backslash fails in C#
+Bug 4013 - Automatic links don't work correctly with operator< and operator<=
+Bug 4064 - Support for C# nullable type
+Bug 4244 - Fortran: tagfile.tag:789: warning: Unknown compound attribute `type'
+           found!
+Bug 4316 - Can't use pound sign in alias command, escaped or unescaped
+Bug 4458 - @todo in @param leads to strange confusing message
+Bug 4529 - HTML tags <u> and </u> not supported,
+Bug 4725 - single quote in HTML section of PHP breaks doxygen
+Bug 4771 - Not warning of undocumented function parameters
+Bug 4878 - Value from enumeration followed with semicolon is not present in java
+           docs
+Bug 4954 - JavaDoc @linkplain is not recognized
+Bug 5032 - Line numbers for examples
+Bug 5068 - The 'Examples:' section; bad/missing style and incorrect spelling
+Bug 5213 - Generated Doxyfile differs from result of doxygen -u,
+Bug 5327 - <img> on a \page does not copy the image to the html output folder
+Bug 5366 - Error with inserting images to PDF with Markdown
+Bug 5442 - Misparsed comments leading to missing call graph
+Bug 5539 - Error message when using memberof in a C macro
+Bug 5547 - "remove" is treated as a keyword (green) in the source browser for
+           C++
+Bug 5677 - Negative sign in -Foo::Bar ruins hyperlink in generated output
+Bug 5725 - Field with name "internal" confuses documentation builder.
+Bug 5765 - \todo at end of C# XML comment breaks following todo's
+Bug 5783 - Navigation incorrect with escaped symbols
+Bug 5784 - Doxygen not creating call graphs for C# methods if namespace contains
+           the classname
+Bug 5818 - Main page absent in TOC of CHM, if PROJECT_NAME is empty
+Bug 5853 - Can't suppress @author, @date and @copyright information in the
+           detailed file description
+Bug 5901 - Macros (@test, @todo, etc) used with PHP namespaces causes illegal
+           command warning
+Bug 5929 - \internal stops all parsing if used inside a section
+Bug 6025 - Make maxLineLen of latex output configurable
+Bug 6041 - PHP: New array syntax not supported when parsing initial value
+Bug 6104 - EXTERNAL_GROUPS lose hierarchy
+Bug 6118 - Title in rtf file is incorrect when overridden by user in extension
+           file
+Bug 6153 - Build of PDF with LaTEX breaks
+Bug 6160 - Python List as Default Parameter not parsed correctly
+Bug 6172 - CREATE_SUBDIRS breaks SERVER_BASED_SEARCH
+Bug 6175 - plantuml:an unwanted newline is generated after @startuml
+Bug 6197 - Czech/Slovak language documentation with tables from LaTeX to PDF is
+           not possible
+Bug 6208 - Annotated function parameter generates <dt> warning in todo list
+Bug 6213 - rtf generation
+Bug 6214 - LaTeX output for \tparam block fails to compile when it contains a
+           \code block,
+Bug 6224 - .tex file is wrong when generating a function whose name includes an
+           underline
+Bug 6269 - Disabled controls when `HAVE_DOT` is already set to `YES`
+Bug 6270 - Bad handling of Python class members when a class declaration line
+           contains a comment
+Bug 6295 - doxygen has problem with operator&=()
+Bug 6305 - XHTML pages are broken several waysand
+Bug 6308 - When generating xhtml, async attribute on script tags need a value
+Bug 6310 - Table markdown produces invalid xhtml code
+Bug 6311 - Blank rows on class page when using external tag file
+Bug 6312 - markdown plantuml use of graphviz fail if plantuml work i code file
+Bug 6316 - unescaped double quote in searchdata.js breaks search box
+           functionality
+Bug 6322 - incorrect parsing of markdown table
+Bug 6323 - error: Could not open file .../doc/html/functions_ .html for writing
+Bug 6324 - C#: Incorrect parsing of property definitions containing "//" symbols
+           in one line with "}
+Bug 6325 - Segmentation fault when generating graphical class hierarchy
+Bug 6339 - Examples of TCL files fail to display
+Bug 6340 - Missed warning opportunity: duplicated arguments
+Bug 6345 - c# see langword broken
+Bug 6346 - Doxygen crash when using \code{.markdown}...\endcode in VHDL source
+Bug 6350 - Broken extension test in FileDef::generateSourceFile()
+Bug 6352 - "unexpected token TK_EOF as the argument of ref" when target starts
+           with a digit
+Bug 6362 - Adjacent xrefitems always added to first list present on page
+Bug 6363 - Backslashes in default values confuse the parser (and cause params
+           to be ignored)
+Bug 6368 - LaTeX: Class scrbook Error: undefined old font command `\tt'
+Bug 6370 - Invalid 3-byte UTF8 found in input of graph
+Bug 6373 - Collapsed treeview arrow displays as emoji in Microsoft Edge
+Bug 6378 - @cond does not stop at @endcond Fortran
+Bug 6517 - Emoji support,
+Bug 6524 - Markdown formats missing in doxygen outputs.
+Bug 6533 - PHP: Namespaced typehints in deprecated methods not handled correctly
+Bug 6547 - Call graph missing due to ALIASES,
+Bug 6566 - INHERIT_DOCS not working for python
+Bug 6580 - xrefitems not listed if the page is referenced multiple times
+Bug 6589 - anchor after test command in a namespace produces duplicate tests
+Bug 6594 - using ingroup and anchor causes tests to disappear
+Bug 6597 - SIGSEGV presumably caused by C++ "using" declaration
+Bug 6601 - tparam HTML gobbles up lines after the tparam comment
+Bug 6612 - Issue with handling of emoji
+Bug 6632 - References to Objective C protocols by name broken in 1.8.12
+Bug 6657 - "QGDict::hashAsciiKey: Invalid null key" when using anonymous
+           union/struct
+Bug 6690 - Regression in handling of shorthand signed/unsigned types in function
+           parameters (with bisect and test case)
+Bug 6691 - Multiple issues with emoji matching
+Bug 6692 - XML TOC generation is not backwards-compatible with 1.8.14
+'self' keyword in PHP documentation
+Added: support RTL for DocXRefItem in html - Removed: support RTL form Return
+   section in html, for consistency with parameter sections
+Fixed: list item bullets overlap floating elements in html - Fixed: fragment
+   lines overlap floating elements in html
+Fixed: text-align of rtl toc
+Fixed: last line underline overlap border in html fragment
+A few more language updates
+Add VHDL strings to Translator class and add german translations.
+Add commands to handle referenced by relation and references relation,
+Add formula (images) to RTF output
+Add function annotations support
+Add possibility for adding doxygen configuration items to, all, tests during
+   runtime.
+Add support for std::shared_ptr
+Add support of dict/set in annotations and default values
+Add variadic arguments support to @link and @ref, aka '...' arguments, fixes
+Add variadic function arguments '...' regression tests
+Add variadic template function regression tests
+Added *.ice files as a recognized file type. Added a Slice-optimized output
+   mode.
+Added French translation
+Added missing #include for util.h to portable.cpp
+Added not for usage of [TOC] together with Markdown headers
+Added some VHDL code coloring
+Added some missing default types for argument matching
+Added substitution variant for character substitution
+Added support for RTL(right to left) languages like Arabic and Persian in HTML
+   output
+Added test case for \ref, and fixed representation of operator->*()
+Adding debug options to vhdl parser generator
+Adjustment of xhtml1-transitional.dtd
+Automatic detection of UCS-2 based on BOM corrected
+Better HTML output for VHDL Ports
+Bold text terminated by plus sign
+Bug fix for plantuml
+Bump minimal deployment target for OSX to 10.9 to avoid deprecation warning
+   while linking
+C++11 features used in Doxygen
+Cannot Generate Layout File using -l
+Cannot properly jump from brief to detailed function description
+Change german translation of trClassDocumentation() for VHDL output.
+Changed implementation, added test case
+Changed mail address and removed obsolete files
+Changed refiltering to forced use of insideTabbing
+Changed state guard instead of adding pattern check+reject
+Close last code line properly.
+Combined lrRank and rank parameters for computeMd5Signature
+Consistency between 'generate' and 'update' startup option
+Consistency between preprocessor and handling of \cond and \if
+Consistency for "group" commands
+Consistency in headings and layout for template parameters (tparam)
+Consistency of Index name in LaTeX output
+Consistency of environment variables between config and code,
+Consistent warning messages
+Correct list of not used translator functions
+Correct typing error in test 5
+Correct typing error in test 51
+Correct typing error in warning message.
+Corrected description of XML output for emoji characters
+Corrected warning in case of a not supported output format with \image command.
+Correcting "Definition at line @0 of file @1."
+Correcting labels for citations,
+Correcting tag example and uniform calling all examples
+Correcting tag in printdocvisitor
+Correcting warning messages and echoing unknown command
+Correction for `doxygen -g`
+Correction in example of FILE_VERSION_FILTER
+Correction in title of FAQ
+Correction internal documentation
+Correction of some coloring of code comments in VHDL, adding data type
+   'positive'
+Create command for escaped equal sign
+Create test possibilities for xhtml and pdf output,
+Debug output commentcnv independent of QUIET setting
+Difference between standard and used Doxyfile
+Difference between standard and used Doxyfile (list)
+Disabled Appveyor documentation build due to unreliability of MikTeX download
+Disabled debug print
+Documentation EXTENSION_MAPPING
+Documentation correction
+Documentation correction CLANG option usage
+Documentation correction include command with options
+Documentation corrections
+Documentation internet addresses
+Documentation update regarding right font usage in architecture chapter
+Does not generate TOC for markdown
+Don't link to non existing / not accessible namespaces , in CSharp, in the
+   source code
+Doxygen creates empty image titles for Docbook output
+Doxygen manual doesn't have lines around markdown tables / cells.
+Doxygen manual is not XHTML compliant
+Drop down lists in menu bar missing
+Enable comma as separator in configuration lists
+Enable in page table of contents for LaTeX
+Enable in page table of contents for XML and add maximum level to in page table
+   of contents,
+Enable possibility of CLANG for Cygwin,
+Enable possibility to run single tests
+Ensure all language files are reset
+Expand sqlite3gen's breadth, depth, and quality
+Extending \cite command with '-' and '?' characters.
+Extending tests with extra possibilities
+Fix French lang build
+Fix HTTPS links
+Fix VHDL Latex documentation having two chapters with the same name.
+Fix Windows build failure
+Fix annotation with default value parsing
+Fix building with Visual Studio 2013
+Fix for 'Definition at line' points to end of multiple-lined definition for
+   Python #6706
+Fix for module quicklinks
+Fix for unbounded memory usage due to a bug in \ref const matching #6689
+Fix potential hangup when merging scopes
+Fix regression due to move of markdown processing
+Fix scanner.l for Slice,,
+Fix/New: add variadic function args '...' support to @link
+Fix/New: add variadic function args '...' support to @ref
+Fixed bug in URL
+Fixed compile errors in clang and gcc
+Fixed compiler warning for nested /* in scanner.l
+Fixed differently by changing root cause for introducing the space
+Fixed documentation to point to GitHub issue tracker
+Fixed incorrect XHTML output for test 021
+Fixed logic error
+Fixed merge problem
+Fixed one remained compile error in clang
+Fixed problems with emoji handling and added a test case for it
+Fixed some more small memory leaks
+Fixed two small memory leaks
+Fixing coverity messages
+Fixing coverity messages (Namespace tag)
+Fixing problem with possible not initialized variable (endless loop in VS 2017
+   debug)
+Fortran code coloring improvements (REAL and comment lines)
+Fortran improvements
+Fortran improvements (2)
+Fortran scanner abort message
+French translation for VHDL additions
+Further simplified the fix
+Generating doxygen documentation on Windows (with MikTex)
+Handling Fortran functions in call graphs
+Heading in rtf. #6522 https://github.com/doxygen/doxygen/issues/6522
+Ignore build* directories and not just build
+Implementation Fortran ENUM / ENUMERATION
+Implementation of standard generator for docbook output,
+Improved robustness of the emoji feature
+Improvement LaTeX outputandand
+Improvement regarding width and title for docbook
+Improvements in handling special characters in Latex
+Include "empty" directories in the documentation if they contain a `.dox` file
+   (or similar) documenting the directory itself.
+Include header for CompilationDatabase
+Include height item in XML output
+Inconsistency in respect to tgroup in docbook
+Incorrect tag sequence for xhtml with class diagram possible
+Incorrect closing tags for in page table of contents (XHTML)
+Incorrect closing tags for in page table of contents (docbook)
+Incorrect number of start / end paragraph tags for xhtml with htmlonly
+Incorrect number of start / end paragraph tags for xhtml with image command
+Incorrect number tag sequence for xhtml with htmlinclude command possible
+Incorrect tag sequence for xhtml with latexinclude command possible
+Incorrect tag sequence possible for images possible in case of xhtml
+Index bugfix
+Index list cannot contain special characters in ids for XHTML
+Inline images
+Invalid warnings regarding todos when source file name contains a '-'
+Issue #6631 Code blocks incorrectly formatted in Latex
+Issue 6411: CSS for Markdown tables do not use HTML_COLORSTYLE_HUE,
+   HTML_COLORSTYLE_SAT config variables
+Issue 6469: Java method calls are ignored in generating call/caller graph with
+   Graphviz
+Issue 6494: asterisks before args and kwargs are ignored in python
+Issue_6456 Using # in links causes errors in PDF generation
+Issue_6585: Unexpected anchor tags in tag-files
+Keyword register (in code) is deprecated since C++11,
+LaTeX with verbatim part inside a table
+Large CALL / CALLER graphs cannot be processed in LaTeX
+Make conanfile creation more readable
+Make it possible to list namespace members in file scope for XML output.
+Making VHDL error messages more doxygen like
+Making the 'tex' part of \makeindex available to the user
+Markdown list wrong displayed
+Minor documentation fix
+Minor fixes to local toc logic after feedback
+Minor restructuring
+Misc. typos,
+Missing opening round bracket in case of an exception
+More typos
+Moved #include "config.h" back to the original place
+Moved duplicated code into dedicated function skipLanguageSpecificKeyword
+Moved local toc data into a separate type for better encapsulation
+Multiple `\xreflist` in one page with same key,
+Multiple addindex commands in HTML with same name
+Namespace with name docstrings_linebreak
+Not showing external project in HTML hierarchy class pages
+Numbers in comment disappear
+Numbers overlap the titles in TOC of PDF
+Order resources not only on filename but also dirname
+PATCH -- updates reference link with no closing
+Path for external commands on windows
+Possibility to have a \image command inside a <A> tag
+Possible fix for the build
+Prevent <center> and <div> inside brief descriptions to avoid broken XHTML
+   output
+Prevent empty list
+Prevent empty member list table (XHTML)
+Prevent empty page list table (XHTML)
+Prevent possible 'QGDict::hashAsciiKey: Invalid null key' warning
+Prevent potential race condition
+Print emoji text in case of unknown emoji
+Problem with TEST_FLAGS when using CMake for Visual Studio
+Problem with \cond in normal comment of test 015
+Problem with code inside a Doxy table in LaTeX
+Problems and some enhancements for LaTeX tables
+RTF layout regarding References and Referenced by
+RTF lists more levels and removing extra paragraphs
+Readded missing "Span" case to DocStyleChange::styleString
+Redundant whitespace removal breaks some C++ links [with test case and Git
+   bisect] (Origin: bugzilla #791942)
+Refactored code a bit
+Refactored code a bit (use const references and made global functions members)
+Reference text in reference list seen as emoji
+Remove debug statement
+Remove debug statements
+Remove default assignment from Translator::trVhdlType() declaration
+Remove double line with documented argument from addContentsItem in ftvhelp.cpp
+Remove non-english translations
+Remove obsolete definitions from scanner
+Remove obsolete line from README.md
+Remove old obsolete docbook generator
+Remove some dead code
+Renamed (start/end)SimpleSect to (start/end)Examples.
+Renamed command and moved duplicated code into a macro
+Renamed option and test case numbers
+Replace ''printf' with appropriate warn 'message'
+Replace calls to trTypeString with trVhdlType in single mode, which is the
+   default.
+Replaced replace(QRegExp(..)) by substitute
+Replaced replace(QRegExp..) by substitute
+Resolve inconsistency in formula repositories.
+Restructured code to avoid the need for global state
+Return VHDL specific text in trClassHierarchyDescription()
+Section label with minus sign not recognized properly.
+Small clarification for REFERENCED_BY_RELATION
+Small correction installation / build procedure
+Small corrections in distributed man pages
+Small documentation corrections
+Small problems when displaying python code
+Small problems when having code in LaTeX output,
+Sorting of index in case of LaTex
+Spanish translation for VHDL additions
+Spelling of the word Javadoc
+Synchronize chapter names of doxygen's own documentation.
+Syntax highlighting / code coloring in RTF
+Tag sequence incorrect for svg image (XHTML)
+Test renumbering,
+Tooltip was twice 'HTML escaped',
+Translators updated to version 1.8.15.
+Truncated split bar in HTML output between treeview and normal text area
+Typos [view],,
+Unbalanced start of lists resulting in not creatable pdf of rtf document
+Update Dutch translation for new Slice implementation
+Update Dutch translation in respect to new VHDL entries.
+Updated Hungarian translation
+Upgrade to jQuery 1.7.2 to get rid of security scan violations.
+Usage of '{', '}' and ',' in ALIAS
+Use QCStringList::split i.s.o. QStringList::split
+Version bump for next release
+Warning running xmllint for xhtml
+Wrong counting of lines during VHDL code output
+Wrong determination of begin / end tag of formula in markdown.
+Wrong link generated for inherited members when tag files are used.
+Wrong separator in index for a.o. Python, C#
+Wrong spelling of word doxygen
+XHTML image tag mandatory alt attribute
+XHTML incorrect attribute values for align and valign
+XHTML problem with class index table
+XHTML problem with multiple use of node numbers in id attribute
+XHTML problem with name attribute with VHDL name attribute
+XML output: avoid warnings with scoped enum values in anonymous namespaces.
+[ImgBot] Optimize images
+added PHP7 support for the search engine on HTML output.
+   See: http://php.net/manual/en/language.basic-syntax.phptags.php
+addindex supports also DocBook and RTF
+correct typo in comment
+declares XMLCodeGenerator in xmlgen.h
+doxyparse bugfixes and minor improvements
+fix build with qt 5.11, deprecated qt5_use_modules macro was removed, patch
+   by Christophe Giboudeaux
+perlmod syntax correction
+redundant input_filter runs significantly reduce performance when
+   FILTER_SOURCE_FILES and INLINE_SOURCES are both enabled #6395
+sqlite3: fix missing external_file view schema col
+sqlite3: require sqlite >= 3.9.0
+--------------------------------------------------------------------------------

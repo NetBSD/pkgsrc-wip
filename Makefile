@@ -617,6 +617,7 @@ SUBDIR+=	dotproject
 SUBDIR+=	double-conversion
 SUBDIR+=	dovecot-antispam
 SUBDIR+=	downtimed
+SUBDIR+=	doxygen
 SUBDIR+=	dpic
 SUBDIR+=	dragbox-git
 SUBDIR+=	dragon

@@ -1,0 +1,33 @@
+[X] Feature HTML_DYNAMIC_MENUS=NO is broken with current pkgsrc package 1.8.13
+    => Updated to 1.8.15
+    HTML-Menus are now working without JavaScript again
+[X] Master sites look dead
+    => Set new one
+[X] LaTeX option is disabled because it was broken in the past
+    => Added new dependencies:
+       - print/tex-import
+       - print/tex-hanging
+       - print/tex-tabu
+    => Created packages for missing dependencies:
+       - wip/tex-etoc
+       - wip/tex-listofitems
+       - wip/tex-stackengine
+       - wip/tex-newunicodechar
+    => Reenable option "latex"
+[X] Removed patch "patch-src_xmlgen.cpp"
+    Merged upstream
+[X] Dependency graphviz no longer has option "pangocairo"
+    => Remove handling of that build option from Makefile
+[X] Configure installation path for documentation to pkgsrc convention
+    => Added cmake argument DOC_INSTALL_DIR:STRING=share/doc/doxygen
+[X] Don't install man pages for optional programs that are not built
+    Found now way to prevent installation
+    => Delete them in DESTDIR after installation
+[X] PLIST updated
+    Recreated PLIST
+    => Removed alternative *.dot files for option "nopangocairo"
+    => Removed man pages for uninstalled programs
+[X] Test on GNU/Linux
+[ ] Test on NetBSD
+[ ] Export of PKG_OPTIONS.graphviz in graphics/graphviz bl3 can be removed
+    (if no other package need it)
