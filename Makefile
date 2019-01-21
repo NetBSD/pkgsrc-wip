@@ -806,6 +806,7 @@ SUBDIR+=	flim
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
 SUBDIR+=	flite2
+SUBDIR+=	flnews
 SUBDIR+=	flnews-devel
 SUBDIR+=	flpsed
 SUBDIR+=	fltk14-devel
