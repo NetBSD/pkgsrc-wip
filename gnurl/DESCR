@@ -1,25 +1,12 @@
-libgnurl is a fork of libcurl with the following major changes:
+libgnurl is a fork of libcurl. The goal for libgnurl is to support
+only HTTP and HTTPS (and only HTTP 1.x) with a single crypto backend
+(GnuTLS) to ensure a small footprint and uniform experience for
+developers regardless of how libcurl was compiled.
 
-Compilation requirements:
-* libgnurl must be compiled so that it supports only HTTP and HTTPS
-  (remove Gopher, SSH, IMAP, etc.)
-* libgnurl must be compiled so that it supports only GnuTLS
-  (remove CaySSL, QsoSSL, GSKit, etc.)
-* removed support for NTLM, GSSAPI, SPNEGO, LDAP, metalink, HTTP2
-* We recommend to build GnuTLS with DANE support, provided by 'unbound'.
-  This is optional.
+The reasons for gnurl can be read at https://gnunet.org/gnurl.
 
-Changes to the code:
-* renamed the library binary from 'libcurl' to 'lignurl'
+Major changes from libcurl:
+* renamed the library binary from 'libcurl' to 'libgnurl'
 * renamed files to ensure a system-wide installation of
   libgnurl does not result in namespace collisions with libcurl
 * adjustments to the testsuite to address the gnurl specific build
-
-The reasons for gnurl can be read at https://gnunet.org/gnurl. The
-main motivations are technical ones:
-The goal of the cURL project is clearly to support many crypto
-backends and many protocols..
-The goal for libgnurl is to support only HTTP and HTTPS
-(and only HTTP 1.x) with a single crypto backend (GnuTLS) to ensure a
-small footprint and uniform experience for developers regardless of
-how libcurl was compiled.
