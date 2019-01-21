@@ -1,0 +1,21 @@
+tex-stackengine: Imported 4.0.1
+
+stackengine - Highly customised stacking of objects, insets, baseline changes
+
+   The stackengine package provides a versatile way to vertically stack
+objects in a variety of customizable ways.  A number of useful macros
+are provided, all of which make use of the stackengine core.  These
+macros allow a wide variety of tasks, including:
+
+-creating aligned stacks of specified inter-item gap;
+-creating aligned stacks of specified inter-item baselinse shift;
+-stacking both above and below the baseline;
+-overlaying character glyphs;
+-insetting graphical images atop larger background images;
+-top and bottom lapping;
+-shifting the horizontal axis of a stack;
+-changing the baseline of an object;
+-subfigure stacking and labeling;
+
+   This package can be set to process its arguments in either text mode or
+in math mode.
