@@ -27,12 +27,13 @@ TEST_TARGET=		check
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--disable-ntml-wb
 CONFIGURE_ARGS+=	--enable-ipv6
-# We need this for gnurl to know the certificate location out of the box
-CONFIGURE_ARGS+=	--with-ca-path=${SSLCERTS}
-# CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 # Optionally, We want GnuTLS with Dane.
 CONFIGURE_ARGS+=	--with-gnutls
 CONFIGURE_ARGS+=	--with-libidn2
+# Fallback to gnutls preferred CA certificates
+CONFIGURE_ARGS+=	--without-ca-bundle
+CONFIGURE_ARGS+=	--without-ca-path
+CONFIGURE_ARGS+=	--with-ca-fallback
 # Do not pick up GSS, should be fixed in upstream.
 CONFIGURE_ARGS+=	--without-gssapi
 
@@ -46,7 +47,6 @@ post-install:
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../security/gnutls/libgnutls-config.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
