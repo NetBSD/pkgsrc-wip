@@ -31,8 +31,10 @@ DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 # Styles used by Doxygen output.
 #
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-etoc-[0-9]*:../../wip/tex-etoc
+DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
@@ -54,6 +56,7 @@ DEPENDS+=	tex-stackengine-[0-9]*:../../wip/tex-stackengine
 DEPENDS+=	tex-tabu-[0-9]*:../../print/tex-tabu
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab

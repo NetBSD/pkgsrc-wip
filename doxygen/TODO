@@ -5,9 +5,12 @@
     => Set new one
 [X] LaTeX option is disabled because it was broken in the past
     => Added new dependencies:
+       - print/tex-appendix
+       - devel/tex-etoolbox
        - print/tex-import
        - print/tex-hanging
        - print/tex-tabu
+       - print/tex-ulem
     => Created packages for missing dependencies:
        - wip/tex-etoc
        - wip/tex-listofitems
