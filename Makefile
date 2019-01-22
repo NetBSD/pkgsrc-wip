@@ -2233,6 +2233,7 @@ SUBDIR+=	mysqltcl
 SUBDIR+=	n2n
 SUBDIR+=	naev
 SUBDIR+=	nag
+SUBDIR+=	nagios-plugin-mysql_health	
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
