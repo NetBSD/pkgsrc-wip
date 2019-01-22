@@ -8,6 +8,7 @@ doxygen: Updated to 1.8.15
   Handling of that build option removed from Makefile
 - Set c++11 in USE_LANGUAGES
   C++11 is now used by doxygen (see changelog below)
+- Test target added
 
 HTML-Menus are now working without JavaScript again (HTML_DYNAMIC_MENUS = NO).
 

@@ -23,6 +23,7 @@ MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
 CMAKE_ARGS+=		-DDOC_INSTALL_DIR:STRING=share/doc/doxygen
+TEST_TARGET=		tests
 
 # Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs

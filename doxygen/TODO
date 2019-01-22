@@ -36,5 +36,8 @@
     => Removed dollar signs to prevent variable expansion
 [X] pklint complains about man vs. ${PKGMANDIR}
     => Fixed
+[X] Tests
+    Test target available ("tests")
+    => Enable it
 [ ] Export of PKG_OPTIONS.graphviz in graphics/graphviz bl3 can be removed
     (if no other package need it)
