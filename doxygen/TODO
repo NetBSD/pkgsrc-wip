@@ -41,5 +41,7 @@
 [X] Tests
     Test target available ("tests")
     => Enable it
+[X] Test building with clang/clang++
+    => Passed
 [ ] Export of PKG_OPTIONS.graphviz in graphics/graphviz bl3 can be removed
     (if no other package need it)
