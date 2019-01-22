@@ -998,6 +998,7 @@ SUBDIR+=	gcc6snapshot
 SUBDIR+=	gcc7-contrib
 SUBDIR+=	gcc7snapshot
 SUBDIR+=	gcc8snapshot
+SUBDIR+=	gcc9snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
