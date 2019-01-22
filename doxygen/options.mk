@@ -30,6 +30,7 @@ DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 #
 # Styles used by Doxygen output.
 #
+DEPENDS+=	tex-adjustbox-[0-9]*:../../print/tex-adjustbox
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
@@ -49,6 +50,7 @@ DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 DEPENDS+=	tex-newunicodechar-[0-9]*:../../wip/tex-newunicodechar
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-psnfss>=9.2anb2:../../fonts/tex-psnfss
 DEPENDS+=	tex-pspicture-[0-9]*:../../print/tex-pspicture
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
