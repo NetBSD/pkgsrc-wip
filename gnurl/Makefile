@@ -42,8 +42,8 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../security/gnutls/libgnutls-config.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../mk/bsd.pkg.mk"
