@@ -1237,6 +1237,7 @@ SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
 SUBDIR+=	guichan
 SUBDIR+=	guile-sqlite3
+SUBDIR+=	guile-bytestructures
 SUBDIR+=	guitone
 SUBDIR+=	gupnp-ui
 SUBDIR+=	gurlchecker
