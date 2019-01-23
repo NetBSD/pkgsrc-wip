@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ng0@n0.is
 HOMEPAGE=	https://gnunet.org/gnurl
-COMMENT=	Client that groks URLs (curl fork)
+COMMENT=	Client that groks URLs (micro fork of curl)
 # not completely, the curl license is inspired by mit
 LICENSE=	mit
 
@@ -24,10 +24,7 @@ INSTALLATION_DIRS=	share/doc/gnurl
 
 TEST_TARGET=		check
 
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--disable-ntml-wb
-CONFIGURE_ARGS+=	--enable-ipv6
-# Optionally, We want GnuTLS with Dane.
 CONFIGURE_ARGS+=	--with-gnutls
 CONFIGURE_ARGS+=	--with-libidn2
 # Fallback to gnutls preferred CA certificates
@@ -44,9 +41,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DESTDIR}${PREFIX}/share/doc/gnurl/
 .endfor
 
-.include "../../devel/libidn2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/gnutls/libgnutls-config.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
