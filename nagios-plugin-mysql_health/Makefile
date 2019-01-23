@@ -28,6 +28,6 @@ CONFIGURE_ARGS+=	--with-statefiles-dir=${VARBASE}/tmp/check_mysql_health
 
 PKG_USERS+=		${NAGIOS_USER}:${NAGIOS_GROUP}
 
-INSTALLATION_DIRS+=	${VARBASE}/tmp/check_mysql_health
+INSTALLATION_DIRS+=	${PREFIX}/libexec/nagios/tmp/check_mysql_health
 
 .include "../../mk/bsd.pkg.mk"
