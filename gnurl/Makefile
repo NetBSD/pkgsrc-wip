@@ -27,6 +27,7 @@ TEST_TARGET=		check
 CONFIGURE_ARGS+=	--disable-ntml-wb
 CONFIGURE_ARGS+=	--with-gnutls
 CONFIGURE_ARGS+=	--with-libidn2
+CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib}
 # Fallback to gnutls preferred CA certificates
 CONFIGURE_ARGS+=	--without-ca-bundle
 CONFIGURE_ARGS+=	--without-ca-path
@@ -45,5 +46,4 @@ post-install:
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../mk/bsd.pkg.mk"
