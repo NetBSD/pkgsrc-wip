@@ -1,3 +1,0 @@
-# rustc to-do
- * use --enable-rustbuild
- * only use one of lang/llvm or lang/libLLVM
