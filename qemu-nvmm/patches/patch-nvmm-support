@@ -421,8 +421,8 @@ Add NVMM support.
  obj-$(CONFIG_WHPX) += whpx-all.o
 +obj-$(CONFIG_NVMM) += nvmm-all.o
 --- target/i386/nvmm-all.c	1970-01-01 01:00:00.000000000 +0100
-+++ target/i386/nvmm-all.c	2019-01-13 08:38:19.209949716 +0100
-@@ -0,0 +1,1230 @@
++++ target/i386/nvmm-all.c	2019-01-24 13:08:23.465295728 +0100
+@@ -0,0 +1,1197 @@
 +/*
 + * Copyright (c) 2018 The NetBSD Foundation, Inc.
 + * All rights reserved.
@@ -1058,47 +1058,11 @@ Add NVMM support.
 +}
 +
 +static int
-+nvmm_handle_hlt(struct nvmm_machine *mach, CPUState *cpu,
++nvmm_handle_halted(struct nvmm_machine *mach, CPUState *cpu,
 +    struct nvmm_exit *exit)
 +{
 +	struct CPUX86State *env = (CPUArchState *)(cpu->env_ptr);
-+	struct nvmm_vcpu *vcpu = get_nvmm_vcpu(cpu);
-+	struct nvmm_x64_state state;
 +	int ret = 0;
-+
-+	/*
-+	 * Disable the INT shadow, and the INT window-exiting, to have
-+	 * nvmm_can_take_int() process pending interrupts and take us
-+	 * out of HLT.
-+	 *
-+	 * XXX: This mechanism is not really optimized, maybe it should
-+	 * be done in the kernel.
-+	 */
-+
-+	ret = nvmm_vcpu_getstate(mach, vcpu->cpuid, &state,
-+	    NVMM_X64_STATE_GPRS | NVMM_X64_STATE_MISC);
-+	if (ret == -1) {
-+		return -1;
-+	}
-+
-+	/* Advance RIP. */
-+	state.gprs[NVMM_X64_GPR_RIP] = exit->u.hlt.npc;
-+
-+	/* Disable the INT shadow, if any. */
-+	state.misc[NVMM_X64_MISC_INT_SHADOW] = 0;
-+	vcpu->int_shadow = false;
-+
-+	if (env->eflags & IF_MASK) {
-+		/* Disable the INT window-exiting, if any. */
-+		state.misc[NVMM_X64_MISC_INT_WINDOW_EXIT] = 0;
-+		vcpu->int_window_exit = false;
-+	}
-+
-+	ret = nvmm_vcpu_setstate(mach, vcpu->cpuid, &state,
-+	    NVMM_X64_STATE_GPRS | NVMM_X64_STATE_MISC);
-+	if (ret == -1) {
-+		return -1;
-+	}
 +
 +	qemu_mutex_lock_iothread();
 +
@@ -1219,19 +1183,22 @@ Add NVMM support.
 +			ret = nvmm_handle_msr(mach, cpu, &exit);
 +			break;
 +		case NVMM_EXIT_INT_READY:
-+			break;
 +		case NVMM_EXIT_NMI_READY:
-+			break;
-+		case NVMM_EXIT_HLT:
-+			ret = nvmm_handle_hlt(mach, cpu, &exit);
 +			break;
 +		case NVMM_EXIT_MONITOR:
 +		case NVMM_EXIT_MWAIT:
 +		case NVMM_EXIT_MWAIT_COND:
 +			ret = nvmm_inject_ud(mach, vcpu);
 +			break;
++		case NVMM_EXIT_HALTED:
++			ret = nvmm_handle_halted(mach, cpu, &exit);
++			break;
++		case NVMM_EXIT_SHUTDOWN:
++			qemu_system_reset_request(SHUTDOWN_CAUSE_GUEST_RESET);
++			cpu->exception_index = EXCP_INTERRUPT;
++			ret = 1;
++			break;
 +
-+		case NVMM_EXIT_SHUTDOWN: /* XXX what to do? */
 +		default:
 +			error_report("NVMM: Unexpected VM exit code %lu",
 +			    exit.reason);
