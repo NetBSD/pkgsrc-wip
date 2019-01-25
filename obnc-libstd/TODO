@@ -1,0 +1,13 @@
+- obnc-libstd is licensed under Mozilla Public License Version 2.0, but that
+  license doesn't seem to be in $PKGSRC/licenses. For now it's left as GPL v3
+  (same license as obnc) until we can figure out what to do about this.
+
+- obnc-libstd fails to build, likely because of the soft build failures
+  noted in obnc/TODO.
+
+- obnc and obnc-libstd both apparently have ${PREFIX}/doc/obnc/obncdoc/index.html
+  files. So be prepared for PLIST conflicts once this package builds successfully.
+
+- Make sure ${PREFIX}/share/doc/obnc/obncdoc/std gets installed.
+
+- Improve the DESCR.
