@@ -3,3 +3,5 @@
 [X] Keyboard shortcut handling (via '_') doesn't work
     => Patch added
 [X] Sent patches to upstream
+    https://dev.gnupg.org/T4336
+    https://dev.gnupg.org/T4337
