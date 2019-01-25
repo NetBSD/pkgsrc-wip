@@ -16,16 +16,21 @@ WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=	c
 
+DEPENDS+=	obnc-[0-9]*:../../wip/obnc
+
 do-build:
 	cd ${WRKSRC} && \
 		${PKGSRC_SETENV} ${MAKE_ENV} \
 		./build
 
-# Unlike obnc which uses ``./install --destdir=DESTDIR``, obnc-libstd
-# uses ``./install DESTDIR`` instead.
-# do-install:
-# 	cd ${WRKSRC} && \
-# 		./install ${DESTDIR}
+do-install:
+	cd ${WRKSRC} && \
+	./install \
+		--prefix=${PREFIX} \
+		--destdir=${DESTDIR}
+
+	# obnc also installs this same file, so remove to prevent conflicts
+	rm -f ${DESTDIR}${PREFIX}/share/doc/obnc/obncdoc/index.html
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../wip/obnc/buildlink3.mk"
