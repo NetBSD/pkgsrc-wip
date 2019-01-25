@@ -1,0 +1,48 @@
+$NetBSD$
+
+Link against ncursesw and adapt install target for pkgsrc.
+
+--- Makefile.orig	2018-03-29 09:26:02.000000000 +0000
++++ Makefile
+@@ -18,7 +18,8 @@ endif
+ # PREFIX is the base directory under which to install the binary and man
+ # page; generally either /usr/local or /usr (or perhaps /opt...).
+ 
+-PREFIX = /usr/local
++DESTDIR ?=
++PREFIX ?= /usr/local
+ 
+ #--------------------------------------------------------------
+ # Defaults are for the standard curses setup:
+@@ -41,7 +42,7 @@ ifeq ($(OS),Windows_NT)
+ else
+ 	CURS_DIR = .
+ 	CURS_LIB = .
+-	LIBS = -lcurses
++	LIBS = -lncursesw
+ 	RM = rm -f
+ 	SEP = ;
+ 	E =
+@@ -101,7 +102,7 @@ $(IOBJS) : %.o: $(isrc)/%.cc
+ 	$(CXX) $(CPPFLAGS) -c $<
+ 
+ mm$(E):	$(MOBJS) $(IOBJS)
+-	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) -L$(CURS_LIB) $(LIBS)
++	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) -L$(CURS_LIB) $(LIBS) $(LDFLAGS)
+ 	$(POST)
+ 
+ dep:
+@@ -113,9 +114,9 @@ clean:
+ 	$(RM) mm$(E)
+ 
+ install::
+-	install -c -s mm $(PREFIX)/bin
+-	install -c -m 644 mm.1 $(HELPDIR)
+-	$(RM) $(HELPDIR)/mmail.1
+-	ln $(HELPDIR)/mm.1 $(HELPDIR)/mmail.1
++	install -c -s mm $(DESTDIR)$(PREFIX)/bin
++	install -c -m 644 mm.1 $(DESTDIR)$(HELPDIR)
++	$(RM) $(DESTDIR)$(HELPDIR)/mmail.1
++	ln $(HELPDIR)/mm.1 $(DESTDIR)$(HELPDIR)/mmail.1
+ 
+ include depend
