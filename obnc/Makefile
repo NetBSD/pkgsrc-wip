@@ -22,6 +22,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && \
+		${PKGSRC_SETENV} ${MAKE_ENV} \
 		./install \
 			--destdir=${DESTDIR}
 
