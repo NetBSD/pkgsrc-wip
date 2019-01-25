@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.15 2018/12/10 14:59:50 leot Exp $
+#
+# used by lang/swi-prolog/Makefile
+# used by lang/swi-prolog-packages/Makefile
+# used by lang/swi-prolog-jpl/Makefile
+
+SWIPLVERS=		8.0.1
+DISTNAME=		swipl-${SWIPLVERS}
+CATEGORIES=		lang
+MASTER_SITES=		http://www.swi-prolog.org/download/stable/src/
+MASTER_SITES+=		http://www.swi-prolog.org/download/devel/src/
+
+HOMEPAGE=		http://www.swi-prolog.org/
+LICENSE=		gnu-lgpl-v2.1
+
+DIST_SUBDIR=		swi-prolog
+DISTINFO_FILE=		${.CURDIR}/../../wip/swi-prolog-lite/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
+
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/build/src
+
+USE_CMAKE=		yes
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+
+CONFIGURE_DIRS=		build
+CMAKE_ARG_PATH=		..
+
+pre-configure:
+	cd ${WRKSRC} && ${MKDIR} build

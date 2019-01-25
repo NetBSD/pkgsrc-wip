@@ -4413,6 +4413,7 @@ SUBDIR+=	swami
 SUBDIR+=	swarp
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
+SUBDIR+=	swi-prolog-lite
 SUBDIR+=	swift
 SUBDIR+=	swift-git
 SUBDIR+=	swisseph

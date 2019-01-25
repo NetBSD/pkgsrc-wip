@@ -1,0 +1,8 @@
+- Double-check that all removed patches are actually no longer
+  needed (most of them were applied but maybe some build related ones
+  needs to be adopted for cmake migration)
+- Build fails with:
+
+   don't know how to make ../man/pldoc. Stop
+
+  Needs to be investigated further.
