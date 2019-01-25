@@ -6,14 +6,13 @@
   might not play nice with PLIST.
 
 - PLIST currently doesn't include everything, due to the soft build failures
-  noted above.
+  noted above. It may also be responsible for obnc-libstd failing to build too.
 
 - Something built by ./install wants libSDL, so we'll want to use the Options
   framework to selectively-enable using it (which'll probably require patching
   the ./install script).
 
-- Update DESCR so it's not just a copy of COMMENT.
+- Verify if we should use ``BUILDLINK_DEPMETHOD.obnc?= build`` and/or
+  ``.include "../../devel/boehm-gc/buildlink3.mk"`` in buildlink3.mk.
 
-- Investigate the Standard Library tarball from <http://miasap.se/obnc/>,
-  and whether it should be installed along with this pkg, or separated-out
-  into its own pkg.
+- Update DESCR so it's not just a copy of COMMENT.
