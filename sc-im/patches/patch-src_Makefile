@@ -3,9 +3,21 @@ $NetBSD$
 - Fix install permissions
   https://github.com/andmarti1424/sc-im/pull/305
 - Make libdl and curses flags overridable
+- Make color support opt in so we can control it
 
 --- src/Makefile
 +++ src/Makefile
+@@ -29,8 +29,8 @@ CFLAGS += -DLIBDIR=\"$(LIBDIR)\"
+ CFLAGS += -DDFLT_PAGER=\"less\"
+ # Sets default editor. Its use in case EDITOR env variable is not set
+ CFLAGS += -DDFLT_EDITOR=\"vim\"
+-# Comment out to disable color support
+-CFLAGS += -DUSECOLORS
++# Uncomment to enable color support
++#CFLAGS += -DUSECOLORS
+ # Command history file, relative to home directory. Comment out to disable commandline history
+ CFLAGS += -DHISTORY_FILE=\".$(name)info\"
+ # Input mode history. Same as previous, but for insert mode commands
 @@ -89,25 +89,27 @@ endif
  
  # dynamic linking (should not be used in FreeBSD
