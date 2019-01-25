@@ -1,13 +1,12 @@
 $NetBSD: distinfo,v 1.74 2017/05/26 13:26:37 maya Exp $
 
-SHA1 (vlc-3.0.2.tar.xz) = 9e50c246242cd1dd94a8534b9be11c13104bb76d
-RMD160 (vlc-3.0.2.tar.xz) = 1ae891e5c6116e942cc5628eff65c72a4f3cb57d
-SHA512 (vlc-3.0.2.tar.xz) = 907a999dfa00fbc378e46689b2c32a09ea324b47a92b2183f2a1ade2c2c1ec205517580000a3c615d17b15d6885ee0ac51894944b90077968cb30ff58745497f
-Size (vlc-3.0.2.tar.xz) = 25175492 bytes
+SHA1 (vlc-3.0.6.tar.xz) = b35168c1811b07844d861311bd0f2194f4bb82ac
+RMD160 (vlc-3.0.6.tar.xz) = 717f81c5ab63d7d5cdb427a198d958e0e418609f
+SHA512 (vlc-3.0.6.tar.xz) = 7c72e98f30ce5c5a94d74e097fa9960442f89240079b042a729f8a33dd7fedee2538c86c99738ccef2eb27f29055f0221d4c70316e3312c5ebba9565eaa15c52
+Size (vlc-3.0.6.tar.xz) = 25699704 bytes
 SHA1 (patch-compat_Makefile.am) = 1c3e0a7c4610c55c3ec9ba80d66b9959661139b3
 SHA1 (patch-lib_core.c) = 8ec5557424e6ddc05cc365aacd1ec847d9a94605
 SHA1 (patch-lib_video.c) = 362aaf7977c264bb70a79e98cf18da923ae62e39
 SHA1 (patch-m4_dolt.m4) = a1aac0c1021001a489f9b515e218904e065ed659
 SHA1 (patch-modules_access_http_Makefile.am) = d91904c6cba1a75a6872d042e4fe87ed9ce65a22
-SHA1 (patch-modules_codec_x264.c) = 78f1a3ee0eda93e7ea32953d7d6cbb5a9d6f2fbc
 SHA1 (patch-share_Makefile.am) = 380dc4ac4a1a19cd1ccc8219b3d1d3b927585c49
