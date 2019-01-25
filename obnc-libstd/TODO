@@ -1,5 +1,1 @@
-- obnc-libstd is licensed under Mozilla Public License Version 2.0, but that
-  license doesn't seem to be in $PKGSRC/licenses. For now it's left as GPL v3
-  (same license as obnc) until we can figure out what to do about this.
-
 - Improve the DESCR.

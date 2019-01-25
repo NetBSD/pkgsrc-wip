@@ -2,15 +2,12 @@
 
 DISTNAME=	obnc-libstd_0.6.0
 PKGNAME=	${DISTNAME:S/_/-/}
-CATEGORIES=	lang
+CATEGORIES=	devel
 MASTER_SITES=	http://miasap.se/obnc/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://miasap.se/obnc/
-COMMENT=	Standard libraries for the OBNC compiler suite
-# FIXME: gnu-gpl-v3 is the WRONG LICENSE. The real license is ``Mozilla Public License Version 2.0``.
-#        See TODO on the rationale.
-LICENSE=	gnu-gpl-v3
+LICENSE=	mpl-2.0
 
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
