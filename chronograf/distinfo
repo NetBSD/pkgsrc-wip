@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (chronograf-1.7.7.tar.gz) = b192ef8e9ccd9419ae2a187dcf9cf963a34797e3
+RMD160 (chronograf-1.7.7.tar.gz) = b3bbcfe0814f0fc976a3c1be2675b98da6a80b73
+SHA512 (chronograf-1.7.7.tar.gz) = e8cbb9b1a95e9dac732493dab946cbe1e01a14cb03e20d0a459ba9af489ff8feb128e31a8867cd6936ddc7ffacc2e66a8242e19d9fee4b48c650dfdcad2e4c25
+Size (chronograf-1.7.7.tar.gz) = 34562596 bytes
+SHA1 (chronograf-dependencies-1.7.7.tar.gz) = bac347e4d9b828d478c38de6ea33ae5eccb298b6
+RMD160 (chronograf-dependencies-1.7.7.tar.gz) = 4961bc5f498181815af31f089891c10b138e9531
+SHA512 (chronograf-dependencies-1.7.7.tar.gz) = 4390ea826f9f2959b5fe5ad57d19817469dc5af569c90d127f382740ce00a75ea30bd73ac86671bf4180863331624738e372ae2319f7ebd8bd1966809c26ca14
+Size (chronograf-dependencies-1.7.7.tar.gz) = 43389651 bytes
+SHA1 (patch-Makefile) = 1db15c4569e39e9e77a2365741918c805ad3943f
