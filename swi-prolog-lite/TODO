@@ -1,8 +1,9 @@
 - Double-check that all removed patches are actually no longer
   needed (most of them were applied but maybe some build related ones
   needs to be adopted for cmake migration)
-- Build fails with:
-
+- -DINSTALL_DOCUMENTATION=OFF is needed otherwise the build fails with:
    don't know how to make ../man/pldoc. Stop
-
-  Needs to be investigated further.
+  Investigate if there is a way to solve that and provide the documentation via
+  swi-prolog-lite package.
+- Install fails due:
+   ERROR: lib/swipl/bin/x86_64--netbsd/swipl: missing library: libswipl.so.8
