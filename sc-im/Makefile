@@ -17,7 +17,6 @@ INSTALL_DIRS=	src
 
 # pkg-config to avoid broken Makefile self-configuration
 USE_TOOLS+=	gmake pkg-config yacc
-USE_CURSES=	wide
 
 # gnuplot is invoked through the shell, no need to check at compile time
 CFLAGS+=	-DGNUPLOT
