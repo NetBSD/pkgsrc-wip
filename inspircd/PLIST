@@ -207,22 +207,12 @@ lib/inspircd/modules/m_userip.so
 lib/inspircd/modules/m_vhost.so
 lib/inspircd/modules/m_watch.so
 lib/inspircd/modules/m_xline_db.so
-share/examples/inspircd/aliases/anope.conf.example
-share/examples/inspircd/aliases/atheme.conf.example
-share/examples/inspircd/censor.conf.example
-share/examples/inspircd/filter.conf.example
-share/examples/inspircd/helpop-full.conf.example
-share/examples/inspircd/helpop.conf.example
-share/examples/inspircd/inspircd.conf.example
-share/examples/inspircd/links.conf.example
-share/examples/inspircd/modules.conf.example
-share/examples/inspircd/modules/charybdis.conf.example
-share/examples/inspircd/modules/unrealircd.conf.example
-share/examples/inspircd/motd.txt.example
-share/examples/inspircd/opermotd.txt.example
-share/examples/inspircd/opers.conf.example
-share/examples/inspircd/quotes.txt.example
-share/examples/inspircd/rules.txt.example
+share/examples/inspircd/inspircd.conf
+share/examples/inspircd/links.conf
+share/examples/inspircd/modules.conf
+share/examples/inspircd/motd.txt
+share/examples/inspircd/opers.conf
+share/examples/inspircd/rules.txt
 @pkgdir inspircd/logs
 @pkgdir inspircd/data
 @pkgdir etc/inspircd

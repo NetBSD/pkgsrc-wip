@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.inspircd
 PKG_SUPPORTED_OPTIONS=		geoip gnutls openssl mysql ldap pcre pgsql sqlite3
-PKG_SUGGESTED_OPTIONS=		openssl sqlite3
+PKG_SUGGESTED_OPTIONS=		openssl
 PLIST_VARS+=			geoip gnutls openssl mysql ldap pcre pgsql sqlite3
 
 .include "../../mk/bsd.options.mk"
