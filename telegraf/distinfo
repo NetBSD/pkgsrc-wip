@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (telegraf-1.9.2.tar.gz) = 756136e5439953e84ae072a008d8404418af8f4c
+RMD160 (telegraf-1.9.2.tar.gz) = dd1c8c8265aaf87022d35b2b585b817c0cdb601a
+SHA512 (telegraf-1.9.2.tar.gz) = 2787d564f95108acce48341911c8f4298233f3d31b00c4d3eba07bcaef6bded8dcc6b0741acdc1ade600bfd09878b04fba576099415d690465e90088fdcec13f
+Size (telegraf-1.9.2.tar.gz) = 1279918 bytes
+SHA1 (telegraf-dependencies-1.9.2.tar.gz) = dc375e7b2bc0837fcc538f352a35d2f1ede60481
+RMD160 (telegraf-dependencies-1.9.2.tar.gz) = ebe1157aadbdf9e3be8e1e01445cb0e9d59f5dcd
+SHA512 (telegraf-dependencies-1.9.2.tar.gz) = 021815c69c21d5e3f5430735233bc0a7e2cc6a1d73c9ad9cea1efc69f1a2026a0859f94ccb53b511ff82e322066c54b9df2ed9401a273e15dd23ce19a33c5edc
+Size (telegraf-dependencies-1.9.2.tar.gz) = 66435980 bytes
+SHA1 (patch-docker_docker_client_unix.go) = 19f354d83e187aff18f09fc1d2088e65524214ef
+SHA1 (patch-vendor_github.com_docker_docker_hack_dockerfile_install_containerd.installer) = edd27e8d070b61ae4e83dc83463c5bdab9ceaa98
