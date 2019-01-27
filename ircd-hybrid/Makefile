@@ -53,7 +53,7 @@ PKG_GROUPS_VARS+=	IRCD_HYBRID_IRC_GROUP
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	doc/ircd.8 etc/reference.conf
+SUBST_FILES.paths=	doc/ircd.8 doc/reference.conf
 SUBST_SED.paths+=	-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g"
 SUBST_SED.paths+=	-e "s|/var/log|${VARBASE}/log/ircd-hybrid|g"
 
