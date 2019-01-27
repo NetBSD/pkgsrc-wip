@@ -3,5 +3,3 @@
   etc/ircd-hybrid/ircd.conf.
 - Double-check if *.conf files (and maybe other files) in INSTALL still need to
   be created
-- files installed in share/doc/ircd-hybrid/doc/ can be probably installed
-  directly in share/doc/ircd-hybrid
