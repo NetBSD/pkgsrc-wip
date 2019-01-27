@@ -5,3 +5,5 @@
 - Investigate if the `@pkgdir share/examples/ircd-hybrid' is still needed in
   PLIST
 - Investigate if etc/reference.conf is actually used by ircd
+- files installed in share/doc/ircd-hybrid/doc/ can be probably installed
+  directly in share/doc/ircd-hybrid
