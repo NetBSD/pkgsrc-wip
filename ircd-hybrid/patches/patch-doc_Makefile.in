@@ -1,0 +1,40 @@
+$NetBSD$
+
+Replaced sysconfdir with egdir so that the conf files are not
+overwritten when the package is being upgraded.
+
+--- doc/Makefile.in.orig	2018-04-04 22:33:34.000000000 +0000
++++ doc/Makefile.in
+@@ -398,25 +398,25 @@ uninstall-man8:
+ 	dir='$(DESTDIR)$(man8dir)'; $(am__uninstall_files_from_dir)
+ install-dist_sysconfDATA: $(dist_sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(dist_sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
+ 	done
+ 
+ uninstall-dist_sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(dist_sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+-	dir='$(DESTDIR)$(sysconfdir)'; $(am__uninstall_files_from_dir)
++	dir='$(DESTDIR)$(egdir)'; $(am__uninstall_files_from_dir)
+ tags TAGS:
+ 
+ ctags CTAGS:
