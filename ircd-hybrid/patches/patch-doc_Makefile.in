@@ -1,40 +1,34 @@
 $NetBSD$
 
-Replaced sysconfdir with egdir so that the conf files are not
-overwritten when the package is being upgraded.
+Do not install files in $(sysconfdir), configuration files are
+handled via CONF_FILES*.
 
 --- doc/Makefile.in.orig	2018-04-04 22:33:34.000000000 +0000
 +++ doc/Makefile.in
-@@ -398,25 +398,25 @@ uninstall-man8:
- 	dir='$(DESTDIR)$(man8dir)'; $(am__uninstall_files_from_dir)
- install-dist_sysconfDATA: $(dist_sysconf_DATA)
- 	@$(NORMAL_INSTALL)
--	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
-+	@list='$(dist_sysconf_DATA)'; test -n "$(egdir)" || list=; \
- 	if test -n "$$list"; then \
--	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
--	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
-+	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
-+	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
- 	fi; \
- 	for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  echo "$$d$$p"; \
- 	done | $(am__base_list) | \
- 	while read files; do \
--	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
--	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
-+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
-+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
+@@ -458,7 +458,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(MANS) $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(man8dir)" "$(DESTDIR)$(sysconfdir)"; do \
++	for dir in "$(DESTDIR)$(man8dir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
+ install: install-am
+@@ -517,7 +517,7 @@ install-dvi: install-dvi-am
  
- uninstall-dist_sysconfDATA:
- 	@$(NORMAL_UNINSTALL)
--	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
-+	@list='$(dist_sysconf_DATA)'; test -n "$(egdir)" || list=; \
- 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
--	dir='$(DESTDIR)$(sysconfdir)'; $(am__uninstall_files_from_dir)
-+	dir='$(DESTDIR)$(egdir)'; $(am__uninstall_files_from_dir)
- tags TAGS:
+ install-dvi-am:
  
- ctags CTAGS:
+-install-exec-am: install-dist_sysconfDATA
++install-exec-am:
+ 
+ install-html: install-html-am
+ 
+@@ -565,7 +565,7 @@ uninstall-man: uninstall-man8
+ 	cscopelist-am ctags-am distclean distclean-generic \
+ 	distclean-libtool distdir dvi dvi-am html html-am info info-am \
+ 	install install-am install-data install-data-am \
+-	install-dist_sysconfDATA install-dvi install-dvi-am \
++	install-dvi install-dvi-am \
+ 	install-exec install-exec-am install-html install-html-am \
+ 	install-info install-info-am install-man install-man8 \
+ 	install-pdf install-pdf-am install-ps install-ps-am \
