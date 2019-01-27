@@ -163,5 +163,4 @@ share/ircd-hybrid/help/who
 share/ircd-hybrid/help/whois
 share/ircd-hybrid/help/whowas
 share/ircd-hybrid/help/xline
-@pkgdir share/ircd-hybrid/messages
 @pkgdir share/examples/ircd-hybrid

@@ -27,7 +27,6 @@ HYBRID_DOC_PLACE=	share/doc/ircd-hybrid
 HYBRID_DOC=		${PREFIX}/${HYBRID_DOC_PLACE}
 
 INSTALLATION_DIRS+=	${HYBRID_DOC_PLACE}/doc
-INSTALLATION_DIRS+=	share/ircd-hybrid/messages
 
 CONF_FILES_PERMS+=	${HYBRID_DOC_PLACE}/doc/reference.conf ${PKG_SYSCONFDIR}/reference.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644

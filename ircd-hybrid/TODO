@@ -3,10 +3,6 @@
   etc/ircd-hybrid/ircd.conf.
 - Double-check if *.conf files (and maybe other files) in INSTALL still need to
   be created
-- Investigate if share/ircd-hybrid/messages still need to be appended to
-  INSTALLATION_DIRS and if not remove it and update PLIST accordingly
-- Investigate if the `@pkgdir share/examples/ircd-hybrid' is still needed in
-  PLIST
 - Investigate if etc/reference.conf is actually used by ircd
 - files installed in share/doc/ircd-hybrid/doc/ can be probably installed
   directly in share/doc/ircd-hybrid
