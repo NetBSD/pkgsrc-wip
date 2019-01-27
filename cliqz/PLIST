@@ -611,6 +611,7 @@ lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/extension.sv
 lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/mcb-disabled.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/panel.css
 lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/permissions.svg
+lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/relay.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/slowtrackers-disabled.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/slowtrackers.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/controlcenter/trackers-disabled.svg

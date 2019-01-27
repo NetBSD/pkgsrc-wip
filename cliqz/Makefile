@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cliqz-1.24.0
+DISTNAME=	cliqz-1.24.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -14,8 +14,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
-# fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20181223141940
+# ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
+CLIQZ_LAST_BUILD_ID=	20190124094133
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
