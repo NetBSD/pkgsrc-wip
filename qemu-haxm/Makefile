@@ -90,14 +90,14 @@ UE_ARCHS+=		sparc64 x86_64 microblazeel s390x unicore32
 .if ${OPSYS} == "NetBSD"
 USER_EMUL=		i386 x86_64 sparc sparc64
 PLIST.nbd=		YES
-.elif !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
+.elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 USER_EMUL=		i386 x86_64 sparc sparc64
 PLIST.nbd=		YES
-.elif !empty(OPSYS:MDarwin)
+.elif ${OPSYS} == "Darwin"
 USER_EMUL=
 CONFIGURE_ARGS+=	--disable-bsd-user
 PLIST.nbd=		YES
-.elif !empty(OPSYS:MLinux)
+.elif ${OPSYS} == "Linux"
 USER_EMUL=		${UE_ARCHS}
 PLIST.nbd=		YES
 PLIST.ivshmem=		YES
@@ -107,8 +107,8 @@ CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
 PLIST_VARS+=		${UE_ARCHS} nbd ivshmem
-.for _var_ in ${USER_EMUL}
-PLIST.${_var_}=		YES
+.for var in ${USER_EMUL}
+PLIST.${var}=		YES
 .endfor
 
 TEST_TARGET=		check
@@ -120,7 +120,7 @@ post-install:
 .include "../../wip/mk/git-package.mk"
 
 # On Darwin, qemu uses Cocoa and CoreAudio
-.if empty(OPSYS:MDarwin)
+.if ${OPSYS} == "Darwin"
 .include "../../mk/oss.buildlink3.mk"
 .endif
 .include "../../archivers/lzo/buildlink3.mk"
@@ -129,6 +129,7 @@ post-install:
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
