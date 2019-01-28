@@ -19,4 +19,6 @@ PKGCONFIG_OVERRIDE+=	getdns_ext_event.pc.in
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../net/unbound/buildlink3.mk"
+.include "../../devel/protobuf-c/buildlink3.mk"
+.include "../../net/fstrm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
