@@ -23,6 +23,7 @@ SUBST_SED.config+=	-e 's,^LDFLAGS =,LDFLAGS +=,'
 SUBST_SED.config+=	-e 's/cc/${CC:Q}/'
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE	# needed for VLNEXT in <sys/termios.h>
+CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
