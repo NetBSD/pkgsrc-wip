@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libcxx-5.0.1.src
+DISTNAME=	libcxx-7.0.1.src
 PKGNAME=	${DISTNAME:S/cxx/c++/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/

@@ -4,6 +4,7 @@ include/c++/v1/__bsd_locale_defaults.h
 include/c++/v1/__bsd_locale_fallbacks.h
 include/c++/v1/__config
 include/c++/v1/__debug
+include/c++/v1/__errc
 include/c++/v1/__functional_03
 include/c++/v1/__functional_base
 include/c++/v1/__functional_base_03
@@ -11,6 +12,7 @@ include/c++/v1/__hash_table
 include/c++/v1/__libcpp_version
 include/c++/v1/__locale
 include/c++/v1/__mutex_base
+include/c++/v1/__node_handle
 include/c++/v1/__nullptr
 include/c++/v1/__split_buffer
 include/c++/v1/__sso_allocator
@@ -31,6 +33,7 @@ include/c++/v1/cctype
 include/c++/v1/cerrno
 include/c++/v1/cfenv
 include/c++/v1/cfloat
+include/c++/v1/charconv
 include/c++/v1/chrono
 include/c++/v1/cinttypes
 include/c++/v1/ciso646
@@ -38,6 +41,7 @@ include/c++/v1/climits
 include/c++/v1/clocale
 include/c++/v1/cmath
 include/c++/v1/codecvt
+include/c++/v1/compare
 include/c++/v1/complex
 include/c++/v1/complex.h
 include/c++/v1/condition_variable
@@ -79,6 +83,7 @@ include/c++/v1/experimental/propagate_const
 include/c++/v1/experimental/ratio
 include/c++/v1/experimental/regex
 include/c++/v1/experimental/set
+include/c++/v1/experimental/simd
 include/c++/v1/experimental/string
 include/c++/v1/experimental/string_view
 include/c++/v1/experimental/system_error
@@ -91,6 +96,7 @@ include/c++/v1/experimental/vector
 include/c++/v1/ext/__hash
 include/c++/v1/ext/hash_map
 include/c++/v1/ext/hash_set
+include/c++/v1/filesystem
 include/c++/v1/float.h
 include/c++/v1/forward_list
 include/c++/v1/fstream
@@ -126,6 +132,7 @@ include/c++/v1/scoped_allocator
 include/c++/v1/set
 include/c++/v1/setjmp.h
 include/c++/v1/shared_mutex
+include/c++/v1/span
 include/c++/v1/sstream
 include/c++/v1/stack
 include/c++/v1/stdbool.h
@@ -169,6 +176,7 @@ include/c++/v1/utility
 include/c++/v1/valarray
 include/c++/v1/variant
 include/c++/v1/vector
+include/c++/v1/version
 include/c++/v1/wchar.h
 include/c++/v1/wctype.h
 lib/libc++.1.0.dylib
@@ -176,3 +184,4 @@ lib/libc++.1.dylib
 lib/libc++.a
 lib/libc++.dylib
 lib/libc++experimental.a
+lib/libc++fs.a
