@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/stagit
+bin/stagit-index
+man/man1/stagit-index.1
+man/man1/stagit.1
+share/stagit/README
+share/stagit/example_create.sh
+share/stagit/example_post-receive.sh
+share/stagit/favicon.png
+share/stagit/logo.png
+share/stagit/style.css

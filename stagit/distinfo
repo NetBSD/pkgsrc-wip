@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (stagit-0.8.tar.gz) = c62de9c522433fb36835f9abba5fece7d09349cd
+RMD160 (stagit-0.8.tar.gz) = 8331b537fdaace2ebea4c8f972ca36501c0757f7
+SHA512 (stagit-0.8.tar.gz) = e18ebb47d678d16066ac31086eef81dda15d75b3dd086bf7cecdd675044ef266aa8c66d684d04d6bca9b202c5d3c8398cea41e0bac7c34e217f572d354755f02
+Size (stagit-0.8.tar.gz) = 17378 bytes
+SHA1 (patch-config.mk) = e1858b143fe686f21722b92e4fb4301707adcd3e
