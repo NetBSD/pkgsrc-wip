@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	libcxxabi-4.0.0.src
-PKGNAME=	libc++-abi-4.0.0
+DISTNAME=	libcxxabi-7.0.1.src
+PKGNAME=	libc++-abi-7.0.1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
