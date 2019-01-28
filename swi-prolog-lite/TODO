@@ -1,3 +1,6 @@
+- Probably we should try to follow `Modular packages for Linux' section in
+  CMAKE.md in order to make swi-prolog pkgsrc packaging similar to the ones
+  in pre-cmake era
 - Double-check that all removed patches are actually no longer
   needed (most of them were applied but maybe some build related ones
   needs to be adopted for cmake migration)
