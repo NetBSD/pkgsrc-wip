@@ -86,10 +86,7 @@ share/doc/ircd-hybrid/INSTALL
 share/doc/ircd-hybrid/README
 share/doc/ircd-hybrid/README.ircd-hybrid-mkpasswd
 share/doc/ircd-hybrid/doc/CIDR.txt
-share/doc/ircd-hybrid/doc/Doxyfile
-share/doc/ircd-hybrid/doc/Makefile.am
 share/doc/ircd-hybrid/doc/index.txt
-share/doc/ircd-hybrid/doc/ircd.8
 share/doc/ircd-hybrid/doc/kline.txt
 share/doc/ircd-hybrid/doc/modeg.txt
 share/doc/ircd-hybrid/doc/modes.txt

@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	ircu-[0-9]*
 
-USE_TOOLS+=	pax
-
 GNU_CONFIGURE=	YES
 BUILD_DEFS+=	VARBASE IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
 
@@ -71,9 +69,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
 		${DESTDIR}${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
 
-	${RM} ${WRKSRC}/doc/Makefile
-	${RM} ${WRKSRC}/doc/Makefile.in
-	cd ${WRKSRC}/doc && pax -s',.*\.orig$$,,' -rwppm . ${DESTDIR}${HYBRID_DOC}/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/*.conf ${DESTDIR}${HYBRID_DOC}/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${HYBRID_DOC}/doc
+	${INSTALL_DATA_DIR} ${DESTDIR}${HYBRID_DOC}/doc/technical
+	${INSTALL_DATA} ${WRKSRC}/doc/technical/*.txt ${DESTDIR}${HYBRID_DOC}/doc/technical
 
 	${MV} ${DESTDIR}${PREFIX}/bin/mkpasswd \
 		${DESTDIR}${PREFIX}/bin/ircd-hybrid-mkpasswd
