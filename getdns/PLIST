@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/getdns_query
-bin/stubby
+bin/getdns_server_mon
 include/getdns/getdns.h
 include/getdns/getdns_extra.h
 lib/libgetdns.la
