@@ -17,6 +17,7 @@ DIST_SUBDIR=		swi-prolog
 DISTINFO_FILE=		${.CURDIR}/../../wip/swi-prolog-lite/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
 
+# XXX: That's kludgy, can it be avoided?
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/build/src
 
 USE_CMAKE=		yes
