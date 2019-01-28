@@ -5,5 +5,3 @@
    don't know how to make ../man/pldoc. Stop
   Investigate if there is a way to solve that and provide the documentation via
   swi-prolog-lite package.
-- Install fails due:
-   ERROR: lib/swipl/bin/x86_64--netbsd/swipl: missing library: libswipl.so.8
