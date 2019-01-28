@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (kore-3.2.2.tar.gz) = fbe938c5617cdacc22410320e619fe1083ada3a8
+RMD160 (kore-3.2.2.tar.gz) = 9f84c590fd9b8345b467383677d2906b377048ca
+SHA512 (kore-3.2.2.tar.gz) = c1c8d16a694c25b55e4a8bc82d0fbc9f3477bcfd9ffe5b3f6e420ba51afebb2b9ff7e974d7e0088195ba88c8f54f5d0fb6a0beaf9c9dfb91a1b2e339e69c50bb
+Size (kore-3.2.2.tar.gz) = 1000711 bytes
+SHA1 (patch-Makefile) = aff05cd0cce01cbb63481b3b4229f165e06765f1
+SHA1 (patch-kodev_Makefile) = 74aadccd5db6fb739242a9356538fd63a9eaebf0

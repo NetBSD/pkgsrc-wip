@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/kodev
+bin/kore
+include/kore/http.h
+include/kore/jsonrpc.h
+include/kore/kore.h
+include/kore/pgsql.h
+include/kore/python_api.h
+include/kore/python_methods.h
+include/kore/tasks.h
+man/man1/kodev.1
+share/kore/features

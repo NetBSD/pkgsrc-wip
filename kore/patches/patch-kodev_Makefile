@@ -1,0 +1,25 @@
+$NetBSD$
+
+Adapt install target for pkgsrc.
+
+--- kodev/Makefile.orig	2019-01-21 09:58:12.000000000 +0000
++++ kodev/Makefile
+@@ -4,6 +4,7 @@ CC?=cc
+ PREFIX?=/usr/local
+ OBJDIR?=obj
+ KODEV=kodev
++DESTDIR?=
+ INSTALL_DIR=$(PREFIX)/bin
+ 
+ S_SRC=	../src/cli.c
+@@ -37,8 +38,8 @@ $(OBJDIR):
+ 	@mkdir -p $(OBJDIR)
+ 
+ install: $(KODEV)
+-	mkdir -p $(INSTALL_DIR)
+-	install -m 555 $(KODEV) $(INSTALL_DIR)/$(KODEV)
++	mkdir -p $(DESTDIR)$(INSTALL_DIR)
++	install -m 555 $(KODEV) $(DESTDIR)$(INSTALL_DIR)/$(KODEV)
+ 
+ uninstall:
+ 	rm -f $(INSTALL_DIR)/$(KODEV)
