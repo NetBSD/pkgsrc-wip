@@ -1,12 +1,12 @@
 $NetBSD$
 
---- configure.orig	2018-11-23 12:57:45.000000000 +0000
+--- configure.orig	2019-01-28 11:56:13.642973851 +0000
 +++ configure
-@@ -809,6 +809,7 @@ DragonFly)
+@@ -819,6 +819,7 @@ DragonFly)
  ;;
  NetBSD)
    bsd="yes"
 +  hax="yes"
    make="${MAKE-gmake}"
-   audio_drv_list="oss"
+   audio_drv_list="oss try-sdl"
    audio_possible_drivers="oss sdl"
