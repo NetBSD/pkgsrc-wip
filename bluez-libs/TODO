@@ -1,4 +1,4 @@
 * Update to 3.35 in order to fix a security bug described at:
   http://article.gmane.org/gmane.linux.bluez.devel/15809/
 * Other possible Security Advisories to investigate:
-   CVE-2016-7837
+   CVE-2016-7837, CVE-2018-10910
