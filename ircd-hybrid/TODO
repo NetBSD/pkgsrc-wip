@@ -1,2 +1,4 @@
 - Double-check if *.conf files (and maybe other files) in INSTALL still need to
   be created
+- Should we add a note in MESSAGE to point out that an ircd.conf needs to be
+  created?
