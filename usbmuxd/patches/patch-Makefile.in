@@ -1,0 +1,14 @@
+$NetBSD$
+
+* Disable udev installation
+
+--- Makefile.in.orig	2014-10-17 20:27:41.000000000 +0000
++++ Makefile.in
+@@ -264,7 +264,6 @@ SET_MAKE = @SET_MAKE@
+ SHELL = @SHELL@
+ STRIP = @STRIP@
+ SYSTEMD_SUB = @SYSTEMD_SUB@
+-UDEV_SUB = @UDEV_SUB@
+ VERSION = @VERSION@
+ WINDRES = @WINDRES@
+ abs_builddir = @abs_builddir@

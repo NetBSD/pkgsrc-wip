@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (usbmuxd-1.1.0.tar.bz2) = a8f5d44b3014d57a6ae40960b56cc6f497876097
+RMD160 (usbmuxd-1.1.0.tar.bz2) = cc690cd42a4699d9d464a94e3ab7433590123c5d
+SHA512 (usbmuxd-1.1.0.tar.bz2) = 66aa0c40e912bf596b819098b87d88e9cf30b2e6352e607eeb778bd4f23bf9bb123fb6a6ecca2d4e4be3171e35d66200d632d2c9c80b1f2462bb45be8aa6912d
+Size (usbmuxd-1.1.0.tar.bz2) = 321897 bytes
+SHA1 (patch-Makefile.in) = 2d5a800ca6f098fc4c8a2eb21cb75c130407f09f
+SHA1 (patch-configure) = d833ffadd5eee3482bacd841aded1bb37b368c1b
+SHA1 (patch-configure.ac) = cd4457924ba71c414e8537a1ab563ca2d2664d3e
+SHA1 (patch-src_main.c) = 57323e5fb532e891d88c0a469219b5a71c0a6adb

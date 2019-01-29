@@ -1,0 +1,15 @@
+$NetBSD$
+
+* POSIX shell portability
+
+--- configure.ac.orig	2014-10-17 20:27:35.000000000 +0000
++++ configure.ac
+@@ -37,7 +37,7 @@ if test "x$have_limd" = "xyes"; then
+     AC_SUBST(libimobiledevice_LIBS)
+   fi
+ else
+-  if test "x$with_preflight" == "xyes"; then
++  if test "x$with_preflight" = "xyes"; then
+     AC_MSG_ERROR([preflight worker support requested but libimobiledevice could not be found])
+   fi
+ fi
