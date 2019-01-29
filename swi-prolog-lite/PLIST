@@ -38,9 +38,7 @@ lib/swipl/include/SWI-Prolog.h
 lib/swipl/include/SWI-Stream.h
 lib/swipl/include/Yap/YapInterface.h
 lib/swipl/include/sicstus/sicstus.h
-lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libswipl.so
-lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libswipl.so.8
-lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libswipl.so.${PKGVERSION}
+lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libswipl.a
 lib/swipl/library/INDEX.pl
 lib/swipl/library/aggregate.pl
 lib/swipl/library/ansi_term.pl

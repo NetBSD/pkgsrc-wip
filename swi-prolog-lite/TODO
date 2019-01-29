@@ -8,4 +8,3 @@
    don't know how to make ../man/pldoc. Stop
   Investigate if there is a way to solve that and provide the documentation via
   swi-prolog-lite package.
-- Double-check all XXX comments
