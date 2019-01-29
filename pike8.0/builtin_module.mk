@@ -91,6 +91,8 @@ do-install:
 
 post-install: remove-dumped-modules remove-main-package-files prepare-docs-dir install-shared-docs install-modrefs
 
+.PHONY: remove-main-package-files remove-dumped-modules prepare-docs-dir install-modrefs install-shared-docs
+
 # remove files that overlap with files in the main pike package, located under PREFIX
 remove-main-package-files:
 	cd ${DESTDIR}/${PREFIX} && \

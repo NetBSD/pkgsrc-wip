@@ -83,6 +83,8 @@ post-build:
 	${SED} -e 's~${WRKSRC}/smartlink~${PREFIX}/include/${NAME}/smartlink~' < ${WRKSRC}/specs > ${WRKSRC}/specs.tmp
 	mv ${WRKSRC}/specs.tmp ${WRKSRC}/specs
 
+.PHONY: remove-subpackage-modules remove-dumped-modules fix-versioned-filenames prepare-docs-dir install-modrefs install-shared-docs print-vars
+
 post-install: remove-dumped-modules remove-subpackage-modules fix-versioned-filenames prepare-docs-dir install-shared-docs install-modrefs
 
 remove-subpackage-modules:
