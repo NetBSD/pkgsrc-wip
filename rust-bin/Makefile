@@ -95,6 +95,15 @@ fix-darwin-install-name:
 		    ${DESTDIR}${PREFIX}/bin/${bin};			\
 	done
 .  endfor
+.  for bin in llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
+		llvm-readobj llvm-size llvm-strip rust-lld
+	otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
+	    | ${GREP} '@rpath' | while read rpath rest; do		\
+		install_name_tool -change $$rpath			\
+		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib/rustlib/${RUST_ARCH}/lib,g'` \
+		    ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}; \
+	done
+.  endfor
 .  for lib in lib lib/rustlib/${RUST_ARCH}/lib lib/rustlib/${RUST_ARCH}/codegen-backends
 	for f in ${DESTDIR}${PREFIX}/${lib}/lib*.dylib; do		\
 		[ ! -f $$f ] && continue;				\
