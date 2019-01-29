@@ -1,6 +1,2 @@
-- Should a default configuration be provided?
-  After the installation if it is tried to run it, it will fails
-  due to missing etc/ircd-hybrid/ircd.conf (chat/ircd-hybrid used
-  ${WRKSRC}/etc/example.conf as ircd.conf)
 - Double-check if *.conf files (and maybe other files) in INSTALL still need to
   be created
