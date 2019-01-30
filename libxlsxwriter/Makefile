@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	libxlsxwriter-0.8.4
-CATEGORIES=	devel
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmcnamara/}
 GITHUB_TAG=	RELEASE_${PKGVERSION_NOREV}
 
