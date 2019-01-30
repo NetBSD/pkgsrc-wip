@@ -4211,7 +4211,6 @@ SUBDIR+=	samtools0119
 SUBDIR+=	sara
 SUBDIR+=	sarf
 SUBDIR+=	sbcl-git
-SUBDIR+=	sc-im
 SUBDIR+=	scantailor
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
