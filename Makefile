@@ -1948,7 +1948,6 @@ SUBDIR+=	libwebsockets
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
 SUBDIR+=	libxls
-SUBDIR+=	libxlsxwriter
 SUBDIR+=	libzeep
 SUBDIR+=	libzn-poly
 SUBDIR+=	libzrtp
