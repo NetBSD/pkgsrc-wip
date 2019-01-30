@@ -44,12 +44,18 @@ PKG_USERS=		${IRCD_HYBRID_IRC_USER}:${IRCD_HYBRID_IRC_GROUP}
 PKG_USERS_VARS+=	IRCD_HYBRID_IRC_USER
 PKG_GROUPS_VARS+=	IRCD_HYBRID_IRC_GROUP
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	doc/ircd.8 doc/reference.conf
-SUBST_SED.paths+=	-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g"
-SUBST_SED.paths+=	-e "s|/var/log|${VARBASE}/log/ircd-hybrid|g"
+SUBST_CLASSES+=		mpaths
+SUBST_MESSAGE.mpaths=	Fixing hardcoded paths in ircd(8)
+SUBST_STAGE.mpaths=	pre-configure
+SUBST_FILES.mpaths=	doc/ircd.8 doc/reference.conf
+SUBST_SED.mpaths+=	-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g"
+SUBST_SED.mpaths+=	-e "s|/var/log|${VARBASE}/log/ircd-hybrid|g"
+
+SUBST_CLASSES+=		rpaths
+SUBST_MESSAGE.rpaths=	Adjusting paths in reference.conf
+SUBST_STAGE.rpaths=	pre-configure
+SUBST_FILES.rpaths=	doc/reference.conf
+SUBST_SED.rpaths+=	-e "s|var/log|${VARBASE}/log/ircd-hybrid/logs|g"
 
 SUBST_CLASSES+=		bpaths
 SUBST_MESSAGE.bpaths=	Fixing hardcoded build paths.
