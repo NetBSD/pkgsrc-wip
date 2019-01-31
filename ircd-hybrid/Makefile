@@ -53,6 +53,7 @@ SUBST_MESSAGE.rpaths=	Adjusting paths in reference.conf
 SUBST_STAGE.rpaths=	pre-configure
 SUBST_FILES.rpaths=	doc/reference.conf
 SUBST_SED.rpaths+=	-e "s|var/log|${VARBASE}/log/ircd-hybrid/logs|g"
+SUBST_SED.rpaths+=	-e "s|var/lib|${VARBASE}/log/ircd-hybrid/lib|g"
 
 SUBST_CLASSES+=		bpaths
 SUBST_MESSAGE.bpaths=	Fixing hardcoded build paths.
