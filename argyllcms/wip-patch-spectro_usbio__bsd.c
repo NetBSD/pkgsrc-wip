@@ -58,14 +58,13 @@ Attempt to make actually function with NetBSD ugen(4).
  
  			/* Allocate an idevice so that we can fill in the end point information */
  			if ((usbd = (struct usb_idevice *) calloc(sizeof(struct usb_idevice), 1)) == NULL) {
-@@ -136,14 +141,62 @@ icompaths *p 
+@@ -136,8 +141,56 @@ icompaths *p 
  				return ICOM_SYS;
  			}
  
 -			usbd->nconfig = nconfig;
--			
 +			usbd->nconfig = nconfig = udd.bNumConfigurations;
-+
+ 			
 +			/* Read the configuration descriptors looking for the first configuration, first interface, */
 +			/* and extract the number of end points for each configuration */
 +			for (configix = 0; configix < nconfig; configix++) {
@@ -117,24 +116,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			/* Found a known instrument ? */
  			if ((itype = inst_usb_match(vid, pid, nep)) != instUnknown) {
  				char pname[400], *cp;
--		
-+
- 				a1logd(p->log, 2, "usb_get_paths: found instrument vid 0x%04x, pid 0x%04x\n",vid,pid);
--		
-+
- 				/* Create the base device path */
- 				dpath = g.gl_pathv[i];
- #if defined(__FreeBSD__)
-@@ -175,7 +228,7 @@ icompaths *p 
- 					globfree(&g);
- 					return ICOM_SYS;
- 				}
--		
-+
- 				/* Add the path and ep info to the list */
- 				if ((rv = p->add_usb(p, pname, vid, pid, nep, usbd, itype)) != ICOM_OK)
- 					return rv;
-@@ -309,11 +362,9 @@ char **pnames		/* List of process names 
+@@ -309,7 +362,6 @@ char **pnames		/* List of process names 
  	if (p->is_open)
  		p->close_port(p);
  
@@ -142,11 +124,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	/* Make sure the port is open */
  	if (!p->is_open) {
  		int rv, i, iface;
--		kkill_nproc_ctx *kpc = NULL;
- 
- 		if (config != 1) {
- 			/* Nothing currently needs it, so we haven't implemented it yet... */
-@@ -344,24 +395,26 @@ char **pnames		/* List of process names 
+@@ -344,12 +396,16 @@ char **pnames		/* List of process names 
  			p->cconfig = 1;
  
  			if (p->cconfig != config) {
@@ -163,12 +141,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			}
  
  			/* We're done */
- 			break;
- 		}
- 
--		if (kpc != NULL)
--			kpc->del(kpc); 
--
+@@ -362,6 +418,7 @@ char **pnames		/* List of process names 
  		/* Claim all the interfaces */
  		for (iface = 0; iface < p->nifce; iface++) {
  
@@ -176,7 +149,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			if ((rv = ioctl(p->usbd->fd, USBDEVFS_CLAIMINTERFACE, &iface)) < 0) {
  				struct usbdevfs_getdriver getd;
  				getd.interface = iface;
-@@ -386,6 +439,30 @@ char **pnames		/* List of process names 
+@@ -386,6 +443,30 @@ char **pnames		/* List of process names 
  					return ICOM_SYS;
  				}
  			}
@@ -207,7 +180,7 @@ Attempt to make actually function with NetBSD ugen(4).
  		}
  
  		/* Clear any errors. */
-@@ -407,25 +484,26 @@ char **pnames		/* List of process names 
+@@ -407,6 +488,7 @@ char **pnames		/* List of process names 
  			p->rd_qa = 8;
  		a1logd(p->log, 8, "usb_open_port: 'serial' read quanta = packet size = %d\n",p->rd_qa);
  
@@ -215,14 +188,7 @@ Attempt to make actually function with NetBSD ugen(4).
  		/* Start the reaper thread to handle URB completions */
  		if ((rv = pipe(p->usbd->sd_pipe)) < 0) {
  			a1loge(p->log, ICOM_SYS, "usb_open_port: creat pipe failed with %d\n",rv);
- 			return ICOM_SYS;
- 		}
- 		pthread_mutex_init(&p->usbd->lock, NULL);
--		
-+
- 		p->usbd->running = 1;
- 		if ((rv = pthread_create(&p->usbd->thread, NULL, urb_reaper, (void*)p)) < 0) {
- 			p->usbd->running = 0;
+@@ -420,12 +502,12 @@ char **pnames		/* List of process names 
  			a1loge(p->log, ICOM_SYS, "usb_open_port: creating urb reaper thread failed with %s\n",rv);
  			return ICOM_SYS;
  		}
@@ -236,30 +202,3 @@ Attempt to make actually function with NetBSD ugen(4).
  	/* Install the cleanup signal handlers, and add to our cleanup list */
  	usb_install_signal_handlers(p);
  
-@@ -525,7 +603,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
- 			req.nourbs--;
- 		}
- 	}
--	
-+
- 	if (cancelt != NULL) {
- 		amutex_lock(cancelt->cmtx);
- 		cancelt->hcancel = (void *)&req;
-@@ -549,7 +627,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
- 			ts.tv_nsec -= 1000000000L;
- 			ts.tv_sec++;
- 		}
--		
-+
- 		for(;;) {	/* Ignore spurious wakeups */
- 			if ((rv = pthread_cond_timedwait(&req.cond, &req.lock, &ts)) != 0) {
- 				if (rv != ETIMEDOUT) {
-@@ -568,7 +646,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
- 					/* Since cancelling failed, we can't wait for them to be reaped */
- 					goto done;
- 				}
--	
-+
- 				/* Wait for the cancelled URB's to be reaped */
- 				for (;req.nourbs > 0;) {	/* Ignore spurious wakeups */
- 					if ((rv = pthread_cond_wait(&req.cond, &req.lock)) != 0) {
