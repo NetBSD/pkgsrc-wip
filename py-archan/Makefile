@@ -3,7 +3,7 @@
 DISTNAME=	archan-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/4e/7b/44f6cd6c415dcd4177974ca43067d00680d4c69a4abbc6833f309cd5ce79/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/archan/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/Pawamoy/archan
