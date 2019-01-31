@@ -1,9 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	libxls-1.4.0
+DISTNAME=	libxls-1.5.0-rc0
+PKGNAME=	libxls-1.5.0rc0
 CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libxls/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v1.5.0-rc0
 
 MAINTAINER=	ik@sjmulder.nl
 HOMEPAGE=	https://github.com/libxls/libxls
