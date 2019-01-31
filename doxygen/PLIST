@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/doxygen
-man/man1/doxygen.1
+${PLIST.latex}man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
 ${PLIST.latex}share/doc/doxygen/html/arch.html
 ${PLIST.latex}share/doc/doxygen/html/archoverview.gif
