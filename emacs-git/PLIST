@@ -69,6 +69,7 @@ info/widget.info.gz
 info/wisent.info.gz
 info/woman.info.gz
 lib/systemd/user/emacs.service
+libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/emacs.pdmp
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/profile
@@ -81,7 +82,6 @@ man/man1/etags.1
 share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
-share/emacs/${PKGVERSION}/etc/CENSORSHIP
 share/emacs/${PKGVERSION}/etc/COPYING
 share/emacs/${PKGVERSION}/etc/DEBUG
 share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
@@ -90,16 +90,12 @@ share/emacs/${PKGVERSION}/etc/DOC
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
-share/emacs/${PKGVERSION}/etc/FTP
-share/emacs/${PKGVERSION}/etc/GNU
 share/emacs/${PKGVERSION}/etc/GNUS-NEWS
 share/emacs/${PKGVERSION}/etc/HELLO
 share/emacs/${PKGVERSION}/etc/HISTORY
 share/emacs/${PKGVERSION}/etc/JOKES
-share/emacs/${PKGVERSION}/etc/LINUX-GNU
 share/emacs/${PKGVERSION}/etc/MACHINES
 share/emacs/${PKGVERSION}/etc/MH-E-NEWS
-share/emacs/${PKGVERSION}/etc/MORE.STUFF
 share/emacs/${PKGVERSION}/etc/NEWS
 share/emacs/${PKGVERSION}/etc/NEWS.1-17
 share/emacs/${PKGVERSION}/etc/NEWS.18
@@ -113,14 +109,11 @@ share/emacs/${PKGVERSION}/etc/NEWS.25
 share/emacs/${PKGVERSION}/etc/NEWS.26
 share/emacs/${PKGVERSION}/etc/NEXTSTEP
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
-share/emacs/${PKGVERSION}/etc/ORDERS
 share/emacs/${PKGVERSION}/etc/ORG-NEWS
 share/emacs/${PKGVERSION}/etc/PROBLEMS
 share/emacs/${PKGVERSION}/etc/README
 share/emacs/${PKGVERSION}/etc/TERMS
-share/emacs/${PKGVERSION}/etc/THE-GNU-PROJECT
 share/emacs/${PKGVERSION}/etc/TODO
-share/emacs/${PKGVERSION}/etc/WHY-FREE
 share/emacs/${PKGVERSION}/etc/charsets/8859-10.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-11.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-13.map

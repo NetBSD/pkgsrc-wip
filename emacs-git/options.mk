@@ -1,24 +1,26 @@
-# $NetBSD: options.mk,v 1.35 2015/04/24 01:23:24 makoto Exp $
-#
+# $NetBSD: options.mk,v 1.3 2018/07/15 15:21:28 mef Exp $
 
 ### Set options
-PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
-PKG_SUPPORTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml
+PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
+PKG_SUPPORTED_OPTIONS=			dbus gconf gnutls imagemagick svg xaw3d xft2 xml
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
 PKG_OPTIONS_GROUP.window-system=	x11 nextstep
+
 # tempted to have 'nox11' :-)
 
-PKG_OPTIONS_OPTIONAL_GROUPS+=	toolkit
-#  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk, gtk2,
+PKG_OPTIONS_OPTIONAL_GROUPS+=		toolkit
+PKG_SUGGESTED_OPTIONS.Darwin=		nextstep
+#  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or  gtk2,
 #                          gtk3, lucid or athena, motif, no)
 # gtk in next line implies gtk2, xaw = athena = lucid
-PKG_OPTIONS_GROUP.toolkit=	gtk motif xaw lucid
+PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw lucid
+# gtk2 and gtk has the same effect
 # gtk is default in the logic below (even not included in SUGGESTED_=
-# gconf, gtk and xft2 will be ingnored for nextstep even shown as selected.
+# gconf, gtk and xft2 will be ignored for nextstep even shown as selected.
 
-PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 svg xaw3d xft2 xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -27,7 +29,7 @@ PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml x11
 ### Support D-BUS
 ###
 .if !empty(PKG_OPTIONS:Mdbus)
-.include "../../sysutils/dbus/buildlink3.mk"
+.  include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-dbus
 .endif
@@ -36,11 +38,11 @@ CONFIGURE_ARGS+=	--without-dbus
 ### Support XML2
 ###
 .if !empty(PKG_OPTIONS:Mxml)
-USE_TOOLS+=             pkg-config
+USE_TOOLS+=		pkg-config
 BUILDLINK_API_DEPENDS.libxml2+= libxml2>=2.6.17
 .include "../../textproc/libxml2/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --without-xml2
+CONFIGURE_ARGS+=	--without-xml2
 .endif
 
 ###
@@ -48,17 +50,9 @@ CONFIGURE_ARGS+=        --without-xml2
 ###
 .if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/p11-kit/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-gnutls
-.endif
-
-###
-### Support ImageMagick
-###
-.if !empty(PKG_OPTIONS:Mimagemagick)
-.include "../../graphics/ImageMagick/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-imagemagick
 .endif
 
 ###
@@ -87,6 +81,16 @@ CONFIGURE_ARGS+=	--without-gconf
 .  endif
 
 ###
+### Support ImageMagick (not recognized for now, sorry)
+###
+.  if !empty(PKG_OPTIONS:Mimagemagick)
+.include "../../graphics/ImageMagick/buildlink3.mk"
+# DEPENDS+=	py[0-9]*-wand-[0-9]*:../../graphics/py-wand
+.  else
+CONFIGURE_ARGS+=	--without-imagemagick
+.  endif
+
+###
 ### Support Xaw3d (This is only valid with Lucid Toolkit)
 ###
 .  if !empty(PKG_OPTIONS:Mxaw3d)
@@ -110,14 +114,14 @@ CONFIGURE_ARGS+=	--without-xft --without-libotf --without-m17n-flt
 ### Toolkit selection
 ###
 .  if (empty(PKG_OPTIONS:Mxaw) && empty(PKG_OPTIONS:Mlucid) &&  empty(PKG_OPTIONS:Mmotif))
-# defaults to gtk
+# defaults to gtk3
+USE_TOOLS+=		pkg-config
+.include "../../x11/gtk3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-x-toolkit=gtk3
+.  elif !empty(PKG_OPTIONS:Mgtk2) || !empty(PKG_OPTIONS:Mgtk)
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=gtk
-.  elif !empty(PKG_OPTIONS:Mgtk)
-USE_TOOLS+=		pkg-config
-.include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=gtk
+CONFIGURE_ARGS+=	--with-x-toolkit=gtk2
 .  elif !empty(PKG_OPTIONS:Mxaw)
 .include "../../mk/xaw.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
@@ -190,7 +194,7 @@ CONFIGURE_ARGS+=	--without-png
 # End:
 
 ### How To Test (or the possible combinations) -- watch the result of 'make configure'
-# Set PKG_OPTIONS.emacs_current=	result
+# Set PKG_OPTIONS.emacs=	result
 # ----------		----------------------------------------------------------
 # (none)		.. x11 gtk    svg gconf       xft2 dbus gnutls imagemagick
 

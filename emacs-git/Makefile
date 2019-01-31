@@ -46,6 +46,7 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION_NOREV}
+CHECK_WRKREF_SKIP+=	libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/emacs.pdmp
 
 PRINT_PLIST_AWK+=	{ gsub(/${PKGVERSION_NOREV}/, "$${PKGVERSION}"); \
 			gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); \
