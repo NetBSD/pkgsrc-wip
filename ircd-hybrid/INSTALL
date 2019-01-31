@@ -6,10 +6,7 @@ POST-INSTALL)
 
 	for f in ${PKG_SYSCONFDIR}/dline.conf ${PKG_SYSCONFDIR}/kline.conf \
 		${PKG_SYSCONFDIR}/xline.conf ${PKG_SYSCONFDIR}/nresv.conf \
-		${PKG_SYSCONFDIR}/cresv.conf ${PKG_SYSCONFDIR}/ircd.motd \
-		@VARBASE@/log/ircd-hybrid/logs/userlog \
-		@VARBASE@/log/ircd-hybrid/logs/operlog \
-		@VARBASE@/log/ircd-hybrid/logs/foperlog
+		${PKG_SYSCONFDIR}/cresv.conf ${PKG_SYSCONFDIR}/ircd.motd
 	do
 		${TOUCH} ${f}
 		${CHOWN} @IRCD_HYBRID_IRC_USER@ ${f}
