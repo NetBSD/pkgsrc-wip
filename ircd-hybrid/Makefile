@@ -22,7 +22,7 @@ RCD_SCRIPTS=		ircd-hybrid
 
 DOCDIR=			share/doc/ircd-hybrid
 
-INSTALLATION_DIRS+=	${DOCDIR}/doc
+INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/doc ${DOCDIR}/doc/technical
 
 OWN_DIRS_PERMS+=	${VARBASE}/log/ircd-hybrid \
 			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 0770
@@ -74,7 +74,6 @@ post-install:
 
 	${INSTALL_DATA} ${WRKSRC}/doc/*.conf ${DESTDIR}${PREFIX}/${DOCDIR}/doc
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/${DOCDIR}/doc
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}/doc/technical
 	${INSTALL_DATA} ${WRKSRC}/doc/technical/*.txt ${DESTDIR}${PREFIX}/${DOCDIR}/doc/technical
 
 	${MV} ${DESTDIR}${PREFIX}/bin/mkpasswd \
