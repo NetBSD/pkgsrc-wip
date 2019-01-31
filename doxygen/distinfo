@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (doxygen-1.8.15.src.tar.gz) = bb5d7456a7ff63768e8755762860d64debd3a4ff
-RMD160 (doxygen-1.8.15.src.tar.gz) = c9f14928c77410d2f71568d4602a489d8ab889d9
-SHA512 (doxygen-1.8.15.src.tar.gz) = a5512e78be66c1591d8ec7e284d5d25c92a97218c79e6fed3c538c723a8dfef4ff7085970bf271a6b639e907157cd4df9fb55d3c975f8d3302fb1012a4d92079
-Size (doxygen-1.8.15.src.tar.gz) = 5097791 bytes
-SHA1 (patch-ac) = 87c68a2ce598c10d90d775764f4c05739eb51435
-SHA1 (patch-ah) = c1a7f35fe2adcfd094c3ba0f81fee47a027bcf82
