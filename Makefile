@@ -3017,6 +3017,7 @@ SUBDIR+=	py-aopython
 SUBDIR+=	py-applpy
 SUBDIR+=	py-aqopa
 SUBDIR+=	py-arabic
+SUBDIR+=	py-archan
 SUBDIR+=	py-ars
 SUBDIR+=	py-arxiv2bib
 SUBDIR+=	py-arxvier
