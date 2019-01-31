@@ -1,2 +1,4 @@
-- Double-check if *.conf files (and maybe other files) in INSTALL still need to
-  be created
+- INSTALL can be probably removed: all the files created are no longer needed
+  (only ircd.motd is still honored, but not needeed). Apart that, after
+  deinstalling ircd-hybrid all those files still resides on ${PKG_SYSCONFDIR}
+  also if they were not adjusted.
