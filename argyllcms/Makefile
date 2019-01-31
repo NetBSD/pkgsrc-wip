@@ -25,17 +25,19 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 BUILD_DEPENDS+=	jam>=2.5.2:../../devel/jam
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} ${MAKE_ENV} jam -q -fJambase ${_MAKE_JOBS}
+	cd ${WRKSRC} && ${SETENV} DESTDIR=${DESTDIR} PREFIX=${PREFIX} \
+		REFSUBDIR=share/argyll/ref \
+		${MAKE_ENV} jam -q -fJambase ${_MAKE_JOBS}
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} DESTDIR=${DESTDIR} ${MAKE_ENV} \
+	cd ${WRKSRC} && ${SETENV} DESTDIR=${DESTDIR} PREFIX=${PREFIX} \
 		REFSUBDIR=share/argyll/ref \
-		jam -q -fJambase ${_MAKE_JOBS} install
+		${MAKE_ENV} jam -q -fJambase ${_MAKE_JOBS} install
 	${MV} ${DESTDIR}${PREFIX}/bin/License.txt \
 		${DESTDIR}${PREFIX}/share/argyll/
 
-post-install:
-	${STRIP} ${DESTDIR}${PREFIX}/bin/*
+#post-install:
+#	${STRIP} ${DESTDIR}${PREFIX}/bin/*
 
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
