@@ -20,10 +20,9 @@ BUILD_DEFS+=	VARBASE IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
 PKG_SYSCONFSUBDIR=	ircd-hybrid
 RCD_SCRIPTS=		ircd-hybrid
 
-HYBRID_DOC_PLACE=	share/doc/ircd-hybrid
-HYBRID_DOC=		${PREFIX}/${HYBRID_DOC_PLACE}
+DOCDIR=			share/doc/ircd-hybrid
 
-INSTALLATION_DIRS+=	${HYBRID_DOC_PLACE}/doc
+INSTALLATION_DIRS+=	${DOCDIR}/doc
 
 OWN_DIRS_PERMS+=	${VARBASE}/log/ircd-hybrid \
 			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 0770
@@ -68,15 +67,15 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/ircd-hybrid
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${HYBRID_DOC}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
-		${DESTDIR}${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
+		${DESTDIR}${PREFIX}/${DOCDIR}/README.ircd-hybrid-mkpasswd
 
-	${INSTALL_DATA} ${WRKSRC}/doc/*.conf ${DESTDIR}${HYBRID_DOC}/doc
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${HYBRID_DOC}/doc
-	${INSTALL_DATA_DIR} ${DESTDIR}${HYBRID_DOC}/doc/technical
-	${INSTALL_DATA} ${WRKSRC}/doc/technical/*.txt ${DESTDIR}${HYBRID_DOC}/doc/technical
+	${INSTALL_DATA} ${WRKSRC}/doc/*.conf ${DESTDIR}${PREFIX}/${DOCDIR}/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/${DOCDIR}/doc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}/doc/technical
+	${INSTALL_DATA} ${WRKSRC}/doc/technical/*.txt ${DESTDIR}${PREFIX}/${DOCDIR}/doc/technical
 
 	${MV} ${DESTDIR}${PREFIX}/bin/mkpasswd \
 		${DESTDIR}${PREFIX}/bin/ircd-hybrid-mkpasswd
