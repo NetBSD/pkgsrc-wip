@@ -6,4 +6,5 @@ SHA512 (Argyll_V2.0.1_src.zip) = d0755d1837fa000278f390d9d101c1e9de3f2e294583c8b
 Size (Argyll_V2.0.1_src.zip) = 13606682 bytes
 SHA1 (patch-Jamtop) = 397fb2370b444a4c28d2d617519d626eb7eee1a5
 SHA1 (patch-spectro_hidio.c) = b0190685bc8a7a4b0f2025562f143eb1887971dd
+SHA1 (patch-spectro_icoms__ux.c) = 729883ffb5c7060a9b87b23f8eb79fd6458e13f4
 SHA1 (patch-spectro_usbio.c) = 84570916fa25b14f27c607cba188d3836b5505e3
