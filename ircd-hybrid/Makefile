@@ -47,7 +47,7 @@ PKG_GROUPS_VARS+=	IRCD_HYBRID_IRC_GROUP
 SUBST_CLASSES+=		mpaths
 SUBST_MESSAGE.mpaths=	Fixing hardcoded paths in ircd(8)
 SUBST_STAGE.mpaths=	pre-configure
-SUBST_FILES.mpaths=	doc/ircd.8 doc/reference.conf
+SUBST_FILES.mpaths=	doc/ircd.8
 SUBST_SED.mpaths+=	-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g"
 SUBST_SED.mpaths+=	-e "s|/var/log|${VARBASE}/log/ircd-hybrid|g"
 
