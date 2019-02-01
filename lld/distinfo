@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2016/09/19 22:32:41 kamil Exp $
-
-SHA1 (lld-4.0.0.src.tar.xz) = 2ec36514d742df3e1151814cba4546cdda597fd8
-RMD160 (lld-4.0.0.src.tar.xz) = 71a13e211501af16798e5fc02a0d9cb59af34ea8
-SHA512 (lld-4.0.0.src.tar.xz) = 66b2c9cc57f5e94ad7e7da1b1bcc08cbbaee1b55c6efa64b2424b9d8776c70b842c2a31c188a99b447be6a8621ad1b1e70573bbfcf5d6b1aa986b03b3b3350f3
-Size (lld-4.0.0.src.tar.xz) = 592728 bytes
