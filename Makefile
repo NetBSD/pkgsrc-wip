@@ -1995,7 +1995,6 @@ SUBDIR+=	litecoin
 SUBDIR+=	litehtml
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
-SUBDIR+=	lld
 SUBDIR+=	lldb-git
 SUBDIR+=	lldb-netbsd
 SUBDIR+=	llgo-git
