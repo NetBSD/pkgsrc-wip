@@ -2717,6 +2717,7 @@ SUBDIR+=	pbbam
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbcopper
 SUBDIR+=	pbseqan
+SUBDIR+=	pbzx
 SUBDIR+=	pcmanfm-qt
 SUBDIR+=	pcp
 SUBDIR+=	pcsx
