@@ -1,0 +1,22 @@
+To begin using z.lua, put something like the following in
+either ~/.profile or ~/.bashrc:
+
+if [ -e /usr/pkg/bin/z.lua ]; then
+	eval "$(lua /usr/pkg/bin/z.lua --eval posix)"
+fi
+
+Then, as z.lua learns your habits, you may use the following
+command to quickly jump around your filesystem:
+    $ z SOME_DIRECTORY
+
+z.lua also has explicit support for other shells, so
+you may want to consider replacing the `--eval posix'
+above with:
+
+    z.lua --eval bash
+	    -or-
+    z.lua --eval fish
+	    -or-
+    z.lua --eval zsh
+
+See /usr/pkg/share/doc/zlua/README.md for more details.

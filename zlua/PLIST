@@ -2,5 +2,5 @@
 bin/z.lua
 share/doc/zlua/README.cn.md
 share/doc/zlua/README.md
+share/zlua/omz.plugin.zsh
 share/zlua/z.cmd
-share/zlua/z.lua.plugin.zsh

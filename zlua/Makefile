@@ -1,11 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	zlua-0.0.1
+PKGNAME=	zlua-0.0.0.20190131
 DISTNAME=	z.lua-${PKGVERSION_NOREV}
 CATEGORIES=		shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skywind3000/}
 GITHUB_PROJECT=	z.lua
-GITHUB_TAG=	ab8277f0cd1a0e6c3ef5dc306dec3f8f6718b664
+GITHUB_TAG=	9fe0fc67a002ce122b10e85e047ef136a4544096
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/skywind3000/z.lua
@@ -25,7 +25,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/z.lua ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/z.lua.plugin.zsh ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/omz.plugin.zsh ${DESTDIR}${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.cn.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
@@ -33,5 +33,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/z.cmd ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../lang/lua/application.mk"
-#.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

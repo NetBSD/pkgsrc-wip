@@ -3,9 +3,5 @@
   Using this name for now, until we can evaluate
   whether such a name will play nice with pkgsrc.
 
-- Upstream has no releases, so the version of 0.0.1 was
-  made up.
-
 - Figure out a better places to install z.lua.plugin.zsh
   for zsh users.
-
