@@ -1,1 +1,7 @@
-libosmocore
+This package contains a set of C-language libraries that form the core
+infrastructure of many Osmocom Open Source Mobile Communications projects.
+
+Historically, a lot of this code was developed as part of the OpenBSC project,
+but which are of a more generic nature and thus useful to (at least) other
+programs that we develop in the sphere of Free Software / Open Source mobile
+communications.

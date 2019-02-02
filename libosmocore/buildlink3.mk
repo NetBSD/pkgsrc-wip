@@ -2,12 +2,14 @@
 
 BUILDLINK_TREE+=	libosmocore
 
-.if !defined(DEFORAOS_LIBSYSTEM_BUILDLINK3_MK)
-DEFORAOS_LIBSYSTEM_BUILDLINK3_MK:=
+.if !defined(LIBOSMOCORE_BUILDLINK3_MK)
+LIBOSMOCORE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libosmocore+=	libosmocore>=0.1.30
+BUILDLINK_API_DEPENDS.libosmocore+=	libosmocore>=1.0.1
 BUILDLINK_PKGSRCDIR.libosmocore?=	../../wip/libosmocore
 
-.endif	# DEFORAOS_LIBSYSTEM_BUILDLINK3_MK
+.include "../../devel/talloc/buildlink3.mk"
+
+.endif	# LIBOSMOCORE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libosmocore

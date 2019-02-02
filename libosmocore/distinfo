@@ -1,10 +1,11 @@
 $NetBSD: distinfo,v 1.3 2011/08/03 02:34:07 khorben Exp $
 
-SHA1 (libosmocore-0.1.30.tar.bz2) = 9270be144a43c07160c58ba5bd67f500c6150129
-RMD160 (libosmocore-0.1.30.tar.bz2) = 7e6c54d3b7a03403f28617555b526f59f7ddd81c
-Size (libosmocore-0.1.30.tar.bz2) = 350305 bytes
-SHA1 (patch-src_Makefile.am) = 3e909d95dd130e9ebd74a5fe0fa2c84933cb243b
-SHA1 (patch-src_Makefile.in) = 9abd36d798f4192abee8bd2c78e435187979fc39
-SHA1 (patch-src_gsm__utils.c) = 9705162ddf34e00d07a2e34df704310741443055
-SHA1 (patch-src_msgfile.c) = 64b14bced24c63731e17bf5bac3dc0f2d6edc44b
-SHA1 (patch-src_talloc.c) = 37d33156f37f5a6854cab54b4ae10003a0ce750d
+SHA1 (libosmocore-1.0.1.tar.gz) = c41da6f716f6dd31bbc472575e7e2d16e07bed18
+RMD160 (libosmocore-1.0.1.tar.gz) = e53f6fdef98687afc375f81bee4dafb1189a621b
+SHA512 (libosmocore-1.0.1.tar.gz) = 15b83cedc8cd01dbd5ac7b6b54685d527f5c94a5c77896c0ca52b2d53c2066d8421166de5fb25f0355c1f372f629a4ceba39c11a80d4582aca1d696fd1bba5c4
+Size (libosmocore-1.0.1.tar.gz) = 1120580 bytes
+SHA1 (patch-include_osmocom_core_stats.h) = 11f19b2519ce7292a95b271373b3cade8a2c45c1
+SHA1 (patch-src_gb_gprs__ns__frgre.c) = b5ac91927201d5dcdeb343d069cae2074ae84cc9
+SHA1 (patch-src_gsm_gsm__utils.c) = 95f66775d011b8320aa03e03391544fcec856cc8
+SHA1 (patch-src_macaddr.c) = ef10e2c33c68de192d972c99e07056b5433de1e5
+SHA1 (patch-src_timer__clockgettime.c) = 6680a006fc4509ec44cef2945751416bd5c328af
