@@ -1,11 +1,2 @@
 Still needs a lot of work.
-Build fails due:
-
-Scanning dependencies of target plugin_odbc4pl
-[ 30%] Building C object packages/odbc/CMakeFiles/plugin_odbc4pl.dir/odbc.c.o
-.../pkgsrc/wip/swi-prolog-packages/work/swipl-8.0.1/packages/odbc/odbc.c:56:17: fatal error: sql.h: No such file or directory
- #include <sql.h>
-                 ^
-compilation terminated.
---- packages/odbc/CMakeFiles/plugin_odbc4pl.dir/odbc.c.o ---
-*** [packages/odbc/CMakeFiles/plugin_odbc4pl.dir/odbc.c.o] Error code 1
+`install' phase needs to be tested and adjusted.
