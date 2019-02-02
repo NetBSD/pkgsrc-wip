@@ -1139,7 +1139,6 @@ SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
-SUBDIR+=	gnurl
 SUBDIR+=	go-backoff
 SUBDIR+=	go-collectd
 SUBDIR+=	go-dotenv
