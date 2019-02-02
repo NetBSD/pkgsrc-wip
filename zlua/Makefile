@@ -9,7 +9,7 @@ GITHUB_TAG=	9fe0fc67a002ce122b10e85e047ef136a4544096
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/skywind3000/z.lua
-COMMENT=	Tool which helps you navigate faster by learning your habits
+COMMENT=	Tool that lets you quickly jump around your filesystem
 LICENSE=	mit
 
 # Upstream has no releases, so we don't use ${DISTNAME} here.
