@@ -4896,6 +4896,7 @@ SUBDIR+=	zinf
 SUBDIR+=	zip-devel
 SUBDIR+=	ziparchive
 SUBDIR+=	zipios
+SUBDIR+=	zlua
 SUBDIR+=	zmap
 SUBDIR+=	zvbi
 

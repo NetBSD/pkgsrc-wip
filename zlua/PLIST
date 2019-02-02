@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/z.lua
+share/doc/zlua/README.cn.md
+share/doc/zlua/README.md
+share/zlua/z.cmd
+share/zlua/z.lua.plugin.zsh

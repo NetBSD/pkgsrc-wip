@@ -1,0 +1,19 @@
+z.lua is a faster way to navigate your filesystem. It tracks your most used
+directories, based on 'frecency'. After a short learning phase, z will take
+you to the most 'frecent' directory that matches ALL of the regexes given
+on the command line, in order.
+
+For example, z foo bar would match /foo/bar but not /bar/foo.
+
+Features:
+
+- 10x times faster than fasd and autojump
+- 3x times faster than z.sh
+- Available for posix shells: bash, zsh, dash, sh, ash, busybox and etc.
+- Supports Windows cmd (with clink) and cmder
+- Supports fish shell (2.4.0 +)
+- Self contained, no dependence on awk/gawk
+- Compatible with lua 5.1, 5.2 and 5.3+
+- New "$_ZL_ADD_ONCE" to allow updating database only if $PWD changed.
+- Enhanced matching mode with "$_ZL_MATCH_MODE" set to 1.
+- Interactive selection enables you to choose where to go before cd.
