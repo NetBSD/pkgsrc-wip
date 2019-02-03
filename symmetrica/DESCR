@@ -1,4 +1,4 @@
-Symmetrica is a collection of routines, written in the programming language
-C, through which the user can readily write his/her own programs. Routines
-which manipulate many types of mathematical objects are available. Their use
-is facilitated by Symmetrica's object oriented style.
+Symmetrica is a library for combinatorics. It has support for the
+representation theory of the symmetric group and related groups, combinatorics
+of tableaux, symmetric functions and polynomials, Schubert polynomials,
+and the representation theory of Hecke algebras of type A_n.

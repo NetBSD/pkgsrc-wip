@@ -1,0 +1,25 @@
+@comment $NetBSD$
+bin/cysignals-CSI${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cysignals/__init__.py
+${PYSITELIB}/cysignals/__init__.pyc
+${PYSITELIB}/cysignals/__init__.pyo
+${PYSITELIB}/cysignals/alarm.so
+${PYSITELIB}/cysignals/cysignals_config.h
+${PYSITELIB}/cysignals/macros.h
+${PYSITELIB}/cysignals/memory.pxd
+${PYSITELIB}/cysignals/memory.pxi
+${PYSITELIB}/cysignals/pselect.so
+${PYSITELIB}/cysignals/pxi_warning.h
+${PYSITELIB}/cysignals/pysignals.pxd
+${PYSITELIB}/cysignals/pysignals.so
+${PYSITELIB}/cysignals/signals.pxd
+${PYSITELIB}/cysignals/signals.pxi
+${PYSITELIB}/cysignals/signals.so
+${PYSITELIB}/cysignals/struct_signals.h
+${PYSITELIB}/cysignals/tests.so
+share/cysignals/cysignals-CSI-helper.py
