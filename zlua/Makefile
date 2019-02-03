@@ -23,7 +23,7 @@ INSTALLATION_DIRS+=		share/doc/${PKGBASE}
 
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/z.lua ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/z.lua ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/omz.plugin.zsh ${DESTDIR}${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.cn.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
