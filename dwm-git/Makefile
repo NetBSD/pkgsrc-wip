@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2018/03/12 11:17:42 wiz Exp $
 
-DISTNAME=	dwm-6.1
+DISTNAME=	dwm-6.2
 CATEGORIES=	wm
 MASTER_SITES=	http://dl.suckless.org/dwm/
 
