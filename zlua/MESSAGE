@@ -4,7 +4,7 @@ $NetBSD$
 To begin using z.lua, put something like the following in
 either ~/.profile or ~/.bashrc:
 
-if [ -e /usr/pkg/bin/z.lua ]; then
+if [ -e ${PREFIX}/bin/z.lua ]; then
     eval "$(lua ${PREFIX}/bin/z.lua --init posix)"
 fi
 
