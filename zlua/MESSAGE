@@ -5,12 +5,12 @@ To begin using z.lua, put something like the following in
 either ~/.profile or ~/.bashrc:
 
 if [ -e /usr/pkg/bin/z.lua ]; then
-	eval "$(lua /usr/pkg/bin/z.lua --init posix)"
+    eval "$(lua ${PREFIX}/bin/z.lua --init posix)"
 fi
 
 Then, as z.lua learns your habits, you may use the following
 command to quickly jump around your filesystem:
-    $ z SOME_DIRECTORY
+    z SOME_DIRECTORY
 
 z.lua also has explicit support for other shells, so
 you may want to consider replacing the `--init posix'
@@ -22,6 +22,6 @@ above with:
 	    -or-
     z.lua --init zsh
 
-See /usr/pkg/share/doc/zlua/README.md for more details.
+See ${PREFIX}/share/doc/zlua/README.md for more details.
 
 ===========================================================================

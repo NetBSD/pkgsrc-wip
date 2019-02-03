@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	zlua-0.0.0.20190131
-DISTNAME=	z.lua-${PKGVERSION_NOREV}
+DISTNAME=	z.lua-0.0.0.20190131
+PKGNAME=	${DISTNAME:S/z.lua/zlua/}
 CATEGORIES=		shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skywind3000/}
 GITHUB_PROJECT=	z.lua
@@ -12,16 +12,15 @@ HOMEPAGE=	https://github.com/skywind3000/z.lua
 COMMENT=	Tool that lets you quickly jump around your filesystem
 LICENSE=	mit
 
+NO_BUILD=	yes
+
 # Upstream has no releases, so we don't use ${DISTNAME} here.
-WRKSRC=	${WRKDIR}/z.lua-${GITHUB_TAG}
+WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 INSTALLATION_DIRS+=		bin
 INSTALLATION_DIRS+=		share/${PKGBASE}
 INSTALLATION_DIRS+=		share/doc/${PKGBASE}
 
-
-do-build:
-	# do nothing
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/z.lua ${DESTDIR}${PREFIX}/bin
