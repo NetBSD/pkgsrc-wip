@@ -326,6 +326,7 @@ go112/misc/cgo/test/issue27340/a.go
 go112/misc/cgo/test/issue28545.go
 go112/misc/cgo/test/issue28772.go
 go112/misc/cgo/test/issue28896.go
+go112/misc/cgo/test/issue29383.go
 go112/misc/cgo/test/issue3250.go
 go112/misc/cgo/test/issue3250w.go
 go112/misc/cgo/test/issue3261.go
@@ -2522,6 +2523,7 @@ go112/src/cmd/go/testdata/script/build_cache_output.txt
 go112/src/cmd/go/testdata/script/build_nocache.txt
 go112/src/cmd/go/testdata/script/build_relative_pkgdir.txt
 go112/src/cmd/go/testdata/script/build_relative_tmpdir.txt
+go112/src/cmd/go/testdata/script/build_runtime_gcflags.txt
 go112/src/cmd/go/testdata/script/cache_unix.txt
 go112/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go112/src/cmd/go/testdata/script/cover_atomic_pkgall.txt
@@ -3391,6 +3393,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/asm_dragonfly_amd64.s
 go112/src/cmd/vendor/golang.org/x/sys/unix/asm_freebsd_386.s
 go112/src/cmd/vendor/golang.org/x/sys/unix/asm_freebsd_amd64.s
 go112/src/cmd/vendor/golang.org/x/sys/unix/asm_freebsd_arm.s
+go112/src/cmd/vendor/golang.org/x/sys/unix/asm_freebsd_arm64.s
 go112/src/cmd/vendor/golang.org/x/sys/unix/asm_linux_386.s
 go112/src/cmd/vendor/golang.org/x/sys/unix/asm_linux_amd64.s
 go112/src/cmd/vendor/golang.org/x/sys/unix/asm_linux_arm.s
@@ -3410,6 +3413,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/bluetooth_linux.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/cap_freebsd.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/constants.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/creds_test.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/darwin_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/dev_aix_ppc.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/dev_aix_ppc64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/dev_darwin.go
@@ -3430,6 +3434,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/example_exec_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/example_flock_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/export_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/fcntl.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/fcntl_darwin.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/fcntl_linux_32bit.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/gccgo.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/gccgo_c.c
@@ -3441,11 +3446,6 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/mksyscall_aix_ppc.pl
 go112/src/cmd/vendor/golang.org/x/sys/unix/mksyscall_aix_ppc64.pl
 go112/src/cmd/vendor/golang.org/x/sys/unix/mksyscall_solaris.pl
 go112/src/cmd/vendor/golang.org/x/sys/unix/mksysctl_openbsd.pl
-go112/src/cmd/vendor/golang.org/x/sys/unix/mksysnum_darwin.pl
-go112/src/cmd/vendor/golang.org/x/sys/unix/mksysnum_dragonfly.pl
-go112/src/cmd/vendor/golang.org/x/sys/unix/mksysnum_freebsd.pl
-go112/src/cmd/vendor/golang.org/x/sys/unix/mksysnum_netbsd.pl
-go112/src/cmd/vendor/golang.org/x/sys/unix/mksysnum_openbsd.pl
 go112/src/cmd/vendor/golang.org/x/sys/unix/mmap_unix_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/openbsd_pledge.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/openbsd_test.go
@@ -3453,6 +3453,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/openbsd_unveil.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/pagesize_unix.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/race.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/race0.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/sendfile_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/sockcmsg_linux.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/sockcmsg_unix.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/str.go
@@ -3468,6 +3469,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_darwin_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_darwin_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_darwin_arm.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_darwin_arm64.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_darwin_libSystem.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_darwin_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_dragonfly.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_dragonfly_amd64.go
@@ -3475,6 +3477,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_freebsd.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_freebsd_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_freebsd_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_freebsd_arm.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_freebsd_arm64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_freebsd_test.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/syscall_linux_386.go
@@ -3525,6 +3528,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_dragonfly_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_freebsd_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_freebsd_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_freebsd_arm.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_freebsd_arm64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_linux_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_linux_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zerrors_linux_arm.go
@@ -3553,14 +3557,23 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc64_gc.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc64_gccgo.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_386.1_11.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_386.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_386.s
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_amd64.1_11.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_amd64.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_amd64.s
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm.1_11.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm.s
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm64.1_11.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm64.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm64.s
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_dragonfly_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_freebsd_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_freebsd_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_freebsd_arm.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_freebsd_arm64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_linux_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_linux_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsyscall_linux_arm.go
@@ -3592,6 +3605,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_dragonfly_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_freebsd_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_freebsd_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_freebsd_arm.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_freebsd_arm64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_linux_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_linux_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/zsysnum_linux_arm.go
@@ -3621,6 +3635,7 @@ go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_dragonfly_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_freebsd_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_freebsd_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_freebsd_arm.go
+go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_freebsd_arm64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_linux_386.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_linux_amd64.go
 go112/src/cmd/vendor/golang.org/x/sys/unix/ztypes_linux_arm.go
@@ -6147,6 +6162,8 @@ go112/src/os/pipe_bsd.go
 go112/src/os/pipe_linux.go
 go112/src/os/pipe_test.go
 go112/src/os/proc.go
+go112/src/os/rawconn.go
+go112/src/os/rawconn_test.go
 go112/src/os/removeall_at.go
 go112/src/os/removeall_noat.go
 go112/src/os/removeall_test.go
@@ -6996,8 +7013,6 @@ go112/src/runtime/testdata/testprog/badtraceback.go
 go112/src/runtime/testdata/testprog/crash.go
 go112/src/runtime/testdata/testprog/deadlock.go
 go112/src/runtime/testdata/testprog/gc.go
-go112/src/runtime/testdata/testprog/gettid.go
-go112/src/runtime/testdata/testprog/gettid_none.go
 go112/src/runtime/testdata/testprog/lockosthread.go
 go112/src/runtime/testdata/testprog/main.go
 go112/src/runtime/testdata/testprog/map.go
@@ -7008,6 +7023,9 @@ go112/src/runtime/testdata/testprog/panicrace.go
 go112/src/runtime/testdata/testprog/signal.go
 go112/src/runtime/testdata/testprog/stringconcat.go
 go112/src/runtime/testdata/testprog/syscall_windows.go
+go112/src/runtime/testdata/testprog/syscalls.go
+go112/src/runtime/testdata/testprog/syscalls_linux.go
+go112/src/runtime/testdata/testprog/syscalls_none.go
 go112/src/runtime/testdata/testprog/timeprof.go
 go112/src/runtime/testdata/testprog/traceback_ancestors.go
 go112/src/runtime/testdata/testprogcgo/aprof.go
@@ -7681,6 +7699,7 @@ go112/test/codegen/slices.go
 go112/test/codegen/stack.go
 go112/test/codegen/strings.go
 go112/test/codegen/structs.go
+go112/test/codegen/zerosize.go
 go112/test/complit.go
 go112/test/complit1.go
 go112/test/compos.go
@@ -8793,6 +8812,7 @@ go112/test/fixedbugs/issue23609.go
 go112/test/fixedbugs/issue23664.go
 go112/test/fixedbugs/issue23719.go
 go112/test/fixedbugs/issue23732.go
+go112/test/fixedbugs/issue23734.go
 go112/test/fixedbugs/issue23780.go
 go112/test/fixedbugs/issue23781.go
 go112/test/fixedbugs/issue23812.go
@@ -8807,6 +8827,7 @@ go112/test/fixedbugs/issue24339.go
 go112/test/fixedbugs/issue24419.go
 go112/test/fixedbugs/issue24449.go
 go112/test/fixedbugs/issue24470.go
+go112/test/fixedbugs/issue24488.go
 go112/test/fixedbugs/issue24503.go
 go112/test/fixedbugs/issue24547.go
 go112/test/fixedbugs/issue24651a.go
@@ -8884,8 +8905,8 @@ go112/test/fixedbugs/issue27695b.go
 go112/test/fixedbugs/issue27695c.go
 go112/test/fixedbugs/issue27718.go
 go112/test/fixedbugs/issue27829.go
-go112/test/fixedbugs/issue27836.dir/?foo.go
-go112/test/fixedbugs/issue27836.dir/?main.go
+go112/test/fixedbugs/issue27836.dir/Äfoo.go
+go112/test/fixedbugs/issue27836.dir/Ämain.go
 go112/test/fixedbugs/issue27836.go
 go112/test/fixedbugs/issue27938.go
 go112/test/fixedbugs/issue27961.go
@@ -8908,9 +8929,17 @@ go112/test/fixedbugs/issue28797.go
 go112/test/fixedbugs/issue29013a.go
 go112/test/fixedbugs/issue29013b.go
 go112/test/fixedbugs/issue29190.go
+go112/test/fixedbugs/issue29215.go
 go112/test/fixedbugs/issue29220.go
 go112/test/fixedbugs/issue29264.go
 go112/test/fixedbugs/issue29304.go
+go112/test/fixedbugs/issue29329.go
+go112/test/fixedbugs/issue29350.go
+go112/test/fixedbugs/issue29362.go
+go112/test/fixedbugs/issue29362b.go
+go112/test/fixedbugs/issue29389.go
+go112/test/fixedbugs/issue29402.go
+go112/test/fixedbugs/issue29562.go
 go112/test/fixedbugs/issue3552.dir/one.go
 go112/test/fixedbugs/issue3552.dir/two.go
 go112/test/fixedbugs/issue3552.go

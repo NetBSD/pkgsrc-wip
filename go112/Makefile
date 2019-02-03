@@ -2,7 +2,7 @@
 
 .include "../../lang/go/version.mk"
 # TODO move to version.mk
-GO112_VERSION?=	1.12beta1
+GO112_VERSION?=	1.12beta2
 
 DISTNAME=	go${GO112_VERSION}.src
 PKGNAME=	go112-${GO112_VERSION}
