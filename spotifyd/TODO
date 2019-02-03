@@ -1,0 +1,88 @@
+## Todo
+
+See this post: https://atomicules.co.uk/2019/01/17/Building-Spotifyd-on-NetBSD.html
+
+1. This needs a fix in ../../lang/rust/cargo.mk:
+
+		SITES.${_crate}.crate+= -${MASTER_SITE_CRATESIO}${_crate:C/-[0-9.]+.*$//}/${_crate:C/^.*-([0-9.]+.*)$/\1/}/download
+
+
+2. Can't find pulse audio... which is bonkers as (like with OpenSSL) there is
+no trouble building _not_ using pkgsrc.
+
+		  = note: ld: cannot find -lpulse
+			  ld: cannot find -lpulse-simple
+			  /usr/pkgsrc/wip/spotifyd/work/spotifyd-0.2.3/target/release/deps/libtime-403082523a38bfa4.rlib(time-403082523a38bfa4.time1-7f65cbe6fc6d97ef342407eef4212401.rs.rcgu.o): In function `time::tzset::h1f1369ae06fc63c2':
+			  time1-7f65cbe6fc6d97ef342407eef4212401.rs:(.text._ZN4time5tzset17h1f1369ae06fc63c2E+0x1): warning: warning: reference to compatibility tzset(); include <time.h> for correct reference
+			  /usr/pkgsrc/wip/spotifyd/work/spotifyd-0.2.3/target/release/deps/libdaemonize-f515f1ae522b34a9.rlib(daemonize-f515f1ae522b34a9.daemonize4-baf8cda99fe9d40a4751f7655a62757b.rs.rcgu.o): In function `daemonize::get_user::h16032565d58358fc':
+			  daemonize4-baf8cda99fe9d40a4751f7655a62757b.rs:(.text._ZN9daemonize8get_user17h16032565d58358fcE+0xc3): warning: warning: reference to compatibility getpwnam(); include <pwd.h> to generate correct reference
+
+
+		error: aborting due to previous error
+
+		error: Could not compile `spotifyd`.
+
+	Have tried setting:
+
+		MAKE_ENV+= RUSTFLAGS='-C link-args=-Wl,-rpath,/usr/lib,-rpath,/usr/pkg/lib'
+
+	And also tried:
+
+		.include "../../audio/pulseaudio/buildlink3.mk"
+
+	No luck.
+
+3. Some of the CARGO_DEPENDS stuff I commented out, because it's not pulled
+from crates.io. Amazingly it still seems to build ok. Probably need to
+understand this.
+
+---
+
+## Done
+
+
+1. Need to somewhat manually create patches. mkpatches doesn't pick up changes
+from vendor directory. E.g, do `pkgdiff` in the directory and then edit patch
+to reference correct location like:
+
+		../vendor/daemonize-0.2.3/src/ffi.rs
+
+2. Figure out why it can't find OpenSSL. Building _normally_ works fine, so
+something to do with pkgsrc. Maybe need to set a variable somewhere.
+
+		error: failed to run custom build command for `openssl-sys v0.9.39`
+		process didn't exit successfully: `/usr/pkgsrc/wip/spotifyd/work/spotifyd-0.2.3/target/release/build/openssl-sys-db8d42dae8a7dcaf/build-script-main` (exit code: 101)
+		--- stdout
+		cargo:rerun-if-env-changed=X86_64_UNKNOWN_NETBSD_OPENSSL_LIB_DIR
+		cargo:rerun-if-env-changed=OPENSSL_LIB_DIR
+		cargo:rerun-if-env-changed=X86_64_UNKNOWN_NETBSD_OPENSSL_INCLUDE_DIR
+		cargo:rerun-if-env-changed=OPENSSL_INCLUDE_DIR
+		cargo:rerun-if-env-changed=X86_64_UNKNOWN_NETBSD_OPENSSL_DIR
+		cargo:rerun-if-env-changed=OPENSSL_DIR
+		run pkg_config fail: "Failed to run `\"\" \"--libs\" \"--cflags\" \"openssl\"`: No such file or directory (os error 2)"
+
+		--- stderr
+		thread 'main' panicked at '
+
+		Could not find directory of OpenSSL installation, and this `-sys` crate cannot
+		proceed without this knowledge. If OpenSSL is installed and this crate had
+		trouble finding it,  you can set the `OPENSSL_DIR` environment variable for the
+		compilation process.
+
+		Make sure you also have the development packages of openssl installed.
+		For example, `libssl-dev` on Ubuntu or `openssl-devel` on Fedora.
+
+		If you're in a situation where you think the directory *should* be found
+		automatically, please open a bug at https://github.com/sfackler/rust-openssl
+		and include information about your system as well as this message.
+
+		    $HOST = x86_64-unknown-netbsd
+		    $TARGET = x86_64-unknown-netbsd
+		    openssl-sys = 0.9.39
+
+	Needed to set these:
+
+		MAKE_ENV+= OPENSSL_INCLUDE_DIR=/usr/include/openssl
+		MAKE_ENV+= OPENSSL_LIB_DIR=/usr/lib
+
+	Actually though I probably need to copy what tealdeer does with openssl
