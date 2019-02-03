@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/12 19:33:16 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/strategies/__init__.py
 ${PYSITELIB}/strategies/__init__.pyc
@@ -16,12 +17,21 @@ ${PYSITELIB}/strategies/branch/core.pyo
 ${PYSITELIB}/strategies/core.py
 ${PYSITELIB}/strategies/core.pyc
 ${PYSITELIB}/strategies/core.pyo
+${PYSITELIB}/strategies/dispatch.py
+${PYSITELIB}/strategies/dispatch.pyc
+${PYSITELIB}/strategies/dispatch.pyo
 ${PYSITELIB}/strategies/examples.py
 ${PYSITELIB}/strategies/examples.pyc
 ${PYSITELIB}/strategies/examples.pyo
+${PYSITELIB}/strategies/term.py
+${PYSITELIB}/strategies/term.pyc
+${PYSITELIB}/strategies/term.pyo
+${PYSITELIB}/strategies/tools.py
+${PYSITELIB}/strategies/tools.pyc
+${PYSITELIB}/strategies/tools.pyo
+${PYSITELIB}/strategies/traverse.py
+${PYSITELIB}/strategies/traverse.pyc
+${PYSITELIB}/strategies/traverse.pyo
 ${PYSITELIB}/strategies/tree.py
 ${PYSITELIB}/strategies/tree.pyc
 ${PYSITELIB}/strategies/tree.pyo
-${PYSITELIB}/strategies/util.py
-${PYSITELIB}/strategies/util.pyc
-${PYSITELIB}/strategies/util.pyo

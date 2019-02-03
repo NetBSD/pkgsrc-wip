@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sym2num/__init__.py
+${PYSITELIB}/sym2num/__init__.pyo
+${PYSITELIB}/sym2num/__init__.pyc
+${PYSITELIB}/sym2num/function.pyo
+${PYSITELIB}/sym2num/function.pyc
+${PYSITELIB}/sym2num/metafun.pyo
+${PYSITELIB}/sym2num/metafun.pyc
+${PYSITELIB}/sym2num/model.pyo
+${PYSITELIB}/sym2num/model.pyc
+${PYSITELIB}/sym2num/printing.pyo
+${PYSITELIB}/sym2num/printing.pyc
+${PYSITELIB}/sym2num/utils.pyo
+${PYSITELIB}/sym2num/utils.pyc
+${PYSITELIB}/sym2num/var.pyo
+${PYSITELIB}/sym2num/var.pyc
+${PYSITELIB}/sym2num/function.py
+${PYSITELIB}/sym2num/metafun.py
+${PYSITELIB}/sym2num/model.py
+${PYSITELIB}/sym2num/printing.py
+${PYSITELIB}/sym2num/utils.py
+${PYSITELIB}/sym2num/var.py

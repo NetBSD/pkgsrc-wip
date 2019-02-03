@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:46 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	strategies-0.1.2
+DISTNAME=	strategies-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_PYPI:=s/strategies/}
+CATEGORIES=	lang
+MASTER_SITES=	https://files.pythonhosted.org/packages/a1/49/67ce5aeaa43fc498951befd4aaf55968ba178c21fee2b68a15408d9b6c79/
 
-MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://github.com/logpy/strategies
-COMMENT=	Python library for control flow programming
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	http://github.com/logpy/strategies
+COMMENT=	Python library for control flow programming.
 LICENSE=	modified-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.6.0:../../devel/py-multipledispatch
+DEPENDS+=	${PYPKGPREFIX}-toolz>=0.9.0:../../devel/py-toolz
 
 USE_LANGUAGES=	# none
 
-#DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.2:../../math/py-sympy
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
