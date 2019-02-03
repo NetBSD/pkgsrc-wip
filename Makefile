@@ -4749,6 +4749,7 @@ SUBDIR+=	witchblast
 SUBDIR+=	wjelement
 SUBDIR+=	wkhtmltopdf
 SUBDIR+=	wl-git
+SUBDIR+=	wla-dx
 SUBDIR+=	wla-dx-git
 SUBDIR+=	wmc2d
 SUBDIR+=	wmii-devel
