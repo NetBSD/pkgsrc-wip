@@ -27,13 +27,12 @@ CMAKE_ARGS+=		-DSWIPL_PACKAGES_TIPC=OFF
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_QT=OFF
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_JAVA=OFF
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_COMPONENT=Core_packages
-CMAKE_ARGS+=		-DCMAKE_INSTALL_COMPONENT=Archive_interface
-CMAKE_ARGS+=		-DCMAKE_INSTALL_COMPONENT=Commandline_editors
-CMAKE_ARGS+=		-DCMAKE_INSTALL_COMPONENT=OpenSSL_interface
-CMAKE_ARGS+=		-DCMAKE_INSTALL_COMPONENT=Graphics_subsystem
-CMAKE_ARGS+=		-DCMAKE_INSTALL_COMPONENT=Documentation
-#CMAKE_ARGS+=		-P cmake_install.cmake
+SWIPL_PACKAGES_COMPONENTS+=	Core_packages
+SWIPL_PACKAGES_COMPONENTS+=	Archive_interface
+SWIPL_PACKAGES_COMPONENTS+=	Commandline_editors
+SWIPL_PACKAGES_COMPONENTS+=	OpenSSL_interface
+SWIPL_PACKAGES_COMPONENTS+=	Graphics_subsystem
+SWIPL_PACKAGES_COMPONENTS+=	Documentation
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -107,6 +106,14 @@ TEST_TARGET=	check
 #	sleep 5
 #	-kill `${CAT} ${WRKDIR}/.Xvfb.pid`
 #	${RM} -f ${WRKDIR}/.Xvfb.pid
+
+do-install:
+.for component in ${SWIPL_PACKAGES_COMPONENTS}
+	cd ${WRKSRC}/build &&						\
+	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV}			\
+		${CMAKE} -DCMAKE_INSTALL_COMPONENT=${component:Q}	\
+			-P cmake_install.cmake
+.endfor
 
 # I need this on FreeBSD, perhaps this depends on GCC behaviour:
 CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHINE_GNU_PLATFORM}/pl2xpce.so
