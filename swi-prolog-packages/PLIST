@@ -286,7 +286,6 @@ lib/swipl/lib/${MACHINE_GNU_PLATFORM}/http_stream.so
 lib/swipl/lib/${MACHINE_GNU_PLATFORM}/inclpr.so
 lib/swipl/lib/${MACHINE_GNU_PLATFORM}/isub.so
 lib/swipl/lib/${MACHINE_GNU_PLATFORM}/json.so
-lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so
 lib/swipl/lib/${MACHINE_GNU_PLATFORM}/md54pl.so
 lib/swipl/lib/${MACHINE_GNU_PLATFORM}/memfile.so
 lib/swipl/lib/${MACHINE_GNU_PLATFORM}/ntriples.so
@@ -386,7 +385,6 @@ lib/swipl/library/doc_files.pl
 lib/swipl/library/doc_http.pl
 lib/swipl/library/doc_latex.pl
 lib/swipl/library/double_metaphone.pl
-lib/swipl/library/editline.pl
 lib/swipl/library/filesex.pl
 lib/swipl/library/hash_stream.pl
 lib/swipl/library/http/README.md

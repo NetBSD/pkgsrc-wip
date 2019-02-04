@@ -115,6 +115,12 @@ do-install:
 			-P cmake_install.cmake
 .endfor
 
+# XXX: editline bindings seems limited and does not support completion, remove
+# XXX: them in order to always use readline.pl.
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so || ${TRUE}
+	${RM} ${DESTDIR}${PREFIX}/lib/swipl/library/editline.pl || ${TRUE}
+
 # I need this on FreeBSD, perhaps this depends on GCC behaviour:
 CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHINE_GNU_PLATFORM}/pl2xpce.so
 
