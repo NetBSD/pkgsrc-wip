@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.villehelin.com/wla.html
 COMMENT=	Assembler that targets many CPUs
 LICENSE=	gnu-gpl-v2
 
+.include "options.mk"
+
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
@@ -25,16 +27,17 @@ do-install:
 .	for f in ${WLADX_BINARIES}
 		${INSTALL_PROGRAM} ${WRKSRC}/binaries/${f} ${DESTDIR}${PREFIX}/bin
 .	endfor
-
-.	for f in binaries/doc/{wla-dx.txt,wla-dx.html} FILE_FORMATS CHANGELOG
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-.	endfor
-
-.	for f in binaries/doc/*.1
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.	endfor
-.	for f in binaries/doc/*.7
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
-.	endfor
+	# Yes, even the manual pages require textproc/py-sphinx.
+.	if !empty(PKG_OPTIONS:Mdoc)
+.		for f in binaries/doc/{wla-dx.txt,wla-dx.html} FILE_FORMATS CHANGELOG
+			${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+.		endfor
+.		for f in binaries/doc/*.1
+			${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.		endfor
+.		for f in binaries/doc/*.7
+			${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
+.		endfor
+.	endif
 
 .include "../../mk/bsd.pkg.mk"
