@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.191 2018/08/22 09:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.200 2019/01/31 13:39:10 martin Exp $
 
-DISTNAME=	qemu-3.0.0
-PKGREVISION=	2
+DISTNAME=	qemu-3.1.0
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -64,6 +64,20 @@ UE_ARCHS+=		x86_64
 .if ${OPSYS} == "NetBSD"
 USER_EMUL=		i386 x86_64 sparc sparc64
 PLIST.nbd=		YES
+.elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+USER_EMUL=		i386 x86_64 sparc sparc64
+PLIST.nbd=		YES
+.elif ${OPSYS} == "Darwin"
+USER_EMUL=
+CONFIGURE_ARGS+=	--disable-bsd-user
+PLIST.nbd=		YES
+.elif ${OPSYS} == "Linux"
+USER_EMUL=		${UE_ARCHS}
+PLIST.nbd=		YES
+PLIST.ivshmem=		YES
+.elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
+PLIST.nbd=		YES
+CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
 PLIST_VARS+=		${UE_ARCHS} nbd ivshmem
