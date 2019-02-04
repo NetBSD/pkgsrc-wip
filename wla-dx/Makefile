@@ -27,9 +27,8 @@ do-install:
 .	for f in ${WLADX_BINARIES}
 		${INSTALL_PROGRAM} ${WRKSRC}/binaries/${f} ${DESTDIR}${PREFIX}/bin
 .	endfor
-	# Yes, even the manual pages require textproc/py-sphinx.
 .	if !empty(PKG_OPTIONS:Mdoc)
-.		for f in binaries/doc/{wla-dx.txt,wla-dx.html} FILE_FORMATS CHANGELOG
+.		for f in binaries/doc/wla-dx.txt binaries/doc/wla-dx.html FILE_FORMATS CHANGELOG
 			${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .		endfor
 .		for f in binaries/doc/*.1
