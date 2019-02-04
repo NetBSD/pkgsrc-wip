@@ -1,1 +1,10 @@
-`install' phase needs to be tested and adjusted.
+- `install' phase needs to be tested and adjusted.
+
+  According quick `build-env' tests probably do-install: needs to be adjusted in
+  order to manually invoke something like that:
+
+   DESTDIR=${DESTDIR} cmake -DCMAKE_INSTALL_COMPONENT=<component> -P cmake_install.cmake
+
+  for each components that we would like to install (at the moment despite
+  passing them via CMAKE_ARGS also components provided by swi-prolog-lite
+  are installed).
