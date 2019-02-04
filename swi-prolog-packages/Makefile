@@ -71,42 +71,42 @@ TEST_TARGET=	check
 #	mkdir ${WRKSRC}/include
 #	${LN} -sf ${WRKSRC}/src/SWI-Prolog.h ${WRKSRC}/include
 #	${LN} -sf ${WRKSRC}/src/os/SWI-Stream.h ${WRKSRC}/include
-
-pre-install: checkforx
-
-# Based on misc/openoffice:
-DISPLAY?=	#empty, if unset
-checkforx:
-.if ${DISPLAY} == "" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
-.  if exists(${X11BASE}/bin/Xvfb)
-	-${X11BASE}/bin/Xvfb :2 & \
-	${ECHO} $$! >${WRKDIR}/.Xvfb.pid
-	${ECHO} checkforx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
-	sleep 5
-DISPLAY= :2
-.  else
-	@${ECHO} "Error: Environment variable DISPLAY must be set"
-	@${ECHO} "       and point to a connectible X server."
-	@${FALSE}
-.  endif  #Xvfb
-.endif  #DISPLAY
-
-MAKE_ENV+=		DISPLAY=${DISPLAY:Q}
-
-# XXX: editline bindings seems limited and does not support completion, remove
-# XXX: them in order to always use readline.pl.
-post-install: teardownx
-	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so || ${TRUE}
-	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/library/editline.pl || ${TRUE}
-	${RM} -f ${LOCALBASE}/lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/prolog/lib/.pwd
-	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce-client.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce-client.1
-	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce.1
-
-teardownx:
-	${ECHO} teardownx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
-	sleep 5
-	-kill `${CAT} ${WRKDIR}/.Xvfb.pid`
-	${RM} -f ${WRKDIR}/.Xvfb.pid
+#
+#pre-install: checkforx
+#
+## Based on misc/openoffice:
+#DISPLAY?=	#empty, if unset
+#checkforx:
+#.if ${DISPLAY} == "" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
+#.  if exists(${X11BASE}/bin/Xvfb)
+#	-${X11BASE}/bin/Xvfb :2 & \
+#	${ECHO} $$! >${WRKDIR}/.Xvfb.pid
+#	${ECHO} checkforx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
+#	sleep 5
+#DISPLAY= :2
+#.  else
+#	@${ECHO} "Error: Environment variable DISPLAY must be set"
+#	@${ECHO} "       and point to a connectible X server."
+#	@${FALSE}
+#.  endif  #Xvfb
+#.endif  #DISPLAY
+#
+#MAKE_ENV+=		DISPLAY=${DISPLAY:Q}
+#
+## XXX: editline bindings seems limited and does not support completion, remove
+## XXX: them in order to always use readline.pl.
+#post-install: teardownx
+#	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so || ${TRUE}
+#	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/library/editline.pl || ${TRUE}
+#	${RM} -f ${LOCALBASE}/lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/prolog/lib/.pwd
+#	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce-client.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce-client.1
+#	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce.1
+#
+#teardownx:
+#	${ECHO} teardownx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
+#	sleep 5
+#	-kill `${CAT} ${WRKDIR}/.Xvfb.pid`
+#	${RM} -f ${WRKDIR}/.Xvfb.pid
 
 # I need this on FreeBSD, perhaps this depends on GCC behaviour:
 CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHINE_GNU_PLATFORM}/pl2xpce.so
