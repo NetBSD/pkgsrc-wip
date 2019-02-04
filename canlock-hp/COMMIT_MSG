@@ -1,0 +1,11 @@
+Update to 3.1.0
+
+Source tree of canlock-hp was merged into libcanlock.
+This package now tracks the version number of libcanlock.
+
+Changelog
+=========
+
+3.1.0      2019-01-26
+           Merged into libcanlock package. Now using the same version number.
+           Manual page of canlock-hfp utility updated

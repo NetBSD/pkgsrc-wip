@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/canlock-hfp
+bin/canlock-mhp
+man/man1/canlock-hfp.1
+man/man1/canlock-mhp.1

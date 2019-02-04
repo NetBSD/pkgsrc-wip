@@ -327,6 +327,7 @@ SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	calypso-git
+SUBDIR+=	canlock-hp
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
