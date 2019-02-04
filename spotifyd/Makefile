@@ -275,9 +275,7 @@ CARGO_CRATE_DEPENDS+=	winutil-0.1.1
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	xdg-2.1.0
 
-# Don't know why it can't find these or why it even needs it
-MAKE_ENV+= OPENSSL_INCLUDE_DIR=/usr/include/openssl
-MAKE_ENV+= OPENSSL_LIB_DIR=/usr/lib
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 
 # Can't get it to link to pulseaudio, these worked outside of pkgsrc
 #MAKE_ENV+= RUSTFLAGS='-C link-args=-Wl,-rpath,/usr/lib,-rpath,/usr/pkg/lib'
@@ -288,4 +286,5 @@ do-build:
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
