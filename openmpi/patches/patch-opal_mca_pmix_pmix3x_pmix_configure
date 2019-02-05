@@ -1,0 +1,15 @@
+$NetBSD$
+
+# POSIX sh compat
+
+--- opal/mca/pmix/pmix3x/pmix/configure.orig	2019-02-05 13:59:01.473887840 +0000
++++ opal/mca/pmix/pmix3x/pmix/configure
+@@ -55349,7 +55349,7 @@ fi
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking if opamgt requested" >&5
+ $as_echo_n "checking if opamgt requested... " >&6; }
+-    if test "$with_opamgt" == "no"; then :
++    if test "$with_opamgt" = "no"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+            pmix_check_opamgt_happy=no

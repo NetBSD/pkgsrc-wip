@@ -2408,6 +2408,7 @@ SUBDIR+=	openh264
 SUBDIR+=	openjazz
 SUBDIR+=	openjdk8-openjfx-hg
 SUBDIR+=	openlogos
+SUBDIR+=	openmpi
 SUBDIR+=	openmpi163
 SUBDIR+=	openmw
 SUBDIR+=	openmx-openmpi

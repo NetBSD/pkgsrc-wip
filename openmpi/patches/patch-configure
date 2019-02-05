@@ -1,0 +1,24 @@
+$NetBSD$
+
+# POSIX sh compat
+
+--- configure.orig	2019-02-05 14:06:54.253381573 +0000
++++ configure
+@@ -164141,7 +164141,7 @@ else
+ fi
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking if want to install standalone libpmix" >&5
+ $as_echo_n "checking if want to install standalone libpmix... " >&6; }
+-    if test "$enable_install_libpmix" == "yes"; then :
++    if test "$enable_install_libpmix" = "yes"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ else
+@@ -340177,7 +340177,7 @@ if test "${with_ompi_pmix_rte+set}" = se
+   withval=$with_ompi_pmix_rte;
+ fi
+ 
+-    if test "$with_ompi_pmix_rte" == "yes"; then :
++    if test "$with_ompi_pmix_rte" = "yes"; then :
+   should_build=$should_build
+            { $as_echo "$as_me:${as_lineno-$LINENO}: PMIx RTE selected by user" >&5
+ $as_echo "$as_me: PMIx RTE selected by user" >&6;}
