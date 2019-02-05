@@ -120,7 +120,7 @@ CARGO_CRATE_DEPENDS+=	memchr-2.1.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.2.1
 CARGO_CRATE_DEPENDS+=	mime-0.3.12
 CARGO_CRATE_DEPENDS+=	mime_guess-2.0.0-alpha.6
-# work around weird version pattern not supposed by cargo.mk
+# work around weird version pattern not supported by cargo.mk
 SITES.mime_guess-2.0.0-alpha.6.crate+=	 -https://crates.io/api/v1/crates/mime_guess/2.0.0-alpha.6/download
 CARGO_CRATE_DEPENDS+=	mio-0.6.16
 CARGO_CRATE_DEPENDS+=	mio-uds-0.6.7
