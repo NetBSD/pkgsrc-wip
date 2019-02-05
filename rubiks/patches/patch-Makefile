@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- Makefile.orig	2008-09-01 09:52:03.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ DIRS=dietz/cu2 dietz/mcube dietz/solver dik reid
+ #INSTALL=`which install` 
+-PREFIX=/usr
++PREFIX=/usr/pkg
+ BINDIR=$(PREFIX)/bin
+ 
+ all clean:

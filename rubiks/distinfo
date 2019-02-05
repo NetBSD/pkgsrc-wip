@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (rubiks-20070912.tar.bz2) = 01a915569068c65b21943b3f34a9f0d104349a96
+RMD160 (rubiks-20070912.tar.bz2) = f65e9019a3dca9ff27346357a76e06c7c444cadb
+SHA512 (rubiks-20070912.tar.bz2) = 0dbde77fd9324820930675589cbd1ba5104d61c2eae96c16e5c9887ac1cd9afd42dbe58de28acf80dc04a787774d7d59bc893bc40a13abb4cb318885cbeb6354
+Size (rubiks-20070912.tar.bz2) = 99028 bytes
+SHA1 (patch-Makefile) = 434280ddae76076567be51535b6b35d8e327df7a
+SHA1 (patch-dietz_solver_cubex.h) = ee103a013ee2c9ad62d892794030f8024722a090
