@@ -183,6 +183,8 @@ lib/anope/modules/unreal4.so
 lib/anope/modules/webcpanel.so
 share/doc/anope/example.chk
 share/doc/anope/stats.standalone.example.conf
+share/examples/anope/botserv.conf
+share/examples/anope/chanserv.conf
 share/examples/anope/chanstats.conf
 share/examples/anope/global.conf
 share/examples/anope/hostserv.conf
