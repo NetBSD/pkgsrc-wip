@@ -122,6 +122,7 @@ SUBDIR+=	and
 SUBDIR+=	android-tools-adb
 SUBDIR+=	angelscript
 SUBDIR+=	ann
+SUBDIR+=	anope
 SUBDIR+=	ansible
 SUBDIR+=	ansible-junos-stdlib
 SUBDIR+=	anthy-dic-jis34

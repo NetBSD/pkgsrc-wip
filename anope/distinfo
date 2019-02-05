@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (anope-2.0.6-source.tar.gz) = bba0c947657f7388da2980241bc11b03f9f64743
+RMD160 (anope-2.0.6-source.tar.gz) = 1771ee896cf30f9962abec56aed3a5f71f17b8e0
+SHA512 (anope-2.0.6-source.tar.gz) = c100758d6159023832bc7a4dceb7d554a9b3cd9120b033efc9a93c7ff28e76a086d0594b66b9cd2946b231421217674990f2a3ebaa8a6598c2a25e2dafd1b65b
+Size (anope-2.0.6-source.tar.gz) = 1792912 bytes
+SHA1 (patch-data_example.conf) = 567577ec635e311cd8089c2a91896e1b8e6caf71
