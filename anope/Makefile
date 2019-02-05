@@ -13,6 +13,7 @@ COMMENT=	Modular set of IRC services
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DPROGRAM_NAME=anope
@@ -22,6 +23,32 @@ CMAKE_ARGS+=	-DCONF_DIR=${PKG_SYSCONFDIR}/anope
 CMAKE_ARGS+=	-DLIB_DIR=lib/anope
 CMAKE_ARGS+=	-DLOCALE_DIR=${PKGLOCALEDIR}/locale
 CMAKE_ARGS+=	-DLOGS_DIR=anope/logs
+
+.include "../../mk/bsd.prefs.mk"
+
+ANOPE_USER?=		anope
+ANOPE_GROUP?=		anope
+PKG_GROUPS=		${ANOPE_GROUP}
+PKG_USERS=		${ANOPE_USER}:${ANOPE_GROUP}
+PKG_GROUPS_VARS=	ANOPE_USER
+PKG_USERS_VARS=		ANOPE_GROUP
+
+OWN_DIRS_PERMS+=	${PREFIX}/anope ${ANOPE_USER} ${ANOPE_GROUP} 0755
+OWN_DIRS_PERMS+=	${PREFIX}/anope/data ${ANOPE_USER} ${ANOPE_GROUP} 0755
+OWN_DIRS_PERMS+=	${PREFIX}/anope/logs ${ANOPE_USER} ${ANOPE_GROUP} 0755
+
+FILES_SUBST+=		ANOPE_GROUP=${ANOPE_GROUP:Q}
+FILES_SUBST+=		ANOPE_USER=${ANOPE_USER:Q}
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_MESSAGE.conf=	Set variables in configuration file.
+SUBST_FILES.conf+=	data/example.conf
+SUBST_SED.conf+=	-e "s,@PREFIX@,${PREFIX},g"
+SUBST_SED.conf+=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
+SUBST_SED.conf+=	-e "s,@PKGLOCALEDIR@,${PKGLOCALEDIR},g"
+
+RCD_SCRIPTS=	anope
 
 EGDIR=		${PREFIX}/share/examples/anope
 DOCDIR=		${PREFIX}/share/doc/anope
