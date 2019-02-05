@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gr-gsm-0.42.2.tar.gz) = 96ed1632d4b40680902ce4225dcc2daee58a6e02
+RMD160 (gr-gsm-0.42.2.tar.gz) = 6cb833293577088f36b54a6cac9e597f621d49b8
+SHA512 (gr-gsm-0.42.2.tar.gz) = 20fb7a0fbcd51c5ed05bcb1cbb3e96f6a7797b330158ce2a2f8b243742fc505cb286dd63fe1573c41f6a0229d6e57f0338eb82a9fa1070efc58209a7e505608e
+Size (gr-gsm-0.42.2.tar.gz) = 413098 bytes
+SHA1 (patch-include_grgsm_endian.h) = 51729dadd466dcfca307cfdfb221ae4c37e5fb2d
