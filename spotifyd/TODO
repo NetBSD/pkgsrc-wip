@@ -2,35 +2,7 @@
 
 See this post: https://atomicules.co.uk/2019/01/17/Building-Spotifyd-on-NetBSD.html
 
-1. This needs a fix in ../../lang/rust/cargo.mk:
-
-		SITES.${_crate}.crate+= -${MASTER_SITE_CRATESIO}${_crate:C/-[0-9.]+.*$//}/${_crate:C/^.*-([0-9.]+.*)$/\1/}/download
-
-
-2. Can't find pulse audio... which is bonkers as (like with OpenSSL) there is
-no trouble building _not_ using pkgsrc.
-
-		  = note: ld: cannot find -lpulse
-			  ld: cannot find -lpulse-simple
-			  /usr/pkgsrc/wip/spotifyd/work/spotifyd-0.2.3/target/release/deps/libtime-403082523a38bfa4.rlib(time-403082523a38bfa4.time1-7f65cbe6fc6d97ef342407eef4212401.rs.rcgu.o): In function `time::tzset::h1f1369ae06fc63c2':
-			  time1-7f65cbe6fc6d97ef342407eef4212401.rs:(.text._ZN4time5tzset17h1f1369ae06fc63c2E+0x1): warning: warning: reference to compatibility tzset(); include <time.h> for correct reference
-			  /usr/pkgsrc/wip/spotifyd/work/spotifyd-0.2.3/target/release/deps/libdaemonize-f515f1ae522b34a9.rlib(daemonize-f515f1ae522b34a9.daemonize4-baf8cda99fe9d40a4751f7655a62757b.rs.rcgu.o): In function `daemonize::get_user::h16032565d58358fc':
-			  daemonize4-baf8cda99fe9d40a4751f7655a62757b.rs:(.text._ZN9daemonize8get_user17h16032565d58358fcE+0xc3): warning: warning: reference to compatibility getpwnam(); include <pwd.h> to generate correct reference
-
-
-		error: aborting due to previous error
-
-		error: Could not compile `spotifyd`.
-
-	Have tried setting:
-
-		MAKE_ENV+= RUSTFLAGS='-C link-args=-Wl,-rpath,/usr/lib,-rpath,/usr/pkg/lib'
-
-	And also tried:
-
-		.include "../../audio/pulseaudio/buildlink3.mk"
-
-	No luck.
+2. Should use vendored crates only and not random non-reproducable git clones
 
 3. Some of the CARGO_DEPENDS stuff I commented out, because it's not pulled
 from crates.io. Amazingly it still seems to build ok. Probably need to

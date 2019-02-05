@@ -1,20 +1,17 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	spotifyd
-DISTNAME=	v0.2.3
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-CATEGORIES=	wip
+DISTNAME=	spotifyd-0.2.3
+CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	base@atomicules.co.uk
 HOMEPAGE=	https://github.com/Spotifyd/spotifyd/
-COMMENT=	An open source Spotify client running as a UNIX daemon.
+COMMENT=	Open source Spotify client running as a UNIX daemon
 
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/spotifyd-0.2.3
-USE_LANGUAGES=	rust
+USE_LANGUAGES=	c # rust, but needs a toolchain to link
 
 # This just seems not a good way to do things
 #
@@ -123,14 +120,16 @@ CARGO_CRATE_DEPENDS+=	memchr-2.1.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.2.1
 CARGO_CRATE_DEPENDS+=	mime-0.3.12
 CARGO_CRATE_DEPENDS+=	mime_guess-2.0.0-alpha.6
+# work around weird version pattern not supposed by cargo.mk
+SITES.mime_guess-2.0.0-alpha.6.crate+=	 -https://crates.io/api/v1/crates/mime_guess/2.0.0-alpha.6/download
 CARGO_CRATE_DEPENDS+=	mio-0.6.16
 CARGO_CRATE_DEPENDS+=	mio-uds-0.6.7
 CARGO_CRATE_DEPENDS+=	miow-0.2.1
 CARGO_CRATE_DEPENDS+=	multimap-0.4.0
 CARGO_CRATE_DEPENDS+=	native-tls-0.2.1
 CARGO_CRATE_DEPENDS+=	net2-0.2.33
-CARGO_CRATE_DEPENDS+=	nix-0.9.0
 CARGO_CRATE_DEPENDS+=	nix-0.11.0
+CARGO_CRATE_DEPENDS+=	nix-0.9.0
 CARGO_CRATE_DEPENDS+=	nodrop-0.1.12
 CARGO_CRATE_DEPENDS+=	num-bigint-0.1.44
 CARGO_CRATE_DEPENDS+=	num-integer-0.1.39
@@ -275,13 +274,21 @@ CARGO_CRATE_DEPENDS+=	winutil-0.1.1
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	xdg-2.1.0
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+INSTALLATION_DIRS+=	bin
 
-# Can't get it to link to pulseaudio, these worked outside of pkgsrc
-#MAKE_ENV+= RUSTFLAGS='-C link-args=-Wl,-rpath,/usr/lib,-rpath,/usr/pkg/lib'
+MAKE_ENV+= RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib -C link-arg=-L${BUILDLINK_PREFIX.pulseaudio}/lib"
 
+# TODO investigate why this is needed
+CHECK_WRKREF_SKIP+=	bin/spotifyd
+
+# TODO we should use --frozen --locked, but it depends on multiple crates
+# that are not present on crates.io right now.
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --no-default-features --features pulseaudio_backend --release
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotifyd ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
