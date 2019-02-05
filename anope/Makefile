@@ -13,10 +13,11 @@ COMMENT=	Modular set of IRC services
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DPROGRAM_NAME=anope
+
+CMAKE_ARGS+=	-DDISABLE_TOOLS=ON
 
 CMAKE_ARGS+=	-DDB_DIR=anope/data
 CMAKE_ARGS+=	-DCONF_DIR=${PKG_SYSCONFDIR}/anope
@@ -58,8 +59,6 @@ USE_PKGLOCALEDIR=	yes
 
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	${DOCDIR}
-
-REPLACE_BASH+=	src/tools/geoipupdate.sh
 
 CONF_FILES+=	${EGDIR}/botserv.conf ${PKG_SYSCONFDIR}/anope/botserv.conf
 CONF_FILES+=	${EGDIR}/chanserv.conf ${PKG_SYSCONFDIR}/anope/chanserv.conf

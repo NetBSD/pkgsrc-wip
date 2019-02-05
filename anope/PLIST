@@ -23,9 +23,6 @@ anope/data/modules/webcpanel/templates/default/operserv/akill.html
 anope/data/modules/webcpanel/templates/default/register.html
 anope/data/modules/webcpanel/templates/default/style.css
 bin/anope
-bin/anoperc
-bin/anopesmtp
-bin/geoipupdate.sh
 lib/anope/modules/bahamut.so
 lib/anope/modules/botserv.so
 lib/anope/modules/bs_assign.so
