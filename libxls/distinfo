@@ -1,6 +1,8 @@
 $NetBSD$
 
-SHA1 (libxls-1.5.0-rc1.tar.gz) = ab5a670a6aa0aa4900776a8b73f8f718dac7aefb
-RMD160 (libxls-1.5.0-rc1.tar.gz) = ac24250b357562956f38260aefa7e8d333f7fef2
-SHA512 (libxls-1.5.0-rc1.tar.gz) = d0c75ba60bc63ac9040f2085ba7392476890f4089ecce7b46c14717b64eb2250a4a125514dae52ecae265b84c18ead1d474fd539e54da03cdf543a9814a6dd00
-Size (libxls-1.5.0-rc1.tar.gz) = 409013 bytes
+SHA1 (libxls-1.5.0-rc2.tar.gz) = 8907c36364ef9689cfe2c5ee2e7a6cb187a4b3e3
+RMD160 (libxls-1.5.0-rc2.tar.gz) = 8075af2f59656be1de2ea75e49f84adb5d3cabc6
+SHA512 (libxls-1.5.0-rc2.tar.gz) = e7571afbeee1e15909e2d5a0ae339547bb30c5a3dffa25f52c94506ab352e4f1e6a96b14fae8e5f2043aed16cd77d948fb9a8792447144d28b044fc178560db9
+Size (libxls-1.5.0-rc2.tar.gz) = 408999 bytes
+SHA1 (patch-Makefile.in) = 76239d2f1aa4f0deae9192b4460eb32d0ca7feed
+SHA1 (patch-src_xlstool.c) = 395ab0144c1fb165326fbae2b3da9ac5d5e79764
