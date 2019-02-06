@@ -3,7 +3,7 @@
 DISTNAME=	conan-1.12.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	pkgtools
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluginbase/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/conan/}
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://conan.io/
