@@ -14,3 +14,4 @@
   src/CMakeLists.txt, but it is should be part of swi-prolog-lite library (that
   have -DINSTALL_DOCUMENTATION=OFF).  We should probably install it
   unconditionally as part of swi-prolog-lite.
+  Please also see swi-prolog-lite/TODO.
