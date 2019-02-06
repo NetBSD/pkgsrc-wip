@@ -1,9 +1,14 @@
 - Needs double-check to see if all compononents are properly installed and setup
   like in swi-prolog-packages-7.6.4.
-- bin/swi-prolog is no longer available/installed, is this intended or is it a
-  regression? (this is probably intended, also the documentation always refers
-  to swipl)
-  Was it just a link to bin/swipl or did it also loaded some modules?
+- bin/swi-prolog is now installed as bin/swipl
+  This is because in src/CMakeLists.txt:
+
+  | function(config_data_files)
+  |   set(PL swipl)
+
+  Previously a PL variable was passed... It is probably better to document that
+  change in the commit message (swi-prolog -> swipl) and just follow upstream 
+  nomenclature.
 - Built-in help (e.g. via help/1 or apropos/1) does not work with swipl...
   It seems that library/help.pl is installed based on INSTALL_DOCUMENTATION in
   src/CMakeLists.txt, but it is should be part of swi-prolog-lite library (that
