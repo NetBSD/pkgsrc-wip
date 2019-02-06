@@ -1,0 +1,32 @@
+# $NetBSD$
+
+DISTNAME=	conan-1.12.1
+PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	pkgtools
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluginbase/}
+
+MAINTAINER=	root@zta.lk
+HOMEPAGE=	https://conan.io/
+COMMENT=	C/C++ package manager
+LICENSE=	mit
+
+USE_LANGUAGES=	# none
+
+DEPENDS+=   ${PYPKGPREFIX}-pluginbase-0.7:../../wip/py-pluginbase
+DEPENDS+=   ${PYPKGPREFIX}-bottle:../../www/py-bottle
+DEPENDS+=   ${PYPKGPREFIX}-tqdm:../../misc/py-tqdm
+DEPENDS+=   ${PYPKGPREFIX}-deprecation:../../devel/py-deprecation
+DEPENDS+=   ${PYPKGPREFIX}-astroid:../../devel/py-astroid
+DEPENDS+=   ${PYPKGPREFIX}-pygments:../../textproc/py-pygments
+DEPENDS+=   ${PYPKGPREFIX}-future:../../devel/py-future
+DEPENDS+=   ${PYPKGPREFIX}-pylint:../../wip/py-pylint
+DEPENDS+=   ${PYPKGPREFIX}-distro-1.1.0:../../wip/py-distro
+DEPENDS+=   ${PYPKGPREFIX}-node-semver:../../wip/py-node-semver
+DEPENDS+=   ${PYPKGPREFIX}-fasteners:../../devel/py-fasteners
+DEPENDS+=   ${PYPKGPREFIX}-patch-1.16:../../wip/py-patch
+DEPENDS+=   ${PYPKGPREFIX}-colorama:../../comms/py-colorama
+DEPENDS+=   ${PYPKGPREFIX}-requests:../../devel/py-requests
+DEPENDS+=   ${PYPKGPREFIX}-JWT:../../textproc/py-JWT
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
