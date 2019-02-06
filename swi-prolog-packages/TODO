@@ -4,5 +4,8 @@
   regression? (this is probably intended, also the documentation always refers
   to swipl)
   Was it just a link to bin/swipl or did it also loaded some modules?
-- Built-in help (e.g. via help/1 or apropos/1) does not work with swipl (not
-  sure if this is a regression or possibly related to missing bin/swi-prolog)
+- Built-in help (e.g. via help/1 or apropos/1) does not work with swipl...
+  It seems that library/help.pl is installed based on INSTALL_DOCUMENTATION in
+  src/CMakeLists.txt, but it is should be part of swi-prolog-lite library (that
+  have -DINSTALL_DOCUMENTATION=OFF).  We should probably install it
+  unconditionally as part of swi-prolog-lite.
