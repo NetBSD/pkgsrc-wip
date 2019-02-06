@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pluginbase-1.0.0
+DISTNAME=	pluginbase-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluginbase/}
