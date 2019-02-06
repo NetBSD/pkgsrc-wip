@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=   ${PYPKGPREFIX}-pluginbase-0.7:../../wip/py-pluginbase
 DEPENDS+=   ${PYPKGPREFIX}-bottle:../../www/py-bottle
-DEPENDS+=   ${PYPKGPREFIX}-tqdm:../../misc/py-tqdm
+DEPENDS+=   ${PYPKGPREFIX}-tqdm>=4.28.1:../../misc/py-tqdm
 DEPENDS+=   ${PYPKGPREFIX}-deprecation:../../devel/py-deprecation
 DEPENDS+=   ${PYPKGPREFIX}-astroid:../../devel/py-astroid
 DEPENDS+=   ${PYPKGPREFIX}-pygments:../../textproc/py-pygments
