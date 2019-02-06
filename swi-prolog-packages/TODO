@@ -1,7 +1,8 @@
 - Needs double-check to see if all compononents are properly installed and setup
   like in swi-prolog-packages-7.6.4.
 - bin/swi-prolog is no longer available/installed, is this intended or is it a
-  regression?
+  regression? (this is probably intended, also the documentation always refers
+  to swipl)
   Was it just a link to bin/swipl or did it also loaded some modules?
 - Built-in help (e.g. via help/1 or apropos/1) does not work with swipl (not
   sure if this is a regression or possibly related to missing bin/swi-prolog)
