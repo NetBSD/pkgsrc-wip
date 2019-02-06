@@ -7,5 +7,9 @@
   needs to be adopted for cmake migration)
 - -DINSTALL_DOCUMENTATION=OFF is needed otherwise the build fails with:
    don't know how to make ../man/pldoc. Stop
-  Investigate if there is a way to solve that and provide the documentation via
-  swi-prolog-lite package.
+  This probably fails because we pass -DSWIPL_PACKAGES=OFF and
+  -DINSTALL_DOCUMENTATION=ON actually needs some packages.
+  We should probably explicitly disable all packages in
+  swi-prolog-lite/Makefile (similarly to what we do in
+  swi-prolog-packages/Makefile) except SWIPL_PACKAGES_BASIC and remove
+  -DSWIPL_PACKAGES=OFF.
