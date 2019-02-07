@@ -15,3 +15,4 @@
   -DSWIPL_PACKAGES=OFF.  Unfortunately doing that seems to pick up
   several further dependencies (e.g. ossp-uuid) leading the build
   to fails.  Analyze if it is possible to avoid that.
+- -DSWIPL_SHARED_LIB=ON probably should be enabled for swi-prolog-jpl
