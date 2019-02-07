@@ -16,8 +16,8 @@ USE_LANGUAGES+=	c
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	post-patch
 SUBST_MESSAGE.makefile= Fixing variable for manpath
-SUBST_SED.makefile=	-e 's|/share/man|/man|g'
-SUBST_FILES.makefile=	${WRKSRC}/cfg/global_vars.mk
+SUBST_SED.makefile=	-e 's|share/man|${PKGMANDIR}|g'
+SUBST_FILES.makefile=	cfg/global_vars.mk
 
 .include "options.mk"
 
