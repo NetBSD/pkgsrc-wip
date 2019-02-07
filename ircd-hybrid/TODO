@@ -1,4 +1,4 @@
-- INSTALL can be probably removed: all the files created are no longer needed
-  (only ircd.motd is still honored, but not needeed). Apart that, after
-  deinstalling ircd-hybrid all those files still resides on ${PKG_SYSCONFDIR}
-  also if they were not adjusted.
+- INSTALL has been removed.
+- Now an empty ${PKG_SYSCONFDIR} is created, and if nothing is added
+  the folder is removed on uninstall.
+- Verify the above changes work correctly.
