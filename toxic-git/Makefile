@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	toxic-0.8.0
+DISTNAME=	toxic-0.8.3
 CATEGORIES=	chat
 GIT_REPO=	https://github.com/JFreegman/toxic.git
 
@@ -12,6 +12,12 @@ LICENSE=	gnu-gpl-v3
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c
+
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	post-patch
+SUBST_MESSAGE.makefile= Fixing variable for manpath
+SUBST_SED.makefile=	-e 's|/share/man|/man|g'
+SUBST_FILES.makefile=	${WRKSRC}/cfg/global_vars.mk
 
 .include "options.mk"
 
