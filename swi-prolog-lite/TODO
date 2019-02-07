@@ -12,4 +12,6 @@
   We should probably explicitly disable all packages in
   swi-prolog-lite/Makefile (similarly to what we do in
   swi-prolog-packages/Makefile) except SWIPL_PACKAGES_BASIC and remove
-  -DSWIPL_PACKAGES=OFF.
+  -DSWIPL_PACKAGES=OFF.  Unfortunately doing that seems to pick up
+  several further dependencies (e.g. ossp-uuid) leading the build
+  to fails.  Analyze if it is possible to avoid that.
