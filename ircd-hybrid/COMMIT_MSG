@@ -1,0 +1,70 @@
+ircd-hybrid: Update to 8.2.24
+
+pkgsrc changes:
+TODO
+
+Changes:
+TODO: include 8.0.0beta1...8.2.24 changes
+
+-- ircd-hybrid-7.3.1 Release Notes
+o) Fixed ERR_ACCEPTEXIST numeric string. Now gives proper
+   nick!user@host mask output
+o) Update RPL_ISUPPORT. CHANMODES now reflects new +OS channelmodes
+o) Fixed random core triggered by exiting servers
+o) Fixed invalid user and invisible count in /lusers which sometimes can
+   occur if a server sends redundant usermodes within a NICK message
+
+
+-- ircd-hybrid-7.3.0 Release Notes
+o) Added Bulgarian language file provided by Borislav Borisov
+o) Server hostmasking has been removed due to TS6 requirements
+o) Fixed broken IPv6 detection
+o) Minor code optimizations. Reduced memory consumption
+o) User IDs are now shown in client connection notices
+o) Increased maximum temporary kline time to 360 days
+o) Added back STATS/TRACE/MOTD/ADMIN request notices. Removed
+   spy_*_notice modules accordingly.
+o) Channelmode +O; channel can be joined by ircops only.
+o) Channelmode +S; only clients with a secure connection (ssl/tls)
+   can join this channel.
+
+
+-- ircd-hybrid-7.3-rc1 Release Notes
+o) Major 64-bit cleanups and portability fixes.
+o) Fixed bug where unregistered clients were not able to complete registration
+   process with /quote PONG <ping_cookie> in case the client was assigned a
+   zero value ping-cookie. This may only happen with general::ping_cookie
+   being enabled.
+o) "STATS z" now shows the actual amount of memory consumption being
+   used by channel bans/excepts/invites.
+o) Fixed archaic bug where bursting servers with missconfigured NICKLEN were
+   able to desync the network's nickname database.
+o) The PCRE library has been removed from the ircd sources. ./configure will
+   now automatically detect an already installed version of the PCRE library.
+o) Various resolver improvements and fixes
+o) Implemented GUNGLINE (global ungline)
+o) Completely rewrote build system. We're now using automake and libtool
+o) Added support for SHA-256/512 encrypted passwords to mkpasswd. Whether
+   passwords hashed using these algorithms will work depends on the system's
+   crypt() implementation. For example, SHA-256/512 is available in glibc since
+   version 2.7.
+o) Added ssl_server_protocol configuration option to servinfo{}.
+   Valid flags are 'sslv3' and 'tlsv1'
+o) Added new 'server' option to listener::flags. Listener with that flag
+   set may only accept server connections.
+o) Fixed occasional core when placing RESVs on channel names
+o) Fixed topic desynchronization which sometimes may
+   happen during netbursts
+o) WATCH support implemented. Known from other irc-daemons, such
+   as Dreamforge and Bahamut. The general::max_watch configuration directive
+   has been added in order to allow run-time configuration of how many
+   watch entries a single client may have on its watchlist.
+o) Fixed bug which would cause invalid invisible counts on oper-up in case
+   operator::umodes and/or general::oper_umodes contains 'invisible'
+o) Removed broken LazyLinks
+o) Removed --disable-gline-voting configure option
+o) Minor code optimizations and cleanups
+o) ACCEPT now supports nick!user@host masks
+o) Unregistered clients are no longer allowed to request the server's motd
+o) general::dot_in_ip6_addr configuration option is obsolete and no longer exists
+o) Dropped support for old style 'operflag = yes|no;' format
