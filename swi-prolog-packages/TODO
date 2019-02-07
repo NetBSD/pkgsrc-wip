@@ -12,6 +12,7 @@
 - Built-in help (e.g. via help/1 or apropos/1) does not work with swipl...
   It seems that library/help.pl is installed based on INSTALL_DOCUMENTATION in
   src/CMakeLists.txt, but it is should be part of swi-prolog-lite library (that
-  have -DINSTALL_DOCUMENTATION=OFF).  We should probably install it
-  unconditionally as part of swi-prolog-lite.
-  Please also see swi-prolog-lite/TODO.
+  have -DINSTALL_DOCUMENTATION=OFF).  Unfortunately manually installing it in
+  post-install: does not work probably because when INSTALL_DOCUMENTATION is ON
+  more steps are done.  For further analysis please give a look to:
+  CMakeLists.txt:151.
