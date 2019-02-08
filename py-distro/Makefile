@@ -12,5 +12,8 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} distro distro-${PYVERSSUFFIX}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
