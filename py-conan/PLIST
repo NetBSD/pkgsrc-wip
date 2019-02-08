@@ -1,7 +1,7 @@
 @comment $NetBSD$
-bin/conan
-bin/conan_build_info
-bin/conan_server
+bin/conan-${PYVERSSUFFIX}
+bin/conan_build_info-${PYVERSSUFFIX}
+bin/conan_server-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

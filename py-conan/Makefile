@@ -12,6 +12,12 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && for b in conan conan_build_info conan_server; \
+          do ${MV} $$b $$b-${PYVERSSUFFIX}; \
+        done
+
 DEPENDS+=   ${PYPKGPREFIX}-pluginbase-0.7:../../wip/py-pluginbase
 DEPENDS+=   ${PYPKGPREFIX}-bottle:../../www/py-bottle
 DEPENDS+=   ${PYPKGPREFIX}-tqdm>=4.28.1:../../misc/py-tqdm
