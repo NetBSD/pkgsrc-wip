@@ -1584,7 +1584,6 @@ SUBDIR+=	ipsvd
 SUBDIR+=	iptables
 SUBDIR+=	iptstate
 SUBDIR+=	ircII-current
-SUBDIR+=	ircd-hybrid
 SUBDIR+=	ironpython
 SUBDIR+=	irrlicht
 SUBDIR+=	irrxml
