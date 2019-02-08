@@ -1,7 +1,20 @@
 ircd-hybrid: Update to 8.2.24
 
 pkgsrc changes:
-* Removed the auto creation of configuration files since they are obsolete.
+- No longer install a default ircd.conf file.  Upstream now only
+  provides a reference ircd.conf file that needs to be adjusted.
+  Document that in the MESSAGE.
+- Remove INSTALL script.  All *.conf are no longer used, corresponding
+  *.db living in ${VARBASE}/log/ircd-hybrid/lib are used instead
+  ircd.motd is still honored and used but there is not a lot of point to
+  continue to install it unconditionally without a configuration file.
+- Remove `efnet', `halfops', `small-net' and `ziplinks' package options,
+  corresponding configure arguments no longer available.
+- No longer honor IRCD_HYBRID_SYSLOG_FACILITY, IRCD_HYBRID_NICLEN,
+  IRCD_HYBRID_TOPICLEN, IRCD_HYBRID_MAXCONN and IRCD_HYBRID_SYSLOG_EVENTS,
+  TODOleot: can all of them be configured with ircd.conf now? (at least
+  niclen and topiclen, yes!)
+- Add LICENSE
 
 Changes since 7.2.3:
 
