@@ -16,6 +16,8 @@ pkgsrc changes:
   and *MAXCONN are now configurable via ircd.conf)
 - Add LICENSE
 
+Thanks to <spz> for suggestions!
+
 Changes since 7.2.3:
 -- Noteworthy changes in version 8.2.24 (2018-04-05)
 o) Added "STATS s" to show configured pseudo {} blocks
