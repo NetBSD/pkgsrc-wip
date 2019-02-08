@@ -12,8 +12,8 @@ pkgsrc changes:
   corresponding configure arguments no longer available.
 - No longer honor IRCD_HYBRID_SYSLOG_FACILITY, IRCD_HYBRID_NICLEN,
   IRCD_HYBRID_TOPICLEN, IRCD_HYBRID_MAXCONN and IRCD_HYBRID_SYSLOG_EVENTS,
-  TODOleot: can all of them be configured with ircd.conf now? (at least
-  niclen and topiclen, yes!)
+  (syslog is no longer used and corresponding entry to set *LEN
+  and *MAXCONN are now configurable via ircd.conf)
 - Add LICENSE
 
 Changes since 7.2.3:
