@@ -17,13 +17,11 @@ pkgsrc changes:
 - Add LICENSE
 
 Changes since 7.2.3:
-
 -- Noteworthy changes in version 8.2.24 (2018-04-05)
 o) Added "STATS s" to show configured pseudo {} blocks
 o) Implemented channel mode 'N' which prevents users from changing their
    nick while in a channel with that mode set
 o) Services clients are now shown with 'is a Network Service' in "WHOIS"
-
 
 -- Noteworthy changes in version 8.2.23 (2018-03-26)
 o) irc-operators are now able to see a user's resolved hostname in /whowas,
@@ -37,7 +35,6 @@ o) Fixed bug where ircd would not remove RPL_WHOISOPERATOR based svstags
    when deoppering
 o) Fixed 'unknown closes' statistic in "STATS t" showing invalid values sometimes
 
-
 -- Noteworthy changes in version 8.2.22 (2017-03-26)
 o) Implemented channel mode 'L'. Channels with that mode set can make use of an
    extended ban list size specified with the new 'channel::max_bans_large'
@@ -49,14 +46,12 @@ o) Fixed an issue with "TRACE" where remote servers would reply with RPL_TRACEUS
 o) "STATS z" now shows simple memory stats of servers linked to the network
 o) Added support for remote "ETRACE"
 
-
 -- Noteworthy changes in version 8.2.21 (2016-11-27)
 o) The 'general::default_floodtime' configuration option has been added
    along with the "SET FLOODTIME" command. These allow to fine-tune the
    message throttling better
 o) Fixed an issue with /invite not showing the list of channels the
    sender is invited to
-
 
 -- Noteworthy changes in version 8.2.20 (2016-11-05)
 o) "INFO" now shows GnuTLS/OpenSSL library/header versions
@@ -69,7 +64,6 @@ o) /whois notices to operators have been re-added. User mode +y is required
 o) The maximum line length for motd files has been increased to 320 bytes
    to support multibyte encodings better
 
-
 -- Noteworthy changes in version 8.2.19 (2016-08-21)
 o) Fixed a possible server name leak in "WHO" with server hiding enabled
 o) "WHO" now allows opers to search by IP address
@@ -77,17 +71,14 @@ o) Admins no longer can see IP addresses in "STATS P" with
    'serverhide::hide_server_ips' enabled
 o) User mode 'n' now shows nick name changes from remote clients, too
 
-
 -- Noteworthy changes in version 8.2.18 (2016-06-22)
 o) Fixed an assert when a client sends invalid LIST options
 o) Fixed invalid memory stats of channel invites in "STATS z"
-
 
 -- Noteworthy changes in version 8.2.17 (2016-04-21)
 o) Fixed core on "REHASH CONF" with 'general::whowas_history_length'
    set to 0
 o) Fixed possible core on "INVITE" with 'channel::max_channels' set to 0
-
 
 -- Noteworthy changes in version 8.2.16 (2016-03-20)
 o) Added 'general::whowas_history_length' configuration option which
@@ -96,14 +87,12 @@ o) Services are now allowed to override 'general::min_nonwildcard',
    and 'general::min_nonwildcard_simple' settings
 o) Minor updates to help files
 
-
 -- Noteworthy changes in version 8.2.15 (2016-02-24)
 o) Added proper support for Raspbian/ARM. Gracias to Beave/2600.net
    for providing a box for testing purposes.
 o) Fixed an assert with empty user = "" directives in auth {} blocks
 o) "STATS z" now shows allocated listeners
 o) Fixed bug where 'can_flood' auth {} flags did not work on channels
-
 
 -- Noteworthy changes in version 8.2.14 (2016-02-09)
 o) Fixed server clustering
@@ -115,7 +104,6 @@ o) Improvements to libGeoIP support:
      serverinfo {} block
 o) Further improvements to GnuTLS support
 
-
 -- Noteworthy changes in version 8.2.13 (2016-02-02)
 o) Implemented support for GnuTLS. Currently ./configure's autodetection
    intentionally prefers OpenSSL over GnuTLS, so OpenSSL detection needs
@@ -126,7 +114,6 @@ o) Added support for remote REHASH: REHASH <server> <option>
 o) Added 'rehash:remote' irc-operator privilege flag
 o) Added 'rehash' type to shared {} blocks
 o) Fixed minor memory leak with shared {} and cluster {} blocks
-
 
 -- Noteworthy changes in version 8.2.12 (2016-01-05)
 #######################################################################
@@ -146,12 +133,10 @@ o) Made idle time look nicer in "STATS v|p" by using a formatted time string
 o) 'general::ts_warn_delta', and 'general::ts_max_delta' can be set to 0 now
 o) Several code cleanups and optimizations. Improved documentation
 
-
 -- Noteworthy changes in version 8.2.11 (2015-11-19)
 o) Implemented IRCv3.2 invite-notify extension
 o) Implemented IRCv3.2 chghost extension
 o) Added channel::invite_delay_channel configuration option
-
 
 -- Noteworthy changes in version 8.2.10 (2015-11-06)
 #######################################################################
@@ -169,7 +154,6 @@ o) RSA keys with less than 2048 bits are no longer supported; same applies
    to the DH param file
 o) Added missing irc-operator privilege flags to /stats o. For a full list
    of flags see doc/reference.conf
-
 
 -- Noteworthy changes in version 8.2.9 (2015-09-13)
 ########################################################################
@@ -201,7 +185,6 @@ o) Added 'resv', and 'unresv' irc-operator flags. Previously, all
 o) Added 'close' to irc-operator flags
 o) ircd is using ISO 8601 date and time notation in most places now
 
-
 -- Noteworthy changes in version 8.2.8 (2015-05-10)
 o) ircd now rejects remote k-line requests for user@host mask that don't
    have at least 'general::min_nonwildcard' non-wildcard characters in it
@@ -219,13 +202,11 @@ o) Fixed broken temporary remote XLINEs
 o) The 'general::havent_read_conf' configuration directive has been removed
 o) Various code cleanups
 
-
 -- Noteworthy changes in version 8.2.7 (2015-04-05)
 o) Fixed a potential buffer overflow with the BMASK inter-server command
 o) Fixed undefined behavior in the HELP command module which could
    lead to stack corruption
 o) Removed useless help files for inter-server commands
-
 
 -- Noteworthy changes in version 8.2.6 (2015-03-29)
 o) INFO now shows configured values of 'max_watch' and 'stats_m_oper_only'
@@ -234,11 +215,9 @@ o) Fixed bug that would allow remote clients to bypass the hard
    limit of max WHOWAS entries to be returned
 o) Code cleanups and performance improvements
 
-
 -- Noteworthy changes in version 8.2.5 (2015-02-24)
 o) Fixed core on Mac OSX 10.10 and possibly some other systems when parsing
    the ircd.conf with configured pseudo {} blocks
-
 
 -- Noteworthy changes in version 8.2.4 (2015-02-17)
 o) Added SVSTAG command which services may use to add tags to users which can
@@ -248,7 +227,6 @@ o) Added 'oper::whois' configuration option which allows to override the default
 o) IRC operators may now use +O on a channel even if they are only a half-op
 o) Fixed bug where TOPIC messages were not n!u@h prefixed in case of TBURST
    issued by services clients
-
 
 -- Noteworthy changes in version 8.2.3 (2015-02-11)
 ########################################################################
@@ -270,7 +248,6 @@ o) Minor code cleanups and improvements
 o) Operators may now see certificate fingerprints, user modes and hidden
    channels via WHOIS as well. This used to be admin only.
 
-
 -- Noteworthy changes in version 8.2.2 (2015-01-20)
 o) Implemented IRCv3.1 extended-join extension
 o) Channel half-ops can now use INVITE as well
@@ -285,7 +262,6 @@ o) The 'general::true_no_oper_flood' configuration option has been deprecated.
 o) Added 'general::stats_m_oper_only' configuration option
 o) Remote client connection notices (user mode +F) now do show IP addresses, too
 
-
 -- Noteworthy changes in version 8.2.1 (2014-10-21)
 o) Fixed bug where "UNDLINE remote.server IP" did not work as expected
 o) Servers are now allowed to add/remove K-/D-/X-lines and RESVs
@@ -294,7 +270,6 @@ o) Due to potential weakness, TLS session caching and session tickets
    have been disabled
 o) Minor improvements to TS6 implementation
 o) WHOWAS now shows the name of the services account a user was logged in
-
 
 -- Noteworthy changes in version 8.2.0 (2014-08-24)
 o) Successful operator logins are now announced globally via GLOBOPS
@@ -309,7 +284,6 @@ o) pseudo {} blocks also known as service aliases have been implemented.
 o) Removed 'general::services_name' configuration option. This is now no
    longer needed.
 
-
 -- Noteworthy changes in version 8.2.0rc2 (2014-08-03)
 o) Improved AWAY throttling to allow for better fine-tuning. See the
    newly added 'away_count' and 'away_time' configuration directives
@@ -317,12 +291,10 @@ o) Improved AWAY throttling to allow for better fine-tuning. See the
 o) Support for the select() I/O event notification has been dropped
 o) Minor code cleanups and improvements
 
-
 -- Noteworthy changes in version 8.2.0rc1 (2014-07-20)
 o) Miscellaneous code cleanups and stabilization fixes
 o) ./configure now requires OpenSSL 0.9.8o or above in order
    to enable TLS/SSL support
-
 
 -- Noteworthy changes in version 8.2.0beta4 (2014-07-06)
 #####################################################################
@@ -344,10 +316,8 @@ o) Removed 'ssl_server_method' and 'ssl_client_method' configuration options.
    ircd now only allows TLSv1, TLSv1.1 and TLSv1.2 protocols depending
    on the OpenSSL version. SSLv3 is no longer supported.
 
-
 -- Noteworthy changes in version 8.2.0beta3 (2014-05-26)
 o) Code cleanups/performance improvements
-
 
 -- Noteworthy changes in version 8.2.0beta2 (2014-05-15)
 #########################################################################
@@ -358,7 +328,6 @@ o) Fixed bug with WHOIS not showing a list of channel names as expected
 o) Added usermode +q which hides idle and signon time in WHOIS
 o) Added usermode +p which hides channel list in WHOIS
 
-
 -- Noteworthy changes in version 8.2.0beta1 (2014-04-29)
 o) TS6 is now mandatory. ircd is no longer backwards compatible with TS5
    and below.
@@ -368,13 +337,11 @@ o) INFO now also reports MPATH (path to main motd (Message of the Day) file)
    and SPATH (Path to server executable)
 o) Updated several help files
 
-
 -- Noteworthy changes in version 8.1.20 (2014-07-20)
 o) Fixed XLINE not working as expected
 o) Fixed build with LibreSSL which hasn't compression support
 o) Miscellaneous stabilization and cosmetical fixes
 o) EGD support has been dropped
-
 
 -- Noteworthy changes in version 8.1.19 (2014-07-05)
 o) Fixed EOB logic for remote servers
@@ -384,7 +351,6 @@ o) Sending messages to user@server to local targets is now no longer possible,
    as this was an easy way to bypass +R/+G/+g user modes.
 o) Fixed splicode logic so SPLITNUM now works as expected
 o) Fixed UNDLINE not to require the IP address to be prepended with *@
-
 
 -- Noteworthy changes in version 8.1.18 (2014-06-09)
 o) Fixed CAP issue for certain clients
@@ -398,7 +364,6 @@ o) Fixed compile warnings; code cleanups
 o) Fixed bug where the configuration parser wouldn't truncate the network name
    if general::network_name contains spaces
 
-
 -- Noteworthy changes in version 8.1.17 (2014-05-01)
 o) Fixed possible WATCH core
 o) Fixed bug where the configuration parser wouldn't take time units
@@ -406,14 +371,12 @@ o) Fixed bug where the configuration parser wouldn't take time units
    configuration options
 o) Minor /list optimization
 
-
 -- Noteworthy changes in version 8.1.16 (2014-04-20)
 o) Fixed undefined behaviour with crypt() returning NULL
    since glibc2.17 in certain cases
 o) Admins may now see all channel members via "WHO #channel"
    regardless of channel mode +s
 o) Fixed corrupted "STATS U" output
-
 
 -- Noteworthy changes in version 8.1.15 (2014-03-29)
 ########################################################################
@@ -424,7 +387,6 @@ o) USERS command has been removed
 o) Fixed issue with SVSNICK where clients self-collided when changing
    just the case of the nick name, i.e. somenick -> SomeNicK
 o) Minor code cleanups and cosmetical fixes
-
 
 -- Noteworthy changes in version 8.1.14 (2014-02-25)
 o) WHOWAS now honors serverhide::disable_remote_commands
@@ -439,7 +401,6 @@ o) Fixed bug where certain irc clients could not reconnect via TLS/SSL
 o) Fixed long-standing bug where +p channels have been shown
    in the /whois reply
 
-
 -- Noteworthy changes in version 8.1.13 (2014-01-07)
 o) Fixed EOB not working for remote servers (resulted in fake
    direction notices)
@@ -451,7 +412,6 @@ o) Fixed several bugs with server hiding
 o) Updated/fixed help files
 o) WHOIS no longer sends a notice to +y operators
 
-
 -- Noteworthy changes in version 8.1.12 (2013-12-22)
 o) RPL_WHOISMODES now uses the 379 numeric
 o) Serial number is now shown on start up
@@ -462,11 +422,9 @@ o) Fixed file descriptor leak with empty help files
 o) Fixed issue with WEBIRC where hostnames were
    not validated
 
-
 -- Noteworthy changes in version 8.1.11 (2013-12-06)
 o) Administrators may now see channel modes in /LIST
 o) Fixed compile error on BSD systems when building with kqueue()
-
 
 -- Noteworthy changes in version 8.1.10 (2013-11-25)
 o) Fixed bug with kqueue() where it occasionally dropped updates
@@ -479,7 +437,6 @@ o) Fixed bug where "STATS P" would leak ip addresses to remotely connected
    administrators, even if serverhide::hide_server_ips was set to 'yes'
 o) Services coders: added SVSKILL
 
-
 -- Noteworthy changes in version 8.1.9 (2013-11-08)
 o) Added usermode +W. Users connected via a webirc gateway get this
    mode set by servers.
@@ -490,7 +447,6 @@ o) Administrators may now see +s channels a user is in with /WHOIS.
    reply.
 o) Administrators are now able to see all the user modes a user has
    set via /whois
-
 
 -- Noteworthy changes in version 8.1.8 (2013-10-25)
 o) Fixed bug that would lead to a desynchronized nick database
@@ -503,21 +459,17 @@ o) When using anope 1.9/2.0 services, /WHOIS now shows the account name
    of a registered/identified client (numeric 330)
 o) Administrators can now see +s channels in /LIST
 
-
 -- Noteworthy changes in version 8.1.7 (2013-08-18)
 o) Fixed issue with channel mode +n having no functionality at all
 o) Fixed SSL certificate fingerprint validation for outgoing server connects
 o) Updated several documentation files
 
-
 -- Noteworthy changes in version 8.1.6 (2013-08-02)
 o) Fixed possible core with empty motd files
-
 
 -- Noteworthy changes in version 8.1.5 (2013-07-16)
 o) Fixed bug that would prevent servers from linking together
    if connect::aftype isn't set
-
 
 -- Noteworthy changes in version 8.1.4 (2013-07-05)
 o) Added 'xline' and 'resv' logging types. See doc/reference.conf
@@ -527,12 +479,10 @@ o) Fixed core with empty auth::spoof entries
 o) Increased oper/auth/connect password length limit from 20 to 128
 o) Minor fixes to nickflood control code
 
-
 -- Noteworthy changes in version 8.1.3 (2013-06-23)
 o) Fixed possible core on "STATS z"
 o) Revised doc/reference.conf
 o) Fixed broken --disable-libgeoip switch
-
 
 -- Noteworthy changes in version 8.1.2 (2013-06-20)
 o) Added general::cycle_on_host_change configuration option
@@ -550,7 +500,6 @@ o) Added usermode +S (client is connected via SSL/TLS). Allows services
 o) Fixed a server name leak with server hiding enabled. Reported by
    Adam <adam@anope.org>
 
-
 -- Noteworthy changes in version 8.1.1 (2013-06-06)
 ########################################################################
 o) IMPORTANT: moved disable_remote_command configuration directive from
@@ -564,14 +513,11 @@ o) Implemented motd{} configuration blocks. See doc/reference.conf for more
    information
 o) "STATS T" shows configured MOTD files
 
-
 -- Noteworthy changes in version 8.1.0 (2013-05-23)
 o) Minor code cleanups/performance improvements
 
-
 -- Noteworthy changes in version 8.1.0rc1 (2013-05-19)
 o) Fixed broken spoofs
-
 
 -- Noteworthy changes in version 8.1.0beta5 (2013-05-15)
 o) Removed 'remote', and 'global_kill' oper flags, and added 'connect',
@@ -583,14 +529,12 @@ o) Removed 'remote', and 'global_kill' oper flags, and added 'connect',
 o) Added 'locops' and 'wallops' to irc-operator flags
 o) Improve/cleanup HELP system
 
-
 -- Noteworthy changes in version 8.1.0beta4 (2013-05-09)
 o) Implemented channel mode +M. Clients that haven't identified their
    name with NickServ may not speak in a channel that has this mode set
 o) Fixed weird idletimes shown in /trace
 o) Added 'nononreg' (+R) to general::oper_umodes
 o) Added user mode +F (can see remote client connect/exit notices)
-
 
 -- Noteworthy changes in version 8.1.0beta3 (2013-05-05)
 o) PCRE support has been dropped
@@ -604,14 +548,12 @@ o) Fixed bug where bans were not checked against non-channel members when
 o) Removed channel::quiet_on_ban configuration option. This feature is
    now enabled by default
 
-
 -- Noteworthy changes in version 8.1.0beta2 (2013-04-28)
 o) Fixed broken compile with libGeoIP disabled
 o) Code cleanups; working towards stabilization and improved performance
 o) Removed operflag 'nick_changes'. Operators can now set +n at will
 o) Fixed shared{} blocks not working as expected
 o) Fixed spoofs not working as expected
-
 
 -- Noteworthy changes in version 8.1.0beta1 (2013-04-25)
 ########################################################################
@@ -639,19 +581,16 @@ o) Added serverhide::hide_services configuration option
 o) Added 'nononreg' (+R) to oper::umodes and general::oper_only_modes
 o) Added support for "away-notify" client capability
 
-
 -- Noteworthy changes in version 8.0.9 (2013-05-16)
 o) Fixed bug where ircd would sometimes drop a services link because
    of a missing argument to the SVSMODE command
 o) Fixed weird idletimes shown in /trace
-
 
 -- Noteworthy changes in version 8.0.8 (2013-04-28)
 o) "STATS s" now shows configured services{} blocks as well
 o) Fixed compile warnings, minor code cleanups and optimizations
 o) Increased nickname history length to 32768
 o) Unidentified/unregistered nicks may not speak in +R channels
-
 
 -- Noteworthy changes in version 8.0.7 (2013-04-12)
 o) Services may now set a channel topic without joining the channel first
@@ -662,12 +601,10 @@ o) Remote server connection and split notices now go to new usermode +e.
 o) Services may now change the host of a specific user
    via "SVSMODE <timestamp> <target> +x <hostname>"
 
-
 -- Noteworthy changes in version 8.0.6 (2013-01-28)
 o) Fix bug where idle time sometimes is 0 even if the client didn't
    send any private message
 o) Fixed possible core in try_parse_v4_netmask()
-
 
 -- Noteworthy changes in version 8.0.5 (2013-01-24)
 ########################################################################
@@ -691,17 +628,14 @@ o) /whois, /stats p, and /trace may now show fake idle times depending on
    way as it does in csircd
 o) The configuration parser now does support 'year' and 'month' units
 
-
 -- Noteworthy changes in version 8.0.4 (2013-01-02)
 o) Fixed possible core on USERHOST/ISON with optimization enabled
 o) Fixed bug where can_flood sometimes didn't work as expected
-
 
 -- Noteworthy changes in version 8.0.3 (2012-12-24)
 o) Fixed core on UNDLINE
 o) XLINE/KLINE/RESV/DLINE/SQUIT and KILL now have the same default reason
    if a reason hasn't been specified
-
 
 -- Noteworthy changes in version 8.0.2 (2012-12-20)
 o) Minor updates to the build system
@@ -712,13 +646,11 @@ o) STATS q|Q now shows how many times a resv{} block has been matched
 o) Fixed contributed WEBIRC module
 o) IRC operators may now again see server generated nick rejection notices
 
-
 -- Noteworthy changes in version 8.0.1 (2012-11-04)
 o) Fixed broken CIDR support for CHALLENGE based irc operator logins
 o) Fixed class limits not properly applying to oper{} blocks
 o) Fixed possible TBURST desynchronization with services
 o) Fixed TBURST sending server's name to clients if it's a hidden server
-
 
 -- Noteworthy changes in version 8.0.0 (2012-10-18)
 o) Fixed an off-by-one with spoofs. Spoofs are now also checked for
@@ -728,14 +660,12 @@ o) Removed general::use_whois_actually configuration directive. This is
 o) Minor SQUIT handling fixes
 o) Fixed bancache not being updated on CHGHOST/CHGIDENT
 
-
 -- Noteworthy changes in version 8.0.0rc1 (2012-09-28)
 o) Removed general::client_flood configuration option and added the
    new 'recvq' configuration directive to class{} blocks.
    The max size of a receive queue can be seen in "STATS Y"
    for each class
 o) Allow the '[' and ']' characters in server description
-
 
 -- Noteworthy changes in version 8.0.0beta3 (2012-08-24)
 o) Fixed wrong syntax in several language files
@@ -746,7 +676,6 @@ o) Removed serverhide::disable_hidden configuration option
 o) Dropped ircd-hybrid-6 GLINE compatibility mode
 o) Removed use_invex, use_except and use_knock configuration options.
    These features are now enabled by default
-
 
 -- Noteworthy changes in version 8.0.0beta2 (2012-07-21)
 o) channel::disable_fake_channels now also disables ascii 29 (mIRC italic)
@@ -763,7 +692,6 @@ o) Removed OMOTD module
 o) Added 'set' to operator privilege flags. Gives access to the "SET" command
 o) Improved TS6 support
 o) Channel keys/passwords are now case sensitive
-
 
 -- Noteworthy changes in version 8.0.0beta1 (2012-05-28)
 o) Implemented full services support, including but not limited to the
@@ -811,7 +739,6 @@ o) "STATS Y|y" now reports CIDR limits as well
 o) Added m_webirc.c to contrib/
 o) Overall code cleanup and speed improvements
 
-
 -- ircd-hybrid-7.3.2 Release Notes
 o) Added new m_webirc.c to contrib/
 o) Added need_tls to auth::flags. Rejects clients that are not connected
@@ -820,7 +747,6 @@ o) Fixed compile warning with gcc 4.6
 o) Minor fixes to m_cap module
 o) Added CIDR support for operator{} blocks
 
-
 -- ircd-hybrid-7.3.1 Release Notes
 o) Fixed ERR_ACCEPTEXIST numeric string. Now gives proper
    nick!user@host mask output
@@ -828,7 +754,6 @@ o) Update RPL_ISUPPORT. CHANMODES now reflects new +OS channelmodes
 o) Fixed random core triggered by exiting servers
 o) Fixed invalid user and invisible count in /lusers which sometimes can
    occur if a server sends redundant usermodes within a NICK message
-
 
 -- ircd-hybrid-7.3.0 Release Notes
 o) Added Bulgarian language file provided by Borislav Borisov
@@ -842,7 +767,6 @@ o) Added back STATS/TRACE/MOTD/ADMIN request notices. Removed
 o) Channelmode +O; channel can be joined by ircops only.
 o) Channelmode +S; only clients with a secure connection (ssl/tls)
    can join this channel.
-
 
 -- ircd-hybrid-7.3-rc1 Release Notes
 o) Major 64-bit cleanups and portability fixes.
