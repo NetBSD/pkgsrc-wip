@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	spotifyd-0.2.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,13 +14,35 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c # rust, but needs a toolchain to link
 
+DISTFILES=	${DEFAULT_DISTFILES}
+
+LIBRESPOT_REV=	d2cadec4190a44572b1d5d5daed4f0eda1c2b921
+DISTFILES+=	librespot-${LIBRESPOT_REV}.tar.gz
+SITES.librespot-${LIBRESPOT_REV}.tar.gz=	-https://github.com/librespot-org/librespot/archive/${LIBRESPOT_REV}.tar.gz
+
+RUST_TREMOR_REV=5958cc302e78f535dad90e9665da981ddff4000a
+DISTFILES+=	rust-tremor-${RUST_TREMOR_REV}.tar.gz
+SITES.rust-tremor-${RUST_TREMOR_REV}.tar.gz=	-https://github.com/plietar/rust-tremor/archive/${RUST_TREMOR_REV}.tar.gz
+
+RUST_MDNS_REV=	66a74033da6c9f1a06e7b0a29f4544fd189d6479
+DISTFILES+=	rust-mdns-${RUST_MDNS_REV}.tar.gz
+SITES.rust-mdns-${RUST_MDNS_REV}.tar.gz=	-https://github.com/plietar/rust-mdns/archive/${RUST_MDNS_REV}.tar.gz
+
+RUST_ALSA_REV=	8c63543fa0ccd971cf15f5675293d19febd6f79e
+DISTFILES+=	rust-alsa-${RUST_ALSA_REV}.tar.gz
+SITES.rust-alsa-${RUST_ALSA_REV}.tar.gz=	-https://github.com/plietar/rust-alsa/archive/${RUST_ALSA_REV}.tar.gz
+
+DNS_PARSER_REV=	1d3e5a5591bc72eb061c23bd426c4a25f2f73791
+DISTFILES+=	dns-parser-${DNS_PARSER_REV}.tar.gz
+SITES.dns-parser-${DNS_PARSER_REV}.tar.gz=	-https://github.com/plietar/dns-parser/archive/${DNS_PARSER_REV}.tar.gz
+
 # This just seems not a good way to do things
 #
 CARGO_CRATE_DEPENDS+=	adler32-1.0.3
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.6.8
-#CARGO_CRATE_DEPENDS+=	alsa-0.0.1
 CARGO_CRATE_DEPENDS+=	alsa-0.2.1
 CARGO_CRATE_DEPENDS+=	alsa-sys-0.1.2
+CARGO_CRATE_DEPENDS+=	arc-swap-0.3.7
 CARGO_CRATE_DEPENDS+=	arrayvec-0.4.7
 CARGO_CRATE_DEPENDS+=	atty-0.2.11
 CARGO_CRATE_DEPENDS+=	backtrace-0.3.9
@@ -55,7 +78,6 @@ CARGO_CRATE_DEPENDS+=	dbus-tokio-0.2.1
 CARGO_CRATE_DEPENDS+=	derive-error-chain-0.10.1
 CARGO_CRATE_DEPENDS+=	derive_builder-0.5.1
 CARGO_CRATE_DEPENDS+=	derive_builder_core-0.2.0
-CARGO_CRATE_DEPENDS+=	dns-parser-0.3.2
 CARGO_CRATE_DEPENDS+=	dotenv-0.10.1
 CARGO_CRATE_DEPENDS+=	dtoa-0.4.3
 CARGO_CRATE_DEPENDS+=	either-1.5.0
@@ -98,33 +120,27 @@ CARGO_CRATE_DEPENDS+=	language-tags-0.2.2
 CARGO_CRATE_DEPENDS+=	lazy_static-0.2.11
 CARGO_CRATE_DEPENDS+=	lazy_static-1.1.0
 CARGO_CRATE_DEPENDS+=	lazycell-1.2.0
-CARGO_CRATE_DEPENDS+=	lewton-0.8.0
+CARGO_CRATE_DEPENDS+=	lewton-0.9.3
 CARGO_CRATE_DEPENDS+=	libc-0.2.43
 CARGO_CRATE_DEPENDS+=	libdbus-sys-0.1.4
 CARGO_CRATE_DEPENDS+=	libflate-0.1.18
 CARGO_CRATE_DEPENDS+=	libpulse-sys-0.0.0
-#CARGO_CRATE_DEPENDS+=	librespot-0.1.0
-#CARGO_CRATE_DEPENDS+=	librespot-audio-0.1.0
-#CARGO_CRATE_DEPENDS+=	librespot-connect-0.1.0
-#CARGO_CRATE_DEPENDS+=	librespot-core-0.1.0
-#CARGO_CRATE_DEPENDS+=	librespot-metadata-0.1.0
-#CARGO_CRATE_DEPENDS+=	librespot-playback-0.1.0
-#CARGO_CRATE_DEPENDS+=	librespot-protocol-0.1.0
 CARGO_CRATE_DEPENDS+=	linear-map-1.2.0
 CARGO_CRATE_DEPENDS+=	lock_api-0.1.4
 CARGO_CRATE_DEPENDS+=	log-0.3.9
 CARGO_CRATE_DEPENDS+=	log-0.4.5
 CARGO_CRATE_DEPENDS+=	matches-0.1.8
-CARGO_CRATE_DEPENDS+=	mdns-0.2.0
 CARGO_CRATE_DEPENDS+=	memchr-2.1.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.2.1
 CARGO_CRATE_DEPENDS+=	mime-0.3.12
 CARGO_CRATE_DEPENDS+=	mime_guess-2.0.0-alpha.6
 # work around weird version pattern not supported by cargo.mk
-SITES.mime_guess-2.0.0-alpha.6.crate+=	 -https://crates.io/api/v1/crates/mime_guess/2.0.0-alpha.6/download
+SITES.mime_guess-2.0.0-alpha.6.crate+=	-https://crates.io/api/v1/crates/mime_guess/2.0.0-alpha.6/download
 CARGO_CRATE_DEPENDS+=	mio-0.6.16
+CARGO_CRATE_DEPENDS+=	mio-named-pipes-0.1.6
 CARGO_CRATE_DEPENDS+=	mio-uds-0.6.7
 CARGO_CRATE_DEPENDS+=	miow-0.2.1
+CARGO_CRATE_DEPENDS+=	miow-0.3.3
 CARGO_CRATE_DEPENDS+=	multimap-0.4.0
 CARGO_CRATE_DEPENDS+=	native-tls-0.2.1
 CARGO_CRATE_DEPENDS+=	net2-0.2.33
@@ -136,7 +152,7 @@ CARGO_CRATE_DEPENDS+=	num-integer-0.1.39
 CARGO_CRATE_DEPENDS+=	num-traits-0.1.43
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.6
 CARGO_CRATE_DEPENDS+=	num_cpus-1.8.0
-CARGO_CRATE_DEPENDS+=	ogg-0.5.1
+CARGO_CRATE_DEPENDS+=	ogg-0.7.0
 CARGO_CRATE_DEPENDS+=	ogg-sys-0.0.9
 CARGO_CRATE_DEPENDS+=	openssl-0.10.14
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.2
@@ -154,6 +170,10 @@ CARGO_CRATE_DEPENDS+=	portaudio-rs-0.3.0
 CARGO_CRATE_DEPENDS+=	portaudio-sys-0.1.1
 CARGO_CRATE_DEPENDS+=	proc-macro2-0.4.20
 CARGO_CRATE_DEPENDS+=	protobuf-1.7.4
+CARGO_CRATE_DEPENDS+=	protobuf-2.0.5
+CARGO_CRATE_DEPENDS+=	protobuf-codegen-2.0.5
+CARGO_CRATE_DEPENDS+=	protoc-2.0.5
+CARGO_CRATE_DEPENDS+=	protoc-rust-2.0.5
 CARGO_CRATE_DEPENDS+=	quick-error-1.2.2
 CARGO_CRATE_DEPENDS+=	quote-0.3.15
 CARGO_CRATE_DEPENDS+=	quote-0.6.8
@@ -174,7 +194,6 @@ CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.1
 CARGO_CRATE_DEPENDS+=	reqwest-0.9.3
 CARGO_CRATE_DEPENDS+=	rpassword-0.3.1
 CARGO_CRATE_DEPENDS+=	rspotify-0.2.5
-CARGO_CRATE_DEPENDS+=	rust-crypto-0.2.36
 CARGO_CRATE_DEPENDS+=	rust-crypto-0.2.36
 CARGO_CRATE_DEPENDS+=	rust-ini-0.10.3
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.9
@@ -199,6 +218,7 @@ CARGO_CRATE_DEPENDS+=	serde_json-0.9.10
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.32
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.5.3
 CARGO_CRATE_DEPENDS+=	shannon-0.2.0
+CARGO_CRATE_DEPENDS+=	signal-hook-0.1.7
 CARGO_CRATE_DEPENDS+=	simplelog-0.4.4
 CARGO_CRATE_DEPENDS+=	siphasher-0.2.3
 CARGO_CRATE_DEPENDS+=	slab-0.3.0
@@ -206,6 +226,7 @@ CARGO_CRATE_DEPENDS+=	slab-0.4.1
 CARGO_CRATE_DEPENDS+=	smallvec-0.2.1
 CARGO_CRATE_DEPENDS+=	smallvec-0.6.5
 CARGO_CRATE_DEPENDS+=	socket2-0.2.4
+CARGO_CRATE_DEPENDS+=	socket2-0.3.8
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.1.1
 CARGO_CRATE_DEPENDS+=	string-0.1.1
 CARGO_CRATE_DEPENDS+=	syn-0.11.11
@@ -214,6 +235,7 @@ CARGO_CRATE_DEPENDS+=	synom-0.11.3
 CARGO_CRATE_DEPENDS+=	synstructure-0.10.0
 CARGO_CRATE_DEPENDS+=	syslog-3.3.0
 CARGO_CRATE_DEPENDS+=	take-0.1.0
+CARGO_CRATE_DEPENDS+=	tempdir-0.3.7
 CARGO_CRATE_DEPENDS+=	tempfile-2.2.0
 CARGO_CRATE_DEPENDS+=	tempfile-3.0.4
 CARGO_CRATE_DEPENDS+=	term-0.4.6
@@ -229,17 +251,17 @@ CARGO_CRATE_DEPENDS+=	tokio-current-thread-0.1.3
 CARGO_CRATE_DEPENDS+=	tokio-executor-0.1.5
 CARGO_CRATE_DEPENDS+=	tokio-fs-0.1.3
 CARGO_CRATE_DEPENDS+=	tokio-io-0.1.9
+CARGO_CRATE_DEPENDS+=	tokio-process-0.2.2
 CARGO_CRATE_DEPENDS+=	tokio-proto-0.1.1
 CARGO_CRATE_DEPENDS+=	tokio-reactor-0.1.6
 CARGO_CRATE_DEPENDS+=	tokio-service-0.1.0
 CARGO_CRATE_DEPENDS+=	tokio-signal-0.1.5
+CARGO_CRATE_DEPENDS+=	tokio-signal-0.2.7
 CARGO_CRATE_DEPENDS+=	tokio-tcp-0.1.2
 CARGO_CRATE_DEPENDS+=	tokio-threadpool-0.1.7
 CARGO_CRATE_DEPENDS+=	tokio-timer-0.2.7
 CARGO_CRATE_DEPENDS+=	tokio-udp-0.1.2
 CARGO_CRATE_DEPENDS+=	tokio-uds-0.2.2
-CARGO_CRATE_DEPENDS+=	tremor-0.1.0
-#CARGO_CRATE_DEPENDS+=	tremor-sys-0.1.0
 CARGO_CRATE_DEPENDS+=	try-lock-0.1.0
 CARGO_CRATE_DEPENDS+=	try-lock-0.2.2
 CARGO_CRATE_DEPENDS+=	ucd-util-0.1.1
@@ -282,10 +304,15 @@ MAKE_ENV+= RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulse
 # TODO investigate why this is needed
 CHECK_WRKREF_SKIP+=	bin/spotifyd
 
-# TODO we should use --frozen --locked, but it depends on multiple crates
-# that are not present on crates.io right now.
+post-extract:
+	mv ${WRKDIR}/librespot-${LIBRESPOT_REV} ${WRKDIR}/librespot
+	mv ${WRKDIR}/rust-tremor-${RUST_TREMOR_REV} ${WRKDIR}/rust-tremor
+	mv ${WRKDIR}/rust-mdns-${RUST_MDNS_REV} ${WRKDIR}/rust-mdns
+	mv ${WRKDIR}/rust-alsa-${RUST_ALSA_REV} ${WRKDIR}/rust-alsa
+	mv ${WRKDIR}/dns-parser-${DNS_PARSER_REV} ${WRKDIR}/dns-parser
+
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --no-default-features --features pulseaudio_backend --release
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --no-default-features --features pulseaudio_backend --release --frozen --locked
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotifyd ${DESTDIR}${PREFIX}/bin

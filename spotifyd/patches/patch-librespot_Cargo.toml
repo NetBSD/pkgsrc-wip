@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- ../librespot/Cargo.toml.orig	2018-11-19 14:03:35.000000000 +0000
++++ ../librespot/Cargo.toml
+@@ -57,8 +57,8 @@ url = "1.7.0"
+ rand            = "0.3.13"
+ vergen          = "0.1.0"
+ 
+-[replace]
+-"rust-crypto:0.2.36" = { git = "https://github.com/awmath/rust-crypto.git", branch = "avx2" }
++#[replace]
++#"rust-crypto:0.2.36" = { git = "https://github.com/awmath/rust-crypto.git", branch = "avx2" }
+ 
+ [features]
+ alsa-backend = ["librespot-playback/alsa-backend"]

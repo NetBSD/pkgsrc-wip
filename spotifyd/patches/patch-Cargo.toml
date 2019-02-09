@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- Cargo.toml.orig	2018-10-21 10:49:11.000000000 +0000
++++ Cargo.toml
+@@ -24,11 +24,12 @@ rspotify = "0.2.5"
+ chrono = "0.4"
+ alsa = { version = "0.2", optional = true }
+ 
+-[replace]
+-"rust-crypto:0.2.36" = { git = "https://github.com/awmath/rust-crypto.git", branch = "avx2" }
++#[replace]
++#"rust-crypto:0.2.36" = { git = "https://github.com/awmath/rust-crypto.git", branch = "avx2" }
+ 
+ [dependencies.librespot]
+-git = "https://github.com/librespot-org/librespot.git"
++#git = "https://github.com/librespot-org/librespot.git"
++path = "../librespot"
+ default-features = false
+ features = ["with-tremor"]
+ 

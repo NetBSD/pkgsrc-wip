@@ -2,16 +2,7 @@
 
 See this post: https://atomicules.co.uk/2019/01/17/Building-Spotifyd-on-NetBSD.html
 
-2. Should use vendored crates only and not random non-reproducable git clones
-
-3. Some of the CARGO_DEPENDS stuff I commented out, because it's not pulled
-from crates.io. Amazingly it still seems to build ok. Probably need to
-understand this.
-
----
-
 ## Done
-
 
 1. Need to somewhat manually create patches. mkpatches doesn't pick up changes
 from vendor directory. E.g, do `pkgdiff` in the directory and then edit patch
