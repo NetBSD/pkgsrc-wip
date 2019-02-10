@@ -5,14 +5,4 @@
 - Double-check that all removed patches are actually no longer
   needed (most of them were applied but maybe some build related ones
   needs to be adopted for cmake migration)
-- -DINSTALL_DOCUMENTATION=OFF is needed otherwise the build fails with:
-   don't know how to make ../man/pldoc. Stop
-  This probably fails because we pass -DSWIPL_PACKAGES=OFF and
-  -DINSTALL_DOCUMENTATION=ON actually needs some packages.
-  We should probably explicitly disable all packages in
-  swi-prolog-lite/Makefile (similarly to what we do in
-  swi-prolog-packages/Makefile) except SWIPL_PACKAGES_BASIC and remove
-  -DSWIPL_PACKAGES=OFF.  Unfortunately doing that seems to pick up
-  several further dependencies (e.g. ossp-uuid) leading the build
-  to fails.  Analyze if it is possible to avoid that.
 - -DSWIPL_SHARED_LIB=ON probably should be enabled for swi-prolog-jpl
