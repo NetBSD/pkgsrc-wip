@@ -13,8 +13,16 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
 CMAKE_ARGS+=		-DSWIPL_ARCH=${MACHINE_GNU_PLATFORM}
-CMAKE_ARGS+=		-DSWIPL_PACKAGES=ON
+CMAKE_ARGS+=		-DINSTALL_PACKAGES=ON
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=ON
+
+# Part of swi-prolog-lite
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_BASIC=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_SSL=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_TERM=OFF
+
+# Part of swi-prolog-lite... ...but needed to build documentation.
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_ARCHIVE=ON
 
 # XXX: Explicitly disable all not wanted packages to avoid possible build
 # XXX: failures. For a complete list please see:
@@ -27,12 +35,7 @@ CMAKE_ARGS+=		-DSWIPL_PACKAGES_TIPC=OFF
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_QT=OFF
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_JAVA=OFF
 
-SWIPL_PACKAGES_COMPONENTS+=	Core_packages
-SWIPL_PACKAGES_COMPONENTS+=	Archive_interface
-SWIPL_PACKAGES_COMPONENTS+=	Commandline_editors
-SWIPL_PACKAGES_COMPONENTS+=	OpenSSL_interface
 SWIPL_PACKAGES_COMPONENTS+=	Graphics_subsystem
-SWIPL_PACKAGES_COMPONENTS+=	Documentation
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -115,22 +118,16 @@ do-install:
 			-P cmake_install.cmake
 .endfor
 
-# XXX: editline bindings seems limited and does not support completion, remove
-# XXX: them in order to always use readline.pl.
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so || ${TRUE}
-	${RM} ${DESTDIR}${PREFIX}/lib/swipl/library/editline.pl || ${TRUE}
-
 # I need this on FreeBSD, perhaps this depends on GCC behaviour:
 CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHINE_GNU_PLATFORM}/pl2xpce.so
 
 
-.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../wip/swi-prolog-lite/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../devel/gmp/buildlink3.mk"
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/ossp-uuid/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
