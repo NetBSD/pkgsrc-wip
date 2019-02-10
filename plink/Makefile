@@ -6,7 +6,6 @@
 ###########################################################
 
 DISTNAME=	plink-${PORTVERSION}
-PKGNAME=	plink19-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
@@ -37,10 +36,8 @@ INSTALLATION_DIRS=	bin
 post-patch:
 	${CP} ${WRKSRC}/Makefile.std ${WRKSRC}/Makefile
 
-# Override install target and install as plink19 to allow coexistence with
-# plink 1.07
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin/plink19
+	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin
 
 .include "../../wip/cblas/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
