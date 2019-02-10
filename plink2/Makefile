@@ -5,11 +5,12 @@
 #              Thu May  3 10:32:03 CDT 2018               #
 ###########################################################
 
-DISTNAME=	plink-ng-${PORTVERSION}
+DISTNAME=	plink-ng-${PV}
+PKGNAME=	plink2-${PV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
-GITHUB_TAG=	f758bbd77e04eb0cb46fbc633be60b22b8b3cc2d
+GITHUB_TAG=	00aaeb53d3edd569c93bd60e7bcd27ced4cd8fdb
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
@@ -17,7 +18,7 @@ COMMENT=	Whole genome association analysis toolset
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++ fortran
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/2.0
 
@@ -29,10 +30,21 @@ MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
 # Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
-PORTVERSION=		0.0.0.20180518
+PV=		0.0.0.20190202
 USE_BUILTIN.zlib=	no
 
 MAKE_FILE=	${FILESDIR}/Makefile.generic
+
+DATADIR=	${PREFIX}/share/plink2
+
+post-install:
+	(cd ${WRKSRC} && pax -rw Tests ${DESTDIR}${DATADIR})
+	${CHMOD} a+x \
+		${DESTDIR}${DATADIR}/Tests/run_tests.sh \
+		${DESTDIR}${DATADIR}/Tests/*/run_tests.sh
+	${SED} -e "s|%%DATADIR%%|${DATADIR}|g" ${FILESDIR}/plink2-test.in \
+		> ${WRKDIR}/plink2-test
+	${INSTALL_SCRIPT} ${WRKDIR}/plink2-test ${DESTDIR}${PREFIX}/bin
 
 # .include "../../wip/openblas/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
