@@ -39,9 +39,10 @@ SWIPL_PACKAGES_COMPONENTS+=	Graphics_subsystem
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11_TYPE} == "modular"
-BUILD_DEPENDS+=		modular-xorg-server-[0-9]*:../../x11/modular-xorg-server
-.endif
+# XXX: check if still needed
+#.if ${X11_TYPE} == "modular"
+#BUILD_DEPENDS+=		modular-xorg-server-[0-9]*:../../x11/modular-xorg-server
+#.endif
 
 #CONFIGURE_ENV+=		PL=swi-prolog
 #CONFIGURE_ENV+=		PLARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
