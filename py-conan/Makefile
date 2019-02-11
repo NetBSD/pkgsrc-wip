@@ -33,6 +33,7 @@ DEPENDS+=   ${PYPKGPREFIX}-patch-1.16:../../wip/py-patch
 DEPENDS+=   ${PYPKGPREFIX}-colorama:../../comms/py-colorama
 DEPENDS+=   ${PYPKGPREFIX}-requests:../../devel/py-requests
 DEPENDS+=   ${PYPKGPREFIX}-JWT:../../textproc/py-JWT
+DEPENDS+=   ${PYPKGPREFIX}-yaml:../../textproc/py-yaml
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
