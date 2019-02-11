@@ -55,6 +55,7 @@ post-install:
 	${SED} -e "s|%%DATADIR%%|${DATADIR}|g" ${FILESDIR}/plink2-test.in \
 		> ${WRKDIR}/plink2-test
 	${INSTALL_SCRIPT} ${WRKDIR}/plink2-test ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${FILESDIR}/plink2-bench ${DESTDIR}${PREFIX}/bin
 
 # .include "../../wip/openblas/buildlink3.mk"
 .include "../../lang/python/application.mk"
