@@ -1246,6 +1246,7 @@ SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
 SUBDIR+=	guichan
 SUBDIR+=	guile-bytestructures
+SUBDIR+=	guile-git
 SUBDIR+=	guile-sqlite3
 SUBDIR+=	guitone
 SUBDIR+=	gupnp-ui
