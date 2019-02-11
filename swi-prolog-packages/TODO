@@ -11,3 +11,5 @@
   Previously a PL variable was passed... It is probably better to document that
   change in the commit message (swi-prolog -> swipl) and just follow upstream 
   nomenclature.
+- Update DESCR to reflect current reality (several packages are in
+  swi-prolog-lite now)
