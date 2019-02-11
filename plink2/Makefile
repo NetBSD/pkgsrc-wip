@@ -20,7 +20,16 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake pax
 
+# RHEL gunzip lacks -k flag
+DEPENDS=	gzip>0:../../archivers/gzip
+
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/2.0
+
+SUBST_CLASSES+=		test
+SUBST_STAGE.test=	pre-configure
+SUBST_FILES.test=	${WRKSRC}/Tests/run_tests.sh
+SUBST_SED.test=		-e 's|../../build_dynamic|${PREFIX}/bin|g'
+SUBST_SED.test+=	-e 's|^python|${PYTHONBIN}|g'
 
 CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
@@ -42,11 +51,13 @@ post-install:
 	${CHMOD} a+x \
 		${DESTDIR}${DATADIR}/Tests/run_tests.sh \
 		${DESTDIR}${DATADIR}/Tests/*/run_tests.sh
+	# ${CHMOD} -R a+rX ${DESTDIR}${DATADIR}/Tests
 	${SED} -e "s|%%DATADIR%%|${DATADIR}|g" ${FILESDIR}/plink2-test.in \
 		> ${WRKDIR}/plink2-test
 	${INSTALL_SCRIPT} ${WRKDIR}/plink2-test ${DESTDIR}${PREFIX}/bin
 
 # .include "../../wip/openblas/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../wip/cblas/buildlink3.mk"
