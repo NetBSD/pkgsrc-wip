@@ -61,5 +61,5 @@ CONFIGURE_ARGS+=	--without-crypto
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-crypto=${BUILDLINK_PREFIX.libgcrypt}
-CONFIGURE_ENV+=		LIBGCRYPT_CONFIG=/nonexistent
+# CONFIGURE_ENV+=		LIBGCRYPT_CONFIG=/nonexistent
 .endif

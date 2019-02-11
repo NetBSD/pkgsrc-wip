@@ -2,7 +2,7 @@
 #
 
 # This is a pre-release, with 0.11 release coming soon. pre66 being best for
-# testing the package.
+# testing the package. This prerelease will fail to build.
 DISTNAME=	gnunet-0.11.0pre66
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=gnunet/}
@@ -14,7 +14,7 @@ COMMENT=	Framework for secure P2P networking
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 PLIST_SRC=		${WRKDIR}/PLIST.src
@@ -28,7 +28,8 @@ LDFLAGS+=		-lpthread -lintl
 
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
+CONFIGURE_ARGS+=	--with-nss=${BUILDLINK_PREFIX.nss}/lib
+CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 
 post-patch:
 	cd ${WRKSRC} && for f in contrib/gnunet.* src/include/gnunet_util.h doc/man/*.?; do \
@@ -53,7 +54,7 @@ post-build:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/libextractor/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
-.include "../../devel/libidn2/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python27/buildlink3.mk"
