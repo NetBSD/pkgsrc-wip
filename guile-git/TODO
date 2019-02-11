@@ -1,0 +1,24 @@
+- guile modules aren't found:
+
+configure: checking for guile 2.2
+configure: found guile 2.2
+checking for guile-2.2... no
+checking for guile2.2... no
+checking for guile-2... no
+checking for guile2... no
+checking for guile... /usr/work/wip/guile-git/work/.buildlink/bin/guile
+checking for Guile version >= 2.2... 2.2.4
+checking for guild... /usr/work/wip/guile-git/work/.buildlink/bin/guild
+checking for guile-config... /usr/work/wip/guile-git/work/.buildlink/bin/guile-config
+checking if (srfi srfi-64) is available... yes
+checking if (bytestructures guile) is available... no
+configure: error: required guile module not found: (bytestructures guile)
+*** Error code 1
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/guile-git
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/guile-git
+
