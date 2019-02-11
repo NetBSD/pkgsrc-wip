@@ -1959,7 +1959,6 @@ SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libwebsockets
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
-SUBDIR+=	libxls
 SUBDIR+=	libzeep
 SUBDIR+=	libzn-poly
 SUBDIR+=	libzrtp
