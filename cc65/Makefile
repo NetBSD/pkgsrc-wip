@@ -9,6 +9,7 @@ GITHUB_TAG=	V${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cc65.org/
 COMMENT=	C cross compiler for 6502 target systems
+LICENSE=	zlib
 
 MAKE_JOBS_SAFE=		no
 
