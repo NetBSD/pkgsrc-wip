@@ -1,4 +1,5 @@
 @comment $NetBSD: PLIST,v 1.51 2017/08/30 21:00:46 kamil Exp $
+bin/elf2dmp
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
@@ -152,6 +153,7 @@ share/qemu/palcode-clipper
 share/qemu/petalogix-ml605.dtb
 share/qemu/petalogix-s3adsp1800.dtb
 share/qemu/ppc_rom.bin
+share/qemu/pvh.bin
 share/qemu/pxe-e1000.rom
 share/qemu/pxe-eepro100.rom
 share/qemu/pxe-ne2k_pci.rom
