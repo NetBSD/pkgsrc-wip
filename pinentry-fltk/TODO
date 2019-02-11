@@ -5,3 +5,5 @@
 [X] Sent patches to upstream
     https://dev.gnupg.org/T4336
     https://dev.gnupg.org/T4337
+    Both patches now merged upstream (can be removed for next release)
+
