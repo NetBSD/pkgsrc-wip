@@ -6,6 +6,3 @@ file-sharing. GNUnet uses a simple, excess-based economic
 model to allocate resources. Peers in GNUnet monitor each
 others behavior with respect to resource usage; peers that
 contribute to the network are rewarded with better service.
-
-GNUnet is part of the GNU project. Our official GNU website
-can be found at http://www.gnu.org/software/GNUnet/.

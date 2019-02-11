@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.6 2008/09/22 12:16:16 thomasklausner Exp $
+$NetBSD$
 
-SHA1 (GNUnet-0.6.4a.tar.bz2) = f3e5f55de75f3859c2f7bc9f0cbb4896255dbbc4
-RMD160 (GNUnet-0.6.4a.tar.bz2) = d827e3a596eded29a6c0d5840e0dbf047682caf7
-Size (GNUnet-0.6.4a.tar.bz2) = 1250052 bytes
-SHA1 (patch-aa) = 3424b9929668e5783fb59f73c53514eed2013308
-SHA1 (patch-ab) = 0dd443aa888314d029af761f2a8140ddb0455de7
-SHA1 (patch-ac) = 506753f8e0bde8fded12182dade9e37d22b2da28
-SHA1 (patch-ad) = e95ec0f92dc404b8d4dab6e8d09236c6e3fd24c0
-SHA1 (patch-ae) = 6b34c9afe15bb1f54444dcb9dd2bb7b5e81c6771
-SHA1 (patch-af) = 566351d448749da2285eff9560ebad90cede3246
+SHA1 (gnunet-0.11.0pre66.tar.gz) = 356724f9e38162984bff602fea30ce524f502201
+RMD160 (gnunet-0.11.0pre66.tar.gz) = 50250a2a8a6fca16c0f72bf0b0b2bb7cd66b75d1
+SHA512 (gnunet-0.11.0pre66.tar.gz) = 914533659419ff3a64772e0933617be455390c8d0b22718dd8d6fe5b892ea9969f2fe55f3c128094f349597a19b32255e47d0c29952864557e1fc19af9465e2d
+Size (gnunet-0.11.0pre66.tar.gz) = 7487985 bytes

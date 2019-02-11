@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.21 2012/11/25 23:32:18 othyro Exp $
+# $NetBSD$
 #
 
-DISTNAME=	GNUnet-0.6.4a
-PKGNAME=	${DISTNAME:S/GNU/gnu/}
-PKGREVISION=	1
-CATEGORIES=	x11
-MASTER_SITES=	http://www2.cddc.vt.edu/gnu/ftp/gnu/gnunet/
-# http://www.gnunet.org/download/
-EXTRACT_SUFX=	.tar.bz2
-LICENSE=	gnu-gpl-v3
+# This is a pre-release, with 0.11 release coming soon. pre66 being best for
+# testing the package.
+DISTNAME=	gnunet-0.11.0pre66
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GNU:=gnunet/}
+LICENSE=	gnu-agpl-v3
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnunet.org/
+MAINTAINER=	ng0@n0.is
+HOMEPAGE=	https://gnunet.org/
 COMMENT=	Framework for secure P2P networking
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake pkg-config msgfmt
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 PLIST_SRC=		${WRKDIR}/PLIST.src
 USE_LIBTOOL=		yes
@@ -28,8 +27,8 @@ LDFLAGS+=		-lpthread -lintl
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
-CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
 
 post-patch:
 	cd ${WRKSRC} && for f in contrib/gnunet.* src/include/gnunet_util.h doc/man/*.?; do \
@@ -45,10 +44,28 @@ post-build:
 	${ECHO} ${f:Q} >>${PLIST_SRC}
 .endfor
 
+.include "../../audio/libopus/buildlink3.mk"
+.include "../../databases/postgresql96-client/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/libextractor/buildlink3.mk"
+.include "../../devel/nss/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../wip/libextractor/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
-.include "../../devel/libltdl/convenience.mk"
+.include "../../devel/libidn2/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../lang/python27/buildlink3.mk"
+.include "../../math/glpk/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../textproc/libunistring/buildlink3.mk"
+.include "../../textproc/jansson/buildlink3.mk"
+.include "../../www/gnurl/buildlink3.mk"
+.include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
