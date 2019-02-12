@@ -33,6 +33,8 @@ Known bugs
  - fix test suite bugs..
  - unknown ones
  - switch from kvm(3) to sysctl(7)
+ - SocketTest.cpp: connection tests hang when run early after boot,
+   it seems that kernel wrongly accepts IPv6 connection to non-open port
 
 REMAINING MILESTONES
 ====================
