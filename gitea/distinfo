@@ -9,5 +9,6 @@ SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__solaris.go) = f4341dfab2b452f
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__sys.go) = 4e6121157bbd4072feaca297c081efa49379a57c
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__syscall.go) = 0f5df532a4a2210539af6b260ac556d864b3179d
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__unix.go) = 390a451fa1ed45755f5a4036c45ec3a2e4507c3b
-SHA1 (patch-vendor_github.com_edsrzf_mmap-go_msync__unix.go) = ef7da70a21d175aa4a1d055af515936c3986d134
+SHA1 (patch-vendor_github.com_edsrzf_mmap-go_msync__netbsd.go) = 13ac5d3f76a330f874002b18698ce5583c875239
+SHA1 (patch-vendor_github.com_edsrzf_mmap-go_msync__unix.go) = 3c3f67d09928abc49ed4b6386edd5cf579e045bf
 SHA1 (patch-vendor_gopkg.in_src-d_go-billy.v4_osfs_os__posix.go) = d8f2684acc2aeadd02761bff7506cb5789d92a72
