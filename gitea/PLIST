@@ -12,6 +12,7 @@ share/gitea/options/gitignore/AppceleratorTitanium
 share/gitea/options/gitignore/ArchLinuxPackages
 share/gitea/options/gitignore/Archives
 share/gitea/options/gitignore/Autotools
+share/gitea/options/gitignore/Backup
 share/gitea/options/gitignore/Bazaar
 share/gitea/options/gitignore/BricxCC
 share/gitea/options/gitignore/C
@@ -37,6 +38,7 @@ share/gitea/options/gitignore/DM
 share/gitea/options/gitignore/Dart
 share/gitea/options/gitignore/DartEditor
 share/gitea/options/gitignore/Delphi
+share/gitea/options/gitignore/Diff
 share/gitea/options/gitignore/Dreamweaver
 share/gitea/options/gitignore/Dropbox
 share/gitea/options/gitignore/Drupal
@@ -64,12 +66,15 @@ share/gitea/options/gitignore/GWT
 share/gitea/options/gitignore/Gcov
 share/gitea/options/gitignore/GitBook
 share/gitea/options/gitignore/Go
+share/gitea/options/gitignore/Godot
 share/gitea/options/gitignore/Gradle
 share/gitea/options/gitignore/Grails
 share/gitea/options/gitignore/Haskell
 share/gitea/options/gitignore/IGORPro
 share/gitea/options/gitignore/Idris
+share/gitea/options/gitignore/Images
 share/gitea/options/gitignore/JDeveloper
+share/gitea/options/gitignore/JEnv
 share/gitea/options/gitignore/Java
 share/gitea/options/gitignore/Jboss
 share/gitea/options/gitignore/Jekyll
@@ -78,8 +83,9 @@ share/gitea/options/gitignore/Joomla
 share/gitea/options/gitignore/Julia
 share/gitea/options/gitignore/KDevelop4
 share/gitea/options/gitignore/Kate
-share/gitea/options/gitignore/KiCAD
+share/gitea/options/gitignore/KiCad
 share/gitea/options/gitignore/Kohana
+share/gitea/options/gitignore/Kotlin
 share/gitea/options/gitignore/LabVIEW
 share/gitea/options/gitignore/Laravel
 share/gitea/options/gitignore/Lazarus
@@ -113,8 +119,11 @@ share/gitea/options/gitignore/Opa
 share/gitea/options/gitignore/OpenCart
 share/gitea/options/gitignore/OracleForms
 share/gitea/options/gitignore/Otto
+share/gitea/options/gitignore/PSoCCreator
 share/gitea/options/gitignore/Packer
+share/gitea/options/gitignore/Patch
 share/gitea/options/gitignore/Perl
+share/gitea/options/gitignore/Perl6
 share/gitea/options/gitignore/Phalcon
 share/gitea/options/gitignore/PlayFramework
 share/gitea/options/gitignore/Plone
@@ -589,6 +598,8 @@ share/gitea/public/img/dingtalk.ico
 share/gitea/public/img/discord.png
 share/gitea/public/img/favicon.ico
 share/gitea/public/img/favicon.png
+share/gitea/public/img/gitea-192.png
+share/gitea/public/img/gitea-512.png
 share/gitea/public/img/gitea-lg.png
 share/gitea/public/img/gitea-safari.svg
 share/gitea/public/img/gitea-sm.png
@@ -1862,6 +1873,7 @@ share/gitea/public/vendor/plugins/jquery.minicolors/jquery.minicolors.min.js
 share/gitea/public/vendor/plugins/jquery.minicolors/jquery.minicolors.png
 share/gitea/public/vendor/plugins/jquery/LICENSE
 share/gitea/public/vendor/plugins/jquery/jquery.min.js
+share/gitea/public/vendor/plugins/moment/moment.min.js
 share/gitea/public/vendor/plugins/pdfjs/LICENSE
 share/gitea/public/vendor/plugins/pdfjs/build/pdf.js
 share/gitea/public/vendor/plugins/pdfjs/build/pdf.worker.js
@@ -1993,6 +2005,8 @@ share/gitea/public/vendor/plugins/simplemde/simplemde.min.js
 share/gitea/public/vendor/plugins/tribute/tribute.css
 share/gitea/public/vendor/plugins/tribute/tribute.min.js
 share/gitea/public/vendor/plugins/u2f/index.js
+share/gitea/public/vendor/plugins/vue-calendar-heatmap/vue-calendar-heatmap.browser.js
+share/gitea/public/vendor/plugins/vue-calendar-heatmap/vue-calendar-heatmap.css
 share/gitea/public/vendor/plugins/vue/LICENSE
 share/gitea/public/vendor/plugins/vue/vue.min.js
 share/gitea/templates/admin/auth/edit.tmpl
@@ -2056,10 +2070,13 @@ share/gitea/templates/org/settings/hooks.tmpl
 share/gitea/templates/org/settings/navbar.tmpl
 share/gitea/templates/org/settings/options.tmpl
 share/gitea/templates/org/team/members.tmpl
+share/gitea/templates/org/team/navbar.tmpl
 share/gitea/templates/org/team/new.tmpl
 share/gitea/templates/org/team/repositories.tmpl
 share/gitea/templates/org/team/sidebar.tmpl
 share/gitea/templates/org/team/teams.tmpl
+share/gitea/templates/pwa/manifest_json.tmpl
+share/gitea/templates/pwa/serviceworker_js.tmpl
 share/gitea/templates/repo/activity.tmpl
 share/gitea/templates/repo/bare.tmpl
 share/gitea/templates/repo/branch/list.tmpl
@@ -2091,6 +2108,7 @@ share/gitea/templates/repo/issue/comment_tab.tmpl
 share/gitea/templates/repo/issue/label_precolors.tmpl
 share/gitea/templates/repo/issue/labels.tmpl
 share/gitea/templates/repo/issue/list.tmpl
+share/gitea/templates/repo/issue/milestone_issues.tmpl
 share/gitea/templates/repo/issue/milestone_new.tmpl
 share/gitea/templates/repo/issue/milestones.tmpl
 share/gitea/templates/repo/issue/navbar.tmpl
