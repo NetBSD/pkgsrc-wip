@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	1.5.5
+VERSION=	1.5.6
 DISTNAME=	mosquitto-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
