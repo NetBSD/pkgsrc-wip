@@ -1,0 +1,3 @@
+bin/conan @PREFIX@/bin/conan-@PYVERSSUFFIX@
+bin/conan_build_info @PREFIX@/bin/conan_build_info-@PYVERSSUFFIX@
+bin/conan_server @PREFIX@/bin/conan_server-@PYVERSSUFFIX@
