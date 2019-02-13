@@ -1,10 +1,10 @@
 # $NetBSD$
 
-GITHUB_PROJECT= haxm
-GITHUB_TAG=     c072ad9b68e1d558a9fb791511468d10a1a9b319
-DISTNAME=       haxm-0.${GITHUB_TAG}
-CATEGORIES=     emulators
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=intel/}
+GITHUB_PROJECT=	haxm
+GITHUB_TAG=	c072ad9b68e1d558a9fb791511468d10a1a9b319
+DISTNAME=	haxm-0.${GITHUB_TAG}
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 
 MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/intel/haxm/
@@ -18,7 +18,9 @@ OSVERSION_SPECIFIC=	YES
 
 BUILD_DIRS=	platforms/netbsd
 
-BUILDLINK_PASSTHRU_DIRS=	${BSDSRCDIR}/sys
+BUILDLINK_PASSTHRU_DIRS+=	${BSDSRCDIR}/sys
+
+BUILD_DEFS+=	BSDSRCDIR
 
 .include "../../mk/compiler.mk"
 
@@ -31,14 +33,10 @@ KMODULEDIR=	stand/${MACHINE}/${OS_VERSION}/modules
 
 INSTALLATION_DIRS+=	${KMODULEDIR}
 
-MACHINE=	amd64
-
 PLIST_SUBST+=	MACHINE=${MACHINE}
 
 do-install:
 	${RUN} cd ${WRKSRC}/platforms/netbsd && \
-		${CP} ${KMOD} ${DESTDIR}${PREFIX}/${KMODULEDIR}
-
-
+		${INSTALL_PROGRAM} ${KMOD} ${DESTDIR}${PREFIX}/${KMODULEDIR}
 
 .include "../../mk/bsd.pkg.mk"
