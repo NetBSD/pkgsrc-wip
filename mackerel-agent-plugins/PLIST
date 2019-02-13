@@ -36,6 +36,7 @@ libexec/mackerelagent/mackerel-plugin-mailq
 libexec/mackerelagent/mackerel-plugin-mcrouter
 libexec/mackerelagent/mackerel-plugin-memcached
 libexec/mackerelagent/mackerel-plugin-mongodb
+libexec/mackerelagent/mackerel-plugin-mssql
 libexec/mackerelagent/mackerel-plugin-multicore
 libexec/mackerelagent/mackerel-plugin-munin
 libexec/mackerelagent/mackerel-plugin-murmur
