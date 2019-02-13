@@ -13,6 +13,17 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/haxm-${GITHUB_TAG}
 
+ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
 OSVERSION_SPECIFIC=	YES
+
+BUILD_DIRS=	platforms/netbsd
+
+BUILDLINK_PASSTHRU_DIRS=	${BSDSRCDIR}/sys
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=address-of-packed-member
+.endif
 
 .include "../../mk/bsd.pkg.mk"
