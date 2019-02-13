@@ -1918,6 +1918,8 @@ share/emacs/${PKGVERSION}/lisp/ffap.el.gz
 share/emacs/${PKGVERSION}/lisp/ffap.elc
 share/emacs/${PKGVERSION}/lisp/filecache.el.gz
 share/emacs/${PKGVERSION}/lisp/filecache.elc
+share/emacs/${PKGVERSION}/lisp/fileloop.el.gz
+share/emacs/${PKGVERSION}/lisp/fileloop.elc
 share/emacs/${PKGVERSION}/lisp/filenotify.el.gz
 share/emacs/${PKGVERSION}/lisp/filenotify.elc
 share/emacs/${PKGVERSION}/lisp/files-x.el.gz
@@ -2711,8 +2713,6 @@ share/emacs/${PKGVERSION}/lisp/mpc.el.gz
 share/emacs/${PKGVERSION}/lisp/mpc.elc
 share/emacs/${PKGVERSION}/lisp/msb.el.gz
 share/emacs/${PKGVERSION}/lisp/msb.elc
-share/emacs/${PKGVERSION}/lisp/multifile.el.gz
-share/emacs/${PKGVERSION}/lisp/multifile.elc
 share/emacs/${PKGVERSION}/lisp/mwheel.el.gz
 share/emacs/${PKGVERSION}/lisp/mwheel.elc
 share/emacs/${PKGVERSION}/lisp/net/ange-ftp.el.gz
