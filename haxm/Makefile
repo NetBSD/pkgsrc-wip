@@ -31,12 +31,28 @@ CFLAGS+=	-Wno-error=address-of-packed-member
 KMOD=		haxm.kmod
 KMODULEDIR=	stand/${MACHINE}/${OS_VERSION}/modules
 
+INSTALLATION_DIRS+=	sbin		# auxiliary scripts
 INSTALLATION_DIRS+=	${KMODULEDIR}
 
 PLIST_SUBST+=	MACHINE=${MACHINE}
 
+pre-configure:
+.for file in haxm-mknod haxm-modunload
+	${CP} ${FILESDIR}/${file} ${WRKSRC}
+.endfor
+	${SED} \
+		-e 's|@PREFIX@|${PREFIX}|g' \
+		-e 's|@MACHINE@|${MACHINE}|g' \
+		-e 's|@OS_VERSION@|${OS_VERSION}|g' \
+		${FILESDIR}/haxm-modload.in > ${WRKSRC}/haxm-modload
+
 do-install:
 	${RUN} cd ${WRKSRC}/platforms/netbsd && \
 		${INSTALL_PROGRAM} ${KMOD} ${DESTDIR}${PREFIX}/${KMODULEDIR}
+.for file in haxm-modload haxm-modunload haxm-mknod
+	${RUN} cd ${WRKSRC} && \
+		${INSTALL_SCRIPT} ${file} ${DESTDIR}${PREFIX}/sbin
+.endfor
+
 
 .include "../../mk/bsd.pkg.mk"
