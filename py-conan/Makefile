@@ -23,7 +23,7 @@ DEPENDS+=   ${PYPKGPREFIX}-tqdm>=4.28.1<5:../../misc/py-tqdm
 DEPENDS+=   ${PYPKGPREFIX}-deprecation>=2.0<2.1:../../devel/py-deprecation
 DEPENDS+=   ${PYPKGPREFIX}-astroid>=1.6<2.0:../../devel/py-astroid
 DEPENDS+=   ${PYPKGPREFIX}-pygments>=2.0<3.0:../../textproc/py-pygments
-DEPENDS+=   ${PYPKGPREFIX}-future-0.16.0:../../devel/py-future
+DEPENDS+=   ${PYPKGPREFIX}-future-0.16.0{,nb[0-9]*}:../../devel/py-future
 DEPENDS+=   ${PYPKGPREFIX}-pylint>=1.9.3:../../wip/py-pylint
 DEPENDS+=   ${PYPKGPREFIX}-distro>=1.0.2<1.2.0:../../wip/py-distro
 DEPENDS+=   ${PYPKGPREFIX}-node-semver-0.6.1:../../wip/py-node-semver
