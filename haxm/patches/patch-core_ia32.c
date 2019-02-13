@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- core/ia32.c.orig	2019-02-12 09:24:47.000000000 +0000
++++ core/ia32.c
+@@ -81,6 +81,11 @@ uint64_t ia32_rdtsc(void)
+ #endif
+ }
+ 
++void hax_clts(void)
++{
++    asm_clts();
++}
++
+ void hax_fxinit(void)
+ {
+     asm_fxinit();
