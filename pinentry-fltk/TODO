@@ -1,9 +1,0 @@
-[X] Fix format string handling for fl_message() and fl_choice()
-    => Patch added (taken from Debian pinentry package)
-[X] Keyboard shortcut handling (via '_') doesn't work
-    => Patch added
-[X] Sent patches to upstream
-    https://dev.gnupg.org/T4336
-    https://dev.gnupg.org/T4337
-    Both patches now merged upstream (can be removed for next release)
-
