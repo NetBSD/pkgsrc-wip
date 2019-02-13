@@ -1,5 +1,0 @@
-@comment $NetBSD$
-sbin/haxm-mknod
-sbin/haxm-modload
-sbin/haxm-modunload
-stand/${MACHINE}/${OS_VERSION}/modules/haxm.kmod
