@@ -1,5 +1,9 @@
 $NetBSD$
 
+Cherry-pick from upstream review:
+ - Fix FPU DNA exception on NetBSD
+   https://github.com/intel/haxm/pull/168
+
 --- core/include/vcpu.h.orig	2019-02-12 09:24:47.000000000 +0000
 +++ core/include/vcpu.h
 @@ -238,6 +238,7 @@ struct vcpu_t {

@@ -1,5 +1,9 @@
 $NetBSD$
 
+Cherry-pick from upstream review:
+ - Fix FPU DNA exception on NetBSD
+   https://github.com/intel/haxm/pull/168
+
 --- core/include/ia32.h.orig	2019-02-12 09:24:47.000000000 +0000
 +++ core/include/ia32.h
 @@ -72,6 +72,7 @@ void ASMCALL set_kernel_fs(uint16_t val)

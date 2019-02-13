@@ -1,5 +1,9 @@
 $NetBSD$
 
+Cherry-pick from upstream review:
+ - Fix FPU DNA exception on NetBSD
+   https://github.com/intel/haxm/pull/168
+
 --- core/ia32_ops.asm.orig	2019-02-12 09:24:47.000000000 +0000
 +++ core/ia32_ops.asm
 @@ -213,6 +213,10 @@ function asm_enable_irq, 0

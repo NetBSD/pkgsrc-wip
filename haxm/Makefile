@@ -13,6 +13,6 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/haxm-${GITHUB_TAG}
 
-#OSVERSION_SPECIFIC=	YES
+OSVERSION_SPECIFIC=	YES
 
 .include "../../mk/bsd.pkg.mk"

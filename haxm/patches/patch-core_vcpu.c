@@ -1,5 +1,9 @@
 $NetBSD$
 
+Cherry-pick from upstream review:
+ - Fix FPU DNA exception on NetBSD
+   https://github.com/intel/haxm/pull/168
+
 --- core/vcpu.c.orig	2019-02-12 09:24:47.000000000 +0000
 +++ core/vcpu.c
 @@ -2041,6 +2041,10 @@ static void vcpu_enter_fpu_state(struct 
