@@ -68,6 +68,8 @@ FILES_SUBST+=	GITEA_GROUP=${GITEA_GROUP}
 FILES_SUBST+=	GITEA_USER_HOME=${VARBASE}/db/gitea
 FILES_SUBST+=	GITEA_SHARE_DIR=${PREFIX}/share/gitea
 
+RCD_SCRIPTS+=	gitea
+
 pre-patch:
 	${CP} ${FILESDIR}/app.ini.sample ${WRKDIR}/
 
