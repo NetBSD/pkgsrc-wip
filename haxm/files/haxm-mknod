@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ -e /dev/HAX ]; then
+	echo "ERR: HAXM devices have been already created"
+	exit 1
+fi
+
 echo "*** Creating HAX devices ***"
 mknod /dev/HAX c 220 0
 mkdir /dev/hax_vm
@@ -16,3 +21,5 @@ while [ $i -lt 128 ]; do
         $cmd
         let "i+=1"
 done
+
+echo "*** Done ****"
