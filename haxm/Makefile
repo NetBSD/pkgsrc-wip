@@ -26,4 +26,19 @@ BUILDLINK_PASSTHRU_DIRS=	${BSDSRCDIR}/sys
 CFLAGS+=	-Wno-error=address-of-packed-member
 .endif
 
+KMOD=		haxm.kmod
+KMODULEDIR=	stand/${MACHINE}/${OS_VERSION}/modules
+
+INSTALLATION_DIRS+=	${KMODULEDIR}
+
+MACHINE=	amd64
+
+PLIST_SUBST+=	MACHINE=${MACHINE}
+
+do-install:
+	${RUN} cd ${WRKSRC}/platforms/netbsd && \
+		${CP} ${KMOD} ${DESTDIR}${PREFIX}/${KMODULEDIR}
+
+
+
 .include "../../mk/bsd.pkg.mk"
