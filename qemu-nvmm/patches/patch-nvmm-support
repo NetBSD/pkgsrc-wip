@@ -376,7 +376,7 @@ Add NVMM support.
  obj-$(CONFIG_SEV) += sev.o
  obj-$(call lnot,$(CONFIG_SEV)) += sev-stub.o
 --- target/i386/nvmm-all.c	1970-01-01 01:00:00.000000000 +0100
-+++ target/i386/nvmm-all.c	2019-02-04 12:02:48.551127655 +0100
++++ target/i386/nvmm-all.c	2019-02-13 15:57:30.270110128 +0100
 @@ -0,0 +1,1173 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
@@ -1459,8 +1459,8 @@ Add NVMM support.
 +    /* Delete the Monitor and MTRR bits, set the Hypervisor bit. */
 +    memset(&cpuid, 0, sizeof(cpuid));
 +    cpuid.leaf = 0x00000001;
-+    cpuid.del.ecx = CPUID_EXT_MONITOR;
-+    cpuid.del.edx = CPUID_MCE | CPUID_MTRR;
++    cpuid.del.ecx = CPUID_EXT_MONITOR | CPUID_EXT_X2APIC;
++    cpuid.del.edx = CPUID_MCE | CPUID_MCA | CPUID_MTRR;
 +    cpuid.set.ecx = CPUID_EXT_HYPERVISOR;
 +
 +    ret = nvmm_machine_configure(mach, NVMM_X86_CONF_CPUID, &cpuid);
