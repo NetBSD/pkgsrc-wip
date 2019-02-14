@@ -1,8 +1,6 @@
-$NetBSD: patch-target_i386_kvm-stub.c,v 1.1 2019/02/13 05:16:12 kamil Exp $
+$NetBSD$
 
-Fix debug build on NetBSD (without Linux-KVM).
-
---- target/i386/kvm-stub.c.orig	2019-02-02 13:12:09.564671574 +0000
+--- target/i386/kvm-stub.c.orig	2018-08-14 19:10:35.000000000 +0000
 +++ target/i386/kvm-stub.c
 @@ -29,16 +29,6 @@ bool kvm_enable_x2apic(void)
  {

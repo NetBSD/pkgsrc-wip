@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- target/i386/Makefile.objs.orig	2018-08-14 19:10:35.000000000 +0000
++++ target/i386/Makefile.objs
+@@ -12,8 +12,10 @@ obj-$(call lnot,$(CONFIG_SEV)) += sev-st
+ ifdef CONFIG_WIN32
+ obj-$(CONFIG_HAX) += hax-all.o hax-mem.o hax-windows.o
+ endif
+-ifdef CONFIG_DARWIN
++ifeq ($(CONFIG_POSIX),y)
+ obj-$(CONFIG_HAX) += hax-all.o hax-mem.o hax-darwin.o
++endif
++ifdef CONFIG_DARWIN
+ obj-$(CONFIG_HVF) += hvf/
+ endif
+ obj-$(CONFIG_WHPX) += whpx-all.o
