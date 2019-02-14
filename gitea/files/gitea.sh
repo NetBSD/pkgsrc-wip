@@ -10,7 +10,6 @@
 name="gitea"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/conf/app.ini"
-pidfile="/dev/null"
 command="@PREFIX@/sbin/gitea"
 command_args="--config @PKG_SYSCONFDIR@/app.ini web &"
 
@@ -21,13 +20,6 @@ gitea_env="${gitea_env} USER=@GITEA_USER@"
 
 gitea_user="@GITEA_USER@"
 gitea_group="@GITEA_GROUP@"
-
-# gitea's pidfile creation seems to not work...
-check_pidfile()
-{
-	pid=$(pgrep -U "${gitea_user}" /sbin/gitea$)
-	echo -n "${pid}"
-}
 
 load_rc_config $name
 run_rc_command "$1"
