@@ -9,7 +9,7 @@
 
 name="gitea"
 rcvar=${name}
-required_files="@PKG_SYSCONFDIR@/app.ini"
+required_files="@PKG_SYSCONFDIR@/conf/app.ini"
 pidfile="/dev/null"
 command="@PREFIX@/sbin/gitea"
 command_args="--config @PKG_SYSCONFDIR@/app.ini web &"
