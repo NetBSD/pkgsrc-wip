@@ -1,0 +1,6 @@
+This is far from ready.
+
+ - port over patches
+ - make this build
+ - alternatively: this would be best if it were just the write_gcm plugin
+   for the regular collectd package. How hard can that be?
