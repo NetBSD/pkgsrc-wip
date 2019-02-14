@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.17 2016/07/09 06:38:58 wiz Exp $
 
-PKGREVISION= 12
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/stackdriver-collectd/Makefile.common"
 
-COMMENT=	Statistics collection daemon base
+COMMENT=	Statistics collection daemon base, Stackdriver version
 
 RCD_SCRIPTS=	collectd
 
