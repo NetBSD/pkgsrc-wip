@@ -17,8 +17,11 @@ USE_TOOLS+=	autoconf automake autoreconf gmake perl pkg-config
 GNU_CONFIGURE=	yes
 REPLACE_PERL=	src/perl/*
 
+CONFIGURE_ARGS+=	--with-pmdir=${PERL5_INSTALLVENDORLIB:S|^${PREFIX}/||}/vcftools
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/perl5/vars.mk"
 .include "../../mk/bsd.pkg.mk"
