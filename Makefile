@@ -4257,6 +4257,7 @@ SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
 SUBDIR+=	salmon
 SUBDIR+=	samhain
+SUBDIR+=	samtools
 SUBDIR+=	samtools0119
 SUBDIR+=	sara
 SUBDIR+=	sarf
