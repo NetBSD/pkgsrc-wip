@@ -23,7 +23,7 @@ DEPENDS+=	slclust>=0.0.0.20100202:../../wip/slclust
 DEPENDS+=	salmon>=0.11.3:../../wip/salmon
 DEPENDS+=	bowtie>=1.1.2:../../wip/bowtie
 DEPENDS+=	bowtie2>=2.3.4.2:../../wip/bowtie2
-DEPENDS+=	samtools>=1.9:../../biology/samtools
+DEPENDS+=	samtools>=1.9:../../wip/samtools
 DEPENDS+=	jellyfish>=2.2.10:../../wip/jellyfish2
 DEPENDS+=	parafly>=2013.01.21:../../wip/parafly
 DEPENDS+=	fastool>=0.1.4:../../wip/fastool

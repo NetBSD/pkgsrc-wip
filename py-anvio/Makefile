@@ -23,7 +23,7 @@ HOMEPAGE=	http://merenlab.org/software/anvio/
 COMMENT=	Analysis and visualization platform for 'omics data
 LICENSE=	gnu-gpl-v3
 
-DEPENDS=	samtools>0:../../biology/samtools \
+DEPENDS=	samtools>0:../../wip/samtools \
 		hmmer>0:../../wip/hmmer \
 		FastTree>0:../../wip/fasttree \
 		muscle>0:../../wip/muscle \
