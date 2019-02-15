@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	libextractor-1.8
+DISTNAME=	libextractor-1.9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=libextractor/}
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnu.org/s/libextractor/
