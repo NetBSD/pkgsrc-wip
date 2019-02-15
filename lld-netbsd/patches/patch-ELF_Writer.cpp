@@ -1,14 +1,8 @@
-$NetBSD: patch-ELF_Writer.cpp,v 1.1 2019/02/01 16:30:00 mgorny Exp $
+$NetBSD$
 
-Add '-z nognustack' option to disable emitting PT_GNU_STACK.
-https://reviews.llvm.org/D56554
-
-Alter defaults for NetBSD targets:
-* disable PT_GNU_STACK (meaningless on NetBSD)
-
---- ELF/Writer.cpp.orig	2018-10-31 17:14:17.000000000 +0000
+--- ELF/Writer.cpp.orig	2019-02-15 21:11:17.385984659 +0000
 +++ ELF/Writer.cpp
-@@ -1881,14 +1881,16 @@ template <class ELFT> std::vector<PhdrEn
+@@ -2026,14 +2026,16 @@ template <class ELFT> std::vector<PhdrEn
    if (OutputSection *Cmd = findSection(".openbsd.randomdata"))
      AddHdr(PT_OPENBSD_RANDOMIZE, Cmd->getPhdrFlags())->add(Cmd);
  

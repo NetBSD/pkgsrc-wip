@@ -1,11 +1,8 @@
-$NetBSD: patch-ELF_Options.td,v 1.1 2019/02/01 16:30:00 mgorny Exp $
+$NetBSD$
 
-Add support for customizing LLD behavior on target triple.
-https://reviews.llvm.org/D56650
-
---- ELF/Options.td.orig	2018-07-30 17:36:38.000000000 +0000
+--- ELF/Options.td.orig	2019-02-15 21:11:17.386739124 +0000
 +++ ELF/Options.td
-@@ -303,6 +303,8 @@ defm symbol_ordering_file:
+@@ -320,6 +320,8 @@ defm symbol_ordering_file:
  
  defm sysroot: Eq<"sysroot", "Set the system root">;
  

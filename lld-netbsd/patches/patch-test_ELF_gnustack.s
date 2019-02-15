@@ -1,9 +1,6 @@
-$NetBSD: patch-test_ELF_gnustack.s,v 1.1 2019/02/01 16:30:00 mgorny Exp $
+$NetBSD$
 
-Add '-z nognustack' option to disable emitting PT_GNU_STACK.
-https://reviews.llvm.org/D56554
-
---- test/ELF/gnustack.s.orig	2018-04-20 21:24:08.000000000 +0000
+--- test/ELF/gnustack.s.orig	2019-02-01 23:06:36.000000000 +0000
 +++ test/ELF/gnustack.s
 @@ -10,6 +10,9 @@
  # RUN: ld.lld %t1 -o %t -z noexecstack
