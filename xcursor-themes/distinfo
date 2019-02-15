@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2013/07/17 21:51:07 thomasklausner Exp $
 
-SHA1 (xcursor-themes-1.0.5.tar.bz2) = 6caae6cdb441003a42305f964c32bac21c34626f
-RMD160 (xcursor-themes-1.0.5.tar.bz2) = 7ef275c1022e4074463691170f43e453131812e5
-SHA512 (xcursor-themes-1.0.5.tar.bz2) = f41e1de0d5deafba33106dcad81576d1888fca052a962c202f2221104aa2d8236b066d8d8fc3dcfbdc166db63f84e60980dfc54059b20a26c7415de71ed07a5b
-Size (xcursor-themes-1.0.5.tar.bz2) = 2356853 bytes
+SHA1 (xcursor-themes-1.0.6.tar.bz2) = b56fd5bf5b1ada0532a85c27db0d296e392168c5
+RMD160 (xcursor-themes-1.0.6.tar.bz2) = 28ad97a21ecba76a203c7217c43b5df2d2b5e790
+SHA512 (xcursor-themes-1.0.6.tar.bz2) = 2ad3586a5571a5ddc0001187362b54b839644916164834213af98e58698044aec4392dd6e1e42f1794fda85c8fedf259b09214a9636bd0e71a1629c710f198d3
+Size (xcursor-themes-1.0.6.tar.bz2) = 2363089 bytes

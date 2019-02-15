@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2013/07/17 21:51:07 thomasklausner Exp $
 
-DISTNAME=	xcursor-themes-1.0.5
+DISTNAME=	xcursor-themes-1.0.6
 CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=	.tar.bz2
