@@ -21,6 +21,7 @@ REPLACE_BASH+=	scripts/tx-sync.sh
 REPLACE_PERL+=	data/scripts/inxi
 REPLACE_PERL+=	data/scripts/mpris
 
+.include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
