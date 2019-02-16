@@ -2,7 +2,4 @@
   CMAKE.md in order to make swi-prolog pkgsrc packaging similar to the ones
   in pre-cmake era (probably also need to be added `-P cmake_install.cmake' to
   CMAKE_ARGS in Makefile.common in order to be honored)
-- Double-check that all removed patches are actually no longer
-  needed (most of them were applied but maybe some build related ones
-  needs to be adopted for cmake migration)
 - -DSWIPL_SHARED_LIB=ON probably should be enabled for swi-prolog-jpl
