@@ -8,7 +8,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
 
 USE_TOOLS+=		pkg-config
-#MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
 
@@ -39,77 +38,9 @@ SWIPL_PACKAGES_COMPONENTS+=	Graphics_subsystem
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX: check if still needed
-#.if ${X11_TYPE} == "modular"
-#BUILD_DEPENDS+=		modular-xorg-server-[0-9]*:../../x11/modular-xorg-server
-#.endif
-
-#CONFIGURE_ENV+=		PL=swi-prolog
-#CONFIGURE_ENV+=		PLARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
-#CONFIGURE_ARGS+=	--without-jpl
-
-# XXX: check if still needed
-#CONFIGURE_DIRS+=	. packages
-#BUILD_DIRS+=		packages
-#INSTALL_DIRS+=		packages
-
-#INSTALLATION_DIRS=	bin lib/swi-prolog-${PKGVERSION_NOREV}/include ${PKGMANDIR}/man1
-
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 TEST_TARGET=	check
-
-# XXX: check if still needed
-#pre-configure:
-#	${LN} -sf ${LOCALBASE}/bin/plld       ${WRKSRC}/src
-#	${LN} -sf ${LOCALBASE}/bin/swi-prolog ${WRKSRC}/src
-#
-#post-configure:
-#	${LN} -sf ${LOCALBASE}/bin/plld       ${WRKSRC}/src
-#	${LN} -sf ${LOCALBASE}/bin/swi-prolog ${WRKSRC}/src
-#	cd ${WRKSRC}/packages; \
-#	${SETENV} \
-#		CPP=${CPP:Q} \
-#		${GMAKE} configure
-#	mkdir ${WRKSRC}/include
-#	${LN} -sf ${WRKSRC}/src/SWI-Prolog.h ${WRKSRC}/include
-#	${LN} -sf ${WRKSRC}/src/os/SWI-Stream.h ${WRKSRC}/include
-#
-#pre-install: checkforx
-#
-## Based on misc/openoffice:
-#DISPLAY?=	#empty, if unset
-#checkforx:
-#.if ${DISPLAY} == "" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
-#.  if exists(${X11BASE}/bin/Xvfb)
-#	-${X11BASE}/bin/Xvfb :2 & \
-#	${ECHO} $$! >${WRKDIR}/.Xvfb.pid
-#	${ECHO} checkforx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
-#	sleep 5
-#DISPLAY= :2
-#.  else
-#	@${ECHO} "Error: Environment variable DISPLAY must be set"
-#	@${ECHO} "       and point to a connectible X server."
-#	@${FALSE}
-#.  endif  #Xvfb
-#.endif  #DISPLAY
-#
-#MAKE_ENV+=		DISPLAY=${DISPLAY:Q}
-#
-## XXX: editline bindings seems limited and does not support completion, remove
-## XXX: them in order to always use readline.pl.
-#post-install: teardownx
-#	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so || ${TRUE}
-#	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/library/editline.pl || ${TRUE}
-#	${RM} -f ${LOCALBASE}/lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/prolog/lib/.pwd
-#	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce-client.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce-client.1
-#	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce.1
-#
-#teardownx:
-#	${ECHO} teardownx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
-#	sleep 5
-#	-kill `${CAT} ${WRKDIR}/.Xvfb.pid`
-#	${RM} -f ${WRKDIR}/.Xvfb.pid
 
 do-install:
 .for component in ${SWIPL_PACKAGES_COMPONENTS}
