@@ -1,18 +1,13 @@
-# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:34 thomasklausner Exp $
+# $NetBSD$
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_OPTIONS_REQUIRED_GROUPS=	security
-PKG_OPTIONS_GROUP.security=	libgcrypt ssl
-PKG_SUPPORTED_OPTIONS=		bdb gdbm inet6 tdb
-PKG_SUGGESTED_OPTIONS=		inet6
+PKG_SUPPORTED_OPTIONS=		bdb gdbm inet6 tdb doc mdoc ssl libgcrypt idn
+PKG_SUGGESTED_OPTIONS=		inet6 doc ssl libgcrypt
 
-# some sane defaults to use base OS functionality where appropriate
-.if !empty(OPSYS:M*BSD)
-PKG_SUGGESTED_OPTIONS=	ssl
-.else
-PKG_SUGGESTED_OPTIONS=	libgcrypt
-.endif
+# openssl is currently required by:
+# src/transport/gnunet-transport-certificate-creation
+# src/gns/gnunet-gns-proxy-setup-ca
 
 .include "../../mk/bsd.options.mk"
 
@@ -61,5 +56,26 @@ CONFIGURE_ARGS+=	--without-crypto
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-crypto=${BUILDLINK_PREFIX.libgcrypt}
-# CONFIGURE_ENV+=		LIBGCRYPT_CONFIG=/nonexistent
+.endif
+
+.if !empty(PKG_OPTIONS:Mdoc)
+CONFIGURE_ARGS+=	--enable-documentation
+.else
+CONFIGURE_ARGS+=	--disable-documentation
+.endif
+
+# build the mdoc output.
+.if !empty(PKG_OPTIONS:Mmdoc)
+BUILD_DEPENDS+=		texi2mdoc-[0-9]*:../../textproc/texi2mdoc
+CONFIGURE_ARGS+=	--enable-texi2mdoc-generation
+.else
+CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
+.endif
+
+.if !empty(PKG_OPTIONS:Midn)
+.include "../../devel/libidn2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libidn2=${BUILDLINK_PREFIX.libidn2}
+.else
+.include "../../devel/libidn/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 .endif
