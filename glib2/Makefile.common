@@ -69,12 +69,14 @@ CONFIGURE_ARGS+=	--disable-threads
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 
+pre-configure:
+	${LN} -s ${PYTHONBIN} ${BUILDLINK_DIR}/bin/python3
+
 BUILD_DEFS+=		VARBASE
 SUBST_CLASSES+=		dbusdb
 SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
 SUBST_STAGE.dbusdb=	pre-configure
 SUBST_FILES.dbusdb=	gio/gdbusconnection.c
 SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
-SUBST_FILES.dbusdb+=	po/glib20.pot
 SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
