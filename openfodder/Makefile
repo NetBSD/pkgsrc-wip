@@ -22,7 +22,7 @@ LIBS+=		`sdl2-config --libs`
 LIBS+=		-lSDL2_mixer
 LIBS+=		${X11_LDFLAGS}
 
-DEPENDS+=	openfodder-data-1.5.1:../../wip/openfodder-data
+DEPENDS+=	openfodder-data-1.6.0:../../wip/openfodder-data
 
 FODDER_SRCDIRS=	Source Source/Amiga Source/PC Source/Structures
 FODDER_SRCS=	${FODDER_SRCDIRS:=/*.cpp}
