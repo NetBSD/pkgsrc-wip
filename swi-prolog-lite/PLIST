@@ -826,6 +826,6 @@ lib/swipl/library/yall.pl
 lib/swipl/library/zip.pl
 lib/swipl/library/zlib.pl
 lib/swipl/swipl.home
-share/man/man1/swipl-ld.1
-share/man/man1/swipl.1
+man/man1/swipl-ld.1
+man/man1/swipl.1
 share/pkgconfig/swipl.pc
