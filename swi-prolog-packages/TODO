@@ -1,7 +1,5 @@
 - Double check dependencies and bl3 include (probably we can't get rid of them
   but mark the one used in swi-prolog-lite only as build depends...)
-- Needs double-check to see if all compononents are properly installed and setup
-  like in swi-prolog-packages-7.6.4.
 - bin/swi-prolog is now installed as bin/swipl
   This is because in src/CMakeLists.txt:
 
