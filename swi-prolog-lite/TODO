@@ -6,5 +6,3 @@
   needed (most of them were applied but maybe some build related ones
   needs to be adopted for cmake migration)
 - -DSWIPL_SHARED_LIB=ON probably should be enabled for swi-prolog-jpl
-- Install man pages on ${PKGMANDIR} (probably needs SUBST-fu in
-  CMakeLists.txt, for `share/man' occurrencies)
