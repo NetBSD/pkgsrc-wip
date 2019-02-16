@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://quassel-irc.org/
-COMMENT=	Modern, cross-platform, distributed IRC clint
+COMMENT=	Modern, cross-platform, distributed IRC client
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 EXTRACT_USING=	bsdtar
