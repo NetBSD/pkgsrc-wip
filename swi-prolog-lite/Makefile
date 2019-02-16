@@ -44,7 +44,7 @@ PLIST_SUBST+=		BITS=32
 
 REPLACE_INTERPRETER+=	swipl
 REPLACE.swipl.old=	/usr/bin/swipl
-REPLACE.swipl.new=	${PREFIX}/bin/swi-prolog
+REPLACE.swipl.new=	${PREFIX}/bin/swipl
 REPLACE_FILES.swipl+=	library/dialect/sicstus/swipl-lfr.pl
 
 # XXX: editline bindings seems limited and does not support completion, remove
