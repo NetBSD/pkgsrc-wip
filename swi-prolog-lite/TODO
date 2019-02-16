@@ -1,5 +1,1 @@
-- Probably we should try to follow `Modular packages for Linux' section in
-  CMAKE.md in order to make swi-prolog pkgsrc packaging similar to the ones
-  in pre-cmake era (probably also need to be added `-P cmake_install.cmake' to
-  CMAKE_ARGS in Makefile.common in order to be honored)
 - -DSWIPL_SHARED_LIB=ON probably should be enabled for swi-prolog-jpl
