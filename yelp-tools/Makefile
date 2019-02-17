@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/06/06 18:49:33 krytarowski Exp $
 
-DISTNAME=	yelp-tools-3.28.0
+DISTNAME=	yelp-tools-3.31.90
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
