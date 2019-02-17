@@ -19,7 +19,13 @@ PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
 
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=		-DSWIPL_SHARED_LIB=OFF
+
+# XXX: That's kludgy, can it be avoided?
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/build/src
+
+# XXX: Can this be addressed differently without appending to the LDFLAGS?
+# XXX: (i.e. it should just work(TM))
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/swipl/lib/${MACHINE_GNU_PLATFORM}
 
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		..
