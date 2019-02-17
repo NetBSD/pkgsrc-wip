@@ -1,0 +1,15 @@
+$NetBSD$
+
+test ... == ... is not portable.
+
+--- configure.orig	2018-10-09 07:29:07.000000000 +0000
++++ configure
+@@ -5691,7 +5691,7 @@ if test "x$ac_cv_prog_cc_c99" != xno; th
+ fi
+ 
+ 
+-if test "$ac_cv_prog_cc_c99" == "no"; then
++if test "$ac_cv_prog_cc_c99" = "no"; then
+     as_fn_error $? "Valgrind relies on a C compiler supporting C99" "$LINENO" 5
+ fi
+ 
