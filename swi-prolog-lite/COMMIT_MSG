@@ -1,0 +1,8 @@
+swi-prolog*: Update to 8.0.1
+
+pkgsrc changes:
+ - Rename swi-prolog to swipl to follow upstream nomenclature
+ TODO
+
+Changes:
+TODO
