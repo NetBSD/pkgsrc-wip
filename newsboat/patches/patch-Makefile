@@ -1,9 +1,9 @@
 $NetBSD$
 
---- Makefile.orig	2018-12-29 13:07:06.000000000 +0000
+--- Makefile.orig	2019-02-10 16:07:09.000000000 +0000
 +++ Makefile
-@@ -62,7 +62,7 @@ NEWSBOATLIB_OUTPUT=target/release/libnew
- LDFLAGS+=-L.//target/release
+@@ -72,7 +72,7 @@ LDFLAGS+=-L./target/release
+ endif
  CARGO_FLAGS+=--release
  endif
 -LDFLAGS+=-lnewsboat -lpthread -ldl

@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	newsboat-2.14
+DISTNAME=	newsboat-2.14.1
 CATEGORIES=	news
-MASTER_SITES=	https://newsboat.org/releases/2.14/
+MASTER_SITES=	https://newsboat.org/releases/2.14.1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -97,6 +97,7 @@ CARGO_CRATE_DEPENDS+=			\
 	ucd-util-0.1.3			\
 	unicode-bidi-0.3.4		\
 	unicode-normalization-0.1.7	\
+	unicode-width-0.1.5		\
 	unicode-xid-0.1.0		\
 	unreachable-1.0.0		\
 	url-1.7.2			\
