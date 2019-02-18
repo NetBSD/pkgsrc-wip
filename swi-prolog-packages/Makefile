@@ -23,15 +23,7 @@ CMAKE_ARGS+=		-DSWIPL_PACKAGES_TERM=OFF
 # Part of swi-prolog-lite... ...but needed to build documentation.
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_ARCHIVE=ON
 
-# XXX: Explicitly disable all not wanted packages to avoid possible build
-# XXX: failures. For a complete list please see:
-# XXX:  ${WRKSRC}/cmake/PackageSelection.cmake
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_ODBC=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_BDB=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_PCRE=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_YAML=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_TIPC=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_QT=OFF
+# Part of swi-prolog-jpl
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_JAVA=OFF
 
 SWIPL_PACKAGES_COMPONENTS+=	Graphics_subsystem

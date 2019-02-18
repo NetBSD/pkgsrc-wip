@@ -20,6 +20,16 @@ PATCHDIR=		${.CURDIR}/../../wip/swi-prolog-lite/patches
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 
+# XXX: Explicitly disable all not wanted packages to avoid possible build
+# XXX: failures. For a complete list please see:
+# XXX:  ${WRKSRC}/cmake/PackageSelection.cmake
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_ODBC=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_BDB=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_PCRE=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_YAML=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_TIPC=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_QT=OFF
+
 # XXX: That's kludgy, can it be avoided?
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/build/src
 

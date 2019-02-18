@@ -15,16 +15,10 @@ CMAKE_ARGS+=		-DSWIPL_PACKAGES_SSL=ON
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_TERM=ON
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=ON
 
-# XXX: Explicitly disable all not wanted packages to avoid possible build
-# XXX: failures. For a complete list please see:
-# XXX:  ${WRKSRC}/cmake/PackageSelection.cmake
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_ODBC=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_BDB=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_PCRE=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_YAML=OFF
+# Part of swi-prolog-jpl
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_JAVA=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_TIPC=OFF
-CMAKE_ARGS+=		-DSWIPL_PACKAGES_QT=OFF
+
+# Part of swi-prolog-packages
 CMAKE_ARGS+=		-DSWIPL_PACKAGES_X=OFF
 
 USE_TOOLS+=		bash:run
