@@ -51,11 +51,8 @@ do-install:
 
 .include "../../wip/swi-prolog-lite/buildlink3.mk"
 .include "../../mk/java-vm.mk"
-.include "../../archivers/libarchive/buildlink3.mk"
-.include "../../devel/ossp-uuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
