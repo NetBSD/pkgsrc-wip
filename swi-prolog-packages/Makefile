@@ -44,11 +44,14 @@ CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHIN
 
 
 .include "../../wip/swi-prolog-lite/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libarchive=	build
 .include "../../archivers/libarchive/buildlink3.mk"
+BUILDLINK_DEPMETHOD.ossp-uuid=	build
 .include "../../devel/ossp-uuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+BUILDLINK_DEPMETHOD.openssl=	build
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
