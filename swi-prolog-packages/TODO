@@ -1,9 +1,0 @@
-- bin/swi-prolog is now installed as bin/swipl
-  This is because in src/CMakeLists.txt:
-
-  | function(config_data_files)
-  |   set(PL swipl)
-
-  Previously a PL variable was passed... It is probably better to document that
-  change in the commit message (swi-prolog -> swipl) and just follow upstream 
-  nomenclature.
