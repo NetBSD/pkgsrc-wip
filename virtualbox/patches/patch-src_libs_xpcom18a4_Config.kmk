@@ -1,0 +1,36 @@
+$NetBSD$
+
+--- src/libs/xpcom18a4/Config.kmk.orig	2018-12-18 13:01:16.000000000 +0000
++++ src/libs/xpcom18a4/Config.kmk
+@@ -53,6 +53,7 @@ TEMPLATE_XPCOM_CXXFLAGS.release    = -O
+ TEMPLATE_XPCOM_CXXFLAGS.profile    = -O
+ TEMPLATE_XPCOM_CXXFLAGS.darwin     = -fpascal-strings -fshort-wchar -fno-common -fno-rtti $(VBOX_DARWIN_DEF_SDK_CXXFLAGS)
+ TEMPLATE_XPCOM_CXXFLAGS.freebsd    = -pthread
++TEMPLATE_XPCOM_CXXFLAGS.netbsd     = -pthread
+ TEMPLATE_XPCOM_CXXFLAGS.linux      = -pthread
+ TEMPLATE_XPCOM_CXXFLAGS.solaris    = -fno-omit-frame-pointer # for now anyway.
+ TEMPLATE_XPCOM_CFLAGS              = -g -pipe -Wall -Wno-unused -Wno-parentheses -Wno-uninitialized $(VBOX_GCC_fvisibility-hidden) \
+@@ -62,6 +63,7 @@ TEMPLATE_XPCOM_CFLAGS.amd64        = -m6
+ TEMPLATE_XPCOM_CFLAGS.release      = -O
+ TEMPLATE_XPCOM_CFLAGS.profile      = -O
+ TEMPLATE_XPCOM_CFLAGS.freebsd      = -pthread
++TEMPLATE_XPCOM_CFLAGS.netbsd       = -pthread
+ TEMPLATE_XPCOM_CFLAGS.linux        = -pthread -ansi
+ TEMPLATE_XPCOM_CFLAGS.solaris      = -fno-omit-frame-pointer # for now anyway.
+ TEMPLATE_XPCOM_DEFS                = \
+@@ -80,6 +82,7 @@ TEMPLATE_XPCOM_DEFS.amd64          = HAV
+ TEMPLATE_XPCOM_DEFS.darwin         = OSTYPE=\"Darwin8.8.1\" OSARCH=\"Darwin\" XP_UNIX=1 XP_MACOSX=1 TARGET_CARBON=1 HAVE_VISIBILITY_ATTRIBUTE=1 DARWIN=1 $(TEMPLATE_VBOXR3NP_DEFS.darwin)
+ TEMPLATE_XPCOM_DEFS.darwin.amd64   = VBOX_MACOSX_FOLLOWS_UNIX_IO
+ TEMPLATE_XPCOM_DEFS.freebsd        = OSTYPE=\"FreeBSD5+\"   OSARCH=\"FreeBSD\" XP_UNIX=1 FREEBSD=1 HAVE_VISIBILITY_ATTRIBUTE=1
++TEMPLATE_XPCOM_DEFS.netbsd         = OSTYPE=\"NetBSD8\"     OSARCH=\"NetBSD\" XP_UNIX=1 NETBSD=1 HAVE_VISIBILITY_ATTRIBUTE=1
+ TEMPLATE_XPCOM_DEFS.linux          = OSTYPE=\"Linux2.6\"    OSARCH=\"Linux\"  XP_UNIX=1 _GNU_SOURCE HAVE_VISIBILITY_ATTRIBUTE=1 ## @todo LINUX=1
+ # Don't define BSD_SELECT because bsdselect() from kLIBC <= 0.6.3 has problems on SMP
+ TEMPLATE_XPCOM_DEFS.os2            = OSTYPE=\"OS/2_4.5\"    OSARCH=\"OS/2\"   XP_OS2 XP_PC OS2=4
+@@ -173,6 +176,7 @@ TEMPLATE_XPCOMEXE_LIBS             = \
+ 	$(VBoxXPCOM_1_TARGET) \
+ 	$(TEMPLATE_XPCOM_LIBS)
+ TEMPLATE_XPCOMEXE_LIBS.freebsd     = $(LIB_PTHREAD)
++TEMPLATE_XPCOMEXE_LIBS.netbsd      = $(LIB_PTHREAD)
+ TEMPLATE_XPCOMEXE_LIBS.linux       = dl $(LIB_PTHREAD)
+ TEMPLATE_XPCOMEXE_LDFLAGS.darwin   = -bind_at_load $(filter-out -current_version -compatibility_version $(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD),$(TEMPLATE_XPCOM_LDFLAGS.darwin))
+ 

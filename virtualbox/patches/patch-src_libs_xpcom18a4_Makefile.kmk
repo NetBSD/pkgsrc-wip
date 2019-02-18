@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- src/libs/xpcom18a4/Makefile.kmk.orig	2018-12-18 13:01:16.000000000 +0000
++++ src/libs/xpcom18a4/Makefile.kmk
+@@ -537,6 +537,7 @@ VBox-xpcom-nspr_DEFS.linux = \
+ 	_PR_PTHREADS
+ # _BSD_SOURCE is here to keep the Glibc header files happy and make them include the right things
+ VBox-xpcom-nspr_DEFS.netbsd = \
++	NETBSD=1 \
+ 	_PR_PTHREADS
+ VBox-xpcom-nspr_DEFS.openbsd = \
+ 	_PR_PTHREADS
+@@ -629,6 +630,7 @@ VBox-xpcom-nspr_SOURCES.darwin = nsprpub
+ VBox-xpcom-nspr_SOURCES.darwin.x86 = nsprpub/pr/src/md/unix/os_Darwin_x86.s
+ 
+ VBox-xpcom-nspr_SOURCES.freebsd = nsprpub/pr/src/md/unix/freebsd.c
++VBox-xpcom-nspr_SOURCES.netbsd = nsprpub/pr/src/md/unix/netbsd.c
+ 
+ VBox-xpcom-nspr_SOURCES.linux = nsprpub/pr/src/md/unix/linux.c
+ VBox-xpcom-nspr_SOURCES.linux.x86 = nsprpub/pr/src/md/unix/os_Linux_x86.s
+@@ -870,6 +872,10 @@ VBox-xpcom-xptcall_SOURCES.freebsd.x86 =
+                                          xpcom/reflect/xptcall/src/md/unix/xptcstubs_gcc_x86_unix.cpp
+ VBox-xpcom-xptcall_SOURCES.freebsd.amd64=xpcom/reflect/xptcall/src/md/unix/xptcinvoke_x86_64_linux.cpp \
+                                          xpcom/reflect/xptcall/src/md/unix/xptcstubs_x86_64_linux.cpp
++VBox-xpcom-xptcall_SOURCES.netbsd.x86  = xpcom/reflect/xptcall/src/md/unix/xptcinvoke_gcc_x86_unix.cpp \
++                                         xpcom/reflect/xptcall/src/md/unix/xptcstubs_gcc_x86_unix.cpp
++VBox-xpcom-xptcall_SOURCES.netbsd.amd64= xpcom/reflect/xptcall/src/md/unix/xptcinvoke_x86_64_linux.cpp \
++                                         xpcom/reflect/xptcall/src/md/unix/xptcstubs_x86_64_linux.cpp
+ VBox-xpcom-xptcall_SOURCES.linux.x86   = xpcom/reflect/xptcall/src/md/unix/xptcinvoke_gcc_x86_unix.cpp \
+                                          xpcom/reflect/xptcall/src/md/unix/xptcstubs_gcc_x86_unix.cpp
+ VBox-xpcom-xptcall_SOURCES.linux.amd64 = xpcom/reflect/xptcall/src/md/unix/xptcinvoke_x86_64_linux.cpp \
