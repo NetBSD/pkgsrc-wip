@@ -1,5 +1,3 @@
-- Double check dependencies and bl3 include (probably we can't get rid of them
-  but mark the one used in swi-prolog-lite only as build depends...)
 - bin/swi-prolog is now installed as bin/swipl
   This is because in src/CMakeLists.txt:
 
@@ -9,5 +7,3 @@
   Previously a PL variable was passed... It is probably better to document that
   change in the commit message (swi-prolog -> swipl) and just follow upstream 
   nomenclature.
-- Update DESCR to reflect current reality (several packages are in
-  swi-prolog-lite now)
