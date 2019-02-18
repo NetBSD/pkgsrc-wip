@@ -2,7 +2,7 @@
 
 .include "../../wip/swi-prolog-lite/Makefile.common"
 
-PKGNAME=		swi-prolog-packages-${SWIPLVERS}
+PKGNAME=		swi-prolog-jpl-${SWIPLVERS}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
