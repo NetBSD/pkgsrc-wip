@@ -1,11 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	ranger-1.7.2
+GITHUB_PROJECT= ranger
+RANGER_VERSION= 1.9.2
+DISTNAME= ${GITHUB_PROJECT}-${RANGER_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://ranger.nongnu.org/
+MASTER_SITES= ${MASTER_SITE_GITHUB:=ranger/}
+GITHUB_TAG= v${RANGER_VERSION}
 
-MAINTAINER=	nahra@unseen.is
+MAINTAINER= jake.slazenger@yandex.com
 HOMEPAGE=	http://ranger.github.io/
 COMMENT=	VIM-inspired filemanager for the console
 LICENSE=	gnu-gpl-v3

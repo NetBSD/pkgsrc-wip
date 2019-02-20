@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ranger-1.7.2.tar.gz) = 77cedf6a1f5324be148bd8e8f9d87d7014239454
-RMD160 (ranger-1.7.2.tar.gz) = 3d16e029cc1065b3fffb34031e5d7cbfb360d3bc
-SHA512 (ranger-1.7.2.tar.gz) = 4815831bceb76bf15a68cdb09d3276192095b211ba06f0abeeec9529b0cb054341666c607f11b2c0acd1ff7de6fa3b71c9aab59db6bd5d1f0137e07619b522bd
-Size (ranger-1.7.2.tar.gz) = 269713 bytes
+SHA1 (ranger-1.9.2.tar.gz) = 822b0704941c9ce921e502def2ba0b71e1518516
+RMD160 (ranger-1.9.2.tar.gz) = b33671b1685836b7ed17b651b53e88018e1f8c4d
+SHA512 (ranger-1.9.2.tar.gz) = 5eb4743beaf0478d745cce8e5bfc2ac07c98ab5784e9394772782d06c0bb27dcd5478ead191ac527f21cce76db09a51eb46db0fabc7993684a6b5aaec0d43104
+Size (ranger-1.9.2.tar.gz) = 265295 bytes
