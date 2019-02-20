@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (i2pd/i2pd-2.18.0.tar.gz) = 2c1e6750d874b3369ae3102ba50dad9292dedad4
-RMD160 (i2pd/i2pd-2.18.0.tar.gz) = 94a0edda2fdcd7ee0ae4d1478ba63dd35464d386
-SHA512 (i2pd/i2pd-2.18.0.tar.gz) = dc8e0f4df25188e4d72ea6ffa2c36e48a7d2103d025730b40e226ab631724a9a07a4dc03a1a3d08328972c98020c44535661820add80374f1dabdf3fc848ef84
-Size (i2pd/i2pd-2.18.0.tar.gz) = 1868440 bytes
+SHA1 (i2pd/i2pd-2.23.0.tar.gz) = 62ae337bb5ca84db6223327359c817936f09af6c
+RMD160 (i2pd/i2pd-2.23.0.tar.gz) = 284b8804eba2e67e9e396a9b61bef5ef0be5a3f4
+SHA512 (i2pd/i2pd-2.23.0.tar.gz) = b547fa5b4ab3fbdf51cded846966b702304cc3dcbafbf3b4fc0e93e1907e45a649dd19eabc851309dfb7d3aa8ef84eefcb2cf1a3cda8549f90200da54df06923
+Size (i2pd/i2pd-2.23.0.tar.gz) = 1008677 bytes
 SHA1 (patch-CMakeLists.txt) = 1a8eecd49068d3a55351640da96d2d83ef0eeeb7
 SHA1 (patch-I2PEndian.h) = c627fe0f6d8bfe10badd2b4cb8e6513c2c31767d
 SHA1 (patch-NTCPSession.cpp) = ae87892d65a0e6e088059f14c9a1c62c37feaca3
