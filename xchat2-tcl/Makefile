@@ -1,7 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2012/10/07 20:11:08 asau Exp $
 
 
-.include "../../chat/xchat/Makefile.common"
+BROKEN=		xchat is no more, and this has not been converted to hexchat (deletion 2019-08-20)
+
+#.include "../../chat/xchat/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tcl-/}
 COMMENT=	TCL scripting plugin for xchat
