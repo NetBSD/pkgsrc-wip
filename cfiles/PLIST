@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/cfiles
+man/man1/cfiles.1

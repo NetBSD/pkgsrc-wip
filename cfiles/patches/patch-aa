@@ -1,0 +1,14 @@
+$NetBSD$
+
+* include <signal.h>
+
+--- cf.c.orig
++++ cf.c
+@@ -15,6 +15,7 @@
+ #include <dirent.h>
+ #include <curses.h>
+ #include <unistd.h>
++#include <signal.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <strings.h>

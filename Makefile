@@ -358,6 +358,7 @@ SUBDIR+=	cdpr
 SUBDIR+=	cedet
 SUBDIR+=	centrifuge
 SUBDIR+=	cereal
+SUBDIR+=	cfiles
 SUBDIR+=	cgal
 SUBDIR+=	cglib
 SUBDIR+=	cgnslib

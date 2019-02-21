@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (cfiles/v1.3.tar.gz) = d961707ed2a684d850301afcfe6bcb70cc052e25
+RMD160 (cfiles/v1.3.tar.gz) = 91b07847eba9e74f37f66a38595474cda8e89167
+SHA512 (cfiles/v1.3.tar.gz) = 0f36f7dca89bd71465e6d25569911fb6322bc139f132a559fda0c31b96caf3f2854d7a071bc8e5d8c0535c72cadc748f9775c4ca5d19f86921a43fc9a3f1136c
+Size (cfiles/v1.3.tar.gz) = 277136 bytes
+SHA1 (patch-aa) = 5e5b838261ffdd04c5ac0b4bf9486646b553396b
