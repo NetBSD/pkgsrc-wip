@@ -2,7 +2,24 @@ swi-prolog*: Update to 8.0.1
 
 pkgsrc changes:
  - Rename swi-prolog to swipl to follow upstream nomenclature
- TODO
+ - Add all main packages (except X11) to swi-prolog-lite.
+   After CMake migration in order to generate the documentation and being able
+   to use it (e.g. via help/2) it is needed to add basic, archive, ssl and term
+   packages.
+   All X11 packages are provided by swi-prolog-packages.
+ - Adjust pkgsrc Makefile-s logic to upstream CMake migration:
+    o Uncoditionally disable not wanted packages in Makefile.common (to avoid
+      possible PLIST mismatches; please note that this will probably disable
+      tipc package on Linux).
+      All other installed packages are enabled via
+      swi-prolog-{lite,packages,jpl} Makefile.
+    o Add libarchive, ossp-uuid and openssl build dependency to
+      swi-prolog-packages.  Despite these are provided by swi-prolog-lite
+      they are needed as part of the build of swi-prolog-packages too.
+ - Remove an unconditional CHECK_WRKREF_SKIP, this was needed on FreeBSD
+   but unfortunately it is not clear why.  If this is still needed please let
+   me know in order to try to investigate and address that.
+ - TODO: maybe there are other pkgsrc changes too worth to be documented!
 
 Changes:
 TODO
