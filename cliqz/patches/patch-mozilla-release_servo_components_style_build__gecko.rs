@@ -6,8 +6,8 @@ Original patch from ryoon, imported from www/firefox
 
 --- mozilla-release/servo/components/style/build_gecko.rs.orig	2018-11-16 08:40:07.000000000 +0000
 +++ mozilla-release/servo/components/style/build_gecko.rs
-@@ -542,6 +542,8 @@ mod bindings {
-                 )).mutable_borrowed_type(ty)
+@@ -559,6 +559,8 @@ mod bindings {
+                 .mutable_borrowed_type(ty)
                  .zero_size_type(ty, &structs_types);
          }
 +        builder = builder

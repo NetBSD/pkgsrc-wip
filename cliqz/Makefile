@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cliqz-1.24.2
+DISTNAME=	cliqz-1.25.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -15,7 +15,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20190124094133
+CLIQZ_LAST_BUILD_ID=	20190218161723
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
@@ -68,11 +68,11 @@ NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/cliqz-bin
 NOT_PAX_MPROTECT_SAFE+=	lib/cliqz/plugin-container
 
 post-extract:
-	${CP} ${DISTDIR}/adult-domains.bin ${WRKSRC}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/adult-domains.bin ${WRKSRC}
 	${MKDIR} ${WRKSRC}/obj/dist/bin/browser/features
-	${CP} ${DISTDIR}/cliqz${CLIQZ_PLUGIN_SUFX} \
-		${DISTDIR}/https-everywhere${CLIQZ_PLUGIN_SUFX} \
-		${DISTDIR}/gdprtool${CLIQZ_PLUGIN_SUFX} \
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/cliqz${CLIQZ_PLUGIN_SUFX} \
+		${DISTDIR}/${DIST_SUBDIR}/https-everywhere${CLIQZ_PLUGIN_SUFX} \
+		${DISTDIR}/${DIST_SUBDIR}/gdprtool${CLIQZ_PLUGIN_SUFX} \
 		${WRKSRC}/obj/dist/bin/browser/features
 
 post-patch:

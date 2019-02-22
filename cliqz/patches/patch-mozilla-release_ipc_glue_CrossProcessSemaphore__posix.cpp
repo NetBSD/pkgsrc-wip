@@ -16,8 +16,8 @@ Original patch from ryoon, imported from www/firefox
  
  static const uint64_t kNsPerMs = 1000000;
  static const uint64_t kNsPerSec = 1000000000;
-@@ -17,7 +22,13 @@ namespace {
- 
+@@ -16,7 +21,13 @@ static const uint64_t kNsPerSec = 100000
+ namespace {
  
  struct SemaphoreData {
 +#if defined(__NetBSD__)
@@ -30,7 +30,7 @@ Original patch from ryoon, imported from www/firefox
    mozilla::Atomic<int32_t> mRefCount;
    uint32_t mInitialValue;
  };
-@@ -44,13 +55,27 @@ CrossProcessSemaphore::Create(const char
+@@ -42,13 +53,27 @@ namespace mozilla {
      return nullptr;
    }
  
@@ -58,7 +58,7 @@ Original patch from ryoon, imported from www/firefox
    sem->mRefCount = &data->mRefCount;
    *sem->mRefCount = 1;
  
-@@ -86,24 +111,44 @@ CrossProcessSemaphore::Create(CrossProce
+@@ -83,23 +108,44 @@ namespace mozilla {
  
    int32_t oldCount = data->mRefCount++;
    if (oldCount == 0) {
@@ -91,19 +91,20 @@ Original patch from ryoon, imported from www/firefox
    return sem;
  }
  
- 
  CrossProcessSemaphore::CrossProcessSemaphore()
+-    : mSemaphore(nullptr), mRefCount(nullptr) {
 +#if defined(__NetBSD__)
 +  : mMutex (nullptr)
 +  , mNotZero (nullptr)
 +  , mValue (nullptr)
 +#else
-   : mSemaphore(nullptr)
++    : mSemaphore(nullptr)
 +#endif
-   , mRefCount(nullptr)
- {
++    , mRefCount(nullptr) {
    MOZ_COUNT_CTOR(CrossProcessSemaphore);
-@@ -115,17 +160,58 @@ CrossProcessSemaphore::~CrossProcessSema
+ }
+ 
+@@ -108,16 +154,57 @@ CrossProcessSemaphore::~CrossProcessSema
  
    if (oldCount == 0) {
      // Nothing can be done if the destroy fails so ignore return code.
@@ -136,10 +137,9 @@ Original patch from ryoon, imported from www/firefox
 +}
 +#endif
 +
- bool
- CrossProcessSemaphore::Wait(const Maybe<TimeDuration>& aWaitTime)
- {
-   MOZ_ASSERT(*mRefCount > 0, "Attempting to wait on a semaphore with zero ref count");
+ bool CrossProcessSemaphore::Wait(const Maybe<TimeDuration>& aWaitTime) {
+   MOZ_ASSERT(*mRefCount > 0,
+              "Attempting to wait on a semaphore with zero ref count");
    int ret;
 +#if defined(__NetBSD__)
 +  struct timespec ts = makeAbsTime(aWaitTime);
@@ -162,7 +162,7 @@ Original patch from ryoon, imported from www/firefox
    if (aWaitTime.isSome()) {
      struct timespec ts;
      if (clock_gettime(CLOCK_REALTIME, &ts) == -1) {
-@@ -142,6 +228,7 @@ CrossProcessSemaphore::Wait(const Maybe<
+@@ -134,13 +221,24 @@ bool CrossProcessSemaphore::Wait(const M
      while ((ret = sem_wait(mSemaphore)) == -1 && errno == EINTR) {
      }
    }
@@ -170,10 +170,9 @@ Original patch from ryoon, imported from www/firefox
    return ret == 0;
  }
  
-@@ -149,7 +236,17 @@ void
- CrossProcessSemaphore::Signal()
- {
-   MOZ_ASSERT(*mRefCount > 0, "Attempting to signal a semaphore with zero ref count");
+ void CrossProcessSemaphore::Signal() {
+   MOZ_ASSERT(*mRefCount > 0,
+              "Attempting to signal a semaphore with zero ref count");
 +#if defined(__NetBSD__)
 +  int ret;
 +  ret = pthread_mutex_lock(mMutex);
@@ -187,4 +186,4 @@ Original patch from ryoon, imported from www/firefox
 +#endif
  }
  
- CrossProcessSemaphoreHandle
+ CrossProcessSemaphoreHandle CrossProcessSemaphore::ShareToProcess(

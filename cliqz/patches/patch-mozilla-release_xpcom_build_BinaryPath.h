@@ -8,8 +8,8 @@ Original patch from ryoon, imported from www/firefox
 
 --- mozilla-release/xpcom/build/BinaryPath.h.orig	2018-11-16 08:40:07.000000000 +0000
 +++ mozilla-release/xpcom/build/BinaryPath.h
-@@ -22,7 +22,8 @@
-     defined(__OpenBSD__)
+@@ -21,7 +21,8 @@
+     defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__)
  #include <sys/sysctl.h>
  #endif
 -#if defined(__OpenBSD__)
@@ -18,21 +18,20 @@ Original patch from ryoon, imported from www/firefox
  #include <sys/stat.h>
  #endif
  #include "mozilla/UniquePtr.h"
-@@ -172,7 +173,8 @@ private:
+@@ -164,7 +165,8 @@ class BinaryPath {
    }
  
  #elif defined(__FreeBSD__) || defined(__DragonFly__) || \
--      defined(__FreeBSD_kernel__) || defined(__NetBSD__)
+-    defined(__FreeBSD_kernel__) || defined(__NetBSD__)
 +      defined(__FreeBSD_kernel__) || \
 +      (defined(__NetBSD__) && defined(KERN_PROC_PATHNAME))
-   static nsresult Get(char aResult[MAXPATHLEN])
-   {
+   static nsresult Get(char aResult[MAXPATHLEN]) {
      int mib[4];
-@@ -256,7 +258,13 @@ private:
-     }
+     mib[0] = CTL_KERN;
+@@ -246,6 +248,13 @@ class BinaryPath {
      return NS_ERROR_FAILURE;
    }
--
+ 
 +#elif (defined(__NetBSD__) && !defined(KERN_PROC_PATHNAME))
 +  static nsresult Get(char aResult[MAXPATHLEN])
 +  {

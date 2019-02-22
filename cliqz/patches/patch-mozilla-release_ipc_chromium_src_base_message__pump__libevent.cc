@@ -12,12 +12,12 @@ Original patch from ryoon, imported from www/firefox
  // ipc/chromiume/src/third_party/<platform>/event2/event-config.h are correct.
 +#if 0
  #if defined(_EVENT_SIZEOF_SHORT)
- #define CHECK_EVENT_SIZEOF(TYPE, type) \
-     static_assert(_EVENT_SIZEOF_##TYPE == sizeof(type), \
+ #define CHECK_EVENT_SIZEOF(TYPE, type)                \
+   static_assert(_EVENT_SIZEOF_##TYPE == sizeof(type), \
 @@ -41,6 +42,7 @@ CHECK_EVENT_SIZEOF(PTHREAD_T, pthread_t)
- CHECK_EVENT_SIZEOF(SHORT,     short);
- CHECK_EVENT_SIZEOF(SIZE_T,    size_t);
- CHECK_EVENT_SIZEOF(VOID_P,    void*);
+ CHECK_EVENT_SIZEOF(SHORT, short);
+ CHECK_EVENT_SIZEOF(SIZE_T, size_t);
+ CHECK_EVENT_SIZEOF(VOID_P, void*);
 +#endif
  
  // Lifecycle of struct event
