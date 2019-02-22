@@ -18,7 +18,7 @@ pkgsrc changes:
       they are needed as part of the build of swi-prolog-packages too.
  - Remove an unconditional CHECK_WRKREF_SKIP, this was needed on FreeBSD
    but unfortunately it is not clear why.  If this is still needed please let
-   me know in order to try to investigate and address that.
+   me know in order to try to investigate further and address that.
  - TODO: maybe there are other pkgsrc changes too worth to be documented!
 
 Changes:
