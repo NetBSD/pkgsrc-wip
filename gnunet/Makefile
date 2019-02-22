@@ -14,7 +14,7 @@ LICENSE=	gnu-agpl-v3
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 PLIST_SRC=		${WRKDIR}/PLIST.src
@@ -51,7 +51,7 @@ post-build:
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/libextractor/buildlink3.mk"
+.include "../../devel/libextractor/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
