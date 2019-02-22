@@ -4,6 +4,6 @@ bin/tscrape_html
 bin/tscrape_plain
 bin/tscrape_update
 man/man1/tscrape.1
-share/tscrape/README
-share/tscrape/style.css
-share/tscrape/tscraperc.example
+share/doc/tscrape/README
+share/doc/tscrape/style.css
+share/doc/tscrape/tscraperc.example

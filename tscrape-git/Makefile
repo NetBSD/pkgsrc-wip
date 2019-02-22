@@ -15,17 +15,9 @@ WRKSRC=			${WRKDIR}/tscrape
 
 USE_LANGUAGES=	c99
 
-# Adjust config.mk
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-configure
-SUBST_MESSAGE.makefile=	Fixing config.mk
-SUBST_FILES.makefile=	config.mk
-SUBST_SED.makefile=	-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.makefile+=	-e 's,man,${PKGMANDIR},g'
-SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
-SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
-SUBST_SED.makefile+=	-e 's,^CPPFLAGS *= ,CPPFLAGS += ,'
-SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
+MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=		MANPREFIX=${PREFIX:Q}/${PKGMANDIR:Q}
+MAKE_FLAGS+=		CC=${CC:Q}
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
