@@ -39,10 +39,6 @@ do-install:
 			-P cmake_install.cmake
 .endfor
 
-# I need this on FreeBSD, perhaps this depends on GCC behaviour:
-CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHINE_GNU_PLATFORM}/pl2xpce.so
-
-
 .include "../../wip/swi-prolog-lite/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libarchive=	build
 .include "../../archivers/libarchive/buildlink3.mk"
