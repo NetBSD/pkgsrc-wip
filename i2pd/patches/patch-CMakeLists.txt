@@ -1,7 +1,7 @@
 $NetBSD$
 
-# Don't install LICENSE and src/* files.
---- build/CMakeLists.txt	2019-01-21 15:51:04.000000000 +0000
+# Don't install LICENSE and src/* files
+--- build/CMakeLists.txt.orig	2019-01-21 15:51:04.000000000 +0000
 +++ build/CMakeLists.txt
 @@ -484,10 +484,10 @@ if (WITH_BINARY)
    endif ()
@@ -27,3 +27,12 @@ $NetBSD$
  # install(DIRECTORY ../ DESTINATION src/
  #   # OPTIONAL
  #   COMPONENT Source FILES_MATCHING
+@@ -506,7 +506,7 @@ install(FILES ${I2PD_SOURCES} DESTINATIO
+ #   )
+ 
+ file(GLOB I2PD_HEADERS "../libi2pd/*.h" "../libi2pd_client/*.h" "../daemon/*.h")
+-install(FILES ${I2PD_HEADERS} DESTINATION src/ COMPONENT Headers)
++#install(FILES ${I2PD_HEADERS} DESTINATION src/ COMPONENT Headers)
+ # install(DIRECTORY ../ DESTINATION src/
+ #   # OPTIONAL
+ #   COMPONENT Headers FILES_MATCHING

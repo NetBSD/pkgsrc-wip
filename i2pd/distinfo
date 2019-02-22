@@ -4,4 +4,4 @@ SHA1 (i2pd/i2pd-2.23.0.tar.gz) = 62ae337bb5ca84db6223327359c817936f09af6c
 RMD160 (i2pd/i2pd-2.23.0.tar.gz) = 284b8804eba2e67e9e396a9b61bef5ef0be5a3f4
 SHA512 (i2pd/i2pd-2.23.0.tar.gz) = b547fa5b4ab3fbdf51cded846966b702304cc3dcbafbf3b4fc0e93e1907e45a649dd19eabc851309dfb7d3aa8ef84eefcb2cf1a3cda8549f90200da54df06923
 Size (i2pd/i2pd-2.23.0.tar.gz) = 1008677 bytes
-SHA1 (patch-CMakeLists.txt) = 58c70126307b7f74b709871bfa38c5b51baf3013
+SHA1 (patch-CMakeLists.txt) = 515c2dd83e19154ea44b4c8c29ee39ee8bf223f6
