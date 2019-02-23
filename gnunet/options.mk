@@ -2,8 +2,8 @@
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		gdbm inet6 tdb doc mdoc ssl libgcrypt idn mysql pgsql tests
-PKG_SUGGESTED_OPTIONS=		inet6 doc ssl libgcrypt
+PKG_SUPPORTED_OPTIONS=		gdbm tdb doc mdoc ssl libgcrypt idn mysql pgsql tests
+PKG_SUGGESTED_OPTIONS=		doc ssl libgcrypt
 
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
@@ -15,16 +15,6 @@ PKG_SUGGESTED_OPTIONS=		inet6 doc ssl libgcrypt
 .if !empty(PKG_OPTIONS:Mtests)
 .include "../../lang/python37/buildlink3.mk"
 .endif
-
-# IPv6 doesn't compile in this release
-#BUILD_DEFS+=		USE_INET6
-#.if !empty(PKG_OPTIONS:inet6)
-#CONFIGURE_ARGS+=	--enable-ipv6
-#GNUNET_PLIST_ADD+=	lib/libgnunettransport_tcp6.la
-#GNUNET_PLIST_ADD+=	lib/libgnunettransport_udp6.la
-#.else
-CONFIGURE_ARGS+=	--disable-ipv6
-#.endif
 
 .if !empty(PKG_OPTIONS:Mgdbm)
 .include "../../databases/gdbm/buildlink3.mk"
