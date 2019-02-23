@@ -2,7 +2,7 @@
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		bdb gdbm inet6 tdb doc mdoc ssl libgcrypt idn mysql pgsql tests
+PKG_SUPPORTED_OPTIONS=		gdbm inet6 tdb doc mdoc ssl libgcrypt idn mysql pgsql tests
 PKG_SUGGESTED_OPTIONS=		inet6 doc ssl libgcrypt
 
 # openssl is currently required by:
@@ -25,15 +25,6 @@ PKG_SUGGESTED_OPTIONS=		inet6 doc ssl libgcrypt
 #.else
 CONFIGURE_ARGS+=	--disable-ipv6
 #.endif
-
-.if !empty(PKG_OPTIONS:Mbdb)
-BDB_ACCEPTED=		db4 db3 db2
-.include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
-GNUNET_PLIST_ADD+=	lib/libgnunetafs_database_bdb.la
-.else
-CONFIGURE_ARGS+=	--without-bdb
-.endif
 
 .if !empty(PKG_OPTIONS:Mgdbm)
 .include "../../databases/gdbm/buildlink3.mk"
