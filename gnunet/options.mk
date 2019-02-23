@@ -2,7 +2,7 @@
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		bdb gdbm inet6 tdb doc mdoc ssl libgcrypt idn
+PKG_SUPPORTED_OPTIONS=		bdb gdbm inet6 tdb doc mdoc ssl libgcrypt idn mysql pgsql tests
 PKG_SUGGESTED_OPTIONS=		inet6 doc ssl libgcrypt
 
 # openssl is currently required by:
@@ -10,6 +10,11 @@ PKG_SUGGESTED_OPTIONS=		inet6 doc ssl libgcrypt
 # src/gns/gnunet-gns-proxy-setup-ca
 
 .include "../../mk/bsd.options.mk"
+
+# Parts of the testsuite require python3.7
+.if !empty(PKG_OPTIONS:Mtests)
+.include "../../lang/python37/buildlink3.mk"
+.endif
 
 # IPv6 doesn't compile in this release
 #BUILD_DEFS+=		USE_INET6
@@ -79,3 +84,13 @@ CONFIGURE_ARGS+=	--with-libidn2=${BUILDLINK_PREFIX.libidn2}
 .include "../../devel/libidn/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 .endif
+
+### database support
+###
+.if !empty(PKG_OPTIONS:Mmysql)
+.include "../../mk/mysql.buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mpgsql)
+.include "../../mk/pgsql.buildlink3.mk"
+.endif
+

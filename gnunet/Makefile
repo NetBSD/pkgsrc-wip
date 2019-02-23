@@ -45,7 +45,6 @@ post-build:
 .endfor
 
 .include "../../audio/libopus/buildlink3.mk"
-.include "../../databases/postgresql96-client/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
@@ -54,7 +53,6 @@ post-build:
 .include "../../devel/libextractor/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python27/buildlink3.mk"
 .include "../../math/glpk/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
