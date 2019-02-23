@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	spotifyd-0.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c # rust, but needs a toolchain to link
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
-LIBRESPOT_REV=	d2cadec4190a44572b1d5d5daed4f0eda1c2b921
+LIBRESPOT_REV=	daeeeaa122fc2d71edf11e562e23038db4210b39
 DISTFILES+=	librespot-${LIBRESPOT_REV}.tar.gz
 SITES.librespot-${LIBRESPOT_REV}.tar.gz=	-https://github.com/librespot-org/librespot/archive/${LIBRESPOT_REV}.tar.gz
 
