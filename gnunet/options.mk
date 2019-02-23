@@ -2,7 +2,7 @@
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		gdbm tdb doc mdoc ssl libgcrypt idn mysql pgsql tests
+PKG_SUPPORTED_OPTIONS=		doc mdoc ssl libgcrypt idn mysql pgsql tests
 PKG_SUGGESTED_OPTIONS=		doc ssl libgcrypt
 
 # openssl is currently required by:
@@ -14,22 +14,6 @@ PKG_SUGGESTED_OPTIONS=		doc ssl libgcrypt
 # Parts of the testsuite require python3.7
 .if !empty(PKG_OPTIONS:Mtests)
 .include "../../lang/python37/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mgdbm)
-.include "../../databases/gdbm/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gdbm=${BUILDLINK_PREFIX.gdbm}
-GNUNET_PLIST_ADD+=	lib/libgnunetafs_database_gdbm.la
-.else
-CONFIGURE_ARGS+=	--without-gdbm
-.endif
-
-.if !empty(PKG_OPTIONS:Mtdb)
-.include "../../databases/tdb/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-tdb=${BDBBASE}
-GNUNET_PLIST_ADD+=	lib/libgnunetafs_database_tdb.la
-.else
-CONFIGURE_ARGS+=	--without-tdb
 .endif
 
 # libgcrypt is used in preference to openssl, per gnunet configure.ac
