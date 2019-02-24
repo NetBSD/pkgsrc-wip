@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	beautysh
-DISTNAME=	beautysh-3.8
+DISTNAME=	beautysh-4.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bemeurer/}
 

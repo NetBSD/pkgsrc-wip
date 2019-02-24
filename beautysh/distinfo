@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (beautysh-3.8.tar.gz) = 85830e4976fe53dc32d9a669332ee2c9c31d5452
-RMD160 (beautysh-3.8.tar.gz) = 119db8c607def9a75beb5b18a729580c92a1a526
-SHA512 (beautysh-3.8.tar.gz) = 0dc966315acf2a7736f9becdff6b6ac133c1bd6bef0395f888696261a607597d7f9538afdc57689e0ef57e5ca6c7ae07dec6093bbc3523b5278b0391d31f57c6
-Size (beautysh-3.8.tar.gz) = 18433 bytes
+SHA1 (beautysh-4.1.tar.gz) = 2cbc74663c67f3fcef878f035c2cb9112a55567e
+RMD160 (beautysh-4.1.tar.gz) = 5368b2e96a1499c4643affd8eb0b1f40a274a085
+SHA512 (beautysh-4.1.tar.gz) = cb321c4173b54f4830403d11573cacd7cfc8d6eb50cd195055223a11d630fea8306383150a58dbb1f52a72f44789fb63b3ddc9dc26fba69c70d2c8462a95fd06
+Size (beautysh-4.1.tar.gz) = 14143 bytes
