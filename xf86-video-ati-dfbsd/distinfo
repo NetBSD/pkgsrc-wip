@@ -1,7 +1,17 @@
-$NetBSD: distinfo,v 1.30 2017/03/16 12:04:25 wiz Exp $
+$NetBSD: distinfo,v 1.35 2018/09/16 20:28:51 triaxx Exp $
 
-SHA1 (xf86-video-ati-7.9.0.tar.bz2) = 86ee6db1d7dcdeb1948aeb7965be8102c18be46b
-RMD160 (xf86-video-ati-7.9.0.tar.bz2) = b9e6650008e4c43e45f7a603b7431bc296dc1475
-SHA512 (xf86-video-ati-7.9.0.tar.bz2) = 125e035da6581520d677c56474653ed75aa6d168bf5450cc973248416b5ada3114ea14d0615b44c58029bb1702609453ab532a506273df2a5dd99dd2af4a9d43
-Size (xf86-video-ati-7.9.0.tar.bz2) = 848502 bytes
-SHA1 (patch-src_radeon__kms.c) = 2865ae6d8953f8e2f8eecf9d690b97498ebb313d
+SHA1 (xf86-video-ati-18.1.0.tar.bz2) = 87beb7d09f5b722570adda9a5a1822cbd19e7059
+RMD160 (xf86-video-ati-18.1.0.tar.bz2) = c9ab92004212306fd2347d9683d7c16ce9dc7085
+SHA512 (xf86-video-ati-18.1.0.tar.bz2) = 7a58c9a6cb4876bd2ff37d837372b4e360e81fec7de6a6c7a48d70a5338d62745f734f5d4207f30aa368ff2d9ef44f5f1ef36afd73802a618998c16fe395ed53
+Size (xf86-video-ati-18.1.0.tar.bz2) = 891953 bytes
+SHA1 (patch-configure) = bdd1014b215af69c2bb837d36829e12e86eb5764
+SHA1 (patch-src_drmmode__display.c) = e243e856507b4b3f1037838ee21c7258a5e83c07
+SHA1 (patch-src_radeon.h) = 938492aede478f071bdc22d907235c1fd9b27cbb
+SHA1 (patch-src_radeon__bo__helper.c) = e8d7e122b84ded2d7dec50262f48568cf59f27a2
+SHA1 (patch-src_radeon__bo__helper.h) = bf01afbec90e6a6a8eed0f2f604d4ac0dd616a65
+SHA1 (patch-src_radeon__dri2.c) = 0124a167886cca1f8c2734b9bc1acf77ec3ff112
+SHA1 (patch-src_radeon__dri3.c) = d47e68602b814d5ea469346451c5c91c46c66b21
+SHA1 (patch-src_radeon__glamor.c) = 8821396b6c38497cd38b79ea09fb22161c56d6df
+SHA1 (patch-src_radeon__glamor.h) = 0a1d28fae719cf709545f6064cd2cc5114418c93
+SHA1 (patch-src_radeon__kms.c) = 9b435022971c4c1f92f8fb26e64c3e406cb98a06
+SHA1 (patch-src_radeon__probe.c) = a29be4b9295295668e0725083145ec67f01df2cb
