@@ -5,6 +5,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 PKGNAME=	guile-gcrypt-${DISTNAME:S/v//}
 CATEGORIES=	devel
 MASTER_SITES=	https://notabug.org/cwebber/guile-gcrypt/archive/
+PKGREVISION=	1
 
 MAINTAINER=	ng0@n0.is
 HOMEPAGE=	https://notabug.org/cwebber/guile-gcrypt/archive/
@@ -16,6 +17,8 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	automake autoconf autoreconf pkg-config makeinfo
 GNU_CONFIGURE=	YES
 
+GNU_CONFIGURE_PREFIX=   ${PREFIX}/guile/2.2
+CONFIGURE_ARGS+=        --libdir=${PREFIX}/guile/2.2/lib
 CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
 
 pre-configure:
