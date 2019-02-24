@@ -1,31 +1,13 @@
 $NetBSD$
 
-Patches from FreeBSD ports / DragonFly dports with include guards.
-Support for different versions of system libusb headers.
-Patches from FreeBSD ports svn commit: r431436
+Patches from FreeBSD ports / DragonFly dports x11-drivers/xf86-input-mouse 1.9.2.
 
---- src/bsd_mouse.c.orig	2015-04-20 01:07:33.000000000 +0000
+--- src/bsd_mouse.c.orig	2018-06-19 04:36:21.000000000 +0000
 +++ src/bsd_mouse.c
-@@ -26,6 +26,41 @@
+@@ -26,6 +26,23 @@
   * authorization from the copyright holder(s) and author(s).
   */
  
-+/* PKGSRC note: To support newer versions of DragonFly and FreeBSD,
-+ * this file is patched using DragonFly dports
-+ * x11-drivers/xf86-input-mouse/files/patch-src-bsd_mouse.c and
-+ * x11-drivers/xf86-input-mouse/dragonfly/patch-src_bsd__mouse.c
-+ * as of master commit 4f04bfe0ea83 ... Tue Jul 14 22:56:44 2015 -0700
-+ * The patch's code is enclosed in include defined(FREEBSD_USB) while the
-+ * original code is enclosed in include !defined(FREEBSD_USB).
-+ */
-+
-+/* DRAGONFLY_U4B is the usb system after OS version 300703
-+ * DRAGONFLY_USB is the usb system before OS version 300703
-+ * FREEBSD_USB must be defined if either DRAGONFLY_U4B or DRAGONFLY_USB are.
-+ */
-+
-+#if defined(FREEBSD_USB)
-+
 +/*
 + * XXX - Should this be autoconf'd instead?
 + */
@@ -43,23 +25,20 @@ Patches from FreeBSD ports svn commit: r431436
 +
 +#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
 +
-+#endif /* defined(FREEBSD_USB) */
-+
  #include <xorg-server.h>
  
  #include <X11/X.h>
-@@ -33,12 +68,33 @@
+@@ -33,9 +50,27 @@
  #include "xf86Priv.h"
  #include "xf86_OSlib.h"
  #include "xf86Xinput.h"
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#include <exevents.h>
-+#endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  #include "mouse.h"
  #include "xisb.h"
  #include "mipointer.h"
-+
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) >= 3
 +#define HAVE_PROPERTIES 1
 +#endif
@@ -73,88 +52,76 @@ Patches from FreeBSD ports svn commit: r431436
 +#undef HAVE_LABELS
 +#endif
 +#endif
-+#endif /* defined(FREEBSD_USB) */
-+
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  #ifdef WSCONS_SUPPORT
  #include <dev/wscons/wsconsio.h>
  #endif
-+
- #ifdef USBMOUSE_SUPPORT
- #ifdef HAS_LIB_USB_HID
- #include <usbhid.h>
-@@ -46,10 +102,25 @@
+@@ -46,10 +81,22 @@
  #include "usb.h"
  #endif
  
-+#if defined(FREEBSD_USB)
-+
-+#if defined(DRAGONFLY_U4B)
++#if defined(__DragonFly__)
 +#include <sys/param.h>
-+#include <bus/u4b/usb.h>
-+#elif defined(DRAGONFLY_USB)
-+#include <sys/param.h>
++#  if __DragonFly_version < 300703
 +#include <bus/usb/usb.h>
++#  else
++#include <bus/u4b/usb.h>
++#  endif
 +#else
  #include <dev/usb/usb.h>
 +#endif
 +
-+#endif /* defined(FREEBSD_USB) */
-+
-+#if !defined(FREEBSD_USB)
++#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__)
  #ifdef USB_GET_REPORT_ID
  #define USB_NEW_HID
  #endif
-+#endif /* !defined(FREEBSD_USB) */
++#endif /* !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__) */
  
  #define HUP_GENERIC_DESKTOP     0x0001
  #define HUP_BUTTON              0x0009
-@@ -76,10 +147,17 @@ static const char *FindDevice(InputInfoP
+@@ -66,8 +113,10 @@
+ #endif /* USBMOUSE_SUPPORT */
+ 
+ #ifdef USBMOUSE_SUPPORT
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 23
+ static void usbSigioReadInput (int fd, void *closure);
+ #endif
++#endif
+ static const char *FindDevice(InputInfoPtr, const char *, int);
+ 
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
+@@ -75,11 +124,17 @@ static const char *FindDevice(InputInfoP
+ #define DEFAULT_MOUSE_DEV               "/dev/mouse"
  #define DEFAULT_SYSMOUSE_DEV            "/dev/sysmouse"
  #define DEFAULT_PS2_DEV                 "/dev/psm0"
- 
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#define DEFAULT_USB_DEV                 "/dev/ums0"
-+#endif
-+
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+ 
  static const char *mouseDevs[] = {
          DEFAULT_MOUSE_DEV,
          DEFAULT_SYSMOUSE_DEV,
          DEFAULT_PS2_DEV,
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +        DEFAULT_USB_DEV,
-+#endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
          NULL
  };
  #elif (defined(__OpenBSD__) || defined(__NetBSD__)) && defined(WSCONS_SUPPORT)
-@@ -97,11 +175,23 @@ static const char *mouseDevs[] = {
+@@ -97,7 +152,7 @@ static const char *mouseDevs[] = {
  static int
  SupportedInterfaces(void)
  {
-+#if !defined(FREEBSD_USB)
-+
- #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
++#if defined(__NetBSD__)
      return MSE_SERIAL | MSE_BUS | MSE_PS2 | MSE_AUTO | MSE_MISC;
  #else
      return MSE_SERIAL | MSE_BUS | MSE_PS2 | MSE_XPS2 | MSE_AUTO | MSE_MISC;
- #endif
-+
-+#else /* defined(FREEBSD_USB) */
-+
-+#if defined(__NetBSD__)
-+    return MSE_SERIAL | MSE_BUS | MSE_PS2 | MSE_AUTO | MSE_MISC;
-+#else
-+    return MSE_SERIAL | MSE_BUS | MSE_PS2 | MSE_XPS2 | MSE_AUTO | MSE_MISC;
-+#endif
-+
-+#endif /* !defined(FREEBSD_USB) */
- }
- 
- /* Names of protocols that are handled internally here. */
-@@ -178,9 +268,34 @@ static struct {
+@@ -178,9 +233,35 @@ static struct {
          { MOUSE_PROTO_SYSMOUSE,         "SysMouse" }
  };
  
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#ifdef XPS2_SUPPORT
 +static struct {
 +        int dmodel;
@@ -171,40 +138,42 @@ Patches from FreeBSD ports svn commit: r431436
 +        { MOUSE_MODEL_4DPLUS,           "IMPS/2" },
 +};
 +#endif
-+#endif /* defined(FREEBSD_USB) */
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
 +
  static const char *
  SetupAuto(InputInfoPtr pInfo, int *protoPara)
  {
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#ifdef XPS2_SUPPORT
 +    const char *dev;
 +#endif
 +    const char *proto;
-+#endif /* defined(FREEBSD_USB) */
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
++
      int i;
      mousehw_t hw;
      mousemode_t mode;
-@@ -189,6 +304,14 @@ SetupAuto(InputInfoPtr pInfo, int *proto
+@@ -188,7 +269,15 @@ SetupAuto(InputInfoPtr pInfo, int *proto
+     if (pInfo->fd == -1)
          return NULL;
  
-     /* set the driver operation level, if applicable */
-+#if defined (FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#ifdef XPS2_SUPPORT
+     /* set the driver operation level, if applicable */
 +    dev = xf86FindOptionValue(pInfo->options, "Device");
 +    if (dev != NULL && !strncmp(dev, DEFAULT_PS2_DEV, 8))
 +        i = 2;
 +    else
 +#endif
-+#endif /* defined(FREEBSD_USB) */
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
      i = 1;
      ioctl(pInfo->fd, MOUSE_SETLEVEL, &i);
  
-@@ -207,9 +330,27 @@ SetupAuto(InputInfoPtr pInfo, int *proto
+@@ -207,9 +296,25 @@ SetupAuto(InputInfoPtr pInfo, int *proto
                      protoPara[0] = mode.syncmask[0];
                      protoPara[1] = mode.syncmask[1];
                  }
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +                proto = devproto[i].name;
 +#ifdef XPS2_SUPPORT
 +                if (mode.protocol == MOUSE_PROTO_PS2)
@@ -214,85 +183,63 @@ Patches from FreeBSD ports svn commit: r431436
 +                           break;
 +                }
 +#endif
-+#endif /* defined(FREEBSD_USB) */
-+
-+#if !defined(FREEBSD_USB)
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
                  xf86MsgVerb(X_INFO, 3, "%s: SetupAuto: protocol is %s\n",
-                             pInfo->name, devproto[i].name);
-                 return devproto[i].name;
-+#else /* defined(FREEBSD_USB) */
-+                xf86MsgVerb(X_INFO, 3, "%s: SetupAuto: protocol is %s\n",
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +                            pInfo->name, proto);
 +                return proto;
-+#endif /* !defined(FREEBSD_USB) */
++#else
+                             pInfo->name, devproto[i].name);
+                 return devproto[i].name;
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
              }
          }
      }
-@@ -227,6 +368,9 @@ SetSysMouseRes(InputInfoPtr pInfo, const
-     mode.rate = rate > 0 ? rate : -1;
-     mode.resolution = res > 0 ? res : -1;
-     mode.accelfactor = -1;
-+
-+#if !defined(FREEBSD_USB)
-+
- #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
-     if (pMse->autoProbe ||
+@@ -232,41 +337,41 @@ SetSysMouseRes(InputInfoPtr pInfo, const
          (protocol && xf86NameCmp(protocol, "SysMouse") == 0)) {
-@@ -241,13 +385,35 @@ SetSysMouseRes(InputInfoPtr pInfo, const
- #else
-     mode.level = -1;
- #endif
-+
-+#else /* defined(FREEBSD_USB) */
-+
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
-+    if (pMse->autoProbe ||
-+        (protocol && xf86NameCmp(protocol, "SysMouse") == 0)) {
-+        /*
-+         * As the FreeBSD sysmouse driver defaults to protocol level 0
+         /*
+          * As the FreeBSD sysmouse driver defaults to protocol level 0
+-         * everytime it is opened we enforce protocol level 1 again at
 +         * everytime it is closed we enforce protocol level 1 again at
-+         * this point.
-+         */
-+        mode.level = 1;
-+    } else
-+#endif
+          * this point.
+          */
+         mode.level = 1;
+     } else
+-        mode.level = -1;
+-#else
+-    mode.level = -1;
+ #endif
 +    mode.level = -1;
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
      ioctl(pInfo->fd, MOUSE_SETMODE, &mode);
  }
  #endif
  
  #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
- 
-+#if !defined(FREEBSD_USB)
- #define MOUSED_PID_FILE "/var/run/moused.pid"
-+#endif
-+
-+#if !defined(FREEBSD_USB)
- 
+-
+-#define MOUSED_PID_FILE "/var/run/moused.pid"
+-
  /*
   * Try to check if moused is running.  DEFAULT_SYSMOUSE_DEV is useless without
-@@ -271,20 +437,66 @@ MousedRunning(void)
-     return FALSE;
- }
- 
-+#else /* defined(FREEBSD_USB) */
-+
-+/*
-+ * Try to check if moused is running.  DEFAULT_SYSMOUSE_DEV is useless without
+- * it.  There doesn't seem to be a better way of checking.
 + * it.  Also, try to check if the device is used by moused.  If it is opened
 + * by moused, we do not want to use it directly.  There doesn't seem to be
 + * a better way of checking.
-+ */
-+static Bool
+  */
+ static Bool
+-MousedRunning(void)
 +MousedRunning(const char *dev)
-+{
+ {
 +    char cmd[128];
-+    FILE *f = NULL;
+     FILE *f = NULL;
+-    unsigned int pid;
 +    unsigned int i;
-+
+ 
+-    if ((f = fopen(MOUSED_PID_FILE, "r")) != NULL) {
+-        if (fscanf(f, "%u", &pid) == 1 && pid > 0) {
+-            if (kill(pid, 0) == 0) {
+-                fclose(f);
+-                return TRUE;
+-            }
 +    if (dev)
 +        sprintf(cmd, "sh -c 'fstat %s | grep -c moused' 2>/dev/null", dev);
 +    else
@@ -301,98 +248,64 @@ Patches from FreeBSD ports svn commit: r431436
 +        if (fscanf(f, "%u", &i) == 1 && i > 0) {
 +            pclose(f);
 +            return TRUE;
-+        }
+         }
+-        fclose(f);
 +        pclose(f);
-+    }
-+    return FALSE;
-+}
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
+     }
+     return FALSE;
+ }
+@@ -274,17 +379,17 @@ MousedRunning(void)
  static const char *
  FindDevice(InputInfoPtr pInfo, const char *protocol, int flags)
  {
-+#if !defined(FREEBSD_USB)
-     int fd = -1;
-+#else
+-    int fd = -1;
 +    int ret = -1;
-+#endif
      const char **pdev, *dev = NULL;
      Bool devMouse = FALSE;
      struct stat devMouseStat;
      struct stat sb;
  
      for (pdev = mouseDevs; *pdev; pdev++) {
-+
-+#if !defined(FREEBSD_USB)
-         SYSCALL (fd = open(*pdev, O_RDWR | O_NONBLOCK));
-         if (fd == -1) {
-+#else
+-        SYSCALL (fd = open(*pdev, O_RDWR | O_NONBLOCK));
+-        if (fd == -1) {
 +        SYSCALL (ret = stat(*pdev, &sb));
 +        if (ret == -1) {
-+#endif /* !defined(FREEBSD_USB) */
-+
  #ifdef DEBUG
-+#if !defined(FREEBSD_USB)
-             ErrorF("Cannot open %s (%s)\n", *pdev, strerror(errno));
-+#else
+-            ErrorF("Cannot open %s (%s)\n", *pdev, strerror(errno));
 +            ErrorF("Cannot stat %s (%s)\n", *pdev, strerror(errno));
-+#endif /* !defined(FREEBSD_USB) */
  #endif
          } else {
              /*
-@@ -293,28 +505,70 @@ FindDevice(InputInfoPtr pInfo, const cha
+@@ -293,28 +398,32 @@ FindDevice(InputInfoPtr pInfo, const cha
               * the test for whether /dev/sysmouse is usable can be made.
               */
              if (!strcmp(*pdev, DEFAULT_MOUSE_DEV)) {
-+#if !defined(FREEBSD_USB)
-                 if (fstat(fd, &devMouseStat) == 0)
-                     devMouse = TRUE;
-                 close(fd);
-+#else
+-                if (fstat(fd, &devMouseStat) == 0)
+-                    devMouse = TRUE;
+-                close(fd);
 +                memcpy(&devMouseStat, &sb, sizeof(devMouseStat));
 +                devMouse = TRUE;
-+#endif /* !defined(FREEBSD_USB) */
                  continue;
              } else if (!strcmp(*pdev, DEFAULT_SYSMOUSE_DEV)) {
                  /* Check if /dev/mouse is the same as /dev/sysmouse. */
-+#if !defined(FREEBSD_USB)
-                 if (devMouse && fstat(fd, &sb) == 0 &&
-                     devMouseStat.st_dev == sb.st_dev &&
-                     devMouseStat.st_ino == sb.st_ino) {
-+#else
+-                if (devMouse && fstat(fd, &sb) == 0 &&
+-                    devMouseStat.st_dev == sb.st_dev &&
 +                if (devMouse && devMouseStat.st_dev == sb.st_dev &&
-+                    devMouseStat.st_ino == sb.st_ino) {
-+#endif /* !defined(FREEBSD_USB) */
+                     devMouseStat.st_ino == sb.st_ino) {
                      /* If the same, use /dev/sysmouse. */
                      devMouse = FALSE;
                  }
-+
-+#if !defined(FREEBSD_USB)
-                 close(fd);
-                 if (MousedRunning())
-+#else
+-                close(fd);
+-                if (MousedRunning())
 +                if (MousedRunning(NULL))
-+#endif /* !defined(FREEBSD_USB) */
-+
                      break;
-+
-+#if !defined(FREEBSD_USB)
-                 else {
- #ifdef DEBUG
-                     ErrorF("moused isn't running\n");
- #endif
-                 }
-+#endif /* !defined(FREEBSD_USB) */
-+
+-                else {
+-#ifdef DEBUG
+-                    ErrorF("moused isn't running\n");
+-#endif
+-                }
              } else {
-+
-+#if !defined(FREEBSD_USB)
-+
-                 close(fd);
-+
-+#else /* defined(FREEBSD_USB) */
-+
+-                close(fd);
 +                /* Check if /dev/mouse is the same as this device. */
 +                if (devMouse && devMouseStat.st_dev == sb.st_dev &&
 +                    devMouseStat.st_ino == sb.st_ino) {
@@ -406,37 +319,22 @@ Patches from FreeBSD ports svn commit: r431436
 +                    xf86NameCmp(protocol, "auto") != 0 &&
 +                    xf86NameCmp(protocol, "sysmouse") != 0)
 +                    continue;
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
                  break;
              }
          }
-@@ -486,8 +740,17 @@ wsconsPreInit(InputInfoPtr pInfo, const
+@@ -486,8 +595,39 @@ wsconsPreInit(InputInfoPtr pInfo, const
  
  #if defined(USBMOUSE_SUPPORT)
  
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#define MAXRIDS		64
 +#define MAXACOLS	8
 +#define MAXLCOLS	16
-+#endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
 +
  typedef struct _UsbMseRec {
      int packetSize;
-+
-+#if !defined(FREEBSD_USB)
-+
-     int iid;
-     hid_item_t loc_x;           /* x locator item */
-     hid_item_t loc_y;           /* y locator item */
-@@ -495,22 +758,92 @@ typedef struct _UsbMseRec {
-     hid_item_t loc_w;           /* z (wheel) locator item */
-     hid_item_t loc_btn[MSE_MAXBUTTONS]; /* buttons locator items */
-    unsigned char *buffer;
-+
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    int iid, nrids, nacols, opened;
 +    struct {
 +	int32_t rid;
@@ -460,12 +358,18 @@ Patches from FreeBSD ports svn commit: r431436
 +	hid_item_t loc_cc;		/* contact count */
 +    } acols[MAXACOLS];
 +    unsigned char *buffer;
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
++#else
+     int iid;
+     hid_item_t loc_x;           /* x locator item */
+     hid_item_t loc_y;           /* y locator item */
+@@ -495,21 +635,61 @@ typedef struct _UsbMseRec {
+     hid_item_t loc_w;           /* z (wheel) locator item */
+     hid_item_t loc_btn[MSE_MAXBUTTONS]; /* buttons locator items */
+    unsigned char *buffer;
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  } UsbMseRec, *UsbMsePtr;
  
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +static int *
 +usbGetReportSizePtr(UsbMsePtr pUsbMse, int32_t rid)
 +{
@@ -484,7 +388,7 @@ Patches from FreeBSD ports svn commit: r431436
 +    }
 +    return (NULL);
 +}
-+#endif /* defined(FREEBSD_USB) */
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
 +
  static int
  usbMouseProc(DeviceIntPtr pPointer, int what)
@@ -492,50 +396,39 @@ Patches from FreeBSD ports svn commit: r431436
      InputInfoPtr pInfo;
      MouseDevPtr pMse;
      UsbMsePtr pUsbMse;
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    struct UsbMseAcol *acol;
-+#endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
      unsigned char map[MSE_MAXBUTTONS + 1];
-+
-+#if !defined(FREEBSD_USB)
-     int nbuttons;
-+#else /* defined (FREEBSD_USB) */
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    int nacol, nbuttons;
 +#ifdef HAVE_LABELS
 +    Atom btn_labels[MSE_MAXBUTTONS] = {0};
 +    Atom axes_labels[3] = { 0, 0, 0 };
 +#endif
-+#endif /* !defined(FREEBSD_USB) */
++#else
+     int nbuttons;
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  
      pInfo = pPointer->public.devicePrivate;
      pMse = pInfo->private;
      pMse->device = pPointer;
      pUsbMse = pMse->mousePriv;
- 
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    for (nacol = 0; nacol < (pUsbMse->nacols - 1); nacol++) {
 +	if (pUsbMse->acols[nacol].pInfo == pInfo)
 +	    break;
 +    }
 +    acol = &pUsbMse->acols[nacol];
-+#endif
-+
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+ 
      switch (what) {
      case DEVICE_INIT:
-         pPointer->public.on = FALSE;
-@@ -518,23 +851,114 @@ usbMouseProc(DeviceIntPtr pPointer, int
+@@ -518,23 +698,120 @@ usbMouseProc(DeviceIntPtr pPointer, int
          for (nbuttons = 0; nbuttons < MSE_MAXBUTTONS; ++nbuttons)
              map[nbuttons + 1] = nbuttons + 1;
  
-+#if !defined(FREEBSD_USB)
-         InitPointerDeviceStruct((DevicePtr)pPointer,
-                                 map,
-                                 min(pMse->buttons, MSE_MAXBUTTONS),
-                                 miPointerGetMotionEvents,
-                                 pMse->Ctrl,
-                                 miPointerGetMotionBufferSize());
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +#ifdef HAVE_LABELS
 +	btn_labels[0] = XIGetKnownProperty(BTN_LABEL_PROP_BTN_LEFT);
 +	btn_labels[1] = XIGetKnownProperty(BTN_LABEL_PROP_BTN_MIDDLE);
@@ -565,17 +458,17 @@ Patches from FreeBSD ports svn commit: r431436
 +	    (acol->xmin != acol->xmax || acol->ymin != acol->ymax) ?
 +	     Absolute : Relative);
 +	InitPtrFeedbackClassDeviceStruct(pPointer, pMse->Ctrl);
-+
-+#endif /* !defined(FREEBSD_USB) */
++#else
+         InitPointerDeviceStruct((DevicePtr)pPointer,
+                                 map,
+                                 min(pMse->buttons, MSE_MAXBUTTONS),
+                                 miPointerGetMotionEvents,
+                                 pMse->Ctrl,
+                                 miPointerGetMotionBufferSize());
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  
          /* X valuator */
-+#if !defined(FREEBSD_USB)
-+
-         xf86InitValuatorAxisStruct(pPointer, 0, 0, -1, 1, 0, 1);
-         xf86InitValuatorDefaults(pPointer, 0);
-+
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +	xf86InitValuatorAxisStruct(pPointer, 0,
 +#ifdef HAVE_LABELS
 +	    axes_labels[0],
@@ -587,19 +480,12 @@ Patches from FreeBSD ports svn commit: r431436
 +	    , (acol->xmin != acol->xmax) ? Absolute : Relative
 +#endif
 +	    );
-+        xf86InitValuatorDefaults(pPointer, 0);
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
++#else
+         xf86InitValuatorAxisStruct(pPointer, 0, 0, -1, 1, 0, 1);
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+         xf86InitValuatorDefaults(pPointer, 0);
          /* Y valuator */
-+
-+#if !defined(FREEBSD_USB)
-+
-         xf86InitValuatorAxisStruct(pPointer, 1, 0, -1, 1, 0, 1);
-         xf86InitValuatorDefaults(pPointer, 1);
-+
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +	xf86InitValuatorAxisStruct(pPointer, 1,
 +#ifdef HAVE_LABELS
 +	    axes_labels[1],
@@ -611,7 +497,11 @@ Patches from FreeBSD ports svn commit: r431436
 +	    , (acol->ymin != acol->ymax) ? Absolute : Relative
 +#endif
 +	    );
-+        xf86InitValuatorDefaults(pPointer, 1);
++#else
+         xf86InitValuatorAxisStruct(pPointer, 1, 0, -1, 1, 0, 1);
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+         xf86InitValuatorDefaults(pPointer, 1);
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +	/* Pressure valuator */
 +	if (acol->pmin != acol->pmax) {
 +	    xf86InitValuatorAxisStruct(pPointer, 2,
@@ -625,30 +515,12 @@ Patches from FreeBSD ports svn commit: r431436
 +		);
 +	    xf86InitValuatorDefaults(pPointer, 2);
 +	}
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
          xf86MotionHistoryAllocate(pInfo);
          break;
  
      case DEVICE_ON:
-+
-+#if !defined(FREEBSD_USB)
-+
-         pInfo->fd = xf86OpenSerial(pInfo->options);
-         if (pInfo->fd == -1)
-             xf86Msg(X_WARNING, "%s: cannot open input device\n", pInfo->name);
-@@ -548,9 +972,33 @@ usbMouseProc(DeviceIntPtr pPointer, int
-                 xf86FlushInput(pInfo->fd);
-                 if (!xf86InstallSIGIOHandler (pInfo->fd, usbSigioReadInput,
-                                               pInfo))
--                    AddEnabledDevice(pInfo->fd);
-+                    xf86AddEnabledDevice(pInfo);
-             }
-         }
-+
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +	if (pUsbMse->opened++ == 0) {
 +		pInfo->fd = xf86OpenSerial(pInfo->options);
 +		if (pInfo->fd == -1)
@@ -661,76 +533,77 @@ Patches from FreeBSD ports svn commit: r431436
 +			pInfo->fd = -1;
 +		    } else {
 +			xf86FlushInput(pInfo->fd);
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 23
 +			if (!xf86InstallSIGIOHandler (pInfo->fd, usbSigioReadInput, 
 +						      pInfo))
-+			    xf86AddEnabledDevice(pInfo);
++#endif
++                            xf86AddEnabledDevice(pInfo);
 +		    }
 +		}
-+        }
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
++         }
++#else
+         pInfo->fd = xf86OpenSerial(pInfo->options);
+         if (pInfo->fd == -1)
+             xf86Msg(X_WARNING, "%s: cannot open input device\n", pInfo->name);
+@@ -553,6 +830,7 @@ usbMouseProc(DeviceIntPtr pPointer, int
+                     AddEnabledDevice(pInfo->fd);
+             }
+         }
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
          pMse->lastButtons = 0;
          pMse->lastMappedButtons = 0;
          pMse->emulateState = 0;
-@@ -560,7 +1008,7 @@ usbMouseProc(DeviceIntPtr pPointer, int
+@@ -562,7 +840,11 @@ usbMouseProc(DeviceIntPtr pPointer, int
      case DEVICE_OFF:
      case DEVICE_CLOSE:
          if (pInfo->fd != -1) {
--            RemoveEnabledDevice(pInfo->fd);
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +            xf86RemoveEnabledDevice(pInfo);
++#else
+             RemoveEnabledDevice(pInfo->fd);
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
              if (pUsbMse->packetSize > 8 && pUsbMse->buffer) {
                  free(pUsbMse->buffer);
              }
-@@ -571,6 +1019,9 @@ usbMouseProc(DeviceIntPtr pPointer, int
+@@ -573,6 +855,9 @@ usbMouseProc(DeviceIntPtr pPointer, int
              xf86CloseSerial(pInfo->fd);
              pInfo->fd = -1;
          }
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +        pUsbMse->opened--;
-+#endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
          pPointer->public.on = FALSE;
          usleep(300000);
          break;
-@@ -586,27 +1037,86 @@ usbReadInput(InputInfoPtr pInfo)
+@@ -588,27 +873,73 @@ usbReadInput(InputInfoPtr pInfo)
  {
      MouseDevPtr pMse;
      UsbMsePtr pUsbMse;
-+
-+#if !defined(FREEBSD_USB)
-     int buttons = pMse->lastButtons;
-     int dx = 0, dy = 0, dz = 0, dw = 0;
-     int n, c;
-+#else
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    int buttons, cc;
 +    int dx, dy, dz, dw, dp, upd, v, nx, ny, np, in_range;
 +    int n, c, rid, *sizep, nacol, nlcol;
-+#endif /* !defined(FREEBSD_USB) */
-+
++#else
+     int buttons = pMse->lastButtons;
+     int dx = 0, dy = 0, dz = 0, dw = 0;
+     int n, c;
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
      unsigned char *pBuf;
- 
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    struct UsbMseAcol *acol;
 +    struct UsbMseLcol *lcol;
-+#endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+ 
      pMse = pInfo->private;
      pUsbMse = pMse->mousePriv;
  
      XisbBlockDuration(pMse->buffer, -1);
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +next:
-+#endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
      pBuf = pUsbMse->buffer;
      n = 0;
-+
-+#if !defined(FREEBSD_USB)
-+
-     while ((c = XisbRead(pMse->buffer)) >= 0 && n < pUsbMse->packetSize) {
-         pBuf[n++] = (unsigned char)c;
-+
-+    }
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    if (pUsbMse->iid) {
 +	rid = XisbRead(pMse->buffer);
 +	if (rid < 0)
@@ -742,50 +615,27 @@ Patches from FreeBSD ports svn commit: r431436
 +    if (sizep == NULL || *sizep == 0) {
 +	xf86Msg(X_WARNING, "%s: unknown report ID %d\n", pInfo->name, rid);
 +	goto next;
-     }
-+    while (n < *sizep && (c = XisbRead(pMse->buffer)) >= 0) {
-+        pBuf[n++] = (unsigned char)c;
 +    }
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
++    while (n < *sizep && (c = XisbRead(pMse->buffer)) >= 0) {
++#else
+     while ((c = XisbRead(pMse->buffer)) >= 0 && n < pUsbMse->packetSize) {
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+         pBuf[n++] = (unsigned char)c;
+     }
      if (n == 0)
          return;
-+
-+#if !defined(FREEBSD_USB)
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
++//    xf86MsgVerb(X_INFO, 3, "pkt: %d %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n",
++//	n, pBuf[0], pBuf[1], pBuf[2], pBuf[3], pBuf[4], pBuf[5], pBuf[6], pBuf[7], pBuf[8], pBuf[9]);
++    if (n != *sizep) {
++#else
      if (n != pUsbMse->packetSize) {
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
          LogMessageVerbSigSafe(X_WARNING, -1,
                                "%s: incomplete packet, size %d\n",
                                pInfo->name, n);
      }
-+
-+#else /* defined(FREEBSD_USB) */
-+
-+    if (n == 0)
-+        return;
-+//    xf86MsgVerb(X_INFO, 3, "pkt: %d %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n",
-+//	n, pBuf[0], pBuf[1], pBuf[2], pBuf[3], pBuf[4], pBuf[5], pBuf[6], pBuf[7], pBuf[8], pBuf[9]);
-+    if (n != *sizep) {
-+        LogMessageVerbSigSafe(X_WARNING, -1,
-+                              "%s: incomplete packet, size %d\n",
-+                              pInfo->name, n);
-+    }
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
-+#if !defined(FREEBSD_USB)
-+
-     /* discard packets with an id that don't match the mouse */
-     /* XXX this is probably not the right thing */
-     if (pUsbMse->iid != 0) {
-@@ -625,6 +1135,122 @@ usbReadInput(InputInfoPtr pInfo)
-     }
-     pMse->PostEvent(pInfo, buttons, dx, dy, dz, dw);
-     return;
-+
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    for (nacol = 0; nacol < pUsbMse->nacols; nacol++) {
 +	acol = &pUsbMse->acols[nacol];
 +	if (acol->pInfo == NULL)
@@ -795,7 +645,17 @@ Patches from FreeBSD ports svn commit: r431436
 +	dx = dy = dz = dw = dp = 0;
 +	for (nlcol = 0; nlcol < pUsbMse->acols[nacol].nlcols; nlcol++) {
 +	    lcol = &acol->lcols[nlcol];
-+
++#else
+     /* discard packets with an id that don't match the mouse */
+     /* XXX this is probably not the right thing */
+     if (pUsbMse->iid != 0) {
+@@ -619,30 +950,152 @@ usbReadInput(InputInfoPtr pInfo)
+     dy = hid_get_data(pBuf, &pUsbMse->loc_y);
+     dz = hid_get_data(pBuf, &pUsbMse->loc_z);
+     dw = hid_get_data(pBuf, &pUsbMse->loc_w);
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+ 
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +	    if (lcol->loc_valid.usage != 0 && rid == lcol->loc_valid.report_ID &&
 +		    hid_get_data(pBuf, &lcol->loc_valid) == 0)
 +		continue;
@@ -894,77 +754,76 @@ Patches from FreeBSD ports svn commit: r431436
 +	    acol->px = dx;
 +	if (ny > 0)
 +	    acol->py = dy;
-+    }
++#else
+     buttons = 0;
+     for (n = 0; n < pMse->buttons; n++) {
+         if (hid_get_data(pBuf, &pUsbMse->loc_btn[n]))
+             buttons |= (1 << UMS_BUT(n));
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+     }
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    goto next;
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
++#else
+     pMse->PostEvent(pInfo, buttons, dx, dy, dz, dw);
+     return;
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  }
  
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 23
  static void
-@@ -633,15 +1259,27 @@ usbSigioReadInput (int fd, void *closure
+ usbSigioReadInput (int fd, void *closure)
+ {
      usbReadInput ((InputInfoPtr) closure);
  }
++#endif
  
-+#if !defined(FREEBSD_USB)
++#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__)
  /* This function is called when the protocol is "usb". */
++#endif /* !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__) */
  static Bool
- usbPreInit(InputInfoPtr pInfo, const char *protocol, int flags)
-+#else
-+static Bool
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +usbInitFirst(InputInfoPtr pInfo)
-+#endif /* !defined(FREEBSD_USB) */
++#else
+ usbPreInit(InputInfoPtr pInfo, const char *protocol, int flags)
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  {
      MouseDevPtr pMse = pInfo->private;
      UsbMsePtr pUsbMse;
      report_desc_t reportDesc;
-+#if !defined(FREEBSD_USB)
-     int i;
--
-+#else
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    hid_data_t d;
 +    hid_item_t h;
 +    struct UsbMseAcol *acol;
 +    struct UsbMseLcol *lcol;
 +    int mdepth, rsize, *rsizep, acolused, lcolused, used;
-+#endif /* !defined(FREEBSD_USB) */
++#else
+     int i;
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+ 
      pUsbMse = malloc(sizeof(UsbMseRec));
      if (pUsbMse == NULL) {
-         xf86Msg(X_ERROR, "%s: cannot allocate UsbMouseRec\n", pInfo->name);
-@@ -649,12 +1287,16 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -651,12 +1104,16 @@ usbPreInit(InputInfoPtr pInfo, const cha
          return FALSE;
      }
  
-+#if !defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
++    bzero(pUsbMse, sizeof(UsbMseRec));
++#else
      pMse->protocol = protocol;
      xf86Msg(X_CONFIG, "%s: Protocol: %s\n", pInfo->name, protocol);
  
      /* Collect the options, and process the common options. */
      COLLECT_INPUT_OPTIONS(pInfo, NULL);
      xf86ProcessCommonOptions(pInfo, pInfo->options);
-+#else
-+    bzero(pUsbMse, sizeof(UsbMseRec));
-+#endif /* !defined(FREEBSD_USB) */
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
  
      /* Check if the device can be opened. */
      pInfo->fd = xf86OpenSerial(pInfo->options);
-@@ -670,6 +1312,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -672,6 +1129,128 @@ usbPreInit(InputInfoPtr pInfo, const cha
      }
      /* Get USB informations */
      reportDesc = hid_get_report_desc(pInfo->fd);
-+
-+#if !defined(FREEBSD_USB)
-+
-     /* Get packet size & iid */
- #ifdef USB_NEW_HID
-     if (ioctl(pInfo->fd, USB_GET_REPORT_ID, &pUsbMse->iid) == -1) {
-@@ -683,6 +1328,139 @@ usbPreInit(InputInfoPtr pInfo, const cha
-     pUsbMse->packetSize = hid_report_size(reportDesc, hid_input,
-                                               &pUsbMse->iid);
- #endif
-+
-+#else /* defined(FREEBSD_USB) */
-+
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    mdepth = 0;
 +    pUsbMse->nacols = 0;
 +    acol = &pUsbMse->acols[pUsbMse->nacols];
@@ -1084,7 +943,18 @@ Patches from FreeBSD ports svn commit: r431436
 +	default:
 +	    break;
 +	}
-+    }
++     }
++#else
+     /* Get packet size & iid */
+ #ifdef USB_NEW_HID
+     if (ioctl(pInfo->fd, USB_GET_REPORT_ID, &pUsbMse->iid) == -1) {
+@@ -685,6 +1264,18 @@ usbPreInit(InputInfoPtr pInfo, const cha
+     pUsbMse->packetSize = hid_report_size(reportDesc, hid_input,
+                                               &pUsbMse->iid);
+ #endif
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
++
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    if (lcolused)
 +	acol->nlcols++;
 +    if (acolused)
@@ -1092,55 +962,39 @@ Patches from FreeBSD ports svn commit: r431436
 +    hid_end_parse(d);
 +    xf86Msg(X_DEFAULT, "%s: Found %d usable logical collections\n",
 +	pInfo->name, pUsbMse->nacols);
-+
-+#endif /* !defined(FREEBSD_USB) */
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
 +
      /* Allocate buffer */
      if (pUsbMse->packetSize <= 8) {
          pUsbMse->buffer = pMse->protoBuf;
-@@ -692,10 +1470,15 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -694,10 +1285,13 @@ usbPreInit(InputInfoPtr pInfo, const cha
      if (pUsbMse->buffer == NULL) {
          xf86Msg(X_ERROR, "%s: cannot allocate buffer\n", pInfo->name);
          free(pUsbMse);
-+#if !defined(FREEBSD_USB)
++#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__)
          free(pMse);
-+#endif
++#endif /* !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__) */
          xf86CloseSerial(pInfo->fd);
          return FALSE;
      }
-+
-+#if !defined(FREEBSD_USB)
-+
++#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__)
  #ifdef USB_NEW_HID
      if (hid_locate(reportDesc, HID_USAGE2(HUP_GENERIC_DESKTOP, HUG_X),
                     hid_input, &pUsbMse->loc_x, pUsbMse->iid) < 0) {
-@@ -733,12 +1516,15 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -734,16 +1328,131 @@ usbPreInit(InputInfoPtr pInfo, const cha
+             break;
      }
      pMse->buttons = i-1;
++#endif /* !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__DragonFly__) */
  
-+#endif /* !defined(FREEBSD_USB) */
-+
      xf86CloseSerial(pInfo->fd);
      pInfo->fd = -1;
  
      /* Private structure */
      pMse->mousePriv = pUsbMse;
- 
-+#if !defined(FREEBSD_USB)
-     /* Process common mouse options (like Emulate3Buttons, etc). */
-     pMse->CommonOptions(pInfo);
- 
-@@ -749,8 +1535,137 @@ usbPreInit(InputInfoPtr pInfo, const cha
- #if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 12
-     pInfo->flags |= XI86_CONFIGURED;
- #endif
-+
-+#endif /* !defined(FREEBSD_USB) */
-+
-     return TRUE;
- }
-+
-+#if defined(FREEBSD_USB)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
++    return TRUE;
++}
 +
 +/* This function is called when the protocol is "usb". */
 +static Bool
@@ -1217,10 +1071,12 @@ Patches from FreeBSD ports svn commit: r431436
 +	pMse->disableXY = TRUE;
 +    pMse->hasZ = acol->hasZ;
 +    pMse->hasW = acol->hasW;
-+
-+    /* Process common mouse options (like Emulate3Buttons, etc). */
-+    pMse->CommonOptions(pInfo);
-+
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
+ 
+     /* Process common mouse options (like Emulate3Buttons, etc). */
+     pMse->CommonOptions(pInfo);
+ 
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
 +    /* Process "Calibration" option. */
 +    str = xf86CheckStrOption(pInfo->options, "Calibration", NULL);
 +    if (str != NULL && (acol->xmin != acol->xmax || acol->ymin != acol->ymax)) {
@@ -1252,35 +1108,18 @@ Patches from FreeBSD ports svn commit: r431436
 +	    pInfo->name, acol->xmin, acol->xmax, acol->ymin, acol->ymax,
 +	    acol->pmin, acol->pmax);
 +    }
++#endif /* defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) */
 +
-+    /* Setup the local procs. */
-+    pInfo->device_control = usbMouseProc;
-+    pInfo->read_input = usbReadInput;
-+
-+#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 12
-+    pInfo->flags |= XI86_CONFIGURED;
-+#endif
-+    return TRUE;
-+}
-+
-+#endif /* defined(FREEBSD_USB) */
-+
- #endif /* USBMOUSE */
- 
- static Bool
-@@ -784,7 +1699,15 @@ OSMouseInit(int flags)
+     /* Setup the local procs. */
+     pInfo->device_control = usbMouseProc;
+     pInfo->read_input = usbReadInput;
+@@ -786,7 +1495,9 @@ OSMouseInit(int flags)
      p->CheckProtocol = CheckProtocol;
  #if (defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)) && defined(MOUSE_PROTO_SYSMOUSE)
      p->SetupAuto = SetupAuto;
-+
-+#if !defined(FREEBSD_USB)
-+    p->SetPS2Res = SetSysMouseRes;
-+#else
 +#ifndef XPS2_SUPPORT
      p->SetPS2Res = SetSysMouseRes;
 +#endif
-+#endif
-+
      p->SetBMRes = SetSysMouseRes;
      p->SetMiscRes = SetSysMouseRes;
  #endif
