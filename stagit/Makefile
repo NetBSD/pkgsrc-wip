@@ -1,13 +1,21 @@
 # $NetBSD$
 
-DISTNAME=	stagit-0.8
+DISTNAME=	stagit-0.9.1
 CATEGORIES=	www
-MASTER_SITES=	https://dl.2f30.org/releases/
+MASTER_SITES=	https://codemadness.org/releases/stagit/
 
 MAINTAINER=	fred@statdns.com
-HOMEPAGE=	https://git.2f30.org/stagit/
+HOMEPAGE=	https://codemadness.org/git/stagit/file/README.html
 COMMENT=	Static git page generator
 LICENSE=	mit
+
+# Adjust config.mk
+SUBST_CLASSES+=         makefile
+SUBST_STAGE.makefile=   pre-configure
+SUBST_MESSAGE.makefile= Fixing config.mk
+SUBST_FILES.makefile=   config.mk
+SUBST_SED.makefile+=    -e 's,^CFLAGS *= ,CFLAGS += ,'
+SUBST_SED.makefile+=    -e 's,^LDFLAGS *= ,LDFLAGS += ,'
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	GITINC=${PREFIX}/include
