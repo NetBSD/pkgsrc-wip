@@ -1,18 +1,24 @@
-$NetBSD$
+$NetBSD: patch-libsync.h,v 1.3 2019/01/22 21:50:47 wiz Exp $
 
-From FreeBSD ports x11/libdrm 2.4.84
+Fix public header on SunOS.
+If ETIME is not defined, use ETIMEDOUT.
 
-# define ETIME as ETIMEOUT same as done in Mesa
-
---- libsync.h.orig	2017-11-03 16:44:27.000000000 +0000
+--- libsync.h.orig	2019-01-22 16:32:41.000000000 +0000
 +++ libsync.h
-@@ -35,6 +35,9 @@
+@@ -33,9 +33,16 @@
+ #include <stdint.h>
+ #include <string.h>
  #include <sys/ioctl.h>
++#ifdef __sun
++#include <sys/filio.h>
++#endif
  #include <sys/poll.h>
  #include <unistd.h>
+ 
 +#ifndef ETIME
 +#define ETIME ETIMEDOUT
 +#endif
- 
++
  #if defined(__cplusplus)
  extern "C" {
+ #endif

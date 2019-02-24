@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2018/03/07 12:12:35 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2019/01/22 21:50:47 wiz Exp $
 
-DISTNAME=		libdrm-2.4.91
+DISTNAME=		libdrm-2.4.97
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -16,14 +16,13 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
-PKGCONFIG_OVERRIDE+=	libkms.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		atomic
 SUBST_FILES.atomic=	xf86drm.h
-SUBST_MESSAGE.atomic=	Configuring xf86drm.h atomic operations.
+SUBST_MESSAGE.atomic=	Configuring xf86drm.h s atomic operations.
 SUBST_STAGE.atomic=	pre-configure
 SUBST_VARS.atomic=	ATOMIC_OPS_CHECK
 
@@ -38,8 +37,12 @@ CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
 .endif
 .endif
 
+CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
+			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
 CONFIGURE_ARGS+=	--disable-valgrind
+
+LDFLAGS.NetBSD+=	-lpci
 
 PLIST_VARS+=	intel arm
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
@@ -56,29 +59,22 @@ PLIST.arm=	yes
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libdrm
-PKG_SUPPORTED_OPTIONS=	pthreadstubs libkms
-PKG_SUGGESTED_OPTIONS+=	pthreadstubs
+PKG_SUPPORTED_OPTIONS=	libkms
+PKG_SUGGESTED_OPTIONS=
 
-.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
-PKG_SUGGESTED_OPTIONS+=	libkms
-.endif
-
-# avoid circular dependency in case cairo supports OpenGL (cairo->mesa-libs->libdrm->cairo)
-CONFIGURE_ARGS+=	--disable-cairo-tests
+# .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
+# PKG_SUGGESTED_OPTIONS+=	libkms
+# .endif
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mpthreadstubs)
-CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
-			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
-.endif
-
-PLIST_VARS+=		libkms	
+PLIST_VARS+=	libkms	
 .if !empty(PKG_OPTIONS:Mlibkms)
-PLIST.libkms=		yes
+PKGCONFIG_OVERRIDE+=	libkms.pc.in
+PLIST.libkms=	yes
 CONFIGURE_ARGS+=	--enable-libkms
 .else
-CONFIGURE_ARGS+=	--disable-libkms
+#CONFIGURE_ARGS+=	--disable-libkms
 .endif
 
 .include "../../mk/bsd.pkg.mk"

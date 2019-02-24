@@ -1,19 +1,14 @@
-$NetBSD: patch-xf86drmMode.c,v 1.2 2015/04/11 10:02:11 sevan Exp $
+$NetBSD: patch-xf86drmMode.c,v 1.5 2019/01/19 13:21:29 tnn Exp $
+ 
+FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
 
-Replace patch disabling checking for hw.dri.%d.modesetting on FreeBSD.
-This sysctl is only available if a KMS module is loaded.
-xf86-video-intel if checking for modesetting fails the first time
-tries to load the kernel module and then check again for modesetting.
-
-Use patch from FreeBSD ports / DragonFly dports graphics/libdrm 2.4.84.
-
-Get rid of drmModeSetPlane patch (from NetBSD?)
+FreeBSD ports / DragonFly dports does not have patch for drmModeSetPlane.
 Android deliberately uses signed crtc_x and crtc_y
 "to allow a destination location that is partially off screen."
 
---- xf86drmMode.c.orig	2017-11-03 16:44:27.000000000 +0000
+--- xf86drmMode.c.orig	2018-10-16 14:49:03.000000000 +0000
 +++ xf86drmMode.c
-@@ -47,6 +47,9 @@
+@@ -43,6 +43,9 @@
  #include <stdlib.h>
  #include <sys/ioctl.h>
  #ifdef HAVE_SYS_SYSCTL_H
@@ -23,7 +18,7 @@ Android deliberately uses signed crtc_x and crtc_y
  #include <sys/sysctl.h>
  #endif
  #include <stdio.h>
-@@ -796,43 +799,75 @@ int drmCheckModesettingSupported(const c
+@@ -799,42 +802,60 @@ drm_public int drmCheckModesettingSuppor
  	closedir(sysdir);
  	if (found)
  		return 0;
@@ -33,15 +28,8 @@ Android deliberately uses signed crtc_x and crtc_y
 -	int domain, bus, dev, func;
 -	int i, modesetting, ret;
 -	size_t len;
--
--	ret = sscanf(busid, "pci:%04x:%02x:%02x.%d", &domain, &bus, &dev,
--	    &func);
--	if (ret != 4)
--		return -EINVAL;
--	snprintf(kbusid, sizeof(kbusid), "pci:%04x:%02x:%02x.%d", domain, bus,
--	    dev, func);
-+#elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__) || defined(__DragonFly__)
-+	#define bus_fmt "pci:%04x:%02x:%02x.%d"
++#elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__) || defined (__DragonFly__)
++	#define bus_fmt "pci:%04x:%02x:%02x.%u"
 +	#define name_fmt "%*s %*s " bus_fmt
 +	unsigned int d1 = 0, b1 = 0, s1 = 0, f1 = 0;
 +	if (sscanf(busid, bus_fmt, &d1, &b1, &s1, &f1) != 4)
@@ -53,9 +41,24 @@ Android deliberately uses signed crtc_x and crtc_y
 +	for (int i = 0; i < DRM_MAX_MINOR; ++i) {
 +		char name[22], value[256];
 +		size_t length = sizeof(value);
-+		snprintf(name, sizeof(name), "hw.dri.%d.name", i);
++		snprintf(name, sizeof(name), "hw.dri.%i.name", i);
 +		if (sysctlbyname(name, value, &length, NULL, 0))
 +			continue;
+ 
+-	ret = sscanf(busid, "pci:%04x:%02x:%02x.%d", &domain, &bus, &dev,
+-	    &func);
+-	if (ret != 4)
+-		return -EINVAL;
+-	snprintf(kbusid, sizeof(kbusid), "pci:%04x:%02x:%02x.%d", domain, bus,
+-	    dev, func);
++		value[length] = '\0';
++		unsigned int d2 = 0, b2 = 0, s2 = 0, f2 = 0;
++		switch (sscanf(value, name_fmt, &d2, &b2, &s2, &f2)) {
++		case 0: /* busid not in the name, try busid */
++			length = sizeof(value);
++			snprintf(name, sizeof(name), "hw.dri.%i.busid", i);
++			if (sysctlbyname(name, value, &length, NULL, 0))
++				continue;
  
 -	/* How many GPUs do we expect in the machine ? */
 -	for (i = 0; i < 16; i++) {
@@ -64,23 +67,14 @@ Android deliberately uses signed crtc_x and crtc_y
 -		ret = sysctlbyname(oid, sbusid, &len, NULL, 0);
 -		if (ret == -1) {
 -			if (errno == ENOENT)
-+		value[length] = '\0';
-+		unsigned int d2 = 0, b2 = 0, s2 = 0, f2 = 0;
-+		switch (sscanf(value, name_fmt, &d2, &b2, &s2, &f2)) {
-+		case 0: /* busid not in the name, try busid */
-+			length = sizeof(value);
-+			snprintf(name, sizeof(name), "hw.dri.%d.busid", i);
-+			if (sysctlbyname(name, value, &length, NULL, 0))
- 				continue;
--			return -EINVAL;
-+
 +			value[length] = '\0';
 +			if (sscanf(value, bus_fmt, &d2, &b2, &s2, &f2) != 4)
-+ 				continue;
+ 				continue;
+-			return -EINVAL;
 +			/* fall through after parsing busid */
 +
 +		case 4: /* if we jumped here then busid was in the name */ 
-+			if ((d1 == d2) && (b1 == b2) && (s1 == s2) && (f1 == f2)) {
++			if (d1 == d2 && b1 == b2 && s1 == s2 && f1 == f2) {
 +			/*
 +			 * Confirm the drm driver for this device supports KMS,
 +			 * except on DragonFly where all the drm drivers do so
@@ -110,24 +104,21 @@ Android deliberately uses signed crtc_x and crtc_y
 -		return (modesetting ? 0 : -ENOSYS);
  	}
 -#elif defined(__DragonFly__)
-+#elif 0 && defined(__DragonFly__)
- 	return 0;
--#endif
--#ifdef __OpenBSD__
-+#elif defined(__NetBSD__)
-+	int fd;
-+	static const struct drm_mode_card_res zero_res;
-+	struct drm_mode_card_res res = zero_res;
-+	int ret;
-+ 
-+	fd = drmOpen(NULL, busid);
-+	if (fd == -1)
-+		return -EINVAL;
-+	ret = drmIoctl(fd, DRM_IOCTL_MODE_GETRESOURCES, &res);
-+	drmClose(fd);
-+	if (ret == 0)
-+		return 0;
-+#elif defined(__OpenBSD__)
+-	return 0;
+-#elif defined(__OpenBSD__)
++#elif defined(__OpenBSD__) || defined(__NetBSD__)
  	int	fd;
  	struct drm_mode_card_res res;
  	drmModeResPtr r = 0;
+@@ -987,7 +1008,11 @@ drm_public int drmModePageFlipTarget(int
+ 
+ drm_public int drmModeSetPlane(int fd, uint32_t plane_id, uint32_t crtc_id,
+ 		    uint32_t fb_id, uint32_t flags,
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
++		    uint32_t crtc_x, uint32_t crtc_y,
++#else
+ 		    int32_t crtc_x, int32_t crtc_y,
++#endif
+ 		    uint32_t crtc_w, uint32_t crtc_h,
+ 		    uint32_t src_x, uint32_t src_y,
+ 		    uint32_t src_w, uint32_t src_h)
