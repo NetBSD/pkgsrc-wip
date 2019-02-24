@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	v0.1.0
+DIST_SUBDIR=	${PKGNAME_NOREV}
 PKGNAME=        guile-sqlite3-${DISTNAME:S/v//}
 CATEGORIES=	databases
 MASTER_SITES=	https://notabug.org/guile-sqlite3/guile-sqlite3/archive/
