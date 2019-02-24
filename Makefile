@@ -20,6 +20,7 @@ SUBDIR+=	Geomyidae-git
 SUBDIR+=	GoogleEarth
 SUBDIR+=	I2util
 SUBDIR+=	LuaJIT21
+SUBDIR+=	MesaLib-dfbsd
 SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenGLUT
 SUBDIR+=	OpenIPMI
