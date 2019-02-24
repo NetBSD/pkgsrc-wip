@@ -1,3 +1,0 @@
-@comment $NetBSD$
-@comment lib/libpthread-stubs.la
-lib/pkgconfig/pthread-stubs.pc
