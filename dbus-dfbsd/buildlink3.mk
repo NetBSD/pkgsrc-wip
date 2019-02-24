@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2014/01/29 13:01:53 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/01/07 13:04:31 rillig Exp $
 
 BUILDLINK_TREE+=	dbus
 

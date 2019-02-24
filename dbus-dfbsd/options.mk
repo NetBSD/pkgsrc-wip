@@ -1,11 +1,16 @@
-# $NetBSD: options.mk,v 1.11 2017/03/14 15:34:56 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2018/08/16 08:57:09 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
-PKG_SUPPORTED_OPTIONS+=	debug x11 enable-in-rcvar nonroot
+PKG_SUPPORTED_OPTIONS+=	debug x11
 PKG_SUGGESTED_OPTIONS=	x11
+
+PKG_SUPPORTED_OPTIONS+=	enable-in-rcvar
+PKG_SUPPORTED_OPTIONS+=	nonroot
+PKG_SUPPORTED_OPTIONS+=	strict-dfbsd
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	enable-in-rcvar	
+PKG_SUGGESTED_OPTIONS+=	strict-dfbsd
 .endif
 
 .if (${OPSYS} == "NetBSD"  ||	\
@@ -17,6 +22,7 @@ PKG_SUPPORTED_OPTIONS+=	kqueue
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
 
+PLIST_VARS+=    	launchd
 # We may want to make it SUGGESTED once we have a framework for
 # launchd support. See PR/49591.
 PKG_SUPPORTED_OPTIONS.Darwin+=	launchd
@@ -32,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-verbose-mode
 .endif
 
 .if !empty(PKG_OPTIONS:Mkqueue)
-CONFIGURE_ARGS+=	--enable-kqueue
+CONFIGURE_ARGS+= 	--enable-kqueue
 .else
 CONFIGURE_ARGS+=	--disable-kqueue
 .endif
@@ -74,3 +80,17 @@ FILES_SUBST+=		DBUS_VAR_RUN_GROUP_SH=${REAL_ROOT_GROUP}
 .endif
 
 FILES_SUBST+=		DBUS_RCVAR=${DBUS_RCVAR}
+
+.if !empty(PKG_OPTIONS:Mstrict-dfbsd)
+.else
+BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
+# Package tries to use these if gcc accepts them, but that doesn't
+# mean that we universally can *run* the executables
+BUILDLINK_TRANSFORM+=	rm:-fPIE
+BUILDLINK_TRANSFORM+=	rm:-pie
+
+# From OpenBSD ports
+# gives no chance of picking up devel/libexecinfo
+CONFIGURE_ENV +=	ac_cv_header_execinfo_h=no
+CONFIGURE_ENV +=	ac_cv_func_backtrace=no
+.endif

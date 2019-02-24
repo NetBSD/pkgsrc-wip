@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2017/08/14 20:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2018/12/10 08:59:44 wiz Exp $
 
-DISTNAME=	dbus-1.10.22
+DISTNAME=	dbus-1.12.12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -18,9 +18,15 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 
+# USE_LANGUAGES+=	c c++
+
 PKGCONFIG_OVERRIDE=	dbus-1.pc.in
 
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE DBUS_USER DBUS_GROUP DBUS_SYSTEM_PID_FILE
+
+# Moved to options.mk
+# OWN_DIRS_PERMS+=	${VARBASE}/db/dbus ${DBUS_USER} ${DBUS_GROUP} 0755
+# SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROUP} 4511
 
 SMF_METHODS=	dbus
 SMF_NAME=	dbus
@@ -29,13 +35,12 @@ MESSAGE_SRC+=	MESSAGE
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 # Prevent the configure script from picking up a per-user tmp
 # directory. See the commit message on revision 1.35
 CONFIGURE_ARGS+=	--with-session-socket-dir=/tmp
 
-CONFIGURE_ARGS+=	--without-init-scripts
 CONFIGURE_ARGS+=	--disable-ansi
 CONFIGURE_ARGS+=	--disable-console-owner-file
 CONFIGURE_ARGS+=	--disable-doxygen-docs
@@ -51,7 +56,7 @@ CONFIGURE_ARGS+=	--enable-static
 #.endif
 
 CONFIGURE_ARGS+=	--with-dbus-user=${DBUS_USER}
-CONFIGURE_ARGS+=	--with-test-socket-dir=${WRKDIR}
+CONFIGURE_ARGS+=	--with-test-socket-dir=${WRKDIR:Q}
 CONFIGURE_ARGS+=	--with-system-pid-file=${VARBASE}/run/dbus/${DBUS_SYSTEM_PID_FILE}
 
 SUBST_CLASSES+=		docbook
@@ -64,13 +69,12 @@ PTHREAD_AUTO_VARS=	yes
 .if ${OPSYS} == "Linux"
 PLIST.linux=		yes
 .else
-CONFIGURE_ARGS+=	--disable-abstract-sockets
 CONFIGURE_ARGS+=	--disable-selinux
-CONFIGURE_ARGS+=	--disable-apparmor
-CONFIGURE_ARGS+=	--disable-systemd
+# CONFIGURE_ARGS+=	--disable-apparmor
+# CONFIGURE_ARGS+=	--disable-systemd
 .endif
 
-PLIST_VARS+=		linux launchd
+PLIST_VARS+=    	linux
 
 DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
 OWN_DIRS+=		${DBUS_CONF_DIR}/services
@@ -94,11 +98,12 @@ FILES_SUBST+=		DBUS_USER_SH=${DBUS_USER}
 FILES_SUBST+=		DBUS_GROUP_SH=${DBUS_GROUP}
 FILES_SUBST+=		DBUS_SYSTEM_PID_FILE_SH=${DBUS_SYSTEM_PID_FILE}
 
-BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
-# Package tries to use these if gcc accepts them, but that doesn't
-# mean that we universally can *run* the executables
-BUILDLINK_TRANSFORM+=	rm:-fPIE
-BUILDLINK_TRANSFORM+=	rm:-pie
+# Moved to options.mk
+# BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
+# # Package tries to use these if gcc accepts them, but that doesn't
+# # mean that we universally can *run* the executables
+# BUILDLINK_TRANSFORM+=	rm:-fPIE
+# BUILDLINK_TRANSFORM+=	rm:-pie
 
 BUILDLINK_TRANSFORM.OpenBSD+=	rm:-lrt
 
@@ -112,5 +117,6 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.expat+=	expat>=2.1.0
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
