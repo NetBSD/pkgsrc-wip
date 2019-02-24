@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.21 2018/03/07 11:57:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2018/10/25 22:40:57 maya Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-XORG_VERSION=	1.19.6
+XORG_VERSION=	1.20.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -63,15 +63,35 @@ CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATHS:ts,:Q}
 
 CONFIGURE_ARGS+=	--disable-config-hal
 CONFIGURE_ARGS+=	--disable-dmx
+.if ${OPSYS} != "FreeBSD" &&  ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--disable-xwin
+.endif
 CONFIGURE_ARGS+=	--disable-xephyr
+
+.if ${OPSYS} != "FreeBSD" &&  ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--disable-kdrive
 #CONFIGURE_ARGS+=	--disable-kdrive-vesa
-CONFIGURE_ARGS+=	--disable-xfake
-CONFIGURE_ARGS+=	--disable-xfbdev
 CONFIGURE_ARGS+=	--enable-xtrans-send-fds
 
 CONFIGURE_ARGS+=	--with-int10=x86emu
+.endif
+
+# From FreeBSD ports
+# .if ${OPSYS} == "FreeBSD" ||  ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=	--with-shared-memory-dir=/tmp
+CONFIGURE_ARGS+=	--disable-config-udev
+CONFIGURE_ARGS+=	--disable-config-udev-kms
+# CONFIGURE_ARGS+=	--disable-xnest
+# CONFIGURE_ARGS+=	--disable-xvfb
+CONFIGURE_ARGS+=	--disable-xwayland
+CONFIGURE_ARGS+=	--enable-xcsecurity
+.endif
+
+# FreeBSD ports devel/libunwind not ported to pkgsrc
+# .if ${OPSYS} == "FreeBSD" ||  ${OPSYS} == "DragonFly"
+# CONFIGURE_ARGS+=	--disable-libunwind
+# .endif
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 CONFIGURE_ENV+=		DRIVER_MAN_SUFFIX=4
@@ -102,6 +122,20 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_header_sys_event_h=no
 # Avoid picking up epoll on illumos
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create1=no
 
+# Only available in newer releases
+CONFIGURE_ENV.SunOS+=	ac_cv_func_mkostemp=no
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+# Workaround glamor lockups when drm-devel-kmod (4.15-4.17) is installed
+# with partial reverting of commit
+# 86b2d8740a330deafe8a9bbf0402705a43efbb42
+SUBST_CLASSES+=		glamor
+SUBST_STAGE.glamor=	pre-configure
+SUBST_MESSAGE.glamor=	Workaround glamor lockups
+SUBST_FILES.glamor=	glamor/glamor_egl.c
+SUBST_SED.glamor=	-e '/glamor_make_pixmap_exportable/s,FALSE,TRUE,g'
+.endif
+
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
 BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.8.0
@@ -126,6 +160,8 @@ CONFIGURE_ARGS+=	--with-sha1=libnettle
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xorgproto+=	xorgproto>=2018.3
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
@@ -142,6 +178,5 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

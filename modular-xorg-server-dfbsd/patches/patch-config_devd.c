@@ -1,10 +1,15 @@
 $NetBSD$
 
-From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
+devd support to detect devices from FreeBSD ports / DragonFly dports
+x11-servers/xorg-server 1.18.4.
 
---- config/devd.c.orig	2018-01-06 18:38:25.992174000 +0000
+Added many debugging statements with DebugF.
+
+Adjust for update to 1.19.6 API.
+
+--- config/devd.c.orig	2018-08-04 04:32:13.580868000 +0000
 +++ config/devd.c
-@@ -0,0 +1,643 @@
+@@ -0,0 +1,613 @@
 +/*
 + * Copyright (c) 2012 Baptiste Daroussin
 + * Copyright (c) 2013, 2014 Alex Kozlov
@@ -247,9 +252,10 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +			attrs.product = strdup(product);
 +			options = input_option_new(options, "name", product);
 +		}
-+		else
++		else {
 +			DebugF("[config/devd]: device_added: input_option_new([name], [(unnamed)])\n");
 +			options = input_option_new(options, "name", "(unnamed)");
++		}
 +
 +		free(vendor);
 +	}
@@ -329,7 +335,7 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +			attrs.product, path);
 +
 +	NewInputDeviceRequest(options, &attrs, &dev);
-+	
++
 +	DebugF("[config/devd]: device_added: finished NewInputDeviceRequest for device %s (%s)\n",
 +			attrs.product, path);
 +
@@ -399,7 +405,7 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +}
 +
 +static void
-+socket_handler(int sock, int ready, void *data);
++wakeup_handler(int sock, int ready, void *data);
 +
 +static int
 +connect_devd(void)
@@ -430,7 +436,7 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +
 +	DebugF("[config/devd]: connected to devd, sock (%d), pid file (%s)\n", sock, DEVD_SOCK_PATH);
 +
-+	SetNotifyFd(sock, socket_handler, X_NOTIFY_READ, NULL);
++	SetNotifyFd(sock, wakeup_handler, X_NOTIFY_READ, NULL);
 +
 +	return	sock;
 +}
@@ -461,8 +467,6 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +	ssize_t ret, cap, sz = 0;
 +	char c;
 +
-+	*out = NULL;
-+
 +	cap = 1024;
 +	buf = malloc(cap * sizeof(char));
 +	if (!buf)
@@ -480,7 +484,7 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +			disconnect_devd(sock_devd);
 +			rtimer = TimerSet(NULL, 0, 1, reconnect_handler, NULL);
 +			LogMessage(X_WARNING, "config/devd: devd socket is lost\n");
-+			DebugF("[config/devd]: socket_getline: EOF devd socket (%d) is LOST\n", sock_devd);
++			DebugF("[config/devd]: WARNING socket_getline: EOF devd socket (%d) is LOST\n", sock_devd);
 +			free(buf);
 +			return -1;
 +		}
@@ -491,6 +495,7 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +			cap *= 2;
 +			newbuf = realloc(buf, cap * sizeof(char));
 +			if (!newbuf) {
++				DebugF("[config/devd]: ERROR socket_getline: realloc failed on buf\n");
 +				free(buf);
 +				return -1;
 +			}
@@ -510,18 +515,24 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +	return sz;
 +}
 +
-+#if 0
 +static void
-+wakeup_handler(void *data, int err)
++wakeup_handler(int sock, int ready, void *data)
 +{
 +	char *line = NULL;
 +	char *walk;
++	ssize_t sz;
 +
-+	if (err < 0)
-+		return;
-+
-+		if (socket_getline(sock_devd, &line) < 0)
++	DebugF("[config/devd]: wakeup_handler: sock_devd (%d), sock (%d), ready (%d)\n", sock_devd, sock, ready);
++	
++		sz = socket_getline(sock_devd, &line);
++		if (sz < 0)
 +			return;
++		if (sz == 0) {
++			DebugF("[config/devd]: WARNING wakeup_handler: socket_getline returned zero length line\n", line);
++			free(line);
++			return;
++		}
++		DebugF("[config/devd]: wakeup_handler: socket_getline (%s)\n", line);
 +
 +		walk = strchr(line + 1, ' ');
 +		if (walk != NULL)
@@ -529,56 +540,20 @@ From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
 +
 +		switch (*line) {
 +		case DEVD_EVENT_ADD:
++			DebugF("[config/devd]: wakeup_handler: DEVD_EVENT_ADD line (%s)\n", line);
 +			device_added(line + 1);
 +			break;
 +		case DEVD_EVENT_REMOVE:
++			DebugF("[config/devd]: wakeup_handler: DEVD_EVENT_REMOVE line (%s)\n", line);
 +			device_removed(line + 1);
++			break;
++		case DEVD_EVENT_NOTIFY:
++			DebugF("[config/devd]: wakeup_handler: DEVD_EVENT_NOTIFY line (%s)\n", line);
 +			break;
 +		default:
 +			break;
 +		}
 +		free(line);
-+}
-+#endif
-+
-+static void
-+socket_handler(int sock, int ready, void *data)
-+{
-+	char *line = NULL;
-+	char *walk;
-+	ssize_t sz;
-+
-+	DebugF("[config/devd]: socket_handler: sock_devd (%d), sock (%d), ready (%d)\n", sock_devd, sock, ready);
-+	
-+	sz = socket_getline(sock_devd, &line);
-+	if (sz < 0)
-+		return;
-+	if (sz == 0) {
-+		free(line);
-+		return;
-+	}
-+	DebugF("[config/devd]: socket_handler: socket_getline (%s)\n", line);
-+
-+	walk = strchr(line + 1, ' ');
-+	if (walk != NULL)
-+		walk[0] = '\0';
-+
-+	switch (*line) {
-+	case DEVD_EVENT_ADD:
-+		DebugF("[config/devd]: socket_handler: DEVD_EVENT_ADD line (%s)\n", line);
-+		device_added(line + 1);
-+		break;
-+	case DEVD_EVENT_REMOVE:
-+		DebugF("[config/devd]: socket_handler: DEVD_EVENT_REMOVE line (%s)\n", line);
-+		device_removed(line + 1);
-+		break;
-+	case DEVD_EVENT_NOTIFY:
-+		DebugF("[config/devd]: socket_handler: DEVD_EVENT_NOTIFY line (%s)\n", line);
-+		break;
-+	default:
-+		break;
-+	}
-+	free(line);
 +}
 +
 +#if 0

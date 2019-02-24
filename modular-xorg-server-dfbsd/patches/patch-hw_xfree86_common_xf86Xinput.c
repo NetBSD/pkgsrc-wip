@@ -1,8 +1,7 @@
 $NetBSD$
 
-From FreeBSD ports / DragonFly dports x11-servers/xorg-server 1.18.4.
-
-devd support
+devd support to detect devices from FreeBSD ports / DragonFly dports
+x11-servers/xorg-server 1.18.4.
 
 --- hw/xfree86/common/xf86Xinput.c.orig	2017-12-20 20:32:33.000000000 +0000
 +++ hw/xfree86/common/xf86Xinput.c

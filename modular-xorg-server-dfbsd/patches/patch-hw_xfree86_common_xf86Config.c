@@ -1,6 +1,7 @@
 $NetBSD$
 
 devd support to detect devices from FreeBSD ports / DragonFly dports
+x11-servers/xorg-server 1.18.4.
 
 --- hw/xfree86/common/xf86Config.c.orig	2017-01-05 21:19:31.000000000 +0000
 +++ hw/xfree86/common/xf86Config.c
@@ -18,7 +19,7 @@ devd support to detect devices from FreeBSD ports / DragonFly dports
  #elif defined(CONFIG_UDEV)
          config_backend = "udev";
 +#elif defined(CONFIG_DEVD)
-+	config_backend = "devd";
++        config_backend = "devd";
  #else
          config_backend = "wscons";
  #endif

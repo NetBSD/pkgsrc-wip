@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2018/03/07 11:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2018/10/26 10:20:12 maya Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-${DISTNAME}

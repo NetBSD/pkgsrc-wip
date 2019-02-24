@@ -1,13 +1,14 @@
 $NetBSD$
 
 devd support to detect devices from FreeBSD ports / DragonFly dports
+x11-servers/xorg-server 1.18.4.
 
---- hw/xfree86/common/xf86Globals.c.orig	2015-07-18 23:25:51.820719000 +0000
+--- hw/xfree86/common/xf86Globals.c.orig	2018-05-10 16:32:35.000000000 +0000
 +++ hw/xfree86/common/xf86Globals.c
-@@ -122,7 +122,8 @@ xf86InfoRec xf86Info = {
+@@ -117,7 +117,8 @@ xf86InfoRec xf86Info = {
+     .miscModInDevEnabled = TRUE,
+     .miscModInDevAllowNonLocal = FALSE,
      .pmFlag = TRUE,
-     .disableRandR = FALSE,
-     .randRFrom = X_DEFAULT,
 -#if defined(CONFIG_HAL) || defined(CONFIG_UDEV) || defined(CONFIG_WSCONS)
 +#if defined(CONFIG_HAL) || defined(CONFIG_UDEV) || defined(CONFIG_WSCONS) || \
 +	defined(CONFIG_DEVD)

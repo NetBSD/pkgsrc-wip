@@ -9,7 +9,7 @@ dri2.c:320:27: note: initialize the variable 'ref' to silence this warning
 dri2.c:601:27: note: initialize the variable 'ref' to silence this warning
     DRI2DrawableRefPtr ref;
 
---- hw/xfree86/dri2/dri2.c.orig	2017-01-06 15:03:50.000000000 +0000
+--- hw/xfree86/dri2/dri2.c.orig	2015-01-26 18:42:23.000000000 +0000
 +++ hw/xfree86/dri2/dri2.c
 @@ -312,7 +312,7 @@ typedef struct DRI2DrawableRefRec {
  static DRI2DrawableRefPtr
