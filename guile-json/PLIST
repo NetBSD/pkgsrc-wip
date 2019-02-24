@@ -1,0 +1,7 @@
+@comment $NetBSD$
+guile/2.2/lib/guile/2.2/site-ccache/json.go
+guile/2.2/lib/guile/2.2/site-ccache/json/builder.go
+guile/2.2/lib/guile/2.2/site-ccache/json/parser.go
+guile/2.2/share/guile/site/2.2/json.scm
+guile/2.2/share/guile/site/2.2/json/builder.scm
+guile/2.2/share/guile/site/2.2/json/parser.scm
