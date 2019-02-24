@@ -1,9 +1,10 @@
 # $NetBSD$
 
-PKGNAME=	greybird-theme-3.22.8
+PKGNAME=	greybird-theme-3.22.10
 DISTNAME=	Greybird-${PKGVERSION_NOREV}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/}
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	robn@gmx.com
 HOMEPAGE=	https://github.com/shimmerproject/Greybird/
@@ -16,12 +17,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake
 
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-configure
-SUBST_FILES.makefile=	Makefile.am
-SUBST_SED.makefile=	-e "s/SASS = sass/SASS = sass${RUBY_SUFFIX}/"
-
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-sass-[0-9]*:../../www/ruby-sass
+BUILD_DEPENDS+=	sassc-[0-9]*:../../www/sassc
 DEPENDS+=	gtk2-engines-murrine-[0-9]*:../../x11/gtk2-engines-murrine
 
 pre-configure:

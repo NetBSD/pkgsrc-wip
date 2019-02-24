@@ -357,7 +357,6 @@ share/themes/Greybird/gtk-3.0/gtk-dark.css
 share/themes/Greybird/gtk-3.0/gtk.css
 share/themes/Greybird/gtk-3.0/gtk.gresource
 share/themes/Greybird/gtk-3.0/gtk.gresource.xml
-share/themes/Greybird/gtk-3.0/parse-sass.sh
 share/themes/Greybird/gtk-3.0/settings.ini
 share/themes/Greybird/index.theme
 share/themes/Greybird/metacity-1/close_focused_normal.png
