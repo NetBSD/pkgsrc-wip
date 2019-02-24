@@ -1,0 +1,21 @@
+@comment $NetBSD$
+lib/guile/2.2/site-ccache/gcrypt/base16.go
+lib/guile/2.2/site-ccache/gcrypt/base64.go
+lib/guile/2.2/site-ccache/gcrypt/common.go
+lib/guile/2.2/site-ccache/gcrypt/hash.go
+lib/guile/2.2/site-ccache/gcrypt/hmac.go
+lib/guile/2.2/site-ccache/gcrypt/package-config.go
+lib/guile/2.2/site-ccache/gcrypt/pk-crypto.go
+lib/guile/2.2/site-ccache/gcrypt/random.go
+lib/guile/2.2/site-ccache/gcrypt/utils.go
+share/guile/site/2.2/gcrypt/base16.scm
+share/guile/site/2.2/gcrypt/base64.scm
+share/guile/site/2.2/gcrypt/common.scm
+share/guile/site/2.2/gcrypt/hash.scm
+share/guile/site/2.2/gcrypt/hmac.scm
+share/guile/site/2.2/gcrypt/package-config.scm
+share/guile/site/2.2/gcrypt/pk-crypto.scm
+share/guile/site/2.2/gcrypt/random.scm
+share/guile/site/2.2/gcrypt/utils.scm
+share/info/dir
+share/info/guile-gcrypt.info
