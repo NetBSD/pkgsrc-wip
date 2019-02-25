@@ -10,7 +10,7 @@ pkgsrc changes:
  - Adjust pkgsrc Makefile-s logic to upstream CMake migration:
     o Uncoditionally disable not wanted packages in Makefile.common (to avoid
       possible PLIST mismatches; please note that this will probably disable
-      tipc package on Linux).
+      tipc package on Linux!).
       All other installed packages are enabled/disabled via
       swi-prolog-{lite,packages,jpl} Makefile.
     o Add libarchive, ossp-uuid and openssl build dependency to
