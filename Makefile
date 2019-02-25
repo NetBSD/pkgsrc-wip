@@ -4470,7 +4470,6 @@ SUBDIR+=	swarp
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	swi-prolog
-SUBDIR+=	swi-prolog-jpg
 SUBDIR+=	swi-prolog-lite
 SUBDIR+=	swi-prolog-packages
 SUBDIR+=	swift
