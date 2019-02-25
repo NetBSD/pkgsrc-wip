@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--without-ca-bundle
 CONFIGURE_ARGS+=	--without-ca-path
 CONFIGURE_ARGS+=	--with-ca-fallback
 # Do not pick up GSS, should be fixed in upstream.
+# https://bugs.gnunet.org/view.php?id=5610
 CONFIGURE_ARGS+=	--without-gssapi
 
 .include "options.mk"
