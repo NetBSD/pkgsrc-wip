@@ -14,7 +14,7 @@ GCC_REQD+=	6
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-7].*-*) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8].*-*)
-USE_PKGSRC_GCC_RUNTIME=	yes
+USE_GCC_RUNTIME=	yes
 .endif
 
 # For rustc/cargo detection
