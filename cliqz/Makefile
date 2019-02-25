@@ -35,7 +35,7 @@ HOMEPAGE=	https://cliqz.com/en/desktop
 COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	mpl-2.0
 
-USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash bsdtar
+USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash pax
 USE_LANGUAGES+=	c99 gnu++14
 
 PYTHON_FOR_BUILD_ONLY=		tool
@@ -92,9 +92,8 @@ do-build:
 
 INSTALLATION_DIRS+=	share/applications share/pixmaps bin lib/cliqz
 do-install:
-	cd ${WRKSRC}/obj/dist && \
-		bsdtar -xjf ${DISTNAME}*${LOWER_OPSYS}-${MACHINE_ARCH}.tar.bz2 \
-		-C ${DESTDIR}${PREFIX}/lib && \
+	cd ${WRKSRC}/obj/dist/cliqz && \
+		${PAX} -wr * ${DESTDIR}${PREFIX}/lib/cliqz && \
 		${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${PREFIX}/lib/*
 	cd ${DESTDIR}${PREFIX}/lib && \
 		${FIND} . \(	-name \*.js  -or \
