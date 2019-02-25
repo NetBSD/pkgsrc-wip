@@ -22,4 +22,15 @@ pkgsrc changes:
  - TODO: maybe there are other pkgsrc changes too worth to be documented!
 
 Changes:
-TODO
+8.0.1
+-----
+Indexing on multiple arguments together, indexing inside compounds,
+Mode-directed tabling, saved states using ZIP files, many deployment
+enhancements. Moved build environment to CMake and removed most of
+the build tool dependencies. Builds documentation along with the
+binary.
+
+Please note that this is just a short summary. Unfortunately the
+complete changelog is very long, full changelog can be found at:
+
+ <http://www.swi-prolog.org/ChangeLog?branch=stable&from=7.6.4&to=8.0.1>
