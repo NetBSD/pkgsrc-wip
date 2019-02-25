@@ -12,9 +12,11 @@ UNLIMIT_RESOURCES+=	datasize
 # for lang/gcc6
 GCC_REQD+=	6
 
+# XXX: USE_PKGSRC_GCC_RUNTIME should not be used there and USE_GCC_RUNTIME
+# should be used instead to pick up gcc*-libs package if needed
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-7].*-*) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8].*-*)
-USE_GCC_RUNTIME=	yes
+USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
 
 # For rustc/cargo detection
