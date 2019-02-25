@@ -19,7 +19,8 @@ pkgsrc changes:
  - Remove an unconditional CHECK_WRKREF_SKIP, this was needed on FreeBSD
    but unfortunately it is not clear why.  If this is still needed please let
    me know in order to try to investigate further and address that.
- - TODO: maybe there are other pkgsrc changes too worth to be documented!
+ - Bump API requirements to 8.0.1 in buildlink3.mk to be on the safe side
+   now that shared libraries are provided on all platforms.
 
 Changes:
 8.0.1
