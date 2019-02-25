@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.41 2009/04/08 23:11:13 joerg Exp $
 
-META_PACKAGE=		# empty
+META_PACKAGE=		yes
 
 .include "../../wip/swi-prolog-lite/Makefile.common"
 
