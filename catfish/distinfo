@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (catfish-1.4.7.tar.bz2) = ac81c413f0bcc2860a87b134775584285653d11d
+RMD160 (catfish-1.4.7.tar.bz2) = 296562c54b2b8788e22ad678b685be85a0048c00
+SHA512 (catfish-1.4.7.tar.bz2) = cafa8eaaa40522f50111b3bb9c09a116ebad827532b0cfc88bc643fb2e2d89edee53057fbbed23719f4091ca384d7ea025633e571e160d7dfced008f788a3ffd
+Size (catfish-1.4.7.tar.bz2) = 162289 bytes
+SHA1 (patch-setup.py) = f6a74e27697811583913cf4f5e1de8b1685f28ba

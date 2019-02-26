@@ -1,0 +1,8 @@
+Catfish is a versatile file search utility for the Xfce desktop.
+Powered by Python and GTK, it's fast, flexible, and exceptional at finding
+files.
+Features
+- Minimalistic, GTK+3 interface
+- Search suggestions, powered by Zeitgeist and locate
+- Powerful filtering by date, file type, and more
+- Full-text file content search

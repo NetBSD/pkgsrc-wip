@@ -344,6 +344,7 @@ SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
 SUBDIR+=	castget
 SUBDIR+=	cataclysm-dda
+SUBDIR+=	catfish
 SUBDIR+=	cb2bib
 SUBDIR+=	cblas
 SUBDIR+=	cc65
