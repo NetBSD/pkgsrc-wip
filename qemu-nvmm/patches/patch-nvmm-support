@@ -376,8 +376,8 @@ Add NVMM support.
  obj-$(CONFIG_SEV) += sev.o
  obj-$(call lnot,$(CONFIG_SEV)) += sev-stub.o
 --- target/i386/nvmm-all.c	1970-01-01 01:00:00.000000000 +0100
-+++ target/i386/nvmm-all.c	2019-02-20 14:36:50.696148104 +0100
-@@ -0,0 +1,1175 @@
++++ target/i386/nvmm-all.c	2019-02-26 12:41:22.288405702 +0100
+@@ -0,0 +1,1174 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
 + *
@@ -447,15 +447,14 @@ Add NVMM support.
 +    nseg->selector = qseg->selector;
 +    nseg->limit = qseg->limit;
 +    nseg->base = qseg->base;
-+    nseg->attrib.type =
-+        (__SHIFTOUT(attrib, DESC_S_MASK) << 4) |
-+        (__SHIFTOUT(attrib, DESC_TYPE_MASK) << 0);
++    nseg->attrib.type = __SHIFTOUT(attrib, DESC_TYPE_MASK);
++    nseg->attrib.s = __SHIFTOUT(attrib, DESC_S_MASK);
 +    nseg->attrib.dpl = __SHIFTOUT(attrib, DESC_DPL_MASK);
 +    nseg->attrib.p = __SHIFTOUT(attrib, DESC_P_MASK);
 +    nseg->attrib.avl = __SHIFTOUT(attrib, DESC_AVL_MASK);
-+    nseg->attrib.lng = __SHIFTOUT(attrib, DESC_L_MASK);
-+    nseg->attrib.def32 = __SHIFTOUT(attrib, DESC_B_MASK);
-+    nseg->attrib.gran = __SHIFTOUT(attrib, DESC_G_MASK);
++    nseg->attrib.l = __SHIFTOUT(attrib, DESC_L_MASK);
++    nseg->attrib.def = __SHIFTOUT(attrib, DESC_B_MASK);
++    nseg->attrib.g = __SHIFTOUT(attrib, DESC_G_MASK);
 +}
 +
 +static void
@@ -472,26 +471,26 @@ Add NVMM support.
 +    assert(cpu_is_stopped(cpu) || qemu_cpu_is_self(cpu));
 +
 +    /* GPRs. */
-+    state.gprs[NVMM_X64_GPR_RAX] = (uint64_t)env->regs[R_EAX];
-+    state.gprs[NVMM_X64_GPR_RCX] = (uint64_t)env->regs[R_ECX];
-+    state.gprs[NVMM_X64_GPR_RDX] = (uint64_t)env->regs[R_EDX];
-+    state.gprs[NVMM_X64_GPR_RBX] = (uint64_t)env->regs[R_EBX];
-+    state.gprs[NVMM_X64_GPR_RSP] = (uint64_t)env->regs[R_ESP];
-+    state.gprs[NVMM_X64_GPR_RBP] = (uint64_t)env->regs[R_EBP];
-+    state.gprs[NVMM_X64_GPR_RSI] = (uint64_t)env->regs[R_ESI];
-+    state.gprs[NVMM_X64_GPR_RDI] = (uint64_t)env->regs[R_EDI];
-+    state.gprs[NVMM_X64_GPR_R8]  = (uint64_t)env->regs[R_R8];
-+    state.gprs[NVMM_X64_GPR_R9]  = (uint64_t)env->regs[R_R9];
-+    state.gprs[NVMM_X64_GPR_R10] = (uint64_t)env->regs[R_R10];
-+    state.gprs[NVMM_X64_GPR_R11] = (uint64_t)env->regs[R_R11];
-+    state.gprs[NVMM_X64_GPR_R12] = (uint64_t)env->regs[R_R12];
-+    state.gprs[NVMM_X64_GPR_R13] = (uint64_t)env->regs[R_R13];
-+    state.gprs[NVMM_X64_GPR_R14] = (uint64_t)env->regs[R_R14];
-+    state.gprs[NVMM_X64_GPR_R15] = (uint64_t)env->regs[R_R15];
++    state.gprs[NVMM_X64_GPR_RAX] = env->regs[R_EAX];
++    state.gprs[NVMM_X64_GPR_RCX] = env->regs[R_ECX];
++    state.gprs[NVMM_X64_GPR_RDX] = env->regs[R_EDX];
++    state.gprs[NVMM_X64_GPR_RBX] = env->regs[R_EBX];
++    state.gprs[NVMM_X64_GPR_RSP] = env->regs[R_ESP];
++    state.gprs[NVMM_X64_GPR_RBP] = env->regs[R_EBP];
++    state.gprs[NVMM_X64_GPR_RSI] = env->regs[R_ESI];
++    state.gprs[NVMM_X64_GPR_RDI] = env->regs[R_EDI];
++    state.gprs[NVMM_X64_GPR_R8]  = env->regs[R_R8];
++    state.gprs[NVMM_X64_GPR_R9]  = env->regs[R_R9];
++    state.gprs[NVMM_X64_GPR_R10] = env->regs[R_R10];
++    state.gprs[NVMM_X64_GPR_R11] = env->regs[R_R11];
++    state.gprs[NVMM_X64_GPR_R12] = env->regs[R_R12];
++    state.gprs[NVMM_X64_GPR_R13] = env->regs[R_R13];
++    state.gprs[NVMM_X64_GPR_R14] = env->regs[R_R14];
++    state.gprs[NVMM_X64_GPR_R15] = env->regs[R_R15];
 +
 +    /* RIP and RFLAGS. */
-+    state.gprs[NVMM_X64_GPR_RIP] = (uint64_t)env->eip;
-+    state.gprs[NVMM_X64_GPR_RFLAGS] = (uint64_t)env->eflags;
++    state.gprs[NVMM_X64_GPR_RIP] = env->eip;
++    state.gprs[NVMM_X64_GPR_RFLAGS] = env->eflags;
 +
 +    /* Segments. */
 +    nvmm_set_segment(&state.segs[NVMM_X64_SEG_CS], &env->segs[R_CS]);
@@ -508,19 +507,19 @@ Add NVMM support.
 +    nvmm_set_segment(&state.segs[NVMM_X64_SEG_IDT], &env->idt);
 +
 +    /* Control registers. */
-+    state.crs[NVMM_X64_CR_CR0] = (uint64_t)env->cr[0];
-+    state.crs[NVMM_X64_CR_CR2] = (uint64_t)env->cr[2];
-+    state.crs[NVMM_X64_CR_CR3] = (uint64_t)env->cr[3];
-+    state.crs[NVMM_X64_CR_CR4] = (uint64_t)env->cr[4];
-+    state.crs[NVMM_X64_CR_CR8] = (uint64_t)vcpu->tpr;
-+    state.crs[NVMM_X64_CR_XCR0] = (uint64_t)env->xcr0;
++    state.crs[NVMM_X64_CR_CR0] = env->cr[0];
++    state.crs[NVMM_X64_CR_CR2] = env->cr[2];
++    state.crs[NVMM_X64_CR_CR3] = env->cr[3];
++    state.crs[NVMM_X64_CR_CR4] = env->cr[4];
++    state.crs[NVMM_X64_CR_CR8] = vcpu->tpr;
++    state.crs[NVMM_X64_CR_XCR0] = env->xcr0;
 +
 +    /* Debug registers. */
-+    state.drs[NVMM_X64_DR_DR1] = (uint64_t)env->dr[1];
-+    state.drs[NVMM_X64_DR_DR2] = (uint64_t)env->dr[2];
-+    state.drs[NVMM_X64_DR_DR3] = (uint64_t)env->dr[3];
-+    state.drs[NVMM_X64_DR_DR6] = (uint64_t)env->dr[6];
-+    state.drs[NVMM_X64_DR_DR7] = (uint64_t)env->dr[7];
++    state.drs[NVMM_X64_DR_DR1] = env->dr[1];
++    state.drs[NVMM_X64_DR_DR2] = env->dr[2];
++    state.drs[NVMM_X64_DR_DR3] = env->dr[3];
++    state.drs[NVMM_X64_DR_DR6] = env->dr[6];
++    state.drs[NVMM_X64_DR_DR7] = env->dr[7];
 +
 +    /* FPU. */
 +    state.fpu.fx_cw = env->fpuc;
@@ -580,14 +579,14 @@ Add NVMM support.
 +    qseg->base = nseg->base;
 +
 +    qseg->flags =
-+        __SHIFTIN((nseg->attrib.type & 0b10000) >> 4, DESC_S_MASK) |
-+        __SHIFTIN((nseg->attrib.type & 0b01111) >> 0, DESC_TYPE_MASK) |
-+        __SHIFTIN(nseg->attrib.dpl, DESC_DPL_MASK) |
-+        __SHIFTIN(nseg->attrib.p, DESC_P_MASK) |
-+        __SHIFTIN(nseg->attrib.avl, DESC_AVL_MASK) |
-+        __SHIFTIN(nseg->attrib.lng, DESC_L_MASK) |
-+        __SHIFTIN(nseg->attrib.def32, DESC_B_MASK) |
-+        __SHIFTIN(nseg->attrib.gran, DESC_G_MASK);
++        __SHIFTIN((uint32_t)nseg->attrib.type, DESC_TYPE_MASK) |
++        __SHIFTIN((uint32_t)nseg->attrib.s, DESC_S_MASK) |
++        __SHIFTIN((uint32_t)nseg->attrib.dpl, DESC_DPL_MASK) |
++        __SHIFTIN((uint32_t)nseg->attrib.p, DESC_P_MASK) |
++        __SHIFTIN((uint32_t)nseg->attrib.avl, DESC_AVL_MASK) |
++        __SHIFTIN((uint32_t)nseg->attrib.l, DESC_L_MASK) |
++        __SHIFTIN((uint32_t)nseg->attrib.def, DESC_B_MASK) |
++        __SHIFTIN((uint32_t)nseg->attrib.g, DESC_G_MASK);
 +}
 +
 +static void
@@ -641,12 +640,12 @@ Add NVMM support.
 +    env->eflags = state.gprs[NVMM_X64_GPR_RFLAGS];
 +
 +    /* Segments. */
-+    nvmm_get_segment(&env->segs[R_CS], &state.segs[NVMM_X64_SEG_CS]);
-+    nvmm_get_segment(&env->segs[R_DS], &state.segs[NVMM_X64_SEG_DS]);
 +    nvmm_get_segment(&env->segs[R_ES], &state.segs[NVMM_X64_SEG_ES]);
++    nvmm_get_segment(&env->segs[R_CS], &state.segs[NVMM_X64_SEG_CS]);
++    nvmm_get_segment(&env->segs[R_SS], &state.segs[NVMM_X64_SEG_SS]);
++    nvmm_get_segment(&env->segs[R_DS], &state.segs[NVMM_X64_SEG_DS]);
 +    nvmm_get_segment(&env->segs[R_FS], &state.segs[NVMM_X64_SEG_FS]);
 +    nvmm_get_segment(&env->segs[R_GS], &state.segs[NVMM_X64_SEG_GS]);
-+    nvmm_get_segment(&env->segs[R_SS], &state.segs[NVMM_X64_SEG_SS]);
 +
 +    /* Special segments. */
 +    nvmm_get_segment(&env->gdt, &state.segs[NVMM_X64_SEG_GDT]);
