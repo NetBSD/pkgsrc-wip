@@ -257,7 +257,7 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
-		ninja -j ${MAKE_JOBS} -C out/${BUILDTYPE} \
+		ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
 			chrome
 
 CHROMIUM_DIR=		chrome
