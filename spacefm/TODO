@@ -1,5 +1,4 @@
-Works only with linux at the moment, vidthumbsnails must be fixed
-Read more here
+Works only with linux at the moment
 
 ##
 Note: libudev is not in the pkgsrc-tree in the moment, you must install libudev
