@@ -1,0 +1,4 @@
+Mescc-tools is a collection of tools for use in a full source
+bootstrapping process.  It consists of the M1 macro assembler,
+the hex2 linker, the blood-elf symbol table generator,
+the kaem shell, exec_enable and get_machine.

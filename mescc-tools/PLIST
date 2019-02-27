@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/M1
+bin/blood-elf
+bin/hex2
