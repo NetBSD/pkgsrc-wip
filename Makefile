@@ -1813,6 +1813,7 @@ SUBDIR+=	libdjconsole
 SUBDIR+=	libdmx
 SUBDIR+=	libdoozer
 SUBDIR+=	libdrm-dfbsd
+SUBDIR+=	libdrm-dfbsd-meson
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libecc
 SUBDIR+=	libechonest

@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.92 2019/01/22 21:50:47 wiz Exp $
+
+SHA1 (drm-6415bd3ced9d80137e30cb90837eb01932607882.tar.xz) = 08f240cb4473ca47127c450c10b17dedfad71ff3
+RMD160 (drm-6415bd3ced9d80137e30cb90837eb01932607882.tar.xz) = ab5f819db8e1e77e5cb6323163b90b71a835fdea
+SHA512 (drm-6415bd3ced9d80137e30cb90837eb01932607882.tar.xz) = 5a1ed905ca49bc2010be76a2b28e1b16d42ea9219ddc1291ebef50ce1e668d3a094be02ae38bc3ab8cea0404abda338863b4b5467012141f094185c78ead1aca
+Size (drm-6415bd3ced9d80137e30cb90837eb01932607882.tar.xz) = 395556 bytes
+SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
+SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
+SHA1 (patch-libkms_vmwgfx.c) = de56a4f1724bef5f237f183eca889b8cef3b81af
+SHA1 (patch-libsync.h) = 1e0603e72a54a069fc9d2ab2c9559d22381a69d3
+SHA1 (patch-meson.build) = 32b7b69c936d658a382a0b4e2b157649a9c4782d
+SHA1 (patch-xf86atomic.h) = 887db95db00125bdfa1ab298b2ccc555dec70366
+SHA1 (patch-xf86drm.c) = 3cd8c6a6e26728d92ec3fc03cfffa778a65c286b
+SHA1 (patch-xf86drmMode.c) = d7c6617ef54f76dc3dac00098adbb2f6fb02d685
+SHA1 (patch-xf86drmMode.h) = 265989e670cc7ead9bb5002e116e5ab56439ede6
