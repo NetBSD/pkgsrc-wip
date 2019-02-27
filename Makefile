@@ -2162,6 +2162,7 @@ SUBDIR+=	mnogosearch
 SUBDIR+=	modglue
 SUBDIR+=	modplugplay
 SUBDIR+=	modular-xorg-server-dfbsd
+SUBDIR+=	modular-xorg-server-dfbsd-meson
 SUBDIR+=	moe
 SUBDIR+=	monajat
 SUBDIR+=	monkey-bubble

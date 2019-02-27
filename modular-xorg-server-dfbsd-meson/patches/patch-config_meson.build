@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- config/meson.build.orig	2019-01-30 21:08:48.000000000 +0000
++++ config/meson.build
+@@ -23,6 +23,14 @@ if host_machine.system() == 'openbsd'
+     srcs_config += 'wscons.c'
+ endif
+ 
++if host_machine.system() == 'dragonfly'
++    srcs_config += 'devd.c'
++endif
++
++if host_machine.system() == 'freebsd'
++    srcs_config += 'devd.c'
++endif
++
+ if build_xorg
+     install_data('10-quirks.conf',
+                  install_dir: join_paths(get_option('datadir'), 'X11/xorg.conf.d'))

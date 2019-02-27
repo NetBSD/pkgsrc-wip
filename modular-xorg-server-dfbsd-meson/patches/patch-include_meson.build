@@ -1,0 +1,33 @@
+$NetBSD$
+
+--- include/meson.build.orig	2019-02-25 15:48:03.000000000 +0000
++++ include/meson.build
+@@ -254,7 +254,7 @@ supports_syscons = false
+ supports_wscons = false
+ csrg_based = false
+ 
+-if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonflybsd'
++if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+   supports_pccons = true
+   supports_pcvt = true
+   supports_syscons = true
+@@ -344,14 +344,17 @@ xorg_data.set_quoted('PCI_TXT_IDS_PATH',
+ xorg_data.set('XSERVER_PLATFORM_BUS', build_udev)
+ xorg_data.set('WSCONS_SUPPORT', host_machine.system() == 'netbsd' or host_machine.system() == 'openbsd')
+ 
+-if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonflybsd'
++if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+     if host_machine.cpu_family() == 'x86' or host_machine.cpu_family() == 'x86_64'
+         xorg_data.set('USE_DEV_IO', true)
+     endif
+ elif host_machine.system() == 'netbsd'
+-    if host_machine.cpu_family() == 'x86' or host_machine.cpu_family() == 'x86_64'
++    if host_machine.cpu_family() == 'x86'
+         xorg_data.set('USE_I386_IOPL', true)
+     endif
++    if host_machine.cpu_family() == 'x86_64'
++        xorg_data.set('USE_AMD64_IOPL', true)
++    endif
+ elif host_machine.system() == 'openbsd'
+     if host_machine.cpu_family() == 'x86'
+         xorg_data.set('USE_I386_IOPL', true)
