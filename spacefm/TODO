@@ -1,11 +1,6 @@
 Works only with linux at the moment, vidthumbsnails must be fixed
 Read more here
 
-#####
-You must edit in the Makefile in "wip/spacefm" between both "#edit me" lines, 
-where are yours libudev.pc file is located from yours linux package manager or
-self compiling/installation.
-#####
 ##
 Note: libudev is not in the pkgsrc-tree in the moment, you must install libudev
 your own, or with the package manager of your linux system.
