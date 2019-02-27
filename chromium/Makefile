@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
 DISTNAME=	chromium-56.0.2924.87
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +21,8 @@ BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 BUILD_DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
+
+PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
