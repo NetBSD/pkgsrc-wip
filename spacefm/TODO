@@ -1,4 +1,15 @@
-NetBSD cant configure/build spacefm, while: XClearWindow in -lX11... no
-x11/libX11 dont support XClearWindow
+configures, but dont compile @the moment.
 
-Current work is get the package on linux systems working.
+#####
+You must edit in the Makefile in "wip/spacefm" between both "#edit me" lines, 
+where are yours libudev.pc file is located from yours linux package manager or
+self compiling/installation.
+#####
+##
+Note: libudev is not in the pkgsrc-tree in the moment, you must install libudev
+your own, or with the package manager of your linux system.
+##
+
+- NetBSD cant configure/build spacefm, while: XClearWindow in -lX11... no
+  x11/libX11 dont support XClearWindow
+- NetBSD/pkgsrc dont support the required libudev package at the moment.
