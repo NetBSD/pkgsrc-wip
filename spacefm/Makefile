@@ -16,11 +16,11 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/spacefm-1.0.6
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
-#CC=		gcc $(pkg-config --cflags gtk+-3.0) $(pkg-config --cflags glib-2.0) $(pkg-config --cflags gdk)
-#CC=		gcc -I/usr/pkg/include/gtk-3.0/ -I/usr/pkg/include/glib/glib-2.0/
+USE_LANGUAGES=	c
 
-USE_TOOLS+=	intltool msgfmt pkg-config automake autoconf
+CONFIGURE_ARGS+= --disable-video-thumbnails
+
+USE_TOOLS+=	intltool msgfmt pkg-config automake autoconf gmake
 
 DEPENDS+=	libX11-[0-9]*:../../x11/libX11
 DEPENDS+=	hal-[0-9]*:../../sysutils/hal
@@ -30,7 +30,7 @@ DEPENDS+=	ffmpegthumbnailer-[0-9]*:../../multimedia/ffmpegthumbnailer
 
 #edit me
 export LIBUDEV_CFLAGS=	-I/usr/lib/pkgconfig/
-export LIBUDEV_LIBS=	/usr/lib/pkgconfig/
+export LIBUDEV_LIBS=	-L/usr/lib/pkgconfig/
 #edit me
 
 .include "options.mk"
