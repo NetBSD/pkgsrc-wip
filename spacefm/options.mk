@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 0.3 2018/09/11 14:44:10 andyb Exp $
+# $NetBSD: Makefile,v 0.3 2019/02/27 15:15:10 andyb Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.spacefm
 
@@ -14,9 +14,6 @@ PLIST_VARS+=            gtk3
 CONFIGURE_ARGS+=        --with-gtk2
 GTK_CFLAGS=      $(pkg-config --cflags gtk+-2.0)
 GTK_LIBS=	$(pkg-config --libs gtk+-2.0)
-CFLAGS+=		-ludev
-export FFMPEG_CFLAGS=   $(pkg-config --cflags libffmpegthumbnailer)
-export FFMPEG_LIBS=     $(pkg-config --libs libffmpegthumbnailer)
 
 .include "../../x11/gtk2/buildlink3.mk"
 .endif
@@ -25,9 +22,6 @@ export FFMPEG_LIBS=     $(pkg-config --libs libffmpegthumbnailer)
 CONFIGURE_ARGS+=        --with-gtk3
 GTK_CFLAGS=      $(pkg-config --cflags gtk+-3.0)
 GTK_LIBS=        $(pkg-config --libs gtk+-3.0)
-CFLAGS+=         -ludev
-export FFMPEG_CFLAGS=   $(pkg-config --cflags libffmpegthumbnailer)
-export FFMPEG_LIBS=     $(pkg-config --libs libffmpegthumbnailer)
 
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST.gtk3=             yes

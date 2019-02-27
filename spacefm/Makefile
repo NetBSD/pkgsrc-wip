@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 0.3 2018/09/11 14:44:10 andyb Exp $
+# $NetBSD: Makefile,v 0.3 2019/02/27 15:15:10 andyb Exp $
 
 
 GITHUB_PROJECT=	spacefm
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+= --disable-video-thumbnails
 
 USE_TOOLS+=	intltool msgfmt pkg-config automake autoconf gmake
 
+CFLAGS+=         -ludev
+
 DEPENDS+=	libX11-[0-9]*:../../x11/libX11
 DEPENDS+=	hal-[0-9]*:../../sysutils/hal
 DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
@@ -32,6 +34,9 @@ DEPENDS+=	ffmpegthumbnailer-[0-9]*:../../multimedia/ffmpegthumbnailer
 export LIBUDEV_CFLAGS=	-I/usr/lib/pkgconfig/
 export LIBUDEV_LIBS=	-L/usr/lib/pkgconfig/
 #edit me
+
+export FFMPEG_CFLAGS=   $(pkg-config --cflags libffmpegthumbnailer)
+export FFMPEG_LIBS=     $(pkg-config --libs libffmpegthumbnailer)
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

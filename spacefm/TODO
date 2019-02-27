@@ -1,4 +1,5 @@
-configures, but dont compile @the moment.
+Works only with linux at the moment, vidthumbsnails must be fixed
+Read more here
 
 #####
 You must edit in the Makefile in "wip/spacefm" between both "#edit me" lines, 
