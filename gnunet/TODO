@@ -1,2 +1,4 @@
 * package gnutls built against libunbound, use this for
   gnunet and some of its dependencies.
+* On linux and systems supported by bluez, add bluez for
+  bluetooth subsystem
