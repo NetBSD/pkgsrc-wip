@@ -68,17 +68,17 @@ SUBST_SED.sysconfdir=		-e 's,^DEFAULTCONFIG.*,DEFAULTCONFIG = ${PKG_SYSCONFDIR}/
 # This is only necessary when the installation was not run
 # as root. Run it to ensure that no manual intervention is
 # necessary.
-# ${CHMOD} root:${GNUNETDNS_GROUP ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-dns
-# ${CHMOD} ${GNUNET_USER}:${GNUNETDNS_GROUP ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-service-dns
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-dns ${REAL_ROOT_USER} ${GNUNET_DNS_GROUP} 4750
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-service-dns ${GNUNET_USER} ${GNUNETDNS_GROUP} 2750
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-testbed ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-exit ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-client ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-bluetooth ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-wlan ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-vpn ${SETUID_ROOT_PERMS}
+# ${CHMOD} root:${GNUNETDNS_GROUP} ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-dns
+# ${CHMOD} ${GNUNET_USER}:${GNUNETDNS_GROUP} ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-service-dns
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-dns ${REAL_ROOT_USER} ${GNUNETDNS_GROUP} 4750
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-service-dns ${GNUNET_USER} ${GNUNETDNS_GROUP} 2750
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-testbed ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-exit ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-client ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_ROOT_PERMS}
+# SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-bluetooth ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-wlan ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-vpn ${SETUID_ROOT_PERMS}
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${WRKSRC}/src/util/gnunet-qr.py ${DESTDIR}${PREFIX}/bin
