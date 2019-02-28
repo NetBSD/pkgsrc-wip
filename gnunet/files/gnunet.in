@@ -48,17 +48,14 @@ gnunet_precmd()
 gnunet_start()
 {
 	@ECHO@ "Starting ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args}'"
+	doit="@SU@ -m ${gnunet_user} -c '${command} -s ${command_args} -c @PKG_SYSCONFDIR@/gnunet.conf'"
 	eval $doit
-	# checkconfig || return 1
-	# ${command} -s -c @PKG_SYSCONFDIR@/gnunet.conf
 }
 
 gnunet_stop()
 {
 	@ECHO@ "Stopping ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command}
-	${command} -e -c @PKG_SYSCONFDIR@/gnunet.conf
+	doit="@SU@ -m ${gnunet_user} -c '${command} -e ${command_args} -c @PKG_SYSCONFDIR@/gnunet.conf'"
 	kill `cat ${pidfile}` 2>/dev/null
 	sleep 1
 	rm -rf /tmp/gnunet-gnunet-runtime 2>/dev/null 2>&1
