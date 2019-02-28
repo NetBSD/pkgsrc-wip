@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=IgnorantGuru/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	andyb@m42.one
+MAINTAINER=	pkgls@gmx.net
 HOMEPAGE=	https://github.com/IgnorantGuru/spacefm/
 COMMENT=	SpaceFM Filemanager
 LICENSE=	gnu-gpl-v3
