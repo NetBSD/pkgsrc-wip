@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD$
+
+To enable this package, put the following into your /etc/rc.conf:
+
+	gnunet=YES
+
+and ensure that
+
+	${RCD_SCRIPTS_DIR}/gnunet start
+
+is run at the appropriate time.
+Each GNUnet user should be added to the ${GNUNET_GROUP}.
+
+Read the documentation (info gnunet) and provided example
+files as well as the man pages to learn how to customize
+your peer configuration. An online documentation is
+provided at https://docs.gnunet.org/.
+===========================================================================

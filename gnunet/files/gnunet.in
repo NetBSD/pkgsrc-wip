@@ -17,32 +17,35 @@ name="gnunet"
 rcvar=$name
 command="@PREFIX@/bin/gnunet-arm"
 required_files="@PKG_SYSCONFDIR@/gnunet.conf"
-start_cmd="gnunet_start"
-stop_cmd="gnunet_stop"
 pidfile="@PKG_HOME@/${name}.pid"
-restart_cmd="gnunet_stop ; gnunet_start"
-extra_commands="reload"
-
 : ${gnunet_user:=@GNUNET_USER@}
 : ${gnunet_group:=@GNUNET_GROUP@}
 : ${gnunet_home:=@PKG_HOME@}
 : ${gnunetdns_group:=@GNUNETDNS_GROUP@}
 
-gnunet_chdir="${gnunet_home}"
-gnunet_env="HOME=${gnunet_home}"
+extra_commands="reload"
+start_cmd="gnunet_start"
+start_precmd="gnunet_precmd"
+stop_cmd="gnunet_stop"
+restart_cmd="gnunet_stop ; gnunet_start"
+restart_precmd="gnunet_precmd"
+reload_cmd="gnunet_reload"
 
-checkconfig()
+
+gnunet_precmd()
 {
 	if [ -n "$(find @PKG_HOME@/.local/share/gnunet -maxdepth 1 -name gnunet.conf -perm +0044)" ]; then
 		echo "@PKG_HOME@/.local/share/gnunet/gnunet.conf"
 		echo "must not be world or group readable, use"
 		echo "chmod 600" 
-		echo "and chown gnunet:gnunet"
+		echo "and chown @GNUNET_USER@:@GNUNET_GROUP@"
 	fi
-	mkdir -p @PKG_HOME@/.cache/gnunet
+	if [ ! -d ${gnunet_home}/.cache/gnunet ]; then
+		mkdir -p ${gnunet_home}/.cache/gnunet
+	fi
 }
 
-gnunet_start ()
+gnunet_start()
 {
 	@ECHO@ "Starting ${name}."
 	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args}'"
@@ -62,10 +65,27 @@ gnunet_stop()
 	rm -rf /tmp/gnunet-system-runtime 2>/dev/null 2>&1
 }
 
-if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
-then
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	eval ${start_cmd}
+	pidfile="${gnunet_home}/${name}.pid"
+	case "$1" in
+	restart)
+		eval ${restart_precmd}
+		eval ${restart_cmd}
+		;;
+	stop)
+		if [ -r "${pidfile}" ]; then
+			eval ${stop_cmd}
+		fi
+		;;
+	reload)
+		eval ${reload_cmd}
+		;;
+	*)
+		eval ${start_precmd}
+		eval ${start_cmd}
+		;;
+	esac
 fi
