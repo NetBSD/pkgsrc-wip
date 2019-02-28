@@ -9,7 +9,7 @@ HOMEPAGE=		https://gnunet.org/
 COMMENT=		Framework for secure P2P networking
 LICENSE=		gnu-agpl-v3
 
-USE_TOOLS+=		msgfmt #autoconf automake
+USE_TOOLS+=		msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
