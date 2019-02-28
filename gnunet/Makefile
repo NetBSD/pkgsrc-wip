@@ -23,7 +23,6 @@ INFO_FILES=		yes
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
