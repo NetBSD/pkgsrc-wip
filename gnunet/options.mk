@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 .endif
 
 # idn is mandatory but idn or idn2 can be used with a preference
-# for idn2. 
+# for idn2.
 .if !empty(PKG_OPTIONS:Midn)
 .include "../../devel/libidn2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn2=${BUILDLINK_PREFIX.libidn2}
