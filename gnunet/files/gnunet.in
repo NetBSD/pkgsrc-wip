@@ -31,6 +31,8 @@ restart_cmd="gnunet_stop ; gnunet_start"
 restart_precmd="gnunet_precmd"
 reload_cmd="gnunet_reload"
 
+gnunet_chdir="${gnunet_home}"
+gnunet_env="HOME=${gnunet_home}"
 
 gnunet_precmd()
 {
