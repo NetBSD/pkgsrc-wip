@@ -1,0 +1,2 @@
+* package gnutls built against libunbound, use this for
+  gnunet and some of its dependencies.

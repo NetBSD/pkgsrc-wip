@@ -1,0 +1,58 @@
+#!@RCD_SCRIPTS_SHELL@
+#
+# PROVIDE: gnunet
+# REQUIRE: DAEMON NETWORKING
+# KEYWORD: shutdown
+#
+# You will need to set some variables in /etc/rc.conf to start gnunet:
+#
+# gnunet=YES
+
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
+
+name="gnunet"
+rcvar=$name
+command="@PREFIX@/bin/gnunet-arm"
+required_files="@PKG_SYSCONFDIR@/gnunet.conf"
+start_cmd="gnunet_start"
+stop_cmd="gnunet_stop"
+pidfile="@PKG_HOME@/${name}.pid"
+restart_cmd="gnunet_stop ; gnunet_start"
+extra_commands="reload"
+
+checkconfig()
+{
+	if [ -n "$(find @PKG_HOME@/.local/share/gnunet -maxdepth 1 -name gnunet.conf -perm +0044)" ]; then
+		echo "@PKG_HOME@/.local/share/gnunet/gnunet.conf"
+		echo "must not be world or group readable, use"
+		echo "chmod 600" 
+		echo "and chown gnunet:gnunet"
+	fi
+	mkdir -p @PKG_HOME@/.cache/gnunet
+}
+
+gnunet_start ()
+{
+	checkconfig || return 1
+	${command} -s -c @PKG_SYSCONFDIR@/gnunet.conf
+}
+
+gnunet_stop()
+{
+	${command} -e -c @PKG_SYSCONFDIR@/gnunet.conf
+	kill `cat ${pidfile}` 2>/dev/null
+	sleep 1
+	rm -rf /tmp/gnunet-gnunet-runtime 2>/dev/null 2>&1
+	rm -rf /tmp/gnunet-system-runtime 2>/dev/null 2>&1
+}
+
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
+then
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	eval ${start_cmd}
+fi

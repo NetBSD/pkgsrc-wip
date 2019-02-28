@@ -1,10 +1,9 @@
 # $NetBSD$
-#
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		doc mdoc ssl libgcrypt idn mysql pgsql tests
-PKG_SUGGESTED_OPTIONS=		doc ssl libgcrypt
-
+PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests
+PKG_SUGGESTED_OPTIONS=		doc
+PLIST_VARS+=			doc
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
 # src/gns/gnunet-gns-proxy-setup-ca
@@ -13,28 +12,22 @@ PKG_SUGGESTED_OPTIONS=		doc ssl libgcrypt
 
 # Parts of the testsuite require python3.7
 .if !empty(PKG_OPTIONS:Mtests)
-.include "../../lang/python37/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+PYTHON_VERSIONS_ACCEPTED=	37
+PYTHON_FOR_BUILD_ONLY=	yes
+BUILD_DEPENDS+=		${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 .endif
 
-# libgcrypt is used in preference to openssl, per gnunet configure.ac
-.if !empty(PKG_OPTIONS:Mlibgcrypt)
-.include "../../security/libgcrypt/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
-CONFIGURE_ARGS+=	--without-crypto
-.endif
-
-.if !empty(PKG_OPTIONS:Mssl)
-.include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-crypto=${BUILDLINK_PREFIX.libgcrypt}
-.endif
-
+# build the doc output. XXX: See README.
 .if !empty(PKG_OPTIONS:Mdoc)
+USE_TOOLS+=		makeinfo
 CONFIGURE_ARGS+=	--enable-documentation
+PLIST.doc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-documentation
 .endif
 
-# build the mdoc output.
+# build the mdoc output. XXX: See README.
 .if !empty(PKG_OPTIONS:Mmdoc)
 BUILD_DEPENDS+=		texi2mdoc-[0-9]*:../../textproc/texi2mdoc
 CONFIGURE_ARGS+=	--enable-texi2mdoc-generation
@@ -42,6 +35,8 @@ CONFIGURE_ARGS+=	--enable-texi2mdoc-generation
 CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 .endif
 
+# idn is mandatory but idn or idn2 can be used with a preference
+# for idn2. 
 .if !empty(PKG_OPTIONS:Midn)
 .include "../../devel/libidn2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn2=${BUILDLINK_PREFIX.libidn2}
@@ -50,12 +45,12 @@ CONFIGURE_ARGS+=	--with-libidn2=${BUILDLINK_PREFIX.libidn2}
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 .endif
 
-### database support
-###
+# database support - they don't exclude other databases,
+# you can have mysql, pgsql, and the default all built in.
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../mk/mysql.buildlink3.mk"
 .endif
+
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
-
