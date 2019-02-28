@@ -23,6 +23,14 @@ pidfile="@PKG_HOME@/${name}.pid"
 restart_cmd="gnunet_stop ; gnunet_start"
 extra_commands="reload"
 
+: ${gnunet_user:=@GNUNET_USER@}
+: ${gnunet_group:=@GNUNET_GROUP@}
+: ${gnunet_home:=@PKG_HOME@}
+: ${gnunetdns_group:=@GNUNETDNS_GROUP@}
+
+gnunet_chdir="${gnunet_home}"
+gnunet_env="HOME=${gnunet_home}"
+
 checkconfig()
 {
 	if [ -n "$(find @PKG_HOME@/.local/share/gnunet -maxdepth 1 -name gnunet.conf -perm +0044)" ]; then
@@ -36,12 +44,17 @@ checkconfig()
 
 gnunet_start ()
 {
-	checkconfig || return 1
-	${command} -s -c @PKG_SYSCONFDIR@/gnunet.conf
+	@ECHO@ "Starting ${name}."
+	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args}'"
+	eval $doit
+	# checkconfig || return 1
+	# ${command} -s -c @PKG_SYSCONFDIR@/gnunet.conf
 }
 
 gnunet_stop()
 {
+	@ECHO@ "Stopping ${name}."
+	doit="@SU@ -m ${gnunet_user} -c '${command}
 	${command} -e -c @PKG_SYSCONFDIR@/gnunet.conf
 	kill `cat ${pidfile}` 2>/dev/null
 	sleep 1
