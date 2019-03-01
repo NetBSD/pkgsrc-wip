@@ -1,0 +1,29 @@
+$NetBSD$
+
+Install clic(1) man page and always quote variables for consistency (and also to
+avoid possible problems if any of them contain spaces).
+
+--- Makefile.orig	2018-08-13 21:06:55.211365239 +0000
++++ Makefile
+@@ -19,15 +19,16 @@ install: ${BIN}
+ 	@mkdir -p "${DESTDIR}${BINDIR}"
+ 	@cp -f clic "${DESTDIR}${BINDIR}/${BIN}"
+ 	@chmod 755 "${DESTDIR}${BINDIR}/${BIN}"
+-	@echo installing manual page to ${DESTDIR}${MANDIR}/man1
+-	@mkdir -p ${DESTDIR}${MANDIR}/man1
+-	@chmod 644 ${DESTDIR}${MANDIR}/man1/clic.1
++	@echo installing manual page to "${DESTDIR}${MANDIR}/man1"
++	@mkdir -p "${DESTDIR}${MANDIR}/man1"
++	@cp -f clic.1 "${DESTDIR}${MANDIR}/man1/clic.1"
++	@chmod 644 "${DESTDIR}${MANDIR}/man1/clic.1"
+ 
+ uninstall:
+ 	@echo removing executable file from "${DESTDIR}${PREFIX}/bin"
+ 	@rm -f "${DESTDIR}${BINDIR}/${BIN}"
+-	@echo removing manual page from ${DESTDIR}${MANDIR}/man1
+-	@rm -f ${DESTDIR}${MANDIR}/man1/clic.1
++	@echo removing manual page from "${DESTDIR}${MANDIR}/man1"
++	@rm -f "${DESTDIR}${MANDIR}/man1/clic.1"
+ 
+ clean:
+ 	rm -f "${BIN}" clic.o clic.eclh clic.cxx
