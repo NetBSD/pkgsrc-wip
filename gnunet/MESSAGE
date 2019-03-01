@@ -12,6 +12,17 @@ and ensure that
 is run at the appropriate time.
 Each GNUnet user should be added to the ${GNUNET_GROUP}.
 
+Each GNUnet user must add a ~/.config/gnunet.conf file
+with these lines:
+
+[arm]
+START_SYSTEM_SERVICES = NO
+START_USER_SERVICES = YES
+
+
+Finally, each user in this multi-user setup, must start
+gnunet with "gnunet-arm -s".
+
 Read the documentation (info gnunet) and provided example
 files as well as the man pages to learn how to customize
 your peer configuration. An online documentation is
