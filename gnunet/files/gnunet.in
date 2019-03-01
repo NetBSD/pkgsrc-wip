@@ -14,8 +14,9 @@ then
 fi
 
 name="gnunet"
-rcvar=$name
+rcvar=${name}
 command="@PREFIX@/bin/gnunet-arm"
+command_args="-c @PKG_SYSCONFDIR@/gnunet.conf"
 required_files="@PKG_SYSCONFDIR@/gnunet.conf"
 pidfile="@PKG_HOME@/${name}.pid"
 : ${gnunet_user:=@GNUNET_USER@}
@@ -50,14 +51,14 @@ gnunet_precmd()
 gnunet_start()
 {
 	@ECHO@ "Starting ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -s -c @PKG_SYSCONFDIR@/gnunet.conf'"
+	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -s'"
 	eval $doit
 }
 
 gnunet_stop()
 {
 	@ECHO@ "Stopping ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -e -c @PKG_SYSCONFDIR@/gnunet.conf'"
+	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -e'"
 	eval $doit
 	# kill `cat ${pidfile}` 2>/dev/null
 	sleep 1
