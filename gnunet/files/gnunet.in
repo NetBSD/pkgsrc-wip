@@ -33,31 +33,37 @@ reload_cmd="gnunet_reload"
 
 gnunet_chdir="${gnunet_home}"
 gnunet_env="HOME=${gnunet_home}"
+gnunet_env="${gnunet_env} USER=${gnunet_user}"
 
 gnunet_precmd()
 {
-	if [ -n "$(find @PKG_HOME@/.local/share/gnunet -maxdepth 1 -name gnunet.conf -perm +0044)" ]; then
-		echo "@PKG_HOME@/.local/share/gnunet/gnunet.conf"
-		echo "must not be world or group readable, use"
-		echo "chmod 600" 
-		echo "and chown @GNUNET_USER@:@GNUNET_GROUP@"
+	if [ -n "$(find @PKG_HOME@/.local/share/gnunet -maxdepth 1 -name gnunet.conf -perm 0044)" ]; then
+		warn "@PKG_HOME@/.local/share/gnunet/gnunet.conf"
+		warn "must not be world or group readable, use"
+		warn "chmod 600" 
+		warn "and chown @GNUNET_USER@:@GNUNET_GROUP@"
+		return 1
 	fi
 	if [ ! -d ${gnunet_home}/.cache/gnunet ]; then
 		mkdir -p ${gnunet_home}/.cache/gnunet
+	fi
+	if [ ! -f ${required_files} ]; then
+		warn "${required_files} does not exist."
+		return 1
 	fi
 }
 
 gnunet_start()
 {
 	@ECHO@ "Starting ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command} -s ${command_args} -c @PKG_SYSCONFDIR@/gnunet.conf'"
+	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -s -c @PKG_SYSCONFDIR@/gnunet.conf'"
 	eval $doit
 }
 
 gnunet_stop()
 {
 	@ECHO@ "Stopping ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command} -e ${command_args} -c @PKG_SYSCONFDIR@/gnunet.conf'"
+	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -e -c @PKG_SYSCONFDIR@/gnunet.conf'"
 	kill `cat ${pidfile}` 2>/dev/null
 	sleep 1
 	rm -rf /tmp/gnunet-gnunet-runtime 2>/dev/null 2>&1
