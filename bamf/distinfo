@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.6 2015/06/06 16:23:52 krytarowski Exp $
 
-SHA1 (bamf-0.5.1.tar.gz) = bb4e07579c965745caf8256272e448ffb8530976
-RMD160 (bamf-0.5.1.tar.gz) = 2374e629ccef11c6c4b51090a52b6d6cf8274033
-SHA512 (bamf-0.5.1.tar.gz) = 0fc3a72f01f408c7cba861404e79e41e3112f8261b7a0ad6b15c43690b3f8063fa654c60c8d10aa4b9ed24b0e6d3047e98bee6a3765ee4f6c0975040ce7dcd26
-Size (bamf-0.5.1.tar.gz) = 575386 bytes
+SHA1 (bamf-0.5.4.tar.gz) = b83a5464f22345394beb2479b943850f751eb9db
+RMD160 (bamf-0.5.4.tar.gz) = 9b94f57efdfa053bbb05345a53ac3571149897d0
+SHA512 (bamf-0.5.4.tar.gz) = 68a587d387ea1190b59207af81c9617aa8ebacb36b8eb6a790c62ccbd534c13bfd7cdb7b3b40a0c9109f5ec8da341b13743362506b080579a56ccf10e340de94
+Size (bamf-0.5.4.tar.gz) = 638756 bytes
