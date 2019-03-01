@@ -1,7 +1,7 @@
 #!@RCD_SCRIPTS_SHELL@
 #
 # PROVIDE: gnunet
-# REQUIRE: DAEMON NETWORKING
+# REQUIRE: DAEMON NETWORKING LOGIN
 # KEYWORD: shutdown
 #
 # You will need to set some variables in /etc/rc.conf to start gnunet:
