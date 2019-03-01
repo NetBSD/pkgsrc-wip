@@ -64,6 +64,7 @@ gnunet_stop()
 {
 	@ECHO@ "Stopping ${name}."
 	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -e -c @PKG_SYSCONFDIR@/gnunet.conf'"
+	eval $doit
 	kill `cat ${pidfile}` 2>/dev/null
 	sleep 1
 	rm -rf /tmp/gnunet-gnunet-runtime 2>/dev/null 2>&1
