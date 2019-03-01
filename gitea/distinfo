@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2017/08/17 01:08:30 gavan Exp $
+$NetBSD$
 
 SHA1 (gitea-1.7.2.tar.gz) = 10ee1404e66d731ebccc1114935f3afdabb6e219
 RMD160 (gitea-1.7.2.tar.gz) = f549a0528dde4444de674d0c278e73a1a99a48fe
