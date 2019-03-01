@@ -37,15 +37,13 @@ gnunet_env="${gnunet_env} USER=${gnunet_user}"
 
 gnunet_precmd()
 {
-	if [ -n "$(find @PKG_HOME@/.local/share/gnunet -maxdepth 1 -name gnunet.conf -perm 0044)" ]; then
-		warn "@PKG_HOME@/.local/share/gnunet/gnunet.conf"
-		warn "must not be world or group readable, use"
-		warn "chmod 600" 
-		warn "and chown @GNUNET_USER@:@GNUNET_GROUP@"
-		return 1
+	if [ -f ${gnunet_home}/.local/share/gnunet/gnunet.conf ]; then
+		@CHMOD@ 0600 @PKG_HOME@/.local/share/gnunet/gnunet.conf
+		@CHOWN@ @GNUNET_USER@:@GNUNET_GROUP@ @PKG_HOME@/.local/share/gnunet/gnunet.conf
 	fi
 	if [ ! -d ${gnunet_home}/.cache/gnunet ]; then
-		mkdir -p ${gnunet_home}/.cache/gnunet
+		@MKDIR@ -p ${gnunet_home}/.cache/gnunet
+		@CHOWN@ @GNUNET_USER@:@GNUNET_GROUP@ ${gnunet_home}/.cache/gnunet
 	fi
 	if [ ! -f ${required_files} ]; then
 		warn "${required_files} does not exist."
