@@ -23,13 +23,11 @@ pidfile="@PKG_HOME@/${name}.pid"
 : ${gnunet_home:=@PKG_HOME@}
 : ${gnunetdns_group:=@GNUNETDNS_GROUP@}
 
-extra_commands="reload"
 start_cmd="gnunet_start"
 start_precmd="gnunet_precmd"
 stop_cmd="gnunet_stop"
 restart_cmd="gnunet_stop ; gnunet_start"
 restart_precmd="gnunet_precmd"
-reload_cmd="gnunet_reload"
 
 gnunet_chdir="${gnunet_home}"
 gnunet_env="HOME=${gnunet_home}"
@@ -63,7 +61,7 @@ gnunet_stop()
 	@ECHO@ "Stopping ${name}."
 	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -e -c @PKG_SYSCONFDIR@/gnunet.conf'"
 	eval $doit
-	kill `cat ${pidfile}` 2>/dev/null
+	# kill `cat ${pidfile}` 2>/dev/null
 	sleep 1
 	rm -rf /tmp/gnunet-gnunet-runtime 2>/dev/null 2>&1
 	rm -rf /tmp/gnunet-system-runtime 2>/dev/null 2>&1
@@ -74,7 +72,8 @@ if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
 	run_rc_command "$1"
 else
 	pidfile="${gnunet_home}/${name}.pid"
-	case "$1" in
+	cmd=${1:-start}
+	case ${cmd} in
 	restart)
 		eval ${restart_precmd}
 		eval ${restart_cmd}
@@ -84,12 +83,14 @@ else
 			eval ${stop_cmd}
 		fi
 		;;
-	reload)
-		eval ${reload_cmd}
-		;;
-	*)
+	start)
 		eval ${start_precmd}
 		eval ${start_cmd}
 		;;
+	*)
+		echo 1>&2 "Usage: $0 [start|stop|restart]"
+		exit 1
+		;;
 	esac
+	exit 0
 fi
