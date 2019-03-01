@@ -1,0 +1,15 @@
+$NetBSD$
+
+Build fix.
+
+--- docs/Makefile.am.orig	2017-02-05 15:15:12.000000000 +0000
++++ docs/Makefile.am
+@@ -13,7 +13,7 @@ plank.1: $(top_builddir)/src/plank $(src
+ 	$(HELP2MAN) $(top_builddir)/src/plank \
+ 		--include $(srcdir)/plank.h2m \
+ 		--libtool --no-info \
+-		--output=$@
++		--no-discard-stderr
+ endif
+ 
+ if HAVE_VALADOC

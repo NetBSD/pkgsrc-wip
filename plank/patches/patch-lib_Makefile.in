@@ -1,0 +1,14 @@
+$NetBSD$
+
+Fix build.
+
+--- lib/Makefile.in.orig	2019-03-01 20:49:05.777159431 +0000
++++ lib/Makefile.in
+@@ -767,7 +767,6 @@ noinst_LTLIBRARIES = libplank-internal.l
+ libplank_internal_la_CFLAGS = \
+ 	$(AM_CFLAGS) \
+ 	-fPIC \
+-	-fvisibility=internal \
+ 	$(NULL)
+ 
+ libplank_internal_la_LDFLAGS = \

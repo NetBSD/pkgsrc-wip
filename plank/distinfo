@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.6 2015/06/06 16:23:52 krytarowski Exp $
+
+SHA1 (plank-0.11.4.tar.xz) = 4a60dd2e446ed16fecaeab3c529fdf83d124278d
+RMD160 (plank-0.11.4.tar.xz) = c9eb35a5bf967eac9e82e8b5c089eaee752f8993
+SHA512 (plank-0.11.4.tar.xz) = 178d78ecb6a6cc66237b4024a10db135626cd1623717c8e218f0ba3b630af1868bc8c174b5c87ab7762c3b62837d2554cadd44b2731edc03f965441d48ccaa77
+Size (plank-0.11.4.tar.xz) = 1022640 bytes
+SHA1 (patch-configure) = 469978f44015b81880bb0249034684a196774ec8
+SHA1 (patch-docs_Makefile.am) = 3ecb420aaf6ff6d346792be4e201e47b6947ebc8
+SHA1 (patch-docs_Makefile.in) = 0d189a3d619bc441ce2ad3e8ba8e354c6999d691
+SHA1 (patch-lib_Makefile.in) = d5d929ad332d5fec859eb169f3e65b8c80a5bd31

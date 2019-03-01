@@ -1,0 +1,15 @@
+$NetBSD$
+
+Portabilty fix.
+
+--- configure.orig	2017-03-27 19:50:51.000000000 +0000
++++ configure
+@@ -18269,7 +18269,7 @@ else
+   have_dbus_launch=no
+ fi
+ fi
+- if test "x$have_xvfb_run" == "xyes" -a "x$have_dbus_launch" == "xyes"; then
++ if test "x$have_xvfb_run" = "xyes" -a "x$have_dbus_launch" = "xyes"; then
+   HAVE_HEADLESS_TESTS_TRUE=
+   HAVE_HEADLESS_TESTS_FALSE='#'
+ else
