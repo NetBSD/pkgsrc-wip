@@ -51,14 +51,14 @@ gnunet_precmd()
 gnunet_start()
 {
 	@ECHO@ "Starting ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -s'"
+	doit="@SU@ -m ${gnunet_user} -c '${gnunet_env} ${command} ${command_args} -s'"
 	eval $doit
 }
 
 gnunet_stop()
 {
 	@ECHO@ "Stopping ${name}."
-	doit="@SU@ -m ${gnunet_user} -c '${command} ${command_args} -e'"
+	doit="@SU@ -m ${gnunet_user} -c '${gnunet_env} ${command} ${command_args} -e'"
 	eval $doit
 	# kill `cat ${pidfile}` 2>/dev/null
 	sleep 1
