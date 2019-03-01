@@ -29,9 +29,7 @@ stop_cmd="gnunet_stop"
 restart_cmd="gnunet_stop ; gnunet_start"
 restart_precmd="gnunet_precmd"
 
-gnunet_chdir="${gnunet_home}"
-gnunet_env="HOME=${gnunet_home}"
-gnunet_env="${gnunet_env} USER=${gnunet_user}"
+gnunet_env="HOME=${gnunet_home} USER=${gnunet_user}"
 
 gnunet_precmd()
 {
