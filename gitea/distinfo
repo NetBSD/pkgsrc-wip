@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (gitea-1.7.2.tar.gz) = 10ee1404e66d731ebccc1114935f3afdabb6e219
-RMD160 (gitea-1.7.2.tar.gz) = f549a0528dde4444de674d0c278e73a1a99a48fe
-SHA512 (gitea-1.7.2.tar.gz) = 8472effb58cc0c416b229ae3724c4e914afd81f058b06ce0c6ea68667a77eaa122a78b928fd5d4cb2e1b00eac15ec76825cd800c769fdc88796a535206a4dff6
-Size (gitea-1.7.2.tar.gz) = 20841049 bytes
+SHA1 (gitea-1.7.3.tar.gz) = 3aa1066c385fc10304bd9e2f441c8c5e8f529418
+RMD160 (gitea-1.7.3.tar.gz) = 0921506b38b759fb9787804e37dc01ae24681957
+SHA512 (gitea-1.7.3.tar.gz) = 802d4b7c60810a22c0625cb69d2cc83fbb2ff4e0b520c20e2119403d6cfdcdda7ee95bd3a8ab39f3668a259fc0ee5aefdbead80876023a3f6095a37d482ee442
+Size (gitea-1.7.3.tar.gz) = 20859030 bytes
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap.go) = fb6036fca52ad3ecf779080849a015fee640aba5
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__solaris.go) = f4341dfab2b452f926353350ce861aa75e3e47f9
 SHA1 (patch-vendor_github.com_edsrzf_mmap-go_mmap__sys.go) = 4e6121157bbd4072feaca297c081efa49379a57c

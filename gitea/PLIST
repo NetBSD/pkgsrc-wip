@@ -1855,6 +1855,7 @@ share/gitea/public/vendor/plugins/emojify/images/yum.png
 share/gitea/public/vendor/plugins/emojify/images/zap.png
 share/gitea/public/vendor/plugins/emojify/images/zero.png
 share/gitea/public/vendor/plugins/emojify/images/zzz.png
+share/gitea/public/vendor/plugins/es6-promise/es6-promise.auto.min.js
 share/gitea/public/vendor/plugins/gitgraph/LICENSE
 share/gitea/public/vendor/plugins/gitgraph/gitgraph.css
 share/gitea/public/vendor/plugins/gitgraph/gitgraph.js
