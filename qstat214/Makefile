@@ -6,6 +6,7 @@ PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=multiplay/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
+PKGNAME=	qstat-2.14
 
 MAINTAINER=	pkgls@gmx.net
 HOMEPAGE=	https://github.com/multiplay/qstat/
