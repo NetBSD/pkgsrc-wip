@@ -3837,7 +3837,6 @@ SUBDIR+=	py-rpaths
 SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rpyc
 SUBDIR+=	py-rql
-SUBDIR+=	py-rsistent
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-safersympify
 SUBDIR+=	py-safety
