@@ -1,33 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2015/02/08 21:19:52 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	givaro-3.8.0
+DISTNAME=	givaro-4.0.4
 CATEGORIES=	math
-MASTER_SITES=	https://forge.imag.fr/frs/download.php/592/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=linbox-team/}
+GITHUB_RELEASE=	v4.0.4
 
-MAINTAINER=	esg@sdf.lonestar.org
-HOMEPAGE=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/
+MAINTAINER=	jihbed.research@gmail.com
+HOMEPAGE=	https://github.com/linbox-team/givaro/
 COMMENT=	C++ library for arithmetic and algebraic computations
-LICENSE=	gnu-gpl-v3
+LICENSE=	cecill-2.0
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=yes
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+PKGCONFIG_OVERRIDE+=	givaro.pc.in
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/FiniteField
-	${INSTALL_DATA} ${WRKSRC}/examples/FiniteField/*.C \
-		${DESTDIR}${EGDIR}/FiniteField
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/Integer
-	${INSTALL_DATA} ${WRKSRC}/examples/Integer/*.C  \
-		${DESTDIR}${EGDIR}/Integer
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/Polynomial
-	${INSTALL_DATA} ${WRKSRC}/examples/Polynomial/*.C \
-		${DESTDIR}${EGDIR}/Polynomial
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/Rational
-	${INSTALL_DATA} ${WRKSRC}/examples/Rational/*.C \
-		${DESTDIR}${EGDIR}/Rational
-
-CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
