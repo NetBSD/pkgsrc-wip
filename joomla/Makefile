@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.3 2018/07/20 03:03:57 wen Exp $
 
-DISTNAME=	Joomla_3.8.10-Stable-Full_Package
-PKGNAME=	joomla-3.8.10
+DISTNAME=	Joomla_3.9.3-Stable-Full_Package
+PKGNAME=	joomla-3.9.3
 CATEGORIES=	www
-MASTER_SITES=	https://downloads.joomla.org/cms/joomla3/3-8-10/
+MASTER_SITES=	https://downloads.joomla.org/cms/joomla3/3-9-3/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wen@NetBSD.org
