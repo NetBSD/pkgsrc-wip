@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/03/14 21:40:13 bubuchka Exp $
 
-SHA1 (Data-Types-0.16.tar.gz) = 48d889b88cebcd318b1627f7cd386b6c0db16c5b
-RMD160 (Data-Types-0.16.tar.gz) = d771d082b4b40c4697c638b13234b63ddad1f39f
-SHA512 (Data-Types-0.16.tar.gz) = aa214088872c0069e9118a331584076c0988a7ae5e93bc9c21ffbe402955e58d970fd9231409f30246ef91ceb663d0d47a913274451daba6769cbd987e942008
-Size (Data-Types-0.16.tar.gz) = 7914 bytes
+SHA1 (Data-Types-0.17.tar.gz) = 0434fe61f7422b735f899f98d49fc633242a7f7d
+RMD160 (Data-Types-0.17.tar.gz) = aef5489b70a8ca5a3506d1cc87e6b7d513dfce75
+SHA512 (Data-Types-0.17.tar.gz) = 4e496005f744251365fe43719b00ba89fe5135e04c737b166247bc0b60955b62ddc381d0e837a958aca51b0c4699c2d51a2d02901a4368fb60a31a9952deb315
+Size (Data-Types-0.17.tar.gz) = 7942 bytes
