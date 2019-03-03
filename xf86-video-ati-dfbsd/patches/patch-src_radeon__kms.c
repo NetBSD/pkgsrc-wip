@@ -6,9 +6,9 @@ commit	3c4c0213c11d623cba7adbc28dde652694f2f758
 
 https://cgit.freedesktop.org/xorg/driver/xf86-video-ati
 
---- src/radeon_kms.c.orig	2018-09-14 15:56:09.000000000 +0000
+--- src/radeon_kms.c.orig	2019-02-11 11:12:34.000000000 +0000
 +++ src/radeon_kms.c
-@@ -212,10 +212,12 @@ static void RADEONFreeRec(ScrnInfoPtr pS
+@@ -216,10 +216,12 @@ static void RADEONFreeRec(ScrnInfoPtr pS
  	    info->accel_state = NULL;
  	}
  
@@ -19,9 +19,9 @@ https://cgit.freedesktop.org/xorg/driver/xf86-video-ati
  #endif
 +#endif /* !REVERT_GBM_BO */
  
- 	pEnt = info->pEnt;
- 	free(pScrn->driverPrivate);
-@@ -2269,10 +2271,14 @@ Bool RADEONScreenInit_KMS(ScreenPtr pScr
+ 	pRADEONEnt->scrn[info->instance_id] = NULL;
+ 	pRADEONEnt->num_scrns--;
+@@ -2332,10 +2334,14 @@ Bool RADEONScreenInit_KMS(ScreenPtr pScr
  	return FALSE;
      }
  
@@ -36,7 +36,7 @@ https://cgit.freedesktop.org/xorg/driver/xf86-video-ati
  
      if (info->r600_shadow_fb) {
  	info->fb_shadow = calloc(1,
-@@ -2743,6 +2749,23 @@ static Bool radeon_setup_kernel_mem(Scre
+@@ -2807,6 +2813,23 @@ static Bool radeon_setup_kernel_mem(Scre
              }
          }
  
@@ -60,7 +60,7 @@ https://cgit.freedesktop.org/xorg/driver/xf86-video-ati
  	if (!info->use_glamor) {
  #if X_BYTE_ORDER == X_BIG_ENDIAN
  	    switch (cpp) {
-@@ -2760,6 +2783,7 @@ static Bool radeon_setup_kernel_mem(Scre
+@@ -2824,6 +2847,7 @@ static Bool radeon_setup_kernel_mem(Scre
  	    if (tiling_flags)
  		radeon_bo_set_tiling(info->front_buffer->bo.radeon, tiling_flags, pitch);
  	}
