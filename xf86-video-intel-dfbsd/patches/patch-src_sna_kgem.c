@@ -8,7 +8,14 @@ x11-drivers/xf86-video-intel29
 Additional patch for DragonFly because struct drm_i915_gem_mmap
 has a field flags.
 
---- src/sna/kgem.c.orig	2019-01-10 10:01:58.000000000 +0000
+https://bz-attachments.freebsd.org/attachment.cgi?id=20233
+
+Fix SNA for drm-v4.11 or later by disabling I915_USERPTR_UNSYNCHRONIZED
+
+I915_USERPTR_UNSYNCHRONIZED is broken since drm-v4.11
+https://github.com/FreeBSDDesktop/kms-drm/issues/32
+
+--- src/sna/kgem.c.orig	2019-02-21 22:26:50.000000000 +0000
 +++ src/sna/kgem.c
 @@ -29,6 +29,11 @@
  #include "config.h"
@@ -22,11 +29,17 @@ has a field flags.
  #include "sna.h"
  #include "sna_reg.h"
  
-@@ -71,7 +76,11 @@ search_snoop_cache(struct kgem *kgem, un
+@@ -69,9 +74,17 @@ search_snoop_cache(struct kgem *kgem, unsigned int num
+ #define DBG_NO_CPU 0
+ #define DBG_NO_CREATE2 0
  #define DBG_NO_USERPTR 0
++#if defined(SET_DBG_NO_UNSYNCHRONIZED_USERPTR)
++#define DBG_NO_UNSYNCHRONIZED_USERPTR 1
++#else
  #define DBG_NO_UNSYNCHRONIZED_USERPTR 0
++#endif
  #define DBG_NO_COHERENT_MMAP_GTT 0
-+#if defined(__DragonFly__)
++#if defined(SET_DBG_NO_LLC)
 +#define DBG_NO_LLC 1
 +#else
  #define DBG_NO_LLC 0
@@ -34,7 +47,7 @@ has a field flags.
  #define DBG_NO_SEMAPHORES 0
  #define DBG_NO_MADV 0
  #define DBG_NO_UPLOAD_CACHE 0
-@@ -682,7 +691,11 @@ retry_wc:
+@@ -682,7 +695,11 @@ retry_wc:
  
  static void *__kgem_bo_map__cpu(struct kgem *kgem, struct kgem_bo *bo)
  {
@@ -46,7 +59,7 @@ has a field flags.
  	int err;
  
  	VG_CLEAR(arg);
-@@ -691,7 +704,12 @@ static void *__kgem_bo_map__cpu(struct k
+@@ -691,7 +708,12 @@ static void *__kgem_bo_map__cpu(struct kgem *kgem, str
  retry:
  	arg.handle = bo->handle;
  	arg.size = bytes(bo);
@@ -59,7 +72,7 @@ has a field flags.
  		DBG(("%s: failed %d, throttling/cleaning caches\n",
  		     __FUNCTION__, err));
  		assert(err != -EINVAL || bo->prime);
-@@ -3313,11 +3331,21 @@ bool __kgem_ring_is_idle(struct kgem *kg
+@@ -3313,11 +3335,21 @@ bool __kgem_ring_is_idle(struct kgem *kgem, int ring)
  	if (rq) {
  		struct kgem_request *tmp;
  

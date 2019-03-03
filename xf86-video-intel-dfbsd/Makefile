@@ -3,8 +3,14 @@
 # Use the commit id to obtain a snapshot of the form: 
 # http://cgit.freedesktop.org/xorg/driver/xf86-video-intel/snapshot/xf86-video-intel-78d7a09b0343829c81257024b164b0b3764392ac.tar.xz
 
+# 2019-03-01 sna: Switch back to hwcursor on the next cursor update
+COMMIT_ID=	6afed33b2d673d88674f0c76efe500ae414e8e1b
+
+# 2019-02-21 Fix build on i686
+# COMMIT_ID=	9e6e003e3468dca674ac848e2669af973da02fd4
+
 # 2019-01-21 sna/uxa: Fix colormap handling at screen depth 30. (v2)
-COMMIT_ID=	33ee0c3b21ea279e08d0863fcb2e874f0974b00e
+# COMMIT_ID=	33ee0c3b21ea279e08d0863fcb2e874f0974b00e
 
 # 2019-01-10 sna: Switch off old outputs on topology changes
 # COMMIT_ID=	c37c7ee0748ba828ec5d2c7304cd2a17af2c8109	
@@ -66,12 +72,21 @@ SUBST_SED.jmp_buf=		-e 's@[[:<:]]jmp_buf[[:>:]]@sigjmp_buf@g'
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-video-intel
 PKG_SUPPORTED_OPTIONS=	uxa dri3 debug
+PKG_SUPPORTED_OPTIONS+=	set_dbg_no_unsynchronized_userptr
+PKG_SUPPORTED_OPTIONS+=	set_dbg_no_llc
 PKG_SUGGESTED_OPTIONS=
+# PKG_SUGGESTED_OPTIONS+=	set_dbg_no_unsynchronized_userptr
+# PKG_SUGGESTED_OPTIONS+=	set_dbg_no_llc
 
 CONFIGURE_ARGS.FreeBSD+=	--disable-udev
 
 .if ${OPSYS} == "FreeBSD"
-PKG_SUGGESTED_OPTIONS+=	uxa
+# PKG_SUGGESTED_OPTIONS+=	uxa
+PKG_SUGGESTED_OPTIONS+=	set_dbg_no_unsynchronized_userptr
+.endif
+
+.if ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+=	set_dbg_no_llc
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -92,6 +107,14 @@ CONFIGURE_ARGS+=	--enable-dri3
 .if !empty(PKG_OPTIONS:Mdebug)
 CFLAGS+=		-O0 -g3
 CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+.if !empty(PKG_OPTIONS:Mset_dbg_no_unsynchronized_userptr)
+CPPFLAGS+=	-DSET_DBG_NO_UNSYNCHRONIZED_USERPTR
+.endif
+
+.if !empty(PKG_OPTIONS:Mset_dbg_no_llc)
+CPPFLAGS+=	-DSET_DBG_NO_LLC
 .endif
 
 pre-configure:

@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.1 2015/04/01 13:11:38 tnn2 Exp $
 
-SHA1 (xf86-video-intel-33ee0c3b21ea279e08d0863fcb2e874f0974b00e.tar.xz) = c6890dd1d7e1bdd787ae0d473cb855929168684d
-RMD160 (xf86-video-intel-33ee0c3b21ea279e08d0863fcb2e874f0974b00e.tar.xz) = 09c2927b027c8d639fc8d9a97cce1f77d5e349a1
-SHA512 (xf86-video-intel-33ee0c3b21ea279e08d0863fcb2e874f0974b00e.tar.xz) = b63ce62b1406e9e576aab7db4174b0b40c6074590d32166d98eac7b5019671f47c5ab6199e887b442a9db7daaf2e7df908ec8c4d4016e8c89fc28d750c169622
-Size (xf86-video-intel-33ee0c3b21ea279e08d0863fcb2e874f0974b00e.tar.xz) = 955256 bytes
+SHA1 (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = acec51bc49102bd071ebd1ffd14eb4730dc4cdc2
+RMD160 (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = bee1e0526fb569a5942e45cacb962d7d81604a6a
+SHA512 (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = 37572630196ee124097ffbfcd6f0e77c9701ff46154a213a6a0778cd1ca4f42fe9da598e948bc167eac6af3ef8097c101f39b1569b3141fb7e0dd0e1997955df
+Size (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = 955096 bytes
 SHA1 (patch-src_intel__device.c) = b0a1f775d3e66605e9a1d94745bc4f7a1fba179e
 SHA1 (patch-src_intel__list.h) = 98ba59c22bc7109f95666291ca1aac19189999aa
-SHA1 (patch-src_sna_kgem.c) = bcc7bf2fded99b5f5b6920f610c30b0bbc72668d
+SHA1 (patch-src_sna_kgem.c) = 57341a2fba5cabe70b20a4a0b2699e655e2d61d7
 SHA1 (patch-src_sna_sna__threads.c) = 54a3bd0de878009335f08b3f41812540a72f5d4d
 SHA1 (patch-src_sna_sna__video.c) = ee732a2c73997cfdf5c5b936fac065a0224687af
