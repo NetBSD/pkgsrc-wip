@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.28 2018/05/11 13:47:35 wiz Exp $
-@comment bin/X
+bin/X
 bin/Xnest
 bin/Xorg
 bin/Xvfb
@@ -34,7 +34,7 @@ include/xorg/dixgrabs.h
 include/xorg/dixstruct.h
 ${PLIST.dri}include/xorg/dri.h
 ${PLIST.dri}include/xorg/dri2.h
-${PLIST.dri3}include/xorg/dri3.h
+${PLIST.dri}include/xorg/dri3.h
 ${PLIST.dri}include/xorg/dristruct.h
 include/xorg/edid.h
 include/xorg/events.h

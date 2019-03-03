@@ -7,3 +7,7 @@ to be accepted.
 
 Port devd patches for 1.19.6 that have not been merged
 into FreeBSD ports, supports evdev.
+
+Get modular-xorg-xephyr to build again.
+
+Get xf86-video-nv, xf86-video-vmware to build again.

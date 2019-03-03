@@ -2,13 +2,21 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace
-PKG_SUPPORTED_OPTIONS+=	revert_flink
-PKG_SUPPORTED_OPTIONS+=	revert_randr_lease
-PKG_SUPPORTED_OPTIONS+= allow_unprivileged
-PKG_SUPPORTED_OPTIONS+= suid_wrapper
-PKG_SUPPORTED_OPTIONS+= xkb_evdev
 PKG_SUGGESTED_OPTIONS=	inet6
-# PKG_SUGGESTED_OPTIONS+= suid_wrapper
+.if ${X11_TYPE} == "modular"
+PKG_SUPPORTED_OPTIONS+=	dri
+PKG_SUGGESTED_OPTIONS+=	dri
+.endif
+
+PKG_SUPPORTED_OPTIONS+= devd
+PKG_SUPPORTED_OPTIONS+= revert_flink
+PKG_SUPPORTED_OPTIONS+= revert_randr_lease
+PKG_SUPPORTED_OPTIONS+= allow_unprivileged
+PKG_SUPPORTED_OPTIONS+= xkb_evdev
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+= devd
+.endif
 
 .if ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	revert_flink
@@ -19,37 +27,11 @@ PKG_SUGGESTED_OPTIONS+=	revert_randr_lease
 PKG_SUGGESTED_OPTIONS+=	allow_unprivileged
 .endif
 
-PKG_SUPPORTED_OPTIONS+=	devd
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= devd
-.endif
-
-.if ${X11_TYPE} == "modular"
-PKG_SUPPORTED_OPTIONS+=	dri
-PKG_SUGGESTED_OPTIONS+=	dri
-PKG_SUPPORTED_OPTIONS+=	dri3
-# dri3 requires kernel support for dma_buf
-.if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	dri3
-.endif
-.endif
-
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		dri dtrace
-PLIST_VARS+=		dri3
 
 .if !empty(PKG_OPTIONS:Mdri)
-
-.if !empty(PKG_OPTIONS:Mdri3)
-CONFIGURE_ARGS+=	--enable-dri3
-MESON_ARGS+=		-Ddri3=true
-PLIST.dri3=		yes
-.else
-CONFIGURE_ARGS+=	--disable-dri3
-MESON_ARGS+=		-Ddri3=false
-.endif
-
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -59,11 +41,13 @@ BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-dri2
+CONFIGURE_ARGS+=	--enable-dri3
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-glamor
 CONFIGURE_ARGS+=	--enable-present
 MESON_ARGS+=		-Ddri1=true
 MESON_ARGS+=		-Ddri2=true
+MESON_ARGS+=		-Ddri3=true
 MESON_ARGS+=		-Dglx=true
 MESON_ARGS+=		-Dglamor=true
 .else
@@ -142,10 +126,6 @@ SUBST_SED.lease+=		 -e 's|XF86_LEASE_VERSION|REVERT_XF86_LEASE_VERSION|g'
 
 .if !empty(PKG_OPTIONS:Mallow_unprivileged)
 CPPFLAGS+=	-DALLOW_UNPRIVILEGED
-.endif
-
-.if !empty(PKG_OPTIONS:Msuid_wrapper)
-MESON_ARGS+=	-Dsuid_wrapper=true
 .endif
 
 .if !empty(PKG_OPTIONS:Mxkb_evdev)

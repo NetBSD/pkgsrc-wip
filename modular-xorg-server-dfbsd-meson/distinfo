@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.92 2018/10/26 10:20:12 maya Exp $
+$NetBSD: distinfo,v 1.94 2019/02/28 12:32:39 tnn Exp $
 
-SHA1 (xserver-12769c516d9356bd92f90e2f53a4853dbfdc4aed.tar.xz) = eebbf29bf4cae996a18b7f4b08e65d374634791e
-RMD160 (xserver-12769c516d9356bd92f90e2f53a4853dbfdc4aed.tar.xz) = 1e681226b67436f618bbd6637d2814580327992c
-SHA512 (xserver-12769c516d9356bd92f90e2f53a4853dbfdc4aed.tar.xz) = 907138bde5c0aaaed61848d7d7ffab4f150d5a876e0541dbc8542558d12c693a0dcc6b05cbaca7868d1b0122f12e7d2e0468fc5811cb4be49478df1c8a5e1b1a
-Size (xserver-12769c516d9356bd92f90e2f53a4853dbfdc4aed.tar.xz) = 3097256 bytes
+SHA1 (xserver-0ec9a13c2a207e98e2dd6b352552c0e069af0727.tar.xz) = 0a0953659df36258e2f0adfea0d183ad16b7a0ac
+RMD160 (xserver-0ec9a13c2a207e98e2dd6b352552c0e069af0727.tar.xz) = cb04f4fc07f3a137032f7fd2d62db9e02ed28ecd
+SHA512 (xserver-0ec9a13c2a207e98e2dd6b352552c0e069af0727.tar.xz) = 8bb933dccdf7b854faa3f03bf3c5c9a6cdc477dc28cc696278847e33c55a4ff195727600fca9caa3a17917f4ebe7120b3c93536204dca5f55fe0cbfa3a235f5e
+Size (xserver-0ec9a13c2a207e98e2dd6b352552c0e069af0727.tar.xz) = 3097888 bytes
 SHA1 (patch-config_config-backends.h) = f44868caa51e972a76949f73ac6083640af2c351
 SHA1 (patch-config_config.c) = 5a3fe4cb6c2170335ab547f438386cff77a9c152
 SHA1 (patch-config_devd.c) = d8c534837b1c448563c363465570b9dc403f19fa
@@ -31,3 +31,4 @@ SHA1 (patch-hw_xfree86_xorg-wrapper.c) = d1178c088307cd3781f8989522bab570b551ff5
 SHA1 (patch-include_meson.build) = 8e7cfb8140e325279fbd8fcebc165b9ddcf4c32d
 SHA1 (patch-randr_randr.c) = eb44a07770ca7308d706aa2324408bb8c6c6b7ba
 SHA1 (patch-randr_rrlease.c) = 82ace923fe7b65f4cf1be2ff243eabd886f3109e
+SHA1 (patch-test_xtest.c) = 77622ef481e91e64b3a6dd64b8579404f33ec88f

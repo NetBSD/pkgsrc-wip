@@ -1,26 +1,23 @@
-# $NetBSD: Makefile.common,v 1.26 2018/10/25 22:40:57 maya Exp $
+# $NetBSD: Makefile.common,v 1.27 2019/02/27 16:32:58 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-# 2019-02-25	os-support/solaris: Set IOPL for input thread too
-COMMIT_ID=	12769c516d9356bd92f90e2f53a4853dbfdc4aed
+# 2019-02-27	Revert "gitlab-ci: Only run docker-image stage if relevant source files change"
+COMMIT_ID=	0ec9a13c2a207e98e2dd6b352552c0e069af0727
 
-# 2019-01-30	ramdac: Remove core ramdac code
-# COMMIT_ID=	8f8d358bad2d33de36686e8405ade8b5b921cafd
+# 2019-02-25	os-support/solaris: Set IOPL for input thread too
+# COMMIT_ID=	12769c516d9356bd92f90e2f53a4853dbfdc4aed
 
 PORTNAME=	xserver
 
 DISTNAME=	${PORTNAME}-${COMMIT_ID}
-PKGNAME=	modular-xorg-server-1.20.4
-# PKGREVISION=	2
-CATEGORIES=	x11
-MASTER_SITES=	http://cgit.freedesktop.org/xorg/${PORTNAME}/snapshot/
-EXTRACT_SUFX=	.tar.xz
 
-# XORG_VERSION=	1.20.3
-# CATEGORIES=	x11
+XORG_VERSION=	1.20.4
+CATEGORIES=	x11
 # MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 # EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://cgit.freedesktop.org/xorg/${PORTNAME}/snapshot/
+EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	http://xorg.freedesktop.org/
 LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
@@ -43,7 +40,8 @@ XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
-MESON_ARGS+=		-Dlog_dir=${VARBASE:Q}/log
+# MESON_ARGS+=		-Dlog_dir=${VARBASE:Q}/log
+MESON_ARGS+=		-Dlocalstatedir=${VARBASE:Q}
 MESON_ARGS+=		-Dxkb_output_dir=${XKB_OUTPUT_DIR:Q}
 
 .if !empty(USE_TOOLS:Mauto*)
@@ -86,21 +84,17 @@ CONFIGURE_ARGS+=	--disable-config-hal
 CONFIGURE_ARGS+=	--disable-dmx
 MESON_ARGS+=		-Dhal=false
 MESON_ARGS+=		-Ddmx=false
-.if ${OPSYS} != "FreeBSD" &&  ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--disable-xwin
 MESON_ARGS+=		-Dxwin=false
-.endif
 CONFIGURE_ARGS+=	--disable-xephyr
 MESON_ARGS+=		-Dxephyr=false
 
-.if ${OPSYS} != "FreeBSD" &&  ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--disable-kdrive
 #CONFIGURE_ARGS+=	--disable-kdrive-vesa
 CONFIGURE_ARGS+=	--enable-xtrans-send-fds
 
 CONFIGURE_ARGS+=	--with-int10=x86emu
 MESON_ARGS+=		-Dint10=x86emu
-.endif
 
 .if ${OPSYS} != "Linux"
 MESON_ARGS+=		-Dudev=false
@@ -164,6 +158,10 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 MESON_ARGS+=	-Dsecure-rpc=false
 .endif
 
+# .if ${OPSYS} == "FreeBSD"
+# CFLAGS+=	-Wno-missing-braces
+# .endif
+
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 # Workaround glamor lockups when drm-devel-kmod (4.15-4.17) is installed
 # with partial reverting of commit
@@ -186,16 +184,19 @@ BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.21.8
 BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
-# .if ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig" || ${OPSYS} == "MirBSD"
+# .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig" || ${OPSYS} == "MirBSD"
 # CONFIGURE_ARGS+=	--with-sha1=libc
 # .else
 .include "../../security/nettle/buildlink3.mk"
-# CONFIGURE_ARGS+=	--with-sha1=libnettle
+CONFIGURE_ARGS+=	--with-sha1=libnettle
 # .endif
 
-.if ${OPSYS} == "FreeBSD"
-CFLAGS+=	-Wno-missing-braces
-.endif
+# Autotools
+# pre-configure:
+#	cd ${WRKSRC} && autoreconf -vif
+
+# Meson
+.include "../../devel/py-meson/build.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
