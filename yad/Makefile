@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	robn@gmx.com
 HOMEPAGE=	https://downloads.sourceforge.net/yad-dialog/
-COMMENT=	YAD is a tool for creating graphical dialogs from shell scripts
+COMMENT=	Tool for creating graphical dialogs from shell scripts
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes

@@ -15,7 +15,11 @@ PKG_SUGGESTED_OPTIONS=		gtk2
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)
+CONFIGURE_ARGS+=	--enable-spell
+CONFIGURE_ARGS+=	--enable-sourceview
 CONFIGURE_ARGS+=	--with-gtk=gtk3
+.include "../../textproc/gtkspell3/buildlink3.mk"
 .include "../../www/webkit24-gtk3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .endif
