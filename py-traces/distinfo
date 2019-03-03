@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (traces-0.4.2.tar.gz) = 492713392fef467ea363729419b4f5e65c94004d
+RMD160 (traces-0.4.2.tar.gz) = 3a618847aff659e7f2d0ee8d11b9f8925fb33519
+SHA512 (traces-0.4.2.tar.gz) = b34a09a5940f19ae66bfaf0e6f8ae23f0810622097d4401e38238270edd3e2445ddd909cb16e3a25848ccc1447dd47f3c72bcf69665125db15dbe1f4a84e085e
+Size (traces-0.4.2.tar.gz) = 137617 bytes
+SHA1 (patch-setup.py) = c80088f3786d60d73d502fcf82ba5dcfeaf2b0ef

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (mapy_package-0.15.0.tar.gz) = ceda4cc77d1d7725edb628197aa582637c487f63
+RMD160 (mapy_package-0.15.0.tar.gz) = 896b89bb03e5f5d8ba41338bd51a40a45a5e4119
+SHA512 (mapy_package-0.15.0.tar.gz) = 734790540ed973235c25b287ef30983850421f81043651b891d2ea5f3f3f4f7d636b4821ffabb7dbd5e6335713407904ff8f8415237b95d2e8e3b987de15f638
+Size (mapy_package-0.15.0.tar.gz) = 41873 bytes
+SHA1 (patch-setup.py) = 76fb0ffd22c66c50e2a362f89fb649b9e61cb571

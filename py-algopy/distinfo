@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/08/31 22:13:21 jihbed Exp $
+$NetBSD$
 
-SHA1 (algopy-0.5.0.tar.gz) = 205a0a589daf8942e07b28f11d53eab5298f36dc
-RMD160 (algopy-0.5.0.tar.gz) = aa1a4f68ef57dc3e3d0112fd770152c9494b20f2
-Size (algopy-0.5.0.tar.gz) = 136197 bytes
+SHA1 (algopy-0.5.7.zip) = 415f6c57521dff621ed8627106bd0588f94342b1
+RMD160 (algopy-0.5.7.zip) = afde10c39cdb717c11586c6f19710581f646b05c
+SHA512 (algopy-0.5.7.zip) = 1d2cb62154f7bc344605e2db1d90125a76b93e99628056ef007a27b05546d0af3e1d52587dc3217d03118f8dddac298742c303ae9d39185ab33375e56ae3a1ba
+Size (algopy-0.5.7.zip) = 189516 bytes

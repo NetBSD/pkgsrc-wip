@@ -1,11 +1,13 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/algopy/__init__.py
 ${PYSITELIB}/algopy/__init__.pyc
 ${PYSITELIB}/algopy/__init__.pyo
+${PYSITELIB}/algopy/_npversion.py
+${PYSITELIB}/algopy/_npversion.pyc
+${PYSITELIB}/algopy/_npversion.pyo
+${PYSITELIB}/algopy/_six.py
+${PYSITELIB}/algopy/_six.pyc
+${PYSITELIB}/algopy/_six.pyo
 ${PYSITELIB}/algopy/base_type.py
 ${PYSITELIB}/algopy/base_type.pyc
 ${PYSITELIB}/algopy/base_type.pyo
@@ -15,6 +17,12 @@ ${PYSITELIB}/algopy/compound.pyo
 ${PYSITELIB}/algopy/exact_interpolation.py
 ${PYSITELIB}/algopy/exact_interpolation.pyc
 ${PYSITELIB}/algopy/exact_interpolation.pyo
+${PYSITELIB}/algopy/fft/__init__.py
+${PYSITELIB}/algopy/fft/__init__.pyc
+${PYSITELIB}/algopy/fft/__init__.pyo
+${PYSITELIB}/algopy/fft/fft.py
+${PYSITELIB}/algopy/fft/fft.pyc
+${PYSITELIB}/algopy/fft/fft.pyo
 ${PYSITELIB}/algopy/globalfuncs.py
 ${PYSITELIB}/algopy/globalfuncs.pyc
 ${PYSITELIB}/algopy/globalfuncs.pyo
@@ -60,6 +68,9 @@ ${PYSITELIB}/algopy/tests/test_globalfuncs.pyo
 ${PYSITELIB}/algopy/tests/test_linalg.py
 ${PYSITELIB}/algopy/tests/test_linalg.pyc
 ${PYSITELIB}/algopy/tests/test_linalg.pyo
+${PYSITELIB}/algopy/tests/test_npversion.py
+${PYSITELIB}/algopy/tests/test_npversion.pyc
+${PYSITELIB}/algopy/tests/test_npversion.pyo
 ${PYSITELIB}/algopy/tests/test_nthderiv.py
 ${PYSITELIB}/algopy/tests/test_nthderiv.pyc
 ${PYSITELIB}/algopy/tests/test_nthderiv.pyo
@@ -90,6 +101,9 @@ ${PYSITELIB}/algopy/tracer/tests/test_output/__init__.pyo
 ${PYSITELIB}/algopy/tracer/tests/test_tracer.py
 ${PYSITELIB}/algopy/tracer/tests/test_tracer.pyc
 ${PYSITELIB}/algopy/tracer/tests/test_tracer.pyo
+${PYSITELIB}/algopy/tracer/tests/test_tracer_complex.py
+${PYSITELIB}/algopy/tracer/tests/test_tracer_complex.pyc
+${PYSITELIB}/algopy/tracer/tests/test_tracer_complex.pyo
 ${PYSITELIB}/algopy/tracer/tracer.py
 ${PYSITELIB}/algopy/tracer/tracer.pyc
 ${PYSITELIB}/algopy/tracer/tracer.pyo
@@ -114,6 +128,12 @@ ${PYSITELIB}/algopy/utpm/tests/test_special_function_identities.pyo
 ${PYSITELIB}/algopy/utpm/tests/test_utpm.py
 ${PYSITELIB}/algopy/utpm/tests/test_utpm.pyc
 ${PYSITELIB}/algopy/utpm/tests/test_utpm.pyo
+${PYSITELIB}/algopy/utpm/tests/test_utpm_complex.py
+${PYSITELIB}/algopy/utpm/tests/test_utpm_complex.pyc
+${PYSITELIB}/algopy/utpm/tests/test_utpm_complex.pyo
+${PYSITELIB}/algopy/utpm/tests/test_utpm_convenience.py
+${PYSITELIB}/algopy/utpm/tests/test_utpm_convenience.pyc
+${PYSITELIB}/algopy/utpm/tests/test_utpm_convenience.pyo
 ${PYSITELIB}/algopy/utpm/utpm.py
 ${PYSITELIB}/algopy/utpm/utpm.pyc
 ${PYSITELIB}/algopy/utpm/utpm.pyo

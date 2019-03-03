@@ -1,22 +1,25 @@
-# $NetBSD: Makefile,v 1.5 2013/08/31 22:13:21 jihbed Exp $
-
-DISTNAME=	algopy-0.5.0
+# $NetBSD$
+#Update
+DISTNAME=	algopy-0.5.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_PYPI:=a/algopy/}
+MASTER_SITES=	https://files.pythonhosted.org/packages/1e/44/e22102b72f0eb3118d4a9e4815104515e1996c3695c82047eeede8a41f89/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://packages.python.org/algopy
-COMMENT=	Taylor Arithmetic Computation and Algorithmic Differentiation
+HOMEPAGE=	https://pythonhosted.org/algopy/
+COMMENT=	ALGOPY: Taylor Arithmetic Computation and Algorithmic Differentiation
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/algopy-0.5.0
+DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-do-test:
-	${RUN} cd ${WRKSRC}/algopy; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_utils.py
+PYDISTUTILSPKG = yes
 
+do-test:
+	${RUN} cd ${WRKSRC}/algopy; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
+
+.include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
