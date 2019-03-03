@@ -3082,6 +3082,7 @@ SUBDIR+=	py-bannock
 SUBDIR+=	py-baron
 SUBDIR+=	py-bctpy
 SUBDIR+=	py-beampy
+SUBDIR+=	py-beautysh
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bibtexparser3
 SUBDIR+=	py-bicho
