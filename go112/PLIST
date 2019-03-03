@@ -327,6 +327,9 @@ go112/misc/cgo/test/issue28545.go
 go112/misc/cgo/test/issue28772.go
 go112/misc/cgo/test/issue28896.go
 go112/misc/cgo/test/issue29383.go
+go112/misc/cgo/test/issue29748.go
+go112/misc/cgo/test/issue29781.go
+go112/misc/cgo/test/issue30065.go
 go112/misc/cgo/test/issue3250.go
 go112/misc/cgo/test/issue3250w.go
 go112/misc/cgo/test/issue3261.go
@@ -582,7 +585,6 @@ go112/misc/nacl/testdata/group
 go112/misc/nacl/testdata/hosts
 go112/misc/nacl/testdata/mime.types
 go112/misc/nacl/testzip.proto
-go112/misc/sortac/sortac.go
 go112/misc/swig/callback/callback.cc
 go112/misc/swig/callback/callback.go
 go112/misc/swig/callback/callback.h
@@ -2526,6 +2528,7 @@ go112/src/cmd/go/testdata/script/build_relative_tmpdir.txt
 go112/src/cmd/go/testdata/script/build_runtime_gcflags.txt
 go112/src/cmd/go/testdata/script/cache_unix.txt
 go112/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
+go112/src/cmd/go/testdata/script/clean_testcache.txt
 go112/src/cmd/go/testdata/script/cover_atomic_pkgall.txt
 go112/src/cmd/go/testdata/script/cover_pkgall_runtime.txt
 go112/src/cmd/go/testdata/script/cpu_profile_twice.txt
@@ -4163,6 +4166,8 @@ go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-ECDSA-ECDSA
 go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-ECDSA-RSA
 go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-RSA-AES256-GCM-SHA384
 go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-RSA-ECDSA
+go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-RSA-PSS-Disabled
+go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-RSA-PSS-Disabled-512
 go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-RSA-RSA
 go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-RSA-RSAPKCS1v15
 go112/src/crypto/tls/testdata/Client-TLSv12-ClientCert-RSA-RSAPSS
@@ -4189,6 +4194,7 @@ go112/src/crypto/tls/testdata/Client-TLSv13-ALPN
 go112/src/crypto/tls/testdata/Client-TLSv13-CHACHA20-SHA256
 go112/src/crypto/tls/testdata/Client-TLSv13-ClientCert-ECDSA-RSA
 go112/src/crypto/tls/testdata/Client-TLSv13-ClientCert-RSA-ECDSA
+go112/src/crypto/tls/testdata/Client-TLSv13-ClientCert-RSA-PSS-Disabled
 go112/src/crypto/tls/testdata/Client-TLSv13-ClientCert-RSA-RSAPSS
 go112/src/crypto/tls/testdata/Client-TLSv13-ECDSA
 go112/src/crypto/tls/testdata/Client-TLSv13-ExportKeyingMaterial
@@ -4212,6 +4218,8 @@ go112/src/crypto/tls/testdata/Server-TLSv12-CipherSuiteCertPreferenceECDSA
 go112/src/crypto/tls/testdata/Server-TLSv12-CipherSuiteCertPreferenceRSA
 go112/src/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedAndECDSAGiven
 go112/src/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedAndGiven
+go112/src/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedAndGiven-PSS-Disabled
+go112/src/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedAndGiven-PSS-Disabled-Required
 go112/src/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedAndPKCS1v15Given
 go112/src/crypto/tls/testdata/Server-TLSv12-ClientAuthRequestedNotGiven
 go112/src/crypto/tls/testdata/Server-TLSv12-ECDHE-ECDSA-AES
@@ -4223,6 +4231,8 @@ go112/src/crypto/tls/testdata/Server-TLSv12-RSA-3DES
 go112/src/crypto/tls/testdata/Server-TLSv12-RSA-AES
 go112/src/crypto/tls/testdata/Server-TLSv12-RSA-AES-GCM
 go112/src/crypto/tls/testdata/Server-TLSv12-RSA-AES256-GCM-SHA384
+go112/src/crypto/tls/testdata/Server-TLSv12-RSA-PSS-Disabled
+go112/src/crypto/tls/testdata/Server-TLSv12-RSA-PSS-Disabled-Required
 go112/src/crypto/tls/testdata/Server-TLSv12-RSA-RC4
 go112/src/crypto/tls/testdata/Server-TLSv12-RSA-RSAPKCS1v15
 go112/src/crypto/tls/testdata/Server-TLSv12-RSA-RSAPSS
@@ -4239,6 +4249,7 @@ go112/src/crypto/tls/testdata/Server-TLSv13-ALPN-NoMatch
 go112/src/crypto/tls/testdata/Server-TLSv13-CHACHA20-SHA256
 go112/src/crypto/tls/testdata/Server-TLSv13-ClientAuthRequestedAndECDSAGiven
 go112/src/crypto/tls/testdata/Server-TLSv13-ClientAuthRequestedAndGiven
+go112/src/crypto/tls/testdata/Server-TLSv13-ClientAuthRequestedAndGiven-PSS-Disabled
 go112/src/crypto/tls/testdata/Server-TLSv13-ClientAuthRequestedNotGiven
 go112/src/crypto/tls/testdata/Server-TLSv13-ECDHE-ECDSA-AES
 go112/src/crypto/tls/testdata/Server-TLSv13-ExportKeyingMaterial
@@ -4246,6 +4257,7 @@ go112/src/crypto/tls/testdata/Server-TLSv13-HelloRetryRequest
 go112/src/crypto/tls/testdata/Server-TLSv13-IssueTicket
 go112/src/crypto/tls/testdata/Server-TLSv13-IssueTicketPreDisable
 go112/src/crypto/tls/testdata/Server-TLSv13-P256
+go112/src/crypto/tls/testdata/Server-TLSv13-RSA-PSS-Disabled
 go112/src/crypto/tls/testdata/Server-TLSv13-RSA-RSAPSS
 go112/src/crypto/tls/testdata/Server-TLSv13-Resume
 go112/src/crypto/tls/testdata/Server-TLSv13-Resume-HelloRetryRequest
@@ -8892,6 +8904,7 @@ go112/test/fixedbugs/issue26495.go
 go112/test/fixedbugs/issue26616.go
 go112/test/fixedbugs/issue26855.go
 go112/test/fixedbugs/issue27143.go
+go112/test/fixedbugs/issue27201.go
 go112/test/fixedbugs/issue27232.go
 go112/test/fixedbugs/issue27267.go
 go112/test/fixedbugs/issue27278.go
@@ -8905,8 +8918,8 @@ go112/test/fixedbugs/issue27695b.go
 go112/test/fixedbugs/issue27695c.go
 go112/test/fixedbugs/issue27718.go
 go112/test/fixedbugs/issue27829.go
-go112/test/fixedbugs/issue27836.dir/Äfoo.go
-go112/test/fixedbugs/issue27836.dir/Ämain.go
+go112/test/fixedbugs/issue27836.dir/?foo.go
+go112/test/fixedbugs/issue27836.dir/?main.go
 go112/test/fixedbugs/issue27836.go
 go112/test/fixedbugs/issue27938.go
 go112/test/fixedbugs/issue27961.go
@@ -8940,6 +8953,19 @@ go112/test/fixedbugs/issue29362b.go
 go112/test/fixedbugs/issue29389.go
 go112/test/fixedbugs/issue29402.go
 go112/test/fixedbugs/issue29562.go
+go112/test/fixedbugs/issue29610.dir/a.go
+go112/test/fixedbugs/issue29610.dir/b.go
+go112/test/fixedbugs/issue29610.dir/main.go
+go112/test/fixedbugs/issue29610.go
+go112/test/fixedbugs/issue29735.go
+go112/test/fixedbugs/issue29870.go
+go112/test/fixedbugs/issue29870b.go
+go112/test/fixedbugs/issue29919.dir/a.go
+go112/test/fixedbugs/issue29919.dir/main.go
+go112/test/fixedbugs/issue29919.go
+go112/test/fixedbugs/issue29943.go
+go112/test/fixedbugs/issue30041.go
+go112/test/fixedbugs/issue30061.go
 go112/test/fixedbugs/issue3552.dir/one.go
 go112/test/fixedbugs/issue3552.dir/two.go
 go112/test/fixedbugs/issue3552.go

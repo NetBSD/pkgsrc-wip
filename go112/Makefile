@@ -2,7 +2,7 @@
 
 .include "../../lang/go/version.mk"
 # TODO move to version.mk
-GO112_VERSION?=	1.12beta2
+GO112_VERSION?=	1.12
 
 DISTNAME=	go${GO112_VERSION}.src
 PKGNAME=	go112-${GO112_VERSION}
@@ -47,7 +47,6 @@ REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
 REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
-REPLACE_BASH+=	src/cmd/vendor/github.com/google/pprof/test.sh
 REPLACE_BASH+=	src/cmd/vendor/github.com/google/pprof/internal/binutils/testdata/build_mac.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
@@ -68,7 +67,6 @@ REPLACE_PERL+=	src/cmd/vendor/golang.org/x/sys/unix/*.pl
 REPLACE_PERL+=	src/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
 REPLACE_PERL+=	src/syscall/*.pl
-REPLACE_PERL+=	test/errchk
 
 # uses own linker, which does not support relro on NetBSD
 CHECK_RELRO_SKIP+=		go${GOVERSSUFFIX}/bin/go
