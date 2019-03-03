@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (xf86-video-scfb-0.0.4-bdeb3bf153d6f841f15990119c07ee349c29866a.tar.gz) = 34c2544737e11a04b72076f392e36a16f992d32f
+RMD160 (xf86-video-scfb-0.0.4-bdeb3bf153d6f841f15990119c07ee349c29866a.tar.gz) = 3d71b7126cb1af30eabfffdc724788e2cc5a75f1
+SHA512 (xf86-video-scfb-0.0.4-bdeb3bf153d6f841f15990119c07ee349c29866a.tar.gz) = f52daa1854092f1b9fd115ff832f70f42975cd3f8ce7ae4256e62493d60ecfae015b30101af13d3dc39d5f232f23e617df233367f440b2f6f6af244654a6e416
+Size (xf86-video-scfb-0.0.4-bdeb3bf153d6f841f15990119c07ee349c29866a.tar.gz) = 345378 bytes
+SHA1 (patch-src_compat-api.h) = 33b696764ff7e09f5ba22fe8c79d76b1112f0ccd
+SHA1 (patch-src_scfb__driver.c) = 616e21e151cb5323b1e06de4b18f37a2dc2c61f7

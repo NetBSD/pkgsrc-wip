@@ -4852,6 +4852,7 @@ SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel-dfbsd
 SUBDIR+=	xf86-video-intel-git
 SUBDIR+=	xf86-video-intel-old
+SUBDIR+=	xf86-video-scfb-dfbsd
 SUBDIR+=	xf86-video-virtualbox
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfs
