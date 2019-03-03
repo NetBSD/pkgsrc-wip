@@ -1,10 +1,13 @@
 # $NetBSD: Makefile,v 1.18 2019/02/22 15:40:35 tnn Exp $
 
-# 2019-02-26	panfrost/midgard: Allow flt to run on most units
-COMMIT_ID=	b7a5b81d1488d4ec11ca49664b4f83ffd9dade2f
+# 2019-03-02	st/mesa: add support for lowering fp64/int64 for nir drivers
+COMMIT_ID=	cb4e3e3ef6e47811303ad3413a4ab2048696a6f6
 
-# 2019-02-21	gallium/auxiliary/vl: Fix transparent issue on compute shader with rgba
-## COMMIT_ID=	eac822eac1d0d682aa199cb039e9df4c53ec5e1e
+# 2019-02-28	scons: Workaround failures with MSVC when using SCons 3.0.[2-4].
+# COMMIT_ID=	838c0485e01f3d3403b430aa6df5b4a1f5262dc3
+
+# 2019-02-26	panfrost/midgard: Allow flt to run on most units
+# COMMIT_ID=	b7a5b81d1488d4ec11ca49664b4f83ffd9dade2f
 
 PORTNAME=	mesa		
 

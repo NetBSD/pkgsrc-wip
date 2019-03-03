@@ -18,6 +18,7 @@ PKG_SUPPORTED_OPTIONS+=		no_cs_queue
 PKG_SUPPORTED_OPTIONS+=		revert_threaded_context
 PKG_SUPPORTED_OPTIONS+=		revert_copy_clear
 PKG_SUPPORTED_OPTIONS+=		revert_i965_softpin
+PKG_SUPPORTED_OPTIONS+=		revert_sdma_uploader
 
 # PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
@@ -66,6 +67,7 @@ PKG_SUGGESTED_OPTIONS+=		revert_copy_clear
 
 .if ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=		revert_i965_softpin
+PKG_SUGGESTED_OPTIONS+=		revert_sdma_uploader
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -189,7 +191,6 @@ DRI_DRIVERS+=		i965
 .if !empty(PKG_OPTIONS:Miris)
 GALLIUM_DRIVERS+=	iris
 PLIST.iris=		yes
-# MESON_ARGS+=		-Dtools=nir
 .endif
 
 # Vulkan support
@@ -397,4 +398,8 @@ CPPFLAGS+=	-DREVERT_COPY_CLEAR
 
 .if !empty(PKG_OPTIONS:Mrevert_i965_softpin)
 CPPFLAGS+=	-DREVERT_I965_SOFTPIN
+.endif
+
+.if !empty(PKG_OPTIONS:Mrevert_sdma_uploader)
+CPPFLAGS+=	-DREVERT_SDMA_UPLOADER
 .endif

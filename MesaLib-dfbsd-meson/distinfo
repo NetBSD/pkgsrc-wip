@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.16 2019/02/22 15:40:35 tnn Exp $
 
-SHA1 (mesa-b7a5b81d1488d4ec11ca49664b4f83ffd9dade2f.tar.xz) = 1f4abc5e81b0324a29e18e4a6462b7594426a0e5
-RMD160 (mesa-b7a5b81d1488d4ec11ca49664b4f83ffd9dade2f.tar.xz) = 9de8f29f7c4ed493fd2fcc13bf1acc219f757b49
-SHA512 (mesa-b7a5b81d1488d4ec11ca49664b4f83ffd9dade2f.tar.xz) = 77dff3852e6e9a396f1147a58e127188decf42496e89428ad3950d7bc00745fe538a7f9739740e64631bd0e3d3c65fb9411c7b6badfcea751da7cf735cca59de
-Size (mesa-b7a5b81d1488d4ec11ca49664b4f83ffd9dade2f.tar.xz) = 10566208 bytes
+SHA1 (mesa-cb4e3e3ef6e47811303ad3413a4ab2048696a6f6.tar.xz) = 3dd8d94a5b01dcfa9472f66a096341d5d588a3ca
+RMD160 (mesa-cb4e3e3ef6e47811303ad3413a4ab2048696a6f6.tar.xz) = 60b3f3e02165ce3a6ba72879a729fc45f2625bc7
+SHA512 (mesa-cb4e3e3ef6e47811303ad3413a4ab2048696a6f6.tar.xz) = 9d723565a7a7e70f4237ac390f29a5d64e014dd41b738184b5b77ac70cc6ea5339099a6f66d2acc9dd52213dcef83162f95847e949266ad28e35dc4980ea4410
+Size (mesa-cb4e3e3ef6e47811303ad3413a4ab2048696a6f6.tar.xz) = 10570888 bytes
 SHA1 (patch-configure.ac) = cddca44dbf1e2f447dd30a03440104920d6c24ab
 SHA1 (patch-include_GL_internal_dri__interface.h) = 76803a4ab6ff7e596900a0099dd9712093f8bc21
 SHA1 (patch-src_amd_common_ac__debug.c) = 8233367c3b5bc344442ea8d19488fdd1e3791ae9
@@ -21,8 +21,11 @@ SHA1 (patch-src_gallium_drivers_freedreno_freedreno__screen.c) = d76bf52c25609d6
 SHA1 (patch-src_gallium_drivers_iris_meson.build) = 9b94ae7047763cc4b1be5b39a3d9cac898e10f65
 SHA1 (patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c) = 04f95784c3270c9bb7e95377982e217962481525
 SHA1 (patch-src_gallium_drivers_nouveau_nv50_nv84__video.c) = 1b4239fe053523835ecac006894bdb0cde0ee626
+SHA1 (patch-src_gallium_drivers_radeonsi_si__buffer.c) = dc2dcb0f87a01ae0162a8c5746911c53e669cd2e
 SHA1 (patch-src_gallium_drivers_radeonsi_si__compute__blit.c) = 65235a932809c434546db0416e69241d62cdaf06
-SHA1 (patch-src_gallium_drivers_radeonsi_si__pipe.c) = c8b6d6418956469f283f3e6bab848c33f54b75e1
+SHA1 (patch-src_gallium_drivers_radeonsi_si__dma__cs.c) = 3c6a2a49e40dd8f99f5f393ad6e03345111cdeb1
+SHA1 (patch-src_gallium_drivers_radeonsi_si__gfx__cs.c) = 98ca07e2cc518125e5ec8924cbadc19f4c13de56
+SHA1 (patch-src_gallium_drivers_radeonsi_si__pipe.c) = 3c6c0e7f1ed9c2cc2b04770206880a0536a09fd2
 SHA1 (patch-src_gallium_drivers_radeonsi_si__state__shaders.c) = ed51a57765f2349bc91fd509dc03e709241bd899
 SHA1 (patch-src_gallium_drivers_vc4_vc4__bufmgr.c) = 1d591d346486fdf58893f69ab92a272e6a31a987
 SHA1 (patch-src_gallium_include_pipe_p__config.h) = f4e38eac66167b619c30076bb0144dd716310967
