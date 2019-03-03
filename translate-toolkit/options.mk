@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.translate-toolkit
 PKG_SUPPORTED_OPTIONS+=		lxml levenshtein chardet tradostm pycountry doc ical ini csv
 PKG_SUGGESTED_OPTIONS=		lxml levenshtein chardet tradostm pycountry doc ical ini csv
-PLIST_VARS+=			csv doc
+PLIST_VARS=			csv doc
 
 
 .include "../../mk/bsd.options.mk"

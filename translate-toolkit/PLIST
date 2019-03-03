@@ -718,9 +718,6 @@ ${PYSITELIB}/translate/lang/zh_tw.pyo
 ${PYSITELIB}/translate/misc/__init__.py
 ${PYSITELIB}/translate/misc/__init__.pyc
 ${PYSITELIB}/translate/misc/__init__.pyo
-${PLIST.csv}${PYSITELIB}/translate/misc/csv_utils.py
-${PLIST.csv}${PYSITELIB}/translate/misc/csv_utils.pyc
-${PLIST.csv}${PYSITELIB}/translate/misc/csv_utils.pyo
 ${PYSITELIB}/translate/misc/deprecation.py
 ${PYSITELIB}/translate/misc/deprecation.pyc
 ${PYSITELIB}/translate/misc/deprecation.pyo
