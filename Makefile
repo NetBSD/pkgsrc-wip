@@ -240,7 +240,6 @@ SUBDIR+=	bdfresize
 SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
-SUBDIR+=	beautysh
 SUBDIR+=	bedtools2
 SUBDIR+=	belle-sip
 SUBDIR+=	bertini
