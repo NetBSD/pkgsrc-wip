@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.91 2019/01/22 21:50:47 wiz Exp $
 
+# 2019-02-26		configure.ac fix build error for config.h in autotools
+COMMIT_ID=		d54e546852dd6ffdc732ffa17f102b7ce87a7352
+
 # 2019-02-01		amdgpu: add some raven marketing names
-COMMIT_ID=		6415bd3ced9d80137e30cb90837eb01932607882
+# COMMIT_ID=		6415bd3ced9d80137e30cb90837eb01932607882
 
 PORTNAME=		drm
 
