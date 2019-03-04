@@ -10,7 +10,7 @@ EXTRACT_USING=	bsdtar
 MAINTAINER=	robn@gmx.com
 HOMEPAGE=	https://github.com/bemeurer/beautysh/
 COMMENT=	Bash beautifier for the masses
-LICENSE=	gnu-gpl-v2
+LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
