@@ -2,4 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/08/19 19:11:02 yhardy Exp $
 
 SHA1 (d2x-rebirth_v0.58.1-src.tar.gz) = 2f8576da0ab445a1cd79663996b06b8c53ebb5c1
 RMD160 (d2x-rebirth_v0.58.1-src.tar.gz) = 0d5edf7becbe4114525d84fad33f5ae2e0fc21f4
+SHA512 (d2x-rebirth_v0.58.1-src.tar.gz) = 19281c8dc554d595f6c40cbef2f4921c6325cd736ec648cb1abf60ad6a339e59b882b8a1426987f7bcfb8413c78bbda9b6f7fa86a6ff8927550a37d0290873fd
 Size (d2x-rebirth_v0.58.1-src.tar.gz) = 1375376 bytes
+SHA1 (patch-include_physfsrwops.h) = 31496ca6262412a3f62945086236fb863dd16af7
