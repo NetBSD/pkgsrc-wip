@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2012/09/25 08:20:47 makoto Exp $
 # $Id: Makefile,v 1.5 2012/09/25 08:20:47 makoto Exp $
 
-DISTNAME=	binutils-2.21
+DISTNAME=	binutils-2.31
 PKGNAME=	cygwin-${DISTNAME:S/-src//}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
