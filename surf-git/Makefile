@@ -11,7 +11,6 @@ LICENSE=	mit
 GIT_REPO=	http://git.suckless.org/surf
 
 USE_TOOLS+=	pkg-config
-MAKE_JOBS_SAFE=	no
 
 SUBST_CLASSES+=		configmk
 SUBST_STAGE.configmk=	pre-configure
