@@ -22,7 +22,7 @@ REPLACE_PERL+=		test/test.pl
 REPLACE_PYTHON=		misc/*.py
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../biology/htslib/buildlink3.mk"
+.include "../../wip/htslib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
