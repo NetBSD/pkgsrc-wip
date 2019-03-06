@@ -30,6 +30,9 @@ ${PYSITELIB}/rtv/docs.pyo
 ${PYSITELIB}/rtv/exceptions.py
 ${PYSITELIB}/rtv/exceptions.pyc
 ${PYSITELIB}/rtv/exceptions.pyo
+${PYSITELIB}/rtv/inbox_page.py
+${PYSITELIB}/rtv/inbox_page.pyc
+${PYSITELIB}/rtv/inbox_page.pyo
 ${PYSITELIB}/rtv/mime_parsers.py
 ${PYSITELIB}/rtv/mime_parsers.pyc
 ${PYSITELIB}/rtv/mime_parsers.pyo
