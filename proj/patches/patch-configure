@@ -1,0 +1,24 @@
+$NetBSD$
+
+Remediate bashism.  Reported on mailinglist 20190126.
+
+--- configure.orig	2019-02-16 07:27:13.000000000 +0000
++++ configure
+@@ -18983,7 +18983,7 @@ if test "${with_external_gtest+set}" = s
+ fi
+ 
+ 
+-if test "x$with_external_gtest" == "xyes" ; then
++if test "x$with_external_gtest" = "xyes" ; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: using external GTest." >&5
+ $as_echo "using external GTest." >&6; }
+ 
+@@ -19082,7 +19082,7 @@ $as_echo "using internal GTest." >&6; }
+     GTEST_CFLAGS="-I\$(top_srcdir)/test/googletest/include"
+     GTEST_LIBS="\$(top_builddir)/test/googletest/libgtest.la"
+ fi
+- if test "x$with_external_gtest" == "xyes"; then
++ if test "x$with_external_gtest" = "xyes"; then
+   USE_EXTERNAL_GTEST_TRUE=
+   USE_EXTERNAL_GTEST_FALSE='#'
+ else

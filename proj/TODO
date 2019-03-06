@@ -1,0 +1,2 @@
+Do not bring into pkgsrc proper yet, because too many depending
+packages will break. -gdt

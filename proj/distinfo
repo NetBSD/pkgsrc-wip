@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.13 2019/02/21 00:55:04 gdt Exp $
+
+SHA1 (proj-6.0.0.tar.gz) = 679310f50a2fe5d3c7f9bd6ab0bba0f9a11233d1
+RMD160 (proj-6.0.0.tar.gz) = 8580caaeba1a15d47d6a2dab29d78a73bbbfd10f
+SHA512 (proj-6.0.0.tar.gz) = bc4d2f02d697aa01099f5e973a7ca70072f51210754e4d9331ae5bfdef886a41984ce27c1ff926da14fd199005bf9cad7162ab3ea8f3f421ac8b60bc8defd8f7
+Size (proj-6.0.0.tar.gz) = 2405217 bytes
+SHA1 (proj-datumgrid-1.8.tar.gz) = ede1c255adebb903f9ec33c5760ecb0df7b3b03c
+RMD160 (proj-datumgrid-1.8.tar.gz) = 074fcfba2e41cbe81e5be45eddc0e38683d891ef
+SHA512 (proj-datumgrid-1.8.tar.gz) = 23153f5b57d210e37cd6e9e0fced23bdabb1c67476e9fb50eb83a68ae066a5c3675822472f5d558d10ddf36ac1d73d538b75304d112a1bfcd8d0bbd26c6481a5
+Size (proj-datumgrid-1.8.tar.gz) = 6604329 bytes
+SHA1 (proj-datumgrid-europe-1.2.tar.gz) = 06924c6a2d9c54d9fa3edc94fefa7da4831ae27a
+RMD160 (proj-datumgrid-europe-1.2.tar.gz) = d7bb4021becad04ce4c0aecc0eb672bf43c3511f
+SHA512 (proj-datumgrid-europe-1.2.tar.gz) = ba8fc7ed7cc3296014c525d64ef670ea19d339987bd2e4379cdb30bd51876de9cfeb702a6a95a0cef5b2449016eda2c328c8a6f2f088305b71d2808eb16efb1b
+Size (proj-datumgrid-europe-1.2.tar.gz) = 20610512 bytes
+SHA1 (proj-datumgrid-north-america-1.2.tar.gz) = c4d858cd584b33c846536ef75fb007168fb0b3a7
+RMD160 (proj-datumgrid-north-america-1.2.tar.gz) = a95ab90d3fb1379770f28bd31c7f70a73895721f
+SHA512 (proj-datumgrid-north-america-1.2.tar.gz) = cd6f934faa0172713880c35184cf8ad75127d19f0e7656d9bef6c97dee049eede27d9e3c6f0d7a1592a6a60088d219bd5c0e1209f35143b17debb0125f030596
+Size (proj-datumgrid-north-america-1.2.tar.gz) = 73655751 bytes
+SHA1 (proj-datumgrid-oceania-1.0.tar.gz) = 42970835b4932e5e96a630759c28b75502f4b382
+RMD160 (proj-datumgrid-oceania-1.0.tar.gz) = fcafe24982a1cd40c97137d42f2438fc48938c27
+SHA512 (proj-datumgrid-oceania-1.0.tar.gz) = a079fdb0ab22e591e55efa003ecd0ca1d65ce84ac0eb1b74456c1d3d62e601e3639b551aab1a0c2e77ca580d0c96cf69284e6591b80cffd18efdaada47d13e64
+Size (proj-datumgrid-oceania-1.0.tar.gz) = 96908713 bytes
+SHA1 (patch-configure) = 07a7f8fcef069cc2f4680f72c296da91371bd71e

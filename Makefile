@@ -2969,6 +2969,7 @@ SUBDIR+=	procps
 SUBDIR+=	prodigal
 SUBDIR+=	profanity
 SUBDIR+=	progreiserfs
+SUBDIR+=	proj
 SUBDIR+=	proplib
 SUBDIR+=	proselint
 SUBDIR+=	prover9
