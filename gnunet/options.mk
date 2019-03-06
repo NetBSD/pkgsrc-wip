@@ -1,9 +1,10 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests
+PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests experimental
 PKG_SUGGESTED_OPTIONS=		doc
 PLIST_VARS+=			doc
+PLIST_VARS+=			experimental
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
 # src/gns/gnunet-gns-proxy-setup-ca
@@ -53,4 +54,16 @@ CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
+.endif
+
+# Experimental
+.if !empty(PKG_OPTIONS:Mexperimental)
+.include "../../audio/libopus/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../math/glpk/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-experimental
+PLIST.experimental=	yes
 .endif

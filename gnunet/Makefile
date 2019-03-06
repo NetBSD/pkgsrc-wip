@@ -3,6 +3,7 @@
 DISTNAME=		gnunet-0.11.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
+PKGREVISION=		1
 
 MAINTAINER=		ng0@n0.is
 HOMEPAGE=		https://gnunet.org/
@@ -26,7 +27,7 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
-CONFIGURE_ARGS+=	--with-gnunetdns=${GNUNETDNS_GROUP}
+CONFIGURE_ARGS+=	--with-gnunetdns=gnunetdns
 
 GNUNET_USER=			gnunet
 GNUNET_GROUP=			gnunet
@@ -54,8 +55,6 @@ CONF_FILES+=			${FILESDIR}/gnunet.conf \
 				${PKG_SYSCONFDIR}/gnunet.conf
 
 FILES_SUBST+=			PKG_HOME=${PKG_HOME.${GNUNET_USER}}
-FILES_SUBST+=			GNUNET_USER=${GNUNET_USER} GNUNET_GROUP=${GNUNET_GROUP}
-FILES_SUBST+=			GNUNETDNS_GROUP=${GNUNETDNS_GROUP}
 
 SUBST_CLASSES+=			sysconfdir
 SUBST_STAGE.sysconfdir=		post-build
@@ -82,13 +81,17 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-vpn ${SETUID_ROOT_PER
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${WRKSRC}/src/util/gnunet-qr.py ${DESTDIR}${PREFIX}/bin
-	# XXX: Will be fixed in 0.11.1 or rewritten in C.
+	# XXX: Will be fixed in 0.11.1, rewritten in C.
 	# Technically this is no executable script anymore, as we call
 	# call it with the shell script. The warning thrown is harmless.
 	# https://gnunet.org/en/#gsoc2019
 	${CHMOD} -x ${DESTDIR}${PREFIX}/bin/gnunet-qr.py
 
-.include "../../audio/libopus/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+# Do we need more for bluez?
+.include "../../wip/bluez-libs/buildlink3.mk"
+.endif
+
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
@@ -97,9 +100,6 @@ post-install:
 .include "../../devel/libextractor/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"

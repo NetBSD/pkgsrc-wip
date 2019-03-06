@@ -19,10 +19,10 @@ command="@PREFIX@/bin/gnunet-arm"
 command_args="-c @PKG_SYSCONFDIR@/gnunet.conf"
 required_files="@PKG_SYSCONFDIR@/gnunet.conf"
 pidfile="@PKG_HOME@/${name}.pid"
-: ${gnunet_user:=@GNUNET_USER@}
-: ${gnunet_group:=@GNUNET_GROUP@}
+: ${gnunet_user:=gnunet}
+: ${gnunet_group:=gnunet}
 : ${gnunet_home:=@PKG_HOME@}
-: ${gnunetdns_group:=@GNUNETDNS_GROUP@}
+: ${gnunetdns_group:=gnunetdns}
 
 start_cmd="gnunet_start"
 start_precmd="gnunet_precmd"
@@ -30,17 +30,17 @@ stop_cmd="gnunet_stop"
 restart_cmd="gnunet_stop ; gnunet_start"
 restart_precmd="gnunet_precmd"
 
-gnunet_env="HOME=${gnunet_home} USER=${gnunet_user}"
+gnunet_env="HOME=${gnunet_home} USER=${gnunet_user} TMP=/tmp"
 
 gnunet_precmd()
 {
 	if [ -f ${gnunet_home}/.local/share/gnunet/gnunet.conf ]; then
 		@CHMOD@ 0600 @PKG_HOME@/.local/share/gnunet/gnunet.conf
-		@CHOWN@ @GNUNET_USER@:@GNUNET_GROUP@ @PKG_HOME@/.local/share/gnunet/gnunet.conf
+		@CHOWN@ gnunet:gnunet @PKG_HOME@/.local/share/gnunet/gnunet.conf
 	fi
 	if [ ! -d ${gnunet_home}/.cache/gnunet ]; then
 		@MKDIR@ -p ${gnunet_home}/.cache/gnunet
-		@CHOWN@ @GNUNET_USER@:@GNUNET_GROUP@ ${gnunet_home}/.cache/gnunet
+		@CHOWN@ gnunet:gnunet ${gnunet_home}/.cache/gnunet
 	fi
 	if [ ! -f ${required_files} ]; then
 		warn "${required_files} does not exist."
