@@ -2018,6 +2018,7 @@ SUBDIR+=	logfmon-git
 SUBDIR+=	logrotate-git
 SUBDIR+=	logwatch
 SUBDIR+=	lorder
+SUBDIR+=	love11
 SUBDIR+=	lpdsrv
 SUBDIR+=	lrslib
 SUBDIR+=	lscpu
