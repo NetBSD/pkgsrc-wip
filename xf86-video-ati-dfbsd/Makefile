@@ -1,7 +1,13 @@
 # $NetBSD: Makefile,v 1.47 2018/09/16 20:28:51 triaxx Exp $
 
+# 2019-03-06	Bump version for 19.0.0 release
+COMMIT_ID=	0d132d99e0b750896a78f47d73a8639680495d8c
+
+# 2019-03-04	dri2: Call drm_queue_handle_deferred in dri2_deferred_event
+# COMMIT_ID=	c301b8af25d2c2cd49035a4395ebe6c3612df366
+
 # 2019-02-11	Keep waiting for a pending flip if drm_handle_event returns 0
-COMMIT_ID=	15697ee242c30b9ea6775624e8282e0171a113a7
+# COMMIT_ID=	15697ee242c30b9ea6775624e8282e0171a113a7
 
 # 2018-07-12	Add RandR leases support
 # COMMIT_ID=	f533b1f654952cee794de49d28d01947a6571daf
