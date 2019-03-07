@@ -19,6 +19,7 @@ PKG_SUPPORTED_OPTIONS+=		revert_threaded_context
 PKG_SUPPORTED_OPTIONS+=		revert_copy_clear
 PKG_SUPPORTED_OPTIONS+=		revert_i965_softpin
 PKG_SUPPORTED_OPTIONS+=		revert_sdma_uploader
+PKG_SUPPORTED_OPTIONS+=		invert_atomic_add_unless
 
 # PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
@@ -68,6 +69,10 @@ PKG_SUGGESTED_OPTIONS+=		revert_copy_clear
 .if ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=		revert_i965_softpin
 PKG_SUGGESTED_OPTIONS+=		revert_sdma_uploader
+.endif
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+=		invert_atomic_add_unless
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -402,4 +407,8 @@ CPPFLAGS+=	-DREVERT_I965_SOFTPIN
 
 .if !empty(PKG_OPTIONS:Mrevert_sdma_uploader)
 CPPFLAGS+=	-DREVERT_SDMA_UPLOADER
+.endif
+
+.if !empty(PKG_OPTIONS:Minvert_atomic_add_unless)
+CPPFLAGS+=	-DINVERT_ATOMIC_ADD_UNLESS
 .endif
