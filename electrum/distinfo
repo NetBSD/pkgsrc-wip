@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.6 2013/11/22 14:05:07 ryo-on Exp $
 
-SHA1 (Electrum-1.9.4.tar.gz) = 4ec336a7c785320d4947cc3da5015d6364bed761
-RMD160 (Electrum-1.9.4.tar.gz) = bae4d0128b5098e5ff367f8e70ddab5dc9663f4e
-Size (Electrum-1.9.4.tar.gz) = 685535 bytes
+SHA1 (Electrum-3.3.4.tar.gz) = 05efee01b8f0e81954372958cb43e5802bea5d86
+RMD160 (Electrum-3.3.4.tar.gz) = 29a5a3f3cefac623032d015e11871b3d15786a85
+SHA512 (Electrum-3.3.4.tar.gz) = 297eb757dccb166d40a652be2c1c058e42f16416b586b69f32223966ff1e92a34e5d01822d71bd063bfa72b7bbbcae4251a63f7373600d0eeb139e923d17a2b3
+Size (Electrum-3.3.4.tar.gz) = 8606286 bytes
