@@ -11,6 +11,10 @@ COMMENT=	Openbox window manager themes
 
 WRKSRC=		${WRKDIR}/themes
 USE_LANGUAGES=	# none
+NO_BUILD=	yes
+DESTDIR=	$WRKSRC
 
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC} ${DESTDIR}${PREFIX}/themes
 
 .include "../../mk/bsd.pkg.mk"

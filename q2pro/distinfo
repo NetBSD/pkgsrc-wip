@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (qtxqfsts/q2pro20190305.zip) = b7392c4bacb4aa6019d4408aca52b20b6c1d835e
+RMD160 (qtxqfsts/q2pro20190305.zip) = 5a87dda5a8ab38b0d2ee218290b9bd90033cf8a9
+SHA512 (qtxqfsts/q2pro20190305.zip) = aea9e3458979980b4f4bbceb5cc065c86cda9c3341ca54544de8bdd836ab2fda075306d70481f46b27035a90e1d071781a50150cdfa515c7b35368fd3b305677
+Size (qtxqfsts/q2pro20190305.zip) = 1059443 bytes
+SHA1 (patch-qgl.h) = db3f888a93e09c2a42592e044593b57fa11021b7
+SHA1 (patch-sound.c) = 87fbbf70c8f2c055bdeef964e8a43569096ab519
+SHA1 (patch-system.c) = 2e97f04cf9a23fd48f60fdaf349a420b261e4d2f
+SHA1 (patch-video.c) = 134901056e2302b9c1736a74c2090dd07a2d4dd1
