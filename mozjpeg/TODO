@@ -1,2 +1,5 @@
 Decide if this should be integrated in mk/jpeg.buildlink3.mk or
 how it should interact with the other jpeg packages.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2018-14498
