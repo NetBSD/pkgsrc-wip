@@ -42,6 +42,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS=		gmake pkg-config automake autoconf
+LDFLAGS+=		-lcompat
 ICON_THEMES=		yes
 
 .include "../../converters/libiconv/buildlink3.mk"
