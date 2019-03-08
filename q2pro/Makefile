@@ -21,6 +21,16 @@ WRKSRC=	${WRKDIR}/q2pro-master
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/q2pro \
+		${DESTDIR}${PREFIX}/games/q2pro/q2pro
+	${INSTALL_PROGRAM} ${WRKSRC}/q2proded \
+		${DESTDIR}${PREFIX}/games/q2pro/q2proded
+	${INSTALL_PROGRAM} ${WRKSRC}/gamex86_64.so \
+		${DESTDIR}${PREFIX}/games/q2pro/baseq2/gamex86_64.so
+	${INSTALL_PROGRAM} ${WRKSRC}/src/client/ui/q2pro.menu \
+		${DESTDIR}${PREFIX}/games/q2pro/baseq2/2pro.menu
+
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
