@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2012/09/28 21:24:39 asau Exp $
 #
 
-DISTNAME=	dvegas-2.0.1
+DISTNAME=	dvegas-2.0.3
 CATEGORIES=	math
-MASTER_SITES=	http://www.hepforge.org/archive/dvegas/
+MASTER_SITES=	https://dvegas.hepforge.org/downloads/?f=
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dvegas.hepforge.org/

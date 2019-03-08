@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2012/08/26 21:54:53 jihbed Exp $
 
-SHA1 (dvegas-2.0.1.tar.gz) = 4e17eafa6fbc5bc879c131c217bb0afa9774abdb
-RMD160 (dvegas-2.0.1.tar.gz) = 136759378ba2419fcf12c1cc61b8e6bbc47898fc
-Size (dvegas-2.0.1.tar.gz) = 382106 bytes
+SHA1 (dvegas-2.0.3.tar.gz) = fa4749660c8d154da7b1d66adcd6894991c9ec10
+RMD160 (dvegas-2.0.3.tar.gz) = 1c5811e8b449af1870928a8fd492b7d80ec8e299
+SHA512 (dvegas-2.0.3.tar.gz) = df5b570361c39c9c5b4254559b7efdb5f2b64f47eb825a4c2982ab85bdf67ca05345bc87b5875346572d3d2b3189c26c2e7c4c04fc29adc3a0839f1b6896858c
+Size (dvegas-2.0.3.tar.gz) = 407177 bytes
