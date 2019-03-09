@@ -19,6 +19,8 @@ BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.4.1
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 
+.include "../../mk/pkg-build-options.mk"
+pkgbase := gnutls
 .if !empty(PKG_BUILD_OPTIONS.gnutls:Munbound)
 .include "../../net/unbound/buildlink3.mk"
 .endif
