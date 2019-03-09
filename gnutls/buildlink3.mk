@@ -18,6 +18,11 @@ BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.4.1
 .include "../../security/nettle/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.gnutls:Munbound)
+.include "../../net/unbound/buildlink3.mk"
+.endif
+
 .endif # GNUTLS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnutls
