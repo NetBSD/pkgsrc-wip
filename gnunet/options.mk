@@ -68,11 +68,6 @@ CONFIGURE_ARGS+=	--enable-experimental
 PLIST.experimental=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Munbound)
-.if empty(PKG_BUILD_OPTIONS.gnutls:Munbound)
+.if !empty(PKG_OPTIONS:Munbound) && empty(PKG_BUILD_OPTIONS.gnutls:Munbound)
 PKG_FAIL_REASON+=	"Requires the unbound option enabled in gnutls"
-.endif
-.include "../../wip/gnutls/buildlink3.mk"
-.else
-.include "../../wip/gnutls/buildlink3.mk"
 .endif
