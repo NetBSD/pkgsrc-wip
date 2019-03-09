@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:47:00 jihbed Exp $
 
 SHA1 (fftjet-1.3.1.tar.gz) = 648558fb6e2716a9bb287c406600e30cffc30490
 RMD160 (fftjet-1.3.1.tar.gz) = 1d0f8596cbf8ece584f0c0c66e5c9365cfa36baa
+SHA512 (fftjet-1.3.1.tar.gz) = 1c88c69e5cea31a86440ab95edca9ec7fd83654655cc7a7b21adcd59eedbe15d76d35cb4a3b6f9c3aa6d6c55841e77a8a601a50acb41dd2b21554358c44e6e38
 Size (fftjet-1.3.1.tar.gz) = 16178957 bytes

@@ -3,7 +3,7 @@
 
 DISTNAME=	fftjet-1.3.1
 CATEGORIES=	math
-MASTER_SITES=	http://www.hepforge.org/archive/fftjet/
+MASTER_SITES=	https://fftjet.hepforge.org/downloads/?f=
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/fftjet/
