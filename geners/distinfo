@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/08/06 00:09:22 jihbed Exp $
 
 SHA1 (geners-1.9.0.tar.gz) = 16c2d172c5547487b8b1a2661e81e276fcb89061
 RMD160 (geners-1.9.0.tar.gz) = 23151390ca74696140e5bda4ce5fad4bf3c5b452
+SHA512 (geners-1.9.0.tar.gz) = 54925738ffac05367d83dfa94c062d4063fb9c2476a3f91628b9468163bb4659a8c79689d66c3c8b75ae152e457f12616f6ab528185f9a4eeb02be7604729940
 Size (geners-1.9.0.tar.gz) = 503147 bytes

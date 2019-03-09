@@ -2,7 +2,7 @@
 
 DISTNAME=	geners-1.9.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.hepforge.org/archive/geners/
+MASTER_SITES=	https://geners.hepforge.org/downloads/?f=
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://geners.hepforge.org/
