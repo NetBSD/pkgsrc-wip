@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests experimental
+PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests experimental unbound
 PKG_SUGGESTED_OPTIONS=		doc
 PLIST_VARS+=			doc
 PLIST_VARS+=			experimental
@@ -66,4 +66,13 @@ CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-experimental
 PLIST.experimental=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Munbound)
+.if empty(PKG_BUILD_OPTIONS.gnutls:Munbound)
+PKG_FAIL_REASON+=	"Requires the unbound option enabled in gnutls"
+.endif
+.include "../../wip/gnutls/buildlink3.mk"
+.else
+.include "../../wip/gnutls/buildlink3.mk"
 .endif
