@@ -20,10 +20,11 @@ USE_TOOLS+=	autoconf automake
 BUILD_DEPENDS+=	sassc-[0-9]*:../../www/sassc
 DEPENDS+=	gtk2-engines-murrine-[0-9]*:../../x11/gtk2-engines-murrine
 
-pre-configure:
-		cd ${WRKSRC} && ./autogen.sh
+post-extract:
+	find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+	find ${WRKSRC} -type f -perm 664 -print0 | xargs -0 chmod 644
 
-.include "../../lang/ruby/rubyversion.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
+
 .include "../../mk/bsd.pkg.mk"
