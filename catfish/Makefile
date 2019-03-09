@@ -14,9 +14,12 @@ USE_TOOLS=	intltool
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
-PYSETUP=	setup.py
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+REPLACE_PYTHON+=	bin/catfish
+REPLACE_PYTHON+=	setup.py
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
