@@ -34,9 +34,9 @@ gnunet_env="HOME=${gnunet_home} USER=${gnunet_user} TMP=/tmp"
 
 gnunet_precmd()
 {
-	if [ -f ${gnunet_home}/.local/share/gnunet/gnunet.conf ]; then
-		@CHMOD@ 0600 @PKG_HOME@/.local/share/gnunet/gnunet.conf
-		@CHOWN@ gnunet:gnunet @PKG_HOME@/.local/share/gnunet/gnunet.conf
+	if [ -f ${gnunet_home}/data/gnunet.conf ]; then
+		@CHMOD@ 0600 @PKG_HOME@/data/gnunet.conf
+		@CHOWN@ gnunet:gnunet @PKG_HOME@/data/gnunet.conf
 	fi
 	if [ ! -d ${gnunet_home}/.cache/gnunet ]; then
 		@MKDIR@ -p ${gnunet_home}/.cache/gnunet

@@ -29,38 +29,45 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=	--with-gnunetdns=gnunetdns
 
+BUILD_DEFS+=			VARBASE
+
+GNUNET_DIR?=			${VARBASE}/chroot/gnunet
+GNUNET_LOG_DIR?=		${VARBASE}/log/gnunet
 GNUNET_USER=			gnunet
 GNUNET_GROUP=			gnunet
 GNUNETDNS_GROUP=		gnunetdns
-PKG_GECOS.${GNUNET_USER}=	Gnunet
-PKG_HOME.${GNUNET_USER}=	${VARBASE}/chroot/gnunet
-BUILD_DEFS+=			VARBASE
 PKG_SYSCONFSUBDIR=		gnunet
 
-PKG_GROUPS_VARS+=		GNUNET_GROUP
-PKG_GROUPS_VARS+=		GNUNETDNS_GROUP
-PKG_USERS_VARS=			GNUNET_USER
+PKG_GROUPS+=			${GNUNET_GROUP}
+PKG_GROUPS+=			${GNUNETDNS_GROUP}
+PKG_USERS+=			${GNUNET_USER}:${GNUNET_GROUP}
+PKG_GECOS.gnunet=		GNUnet System user
+PKG_HOME.gnunet=		${GNUNET_DIR}
 
 RCD_SCRIPTS=			gnunet
 RCD_SCRIPT_SRC.gnunet=		${FILESDIR}/gnunet.in
-PKG_GROUPS=			${GNUNET_GROUP} ${GNUNETDNS_GROUP}
-PKG_USERS=			${GNUNET_USER}:${GNUNET_GROUP}
-USER_GROUP=			${GNUNET_USER} ${GNUNET_GROUP}
 
-OWN_DIRS_PERMS+=		${PKG_HOME.${GNUNET_USER}} ${USER_GROUP} 0700
+OWN_DIRS_PERMS+=		${GNUNET_DIR} ${GNUNET_USER} ${GNUNET_GROUP} 0700
+OWN_DIRS_PERMS+=		${GNUNET_LOG_DIR} ${GNUNET_USER} ${GNUNET_GROUP} 0755
+OWN_DIRS_PERMS+=		${GNUNET_DIR}/data ${GNUNET_USER} ${GNUNET_GROUP} 0700
 
 MAKE_DIRS+=			${PKG_SYSCONFDIR}
+MAKE_DIRS+=			${GNUNET_LOG_DIR}
+MAKE_DIRS+=			${GNUNET_DIR}/data
 AUTO_MKDIRS=			YES
 CONF_FILES+=			${FILESDIR}/gnunet.conf \
 				${PKG_SYSCONFDIR}/gnunet.conf
 
-FILES_SUBST+=			PKG_HOME=${PKG_HOME.${GNUNET_USER}}
+FILES_SUBST+=			PKG_HOME=${GNUNET_DIR}
 
 SUBST_CLASSES+=			sysconfdir
 SUBST_STAGE.sysconfdir=		post-build
-SUBST_MESSAGE.sysconfdir=	Fixing sysconfdir in gnunet.conf
+SUBST_MESSAGE.sysconfdir=	Fixing paths in gnunet.conf
 SUBST_FILES.sysconfdir=		${FILESDIR}/gnunet.conf
-SUBST_SED.sysconfdir=		-e 's,^DEFAULTCONFIG.*,DEFAULTCONFIG = ${PKG_SYSCONFDIR}/gnunet.conf,g'
+SUBST_SED.sysconfdir+=		-e 's,^DEFAULTCONFIG.*,DEFAULTCONFIG = ${PKG_SYSCONFDIR}/gnunet.conf,g'
+SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DIR}/data,g'
+SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'
+SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
 
 # All helpers have to be suid. fs helper must not be suid.
 # Not all of these files may be available.
