@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2012/10/01 21:43:26 asau Exp $
 #
 
-DISTNAME=	joe-3.1jupp20
+DISTNAME=	joe-3.1jupp38
 PKGNAME=	${DISTNAME:S/jupp/./:S/joe/jupp/}
 CATEGORIES=	editors
 MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/jupp/ \

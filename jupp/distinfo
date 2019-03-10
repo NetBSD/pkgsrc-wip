@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.4 2012/06/09 11:09:27 bsiegert Exp $
 
-SHA1 (joe-3.1jupp20.tgz) = 085c1d2c1c2ecf690022754f0d2e53545fa7b800
-RMD160 (joe-3.1jupp20.tgz) = e60bbb2322115532a0d9b9f7a65d225af2e56132
-Size (joe-3.1jupp20.tgz) = 440346 bytes
+SHA1 (joe-3.1jupp38.tgz) = 8c5f423cf7b8f884756b9be4c0b48279d378d2fc
+RMD160 (joe-3.1jupp38.tgz) = 2ef8a448516e7d0b5ba27bd87196f1f4e3dbe716
+SHA512 (joe-3.1jupp38.tgz) = 1d21ee5bbd1a042c58a89dd2bed8ec711c59fc383ff0dfd94d3a0eaccb999734915abc202e2112c5d573d8073e748b8024cd710b21803fed7422f5a8bccbc0c5
+Size (joe-3.1jupp38.tgz) = 498068 bytes
