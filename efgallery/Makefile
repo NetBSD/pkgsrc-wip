@@ -63,6 +63,7 @@ EFG_VIEWFILES=	back.png \
 		mootools-more-1.4.js \
 		noise.png \
 		throbber.gif \
+		overview.css \
 		overview.html \
 		overview.js \
 		overview.png
