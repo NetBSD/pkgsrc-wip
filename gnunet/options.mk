@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests experimental
+PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests experimental bluez
 PKG_SUGGESTED_OPTIONS=		doc
 PLIST_VARS+=			doc
 PLIST_VARS+=			experimental
@@ -77,3 +77,8 @@ PLIST.experimental=	yes
 # .if !empty(PKG_OPTIONS:Munbound) && empty(PKG_BUILD_OPTIONS.gnutls:Munbound)
 # PKG_FAIL_REASON+=	"Requires the unbound option enabled in gnutls"
 # .endif
+
+.if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mbluez)
+# Do we need more for bluez?
+.include "../../wip/bluez-libs/buildlink3.mk"
+.endif

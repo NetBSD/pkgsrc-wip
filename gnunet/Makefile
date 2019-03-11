@@ -94,11 +94,6 @@ post-install:
 	# https://gnunet.org/en/#gsoc2019
 	${CHMOD} -x ${DESTDIR}${PREFIX}/bin/gnunet-qr.py
 
-.if ${OPSYS} == "Linux"
-# Do we need more for bluez?
-.include "../../wip/bluez-libs/buildlink3.mk"
-.endif
-
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
