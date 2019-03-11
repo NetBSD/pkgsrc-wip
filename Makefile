@@ -1264,7 +1264,6 @@ SUBDIR+=	gvariant
 SUBDIR+=	gwenview
 SUBDIR+=	gwget
 SUBDIR+=	gwhois
-SUBDIR+=	gwibber
 SUBDIR+=	gwsmhg
 SUBDIR+=	gwyddion
 SUBDIR+=	gxconsole
