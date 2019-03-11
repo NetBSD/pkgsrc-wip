@@ -1,0 +1,416 @@
+Changelog
+=========
+
+Release 2018-11-22:
+-libschily: resolvenpath() did not work as expected when some path names
+            do not exist. A stat() call that should check whether we already
+            reached the "/" directory caused a return (-1) even with
+            (flags & RSPF_EXIST) == 0
+
+            This bug caused star to classify more symlinks as dangerous than
+            needed.
+
+- star: A typo in the function dolchmodat() has been fixed. The bug has been
+        introduced in July 2018 while adding support for very long path names.
+
+- star: added a new timestamp to the star version.
+
+- star: The man page now mentions incremental backups and restores in the
+        FEATURES section.
+
+Release 2018-12-06:
+- star: hole.c: A memory leak in in hole.c::put_sparse() has been fixed.
+
+        Thanks to Pavel Raiskup for reporting this coverity result.
+
+- star: xheader.c: the macro scopy() no longer has a semicolon at the end.
+
+        Thanks to Pavel Raiskup for reporting this coverity result.
+
+Release 2019-01-22:
+- libstrar & star unicode.c: iconv() may return > 0 if there are
+                             characters that could not be converted into an
+                             identical meaning.
+                             We therefore now check for ret != 0 instead of
+                             ret == -1.
+
+- star: added support for auto detection of "zstd" compressed archives.
+
+- star: added a new option -zstd to support compression and uncompression
+        using the program "zstd".
+
+- star: Recently, star did hang in the FIFO code on Solaris. This did
+        not happen on Solaris over 20 years before...
+
+        On Linux - on fast multi CPU machines - the probability that a
+        child process from fork() starts up before the parent is 1000x higher
+        than on Solaris, where 10 million tries were needed to reproduce the
+        same problem.
+
+        As a result, the FIFO in star on Linux could in rare cases (1 of.
+        ~ 10000 tries) even finish the 1st read() from the input file before
+        the "tar"-process starts with e.g. command lines like "star -tv" or.
+        "star -x". Since star introduced auto-byte-order detection and
+        handling in 1985, star needs a special start up sequence to do that.
+
+        Star introduced the FIFO in the late 1980s and the machines from that
+        time did always restart the parent before the fork()ed child starts.
+        The new OS behavior thus caused a situation that was not forseeable
+        when the FIFO has been designed. This new OS behavior caused a
+        deadlock in aprox. 1 of 10000 star calls on Linux and 1 of 10000000
+        star calls on Solaris.
+
+        Star now waits when entering the FIFO fill-process until the.
+        FIFO get-process did start up before trying to wake up a waiting
+        get process.
+
+- star: On Linux, in 1 of 1.5 million tries, star did die from SIGPIPE.
+        Note that this did never happen on Solaris.
+
+        Star now ignores SIGPIPE and it seems that this fixed the problem
+        since it did not happen again after that change with even 100 million
+        tries.
+
+- star: The debug printing for the FIFO has been enhanced to print more
+        information from the FIFO control structure to make it easier to debug
+        problems like the ones mentioned above.
+
+- star: There seems to be a problem in pipe handling in the Linux kernel.
+        It seems that in rare cases, the read(2) on a pipe returns 0 even though
+        the write side did write(2) one byte to the pipe just before calling
+        exit(). Unfortunately, this problem is hard to debug as it happens only
+        once every ~30 million tries. Our workaround is to behave as if the
+        expected byte could be read and star currently prints something like:
+
+                star: Erfolg. Sync pipe read error pid 8141 ret 0
+                star: Erfolg. Ib 0 Ob 1 e 0 p 1 g 0 chan 5.
+                star: Erfolg. Trying to work around Kernel Pipe botch.
+
+        before it continues. Since the star exit code in such a case is 0,
+        we assume that this is a correct workaround and this case thus may
+        be made completely silent in the future.
+
+- star: an even less frequent FIFO problem (occurs once every 50 million
+        tries on fast multi CPU machines) has been identified. Star reports a
+        hard EOF on input even though the complete file with logical EOF has
+        been read and there is still input to process. In order to debug this
+        problem a debug message has been added to the code.
+
+        With this debug message, it turned out, that this problem happened
+        because a context switch occurred in the FIFO read process after it did
+        see an empty FIFO and later, after the process was resumed, the
+        following check for the FIFO_MEOF flag did see EOF. We now first check
+        for the FIFO_MEOF flag and later for the amount of data inside as the
+        FIFO as FIFO_MEOF is set after the FIFO content has been updated and
+        thus a context switch is no longer able to cause a wrong assumption
+        about the content of the FIFO.
+
+        If you still see this, please send a report.
+
+- star: added support to print debug malloc statistics to better debug
+        memory problems in star.
+
+- star: pathname.c:: free_pspace() now only frees the path buffer if it
+        is != NULL
+
+- star: fixed a bug in the file create.c that caused star to incorrectly
+        grow the path buffer by 2 bytes for every archived file. This caused
+        star to constantly grow if a larger amount of files are archived and
+        eat up all memory available to 32 bit processes if the archived
+        filesystem is larger than approx. 1 TB.
+
+- star: If the path name now cannot be handled because of low memory,
+        we print a warning that includes the text "out of memory".
+
+- star: Now checking whether open of /dev/null failed while running a
+        compress pipe. This avoids a core dump on defective OS installations.
+
+        Thanks to Pavel Raiskup for poiting to a related Coverity message.
+
+- star: props.c: Added a missing /* FALLTHROUGH */ comment..
+
+        Thanks to Pavel Raiskup for poiting to a related Coverity message.
+
+- star: create.c: Add more comment for the CPIO CRC format handler to
+        explain why the last instance if a series of hard links for a file
+        needs to archive the data.
+
+- star: diff.c: added a filling fillbytes(&finfo, ...) to make sure that
+        ACL pointers are initialized.
+
+        Thanks to Pavel Raiskup for poiting to a related Coverity message.
+
+- star: Several /* NOTREACHED */ comments have been added to tell
+        programs like coverity that after a NULL pointer check, there is no
+        continuation of the program
+
+        Thanks to Pavel Raiskup for poiting to a related Coverity message.
+
+- star: extract.c: A if (path->ps_path == '\0') has been corrected to
+        if (path->ps_path[0] == '\0') after a mktemp() call. This was a typo
+        introduced with the new support for extremely long path names.
+
+        Thanks to Pavel Raiskup for poiting to a related Coverity message.
+
+- star: extract.c An initalization for a struct pathstore has been
+        moved to the front to verify that path.ps_path is always initialized.
+
+        Thanks to Pavel Raiskup for poiting to a related Coverity message.
+
+- star: header.c: isgnumagic(&ptb->dbuf.t_vers) has been changed to
+        isgnumagic(ptb->ustar_dbuf.t_magic) as it is a "ustar" structure
+        that is going to be checked.
+
+        Thanks to Pavel Raiskup for poiting to a related Coverity message.
+
+- star: some Cstyle changes
+
+- bsh / Bourne Shell / star: the function hop_dirs() no longer checks
+                             for p2 != NULL before calling *p2 = '/' as p2 has
+                             been granted to be != NULL from a break with
+                             strchr(p, '/') == NULL
+
+Release 2019-02-18:
+- star: another similar has been fixed similat to what has been fixed
+        already in the 2019-01-22 release:
+
+        An even less frequent FIFO problem (occurs once every 50 million
+        tries on fast multi CPU machines) has been identified. Star reports a
+        hard EOF on input even though the complete file with logical EOF has
+        been read and there is still input to process. In order to debug this
+        problem a debug message has been added to the code.
+
+        With this debug message, it turned out, that this problem happened
+        because a context switch occurred in the FIFO read process after it did
+        see an empty FIFO and later, after the process was resumed, the
+        following check for the FIFO_MEOF flag did see EOF. We now first check
+        for the FIFO_MEOF flag and later for the amount of data inside as the
+        FIFO as FIFO_MEOF is set after the FIFO content has been updated and
+        thus a context switch is no longer able to cause a wrong assumption
+        about the content of the FIFO.
+
+        We now did run 250 million tests without seeing another problem.
+
+        If you still see this, please send a report.
+
+- star: Note that the debug output for this problem now has been
+        disabled. If you need to debug this, call:
+
+                smake clean COPTX=-DFIFO_EOF_DEBUG all
+
+        in the star directory.
+
+- star: The message "Sync pipe read error" is no longer printed when
+        the FIFO background process dies instead of sending a final wakeup.
+        This is needed since there is a possibility for a context switch in
+        the foreground process that can make it later wait for a wakeup while
+        the background process misses to see the wait flag and just exits.
+
+- star: In rare conditions (once every 2 million tries), a hang could.
+        occur with "star -c" if the tar process fills the FIFO and sets the
+        EOF flag and then calls wait() to wait for the FIFO tape output
+        process. This happens in case that the tape output did not see the
+        EOF flag because it has undergone a context switch after it checked
+        for the not yet existing EOF flag and before waiting for a wakeup
+        from the tar FIFO fill process.
+
+        Star now closes the sync pipes before calling wait() as this always
+        wakes up the waiting other side.
+
+        We did run another 300 million tests for this condition and did not
+        see any problem now.
+
+- star: The version is now 1.6
+
+        Short overview for what changed since the last "stable" version:
+
+        - Support for "infinitely" long path names has been added.
+
+        - Support for comparing timestamps with nanosecond granularity
+
+        - -secure-links has been made the default when extracting
+          archived (except when doing an incremental restore).
+
+        - Added Support for NFSv4 ACLs on FreeBSD. Solaris has been
+          supported since 2013.
+
+        - Added Support to archive SELinix attributes.
+
+        - Allow to configure whether "star -fsync" is the default in
+          order to support filesystems that are slow with granted
+          transactions (like ZFS) or platforms that are genrally
+          slow with fsync() (like Linux).
+
+        - Full UNICODE support has been added for tar headers.
+
+        - Support for -zstd compression has been added.
+
+        - Some rare FIFO problems have been fixed.
+          Note that we did recently run more than a billion tests to
+          verify the FIFO after we identified a method to trigger the
+          problem on Linux.
+
+Release 2019-03-11:
+- star: Support for base-256 numbers in timestams and uid/gid has been
+        added. This has been planned in the 1990s already, when star invented
+        the base-256 coding, but it has been forgotten in favor of the
+        POSIX.1-2001 enhanded archive headers. Now it seems that GNU tar.
+        that copied the format from star uses it for timestamps and uid/gid
+        and we need to implement it in order to get archive compatibility.
+
+        Thanks to Michal Górny (mgorny@gentoo.org) for detecting the missing
+        feature.
+
+- star: The t_rdev field in the old star header now may use base-256
+        as well.
+
+- star: The function stoli() added a new parameter "fieldwidth" that
+        allows to configure when a "unterminated octal number" warning is
+        printed. This is needed since this function is used for 8 byte and
+        for 12 byte fields.
+
+- star: star did print archives with illegal 32 byte user/group.
+        names (where the nul terminator is missing) "correctly", when in.
+        list mode but it used only the first 31 bytes when extractig.
+        such archives
+
+- star: a new function istarnumber() is used to do better heuristics on
+        what a valid TAR archive is. We have some special handling to work.
+        around the non-compliance of GNU tar in some known cases. If you
+        discover other GNU tar archives that are not detected as TAR archive,
+        please report them to help to make th eheuristics better.
+
+        The background is to make star better in detecting fool archives.
+
+- star: The directory testscripts added new files:
+
+        testscripts/not_a_tar_file1 and testscripts/not_a_tar_file3
+
+        with correct checksums that fool tar implementations that use too
+        few heuristics to identify tar archives.
+
+- star: fixed a bug in the FIFO related to extracting multi-volume
+        archives. The bug was introduced with release 2019-02-18 and the
+        effect was that the FIFO complained at the end of the last volume.
+
+- star/libschily: Added new error checking codes:
+
+        "ID"<-->allows to control error behaviour with range errors in uid_t
+                and gid_t values.
+
+        "TIME"<>allows to control error behaviour with range errors in time_t
+
+- star: Creating multi volume archives without using the FIFO did dump
+        core. We thus no longer set mp->chreel = TRUE; when the FIFO has.
+        been disabled. The related bug has been introduced in January 2012.
+
+- star: Creating multi volume archives with a very small volume size
+        could cause a hang at the end as the function startvol() did not
+        check whether the TAR process did already decide to exit while
+        waiting for the TAR process to calm down (stop) before writing the
+        next multi volume header. We no longer wait in this case.
+
+- star: exprstats() now calls fifo_exit(ret) in order to avoid a
+        FIFO Sync pipe read error message in case that star was terminated
+        with an error.
+
+- star: Since we added better Unicode support in May 2018, star did
+        dump core when a multi volume header with POSIX.1-2001 extensions
+        was written in multi volume create mode. We now check for NULL
+        pointers before we call nameascii() to decide whether the file.
+        name needs a UTF-8 translation.
+
+- star: Creating multi volume archives without POSIX.1-2001 support
+        no longer sets POSIX.1-2001 extension flags for the volume header.
+
+- star: The flag XF_NOTIME now works when creating POSIX.1-2001
+        extended headers and thus the 'x'-header with time stamps for the
+        volume header tar header is no longer created. This avoids
+        to write atime=1 for the volume number 1 since we encode the
+        volume number in the otherwise useless atime of the volume header
+        when in POSIX.1-1988 TAR mode.
+
+- star: the star.1 man page now mentions that the first tar program
+        appeared in 1979 (3 years before star has been started as a project).
+
+- star: the star.4 man page now has a "SEE ALSO", a HISTORY and
+        a AUTHOR section.
+
+- star: the star.4 man page now has a MULTI VOLUME ARCHIVE HANDLING
+        section.
+
+- star: the star.4 man page added a new "BASIC TAR STRUCTURE" section.
+
+- star: The ACL reference test archives (formerly available from e.g.:
+                http://sf.net/projects/s-tar/files/alpha/) have been added
+        to the directory star/testscripts/. The files.
+
+        acl-test.tar.gz
+        acl-test2.tar.gz
+        acl-test3.tar.gz
+        acl-test4.tar.gz
+        acl-test5.tar.gz
+
+        contain ACLs that use the obsolete method from a POSIX proposal
+        from around 1993 that was withdrawn in 1997 and never has become
+        part of a standard. This method has been implemented in 1993 for
+        UFS on Solaris.
+
+        GNU tar claims to support this format but really does not support
+        it at all. GNU tar fails to extract the reference tar archives from
+        above and it fails to create a compliant tar archive in create mode.
+        It is strange to see that GNU tar never has been tested against the
+        reference archives that have been created in collaboration with
+        SuSE in 2001 already.
+
+        The files
+
+        acl-nfsv4-test.tar.gz
+        acl-nfsv4-test2.tar.gz
+        acl-nfsv4-test3.tar.gz
+        acl-nfsv4-test4.tar.gz
+        acl-nfsv4-test5.tar.gz
+
+        contain ACLs that have become part of the NFSv4 standard and that.
+        are also used on NTFS and ZFS. This format is completely unsupported
+        by GNU tar.
+
+- star TODO: create unit tests in order to avoid future problems
+        with multi volume archives similar to the problems we recently
+        fixed.
+
+- star: Updated version 1.6 (not yet published in separate tarball)
+
+        Short overview for what changed since the last "stable" version:
+
+        - Support for "infinitely" long path names has been added.
+
+        - Support for base-256 numbers in timestams and uid/gid
+          has been added. This has been planned in the 1990s already,
+          when star invented the base-256 coding, but it has been
+          forgotten in favor of the POSIX.1-2001 enhanded archive
+          headers.
+
+        - Support for comparing timestamps with nanosecond granularity
+
+        - -secure-links has been made the default when extracting
+          archived (except when doing an incremental restore).
+
+        - Added Support for NFSv4 ACLs on FreeBSD. Solaris has been
+          supported since 2013.
+
+        - Added Support to archive SELinix attributes.
+
+        - Allow to configure whether "star -fsync" is the default in
+          order to support filesystems that are slow with granted
+          transactions (like ZFS) or platforms that are genrally
+          slow with fsync() (like Linux).
+
+        - Full UNICODE support has been added for tar headers.
+
+        - Support for -zstd compression has been added.
+
+        - Some rare FIFO problems have been fixed.
+          Note that we did recently run more than a billion tests to
+          verify the FIFO after we identified a method to trigger the
+          problem on Linux.
