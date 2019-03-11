@@ -1,0 +1,168 @@
+Changelog
+=========
+
+Release 2019-02-18:
+- libgetopt: The undocumented variable "_sp" from SVr4 has been renamed
+             to "opt_sp" and (on platforms that support "#pragma weak") there
+             is a  weak reference _sp to that new variable, giving backwards
+             compatibility.
+
+             The reason for doing this is to make sure that people on Illumos
+             or Oracle Solaris, who still have an outdated version of getopt()
+             in their local libc, do not try to link the Bourne Shell only
+             against their old getopt(). If they did this, they would not get
+             the documented enhanced getopt() features from the Bourne Shell.
+
+- Bourne Shell: The shell now uses "opt_sp" as the name for the
+                undocumented additional getopt() interface from AT&T. This has
+                been done to avoid being able to link the Bourne Shell on
+                Illumos or Oracle Solaris without using our libgetopt. If this
+                was done, we could not support UNIX/MULTICS style long options
+                and we could not support -help/--help, since the latter is
+                implemented via long options that are not an alias to short
+                options.
+
+- Bourne Shell: added a new timestamp to the Bourne Shell version.
+
+
+Release 2018-11-21:
+- Bourne Shell: make it exit the whole shell with set -e after a command
+                substitution failed on the right side of a variable assignment
+                that has no command. This is required by POSIX.
+
+- Bourne Shell: added a unit tests for the above case.
+
+- Bourne Shell: New version date set to 2018-12-08 the this change.
+
+Release 2019-01-22:
+- bsh / Bourne Shell / star: the function hop_dirs() no longer checks
+                             for p2 != NULL before calling *p2 = '/' as p2 has
+                             been granted to be != NULL from a break with
+                             strchr(p, '/') == NULL
+
+                             Thanks to Pavel Raiskup for poiting to a related
+                             Coverity message.
+
+- Bourne Shell: Added a missing /* FALLTHROUGH */ comment..
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: added a range check for $OPTIND to tge getopts(1)
+                implementation
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: Removed a nonsense variable in expand() that caused
+                Coverity not to understand that a directory was correctly
+                closed()
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: Added a paranoia comparison to make Coverity quiet.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: avoid to call catpath() with a NULL pointer for path
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: check the write() return code in io.c
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: Added a paranopia check for "test -o" to make Coperity
+                quiet.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: Added (void) before fcntl() in hope to make Coverity
+                quiet.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: Removed dead code from readwc()
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: Cstyle changes to xec.c
+
+- Bourne Shell: "builtin -d ..." did access free()d memory.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: expand.c: added a check for fd == -1 to avoid calling
+                openat() with that fd.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+-Bourne Shell: func.c: added a check for fd == -1 to avoid calling
+               read()/close() with that fd.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: jobs.c: enlarged a buffer to be of same size as
+                numbuf[] to avoid a potential buffer overflow.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: print.c::prt_cntl() had a very old (AT&T) bug with
+                printing byte sequences that get an error with mbtowc() and it
+                did not print byte sequences correctly that refer to legal but
+                "nonprintable" multi byte characters.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: xec.c: the reserved word "time" could cause to
+                access uninitialized memory if the string in $TIMEFORMAT
+                contains the format %J
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+- Bourne Shell: xec.c: added a paranoia check on whether
+                findnam("funcname") returns NULL even though the existence of
+                a function with that name already has been verified via the
+                hash service.
+
+                Thanks to Pavel Raiskup for poiting to a related Coverity
+                message.
+
+Release 2019-02-18:
+- Bourne Shell: Another vfork() problem has been fixed. "trap cmd EXIT"
+                has incorrectly called "cmd" after a non-existing command was.
+                called by the shell. This was a result of the shared data from
+                vfork().
+
+                Thanks to Martijn Dekker for reporting.
+
+- Bourne Shell: A unit test case for the above bug has been added.
+
+- Bourne Shell: __growstak() now always uses realloc() on modern
+               platforms. This may speed up things up to 15%.
+
+               Thanks to Jan Engelhardt for reporting.
+
+Release 2019-03-11:
+- libgetopt/Bourne Shell: added an #ifndef __CYGWIN__ in order to avoid
+                          overwriting non-standard definitions by standard
+                          definitions on Cygwin for the global getopt()
+                          variables.
+
+                          Thanks to Heiko Ei[eszett]feldt for proposing this
+                          fix.
+
+- Bourne Shell: better comment in bltin.c
