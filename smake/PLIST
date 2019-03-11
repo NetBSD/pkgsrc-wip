@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/smake
+man/man1/smake.1
+share/lib/smake/defaults.smk
