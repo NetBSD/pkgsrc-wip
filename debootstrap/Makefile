@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=			debootstrap_1.0.100
+DISTNAME=			debootstrap_1.0.114
 PKGNAME=			${DISTNAME:S/_/-/}
 CATEGORIES=			sysutils emulators
 MASTER_SITES=			${MASTER_SITE_DEBIAN:=pool/main/d/debootstrap/}
@@ -19,7 +19,7 @@ DEPENDS+=	wget-[0-9]*:../../net/wget
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/debootstrap
 #WRKSRC=	${WRKDIR}/debootstrap.git
 USE_LANGUAGES=	# none
 

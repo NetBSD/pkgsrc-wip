@@ -10,6 +10,7 @@ share/debootstrap/scripts/aequorea
 share/debootstrap/scripts/artful
 share/debootstrap/scripts/bartholomea
 share/debootstrap/scripts/bionic
+share/debootstrap/scripts/bookworm
 share/debootstrap/scripts/breezy
 share/debootstrap/scripts/bullseye
 share/debootstrap/scripts/buster
@@ -18,6 +19,7 @@ share/debootstrap/scripts/cosmic
 share/debootstrap/scripts/dapper
 share/debootstrap/scripts/dasyatis
 share/debootstrap/scripts/debian-common
+share/debootstrap/scripts/disco
 share/debootstrap/scripts/edgy
 share/debootstrap/scripts/etch
 share/debootstrap/scripts/etch-m68k
