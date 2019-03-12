@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dosbox-x.com/
 COMMENT=	DOSBox with accurate emulation and wide testing
 LICENSE=	gnu-gpl-v2
-O
+
 WRKSRC=			${WRKDIR}/dosbox-x-${GITHUB_TAG}
 GNU_CONFIGURE=		yes
 # dosbox-x uses a modified SDL1 or system SDL2
