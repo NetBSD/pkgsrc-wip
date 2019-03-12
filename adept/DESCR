@@ -1,0 +1,4 @@
+This library implements a very unusual and interesting approach. It takes a function
+of several arguments supplied by the caller, deconstructs its analytic structure
+using C++ type substitution for all values, and computes gradients (Jacobians) of
+the function while ony calling the function once. A very innovative approach

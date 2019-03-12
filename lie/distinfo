@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (conLiE.tar.gz) = 92eb9283868cc46ae0b87c4dfd6f13631e046bee
+RMD160 (conLiE.tar.gz) = 3a0ff7e62db3de194222d0d5bd5fab8390ef8537
+SHA512 (conLiE.tar.gz) = bc7247c273b24b9dc03ce3e5d7f55dfdc8b80988d29821926938b72fa4dd4f937a28cc3b0ae350b9cbbe7c78a994918fb323964bbf0cfd3a211f95e239154cc2
+Size (conLiE.tar.gz) = 361170 bytes
+SHA1 (patch-Makefile) = db2986bb6b028de002b5e6c58206dc70a933b327
