@@ -1,0 +1,39 @@
+$NetBSD$
+
+--- otherlibs/systhreads/Makefile.orig	2019-03-01 15:13:46.000000000 +0000
++++ otherlibs/systhreads/Makefile
+@@ -21,6 +21,7 @@ include $(ROOTDIR)/Makefile.common
+ CAMLRUN ?= $(ROOTDIR)/boot/ocamlrun
+ 
+ LIBS = -nostdlib -I $(ROOTDIR)/stdlib -I $(ROOTDIR)/otherlibs/$(UNIXLIB)
++LDOPTS=	-ldopt "$(LDFLAGS)"
+ 
+ CAMLC=$(CAMLRUN) $(ROOTDIR)/ocamlc $(LIBS)
+ CAMLOPT=$(CAMLRUN) $(ROOTDIR)/ocamlopt $(LIBS)
+@@ -61,7 +62,7 @@ all: lib$(LIBNAME).$(A) $(LIBNAME).cma $
+ allopt: lib$(LIBNAME)nat.$(A) $(LIBNAME).cmxa $(CMIFILES)
+ 
+ lib$(LIBNAME).$(A): $(BYTECODE_C_OBJS)
+-	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LINK)
++	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LINK) $(LDOPTS)
+ 
+ lib$(LIBNAME)nat.$(A): $(NATIVECODE_C_OBJS)
+ 	$(MKLIB_CMD) -o $(LIBNAME)nat $^
+@@ -69,7 +70,7 @@ lib$(LIBNAME)nat.$(A): $(NATIVECODE_C_OB
+ $(LIBNAME).cma: $(THREADS_BCOBJS)
+ ifeq "$(UNIX_OR_WIN32)" "unix"
+ 	$(MKLIB) -o $(LIBNAME) -ocamlc '$(CAMLC)' -cclib -lunix -linkall \
+-	  $(PTHREAD_CAML_LINK) $^
++	  $(PTHREAD_CAML_LINK) $(LDOPTS) $^
+ # TODO: Figure out why -cclib -lunix is used here.
+ # It may be because of the threadsUnix module which is deprecated.
+ # It may hence be good to figure out whether this module shouldn't be
+@@ -117,7 +118,7 @@ install:
+ 	fi
+ 	$(INSTALL_DATA) libthreads.$(A) "$(INSTALL_LIBDIR)"
+ 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) libthreads.$(A)
+-	mkdir -p "$(INSTALL_THREADSLIBDIR)"
++	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_THREADSLIBDIR)"
+ 	$(INSTALL_DATA) \
+ 	  $(CMIFILES) threads.cma \
+ 	  "$(INSTALL_THREADSLIBDIR)"

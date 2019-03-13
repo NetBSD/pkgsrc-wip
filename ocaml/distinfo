@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.125 2019/01/07 18:52:23 jaapb Exp $
+
+SHA1 (ocaml-4.08.0+beta2.tar.gz) = 890863e97122821059378659811f66a19f441584
+RMD160 (ocaml-4.08.0+beta2.tar.gz) = 3a7c1cf1966a84ac707eef621eec9cc540c8f973
+SHA512 (ocaml-4.08.0+beta2.tar.gz) = 6cf13ba80462a6d5dad904d58f73c82fc01073bb126b4001db01de878b876409cd1439ec87cb85b8294088e3cd55227997b312530a702158731e2f46f2ca4de4
+Size (ocaml-4.08.0+beta2.tar.gz) = 4895272 bytes
+SHA1 (patch-Makefile) = 4ed79d0a5e2368a3840f51ebcdfd5a8f91e6c74e
+SHA1 (patch-Makefile.common.in) = 6bfbaf2fb7f9f74227c5f581eb65430985c1ac01
+SHA1 (patch-asmcomp_amd64_emit.mlp) = 68cc42afd6439347524f2d81c48305dcbc173869
+SHA1 (patch-asmcomp_asmlink.ml) = db2b387ea17f41a62c2bce53b91f945d5e29a82f
+SHA1 (patch-asmrun_amd64.S) = c7cd60d9b02ddc3b9a09c696f697d5f78c25a13f
+SHA1 (patch-configure) = 29772545e35625fb8b8d74ca74291d62eee1b1c6
+SHA1 (patch-driver_compenv.ml) = fce94a3c0d7681598d9dfe7d5e882e3ad5a15540
+SHA1 (patch-driver_main.ml) = 69a6f761ded38e0721a7aed1416a9f19a288d991
+SHA1 (patch-driver_main_args.ml) = 4c6a6ec25f433974f9aab99b4f2ac9c884bb3b04
+SHA1 (patch-driver_main_args.mli) = 5e8164e4392c0dde6c6264eeed87c346128e1863
+SHA1 (patch-driver_optmain.ml) = 5ce77f1f906ce59cb533b4d25e4d57f7a70ab1b3
+SHA1 (patch-man_Makefile) = b780c026aef5f7e6b22b142fce3ec87ef9d2ab22
+SHA1 (patch-ocamldoc_odoc__messages.ml) = 77f650a5f34f40b9648a8d5091e9aa31efb5734b
+SHA1 (patch-otherlibs_Makefile.otherlibs.common) = 9933ed1b10c79885920020c444750f7487829d6b
+SHA1 (patch-otherlibs_systhreads_Makefile) = 477f965a6d8854dcf33caecb91d6655896333950
+SHA1 (patch-otherlibs_threads_Makefile) = 607e5ae77c526ea412452b93454d2e0d65aed687
+SHA1 (patch-tools_ocamlcp.ml) = 76dfe040e6d61f0c844e01fa2bd9b6b0f1c21b99
+SHA1 (patch-tools_ocamlmklib) = 409e9fab682d9c0533725b872fd233becf234133
+SHA1 (patch-tools_ocamloptp.ml) = 070bd797fcd4120e58d15a09f25d93ec46b87d1a
+SHA1 (patch-utils_clflags.ml) = 1c8223caac3c81b134b470d9bb2fb5ce62576c53
+SHA1 (patch-utils_clflags.mli) = 381951d9583e032d3a520b68a8fe9f867ec49995
+SHA1 (patch-yacc_Makefile) = 5e52986e495718666c253dc5bfd8a9ca584ea854
