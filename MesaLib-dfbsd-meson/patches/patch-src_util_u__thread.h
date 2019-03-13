@@ -109,7 +109,7 @@ https://reviews.freebsd.org/D17872
  u_thread_get_time_nano(thrd_t thread)
  {
 -#if defined(__linux__) && defined(HAVE_PTHREAD)
-+#if (defined(__linux__) || defined(__DragonFly__) || defined(__FreeBSD__)) && defined(HAVE_PTHREAD)
++#if (defined(__linux__) || defined(USE_PTHREAD_GETCPUCLOCKID)) && defined(HAVE_PTHREAD)
     struct timespec ts;
     clockid_t cid;
  

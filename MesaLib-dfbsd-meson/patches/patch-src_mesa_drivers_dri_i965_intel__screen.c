@@ -65,7 +65,7 @@ See kernel commit 172cf15d18889313bf2c3bfb81fcea08369274ef in 3.6+.
        return false;
     }
  
-+#if defined(__FreeBSD__)
++#if defined(REQUIRE_36_GEN4)
 +   if (!intel_get_boolean(screen, I915_PARAM_HAS_RELAXED_DELTA)) {
 +      fprintf(stderr, "[%s: %u] Kernel 2.6.39 required.\n", __func__, __LINE__);
 +      return false;

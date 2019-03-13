@@ -14,12 +14,21 @@ PKG_SUPPORTED_OPTIONS+=		noatexit
 PKG_SUPPORTED_OPTIONS+=		iris
 PKG_SUGGESTED_OPTIONS+=		iris
 PKG_SUPPORTED_OPTIONS+=		vulkan
+
+PKG_SUPPORTED_OPTIONS+=		no_render_node
+PKG_SUPPORTED_OPTIONS+=		use_clock_nanosleep_os_time
+PKG_SUPPORTED_OPTIONS+=		use_pthread_getcpuclockid
 PKG_SUPPORTED_OPTIONS+=		no_cs_queue
 PKG_SUPPORTED_OPTIONS+=		revert_threaded_context
 PKG_SUPPORTED_OPTIONS+=		revert_copy_clear
 PKG_SUPPORTED_OPTIONS+=		revert_i965_softpin
 PKG_SUPPORTED_OPTIONS+=		revert_sdma_uploader
+PKG_SUPPORTED_OPTIONS+=		require_36_gen4
 PKG_SUPPORTED_OPTIONS+=		invert_atomic_add_unless
+PKG_SUPPORTED_OPTIONS+=		physmem_netbsd
+PKG_SUPPORTED_OPTIONS+=		strict_netbsd
+PKG_SUPPORTED_OPTIONS+=		x86_tsd_openbsd
+PKG_SUPPORTED_OPTIONS+=		so_name_openbsd
 
 # PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
@@ -60,6 +69,21 @@ PKG_SUGGESTED_OPTIONS+=		dri
 PKG_SUGGESTED_OPTIONS+=		glx-tls
 .endif
 
+# Revert patch removing support for no dedicated render nodes
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		no_render_node
+.endif
+
+# Use clock_nanosleep() in os_time.c
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		use_clock_nanosleep_os_time
+.endif
+
+# pthread_getcpuclockid only in NetBSD 8+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		use_pthread_getcpuclockid
+.endif
+
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		no_cs_queue
 PKG_SUGGESTED_OPTIONS+=		revert_threaded_context
@@ -71,8 +95,32 @@ PKG_SUGGESTED_OPTIONS+=		revert_i965_softpin
 PKG_SUGGESTED_OPTIONS+=		revert_sdma_uploader
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=		invert_atomic_add_unless
+# Require Linux 3.6+ intel support for ge4+
+.if ${OPSYS} == "FreeBSD"
+PKG_SUGGESTED_OPTIONS+=		require_36_gen4
+.endif
+
+# Causes segfault in mpv on DragonFly intel EagleLake machine
+# .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+# PKG_SUGGESTED_OPTIONS+=		invert_atomic_add_unless
+# .endif
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		physmem_netbsd
+.endif
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		strict_netbsd
+.endif
+
+# OpenBSD xenocara tsd dispatch assembly for entry_x86_tsd.h
+.if ${OPSYS} == "OpenBSD"
+PKG_SUGGESTED_OPTIONS+=		x86_tsd_openbsd
+.endif
+
+# Shorten names dlopened to libGL.so and libglapi.so
+.if ${OPSYS} == "OpenBSD"
+PKG_SUGGESTED_OPTIONS+=		so_name_openbsd
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -137,11 +185,13 @@ MESON_ARGS+=		-Dgles2=false
 # Recommended by
 # http://www.freedesktop.org/wiki/Software/Glamor/
 CONFIGURE_ARGS+=	--enable-glx-tls
+MESON_ARGS+=		-Dglx-tls=true
 .else
 # (EE) Failed to load /usr/pkg/lib/xorg/modules/extensions/libglx.so:
 # /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model
 # initial-exec and dlopen is not supported
 CONFIGURE_ARGS+=	--disable-glx-tls
+MESON_ARGS+=		-Dglx-tls=false
 .endif # glx-tls
 
 # DRI on Linux needs either sysfs or udev
@@ -389,6 +439,18 @@ MESON_ARGS+=		-Dgallium-xvmc=false
 CPPFLAGS+=	-DHAVE_NOATEXIT
 .endif
 
+.if !empty(PKG_OPTIONS:Mno_render_node)
+CPPFLAGS+=	-DNO_RENDER_NODE
+.endif
+
+.if !empty(PKG_OPTIONS:Muse_clock_nanosleep_os_time)
+CPPFLAGS+=	-DUSE_CLOCK_NANOSLEEP_OS_TIME
+.endif
+
+.if !empty(PKG_OPTIONS:Muse_pthread_getcpuclockid)
+CPPFLAGS+=	-DUSE_PTHREAD_GETCPUCLOCKID
+.endif
+
 .if !empty(PKG_OPTIONS:Mno_cs_queue)
 CPPFLAGS+=	-DNO_CS_QUEUE
 .endif
@@ -409,6 +471,26 @@ CPPFLAGS+=	-DREVERT_I965_SOFTPIN
 CPPFLAGS+=	-DREVERT_SDMA_UPLOADER
 .endif
 
+.if !empty(PKG_OPTIONS:Mrequire_36_gen4)
+CPPFLAGS+=	-DREQUIRE_36_GEN4
+.endif
+
 .if !empty(PKG_OPTIONS:Minvert_atomic_add_unless)
 CPPFLAGS+=	-DINVERT_ATOMIC_ADD_UNLESS
+.endif
+
+.if !empty(PKG_OPTIONS:Mphysmem_netbsd)
+CPPFLAGS+=	-DPHYSMEM_NETBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mstrict_netbsd)
+CPPFLAGS+=	-DSTRICT_NETBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mx86_tsd_openbsd)
+CPPFLAGS+=	-DX86_TSD_OPENBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mso_name_openbsd)
+CPPFLAGS+=	-DSO_NAME_OPENBSD
 .endif

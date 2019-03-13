@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.18 2019/02/22 15:40:35 tnn Exp $
 
+# 2019-03-12	intel/fs: Fix opt_peephole_csel to not throw away saturates.
+COMMIT_ID=	3570d15b6d88bdcd353b31ffe5460d04a88b7b6f
+
 # 2019-03-06	st/glsl: start spilling out common st glsl conversion code
-COMMIT_ID=	ecceb076e5c99cea94b853a9600947fe78b3ca74
+# COMMIT_ID=	ecceb076e5c99cea94b853a9600947fe78b3ca74
 
 # 2019-03-05	anv: Implement VK_EXT_inline_uniform_block
 # COMMIT_ID=	43f40dc7cb234e007fe612b67cc765288ddf0533
@@ -35,10 +38,9 @@ HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
+# GNU_CONFIGURE=	yes
 # USE_TOOLS+=	autoconf automake autoreconf bison pkg-config gmake flex
 USE_TOOLS+=	bison pkg-config gmake flex
-
 USE_LANGUAGES=	c99 c++
 # USE_LIBTOOL=	yes
 

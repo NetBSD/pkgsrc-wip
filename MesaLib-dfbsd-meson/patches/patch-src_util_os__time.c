@@ -12,7 +12,7 @@ https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=225415
  os_time_sleep(int64_t usecs)
  {
 -#if defined(PIPE_OS_LINUX)
-+#if (defined(HAVE_CLOCK_NANOSLEEP) && (defined(__FreeBSD__) || defined(__DragonFly__))) || defined(PIPE_OS_LINUX)
++#if (defined(HAVE_CLOCK_NANOSLEEP) && defined(USE_CLOCK_NANOSLEEP_OS_TIME)) || defined(PIPE_OS_LINUX)
     struct timespec time;
     time.tv_sec = usecs / 1000000;
     time.tv_nsec = (usecs % 1000000) * 1000;

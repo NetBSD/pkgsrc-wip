@@ -1,0 +1,24 @@
+$NetBSD$
+
+--- meson.build.orig	2019-03-06 23:05:20.000000000 +0000
++++ meson.build
+@@ -50,6 +50,7 @@ with_tests = get_option('build-tests')
+ with_valgrind = get_option('valgrind')
+ with_libunwind = get_option('libunwind')
+ with_asm = get_option('asm')
++with_glx_tls = get_option('glx-tls')
+ with_glx_read_only_text = get_option('glx-read-only-text')
+ with_glx_direct = get_option('glx-direct')
+ with_osmesa = get_option('osmesa')
+@@ -338,7 +339,10 @@ if with_egl and not (with_platform_drm o
+   endif
+ endif
+ 
+-pre_args += '-DGLX_USE_TLS'
++if with_glx_tls
++  pre_args += '-DGLX_USE_TLS'
++endif
++
+ if with_glx != 'disabled'
+   if not (with_platform_x11 and with_any_opengl)
+     error('Cannot build GLX support without X11 platform support and at least one OpenGL API')
