@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.91 2019/01/22 21:50:47 wiz Exp $
 
+# 2019-03-12		xf86drm: Fix segmentation fault while parsing device info
+COMMIT_ID=		4735ca71af9f741e2438104d543dc3c5a8107f35
+
 # 2019-02-26		configure.ac fix build error for config.h in autotools
-COMMIT_ID=		d54e546852dd6ffdc732ffa17f102b7ce87a7352
+# COMMIT_ID=		d54e546852dd6ffdc732ffa17f102b7ce87a7352
 
 # 2019-02-01		amdgpu: add some raven marketing names
 # COMMIT_ID=		6415bd3ced9d80137e30cb90837eb01932607882
@@ -80,6 +83,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.libdrm
 PKG_SUPPORTED_OPTIONS=	libkms
 PKG_SUGGESTED_OPTIONS=
 
+PKG_SUPPORTED_OPTIONS+=	invert_atomic_add_unless
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+=	invert_atomic_add_unless 
+.endif
+
 # .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
 # PKG_SUGGESTED_OPTIONS+=	libkms
 # .endif
@@ -95,6 +103,10 @@ MESON_ARGS+=	-Dlibkms=true
 .else
 CONFIGURE_ARGS+=	--disable-libkms
 MESON_ARGS+=	-Dlibkms=false
+.endif
+
+.if !empty(PKG_OPTIONS:Minvert_atomic_add_unless)
+CPPFLAGS+=	-DINVERT_ATOMIC_ADD_UNLESS
 .endif
 
 # Meson

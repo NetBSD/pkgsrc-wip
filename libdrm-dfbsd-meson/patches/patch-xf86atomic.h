@@ -11,7 +11,7 @@ https://bugs.freedesktop.org/show_bug.cgi?id=100077
  	c = atomic_read(v);
  	while (c != unless && (old = atomic_cmpxchg(v, c, c + add)) != c)
  		c = old;
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(INVERT_ATOMIC_ADD_UNLESS)
 +	return c != unless;
 +#else
  	return c == unless;
