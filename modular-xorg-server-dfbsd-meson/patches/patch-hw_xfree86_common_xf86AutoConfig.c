@@ -2,16 +2,20 @@ $NetBSD: patch-hw_xfree86_common_xf86AutoConfig.c,v 1.3 2018/10/26 10:20:12 maya
 
 Patches from FreeBSD ports /DragonFly dports for x11-servers/xorg-server 1.18.4.
 
+Add option for modesetting driver.
+
+Add option for scfb driver.
+
 Look for wsfb on netbsd (needed by genfb)
 
---- hw/xfree86/common/xf86AutoConfig.c.orig	2018-10-25 14:13:21.000000000 +0000
+--- hw/xfree86/common/xf86AutoConfig.c.orig	2019-03-05 16:34:21.000000000 +0000
 +++ hw/xfree86/common/xf86AutoConfig.c
 @@ -294,7 +294,7 @@ listPossibleVideoDrivers(XF86MatchedDriv
      xf86PciMatchDriver(md);
  #endif
  
 -#if defined(__linux__)
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__linux__) || defined(ADD_MODESETTING_DRIVER)
      xf86AddMatchedDriver(md, "modesetting");
  #endif
  
@@ -22,7 +26,7 @@ Look for wsfb on netbsd (needed by genfb)
 -#else
 +#elif defined(__linux__)
      xf86AddMatchedDriver(md, "fbdev");
-+#elif defined(__FreeBSD__)
++#elif defined(ADD_SCFB_DRIVER)
 +    xf86AddMatchedDriver(md, "scfb");
  #endif
  #endif                          /* !__sun */

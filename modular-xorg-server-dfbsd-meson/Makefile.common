@@ -2,8 +2,14 @@
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
+# 2019-03-13	Add xf86OSInputThreadInit to stub os-support as well
+COMMIT_ID=	c020769dbfb965740c8441d8242b738ef572a7c9
+
+# 2019-03-11	mi: Shortcut miDoCopy/miCopyArea based on clipList
+# COMMIT_ID=	f665a9c9e6c8643f3050378249db3088ae3057be
+
 # 2019-03-05	meson: Bump required meson version to 0.46
-COMMIT_ID=	7e046b9467784451769af3a03db46e3c690063b0
+# COMMIT_ID=	7e046b9467784451769af3a03db46e3c690063b0
 
 # 2019-02-27	Revert "gitlab-ci: Only run docker-image stage if relevant source files change"
 # COMMIT_ID=	0ec9a13c2a207e98e2dd6b352552c0e069af0727

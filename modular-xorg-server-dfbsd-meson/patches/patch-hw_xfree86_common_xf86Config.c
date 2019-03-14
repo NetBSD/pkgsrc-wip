@@ -3,9 +3,21 @@ $NetBSD$
 devd support to detect devices from FreeBSD ports / DragonFly dports
 x11-servers/xorg-server 1.18.4.
 
---- hw/xfree86/common/xf86Config.c.orig	2017-01-05 21:19:31.000000000 +0000
+--- hw/xfree86/common/xf86Config.c.orig	2019-03-05 16:34:21.000000000 +0000
 +++ hw/xfree86/common/xf86Config.c
-@@ -1375,13 +1375,16 @@ checkCoreInputDevices(serverLayoutPtr se
+@@ -1020,7 +1020,11 @@ checkCoreInputDevices(serverLayoutPtr se
+     MessageType from = X_DEFAULT;
+ 
+     const char *mousedrivers[] = { "mouse", "synaptics", "evdev", "vmmouse",
++#if defined(WS_DRIVERS_OPENBSD)
++        "ws", "void", NULL
++#else
+         "void", NULL
++#endif
+     };
+ 
+     /*
+@@ -1260,13 +1264,16 @@ checkCoreInputDevices(serverLayoutPtr se
      }
  
      if (!xf86Info.forceInputDevices && !(foundPointer && foundKeyboard)) {
