@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ELF/Options.td.orig	2019-02-15 21:11:17.386739124 +0000
+--- ELF/Options.td.orig	2019-03-14 17:35:11.000000000 +0000
 +++ ELF/Options.td
 @@ -320,6 +320,8 @@ defm symbol_ordering_file:
  

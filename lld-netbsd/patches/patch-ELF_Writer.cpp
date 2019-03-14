@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ELF/Writer.cpp.orig	2019-02-15 21:11:17.385984659 +0000
+--- ELF/Writer.cpp.orig	2019-03-14 17:35:11.000000000 +0000
 +++ ELF/Writer.cpp
-@@ -2026,14 +2026,16 @@ template <class ELFT> std::vector<PhdrEn
+@@ -2019,14 +2019,16 @@ template <class ELFT> std::vector<PhdrEn
    if (OutputSection *Cmd = findSection(".openbsd.randomdata"))
      AddHdr(PT_OPENBSD_RANDOMIZE, Cmd->getPhdrFlags())->add(Cmd);
  

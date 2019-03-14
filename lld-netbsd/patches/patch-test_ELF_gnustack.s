@@ -1,6 +1,6 @@
 $NetBSD$
 
---- test/ELF/gnustack.s.orig	2019-02-01 23:06:36.000000000 +0000
+--- test/ELF/gnustack.s.orig	2019-03-14 17:33:28.000000000 +0000
 +++ test/ELF/gnustack.s
 @@ -10,6 +10,9 @@
  # RUN: ld.lld %t1 -o %t -z noexecstack

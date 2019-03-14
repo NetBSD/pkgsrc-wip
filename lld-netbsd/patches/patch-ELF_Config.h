@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ELF/Config.h.orig	2019-02-15 21:11:17.982194121 +0000
+--- ELF/Config.h.orig	2019-03-14 17:35:11.000000000 +0000
 +++ ELF/Config.h
 @@ -13,6 +13,7 @@
  #include "llvm/ADT/MapVector.h"
@@ -10,7 +10,7 @@ $NetBSD$
  #include "llvm/BinaryFormat/ELF.h"
  #include "llvm/Support/CachePruning.h"
  #include "llvm/Support/CodeGen.h"
-@@ -195,6 +196,7 @@ struct Configuration {
+@@ -198,6 +199,7 @@ struct Configuration {
    bool ZNodefaultlib;
    bool ZNodelete;
    bool ZNodlopen;
@@ -18,7 +18,7 @@ $NetBSD$
    bool ZNow;
    bool ZOrigin;
    bool ZRelro;
-@@ -292,6 +294,10 @@ struct Configuration {
+@@ -295,6 +297,10 @@ struct Configuration {
  
    // 4 for ELF32, 8 for ELF64.
    int Wordsize;

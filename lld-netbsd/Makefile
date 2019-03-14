@@ -2,7 +2,7 @@
 
 SVN_REPOSITORIES=	lld
 SVN_REPO.lld=		http://llvm.org/svn/llvm-project/lld/trunk
-SVN_REVISION.lld=	354151
+SVN_REVISION.lld=	356117
 
 PKGNAME=		lld-9.0.0
 #DISTNAME=		${PKGNAME}.src
