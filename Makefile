@@ -4856,6 +4856,7 @@ SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-scfb-dfbsd
 SUBDIR+=	xf86-video-virtualbox
 SUBDIR+=	xf86rushproto
+SUBDIR+=	xfce4-wm-dfbsd
 SUBDIR+=	xfs
 SUBDIR+=	xgobi
 SUBDIR+=	xine-plugin
