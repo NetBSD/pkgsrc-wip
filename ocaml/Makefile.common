@@ -26,8 +26,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-x
 #CPPFLAGS+=		-DDB_DBM_HSEARCH
 
-DISTINFO_FILE= ${.CURDIR}/../../lang/ocaml/distinfo
-PATCHDIR= ${.CURDIR}/../../lang/ocaml/patches
+#DISTINFO_FILE= ${.CURDIR}/../../lang/ocaml/distinfo
+#PATCHDIR= ${.CURDIR}/../../lang/ocaml/patches
 
 .include "../../mk/bsd.prefs.mk"
 
