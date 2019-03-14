@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.47 2018/09/16 20:28:51 triaxx Exp $
 
+# 2019-03-08	Revert "glamor: Avoid glamor_create_pixmap for pixmaps backing windows"
+COMMIT_ID=	f6cd4a67d7de5d3ff1a6e58a8c83749fc8ffc310
+
 # 2019-03-06	Bump version for 19.0.0 release
-COMMIT_ID=	0d132d99e0b750896a78f47d73a8639680495d8c
+# COMMIT_ID=	0d132d99e0b750896a78f47d73a8639680495d8c
 
 # 2019-03-04	dri2: Call drm_queue_handle_deferred in dri2_deferred_event
 # COMMIT_ID=	c301b8af25d2c2cd49035a4395ebe6c3612df366
