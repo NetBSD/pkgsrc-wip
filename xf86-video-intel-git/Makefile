@@ -32,6 +32,7 @@ pre-configure:
 
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libXvMC/buildlink3.mk"
