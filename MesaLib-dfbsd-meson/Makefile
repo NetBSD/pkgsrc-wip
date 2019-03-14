@@ -1,22 +1,10 @@
 # $NetBSD: Makefile,v 1.18 2019/02/22 15:40:35 tnn Exp $
 
+# 2019-03-13	anv/pass: Flag the need for a RT flush for resolve attachments
+COMMIT_ID=	489bf2de237a190b966a412efda89d12d1daacde
+
 # 2019-03-12	intel/fs: Fix opt_peephole_csel to not throw away saturates.
-COMMIT_ID=	3570d15b6d88bdcd353b31ffe5460d04a88b7b6f
-
-# 2019-03-06	st/glsl: start spilling out common st glsl conversion code
-# COMMIT_ID=	ecceb076e5c99cea94b853a9600947fe78b3ca74
-
-# 2019-03-05	anv: Implement VK_EXT_inline_uniform_block
-# COMMIT_ID=	43f40dc7cb234e007fe612b67cc765288ddf0533
-
-# 2019-03-02	st/mesa: add support for lowering fp64/int64 for nir drivers
-# COMMIT_ID=	cb4e3e3ef6e47811303ad3413a4ab2048696a6f6
-
-# 2019-02-28	scons: Workaround failures with MSVC when using SCons 3.0.[2-4].
-# COMMIT_ID=	838c0485e01f3d3403b430aa6df5b4a1f5262dc3
-
-# 2019-02-26	panfrost/midgard: Allow flt to run on most units
-# COMMIT_ID=	b7a5b81d1488d4ec11ca49664b4f83ffd9dade2f
+# COMMIT_ID=	3570d15b6d88bdcd353b31ffe5460d04a88b7b6f
 
 PORTNAME=	mesa		
 

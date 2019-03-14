@@ -1,6 +1,6 @@
 $NetBSD$
 
---- meson.build.orig	2019-03-06 23:05:20.000000000 +0000
+--- meson.build.orig	2019-03-13 22:58:27.000000000 +0000
 +++ meson.build
 @@ -50,6 +50,7 @@ with_tests = get_option('build-tests')
  with_valgrind = get_option('valgrind')
@@ -10,7 +10,7 @@ $NetBSD$
  with_glx_read_only_text = get_option('glx-read-only-text')
  with_glx_direct = get_option('glx-direct')
  with_osmesa = get_option('osmesa')
-@@ -338,7 +339,10 @@ if with_egl and not (with_platform_drm o
+@@ -343,7 +344,10 @@ if with_egl and not (with_platform_drm o
    endif
  endif
  
@@ -22,3 +22,20 @@ $NetBSD$
  if with_glx != 'disabled'
    if not (with_platform_x11 and with_any_opengl)
      error('Cannot build GLX support without X11 platform support and at least one OpenGL API')
+@@ -1098,7 +1102,15 @@ endif
+ dep_zlib = dependency('zlib', version : '>= 1.2.3')
+ pre_args += '-DHAVE_ZLIB'
+ dep_thread = dependency('threads')
+-if dep_thread.found() and host_machine.system() != 'windows'
++if dep_thread.found() and ['freebsd', 'dragonfly'].contains(host_machine.system())
++  pre_args += '-DHAVE_PTHREAD'
++  if cc.has_function(
++      'pthread_setaffinity_np',
++      dependencies : dep_thread,
++      prefix : '#include <pthread_np.h>')
++    pre_args += '-DHAVE_PTHREAD_SETAFFINITY'
++  endif
++elif dep_thread.found() and host_machine.system() != 'windows'
+   pre_args += '-DHAVE_PTHREAD'
+   if cc.has_function(
+       'pthread_setaffinity_np',
