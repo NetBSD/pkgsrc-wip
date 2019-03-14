@@ -2332,6 +2332,7 @@ SUBDIR+=	nodm
 SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nomadio
+SUBDIR+=	nominatim
 SUBDIR+=	nongnu-libunwind-git
 SUBDIR+=	noor
 SUBDIR+=	nos-tun

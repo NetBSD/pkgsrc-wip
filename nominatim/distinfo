@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (Nominatim-3.2.0.tar.bz2) = 068f1d2c1aeefc30cc4089afae586f1a27443c8f
+RMD160 (Nominatim-3.2.0.tar.bz2) = 068ac839932796d86d6ad372af3fd5a299f3bbc1
+SHA512 (Nominatim-3.2.0.tar.bz2) = 41c152efa07f164dd09745f7813818be46ee67a0267ada289c1df58d38793a5a00e6b2e2f5ead0130f379aac5883f2bf670bc8e010af2f9c47b04348302321e8
+Size (Nominatim-3.2.0.tar.bz2) = 47890007 bytes
+SHA1 (patch-nominatim_postgresql.h) = ce5b05b5eac34464734684f37fe725d2eacc3c32
