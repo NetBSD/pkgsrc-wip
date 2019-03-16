@@ -90,7 +90,6 @@ share/emacs/${PKGVERSION}/etc/DOC
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
-share/emacs/${PKGVERSION}/etc/GNUS-NEWS
 share/emacs/${PKGVERSION}/etc/HELLO
 share/emacs/${PKGVERSION}/etc/HISTORY
 share/emacs/${PKGVERSION}/etc/JOKES
@@ -2379,6 +2378,8 @@ share/emacs/${PKGVERSION}/lisp/language/lao.el.gz
 share/emacs/${PKGVERSION}/lisp/language/lao.elc
 share/emacs/${PKGVERSION}/lisp/language/misc-lang.el.gz
 share/emacs/${PKGVERSION}/lisp/language/misc-lang.elc
+share/emacs/${PKGVERSION}/lisp/language/pinyin.el.gz
+share/emacs/${PKGVERSION}/lisp/language/pinyin.elc
 share/emacs/${PKGVERSION}/lisp/language/romanian.el.gz
 share/emacs/${PKGVERSION}/lisp/language/romanian.elc
 share/emacs/${PKGVERSION}/lisp/language/sinhala.el.gz
@@ -2503,6 +2504,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/quick-cns.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/quick-cns.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/rfc1345.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/rfc1345.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/sami.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/sami.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/sgml-input.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/sgml-input.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/sisheng.el.gz
@@ -2839,6 +2842,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-integration.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-integration.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/net/tramp-rclone.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-rclone.elc
