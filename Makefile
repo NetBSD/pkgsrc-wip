@@ -4181,6 +4181,7 @@ SUBDIR+=	remctl
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	resin
+SUBDIR+=	restic
 SUBDIR+=	revelation
 SUBDIR+=	rhapsody
 SUBDIR+=	riak
