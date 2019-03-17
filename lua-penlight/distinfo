@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (penlight-1.5.2.tar.gz) = f03dba2c687d07dbe78ea62e65daae20d0db85f4
-RMD160 (penlight-1.5.2.tar.gz) = 10a702d59d68f7603cc5cdf57d09c303a1fc4910
-SHA512 (penlight-1.5.2.tar.gz) = 1e707cddb302496e6859cfd76245fe42244c9f62fc339a63375bf6d759b9585fc0d1dfe44cec7c77ab13423e27cb8acd8e8709d3fad5081324a4ca7499714bbe
-Size (penlight-1.5.2.tar.gz) = 212002 bytes
+SHA1 (penlight-1.6.0.tar.gz) = 6046dc8467dde764c8e069ab7808131fd8d3afaa
+RMD160 (penlight-1.6.0.tar.gz) = 0de583e9337d1044e9371239501ab37b7502d820
+SHA512 (penlight-1.6.0.tar.gz) = 4f9988e9e5d66aad1c7137a5b8a36e4eaa2dba5408c90ee0253ce3db69980b2e0be8c9ba38f1e88f269da96d09a908115e0e9c2bd0667393f950fdfc1e232ff0
+Size (penlight-1.6.0.tar.gz) = 373167 bytes
