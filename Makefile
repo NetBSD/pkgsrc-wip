@@ -456,6 +456,7 @@ SUBDIR+=	compiz-boxmenu
 SUBDIR+=	complexity
 SUBDIR+=	concorde
 SUBDIR+=	conkeror
+SUBDIR+=	consul
 SUBDIR+=	contact-lookup-applet
 SUBDIR+=	contacts
 SUBDIR+=	converttomp3
