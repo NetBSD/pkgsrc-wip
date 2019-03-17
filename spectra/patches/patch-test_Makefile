@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- test/Makefile.orig	2019-01-10 23:33:40.000000000 +0000
++++ test/Makefile
+@@ -1,4 +1,4 @@
+-CXXFLAGS = -std=c++11 -Wall -O2 -Wno-parentheses -Wno-misleading-indentation -Wno-int-in-bool-context
++CXXFLAGS += -std=c++11 -Wall -O2 -Wno-parentheses
+ CPPFLAGS = -I../include
+ LDFLAGS =
+ LIBS =

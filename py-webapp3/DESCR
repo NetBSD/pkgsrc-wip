@@ -1,0 +1,12 @@
+webapp3 is simple. it follows the simplicity of webapp, but improves it in some
+ways: it adds better URI routing and exception handling, a full featured
+response object and a more flexible dispatching mechanism.
+
+webapp3 also offers the package webapp3_extras with several optional
+utilities: sessions, localization, internationalization, domain and subdomain
+routing, secure cookies and others.
+
+webapp3 can also be used outside of Google App Engine, independently
+of the App Engine SDK.
+
+For a complete description of how webapp3 improves webapp, see webapp3 features

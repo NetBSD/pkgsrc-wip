@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:05:28 jihbed Exp $
 
-SHA1 (Jmol-12.0.12-binary.zip) = 8a9e7500478be91707a054daf714bc71987be8c7
-RMD160 (Jmol-12.0.12-binary.zip) = 262bd696fe2fd262fa2d2e1918ac3d8a8d5cc8fa
-Size (Jmol-12.0.12-binary.zip) = 15588288 bytes
+SHA1 (Jmol-14.29.31-binary.tar.gz) = b46c9c4c2c862291e81f50d455df390c3d685a39
+RMD160 (Jmol-14.29.31-binary.tar.gz) = 3d99d4f9e22dfe211818840afc0690b61e2a8f5a
+SHA512 (Jmol-14.29.31-binary.tar.gz) = 0d32b92da6279447a1459a05d8ed76aed0f3ca58fb6a41512d2f6fb78b3d480a174ef4722a0dd78cadf9056cc73424ecd547e651981c9f90a9edebd648d5e293
+Size (Jmol-14.29.31-binary.tar.gz) = 83120030 bytes

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (spectra/v0.7.0.tar.gz) = 3495286001534f21e19cf4eac38666429ec9233d
+RMD160 (spectra/v0.7.0.tar.gz) = 0eb5765d1bda18042868f9aeba2a1214f7434d55
+SHA512 (spectra/v0.7.0.tar.gz) = 2a1cd9eed6cebabb551cc2f662d38d75c6b24edc8f19ee4feb122958653ecb4533b936447d36712225b48a4f1aa6590b17ca5076d78d506a515e8701752bf32d
+Size (spectra/v0.7.0.tar.gz) = 188707 bytes
+SHA1 (patch-test_Makefile) = 3d33a4c9fa80ebcae031a6b0b6b08e021d99cbf0

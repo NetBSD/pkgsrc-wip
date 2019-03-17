@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/dfa2dot
+bin/gta2dot
+bin/mona
+include/mona/bdd.h
+include/mona/config.h
+include/mona/dfa.h
+include/mona/dlmalloc.h
+include/mona/gnuc.h
+include/mona/gta.h
+include/mona/mem.h
+lib/libmonabdd.la
+lib/libmonadfa.la
+lib/libmonagta.la
+lib/libmonamem.la
+man/man1/mona.1
+share/mona-mode.el

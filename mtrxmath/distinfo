@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (mtrxmath-1.0.2.tar.gz) = 2cc0c7b83efda26fa1175f254451dc20d171fa92
+RMD160 (mtrxmath-1.0.2.tar.gz) = 16650e1e6d3382dfaddb890578c4c111b1d4d4df
+SHA512 (mtrxmath-1.0.2.tar.gz) = 4db6e75650faccc8f9df998d696f6e9f779409d701950e5c5fbd6915642aa697f24222eaaefcf039e7d567c8945feeccc8e8ead2b007bc70eac6a638a7a4afbe
+Size (mtrxmath-1.0.2.tar.gz) = 15889 bytes
+SHA1 (patch-Makefile) = 445edebf43e8cea0a00df0033a42e3c506fa64ba
+SHA1 (patch-mtrxmath.h) = 13f202e77d45236e594d48bff2486b90baba0d4f

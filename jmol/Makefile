@@ -27,9 +27,7 @@ JMOL_FILES=	Jmol.jar JmolApplet.jar           \
 			JmolData.jar Jmol.js
 
 INSTALLATION_DIRS=	bin ${JMOL_HOME}
-
-do-build:
-	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -Djmol.home=${JMOL_HOME} -jar ${JMOL_HOME}/Jmol.jar  \"\$$@\"\\n" > ${WRKSRC}/jmol.sh
+ME}/Jmol.jar  \"\$$@\"\\n" > ${WRKSRC}/jmol.sh
 
 do-install:
 	${INSTALL_SCRIPT}  ${WRKSRC}/jmol.sh ${DESTDIR}${PREFIX}/bin/jmol

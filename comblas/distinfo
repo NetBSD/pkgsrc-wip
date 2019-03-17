@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (CombBLAS_beta_16_2.tgz) = eec8ddcb4371de8ebc2867cfd8d6a0ff5036e560
+RMD160 (CombBLAS_beta_16_2.tgz) = ff2bed85583fae1cf0d8c3c3e3d0bb5e4b3ca909
+SHA512 (CombBLAS_beta_16_2.tgz) = de63b6da77563cd1e074f44d6892c8d1dcb7aa9475f617b2de60239485e6dbd5965a305471f933fe175778a12fc6bb987a75f3631487b6461a382c5419b267aa
+Size (CombBLAS_beta_16_2.tgz) = 1555398 bytes
+SHA1 (patch-include_CombBLAS_PBBS_utils.h) = d48c8df757a3f5ec55089ea5461eb4058145286a

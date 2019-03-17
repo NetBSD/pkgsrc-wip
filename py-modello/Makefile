@@ -7,7 +7,7 @@ MASTER_SITES=	https://files.pythonhosted.org/packages/74/50/1ae7008ac3864ffcecc8
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/Code0x58/modello/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Sympy expressions in models
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32.3:../../devel/py-wheel
