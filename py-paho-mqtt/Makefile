@@ -11,7 +11,7 @@ COMMENT=	MQTT version 3.1.1 client class
 LICENSE=	eclipse-license
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.6.6:../../wip/py-lama
+TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.6.6:../../devel/py-lama
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
