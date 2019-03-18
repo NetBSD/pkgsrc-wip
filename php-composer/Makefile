@@ -1,7 +1,7 @@
 # $NetBSD$
 
-VERSION=	1.4.1
-PKGNAME=	php-composer-${VERSION}
+VERSION=	1.8.4
+PKGNAME=	${PHP_PKG_PREFIX}-composer-${VERSION}
 DISTNAME=	composer
 CATEGORIES=	devel
 MASTER_SITES=	https://getcomposer.org/download/${VERSION}/
@@ -17,8 +17,6 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
-DEPENDS+=	php-[0-9]*:../../lang/php
-
 do-extract:
 	${MKDIR} -m 0755 ${WRKSRC}
 	${INSTALL} -m 0644 ${FILESDIR}/composer ${WRKSRC}/composer
@@ -32,6 +30,8 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		post-extract
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		composer
-SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 
+.include "../../lang/php/phpversion.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
