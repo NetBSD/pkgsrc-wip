@@ -32,7 +32,7 @@ MAINTAINER=	dsiercks@uwm.edu
 
 COMMENT=	Library for manipulating units of physical quantities
 
-#LICENSE=	UCAR-License
+LICENSE=		modified-bsd
 
 # Pessimistic assumption.  Test and change if possible.
 MAKE_JOBS_SAFE=	no
@@ -43,10 +43,11 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--disable-shared
+INFO_FILES=		yes
 
 CONFIGURE_ENV+=	ac_cv_header_CUnit_CUnit_h=no
 
-PORTVERSION=	2.2.20
+PORTVERSION=	2.2.26
 
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
 #.include "../../mk/bsd.prefs.mk"

@@ -13,9 +13,9 @@ share/doc/udunits/udunits2-common.xml
 share/doc/udunits/udunits2-derived.xml
 share/doc/udunits/udunits2-prefixes.xml
 share/doc/udunits/udunits2.xml
-share/info/udunits2.info
-share/info/udunits2lib.info
-share/info/udunits2prog.info
+info/udunits2.info
+info/udunits2lib.info
+info/udunits2prog.info
 share/udunits/udunits2-accepted.xml
 share/udunits/udunits2-base.xml
 share/udunits/udunits2-common.xml
