@@ -2,6 +2,7 @@
 
 BUILDLINK_TREE+=        efl
 
+BUILDLINK_ABI_DEPENDS.efl?=     efl>=1.21.0nb1
 BUILDLINK_PKGSRCDIR.efl?=     ../../wip/efl121
 
 .include "../../converters/libiconv/buildlink3.mk"

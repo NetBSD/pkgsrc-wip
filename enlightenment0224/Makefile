@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 0.2 2018/09/06 16:15:10 andyb Exp $
 
 DISTNAME=	enlightenment-0.22.4
+PKGREVISION=	1
 CATEGORIES=	wip
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz

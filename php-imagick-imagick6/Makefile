@@ -7,6 +7,7 @@ CATEGORIES+=		graphics
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pecl.php.net/package/imagick/
 COMMENT=		PHP extension for ImageMagick graphics library
+PKGREVISION=		1
 LICENSE=		php
 
 PHP_VERSIONS_ACCEPTED=	56 70
