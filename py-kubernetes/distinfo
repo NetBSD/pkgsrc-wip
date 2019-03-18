@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (kubernetes-8.0.1.tar.gz) = aa6529e170577f5bfa67f5a150d3b2d50ed2220f
+RMD160 (kubernetes-8.0.1.tar.gz) = 4b7e90fd9fc6a14c9802f4a65e9698a6a4d3d7cb
+SHA512 (kubernetes-8.0.1.tar.gz) = d932ab46ef281c34cf69a8b9c185ee834ca17433f542f5da5d7250319bf26b93f5c4e24fe25c6b4343b9ecadbf86db33546c6514e444542cf989b6d9dd5371d3
+Size (kubernetes-8.0.1.tar.gz) = 621465 bytes
