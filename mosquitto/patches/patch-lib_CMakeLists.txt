@@ -1,6 +1,8 @@
 $NetBSD$
 
-On NetBSD, do not include librt.  (Why?  All other "UNIX" does, except Mac.)
+On NetBSD, do not include librt.
+\todo Why?  All other "UNIX" does, except Mac.
+\todo Consider filing upstream.
 
 --- lib/CMakeLists.txt.orig	2018-09-04 16:57:17.000000000 +0000
 +++ lib/CMakeLists.txt

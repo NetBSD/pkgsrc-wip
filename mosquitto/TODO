@@ -1,26 +1,4 @@
-* conf files
+* conf files (see Makefile)
 
-Decide on if a mosquitto config file should be installed in etc, or if
-a user should take a few lines from the (large) example as needed.
+* resolve patches (see patch files)
 
-Document our strategy for modifying the example file, explaining if it
-is reflecting compiled-in defaults, or some other reasons.
-
-* patches
-
-For each, document why and file upstream/include ref or explain why
-upstream is inappropriate.
-
-** ldconfig
-
-Upstream appears to run ldconfig on "UNIX", which is incorrect.  File
-a bug about this.
-
-* security
-
-Check if these are really fixed in 1.5.1:
-  https://nvd.nist.gov/vuln/detail/CVE-2017-7653
-  https://nvd.nist.gov/vuln/detail/CVE-2017-7654
-
-Query sent to list on 20180904.  It seems likely that they are fixed
-but that it is not clearly documented.

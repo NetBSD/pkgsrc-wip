@@ -23,6 +23,7 @@ USE_TOOLS+=	gmake
 pre-configure:
 	${RM} ${WRKSRC}/config.mk
 
+# \todo Resolve what is an example vs. what might be used.
 CONF_FILES=	${PREFIX}/share/examples/mosquitto/pskfile.example \
 		${PREFIX}/share/examples/mosquitto/pwfile.example \
 		${PREFIX}/share/examples/mosquitto/mosquitto.conf \
