@@ -1,13 +1,14 @@
 # $NetBSD: Makefile,v 1.8 2012/09/24 18:26:51 asau Exp $
 #
 
-DISTNAME=	c2hs-0.14.5
+DISTNAME=	c2hs-0.28.1
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.cse.unsw.edu.au/~chak/haskell/c2hs/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=haskell/}
+GITHUB_PROJECT=	c2hs
 
 MAINTAINER=	esg@sdf.lonestar.org
-HOMEPAGE=	http://www.cse.unsw.edu.au/~chak/haskell/c2hs/
+HOMEPAGE=	https://github.com/haskell/c2hs/
 COMMENT=	C->Haskell, an Interface Generator for Haskell
 LICENSE=	gnu-gpl-v2
 
