@@ -34,4 +34,5 @@ SUBST_VARS.fix-paths=		PREFIX
 
 .include "../../lang/php/phpversion.mk"
 .include "../../lang/python/application.mk"
+
 .include "../../mk/bsd.pkg.mk"
