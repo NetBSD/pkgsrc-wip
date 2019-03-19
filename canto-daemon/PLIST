@@ -4,6 +4,7 @@ bin/canto-remote
 lib/canto/plugins/reddit.py
 lib/canto/plugins/sync-inoreader.py
 lib/canto/plugins/sync-rsync.py
+lib/canto/plugins/script.py
 ${PYSITELIB}/canto_next/__init__.py
 ${PYSITELIB}/canto_next/__init__.pyo
 ${PYSITELIB}/canto_next/__init__.pyc
