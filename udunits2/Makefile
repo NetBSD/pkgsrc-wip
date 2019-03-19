@@ -9,20 +9,6 @@
 
 ## Created by: Greg Lewis <glewis@FreeBSD.org>
 ## $FreeBSD: head/science/udunits/Makefile 383158 2015-04-03 17:28:32Z sunpoet $
-#		LOCAL/sunpoet
-#OPTIONS_DEFINE=	DOCS
-#CPPFLAGS+=		-I${LOCALBASE}/include
-#INSTALL_TARGET=	install-strip
-#LDFLAGS+=		-L${LOCALBASE}/lib
-#USE_LDCONFIG=		yes
-#INFO=			udunits2 udunits2lib udunits2prog
-#PORTDATA=		*
-#PORTDOCS=		*
-#post-patch:
-#	@${REINPLACE_CMD} -e '/install-data-hook$$/d' ${WRKSRC}/lib/Makefile.in
-#regression-test test: build
-#	cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} check
-#.include <bsd.port.mk>
 
 DISTNAME=	udunits-${PORTVERSION}
 CATEGORIES=	math
@@ -34,10 +20,8 @@ COMMENT=	Library for manipulating units of physical quantities
 
 LICENSE=		modified-bsd
 
-# Pessimistic assumption.  Test and change if possible.
 MAKE_JOBS_SAFE=	no
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=		fortran c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -54,11 +38,6 @@ PORTVERSION=	2.2.26
 
 # Keep this if there are user-selectable options.
 #.include "options.mk"
-
-# You may need this, especially if using do-install.
-
-# Note: Depends on PLIST.
-#AUTO_MKDIRS=	yes
 
 # Add any _DEPENDS that have a buildlink3.mk
 .include "../../textproc/expat/buildlink3.mk"
