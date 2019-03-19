@@ -1,9 +1,0 @@
-Changelog
-=========
-
-Release 2019-02-18:
-- smake (psmake): a missing link to libschily/strnlen.c has been added.
-
-Release 2019-03-11:
-- psmake: cpfiles/lnfiles/rmlinks now contain a line for the new
-          include/schily/type_val.h

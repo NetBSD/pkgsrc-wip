@@ -1,3 +1,0 @@
-[X] Updated PLIST for testsuite
-[ ] Makefile: After import switch back to:
-    .include "../../devel/smake/Makefile.common"

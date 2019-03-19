@@ -1,7 +1,0 @@
-[X] Bump PKGREVISION
-[X] Remove rule i386-netbsd-clang.rul
-    (now present from upstream build system)
-[X] Test NetBSD/clang again
-    Still working
-[ ] Makefile: After import switch back to:
-    .include "../../devel/smake/Makefile.common"
