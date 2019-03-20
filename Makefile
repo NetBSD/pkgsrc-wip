@@ -4950,7 +4950,6 @@ SUBDIR+=	xorgxrdp
 SUBDIR+=	xosview
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
-SUBDIR+=	xphelloworld
 SUBDIR+=	xpi-quick_locale_switcher
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore

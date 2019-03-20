@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/21 00:21:07 othyro Exp $
-bin/xphelloworld
-bin/xpsimplehelloworld
-bin/xpxthelloworld
-man/man1/xphelloworld.1
-man/man1/xpsimplehelloworld.1
-man/man1/xpxthelloworld.1
