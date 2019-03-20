@@ -1818,7 +1818,6 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdivecomputer
 SUBDIR+=	libdjconsole
-SUBDIR+=	libdmx
 SUBDIR+=	libdoozer
 SUBDIR+=	libdrm-dfbsd
 SUBDIR+=	libdrm-dfbsd-meson
