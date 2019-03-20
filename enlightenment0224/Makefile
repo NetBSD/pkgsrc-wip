@@ -2,7 +2,7 @@
 
 DISTNAME=	enlightenment-0.22.4
 PKGREVISION=	1
-CATEGORIES=	wip
+CATEGORIES=	wm
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
@@ -11,8 +11,8 @@ HOMEPAGE=	https://download.enlightenment.org/rel/apps/enlightenment/
 COMMENT=	Enlightenment desktop
 LICENSE=	2-clause-bsd
 
-DEPENDS+=               efl121-[0-9]*:../../wip/efl121/
-DEPENDS+=               terminology-[0-9]*:../../wip/terminology/
+DEPENDS+=               efl121-[0-9]*:../../wip/efl121
+DEPENDS+=               terminology-[0-9]*:../../wip/terminology
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
