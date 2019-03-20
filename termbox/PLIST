@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/termbox.h
+lib/libtermbox.a
+lib/libtermbox.so
+lib/libtermbox.so.1
+lib/libtermbox.so.1.0.0
