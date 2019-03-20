@@ -3,6 +3,7 @@
 DISTNAME=	libansilove-1.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ansilove/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	fred@statdns.com
 HOMEPAGE=	https://www.ansilove.org/
