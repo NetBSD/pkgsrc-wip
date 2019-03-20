@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/03/05 20:18:08 asau Exp $
-
-SHA1 (xgobi.tar.gz) = d8739d337e7c3993cd831dbf894a1511f26b9fe9
-RMD160 (xgobi.tar.gz) = 00d6b8ac046bd2e2a0419058293deb793d135398
-Size (xgobi.tar.gz) = 799731 bytes
-SHA1 (patch-aa) = 38f20ea9174ca1298dd228f35854dddfdb73859d

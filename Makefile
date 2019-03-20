@@ -4905,7 +4905,6 @@ SUBDIR+=	xf86-video-virtualbox
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4-wm-dfbsd
 SUBDIR+=	xfs
-SUBDIR+=	xgobi
 SUBDIR+=	xine-plugin
 SUBDIR+=	xinetd
 SUBDIR+=	xinput_calibrator
