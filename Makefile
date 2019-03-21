@@ -1176,7 +1176,6 @@ SUBDIR+=	godura
 SUBDIR+=	goldendict
 SUBDIR+=	golly
 SUBDIR+=	gonepass-git
-SUBDIR+=	google-benchmark
 SUBDIR+=	google-perftools
 SUBDIR+=	googlecl
 SUBDIR+=	gopass
