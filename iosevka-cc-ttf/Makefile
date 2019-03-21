@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	iosevka-cc-2.2.0
-DISTNAME=	04-${PKGNAME}
+PKGNAME=	iosevka-cc-ttf-2.2.0
+DISTNAME=	04-iosevka-cc-2.2.0
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
 GITHUB_PROJECT=	Iosevka
