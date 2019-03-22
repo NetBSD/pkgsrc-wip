@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.21 2017/09/11 20:56:28 wiz Exp $
+
+SHA1 (lapack-3.8.0.tar.gz) = 55ac9d6be510883c5442c8aca967722cdf58fb29
+RMD160 (lapack-3.8.0.tar.gz) = ff306181c4c125e7594c57c1eeece8b0aa8f8523
+SHA512 (lapack-3.8.0.tar.gz) = 17786cb7306fccdc9b4a242de7f64fc261ebe6a10b6ec55f519deb4cb673cb137e8742aa5698fd2dc52f1cd56d3bd116af3f593a01dcf6770c4dcc86c50b2a7f
+Size (lapack-3.8.0.tar.gz) = 7426094 bytes

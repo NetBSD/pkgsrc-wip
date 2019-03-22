@@ -1754,6 +1754,7 @@ SUBDIR+=	l2tpd
 SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
 SUBDIR+=	lander
+SUBDIR+=	lapack-ng
 SUBDIR+=	lariza
 SUBDIR+=	lasi
 SUBDIR+=	last-exit
