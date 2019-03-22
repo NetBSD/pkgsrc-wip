@@ -4,7 +4,7 @@
 # OPENBLAS_VARIANT = (openblas|openblas_pthread|openblas_openmp)
 # being set.
 
-PORTVERSION=	0.2.20
+PORTVERSION=	0.3.5
 DISTNAME=	OpenBLAS-${PORTVERSION}
 PKGNAME=	${OPENBLAS_VARIANT}-${PORTVERSION}
 # ThOr: I do not like that. Can we rather rename the benchmark files
@@ -140,7 +140,7 @@ SUBST_FILES.threads+=	${WRKSRC}/ctest/Makefile
 SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=		post-patch
 SUBST_SED.pc+=		-e 's+-lopenblas+-l${OPENBLAS_VARIANT}+'
-SUBST_SED.pc+=		-e 's+openblas.pc$$+${OPENBLAS_VARIANT}.pc+'
+SUBST_SED.pc+=		-e 's+openblas.pc"+${OPENBLAS_VARIANT}.pc"+'
 SUBST_FILES.pc+=	Makefile.install openblas.pc.in
 
 post-extract:

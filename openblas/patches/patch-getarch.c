@@ -1,9 +1,9 @@
 @NetBSD@
 
 Do not override our parallel make choice.
---- getarch.c.orig	2018-04-03 12:56:19.322128443 +0200
-+++ getarch.c	2018-04-03 12:57:42.424122776 +0200
-@@ -1134,21 +1134,6 @@
+--- getarch.c.orig	2018-12-31 23:09:59.000000000 +0100
++++ getarch.c	2019-03-22 17:24:40.477260427 +0100
+@@ -1236,19 +1236,6 @@
  #endif
  #endif
  
@@ -17,9 +17,7 @@ Do not override our parallel make choice.
 -#elif NO_PARALLEL_MAKE==1
 -    printf("MAKE += -j 1\n");
 -#else
--#ifndef OS_WINDOWS
 -    printf("MAKE += -j %d\n", get_num_cores());
--#endif
 -#endif
 -
      break;

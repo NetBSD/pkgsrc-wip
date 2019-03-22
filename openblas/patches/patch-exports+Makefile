@@ -1,17 +1,17 @@
 $NetBSD$
 
 # Improve dynamic lib naming
---- exports/Makefile.orig	2015-10-27 20:44:50 UTC
-+++ exports/Makefile
-@@ -140,6 +140,7 @@ endif
+--- exports/Makefile.orig	2018-12-31 23:09:59.000000000 +0100
++++ exports/Makefile	2019-03-22 17:22:50.811953116 +0100
+@@ -160,6 +160,7 @@
  #http://stackoverflow.com/questions/7656425/makefile-ifeq-logical-or
- ifeq ($(OSNAME), $(filter $(OSNAME),FreeBSD NetBSD))
+ ifeq ($(OSNAME), $(filter $(OSNAME),FreeBSD OpenBSD NetBSD DragonFly))
  
 +EXTRALIB += -lgfortran
  so : ../$(LIBSONAME)
  
  ifeq (, $(SYMBOLPREFIX)$(SYMBOLSUFFIX))
-@@ -151,6 +152,7 @@ else
+@@ -171,6 +172,7 @@
  endif
  	$(CC) $(CFLAGS) $(LDFLAGS)  -shared -o ../$(LIBSONAME) \
  	-Wl,--whole-archive $< -Wl,--no-whole-archive \
