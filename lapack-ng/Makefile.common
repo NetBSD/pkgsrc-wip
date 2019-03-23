@@ -1,0 +1,41 @@
+# $NetBSD$
+
+# Common Makefile for packages derived from the Netlib LAPACK sources.
+# You set LAPACK_PART (lowercase) and LAPACK_PART_CMAKE_ARGS to choose 
+# the library to install.
+
+PORTVERSION=	3.8.0
+DISTNAME=	lapack-${PORTVERSION}
+# TODO: remove the -ng once we replace the old math/lapack.
+PKGNAME=	${LAPACK_PART}-ng-${PORTVERSION}
+PKGREVISION=	1
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
+EXTRACT_SUFX=	.tar.gz
+
+MAINTAINER=	thomas.orgis@uni-hamburg.de
+HOMEPAGE=	http://www.netlib.org/lapack/
+LICENSE=	modified-bsd
+
+# All parts are in the same section (now wip, later math).
+# TODO: remove the -ng once we replace the old math/lapack
+PATCHDIR=       ${.CURDIR}/../lapack-ng/patches
+DISTINFO_FILE=  ${.CURDIR}/../lapack-ng/distinfo
+
+USE_LANGUAGES=		c fortran
+USE_TOOLS+=		cmake
+USE_CMAKE=		yes
+
+WRKSRC=			${WRKDIR}/${DISTNAME}
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
+
+CMAKE_ARGS=	-DBUILD_DEPRECATED=yes \
+		-DBUILD_SHARED_LIBS=ON \
+		${LAPACK_PART_CMAKE_ARGS}
+
+post-extract:
+	${RUN} mkdir -p ${WRKDIR}/build
+
+.include "../../mk/bsd.pkg.mk"
+

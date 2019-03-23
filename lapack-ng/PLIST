@@ -1,8 +1,8 @@
 @comment $NetBSD$
-lib/cmake/${PKGNAME}/lapack-config-version.cmake
-lib/cmake/${PKGNAME}/lapack-config.cmake
-lib/cmake/${PKGNAME}/lapack-targets-release.cmake
-lib/cmake/${PKGNAME}/lapack-targets.cmake
+lib/cmake/lapack-${PKGVERSION}/lapack-config-version.cmake
+lib/cmake/lapack-${PKGVERSION}/lapack-config.cmake
+lib/cmake/lapack-${PKGVERSION}/lapack-targets-release.cmake
+lib/cmake/lapack-${PKGVERSION}/lapack-targets.cmake
 lib/libblas.so
 lib/libblas.so.3
 lib/libblas.so.${PKGVERSION}
