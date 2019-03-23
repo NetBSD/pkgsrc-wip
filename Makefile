@@ -350,6 +350,7 @@ SUBDIR+=	cataclysm-dda
 SUBDIR+=	catfish
 SUBDIR+=	cb2bib
 SUBDIR+=	cblas
+SUBDIR+=	cblas-ng
 SUBDIR+=	cc65
 SUBDIR+=	ccnet-server
 SUBDIR+=	ccrypt
