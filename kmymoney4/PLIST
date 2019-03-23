@@ -133,7 +133,6 @@ lib/libpayeeidentifier_iban_bic_widgets.so.4.14.38
 lib/libpayeeidentifier_nationalAccount.so
 lib/libpayeeidentifier_nationalAccount.so.4
 lib/libpayeeidentifier_nationalAccount.so.4.14.38
-share/appdata/org.kde.kmymoney.appdata.xml
 share/applications/kde4/org.kde.kmymoney.desktop
 share/doc/kde/HTML/de/kmymoney/account_edit.png
 share/doc/kde/HTML/de/kmymoney/account_options.png
@@ -238,6 +237,7 @@ share/doc/kde/HTML/en/kmymoney/csvImporter_2.png
 share/doc/kde/HTML/en/kmymoney/csvImporter_3.png
 share/doc/kde/HTML/en/kmymoney/csvImporter_4.png
 share/doc/kde/HTML/en/kmymoney/csvImporter_5.png
+share/doc/kde/HTML/en/kmymoney/csvexport.png
 share/doc/kde/HTML/en/kmymoney/currency_newpriceentry.png
 share/doc/kde/HTML/en/kmymoney/currency_priceeditor.png
 share/doc/kde/HTML/en/kmymoney/date_widget.png
@@ -249,6 +249,7 @@ share/doc/kde/HTML/en/kmymoney/details-database.docbook
 share/doc/kde/HTML/en/kmymoney/details-forecast.docbook
 share/doc/kde/HTML/en/kmymoney/details-formats.docbook
 share/doc/kde/HTML/en/kmymoney/details-impexp-csv.docbook
+share/doc/kde/HTML/en/kmymoney/details-impexp-csvexp.docbook
 share/doc/kde/HTML/en/kmymoney/details-impexp.docbook
 share/doc/kde/HTML/en/kmymoney/details-institutions.docbook
 share/doc/kde/HTML/en/kmymoney/details-investments.docbook
@@ -534,6 +535,7 @@ share/doc/kde/HTML/it/kmymoney/details-database.docbook
 share/doc/kde/HTML/it/kmymoney/details-forecast.docbook
 share/doc/kde/HTML/it/kmymoney/details-formats.docbook
 share/doc/kde/HTML/it/kmymoney/details-impexp-csv.docbook
+share/doc/kde/HTML/it/kmymoney/details-impexp-csvexp.docbook
 share/doc/kde/HTML/it/kmymoney/details-impexp.docbook
 share/doc/kde/HTML/it/kmymoney/details-institutions.docbook
 share/doc/kde/HTML/it/kmymoney/details-investments.docbook
@@ -567,6 +569,7 @@ share/doc/kde/HTML/nl/kmymoney/details-database.docbook
 share/doc/kde/HTML/nl/kmymoney/details-forecast.docbook
 share/doc/kde/HTML/nl/kmymoney/details-formats.docbook
 share/doc/kde/HTML/nl/kmymoney/details-impexp-csv.docbook
+share/doc/kde/HTML/nl/kmymoney/details-impexp-csvexp.docbook
 share/doc/kde/HTML/nl/kmymoney/details-impexp.docbook
 share/doc/kde/HTML/nl/kmymoney/details-institutions.docbook
 share/doc/kde/HTML/nl/kmymoney/details-investments.docbook
@@ -664,6 +667,7 @@ share/doc/kde/HTML/sv/kmymoney/details-database.docbook
 share/doc/kde/HTML/sv/kmymoney/details-forecast.docbook
 share/doc/kde/HTML/sv/kmymoney/details-formats.docbook
 share/doc/kde/HTML/sv/kmymoney/details-impexp-csv.docbook
+share/doc/kde/HTML/sv/kmymoney/details-impexp-csvexp.docbook
 share/doc/kde/HTML/sv/kmymoney/details-impexp.docbook
 share/doc/kde/HTML/sv/kmymoney/details-institutions.docbook
 share/doc/kde/HTML/sv/kmymoney/details-investments.docbook
@@ -697,6 +701,7 @@ share/doc/kde/HTML/uk/kmymoney/details-database.docbook
 share/doc/kde/HTML/uk/kmymoney/details-forecast.docbook
 share/doc/kde/HTML/uk/kmymoney/details-formats.docbook
 share/doc/kde/HTML/uk/kmymoney/details-impexp-csv.docbook
+share/doc/kde/HTML/uk/kmymoney/details-impexp-csvexp.docbook
 share/doc/kde/HTML/uk/kmymoney/details-impexp.docbook
 share/doc/kde/HTML/uk/kmymoney/details-institutions.docbook
 share/doc/kde/HTML/uk/kmymoney/details-investments.docbook
@@ -1585,4 +1590,5 @@ share/locale/sv/LC_MESSAGES/kmymoney.mo
 share/locale/tr/LC_MESSAGES/kmymoney.mo
 share/locale/uk/LC_MESSAGES/kmymoney.mo
 share/locale/zh_TW/LC_MESSAGES/kmymoney.mo
+share/metainfo/org.kde.kmymoney.appdata.xml
 share/mime/packages/x-kmymoney.xml

@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2012/01/02 21:16:18 gduzan Exp $
 
-SHA1 (kmymoney-4.8.2.tar.xz) = 826b0faa540aa7169cec33265eab42e0722f2d7e
-RMD160 (kmymoney-4.8.2.tar.xz) = a6be69e99c26b570008407e1dbc08a123e30da1f
-SHA512 (kmymoney-4.8.2.tar.xz) = 8edbecc248c3f90fca25e780611d24d0c986cad30ad2725438478b54b26fe51fb484ab4142f5c1d7b55d8e29ce16d6d0a6346380bcb3a47bb5b2b27ee4fe6e80
-Size (kmymoney-4.8.2.tar.xz) = 20883828 bytes
+SHA1 (kmymoney-4.8.3.tar.xz) = e6cbb9b456c0e85e4f6353fa05111a88ff3c34c1
+RMD160 (kmymoney-4.8.3.tar.xz) = 760c3cb259ec45ec9749c6e3a25adff6d232f8ed
+SHA512 (kmymoney-4.8.3.tar.xz) = b3a9d6d65b2d8971139c5532985863e73b3f1e1d80c2091c5aaccdf8e0aacd8c53506aeb98522ca79fa830ba516e88d5acfa36d639d255c290c22b9f7b917b4e
+Size (kmymoney-4.8.3.tar.xz) = 20934596 bytes
