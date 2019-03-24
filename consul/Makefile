@@ -4,7 +4,7 @@ DISTNAME=	consul-1.4.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.consul.io/
 COMMENT=	Tool for service discovery, monitoring and configuration
 LICENSE=	mpl-2.0
