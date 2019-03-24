@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD$
+Try following after install
+  - rsync -avH ${PREFIX}/share/${PKGNAME}/test/examples  /tmp
+  - open the URL with your browser
+    file:///tmp/examples
+===========================================================================
