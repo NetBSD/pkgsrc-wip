@@ -2417,6 +2417,7 @@ SUBDIR+=	okular
 SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omnispeak
+SUBDIR+=	oneko
 SUBDIR+=	oneloop
 SUBDIR+=	oolite
 SUBDIR+=	oops

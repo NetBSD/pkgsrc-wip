@@ -1,0 +1,2 @@
+* As upstream, fix up proper buildsystem and man page so that pkgsrc
+  lint does not complain anymore. Make a tarball once this is done.
