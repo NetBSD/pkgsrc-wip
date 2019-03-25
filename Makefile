@@ -1597,7 +1597,6 @@ SUBDIR+=	io-zlib
 SUBDIR+=	ion3
 SUBDIR+=	ioquake3-snapshot
 SUBDIR+=	iosevka-cc-ttf
-SUBDIR+=	iosevka-template
 SUBDIR+=	iosevka-term-ttf
 SUBDIR+=	iosevka-ttf
 SUBDIR+=	iosevka-type-ttf
