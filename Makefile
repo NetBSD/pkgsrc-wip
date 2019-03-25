@@ -1063,7 +1063,6 @@ SUBDIR+=	gin
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-modes-git
 SUBDIR+=	git-spindle
-SUBDIR+=	gitea
 SUBDIR+=	gitg
 SUBDIR+=	gitlab
 SUBDIR+=	gitless
