@@ -850,6 +850,7 @@ SUBDIR+=	freedup
 SUBDIR+=	freedup16
 SUBDIR+=	freefem++
 SUBDIR+=	freej
+SUBDIR+=	freerdp
 SUBDIR+=	freeswitch-core
 SUBDIR+=	freeswitch-music
 SUBDIR+=	freesynd
