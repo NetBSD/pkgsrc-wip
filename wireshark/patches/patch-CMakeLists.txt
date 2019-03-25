@@ -1,0 +1,27 @@
+$NetBSD$
+
+Avoid
+	CMake Error at CMakeLists.txt:3021 (install):
+  	install FILES given directory
+  	"${WRKDIR}/.buildlink/cmake-Modules" to install.
+
+
+--- CMakeLists.txt.orig	2019-03-25 14:33:39.354346985 +0000
++++ CMakeLists.txt
+@@ -3020,11 +3020,11 @@ endif()
+ 
+ install(
+ 	FILES
+-		${CMAKE_MODULE_PATH}/FindGLIB2.cmake
+-		${CMAKE_MODULE_PATH}/FindWSWinLibs.cmake
+-		${CMAKE_MODULE_PATH}/UseAsn2Wrs.cmake
+-		${CMAKE_MODULE_PATH}/LocatePythonModule.cmake
+-		${CMAKE_MODULE_PATH}/UseMakePluginReg.cmake
++		cmake/modules/FindGLIB2.cmake
++		cmake/modules/FindWSWinLibs.cmake
++		cmake/modules/UseAsn2Wrs.cmake
++		cmake/modules/LocatePythonModule.cmake
++		cmake/modules/UseMakePluginReg.cmake
+ 	DESTINATION
+ 		${WIRESHARK_INSTALL_CMAKEDIR}
+ )
