@@ -2632,7 +2632,6 @@ SUBDIR+=	p5-Math-FixedPrecision
 SUBDIR+=	p5-Math-Gauss
 SUBDIR+=	p5-Math-Int128
 SUBDIR+=	p5-MaxMind-DB-Common
-SUBDIR+=	p5-MaxMind-DB-Reader
 SUBDIR+=	p5-Maypole
 SUBDIR+=	p5-MediaWiki-API
 SUBDIR+=	p5-Metadata
