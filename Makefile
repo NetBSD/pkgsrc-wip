@@ -2578,7 +2578,6 @@ SUBDIR+=	p5-Dancer-Plugin-Database
 SUBDIR+=	p5-Dancer-Plugin-Database-Core
 SUBDIR+=	p5-Data-DPath
 SUBDIR+=	p5-Data-DPath-Validator
-SUBDIR+=	p5-Data-IEEE754
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Types
 SUBDIR+=	p5-Date-Range
