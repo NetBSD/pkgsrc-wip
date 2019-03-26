@@ -10,4 +10,4 @@ LAPACK_PART_CMAKE_ARGS=	\
 	-DCBLAS=OFF -DLAPACKE=ON
 
 .include "../../wip/mk/blas.buildlink3.mk"
-.include "../lapack-ng/Makefile.common"
+.include "../lapack/Makefile.common"

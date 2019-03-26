@@ -46,7 +46,7 @@ _BLAS_TYPE=     none
 .  endif
 
 .if $(_BLAS_TYPE) == "netlib"
-_BLAS_PACKAGE=	wip/lapack-ng
+_BLAS_PACKAGE=	wip/lapack
 BLAS_LIBS=	-lblas
 LAPACK_LIBS=	-llapack ${BLAS_LIBS}
 .elif $(_BLAS_TYPE) == "openblas"

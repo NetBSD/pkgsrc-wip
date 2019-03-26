@@ -1,49 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	cblas
-PKGNAME=	cblas-1.0
-CATEGORIES=	math
-MASTER_SITES=	http://www.netlib.org/blas/blast-forum/
-EXTRACT_SUFX=	.tgz
+COMMENT=	C interface to a BLAS library
+LAPACK_PART=	cblas
+LAPACK_PART_CMAKE_ARGS=	\
+	-DUSE_OPTIMIZED_BLAS=ON \
+	-DBLAS_LIBRARIES=${BLAS_LIBS:Q} \
+	-DUSE_OPTIMIZED_LAPACK=ON \
+	-DLAPACK_LIBRARIES=${LAPACK_LIBS:Q} \
+	-DCBLAS=ON -DLAPACKE=OFF
 
-MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.netlib.org/blas/blast-forum/
-COMMENT=	C bindings and headers for BLAS library
-# Not sure about this.  FreeBSD port has custom blas license.
-LICENSE=	modified-bsd
-
-WRKSRC=		${WRKDIR}/CBLAS
-USE_LANGUAGES=	c fortran
-
-SUBST_CLASSES+=		libblas
-SUBST_STAGE.libblas=	post-patch
-SUBST_SED.libblas=	-e 's|libblas.a|-L${PREFIX}/lib -lblas|g'
-SUBST_SED.libblas+=	-e 's|cblas_$$(PLAT)|libcblas|g'
-SUBST_SED.libblas+=	-e 's|= -O3|+=|g'
-SUBST_SED.libblas+=	-e 's|CC =|CC ?=|g'
-SUBST_SED.libblas+=	-e 's|FC =|FC ?=|g'
-SUBST_FILES.libblas=	Makefile.in
-
-# Can't find -lssp* on NetBSD 7.0.1
-PKGSRC_USE_SSP=		no
-CFLAGS+=		-fPIC
-FFLAGS+=		-fPIC
-
-INSTALLATION_DIRS=	include lib
-
-post-extract:
-	${CP} ${WRKSRC}/Makefile.LINUX ${WRKSRC}/Makefile.in
-
-post-build:
-	${MKDIR} ${WRKSRC}/shared-lib
-	${CHMOD} a-x ${WRKSRC}/lib/libcblas.a
-	cd ${WRKSRC}/shared-lib && \
-		${AR} x ../lib/libcblas.a && \
-		${FC} ${LDFLAGS} -shared -o ../lib/libcblas.so *.o
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/lib/libcblas.* ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/include/*.h ${DESTDIR}${PREFIX}/include
-
-.include "../../math/blas/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
+.include "../../wip/mk/blas.buildlink3.mk"
+.include "../lapack/Makefile.common"
