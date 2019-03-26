@@ -33,6 +33,10 @@ BLAS_BUILDLINK3_MK=	# define it
 
 # List of all possible BLAS choices.
 _BLAS_TYPES=	netlib openblas openblas_pthread openblas_openmp
+# Add Accelerate framework on Darwin (pulled from math/R).
+.if exists(/System/Library/Frameworks/Accelerate.framework)
+_BLAS_TYPES+=	accelerate.framework
+.endif
 # Currently chosen type.
 # Default is the standard, slow, easily available.
 BLAS_TYPE?=	netlib
@@ -60,6 +64,9 @@ LAPACK_LIBS=	${BLAS_LIBS}
 .elif $(_BLAS_TYPE) == "openblas_openmp"
 _BLAS_PACKAGE=	wip/openblas_openmp
 BLAS_LIBS=	-lopenblas_openmp
+LAPACK_LIBS=	${BLAS_LIBS}
+.elif $(_BLAS_TYPE) == "accelerate.framework"
+BLAS_LIBS=	-framework Accelerate
 LAPACK_LIBS=	${BLAS_LIBS}
 # TODO: atlas
 # TODO: external BLAS (other OpenBLAS/ATLAS, Intel MKL)
