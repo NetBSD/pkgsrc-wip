@@ -7,6 +7,8 @@ CBLAS_NG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cblas-ng+=	cblas-ng>=3.8.0
 BUILDLINK_PKGSRCDIR.cblas-ng?=	../../wip/cblas-ng
+
+.include	"../../wip/mk/blas.buildlink3.mk"
 .endif
 
 BUILDLINK_TREE+=	-cblas-ng
