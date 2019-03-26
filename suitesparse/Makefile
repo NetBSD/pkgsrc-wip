@@ -5,6 +5,7 @@
 # PKGNAME=	suitesparse-3.6.1
 DISTNAME=	SuiteSparse-4.0.2
 PKGNAME=	suitesparse-4.0.2
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://faculty.cse.tamu.edu/davis/SuiteSparse/
 #MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
@@ -33,9 +34,6 @@ LIB=		-lm
 LIB=		-lm -lrt
 .endif
 
-BLAS=		-lblas
-LAPACK=		-llapack
-
 # /home/bacon/Pkgsrc/pkgsrc-1/mk/pkgformat/pkg/list-dependencies: line 52: -e: command not found
 # Problem is ${SED} is empty
 # TOOLS_PLATFORM.gsed=	#empty
@@ -61,12 +59,12 @@ AUTO_MKDIRS=		yes
 INSTALLATION_DIRS=	include/suitesparse lib
 
 # Non-standard variables used by SuiteSparse Makefiles
-MAKE_FLAGS+=	BLAS="${LDFLAGS} ${BLAS}" \
+MAKE_FLAGS+=	BLAS="${LDFLAGS} ${BLAS_LIBS}" \
 		CHOLMOD_CONFIG="${CHOLMOD_CONFIG}" \
 		CPLUSPLUS="${CXX}" \
 		CF="${CFLAGS} ${CXXFLAGS}" \
 		F77FLAGS="${FFLAGS} ${PICFLAG}" \
-		LAPACK="${LDFLAGS} ${LAPACK}" \
+		LAPACK="${LDFLAGS} ${LAPACK_LIBS}" \
 		METIS="${METIS}" \
 		METIS_PATH="${METIS_PATH}" \
 		SPQR_CONFIG="${CHOLMOD_CONFIG}" \
@@ -76,14 +74,14 @@ post-patch:
 	${CP} ${FILESDIR}/SuiteSparse_config.mk ${WRKSRC}/SuiteSparse_config
 #	${FIND} ${WRKSRC} -type f \( -name 'Makefile' -o -name '*.mk' \) \
 		-exec gsed -i'.bak' -e '\|^AR =|s|ar|${AR}|' \
-			-e '\|^BLAS =|s|=.*|= ${LDFLAGS} ${BLAS}|' \
+			-e '\|^BLAS =|s|=.*|= ${LDFLAGS} ${BLAS_LIBS}|' \
 			-e '\|^CC =|d' \
 			-e '\|^CFLAGS =|{s|-O[1-9]\{0,1\}||g;s|=|= ${CFLAGS} $${PICFLAG} |;}' \
 			-e '\|^CHOLMOD_CONFIG =|s|=.*|= ${CHOLMOD_CONFIG}|' \
 			-e '\|^CPLUSPLUS =|s|=.*|= ${CXX}|' \
 			-e '\|^F77 =|d' \
 			-e '\|^F77FLAGS =|s|=.*|= ${FFLAGS} $${PICFLAG}|' \
-			-e '\|^LAPACK =|s|=.*|= ${LDFLAGS} ${LAPACK}|' \
+			-e '\|^LAPACK =|s|=.*|= ${LDFLAGS} ${LAPACK_LIBS}|' \
 			-e '\|^METIS =|s|=.*|= ${METIS}|' \
 			-e '\|^METIS_PATH =|s|=.*|= ${METIS_PATH}|' \
 			-e 's|-I\$$(METIS_PATH)/Lib|-I${METIS_PATH}|' \
@@ -126,7 +124,6 @@ do-install:
 #		j=$${i##*/} ;  ${LN} -sf $${j%.a}.so.${SVERSION} ${DESTDIR}${PREFIX}/lib/$${j%.a}.so ; \
 #	done
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../wip/mk/blas.buildlink3.mk"
 .include "../../math/metis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
