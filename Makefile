@@ -2657,7 +2657,6 @@ SUBDIR+=	p5-Net-Syslog
 SUBDIR+=	p5-Net-Twitter-Lite
 SUBDIR+=	p5-Net-UPnP
 SUBDIR+=	p5-Net-Whois-RIPE
-SUBDIR+=	p5-Net-Works
 SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-OSSP-uuid
 SUBDIR+=	p5-OptArgs
