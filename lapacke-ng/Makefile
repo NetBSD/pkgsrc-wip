@@ -9,5 +9,5 @@ LAPACK_PART_CMAKE_ARGS=	\
         -DLAPACK_LIBRARIES=${LAPACK_LIBS:Q} \
 	-DCBLAS=OFF -DLAPACKE=ON
 
-.include "../../mk/blas.buildlink3.mk"
+.include "../../wip/mk/blas.buildlink3.mk"
 .include "../lapack-ng/Makefile.common"
