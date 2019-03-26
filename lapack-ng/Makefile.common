@@ -23,7 +23,6 @@ PATCHDIR=       ${.CURDIR}/../lapack-ng/patches
 DISTINFO_FILE=  ${.CURDIR}/../lapack-ng/distinfo
 
 USE_LANGUAGES=		c fortran
-USE_TOOLS+=		cmake
 USE_CMAKE=		yes
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
