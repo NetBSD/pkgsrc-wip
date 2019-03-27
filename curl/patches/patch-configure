@@ -5,7 +5,8 @@ $NetBSD: patch-configure,v 1.4 2018/11/28 01:31:45 sevan Exp $
 - On Darwin, do not append custom CFLAGS.
 - Do not strip debug flags.
 - Support Minix.
-- Avoid unportable `==' test(1) operator.
+- Avoid unportable `==' test(1) operator, applied upstream via:
+   <https://github.com/curl/curl/pull/3709>
 
 --- configure.orig	2019-03-25 21:03:50.000000000 +0000
 +++ configure
