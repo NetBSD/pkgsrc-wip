@@ -5,6 +5,7 @@ include/cblas_mangling.h
 include/cblas_test.h
 lib/cmake/cblas-${PKGVERSION}/cblas-config-version.cmake
 lib/cmake/cblas-${PKGVERSION}/cblas-config.cmake
+lib/libcblas.a
 lib/libcblas.so
 lib/libcblas.so.3
 lib/libcblas.so.${PKGVERSION}

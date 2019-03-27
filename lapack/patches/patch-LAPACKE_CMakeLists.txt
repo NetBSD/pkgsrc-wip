@@ -1,0 +1,33 @@
+$NetBSD$
+
+Support combined build of shared and static libraries.
+
+--- LAPACKE/CMakeLists.txt.orig	2017-11-13 04:15:54.000000000 +0000
++++ LAPACKE/CMakeLists.txt
+@@ -71,6 +71,26 @@ endif()
+ target_link_libraries(lapacke PRIVATE ${LAPACK_LIBRARIES})
+ 
+ lapack_install_library(lapacke)
++
++if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
++  add_library(lapacke_static STATIC ${SOURCES})
++  set_target_properties(
++    lapacke_static PROPERTIES
++    OUTPUT_NAME lapacke
++    )
++   target_include_directories(lapacke_static PUBLIC
++    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
++    $<INSTALL_INTERFACE:include>
++  )
++
++  if(LAPACKE_WITH_TMG)
++    target_link_libraries(lapacke_static PRIVATE tmglib)
++  endif()
++  target_link_libraries(lapacke_static PRIVATE ${LAPACK_LIBRARIES})
++
++  lapack_install_library(lapacke_static)
++endif()
++
+ install(FILES ${LAPACKE_INCLUDE} ${LAPACK_BINARY_DIR}/include/lapacke_mangling.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+ 
+ if(BUILD_TESTING)

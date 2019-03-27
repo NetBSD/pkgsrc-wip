@@ -27,8 +27,11 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-CMAKE_ARGS=	-DBUILD_DEPRECATED=yes \
+# Note: We patch the build to install both static and
+# shared libraries.
+CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
 		-DBUILD_SHARED_LIBS=ON \
+		-DBUILD_STATIC_LIBS=ON \
 		${LAPACK_PART_CMAKE_ARGS}
 
 post-extract:

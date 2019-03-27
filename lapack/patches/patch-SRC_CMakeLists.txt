@@ -1,0 +1,30 @@
+$NetBSD$
+
+Support combined build of shared and static libraries.
+
+--- SRC/CMakeLists.txt.orig	2017-11-13 04:15:54.000000000 +0000
++++ SRC/CMakeLists.txt
+@@ -510,3 +510,23 @@ if (${CMAKE_BUILD_TYPE_UPPER} STREQUAL "
+ endif()
+ 
+ lapack_install_library(lapack)
++
++if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
++  add_library(lapack_static STATIC ${SOURCES})
++  set_target_properties(
++    lapack_static PROPERTIES
++    OUTPUT_NAME lapack
++    )
++
++  if(USE_XBLAS)
++    target_link_libraries(lapack_static PRIVATE ${XBLAS_LIBRARY})
++  endif()
++  target_link_libraries(lapack_static PRIVATE ${BLAS_LIBRARIES})
++
++  if (${CMAKE_BUILD_TYPE_UPPER} STREQUAL "COVERAGE")
++    target_link_libraries(lapack_static PRIVATE gcov)
++    add_coverage(lapack_static)
++  endif()
++
++  lapack_install_library(lapack_static)
++endif()
