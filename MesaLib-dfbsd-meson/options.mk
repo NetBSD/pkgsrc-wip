@@ -26,9 +26,12 @@ PKG_SUPPORTED_OPTIONS+=		revert_sdma_uploader
 PKG_SUPPORTED_OPTIONS+=		require_36_gen4
 PKG_SUPPORTED_OPTIONS+=		invert_atomic_add_unless
 PKG_SUPPORTED_OPTIONS+=		physmem_netbsd
-PKG_SUPPORTED_OPTIONS+=		strict_netbsd
+PKG_SUPPORTED_OPTIONS+=		setaffinity_np_netbsd
+PKG_SUPPORTED_OPTIONS+=		strict_xsrc_netbsd
 PKG_SUPPORTED_OPTIONS+=		x86_tsd_openbsd
 PKG_SUPPORTED_OPTIONS+=		so_name_openbsd
+PKG_SUPPORTED_OPTIONS+=		disable_wx_memory
+PKG_SUPPORTED_OPTIONS+=		no_linear_alloc_destructor
 
 # PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
@@ -110,7 +113,11 @@ PKG_SUGGESTED_OPTIONS+=		physmem_netbsd
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=		strict_netbsd
+PKG_SUGGESTED_OPTIONS+=		setaffinity_np_netbsd
+.endif
+
+.if ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+=		strict_xsrc_netbsd
 .endif
 
 # OpenBSD xenocara tsd dispatch assembly for entry_x86_tsd.h
@@ -121,6 +128,15 @@ PKG_SUGGESTED_OPTIONS+=		x86_tsd_openbsd
 # Shorten names dlopened to libGL.so and libglapi.so
 .if ${OPSYS} == "OpenBSD"
 PKG_SUGGESTED_OPTIONS+=		so_name_openbsd
+.endif
+
+# Disable code for init_heap for fear of W^X violation
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+=		disable_wx_memory
+.endif
+
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+=		no_linear_alloc_destructor
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -483,8 +499,12 @@ CPPFLAGS+=	-DINVERT_ATOMIC_ADD_UNLESS
 CPPFLAGS+=	-DPHYSMEM_NETBSD
 .endif
 
-.if !empty(PKG_OPTIONS:Mstrict_netbsd)
-CPPFLAGS+=	-DSTRICT_NETBSD
+.if !empty(PKG_OPTIONS:Msetaffinity_np_netbsd)
+CPPFLAGS+=	-DSETAFFINITY_NP_NETBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mstrict_xsrc_netbsd)
+CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 .endif
 
 .if !empty(PKG_OPTIONS:Mx86_tsd_openbsd)
@@ -493,4 +513,12 @@ CPPFLAGS+=	-DX86_TSD_OPENBSD
 
 .if !empty(PKG_OPTIONS:Mso_name_openbsd)
 CPPFLAGS+=	-DSO_NAME_OPENBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mdisable_wx_memory)
+CPPFLAGS+=	-DDISABLE_WX_MEMORY
+.endif
+
+.if !empty(PKG_OPTIONS:Mno_linear_alloc_destructor)
+CPPFLAGS+=	-DNO_LINEAR_ALLOC_DESTRUCTOR
 .endif

@@ -8,7 +8,7 @@ Workaround netbsd headers.
   * language version or extension might provide them.
   */
  
-+#ifdef __NetBSD__ /* XXX https://mail-index.netbsd.org/tech-userlevel/2018/09/08/msg011381.html */
++#if defined(__NetBSD__) && !defined(STRICT_XSRC_NETBSD) /* XXX https://mail-index.netbsd.org/tech-userlevel/2018/09/08/msg011381.html */
 +#undef uint8_t
 +#undef uint16_t
 +#undef uint32_t

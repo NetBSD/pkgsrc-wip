@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.18 2019/02/22 15:40:35 tnn Exp $
 
-# 2019-03-14	st/mesa: Let NIR lower UBO and SSBO access when we have it
-COMMIT_ID=	efa4fc0ebd96b3fbcf30550494251307f11dc7b9
+# 2019-03-25	freedreno/ir3: Fix operand order for DSX/DSY
+COMMIT_ID=	c7c432738a68d543dc1b73eae895ec4dfacd92b2
 
-# 2019-03-13	anv/pass: Flag the need for a RT flush for resolve attachments
-# COMMIT_ID=	489bf2de237a190b966a412efda89d12d1daacde
+# 2019-03-23	spirv: Add an execution environment to the options
+# COMMIT_ID=	15012077bceda24cbf38afeda7723c47e1b0d3c3
 
-# 2019-03-12	intel/fs: Fix opt_peephole_csel to not throw away saturates.
-# COMMIT_ID=	3570d15b6d88bdcd353b31ffe5460d04a88b7b6f
+# 2019-03-22	docs: update freedreno status
+# COMMIT_ID=	cdd90a7502e501b0f25d35a2e9715fbe5d09a211
 
 PORTNAME=	mesa		
 

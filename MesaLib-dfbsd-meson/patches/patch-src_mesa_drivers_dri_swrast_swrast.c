@@ -8,7 +8,7 @@ Fix build on older NetBSD w/o _SC_PHYS_PAGES.
          size_t len = sizeof(system_memory_bytes);
          if (sysctl(mib, 2, &system_memory_bytes, &len, NULL, 0) != 0)
              return -1;
-+#elif defined(HW_PHYSMEM64) && defined(__NetBSD__)
++#elif defined(HW_PHYSMEM64) && defined(PHYSMEM_NETBSD)
 +        int mib[2] = { CTL_HW, HW_PHYSMEM64 };
 +        uint64_t system_memory_bytes;
 +        size_t len = sizeof(system_memory_bytes);

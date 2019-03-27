@@ -5,7 +5,9 @@ atexit() is not a good idea in shared libraries.
 FreeBSD reported atexit bug for 10.6:
 https://bugs.freedesktop.org/show_bug.cgi?id=91869
 
---- src/util/u_queue.c.orig	2018-12-11 21:13:57.000000000 +0000
+NetBSD option for pthread_setaffinity_np idiom.
+
+--- src/util/u_queue.c.orig	2019-03-15 01:02:19.000000000 +0000
 +++ src/util/u_queue.c
 @@ -46,11 +46,22 @@ static once_flag atexit_once_flag = ONCE
  static struct list_head queue_list;
@@ -46,7 +48,7 @@ https://bugs.freedesktop.org/show_bug.cgi?id=91869
        /* Don't inherit the thread affinity from the parent thread.
         * Set the full mask.
         */
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && defined(SETAFFINITY_NP_NETBSD)
 +      cpuset_t *cpuset;
 +      cpuset = cpuset_create();
 +      if (cpuset != NULL) {

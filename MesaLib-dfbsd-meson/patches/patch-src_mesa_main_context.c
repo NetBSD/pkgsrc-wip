@@ -9,14 +9,14 @@ https://bugs.freedesktop.org/show_bug.cgi?id=82246
 FreeBSD reported atexit bug for 10.6:
 https://bugs.freedesktop.org/show_bug.cgi?id=91869
 
---- src/mesa/main/context.c.orig	2017-11-20 14:25:47.000000000 +0000
+--- src/mesa/main/context.c.orig	2019-03-15 01:02:19.000000000 +0000
 +++ src/mesa/main/context.c
-@@ -354,11 +354,23 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
+@@ -357,11 +357,23 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
   * Calls all the various one-time-fini functions in Mesa
   */
  
 +#if defined(HAVE_NOATEXIT)
-+static GLbitfield api_init_mask = 0x0;
++static int init_called = 0;
 +static void __attribute__((__destructor__))
 +#else
  static void
@@ -24,7 +24,7 @@ https://bugs.freedesktop.org/show_bug.cgi?id=91869
  one_time_fini(void)
  {
 +#if defined(HAVE_NOATEXIT)
-+   if (api_init_mask) {
++   if (init_called) {
 +      _mesa_destroy_shader_compiler();
 +      _mesa_locale_fini();
 +   }
@@ -35,17 +35,17 @@ https://bugs.freedesktop.org/show_bug.cgi?id=91869
  }
  
  /**
-@@ -373,7 +385,9 @@ one_time_fini(void)
+@@ -376,7 +388,9 @@ one_time_fini(void)
  static void
  one_time_init( struct gl_context *ctx )
  {
-+#if !defined(HAVE_NOATEXIT)
++#if 1
     static GLbitfield api_init_mask = 0x0;
 +#endif
  
     mtx_lock(&OneTimeLock);
  
-@@ -398,7 +412,9 @@ one_time_init( struct gl_context *ctx )
+@@ -401,7 +415,9 @@ one_time_init( struct gl_context *ctx )
           _mesa_ubyte_to_float_color_tab[i] = (float) i / 255.0F;
        }
  
@@ -55,3 +55,13 @@ https://bugs.freedesktop.org/show_bug.cgi?id=91869
  
  #if defined(DEBUG)
        if (MESA_VERBOSE != 0) {
+@@ -416,6 +432,9 @@ one_time_init( struct gl_context *ctx )
+    }
+ 
+    api_init_mask |= 1 << ctx->API;
++#if defined(HAVE_NOATEXIT)
++   init_called = 1;
++#endif
+ 
+    mtx_unlock(&OneTimeLock);
+ }

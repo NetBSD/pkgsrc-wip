@@ -1,6 +1,6 @@
 $NetBSD$
 
---- meson.build.orig	2019-03-13 22:58:27.000000000 +0000
+--- meson.build.orig	2019-03-15 01:02:19.000000000 +0000
 +++ meson.build
 @@ -50,6 +50,7 @@ with_tests = get_option('build-tests')
  with_valgrind = get_option('valgrind')
@@ -22,7 +22,29 @@ $NetBSD$
  if with_glx != 'disabled'
    if not (with_platform_x11 and with_any_opengl)
      error('Cannot build GLX support without X11 platform support and at least one OpenGL API')
-@@ -1098,7 +1102,15 @@ endif
+@@ -1011,7 +1015,7 @@ foreach h : ['xlocale.h', 'sys/sysctl.h'
+   endif
+ endforeach
+ 
+-foreach f : ['strtof', 'mkostemp', 'posix_memalign', 'timespec_get', 'memfd_create']
++foreach f : ['strtof', 'mkostemp', 'posix_memalign', 'timespec_get', 'memfd_create', 'open_memstream']
+   if cc.has_function(f)
+     pre_args += '-DHAVE_@0@'.format(f.to_upper())
+   endif
+@@ -1094,11 +1098,28 @@ else
+   dep_clock = cc.find_library('rt')
+ endif
+ 
++foreach g : ['clock_gettime', 'clock_nanotime']
++  if cc.has_function(
++      g,
++      dependencies : dep_clock,
++      prefix : '#include <time.h>')
++    pre_args += '-DHAVE_@0@'.format(g.to_upper())
++  endif
++endforeach
++
+ # TODO: some of these may be conditional
  dep_zlib = dependency('zlib', version : '>= 1.2.3')
  pre_args += '-DHAVE_ZLIB'
  dep_thread = dependency('threads')
