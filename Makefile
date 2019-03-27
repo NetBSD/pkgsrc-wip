@@ -4799,6 +4799,7 @@ SUBDIR+=	viewer
 SUBDIR+=	viewglob
 SUBDIR+=	viewnior
 SUBDIR+=	vim-nox
+SUBDIR+=	vimb
 SUBDIR+=	vimb-git
 SUBDIR+=	vimb2
 SUBDIR+=	vimprobable2
