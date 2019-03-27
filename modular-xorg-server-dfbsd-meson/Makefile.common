@@ -2,8 +2,11 @@
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
+# 2019-03-20	Revert "systemd-logind: Monitor systemd-logind going away"
+COMMIT_ID=	5a549c957a873bd44ab351e627828905ee7dbf18
+
 # 2019-03-13	Add xf86OSInputThreadInit to stub os-support as well
-COMMIT_ID=	c020769dbfb965740c8441d8242b738ef572a7c9
+# COMMIT_ID=	c020769dbfb965740c8441d8242b738ef572a7c9
 
 # 2019-03-11	mi: Shortcut miDoCopy/miCopyArea based on clipList
 # COMMIT_ID=	f665a9c9e6c8643f3050378249db3088ae3057be

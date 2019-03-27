@@ -16,7 +16,7 @@ for bug #196678
 
 https://bugs.freebsd.org/bugzilla/attachment.cgi?id=191592&action=diff
 
---- hw/xfree86/os-support/bsd/bsd_init.c.orig	2019-03-05 16:34:21.000000000 +0000
+--- hw/xfree86/os-support/bsd/bsd_init.c.orig	2019-03-20 23:09:22.000000000 +0000
 +++ hw/xfree86/os-support/bsd/bsd_init.c
 @@ -37,6 +37,9 @@
  
@@ -70,11 +70,11 @@ https://bugs.freebsd.org/bugzilla/attachment.cgi?id=191592&action=diff
   * pcvt or syscons might succesfully probe as pccons.)
   */
  static xf86ConsOpen_t xf86ConsTab[] = {
-+#if defined(USL_VT_SWITCHING)
++#if defined(TRY_DEV_WSKBD) || defined(USL_VT_SWITCHING)
 +#ifdef WSCONS_SUPPORT
 +    xf86OpenWScons,
 +#endif
-+#endif /* USL_VT_SWITCHING */
++#endif /* TRY_DEV_WSKBD || USL_VT_SWITCHING */
  #ifdef PCVT_SUPPORT
      xf86OpenPcvt,
  #endif
@@ -82,11 +82,11 @@ https://bugs.freebsd.org/bugzilla/attachment.cgi?id=191592&action=diff
  #ifdef PCCONS_SUPPORT
      xf86OpenPccons,
  #endif
-+#if !defined(USL_VT_SWITCHING)
++#if !defined(TRY_DEV_WSKBD) && !defined(USL_VT_SWITCHING)
  #ifdef WSCONS_SUPPORT
      xf86OpenWScons,
  #endif
-+#endif /* !USL_VT_SWITCHING */
++#endif /* !TRY_DEV_WSKBD && !USL_VT_SWITCHING */
      (xf86ConsOpen_t) NULL
  };
  
@@ -263,7 +263,7 @@ https://bugs.freebsd.org/bugzilla/attachment.cgi?id=191592&action=diff
              xf86Msg(X_PROBED, "Using pcvt driver (version %d.%d)\n",
                      pcvt_version.rmajor, pcvt_version.rminor);
  #endif
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +            xf86Msg(X_PROBED, "using VT number %d\n", xf86Info.vtno);
 +#endif
          }
@@ -383,7 +383,7 @@ https://bugs.freebsd.org/bugzilla/attachment.cgi?id=191592&action=diff
      struct vt_mode VT;
  #endif
  
-+#if defined (SYSCONS_SUPPORT) || defined (PCVT_SUPPORT) || !defined(STRICT_NETBSD)
++#if defined (SYSCONS_SUPPORT) || defined (PCVT_SUPPORT) || !defined(STRICT_XSRC_NETBSD)
      if (xf86Info.ShareVTs)
          return;
 +#endif

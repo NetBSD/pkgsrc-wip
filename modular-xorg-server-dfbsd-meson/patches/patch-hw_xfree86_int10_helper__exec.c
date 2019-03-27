@@ -6,7 +6,7 @@ $NetBSD$
  void
  LockLegacyVGA(xf86Int10InfoPtr pInt, legacyVGAPtr vga)
  {
-+#if !defined(NO_LEGACY_VGA) || !defined(STRICT_NETBSD)
++#if !defined(NO_LEGACY_VGA) || !defined(STRICT_XSRC_NETBSD)
      vga->save_msr = pci_io_read8(pInt->io, 0x03CC);
      vga->save_vse = pci_io_read8(pInt->io, 0x03C3);
  #ifndef __ia64__
@@ -20,7 +20,7 @@ $NetBSD$
  void
  UnlockLegacyVGA(xf86Int10InfoPtr pInt, legacyVGAPtr vga)
  {
-+#if !defined(NO_LEGACY_VGA) || !defined(STRICT_NETBSD)
++#if !defined(NO_LEGACY_VGA) || !defined(STRICT_XSRC_NETBSD)
      pci_io_write8(pInt->io, 0x0102, vga->save_pos102);
  #ifndef __ia64__
      pci_io_write8(pInt->io, 0x46E8, vga->save_46e8);

@@ -14,7 +14,7 @@ Option from OpenBSD xenocara for randr backlight setting
      DamageRegister(&ppix->drawable, ppriv->slave_damage);
  
      if (ppriv->fb_id == 0) {
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +        int ret = drmModeAddFB(drmmode->fd, ppix->drawable.width,
 +#else
          drmModeAddFB(drmmode->fd, ppix->drawable.width,
@@ -23,7 +23,7 @@ Option from OpenBSD xenocara for randr backlight setting
                       ppix->drawable.depth,
                       ppix->drawable.bitsPerPixel,
                       ppix->devKind, ppriv->backing_bo->handle, &ppriv->fb_id);
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +        if (ret) {
 +            ErrorF("failed to set scanout pixmap cpu\n");
 +            return FALSE;
@@ -100,7 +100,7 @@ Option from OpenBSD xenocara for randr backlight setting
      if (!conn)
          return -1;
      len = conn - (blob_data + 4);
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +    if (len + 1 >= sizeof(conn_id))
 +#else
      if (len + 1> 5)

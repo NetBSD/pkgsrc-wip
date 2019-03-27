@@ -6,7 +6,7 @@ $NetBSD$
      if (sectlist)
          *sectlist = NULL;
  
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +    /*
 +     * 20111009 jmcneill: This line was removed with the following commit upstream:
 +     *  http://cgit.freedesktop.org/xorg/xserver/commit/hw/xfree86/common/xf86Helper.c?id=0ceac6f64f5ad9bc2ac4b19be2dd245ffba78b05

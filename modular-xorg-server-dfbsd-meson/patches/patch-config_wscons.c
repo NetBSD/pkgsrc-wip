@@ -52,14 +52,14 @@ Option for masking bits to compare kbd value from OpenBSD xenocara.
      char *name;
  } kbdenc[] = {
      KB_OVRENC,
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +    KB_ENCTAB
 +#ifndef __NetBSD__
 +             ,
 +#endif
-+#else /* !STRICT_NETBSD */
++#else /* !STRICT_XSRC_NETBSD */
      KB_ENCTAB,
-+#endif /* STRICT_NETBSD */
++#endif /* STRICT_XSRC_NETBSD */
      {0}
  };
  
@@ -82,7 +82,7 @@ Option for masking bits to compare kbd value from OpenBSD xenocara.
      input_options = input_option_new(input_options, "name", WSCONS_KBD_DEVICE);
      input_options = input_option_new(input_options, "driver", "kbd");
  
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +    if (asprintf(&config_info, "wscons:%s", WSCONS_KBD_DEVICE) != -1)
 +#else
      config_info = Xprintf("wscons:%s", WSCONS_KBD_DEVICE);
@@ -119,7 +119,7 @@ Option for masking bits to compare kbd value from OpenBSD xenocara.
      char *config_info = NULL;
      int rc;
  
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +    if (asprintf(&config_info, "wscons:%s", path) == -1)
 +#else
      config_info = Xprintf("wscons:%s", path);

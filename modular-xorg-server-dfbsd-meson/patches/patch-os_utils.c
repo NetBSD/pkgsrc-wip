@@ -6,7 +6,7 @@ $NetBSD$
  #if !defined(WIN32) || !defined(__MINGW32__)
              struct rlimit core_limit;
  
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +            if (getrlimit(RLIMIT_CORE, &core_limit) != -1) {
 +                core_limit.rlim_cur = core_limit.rlim_max;
 +                setrlimit(RLIMIT_CORE, &core_limit);
@@ -15,7 +15,7 @@ $NetBSD$
              getrlimit(RLIMIT_CORE, &core_limit);
              core_limit.rlim_cur = core_limit.rlim_max;
              setrlimit(RLIMIT_CORE, &core_limit);
-+#endif /* STRICT_NETBSD */
++#endif /* STRICT_XSRC_NETBSD */
  #endif
              CoreDump = TRUE;
          }

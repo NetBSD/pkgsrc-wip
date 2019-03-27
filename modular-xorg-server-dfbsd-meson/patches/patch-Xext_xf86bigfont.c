@@ -6,7 +6,7 @@ $NetBSD$
  #ifdef HAS_SHM
          if (!badSysCall)
              pDesc = (ShmDescPtr) FontGetPrivate(pFont, FontShmdescIndex);
-+#if defined(STRICT_NETBSD)
++#if defined(STRICT_XSRC_NETBSD)
 +        if (pDesc && pDesc->attach_addr) {
 +#else
          if (pDesc) {

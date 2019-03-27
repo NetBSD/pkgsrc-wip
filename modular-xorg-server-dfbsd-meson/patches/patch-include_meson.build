@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/meson.build.orig	2019-02-25 15:48:03.000000000 +0000
+--- include/meson.build.orig	2019-03-13 16:07:36.000000000 +0000
 +++ include/meson.build
 @@ -254,7 +254,7 @@ supports_syscons = false
  supports_wscons = false

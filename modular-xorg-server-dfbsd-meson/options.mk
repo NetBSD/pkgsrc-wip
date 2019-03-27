@@ -16,7 +16,7 @@ PKG_SUPPORTED_OPTIONS+= xkb_evdev
 PKG_SUPPORTED_OPTIONS+= add_modesetting_driver
 PKG_SUPPORTED_OPTIONS+= add_scfb_driver
 
-PKG_SUPPORTED_OPTIONS+= strict_netbsd
+PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
 
 PKG_SUPPORTED_OPTIONS+= modesetting_on_intel
 PKG_SUPPORTED_OPTIONS+= fallback_not_wsdisplay
@@ -25,6 +25,7 @@ PKG_SUPPORTED_OPTIONS+= usl_vt_switching
 PKG_SUPPORTED_OPTIONS+= openbsd_more_calls
 PKG_SUPPORTED_OPTIONS+= randr_backlight
 PKG_SUPPORTED_OPTIONS+= ws_drivers_openbsd
+PKG_SUPPORTED_OPTIONS+= try_dev_wskbd
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+= devd
@@ -50,13 +51,13 @@ PKG_SUGGESTED_OPTIONS+= add_scfb_driver
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= strict_netbsd
+PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
 .endif
 
 # Patch from OpenBSD to aggressively use the modesetting driver on intel integrated graphics
-# .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-# PKG_SUGGESTED_OPTIONS+= modesetting_on_intel
-# .endif
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= modesetting_on_intel
+.endif
 
 # From OpenBSD 6.5 xenocara xserver 1.19.6
 .if ${OPSYS} == "OpenBSD"
@@ -82,8 +83,13 @@ PKG_SUGGESTED_OPTIONS+= randr_backlight
 .endif
 
 # From OpenBSD 6.5 xenocara xserver 1.19.6
-.if ${OPSYS} == "OpenBSD"
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+= ws_drivers_openbsd
+.endif
+
+# From NetBSD 1.20.4 but extended to amd64 and i386
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= try_dev_wskbd
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -201,8 +207,8 @@ CPPFLAGS+=	-DADD_MODESETTING_DRIVER
 CPPFLAGS+=	-DADD_SCFB_DRIVER
 .endif
 
-.if !empty(PKG_OPTIONS:Mstrict_netbsd)
-CPPFLAGS+=	-DSTRICT_NETBSD
+.if !empty(PKG_OPTIONS:Mstrict_xsrc_netbsd)
+CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 .endif
 
 .if !empty(PKG_OPTIONS:Mmodesetting_on_intel)
@@ -227,6 +233,11 @@ CPPFLAGS+=	-DOPENBSD_MORE_CALLS
 
 .if !empty(PKG_OPTIONS:Mws_drivers_openbsd)
 CPPFLAGS+=	-DWS_DRIVERS_OPENBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mtry_dev_wskbd)
+CPPFLAGS+=	-DTRY_DEV_WSKBD
+CPPFLAGS+=	-DCONFIG_WSCONS
 .endif
 
 .if !empty(PKG_OPTIONS:Mrandr_backlight)
