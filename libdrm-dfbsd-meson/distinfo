@@ -1,15 +1,17 @@
 $NetBSD: distinfo,v 1.92 2019/01/22 21:50:47 wiz Exp $
 
-SHA1 (drm-4735ca71af9f741e2438104d543dc3c5a8107f35.tar.xz) = c00f51a79df0e5733dca2b6ab7025129f9b02e83
-RMD160 (drm-4735ca71af9f741e2438104d543dc3c5a8107f35.tar.xz) = da5e031ac3923839865543473ea6f76e708ede72
-SHA512 (drm-4735ca71af9f741e2438104d543dc3c5a8107f35.tar.xz) = 40014a5d3122054fa1f9bd252a211410cb08b725f5e2f45626c743274a21ee3d4125290ee94f9770af2fa6a8f5e1f3a98c123e36c2b410fff5b11cec9cf7f804
-Size (drm-4735ca71af9f741e2438104d543dc3c5a8107f35.tar.xz) = 395888 bytes
+SHA1 (drm-ae836decb41a69d00bfadab78a7cb69f88de4c94.tar.xz) = 0766d4d58fc9a1c2dfedbf799a1f45d03a8dd853
+RMD160 (drm-ae836decb41a69d00bfadab78a7cb69f88de4c94.tar.xz) = 6adef5c438e3f3c73cfb12b1a3ce6270ae5e3c82
+SHA512 (drm-ae836decb41a69d00bfadab78a7cb69f88de4c94.tar.xz) = eda65490b0d36e49173a05f9dfda9bcf85cb4b84697ca7b115c44f453830c7d4210eaca42df073b9147036b6912fdd5ac95235e0b041ac570b88b2acc606dda1
+Size (drm-ae836decb41a69d00bfadab78a7cb69f88de4c94.tar.xz) = 400388 bytes
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
+SHA1 (patch-intel_intel__bufmgr__gem.c) = 29598cfacd6b6f7432001d0d884b4e4204c18d4a
+SHA1 (patch-intel_uthash.h) = fba0a7bb2437760b06640a3d69f1a44b62726a3a
 SHA1 (patch-libkms_vmwgfx.c) = de56a4f1724bef5f237f183eca889b8cef3b81af
 SHA1 (patch-libsync.h) = 1e0603e72a54a069fc9d2ab2c9559d22381a69d3
 SHA1 (patch-meson.build) = 32b7b69c936d658a382a0b4e2b157649a9c4782d
-SHA1 (patch-xf86atomic.h) = c1be2a2b7715ac37c997a63de817f4d715046e26
-SHA1 (patch-xf86drm.c) = 3cd8c6a6e26728d92ec3fc03cfffa778a65c286b
+SHA1 (patch-xf86atomic.h) = e8af89dfefe0537e33dce16609b083261792b1ad
+SHA1 (patch-xf86drm.c) = 2aa77835d011d074cfb24248ba4fd1d18fc5b4b9
 SHA1 (patch-xf86drmMode.c) = d7c6617ef54f76dc3dac00098adbb2f6fb02d685
 SHA1 (patch-xf86drmMode.h) = 265989e670cc7ead9bb5002e116e5ab56439ede6

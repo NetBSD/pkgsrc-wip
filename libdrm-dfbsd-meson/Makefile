@@ -1,7 +1,16 @@
 # $NetBSD: Makefile,v 1.91 2019/01/22 21:50:47 wiz Exp $
 
+# 2019-03-25		intel: sync i915_pciids.h with kernel
+COMMIT_ID=		ae836decb41a69d00bfadab78a7cb69f88de4c94
+
+# 2019-03-20		tests/amdgpu: minor fix for dispatch/draw test
+# COMMIT_ID=		a85b31c973d9f619be862655793ab957318321dc
+
+# 2019-03-18		tests/amdgpu: add memcpy draw test
+# COMMIT_ID=		852a9d20ad645d399774a2b3ff1746521841ba54
+
 # 2019-03-12		xf86drm: Fix segmentation fault while parsing device info
-COMMIT_ID=		4735ca71af9f741e2438104d543dc3c5a8107f35
+# COMMIT_ID=		4735ca71af9f741e2438104d543dc3c5a8107f35
 
 # 2019-02-26		configure.ac fix build error for config.h in autotools
 # COMMIT_ID=		d54e546852dd6ffdc732ffa17f102b7ce87a7352
@@ -33,9 +42,9 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
-USE_LIBTOOL=		yes
+# USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
-GNU_CONFIGURE=		yes
+# GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -92,6 +101,11 @@ PKG_SUGGESTED_OPTIONS+=	invert_atomic_add_unless
 # PKG_SUGGESTED_OPTIONS+=	libkms
 # .endif
 
+PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	libkms	
@@ -107,6 +121,10 @@ MESON_ARGS+=	-Dlibkms=false
 
 .if !empty(PKG_OPTIONS:Minvert_atomic_add_unless)
 CPPFLAGS+=	-DINVERT_ATOMIC_ADD_UNLESS
+.endif
+
+.if !empty(PKG_OPTIONS:Mstrict_xsrc_netbsd)
+CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 .endif
 
 # Meson

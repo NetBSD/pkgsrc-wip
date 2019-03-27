@@ -4,7 +4,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 
 Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
 
---- xf86drm.c.orig	2019-01-22 16:32:41.000000000 +0000
+--- xf86drm.c.orig	2019-03-12 11:55:31.000000000 +0000
 +++ xf86drm.c
 @@ -46,6 +46,11 @@
  #include <signal.h>
@@ -100,7 +100,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  /**
   * Compare two busid strings
   *
-@@ -351,7 +401,11 @@ static int drmOpenDevice(dev_t dev, int
+@@ -351,7 +401,11 @@ static int drmOpenDevice(dev_t dev, int 
          return -EINVAL;
      };
  
@@ -160,7 +160,16 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  
  /**
   * Open the device by bus ID.
-@@ -2779,12 +2846,29 @@ static bool drmNodeIsDRM(int maj, int mi
+@@ -2594,7 +2661,7 @@ drm_public int drmCommandNone(int fd, un
+ {
+     unsigned long request;
+ 
+-    request = DRM_IO( DRM_COMMAND_BASE + drmCommandIndex);
++    request = DRM_IO( (DRM_COMMAND_BASE + drmCommandIndex) );
+ 
+     if (drmIoctl(fd, request, NULL)) {
+         return -errno;
+@@ -2820,12 +2887,29 @@ static bool drmNodeIsDRM(int maj, int mi
               maj, min);
      return stat(path, &sbuf) == 0;
  #else
@@ -190,7 +199,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
      struct stat sbuf;
      int maj, min, type;
  
-@@ -2803,6 +2887,7 @@ drm_public int drmGetNodeTypeFromFd(int
+@@ -2844,6 +2928,7 @@ drm_public int drmGetNodeTypeFromFd(int 
      if (type == -1)
          errno = ENODEV;
      return type;
@@ -198,7 +207,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  }
  
  drm_public int drmPrimeHandleToFD(int fd, uint32_t handle, uint32_t flags,
-@@ -2881,6 +2966,25 @@ static char *drmGetMinorNameForFD(int fd
+@@ -2922,6 +3007,25 @@ static char *drmGetMinorNameForFD(int fd
  
      closedir(sysdir);
      return NULL;
@@ -224,7 +233,16 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  #else
      struct stat sbuf;
      char buf[PATH_MAX + 1];
-@@ -3014,7 +3118,66 @@ static int drmParseSubsystemType(int maj
+@@ -2957,7 +3061,7 @@ static char *drmGetMinorNameForFD(int fd
+         return NULL;
+ 
+     n = snprintf(buf, sizeof(buf), dev_name, DRM_DIR_NAME, min - base);
+-    if (n == -1 || n >= sizeof(buf))
++    if (n == -1 || n >= (int)sizeof(buf))
+         return NULL;
+ 
+     return strdup(buf);
+@@ -3055,7 +3159,66 @@ static int drmParseSubsystemType(int maj
      }
  
      return -EINVAL;
@@ -292,7 +310,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
      return DRM_BUS_PCI;
  #else
  #warning "Missing implementation of drmParseSubsystemType"
-@@ -3022,6 +3185,7 @@ static int drmParseSubsystemType(int maj
+@@ -3063,6 +3226,7 @@ static int drmParseSubsystemType(int maj
  #endif
  }
  
@@ -300,7 +318,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  static void
  get_pci_path(int maj, int min, char *pci_path)
  {
-@@ -3037,8 +3201,14 @@ get_pci_path(int maj, int min, char *pci
+@@ -3078,8 +3242,14 @@ get_pci_path(int maj, int min, char *pci
      if (term && strncmp(term, "/virtio", 7) == 0)
          *term = 0;
  }
@@ -315,7 +333,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  {
  #ifdef __linux__
      unsigned int domain, bus, dev, func;
-@@ -3063,7 +3233,74 @@ static int drmParsePciBusInfo(int maj, i
+@@ -3104,7 +3274,74 @@ static int drmParsePciBusInfo(int maj, i
      info->func = func;
  
      return 0;
@@ -391,7 +409,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
      struct drm_pciinfo pinfo;
      int fd, type;
  
-@@ -3087,6 +3324,61 @@ static int drmParsePciBusInfo(int maj, i
+@@ -3128,6 +3365,61 @@ static int drmParsePciBusInfo(int maj, i
      info->func = pinfo.func;
  
      return 0;
@@ -453,7 +471,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  #else
  #warning "Missing implementation of drmParsePciBusInfo"
      return -EINVAL;
-@@ -3135,7 +3427,11 @@ static int drmGetNodeType(const char *na
+@@ -3176,7 +3468,11 @@ static int drmGetNodeType(const char *na
          sizeof(DRM_RENDER_MINOR_NAME) - 1) == 0)
          return DRM_NODE_RENDER;
  
@@ -465,7 +483,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  }
  
  static int drmGetMaxNodeName(void)
-@@ -3218,6 +3514,9 @@ static int parse_config_sysfs_file(int m
+@@ -3259,6 +3555,9 @@ static int parse_config_sysfs_file(int m
  #endif
  
  static int drmParsePciDeviceInfo(int maj, int min,
@@ -475,7 +493,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
                                   drmPciDeviceInfoPtr device,
                                   uint32_t flags)
  {
-@@ -3229,7 +3528,49 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3270,7 +3569,49 @@ static int drmParsePciDeviceInfo(int maj
          return parse_config_sysfs_file(maj, min, device);
  
      return 0;
@@ -526,7 +544,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
      struct drm_pciinfo pinfo;
      int fd, type;
  
-@@ -3254,6 +3595,43 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3295,6 +3636,43 @@ static int drmParsePciDeviceInfo(int maj
      device->subdevice_id = pinfo.subdevice_id;
  
      return 0;
@@ -570,7 +588,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
  #else
  #warning "Missing implementation of drmParsePciDeviceInfo"
      return -EINVAL;
-@@ -3380,18 +3758,42 @@ static int drmProcessPciDevice(drmDevice
+@@ -3421,18 +3799,42 @@ static int drmProcessPciDevice(drmDevice
  
      dev->businfo.pci = (drmPciBusInfoPtr)addr;
  
@@ -613,7 +631,7 @@ Patches from FreeBSD ports / DragonFly dports for graphics/libdrm 2.4.84.
      }
  
      *device = dev;
-@@ -4099,6 +4501,23 @@ drm_public char *drmGetDeviceNameFromFd2
+@@ -4101,6 +4503,23 @@ drm_public char *drmGetDeviceNameFromFd2
      free(value);
  
      return strdup(path);
