@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mackerel-agent-plugins-0.55.0.tar.gz) = 406a6e60dd16aa317eb469e643e318475864ee82
-RMD160 (mackerel-agent-plugins-0.55.0.tar.gz) = b81bf044d148b13082e870180c329f4b118017f2
-SHA512 (mackerel-agent-plugins-0.55.0.tar.gz) = f8bd5ec78ea8924be539548d849f6a59ae49c23ecaa23d5782d65eccfcde9f1d879e2870cb46112a74ed7f4a235d98c578202489d72f600d5e5754b32cb15906
-Size (mackerel-agent-plugins-0.55.0.tar.gz) = 218662 bytes
+SHA1 (mackerel-agent-plugins-0.55.1.tar.gz) = ce0593804bd76bc3644e17d3ef7b62c3b9295945
+RMD160 (mackerel-agent-plugins-0.55.1.tar.gz) = 1c55b3c1b78545f97e50194d798f0fc939e3521f
+SHA512 (mackerel-agent-plugins-0.55.1.tar.gz) = 3abd255bf0cbad1cbd4dcf5d9d3ab37fe7b9df9c3eba61a1009d690747b1558ba602e531fec7516ab4b412afe6eb2f423e9acbf2bc2127f7ed6539d004bf7cec
+Size (mackerel-agent-plugins-0.55.1.tar.gz) = 219001 bytes
