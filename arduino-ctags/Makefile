@@ -1,12 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	ctags-5.8-arduino11
-PKGNAME=	${DISTNAME}
+DISTNAME=	arduino-ctags-${GITHUB_TAG:S/-arduino/./}
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arduino/}
 GITHUB_PROJECT=	ctags
 GITHUB_TAG=	5.8-arduino11
-
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	krz.lasocki@gmail.com
