@@ -1,16 +1,17 @@
 # $NetBSD$
-# XXX: url2pkg has problems downloading
-# https://github.com/arduino/ctags/archive/5.8-arduino11.{zip|tar.gz}
-# hence the zip file is rehosted. This is a WIP package and this lets me work on the code
-# for the time being.
+
 DISTNAME=	ctags-5.8-arduino11
+PKGNAME=	${DISTNAME}
 CATEGORIES=	wip
-MASTER_SITES=	http://polprog.net/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=arduino/}
+GITHUB_PROJECT=	ctags
+GITHUB_TAG=	5.8-arduino11
+
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	krz.lasocki@gmail.com
-HOMEPAGE=	http://polprog.net/
-COMMENT=	TODO: Short description of the package
+HOMEPAGE=	https://github.com/arduino/ctags
+COMMENT=	Arduino ctags, based on Exuberant ctags
 LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
