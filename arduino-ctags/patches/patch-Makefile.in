@@ -1,0 +1,34 @@
+$NetBSD$
+
+--- Makefile.in.orig	2016-11-23 09:52:52.000000000 +0000
++++ Makefile.in
+@@ -6,8 +6,8 @@
+ # These are the names of the installed programs, in case you wish to change
+ # them.
+ #
+-CTAGS_PROG = ctags
+-ETAGS_PROG = etags
++CTAGS_PROG = arduino-ctags
++ETAGS_PROG = arduino-etags
+
+ # Set this to the path to your shell (must run Bourne shell commands).
+ #
+@@ -85,12 +85,12 @@ EMAN	= $(ETAGS_PROG).$(manext)
+ #
+ CTAGS_EXEC	= $(CTAGS_PROG)$(EXEEXT)
+ ETAGS_EXEC	= $(ETAGS_PROG)$(EXEEXT)
+-DEST_CTAGS	= $(bindir)/$(CTAGS_EXEC)
+-DEST_ETAGS	= $(bindir)/$(ETAGS_EXEC)
+-DEST_READ_LIB	= $(libdir)/$(READ_LIB)
+-DEST_READ_INC	= $(incdir)/$(READ_INC)
+-DEST_CMAN	= $(man1dir)/$(CMAN)
+-DEST_EMAN	= $(man1dir)/$(EMAN)
++DEST_CTAGS	= $(DESTDIR)$(bindir)/$(CTAGS_EXEC)
++DEST_ETAGS	= $(DESTDIR)$(bindir)/$(ETAGS_EXEC)
++DEST_READ_LIB	= $(DESTDIR)$(libdir)/$(READ_LIB)
++DEST_READ_INC	= $(DESTDIR)$(incdir)/$(READ_INC)
++DEST_CMAN	= $(DESTDIR)$(man1dir)/$(CMAN)
++DEST_EMAN	= $(DESTDIR)$(man1dir)/$(EMAN)
+
+ #
+ # primary rules

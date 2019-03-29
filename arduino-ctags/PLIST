@@ -1,1 +1,3 @@
 @comment $NetBSD$
+bin/arduino-ctags
+man/man1/arduino-ctags.1

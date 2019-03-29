@@ -14,4 +14,6 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 
+MAKE_INSTALL_FLAGS+= PREFIX=${DESTDIR}${PREFIX}
+INSTALLATION_DIRS+= bin man/man1
 .include "../../mk/bsd.pkg.mk"
