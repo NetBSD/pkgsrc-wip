@@ -14,19 +14,23 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES+=	c++
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing data directory paths
 SUBST_FILES.paths=	main.cpp sql/connection.h sql/lessontablesql.cpp \
-			widget/downloaddialog.cpp widget/fingerwidget.cpp widget/helpbrowser.cpp \
-			widget/illustrationdialog.cpp widget/keyboard.cpp widget/lessonresult.cpp \
-			widget/licensedialog.cpp widget/mainwindow.cpp widget/numpad.cpp \
-			widget/progressionwidget.cpp widget/regexpdialog.cpp widget/settingsdialog.cpp \
-			widget/settingsdialogx.cpp widget/settingspages.cpp widget/startwidget.cpp \
-			widget/tickerboard.cpp widget/trainingwidget.cpp widget/txtmessagedialog.cpp \
-			widget/updatedialog.cpp
+			widget/downloaddialog.cpp widget/fingerwidget.cpp \
+			widget/helpbrowser.cpp \
+			widget/illustrationdialog.cpp \
+			widget/keyboard.cpp widget/lessonresult.cpp \
+			widget/licensedialog.cpp widget/mainwindow.cpp \
+			widget/numpad.cpp widget/progressionwidget.cpp \
+			widget/regexpdialog.cpp widget/settingsdialog.cpp \
+			widget/settingsdialogx.cpp widget/settingspages.cpp \
+			widget/startwidget.cpp \
+			widget/tickerboard.cpp widget/trainingwidget.cpp \
+			widget/txtmessagedialog.cpp widget/updatedialog.cpp
 SUBST_SED.paths=	-e 's,QCoreApplication::applicationDirPath(),QString("${PREFIX}/share/tipp10"),g'
 
 INSTALLATION_DIRS+=	bin share/tipp10/help/de/content
