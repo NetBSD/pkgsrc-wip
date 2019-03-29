@@ -1,0 +1,4 @@
+* FIXME: https://www.tipp10.com/de/download/getfile/3/ is the
+  real source. We need a webbrowser user-agent string to get
+  this, otherwise we get a 0 length gzip file. This is why we
+  are using Debian as a source.

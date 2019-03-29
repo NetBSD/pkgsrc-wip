@@ -1,10 +1,10 @@
-$NetBSD: patch-sql_chartablesql.cpp,v 1.1 2012/12/29 14:51:33 othyro Exp $
+$NetBSD$
 
-Removing unnecessary function qualifier.
+Remove unnecessary function qualifier
 
---- sql/chartablesql.cpp.orig	2010-12-28 12:30:54.000000000 +0000
+--- sql/chartablesql.cpp
 +++ sql/chartablesql.cpp
-@@ -57,7 +57,7 @@ QVariant CharSqlModel::data(const QModel
+@@ -57,7 +57,7 @@ QVariant CharSqlModel::data(const QModelIndex &index, int role) const {
  			// Read the unicode value
  			unicode = value.toInt();
  			// Convert unicode to a char

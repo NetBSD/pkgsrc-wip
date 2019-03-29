@@ -1,10 +1,9 @@
-$NetBSD: patch-def_defines.h,v 1.1.1.1 2011/05/31 00:50:56 mrampke Exp $
-
+$NetBSD$
 automatically determine for what system to compile
 
---- def/defines.h.orig	2011-03-12 19:26:12.000000000 +0000
+--- def/defines.h
 +++ def/defines.h
-@@ -27,9 +27,19 @@ Foundation, Inc., 51 Franklin Street, Fi
+@@ -27,9 +27,19 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  #define DEFINES_H
  
  // OS constants

@@ -1,8 +1,7 @@
-$NetBSD: patch-widget_lessondialog.cpp,v 1.1 2012/12/29 14:51:33 othyro Exp $
+$NetBSD$
+Remove unncessary function qualifier.
 
-Removing unnecessary function qualifier.
-
---- widget/lessondialog.cpp.orig	2011-03-12 20:10:08.000000000 +0000
+--- widget/lessondialog.cpp
 +++ widget/lessondialog.cpp
 @@ -89,7 +89,7 @@ void LessonDialog::updateContent() {
  			*lessonData = lineLessonContent->toPlainText().split("\n", QString::SkipEmptyParts);

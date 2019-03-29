@@ -1,10 +1,9 @@
-$NetBSD: patch-widget_tickerboard.cpp,v 1.1 2012/12/29 14:51:33 othyro Exp $
-
+$NetBSD$
 Remove redundant qualifier.
 
---- widget/tickerboard.cpp.orig	2011-03-12 20:10:08.000000000 +0000
+--- widget/tickerboard.cpp
 +++ widget/tickerboard.cpp
-@@ -97,7 +97,7 @@ void TickerBoard::startTicker(bool wasPa
+@@ -97,7 +97,7 @@ void TickerBoard::startTicker(bool wasPaused) {
  
  		if (tickerSpeed == 50) {
  			scrollOffset = 290;
