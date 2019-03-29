@@ -1,9 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/12/29 14:54:37 othyro Exp $
 
-DISTNAME=	tipp10_2.1.0.orig.tar.gz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFFIX}
-PKGVERSION=	2.1.0
-PKGNAME=	tipp10-${PKGVERSION}
+DISTNAME=	tipp10_2.1.0.orig
+PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/tipp10/}
 
