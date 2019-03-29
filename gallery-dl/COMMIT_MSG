@@ -1,0 +1,20 @@
+gallery-dl: Update to 1.8.1
+
+Changes:
+1.8.1
+-----
+### Added
+ - Support for:
+   - `35photo` (#162)
+   - `500px` (#185)
+ - `instagram` extractor for hashtags (#202)
+ - Option to get more metadata on `deviantart` (#189)
+ - Man pages and bash completion (#150)
+ - Snap improvements (#197, #199, #207)
+### Changed
+ - Metadata for `luscious` albums
+ - FFmpeg arguments for `--ugoira-conv`
+### Fixed
+ - `tumblr` avatar URLs when not using OAuth1.0 (#193)
+ - `instagram` multi-image posts (#178, #201)
+ - Miscellaneous issues on `exhentai`, `komikcast`
