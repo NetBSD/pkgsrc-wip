@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.2 2015/05/03 15:01:11 spz Exp $
+
+SHA1 (NetBSD-8.0/src.tgz) = 31231650dafc608e1c449f8ecf08cf57d481a113
+RMD160 (NetBSD-8.0/src.tgz) = 1422ca9389e1151994c2f5f475c9999a860c30fd
+SHA512 (NetBSD-8.0/src.tgz) = d10f09bfe3d8d91f9d4529da458a35f2effb0196e7f3b55ebf45d9d8f9104073e5349169d025f3a540da4df120a6a334be70d52d98d7a5008b71565054e2cd0c
+Size (NetBSD-8.0/src.tgz) = 181396517 bytes
+SHA1 (NetBSD-8.0/syssrc.tgz) = 57c5640a388dce0ab4fc05ee03664f69f3cce52a
+RMD160 (NetBSD-8.0/syssrc.tgz) = 9850b897cd7e4bb67c2f05b2ed7a19a16e3028f1
+SHA512 (NetBSD-8.0/syssrc.tgz) = 1e71690b9d83a2727a0768e188fbc8b36b231a50a22785db27f69a2cd9344c09061c6ce1ea21046a8eda712e05d40f86164c385b3a2374f62d9a1be75dc4fba4
+Size (NetBSD-8.0/syssrc.tgz) = 55245187 bytes
+SHA1 (patch-usr.sbin_pf_examples_Makefile) = 05d7bfebff0e240d5785f549e4c34ff283abb405
