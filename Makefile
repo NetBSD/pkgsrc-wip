@@ -2325,6 +2325,7 @@ SUBDIR+=	netbsd-icon-theme
 SUBDIR+=	netbsd-light-desktop-artwork
 SUBDIR+=	netbsd-light-desktop-default-settings
 SUBDIR+=	netbsd-make
+SUBDIR+=	netbsd-pf
 SUBDIR+=	netbsd-x11-i386
 SUBDIR+=	netclasses
 SUBDIR+=	netdata-git
