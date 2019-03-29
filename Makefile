@@ -4250,7 +4250,6 @@ SUBDIR+=	rosegarden
 SUBDIR+=	rott
 SUBDIR+=	roundcube-skin-mvision2
 SUBDIR+=	routersploit
-SUBDIR+=	routersploit-git
 SUBDIR+=	roxterm
 SUBDIR+=	rpcemu
 SUBDIR+=	rpki-git
