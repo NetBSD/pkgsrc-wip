@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	basepkg-1.6.2
+DISTNAME=	basepkg-1.6.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
