@@ -18,7 +18,13 @@ Recognise SunOS as having shared libraries
  
  if test x"$enable_shared" != "xno"; then :
    case $host in #(
-@@ -13383,6 +13383,8 @@ if test x"$enable_shared" != "xno"; then
+@@ -13471,10 +13471,14 @@ fi ;; #(
+     natdynlink=true ;; #(
+   arm*-*-freebsd*) :
+     natdynlink=true ;; #(
++  arm*-*-netbsd*) :
++    natdynlink=true ;; #(
+   earm*-*-netbsd*) :
      natdynlink=true ;; #(
    aarch64-*-freebsd*) :
      natdynlink=true ;; #(
