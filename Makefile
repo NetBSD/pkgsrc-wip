@@ -506,7 +506,6 @@ SUBDIR+=	cubature
 SUBDIR+=	cufflinks
 SUBDIR+=	cufflinks-2.2.1
 SUBDIR+=	cup
-SUBDIR+=	curl
 SUBDIR+=	cutecom
 SUBDIR+=	cvc3
 SUBDIR+=	cvs-syncmail
