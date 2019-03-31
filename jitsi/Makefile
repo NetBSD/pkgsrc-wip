@@ -6,20 +6,20 @@ MASTER_SITES=	https://download.jitsi.org/jitsi/src/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	coypu@sdf.org
-HOMEPAGE=	https://jitsi.org
-COMMENT=	
+HOMEPAGE=	https://jitsi.org/
+COMMENT=	Multi-platform open-source video conferencing
 LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/jitsi
 USE_LANGUAGES=	c c++
 
 do-build:
-	$(RUN)$(_ULIMIT_CMD) cd $(WRKSRC) && \
-	  $(PKGSRC_SETENV) $(MAKE_ENV) \
+	${RUN}${_ULIMIT_CMD} cd ${WRKSRC} && \
+	  ${PKGSRC_SETENV} ${MAKE_ENV} \
 	    ant -nouserlib rebuild
 
 do-install:
-	cd ${WRKSRC} && ./resources/install/generic/run.sh 
+	cd ${WRKSRC} && ./resources/install/generic/run.sh
 
 DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
