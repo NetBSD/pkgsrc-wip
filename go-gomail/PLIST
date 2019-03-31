@@ -1,0 +1,19 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/gopkg.in/gomail.v2.a
+gopkg/src/gopkg.in/gomail.v2/CHANGELOG.md
+gopkg/src/gopkg.in/gomail.v2/CONTRIBUTING.md
+gopkg/src/gopkg.in/gomail.v2/LICENSE
+gopkg/src/gopkg.in/gomail.v2/README.md
+gopkg/src/gopkg.in/gomail.v2/auth.go
+gopkg/src/gopkg.in/gomail.v2/auth_test.go
+gopkg/src/gopkg.in/gomail.v2/doc.go
+gopkg/src/gopkg.in/gomail.v2/example_test.go
+gopkg/src/gopkg.in/gomail.v2/message.go
+gopkg/src/gopkg.in/gomail.v2/message_test.go
+gopkg/src/gopkg.in/gomail.v2/mime.go
+gopkg/src/gopkg.in/gomail.v2/mime_go14.go
+gopkg/src/gopkg.in/gomail.v2/send.go
+gopkg/src/gopkg.in/gomail.v2/send_test.go
+gopkg/src/gopkg.in/gomail.v2/smtp.go
+gopkg/src/gopkg.in/gomail.v2/smtp_test.go
+gopkg/src/gopkg.in/gomail.v2/writeto.go
