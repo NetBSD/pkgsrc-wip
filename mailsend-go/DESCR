@@ -1,0 +1,5 @@
+mailsend-go is a command line tool to send mail via SMTP protocol.
+
+This is the golang incarnation of my C version of mailsend. However, this
+version is much simpler and all the heavy lifting is done by the package
+gomail.v2
