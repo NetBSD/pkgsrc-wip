@@ -1,0 +1,176 @@
+$NetBSD$
+
+--- configure.ac.orig	2018-10-09 07:26:33.000000000 +0000
++++ configure.ac
+@@ -115,7 +115,7 @@ rm $tmpfile
+ 
+ # Make sure we can compile in C99 mode.
+ AC_PROG_CC_C99
+-if test "$ac_cv_prog_cc_c99" == "no"; then
++if test "$ac_cv_prog_cc_c99" = "no"; then
+     AC_MSG_ERROR([Valgrind relies on a C compiler supporting C99])
+ fi
+ 
+@@ -450,6 +450,12 @@ case "${host_os}" in
+ 	esac
+         ;;
+ 
++     *netbsd*)
++        AC_MSG_RESULT([ok (${host_os})])
++        VGCONF_OS="netbsd"
++        DEFAULT_SUPP="netbsd.supp ${DEFAULT_SUPP}"
++        ;;
++
+      solaris2.11*)
+         AC_MSG_RESULT([ok (${host_os})])
+         VGCONF_OS="solaris"
+@@ -484,7 +490,7 @@ esac
+ # does not support building 32 bit programs
+ 
+ case "$ARCH_MAX-$VGCONF_OS" in
+-     amd64-linux|ppc64be-linux|arm64-linux|amd64-solaris)
++     amd64-linux|ppc64be-linux|arm64-linux|amd64-solaris|amd64-netbsd)
+         AC_MSG_CHECKING([for 32 bit build support])
+         safe_CFLAGS=$CFLAGS
+         CFLAGS="-m32"
+@@ -784,6 +790,17 @@ case "$ARCH_MAX-$VGCONF_OS" in
+         fi
+         AC_MSG_RESULT([ok (${ARCH_MAX}-${VGCONF_OS})])
+         ;;
++     amd64-netbsd)
++        VGCONF_ARCH_PRI="amd64"
++        VGCONF_ARCH_SEC=""
++        VGCONF_PLATFORM_PRI_CAPS="AMD64_NETBSD"
++        VGCONF_PLATFORM_SEC_CAPS=""
++        valt_load_address_pri_norml="0x38000000"
++        valt_load_address_pri_inner="0x28000000"
++        valt_load_address_sec_norml="0xUNSET"
++        valt_load_address_sec_inner="0xUNSET"
++        AC_MSG_RESULT([ok (${ARCH_MAX}-${VGCONF_OS})])
++        ;;
+      x86-solaris)
+         VGCONF_ARCH_PRI="x86"
+         VGCONF_ARCH_SEC=""
+@@ -852,6 +869,7 @@ AM_CONDITIONAL(VGCONF_ARCHS_INCLUDE_X86,
+ AM_CONDITIONAL(VGCONF_ARCHS_INCLUDE_AMD64, 
+                test x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_LINUX \
+                  -o x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_DARWIN \
++                 -o x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_NETBSD \
+                  -o x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_SOLARIS )
+ AM_CONDITIONAL(VGCONF_ARCHS_INCLUDE_PPC32, 
+                test x$VGCONF_PLATFORM_PRI_CAPS = xPPC32_LINUX \ 
+@@ -909,6 +927,8 @@ AM_CONDITIONAL(VGCONF_PLATFORMS_INCLUDE_
+                  -o x$VGCONF_PLATFORM_SEC_CAPS = xX86_SOLARIS)
+ AM_CONDITIONAL(VGCONF_PLATFORMS_INCLUDE_AMD64_SOLARIS,
+                test x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_SOLARIS)
++AM_CONDITIONAL(VGCONF_PLATFORMS_INCLUDE_AMD64_NETBSD, 
++               test x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_NETBSD)
+ 
+ 
+ # Similarly, set up VGCONF_OS_IS_<os>.  Exactly one of these becomes defined.
+@@ -931,6 +951,8 @@ AM_CONDITIONAL(VGCONF_OS_IS_DARWIN,
+ AM_CONDITIONAL(VGCONF_OS_IS_SOLARIS,
+                test x$VGCONF_PLATFORM_PRI_CAPS = xX86_SOLARIS \
+                  -o x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_SOLARIS)
++AM_CONDITIONAL(VGCONF_OS_IS_NETBSD,
++               test x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_NETBSD )
+ 
+ 
+ # Sometimes, in the Makefile.am files, it's useful to know whether or not
+@@ -1025,6 +1047,15 @@ AC_EGREP_CPP([DARWIN_LIBC], [
+ GLIBC_VERSION="darwin")
+ 
+ # not really a version check
++AC_EGREP_CPP([NETBSD_LIBC], [
++#include <sys/cdefs.h>
++#if defined(__NetBSD__)
++  NETBSD_LIBC
++#endif
++],
++GLIBC_VERSION="netbsd")
++
++# not really a version check
+ AC_EGREP_CPP([BIONIC_LIBC], [
+ #if defined(__ANDROID__)
+   BIONIC_LIBC
+@@ -1095,6 +1126,11 @@ case "${GLIBC_VERSION}" in
+ 	AC_DEFINE([BIONIC_LIBC], 1, [Define to 1 if you're using Bionic])
+ 	DEFAULT_SUPP="bionic.supp ${DEFAULT_SUPP}"
+ 	;;
++     netbsd)
++	AC_MSG_RESULT(NetBSD)
++	# DEFAULT_SUPP set in host_os switch-case above.
++	# No other suppression file is used.
++	;;
+      solaris)
+ 	AC_MSG_RESULT(Solaris)
+ 	# DEFAULT_SUPP set in host_os switch-case above.
+@@ -3013,6 +3049,41 @@ if test "$vg_cv_tls" = yes -a $is_clang 
+ AC_DEFINE([HAVE_TLS], 1, [can use __thread to define thread-local variables])
+ fi
+ 
++#----------------------------------------------------------------------------
++# NetBSD-specific checks.
++#----------------------------------------------------------------------------
++
++if test "$VGCONF_OS" = "netbsd" ; then
++# NetBSD-specific check determining default platform for the Valgrind launcher.
++# Used in case the launcher cannot select platform by looking at the client
++# image (for example because the executable is a shell script).
++#
++# C-level symbol: NETBSD_LAUNCHER_DEFAULT_PLATFORM
++# Automake-level symbol: none
++#
++AC_MSG_CHECKING([for default platform of Valgrind launcher (NetBSD-specific)])
++# Get the ELF class of /bin/sh first.
++if ! test -f /bin/sh; then
++  AC_MSG_ERROR([Shell interpreter `/bin/sh' not found.])
++fi
++elf_class=$( /usr/bin/file /bin/sh | sed -n 's/.*ELF \(..\)-bit.*/\1/p' )
++case "$elf_class" in
++  64)
++    default_arch="$VGCONF_ARCH_PRI";
++    ;;
++  32)
++    AC_MSG_ERROR([Shell interpreter `/bin/sh' 32-bit not supported])
++    ;;
++  *)
++    AC_MSG_ERROR([Cannot determine ELF class of `/bin/sh'.])
++    ;;
++esac
++default_platform="$default_arch-$VGCONF_OS"
++AC_MSG_RESULT([$default_platform])
++AC_DEFINE_UNQUOTED([NETBSD_LAUNCHER_DEFAULT_PLATFORM], ["$default_platform"],
++                   [Default platform for Valgrind launcher.])
++fi # test "$VGCONF_OS" = "netbsd"
++
+ 
+ #----------------------------------------------------------------------------
+ # Solaris-specific checks.
+@@ -4148,6 +4219,7 @@ if test x$VGCONF_PLATFORM_PRI_CAPS = xX8
+      -o x$VGCONF_PLATFORM_PRI_CAPS = xX86_SOLARIS ; then
+   mflag_primary=$FLAG_M32
+ elif test x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_LINUX \
++       -o x$VGCONF_PLATFORM_PRI_CAPS = xAMD64_NETBSD \
+        -o x$VGCONF_PLATFORM_PRI_CAPS = xPPC64_LINUX \
+        -o x$VGCONF_PLATFORM_PRI_CAPS = xARM64_LINUX \
+        -o x$VGCONF_PLATFORM_PRI_CAPS = xMIPS64_LINUX \
+@@ -4187,6 +4259,9 @@ AM_COND_IF([VGCONF_OS_IS_LINUX],
+ AM_COND_IF([VGCONF_OS_IS_DARWIN],
+            [CFLAGS_MPI="-g -O -fno-omit-frame-pointer -Wall -dynamic"
+             LDFLAGS_MPI="-dynamic -dynamiclib -all_load"])
++AM_COND_IF([VGCONF_OS_IS_NETBSD],
++           [CFLAGS_MPI="-g -O -fno-omit-frame-pointer -Wall -fPIC"
++            LDFLAGS_MPI="-fPIC -shared"])
+ AM_COND_IF([VGCONF_OS_IS_SOLARIS],
+            [CFLAGS_MPI="-g -O -fno-omit-frame-pointer -Wall -fpic"
+             LDFLAGS_MPI="-fpic -shared"])
+@@ -4680,6 +4755,8 @@ AC_CONFIG_FILES([
+ ])
+ AC_CONFIG_FILES([coregrind/link_tool_exe_linux],
+                 [chmod +x coregrind/link_tool_exe_linux])
++AC_CONFIG_FILES([coregrind/link_tool_exe_netbsd],
++                [chmod +x coregrind/link_tool_exe_netbsd])
+ AC_CONFIG_FILES([coregrind/link_tool_exe_darwin],
+                 [chmod +x coregrind/link_tool_exe_darwin])
+ AC_CONFIG_FILES([coregrind/link_tool_exe_solaris],

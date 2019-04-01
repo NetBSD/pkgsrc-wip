@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- Makefile.am.orig	2018-10-09 07:18:28.000000000 +0000
++++ Makefile.am
+@@ -49,6 +49,7 @@ SUPP_FILES = \
+ 	darwin11.supp darwin12.supp darwin13.supp darwin14.supp darwin15.supp \
+ 	darwin16.supp darwin17.supp \
+ 	bionic.supp \
++	netbsd.supp \
+ 	solaris11.supp solaris12.supp
+ DEFAULT_SUPP_FILES = @DEFAULT_SUPP@
+ 
+@@ -138,4 +139,3 @@ include/vgversion.h:
+ 	$(top_srcdir)/auxprogs/make_or_upd_vgversion_h $(top_srcdir)
+ 
+ .PHONY: include/vgversion.h
+-
