@@ -10,20 +10,13 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jstemmer/}
 EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
-HOMEPAGE=	https://github.com/jstemmer/go-junit-report/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ejstemmer/go-junit-report
 COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	# TODO: (see mk/license.mk)
 
-USE_LANGUAGES = go
+GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
+GO_SRCPATH=	github.com/jstemmer/go-junit-report/
 
-DEPENDS+= go>=1.1:../../lang/go
-
-WRKSRC=		${WRKDIR}/myaasss
-
-
-
-# url2pkg-marker (please do not remove this line.)
-.include "../../mk/bsd.pkg.mk"
 .include "../../lang/go/go-package.mk"
-
+.include "../../mk/bsd.pkg.mk"
