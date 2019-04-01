@@ -13,7 +13,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ejstemmer/go-junit-report
 COMMENT=	TODO: Short description of the package
-LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
 GO_SRCPATH=	github.com/jstemmer/go-junit-report/
