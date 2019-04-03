@@ -376,8 +376,8 @@ Add NVMM support.
  obj-$(CONFIG_SEV) += sev.o
  obj-$(call lnot,$(CONFIG_SEV)) += sev-stub.o
 --- target/i386/nvmm-all.c	1970-01-01 01:00:00.000000000 +0100
-+++ target/i386/nvmm-all.c	2019-03-21 20:52:07.633997481 +0100
-@@ -0,0 +1,1176 @@
++++ target/i386/nvmm-all.c	2019-04-03 19:14:34.639995406 +0200
+@@ -0,0 +1,1178 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
 + *
@@ -555,6 +555,7 @@ Add NVMM support.
 +    state.msrs[NVMM_X64_MSR_SYSENTER_ESP] = env->sysenter_esp;
 +    state.msrs[NVMM_X64_MSR_SYSENTER_EIP] = env->sysenter_eip;
 +    state.msrs[NVMM_X64_MSR_PAT] = env->pat;
++    state.msrs[NVMM_X64_MSR_TSC] = env->tsc;
 +
 +    bitmap =
 +        NVMM_X64_STATE_SEGS |
@@ -705,6 +706,7 @@ Add NVMM support.
 +    env->sysenter_esp = state.msrs[NVMM_X64_MSR_SYSENTER_ESP];
 +    env->sysenter_eip = state.msrs[NVMM_X64_MSR_SYSENTER_EIP];
 +    env->pat = state.msrs[NVMM_X64_MSR_PAT];
++    env->tsc = state.msrs[NVMM_X64_MSR_TSC];
 +
 +    x86_update_hflags(env);
 +}
