@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	mmail-0.51
+DISTNAME=	mmail-0.52
 CATEGORIES=	news
-MASTER_SITES=	https://downloads.sourceforge.net/project/multimail/MultiMail/0.51/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=multimail/}
 
 MAINTAINER=	fred@statdns.com
 HOMEPAGE=	https://multimail.sourceforge.io/

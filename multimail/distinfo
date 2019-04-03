@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (mmail-0.51.tar.gz) = eb16f372af41079da17b9f792008e90a5086ff24
-RMD160 (mmail-0.51.tar.gz) = d64e3c31e48f32ac25e5922bf3fe48fdcd23d01d
-SHA512 (mmail-0.51.tar.gz) = 8a7e0f450c204b927e9a01461abc51f5cd278d26d9110efc919dbe04d1b4c90c39dbd71f3ed5db186184070d5d25dcdc3cb1322edcc75dbd6117ecb400666072
-Size (mmail-0.51.tar.gz) = 220574 bytes
-SHA1 (patch-Makefile) = 69c9263c3ab799e155483aeade79573ae55cd758
+SHA1 (mmail-0.52.tar.gz) = 6a0e2d9ed1bdf1c00afae15f008a7f7e4850b0fa
+RMD160 (mmail-0.52.tar.gz) = b518caf178399540b0384bbc54aae0fa0bf172d5
+SHA512 (mmail-0.52.tar.gz) = 2e0b834db289ec94d893deb0250dcc44e826ca7cbf28c6e39b23c3ac9a008e7f5da6a584d0f32547ca057c5ae44c3d84bbe0833bb1b8bb6df4f652174ee139b4
+Size (mmail-0.52.tar.gz) = 221721 bytes
+SHA1 (patch-Makefile) = beff612a3b60a2e8ad2f45b685a925e5d2af95c8

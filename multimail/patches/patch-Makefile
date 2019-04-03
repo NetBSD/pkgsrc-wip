@@ -2,7 +2,7 @@ $NetBSD$
 
 Link against ncursesw and adapt install target for pkgsrc.
 
---- Makefile.orig	2018-03-29 09:26:02.000000000 +0000
+--- Makefile.orig	2019-02-22 01:00:59.000000000 +0000
 +++ Makefile
 @@ -18,7 +18,8 @@ endif
  # PREFIX is the base directory under which to install the binary and man
@@ -14,25 +14,25 @@ Link against ncursesw and adapt install target for pkgsrc.
  
  #--------------------------------------------------------------
  # Defaults are for the standard curses setup:
-@@ -41,7 +42,7 @@ ifeq ($(OS),Windows_NT)
+@@ -37,7 +38,7 @@ ifeq ($(OS),Windows_NT)
+ 	E = .exe
  else
  	CURS_DIR = .
- 	CURS_LIB = .
 -	LIBS = -lcurses
 +	LIBS = -lncursesw
  	RM = rm -f
  	SEP = ;
  	E =
-@@ -101,7 +102,7 @@ $(IOBJS) : %.o: $(isrc)/%.cc
- 	$(CXX) $(CPPFLAGS) -c $<
+@@ -94,7 +95,7 @@ $(IOBJS) : %.o: $(isrc)/%.cc
+ 	$(CXX) $(OPTS) -I$(CURS_DIR) -c $<
  
  mm$(E):	$(MOBJS) $(IOBJS)
--	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) -L$(CURS_LIB) $(LIBS)
-+	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) -L$(CURS_LIB) $(LIBS) $(LDFLAGS)
+-	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) $(LIBS)
++	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) $(LIBS) $(LDFLAGS)
  	$(POST)
  
  dep:
-@@ -113,9 +114,9 @@ clean:
+@@ -106,9 +107,9 @@ clean:
  	$(RM) mm$(E)
  
  install::
