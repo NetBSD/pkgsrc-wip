@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	spotifyd-0.2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -325,8 +325,18 @@ post-extract:
 	mv ${WRKDIR}/rust-alsa-${RUST_ALSA_REV} ${WRKDIR}/rust-alsa
 	mv ${WRKDIR}/dns-parser-${DNS_PARSER_REV} ${WRKDIR}/dns-parser
 
+# NOTE: To update this package I think you need to do:
+# 1. remove `--frozen --locked` below
+# 2. `make extract`
+# 3. `make patch`
+# 4. `cd` into working directory
+# 5. `cargo update` to update the lock file
+# 6. `pkgdiff Cargo.lock Cargo.lock.orig > patch-Cargo.lock
+# 7. Replace the file in `patches/` with that one
+# 8. Can then re-add `--frozen --locked` below
+#
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --no-default-features --features pulseaudio_backend --release
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --no-default-features --features pulseaudio_backend --release --frozen --locked
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotifyd ${DESTDIR}${PREFIX}/bin
