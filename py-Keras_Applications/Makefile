@@ -10,6 +10,9 @@ HOMEPAGE=	https://github.com/keras-team/keras-applications
 COMMENT=	Reference implementations of popular deep learning models
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-h5py-[0-9]*:../../devel/py-h5py
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.1:../../math/py-numpy
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
