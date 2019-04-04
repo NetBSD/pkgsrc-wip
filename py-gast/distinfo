@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (gast-0.2.0.tar.gz) = 9f5069701bb94485d406bb1161546acf485b4780
-RMD160 (gast-0.2.0.tar.gz) = da807b12ccf6bdfb77f7958c4fb7badb8af1814d
-SHA512 (gast-0.2.0.tar.gz) = 651719c3035d21e02e39cd83fd54212a12c39addf69f7c9e8810ccb7bb9aae7828e176ad0adf55182f0628f18d76cb1e286e498a9665ddb12e91a51dc2303381
-Size (gast-0.2.0.tar.gz) = 9400 bytes
+SHA1 (gast-0.2.2.tar.gz) = 09c6304a48e548b36bf99172d4b399dbfd9d7de9
+RMD160 (gast-0.2.2.tar.gz) = 550b7d61ddfc2f62d6f976996dc84e4b8784338f
+SHA512 (gast-0.2.2.tar.gz) = 0be9b2b66b7815153e6f294b4db6b028c321d8a94d97c89d89b026df73e0c95dc2ee8af5c10f2eee51cbfb94af4b5a0da8a682896861870b98dec4c6c59a5dd3
+Size (gast-0.2.2.tar.gz) = 10294 bytes
