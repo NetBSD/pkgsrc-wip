@@ -1,6 +1,23 @@
 ## Todo
 
-See this post: https://atomicules.co.uk/2019/01/17/Building-Spotifyd-on-NetBSD.html
+1. Update reqwest
+
+	I've had to roll back reqwest to version 0.9.3 because the one linked
+	(0.9.9) against spotifyd 0.2.5 won't build with the version of Rust I have
+	(1.29.1) and I can't (be bothered) to build rust from source (it's bad enough
+	building this project) so I'll have to settle for the binary I have until there
+	is a more recent one available in pkgsrc (it seems to have disappeared
+	temporarily). The issue that I hit is:
+
+		access to extern crates through prelude is experimental (see issue #44660)
+
+	0.9.6 introduced this with: <https://github.com/seanmonstar/reqwest/commit/4c21127f15ff814f8397a336fd647edc7cc89bc8>
+
+2. In the Makefile there is this todo item:
+
+		# TODO investigate why this is needed
+		CHECK_WRKREF_SKIP+=	bin/spotifyd
+
 
 ## Done
 
@@ -49,3 +66,35 @@ something to do with pkgsrc. Maybe need to set a variable somewhere.
 		MAKE_ENV+= OPENSSL_LIB_DIR=/usr/lib
 
 	Actually though I probably need to copy what tealdeer does with openssl
+
+3. In updating to spotifyd 0.2.5 ran into some issues with nix and libc
+
+		 error[E0425]: cannot find function `fexecve` in module `libc`
+		   --> /usr/pkgsrc/wip/spotifyd/work/vendor/nix-0.11.0/src/unistd.rs:655:15
+		    |
+		655 |         libc::fexecve(fd, args_p.as_ptr(), env_p.as_ptr())
+		    |               ^^^^^^^ did you mean `execve`?
+		help: possible candidate is found in another module, you can import it into scope
+		    |
+		3   | use unistd::fexecve;
+		    |
+
+		error: aborting due to previous error
+
+		For more information about this error, try `rustc --explain E0425`.
+		error: Could not compile `nix`.
+		warning: build failed, waiting for other jobs to finish...
+		error: build failed
+		*** Error code 101
+
+	The relevant PRs for this are:
+
+		- https://github.com/nix-rust/nix/pull/1000
+		- https://github.com/rust-lang/libc/pull/1201
+
+	In a nutshell the problem is that libc was updated to remove `fexecve`
+	for netbsd-like platforms as it's irrelevant, but spotifyd has dependencies on
+	older versions of nix that still look for this function so we need to patch one
+	of these older versions to remove this function. Rust dependency management is
+	obviously not solving _all_ the problems although it is nice (I think?) how you
+	can be dependent on multiple versions of the same thing.

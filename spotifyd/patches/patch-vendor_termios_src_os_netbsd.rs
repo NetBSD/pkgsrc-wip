@@ -1,5 +1,7 @@
 $NetBSD$
 
+Upstream PR is wip: https://github.com/dcuddeback/termios-rs/pull/22
+
 --- ../vendor/termios-0.2.2/src/os/netbsd.rs.orig	2019-01-30 09:50:04.014973707 +0000
 +++ ../vendor/termios-0.2.2/src/os/netbsd.rs
 @@ -0,0 +1,148 @@
