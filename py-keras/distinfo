@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (Keras-2.1.5.tar.gz) = ba59d17371fa5ccf1c938f212cd0fb05fe67ebd6
-RMD160 (Keras-2.1.5.tar.gz) = 3cdf3a9756801b25163b879154806fd0955ec8c3
-SHA512 (Keras-2.1.5.tar.gz) = fd2d0aa21ca90eec6c934e424e2102b372a66f4d8877269c64391ee031a30056dac9f91f7da5b5eec5edfd00b901b4771fd2af882731b896c78ee19c4d27ef45
-Size (Keras-2.1.5.tar.gz) = 495279 bytes
+SHA1 (Keras-2.2.4.tar.gz) = 5a77ce66df20dd8f67b7c4c1bd8ade388fa0f27d
+RMD160 (Keras-2.2.4.tar.gz) = 23f5fcfbe5b6bab2e6393a0cce917cbf348031df
+SHA512 (Keras-2.2.4.tar.gz) = 0d57cb8e0af234a619ba3dec245c2ab73cbd0566194ed6b59377231183b2ef916514ba87abe04ec7e518770c9e0cb157747db87cedf0ebeced4ae0f56be401c3
+Size (Keras-2.2.4.tar.gz) = 765866 bytes
