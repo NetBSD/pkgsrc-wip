@@ -3038,6 +3038,7 @@ SUBDIR+=	py-Fnorb-docs
 SUBDIR+=	py-Genetic
 SUBDIR+=	py-IOSXR
 SUBDIR+=	py-Kallithea
+SUBDIR+=	py-Keras_Applications
 SUBDIR+=	py-Netzob
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-PEG2
