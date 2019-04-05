@@ -15,9 +15,6 @@ CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 
 CHECK_PORTABILITY_SKIP+=	appveyor/get_wheels.sh
 
-do-test:
-	${RUN}cd ${WRKSRC};${SETENV} ${TEST_ENV} ${PYTHONBIN} ${PYSETUP} test
-
 BUILDLINK_API_DEPENDS.gmp+=     gmp>=5.0
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../lang/python/egg.mk"
