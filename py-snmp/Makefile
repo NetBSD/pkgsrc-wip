@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pysnmp-4.4.6
+DISTNAME=	pysnmp-4.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysnmp/}
