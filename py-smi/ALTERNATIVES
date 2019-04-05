@@ -1,0 +1,2 @@
+bin/mibcopy.py @PREFIX@/bin/mibcopy-@PYVERSSUFFIX@.py 
+bin/mibdump.py @PREFIX@/bin/mibdump-@PYVERSSUFFIX@.py 

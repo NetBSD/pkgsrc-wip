@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pysmi-0.2.2.tar.gz) = 2ef4710956e5f2ab6ba23555501055639c544193
-RMD160 (pysmi-0.2.2.tar.gz) = ef4c2924342f8a8edf8c8c0a1611877e0a0a0e5c
-SHA512 (pysmi-0.2.2.tar.gz) = 64c3f6877d4485ba166077110cd4caaa03676ae7ac1681971feff73c091234c32d7e08517dba3eb75e87841a6dae43812fbfbf32d8858c0ab40591d5b456ba62
-Size (pysmi-0.2.2.tar.gz) = 90568 bytes
+SHA1 (pysmi-0.3.3.tar.gz) = 55caa2116fa7a8105beac50cd5940e202ef27adb
+RMD160 (pysmi-0.3.3.tar.gz) = 1754bcd06a4d36ae89e2dc9c5f7f0d215f70cb03
+SHA512 (pysmi-0.3.3.tar.gz) = 8bae8cf396fc4115adf8711eadda9042f99d6a69edfa31345d88bc31a5b4ad9ce1e7da8d599a52acac536baf6741ac650bacf62d36e994db79b73169cd9897d2
+Size (pysmi-0.3.3.tar.gz) = 94674 bytes
