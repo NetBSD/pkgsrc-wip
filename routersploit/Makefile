@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2017/09/14 12:43:54 leot Exp $
 
 DISTNAME=	routersploit-3.4.0
-CATEGORIES=	security
+CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=threat9/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
