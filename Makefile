@@ -4308,6 +4308,7 @@ SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runit
 SUBDIR+=	rust-bin
 SUBDIR+=	rygel
+SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
 SUBDIR+=	s6

@@ -1,0 +1,22 @@
+This package may be used as an unrestricted substitute for wip/libtxc_dxtn.
+
+S2TC provides a subset of a wellknown texture compression scheme.
+This package provides the library libtxc_dxtn which can be used by
+grahics/MesaLib.
+
+S2TC's format specification is very easy to implement, so it is
+not hard to make a working compressor or decompressor for it. It
+is based on Color Cell Compression[1] from 1986, and decoding is
+done entirely using the methods from there. Encoding is done using
+a search and refinement method that is derived from the methods
+described in that paper.
+
+The compressor and decompressor here are licensed under a license
+that gives you all freedoms you will ever need (namely, the MIT
+license). In particular, the MIT license allows you to use, copy,
+modify, merge, publish, distribute, sublicense or sell the software,
+provided you keep copyright notices intact.
+
+[1]: Graham Campbell, Thomas A. DeFanti, Jeff Frederiksen, Stephen
+A. Joyce, and Lawrence A. Leske. 1986. Two bit/pixel full color
+encoding. SIGGRAPH Comput. Graph. 20, 4 (August 1986), 215-223.

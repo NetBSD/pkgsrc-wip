@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/s2tc_compress
+bin/s2tc_decompress
+bin/s2tc_from_s3tc
+include/txc_dxtn.h
+lib/libtxc_dxtn.la
+lib/pkgconfig/txc_dxtn.pc

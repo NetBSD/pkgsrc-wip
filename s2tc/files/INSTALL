@@ -1,0 +1,3 @@
+if [ ${STAGE} = POST-INSTALL -a ${X11BASE} != ${PREFIX} ]; then
+	${LN} -s ${PREFIX}/lib/libtxc_dxtn.so ${X11BASE}/lib/libtxc_dxtn.so
+fi
