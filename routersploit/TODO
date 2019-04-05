@@ -25,10 +25,12 @@ are started but they quickly terminate, e.g.:
  [*] Elapsed time: 0.00017380714416503906 seconds
  [...]
 
-There is probably something bad going on, investigate further.
-At least routersploit-2.2.1nb20180305 (routersploit-git) seemed to
-properly work.
+At least ktruss-ing it reveals that several open("routersploit/...")
+fails due ENOENT.  If the $PWD is ${PYSITELIB} and then directly
+invoking routersploit in the python interpreter via:
 
-At least ktruss-ing it reveals that a open("routersploit/...")
-fails due ENOENT, probably routersploit modules are not gracefully
-picked up?
+ >>> from routersploit.interpreter import RoutersploitInterpreter
+ >>> rsf = RoutersploitInterpreter()
+ >>> rsf.start()
+
+routersploit works as usual!
