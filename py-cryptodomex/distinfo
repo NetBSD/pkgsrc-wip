@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pycryptodomex-3.6.4.tar.gz) = f69ccae32ebdc97e0d1e7fa92533f99307df5208
-RMD160 (pycryptodomex-3.6.4.tar.gz) = f0610e1f5f7e079b43a82d6dc4983357f6b50eea
-SHA512 (pycryptodomex-3.6.4.tar.gz) = 592f2bad2e60902030a98c5ccf494a79db2668dca7876b813509860a3873021fb5f762065c629856b394c03aab9325298f58bf10a68a8d08d63519e951bad0c2
-Size (pycryptodomex-3.6.4.tar.gz) = 7135893 bytes
+SHA1 (pycryptodomex-3.8.1.tar.gz) = 20fe6dac6e2391b9c4b89d8939f79ca31d7e35bf
+RMD160 (pycryptodomex-3.8.1.tar.gz) = 441dcc4f06fe563429a945d1c27c91599c1b70ab
+SHA512 (pycryptodomex-3.8.1.tar.gz) = 21da08d24eabbcd392eac62b8805114bdc987dc02d89c797ab320e8da8e973dc7eca23623b0fd3f98d484dbb97a743dc688babf981e072adcb196757c3455de0
+Size (pycryptodomex-3.8.1.tar.gz) = 11536920 bytes
