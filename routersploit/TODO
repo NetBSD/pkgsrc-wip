@@ -28,3 +28,7 @@ are started but they quickly terminate, e.g.:
 There is probably something bad going on, investigate further.
 At least routersploit-2.2.1nb20180305 (routersploit-git) seemed to
 properly work.
+
+At least ktruss-ing it reveals that a open("routersploit/...")
+fails due ENOENT, probably routersploit modules are not gracefully
+picked up?
