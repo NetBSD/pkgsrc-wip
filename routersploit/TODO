@@ -26,3 +26,5 @@ are started but they quickly terminate, e.g.:
  [...]
 
 There is probably something bad going on, investigate further.
+At least routersploit-2.2.1nb20180305 (routersploit-git) seemed to
+properly work.
