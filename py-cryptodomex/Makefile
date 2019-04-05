@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptodomex/}
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	http://www.pycryptodome.org/
-COMMENT=	Cryptographic library for Python
+COMMENT=	Cryptographic and hash functions for Python
 LICENSE=	public-domain AND python-software-foundation
 
 # XXX is this needed?
