@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.pycryptodome.org/
 COMMENT=	Cryptographic library for Python
 LICENSE=	public-domain AND python-software-foundation
 
-CONFLICTS+=	${PYPKGPREFIX}-cryptodome-[0-9]*
-
 CHECK_PORTABILITY_SKIP+=	appveyor/get_wheels.sh
 
 CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
