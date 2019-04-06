@@ -3,6 +3,10 @@ $NetBSD$
 - Use MODULES_DIR instead of picking up modules in ${PWD} (and mostly likely
   failing)
 
+Patch shared upstream via:
+
+ <https://github.com/threat9/routersploit/pull/578>
+
 --- routersploit/modules/scanners/autopwn.py.orig	2018-10-17 17:30:53.000000000 +0000
 +++ routersploit/modules/scanners/autopwn.py
 @@ -34,8 +34,8 @@ class Exploit(Exploit):
