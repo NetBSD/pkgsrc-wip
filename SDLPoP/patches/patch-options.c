@@ -3,7 +3,7 @@ $NetBSD$
 Use installed data path.
 Disable rumble/haptic support.
 
---- src/options.c.orig	2018-03-17 16:33:14.000000000 +0000
+--- src/options.c.orig	2019-03-31 19:38:47.000000000 +0000
 +++ src/options.c
 @@ -185,7 +185,8 @@ static int global_ini_callback(const cha
  		process_boolean("use_correct_aspect_ratio", &use_correct_aspect_ratio);
@@ -15,12 +15,12 @@ Disable rumble/haptic support.
  		process_boolean("joystick_only_horizontal", &joystick_only_horizontal);
  		process_int("joystick_threshold", &joystick_threshold, NULL);
  
-@@ -436,7 +437,7 @@ void set_options_to_default() {
+@@ -439,7 +440,7 @@ void load_dos_exe_modifications(const ch
  
  void load_global_options() {
  	set_options_to_default();
 -	ini_load(locate_file("SDLPoP.ini"), global_ini_callback); // global configuration
 +	ini_load(PKGSRC_DATA_PATH "SDLPoP.ini", global_ini_callback); // global configuration
+ 	load_dos_exe_modifications("."); // read PRINCE.EXE in the current working directory
  }
  
- void check_mod_param() {
