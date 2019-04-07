@@ -1,13 +1,15 @@
 # $NetBSD: Makefile,v 1.1 2015/03/14 21:58:24 jihbed Exp $
 
-DISTNAME=	checkstyle-6.4.1-all
+DISTNAME=	checkstyle-8.19-all
 PKGNAME=	${DISTNAME:S/-all//}
 CATEGORIES=	devel java
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/checkstyle/checkstyle/6.4.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=checkstyle/}
+GITHUB_PROJECT=	checkstyle
+GITHUB_RELEASE=	${PKGNAME}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://checkstyle.sourceforge.net/
+HOMEPAGE=	https://checkstyle.org/
 COMMENT=	Static code analysis tool for Java
 LICENSE=	gnu-lgpl-v2.1
 
