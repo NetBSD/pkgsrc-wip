@@ -16,6 +16,7 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE+=	libmicrohttpd.pc.in
+CONFIGURE_ARGS+=	--enable-nls
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
