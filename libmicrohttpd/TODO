@@ -1,1 +1,4 @@
 - Investigate if gettext is needed (at least configure checks for them)
+- While the application compiles its example and works, the testsuite
+  fails 1 test on NetBSD/amd64 8.99.36, reported upstream:
+  https://bugs.gnunet.org/view.php?id=5683
