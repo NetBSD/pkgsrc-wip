@@ -4,13 +4,13 @@ DISTNAME=	libmicrohttpd-0.9.63
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=libmicrohttpd/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	ng0@n0.is
 HOMEPAGE=	https://www.gnu.org/software/libmicrohttpd/
 COMMENT=	Small C library to run an HTTP server as part of another app
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gettext
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 TEST_TARGET=		check
