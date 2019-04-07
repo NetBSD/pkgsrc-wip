@@ -1,0 +1,1 @@
+- Investigate if gettext is needed (at least configure checks for them)
