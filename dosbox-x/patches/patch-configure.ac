@@ -2,7 +2,7 @@ $NetBSD$
 
 Fix == test in configure script.
 
---- configure.ac.orig	2019-03-02 01:06:32.000000000 +0000
+--- configure.ac.orig	2019-04-06 04:12:19.000000000 +0000
 +++ configure.ac
 @@ -171,7 +171,7 @@ CFLAGS=["`echo $CFLAGS' ' | sed -e 's/-O
  CXXFLAGS=["`echo $CXXFLAGS' ' | sed -e 's/-O[^ ]* //g'`"]
@@ -85,7 +85,7 @@ Fix == test in configure script.
  
  dnl NASM (Netwide Assembler)
  AC_PATH_PROG([NASM], [nasm])
-@@ -1005,7 +1005,7 @@ else
+@@ -1000,7 +1000,7 @@ else
    AC_MSG_RESULT(no)
  fi
  
