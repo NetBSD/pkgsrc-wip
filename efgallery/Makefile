@@ -3,7 +3,7 @@
 PORTVERSION=	2.4
 PKGBASE=	efgallery
 DISTNAME=	${PKGBASE}-${PORTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=0-ast-0/}
@@ -30,17 +30,11 @@ DEPENDS+=	p5-Image-ExifTool>=10.0:../../graphics/p5-Image-ExifTool
 EFG_SHAREDIR=	share/${PKGBASE}
 EFG_VIEWDIR=	share/${PKGBASE}/view
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		post-patch
-SUBST_MESSAGE.fix-paths=	Fixing ${EFG_VIEWDIR} path.
-SUBST_FILES.fix-paths=		efgallery
-SUBST_SED.fix-paths=		-e "s,%%EFG_VIEWDIR%%,${PREFIX}/${EFG_VIEWDIR},g"
-
 SUBST_CLASSES+=		fix-vers
-SUBST_STAGE.fix-vers=	post-patch
-SUBST_MESSAGE.fix-vers=	Setting version to ${PKGVERSION:C/^.*-//}.
+SUBST_STAGE.fix-vers=	pre-configure
 SUBST_FILES.fix-vers=	efgallery
-SUBST_SED.fix-vers=	-e "s,\"${PORTVERSION}\",\"${PKGVERSION:C/^.*-//}\","
+SUBST_MESSAGE.fix-vers=	Setting version in ${SUBST_FILES.fix-vers} to ${PKGVERSION:C/^.*-//}.
+SUBST_SED.fix-vers=	-e "/^our/ s,\"${PORTVERSION}\",\"${PKGVERSION:C/^.*-//}\","
 
 EFG_DOCS=	COPYING.txt README.md
 EFG_SRCDIR=	${WRKDIR}/${DISTNAME}
