@@ -18,6 +18,7 @@ TEST_TARGET=		check
 PKGCONFIG_OVERRIDE+=	libmicrohttpd.pc.in
 CONFIGURE_ARGS+=	--enable-nls
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
