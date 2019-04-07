@@ -6,4 +6,5 @@ SHA512 (shellinabox-v2.20.tar.gz) = 369fb6e0041fc3eb52a533f14d1f856a71ec1bf16644
 Size (shellinabox-v2.20.tar.gz) = 745920 bytes
 SHA1 (patch-configure-ptsname_r) = 40c44f37afb09b99b40ee5b4faf470d95add10b7
 SHA1 (patch-configure-shell-syntax) = f6341418e5cc7538935c4c8ee8b2fa812512d579
+SHA1 (patch-libhttp-url-broken-multipart-form-data) = 6bf678d939880bd029548aa85246aacb188fce5a
 SHA1 (patch-service-ssh-rm-rsa-options) = 7e085d515d63dfd4fa3c3975a93a8e0434795e73

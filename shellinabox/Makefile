@@ -3,7 +3,7 @@
 PKGBASE=	shellinabox
 SIB_VER=	v2.20
 DISTNAME=	${PKGBASE}-${SIB_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shellinabox/}
@@ -11,7 +11,7 @@ GITHUB_PROJECT=	${PKGBASE}
 GITHUB_TAG=	${SIB_VER}
 
 MAINTAINER=	ast@NetBSD.org
-HOMEPAGE=	https://code.google.com/archive/p/shellinabox/
+HOMEPAGE=	https://github.com/shellinabox/shellinabox
 COMMENT=	JavaScript/CSS web server instrumentation for terminal emulation
 LICENSE=	gnu-gpl-v2
 
@@ -34,7 +34,7 @@ PKG_GROUPS_VARS=	SIB_USER
 PKG_USERS_VARS=		SIB_GROUP
 
 RCD_SCRIPTS+=		shellinaboxd
-RCD_SCRIPT_SRC.shellinaboxd = ${WRKSRC}/shellinaboxd.in
+RCD_SCRIPT_SRC.shellinaboxd= ${WRKSRC}/shellinaboxd.in
 
 SUBST_CLASSES+=		sib
 SUBST_STAGE.sib=	pre-configure
