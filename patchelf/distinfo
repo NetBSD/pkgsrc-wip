@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/10/10 00:05:31 mef Exp $
+
+SHA1 (patchelf-0.10.tar.gz) = e951ef509955c056ad70b863b51e2ee1f20ca3e1
+RMD160 (patchelf-0.10.tar.gz) = 618f90fc0aabce31b199b501960a43984c84afc8
+SHA512 (patchelf-0.10.tar.gz) = 39745662651cf0a9915685b2767a611ceab4286f8fa57eace342b3f44248431616e8563d4ac6709c97d8534229c73c05470239e462b7e74b36bf629a876dfbad
+Size (patchelf-0.10.tar.gz) = 188702 bytes

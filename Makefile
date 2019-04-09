@@ -2765,6 +2765,7 @@ SUBDIR+=	parted
 SUBDIR+=	partonevolution
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
+SUBDIR+=	patchelf
 SUBDIR+=	paxmirabilis
 SUBDIR+=	paxtest
 SUBDIR+=	payara41
