@@ -1188,6 +1188,7 @@ SUBDIR+=	gopass
 SUBDIR+=	gopkgdep
 SUBDIR+=	gpak
 SUBDIR+=	gplbasic
+SUBDIR+=	gpsbabel
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
 SUBDIR+=	gqrx
