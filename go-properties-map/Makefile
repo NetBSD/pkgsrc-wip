@@ -13,6 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/arduino/go-properties-map
 COMMENT=	TODO: Short description of the package
 LICENSE=	mit
+USE_LANGUAGES= go
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
 GO_SRCPATH=		github.com/arduino/go-properties-map
