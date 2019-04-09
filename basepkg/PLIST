@@ -322,11 +322,3 @@ basepkg/sets/lists/xserver/md.zaurus
 basepkg/sets/lists/xserver/mi
 man/man1/basepkg.1
 man/man1/basepkg.sh.1
-@pkgdir basepkg/sets/lists/xserver/patches
-@pkgdir basepkg/sets/lists/xfont/patches
-@pkgdir basepkg/sets/lists/xetc/patches
-@pkgdir basepkg/sets/lists/xdebug/patches
-@pkgdir basepkg/sets/lists/xcomp/patches
-@pkgdir basepkg/sets/lists/xbase/patches
-@pkgdir basepkg/sets/lists/debug/patches
-@pkgdir basepkg/sets/lists/comp/patches
