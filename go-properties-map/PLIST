@@ -1,0 +1,13 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/arduino/go-properties-map.a
+gopkg/src/github.com/arduino/go-properties-map/LICENSE
+gopkg/src/github.com/arduino/go-properties-map/README.md
+gopkg/src/github.com/arduino/go-properties-map/objects.go
+gopkg/src/github.com/arduino/go-properties-map/properties.go
+gopkg/src/github.com/arduino/go-properties-map/properties_test.go
+gopkg/src/github.com/arduino/go-properties-map/strings.go
+gopkg/src/github.com/arduino/go-properties-map/strings_test.go
+gopkg/src/github.com/arduino/go-properties-map/testdata/boards.txt
+gopkg/src/github.com/arduino/go-properties-map/testdata/broken.txt
+gopkg/src/github.com/arduino/go-properties-map/testdata/redbearlab_boards.txt
+gopkg/src/github.com/arduino/go-properties-map/testdata/test.txt
