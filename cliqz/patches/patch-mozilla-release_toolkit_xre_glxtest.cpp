@@ -13,6 +13,6 @@ Original patch from matrin, imported from www/firefox
      ///// Open libGL and load needed symbols /////
 -#ifdef __OpenBSD__
 +#if defined(__OpenBSD__) || defined(__NetBSD__)
- #define LIBGL_FILENAME "libGL.so"
+ #  define LIBGL_FILENAME "libGL.so"
  #else
- #define LIBGL_FILENAME "libGL.so.1"
+ #  define LIBGL_FILENAME "libGL.so.1"

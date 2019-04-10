@@ -6,16 +6,16 @@ Original patch from ryoon, imported from www/firefox
 
 * Renamed firefox to cliqz to match the binary name
 
---- mozilla-release/xpcom/build/BinaryPath.h.orig	2018-11-16 08:40:07.000000000 +0000
+--- mozilla-release/xpcom/build/BinaryPath.h.orig	2019-04-03 08:46:52.000000000 +0000
 +++ mozilla-release/xpcom/build/BinaryPath.h
 @@ -21,7 +21,8 @@
      defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__)
- #include <sys/sysctl.h>
+ #  include <sys/sysctl.h>
  #endif
 -#if defined(__OpenBSD__)
 +#if defined(__OpenBSD__) || \
 +    (defined(__NetBSD__) && !defined(KERN_PROC_PATHNAME))
- #include <sys/stat.h>
+ #  include <sys/stat.h>
  #endif
  #include "mozilla/UniquePtr.h"
 @@ -164,7 +165,8 @@ class BinaryPath {
@@ -35,10 +35,10 @@ Original patch from ryoon, imported from www/firefox
 +#elif (defined(__NetBSD__) && !defined(KERN_PROC_PATHNAME))
 +  static nsresult Get(char aResult[MAXPATHLEN])
 +  {
-+    char path[] = "@PREFIX@/lib/cliqz/cliqz";
++    char path[] = "/usr/pkg/lib/cliqz/cliqz";
 +    sprintf(aResult, "%s", path);
 +    return NS_OK;
 +  }
  #else
- #error Oops, you need platform-specific code here
+ #  error Oops, you need platform-specific code here
  #endif

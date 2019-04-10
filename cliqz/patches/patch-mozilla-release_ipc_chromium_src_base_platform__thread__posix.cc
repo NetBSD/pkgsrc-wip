@@ -9,11 +9,12 @@ Original patch from ryoon, imported from www/firefox
 +++ mozilla-release/ipc/chromium/src/base/platform_thread_posix.cc
 @@ -12,7 +12,9 @@
  #if defined(OS_MACOSX)
- #include <mach/mach.h>
+ #  include <mach/mach.h>
  #elif defined(OS_NETBSD)
+-#  include <lwp.h>
 +_Pragma("GCC visibility push(default)")
- #include <lwp.h>
++#include <lwp.h>
 +_Pragma("GCC visibility pop")
  #elif defined(OS_LINUX)
- #include <sys/syscall.h>
- #include <sys/prctl.h>
+ #  include <sys/syscall.h>
+ #  include <sys/prctl.h>

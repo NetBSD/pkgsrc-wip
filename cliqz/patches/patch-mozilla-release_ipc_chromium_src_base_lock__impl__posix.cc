@@ -12,6 +12,6 @@ Original patch from tsutsui, imported from www/firefox
  // inheritance locks.
 -#if defined(OS_NACL) || defined(OS_ANDROID)
 +#if defined(OS_NACL) || defined(OS_ANDROID) || (defined(__NetBSD__) && !defined(PTHREAD_PRIO_INHERIT))
- #define PRIORITY_INHERITANCE_LOCKS_POSSIBLE() 0
+ #  define PRIORITY_INHERITANCE_LOCKS_POSSIBLE() 0
  #else
- #define PRIORITY_INHERITANCE_LOCKS_POSSIBLE() 1
+ #  define PRIORITY_INHERITANCE_LOCKS_POSSIBLE() 1

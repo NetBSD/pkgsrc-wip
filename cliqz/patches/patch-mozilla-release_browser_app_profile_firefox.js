@@ -7,13 +7,19 @@ Original patch from ryoon, imported from www/firefox
 
 --- mozilla-release/browser/app/profile/firefox.js.orig	2018-11-16 08:40:07.000000000 +0000
 +++ mozilla-release/browser/app/profile/firefox.js
-@@ -1796,3 +1796,9 @@ pref("toolkit.coverage.endpoint.base", "
- #if defined(NIGHTLY_BUILD) && defined(MOZ_LIBPRIO)
+@@ -1770,6 +1770,15 @@ pref("toolkit.coverage.endpoint.base", "
  pref("prio.enabled", true);
  #endif
-+
+ 
 +// Select UI locale from LANG/LC_MESSAGE environmental variables
 +pref("intl.locale.requested", "");
 +
++// Enable system addons, for example langpacks from www/firefox-l10n
++pref("extensions.autoDisableScopes", 11);
++
 +// Disable multiprocess window support. Workaround for PR 53273.
 +pref("browser.tabs.remote.autostart", false);
++
+ // Discovery prefs
+ pref("browser.discovery.enabled", true);
+ pref("browser.discovery.containers.enabled", true);
