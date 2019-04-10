@@ -35,7 +35,7 @@ Original patch from ryoon, imported from www/firefox
 +#elif (defined(__NetBSD__) && !defined(KERN_PROC_PATHNAME))
 +  static nsresult Get(char aResult[MAXPATHLEN])
 +  {
-+    char path[] = "/usr/pkg/lib/cliqz/cliqz";
++    char path[] = "@PREFIX@/lib/cliqz/cliqz";
 +    sprintf(aResult, "%s", path);
 +    return NS_OK;
 +  }

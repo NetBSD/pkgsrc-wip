@@ -38,4 +38,4 @@ SHA1 (patch-mozilla-release_servo_components_style_build__gecko.rs) = a98bf75902
 SHA1 (patch-mozilla-release_toolkit_components_terminator_nsTerminator.cpp) = c439a1612f8d8ce4ceae5bbbff164cfc6e90e525
 SHA1 (patch-mozilla-release_toolkit_xre_glxtest.cpp) = b999e79dbda56914d25341e5dd09c4b5bed8d87c
 SHA1 (patch-mozilla-release_xpcom_base_nscore.h) = c1a72f0ea63aacde6dbe321031e82aec99d4350f
-SHA1 (patch-mozilla-release_xpcom_build_BinaryPath.h) = 8701ee6d701f802903bb5481af50665e1f1c4b8a
+SHA1 (patch-mozilla-release_xpcom_build_BinaryPath.h) = a351eed0681872d50193a0232e61752c223026d1
