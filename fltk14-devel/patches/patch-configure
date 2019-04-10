@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2018/07/13 04:24:39 dbj Exp $
+$NetBSD$
 
 Modify configure script for "--enable-libtool".
 

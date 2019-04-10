@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2018/07/13 04:24:39 dbj Exp $
+$NetBSD$
 
 Do not install manpages to cat1/cat3 directories.
 

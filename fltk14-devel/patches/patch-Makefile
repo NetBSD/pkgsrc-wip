@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2018/07/13 04:24:39 dbj Exp $
+$NetBSD$
 
 Remove tests from directory list.
 Added makeinclude as dependency for test target.

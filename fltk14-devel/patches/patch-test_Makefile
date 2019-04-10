@@ -2,23 +2,26 @@ $NetBSD$
 
 Use libtool to link test programs.
 
---- test/Makefile.orig	2017-10-17 00:28:56.000000000 +0000
+--- test/Makefile.orig	2019-04-07 09:24:20.000000000 +0000
 +++ test/Makefile
-@@ -308,19 +308,19 @@ buttons$(EXEEXT): buttons.o
+@@ -333,14 +333,14 @@ buttons$(EXEEXT): buttons.o
  
  blocks$(EXEEXT): blocks.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -f -r blocks.app/Contents/MacOS
+ 	$(OSX_ONLY) mkdir blocks.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) blocks$(EXEEXT) blocks.app/Contents/MacOS
  
  checkers$(EXEEXT): checkers.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -f -r checkers.app/Contents/MacOS
+ 	$(OSX_ONLY) mkdir checkers.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) checkers$(EXEEXT) checkers.app/Contents/MacOS
- 
- clock$(EXEEXT): clock.o
+@@ -349,7 +349,7 @@ clock$(EXEEXT): clock.o
  
  colbrowser$(EXEEXT): colbrowser.o
  	echo Linking $@...
@@ -27,7 +30,7 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p colbrowser.app/Contents/Resources
  	$(OSX_ONLY) cp -f rgb.txt colbrowser.app/Contents/Resources/
-@@ -333,21 +333,21 @@ curve$(EXEEXT): curve.o
+@@ -362,21 +362,21 @@ curve$(EXEEXT): curve.o
  
  demo$(EXEEXT): demo.o
  	echo Linking $@...
@@ -52,7 +55,7 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) cp -f editor-Info.plist editor.app/Contents/Info.plist
  
-@@ -356,21 +356,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
+@@ -385,21 +385,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
  
  file_chooser$(EXEEXT): file_chooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -77,7 +80,7 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p help_dialog.app/Contents/Resources
  	$(OSX_ONLY) cp -f help_dialog.html help_dialog.app/Contents/Resources/
-@@ -390,14 +390,14 @@ input_choice$(EXEEXT): input_choice.o
+@@ -419,14 +419,14 @@ input_choice$(EXEEXT): input_choice.o
  
  keyboard$(EXEEXT): keyboard_ui.o keyboard.o
  	echo Linking $@...
@@ -94,7 +97,7 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  line_style$(EXEEXT): line_style.o
-@@ -406,7 +406,7 @@ list_visuals$(EXEEXT): list_visuals.o
+@@ -435,7 +435,7 @@ list_visuals$(EXEEXT): list_visuals.o
  
  mandelbrot$(EXEEXT): mandelbrot_ui.o mandelbrot.o
  	echo Linking $@...
@@ -103,7 +106,7 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  mandelbrot_ui.o:	mandelbrot_ui.h
  mandelbrot_ui.cxx:	mandelbrot_ui.fl ../fluid/fluid$(EXEEXT)
-@@ -419,7 +419,7 @@ minimum$(EXEEXT): minimum.o
+@@ -448,7 +448,7 @@ minimum$(EXEEXT): minimum.o
  
  native-filechooser$(EXEEXT): native-filechooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -112,7 +115,7 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  navigation$(EXEEXT): navigation.o
-@@ -428,7 +428,7 @@ offscreen$(EXEEXT): offscreen.o
+@@ -457,7 +457,7 @@ offscreen$(EXEEXT): offscreen.o
  
  output$(EXEEXT): output.o $(FLLIBNAME)
  	echo Linking $@...
@@ -121,7 +124,7 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  overlay$(EXEEXT): overlay.o
-@@ -439,7 +439,7 @@ pixmap$(EXEEXT): pixmap.o
+@@ -468,7 +468,7 @@ pixmap$(EXEEXT): pixmap.o
  
  pixmap_browser$(EXEEXT): pixmap_browser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -130,14 +133,16 @@ Use libtool to link test programs.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  preferences$(EXEEXT):	preferences.o
-@@ -463,13 +463,13 @@ subwindow$(EXEEXT): subwindow.o
+@@ -492,7 +492,7 @@ subwindow$(EXEEXT): subwindow.o
  
  sudoku: sudoku.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -r -f sudoku.app/Contents/MacOS
+ 	$(OSX_ONLY) mkdir sudoku.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) sudoku$(EXEEXT) sudoku.app/Contents/MacOS
- 
+@@ -500,7 +500,7 @@ sudoku: sudoku.o
  sudoku.exe: sudoku.o sudoku.rc
  	echo Linking $@...
  	$(RC) sudoku.rc sudokures.o
@@ -146,7 +151,7 @@ Use libtool to link test programs.
  
  symbols$(EXEEXT): symbols.o
  
-@@ -501,7 +501,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
+@@ -532,7 +532,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
  # OpenGL demos...
  CubeView$(EXEEXT): CubeMain.o CubeView.o CubeViewUI.o
  	echo Linking $@...
@@ -155,7 +160,7 @@ Use libtool to link test programs.
  		CubeMain.o CubeView.o CubeViewUI.o \
  		$(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
-@@ -512,37 +512,37 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
+@@ -543,37 +543,37 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
  
  cube$(EXEEXT): cube.o
  	echo Linking $@...

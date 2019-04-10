@@ -1,13 +1,10 @@
 # $NetBSD$
 
-# pkglint complains if PKGNAME is listed first
-FLTK_VERSION=	fltk-1.4.x
-
-DISTNAME=	${FLTK_VERSION}-r13065
-PKGNAME=	${FLTK_VERSION}
+DISTNAME=	fltk-1.4.x
 CATEGORIES=	x11
-MASTER_SITES=	http://fltk.org/pub/fltk/snapshots/
-EXTRACT_SUFX=	.tar.bz2
+GITHUB_TAG=	abc8f4158f2171884e055a2ca4b234655220c26e
+MASTER_SITES=	https://github.com/fltk/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fltk.org/
@@ -16,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake nroff
+USE_TOOLS+=		autoconf gmake nroff
 TEST_TARGET=		test
 
 # ------------------------------------------------------
@@ -42,7 +39,7 @@ CONFIGURE_ARGS+=	--disable-cairo
 .  include "../../graphics/Mesa/buildlink3.mk"
 .endif
 CONFIGURE_ARGS+=	--enable-gl
-PLIST.opengl=	yes
+PLIST.opengl=		yes
 .else
 CONFIGURE_ARGS+=	--disable-gl
 .endif
@@ -71,6 +68,9 @@ PLIST.cs=		yes
 CONFIGURE_ARGS+=	--enable-shared
 # Use pkgsrc versions, not package's bundled versions.
 CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
+
+post-extract:
+	cd ${WRKSRC} && autoconf
 
 pre-configure:
 	cd ${WRKSRC} && ${GMAKE} ${MAKE_FLAGS} clean
