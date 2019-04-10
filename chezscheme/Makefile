@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	ChezScheme
-VERSION=	9.5
+VERSION=	9.5.2
 PKGNAME=	${GITHUB_PROJECT:tl}-${VERSION}
 DISTNAME=	v${VERSION}
 CATEGORIES=	lang
@@ -62,5 +62,6 @@ BUILD_TARGET=	build
 PLIST_SUBST+=	T=${THR}
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -34,5 +34,7 @@ lib/csv${PKGVERSION}/${T}${M}${OS}/petite.boot
 lib/csv${PKGVERSION}/${T}${M}${OS}/scheme-script.boot
 lib/csv${PKGVERSION}/${T}${M}${OS}/scheme.boot
 lib/csv${PKGVERSION}/${T}${M}${OS}/scheme.h
+lib/csv${PKGVERSION}/${T}${M}${OS}/kernel.o
+lib/csv${PKGVERSION}/${T}${M}${OS}/main.o
 man/man1/petite.1
 man/man1/scheme.1
