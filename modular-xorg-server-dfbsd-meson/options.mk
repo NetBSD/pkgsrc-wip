@@ -9,23 +9,26 @@ PKG_SUGGESTED_OPTIONS+=	dri
 .endif
 
 PKG_SUPPORTED_OPTIONS+= devd
+PKG_SUPPORTED_OPTIONS+= xkb_evdev
+
 PKG_SUPPORTED_OPTIONS+= revert_flink
 PKG_SUPPORTED_OPTIONS+= revert_randr_lease
-PKG_SUPPORTED_OPTIONS+= allow_unprivileged
-PKG_SUPPORTED_OPTIONS+= xkb_evdev
-PKG_SUPPORTED_OPTIONS+= add_modesetting_driver
 PKG_SUPPORTED_OPTIONS+= add_scfb_driver
+PKG_SUPPORTED_OPTIONS+= add_modesetting_driver
 
+PKG_SUPPORTED_OPTIONS+= allow_unprivileged
+PKG_SUPPORTED_OPTIONS+=	otherid_xsrc_netbsd
 PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
 
 PKG_SUPPORTED_OPTIONS+= modesetting_on_intel
+PKG_SUPPORTED_OPTIONS+= try_dev_wskbd
+
 PKG_SUPPORTED_OPTIONS+= fallback_not_wsdisplay
 PKG_SUPPORTED_OPTIONS+= kbd_by_masking_bits
 PKG_SUPPORTED_OPTIONS+= usl_vt_switching
 PKG_SUPPORTED_OPTIONS+= openbsd_more_calls
 PKG_SUPPORTED_OPTIONS+= randr_backlight
 PKG_SUPPORTED_OPTIONS+= ws_drivers_openbsd
-PKG_SUPPORTED_OPTIONS+= try_dev_wskbd
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+= devd
@@ -36,8 +39,9 @@ PKG_SUGGESTED_OPTIONS+=	revert_flink
 PKG_SUGGESTED_OPTIONS+=	revert_randr_lease
 .endif
 
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	allow_unprivileged
+# Add scfb driver in xf86AutoConfig.c
+.if ${OPSYS} == "FreeBSD"
+PKG_SUGGESTED_OPTIONS+= add_scfb_driver
 .endif
 
 # Add modesetting driver in xf86AutoConfig.c
@@ -45,9 +49,12 @@ PKG_SUGGESTED_OPTIONS+=	allow_unprivileged
 PKG_SUGGESTED_OPTIONS+= add_modesetting_driver
 .endif
 
-# Add scfb driver in xf86AutoConfig.c
-.if ${OPSYS} == "FreeBSD"
-PKG_SUGGESTED_OPTIONS+= add_scfb_driver
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=	allow_unprivileged
+.endif
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= otherid_xsrc_netbsd
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -55,9 +62,15 @@ PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
 .endif
 
 # Patch from OpenBSD to aggressively use the modesetting driver on intel integrated graphics
-.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
+# .if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "OpenBSD"
 PKG_SUGGESTED_OPTIONS+= modesetting_on_intel
 .endif
+
+# From NetBSD 1.20.4 but extended to amd64 and i386
+# .if ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+= try_dev_wskbd
+# .endif
 
 # From OpenBSD 6.5 xenocara xserver 1.19.6
 .if ${OPSYS} == "OpenBSD"
@@ -83,13 +96,9 @@ PKG_SUGGESTED_OPTIONS+= randr_backlight
 .endif
 
 # From OpenBSD 6.5 xenocara xserver 1.19.6
-.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
+# .if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "OpenBSD"
 PKG_SUGGESTED_OPTIONS+= ws_drivers_openbsd
-.endif
-
-# From NetBSD 1.20.4 but extended to amd64 and i386
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= try_dev_wskbd
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -173,6 +182,13 @@ CONFIGURE_ARGS+=	--without-dtrace
 # SUBST_FILES.devd_dix+=		include/dix-config.h	
 # SUBST_SED.devd_dix+=		-e 's|/\* \#undef CONFIG_UDEV \*/|\#define CONFIG_DEVD 1 |'
 CPPFLAGS+=			-DCONFIG_DEVD=1
+MESON_ARGS+=	-Ddevd=true
+.endif
+
+.if !empty(PKG_OPTIONS:Mxkb_evdev)
+MESON_ARGS+=	-Dxkb_default_rules=evdev
+.else
+MESON_ARGS+=	-Dxkb_default_rules=base
 .endif
 
 .if !empty(PKG_OPTIONS:Mrevert_flink)
@@ -189,22 +205,20 @@ SUBST_FILES.lease+=		hw/xfree86/modes/xf86Crtc.h
 SUBST_SED.lease+=		 -e 's|XF86_LEASE_VERSION|REVERT_XF86_LEASE_VERSION|g'
 .endif
 
-.if !empty(PKG_OPTIONS:Mallow_unprivileged)
-CPPFLAGS+=	-DALLOW_UNPRIVILEGED
-.endif
-
-.if !empty(PKG_OPTIONS:Mxkb_evdev)
-MESON_ARGS+=	-Dxkb_default_rules=evdev
-.else
-MESON_ARGS+=	-Dxkb_default_rules=base
+.if !empty(PKG_OPTIONS:Madd_scfb_driver)
+CPPFLAGS+=	-DADD_SCFB_DRIVER
 .endif
 
 .if !empty(PKG_OPTIONS:Madd_modesetting_driver)
 CPPFLAGS+=	-DADD_MODESETTING_DRIVER
 .endif
 
-.if !empty(PKG_OPTIONS:Madd_scfb_driver)
-CPPFLAGS+=	-DADD_SCFB_DRIVER
+.if !empty(PKG_OPTIONS:Mallow_unprivileged)
+CPPFLAGS+=	-DALLOW_UNPRIVILEGED
+.endif
+
+.if !empty(PKG_OPTIONS:Motherid_xsrc_netbsd)
+CPPFLAGS+=	-DOTHERID_XSRC_NETBSD
 .endif
 
 .if !empty(PKG_OPTIONS:Mstrict_xsrc_netbsd)
@@ -213,6 +227,12 @@ CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 
 .if !empty(PKG_OPTIONS:Mmodesetting_on_intel)
 CPPFLAGS+=	-DMODESETTING_ON_INTEL
+.endif
+
+.if !empty(PKG_OPTIONS:Mtry_dev_wskbd)
+CPPFLAGS+=	-DTRY_DEV_WSKBD
+CPPFLAGS+=	-DCONFIG_WSCONS=1
+MESON_ARGS+=	-Dwscons=true
 .endif
 
 .if !empty(PKG_OPTIONS:Mfallback_not_wsdisplay)
@@ -233,11 +253,6 @@ CPPFLAGS+=	-DOPENBSD_MORE_CALLS
 
 .if !empty(PKG_OPTIONS:Mws_drivers_openbsd)
 CPPFLAGS+=	-DWS_DRIVERS_OPENBSD
-.endif
-
-.if !empty(PKG_OPTIONS:Mtry_dev_wskbd)
-CPPFLAGS+=	-DTRY_DEV_WSKBD
-CPPFLAGS+=	-DCONFIG_WSCONS
 .endif
 
 .if !empty(PKG_OPTIONS:Mrandr_backlight)

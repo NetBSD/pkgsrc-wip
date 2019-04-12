@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- meson_options.txt.orig	2019-03-20 23:09:22.000000000 +0000
++++ meson_options.txt
+@@ -64,6 +64,8 @@ option('pciaccess', type: 'boolean', val
+ option('udev', type: 'boolean', value: 'true')
+ option('hal', type: 'combo', choices: ['true', 'false', 'auto'], value: 'auto',
+        description: 'Enable HAL integration')
++option('wscons', type: 'boolean', value: 'false')
++option('devd', type: 'boolean', value: 'false')
+ option('systemd_logind', type: 'combo', choices: ['true', 'false', 'auto'], value: 'auto',
+        description: 'Enable systemd-logind integration')
+ option('vbe', type: 'combo', choices: ['true', 'false', 'auto'], value: 'auto',

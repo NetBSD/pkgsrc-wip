@@ -2,8 +2,14 @@
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
+# 2019-04-04	test: Fix meson build with xvfb disabled.
+COMMIT_ID=	0a005c4fe4fccc9bb6c3a5266065f8437621fdb9
+
+# 2019-03-29	present: Call present_vblank_scrap in screen mode
+# COMMIT_ID=	4adda1f6359fd96436dd61d0250b84f55b2fd277
+
 # 2019-03-20	Revert "systemd-logind: Monitor systemd-logind going away"
-COMMIT_ID=	5a549c957a873bd44ab351e627828905ee7dbf18
+# COMMIT_ID=	5a549c957a873bd44ab351e627828905ee7dbf18
 
 # 2019-03-13	Add xf86OSInputThreadInit to stub os-support as well
 # COMMIT_ID=	c020769dbfb965740c8441d8242b738ef572a7c9
