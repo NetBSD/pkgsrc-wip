@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tor-0.4.0.3-alpha
+DISTNAME=	tor-0.4.0.4-rc
 PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 CATEGORIES=	net security
 MASTER_SITES=	http://www.torproject.org/dist/
@@ -64,6 +64,11 @@ CHECK_PORTABILITY_SKIP+=	contrib/*
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 CFLAGS+=		-c99
 .endif
+
+.PHONY: post-install-paxctl-AM:
+post-install: post-install-paxctl-AM
+post-install-paxctl-AM:
+	${PAXCTL} +AM ${DESTDIR}${PREFIX}/bin/tor-dev
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
