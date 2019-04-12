@@ -2689,7 +2689,6 @@ SUBDIR+=	p5-Syntax-Highlight-Perl-Improved
 SUBDIR+=	p5-Sys-MemInfo
 SUBDIR+=	p5-Template-Plugin-Class
 SUBDIR+=	p5-Term-ReadLine-Perl5
-SUBDIR+=	p5-Test-Bits
 SUBDIR+=	p5-Test-Fake-HTTPD
 SUBDIR+=	p5-Test-HexDifferences
 SUBDIR+=	p5-Test-Strict
