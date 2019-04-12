@@ -1,35 +1,27 @@
-# $NetBSD$
+# $NetBSD: options.mk,v 1.21 2014/10/12 00:08:26 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bareos
-PKG_SUPPORTED_OPTIONS=		ssl lzo
+PKG_SUPPORTED_OPTIONS=		scsi-crypto
 PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	catalog-sqlite3 catalog-pgsql catalog-mysql
-PKG_SUGGESTED_OPTIONS=		ssl catalog-sqlite3
+PKG_SUGGESTED_OPTIONS=		catalog-pgsql #scsi-crypto
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcatalog-sqlite3)
 .  include "../../databases/sqlite3/buildlink3.mk"
-CONFIGURE_ARGS+=        --with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
-BAREOS_DB=              sqlite3
+DBIMPL=sqllite3
+CMAKE_ARGS+=		-Dsqlite3=yes
 .elif !empty(PKG_OPTIONS:Mcatalog-pgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=        --with-postgresql=${PGSQL_PREFIX}
-BAREOS_DB=              postgresql
-PGSQL_VERSIONS_ACCEPTED=   95 94 93
+DBIMPL=postgresql
+CMAKE_ARGS+=		-Dpostgresql=yes
 .elif !empty(PKG_OPTIONS:Mcatalog-mysql)
 .  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=        --with-mysql=${PREFIX}
-BAREOS_DB=              mysql
+DBIMPL=mysql
+CMAKE_ARGS+=		-Dmysql=yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mssl)
-.  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=        --with-openssl=${BUILDLINK_PREFIX.openssl}
-.else
-CONFIGURE_ARGS+=        --without-openssl
-.endif
-
-.if !empty(PKG_OPTIONS:Mlzo)
-.  include "../../archivers/lzo/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mscsi-crypto)
+CMAKE_ARGS+=   -Dscsi-crypto=yes
 .endif

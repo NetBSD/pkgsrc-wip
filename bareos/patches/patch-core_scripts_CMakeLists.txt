@@ -1,0 +1,47 @@
+$NetBSD$
+
+	Install mtx-changer script if mtx is available
+
+--- core/scripts/CMakeLists.txt.orig	2019-02-13 14:25:55.000000000 +0000
++++ core/scripts/CMakeLists.txt
+@@ -41,7 +41,6 @@ INSTALL(FILES
+ 
+ IF(NOT client-only)
+    INSTALL(FILES
+-         mtx-changer
+          disk-changer
+          bareos-explorer
+          bareos-glusterfind-wrapper
+@@ -54,12 +53,26 @@ IF(NOT client-only)
+          DESTINATION "${scriptdir}")
+ 
+    INSTALL(FILES
+-            mtx-changer.conf
+             bareos-regress.conf
+-            DESTINATION "${confdir}")
++            DESTINATION "${configtemplatedir}")
+ 
+-   INSTALL(FILES
+-          logrotate
+-          DESTINATION "${sysconfdir}/logrotate.d"
+-          RENAME bareos-dir)
++   IF(NOT ${MTX} STREQUAL "MTX-NOTFOUND")
++         INSTALL(FILES
++                 mtx-changer
++                 PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
++                             GROUP_READ GROUP_EXECUTE
++                             WORLD_READ WORLD_EXECUTE
++                 DESTINATION "${scriptdir}")
++
++         INSTALL(FILES
++                 mtx-changer.conf
++                 DESTINATION "${configtemplatedir}")
++   ENDIF()
++
++   IF (NOT ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++   	INSTALL(FILES
++          	logrotate
++          	DESTINATION "${sysconfdir}/logrotate.d"
++          	RENAME bareos-dir)
++   ENDIF()
+ ENDIF()

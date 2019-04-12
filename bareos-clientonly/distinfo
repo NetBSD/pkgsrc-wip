@@ -11,6 +11,7 @@ SHA1 (patch-core_platforms_netbsd_CMakeLists.txt) = dd6a54bac7e4b51e3f564f83cc7f
 SHA1 (patch-core_platforms_netbsd_chio-changer) = 123f2fd2ec0cddcf4339cf7b0bc28a9f00ba9a06
 SHA1 (patch-core_scripts_CMakeLists.txt) = 844ecbcd8f67f5320cf181bd39b8b67d96abeada
 SHA1 (patch-core_src_CMakeLists.txt) = 6291bb32473cb26ff819f847b9b78d198b53d876
+SHA1 (patch-core_src_cats_CMakeLists.txt) = 628388998e934aa672fc11a027707d394634060b
 SHA1 (patch-core_src_cats_make__catalog__backup.pl.in) = 0753f31201df7406bf95ef95d420f66f27f8f0e8
 SHA1 (patch-core_src_cats_postgresql__queries.inc) = d255a93a039d671d9dad7b7b096dfff97095aa6e
 SHA1 (patch-core_src_dird_admin.cc) = 409e60dc07d7d6868f108ca05273ddacf166a54c

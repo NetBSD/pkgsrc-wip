@@ -50,4 +50,3 @@ else
 	_arg="$1"
 	${start_cmd}
 fi
-

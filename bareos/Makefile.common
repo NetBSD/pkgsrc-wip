@@ -1,88 +1,95 @@
 # $NetBSD$
+# used by sysutils/bareos-clientonly/Makefile
+# used by wip/bareos-clientonly/Makefile
 
 GITHUB_PROJECT=	bareos
-PKGNAME=	${GITHUB_PROJECT}-${VERSION}
-DISTNAME=	bareos
-MASTER_SITES=	${MASTER_SITE_GITHUB:=bareos/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-TAG=		Release
-GITHUB_TAG=	${TAG}/${PKGVERSION_NOREV}
-WRKSRC=		${WRKDIR}/${DISTNAME}-${TAG}-${PKGVERSION_NOREV}
+VERSION=        18.2.6
+GITHUB_TAG=	Release/${VERSION}
 
-VERSION=	17.2.4
+DISTNAME=	bareos-${VERSION}
+WRKSRC=         ${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG:C/\//-/}
 CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=bareos/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	paul@paulbsd.com
 HOMEPAGE=	http://www.bareos.org/
-COMMENT?=	Open Source Data Protection
 LICENSE=	gnu-agpl-v3
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt
-GNU_CONFIGURE=		yes
+# pkgsrc version currently only tested/configured for NetBSD build
+ONLY_FOR_PLATFORM=	NetBSD-*-*
+
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	awk
+USE_CMAKE=	yes
+
+CONFIGURE_DIRS+= core
+
+BUILD_DEFS+=		VARBASE
+
+# file locations
+PKG_SYSCONFSUBDIR?=	bareos
+BAREOS_PIDDIR?=		${VARBASE}/run
+BAREOS_LOGDIR?=		${VARBASE}/log
+BAREOS_LIBDIR?=		${PREFIX}/lib
+BAREOS_WORKINGDIR?=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}
+
+BUILD_DEFS+=		BAREOS_PIDDIR BAREOS_WORKINGDIR
+
+# user/group information
+BAREOS_GROUP?=		bareos
+
+BAREOS_SD_USER?=	bareossd
+PKG_GECOS.${BAREOS_SD_USER}=Bareos Storage User
+PKG_HOME.${BAREOS_SD_USER}=${BAREOS_WORKINGDIR}
+PKG_SHELL.${BAREOS_SD_USER}=/bin/sh
+
+BAREOS_DIR_USER?=	bareosdir
+PKG_GECOS.${BAREOS_DIR_USER}=Bareos Director User
+PKG_HOME.${BAREOS_DIR_USER}=${BAREOS_WORKINGDIR}
+PKG_SHELL.${BAREOS_DIR_USER}=/bin/sh
+
+PKG_GROUPS=		${BAREOS_GROUP}
+PKG_USERS=		${BAREOS_DIR_USER}:${BAREOS_GROUP} ${BAREOS_SD_USER}:${BAREOS_GROUP}
+
+CONFIG_TEMPLATE_PATH=	share/examples/${PKG_SYSCONFSUBDIR}/configtemplates
+
+# variables to substitute
+FILES_SUBST+=           BAREOS_ETCDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+=           BAREOS_PIDDIR=${BAREOS_PIDDIR}
+FILES_SUBST+=           BAREOS_LOGDIR=${BAREOS_LOGDIR}
+FILES_SUBST+=           BAREOS_GROUP=${BAREOS_GROUP}
+FILES_SUBST+=           BAREOS_DIR_USER=${BAREOS_DIR_USER}
+FILES_SUBST+=           BAREOS_SD_USER=${BAREOS_SD_USER}
+
+# cmake arguments
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_ARGS+=	-DCMAKE_STAGING_PREFIX=${BUILDLINK_DIR}
+# reduce job log noise: CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS=-DNO_ADV=1
+CMAKE_ARGS+=	-Dconfigtemplatedir=${PREFIX}/${CONFIG_TEMPLATE_PATH}
+CMAKE_ARGS+=	-Dworkingdir=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working
+CMAKE_ARGS+=	-Dsubsysdir=${VARBASE}/db/${PKG_SYSCONFSUBDIR}
+CMAKE_ARGS+=	-Dbsrdir=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/bsr
+CMAKE_ARGS+=	-Dlogdir=${BAREOS_LOGDIR}
+CMAKE_ARGS+=	-Dlibdir=${BAREOS_LIBDIR}
+CMAKE_ARGS+=	-Dpiddir=${BAREOS_PIDDIR}
+CMAKE_ARGS+=	-Darchivedir=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/storage
+CMAKE_ARGS+=	-Ddir-user=${BAREOS_DIR_USER}
+CMAKE_ARGS+=	-Ddir-group=${BAREOS_GROUP}
+CMAKE_ARGS+=	-Dsd-user=${BAREOS_SD_USER}
+CMAKE_ARGS+=	-Dsd-group=${BAREOS_GROUP}
+CMAKE_ARGS+=	-Dfd-user=root
+CMAKE_ARGS+=	-Dfd-group=${BAREOS_GROUP}
 
 .include "../../mk/bsd.prefs.mk"
 
-# For make_catalog_backup.pl.in.
-USE_TOOLS+=	perl:run
-
-BAREOS_GROUP?=		bareos
-BAREOS_DIR_USER?=	bareos-dir
-BAREOS_SD_USER?=	bareos-sd
-
-PKG_GROUPS_VARS+=	BAREOS_GROUP
-PKG_USERS_VARS=		BAREOS_DIR_USER BAREOS_SD_USER
-
-PKG_SYSCONFSUBDIR?=	bareos
-BAREOS_PIDDIR?=		${VARBASE}/run/bareos
-BAREOS_WORKINGDIR?=	${VARBASE}/spool/bareos
-
-BUILD_DEFS+=	VARBASE BAREOS_PIDDIR BAREOS_WORKINGDIR
-
-FILES_SUBST+=	BAREOS_ETCDIR=${PKG_SYSCONFDIR}
-FILES_SUBST+=	BAREOS_PIDDIR=${BAREOS_PIDDIR}
-FILES_SUBST+=	BAREOS_GROUP=${BAREOS_GROUP}
-FILES_SUBST+=	BAREOS_DIR_USER=${BAREOS_DIR_USER}
-FILES_SUBST+=	BAREOS_SD_USER=${BAREOS_SD_USER}
-
-SUBST_CLASSES+=		egdir
-SUBST_STAGE.egdir=	pre-configure
-SUBST_FILES.egdir=	src/dird/Makefile.in
-SUBST_FILES.egdir+=	src/console/Makefile.in
-SUBST_FILES.egdir+=	src/filed/Makefile.in
-SUBST_FILES.egdir+=	src/stored/Makefile.in
-SUBST_FILES.egdir+=	src/gnome2-console/Makefile.in
-SUBST_FILES.egdir+=	src/wx-console/Makefile.in
-SUBST_FILES.egdir+=	src/tray-monitor/Makefile.in
-SUBST_SED.egdir=	-e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bareos
-CONFIGURE_ARGS+=	--with-sbin-perm=0755
-CONFIGURE_ARGS+=	--with-working-dir=${BAREOS_WORKINGDIR}
-CONFIGURE_ARGS+=	--with-pid-dir=${BAREOS_PIDDIR}
-CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}/include/readline
-CONFIGURE_ARGS+=	--with-jansson
-
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-smartalloc
-.endif
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-xattr
-.endif
-
-PTHREAD_OPTS+=		require
-PTHREAD_AUTO_VARS=	yes
-
-CONFLICTS=		bacula-[0-9]*
-
-EXAMPLESDIR=		${PREFIX}/share/examples/bareos
-INSTALLATION_DIRS+=	${EXAMPLESDIR}
-
-.include "../../mk/readline.buildlink3.mk"
+# dependencies
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../lang/python27/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"

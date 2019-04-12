@@ -1,0 +1,15 @@
+$NetBSD$
+
+	Add ndmp driectory if the NDMP feature is requested
+
+--- core/src/CMakeLists.txt.orig	2019-02-13 14:25:55.000000000 +0000
++++ core/src/CMakeLists.txt
+@@ -23,7 +23,7 @@ IF(NOT client-only)
+       add_subdirectory(tests)
+    ENDIF()
+    add_subdirectory(cats)
+-   IF(NOT HAVE_WIN32 AND ndmp)
++   IF(NOT HAVE_NDMP AND ndmp)
+       add_subdirectory(ndmp)
+    ENDIF()
+    add_subdirectory(dird)
