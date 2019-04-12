@@ -9,7 +9,7 @@ with dlopen(3) at the moment.
  
  __thread struct _glapi_table *u_current_table
      __attribute__((tls_model("initial-exec")))
-+#if defined(__NetBSD__)
++#if defined(NO_INITIAL_EXEC_NONNULL)
 +    = NULL; /* non-zero initializers not supported with dlopen */
 +#else
      = (struct _glapi_table *) table_noop_array;
@@ -21,7 +21,7 @@ with dlopen(3) at the moment.
  u_current_get_table_internal(void)
  {
  #if defined(GLX_USE_TLS)
-+#  if defined(__NetBSD__)
++#  if defined(NO_INITIAL_EXEC_NONNULL)
 +   return (likely(u_current_table) ? u_current_table : (struct _glapi_table *) table_noop_array);
 +#  else
     return u_current_table;

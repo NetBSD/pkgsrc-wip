@@ -100,6 +100,7 @@ ${PLIST.glesv1}lib/pkgconfig/glesv1_cm.pc
 ${PLIST.glesv2}lib/pkgconfig/glesv2.pc
 ${PLIST.wayland}lib/pkgconfig/wayland-egl.pc
 ${PLIST.xatracker}lib/pkgconfig/xatracker.pc
+@comment ${PLIST.vdpau}lib/vdpau/libvdpau_gallium.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0

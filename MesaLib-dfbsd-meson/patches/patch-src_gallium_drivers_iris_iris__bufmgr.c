@@ -5,7 +5,9 @@ an Intel integrated graphics IvyBridge machine on DragonFly.
 libdrm atomic_add_unless() may reverse return value meaning
 https://bugs.freedesktop.org/show_bug.cgi?id=100077
 
---- src/gallium/drivers/iris/iris_bufmgr.c.orig	2019-03-05 16:06:50.000000000 +0000
+This does not seem the correct choice in mesa3d.
+
+--- src/gallium/drivers/iris/iris_bufmgr.c.orig	2019-03-30 17:05:31.000000000 +0000
 +++ src/gallium/drivers/iris/iris_bufmgr.c
 @@ -114,7 +114,11 @@ atomic_add_unless(int *v, int add, int u
     c = p_atomic_read(v);
@@ -18,4 +20,4 @@ https://bugs.freedesktop.org/show_bug.cgi?id=100077
 +#endif
  }
  
- /**
+ static const char *

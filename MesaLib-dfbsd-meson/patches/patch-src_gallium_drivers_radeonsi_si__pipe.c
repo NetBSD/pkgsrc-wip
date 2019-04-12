@@ -18,9 +18,9 @@ radeonsi: use SDMA for uploading data through const_uploader
 
 https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb9059747782a72a7
 
---- src/gallium/drivers/radeonsi/si_pipe.c.orig	2019-02-28 21:26:15.000000000 +0000
+--- src/gallium/drivers/radeonsi/si_pipe.c.orig	2019-04-08 23:50:24.000000000 +0000
 +++ src/gallium/drivers/radeonsi/si_pipe.c
-@@ -197,10 +197,12 @@ static void si_destroy_context(struct pi
+@@ -198,10 +198,12 @@ static void si_destroy_context(struct pi
  		sctx->b.delete_vs_state(&sctx->b, sctx->vs_blit_color_layered);
  	if (sctx->vs_blit_texcoord)
  		sctx->b.delete_vs_state(&sctx->b, sctx->vs_blit_texcoord);
@@ -33,7 +33,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  	if (sctx->cs_copy_image)
  		sctx->b.delete_compute_state(&sctx->b, sctx->cs_copy_image);
  	if (sctx->cs_copy_image_1d_array)
-@@ -378,7 +380,11 @@ static void si_set_context_param(struct
+@@ -381,7 +383,11 @@ static void si_set_context_param(struct 
  }
  
  static struct pipe_context *si_create_context(struct pipe_screen *screen,
@@ -45,7 +45,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  {
  	struct si_context *sctx = CALLOC_STRUCT(si_context);
  	struct si_screen* sscreen = (struct si_screen *)screen;
-@@ -396,7 +402,11 @@ static struct pipe_context *si_create_co
+@@ -399,7 +405,11 @@ static struct pipe_context *si_create_co
  		sscreen->record_llvm_ir = true; /* racy but not critical */
  
  	sctx->b.screen = screen; /* this must be set first */
@@ -57,7 +57,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  	sctx->b.destroy = si_destroy_context;
  	sctx->screen = sscreen; /* Easy accessing of screen/winsys. */
  	sctx->is_debug = (flags & PIPE_CONTEXT_DEBUG) != 0;
-@@ -454,8 +464,13 @@ static struct pipe_context *si_create_co
+@@ -457,8 +467,13 @@ static struct pipe_context *si_create_co
  						   sctx, stop_exec_on_failure);
  	}
  
@@ -71,7 +71,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  						 0, PIPE_USAGE_DEFAULT,
  						 SI_RESOURCE_FLAG_32BIT |
  						 (use_sdma_upload ?
-@@ -647,6 +662,7 @@ fail:
+@@ -650,6 +665,7 @@ fail:
  	return NULL;
  }
  
@@ -79,7 +79,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  static struct pipe_context *si_pipe_create_context(struct pipe_screen *screen,
  						   void *priv, unsigned flags)
  {
-@@ -677,6 +693,7 @@ static struct pipe_context *si_pipe_crea
+@@ -680,6 +696,7 @@ static struct pipe_context *si_pipe_crea
  				       sscreen->info.drm_major >= 3 ? si_create_fence : NULL,
  				       &((struct si_context*)ctx)->tc);
  }
@@ -87,7 +87,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  
  /*
   * pipe_screen
-@@ -874,7 +891,11 @@ struct pipe_screen *radeonsi_screen_crea
+@@ -903,7 +920,11 @@ struct pipe_screen *radeonsi_screen_crea
  						       debug_options, 0);
  
  	/* Set functions first. */
@@ -97,9 +97,9 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  	sscreen->b.context_create = si_pipe_create_context;
 +#endif
  	sscreen->b.destroy = si_destroy_screen;
- 
- 	si_init_screen_get_functions(sscreen);
-@@ -1144,7 +1165,11 @@ struct pipe_screen *radeonsi_screen_crea
+ 	sscreen->b.set_max_shader_compiler_threads =
+ 		si_set_max_shader_compiler_threads;
+@@ -1177,7 +1198,11 @@ struct pipe_screen *radeonsi_screen_crea
  		si_init_compiler(sscreen, &sscreen->compiler_lowp[i]);
  
  	/* Create the auxiliary context. This must be done last. */

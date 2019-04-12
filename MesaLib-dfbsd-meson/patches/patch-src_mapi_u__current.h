@@ -10,7 +10,7 @@ with dlopen(3) at the moment.
  u_current_get_table(void)
  {
 -#ifdef GLX_USE_TLS
-+#if defined(GLX_USE_TLS) && !defined(__NetBSD__)
++#if defined(GLX_USE_TLS) && !defined(NO_INITIAL_EXEC_NONNULL)
     return u_current_table;
  #else
     return (likely(u_current_table) ?

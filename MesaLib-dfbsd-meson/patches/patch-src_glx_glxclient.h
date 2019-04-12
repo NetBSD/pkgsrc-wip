@@ -9,7 +9,7 @@ with dlopen(3) at the moment.
  extern __thread void *__glX_tls_Context
     __attribute__ ((tls_model("initial-exec")));
  
-+#if defined(__NetBSD__)
++#if defined(NO_INITIAL_EXEC_NONNULL)
 +#  define __glXGetCurrentContext() (likely(__glX_tls_Context) ? __glX_tls_Context : (void*)&dummyContext)
 +#else
  #  define __glXGetCurrentContext() __glX_tls_Context

@@ -14,7 +14,7 @@ es1api and es2api are not going to be patched for NetBSD.
  
  #ifndef __ILP32__
  
-+#if defined(__NetBSD__) && defined(MAPI_MODE_GLAPI)
++#if defined(NO_INITIAL_EXEC_NONNULL) && defined(MAPI_MODE_GLAPI)
  #define STUB_ASM_CODE(slot)                              \
     "movq " ENTRY_CURRENT_TABLE "@GOTTPOFF(%rip), %rax\n\t"  \
     "movq %fs:(%rax), %r11\n\t"                           \
