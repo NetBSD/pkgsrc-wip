@@ -31,6 +31,7 @@ REPLACE_PYTHON+=		man/simplecpp
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
