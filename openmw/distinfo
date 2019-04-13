@@ -1,10 +1,10 @@
 $NetBSD$
 
-SHA1 (openmw-0.43.0.tar.gz) = 7b25120b311b79ff3bb098f852754bc50aa97d6d
-RMD160 (openmw-0.43.0.tar.gz) = 21cc4bed8394f7160a758974eb977ad66006ac48
-SHA512 (openmw-0.43.0.tar.gz) = e902dd2274c05838bb1171f07d7a673fc7b85d1290a9e01c8ab89f1c279bd236332ecdc0f2b7944ec7209a0e6022ff472639b5724bf26904e3a2d338c7be401a
-Size (openmw-0.43.0.tar.gz) = 5023421 bytes
-SHA1 (patch-apps_openmw_crashcatcher.cpp) = e8088a07f31f4b2bedddf470dc2b5a7602a2badb
+SHA1 (openmw-0.45.0.tar.gz) = 57ffaa0e066ddd4ad22b56b58879061693fa0c0d
+RMD160 (openmw-0.45.0.tar.gz) = 26810d9a3373691969d3f1c4b78b8aa52c866ec7
+SHA512 (openmw-0.45.0.tar.gz) = b968426659457cf486f6756f7ab82cc4cb34a92923c433dd86f711e5d7097f75441ed17daa50d21f15f1847f5aed1f4c3a094a06cfd3f2e9b90aa182742c596f
+Size (openmw-0.45.0.tar.gz) = 4711103 bytes
+SHA1 (patch-components_crashcatcher_crashcatcher.cpp) = ecb17b1f5a199ddc8b3bd299e0222ebf88c1fdec
 SHA1 (patch-components_files_fixedpath.hpp) = c4047ee90e1771228ce5179d8a082345a0310e03
-SHA1 (patch-components_files_linuxpath.cpp) = 6e88791100706a0cb020874ac975832e70dffdcb
+SHA1 (patch-components_files_linuxpath.cpp) = 706543e2a684dda0e21b39b35c829baf314deedf
 SHA1 (patch-components_files_linuxpath.hpp) = 0627dc0a15e62b2e3c7314d19d1bb2b099af576e

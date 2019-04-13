@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	openmw-0.43.0
+DISTNAME=	openmw-0.45.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenMW/}
 
@@ -13,6 +13,8 @@ GITHUB_TAG=	openmw-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 DEPENDS+=	bullet>=2.83:../../wip/bullet
 DEPENDS+=	osg>=3.3.4:../../graphics/osg
@@ -27,5 +29,5 @@ DEPENDS+=	osg>=3.3.4:../../graphics/osg
 .include "../../wip/bullet/buildlink3.mk" # XXX requires version in wip
 .include "../../wip/mygui-git/buildlink3.mk" # XXX
 .include "../../audio/openal-soft/buildlink3.mk"
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
