@@ -21,7 +21,7 @@ CONFIGURE_ENV+=	ac_cv_lib_amd64_amd64_iopl=no
 .endif
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_ACCEPTED=	27
+CONFIGURE_ENV+=			ac_cv_prog_HAVE_PYTHON=python${PYVERSSUFFIX}
 REPLACE_PYTHON+=		data/convert-icon
 REPLACE_PYTHON+=		man/docgen
 REPLACE_PYTHON+=		man/simplecpp
