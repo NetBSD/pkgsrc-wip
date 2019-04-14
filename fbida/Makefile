@@ -27,7 +27,7 @@ post-extract:
 	    done
 
 # Depend on this, purely for fetching the distfile.
-DEPENDS+= jpeg-9c:../../graphics/jpeg
+DEPENDS+= jpeg>=9c:../../graphics/jpeg
 
 # not used, even though the configure output claims it
 #.include "../../graphics/ImageMagick/buildlink3.mk"
