@@ -1,0 +1,9 @@
+#!/bin/sh
+cd @PREFIX@/share/tesseract
+if [ ${XDG_DATA_HOME} ]; then
+	mkdir -p ${XDG_DATA_HOME}/tesseract
+	exec @PREFIX@/libexec/${0##*/} "-u${XDG_DATA_HOME}/tesseract" "$@"
+else
+	mkdir -p ~/.local/share/tesseract
+	exec @PREFIX@/libexec/${0##*/} '-u~/.local/share/tesseract' "$@"
+fi

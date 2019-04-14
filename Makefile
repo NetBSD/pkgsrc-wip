@@ -4610,6 +4610,7 @@ SUBDIR+=	termbox
 SUBDIR+=	terminology
 SUBDIR+=	termit
 SUBDIR+=	testssl
+SUBDIR+=	tesseract
 SUBDIR+=	tetrinet
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc

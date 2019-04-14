@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (tesseract_2014_05_12_first_edition_linux.tar.xz) = 5cd0c8cc4dc77b0e0f97343da51c9a8eb47cab22
+RMD160 (tesseract_2014_05_12_first_edition_linux.tar.xz) = cc57f201c46f7e0fd5eeda39f9d574ac756fd115
+SHA512 (tesseract_2014_05_12_first_edition_linux.tar.xz) = a625775501b57c519c624bdd9b29d4f89d29c0caedbf6ad4143a65c1f9f9dc088d289953ce3d5043f3467cc8dd86ba9040e636a20a16d5114cf6e7434e089f96
+Size (tesseract_2014_05_12_first_edition_linux.tar.xz) = 249009328 bytes
+SHA1 (patch-src_Makefile) = 70b011d68e228f5676a58dfd0f0c3337cc267ec2
+SHA1 (patch-src_enet_Makefile) = a02d7878abce0e89cf28238696da1e104e719407
