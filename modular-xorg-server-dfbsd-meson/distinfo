@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.94 2019/02/28 12:32:39 tnn Exp $
 
-SHA1 (xserver-0a005c4fe4fccc9bb6c3a5266065f8437621fdb9.tar.xz) = 80f4a1212273707cf1f6d53c986d1613dcdab13f
-RMD160 (xserver-0a005c4fe4fccc9bb6c3a5266065f8437621fdb9.tar.xz) = c13d4d3e0db134eae9d85d8debe1ccf40490d30b
-SHA512 (xserver-0a005c4fe4fccc9bb6c3a5266065f8437621fdb9.tar.xz) = 57086fcc66f748fa4d61d6632862bb8c2536da749e114b6d74a8872dd8ab86f020e0d4f1b38ed895a30d315fde3450138f47647702fe27a523ca0676ec549cab
-Size (xserver-0a005c4fe4fccc9bb6c3a5266065f8437621fdb9.tar.xz) = 3097856 bytes
+SHA1 (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = 8daf78aff6a3da671a6982d940f37b2882f1d66f
+RMD160 (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = 18eaa1a2298fe8d77f436a7eb3df2be2d89fe0e1
+SHA512 (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = fa2e602cb521f1a0b061dd3a5e576afd79b5a0fa20b8681d6e9be8648ff2aaa4ae4d0f446550717da580c335129ea4c10573ba2cc43e9fa3f24edfdf8b8a556c
+Size (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = 3097956 bytes
 SHA1 (patch-Xext_xf86bigfont.c) = 0d8b9f84f3441764d990c0d7ee41dc34e5430cde
 SHA1 (patch-config_config-backends.h) = f44868caa51e972a76949f73ac6083640af2c351
 SHA1 (patch-config_config.c) = 5a3fe4cb6c2170335ab547f438386cff77a9c152
