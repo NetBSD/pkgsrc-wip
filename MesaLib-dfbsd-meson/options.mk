@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2019/01/26 21:28:29 tnn Exp $
+# $NetBSD: options.mk,v 1.12 2019/04/11 16:27:03 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -30,6 +30,7 @@ PKG_SUPPORTED_OPTIONS+=		revert_copy_clear
 PKG_SUPPORTED_OPTIONS+=		physmem_netbsd
 PKG_SUPPORTED_OPTIONS+=		setaffinity_np_netbsd
 PKG_SUPPORTED_OPTIONS+=		no_initial_exec_nonnull
+PKG_SUPPORTED_OPTIONS+=		no_getprogramname
 PKG_SUPPORTED_OPTIONS+=		strict_xsrc_netbsd
 
 PKG_SUPPORTED_OPTIONS+=		x86_tsd_openbsd
@@ -49,6 +50,8 @@ PKG_SUGGESTED_OPTIONS+=		glesv1 glesv2
 .endif
 
 PKG_SUGGESTED_OPTIONS+=		xa
+
+PKG_SUGGESTED_OPTIONS+=		asm
 
 # .if ${OPSYS} == "NetBSD"
 # PKG_SUGGESTED_OPTIONS+=		noatexit
@@ -81,12 +84,12 @@ PKG_SUGGESTED_OPTIONS+=		dri
 PKG_SUGGESTED_OPTIONS+=		glx-tls
 .endif
 
-.if ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		test_dri3_enable
 .endif
 
 # Revert patch removing support for no dedicated render nodes
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		no_render_node
 .endif
 
@@ -128,9 +131,13 @@ PKG_SUGGESTED_OPTIONS+=		setaffinity_np_netbsd
 PKG_SUGGESTED_OPTIONS+=		no_initial_exec_nonnull
 .endif
 
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=		strict_xsrc_netbsd
-.endif
+# .if ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+=		no_getprogramname
+# .endif
+
+# .if ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+=		strict_xsrc_netbsd
+# .endif
 
 # OpenBSD xenocara tsd dispatch assembly for entry_x86_tsd.h
 .if ${OPSYS} == "OpenBSD"
@@ -380,6 +387,7 @@ MESON_ARGS+=	-Dgallium-vdpau=false
 # XA is useful for accelerating xf86-video-vmware
 .if !empty(PKG_OPTIONS:Mxa)
 CONFIGURE_ARGS+=	--enable-xa
+MESON_ARGS+=	-Dgallium-xa=true
 PLIST.xatracker=	yes
 .else
 MESON_ARGS+=	-Dgallium-xa=false
@@ -444,8 +452,6 @@ MESON_ARGS+=		-Dgles1=false
 MESON_ARGS+=		-Dgles2=false
 MESON_ARGS+=		-Dglx=xlib
 MESON_ARGS+=		-Dplatforms=x11
-# XXX configure looks for expat but doesn't actually need it in non-dri case
-CONFIGURE_ENV+=		EXPAT_CFLAGS=" " EXPAT_LIBS=" "
 .if !empty(PKG_OPTIONS:Mllvm)
 PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
 .endif
@@ -457,7 +463,6 @@ MESON_ARGS+=		--buildtype=debug
 .endif
 
 .if !empty(PKG_OPTIONS:Masm)
-MESON_ARGS+=		-Dasm=true
 .else
 MESON_ARGS+=		-Dasm=false
 .endif
@@ -524,6 +529,10 @@ CPPFLAGS+=	-DSETAFFINITY_NP_NETBSD
 
 .if !empty(PKG_OPTIONS:Mno_initial_exec_nonnull)
 CPPFLAGS+=	-DNO_INITIAL_EXEC_NONNULL
+.endif
+
+.if !empty(PKG_OPTIONS:Mno_getprogramname)
+CPPFLAGS+=	-DNO_GETPROGRAMNAME
 .endif
 
 .if !empty(PKG_OPTIONS:Mstrict_xsrc_netbsd)

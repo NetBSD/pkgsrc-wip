@@ -1,7 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2019/02/22 15:40:35 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
+
+# 2019-04-13	nir: add lower_ftrunc
+COMMIT_ID=	b6bed115a5efb281b450c749418646b4ea2e7db7
+
+# 2019-04-12	v3d: Use the new lower_to_scratch implementation for indirects on temps.
+# COMMIT_ID=	dc402be73e4bbb9b43213a4266b98a46092e3038
 
 # 2019-04-10	lima: implement blit with util_blitter
-COMMIT_ID=	a155c26a66d58d9283b314dce4dd2abb71355349
+# COMMIT_ID=	a155c26a66d58d9283b314dce4dd2abb71355349
 
 # 2019-04-10	docs: update calendar, and news item and link release notes for 19.0.2
 # COMMIT_ID=	4122f55574f1184e73962135123be1899b1739db
@@ -162,4 +168,5 @@ CFLAGS+=	-Wno-return-type
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
