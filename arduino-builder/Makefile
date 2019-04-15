@@ -28,10 +28,12 @@ DEPENDS+= go-fsnotify>=0:../../devel/go-fsnotify
 DEPENDS+= go-properties-map>=0:../../wip/go-properties-map
 
 .include "../../lang/go/go-package.mk"
+.include "../../wip/go-properties-map/buildlink3.mk"
+
+
 .include "../../devel/go-errors/buildlink3.mk"
 .include "../../devel/go-testify/buildlink3.mk"
 .include "../../net/grpc/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/go-fsnotify/buildlink3.mk"
-.include "../../wip/go-properties-map/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
