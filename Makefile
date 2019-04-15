@@ -4627,6 +4627,7 @@ SUBDIR+=	thabit-ttf
 SUBDIR+=	thawab
 SUBDIR+=	thcrut
 SUBDIR+=	theama
+SUBDIR+=	thedarkmod
 SUBDIR+=	thepeg
 SUBDIR+=	threadingbuildingblocks
 SUBDIR+=	thrift
