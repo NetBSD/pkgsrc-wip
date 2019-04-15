@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	tesseract-0.0.20140512
+PKGNAME=	tesseract-game-0.0.20140512
 DISTNAME=	tesseract_2014_05_12_first_edition_linux
 CATEGORIES=	games
 MASTER_SITES=	https://download.tuxfamily.org/tesseract/
