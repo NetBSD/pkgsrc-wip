@@ -33,7 +33,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://cliqz.com/en/desktop
 COMMENT=	Secure browser (Mozilla based) with built-in quick search
-LICENSE=	mpl-2.0
+LICENSE=	mpl-2.0 AND gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash pax
 USE_LANGUAGES+=	c99 gnu++14
