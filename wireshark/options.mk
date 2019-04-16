@@ -1,45 +1,25 @@
 # $NetBSD: options.mk,v 1.22 2018/12/03 15:35:15 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=		gtk3 http2 lua qt5
+PKG_SUPPORTED_OPTIONS=		http2 lua qt5
 PKG_SUGGESTED_OPTIONS=		qt5 lua
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gtk3 icons lua mans qt
+PLIST_VARS+=		icons lua mans qt
 
 .if !empty(PKG_OPTIONS:Mqt5)
-#CONFIGURE_ARGS+=	--with-qt=5
+.  include "../../x11/qt5-qtsvg/buildlink3.mk"
 .  include "../../x11/qt5-qttools/buildlink3.mk"
 .  if ${OPSYS} == "Darwin"
 .    include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .  else
 .    include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .  endif
-CONFIGURE_ENV+=		LRELEASE=${QTDIR}/bin/lrelease
-CONFIGURE_ENV+=		MOC=${QTDIR}/bin/moc
-CONFIGURE_ENV+=		RCC=${QTDIR}/bin/rcc
-CONFIGURE_ENV+=		UIC=${QTDIR}/bin/uic
 PLIST.qt=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtk3)
-#CONFIGURE_ARGS+=	--with-gtk=3
-PLIST.gtk3=		yes
-POST_INSTALL_TARGETS+=	install-gtk-desktop
-.include "../../x11/gtk3/buildlink3.mk"
-.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
-
-.PHONY: install-gtk-desktop
-install-gtk-desktop:
-	${INSTALL_DATA} ${WRKSRC}/wireshark.desktop \
-		${DESTDIR}${PREFIX}/share/applications/
-
-.else
-#CONFIGURE_ARGS+=	--without-gtk
-.endif
-
-.if empty(PKG_OPTIONS:Mgtk3) && empty(PKG_OPTIONS:Mqt5)
+.if empty(PKG_OPTIONS:Mqt5)
 #CONFIGURE_ARGS+=	--disable-wireshark
 .else
 #CONFIGURE_ARGS+=	--enable-wireshark

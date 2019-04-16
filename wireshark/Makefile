@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.205 2019/03/07 10:39:52 adam Exp $
 
-DISTNAME=	wireshark-3.0.0
+DISTNAME=	wireshark-3.0.1
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -10,22 +10,16 @@ HOMEPAGE=	https://www.wireshark.org/
 COMMENT=	Network protocol analyzer
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=		ethereal-[0-9]*
+CONFLICTS+=	ethereal-[0-9]*
 
 USE_CMAKE=		yes
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DENABLE_APPLICATION_BUNDLE=OFF
 CMAKE_ARG_PATH=		..
-
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config yacc lex
-
 CONFIGURE_DIRS=		build
 
-#CONFIGURE_ARGS+=	--enable-static=no
-#CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
-#CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-#CONFIGURE_ENV+=		ac_cv_path_YACCDUMMY=${TOOLS_PATH.yacc}
-#CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl pkg-config yacc lex
 PKGCONFIG_OVERRIDE+=	wireshark.pc.in
 
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/*/*
@@ -74,6 +68,7 @@ BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
