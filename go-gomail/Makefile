@@ -1,6 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	go-gomail-2.0.0
+PKGREVISION=	1
 DISTNAME=	go-gomail
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gomail/}
