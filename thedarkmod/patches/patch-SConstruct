@@ -26,3 +26,12 @@ $NetBSD$
  CORELINKFLAGS = [ ]
  
  # for release build, further optimisations that may not work on all files
+@@ -373,7 +374,7 @@ SConscript( g_build + '/core/glimp/sys/s
+ VariantDir( g_build + '/core', '.', duplicate = 0 )
+ thedarkmod = SConscript( g_build + '/core/sys/scons/SConscript.darkmod' )
+ 
+-exe_name = 'thedarkmod.' + ('x64' if TARGET_ARCH == 'x64' else cpu)
++exe_name = 'thedarkmod'
+ # Note: this target only runs if you append ".." (without quotes) as the last argument to scons command line
+ # It copies executable into ../darkmod, which is default location of darkmod installation in development environment
+ InstallAs( '../darkmod/' + exe_name, thedarkmod )

@@ -1,4 +1,3 @@
-do-install.
 Include the data files from the mirrors. (http://mirrors.thedarkmod.com/)
 	Not versioned. Probably get installed to ~/thedarkmod, fetch them with a script.
 		Or mirror them for pkgsrc.
