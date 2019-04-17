@@ -1,0 +1,3 @@
+Lots of Ruby libraries utilize XML parsing in some form, and everyone has their
+favorite XML library. In order to best support multiple XML parsers and
+libraries, multi_xml is a general-purpose swappable XML backend library.

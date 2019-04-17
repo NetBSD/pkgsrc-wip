@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/LICENSE.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/multi_xml.rb
+${GEM_LIBDIR}/lib/multi_xml/parsers/libxml.rb
+${GEM_LIBDIR}/lib/multi_xml/parsers/libxml2_parser.rb
+${GEM_LIBDIR}/lib/multi_xml/parsers/nokogiri.rb
+${GEM_LIBDIR}/lib/multi_xml/parsers/oga.rb
+${GEM_LIBDIR}/lib/multi_xml/parsers/ox.rb
+${GEM_LIBDIR}/lib/multi_xml/parsers/rexml.rb
+${GEM_LIBDIR}/lib/multi_xml/version.rb
+${GEM_LIBDIR}/multi_xml.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.4.0/extensions
+@pkgdir lib/ruby/gems/2.4.0/build_info

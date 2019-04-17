@@ -4287,6 +4287,7 @@ SUBDIR+=	ruby-httparty
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-libv8
+SUBDIR+=	ruby-multi_xml
 SUBDIR+=	ruby-neovim
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-rack-flash3
