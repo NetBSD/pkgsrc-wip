@@ -721,6 +721,7 @@ SUBDIR+=	emirror
 SUBDIR+=	emokit
 SUBDIR+=	emovix
 SUBDIR+=	empathy
+SUBDIR+=	endless-sky
 SUBDIR+=	engauge-digitizer
 SUBDIR+=	enigma2000
 SUBDIR+=	enlightenment0224

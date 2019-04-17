@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (endless-sky/v0.9.8.tar.gz) = 4a1b2c3f17fb95963f3997c36314028cb7b0379e
+RMD160 (endless-sky/v0.9.8.tar.gz) = 18c572471df372c3531ad8d69eaac1fd416ce336
+SHA512 (endless-sky/v0.9.8.tar.gz) = 521026cb70372fd380b14a1a1d296f86015e5999dc233f4d9c05d958092e1f3982d2f12e913a435d5827fb45945bd4b60bbae293c2c90685024cdae96e352078
+Size (endless-sky/v0.9.8.tar.gz) = 74476053 bytes
+SHA1 (patch-source_Files.cpp) = f21b4d4ca9d4c5df56a8c50b887c163673d747a5
