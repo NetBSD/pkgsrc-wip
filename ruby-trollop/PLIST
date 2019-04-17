@@ -1,10 +1,26 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/02 11:55:18 phonohawk Exp $
-${GEM_HOME}/cache/trollop-${PKGVERSION}.gem
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/FAQ.txt
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.travis
 ${GEM_LIBDIR}/History.txt
-${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/trollop.rb
-${GEM_LIBDIR}/test/test_trollop.rb
-${GEM_HOME}/specifications/trollop-${PKGVERSION}.gemspec
+${GEM_LIBDIR}/release-script.txt
+${GEM_LIBDIR}/test/support/assert_helpers.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_LIBDIR}/test/trollop/command_line_error_test.rb
+${GEM_LIBDIR}/test/trollop/help_needed_test.rb
+${GEM_LIBDIR}/test/trollop/parser_educate_test.rb
+${GEM_LIBDIR}/test/trollop/parser_opt_test.rb
+${GEM_LIBDIR}/test/trollop/parser_parse_test.rb
+${GEM_LIBDIR}/test/trollop/parser_test.rb
+${GEM_LIBDIR}/test/trollop/version_needed_test.rb
+${GEM_LIBDIR}/test/trollop_test.rb
+${GEM_LIBDIR}/trollop.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.4.0/extensions
+@pkgdir lib/ruby/gems/2.4.0/build_info

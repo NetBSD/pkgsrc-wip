@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/02 11:55:18 phonohawk Exp $
+$NetBSD$
 
-SHA1 (trollop-1.15.gem) = 291a445ef14e24e691e6dc7f006c7352b632b82d
-RMD160 (trollop-1.15.gem) = 998d01f0ee369059e93a923dbb4c7b59982f1fc9
-Size (trollop-1.15.gem) = 20992 bytes
+SHA1 (trollop-2.1.3.gem) = 58739c043f5fc8f52b8f176aaf95f3facaa1b22b
+RMD160 (trollop-2.1.3.gem) = 0116c9cd180f07d3ab4dbf2d645aaf60c024d6cf
+SHA512 (trollop-2.1.3.gem) = 4d172c6d75f40edb36c353d2e32afce10b012f02927772fa201256126f88c62adce39400225434a80fd678e1cad703e3d3f32cdeddd150287a44ff81a2fca819
+Size (trollop-2.1.3.gem) = 30208 bytes

@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/02/22 13:47:41 phonohawk Exp $
 #
 
-DISTNAME=	trollop-1.15
+DISTNAME=	trollop-2.1.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
