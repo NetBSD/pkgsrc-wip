@@ -1,6 +1,7 @@
 $NetBSD$
 
 Do not make application bundle on Darwin.
+Store correct version number in version.h.
 Avoid
 	CMake Error at CMakeLists.txt:3021 (install):
   	install FILES given directory
@@ -17,7 +18,18 @@ Avoid
  	#
  	# As https://developer.apple.com/library/archive/technotes/tn2206/_index.html
  	# says,
-@@ -2229,7 +2229,11 @@ if(BUILD_wireshark AND QT_FOUND)
+@@ -1462,9 +1462,7 @@ gmx_test_large_files(GMX_LARGEFILES)
+ set( VERSION ${PROJECT_VERSION} )
+ add_custom_target(version
+ 	BYPRODUCTS version.h
+-	COMMAND ${PERL_EXECUTABLE}
+-		${CMAKE_SOURCE_DIR}/tools/make-version.pl
+-		${CMAKE_SOURCE_DIR}
++	COMMAND ${CMAKE_COMMAND} -E echo '\#define VCSVERSION \"${VERSION}\"' > ${CMAKE_BINARY_DIR}/version.h
+ )
+ set_target_properties(version PROPERTIES FOLDER "Auxiliary")
+ 
+@@ -2229,7 +2227,11 @@ if(BUILD_wireshark AND QT_FOUND)
  		$<$<BOOL:${WIN32}>:UxTheme.lib>
  	)
  
@@ -30,7 +42,7 @@ Avoid
  	set(PROGLIST ${PROGLIST} wireshark)
  	set_target_properties(wireshark PROPERTIES
  		LINK_FLAGS "${WS_LINK_FLAGS}"
-@@ -3022,11 +3026,11 @@ endif()
+@@ -3022,11 +3024,11 @@ endif()
  
  install(
  	FILES

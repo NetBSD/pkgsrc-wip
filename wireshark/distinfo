@@ -4,4 +4,4 @@ SHA1 (wireshark-3.0.1.tar.xz) = 33b880fb76b356dce4713a207c0bb9624f9b2c43
 RMD160 (wireshark-3.0.1.tar.xz) = 27ed3498a1e9a89706c1461736219c4ae4b08085
 SHA512 (wireshark-3.0.1.tar.xz) = 59c3f36e4e7a1a7ea8f926dbf8ca495f83346396e1df5edf6a1bb34823c84308f52a1b6d46be9675d3af9ce8718da4a574f63a4fb210d8fc52131f4534d8670d
 Size (wireshark-3.0.1.tar.xz) = 30903792 bytes
-SHA1 (patch-CMakeLists.txt) = 431afe779ed4c41ef11f2dc94f1c0e665610d6b5
+SHA1 (patch-CMakeLists.txt) = c78289d6ded796674b947d6bddd0ba9749ab4569

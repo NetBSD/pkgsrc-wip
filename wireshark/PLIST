@@ -658,9 +658,11 @@ man/man1/sshdump.1
 man/man1/text2pcap.1
 man/man1/tshark.1
 man/man1/udpdump.1
-${PLIST.mans}man/man1/wireshark.1
+man/man1/wireshark.1
 man/man4/extcap.4
 man/man4/wireshark-filter.4
+${PLIST.icons}share/appdata/wireshark.appdata.xml
+${PLIST.icons}share/applications/wireshark.desktop
 share/doc/wireshark/androiddump.html
 share/doc/wireshark/capinfos.html
 share/doc/wireshark/captype.html
@@ -681,8 +683,6 @@ share/doc/wireshark/tshark.html
 share/doc/wireshark/udpdump.html
 share/doc/wireshark/wireshark-filter.html
 share/doc/wireshark/wireshark.html
-${PLIST.icons}share/appdata/wireshark.appdata.xml
-${PLIST.icons}share/applications/wireshark.desktop
 ${PLIST.icons}share/icons/hicolor/128x128/apps/wireshark.png
 ${PLIST.icons}share/icons/hicolor/128x128/mimetypes/application-vnd.tcpdump.pcap.png
 ${PLIST.icons}share/icons/hicolor/128x128/mimetypes/application-wireshark-doc.png
