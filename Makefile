@@ -2127,6 +2127,7 @@ SUBDIR+=	mcl
 SUBDIR+=	mcwm
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
+SUBDIR+=	mdpress
 SUBDIR+=	mediawiki-mode
 SUBDIR+=	meep
 SUBDIR+=	meep-mpi
