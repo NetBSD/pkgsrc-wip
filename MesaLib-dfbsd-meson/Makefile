@@ -1,7 +1,22 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-04-16	radeonsi/nir: fix scanning of bindless images
+COMMIT_ID=	3c5a9ab9f01d1d299eea1b99b9346c639fc30612
+
+# 2019-04-16	iris: Add texture cache flushing hacks for blit and resource_copy_regionHEADmaster
+# COMMIT_ID=	c4478889b7176ea5aed52d1630bedb43797a00f0
+
+# 2019-04-16	winsys/amdgpu: don't set GTT with GDS & OA placements on APUs
+# COMMIT_ID=	4f715868a94b2c43656b3574b876bd254757521b
+
+# 2019-04-16	compiler/glsl: handle case where we have multiple users for types
+# COMMIT_ID=	624789e3708c87ea2a4c8d2266266b489b421cba
+
+# 2019-04-14	draw: fix building error in draw_gs_init()
+# COMMIT_ID=	1af7701666bea2d6f4d0d226f5efc2fa65103872
+
 # 2019-04-13	nir: add lower_ftrunc
-COMMIT_ID=	b6bed115a5efb281b450c749418646b4ea2e7db7
+# COMMIT_ID=	b6bed115a5efb281b450c749418646b4ea2e7db7
 
 # 2019-04-12	v3d: Use the new lower_to_scratch implementation for indirects on temps.
 # COMMIT_ID=	dc402be73e4bbb9b43213a4266b98a46092e3038
@@ -20,21 +35,6 @@ COMMIT_ID=	b6bed115a5efb281b450c749418646b4ea2e7db7
 
 # 2019-04-08	drisw: Try harder to probe whether MIT-SHM works
 # COMMIT_ID=	52426ce4a929f7e1389baf490967fc02357b3f5e
-
-# 2019-03-31	i965: perf: update render basic configs for big core gen9/gen10
-# COMMIT_ID=	f0b472b3016c9625e1324fc7f70fc875e5926e00
-
-# 2019-03-30	iris: fix set_sampler_view
-# COMMIT_ID=	b2d651b86267f7511e3c4c35d92c0ff72e174bc
-
-# 2019-03-25	freedreno/ir3: Fix operand order for DSX/DSY
-# COMMIT_ID=	c7c432738a68d543dc1b73eae895ec4dfacd92b2
-
-# 2019-03-23	spirv: Add an execution environment to the options
-# COMMIT_ID=	15012077bceda24cbf38afeda7723c47e1b0d3c3
-
-# 2019-03-22	docs: update freedreno status
-# COMMIT_ID=	cdd90a7502e501b0f25d35a2e9715fbe5d09a211
 
 PORTNAME=	mesa		
 
