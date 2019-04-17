@@ -4283,6 +4283,7 @@ SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-ghi
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-git_stats
+SUBDIR+=	ruby-httparty
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-libv8

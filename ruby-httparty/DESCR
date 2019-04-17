@@ -1,0 +1,4 @@
+httparty includes the executable httparty which can be used to query web
+services and examine the resulting output. By default it will output the
+response as a pretty-printed Ruby object (useful for grokking the structure of
+output). This can also be overridden to output formatted XML or JSON.
