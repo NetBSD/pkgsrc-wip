@@ -10,8 +10,8 @@ HOMEPAGE=	https://jonas.github.io/tig/
 COMMENT=	Ncurses-based GIT repository tool
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GNU_CONFIGURE=	yes
