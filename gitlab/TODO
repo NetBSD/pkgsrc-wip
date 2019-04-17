@@ -141,3 +141,7 @@ Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension
 checking for main() in -lpthread... yes
 checking for v8.h... no
 *** extconf.rb failed ***
+
+This package has several known vulnerabilities that are usually
+fixed in latest stable releases.  However, no such vulnerabilities
+are tracked down in TODO at the moment.
