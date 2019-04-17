@@ -2,7 +2,7 @@ $NetBSD$
 
 Use libtool to link and install binaries.
 
---- src/Makefile.orig	2018-04-30 08:36:52.000000000 +0000
+--- src/Makefile.orig	2019-04-07 09:24:20.000000000 +0000
 +++ src/Makefile
 @@ -353,6 +353,10 @@ $(LIBNAME): $(OBJECTS)
  	$(LIBCOMMAND) $@ $(OBJECTS)
@@ -48,7 +48,7 @@ Use libtool to link and install binaries.
  libfltk_images.so.$(FL_DSO_VERSION): $(IMGOBJECTS) libfltk.so.$(FL_DSO_VERSION)
  	echo $(DSOCOMMAND) $@ ...
  	$(DSOCOMMAND) $@ $(IMGOBJECTS) -L. $(IMAGELIBS) -lfltk $(LDLIBS)
-@@ -687,6 +703,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -749,6 +765,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(INSTALL_LIB) $(GLLIBNAME) $(DESTDIR)$(libdir); \
  		$(RANLIB) $(DESTDIR)$(libdir)/$(GLLIBBASENAME); \
  	fi
@@ -58,7 +58,7 @@ Use libtool to link and install binaries.
  	$(RANLIB) $(DESTDIR)$(libdir)/$(IMGLIBBASENAME)
  	if test x$(DSONAME) = xlibfltk.so.$(FL_DSO_VERSION); then\
  		$(RM) $(DESTDIR)$(libdir)/libfltk.so*;\
-@@ -707,6 +726,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -769,6 +788,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(RM) $(DESTDIR)$(libdir)/libfltk_s.a;\
  		$(INSTALL_LIB) libfltk_s.a $(DESTDIR)$(libdir); \
  	fi
@@ -68,7 +68,7 @@ Use libtool to link and install binaries.
  	if test x$(DSONAME) = xcygfltknox-$(FL_DSO_VERSION).dll; then\
  		$(RM) $(DESTDIR)$(bindir)/$(DSONAME);\
  		$(INSTALL_LIB) $(DSONAME) $(DESTDIR)$(bindir); \
-@@ -724,6 +746,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -786,6 +808,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(INSTALL_LIB) libfltk_forms.so.$(FL_DSO_VERSION) $(DESTDIR)$(libdir); \
  		$(LN) libfltk_forms.so.$(FL_DSO_VERSION) $(DESTDIR)$(libdir)/libfltk_forms.so;\
  	fi
@@ -78,7 +78,7 @@ Use libtool to link and install binaries.
  	if test x$(FLDSONAME) = xlibfltk_forms.sl.$(FL_DSO_VERSION); then\
  		$(RM) $(DESTDIR)$(libdir)/libfltk_forms.sl*;\
  		$(INSTALL_LIB) libfltk_forms.sl.$(FL_DSO_VERSION) $(DESTDIR)$(libdir); \
-@@ -781,6 +806,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -843,6 +868,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(RM) $(DESTDIR)$(libdir)/libfltk_gl.dll.a;\
  		$(INSTALL_LIB) libfltk_gl.dll.a $(DESTDIR)$(libdir); \
  	fi
