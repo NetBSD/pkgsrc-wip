@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.91 2019/01/22 21:50:47 wiz Exp $
 
+# 2019-04-17		tests/util: Add armada-drm driver
+COMMIT_ID=		0b474eab3dd37c09f7f05e55176fcaea76fb4f92
+
 # 2019-04-12		amdgpu: Fix a structure initialization issueHEADmaster
-COMMIT_ID=		fcf80e2fd7741c9140e5e2971f9742fe7a82f68e
+# COMMIT_ID=		fcf80e2fd7741c9140e5e2971f9742fe7a82f68e
 
 # 2019-04-04		drm/amdgpu: support test mask
 # COMMIT_ID=		b4fbc6d70cf39971aed731ccf66246302d788899
