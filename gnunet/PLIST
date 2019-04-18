@@ -13,7 +13,6 @@ bin/gnunet-dht-monitor
 bin/gnunet-dht-put
 bin/gnunet-directory
 bin/gnunet-download
-bin/gnunet-download-manager.scm
 bin/gnunet-ecc
 bin/gnunet-fs
 bin/gnunet-gns
@@ -28,8 +27,6 @@ bin/gnunet-nse
 bin/gnunet-peerinfo
 bin/gnunet-peerstore
 bin/gnunet-publish
-bin/gnunet-qr
-bin/gnunet-qr.py
 bin/gnunet-resolver
 bin/gnunet-revocation
 bin/gnunet-scalarproduct
@@ -159,6 +156,8 @@ include/gnunet/gnunet_util_lib.h
 include/gnunet/gnunet_vpn_service.h
 include/gnunet/platform.h
 include/gnunet/plibc.h
+include/gnunet/gnunet_credential_service.h
+include/gnunet/gnunet_transport_application_service.h
 lib/gnunet/libexec/gnunet-daemon-exit
 lib/gnunet/libexec/gnunet-daemon-hostlist
 lib/gnunet/libexec/gnunet-daemon-latency-logger
@@ -233,7 +232,6 @@ lib/gnunet/libgnunet_plugin_namestore_sqlite.la
 lib/gnunet/libgnunet_plugin_peerstore_sqlite.la
 lib/gnunet/libgnunet_plugin_rest_copying.la
 lib/gnunet/libgnunet_plugin_rest_gns.la
-lib/gnunet/libgnunet_plugin_rest_identity.la
 lib/gnunet/libgnunet_plugin_rest_namestore.la
 lib/gnunet/libgnunet_plugin_rest_peerinfo.la
 lib/gnunet/libgnunet_plugin_test.la
@@ -295,6 +293,14 @@ lib/libgnunettransportmonitor.la
 lib/libgnunettransporttesting.la
 lib/libgnunetutil.la
 lib/libgnunetvpn.la
+lib/libgnunet_plugin_rest_identity.a
+lib/libgnunet_plugin_rest_identity.la
+lib/libgnunet_plugin_rest_identity.so
+lib/libgnunettransportapplication.a
+lib/libgnunettransportapplication.la
+lib/libgnunettransportapplication.so
+lib/libgnunettransportapplication.so.0
+lib/libgnunettransportapplication.so.0.0.0
 lib/pkgconfig/gnunetarm.pc
 lib/pkgconfig/gnunetats.pc
 lib/pkgconfig/gnunetblock.pc
@@ -389,6 +395,8 @@ share/locale/it/LC_MESSAGES/gnunet.mo
 share/locale/sv/LC_MESSAGES/gnunet.mo
 share/locale/vi/LC_MESSAGES/gnunet.mo
 share/locale/zh_CN/LC_MESSAGES/gnunet.mo
+share/gnunet/services/openrc/gnunet.initd
+share/gnunet/services/systemd/gnunet.service
 ${PLIST.doc}info/gnunet-tutorial.info
 ${PLIST.doc}info/gnunet.info
 ${PLIST.doc}info/images/daemon_lego_block.png
@@ -425,6 +433,8 @@ ${PLIST.doc}info/images/service_lego_block.png
 ${PLIST.doc}info/images/service_lego_block.svg
 ${PLIST.doc}info/images/service_stack.png
 ${PLIST.doc}info/images/structure.dot
+${PLIST.doc}man/man1/gnunet-gns-proxy-setup-ca.1
+${PLIST.doc}man/man1/gnunet-nse.1
 ${PLIST.doc}man/man1/gnunet-arm.1
 ${PLIST.doc}man/man1/gnunet-ats.1
 ${PLIST.doc}man/man1/gnunet-auto-share.1
