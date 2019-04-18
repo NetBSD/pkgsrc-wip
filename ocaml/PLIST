@@ -1423,6 +1423,8 @@ ${PLIST.ocaml-opt}lib/ocaml/libasmrund.a
 ${PLIST.instrumented_runtime}${PLIST.ocaml-opt}lib/ocaml/libasmruni.a
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/libasmrunp.a
 lib/ocaml/libcamlrun.a
+lib/ocaml/libcamlrun_pic.a
+lib/ocaml/libcamlrun_shared.so
 lib/ocaml/libcamlrund.a
 ${PLIST.instrumented_runtime}lib/ocaml/libcamlruni.a
 lib/ocaml/libcamlstr.a
@@ -2347,6 +2349,7 @@ man/man3/Stdlib.String.3
 man/man3/Stdlib.StringLabels.3
 man/man3/Stdlib.Sys.3
 man/man3/Stdlib.Uchar.3
+man/man3/Stdlib.Unit.3
 man/man3/Stdlib.Weak.3
 man/man3/Str.3
 man/man3/Stream.3
