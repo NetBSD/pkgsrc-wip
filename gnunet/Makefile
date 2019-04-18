@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.11.0
+DISTNAME=		gnunet-0.11.3
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
-PKGREVISION=		1
 
 MAINTAINER=		ng0@n0.is
 HOMEPAGE=		https://gnunet.org/
@@ -85,14 +84,6 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-bluetooth ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-wlan ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-vpn ${SETUID_ROOT_PERMS}
-
-post-install:
-	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${WRKSRC}/src/util/gnunet-qr.py ${DESTDIR}${PREFIX}/bin
-	# XXX: Will be fixed in 0.11.1, rewritten in C.
-	# Technically this is no executable script anymore, as we call
-	# call it with the shell script. The warning thrown is harmless.
-	# https://gnunet.org/en/#gsoc2019
-	${CHMOD} -x ${DESTDIR}${PREFIX}/bin/gnunet-qr.py
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

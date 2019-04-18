@@ -14,9 +14,8 @@ PLIST_VARS+=			experimental
 # Parts of the testsuite require python3.7
 .if !empty(PKG_OPTIONS:Mtests)
 .include "../../lang/python/tool.mk"
-PYTHON_VERSIONS_ACCEPTED=	37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=	yes
-BUILD_DEPENDS+=		${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 .endif
 
 # build the doc output. XXX: See README.
