@@ -1,10 +1,10 @@
 $NetBSD$
 
-SHA1 (mosquitto-1.5.8.tar.gz) = b1b4e27c563000a35d5df11149b160cd42b58342
-RMD160 (mosquitto-1.5.8.tar.gz) = 3c84581f497fd8d191d8df5b6dc7658af650e711
-SHA512 (mosquitto-1.5.8.tar.gz) = 5cf2ae59077878be2784cc83fefe00fa3ff904646711545be519fc48557319c56dc7c15682fffc0dc42c530cdf59f550f25da9eec50a1a7deb222aa11bb669d3
-Size (mosquitto-1.5.8.tar.gz) = 442834 bytes
+SHA1 (mosquitto-1.6.0.tar.gz) = 37cb2cff316f8acef69ff139bdc08da7251d5232
+RMD160 (mosquitto-1.6.0.tar.gz) = adca791c1e796eb93b51d5cca909e2ccb3f1ae07
+SHA512 (mosquitto-1.6.0.tar.gz) = caa2eb5dae1a20a3da48d55ae2f141284ef80b9ec51adbb87f67ea1cc7ea09df5e39ea7b2993a2f88e2c7311c219f120b9cbd4e29faf5c070cc2212c5e411dfe
+Size (mosquitto-1.6.0.tar.gz) = 574988 bytes
 SHA1 (patch-CMakeLists.txt) = 34891235466aca2becd6072183298b8949a0a356
 SHA1 (patch-lib_CMakeLists.txt) = cddb8803a759820c8059028f924b56c22689ee54
-SHA1 (patch-mosquitto.conf) = faa7e77c30a58105bd678d510f1f545345f6ce0b
-SHA1 (patch-src_CMakeLists.txt) = 08aacc3da1ad69b2a132af3d405d109416a94434
+SHA1 (patch-mosquitto.conf) = bb1133a993f63351ec9768a3943301758ad28bce
+SHA1 (patch-src_CMakeLists.txt) = 2dc455267f2cbf0810062bf588ca1369d2ce06ef

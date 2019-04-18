@@ -2,11 +2,9 @@ $NetBSD$
 
 On NetBSD, don't use -ldl (why?).
 
-For uuid, insist on library, not just header (why?).
-
---- src/CMakeLists.txt.orig	2018-11-15 17:06:23.000000000 +0000
+--- src/CMakeLists.txt.orig	2019-04-17 19:54:00.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -129,6 +129,8 @@ endif (HAVE_GETADDRINFO_A)
+@@ -146,6 +146,8 @@ endif (HAVE_GETADDRINFO_A)
  if (UNIX)
  	if (APPLE)
  		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
@@ -15,18 +13,3 @@ For uuid, insist on library, not just header (why?).
      elseif(QNX)
          set(MOSQ_LIBS ${MOSQ_LIBS} m socket)
      else(APPLE)
-@@ -159,10 +161,11 @@ endif (${WITH_WEBSOCKETS} STREQUAL ON)
- # Simple detect libuuid
- if(NOT APPLE)
- 	FIND_PATH(UUID_HEADER uuid/uuid.h)
--	if (UUID_HEADER)
-+	FIND_LIBRARY(UUID_LIBRARY NAMES uuid)
-+	IF (UUID_HEADER AND UUID_LIBRARY)
- 		add_definitions(-DWITH_UUID)
--		set (MOSQ_LIBS ${MOSQ_LIBS} uuid)
--	endif (UUID_HEADER)
-+		set (MOSQ_LIBS ${MOSQ_LIBS} ${UUID_LIBRARY})
-+	endif (UUID_HEADER AND UUID_LIBRARY)
- endif(NOT APPLE)
- 
- add_executable(mosquitto ${MOSQ_SRCS})
