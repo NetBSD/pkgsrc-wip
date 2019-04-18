@@ -20,6 +20,7 @@ SHA1 (patch-sys_gllog_gl__extensions.cpp.m4) = eeb4961c611e86b8e7ebbe333667ff9e5
 SHA1 (patch-sys_linux_main.cpp) = 2f15b1c3b635fc5f32fccbbc7f6ba39da17d8327
 SHA1 (patch-sys_osx_DOOMController.mm) = 492c6555fb0550e6eb41617176574b8c616ff48d
 SHA1 (patch-sys_scons_SConscript.darkmod) = 076e5663f2b16b88892b49d10ec11278d9be98f5
+SHA1 (patch-sys_scons_SConscript.gl) = 89fd461e5f1ea2a299de77d011d0e13b85aac27c
 SHA1 (patch-sys_sys__local.cpp) = 265e7f1c8c42d33264272ff079778355da89184b
 SHA1 (patch-sys_sys__local.h) = 20eb3286e84c1be82fc67d51c3ef79612c3d119e
 SHA1 (patch-sys_sys__public.h) = 5549b99eb433a543d5f086e2ae9432ba3f08d714
