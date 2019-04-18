@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/thedarkmod.sh
+bin/thedarkmod
 libexec/thedarkmod
 share/applications/thedarkmod.desktop
 share/icons/hicolor/128x128/apps/thedarkmod.png
