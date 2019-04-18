@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.94 2019/02/28 12:32:39 tnn Exp $
 
-SHA1 (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = 8daf78aff6a3da671a6982d940f37b2882f1d66f
-RMD160 (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = 18eaa1a2298fe8d77f436a7eb3df2be2d89fe0e1
-SHA512 (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = fa2e602cb521f1a0b061dd3a5e576afd79b5a0fa20b8681d6e9be8648ff2aaa4ae4d0f446550717da580c335129ea4c10573ba2cc43e9fa3f24edfdf8b8a556c
-Size (xserver-6975807945d12c07f00e18df7fafeff43efa0267.tar.xz) = 3097956 bytes
+SHA1 (xserver-7f962c70b6d9c346477f23f6c15211e749110078.tar.xz) = 3e01a38088253c49124be76989a01b3d5011e76b
+RMD160 (xserver-7f962c70b6d9c346477f23f6c15211e749110078.tar.xz) = d4d19f15432df94e66b5725d471a1ea095bddcc4
+SHA512 (xserver-7f962c70b6d9c346477f23f6c15211e749110078.tar.xz) = b64293e6f37cd1c3d7d705945b8c9566b469fdad148efe0bd6c195c359195f41d1d0819137de62797400056fcdddc331dcd5259d37fe3dbae03b5f47fbeef413
+Size (xserver-7f962c70b6d9c346477f23f6c15211e749110078.tar.xz) = 3099188 bytes
 SHA1 (patch-Xext_xf86bigfont.c) = 0d8b9f84f3441764d990c0d7ee41dc34e5430cde
 SHA1 (patch-config_config-backends.h) = f44868caa51e972a76949f73ac6083640af2c351
 SHA1 (patch-config_config.c) = 5a3fe4cb6c2170335ab547f438386cff77a9c152
@@ -19,7 +19,7 @@ SHA1 (patch-hw_xfree86_common_xf86Config.c) = 904e192e3abf80e78e2afba0f589e51c25
 SHA1 (patch-hw_xfree86_common_xf86Configure.c) = 787d2de8fac99fa74c4d7460d286d545abf5d401
 SHA1 (patch-hw_xfree86_common_xf86Globals.c) = da35eb1c437eaffce0b8f8a3964e3a75631d8a73
 SHA1 (patch-hw_xfree86_common_xf86Helper.c) = 52a30f00fb95ee433ed6ba3b72073f3fc32259bd
-SHA1 (patch-hw_xfree86_common_xf86Xinput.c) = 5ad0c36fe68f87c853ac084640269e3b8f9370c9
+SHA1 (patch-hw_xfree86_common_xf86Xinput.c) = c35b0da7e340e15f2bf6858eb6aae68704f207b1
 SHA1 (patch-hw_xfree86_common_xf86pciBus.c) = 6d112060b0ebb2be8c93bf567d4a4904829af44b
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 475ea1956f2e71d684cf1e5a8a68b30279959a04
