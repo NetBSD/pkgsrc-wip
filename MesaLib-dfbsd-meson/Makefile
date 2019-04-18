@@ -1,7 +1,13 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-04-17	Add no_aos_sampling GALLIVM_PERF option
+COMMIT_ID=	829f278ad0042b0bb5026b10e7393fa3e11498b2
+
+# 2019-04-17	gallivm: fix saturated signed add / sub with llvm 9
+# COMMIT_ID=	dded2edf8bedb9a5bafd7788e52dc8e714527186
+
 # 2019-04-16	radeonsi/nir: fix scanning of bindless images
-COMMIT_ID=	3c5a9ab9f01d1d299eea1b99b9346c639fc30612
+# COMMIT_ID=	3c5a9ab9f01d1d299eea1b99b9346c639fc30612
 
 # 2019-04-16	iris: Add texture cache flushing hacks for blit and resource_copy_regionHEADmaster
 # COMMIT_ID=	c4478889b7176ea5aed52d1630bedb43797a00f0
@@ -11,30 +17,6 @@ COMMIT_ID=	3c5a9ab9f01d1d299eea1b99b9346c639fc30612
 
 # 2019-04-16	compiler/glsl: handle case where we have multiple users for types
 # COMMIT_ID=	624789e3708c87ea2a4c8d2266266b489b421cba
-
-# 2019-04-14	draw: fix building error in draw_gs_init()
-# COMMIT_ID=	1af7701666bea2d6f4d0d226f5efc2fa65103872
-
-# 2019-04-13	nir: add lower_ftrunc
-# COMMIT_ID=	b6bed115a5efb281b450c749418646b4ea2e7db7
-
-# 2019-04-12	v3d: Use the new lower_to_scratch implementation for indirects on temps.
-# COMMIT_ID=	dc402be73e4bbb9b43213a4266b98a46092e3038
-
-# 2019-04-10	lima: implement blit with util_blitter
-# COMMIT_ID=	a155c26a66d58d9283b314dce4dd2abb71355349
-
-# 2019-04-10	docs: update calendar, and news item and link release notes for 19.0.2
-# COMMIT_ID=	4122f55574f1184e73962135123be1899b1739db
-
-# 2019-04-10	gallium/aux: Report error if loading of a pipe driver fails.
-# COMMIT_ID=	6ec9733b9f16e94dc3b3a0e6f9e88bced6955e86
-
-# 2019-04-09	bin: drop unused import from install_megadrivers.py
-# COMMIT_ID=	eb699c15750f6e927e666bdd0ef2b6d6aff8a1b9
-
-# 2019-04-08	drisw: Try harder to probe whether MIT-SHM works
-# COMMIT_ID=	52426ce4a929f7e1389baf490967fc02357b3f5e
 
 PORTNAME=	mesa		
 

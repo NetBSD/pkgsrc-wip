@@ -40,8 +40,10 @@ PKG_SUPPORTED_OPTIONS+=		no_linear_alloc_destructor
 
 PKG_SUPPORTED_OPTIONS+=		invert_atomic_add_unless
 
-# PKG_SUGGESTED_OPTIONS+=		xvmc
+PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
+
+PKG_SUGGESTED_OPTIONS+=		osmesa
 
 # glesv1 and glesv2 build error on NetBSD
 # due to no table_noop_array for tls patch

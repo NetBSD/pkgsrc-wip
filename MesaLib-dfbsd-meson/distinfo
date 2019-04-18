@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.16 2019/02/22 15:40:35 tnn Exp $
 
-SHA1 (mesa-3c5a9ab9f01d1d299eea1b99b9346c639fc30612.tar.xz) = 3978b3ac7de30224597a93d3e34ef7a40b921c73
-RMD160 (mesa-3c5a9ab9f01d1d299eea1b99b9346c639fc30612.tar.xz) = 2ad43694458087c7ba7bb02f151c573a983fcf90
-SHA512 (mesa-3c5a9ab9f01d1d299eea1b99b9346c639fc30612.tar.xz) = 6c33f6bf2608cceb176eed042fecdb54b94597f7bf79885569c30ef87749d102a3419102ac4d10d6a7d123ea3b0edb286066bb06494a0adb94fb979421d9fefb
-Size (mesa-3c5a9ab9f01d1d299eea1b99b9346c639fc30612.tar.xz) = 10822044 bytes
+SHA1 (mesa-829f278ad0042b0bb5026b10e7393fa3e11498b2.tar.xz) = 392341257c672f0c118481e23bbc32badf5f1813
+RMD160 (mesa-829f278ad0042b0bb5026b10e7393fa3e11498b2.tar.xz) = 28eb2bdf011b1107c24c1d297fa04bf0c1edbfb1
+SHA512 (mesa-829f278ad0042b0bb5026b10e7393fa3e11498b2.tar.xz) = 6f616c3e71544289d6543f3232b0f2f9ce7e25f1cb1954de46e5000ae843bc567fdbc1b3f4c09ff9688c09f18bb42f45b1ef5f6553e7fa88153d961ea7af54c0
+Size (mesa-829f278ad0042b0bb5026b10e7393fa3e11498b2.tar.xz) = 10796708 bytes
 SHA1 (patch-include_GL_internal_dri__interface.h) = 76803a4ab6ff7e596900a0099dd9712093f8bc21
 SHA1 (patch-meson.build) = 3cd30902cd5af7bc860dd2984a51d9ebf051662e
 SHA1 (patch-meson__options.txt) = 171ac109444b0ce8ea37e53b72f529a4b5e5c6f6
@@ -51,6 +51,7 @@ SHA1 (patch-src_glx_glxcurrent.c) = 67142b977aadf23b0b0d3a06db3d9450e0b7f892
 SHA1 (patch-src_glx_glxext.c) = 1c044d38faebc310f49248a6b937b1bbc5a16870
 SHA1 (patch-src_intel_compiler_brw__fs__bank__conflicts.cpp) = 6276d2c6846bb4dd08699921bec4e20202a17478
 SHA1 (patch-src_intel_isl_isl__tiled__memcpy.c) = f019e47e535e2c2ab8d324937362a4c7965311f1
+SHA1 (patch-src_intel_perf_gen__perf.h) = 2915eb9dc7161d74d73b8e238dc1f0d0d9b82935
 SHA1 (patch-src_intel_tools_aub__mem.c) = 671e478a843b70c12c5038ad314c108925ab5cc7
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = 159b57f9a3c1fd37ab1e5b49ff911073e2e9ff9b
 SHA1 (patch-src_intel_tools_error2aub.c) = e38395e3889f6e3af645f312a429ce2a7d285231
@@ -68,7 +69,6 @@ SHA1 (patch-src_mapi_u__current.h) = 13e91936db8d468c4f4744eb5cc01ad879b53539
 SHA1 (patch-src_mapi_u__execmem.c) = 3b448405aeea0b17cfa58e8fe66708467b6eeb8a
 SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = fb9324dcbc8ffbc00bee6aedcc38db2e94b24f9d
 SHA1 (patch-src_mesa_drivers_dri_i965_brw__bufmgr.c) = 7a6edf46b9364bcdb2dbe8d70a2e6a1d0610dc40
-SHA1 (patch-src_mesa_drivers_dri_i965_brw__performance__query.c) = 9579ab29e0a913aa0516665e72a8573097932312
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 1b5de370add6984fb44968c055b7d8d5a54417dd
 SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = 4c0ca7dec2398a15f77b643d0f86af41ca202be3
 SHA1 (patch-src_mesa_main_context.c) = a7c796810104971e2fd76b15397d068e628f0a9e
