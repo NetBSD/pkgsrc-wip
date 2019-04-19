@@ -431,7 +431,6 @@ SUBDIR+=	clhep
 SUBDIR+=	cli-git
 SUBDIR+=	clic
 SUBDIR+=	cliquer
-SUBDIR+=	cliqz
 SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
 SUBDIR+=	clockspeed
