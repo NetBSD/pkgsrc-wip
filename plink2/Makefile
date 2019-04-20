@@ -59,8 +59,8 @@ post-install:
 
 # .include "../../wip/openblas/buildlink3.mk"
 # .include "../../math/blas/buildlink3.mk"
-.include "../../wip/cblas/buildlink3.mk"
 .include "../../wip/mk/blas.buildlink3.mk"
+.include "../../wip/cblas/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
