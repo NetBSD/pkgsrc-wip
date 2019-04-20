@@ -1796,6 +1796,7 @@ SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
 SUBDIR+=	libLLVM38
+SUBDIR+=	libaec
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
 SUBDIR+=	libansilove

@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libaec
+
+.if !defined(LIBAEC_BUILDLINK3_MK)
+LIBAEC_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libaec+=	libaec>=1.0.4
+BUILDLINK_PKGSRCDIR.libaec?=	../../wip/libaec
+.endif	# LIBAEC_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libaec
