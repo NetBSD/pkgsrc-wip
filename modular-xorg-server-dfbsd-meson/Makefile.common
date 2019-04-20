@@ -2,8 +2,11 @@
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
+# 2019-04-18	appveyor: Use ccache
+COMMIT_ID=	9c7ebf259f49f5e63906f572a1101747ac023b72
+
 # 2019-04-17	xsync: Add resource inside of SyncCreate, export SyncCreate
-COMMIT_ID=	7f962c70b6d9c346477f23f6c15211e749110078
+# COMMIT_ID=	7f962c70b6d9c346477f23f6c15211e749110078
 
 # 2019-04-17	Fix missing prototype warning for xf86_find_platform_device_by_devnum()
 # COMMIT_ID=	2764128e9fe775fabe28b0b9be427c16754e7128
