@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-04-18	iris: Be less aggressive at postdraw work skipping
+COMMIT_ID=	a913fbf124e201a8bf53fe8385619a71a6e9594b
+
 # 2019-04-17	Add no_aos_sampling GALLIVM_PERF option
-COMMIT_ID=	829f278ad0042b0bb5026b10e7393fa3e11498b2
+# COMMIT_ID=	829f278ad0042b0bb5026b10e7393fa3e11498b2
 
 # 2019-04-17	gallivm: fix saturated signed add / sub with llvm 9
 # COMMIT_ID=	dded2edf8bedb9a5bafd7788e52dc8e714527186
