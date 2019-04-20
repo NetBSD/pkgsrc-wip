@@ -26,24 +26,21 @@ CHECK_PORTABILITY_SKIP+=	build/mac-bundle/coyim-launcher.sh
 
 COYIM_ICON=		coyim.png
 COYIM_ICON_SRC=		${WRKSRC}/build/mac-bundle/coy.iconset/icon_32x32@2x.png
-COYIM_DESKTOP_SAMPLE=	${WRKSRC}/build/coyim.desktop.sample
 COYIM_DESKTOP=		${WRKSRC}/build/coyim.desktop
 
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 
-post-build:
-	${CP} ${COYIM_DESKTOP} ${COYIM_DESKTOP_SAMPLE}
-	${SED}  -e '/^#/d' \
-		-e '/^$$/d' \
-		< ${COYIM_DESKTOP_SAMPLE} \
-		> ${COYIM_DESKTOP}
-	${ECHO} "Exec=${PREFIX}/bin/coyim" >> ${COYIM_DESKTOP}
-	${ECHO} "Icon=${COYIM_ICON}" >> ${COYIM_DESKTOP}
+SUBST_CLASSES+=			desktop-entry
+SUBST_STAGE.desktop-entry=	post-build
+SUBST_MESSAGE.desktop-entry=	Create desktop entry.
+SUBST_FILES.desktop-entry=	${COYIM_DESKTOP}
+SUBST_SED.desktop-entry=	-e 's|\# Exec=/path/to/coyim/executable|Exec=${PREFIX}/bin/coyim|'
+SUBST_SED.desktop-entry+=	-e 's|\# Icon=/path/to/Coy.icns|Icon=${COYIM_ICON}|'
+SUBST_SED.desktop-entry+=	-e '/^\#/d'
+SUBST_SED.desktop-entry+=	-e '/^$$/d'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/coyim ${DESTDIR}${PREFIX}/bin
-
-post-install:
 	${INSTALL_DATA} ${COYIM_DESKTOP} ${DESTDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${COYIM_ICON_SRC} ${DESTDIR}${PREFIX}/share/pixmaps/${COYIM_ICON}
 
