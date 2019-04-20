@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-04-19	anv: Rework the descriptor set layout create loop
+COMMIT_ID=	828ec411545ee6cdcabe228002fca3e4c5d14274
+
 # 2019-04-18	iris: Be less aggressive at postdraw work skipping
-COMMIT_ID=	a913fbf124e201a8bf53fe8385619a71a6e9594b
+# COMMIT_ID=	a913fbf124e201a8bf53fe8385619a71a6e9594b
 
 # 2019-04-17	Add no_aos_sampling GALLIVM_PERF option
 # COMMIT_ID=	829f278ad0042b0bb5026b10e7393fa3e11498b2
