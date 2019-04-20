@@ -4,7 +4,7 @@
 # since they disappear immediately when new releases happen,
 # which is quite often.
 
-DISTNAME=	Mojolicious-8.07
+DISTNAME=	Mojolicious-8.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mojolicious/}
