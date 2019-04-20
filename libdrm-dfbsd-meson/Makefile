@@ -1,7 +1,13 @@
 # $NetBSD: Makefile,v 1.91 2019/01/22 21:50:47 wiz Exp $
 
+# 2019-04-19		Bump the version to 2.4.98
+COMMIT_ID=		be3b07617fc999e366e8185dbc7851ae5943df27
+
+# 2019-04-18		amdgpu: Add context priority override function.
+# COMMIT_ID=		232dc3305d55d199f4765968d299bfc2a249d920
+
 # 2019-04-17		tests/util: Add armada-drm driver
-COMMIT_ID=		0b474eab3dd37c09f7f05e55176fcaea76fb4f92
+# COMMIT_ID=		0b474eab3dd37c09f7f05e55176fcaea76fb4f92
 
 # 2019-04-12		amdgpu: Fix a structure initialization issueHEADmaster
 # COMMIT_ID=		fcf80e2fd7741c9140e5e2971f9742fe7a82f68e
@@ -30,7 +36,7 @@ COMMIT_ID=		0b474eab3dd37c09f7f05e55176fcaea76fb4f92
 PORTNAME=		drm
 
 DISTNAME=		${PORTNAME}-${COMMIT_ID}
-PKGNAME=		libdrm-2.4.97
+PKGNAME=		libdrm-2.4.98
 # PKGREVISION=	2
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://cgit.freedesktop.org/mesa/${PORTNAME}/snapshot/
