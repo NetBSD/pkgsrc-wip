@@ -434,6 +434,7 @@ SUBDIR+=	clic
 SUBDIR+=	cliquer
 SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
+SUBDIR+=	cloc
 SUBDIR+=	clockspeed
 SUBDIR+=	clustalx
 SUBDIR+=	cluster-admin

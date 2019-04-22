@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.3 2018/05/29 02:56:49 ginsbach Exp $
+
+SHA1 (cloc-1.80.tar.gz) = f78e173c9c8e70d8b65d15e2715f599a11b6c915
+RMD160 (cloc-1.80.tar.gz) = 6a1cdeb088e6793d917a9a26198d0aad3f093b99
+SHA512 (cloc-1.80.tar.gz) = 3f41a0e2bd4becbb393e24834c45d9998217443d5c6d0478be5ce4f9506bb8dcb44088ce4a2c75c06cb6af47b4432f3dc58db9009f9a350a00dd80802109117f
+Size (cloc-1.80.tar.gz) = 453965 bytes
+SHA1 (patch-Unix_Makefile) = b797a50124177380837d00ff72dd119c508c87c3
