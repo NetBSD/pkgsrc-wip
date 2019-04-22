@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-04-20	intel/fs: Add support for float16 to the fsign optimizations
+COMMIT_ID=	a6ccc4c0c893cfd978068f1d75ad0e001182b381
+
 # 2019-04-19	anv: Rework the descriptor set layout create loop
-COMMIT_ID=	828ec411545ee6cdcabe228002fca3e4c5d14274
+# COMMIT_ID=	828ec411545ee6cdcabe228002fca3e4c5d14274
 
 # 2019-04-18	iris: Be less aggressive at postdraw work skipping
 # COMMIT_ID=	a913fbf124e201a8bf53fe8385619a71a6e9594b
