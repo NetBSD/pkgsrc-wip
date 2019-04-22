@@ -2,7 +2,6 @@
 
 COMMENT=	WIP pkgsrc packages
 
-SUBDIR+=	.idea
 SUBDIR+=	0ad
 SUBDIR+=	0ad-data
 SUBDIR+=	389-ds-base
