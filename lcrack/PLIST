@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/27 23:44:02 poppnk Exp $
-bin/lcrack
-bin/mktbl
-bin/mkword
-bin/regex

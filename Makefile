@@ -1781,7 +1781,6 @@ SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
 SUBDIR+=	lci
 SUBDIR+=	lcov-git
-SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
 SUBDIR+=	ldapuseradd
