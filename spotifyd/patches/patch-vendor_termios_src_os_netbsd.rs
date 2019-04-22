@@ -4,10 +4,8 @@ Upstream PR is wip: https://github.com/dcuddeback/termios-rs/pull/22
 
 --- ../vendor/termios-0.2.2/src/os/netbsd.rs.orig	2019-01-30 09:50:04.014973707 +0000
 +++ ../vendor/termios-0.2.2/src/os/netbsd.rs
-@@ -0,0 +1,148 @@
+@@ -0,0 +1,153 @@
 +#![allow(non_camel_case_types)]
-+
-+extern crate libc;
 +
 +use libc::{c_int,c_uint,c_uchar};
 +
@@ -47,6 +45,8 @@ Upstream PR is wip: https://github.com/dcuddeback/termios-rs/pull/22
 +pub const VDISCARD: usize = 15;
 +pub const VMIN:     usize = 16;
 +pub const VTIME:    usize = 17;
++pub const VSTATUS:  usize = 18;
++// 19 is "spare"
 +
 +// c_iflag bits
 +pub const IGNBRK:  tcflag_t = 0x00000001;
@@ -66,12 +66,11 @@ Upstream PR is wip: https://github.com/dcuddeback/termios-rs/pull/22
 +// c_oflag bits
 +pub const OPOST:  tcflag_t = 0x00000001;
 +pub const ONLCR:  tcflag_t = 0x00000002;
-+pub const TAB3:   tcflag_t = 0x00000004;
-+pub const OXTABS: tcflag_t = TAB3;
++pub const OXTABS: tcflag_t = 0x00000004;
 +pub const ONOEOT: tcflag_t = 0x00000008;
 +pub const OCRNL:  tcflag_t = 0x00000010;
-+pub const ONOCR:  tcflag_t = 0x00000040;
-+pub const ONLRET: tcflag_t = 0x00000080;
++pub const ONOCR:  tcflag_t = 0x00000020;
++pub const ONLRET: tcflag_t = 0x00000040;
 +
 +// c_cflag bits
 +pub const CIGNORE:    tcflag_t = 0x00000001;
@@ -90,6 +89,10 @@ Upstream PR is wip: https://github.com/dcuddeback/termios-rs/pull/22
 +pub const CRTS_IFLOW: tcflag_t = CRTSCTS;
 +pub const CCTS_OFLOW: tcflag_t = CRTSCTS;
 +pub const MDMBUF:     tcflag_t = 0x00100000;
++// NetBSD defines CHFLOW as this:
++// pub const CHFLOW:     tcflag_t = (MDMBUF|CRTSCTS|CDTRCTS);
++// Pick one and be consistent with above
++pub const CHFLOW:     tcflag_t = CRTSCTS;
 +
 +// c_lflag bits
 +pub const ECHOKE:     tcflag_t = 0x00000001;
@@ -134,6 +137,8 @@ Upstream PR is wip: https://github.com/dcuddeback/termios-rs/pull/22
 +pub const B76800:  speed_t = 76800;
 +pub const B115200: speed_t = 115200;
 +pub const B230400: speed_t = 230400;
++pub const B460800: speed_t = 460800;
++pub const B921600: speed_t = 921600;
 +pub const EXTA:    speed_t = 19200;
 +pub const EXTB:    speed_t = 38400;
 +
