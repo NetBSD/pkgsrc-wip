@@ -2,6 +2,7 @@
 
 VERSION=	1.6.0
 DISTNAME=	mosquitto-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
 
@@ -44,6 +45,7 @@ post-install:
 	${INSTALL_DATA}	${WRKSRC}/pskfile.example ${WRKSRC}/pwfile.example ${WRKSRC}/mosquitto.conf ${WRKSRC}/aclfile.example ${DESTDIR}${PREFIX}/share/examples/mosquitto
 
 .include "../../devel/libuuid/buildlink3.mk"
+.include "../../devel/uthash/buildlink3.mk"
 # ?needed
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
