@@ -480,7 +480,6 @@ SUBDIR+=	courierpassd
 SUBDIR+=	coverity-analysis-bin
 SUBDIR+=	cowpatty
 SUBDIR+=	coxeter
-SUBDIR+=	coyim
 SUBDIR+=	cpdup
 SUBDIR+=	cpluff
 SUBDIR+=	cpm
