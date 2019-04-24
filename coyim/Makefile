@@ -44,15 +44,11 @@ do-install:
 	${INSTALL_DATA} ${COYIM_DESKTOP} ${DESTDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${COYIM_ICON_SRC} ${DESTDIR}${PREFIX}/share/pixmaps/${COYIM_ICON}
 
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.31.13
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=		pango>=1.22.0
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=		gtk3+>=3.1.9
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../devel/go-golang-lru/buildlink3.mk"
