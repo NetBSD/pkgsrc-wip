@@ -11,8 +11,11 @@ COMMENT=	The python chemistry library you were waiting for
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.4:../../devel/py-nose
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-BROKEN=		"downloads during build (distribute_setup.py)"
+pre-configure:
+	# Verify that no fetching is done during build
+	${RM} ${WRKSRC}/distribute_setup.py
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
