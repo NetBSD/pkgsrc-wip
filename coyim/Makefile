@@ -6,9 +6,9 @@ CATEGORIES=	chat
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
-MAINTAINER=	fox@NetBSD.org
-HOMEPAGE=	https://github.com/coyim/coyim
-COMMENT=	Safe and secure chat client
+MAINTAINER=	support@coy.im
+HOMEPAGE=	https://coy.im/
+COMMENT=	Safe and secure by default chat client
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config gmake
