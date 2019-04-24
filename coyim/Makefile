@@ -39,6 +39,8 @@ SUBST_SED.desktop-entry+=	-e 's|\# Icon=/path/to/Coy.icns|Icon=${COYIM_ICON}|'
 SUBST_SED.desktop-entry+=	-e '/^\#/d'
 SUBST_SED.desktop-entry+=	-e '/^$$/d'
 
+CHECK_RELRO_SKIP=	bin/coyim
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/coyim ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${COYIM_DESKTOP} ${DESTDIR}${PREFIX}/share/applications/
