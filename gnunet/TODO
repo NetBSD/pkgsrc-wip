@@ -4,3 +4,4 @@
   bluetooth subsystem
 * Package libgabe and libpbc for experimental features
 * Package gnunet-qr dependencies
+* package glade-3.22.1 for gnunet-gtk (separate package)
