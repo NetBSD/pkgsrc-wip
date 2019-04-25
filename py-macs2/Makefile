@@ -40,6 +40,6 @@ post-patch:
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../wip/mk/blas.buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
