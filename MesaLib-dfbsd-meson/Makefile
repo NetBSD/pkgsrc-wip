@@ -1,31 +1,25 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
-# 2019-04-20	intel/fs: Add support for float16 to the fsign optimizations
-COMMIT_ID=	a6ccc4c0c893cfd978068f1d75ad0e001182b381
+# 2019-04-24	i965: fix icelake performance query enabling
+COMMIT_ID=	f15409ee5539579c227fa916d410945b0516d712
 
-# 2019-04-19	anv: Rework the descriptor set layout create loop
-# COMMIT_ID=	828ec411545ee6cdcabe228002fca3e4c5d14274
+# 2019-04-24	iris: Split iris_flush_and_dirty_for_history into two helpers.
+# COMMIT_ID=	21688a306b299ae7214f4fb139a6813e0018c0a8
 
-# 2019-04-18	iris: Be less aggressive at postdraw work skipping
-# COMMIT_ID=	a913fbf124e201a8bf53fe8385619a71a6e9594b
+# 2019-04-23	intel/isl: Resize clear color buffer to full cacheline
+# COMMIT_ID=	f2041d2a9266ec14270b6da9bf9ce2b54d555ebd
 
-# 2019-04-17	Add no_aos_sampling GALLIVM_PERF option
-# COMMIT_ID=	829f278ad0042b0bb5026b10e7393fa3e11498b2
+# 2019-04-23	intel/fs: Fix D to W conversion in opt_combine_constants
+# COMMIT_ID=	21223acf7d5b39e5eb2b248330519cdbee3e63e8
 
-# 2019-04-17	gallivm: fix saturated signed add / sub with llvm 9
-# COMMIT_ID=	dded2edf8bedb9a5bafd7788e52dc8e714527186
+# 2019-04-23	gallium: replace drm_driver_descriptor::configuration with driconf_xml
+# COMMIT_ID=	d8b296d3ad96cb04ee57234a0b1a6a046e08a1a7
 
-# 2019-04-16	radeonsi/nir: fix scanning of bindless images
-# COMMIT_ID=	3c5a9ab9f01d1d299eea1b99b9346c639fc30612
+# 2019-04-23	st/mesa/radeonsi: fix race between destruction of types and shader compilation
+# COMMIT_ID=	a6b7068ff5fbf4694a45a6e07adac5047e574514
 
-# 2019-04-16	iris: Add texture cache flushing hacks for blit and resource_copy_regionHEADmaster
-# COMMIT_ID=	c4478889b7176ea5aed52d1630bedb43797a00f0
-
-# 2019-04-16	winsys/amdgpu: don't set GTT with GDS & OA placements on APUs
-# COMMIT_ID=	4f715868a94b2c43656b3574b876bd254757521b
-
-# 2019-04-16	compiler/glsl: handle case where we have multiple users for types
-# COMMIT_ID=	624789e3708c87ea2a4c8d2266266b489b421cba
+# 2019-04-23	radv: Add adaptive_sync driconfig option and enable it by default.
+# COMMIT_ID=	3844ed8d44677588bc29d470d0b41ef7816591b
 
 PORTNAME=	mesa		
 

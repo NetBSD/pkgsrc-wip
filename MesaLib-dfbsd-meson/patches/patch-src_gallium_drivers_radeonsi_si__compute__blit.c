@@ -5,7 +5,7 @@ Commit: 9b331e462e5021d994859756d46cd2519d9c9c6e
 
 https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2519d9c9c6e
 
---- src/gallium/drivers/radeonsi/si_compute_blit.c.orig	2019-02-09 12:52:15.000000000 +0000
+--- src/gallium/drivers/radeonsi/si_compute_blit.c.orig	2019-04-23 07:24:08.000000000 +0000
 +++ src/gallium/drivers/radeonsi/si_compute_blit.c
 @@ -34,10 +34,17 @@ static enum si_cache_policy get_cache_po
  					     enum si_coherency coher,
@@ -25,9 +25,9 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
  
  	return L2_BYPASS;
  }
-@@ -180,6 +187,52 @@ void si_clear_buffer(struct si_context *
- 		     uint64_t offset, uint64_t size, uint32_t *clear_value,
- 		     uint32_t clear_value_size, enum si_coherency coher)
+@@ -189,6 +196,52 @@ void si_clear_buffer(struct si_context *
+ 		     uint32_t clear_value_size, enum si_coherency coher,
+ 		     bool force_cpdma)
  {
 +#if defined(REVERT_COPY_CLEAR)
 +
@@ -78,7 +78,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
  	if (!size)
  		return;
  
-@@ -258,6 +311,7 @@ void si_clear_buffer(struct si_context *
+@@ -268,6 +321,7 @@ void si_clear_buffer(struct si_context *
  		offset += aligned_size;
  		size -= aligned_size;
  	}
@@ -86,7 +86,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
  
  	/* Handle non-dword alignment. */
  	if (size) {
-@@ -275,8 +329,61 @@ static void si_pipe_clear_buffer(struct 
+@@ -285,8 +339,61 @@ static void si_pipe_clear_buffer(struct 
  				 const void *clear_value,
  				 int clear_value_size)
  {
@@ -140,15 +140,15 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
 +	}
 +
 +	si_clear_buffer(sctx, dst, offset, size, &dword_value,
-+			clear_value_size, SI_COHERENCY_SHADER);
++			clear_value_size, SI_COHERENCY_SHADER, false);
 +#else
  	si_clear_buffer((struct si_context*)ctx, dst, offset, size, (uint32_t*)clear_value,
- 			clear_value_size, SI_COHERENCY_SHADER);
+ 			clear_value_size, SI_COHERENCY_SHADER, false);
 +#endif
  }
  
  void si_copy_buffer(struct si_context *sctx,
-@@ -289,6 +396,17 @@ void si_copy_buffer(struct si_context *s
+@@ -299,6 +406,17 @@ void si_copy_buffer(struct si_context *s
  	enum si_coherency coher = SI_COHERENCY_SHADER;
  	enum si_cache_policy cache_policy = get_cache_policy(sctx, coher, size);
  
@@ -166,7 +166,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
  	/* Only use compute for VRAM copies on dGPUs. */
  	if (sctx->screen->info.has_dedicated_vram &&
  	    si_resource(dst)->domains & RADEON_DOMAIN_VRAM &&
-@@ -301,6 +419,7 @@ void si_copy_buffer(struct si_context *s
+@@ -311,6 +429,7 @@ void si_copy_buffer(struct si_context *s
  		si_cp_dma_copy_buffer(sctx, dst, src, dst_offset, src_offset, size,
  				      0, coher, cache_policy);
  	}
