@@ -49,23 +49,23 @@ _BLAS_TYPE=     ${BLAS_TYPE}
 _BLAS_TYPE=     none
 .  endif
 
-.if $(_BLAS_TYPE) == "netlib"
+.if ${_BLAS_TYPE} == "netlib"
 _BLAS_PACKAGE=	wip/lapack
 BLAS_LIBS=	-lblas
 LAPACK_LIBS=	-llapack ${BLAS_LIBS}
-.elif $(_BLAS_TYPE) == "openblas"
+.elif ${_BLAS_TYPE} == "openblas"
 _BLAS_PACKAGE=	wip/openblas
 BLAS_LIBS=	-lopenblas
 LAPACK_LIBS=	${BLAS_LIBS}
-.elif $(_BLAS_TYPE) == "openblas_pthread"
+.elif ${_BLAS_TYPE} == "openblas_pthread"
 _BLAS_PACKAGE=	wip/openblas_pthread
 BLAS_LIBS=	-lopenblas_pthread
 LAPACK_LIBS=	${BLAS_LIBS}
-.elif $(_BLAS_TYPE) == "openblas_openmp"
+.elif ${_BLAS_TYPE} == "openblas_openmp"
 _BLAS_PACKAGE=	wip/openblas_openmp
 BLAS_LIBS=	-lopenblas_openmp
 LAPACK_LIBS=	${BLAS_LIBS}
-.elif $(_BLAS_TYPE) == "accelerate.framework"
+.elif ${_BLAS_TYPE} == "accelerate.framework"
 BLAS_LIBS=	-framework Accelerate
 LAPACK_LIBS=	${BLAS_LIBS}
 # TODO: atlas
