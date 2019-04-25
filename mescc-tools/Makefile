@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mescc-tools-Release_0.5.2
+DISTNAME=	mescc-tools-Release_0.6.1
 PKGNAME=	${DISTNAME:S/Release_//}
 CATEGORIES=	devel
 MASTER_SITES=	http://git.savannah.nongnu.org/cgit/mescc-tools.git/snapshot/
@@ -13,7 +13,7 @@ USE_TOOLS=	gmake
 
 NO_CONFIGURE=	YES
 
-WRKSRC=	${WRKDIR}/mescc-tools-Release_0.5.2
+WRKSRC=	${WRKDIR}/mescc-tools-Release_0.6.1
 
 MAKE_FILE=	makefile
 INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}

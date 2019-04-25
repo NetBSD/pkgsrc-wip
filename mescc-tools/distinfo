@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mescc-tools-Release_0.5.2.tar.gz) = 8e68cdddca7c363192ce5486647dc42ce3687d73
-RMD160 (mescc-tools-Release_0.5.2.tar.gz) = 9000ed192d0e9451fab2db02e246a875041b6bd4
-SHA512 (mescc-tools-Release_0.5.2.tar.gz) = 0afd55ef464a7ad98173e89254f2bc48cf904c0794c43b9c9127d2b8bb62206202bf882096b5c72b9afd6747820c49fce6fa22922c706708d089343043197721
-Size (mescc-tools-Release_0.5.2.tar.gz) = 76759 bytes
+SHA1 (mescc-tools-Release_0.6.1.tar.gz) = ce99d73ea2fff2079c4936f7d8dbf2384a75eaf4
+RMD160 (mescc-tools-Release_0.6.1.tar.gz) = 31011a19da17cd9821be914d102aae7e7cfd4a0a
+SHA512 (mescc-tools-Release_0.6.1.tar.gz) = 61edb9f1102e3020b0e235e2391f58293985fef82dadfe4cff41c66bcc0f8f9f85b893f84ea56c798831ec738085d534ef2c27391e091a679293177b7441d45e
+Size (mescc-tools-Release_0.6.1.tar.gz) = 121370 bytes
