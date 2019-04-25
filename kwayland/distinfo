@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (kwayland-5.47.0.tar.xz) = e4a709c48b4745690bbba6150111bfe430e947fb
-RMD160 (kwayland-5.47.0.tar.xz) = 74f9a25df5aec8545a0363d67ab379aef11d5783
-SHA512 (kwayland-5.47.0.tar.xz) = 208cfcd6b94ba154e5a1892746d904c79cdf199179fb40f37384a252ff57abd2bfc1419ab0b4066494d25f69b6afd3afb4a809e323730f82059ec2c04a0e3086
-Size (kwayland-5.47.0.tar.xz) = 308952 bytes
-SHA1 (patch-CMakeLists.txt) = 01003ad8ad25cbe965ff860c938e5771d0ec97e0
+SHA1 (kwayland-5.57.0.tar.xz) = be59cc806827cab195ef5d08cf1f1dcb5013a5f2
+RMD160 (kwayland-5.57.0.tar.xz) = 6a4b7697d058e173576540871641c440252c1ce8
+SHA512 (kwayland-5.57.0.tar.xz) = 95caf19c0add3f853de7c330b070adb8c9012b4abd84bd235852cc9c3b8795981e5d113f893e4022bb3d3844391f27c8237fb66981bd80a465ec0388331e4fec
+Size (kwayland-5.57.0.tar.xz) = 340180 bytes

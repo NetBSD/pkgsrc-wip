@@ -10,6 +10,8 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	pkg-config
+# Don't do autotests.  Some builds are linux specific.
+CMAKE_ARGS+=	-DBUILD_TESTING=no
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
