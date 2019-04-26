@@ -4,7 +4,7 @@ From FreeBSD ports graphics/mesa-dri 18.1.4.
 
 - Without sysinfo() fall back to sysconf()
 
---- src/gallium/drivers/freedreno/freedreno_screen.c.orig	2018-07-13 18:41:27.000000000 +0000
+--- src/gallium/drivers/freedreno/freedreno_screen.c.orig	2019-04-25 21:13:31.000000000 +0000
 +++ src/gallium/drivers/freedreno/freedreno_screen.c
 @@ -43,7 +43,11 @@
  #include <errno.h>
@@ -18,8 +18,8 @@ From FreeBSD ports graphics/mesa-dri 18.1.4.
  
  #include "freedreno_screen.h"
  #include "freedreno_resource.h"
-@@ -837,9 +841,13 @@ fd_screen_create(struct fd_device *dev)
- 		screen->priority_mask = (1 << val) - 1;
+@@ -832,9 +836,13 @@ fd_screen_create(struct fd_device *dev,
+ 		screen->has_robustness = val;
  	}
  
 +#ifdef __GLIBC__

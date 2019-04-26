@@ -1,25 +1,13 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
-# 2019-04-24	i965: fix icelake performance query enabling
-COMMIT_ID=	f15409ee5539579c227fa916d410945b0516d712
+# 2019-04-25	nir: fix bit_size in lower indirect derefs.
+COMMIT_ID=	d946cbe9f54a1b733e0bdec2423ae47d408114fb
 
-# 2019-04-24	iris: Split iris_flush_and_dirty_for_history into two helpers.
-# COMMIT_ID=	21688a306b299ae7214f4fb139a6813e0018c0a8
+# 2019-04-25	glsl: fix shader_storage_blocks_write_access for SSBO block arrays (v2)
+# COMMIT_ID=	c5f65bfe6c9b82925d65ba677664cfc063a9b96c
 
-# 2019-04-23	intel/isl: Resize clear color buffer to full cacheline
-# COMMIT_ID=	f2041d2a9266ec14270b6da9bf9ce2b54d555ebd
-
-# 2019-04-23	intel/fs: Fix D to W conversion in opt_combine_constants
-# COMMIT_ID=	21223acf7d5b39e5eb2b248330519cdbee3e63e8
-
-# 2019-04-23	gallium: replace drm_driver_descriptor::configuration with driconf_xml
-# COMMIT_ID=	d8b296d3ad96cb04ee57234a0b1a6a046e08a1a7
-
-# 2019-04-23	st/mesa/radeonsi: fix race between destruction of types and shader compilation
-# COMMIT_ID=	a6b7068ff5fbf4694a45a6e07adac5047e574514
-
-# 2019-04-23	radv: Add adaptive_sync driconfig option and enable it by default.
-# COMMIT_ID=	3844ed8d44677588bc29d470d0b41ef7816591b
+# 2019-04-25	freedreno/a6xx: sample-shading support
+# COMMIT_ID=	7a57cfbed695c48915fdb3d7bec37505d3f18e81
 
 PORTNAME=	mesa		
 

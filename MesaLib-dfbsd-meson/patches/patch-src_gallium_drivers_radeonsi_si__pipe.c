@@ -18,9 +18,9 @@ radeonsi: use SDMA for uploading data through const_uploader
 
 https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb9059747782a72a7
 
---- src/gallium/drivers/radeonsi/si_pipe.c.orig	2019-04-08 23:50:24.000000000 +0000
+--- src/gallium/drivers/radeonsi/si_pipe.c.orig	2019-04-25 21:13:31.000000000 +0000
 +++ src/gallium/drivers/radeonsi/si_pipe.c
-@@ -198,10 +198,12 @@ static void si_destroy_context(struct pi
+@@ -200,10 +200,12 @@ static void si_destroy_context(struct pi
  		sctx->b.delete_vs_state(&sctx->b, sctx->vs_blit_color_layered);
  	if (sctx->vs_blit_texcoord)
  		sctx->b.delete_vs_state(&sctx->b, sctx->vs_blit_texcoord);
@@ -33,7 +33,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  	if (sctx->cs_copy_image)
  		sctx->b.delete_compute_state(&sctx->b, sctx->cs_copy_image);
  	if (sctx->cs_copy_image_1d_array)
-@@ -381,7 +383,11 @@ static void si_set_context_param(struct 
+@@ -383,7 +385,11 @@ static void si_set_context_param(struct
  }
  
  static struct pipe_context *si_create_context(struct pipe_screen *screen,
@@ -45,7 +45,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  {
  	struct si_context *sctx = CALLOC_STRUCT(si_context);
  	struct si_screen* sscreen = (struct si_screen *)screen;
-@@ -399,7 +405,11 @@ static struct pipe_context *si_create_co
+@@ -401,7 +407,11 @@ static struct pipe_context *si_create_co
  		sscreen->record_llvm_ir = true; /* racy but not critical */
  
  	sctx->b.screen = screen; /* this must be set first */
@@ -57,7 +57,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  	sctx->b.destroy = si_destroy_context;
  	sctx->screen = sscreen; /* Easy accessing of screen/winsys. */
  	sctx->is_debug = (flags & PIPE_CONTEXT_DEBUG) != 0;
-@@ -457,8 +467,13 @@ static struct pipe_context *si_create_co
+@@ -459,8 +469,13 @@ static struct pipe_context *si_create_co
  						   sctx, stop_exec_on_failure);
  	}
  
@@ -71,7 +71,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  						 0, PIPE_USAGE_DEFAULT,
  						 SI_RESOURCE_FLAG_32BIT |
  						 (use_sdma_upload ?
-@@ -650,6 +665,7 @@ fail:
+@@ -655,6 +670,7 @@ fail:
  	return NULL;
  }
  
@@ -79,7 +79,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  static struct pipe_context *si_pipe_create_context(struct pipe_screen *screen,
  						   void *priv, unsigned flags)
  {
-@@ -680,6 +696,7 @@ static struct pipe_context *si_pipe_crea
+@@ -685,6 +701,7 @@ static struct pipe_context *si_pipe_crea
  				       sscreen->info.drm_major >= 3 ? si_create_fence : NULL,
  				       &((struct si_context*)ctx)->tc);
  }
@@ -87,7 +87,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  
  /*
   * pipe_screen
-@@ -903,7 +920,11 @@ struct pipe_screen *radeonsi_screen_crea
+@@ -920,7 +937,11 @@ struct pipe_screen *radeonsi_screen_crea
  						       debug_options, 0);
  
  	/* Set functions first. */
@@ -99,15 +99,17 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=edbd2c1ff559cde1d9e22a9fb90597
  	sscreen->b.destroy = si_destroy_screen;
  	sscreen->b.set_max_shader_compiler_threads =
  		si_set_max_shader_compiler_threads;
-@@ -1177,7 +1198,11 @@ struct pipe_screen *radeonsi_screen_crea
+@@ -1200,8 +1221,13 @@ struct pipe_screen *radeonsi_screen_crea
  		si_init_compiler(sscreen, &sscreen->compiler_lowp[i]);
  
  	/* Create the auxiliary context. This must be done last. */
 +#if defined(REVERT_THREADED_CONTEXT)
-+	sscreen->aux_context = sscreen->b.context_create(&sscreen->b, NULL, 0);
++	sscreen->aux_context = sscreen->b.context_create(
++		&sscreen->b, NULL, sscreen->options.aux_debug ? PIPE_CONTEXT_DEBUG : 0);
 +#else
- 	sscreen->aux_context = si_create_context(&sscreen->b, 0);
+ 	sscreen->aux_context = si_create_context(
+ 		&sscreen->b, sscreen->options.aux_debug ? PIPE_CONTEXT_DEBUG : 0);
 +#endif
- 
- 	if (sscreen->debug_flags & DBG(TEST_DMA))
- 		si_test_dma(sscreen);
+ 	if (sscreen->options.aux_debug) {
+ 		struct u_log_context *log = CALLOC_STRUCT(u_log_context);
+ 		u_log_context_init(log);
