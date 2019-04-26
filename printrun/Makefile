@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.pronterface.com/
 COMMENT=	3D printing host suite
 LICENSE=	gnu-gpl-v3
 
-#PYTHON_VERSIONS_ACCEPTED=	36 35 34 27
+#PYTHON_VERSIONS_ACCEPTED=	36 27
 PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools

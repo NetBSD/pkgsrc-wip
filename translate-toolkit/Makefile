@@ -33,8 +33,6 @@ DEPENDS+=	${PYPKGPREFIX}-diff-match-patch>=0:../../textproc/py-diff-match-patch/
 USE_TOOLS+=	bash:run
 REPLACE_BASH=	tools/*
 
-PYTHON_VERSIONS_ACCEPTED=	37 36 35 34 27
-
 # We do not want to setup a build env to translate
 # Firefox and Firefox Mobile.
 post-extract:

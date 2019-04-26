@@ -14,8 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.3:../../textproc/py-sphinx
 
 GNU_CONFIGURE=	NO
 
-PYTHON_VERSIONS_ACCEPTED= 37 36 35 34 27
-
 post-extract:
 	${MV} ${WRKSRC}/src/scripts/cysignals-CSI ${WRKSRC}/src/scripts/cysignals-CSI${PYVERSSUFFIX}
 
