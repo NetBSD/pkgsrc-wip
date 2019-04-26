@@ -1,0 +1,16 @@
+- Firstly these patches aren't needed on 64 bit system. Needed on 32bit system
+  only. Further these are just quick fixes. Can be improved and shared
+  upstream.
+
+     patch-src_acl_external_kerberos__ldap__group_support__resolv.cc
+     patch-src_fs_ufs_RebuildState.h
+
+- Need to get rc script related code from squid3 makefile
+
+- Need to get (at least) those options available in squid3 here (first checking
+  whether each one is still supported)
+
+- ssl option needs to be checked for compatibility with NetBSD >= 8.99 as ssl
+  has been upgraded
+
+- Other cosmetics
