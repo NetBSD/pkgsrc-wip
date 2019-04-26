@@ -30,6 +30,8 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-thread-safety-analysis
 
 INSTALLATION_DIRS=	lib include/libepoll-shim/sys
 
+MAKE_ENV+=		INSTPRIV=-U
+
 post-install:
 	cp ${WRKSRC}/include/sys/*.h ${DESTDIR}${PREFIX}/include/libepoll-shim/sys
 
