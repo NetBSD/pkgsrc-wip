@@ -2,7 +2,7 @@ $NetBSD$
 
 BSD support from FreeBSD
 
---- src/wayland-server.c.orig	2017-08-08 18:20:52 UTC
+--- src/wayland-server.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ src/wayland-server.c
 @@ -25,6 +25,8 @@
  
@@ -43,7 +43,17 @@ BSD support from FreeBSD
  	int error;
  	struct wl_priv_signal resource_created_signal;
  };
-@@ -501,10 +518,20 @@ wl_client_create(struct wl_display *disp
+@@ -312,7 +329,8 @@ wl_resource_post_error(struct wl_resourc
+ static void
+ destroy_client_with_error(struct wl_client *client, const char *reason)
+ {
+-	wl_log("%s (pid %u)\n", reason, client->ucred.pid);
++	wl_log("Destroying with error: %s\n", reason);
++	//wl_log("%s (pid %u)\n", reason, client->ucred.pid);
+ 	wl_client_destroy(client);
+ }
+ 
+@@ -526,10 +544,20 @@ wl_client_create(struct wl_display *disp
  	if (!client->source)
  		goto err_client;
  
@@ -64,7 +74,7 @@ BSD support from FreeBSD
  
  	client->connection = wl_connection_create(fd);
  	if (client->connection == NULL)
-@@ -558,12 +585,23 @@ WL_EXPORT void
+@@ -583,12 +611,23 @@ WL_EXPORT void
  wl_client_get_credentials(struct wl_client *client,
  			  pid_t *pid, uid_t *uid, gid_t *gid)
  {

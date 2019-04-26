@@ -1,8 +1,6 @@
 $NetBSD$
 
-BSD support from FreeBSD
-
---- tests/test-runner.c.orig	2017-08-08 18:20:52 UTC
+--- tests/test-runner.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ tests/test-runner.c
 @@ -25,6 +25,12 @@
  
@@ -17,44 +15,36 @@ BSD support from FreeBSD
  #include <unistd.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -37,19 +43,36 @@
+@@ -37,13 +43,28 @@
  #include <errno.h>
  #include <limits.h>
  #include <sys/ptrace.h>
-+#ifdef __linux__
++#ifdef HAVE_SYS_PRCTL_H
  #include <sys/prctl.h>
 +#endif
++#include <signal.h>
  #ifndef PR_SET_PTRACER
  # define PR_SET_PTRACER 0x59616d61
  #endif
-+#include <signal.h>
  
  #include "test-runner.h"
  
- static int num_alloc;
-+
-+extern const struct test __start_test_section, __stop_test_section;
-+
-+/* This is all disabled for FreeBSD because it gives "can't allocate initial
-+ * thread" aborts otherwise. */
-+#ifndef __FreeBSD__
- static void* (*sys_malloc)(size_t);
- static void (*sys_free)(void*);
- static void* (*sys_realloc)(void*, size_t);
- static void* (*sys_calloc)(size_t, size_t);
-+#endif
- 
-+#ifdef __FreeBSD__
-+/* XXX review ptrace() usage */
++#ifndef PTRACE_ATTACH
 +#define PTRACE_ATTACH PT_ATTACH
++#endif
++
++#ifndef PTRACE_CONT
 +#define PTRACE_CONT PT_CONTINUE
++#endif
++
++#ifndef PTRACE_DETACH
 +#define PTRACE_DETACH PT_DETACH
 +#endif
 +
- /* when set to 1, check if tests are not leaking memory and opened files.
+ /* when set to 1, check if tests are not leaking opened files.
   * It is turned on by default. It can be turned off by
   * WAYLAND_TEST_NO_LEAK_CHECK environment variable. */
-@@ -57,7 +80,7 @@ int leak_check_enabled;
+@@ -51,7 +72,7 @@ int fd_leak_check_enabled;
  
  /* when this var is set to 0, every call to test_set_timeout() is
   * suppressed - handy when debugging the test. Can be set by
@@ -63,23 +53,7 @@ BSD support from FreeBSD
  static int timeouts_enabled = 1;
  
  /* set to one if the output goes to the terminal */
-@@ -65,6 +88,7 @@ static int is_atty = 0;
- 
- extern const struct test __start_test_section, __stop_test_section;
- 
-+#ifndef __FreeBSD__
- __attribute__ ((visibility("default"))) void *
- malloc(size_t size)
- {
-@@ -98,6 +122,7 @@ calloc(size_t nmemb, size_t size)
- 
- 	return sys_calloc(nmemb, size);
- }
-+#endif
- 
- static const struct test *
- find_test(const char *name)
-@@ -292,6 +317,8 @@ is_debugger_attached(void)
+@@ -239,6 +260,8 @@ is_debugger_attached(void)
  		return 0;
  	}
  
@@ -88,7 +62,7 @@ BSD support from FreeBSD
  	pid = fork();
  	if (pid == -1) {
  		perror("fork");
-@@ -312,7 +339,7 @@ is_debugger_attached(void)
+@@ -259,13 +282,14 @@ is_debugger_attached(void)
  			_exit(1);
  		if (!waitpid(-1, NULL, 0))
  			_exit(1);
@@ -97,48 +71,35 @@ BSD support from FreeBSD
  		ptrace(PTRACE_DETACH, ppid, NULL, NULL);
  		_exit(0);
  	} else {
-@@ -346,17 +373,19 @@ int main(int argc, char *argv[])
- 	const struct test *t;
- 	pid_t pid;
- 	int total, pass;
-+#ifdef HAVE_WAITID
- 	siginfo_t info;
-+#else
-+	int status;
-+#endif
+ 		close(pipefd[0]);
  
-+#ifndef __FreeBSD__
- 	/* Load system malloc, free, and realloc */
- 	sys_calloc = dlsym(RTLD_NEXT, "calloc");
- 	sys_realloc = dlsym(RTLD_NEXT, "realloc");
- 	sys_malloc = dlsym(RTLD_NEXT, "malloc");
- 	sys_free = dlsym(RTLD_NEXT, "free");
+ 		/* Enable child to ptrace the parent process */
++#if defined(HAVE_PRCTL)
+ 		rc = prctl(PR_SET_PTRACER, pid);
+ 		if (rc != 0 && errno != EINVAL) {
+ 			/* An error prevents us from telling if a debugger is attached.
+@@ -275,7 +299,9 @@ is_debugger_attached(void)
+ 			 */
+ 			perror("prctl");
+ 			write(pipefd[1], "-", 1);
+-		} else {
++		} else
++#endif
++		{
+ 			/* Signal to client that parent is ready by passing '+' */
+ 			write(pipefd[1], "+", 1);
+ 		}
+@@ -295,9 +321,6 @@ int main(int argc, char *argv[])
+ 	int total, pass;
+ 	siginfo_t info;
  
 -	if (isatty(fileno(stderr)))
 -		is_atty = 1;
 -
  	if (is_debugger_attached()) {
- 		leak_check_enabled = 0;
+ 		fd_leak_check_enabled = 0;
  		timeouts_enabled = 0;
-@@ -364,7 +393,17 @@ int main(int argc, char *argv[])
- 		leak_check_enabled = !getenv("WAYLAND_TEST_NO_LEAK_CHECK");
- 		timeouts_enabled = !getenv("WAYLAND_TEST_NO_TIMEOUTS");
- 	}
-+#else
-+	/* Disable leak checking on FreeBSD since we can't override malloc().  */
-+	leak_check_enabled = 0;
-+	/* XXX review later */
-+	timeouts_enabled = 0;
-+#endif
- 
-+	if (isatty(fileno(stderr)))
-+		is_atty = 1;
-+
-+
- 	if (argc == 2 && strcmp(argv[1], "--help") == 0)
- 		usage(argv[0], EXIT_SUCCESS);
- 
-@@ -395,7 +434,8 @@ int main(int argc, char *argv[])
+@@ -336,7 +359,8 @@ int main(int argc, char *argv[])
  		if (pid == 0)
  			run_test(t); /* never returns */
  
@@ -148,7 +109,7 @@ BSD support from FreeBSD
  			stderr_set_color(RED);
  			fprintf(stderr, "waitid failed: %m\n");
  			stderr_reset_color();
-@@ -426,6 +466,25 @@ int main(int argc, char *argv[])
+@@ -367,6 +391,25 @@ int main(int argc, char *argv[])
  
  			break;
  		}

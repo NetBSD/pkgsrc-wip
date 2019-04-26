@@ -1,12 +1,10 @@
-$NetBSD$
-
-BSD support from FreeBSD
-
---- tests/test-helpers.c.orig	2015-07-06 19:38:51 UTC
+--- tests/test-helpers.c.orig	2018-08-24 18:04:36 UTC
 +++ tests/test-helpers.c
-@@ -23,6 +23,12 @@
-  * SOFTWARE.
-  */
+--- tests/test-helpers.c.orig	2019-03-21 00:55:25.000000000 +0000
++++ tests/test-helpers.c
+@@ -25,6 +25,12 @@
+ 
+ #include "config.h"
  
 +#include "../config.h"
 +
@@ -17,7 +15,7 @@ BSD support from FreeBSD
  #include <assert.h>
  #include <errno.h>
  #include <dirent.h>
-@@ -32,6 +38,16 @@
+@@ -40,6 +46,16 @@
  
  #include "test-runner.h"
  
@@ -34,7 +32,7 @@ BSD support from FreeBSD
  int
  count_open_fds(void)
  {
-@@ -39,8 +55,8 @@ count_open_fds(void)
+@@ -47,8 +63,8 @@ count_open_fds(void)
  	struct dirent *ent;
  	int count = 0;
  
@@ -45,7 +43,7 @@ BSD support from FreeBSD
  
  	errno = 0;
  	while ((ent = readdir(dir))) {
-@@ -49,7 +65,7 @@ count_open_fds(void)
+@@ -57,7 +73,7 @@ count_open_fds(void)
  			continue;
  		count++;
  	}

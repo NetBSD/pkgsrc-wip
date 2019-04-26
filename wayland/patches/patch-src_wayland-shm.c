@@ -1,8 +1,6 @@
-$NetBSD$
-
-BSD support from FreeBSD
-
---- src/wayland-shm.c.orig	2017-08-08 18:20:52 UTC
+--- src/wayland-shm.c.orig	2018-04-09 17:19:26 UTC
++++ src/wayland-shm.c
+--- src/wayland-shm.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ src/wayland-shm.c
 @@ -30,6 +30,8 @@
  
@@ -49,7 +47,7 @@ BSD support from FreeBSD
  	if (data == MAP_FAILED) {
  		wl_resource_post_error(pool->resource,
  				       WL_SHM_ERROR_INVALID_FD,
-@@ -110,6 +124,10 @@ shm_pool_unref(struct wl_shm_pool *pool, bool external
+@@ -110,6 +124,10 @@ shm_pool_unref(struct wl_shm_pool *pool,
  	if (pool->internal_refcount + pool->external_refcount)
  		return;
  
@@ -60,7 +58,7 @@ BSD support from FreeBSD
  	munmap(pool->data, pool->size);
  	free(pool);
  }
-@@ -223,6 +241,73 @@ shm_pool_destroy(struct wl_client *client, struct wl_r
+@@ -223,6 +241,73 @@ shm_pool_destroy(struct wl_client *clien
  	wl_resource_destroy(resource);
  }
  
@@ -134,8 +132,8 @@ BSD support from FreeBSD
  static void
  shm_pool_resize(struct wl_client *client, struct wl_resource *resource,
  		int32_t size)
-@@ -284,7 +369,14 @@ shm_create_pool(struct wl_client *client, struct wl_re
- 				       "failed mmap fd %d", fd);
+@@ -284,7 +369,14 @@ shm_create_pool(struct wl_client *client
+ 				       "failed mmap fd %d: %m", fd);
  		goto err_free;
  	}
 +

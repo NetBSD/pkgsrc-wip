@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	wayland-1.14.0
+DISTNAME=	wayland-1.17.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://wayland.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz

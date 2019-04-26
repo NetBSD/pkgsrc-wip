@@ -1,10 +1,8 @@
 $NetBSD$
 
-BSD support from FreeBSD
-
---- Makefile.am.orig	2017-05-05 11:54:01 UTC
+--- Makefile.am.orig	2019-03-21 00:55:25.000000000 +0000
 +++ Makefile.am
-@@ -73,7 +73,7 @@ nodist_include_HEADERS =			\
+@@ -71,7 +71,7 @@ nodist_include_HEADERS =			\
  	protocol/wayland-client-protocol.h
  
  libwayland_server_la_CFLAGS = $(FFI_CFLAGS) $(AM_CFLAGS) -pthread
@@ -13,7 +11,7 @@ BSD support from FreeBSD
  libwayland_server_la_LDFLAGS = -version-info 1:0:1
  libwayland_server_la_SOURCES =			\
  	src/wayland-server.c			\
-@@ -85,7 +85,7 @@ nodist_libwayland_server_la_SOURCES =		\
+@@ -83,7 +83,7 @@ nodist_libwayland_server_la_SOURCES =		\
  	protocol/wayland-protocol.c
  
  libwayland_client_la_CFLAGS = $(FFI_CFLAGS) $(AM_CFLAGS) -pthread
@@ -22,30 +20,12 @@ BSD support from FreeBSD
  libwayland_client_la_LDFLAGS = -version-info 3:0:3
  libwayland_client_la_SOURCES =			\
  	src/wayland-client.c
-@@ -180,12 +180,12 @@ AM_TESTS_ENVIRONMENT =							\
- TESTS = $(built_test_programs)			\
- 	tests/scanner-test.sh
- 
--noinst_PROGRAMS =				\
--	$(built_test_programs)			\
--	exec-fd-leak-checker			\
--	fixed-benchmark
-+#noinst_PROGRAMS =				\
-+#	$(built_test_programs)			\
-+#	exec-fd-leak-checker			\
-+#	fixed-benchmark
- 
--noinst_LTLIBRARIES += libtest-runner.la
-+#noinst_LTLIBRARIES += libtest-runner.la
- 
- libtest_runner_la_SOURCES =			\
- 	tests/test-runner.c			\
-@@ -198,7 +198,7 @@ libtest_runner_la_LIBADD =			\
- 	libwayland-util.la			\
+@@ -227,7 +227,7 @@ libtest_runner_la_LIBADD =			\
  	libwayland-client.la			\
  	libwayland-server.la			\
+ 	libtest-helpers.la			\
 -	-lrt -ldl $(FFI_LIBS)
 +	-lrt $(DL_LIBS) $(FFI_LIBS) $(EPOLLSHIM_LIBS)
  
- 
  array_test_SOURCES = tests/array-test.c
+ array_test_LDADD = libtest-runner.la
