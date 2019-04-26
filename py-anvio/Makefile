@@ -64,7 +64,7 @@ REPLACE.R.old=          /usr/bin/env Rscript
 REPLACE.R.new=          ${PREFIX}/bin/R
 REPLACE_FILES.R=        ${REPLACE_R}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PV=		5.2
 

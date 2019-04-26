@@ -26,8 +26,6 @@ SUBST_MESSAGE.setup=	Fixing hardcoded paths in setup.py
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup+=	-e 's,share/man,${PKGMANDIR},g'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	35	# py-pdfrw
-
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

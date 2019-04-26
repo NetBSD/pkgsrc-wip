@@ -18,7 +18,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/snakemake
 COMMENT=	Reduce the complexity of creating workflows
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PV=		5.2.0
 

@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 34
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

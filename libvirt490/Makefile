@@ -19,7 +19,7 @@ USE_LIBTOOL=            yes
 
 #BUILD_DEFS+=           VARBASE
 
-#PYTHON_VERSIONS_INCOMPATIBLE=  34 35 36 37 # py-xml
+#PYTHON_VERSIONS_INCOMPATIBLE=  36 37 # py-xml
 
 #PY_PATCHPLIST=         yes
 #REPLACE_PYTHON+=       docs/apibuild.py

@@ -39,8 +39,6 @@ DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.6.1:../../math/py-statsmodels
 DEPENDS+=	${PYPKGPREFIX}-tables>=3.3.0:../../math/py-tables
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34
-
 BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.22.1
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"

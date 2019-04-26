@@ -15,7 +15,5 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.6.0:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.0:../../textproc/py-toml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

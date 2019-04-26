@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-xarray>=1.1.0:../../wip/py-xarray
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 37 36 35 34 27
-
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
