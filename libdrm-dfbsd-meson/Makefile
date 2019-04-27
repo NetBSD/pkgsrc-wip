@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.91 2019/01/22 21:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2019/04/23 09:51:47 wiz Exp $
+
+# 2019-04-25		tests/libkms-test-plane: fix possbile memory leak
+COMMIT_ID=		6a7d1329dbcc898f51173885db08d36c80bb5f20
 
 # 2019-04-19		Bump the version to 2.4.98
-COMMIT_ID=		be3b07617fc999e366e8185dbc7851ae5943df27
+# COMMIT_ID=		be3b07617fc999e366e8185dbc7851ae5943df27
 
 # 2019-04-18		amdgpu: Add context priority override function.
 # COMMIT_ID=		232dc3305d55d199f4765968d299bfc2a249d920
