@@ -1,5 +1,4 @@
 # $NetBSD$
-#
 
 DISTNAME=		glade-3.22.1
 CATEGORIES=		devel
@@ -11,10 +10,13 @@ HOMEPAGE=		https://glade.gnome.org/
 COMMENT=		User interface builder for the GTK3+ toolkit
 LICENSE=		gnu-gpl-v2
 
-USE_PKGLOCALEDIR=	yes
+TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt
-GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	data/gladeui-2.0.pc.in
 
