@@ -4,3 +4,5 @@ SHA1 (khotkeys-5.12.4.tar.xz) = 0905c317459f52fb64055f05dd5b4c9914c37749
 RMD160 (khotkeys-5.12.4.tar.xz) = a94e85457138294c60236f4f6224ee0fabe59a65
 SHA512 (khotkeys-5.12.4.tar.xz) = dacf62abbd13ce37b308f797ca9c6fac740f0ae950c5ee7abd96eb561e6b5b817fd0ccd72b4d5d0ca1fe5a77bec4f1d14c9426877ebcb6cd852a5aa3441b49a4
 Size (khotkeys-5.12.4.tar.xz) = 1058428 bytes
+SHA1 (patch-CMakeLists.txt) = 76c5d572dce339d106ecee11952e28e7de9a2fb0
+SHA1 (patch-config-X11.h.cmake) = 896b0c53e14c0150d9003cca36046e36befa95e0
