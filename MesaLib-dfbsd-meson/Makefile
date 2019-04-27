@@ -1,7 +1,16 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-04-26	vc4: Fall back to renderonly if the vc4 driver doesn't have v3d.
+COMMIT_ID=	edb04953c8b8520108f333b1e289f18719a7d597
+
+# 2019-04-26	swr/rast: enforce use of tile offsets
+# COMMIT_ID=	8bfb34fd0adf23fdb73cf5e4253b42cb2da58188
+
+# 2019-04-26	llvmpipe: Always return some fence in flush (v2)
+# COMMIT_ID=	e8bf4efcebf0d860dec3a38be3388aba035b0d1b
+
 # 2019-04-25	nir: fix bit_size in lower indirect derefs.
-COMMIT_ID=	d946cbe9f54a1b733e0bdec2423ae47d408114fb
+# COMMIT_ID=	d946cbe9f54a1b733e0bdec2423ae47d408114fb
 
 # 2019-04-25	glsl: fix shader_storage_blocks_write_access for SSBO block arrays (v2)
 # COMMIT_ID=	c5f65bfe6c9b82925d65ba677664cfc063a9b96c
