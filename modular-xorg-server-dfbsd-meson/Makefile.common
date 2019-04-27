@@ -2,8 +2,14 @@
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
+# 2019-04-23	hw/xwayland/Makefile.am: fix build without glx
+COMMIT_ID=	836f93de99b35050d78d61d3654f7c5655184144
+
+# 2019-04-19	ephyr: fix typo: rquires -> requires
+# COMMIT_ID=	0854732d55a76cdb584306e8e653c2bcd292a7cb
+
 # 2019-04-18	appveyor: Use ccache
-COMMIT_ID=	9c7ebf259f49f5e63906f572a1101747ac023b72
+# COMMIT_ID=	9c7ebf259f49f5e63906f572a1101747ac023b72
 
 # 2019-04-17	xsync: Add resource inside of SyncCreate, export SyncCreate
 # COMMIT_ID=	7f962c70b6d9c346477f23f6c15211e749110078
