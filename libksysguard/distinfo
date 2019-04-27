@@ -7,4 +7,4 @@ Size (libksysguard-5.12.4.tar.xz) = 567216 bytes
 SHA1 (patch-ksgrd_SensorManager.cpp) = 90390178e85106f936bb0bcb49ae184b50ae52dc
 SHA1 (patch-processcore_CMakeLists.txt) = 97f9bf250847fb79545c87e9ec8f1a80f49be338
 SHA1 (patch-processcore_processes.cpp) = d2d0feb9334e4a2a5845c263ba51615f48356d0c
-SHA1 (patch-processcore_processes__netbsd__p.cpp) = e69a3775effc375bb8eb5dfdc0cb4622d4c3aeb1
+SHA1 (patch-processcore_processes__netbsd__p.cpp) = 348e06a3ffde214a880fbcda1ff9d73c57741897
