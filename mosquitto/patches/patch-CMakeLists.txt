@@ -1,39 +1,18 @@
 $NetBSD$
 
-In cmake build, adjust paths to pkgsrc norms.  (Originally from
-OpenBSD.)
+Adjust pkgconfig installation location to lib, not share.
 
-The main point (but not using examples for sysconf) is filed upstream as:
-https://github.com/eclipse/mosquitto/issues/1049
-
---- CMakeLists.txt.orig	2018-09-25 15:27:43.000000000 +0000
+--- CMakeLists.txt.orig	2019-04-26 16:07:59.000000000 +0000
 +++ CMakeLists.txt
-@@ -15,6 +15,8 @@ set (VERSION 1.5.3)
+@@ -108,9 +114,9 @@ install(FILES mosquitto.conf aclfile.exa
+ # ========================================
  
- add_definitions (-DCMAKE -DVERSION=\"${VERSION}\")
+ configure_file(libmosquitto.pc.in libmosquitto.pc @ONLY)
+-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquitto.pc" DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig")
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquitto.pc" DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
+ configure_file(libmosquittopp.pc.in libmosquittopp.pc @ONLY)
+-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquittopp.pc" DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig")
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquittopp.pc" DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
  
-+include(GNUInstallDirs)
-+
- if (WIN32)
- 	set (BINDIR .)
- 	set (SBINDIR .)
-@@ -30,17 +32,12 @@ if (WIN32)
- else (WIN32)
- 	set (BINDIR bin)
- 	set (SBINDIR sbin)
--	if ("${CMAKE_INSTALL_PREFIX}" STREQUAL /usr)
--		set (SYSCONFDIR /etc/mosquitto)
--	else ("${CMAKE_INSTALL_PREFIX}" STREQUAL /usr)
--		set (SYSCONFDIR etc/mosquitto)
--	endif ("${CMAKE_INSTALL_PREFIX}" STREQUAL /usr)
-+	set (SYSCONFDIR "${DATAROOTDIR}/examples/mosquitto")
- 	
- 	set (LIBDIR lib${LIB_SUFFIX})
--	set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${LIBDIR}")
- 	set (INCLUDEDIR include)
- 	set (DATAROOTDIR share)
--	set (MANDIR "${DATAROOTDIR}/man")
-+	set (MANDIR ${CMAKE_INSTALL_MANDIR})
- 	set (SHAREDIR "${DATAROOTDIR}/mosquitto")
- 	set (PKGCONFIGDIR "${LIBDIR}/pkgconfig")
- endif (WIN32)
+ # ========================================
+ # Testing

@@ -1,8 +1,7 @@
 # $NetBSD$
 
-VERSION=	1.6.0
+VERSION=	1.6.1
 DISTNAME=	mosquitto-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
 
@@ -19,6 +18,8 @@ USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
+CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
+
 # config.mk is in theory used by only the non-cmake build.  Remove it,
 # to force a failure if it somehow becomes used.
 pre-configure:
@@ -29,20 +30,6 @@ CONF_FILES=	${PREFIX}/share/examples/mosquitto/pskfile.example \
 		${PREFIX}/share/examples/mosquitto/pwfile.example \
 		${PREFIX}/share/examples/mosquitto/mosquitto.conf \
 		${PREFIX}/share/examples/mosquitto/aclfile.example
-
-# The upstream code uses ldconfig.
-# https://github.com/eclipse/mosquitto/issues/1048
-SUBST_CLASSES+=			ldconfig
-SUBST_STAGE.ldconfig=		pre-configure
-SUBST_MESSAGE.ldconfig=		Removing non-portable ldconfig invocations
-SUBST_FILES.ldconfig=		lib/CMakeLists.txt \
-				lib/cpp/CMakeLists.txt \
-				src/CMakeLists.txt
-SUBST_SED.ldconfig=		-E -e '/EXEC_PROGRAM\(\/sbin\/ldconfig/d'
-
-post-install:
-	mkdir ${DESTDIR}${PREFIX}/share/examples/mosquitto
-	${INSTALL_DATA}	${WRKSRC}/pskfile.example ${WRKSRC}/pwfile.example ${WRKSRC}/mosquitto.conf ${WRKSRC}/aclfile.example ${DESTDIR}${PREFIX}/share/examples/mosquitto
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"
