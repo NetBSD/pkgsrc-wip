@@ -1,7 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	restic-0.9.4
-PKGREVISION=	1
+PKGNAME=	restic-0.9.5
 DISTNAME=	restic-${GITHUB_TAG}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
