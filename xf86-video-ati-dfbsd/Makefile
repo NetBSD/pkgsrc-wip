@@ -1,16 +1,13 @@
 # $NetBSD: Makefile,v 1.49 2019/03/19 23:51:46 wiz Exp $
 
+# 2019-04-24	Retry get_fb_ptr in get_fb
+COMMIT_ID=	d1d8e3c8d0a0a0394d395eba171460501745209b
+
 # 2019-03-19	Bump version for 19.0.1 release
-COMMIT_ID=	36703f66c3b06875651606a6280d5dc9d9dad51e
+# COMMIT_ID=	36703f66c3b06875651606a6280d5dc9d9dad51e
 
 # 2019-03-15	modesetting: add tile property support
 # COMMIT_ID=	4407c78bd86da4460ee07a15a365e07d99e0dd27
-
-# 2019-03-08	Revert "glamor: Avoid glamor_create_pixmap for pixmaps backing windows"
-### COMMIT_ID=	f6cd4a67d7de5d3ff1a6e58a8c83749fc8ffc310
-
-# 2019-03-06	Bump version for 19.0.0 release
-# COMMIT_ID=	0d132d99e0b750896a78f47d73a8639680495d8c
 
 PORTNAME=	xf86-video-ati
 
