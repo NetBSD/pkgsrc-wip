@@ -20,16 +20,15 @@ USE_TOOLS+=	gmake
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
 
-# config.mk is in theory used by only the non-cmake build.  Remove it,
-# to force a failure if it somehow becomes used.
-pre-configure:
-	${RM} ${WRKSRC}/config.mk
-
 # \todo Resolve what is an example vs. what might be used.
 CONF_FILES=	${PREFIX}/share/examples/mosquitto/pskfile.example \
 		${PREFIX}/share/examples/mosquitto/pwfile.example \
 		${PREFIX}/share/examples/mosquitto/mosquitto.conf \
 		${PREFIX}/share/examples/mosquitto/aclfile.example
+
+# Fails; see https://github.com/eclipse/mosquitto/issues/1242
+TEST_TARGET=	test
+.include "../../devel/cunit/buildlink3.mk"
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"

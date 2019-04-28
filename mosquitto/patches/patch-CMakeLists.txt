@@ -6,7 +6,7 @@ Sent upstream via email 20190427.
 
 --- CMakeLists.txt.orig	2019-04-26 16:07:59.000000000 +0000
 +++ CMakeLists.txt
-@@ -108,9 +114,9 @@ install(FILES mosquitto.conf aclfile.exa
+@@ -108,12 +108,12 @@ install(FILES mosquitto.conf aclfile.exa
  # ========================================
  
  configure_file(libmosquitto.pc.in libmosquitto.pc @ONLY)
@@ -18,3 +18,7 @@ Sent upstream via email 20190427.
  
  # ========================================
  # Testing
+ # ========================================
+ enable_testing()
+-add_test("test" make -C ${mosquitto_SOURCE_DIR}/test test)
++add_test("test" gmake -C ${mosquitto_SOURCE_DIR}/test test)
