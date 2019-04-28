@@ -1077,7 +1077,6 @@ SUBDIR+=	gjots2
 SUBDIR+=	gjs
 SUBDIR+=	gksu
 SUBDIR+=	gl2ps
-SUBDIR+=	glade2-nognome
 SUBDIR+=	gle
 SUBDIR+=	glib-java
 SUBDIR+=	glib2
