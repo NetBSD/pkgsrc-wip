@@ -17,22 +17,38 @@ Add missing dependencies, and fix CFLAGS and LDFLAGS for GL and GLU.
  # SDL
  #
  SDL_CFLAGS = `sdl-config --cflags`
-@@ -67,10 +73,10 @@ OUTFILE = $(BIN_DIR)/Supermodel
+@@ -65,12 +71,10 @@ OUTFILE = $(BIN_DIR)/Supermodel
+ # Compiler and Linker
+ ###############################################################################
  
- CC = gcc
- LD = gcc
+-CC = gcc
+-LD = gcc
 -COMPILER_FLAGS = $(SDL_CFLAGS) -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall -O3
-+COMPILER_FLAGS = $(GLU_CFLAGS) $(SDL_CFLAGS) -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall -O3
- CFLAGS = $(COMPILER_FLAGS)
- CPPFLAGS = $(COMPILER_FLAGS)
+-CFLAGS = $(COMPILER_FLAGS)
+-CPPFLAGS = $(COMPILER_FLAGS)
 -LFLAGS = -o $(OUTFILE) $(SDL_LIBFLAGS) -lGL -lGLU -lz -lm -lstdc++
-+LFLAGS = -o $(OUTFILE) $(GLU_LIBFLAGS) $(SDL_LIBFLAGS) -lGL -lGLU -lz -lm -lstdc++
++COMPILER_FLAGS = $(GLU_CFLAGS) $(SDL_CFLAGS) -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall
++CFLAGS += $(COMPILER_FLAGS)
++CPPFLAGS = $(CXXFLAGS) $(COMPILER_FLAGS) -std=c++98
++LFLAGS = $(LDFLAGS) -o $(OUTFILE) $(GLU_LIBFLAGS) $(SDL_LIBFLAGS) -lGL -lGLU -lz -lm -lstdc++
  
  #
  # Build options...
-@@ -138,7 +144,7 @@ $(OBJ_DIR)/m68kmake: Src/CPU/68K/Musashi
+@@ -116,7 +120,7 @@ endif
+ # Targets
+ #
+ all:	$(BIN_DIR) $(OBJ_DIR) $(OBJ)
+-	$(LD) $(OBJ_LIBS) $(OBJ) $(LFLAGS)
++	$(CC) $(OBJ_LIBS) $(OBJ) $(LFLAGS)
+ 
+ $(BIN_DIR):
+ 	mkdir $(BIN_DIR) 
+@@ -136,9 +140,9 @@ clean:	
+ #
+ $(OBJ_DIR)/m68kmake: Src/CPU/68K/Musashi/m68kmake.c
  	$(CC) $< $(CFLAGS) -o $(OBJ_DIR)/m68kmake.o
- 	$(LD) $(OBJ_DIR)/m68kmake.o -o $(OBJ_DIR)/m68kmake
+-	$(LD) $(OBJ_DIR)/m68kmake.o -o $(OBJ_DIR)/m68kmake
++	$(CC) $(OBJ_DIR)/m68kmake.o -o $(OBJ_DIR)/m68kmake
  	
 -$(OBJ_DIR)/m68kops.h: $(OBJ_DIR)/m68kmake Src/CPU/68K/Musashi/m68k_in.c
 +$(OBJ_DIR)/m68kops.h $(OBJ_DIR)/m68kopnz.c $(OBJ_DIR)/m68kopdm.c $(OBJ_DIR)/m68kopac.c $(OBJ_DIR)/m68kops.c: $(OBJ_DIR)/m68kmake Src/CPU/68K/Musashi/m68k_in.c

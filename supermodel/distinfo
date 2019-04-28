@@ -3,5 +3,5 @@ $NetBSD: distinfo,v 1.3 2012/12/20 14:30:46 othyro Exp $
 SHA1 (Supermodel_0.2a_Src.zip) = 0ad2348708cf5792ff727ff85bf36b5b51cc3c2f
 RMD160 (Supermodel_0.2a_Src.zip) = 14955e324410ba793f28132fc6e1d7f595a77e15
 Size (Supermodel_0.2a_Src.zip) = 1029004 bytes
-SHA1 (patch-Makefiles_Makefile.SDL.UNIX.GCC) = 1d6b4882d43c9c78c175a1e7c70b69b0d3611b32
+SHA1 (patch-Makefiles_Makefile.SDL.UNIX.GCC) = b22c8a250ea1c774e972f74dc11ef7e64a4ca512
 SHA1 (patch-Src_Pkgs_ioapi.h) = 4f9560ffdd0b76d032aaf4a798b4d9ad8582e3b4
