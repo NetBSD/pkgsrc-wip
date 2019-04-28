@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-04-27	radv: add missing VEGA20 chip in radv_get_device_name()
+COMMIT_ID=	07745f94948874c875dac924e055a11ee96beb5b
+
 # 2019-04-26	vc4: Fall back to renderonly if the vc4 driver doesn't have v3d.
-COMMIT_ID=	edb04953c8b8520108f333b1e289f18719a7d597
+# COMMIT_ID=	edb04953c8b8520108f333b1e289f18719a7d597
 
 # 2019-04-26	swr/rast: enforce use of tile offsets
 # COMMIT_ID=	8bfb34fd0adf23fdb73cf5e4253b42cb2da58188
