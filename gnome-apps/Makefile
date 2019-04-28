@@ -26,7 +26,7 @@ DEPENDS+=	file-roller>=3.16.2:../../archivers/file-roller
 #DEPENDS+=	four-in-a-row>=3.16.2:../../devel/four-in-a-row
 DEPENDS+=	gedit>=3.16.1:../../editors/gedit3
 DEPENDS+=	gitg>=3.16.1:../../wip/gitg
-DEPENDS+=	glade>=3.18.3:../../devel/glade3
+DEPENDS+=	glade>=3.18.3:../../devel/glade
 #DEPENDS+=	gnome-boxes>=3.16.2:../../devel/gnome-boxes
 #DEPENDS+=	gnome-calendar>=3.16.2:../../devel/gnome-calendar
 #DEPENDS+=	gnome-characters>=3.16.2:../../devel/gnome-characters
