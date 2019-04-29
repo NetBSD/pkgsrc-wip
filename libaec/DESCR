@@ -8,8 +8,4 @@ coded by grouping exponents and mantissa.
 Libaec implements Golomb-Rice coding as defined in the Space Data System
 Standard documents 121.0-B-2 and 120.0-G-2.
 
-Libaec includes a free drop-in replacement for the SZIP library. Just
-replace SZIP's shared library libsz.so* with libaec.so* and libsz.so*
-from libaec. Code which is dynamically linked with SZIP such as HDF5 should
-continue to work with libaec. No re-compilation required. HDF5 files which
-contain SZIP encoded data can be decoded by HDF5 using libaec and vice versa.
+Libaec includes a free drop-in replacement for the SZIP library.
