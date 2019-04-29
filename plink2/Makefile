@@ -35,7 +35,7 @@ CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 
 # MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas"
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -llapack -lcblas -lblas"
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lcblas ${BLAS_LIBS}"
 # Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
