@@ -4788,7 +4788,6 @@ SUBDIR+=	usbmuxd
 SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
-SUBDIR+=	uthash
 SUBDIR+=	util-linux
 SUBDIR+=	uzbl
 SUBDIR+=	uzbl-git
