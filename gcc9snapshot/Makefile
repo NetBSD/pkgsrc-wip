@@ -6,7 +6,7 @@ GCC_PKGNAME=		gcc9snapshot
 DISTNAME=	gcc-${GCC9S_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC9S_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
-## lang/gcc7-libs needs to be bump to be at least 1 more than the
+## lang/gcc9-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
 CATEGORIES=	lang
 #MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC9S_DIST_VERSION}/}
@@ -21,13 +21,13 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
-NOT_FOR_PLATFORM=	Interix-*-*
-
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # too many unknown options
+
 ## Build outside ${WRKSRC}
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}

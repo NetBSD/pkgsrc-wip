@@ -6,22 +6,17 @@ PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
 			gcc-graphite gcc-inplace-math
 
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	nls
-.elif ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	nls
-.elif ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	nls
-.elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
-.else
-.endif
+PKG_SUGGESTED_OPTIONS.NetBSD=		nls
+PKG_SUGGESTED_OPTIONS.Linux=		nls
+PKG_SUGGESTED_OPTIONS.DragonFly=	nls
+PKG_SUGGESTED_OPTIONS.SunOS=		gcc-inplace-math
+PKG_SUGGESTED_OPTIONS+=			${PKG_SUGGESTED_OPTIONS.${OPSYS}}
 
 ###
-### Determine if multilib is avalible.
+### Determine if multilib is available.
 ###
 MULTILIB_SUPPORTED?=	unknown
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.if ${MACHINE_PLATFORM:MLinux-*-x86_64}
 .  if exists(/usr/include/gnu/stubs-64.h) && \
      !exists(/usr/include/gnu/stubs-32.h)
 MULTILIB_SUPPORTED=	No
@@ -29,7 +24,7 @@ MULTILIB_SUPPORTED=	No
 MULTILIB_SUPPORTED=	Yes
 .  endif
 .endif
-.if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])
+.if ${MULTILIB_SUPPORTED:tl} == yes
 PKG_SUPPORTED_OPTIONS+=	gcc-multilib
 PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 .endif
@@ -81,16 +76,10 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-ISL16 =		isl-0.16.1
-SITES.${ISL16}.tar.bz2 = ${MASTER_SITE_GNU:=gcc/infrastructure/}
-DISTFILES +=	${ISL16}.tar.bz2
+ISL16=		isl-0.16.1
+SITES.${ISL16}.tar.bz2= ${MASTER_SITE_GNU:=gcc/infrastructure/}
+DISTFILES+=	${ISL16}.tar.bz2
 .endif
-
-###
-### Optional languages
-### Ada could be added although there is a bootstrapping issue.  See
-### ../gcc34-ada for guidance
-###
 
 .if !empty(PKG_OPTIONS:Mgcc-objc++)
 .  if empty(PKG_OPTIONS:Mgcc-c++)
