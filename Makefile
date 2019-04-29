@@ -3619,7 +3619,6 @@ SUBDIR+=	py-minepy
 SUBDIR+=	py-minidb
 SUBDIR+=	py-mipp
 SUBDIR+=	py-mmLib
-SUBDIR+=	py-mmh3
 SUBDIR+=	py-mne
 SUBDIR+=	py-mochi
 SUBDIR+=	py-mocker
