@@ -15,6 +15,7 @@ USE_TOOLS+=	autoconf automake autoreconf
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
