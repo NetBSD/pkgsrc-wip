@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (GEMMA-0.98.1.tar.gz) = 460036a4a689ed0ff1cf049e671a3804faa0e873
+RMD160 (GEMMA-0.98.1.tar.gz) = a2a89a092e653536a50c8ad9561a7c534cebff2c
+SHA512 (GEMMA-0.98.1.tar.gz) = 501e77a0150d9de25c793b67245f813569d12313a60ee6974719cd6f97d0044fe8f975f039b7864b1e3c93c16fe31cb8e3a69e719bc058532bbd46891c8a6d45
+Size (GEMMA-0.98.1.tar.gz) = 49569015 bytes
+SHA1 (patch-doc_manual.tex) = 02b3c057b31794b3f87d825870369d264c4b9f31
+SHA1 (patch-src_fastblas.cpp) = 1190884b24ddefbff785fc84c6381db0dbde14d1
+SHA1 (patch-src_fastopenblas.h) = 7a70c72de630bef2a7f24d66324a7d8a153195df
+SHA1 (patch-src_gemma.cpp) = 7420a4be1d6fe3b487c9565c153955e733ac2e68
