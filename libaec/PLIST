@@ -5,5 +5,3 @@ include/szlib.h
 lib/libaec.la
 lib/libsz.la
 man/man1/aec.1
-@pkgdir share/examples
-@pkgdir share/doc
