@@ -6,6 +6,7 @@ SHA512 (mosquitto-1.6.1.tar.gz) = 64a9a5ea9a9f28f13d1a730c69445fb56a196e151dbcf1
 Size (mosquitto-1.6.1.tar.gz) = 575753 bytes
 SHA1 (patch-CMakeLists.txt) = bb50a613e72ab2052a2b1dfeffa6173ad5bbceb5
 SHA1 (patch-lib_CMakeLists.txt) = cddb8803a759820c8059028f924b56c22689ee54
+SHA1 (patch-lib_net__mosq.c) = a38294cdfea98f2da0879ea93373c5f04aebdb20
 SHA1 (patch-lib_util__mosq.c) = 3c0c01bd4bbfa838a3e2206485d63df7c2857eaf
 SHA1 (patch-mosquitto.conf) = 3db0e0bb4ca25bb12f539b604a957453268712bf
 SHA1 (patch-src_CMakeLists.txt) = 2346ee3f13ab7f7e2c34492a4271e0b1adcae4fb
