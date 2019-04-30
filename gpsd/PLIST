@@ -1,39 +1,39 @@
 @comment $NetBSD: PLIST,v 1.10 2011/03/23 16:08:34 gdt Exp $
-bin/cgps
+@comment bin/cgps
+bin/gegps
 bin/gps2udp
 bin/gpscat
 bin/gpsctl
 bin/gpsdecode
 bin/gpsfake
-bin/gpsmon
+@comment bin/gpsmon
 bin/gpspipe
 bin/gpsprof
 bin/gpxlogger
 bin/lcdgps
 bin/ntpshmmon
-bin/xgps
-bin/xgpsspeed
+@comment bin/xgps
+@comment bin/xgpsspeed
+bin/ubxtool
+bin/zerk
 include/gps.h
-include/gpsd.h
+@comment include/gpsd.h
 include/libgpsmm.h
-lib/libgpsd.la
+lib/libgps.so
+lib/libgps.so.24
+lib/libgps.so.24.0.0
+@comment lib/libgpsd.la
 lib/pkgconfig/libgps.pc
-lib/pkgconfig/libgpsd.pc
+@comment lib/pkgconfig/libgpsd.pc
+${PYSITELIB}/gps-${PKGVERSION}.egg-info
 ${PYSITELIB}/gps/__init__.py
-${PYSITELIB}/gps/__init__.pyc
 ${PYSITELIB}/gps/client.py
-${PYSITELIB}/gps/client.pyc
 ${PYSITELIB}/gps/clienthelpers.so
 ${PYSITELIB}/gps/fake.py
-${PYSITELIB}/gps/fake.pyc
 ${PYSITELIB}/gps/gps.py
-${PYSITELIB}/gps/gps.pyc
 ${PYSITELIB}/gps/misc.py
-${PYSITELIB}/gps/misc.pyc
 ${PYSITELIB}/gps/packet.so
-${PYSITELIB}/gpscap.py
-${PYSITELIB}/gpscap.pyc
-${PYSITELIB}/gpscap.pyo
+${PYSITELIB}/gps/watch_options.py
 man/man1/cgps.1
 man/man1/gegps.1
 man/man1/gps.1
@@ -49,12 +49,12 @@ man/man1/gpxlogger.1
 man/man1/lcdgps.1
 man/man1/ntpshmmon.1
 man/man1/ubxtool.1
-man/man1/xgps.1
-man/man1/xgpsspeed.1
+@comment man/man1/xgps.1
+@comment man/man1/xgpsspeed.1
 man/man1/zerk.1
 man/man3/libQgpsmm.3
 man/man3/libgps.3
-man/man3/libgpsd.3
+@comment man/man3/libgpsd.3
 man/man3/libgpsmm.3
 man/man5/gpsd_json.5
 man/man5/srec.5

@@ -25,6 +25,13 @@ FAKE_NCURSES=	yes
 # gpsd uses syncok
 USE_CURSES=	syncok
 
+REPLACE_PYTHON+=	gegps
+REPLACE_PYTHON+=	gpscat
+REPLACE_PYTHON+=	gpsfake
+REPLACE_PYTHON+=	gpsprof
+REPLACE_PYTHON+=	ubxtool
+REPLACE_PYTHON+=	zerk
+
 # \todo Check if this is necessary.
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
@@ -32,6 +39,7 @@ CFLAGS.SunOS=	-DLOG_PERROR=0
 
 # Configure phase arguments:
 SCONS_ARGS+=	leapfetch=no		# Do not use the net at build time.
+SCONS_ARGS+=	target_python=${PYTHONBIN}
 
 # \todo: Determine if CC/CXX are needed here.
 #	CC=${CC:Q} CXX=${CXX:Q}
