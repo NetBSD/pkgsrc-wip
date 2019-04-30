@@ -37,6 +37,7 @@ DEPENDS+=   ${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=   ${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=   ${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
 DEPENDS+=   ${PYPKGPREFIX}-cryptography>=1.3.4<2.4.0:../../security/py-cryptography
+DEPENDS+=   ${PYPKGPREFIX}-idna=2.6:../../www/py-idna
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
