@@ -12,8 +12,8 @@ bin/gpsprof
 bin/gpxlogger
 bin/lcdgps
 bin/ntpshmmon
-@comment bin/xgps
-@comment bin/xgpsspeed
+bin/xgps
+bin/xgpsspeed
 bin/ubxtool
 bin/zerk
 include/gps.h
@@ -49,8 +49,8 @@ man/man1/gpxlogger.1
 man/man1/lcdgps.1
 man/man1/ntpshmmon.1
 man/man1/ubxtool.1
-@comment man/man1/xgps.1
-@comment man/man1/xgpsspeed.1
+man/man1/xgps.1
+man/man1/xgpsspeed.1
 man/man1/zerk.1
 man/man3/libQgpsmm.3
 man/man3/libgps.3

@@ -25,6 +25,18 @@ FAKE_NCURSES=	yes
 # gpsd uses syncok
 USE_CURSES=	syncok
 
+# Documentation depends
+BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+
+# \todo Decide if buildlink3 is more appropriate.
+DEPENDS+=		${PYPKGPREFIX}-gobject3:../../devel/py-gobject3
+
+CFLAGS.SunOS=	-DLOG_PERROR=0
+
+# Configure phase arguments:
+SCONS_ARGS+=	leapfetch=no		# Do not use the net at build time.
+SCONS_ARGS+=	target_python=${PYTHONBIN}	# Use our python, not "python".
+
 SUBST_CLASSES+=		pyenv
 SUBST_MESSAGE.pyenv=	Fixing path in Python scripts
 SUBST_STAGE.pyenv=	pre-build	# We don't configure :-(
@@ -33,19 +45,12 @@ SUBST_FILES.pyenv+=	gpscat
 SUBST_FILES.pyenv+=	gpsfake
 SUBST_FILES.pyenv+=	gpsprof
 SUBST_FILES.pyenv+=	ubxtool
+SUBST_FILES.pyenv+=	xgps
+SUBST_FILES.pyenv+=	xgpsspeed
 SUBST_FILES.pyenv+=	zerk
 SUBST_SED.pyenv=	-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 
-# \todo Check if this is necessary.
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-
-CFLAGS.SunOS=	-DLOG_PERROR=0
-
-# Configure phase arguments:
-SCONS_ARGS+=	leapfetch=no		# Do not use the net at build time.
-SCONS_ARGS+=	target_python=${PYTHONBIN}
-
-# \todo: Determine if CC/CXX are needed here.
+# \todo: Determine if CC/CXX are needed (e.g, when using other than gcc).
 #	CC=${CC:Q} CXX=${CXX:Q}
 do-build:
 	cd ${WRKSRC} && \
@@ -62,11 +67,10 @@ do-test:
 	cd ${WRKSRC} && \
 	${SETENV} ${INSTALL_ENV} ${SCONSBIN} check
 
-# \todo Change to TOOLS or BUILD_DEPENDS after scons is improved.
+# \todo Change to TOOLS or BUILD_DEPENDS after scons support is improved.
 .include "../../devel/scons/buildlink3.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"
-.include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/curses.buildlink3.mk"
