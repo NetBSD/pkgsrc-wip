@@ -1192,6 +1192,7 @@ SUBDIR+=	googlecl
 SUBDIR+=	gopass
 SUBDIR+=	gopkgdep
 SUBDIR+=	gpak
+SUBDIR+=	gpsd
 SUBDIR+=	gplbasic
 SUBDIR+=	gpsbabel
 SUBDIR+=	gpsdrive
