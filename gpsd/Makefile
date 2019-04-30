@@ -11,58 +11,46 @@ COMMENT=	GPS information daemon
 LICENSE=	modified-bsd
 
 PY_PATCHPLIST=	yes
-#PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 2.96
 
 USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c99 c++
 
+# \todo Separate upstream's build into configure and build.
 NO_CONFIGURE=	yes
 
-
+# \todo Check if this is necessary.
 # gpsd looks for ncurses but not curses. (Not yet filed upstream.)
 FAKE_NCURSES=	yes
-
 # gpsd uses syncok
 USE_CURSES=	syncok
 
-# \todo Add a USE_TOOLS entry for scons.  SCONSBIN is open-coded
-# because using the bl3 depends on a python that is incompatible with
-# gpsd's python version, and we are using a tool, not buildlinking.
-#BUILD_DEPENDS+=		py*-scons-[0-9]*:../../devel/scons
-#SCONSBIN=		${PREFIX}/bin/scons
-
-# \todo In theory this is not necessary.
+# \todo Check if this is necessary.
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 CFLAGS.SunOS=	-DLOG_PERROR=0
 
-# \todo Resolve options
-# nmea2000 = False (default True): NMEA2000/CAN support
-# rtcm104v2 = False (default True): rtcm104v2 support
-# pps = False (default True): PPS time syncing support
-# dbus_export = False (default True): enable DBUS export support
-# libgpsmm = False (default True): build C++ bindings
-# qt?
+# Configure phase arguments:
+SCONS_ARGS+=	leapfetch=no		# Do not use the net at build time.
 
-# \todo: Separate configure phase
-
-WRAPPER_DEBUG=	yes
-
+# \todo: Determine if CC/CXX are needed here.
+#	CC=${CC:Q} CXX=${CXX:Q}
 do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${SCONSBIN} \
+	prefix=${PREFIX} mandir=${PREFIX}/man \
+	${SCONS_ARGS} \
 	-j${MAKE_JOBS:U1}
-#	CC=${CC:Q} CXX=${CXX:Q} \
 
 do-install:
-	cd ${WRKSRC} && ./install.sh ${DESTDIR}${PREFIX}
+	cd ${WRKSRC} && \
+	${SETENV} ${INSTALL_ENV} ${SCONSBIN} install
 
-#INSTALLATION_DIRS=	sbin
+do-test:
+	cd ${WRKSRC} && \
+	${SETENV} ${INSTALL_ENV} ${SCONSBIN} check
 
-#TEST_TARGET=	check
-
-PYTHON_FOR_BUILD_ONLY?=	yes
+# \todo Change to TOOLS or BUILD_DEPENDS after scons is improved.
 .include "../../devel/scons/buildlink3.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"

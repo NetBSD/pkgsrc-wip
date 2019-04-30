@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- SConstruct.orig	2018-10-03 00:05:28.000000000 +0000
++++ SConstruct
+@@ -280,6 +280,7 @@ import_env = (
+     'STAGING_DIR',     # Required by the OpenWRT and CeroWrt builds.
+     'STAGING_PREFIX',  # Required by the OpenWRT and CeroWrt builds.
+     'WRITE_PAD',       # So we can test WRITE_PAD values on the fly.
++    'CWRAPPERS_CONFIG_DIR',	# pkgsrc config
+ )
+ 
+ envs = {}
