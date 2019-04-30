@@ -1,0 +1,218 @@
+geography/gpsd: Update to 3.18
+
+pkgsrc changes:
+  - adapt to scons
+  - patch upstream SConstruct to respect needed pkgsrc variables
+  - patch upstream's use of "#!/usr/bin/env python"
+  - other minor build adaptations
+
+
+3.18: 2018-10-02 (Gary E. Miller <gem@rellim.com>)
+  Add ECEF support to ievermore, italk,Skytraq, SiRF, U-blox drivers.
+  Add ECEF support to JSON, cgps and xgps.
+  Add GREIS (Javad) driver from Virgin Orbit.
+  Add CLI tools zerk and ubxtool to manage JAVAD and u-blox GPS.
+  Add gnssid:svid to satellite_t, cgps and xgps.  PRN will die.
+  Add gnssid:svid to JSON, cgps and xgps.
+  Add stricter version checking (more to todo).
+  More and better regression tests.
+  Better Python dependency checking, at build time and runtime.
+  Fix several buffer issues.
+  New polar plots, and improved statistice, in gpsprof.
+  gpsd master/slave mode works, first time ever.
+  All isnan() changed to !isfinite(), fixing many bugs.
+  Client-side Python libraries may automatically reconnect
+  Too many other bug fixes and improvements to mention.
+  Over 1,000 commits from 46 different commiters.
+
+3.17: 2017-09-07 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Repair support for non-NMEA devices requring active probing
+  (e.g. Garmin USB GPSes). Apply OS X build fixes.  Fix a SiRF driver
+  bug that occasionally confused NTP.  Support for Spectratime iSync
+  GRClok and LNRClok oscillators. gpxlogger can reconnect when
+  the GPS loses the fix. xgps and xgpsspeed moved to python-gi,
+  getting shut of the deprecated pygtk2 bindings. Default mode for
+  xgpsspeed is now the more interesting nautical display. gpsmon
+  includes the hostname with the device display. gpsprof now has
+  centimeter precision.
+
+3.16: 2016-01-08 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Test rebuilds for mid-2015 leapsecond bump. Regression tests will
+  run even if "python" in Python 3.  Build correctly on systems where
+  -ltinfo is split from -lncurses. Avoid some rare overflow conditions
+  in PPS code.  Fix bugs in JSON sat-view parsing due to the JSON
+  parser stuffing ints into shorts.  Various small fixes to AIS
+  interpretation.  Prevent a memory leak in long-running gpsmon
+  instances.  Fix Savannah bug #45270: serial driver does not work
+  properly on pipes.  Fix Savannah bug #44648: GPSD won't build if
+  CCFLAGS contains options that are only compatible with the
+  cros1s-compiler. Fix Savannah bug #45342: SConstruct generates wrong
+  *.pc files.  Fix Savannah bug #46495: gpsd_poll may crash due to
+  unitialized pointer (probably due to buggy FD_ISSET on host
+  system). Fix Savannah bug #46648: gpsd crashes and buffer overflow
+  is reported when terminated.  Fix Savannah bug #46802: AIVDM to CSV
+  is broken in some weird cases. Fix Savannah bug #46804: JSON
+  satellite view parsing is somewhat broken.
+
+3.15: 2015-06-03 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Fix a rare crash bug related to devices becoming inaccessible while timed out.
+  Accept NMEA 4.1 GSV sentences with the trailing signal-ID field.
+  Fixed incorrect decode of south latitudes in AIS Type 17 messages.
+  splint has been retired; this removes almost 2KLOC of annotations.
+  chrpath is no longer a build dependency. Corrected Beidou/QZNSS display
+  in the Python clients so the graphics don't look like SBAS.
+
+3.14: 2015-03-14 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  The Pi Day release, 3.14 on 3/14 2015 at 9:26. Longer timeouts on test clients.
+  Skyview support for the Beidou and QZSS constellations in the NMEA0183 driver.
+  ntpmon rename to ntpshmmon - it doesn't actually monitor NTP itself.
+  New HOWTO on the website: "Introduction to Time Service".
+
+3.13: 2015-02-26 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  compiler.h inclusion removed for gps.h so it's standalone for /usr/include. 
+  TOFF JSON report gives the offset between GPS top of second and clock time.
+  A new ntpmon tool supports capturing clock samples from NTP SHM segments. 
+
+3.12: 2015-02-22 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  The daemon's power utilization has been reduced by changing from
+  non-blocking to blocking I/O; this may be significant on mobile devices.
+  Better protection against false matches of Inland AIS messages; this
+  required a libgps version bump to 22 (as a side effect, per-device
+  footprint has decreased). PPS feature is no longer marked
+  experimental/unstable.  Sentence tag fields have been dropped from
+  the JSON reports. GNSS and GLONASS SKY reports are now
+  merged. Addressed versions of AIS Type 25 and 26 are now
+  handled. The 'nmea' build option is now 'nmea0183'. New 'minimal'
+  option sets all boolean options not explicitly set on the build
+  command line to false.  The 'limited_max_devices' option is now
+  'max_devices'; the 'limited_max_clients' option is now 'max_clients'
+  The previously deprecated 'libQgpsmm' option has been removed; use 'qt'.
+  A bug fix for error modeling when NMEA 0183 reports empty DOP
+  fields.  On OS X, the "osx-pl203" driver has been explicitly listed
+  as unsupported. The last remnants of the old pre-JSON query protocol
+  have been removed from the client library.
+
+3.11: 2014-07-23 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  A bug that prevented track interpolation has been fixed.
+  We now get vertical error position and speed estimates from the
+  u-blox driver rather than having to interpolate them.
+  Some unusual AIS talker IDs (NMEA 4.0 station classes) are supported.
+  chrpath is no longer a dependency for building and testing, and
+  now defaults to 'no'.  Full systemd support.  Fixes for handling
+  large PPS offsets. Improved recovery from device flakeouts,
+  gpsmon argument parsing.
+
+3.10: 2013-11-22 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  AIS: Adds gps2udp, an AIS data relay, split24 option supports
+  passing through Type 24 halves; support for Inland AIS; "scaled" no
+  longer controls dumping of controlled-vocabulary fields; instead,
+  the're always dumped numerically and as text, with text in an
+  attribute name generated by appending "_text" to the name of the
+  base attribute. The packetizer's handling of write boundaries not
+  coinciding with packet boundaries is improved.  Better support for
+  mode and speed switching in the UBX driver.  PPS message now ships
+  nsec. PPS events are visible in gpsmon. Time-reporting fix to TSIP.
+
+3.9: 2013-05-01 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Note to packagers: this is an urgent release that fixes a possible
+  DoS or security hole!  Armor the AIS driver against an implausible
+  overrun attack.  A (different) fix for our first malformed-packet
+  crash since about 2007. Minor improvements to the NMEA2000
+  driver. New FAQ entry on how to know WAAS/EGNOS is working.
+  New -u and -uu options enable usec timestamps on gpspipe output.
+
+3.8: 2013-02-25 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Fix various minor errors in the AIVDM/AIVDO description. Repair the
+  xmlto support in the build system. Add two more regression
+  tests. Significant improvements to NMEA2000 support. Upgrade the PHP
+  client to v3 of the Google Maps API. Support for the Telit SL869
+  chipset. Added a nautical-style display to xgpsspeed. Minor
+  improvements to leapsecond.py.
+
+3.7: 2012-07-02 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Snap release to get the midnight change in the default leap-second
+  constant out the door.  Port tests now pass on all Debian supported
+  architectures, including the Sparc and s390 that were giving us
+  trouble before. Pre-2003 Delorme Earthmate works again.
+
+3.6: 2012-05-23 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  It's the Fernando Poo Day release.  Code has zero detectible defects
+  under Coverity scanning and cppcheck 1.52; this is mainly a cleanup
+  release to get those minor fixes into the field.  If a leap-second
+  warning is available from GPS subframe information it is passed to
+  ntpd. NMEA2000 is now supported via the Linux kernel CAN interface.
+  There's a chrpath=no config option for distribution makers, so
+  chrpath is no longer a build dependency; see build.txt for
+  explanation.
+
+3.5: 2012-04-14 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Use pselect when it's available to cut down on wakeups and improve
+  signal handling.  New {PPS} message exporting clock drift. The AIVDM
+  driver now handles up to 16 interleaved 24A and 24B pair-halves.
+  The NMEA driver interprets depth-sounder returns from SDDBT and
+  reports them as negative altitudes. The pps-pin option is gone, the
+  PPS code now just accepts any handshake pin. A bug that sometimes
+  caused RTCM packets to be dropped rather than relayed is fixed.
+
+3.4: 2012-01-12 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Don't barf when chrpath is not available, fall back to static linking;
+  helps people not running Linux.
+
+3.3: 2011-10-29 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  Improvements to build and release-procedure documentation. Make
+  sirf=no build work again. Main reason for this release is to make
+  chrpath a mandatory build dependency and explain why in the build
+  documentation.
+
+3.2: 2011-10-25 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  In the build recipe, (1) set pkgconfig properly for 64-bit Fedora
+  systems, (2) clean up various derived files including *.pyc on scons
+  -c, (3) add an option to disable stripping of binaries (strip=no),
+  (4) for embedded targets, add an option to disable building Python
+  support (python=no), (5) make the help for gpsd_group and gpsd_user
+  a little clearer, (6) add a force_global option to build gpsd to
+  listen to all addresses (rather than just loopback). The packet
+  sniffer now accepts NMEA packets with the ECDIS packet leader 'EC'.
+  SBAS satellites are now properly use-flagged in SiRF and UBX
+  skyviews.  The -G option now works under IPv6. Cross-build is now
+  officially supported and instructions included.  gpsprof works again
+  and does whole-cycle profiling. gpsd.php has Open Street Map
+  support.  The pp-on-cts option is replaced by a pps_pin option that
+  lets you specify the pin; the default is still DCD. New supported
+  device; the Jackson Labs Fury. The chrpath utility has become a
+  build prerequisite.
+
+3.1: 2011-07-28 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  The Irene release, rocking you like a hurricane and brought to you
+  from the storm shelter in my basement. This is a snap release mainly
+  to get some scons recipe cleanups out the door.  Parallelized builds
+  now work. Small but fatal problems with reconfigure=no, netfeed=no
+  and sock_export=no builds have been fixed.  Build recipe ported for
+  Fedora, Darwin, FreeBSD and OpenBSD.  libgps now brings -lm with it
+  on systems with implicit linking. One old bug fixed (code was
+  previously present but broken): Under Linux, gpsd will refrain from
+  opening serial or USB devices that another process has open,
+  avoiding potential problems with class 0xFF USB devices opened by
+  other programs.  One new bug fix: we now use an atof()
+  implementation that ignores locale, avoiding problems where decimal
+  point is a comma. One new feature: Change -N semantics so it only
+  suppresses backgrounding; privileges are now dropped as in normal
+  background operation.
+
+3.0: 2011-07-19 (Eric S. Raymond <esr@snark.thyrsus.com>)
+  POLL subobject name changes: fixes -> tpv, skyview -> sky.
+  Fix a timestamp-clobbering bug in the C library revealed by an
+  obscure car-nav device, the MyGuide 3100. The DEVICE 'activated'
+  attribute becomes an ISO8601 string; the client libraries will
+  still backward-compatibly read a float value. gps_unpack() is
+  now a documented part of the library API. There is now a
+  shared-memory export from the daemon that can be accessed through
+  the C and C++ client libraries.  xgps and cgps may now display
+  the Maidenhead grid locator for current lat/lon.  xgps displays
+  GST noise statistics if they are available. Codebase now has
+  an scons build recipe. Direct support for activation of gpsd from
+  Mac OS/X systemd. gpsdecode can now filter reports by RTCM2, RTCM3,
+  or AIS message type. NMEA HEHDT is implemented. Remote gpsd instances
+  can now be used as data sources via a gpsd:// URL.  There is a client
+  for live-feeding GPSD data to Google Earth. The hotplug sequence no
+  longer requires Python.
