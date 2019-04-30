@@ -1,0 +1,14 @@
+# $NetBSD$
+
+DISTNAME=	codecov-2.0.15
+PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/codecov/}
+
+MAINTAINER=	root@zta.lk
+HOMEPAGE=	https://github.com/codecov/codecov-python
+COMMENT=	Python report uploader for Codecov
+LICENSE=	apache-2.0
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
