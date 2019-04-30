@@ -16,6 +16,7 @@ COMMENT=	Integrated Development Environment for the Gambas programming language
 DEPENDS+=	gtar-base-1.*:../../archivers/gtar-base
 
 CHECK_FILES_SKIP+=	${PREFIX}/bin/gb.*
+CHECK_FILES_SKIP+=	${PREFIX}/share/appdata/gambas3.appdata.xml
 
 post-install:
 	cd ${WRKSRC}/app; \
