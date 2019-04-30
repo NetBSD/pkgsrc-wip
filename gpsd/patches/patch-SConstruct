@@ -1,5 +1,10 @@
 $NetBSD$
 
+Tell scons to pass the wrapper config variable to children, so the
+wrapped compiler works.
+
+Not yet addressed upstream.
+
 --- SConstruct.orig	2018-10-03 00:05:28.000000000 +0000
 +++ SConstruct
 @@ -280,6 +280,7 @@ import_env = (
