@@ -4,6 +4,6 @@ SHA1 (gpsd-3.18.tar.gz) = 9785ca861dc2fc3373119b8067f3b420c564c4c4
 RMD160 (gpsd-3.18.tar.gz) = 8499ad1637bf6dbf6b7349d74b0dd6317771e87b
 SHA512 (gpsd-3.18.tar.gz) = c80f2ef6856faa0b38f3d258be9801982588916677401654902ef0b8ec9e62c8b3cb9421f41b4a1e2e27a15a3f3562cbf68ce7bf03a19746ab62f80172d85434
 Size (gpsd-3.18.tar.gz) = 9020649 bytes
-SHA1 (patch-SConstruct) = cf084bbba9ed420d935a9873019e4c6ffa043787
+SHA1 (patch-SConstruct) = 9a0904c003f1883e188e277f9e45c324e09f9c9f
 SHA1 (patch-gpspipe.c) = 43d9e99867175418874adaaf210a429819c3ea9a
 SHA1 (patch-serial.c) = b28f1d209ecf27fcd7a98dcacb201632f3667d56
