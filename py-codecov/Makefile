@@ -13,5 +13,8 @@ LICENSE=	apache-2.0
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} codecov codecov-${PYVERSSUFFIX}
 
+DEPENDS+=   ${PYPKGPREFIX}-requests>=2.7.9:../../devel/py-requests
+DEPENDS+=   ${PYPKGPREFIX}-coverage:../../devel/py-coverage
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
