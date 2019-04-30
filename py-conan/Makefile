@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	conan-1.14.4
+DISTNAME=	conan-1.14.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/conan/}
