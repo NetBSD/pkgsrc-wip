@@ -25,12 +25,16 @@ FAKE_NCURSES=	yes
 # gpsd uses syncok
 USE_CURSES=	syncok
 
-REPLACE_PYTHON+=	gegps
-REPLACE_PYTHON+=	gpscat
-REPLACE_PYTHON+=	gpsfake
-REPLACE_PYTHON+=	gpsprof
-REPLACE_PYTHON+=	ubxtool
-REPLACE_PYTHON+=	zerk
+SUBST_CLASSES+=		pyenv
+SUBST_MESSAGE.pyenv=	Fixing path in Python scripts
+SUBST_STAGE.pyenv=	pre-build	# We don't configure :-(
+SUBST_FILES.pyenv+=	gegps
+SUBST_FILES.pyenv+=	gpscat
+SUBST_FILES.pyenv+=	gpsfake
+SUBST_FILES.pyenv+=	gpsprof
+SUBST_FILES.pyenv+=	ubxtool
+SUBST_FILES.pyenv+=	zerk
+SUBST_SED.pyenv=	-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 
 # \todo Check if this is necessary.
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
@@ -46,7 +50,7 @@ SCONS_ARGS+=	target_python=${PYTHONBIN}
 do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${SCONSBIN} \
-	prefix=${PREFIX} mandir=${PREFIX}/man \
+	prefix=${PREFIX} mandir=${PREFIX}/${PKGMANDIR} \
 	${SCONS_ARGS} \
 	-j${MAKE_JOBS:U1}
 
