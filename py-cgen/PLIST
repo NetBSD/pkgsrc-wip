@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cgen/__init__.py
+${PYSITELIB}/cgen/__init__.pyo
+${PYSITELIB}/cgen/__init__.pyc
+${PYSITELIB}/cgen/cuda.pyo
+${PYSITELIB}/cgen/cuda.pyc
+${PYSITELIB}/cgen/ispc.pyo
+${PYSITELIB}/cgen/ispc.pyc
+${PYSITELIB}/cgen/mapper.pyo
+${PYSITELIB}/cgen/mapper.pyc
+${PYSITELIB}/cgen/opencl.pyo
+${PYSITELIB}/cgen/opencl.pyc
+${PYSITELIB}/cgen/cuda.py
+${PYSITELIB}/cgen/ispc.py
+${PYSITELIB}/cgen/mapper.py
+${PYSITELIB}/cgen/opencl.py

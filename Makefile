@@ -3176,6 +3176,7 @@ SUBDIR+=	py-cerridwen
 SUBDIR+=	py-cesium
 SUBDIR+=	py-cexprtk
 SUBDIR+=	py-cf-python
+SUBDIR+=	py-cgen
 SUBDIR+=	py-chaco
 SUBDIR+=	py-chainer
 SUBDIR+=	py-chaintipy

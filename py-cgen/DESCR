@@ -1,0 +1,3 @@
+Cgen offers a simple abstract syntax tree for C and related languages
+(C++/CUDA/OpenCL) to allow structured code generation from Python.
+To represent mathematical expressions, cgen can be used with pymbolic.
