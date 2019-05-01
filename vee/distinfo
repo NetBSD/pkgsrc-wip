@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2008/04/24 13:10:47 cherrymathew Exp $
 
-SHA1 (vee-0.9.9-zeta.tgz) = b960b94ecac8a51b6e68fab31b3d55745b566d55
-RMD160 (vee-0.9.9-zeta.tgz) = b2ad64a06e37d33c30fb087489ec8864d43db37b
-Size (vee-0.9.9-zeta.tgz) = 9024 bytes
+SHA1 (0.9.9-zeta.tar.gz) = a341f33c81f68011132f5c9251112114b93199ca
+RMD160 (0.9.9-zeta.tar.gz) = e956bef1ed4c4e4f3bd3d1bfb0a55a8e425dce26
+SHA512 (0.9.9-zeta.tar.gz) = d03b2b975ebf19518776e1ab1a7cac48870e5428590c234ff1cbcb03d1997cc91b601e503df59d1f169c68d9b7d20ec7d04a48659df4ff095440ae27730bac13
+Size (0.9.9-zeta.tar.gz) = 9039 bytes

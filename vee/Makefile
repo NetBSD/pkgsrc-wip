@@ -1,14 +1,14 @@
 # $NetBSD: Makefile,v 1.4 2012/10/07 17:34:22 asau Exp $
 #
 
-DISTNAME=	vee-0.9.9-zeta
+DISTNAME=	0.9.9-zeta
 PKGNAME=	vee-0.9.9
+GITHUB_TAG=	${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://vee.googlecode.com/files/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=estrabd/}
 
 MAINTAINER=	cherry@zyx.in
-HOMEPAGE=	http://www.0x743.com/vee/
+HOMEPAGE=	https://estrabd.github.io/vee/
 COMMENT=	Command line blog tool that is very portable across Unix systems
 
 NO_BUILD=	yes	# no? yes!
