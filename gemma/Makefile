@@ -26,7 +26,7 @@ MAKE_FLAGS+=	LDFLAGS+="${BLAS_LIBS} -lgsl -lcblas -lz"
 MAKE_FILE=	${FILESDIR}/Makefile
 
 PV=		0.98.1
-BLAS_ACCEPTED=	openblas
+BLAS_ACCEPTED=	openblas	# Unusably slow with netlib
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/mk/blas.buildlink3.mk"
