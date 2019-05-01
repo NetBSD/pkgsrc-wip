@@ -1,12 +1,12 @@
 @comment $NetBSD: PLIST,v 1.10 2011/03/23 16:08:34 gdt Exp $
-@comment bin/cgps
+bin/cgps
 bin/gegps
 bin/gps2udp
 bin/gpscat
 bin/gpsctl
 bin/gpsdecode
 bin/gpsfake
-@comment bin/gpsmon
+bin/gpsmon
 bin/gpspipe
 bin/gpsprof
 bin/gpxlogger

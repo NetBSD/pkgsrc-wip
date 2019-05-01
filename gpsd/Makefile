@@ -19,10 +19,11 @@ USE_LANGUAGES=	c99 c++
 # \todo Separate upstream's build into configure and build.
 NO_CONFIGURE=	yes
 
-# \todo Check if this is necessary.
-# gpsd looks for ncurses but not curses. (Not yet filed upstream.)
+# \todo Consider teaching gpsd to use base system curses.  Note that
+# gpsd is documented to use ncurses, not curses, and expects a
+# pkgconfig file.
 FAKE_NCURSES=	yes
-# gpsd uses syncok
+# gpsd uses syncok.  Insist on an implementation that provides it.
 USE_CURSES=	syncok
 
 # Documentation depends
@@ -71,8 +72,11 @@ do-test:
 .include "../../devel/scons/buildlink3.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"
+# builtin curses does not provide a pkgconfig file and is thus deficient.
+USE_BUILTIN.ncurses=	no
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../mk/curses.buildlink3.mk"
+#.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
