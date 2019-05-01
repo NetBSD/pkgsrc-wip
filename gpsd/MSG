@@ -1,4 +1,4 @@
-geography/gpsd: Update to 3.18
+geography/gpsd: Update to 3.18.1
 
 pkgsrc changes:
   - adapt to scons
@@ -6,6 +6,17 @@ pkgsrc changes:
   - patch upstream's use of "#!/usr/bin/env python"
   - other minor build adaptations
 
+Upstream changes not in NEWS:
+
+  libgpsd (header, lib, pc, man page) is no longer installed.  (This
+  was an internal interface.)
+
+Upstream NEWS:
+
+3.18.1: 2018-10-19 (Gary E. Miller <gem@rellim.com>)
+  Fix some installation issues.
+  A few minor updates to ubxtool and driver_ubx.
+  Add contrib/skyview2svg
 
 3.18: 2018-10-02 (Gary E. Miller <gem@rellim.com>)
   Add ECEF support to ievermore, italk,Skytraq, SiRF, U-blox drivers.

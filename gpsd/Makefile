@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.41 2019/04/26 14:12:39 maya Exp $
 
-DISTNAME=	gpsd-3.18
+DISTNAME=	gpsd-3.18.1
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 
@@ -19,18 +19,16 @@ USE_LANGUAGES=	c99 c++
 # \todo Separate upstream's build into configure and build.
 NO_CONFIGURE=	yes
 
-# \todo Consider teaching gpsd to use base system curses.  Note that
-# gpsd is documented to use ncurses, not curses, and expects a
-# pkgconfig file.
+# Note that gpsd is documented to use ncurses, not curses.
 FAKE_NCURSES=	yes
 # gpsd uses syncok.  Insist on an implementation that provides it.
 USE_CURSES=	syncok
 
 # Documentation depends
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 # \todo Decide if buildlink3 is more appropriate.
-DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 CFLAGS.SunOS=	-DLOG_PERROR=0
 
@@ -72,11 +70,10 @@ do-test:
 .include "../../devel/scons/buildlink3.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"
-# builtin curses does not provide a pkgconfig file and is thus deficient.
-USE_BUILTIN.ncurses=	no
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+# \todo Resolve mk/curses not invoking ncurses builtin processing.
 #.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
