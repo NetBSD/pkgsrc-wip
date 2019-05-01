@@ -1,6 +1,9 @@
 $NetBSD: patch-loginrec.c,v 1.5 2016/01/18 12:53:26 jperkin Exp $
 
-Interix support and related fixes. Fix build on FreeBSD.
+Interix support and related fixes.
+Fix build on FreeBSD.
+
+XXX remove interix once we figure out which one's which
 
 --- loginrec.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ loginrec.c

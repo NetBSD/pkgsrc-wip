@@ -36,32 +36,11 @@ INSTALL_TARGET=		install-nokeys
 # fixes: dyld: Symbol not found: _allow_severity
 CONFIGURE_ARGS.Darwin+=	--disable-strip
 
-# OpenSSH on Interix has some important caveats
-.if ${OPSYS} == "Interix"
-MESSAGE_SRC=		${.CURDIR}/MESSAGE.Interix
-BUILDLINK_PASSTHRU_DIRS+= /usr/local/lib/bind
-CONFIGURE_ENV+=		ac_cv_func_openpty=no
-CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
-CPPFLAGS+=		-DIOV_MAX=16 # default is INT_MAX, way too large
-.  if exists(/usr/local/include/bind/resolv.h)
-CPPFLAGS+=		-I/usr/local/include/bind
-BUILDLINK_PASSTHRU_DIRS+= /usr/local/include/bind
-.  elif exists(/usr/local/bind/include/resolv.h)
-CPPFLAGS+=		-I/usr/local/bind/include
-BUILDLINK_PASSTHRU_DIRS+= /usr/local/bind/include
-.  endif
-LDFLAGS+=		-L/usr/local/lib/bind
-LIBS+=			-lbind -ldb -lcrypt
-
-.else # not Interix
-
 PKG_GROUPS=		${OPENSSH_GROUP}
 PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}
 
 PKG_GECOS.${OPENSSH_USER}=	sshd privsep pseudo-user
 PKG_HOME.${OPENSSH_USER}=	${OPENSSH_CHROOT}
-
-.endif
 
 SSH_PID_DIR=		${VARBASE}/run	# default directory for PID files
 
@@ -73,10 +52,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 
-.if ${OPSYS} != "Interix"
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT:Q}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
-.endif
 
 # pkgsrc already enforces a "secure" version of zlib via dependencies,
 # so skip this bogus version check.

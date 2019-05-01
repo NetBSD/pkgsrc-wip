@@ -20,22 +20,6 @@ $NetBSD$
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -737,6 +741,15 @@ main() { if (NSVersionOfRunTimeLibrary("
- 		;;
- 	esac
- 	;;
-+*-*-interix*)
-+        AC_DEFINE(HAVE_INTERIX)
-+        AC_DEFINE(DISABLE_FD_PASSING)
-+        AC_DEFINE(DISABLE_SHADOW)
-+        AC_DEFINE(IP_TOS_IS_BROKEN)
-+        AC_DEFINE(MISSING_HOWMANY)
-+        AC_DEFINE(NO_IPPORT_RESERVED_CONCEPT)
-+        AC_DEFINE(USE_PIPES)
-+        ;;
- *-*-irix5*)
- 	PATH="$PATH:/usr/etc"
- 	AC_DEFINE([BROKEN_INET_NTOA], [1],
 @@ -1494,6 +1507,62 @@ else
  	AC_MSG_RESULT([no])
  fi
