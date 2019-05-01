@@ -12,9 +12,9 @@ bin/gpsprof
 bin/gpxlogger
 bin/lcdgps
 bin/ntpshmmon
+bin/ubxtool
 bin/xgps
 bin/xgpsspeed
-bin/ubxtool
 bin/zerk
 include/gps.h
 @comment include/gpsd.h
