@@ -2,8 +2,17 @@
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
+# 2019-05-01	glx: Fix GLX_CONTEXT_RELEASE_BEHAVIOR_ARB handling
+COMMIT_ID=	007d812a832cf32b02542bbae13a3997e655171a
+
+# 2019-04-30	meson: Don't use strndup() unless it's prototyped
+# COMMIT_ID=	504468d2cf56c6588342249c4625a0bfadf0751d
+
+# 2019-04-29	meson: Fix building unit tests when protocol headers aren't in default include path
+# COMMIT_ID=	1f5742d27187fabba0c556b50ebfcd9fddfdcf2b
+
 # 2019-04-23	hw/xwayland/Makefile.am: fix build without glx
-COMMIT_ID=	836f93de99b35050d78d61d3654f7c5655184144
+# COMMIT_ID=	836f93de99b35050d78d61d3654f7c5655184144
 
 # 2019-04-19	ephyr: fix typo: rquires -> requires
 # COMMIT_ID=	0854732d55a76cdb584306e8e653c2bcd292a7cb
