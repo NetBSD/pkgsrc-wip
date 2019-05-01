@@ -4,3 +4,5 @@ SHA1 (plasma-desktop-5.12.4.tar.xz) = 6fa92090acac258d1296cc715309d92c14a85b1f
 RMD160 (plasma-desktop-5.12.4.tar.xz) = e1b1878dfbd509a0fd9be6786bf3ab1e2936738a
 SHA512 (plasma-desktop-5.12.4.tar.xz) = 1aaecdddfd373512eaabea2c1c2e172c058b4aac52144feb14c8c0bc096db0e8242f7f712e228fc4f9188877e045cfd4d1e9890578234c61f6b408f8c3cfb660
 Size (plasma-desktop-5.12.4.tar.xz) = 8532112 bytes
+SHA1 (patch-CMakeLists.txt) = 706a7384a8ec64646585c80b7301ed989dad1533
+SHA1 (patch-config-X11.h.cmake) = 57611149f2680a8d972eeeb5247e8227dc0a98b4
