@@ -1,7 +1,28 @@
-# $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
+e $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
+
+# 2019-05-01	util: move #include out of #if linux
+COMMIT_ID=	70da00ffd65e56c8c8cc6ecfcec462fb52ee5102
+
+# 2019-05-01	gitlab-ci: build vulkan drivers in clang build
+# COMMIT_ID=	47f419d0b37721776785a54005783ef6fe836d66
+
+# 2019-04-30	egl: return correct error code for a case req ver < 3 with forward-compatible
+# COMMIT_ID=	5c581b3dd6979b79cb3e3ab8e2e03b442e6ecb0d
+
+# 2019-04-30	radeonsi/nir: call radeonsi nir opts before the scan pass
+# COMMIT_ID=	90f3bf7437eb735bf51d8fcbfbb0adeed9cfcf89
+
+# 2019-04-30	swr/rast: early exit on empty triangle mask
+# COMMIT_ID=	4c68acba3749b84c95c0e8751a00eeb1e820d6f4
+
+# 2019-04-30	st/va: properly set stride and offset in vlVaDeriveImage
+# COMMIT_ID=	0e3a348bec436b9d949e85574e363a1fe0e7683c
+
+# 2019-04-29	i965: Re-enable fast color clears for GEN11.
+# COMMIT_ID=	11518384c465b9f4a7ef19e2cef068bba7d66b63
 
 # 2019-04-27	radv: add missing VEGA20 chip in radv_get_device_name()
-COMMIT_ID=	07745f94948874c875dac924e055a11ee96beb5b
+# COMMIT_ID=	07745f94948874c875dac924e055a11ee96beb5b
 
 # 2019-04-26	vc4: Fall back to renderonly if the vc4 driver doesn't have v3d.
 # COMMIT_ID=	edb04953c8b8520108f333b1e289f18719a7d597
