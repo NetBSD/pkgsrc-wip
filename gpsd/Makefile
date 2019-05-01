@@ -30,7 +30,7 @@ USE_CURSES=	syncok
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
 # \todo Decide if buildlink3 is more appropriate.
-DEPENDS+=		${PYPKGPREFIX}-gobject3:../../devel/py-gobject3
+DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 CFLAGS.SunOS=	-DLOG_PERROR=0
 
