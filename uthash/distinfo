@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:38 agc Exp $
+
+SHA1 (uthash-2.1.0.tar.gz) = 8f287a2dcf38218c3180d122e10039e23fe8e4b8
+RMD160 (uthash-2.1.0.tar.gz) = d0f9bdab55b8a5ed549858ce1921b431a22aca12
+SHA512 (uthash-2.1.0.tar.gz) = c8005113a48ec7636715ecec0286a5d9086971a7267947aba9e0ad031b6113a4f38a1fb512d33d6fefb5891635fdd31169ce4d6ab04b938bda612ebbccb3eda0
+Size (uthash-2.1.0.tar.gz) = 191782 bytes
