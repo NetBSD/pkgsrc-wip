@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libansilove-1.1.1.tar.gz) = 32e82c4a96ec23dbdb92460fb58168b7ec65ed85
-RMD160 (libansilove-1.1.1.tar.gz) = 28926459d04bd3be3b65d5dbcd343360e01c42f4
-SHA512 (libansilove-1.1.1.tar.gz) = 22060e78fb09a409c9fc5ec5babeeb44320b4efe9a09a9284c4073ccec42d77325121f607c0077a15984efca5d1a8ee17336a98eb4fcd608b9a3dee0ca54b9ee
-Size (libansilove-1.1.1.tar.gz) = 53759 bytes
+SHA1 (libansilove-1.1.2.tar.gz) = a115c3a9dbaf3319bb2c314ce711b5e1bb0d6460
+RMD160 (libansilove-1.1.2.tar.gz) = f8db91de178223910a83cb30cd47d549b6d8353c
+SHA512 (libansilove-1.1.2.tar.gz) = 2ca2ee85cdd8487d1f75a92f35bf96cac032b6d4712a565bbc59fe05f3431a2df0077c6d56fc841f26b065a3ad4805ff29c17891fdfc1e0e0b2ea66fe803ccf1
+Size (libansilove-1.1.2.tar.gz) = 54870 bytes

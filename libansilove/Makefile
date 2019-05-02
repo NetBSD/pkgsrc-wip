@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libansilove-1.1.1
+DISTNAME=	libansilove-1.1.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ansilove/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
