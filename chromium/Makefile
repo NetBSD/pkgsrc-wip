@@ -253,7 +253,7 @@ do-configure:
 			--script-executable="${PYTHONBIN}" \
 			${GN_VERBOSE} \
 			out/${BUILDTYPE}
-	
+
 do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
