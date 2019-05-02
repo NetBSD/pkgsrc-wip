@@ -11,7 +11,6 @@ $NetBSD$
 +
 +#include <stddef.h>
 +#include <sys/sysctl.h>
-+#include <sys/user.h>
 +#include <unistd.h>
 +
 +#include "base/macros.h"
