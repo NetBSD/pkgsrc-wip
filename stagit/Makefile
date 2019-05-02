@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	stagit-0.9.1
+DISTNAME=	stagit-0.9.2
 CATEGORIES=	www
 MASTER_SITES=	https://codemadness.org/releases/stagit/
 
