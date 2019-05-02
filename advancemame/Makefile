@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 
 CONFIG_SHELL=	ksh
 
-BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 CONFIGURE_ARGS+=	--enable-expat
 CONFIGURE_ARGS+=	--enable-zlib

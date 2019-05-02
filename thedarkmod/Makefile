@@ -30,7 +30,7 @@ SCONS_ARGS+=	TARGET_ARCH="x64"
 SCONS_ARGS+=	TARGET_ARCH="x86"
 .endif
 
-BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
