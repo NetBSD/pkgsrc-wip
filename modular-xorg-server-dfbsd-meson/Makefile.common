@@ -2,8 +2,11 @@
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
+# 2019-05-02	hw/dmx/glxProxy/glxcmds.c CreateContext(): free glxc->real_ids and glxc in a couple of error branches, per complaints from cppcheck.
+COMMIT_ID=	71cff63c06a6b494dc8921270535f33fb78bd32b
+
 # 2019-05-01	glx: Fix GLX_CONTEXT_RELEASE_BEHAVIOR_ARB handling
-COMMIT_ID=	007d812a832cf32b02542bbae13a3997e655171a
+# COMMIT_ID=	007d812a832cf32b02542bbae13a3997e655171a
 
 # 2019-04-30	meson: Don't use strndup() unless it's prototyped
 # COMMIT_ID=	504468d2cf56c6588342249c4625a0bfadf0751d
