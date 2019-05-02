@@ -4158,6 +4158,7 @@ SUBDIR+=	py-zbar
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zenity
 SUBDIR+=	py-zipline
+SUBDIR+=	py34-html-docs
 SUBDIR+=	pydance
 SUBDIR+=	pydb
 SUBDIR+=	pypanel
