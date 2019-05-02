@@ -22,7 +22,7 @@ USE_TOOLS+=	pax
 
 USE_JAVA=		yes
 USE_JAVA2=		yes
-PKG_JVMS_ACCEPTED=	sun-jdk6
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 INSTALLATION_DIRS=	lib/java share/doc/apache-commons-dbcp
 

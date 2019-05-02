@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 INSTALLATION_DIRS=	bin share/doc/feynedit
 

@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 VERSION=	1.0
 USE_LANGUAGES=	# none
 
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15
+PKG_JVMS_ACCEPTED=	sun-jdk7
 USE_JAVA2=		yes
 
 INSTALLATION_DIRS=	bin  lib/java

@@ -19,7 +19,7 @@ USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
 USE_JAVA=		yes
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 INSTALLATION_DIRS=	lib/java share/doc/java-basicplayer
 

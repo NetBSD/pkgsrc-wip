@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/AOKell-2.0
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15
+PKG_JVMS_ACCEPTED=	sun-jdk7
 USE_JAVA2=		yes
 
 INSTALLATION_DIRS=	share/doc/aokell lib/java/aokell

@@ -33,7 +33,7 @@ PLIST.bdb=		yes
 
 .if !empty(PKG_OPTIONS:Mjdbc)
 PKGCONFIG_OVERRIDE+=	libgda-jdbc-4.0.pc.in
-PKG_JVMS_ACCEPTED=	openjdk7					# XXX openjdk7-bin sun-jdk6 a.o. (patch-ad and patch-fb)
+PKG_JVMS_ACCEPTED=	openjdk7					# XXX openjdk7-bin sun-jdk7 a.o. (patch-ad and patch-fb)
 BUILD_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
 BUILD_DIRS+=		providers/jdbc
 CONFIGURE_ARGS+=	--with-java=yes

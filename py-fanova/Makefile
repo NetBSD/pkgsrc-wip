@@ -13,7 +13,7 @@ COMMENT=	Functional ANOVA
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.11:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
-PKG_JVMS_ACCEPTED=	sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

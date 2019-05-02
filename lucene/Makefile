@@ -18,7 +18,7 @@ AUTO_MKDIRS=	yes
 USE_JAVA=	yes
 USE_JAVA2=	yes
 
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${PREFIX}/lib/java/lucene

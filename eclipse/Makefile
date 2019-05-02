@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
 LICENSE=	eclipse-license
 
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14 openjdk7-bin openjdk7
+PKG_JVMS_ACCEPTED=	sun-jdk7 openjdk7-bin openjdk7
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 

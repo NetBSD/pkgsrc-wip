@@ -18,7 +18,7 @@ NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
 USE_JAVA=		yes
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386  Linux-*-i386 Darwin-*-i386
 

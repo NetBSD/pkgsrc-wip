@@ -13,7 +13,7 @@ LICENSE=	spl-1.0 AND gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}
 
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk7
 USE_JAVA=		yes
 USE_LANGUAGES=		# none
 

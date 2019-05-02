@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/jmol-12.0.12
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
 
 USE_JAVA2=		yes
-PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk7
 
 JMOL_HOME=	${PREFIX}/share/jmol
 JMOL_FILES=	Jmol.jar JmolApplet.jar           \
