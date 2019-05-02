@@ -1,46 +1,19 @@
 e $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
 
+# 2019-05-02	panfrost/midgard: Skip liveness analysis for instructions without dest
+COMMIT_ID=	ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3
+
+# 2019-05-01	util/bitset: Return an actual bool from test macros
+# COMMIT_ID=	bf774b56be46d5812868d9f6e7e63437d36754e0
+
+# 2019-05-01	panfrost: Fix blend shader upload
+# COMMIT_ID=	09c669260f6d311d0d99f2c63ebd0ec5b68853f8
+
 # 2019-05-01	util: move #include out of #if linux
-COMMIT_ID=	70da00ffd65e56c8c8cc6ecfcec462fb52ee5102
+# COMMIT_ID=	70da00ffd65e56c8c8cc6ecfcec462fb52ee5102
 
 # 2019-05-01	gitlab-ci: build vulkan drivers in clang build
 # COMMIT_ID=	47f419d0b37721776785a54005783ef6fe836d66
-
-# 2019-04-30	egl: return correct error code for a case req ver < 3 with forward-compatible
-# COMMIT_ID=	5c581b3dd6979b79cb3e3ab8e2e03b442e6ecb0d
-
-# 2019-04-30	radeonsi/nir: call radeonsi nir opts before the scan pass
-# COMMIT_ID=	90f3bf7437eb735bf51d8fcbfbb0adeed9cfcf89
-
-# 2019-04-30	swr/rast: early exit on empty triangle mask
-# COMMIT_ID=	4c68acba3749b84c95c0e8751a00eeb1e820d6f4
-
-# 2019-04-30	st/va: properly set stride and offset in vlVaDeriveImage
-# COMMIT_ID=	0e3a348bec436b9d949e85574e363a1fe0e7683c
-
-# 2019-04-29	i965: Re-enable fast color clears for GEN11.
-# COMMIT_ID=	11518384c465b9f4a7ef19e2cef068bba7d66b63
-
-# 2019-04-27	radv: add missing VEGA20 chip in radv_get_device_name()
-# COMMIT_ID=	07745f94948874c875dac924e055a11ee96beb5b
-
-# 2019-04-26	vc4: Fall back to renderonly if the vc4 driver doesn't have v3d.
-# COMMIT_ID=	edb04953c8b8520108f333b1e289f18719a7d597
-
-# 2019-04-26	swr/rast: enforce use of tile offsets
-# COMMIT_ID=	8bfb34fd0adf23fdb73cf5e4253b42cb2da58188
-
-# 2019-04-26	llvmpipe: Always return some fence in flush (v2)
-# COMMIT_ID=	e8bf4efcebf0d860dec3a38be3388aba035b0d1b
-
-# 2019-04-25	nir: fix bit_size in lower indirect derefs.
-# COMMIT_ID=	d946cbe9f54a1b733e0bdec2423ae47d408114fb
-
-# 2019-04-25	glsl: fix shader_storage_blocks_write_access for SSBO block arrays (v2)
-# COMMIT_ID=	c5f65bfe6c9b82925d65ba677664cfc063a9b96c
-
-# 2019-04-25	freedreno/a6xx: sample-shading support
-# COMMIT_ID=	7a57cfbed695c48915fdb3d7bec37505d3f18e81
 
 PORTNAME=	mesa		
 

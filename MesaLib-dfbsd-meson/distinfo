@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.16 2019/02/22 15:40:35 tnn Exp $
 
-SHA1 (mesa-70da00ffd65e56c8c8cc6ecfcec462fb52ee5102.tar.xz) = ba95304df610a27ca1cc4cc53b075db2daf8a4fd
-RMD160 (mesa-70da00ffd65e56c8c8cc6ecfcec462fb52ee5102.tar.xz) = 8d203d6b44ff43555c69c0d46837480db3db939b
-SHA512 (mesa-70da00ffd65e56c8c8cc6ecfcec462fb52ee5102.tar.xz) = b8ba3afc85a9ef31f34b822829152a46062982c99af1ddb476aed60b08a78370e67949567749374aca9ca3ecd1db71ce1049dcdf55c61f2533d82cc45ede0616
-Size (mesa-70da00ffd65e56c8c8cc6ecfcec462fb52ee5102.tar.xz) = 10863748 bytes
+SHA1 (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = 63ceecb6f19157015b46bece676419972e13a6cb
+RMD160 (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = e547d96e0430f250d00b817076dcffa6d29cb92e
+SHA512 (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = 475ae6da82fe907d09ca000bc85410fad79163c929c86db2c300f7b917541bf83fd7007f700adadc321d9a2ed3a1a93d7375ba0e640292343a7a324f4b226ca4
+Size (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = 10869904 bytes
 SHA1 (patch-include_GL_internal_dri__interface.h) = ed567949ae44f7477738138347cf9648b9a8d634
 SHA1 (patch-meson.build) = 3cd30902cd5af7bc860dd2984a51d9ebf051662e
 SHA1 (patch-meson__options.txt) = 171ac109444b0ce8ea37e53b72f529a4b5e5c6f6
