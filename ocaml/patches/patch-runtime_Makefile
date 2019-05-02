@@ -1,0 +1,34 @@
+$NetBSD$
+
+--- runtime/Makefile.orig	2019-03-01 15:13:46.000000000 +0000
++++ runtime/Makefile
+@@ -184,11 +184,11 @@ LIBS = $(BYTECCLIBS) $(EXTRALIBS)
+ ifdef BOOTSTRAPPING_FLEXLINK
+ MAKE_OCAMLRUN=$(MKEXE_BOOT)
+ else
+-MAKE_OCAMLRUN = $(MKEXE) -o $(1) $(2)
++MAKE_OCAMLRUN = $(MKEXE) $(LDFLAGS) -o $(1) $(2)
+ endif
+ else
+ LIBS = $(BYTECCLIBS)
+-MAKE_OCAMLRUN = $(MKEXE) -o $(1) $(2)
++MAKE_OCAMLRUN = $(MKEXE) $(LDFLAGS) -o $(1) $(2)
+ endif
+ 
+ # Build, install and clean targets
+@@ -294,13 +294,13 @@ libcamlrun.$(A): $(libcamlrun_OBJECTS)
+ 	$(call MKLIB,$@, $^)
+ 
+ ocamlrund$(EXE): prims.$(O) libcamlrund.$(A)
+-	$(MKEXE) $(MKEXEDEBUGFLAG) -o $@ $^ $(LIBS)
++	$(MKEXE) $(LDFLAGS) $(MKEXEDEBUGFLAG) -o $@ $^ $(LIBS)
+ 
+ libcamlrund.$(A): $(libcamlrund_OBJECTS)
+ 	$(call MKLIB,$@, $^)
+ 
+ ocamlruni$(EXE): prims.$(O) libcamlruni.$(A)
+-	$(MKEXE) -o $@ $^ $(LIBS)
++	$(MKEXE) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+ libcamlruni.$(A): $(libcamlruni_OBJECTS)
+ 	$(call MKLIB,$@, $^)

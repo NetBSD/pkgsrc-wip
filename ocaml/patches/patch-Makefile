@@ -1,8 +1,17 @@
 $NetBSD$
 
---- Makefile.orig	2019-02-08 14:34:09.000000000 +0000
+--- Makefile.orig	2019-03-01 15:13:45.000000000 +0000
 +++ Makefile
-@@ -516,10 +516,10 @@ endif
+@@ -54,7 +54,7 @@ INCLUDES=-I utils -I parsing -I typing -
+ COMPFLAGS=-strict-sequence -principal -absname -w +a-4-9-41-42-44-45-48-66 \
+ 	  -warn-error A \
+           -bin-annot -safe-string -strict-formats $(INCLUDES)
+-LINKFLAGS=
++LINKFLAGS= -cclib "$(LDFLAGS)"
+ 
+ ifeq "$(strip $(NATDYNLINKOPTS))" ""
+ OCAML_NATDYNLINKOPTS=
+@@ -513,10 +513,10 @@ endif
  # Installation
  .PHONY: install
  install:
@@ -17,7 +26,7 @@ $NetBSD$
  	$(INSTALL_DATA) \
  	  VERSION \
  	  "$(INSTALL_LIBDIR)"
-@@ -567,7 +567,7 @@ ifeq "$(INSTALL_SOURCE_ARTIFACTS)" "true
+@@ -564,7 +564,7 @@ ifeq "$(INSTALL_SOURCE_ARTIFACTS)" "true
  endif
  	$(MAKE) -C tools install
  ifeq "$(UNIX_OR_WIN32)" "unix" # Install manual pages only on Unix

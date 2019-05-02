@@ -1,6 +1,6 @@
 $NetBSD$
 
---- Makefile.common.in.orig	2019-02-08 14:34:09.000000000 +0000
+--- Makefile.common.in.orig	2019-03-01 15:13:45.000000000 +0000
 +++ Makefile.common.in
 @@ -16,9 +16,9 @@
  # This makefile contains common definitions shared by other Makefiles
