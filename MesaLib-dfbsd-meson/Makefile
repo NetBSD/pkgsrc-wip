@@ -1,7 +1,13 @@
-e $NetBSD: Makefile,v 1.19 2019/04/11 15:52:08 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
+
+# 2019-05-02	anv: Stop including POS in FS input limits
+COMMIT_ID=	be7e9870d620460a91e8fbdbb8bf39b5c462aed3
+
+# 2019-05-02	docs: fixup mistake in contents
+# COMMIT_ID=	96924aa92ecf16cd2145b1a881df37d9162c6ba7
 
 # 2019-05-02	panfrost/midgard: Skip liveness analysis for instructions without dest
-COMMIT_ID=	ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3
+# COMMIT_ID=	ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3
 
 # 2019-05-01	util/bitset: Return an actual bool from test macros
 # COMMIT_ID=	bf774b56be46d5812868d9f6e7e63437d36754e0

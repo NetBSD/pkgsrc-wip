@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.16 2019/02/22 15:40:35 tnn Exp $
+$NetBSD: distinfo,v 1.17 2019/05/01 19:31:45 maya Exp $
 
-SHA1 (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = 63ceecb6f19157015b46bece676419972e13a6cb
-RMD160 (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = e547d96e0430f250d00b817076dcffa6d29cb92e
-SHA512 (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = 475ae6da82fe907d09ca000bc85410fad79163c929c86db2c300f7b917541bf83fd7007f700adadc321d9a2ed3a1a93d7375ba0e640292343a7a324f4b226ca4
-Size (mesa-ad7c9ba0ecb349763ab7fad7bce74f1d47c139e3.tar.xz) = 10869904 bytes
+SHA1 (mesa-be7e9870d620460a91e8fbdbb8bf39b5c462aed3.tar.xz) = e6b5051b59f8700bf928fd79970ce48037953898
+RMD160 (mesa-be7e9870d620460a91e8fbdbb8bf39b5c462aed3.tar.xz) = d7313261e7b9777d513fca84de30491d5da44207
+SHA512 (mesa-be7e9870d620460a91e8fbdbb8bf39b5c462aed3.tar.xz) = c343d6331c7de9ae25e9dbdb35120236f0eb41506eb610a1e0a50e7759e14318b1dedcf2951fc4513b4009231ca747b873a74c7da9d1df01b503f7a65a3209e1
+Size (mesa-be7e9870d620460a91e8fbdbb8bf39b5c462aed3.tar.xz) = 10875384 bytes
 SHA1 (patch-include_GL_internal_dri__interface.h) = ed567949ae44f7477738138347cf9648b9a8d634
 SHA1 (patch-meson.build) = 3cd30902cd5af7bc860dd2984a51d9ebf051662e
 SHA1 (patch-meson__options.txt) = 171ac109444b0ce8ea37e53b72f529a4b5e5c6f6
@@ -52,13 +52,13 @@ SHA1 (patch-src_glx_glxext.c) = 1c044d38faebc310f49248a6b937b1bbc5a16870
 SHA1 (patch-src_intel_compiler_brw__fs__bank__conflicts.cpp) = 6276d2c6846bb4dd08699921bec4e20202a17478
 SHA1 (patch-src_intel_isl_isl__tiled__memcpy.c) = f019e47e535e2c2ab8d324937362a4c7965311f1
 SHA1 (patch-src_intel_perf_gen__perf.h) = 2915eb9dc7161d74d73b8e238dc1f0d0d9b82935
-SHA1 (patch-src_intel_tools_aub__mem.c) = 671e478a843b70c12c5038ad314c108925ab5cc7
+SHA1 (patch-src_intel_tools_aub__mem.c) = fe7f8315515618e2becfa5279de613bca200dbf8
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = 159b57f9a3c1fd37ab1e5b49ff911073e2e9ff9b
 SHA1 (patch-src_intel_tools_error2aub.c) = e38395e3889f6e3af645f312a429ce2a7d285231
-SHA1 (patch-src_intel_vulkan_anv__allocator.c) = 5dd27eea9811d739558c5b488c57a3d7ae539d87
+SHA1 (patch-src_intel_vulkan_anv__allocator.c) = da5a11c95d17d6476e7141572264a215807b8cd7
 SHA1 (patch-src_intel_vulkan_anv__device.c) = 1f6ac5bcd6bf31275b93b805ee5fe6213e6dbb7e
 SHA1 (patch-src_intel_vulkan_anv__gem.c) = b8eb487fa704151e7c3c3b1d23973b2b0aa5922e
-SHA1 (patch-src_intel_vulkan_anv__gem__stubs.c) = 7f0a25e96624815ef0912024b52bbb512d4fa42f
+SHA1 (patch-src_intel_vulkan_anv__gem__stubs.c) = ad5a4bd9fe521cf73faf2f0cf0f493a0b40f4c20
 SHA1 (patch-src_intel_vulkan_anv__queue.c) = 2dbf7dfd0c77f74f510032bf8d12109f58c50a30
 SHA1 (patch-src_mapi_entry__x86-64__tls.h) = a0cbe5c8412fa626926ade0c72c6bc13b1ab4f36
 SHA1 (patch-src_mapi_entry__x86__tls.h) = 740312f64e4848164482f44642859aecc7025853
