@@ -12,7 +12,7 @@ $NetBSD$
  BINDIR ?= $(PREFIX)/bin
  INCLUDE_DIRS ?=
  LIBRARY_DIRS ?=
-+STRIP_CMD ?= strip
++STRIP ?= strip
  
  SRC := $(wildcard ${DIR_SRC}/*.cpp)
  OBJ := $(patsubst %.cpp,${DIR_OBJ}/%.o,$(notdir ${SRC}))
@@ -45,4 +45,4 @@ $NetBSD$
  	@echo "Installed."
 +
 +install-strip: install
-+	$(STRIP_CMD) $(DESTDIR)$(BINDIR)/$(TARGET)
++	$(STRIP) $(DESTDIR)$(BINDIR)/$(TARGET)
