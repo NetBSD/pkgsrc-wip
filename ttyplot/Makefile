@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ttyplot-1.1
+DISTNAME=	ttyplot-1.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tenox7/}
 
