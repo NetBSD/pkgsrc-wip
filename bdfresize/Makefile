@@ -8,11 +8,20 @@ MAINTAINER=	fred@statdns.com
 COMMENT=	Tool for resizing BDF format fonts
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+# Do not build embedded getopt
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	post-configure
+SUBST_MESSAGE.makefile=	Do not build embedded getopt
+SUBST_FILES.makefile=	Makefile
+SUBST_SED.makefile+=	-e 's,charresize.o getopt.o,charresize.o,'
 
-post-configure:
-	# Do not build embedded getopt
-	sed -i 's|"getopt.h"|<getopt.h>|' ${WRKSRC}/bdfresize.c
-	sed -i 's|charresize.o getopt.o|charresize.o|' ${WRKSRC}/Makefile
+# Fix getopt includes
+SUBST_CLASSES+=		includes
+SUBST_STAGE.includes=	post-configure
+SUBST_MESSAGE.includes=	Fix getopt includes
+SUBST_FILES.includes=	bdfresize.c
+SUBST_SED.includes+=	-e 's,"getopt.h",<getopt.h>,'
+
+GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"
