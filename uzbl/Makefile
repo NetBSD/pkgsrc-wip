@@ -23,6 +23,12 @@ PY_PATCHPLIST=		yes
 MAKE_ENV+=	PYTHON=${PYTHONBIN}
 MAKE_ENV+=	MANDIR=${DESTDIR}/${PREFIX}/${PKGMANDIR}
 
+# don't include lang/python/egg.mk. define onwn EGG_NAME, INFODIR.
+# when include egg.mk, defined PYDISTUTILSPKG=yes
+# then run do-build and do-install in lang/python/extension.mk
+EGG_NAME=	uzbl-201100808
+PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+
 REPLACE_PYTHON+=	bin/uzbl-tabbed
 REPLACE_PYTHON+=	examples/data/scripts/auth.py
 REPLACE_PYTHON+=	examples/data/scripts/uzblcat
