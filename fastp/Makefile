@@ -3,7 +3,6 @@
 DISTNAME=	fastp-0.20.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenGene/}
-GITHUB_PROJECT=	fastp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
@@ -15,7 +14,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 BUILD_TARGET=		fastp
 PTHREAD_AUTO_VARS=	yes
-INSTALL_TARGET=		install-strip
+
+post-install:
+	${STRIP} ${DESTDIR}${PREFIX}/bin/fastp
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
