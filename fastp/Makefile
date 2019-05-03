@@ -4,17 +4,19 @@ DISTNAME=	fastp-0.20.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenGene/}
 GITHUB_PROJECT=	fastp
-GITHUB_TAG=	v0.20.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/OpenGene/fastp
 COMMENT=	Ultra-fast all-in-one FASTQ preprocessor
 LICENSE=	mit
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-BUILD_TARGET=	fastp
-INSTALL_TARGET=	install-strip
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+BUILD_TARGET=		fastp
+PTHREAD_AUTO_VARS=	yes
+INSTALL_TARGET=		install-strip
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

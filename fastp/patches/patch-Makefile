@@ -21,10 +21,11 @@ $NetBSD$
  
  CXX ?= g++
 -CXXFLAGS := -std=c++11 -g -O3 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir)) ${CXXFLAGS}
+-LIBS := -lz -lpthread
+-LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS) $(LD_FLAGS)
 +CXXFLAGS ?= -g -O3
 +CXXFLAGS += -std=c++11 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir))
- LIBS := -lz -lpthread
--LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS) $(LD_FLAGS)
++LIBS := -lz
 +LDFLAGS += $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS)
  
  
