@@ -24,21 +24,20 @@ PKG_SUPPORTED_OPTIONS+=		revert_i965_softpin
 PKG_SUPPORTED_OPTIONS+=		revert_sdma_uploader
 PKG_SUPPORTED_OPTIONS+=		require_36_gen4
 
-PKG_SUPPORTED_OPTIONS+=		no_cs_queue
-PKG_SUPPORTED_OPTIONS+=		revert_threaded_context
-PKG_SUPPORTED_OPTIONS+=		revert_copy_clear
 PKG_SUPPORTED_OPTIONS+=		physmem_netbsd
 PKG_SUPPORTED_OPTIONS+=		setaffinity_np_netbsd
 PKG_SUPPORTED_OPTIONS+=		no_initial_exec_nonnull
+
+PKG_SUPPORTED_OPTIONS+=		no_cs_queue
+PKG_SUPPORTED_OPTIONS+=		revert_threaded_context
+PKG_SUPPORTED_OPTIONS+=		revert_copy_clear
+
 PKG_SUPPORTED_OPTIONS+=		no_getprogramname
 PKG_SUPPORTED_OPTIONS+=		strict_xsrc_netbsd
 
 PKG_SUPPORTED_OPTIONS+=		x86_tsd_openbsd
-PKG_SUPPORTED_OPTIONS+=		so_name_openbsd
 PKG_SUPPORTED_OPTIONS+=		disable_wx_memory
 PKG_SUPPORTED_OPTIONS+=		no_linear_alloc_destructor
-
-PKG_SUPPORTED_OPTIONS+=		invert_atomic_add_unless
 
 PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
@@ -116,12 +115,6 @@ PKG_SUGGESTED_OPTIONS+=		require_36_gen4
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=		no_cs_queue
-PKG_SUGGESTED_OPTIONS+=		revert_threaded_context
-PKG_SUGGESTED_OPTIONS+=		revert_copy_clear
-.endif
-
-.if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		physmem_netbsd
 .endif
 
@@ -131,6 +124,12 @@ PKG_SUGGESTED_OPTIONS+=		setaffinity_np_netbsd
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		no_initial_exec_nonnull
+.endif
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		no_cs_queue
+PKG_SUGGESTED_OPTIONS+=		revert_threaded_context
+PKG_SUGGESTED_OPTIONS+=		revert_copy_clear
 .endif
 
 # .if ${OPSYS} == "NetBSD"
@@ -146,11 +145,6 @@ PKG_SUGGESTED_OPTIONS+=		no_initial_exec_nonnull
 PKG_SUGGESTED_OPTIONS+=		x86_tsd_openbsd
 .endif
 
-# Shorten names dlopened to libGL.so and libglapi.so
-.if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=		so_name_openbsd
-.endif
-
 # Disable code for init_heap for fear of W^X violation
 .if ${OPSYS} == "OpenBSD"
 PKG_SUGGESTED_OPTIONS+=		disable_wx_memory
@@ -159,11 +153,6 @@ PKG_SUGGESTED_OPTIONS+=		disable_wx_memory
 .if ${OPSYS} == "OpenBSD"
 PKG_SUGGESTED_OPTIONS+=		no_linear_alloc_destructor
 .endif
-
-# Causes segfault in mpv on DragonFly intel EagleLake machine
-# .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-# PKG_SUGGESTED_OPTIONS+=		invert_atomic_add_unless
-# .endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -509,18 +498,6 @@ CPPFLAGS+=	-DREVERT_SDMA_UPLOADER
 CPPFLAGS+=	-DREQUIRE_36_GEN4
 .endif
 
-.if !empty(PKG_OPTIONS:Mno_cs_queue)
-CPPFLAGS+=	-DNO_CS_QUEUE
-.endif
-
-.if !empty(PKG_OPTIONS:Mrevert_threaded_context)
-CPPFLAGS+=	-DREVERT_THREADED_CONTEXT
-.endif
-
-.if !empty(PKG_OPTIONS:Mrevert_copy_clear)
-CPPFLAGS+=	-DREVERT_COPY_CLEAR
-.endif
-
 .if !empty(PKG_OPTIONS:Mphysmem_netbsd)
 CPPFLAGS+=	-DPHYSMEM_NETBSD
 .endif
@@ -531,6 +508,18 @@ CPPFLAGS+=	-DSETAFFINITY_NP_NETBSD
 
 .if !empty(PKG_OPTIONS:Mno_initial_exec_nonnull)
 CPPFLAGS+=	-DNO_INITIAL_EXEC_NONNULL
+.endif
+
+.if !empty(PKG_OPTIONS:Mno_cs_queue)
+CPPFLAGS+=	-DNO_CS_QUEUE
+.endif
+
+.if !empty(PKG_OPTIONS:Mrevert_threaded_context)
+CPPFLAGS+=	-DREVERT_THREADED_CONTEXT
+.endif
+
+.if !empty(PKG_OPTIONS:Mrevert_copy_clear)
+CPPFLAGS+=	-DREVERT_COPY_CLEAR
 .endif
 
 .if !empty(PKG_OPTIONS:Mno_getprogramname)
@@ -545,18 +534,10 @@ CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 CPPFLAGS+=	-DX86_TSD_OPENBSD
 .endif
 
-.if !empty(PKG_OPTIONS:Mso_name_openbsd)
-CPPFLAGS+=	-DSO_NAME_OPENBSD
-.endif
-
 .if !empty(PKG_OPTIONS:Mdisable_wx_memory)
 CPPFLAGS+=	-DDISABLE_WX_MEMORY
 .endif
 
 .if !empty(PKG_OPTIONS:Mno_linear_alloc_destructor)
 CPPFLAGS+=	-DNO_LINEAR_ALLOC_DESTRUCTOR
-.endif
-
-.if !empty(PKG_OPTIONS:Minvert_atomic_add_unless)
-CPPFLAGS+=	-DINVERT_ATOMIC_ADD_UNLESS
 .endif

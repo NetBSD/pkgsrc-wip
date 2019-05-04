@@ -1,7 +1,16 @@
 # $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
 
+# 2019-05-03	st/va: check resource_get_info nullity in vlVaDeriveImage
+COMMIT_ID=	8cd71f399e73c5d87e9162cc74da76e317a9f41f
+
+# 2019-05-03	radv: apply the indexing workaround for atomic buffer operations on GFX9
+# COMMIT_ID=	4f18c43d1df64135e8968a7d4fbfd2c9918b76ae
+
+# 2019-05-03	anv: fix crash when application does not provide push constants
+# COMMIT_ID=	80dc78407d0d1e03ceddf8889b217e8fd113568d
+
 # 2019-05-02	anv: Stop including POS in FS input limits
-COMMIT_ID=	be7e9870d620460a91e8fbdbb8bf39b5c462aed3
+# COMMIT_ID=	be7e9870d620460a91e8fbdbb8bf39b5c462aed3
 
 # 2019-05-02	docs: fixup mistake in contents
 # COMMIT_ID=	96924aa92ecf16cd2145b1a881df37d9162c6ba7

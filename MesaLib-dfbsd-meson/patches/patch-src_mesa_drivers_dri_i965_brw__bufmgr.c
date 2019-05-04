@@ -1,10 +1,5 @@
 $NetBSD$
 
-This single patch allows glxgears to run properly on
-an Intel integrated graphics IvyBridge machine on DragonFly.
-libdrm atomic_add_unless() may reverse return value meaning
-https://bugs.freedesktop.org/show_bug.cgi?id=100077
-
 From Ravenports
 
 graphics/mesa-dri: Disable soft-spinning of all buffers (#169)
@@ -20,21 +15,9 @@ Discussion in
 
 https://bugs.dragonflybsd.org/issues/3171
 
---- src/mesa/drivers/dri/i965/brw_bufmgr.c.orig	2019-03-05 16:06:50.000000000 +0000
+--- src/mesa/drivers/dri/i965/brw_bufmgr.c.orig	2019-05-03 15:59:12.000000000 +0000
 +++ src/mesa/drivers/dri/i965/brw_bufmgr.c
-@@ -98,7 +98,11 @@ atomic_add_unless(int *v, int add, int u
-    c = p_atomic_read(v);
-    while (c != unless && (old = p_atomic_cmpxchg(v, c, c + add)) != c)
-       c = old;
-+#if defined(INVERT_ATOMIC_ADD_UNLESS)
-+   return c != unless;
-+#else
-    return c == unless;
-+#endif
- }
- 
- /**
-@@ -1721,7 +1725,11 @@ brw_bufmgr_init(struct gen_device_info *
+@@ -1721,7 +1721,11 @@ brw_bufmgr_init(struct gen_device_info *
        bufmgr->initial_kflags |= EXEC_OBJECT_SUPPORTS_48B_ADDRESS;
  
        /* Allocate VMA in userspace if we have softpin and full PPGTT. */
