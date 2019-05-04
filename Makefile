@@ -4513,7 +4513,6 @@ SUBDIR+=	ssid
 SUBDIR+=	ssu
 SUBDIR+=	st-term-git
 SUBDIR+=	stackdriver-collectd
-SUBDIR+=	stacks
 SUBDIR+=	stagit
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools

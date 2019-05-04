@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (stacks-1.48.tar.gz) = 6959023f5f7073d18b5048e97643aab1ee92d109
-RMD160 (stacks-1.48.tar.gz) = 874de582a5de4bd448575ba230a78b5048577f89
-SHA512 (stacks-1.48.tar.gz) = 792f697fd1e23d7b7a1138af3fc3725705d3930faacd1bc0411e1bdea7254981b2cc369dc824213c15c2c8fad56d7f910c6647e7886252f9b388028d6900b49a
-Size (stacks-1.48.tar.gz) = 895195 bytes
-SHA1 (patch-htslib_Makefile) = 0bceb9bcabb8d328800673588e79d0b2a276ab96
