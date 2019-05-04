@@ -4513,6 +4513,7 @@ SUBDIR+=	ssu
 SUBDIR+=	st-term-git
 SUBDIR+=	stackdriver-collectd
 SUBDIR+=	stagit
+SUBDIR+=	stagit-gopher
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	starfighter
