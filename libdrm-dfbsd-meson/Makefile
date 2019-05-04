@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.92 2019/04/23 09:51:47 wiz Exp $
 
+# 2019-05-03		xf86drm: Fix possible memory leak with drmModeGetPropertyPtr()
+COMMIT_ID=		b39377d66ac04363f3c47ba5870c5ef71a95f5b8
+
 # 2019-04-25		tests/libkms-test-plane: fix possbile memory leak
-COMMIT_ID=		6a7d1329dbcc898f51173885db08d36c80bb5f20
+# COMMIT_ID=		6a7d1329dbcc898f51173885db08d36c80bb5f20
 
 # 2019-04-19		Bump the version to 2.4.98
 # COMMIT_ID=		be3b07617fc999e366e8185dbc7851ae5943df27
