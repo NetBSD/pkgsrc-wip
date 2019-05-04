@@ -3,7 +3,7 @@
 DISTNAME=	tor-0.4.0.4-rc
 PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 CATEGORIES=	net security
-MASTER_SITES=	http://www.torproject.org/dist/
+MASTER_SITES=	https://dist.torproject.org/
 
 MAINTAINER=	alnsn@NetBSD.org
 HOMEPAGE=	http://www.torproject.org/
@@ -12,18 +12,14 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		perl:test pkg-config
 GNU_CONFIGURE=		yes
-
-USE_TOOLS+=		pkg-config
-
-CONFIGURE_ENV+=		CPP=${CPP:Q}
-CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--program-suffix=-dev
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--program-suffix=-dev
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/tordev
+CONFIGURE_ENV+=		CPP=${CPP:Q}
 
-# one test failure in 0.3.5.3-alpha
-# https://trac.torproject.org/projects/tor/ticket/27948
 TEST_TARGET=		check
 
 TOR_USER?=		tordev
@@ -44,8 +40,6 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME.${TOR_USER}} ${USER_GROUP} 0700
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-
 CONF_FILES+=		${PREFIX}/share/examples/tordev/torrc.sample	\
 			${PKG_SYSCONFDIR}/torrc
 
@@ -57,7 +51,9 @@ FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
-CHECK_PORTABILITY_SKIP+=	contrib/*
+CHECK_PORTABILITY_SKIP+=contrib/*
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,18 +61,9 @@ CHECK_PORTABILITY_SKIP+=	contrib/*
 CFLAGS+=		-c99
 .endif
 
-.PHONY: post-install-paxctl-AM:
-post-install: post-install-paxctl-AM
-post-install-paxctl-AM:
-	${PAXCTL} +AM ${DESTDIR}${PREFIX}/bin/tor-dev
-
+.include "../../archivers/zstd/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-## We include this after other b3.mk files since we use PTHREAD_TYPE.
-##
-.include "options.mk"
-
 .include "../../mk/bsd.pkg.mk"
