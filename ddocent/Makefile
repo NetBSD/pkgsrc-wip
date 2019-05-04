@@ -29,7 +29,7 @@ DEPENDS=	mawk>=0:../../lang/mawk \
 		cdhit>=0:../../biology/cdhit \
 		samtools>=1.3:../../wip/samtools \
 		vcftools>=0.1.15:../../wip/vcftools \
-		Trimmomatic>=0:../../wip/trimmomatic \
+		Trimmomatic>=0:../../biology/trimmomatic \
 		stacks>=0:../../biology/stacks \
 		rainbow>=0:../../wip/rainbow \
 		trimadap>=0:../../wip/trimadap \
