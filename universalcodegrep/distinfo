@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (universalcodegrep-0.3.0.tar.gz) = 9b06f306eea205adf0f5ac005d79637240bf6e0d
-RMD160 (universalcodegrep-0.3.0.tar.gz) = e59fdfed0400a14e8dced801b31745313dc896aa
-SHA512 (universalcodegrep-0.3.0.tar.gz) = 5a7a45d46ec16b8946b9308c0b022aeec39dd1ea4825a67cee9855382e5249191c3e9760d270c2d81c9bc348ebf767581b60240e5ef810bf4b9f9e41f96fb93d
-Size (universalcodegrep-0.3.0.tar.gz) = 606500 bytes
+SHA1 (universalcodegrep-0.3.0.tar.gz) = 562b3fb00162205432a654e4e67ed70e9225de44
+RMD160 (universalcodegrep-0.3.0.tar.gz) = e3ce16f9313c0d36f025710706345fe758fe4bef
+SHA512 (universalcodegrep-0.3.0.tar.gz) = ba67a474e27182411c3fb62339804ef90b5371001136510ecfb72f8a73c9b34d22b6cf5842d0f13ca6f19234698a20dc7dea36c8aa366478d93afc2d7c685118
+Size (universalcodegrep-0.3.0.tar.gz) = 606643 bytes
