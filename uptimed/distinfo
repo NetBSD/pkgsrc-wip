@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.5 2013/05/10 08:20:04 ahp-nils Exp $
 
-SHA1 (uptimed-0.3.17.tar.gz) = f05324e12a5f992c5f236fbc536b4da2939a1d9d
-RMD160 (uptimed-0.3.17.tar.gz) = 6002646b458436adf4dafa351c7a82cb31a976cb
-SHA512 (uptimed-0.3.17.tar.gz) = 5f43cee9e3aca34c9a9d66e476e5e9938ab5275683e1190162b3d53ba1c3c194af1de59597635451d7737d1e855933c892863756efa3905b05c1f8bd1b757945
-Size (uptimed-0.3.17.tar.gz) = 356327 bytes
-SHA1 (patch-ab) = cd8b50b87a79f30719d5d4d0f32bb9d17438da8b
+SHA1 (uptimed-0.4.1.tar.gz) = 69133d60f130d347d90153a5123315ccc39e56e7
+RMD160 (uptimed-0.4.1.tar.gz) = bbb92c65db33df936e675b725a5cb2c5d290137c
+SHA512 (uptimed-0.4.1.tar.gz) = 5dfe79aebab8c8daca3a3ec88d54e312446fc7cf8b54ef1414cbfcb3fb25053ef31235de4b42cb14fc7352965b77ca2875c753b97b4d61178792a5484715e23a
+Size (uptimed-0.4.1.tar.gz) = 55162 bytes
+SHA1 (patch-ab) = 5f8a4f65be19b43c7dccde3e2a9a90243779105e
