@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
 
+# 2019-05-04	panfrost/midgard: iabs cannot run on mul
+COMMIT_ID=	68238732462bb044282ffbeb6cb08b96c7ff7805
+
 # 2019-05-03	st/va: check resource_get_info nullity in vlVaDeriveImage
-COMMIT_ID=	8cd71f399e73c5d87e9162cc74da76e317a9f41f
+# COMMIT_ID=	8cd71f399e73c5d87e9162cc74da76e317a9f41f
 
 # 2019-05-03	radv: apply the indexing workaround for atomic buffer operations on GFX9
 # COMMIT_ID=	4f18c43d1df64135e8968a7d4fbfd2c9918b76ae
