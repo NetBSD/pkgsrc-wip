@@ -3,11 +3,11 @@
 
 DISTNAME=	uptimed-0.3.17
 CATEGORIES=	sysutils
-MASTER_SITES=	http://podgorny.cz/uptimed/releases/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rpodgorny/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=		joe@joe.cz
-HOMEPAGE=		http://podgorny.cz/uptimed/
+HOMEPAGE=		https://github.com/rpodgorny/uptimed
 COMMENT=		Keeps track of current and past system uptimes
 
 
