@@ -1843,6 +1843,7 @@ SUBDIR+=	libcue
 SUBDIR+=	libdazzle
 SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
+SUBDIR+=	libdecaf
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdivecomputer
