@@ -17,7 +17,7 @@ CMAKE_ARGS+=	-DENABLE_TESTS=NO
 # These are required to prevent build breakage when tests are enabled
 # This is probably due to the auto-generated headers clobbering with
 # the #defines
-CFLAGS+=	-D_NETBSD_SOURCE
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 PYTHON_FOR_BUILD_ONLY=		tool
 
