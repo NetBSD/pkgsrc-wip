@@ -3,5 +3,9 @@
 - Review patches/patch-include_tig_display.h, I am not sure if it is correct
 - Add a comment about patches/patch-include_tig_tig.h
 - Some graphical artifacts (e.g. where `main' and `diff' views are present)
-  should be investigated and fixed
-    -- leot (2018/07/22)
+  should be investigated and fixed, to reproduce them:
+   + press enter 
+   + press down arrow
+  After that the `main' view is mostly completely blank except for the current
+  two entries.
+    -- leot (2019/05/06)
