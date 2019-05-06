@@ -4882,7 +4882,6 @@ SUBDIR+=	wine-devel
 SUBDIR+=	wings
 SUBDIR+=	winwrangler
 SUBDIR+=	wireless-tools
-SUBDIR+=	wireshark
 SUBDIR+=	wise2
 SUBDIR+=	wise3
 SUBDIR+=	witchblast
