@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (lablgtk-3.0.beta6.tar.gz) = 18dbac5c3e856891620b79fd548c6b952991c29c
+RMD160 (lablgtk-3.0.beta6.tar.gz) = 7c7f6f9d946835a95f8193cf23f9f70e5820d231
+SHA512 (lablgtk-3.0.beta6.tar.gz) = 8139645cbf0cc72ade46e66c00912fe3921c87190db6b7172c8061a6208aad883ac8826555191822cd3d2653e858d6fc9c5c920ba79d38beea51d5dfc7533ca9
+Size (lablgtk-3.0.beta6.tar.gz) = 1099271 bytes
+SHA1 (patch-configure) = 782b03c018821ca298b8e008bb22c2fb571495ea
+SHA1 (patch-src_Makefile) = f7e29020e3963ee49df105b19f12d6e76d5c7002

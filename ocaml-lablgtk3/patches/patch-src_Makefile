@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/Makefile.orig	2019-04-25 08:22:06.000000000 +0000
++++ src/Makefile
+@@ -372,16 +372,7 @@ old-uninstall:
+ 
+ # Install using ocamlfind
+ findlib-install:
+-	@if test "$(OCAMLFIND)" = no; then \
+-	  echo "Cannot use ocamlfind, use old-install."; \
+-	  exit 2; fi
+-	mkdir -p "$(BINDIR)"
+-	mkdir -p "$(DESTDIR)$(FINDLIBDIR)"
+-	@if test -f "$(DESTDIR)$(OCAMLLDCONF)"; then :; else \
+-	  mkdir -p "`dirname $(DESTDIR)$(OCAMLLDCONF)`"; \
+-	  touch "$(DESTDIR)$(OCAMLLDCONF)"; fi
+-	$(OCAMLFIND) install -destdir "$(DESTDIR)$(FINDLIBDIR)" \
+-	  -ldconf "$(DESTDIR)$(OCAMLLDCONF)" \
++	$(OCAMLFIND) install \
+     lablgtk3 ../META \
+     build.ml \
+     $(CLIBS) \

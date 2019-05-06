@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.orig	2019-04-25 08:22:06.000000000 +0000
++++ configure
+@@ -2458,7 +2458,7 @@ if test "$OCAMLFIND" = no; then
+ FINDLIBDIR=""
+ OCAMLLDCONF=""
+ else
+-FINDLIBDIR="`ocamlfind printconf destdir | tr -d '\\r'`"
++FINDLIBDIR="${PREFIX}/${OCAML_SITELIBDIR}"
+ echo "$OCAMLFIND library path is $FINDLIBDIR"
+ OCAMLLDCONF="`ocamlfind printconf ldconf | tr -d '\\r'`"
+ echo "$OCAMLFIND ldconf path is $OCAMLLDCONF"
