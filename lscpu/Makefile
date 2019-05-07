@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	lscpu
-DISTNAME=	1.0.0
+DISTNAME=	1.2.0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NanXiao/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/NanXiao/lscpu/
 COMMENT=	The lscpu for BSD
 LICENSE=	modified-bsd
 
-WRKSRC=	${WRKDIR}/lscpu-1.0.0
+WRKSRC=	${WRKDIR}/lscpu-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	bin
 
