@@ -1,0 +1,3 @@
+@comment $NetBSD$
+include/gabe.h
+lib/libgabe.a

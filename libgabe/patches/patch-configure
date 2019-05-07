@@ -1,0 +1,26 @@
+$NetBSD$
+
+https://github.com/schanzen/libgabe/pull/3
+
+--- configure.old
++++ configure
+@@ -2253,15 +2253,15 @@ else
+ fi
+ 
+ if test "x$enable_debug" = "xyes"; then
+-  CFLAGS="-g -Wall -fPIC"
+-  LDFLAGS="-g -Wall"
++  CFLAGS="$CFLAGS -g -Wall -fPIC"
++  LDFLAGS="$LDFLAGS -g -Wall"
+   $as_echo "#define BSWABE_DEBUG 1" >>confdefs.h
+ 
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ else
+-  CFLAGS="-O3 -Wall -fPIC"
+-  LDFLAGS="-O3 -Wall"
++  CFLAGS="$CFLAGS -Wall -fPIC"
++  LDFLAGS="$LDFLAGS -Wall"
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+ fi
