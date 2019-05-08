@@ -1,13 +1,12 @@
 # $NetBSD: Makefile,v 1.15 2012/09/24 18:26:52 asau Exp $
-#
 
-DISTNAME=	castget-1.1.0
+DISTNAME=	castget-1.2.4
 CATEGORIES=	audio www
-MASTER_SITES=	http://savannah.nongnu.org/download/castget/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/castget/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	netbsd@guigui2.net
-HOMEPAGE=	http://castget.nongnu.org/
+HOMEPAGE=	https://castget.johndal.com/
 COMMENT=	Command-line RSS enclosures dowloader
 LICENSE=	gnu-lgpl-v2.1
 
@@ -22,8 +21,18 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/castgetrc.example \
 		${DESTDIR}${PREFIX}/share/examples/castgetrc.example
 
-.include "../../www/curl/buildlink3.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.castget
+PKG_SUPPORTED_OPTIONS=	id3
+PKG_SUGGESTED_OPTIONS=	id3
+
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mid3)
 .include "../../audio/id3lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-id3lib
+.endif
+
+.include "../../www/curl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

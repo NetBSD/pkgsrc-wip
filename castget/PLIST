@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/04/27 05:22:20 guigui2 Exp $
+@comment $NetBSD$
 bin/castget
 man/man1/castget.1
 man/man5/castgetrc.5
