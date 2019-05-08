@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	motyl-1.0.1
+DISTNAME=	motyl-1.0.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_PROJECT=	motyl
