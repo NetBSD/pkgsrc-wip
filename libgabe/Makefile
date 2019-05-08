@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=schanzen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ng0@n0.is
-HOMEPAGE=	https://github.com/schanzen/
+HOMEPAGE=	https://github.com/schanzen/libgabe
 COMMENT=	Ciphertext-Policy Attribute-Based Encryption library, fork of libbswabe
 LICENSE=	gnu-gpl-v2
 
