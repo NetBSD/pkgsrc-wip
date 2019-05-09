@@ -24,5 +24,9 @@ DEPENDS+=	${PYPKGPREFIX}-uritemplate>=1.0.0:../../textproc/py-uritemplate
 
 USE_LANGUAGES=	# none
 
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/gitsome.bat
+	${RM} ${DESTDIR}${PREFIX}/bin/xonsh.bat
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
