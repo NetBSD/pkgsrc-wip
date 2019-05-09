@@ -36,7 +36,6 @@ PKG_SUPPORTED_OPTIONS+=		no_getprogramname
 PKG_SUPPORTED_OPTIONS+=		strict_xsrc_netbsd
 
 PKG_SUPPORTED_OPTIONS+=		x86_tsd_openbsd
-PKG_SUPPORTED_OPTIONS+=		disable_wx_memory
 PKG_SUPPORTED_OPTIONS+=		no_linear_alloc_destructor
 
 PKG_SUGGESTED_OPTIONS+=		xvmc
@@ -143,11 +142,6 @@ PKG_SUGGESTED_OPTIONS+=		revert_copy_clear
 # OpenBSD xenocara tsd dispatch assembly for entry_x86_tsd.h
 .if ${OPSYS} == "OpenBSD"
 PKG_SUGGESTED_OPTIONS+=		x86_tsd_openbsd
-.endif
-
-# Disable code for init_heap for fear of W^X violation
-.if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=		disable_wx_memory
 .endif
 
 .if ${OPSYS} == "OpenBSD"
@@ -532,10 +526,6 @@ CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 
 .if !empty(PKG_OPTIONS:Mx86_tsd_openbsd)
 CPPFLAGS+=	-DX86_TSD_OPENBSD
-.endif
-
-.if !empty(PKG_OPTIONS:Mdisable_wx_memory)
-CPPFLAGS+=	-DDISABLE_WX_MEMORY
 .endif
 
 .if !empty(PKG_OPTIONS:Mno_linear_alloc_destructor)

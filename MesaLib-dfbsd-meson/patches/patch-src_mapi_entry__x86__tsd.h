@@ -1,5 +1,14 @@
 $NetBSD$
 
+From OpenBSD xenocara
+
+Make similiar changes to the i386 tsd dispatch assembly as libglvnd to
+avoid a text relocation fixing the build with lld.
+
+This time store the address of the GOT in ebx as required before calling
+the PLT stub and change .balign value to match X86_ENTRY_SIZE as suggested
+by naddy.
+
 --- src/mapi/entry_x86_tsd.h.orig	2019-03-06 23:05:20.000000000 +0000
 +++ src/mapi/entry_x86_tsd.h
 @@ -31,18 +31,51 @@

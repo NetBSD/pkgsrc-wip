@@ -1,7 +1,16 @@
 # $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
 
+# 2019-05-08	iris: Reorganise execbuf to have a single point of failure
+COMMIT_ID=	8b8125646991fb7e923821bafea9bec3ba355b42
+
+# 2019-05-08	kmsro: add _dri.so to two of the kmsro drivers.
+# COMMIT_ID=	0a42d5b98bc3083e20475eb1ecea20f9b876269d
+
+# 2019-05-07	Revert "glx: Fix synthetic error generation in __glXSendError"
+# COMMIT_ID=	a01b393c397c846345f03f76f1167dd667e0ee96
+
 # 2019-05-04	panfrost/midgard: iabs cannot run on mul
-COMMIT_ID=	68238732462bb044282ffbeb6cb08b96c7ff7805
+# COMMIT_ID=	68238732462bb044282ffbeb6cb08b96c7ff7805
 
 # 2019-05-03	st/va: check resource_get_info nullity in vlVaDeriveImage
 # COMMIT_ID=	8cd71f399e73c5d87e9162cc74da76e317a9f41f
