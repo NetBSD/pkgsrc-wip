@@ -1,7 +1,6 @@
 # $NetBSD$
 
 DISTNAME=	gitsome-0.8.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gitsome/}
 
