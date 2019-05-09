@@ -1074,6 +1074,7 @@ SUBDIR+=	git-spindle
 SUBDIR+=	gitg
 SUBDIR+=	gitlab
 SUBDIR+=	gitless
+SUBDIR+=	gitsome
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
 SUBDIR+=	gjs
