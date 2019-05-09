@@ -1,6 +1,7 @@
 $NetBSD$
 
-Avoid too strict version requirements.
+- Avoid too strict version requirements.
+- Depends on uritemplate, not uritemplate.py
 
 --- setup.py.orig	2019-04-07 18:12:11.000000000 +0000
 +++ setup.py
@@ -29,7 +30,7 @@ Avoid too strict version requirements.
 +            'feedparser>=5.2.1',
 +            'pytz>=2016.3',
 +            'docopt>=0.6.2',
-+            'uritemplate.py>=1.0.0',
++            'uritemplate>=1.0.0',
          ],
          skw['entry_points'] = {
              'pygments.lexers': ['gitsome = xonsh.pyghooks:XonshLexer',

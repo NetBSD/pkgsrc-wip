@@ -4,4 +4,4 @@ SHA1 (gitsome-0.8.4.tar.gz) = 15a2c6836894b186fb2c4724b29c25628ca824be
 RMD160 (gitsome-0.8.4.tar.gz) = c44e37a21578fb2da6b6e5ae7c710fdb063eb84a
 SHA512 (gitsome-0.8.4.tar.gz) = e719f6d25c377f476abef410ab40355b76190eb93b9bb1b041bcb6f87bb1c8dbd7b1b7c2200ca43d31eac5a472f50fa92c6e81b855373929b9f31b3e64165bce
 Size (gitsome-0.8.4.tar.gz) = 609409 bytes
-SHA1 (patch-setup.py) = 2660ae4f302a7f68550b61069cdbc135f5cd29c6
+SHA1 (patch-setup.py) = 80842e166dbcbde56da5d3f1042ee47e9cf0d1e3
