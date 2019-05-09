@@ -5,11 +5,10 @@
 #              Fri May 20 17:39:48 CDT 2016               #
 ###########################################################
 
-DISTNAME=	vsearch-${PORTVERSION}
+DISTNAME=	vsearch-2.13.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=torognes/}
-GITHUB_PROJECT=	vsearch
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/torognes/vsearch
@@ -20,8 +19,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf automake autoreconf gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-pdfman
-
-PORTVERSION=	2.4.2
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi

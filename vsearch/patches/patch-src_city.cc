@@ -1,20 +1,20 @@
 $NetBSD$
 
-# Handle non-standardized swap macros
+# Portability
 
---- src/city.cc.orig	2016-01-25 19:23:36 UTC
+--- src/city.cc.orig	2019-04-30 11:57:32 UTC
 +++ src/city.cc
-@@ -69,6 +69,13 @@ static uint32 UNALIGNED_LOAD32(const cha
- #define bswap_64(x) bswap64(x)
- #endif
+@@ -60,6 +60,13 @@ static uint32 UNALIGNED_LOAD32(const char *p) {
+ #define bswap_32(x) OSSwapInt32(x)
+ #define bswap_64(x) OSSwapInt64(x)
  
 +#elif defined(__FreeBSD__)
++
++#include <sys/endian.h>
 +
 +#define bswap_32(x) bswap32(x)
 +#define bswap_64(x) bswap64(x)
 +
-+#include <sys/endian.h>
-+
- #else
+ #elif defined(__NetBSD__)
  
- #include <byteswap.h>
+ #include <sys/types.h>
