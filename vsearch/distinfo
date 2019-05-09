@@ -5,4 +5,5 @@ RMD160 (vsearch-2.13.3.tar.gz) = d8f00a88449fb827878b7e301f9127799ce3d43c
 SHA512 (vsearch-2.13.3.tar.gz) = a3c539d60ed6db8bdb964a1aee18e79a6b8ed397dc01d47aad873019a8f123ed8892b08536dfd5f785f8d327fee75d42b4a744f354f5c6e3bb03d0bf10f054e5
 Size (vsearch-2.13.3.tar.gz) = 233846 bytes
 SHA1 (patch-src_city.cc) = 3a5bcbca0a0c733a32a9d152189de10df3cb515f
-SHA1 (patch-src_vsearch.h) = 35318f5a3da82fa5ea3846be5c0f6617a8b6408a
+SHA1 (patch-src_vsearch.cc) = d56b276d7596d11c0c1ae74e43328b9470afcefa
+SHA1 (patch-src_vsearch.h) = 9cc8309ed7a68dfcd5f4a173aabf131efcaa2562
