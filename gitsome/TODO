@@ -1,3 +1,4 @@
+- Should it be renamed to py-gitsome?
 - Investigate the differences and possible rationale between uritemplate and
   uritemplate.py (former is textproc/py-uritemplate, latter not present in
   pkgsrc)
