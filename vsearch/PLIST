@@ -1,3 +1,4 @@
 @comment $NetBSD$
 bin/vsearch
 man/man1/vsearch.1
+share/doc/vsearch/vsearch_manual.pdf
