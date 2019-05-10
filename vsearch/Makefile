@@ -21,4 +21,6 @@ CONFIGURE_ARGS+=	--disable-pdfman
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
