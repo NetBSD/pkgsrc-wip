@@ -30,6 +30,8 @@ WRKSRC=		${WRKDIR}/VirtualBox-${PKGVERSION_NOREV}
 HAS_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
 
+PYTHON_VERSIONS_ACCEPTED=       27
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
