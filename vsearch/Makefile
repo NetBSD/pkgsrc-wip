@@ -16,6 +16,7 @@ ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf automake autoreconf gmake
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-pdfman
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
