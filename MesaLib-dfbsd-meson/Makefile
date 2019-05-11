@@ -1,7 +1,16 @@
 # $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
 
+# 2019-05-10	intel: drop misleading driver name from gen_get_device_info()
+COMMIT_ID=	7b2468bf6e58b0b178f8f498fca92c9cc0a71edb
+
+# 2019-05-10	radv: clear vertex bindings while resetting command buffer
+# COMMIT_ID=	24af0f1318967e20a8c5d7f3559389c341a0a11c
+
+# 2019-05-09	lima: fix tile buffer reloading
+# COMMIT_ID=	e44a4bae52f8d835bd7d4b740cb688f59d03cced
+
 # 2019-05-08	iris: Reorganise execbuf to have a single point of failure
-COMMIT_ID=	8b8125646991fb7e923821bafea9bec3ba355b42
+# COMMIT_ID=	8b8125646991fb7e923821bafea9bec3ba355b42
 
 # 2019-05-08	kmsro: add _dri.so to two of the kmsro drivers.
 # COMMIT_ID=	0a42d5b98bc3083e20475eb1ecea20f9b876269d
