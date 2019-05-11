@@ -3,7 +3,7 @@ $NetBSD: patch-nvmm_support,v 1.1 2018/10/29 00:00:00 maxv Exp $
 Add NVMM support.
 
 --- accel/stubs/Makefile.objs	2018-12-11 18:44:34.000000000 +0100
-+++ accel/stubs/Makefile.objs	2019-03-21 20:48:31.764998305 +0100
++++ accel/stubs/Makefile.objs	2019-05-01 11:53:33.068579985 +0200
 @@ -1,5 +1,6 @@
  obj-$(call lnot,$(CONFIG_HAX))  += hax-stub.o
  obj-$(call lnot,$(CONFIG_HVF))  += hvf-stub.o
@@ -12,7 +12,7 @@ Add NVMM support.
  obj-$(call lnot,$(CONFIG_KVM))  += kvm-stub.o
  obj-$(call lnot,$(CONFIG_TCG))  += tcg-stub.o
 --- accel/stubs/nvmm-stub.c	1970-01-01 01:00:00.000000000 +0100
-+++ accel/stubs/nvmm-stub.c	2019-03-21 20:48:31.773998305 +0100
++++ accel/stubs/nvmm-stub.c	2019-05-01 11:53:33.087579596 +0200
 @@ -0,0 +1,43 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
@@ -58,7 +58,7 @@ Add NVMM support.
 +{
 +}
 --- configure	2018-12-11 18:44:34.000000000 +0100
-+++ configure	2019-03-21 20:48:31.773998305 +0100
++++ configure	2019-05-01 11:53:33.090579534 +0200
 @@ -237,6 +237,17 @@
      return 1
  }
@@ -152,7 +152,7 @@ Add NVMM support.
    echo "TARGET_WORDS_BIGENDIAN=y" >> $config_target_mak
  fi
 --- cpus.c	2018-12-11 18:44:34.000000000 +0100
-+++ cpus.c	2019-03-21 20:48:31.774998305 +0100
++++ cpus.c	2019-05-01 11:53:33.092579493 +0200
 @@ -40,6 +40,7 @@
  #include "sysemu/hax.h"
  #include "sysemu/hvf.h"
@@ -240,7 +240,7 @@ Add NVMM support.
          qemu_dummy_start_vcpu(cpu);
      }
 --- include/sysemu/hw_accel.h	2018-12-11 18:44:34.000000000 +0100
-+++ include/sysemu/hw_accel.h	2019-03-21 20:48:31.774998305 +0100
++++ include/sysemu/hw_accel.h	2019-05-01 11:53:33.092579493 +0200
 @@ -15,6 +15,7 @@
  #include "sysemu/hax.h"
  #include "sysemu/kvm.h"
@@ -290,7 +290,7 @@ Add NVMM support.
  
  #endif /* QEMU_HW_ACCEL_H */
 --- include/sysemu/nvmm.h	1970-01-01 01:00:00.000000000 +0100
-+++ include/sysemu/nvmm.h	2019-03-21 20:48:31.774998305 +0100
++++ include/sysemu/nvmm.h	2019-05-01 11:53:33.093579472 +0200
 @@ -0,0 +1,35 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
@@ -328,7 +328,7 @@ Add NVMM support.
 +
 +#endif /* CONFIG_NVMM */
 --- qemu-options.hx	2018-12-11 18:44:34.000000000 +0100
-+++ qemu-options.hx	2019-03-21 20:48:31.774998305 +0100
++++ qemu-options.hx	2019-05-01 11:53:33.093579472 +0200
 @@ -66,7 +66,7 @@
  @table @option
  @item accel=@var{accels1}[:@var{accels2}[:...]]
@@ -355,7 +355,7 @@ Add NVMM support.
  fails to initialize.
  @table @option
 --- target/i386/helper.c	2018-12-11 18:44:34.000000000 +0100
-+++ target/i386/helper.c	2019-03-21 20:48:31.775998305 +0100
++++ target/i386/helper.c	2019-05-01 11:53:33.093579472 +0200
 @@ -986,7 +986,7 @@
      X86CPU *cpu = x86_env_get_cpu(env);
      CPUState *cs = CPU(cpu);
@@ -366,7 +366,7 @@ Add NVMM support.
  
          cpu_interrupt(cs, CPU_INTERRUPT_TPR);
 --- target/i386/Makefile.objs	2018-12-11 18:44:34.000000000 +0100
-+++ target/i386/Makefile.objs	2019-03-21 20:48:31.775998305 +0100
++++ target/i386/Makefile.objs	2019-05-01 11:53:33.094579452 +0200
 @@ -17,6 +17,7 @@
  obj-$(CONFIG_HVF) += hvf/
  endif
@@ -376,8 +376,8 @@ Add NVMM support.
  obj-$(CONFIG_SEV) += sev.o
  obj-$(call lnot,$(CONFIG_SEV)) += sev-stub.o
 --- target/i386/nvmm-all.c	1970-01-01 01:00:00.000000000 +0100
-+++ target/i386/nvmm-all.c	2019-04-13 15:09:17.551898967 +0200
-@@ -0,0 +1,1167 @@
++++ target/i386/nvmm-all.c	2019-05-11 09:04:16.041517843 +0200
+@@ -0,0 +1,1170 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
 + *
@@ -904,7 +904,7 @@ Add NVMM support.
 +    current_cpu->vcpu_dirty = false;
 +}
 +
-+static const struct nvmm_callbacks nvmm_callbacks = {
++static struct nvmm_callbacks nvmm_callbacks = {
 +    .io = nvmm_io_callback,
 +    .mem = nvmm_mem_callback
 +};
@@ -1459,14 +1459,19 @@ Add NVMM support.
 +static int
 +nvmm_accel_configure(struct nvmm_machine *mach)
 +{
-+    struct nvmm_x86_conf_cpuid cpuid;
++    struct nvmm_mach_conf_x86_cpuid cpuid;
 +    int ret;
 +
 +    memset(&cpuid, 0, sizeof(cpuid));
 +    cpuid.leaf = 0x00000001;
 +    cpuid.del.edx = CPUID_MCE | CPUID_MCA | CPUID_MTRR;
 +
-+    ret = nvmm_machine_configure(mach, NVMM_X86_CONF_CPUID, &cpuid);
++    ret = nvmm_machine_configure(mach, NVMM_MACH_CONF_X86_CPUID, &cpuid);
++    if (ret == -1)
++        return -1;
++
++    ret = nvmm_machine_configure(mach, NVMM_MACH_CONF_CALLBACKS,
++        &nvmm_callbacks);
 +    if (ret == -1)
 +        return -1;
 +
@@ -1506,8 +1511,6 @@ Add NVMM support.
 +        return -ENOSPC;
 +    }
 +
-+    nvmm_callbacks_register(&nvmm_callbacks);
-+
 +    memory_listener_register(&nvmm_memory_listener, &address_space_memory);
 +    ram_block_notifier_add(&nvmm_ram_notifier);
 +
@@ -1546,7 +1549,7 @@ Add NVMM support.
 +
 +type_init(nvmm_type_init);
 --- vl.c	2018-12-11 18:44:35.000000000 +0100
-+++ vl.c	2019-03-21 20:48:31.776998305 +0100
++++ vl.c	2019-05-01 11:53:33.095579431 +0200
 @@ -3653,7 +3653,8 @@
                                                       optarg, true);
                  optarg = qemu_opt_get(accel_opts, "accel");
