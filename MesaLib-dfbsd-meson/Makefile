@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
 
+# 2019-05-11	nir: Fix wrong sign in lower_rcp
+COMMIT_ID=	974c4d679c23373dbed386c696e3e3bc1bfa23ae
+
 # 2019-05-10	intel: drop misleading driver name from gen_get_device_info()
-COMMIT_ID=	7b2468bf6e58b0b178f8f498fca92c9cc0a71edb
+# COMMIT_ID=	7b2468bf6e58b0b178f8f498fca92c9cc0a71edb
 
 # 2019-05-10	radv: clear vertex bindings while resetting command buffer
 # COMMIT_ID=	24af0f1318967e20a8c5d7f3559389c341a0a11c
