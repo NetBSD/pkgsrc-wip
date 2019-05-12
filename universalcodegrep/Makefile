@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=gvansickle/}
 GITHUB_PROJECT=	ucg
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 #GITHUB_TAG=	038e498679dcce932469089ff794176e44d7024c
+DIST_SUBDIR=	universalcodegrep-0.3.0v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gvansickle/ucg/
