@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rust-1.32.0
+DISTNAME=	rust-1.34.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -87,7 +87,7 @@ do-install:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-.  for bin in clippy-driver rls rustc rustdoc
+.  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
 	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
@@ -95,7 +95,7 @@ fix-darwin-install-name:
 		    ${DESTDIR}${PREFIX}/bin/${bin};			\
 	done
 .  endfor
-.  for bin in llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
+.  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump llvm-profdata \
 		llvm-readobj llvm-size llvm-strip rust-lld
 	otool -XL ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin} \
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
@@ -121,7 +121,7 @@ BUILD_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in clippy-driver rls rustc rustdoc
+.  for bin in cargo-miri clippy-driver miri rls rustc rustdoc
 	${PREFIX}/bin/patchelf --set-rpath \
 		${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin}
 .  endfor
