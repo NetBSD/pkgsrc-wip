@@ -4,7 +4,7 @@ DISTNAME=	stagit-gopher-0.9.2
 CATEGORIES=	net
 MASTER_SITES=	https://codemadness.org/releases/stagit-gopher/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://codemadness.org/git/stagit-gopher/file/README.html
 COMMENT=	Static git page generator for gopher
 LICENSE=	mit
