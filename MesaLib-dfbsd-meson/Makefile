@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.20 2019/04/25 07:32:56 maya Exp $
 
+# 2019-05-12	radv: Do not use extra descriptor space for the 3rd plane.
+COMMIT_ID=	f53ebfb4503a1ae054539df1c414b86c3b1966d9
+
 # 2019-05-11	nir: Fix wrong sign in lower_rcp
-COMMIT_ID=	974c4d679c23373dbed386c696e3e3bc1bfa23ae
+# COMMIT_ID=	974c4d679c23373dbed386c696e3e3bc1bfa23ae
 
 # 2019-05-10	intel: drop misleading driver name from gen_get_device_info()
 # COMMIT_ID=	7b2468bf6e58b0b178f8f498fca92c9cc0a71edb
