@@ -50,7 +50,7 @@ share/bash-completion/completions/xbps-query
 share/bash-completion/completions/xbps-reconfigure
 share/bash-completion/completions/xbps-remove
 share/bash-completion/completions/xbps-rindex
-share/xbps.d/00-repository-main.conf
-share/xbps.d/xbps.conf
+share/examples/xbps/00-repository-main.conf.example
+share/examples/xbps/xbps.conf.example
 share/zsh/site-functions/_xbps
 share/zsh/site-functions/_xbps_src
