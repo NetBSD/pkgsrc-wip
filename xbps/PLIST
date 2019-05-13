@@ -39,6 +39,7 @@ man/man1/xbps-remove.1
 man/man1/xbps-rindex.1
 man/man1/xbps-uchroot.1
 man/man1/xbps-uunshare.1
+man/man5/xbps.d.5
 share/bash-completion/completions/xbps
 share/bash-completion/completions/xbps-checkvers
 share/bash-completion/completions/xbps-create
@@ -49,7 +50,6 @@ share/bash-completion/completions/xbps-query
 share/bash-completion/completions/xbps-reconfigure
 share/bash-completion/completions/xbps-remove
 share/bash-completion/completions/xbps-rindex
-share/man/man5/xbps.d.5
 share/xbps.d/00-repository-main.conf
 share/xbps.d/xbps.conf
 share/zsh/site-functions/_xbps
