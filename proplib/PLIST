@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/19 17:56:54 realzhtw Exp $
+@comment $NetBSD$
 include/prop/prop_array.h
 include/prop/prop_bool.h
 include/prop/prop_data.h

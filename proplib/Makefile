@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/06/28 14:53:16 kirussel Exp $
+# $NetBSD$
 
-DISTNAME=	proplib-0.6.4
+DISTNAME=	proplib-0.6.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xtraeme/}
 GITHUB_PROJECT=	portableproplib
-GITHUB_TAG=	0.6.4
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://github.com/xtraeme/portableproplib/
