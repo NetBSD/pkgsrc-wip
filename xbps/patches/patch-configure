@@ -1,5 +1,7 @@
 $NetBSD$
 
+Ignoring warnings.
+
 --- configure.orig	2018-04-16 12:00:30.000000000 +0000
 +++ configure
 @@ -266,7 +266,7 @@ fi

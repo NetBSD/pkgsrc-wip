@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	xbps-0.52
+DISTNAME=	xbps-0.53
 CATEGORIES=	pkgtools
-MASTER_SITES=	${MASTER_SITE_GITHUB:=voidlinux/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=void-linux/}
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	https://github.com/voidlinux/xbps/
+HOMEPAGE=	https://github.com/void-linux/xbps/
 COMMENT=	The X Binary Package System
 LICENSE=	2-clause-bsd
 

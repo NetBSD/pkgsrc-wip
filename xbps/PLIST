@@ -23,8 +23,8 @@ include/xbps/xbps_object.h
 include/xbps/xbps_string.h
 lib/libxbps.a
 lib/libxbps.so
-lib/libxbps.so.2
-lib/libxbps.so.2.0.0
+lib/libxbps.so.3
+lib/libxbps.so.3.0.0
 lib/pkgconfig/libxbps.pc
 man/man1/xbps-alternatives.1
 man/man1/xbps-checkvers.1
