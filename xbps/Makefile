@@ -10,22 +10,24 @@ COMMENT=	The X Binary Package System
 LICENSE=	2-clause-bsd
 
 EGDIR=          ${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=     ${EGDIR}/xbps.conf.example \
-                  ${PKG_SYSCONFDIR}/xbps.d/xbps.conf \
-                ${EGDIR}/00-repository-main.conf.example \
-                  ${PKG_SYSCONFDIR}/xbps.d/00-repository-main.conf
+CONFS=          xbps.conf 00-repository-main.conf
 
-OWN_DIRS+=      ${PKG_SYSCONFDIR}/${PKGBASE}
+.for f in ${CONFS}
+CONF_FILES+=    ${EGDIR}/${f} ${PKG_SYSCONFDIR}/xbps.d/${f}
+.endfor
+
+INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/examples/${PKGBASE}
+
+OWN_DIRS+=      ${PKG_SYSCONFDIR}/xbps.d
 
 USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/share && \
-	  ${MKDIR} examples/xbps && \
-	  ${MV} xbps.d/xbps.conf examples/xbps/xbps.conf.example && \
-	  ${MV} xbps.d/00-repository-main.conf examples/xbps/00-repository-main.conf.example && \
-	  ${RMDIR} xbps.d
+	${MKDIR} ${DESTDIR}${EGDIR} &&\
+	for f in ${CONFS}; do \
+	  ${MV} ${DESTDIR}${PREFIX}/share/xbps.d/$${f} ${DESTDIR}${EGDIR}; \
+	done
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
