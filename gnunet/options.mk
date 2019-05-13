@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests experimental bluez
 PKG_SUGGESTED_OPTIONS=		doc
-PLIST_VARS+=			doc
+PLIST_VARS+=			doc mdoc
 PLIST_VARS+=			experimental
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-documentation
 .if !empty(PKG_OPTIONS:Mmdoc)
 BUILD_DEPENDS+=		texi2mdoc-[0-9]*:../../textproc/texi2mdoc
 CONFIGURE_ARGS+=	--enable-texi2mdoc-generation
+PLIST.mdoc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 .endif
