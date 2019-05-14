@@ -7,4 +7,5 @@
    + press down arrow
   After that the `main' view is mostly completely blank except for the current
   two entries.
-    -- leot (2019/05/06)
+  patch-src_view.c workarounds that.
+    -- leot (2019/05/14)

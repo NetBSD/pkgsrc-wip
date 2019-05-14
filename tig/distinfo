@@ -6,3 +6,4 @@ SHA512 (tig-2.4.1.tar.gz) = 516114ed267a9459e356ca1af35c9eba521f9a11e9462cc5120c
 Size (tig-2.4.1.tar.gz) = 1181900 bytes
 SHA1 (patch-aa) = 304457804ce9a342e903ec25c1d7d6d9cf353cf5
 SHA1 (patch-include_tig_tig.h) = 42803e6589f97b6ad0230d0d895c429e1525476b
+SHA1 (patch-src_view.c) = f6aa68992ebe79ce8fbf161afcb0dfc52f7e4881
