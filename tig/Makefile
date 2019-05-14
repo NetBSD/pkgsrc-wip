@@ -39,6 +39,7 @@ CFLAGS+=	-D_BSD_SOURCE
 
 BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
+TEST_TARGET=	test
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR} && \
