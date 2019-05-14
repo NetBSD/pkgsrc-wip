@@ -1,6 +1,5 @@
 - Investigate if we should install TESTS, if yes patches/patch-aa needed to be
   adjusted accordingly like devel/tig
-- Review patches/patch-include_tig_display.h, I am not sure if it is correct
 - Add a comment about patches/patch-include_tig_tig.h
 - Some graphical artifacts (e.g. where `main' and `diff' views are present)
   should be investigated and fixed, to reproduce them:
