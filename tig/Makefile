@@ -48,5 +48,6 @@ post-install:
 USE_CURSES=		getsyx
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
