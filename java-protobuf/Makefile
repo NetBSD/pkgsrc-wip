@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2016/07/09 13:03:43 wiz Exp $
 
-.include "../../devel/protobuf/Makefile.common"
+# \todo Replace; no longer exists.
+#.include "../../devel/protobuf/Makefile.common"
 
 DISTNAME=	protobuf-java-${PROTOBUFVER}
 PKGNAME=	java-${DISTNAME:S/-java//}
