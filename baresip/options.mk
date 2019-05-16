@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.baresip
 PKG_SUPPORTED_OPTIONS=		alsa cairo ffmpeg gstreamer gtk x265 ilbc jack
 PKG_SUPPORTED_OPTIONS+=		libvpx oss opencore-amr opus portaudio
-PKG_SUPPORTED_OPTIONS+=		pulseaudio sdl sdl2 sndfile sndio speex v4l2
+PKG_SUPPORTED_OPTIONS+=		pulseaudio sdl2 sndfile sndio speex v4l2
 PKG_SUPPORTED_OPTIONS+=		x11
 PKG_SUGGESTED_OPTIONS=		oss ilbc speex
 
@@ -175,17 +175,6 @@ MAKE_FLAGS+=	USE_PULSE=yes
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_PULSE=
-.endif
-
-###
-### SDL support (video output)
-###
-.if !empty(PKG_OPTIONS:Msdl)
-PLIST.sdl=	yes
-MAKE_FLAGS+=	USE_SDL=yes
-.include "../../devel/SDL/buildlink3.mk"
-.else
-MAKE_FLAGS+=	USE_SDL=
 .endif
 
 ###
