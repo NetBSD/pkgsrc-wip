@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/kodev
 bin/kore
+include/kore/curl.h
 include/kore/http.h
 include/kore/jsonrpc.h
 include/kore/kore.h
