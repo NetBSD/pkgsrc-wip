@@ -3964,6 +3964,7 @@ SUBDIR+=	py-sima
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
+SUBDIR+=	py-sklearn-pandas
 SUBDIR+=	py-sleekxmpp
 SUBDIR+=	py-smcp
 SUBDIR+=	py-smell
