@@ -56,8 +56,8 @@
 _GO_DIST_BASE!=		basename ${GO_SRCPATH}
 GO_DIST_BASE?=		${_GO_DIST_BASE}
 
-.if !empty(${GO_MODULE:M[Yy][Ee][Ss]})
-GO_BUILD_PATTERN?=	all
+.if !empty(GO_MODULE:M[Yy][Ee][Ss])
+GO_BUILD_PATTERN?=	...
 .else
 GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
@@ -74,14 +74,14 @@ GOTOOLDIR=		go${GOVERSSUFFIX}/pkg/tool/${GO_PLATFORM}
 PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
-.if !empty(${GO_MODULE:M[Yy][Ee][Ss]})
+.if !empty(GO_MODULE:M[Yy][Ee][Ss])
 MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.gopath/pkg/mod/
 .else
 MAKE_ENV+=	GO111MODULE=off GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg 
 .endif
 MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
 
-.if !target(post-extract) && empty(${GO_MODULE:M[Yy][Ee][Ss]})
+.if !target(post-extract) && empty(GO_MODULE:M[Yy][Ee][Ss])
 post-extract:
 	${RUN} ${MKDIR} ${WRKSRC}
 	${RUN} ${RM} -fr ${WRKDIR}/${GO_DIST_BASE}/.hg
@@ -104,7 +104,7 @@ do-install:
 	${RUN} cd ${WRKDIR}; [ ! -d pkg ] || ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
 .endif
 
-.if !empty(${GO_MODULE:M[Yy][Ee][Ss]})
+.if !empty(GO_MODULE:M[Yy][Ee][Ss])
 .PHONY: show-go-modules
 show-go-modules:
 	cd ${WRKSRC} && ${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
