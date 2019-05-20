@@ -108,3 +108,7 @@ we have lpq in path
 + programs/dtudcfonted/dtcpftogpf/cpftogpf.c -> union wait => int
 + programs/dtudcfonted/libfuty/getfname.c -> union wait => int
 + programs/dtudcfonted/libfuty/oakfuty.c -> union wait => int
+
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  https://lab.mediaservice.net/advisory/2019-01-cde-dtprintinfo.txt
