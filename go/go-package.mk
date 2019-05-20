@@ -75,7 +75,7 @@ PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
 .if !empty(${GO_MODULE:M[Yy][Ee][Ss]})
-MAKE_ENV+=	GO111MODULE=on GOPROXY=file://${WRKDIR}/.proxy
+MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.gopath/pkg/mod/
 .else
 MAKE_ENV+=	GO111MODULE=off GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg 
 .endif
@@ -102,6 +102,13 @@ do-test:
 do-install:
 	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
 	${RUN} cd ${WRKDIR}; [ ! -d pkg ] || ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
+.endif
+
+.if !empty(${GO_MODULE:M[Yy][Ee][Ss]})
+.PHONY: show-go-modules
+show-go-modules:
+	cd ${WRKSRC} && ${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
+	cd ${WRKDIR}/.gopath/pkg/mod && ${RUN} ${FIND} . | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 .endif
 
 _VARGROUPS+=		go
