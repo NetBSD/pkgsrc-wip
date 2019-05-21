@@ -1166,6 +1166,7 @@ SUBDIR+=	go
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bytebufferpool
 SUBDIR+=	go-collectd
+SUBDIR+=	go-compress
 SUBDIR+=	go-cpuid
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-flags
