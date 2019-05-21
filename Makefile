@@ -1164,6 +1164,7 @@ SUBDIR+=	gnurl
 SUBDIR+=	gnutls
 SUBDIR+=	go
 SUBDIR+=	go-backoff
+SUBDIR+=	go-bytebufferpool
 SUBDIR+=	go-collectd
 SUBDIR+=	go-cpuid
 SUBDIR+=	go-dotenv
