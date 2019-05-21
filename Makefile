@@ -1169,6 +1169,7 @@ SUBDIR+=	go-collectd
 SUBDIR+=	go-compress
 SUBDIR+=	go-cpuid
 SUBDIR+=	go-dotenv
+SUBDIR+=	go-fasthttp
 SUBDIR+=	go-flags
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-ghodss-yaml
