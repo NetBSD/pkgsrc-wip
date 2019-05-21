@@ -1187,6 +1187,7 @@ SUBDIR+=	go-properties-map
 SUBDIR+=	go-pty
 SUBDIR+=	go-rateio
 SUBDIR+=	go-rest
+SUBDIR+=	go-tcplisten
 SUBDIR+=	go-trie
 SUBDIR+=	go-upspin
 SUBDIR+=	go-xxhash
