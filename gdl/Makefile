@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdl/3.28/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gdl
 COMMENT=	Gnome Devtool Libraries
 LICENSE=	gnu-gpl-v3
 
