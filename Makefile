@@ -1186,6 +1186,7 @@ SUBDIR+=	go-rateio
 SUBDIR+=	go-rest
 SUBDIR+=	go-trie
 SUBDIR+=	go-upspin
+SUBDIR+=	go-xxhash
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict
