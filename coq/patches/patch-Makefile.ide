@@ -1,0 +1,41 @@
+$NetBSD$
+
+Correct package name for lablgtk3
+--- Makefile.ide.orig	2019-05-14 14:52:16.000000000 +0000
++++ Makefile.ide
+@@ -43,7 +43,7 @@ IDESRCDIRS:= $(CORESRCDIRS) ide ide/prot
+ ifeq ($(HASCOQIDE),no)
+ COQIDEFLAGS=$(addprefix -I , $(IDESRCDIRS))
+ else
+-COQIDEFLAGS=$(addprefix -I , $(IDESRCDIRS)) -package lablgtk3-sourceview3
++COQIDEFLAGS=$(addprefix -I , $(IDESRCDIRS)) -package lablgtk3.sourceview3
+ endif
+ 
+ IDEDEPS:=config/config.cma clib/clib.cma lib/lib.cma ide/protocol/ideprotocol.cma
+@@ -106,7 +106,7 @@ ifeq ($(HASCOQIDE),opt)
+ $(COQIDE): $(LINKIDEOPT)
+ 	$(SHOW)'OCAMLOPT -o $@'
+ 	$(HIDE)$(OCAMLOPT) $(COQIDEFLAGS) $(OPTFLAGS) -o $@ \
+-	       -linkpkg -package str,unix,dynlink,threads,lablgtk3-sourceview3 -linkall $(IDEFLAGS:.cma=.cmxa) $^
++	       -linkpkg -package str,unix,dynlink,threads,lablgtk3.sourceview3 -linkall $(IDEFLAGS:.cma=.cmxa) $^
+ 	$(STRIP_HIDE) $@
+ else
+ $(COQIDE): $(COQIDEBYTE)
+@@ -116,7 +116,7 @@ endif
+ $(COQIDEBYTE): $(LINKIDE)
+ 	$(SHOW)'OCAMLC -o $@'
+ 	$(HIDE)$(OCAMLC) $(COQIDEFLAGS) $(BYTEFLAGS) -o $@ \
+-	       -linkpkg -package str,unix,dynlink,threads,lablgtk3-sourceview3 $(IDEFLAGS) $(IDECDEPSFLAGS) $^
++	       -linkpkg -package str,unix,dynlink,threads,lablgtk3.sourceview3 $(IDEFLAGS) $(IDECDEPSFLAGS) $^
+ 
+ ide/coqide_os_specific.ml: ide/coqide_$(IDEINT).ml.in config/Makefile
+ 	@rm -f $@
+@@ -245,7 +245,7 @@ $(COQIDEAPP)/Contents:
+ $(COQIDEINAPP): ide/macos_prehook.cmx $(LINKIDEOPT) | $(COQIDEAPP)/Contents
+ 	$(SHOW)'OCAMLOPT -o $@'
+ 	$(HIDE)$(OCAMLOPT) $(COQIDEFLAGS) $(OPTFLAGS) -o $@ \
+-	        -linkpkg -package str,unix,dynlink,threads,lablgtk3-sourceview3 $(IDEFLAGS:.cma=.cmxa) $^
++	        -linkpkg -package str,unix,dynlink,threads,lablgtk3.sourceview3 $(IDEFLAGS:.cma=.cmxa) $^
+ 	$(STRIP_HIDE) $@
+ 
+ $(COQIDEAPP)/Contents/Resources/share: $(COQIDEAPP)/Contents
