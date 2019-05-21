@@ -759,6 +759,7 @@ SUBDIR+=	exult-snapshot
 SUBDIR+=	ez-pine-gpg
 SUBDIR+=	ezbounce
 SUBDIR+=	f1spirit
+SUBDIR+=	f3
 SUBDIR+=	faast
 SUBDIR+=	facedetect
 SUBDIR+=	fairymax

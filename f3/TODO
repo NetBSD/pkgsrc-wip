@@ -1,0 +1,9 @@
+f3write on fails(?) on ffs:
+	Creating file 1.h2w ... 85.80% -- 178.17 MB/s -- 1s
+	[ 28376.7885906] /mnt: write failed, file system is full
+	OK!
+	Free space: 796.00 KB
+	Average writing speed: 176.36 MB/s
+
+f3read fails on FAT:
+	assertion "!fdatasync(fd)" failed: file "f3read.c", line 162, function
