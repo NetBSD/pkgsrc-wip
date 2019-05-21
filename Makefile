@@ -1165,6 +1165,7 @@ SUBDIR+=	gnutls
 SUBDIR+=	go
 SUBDIR+=	go-backoff
 SUBDIR+=	go-collectd
+SUBDIR+=	go-cpuid
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-flags
 SUBDIR+=	go-fsnotify
