@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (recidivm-0.1.4.tar.gz) = 2796b02cc638135e8de12eb53c37738bf91176f5
-RMD160 (recidivm-0.1.4.tar.gz) = cf66e069cd5012d75bad697b509aff29498fd8cf
-SHA512 (recidivm-0.1.4.tar.gz) = 8a067c3a744c5add8cee1f7e60da08299a923f64a0e7f145d7308a36835eeb17a9336a9ddd08d7f46155e4f0510d7cfced58584ac7411219744d3e275bd7376f
-Size (recidivm-0.1.4.tar.gz) = 6591 bytes
+SHA1 (recidivm-0.2.tar.gz) = bc9a0482eebb51bff52ec8e381c036c7b86d3987
+RMD160 (recidivm-0.2.tar.gz) = 5c28cd4453591cc7bd45e536b123685e0aac6f74
+SHA512 (recidivm-0.2.tar.gz) = ffa26b29fa6b6e00c4a89a2cdc2d16c06c7b7c43a6429493d0e3412e971f6105b44cbaa2d0657b0b63702d0cfbf0cb0a11916d9fc068fccf65a41ea37336e70a
+Size (recidivm-0.2.tar.gz) = 7596 bytes
+SHA1 (patch-Makefile) = d6df83358bec1f239f4cfeba64f278b52f00e4c0

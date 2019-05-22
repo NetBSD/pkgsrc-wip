@@ -1,0 +1,15 @@
+$NetBSD$
+
+Allow setting PREFIX.
+
+--- Makefile.orig	2019-02-19 18:27:53.000000000 +0000
++++ Makefile
+@@ -22,7 +22,7 @@ CFLAGS ?= -g -O2
+ CFLAGS += -Wall -Wextra -Wconversion
+ CFLAGS += -D_FILE_OFFSET_BITS=64
+ 
+-PREFIX = /usr/local
++PREFIX?= /usr/local
+ DESTDIR =
+ 
+ bindir = $(PREFIX)/bin
