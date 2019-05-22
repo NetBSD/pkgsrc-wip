@@ -1,0 +1,10 @@
+@comment $NetBSD$
+include/cjson/cJSON.h
+lib/cmake/cJSON/cJSONConfig.cmake
+lib/cmake/cJSON/cJSONConfigVersion.cmake
+lib/cmake/cJSON/cjson-noconfig.cmake
+lib/cmake/cJSON/cjson.cmake
+lib/libcjson.so
+lib/libcjson.so.1
+lib/libcjson.so.${PKGVERSION}
+lib/pkgconfig/libcjson.pc

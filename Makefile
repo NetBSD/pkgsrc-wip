@@ -403,6 +403,7 @@ SUBDIR+=	cinnamon-screensaver
 SUBDIR+=	cinnamon-session
 SUBDIR+=	cinnamon-settings-daemon
 SUBDIR+=	ciwiki
+SUBDIR+=	cJSON
 SUBDIR+=	cjs
 SUBDIR+=	cl-alexandria
 SUBDIR+=	cl-anaphora
