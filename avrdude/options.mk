@@ -10,15 +10,15 @@ PLIST_VARS+=			doc
 .if !empty(PKG_OPTIONS:Mdoc)
 CONFIGURE_ARGS+=	--enable-doc
 
-BUILD_DEPENDS+=         dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=         tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-BUILD_DEPENDS+=         tex-pdftex-[0-9]*:../../print/tex-pdftex
-TEXINFO_REQD=           4.9
-USE_TOOLS+=             makeinfo texi2html yacc lex
+BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
+BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
+TEXINFO_REQD=		4.9
+USE_TOOLS+=		makeinfo texi2html yacc lex
 
 # DragonFly has stripped makeinfo in the base - without texi2dvi.
 .if ${OPSYS} == "DragonFly"
-BUILD_DEPENDS+=         gtexinfo-[0-9]*:../../devel/gtexinfo
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .endif
 PLIST.doc=		yes
 

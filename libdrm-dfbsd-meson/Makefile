@@ -90,8 +90,8 @@ CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
 CONFIGURE_ARGS+=	--disable-valgrind
-MESON_ARGS+=	-Dman-pages=false
-MESON_ARGS+=	-Dvalgrind=false
+MESON_ARGS+=		-Dman-pages=false
+MESON_ARGS+=		-Dvalgrind=false
 
 LDFLAGS.NetBSD+=	-lpci
 
@@ -122,22 +122,22 @@ PKG_SUGGESTED_OPTIONS+=	invert_atomic_add_unless
 # PKG_SUGGESTED_OPTIONS+=	libkms
 # .endif
 
-PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	strict_xsrc_netbsd
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	strict_xsrc_netbsd
 .endif
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	libkms	
+PLIST_VARS+=		libkms	
 .if !empty(PKG_OPTIONS:Mlibkms)
 PKGCONFIG_OVERRIDE+=	libkms.pc.in
-PLIST.libkms=	yes
+PLIST.libkms=		yes
 CONFIGURE_ARGS+=	--enable-libkms
-MESON_ARGS+=	-Dlibkms=true
+MESON_ARGS+=		-Dlibkms=true
 .else
 CONFIGURE_ARGS+=	--disable-libkms
-MESON_ARGS+=	-Dlibkms=false
+MESON_ARGS+=		-Dlibkms=false
 .endif
 
 .if !empty(PKG_OPTIONS:Minvert_atomic_add_unless)

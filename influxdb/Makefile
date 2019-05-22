@@ -1,33 +1,33 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	influxdb
-PKGVERSION_NOREV= 1.6.5
-DISTNAME=       influxdb-1.6.5
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
-MAINTAINER=	william@welliver.org
-HOMEPAGE=	https://www.influxdata.com/
-COMMENT=	Time-series Database
-LICENSE=	mit
+GITHUB_PROJECT=		influxdb
+PKGVERSION_NOREV=	1.6.5
+DISTNAME=		influxdb-1.6.5
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+CATEGORIES=		databases
+MASTER_SITES=		${MASTER_SITE_GITHUB:=influxdata/}
+MAINTAINER=		william@welliver.org
+HOMEPAGE=		https://www.influxdata.com/
+COMMENT=		Time-series Database
+LICENSE=		mit
 
 # despite being the default value, this explicit declaration is required for things
 # to build properly.
-EXTRACT_SUFX=   .tar.gz
+EXTRACT_SUFX=	.tar.gz
 
-IFDB_DISTNAME=			${DISTNAME}${EXTRACT_SUFX}
+IFDB_DISTNAME=		${DISTNAME}${EXTRACT_SUFX}
 IFDB_DEPENDENCIES=	influxdb-dependencies-${PKGVERSION_NOREV}.tar.gz
-DISTFILES=			${IFDB_DISTNAME}
+DISTFILES=		${IFDB_DISTNAME}
 .if !defined(BOOTSTRAP)
-DISTFILES+=     ${IFDB_DEPENDENCIES}
+DISTFILES+=		${IFDB_DEPENDENCIES}
 SITES.influxdb-dependencies-${PKGVERSION_NOREV}.tar.gz= https://bitbucket.org/hww3/influxdb/downloads/
 .endif
 
-#EXTRACT_ONLY=			${IFDB_DISTNAME}
-EXTRACT_DIR.${IFDB_DISTNAME}=	${WRKDIR}/src/github.com/influxdata
+#EXTRACT_ONLY=				${IFDB_DISTNAME}
+EXTRACT_DIR.${IFDB_DISTNAME}=		${WRKDIR}/src/github.com/influxdata
 EXTRACT_DIR.${IFDB_DEPENDENCIES}=	${WRKDIR}/src/github.com/influxdata
-WRKSRC=				${WRKDIR}/src/github.com/influxdata/influxdb
-USE_TOOLS+=	gmake curl
+WRKSRC=					${WRKDIR}/src/github.com/influxdata/influxdb
+USE_TOOLS+=				gmake curl
 
 BUILD_DEPENDS+=			go19-1.9.*:../../lang/go19
 BUILD_DEPENDS+=			asciidoc-[0-9]*:../../textproc/asciidoc

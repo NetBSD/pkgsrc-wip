@@ -1,14 +1,14 @@
 # $NetBSD$
 
-MODULENAME=	Image_TIFF
-INTERNAL_MODULENAME= _Image_TIFF
-PIKEVERSUFFIX=	8.0
+MODULENAME=		Image_TIFF
+INTERNAL_MODULENAME=	_Image_TIFF
+PIKEVERSUFFIX=		8.0
 
-EXTRACT_ELEMENTS+= ${DISTNAME}/src/modules/Image
+EXTRACT_ELEMENTS+=	${DISTNAME}/src/modules/Image
 
 .include 	"../../wip/pike${PIKEVERSUFFIX}/builtin_module.mk"
 
-PIKE_MODULE_OVERLAPPING_FILES+= lib/pike${PIKEVERSUFFIX}/modules/_Image_TIFF.pmod
+PIKE_MODULE_OVERLAPPING_FILES+=	lib/pike${PIKEVERSUFFIX}/modules/_Image_TIFF.pmod
 
 # the Image_Freetype module uses headers from the Image module, but these aren't installed
 # by default, so we just make them available

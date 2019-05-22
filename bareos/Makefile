@@ -14,12 +14,12 @@ USE_TOOLS+=		perl:run
 REPLACE_PERL?=
 REPLACE_PERL+=		core/src/cats/make_catalog_backup.pl.in
 
-SUBST_CLASSES+=                 fix-paths
-SUBST_STAGE.fix-paths=          pre-configure
-SUBST_MESSAGE.fix-paths=        Fixing paths.
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing paths.
 SUBST_FILES.fix-paths?=
-SUBST_FILES.fix-paths+=         core/src/cats/make_catalog_backup.pl.in
-SUBST_SED.fix-paths=            -e 's,@PREFIX@,${PREFIX},g'
+SUBST_FILES.fix-paths+=		core/src/cats/make_catalog_backup.pl.in
+SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
 
 .include "options.mk"
 .include "Makefile.common"
@@ -28,22 +28,22 @@ SUBST_SED.fix-paths=            -e 's,@PREFIX@,${PREFIX},g'
 BUILD_DEFS+=		VARBASE
 
 # spool directory
-MAKE_DIRS_PERMS+=       ${VARBASE}/${PKG_SYSCONFSUBDIR} \
-                        ${REAL_ROOT_USER} ${BAREOS_GROUP} 0770
+MAKE_DIRS_PERMS+=	${VARBASE}/${PKG_SYSCONFSUBDIR} \
+			${REAL_ROOT_USER} ${BAREOS_GROUP} 0770
 
 post-install: # should go away once we find out how  to set the run link path in CMakefiles
 	${LN} -fs ${PKG_SYSCONFSUBDIR}/backends/libbareossd-gentape.so ${DESTDIR:Q}/${BAREOS_LIBDIR:Q}/libbareossd-gentape.so
 
-CONFIG_TEMPLATES!=${EGREP} "^"${CONFIG_TEMPLATE_PATH:Q} PLIST.common 2>/dev/null | sed -e 's/ /\\ /g'
+CONFIG_TEMPLATES!=	${EGREP} "^"${CONFIG_TEMPLATE_PATH:Q} PLIST.common 2>/dev/null | sed -e 's/ /\\ /g'
 CONF_FILES?=
 
 .for l in ${CONFIG_TEMPLATES}
-CONF_FILES+=${l} ${PKG_SYSCONFDIR}${l:S/^${CONFIG_TEMPLATE_PATH}//}
+CONF_FILES+=	${l} ${PKG_SYSCONFDIR}${l:S/^${CONFIG_TEMPLATE_PATH}//}
 .endfor
 
 MAKE_DIRS?=
-MAKE_DIRS+=${CONFIG_TEMPLATES:H:O:u:S/^${CONFIG_TEMPLATE_PATH}/${PKG_SYSCONFDIR}/}
-MAKE_DIRS+=${VARBASE}/db/${PKG_SYSCONFSUBDIR}
-MAKE_DIRS+=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/bsr
-MAKE_DIRS+=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/storage
-MAKE_DIRS+=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working
+MAKE_DIRS+=	${CONFIG_TEMPLATES:H:O:u:S/^${CONFIG_TEMPLATE_PATH}/${PKG_SYSCONFDIR}/}
+MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}
+MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/bsr
+MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/storage
+MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working

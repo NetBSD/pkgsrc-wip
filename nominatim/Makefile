@@ -49,10 +49,10 @@ INSTALLATION_DIRS+=	${NDIR}/website
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	${WRKSRC}/settings/defaults.php
-SUBST_SED.paths+=       -e "s|@CMAKE_SOURCE_DIR@|${NDIR}|g"
-SUBST_SED.paths+=       -e "s|@CMAKE_BINARY_DIR@|${NDIR}|g"
-SUBST_SED.paths+=       -e "s|CONST_InstallPath.'/module'|'${MODDIR}'|g"
-SUBST_STAGE.paths=      post-configure
+SUBST_SED.paths+=	-e "s|@CMAKE_SOURCE_DIR@|${NDIR}|g"
+SUBST_SED.paths+=	-e "s|@CMAKE_BINARY_DIR@|${NDIR}|g"
+SUBST_SED.paths+=	-e "s|CONST_InstallPath.'/module'|'${MODDIR}'|g"
+SUBST_STAGE.paths=	post-configure
 
 .include "../../lang/python/application.mk"
 

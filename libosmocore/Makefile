@@ -20,9 +20,9 @@ PKGCONFIG_OVERRIDE+=	libosmogsm.pc.in
 PKGCONFIG_OVERRIDE+=	libosmosim.pc.in
 PKGCONFIG_OVERRIDE+=	libosmovty.pc.in
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-CONFIGURE_ENV+=	ac_cv_prog_PYTHON=${PYTHONBIN}
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 # libosmocore.so: undefined reference to `__cpu_model'
 CONFIGURE_ENV.NetBSD+=	osmo_cv_cc_has_builtin=false
 

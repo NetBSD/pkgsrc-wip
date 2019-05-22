@@ -4,12 +4,12 @@
 .if !defined(PIKE8.0_BUILTIN_MODULE_MK)
 PIKE8.0_BUILTIN_MODULE_MK:=
 
-PIKEVERSUFFIX= 	8.0
+PIKEVERSUFFIX=	8.0
 
 .include 	"../../wip/pike${PIKEVERSUFFIX}/version.mk"
 
 INTERNAL_MODULENAME?=	${MODULENAME}
-MODULE_TYPE?=	module
+MODULE_TYPE?=		module
 
 # if set to yes, build a module modref. most bundled modules already have this included
 # in the main pike build, so it's not usually necessary to include a second one.
@@ -24,29 +24,29 @@ CHECK_MODULE_ENABLED?=	yes
 .error MODULE_TYPE must be module or post_module
 .endif
 NAME=		pike${PIKEVERSUFFIX}-${MODULENAME}
-PKGNAME=        ${NAME}-${PIKE_VERSION}
-DISTNAME=       Pike-v${PIKE_VERSION}
+PKGNAME=	${NAME}-${PIKE_VERSION}
+DISTNAME=	Pike-v${PIKE_VERSION}
 
-PIKE_EXECUTABLE = pike${PIKEVERSUFFIX}
+PIKE_EXECUTABLE =	pike${PIKEVERSUFFIX}
 
 CHECK_SSP=	no
 .if defined(PKGSRC_USE_SSP)
 # do not add flags to everything
-PKGSRC_USE_SSP= no
+PKGSRC_USE_SSP=	no
 .endif
 
-CATEGORIES=     lang
-MASTER_SITES=   http://pike.lysator.liu.se/pub/pike/${PIKE_RELEASE_TYPE}/${PIKE_VERSION}/
+CATEGORIES=	lang
+MASTER_SITES=	http://pike.lysator.liu.se/pub/pike/${PIKE_RELEASE_TYPE}/${PIKE_VERSION}/
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mpl-1.1
-MAINTAINER=     william@welliver.org
-HOMEPAGE=       http://pike.lysator.liu.se/
-COMMENT=        ${MODULENAME} module for Pike ${PIKEVERSUFFIX}
+MAINTAINER=	william@welliver.org
+HOMEPAGE=	http://pike.lysator.liu.se/
+COMMENT=	${MODULENAME} module for Pike ${PIKEVERSUFFIX}
 
-BUILD_DEPENDS+=	 pkgconf-[0-9]*:../../devel/pkgconf
-MAKE_JOBS_SAFE= no
-USE_TOOLS+=gmake
-USE_LANGUAGES=  c c++
-SHARED_DOCS_LOC=      ${PREFIX}/share/doc/${NAME}
+BUILD_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
+MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
+SHARED_DOCS_LOC=	${PREFIX}/share/doc/${NAME}
 
 PIKE_MODULE_SRC=	src/${MODULE_TYPE}s/${INTERNAL_MODULENAME}
 PIKE_MODULE_OVERLAPPING_FILES =
@@ -54,7 +54,7 @@ PIKE_MODULE_OVERLAPPING_FILES =
 SYSTEM_MODULE_PATH!=	pike${PIKEVERSUFFIX} -x module --query=system_module_path
 SYSTEM_DOC_PATH=	${PREFIX}/share/pike${PIKEVERSUFFIX}/refdoc
 
-EXTRACT_ELEMENTS+= ${DISTNAME}/src/${MODULE_TYPE}s/${INTERNAL_MODULENAME} ${DISTNAME}/refdoc
+EXTRACT_ELEMENTS+=	${DISTNAME}/src/${MODULE_TYPE}s/${INTERNAL_MODULENAME} ${DISTNAME}/refdoc
 FILES_SUBST+=		NAME="${NAME}"
 FILES_SUBST+=		MODULENAME="${MODULENAME}"
 FILES_SUBST+=		MODULENAME="${INTERNAL_MODULENAME}"
@@ -62,7 +62,7 @@ FILES_SUBST+=		PIKEVERSUFFIX="${PIKEVERSUFFIX}"
 FILES_SUBST+=		PIKE_EXECUTABLE="${PIKE_EXECUTABLE}"
 
 # remove any dumped modules from the list, as their generation is not deterministic
-PRINT_PLIST_AWK+=       /^lib\/.*(\.pike\.o|\.pmod\.o)$$/ { next; }
+PRINT_PLIST_AWK+=	/^lib\/.*(\.pike\.o|\.pmod\.o)$$/ { next; }
 
 # add the dumped modules from this build
 #GENERATE_PLIST+=	cd ${DESTDIR}/${PREFIX} && find . -name \*.o -print | sed -e 's~^\./~~' ;

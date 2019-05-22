@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Chris00/ocaml-cairo/
 COMMENT=	Bindings for OCaml to the cairo library
 #LICENSE=	# TODO: (see mk/license.mk)
 
-OCAML_USE_DUNE=	yes
+OCAML_USE_DUNE=		yes
 OCAML_FINDLIB_DIRS=	cairo2
 OPAM_INSTALL_FILES=	cairo2
 

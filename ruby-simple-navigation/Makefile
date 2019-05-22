@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/codeplant/simple-navigation
 COMMENT=	Create navigations for Rails, Sinatra or Padrino applications
 LICENSE=	mit
 
-DEPENDS+=       ${RUBY_PKGPREFIX}-activesupport32>=3.2.0:../../devel/ruby-activesupport32
+DEPENDS+=	${RUBY_PKGPREFIX}-activesupport32>=3.2.0:../../devel/ruby-activesupport32
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

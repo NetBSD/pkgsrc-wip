@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
 PKG_SUPPORTED_OPTIONS=	debug f90 java
-PKG_SUGGESTED_OPTIONS+= f90
+PKG_SUGGESTED_OPTIONS+=	f90
 
 .include "../../mk/bsd.options.mk"
 

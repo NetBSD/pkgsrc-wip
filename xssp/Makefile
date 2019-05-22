@@ -40,9 +40,9 @@ SUBST_STAGE.cmath=	pre-configure
 SUBST_SED.cmath+=	-e 's|tr1/cmath.hpp|units/cmath.hpp|g'
 SUBST_FILES.cmath+=	${WRKSRC}/src/hssp-nt.cpp
 
-CXXFLAGS+=	-Wno-unused-const-variable
-CXXFLAGS+=	-Wno-unknown-pragmas
-CXXFLAGS+=	-Wno-error=sign-compare		# Boost header
+CXXFLAGS+=		-Wno-unused-const-variable
+CXXFLAGS+=		-Wno-unknown-pragmas
+CXXFLAGS+=		-Wno-error=sign-compare		# Boost header
 # Work around "could not find a version of the library" configure error
 CONFIGURE_ARGS+=	--with-boost-libdir=${PREFIX}/lib
 

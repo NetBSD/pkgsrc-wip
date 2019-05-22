@@ -10,8 +10,8 @@ COMMENT=	JSON module for Guile
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=     automake autoconf autoreconf pkg-config makeinfo
-GNU_CONFIGURE=  YES
+USE_TOOLS+=	automake autoconf autoreconf pkg-config makeinfo
+GNU_CONFIGURE=	YES
 
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib

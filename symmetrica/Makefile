@@ -15,11 +15,11 @@ WRKSRC=	${WRKDIR}
 
 VERSION=	2.0
 NO_CONFIGURE=	yes
-USE_LANGUAGES=  c c++
+USE_LANGUAGES=	c c++
 MAKE_FILE=	makefile
-USE_TOOLS+=     gmake
+USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS+= bin include/symmetrica
+INSTALLATION_DIRS+=	bin include/symmetrica
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE}

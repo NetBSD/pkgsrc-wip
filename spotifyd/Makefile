@@ -20,8 +20,8 @@ LIBRESPOT_REV=	a41ab28540537e5f277fc9556bbcc16e08f065d5
 DISTFILES+=	librespot-${LIBRESPOT_REV}.tar.gz
 SITES.librespot-${LIBRESPOT_REV}.tar.gz=	-https://github.com/librespot-org/librespot/archive/${LIBRESPOT_REV}.tar.gz
 
-RUST_TREMOR_REV=5958cc302e78f535dad90e9665da981ddff4000a
-DISTFILES+=	rust-tremor-${RUST_TREMOR_REV}.tar.gz
+RUST_TREMOR_REV=	5958cc302e78f535dad90e9665da981ddff4000a
+DISTFILES+=		rust-tremor-${RUST_TREMOR_REV}.tar.gz
 SITES.rust-tremor-${RUST_TREMOR_REV}.tar.gz=	-https://github.com/plietar/rust-tremor/archive/${RUST_TREMOR_REV}.tar.gz
 
 RUST_MDNS_REV=	66a74033da6c9f1a06e7b0a29f4544fd189d6479
@@ -345,7 +345,7 @@ CARGO_CRATE_DEPENDS+=	xdg-2.2.0
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 INSTALLATION_DIRS+=	bin
 
-MAKE_ENV+= RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib -C link-arg=-L${BUILDLINK_PREFIX.pulseaudio}/lib"
+MAKE_ENV+=	RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib -C link-arg=-L${BUILDLINK_PREFIX.pulseaudio}/lib"
 
 # TODO investigate why this is needed
 CHECK_WRKREF_SKIP+=	bin/spotifyd

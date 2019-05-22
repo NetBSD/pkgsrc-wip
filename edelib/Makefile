@@ -33,8 +33,8 @@ PLIST_VARS+=		shlibs statlibs
 # Solaris /bin/sh is really bad, so use TOOLS_PLATFORM.sh if it's been defined.
 .if ${OPSYS} == "SunOS"
 REPLACE_SH+=	autogen.sh configure \
-                src/tinyscheme/gen-c-string.sh \
-                test/abicheck.sh tools/geniconmap
+		src/tinyscheme/gen-c-string.sh \
+		test/abicheck.sh tools/geniconmap
 .else
 # doxygen doesn't build from pkgsrc on Solaris now - handle this better later
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen

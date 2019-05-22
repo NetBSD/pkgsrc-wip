@@ -19,10 +19,10 @@ SUBST_STAGE.ldflags=	post-patch
 SUBST_SED.ldflags=	-e "s|LDFLAGS =|LDFLAGS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
 
 CXXFLAGS+=	-I${PREFIX}/include/smithwaterman \
- 		-I${PREFIX}/include/multichoose \
- 		-I${PREFIX}/include/filevercmp \
- 		-I${PREFIX}/include/fastahack \
- 		-I${PREFIX}/include/intervaltree \
+		-I${PREFIX}/include/multichoose \
+		-I${PREFIX}/include/filevercmp \
+		-I${PREFIX}/include/fastahack \
+		-I${PREFIX}/include/intervaltree \
 		-DVERSION='"${PORTVERSION}"'
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_FLAGS=	LIB_PATH+=${COMPILER_RPATH_FLAG}${PREFIX}/lib

@@ -12,8 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG = yes
-PYTHON_VERSIONS_INCOMPATIBLE= 27
+PYDISTUTILSPKG =		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

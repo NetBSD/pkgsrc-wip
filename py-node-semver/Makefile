@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	node-semver-0.6.1
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/node-semver/}
 

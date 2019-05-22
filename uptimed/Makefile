@@ -14,7 +14,7 @@ COMMENT=		Keeps track of current and past system uptimes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=	automake patch
+USE_TOOLS+=		automake patch
 
 EGDIR=			share/examples/${PKGBASE}
 INSTALLATION_DIRS=	bin sbin lib ${PKGMANDIR}/man2 ${PKGMANDIR}/man8

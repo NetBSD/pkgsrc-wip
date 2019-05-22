@@ -19,8 +19,8 @@ REPLACE_PERL=	Fonts/bdf2psf
 
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 
-AUTO_MKDIRS=	yes
-INSTALLATION_DIRS+= bin ${PKGMANDIR}/man1 ${SHAREDIR}/fontsets
+AUTO_MKDIRS=		yes
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${SHAREDIR}/fontsets
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Fonts/bdf2psf ${DESTDIR}${PREFIX}/bin

@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG = yes
+PYDISTUTILSPKG =	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE= 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"

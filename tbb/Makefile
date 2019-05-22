@@ -23,10 +23,10 @@
 
 # Best guess translation of REINPLACE above.  Replace 1 with a
 # meaningful name.  Assuming post-patch: Change if necessary.
-#SUBST_CLASSES+=		1
-#SUBST_STAGE.1=	post-patch
-#SUBST_SED.1+=	-e '/^CONLY =/s|^CONLY =.*|CONLY = ${CC}|'
-#SUBST_SED.1+=	-e '/^CPLUS =/s|^CPLUS =.*|CPLUS = ${CXX}|'
+#SUBST_CLASSES+=	1
+#SUBST_STAGE.1=		post-patch
+#SUBST_SED.1+=		-e '/^CONLY =/s|^CONLY =.*|CONLY = ${CC}|'
+#SUBST_SED.1+=		-e '/^CPLUS =/s|^CPLUS =.*|CPLUS = ${CXX}|'
 #SUBST_FILES.1+=	${WRKSRC}/build/FreeBSD.${COMPILER_TYPE}.inc
 
 DISTNAME=	tbb-${PV}
@@ -40,7 +40,7 @@ HOMEPAGE=	http://threadingbuildingblocks.org/
 COMMENT=	Library that provides thread building blocks
 LICENSE=	apache-2.0
 
-ONLY_FOR_PLATFORM=	 *-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
+ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax

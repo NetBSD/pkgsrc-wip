@@ -22,7 +22,7 @@ PLIST_VARS+=	pam
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=        --disable-pam
+CONFIGURE_ARGS+=	--disable-pam
 .else
 PLIST.pam=		yes
 CONFIGURE_ARGS+=	--with-pam-prefix=/etc/pam.d \

@@ -21,12 +21,12 @@ FLNEWS_OPT_DISABLE_IP6=		1
 # nls: Optional support for National Language Support (NLS)
 # Requires an OS with X/Open XSI extension API (SUSv2) and the gencat utility
 # Note: Only locales with UTF-8, ISO-8859-1 or US-ASCII codeset are supported!
-PLIST_VARS+=	nls
+PLIST_VARS+=		nls
 .if !empty(PKG_OPTIONS:Mnls)
-PLIST.nls=	yes
-FLNEWS_OPT_DISABLE_NLS=		0
+PLIST.nls=		yes
+FLNEWS_OPT_DISABLE_NLS=	0
 .else
-FLNEWS_OPT_DISABLE_NLS=		1
+FLNEWS_OPT_DISABLE_NLS=	1
 .endif
 
 # xdbe: Optional support for X11 Double Buffer Extension (XDBE)

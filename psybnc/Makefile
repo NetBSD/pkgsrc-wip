@@ -17,7 +17,7 @@ BUILD_DEPENDS+=		glib-[0-9]*:../../devel/glib
 USE_TOOLS+=	gmake
 
 CONF_FILES=		share/examples/psybnc/psybnc.conf \
-                        ${PKG_SYSCONFDIR}/psybnc.conf
+			${PKG_SYSCONFDIR}/psybnc.conf
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	tools/autoconf.c

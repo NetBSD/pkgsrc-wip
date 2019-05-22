@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/mona-1.4
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL= yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	bison
-MAKE_FILE= makefile
+MAKE_FILE=	makefile
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.pkg.mk"

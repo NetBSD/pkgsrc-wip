@@ -7,7 +7,7 @@ MASTER_SITES=	https://files.pythonhosted.org/packages/82/43/a1e4b7368eec9653660e
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/AzureAD/azure-activedirectory-library-for-python
-COMMENT=  Microsoft Azure Active Directory Authentication Library for Python
+COMMENT=	Microsoft Azure Active Directory Authentication Library for Python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.21.0:../../devel/py-requests

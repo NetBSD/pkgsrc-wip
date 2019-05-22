@@ -33,7 +33,7 @@ LICENSE=	gnu-gpl-v3
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-BUILD_TARGET=	 mothur
+BUILD_TARGET=	mothur
 
 PORTVERSION=	1.40.5	
 DATADIR=	${PREFIX}/share/mothur
@@ -43,17 +43,17 @@ EXAMPLESDIR=	${PREFIX}/share/examples/mothur
 DEPENDS+=	vsearch>=0:../../wip/vsearch
 
 
-SUBST_CLASSES+=                thread1
-SUBST_STAGE.thread1= post-patch
-SUBST_SED.thread1=  -e "s|thread[*]|std::thread*|g"
-SUBST_FILES.thread1=        ${WRKSRC}/source/*.cpp
-SUBST_FILES.thread1+=		${WRKSRC}/source/*/*.cpp
+SUBST_CLASSES+=		thread1
+SUBST_STAGE.thread1=	post-patch
+SUBST_SED.thread1=	-e "s|thread[*]|std::thread*|g"
+SUBST_FILES.thread1=	${WRKSRC}/source/*.cpp
+SUBST_FILES.thread1+=	${WRKSRC}/source/*/*.cpp
 
-SUBST_CLASSES+=                thread2
-SUBST_STAGE.thread2= post-patch
-SUBST_SED.thread2=  -e "s|new thread(|new std::thread(|g"
-SUBST_FILES.thread2=        ${WRKSRC}/source/*.cpp
-SUBST_FILES.thread2+=           ${WRKSRC}/source/*/*.cpp
+SUBST_CLASSES+=		thread2
+SUBST_STAGE.thread2=	post-patch
+SUBST_SED.thread2=	-e "s|new thread(|new std::thread(|g"
+SUBST_FILES.thread2=	${WRKSRC}/source/*.cpp
+SUBST_FILES.thread2+=	${WRKSRC}/source/*/*.cpp
 
 
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..

@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk3
 PKG_SUPPORTED_OPTIONS=	gtksourceview3 gtkspell
 PKG_SUGGESTED_OPTIONS=	gtksourceview3 gtkspell
-PLIST_VARS+=	gtkspell gtksourceview
+PLIST_VARS+=		gtkspell gtksourceview
 
 .include "../../mk/bsd.options.mk"
 

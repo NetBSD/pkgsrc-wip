@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
-TOOL_DEPENDS+= waf>=1.8.4:../../devel/waf
+TOOL_DEPENDS+=	waf>=1.8.4:../../devel/waf
 
 .include "../../devel/waf/waf.mk"
 .include "../../mk/bsd.pkg.mk"

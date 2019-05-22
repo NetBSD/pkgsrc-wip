@@ -3,22 +3,22 @@
 # TODO give startup scripts more attention
 # TODO consider changing default internal paths to reflect ${PREFIX}
 
-GITHUB_PROJECT=	chronograf
-PKGVERSION_NOREV= 1.7.7
-DISTNAME=    	chronograf-1.7.7
-GITHUB_TAG=	${PKGVERSION_NOREV}
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
-MAINTAINER=	william@welliver.org
-HOMEPAGE=	https://www.influxdata.com/
-COMMENT=	Monitoring and visualization UI for the TICK stack
-LICENSE=	gnu-agpl-v3
+GITHUB_PROJECT=		chronograf
+PKGVERSION_NOREV=	1.7.7
+DISTNAME=		chronograf-1.7.7
+GITHUB_TAG=		${PKGVERSION_NOREV}
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_GITHUB:=influxdata/}
+MAINTAINER=		william@welliver.org
+HOMEPAGE=		https://www.influxdata.com/
+COMMENT=		Monitoring and visualization UI for the TICK stack
+LICENSE=		gnu-agpl-v3
 
 # despite being the default value, this explicit declaration is required for things
 # to build properly.
-EXTRACT_SUFX=   .tar.gz
+EXTRACT_SUFX=	.tar.gz
 
-CHRONOGRAF_DISTNAME=			${DISTNAME}${EXTRACT_SUFX}
+CHRONOGRAF_DISTNAME=		${DISTNAME}${EXTRACT_SUFX}
 CHRONOGRAF_DEPENDENCIES_DIR=	chronograf-dependencies-${PKGVERSION_NOREV}
 CHRONOGRAF_DEPENDENCIES=	${CHRONOGRAF_DEPENDENCIES_DIR}${EXTRACT_SUFX}
 
@@ -30,7 +30,7 @@ SITES.${CHRONOGRAF_DEPENDENCIES}= https://bitbucket.org/hww3/influxdb/downloads/
 .endif
 
 EXTRACT_DIR.${CHRONOGRAF_DISTNAME}=	${WRKDIR}/src/github.com/influxdata
-WRKSRC=				${WRKDIR}/src/github.com/influxdata/chronograf
+WRKSRC=		${WRKDIR}/src/github.com/influxdata/chronograf
 USE_TOOLS+=	gmake curl
 USE_LANGUAGES+=	c c++
 
@@ -43,8 +43,8 @@ BUILD_DEPENDS+=		yarn-1.7.*:../../devel/yarn
 # go language executables don't have SSP support
 CHECK_SSP_SKIP=	bin/*
 
-PKGSRC_MAKE_ENV+=		GOPATH=${WRKDIR}
-PKGSRC_MAKE_ENV+=		GO_BIN=${GO_BIN}
+PKGSRC_MAKE_ENV+=	GOPATH=${WRKDIR}
+PKGSRC_MAKE_ENV+=	GO_BIN=${GO_BIN}
 PKGSRC_MAKE_ENV+=	PYTHON=${PREFIX}/bin/python2.7
 PKGSRC_MAKE_ENV+=	YARN_DISABLE_SELF_UPDATE_CHECK="true"
 
@@ -76,7 +76,7 @@ INSTALLATION_DIRS+=	bin etc/chronograf share/doc/chronograf share/examples/chron
 DOC_FILES+=	LICENSE LICENSE_OF_DEPENDENCIES.md README.md CHANGELOG.md platform_migrate.md agpl-3.0.md
 BIN_FILES+=	chronograf chronoctl
 
-GO_BIN=	${PREFIX}/go110/bin/go
+GO_BIN=		${PREFIX}/go110/bin/go
 CPPFLAGS+=	-I${PREFIX}/include/node
 CFLAGS+=	-I${PREFIX}/include/node
 

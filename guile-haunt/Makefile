@@ -10,10 +10,10 @@ HOMEPAGE=	https://files.dthompson.us/haunt/
 COMMENT=	Functional static web site generator
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
-USE_TOOLS+=	automake autoconf autoreconf pkg-config
+USE_TOOLS+=		automake autoconf autoreconf pkg-config
 
 DEPENDS+=	guile-commonmark-[0-9]*:../../wip/guile-commonmark
 INFO_FILES=	YES

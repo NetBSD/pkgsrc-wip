@@ -17,8 +17,8 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	automake autoconf autoreconf pkg-config makeinfo
 GNU_CONFIGURE=	YES
 
-GNU_CONFIGURE_PREFIX=   ${PREFIX}/guile/2.2
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/guile/2.2/lib
+GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
 
 pre-configure:

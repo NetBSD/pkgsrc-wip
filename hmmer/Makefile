@@ -8,14 +8,14 @@
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
 
-#TEST_TARGET=	check
-#SHEBANG_GLOB=	*.pl
+#TEST_TARGET=		check
+#SHEBANG_GLOB=		*.pl
 #OPTIONS_DEFINE=	DOCS EXAMPLES TEST
-#DOCFILES=	Userguide.pdf
-#EXAMPLES=	7LESS_DROME HBB_HUMAN MADE1.hmm MADE1.sto \
-#		Pkinase.hmm Pkinase.sto dna_target.fa fn3.hmm fn3.sto \
-#		globins4.hmm globins4.sto globins45.fa
-#TEST_VARS=	use_perl5=build
+#DOCFILES=		Userguide.pdf
+#EXAMPLES=		7LESS_DROME HBB_HUMAN MADE1.hmm MADE1.sto \
+#			Pkinase.hmm Pkinase.sto dna_target.fa fn3.hmm fn3.sto \
+#			globins4.hmm globins4.sto globins45.fa
+#TEST_VARS=		use_perl5=build
 #post-build-TEST-on:	do-test
 #post-install:
 #	@${STRIP} ${DESTDIR}${PREFIX}/bin/*
@@ -36,7 +36,7 @@ COMMENT=	Profile hidden Markov models for biological sequence analysis
 LICENSE=	modified-bsd
 
 # Requires SSE2 or AltiVec instructions
-ONLY_FOR_PLATFORM=	 *-*-x86_64 *-*-i386 *-*-ia64 *-*-powerpc *-*-powerpc64
+ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-i386 *-*-ia64 *-*-powerpc *-*-powerpc64
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl:test

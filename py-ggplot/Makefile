@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 DEPENDS+=		${PYPKGPREFIX}-brewer2mpl>=1.4.1:../../graphics/py-brewer2mpl
 DEPENDS+=		${PYPKGPREFIX}-cycler>=0.10.0:../../graphics/py-cycler
 DEPENDS+=		${PYPKGPREFIX}-matplotlib>=2.2.2:../../graphics/py-matplotlib
-DEPENDS+=       	${PYPKGPREFIX}-patsy>=0.3.0:../../math/py-patsy
+DEPENDS+=		${PYPKGPREFIX}-patsy>=0.3.0:../../math/py-patsy
 DEPENDS+=		${PYPKGPREFIX}-pandas>=0.23.4:../../math/py-pandas
 DEPENDS+=		${PYPKGPREFIX}-scipy>=1.1.0:../../math/py-scipy
 DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six

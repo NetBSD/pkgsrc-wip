@@ -13,10 +13,10 @@ R_PKGVER=	1.20.2
 
 REPLACE_R=	exec/example.R
 
-REPLACE_INTERPRETER+=   R
-REPLACE.R.old=          /path/to/Rscript
-REPLACE.R.new=          ${PREFIX}/bin/R
-REPLACE_FILES.R=        ${REPLACE_R}
+REPLACE_INTERPRETER+=	R
+REPLACE.R.old=		/path/to/Rscript
+REPLACE.R.new=		${PREFIX}/bin/R
+REPLACE_FILES.R=	${REPLACE_R}
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"

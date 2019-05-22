@@ -10,7 +10,7 @@ COMMENT=	Convolution Theorem Visualization
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
-INFO_FILES=yes
+INFO_FILES=	yes
 USE_LANGUAGES=	c fortran
 
 .include "../../mk/bsd.pkg.mk"

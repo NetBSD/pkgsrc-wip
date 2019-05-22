@@ -12,7 +12,7 @@ COMMENT=	Python bindings for GNU Triangulated Surface Library
 LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 
 DOCDIR=	${PREFIX}/share/doc/py-gts

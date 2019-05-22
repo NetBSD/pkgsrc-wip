@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/fxt
 
 USE_TOOLS+=	gmake perl
-MAKE_FILE= makefile
+MAKE_FILE=	makefile
 USE_LANGUAGES=	c++
 
 #Minimal configuration

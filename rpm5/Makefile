@@ -40,9 +40,9 @@ pre-configure:
 
 
 RPM5_DBI_FILES=	Basenames Conflictname Dirnames Group Installtid Name Packages \
-	        Providename Provideversion Requirename Requireversion Triggername \
+		Providename Provideversion Requirename Requireversion Triggername \
 		Filemd5s Pubkeys Sha1header Sigmd5 \
-	        __db.001 __db.002 __db.003 __db.004 __db.005
+		__db.001 __db.002 __db.003 __db.004 __db.005
 
 RPM5_ETCDIR=		/etc/${PKGSRCNAME}
 RPM5_LIBDIR=		/var/lib/${PKGSRCNAME}

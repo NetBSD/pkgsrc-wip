@@ -14,11 +14,11 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
-#USE_OLD_DES_API=yes
-CMAKE_ARGS+=	-DWITH_WAYLAND=OFF
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+#USE_OLD_DES_API=	yes
+CMAKE_ARGS+=		-DWITH_WAYLAND=OFF
 
 PKGCONFIG_OVERRIDE+=	freerdp.pc.in
 

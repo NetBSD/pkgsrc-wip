@@ -8,7 +8,7 @@ HOMEPAGE=	http://code.quirkey.com/vegas/
 COMMENT=	Sinatra/Rack app wrapper
 LICENSE=	mit
 
-DEPENDS+=       ${RUBY_PKGPREFIX}-rack>=2.0.0:../../www/ruby-rack
+DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0.0:../../www/ruby-rack
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

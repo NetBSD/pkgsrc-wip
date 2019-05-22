@@ -1,7 +1,7 @@
 # $NetBSD$
 
-VERSION=        3.3.1
-PKGNAME=        laszip-${VERSION}
+VERSION=	3.3.1
+PKGNAME=	laszip-${VERSION}
 DISTNAME=	laszip-src-${VERSION}
 CATEGORIES=	geography
 MASTER_SITES=	https://github.com/LASzip/LASzip/releases/download/${VERSION}/

@@ -30,7 +30,7 @@ DEPENDS+=	fastool>=0.1.4:../../wip/fastool
 DEPENDS+=	p5-transdecoder>=5.3.0:../../wip/p5-transdecoder
 DEPENDS+=	Trimmomatic>=0.38:../../wip/trimmomatic
 DEPENDS+=	rsem>=1.2.30:../../wip/rsem
-DEPENDS+=       ncbi-blast+>=2.7.1:../../biology/ncbi-blast+
+DEPENDS+=	ncbi-blast+>=2.7.1:../../biology/ncbi-blast+
 
 DISTNAME=	trinity-${PV}
 CATEGORIES=	biology
@@ -47,21 +47,21 @@ USE_LANGUAGES=	c c++
 USE_JAVA=	run
 USE_TOOLS+=	bash cmake gmake pax perl
 
-REPLACE_BASH=	util/*/*.sh
-REPLACE_BASH+=	util/*/*/*.sh
-REPLACE_BASH+=	Analysis/*/*/*.sh
-REPLACE_PERL=	Trinity util/misc/Monarch
-REPLACE_PERL+=	util/*.pl util/*/*.pl util/*/*/*.pl util/*/*/*/*.pl
-REPLACE_PERL+=	Chrysalis/analysis/*.pl
-REPLACE_PERL+=	Analysis/*/*.pl Analysis/*/*/*.pl Analysis/*/*/*/*.pl
-REPLACE_PERL+=	Analysis/*/*.cgi Analysis/*/PtR
-REPLACE_PERL+=	PerlLib/*.pm PerlLib/*/*.pm PerlLib/*.ph PerlLib/*.pl
-REPLACE_PYTHON=	util/support_scripts/trinity_installer.py
-REPLACE_PYTHON+=util/misc/alt_GG_read_partitioning_JCornish/genwig2.py
-REPLACE_PYTHON+=util/misc/sim_test_framework/run_Trinity_eval.sh
-REPLACE_PYTHON+=util/misc/TPM_weighted_gene_length.py
-REPLACE_PYTHON+=Analysis/SuperTranscripts/*.py
-REPLACE_PYTHON+=Analysis/SuperTranscripts/*/*.py
+REPLACE_BASH=		util/*/*.sh
+REPLACE_BASH+=		util/*/*/*.sh
+REPLACE_BASH+=		Analysis/*/*/*.sh
+REPLACE_PERL=		Trinity util/misc/Monarch
+REPLACE_PERL+=		util/*.pl util/*/*.pl util/*/*/*.pl util/*/*/*/*.pl
+REPLACE_PERL+=		Chrysalis/analysis/*.pl
+REPLACE_PERL+=		Analysis/*/*.pl Analysis/*/*/*.pl Analysis/*/*/*/*.pl
+REPLACE_PERL+=		Analysis/*/*.cgi Analysis/*/PtR
+REPLACE_PERL+=		PerlLib/*.pm PerlLib/*/*.pm PerlLib/*.ph PerlLib/*.pl
+REPLACE_PYTHON=		util/support_scripts/trinity_installer.py
+REPLACE_PYTHON+=	util/misc/alt_GG_read_partitioning_JCornish/genwig2.py
+REPLACE_PYTHON+=	util/misc/sim_test_framework/run_Trinity_eval.sh
+REPLACE_PYTHON+=	util/misc/TPM_weighted_gene_length.py
+REPLACE_PYTHON+=	Analysis/SuperTranscripts/*.py
+REPLACE_PYTHON+=	Analysis/SuperTranscripts/*/*.py
 REPLACE_RSCRIPT+=	Analysis/*/*.Rscript
 REPLACE_RSCRIPT+=	util/misc/*.Rscript
 

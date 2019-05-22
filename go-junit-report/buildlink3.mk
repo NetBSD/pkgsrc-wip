@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	go-junit-report
 GO_JUNIT_REPORT_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.go-junit-report=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.go-junit-report?=	build
+BUILDLINK_DEPMETHOD.go-junit-report?=		build
 
 BUILDLINK_API_DEPENDS.go-junit-report+=	go-junit-report>=1.3.0
 BUILDLINK_PKGSRCDIR.go-junit-report?=	../../wip/go-junit-report

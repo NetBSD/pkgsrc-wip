@@ -11,8 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=      	bash:run ghostscript gmake makeinfo
-INFO_FILES=     	yes
+USE_TOOLS=		bash:run ghostscript gmake makeinfo
+INFO_FILES=		yes
 
 BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
 BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin

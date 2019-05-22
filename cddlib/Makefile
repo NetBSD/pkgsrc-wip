@@ -8,7 +8,7 @@ GITHUB_RELEASE=	0.94j
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/cddlib/cddlib
 COMMENT=	Efficient implementation of the Double Description Method
-LICENSE=		gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

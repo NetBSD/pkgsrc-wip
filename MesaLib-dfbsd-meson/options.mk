@@ -336,14 +336,14 @@ DRI_DRIVERS+=		nouveau
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-platforms=x11
-MESON_ARGS+=	-Dplatforms=x11
+MESON_ARGS+=		-Dplatforms=x11
 #.elif ${OPSYS} == "Linux"
 #.include "../../wip/wayland/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-platforms=x11,drm,wayland
 #PLIST.wayland=		yes
 .else
 CONFIGURE_ARGS+=	--with-platforms=x11,drm
-MESON_ARGS+=	-Dplatforms=x11,drm
+MESON_ARGS+=		-Dplatforms=x11,drm
 .endif
 
 .if !empty(PKG_OPTIONS:Mllvm)
@@ -372,10 +372,10 @@ MESON_ARGS+=	-Dgallium-vdpau=false
 # XA is useful for accelerating xf86-video-vmware
 .if !empty(PKG_OPTIONS:Mxa)
 CONFIGURE_ARGS+=	--enable-xa
-MESON_ARGS+=	-Dgallium-xa=true
+MESON_ARGS+=		-Dgallium-xa=true
 PLIST.xatracker=	yes
 .else
-MESON_ARGS+=	-Dgallium-xa=false
+MESON_ARGS+=		-Dgallium-xa=false
 .endif
 
 # AMD Radeon r300

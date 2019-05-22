@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 DEPENDS+=	openal-soft-[0-9]*:../../audio/openal-soft
-DEPENDS+=       SDL2-[0-9]*:../../devel/SDL2
+DEPENDS+=	SDL2-[0-9]*:../../devel/SDL2
 
 MAINTAINER=	pkgls@gmx.net
 HOMEPAGE=	https://github.com/bsfd80/qtxqfsts/

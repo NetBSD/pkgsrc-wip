@@ -18,8 +18,8 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	automake autoconf autoreconf pkg-config
 GNU_CONFIGURE=	yes
 
-GNU_CONFIGURE_PREFIX=   ${PREFIX}/guile/2.2
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/guile/2.2/lib
+GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -I${PREFIX}/guile/2.2/share/aclocal -vif

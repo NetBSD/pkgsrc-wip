@@ -48,7 +48,7 @@ CONF_FILES+=	${EGDIR}/xdg/autostart/lxqt-compton.desktop			\
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf=	autostart/CMakeLists.txt \
-    			config/CMakeLists.txt	 \
+			config/CMakeLists.txt	 \
 			menu/CMakeLists.txt
 SUBST_SED.conf=		-e 's,$${LXQT_ETC_XDG_DIR}/,${EGDIR}/xdg/,'
 SUBST_STAGE.conf=	post-patch

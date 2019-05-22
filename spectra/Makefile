@@ -14,7 +14,7 @@ LICENSE=	mpl-2.0
 
 WRKSRC=		${WRKDIR}/spectra-0.7.0
 
-NO_BUILD=       yes
+NO_BUILD=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	c++ fortran
 

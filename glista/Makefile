@@ -11,7 +11,7 @@ COMMENT=	Simple task list management utility
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+= 	xdg-1.4
+USE_DIRS+=	xdg-1.4
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 

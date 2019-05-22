@@ -15,7 +15,7 @@ COMMENT=	Perl web framework: The Web In A Box!
 LICENSE=	artistic-2.0
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Mojolicious/.packlist
+PERL5_PACKLIST=	auto/Mojolicious/.packlist
 
 REPLACE_PERL+=	script/*
 

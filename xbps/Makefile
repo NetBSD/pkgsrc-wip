@@ -9,16 +9,16 @@ HOMEPAGE=	https://github.com/void-linux/xbps/
 COMMENT=	The X Binary Package System
 LICENSE=	2-clause-bsd
 
-EGDIR=          ${PREFIX}/share/examples/${PKGBASE}
-CONFS=          xbps.conf 00-repository-main.conf
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONFS=		xbps.conf 00-repository-main.conf
 
 .for f in ${CONFS}
-CONF_FILES+=    ${EGDIR}/${f} ${PKG_SYSCONFDIR}/xbps.d/${f}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/xbps.d/${f}
 .endfor
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/examples/${PKGBASE}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/examples/${PKGBASE}
 
-OWN_DIRS+=      ${PKG_SYSCONFDIR}/xbps.d
+OWN_DIRS+=	${PKG_SYSCONFDIR}/xbps.d
 
 USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes

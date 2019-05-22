@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	audio devel
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
-                http://ftp.musicbrainz.org/pub/musicbrainz/
+		http://ftp.musicbrainz.org/pub/musicbrainz/
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://musicbrainz.org/products/tunepimp/index.html

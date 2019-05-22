@@ -14,19 +14,19 @@ COMMENT=	Command line tool able to build arduino sketches
 #LICENSE=	# TODO: (see mk/license.mk)
 
 
-GO_SRCPATH=		github.com/arduino/arduino-builder
+GO_SRCPATH=	github.com/arduino/arduino-builder
 GO_DIST_BASE=	${GITHUB_PROJECT}-${DISTNAME}
 
 
 
 USE_LANGUAGES=	c++ go
-DEPENDS+= go>=1.8.0:../../lang/go
-DEPENDS+= go-errors>=0:../../devel/go-errors
-DEPENDS+= go-testify>=0:../../devel/go-testify
-DEPENDS+= grpc>=0:../../net/grpc
-DEPENDS+= protobuf>=0:../../devel/protobuf
-DEPENDS+= go-fsnotify>=0:../../devel/go-fsnotify
-DEPENDS+= go-properties-map>=0:../../wip/go-properties-map
+DEPENDS+=	go>=1.8.0:../../lang/go
+DEPENDS+=	go-errors>=0:../../devel/go-errors
+DEPENDS+=	go-testify>=0:../../devel/go-testify
+DEPENDS+=	grpc>=0:../../net/grpc
+DEPENDS+=	protobuf>=0:../../devel/protobuf
+DEPENDS+=	go-fsnotify>=0:../../devel/go-fsnotify
+DEPENDS+=	go-properties-map>=0:../../wip/go-properties-map
 
 .include "../../lang/go/go-package.mk"
 .include "../../wip/go-properties-map/buildlink3.mk"

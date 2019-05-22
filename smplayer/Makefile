@@ -32,11 +32,11 @@ SUBST_SED.dirs=		-e "s|share/man|${PKGMANDIR}|g"
 SUBST_SED.dirs+=	-e "s|doc/packages|doc|1"
 SUBST_STAGE.dirs=	pre-build
 
-SUBST_CLASSES+=         paths
-SUBST_STAGE.paths=      pre-configure
-SUBST_SED.paths+=       -e 's,/usr/local,${PREFIX},g'
-SUBST_FILES.paths+=     Makefile
-SUBST_MESSAGE.paths=    Fixing header search paths.
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_SED.paths+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_FILES.paths+=	Makefile
+SUBST_MESSAGE.paths=	Fixing header search paths.
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

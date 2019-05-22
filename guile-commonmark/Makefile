@@ -11,7 +11,7 @@ COMMENT=	Implementation of CommonMark for Guile
 LICENSE=	gnu-lgpl-v3
 USE_TOOLS+=	pkg-config
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 

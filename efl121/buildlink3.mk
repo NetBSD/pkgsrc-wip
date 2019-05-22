@@ -1,9 +1,9 @@
 # $NetBSD: buildlink3.mk,v 1.17 2018/08/16 18:54:28 adam Exp $
 
-BUILDLINK_TREE+=        efl
+BUILDLINK_TREE+=	efl
 
-BUILDLINK_ABI_DEPENDS.efl?=     efl>=1.21.0nb1
-BUILDLINK_PKGSRCDIR.efl?=     ../../wip/efl121
+BUILDLINK_ABI_DEPENDS.efl?=	efl>=1.21.0nb1
+BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl121
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

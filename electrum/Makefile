@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.10 2015/04/13 23:22:01 othyro Exp $
 
-ELECT_VER=      3.3.4
-DISTNAME=       Electrum-${ELECT_VER}
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=     finance python
-MASTER_SITES=   http://download.electrum.org/${ELECT_VER}/
+ELECT_VER=	3.3.4
+DISTNAME=	Electrum-${ELECT_VER}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	finance python
+MASTER_SITES=	http://download.electrum.org/${ELECT_VER}/
 
 MAINTAINER=	kyuupichan@gmail.com
 HOMEPAGE=	http://electrum.org/

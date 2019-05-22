@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.22 2016/01/16 20:30:11 ryoon Exp $
 #
 
-PKGSRC_USE_SSP=         no
+PKGSRC_USE_SSP=		no
 
 DISTNAME=		valgrind-3.14.0
 CATEGORIES=		devel
@@ -52,10 +52,10 @@ CONFIGURE_ARGS+=	--enable-only64bit
 
 #CFLAGS+=	-fsanitize-coverage=trace-pc
 
-CFLAGS+=                -O0 -g -ggdb
-CXXFLAGS+=              -O0 -g -ggdb
-INSTALL_UNSTRIPPED=     yes
-BUILDLINK_TRANSFORM+=   rm:-s
+CFLAGS+=		-O0 -g -ggdb
+CXXFLAGS+=		-O0 -g -ggdb
+INSTALL_UNSTRIPPED=	yes
+BUILDLINK_TRANSFORM+=	rm:-s
 
 #CFLAGS+=		-fsanitize=address
 #LDFLAGS+=		-fsanitize=address

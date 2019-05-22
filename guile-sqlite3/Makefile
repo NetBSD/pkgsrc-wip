@@ -2,7 +2,7 @@
 
 DISTNAME=	v0.1.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
-PKGNAME=        guile-sqlite3-${DISTNAME:S/v//}
+PKGNAME=	guile-sqlite3-${DISTNAME:S/v//}
 CATEGORIES=	databases
 MASTER_SITES=	https://notabug.org/guile-sqlite3/guile-sqlite3/archive/
 
@@ -13,8 +13,8 @@ LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/guile-sqlite3
 USE_LANGUAGES=	c
-USE_TOOLS+=     automake autoconf autoreconf pkg-config
-GNU_CONFIGURE=  YES
+USE_TOOLS+=	automake autoconf autoreconf pkg-config
+GNU_CONFIGURE=	YES
 
 # not all sqlite3.pc files provide the pkg-config variable, set path manually
 # see also patch-configure.ac

@@ -3,48 +3,48 @@
 .include 	"./version.mk"
 
 NAME=		pike${PIKEVERSUFFIX}
-PKGNAME=        ${NAME}-${PIKE_VERSION}
-DISTNAME=       Pike-v${PIKE_VERSION}
+PKGNAME=	${NAME}-${PIKE_VERSION}
+DISTNAME=	Pike-v${PIKE_VERSION}
 
-CATEGORIES=     lang
-MASTER_SITES=   http://pike.lysator.liu.se/pub/pike/${PIKE_RELEASE_TYPE}/${PIKE_VERSION}/
+CATEGORIES=	lang
+MASTER_SITES=	http://pike.lysator.liu.se/pub/pike/${PIKE_RELEASE_TYPE}/${PIKE_VERSION}/
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mpl-1.1
 #LICENSE+=	gnu-lgpl-v2.1
 #LICENSE+=	mpl-v1.1
-MAINTAINER=     william@welliver.org
-HOMEPAGE=       http://pike.lysator.liu.se/
-COMMENT=        Dynamic language with a syntax similar to Java and C
+MAINTAINER=	william@welliver.org
+HOMEPAGE=	http://pike.lysator.liu.se/
+COMMENT=	Dynamic language with a syntax similar to Java and C
 
 CHECK_SSP=	no
 .if defined(PKGSRC_USE_SSP)
 # do not add flags to everything
-PKGSRC_USE_SSP= no
+PKGSRC_USE_SSP=	no
 .endif
 
-BUILD_DEPENDS+=	 pkgconf-[0-9]*:../../devel/pkgconf
-BUILD_DEPENDS+=	 pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
-MAKE_JOBS_SAFE= no
-GNU_CONFIGURE= yes
+BUILD_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
+BUILD_DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
+MAKE_JOBS_SAFE=		no
+GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	src/configure
-#CONFIGURE_ARGS+= --without-machine-code
-CFLAGS+=	-O
+#CONFIGURE_ARGS+=	--without-machine-code
+CFLAGS+=		-O
 BUILD_MAKE_FLAGS+=
-USE_TOOLS+=gmake
-USE_LANGUAGES=  c c++
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
 
-SHARED_DOCS_LOC=      ${PREFIX}/share/doc/${NAME}
+SHARED_DOCS_LOC=	${PREFIX}/share/doc/${NAME}
 INSTALL_SHARED_DOCS=	ANNOUNCE CHANGES COMMITTERS COPYING COPYRIGHT README README-GIT
 
 INSTALL_TARGET_ARGS+=	INSTALLARGS="buildroot='${DESTDIR}' prefix='${PREFIX}' include_prefix='${PREFIX}/include/${NAME}' lib_prefix='${PREFIX}/lib/${NAME}' --verbose --traditional"
 INSTALL_TARGET_ARGS+=	buildroot='${DESTDIR}' prefix='${PREFIX}'
 
 .if (defined(ABI))
-CONFIGURE_ARGS+= --with-abi=${ABI}
+CONFIGURE_ARGS+=	--with-abi=${ABI}
 .endif
 
 FILES_SUBST+=		NAME="${NAME}"
 
-REPLACE_INTERPRETER+=   pike
+REPLACE_INTERPRETER+=	pike
 REPLACE.pike.old=	pike
 REPLACE.pike.new=	${PREFIX}/bin/pike${PIKEVERSUFFIX}
 REPLACE_FILES.pike=	lib/modules/Tools.pmod/Standalone.pmod/cgrep.pike
@@ -53,7 +53,7 @@ REPLACE_FILES.pike+=	lib/modules/Tools.pmod/Standalone.pmod/test_pike.pike
 REPLACE_FILES.pike+=	lib/modules/Tools.pmod/Standalone.pmod/rsif.pike
 
 # remove any dumped modules from the list, as their generation is not deterministic
-PRINT_PLIST_AWK+=       /^lib\/.*(\.pike\.o|\.pmod\.o)$$/ { next; }
+PRINT_PLIST_AWK+=	/^lib\/.*(\.pike\.o|\.pmod\.o)$$/ { next; }
 
 # add the dumped modules from this build
 #GENERATE_PLIST+=	cd ${DESTDIR}/${PREFIX} && find . -name \*.o -print | sed -e 's~^\./~~' ;

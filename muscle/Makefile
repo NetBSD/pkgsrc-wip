@@ -23,7 +23,7 @@ DEPENDS+=	dos2unix>0:../../converters/dos2unix
 
 LICENSE=	public-domain
 
-ONLY_FOR_PLATFORM=	 *-*-x86_64 *-*-i386
+ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-i386
 
 USE_LANGUAGES=	c c++
 

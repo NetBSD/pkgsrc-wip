@@ -25,7 +25,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR} share/doc/cargo/bash_completion.d
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	darwin nondarwin
+PLIST_VARS+=		darwin nondarwin
 .if ${OPSYS} == "Darwin"
 PLIST.darwin=		yes
 .else

@@ -1,23 +1,23 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	telegraf
-PKGVERSION_NOREV= 1.9.2
-DISTNAME=       telegraf-1.9.2
-GITHUB_TAG=	${PKGVERSION_NOREV}
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
-MAINTAINER=	william@welliver.org
-HOMEPAGE=	https://www.influxdata.com/
-COMMENT=	Plugin-driven server agent for collecting & reporting metrics
-LICENSE=	mit
+GITHUB_PROJECT=		telegraf
+PKGVERSION_NOREV=	1.9.2
+DISTNAME=		telegraf-1.9.2
+GITHUB_TAG=		${PKGVERSION_NOREV}
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_GITHUB:=influxdata/}
+MAINTAINER=		william@welliver.org
+HOMEPAGE=		https://www.influxdata.com/
+COMMENT=		Plugin-driven server agent for collecting & reporting metrics
+LICENSE=		mit
 
 # despite being the default value, this explicit declaration is required for things
 # to build properly.
-EXTRACT_SUFX=	.tar.gz
+EXTRACT_SUFX=			.tar.gz
 TELEGRAF_DEPENDENCIES_DIR=	telegraf-dependencies-${PKGVERSION_NOREV}
-TELEGRAF_DEPENDENCIES=	${TELEGRAF_DEPENDENCIES_DIR}${EXTRACT_SUFX}
-TELEGRAF_DISTNAME=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES=	${TELEGRAF_DISTNAME}
+TELEGRAF_DEPENDENCIES=		${TELEGRAF_DEPENDENCIES_DIR}${EXTRACT_SUFX}
+TELEGRAF_DISTNAME=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=			${TELEGRAF_DISTNAME}
 
 .if !defined(BOOTSTRAP)
 DISTFILES+=	${TELEGRAF_DEPENDENCIES}

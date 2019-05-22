@@ -15,7 +15,7 @@ NO_CONFIGURE=	YES
 
 WRKSRC=	${WRKDIR}/mescc-tools-Release_0.6.1
 
-MAKE_FILE=	makefile
+MAKE_FILE=		makefile
 INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 TEST_TARGET=	test

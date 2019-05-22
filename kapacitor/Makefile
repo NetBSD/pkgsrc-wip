@@ -1,25 +1,25 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	kapacitor
-PKGVERSION_NOREV= 1.5.2
-DISTNAME=       kapacitor-1.5.2
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
-MAINTAINER=	william@welliver.org
-HOMEPAGE=	https://www.influxdata.com/
-COMMENT=	Framework for processing, monitoring, and alerting on time series data
-LICENSE=	mit
+GITHUB_PROJECT=		kapacitor
+PKGVERSION_NOREV=	1.5.2
+DISTNAME=		kapacitor-1.5.2
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_GITHUB:=influxdata/}
+MAINTAINER=		william@welliver.org
+HOMEPAGE=		https://www.influxdata.com/
+COMMENT=		Framework for processing, monitoring, and alerting on time series data
+LICENSE=		mit
 
 # despite being the default value, this explicit declaration is required for things
 # to build properly.
-EXTRACT_SUFX=   .tar.gz
+EXTRACT_SUFX=	.tar.gz
 
-KAPACITOR_DISTNAME=			${DISTNAME}${EXTRACT_SUFX}
-DISTFILES=			${KAPACITOR_DISTNAME}
+KAPACITOR_DISTNAME=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=		${KAPACITOR_DISTNAME}
 
 EXTRACT_DIR.${KAPACITOR_DISTNAME}=	${WRKDIR}/src/github.com/influxdata
-WRKSRC=				${WRKDIR}/src/github.com/influxdata/kapacitor
+WRKSRC=		${WRKDIR}/src/github.com/influxdata/kapacitor
 USE_TOOLS+=	gmake
 
 BUILD_DEPENDS+=			go110-1.10.*:../../lang/go110
@@ -31,9 +31,9 @@ PKGSRC_MAKE_ENV+=		GOPATH=${WRKDIR}
 
 PKG_SYSCONFSUBDIR=	kapacitor
 
-REPLACE.kapacitor.old=       /etc/kapacitor
-REPLACE.kapacitor.new=       ${PKG_SYSCONFDIR}
-REPLACE_FILES.kapacitor=     share/examples/kapacitor/kapacitor.conf
+REPLACE.kapacitor.old=		/etc/kapacitor
+REPLACE.kapacitor.new=		${PKG_SYSCONFDIR}
+REPLACE_FILES.kapacitor=	share/examples/kapacitor/kapacitor.conf
 
 DATADIR=	${VARBASE}/lib/kapacitor
 LOGDIR=		${VARBASE}/log/kapacitor
@@ -44,7 +44,7 @@ FILES_SUBST+=		KAPACITOR_GROUP=${KAPACITOR_GROUP:Q}
 FILES_SUBST+=		DATADIR=${DATADIR:Q}
 FILES_SUBST+=		LOGDIR=${LOGDIR:Q}
 
-KAPACITOR_USER?=		kapacitor
+KAPACITOR_USER?=	kapacitor
 KAPACITOR_GROUP?=	kapacitor
 OWN_DIRS_PERMS+=	${DATADIR} ${KAPACITOR_USER} ${KAPACITOR_GROUP} 0700
 OWN_DIRS_PERMS+=	${LOGDIR} ${KAPACITOR_USER} ${KAPACITOR_GROUP} 0700
@@ -58,8 +58,8 @@ INSTALLATION_DIRS+=	bin etc/kapacitor share/doc/kapacitor share/kapacitor/telegr
 
 DOC_FILES+=	LICENSE LICENSE_OF_DEPENDENCIES.md DESIGN.md README.md CHANGELOG.md
 BIN_FILES+=	kapacitor kapacitord
-CONF_FILES+=    ${PREFIX}/share/examples/${PKGBASE}/kapacitor.conf ${PKG_SYSCONFDIR}/kapacitor.conf
-CONF_FILES+=    ${PREFIX}/share/examples/${PKGBASE}/logrotate.d/kapacitor ${PKG_SYSCONFDIR}/../logrotate.d/kapacitor
+CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/kapacitor.conf ${PKG_SYSCONFDIR}/kapacitor.conf
+CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/logrotate.d/kapacitor ${PKG_SYSCONFDIR}/../logrotate.d/kapacitor
 
 GO_BIN=	${PREFIX}/go110/bin/go
 

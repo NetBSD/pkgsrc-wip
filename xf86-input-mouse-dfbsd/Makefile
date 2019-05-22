@@ -15,12 +15,12 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
-CFLAGS.DragonFly+= -Wno-array-bounds
+CFLAGS.DragonFly+=	-Wno-array-bounds
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-SUBST_CLASSES+=                 freebsdusb 
+SUBST_CLASSES+=			freebsdusb 
 SUBST_STAGE.freebsdusb=		post-extract
 SUBST_MESSAGE.freebsdusb=	Patching src/Makefile.in for DragonFly or FreeBSD compatible USB 
 SUBST_FILES.freebsdusb+=	src/Makefile.in

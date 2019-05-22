@@ -142,7 +142,7 @@ INSTALLATION_DIRS+=	${BZDIR}/${i}
 .endfor
 
 FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
-                BZDIR=${BZDIR}
+		BZDIR=${BZDIR}
 
 do-configure:
 	(cd ${WRKSRC}; ./checksetup.pl)

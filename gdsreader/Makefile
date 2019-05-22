@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGBASE}
 
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
 INSTALLATION_DIRS=	bin ${EXAMPLESDIR}
 
 do-install:

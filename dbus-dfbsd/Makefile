@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=	--disable-selinux
 # CONFIGURE_ARGS+=	--disable-systemd
 .endif
 
-PLIST_VARS+=    	linux
+PLIST_VARS+=		linux
 
 DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
 OWN_DIRS+=		${DBUS_CONF_DIR}/services

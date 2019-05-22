@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	pbzx-1.0.2
-CATEGORIES=		archivers
+CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NiklasRosenstein/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 

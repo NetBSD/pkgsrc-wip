@@ -9,23 +9,23 @@ HOMEPAGE=	https://github.com/navit-gps/navit
 COMMENT=	GPS car navigation system
 LICENSE=	gnu-gpl-v2
 
-GIT_REPOSITORIES=   navit-gps
-GIT_REPO.navit-gps= https://github.com/navit-gps/navit.git
-GIT_REVISION=       07de185df5dc96356a21016b544137b84b4fc023
-_GIT_FLAGS?=        --depth 1
+GIT_REPOSITORIES=	navit-gps
+GIT_REPO.navit-gps=	https://github.com/navit-gps/navit.git
+GIT_REVISION=		07de185df5dc96356a21016b544137b84b4fc023
+_GIT_FLAGS?=		--depth 1
 
 CONFLICTS=	navit-[0-9]*
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CFLAGS.NetBSD+= -DUSE_SYS_ENDIAN_H
+CFLAGS.NetBSD+=	-DUSE_SYS_ENDIAN_H
 
 USE_TOOLS+=	cmake pkg-config
 
-CMAKE_ARGS+=    -DLIB_DIR=${PREFIX}/lib/navit
-CMAKE_ARGS+=    -DMAN_DIR=${PREFIX}/${PKGMANDIR}/man1
-CMAKE_ARGS+=    -DUSE_PLUGINS=0
+CMAKE_ARGS+=	-DLIB_DIR=${PREFIX}/lib/navit
+CMAKE_ARGS+=	-DMAN_DIR=${PREFIX}/${PKGMANDIR}/man1
+CMAKE_ARGS+=	-DUSE_PLUGINS=0
 CMAKE_ARGS+=	-DSAMPLE_MAP=1
 CMAKE_ARGS+=	-DSVG2PNG=0
 CMAKE_ARGS+=	-DUSE_NATIVE_LANGUAGE_SUPPORT=1

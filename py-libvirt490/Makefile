@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.32 2018/11/30 09:59:40 adam Exp $
 
-DISTNAME=       libvirt-python-4.9.0
-CATEGORIES=     sysutils python
-MASTER_SITES=   https://libvirt.org/sources/python/
+DISTNAME=	libvirt-python-4.9.0
+CATEGORIES=	sysutils python
+MASTER_SITES=	https://libvirt.org/sources/python/
 
-MAINTAINER=     andyb@m42.one
-HOMEPAGE=       https://libvirt.org/sources/python/
-COMMENT=        libvirt python library
-LICENSE=        gnu-lgpl-v2
+MAINTAINER=	andyb@m42.one
+HOMEPAGE=	https://libvirt.org/sources/python/
+COMMENT=	libvirt python library
+LICENSE=	gnu-lgpl-v2
 
 #DEPENDS+=	${PYPKGPREFIX}-backcall-[0-9]*:../../devel/py-backcall
 #DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator

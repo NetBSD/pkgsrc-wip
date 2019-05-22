@@ -59,10 +59,10 @@ REPLACE_PYTHON=	tests/server/run_server_tests.py
 
 REPLACE_R=	sandbox/anvi-script-gen_stats_for_single_copy_genes.R
 
-REPLACE_INTERPRETER+=   R
-REPLACE.R.old=          /usr/bin/env Rscript
-REPLACE.R.new=          ${PREFIX}/bin/R
-REPLACE_FILES.R=        ${REPLACE_R}
+REPLACE_INTERPRETER+=	R
+REPLACE.R.old=		/usr/bin/env Rscript
+REPLACE.R.new=		${PREFIX}/bin/R
+REPLACE_FILES.R=	${REPLACE_R}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

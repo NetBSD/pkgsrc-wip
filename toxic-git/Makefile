@@ -15,7 +15,7 @@ USE_LANGUAGES+=	c
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	post-patch
-SUBST_MESSAGE.makefile= Fixing variable for manpath
+SUBST_MESSAGE.makefile=	Fixing variable for manpath
 SUBST_SED.makefile=	-e 's|share/man|${PKGMANDIR}|g'
 SUBST_FILES.makefile=	cfg/global_vars.mk
 

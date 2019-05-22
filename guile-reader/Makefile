@@ -11,7 +11,7 @@ COMMENT=	Extensible reader framework for GNU Guile.
 
 USE_TOOLS+=	pkg-config automake autoconf autoreconf gmake
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 # --with-guilemoduledir=/usr/pkg/guile/2.2/share/guile/site/2.2'.

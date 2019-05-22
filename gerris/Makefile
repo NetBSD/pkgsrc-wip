@@ -13,7 +13,7 @@ COMMENT=	Software solution of the PDE describing fluid flow
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config pax
-USE_LANGUAGES+=	 c c++
+USE_LANGUAGES+=	c c++
 
 PKGCONFIG_OVERRIDE+=	src/gerris2D.pc.in
 PKGCONFIG_OVERRIDE+=	src/gerris2D3.pc.in

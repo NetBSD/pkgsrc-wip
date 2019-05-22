@@ -126,7 +126,7 @@ RULE_SUBDIR=		${RULESDIR:S,^${PREFIX}/,,}
 
 CONF_FILES+=		${EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf	\
 			${RULESDIR}/user_prefs.template			\
-		 	${PKG_SYSCONFDIR}/user_prefs.template
+			${PKG_SYSCONFDIR}/user_prefs.template
 SUPPORT_FILES_PERMS+=	${EGDIR}/netbsd_lists.cf			\
 			${PKG_SYSCONFDIR}/netbsd_lists.cf ${SHAREOWN}	\
 			${SHAREGRP} ${SHAREMODE}

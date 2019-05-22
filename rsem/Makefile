@@ -27,15 +27,15 @@ USE_LANGUAGES=	c c++
 # Should be unbundled in the future.
 USE_TOOLS+=	gmake perl:run
 REPLACE_PERL=	convert-sam-for-rsem \
-                extract-transcript-to-gene-map-from-trinity \
-                rsem-calculate-expression \
-                rsem-control-fdr \
-                rsem-generate-data-matrix \
-                rsem-generate-ngvector \
-                rsem-plot-transcript-wiggles \
-                rsem-prepare-reference \
-                rsem-run-ebseq \
-                rsem_perl_utils.pm
+		extract-transcript-to-gene-map-from-trinity \
+		rsem-calculate-expression \
+		rsem-control-fdr \
+		rsem-generate-data-matrix \
+		rsem-generate-ngvector \
+		rsem-plot-transcript-wiggles \
+		rsem-prepare-reference \
+		rsem-run-ebseq \
+		rsem_perl_utils.pm
 REPLACE_PYTHON=	rsem-refseq-extract-primary-assembly \
 		rsem-gff3-to-gtf
 

@@ -16,9 +16,9 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 INFO_FILES=		yes
 
-GNU_CONFIGURE_PREFIX=   ${PREFIX}/guile/2.2
+GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--prefix=${PREFIX}/guile/2.2
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/guile/2.2/lib
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 CONFIGURE_ARGS+=	--site_scm_dir=${PREFIX}/guile/2.2/share/guile/2.2
 CONFIGURE_ARGS+=	--site_scm_go_dir=${PREFIX}/guile/2.2/lib/guile/2.2/site-ccache
 

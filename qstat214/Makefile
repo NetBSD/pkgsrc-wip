@@ -15,14 +15,14 @@ COMMENT=	QStat is a program displays information about game servers
 LICENSE=	artistic-2.0
 
 DEPENDS+=	automake-[0-9]*:../../devel/automake
-DEPENDS+=       autoconf-[0-9]*:../../devel/autoconf
+DEPENDS+=	autoconf-[0-9]*:../../devel/autoconf
 
-GNU_CONFIGURE=  yes
-USE_LIBTOOL=    yes
-USE_LANGUAGES=  c c++
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake automake autoconf autoheader autom4te aclocal intltool pkg-config which
 
-WRKSRC= ${WRKDIR}/qstat-2.14
+WRKSRC=	${WRKDIR}/qstat-2.14
 
 pre-configure:
 	cd ${WRKSRC} && \

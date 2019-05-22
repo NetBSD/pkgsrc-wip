@@ -36,14 +36,14 @@ MESSAGE_SUBST+=	DOCDIR=${DOCDIR}
 MESSAGE_SUBST+=	VARBASE=${VARBASE}
 
 OWN_DIRS_PERMS+=	${VARBASE}/shaarli \
-		       	${WWW_USER} ${WWW_GROUP} 0770
+			${WWW_USER} ${WWW_GROUP} 0770
 OWN_DIRS_PERMS+=	${VARBASE}/shaarli/data \
-		       	${WWW_USER} ${WWW_GROUP} 0750
+			${WWW_USER} ${WWW_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/shaarli/tmp \
-		       	${WWW_USER} ${WWW_GROUP} 0750
+			${WWW_USER} ${WWW_GROUP} 0750
 
 CONF_FILES+=	${EGDIR}/apache.conf \
-	       	${PKG_SYSCONFDIR}/apache.conf
+		${PKG_SYSCONFDIR}/apache.conf
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure

@@ -11,7 +11,7 @@ COMMENT=	C++ library for arithmetic and algebraic computations
 LICENSE=	cecill-2.0
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 

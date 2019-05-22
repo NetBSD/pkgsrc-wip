@@ -20,7 +20,7 @@ MESSAGE_SUBST+=		PKG_JAVA_HOME=${PKG_JAVA_HOME}
 
 USE_JAVA=	yes
 USE_JAVA2=	yes
-NO_BUILD= 	yes
+NO_BUILD=	yes
 
 CONF_FILES=	${PREFIX}/share/examples/opengrok/paths.tsv \
 		${PREFIX}/share/opengrok/var/opengrok/paths.tsv

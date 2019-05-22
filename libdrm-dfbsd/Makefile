@@ -68,10 +68,10 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	libkms	
+PLIST_VARS+=		libkms	
 .if !empty(PKG_OPTIONS:Mlibkms)
 PKGCONFIG_OVERRIDE+=	libkms.pc.in
-PLIST.libkms=	yes
+PLIST.libkms=		yes
 CONFIGURE_ARGS+=	--enable-libkms
 .else
 #CONFIGURE_ARGS+=	--disable-libkms

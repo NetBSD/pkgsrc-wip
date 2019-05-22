@@ -9,12 +9,12 @@ BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/subversion/Makefile.common"
 
-CONFLICTS+= 		subversion-[0-9]* subversion-base-[0-9]*
+CONFLICTS+=		subversion-[0-9]* subversion-base-[0-9]*
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/freebsd-svn/distinfo
 
-PATCHFILES+= 		extra-patch-fbsd-template
-PATCH_SITES+= 		https://svnweb.freebsd.org/ports/head/devel/subversion19/files/
+PATCHFILES+=		extra-patch-fbsd-template
+PATCH_SITES+=		https://svnweb.freebsd.org/ports/head/devel/subversion19/files/
 
 USE_TOOLS+=		msgfmt
 

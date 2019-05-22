@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/sgillies/shapely
 COMMENT=	Geometric objects, predicates, and operations
 LICENSE=	2-clause-bsd
 
-INSTALLATION_DIRS=	share/doc/py-shapely
-PYTHON_VERSIONS_INCOMPATIBLE= 36 37
+INSTALLATION_DIRS=		share/doc/py-shapely
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/manual.txt ${DESTDIR}${PREFIX}/share/doc/py-shapely

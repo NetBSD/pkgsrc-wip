@@ -40,11 +40,11 @@ USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-video-ati
-PKG_SUPPORTED_OPTIONS=  debug
-PKG_SUPPORTED_OPTIONS+= revert_gbm_bo
+PKG_SUPPORTED_OPTIONS=	debug
+PKG_SUPPORTED_OPTIONS+=	revert_gbm_bo
 
 .if ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= revert_gbm_bo
+PKG_SUGGESTED_OPTIONS+=	revert_gbm_bo
 .endif
 
 .include "../../mk/bsd.options.mk"

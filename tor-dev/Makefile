@@ -51,7 +51,7 @@ FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
-CHECK_PORTABILITY_SKIP+=contrib/*
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 .include "options.mk"
 

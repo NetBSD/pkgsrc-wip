@@ -12,7 +12,7 @@ GIO_QUERYMODULES=	${BUILDLINK_PREFIX.glib2}/bin/gio-querymodules
 
 FILES_SUBST+=		GIO_MODULES_DIR=${GIO_MODULES_DIR:Q}
 FILES_SUBST+=		GIO_QUERYMODULES=${GIO_QUERYMODULES:Q}
-GIO_MODULES_DIR=${BUILDLINK_PREFIX.glib2}/lib/gio/modules
+GIO_MODULES_DIR=	${BUILDLINK_PREFIX.glib2}/lib/gio/modules
 INSTALL_TEMPLATES+=	../../devel/glib2/files/modules.tmpl
 DEINSTALL_TEMPLATES+=	../../devel/glib2/files/modules.tmpl
 

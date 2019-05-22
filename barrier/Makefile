@@ -13,14 +13,14 @@ COMMENT=	Let a user share a mouse and keyboard among computers
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/barrier-2.1.1
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=	c c++11
 # Main configuration is CMake, but subdirectories are GNU configure.
 # We need to set GNU_CONFIGURE=yes for config.{guess,sub} overrides to kick in.
 # We override the do-configure target to prevent pkgsrc from running both
 # configuration mechanisms.
 USE_CMAKE=	yes
-USE_CMAKE=		yes
-GNU_CONFIGURE=		yes
+USE_CMAKE=	yes
+GNU_CONFIGURE=	yes
 
 CONFIG_SUB_OVERRIDE+=	ext/gmock/build-aux/config.sub
 CONFIG_SUB_OVERRIDE+=	ext/gtest/build-aux/config.sub

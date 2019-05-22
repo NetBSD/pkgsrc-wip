@@ -5,8 +5,8 @@ VERSION=	2.12r
 PKGNAME=	ddate-${VERSION}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/misc/} \
-                http://www.kernel.org/pub/linux/utils/util-linux/ \
-                ftp://ftp.fr.kernel.org/pub/linux/utils/util-linux/
+		http://www.kernel.org/pub/linux/utils/util-linux/ \
+		ftp://ftp.fr.kernel.org/pub/linux/utils/util-linux/
 
 MAINTAINER=		lkundrak@skosi.org
 HOMEPAGE=		http://freshmeat.net/projects/util-linux/

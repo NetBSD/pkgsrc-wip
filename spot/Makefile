@@ -10,7 +10,7 @@ COMMENT=	Library for omega automata manipulation and model checking
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL= yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 

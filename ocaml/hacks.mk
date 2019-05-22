@@ -15,12 +15,12 @@ OCAML_HACKS_MK=	defined
 ### itself.
 ###
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-9].*-*)
-PKG_HACKS+=	no_compact_unwind
-SUBST_CLASSES+=	no_compact_unwind
-SUBST_MESSAGE.no_compact_unwind= Removing -no_compact_unwind from linker options
-SUBST_FILES.no_compact_unwind=	configure
-SUBST_SED.no_compact_unwind=	-e 's/-Wl,-no_compact_unwind//g'
-SUBST_STAGE.no_compact_unwind=	pre-configure
+PKG_HACKS+=				no_compact_unwind
+SUBST_CLASSES+=				no_compact_unwind
+SUBST_MESSAGE.no_compact_unwind=	Removing -no_compact_unwind from linker options
+SUBST_FILES.no_compact_unwind=		configure
+SUBST_SED.no_compact_unwind=		-e 's/-Wl,-no_compact_unwind//g'
+SUBST_STAGE.no_compact_unwind=		pre-configure
 .endif
 
 ### [ Wed Oct  7 9:16:42 GMT 2009 : dmcmahill ]

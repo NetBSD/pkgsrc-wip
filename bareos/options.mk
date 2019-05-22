@@ -23,5 +23,5 @@ CMAKE_ARGS+=		-Dmysql=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mscsi-crypto)
-CMAKE_ARGS+=   -Dscsi-crypto=yes
+CMAKE_ARGS+=	-Dscsi-crypto=yes
 .endif

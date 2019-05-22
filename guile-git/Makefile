@@ -15,8 +15,8 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	automake autoconf autoreconf pkg-config
 DEPENDS+=	guile-bytestructures>=1.0.5:../../wip/guile-bytestructures
 
-GNU_CONFIGURE_PREFIX=   ${PREFIX}/guile/2.2
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/guile/2.2/lib
+GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 CONFIGURE_ENV+=		LIBGIT2_LIBDIR=${BUILDLINK_PREFIX.libgit2}/lib
 
 pre-configure:

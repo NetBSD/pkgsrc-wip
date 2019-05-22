@@ -3,8 +3,8 @@
 DISTNAME=	heimdal-7.5.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heimdal/}
-GITHUB_PROJECT= heimdal
-GITHUB_RELEASE= ${DISTNAME}
+GITHUB_PROJECT=	heimdal
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.h5l.org/
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}
 CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editlinereadline}
 .endif
 
-PLIST_VARS+=		glob vis
+PLIST_VARS+=	glob vis
 .if ${OPSYS} == "SunOS"
 PLIST.vis=	yes
 PLIST.glob=	yes
@@ -76,8 +76,8 @@ PLIST.glob=	yes
 
 # Linux does not have include/vis.h and expected include/glob.h.
 .if ${OPSYS} == "Linux"
-PLIST.vis=	yes
-PLIST.glob=	yes
+PLIST.vis=		yes
+PLIST.glob=		yes
 # Without this I get undefined references to pthread_getspecific
 PTHREAD_AUTO_VARS=	yes
 .endif

@@ -6,9 +6,9 @@ MODULE_TYPE=	post_module
 
 .include 	"../../wip/pike${PIKEVERSUFFIX}/builtin_module.mk"
 
-CFLAGS+=	-I../..
-EXTRACT_ELEMENTS+= ${DISTNAME}/src/modules/Image
-PIKE_MODULE_OVERLAPPING_FILES+= lib/pike${PIKEVERSUFFIX}/modules/GTK2.pmod
+CFLAGS+=			-I../..
+EXTRACT_ELEMENTS+=		${DISTNAME}/src/modules/Image
+PIKE_MODULE_OVERLAPPING_FILES+=	lib/pike${PIKEVERSUFFIX}/modules/GTK2.pmod
 
 # the GTK2 module uses headers from the Image module, but these aren't installed
 # by default, so we just make them available

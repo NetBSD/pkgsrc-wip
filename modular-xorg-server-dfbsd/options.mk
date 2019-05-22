@@ -4,7 +4,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace
 PKG_SUPPORTED_OPTIONS+=	revert_flink
 PKG_SUPPORTED_OPTIONS+=	revert_randr_lease
-PKG_SUPPORTED_OPTIONS+= allow_unprivileged
+PKG_SUPPORTED_OPTIONS+=	allow_unprivileged
 PKG_SUGGESTED_OPTIONS=	inet6
 
 .if ${OPSYS} == "DragonFly"
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS+=	allow_unprivileged
 
 PKG_SUPPORTED_OPTIONS+=	devd
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= devd
+PKG_SUGGESTED_OPTIONS+=	devd
 .endif
 
 .if ${X11_TYPE} == "modular"
@@ -115,11 +115,11 @@ CPPFLAGS+=	-DREVERT_FLINK
 .if !empty(PKG_OPTIONS:Mrevert_randr_lease)
 CPPFLAGS+=	-DREVERT_RANDR_LEASE
 
-SUBST_CLASSES+=			lease
-SUBST_STAGE.lease=		post-configure
-SUBST_MESSAGE.lease=		Removing definition of XF86_LEASE_VERSION	
-SUBST_FILES.lease+=		hw/xfree86/modes/xf86Crtc.h
-SUBST_SED.lease+=		 -e 's|XF86_LEASE_VERSION|REVERT_XF86_LEASE_VERSION|g'
+SUBST_CLASSES+=		lease
+SUBST_STAGE.lease=	post-configure
+SUBST_MESSAGE.lease=	Removing definition of XF86_LEASE_VERSION	
+SUBST_FILES.lease+=	hw/xfree86/modes/xf86Crtc.h
+SUBST_SED.lease+=	-e 's|XF86_LEASE_VERSION|REVERT_XF86_LEASE_VERSION|g'
 .endif
 
 .if !empty(PKG_OPTIONS:Mallow_unprivileged)

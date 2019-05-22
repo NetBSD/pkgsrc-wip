@@ -15,7 +15,7 @@ COMMENT=	JSON Web Token the Mojo way
 LICENSE=	${PERL_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Mojo/JWT/.packlist
+PERL5_PACKLIST=	auto/Mojo/JWT/.packlist
 
 PERL5_MODULE_TYPE=	Module::Build
 

@@ -15,8 +15,8 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/wolfpld-tracy-59ed5775d973
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake pkg-config
-INSTALLATION_DIRS= bin
+USE_TOOLS+=		gmake pkg-config
+INSTALLATION_DIRS=	bin
 
 do-build:
 	cd ${WRKSRC}/profiler/build/unix && ${GMAKE} release

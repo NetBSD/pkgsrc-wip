@@ -3,7 +3,7 @@
 VERSION=	3.7.0
 DISTNAME=	reveal.js-${VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=hakimel/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hakimel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hakimel/reveal.js/
@@ -14,7 +14,7 @@ NO_BUILD=	yes
 
 INSTALL_DIR=	${PREFIX}/share/
 
-SUBST_CLASSES+=	path
+SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	test/examples/*.html
 

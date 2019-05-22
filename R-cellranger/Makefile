@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 R_PKGNAME=	cellranger
 R_PKGVER=	1.1.0
 
-DEPENDS+=       R-rematch>=1.0.1:../../wip/R-rematch
+DEPENDS+=	R-rematch>=1.0.1:../../wip/R-rematch
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"

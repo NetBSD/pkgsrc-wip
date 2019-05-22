@@ -25,14 +25,14 @@ CFLAGS+=	-Wno-inconsistent-missing-override \
 
 CMAKE_ARGS+=	-DENABLE_SPOTIFY_BLOB=OFF \
 		-DCRYPTOPP_LIBS=${LOCALBASE}/lib/libcryptopp.so \
-	     	-DCRYPTOPP_INCLUDEDIR=${LOCALBASE}/include/cryptopp \
-	     	-DCRYPTOPP_LIBDIR=${LOCALBASE}/lib \
-	     	-DCRYPTOPP_LDFLAGS=-lcryptopp \
-	     	-DCRYPTOPP_LIBRARIES=cryptopp \
-	     	-DCRYPTOPP_LIBRARY_DIRS=${LOCALBASE}/lib \
-	     	-DCRYPTOPP_cryptopp_INCLUDEDIR=${LOCALBASE}/include/cryptopp \
-	     	-DCRYPTOPP_cryptopp_LIBDIR=${LOCALBASE}/lib \
-	     	-DCRYPTOPP_FOUND=1 \
+		-DCRYPTOPP_INCLUDEDIR=${LOCALBASE}/include/cryptopp \
+		-DCRYPTOPP_LIBDIR=${LOCALBASE}/lib \
+		-DCRYPTOPP_LDFLAGS=-lcryptopp \
+		-DCRYPTOPP_LIBRARIES=cryptopp \
+		-DCRYPTOPP_LIBRARY_DIRS=${LOCALBASE}/lib \
+		-DCRYPTOPP_cryptopp_INCLUDEDIR=${LOCALBASE}/include/cryptopp \
+		-DCRYPTOPP_cryptopp_LIBDIR=${LOCALBASE}/lib \
+		-DCRYPTOPP_FOUND=1 \
 		-DENABLE_DBUS=ON \
 		-DBUILD_WERROR=OFF
 

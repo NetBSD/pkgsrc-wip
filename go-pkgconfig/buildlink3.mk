@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	go-pkgconfig
 GO_PKGCONFIG_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.go-pkgconfig=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.go-pkgconfig?=		build
+BUILDLINK_DEPMETHOD.go-pkgconfig?=	build
 
 BUILDLINK_API_DEPENDS.go-pkgconfig+=	go-pkgconfig>=0.0.0
 BUILDLINK_PKGSRCDIR.go-pkgconfig?=	../../wip/go-pkgconfig

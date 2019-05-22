@@ -22,7 +22,7 @@ PKG_SUPPORTED_OPTIONS+=	kqueue
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
 
-PLIST_VARS+=    	launchd
+PLIST_VARS+=		launchd
 # We may want to make it SUGGESTED once we have a framework for
 # launchd support. See PR/49591.
 PKG_SUPPORTED_OPTIONS.Darwin+=	launchd
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-verbose-mode
 .endif
 
 .if !empty(PKG_OPTIONS:Mkqueue)
-CONFIGURE_ARGS+= 	--enable-kqueue
+CONFIGURE_ARGS+=	--enable-kqueue
 .else
 CONFIGURE_ARGS+=	--disable-kqueue
 .endif

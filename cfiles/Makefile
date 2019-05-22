@@ -25,11 +25,11 @@ SUBST_STAGE.gcc=	pre-configure
 SUBST_FILES.gcc+=	Makefile
 SUBST_SED.gcc+=		-e 's|CC = gcc|CC = cc|g'
 
-SUBST_CLASSES+=         ncurses
-SUBST_STAGE.ncurses=   pre-configure
-SUBST_MESSAGE.ncurses= Link with the proper curses type
-SUBST_FILES.ncurses=   Makefile
-SUBST_SED.ncurses=     -e 's|LIBS =  -lncursesw|LIBS = -l${BUILDLINK_LIBNAME.curses}|g'
+SUBST_CLASSES+=		ncurses
+SUBST_STAGE.ncurses=	pre-configure
+SUBST_MESSAGE.ncurses=	Link with the proper curses type
+SUBST_FILES.ncurses=	Makefile
+SUBST_SED.ncurses=	-e 's|LIBS =  -lncursesw|LIBS = -l${BUILDLINK_LIBNAME.curses}|g'
 
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	pre-configure

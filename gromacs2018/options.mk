@@ -20,7 +20,7 @@ PLIST_SUBST+=		MPI=
 # X support:
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x
-PLIST.x11=	yes
+PLIST.x11=		yes
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"

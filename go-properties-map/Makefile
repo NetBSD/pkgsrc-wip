@@ -1,8 +1,8 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	go-properties-map
-GITHUB_TAG= 	ad37f0cfeff29fadeabe6b2f7f852d8db1fb5c41
-DISTNAME= 		${GITHUB_PROJECT}-${GITHUB_TAG}
+GITHUB_TAG=	ad37f0cfeff29fadeabe6b2f7f852d8db1fb5c41
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 
 PKGREVISION=	1
 CATEGORIES=	wip
@@ -14,10 +14,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/arduino/go-properties-map
 COMMENT=	TODO: Short description of the package
 LICENSE=	mit
-USE_LANGUAGES= go
+USE_LANGUAGES=	go
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
-GO_SRCPATH=		github.com/arduino/go-properties-map
+GO_SRCPATH=	github.com/arduino/go-properties-map
 
 DEPENDS+=	go-paths-helper>=0:../../wip/go-paths-helper
 

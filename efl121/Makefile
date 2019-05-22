@@ -11,7 +11,7 @@ HOMEPAGE=	https://download.enlightenment.org/rel/libs/efl/
 COMMENT=	Enlightenment foundation libraries
 LICENSE=	2-clause-bsd
 
-DEPENDS+= 		xz-[0-9]*:../../archivers/xz
+DEPENDS+=		xz-[0-9]*:../../archivers/xz
 DEPENDS+=		glib2-[0-9]*:../../devel/glib2
 DEPENDS+=		gstreamer1-[0-9]*:../../multimedia/gstreamer1
 DEPENDS+=		LuaJIT2-[0-9]*:../../lang/LuaJIT2
@@ -21,7 +21,7 @@ DEPENDS+=		fribidi-[0-9]*:../../converters/fribidi
 DEPENDS+=		png-[0-9]*:../../graphics/png
 DEPENDS+=		poppler-cpp-[0-9]*:../../print/poppler-cpp
 DEPENDS+=		libspectre-[0-9]*:../../print/libspectre
-DEPENDS+= 		MesaLib-[0-9]*:../../graphics/MesaLib
+DEPENDS+=		MesaLib-[0-9]*:../../graphics/MesaLib
 DEPENDS+=		giflib-[0-9]*:../../graphics/giflib
 DEPENDS+=		tiff-[0-9]*:../../graphics/tiff
 DEPENDS+=		libraw-[0-9]*:../../graphics/libraw

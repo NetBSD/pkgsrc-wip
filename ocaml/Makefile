@@ -9,8 +9,8 @@ MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
 
 USE_TOOLS+=		bash
-USE_LANGUAGES+=	c
-USE_LIBTOOL=	yes
+USE_LANGUAGES+=		c
+USE_LIBTOOL=		yes
 USE_GNU_CONFIGURE_HOST=	no
 
 #USE_GCC_RUNTIME=	yes
@@ -37,12 +37,12 @@ PLIST.ocaml-stub=	yes
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
     (${MACHINE_ARCH} == "x86_64")
-BUILD_TARGET+=	opt opt.opt
+BUILD_TARGET+=		opt opt.opt
 PLIST.ocaml-opt=	yes
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
       (${MACHINE_ARCH} != "aarch64")
-PLIST.ocaml-prof=yes
+PLIST.ocaml-prof=	yes
 .  endif
 .endif
 
@@ -56,20 +56,20 @@ PLIST.ocaml-prof=yes
       (!empty(MACHINE_PLATFORM:MNetBSD-*-*) && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
       !empty(MACHINE_PLATFORM:MSunOS-*-*)
-PLIST.ocaml-nat= yes
+PLIST.ocaml-nat=	yes
 .  endif
 .endif
 
 # Spacetime profiling is only available for native code on 64-bit targets.
 .if (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "aarch64")
-PLIST.ocaml-spacetime= yes
+PLIST.ocaml-spacetime=	yes
 .endif
 
 # clock_gettime(2), required by POSIX, is necessary for the
 # instrumented_runtime feature.
 # It is missing on macOS before 10.12.
 .if ${OPSYS} != "Darwin" || ${OS_VERSION:R:R} >= 16
-PLIST.instrumented_runtime=yes
+PLIST.instrumented_runtime=	yes
 .endif
 
 # This is needed because ${WRKSRC}/build/partial-install.sh uses

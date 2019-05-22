@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	codecov-2.0.15
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/codecov/}
 
@@ -13,8 +13,8 @@ LICENSE=	apache-2.0
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} codecov codecov-${PYVERSSUFFIX}
 
-DEPENDS+=   ${PYPKGPREFIX}-requests>=2.7.9:../../devel/py-requests
-DEPENDS+=   ${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.9:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

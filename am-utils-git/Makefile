@@ -29,8 +29,8 @@ PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${EGDIR} ${PKGDOCDIR} etc/amd
 
 EXTRA_DOC_FILES=	COPYING FAQ ChangeLog BUGS AUTHORS \
-                        README.attrcache README.autofs README.ldap \
-                        README.osx README.y2k NEWS README INSTALL
+			README.attrcache README.autofs README.ldap \
+			README.osx README.y2k NEWS README INSTALL
 EXAMPLE_CONF_FILES=	amd.conf lostaltmail.conf
 
 pre-configure:

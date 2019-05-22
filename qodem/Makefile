@@ -11,7 +11,7 @@ LICENSE=	cc0-1.0-universal
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+= --disable-sdl --disable-upnp
+CONFIGURE_ARGS+=	--disable-sdl --disable-upnp
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

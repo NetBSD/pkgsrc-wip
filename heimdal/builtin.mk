@@ -21,7 +21,7 @@ IS_BUILTIN.heimdal=	no
 IS_BUILTIN.heimdal=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.heimdal
+MAKEVARS+=		IS_BUILTIN.heimdal
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -50,6 +50,7 @@ _BLTN_HEIMDAL_0.4e=	NetBSD-1.6[A-H]-*				\
 _BLTN_HEIMDAL_0.3f=	NetBSD-1.5X-*
 _BLTN_HEIMDAL_0.3e=	NetBSD-1.5[UVW]-*				\
 			NetBSD-1.5.*-*
+
 .    for _heimdal_version_ in ${_BLTN_HEIMDAL_VERSIONS}
 .      for _pattern_ in ${_BLTN_HEIMDAL_${_heimdal_version_}}
 .        if !empty(MACHINE_PLATFORM:M${_pattern_})
@@ -61,7 +62,7 @@ BUILTIN_VERSION.heimdal?=	0.2t
 .  endif
 BUILTIN_PKG.heimdal=		heimdal-${BUILTIN_VERSION.heimdal}
 .endif
-MAKEVARS+=	BUILTIN_PKG.heimdal
+MAKEVARS+=			BUILTIN_PKG.heimdal
 
 ###
 ### Determine whether we should use the built-in implementation if it

@@ -8,14 +8,14 @@ GITHUB_RELEASE=	20190228
 DIST_SUBDIR=	${GITHUB_PROJECT}
 PKGNAME=	minizip-19.2
 
-MAINTAINER=     pkgls@gmx.net
+MAINTAINER=	pkgls@gmx.net
 HOMEPAGE=	https://github.com/bsfd80/qtxqfsts/
-COMMENT=        Zip manipulation library written in C
-LICENSE=        zlib
+COMMENT=	Zip manipulation library written in C
+LICENSE=	zlib
 
-USE_CMAKE=      yes
-USE_LANGUAGES=  c c++
-USE_TOOLS+=     cmake gmake
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	cmake gmake
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

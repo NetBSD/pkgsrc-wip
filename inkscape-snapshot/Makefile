@@ -62,10 +62,10 @@ REPLACE_PYTHON+=	share/extensions/Barcode/*.py
 REPLACE_PYTHON+=	share/extensions/ink2canvas/*.py
 REPLACE_PYTHON+=	share/extensions/test/*.test.py
 
-CHECK_INTERPRETER_SKIP+=share/inkscape/extensions/genpofiles.sh
-CHECK_INTERPRETER_SKIP+=share/inkscape/extensions/simplepath.rb
-CHECK_PORTABILITY_SKIP+=packaging/macosx/Resources/bin/inkscape
-CHECK_PORTABILITY_SKIP+=packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
+CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/genpofiles.sh
+CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/simplepath.rb
+CHECK_PORTABILITY_SKIP+=	packaging/macosx/Resources/bin/inkscape
+CHECK_PORTABILITY_SKIP+=	packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inkscape
 PKG_SUPPORTED_OPTIONS=	gnome

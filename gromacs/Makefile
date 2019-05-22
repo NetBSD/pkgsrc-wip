@@ -19,7 +19,7 @@ USE_CMAKE=		yes
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		scripts/demux.pl scripts/xplor2gmx.pl
 
-CHECK_INTERPRETER_SKIP+= share/gromacs/tutor/gmxdemo/demo
+CHECK_INTERPRETER_SKIP+=	share/gromacs/tutor/gmxdemo/demo
 
 .include "../../mk/bsd.prefs.mk"
 
