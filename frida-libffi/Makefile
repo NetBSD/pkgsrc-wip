@@ -51,7 +51,7 @@ CPPFLAGS +=	-D__PIC__
 .endif
 
 # irix fixes from PR 48587
-.if !empty(OPSYS:MIRIX)
+.if ${OPSYS} == IRIX
 USE_TOOLS+=	bash gmake
 MAKE_FLAGS+=	SHELL=${TOOLS_DIR}/bin/bash
 .endif

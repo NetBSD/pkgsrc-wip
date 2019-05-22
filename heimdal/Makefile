@@ -111,13 +111,13 @@ CHECK_BUILTIN.openssl:=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl:=no
 .if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
-    (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
+    (${OPSYS} == "SunOS" && ${USE_BUILTIN.openssl} == yes &&	\
 		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
 PLIST.hcrypto=		yes
 .endif
 
 .if ${OPSYS} == "MirBSD"
-.  if !empty(USE_BUILTIN.openssl:Myes)
+.  if ${USE_BUILTIN.openssl} == yes
 PLIST.hcrypto=		yes
 .  endif
 PLIST.vis=		yes

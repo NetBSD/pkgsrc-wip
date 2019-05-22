@@ -45,14 +45,14 @@ CONFIGURE_ARGS+=	--disable-valgrind
 LDFLAGS.NetBSD+=	-lpci
 
 PLIST_VARS+=	intel arm
-.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
+.if ${MACHINE_ARCH} == i386 || ${MACHINE_ARCH} == x86_64
 # libpciaccess is needed to build support for the intel KMS API,
 # libdrm_intel.so.
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 PLIST.intel=	yes
 .elif !empty(MACHINE_ARCH:Marm*) || \
       !empty(MACHINE_ARCH:Mearm*) || \
-      !empty(MACHINE_ARCH:Maarch64)
+      ${MACHINE_ARCH} == aarch64
 PLIST.arm=	yes
 #.else
 #CONFIGURE_ARGS+=	--disable-intel
@@ -68,7 +68,7 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		libkms	
+PLIST_VARS+=		libkms
 .if !empty(PKG_OPTIONS:Mlibkms)
 PKGCONFIG_OVERRIDE+=	libkms.pc.in
 PLIST.libkms=		yes

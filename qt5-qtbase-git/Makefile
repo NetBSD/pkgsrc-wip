@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	-system-zlib
 CONFIGURE_ARGS+=	-iconv
 QMAKE_CONF=		qmake.conf
 .  if ${OPSYS} != "SunOS" && \
-      (!empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64))
+      ((${MACHINE_ARCH} == i386) || (${MACHINE_ARCH} == x86_64))
 CONFIGURE_ARGS+=	-reduce-relocations
 .  endif
 .else

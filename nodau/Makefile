@@ -25,7 +25,7 @@ INSTALL_MAKE_FLAGS+=	BIN_DIR=${DESTDIR}${PREFIX}/bin
 INSTALL_MAKE_FLAGS+=	MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == DragonFly
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 

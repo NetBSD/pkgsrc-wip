@@ -45,12 +45,12 @@ PLIST_VARS+=		oss wine16 wine32 wine64
 PLIST_SRC=		PLIST.wine32
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
 
-.if !empty(MACHINE_ARCH:Mx86_64)
+.if ${MACHINE_ARCH} == x86_64
 .include "../../wip/netbsd-x11-i386/buildlink3.mk"
 .endif
 
 # XXX nicer x11-32bit so config works for both
-.if !empty(MACHINE_ARCH:Mx86_64) && 0
+.if (${MACHINE_ARCH} == x86_64) && 0
 NOT_PAX_MPROTECT_SAFE+=	bin/wine64
 PLIST_SRC=		PLIST.wine64
 

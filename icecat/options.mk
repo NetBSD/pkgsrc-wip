@@ -9,8 +9,8 @@ PLIST_VARS+=		gnome
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 .endif
 
-.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Msparc) || \
-	!empty(MACHINE_ARCH:Marm)
+.if ${MACHINE_ARCH} == i386 || ${MACHINE_ARCH} == sparc || \
+	${MACHINE_ARCH} == arm
 PKG_SUPPORTED_OPTIONS+=	mozilla-jit
 PKG_SUGGESTED_OPTIONS+=	mozilla-jit
 .endif

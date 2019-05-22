@@ -46,7 +46,7 @@ CONFIGURE_ENV+=		LOCALBASE=${PREFIX}
 #   scilab-4.1/routines/os_specific/getarg.c
 #
 .include "../../mk/compiler.mk"
-.if !empty(FC:Mgfortran) || (defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mg95))
+.if (${FC} == gfortran) || (defined(PKGSRC_FORTRAN) && (${PKGSRC_FORTRAN} == g95))
 CFLAGS+=		-DG95_FORTRAN=1
 .endif
 

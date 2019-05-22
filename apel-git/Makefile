@@ -45,7 +45,7 @@ MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .include "../../wip/emacs-git/modules.mk"
 
 PLIST_VARS+=	emacs23 emacs19
-.if empty(EMACS_TYPE:Mxemacs)
+.if ${EMACS_TYPE} != xemacs
 .  if !empty(EMACS_TYPE:Memacs2[3-9]*)
 PLIST.emacs23=	yes
 .  else

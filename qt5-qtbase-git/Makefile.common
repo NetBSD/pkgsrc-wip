@@ -56,9 +56,9 @@ PLIST.unix=		yes
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
-.if empty(PKGPATH:Mwip/qt5-qtbase-git) \
-	&& empty(PKGPATH:Mwip/qt5-odbc-git) && empty(PKGPATH:Mwip/qt5-mysql-git) \
-	&& empty(PKGPATH:Mwip/qt5-psql-git) && empty(PKGPATH:Mwip/qt5-sqlite3-git)
+.if (${PKGPATH} != wip/qt5-qtbase-git) \
+	&& (${PKGPATH} != wip/qt5-odbc-git) && (${PKGPATH} != wip/qt5-mysql-git) \
+	&& (${PKGPATH} != wip/qt5-psql-git) && (${PKGPATH} != wip/qt5-sqlite3-git)
 do-configure:
 	cd ${WRKSRC} && ${QTPREFIX}/bin/qmake -o Makefile
 .endif

@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-system-hsqldb \
 			--without-system-jfreereport
 PLIST_SRC+=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
-.  if !empty(PKG_JVM:Mopenjdk7)
+.  if ${PKG_JVM} == openjdk7
 CONFIGURE_ARGS+=	--disable-scripting-javascript
 .  else
 PLIST_SRC+=		${PKGDIR}/PLIST.javascript

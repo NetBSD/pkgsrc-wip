@@ -16,7 +16,7 @@ PLIST_VARS+=		context fiber log long_double_math
 BJAM_ARGS+=		pch=off
 .endif
 
-.if !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || !empty(MACHINE_ARCH:Msparc64)
+.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == m68k || ${MACHINE_ARCH} == sparc64
 BJAM_ARGS+=		--without-context
 BJAM_ARGS+=		--without-coroutine
 BJAM_ARGS+=		--without-coroutine2
@@ -40,8 +40,8 @@ PLIST.log=		yes
 # Additionally fiber checks std::timed_mutex.
 .if ((${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14) || \
     !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-*)) || \
-    !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || \
-    !empty(MACHINE_ARCH:Msparc64) || \
+    ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == m68k || \
+    ${MACHINE_ARCH} == sparc64 || \
     (exists(/etc/redhat-release) && !empty(CC_VERSION:Mgcc-4.4.*)) || \
     (${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang))
 BJAM_ARGS+=		--without-fiber

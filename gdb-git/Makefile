@@ -65,7 +65,7 @@ MAKE_ENV+= gdb_cv_var_elf=yes
 CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
 MAKE_ENV+= gdb_cv_struct_lwp=yes
 PLIST.gcore=	YES
-.elif !empty(OPSYS:MLinux)
+.elif ${OPSYS} == Linux
 PLIST.gcore=		YES
 PLIST.gdbserver=	YES
 .endif

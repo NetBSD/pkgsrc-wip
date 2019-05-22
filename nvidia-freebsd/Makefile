@@ -30,7 +30,7 @@ X11_TYPE?=		XFree86		# If you use XFree86 from pkgsrc.
 COMPAT_LINUX?=		no		# Linux compat libraries.
 CHECK_SHLIBS=		no
 
-.if !empty(X11_TYPE:MXFree86)
+.if ${X11_TYPE} == XFree86
 SUBST_CLASSES+=		fixme
 SUBST_STAGE.fixme=	post-patch
 SUBST_FILES.fixme=	doc/Makefile driver/Makefile \

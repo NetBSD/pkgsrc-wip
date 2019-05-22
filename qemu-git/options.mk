@@ -5,7 +5,7 @@ PKG_SUPPORTED_OPTIONS=	gtk3 sdl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if empty(OPSYS:MDarwin)
+.if ${OPSYS} != Darwin
 PKG_SUGGESTED_OPTIONS+=	sdl
 .endif
 

@@ -17,7 +17,7 @@ DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*) || !empty(MACHINE_PLATFORM:MLinux)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*) || ${MACHINE_PLATFORM} == Linux
 DEPENDS+=	gst-plugins1-v4l2-[0-9]*:../../multimedia/gst-plugins1-v4l2
 .endif
 
