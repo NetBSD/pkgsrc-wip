@@ -1,0 +1,15 @@
+$NetBSD$
+
+Allow setting PREFIX in Makefile.
+
+--- Makefile.orig	2019-04-24 20:15:58.000000000 +0000
++++ Makefile
+@@ -11,7 +11,7 @@ DISTFILES = src \
+ 	COPYING \
+ 	Makefile \
+ 
+-PREFIX = /usr/local
++PREFIX?= /usr/local
+ TARGET_INCLUDE_PATH = $(PREFIX)/include/avr
+ 
+ CDEFS = -DDEFAULT_INCLUDE_PATH='"$(TARGET_INCLUDE_PATH)"' \

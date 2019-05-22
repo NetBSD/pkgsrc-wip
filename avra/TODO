@@ -1,0 +1,2 @@
+Build on other platforms besides NetBSD. Makefile may not be portable.
+Run tests.

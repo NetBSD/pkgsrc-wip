@@ -213,6 +213,7 @@ SUBDIR+=	autopsy
 SUBDIR+=	autoq3d
 SUBDIR+=	autossh
 SUBDIR+=	avida2
+SUBDIR+=	avra
 SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb

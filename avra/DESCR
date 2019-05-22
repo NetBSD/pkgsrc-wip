@@ -1,0 +1,5 @@
+Assember for the Atmel AVR microcontroller family
+
+AVRA is an assembler for Atmel AVR microcontrollers, and it is almost
+compatible with Atmel's own assembler AVRASM32. The programming principles
+andc onceptions are based on the ANSI programming language "C".
