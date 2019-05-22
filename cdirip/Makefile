@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/jozip/cdirip/
 COMMENT=	Program for extracting tracks from a CDI (DiscJuggler) image
 LICENSE=	gnu-gpl-v2
 
-NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin
 
 do-install:
