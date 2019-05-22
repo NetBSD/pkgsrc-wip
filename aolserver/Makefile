@@ -13,7 +13,7 @@ COMMENT=		America Online's open source web server
 
 
 MAKE_FLAGS+=		NSHOME=${WRKSRC}
-CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-tcl=${PREFIX}/lib
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes

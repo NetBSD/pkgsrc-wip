@@ -29,5 +29,5 @@ do-install:
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
-MAKE_PROGRAM=		${LOCALBASE}/bin/ant
+MAKE_PROGRAM=		${PREFIX}/bin/ant
 MAKE_FLAGS=		-Dpkgsrc.prefix=${PREFIX}

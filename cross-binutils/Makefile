@@ -33,7 +33,7 @@ PKGSRC_MAKE_ENV+=	SH=/bin/ksh
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
 BUILD_TARGET=		all-binutils all-ld
 
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+PLIST_SUBST+=		LOCALBASE=${PREFIX}
 
 BINDIR=			${PREFIX}/cross/libexec/binutils
 

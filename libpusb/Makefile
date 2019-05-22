@@ -24,6 +24,6 @@ SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Setting up hardcoded path.
 SUBST_FILES.path=	Makefile
 SUBST_STAGE.path=	post-patch
-SUBST_SED.path=		-e 's|/usr/pkg|${LOCALBASE}|'
+SUBST_SED.path=		-e 's|/usr/pkg|${PREFIX}|'
 
 .include "../../mk/bsd.pkg.mk"

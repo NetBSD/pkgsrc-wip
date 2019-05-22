@@ -50,8 +50,8 @@ MAKEFLAGS+=		USE_BINUTILS=${USE_BINUTILS:Q}
 .endif
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
 DEPENDS+=		binutils>=2.14:../../devel/binutils
-CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/bin/as
-CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
+CONFIGURE_ARGS+=	--with-as=${PREFIX}/bin/as
+CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}

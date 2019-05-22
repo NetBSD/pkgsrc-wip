@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=	icu
 ###
 .if !empty(PKG_OPTIONS:Micu)
 CONFIGURE_ARGS+=	-t icu
-XALAN_ENV+=	ICUROOT="${LOCALBASE}"
+XALAN_ENV+=	ICUROOT="${PREFIX}"
 PLIST_SRC+=	PLIST.icu
 .include "../../textproc/icu/buildlink3.mk"
 .else

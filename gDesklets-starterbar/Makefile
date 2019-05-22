@@ -16,7 +16,7 @@ NO_BUILD=	yes
 USE_TOOLS+=	pax
 
 NAME=		StarterBar
-GDESKLETSDIR=	${LOCALBASE}/share/gdesklets
+GDESKLETSDIR=	${PREFIX}/share/gdesklets
 
 post-extract:
 	${PYTHONBIN} ${WRKSRC}/Install_${NAME}_Sensor.bin --nomsg ${WRKSRC}

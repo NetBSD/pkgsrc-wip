@@ -58,7 +58,7 @@ PLIST.x11=	yes
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kioslave/info/kde-info2html.conf
-SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_SED.paths=	-e 's,@LOCALBASE@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
 REPLACE_PERL+= \

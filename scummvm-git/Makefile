@@ -14,8 +14,8 @@ NO_SRC_ON_CDROM=	# changes daily
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
-CONFIGURE_ARGS+=	--mandir=${LOCALBASE}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 .include "options.mk"
 

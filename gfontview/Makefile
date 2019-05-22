@@ -14,7 +14,7 @@ COMMENT=		Outline font viewer for X11
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-fontdir=${LOCALBASE}/share/ghostscript/fonts
+CONFIGURE_ARGS+=	--with-fontdir=${PREFIX}/share/ghostscript/fonts
 
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../graphics/freetype-lib/buildlink3.mk"

@@ -19,7 +19,7 @@ LIBS+=			${LIBOSSAUDIO}
 
 pre-configure:
 	cd ${WRKSRC} && aclocal
-	cd ${WRKSRC} && ${LOCALBASE}/bin/libtoolize --automake
+	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize --automake
 	cd ${WRKSRC} && automake --add-missing
 	cd ${WRKSRC} && autoconf
 

@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \
 			--with-perl=${BUILDLINK_PREFIX.perl} \
 			--with-xml=${BUILDLINK_PREFIX.libxml2}/bin \
-			--with-docdir=${LOCALBASE}/share/doc/ices \
+			--with-docdir=${PREFIX}/share/doc/ices \
 			--with-libshout=${BUILDLINK_PREFIX.libshout}
 
 .include "../../audio/libshout/buildlink3.mk"

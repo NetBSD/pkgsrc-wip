@@ -36,7 +36,7 @@ post-extract:
 	${INSTALL_DATA} ${FILESDIR}/qplatformdefs.h ${WRKSRC}/src/qt/mkspecs/solaris-g++
 
 pre-configure:
-	sed	-e 's:@LOCALBASE@:${LOCALBASE}:g' \
+	sed	-e 's:@LOCALBASE@:${PREFIX}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
 		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
 		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \

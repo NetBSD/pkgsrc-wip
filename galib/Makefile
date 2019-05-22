@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake
 
 pre-configure:
 	cd ${WRKSRC}; 					\
-	${CAT} makevars|${SED} -e s,DESTDIR=\/usr\/local,DESTDIR=${LOCALBASE}, > makevars.tmp; \
+	${CAT} makevars|${SED} -e s,DESTDIR=\/usr\/local,DESTDIR=${PREFIX}, > makevars.tmp; \
 	${CP} makevars makevars.old; ${CP} makevars.tmp makevars; \
 	${CP} makefile Makefile
 

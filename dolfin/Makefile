@@ -22,7 +22,7 @@ REPLACE_PYTHON+=	scripts/dolfin-convert/dolfin-convert
 
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 		-DDOLFIN_ENABLE_MPI:BOOL=OFF \
-		-DLOCALBASE=${LOCALBASE}
+		-DLOCALBASE=${PREFIX}
 
 # CHOLMOD_DIR, UMFPACK_DIR, etc. will default to .buildlink.  See CMakeCache.txt
 # Installed dolfin-config.cmake contains .buildlink where it should use
@@ -40,7 +40,7 @@ CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 CXXFLAGS+=	-fpermissive
 
 .if ${OPSYS} == "Darwin"
-CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
+CXXFLAGS+=	-I${PREFIX}/${PYINC}
 .endif
 
 # Fix for variadic template warnings, but causes make_pair() error

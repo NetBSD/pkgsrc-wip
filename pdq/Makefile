@@ -11,7 +11,7 @@ LICENSE=		gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${LOCALBASE} == "/usr" || !exists(/usr/bin/file)
+.if ${PREFIX} == "/usr" || !exists(/usr/bin/file)
 DEPENDS+=		file-[0-9]*:../../sysutils/file
 .endif
 

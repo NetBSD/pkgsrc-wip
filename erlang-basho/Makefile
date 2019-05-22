@@ -59,7 +59,7 @@ MAKE_ENV+=		DESTDIR=${DESTDIR}
 
 REPLACE_INTERPRETER+=	escript
 REPLACE.escript.old=	.*escript
-REPLACE.escript.new=	${LOCALBASE}/bin/escript
+REPLACE.escript.new=	${PREFIX}/bin/escript
 REPLACE_FILES.escript=	\
 	lib/reltool/examples/display_args \
 	lib/reltool/examples/mnesia_core_dump_viewer \

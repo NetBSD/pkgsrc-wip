@@ -22,7 +22,7 @@ BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-EXTRACT_CMD=	${LOCALBASE}/bin/cabextract -q -s $${extract_file} ppviewer.cab
+EXTRACT_CMD=	${PREFIX}/bin/cabextract -q -s $${extract_file} ppviewer.cab
 FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/vista-fonts
 FONTS_DIRS.ttf=	${FONTDIR}

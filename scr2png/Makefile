@@ -14,7 +14,7 @@ COMMENT=		Converts the output of FreeBSD "vidcontrol -p" to PNG
 WRKSRC=			${WRKDIR}
 CFLAGS+=		-DPREFIX=\"${PREFIX}\"
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gd}/lib
-LDFLAGS+=		-L${LOCALBASE}/lib
+LDFLAGS+=		-L${PREFIX}/lib
 MAKE_ENV+=		MKMAN=no
 PKGMANDIR?=		man
 

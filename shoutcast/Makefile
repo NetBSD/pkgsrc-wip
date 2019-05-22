@@ -19,10 +19,10 @@ BUILD_DIRS=		# empty
 PKG_SYSCONFSUBDIR=	shoutcast
 
 post-build:
-	@${SED} -e "s,@LOCALBASE@,${LOCALBASE},g" < ${WRKSRC}/sc_serv.conf > ${WRKSRC}/tmp
+	@${SED} -e "s,@LOCALBASE@,${PREFIX},g" < ${WRKSRC}/sc_serv.conf > ${WRKSRC}/tmp
 	@${SED} -e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g" < ${WRKSRC}/tmp >${WRKSRC}/sc_serv.conf
 
 do-install:
-	@${FILESDIR}/install.sh ${WRKDIR}/shoutcast-1-9-2-linux-glibc6 ${DESTDIR}${LOCALBASE} ${DESTDIR}${PKG_SYSCONFDIR}
+	@${FILESDIR}/install.sh ${WRKDIR}/shoutcast-1-9-2-linux-glibc6 ${DESTDIR}${PREFIX} ${DESTDIR}${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"

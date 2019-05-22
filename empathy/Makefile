@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 # with --nonet, xsltproc needs a helping hand finding some dtds
-XSLTPROC_PATH=		${LOCALBASE}/share/doc/dbus
+XSLTPROC_PATH=		${PREFIX}/share/doc/dbus
 
 # notyet
 #CONFIGURE_ARGS+=	--enable-meego

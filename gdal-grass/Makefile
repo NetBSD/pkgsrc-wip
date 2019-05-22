@@ -15,7 +15,7 @@ COMMENT=		Standalone GRASS 6 drivers for GDAL and OGR
 
 WRKSRC=			${WRKDIR}/gdal-grass-1.3.1
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gdal=${LOCALBASE}/bin/gdal-config
+CONFIGURE_ARGS+=	--with-gdal=${PREFIX}/bin/gdal-config
 CONFIGURE_ARGS+=	--with-grass=${GRASS_HOME}
 USE_LANGUAGES=		c++
 BUILD_TARGET=		default

@@ -1,6 +1,6 @@
 # $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_PREFIX.gcc42:=	${LOCALBASE}/gcc42
+BUILDLINK_PREFIX.gcc42:=	${PREFIX}/gcc42
 
 BUILDLINK_TREE+=	gcc42
 

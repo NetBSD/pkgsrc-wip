@@ -20,7 +20,7 @@ BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	SED_PROG=${LOCALBASE}/bin/gsed
+CONFIGURE_ARGS+=	SED_PROG=${PREFIX}/bin/gsed
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

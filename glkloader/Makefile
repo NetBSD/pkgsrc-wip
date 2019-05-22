@@ -19,7 +19,7 @@ EGDIR=		${DOCDIR}/samples
 CONF_FILES=	${EGDIR}/glkloaderrc ${PKG_SYSCONFDIR}/glkloaderrc
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/glkstart.h ${LOCALBASE}/include/glkloader
+	${INSTALL_DATA} ${FILESDIR}/glkstart.h ${PREFIX}/include/glkloader
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/glkloaderrc ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}

@@ -50,7 +50,7 @@ PHANTOMJS_WEBKIT_DISABLE+=	video
 PHANTOMJS_WEBKIT_DISABLE+=	gamepad
 
 pre-configure:
-	${SED}	-e 's:@LOCALBASE@:${LOCALBASE}:g' \
+	${SED}	-e 's:@LOCALBASE@:${PREFIX}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
 		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
 		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \

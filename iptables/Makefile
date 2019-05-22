@@ -21,13 +21,13 @@ PKGMANDIR?=		man  # until this in official pkgsrc
 
 do-build:
 	cd ${WRKSRC} && \
-	${GMAKE} BINDIR=${LOCALBASE}/bin LIBDIR=${LOCALBASE}/lib \
-		MANDIR=${LOCALBASE}/${PKGMANDIR}
+	${GMAKE} BINDIR=${PREFIX}/bin LIBDIR=${PREFIX}/lib \
+		MANDIR=${PREFIX}/${PKGMANDIR}
 
 do-install:
 	cd ${WRKSRC} && \
-	${GMAKE} BINDIR=${LOCALBASE}/bin LIBDIR=${LOCALBASE}/lib \
-		MANDIR=${LOCALBASE}/${PKGMANDIR} install
+	${GMAKE} BINDIR=${PREFIX}/bin LIBDIR=${PREFIX}/lib \
+		MANDIR=${PREFIX}/${PKGMANDIR} install
 
 # If you are a developer, you can install the headers, development libraries
 # and associated development man pages, with:

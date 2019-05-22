@@ -17,7 +17,7 @@ SUBST_CLASSES+=			localbase
 SUBST_MESSAGE.localbase=	Fixing localbase.
 SUBST_STAGE.localbase=		post-extract
 SUBST_FILES.localbase=		service.sh
-SUBST_SED.localbase=		-e "s,/usr/pkg,${LOCALBASE},"
+SUBST_SED.localbase=		-e "s,/usr/pkg,${PREFIX},"
 
 
 do-fetch:

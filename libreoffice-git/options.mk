@@ -18,10 +18,10 @@ PLIST_VARS+=	java kde4 gtk3
 USE_JAVA=		yes
 USE_JAVA2=		yes
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
-CONFIGURE_ARGS+=	--with-ant-home=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-ant-home=${PREFIX}
 
 DEPENDS+=		hsqldb18-[0-9]*:../../databases/hsqldb18
-CONFIGURE_ARGS+=	--with-hsqldb-jar=${LOCALBASE}/lib/java/hsqldb18/hsqldb.jar
+CONFIGURE_ARGS+=	--with-hsqldb-jar=${PREFIX}/lib/java/hsqldb18/hsqldb.jar
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-java \
 			--with-jdk-home=${PKG_JAVA_HOME} \
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--disable-gtk3
 
 .if !empty(PKG_OPTIONS:Mkde4)
 CONFIGURE_ARGS+=	--enable-kde4
-CONFIGURE_ENV+=		KDE4DIR="${LOCALBASE}"
+CONFIGURE_ENV+=		KDE4DIR="${PREFIX}"
 PLIST.kde4=		yes
 .include "../../x11/kdelibs4/buildlink3.mk"
 .else

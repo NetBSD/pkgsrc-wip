@@ -47,7 +47,7 @@ post-build:
 	cd ${WRKSRC}; for i in mime-en mime-ja; do			\
 		${RM} -f $${i}.info*;					\
 		${CP} $${i}.texi $${i}.texi.orig;			\
-		${LOCALBASE}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
+		${PREFIX}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
 		makeinfo --force --no-validate $${i}.texi;		\
 	done
 

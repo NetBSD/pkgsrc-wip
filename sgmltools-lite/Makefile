@@ -23,9 +23,9 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV=	PYTHON=${PYTHONBIN:Q}
 
 PKG_SYSCONFSUBDIR=	sgml
-EGDIR=			${LOCALBASE}/share/examples/sgmltools-lite
+EGDIR=			${PREFIX}/share/examples/sgmltools-lite
 CONFIGURE_ARGS+=	--with-etcsgml=${EGDIR}
-CONFIGURE_ARGS+=	--datadir=${LOCALBASE}/share
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 
 # Avoid using -s on /usr/pkg/bin/sgmltools
 _STRIPFLAG_INSTALL=

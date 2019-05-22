@@ -15,7 +15,7 @@ SUBST_CLASSES+=		obmenu
 SUBST_MESSAGE.obmenu=	Fixing LOCALBASE path.
 SUBST_STAGE.obmenu=	pre-patch
 SUBST_FILES.obmenu=	obmenu
-SUBST_SED.obmenu+=	-e 's|/usr/share|${LOCALBASE}/share|g'
+SUBST_SED.obmenu+=	-e 's|/usr/share|${PREFIX}/share|g'
 
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON=	${WRKSRC}/obmenu ${WRKSRC}/obxml.py

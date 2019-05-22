@@ -146,7 +146,7 @@ PC_FILES=		Qt5Bootstrap.pc Qt5Concurrent.pc Qt5Core.pc \
 			Qt5Widgets.pc Qt5Xml.pc
 
 pre-configure:
-	${SED}  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
+	${SED}  -e 's:@LOCALBASE@:${PREFIX}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
 		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \
 		-e 's:@CC@:${CC:Q}:g' \

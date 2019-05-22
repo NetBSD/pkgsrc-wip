@@ -24,15 +24,15 @@ CFLAGS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 #CONFIGURE_ENV+=
 #CONFIGURE_ARGS+=	--enable-ocaml
-CONFIGURE_ARGS+=	--with-GL-prefix=${LOCALBASE}
-CONFIGURE_ENV+=		PERLPATH=${LOCALBASE}/bin/perl
+CONFIGURE_ARGS+=	--with-GL-prefix=${PREFIX}
+CONFIGURE_ENV+=		PERLPATH=${PREFIX}/bin/perl
 
 #mpeg
 #java
 .include "../../databases/mysql56-client/buildlink3.mk"
 #BUILDLINK_LDFLAGS.mysql-client?=        -Wl,-R${LOCALBASE}/lib/mysql
-LDFLAGS.SunOS+=		-R${LOCALBASE}/lib/mysql
-LIBS.SunOS+=		-R${LOCALBASE}/lib/mysql
+LDFLAGS.SunOS+=		-R${PREFIX}/lib/mysql
+LIBS.SunOS+=		-R${PREFIX}/lib/mysql
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../wip/ubit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

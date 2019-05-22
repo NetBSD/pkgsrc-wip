@@ -18,12 +18,12 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/Chinput.ad ${PKG_SYSCONFDIR}/Chinput.ad
 
 post-patch:
-	${SED} -e 's:/usr/dict:'${LOCALBASE}/lib/unicon':g' < \
+	${SED} -e 's:/usr/dict:'${PREFIX}/lib/unicon':g' < \
 		${WRKSRC}/src/init.c > ${WRKSRC}/src/init.c.tmp
 	${SED} -e 's:/usr/lib/ZWinPro:'${PREFIX}/etc':g' < \
 		${WRKSRC}/src/init.c.tmp > ${WRKSRC}/src/init.c
 	${MV} ${WRKSRC}/resource/Chinput.ad ${WRKSRC}/resource/Chinput.ad.tmp
-	${SED} -e 's:/usr/lib/unicon2:'${LOCALBASE}/lib/unicon':g' < \
+	${SED} -e 's:/usr/lib/unicon2:'${PREFIX}/lib/unicon':g' < \
 		${WRKSRC}/resource/Chinput.ad.tmp > \
 		${WRKSRC}/resource/Chinput.ad
 

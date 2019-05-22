@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 #CONFIGURE_ENV+=
-CONFIGURE_ARGS+=	--with-gl-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-gl-prefix=${PREFIX}
 
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

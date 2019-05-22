@@ -96,7 +96,7 @@ CONFIGURE_ARGS+=	${WITH_DIALOGS}
 CONFIGURE_ARGS+=	--with-infopath=${INFOPATH:Q}
 CONFIGURE_ARGS+=	--with-site-includes=${BUILDLINK_DIR}/include:${BUILDLINK_X11_DIR}/include
 CONFIGURE_ARGS+=	--with-site-libraries=${BUILDLINK_DIR}/lib:${BUILDLINK_X11_DIR}
-CONFIGURE_ARGS+=	--with-site-runtime-libraries=${LOCALBASE}/lib:${X11BASE}/lib
+CONFIGURE_ARGS+=	--with-site-runtime-libraries=${PREFIX}/lib:${X11BASE}/lib
 
 CFLAGS+=		-Dunix
 

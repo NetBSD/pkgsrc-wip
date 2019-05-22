@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
 
-CPPFLAGS+=		-I${LOCALBASE}/include/PCSC
+CPPFLAGS+=		-I${PREFIX}/include/PCSC
 
 CONFIGURE_ARGS+=	--enable-callback
 
