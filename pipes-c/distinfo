@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (pipes.c/pipes-c-1.2.0.tar.gz) = 9548be13d41ea886330e2f1b241c82ad1855abd8
-RMD160 (pipes.c/pipes-c-1.2.0.tar.gz) = f67e737184a2eaaa57a9890fae0d6d63423a0252
-SHA512 (pipes.c/pipes-c-1.2.0.tar.gz) = 97f38226e9629e5ea3cc2efd0bcfc30d33bbdda9678902d719b07b24fe81170b5d4903ff45ed6a34277ebd201ccd145354f545e04b4e7879baff794d329e588e
-Size (pipes.c/pipes-c-1.2.0.tar.gz) = 157048 bytes
+SHA1 (pipes.c/pipes-c-1.2.1.tar.gz) = 7bebdd8432c17ec80c956fe4271e26c33a3662da
+RMD160 (pipes.c/pipes-c-1.2.1.tar.gz) = cdcb0c5eb76a72ed085cf7dd113bf8b581995dd6
+SHA512 (pipes.c/pipes-c-1.2.1.tar.gz) = 27914ce42b82dbee9d0519ed0ee24b0957f55ff666326f949bf7906b95dcb6d0530e73f2e2917c188372229fd1d433d5d18fde942960f5ec2f760e58a92050a8
+Size (pipes.c/pipes-c-1.2.1.tar.gz) = 158190 bytes
 SHA1 (patch-tap_tap.c) = 83c5c1b1e1b3a2710d4b3c5c2d277938382cf760
