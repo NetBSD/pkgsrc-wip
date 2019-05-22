@@ -3,14 +3,13 @@
 DISTNAME=	recidivm-0.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
-GITHUB_RELEASE=	0.2
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	http://jwilk.net/software/recidivm
 COMMENT=	Estimates a program's peak virtual memory use
 LICENSE=	mit
 
-NO_CONFIGURE=			yes
 USE_TOOLS+=			gmake
 
 SUBST_CLASSES+=			fix-paths
