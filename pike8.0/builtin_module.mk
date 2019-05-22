@@ -21,7 +21,7 @@ MAKE_MODREF?=	no
 CHECK_MODULE_ENABLED?=	yes
 
 .if (${MODULE_TYPE} != "post_module" && ${MODULE_TYPE} != "module")
-.error MODULE_TYPE must be module or post_module
+.  error MODULE_TYPE must be module or post_module
 .endif
 NAME=		pike${PIKEVERSUFFIX}-${MODULENAME}
 PKGNAME=	${NAME}-${PIKE_VERSION}

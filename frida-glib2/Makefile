@@ -50,7 +50,7 @@ CPPFLAGS.SunOS+=	-DBSD_COMP
 CONFIGURE_ENV+=		LIBELF_LIBS='-lelf'
 .    endif
 .  else
-.  include "../../devel/libelf/buildlink3.mk"
+.    include "../../devel/libelf/buildlink3.mk"
 .  endif
 .endif
 

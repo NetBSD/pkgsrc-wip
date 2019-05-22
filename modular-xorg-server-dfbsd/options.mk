@@ -26,9 +26,9 @@ PKG_SUPPORTED_OPTIONS+=	dri
 PKG_SUGGESTED_OPTIONS+=	dri
 PKG_SUPPORTED_OPTIONS+=	dri3
 # dri3 requires kernel support for dma_buf
-.if ${OPSYS} == "Linux"
+.  if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	dri3
-.endif
+.  endif
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -38,12 +38,12 @@ PLIST_VARS+=		dri3
 
 .if !empty(PKG_OPTIONS:Mdri)
 
-.if !empty(PKG_OPTIONS:Mdri3)
+.  if !empty(PKG_OPTIONS:Mdri3)
 CONFIGURE_ARGS+=	--enable-dri3
 PLIST.dri3=		yes
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-dri3
-.endif
+.  endif
 
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11

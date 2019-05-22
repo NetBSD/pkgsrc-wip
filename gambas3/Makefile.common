@@ -120,8 +120,8 @@ CONFIGURE_DIRS!=	for d in ${BUILD_DIRS}; do echo $$d | cut -d/ -f1; done
 .if "${BUILD_DIRS}" != "main/gbc"
 BUILD_DEPENDS+=		gambas3-devel-${GB_VERSION}:../../wip/gambas3-devel
 BUILD_DEPENDS+=		xdg-utils-1.*:../../misc/xdg-utils
-.export XDG_DATA_HOME	${DESTDIR}${PREFIX}/share
-.export XDG_UTILS_INSTALL_MODE user
+.  export XDG_DATA_HOME	${DESTDIR}${PREFIX}/share
+.  export XDG_UTILS_INSTALL_MODE user
 
 .  for comp in ${GB_DEPENDS}
 DEPENDS+=		${comp}-${GB_VERSION}:../../wip/${comp}

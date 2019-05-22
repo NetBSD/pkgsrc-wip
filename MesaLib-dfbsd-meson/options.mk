@@ -168,66 +168,66 @@ CONFIGURE_ARGS+=	--enable-dri
 # will only use it if it is supported at run time.
 CONFIGURE_ARGS+=	--enable-dri3
 MESON_ARGS+=		-Ddri3=true
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--enable-egl
 CONFIGURE_ARGS+=	--enable-gbm
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
 PLIST.egl=		yes
 PLIST.gbm=		yes
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-egl
 CONFIGURE_ARGS+=	--disable-gbm
 MESON_ARGS+=		-Degl=false
 MESON_ARGS+=		-Dgbm=false
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mosmesa)
+.  if !empty(PKG_OPTIONS:Mosmesa)
 CONFIGURE_ARGS+=	--enable-osmesa
 MESON_ARGS+=		-Dosmesa=gallium
 PLIST.osmesa=		yes
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mglesv1)
+.  if !empty(PKG_OPTIONS:Mglesv1)
 CONFIGURE_ARGS+=	--enable-gles1
 MESON_ARGS+=		-Dgles1=true
 PLIST.glesv1=		yes
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-gles1
 MESON_ARGS+=		-Dgles1=false
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mglesv2)
+.  if !empty(PKG_OPTIONS:Mglesv2)
 CONFIGURE_ARGS+=	--enable-gles2
 MESON_ARGS+=		-Dgles2=true
 PLIST.glesv2=		yes
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-gles2
 MESON_ARGS+=		-Dgles2=false
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mglx-tls)
+.  if !empty(PKG_OPTIONS:Mglx-tls)
 # Recommended by
 # http://www.freedesktop.org/wiki/Software/Glamor/
 CONFIGURE_ARGS+=	--enable-glx-tls
 MESON_ARGS+=		-Dglx-tls=true
-.else
+.  else
 # (EE) Failed to load /usr/pkg/lib/xorg/modules/extensions/libglx.so:
 # /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model
 # initial-exec and dlopen is not supported
 CONFIGURE_ARGS+=	--disable-glx-tls
 MESON_ARGS+=		-Dglx-tls=false
-.endif # glx-tls
+.  endif # glx-tls
 
 # DRI on Linux needs either sysfs or udev
 CONFIGURE_ARGS.Linux+=	--enable-sysfs
 
 PLIST.dri=	yes
 
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
-.endif
+.  endif
 .include "../../graphics/MesaLib/dri.mk"
 
 DRI_DRIVERS=		#
@@ -240,15 +240,15 @@ VULKAN_DRIVERS=		#
 #   error('Only one swrast provider can be built')
 # endif
 PLIST.swrast_dri=	yes
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 PLIST.swrast=		yes
 GALLIUM_DRIVERS+=	swrast
-.else
+.  else
 DRI_DRIVERS+=		swrast
-.endif
+.  endif
 
 # x86 only drivers
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "Darwin"
+.  if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "Darwin"
 # svga / VMWare driver
 PLIST.svga=		yes
 GALLIUM_DRIVERS+=	svga
@@ -265,24 +265,24 @@ DRI_DRIVERS+=		i915
 PLIST.i965=		yes
 DRI_DRIVERS+=		i965
 
-.endif
+.  endif
 
 # Intel Iris support
-.if !empty(PKG_OPTIONS:Miris)
+.  if !empty(PKG_OPTIONS:Miris)
 GALLIUM_DRIVERS+=	iris
 PLIST.iris=		yes
-.endif
+.  endif
 
 # Vulkan support
-.if !empty(PKG_OPTIONS:Mvulkan)
+.  if !empty(PKG_OPTIONS:Mvulkan)
 # VULKAN_DRIVERS+=	intel
 # VULKAN_DRIVERS+=	radeon
 VULKAN_DRIVERS+=	auto	
 PLIST.vulkan=		yes
-.endif
+.  endif
 
 # ARM drivers
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 # Qualcomm SnapDragon, libdrm_freedreno.pc
 #GALLIUM_DRIVERS+=	freedreno
 #PLIST.freedreno=	yes
@@ -290,17 +290,17 @@ PLIST.vulkan=		yes
 # Broadcom VideoCore 4
 GALLIUM_DRIVERS+=	vc4
 PLIST.vc4=		yes
-.endif
+.  endif
 
 # qemu Linux guest driver
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.  if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 # XXX test this
 #GALLIUM_DRIVERS+=	virgl
 #PLIST.virgl=		yes
-.endif
+.  endif
 
 # theoretically cross platform PCI drivers
-.if ${OPSYS} != "Darwin" && empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && \
+.  if ${OPSYS} != "Darwin" && empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && \
 	empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
 
 # AMD Radeon r600
@@ -311,11 +311,11 @@ GALLIUM_DRIVERS+=	r600
 # FULL_OS_VERSION=	${FULL_OS_VERSION_CMD:sh}
 
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
-.if ${OPSYS} != "FreeBSD"
+.    if ${OPSYS} != "FreeBSD"
 # nVidia
 PLIST.nouveau=		yes
 GALLIUM_DRIVERS+=	nouveau
-.endif
+.    endif
 
 # Meson build does not compile these correctly anymore.
 # classic DRI radeon
@@ -327,56 +327,56 @@ PLIST.r200=		yes
 DRI_DRIVERS+=		r200
 
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
-.if ${OPSYS} != "FreeBSD"
+.    if ${OPSYS} != "FreeBSD"
 # classic DRI nouveau
 PLIST.nouveau_dri=	yes
 DRI_DRIVERS+=		nouveau
-.endif
-.endif # cross platform PCI drivers
+.    endif
+.  endif # cross platform PCI drivers
 
-.if ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-platforms=x11
 MESON_ARGS+=		-Dplatforms=x11
 #.elif ${OPSYS} == "Linux"
 #.include "../../wip/wayland/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-platforms=x11,drm,wayland
 #PLIST.wayland=		yes
-.else
+.  else
 CONFIGURE_ARGS+=	--with-platforms=x11,drm
 MESON_ARGS+=		-Dplatforms=x11,drm
-.endif
+.  endif
 
-.if !empty(PKG_OPTIONS:Mllvm)
+.  if !empty(PKG_OPTIONS:Mllvm)
 # VA-API and VDPAU
-.if !empty(PKG_OPTIONS:Mvaapi)
+.    if !empty(PKG_OPTIONS:Mvaapi)
 .include "../../multimedia/libva/available.mk"
-.if ${VAAPI_AVAILABLE} == "yes"
+.      if ${VAAPI_AVAILABLE} == "yes"
 PLIST.vaapi=	yes
 .include "../../multimedia/libva/buildlink3.mk"
 MESON_ARGS+=	-Dgallium-va=true
-.else
+.      else
 MESON_ARGS+=	-Dgallium-va=false
-.endif
-.endif # vaapi
-.if !empty(PKG_OPTIONS:Mvdpau)
+.      endif
+.    endif # vaapi
+.    if !empty(PKG_OPTIONS:Mvdpau)
 .include "../../multimedia/libvdpau/available.mk"
-.if ${VDPAU_AVAILABLE} == "yes"
+.      if ${VDPAU_AVAILABLE} == "yes"
 PLIST.vdpau=	yes
 .include "../../multimedia/libvdpau/buildlink3.mk"
 MESON_ARGS+=	-Dgallium-vdpau=true
-.else
+.      else
 MESON_ARGS+=	-Dgallium-vdpau=false
-.endif
-.endif # vdpau
+.      endif
+.    endif # vdpau
 
 # XA is useful for accelerating xf86-video-vmware
-.if !empty(PKG_OPTIONS:Mxa)
+.    if !empty(PKG_OPTIONS:Mxa)
 CONFIGURE_ARGS+=	--enable-xa
 MESON_ARGS+=		-Dgallium-xa=true
 PLIST.xatracker=	yes
-.else
+.    else
 MESON_ARGS+=		-Dgallium-xa=false
-.endif
+.    endif
 
 # AMD Radeon r300
 PLIST.r300=		yes
@@ -389,9 +389,9 @@ CONFIGURE_ARGS+=	--enable-llvm-shared-libs
 MESON_ARGS+=		-Dllvm=true
 MESON_ARGS+=		-Dshared-llvm=true
 
-.if !exists(/usr/include/libelf.h)
+.    if !exists(/usr/include/libelf.h)
 .include "../../devel/libelf/buildlink3.mk"
-.endif
+.    endif
 
 # XXX update libLLVM to use it instead
 #BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=5.0
@@ -400,14 +400,14 @@ MESON_ARGS+=		-Dshared-llvm=true
 # BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=4.0
 # .include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
-.else # !llvm
+.  else # !llvm
 CONFIGURE_ARGS+=	--disable-xa
 CONFIGURE_ARGS+=	--disable-llvm
 CONFIGURE_ARGS+=	--disable-llvm-shared-libs
 MESON_ARGS+=		-Dgallium-xa=false
 MESON_ARGS+=		-Dllvm=false
 MESON_ARGS+=		-Dshared-llvm=false
-.endif # llvm
+.  endif # llvm
 
 CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
 CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_DRIVERS:ts,}
@@ -437,9 +437,9 @@ MESON_ARGS+=		-Dgles1=false
 MESON_ARGS+=		-Dgles2=false
 MESON_ARGS+=		-Dglx=xlib
 MESON_ARGS+=		-Dplatforms=x11
-.if !empty(PKG_OPTIONS:Mllvm)
+.  if !empty(PKG_OPTIONS:Mllvm)
 PKG_FAIL_REASON+=	"The llvm PKG_OPTION must also be disabled when dri is disabled"
-.endif
+.  endif
 .endif # dri
 
 .if !empty(PKG_OPTIONS:Mdebug)

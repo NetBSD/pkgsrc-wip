@@ -117,9 +117,9 @@ PLIST.hcrypto=		yes
 .endif
 
 .if ${OPSYS} == "MirBSD"
-.if !empty(USE_BUILTIN.openssl:Myes)
+.  if !empty(USE_BUILTIN.openssl:Myes)
 PLIST.hcrypto=		yes
-.endif
+.  endif
 PLIST.vis=		yes
 # all of the tools need to link against pthread, force it.
 PTHREAD_AUTO_VARS=	yes

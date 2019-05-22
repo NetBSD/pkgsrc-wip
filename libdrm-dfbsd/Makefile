@@ -31,10 +31,10 @@ ATOMIC_OPS_CHECK=	0
 ATOMIC_OPS_CHECK=	1
 .else
 # Intel driver no longer needs libatomic_ops
-.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != x86_64
-.  include "../../devel/libatomic_ops/buildlink3.mk"
+.  if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != x86_64
+.    include "../../devel/libatomic_ops/buildlink3.mk"
 CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
-.endif
+.  endif
 .endif
 
 CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \

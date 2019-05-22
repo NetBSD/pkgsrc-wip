@@ -35,9 +35,9 @@ CONFIGURE_ARGS+=	--disable-cairo
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
-.if ${OPSYS} != "Darwin"
-.  include "../../graphics/Mesa/buildlink3.mk"
-.endif
+.  if ${OPSYS} != "Darwin"
+.    include "../../graphics/Mesa/buildlink3.mk"
+.  endif
 CONFIGURE_ARGS+=	--enable-gl
 PLIST.opengl=		yes
 .else

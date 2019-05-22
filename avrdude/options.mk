@@ -17,9 +17,9 @@ TEXINFO_REQD=		4.9
 USE_TOOLS+=		makeinfo texi2html yacc lex
 
 # DragonFly has stripped makeinfo in the base - without texi2dvi.
-.if ${OPSYS} == "DragonFly"
+.  if ${OPSYS} == "DragonFly"
 BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
-.endif
+.  endif
 PLIST.doc=		yes
 
 .else

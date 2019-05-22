@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	gts-check
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgts-check)
-. include "../../graphics/gts/buildlink3.mk"
+.  include "../../graphics/gts/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gts-check
 .endif
 

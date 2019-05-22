@@ -14,7 +14,7 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 ###
 PLIST_VARS+=	sqlite
 .if !empty(PKG_OPTIONS:Msqlite)
-.	include "../../databases/sqlite3/buildlink3.mk"
+.  include "../../databases/sqlite3/buildlink3.mk"
 CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE:BOOL=ON
 CMAKE_ARGS+=	-DDATABASE_BACKEND=SQLITE
 CMAKE_ARGS+=	-DSQLITE_INCLUDE_DIR=${BUILDLINK_PREFIX.sqlite3}/include

@@ -50,10 +50,10 @@ post-install:
 	## delete following or similar files, which includes PATH at build time.
 	##_usr_pkgsrc_cross_avr-libc_work_avr-libc-1.8.0_libc_string_.3
 	${RM} ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3/*${PKGVERSION_NOREV}*
-.for f in Makefile demo.c demo.bin demo.hex demo.pdf demo.srec
+.  for f in Makefile demo.c demo.bin demo.hex demo.pdf demo.srec
 	${INSTALL_DATA} ${WRKSRC}/doc/examples/demo/${f} \
 		${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo
-.endfor
+.  endfor
 
 
 PLIST.doc=		yes

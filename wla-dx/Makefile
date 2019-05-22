@@ -24,19 +24,19 @@ WLADX_BINARIES=		wla-6502 wla-6510 wla-65816 wla-65c02 wla-gb wla-huc6280 \
 					wla-spc700 wla-z80 wlab wlalink
 
 do-install:
-.	for f in ${WLADX_BINARIES}
+.for f in ${WLADX_BINARIES}
 		${INSTALL_PROGRAM} ${WRKSRC}/binaries/${f} ${DESTDIR}${PREFIX}/bin
-.	endfor
-.	if !empty(PKG_OPTIONS:Mdoc)
-.		for f in binaries/doc/wla-dx.txt binaries/doc/wla-dx.html FILE_FORMATS CHANGELOG
+.endfor
+.if !empty(PKG_OPTIONS:Mdoc)
+.  for f in binaries/doc/wla-dx.txt binaries/doc/wla-dx.html FILE_FORMATS CHANGELOG
 			${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-.		endfor
-.		for f in binaries/doc/*.1
+.  endfor
+.  for f in binaries/doc/*.1
 			${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.		endfor
-.		for f in binaries/doc/*.7
+.  endfor
+.  for f in binaries/doc/*.7
 			${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
-.		endfor
-.	endif
+.  endfor
+.endif
 
 .include "../../mk/bsd.pkg.mk"
