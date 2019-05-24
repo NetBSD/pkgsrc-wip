@@ -8,30 +8,30 @@ PKG_SUPPORTED_OPTIONS+=	dri
 PKG_SUGGESTED_OPTIONS+=	dri
 .endif
 
-PKG_SUPPORTED_OPTIONS+=	devd
-PKG_SUPPORTED_OPTIONS+=	xkb_evdev
+PKG_SUPPORTED_OPTIONS+= devd
+PKG_SUPPORTED_OPTIONS+= xkb_evdev
 
-PKG_SUPPORTED_OPTIONS+=	revert_flink
-PKG_SUPPORTED_OPTIONS+=	revert_randr_lease
-PKG_SUPPORTED_OPTIONS+=	add_scfb_driver
-PKG_SUPPORTED_OPTIONS+=	add_modesetting_driver
+PKG_SUPPORTED_OPTIONS+= revert_flink
+PKG_SUPPORTED_OPTIONS+= revert_randr_lease
+PKG_SUPPORTED_OPTIONS+= add_scfb_driver
+PKG_SUPPORTED_OPTIONS+= add_modesetting_driver
 
-PKG_SUPPORTED_OPTIONS+=	allow_unprivileged
+PKG_SUPPORTED_OPTIONS+= allow_unprivileged
 PKG_SUPPORTED_OPTIONS+=	otherid_xsrc_netbsd
-PKG_SUPPORTED_OPTIONS+=	strict_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
 
-PKG_SUPPORTED_OPTIONS+=	modesetting_on_intel
-PKG_SUPPORTED_OPTIONS+=	try_dev_wskbd
+PKG_SUPPORTED_OPTIONS+= modesetting_on_intel
+PKG_SUPPORTED_OPTIONS+= try_dev_wskbd
 
-PKG_SUPPORTED_OPTIONS+=	fallback_not_wsdisplay
-PKG_SUPPORTED_OPTIONS+=	kbd_by_masking_bits
-PKG_SUPPORTED_OPTIONS+=	usl_vt_switching
-PKG_SUPPORTED_OPTIONS+=	openbsd_more_calls
-PKG_SUPPORTED_OPTIONS+=	randr_backlight
-PKG_SUPPORTED_OPTIONS+=	ws_drivers_openbsd
+PKG_SUPPORTED_OPTIONS+= fallback_not_wsdisplay
+PKG_SUPPORTED_OPTIONS+= kbd_by_masking_bits
+PKG_SUPPORTED_OPTIONS+= usl_vt_switching
+PKG_SUPPORTED_OPTIONS+= openbsd_more_calls
+PKG_SUPPORTED_OPTIONS+= randr_backlight
+PKG_SUPPORTED_OPTIONS+= ws_drivers_openbsd
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	devd
+PKG_SUGGESTED_OPTIONS+= devd
 .endif
 
 .if ${OPSYS} == "DragonFly"
@@ -41,12 +41,12 @@ PKG_SUGGESTED_OPTIONS+=	revert_randr_lease
 
 # Add scfb driver in xf86AutoConfig.c
 .if ${OPSYS} == "FreeBSD"
-PKG_SUGGESTED_OPTIONS+=	add_scfb_driver
+PKG_SUGGESTED_OPTIONS+= add_scfb_driver
 .endif
 
 # Add modesetting driver in xf86AutoConfig.c
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	add_modesetting_driver
+PKG_SUGGESTED_OPTIONS+= add_modesetting_driver
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -54,17 +54,17 @@ PKG_SUGGESTED_OPTIONS+=	allow_unprivileged
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	otherid_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+= otherid_xsrc_netbsd
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	strict_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
 .endif
 
 # Patch from OpenBSD to aggressively use the modesetting driver on intel integrated graphics
 # .if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	modesetting_on_intel
+PKG_SUGGESTED_OPTIONS+= modesetting_on_intel
 .endif
 
 # From NetBSD 1.20.4 but extended to amd64 and i386
@@ -74,31 +74,31 @@ PKG_SUGGESTED_OPTIONS+=	modesetting_on_intel
 
 # From OpenBSD 6.5 xenocara xserver 1.19.6
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	fallback_not_wsdisplay
+PKG_SUGGESTED_OPTIONS+= fallback_not_wsdisplay
 .endif
 
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	kbd_by_masking_bits
+PKG_SUGGESTED_OPTIONS+= kbd_by_masking_bits
 .endif
 
 # Implement VT switching based on the USL compat interface
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	usl_vt_switching
+PKG_SUGGESTED_OPTIONS+= usl_vt_switching
 .endif
 
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	openbsd_more_calls
+PKG_SUGGESTED_OPTIONS+= openbsd_more_calls
 .endif
 
 # From OpenBSD 6.5 xenocara xserver 1.19.6
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	randr_backlight
+PKG_SUGGESTED_OPTIONS+= randr_backlight
 .endif
 
 # From OpenBSD 6.5 xenocara xserver 1.19.6
 # .if ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD"
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	ws_drivers_openbsd
+PKG_SUGGESTED_OPTIONS+= ws_drivers_openbsd
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -181,7 +181,7 @@ CONFIGURE_ARGS+=	--without-dtrace
 # SUBST_MESSAGE.devd_dix=		Patching include/dix-config.h for devd 
 # SUBST_FILES.devd_dix+=		include/dix-config.h	
 # SUBST_SED.devd_dix+=		-e 's|/\* \#undef CONFIG_UDEV \*/|\#define CONFIG_DEVD 1 |'
-CPPFLAGS+=	-DCONFIG_DEVD=1
+CPPFLAGS+=			-DCONFIG_DEVD=1
 MESON_ARGS+=	-Ddevd=true
 .endif
 
@@ -198,11 +198,11 @@ CPPFLAGS+=	-DREVERT_FLINK
 .if !empty(PKG_OPTIONS:Mrevert_randr_lease)
 CPPFLAGS+=	-DREVERT_RANDR_LEASE
 
-SUBST_CLASSES+=		lease
-SUBST_STAGE.lease=	post-configure
-SUBST_MESSAGE.lease=	Removing definition of XF86_LEASE_VERSION	
-SUBST_FILES.lease+=	hw/xfree86/modes/xf86Crtc.h
-SUBST_SED.lease+=	-e 's|XF86_LEASE_VERSION|REVERT_XF86_LEASE_VERSION|g'
+SUBST_CLASSES+=			lease
+SUBST_STAGE.lease=		post-configure
+SUBST_MESSAGE.lease=		Removing definition of XF86_LEASE_VERSION	
+SUBST_FILES.lease+=		hw/xfree86/modes/xf86Crtc.h
+SUBST_SED.lease+=		 -e 's|XF86_LEASE_VERSION|REVERT_XF86_LEASE_VERSION|g'
 .endif
 
 .if !empty(PKG_OPTIONS:Madd_scfb_driver)
