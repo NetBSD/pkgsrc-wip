@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake pax
 
 MAKE_FILE=	${FILESDIR}/Makefile
-MAKE_ENV+=	BLAS_LIBS=${BLAS_LIBS} LAPACK_LIBS=${LAPACK_LIBS}
+MAKE_ENV+=	LAPACK_LIBS="${LAPACK_LIBS}"
 CXXFLAGS+=	-fopenmp
 
 DATADIR=	share/bolt-lmm
@@ -28,11 +28,21 @@ EXAMPLESDIR=	share/examples/bolt-lmm
 
 INSTALLATION_DIRS=	bin ${DATADIR} ${EXAMPLESDIR}
 
+SUBST_CLASSES+=		data
+SUBST_STAGE.data=	pre-configure
+SUBST_FILES.data=	src/BoltParams.cpp
+SUBST_SED.data=		-e 's|tables/|${PREFIX}/${DATADIR}/tables|g'
+
+SUBST_CLASSES+=		example
+SUBST_STAGE.example=	pre-configure
+SUBST_FILES.example=	example/run_example.sh
+SUBST_SED.example=	-e 's|../tables/|${PREFIX}/${DATADIR}/tables/|g'
+
 post-patch:
-	${RM} ${WRKSRC}/example/*.orig
+	${RM} ${WRKSRC}/example/*.orig ${WRKSRC}/bolt
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bolt ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/bolt ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw tables ${DESTDIR}${PREFIX}/${DATADIR}
 	cd ${WRKSRC}/example && pax -rw * ${DESTDIR}${PREFIX}/${EXAMPLESDIR}
 	${CHMOD} a+x ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*.sh
