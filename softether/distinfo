@@ -1,0 +1,16 @@
+$NetBSD$
+
+SHA1 (SoftEtherVPN_Stable/softether-src-v4.29-9680-rtm.tar.gz) = f6752d04f3f991d2a0dbb6db18b125191af1b5ba
+RMD160 (SoftEtherVPN_Stable/softether-src-v4.29-9680-rtm.tar.gz) = e466143fc17cb943f847e63ee9d80e70b7645bb7
+SHA512 (SoftEtherVPN_Stable/softether-src-v4.29-9680-rtm.tar.gz) = 0a6fe5d18e64a18febd8b16741025a60e4c294ecb7fdef2bb9e4a61edac1f772fb6e3faa2d1498354d24726429ca0a8e2de9ee8ad923a31828b01d08ec41e898
+Size (SoftEtherVPN_Stable/softether-src-v4.29-9680-rtm.tar.gz) = 33759397 bytes
+SHA1 (patch-src_makefiles_freebsd__32bit.mak) = b6102c09091cd15faa8f528dc009d981ae203346
+SHA1 (patch-src_makefiles_freebsd__64bit.mak) = 7f4f31bff9a9b1eb8c299beeeaa06a2fdf8fbffc
+SHA1 (patch-src_makefiles_linux__32bit.mak) = e712f23f6124f34b08de41f360f8cd74f24df0c7
+SHA1 (patch-src_makefiles_linux__64bit.mak) = 351cf840cff1c94123032e3e855b25d1632d2bad
+SHA1 (patch-src_makefiles_macos__32bit.mak) = 6f9f9ef730057d968ad441fcc9855192aec40027
+SHA1 (patch-src_makefiles_macos__64bit.mak) = cf427e09dfb05c37e3b730814fe673cb2be3eb84
+SHA1 (patch-src_makefiles_openbsd__32bit.mak) = 29e64604653cd183e2d815f30567143441244242
+SHA1 (patch-src_makefiles_openbsd__64bit.mak) = f506d8be8fc22894ef289465f553bd8f11496f35
+SHA1 (patch-src_makefiles_solaris__32bit.mak) = ef9b75f1101c9a03f37fed3bc1655e0f861c2e04
+SHA1 (patch-src_makefiles_solaris__64bit.mak) = 0587f2bfbf30042cd1f3bcc5464899d7dbc47381
