@@ -560,5 +560,5 @@ SHA1 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = eadfdb146024d37b6887b5b9cb6a69
 RMD160 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 300417853d251d91cadb9650992a6aa98248619f
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
+SHA1 (patch-Makefile.am) = df79814a592d7fd59fe53dde977c56206c6bca5a
 SHA1 (patch-configure.ac) = bdad8c486f552dbd301abb49cef3f73aaeb81165
-SHA1 (patch-rsvg__internals_Cargo.toml) = e75641a5278b0420cf336f7d4b2a88186f7bb896
