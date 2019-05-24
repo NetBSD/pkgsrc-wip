@@ -5,8 +5,8 @@
 #              Wed Sep 20 05:34:25 CDT 2017               #
 ###########################################################
 
-DISTNAME=	BOLT-LMM_v${PORTVERSION}
-PKGNAME=	bolt-lmm-${PORTVERSION}
+PKGNAME=	bolt-lmm-2.3.2
+DISTNAME=	BOLT-LMM_v${PKGVERSION_NOREV}
 CATEGORIES=	biology
 MASTER_SITES=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/ \
 		https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/old/
@@ -14,15 +14,15 @@ MASTER_SITES=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/ \
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/
 COMMENT=	Statistics for testing association between phenotype and genotypes
-# Check this
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake pax
 
-CXXFLAGS=	-fopenmp
+MAKE_FILE=	${FILESDIR}/Makefile
+MAKE_ENV+=	BLAS_LIBS=${BLAS_LIBS} LAPACK_LIBS=${LAPACK_LIBS}
+CXXFLAGS+=	-fopenmp
 
-PORTVERSION=	2.3
 DATADIR=	share/bolt-lmm
 EXAMPLESDIR=	share/examples/bolt-lmm
 
@@ -31,18 +31,15 @@ INSTALLATION_DIRS=	bin ${DATADIR} ${EXAMPLESDIR}
 post-patch:
 	${RM} ${WRKSRC}/example/*.orig
 
-pre-build:
-	${CP} ${FILESDIR}/Makefile ${WRKSRC}
-
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bolt ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw tables ${DESTDIR}${PREFIX}/${DATADIR}
 	cd ${WRKSRC}/example && pax -rw * ${DESTDIR}${PREFIX}/${EXAMPLESDIR}
 	${CHMOD} a+x ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*.sh
 	${CHMOD} g-w ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*
 
+.include "../../wip/mk/blas.buildlink3.mk"
 .include "../../math/nlopt/buildlink3.mk"
-.include "../../wip/openblas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

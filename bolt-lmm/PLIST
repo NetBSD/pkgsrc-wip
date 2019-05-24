@@ -18,6 +18,7 @@ share/examples/bolt-lmm/EUR_subset.dosage2.chr22last100.gz
 share/examples/bolt-lmm/EUR_subset.dosage2.chr22last100.map
 share/examples/bolt-lmm/EUR_subset.dosage2FileList.txt
 share/examples/bolt-lmm/EUR_subset.exclude
+share/examples/bolt-lmm/EUR_subset.exclude2
 share/examples/bolt-lmm/EUR_subset.fam
 share/examples/bolt-lmm/EUR_subset.impute2.chr17first100.gz
 share/examples/bolt-lmm/EUR_subset.impute2.chr17second100
@@ -27,6 +28,7 @@ share/examples/bolt-lmm/EUR_subset.impute2FileList.txt
 share/examples/bolt-lmm/EUR_subset.modelSnps
 share/examples/bolt-lmm/EUR_subset.modelSnps2
 share/examples/bolt-lmm/EUR_subset.pheno.covars
+share/examples/bolt-lmm/EUR_subset.pheno2.covars
 share/examples/bolt-lmm/EUR_subset.remove
 share/examples/bolt-lmm/example.dosage2Snps.stats
 share/examples/bolt-lmm/example.dosageSnps.stats
