@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.92 2019/04/23 09:51:47 wiz Exp $
 
+# 2019-05-16		amdgpu: Add amdgpu_cs_syncobj_transfer to amdgpu-symbol-check
+COMMIT_ID=		922d92994267743266024ecceb734ce0ebbca808
+
 # 2019-05-03		xf86drm: Fix possible memory leak with drmModeGetPropertyPtr()
-COMMIT_ID=		b39377d66ac04363f3c47ba5870c5ef71a95f5b8
+# COMMIT_ID=		b39377d66ac04363f3c47ba5870c5ef71a95f5b8
 
 # 2019-04-25		tests/libkms-test-plane: fix possbile memory leak
 # COMMIT_ID=		6a7d1329dbcc898f51173885db08d36c80bb5f20
@@ -80,30 +83,30 @@ ATOMIC_OPS_CHECK=	0
 ATOMIC_OPS_CHECK=	1
 .else
 # Intel driver no longer needs libatomic_ops
-.  if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != x86_64
-.    include "../../devel/libatomic_ops/buildlink3.mk"
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != x86_64
+.  include "../../devel/libatomic_ops/buildlink3.mk"
 CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
-.  endif
+.endif
 .endif
 
 CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
 CONFIGURE_ARGS+=	--disable-valgrind
-MESON_ARGS+=		-Dman-pages=false
-MESON_ARGS+=		-Dvalgrind=false
+MESON_ARGS+=	-Dman-pages=false
+MESON_ARGS+=	-Dvalgrind=false
 
 LDFLAGS.NetBSD+=	-lpci
 
 PLIST_VARS+=	intel arm
-.if ${MACHINE_ARCH} == i386 || ${MACHINE_ARCH} == x86_64
+.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
 # libpciaccess is needed to build support for the intel KMS API,
 # libdrm_intel.so.
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 PLIST.intel=	yes
 .elif !empty(MACHINE_ARCH:Marm*) || \
       !empty(MACHINE_ARCH:Mearm*) || \
-      ${MACHINE_ARCH} == aarch64
+      !empty(MACHINE_ARCH:Maarch64)
 PLIST.arm=	yes
 #.else
 #CONFIGURE_ARGS+=	--disable-intel
@@ -115,29 +118,29 @@ PKG_SUGGESTED_OPTIONS=
 
 PKG_SUPPORTED_OPTIONS+=	invert_atomic_add_unless
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	invert_atomic_add_unless
+PKG_SUGGESTED_OPTIONS+=	invert_atomic_add_unless 
 .endif
 
 # .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
 # PKG_SUGGESTED_OPTIONS+=	libkms
 # .endif
 
-PKG_SUPPORTED_OPTIONS+=	strict_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	strict_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
 .endif
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		libkms
+PLIST_VARS+=	libkms	
 .if !empty(PKG_OPTIONS:Mlibkms)
 PKGCONFIG_OVERRIDE+=	libkms.pc.in
-PLIST.libkms=		yes
+PLIST.libkms=	yes
 CONFIGURE_ARGS+=	--enable-libkms
-MESON_ARGS+=		-Dlibkms=true
+MESON_ARGS+=	-Dlibkms=true
 .else
 CONFIGURE_ARGS+=	--disable-libkms
-MESON_ARGS+=		-Dlibkms=false
+MESON_ARGS+=	-Dlibkms=false
 .endif
 
 .if !empty(PKG_OPTIONS:Minvert_atomic_add_unless)
