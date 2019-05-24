@@ -46,7 +46,7 @@ without DRI3 support.
     if (!disp->Options.ForceSoftware) {
  #ifdef HAVE_DRI3
 -      if (!env_var_as_boolean("LIBGL_DRI3_DISABLE", false))
-+#if ((defined(__FreeBSD__) || defined(__FreeBSD_kernel__)) && !defined(__DRM_NEXT__)) || defined(__DragonFly__) || defined(__NetBSD__)
++#if ((defined(__FreeBSD__) || defined(__FreeBSD_kernel__)) && !defined(__DRM_NEXT__)) || defined(TEST_DRI3_ENABLE)
 +      if (env_var_as_boolean("LIBGL_DRI3_ENABLE", false))
 +#endif
 +      if (!env_var_as_boolean("LIBGL_DRI3_DISABLE", false)) {

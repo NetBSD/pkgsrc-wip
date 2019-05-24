@@ -15,7 +15,7 @@ with dlopen(3) at the moment.
 + * We need these to not be extern in libGL.so because of
 + * PR toolchain/50277
 + */
-+#if defined(GLX_USE_TLS) && defined(__NetBSD__)
++#if defined(GLX_USE_TLS) && defined(NO_INITIAL_EXEC_NONNULL)
 +_X_EXPORT __thread struct _glapi_table * _glapi_tls_Dispatch
 +    __attribute__((tls_model("initial-exec"))) = NULL;
 +_X_EXPORT __thread void * _glapi_tls_Context
@@ -30,7 +30,7 @@ with dlopen(3) at the moment.
   * \c __glXGetCurrentContext can be implemented as trivial macro.
   */
  __thread void *__glX_tls_Context __attribute__ ((tls_model("initial-exec")))
-+#if defined(__NetBSD__)
++#if defined(NO_INITIAL_EXEC_NONNULL)
 +   = NULL; /* non-zero initializers not supported with dlopen */
 +#else
     = &dummyContext;

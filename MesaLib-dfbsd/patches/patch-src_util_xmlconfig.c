@@ -3,11 +3,11 @@ $NetBSD: patch-src_util_xmlconfig.c,v 1.1 2018/10/07 23:49:31 ryoon Exp $
 PR pkg/50202.
 Provide compat strndup for older Darwin.
 
---- src/util/xmlconfig.c.orig	2018-09-07 21:18:07.000000000 +0000
+--- src/util/xmlconfig.c.orig	2019-03-05 18:53:12.177053000 +0000
 +++ src/util/xmlconfig.c
-@@ -39,6 +39,23 @@
- #include "xmlconfig.h"
- #include "u_process.h"
+@@ -47,6 +47,24 @@
+ #define PATH_MAX 4096
+ #endif
  
 +#if (defined(__APPLE__) && __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__-0 < 1070)
 +static char *
@@ -26,6 +26,7 @@ Provide compat strndup for older Darwin.
 +    return (copy);
 +}
 +#endif
- 
++
  /** \brief Find an option in an option cache with the name as key */
  static uint32_t
+ findOption(const driOptionCache *cache, const char *name)

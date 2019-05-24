@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/gallium/drivers/iris/meson.build.orig	2019-04-23 07:24:08.000000000 +0000
++++ src/gallium/drivers/iris/meson.build
+@@ -62,7 +62,7 @@ iris_gen_libs = []
+ foreach v : ['80', '90', '100', '110']
+   iris_gen_libs += static_library(
+     'libiris_gen@0@'.format(v),
+-    ['iris_blorp.c', 'iris_state.c', gen_xml_pack],
++    ['iris_blorp.c', 'iris_state.c', gen_xml_pack, nir_opcodes_h, nir_builder_opcodes_h, nir_intrinsics_h],
+     include_directories : [inc_common, inc_intel, inc_nir],
+     c_args : [
+       c_vis_args, no_override_init_args, c_sse2_args,
+@@ -74,7 +74,7 @@ endforeach
+ 
+ libiris = static_library(
+   'iris',
+-  [files_libiris, gen_xml_pack, nir_opcodes_h, nir_builder_opcodes_h,
++  [files_libiris, gen_xml_pack, nir_opcodes_h, nir_builder_opcodes_h, nir_intrinsics_h,
+    iris_driinfo_h],
+   include_directories : [
+     inc_src, inc_include, inc_gallium, inc_gallium_aux, inc_intel, inc_nir,

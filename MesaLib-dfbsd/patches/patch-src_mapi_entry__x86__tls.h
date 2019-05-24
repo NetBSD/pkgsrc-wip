@@ -14,7 +14,7 @@ es1api and es2api are not going to be patched for NetBSD.
     ".balign 16\n"                \
     func ":"
  
-+#if defined(__NetBSD__) && defined(MAPI_MODE_GLAPI)
++#if defined(NO_INITIAL_EXEC_NONNULL) && defined(MAPI_MODE_GLAPI)
 +extern const mapi_func table_noop_array[];
  #define STUB_ASM_CODE(slot)      \
     "call x86_current_tls\n\t"    \

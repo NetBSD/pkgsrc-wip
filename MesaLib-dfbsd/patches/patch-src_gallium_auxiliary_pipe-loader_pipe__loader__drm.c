@@ -31,7 +31,7 @@ v2: Clarify the linking topic in the commit message.
     return ret;
  }
  
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
++#if defined(NO_RENDER_NODE)
 +static int
 +open_drm_minor(int minor)
 +{
@@ -48,7 +48,7 @@ v2: Clarify the linking topic in the commit message.
  int
  pipe_loader_drm_probe(struct pipe_loader_device **devs, int ndev)
  {
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
++#if defined(NO_RENDER_NODE)
 +   int i, k, fd, num_render_node_devs;
 +   int j = 0;
 +
@@ -68,7 +68,7 @@ v2: Clarify the linking topic in the commit message.
           continue;
        }
  
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
++#if defined(NO_RENDER_NODE)
 +      render_node_devs[j].vendor_id = dev->u.pci.vendor_id;
 +      render_node_devs[j].chip_id = dev->u.pci.chip_id;
 +
@@ -80,7 +80,7 @@ v2: Clarify the linking topic in the commit message.
        j++;
     }
  
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
++#if defined(NO_RENDER_NODE)
 +   num_render_node_devs = j;
 +
 +   /* Next look for drm devices. */

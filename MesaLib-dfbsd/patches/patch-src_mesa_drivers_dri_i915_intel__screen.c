@@ -13,7 +13,7 @@ Fix build on older NetBSD w/o _SC_PHYS_PAGES.
  #include <time.h>
  #include <unistd.h>
 +
-+#if defined(HAVE_SYS_SYSCTL_H) && defined(__NetBSD__)
++#if defined(HAVE_SYS_SYSCTL_H) && defined(PHYSMEM_NETBSD)
 +# include <sys/sysctl.h>
 +#endif
 +
@@ -24,7 +24,7 @@ Fix build on older NetBSD w/o _SC_PHYS_PAGES.
        const unsigned gpu_mappable_megabytes =
           (aper_size / (1024 * 1024)) * 3 / 4;
  
-+#if defined(HW_PHYSMEM64) && defined(__NetBSD__)
++#if defined(HW_PHYSMEM64) && defined(PHYSMEM_NETBSD)
 +      int mib[2] = { CTL_HW, HW_PHYSMEM64 };
 +      uint64_t system_memory_bytes;
 +      size_t len = sizeof(system_memory_bytes);

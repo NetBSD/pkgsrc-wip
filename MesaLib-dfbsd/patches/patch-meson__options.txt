@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- meson_options.txt.orig	2019-03-06 23:05:20.000000000 +0000
++++ meson_options.txt
+@@ -212,6 +212,12 @@ option(
+   description : 'Build support for GLX platform'
+ )
+ option(
++  'glx-tls',
++  type : 'boolean',
++  value : true,
++  description : 'Enable TLS (Thread Local Storage) support in GLX',
++)
++option(
+   'egl',
+   type : 'combo',
+   value : 'auto',

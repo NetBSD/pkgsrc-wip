@@ -1,0 +1,63 @@
+$NetBSD$
+
+--- meson.build.orig	2019-03-15 01:02:19.000000000 +0000
++++ meson.build
+@@ -50,6 +50,7 @@ with_tests = get_option('build-tests')
+ with_valgrind = get_option('valgrind')
+ with_libunwind = get_option('libunwind')
+ with_asm = get_option('asm')
++with_glx_tls = get_option('glx-tls')
+ with_glx_read_only_text = get_option('glx-read-only-text')
+ with_glx_direct = get_option('glx-direct')
+ with_osmesa = get_option('osmesa')
+@@ -343,7 +344,10 @@ if with_egl and not (with_platform_drm o
+   endif
+ endif
+ 
+-pre_args += '-DGLX_USE_TLS'
++if with_glx_tls
++  pre_args += '-DGLX_USE_TLS'
++endif
++
+ if with_glx != 'disabled'
+   if not (with_platform_x11 and with_any_opengl)
+     error('Cannot build GLX support without X11 platform support and at least one OpenGL API')
+@@ -1011,7 +1015,7 @@ foreach h : ['xlocale.h', 'sys/sysctl.h'
+   endif
+ endforeach
+ 
+-foreach f : ['strtof', 'mkostemp', 'posix_memalign', 'timespec_get', 'memfd_create']
++foreach f : ['strtof', 'mkostemp', 'posix_memalign', 'timespec_get', 'memfd_create', 'open_memstream']
+   if cc.has_function(f)
+     pre_args += '-DHAVE_@0@'.format(f.to_upper())
+   endif
+@@ -1094,11 +1098,28 @@ else
+   dep_clock = cc.find_library('rt')
+ endif
+ 
++foreach g : ['clock_gettime', 'clock_nanotime']
++  if cc.has_function(
++      g,
++      dependencies : dep_clock,
++      prefix : '#include <time.h>')
++    pre_args += '-DHAVE_@0@'.format(g.to_upper())
++  endif
++endforeach
++
+ # TODO: some of these may be conditional
+ dep_zlib = dependency('zlib', version : '>= 1.2.3')
+ pre_args += '-DHAVE_ZLIB'
+ dep_thread = dependency('threads')
+-if dep_thread.found() and host_machine.system() != 'windows'
++if dep_thread.found() and ['freebsd', 'dragonfly'].contains(host_machine.system())
++  pre_args += '-DHAVE_PTHREAD'
++  if cc.has_function(
++      'pthread_setaffinity_np',
++      dependencies : dep_thread,
++      prefix : '#include <pthread_np.h>')
++    pre_args += '-DHAVE_PTHREAD_SETAFFINITY'
++  endif
++elif dep_thread.found() and host_machine.system() != 'windows'
+   pre_args += '-DHAVE_PTHREAD'
+   if cc.has_function(
+       'pthread_setaffinity_np',

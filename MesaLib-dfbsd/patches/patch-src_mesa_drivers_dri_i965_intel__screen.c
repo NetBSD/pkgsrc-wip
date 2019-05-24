@@ -32,7 +32,7 @@ See kernel commit 172cf15d18889313bf2c3bfb81fcea08369274ef in 3.6+.
  #include <time.h>
  #include <unistd.h>
 +
-+#if defined(HAVE_SYS_SYSCTL_H) && defined(__NetBSD__)
++#if defined(HAVE_SYS_SYSCTL_H) && defined(PHYSMEM_NETBSD)
 +# include <sys/sysctl.h>
 +#endif
 +
@@ -43,7 +43,7 @@ See kernel commit 172cf15d18889313bf2c3bfb81fcea08369274ef in 3.6+.
        const unsigned gpu_mappable_megabytes =
           screen->aperture_threshold / (1024 * 1024);
  
-+#if defined(HW_PHYSMEM64) && defined(__NetBSD__)
++#if defined(HW_PHYSMEM64) && defined(PHYSMEM_NETBSD)
 +      int mib[2] = { CTL_HW, HW_PHYSMEM64 };
 +      const uint64_t system_memory_bytes;
 +      size_t len = sizeof(system_memory_bytes);
@@ -65,7 +65,7 @@ See kernel commit 172cf15d18889313bf2c3bfb81fcea08369274ef in 3.6+.
        return false;
     }
  
-+#if defined(__FreeBSD__)
++#if defined(REQUIRE_36_GEN4)
 +   if (!intel_get_boolean(screen, I915_PARAM_HAS_RELAXED_DELTA)) {
 +      fprintf(stderr, "[%s: %u] Kernel 2.6.39 required.\n", __func__, __LINE__);
 +      return false;

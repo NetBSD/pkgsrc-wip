@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/gallium/drivers/nouveau/meson.build.orig	2019-03-21 00:58:06.000000000 +0000
++++ src/gallium/drivers/nouveau/meson.build
+@@ -211,7 +211,7 @@ files_libnouveau = files(
+ 
+ libnouveau = static_library(
+   'nouveau',
+-  [files_libnouveau, nir_opcodes_h],
++  [files_libnouveau, nir_opcodes_h, nir_intrinsics_h],
+   include_directories : [
+     inc_src, inc_include, inc_gallium, inc_gallium_aux, inc_common,
+   ],
