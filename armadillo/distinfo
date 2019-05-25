@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/10/02 15:31:39 uccwen Exp $
+$NetBSD$
 
-SHA1 (armadillo-4.450.2.tar.gz) = 49718ac55c03a94a93989582269975b85fbc1618
-RMD160 (armadillo-4.450.2.tar.gz) = 7d9391ef7c1a31c1974106ff13178f933681ff71
-Size (armadillo-4.450.2.tar.gz) = 5342251 bytes
+SHA1 (armadillo-9.400.3.tar.xz) = 142acafa7801613b01965a113267211d09e421dc
+RMD160 (armadillo-9.400.3.tar.xz) = e1d73d9c5cb9eed997ca294fee85d5c649a8ef90
+SHA512 (armadillo-9.400.3.tar.xz) = ae35f6d2e45202af4f5ef4516467c38a064ca2c1796d5c03ab389c31b800e8eea110b9035912a742c3f297234890b57f91918a40df071db5ebb20ec74b18ada5
+Size (armadillo-9.400.3.tar.xz) = 4798164 bytes
