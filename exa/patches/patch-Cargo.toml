@@ -1,0 +1,15 @@
+$NetBSD$
+
+Update git2 cargo crate to 0.7.5 so that builds work correctly
+in NetBSD.
+
+--- Cargo.toml.orig	2019-05-25 00:25:16.395468845 +0000
++++ Cargo.toml
+@@ -59,6 +59,6 @@ lto = true
+ panic = "abort"
+ 
+ [dependencies.git2]
+-version = "0.7"
++version = "0.7.5"
+ optional = true
+ default-features = false

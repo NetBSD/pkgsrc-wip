@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/exa
+man/man1/exa.1
+share/examples/exa/completions.bash
+share/examples/exa/completions.fish
+share/examples/exa/completions.zsh
