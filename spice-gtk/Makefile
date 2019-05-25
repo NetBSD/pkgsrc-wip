@@ -11,7 +11,7 @@ COMMENT=	GTK+ widget for SPICE clients
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	spice-client-glib-2.0.pc.in
