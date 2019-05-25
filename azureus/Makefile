@@ -26,7 +26,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-install
 SUBST_MESSAGE.prefix=	Fixing prefixes.
 SUBST_FILES.prefix=	azureus
-SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.prefix=	PREFIX
 
 do-install:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin

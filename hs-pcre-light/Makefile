@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix+=	pcre-light.cabal
-SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.prefix=	PREFIX
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/pcre/buildlink3.mk"

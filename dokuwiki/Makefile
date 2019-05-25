@@ -93,7 +93,7 @@ SUBST_FILES.files+=	conf/dokuwiki.php
 SUBST_FILES.files+=	apache.conf.dist
 SUBST_FILES.files+=	dokuser
 SUBST_SED.files+=	-e "s|@DATADIR@|${VARBASE}/dokuwiki|g"
-SUBST_SED.files+=	-e "s|@DOKUDIR@|${DOKUDIR}|g"
+SUBST_VARS.files=	DOKUDIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 MESSAGE_SUBST+=		DOKUDIR=${DOKUDIR}

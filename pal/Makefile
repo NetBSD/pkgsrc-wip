@@ -23,10 +23,10 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing hardcoded paths
 SUBST_FILES.path=	Makefile.defs Makefile input.c ../pal.conf
-SUBST_SED.path=		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.path+=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
-SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.path+=	-e 's,@EGDIR@,${EGDIR},g'
+SUBST_VARS.path=	PKG_SYSCONFDIR
+SUBST_VARS.path+=	PKGMANDIR
+SUBST_VARS.path+=	PREFIX
+SUBST_VARS.path+=	EGDIR
 
 EGDIR=			${PREFIX}/share/examples/pal
 

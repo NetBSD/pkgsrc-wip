@@ -24,9 +24,9 @@ EMUL_MODULES.linux=	compat png x11
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/${NX_SCRIPT}
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_SED.paths+=	-e 's,@NX@,${NX},g'
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	SH
+SUBST_VARS.paths+=	NX
 SUBST_STAGE.paths=	post-patch
 
 INSTALLATION_DIRS=	bin

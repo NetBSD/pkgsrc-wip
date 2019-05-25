@@ -19,7 +19,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_MESSAGE.fix-paths=	Fixing path references
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_FILES.fix-paths=		run-mailcap.man
-SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 
 SUBST_CLASSES+=		fix-x11
 SUBST_MESSAGE.fix-x11=	Fixing X11 references

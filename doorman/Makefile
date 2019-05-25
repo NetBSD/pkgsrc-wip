@@ -31,7 +31,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		post-patch
 SUBST_MESSAGE.fix-paths=	Fixing absolute pathes.
 SUBST_FILES.fix-paths=		configure
-SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 
 SUBST_CLASSES+=			fix-conf-paths
 SUBST_STAGE.fix-conf-paths=	post-configure

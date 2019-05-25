@@ -17,7 +17,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	Makefile
 SUBST_SED.prefix=	-e 's,/usr,${PREFIX},g'
-SUBST_SED.prefix+=	-e 's,@PREFIX@,${PREFIX},'
+SUBST_VARS.prefix=	PREFIX
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 

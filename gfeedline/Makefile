@@ -45,7 +45,7 @@ REPLACE_PYTHON=		lib/plugins/post.py lib/plugins/twitter/dd.py
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	lib/utils/iconimage.py lib/utils/iconimage.py lib/constants.py
-SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.prefix=	PREFIX
 SUBST_MESSAGE.prefix=	Replacing pkg path.
 
 .include "options.mk"

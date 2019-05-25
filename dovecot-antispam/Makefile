@@ -17,9 +17,9 @@ USE_TOOLS+=		gmake
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	post-patch
 SUBST_FILES.pkgsrc=	defconfig
-SUBST_SED.pkgsrc=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.pkgsrc+=	-e "s|@ROOT_USER@|${ROOT_USER}|g"
-SUBST_SED.pkgsrc+=	-e "s|@ROOT_GROUP@|${ROOT_GROUP}|g"
+SUBST_VARS.pkgsrc=	PREFIX
+SUBST_VARS.pkgsrc+=	ROOT_USER
+SUBST_VARS.pkgsrc+=	ROOT_GROUP
 
 pre-configure:
 	cp ${WRKSRC}/defconfig ${WRKSRC}/.config

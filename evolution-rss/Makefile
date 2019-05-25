@@ -26,7 +26,7 @@ GSED=			${PREFIX}/bin/gsed
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_SED.paths+=	-e 's|@GSED@|${GSED}|g'
+SUBST_VARS.paths=	GSED
 SUBST_FILES.paths+=	src/Makefile.in
 SUBST_MESSAGE.paths=	Fixing gsed path.
 

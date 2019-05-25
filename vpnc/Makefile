@@ -27,12 +27,12 @@ SUBST_MESSAGE.paths=	fixing pathnames
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	config.c vpnc-script.in makeman.pl pcf2vpnc
 SUBST_FILES.paths+=	vpnc.8.template vpnc-disconnect
-SUBST_SED.paths=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
-SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.paths+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
-SUBST_SED.paths+=	-e 's|@VARBASE@|${VARBASE}|g'
-SUBST_SED.paths+=	-e 's|@PERL5@|${PERL5}|g'
-SUBST_SED.paths+=	-e 's|@SH@|${SH}|g'
+SUBST_VARS.paths=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	PREFIX
+SUBST_VARS.paths+=	PKGMANDIR
+SUBST_VARS.paths+=	VARBASE
+SUBST_VARS.paths+=	PERL5
+SUBST_VARS.paths+=	SH
 
 
 BUILD_DEFS+=		VARBASE

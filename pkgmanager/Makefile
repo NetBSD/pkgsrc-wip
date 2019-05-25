@@ -36,8 +36,8 @@ SUBST_MESSAGE.clocc=	Fixing clocc root directory in clocc.lisp
 SUBST_CLASSES+=		wrapper
 SUBST_STAGE.wrapper=	post-patch
 SUBST_FILES.wrapper=	pkgmanager-${PKGMGR_VERSION:Q}/src/pkgmanager-wrapper.sh
-SUBST_SED.wrapper=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.wrapper+=	-e "s|@MAKE@|${MAKE}|g"
+SUBST_VARS.wrapper=	PREFIX
+SUBST_VARS.wrapper+=	MAKE
 SUBST_SED.wrapper+=	-e "s|@DBDIR@|${PKG_DBDIR}|g"
 SUBST_MESSAGE.wrapper=	Fixing prefix in pkgmanager shell script wrapper
 

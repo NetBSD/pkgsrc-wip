@@ -56,14 +56,14 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		install.sh src/runtime/runtime.c doc/sbcl.1
-SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 #SUBST_SED.fix-paths+=		-e 's,/var/log,${VARBASE}/log,g'
 
 SUBST_CLASSES+=			fix-gtar
 SUBST_STAGE.fix-gtar=		pre-configure
 SUBST_MESSAGE.fix-gtar=		Fixing GNU tar references.
 SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
-SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
+SUBST_VARS.fix-gtar=		GTAR
 
 pre-build:
 	cd ${WRKSRC} && ${ECHO} '"1.0.99"' > version.lisp-expr

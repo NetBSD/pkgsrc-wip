@@ -47,7 +47,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing pathnames in configuration file.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	../joomla.conf
-SUBST_SED.paths=	-e "s,@JOOMLADIR@,${JOOMLADIR},g"
+SUBST_VARS.paths=	JOOMLADIR
 
 post-extract:
 	${CP} ${FILESDIR}/joomla.conf ${WRKDIR}/joomla.conf

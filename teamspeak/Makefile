@@ -18,7 +18,7 @@ SUBST_CLASSES+=		ts
 SUBST_STAGE.ts=		post-configure
 SUBST_FILES.ts+=	teamspeak.sh
 SUBST_SED.ts+=		-e 's|@BASEDIR@|${TS_BASEDIR}|g'
-SUBST_SED.ts+=		-e 's|@SH@|${SH}|g'
+SUBST_VARS.ts=		SH
 
 TS_BASEDIR=		${PREFIX}/lib/${PKGNAME_NOREV}
 TS_SRCDIR=		${WRKSRC}/setup.data/image

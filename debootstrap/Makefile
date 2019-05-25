@@ -40,7 +40,7 @@ SUBST_CLASSES+=			fix-paths2
 SUBST_STAGE.fix-paths2=		pre-configure
 SUBST_MESSAGE.fix-paths2=	Fixing absolute paths.
 SUBST_FILES.fix-paths2=		debootstrap
-SUBST_SED.fix-paths2=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths2=		PREFIX
 
 SUBST_CLASSES+=			fix-paths3
 SUBST_STAGE.fix-paths3=		pre-configure

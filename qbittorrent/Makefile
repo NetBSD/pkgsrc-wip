@@ -25,7 +25,7 @@ INSTALLATION_DIRS+=	bin
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	configure
-SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.paths=	PREFIX
 SUBST_MESSAGE.paths=	Fixing paths.
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

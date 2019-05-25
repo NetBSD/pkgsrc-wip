@@ -51,15 +51,15 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	example-config.xml
-SUBST_SED.paths+=	-e 's,@JABBER_GROUP@,${JABBER_GROUP},g'
-SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBER_SPOOLDIR@,${JABBER_SPOOLDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBER_TRANSDIR@,${JABBER_TRANSDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBER_USER@,${JABBER_USER},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g'
+SUBST_VARS.paths=	JABBER_GROUP
+SUBST_VARS.paths+=	JABBER_LOGDIR
+SUBST_VARS.paths+=	JABBER_PIDDIR
+SUBST_VARS.paths+=	JABBER_SPOOLDIR
+SUBST_VARS.paths+=	JABBER_TRANSDIR
+SUBST_VARS.paths+=	JABBER_USER
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	PREFIX
+SUBST_VARS.paths+=	TRANSPORTDIR
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

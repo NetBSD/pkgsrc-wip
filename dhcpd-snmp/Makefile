@@ -29,7 +29,7 @@ BUILD_DEFS+=		VARBASE NET_SNMP_MIBDIR
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	dhcpd-snmp.conf.dist
-SUBST_SED.paths+=	-e 's|@VARBASE@|${VARBASE}|g'
+SUBST_VARS.paths=	VARBASE
 SUBST_STAGE.paths=	post-configure
 
 CONF_FILES=		${PREFIX}/${EGDIR}/dhcpd-snmp.conf \

@@ -52,7 +52,7 @@ EVAL_PREFIX+=		W3MPREFIX=w3m
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	w3m.el
-SUBST_SED.paths+=	-e 's,@W3MPREFIX@,${W3MPREFIX},g'
+SUBST_VARS.paths=	W3MPREFIX
 SUBST_STAGE.paths=	pre-configure
 
 .include "../../wip/emacs-git/modules.mk"

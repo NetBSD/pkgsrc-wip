@@ -22,7 +22,7 @@ WRKSRC=		${WRKDIR}/todo.txt-cli
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	todo.sh
-SUBST_SED.prefix+=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
+SUBST_VARS.prefix=	PKG_SYSCONFDIR
 
 USE_TOOLS+=	bash
 REPLACE_BASH=	todo.sh

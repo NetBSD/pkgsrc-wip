@@ -23,7 +23,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-install
 SUBST_FILES.prefix=	roadfighter.sh
 SUBST_MESSAGE.prefix=	Fixing PREFIX.
-SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.prefix=	PREFIX
 
 pre-patch:
 	${MV} ${WRKSRC}/src/sge/* ${WRKSRC}

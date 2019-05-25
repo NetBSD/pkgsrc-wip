@@ -134,7 +134,7 @@ SUBST_CLASSES+=			fix-libx11
 SUBST_STAGE.fix-libx11=		pre-configure
 SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
 SUBST_FILES.fix-libx11=		configure
-SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
+SUBST_VARS.fix-libx11=		X11BASE
 
 PLIST_VARS=	monodoc
 

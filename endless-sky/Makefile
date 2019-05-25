@@ -33,7 +33,7 @@ SUBST_FILES.fix-paths=		SConstruct source/Files.cpp
 SUBST_SED.fix-paths=		-e 's@/share/games/@/share/@g'
 SUBST_SED.fix-paths+=		-e 's@/games@/bin@g'
 SUBST_SED.fix-paths+=		-e 's@/share/man/@/${PKGMANDIR}/@g'
-SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}

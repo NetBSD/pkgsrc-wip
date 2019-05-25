@@ -25,7 +25,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-install
 SUBST_FILES.prefix=	f1spirit.sh
 SUBST_MESSAGE.prefix=	Fixing PREFIX.
-SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.prefix=	PREFIX
 
 pre-patch:
 	${CP} ${FILESDIR}/f1spirit ${WRKSRC}/f1spirit.sh

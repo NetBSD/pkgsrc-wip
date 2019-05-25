@@ -31,7 +31,7 @@ CHECK_SHLIBS_SUPPORTED=	no
 SUBST_CLASSES+=		launcher
 SUBST_STAGE.launcher=	pre-configure
 SUBST_FILES.launcher=	jedit
-SUBST_SED.launcher+=	-e 's,@PKG_JAVA_HOME@,'${PKG_JAVA_HOME}',g'
+SUBST_VARS.launcher=	PKG_JAVA_HOME
 SUBST_SED.launcher+=	-e 's,@JEDIT_HOME@,'${SHAREDIR:Q}',g'
 
 post-extract:

@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-bdb=${PREFIX}				# XXX BDBBASE
 SUBST_CLASSES+=		bdb
 SUBST_STAGE.bdb=	post-patch
 SUBST_FILES.bdb=	providers/bdb/Makefile.in
-SUBST_SED.bdb=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.bdb=		PREFIX
 SUBST_MESSAGE.bdb=	"Fixing BDB prefix."
 
 .include "../../mk/bdb.buildlink3.mk"
@@ -69,7 +69,7 @@ CFLAGS+=		-DMDB_WITH_WRITE_SUPPORT
 SUBST_CLASSES+=		mdb
 SUBST_STAGE.mdb=	post-patch
 SUBST_FILES.mdb=	providers/mdb/Makefile.in
-SUBST_SED.mdb=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.mdb=		PREFIX
 SUBST_MESSAGE.mdb=	"Fixing MDB provider Makefile.in."
 
 .  include "../../wip/mdbtools/buildlink3.mk"

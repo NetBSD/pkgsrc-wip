@@ -18,9 +18,9 @@ SUBST_CLASSES+=		cfg
 SUBST_MESSAGE.cfg=	Fixing paths
 SUBST_STAGE.cfg=	pre-build
 SUBST_FILES.cfg=	config
-SUBST_SED.cfg+=		-e "s,@PREFIX@,${PREFIX},"
-SUBST_SED.cfg+=		-e "s,@LUA_CDIR@,${LUA_CDIR},"
-SUBST_SED.cfg+=		-e "s,@LUA_INCDIR@,${LUA_INCDIR},"
+SUBST_VARS.cfg=		PREFIX
+SUBST_VARS.cfg+=	LUA_CDIR
+SUBST_VARS.cfg+=	LUA_INCDIR
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE} src/lfs.so

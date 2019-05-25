@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	modplugplay.c
-SUBST_SED.paths=	-e 's,@DEVOSSAUDIO@,${DEVOSSAUDIO},'
+SUBST_VARS.paths=	DEVOSSAUDIO
 
 do-build:
 	${CXX} ${WRKSRC}/modplugplay.c ${CFLAGS} ${LDFLAGS} \

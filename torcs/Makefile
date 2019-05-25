@@ -39,13 +39,13 @@ SUBST_CLASSES+=			fix-bash
 SUBST_STAGE.fix-bash=		pre-configure
 SUBST_MESSAGE.fix-bash=		Fixing path to bash interpreter.
 SUBST_FILES.fix-bash=		Make-default.mk src/linux/torcs.in
-SUBST_SED.fix-bash=		-e 's,@BASH@,${BASH},g'
+SUBST_VARS.fix-bash=		BASH
 
 SUBST_CLASSES+=			fix-mkdir
 SUBST_STAGE.fix-mkdir=		pre-configure
 SUBST_MESSAGE.fix-mkdir=	Fixing mkdir use in installation scripts.
 SUBST_FILES.fix-mkdir=		mkinstalldirs
-SUBST_SED.fix-mkdir=		-e 's,@INSTALL_DATA_DIR@,${INSTALL_DATA_DIR},g'
+SUBST_VARS.fix-mkdir=		INSTALL_DATA_DIR
 
 BUILD_TARGET=
 INSTALL_TARGET=		install datainstall

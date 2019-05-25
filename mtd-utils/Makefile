@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	Makefile
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	post-patch
 
 pre-build:

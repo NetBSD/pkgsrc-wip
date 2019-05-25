@@ -19,7 +19,7 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing paths.
 SUBST_FILES.fix-paths?=
 SUBST_FILES.fix-paths+=		core/src/cats/make_catalog_backup.pl.in
-SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 
 .include "options.mk"
 .include "Makefile.common"

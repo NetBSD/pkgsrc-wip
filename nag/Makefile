@@ -48,7 +48,7 @@ USE_PKGINSTALL=		YES
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	nag.conf.dist
-SUBST_SED.files=	-e "s|@NAGDIR@|${NAGDIR}|g"
+SUBST_VARS.files=	NAGDIR
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 PKG_USERS_VARS+=	APACHE_USER

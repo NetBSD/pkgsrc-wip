@@ -20,8 +20,8 @@ SUBST_CLASSES+=		script
 SUBST_STAGE.script=	pre-install
 SUBST_MESSAGE.script=	Generating script file.
 SUBST_FILES.script=	jabref
-SUBST_SED.script+=	-e "s|@SH@|${SH}|g"
-SUBST_SED.script+=	-e "s|@JAVA_BINPREFIX@|${JAVA_BINPREFIX}|g"
+SUBST_VARS.script=	SH
+SUBST_VARS.script+=	JAVA_BINPREFIX
 SUBST_SED.script+=	-e "s|@JABREF_PREFIX@|${PREFIX}/share/java/|g"
 SUBST_SED.script+=	-e "s|@JABREF_JAR@|${DISTNAME}.jar|g"
 

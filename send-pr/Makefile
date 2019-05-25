@@ -41,7 +41,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		post-patch
 SUBST_MESSAGE.fix-paths=	Fixing paths
 SUBST_FILES.fix-paths+=		send-pr.NetBSD.conf
-SUBST_SED.fix-paths+=		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.fix-paths=		PKG_SYSCONFDIR
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/gnats/dist ${EGDIR}

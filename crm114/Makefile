@@ -40,7 +40,7 @@ SUBST_CLASSES+=		crmdirs
 SUBST_STAGE.crmdirs=	pre-configure
 SUBST_MESSAGE.crmdirs=	Fixing script references
 SUBST_FILES.crmdirs=	${SCRIPTS}
-SUBST_SED.crmdirs=	-e 's,@SCRIPTSDIR@,${SCRIPTSDIR},g'
+SUBST_VARS.crmdirs=	SCRIPTSDIR
 
 # Several differences will be shown in `make test':
 #   * userdirtest.crm: output depends on locale collation ordering

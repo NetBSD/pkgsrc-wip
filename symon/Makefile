@@ -42,7 +42,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_FILES.paths=	symon/symon.8 symux/symux.8
 SUBST_FILES.paths+=	symux/c_smrrds.sh
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_VARS.paths=	PKG_SYSCONFDIR
 SUBST_SED.paths+=	-e 's,@PKG_PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
