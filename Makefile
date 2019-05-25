@@ -755,6 +755,7 @@ SUBDIR+=	evilvte
 SUBDIR+=	evolution-data-server
 SUBDIR+=	evolution-rss
 SUBDIR+=	evolution-tray
+SUBDIR+=	exa
 SUBDIR+=	exact-image
 SUBDIR+=	execline
 SUBDIR+=	exhume
