@@ -17,10 +17,10 @@ USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	spice-server.pc.in
 
-.include "../../sysutils/spice-protocol/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/pixman/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/spice-protocol/buildlink3.mk"
+.include "../../x11/pixman/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
