@@ -4371,6 +4371,7 @@ SUBDIR+=	samhain
 SUBDIR+=	samtools0119
 SUBDIR+=	sara
 SUBDIR+=	sarf
+SUBDIR+=	sauerbraten
 SUBDIR+=	sbcl-git
 SUBDIR+=	scantailor
 SUBDIR+=	scare
