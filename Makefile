@@ -242,6 +242,7 @@ SUBDIR+=	barrier
 SUBDIR+=	basepkg
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
+SUBDIR+=	bat
 SUBDIR+=	bcftools
 SUBDIR+=	bdf2psf
 SUBDIR+=	bdfresize
