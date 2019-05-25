@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/spice-vdagent
+man/man1/spice-vdagent.1
+man/man1/spice-vdagentd.1
+sbin/spice-vdagentd
+share/examples/spice-vdagent/xdg/autostart/spice-vdagent.desktop
+share/gdm/autostart/LoginWindow/spice-vdagent.desktop
+share/gdm/greeter/autostart/spice-vdagent.desktop
+@pkgdir var/run/spice-vdagentd

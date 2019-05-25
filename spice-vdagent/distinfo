@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (spice-vdagent-0.19.0.tar.bz2) = ba2297228f26c60fe33539f15dd7e9bf2d216888
+RMD160 (spice-vdagent-0.19.0.tar.bz2) = 68c5b4016247be02e04fd924d70a3222f51866c0
+SHA512 (spice-vdagent-0.19.0.tar.bz2) = f5056dfe66df3ee8205549be22bbc8c17d2196c8448eda97f01659ff30c34d9929f330767d7fafec557dc5f7fb9b65eaf85973193b38df774042de9b72d6e60d
+Size (spice-vdagent-0.19.0.tar.bz2) = 151356 bytes
+SHA1 (patch-src_udscs.c) = 12439cbb7e6a14ee2cd6b15ef8e4ef4e629f7e24
+SHA1 (patch-src_vdagentd_uinput.c) = 2d38ccfdb96bfabd456f0b033a4a0d936d5f97a3
