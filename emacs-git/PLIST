@@ -2944,6 +2944,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/html2text.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/html2text.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/info-edit.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/info-edit.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
