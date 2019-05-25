@@ -4,6 +4,7 @@ COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	0ad
 SUBDIR+=	0ad-data
+SUBDIR+=	2048-c
 SUBDIR+=	389-ds-base
 SUBDIR+=	3dsconv
 SUBDIR+=	7kaa
