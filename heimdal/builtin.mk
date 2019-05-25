@@ -30,8 +30,8 @@ MAKEVARS+=		IS_BUILTIN.heimdal
 .if !defined(BUILTIN_PKG.heimdal) && \
     !empty(IS_BUILTIN.heimdal:M[yY][eE][sS])
 .  if empty(SH_KRB5_CONFIG:M__nonexistent__)
-BUILTIN_VERSION.heimdal!=	${SH_KRB5_CONFIG} --version |		\
-				${AWK} '{ print $$2; exit }'
+BUILTIN_VERSION.heimdal!= \
+	${SH_KRB5_CONFIG} --version | ${AWK} '{ print $$2; exit }'
 .  else
 #
 # heimdal<=0.6.x doesn't have a method of checking files to discover

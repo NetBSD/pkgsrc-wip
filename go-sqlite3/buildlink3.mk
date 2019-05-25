@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	go-sqlite3
 GO_SQLITE3_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.go-sqlite3=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.go-sqlite3?=		build
+BUILDLINK_DEPMETHOD.go-sqlite3?=	build
 
 BUILDLINK_API_DEPENDS.go-sqlite3+=	go-sqlite3>=1.10.0
 BUILDLINK_PKGSRCDIR.go-sqlite3?=	../../wip/go-sqlite3

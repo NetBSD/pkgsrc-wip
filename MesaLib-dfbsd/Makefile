@@ -116,11 +116,11 @@ SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename\.la,libglapi.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename_la,libglapi_la,g'
 
 # Replace /etc/drirc.d with ${PREFIX}/etc/drirc.d
-SUBST_CLASSES+=			drirc
-SUBST_STAGE.drirc=		pre-configure
-SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc.d references
-SUBST_FILES.drirc+=		src/util/xmlconfig.c
-SUBST_SED.drirc+=		 -e 's|/etc|${PREFIX}/etc|g'
+SUBST_CLASSES+=		drirc
+SUBST_STAGE.drirc=	pre-configure
+SUBST_MESSAGE.drirc=	Fixing hardcoded /etc/drirc.d references
+SUBST_FILES.drirc+=	src/util/xmlconfig.c
+SUBST_SED.drirc+=	-e 's|/etc|${PREFIX}/etc|g'
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
 CXXFLAGS.SunOS+=	-Drestrict=__restrict__
