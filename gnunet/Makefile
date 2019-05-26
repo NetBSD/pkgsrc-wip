@@ -18,8 +18,6 @@ TEST_TARGET=		check
 PTHREAD_OPTS=		require native
 LDFLAGS+=		-lpthread -lintl
 
-INFO_FILES=		yes
-
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
