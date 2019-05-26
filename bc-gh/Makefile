@@ -19,6 +19,6 @@ CONFIGURE_ARGS=         -G
 CONFIGURE_ENV=          EXECSUFFIX="-gh" MANDIR="${PREFIX}/man" NLSPATH="${PREFIX}/share/locale/%L/%N"
 
 do-test:
-        cd ${WRKSRC} && make test
+	cd ${WRKSRC} && make test
 
 .include "../../mk/bsd.pkg.mk"
