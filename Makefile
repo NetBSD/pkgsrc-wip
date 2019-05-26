@@ -1169,6 +1169,7 @@ SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gnurl
 SUBDIR+=	gnutls
 SUBDIR+=	go
+SUBDIR+=	go-argv
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bytebufferpool
 SUBDIR+=	go-collectd
