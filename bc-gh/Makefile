@@ -1,11 +1,12 @@
 # $NetBSD$
 
-DISTNAME=       bc-2.0.0
-PKGNAME=        bc-gh-2.0.0
+VERSION=	2.0.0
+DISTNAME=       bc-${VERSION}
+PKGNAME=        bc-gh-${VERSION}
 CATEGORIES=     math
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=gavinhoward/}
 GITHUB_PROJECT= bc
-GITHUB_RELEASE= 2.0.0
+GITHUB_RELEASE= ${VERSION}
 EXTRACT_SUFX=   .tar.xz
 
 MAINTAINER=     yzena.tech@gmail.com
