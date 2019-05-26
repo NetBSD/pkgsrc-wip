@@ -9,7 +9,7 @@ HOMEPAGE=	https://kore.io/
 COMMENT=	Web application framework for writing scalable web APIs in C
 LICENSE=	isc
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	TASKS=1
