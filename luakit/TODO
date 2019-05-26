@@ -1,2 +1,3 @@
-- Get in touch with upstream to discuss patches/patch-config_window.lua (not
-  sure if it is the correct workaround/solution)
+- There are probably some message truncations and some times big web
+  page are partly rendered.  Reloading the web page workaround that.
+    -- leot (2019/05/26)
