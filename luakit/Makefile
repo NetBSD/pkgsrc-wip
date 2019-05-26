@@ -1,12 +1,8 @@
 # $NetBSD$
 
-PKGNAME=	luakit-${GITHUB_TAG}
-DISTNAME=	${GITHUB_TAG}
+DISTNAME=	luakit-2.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luakit/}
-GITHUB_PROJECT=	luakit
-GITHUB_TAG=	2.1
-DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://luakit.org/
