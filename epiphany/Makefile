@@ -10,16 +10,21 @@ HOMEPAGE=	https://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+
 USE_TOOLS+=	pkg-config
 
 LDFLAGS+=	-L${PREFIX}/lib/epiphany ${COMPILER_RPATH_FLAG}${PREFIX}/lib/epiphany
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+REPLACE_PYTHON+=		post_install.py
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# needs Python 3
+PYTHON_FOR_BUILD_ONLY=		yes
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
+.include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
