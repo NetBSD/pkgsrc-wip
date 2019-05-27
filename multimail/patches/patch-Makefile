@@ -1,10 +1,18 @@
 $NetBSD$
 
-Link against ncursesw and adapt install target for pkgsrc.
+Link against ncursesw, honour CXXFLAGS, and adapt install target for pkgsrc.
 
 --- Makefile.orig	2019-02-22 01:00:59.000000000 +0000
 +++ Makefile
-@@ -18,7 +18,8 @@ endif
+@@ -11,14 +11,15 @@ isrc = interfac
+ ifeq ($(DEBUG),Y)
+ 	OPTS = -g -Wall -pedantic
+ else
+-	OPTS = -O2 -Wall -pedantic
++	OPTS = $(CXXFLAGS) -Wall -pedantic
+ 	POST = strip mm$(E)
+ endif
+ 
  # PREFIX is the base directory under which to install the binary and man
  # page; generally either /usr/local or /usr (or perhaps /opt...).
  
