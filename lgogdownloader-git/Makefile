@@ -7,7 +7,7 @@ GIT_REPO=	git://github.com/Sude-/lgogdownloader.git
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Sude-/lgogdownloader
 COMMENT=	Download games from GOG
-#LICENSE=	dwtfywtpl
+LICENSE=	public-domain # actually, dwtfywtpl
 
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
