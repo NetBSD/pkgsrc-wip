@@ -4658,6 +4658,7 @@ SUBDIR+=	termbox
 SUBDIR+=	terminology
 SUBDIR+=	termit
 SUBDIR+=	tesseract-game
+SUBDIR+=	tesseract-game-svn
 SUBDIR+=	testssl
 SUBDIR+=	tetrinet
 SUBDIR+=	tex-arabxtex

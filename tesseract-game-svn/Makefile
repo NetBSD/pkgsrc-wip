@@ -1,14 +1,14 @@
 # $NetBSD$
 
-PKGNAME=	tesseract-game-0.0.20140512
-DISTNAME=	tesseract_2014_05_12_first_edition_linux
+PKGNAME=	tesseract-game-0
 CATEGORIES=	games
-MASTER_SITES=	https://download.tuxfamily.org/tesseract/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tesseract.gg/
 COMMENT=	First-person shooter game based on Cube 2
+
+SVN_REPO=	svn://svn.tuxfamily.org/svnroot/tesseract/main
+SVN_EXTRACTDIR=	tesseract
 
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++03
@@ -21,7 +21,8 @@ CXXFLAGS+=	-fno-delete-null-pointer-checks
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
-INSTALLATION_DIRS+=	share/tesseract
+INSTALLATION_DIRS+=	share/tesseract/config
+INSTALLATION_DIRS+=	share/tesseract/media
 
 pre-configure:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g' \
@@ -50,4 +51,5 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
