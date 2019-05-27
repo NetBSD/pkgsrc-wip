@@ -2,7 +2,7 @@
 
 # XXX 0.0.1 is a made-up release number, ask upstream to make a release.
 PKGNAME=	go-rateio-0.0.1
-PKGREVISION=	6
+PKGREVISION=	7
 GITHUB_TAG=	e8e00881e5c12090412414be41c04ca9c8a71106
 DISTNAME=	rateio-${GITHUB_TAG}
 CATEGORIES=	devel
