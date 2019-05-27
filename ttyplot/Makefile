@@ -9,6 +9,13 @@ HOMEPAGE=	https://github.com/tenox7/ttyplot/
 COMMENT=	Realtime plotting utility for terminals
 LICENSE=	unlicense
 
+# Adjust Makefile
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-configure
+SUBST_MESSAGE.makefile=	Fixing Makefile
+SUBST_FILES.makefile=	Makefile
+SUBST_SED.makefile+=	-e '/^CFLAGS/ s,-O3,${CFLAGS},'
+
 DOCDIR=		share/doc/ttyplot
 
 AUTO_MKDIRS=		yes
