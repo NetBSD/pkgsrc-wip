@@ -11,10 +11,9 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c99
 
-# Adjust config.mk
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-configure
-SUBST_MESSAGE.makefile=	Fixing config.mk
+SUBST_MESSAGE.makefile=	Adjust config.mk
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile+=	-e '/^CFLAGS/ s,-O2,,'
 SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
