@@ -1,10 +1,10 @@
 # $NetBSD$
-#
 
-DISTNAME=	openscad-master
-CATEGORIES=	wip
-MASTER_SITES=	-https://github.com/openscad/openscad/archive/master.zip
-EXTRACT_SUFX=	.zip
+VERSION=	2019.05
+DISTNAME=	openscad-${VERSION}
+CATEGORIES=	cad
+MASTER_SITES=	${MASTER_SITE_GITHUB:=openscad/}
+GITHUB_TAG=	openscad-${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openscad.org/
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++11
 USE_TOOLS+=	bison gettext pkg-config
 USE_LIBTOOL=	yes
 
-WRKSRC=		${WRKDIR}/${DISTNAME:R}
+WRKSRC=		${WRKDIR}/${PKGBASE}-${DISTNAME}
 
 CHECK_PORTABILITY_SKIP+=	tests/compare-bitmaps.sh
 
@@ -46,4 +46,5 @@ do-configure:
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qscintilla/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
+.include "../../wip/double-conversion/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

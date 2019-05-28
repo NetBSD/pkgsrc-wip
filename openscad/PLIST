@@ -1,8 +1,8 @@
 @comment $NetBSD$
 bin/openscad
 man/man1/openscad.1
-share/appdata/openscad.appdata.xml
 share/applications/openscad.desktop
+share/metainfo/org.openscad.OpenSCAD.appdata.xml
 share/mime/packages/openscad.xml
 share/openscad/color-schemes/editor/dark-background.json
 share/openscad/color-schemes/editor/light-background.json
@@ -25,6 +25,7 @@ share/openscad/color-schemes/render/tomorrow-night.json
 share/openscad/color-schemes/render/tomorrow.json
 share/openscad/examples/Advanced/GEB.scad
 share/openscad/examples/Advanced/animation.scad
+share/openscad/examples/Advanced/assert.scad
 share/openscad/examples/Advanced/children.scad
 share/openscad/examples/Advanced/children_indexed.scad
 share/openscad/examples/Advanced/module_recursion.scad
@@ -42,6 +43,7 @@ share/openscad/examples/Basics/projection.stl
 share/openscad/examples/Basics/rotate_extrude.scad
 share/openscad/examples/Basics/text_on_cube.scad
 share/openscad/examples/COPYING-CC0.txt
+share/openscad/examples/Functions/echo.scad
 share/openscad/examples/Functions/functions.scad
 share/openscad/examples/Functions/list_comprehensions.scad
 share/openscad/examples/Functions/polygon_areas.scad
@@ -107,5 +109,6 @@ share/openscad/locale/es/LC_MESSAGES/openscad.mo
 share/openscad/locale/fr/LC_MESSAGES/openscad.mo
 share/openscad/locale/pl/LC_MESSAGES/openscad.mo
 share/openscad/locale/ru/LC_MESSAGES/openscad.mo
+share/openscad/locale/uk/LC_MESSAGES/openscad.mo
 share/pixmaps/openscad.png
 @pkgdir share/openscad/libraries/MCAD
