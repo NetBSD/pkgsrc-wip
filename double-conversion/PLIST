@@ -10,8 +10,8 @@ include/double-conversion/strtod.h
 include/double-conversion/utils.h
 lib/cmake/double-conversion/double-conversionConfig.cmake
 lib/cmake/double-conversion/double-conversionConfigVersion.cmake
-lib/cmake/double-conversion/double-conversionLibraryDepends-noconfig.cmake
-lib/cmake/double-conversion/double-conversionLibraryDepends.cmake
+lib/cmake/double-conversion/double-conversionTargets-noconfig.cmake
+lib/cmake/double-conversion/double-conversionTargets.cmake
 lib/libdouble-conversion.so
-lib/libdouble-conversion.so.1
-lib/libdouble-conversion.so.1.0.0
+lib/libdouble-conversion.so.3
+lib/libdouble-conversion.so.${PKGVERSION}

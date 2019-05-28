@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	double-conversion-3.0.0
+DISTNAME=	double-conversion-3.1.5
 CATEGORIES=	math converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
