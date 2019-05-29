@@ -1993,7 +1993,6 @@ SUBDIR+=	libretro-px68k
 SUBDIR+=	libretro-tyrquake
 SUBDIR+=	libretro-yabause
 SUBDIR+=	librocket
-SUBDIR+=	librsvg
 SUBDIR+=	libscscp
 SUBDIR+=	libsearpc
 SUBDIR+=	libslab
