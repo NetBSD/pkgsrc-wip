@@ -11,7 +11,7 @@ PREFIX		?= /usr/local
 MKDIR		?= mkdir
 INSTALL		?= install
 
-BIN		= gemma
+BIN		= bin/gemma
 HDR		= $(wildcard src/*.h) ./src/version.h
 SOURCES		= $(wildcard src/*.cpp)
 OBJS		= $(SOURCES:.cpp=.o)

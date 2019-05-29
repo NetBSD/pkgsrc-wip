@@ -16,7 +16,7 @@ COMMENT=	Genome-wide Efficient Mixed Model Association
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 
 CXXFLAGS+=	-I${PREFIX}/include/eigen3
 CXXFLAGS+=	-fpermissive
