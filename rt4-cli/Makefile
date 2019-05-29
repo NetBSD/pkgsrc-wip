@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://www.bestpractical.com/rt/
-COMMENT=	Industrial-grade ticketing system
+COMMENT=	Command-line interface to RT 3.0 or newer
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	rt<4.0
