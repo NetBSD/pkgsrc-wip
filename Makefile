@@ -5014,6 +5014,7 @@ SUBDIR+=	xmms-skins
 SUBDIR+=	xmms-volnorm
 SUBDIR+=	xmms2
 SUBDIR+=	xmoto
+SUBDIR+=	xnedit	
 SUBDIR+=	xnee
 SUBDIR+=	xonotic
 SUBDIR+=	xoo

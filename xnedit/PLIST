@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/xnc
+bin/xnedit
+man/man1/xnedit-nc.1
+man/man1/xnedit.1
+share/doc/xnedit/NEdit.ad
+share/doc/xnedit/README
+share/doc/xnedit/ReleaseNotes
+share/doc/xnedit/faq.txt

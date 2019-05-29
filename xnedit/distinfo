@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (xnedit-1.0.1.tar.gz) = 10ca8b314bd5bcddc1ba6df2476d3ef23fdd5028
+RMD160 (xnedit-1.0.1.tar.gz) = 51102a40931706cd5fba1ddbc69bd1ef2609d53e
+SHA512 (xnedit-1.0.1.tar.gz) = cb3ec4ff3ab2b1eb60331df3ed8dec820a5be604d0be2a278dd74809a296c29f96dea33c896d64a78f3742a4914f45346b9a88bbf15e0b838de73b0a2a144864
+Size (xnedit-1.0.1.tar.gz) = 1432971 bytes
+SHA1 (patch-makefiles_Makefile.netbsd) = ac2af4da7e0af0d36567b0a3036d32c589065a3f
