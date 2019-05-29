@@ -5,31 +5,44 @@
 #              Mon Apr 29 11:01:43 CDT 2019               #
 ###########################################################
 
-DISTNAME=	GEMMA-${PV}
+DISTNAME=	GEMMA-0.98.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=genetics-statistics/}
 GITHUB_PROJECT=	GEMMA
-GITHUB_TAG=	${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/genetics-statistics/GEMMA
 COMMENT=	Genome-wide Efficient Mixed Model Association
 LICENSE=	gnu-gpl-v3
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-CXXFLAGS+=	-I${PREFIX}/include/eigen3 -DOPENBLAS -DOPENBLAS_LEGACY
+CXXFLAGS+=	-I${PREFIX}/include/eigen3
 CXXFLAGS+=	-fpermissive
-MAKE_FLAGS+=	LDFLAGS+="${BLAS_LIBS} -lgsl -lcblas -lz"
+MAKE_FLAGS+=	LDFLAGS+="${LAPACK_LIBS} -lgsl -lcblas -lz"
 MAKE_FILE=	${FILESDIR}/Makefile
 
-PV=		0.98.1
-BLAS_ACCEPTED=	openblas	# Unusably slow with netlib
+# Requires multithreading for decent performance
+BLAS_ACCEPTED=	openblas_pthread openblas_openmp
+
+.include "../../wip/mk/blas.buildlink3.mk"
+
+.if !empty(BLAS_TYPE:Mopenblas*)
+CXXFLAGS+=	-I${PREFIX}/include/${BLAS_TYPE} -DOPENBLAS
+.endif
+
+# No multithreading
+.if ${BLAS_TYPE} == "openblas"
+CXXFLAGS+=	-DOPENBLAS_LEGACY
+.endif
+
+INSTALLATION_DIRS=	bin share/examples
+
+do-test:
+	(cd ${WRKSRC}/test && ${SH} test_suite.sh)
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/mk/blas.buildlink3.mk"
 .include "../../wip/cblas/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
