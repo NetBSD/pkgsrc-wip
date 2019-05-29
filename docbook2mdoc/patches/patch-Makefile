@@ -1,24 +1,19 @@
 $NetBSD$
 Honor LDFLAGS, Support PKGMANDIR
 
----
- Makefile | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
-diff --git a/Makefile b/Makefile
-index 9b8dc50..66b7a6d 100644
---- Makefile.orig
-+++ Makefile
-@@ -11,18 +11,18 @@ DISTFILES = Makefile NEWS docbook2mdoc.1
+diff -r 4effa24f4bc0 -r d26c84c81ce8 Makefile
+--- Makefile.a	Wed May 29 18:59:08 2019 +0000
++++ Makefile	Wed May 29 19:03:33 2019 +0000
+@@ -11,18 +11,18 @@
  all: docbook2mdoc
  
  docbook2mdoc: $(OBJS)
 -	$(CC) -g -o $@ $(OBJS)
 +	$(CC) $(LDFLAGS) -g -o $@ $(OBJS)
  
- statistics: statistics.o
--	$(CC) -g -o $@ statistics.c
-+	$(CC) $(LDFLAGS) -g -o $@ statistics.c
+ statistics: statistics.o xmalloc.o
+-	$(CC) -g -o $@ statistics.o xmalloc.o
++	$(CC) $(LDFLAGS) -g -o $@ statistics.o xmalloc.o
  
  www: docbook2mdoc.1.html docbook2mdoc-$(VERSION).tgz README.txt
  
@@ -32,3 +27,4 @@ index 9b8dc50..66b7a6d 100644
  
  installwww: www
  	mkdir -p $(WWWPREFIX)/snapshots
+
