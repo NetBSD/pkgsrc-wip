@@ -1,7 +1,0 @@
-- Term::ReadLine is provided by lang/perl5 too.
-  However, with it no readline(3) (or editline(3)) functionality
-  is available on at least NetBSD -current.  Investigate further
-  (probably not an rt4-cli problem but a more general
-  Term::ReadLine one, if that's addressed the dependency to
-  p5-Term-ReadLine package can be removed).
-	-- leot (2019/05/29)
