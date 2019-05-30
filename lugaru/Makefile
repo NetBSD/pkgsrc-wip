@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	cfkoch@edgebsd.org
 COMMENT=	Open source release of the game from Wolfire
-HOMEPAGE=	https://gitlab.com/osslugaru/lugaru
+HOMEPAGE=	https://osslugaru.gitlab.io/
 LICENSE=	gnu-gpl-v2 AND cc-by-sa-v3.0 AND cc-by-sa-v4.0
 
 USE_LANGUAGES=	c c++
