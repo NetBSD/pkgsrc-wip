@@ -1,0 +1,17 @@
+$NetBSD$
+
+Don't link -lutil on SunOS
+
+--- qemu_mode/qemu/tests/Makefile.orig	2017-05-31 22:53:05.000000000 +0000
++++ qemu_mode/qemu/tests/Makefile
+@@ -371,8 +371,10 @@ tests/test-qemu-opts$(EXESUF): tests/tes
+ tests/test-write-threshold$(EXESUF): tests/test-write-threshold.o $(block-obj-y) libqemuutil.a libqemustub.a
+ 
+ ifeq ($(CONFIG_POSIX),y)
++ifneq ($(CONFIG_SOLARIS),y)
+ LIBS += -lutil
+ endif
++endif
+ 
+ # QTest rules
+ 

@@ -1,23 +1,22 @@
 # $NetBSD$
 
-DISTNAME=	${GIT_COMMIT}
+DISTNAME=	TriforceAFL
 PKGNAME=	TriforceAFL-0.0
 CATEGORIES=	emulators
-MASTER_SITES=	https://github.com/nccgroup/TriforceAFL/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=nccgroup/}
 
-GIT_COMMIT=	73ec279d5ee3aa84fd7e4e8c3818428d437d8fa7
+GITHUB_TAG=	2a8ed329233a921044c903222fc3aa029ef68c69
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
-HOMEPAGE=	https://github.com/nccgroup/
+MAINTAINER=	vishnu@akulpillai.com
+HOMEPAGE=	https://github.com/nccgroup/TriforceAFL/
 COMMENT=	AFL/QEMU fuzzing with full-system emulation
 LICENSE=	apache-2.0
 
 EXTRACT_USING=	gtar
-WRKSRC=		${WRKDIR}/TriforceAFL-${GIT_COMMIT}
+WRKSRC=		${WRKDIR}/TriforceAFL-${GITHUB_TAG}
 
-USE_TOOLS=	gmake pkg-config makeinfo perl:build
+USE_TOOLS=	bison gmake pkg-config makeinfo perl:build pkg-config
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../lang/python/pyversion.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

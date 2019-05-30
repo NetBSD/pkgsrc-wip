@@ -1,18 +1,22 @@
 $NetBSD$
 
---- qemu_mode/build_qemu_support.sh.orig	2016-10-19 19:08:17.000000000 +0000
+Build qemu x86_64-bsd-user instead of linux user
+
+--- qemu_mode/build_qemu_support.sh.orig	2017-05-31 22:53:05.000000000 +0000
 +++ qemu_mode/build_qemu_support.sh
-@@ -7,10 +7,10 @@ CPU_TARGET=x86_64
+@@ -6,12 +6,12 @@
  cd qemu
  
  CFLAGS="-O3" ./configure --disable-werror \
 -  --enable-system --enable-linux-user \
 +  --enable-system --enable-bsd-user \
    --enable-guest-base --disable-gtk --disable-sdl --disable-vnc \
--  --target-list="${CPU_TARGET}-linux-user ${CPU_TARGET}-softmmu"
-+  --target-list="${CPU_TARGET}-bsd-user ${CPU_TARGET}-softmmu"
+-  --target-list="x86_64-linux-user x86_64-softmmu arm-softmmu aarch64-softmmu"
++  --target-list="x86_64-bsd-user x86_64-softmmu arm-softmmu aarch64-softmmu"
  
  make
--cp -f "${CPU_TARGET}-linux-user/qemu-${CPU_TARGET}" "../../afl-qemu-trace"
-+cp -f "${CPU_TARGET}-bsd-user/qemu-${CPU_TARGET}" "../../afl-qemu-trace"
- cp -f "${CPU_TARGET}-softmmu/qemu-system-${CPU_TARGET}" "../../afl-qemu-system-trace"
+-cp -f "x86_64-linux-user/qemu-x86_64" "../../afl-qemu-trace"
++cp -f "x86_64-bsd-user/qemu-x86_64" "../../afl-qemu-trace"
+ cp -f "x86_64-softmmu/qemu-system-x86_64" "../../afl-qemu-system-trace"
+ cp -f "x86_64-softmmu/qemu-system-x86_64" "../../qemu-system-x86_64"
+ cp -f "arm-softmmu/qemu-system-arm" "../../qemu-system-arm"
