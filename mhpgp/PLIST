@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/mhpgp
+bin/mhsign
+man/man1/mhpgp.1
+man/man1/mhsign.1
