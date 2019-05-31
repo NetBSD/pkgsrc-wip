@@ -12,6 +12,7 @@ COMMENT=	MH scripts to assist PGP operations on emails
 LICENSE=	public-domain
 
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
+DEPENDS+=	nmh-[0-9]*:../../mail/nmh
 
 USE_LANGUAGES=	# none
 
