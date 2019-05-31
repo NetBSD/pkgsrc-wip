@@ -1,3 +1,0 @@
-rt allows you to interact with an RT server over HTTP, and offers
-an interface to RT's functionality that is better-suited to automation
-and integration with other tools.

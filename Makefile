@@ -4312,7 +4312,6 @@ SUBDIR+=	rsound
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
-SUBDIR+=	rt4-cli
 SUBDIR+=	rtcmix
 SUBDIR+=	rte
 SUBDIR+=	rthread
