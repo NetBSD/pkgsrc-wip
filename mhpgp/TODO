@@ -1,6 +1,0 @@
-When importing:
-
- - adjust DISTNAME to the dated one
- - upload the distfile
- - change MASTER_SITES to MASTER_SITE_LOCAL
- - update distinfo
