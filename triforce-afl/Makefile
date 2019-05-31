@@ -11,7 +11,9 @@ HOMEPAGE=	https://github.com/nccgroup/TriforceAFL/
 COMMENT=	AFL/QEMU fuzzing with full-system emulation
 LICENSE=	apache-2.0
 
-USE_TOOLS=	bison gmake pkg-config makeinfo perl:build
+USE_TOOLS=	bash:run bison gmake perl:build pkg-config makeinfo
+REPLACE_SH+=	afl-plot
+REPLACE_BASH+=	afl-cmin
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
