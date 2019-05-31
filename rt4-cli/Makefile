@@ -2,7 +2,7 @@
 
 DISTNAME=	rt-4.4.4
 PKGNAME=	${DISTNAME:S/rt/rt4-cli/}
-CATEGORIES=	devel
+CATEGORIES=	net
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
 MAINTAINER=	leot@NetBSD.org
