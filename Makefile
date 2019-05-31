@@ -2182,7 +2182,6 @@ SUBDIR+=	metalog
 SUBDIR+=	metasploit
 SUBDIR+=	mg-cvs
 SUBDIR+=	mg-lsh
-SUBDIR+=	mhpgp
 SUBDIR+=	mic-paren
 SUBDIR+=	microbiomeutil
 SUBDIR+=	microblog-purple
