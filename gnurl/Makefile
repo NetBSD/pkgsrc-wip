@@ -14,6 +14,8 @@ LICENSE=	mit
 BUILD_DEFS+=	IPV6_READY
 
 USE_TOOLS+=		pkg-config
+USE_TOOLS+=		perl:test
+PYTHON_FOR_BUILD_ONLY=	test
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes # make install depends on it
 PKGCONFIG_OVERRIDE=	libgnurl.pc.in
@@ -60,5 +62,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
