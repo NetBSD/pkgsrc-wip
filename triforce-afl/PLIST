@@ -8,7 +8,6 @@ bin/afl-g++
 bin/afl-gcc
 bin/afl-gotcpu
 bin/afl-plot
-bin/afl-qemu-trace
 bin/afl-showmap
 bin/afl-tmin
 bin/afl-whatsup

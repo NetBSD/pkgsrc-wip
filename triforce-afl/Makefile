@@ -11,9 +11,9 @@ HOMEPAGE=	https://github.com/nccgroup/TriforceAFL/
 COMMENT=	AFL/QEMU fuzzing with full-system emulation
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/TriforceAFL-${GITHUB_TAG}
-
 USE_TOOLS=	bison gmake pkg-config makeinfo perl:build
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
