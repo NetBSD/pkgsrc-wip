@@ -4,5 +4,3 @@ SHA1 (rt-4.4.4.tar.gz) = e2c9ed8716a180638b4ce34a05d67bcc6c4c0935
 RMD160 (rt-4.4.4.tar.gz) = 10eb3df55a30d3cba154b36d40b5970fd2cebe50
 SHA512 (rt-4.4.4.tar.gz) = 95335cfa9e7107300670a5e8631ffb6f402895dae051201d051ac01885b0cb185f838a666acaec773e0f670e1b9d16b7cede72f37ce9832fd83a9da8514e6972
 Size (rt-4.4.4.tar.gz) = 9977845 bytes
-SHA1 (patch-Makefile.in) = d46b5cd6e9de77409ac8d6b6c172bc9dd3ed96be
-SHA1 (patch-config.layout) = 1e237d38d4e3a2ad6c240feb3e58f1345c7ff476
