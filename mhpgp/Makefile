@@ -1,10 +1,10 @@
 # $NetBSD$
 
-# FIXME: DISTNAME should always have a version
 DISTNAME=	gnupg-scripts-for-mh
 PKGNAME=	mhpgp-20070530
 CATEGORIES=	mail
 MASTER_SITES=	http://faculty.cs.niu.edu/~rickert/mh/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://faculty.cs.niu.edu/~rickert/mh/
