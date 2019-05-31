@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2019/03/05 00:40:37 gdt Exp $
 
-DISTNAME=	gnurl-7.64.1
+DISTNAME=	gnurl-7.65.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=gnunet/}
 EXTRACT_SUFX=	.tar.Z
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 BUILD_DEFS+=	IPV6_READY
 
-USE_TOOLS+=		nroff perl pkg-config
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes # make install depends on it
 PKGCONFIG_OVERRIDE=	libgnurl.pc.in
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--disable-ftp
 CONFIGURE_ARGS+=	--disable-gopher
 CONFIGURE_ARGS+=	--disable-imap
 CONFIGURE_ARGS+=	--disable-ldap
-CONFIGURE_ARGS+=	--disable-libpsl
 CONFIGURE_ARGS+=	--without-libpsl
 CONFIGURE_ARGS+=	--without-librtmp
 CONFIGURE_ARGS+=	--with-libidn2
@@ -42,7 +41,7 @@ CONFIGURE_ARGS+=	--disable-smtp
 CONFIGURE_ARGS+=	--without-ssl
 CONFIGURE_ARGS+=	--disable-telnet
 CONFIGURE_ARGS+=	--disable-tftp
-CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 # Fallback to gnutls preferred CA certificates
 CONFIGURE_ARGS+=	--without-ca-bundle
 CONFIGURE_ARGS+=	--without-ca-path
