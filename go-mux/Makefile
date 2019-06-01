@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=		go-mux-${GITHUB_TAG}
+PKGREVISION=		1
 PKGNAME=		go-mux-1.7.2
 GITHUB_PROJECT=		mux
 CATEGORIES=		devel
@@ -12,7 +13,7 @@ HOMEPAGE=		https://github.com/gorilla/go-mux
 COMMENT=		URL router and dispatcher for Go
 LICENSE=		modified-bsd # bsd-3
 
-GO_SRCPATH=		github.com/gorilla/go-mux
+GO_SRCPATH=		github.com/gorilla/mux
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
 
 .include "../../lang/go/go-package.mk"
