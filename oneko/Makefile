@@ -1,25 +1,19 @@
 # $NetBSD$
 
-DISTNAME=		oneko-1.2
-#PKGNAME=		oneko-1.2.1
+DISTNAME=		oneko-1.2.1
 CATEGORIES=		x11 games
-GIT_REPOSITORIES=	oneko
-GIT_REPO.oneko=		https://c.n0.is/git/oneko.git
-#MASTER_SITES=		https://d.n0.is/pub/oneko/
-#EXTRACT_SUFX=		.pax.Z
+MASTER_SITES=		https://d.n0.is/pub/oneko/
+EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		ng0@n0.is
 COMMENT=		Neko (cat) or other animals follow your pointer
-LICENSE=		2-clause-bsd
+LICENSE=		2-clause-bsd # and public-domain
 
-WRKSRC=			${WRKDIR}/oneko
+USE_CMAKE=		yes
+USE_LANGUAGES=		c
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+CMAKE_ARGS+=		-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/oneko ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/oneko.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
