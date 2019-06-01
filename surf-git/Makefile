@@ -3,7 +3,7 @@
 DISTNAME=	surf-2.0
 CATEGORIES=	www
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://surf.suckless.org/
 COMMENT=	Fast and minimalistic web browser based on WebKit/GTK+
 LICENSE=	mit
