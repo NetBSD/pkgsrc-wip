@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	dosbox-x
-PKGNAME=	dosbox-x-0.82.17
+PKGNAME=	dosbox-x-0.82.19
 DISTNAME=	${GITHUB_TAG}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
@@ -28,6 +28,8 @@ PKGCONFIG_OVERRIDE+=	vs2015/zlib/zlib.pc.in
 
 CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/androidbuildlibs.sh
 CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/iosbuild.sh
+
+NOT_PAX_MPROTECT_SAFE=	bin/dosbox-x
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
