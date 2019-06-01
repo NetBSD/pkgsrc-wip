@@ -1,0 +1,21 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/gorilla/go-mux.a
+gopkg/src/github.com/gorilla/go-mux/AUTHORS
+gopkg/src/github.com/gorilla/go-mux/ISSUE_TEMPLATE.md
+gopkg/src/github.com/gorilla/go-mux/LICENSE
+gopkg/src/github.com/gorilla/go-mux/README.md
+gopkg/src/github.com/gorilla/go-mux/bench_test.go
+gopkg/src/github.com/gorilla/go-mux/context.go
+gopkg/src/github.com/gorilla/go-mux/context_test.go
+gopkg/src/github.com/gorilla/go-mux/doc.go
+gopkg/src/github.com/gorilla/go-mux/example_authentication_middleware_test.go
+gopkg/src/github.com/gorilla/go-mux/example_route_test.go
+gopkg/src/github.com/gorilla/go-mux/go.mod
+gopkg/src/github.com/gorilla/go-mux/middleware.go
+gopkg/src/github.com/gorilla/go-mux/middleware_test.go
+gopkg/src/github.com/gorilla/go-mux/mux.go
+gopkg/src/github.com/gorilla/go-mux/mux_test.go
+gopkg/src/github.com/gorilla/go-mux/old_test.go
+gopkg/src/github.com/gorilla/go-mux/regexp.go
+gopkg/src/github.com/gorilla/go-mux/route.go
+gopkg/src/github.com/gorilla/go-mux/test_helpers.go
