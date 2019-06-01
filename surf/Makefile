@@ -4,7 +4,7 @@ DISTNAME=	surf-2.0
 CATEGORIES=	www
 MASTER_SITES=	http://dl.suckless.org/surf/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://surf.suckless.org/
 COMMENT=	Surf is a fast and minimalistic web browser based on WebKit2/GTK+
 LICENSE=	mit
