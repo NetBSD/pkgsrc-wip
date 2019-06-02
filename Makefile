@@ -1293,6 +1293,7 @@ SUBDIR+=	guile-bytestructures
 SUBDIR+=	guile-commonmark
 SUBDIR+=	guile-gcrypt
 SUBDIR+=	guile-git
+SUBDIR+=	guile-gash
 SUBDIR+=	guile-haunt
 SUBDIR+=	guile-json
 SUBDIR+=	guile-reader
