@@ -5,7 +5,7 @@ CATEGORIES=	multimedia net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mps-youtube/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://github.com/np1/mps-youtube
+HOMEPAGE=	https://github.com/mps-youtube/mps-youtube
 COMMENT=	Terminal based YouTube player and downloader
 LICENSE=	gnu-gpl-v3
 
