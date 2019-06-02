@@ -1,0 +1,17 @@
+$NetBSD$
+
+SHA1 (TriforceAFL-0.0.2017.06.01-2a8ed329233a921044c903222fc3aa029ef68c69.tar.gz) = 9ab1432700070345ee61b4a8719e90b9756de131
+RMD160 (TriforceAFL-0.0.2017.06.01-2a8ed329233a921044c903222fc3aa029ef68c69.tar.gz) = e4c34a542de1e6a5f6cad204fcea17858e7b6a34
+SHA512 (TriforceAFL-0.0.2017.06.01-2a8ed329233a921044c903222fc3aa029ef68c69.tar.gz) = aac1abb5e9d334923a4d6dab159e518bce1944573884e1012620aff139d4d0abcdbca41104c1c2eed9006fc277321f1f13212a698a7b7c49c6b0f1f98078d2e0
+Size (TriforceAFL-0.0.2017.06.01-2a8ed329233a921044c903222fc3aa029ef68c69.tar.gz) = 32045053 bytes
+SHA1 (patch-qemu__mode_build__qemu__support.sh) = 76fdbbbb93971e0ce55579b90c183a90b9a80e8f
+SHA1 (patch-qemu__mode_qemu_Makefile) = 8d8baa55e4f93ba635f9399c8e0a29f6f59d2292
+SHA1 (patch-qemu__mode_qemu_audio_audio.c) = aaa82ac3208ef605cb6f5b0fabd38a0d223f21f2
+SHA1 (patch-qemu__mode_qemu_hw_display_omap__dss.c) = 48f38ead6aa5a14b13f87e44217bb551817280ad
+SHA1 (patch-qemu__mode_qemu_hw_net_etraxfs__eth.c) = ceec571369f0f0a1f5b177f28a70a6d888ed67f2
+SHA1 (patch-qemu__mode_qemu_hw_net_xilinx__axienet.c) = 14106d36592b27beccf50f3844fc64fc5d591c1c
+SHA1 (patch-qemu__mode_qemu_hw_ppc_mac__newworld.c) = 51ecb00d8b0848277d6783eb3ee437665f6f963c
+SHA1 (patch-qemu__mode_qemu_hw_ppc_mac__oldworld.c) = 666b828a0060879503497c1405e2d2601d88bb5e
+SHA1 (patch-qemu__mode_qemu_memory.c) = 5f2de939254ea5d1b8acc76580205163edee471c
+SHA1 (patch-qemu__mode_qemu_slirp_tcp__subr.c) = 057d6e7b7af5ba9b3994f7944e797d0e1fd0c73b
+SHA1 (patch-qemu__mode_qemu_tests_Makefile) = c668c88991ccefdac8b0665113ea2c1a3d479ec5
