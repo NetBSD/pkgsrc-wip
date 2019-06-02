@@ -1,21 +1,22 @@
 $NetBSD$
 
-Install into subdirectory
-
 --- Makefile.orig	2017-05-31 22:53:05.000000000 +0000
 +++ Makefile
-@@ -17,10 +17,10 @@ PROGNAME    = afl
+@@ -16,7 +16,7 @@
+ PROGNAME    = afl
  VERSION     = 2.06b
  
- PREFIX     ?= /usr/local
--BIN_PATH    = $(PREFIX)/bin
--HELPER_PATH = $(PREFIX)/lib/afl
--DOC_PATH    = $(PREFIX)/share/doc/afl
--MISC_PATH   = $(PREFIX)/share/afl
-+BIN_PATH    = $(PREFIX)/triforce-afl
-+HELPER_PATH = $(PREFIX)/lib/triforce-afl
-+DOC_PATH    = $(PREFIX)/share/doc/triforce-afl
-+MISC_PATH   = $(PREFIX)/share/triforce-afl
- 
- # PROGS intentionally omit afl-as, which gets installed to its own dir.
- 
+-PREFIX     ?= /usr/local
++PREFIX      = /usr/pkg/triforce-afl
+ BIN_PATH    = $(PREFIX)/bin
+ HELPER_PATH = $(PREFIX)/lib/afl
+ DOC_PATH    = $(PREFIX)/share/doc/afl
+@@ -122,7 +122,7 @@ install: all
+ 	rm -f $${DESTDIR}$(BIN_PATH)/afl-plot.sh
+ 	install -m 755 $(PROGS) $(SH_PROGS) $${DESTDIR}$(BIN_PATH)
+ 	rm -f $${DESTDIR}$(BIN_PATH)/afl-as
+-	if [ -f afl-qemu-trace ]; then install -m 755 afl-qemu-trace $${DESTDIR}$(BIN_PATH); fi
++	if [ -f afl-qemu-system-trace ]; then install -m 755 afl-qemu-system-trace $${DESTDIR}$(BIN_PATH); fi
+ 	if [ -f afl-clang-fast -a -f afl-llvm-pass.so -a -f afl-llvm-rt.o ]; then set -e; install -m 755 afl-clang-fast $${DESTDIR}$(BIN_PATH); ln -sf afl-clang-fast $${DESTDIR}$(BIN_PATH)/afl-clang-fast++; install -m 755 afl-llvm-pass.so afl-llvm-rt.o $${DESTDIR}$(HELPER_PATH); fi
+ 	set -e; for i in afl-g++ afl-clang afl-clang++; do ln -sf afl-gcc $${DESTDIR}$(BIN_PATH)/$$i; done
+ 	install -m 755 afl-as $${DESTDIR}$(HELPER_PATH)
