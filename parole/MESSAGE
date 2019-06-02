@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD$
+
+You'll need to install additional gst-plugins1-* packages to play
+some types of media. Note that they are spread across several
+categories (x11, audio, etc.).
+===========================================================================

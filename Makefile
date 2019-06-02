@@ -2801,6 +2801,7 @@ SUBDIR+=	pangoterm
 SUBDIR+=	parafly
 SUBDIR+=	paraview
 SUBDIR+=	parcellite
+SUBDIR+=	parole
 SUBDIR+=	parted
 SUBDIR+=	partonevolution
 SUBDIR+=	pasmo
