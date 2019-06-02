@@ -1,0 +1,21 @@
+$NetBSD$
+
+Install into subdirectory
+
+--- Makefile.orig	2017-05-31 22:53:05.000000000 +0000
++++ Makefile
+@@ -17,10 +17,10 @@ PROGNAME    = afl
+ VERSION     = 2.06b
+ 
+ PREFIX     ?= /usr/local
+-BIN_PATH    = $(PREFIX)/bin
+-HELPER_PATH = $(PREFIX)/lib/afl
+-DOC_PATH    = $(PREFIX)/share/doc/afl
+-MISC_PATH   = $(PREFIX)/share/afl
++BIN_PATH    = $(PREFIX)/triforce-afl
++HELPER_PATH = $(PREFIX)/lib/triforce-afl
++DOC_PATH    = $(PREFIX)/share/doc/triforce-afl
++MISC_PATH   = $(PREFIX)/share/triforce-afl
+ 
+ # PROGS intentionally omit afl-as, which gets installed to its own dir.
+ 

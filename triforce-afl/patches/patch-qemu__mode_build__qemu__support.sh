@@ -1,6 +1,6 @@
 $NetBSD$
 
-Don't build bsd-user
+Disable linux-user and bsd-user
 
 --- qemu_mode/build_qemu_support.sh.orig	2017-05-31 22:53:05.000000000 +0000
 +++ qemu_mode/build_qemu_support.sh
@@ -9,7 +9,7 @@ Don't build bsd-user
  
  CFLAGS="-O3" ./configure --disable-werror \
 -  --enable-system --enable-linux-user \
-+  --enable-system --disable-bsd-user \
++  --enable-system --disable-linux-user --disable-bsd-user \
    --enable-guest-base --disable-gtk --disable-sdl --disable-vnc \
 -  --target-list="x86_64-linux-user x86_64-softmmu arm-softmmu aarch64-softmmu"
 +  --target-list="x86_64-softmmu arm-softmmu aarch64-softmmu"
