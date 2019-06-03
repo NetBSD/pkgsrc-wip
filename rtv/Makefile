@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rtv-1.26.0
+DISTNAME=	rtv-1.27.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rtv/}
 
