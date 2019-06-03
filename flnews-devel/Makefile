@@ -10,7 +10,7 @@ MASTER_SITES+=	http://www.southcity.de/flnews/src/
 EXTRACT_SUFX=	.tar.bz2
 #EXTRACT_USING=	bsdtar
 
-MAINTAINER=	michael.baeuerle@gmx.net
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	http://micha.freeshell.org/flnews/
 COMMENT=	Fast and lightweight USENET newsreader with GUI
 LICENSE=	modified-bsd AND 2-clause-bsd AND unicode
