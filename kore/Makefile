@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kore-3.3.0
+DISTNAME=	kore-3.3.1
 CATEGORIES=	www
 MASTER_SITES=	https://kore.io/releases/
 
