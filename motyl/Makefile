@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_PROJECT=	motyl
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	fred@statdns.com
+MAINTAINER=	fcambus@netbsd.org
 HOMEPAGE=	https://github.com/fcambus/motyl/
 COMMENT=	Opinionated blog-aware static site generator
 LICENSE=	2-clause-bsd

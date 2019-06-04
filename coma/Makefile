@@ -4,7 +4,7 @@ DISTNAME=	coma-1.0
 CATEGORIES=	wm
 MASTER_SITES=	https://coma.one/releases/
 
-MAINTAINER=	fred@statdns.com
+MAINTAINER=	fcambus@netbsd.org
 HOMEPAGE=	https://coma.one/releases/
 COMMENT=	Keyboard driven tiling window manager
 LICENSE=	isc

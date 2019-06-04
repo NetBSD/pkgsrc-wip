@@ -4,7 +4,7 @@ DISTNAME=	trader-7.12
 CATEGORIES=	games
 MASTER_SITES=	https://ftp.zap.org.au/pub/trader/unix/
 
-MAINTAINER=	fred@statdns.com
+MAINTAINER=	fcambus@netbsd.org
 HOMEPAGE=	https://www.zap.org.au/software/trader/
 COMMENT=	Simple text-based game of interstellar trading
 LICENSE=	gnu-gpl-v3
