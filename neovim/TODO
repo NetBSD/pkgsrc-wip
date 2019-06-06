@@ -4,3 +4,6 @@
    lua-bitopt, lua-busted
  (According: <https://packages.debian.org/sid/source/neovim>, via:
   <https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites>)
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2019-12735
