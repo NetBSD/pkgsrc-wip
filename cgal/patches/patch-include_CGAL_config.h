@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD endianness support
+
 --- include/CGAL/config.h.orig	2017-09-20 19:00:13.000000000 +0000
 +++ include/CGAL/config.h
 @@ -325,6 +325,15 @@
