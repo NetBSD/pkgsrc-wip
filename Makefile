@@ -367,7 +367,6 @@ SUBDIR+=	cdbfasta
 SUBDIR+=	cddlib
 SUBDIR+=	cde
 SUBDIR+=	cdhit
-SUBDIR+=	cdirip
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
