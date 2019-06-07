@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2019/03/05 00:40:37 gdt Exp $
 
-DISTNAME=	gnurl-7.65.0
+DISTNAME=	gnurl-7.65.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=gnunet/}
 EXTRACT_SUFX=	.tar.Z
