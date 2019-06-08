@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (vault-1.1.2.tar.gz) = 3a034becda6079f7303ecaa74d41a9f5a0bf52af
-RMD160 (vault-1.1.2.tar.gz) = a06c94a47bcd07b2b8ed78e0c12f543893414406
-SHA512 (vault-1.1.2.tar.gz) = bc645bc5efeaf5a185479ab2ea78589762d09a40e889845d8cceac94568fcfcfeac94ae602c548648aea800b791121fbb2b75c3af9a9651d08dd9e38c1219826
-Size (vault-1.1.2.tar.gz) = 26026601 bytes
+SHA1 (vault-1.1.3.tar.gz) = 5761c928755210123e10593f80f6e5f62ad1ddf9
+RMD160 (vault-1.1.3.tar.gz) = 8e434559f4d6190fdd2d7f49553e1b120de179e2
+SHA512 (vault-1.1.3.tar.gz) = bf757558b984711967fdc623393e71c74d5e73922de3b0574ecb229a5d52320ebc3f848b48eabf0ed7a8d6e9d9f6c12d69fb23309fb8c19492b135344c8c4be2
+Size (vault-1.1.3.tar.gz) = 26026249 bytes
