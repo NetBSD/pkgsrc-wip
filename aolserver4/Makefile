@@ -39,8 +39,7 @@ OWN_DIRS_PERMS+=	${NSD_PIDDIR} ${NSD_USER} ${NSD_GROUP} 740
 SUBST_CLASSES+=		cl1
 SUBST_STAGE.cl1=	post-patch
 SUBST_FILES.cl1=	sample-config.tcl
-SUBST_SED.cl1=		-e s!@PREFIX@!${PREFIX}!g \
-			-e s!@VARBASE@!${VARBASE}!g
+SUBST_VARS.cl1=		PREFIX VARBASE
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

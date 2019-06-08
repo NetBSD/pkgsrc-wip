@@ -32,9 +32,7 @@ SCSH_IMAGE=		${PREFIX}/lib/scsh/scsh.image
 SUBST_CLASSES+=		orion
 SUBST_STAGE.orion=	post-patch
 SUBST_FILES.orion=	install.scm
-SUBST_SED.orion=	-e "s,@HEAP_SIZE@,${HEAP_SIZE},g" \
-			-e "s,@SCSH_VM@,${SCSH_VM},g"     \
-			-e "s,@SCSH_IMAGE@,${SCSH_IMAGE},g"
+SUBST_VARS.orion=	HEAP_SIZE SCSH_VM SCSH_IMAGE
 
 do-install:
 	cd ${WRKSRC}; \
