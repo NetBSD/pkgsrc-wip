@@ -1,4 +1,4 @@
-REPLACE_PYTHON = \
+REPLACE_PYTHON= \
 	grc/base/Platform.py \
 	grc/base/Port.py \
 	grc/base/Constants.py \
