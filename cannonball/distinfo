@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.18 2015/11/03 20:31:10 agc Exp $
+
+SHA1 (cannonball-0.3-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) = a92cea8856b9c625541841969de01b72ff149cd6
+RMD160 (cannonball-0.3-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) = 79f33565344ec4f5b6d37ff0967c033ea8751bba
+SHA512 (cannonball-0.3-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) = b387e1d855c7949a9685d0fc9dac1a917962e2a1679a0ef5813f0efe6a936e5e25e57ccd80d54f28384c390a74f0285f40c673d2294c24693a52cb52ece80de0
+Size (cannonball-0.3-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) = 277449 bytes
+SHA1 (patch-cmake_CMakeLists.txt) = 1776821704ccf44ef788f1a64b8e65903465b0db
+SHA1 (patch-cmake_bsd.cmake) = c331da7ef49e2351395959da641cd7ec0847bd38
