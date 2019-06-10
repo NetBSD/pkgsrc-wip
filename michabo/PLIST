@@ -1,0 +1,14 @@
+@comment $NetBSD$
+bin/Michabo
+share/michabo/icons/action-favorite.svg
+share/michabo/icons/action-repeat.svg
+share/michabo/icons/action-reply.svg
+share/michabo/icons/ellipsis-h.svg
+share/michabo/icons/michabo-16.png
+share/michabo/icons/michabo-16.svg
+share/michabo/icons/michabo-256.png
+share/michabo/icons/michabo-32.png
+share/michabo/icons/michabo-32.svg
+share/michabo/icons/michabo-64.png
+share/michabo/icons/michabo-64.svg
+share/michabo/icons/michabo-default.svg

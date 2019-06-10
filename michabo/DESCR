@@ -1,0 +1,5 @@
+Michabo is a work in progress native (e.g. not Electron) desktop app
+for Pleroma and Mastodon servers.
+Warning! This app is not yet suitable for use as your daily driver.
+While the client core is robust, there are many missing features which
+make it annoying to use.
