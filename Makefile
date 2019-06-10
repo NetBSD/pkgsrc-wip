@@ -4225,6 +4225,7 @@ SUBDIR+=	qstat214
 SUBDIR+=	qt4-gstreamer
 SUBDIR+=	qt4-libqtlua
 SUBDIR+=	qt5-libqtlua
+SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qscintilla
 SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qt5-qtwebengine
