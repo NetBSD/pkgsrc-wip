@@ -1211,6 +1211,7 @@ SUBDIR+=	gonepass-git
 SUBDIR+=	google-perftools
 SUBDIR+=	googlecl
 SUBDIR+=	gopass
+SUBDIR+=	gophervalidator-git
 SUBDIR+=	gopkgdep
 SUBDIR+=	gpak
 SUBDIR+=	gplbasic
