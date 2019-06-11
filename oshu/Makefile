@@ -13,6 +13,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++14
 USE_CMAKE=	yes
 
+CMAKE_ARGS+=	-DOSHU_SKINS="minimal;osu"
+
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
