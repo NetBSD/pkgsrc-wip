@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/05/08 12:43:31 jonthn Exp $
 
-DISTNAME=	procps-ng-3.3.10
-PKGNAME=	watch-3.3.10
+DISTNAME=	procps-ng-3.3.15
+PKGNAME=	watch-3.3.15
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=procps-ng/}
 EXTRACT_SUFX=	.tar.xz

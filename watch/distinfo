@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.1 2015/05/08 12:43:31 jonthn Exp $
 
-SHA1 (procps-ng-3.3.10.tar.xz) = 484db198d6a18a42b4011d5ecb2cb784a81b0e4f
-RMD160 (procps-ng-3.3.10.tar.xz) = ffc21f6b9f0a8d42aa8b4b0be33c2b76a0efa0be
-Size (procps-ng-3.3.10.tar.xz) = 819880 bytes
+SHA1 (procps-ng-3.3.15.tar.xz) = 2929bc64f0cf7b2db997eef79b7187658e47230d
+RMD160 (procps-ng-3.3.15.tar.xz) = cf1f4099d4d304eb4461a88e68d45a901464213f
+SHA512 (procps-ng-3.3.15.tar.xz) = bc83ccc1941e7be8266588fdfbba17e2424b30163a215873ee6dee96215d66249f5d5e46fec2278d030b42bd7599861c4878360042dacec4c221ce411453747c
+Size (procps-ng-3.3.15.tar.xz) = 904416 bytes
 SHA1 (patch-Makefile.am) = a7629307bd9fc71c88fa71619f86e0ec58b61b44
 SHA1 (patch-autogen.sh) = 470959938bbb18e595ef7de0b0dbdacfb4684496
 SHA1 (patch-configure.ac) = 8b96a9f79f0f9d1cf41c82e9d2fc19b37d3d417c
