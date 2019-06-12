@@ -1,14 +1,14 @@
 $NetBSD: distinfo,v 1.1 2012/12/11 20:21:43 ftigeot Exp $
 
-SHA1 (nss-pam-ldapd-0.9.7.tar.gz) = 66bd9024d2dfa46097aa75cf144ff2b894073659
-RMD160 (nss-pam-ldapd-0.9.7.tar.gz) = 57a364d2fe0c8e88ab71a07b830ccd1ac97bdc14
-SHA512 (nss-pam-ldapd-0.9.7.tar.gz) = 2117262f41c4fc54987f9f663ed71126100420ecff391cc280e98d7864094db201a81a4ebf7e5634436982092be3c751971d8aee53e39c42a8572ab57b561284
-Size (nss-pam-ldapd-0.9.7.tar.gz) = 762743 bytes
+SHA1 (nss-pam-ldapd-0.9.10.tar.gz) = e5e2cc2941569d7a99734e8fc3b3c12f9c18ef3d
+RMD160 (nss-pam-ldapd-0.9.10.tar.gz) = 1a19cf2abb2de438e532f2bbcde5ab4f9c8de361
+SHA512 (nss-pam-ldapd-0.9.10.tar.gz) = be559bc0d60bcf25af94919d456922bee4abb2c0417a8d2daf954d9aa9af2d41cb06a20cef04d9afd61c1316a744331753ee1cb25ef4a9c5411c508193231218
+Size (nss-pam-ldapd-0.9.10.tar.gz) = 749302 bytes
 SHA1 (patch-Makefile.am) = 4ced568a0c1bf824be6dfaf3672dfcd33da6297c
 SHA1 (patch-Makefile.in) = 2deea5a0fff3ed05c0989210e5df783530d23ab1
 SHA1 (patch-compat_getpeercred.c) = cebcfb38f09d829ae3ab8640fd8ee7dbdb43672a
 SHA1 (patch-compat_nss_compat.c) = 22857c0a0d7f6ae068982373f34448330e1b5840
 SHA1 (patch-compat_nss_compat.h) = f31b2b1c43a9ccc6617fd283d62db7a0abd889c6
 SHA1 (patch-configure.ac) = 8300ed640f8ab8810b44807678eb8aac177ed95e
-SHA1 (patch-nss_bsdnss.c) = baf451c893a76d81b88e2563dbacba7ce24bde3b
+SHA1 (patch-nss_bsdnss.c) = f6a2eebd5db46a66fdbf67e43723728d48644a3f
 SHA1 (patch-pynslcd_Makefile.in) = 61f5f0e1c9e059e410fba1e28e914324381ebbf2

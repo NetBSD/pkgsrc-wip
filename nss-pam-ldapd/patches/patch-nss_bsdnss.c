@@ -3,9 +3,9 @@ $NetBSD$
 NetBSD does not have __nss_compat_xxx functions in its C library.
 It also need non-_r variants.
 
---- nss/bsdnss.c.orig	2012-05-18 15:34:22.000000000 +0200
-+++ nss/bsdnss.c	2013-12-03 17:18:50.000000000 +0100
-@@ -40,111 +40,110 @@
+--- nss/bsdnss.c.orig	2018-09-01 09:09:35.000000000 +0000
++++ nss/bsdnss.c
+@@ -46,21 +46,27 @@ struct name_list {
  NSS_METHOD_PROTOTYPE(__nss_compat_getgrnam_r);
  NSS_METHOD_PROTOTYPE(__nss_compat_getgrgid_r);
  NSS_METHOD_PROTOTYPE(__nss_compat_getgrent_r);
@@ -30,7 +30,12 @@ It also need non-_r variants.
 -NSS_METHOD_PROTOTYPE(__nss_compat_gethostbyname2);
  NSS_METHOD_PROTOTYPE(__nss_compat_gethostbyaddr);
  
- static ns_mtab methods[] = {
+ NSS_METHOD_PROTOTYPE(__nss_compat_getnetgrent_r);
++NSS_METHOD_PROTOTYPE(__nss_compat_getnetgrent);
+ NSS_METHOD_PROTOTYPE(__nss_compat_setnetgrent);
+ NSS_METHOD_PROTOTYPE(__nss_compat_endnetgrent);
+ 
+@@ -68,33 +74,45 @@ static ns_mtab methods[] = {
    { NSDB_GROUP, "getgrnam_r", __nss_compat_getgrnam_r, (void *)NSS_NAME(getgrnam_r) },
    { NSDB_GROUP, "getgrgid_r", __nss_compat_getgrgid_r, (void *)NSS_NAME(getgrgid_r) },
    { NSDB_GROUP, "getgrent_r", __nss_compat_getgrent_r, (void *)NSS_NAME(getgrent_r) },
@@ -72,9 +77,13 @@ It also need non-_r variants.
    { NSDB_PASSWD_COMPAT, "endpwent",   __nss_compat_endpwent,   (void *)NSS_NAME(endpwent) },
 +  { NSDB_PASSWD_COMPAT, "getpwnam",   __nss_compat_getpwnam,   (void *)NSS_NAME(getpwnam_r) },
 +  { NSDB_PASSWD_COMPAT, "getpwuid",   __nss_compat_getpwuid,   (void *)NSS_NAME(getpwuid_r) },
-+
- };
  
+   { NSDB_NETGROUP, "getnetgrent_r", __nss_compat_getnetgrent_r, (void *)NSS_NAME(getnetgrent_r) },
++  { NSDB_NETGROUP, "getnetgrent", __nss_compat_getnetgrent_r, (void *)NSS_NAME(getnetgrent_r) },
+   { NSDB_NETGROUP, "setnetgrent", __nss_compat_setnetgrent, (void *)NSS_NAME(setnetgrent) },
+   { NSDB_NETGROUP, "endnetgrent", __nss_compat_endnetgrent, (void *)NSS_NAME(endnetgrent) },
+ };
+@@ -102,63 +120,45 @@ static ns_mtab methods[] = {
  typedef nss_status_t (*gethbn_t)(const char *, struct hostent *, char *, size_t, int *, int *);
  typedef nss_status_t (*gethba_t)(struct in_addr *, int, int, struct hostent *, char *, size_t, int *, int *);
  
@@ -116,7 +125,7 @@ It also need non-_r variants.
 -  fn = (gethbn_t)mdata;
 +  fn = (gethbn_t)cbdata;
    name = va_arg(ap, const char *);
-+  namelen=va_arg(ap,int);
++  namelen = va_arg(ap, int);
    af = va_arg(ap, int);
 -  result = va_arg(ap, struct hostent *);
 -  status = fn(name, result, buffer, sizeof(buffer), &errnop, &h_errnop);
@@ -153,7 +162,7 @@ It also need non-_r variants.
    status = __nss_compat_result(status, errnop);
    h_errno = h_errnop;
    return status;
-@@ -168,23 +167,27 @@ static int __gr_addgid(gid_t gid, gid_t 
+@@ -182,23 +182,27 @@ static int __gr_addgid(gid_t gid, gid_t 
    return ret;
  }
  
@@ -182,3 +191,19 @@ It also need non-_r variants.
    tmpgroups = malloc(maxgrp * sizeof(gid_t));
    if (tmpgroups == NULL)
      return NSS_STATUS_UNAVAIL;
+@@ -270,6 +274,7 @@ int __nss_compat_getnetgrent_r(void UNUS
+           return (NS_SUCCESS);
+         }
+         break;
++#ifndef __NetBSD__
+       case NS_RETURN:
+         netlist = netgr->needed_groups;
+         if(netlist != NULL){
+@@ -280,6 +285,7 @@ int __nss_compat_getnetgrent_r(void UNUS
+           ret = NS_TRYAGAIN;
+         }
+         break;
++#endif
+       default:
+         ;
+     }
