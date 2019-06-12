@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/doomlegacy
+share/doc/doomlegacy/legacy.css
+share/doc/doomlegacy/whatsnew.html
+share/doomlegacy/legacy.wad

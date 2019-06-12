@@ -1,0 +1,38 @@
+$NetBSD$
+
+Add NetBSD to OS list.
+
+--- src/Makefile.orig	2018-07-16 09:17:06.000000000 +0000
++++ src/Makefile
+@@ -449,7 +449,7 @@ endif
+ endif
+ 
+ 
+-OS_LIST:=LINUX FREEBSD WIN32 WIN7 WIN98 OS2 DOS MAC
++OS_LIST:=LINUX FREEBSD NETBSD WIN32 WIN7 WIN98 OS2 DOS MAC
+ 
+ OPTS:=
+ 
+@@ -479,6 +479,14 @@ ifeq ($(OS), FREEBSD)
+   # __FreeBSD__  __FreeBSD_kernel__  __DragonFly__
+   # SDL_platform.h for FreeBSD defines: __FREEBSD__
+ else
++ifeq ($(OS), NETBSD)
++  # Uses statvfs(5).
++  NETBSD=1
++  OPTS:=-DLINUX -DNETBSD
++  #Known Compiler symbols
++  # __NetBSD__
++  # SDL_platform.h for FreeBSD defines: __NETBSD__
++else
+ ifeq ($(OS), WIN32)
+   WIN32=1
+   DOSFILE=1
+@@ -545,6 +553,7 @@ endif
+ endif
+ endif
+ endif
++endif
+ export DOSFILE
+ 
+ # all OPTINC need to have -I. because of how includes are written
