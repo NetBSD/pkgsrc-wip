@@ -8,22 +8,22 @@ DISTNAME=		${PKGNAME:S/-/_/}_source
 DISTFILES=		${DEFAULT_DISTFILES} doomlegacy_${VERS}_common.zip
 EXTRACT_SUFX=		.tar.bz2
 
-
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		http://doomlegacy.sourceforge.net/
 COMMENT=		The legacy of Doom
 LICENSE=		gnu-gpl-v2
 
-# Tested on GNU/Linux and NetBSD
+# Tested to work on Linux/ppc (Big Endian) and NetBSD/amd64 (Little Endian)
 # Source has support for the other listed OS too (may need additional work)
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
 			NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
+USE_TOOLS+=		gmake
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/endian.mk"
 
-USE_TOOLS+=		gmake
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 MAKE_FLAGS+=		OS=FREEBSD
 .elif ${OPSYS} == "NetBSD"
@@ -36,11 +36,10 @@ MAKE_FLAGS+=		OS=LINUX
 .endif
 MAKE_FLAGS+=		HAVE_MIXER=1 DEBUG=0
 
-.include "../../mk/endian.mk"
-
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=		-D__BIG_ENDIAN__
 .endif
+CFLAGS+=		-Wno-char-subscripts
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR?=		share/doom
@@ -60,6 +59,7 @@ do-install:
 		${INSTALL_DATA} legacy.wad				\
 			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
 
+# Ensure that at least the shareware Episode 1 of Doom is available
 DEPENDS+=		doom1-[0-9]*:../../games/doom1
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7
