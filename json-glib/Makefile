@@ -14,10 +14,12 @@ USE_TOOLS+=	gmake msgfmt msgmerge pkg-config xgettext
 
 CONFIGURE_ARGS+=	--disable-man
 
-# fails to build
+# workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/json-glib
 
-TEST_TARGET=		check
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -C output test
 
 .include "options.mk"
 
