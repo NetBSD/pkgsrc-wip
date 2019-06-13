@@ -1,26 +1,42 @@
 $NetBSD$
 
 Add NetBSD to OS list.
+Honor environment variables CFLAGS, LDFLAGS and LIBS
 
 --- src/Makefile.orig	2018-07-16 09:17:06.000000000 +0000
 +++ src/Makefile
-@@ -449,7 +449,7 @@ endif
+@@ -449,13 +449,14 @@ endif
  endif
  
  
 -OS_LIST:=LINUX FREEBSD WIN32 WIN7 WIN98 OS2 DOS MAC
 +OS_LIST:=LINUX FREEBSD NETBSD WIN32 WIN7 WIN98 OS2 DOS MAC
  
- OPTS:=
+-OPTS:=
++# Do not reset OPTS (take CFLAGS value from environment as base)
++OPTS=$(CFLAGS)
  
-@@ -479,6 +479,14 @@ ifeq ($(OS), FREEBSD)
+ ifeq ($(OS), LINUX)
+   LINUX=1
+-  OPTS:=-DLINUX
++  OPTS+=-DLINUX
+   #Known Compiler symbols
+   # linux  __linux  __linux__
+   # AIX defines: _AIX
+@@ -474,15 +475,23 @@ else
+ ifeq ($(OS), FREEBSD)
+   # Has some linking differences from the rest of Linux-like OS.
+   FREEBSD=1
+-  OPTS:=-DLINUX -DFREEBSD
++  OPTS+=-DLINUX -DFREEBSD
+   #Known Compiler symbols
    # __FreeBSD__  __FreeBSD_kernel__  __DragonFly__
    # SDL_platform.h for FreeBSD defines: __FREEBSD__
  else
 +ifeq ($(OS), NETBSD)
 +  # Uses statvfs(5).
 +  NETBSD=1
-+  OPTS:=-DLINUX -DNETBSD
++  OPTS+=-DLINUX -DNETBSD
 +  #Known Compiler symbols
 +  # __NetBSD__
 +  # SDL_platform.h for FreeBSD defines: __NETBSD__
@@ -28,7 +44,36 @@ Add NetBSD to OS list.
  ifeq ($(OS), WIN32)
    WIN32=1
    DOSFILE=1
-@@ -545,6 +553,7 @@ endif
+-  OPTS:=-DWIN32
++  OPTS+=-DWIN32
+   # if have windows > Win98, and want large memory reports
+   ifdef WIN_LARGE_MEM
+     OPTS+=-DWIN_LARGE_MEM
+@@ -500,7 +509,7 @@ ifeq ($(OS), WIN7)
+   # This does  NOT YET  make a version customized to Win7/8.
+   WIN32=1
+   DOSFILE=1
+-  OPTS:=-DWIN32
++  OPTS+=-DWIN32
+   # probably want large memory reports
+   OPTS+=-DWIN_LARGE_MEM
+   #Known Compiler symbols
+@@ -511,12 +520,12 @@ ifeq ($(OS), WIN98)
+   # If Win98 differences occur, this category can isolate them.
+   WIN32=1
+   DOSFILE=1
+-  OPTS:=-DWIN32
++  OPTS+=-DWIN32
+ else
+ ifeq ($(OS), OS2)
+   OS2=1
+   DOSFILE=1
+-  OPTS:=-D__OS2__
++  OPTS+=-D__OS2__
+   #Known Compiler symbols
+   # __OS2__
+ else
+@@ -545,15 +554,19 @@ endif
  endif
  endif
  endif
@@ -36,3 +81,17 @@ Add NetBSD to OS list.
  export DOSFILE
  
  # all OPTINC need to have -I. because of how includes are written
+ # however the order of -I may be important, so it is left to each SMIF.
+ OPTINC:=
+-LIBS:=
+-LDFLAGS:=
++# Do not reset LIBS (take value from environment as base)
++#LIBS:=
++# Do not reset LDFLAGS (take value from environment as base)
++#LDFLAGS:=
+ INSTALL_SUPPL:=
+ 
++# Note: External CFLAGS are now part of OPTS and appended later
+ CFLAGS:=
+ # Machine architecture.
+ ifdef ARCH

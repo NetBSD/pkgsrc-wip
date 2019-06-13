@@ -31,18 +31,24 @@ MAKE_FLAGS+=		OS=NETBSD
 .elif ${OPSYS} == "Darwin"
 MAKE_FLAGS+=		OS=MAC
 .else
-# All other Unix variants (should work for GNU/Linux, OpenBSD and SunOS)
+# Other Unix (should work for GNU/Linux, OpenBSD and SunOS)
 MAKE_FLAGS+=		OS=LINUX
 .endif
-MAKE_FLAGS+=		HAVE_MIXER=1 DEBUG=1
+MAKE_FLAGS+=		HAVE_MIXER=1 DEBUG=0
 
 .include "../../mk/endian.mk"
 
 .if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=		-D__BIG_ENDIAN__=1
+CFLAGS+=		-D__BIG_ENDIAN__
 .endif
 
-INSTALLATION_DIRS=	bin share/doc/doomlegacy share/doomlegacy
+# DOOMWADDIR is intentionally shared with other Doom packages
+DOOMWADDIR?=		share/doom
+INSTALLATION_DIRS=	bin share/doc/doomlegacy ${DOOMWADDIR}
+
+MESSAGE_SRC+=		MESSAGE.doomlegacy
+MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
+MESSAGE_SUBST+=		DOOMWADDIR_CONF="${PREFIX}/${DOOMWADDIR}"
 
 do-install:
 	cd ${WRKSRC} &&							\
@@ -52,7 +58,9 @@ do-install:
 			${DESTDIR}${PREFIX}/share/doc/doomlegacy;	\
 	cd ${WRKDIR}/doomlegacy_${VERS} &&				\
 		${INSTALL_DATA} legacy.wad				\
-			${DESTDIR}${PREFIX}/share/doomlegacy/legacy.wad
+			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
+
+DEPENDS+=		doom1-[0-9]*:../../games/doom1
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7
 .include "../../audio/SDL_mixer/buildlink3.mk"

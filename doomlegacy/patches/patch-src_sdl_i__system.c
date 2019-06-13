@@ -9,7 +9,7 @@ Use statvfs(5) for NetBSD.
  #  include <sys/types.h>
  #  include <sys/sysctl.h>
 -# elif defined( __MACH__ )
-+# elif defined( NETBSD ) || defined( __MACH__ )
++# elif defined( __MACH__ ) || defined( NETBSD )
  #  include <sys/statvfs.h>
  # else
  #  include <sys/vfs.h>
@@ -18,7 +18,7 @@ Use statvfs(5) for NetBSD.
    goto guess;
  
 -# elif defined( __MACH__ )
-+# elif defined( NETBSD ) || defined( __MACH__ )
++# elif defined( __MACH__ ) || defined( NETBSD )
    struct statvfs stfs;
    if (statvfs(".", &stfs) == -1)
      goto guess;
