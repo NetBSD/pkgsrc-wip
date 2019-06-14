@@ -34,7 +34,7 @@ MAKE_FLAGS+=		OS=MAC
 # Other Unix (should work for GNU/Linux, OpenBSD and SunOS)
 MAKE_FLAGS+=		OS=LINUX
 .endif
-MAKE_FLAGS+=		HAVE_MIXER=1 DEBUG=0
+MAKE_FLAGS+=		HAVE_MIXER=1
 
 .if ${MACHINE_ENDIAN} == "big"
 # Some compilers define this themselves (but maybe not all)

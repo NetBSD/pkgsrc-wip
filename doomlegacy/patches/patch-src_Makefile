@@ -1,7 +1,8 @@
 $NetBSD$
 
 Add NetBSD to OS list.
-Honor environment variables CFLAGS, LDFLAGS and LIBS
+Honor environment variables CFLAGS, LDFLAGS and LIBS.
+Silence warnings about common symbol merging.
 
 --- src/Makefile.orig	2018-07-16 09:17:06.000000000 +0000
 +++ src/Makefile
@@ -113,3 +114,22 @@ Honor environment variables CFLAGS, LDFLAGS and LIBS
      endif
  
      SDL_CONFIG:=1
+@@ -1010,12 +1023,12 @@ CFLAGS+=-ffast-math -fno-strict-aliasing
+ LCFLAGS:=$(CFLAGS)
+ CFLAGS+=$(OPTS) $(OPTINC)
+ 
+-ifdef MAC
+-  # MAC linker does not accept these flags.
+-else
+-  # Flags to the linker.
+-  LDFLAGS+=-Xlinker --warn-common
+-endif
++#ifdef MAC
++#  # MAC linker does not accept these flags.
++#else
++#  # Flags to the linker.
++#  # LDFLAGS+=-Xlinker --warn-common
++#endif
+ 
+ SNDSERV_EXTRAFLAGS:=
+ ifdef HAVE_ESD

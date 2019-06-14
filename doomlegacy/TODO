@@ -1,12 +1,12 @@
 [X] Patch to support NetBSD
     FreeBSD codepath does not work for NetBSD
     => Use statvfs()
-[X] Disable parallel make jobs
-    Build system seems to not support that
+[X] Build system seems to not support that
+    => Disable parallel make jobs
+[X] Test on GNU/Linux
 [X] Check that Big Endian platforms work too
     Seems to work out-of-the-box with GCC
     => Nevertheless ensure that __BIG_ENDIAN__ is always defined if required
-[X] Test on GNU/Linux
 [X] Configure for pkgsrc DOOMWADDIR: ${PREFIX}/share/doom
     Add Message for DOOMWADDIR location
     => Set LEGACYWADDIR to DOOMWADDIR and install legacy.wad there
@@ -16,8 +16,12 @@
 [X] Honor CFLAGS/LDFLAGS/LIBS
 [X] Check MKPIE/RELRO/USE_STACK_CHECK hardening flags on NetBSD/amd64
 [X] Check for reproducible build (PKGSRC_MKREPRO)
-[ ] Check build with clang
-    Dependency generation fails
+[X] Check build with clang
+    (Dependency generation fails)
+    Problem was with clang installation, not related to package
+    (DEBUG creates GCC specific options)
+    Undefine DEBUG
+    => Works now
 [ ] Analyze why MIDI music doesn't work
 [X] Check OpenGL renderer
     GNU/Linux: Looks nice
@@ -29,10 +33,12 @@
 [X] Check Ultimate Doom Episode 4 (Thy Flesh Consumed)
 [X] Check Romero's 25th anniversary Episode 5 (Sigil)
     SIGIL_COMPAT.wad works with doom.wad as IWAD
+    SIGIL.wad works with doomu.wad as IWAD (menu entry for Episode 5 is missing)
 [X] Check Doom II (Hell on Earth)
 [X] Check Final Doom Part 1 (TNT: Evilution)
 [X] Check Final Doom Part 2 (The Plutonia Experiment)
 [X] Check Heretic
+[ ] man page with examples how to specify WADs and game type on commandline
 
 
 EOF
