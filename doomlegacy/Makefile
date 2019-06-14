@@ -50,9 +50,9 @@ MESSAGE_SRC+=		MESSAGE.doomlegacy
 MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
 MESSAGE_SUBST+=		DOOMWADDIR_CONF="${PREFIX}/${DOOMWADDIR}"
 
-# Set LEGACYWADDIR to DOOMWADDIR
+# Configure LEGACYWADDIR and DOOMWADDIR
 SUBST_CLASSES+=		doomdef
-SUBST_STAGE.doomdef=	pre-configure
+SUBST_STAGE.doomdef=	do-configure
 SUBST_MESSAGE.doomdef=	Preparing doomdef.h file ...
 SUBST_FILES.doomdef=	src/doomdef.h
 SUBST_SED.doomdef=	-e 's,LEGACYWADDIR  "/usr/local/share/games/doomlegacy",LEGACYWADDIR  "${PREFIX}/${DOOMWADDIR}",g'

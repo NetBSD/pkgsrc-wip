@@ -20,7 +20,9 @@
     Dependency generation fails
 [ ] Analyze why MIDI music doesn't work
 [X] Check OpenGL renderer
-    Looks nice
+    GNU/Linux: Looks nice
+    NetBSD: Fails with:
+    LLVM ERROR: Program used external function 'llvm.x86.sse41.pmaxsd' which could not be resolved!
 [ ] Send NetBSD patches to upstream
 [X] Check Doom Episode 2 (The Shores of Hell)
 [X] Check Doom Episode 3 (Inferno)
