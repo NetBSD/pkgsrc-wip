@@ -13,8 +13,8 @@ HOMEPAGE=		http://doomlegacy.sourceforge.net/
 COMMENT=		The legacy of Doom
 LICENSE=		gnu-gpl-v2
 
-# Tested to work on Linux/ppc (Big Endian) and NetBSD/amd64 (Little Endian)
-# Source has support for the other listed OS too (may need additional work)
+# Tested on Linux/ppc (32bit Big Endian) and NetBSD/amd64 (64bit Little Endian)
+# Untested: In general the source code has support for the other listed OS too
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
 			NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
@@ -37,17 +37,26 @@ MAKE_FLAGS+=		OS=LINUX
 MAKE_FLAGS+=		HAVE_MIXER=1 DEBUG=0
 
 .if ${MACHINE_ENDIAN} == "big"
+# Some compilers define this themselves (but maybe not all)
 CFLAGS+=		-D__BIG_ENDIAN__
 .endif
-CFLAGS+=		-Wno-char-subscripts
+CFLAGS+=		-Wno-char-subscripts -Wno-unused-result
 
 # DOOMWADDIR is intentionally shared with other Doom packages
-DOOMWADDIR?=		share/doom
+DOOMWADDIR=		share/doom
 INSTALLATION_DIRS=	bin share/doc/doomlegacy ${DOOMWADDIR}
 
 MESSAGE_SRC+=		MESSAGE.doomlegacy
 MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
 MESSAGE_SUBST+=		DOOMWADDIR_CONF="${PREFIX}/${DOOMWADDIR}"
+
+# Set LEGACYWADDIR to DOOMWADDIR
+SUBST_CLASSES+=		doomdef
+SUBST_STAGE.doomdef=	pre-configure
+SUBST_MESSAGE.doomdef=	Preparing doomdef.h file ...
+SUBST_FILES.doomdef=	src/doomdef.h
+SUBST_SED.doomdef=	-e 's,LEGACYWADDIR  "/usr/local/share/games/doomlegacy",LEGACYWADDIR  "${PREFIX}/${DOOMWADDIR}",g'
+SUBST_SED.doomdef+=	-e 's,DEFWADS01  "~/games/doomlegacy/wads",DEFWADS01  "${PREFIX}/${DOOMWADDIR}",'
 
 do-install:
 	cd ${WRKSRC} &&							\

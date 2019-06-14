@@ -13,8 +13,8 @@ Honor environment variables CFLAGS, LDFLAGS and LIBS
 +OS_LIST:=LINUX FREEBSD NETBSD WIN32 WIN7 WIN98 OS2 DOS MAC
  
 -OPTS:=
-+# Do not reset OPTS (take CFLAGS value from environment as base)
-+OPTS=$(CFLAGS)
++# Do not reset OPTS (init to CFLAGS from environment)
++OPTS:=$(CFLAGS)
  
  ifeq ($(OS), LINUX)
    LINUX=1
@@ -85,9 +85,9 @@ Honor environment variables CFLAGS, LDFLAGS and LIBS
  OPTINC:=
 -LIBS:=
 -LDFLAGS:=
-+# Do not reset LIBS (take value from environment as base)
++# Do not reset LIBS
 +#LIBS:=
-+# Do not reset LDFLAGS (take value from environment as base)
++# Do not reset LDFLAGS
 +#LDFLAGS:=
  INSTALL_SUPPL:=
  
@@ -95,3 +95,21 @@ Honor environment variables CFLAGS, LDFLAGS and LIBS
  CFLAGS:=
  # Machine architecture.
  ifdef ARCH
+@@ -597,14 +610,14 @@ ifeq ($(SMIF), SDL)
+     ifndef MAC
+       # default is Linux, for all unix SDL
+       EXENAME:=doomlegacy
+-      LDFLAGS=-L/usr/X11R6/lib
+-      LIBS:=-lGL -lGLU -lm
++      LDFLAGS +=-L/usr/X11R6/lib
++      LIBS +=-lGL -lGLU -lm
+       # -L/usr/X11R6/lib is needed by Linux 2.4 and others that still have
+       # the GLU libraries in an X11 directory.
+       # -lm is needed for pow, powf, and other MATH1 functions.
+     else
+       EXENAME:=doomlegacy
+-      LDFLAGS=-framework OpenGL
++      LDFLAGS +=-framework OpenGL
+     endif
+ 
+     SDL_CONFIG:=1

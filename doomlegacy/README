@@ -1,0 +1,15 @@
+A dependency to games/doom1 makes the Doom Shareware Episode 1 "Knee-Deep in the
+Dead" (doom1.wad) directly playable.
+Note: The demos from games/doom1 are not compatible with the Legacy engine.
+
+
+$ doomlegacy
+$ doomlegacy -iwad doom.wad
+$ doomlegacy -game doomu -iwad doom.wad -file doomu.wad
+$ doomlegacy -iwad doom.wad -file SIGIL_COMPAT.wad
+
+$ doomlegacy -iwad doom2.wad
+$ doomlegacy -iwad tnt.wad
+$ doomlegacy -iwad plutonia.wad
+
+$ doomlegacy -iwad heretic.wad

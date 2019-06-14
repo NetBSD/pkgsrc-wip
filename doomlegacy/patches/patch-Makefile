@@ -21,7 +21,7 @@ Add NetBSD to OS list.
 +  # Uses statvfs(5).
 +  $(info  NetBSD support is dependent upon user reports.)
 +  $(info  Please submit bug reports, and bug fixes. )
-+  FREEBSD=1
++  NETBSD=1
 +else
  ifeq ($(OS), WIN32)
    $(info  Generic Windows compile.  May or may-not work on modern Windows.)

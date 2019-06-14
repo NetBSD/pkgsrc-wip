@@ -1,6 +1,10 @@
 This is one of the most popular Doom source ports.
-It enhances Doom with things like Free Look, OpenGL renderer, Heretic support,
-TCP/IP networking and much more.
+It enhances Doom with things like:
+- Free Look
+- OpenGL renderer
+- Heretic support,
+- TCP/IP networking
+and much more.
 
 Doom Legacy can play Doom, Boom, Marine's Best Friend (MBF), and Heretic maps.
 In addition to the original games by id Software and Raven Software, there are
@@ -16,8 +20,4 @@ and the Marine's Best Friend (MBF) extensions. Legacy also has implemented
 among other things 3D floors, swimmable water and other special effects using
 extended linedef codes, and supports the FraggleScript scripting language.
 
-Note:
-This engine can be used to play the SIGIL Megawad (Doom Episode 5).
-Use SIGIL_COMPAT.wad together with doom.wad as IWAD like this:
-
-   $ doomlegacy -iwad /tmp/doom.wad -file /tmp/SIGIL_COMPAT.wad
+This package contains the SDL build of Doom Legacy.
