@@ -54,7 +54,7 @@ SUBST_STAGE.env=	post-patch
 SUBST_FILES.env=	scripts/*.py
 SUBST_SED.env=		-e 's|/bin/env python|${PYTHONBIN}|g'
 
-DENIED_HOSTS_FILE=	${PREFIX}/etc/hosts.deniedssh
+DENIED_HOSTS_FILE=	/etc/hosts.deniedssh
 
 .include "../../mk/bsd.prefs.mk"
 
