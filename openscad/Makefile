@@ -6,12 +6,12 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openscad/}
 GITHUB_TAG=	openscad-${VERSION}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	http://www.openscad.org/
 COMMENT=	OpenSCAD - The Programmers Solid 3D CAD Modeller
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison gettext pkg-config
 USE_LIBTOOL=	yes
 
@@ -26,12 +26,13 @@ MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake \
-	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex
+	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex \
+	    QMAKE_CXXFLAGS+=-std=c++0x
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 # DragonFly requires FlexLexer.h from pkgsrc - base doesn't cut it.
-#.include "../../devel/flex/buildlink3.mk"
+.include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
