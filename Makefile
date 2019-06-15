@@ -4106,7 +4106,6 @@ SUBDIR+=	py-u2flib-server
 SUBDIR+=	py-ua-parser
 SUBDIR+=	py-ufl
 SUBDIR+=	py-umalqurra
-SUBDIR+=	py-uncertainties
 SUBDIR+=	py-undebt
 SUBDIR+=	py-unidiff
 SUBDIR+=	py-unpaddedbase64
