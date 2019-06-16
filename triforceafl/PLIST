@@ -12,6 +12,7 @@ triforceafl/bin/afl-qemu-system-trace
 triforceafl/bin/afl-showmap
 triforceafl/bin/afl-tmin
 triforceafl/bin/afl-whatsup
+triforceafl/config.h
 triforceafl/lib/afl/afl-as
 triforceafl/lib/afl/as
 triforceafl/share/afl/testcases/README.testcases
@@ -76,3 +77,4 @@ triforceafl/share/doc/afl/sister_projects.txt
 triforceafl/share/doc/afl/status_screen.txt
 triforceafl/share/doc/afl/technical_details.txt
 triforceafl/share/doc/afl/triforce_internals.txt
+triforceafl/types.h

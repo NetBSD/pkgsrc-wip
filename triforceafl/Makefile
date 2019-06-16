@@ -30,6 +30,12 @@ post-install:
 	${RUN} cd ${WRKSRC} && \
 		${INSTALL_PROGRAM} afl-qemu-system-trace \
 			${DESTDIR}${AFLPREFIX}/bin
+	${RUN} cd ${WRKSRC} && \
+		${INSTALL_DATA} config.h \
+			${DESTDIR}${AFLPREFIX}
+	${RUN} cd ${WRKSRC} && \
+		${INSTALL_DATA} types.h \
+			${DESTDIR}${AFLPREFIX}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
