@@ -5,8 +5,8 @@ ${PLIST.caja}lib/caja/extensions-2.0/libgtkhash-properties-caja.so
 ${PLIST.nautilus}lib/nautilus/extensions-2.0/libgtkhash-properties-nautilus.la
 ${PLIST.nautilus}lib/nautilus/extensions-2.0/libgtkhash-properties-nautilus.so
 ${PLIST.thunar}lib/thunarx-2/libgtkhash-properties-thunar.la
-share/appdata/gtkhash.appdata.xml
 ${PLIST.caja}share/appdata/caja-gtkhash.metainfo.xml
+share/appdata/gtkhash.appdata.xml
 ${PLIST.nautilus}share/appdata/nautilus-gtkhash.metainfo.xml
 ${PLIST.thunar}share/appdata/thunar-gtkhash.metainfo.xml
 share/applications/gtkhash.desktop

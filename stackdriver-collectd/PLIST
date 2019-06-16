@@ -13,10 +13,10 @@ ${PLIST.battery}lib/collectd/battery.la
 ${PLIST.contextswitch}lib/collectd/contextswitch.la
 ${PLIST.cpu}lib/collectd/cpu.la
 lib/collectd/csv.la
-${PLIST.entropy}lib/collectd/entropy.la
 ${PLIST.df}lib/collectd/df.la
 ${PLIST.disk}lib/collectd/disk.la
 lib/collectd/email.la
+${PLIST.entropy}lib/collectd/entropy.la
 lib/collectd/exec.la
 lib/collectd/filecount.la
 lib/collectd/hddtemp.la
@@ -50,8 +50,8 @@ lib/collectd/target_replace.la
 lib/collectd/target_scale.la
 lib/collectd/target_set.la
 lib/collectd/target_v5upgrade.la
-lib/collectd/teamspeak2.la
 ${PLIST.tcpconns}lib/collectd/tcpconns.la
+lib/collectd/teamspeak2.la
 lib/collectd/threshold.la
 lib/collectd/unixsock.la
 ${PLIST.uptime}lib/collectd/uptime.la

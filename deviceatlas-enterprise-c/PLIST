@@ -1,18 +1,18 @@
 @comment $NetBSD: PLIST,v 1.2 2015/07/07 15:13:37 devnexen Exp $
-include/dac.h
-include/dac_json.h
 include/ci.h
 include/ci_fwd.h
 include/ci_priv.h
-lib/libda.so
+include/dac.h
+include/dac_json.h
 lib/libci.so
-lib/libda.so.2.1.4
 lib/libci.so.1.1.0
+lib/libda.so
+lib/libda.so.2.1.4
+share/doc/deviceatlas-enterprise-c/examples/ci-example.c
 share/doc/deviceatlas-enterprise-c/examples/daexutil.h
 share/doc/deviceatlas-enterprise-c/examples/example0.c
 share/doc/deviceatlas-enterprise-c/examples/example1.c
 share/doc/deviceatlas-enterprise-c/examples/example2.c
 share/doc/deviceatlas-enterprise-c/examples/example3.c
 share/doc/deviceatlas-enterprise-c/examples/example4.c
-share/doc/deviceatlas-enterprise-c/examples/ci-example.c
 share/doc/deviceatlas-enterprise-c/examples/util.c

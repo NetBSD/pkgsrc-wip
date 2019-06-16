@@ -1,12 +1,6 @@
 @comment $NetBSD: PLIST,v 1.5 2018/07/13 04:24:39 dbj Exp $
 bin/fltk-config
 bin/fluid
-include/FL/abi-version.h
-include/FL/android.H
-${PLIST.cs}include/FL/android.h
-include/FL/platform.H
-${PLIST.cs}include/FL/platform.h
-${PLIST.cs}include/FL/platform_types.h
 include/FL/Enumerations.H
 ${PLIST.cs}include/FL/Enumerations.h
 include/FL/Fl.H
@@ -185,6 +179,8 @@ include/FL/Fl_Round_Button.H
 ${PLIST.cs}include/FL/Fl_Round_Button.h
 include/FL/Fl_Round_Clock.H
 ${PLIST.cs}include/FL/Fl_Round_Clock.h
+include/FL/Fl_SVG_Image.H
+${PLIST.cs}include/FL/Fl_SVG_Image.h
 include/FL/Fl_Scroll.H
 ${PLIST.cs}include/FL/Fl_Scroll.h
 include/FL/Fl_Scrollbar.H
@@ -205,8 +201,6 @@ include/FL/Fl_Slider.H
 ${PLIST.cs}include/FL/Fl_Slider.h
 include/FL/Fl_Spinner.H
 ${PLIST.cs}include/FL/Fl_Spinner.h
-include/FL/Fl_SVG_Image.H
-${PLIST.cs}include/FL/Fl_SVG_Image.h
 include/FL/Fl_Sys_Menu_Bar.H
 ${PLIST.cs}include/FL/Fl_Sys_Menu_Bar.h
 include/FL/Fl_Table.H
@@ -263,6 +257,9 @@ include/FL/Fl_XBM_Image.H
 ${PLIST.cs}include/FL/Fl_XBM_Image.h
 include/FL/Fl_XPM_Image.H
 ${PLIST.cs}include/FL/Fl_XPM_Image.h
+include/FL/abi-version.h
+include/FL/android.H
+${PLIST.cs}include/FL/android.h
 include/FL/filename.H
 ${PLIST.cs}include/FL/filename.h
 include/FL/fl_ask.H
@@ -292,6 +289,9 @@ include/FL/mac.H
 ${PLIST.cs}include/FL/mac.h
 include/FL/math.h
 include/FL/names.h
+include/FL/platform.H
+${PLIST.cs}include/FL/platform.h
+${PLIST.cs}include/FL/platform_types.h
 include/FL/win32.H
 ${PLIST.cs}include/FL/win32.h
 include/FL/x.H

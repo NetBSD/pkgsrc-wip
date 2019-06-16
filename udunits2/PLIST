@@ -3,6 +3,9 @@ bin/udunits2
 include/converter.h
 include/udunits.h
 include/udunits2.h
+info/udunits2.info
+info/udunits2lib.info
+info/udunits2prog.info
 lib/libudunits2.la
 share/doc/udunits/CHANGE_LOG
 share/doc/udunits/COPYRIGHT
@@ -13,9 +16,6 @@ share/doc/udunits/udunits2-common.xml
 share/doc/udunits/udunits2-derived.xml
 share/doc/udunits/udunits2-prefixes.xml
 share/doc/udunits/udunits2.xml
-info/udunits2.info
-info/udunits2lib.info
-info/udunits2prog.info
 share/udunits/udunits2-accepted.xml
 share/udunits/udunits2-base.xml
 share/udunits/udunits2-common.xml

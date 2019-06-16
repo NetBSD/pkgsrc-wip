@@ -30,9 +30,9 @@ man/man8/pkgdelta.8
 man/man8/repo-add.8
 man/man8/repo-remove.8
 man/man8/vercmp.8
-share/examples/pacman/pacman.conf
-share/examples/pacman/makepkg.conf
 share/examples/pacman/bash_completion-pacman
+share/examples/pacman/makepkg.conf
+share/examples/pacman/pacman.conf
 share/locale/ar/LC_MESSAGES/libalpm.mo
 share/locale/ar/LC_MESSAGES/pacman.mo
 share/locale/ast/LC_MESSAGES/libalpm.mo

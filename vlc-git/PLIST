@@ -106,11 +106,11 @@ lib/libvlc.la
 lib/libvlccore.la
 lib/pkgconfig/libvlc.pc
 lib/pkgconfig/vlc-plugin.pc
-${PLIST.jack}lib/vlc/plugins/access/libaccess_jack_plugin.la
 lib/vlc/libvlc_vdpau.la
 lib/vlc/libvlc_xcb_events.la
 lib/vlc/plugins/access/libaccess_concat_plugin.la
 lib/vlc/plugins/access/libaccess_imem_plugin.la
+${PLIST.jack}lib/vlc/plugins/access/libaccess_jack_plugin.la
 lib/vlc/plugins/access/libaccess_mms_plugin.la
 lib/vlc/plugins/access/libaccess_mtp_plugin.la
 ${PLIST.oss}lib/vlc/plugins/access/libaccess_oss_plugin.la
@@ -126,9 +126,8 @@ lib/vlc/plugins/access/libhttp_plugin.la
 lib/vlc/plugins/access/libhttps_plugin.la
 lib/vlc/plugins/access/libidummy_plugin.la
 lib/vlc/plugins/access/libimem_plugin.la
-${PLIST.live}lib/vlc/plugins/access/liblive555_plugin.la
-${PLIST.pulseaudio}lib/vlc/plugins/access/libpulsesrc_plugin.la
 lib/vlc/plugins/access/liblive555_plugin.la
+${PLIST.pulseaudio}lib/vlc/plugins/access/libpulsesrc_plugin.la
 lib/vlc/plugins/access/librtp_plugin.la
 lib/vlc/plugins/access/libsatip_plugin.la
 lib/vlc/plugins/access/libsdp_plugin.la
@@ -279,8 +278,8 @@ lib/vlc/plugins/demux/libvobsub_plugin.la
 lib/vlc/plugins/demux/libvoc_plugin.la
 lib/vlc/plugins/demux/libwav_plugin.la
 lib/vlc/plugins/demux/libxa_plugin.la
-${PLIST.vlc-skins}lib/vlc/plugins/gui/libskins2_plugin.la
 lib/vlc/plugins/gui/libqt_plugin.la
+${PLIST.vlc-skins}lib/vlc/plugins/gui/libskins2_plugin.la
 lib/vlc/plugins/keystore/libfile_keystore_plugin.la
 lib/vlc/plugins/keystore/libkwallet_plugin.la
 lib/vlc/plugins/keystore/libmemory_keystore_plugin.la
@@ -329,7 +328,6 @@ lib/vlc/plugins/services_discovery/libpodcast_plugin.la
 ${PLIST.pulseaudio}lib/vlc/plugins/services_discovery/libpulselist_plugin.la
 lib/vlc/plugins/services_discovery/libsap_plugin.la
 lib/vlc/plugins/services_discovery/libupnp_plugin.la
-${PLIST.x11}lib/vlc/plugins/services_discovery/libxcb_apps_plugin.la
 lib/vlc/plugins/services_discovery/libxcb_apps_plugin.la
 lib/vlc/plugins/spu/libaudiobargraph_v_plugin.la
 lib/vlc/plugins/spu/libdynamicoverlay_plugin.la

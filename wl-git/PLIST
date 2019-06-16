@@ -233,7 +233,6 @@ share/wl/wl-message-play-content-up.xpm
 share/wl/wl-message-prev-content-up.xpm
 share/wl/wl-message-quit-up.xpm
 share/wl/wl-message-read-up.xpm
-${PLIST.emacs-w3m-current}share/wl/shimbun.xpm
 share/wl/wl-stable-logo.img
 share/wl/wl-stable-logo.xbm
 share/wl/wl-stable-logo.xpm

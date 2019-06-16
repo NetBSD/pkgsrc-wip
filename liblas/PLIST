@@ -1,8 +1,8 @@
 @comment $NetBSD$
-bin/las2las
-bin/las2txt
 bin/las2col
+bin/las2las
 bin/las2pg
+bin/las2txt
 bin/lasblock
 bin/lasinfo
 bin/liblas-config
@@ -65,8 +65,8 @@ include/liblas/external/property_tree/id_translator.hpp
 include/liblas/external/property_tree/info_parser.hpp
 include/liblas/external/property_tree/ini_parser.hpp
 include/liblas/external/property_tree/json_parser.hpp
-include/liblas/external/property_tree/ptree_fwd.hpp
 include/liblas/external/property_tree/ptree.hpp
+include/liblas/external/property_tree/ptree_fwd.hpp
 include/liblas/external/property_tree/ptree_serialization.hpp
 include/liblas/external/property_tree/stream_translator.hpp
 include/liblas/external/property_tree/string_path.hpp
@@ -86,16 +86,16 @@ include/liblas/utility.hpp
 include/liblas/variablerecord.hpp
 include/liblas/version.hpp
 include/liblas/writer.hpp
-lib/liblas_c.so
-lib/liblas_c.so.2.4.0
-lib/liblas_c.so.3
 lib/liblas.so
 lib/liblas.so.2.4.0
 lib/liblas.so.3
-share/cmake/libLAS/liblas-config.cmake
+lib/liblas_c.so
+lib/liblas_c.so.2.4.0
+lib/liblas_c.so.3
 share/cmake/libLAS/liblas-config-version.cmake
-share/cmake/libLAS/liblas-depends.cmake
+share/cmake/libLAS/liblas-config.cmake
 share/cmake/libLAS/liblas-depends-release.cmake
+share/cmake/libLAS/liblas-depends.cmake
 share/liblas/doc/AUTHORS
 share/liblas/doc/COPYING
 share/liblas/doc/INSTALL

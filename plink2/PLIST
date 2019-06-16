@@ -1,8 +1,8 @@
 @comment $NetBSD$
 bin/pgen_compress
 bin/plink2
-bin/plink2-test
 bin/plink2-bench
+bin/plink2-test
 share/plink2/Tests/TEST_DOSAGE_ROUND_TRIP/.gitignore
 share/plink2/Tests/TEST_DOSAGE_ROUND_TRIP/run_tests.sh
 share/plink2/Tests/TEST_EXTRACT_CHR/.gitignore

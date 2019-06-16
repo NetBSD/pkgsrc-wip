@@ -81,4 +81,3 @@ bin/cl_napalm_configure
 bin/cl_napalm_test
 bin/cl_napalm_validate
 bin/napalm
-
