@@ -16,7 +16,7 @@ BUILDLINK_TRANSFORM+=	opt:-O3:-O2
 .if (${OPSYS} == "NetBSD"  || \
      ${OPSYS} == "OpenBSD" || \
      ${OPSYS} == "FreeBSD" || \
-     ${OPSYS} == "Solaris")
+     ${OPSYS} == "SunOS")
 CFLAGS+=	-DMMAP_MAP_FIXED
 .endif
 
