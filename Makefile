@@ -634,7 +634,6 @@ SUBDIR+=	dolfin
 SUBDIR+=	dolphin-emu
 SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
-SUBDIR+=	doomlegacy
 SUBDIR+=	doorman
 SUBDIR+=	dosbox-svn
 SUBDIR+=	dosbox-x

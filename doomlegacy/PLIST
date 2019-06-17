@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/doomlegacy
-man/man1/doomlegacy.1
-share/doc/doomlegacy/legacy.css
-share/doc/doomlegacy/whatsnew.html
-share/doom/legacy.wad
