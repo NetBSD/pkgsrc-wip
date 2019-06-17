@@ -2696,7 +2696,6 @@ SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-IP-Match-Regexp
 SUBDIR+=	p5-Net-OAuth2-AuthorizationServer
 SUBDIR+=	p5-Net-PcapUtils
-SUBDIR+=	p5-Net-SFTP-Foreign
 SUBDIR+=	p5-Net-SMS-Clickatell
 SUBDIR+=	p5-Net-SenderBase
 SUBDIR+=	p5-Net-Syslog
