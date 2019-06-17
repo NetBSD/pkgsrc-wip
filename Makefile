@@ -3447,7 +3447,6 @@ SUBDIR+=	py-geoip
 SUBDIR+=	py-geom
 SUBDIR+=	py-geopy
 SUBDIR+=	py-gettext-tools
-SUBDIR+=	py-ggplot
 SUBDIR+=	py-ghalatawi
 SUBDIR+=	py-gist
 SUBDIR+=	py-git
