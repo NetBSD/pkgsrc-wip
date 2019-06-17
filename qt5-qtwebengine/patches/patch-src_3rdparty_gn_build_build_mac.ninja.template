@@ -1,7 +1,7 @@
 $NetBSD$
 
---- src/3rdparty/chromium/tools/gn/bootstrap/build_mac.ninja.template.orig	2017-06-09 20:18:47.000000000 +0000
-+++ src/3rdparty/chromium/tools/gn/bootstrap/build_mac.ninja.template
+--- src/3rdparty/gn/build/build_mac.ninja.template.orig	2017-06-09 20:18:47.000000000 +0000
++++ src/3rdparty/gn/build/build_mac.ninja.template
 @@ -11,7 +11,7 @@ rule cxx
    deps = gcc
  

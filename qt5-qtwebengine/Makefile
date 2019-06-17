@@ -27,8 +27,10 @@ LDFLAGS+=	-Wl,-no-keep-memory -Wl-reduce-memory
 .endif
 
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/icu/android/patch_locale.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/icu/cast/patch_locale.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/post_process_dist.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/sqlite/src/configure
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/swiftshader/third_party/LLVM/utils/buildit/build_llvm
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/xdg-utils/scripts/xdg-terminal
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/xdg-utils/scripts/xdg-terminal.in
@@ -56,13 +58,13 @@ post-install:
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../multimedia/ffmpeg3/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 # alsa pulseaudio
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
@@ -77,4 +79,5 @@ PYTHON_VERSIONS_ACCEPTED=	27
 #.include "../../lang/ruby/buildlink3.mk"
 #BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
