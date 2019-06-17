@@ -10,6 +10,7 @@ SHA512 (doomlegacy_1.47.2_source.tar.bz2) = e2e182c18dd24c14e954f791c58e44119457
 Size (doomlegacy_1.47.2_source.tar.bz2) = 2276199 bytes
 SHA1 (patch-Makefile) = 03fc2f70c4a91ab6e7e3611f594eeaee4ac78b6b
 SHA1 (patch-src_Makefile) = 15cb6daa92f0d00eaf3b6956ef2813fa8358742c
+SHA1 (patch-src_am__map.c) = 647bcba2374cfa7038646e0c053636b43caaf33a
 SHA1 (patch-src_d__main.c) = 89188e534d486d9cfbf2ad92f63b4eb7ab6c50f8
 SHA1 (patch-src_doomtype.h) = fefe08ca5fbe8d11325e32ca833a73d3acb36ea1
 SHA1 (patch-src_i__tcp.c) = 1c0c6017d24640217e29ed238e210850329d0e75

@@ -1,8 +1,8 @@
 [X] Patch to support NetBSD
     FreeBSD codepath does not work for NetBSD
     => Use statvfs()
-[X] Build system seems to not support that
-    => Disable parallel make jobs
+[X] Build system seems to not support parallel make jobs
+    => Disable
 [X] Test on GNU/Linux
 [X] Check that Big Endian platforms work too
     Seems to work out-of-the-box with GCC
@@ -22,7 +22,10 @@
     (DEBUG creates GCC specific options)
     Undefine DEBUG
     => Works now
-[ ] Analyze why MIDI music doesn't work
+[X] Analyze why MIDI music doesn't work
+    Instruments missing for synthesizer, not related to package
+    Installed freepats
+    => Works now with timidity
 [X] Check OpenGL renderer
     GNU/Linux: Looks nice
     NetBSD: Fails with:
@@ -31,14 +34,15 @@
 [X] Check Doom Episode 2 (The Shores of Hell)
 [X] Check Doom Episode 3 (Inferno)
 [X] Check Ultimate Doom Episode 4 (Thy Flesh Consumed)
-[X] Check Romero's 25th anniversary Episode 5 (Sigil)
+[X] Check Romero's 25th anniversary Doom Episode 5 (Sigil)
     SIGIL_COMPAT.wad works with doom.wad as IWAD
     SIGIL.wad works with doomu.wad as IWAD (menu entry for Episode 5 is missing)
 [X] Check Doom II (Hell on Earth)
 [X] Check Final Doom Part 1 (TNT: Evilution)
 [X] Check Final Doom Part 2 (The Plutonia Experiment)
 [X] Check Heretic
-[ ] man page with examples how to specify WADs and game type on commandline
+[X] man page with examples how to specify WADs and game type on commandline
+[ ] Check multiplayer/network
 
 
 EOF

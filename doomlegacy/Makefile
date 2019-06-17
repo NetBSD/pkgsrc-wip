@@ -18,6 +18,8 @@ LICENSE=		gnu-gpl-v2
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
 			NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
+USE_LANGUAGES+=		c99
+
 USE_TOOLS+=		gmake
 MAKE_JOBS_SAFE=		no
 
@@ -40,23 +42,33 @@ MAKE_FLAGS+=		HAVE_MIXER=1
 # Some compilers define this themselves (but maybe not all)
 CFLAGS+=		-D__BIG_ENDIAN__
 .endif
-CFLAGS+=		-Wno-char-subscripts -Wno-unused-result
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
-INSTALLATION_DIRS=	bin share/doc/doomlegacy ${DOOMWADDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/doomlegacy ${DOOMWADDIR}
 
 MESSAGE_SRC+=		MESSAGE.doomlegacy
 MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
 MESSAGE_SUBST+=		DOOMWADDIR_CONF="${PREFIX}/${DOOMWADDIR}"
 
-# Configure LEGACYWADDIR and DOOMWADDIR
+# Configure defaults for LEGACYWADDIR and DOOMWADDIR
 SUBST_CLASSES+=		doomdef
 SUBST_STAGE.doomdef=	do-configure
 SUBST_MESSAGE.doomdef=	Preparing doomdef.h file ...
 SUBST_FILES.doomdef=	src/doomdef.h
 SUBST_SED.doomdef=	-e 's,LEGACYWADDIR  "/usr/local/share/games/doomlegacy",LEGACYWADDIR  "${PREFIX}/${DOOMWADDIR}",g'
 SUBST_SED.doomdef+=	-e 's,DEFWADS01  "~/games/doomlegacy/wads",DEFWADS01  "${PREFIX}/${DOOMWADDIR}",'
+
+pre-configure:
+	${CP} ${FILESDIR}/doomlegacy.in1 ${WRKDIR}
+
+# Process manpage template
+do-configure:
+	cd ${WRKDIR} &&							\
+		${SED} -e 's,$$NAME,doomlegacy,g'			\
+			-e 's,$$VERSION,${VERS},g'			\
+			-e 's,$$WADDIR,${PREFIX}/${DOOMWADDIR},g'	\
+			doomlegacy.in1 >doomlegacy.1
 
 do-install:
 	cd ${WRKSRC} &&							\
@@ -66,9 +78,13 @@ do-install:
 			${DESTDIR}${PREFIX}/share/doc/doomlegacy;	\
 	cd ${WRKDIR}/doomlegacy_${VERS} &&				\
 		${INSTALL_DATA} legacy.wad				\
-			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
+			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad;	\
+	cd ${WRKDIR} &&							\
+		${INSTALL_MAN} ${WRKDIR}/doomlegacy.1			\
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 # Ensure that at least the shareware Episode 1 of Doom is available
+# Note: The demos from games/doom1 are not compatible with the Legacy engine
 DEPENDS+=		doom1-[0-9]*:../../games/doom1
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7
