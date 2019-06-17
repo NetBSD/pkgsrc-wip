@@ -243,7 +243,6 @@ SUBDIR+=	basepkg
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
 SUBDIR+=	bat
-SUBDIR+=	bc-gh
 SUBDIR+=	bcftools
 SUBDIR+=	bdf2psf
 SUBDIR+=	bdfresize
