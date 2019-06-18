@@ -5,7 +5,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lavv17/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@netbsd.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://github.com/lavv17/le/
 COMMENT=	Full screen text editor inspired by Norton Editor
 LICENSE=	gnu-gpl-v3

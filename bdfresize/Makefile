@@ -4,7 +4,7 @@ DISTNAME=	bdfresize-1.5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.distfiles.pl/
 
-MAINTAINER=	fcambus@netbsd.org
+MAINTAINER=	fcambus@NetBSD.org
 COMMENT=	Tool for resizing BDF format fonts
 LICENSE=	gnu-gpl-v2
 

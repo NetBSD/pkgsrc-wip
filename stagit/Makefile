@@ -4,7 +4,7 @@ DISTNAME=	stagit-0.9.2
 CATEGORIES=	www
 MASTER_SITES=	https://codemadness.org/releases/stagit/
 
-MAINTAINER=	fcambus@netbsd.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://codemadness.org/git/stagit/file/README.html
 COMMENT=	Static git page generator
 LICENSE=	mit

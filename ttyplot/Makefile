@@ -4,7 +4,7 @@ DISTNAME=	ttyplot-1.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tenox7/}
 
-MAINTAINER=	fcambus@netbsd.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://github.com/tenox7/ttyplot/
 COMMENT=	Realtime plotting utility for terminals
 LICENSE=	unlicense

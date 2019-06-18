@@ -4,7 +4,7 @@ DISTNAME=	mmail-0.52
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=multimail/}
 
-MAINTAINER=	fcambus@netbsd.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://multimail.sourceforge.io/
 COMMENT=	Offline mail reader for Blue Wave, QWK, OMEN, SOUP and OPX
 LICENSE=	gnu-gpl-v3

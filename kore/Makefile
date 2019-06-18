@@ -4,7 +4,7 @@ DISTNAME=	kore-3.3.1
 CATEGORIES=	www
 MASTER_SITES=	https://kore.io/releases/
 
-MAINTAINER=	fcambus@netbsd.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://kore.io/
 COMMENT=	Web application framework for writing scalable web APIs in C
 LICENSE=	isc
