@@ -8,7 +8,7 @@ portable than syscall(SYS_gettid).
 
 --- src/zm_thread.h.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_thread.h
-@@ -22,10 +22,8 @@
+@@ -22,20 +22,21 @@
  
  #include <unistd.h>
  #include <pthread.h>
@@ -20,26 +20,21 @@ portable than syscall(SYS_gettid).
  #include "zm_exception.h"
  #include "zm_utils.h"
  #ifdef __FreeBSD__
-@@ -35,7 +33,7 @@
+ #include <sys/thr.h>
+ #endif
+ 
++/* Assume that because pthread.h was included, all systems have pthread.*/
++#define USE_PTHREAD
++
  class ThreadException : public Exception
  {
  private:
 -#ifndef SOLARIS
-+#if !defined(SOLARIS) && !defined(__NetBSD__)
++#ifndef USE_PTHREAD
  pid_t pid() {
      pid_t tid; 
  #ifdef __FreeBSD__ 
-@@ -46,7 +44,9 @@ pid_t pid() {
-     #ifdef __FreeBSD_kernel__
-         if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
-     # else
-+	#ifdef linux
-         tid=syscall(SYS_gettid); 
-+	#endif
-     #endif
- #endif
-     return tid;
-@@ -55,7 +55,8 @@ pid_t pid() {
+@@ -55,7 +56,8 @@ pid_t pid() {
  pthread_t pid() { return( pthread_self() ); }
  #endif
  public:
@@ -49,13 +44,57 @@ portable than syscall(SYS_gettid).
      }
  };
  
-@@ -242,7 +243,9 @@ protected:
-         if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
+@@ -217,7 +219,7 @@ protected:
  
+     Mutex mThreadMutex;
+     Condition mThreadCondition;
+-#ifndef SOLARIS
++#ifndef USE_PTHREAD
+     pid_t mPid;
+ #else
+     pthread_t mPid;
+@@ -229,7 +231,7 @@ protected:
+     Thread();
+     virtual ~Thread();
+ 
+-#ifndef SOLARIS
++#ifndef USE_PTHREAD
+     pid_t id() const
+     {
+         pid_t tid; 
+@@ -237,22 +239,21 @@ protected:
+         long lwpid; 
+         thr_self(&lwpid); 
+         tid = lwpid; 
+-#else 
++#else /* __FreeBSD__ */
+     #ifdef __FreeBSD_kernel__
+         if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
+-
      #else
-+	#ifdef linux
          tid=syscall(SYS_gettid); 
-+	#endif
      #endif
- #endif
+-#endif
++#endif /* __FreeBSD__ */
  return tid;
+     }
+-#else
++#else /* USE_PTHREAD */
+     pthread_t id() const
+     {
+         return( pthread_self() );
+     }
+-#endif
++#endif /* USE_PTHREAD */
+     void exit( int status = 0 )
+     {
+         //INFO( "Exiting" );
+@@ -268,7 +269,7 @@ public:
+     void kill( int signal );
+     bool isThread()
+     {
+-        return( mPid > -1 && pthread_equal( pthread_self(), mThread ) );
++        return( /* mPid > -1 && */ pthread_equal( pthread_self(), mThread ) );
+     }
+     bool isStarted() const { return( mStarted ); }
+     bool isRunning() const { return( mRunning ); }
