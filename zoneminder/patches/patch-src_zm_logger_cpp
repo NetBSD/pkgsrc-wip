@@ -1,0 +1,16 @@
+$NetBSD: patch-src_zm_logger_cpp,v 1.5 2018/07/14 15:03:57 gdt Exp $
+
+If the system has syscall() but not SYS_gettid [E.g. NetBSD], don't attempt
+to use SYS_gettid.
+
+--- src/zm_logger.cpp.orig	2016-02-03 18:40:30.000000000 +0000
++++ src/zm_logger.cpp
+@@ -604,7 +604,7 @@ void Logger::logPrint( bool hex, const c
+ 
+             mysql_real_escape_string( &mDbConnection, escapedString, syslogStart, strlen(syslogStart) );
+ 			
+-            snprintf( sql, sizeof(sql), "insert into Logs ( TimeKey, Component, ServerId, Pid, Level, Code, Message, File, Line ) values ( %ld.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )", timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString, file, line );
++            snprintf( sql, sizeof(sql), "insert into Logs ( TimeKey, Component, ServerId, Pid, Level, Code, Message, File, Line ) values ( %jd.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )", (intmax_t) timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString, file, line );
+             if ( mysql_query( &mDbConnection, sql ) )
+             {
+                 databaseLevel( NOLOG );

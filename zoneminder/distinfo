@@ -1,0 +1,30 @@
+$NetBSD: distinfo,v 1.12 2018/07/14 15:03:57 gdt Exp $
+
+SHA1 (ZoneMinder-1.29.0.tar.gz) = 1e1fb9aeb7f482c27b4275ad84556b6c3910e4dc
+RMD160 (ZoneMinder-1.29.0.tar.gz) = d744a68552651489cc17f369c11baa3cc45621ff
+SHA512 (ZoneMinder-1.29.0.tar.gz) = 4716e0788db29880eeafc817fe63662d07c3b805214b4d2eb29b346dd3493b0215c9e79370e3414220c812065eefbe253548a70d8128c253aa4535f66f9544df
+Size (ZoneMinder-1.29.0.tar.gz) = 9302624 bytes
+SHA1 (patch-Makefile_am) = d3b66d8d741b739e2e6b354cef29881d8bcde31c
+SHA1 (patch-configure_ac) = aa258339263476b672b7683d8a6f0f378f8f7d6b
+SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 841d897662958698a4dfcb95dd5bc43bb5fed568
+SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51
+SHA1 (patch-src_Makefile_am) = 0f6571c9d5a3e688544f93d687d266e1b71f0f43
+SHA1 (patch-src_zm__event.cpp) = 3adf6439da64fb991a9197dac2819bab22c53b44
+SHA1 (patch-src_zm__monitor.cpp) = dcc3816686a6a7c375d4716d3663b4c922c90439
+SHA1 (patch-src_zm__rtp__source.cpp) = 5341938eefe5def49dc8f3e3b760d86cabd17772
+SHA1 (patch-src_zm__sdp.cpp) = ed89bc14ae557281bb43baca9c90b78d801d8eb1
+SHA1 (patch-src_zm__thread.h) = c44a6b6a4fc187b742002b86bbcc9ca06f32f2cf
+SHA1 (patch-src_zm__timer.h) = f911310c52cad52ca47f632c370aca39858fbe44
+SHA1 (patch-src_zm__utils.cpp) = f6a109296146822014d57d39094390adcc5df760
+SHA1 (patch-src_zm__utils.h) = dbda8ba527f08b0337f6d2afa155ce4adc733e1e
+SHA1 (patch-src_zm_comms_cpp) = bd3c3e6dd4d11ea0845d2da662e99169cd6e6680
+SHA1 (patch-src_zm_comms_h) = 75ceba7e2c725c02a09cb2203a94142b1a987bce
+SHA1 (patch-src_zm_logger_cpp) = 2009be43b7a95cda662ea11703155dc892e7ad48
+SHA1 (patch-src_zm_remote_camera_h) = 0d4bd7dae0188df7e463586250ac2ed530230f3d
+SHA1 (patch-src_zm_signal_cpp) = 0e53c30d408cf926d9a1f05a683e10cd8b9f2d8e
+SHA1 (patch-src_zm_thread_cpp) = c5f64697c3024c6c382f9ae2c5dbe9c21b529b6e
+SHA1 (patch-src_zmc_cpp) = 9fee2df53603a26a086fc2d8a56b29e4059f3ed1
+SHA1 (patch-src_zmf.cpp) = a059b9ae068037c6f68c16dab861ed830dd1c7e2
+SHA1 (patch-src_zmu.cpp) = c83283c1ac38e7c39201f72099b9830d84566c41
+SHA1 (patch-web_Makefile.am) = ddb3815fa1b1799658034789302c8d3840f2b894
+SHA1 (patch-web_ajax_stream_php) = e8f811e63bedec03345b74db72c3d8014b3cc7f6
