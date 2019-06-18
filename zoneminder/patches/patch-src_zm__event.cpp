@@ -10,7 +10,21 @@ Also, this fix is expedient and probably a better fix is appropriate.
 
 --- src/zm_event.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_event.cpp
-@@ -80,7 +80,7 @@ Event::Event( Monitor *p_monitor, struct
+@@ -36,11 +36,13 @@
+ #include "zm_event.h"
+ #include "zm_monitor.h"
+ 
++#if HAVE_SENDFILE
+ // sendfile tricks
+ extern "C"
+ {
+ #include "zm_sendfile.h"
+ }
++#endif
+ 
+ #include "zmf.h"
+ 
+@@ -80,7 +82,7 @@ Event::Event( Monitor *p_monitor, struct
      static char sql[ZM_SQL_MED_BUFSIZ];
  
      struct tm *stime = localtime( &start_time.tv_sec );
@@ -19,7 +33,7 @@ Also, this fix is expedient and probably a better fix is appropriate.
      if ( mysql_query( &dbconn, sql ) )
      {
          Error( "Can't insert event: %s", mysql_error( &dbconn ) );
-@@ -178,7 +178,7 @@ Event::~Event()
+@@ -178,7 +180,7 @@ Event::~Event()
  
          Debug( 1, "Adding closing frame %d to DB", frames );
          static char sql[ZM_SQL_SML_BUFSIZ];
@@ -28,7 +42,7 @@ Also, this fix is expedient and probably a better fix is appropriate.
          if ( mysql_query( &dbconn, sql ) )
          {
              Error( "Can't insert frame: %s", mysql_error( &dbconn ) );
-@@ -191,7 +191,7 @@ Event::~Event()
+@@ -191,7 +193,7 @@ Event::~Event()
      struct DeltaTimeval delta_time;
      DELTA_TIMEVAL( delta_time, end_time, start_time, DT_PREC_2 );
  
@@ -37,7 +51,7 @@ Also, this fix is expedient and probably a better fix is appropriate.
      if ( mysql_query( &dbconn, sql ) )
      {
          Error( "Can't update event: %s", mysql_error( &dbconn ) );
-@@ -522,7 +522,7 @@ void Event::AddFramesInternal( int n_fra
+@@ -522,7 +524,7 @@ void Event::AddFramesInternal( int n_fra
          DELTA_TIMEVAL( delta_time, *(timestamps[i]), start_time, DT_PREC_2 );
  
          int sql_len = strlen(sql);
@@ -46,7 +60,7 @@ Also, this fix is expedient and probably a better fix is appropriate.
  
          frameCount++;
      }
-@@ -573,7 +573,7 @@ void Event::AddFrame( Image *image, stru
+@@ -573,7 +575,7 @@ void Event::AddFrame( Image *image, stru
  
          Debug( 1, "Adding frame %d of type \"%s\" to DB", frames, frame_type );
          static char sql[ZM_SQL_MED_BUFSIZ];
@@ -55,7 +69,7 @@ Also, this fix is expedient and probably a better fix is appropriate.
          if ( mysql_query( &dbconn, sql ) )
          {
              Error( "Can't insert frame: %s", mysql_error( &dbconn ) );
-@@ -661,7 +661,7 @@ bool EventStream::loadInitialEventData( 
+@@ -661,7 +663,7 @@ bool EventStream::loadInitialEventData( 
  {
      static char sql[ZM_SQL_SML_BUFSIZ];
  
@@ -64,3 +78,13 @@ Also, this fix is expedient and probably a better fix is appropriate.
  
      if ( mysql_query( &dbconn, sql ) )
      {
+@@ -1219,7 +1221,9 @@ bool EventStream::sendFrame( int delta_u
+     Debug( 2, "Sending frame %d", curr_frame_id );
+ 
+     static char filepath[PATH_MAX];
++#if HAVE_SENDFILE
+     static struct stat filestat;
++#endif
+     FILE *fdj = NULL;
+     
+     snprintf( filepath, sizeof(filepath), Event::capture_file_format, event_data->path, curr_frame_id );

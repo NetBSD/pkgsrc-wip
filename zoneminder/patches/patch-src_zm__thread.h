@@ -29,13 +29,33 @@ portable than syscall(SYS_gettid).
  pid_t pid() {
      pid_t tid; 
  #ifdef __FreeBSD__ 
-@@ -55,7 +53,8 @@ pid_t pid() {
+@@ -46,7 +44,9 @@ pid_t pid() {
+     #ifdef __FreeBSD_kernel__
+         if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
+     # else
++	#ifdef linux
+         tid=syscall(SYS_gettid); 
++	#endif
+     #endif
+ #endif
+     return tid;
+@@ -55,7 +55,8 @@ pid_t pid() {
  pthread_t pid() { return( pthread_self() ); }
  #endif
  public:
 -    ThreadException( const std::string &message ) : Exception( stringtf( "(%d) "+message, (long int)pid() ) ) {
 + /* The type of pid() varies by OS */
-+ ThreadException( const std::string &message ) : Exception( stringtf( ("(%jd) "+message).c_str, (intmax_t)pid() ) ) {
++ ThreadException( const std::string &message ) : Exception( stringtf( ("(%jd) "+message).c_str(), (intmax_t)pid() ) ) {
      }
  };
  
+@@ -242,7 +243,9 @@ protected:
+         if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
+ 
+     #else
++	#ifdef linux
+         tid=syscall(SYS_gettid); 
++	#endif
+     #endif
+ #endif
+ return tid;
