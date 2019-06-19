@@ -1,5 +1,7 @@
 $NetBSD: patch-src_zmf.cpp,v 1.1 2017/02/15 00:54:25 joerg Exp $
 
+\todo Explain
+
 --- src/zmf.cpp.orig	2017-02-15 00:51:13.260940737 +0000
 +++ src/zmf.cpp
 @@ -293,7 +293,7 @@ int main( int argc, char *argv[] )

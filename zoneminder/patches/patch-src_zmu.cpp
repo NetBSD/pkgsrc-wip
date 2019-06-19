@@ -1,5 +1,7 @@
 $NetBSD: patch-src_zmu.cpp,v 1.2 2018/07/14 15:03:57 gdt Exp $
 
+time types
+
 --- src/zmu.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zmu.cpp
 @@ -519,14 +519,14 @@ int main( int argc, char *argv[] )

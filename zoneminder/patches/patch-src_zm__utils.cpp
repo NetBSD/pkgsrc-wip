@@ -1,5 +1,7 @@
 $NetBSD: patch-src_zm__utils.cpp,v 1.1 2013/03/24 16:47:47 joerg Exp $
 
+\todo Explain
+
 --- src/zm_utils.cpp.orig	2011-06-21 09:19:11.000000000 +0000
 +++ src/zm_utils.cpp
 @@ -38,21 +38,6 @@ const std::string stringtf( const char *

@@ -1,12 +1,14 @@
 $NetBSD: patch-src_zm__event.cpp,v 1.2 2018/07/14 15:03:57 gdt Exp $
 
-zoneminder uses %ld for time_t, which is troublesome on NetBSD mrm and
+zoneminder uses %ld for time_t, which is troublesome on NetBSD arm and
 presumably i386.  (Note that there are multiple patch files for the
 same issue.)
 
 Not yet sent upstream -- needs update to latest release first, where
 it might be fixed, or the patch might simply need to be rebased.
 Also, this fix is expedient and probably a better fix is appropriate.
+
+Avoid sendfile code when sendfile doesn't exist.
 
 --- src/zm_event.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_event.cpp

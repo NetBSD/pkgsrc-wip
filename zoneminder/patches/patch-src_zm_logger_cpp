@@ -1,7 +1,13 @@
 $NetBSD: patch-src_zm_logger_cpp,v 1.5 2018/07/14 15:03:57 gdt Exp $
 
+Use libgen.h for basename.
+
+Kludge around const for basename.
+
 If the system has syscall() but not SYS_gettid [E.g. NetBSD], don't attempt
 to use SYS_gettid.
+
+Fix time types (sizes).
 
 --- src/zm_logger.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_logger.cpp

@@ -6,6 +6,8 @@ pthread_t is opaque, and under NetBSD is a pointer.  It's being abused here,
 but the value is only used for logging, and casting pthread_self() is more
 portable than syscall(SYS_gettid).
 
+\todo Fix correctly upstream.
+
 --- src/zm_thread.h.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_thread.h
 @@ -22,20 +22,21 @@

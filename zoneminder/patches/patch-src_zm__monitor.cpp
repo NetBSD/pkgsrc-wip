@@ -1,5 +1,9 @@
 $NetBSD: patch-src_zm__monitor.cpp,v 1.1 2017/02/15 00:54:25 joerg Exp $
 
+\todo Explain mem_ptr change.
+
+Avoid type error (suseconds_t is not long).  To be addressed upstream once caught up.
+
 --- src/zm_monitor.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_monitor.cpp
 @@ -160,7 +160,7 @@ bool Monitor::MonitorLink::connect()
@@ -25,7 +29,7 @@ $NetBSD: patch-src_zm__monitor.cpp,v 1.1 2017/02/15 00:54:25 joerg Exp $
                          break;
                      case 'f' :
 -                        d_ptr += snprintf( d_ptr, sizeof(label_text)-(d_ptr-label_text), "%02ld", ts_time->tv_usec/10000 );
-+		      d_ptr += snprintf( d_ptr, sizeof(label_text)-(d_ptr-label_text), "%02ld", (long) ts_time->tv_usec/10000 );
++		         d_ptr += snprintf( d_ptr, sizeof(label_text)-(d_ptr-label_text), "%02ld", (long) ts_time->tv_usec/10000 );
                          found_macro = true;
                          break;
                  }

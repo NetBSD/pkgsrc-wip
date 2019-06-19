@@ -3,6 +3,8 @@ $NetBSD: patch-src_zm_thread_cpp,v 1.2 2013/03/24 16:47:47 joerg Exp $
 pthread_mutex_timedlock() is not available on NetBSD 5.0, and not required
 in ZoneMinder.
 
+Work around varying notion of an undefined mpid on pthread/not.
+
 --- src/zm_thread.cpp.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_thread.cpp
 @@ -72,6 +72,7 @@ void Mutex::lock()

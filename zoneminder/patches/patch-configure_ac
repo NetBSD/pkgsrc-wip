@@ -1,10 +1,6 @@
 $NetBSD: patch-configure_ac,v 1.4 2015/04/07 12:54:36 dsainty Exp $
 
-Recognise lower-case "netbsd" as BSD.
-
-Correct shell test = syntax.
-
-Allow Pkgsrc to manage dlopen() support.
+Remediate == (bashism) in configure.ac
 
 --- configure.ac.orig	2016-02-03 18:40:30.000000000 +0000
 +++ configure.ac
