@@ -1,12 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	scheme-bytestructures-1.0.5
+DISTNAME=	scheme-bytestructures-1.0.6
 PKGNAME=	${DISTNAME:S/scheme/guile/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TaylanUB/}
 GITHUB_PROJECT=	scheme-bytestructures
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/TaylanUB/scheme-bytestructures/

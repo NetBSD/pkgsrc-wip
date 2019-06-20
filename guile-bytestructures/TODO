@@ -1,1 +1,4 @@
 * see if it is possible to run tests, which apparently exist
+
+* guild create a ccache in the wrkdir at:
+  .home/.cache/guile/ccache/2.2-LE-8-3.A/usr/pkg/guile/2.2/bin/guild.go

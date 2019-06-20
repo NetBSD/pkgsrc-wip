@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (scheme-bytestructures-1.0.5.tar.gz) = ba2da83f8cbd0f60f587571c7230b25b62687b12
-RMD160 (scheme-bytestructures-1.0.5.tar.gz) = 16eb801ff2d4e4d1a6785abe3d233a0c9ea03e9a
-SHA512 (scheme-bytestructures-1.0.5.tar.gz) = 3c6c48735ae65934c3d71abc211e57774d8c9eff44d6ca82470ba608738f9e2ade8f64cf4a0abb101be55718f6c3e7c4387c543e67a53ac7c0fae0ba86133afa
-Size (scheme-bytestructures-1.0.5.tar.gz) = 48324 bytes
+SHA1 (scheme-bytestructures-1.0.6.tar.gz) = 68aae12de2e817892116c17afb7f4be57da15734
+RMD160 (scheme-bytestructures-1.0.6.tar.gz) = 9a43f11c3e9c44a0cf6768bc54dc1fa4e9dc679f
+SHA512 (scheme-bytestructures-1.0.6.tar.gz) = f1e51c9e22215173a30f7096bc0d707b3da41f8b2dc8ea868e105a76b2653b7957c377b7d12fbfb9b788935dfaf961a29d6c5783bf93a0e78ba0e77b0d9bd68e
+Size (scheme-bytestructures-1.0.6.tar.gz) = 49056 bytes
