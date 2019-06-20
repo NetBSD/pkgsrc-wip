@@ -12,11 +12,5 @@ LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man3
-
-post-install:
-	${RUN}${INSTALL_MAN} ${WRKSRC}/libansilove.3 \
-	                     ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
-
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
