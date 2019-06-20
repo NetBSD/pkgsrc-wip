@@ -14,7 +14,8 @@ SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-configure
 SUBST_MESSAGE.makefile=	Fixing Makefile
 SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e '/^CFLAGS/ s,-O3,${CFLAGS},'
+SUBST_SED.makefile+=	-e '/^CFLAGS/ s,-O3,,'
+SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 
 DOCDIR=		share/doc/ttyplot
 
