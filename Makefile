@@ -5076,6 +5076,7 @@ SUBDIR+=	ziparchive
 SUBDIR+=	zipios
 SUBDIR+=	zlua
 SUBDIR+=	zmap
+SUBDIR+=	zola
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
