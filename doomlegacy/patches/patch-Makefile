@@ -1,0 +1,76 @@
+$NetBSD$
+
+Add NetBSD to OS list.
+Honor environment variables CFLAGS, LDFLAGS and LIBS.
+Silence warnings about common symbol merging.
+
+--- Makefile.orig	2017-03-03 20:22:35.000000000 +0000
++++ Makefile
+@@ -128,6 +128,7 @@
+ # Linux is the default for SDL, that also applies to most unix-like OS.
+ #   OS=LINUX
+ #   OS=FREEBSD
++#   OS=NETBSD
+ # Windows operating systems.  Also see CC_SELECT.
+ # WIN32 is a generic 32bit Windows.
+ #   OS=WIN32
+@@ -418,7 +419,7 @@ endif
+ export SMIF
+ 
+ 
+-OS_LIST:=LINUX FREEBSD WIN32 WIN98 WIN7 OS2 DOS MAC
++OS_LIST:=LINUX FREEBSD NETBSD WIN32 WIN98 WIN7 OS2 DOS MAC
+ 
+ ifeq ($(OS), LINUX)
+   LINUX=1
+@@ -429,6 +430,12 @@ ifeq ($(OS), FREEBSD)
+   $(info  Please submit bug reports, and bug fixes. )
+   FREEBSD=1
+ else
++ifeq ($(OS), NETBSD)
++  # Uses statvfs(5).
++  $(info  NetBSD support is dependent upon user reports.)
++  $(info  Please submit bug reports, and bug fixes. )
++  NETBSD=1
++else
+ ifeq ($(OS), WIN32)
+   $(info  Generic Windows compile.  May or may-not work on modern Windows.)
+   $(info  Please submit bug reports, and bug fixes. )
+@@ -482,6 +489,7 @@ endif
+ endif
+ endif
+ endif
++endif
+ export OS
+ 
+ 
+@@ -507,7 +515,7 @@ ifdef DOSFILE
+   O_WIN:=$(subst /,\,$(O))
+   DD_WIN:=$(subst /,\,$(DD))
+ else
+-  # Linux, FreeBSD, Mac
++  # Linux, FreeBSD, NETBSD, Mac
+   RM:=rm
+   SHELL:=/bin/sh
+ endif
+@@ -730,7 +738,7 @@ ifdef DOSFILE
+   INSTALL_GAMES_DIR ?= \games\doomlegacy
+   INSTALL_USER_DIR ?= $(USERHOME)\games\doomlegacy
+ else
+-  # Linux, FreeBSD, Mac
++  # Linux, FreeBSD, NETBSD, Mac
+   # DO NOT use tilde, use $(HOME).
+   PREFIX ?= /usr/local
+   INSTALL_SYS_DIR ?= $(PREFIX)/bin
+@@ -1144,7 +1152,11 @@ else
+   ifeq ($(OS), FREEBSD)
+ 	cp -n  make_options_nix  $(BUILD_DIR)make_options
+   else
++  ifeq ($(OS), NETBSD)
+ 	cp -n  make_options_nix  $(BUILD_DIR)make_options
++  else
++	cp -n  make_options_nix  $(BUILD_DIR)make_options
++  endif
+   endif
+   endif
+ endif
