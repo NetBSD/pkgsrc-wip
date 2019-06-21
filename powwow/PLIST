@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:53 joerg Exp $
+bin/powwow
+man/man6/powwow.6
+share/powwow/powwow.doc
+share/powwow/powwow.help

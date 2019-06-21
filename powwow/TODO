@@ -1,0 +1,18 @@
+* Correctly patch alloca() usage. Upstream has been contacted for
+  resolution.
+
+* this:
+tty.c: In function 'tty_start':
+tty.c:64:18: error: 'ECHO' undeclared (first use in this function); did you mean 'O_ECHO'?
+ #  define O_ECHO ECHO
+                  ^
+tty.c:184:49: note: in expansion of macro 'O_ECHO'
+     ttyb.sg_flags = (ttyb.sg_flags|O_CBREAK) & ~O_ECHO;
+                                                 ^~~~~~
+tty.c:64:18: note: each undeclared identifier is reported only once for each function it appears in
+ #  define O_ECHO ECHO
+									                  ^
+tty.c:184:49: note: in expansion of macro 'O_ECHO'
+     ttyb.sg_flags = (ttyb.sg_flags|O_CBREAK) & ~O_ECHO;
+                                                 ^~~~~~
+

@@ -1,0 +1,22 @@
+$NetBSD$
+# HG changeset patch
+# User ng0@n0.is
+# Date 1561116677 0
+#      Fri Jun 21 11:31:17 2019 +0000
+# Node ID e208602bebbca226bfec03c91b3c8dc23baac0bb
+# Parent  f6aa85dbb7139b735086034c216a0c689dc6784d
+Remove unnecessary alloca.h include.
+https://linux.die.net/man/3/alloca:
+By default the glibc version of <stdlib.h> includes <alloca.h>
+
+diff -r f6aa85dbb713 -r e208602bebbc tty.c
+--- tty.c~	Fri Jun 21 11:20:57 2019 +0000
++++ tty.c	Fri Jun 21 11:31:17 2019 +0000
+@@ -9,7 +9,6 @@
+  *  (at your option) any later version.
+  *
+  */
+-#include <alloca.h>
+ #include <assert.h>
+ #include <errno.h>
+ #include <fcntl.h>

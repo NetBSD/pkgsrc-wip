@@ -3031,6 +3031,7 @@ SUBDIR+=	postoffice
 SUBDIR+=	postr
 SUBDIR+=	povray
 SUBDIR+=	powerdevil
+SUBDIR+=	powwow
 SUBDIR+=	ppp
 SUBDIR+=	ppr
 SUBDIR+=	praat
