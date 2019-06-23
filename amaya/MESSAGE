@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/04/21 14:53:35 makoto Exp $
-
-The license of this package may require formal notice that the sources
-have been patched. Patches and their history may be inspected here:
-
-   http://cvsweb.netbsd.org/bsdweb.cgi/pkgsrc/www/amaya/patches/
-
-===========================================================================
