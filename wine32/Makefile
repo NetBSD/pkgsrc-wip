@@ -15,7 +15,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
-PKG_DESTDIR_SUPPORT=	user-destdir
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
 
