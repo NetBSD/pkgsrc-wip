@@ -3,5 +3,7 @@
     => PKGREVISION not bumped, because binary package has not changed
 [X] Renamed man page template to doomlegacy.1.in (suggested by wiz@)
     => PKGREVISION not bumped, because binary package has not changed
+[X] Move man page to section 6 (it's a game)
+   => Bump PKGREVISION
 [ ] Test building of the package again
 [ ] Remove patches after upstream integration

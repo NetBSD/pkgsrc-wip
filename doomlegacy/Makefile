@@ -1,12 +1,12 @@
 # $NetBSD$
 
-VERS=			1.47.2
-PKGNAME=		doomlegacy-${VERS}
-CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
-DISTNAME=		${PKGNAME:S/-/_/}_source
-DISTFILES=		${DEFAULT_DISTFILES} doomlegacy_${VERS}_common.zip
-EXTRACT_SUFX=		.tar.bz2
+VERS=		1.47.2
+PKGNAME=	doomlegacy-${VERS}
+PKGREVISION=	1
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
+DISTNAME=	${PKGNAME_NOREV:S/-/_/}_source
+DISTFILES=	doomlegacy_${VERS}_source.tar.bz2 doomlegacy_${VERS}_common.zip
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		http://doomlegacy.sourceforge.net/
@@ -45,7 +45,7 @@ CFLAGS+=		-D__BIG_ENDIAN__
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/doomlegacy ${DOOMWADDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/doc/doomlegacy ${DOOMWADDIR}
 
 MESSAGE_SRC+=		MESSAGE.doomlegacy
 MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
@@ -60,7 +60,7 @@ SUBST_SED.doomdef=	-e 's,LEGACYWADDIR  "/usr/local/share/games/doomlegacy",LEGAC
 SUBST_SED.doomdef+=	-e 's,DEFWADS01  "~/games/doomlegacy/wads",DEFWADS01  "${PREFIX}/${DOOMWADDIR}",'
 
 pre-configure:
-	${CP} ${FILESDIR}/doomlegacy.1.in ${WRKDIR}
+	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
 
 # Move configure options and process manpage template
 do-configure:
@@ -68,7 +68,7 @@ do-configure:
 		${SED} -e 's,$$NAME,doomlegacy,g'			\
 			-e 's,$$VERSION,${VERS},g'			\
 			-e 's,$$WADDIR,${PREFIX}/${DOOMWADDIR},g'	\
-			doomlegacy.1.in >doomlegacy.1
+			doomlegacy.6.in >doomlegacy.6
 
 do-install:
 	cd ${WRKSRC} &&							\
@@ -80,8 +80,8 @@ do-install:
 		${INSTALL_DATA} legacy.wad				\
 			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad;	\
 	cd ${WRKDIR} &&							\
-		${INSTALL_MAN} ${WRKDIR}/doomlegacy.1			\
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_MAN} ${WRKDIR}/doomlegacy.6			\
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 # Ensure that at least the shareware Episode 1 of Doom is available
 # Note: The demos from games/doom1 are not compatible with the Legacy engine

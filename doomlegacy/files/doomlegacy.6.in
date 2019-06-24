@@ -4,7 +4,7 @@
 .\" Copyright (c) 2019 by Michael Baeuerle.
 .\" License: GNU Free Documentation License (GFDL)
 .\"
-.TH $NAME 1 2019-06-16 Unix "$NAME $VERSION manual"
+.TH $NAME 6 2019-06-16 Unix "$NAME $VERSION manual"
 .\"
 .\"
 .\"=============================================================================
