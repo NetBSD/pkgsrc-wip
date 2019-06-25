@@ -1,0 +1,8 @@
+Respect CFLAGS and CXXFLAGS.
+--- configure.ac~
++++ configure.ac
+@@ -57,4 +57,2 @@ fi
+ 
+-CFLAGS=
+-CXXFLAGS=
+ AC_PROG_CC

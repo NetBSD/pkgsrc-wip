@@ -1,0 +1,8 @@
+
+--- Makefile.config.in~
++++ Makefile.config.in
+@@ -5,3 +5,4 @@ CXX = @CXX@
+ CXXFLAGS = @CXXFLAGS@
++LDFLAGS = @LDFLAGS@
+ ENABLE_S3 = @ENABLE_S3@
+ HAVE_SODIUM = @HAVE_SODIUM@

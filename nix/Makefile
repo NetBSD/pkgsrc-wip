@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	nix
-DISTNAME=	2.2.1
+DISTNAME=	2.2.2
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NixOS/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/NixOS/nix/
 COMMENT=	Purely functional package manager
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/nix-2.2.1
+WRKSRC=		${WRKDIR}/nix-2.2.2
 USE_TOOLS+=	pkg-config yacc flex automake autoconf autoreconf #bison?
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
@@ -23,15 +23,18 @@ PKGCONFIG_OVERRIDE+=	src/libstore/nix-store.pc.in
 
 CONFIGURE_ARGS+=	--with-sandbox-shell=/bin/sh
 CONFIGURE_ARGS+=	--enable-gc
+CONFIGURE_ARGS+=	--disable-s3
 #CONFIGURE_ARGS+=	--localstatedir=
 
-#pkg-config fails to find editline and suggests to set the following:
-#EDITLINE_CFLAGS
-#EDITLINE_LIBS
+CONFIGURE_ENV+=		EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include
+CONFIGURE_ENV+=		EDITLINE_LIBS=${BUILDLINK_PREFIX.editlinereadline:Q}/lib
+CONFIGURE_ENV+=		LIBLZMA_CFLAGS=${BUILDLINK_PREFIX.lzmalib:Q}/include
+CONFIGURE_ENV+=		LIBLZMA_LIBS=${BUILDLINK_PREFIX.lzmalib:Q}/lib
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} bootstrap.sh
 
+.include "../../archivers/lzmalib/buildlink3.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"

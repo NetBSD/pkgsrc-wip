@@ -1,0 +1,12 @@
+--- mk/programs.mk~
++++ mk/programs.mk
+@@ -34,3 +34,3 @@ define build-program
+   $$($(1)_PATH): $$($(1)_OBJS) $$(_libs) | $$(_d)/
+-	$$(trace-ld) $(CXX) -o $$@ $$(GLOBAL_LDFLAGS) $$($(1)_OBJS) $$($(1)_LDFLAGS) $$(foreach lib, $$($(1)_LIBS), $$($$(lib)_LDFLAGS_USE))
++	$$(trace-ld) $(CXX) -o $$@ $$(LDFLAGS) $$(GLOBAL_LDFLAGS) $$($(1)_OBJS) $$($(1)_LDFLAGS) $$(foreach lib, $$($(1)_LIBS), $$($$(lib)_LDFLAGS_USE))
+ 
+@@ -48,3 +48,3 @@ define build-program
+     $(DESTDIR)$$($(1)_INSTALL_PATH): $$($(1)_OBJS) $$(_libs_final) | $(DESTDIR)$$($(1)_INSTALL_DIR)/
+-	$$(trace-ld) $(CXX) -o $$@ $$(GLOBAL_LDFLAGS) $$($(1)_OBJS) $$($(1)_LDFLAGS) $$(foreach lib, $$($(1)_LIBS), $$($$(lib)_LDFLAGS_USE_INSTALLED))
++	$$(trace-ld) $(CXX) -o $$@ $$(LDFLAGS) $$(GLOBAL_LDFLAGS) $$($(1)_OBJS) $$($(1)_LDFLAGS) $$(foreach lib, $$($(1)_LIBS), $$($$(lib)_LDFLAGS_USE_INSTALLED))
+ 
