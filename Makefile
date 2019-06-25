@@ -2396,6 +2396,7 @@ SUBDIR+=	ninja-ide
 SUBDIR+=	ninka
 SUBDIR+=	nios2-gdb
 SUBDIR+=	nitrogen
+SUBDIR+=	nix
 SUBDIR+=	njb-sharp
 SUBDIR+=	nlohmann-json
 SUBDIR+=	nltk_data
