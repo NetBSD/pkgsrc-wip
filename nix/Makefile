@@ -1,18 +1,14 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	nix
-DISTNAME=	2.2.2
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	nix-2.2.2
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NixOS/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	ng0@n0.is
 HOMEPAGE=	https://github.com/NixOS/nix/
 COMMENT=	Purely functional package manager
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/nix-2.2.2
 USE_TOOLS+=	pkg-config yacc flex automake autoconf autoreconf #bison?
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

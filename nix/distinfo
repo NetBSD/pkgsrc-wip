@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (nix/2.2.2.tar.gz) = 2bf4001dc70472d695534f04bea3803f546a9594
-RMD160 (nix/2.2.2.tar.gz) = 5d95c107c10833c52e674f75ffab3e06f2657082
-SHA512 (nix/2.2.2.tar.gz) = 793fb94a4fa7959651238d7b31853cba231a0016d2d7cb2ab5b8445ad9fbfe738673cfc1cc8666a2c59898bfda481c1b8d31c64af65123052f11194867f2a97d
-Size (nix/2.2.2.tar.gz) = 865747 bytes
+SHA1 (nix-2.2.2.tar.gz) = 2bf4001dc70472d695534f04bea3803f546a9594
+RMD160 (nix-2.2.2.tar.gz) = 5d95c107c10833c52e674f75ffab3e06f2657082
+SHA512 (nix-2.2.2.tar.gz) = 793fb94a4fa7959651238d7b31853cba231a0016d2d7cb2ab5b8445ad9fbfe738673cfc1cc8666a2c59898bfda481c1b8d31c64af65123052f11194867f2a97d
+Size (nix-2.2.2.tar.gz) = 865747 bytes
 SHA1 (patch-aa__configure_ac) = 6c20b077d347ed08a73e64a189d67e11f75ebe23
 SHA1 (patch-ab__Makefile_config_in) = aecad05838282840f966b1f529e7b87dfe6f6c41
 SHA1 (patch-mk__libraries_mk) = 1ea7f8d5b6d743efa146dc9f9d1773bd01c4ec60
