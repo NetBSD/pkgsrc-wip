@@ -1,3 +1,6 @@
 $NetBSD$
 
-SHA1 (patch-src_system-install.mk) = 4880fb97c7c6e4a27b9b50b3e8fb5d40c3acbef0
+SHA1 (redeclipse_1.6.0_nix.tar.bz2) = 1e8271ac8d34df1ebda47443ff824338550eddb7
+RMD160 (redeclipse_1.6.0_nix.tar.bz2) = 41b480abd8712efed76f092253a41c1ebd604e0c
+SHA512 (redeclipse_1.6.0_nix.tar.bz2) = e944aed8155b5e89e8df000516d4a019a63d38d7ad9c3982b2e111f8a20bc848a98e30c1b60f4fdaf006c2ff9e2cb04647c07778eb2562eaf7db733dbce11233
+Size (redeclipse_1.6.0_nix.tar.bz2) = 898467399 bytes
