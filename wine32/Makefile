@@ -17,8 +17,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
+PREFER_NATIVE=		curses
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
@@ -29,6 +29,8 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
