@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	cov-analysis-netbsd64-2017.07
-PKGNAME=	coverity-analysis-bin-2017.07
+DISTNAME=	cov-analysis-netbsd64-2019.03
+PKGNAME=	coverity-analysis-bin-2019.03
 CATEGORIES=	devel
 MASTER_SITES=	# http://scan.coverity.com/download/
 
@@ -18,6 +18,7 @@ NOT_FOR_PLATFORM=	NetBSD-[0-4]*.*-x86_64
 CHECK_RELRO_SUPPORTED=	no
 
 USE_TOOLS+=		pax
+EXTRACT_USING=		bsdtar
 
 do-build:
 
