@@ -8,6 +8,7 @@ SUBDIR+=	2048-c
 SUBDIR+=	389-ds-base
 SUBDIR+=	3dsconv
 SUBDIR+=	7kaa
+SUBDIR+=	7kaa-music
 SUBDIR+=	8cc-git
 SUBDIR+=	ARC
 SUBDIR+=	Bear

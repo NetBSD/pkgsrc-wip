@@ -1,0 +1,12 @@
+This is a GPL release of the Seven Kingdoms: Ancient Adversaries thanks to
+Enlight Software which granted the ability to license the game under a
+free and open source license in 2009. See the file "COPYING" for the
+details of the license. We are indebted to Enlight for making the 7kfans
+project possible and giving a new chance to build a community for fans
+of the game.
+
+This package contains the non-GPL music files, which are redistributed
+separately due to restrictive licensing. Their license forbids modifications
+and they are restricted for use with Seven Kingdoms alone.
+
+Once installed, these will automatically be used by 7kaa.
