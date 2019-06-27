@@ -5065,6 +5065,7 @@ SUBDIR+=	ympd
 SUBDIR+=	yoda
 SUBDIR+=	yosys
 SUBDIR+=	you-get
+SUBDIR+=	youtube-dl
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
