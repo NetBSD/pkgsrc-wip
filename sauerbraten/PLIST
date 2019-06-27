@@ -3,6 +3,7 @@ bin/sauer_client
 bin/sauer_server
 libexec/sauer_client
 libexec/sauer_server
+share/applications/sauerbraten.desktop
 share/doc/sauerbraten/config.html
 share/doc/sauerbraten/cube2logo.png
 share/doc/sauerbraten/dev/edgespans.gif
@@ -25,6 +26,8 @@ share/doc/sauerbraten/history.html
 share/doc/sauerbraten/models.html
 share/doc/sauerbraten/rpg.html
 share/doc/sauerbraten/style.css
+share/icons/hicolor/16x16/apps/sauerbraten.png
+share/icons/hicolor/32x32/apps/sauerbraten.png
 share/sauerbraten/data/background.png
 share/sauerbraten/data/background_decal.png
 share/sauerbraten/data/background_detail.png

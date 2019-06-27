@@ -21,6 +21,9 @@ LDFLAGS.NetBSD+=	-lrt
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
 INSTALLATION_DIRS+=	share/doc/sauerbraten
 INSTALLATION_DIRS+=	share/sauerbraten/data
 INSTALLATION_DIRS+=	share/sauerbraten/packages
@@ -42,6 +45,12 @@ do-install:
 	    ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${WRKSRC}/src/sauer_server \
 	    ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_DATA} ${FILESDIR}/sauerbraten.desktop \
+	    ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/src/xcode/help/sauer16.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/16x16/apps/sauerbraten.png
+	${INSTALL_DATA} ${WRKSRC}/src/xcode/help/sauer32.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps/sauerbraten.png
 	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/doc/sauerbraten
 	cd ${WRKSRC}/data && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/sauerbraten/data
 	cd ${WRKSRC}/packages && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/sauerbraten/packages
@@ -49,6 +58,7 @@ do-install:
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
