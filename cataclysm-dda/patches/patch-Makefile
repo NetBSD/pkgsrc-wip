@@ -1,58 +1,66 @@
 $NetBSD: patch-Makefile,v 1.1 2015/08/18 21:49:07 yhardy Exp $
 
-Avoid gnuisms
+Avoid gnuisms and skip pull request validation.
 
---- Makefile.orig	2015-03-09 05:25:34.000000000 +0000
+--- Makefile.orig	2019-03-08 03:34:43.000000000 +0000
 +++ Makefile
-@@ -477,29 +477,31 @@ DATA_PREFIX=$(PREFIX)/share/cataclysm-dd
- BIN_PREFIX=$(PREFIX)/bin
- LOCALE_DIR=$(PREFIX)/share/locale
+@@ -857,18 +857,15 @@ DATA_PREFIX=$(DESTDIR)$(PREFIX)/share/ca
+ BIN_PREFIX=$(DESTDIR)$(PREFIX)/bin
+ LOCALE_DIR=$(DESTDIR)$(PREFIX)/share/locale
  install: version $(TARGET)
 -	mkdir -p $(DATA_PREFIX)
 -	mkdir -p $(BIN_PREFIX)
 -	install --mode=755 $(TARGET) $(BIN_PREFIX)
+-	cp -R --no-preserve=ownership data/core $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/font $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/json $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/mods $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/names $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/raw $(DATA_PREFIX)
--	cp -R --no-preserve=ownership data/recycling $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/motd $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/credits $(DATA_PREFIX)
 -	cp -R --no-preserve=ownership data/title $(DATA_PREFIX)
 +	${INSTALL_DATA_DIR} $(DATA_PREFIX)
 +	${INSTALL_DATA_DIR} $(BIN_PREFIX)
 +	$(INSTALL_PROGRAM) $(TARGET) $(BIN_PREFIX)
-+	cd data && find font json mods names raw recycling motd credits title -type d | while read d; \
++	cd data && find core font json mods names raw motd credits title -type d | while read d; \
 +			do ${INSTALL_DATA_DIR} "$(DATA_PREFIX)/$$d"; \
 +	done
-+	cd data && find font json mods names raw recycling motd credits title ! -type d | while read f; \
++	cd data && find core font json mods names raw motd credits title ! -type d | while read f; \
 +			do ${INSTALL_DATA} "$$f" "$(DATA_PREFIX)/$${f%/*}"; \
 +	done
  ifdef TILES
--	cp -R --no-preserve=ownership gfx $(DATA_PREFIX)
-+	find gfx -type d | while read d; \
-+		do ${INSTALL_DATA_DIR} "$(DATA_PREFIX)/$$d"; \
-+	done
-+	find gfx ! -type d | while read f; \
-+		do ${INSTALL_DATA} "$$f" "$(DATA_PREFIX)/$${f%/*}"; \
-+	done
+ 	cp -R --no-preserve=ownership gfx $(DATA_PREFIX)
+ endif
+@@ -876,14 +873,14 @@ ifdef SOUND
+ 	cp -R --no-preserve=ownership data/sound $(DATA_PREFIX)
  endif
  ifdef LUA
 -	mkdir -p $(DATA_PREFIX)/lua
 -	install --mode=644 lua/autoexec.lua $(DATA_PREFIX)/lua
+-	install --mode=644 lua/log.lua $(DATA_PREFIX)/lua
 -	install --mode=644 lua/class_definitions.lua $(DATA_PREFIX)/lua
 -endif
 -	install --mode=644 data/changelog.txt data/cataicon.ico data/fontdata.json \
--                   README.txt LICENSE.txt -t $(DATA_PREFIX)
+-                   LICENSE.txt -t $(DATA_PREFIX)
 -	mkdir -p $(LOCALE_DIR)
 +	${INSTALL_DATA_DIR} $(DATA_PREFIX)/lua
 +	${INSTALL_DATA} lua/autoexec.lua $(DATA_PREFIX)/lua
++	${INSTALL_DATA} lua/log.lua $(DATA_PREFIX)/lua
 +	${INSTALL_DATA} lua/class_definitions.lua $(DATA_PREFIX)/lua
 +endif
 +	${INSTALL_DATA} data/changelog.txt data/cataicon.ico data/fontdata.json \
-+                   README.txt LICENSE.txt $(DATA_PREFIX)
++                   LICENSE.txt $(DATA_PREFIX)
 +	${INSTALL_DATA_DIR} $(LOCALE_DIR)
- 	LOCALE_DIR=$(LOCALE_DIR) lang/compile_mo.sh
+ ifdef LANGUAGES
+ 	LOCALE_DIR=$(LOCALE_DIR) lang/compile_mo.sh $(LANGUAGES)
  endif
+@@ -1098,7 +1095,7 @@ clean-tests:
+ 	$(MAKE) -C tests clean
+ 
+ validate-pr:
+-	@build-scripts/validate_pr_in_jenkins
++	@true build-scripts/validate_pr_in_jenkins
+ 
+ .PHONY: tests check ctags etags clean-tests install lint validate-pr
  
