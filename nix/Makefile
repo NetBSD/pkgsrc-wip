@@ -31,6 +31,11 @@ CONFIGURE_ENV+=		LIBLZMA_LIBS=${BUILDLINK_PREFIX.lzmalib:Q}/lib
 #   /usr/bin/ld: error: undefined symbol: SHA512_Update
 MAKE_ARGS+=	libutil_ALLOW_UNDEFINED=yes
 
+# verbose build
+MAKE_ENV+=	V=1
+# Disable hardcoded -O3
+MAKE_ENV+=	OPTIMIZE=0
+
 # checking for aws/s3/S3Client.h... (cached) no
 # ./configure: 7003: Syntax error: "(" unexpected (expecting "fi")
 # *** Error code 2
