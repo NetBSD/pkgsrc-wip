@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/colm
+include/colm/bytecode.h
+include/colm/colm.h
+include/colm/config.h
+include/colm/debug.h
+include/colm/defs.h
+include/colm/input.h
+include/colm/internal.h
+include/colm/map.h
+include/colm/pdarun.h
+include/colm/pool.h
+include/colm/program.h
+include/colm/struct.h
+include/colm/tree.h
+include/colm/type.h
+lib/libcolm.la
+share/doc/colm/colm.vim
