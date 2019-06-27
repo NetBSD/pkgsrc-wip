@@ -494,8 +494,10 @@ share/7kaa/TUTORIAL/8FRYHTAN.TUT
 share/7kaa/TUTORIAL/9SEATPOW.TUT
 share/7kaa/TUTORIAL/LOYALTY.TUT
 share/7kaa/TUTORIAL/SPYING.TUT
+share/applications/7kaa.desktop
 share/doc/7kaa/COPYING
 share/doc/7kaa/README
+share/icons/hicolor/32x32/apps/7kaa.png
 share/locale/de/LC_MESSAGES/7kaa.mo
 share/locale/es/LC_MESSAGES/7kaa.mo
 share/locale/pt_BR/LC_MESSAGES/7kaa.mo
