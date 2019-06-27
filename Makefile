@@ -455,6 +455,7 @@ SUBDIR+=	collectd-haproxy
 SUBDIR+=	collectd-redis
 SUBDIR+=	collectd-unbound
 SUBDIR+=	collectd-web
+SUBDIR+=	colm-devel
 SUBDIR+=	colobot
 SUBDIR+=	colord
 SUBDIR+=	colord-gtk
