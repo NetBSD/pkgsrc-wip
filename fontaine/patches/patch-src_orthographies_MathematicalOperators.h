@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- src/orthographies/MathematicalOperators.h.orig	2012-06-26 10:46:34.000000000 -0500
 +++ src/orthographies/MathematicalOperators.h	2014-02-24 04:49:04.000000000 -0600
 @@ -10,6 +10,7 @@

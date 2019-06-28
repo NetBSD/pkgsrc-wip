@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- src/orthographies/orthographies.h.orig	2012-06-26 10:46:34.000000000 -0500
 +++ src/orthographies/orthographies.h	2015-01-23 11:57:04.000000000 -0600
 @@ -20,10 +20,11 @@

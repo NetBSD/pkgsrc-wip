@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- /dev/null	2015-01-23 12:43:49.000000000 -0600
 +++ src/orthographies/MathematicalNumerals.h	2015-01-23 11:48:40.000000000 -0600
 @@ -0,0 +1,58 @@

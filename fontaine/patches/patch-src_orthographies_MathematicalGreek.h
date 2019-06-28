@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- /dev/null	2015-01-23 12:43:49.000000000 -0600
 +++ src/orthographies/MathematicalGreek.h	2015-01-23 12:00:45.000000000 -0600
 @@ -0,0 +1,66 @@

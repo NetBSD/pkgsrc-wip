@@ -1,3 +1,5 @@
+$NetBSD$
+
 9a10,12
 > /*****
 > TL: I'd rename everything referencing "euro" to "currency" instead.
