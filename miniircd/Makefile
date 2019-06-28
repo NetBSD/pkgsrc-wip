@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2017/04/14 19:10:23 leot Exp $
 
-DISTNAME=	miniircd-1.2.1
+DISTNAME=	miniircd-1.3
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jrosdahl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
