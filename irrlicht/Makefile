@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.8 2013/01/07 04:17:22 ryo-on Exp $
 #
 
-DISTNAME=	irrlicht-1.8
+DISTNAME=	irrlicht-1.8.4
 CATEGORIES=	graphics games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=irrlicht/}
 EXTRACT_SUFX=	.zip

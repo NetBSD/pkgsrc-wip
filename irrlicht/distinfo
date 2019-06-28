@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.4 2013/01/06 14:13:27 ryo-on Exp $
 
-SHA1 (irrlicht-1.8.zip) = a24c2183e3c7dd909f92699c373a68382958b09d
-RMD160 (irrlicht-1.8.zip) = 3fd9a28fa93146cc660c49fd18ef4e25db294a2b
-Size (irrlicht-1.8.zip) = 23674513 bytes
+SHA1 (irrlicht-1.8.4.zip) = 38bf0223fe868d243d6a39d0dc191c8df6e03b3b
+RMD160 (irrlicht-1.8.4.zip) = 275eb79193a330b3924166e9cac8d74d37990256
+SHA512 (irrlicht-1.8.4.zip) = de69ddd2c6bc80a1b27b9a620e3697b1baa552f24c7d624076d471f3aecd9b15f71dce3b640811e6ece20f49b57688d428e3503936a7926b3e3b0cc696af98d1
+Size (irrlicht-1.8.4.zip) = 27927144 bytes
 SHA1 (patch-source_Irrlicht_COSOperator.cpp) = d78afd144d06afa1b4b199c192178759be18015e
 SHA1 (patch-source_Irrlicht_Makefile) = 4d49b4eac2b501c0bbfeacb8b1f1f54e9d5feea3
 SHA1 (patch-source_Irrlicht_os.cpp) = f6a4375db91f552f4e14afb847bcaaa5e5b0e831
