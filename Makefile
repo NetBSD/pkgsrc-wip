@@ -2201,6 +2201,7 @@ SUBDIR+=	milter-greylist-devel
 SUBDIR+=	mime-support
 SUBDIR+=	min12xxw
 SUBDIR+=	mindy-git
+SUBDIR+=	minetest
 SUBDIR+=	mingw-w64-binutils
 SUBDIR+=	mingw-w64-crt
 SUBDIR+=	mingw-w64-gcc
