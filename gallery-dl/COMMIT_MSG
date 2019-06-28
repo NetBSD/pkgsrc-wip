@@ -1,0 +1,21 @@
+gallery-dl: Update to 1.8.7
+
+Changes:
+1.8.7
+-----
+Additions:
+ - Support for
+   - `vanillarock` (#254)
+   - `nsfwalbum`   (#287)
+ - `artist` and `tags` metadata for `hentaicafe` (#238)
+ - `description` metadata for `instagram` (#310)
+ - Format string option to replace a substring with another
+   - `R<old>/<new>/` (#318)
+
+Changes:
+ - Delete empty archives created by the `zip` post-processor (#316)
+
+Fixes:
+ - Handle `hitomi` Game CG galleries correctly (#321)
+ - Miscellaneous fixes for `deviantart`, `hitomi`, `pururin`, `kissmanga`,
+   `keenspot`, `mangoxo`, `imagefap`
