@@ -1,6 +1,6 @@
 $NetBSD$
 
-Work around iconv("WCHAR_T", "UTF-8") failing on NetBSD.
+Work around iconv("UTF-8", "WCHAR_T") failing on NetBSD.
 
 --- src/util/string.cpp.orig	2019-03-31 20:57:45.000000000 +0000
 +++ src/util/string.cpp
