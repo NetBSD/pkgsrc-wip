@@ -29,7 +29,6 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DBUILD_CLIENT=TRUE
 CMAKE_ARGS+=	-DBUILD_SERVER=TRUE
 
-CMAKE_ARGS+=	-DENABLE_CURSES=FALSE
 CMAKE_ARGS+=	-DENABLE_POSTGRESQL=FALSE
 CMAKE_ARGS+=	-DENABLE_LEVELDB=FALSE
 CMAKE_ARGS+=	-DENABLE_REDIS=FALSE
@@ -61,6 +60,7 @@ post-extract:
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
