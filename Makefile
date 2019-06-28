@@ -911,6 +911,7 @@ SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	galib
+SUBDIR+=	gallery-dl
 SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambas3
 SUBDIR+=	gambas3-devel
