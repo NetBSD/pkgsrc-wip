@@ -2442,6 +2442,7 @@ SUBDIR+=	objfw-git
 SUBDIR+=	obmenu
 SUBDIR+=	obnc
 SUBDIR+=	obnc-libstd
+SUBDIR+=	obs-studio
 SUBDIR+=	ocaml
 SUBDIR+=	ocaml-bin_prot
 SUBDIR+=	ocaml-biniou
