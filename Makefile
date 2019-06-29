@@ -2222,7 +2222,6 @@ SUBDIR+=	mixmaster
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcabal
-SUBDIR+=	mksend
 SUBDIR+=	mlmmj
 SUBDIR+=	mlocate
 SUBDIR+=	mlton-git

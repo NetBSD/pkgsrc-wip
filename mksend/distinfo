@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/03/21 20:39:34 poppnk Exp $
-
-SHA1 (mksend-0.5.3.tar.gz) = fe1fe125945c40b42dd33bff5e5270ef39afd544
-RMD160 (mksend-0.5.3.tar.gz) = 196ef5b99d82c8ce69d4114c77480bf2e7b1c779
-Size (mksend-0.5.3.tar.gz) = 74843 bytes

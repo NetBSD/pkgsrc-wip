@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:57 thomasklausner Exp $
-bin/mksend
-share/mksend/db/arp.xml
-share/mksend/db/ethernet.xml
-share/mksend/db/icmp.xml
-share/mksend/db/ipv4.xml
-share/mksend/db/tcp.xml
-share/mksend/db/vlan.xml
-share/mksend/scripts/troute
