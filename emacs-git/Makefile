@@ -60,6 +60,7 @@ pre-configure:
 	(cd ${WRKSRC}; ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ./autogen.sh)
 
 .include "../../wip/mk/git-package.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libimagequant/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

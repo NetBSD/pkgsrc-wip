@@ -2,7 +2,8 @@
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=			dbus gconf gnutls imagemagick svg xaw3d xft2 xml
+PKG_SUPPORTED_OPTIONS=			dbus gconf gnutls imagemagick jansson svg xaw3d xft2 xml
+PKG_SUGGESTED_OPTIONS=			jansson
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -88,6 +89,15 @@ CONFIGURE_ARGS+=	--without-gconf
 # DEPENDS+=	py[0-9]*-wand-[0-9]*:../../graphics/py-wand
 .  else
 CONFIGURE_ARGS+=	--without-imagemagick
+.  endif
+
+###
+### Support jansson (JSON library)
+###
+.  if !empty(PKG_OPTIONS:Mjansson)
+.include "../../textproc/jansson/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-json
 .  endif
 
 ###

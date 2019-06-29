@@ -2964,6 +2964,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/lucid.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lucid.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/messcompat.el
@@ -3468,8 +3470,6 @@ share/emacs/${PKGVERSION}/lisp/progmodes/m4-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/m4-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/make-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/make-mode.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/mantemp.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/mantemp.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/meta-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/meta-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/mixal-mode.el.gz
