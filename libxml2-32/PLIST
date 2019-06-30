@@ -1,0 +1,15 @@
+@comment $NetBSD$
+lib/32/cmake/libxml2/libxml2-config.cmake
+lib/32/libxml2.la
+lib/32/pkgconfig/libxml-2.0.pc
+lib/32/xml2Conf.sh
+@pkgdir share/gtk-doc/html/libxml2
+@pkgdir share/examples/libxml2
+@pkgdir share/doc/libxml2/tutorial/images/callouts
+@pkgdir share/doc/libxml2/html
+@pkgdir share/doc/libxml2-${PKGVERSION}
+@pkgdir share/aclocal
+@pkgdir man/man3
+@pkgdir man/man1
+@pkgdir include/libxml2/libxml
+@pkgdir bin

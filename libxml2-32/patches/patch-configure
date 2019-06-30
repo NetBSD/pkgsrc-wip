@@ -1,0 +1,92 @@
+$NetBSD: patch-configure,v 1.1 2019/01/09 19:09:03 adam Exp $
+
+Various configure fixes:
+ * Add run-path to XML_LIBDIR
+ * Fix handling of pthreads
+ * Add portability to OpenBSD, MirBSD, FreeBSD, NetBSD and DragonFly
+ * Fix test for SAX
+   Submitted as https://bugzilla.gnome.org/show_bug.cgi?id=766859
+
+--- configure.orig	2017-11-02 20:16:48.000000000 +0000
++++ configure
+@@ -15084,7 +15084,7 @@ fi
+ fi
+ 
+ 
+-XML_LIBDIR='-L${libdir}'
++XML_LIBDIR='-Wl,-R${libdir} -L${libdir}'
+ XML_INCLUDEDIR='-I${includedir}/libxml2'
+ 
+ XML_CFLAGS=""
+@@ -15557,13 +15557,13 @@ else
+         if test "$with_threads" = "pthread" || test "$with_threads" = "" || test "$with_threads" = "yes" ; then
+             ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
+ if test "x$ac_cv_header_pthread_h" = xyes; then :
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in -lpthread" >&5
+-$as_echo_n "checking for pthread_join in -lpthread... " >&6; }
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++$as_echo_n "checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
+ if ${ac_cv_lib_pthread_pthread_join+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -15595,7 +15595,7 @@ fi
+ $as_echo "$ac_cv_lib_pthread_pthread_join" >&6; }
+ if test "x$ac_cv_lib_pthread_pthread_join" = xyes; then :
+ 
+-                THREAD_LIBS="-lpthread"
++                THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+ 
+ $as_echo "#define HAVE_LIBPTHREAD /**/" >>confdefs.h
+ 
+@@ -15617,12 +15617,12 @@ fi
+        *beos*) WITH_THREADS="1"
+ 	   THREAD_CFLAGS="$THREAD_CFLAGS -DHAVE_BEOS_THREADS"
+        ;;
+-       *linux*)
++       *linux* | *openbsd* | *mirbsd*)
+            if test "${GCC}" = "yes" ; then
+ 	       GCC_VERSION=`${CC} --version | head -1 | awk '{print $3}'`
+ 	       GCC_MAJOR=`echo ${GCC_VERSION} | sed 's+\..*++'`
+ 	       GCC_MEDIUM=`echo ${GCC_VERSION} | sed 's+[0-9]*\.++' | sed 's+\..*++'`
+-	       if test "${THREAD_LIBS}" = "-lpthread" ; then
++	       if test "${THREAD_LIBS}" = "${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" ; then
+ 	           if expr ${GCC_MEDIUM} \> 2 \& ${GCC_MAJOR} = 3 > /dev/null
+ 		   then
+ 		       THREAD_LIBS=""
+@@ -15639,6 +15639,10 @@ fi
+ 	       fi
+ 	   fi
+        ;;
++       *freebsd* | *netbsd* | *dragonfly*)
++	   THREAD_LIBS=""
++	   BASE_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++       ;;
+     esac
+     if test "$WITH_THREADS" = "1" ; then
+ 	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
+@@ -15909,7 +15913,7 @@ else
+     TEST_SAX=SAXtests
+ fi
+ 
+- if test "${WITH_TRIO}" = "1"; then
++ if test "${WITH_SAX1}" = "1"; then
+   WITH_SAX1_SOURCES_TRUE=
+   WITH_SAX1_SOURCES_FALSE='#'
+ else
+@@ -16493,10 +16497,6 @@ case "$host" in
+  CPPFLAGS="$CPPFLAGS -DWIN32"
+  WIN32_EXTRA_LIBADD="-lws2_32"
+  WIN32_EXTRA_LDFLAGS="-no-undefined"
+- if test "${PYTHON}" != ""
+- then
+-   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython$(echo ${PYTHON_VERSION} | tr -d .)"
+- fi
+  ;;
+  *-*-cygwin*)
+  CYGWIN_EXTRA_LDFLAGS="-no-undefined"
