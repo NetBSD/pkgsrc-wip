@@ -1,5 +1,6 @@
 # $NetBSD: Makefile.common,v 1.1 2014/12/26 15:39:45 nros Exp $
 #
+# used by wip/ocaml-gmetadom/Makefile
 # used by: ../../wip/gmetadom/Makefile
 # used by: ../../wip/ocaml-gematadom/Makefile
 #

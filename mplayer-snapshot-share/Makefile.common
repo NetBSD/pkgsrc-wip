@@ -1,5 +1,6 @@
 # $NetBSD: Makefile.common,v 1.4 2010/09/14 13:03:30 cheusov Exp $
 # used by multimedia/gmplayer/Makefile
+# used by wip/mplayer-snapshot/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
 

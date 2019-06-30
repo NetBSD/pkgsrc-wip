@@ -1,4 +1,5 @@
 # $NetBSD$
+# used by wip/0ad-data/Makefile
 
 DISTVERSION=	0ad-0.0.20-alpha-unix
 CATEGORIES=	games

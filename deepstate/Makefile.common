@@ -1,5 +1,6 @@
 # $NetBSD$
 #
+# used by wip/py-deepstate/Makefile
 # used by wip/deepstate/Makefile
 # user by wip/py-deepstate/Makefile
 

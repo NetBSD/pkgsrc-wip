@@ -1,5 +1,6 @@
 # $NetBSD: Makefile.common,v 1.12 2015/09/17 13:48:04 makoto Exp $
 # This Makefile fragment is included in the package Makefiles for
+# used by wip/gnuradio-default/Makefile
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
 # used by wip/gnuradio-atsc/Makefile

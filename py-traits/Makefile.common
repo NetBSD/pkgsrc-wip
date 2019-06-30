@@ -1,5 +1,6 @@
 # $NetBSD: Makefile.common,v 1.2 2012/10/07 13:57:31 asau Exp $
 #
+# used by wip/py-traitsgui/Makefile
 
 
 

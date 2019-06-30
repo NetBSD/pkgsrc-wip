@@ -1,5 +1,21 @@
 # $NetBSD: Makefile.common,v 1.1 2015/05/30 01:36:11 krytarowski Exp $
 # used by wip/liblxqt/Makefile
+# used by wip/pcmanfm-qt/Makefile
+# used by wip/obconf-qt/Makefile
+# used by wip/lxqt-session/Makefile
+# used by wip/lxqt-runner/Makefile
+# used by wip/lxqt-qtplugin/Makefile
+# used by wip/lxqt-powermanagement/Makefile
+# used by wip/lxqt-policykit/Makefile
+# used by wip/lxqt-panel/Makefile
+# used by wip/lxqt-notificationd/Makefile
+# used by wip/lxqt-globalkeys/Makefile
+# used by wip/lxqt-config/Makefile
+# used by wip/lxqt-common/Makefile
+# used by wip/lxqt-admin/Makefile
+# used by wip/lxqt-about/Makefile
+# used by wip/lximage-qt/Makefile
+# used by wip/libsysstat/Makefile
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxde/}
 HOMEPAGE=	https://lxqt.org/

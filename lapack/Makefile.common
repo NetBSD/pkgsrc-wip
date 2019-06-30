@@ -1,7 +1,10 @@
 # $NetBSD$
+# used by wip/cblas/Makefile
+# used by wip/lapacke/Makefile
+# used by wip/lapack/Makefile
 
 # Common Makefile for packages derived from the Netlib LAPACK sources.
-# You set LAPACK_PART (lowercase) and LAPACK_PART_CMAKE_ARGS to choose 
+# You set LAPACK_PART (lowercase) and LAPACK_PART_CMAKE_ARGS to choose
 # the library to install.
 
 PORTVERSION=	3.8.0

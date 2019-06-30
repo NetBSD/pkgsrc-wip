@@ -1,5 +1,8 @@
 # $NetBSD$
 #
+# used by wip/openblas_pthread/Makefile
+# used by wip/openblas_openmp/Makefile
+# used by wip/openblas/Makefile
 # This is the common Makefile for OpenBLAS builds. It depends on
 # OPENBLAS_VARIANT = (openblas|openblas_pthread|openblas_openmp)
 # being set.
@@ -22,7 +25,7 @@ GITHUB_TAG=	v${PORTVERSION}
 DISTINFO_FILE=	${.CURDIR}/../../wip/openblas/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/openblas/patches
 PLIST_SRC=	${.CURDIR}/../../wip/openblas/PLIST
-PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}        
+PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
 
 # NetBSD: Cannot find -lssp*
 PKGSRC_USE_SSP=	no
