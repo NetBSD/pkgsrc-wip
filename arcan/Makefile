@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=letoram/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	coypu+arcan@sdf.org
-HOMEPAGE=	https://github.com/letoram/arcan/
+HOMEPAGE=	https://arcan-fe.com/
 COMMENT=	Graphical development toolkit
 LICENSE=	modified-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2 AND public-domain
 
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	src/platform/cmake/shmif_tui.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-march=native
 
-# Ruby replace happens too late.
+# XXX Ruby replace happens too late.
 pre-configure: 
 	chmod +x ${WRKSRC}/doc/docgen.rb
 	cd ${WRKSRC}/doc && ruby${RUBY_VER} ./docgen.rb mangen
