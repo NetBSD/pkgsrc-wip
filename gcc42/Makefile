@@ -144,7 +144,7 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 # Ada bootstrap compiler section
 # An Ada compiler is required to build the Ada compiler. You
 # may specify:
-#USE_GCC42ADA	=	# Define to use gcc-3.4.x-ada
+#USE_GCC42ADA=	# Define to use gcc-3.4.x-ada
 # Or, you may specify the path of any gcc/gnat Ada compiler
 # by providing the full path of the compiler (example) below:
 #ALT_GCC=		prefix/bin/gcc

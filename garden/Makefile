@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 #DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
 
 # Patches can be omitted with
-#CFLAGS +=	-fgnu89-inline
+#CFLAGS+=	-fgnu89-inline
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

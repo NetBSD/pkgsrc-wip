@@ -12,7 +12,7 @@ COMMENT=	Formalism for the syntactic description of Natural Languages
 DIST_SUBDIR=	agfl-${AGFL_VERSION}
 
 AGFL_VERSION=		3.2
-CONFIGURE_ARGS +=	--with-cdl3=${BUILDLINK_PREFIX.cdl3}
+CONFIGURE_ARGS+=	--with-cdl3=${BUILDLINK_PREFIX.cdl3}
 MAKE_JOBS_SAFE=		NO
 LICENSE=		gnu-gpl-v3
 

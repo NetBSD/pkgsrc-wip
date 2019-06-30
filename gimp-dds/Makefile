@@ -14,7 +14,7 @@ USE_TOOLS+=	gmake pkg-config
 
 GCC_REQD=	4.9
 
-gimplibdir =	pkg-config --variable=gimplibdir gimp-2.0
+gimplibdir=	pkg-config --variable=gimplibdir gimp-2.0
 
 do-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${gimplibdir:sh}/plug-ins

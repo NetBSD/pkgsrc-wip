@@ -91,6 +91,6 @@ BUILDLINK_TRANSFORM+=	rm:-pie
 
 # From OpenBSD ports
 # gives no chance of picking up devel/libexecinfo
-CONFIGURE_ENV +=	ac_cv_header_execinfo_h=no
-CONFIGURE_ENV +=	ac_cv_func_backtrace=no
+CONFIGURE_ENV+=	ac_cv_header_execinfo_h=no
+CONFIGURE_ENV+=	ac_cv_func_backtrace=no
 .endif

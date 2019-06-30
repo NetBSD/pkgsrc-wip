@@ -11,7 +11,7 @@ COMMENT=	Virtual midi keyboard
 
 RAWMIDI=	/dev/rmidi0
 WRKSRC=		${WRKDIR}/vkeybd
-VKB_TCLFILE =	${PREFIX}/share/vkeybd/vkeybd.tcl
+VKB_TCLFILE=	${PREFIX}/share/vkeybd/vkeybd.tcl
 NO_CONFIGURE=	yes
 CFLAGS+=	-Wall -O2
 CFLAGS+=	-DVKB_TCLFILE=\"${VKB_TCLFILE:Q}\"

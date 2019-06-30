@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.4 2014/05/09 07:38:46 thomasklausner Exp $
 
-PKG_OPTIONS_VAR =	PKG_OPTIONS.chiantipy
+PKG_OPTIONS_VAR=	PKG_OPTIONS.chiantipy
 PKG_SUPPORTED_OPTIONS=	wx qt
 PKG_SUGGESTED_OPTIONS=	wx
 

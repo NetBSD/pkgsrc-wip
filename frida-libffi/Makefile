@@ -47,7 +47,7 @@ LIBS+=	-lm68k
 
 # fix http://gnats.netbsd.org/42865
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
-CPPFLAGS +=	-D__PIC__
+CPPFLAGS+=	-D__PIC__
 .endif
 
 # irix fixes from PR 48587

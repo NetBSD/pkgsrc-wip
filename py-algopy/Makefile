@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG =	yes
+PYDISTUTILSPKG=	yes
 
 do-test:
 	${RUN} cd ${WRKSRC}/algopy; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py

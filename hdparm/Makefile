@@ -16,7 +16,7 @@ SUBST_CLASSES+=	prefix
 
 SUBST_STAGE.prefix=	pre-build
 SUBST_FILES.prefix=	Makefile
-SUBST_SED.prefix  =	-e s,/usr,,g \
+SUBST_SED.prefix=	-e s,/usr,,g \
 			-e s,DESTDIR\ =,DESTDIR=${PREFIX},g
 
 

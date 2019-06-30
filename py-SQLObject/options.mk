@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.5 2014/05/09 07:38:44 thomasklausner Exp $
 
-PKG_OPTIONS_VAR =	PKG_OPTIONS.SQLObject
+PKG_OPTIONS_VAR=	PKG_OPTIONS.SQLObject
 PKG_SUPPORTED_OPTIONS=	mysql psycopg2 sqlite sybase
 PKG_SUGGESTED_OPTIONS=	psycopg2
 

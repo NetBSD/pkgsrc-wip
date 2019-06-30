@@ -23,9 +23,9 @@ INSTALLATION_DIRS=		bin
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
 
-DATA_DIR =		${DESTDIR}${PREFIX}/share/slideml
-DOC_DIR =		${DESTDIR}${PREFIX}/share/doc/slideml
-EG_DIR =		${DESTDIR}${PREFIX}/share/examples/slideml
+DATA_DIR=		${DESTDIR}${PREFIX}/share/slideml
+DOC_DIR=		${DESTDIR}${PREFIX}/share/doc/slideml
+EG_DIR=		${DESTDIR}${PREFIX}/share/examples/slideml
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/slideml.pl ${DESTDIR}${PREFIX}/bin/slideml.pl

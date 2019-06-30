@@ -49,7 +49,7 @@ EGDIR=		${PREFIX}/share/examples/c-news
 # Debugging aids
 CFLAGS+=		-Wall -Wno-error
 DBG=			-O -g3
-INSTALL_UNSTRIPPED =	yes
+INSTALL_UNSTRIPPED=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

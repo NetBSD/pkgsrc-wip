@@ -4,9 +4,9 @@ META_PACKAGE=	# empty
 
 .include "../../wip/io-base/version.mk"
 
-DISTNAME =	io-${IO_VERSION}
-PKGNAME =	io-base-${IO_VERSION}
-CATEGORIES =	meta-pkgs lang devel
+DISTNAME=	io-${IO_VERSION}
+PKGNAME=	io-base-${IO_VERSION}
+CATEGORIES=	meta-pkgs lang devel
 LICENSE=	modified-bsd
 
 MAINTAINER=	milos.negovanovic@googlemail.com

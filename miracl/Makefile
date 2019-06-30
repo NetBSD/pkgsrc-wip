@@ -22,9 +22,9 @@ USE_LANGUAGES=	c c++
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-BUILDCMD =		linux
+BUILDCMD=		linux
 .elif ${MACHINE_ARCH} == "x86_64"
-BUILDCMD =		linux64
+BUILDCMD=		linux64
 .else
 PKG_FAIL_REASON=	"This package is unavailable on your machine"
 .endif

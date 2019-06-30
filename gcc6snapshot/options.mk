@@ -81,9 +81,9 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-ISL14 =		isl-0.14
-SITES.${ISL14}.tar.bz2 = ${MASTER_SITE_GNU:=gcc/infrastructure/}
-DISTFILES +=	${ISL14}.tar.bz2
+ISL14=		isl-0.14
+SITES.${ISL14}.tar.bz2= ${MASTER_SITE_GNU:=gcc/infrastructure/}
+DISTFILES+=	${ISL14}.tar.bz2
 .endif
 
 ###

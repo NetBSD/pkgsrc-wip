@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-mysql-include=${PREFIX}/include/mysql
 CONFIGURE_ARGS+=	--with-mysql-lib=${PREFIX}/lib/mysql
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/tcl
 
-LIBS +=			${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+LIBS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
