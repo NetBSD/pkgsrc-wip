@@ -1,0 +1,17 @@
+@comment $NetBSD$
+lib/32/libpng-config
+lib/32/libpng16-config
+lib/32/libpng16.la
+lib/32/libpng16/png.h
+lib/32/libpng16/pngconf.h
+lib/32/libpng16/pnglibconf.h
+lib/32/man3/libpng.3
+lib/32/man3/libpngpf.3
+lib/32/man5/png.5
+lib/32/pkgconfig/libpng.pc
+lib/32/pkgconfig/libpng16.pc
+lib/32/png-fix-itxt
+lib/32/png.h
+lib/32/pngconf.h
+lib/32/pngfix
+lib/32/pnglibconf.h
