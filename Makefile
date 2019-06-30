@@ -1645,7 +1645,6 @@ SUBDIR+=	iptables
 SUBDIR+=	iptstate
 SUBDIR+=	ircII-current
 SUBDIR+=	ironpython
-SUBDIR+=	irrlicht
 SUBDIR+=	irrxml
 SUBDIR+=	irssi-otr
 SUBDIR+=	ised
