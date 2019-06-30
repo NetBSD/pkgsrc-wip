@@ -22,10 +22,10 @@ CONF_FILES+=	${EGDIR}/lightdm-gtk-greeter.conf ${PKG_SYSCONFDIR}/lightdm/lightdm
 INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/lightdm ${EGDIR}
 
 pre-install:
-		${INSTALL_DATA} ${WRKSRC}/data/lightdm-gtk-greeter.conf ${DESTDIR}${EGDIR}/lightdm-gtk-greeter.conf
+	${INSTALL_DATA} ${WRKSRC}/data/lightdm-gtk-greeter.conf ${DESTDIR}${EGDIR}/lightdm-gtk-greeter.conf
 
 post-install:
-		${RM} ${DESTDIR}${PKG_SYSCONFDIR}/lightdm/lightdm-gtk-greeter.conf
+	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/lightdm/lightdm-gtk-greeter.conf
 
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

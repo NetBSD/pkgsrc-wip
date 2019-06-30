@@ -16,11 +16,11 @@ NO_BUILD=	yes
 #DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 post-extract:
-		${FIND} ${WRKDIR} -type f -exec ${CHMOD} 0644 {} \;
+	${FIND} ${WRKDIR} -type f -exec ${CHMOD} 0644 {} \;
 
 do-install:
-		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/simtrans
-		${CP} -r ${WRKSRC} ${DESTDIR}${PREFIX}/share/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/simtrans
+	${CP} -r ${WRKSRC} ${DESTDIR}${PREFIX}/share/
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

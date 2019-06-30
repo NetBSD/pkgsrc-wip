@@ -19,10 +19,10 @@ WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS+=	bin
 
 do-build:
-			cd ${WRKSRC} && ${CC} -o ranmacgen macgen.c
+	cd ${WRKSRC} && ${CC} -o ranmacgen macgen.c
 
 do-install:
-			${INSTALL_PROGRAM} ${WRKSRC}/ranmacgen \
-				${DESTDIR}${PREFIX}/bin/ranmacgen
+	${INSTALL_PROGRAM} ${WRKSRC}/ranmacgen \
+		${DESTDIR}${PREFIX}/bin/ranmacgen
 
 .include "../../mk/bsd.pkg.mk"

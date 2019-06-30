@@ -16,10 +16,10 @@ MAKE_ENV+=	LIBS=${LIBS:Q}
 INSTALLATION_DIRS=	bin
 
 post-extract:
-		cd ${WRKSRC} && ${LN} -s modules/speedtouch.o speedtouch.o
+	cd ${WRKSRC} && ${LN} -s modules/speedtouch.o speedtouch.o
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/dmt-ux ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/dmt-ux ${DESTDIR}${PREFIX}/bin
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

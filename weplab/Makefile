@@ -17,8 +17,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/weplab ${DESTDIR}${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/weplab.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/weplab ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/weplab.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

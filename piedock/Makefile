@@ -27,7 +27,7 @@ SUBST_SED.share=	-e "s|/usr/share|${PREFIX}/share|g"
 .include "options.mk"
 
 post-install:
-			${INSTALL_DATA} ${WRKSRC}/res/piedockrc.sample ${DESTDIR}${PREFIX}/${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/res/piedockrc.sample ${DESTDIR}${PREFIX}/${EGDIR}/
 
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"

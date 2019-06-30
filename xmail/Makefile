@@ -17,20 +17,20 @@ MAKE_ENV+=	OSTYPE=${OPSYS}
 
 .include "../../mk/bsd.prefs.mk"
 
-EXT=bsd # Default one :)
+EXT=	bsd # Default one :)
 .if ${OPSYS} == "Linux"
 .  if   ${MACHINE_ARCH} == "i86pc"
-		EXT="lnx"
+EXT=	lnx
 .  elif ${MACHINE_ARCH} == "sparc"
-		EXT="slx"
+EXT=	slx
 .  elif ${MACHINE_ARCH} == "ppc"
-		EXT="plx"
+EXT=	plx
 .  endif
 .elif ${OPSYS} == "SunOS"
 .  if   ${MACHINE_ARCH} == "sparc"
-		EXT="sso"
+EXT=	sso
 .  elif ${MACHINE_ARCH} == "i86pc"
-		EXT="ssx"
+EXT=	ssx
 .  endif
 .endif
 

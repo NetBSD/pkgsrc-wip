@@ -130,7 +130,7 @@ post-install:
 	cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE} install-man
 
 .for f in ${MKDIRS}
-		${MKDIR} ${PKG_SYSCONFDIR}/${f}
+	${MKDIR} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 	${CHOWN} ${OPENCA_USER}:${OPENCA_GROUP} \

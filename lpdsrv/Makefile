@@ -19,6 +19,6 @@ MAKE_ENV+=	LDLIBS=${LIBS:Q}
 INSTALLATION_DIRS=	sbin
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/lpdsrv ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/lpdsrv ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"

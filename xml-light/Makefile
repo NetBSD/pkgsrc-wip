@@ -25,9 +25,9 @@ SUBST_SED.destdir=	-e "s|INSTALLDIR=|INSTALLDIR=${DESTDIR}|1"
 INSTALLATION_DIRS+=	lib/ocaml
 
 post-install:
-		${CHMOD} -x ${DESTDIR}${PREFIX}/lib/ocaml/dtd.mli
-		${CHMOD} -x ${DESTDIR}${PREFIX}/lib/ocaml/xml.mli
-		${CHMOD} -x ${DESTDIR}${PREFIX}/lib/ocaml/xmlParser.mli
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/ocaml/dtd.mli
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/ocaml/xml.mli
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/ocaml/xmlParser.mli
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

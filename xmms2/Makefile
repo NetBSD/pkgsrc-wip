@@ -37,7 +37,7 @@ do-configure:
 			--with-default-output-plugin=oss \
 			--mandir=${PREFIX}/${PKGMANDIR} \
 			--boost-includes=${BOOST_INCLUDES}
-			# --without-plugins=${WITHOUT_PLUGINS} # space clobbered
+	# --without-plugins=${WITHOUT_PLUGINS} # space clobbered
 
 do-build:
 	cd ${WRKSRC} && \

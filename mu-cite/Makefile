@@ -23,10 +23,10 @@ MAKE_DIRS+=		${PREFIX}/share/doc/mu-cite
 AUTO_MKDIRS=		yes
 
 do-build:
-		(cd ${WRKSRC} && ${MAKE})
+	cd ${WRKSRC} && ${MAKE}
 
 post-install:
-		${INSTALL_DATA} ${WRKSRC}/README.en ${DESTDIR}${PREFIX}/share/doc/mu-cite
-		${INSTALL_DATA} ${WRKSRC}/NEWS      ${DESTDIR}${PREFIX}/share/doc/mu-cite
+	${INSTALL_DATA} ${WRKSRC}/README.en ${DESTDIR}${PREFIX}/share/doc/mu-cite
+	${INSTALL_DATA} ${WRKSRC}/NEWS      ${DESTDIR}${PREFIX}/share/doc/mu-cite
 
 .include "../../mk/bsd.pkg.mk"

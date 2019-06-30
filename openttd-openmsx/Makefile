@@ -25,10 +25,10 @@ NO_CONFIGURE=	YES
 OPENTTD_GMDIR=	${DESTDIR}${PREFIX}/share/openttd/gm
 
 do-install:
-		${INSTALL_DATA} ${WRKSRC}/*.mid \
-			${OPENTTD_GMDIR}
-		${INSTALL_DATA} ${WRKSRC}/*.obm \
-			${OPENTTD_GMDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.mid \
+		${OPENTTD_GMDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.obm \
+		${OPENTTD_GMDIR}
 
 
 .include "../../mk/bsd.pkg.mk"

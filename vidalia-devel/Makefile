@@ -22,7 +22,7 @@ USE_TOOLS+=	gmake mkdir
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 
 pre-configure:
-		cd ${WRKSRC} && ${MKDIR} build
+	cd ${WRKSRC} && ${MKDIR} build
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"

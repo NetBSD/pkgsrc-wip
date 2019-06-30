@@ -55,10 +55,10 @@ do-install:
 
 	# Data
 .for d in data/locales data/schema data/templates
-		${INSTALL_DATA_DIR} ${DESTDIR}${SSDIR}/${d}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SSDIR}/${d}
 .endfor
 .for d in data/locales data/schema data/templates
-		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${SSDIR}/${d}
+	cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${SSDIR}/${d}
 .endfor
 
 	${INSTALL_DATA} ${WRKSRC}/data/config.default.php ${DESTDIR}${SSDIR}/data

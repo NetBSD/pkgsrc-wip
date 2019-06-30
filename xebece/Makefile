@@ -19,22 +19,22 @@ INSTALLATION_DIRS+=	bin share/doc/xebece share/examples/xebece xebece/dist
 INSTALLATION_DIRS+=	xebece/lib
 
 do-build:
-		# nothing
+	# nothing
 
 post-build:
-		${ECHO} '#!${SH}' > ${WRKSRC}/xebece
-		${ECHO} '${DESTDIR}${PREFIX}/bin/sun6-java -jar ${DESTDIR}${PREFIX}/xebece/dist/xebece.jar' >> ${WRKSRC}/xebece
+	${ECHO} '#!${SH}' > ${WRKSRC}/xebece
+	${ECHO} '${DESTDIR}${PREFIX}/bin/sun6-java -jar ${DESTDIR}${PREFIX}/xebece/dist/xebece.jar' >> ${WRKSRC}/xebece
 
 do-install:
-		${INSTALL_DATA} ${WRKSRC}/doc/Xebece-Manual.cal ${DESTDIR}${PREFIX}/share/doc/xebece/Xebece-Manual.cal
-		${INSTALL_DATA} ${WRKSRC}/doc/Xebece-Manual_de.cal ${DESTDIR}${PREFIX}/share/doc/xebece/Xebece-Manual_de.cal
-		${INSTALL_DATA} ${WRKSRC}/doc/examples/chi.cal ${DESTDIR}${PREFIX}/share/examples/xebece/chi.cal
-		${INSTALL_DATA} ${WRKSRC}/doc/examples/solar_system.cal ${DESTDIR}${PREFIX}/share/examples/xebece/solar_system.cal
-		${INSTALL_SCRIPT} ${WRKSRC}/dist/xebece.jar ${DESTDIR}${PREFIX}/xebece/dist/xebece.jar
-		${INSTALL_LIB} ${WRKSRC}/lib/icons.zip ${DESTDIR}${PREFIX}/xebece/lib/icons.zip
-		${INSTALL_LIB} ${WRKSRC}/lib/prefuse.jar ${DESTDIR}${PREFIX}/xebece/lib/prefuse.jar
-		${INSTALL_LIB} ${WRKSRC}/lib/prefusex.jar ${DESTDIR}${PREFIX}/xebece/lib/prefusex.jar
-		${INSTALL_SCRIPT} ${WRKSRC}/xebece ${DESTDIR}${PREFIX}/bin/xebece
+	${INSTALL_DATA} ${WRKSRC}/doc/Xebece-Manual.cal ${DESTDIR}${PREFIX}/share/doc/xebece/Xebece-Manual.cal
+	${INSTALL_DATA} ${WRKSRC}/doc/Xebece-Manual_de.cal ${DESTDIR}${PREFIX}/share/doc/xebece/Xebece-Manual_de.cal
+	${INSTALL_DATA} ${WRKSRC}/doc/examples/chi.cal ${DESTDIR}${PREFIX}/share/examples/xebece/chi.cal
+	${INSTALL_DATA} ${WRKSRC}/doc/examples/solar_system.cal ${DESTDIR}${PREFIX}/share/examples/xebece/solar_system.cal
+	${INSTALL_SCRIPT} ${WRKSRC}/dist/xebece.jar ${DESTDIR}${PREFIX}/xebece/dist/xebece.jar
+	${INSTALL_LIB} ${WRKSRC}/lib/icons.zip ${DESTDIR}${PREFIX}/xebece/lib/icons.zip
+	${INSTALL_LIB} ${WRKSRC}/lib/prefuse.jar ${DESTDIR}${PREFIX}/xebece/lib/prefuse.jar
+	${INSTALL_LIB} ${WRKSRC}/lib/prefusex.jar ${DESTDIR}${PREFIX}/xebece/lib/prefusex.jar
+	${INSTALL_SCRIPT} ${WRKSRC}/xebece ${DESTDIR}${PREFIX}/bin/xebece
 
 
 .include "../../mk/java-vm.mk"

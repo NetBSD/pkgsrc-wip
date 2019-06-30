@@ -23,8 +23,8 @@ SUBST_FILES.prefix=	org.freedesktop.Notifications.service
 SUBST_SED.prefix=	-e 's|/usr|${PREFIX}|'
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/qtnotifydaemon ${DESTDIR}${PREFIX}/bin/qtnotifydaemon
-		${INSTALL_DATA} ${WRKSRC}/org.freedesktop.Notifications.service ${DESTDIR}${PREFIX}/share/dbus-1/services/org.freedesktop.Notifications.service
+	${INSTALL_PROGRAM} ${WRKSRC}/qtnotifydaemon ${DESTDIR}${PREFIX}/bin/qtnotifydaemon
+	${INSTALL_DATA} ${WRKSRC}/org.freedesktop.Notifications.service ${DESTDIR}${PREFIX}/share/dbus-1/services/org.freedesktop.Notifications.service
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"

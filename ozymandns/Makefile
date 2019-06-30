@@ -32,9 +32,9 @@ SUBST_SED.perlfix=	-e 's:^\#!/usr/bin/perl:\#!${PERL5}:g'
 LIBS.SunOS+=	-lnsl # for gethostbyname
 
 do-build:
-		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} glance.c -o glance ${LDFLAGS} ${LIBS}
+	cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} glance.c -o glance ${LDFLAGS} ${LIBS}
 
 do-install:
-		cd ${WRKSRC} && ${INSTALL_PROGRAM} glance ${DESTDIR}${PREFIX}/sbin && ${INSTALL_SCRIPT} ${OZYMAN_PERLSCRIPTS} ${DESTDIR}${PREFIX}/sbin
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} glance ${DESTDIR}${PREFIX}/sbin && ${INSTALL_SCRIPT} ${OZYMAN_PERLSCRIPTS} ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"

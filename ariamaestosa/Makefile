@@ -23,22 +23,17 @@ INSTALLATION_DIRS+=	share/applications
 
 .include "options.mk"
 
-
 do-build:
-			cd ${WRKSRC} && \
-			${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
-
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
 
 do-install:
-			cd ${WRKSRC} && \
-			${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/scons install prefix=${DESTDIR}${PREFIX}
-
+	cd ${WRKSRC} && \
+		${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/scons install prefix=${DESTDIR}${PREFIX}
 
 post-install:
-			${INSTALL_DATA} ${WRKSRC}/Freedesktop/Aria.desktop ${DESTDIR}${PREFIX}/share/applications/
-			${CHMOD} g-w ${DESTDIR}${PREFIX}/bin/Aria
-			${CHMOD} -R g-w ${DESTDIR}${PREFIX}/share/Aria
-
+	${INSTALL_DATA} ${WRKSRC}/Freedesktop/Aria.desktop ${DESTDIR}${PREFIX}/share/applications/
+	${CHMOD} g-w ${DESTDIR}${PREFIX}/bin/Aria
+	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/share/Aria
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/dlopen.buildlink3.mk"

@@ -19,12 +19,12 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--with-python=${PYTHONBIN:Q}
 
 post-extract:
-		${MV} ${WRKSRC}/man/emirror.1 ${WRKSRC}/man/emirror.1.in
+	${MV} ${WRKSRC}/man/emirror.1 ${WRKSRC}/man/emirror.1.in
 
 post-configure:
-		${SED} -e "s|@PREFIX@|${PREFIX}|g" \
-			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
-			< ${WRKSRC}/man/emirror.1.in > ${WRKSRC}/man/emirror.1
+	${SED} -e "s|@PREFIX@|${PREFIX}|g" \
+		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
+		< ${WRKSRC}/man/emirror.1.in > ${WRKSRC}/man/emirror.1
 
 .include	"../../lang/python/application.mk"
 .include	"../../mk/bsd.pkg.mk"

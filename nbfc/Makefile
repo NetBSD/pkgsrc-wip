@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake yacc
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
-			${INSTALL_PROGRAM} ${WRKSRC}/nbfc ${DESTDIR}${PREFIX}/bin
-			${INSTALL_MAN} ${WRKSRC}/nbfc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/nbfc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/nbfc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

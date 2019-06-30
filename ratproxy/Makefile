@@ -40,7 +40,7 @@ do-install:
 			${DESTDIR}${DATADIR} && \
 		${INSTALL_SCRIPT} ratproxy-report.sh \
 			${DESTDIR}${BINDIR}/ratproxy-report
-		${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${DOCDIR}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -65,7 +65,7 @@ CONF_FILES+=		${EGDIR}/cinnamon-settings-daemon-a11y-keyboard.desktop		\
 			${PKG_SYSCONFDIR}/dbus-1/system.d/org.cinnamon.SettingsDaemon.DateTimeMechanism.conf
 
 pre-configure:
-		cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
+	cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
 
 BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4

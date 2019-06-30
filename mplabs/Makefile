@@ -23,8 +23,8 @@ do-install:
 .for i in LL-2D-DGR      LL-2D-STD      ZSC-2D-DGR     ZSC-2D-STD
 	${INSTALL_DATA} ${WRKSRC}/bin/${i} ${DESTDIR}${PREFIX}/bin
 .endfor
-		${INSTALL_DATA} ${WRKSRC}/docs/mp-labs.pdf \
-			${DESTDIR}${PREFIX}/share/doc/mplabs
+	${INSTALL_DATA} ${WRKSRC}/docs/mp-labs.pdf \
+		${DESTDIR}${PREFIX}/share/doc/mplabs
 
 .include "../../parallel/openmpi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

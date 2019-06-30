@@ -60,7 +60,7 @@ SUBST_VARS.tools+=	PKG_SYSCONFDIR
 
 do-extract:
 .for f in ${AS_FILES}
-		${CP} ${FILESDIR}/${f} ${WRKSRC}
+	${CP} ${FILESDIR}/${f} ${WRKSRC}
 .endfor
 
 do-install:

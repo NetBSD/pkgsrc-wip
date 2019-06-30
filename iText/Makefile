@@ -21,9 +21,9 @@ MESSAGE_SUBST+=	PKGV_NR=${PKGVERSION_NOREV}
 INSTALLATION_DIRS+=	lib/java share/doc/${PKGBASE}
 
 do-install:
-		cd ${WRKSRC} && \
-			${INSTALL_DATA} *${PKGVERSION_NOREV}.jar ${DESTDIR}${PREFIX}/lib/java && \
-			${INSTALL_DATA} notice.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/README
+	cd ${WRKSRC} && \
+		${INSTALL_DATA} *${PKGVERSION_NOREV}.jar ${DESTDIR}${PREFIX}/lib/java && \
+		${INSTALL_DATA} notice.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/README
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

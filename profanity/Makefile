@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 pre-configure:
-		cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoconf
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"

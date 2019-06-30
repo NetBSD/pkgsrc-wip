@@ -17,10 +17,10 @@ CFLAGS+=	`${SDL_CONFIG} --cflags`
 LIBS+=		`${SDL_CONFIG} --libs`
 
 do-build:
-		cd ${WRKSRC} && ${CC} ${CFLAGS} -DUSESDL -o drumpiler drumpiler.c ${LIBS}
+	cd ${WRKSRC} && ${CC} ${CFLAGS} -DUSESDL -o drumpiler drumpiler.c ${LIBS}
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/drumpiler ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/drumpiler ${PREFIX}/bin
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

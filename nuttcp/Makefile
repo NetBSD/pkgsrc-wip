@@ -20,15 +20,15 @@ USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 share/doc/${PKGBASE}
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/nuttcp-${NUTTCP_VERSION} \
-			${DESTDIR}${PREFIX}/bin/nuttcp
-		${INSTALL_MAN} ${WRKSRC}/nuttcp.8 \
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-		${INSTALL_DATA} ${WRKSRC}/README \
-			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-		${INSTALL_DATA} ${WRKSRC}/examples.txt \
-			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-		${INSTALL_DATA} ${WRKSRC}/nuttcp.html \
-			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_PROGRAM} ${WRKSRC}/nuttcp-${NUTTCP_VERSION} \
+		${DESTDIR}${PREFIX}/bin/nuttcp
+	${INSTALL_MAN} ${WRKSRC}/nuttcp.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/examples.txt \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/nuttcp.html \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"

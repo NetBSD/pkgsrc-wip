@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 MAKE_PARAMS+=	--prefix=${PREFIX}
 
 post-extract:
-		rm ${WRKSRC}/cpan2spec.pl
+	rm ${WRKSRC}/cpan2spec.pl
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

@@ -26,18 +26,18 @@ WLADX_BINARIES=		wla-6502 wla-6510 wla-65816 wla-65c02 wla-gb wla-huc6280 \
 
 do-install:
 .for f in ${WLADX_BINARIES}
-		${INSTALL_PROGRAM} ${WRKSRC}/binaries/${f} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/binaries/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 
 .for f in binaries/doc/{wla-dx.txt,wla-dx.html} FILE_FORMATS CHANGELOG
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 
 .for f in binaries/doc/*.1
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
 .for f in binaries/doc/*.7
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 .endfor
 
 

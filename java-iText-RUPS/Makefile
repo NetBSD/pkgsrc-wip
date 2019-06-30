@@ -23,7 +23,7 @@ MESSAGE_SUBST+=	DN=itext-rups-${PKGVERSION_NOREV}
 INSTALLATION_DIRS=	lib/java
 
 do-install:
-		${INSTALL_DATA} ${WRKSRC}/itext-rups-${PKGVERSION_NOREV}.jar ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/itext-rups-${PKGVERSION_NOREV}.jar ${DESTDIR}${PREFIX}/lib/java
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

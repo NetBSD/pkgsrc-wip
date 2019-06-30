@@ -21,10 +21,10 @@ SUBST_MESSAGE.x11=	Fixing X11 LIBDIR.
 SUBST_SED.x11=		-e "s|/usr/X11R6/lib|${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib|"
 
 do-install:
-			${INSTALL_PROGRAM} ${WRKSRC}/wmsupermon ${DESTDIR}${PREFIX}/bin/wmsupermon
-			${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/wmsupermon/README
-			${INSTALL_DATA} ${WRKSRC}/example-wmsupermonrc ${DESTDIR}${PREFIX}/share/examples/wmsupermon/wmsupermonrc
-			${INSTALL_DATA} ${WRKSRC}/wmsupermon-master.xpm ${DESTDIR}${PREFIX}/share/pixmaps/wmsupermon.xpm
+	${INSTALL_PROGRAM} ${WRKSRC}/wmsupermon ${DESTDIR}${PREFIX}/bin/wmsupermon
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/wmsupermon/README
+	${INSTALL_DATA} ${WRKSRC}/example-wmsupermonrc ${DESTDIR}${PREFIX}/share/examples/wmsupermon/wmsupermonrc
+	${INSTALL_DATA} ${WRKSRC}/wmsupermon-master.xpm ${DESTDIR}${PREFIX}/share/pixmaps/wmsupermon.xpm
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

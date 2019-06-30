@@ -25,6 +25,6 @@ SUBST_FILES.gtar=	themes/import.sh
 SUBST_STAGE.gtar=	post-configure
 
 pre-configure:
-		cd ${WRKSRC} && ./autogen.sh
+	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../mk/bsd.pkg.mk"

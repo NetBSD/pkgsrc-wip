@@ -165,10 +165,10 @@ pre-configure:
 		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
 		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
 		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
-		for dir in ${WRKSRC}/mkspecs/*; do \
-			cp ${WRKSRC}/qmake.conf $${dir}; \
-			rm -f $${dir}/*.orig; \
-		done
+	for dir in ${WRKSRC}/mkspecs/*; do \
+		cp ${WRKSRC}/qmake.conf $${dir}; \
+		rm -f $${dir}/*.orig; \
+	done
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/default_pre.prf
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/objective_c.prf.orig
 

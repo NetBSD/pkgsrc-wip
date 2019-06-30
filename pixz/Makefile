@@ -19,8 +19,8 @@ BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/pixz ${DESTDIR}${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/pixz.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/pixz ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/pixz.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

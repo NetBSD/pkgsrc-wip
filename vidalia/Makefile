@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 DEPENDS+=	tor-[0-9]*:../../net/tor
 
 pre-configure:
-		cd ${WRKSRC} && ${MKDIR} build
+	cd ${WRKSRC} && ${MKDIR} build
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"

@@ -24,6 +24,6 @@ CXXFLAGS.Linux+=	-DCSTDLIB
 BUILD_TARGET=	tctool
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/tctool ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/tctool ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

@@ -67,10 +67,10 @@ INSTALLATION_DIRS+=	${RCDIR} ${EGDIR}
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${RCDIR}
 .for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${DESTDIR}${RCDIR}/${d}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RCDIR}/${d}
 .endfor
 .for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${RCDIR}/${d}
+	cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${RCDIR}/${d}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/apache.conf.dist ${DESTDIR}${EGDIR}/apache.conf
 

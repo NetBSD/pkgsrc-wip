@@ -15,11 +15,11 @@ USE_TOOLS+=		gmake pkg-config
 INSTALLATION_DIRS+=	bin
 
 do-build:
-		cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 
 do-install:
-		cd ${WRKSRC}/src && \
-			${INSTALL_PROGRAM} yaupspe ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}/src && \
+		${INSTALL_PROGRAM} yaupspe ${DESTDIR}${PREFIX}/bin
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

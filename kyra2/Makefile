@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf automake gmake perl
 
 pre-configure:
-		cd ${WRKSRC} && ${SH} autogen
+	cd ${WRKSRC} && ${SH} autogen
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"

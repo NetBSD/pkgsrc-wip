@@ -44,10 +44,9 @@ SUBST_FILES.testeq+=	script/*.sh
 SUBST_FILES.testeq+=	Makefile
 SUBST_SED.testeq=	-e 's/==/=/g'
 
-
 do-extract:
-		unzip ${DISTDIR}/${DISTNAME}.zip -d ${WRKSRC} -o
-		unzip ${DISTDIR}/language_pack-Base+texts.zip -d ${WRKSRC}/simutrans/text -o
+	unzip ${DISTDIR}/${DISTNAME}.zip -d ${WRKSRC} -o
+	unzip ${DISTDIR}/language_pack-Base+texts.zip -d ${WRKSRC}/simutrans/text -o
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw -pp simutrans ${DESTDIR}${PREFIX}/share/

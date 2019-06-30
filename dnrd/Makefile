@@ -21,8 +21,8 @@ LIBS.SunOS+=	-lrt -lsocket -lnsl -lresolv	# for sem_*(), inet_ntoa(), inet_aton(
 INSTALLATION_DIRS=	sbin share/doc/dnrd
 
 post-install:
-		${RM} -f ${DESTDIR}${PREFIX}/share/doc/dnrd/README-cygwin \
-			 ${DESTDIR}${PREFIX}/share/doc/dnrd/NEWS
+	${RM} -f ${DESTDIR}${PREFIX}/share/doc/dnrd/README-cygwin \
+		 ${DESTDIR}${PREFIX}/share/doc/dnrd/NEWS
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

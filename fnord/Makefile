@@ -27,6 +27,6 @@ LIBS.SunOS+=	-lsocket -lnsl
 INSTALLATION_DIRS=	sbin
 
 do-install:
-		cd ${WRKSRC} && ${INSTALL_PROGRAM} fnord fnord-cgi fnord-idx ${DESTDIR}${PREFIX}/sbin
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} fnord fnord-cgi fnord-idx ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"

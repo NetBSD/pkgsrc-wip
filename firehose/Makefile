@@ -28,7 +28,7 @@ INSTALLATION_DIRS=	bin
 CFLAGS+=		-Dfseeko64=fseeko -Dfopen64=fopen
 
 pre-configure:
-		cd ${WRKSRC} && ${MKDIR} i686 mips
+	cd ${WRKSRC} && ${MKDIR} i686 mips
 
 do-install:
 .for f in bottom date* extract fire???? swapon

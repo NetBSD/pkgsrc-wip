@@ -30,7 +30,7 @@ SUBST_FILES.go=		CMakeLists.txt
 SUBST_SED.go=		-e '/find_program.GO_EXECUTABLE/s,go,${GO},'
 
 post-extract:
-		${RUN} mkdir -p ${WRKDIR}/build
+	${RUN} mkdir -p ${WRKDIR}/build
 
 do-install:
 	for d in bssl/bin bssl/lib bssl/include/openssl; do		\

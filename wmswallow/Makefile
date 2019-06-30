@@ -21,7 +21,7 @@ BUILD_TARGET=	xfree
 LDFLAGS+=	${X11_LDFLAGS}
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/wmswallow ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/wmswallow ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

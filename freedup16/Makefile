@@ -31,6 +31,6 @@ ONLY_FOR_PLATFORM=	DragonFly-*-* \
 			NetBSD-[5-9]*-amd64
 
 post-extract:
-		cd ${WRKSRC} && rm symharden
+	cd ${WRKSRC} && rm symharden
 
 .include "../../mk/bsd.pkg.mk"

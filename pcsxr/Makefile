@@ -28,7 +28,7 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 .include "options.mk"
 
 pre-configure:
-			cd ${WRKSRC} && ./autogen.sh
+	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_DEPMETHOD.libXcursor=	build
