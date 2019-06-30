@@ -1,8 +1,7 @@
 # $NetBSD$
 #
-# used by wip/py-deepstate/Makefile
 # used by wip/deepstate/Makefile
-# user by wip/py-deepstate/Makefile
+# used by wip/py-deepstate/Makefile
 
 DISTNAME=	deepstate-0.0.0
 CATEGORIES=	devel

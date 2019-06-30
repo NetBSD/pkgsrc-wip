@@ -1,32 +1,30 @@
 # $NetBSD: Makefile.common,v 1.12 2015/09/17 13:48:04 makoto Exp $
+#
 # This Makefile fragment is included in the package Makefiles for
-# used by wip/gnuradio-default/Makefile
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
+#
 # used by wip/gnuradio-atsc/Makefile
 # used by wip/gnuradio-channels/Makefile
 # used by wip/gnuradio-companion/Makefile
 # used by wip/gnuradio-core/Makefile
 # used by wip/gnuradio-ctrlport/Makefile
-
+# used by wip/gnuradio-default/Makefile
 # used by wip/gnuradio-digital/Makefile
 # used by wip/gnuradio-doxygen/Makefile
 # used by wip/gnuradio-dtv/Makefile
 # used by wip/gnuradio-fcd/Makefile
 # used by wip/gnuradio-fec/Makefile
-
 # used by wip/gnuradio-fcd/Makefile
 # used by wip/gnuradio-noaa/Makefile
 # used by wip/gnuradio-pager/Makefile
 # used by wip/gnuradio-qtgui/Makefile
 # used by wip/gnuradio-trellis/Makefile
-
 # used by wip/gnuradio-uhd/Makefile
 # used by wip/gnuradio-utils/Makefile
 # used by wip/gnuradio-video-sdl/Makefile
 # used by wip/gnuradio-vocoder/Makefile
 # used by wip/gnuradio-wavelet/Makefile
-
 # used by wip/gnuradio-wxgui/Makefile
 # used by wip/gnuradio-zeromq/Makefile
 
