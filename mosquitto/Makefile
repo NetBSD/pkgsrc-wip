@@ -1,7 +1,7 @@
 # $NetBSD$
 
 VERSION=	1.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	mosquitto-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
@@ -25,6 +25,9 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
 # However, we need to set a few things to make automatic startup work.
 CONF_FILES=	${PREFIX}/share/examples/mosquitto/mosquitto.conf \
 		${PKG_SYSCONFDIR}/mosquitto.conf
+
+PKG_USERS=	mosquitto:mosquitto
+PKG_GROUPS=	mosquitto
 
 # Fails; see https://github.com/eclipse/mosquitto/issues/1242
 TEST_TARGET=	test
