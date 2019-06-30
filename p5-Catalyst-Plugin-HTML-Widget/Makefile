@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SRI/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-HTML-Widget/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-HTML-Widget
 COMMENT=	HTML Widget And Validation Framework
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.5:../../www/p5-Catalyst-Runtime

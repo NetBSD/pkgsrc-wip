@@ -6,7 +6,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Crypt-CAST5/
+HOMEPAGE=	https://metacpan.org/release/Crypt-CAST5
 COMMENT=	Perl5 CAST5 block cipher implementation
 
 PERL5_PACKLIST=	auto/Crypt/CAST5/.packlist

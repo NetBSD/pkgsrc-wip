@@ -6,7 +6,7 @@ CATEGORIES=	perl5 geography
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SREZIC/}
 
 MAINTAINER=	uli@habel.name
-HOMEPAGE=	http://search.cpan.org/dist/perl-GPS/
+HOMEPAGE=	https://metacpan.org/release/perl-GPS
 COMMENT=	GPS::Garmin access module for Perl
 
 DEPENDS+=	p5-Device-SerialPort>=0.12:../../comms/p5-Device-SerialPort

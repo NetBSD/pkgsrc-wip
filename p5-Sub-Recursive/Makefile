@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sub/}
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://search.cpan.org/dist/Sub-Recursive/
+HOMEPAGE=	https://metacpan.org/release/Sub-Recursive
 COMMENT=	Anonymous memory leak free recursive subroutines
 
 PERL5_PACKLIST=	auto/Sub/Recursive/.packlist

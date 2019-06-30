@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/N/NU/NUFFIN/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Authentication-Store-Htpasswd/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-Authentication-Store-Htpasswd
 COMMENT=	Use .htpasswd with Catalyst
 
 DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.01:../../www/p5-Catalyst-Plugin-Authentication

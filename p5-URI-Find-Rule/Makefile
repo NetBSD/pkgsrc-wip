@@ -6,7 +6,7 @@ CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=URI/}
 
 MAINTAINER=	charlie@rubberduck.com
-HOMEPAGE=	http://search.cpan.org/dist/URI-Find-Rule/
+HOMEPAGE=	https://metacpan.org/release/URI-Find-Rule
 COMMENT=	Simpler interface to URI::Find
 
 DEPENDS+=	p5-URI-Find>=0:../../www/p5-URI-Find

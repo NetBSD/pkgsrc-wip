@@ -6,7 +6,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Devel/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/Devel-Profiler/
+HOMEPAGE=		https://metacpan.org/release/Devel-Profiler
 COMMENT=		Perl profiler compatible with dprofpp
 
 

@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RT/}
 
 MAINTAINER=	tonnerre@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/RT-Authen-ExternalAuth/
+HOMEPAGE=	https://metacpan.org/release/RT-Authen-ExternalAuth
 COMMENT=	RT extension for external authentication methods
 LICENSE=	${PERL5_LICENSE}
 

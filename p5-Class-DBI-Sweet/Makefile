@@ -6,7 +6,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/P/PH/PHRED/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Class-DBI-Sweet/
+HOMEPAGE=	https://metacpan.org/release/Class-DBI-Sweet
 COMMENT=	Extra sweet features for Class::DBI
 LICENSE=	${PERL5_LICENSE}
 

@@ -6,7 +6,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Astro/}
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Astro-SpaceTrack
+HOMEPAGE=	https://metacpan.org/release/Astro-SpaceTrack
 COMMENT=	Retrieve orbital data from www.space-track.org
 LICENSE=	${PERL5_LICENSE}
 

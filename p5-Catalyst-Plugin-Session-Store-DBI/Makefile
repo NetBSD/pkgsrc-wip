@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-module/Catalyst/}
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session-Store-DBI/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-Session-Store-DBI
 COMMENT=	DBI storage backend for session data
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.0:../../www/p5-Catalyst-Runtime

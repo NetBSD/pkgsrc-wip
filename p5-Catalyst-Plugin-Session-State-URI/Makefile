@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session-State-URI/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-Session-State-URI
 COMMENT=	Saves Catalyst Session IDs by rewriting URIs
 
 DEPENDS+=	p5-URI>=1.72:../../www/p5-URI

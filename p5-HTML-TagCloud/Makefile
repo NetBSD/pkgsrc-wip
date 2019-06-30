@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/HTML-TagCloud/
+HOMEPAGE=	https://metacpan.org/release/HTML-TagCloud
 COMMENT=	Generate An HTML Tag Cloud
 LICENSE=	${PERL5_LICENSE}
 

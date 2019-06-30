@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PerlIO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Querying your filehandle's capabilities
-HOMEPAGE=	http://search.cpan.org/dist/PerlIO-Layers/
+HOMEPAGE=	https://metacpan.org/release/PerlIO-Layers
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES+=	c

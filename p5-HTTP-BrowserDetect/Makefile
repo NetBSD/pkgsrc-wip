@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/HTTP-BrowserDetect/
+HOMEPAGE=		https://metacpan.org/release/HTTP-BrowserDetect
 COMMENT=		Detect browser, version, OS from UserAgent
 LICENSE=		${PERL5_LICENSE}
 

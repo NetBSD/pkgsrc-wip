@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/E/ET/ETHER/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Email/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-Email
 COMMENT=	Send emails with Catalyst and Email::Send and Email::MIME::Creator
 
 DEPENDS+=	p5-Email-MIME>=0:../../mail/p5-Email-MIME

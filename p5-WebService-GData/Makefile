@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SZ/SZABGAB/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/WebService-GData/
+HOMEPAGE=	https://metacpan.org/release/WebService-GData
 COMMENT=	Google data protocol v2
 LICENSE=	${PERL5_LICENSE}
 

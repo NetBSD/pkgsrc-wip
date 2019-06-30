@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/WWW-YouTube-VideoURI/
+HOMEPAGE=	https://metacpan.org/release/WWW-YouTube-VideoURI
 COMMENT=	Module to determine the URI of a Flash Video file on YouTube.com
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww

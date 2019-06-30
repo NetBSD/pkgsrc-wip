@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Unit-Lite/
+HOMEPAGE=	https://metacpan.org/release/Test-Unit-Lite
 COMMENT=	Unit testing without external dependencies
 LICENSE=	${PERL5_LICENSE}
 

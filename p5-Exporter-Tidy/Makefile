@@ -6,7 +6,7 @@ CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Exporter/}
 
 MAINTAINER=	athaba@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/dist/Exporter-Tidy
+HOMEPAGE=	https://metacpan.org/release/Exporter-Tidy
 COMMENT=	Alternative way of exporting symbols in perl
 # In fact the license says:
 # Pick your favourite OSI approved license :)

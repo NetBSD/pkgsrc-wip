@@ -6,7 +6,7 @@ CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Unicode-EastAsianWidth-Detect/
+HOMEPAGE=	https://metacpan.org/release/Unicode-EastAsianWidth-Detect
 COMMENT=	Perl5 module to detect CJK Language
 LICENSE=	${PERL5_LICENSE}
 

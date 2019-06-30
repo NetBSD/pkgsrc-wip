@@ -5,7 +5,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Getopt/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/OptArgs/
+HOMEPAGE=		https://metacpan.org/release/OptArgs
 COMMENT=		Extended processing of command line options
 LICENSE=		${PERL5_LICENSE}
 

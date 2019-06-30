@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Unicode-Encoding/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Unicode-Encoding
 COMMENT=	Unicode aware Catalyst
 PERL5_REQD+=	5.8.1
 

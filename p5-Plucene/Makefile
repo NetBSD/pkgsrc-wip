@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plucene/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Plucene/
+HOMEPAGE=	https://metacpan.org/release/Plucene
 COMMENT=	Perl port of the Java Lucene search engine
 PERL5_REQD+=	5.6.0
 

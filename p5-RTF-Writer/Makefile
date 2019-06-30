@@ -6,7 +6,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=RTF/}
 
 MAINTAINER=		tonnerre@bsdprojects.net
-HOMEPAGE=		http://search.cpan.org/dist/RTF-Writer/
+HOMEPAGE=		https://metacpan.org/release/RTF-Writer
 COMMENT=		Perl module for generating documents in Rich Text Format
 
 DEPENDS+=		p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size

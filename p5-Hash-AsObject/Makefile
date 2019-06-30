@@ -7,7 +7,7 @@ CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 
 MAINTAINER=	athaba@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/dist/Hash-AsObject
+HOMEPAGE=	https://metacpan.org/release/Hash-AsObject
 COMMENT=	Treat hashes as objects, with arbitrary accessors/mutators
 LICENSE=	${PERL5_LICENSE}
 

@@ -6,7 +6,7 @@ CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	athaba@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/dist/Text-Quote
+HOMEPAGE=	https://metacpan.org/release/Text-Quote
 COMMENT=	Quotes strings as required for perl to eval them back correctly
 
 DEPENDS+=	p5-Carp-Assert>=0.13:../../devel/p5-Carp-Assert

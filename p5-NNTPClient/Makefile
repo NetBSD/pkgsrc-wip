@@ -7,7 +7,7 @@ CATEGORIES=	news perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=News/}
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://search.cpan.org/dist/NNTPClient/
+HOMEPAGE=	https://metacpan.org/release/NNTPClient
 COMMENT=	Perl 5 module to talk to NNTP (RFC977) server
 
 

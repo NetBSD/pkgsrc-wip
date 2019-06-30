@@ -6,7 +6,7 @@ CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Tie/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/Tie-DB_Lock/
+HOMEPAGE=		https://metacpan.org/release/Tie-DB_Lock
 COMMENT=		Ties hashes to databases using shared and exclusive locks
 
 

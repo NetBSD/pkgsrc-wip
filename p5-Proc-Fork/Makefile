@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Proc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Proc-Fork/
+HOMEPAGE=	https://metacpan.org/release/Proc-Fork
 COMMENT=	Simple, intuitive interface to the fork() system call
 LICENSE=	${PERL5_LICENSE}
 

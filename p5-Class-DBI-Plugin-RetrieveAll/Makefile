@@ -7,7 +7,7 @@ CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/dist/Class-DBI-Plugin-RetrieveAll/
+HOMEPAGE=	https://metacpan.org/release/Class-DBI-Plugin-RetrieveAll
 COMMENT=	More complex retrieve_all() for Class::DBI
 LICENSE=	${PERL5_LICENSE}
 

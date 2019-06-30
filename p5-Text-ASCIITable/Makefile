@@ -6,7 +6,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/Text-ASCIITable/
+HOMEPAGE=		https://metacpan.org/release/Text-ASCIITable
 COMMENT=		Create a nice formatted table using ASCII characters
 LICENSE=		${PERL5_LICENSE}
 

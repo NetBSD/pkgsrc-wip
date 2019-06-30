@@ -6,7 +6,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Net-Twitter-Lite/
+HOMEPAGE=	https://metacpan.org/release/Net-Twitter-Lite
 COMMENT=	Perl interface to the Twitter API (lite)
 LICENSE=	${PERL5_LICENSE}
 

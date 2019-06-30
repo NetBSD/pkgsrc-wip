@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/CGI-Application-Plugin-DevPopup/
+HOMEPAGE=		https://metacpan.org/release/CGI-Application-Plugin-DevPopup
 COMMENT=		Runtime cgiapp info in a popup window
 LICENSE=		${PERL5_LICENSE}
 

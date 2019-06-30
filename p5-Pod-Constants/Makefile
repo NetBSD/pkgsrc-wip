@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MG/MGV/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Pod-Constants/
+HOMEPAGE=	https://metacpan.org/release/Pod-Constants
 COMMENT=	Include constants from POD
 LICENSE=	artistic-2.0 # OR gnu-gpl-v2
 

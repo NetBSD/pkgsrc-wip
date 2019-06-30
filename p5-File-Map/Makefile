@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/File-Map
+HOMEPAGE=	https://metacpan.org/release/File-Map
 COMMENT=	Memory mapping made simple and safe
 LICENSE=	${PERL5_LICENSE}
 

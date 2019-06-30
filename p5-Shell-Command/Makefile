@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Shell/}
 
 MAINTAINER=	sasha-pkgsrc@arcocene.org
-HOMEPAGE=	http://search.cpan.org/dist/Shell-Command/
+HOMEPAGE=	https://metacpan.org/release/Shell-Command
 COMMENT=	Cross-platform functions emulating common shell commands
 LICENSE=	${PERL5_LICENSE}
 

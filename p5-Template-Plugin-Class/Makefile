@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/dist/Template-Plugin-Class/
+HOMEPAGE=	https://metacpan.org/release/Template-Plugin-Class
 COMMENT=	Allow calling of class methods on arbitrary classes
 LICENSE=	${PERL5_LICENSE}
 

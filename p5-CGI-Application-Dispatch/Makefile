@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/dist/CGI-Application-Dispatch/
+HOMEPAGE=	https://metacpan.org/release/CGI-Application-Dispatch
 COMMENT=	Dispatch requests to CGI::Application based objects
 LICENSE=	${PERL5_LICENSE}
 

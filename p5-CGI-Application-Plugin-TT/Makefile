@@ -6,7 +6,7 @@ CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/CGI-Application-Plugin-TT/
+HOMEPAGE=		https://metacpan.org/release/CGI-Application-Plugin-TT
 COMMENT=		Add Template Toolkit support to CGI::Application
 LICENSE=		${PERL5_LICENSE}
 

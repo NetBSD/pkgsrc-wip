@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/dist/Data-Properties/
+HOMEPAGE=	https://metacpan.org/release/Data-Properties
 COMMENT=	Perl version of Java's java.util.Properties
 
 

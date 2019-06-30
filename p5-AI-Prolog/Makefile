@@ -7,7 +7,7 @@ CATEGORIES=	perl5 lang
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AI/}
 
 MAINTAINER=	athaba@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/dist/AI-Prolog
+HOMEPAGE=	https://metacpan.org/release/AI-Prolog
 COMMENT=	Pure Perl predicate logic engine
 LICENSE=	${PERL5_LICENSE}
 

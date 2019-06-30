@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Prototype/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-Prototype
 COMMENT=	Catalyst plugin for Prototype
 
 DEPENDS+=	p5-Catalyst-Runtime>=0:../../www/p5-Catalyst-Runtime

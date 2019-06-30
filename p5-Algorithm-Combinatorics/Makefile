@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Algorithm-Combinatorics/
+HOMEPAGE=	https://metacpan.org/release/Algorithm-Combinatorics
 COMMENT=	Efficient generation of combinatorial sequences
 LICENSE=	${PERL5_LICENSE}
 

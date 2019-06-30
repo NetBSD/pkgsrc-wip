@@ -6,7 +6,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Cache/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/Cache-Mmap/
+HOMEPAGE=		https://metacpan.org/release/Cache-Mmap
 COMMENT=		Shared data cache using memory mapped files
 LICENSE=		${PERL5_LICENSE}
 

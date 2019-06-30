@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Apache2-ModSSL/
+HOMEPAGE=	https://metacpan.org/release/Apache2-ModSSL
 COMMENT=	Perl Interface to mod_ssl functions
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay

@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	tonnerre@bsdprojects.net
-HOMEPAGE=	http://search.cpan.org/dist/XML-DTDParser/
+HOMEPAGE=	https://metacpan.org/release/XML-DTDParser
 COMMENT=	Perl module for handling XML DTDs
 LICENSE=	${PERL5_LICENSE}
 

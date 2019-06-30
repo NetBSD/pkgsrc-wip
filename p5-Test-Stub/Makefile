@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Stub/
+HOMEPAGE=	https://metacpan.org/release/Test-Stub
 COMMENT=	Simple stubbing library for Perl5
 LICENSE=	${PERL5_LICENSE}
 

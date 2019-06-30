@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/URI-Title/
+HOMEPAGE=		https://metacpan.org/release/URI-Title
 COMMENT=		Get the titles of things on the web in a sensible way
 LICENSE=		${PERL5_LICENSE}
 

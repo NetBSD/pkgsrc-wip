@@ -4,7 +4,7 @@
 DISTNAME=		Encode-compat-0.07
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		perl5
-HOMEPAGE=		http://search.cpan.org/dist/Encode-compat/
+HOMEPAGE=		https://metacpan.org/release/Encode-compat
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Encode/}
 LICENSE=		${PERL5_LICENSE}
 

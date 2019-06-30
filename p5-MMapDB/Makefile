@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OP/OPI/}
 
 MAINTAINER=	wenheping@gmail.com
-HOMEPAGE=	http://search.cpan.org/dist/MMapDB
+HOMEPAGE=	https://metacpan.org/release/MMapDB
 COMMENT=	Simple database in shared memory
 LICENSE=	${PERL5_LICENSE}
 

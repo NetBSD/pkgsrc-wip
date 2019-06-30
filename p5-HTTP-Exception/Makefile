@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/dist/HTTP-Exception/
+HOMEPAGE=	https://metacpan.org/release/HTTP-Exception
 COMMENT=	Throw HTTP-Errors as Exceptions
 LICENSE=	${PERL5_LICENSE}
 

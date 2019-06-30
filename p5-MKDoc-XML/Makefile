@@ -6,7 +6,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BP/BPOSTLE/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/MKDoc-XML/
+HOMEPAGE=		https://metacpan.org/release/MKDoc-XML
 COMMENT=		Suite of low level XML processing modules
 
 PERL5_PACKLIST=		auto/MKDoc/XML/.packlist

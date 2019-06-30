@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SAMV/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Lingua-Translate/
+HOMEPAGE=	https://metacpan.org/release/Lingua-Translate
 COMMENT=	Translate text from one language to another
 LICENSE=	${PERL5_LICENSE}
 

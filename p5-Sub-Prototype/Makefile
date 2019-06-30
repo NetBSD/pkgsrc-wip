@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Sub-Prototype/
+HOMEPAGE=	https://metacpan.org/release/Sub-Prototype
 COMMENT=	Add prototype for function
 LICENSE=	${PERL5_LICENSE}
 

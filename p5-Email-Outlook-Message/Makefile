@@ -6,7 +6,7 @@ CATEGORIES=	devel mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Email-Outlook-Message/
+HOMEPAGE=	https://metacpan.org/release/Email-Outlook-Message
 COMMENT=	Read Outlook .msg files
 LICENSE=	${PERL5_LICENSE}
 

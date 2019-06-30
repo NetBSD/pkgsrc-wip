@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POSIX/}
 
 MAINTAINER=	tonnerre@thebsh.sygroup.ch
-HOMEPAGE=	http://search.cpan.org/dist/POSIX-strptime/
+HOMEPAGE=	https://metacpan.org/release/POSIX-strptime
 COMMENT=	Perl module for the POSIX strptime function
 LICENSE=	${PERL5_LICENSE}
 

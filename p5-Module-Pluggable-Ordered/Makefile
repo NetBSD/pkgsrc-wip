@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Module-Pluggable-Ordered/
+HOMEPAGE=	https://metacpan.org/release/Module-Pluggable-Ordered
 COMMENT=	Call module plugins in a specified order
 LICENSE=	${PERL5_LICENSE}
 

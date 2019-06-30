@@ -6,7 +6,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	charlie@rubberduck.com
-HOMEPAGE=	http://search.cpan.org/dist/Net-Delicious/
+HOMEPAGE=	https://metacpan.org/release/Net-Delicious
 COMMENT=	OOP for the del.icio.us API
 
 BUILD_DEPENDS+=	p5-Test-Simple>=0.47:../../devel/p5-Test-Simple

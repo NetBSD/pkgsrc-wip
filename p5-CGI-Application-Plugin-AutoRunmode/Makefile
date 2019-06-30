@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 LICENSE=		${PERL5_LICENSE}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/CGI-Application-Plugin-AutoRunmode/
+HOMEPAGE=		https://metacpan.org/release/CGI-Application-Plugin-AutoRunmode
 COMMENT=		CGI::App plugin to automatically register runmodes
 
 DEPENDS+=		p5-CGI-Application>=4.01:../../www/p5-CGI-Application

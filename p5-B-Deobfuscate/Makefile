@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/B-Deobfuscate/
+HOMEPAGE=	https://metacpan.org/release/B-Deobfuscate
 COMMENT=	Extension to B::Deparse for use in de-obfuscating source code
 LICENSE=	${PERL5_LICENSE}
 

@@ -7,7 +7,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Metadata/}
 
 MAINTAINER=		athaba@users.sourceforge.net
-HOMEPAGE=		http://search.cpan.org/dist/Metadata/
+HOMEPAGE=		https://metacpan.org/release/Metadata
 COMMENT=		Perl classes for simple metadata
 LICENSE=		${PERL5_LICENSE}
 

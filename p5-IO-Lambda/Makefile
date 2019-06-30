@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/K/KA/KARASIK/
 
 MAINTAINER=	wenheping@gmail.com
-HOMEPAGE=	http://search.cpan.org/dist/IO-Lambda/
+HOMEPAGE=	https://metacpan.org/release/IO-Lambda
 COMMENT=	Non-blocking I/O in lambda style
 LICENSE=	${PERL5_LICENSE}
 

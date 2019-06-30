@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=UUID/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/UUID/
+HOMEPAGE=	https://metacpan.org/release/UUID
 COMMENT=	DCE compatible Universally Unique Identifier library for Perl
 LICENSE=	${PERL5_LICENSE}
 

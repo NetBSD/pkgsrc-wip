@@ -6,7 +6,7 @@ CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Date-Range/
+HOMEPAGE=	https://metacpan.org/release/Date-Range
 COMMENT=	Date::Range - deal with a range of dates
 LICENSE=	gnu-gpl-v2
 

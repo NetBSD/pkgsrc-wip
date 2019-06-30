@@ -7,7 +7,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		athaba@users.sourceforge.net
-HOMEPAGE=		http://search.cpan.org/dist/Crypt-Serpent
+HOMEPAGE=		https://metacpan.org/release/Crypt-Serpent
 COMMENT=		Serpent block cipher encryption module for perl
 LICENSE=		${PERL5_LICENSE}
 

@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Term-ReadLine-Perl/
+HOMEPAGE=	https://metacpan.org/release/Term-ReadLine-Perl
 COMMENT=	Perl module providing minimal interface to Readline libraries
 LICENSE=	${PERL5_LICENSE}
 

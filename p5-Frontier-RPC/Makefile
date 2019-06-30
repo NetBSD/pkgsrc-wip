@@ -6,7 +6,7 @@ CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Frontier/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/Frontier-RPC/
+HOMEPAGE=		https://metacpan.org/release/Frontier-RPC
 COMMENT=		Perl module to handle client/server xmlrpc
 LICENSE=		${PERL5_LICENSE}
 

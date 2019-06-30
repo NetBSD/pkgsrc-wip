@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EX/EXOBUZZ/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MediaWiki-API/
+HOMEPAGE=	https://metacpan.org/release/MediaWiki-API
 COMMENT=	Perl interface to the MediaWiki API
 LICENSE=	gnu-gpl-v3
 

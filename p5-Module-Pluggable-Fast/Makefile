@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/dist/Module-Pluggable-Fast/
+HOMEPAGE=	https://metacpan.org/release/Module-Pluggable-Fast
 COMMENT=	Fast plugins with instantiation
 LICENSE=	${PERL5_LICENSE}
 

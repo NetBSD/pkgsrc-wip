@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/F/FL/FLORA/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Engine-Apache/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Engine-Apache
 COMMENT=	Catalyst Apache Engines
 
 BUILD_DEPENDS+=	p5-Catalyst-Runtime>=5.50:../../www/p5-Catalyst-Runtime

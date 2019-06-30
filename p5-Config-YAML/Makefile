@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Config-YAML/
+HOMEPAGE=	https://metacpan.org/release/Config-YAML
 COMMENT=	Simple configuration automation
 LICENSE=	${PERL5_LICENSE}
 

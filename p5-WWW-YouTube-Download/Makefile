@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/O/OA/OALDERS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/WebService-GData/
+HOMEPAGE=	https://metacpan.org/release/WebService-GData
 COMMENT=	Very simple YouTube video download interface
 LICENSE=	${PERL5_LICENSE}
 

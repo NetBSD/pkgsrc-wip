@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	tonnerre@bsdprojects.net
-HOMEPAGE=	http://search.cpan.org/dist/XML-DT/
+HOMEPAGE=	https://metacpan.org/release/XML-DT
 COMMENT=	Perl module for down translation of XML files
 LICENSE=	${PERL5_LICENSE}
 

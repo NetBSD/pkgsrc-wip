@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DC/DCANTRELL/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/dist/Sub-WrapPackages
+HOMEPAGE=	https://metacpan.org/release/Sub-WrapPackages
 COMMENT=	Add pre- and post-execution wrappers around all the subroutines
 LICENSE=	${PERL5_LICENSE}
 

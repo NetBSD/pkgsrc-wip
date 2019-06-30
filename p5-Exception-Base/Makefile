@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DE/DEXTER/}
 
 MAINTAINER=	ggm@apnic.net
-HOMEPAGE=	http://search.cpan.org/dist/Exception-Base/
+HOMEPAGE=	https://metacpan.org/release/Exception-Base
 COMMENT=	Exception::Base
 LICENSE=	${PERL5_LICENSE}
 

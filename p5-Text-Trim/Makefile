@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	tonnerre@bsdprojects.net
-HOMEPAGE=	http://search.cpan.org/dist/Text-Trim/
+HOMEPAGE=	https://metacpan.org/release/Text-Trim
 COMMENT=	Extract the structure of a quoted mail message
 LICENSE=	${PERL5_LICENSE}
 

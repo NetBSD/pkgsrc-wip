@@ -6,7 +6,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/Text-VimColor/
+HOMEPAGE=		https://metacpan.org/release/Text-VimColor
 COMMENT=		Syntax color text in HTML or XML using Vim
 LICENSE=		${PERL5_LICENSE}
 

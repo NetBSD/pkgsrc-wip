@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/B/BO/BOBTFISH/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-DefaultEnd/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-DefaultEnd
 COMMENT=	Sensible default end action
 LICENSE=	${PERL5_LICENSE}
 

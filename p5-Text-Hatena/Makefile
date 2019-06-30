@@ -6,7 +6,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/Text-Hatena/
+HOMEPAGE=		https://metacpan.org/release/Text-Hatena
 COMMENT=		Perl extension for formatting text with Hatena Style
 
 DEPENDS+=		p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser

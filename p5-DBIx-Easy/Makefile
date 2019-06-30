@@ -6,7 +6,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/dist/DBIx-Easy/
+HOMEPAGE=	https://metacpan.org/release/DBIx-Easy
 COMMENT=	Easy to Use DBI interface
 LICENSE=	gnu-gpl-v2
 

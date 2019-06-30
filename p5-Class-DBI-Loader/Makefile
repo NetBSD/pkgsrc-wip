@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/dist/Class-DBI-Loader/
+HOMEPAGE=	https://metacpan.org/release/Class-DBI-Loader
 COMMENT=	Dynamic definition of Class::DBI sub classes
 LICENSE=	${PERL5_LICENSE}
 

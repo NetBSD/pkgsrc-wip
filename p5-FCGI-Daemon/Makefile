@@ -8,7 +8,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=FCGI/}
 
 MAINTAINER=	ast@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/FCGI-Daemon/
+HOMEPAGE=	https://metacpan.org/release/FCGI-Daemon
 COMMENT=	Perl-aware Fast CGI daemon for use with nginx web server
 LICENSE=	gnu-agpl-v3
 

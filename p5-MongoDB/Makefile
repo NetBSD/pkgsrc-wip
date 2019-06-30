@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MO/MONGODB/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/MongoDB/
+HOMEPAGE=	https://metacpan.org/release/MongoDB
 COMMENT=	Mongo Driver for Perl
 LICENSE=	apache-2.0
 

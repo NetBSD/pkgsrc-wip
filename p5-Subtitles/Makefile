@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KA/KARASIK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Subtitles/
+HOMEPAGE=	https://metacpan.org/release/Subtitles
 COMMENT=	Handle video subtitles in various text formats
 LICENSE=	${PERL5_LICENSE}
 

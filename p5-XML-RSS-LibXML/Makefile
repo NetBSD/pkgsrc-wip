@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/dist/XML-RSS-LibXML/
+HOMEPAGE=	https://metacpan.org/release/XML-RSS-LibXML
 COMMENT=	XML::RSS with XML::LibXML
 LICENSE=	${PERL5_LICENSE}
 

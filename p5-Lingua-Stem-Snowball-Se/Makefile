@@ -6,7 +6,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AS/ASKSH/}
 
 MAINTAINER=		kuli0020@umn.edu
-HOMEPAGE=		http://search.cpan.org/dist/Snowball-Swedish/
+HOMEPAGE=		https://metacpan.org/release/Snowball-Swedish
 COMMENT=		Stemmer for Swedish
 LICENSE=		${PERL5_LICENSE}
 

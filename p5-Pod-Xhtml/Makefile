@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/dist/Pod-Xhtml/
+HOMEPAGE=	https://metacpan.org/release/Pod-Xhtml
 COMMENT=	Generate well-formed XHTML documents from POD format documentation
 LICENSE=	gnu-gpl-v2
 

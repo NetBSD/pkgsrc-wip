@@ -7,7 +7,7 @@ CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Unicode-CheckUTF8/
+HOMEPAGE=	https://metacpan.org/release/Unicode-CheckUTF8
 COMMENT=	Perl5 module to check if scalar is valid UTF-8
 LICENSE=	generic-nonlicense
 

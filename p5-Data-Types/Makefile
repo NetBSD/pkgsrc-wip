@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MANWAR/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Data-Types/
+HOMEPAGE=	https://metacpan.org/release/Data-Types
 COMMENT=	Validate and convert data types
 LICENSE=	${PERL5_LICENSE}
 

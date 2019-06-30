@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://search.cpan.org/dist/Class-Date/
+HOMEPAGE=	https://metacpan.org/release/Class-Date
 COMMENT=	Perl class for easy date and time manipulation
 LICENSE=	${PERL5_LICENSE}
 

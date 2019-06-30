@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/HTTP-Request-StreamingUpload/
+HOMEPAGE=	https://metacpan.org/release/HTTP-Request-StreamingUpload
 COMMENT=	Streaming upload wrapper for HTTP::Request
 LICENSE=	${PERL5_LICENSE}
 

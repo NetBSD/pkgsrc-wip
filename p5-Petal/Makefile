@@ -6,7 +6,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NINE/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/Petal/
+HOMEPAGE=		https://metacpan.org/release/Petal
 COMMENT=		Perl Template Attribute Language
 LICENSE=		${PERL5_LICENSE}
 

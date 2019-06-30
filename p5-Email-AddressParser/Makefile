@@ -6,7 +6,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Email-AddressParser/
+HOMEPAGE=	https://metacpan.org/release/Email-AddressParser
 COMMENT=	RFC 2822 Address Parsing and Creation
 
 

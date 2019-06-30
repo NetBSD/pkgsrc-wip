@@ -6,7 +6,7 @@ CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bit/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Bit-Vector-Minimal/
+HOMEPAGE=	https://metacpan.org/release/Bit-Vector-Minimal
 COMMENT=	"Object-oriented wrapper around Perl's vec()"
 LICENSE=	${PERL5_LICENSE}
 

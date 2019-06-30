@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-Fake-HTTPD/
+HOMEPAGE=	https://metacpan.org/release/Test-Fake-HTTPD
 COMMENT=	Fake HTTP Server
 LICENSE=	${PERL5_LICENSE}
 

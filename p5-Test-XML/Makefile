@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://search.cpan.org/dist/Test-XML/
+HOMEPAGE=	https://metacpan.org/release/Test-XML
 COMMENT=	Compare XML in perl tests
 LICENSE=	${PERL5_LICENSE}
 

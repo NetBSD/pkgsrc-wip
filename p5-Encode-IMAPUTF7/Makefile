@@ -6,7 +6,7 @@ CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Encode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/Encode-IMAPUTF7/
+HOMEPAGE=	https://metacpan.org/release/Encode-IMAPUTF7
 COMMENT=	Modified UTF7 encoding (for IMAP)
 
 

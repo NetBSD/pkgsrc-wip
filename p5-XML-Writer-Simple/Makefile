@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	tonnerre@bsdprojects.net
-HOMEPAGE=	http://search.cpan.org/dist/XML-Writer-Simple/
+HOMEPAGE=	https://metacpan.org/release/XML-Writer-Simple
 COMMENT=	Perl module for writing XML documents
 LICENSE=	${PERL5_LICENSE}
 

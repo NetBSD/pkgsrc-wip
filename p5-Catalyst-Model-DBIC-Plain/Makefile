@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/G/GA/GABB/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Model-DBIC/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Model-DBIC
 COMMENT=	DBIx::Class model class for Catalyst, without loader
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.00:../../www/p5-Catalyst-Runtime

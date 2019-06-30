@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/ST/STRYTOAST/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/PluceneSimple/
+HOMEPAGE=	https://metacpan.org/release/PluceneSimple
 COMMENT=	Perl interface to Plucene
 
 DEPENDS+=	p5-PathTools>=1.2:../../devel/p5-PathTools

@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Log-Log4perl/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Log-Log4perl
 COMMENT=	Log::Log4perl logging for Catalyst
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.60:../../www/p5-Catalyst-Runtime

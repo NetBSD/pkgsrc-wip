@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
-HOMEPAGE=		http://search.cpan.org/dist/HTML-Widget/
+HOMEPAGE=		https://metacpan.org/release/HTML-Widget
 COMMENT=		HTML Widget And Validation Framework
 
 DEPENDS+=		p5-Module-Pluggable-Fast>=0.18:../../wip/p5-Module-Pluggable-Fast

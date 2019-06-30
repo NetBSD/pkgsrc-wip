@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/F/FA/FABPOT/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://search.cpan.org/dist/Plucene-Plugin-Analyzer-SnowballAnalyzer/
+HOMEPAGE=	https://metacpan.org/release/Plucene-Plugin-Analyzer-SnowballAnalyzer
 COMMENT=	Stemmed analyzer plugin for p5-Plucene search engine
 
 DEPENDS+=	p5-Lingua-StopWords>=0:../../wip/p5-Lingua-StopWords
