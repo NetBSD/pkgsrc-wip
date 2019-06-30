@@ -27,7 +27,7 @@ SUBST_STAGE.minor=	post-patch
 SUBST_FILES.minor=	CMakeLists.txt
 SUBST_SED.minor=	-e "s|ARMA_MINOR ${DIST_MINOR}|ARMA_MINOR ${PKG_MINOR}|g"
 
-# Upstream requires both lapack and openblas, so we cannot use 
+# Upstream requires both lapack and openblas, so we cannot use
 # mk/blas.buildlink.mk without extensive hacking
 .include "../../wip/openblas/buildlink3.mk"
 .include "../../wip/lapack/buildlink3.mk"

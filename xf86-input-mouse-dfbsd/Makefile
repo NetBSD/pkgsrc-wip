@@ -20,9 +20,9 @@ CFLAGS.DragonFly+=	-Wno-array-bounds
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-SUBST_CLASSES+=			freebsdusb 
+SUBST_CLASSES+=			freebsdusb
 SUBST_STAGE.freebsdusb=		post-extract
-SUBST_MESSAGE.freebsdusb=	Patching src/Makefile.in for DragonFly or FreeBSD compatible USB 
+SUBST_MESSAGE.freebsdusb=	Patching src/Makefile.in for DragonFly or FreeBSD compatible USB
 SUBST_FILES.freebsdusb+=	src/Makefile.in
 SUBST_SED.freebsdusb+=		-e 's|-module -avoid-version|-module -avoid-version -lusbhid|'
 .endif

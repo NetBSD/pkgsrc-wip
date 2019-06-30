@@ -11,7 +11,7 @@ COMMENT=	Lattice QCD library including statistical, fitting, plotting functions
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.3.2:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.2:../../textproc/py-jinja2 
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.2:../../textproc/py-jinja2
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

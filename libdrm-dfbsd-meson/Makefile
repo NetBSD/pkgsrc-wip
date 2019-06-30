@@ -118,7 +118,7 @@ PKG_SUGGESTED_OPTIONS=
 
 PKG_SUPPORTED_OPTIONS+=	invert_atomic_add_unless
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	invert_atomic_add_unless 
+PKG_SUGGESTED_OPTIONS+=	invert_atomic_add_unless
 .endif
 
 # .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
@@ -132,7 +132,7 @@ PKG_SUGGESTED_OPTIONS+=	strict_xsrc_netbsd
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		libkms	
+PLIST_VARS+=		libkms
 .if !empty(PKG_OPTIONS:Mlibkms)
 PKGCONFIG_OVERRIDE+=	libkms.pc.in
 PLIST.libkms=		yes

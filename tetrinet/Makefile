@@ -6,7 +6,7 @@ MASTER_SITES=	http://tetrinet.or.cz/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	david@netbsd-fr.org
-HOMEPAGE=	${MASTER_SITES}
+HOMEPAGE=	http://tetrinet.or.cz/download/
 COMMENT=	Console tetrinet client
 
 BUILDLINK_TRANSFORM+=	l:ncurses:curses

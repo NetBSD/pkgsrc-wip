@@ -35,7 +35,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 BUILD_TARGET=	mothur
 
-PORTVERSION=	1.40.5	
+PORTVERSION=	1.40.5
 DATADIR=	${PREFIX}/share/mothur
 DOCSDIR=	${PREFIX}/share/doc/mothur
 EXAMPLESDIR=	${PREFIX}/share/examples/mothur

@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RTcmix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org	
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rtcmix.org
 COMMENT=	Open-source digital signal processing and sound synthesis language
 LICENSE=	apache-2.0
@@ -20,5 +20,5 @@ USE_TOOLS=		gmake autoconf perl
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
-	
+
 .include "../../mk/bsd.pkg.mk"

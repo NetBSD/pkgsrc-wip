@@ -17,5 +17,5 @@ USE_LANGUAGES=	c c++
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../math/py-numpy/buildlink3.mk"	
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

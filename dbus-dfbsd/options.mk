@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=	nonroot
 PKG_SUPPORTED_OPTIONS+=	strict-dfbsd
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	enable-in-rcvar	
+PKG_SUGGESTED_OPTIONS+=	enable-in-rcvar
 PKG_SUGGESTED_OPTIONS+=	strict-dfbsd
 .endif
 

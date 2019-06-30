@@ -17,7 +17,7 @@ USE_TOOLS+=	automake autoconf autoreconf pkg-config
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -fiv
-	
+
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libxmp/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

@@ -19,7 +19,7 @@ BINFILES=	ssl/ssl_client1 ssl/ssl_client2 ssl/ssl_server aes/aescrypt2 \
 		pkey/dh_client pkey/dh_genprime pkey/dh_server pkey/mpi_demo \
 		pkey/rsa_genkey pkey/rsa_sign pkey/rsa_verify hash/hello \
 		hash/md5sum hash/sha1sum hash/sha2sum test/ssl_cert_test \
-		test/benchmark test/selftest test/ssl_test 
+		test/benchmark test/selftest test/ssl_test
 
 INCLUDE_FILES=	aes.h arc4.h asn1.h base64.h bignum.h \
 		bn_mul.h camellia.h certs.h cipher.h cipher_wrap.h config.h \

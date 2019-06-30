@@ -10,4 +10,4 @@ thus lacks certain features normally found in more high-level libraries.
 
 ImGui is particularly suited to integration in realtime 3D applications,
 fullscreen applications, embedded applications, games, or any applications on
-consoles platforms where operating system features are non-standard. 
+consoles platforms where operating system features are non-standard.

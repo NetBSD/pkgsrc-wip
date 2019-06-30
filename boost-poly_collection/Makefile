@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	brook@NetBSD.org
 HOMEPAGE=	http://rawgit.com/joaquintides/poly_collection/website/doc/html/index.html
-COMMENT=	Containers supporting dynamic polymorphism in C++ 
+COMMENT=	Containers supporting dynamic polymorphism in C++
 LICENSE=	boost-license
 
 WRKSRC=		${WRKDIR}/poly_collection-develop
@@ -18,7 +18,7 @@ USE_TOOLS+=	pax
 # XXX - remove this or add more to do-install and PLIST
 .if !empty(XXX_BUILD_BOOST_POLY_COLLECTION)
 USE_LANGUAGES+=	c c++
-USE_CMAKE=	
+USE_CMAKE=
 CMAKE_INSTALL_PREFIX=	${PREFIX}/include/boost/poly_collection
 .include "../../devel/boost-headers/buildlink3.mk"
 .else

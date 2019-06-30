@@ -26,6 +26,6 @@ WRKSRC=	${WRKDIR}/qstat-2.14
 
 pre-configure:
 	cd ${WRKSRC} && \
-	./autogen.sh       
+	./autogen.sh
 
 .include "../../mk/bsd.pkg.mk"

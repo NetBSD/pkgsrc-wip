@@ -51,13 +51,13 @@ PY_PATCHPLIST=			yes
 
 # to make protoc work during installation
 # http://paraview.org/Bug/view.php?id=12852
-# 
+#
 # For 3.98 it fails to run vtkkwProcessXML-pv3.98
 # with the following error message
 # _ParaView_build/bin/vtkkwProcessXML-pv3.98: error while loading
 # shared libraries: libvtkCommonCore-pv3.98.so.1: cannot open shared
 # object file: No such file or directory
-# 
+#
 # I add ${WRKSRC}/_ParaView_build/lib/ to LD_LIBRARY_PATH to solve it
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/_ParaView_build/bin:${WRKSRC}/_ParaView_build/lib/
 

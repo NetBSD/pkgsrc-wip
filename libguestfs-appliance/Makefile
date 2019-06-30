@@ -25,7 +25,7 @@ do-build:
 	${PREFIX}/bin/qemu-img convert -f raw -O qcow2 -c \
 	  ${WRKSRC}/root ${WRKSRC}/root.qcow2
 	rm ${WRKSRC}/root
-	ln -s root.qcow2 ${WRKSRC}/root 
+	ln -s root.qcow2 ${WRKSRC}/root
 
 do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/lib/guestfs/.

@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avrdude
 PKG_SUPPORTED_OPTIONS+=		doc
-PKG_SUGGESTED_OPTIONS=		
+PKG_SUGGESTED_OPTIONS=
 PLIST_VARS+=			doc
 
 .include "../../mk/bsd.options.mk"

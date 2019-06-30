@@ -3,7 +3,7 @@
 
 DISTNAME=	etoile-${VERSN}
 PKGNAME=	${DISTNAME:S/-/-services-/}
-CATEGORIES=	gnustep 
+CATEGORIES=	gnustep
 MASTER_SITES=	http://download.gna.org/etoile/
 VERSN=		0.4.1
 

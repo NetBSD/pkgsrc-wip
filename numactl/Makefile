@@ -10,7 +10,7 @@ COMMENT=	Non Uniform Memory Access tools
 #LICENSE=	# TODO: (see mk/license.mk)
 
 # numactl and the demo programs are under the GNU General Public License, v.2
-# libnuma is under the GNU Lesser General Public License, v2.1. 
+# libnuma is under the GNU Lesser General Public License, v2.1.
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 

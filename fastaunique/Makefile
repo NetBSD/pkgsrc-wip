@@ -14,7 +14,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://example.com
 COMMENT=	Sort and uniq fasta files
-# LICENSE=	
+# LICENSE=
 
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes

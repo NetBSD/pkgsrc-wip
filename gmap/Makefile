@@ -12,12 +12,12 @@ DISTFILES=	gmap-gsnap-${PORTVERSION:C|\.|-|g}${EXTRACT_SUFX}
 
 MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Genomic Mapping and Alignment Program for mRNA and EST Sequences
-#LICENSE=	
+#LICENSE=
 
 # Pessimistic assumption.  Test and change if possible.
 # MAKE_JOBS_SAFE=	no
 
-ONLY_FOR_PLATFORM=	
+ONLY_FOR_PLATFORM=
 
 # FIXME: Add shebang fixes for perl scripts
 

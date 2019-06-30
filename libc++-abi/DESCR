@@ -8,6 +8,6 @@ Features and Goals includes:
 Correctness as defined by the C++11 standard.
 Provide a portable sublayer to wase the porting of libc++.
 On Mac OS X, be ABI compatible with the existing low-level support.
-libc++abi is know to work on Darwin platform using clang. 
+libc++abi is know to work on Darwin platform using clang.
 Find the list of functionality here:
 http://libcxxabi.llvm.org/spec.html

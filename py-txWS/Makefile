@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-vcversioner-[0-9]*:../../devel/py-vcversioner 
+DEPENDS+=	${PYPKGPREFIX}-vcversioner-[0-9]*:../../devel/py-vcversioner
 
 USE_LANGUAGES=	# none
 

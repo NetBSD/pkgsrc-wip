@@ -277,7 +277,7 @@ PLIST.iris=		yes
 .  if !empty(PKG_OPTIONS:Mvulkan)
 # VULKAN_DRIVERS+=	intel
 # VULKAN_DRIVERS+=	radeon
-VULKAN_DRIVERS+=	auto	
+VULKAN_DRIVERS+=	auto
 PLIST.vulkan=		yes
 .  endif
 

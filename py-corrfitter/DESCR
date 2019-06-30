@@ -15,6 +15,6 @@ used to fit multiple models to data simultaneously. Any number of
 correlators may be described and fit by a single |CorrFitter| object.
 |CorrFitter| objects can also be used to to extract the appropriate fit
 data from |Dataset| objects.
-  
+
 This module has been used extensively for analyzing results from lattice
 QCD simulations

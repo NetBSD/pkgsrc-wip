@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-simplegeneric>0.8:../../devel/py-simplegeneric
 #DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2:../../devel/py-traitlets
 
 USE_LANGUAGES=	# none
-#REPLACE_PYTHON=	
+#REPLACE_PYTHON=
 #PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"

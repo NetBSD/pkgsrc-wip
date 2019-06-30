@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config perl:run
 
-REPLACE_PERL+=	updaters/ksreenlocker_5_3_separate_autologin.pl 
+REPLACE_PERL+=	updaters/ksreenlocker_5_3_separate_autologin.pl
 
 SPECIAL_PERMS+=	${PREFIX}/libexec/kcheckpass \
 		${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555

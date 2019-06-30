@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gfeedline
 PKG_SUPPORTED_OPTIONS=	proxy spellcheck
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 

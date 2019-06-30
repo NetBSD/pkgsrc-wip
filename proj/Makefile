@@ -3,7 +3,7 @@
 # I have an update to 6 ready, but it is on hold pending an assessment
 # of projects.h removal fallout - gdt.
 VERSION_BASE=	6.0.0
-VERSION_RC=	
+VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0
 # proj RCs have names like 5.1.0RC1 but unpack to 5.1.0

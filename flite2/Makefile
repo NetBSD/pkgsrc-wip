@@ -5,7 +5,7 @@ DISTNAME=	flite-2.0.0-release
 PKGNAME=	${DISTNAME:S/-release//}
 CATEGORIES=	audio
 #MASTER_SITES=	http://www.speech.cs.cmu.edu/flite/packed/flite-1.3/
-MASTER_SITES=	http://festvox.org/flite/packed/flite-2.0/	
+MASTER_SITES=	http://festvox.org/flite/packed/flite-2.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,11 +25,11 @@ GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-sockets
-CONFIGURE_ARGS+=	--with-audio=pulseaudio 
-CONFIGURE_ARGS+=	--with-lang 
-CONFIGURE_ARGS+=	--with-pic 
-CONFIGURE_ARGS+=	--with-vox 
-CONFIGURE_ARGS+=	--with-lex 
+CONFIGURE_ARGS+=	--with-audio=pulseaudio
+CONFIGURE_ARGS+=	--with-lang
+CONFIGURE_ARGS+=	--with-pic
+CONFIGURE_ARGS+=	--with-vox
+CONFIGURE_ARGS+=	--with-lex
 CONFIGURE_ARGS+=	--with-langvox=default
 
 .include "../../audio/pulseaudio/buildlink3.mk"

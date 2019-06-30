@@ -54,7 +54,7 @@
 # 2019-05-01	gitlab-ci: build vulkan drivers in clang build
 # COMMIT_ID=	47f419d0b37721776785a54005783ef6fe836d66
 
-PORTNAME=	mesa		
+PORTNAME=	mesa
 
 # DISTNAME=	${PORTNAME}-${COMMIT_ID}
 # PKGNAME=	MesaLib-19.1.0

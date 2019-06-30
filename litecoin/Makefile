@@ -30,7 +30,7 @@ BOOST_LDFLAGS=		-Wl,-R${BUILDLINK_TRANSFORM.boost-libs}/lib -Wl,-L${BUILDLINK_PR
 
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 CONFIGURE_ARGS+=	--enable-hardening
-CONFIGURE_ARGS+=	${PREFIX}/include/db4 
+CONFIGURE_ARGS+=	${PREFIX}/include/db4
 #CONFIGURE_ARGS+=	--without-gui
 
 LIBTOOLIZE=	${PREFIX}/bin/libtoolize

@@ -43,7 +43,7 @@ PLIST_VARS+=		ia32w linux
 # 	librt.so.1 libgobject-2.0.so.0
 # 	libsmime3.so libpangocairo-1.0.so.0
 # 	libpango-1.0.so.0 libcairo.so.2 libgio-2.0.so.0
-# 	libgdk_pixbuf-2.0.so.0 
+# 	libgdk_pixbuf-2.0.so.0
 # 	libuuid.so.1
 # 	libatk-1.0.so.0 libatk-bridge-2.0.so.0
 # 	libatspi.so.0 libm.so.6 libgtk-3.so.0 libgdk-3.so.0

@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/httpdss/
-COMMENT=	Web interface for Collectd	
+COMMENT=	Web interface for Collectd
 LICENSE=	gnu-gpl-v2
 
 NO_CONFIGURE=		yes

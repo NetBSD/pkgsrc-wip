@@ -33,7 +33,7 @@ DASHT_MANPAGES= \
 	dasht-query-line.1 \
 	dasht-server-http.1 \
 	dasht-server.1 \
-	dasht.1 
+	dasht.1
 
 DASHT_SCRIPTS= \
 	dasht \
@@ -46,7 +46,7 @@ DASHT_SCRIPTS= \
 	dasht-query-html \
 	dasht-query-line \
 	dasht-server \
-	dasht-server-http 
+	dasht-server-http
 
 do-install:
 .for _m_ in ${DASHT_MANPAGES}

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.40 2018/03/07 11:57:43 wiz Exp $
 
-# Use the commit id to obtain a snapshot of the form: 
+# Use the commit id to obtain a snapshot of the form:
 # http://cgit.freedesktop.org/xorg/driver/xf86-video-intel/snapshot/xf86-video-intel-78d7a09b0343829c81257024b164b0b3764392ac.tar.xz
 
 # 2019-03-01 sna: Switch back to hwcursor on the next cursor update
@@ -13,7 +13,7 @@ COMMIT_ID=	6afed33b2d673d88674f0c76efe500ae414e8e1b
 # COMMIT_ID=	33ee0c3b21ea279e08d0863fcb2e874f0974b00e
 
 # 2019-01-10 sna: Switch off old outputs on topology changes
-# COMMIT_ID=	c37c7ee0748ba828ec5d2c7304cd2a17af2c8109	
+# COMMIT_ID=	c37c7ee0748ba828ec5d2c7304cd2a17af2c8109
 
 # 2018-05-12 configure: Set DRI1 to autodiscover
 # COMMIT_ID=	359477215092ac1b602ad1e2f17a28963d9224c2
@@ -53,7 +53,7 @@ CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 CONFIGURE_ENV.DragonFly+=	xorg_cv_cc_flag__Wno_maybe_uninitialized=no
 
 # DragonFly version 4.6-RELEASE, maybe other versions prior to 4.7
-# need -D_WITH_GETLINE=1 according to: 
+# need -D_WITH_GETLINE=1 according to:
 # https://github.com/DragonFlyBSD/DPorts/issues/184
 # FreeBSD ports now patches files individually.
 # CFLAGS.FreeBSD+=		-D_WITH_GETLINE=1

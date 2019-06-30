@@ -4,9 +4,9 @@ over IP in three protocols, and can interoperate with almost all
 standards-based telephony equipment using relatively inexpensive
 hardware.
 
-VICIDIAL is a software suite that is designed to interact with 
-the Asterisk Open-Source PBX Phone system to act as a complete 
-inbound/outbound contact center suite with inbound email support 
+VICIDIAL is a software suite that is designed to interact with
+the Asterisk Open-Source PBX Phone system to act as a complete
+inbound/outbound contact center suite with inbound email support
 as well.
 
 This is a modified version of Asterisk 11 for Vicidial.

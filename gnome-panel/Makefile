@@ -26,7 +26,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-ORBit via py-gnome2
 
 
 # Horrible hack because the package uses libgweather wrong
-# error "gweather-timezone.h must not be included individually, 
+# error "gweather-timezone.h must not be included individually,
 # include gweather.h instead"
 CFLAGS+=	-DGWEATHER_COMPILATION
 

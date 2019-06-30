@@ -17,7 +17,7 @@ COMMENT=	Utilities for processing and analyzing 16S rRNA genes
 # Pessimistic assumption.  Test and change if possible.
 MAKE_JOBS_SAFE=	no
 
-#ONLY_FOR_PLATFORM=	
+#ONLY_FOR_PLATFORM=
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++

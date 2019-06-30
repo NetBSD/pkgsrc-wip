@@ -156,7 +156,7 @@ MESON_ARGS+=		-Dipv6=false
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
 MESON_ARGS+=		--buildtype=debug
-# Debug flags -O0 -g3 recommended by: 
+# Debug flags -O0 -g3 recommended by:
 # https://www.x.org/wiki/Development/Documentation/ServerDebugging/
 # CFLAGS+=		-ggdb
 CFLAGS+=		-O0 -g3
@@ -171,15 +171,15 @@ CONFIGURE_ARGS+=	--without-dtrace
 
 .if !empty(PKG_OPTIONS:Mdevd)
 # SUBST_CLASSES+=			devd_config
-# SUBST_STAGE.devd_config=	post-configure	
+# SUBST_STAGE.devd_config=	post-configure
 # SUBST_MESSAGE.devd_config=	Patching config/Makefile for devd
 # SUBST_FILES.devd_config+=	config/Makefile
 # SUBST_SED.devd_config+=		-e 's|config\.c|config.c devd.c|g'
 # SUBST_SED.devd_config+=		-e 's|config\.lo|config.lo devd.lo|g'
 # SUBST_CLASSES+=			devd_dix
 # SUBST_STAGE.devd_dix=		post-configure
-# SUBST_MESSAGE.devd_dix=		Patching include/dix-config.h for devd 
-# SUBST_FILES.devd_dix+=		include/dix-config.h	
+# SUBST_MESSAGE.devd_dix=		Patching include/dix-config.h for devd
+# SUBST_FILES.devd_dix+=		include/dix-config.h
 # SUBST_SED.devd_dix+=		-e 's|/\* \#undef CONFIG_UDEV \*/|\#define CONFIG_DEVD 1 |'
 CPPFLAGS+=	-DCONFIG_DEVD=1
 MESON_ARGS+=	-Ddevd=true
@@ -200,7 +200,7 @@ CPPFLAGS+=	-DREVERT_RANDR_LEASE
 
 SUBST_CLASSES+=		lease
 SUBST_STAGE.lease=	post-configure
-SUBST_MESSAGE.lease=	Removing definition of XF86_LEASE_VERSION	
+SUBST_MESSAGE.lease=	Removing definition of XF86_LEASE_VERSION
 SUBST_FILES.lease+=	hw/xfree86/modes/xf86Crtc.h
 SUBST_SED.lease+=	-e 's|XF86_LEASE_VERSION|REVERT_XF86_LEASE_VERSION|g'
 .endif

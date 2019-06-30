@@ -237,17 +237,17 @@ INSTALLATION_DIRS+=	share/${PKGBASE}/tmp/thumbnails share/${PKGBASE}/vendor
 .include "options.mk"
 
 #do-install:
-#	set -e; cd ${WRKSRC}; 
-		#for i in `find . -path ./doc -prune -o -type f ! -perm 775 -print`; 
-		#do 
-		#	${INSTALL_DATA} $$i 
-				#${DESTDIR}${PREFIX}/share/${PKGBASE}/$$i; 
-		#done; 
-		#for i in `find . -type f -executable -not -name ttf2ufm\\* -print`; 
-		#do 
-		#	${INSTALL_SCRIPT} $$i 
-				#${DESTDIR}${PREFIX}/share/${PKGBASE}/$$i; 
-		#done; 
+#	set -e; cd ${WRKSRC};
+		#for i in `find . -path ./doc -prune -o -type f ! -perm 775 -print`;
+		#do
+		#	${INSTALL_DATA} $$i
+				#${DESTDIR}${PREFIX}/share/${PKGBASE}/$$i;
+		#done;
+		#for i in `find . -type f -executable -not -name ttf2ufm\\* -print`;
+		#do
+		#	${INSTALL_SCRIPT} $$i
+				#${DESTDIR}${PREFIX}/share/${PKGBASE}/$$i;
+		#done;
 		#${INSTALL_DATA} doc/* ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/ruby/gem.mk"

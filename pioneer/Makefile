@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config automake autoconf gmake
 
 CONFIGURE_ENV+=	PIONEER_DATA_DIR=${PREFIX}/share/pioneer/data
-   
+
 BUILDLINK_PKGSRCDIR.assimp=	../../wip/assimp
 
 pre-configure:

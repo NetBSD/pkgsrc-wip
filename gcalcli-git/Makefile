@@ -7,7 +7,7 @@ LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/insanum/gcalcli/
-COMMENT=	Command line interface to Google Calendar 
+COMMENT=	Command line interface to Google Calendar
 
 GIT_REPOSITORIES=	gcalcli
 GIT_REPO.gcalcli=	git://github.com/insanum/gcalcli.git

@@ -1,9 +1,9 @@
-GMetaDOM is a collection of librares, each library providing a DOM 
+GMetaDOM is a collection of librares, each library providing a DOM
 implementation. This is the binding for OCAML.
 
-The basic idea is that, given the availability of DOM implementations 
-for the C programming language (like Gdome2), and given the uniformity 
-of the DOM interfaces, bindings for various programming languages based 
-on the C implementation can be built automatically, providing a small 
-number of hand-coded classes and a set of scripts for the automatic 
+The basic idea is that, given the availability of DOM implementations
+for the C programming language (like Gdome2), and given the uniformity
+of the DOM interfaces, bindings for various programming languages based
+on the C implementation can be built automatically, providing a small
+number of hand-coded classes and a set of scripts for the automatic
 generation of the remaining ones.

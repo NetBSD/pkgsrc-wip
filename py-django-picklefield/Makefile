@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-picklefield/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://github.com/gintas/django-picklefield	
+HOMEPAGE=	https://github.com/gintas/django-picklefield
 COMMENT=	Pickled object field for Django
 LICENSE=	mit
 

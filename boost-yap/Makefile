@@ -19,7 +19,7 @@ USE_TOOLS+=	pax
 # XXX - remove this or add more to do-install and PLIST
 .if !empty(XXX_BUILD_BOOST_YAP)
 USE_LANGUAGES+=	c c++
-USE_CMAKE=	
+USE_CMAKE=
 CMAKE_INSTALL_PREFIX=	${PREFIX}/include/boost/yap
 .include "../../devel/boost-headers/buildlink3.mk"
 .else

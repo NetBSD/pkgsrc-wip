@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simutrans/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.simutrans.com/en/paksets/
-COMMENT=	Game data for Simutrans 
+COMMENT=	Game data for Simutrans
 #LICENSE=	# TODO: (see mk/license.mk)
 
 NO_BUILD=	yes
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 post-extract:
 		${FIND} ${WRKDIR} -type f -exec ${CHMOD} 0644 {} \;
 
-do-install:	
+do-install:
 		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/simtrans
 		${CP} -r ${WRKSRC} ${DESTDIR}${PREFIX}/share/
 

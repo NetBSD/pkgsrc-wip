@@ -20,7 +20,7 @@ Dune Legacy:
 	GERMAN.PAK (for playing in German)
 	FRENCH.PAK (for playing in French)
 
-You should place these files in ${PREFIX}/share/dunelegacy 
+You should place these files in ${PREFIX}/share/dunelegacy
 or ~/.config/dunelegacy/data
 
 ===========================================================================

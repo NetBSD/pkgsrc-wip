@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitsets/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://github.com/xflr6/bitsets	
+HOMEPAGE=	https://github.com/xflr6/bitsets
 COMMENT=	Ordered subsets over a predefined domain
 LICENSE=	mit
 

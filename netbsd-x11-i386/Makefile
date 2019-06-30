@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/usr/X11R7
 # XXX crimes
 NO_BUILD=		yes
 
-do-install:                                                
+do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
 	cd ${WRKSRC} && for dir in lib libexec usr; do		\
 	if ${TEST} -d "$$dir"; then				\
@@ -25,6 +25,6 @@ do-install:
 	fi;							\
 	done
 
-		 	
+
 
 .include "../../mk/bsd.pkg.mk"

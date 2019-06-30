@@ -27,7 +27,7 @@ BINFILES=	CUT/mincut FMATCH/fmatch LINKERN/linkern \
 		TOOLS/killgrun TOOLS/prob2tsp TOOLS/showres TOOLS/tourchk \
 		TOOLS/tourlen TSP/bosstell TSP/concorde TSP/cutserv \
 		TSP/poolcat TSP/probserv TSP/test_tsp VERIFY/verify
-		
+
 INCFILES=	bigguy.h combs.h config.h consec1.h cut.h cuttree.h \
 		delaunay.h edgegen.h fmatch.h heldkarp.h kdtree.h \
 		linkern.h localcut.h lp.h machdefs.h macrorus.h mlinkern.h \
