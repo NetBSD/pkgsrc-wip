@@ -1,2 +1,9 @@
-* resolve patches (see patch files)
+* get patches integrated upstream
+
+* rewrite -ldl patch
+
+* check and perhaps remove -lrt patch
+
+* create a rc.d script
+
 
