@@ -1,0 +1,14 @@
+$NetBSD$
+
+SHA1 (arcan/0.5.5.2.tar.gz) = 16e9f1eeb4b6d4c9266cf56ed149c79afe695422
+RMD160 (arcan/0.5.5.2.tar.gz) = 255986c9d5c19f241b1d056da9f1289286dada2e
+SHA512 (arcan/0.5.5.2.tar.gz) = 482ade8e02cbc31d57dc08120f48ed0eeec830dd7ffb2b6e8cb727083140015762f114f1d7a41b7f7cbbfc959c7145bb2e5642809af6ad606aa3215aa53d5349
+Size (arcan/0.5.5.2.tar.gz) = 10481194 bytes
+SHA1 (patch-src_frameserver_avfeed_CMakeLists.txt) = 40a3213f7b97257f8601c3775084551566faed73
+SHA1 (patch-src_frameserver_terminal_default_CMakeLists.txt) = 96bb15a2e9a66e8d661437d0487824fde07dcd3d
+SHA1 (patch-src_frameserver_terminal_default_tsm_shl-pty.c) = 1dff9cc7d83c0db4772a22d810e98f663961bf9e
+SHA1 (patch-src_platform_cmake_CMakeLists.BSD) = e000c19441ea30627d4a41b4753f2281d834890a
+SHA1 (patch-src_platform_cmake_modules_FindGBMKMS.cmake) = eedb39e5a3ac1120ce5fa1fa6416017c98afd6f2
+SHA1 (patch-src_platform_cmake_modules_FindOpenGL.cmake) = 4863462a8342306e3c4392404f11394b577db178
+SHA1 (patch-src_platform_posix_psep__open.c) = 96d7b761bfb9078013273164acd9debcd9bb9e6b
+SHA1 (patch-src_platform_posix_random.c) = c43219b53d2fabe88dc23bc631a06129231d555c

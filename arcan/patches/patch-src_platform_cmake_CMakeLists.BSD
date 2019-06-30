@@ -1,0 +1,29 @@
+$NetBSD$
+
+Don't require libiconv to be a separate library.
+(Its in libc in netbsd)
+
+--- src/platform/cmake/CMakeLists.BSD.orig	2018-12-10 23:33:36.000000000 +0000
++++ src/platform/cmake/CMakeLists.BSD
+@@ -48,7 +48,7 @@ list(APPEND ARCAN_PLATFORM
+ set(LWA_PLATFORM ${ARCAN_PLATFORM})
+ 
+ # then the variant specific changes
+-if (${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
++if (${CMAKE_SYSTEM_NAME} MATCHES "(OpenBSD|NetBSD)")
+ # force these options here for now
+ 	set(ENABLE_LWA OFF)
+ 
+@@ -100,8 +100,10 @@ add_definitions(
+ 	${BSD_VARIANT_DEFINITIONS}
+ )
+ 
+-find_library(ICONV NAMES iconv REQUIRED)
+-LIST(APPEND ARCAN_LIBRARIES ${ICONV})
++find_library(ICONV NAMES iconv)
++if(ICONV)
++	LIST(APPEND ARCAN_LIBRARIES ${ICONV})
++endif()
+ 
+ set_property(SOURCE platform/posix/fdpassing.c
+ 	APPEND PROPERTY COMPILE_FLAGS -w)
