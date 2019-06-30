@@ -1,0 +1,63 @@
+$NetBSD: patch-config_libnover.in,v 1.2 2018/06/15 20:46:01 tez Exp $
+
+Add --enable-pkgsrc-libtool option
+(was patch-ci)
+
+--- config/libnover.in.orig	2016-02-29 19:50:13.000000000 +0000
++++ config/libnover.in
+@@ -20,8 +20,10 @@ LIBPREFIX=
+ 
+ SHOBJLISTS=$(STOBJLISTS:.ST=.SH)
+ PFOBJLISTS=$(STOBJLISTS:.ST=.PF)
++LAOBJLISTS=$(STOBJLISTS:.ST=.LA)
++LIBTOOL_TAIL=-rpath $(MODULE_INSTALL_DIR) -shared -module -avoid-version
+ 
+-dummy-target-1 $(SUBDIROBJLISTS) $(SUBDIROBJLISTS:.ST=.SH) $(SUBDIROBJLISTS:.ST=.PF): all-recurse
++dummy-target-1 $(SUBDIROBJLISTS) $(SUBDIROBJLISTS:.ST=.SH) $(SUBDIROBJLISTS:.ST=.PF) $(SUBDIROBJLISTS:.ST=.LA): all-recurse
+ 
+ # Gets invoked as $(PARSE_OBJLISTS) list-of-OBJS.*-files
+ PARSE_OBJLISTS= set -x && $(PERL) -p -e 'BEGIN { $$SIG{__WARN__} = sub {die @_} }; $$e=$$ARGV; $$e =~ s/OBJS\...$$//; s/^/ /; s/ $$//; s/ / $$e/g;'
+@@ -83,6 +85,25 @@ libkrb5_$(LIBBASE)$(PFLIBEXT): $(PFOBJLI
+ 	set -x; objlist=`$(PARSE_OBJLISTS) $(PFOBJLISTS)` && $(AR) cq $@ $$objlist
+ 	$(RANLIB) $@
+ 
++lib$(LIBBASE)$(LALIBEXT): ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
++	$(RM) $@
++	$(LN_S) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $@
++
++../lib$(LIBBASE)$(LALIBEXT): ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
++	$(RM) $@
++	$(LN_S) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $@
++
++${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT): $(LAOBJLISTS)
++	$(RM) $@
++	@echo "building $(LIBBASE) libtool archive ($(LIBMAJOR).$(LIBMINOR))"
++	@dirs=`echo $(LAOBJLISTS) | \
++		sed -e 's%/OBJS.LA%%g' -e 's%OBJS.LA%.%'`; \
++		$(LIBTOOL) --mode=link $(CC) -o $@ `for d in $$dirs; do \
++			sed -e '/^$$/d' -e "s%^%$$d/%" -e "s% % $$d/%g" \
++				$$d/OBJS.LA; done` \
++			$(LALIB_EXPFLAGS) \
++			$(LIBTOOL_TAIL)
++
+ # For static builds, we make a symlink in the main library directory,
+ # allowing the plugin library to be a dependency of the core libraries
+ # which use it.
+@@ -101,6 +122,7 @@ all-libs: $(PLUGIN)
+ 
+ clean-libs:
+ 	$(RM) $(LIBBASE)$(DYNOBJEXT)
++	$(LIBTOOL) --mode=uninstall $(RM) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
+ 	$(RM) binutils.versions osf1.exports darwin.exports hpux.exports
+ 
+ clean-liblinks:
+@@ -114,6 +136,9 @@ install-static:
+ install-plugin:
+ 	$(RM) $(DESTDIR)$(MODULE_INSTALL_DIR)/$(LIBBASE)$(DYNOBJEXT)
+ 	$(INSTALL_SHLIB) $(LIBBASE)$(DYNOBJEXT) $(DESTDIR)$(MODULE_INSTALL_DIR)
++install-libtool:
++	$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(MODULE_INSTALL_DIR)/lib$(LIBBASE)$(LALIBEXT)
++	$(LIBTOOL) --mode=install $(INSTALL_SHLIB) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $(DESTDIR)$(MODULE_INSTALL_DIR)/lib$(LIBBASE)$(LALIBEXT)
+ 
+ Makefile: $(top_srcdir)/config/libnover.in
+ $(BUILDTOP)/config.status: $(top_srcdir)/config/shlib.conf

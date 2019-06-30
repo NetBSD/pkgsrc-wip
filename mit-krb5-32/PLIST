@@ -1,0 +1,42 @@
+@comment $NetBSD$
+lib/32/krb5/plugins/kdb/libdb2.la
+lib/32/krb5/plugins/preauth/libotp.la
+lib/32/krb5/plugins/preauth/libpkinit.la
+lib/32/krb5/plugins/tls/libk5tls.la
+lib/32/libcom_err.la
+lib/32/libgssapi_krb5.la
+lib/32/libgssrpc.la
+lib/32/libk5crypto.la
+lib/32/libkadm5clnt.la
+lib/32/libkadm5clnt_mit.la
+lib/32/libkadm5srv.la
+lib/32/libkadm5srv_mit.la
+lib/32/libkdb5.la
+lib/32/libkrad.la
+lib/32/libkrb5.la
+lib/32/libkrb5support.la
+lib/32/libverto.la
+lib/32/pkgconfig/gssrpc.pc
+lib/32/pkgconfig/kadm-client.pc
+lib/32/pkgconfig/kadm-server.pc
+lib/32/pkgconfig/kdb.pc
+lib/32/pkgconfig/krb5-gssapi.pc
+lib/32/pkgconfig/krb5.pc
+lib/32/pkgconfig/mit-krb5-gssapi.pc
+lib/32/pkgconfig/mit-krb5.pc
+@pkgdir share/locale/en_US/LC_MESSAGES
+@pkgdir share/locale/de/LC_MESSAGES
+@pkgdir share/gnats
+@pkgdir share/examples/rc.d
+@pkgdir share/examples/krb5
+@pkgdir share/et
+@pkgdir sbin
+@pkgdir man/man8
+@pkgdir man/man7
+@pkgdir man/man5
+@pkgdir man/man1
+@pkgdir include/krb5
+@pkgdir include/kadm5
+@pkgdir include/gssrpc
+@pkgdir include/gssapi
+@pkgdir bin

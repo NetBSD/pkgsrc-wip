@@ -1,0 +1,14 @@
+$NetBSD: patch-build-tools_krb5-config.in,v 1.1 2018/12/21 15:45:13 adam Exp $
+
+Add --enable-pkgsrc-libtool option
+
+--- build-tools/krb5-config.in.orig	2010-12-12 17:46:49.027864000 -0600
++++ build-tools/krb5-config.in	2010-12-12 17:48:58.611160100 -0600
+@@ -180,6 +180,7 @@
+     # Ugly gross hack for our build tree
+     lib_flags=`echo $CC_LINK | sed -e 's/\$(CC)//' \
+ 	    -e 's/\$(PURE)//' \
++	    -e 's/\$(LIBTOOL) --mode=link//' \
+ 	    -e 's#\$(PROG_RPATH_FLAGS)#'"$PROG_RPATH_FLAGS"'#' \
+ 	    -e 's#\$(PROG_RPATH)#'$libdir'#' \
+ 	    -e 's#\$(PROG_LIBPATH)#'$libdirarg'#' \
