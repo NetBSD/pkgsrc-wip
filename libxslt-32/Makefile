@@ -29,5 +29,5 @@ CPPFLAGS+=	-Dsocklen_t=int
 #BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 
 .include "../../security/libgcrypt/buildlink3.mk"
-.include "../libxml2-32/buildlink3.mk"
+.include "../../wip/libxml2-32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
