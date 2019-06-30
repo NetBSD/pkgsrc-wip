@@ -1,7 +1,9 @@
 @comment $NetBSD$
 bin/sauer_client
+bin/sauer_master
 bin/sauer_server
 libexec/sauer_client
+libexec/sauer_master
 libexec/sauer_server
 share/applications/sauerbraten.desktop
 share/doc/sauerbraten/config.html

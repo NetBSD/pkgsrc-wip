@@ -16,6 +16,7 @@ USE_LANGUAGES=	c c++03
 
 WRKSRC=		${WRKDIR}/sauerbraten
 BUILD_DIRS+=	src
+BUILD_TARGET=	client master server
 
 LDFLAGS.NetBSD+=	-lrt
 
@@ -29,22 +30,19 @@ INSTALLATION_DIRS+=	share/sauerbraten/data
 INSTALLATION_DIRS+=	share/sauerbraten/packages
 
 pre-configure:
+.for prog in client master server
 	${SED}	-e 's,@PREFIX@,${PREFIX},g' \
 		< ${FILESDIR}/sauerbraten.sh.in > \
-		${WRKDIR}/sauer_client
-	${SED}	-e 's,@PREFIX@,${PREFIX},g' \
-		< ${FILESDIR}/sauerbraten.sh.in > \
-		${WRKDIR}/sauer_server
+		${WRKDIR}/sauer_${prog}
+.endfor
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/sauer_client \
+.for prog in client master server
+	${INSTALL_SCRIPT} ${WRKDIR}/sauer_${prog} \
 	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/sauer_server \
-	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/src/sauer_client \
+	${INSTALL_PROGRAM} ${WRKSRC}/src/sauer_${prog} \
 	    ${DESTDIR}${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/src/sauer_server \
-	    ${DESTDIR}${PREFIX}/libexec
+.endfor
 	${INSTALL_DATA} ${FILESDIR}/sauerbraten.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/src/xcode/help/sauer16.png \
