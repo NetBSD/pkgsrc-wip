@@ -4431,7 +4431,6 @@ SUBDIR+=	seqtk
 SUBDIR+=	serendipity
 SUBDIR+=	service
 SUBDIR+=	seturgent
-SUBDIR+=	sfeed
 SUBDIR+=	sfeed-git
 SUBDIR+=	sflphoned
 SUBDIR+=	sfml+

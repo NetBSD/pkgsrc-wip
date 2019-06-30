@@ -1,7 +1,0 @@
-sfeed: Update to 0.9.12
-
-Changes:
-0.9.12
-------
- - Handle entities in attribute values
- - Misc bug fixes and improvements
