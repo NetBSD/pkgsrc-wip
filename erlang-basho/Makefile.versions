@@ -70,11 +70,11 @@ PLIST_SUBST+=		VERSION.${name}=${version}
 .endfor
 
 # Generate PLIST
-.for _pkg_ _version_ in $(_VERSIONS)
+.for _pkg_ _version_ in ${_VERSIONS}
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\/$(_pkg_)-$(_version_)\//) {sub(/\/$(_pkg_)-$(_version_)\//,"/$(_pkg_)-$${VERSION.$(_pkg_)}/", $$0);}}
 # documentation:
-PRINT_PLIST_AWK+=	{gsub(/\/$(_pkg_)-$(_version_)\.pdf/,"/$(_pkg_)-$${VERSION.$(_pkg_)}.pdf", $$0);}
+PRINT_PLIST_AWK+=	{gsub(/\/$(_pkg_)-${_version_}\.pdf/,"/$(_pkg_)-$${VERSION.$(_pkg_)}.pdf", $$0);}
 .endfor
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/${DIST_VERSION_MAJOR}\//) {sub(/\/releases\/${DIST_VERSION_MAJOR}\//,"/releases/$${VERSION}/", $$0);}}
 # documentation:
-PRINT_PLIST_AWK+=	{gsub(/\/otp-system-documentation-$(VERSION.erts)\.pdf/,"/otp-system-documentation-$${VERSION.erts}.pdf", $$0);}
+PRINT_PLIST_AWK+=	{gsub(/\/otp-system-documentation-${VERSION.erts}\.pdf/,"/otp-system-documentation-$${VERSION.erts}.pdf", $$0);}

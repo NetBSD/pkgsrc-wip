@@ -4,7 +4,7 @@
 DISTNAME=	mopac7-1.11
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=mopac7/)
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mopac7/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://sourceforge.net/projects/mopac7/

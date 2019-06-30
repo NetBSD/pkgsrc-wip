@@ -44,14 +44,14 @@ SUBST_STAGE.gksu=	post-configure
 
 SUBST_CLASSES+=		term
 SUBST_FILES.term=	gksu.desktop
-.if $(OPSYS) != "Linux"
+.if ${OPSYS} != "Linux"
 SUBST_SED.term=		-e 's,/usr/bin/x-terminal-emulator,${PREFIX}/bin/gnome-terminal,g'
 .endif
 SUBST_STAGE.term=	post-configure
 
 REPLACE_BASH+=		gksu-migrate-conf.sh
 
-.if $(OPSYS) != "Linux"
+.if ${OPSYS} != "Linux"
 DEPENDS+=		gnome-terminal>=2.32.1:../../x11/gnome-terminal
 .endif
 

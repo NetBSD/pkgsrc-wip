@@ -53,7 +53,7 @@ CONFIGURE_ARGS+= -with-doc no
 .if !empty(PKG_OPTIONS:Mcoqide)
 .include "../../wip/ocaml-lablgtk3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-CONFIGURE_ARGS+=	-coqide $(COQIDE_TYPE)
+CONFIGURE_ARGS+=	-coqide ${COQIDE_TYPE}
 PLIST.coqide=		yes
 .else
 CONFIGURE_ARGS+= -coqide no

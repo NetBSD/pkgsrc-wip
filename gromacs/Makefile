@@ -23,7 +23,7 @@ CHECK_INTERPRETER_SKIP+=	share/gromacs/tutor/gmxdemo/demo
 
 .include "../../mk/bsd.prefs.mk"
 
-.if $(MACHINE_ARCH) == "i386"
+.if ${MACHINE_ARCH} == "i386"
 CFLAGS+=	-msse -msse2
 .endif
 

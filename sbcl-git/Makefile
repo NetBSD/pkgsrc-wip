@@ -74,12 +74,12 @@ post-build:
 
 do-install:
 	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR} INSTALL_ROOT=${PREFIX} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
-	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/asdf-install/installer.lisp.orig
-	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/sb-posix/posix-tests.lisp.orig
-	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/sb-posix/test-output/write-test.txt
-	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/sb-posix/test-output/read-test.txt
-	find $(DESTDIR)$(PREFIX)/lib/sbcl -type d -name CVS -exec rm -rf {} \+
-	find $(DESTDIR)$(PREFIX)/lib/sbcl -type f -name .cvsignore -exec rm -f {} \+
+	rm -f ${DESTDIR}${PREFIX}/lib/sbcl/asdf-install/installer.lisp.orig
+	rm -f ${DESTDIR}${PREFIX}/lib/sbcl/sb-posix/posix-tests.lisp.orig
+	rm -f ${DESTDIR}${PREFIX}/lib/sbcl/sb-posix/test-output/write-test.txt
+	rm -f ${DESTDIR}${PREFIX}/lib/sbcl/sb-posix/test-output/read-test.txt
+	find ${DESTDIR}${PREFIX}/lib/sbcl -type d -name CVS -exec rm -rf {} \+
+	find ${DESTDIR}${PREFIX}/lib/sbcl -type f -name .cvsignore -exec rm -f {} \+
 
 do-test:
 	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh

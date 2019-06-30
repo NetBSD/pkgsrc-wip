@@ -24,7 +24,7 @@ SUBST_SED.prefix=	-e "s|/usr/local|${DESTDIR}${PREFIX}|1"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if $(OPSYS) == "NetBSD"
+.if ${OPSYS} == "NetBSD"
 MAKE_FILE=	makefile.openbsd
 .else
 MAKE_FILE=	makefile.${OPSYS:tl}

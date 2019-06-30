@@ -22,6 +22,6 @@ USE_LANGUAGES=	c c++
 BUILD_DIRS=	talk/base
 
 post-extract:
-	$(CP) $(FILESDIR)/Makefile $(WRKSRC)/talk/base/
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}/talk/base/
 
 .include "../../mk/bsd.pkg.mk"

@@ -25,7 +25,7 @@ BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
 BUILD_MAKE_FLAGS+=	TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 
-CONFIGURE_ENV+=		HOST_AWK=$(TOOLS_PATH.awk)	# force it
+CONFIGURE_ENV+=		HOST_AWK=${TOOLS_PATH.awk}	# force it
 
 .include "options.mk"
 

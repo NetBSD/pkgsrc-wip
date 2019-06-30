@@ -21,7 +21,7 @@ CONF_FILES+=		${EGDIR}/unagi.conf ${PKG_SYSCONFDIR}/xdg/unagi.conf
 
 .include "options.mk"
 
-.if $(OPSYS) != "Linux"
+.if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM=	rm:-ldl
 .endif
 

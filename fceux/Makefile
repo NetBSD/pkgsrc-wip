@@ -24,7 +24,7 @@ SUBST_MESSAGE.pkgmandir=	Fixing PKGMANDIR path.
 SUBST_SED.pkgmandir=		-e "s|share/man|${PKGMANDIR}|g"
 SUBST_STAGE.pkgmandir=		post-patch
 
-.if $(OPSYS) != "Linux"
+.if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM=	rm:-ldl
 .endif
 

@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-libctl=${PREFIX}/share/libctl \
 			--prefix=${MPI_PREFIX:Q} \
 			--mandir=${MPI_PREFIX:Q}/man
 # Prevent picking up wrong sh:
-CONFIGURE_ENV+=		SH_JOB=$(TOOLS_PATH.sh)
+CONFIGURE_ENV+=		SH_JOB=${TOOLS_PATH.sh}
 
 CFLAGS+=	-DH5_USE_16_API=1
 

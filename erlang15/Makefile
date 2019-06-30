@@ -14,7 +14,7 @@ LICENSE=		erlang-public-license
 CONFLICTS+=		erlang-[0-9]*
 
 DIST_SUBDIR=		erlang
-WRKSRC=			$(WRKDIR)/otp_src_${DIST_VERSION_MAJOR}
+WRKSRC=			${WRKDIR}/otp_src_${DIST_VERSION_MAJOR}
 
 MAKE_JOBS_SAFE=		no
 

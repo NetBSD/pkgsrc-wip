@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config
 NO_CONFIGURE=	yes
 MAKE_ENV+=	REAL_VERSION=${VERSION}
-MAKE_ENV+=	MANDIR=$(PREFIX)/${PKGMANDIR}
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"

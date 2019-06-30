@@ -17,7 +17,7 @@ USE_TOOLS+=	gsed
 
 CONFIGURE_ARGS+=	--with-libctl=${BUILDLINK_PREFIX.libctl}/share/libctl
 # Prevent picking up wrong sh:
-CONFIGURE_ENV+=		SH_JOB=$(TOOLS_PATH.sh)
+CONFIGURE_ENV+=		SH_JOB=${TOOLS_PATH.sh}
 CFLAGS+=		-DH5_USE_16_API=1
 
 .include "../../math/blas/buildlink3.mk"

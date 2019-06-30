@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	gmake bash
 
-.if defined(MLTON_BOOT) && $(MLTON_BOOT) == "mlton"
+.if defined(MLTON_BOOT) && ${MLTON_BOOT} == "mlton"
 BUILD_TARGET=	all
 .else # use SML/NJ
 BUILD_DEPENDS+=	smlnj-[0-9]*:../../lang/smlnj
@@ -22,7 +22,7 @@ BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 GIT_REPOSITORIES=	mlton
 GIT_REPO.mlton=		git://github.com/MLton/mlton.git
-WRKSRC=			$(WRKDIR)/mlton
+WRKSRC=			${WRKDIR}/mlton
 
 REPLACE_PERL=	lib/mlrisc-lib/MLRISC/Doc/html/mltex2html \
 		lib/mlrisc-lib/MLRISC/Doc/html/mltex2html.orig \
@@ -38,7 +38,7 @@ REPLACE_BASH=	bin/mlton-script
 SUBST_CLASSES+=			fix-sh
 SUBST_STAGE.fix-sh=		pre-configure
 SUBST_MESSAGE.fix-sh=		Fixing broken scripts
-SUBST_FILES.fix-sh=		$(REPLACE_SH)
+SUBST_FILES.fix-sh=		${REPLACE_SH}
 #SUBST_SED.fix-sh=		-e '1s|^\#![[:space:]]*[^[:space:]]*sh|\#!${SH}|'
 SUBST_SED.fix-sh=		-e '1s|^\#!.*|\#!${SH}|'
 

@@ -24,7 +24,7 @@ CMAKE_ARGS+=	-DX11_ICE_INCLUDE_PATH=${BUILDLINK_PREFIX.libICE}/include/X11/ICE
 
 .include "../../mk/bsd.prefs.mk"
 
-.if $(OPSYS) != "Linux"
+.if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM=	rm:-ldl
 CMAKE_ARGS+=		-Dlibdl=NO
 .else

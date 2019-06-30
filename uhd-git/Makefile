@@ -74,7 +74,7 @@ post-patch:
 	done)
 
 do-configure:
-	(cd $(WRKSRC) ; \
+	(cd ${WRKSRC} ; \
 	cmake \
 	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \

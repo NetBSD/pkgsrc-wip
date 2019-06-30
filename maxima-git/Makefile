@@ -35,7 +35,7 @@ WRKSRC=		${WRKDIR}/maxima
 
 USE_TOOLS+=		aclocal automake autoconf
 
-CONFIGURE_ENV+=		VERSION=$(PKGVERSION_NOREV) ac_cv_prog_git_found=false
+CONFIGURE_ENV+=		VERSION=${PKGVERSION_NOREV} ac_cv_prog_git_found=false
 
 SUBST_CLASSES+=			fix-version
 SUBST_STAGE.fix-version=	post-patch
@@ -44,7 +44,7 @@ SUBST_FILES.fix-version=	configure.in
 SUBST_SED.fix-version=		-e 's:AC_INIT(\[maxima\], *\[.*\]):AC_INIT([maxima],[${PKGVERSION_NOREV}]):'
 
 PYTHON_FOR_BUILD_ONLY=	yes
-ALL_ENV+=		PYTHONBIN=$(PYTHONBIN:Q)
+ALL_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
 
 pre-configure:
 	cd ${WRKSRC}/src && ${CONFIG_SHELL} ../admin/make_share_list

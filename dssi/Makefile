@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	dssi.pc.in
 
 .include "options.mk"
 
-.if $(OPSYS) != "Linux"
+.if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM=	rm:-ldl
 .endif
 
