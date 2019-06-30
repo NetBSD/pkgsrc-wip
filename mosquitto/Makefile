@@ -1,6 +1,7 @@
 # $NetBSD$
 
 VERSION=	1.6.3
+PKGREVISION=	1
 DISTNAME=	mosquitto-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
@@ -20,11 +21,10 @@ USE_TOOLS+=	gmake
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
 
-# \todo Resolve what is an example vs. what might be used.
-CONF_FILES=	${PREFIX}/share/examples/mosquitto/pskfile.example \
-		${PREFIX}/share/examples/mosquitto/pwfile.example \
-		${PREFIX}/share/examples/mosquitto/mosquitto.conf \
-		${PREFIX}/share/examples/mosquitto/aclfile.example
+# \todo The example file is vast and arguably should not be installed.
+# However, we need to set a few things to make automatic startup work.
+CONF_FILES=	${PREFIX}/share/examples/mosquitto/mosquitto.conf \
+		${PKG_SYSCONFDIR}/mosquitto.conf
 
 # Fails; see https://github.com/eclipse/mosquitto/issues/1242
 TEST_TARGET=	test
