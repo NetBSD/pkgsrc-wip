@@ -194,6 +194,7 @@ SUBDIR+=	artemis
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
+SUBDIR+=	assaultcube
 SUBDIR+=	assimp
 SUBDIR+=	asterisk11-vicidial
 SUBDIR+=	astguiclient-vicidial
