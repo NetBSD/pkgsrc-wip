@@ -1835,7 +1835,6 @@ SUBDIR+=	libLLVM38
 SUBDIR+=	libaec
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
-SUBDIR+=	libansilove
 SUBDIR+=	libavc1394
 SUBDIR+=	libbfio
 SUBDIR+=	libbpg
