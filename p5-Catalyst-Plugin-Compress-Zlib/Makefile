@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MS/MSTROUT/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~mstrout/Catalyst-Plugin-Compress-Zlib/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Plugin-Compress-Zlib
 COMMENT=	Gzip compress response if client supports it.
 
 DEPENDS+=	p5-IO-Compress>=0:../../devel/p5-IO-Compress

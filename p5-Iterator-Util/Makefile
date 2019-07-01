@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RO/ROODE/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~roode/Iterator-Util/
+HOMEPAGE=	https://metacpan.org/release/Iterator-Util
 COMMENT=	Essential utilities for the Iterator class
 
 DEPENDS+=	p5-Iterator>0:../../wip/p5-Iterator

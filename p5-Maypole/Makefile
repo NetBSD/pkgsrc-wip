@@ -4,10 +4,10 @@
 DISTNAME=	Maypole-2.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/T/TE/TEEJAY/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TE/TEEJAY/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/T/TE/TEEJAY/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/T/TE/TEEJAY/
 COMMENT=	Maypole - MVC web application framework
 
 DEPENDS+=	p5-CGI-Simple>=0:../../www/p5-CGI-Simple

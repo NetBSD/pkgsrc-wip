@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DANBERR/}
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://search.cpan.org/~danberr/Net-DBus-GLib-0.33.0/
+HOMEPAGE=	https://metacpan.org/release/DANBERR/Net-DBus-GLib-0.33.0
 COMMENT=	Perl extension for the DBus GLib bindings
 #LICENSE=	# TODO: (see mk/license.mk)
 

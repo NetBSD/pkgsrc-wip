@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MasonX/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/~beau/MasonX-Apache2Handler-0.05/
+HOMEPAGE=		https://metacpan.org/release/BEAU/MasonX-Apache2Handler-0.05
 COMMENT=		Perl-based Apache handler for Apache2 with Mason
 
 DEPENDS+=		p5-${APACHE_PKG_PREFIX}-libapreq2>=2.4:../../www/p5-libapreq2

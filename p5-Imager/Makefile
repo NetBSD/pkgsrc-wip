@@ -6,7 +6,7 @@ CATEGORIES=		graphics perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Imager/}
 
 MAINTAINER=		kuli0020@umn.edu
-HOMEPAGE=		http://search.cpan.org/~tonyc/Imager/
+HOMEPAGE=		https://metacpan.org/release/Imager
 COMMENT=		Perl module for manipulating gray, color, and RGBA format images
 LICENSE=		${PERL5_LICENSE}
 

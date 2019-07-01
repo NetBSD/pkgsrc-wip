@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~timpotter/Net-PcapUtils-0.01/
+HOMEPAGE=	https://metacpan.org/release/TIMPOTTER/Net-PcapUtils-0.01
 COMMENT=	Utility routines for Net::Pcap module
 
 DEPENDS+=	p5-Net-Pcap>=0.3:../../net/p5-Net-Pcap

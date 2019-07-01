@@ -6,7 +6,7 @@ CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SC/SCRESTO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~scresto/Sys-MemInfo/
+HOMEPAGE=	https://metacpan.org/release/Sys-MemInfo
 COMMENT=	Perl 5 module for getting memory information
 LICENSE=	${PERL5_LICENSE}
 

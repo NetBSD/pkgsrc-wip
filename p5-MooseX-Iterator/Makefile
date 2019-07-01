@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RL/RLB/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~rlb/MooseX-Iterator/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Iterator
 COMMENT=	Iterate over collections
 
 DEPENDS+=	p5-Test-Simple>0:../../devel/p5-Test-Simple

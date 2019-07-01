@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MA/MARKSTOS/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MA/MARKSTOS/
 COMMENT=	Define a standard configuration API for CGI::Application
 
 

@@ -4,10 +4,10 @@
 DISTNAME=	Class-DBI-Loader-Relationship-1.2
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SI/SIMON/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SI/SIMON/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/S/SI/SIMON/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/S/SI/SIMON/
 COMMENT=	Easier relationship specification in CDBI::L
 
 DEPENDS+=	p5-Class-DBI-Loader>=0:../../wip/p5-Class-DBI-Loader

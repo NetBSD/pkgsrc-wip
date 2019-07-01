@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/P/PU/PURDY/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/P/PU/PURDY/
 COMMENT=	CGI::Application Plugin for streaming files
 
 DEPENDS+=	p5-CGI-Application-[0-9]*:../../www/p5-CGI-Application

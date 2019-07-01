@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/G/GR/GRODITI/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~groditi/Catalyst-Component-InstancePerContext/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Component-InstancePerContext
 COMMENT=	Return a new instance a component on each request
 LICENSE=	${PERL5_LICENSE}
 

@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SC/SCHWIGON/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~schwigon/Data-DPath/
+HOMEPAGE=	https://metacpan.org/release/Data-DPath
 COMMENT=	DPath is not XPath!
 
 DEPENDS+=	p5-Scalar-List-Utils>0:../../devel/p5-Scalar-List-Utils

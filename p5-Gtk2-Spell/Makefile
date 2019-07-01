@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TS/TSCH/}
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://search.cpan.org/~tsch/Gtk2-Spell/
+HOMEPAGE=	https://metacpan.org/release/Gtk2-Spell
 COMMENT=	Bindings for GtkSpell with Gtk2
 LICENSE=	gnu-lgpl-v2.1
 

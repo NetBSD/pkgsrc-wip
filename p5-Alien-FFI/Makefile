@@ -6,7 +6,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/P/PL/PLICEASE/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~plicease/Alien-Build/
+HOMEPAGE=	https://metacpan.org/release/Alien-Build
 COMMENT=	Build and make available libffi
 LICENSE=	${PERL5_LICENSE}
 

@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MARKSTOS/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/~markstos/CGI-Application-Plugin-FillInForm/
+HOMEPAGE=	https://metacpan.org/release/CGI-Application-Plugin-FillInForm
 COMMENT=	Integrate with HTML::FillInForm
 
 # TODO: Look for the dependencies in Build.PL.

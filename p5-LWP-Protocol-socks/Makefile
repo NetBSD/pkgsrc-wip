@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~scr/LWP-Protocol-socks-1.5/lib/LWP/Protocol/socks4.pm
+HOMEPAGE=	https://metacpan.org/pod/release/SCR/LWP-Protocol-socks-1.5/lib/LWP/Protocol/socks4.pm
 COMMENT=	Adds support for SOCKS to p5-libwww
 LICENSE=	${PERL5_LICENSE}
 

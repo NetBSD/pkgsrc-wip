@@ -6,7 +6,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/T/TE/TEDDY/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~teddy/Catalyst-Helper-Model-Email/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Helper-Model-Email
 COMMENT=	Helper for Mail::Builder::Simple
 LICENSE=	${PERL5_LICENSE}
 

@@ -4,10 +4,10 @@
 DISTNAME=	CGI-Untaint-email-0.03
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MIYAGAWA/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MI/MIYAGAWA/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/
 COMMENT=	Validate an email address
 
 DEPENDS+=	p5-CGI-Untaint>=0.07:../../wip/p5-CGI-Untaint

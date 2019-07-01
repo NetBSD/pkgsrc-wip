@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/I/IM/IMALPASS/}
 
 MAINTAINER=		jfranz@bsdprojects.net
-HOMEPAGE=		http://search.cpan.org/CPAN/authors/id/I/IM/IMALPASS/
+HOMEPAGE=		https://cpan.metacpan.org/authors/id/I/IM/IMALPASS/
 COMMENT=		Information from the CIA World Factbook
 
 DEPENDS+=		p5-MLDBM>=2.01:../../databases/p5-MLDBM

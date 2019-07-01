@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MS/MSTRAT/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~mstrat/Catalyst-View-XML-Feed/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-View-XML-Feed
 COMMENT=	Catalyst view for RSS, Atom, or other XML feeds
 LICENSE=	${PERL5_LICENSE}
 

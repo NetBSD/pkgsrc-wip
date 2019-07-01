@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/J/JJ/JJNAPIORK/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~jjnapiork/MooseX-Role-BuildInstanceOf/
+HOMEPAGE=	https://metacpan.org/release/MooseX-Role-BuildInstanceOf
 COMMENT=	Less Boilerplate when you need lots of Instances
 
 DEPENDS+=	p5-Moose>0:../../devel/p5-Moose

@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AB/ABRAXXA/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~abraxxa/Catalyst-Controller-DBIC-API/
+HOMEPAGE=	https://metacpan.org/release/Catalyst-Controller-DBIC-API
 COMMENT=	Provides a REST interface to DBIx::Class
 LICENSE=	${PERL5_LICENSE}
 

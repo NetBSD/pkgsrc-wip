@@ -3,10 +3,10 @@
 DISTNAME=	Test-Strict-0.47
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MANWAR/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MA/MANWAR/
 
 MAINTAINER=	pkgsrc-users@pkgsrc.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MA/MANWAR/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MA/MANWAR/
 COMMENT=	Check syntax, presence of use strict; and test coverage
 LICENSE=	${PERL5_LICENSE}
 

@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JA/JALDHAR/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/~jaldhar/Module-Starter-Plugin-CGIApp/
+HOMEPAGE=	https://metacpan.org/release/Module-Starter-Plugin-CGIApp
 COMMENT=	Template based module starter for CGI apps
 LICENSE=	${PERL5_LICENSE}
 

@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/H/HA/HARTZELL/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/H/HA/HARTZELL/
 COMMENT=	Test::WWW::Mechanize for CGI::Application
 
 DEPENDS+=	p5-CGI-Application>=0:../../www/p5-CGI-Application

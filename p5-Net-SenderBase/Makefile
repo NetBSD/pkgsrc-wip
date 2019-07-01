@@ -7,7 +7,7 @@ CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSERGEANT/}
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://search.cpan.org/~msergeant/Net-SenderBase-1.01/lib/Net/SenderBase.pm
+HOMEPAGE=	https://metacpan.org/pod/release/MSERGEANT/Net-SenderBase-1.01/lib/Net/SenderBase.pm
 COMMENT=	Query the senderbase.org service
 
 .include "../../lang/perl5/license.mk"

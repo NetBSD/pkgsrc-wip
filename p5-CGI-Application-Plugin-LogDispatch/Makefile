@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/C/CE/CEESHEK/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/C/CE/CEESHEK/
 COMMENT=	Add Log::Dispatch support to CGI::Application
 
 # TODO: Look for the dependencies in Build.PL.

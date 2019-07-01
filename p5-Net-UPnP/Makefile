@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SK/SKONNO/}
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://search.cpan.org/~skonno/Net-UPnP/
+HOMEPAGE=	https://metacpan.org/release/Net-UPnP
 COMMENT=	Perl extension for UPnP
 LICENSE=	modified-bsd
 

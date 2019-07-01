@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~oleg/IO-Socket-Socks-0.51/lib/IO/Socket/Socks.pm
+HOMEPAGE=	https://metacpan.org/pod/release/OLEG/IO-Socket-Socks-0.51/lib/IO/Socket/Socks.pm
 COMMENT=	Create SOCKS v4/v5 client or server
 LICENSE=	${PERL5_LICENSE}
 

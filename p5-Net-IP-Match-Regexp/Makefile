@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CD/CDOLAN/}
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/C/CD/CDOLAN/
+HOMEPAGE=	https://cpan.metacpan.org/authors/id/C/CD/CDOLAN/
 COMMENT=	Efficiently match IP addresses against ranges
 
 .include "../../lang/perl5/license.mk"
