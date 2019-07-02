@@ -43,7 +43,13 @@ FILES_SUBST+=	MOSQUITTO_USER=${MOSQUITTO_USER}
 FILES_SUBST+=	MOSQUITTO_GROUP=${MOSQUITTO_GROUP}
 FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-# Fails; see https://github.com/eclipse/mosquitto/issues/1242
+# mosquitto's build system is very troubled, and the tests do not
+# currently work.
+#   https://github.com/eclipse/mosquitto/issues/1242
+#   https://github.com/eclipse/mosquitto/issues/1330
+#
+# \todo invoke "gmake test" in tests/ subdir instead of at top level
+# \todo pass in CPPFLAGS/LDFLAGS to test invocation
 TEST_TARGET=	test
 .include "../../devel/cunit/buildlink3.mk"
 

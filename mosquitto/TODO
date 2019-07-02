@@ -4,6 +4,8 @@
 
 * check and perhaps remove -lrt patch
 
-* create a rc.d script
+* adjust config file to have unmodified preamble, section to modify
+  defaults to fit traditional UNIX norms, and then a section for user
+  config
 
-
+* run the tests on make test
