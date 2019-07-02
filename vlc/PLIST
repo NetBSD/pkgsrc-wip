@@ -308,6 +308,7 @@ lib/vlc/plugins/demux/libmjpeg_plugin.la
 lib/vlc/plugins/demux/libmkv_plugin.la
 lib/vlc/plugins/demux/libmod_plugin.la
 lib/vlc/plugins/demux/libmp4_plugin.la
+lib/vlc/plugins/demux/libmpc_plugin.la
 lib/vlc/plugins/demux/libmpgv_plugin.la
 lib/vlc/plugins/demux/libnoseek_plugin.la
 lib/vlc/plugins/demux/libnsc_plugin.la
@@ -492,8 +493,8 @@ lib/vlc/plugins/video_filter/libwave_plugin.la
 ${PLIST.egl}lib/vlc/plugins/video_output/libegl_x11_plugin.la
 lib/vlc/plugins/video_output/libflaschen_plugin.la
 lib/vlc/plugins/video_output/libgl_plugin.la
-${PLIST.qt5}${PLIST.vaapi}lib/vlc/plugins/video_output/libglconv_vaapi_drm_plugin.la
-${PLIST.qt5}${PLIST.vaapi}lib/vlc/plugins/video_output/libglconv_vaapi_x11_plugin.la
+${PLIST.egl}${PLIST.qt5}${PLIST.vaapi}lib/vlc/plugins/video_output/libglconv_vaapi_drm_plugin.la
+${PLIST.egl}${PLIST.qt5}${PLIST.vaapi}lib/vlc/plugins/video_output/libglconv_vaapi_x11_plugin.la
 ${PLIST.qt5}lib/vlc/plugins/video_output/libglconv_vdpau_plugin.la
 ${PLIST.qt5}lib/vlc/plugins/video_output/libglx_plugin.la
 lib/vlc/plugins/video_output/libvdummy_plugin.la

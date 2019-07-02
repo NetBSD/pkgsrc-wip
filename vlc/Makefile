@@ -54,7 +54,6 @@ CONFIGURE_ARGS+=	--disable-live555
 CONFIGURE_ARGS+=	--disable-mfx
 CONFIGURE_ARGS+=	--disable-microdns
 CONFIGURE_ARGS+=	--disable-mmal
-CONFIGURE_ARGS+=	--disable-musepack
 CONFIGURE_ARGS+=	--disable-ncurses
 CONFIGURE_ARGS+=	--disable-nfs
 CONFIGURE_ARGS+=	--disable-notify
@@ -176,6 +175,7 @@ pre-configure:
 .include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
+.include "../../audio/musepack/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
