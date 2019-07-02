@@ -2,6 +2,7 @@
 
 DISTNAME=	navit-gps
 PKGNAME=	navit-0
+PKGREVISION=	1
 CATEGORIES=	geography
 
 MAINTAINER=	fekete.zoltan@minux.hu
