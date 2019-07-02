@@ -2,8 +2,8 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
-PKG_SUPPORTED_OPTIONS+=		vlc-skins x11
-PKG_SUGGESTED_OPTIONS=		dbus x11
+PKG_SUPPORTED_OPTIONS+=		vlc-skins qt5
+PKG_SUGGESTED_OPTIONS=		dbus qt5
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/bsd.prefs.mk"
@@ -99,7 +99,7 @@ CONFIGURE_ARGS+=	--disable-skins2
 ## X11 dependency and QT5 frontend
 
 PLIST_VARS+=		egl
-.if !empty(PKG_OPTIONS:Mx11)
+.if !empty(PKG_OPTIONS:Mqt5)
 DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
@@ -117,7 +117,7 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-qt \
 			--with-x
-PLIST.x11=		yes
+PLIST.qt5=		yes
 .  if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
 PLIST.egl=		yes
 .  endif
