@@ -2,7 +2,7 @@ $NetBSD$
 
 Adapt install target for pkgsrc.
 
---- kodev/Makefile.orig	2019-01-21 09:58:12.000000000 +0000
+--- kodev/Makefile.orig	2019-06-03 13:29:24.000000000 +0000
 +++ kodev/Makefile
 @@ -4,6 +4,7 @@ CC?=cc
  PREFIX?=/usr/local
@@ -12,7 +12,16 @@ Adapt install target for pkgsrc.
  INSTALL_DIR=$(PREFIX)/bin
  
  S_SRC=	../src/cli.c
-@@ -37,8 +38,8 @@ $(OBJDIR):
+@@ -16,8 +17,6 @@ LDFLAGS=-lcrypto
+ 
+ ifneq ("$(NOOPT)", "")
+ 	CFLAGS+=-O0
+-else
+-	CFLAGS+=-O2
+ endif
+ 
+ OSNAME=$(shell uname -s | sed -e 's/[-_].*//g' | tr A-Z a-z)
+@@ -37,8 +36,8 @@ $(OBJDIR):
  	@mkdir -p $(OBJDIR)
  
  install: $(KODEV)

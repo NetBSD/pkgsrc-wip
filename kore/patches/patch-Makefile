@@ -2,7 +2,7 @@ $NetBSD$
 
 Adapt install target for pkgsrc.
 
---- Makefile.orig	2019-01-21 09:58:12.000000000 +0000
+--- Makefile.orig	2019-06-03 13:29:24.000000000 +0000
 +++ Makefile
 @@ -1,13 +1,14 @@
  # Kore Makefile
@@ -20,7 +20,16 @@ Adapt install target for pkgsrc.
  SHARE_DIR=$(PREFIX)/share/kore
  INCLUDE_DIR=$(PREFIX)/include/kore
  
-@@ -161,14 +162,14 @@ $(OBJDIR):
+@@ -46,8 +47,6 @@ endif
+ 
+ ifneq ("$(NOOPT)", "")
+ 	CFLAGS+=-O0
+-else
+-	CFLAGS+=-O2
+ endif
+ 
+ ifneq ("$(NOSENDFILE)", "")
+@@ -176,14 +175,14 @@ $(OBJDIR):
  	@mkdir -p $(OBJDIR)
  
  install:
