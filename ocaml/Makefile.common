@@ -2,8 +2,8 @@
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
-DISTNAME=	ocaml-4.08.0+beta3
-PKGNAME=	ocaml-4.08.0beta3
+DISTNAME=	ocaml-4.08.0
+PKGNAME=	ocaml-4.08.0
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.08/
 #EXTRACT_SUFX=	.tar.bz2
