@@ -3466,7 +3466,6 @@ SUBDIR+=	py-gobject3-common
 SUBDIR+=	py-gogo
 SUBDIR+=	py-golangenv
 SUBDIR+=	py-goless
-SUBDIR+=	py-google-auth
 SUBDIR+=	py-goreutilities
 SUBDIR+=	py-gorm
 SUBDIR+=	py-gosam

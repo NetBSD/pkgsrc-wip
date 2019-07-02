@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.24.1:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-websocket-client>=0.55.0:../../www/py-websocket-client
 DEPENDS+=	${PYPKGPREFIX}-adal>=1.2.1:../../wip/py-adal
-DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.6.3:../../wip/py-google-auth
+DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.6.3:../../security/py-google-auth
 
 USE_LANGUAGES=	# none
 
