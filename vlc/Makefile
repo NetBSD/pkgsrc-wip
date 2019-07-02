@@ -82,7 +82,7 @@ CONFIGURE_ARGS+=	--disable-x265
 CONFIGURE_ARGS+=	--disable-zvbi
 
 # which platforms support OSSv4?
-.if ${MACHINE_PLATFORM:MNetBSD-[789].*}
+.if ${OPSYS} == "NetBSD"
 PLIST.oss=		yes
 .include "../../mk/oss.buildlink3.mk"
 .else
