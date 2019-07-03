@@ -4985,6 +4985,7 @@ SUBDIR+=	xmail
 SUBDIR+=	xmakemol
 SUBDIR+=	xmds
 SUBDIR+=	xmim
+SUBDIR+=	xmix
 SUBDIR+=	xml-light
 SUBDIR+=	xmlformat-docs
 SUBDIR+=	xmlformat-perl

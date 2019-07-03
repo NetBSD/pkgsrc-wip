@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/xmix
+lib/X11/app-defaults/XMix
+${IMAKE_MAN_DIR}/xmix.1
