@@ -4,7 +4,7 @@ DISTNAME=	Image_GraphViz-1.3.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pear.php.net/package/Image_Graphviz/
+HOMEPAGE=	https://pear.php.net/package/Image_Graphviz/
 COMMENT=	Interface to AT&T\'s GraphViz tools
 
 DEPENDS+=	graphviz>=2:../../graphics/graphviz
