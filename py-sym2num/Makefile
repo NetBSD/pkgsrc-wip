@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	https://files.pythonhosted.org/packages/15/f2/010a380ef983b41f363324f2d17d9deed7dc957eff2dd19b6e22279c56cd/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/cea-ufmg/sym2num
+HOMEPAGE=	https://github.com/cea-ufmg/sym2num
 COMMENT=	Sympy to numpy code generator
 LICENSE=	mit
 

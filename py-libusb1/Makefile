@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libusb1/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/vpelletier/python-libusb1
+HOMEPAGE=	https://github.com/vpelletier/python-libusb1
 COMMENT=	Pure-Python wrapper for libusb-1.0
 LICENSE=	gnu-lgpl-v2
 

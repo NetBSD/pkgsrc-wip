@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Migrate/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	http://github.com/miguelgrinberg/flask-migrate/
+HOMEPAGE=	https://github.com/miguelgrinberg/flask-migrate
 COMMENT=	SQLAlchemy database migrations for Flask applications
 LICENSE=	mit
 

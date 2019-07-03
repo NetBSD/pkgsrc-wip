@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-decouple/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	http://github.com/henriquebastos/python-decouple/
+HOMEPAGE=	https://github.com/henriquebastos/python-decouple/
 COMMENT=	Strict separation of settings from code
 LICENSE=	mit
 

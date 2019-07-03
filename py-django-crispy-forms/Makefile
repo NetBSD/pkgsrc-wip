@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-crispy-forms/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	http://github.com/maraujop/django-crispy-forms
+HOMEPAGE=	https://github.com/maraujop/django-crispy-forms
 COMMENT=	Best way to have Django DRY forms
 LICENSE=	mit
 

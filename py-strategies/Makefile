@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	https://files.pythonhosted.org/packages/a1/49/67ce5aeaa43fc498951befd4aaf55968ba178c21fee2b68a15408d9b6c79/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/logpy/strategies
+HOMEPAGE=	https://github.com/logpy/strategies
 COMMENT=	Python library for control flow programming.
 LICENSE=	modified-bsd
 
