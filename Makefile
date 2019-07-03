@@ -2431,6 +2431,7 @@ SUBDIR+=	nuppelvideo
 SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
 SUBDIR+=	nvidia-freebsd
+SUBDIR+=	nxengine-evo
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nyh-hoc
 SUBDIR+=	nzbget
