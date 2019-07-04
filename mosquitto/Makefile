@@ -1,7 +1,7 @@
 # $NetBSD$
 
 VERSION=	1.6.3
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	mosquitto-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://mosquitto.org/files/source/
@@ -33,10 +33,10 @@ CONF_FILES=	${PREFIX}/share/examples/mosquitto/mosquitto.conf \
 		${PKG_SYSCONFDIR}/mosquitto.conf
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
+SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Substituting paths
 SUBST_FILES.paths=	mosquitto.conf
-SUBST_SED.paths=	-e 's,@VAR_RUN@,/var/run,g'
+SUBST_SED.paths=	-e "s,@SSLCERTS@,${SSLCERTS},g"
 
 RCD_SCRIPTS=	mosquitto
 FILES_SUBST+=	MOSQUITTO_USER=${MOSQUITTO_USER}
