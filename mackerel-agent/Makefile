@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mackerel-agent-0.59.2
+DISTNAME=	mackerel-agent-0.60.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 PKGREVISION=	7
 CATEGORIES=	net
@@ -34,10 +34,10 @@ MAKE_DIRS_PERMS=	${MACKEREL_ROOTDIR} ${MACKEREL_USER} ${MACKEREL_GROUP} 0755
 RCD_SCRIPTS+=		mackerelagent
 
 do-build:
-	cd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH:Q}:${GOPATH}/bin ${MAKE_PROGRAM} build
+	cd ${WRKSRC} && ${MAKE_PROGRAM} build
 
 do-test:
-	cd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH:Q}:${GOPATH}/bin ${MAKE_PROGRAM} test
+	cd ${WRKSRC} && ${MAKE_PROGRAM} test
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/mackerel-agent \
