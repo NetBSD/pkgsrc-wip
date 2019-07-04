@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (openclonk-8.0-src.tar.bz2) = 48eab625e24e20649766390f325e3724ba33366c
-RMD160 (openclonk-8.0-src.tar.bz2) = 0d42c0f8216685399a7b60a8d91a36f8143a1e7a
-SHA512 (openclonk-8.0-src.tar.bz2) = 0aa094f5e07a9f831f8be30b348bf5cbb48d49067dc01a502062c5a1773b2237e251d3fac33e0fb81a2e55da4dd6de6b92d9696eb8003ad4a711380c44818b04
-Size (openclonk-8.0-src.tar.bz2) = 121422616 bytes
+SHA1 (openclonk-8.1-src.tar.bz2) = cad119b97ae4f1da772ef180c3c67741b812e466
+RMD160 (openclonk-8.1-src.tar.bz2) = 65ae54147aa12d50972cf3bf9ef454338063e6d6
+SHA512 (openclonk-8.1-src.tar.bz2) = b52a2fba0906cc80fffe2ce308bb4631d4e2d4ada6b8442856deb5e729d37d5c473c3c1a50765eb0bd978d9e3c874d83e0d60f67f44d9535a3ac432029849f6c
+Size (openclonk-8.1-src.tar.bz2) = 120149164 bytes
