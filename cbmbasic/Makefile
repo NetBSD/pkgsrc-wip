@@ -10,12 +10,6 @@ HOMEPAGE=	https://github.com/mist64/cbmbasic/
 COMMENT=	Portable implementation of Commodore BASIC
 LICENSE=	2-clause-bsd
 
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-configure
-SUBST_MESSAGE.makefile=	Adjust Makefile
-SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e 's|-O3||g'
-
 INSTALLATION_DIRS+=	bin
 
 do-install:
