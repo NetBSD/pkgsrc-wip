@@ -1,0 +1,10 @@
+Devd is a local webserver for developers.
+
+Features:
+ * Cross-platform and self-contained
+ * Designed for the terminal
+ * Convenient
+ * Livereload
+ * Reverse proxy + static file server + flexible routing
+ * Light-weight virtual hosting
+ * Latency and bandwidth simulation

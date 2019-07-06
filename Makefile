@@ -589,6 +589,7 @@ SUBDIR+=	desktop-data-model
 SUBDIR+=	desmume
 SUBDIR+=	despotify-svn
 SUBDIR+=	detachtty
+SUBDIR+=	devd
 SUBDIR+=	deviceatlas-enterprise-c
 SUBDIR+=	devkitARM-buildrules
 SUBDIR+=	devkitARM-newlib
