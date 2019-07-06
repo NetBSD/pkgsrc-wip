@@ -4718,6 +4718,7 @@ SUBDIR+=	tmva
 SUBDIR+=	tmw
 SUBDIR+=	tnt
 SUBDIR+=	todotxt-git
+SUBDIR+=	tolua++
 SUBDIR+=	tome
 SUBDIR+=	tome2
 SUBDIR+=	toot
