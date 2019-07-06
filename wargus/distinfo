@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (wargus-2.4.2.tar.gz) = 3c7829f7708fa58b4111627a89c72d6fda73d8bd
+RMD160 (wargus-2.4.2.tar.gz) = 9a36311df9353acdd30772d4b528257583debd85
+SHA512 (wargus-2.4.2.tar.gz) = 7fbd1e983baa6081d2aea06a1f83a87e1efc008915c789406b7ef1e8e0d0086e0e5cc0d98ad1d6fcb222a2feb277d0da090ff5fb3c192da3d3d5bd5c1b87889d
+Size (wargus-2.4.2.tar.gz) = 46013993 bytes
+SHA1 (patch-rip_music_unix.cpp) = ff44c21c2af780dbf3822d5632f7dc16c552b77c
