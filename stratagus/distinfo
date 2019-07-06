@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (stratagus-2.4.2.tar.gz) = 83170db200f0f7fe293a48ac90e9645f6605e6cc
+RMD160 (stratagus-2.4.2.tar.gz) = a83ab6a87e98fa10cdb2f4d938a7010042ba6fb7
+SHA512 (stratagus-2.4.2.tar.gz) = 4539295f7575883ae6fe7f1ae48aedefcf08ce55bffeb6f1e9275ed0138c499f8b838904002f873065d8d441932f5df4f223d34144669c461b523ce7a28b0bc9
+Size (stratagus-2.4.2.tar.gz) = 1114717 bytes
+SHA1 (patch-CMakeLists.txt) = 8cac871f9fa73f0fc11aa81a8699f435f2081dc7
+SHA1 (patch-src_ui_interface.cpp) = 46451e5e21d826793849db852f15d0ab849f65c0
+SHA1 (patch-src_video_graphic.cpp) = 73ce87e430c9752a02558c08366f5c86c49e69ba
+SHA1 (patch-src_video_sdl.cpp) = c6b77dca09b0bbeee38eb11fdbaa511e512ac56b
+SHA1 (patch-src_video_video.cpp) = aa9952143dd25bc877c0fb6bbc8f9b4b64aab48a
