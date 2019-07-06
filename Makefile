@@ -2233,6 +2233,7 @@ SUBDIR+=	modglue
 SUBDIR+=	modplugplay
 SUBDIR+=	modular-xorg-server-dfbsd
 SUBDIR+=	modular-xorg-server-dfbsd-meson
+SUBDIR+=	modd
 SUBDIR+=	moe
 SUBDIR+=	mona
 SUBDIR+=	monajat
