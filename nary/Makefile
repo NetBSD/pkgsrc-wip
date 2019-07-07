@@ -138,6 +138,8 @@ CARGO_CRATE_DEPENDS+=	xattr-0.2.2
 
 INSTALLATION_DIRS=	bin
 
+MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
 
@@ -146,4 +148,5 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -500,4 +500,6 @@ SHA1 (xattr-0.2.2.crate) = cde9102482a556b8c430631cc051a98afad04ded
 RMD160 (xattr-0.2.2.crate) = 6d3668a1b5818aa07c3d40d4b6500abd6be89760
 SHA512 (xattr-0.2.2.crate) = a89d34313c35ab02d6ea25675c99f9c9650dee40a76223d62941edda43b3d2db83ed223bada129625b3cf8487c293646ce9980afc6dba8888fa078d5aa035cab
 Size (xattr-0.2.2.crate) = 11750 bytes
-SHA1 (patch-netbsd) = e8b278cfea85480cc107d4037ee351430554f54e
+SHA1 (patch-vendor_termios_src_lib.rs) = e97ac198e0a9e92d4128fcc1a87ffd66ec282e03
+SHA1 (patch-vendor_termios_src_os_mod.rs) = d0714ceb7b507035374f18a5c741a46d3c3e6181
+SHA1 (patch-vendor_termios_src_os_netbsd.rs) = 068343bce516bf63abb3f35ddd7f84f8255f2340
