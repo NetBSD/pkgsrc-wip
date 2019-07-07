@@ -8,7 +8,7 @@ MASTER_SITES=	https://files.pythonhosted.org/packages/25/63/db25e62979c2a716a749
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.eclipse.org/paho/
 COMMENT=	MQTT version 3.1.1 client class
-LICENSE=	eclipse-license
+LICENSE=	epl-v1.0
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.6.6:../../devel/py-lama
