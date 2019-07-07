@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../wip/stormlib/buildlink3.mk"
 .include "../../wip/stratagus/buildlink3.mk"
 .include "../../wip/tolua++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
