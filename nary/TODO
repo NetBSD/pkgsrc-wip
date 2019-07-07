@@ -1,0 +1,3 @@
+* Find a work-around for this blocker or wait for termios reaction,
+  which however will require patching Cargo checksums then.
+  - https://github.com/dcuddeback/termios-rs/pull/22
