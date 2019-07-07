@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/storm_test
+include/StormLib.h
+include/StormPort.h
+lib/libstorm.a

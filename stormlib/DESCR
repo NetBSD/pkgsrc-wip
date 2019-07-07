@@ -1,0 +1,3 @@
+The StormLib library is a pack of modules, written in C++, which are able to
+read and also to write files from/to MPQ archives, Blizzard's archive format
+for games such as Diablo, Warcraft and Starcraft.

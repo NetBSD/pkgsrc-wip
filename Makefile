@@ -4562,6 +4562,7 @@ SUBDIR+=	stksolver
 SUBDIR+=	stmd-git
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
+SUBDIR+=	stormlib
 SUBDIR+=	stress
 SUBDIR+=	stress-ng
 SUBDIR+=	strongswan

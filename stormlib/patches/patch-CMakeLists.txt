@@ -1,0 +1,17 @@
+# $NetBSD$
+
+Enable NetBSD support.
+
+--- CMakeLists.txt.orig	2019-07-06 17:17:05.108805505 -0700
++++ CMakeLists.txt	2019-07-06 17:20:01.408439446 -0700
+@@ -293,8 +293,8 @@
+     endif()
+ endif()
+ 
+-if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD)
+-    message(STATUS "Using FreeBSD port")
++if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD OR ${CMAKE_SYSTEM_NAME} STREQUAL NetBSD)
++    message(STATUS "Using ${CMAKE_SYSTEM_NAME} port")
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DO_LARGEFILE=0 -Dstat64=stat -Dlstat64=lstat -Dlseek64=lseek -Doff64_t=off_t -Dfstat64=fstat -Dftruncate64=ftruncate")
+ endif()
+ 
