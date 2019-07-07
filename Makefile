@@ -2356,7 +2356,6 @@ SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncp
 SUBDIR+=	ncrack
-SUBDIR+=	neatvi
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	necpp-git
