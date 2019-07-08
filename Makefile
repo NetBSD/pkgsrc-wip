@@ -4355,6 +4355,7 @@ SUBDIR+=	ruby-multi_xml
 SUBDIR+=	ruby-neovim
 SUBDIR+=	ruby-net-http-pipeline
 SUBDIR+=	ruby-passenger
+SUBDIR+=	ruby-pusher-client
 SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-redmine
