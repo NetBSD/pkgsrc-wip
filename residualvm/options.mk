@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=	--with-png-prefix=${BUILDLINK_PREFIX.png}
 
 .if !empty(PKG_OPTIONS:Mjpeg)
 CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mtheora)
