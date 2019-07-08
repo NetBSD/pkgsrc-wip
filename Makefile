@@ -4368,6 +4368,7 @@ SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
 SUBDIR+=	ruby-trollop
+SUBDIR+=	ruby-typhoeus
 SUBDIR+=	ruby-vegas
 SUBDIR+=	ruby-versionomy
 SUBDIR+=	ruby-xmpp4r
