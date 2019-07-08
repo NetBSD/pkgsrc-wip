@@ -4368,6 +4368,7 @@ SUBDIR+=	ruby-taskwarrior-web
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
+SUBDIR+=	ruby-travis
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-typhoeus
 SUBDIR+=	ruby-vegas

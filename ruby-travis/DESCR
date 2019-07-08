@@ -1,0 +1,3 @@
+The travis gem includes both a command line client and a Ruby library
+to interface with a Travis CI service.  Both work with travis-ci.org,
+travis-ci.com or any custom Travis CI setup you might have.
