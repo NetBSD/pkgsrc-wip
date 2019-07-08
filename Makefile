@@ -2960,6 +2960,7 @@ SUBDIR+=	pidgin-status-to-twitter
 SUBDIR+=	pidgin-twitterstatus
 SUBDIR+=	piedock
 SUBDIR+=	piglit-git
+SUBDIR+=	pijul
 SUBDIR+=	pike
 SUBDIR+=	pike-Gettext
 SUBDIR+=	pike-Gz
