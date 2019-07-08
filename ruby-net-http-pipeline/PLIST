@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/net/http/pipeline.rb
+${GEM_LIBDIR}/sample/pipeline.rb
+${GEM_LIBDIR}/test/test_net_http_pipeline.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
