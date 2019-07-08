@@ -2336,6 +2336,7 @@ SUBDIR+=	naev
 SUBDIR+=	nag
 SUBDIR+=	nagios-plugin-mysql_health
 SUBDIR+=	naqsh-ttf
+SUBDIR+=	nary
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
 SUBDIR+=	nautilus
