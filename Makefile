@@ -4342,6 +4342,7 @@ SUBDIR+=	ruby-chawan
 SUBDIR+=	ruby-delegate_it
 SUBDIR+=	ruby-diaspora
 SUBDIR+=	ruby-ditz
+SUBDIR+=	ruby-gh
 SUBDIR+=	ruby-ghi
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-git_stats
