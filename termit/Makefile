@@ -7,7 +7,7 @@ MASTER_SITES=	https://github.com/downloads/nonstop/termit/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jan.smydke@jh-inst.cas.cz
-HOMEPAGE=	http://wiki.github.com/nonstop/termit
+HOMEPAGE=	https://github.com/nonstop/termit/wiki
 COMMENT=	Simple vte-based terminal with tabs and encoding switching
 LICENSE=	gnu-gpl-v2
 
