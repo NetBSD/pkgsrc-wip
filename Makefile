@@ -2795,6 +2795,7 @@ SUBDIR+=	p6-test-mock
 SUBDIR+=	p6-uri
 SUBDIR+=	p6-xml-writer
 SUBDIR+=	p6-zef
+SUBDIR+=	pack
 SUBDIR+=	packer
 SUBDIR+=	packman
 SUBDIR+=	pacman
