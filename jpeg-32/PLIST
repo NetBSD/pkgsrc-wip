@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/32/libjpeg.la
+lib/32/pkgconfig/libjpeg.pc
+@pkgdir share/doc/jpeg
+@pkgdir man/man1
+@pkgdir include
+@pkgdir bin

@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.6 2016/02/01 09:22:53 wiz Exp $
+
+Build and install jpegexiforient.
+
+--- Makefile.am.orig	2012-05-09 13:13:36.000000000 +0000
++++ Makefile.am
+@@ -76,7 +76,7 @@ if HAVE_LD_VERSION_SCRIPT
+ endif
+ 
+ # Executables to build
+-bin_PROGRAMS = cjpeg djpeg jpegtran rdjpgcom wrjpgcom
++bin_PROGRAMS = cjpeg djpeg jpegtran rdjpgcom wrjpgcom jpegexiforient
+ 
+ # Executable sources & libs
+ cjpeg_SOURCES    = cjpeg.c rdppm.c rdgif.c rdtarga.c rdrle.c rdbmp.c \
+@@ -89,6 +89,8 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
+ jpegtran_LDADD   = libjpeg.la
+ rdjpgcom_SOURCES = rdjpgcom.c
+ wrjpgcom_SOURCES = wrjpgcom.c
++jpegexiforient_SOURCES	= jpegexiforient.c
++jpegexiforient_LDADD	= libjpeg.la
+ 
+ # Manual pages to install
+ man_MANS = $(DISTMANS)

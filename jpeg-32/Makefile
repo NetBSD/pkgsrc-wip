@@ -1,0 +1,41 @@
+# $NetBSD: Makefile,v 1.55 2019/03/10 11:22:43 spz Exp $
+
+DISTNAME=	jpegsrc.v9c
+ABI=		32
+PKGNAME=	compat${ABI}_${DISTNAME:S/src.v/-/}
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.ijg.org/files/
+DIST_SUBDIR=	jpeg-9c-v2
+PKGREVISION=	1
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.ijg.org/
+COMMENT=	IJG's jpeg compression utilities
+
+CONFLICTS=		libjpeg-turbo-[0-9]*
+
+#WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/jpeg-9c
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+LIBABISUFFIX?=		/32
+CFLAGS+=		-m32
+CONFIGURE_ARGS+=	--disable-ld-version-script
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib${LIBABISUFFIX}
+
+INSTALLATION_DIRS=	bin include share/doc/jpeg
+
+PKGCONFIG_OVERRIDE=	libjpeg.pc.in
+
+TEST_TARGET=		test
+
+post-extract:
+	${CP} ${FILESDIR}/jpegexiforient.c ${WRKSRC}
+
+remove-non-libraries:
+	echo "Removing non-compat library package content"
+	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -o -type f -exec ${RM} {} +
+
+post-install: remove-non-libraries
+
+.include "../../mk/bsd.pkg.mk"
