@@ -1,13 +1,14 @@
 # $NetBSD: buildlink3.mk,v 1.27 2013/02/16 11:16:06 wiz Exp $
 
-BUILDLINK_TREE+=	png
+BUILDLINK_TREE+=	compat32_png
 
-.if !defined(PNG_BUILDLINK3_MK)
-PNG_BUILDLINK3_MK:=
+.if !defined(COMPAT32_PNG_BUILDLINK3_MK)
+COMPAT32_PNG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.png+=	png>=1.2.4
-BUILDLINK_ABI_DEPENDS.png+=	png>=1.6.0nb1
-BUILDLINK_PKGSRCDIR.png?=	../../graphics/png
+BUILDLINK_API_DEPENDS.compat32_png+=	compat32_png>=1.2.4
+BUILDLINK_ABI_DEPENDS.compat32_png+=	compat32_png>=1.6.0nb1
+BUILDLINK_PKGSRCDIR.compat32_png?=	../../wip/png-32
+BUILDLINK_LIBDIRS.compat32_png=		lib/32
 
 # keep this in sync with the same code in Makefile
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
@@ -22,6 +23,6 @@ CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 BUILDLINK_TRANSFORM+=	l:png:png16
 
 .include "../../devel/zlib/buildlink3.mk"
-.endif # PNG_BUILDLINK3_MK
+.endif # COMPAT32_PNG_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-png
+BUILDLINK_TREE+=	-compat32_png
