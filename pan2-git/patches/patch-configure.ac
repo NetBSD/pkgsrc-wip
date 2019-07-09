@@ -1,0 +1,27 @@
+$NetBSD$
+
+Add AM_GNU_GETTEXT_REQUIRE_VERSION so that autopoint 0.20 will set
+the version number to 0.20 (its own) instead of 0.19. Otherwise,
+the generated po/Makefile.in.in will have "GETTEXT_MACRO_VERSION = 0.19"
+but @GETTEXT_MACRO_VERSION@ = 0.20 and it will refuse to work:
+
+    *** error: gettext infrastructure mismatch: using a Makefile.in.in from gettext version 0.19 but the autoconf macros are from gettext version 0.20
+
+Just adding AM_GNU_GETTEXT_REQUIRE_VERSION isn't enough, then some tools
+seem to think that gettext isn't used at all.
+
+Weird.
+
+diff --git a/configure.ac b/configure.ac
+index f53d238..3d3a0cf 100644
+--- configure.ac
++++ configure.ac
+@@ -94,7 +94,8 @@ AC_CHECK_HEADERS([errno.h fcntl.h])
+ dnl I18n support
+ GETTEXT_PACKAGE=pan
+ AC_SUBST(GETTEXT_PACKAGE)
+ AM_GNU_GETTEXT_VERSION([0.19.7])
++AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.7])
+ AM_GNU_GETTEXT([external])
+ AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Gettext Package])
+ panlocaledir=[${datadir}/locale]
