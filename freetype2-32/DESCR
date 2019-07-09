@@ -8,4 +8,4 @@ engine, as the project is now switching to a new version dubbed FreeType
  * Even more portable
  * An improved anti-aliasing algorithm
 
-This package is intended to crosscompile freetype2 for i386.
+Note: This package is intended to crosscompile freetype2 for i386
