@@ -26,8 +26,15 @@ BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
-#BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 
-.include "../../security/libgcrypt/buildlink3.mk"
+remove non-libraries:
+	echo "Removing non-compat library package content"
+	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -o -type f -exec ${RM} {} +
+
+post-install: remove non-libraries
+
+.include "../../wip/libgcrypt-32/buildlink3.mk"
+.include "../../wip/libgpg-error-32/buildlink3.mk"
 .include "../../wip/libxml2-32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
