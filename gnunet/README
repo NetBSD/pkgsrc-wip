@@ -1,6 +1,0 @@
-* documentation is only on or off in 0.11.0 release:
-  https://bugs.gnunet.org/view.php?id=5616
-  This also means that the mdoc rule does not work,
-  but we keep it in because I can cherry-pick from
-  upstream once I have written the patch for upstream
-  work.
