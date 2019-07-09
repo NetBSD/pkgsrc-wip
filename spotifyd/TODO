@@ -1,19 +1,6 @@
 ## Todo
 
-1. Update reqwest
-
-	I've had to roll back reqwest to version 0.9.3 because the one linked
-	(0.9.9) against spotifyd 0.2.5 won't build with the version of Rust I have
-	(1.29.1) and I can't (be bothered) to build rust from source (it's bad enough
-	building this project) so I'll have to settle for the binary I have until there
-	is a more recent one available in pkgsrc (it seems to have disappeared
-	temporarily). The issue that I hit is:
-
-		access to extern crates through prelude is experimental (see issue #44660)
-
-	0.9.6 introduced this with: <https://github.com/seanmonstar/reqwest/commit/4c21127f15ff814f8397a336fd647edc7cc89bc8>
-
-2. In the Makefile there is this todo item:
+1. In the Makefile there is this todo item:
 
 		# TODO investigate why this is needed
 		CHECK_WRKREF_SKIP+=	bin/spotifyd

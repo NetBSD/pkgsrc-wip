@@ -1,21 +1,13 @@
 $NetBSD$
 
---- Cargo.toml.orig	2019-03-25 21:19:18.000000000 +0000
+--- Cargo.toml.orig	2019-06-19 20:25:58.000000000 +0000
 +++ Cargo.toml
-@@ -26,12 +26,13 @@ alsa = { version = "0.2", optional = tru
- keyring = { version = "0.6.1", optional = true }
- 
+@@ -29,7 +29,7 @@ xdg = "2.2"
  [dependencies.librespot]
--git = "https://github.com/librespot-org/librespot.git"
-+#git = "https://github.com/librespot-org/librespot.git"
-+path = "../librespot"
  default-features = false
  features = ["with-tremor"]
- 
--[replace]
--"rust-crypto:0.2.36" = { git = "https://github.com/awmath/rust-crypto.git", branch = "avx2" }
-+#[replace]
-+#"rust-crypto:0.2.36" = { git = "https://github.com/awmath/rust-crypto.git", branch = "avx2" }
+-git = "https://github.com/librespot-org/librespot.git"
++path = "../librespot"
  
  [features]
  alsa_backend = ["librespot/alsa-backend", "alsa"]
