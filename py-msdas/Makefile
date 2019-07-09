@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msdas/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pythonhosted.org/msdas/
+HOMEPAGE=	https://pythonhosted.org/msdas/
 COMMENT=	Mass Spectrometry analysis
 LICENSE=	gnu-lgpl-v3
 
