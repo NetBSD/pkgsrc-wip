@@ -1,0 +1,34 @@
+$NetBSD: patch-builds_unix_unix-cc.in,v 1.2 2018/05/04 08:40:11 adam Exp $
+
+Provide tag to libtool.
+Use CFLAGS when compiling executables.
+
+--- builds/unix/unix-cc.in.orig	2018-04-22 09:41:36.000000000 +0000
++++ builds/unix/unix-cc.in
+@@ -88,7 +88,7 @@ ANSIFLAGS := @XX_ANSIFLAGS@
+ # C compiler to use -- we use libtool!
+ #
+ CCraw := $(CC)
+-CC    := $(LIBTOOL) --mode=compile $(CCraw)
++CC    := $(LIBTOOL) --tag=CC --mode=compile $(CCraw)
+ 
+ # Resource compiler to use on Cygwin/MinGW, usually windres.
+ #
+@@ -108,14 +108,14 @@ LIB_CLOCK_GETTIME := @LIB_CLOCK_GETTIME@
+ CCraw_build  := @CC_BUILD@	# native CC of building system
+ E_BUILD      := @EXEEXT_BUILD@	# extension for executable on building system
+ EXPORTS_LIST := $(OBJ_DIR)/ftexport.sym
+-CCexe        := $(CCraw_build)	# used to compile `apinames' only
++CCexe        := $(CCraw_build) @CFLAGS@	# used to compile `apinames' only
+ 
+ 
+ # Library linking
+ #
+-LINK_LIBRARY = $(LIBTOOL) --mode=link $(CCraw) -o $@ $(OBJECTS_LIST) \
++LINK_LIBRARY = $(LIBTOOL) --tag=CC --mode=link $(CCraw) -o $@ $(OBJECTS_LIST) \
+                           -rpath $(libdir) -version-info $(version_info) \
+                           $(LDFLAGS) -no-undefined \
+-                          -export-symbols $(EXPORTS_LIST)
++                          # -export-symbols $(EXPORTS_LIST)
+ 
+ # EOF
