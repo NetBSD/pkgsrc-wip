@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.2 2019/04/27 13:44:12 wiz Exp $
+
+SHA1 (xbase.tgz) = 22a922377c31600709bbcc8c1da697ffb71d4adc
+RMD160 (xbase.tgz) = b823933f9f176881aa85701807a5e06bde568042
+SHA512 (xbase.tgz) = a7361c3b3b16a871f2fca365e612a9dd3d35dbffecf839ec8d9a015bd83082a10c68baac069ff7fb9dea4b443eb4f60f4ba4bfd85b8ad076fa45746edaa36f6e
+Size (xbase.tgz) = 7018225 bytes
+SHA1 (xcomp.tgz) = ff2eba8ef87dffb410e09cfda2e23ee1378fd905
+RMD160 (xcomp.tgz) = f12c95e54acf80b1f85614f66a3a0d14b98d6b71
+SHA512 (xcomp.tgz) = c12372f827838066e472b4cce9a69e60666a205ef3674d72ef1d5ee8f868edea533e3df253a91082c7f02ba18cb2b499af2361127c5f7f26f617eb33f4181b7b
+Size (xcomp.tgz) = 38275937 bytes
+SHA1 (xetc.tgz) = 7c0a38427e28059e04ef3d008b2b32ae4bfa862f
+RMD160 (xetc.tgz) = 10547ae0dd21e035cdfd13df01149a67dd1adae9
+SHA512 (xetc.tgz) = f74d6806fda1369797ff7c623bd44e74982922a99da731e664607cad7f0f8992496e84db2bfdad089565a63057fdaf558f443791b98787234f998d1301dffef0
+Size (xetc.tgz) = 27940 bytes
+SHA1 (xfont.tgz) = 184bf6b6587dfcc634f74e3616dc45c1d702d7e6
+RMD160 (xfont.tgz) = e76c8d9d2af6f0adf69fe6932304e6dac603c54f
+SHA512 (xfont.tgz) = b7f2a806b0e09f06683aa1b8963ec951b2d2b590048e6c997b26b3edd7fe4408bed09c00bd20e10cd3041893ab74cd6d077b6d9c5374acc5b0691b8283522d0a
+Size (xfont.tgz) = 32783481 bytes
+SHA1 (xserver.tgz) = c2546ba32114d30dde60bccac4bf324dbf315563
+RMD160 (xserver.tgz) = ac583dced89fb5505dfa35b46cca855c9a4a0746
+SHA512 (xserver.tgz) = 465bf6a347d43555b4e60f0ec55aeb42ee713d8afab57466f5b963355d8ac66110f08b081aa05704619aba416272b29a5df91e91068467dc37463a87d03c42ec
+Size (xserver.tgz) = 31827733 bytes
