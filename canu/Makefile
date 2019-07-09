@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://canu.readthedocs.io/
+HOMEPAGE=	https://canu.readthedocs.io/
 COMMENT=	Single molecule sequence assembler for genomes large and small
 LICENSE=	gnu-gpl-v2
 
