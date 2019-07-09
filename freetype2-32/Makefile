@@ -1,22 +1,71 @@
-# $NetBSD: Makefile,v 1.152 2019/01/09 19:09:02 adam Exp $
+# $NetBSD: Makefile,v 1.117 2019/04/02 07:17:17 adam Exp $
 
-ORIGINAL_PACKAGE=       ../../graphics/freetype2
+DISTNAME=	freetype-2.10.0
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
+MASTER_SITES+=	http://download.savannah.gnu.org/releases/freetype/
+EXTRACT_SUFX=	.tar.bz2
+ABI=		32
+PKGNAME=	compat${ABI}_${DISTNAME:S/-/2-/}
 
-ABI?=           	32
-ORIGINALPKG!=		make -C ${ORIGINAL_PACKAGE}	
-PKGNAME=		compat${ABI}_freetype-2.10.0
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.freetype.org/
+COMMENT=	Font rendering engine and library API
+LICENSE=	gnu-gpl-v2
 
-# XXX make a definition for netbsd archs.
-LIBABISUFFIX?=          /32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
-CFLAGS+=                -m32
+USE_LIBTOOL=		yes
+LIBABISUFFIX?=		/32
+USE_TOOLS+=		grep gmake pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		builds/unix
+CFLAGS+=		-m32
+BUILD_DIRS=		.
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib${LIBABISUFFIX}
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--with-harfbuzz=no
+CONFIGURE_ENV+=		ac_cv_path_GREP=${GREP:Q} ac_cv_path_EGREP=${EGREP:Q}
 
-remove-non-libraries:
-	echo "Removing non-compat library package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -o -type f -exec ${RM} {} +
+# Remove this when all dependent packages have switched to pkg-config
+CONFIGURE_ARGS+=	--enable-freetype-config
 
-post-install: remove-non-libraries
+.if exists(/System/Library/Frameworks/Carbon.framework)
+LDFLAGS+=	-framework Carbon
+.endif
 
-GENERATE_PLIST= ${SED} -n '/^lib/ s;lib;lib${LIBABISUFFIX};p' ${ORIGINAL_PACKAGE}/PLIST;
+PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
+SUBST_CLASSES+=		ftc
+SUBST_FILES.ftc+=	builds/unix/freetype-config.in
+SUBST_SED.ftc+=		-e "s!echo -L\([^ ]*\)!echo ${COMPILER_RPATH_FLAG}\\1 -L\\1!"
+SUBST_STAGE.ftc+=	pre-configure
+SUBST_MESSAGE.ftc+=	Fixing rpath in freetype-config script.
 
-.include "${ORIGINAL_PACKAGE}/Makefile"
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
+
+.include "options.mk"
+
+# source code breaks strict aliasing in gcc>=2.95
+.if !empty(CC_VERSION:Mgcc-[3-9]*) || !empty(CC_VERSION:Mgcc-2.95*)
+CFLAGS+=	-fno-strict-aliasing
+.endif
+
+# tell configure not to use unix-specific version of ftsystem.c on OpenBSD
+CONFIGURE_ENV.OpenBSD+=	ac_cv_func_mmap_fixed_mapped=no
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ENV+=		CC_BUILD=${NATIVE_CC:Q}
+.endif
+
+post-configure:
+	cd ${WRKSRC} && ${LN} -f -s builds/unix/unix.mk config.mk
+.if ${OPSYS} == "IRIX"
+	${MKDIR} ${WRKSRC}/.libs
+.endif
+
+.include "../../archivers/bzip2/buildlink3.mk"
+# Avoid creating a fake zlib.pc, because if it does
+# we will add a Requires for it to our .pc file
+CHECK_BUILTIN.zlib:=yes
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
