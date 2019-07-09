@@ -1,18 +1,19 @@
 # $NetBSD: buildlink3.mk,v 1.24 2013/08/28 16:51:36 richard Exp $
 
-BUILDLINK_TREE+=	tiff
+BUILDLINK_TREE+=	compat32_tiff
 
-.if !defined(TIFF_BUILDLINK3_MK)
-TIFF_BUILDLINK3_MK:=
+.if !defined(COMPAT32_TIFF_BUILDLINK3_MK)
+COMPAT32_TIFF_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.tiff+=	tiff>=3.6.1
-BUILDLINK_ABI_DEPENDS.tiff+=	tiff>=4.0.3nb5
-BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
+BUILDLINK_API_DEPENDS.compat32_tiff+=	compat32_tiff>=3.6.1
+BUILDLINK_ABI_DEPENDS.compat32_tiff+=	compat32_tiff>=4.0.3nb5
+BUILDLINK_PKGSRCDIR.compat32_tiff?=	../../wip/tiff-32
+BUILDLINK_LIBDIRS.compat32_tiff=	lib/32
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.endif # TIFF_BUILDLINK3_MK
+.endif # COMPAT32_TIFF_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-tiff
+BUILDLINK_TREE+=	-compat32_tiff
