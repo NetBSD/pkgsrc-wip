@@ -24,8 +24,10 @@ REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
 
 BUILD32=		${WRKSRC}/wine32
+BUILD64=		${WRKSRC}/wine64
 
 post-extract:
+	${MKDIR} ${BUILD32}
 	${MKDIR} ${BUILD32}
 
 do-configure:
