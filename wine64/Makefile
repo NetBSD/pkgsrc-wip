@@ -39,8 +39,7 @@ post-extract:
 	${MKDIR} ${BUILD32}
 	${MKDIR} ${BUILD32}
 
-do-build:
-	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS}
+do-build: build-wine64 build-wine32
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
