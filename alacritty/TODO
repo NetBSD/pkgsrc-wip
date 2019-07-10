@@ -1,0 +1,3 @@
+* This package tracks https://github.com/jwilm/alacritty/issues/2631,
+  which is why the build is not done from a release tarball. The ticket
+  aims to fix NetBSD builds for alacritty.

@@ -112,6 +112,7 @@ SUBDIR+=	akonadi-mime
 SUBDIR+=	akonadi-notes
 SUBDIR+=	akonadi-search
 SUBDIR+=	alac_decoder
+SUBDIR+=	alacritty
 SUBDIR+=	alberta
 SUBDIR+=	aldo
 SUBDIR+=	alive
