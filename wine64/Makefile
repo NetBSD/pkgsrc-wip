@@ -15,9 +15,7 @@ ONLY_FOR_PLATFORM+=	*-*-x86_64
 GNU_CONFIGURE=		yes
 CFLAGS+=		-m32
 CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--x-libraries=/usr/pkg/emul/netbsd32/lib
-X11_LDFLAGS+=		-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
-X11_LDFLAGS+=		-L/usr/pkg/emul/netbsd32/lib -lX11
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
@@ -28,6 +26,12 @@ BUILD64=		${WRKSRC}/wine64
 
 build-wine64:
 	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${WKRSRC}/configure ${CONFIGURE_ARGS} --enable-wine64
+
+build-wine32:
+	${SETENV} CONFIGURE_ARGS+=--x-libraries=/usr/pkg/emul/netbsd32/lib
+	${SETENV} X11_LDFLAGS+=-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
+	${SETENV} X11_LDFLAGS+=-L/usr/pkg/emul/netbsd32/lib -lX11
+	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} --with-wine64=${BUILD64}
 
 post-extract:
 	${MKDIR} ${BUILD32}
