@@ -26,6 +26,9 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine
 BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
 
+build-wine64:
+	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${WKRSRC}/configure ${CONFIGURE_ARGS} --enable-wine64
+
 post-extract:
 	${MKDIR} ${BUILD32}
 	${MKDIR} ${BUILD32}
