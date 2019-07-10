@@ -37,9 +37,6 @@ post-extract:
 	${MKDIR} ${BUILD32}
 	${MKDIR} ${BUILD32}
 
-do-configure:
-	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}
-
 do-build:
 	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS}
 
