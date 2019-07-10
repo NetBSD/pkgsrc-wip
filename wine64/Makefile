@@ -26,12 +26,14 @@ BUILD64=		${WRKSRC}/wine64
 
 build-wine64:
 	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${WKRSRC}/configure ${CONFIGURE_ARGS} --enable-wine64
+	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS}
 
 build-wine32:
 	${SETENV} CONFIGURE_ARGS+=--x-libraries=/usr/pkg/emul/netbsd32/lib
 	${SETENV} X11_LDFLAGS+=-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
 	${SETENV} X11_LDFLAGS+=-L/usr/pkg/emul/netbsd32/lib -lX11
 	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} --with-wine64=${BUILD64}
+	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS}
 
 post-extract:
 	${MKDIR} ${BUILD32}
