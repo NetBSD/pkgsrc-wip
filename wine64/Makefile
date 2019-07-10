@@ -4,7 +4,6 @@ DISTNAME=		wine-4.4
 CATEGORIES=		emulators
 MASTER_SITES=		https://dl.winehq.org/wine/source/4.x/
 EXTRACT_SUFX=		.tar.xz
-ABI=			32
 
 MAINTAINER=		zerous@nocebo.space
 HOMEPAGE=		http://www.winehq.org/
@@ -13,7 +12,6 @@ LICENSE=		gnu-lgpl-v2.1
 
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 GNU_CONFIGURE=		yes
-CFLAGS+=		-m32
 CONFIGURE_ARGS+=	--disable-tests
 
 USE_LANGUAGES=		c c++
@@ -29,6 +27,8 @@ build-wine64:
 	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS}
 
 build-wine32:
+	ABI=32
+	${SETENV} CFLAGS+=-m32
 	${SETENV} CONFIGURE_ARGS+=--x-libraries=/usr/pkg/emul/netbsd32/lib
 	${SETENV} X11_LDFLAGS+=-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
 	${SETENV} X11_LDFLAGS+=-L/usr/pkg/emul/netbsd32/lib -lX11
