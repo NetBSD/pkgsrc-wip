@@ -532,7 +532,6 @@ SUBDIR+=	d1x-rebirth
 SUBDIR+=	d2x-rebirth
 SUBDIR+=	daligner
 SUBDIR+=	daphne
-SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
 SUBDIR+=	darcs-to-git
 SUBDIR+=	darkcoin
