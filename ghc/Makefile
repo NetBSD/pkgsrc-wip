@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 EXTRACT_USING=	gtar
 
 MAINTAINER=	pho@cielonero.org
-HOMEPAGE=	http://www.haskell.org/ghc/
+HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 LICENSE=	modified-bsd
 

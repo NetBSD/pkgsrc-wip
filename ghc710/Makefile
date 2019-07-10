@@ -10,7 +10,7 @@ DISTFILES+=	ghc-7.10.3-testsuite.tar.xz
 
 
 MAINTAINER=			sandro.r.millien@gmail.com
-HOMEPAGE=			http://www.haskell.org/ghc/
+HOMEPAGE=			https://www.haskell.org/ghc/
 COMMENT=			Compiler for the functional language Haskell
 LICENSE=			modified-bsd
 

@@ -7,7 +7,7 @@ MASTER_SITES=		http://projects.haskell.org/haskellmode-emacs/
 LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.haskell.org/haskell-mode/
+HOMEPAGE=		https://www.haskell.org/haskell-mode/
 COMMENT=		Haskell mode for Emacs
 
 

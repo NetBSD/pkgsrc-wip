@@ -5,7 +5,7 @@ DISTNAME=	data-accessor-monads-fd-0.2.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.haskell.org/haskellwiki/Record_access
+HOMEPAGE=	https://www.haskell.org/haskellwiki/Record_access
 COMMENT=	Use Accessor to access state in monads-fd State monad class
 LICENSE=	modified-bsd
 

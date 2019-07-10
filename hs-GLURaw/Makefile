@@ -5,7 +5,7 @@ DISTNAME=	GLURaw-1.1.0.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.haskell.org/HOpenGL/
+HOMEPAGE=	https://www.haskell.org/HOpenGL/
 COMMENT=	Raw binding for the OpenGL graphics system
 LICENSE=	modified-bsd
 

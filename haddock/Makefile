@@ -9,7 +9,7 @@ DISTFILES=		haddock-${VERSION}-src.tar.gz
 #DISTFILES+=		haddock-html-${VERSION}.tar.gz
 
 MAINTAINER=		esg@sdf.lonestar.org
-HOMEPAGE=		http://www.haskell.org/haddock/
+HOMEPAGE=		https://www.haskell.org/haddock/
 COMMENT=		Documentation tool for Haskell
 
 VERSION=		0.8

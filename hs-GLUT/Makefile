@@ -5,7 +5,7 @@ DISTNAME=	GLUT-2.2.2.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.haskell.org/HOpenGL/
+HOMEPAGE=	https://www.haskell.org/HOpenGL/
 COMMENT=	Binding for the OpenGL Utility Toolkit
 LICENSE=	modified-bsd
 
