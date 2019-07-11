@@ -7,7 +7,7 @@ CATEGORIES=	databases devel
 MASTER_SITES=	http://fallabs.com/kyotocabinet/perlpkg/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fallabs.com/kyotocabinet/
+HOMEPAGE=	https://fallabs.com/kyotocabinet/
 COMMENT=	Perl binding for Kyoto Cabinet
 LICENSE=	gnu-gpl-v3
 

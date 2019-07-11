@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://fallabs.com/kyototycoon/pkg/
 
 MAINTAINER=	msporleder@gmail.com
-HOMEPAGE=	http://fallabs.com/kyototycoon/
+HOMEPAGE=	https://fallabs.com/kyototycoon/
 COMMENT=	Kyoto Tycoon is a lightweight database server for Kyoto Cabinet
 LICENSE=	gnu-gpl-v3
 
