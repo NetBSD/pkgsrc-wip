@@ -164,6 +164,9 @@ ${PYSITELIB}/conans/client/generators/cmake_paths.pyo
 ${PYSITELIB}/conans/client/generators/compiler_args.py
 ${PYSITELIB}/conans/client/generators/compiler_args.pyc
 ${PYSITELIB}/conans/client/generators/compiler_args.pyo
+${PYSITELIB}/conans/client/generators/deploy.py
+${PYSITELIB}/conans/client/generators/deploy.pyc
+${PYSITELIB}/conans/client/generators/deploy.pyo
 ${PYSITELIB}/conans/client/generators/gcc.py
 ${PYSITELIB}/conans/client/generators/gcc.pyc
 ${PYSITELIB}/conans/client/generators/gcc.pyo
@@ -272,6 +275,9 @@ ${PYSITELIB}/conans/client/manifest_manager.pyo
 ${PYSITELIB}/conans/client/migrations.py
 ${PYSITELIB}/conans/client/migrations.pyc
 ${PYSITELIB}/conans/client/migrations.pyo
+${PYSITELIB}/conans/client/migrations_settings.py
+${PYSITELIB}/conans/client/migrations_settings.pyc
+${PYSITELIB}/conans/client/migrations_settings.pyo
 ${PYSITELIB}/conans/client/output.py
 ${PYSITELIB}/conans/client/output.pyc
 ${PYSITELIB}/conans/client/output.pyo
@@ -356,6 +362,9 @@ ${PYSITELIB}/conans/client/store/localdb.pyo
 ${PYSITELIB}/conans/client/tools/__init__.py
 ${PYSITELIB}/conans/client/tools/__init__.pyc
 ${PYSITELIB}/conans/client/tools/__init__.pyo
+${PYSITELIB}/conans/client/tools/android.py
+${PYSITELIB}/conans/client/tools/android.pyc
+${PYSITELIB}/conans/client/tools/android.pyo
 ${PYSITELIB}/conans/client/tools/apple.py
 ${PYSITELIB}/conans/client/tools/apple.pyc
 ${PYSITELIB}/conans/client/tools/apple.pyo
@@ -380,6 +389,9 @@ ${PYSITELIB}/conans/client/tools/scm.pyo
 ${PYSITELIB}/conans/client/tools/system_pm.py
 ${PYSITELIB}/conans/client/tools/system_pm.pyc
 ${PYSITELIB}/conans/client/tools/system_pm.pyo
+${PYSITELIB}/conans/client/tools/version.py
+${PYSITELIB}/conans/client/tools/version.pyc
+${PYSITELIB}/conans/client/tools/version.pyo
 ${PYSITELIB}/conans/client/tools/win.py
 ${PYSITELIB}/conans/client/tools/win.pyc
 ${PYSITELIB}/conans/client/tools/win.pyo
@@ -419,6 +431,9 @@ ${PYSITELIB}/conans/model/env_info.pyo
 ${PYSITELIB}/conans/model/graph_info.py
 ${PYSITELIB}/conans/model/graph_info.pyc
 ${PYSITELIB}/conans/model/graph_info.pyo
+${PYSITELIB}/conans/model/graph_lock.py
+${PYSITELIB}/conans/model/graph_lock.pyc
+${PYSITELIB}/conans/model/graph_lock.pyo
 ${PYSITELIB}/conans/model/info.py
 ${PYSITELIB}/conans/model/info.pyc
 ${PYSITELIB}/conans/model/info.pyo
@@ -473,9 +488,6 @@ ${PYSITELIB}/conans/paths/package_layouts/package_cache_layout.pyo
 ${PYSITELIB}/conans/paths/package_layouts/package_editable_layout.py
 ${PYSITELIB}/conans/paths/package_layouts/package_editable_layout.pyc
 ${PYSITELIB}/conans/paths/package_layouts/package_editable_layout.pyo
-${PYSITELIB}/conans/paths/simple_paths.py
-${PYSITELIB}/conans/paths/simple_paths.pyc
-${PYSITELIB}/conans/paths/simple_paths.pyo
 ${PYSITELIB}/conans/pylint_plugin.py
 ${PYSITELIB}/conans/pylint_plugin.pyc
 ${PYSITELIB}/conans/pylint_plugin.pyo
@@ -672,6 +684,9 @@ ${PYSITELIB}/conans/test/utils/conanfile.pyo
 ${PYSITELIB}/conans/test/utils/cpp_test_files.py
 ${PYSITELIB}/conans/test/utils/cpp_test_files.pyc
 ${PYSITELIB}/conans/test/utils/cpp_test_files.pyo
+${PYSITELIB}/conans/test/utils/deprecation.py
+${PYSITELIB}/conans/test/utils/deprecation.pyc
+${PYSITELIB}/conans/test/utils/deprecation.pyo
 ${PYSITELIB}/conans/test/utils/go_test_files.py
 ${PYSITELIB}/conans/test/utils/go_test_files.pyc
 ${PYSITELIB}/conans/test/utils/go_test_files.pyo
@@ -684,9 +699,6 @@ ${PYSITELIB}/conans/test/utils/profiles.pyo
 ${PYSITELIB}/conans/test/utils/python_test_files.py
 ${PYSITELIB}/conans/test/utils/python_test_files.pyc
 ${PYSITELIB}/conans/test/utils/python_test_files.pyo
-${PYSITELIB}/conans/test/utils/runner.py
-${PYSITELIB}/conans/test/utils/runner.pyc
-${PYSITELIB}/conans/test/utils/runner.pyo
 ${PYSITELIB}/conans/test/utils/server_launcher.py
 ${PYSITELIB}/conans/test/utils/server_launcher.pyc
 ${PYSITELIB}/conans/test/utils/server_launcher.pyo
