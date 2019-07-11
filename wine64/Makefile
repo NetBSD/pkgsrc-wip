@@ -47,8 +47,8 @@ do-build:
 	cd ${BUILD32} && ${SETENV} ${WINE32_ENV} ${MAKE_ENV} ${MAKE} -j${MAKE_JOBS}
 
 do-install:
-	cd ${BUILD32} && ${INSTALL_ENV} ${MAKE} install
-	cd ${BUILD64} && ${INSTALL_ENV} ${MAKE} install
+	cd ${BUILD32} && ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
+	cd ${BUILD64} && ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
 
 .include "../../wip/freetype2-32/buildlink3.mk"
 .include "../../wip/giflib-32/buildlink3.mk"
