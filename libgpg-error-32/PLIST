@@ -1,0 +1,29 @@
+@comment $NetBSD$
+lib/32/libgpg-error.la
+lib/32/pkgconfig/gpg-error.pc
+@pkgdir share/locale/zh_TW/LC_MESSAGES
+@pkgdir share/locale/zh_CN/LC_MESSAGES
+@pkgdir share/locale/vi/LC_MESSAGES
+@pkgdir share/locale/uk/LC_MESSAGES
+@pkgdir share/locale/sv/LC_MESSAGES
+@pkgdir share/locale/sr/LC_MESSAGES
+@pkgdir share/locale/ru/LC_MESSAGES
+@pkgdir share/locale/ro/LC_MESSAGES
+@pkgdir share/locale/pt/LC_MESSAGES
+@pkgdir share/locale/pl/LC_MESSAGES
+@pkgdir share/locale/nl/LC_MESSAGES
+@pkgdir share/locale/ja/LC_MESSAGES
+@pkgdir share/locale/it/LC_MESSAGES
+@pkgdir share/locale/hu/LC_MESSAGES
+@pkgdir share/locale/fr/LC_MESSAGES
+@pkgdir share/locale/es/LC_MESSAGES
+@pkgdir share/locale/eo/LC_MESSAGES
+@pkgdir share/locale/de/LC_MESSAGES
+@pkgdir share/locale/da/LC_MESSAGES
+@pkgdir share/locale/cs/LC_MESSAGES
+@pkgdir share/libgpg-error
+@pkgdir share/common-lisp/source/gpg-error
+@pkgdir share/aclocal
+@pkgdir man/man1
+@pkgdir include
+@pkgdir bin
