@@ -27,6 +27,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
+NOT_PAX_MPROTECT_SAFE+= bin/wine64
 
 BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
