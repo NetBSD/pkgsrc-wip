@@ -1355,6 +1355,7 @@ SUBDIR+=	hmmer
 SUBDIR+=	honggfuzz-git
 SUBDIR+=	hoogle
 SUBDIR+=	howdoi
+SUBDIR+=	hpl
 SUBDIR+=	hplibunwind-git
 SUBDIR+=	hpoj
 SUBDIR+=	hs-Boolean
