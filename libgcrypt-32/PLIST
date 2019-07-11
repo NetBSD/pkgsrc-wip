@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/32/libgcrypt.la
+@pkgdir share/aclocal
+@pkgdir man/man1
+@pkgdir include
+@pkgdir bin
