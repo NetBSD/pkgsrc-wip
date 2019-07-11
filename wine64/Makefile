@@ -31,6 +31,17 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine
 BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
 
+post-extract:
+	${MKDIR} ${BUILD32}
+	${MKDIR} ${BUILD64}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
+do-configure:
+	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE64_ARGS}
+	cd ${BUILD32} && ${SETENV} ${WINE32_ENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE32_ARGS}
+
 do-build:
 	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${MAKE} -j${MAKE_JOBS}
 	cd ${BUILD32} && ${SETENV} ${WINE32_ENV} ${MAKE_ENV} ${MAKE} -j${MAKE_JOBS}
@@ -38,17 +49,6 @@ do-build:
 do-install:
 	cd ${BUILD32} && ${INSTALL_ENV} ${MAKE} install
 	cd ${BUILD64} && ${INSTALL_ENV} ${MAKE} install
-
-post-extract:
-	${MKDIR} ${BUILD32}
-	${MKDIR} ${BUILD64}
-
-do-configure:
-	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE64_ARGS}
-	cd ${BUILD32} && ${SETENV} ${WINE32_ENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE32_ARGS}
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 .include "../../wip/freetype2-32/buildlink3.mk"
 .include "../../wip/giflib-32/buildlink3.mk"
