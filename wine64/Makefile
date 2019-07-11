@@ -13,6 +13,15 @@ LICENSE=		gnu-lgpl-v2.1
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
+WINE32_ARGS+=		--x-libraries=/usr/pkg/emul/netbsd32/lib
+WINE32_ARGS+=		--with-wine64=${BUILD64}
+WINE64_ARGS+=		--enable-win64
+WINE32_ENV+=		CFLAGS+=-m32
+WINE32_ENV+=		LDFLAGS+=-Wl,-rpath,/usr/lib/i386
+WINE32_ENV+=		LDFLAGS+=-L/usr/lib/i386
+WINE32_ENV+=		X11_LDFLAGS+=-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
+WINE32_ENV+=		X11_LDFLAGS+=-L/usr/pkg/emul/netbsd32/lib
+WINE32_ENV+=		X11_LDFLAGS+=-lX11
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
@@ -23,23 +32,24 @@ BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
 
 build-wine64:
-	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${WKRSRC}/configure ${CONFIGURE_ARGS} --enable-wine64
-	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS}
+	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${MAKE} -j${MAKE_JOBS}
 
 build-wine32:
-	ABI=32
-	${SETENV} CFLAGS+=-m32
-	${SETENV} CONFIGURE_ARGS+=--x-libraries=/usr/pkg/emul/netbsd32/lib
-	${SETENV} X11_LDFLAGS+=-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
-	${SETENV} X11_LDFLAGS+=-L/usr/pkg/emul/netbsd32/lib -lX11
-	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} --with-wine64=${BUILD64}
-	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS}
+	cd ${BUILD32} && ${SETENV} ${MAKE_ENV} ${MAKE} -j${MAKE_JOBS}
+
+do-install:
+	cd ${BUILD32} && ${INSTALL_ENV} ${MAKE} install
+	cd ${BUILD64} && ${INSTALL_ENV} ${MAKE} install
 
 post-extract:
 	${MKDIR} ${BUILD32}
-	${MKDIR} ${BUILD32}
+	${MKDIR} ${BUILD64}
 
 do-build: build-wine64 build-wine32
+
+do-configure:
+	cd ${BUILD64} && ${SETENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE64_ARGS}
+	cd ${BUILD32} && ${SETENV} ${WINE32_ENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE32_ARGS}
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
