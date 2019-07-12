@@ -13,14 +13,14 @@ LICENSE=		gnu-lgpl-v2.1
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
-WINE32_ARGS+=		--x-libraries=/usr/pkg/emul/netbsd32/lib
+WINE32_ARGS+=		--x-libraries=${PREFIX}/emul/netbsd32/lib
 WINE32_ARGS+=		--with-wine64=${BUILD64}
 WINE32_ARGS+=		--libdir=${PREFIX}/lib/32
 WINE64_ARGS+=		--enable-win64
 WINE64_ARGS+=		--libdir=${PREFIX}/lib
 WINE32_ENV+=		CFLAGS+=-m32
-WINE32_ENV+=		X11_LDFLAGS+=-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
-WINE32_ENV+=		X11_LDFLAGS+=-L/usr/pkg/emul/netbsd32/lib
+WINE32_ENV+=		X11_LDFLAGS+=${COMPILER_RPATH_FLAG}${PREFIX}/emul/netbsd32/lib
+WINE32_ENV+=		X11_LDFLAGS+=-L${PREFIX}/emul/netbsd32/lib
 WINE32_ENV+=		X11_LDFLAGS+=-lX11
 
 USE_LANGUAGES=		c c++
