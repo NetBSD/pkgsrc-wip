@@ -1,0 +1,60 @@
+$NetBSD$
+
+Adapt for NetBSD & pkgsrc.
+
+--- Makefile.orig	2019-07-12 10:37:48.098876640 +0000
++++ Makefile
+@@ -25,10 +25,17 @@
+ ifeq ($(shell uname -s),Darwin)
+ CONFIG_DARWIN=y
+ endif
++ifeq ($(shell uname -s),NetBSD)
++CONFIG_NETBSD=y
++endif
+ # Windows cross compilation from Linux
+ #CONFIG_WIN32=y
+ # use link time optimization (smaller and faster executables but slower build)
+ CONFIG_LTO=y
++# Skip this for now, to support gcc5 without gcc-ar
++ifdef CONFIG_NETBSD
++CONFIG_LTO=
++endif
+ # consider warnings as errors (for development)
+ #CONFIG_WERROR=y
+ 
+@@ -150,8 +157,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
+ 
+ LIBS=-lm
+ ifndef CONFIG_WIN32
++ifndef CONFIG_NETBSD
+ LIBS+=-ldl
+ endif
++endif
+ 
+ $(OBJDIR):
+ 	mkdir -p $(OBJDIR)
+@@ -300,16 +309,16 @@ clean:
+ 	rm -rf run-test262-debug run-test262-32 run-test262-bn32
+ 
+ install: all
+-	mkdir -p "$(prefix)/bin"
+-	install -m755 -s qjs qjsc qjsbn qjsbnc "$(prefix)/bin"
+-	ln -sf qjsbn "$(prefix)/bin/qjscalc"
+-	mkdir -p "$(prefix)/lib/quickjs"
+-	install -m755 libquickjs.a libquickjs.bn.a "$(prefix)/lib/quickjs"
++	mkdir -p "${DESTDIR}$(prefix)/bin"
++	install -m755 -s qjs qjsc qjsbn qjsbnc "${DESTDIR}$(prefix)/bin"
++	ln -sf qjsbn "${DESTDIR}$(prefix)/bin/qjscalc"
++	mkdir -p "${DESTDIR}$(prefix)/lib/quickjs"
++	install -m755 libquickjs.a libquickjs.bn.a "${DESTDIR}$(prefix)/lib/quickjs"
+ ifdef CONFIG_LTO
+-	install -m755 libquickjs.lto.a libquickjs.bn.lto.a "$(prefix)/lib/quickjs"
++	install -m755 libquickjs.lto.a libquickjs.bn.lto.a "${DESTDIR}$(prefix)/lib/quickjs"
+ endif
+-	mkdir -p "$(prefix)/include/quickjs"
+-	install -m755 quickjs.h quickjs-libc.h "$(prefix)/include/quickjs"
++	mkdir -p "${DESTDIR}$(prefix)/include/quickjs"
++	install -m755 quickjs.h quickjs-libc.h "${DESTDIR}$(prefix)/include/quickjs"
+ 
+ 
+ ###############################################################################
