@@ -13,7 +13,7 @@ COMMENT=	Small and embeddable Javascript engine
 LICENSE=	mit
 USE_TOOLS=	gmake
 
-INSTALLATION_DIRS+=	bin lib include/quickjs
+INSTALLATION_DIRS+=	bin lib/quickjs include/quickjs
 
 post-extract:
 	cd ${WRKSRC}; \
