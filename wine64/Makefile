@@ -17,8 +17,6 @@ WINE32_ARGS+=		--x-libraries=/usr/pkg/emul/netbsd32/lib
 WINE32_ARGS+=		--with-wine64=${BUILD64}
 WINE64_ARGS+=		--enable-win64
 WINE32_ENV+=		CFLAGS+=-m32
-WINE32_ENV+=		LDFLAGS+=-Wl,-rpath,/usr/lib/i386
-WINE32_ENV+=		LDFLAGS+=-L/usr/lib/i386
 WINE32_ENV+=		X11_LDFLAGS+=-Wl,-rpath,/usr/pkg/emul/netbsd32/lib
 WINE32_ENV+=		X11_LDFLAGS+=-L/usr/pkg/emul/netbsd32/lib
 WINE32_ENV+=		X11_LDFLAGS+=-lX11
