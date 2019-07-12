@@ -9,4 +9,4 @@ SHA1 (patch-cutils.h) = 12990379aca9ce0e13bca8674324cbbf3cf50376
 SHA1 (patch-qjs.c) = d6d11d6b72d8136030d578e4dd3449f6b65dca12
 SHA1 (patch-qjsc.c) = 836eef33eb510d2259098441992c43e68a5bf2bf
 SHA1 (patch-quickjs-libc.c) = a8158a940f5ad4ca0622c8ce074d0e0277adbf13
-SHA1 (patch-quickjs.c) = ac883115313e7bd6e2391acc304ac3e477012f3f
+SHA1 (patch-quickjs.c) = 99dafd75d0a9e5fc131cf9c81da3f26a7d7e5d38
