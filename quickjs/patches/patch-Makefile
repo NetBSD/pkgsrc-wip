@@ -1,10 +1,11 @@
 $NetBSD$
 
 Adapt for NetBSD & pkgsrc.
+Avoid to build 32 bit utilities: aarch64 gcc does not support `-m32'.
 
---- Makefile.orig	2019-07-12 10:37:48.098876640 +0000
+--- Makefile.orig	2019-07-09 17:49:47.000000000 +0000
 +++ Makefile
-@@ -25,10 +25,17 @@
+@@ -25,17 +25,26 @@
  ifeq ($(shell uname -s),Darwin)
  CONFIG_DARWIN=y
  endif
@@ -22,7 +23,16 @@ Adapt for NetBSD & pkgsrc.
  # consider warnings as errors (for development)
  #CONFIG_WERROR=y
  
-@@ -150,8 +157,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
+ ifndef CONFIG_WIN32
++ifndef CONFIG_NETBSD
+ # force 32 bit build for some utilities
+ CONFIG_M32=y
+ endif
++endif
+ ifdef CONFIG_DARWIN
+ # use clang instead of gcc
+ CONFIG_CLANG=y
+@@ -150,8 +159,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
  
  LIBS=-lm
  ifndef CONFIG_WIN32
@@ -33,7 +43,7 @@ Adapt for NetBSD & pkgsrc.
  
  $(OBJDIR):
  	mkdir -p $(OBJDIR)
-@@ -300,16 +309,16 @@ clean:
+@@ -300,16 +311,16 @@ clean:
  	rm -rf run-test262-debug run-test262-32 run-test262-bn32
  
  install: all
