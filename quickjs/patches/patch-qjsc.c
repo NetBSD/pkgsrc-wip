@@ -2,9 +2,9 @@ $NetBSD$
 
 Adapt to NetBSD.
 
---- qjsc.c.orig   2019-07-09 19:49:47.000000000 +0200
-+++ qjsc.c       2019-07-12 01:58:27.158678240 +0200
-@@ -399,7 +399,9 @@
+--- qjsc.c.orig	2019-07-09 17:49:47.000000000 +0000
++++ qjsc.c
+@@ -399,7 +399,9 @@ static int output_executable(const char 
               lib_dir, bn_suffix, lto_suffix);
      *arg++ = libjsname;
      *arg++ = "-lm";
