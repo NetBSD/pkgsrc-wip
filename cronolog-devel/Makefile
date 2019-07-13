@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-PKGNAME=	cronolog-devel-1.7.1
+PKGNAME=	cronolog-devel-1.7.1-beta
 DISTNAME=	cronolog-1.7.1-beta
 CATEGORIES=	www
 MASTER_SITES=	http://BSDforge.com/projects/source/sysutils/cronolog-devel/

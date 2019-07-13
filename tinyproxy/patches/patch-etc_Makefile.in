@@ -1,0 +1,15 @@
+$NetBSD: patch-etc_Makefile.in,v 1.2 2018/10/12 13:57:46 adam Exp $
+
+Use pkgsrc framework for config files.
+
+--- etc/Makefile.in.orig	2018-10-12 13:51:26.000000000 +0000
++++ etc/Makefile.in
+@@ -424,7 +424,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-pkgsysconfDATA
++install-data-am:
+ 
+ install-dvi: install-dvi-am
+ 
