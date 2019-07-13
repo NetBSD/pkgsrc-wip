@@ -13,13 +13,14 @@ LICENSE=	mit
 
 USE_TOOLS=	gmake
 
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-configure
+SUBST_MESSAGE.makefile=	Adjust hardcoded paths
+SUBST_FILES.makefile=	Makefile
+SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
+
 INSTALLATION_DIRS+=	bin lib/quickjs include/quickjs
 
 TEST_TARGET=	test
-
-post-extract:
-	cd ${WRKSRC}; \
-	${SED} -e 's:^prefix=.*:prefix='${PREFIX}':' <Makefile >Makefile.new; \
-	mv Makefile.new Makefile
 
 .include "../../mk/bsd.pkg.mk"
