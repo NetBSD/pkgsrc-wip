@@ -1175,6 +1175,7 @@ SUBDIR+=	gnurl
 SUBDIR+=	gnutls
 SUBDIR+=	gnutls-guile
 SUBDIR+=	go
+SUBDIR+=	go113
 SUBDIR+=	go-argv
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bytebufferpool
