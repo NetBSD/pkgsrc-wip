@@ -1,8 +1,0 @@
-@comment $NetBSD$
-include/microhttpd.h
-info/libmicrohttpd-tutorial.info
-info/libmicrohttpd.info
-info/libmicrohttpd_performance_data.png
-lib/libmicrohttpd.la
-lib/pkgconfig/libmicrohttpd.pc
-man/man3/libmicrohttpd.3

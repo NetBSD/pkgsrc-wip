@@ -1948,7 +1948,6 @@ SUBDIR+=	libltc
 SUBDIR+=	liblxqt
 SUBDIR+=	libm4ri
 SUBDIR+=	libmesode
-SUBDIR+=	libmicrohttpd
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmobi-git
 SUBDIR+=	libmpg123
