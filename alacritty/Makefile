@@ -14,18 +14,18 @@ USE_TOOLS+=	gmake pkg-config # For fontconfig-sys
 
 CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		aho-corasick-0.6.10 \
-		aho-corasick-0.7.3 \
+		aho-corasick-0.7.4 \
 		andrew-0.2.1 \
 		android_glue-0.2.3 \
 		ansi_term-0.11.0 \
 		approx-0.3.2 \
 		arc-swap-0.3.11 \
 		argon2rs-0.2.5 \
-		arrayvec-0.4.10 \
-		atty-0.2.11 \
+		arrayvec-0.4.11 \
+		atty-0.2.12 \
 		autocfg-0.1.4 \
-		backtrace-0.3.30 \
-		backtrace-sys-0.1.29 \
+		backtrace-0.3.32 \
+		backtrace-sys-0.1.30 \
 		base64-0.10.1 \
 		bindgen-0.33.2 \
 		bitflags-1.1.0 \
@@ -34,6 +34,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		byteorder-1.3.2 \
 		bzip2-0.3.3 \
 		bzip2-sys-0.1.7 \
+		c2-chacha-0.2.2 \
 		cc-1.0.37 \
 		cexpr-0.2.3 \
 		cfg-if-0.1.9 \
@@ -56,7 +57,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		crossbeam-epoch-0.7.1 \
 		crossbeam-queue-0.1.2 \
 		crossbeam-utils-0.6.5 \
-		deflate-0.7.19 \
+		deflate-0.7.20 \
 		derivative-1.0.2 \
 		dirs-1.0.5 \
 		dlib-0.4.1 \
@@ -67,7 +68,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		either-1.5.2 \
 		embed-resource-1.2.1 \
 		env_logger-0.5.13 \
-		env_logger-0.6.1 \
+		env_logger-0.6.2 \
 		errno-0.2.4 \
 		errno-dragonfly-0.1.1 \
 		euclid-0.19.9 \
@@ -90,9 +91,10 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		fuchsia-zircon-0.3.3 \
 		fuchsia-zircon-sys-0.3.3 \
 		gcc-0.3.55 \
+		getrandom-0.1.6 \
 		gif-0.10.2 \
 		gl_generator-0.11.0 \
-		gleam-0.6.17 \
+		gleam-0.6.18 \
 		glob-0.2.11 \
 		glutin-0.21.0 \
 		glutin_egl_sys-0.1.3 \
@@ -100,7 +102,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		glutin_gles2_sys-0.1.3 \
 		glutin_glx_sys-0.1.5 \
 		glutin_wgl_sys-0.1.3 \
-		http_req-0.5.0 \
+		http_req-0.5.1 \
 		humantime-1.2.0 \
 		idna-0.1.5 \
 		image-0.21.2 \
@@ -114,19 +116,19 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		khronos_api-3.1.0 \
 		lazy_static-1.3.0 \
 		lazycell-1.2.1 \
-		libc-0.2.58 \
-		libflate-0.1.24 \
-		libloading-0.5.1 \
+		libc-0.2.59 \
+		libflate-0.1.25 \
+		libloading-0.5.2 \
 		libz-sys-1.0.25 \
 		line_drawing-0.7.0 \
 		linked-hash-map-0.5.2 \
 		lock_api-0.1.5 \
-		log-0.4.6 \
+		log-0.4.7 \
 		lzw-0.10.0 \
 		malloc_buf-0.0.6 \
 		matches-0.1.8 \
 		memchr-1.0.2 \
-		memchr-2.2.0 \
+		memchr-2.2.1 \
 		memmap-0.7.0 \
 		memoffset-0.2.1 \
 		mio-0.6.19 \
@@ -150,7 +152,6 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		num-rational-0.2.2 \
 		num-traits-0.2.8 \
 		num_cpus-1.10.1 \
-		numtoa-0.1.0 \
 		objc-0.2.6 \
 		objc-foundation-0.1.1 \
 		objc_id-0.1.1 \
@@ -171,15 +172,20 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		pkg-config-0.3.14 \
 		png-0.14.1 \
 		podio-0.1.6 \
+		ppv-lite86-0.2.5 \
 		proc-macro2-0.4.30 \
 		quick-error-1.2.2 \
 		quote-0.3.15 \
-		quote-0.6.12 \
+		quote-0.6.13 \
 		rand-0.6.5 \
+		rand-0.7.0 \
 		rand_chacha-0.1.1 \
+		rand_chacha-0.2.0 \
 		rand_core-0.3.1 \
 		rand_core-0.4.0 \
+		rand_core-0.5.0 \
 		rand_hc-0.1.0 \
+		rand_hc-0.2.0 \
 		rand_isaac-0.1.1 \
 		rand_jitter-0.1.4 \
 		rand_os-0.1.3 \
@@ -188,19 +194,19 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		rayon-1.1.0 \
 		rayon-core-1.5.0 \
 		rdrand-0.4.0 \
-		redox_syscall-0.1.54 \
-		redox_termios-0.1.1 \
+		redox_syscall-0.1.56 \
 		redox_users-0.3.0 \
 		regex-0.2.11 \
-		regex-1.1.7 \
+		regex-1.1.9 \
 		regex-syntax-0.5.6 \
-		regex-syntax-0.6.7 \
+		regex-syntax-0.6.8 \
 		remove_dir_all-0.5.2 \
+		rle-decode-fast-1.0.1 \
 		rustc-demangle-0.1.15 \
 		rustc_tools_util-0.2.0 \
 		rustc_version-0.2.3 \
 		rusttype-0.7.7 \
-		ryu-0.2.8 \
+		ryu-1.0.0 \
 		same-file-1.0.4 \
 		schannel-0.1.15 \
 		scoped_threadpool-0.1.9 \
@@ -211,7 +217,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		semver-parser-0.7.0 \
 		serde-1.0.94 \
 		serde_derive-1.0.94 \
-		serde_json-1.0.39 \
+		serde_json-1.0.40 \
 		serde_yaml-0.8.9 \
 		servo-fontconfig-0.4.0 \
 		servo-fontconfig-sys-4.0.7 \
@@ -225,6 +231,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		smithay-client-toolkit-0.6.3 \
 		smithay-clipboard-0.3.3 \
 		socket2-0.3.9 \
+		spin-0.5.0 \
 		spsc-buffer-0.1.1 \
 		stable_deref_trait-1.1.1 \
 		static_assertions-0.3.3 \
@@ -232,10 +239,10 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		strsim-0.8.0 \
 		syn-0.15.39 \
 		synstructure-0.10.2 \
-		tempfile-3.0.8 \
+		take_mut-0.2.2 \
+		tempfile-3.1.0 \
 		termcolor-1.0.5 \
 		terminfo-0.6.1 \
-		termion-1.5.3 \
 		textwrap-0.11.0 \
 		thread_local-0.3.6 \
 		tiff-0.2.2 \
@@ -249,7 +256,7 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 		url-1.7.2 \
 		utf8-ranges-1.0.3 \
 		utf8parse-0.1.1 \
-		vcpkg-0.2.6 \
+		vcpkg-0.2.7 \
 		vec_map-0.8.1 \
 		version_check-0.1.5 \
 		void-1.0.2 \
@@ -290,6 +297,8 @@ CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
 
 INSTALLATION_DIRS=	bin
 
+DEPENDS+=	xcb-[0-9]*:../../x11/xcb
+
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -310,4 +319,6 @@ do-install:
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
