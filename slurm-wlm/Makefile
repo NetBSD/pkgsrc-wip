@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2018/08/22 09:46:10 wiz Exp $
 
-DISTNAME=	slurm-18.08.3
-PKGNAME=	slurm-wlm-18.08.3
+DISTNAME=	slurm-18.08.8
+PKGNAME=	slurm-wlm-18.08.8
 CATEGORIES=	parallel
 MASTER_SITES=	http://download.schedmd.com/slurm/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/

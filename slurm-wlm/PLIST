@@ -330,6 +330,7 @@ share/doc/slurm-${PKGVERSION}/html/configurator.easy.html
 share/doc/slurm-${PKGVERSION}/html/configurator.html
 share/doc/slurm-${PKGVERSION}/html/cons_res.html
 share/doc/slurm-${PKGVERSION}/html/cons_res_share.html
+share/doc/slurm-${PKGVERSION}/html/containers.html
 share/doc/slurm-${PKGVERSION}/html/contributor.html
 share/doc/slurm-${PKGVERSION}/html/core_spec.html
 share/doc/slurm-${PKGVERSION}/html/core_spec_plugins.html
@@ -362,7 +363,6 @@ share/doc/slurm-${PKGVERSION}/html/hdf5_profile_user_guide.html
 share/doc/slurm-${PKGVERSION}/html/hdf5_task_attr.png
 share/doc/slurm-${PKGVERSION}/html/heterogeneous_jobs.html
 share/doc/slurm-${PKGVERSION}/html/high_throughput.html
-share/doc/slurm-${PKGVERSION}/html/ibm-pe.html
 share/doc/slurm-${PKGVERSION}/html/ibm_pe_fig1.png
 share/doc/slurm-${PKGVERSION}/html/ibm_pe_fig2.png
 share/doc/slurm-${PKGVERSION}/html/intel_knl.html
