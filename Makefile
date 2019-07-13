@@ -4251,6 +4251,7 @@ SUBDIR+=	quarkcoin
 SUBDIR+=	quex
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
+SUBDIR+=	quickjs
 SUBDIR+=	quiterss
 SUBDIR+=	qupzilla
 SUBDIR+=	qutebrowser
