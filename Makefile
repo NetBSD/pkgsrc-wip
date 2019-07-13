@@ -4309,6 +4309,7 @@ SUBDIR+=	rk
 SUBDIR+=	rmilter
 SUBDIR+=	rnc-mode
 SUBDIR+=	rng-tools
+SUBDIR+=	rnp
 SUBDIR+=	roadfighter
 SUBDIR+=	rocksdb
 SUBDIR+=	rolo
