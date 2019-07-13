@@ -9,11 +9,13 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bellard.org/quickjs/
 COMMENT=	Small and embeddable Javascript engine
-
 LICENSE=	mit
+
 USE_TOOLS=	gmake
 
 INSTALLATION_DIRS+=	bin lib/quickjs include/quickjs
+
+TEST_TARGET=	test
 
 post-extract:
 	cd ${WRKSRC}; \
