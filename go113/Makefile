@@ -2,8 +2,11 @@
 
 .include "../../lang/go/version.mk"
 
-DISTNAME=	go${GO112_VERSION}.src
-PKGNAME=	go112-${GO112_VERSION}
+# This should go into version.mk
+GO113_VERSION=	1.13beta1
+
+DISTNAME=	go${GO113_VERSION}.src
+PKGNAME=	go113-${GO113_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	gtar
@@ -13,12 +16,9 @@ HOMEPAGE=	http://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
 
-GOVERSSUFFIX=	112
+GOVERSSUFFIX=	113
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
-
-# uses ulimit -T
-# BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
