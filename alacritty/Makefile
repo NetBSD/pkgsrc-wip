@@ -301,8 +301,11 @@ DEPENDS+=	xcb-[0-9]*:../../x11/xcb
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 
+BUILD_DEPENDS+=			cmake-[0-9]*:../../devel/cmake
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		yes
+BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 #REPLACE_PYTHON+=		../vendor/xcb-0.8.2/rs-client.py
 #REPLACE_PYTHON+=		../vendor/xcb-0.8.2/build.rs
 
