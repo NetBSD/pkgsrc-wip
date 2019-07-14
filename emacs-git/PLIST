@@ -3023,8 +3023,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/vip.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vip.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/xesam.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/xesam.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/yow.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/yow.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-C.el.gz
@@ -3583,6 +3581,8 @@ share/emacs/${PKGVERSION}/lisp/site-init.el.gz
 share/emacs/${PKGVERSION}/lisp/site-init.elc
 share/emacs/${PKGVERSION}/lisp/skeleton.el.gz
 share/emacs/${PKGVERSION}/lisp/skeleton.elc
+share/emacs/${PKGVERSION}/lisp/so-long.el.gz
+share/emacs/${PKGVERSION}/lisp/so-long.elc
 share/emacs/${PKGVERSION}/lisp/sort.el.gz
 share/emacs/${PKGVERSION}/lisp/sort.elc
 share/emacs/${PKGVERSION}/lisp/soundex.el.gz
