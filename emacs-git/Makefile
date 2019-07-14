@@ -4,7 +4,7 @@
 DISTNAME=	emacs-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 PKGNAME=	emacs27-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 CATEGORIES=	editors
-GIT_REPO=	git://git.sv.gnu.org/emacs.git
+GIT_REPO=	git://git.savannah.gnu.org/emacs.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/emacs/
