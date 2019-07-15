@@ -27,7 +27,7 @@ post-extract:
 post-build:
 	${CAT} ${WRKSRC}/spl/sunxi-spl.bin ${WRKSRC}/u-boot.itb > ${WRKSRC}/u-boot-sunxi-with-spl.bin
 
-.include "../../sysutils/arm-trusted-firmware-sun50i_a64-crust/buildlink3.mk"
+.include "../../wip/arm-trusted-firmware-sun50i_a64-crust/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
 
 CHECK_PORTABILITY_SKIP+=tools/imx_cntr_image.sh

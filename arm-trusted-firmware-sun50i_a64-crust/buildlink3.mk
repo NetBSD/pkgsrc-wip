@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	arm-trusted-firmware-sun50i_a64-crust
 ARM_TRUSTED_FIRMWARE_SUN50I_A64_CRUST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.arm-trusted-firmware-sun50i_a64-crust+=	arm-trusted-firmware-sun50i_a64-crust>2.0
-BUILDLINK_PKGSRCDIR.arm-trusted-firmware-sun50i_a64-crust?=	../../sysutils/arm-trusted-firmware-sun50i_a64-crust
+BUILDLINK_PKGSRCDIR.arm-trusted-firmware-sun50i_a64-crust?=	../../wip/arm-trusted-firmware-sun50i_a64-crust
 .endif	# ARM_TRUSTED_FIRMWARE_SUN50I_A64_CRUST_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-arm-trusted-firmware-sun50i_a64-crust
