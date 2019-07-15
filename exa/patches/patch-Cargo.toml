@@ -1,15 +1,19 @@
 $NetBSD$
 
-Update git2 cargo crate to 0.7.5 so that builds work correctly
-in NetBSD.
+Remove openssl-sys and openssl-src dependencies since this is causing
+fetch failures of the cargo crate with pkgsrc's fetch mechanism.
 
---- Cargo.toml.orig	2019-05-25 00:25:16.395468845 +0000
+The vendored openssl seems to be an optional feature as of now.
+
+https://github.com/ogham/exa/commit/b767c211e9147112780d8ce5e4714a08fa778ba4
+
+--- Cargo.toml.orig	2019-07-15 03:28:09.967870073 +0000
 +++ Cargo.toml
-@@ -59,6 +59,6 @@ lto = true
- panic = "abort"
+@@ -56,7 +56,6 @@ datetime = "0.4.7"
+ [features]
+ default = [ "git" ]
+ git = [ "git2" ]
+-vendored-openssl = ["git2/vendored-openssl"]
  
- [dependencies.git2]
--version = "0.7"
-+version = "0.7.5"
- optional = true
- default-features = false
+ [profile.release]
+ opt-level = 3
