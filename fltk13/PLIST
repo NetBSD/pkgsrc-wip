@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/fltk-config
 bin/fluid
+include/FL/abi-version.h
 include/FL/Enumerations.H
 ${PLIST.cs}include/FL/Enumerations.h
 include/FL/Fl.H
@@ -247,7 +248,6 @@ include/FL/Fl_XBM_Image.H
 ${PLIST.cs}include/FL/Fl_XBM_Image.h
 include/FL/Fl_XPM_Image.H
 ${PLIST.cs}include/FL/Fl_XPM_Image.h
-include/FL/abi-version.h
 include/FL/dirent.h
 include/FL/filename.H
 ${PLIST.cs}include/FL/filename.h
