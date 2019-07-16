@@ -1,2 +1,0 @@
-* Fix Cg detection. The includes are not being buildlink'd for some reason;
-* Test wxGTK29 (wxUnicode) option after it's packaged;

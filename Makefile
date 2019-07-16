@@ -636,7 +636,6 @@ SUBDIR+=	docbook2mdoc
 SUBDIR+=	dogecoin
 SUBDIR+=	dokuwiki
 SUBDIR+=	dolfin
-SUBDIR+=	dolphin-emu
 SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
 SUBDIR+=	doomlegacy

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/05/13 00:23:02 othyro Exp $
-
-SHA1 (dolphin-3.5-src.zip) = 7e45ca9531746a34a73422b3ec9163203e915ad8
-RMD160 (dolphin-3.5-src.zip) = f515fc0ee228905838ac0903e6a89bad461f7aa6
-Size (dolphin-3.5-src.zip) = 28805192 bytes
-SHA1 (patch-CMakeLists.txt) = 7d2a7232343c3d3a00ace054f0009bf81bffc048
-SHA1 (patch-Source_Core_Common_Src_MemArena.cpp) = a795cd3e7b6250422a7af4826e0e5ce02ef78674
-SHA1 (patch-Source_Core_Core_Src_HW_BBA-TAP_TAP__Unix.cpp) = 0337188be00535f64ede7a3141b3875df969a11e
