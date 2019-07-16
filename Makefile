@@ -2042,7 +2042,6 @@ SUBDIR+=	lie
 SUBDIR+=	light-desktop
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
-SUBDIR+=	lightspark
 SUBDIR+=	lilypond-git
 SUBDIR+=	lilyterm
 SUBDIR+=	linbox
