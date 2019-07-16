@@ -1,0 +1,6 @@
+@comment $NetBSD$
+man/man8/usbgen.8
+sbin/usbctl
+sbin/usbdebug
+sbin/usbgen
+sbin/usbstats
