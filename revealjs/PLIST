@@ -2,12 +2,12 @@
 share/${PKGNAME}/.gitignore
 share/${PKGNAME}/.travis.yml
 share/${PKGNAME}/CONTRIBUTING.md
-share/${PKGNAME}/Gruntfile.js
 share/${PKGNAME}/LICENSE
 share/${PKGNAME}/README.md
 share/${PKGNAME}/bower.json
 share/${PKGNAME}/css/print/paper.css
 share/${PKGNAME}/css/print/pdf.css
+share/${PKGNAME}/css/reset.css
 share/${PKGNAME}/css/reveal.css
 share/${PKGNAME}/css/reveal.scss
 share/${PKGNAME}/css/theme/README.md
@@ -37,8 +37,10 @@ share/${PKGNAME}/css/theme/template/settings.scss
 share/${PKGNAME}/css/theme/template/theme.scss
 share/${PKGNAME}/css/theme/white.css
 share/${PKGNAME}/demo.html
+share/${PKGNAME}/gruntfile.js
 share/${PKGNAME}/index.html
 share/${PKGNAME}/js/reveal.js
+share/${PKGNAME}/lib/css/monokai.css
 share/${PKGNAME}/lib/css/zenburn.css
 share/${PKGNAME}/lib/font/league-gothic/LICENSE
 share/${PKGNAME}/lib/font/league-gothic/league-gothic.css
@@ -59,9 +61,9 @@ share/${PKGNAME}/lib/font/source-sans-pro/source-sans-pro-semibolditalic.eot
 share/${PKGNAME}/lib/font/source-sans-pro/source-sans-pro-semibolditalic.ttf
 share/${PKGNAME}/lib/font/source-sans-pro/source-sans-pro-semibolditalic.woff
 share/${PKGNAME}/lib/font/source-sans-pro/source-sans-pro.css
-share/${PKGNAME}/lib/js/classList.js
-share/${PKGNAME}/lib/js/head.min.js
 share/${PKGNAME}/lib/js/html5shiv.js
+share/${PKGNAME}/lib/js/promise.js
+share/${PKGNAME}/package-lock.json
 share/${PKGNAME}/package.json
 share/${PKGNAME}/plugin/highlight/highlight.js
 share/${PKGNAME}/plugin/markdown/example.html
@@ -81,6 +83,12 @@ share/${PKGNAME}/plugin/notes/notes.js
 share/${PKGNAME}/plugin/print-pdf/print-pdf.js
 share/${PKGNAME}/plugin/search/search.js
 share/${PKGNAME}/plugin/zoom-js/zoom.js
+share/${PKGNAME}/test/assets/external-script-a.js
+share/${PKGNAME}/test/assets/external-script-b.js
+share/${PKGNAME}/test/assets/external-script-c.js
+share/${PKGNAME}/test/assets/external-script-d.js
+share/${PKGNAME}/test/examples/assets/beeping.txt
+share/${PKGNAME}/test/examples/assets/beeping.wav
 share/${PKGNAME}/test/examples/assets/image1.png
 share/${PKGNAME}/test/examples/assets/image2.png
 share/${PKGNAME}/test/examples/barebones.html
@@ -91,6 +99,10 @@ share/${PKGNAME}/test/examples/slide-transitions.html
 share/${PKGNAME}/test/qunit-2.5.0.css
 share/${PKGNAME}/test/qunit-2.5.0.js
 share/${PKGNAME}/test/simple.md
+share/${PKGNAME}/test/test-dependencies-async.html
+share/${PKGNAME}/test/test-dependencies.html
+share/${PKGNAME}/test/test-grid-navigation.html
+share/${PKGNAME}/test/test-iframes.html
 share/${PKGNAME}/test/test-markdown-element-attributes.html
 share/${PKGNAME}/test/test-markdown-element-attributes.js
 share/${PKGNAME}/test/test-markdown-external.html
@@ -103,6 +115,8 @@ share/${PKGNAME}/test/test-markdown.html
 share/${PKGNAME}/test/test-markdown.js
 share/${PKGNAME}/test/test-pdf.html
 share/${PKGNAME}/test/test-pdf.js
+share/${PKGNAME}/test/test-plugins.html
+share/${PKGNAME}/test/test-state.html
 share/${PKGNAME}/test/test.html
 share/${PKGNAME}/test/test.js
-@pkgdir share/revealjs
+@pkgdir share/${PKGNAME}
