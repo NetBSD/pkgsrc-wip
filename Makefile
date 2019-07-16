@@ -2800,6 +2800,7 @@ SUBDIR+=	p6-zef
 SUBDIR+=	pack
 SUBDIR+=	packer
 SUBDIR+=	packman
+SUBDIR+=	packmol
 SUBDIR+=	pacman
 SUBDIR+=	pagetools
 SUBDIR+=	pal
