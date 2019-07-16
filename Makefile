@@ -3529,6 +3529,7 @@ SUBDIR+=	py-htmlparser
 SUBDIR+=	py-htseq
 SUBDIR+=	py-httpretty
 SUBDIR+=	py-hurry-filesize
+SUBDIR+=	py-hvac
 SUBDIR+=	py-hybridlfpy
 SUBDIR+=	py-hydrointerp
 SUBDIR+=	py-hyperbolic
