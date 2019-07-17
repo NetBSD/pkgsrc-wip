@@ -27,8 +27,8 @@
 # === Per-package variables ===
 #
 # BLAS_ACCEPTED
-#       This is a list of blas packages that are compatible with the current
-#       package. If not set, any package is OK.
+#   This is a list of blas packages that are compatible with the current
+#   package. If not set, any package is OK.
 #
 # === Variables for package Makefiles to use ===
 # 
