@@ -12,7 +12,6 @@ HOMEPAGE=	https://github.com/sharkdp/bat/
 COMMENT=	Clone of cat with syntax highlighting
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c
 
 CARGO_CRATE_DEPENDS+=	adler32-1.0.3
