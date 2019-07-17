@@ -4381,6 +4381,7 @@ SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runit
 SUBDIR+=	rust-bin
+SUBDIR+=	rust-bindgen
 SUBDIR+=	rygel
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
