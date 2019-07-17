@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	setuptools-rust-0.10.5
+DISTNAME=	setuptools-rust-0.10.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PyO3/}
