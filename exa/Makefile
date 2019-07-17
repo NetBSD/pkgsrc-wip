@@ -79,27 +79,23 @@ CARGO_CRATE_DEPENDS+=	wincolor-1.0.1
 CARGO_CRATE_DEPENDS+=	zoneinfo_compiled-0.4.8
 
 INSTALLATION_DIRS=	bin \
-			${PKGMANDIR}/man1
-
-EGDIR=			${PREFIX}/share/examples/exa
-
-CONF_FILES+=		${EGDIR}/completions.bash \
-			${PKG_SYSCONFDIR}/bash_completion.d/exa.bash
-CONF_FILES+=		${EGDIR}/completions.fish \
-			${PREFIX}/share/fish/completions/exa.fish
-CONF_FILES+=		${EGDIR}/completions.zsh \
-			${PREFIX}/share/zsh/site-functions/_exa
+			${PKGMANDIR}/man1 \
+			share/bash-completion/completions \
+			share/fish/vendor_completions.d \
+			share/zsh/site-functions
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
 
 do-install:
-	${MKDIR} ${DESTDIR}${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/exa ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/contrib/man/exa.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/contrib/completions.bash ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/contrib/completions.fish ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/contrib/completions.zsh ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/completions.bash \
+			${DESTDIR}${PREFIX}/share/bash-completion/completions/exa
+	${INSTALL_DATA} ${WRKSRC}/contrib/completions.fish \
+			${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/exa.fish
+	${INSTALL_DATA} ${WRKSRC}/contrib/completions.zsh \
+			${DESTDIR}${PREFIX}/share/zsh/site-functions/_exa
 
 
 .include "../../lang/rust/cargo.mk"
