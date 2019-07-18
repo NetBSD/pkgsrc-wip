@@ -6,7 +6,6 @@
 DISTNAME=	ncurses-${NC_VERS}
 ABI?=		32
 PKGNAME=	compat${ABI}_${DISTNAME}
-LIBABISUFFIX?=	/32
 NC_VERS=	6.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/}
@@ -22,7 +21,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config tbl
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib${LIBABISUFFIX}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--enable-bsdpad
 CONFIGURE_ARGS+=	--enable-overwrite
