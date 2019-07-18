@@ -1,22 +1,14 @@
-# $NetBSD: Makefile,v 1.152 2019/01/09 19:09:02 adam Exp $
+# $NetBSD: Makefile,v 1.48 2013/08/31 18:41:33 adam Exp $
 
-ORIGINAL_PACKAGE=       ../../graphics/giflib
+.include "Makefile.common"
 
-ABI?=           	32
-ORIGINALPKG!=		make -C ${ORIGINAL_PACKAGE}	
-PKGNAME=		compat${ABI}_giflib-5.1.4
+COMMENT=	GIF image format library
 
-# XXX make a definition for netbsd archs.
-LIBABISUFFIX?=          /32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
-CFLAGS+=                -m32
+CONFLICTS+=	libungif-[0-9]*
 
-remove-non-libraries:
-	echo "Removing non-compat library package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -o -type f -exec ${RM} {} +
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
+CFLAGS+=		-m32
+BUILD_DIRS=	lib
+INSTALL_DIRS=	lib
 
-post-install: remove-non-libraries
-
-GENERATE_PLIST= ${SED} -n '/^lib/ s;lib;lib${LIBABISUFFIX};p' ${ORIGINAL_PACKAGE}/PLIST;
-
-.include "${ORIGINAL_PACKAGE}/Makefile"
+.include "../../mk/bsd.pkg.mk"
