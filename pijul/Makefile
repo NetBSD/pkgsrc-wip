@@ -118,7 +118,7 @@ CARGO_CRATE_DEPENDS+=	memmap-0.7.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.2.1
 CARGO_CRATE_DEPENDS+=	memsec-0.5.4
 CARGO_CRATE_DEPENDS+=	mime-0.3.13
-#CARGO_CRATE_DEPENDS+=	mime_guess-2.0.0-alpha.6
+CARGO_CRATE_DEPENDS+=	mime_guess-2.0.0-alpha.6
 CARGO_CRATE_DEPENDS+=	miniz-sys-0.1.11
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.2.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide_c_api-0.2.1
@@ -282,6 +282,8 @@ CARGO_CRATE_DEPENDS+=	yasna-0.1.3
 INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+MAKE_ENV+=		SODIUM_LIB_DIR=${BUILDLINK_PREFIX.libsodium:Q}
+#MAKE_ENV+=		SODIUM_STATIC
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
@@ -291,5 +293,6 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
