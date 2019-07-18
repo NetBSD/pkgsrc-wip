@@ -354,6 +354,7 @@ SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	caprice32
 SUBDIR+=	cardpeek
+SUBDIR+=	cargo-audit
 SUBDIR+=	caribou
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
