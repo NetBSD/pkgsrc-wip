@@ -8,7 +8,7 @@ PKGNAME=	xfce4-wm-4.12.5
 CATEGORIES=	wm
 MASTER_SITES+=	http://archive.xfce.org/src/xfce/xfwm4/4.12/
 
-HOMEPAGE=	http://docs.xfce.org/xfce/xfwm4/start
+HOMEPAGE=	https://docs.xfce.org/xfce/xfwm4/start
 COMMENT=	Xfce window manager
 
 .include "../../devel/libwnck/buildlink3.mk"
