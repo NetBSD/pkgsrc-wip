@@ -4769,6 +4769,7 @@ SUBDIR+=	treeviewx
 SUBDIR+=	trelby
 SUBDIR+=	triangle
 SUBDIR+=	triforceafl
+SUBDIR+=	triforcenetbsdsyscallfuzzer
 SUBDIR+=	trimadap
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2

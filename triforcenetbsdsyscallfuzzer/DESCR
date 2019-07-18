@@ -1,0 +1,3 @@
+TriforceAFL is a modified version of AFL that supports fuzzing using QEMU's
+full system emulation. TriforceNetBSDSyscallFuzzer will be a syscall fuzzer
+for NetBSD built on top of TriforceAFL.
