@@ -1,22 +1,29 @@
-# $NetBSD: Makefile,v 1.152 2019/01/09 19:09:02 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/01/15 10:54:46 markd Exp $
 
-ORIGINAL_PACKAGE=       ../../graphics/lcms2
+DISTNAME=	lcms2-2.9
+ABI=		32
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/}
+PKGNAME=	compat${ABI}_${DISTNAME}
 
-ABI?=           	32
-ORIGINALPKG!=		make -C ${ORIGINAL_PACKAGE}	
-PKGNAME=		compat${ABI}_lcms2-2.9
+MAINTAINER=	gdt@NetBSD.org
+HOMEPAGE=	http://www.littlecms.com/
+COMMENT=	Little Color Management System - a color management library
+LICENSE=	mit
 
-# XXX make a definition for netbsd archs.
-LIBABISUFFIX?=          /32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
-CFLAGS+=                -m32
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+TEST_TARGET=		check
+CFLAGS+=		-m32
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 
-remove-non-libraries:
-	echo "Removing non-compat library package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -o -type f -exec ${RM} {} +
 
-post-install: remove-non-libraries
+# lcms does not need zlib, but will look for it and link it to tifficc
+# if present.  Therefore, we don't enjoin lcms from finding zlib, but
+# don't include it via bl3.
 
-GENERATE_PLIST= ${SED} -n '/^lib/ s;lib;lib${LIBABISUFFIX};p' ${ORIGINAL_PACKAGE}/PLIST;
+PKGCONFIG_OVERRIDE=	lcms2.pc.in
 
-.include "${ORIGINAL_PACKAGE}/Makefile"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../wip/tiff-32/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

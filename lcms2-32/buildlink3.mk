@@ -7,7 +7,8 @@ COMPAT32_LCMS2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_lcms2+=	compat32_lcms2>=2.2
 BUILDLINK_PKGSRCDIR.compat32_lcms2?=	../../wip/lcms2-32
-BUILDLINK_LIBDIRS.compat32_lcms2=	lib/32
+BUILDLINK_LIBDIRS.compat32_lcms2=	emul/netbsd32/lib
+BUILDLINK_INCDIRS.compat32_lcms2=	emul/netbsd32/include
 
 BUILDLINK_TARGETS+=	buildlink-include-compat32_lcms2
 
