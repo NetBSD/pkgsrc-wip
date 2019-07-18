@@ -9,9 +9,10 @@ BUILDLINK_API_DEPENDS.compat32_libxml2+=	compat32_libxml2>=2.6.2
 BUILDLINK_ABI_DEPENDS.compat32_libxml2+=	compat32_libxml2>=2.8.0nb2
 #BUILDLINK_PKGSRCDIR.compat32_libxml2?=		../../textproc/compat32_libxml2
 BUILDLINK_PKGSRCDIR.compat32_libxml2?=		../../wip/libxml2-32/
-BUILDLINK_LIBDIRS.compat32_libxml2=		lib/32
+BUILDLINK_LIBDIRS.compat32_libxml2=		emul/netbsd32/lib
+BUILDLINK_INCDIRS.compat32_libxml2=		emul/netbsd32/include
 
-BUILDLINK_FILES.compat32_libxml2+=		bin/xml2-config
+BUILDLINK_FILES.compat32_libxml2+=		emul/netbsd32/bin/xml2-config
 
 USE_FEATURES+=		glob
 
