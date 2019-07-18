@@ -8,7 +8,8 @@ COMPAT32_PNG_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.compat32_png+=	compat32_png>=1.2.4
 BUILDLINK_ABI_DEPENDS.compat32_png+=	compat32_png>=1.6.0nb1
 BUILDLINK_PKGSRCDIR.compat32_png?=	../../wip/png-32
-BUILDLINK_LIBDIRS.compat32_png=		lib/32
+BUILDLINK_LIBDIRS.compat32_png=		emul/netbsd32/lib
+BUILDLINK_INCDIRS.compat32_png=		emul/netbsd32/include
 
 # keep this in sync with the same code in Makefile
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"

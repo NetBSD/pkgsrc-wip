@@ -3,7 +3,6 @@
 DISTNAME=	libpng-1.6.37
 ABI?=		32
 PKGNAME=	compat${ABI}_${DISTNAME:S/lib//}
-LIBABISUFFIX?=	/32
 CATEGORIES=	graphics
 MASTER_SITES=	https://ftp-osl.osuosl.org/pub/libpng/src/archive/xz/libpng16/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/}
@@ -19,11 +18,8 @@ CFLAGS+=		-m32
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 # do not create libpng.la
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib${LIBABISUFFIX}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--disable-unversioned-links
-CONFIGURE_ARGS+=	--bindir=${PREFIX}/lib/${LIBABISUFFIX}
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/lib/${LIBABISUFFIX}
-GNU_CONFIGURE_MANDIR=	${PREFIX}/lib/${LIBABISUFFIX}
 # but do install png.h outside include/libpng$VERSION for now
 # until pkgsrc is fixed to use libpng-config or the pc file everywhere
 INSTALL_TARGET=		install install-header-links
