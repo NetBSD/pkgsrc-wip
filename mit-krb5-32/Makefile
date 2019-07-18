@@ -12,10 +12,7 @@ HOMEPAGE=	http://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
 
 MAKE_JOBS_SAFE=		no
-LIBABISUFFIX?=		/32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
-#CONFIGURE_ARGS+=        --bindir=${PREFIX}/lib${LIBABISUFFIX}
-#CONFIGURE_ARGS+=        --includedir=${PREFIX}/lib${LIBABISUFFIX}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CFLAGS+=                -m32
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -64,7 +61,7 @@ INFO_FILES=		YES
 
 OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
-#RCD_SCRIPTS=		kadmind kdc
+RCD_SCRIPTS=		kadmind kdc
 
 INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 			${PKGMANDIR}/man1 ${PKGMANDIR}/man5		\
@@ -78,20 +75,12 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 pre-configure:
 	cd ${WRKSRC} && autoconf -I ${WRKSRC} -f
 
-# pre-install:
-# 	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} \
-# 	-prune -o -type f -exec ${RM} {} +
-
-remove-non-libs:
-	echo "Removing non-compat lib package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -or -type f -exec ${RM} {} +
-
-post-install: remove-non-libs
-	# cd ${WRKDIR}/${DISTNAME}/doc;					\
-	# for f in *.info *.info-[0-9]*; do				\
-	# 	${TEST} ! -f "$$f" ||					\
-	# 	${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
-	# done
+post-install:
+	cd ${WRKDIR}/${DISTNAME}/doc;					\
+	for f in *.info *.info-[0-9]*; do				\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
+	done
 
 BUILDLINK_API_DEPENDS.openssl+= openssl>=1.0.1
 .include "../../security/openssl/buildlink3.mk"

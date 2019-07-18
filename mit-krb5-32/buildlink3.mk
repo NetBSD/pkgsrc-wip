@@ -7,7 +7,7 @@ MIT_KRB5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_mit-krb5+=	compat32_mit-krb5>=1.4
 BUILDLINK_PKGSRCDIR.compat32_mit-krb5?=		../../wip/mit-krb5-32
-BUILDLINK_LIBDIRS.compat32_mit-krb5=		lib/32
+BUILDLINK_LIBDIRS.compat32_mit-krb5=		${PREFIX}/emul/netbsd32/lib
 .endif # MIT_KRB5_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-compat32_mit-krb5
