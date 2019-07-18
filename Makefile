@@ -1227,7 +1227,6 @@ SUBDIR+=	gqrx
 SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-gsm
 SUBDIR+=	gr-osmosdr-git
-SUBDIR+=	grafX2
 SUBDIR+=	grandr
 SUBDIR+=	graphmonkey
 SUBDIR+=	grass

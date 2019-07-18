@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (grafX2-2.4.tar.gz) = 42d6ff41a756bbcfb6b30386aab816539d0f3fbc
-RMD160 (grafX2-2.4.tar.gz) = ac77f23fab86c5df9c0ab77964e81295371a874f
-SHA512 (grafX2-2.4.tar.gz) = 357d3f9f6b1f2f05130686d57590f00e8327db2f6d04c8ea8e5879a2d9824f612d77123cbcb08788d6aac9effacf1aa96043000cf6b667952d738aaf69d78642
-Size (grafX2-2.4.tar.gz) = 1632859 bytes
-SHA1 (patch-realpath.c) = c3e9a36e0edac36aea5cc51e80fc8bceae0f1cce
-SHA1 (patch-setup.c) = 8cc104558fb7b5d261d749a793d95786bbfbe3f9
