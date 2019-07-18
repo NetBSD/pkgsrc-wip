@@ -16,25 +16,18 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-LIBABISUFFIX?=          /32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
 CFLAGS+=                -m32
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
-#CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
-CONFIGURE_ARGS+=        --with-docdir=${PREFIX}/lib${LIBABISUFFIX}
 CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
-CONFIGURE_ARGS+=	--bindir=${PREFIX}/lib/${LIBABISUFFIX}
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/lib/${LIBABISUFFIX}
-#CONFIGURE_ARGS+=	--mandir=${PREFIX}/lib/${LIBABISUFFIX}
-GNU_CONFIGURE_MANDIR=	${PREFIX}/lib/${LIBABISUFFIX}
 
 PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
 TEST_TARGET=		check
 
 post-install:
-	cd ${DESTDIR}/${PREFIX}/lib/${LIBABISUFFIX}/man3 && for file in *.3tiff; do\
+	cd ${DESTDIR}/${PREFIX}/emul/netbsd32/man/man3 && for file in *.3tiff; do\
 		target=`${ECHO} $$file | sed "s/3tiff/3/"`; \
 		${MV} $$file $$target; \
 	done

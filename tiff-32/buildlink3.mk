@@ -8,7 +8,8 @@ COMPAT32_TIFF_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.compat32_tiff+=	compat32_tiff>=3.6.1
 BUILDLINK_ABI_DEPENDS.compat32_tiff+=	compat32_tiff>=4.0.3nb5
 BUILDLINK_PKGSRCDIR.compat32_tiff?=	../../wip/tiff-32
-BUILDLINK_LIBDIRS.compat32_tiff=	lib/32
+BUILDLINK_LIBDIRS.compat32_tiff=	emul/netbsd32/lib
+BUILDLINK_INCDIRS.compat32_tiff=	emul/netbsd32/include
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
