@@ -6,9 +6,6 @@ ABI=		32
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/
 MASTER_SITES+=	ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/
 EXTRACT_SUFX=	.tar.bz2
-LIBABISUFFIX?=          /32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
-CFLAGS+=                -m32
 
 PKGNAME=	compat${ABI}_${DISTNAME}
 MAINTAINER=	minskim@NetBSD.org
@@ -20,6 +17,9 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+CFLAGS+=                -m32
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/emul/netbsd32/share/
 INFO_FILES=		yes
 TEST_TARGET=		check
 
@@ -35,11 +35,11 @@ CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
 LIBS+=	-lrt
 .endif
 
-remove non-libraries:
+remove non-libs-headers:
 	echo "Removing non-compat lib package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -or -type f -exec ${RM} {} +
+	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/emul -prune -or -type f -exec ${RM} {} +
 
-post-install: remove non-libraries
+post-install: remove non-libs-headers
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
