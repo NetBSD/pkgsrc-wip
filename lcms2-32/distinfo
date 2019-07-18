@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: distinfo,v 1.9 2019/01/15 10:54:46 markd Exp $
 
 SHA1 (lcms2-2.9.tar.gz) = 60bea9875e017dd1c466e988c2ad98f8766e4e55
 RMD160 (lcms2-2.9.tar.gz) = 0003ffd3561e6ed787be81b5ed7b7af52211fe19
