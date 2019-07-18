@@ -1,6 +1,21 @@
 @comment $NetBSD$
-lib/32/libgpg-error.la
-lib/32/pkgconfig/gpg-error.pc
+emul/netbsd32/bin/gpg-error
+emul/netbsd32/bin/gpg-error-config
+emul/netbsd32/bin/gpgrt-config
+emul/netbsd32/bin/yat2m
+emul/netbsd32/include/gpg-error.h
+emul/netbsd32/include/gpgrt.h
+emul/netbsd32/info/gpgrt.info
+emul/netbsd32/lib/libgpg-error.la
+emul/netbsd32/lib/pkgconfig/gpg-error.pc
+emul/netbsd32/man/man1/gpgrt-config.1
+emul/netbsd32/share/aclocal/gpg-error.m4
+emul/netbsd32/share/aclocal/gpgrt.m4
+emul/netbsd32/share/common-lisp/source/gpg-error/gpg-error-codes.lisp
+emul/netbsd32/share/common-lisp/source/gpg-error/gpg-error-package.lisp
+emul/netbsd32/share/common-lisp/source/gpg-error/gpg-error.asd
+emul/netbsd32/share/common-lisp/source/gpg-error/gpg-error.lisp
+emul/netbsd32/share/libgpg-error/errorref.txt
 @pkgdir share/locale/zh_TW/LC_MESSAGES
 @pkgdir share/locale/zh_CN/LC_MESSAGES
 @pkgdir share/locale/vi/LC_MESSAGES
@@ -21,9 +36,3 @@ lib/32/pkgconfig/gpg-error.pc
 @pkgdir share/locale/de/LC_MESSAGES
 @pkgdir share/locale/da/LC_MESSAGES
 @pkgdir share/locale/cs/LC_MESSAGES
-@pkgdir share/libgpg-error
-@pkgdir share/common-lisp/source/gpg-error
-@pkgdir share/aclocal
-@pkgdir man/man1
-@pkgdir include
-@pkgdir bin
