@@ -701,6 +701,7 @@ SUBDIR+=	efl121
 SUBDIR+=	efltk
 SUBDIR+=	eic
 SUBDIR+=	eina-musicplayer
+SUBDIR+=	ekermit
 SUBDIR+=	ekg2
 SUBDIR+=	ekiga
 SUBDIR+=	electricsheep
