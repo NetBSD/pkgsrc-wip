@@ -10,4 +10,4 @@ X Error: BadDrawable (invalid Pixmap or Window parameter) 9
   Resource id:  0x0
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2017-12778
+  CVE-2017-12778, CVE-2019-13640
