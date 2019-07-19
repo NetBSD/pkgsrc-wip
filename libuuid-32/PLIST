@@ -1,0 +1,22 @@
+@comment $NetBSD$
+emul/netbsd32/bin/uuidgen
+emul/netbsd32/include/uuid/uuid.h
+emul/netbsd32/lib/libuuid.la
+emul/netbsd32/lib/pkgconfig/uuid.pc
+emul/netbsd32/man/man1/uuidgen.1
+emul/netbsd32/man/man3/uuid.3
+emul/netbsd32/man/man3/uuid_clear.3
+emul/netbsd32/man/man3/uuid_compare.3
+emul/netbsd32/man/man3/uuid_copy.3
+emul/netbsd32/man/man3/uuid_generate.3
+emul/netbsd32/man/man3/uuid_generate_random.3
+emul/netbsd32/man/man3/uuid_generate_time.3
+emul/netbsd32/man/man3/uuid_generate_time_safe.3
+emul/netbsd32/man/man3/uuid_is_null.3
+emul/netbsd32/man/man3/uuid_parse.3
+emul/netbsd32/man/man3/uuid_time.3
+emul/netbsd32/man/man3/uuid_unparse.3
+@pkgdir emul/netbsd32/share/bash-completion/completions
+@pkgdir emul/netbsd32/sbin
+@pkgdir emul/netbsd32/man/man8
+@pkgdir emul/netbsd32/man/man5
