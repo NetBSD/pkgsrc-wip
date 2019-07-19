@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	getdns.pc.in
 PKGCONFIG_OVERRIDE+=	getdns_ext_event.pc.in
 
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
