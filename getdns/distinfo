@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (getdns-1.5.0.tar.gz) = 2bc8b1a0ea80793a1c29f8fec5518df97828a3a5
-RMD160 (getdns-1.5.0.tar.gz) = 28f3707846f8e5f7d0fea03cca9a0a3466497e07
-SHA512 (getdns-1.5.0.tar.gz) = 1e6d492aec56dd83535ddc2fe0611be8f2c8370776493e3a2bc55c38a38f53b05279b70d4e427bb122ea7d6c05c73161689020d7f9efcd34628d2ef1d0ccce9b
-Size (getdns-1.5.0.tar.gz) = 1073488 bytes
+SHA1 (getdns-1.5.2.tar.gz) = c1284d789f6a77f0d8016848a0d7d79b8df79f07
+RMD160 (getdns-1.5.2.tar.gz) = 85ce46a88273dbe6c38f73acc5a4d15a7c4a6392
+SHA512 (getdns-1.5.2.tar.gz) = 42e56264578f59e94d0a7315cd9cb1720f24c7a9abbaa09e1b42c274d15d1082ad4a036fa3c10573cf4d0ee6d868b6fcedf3a7cd64b53bdabd9d45542e479ca4
+Size (getdns-1.5.2.tar.gz) = 1091088 bytes

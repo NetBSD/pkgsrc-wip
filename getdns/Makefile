@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	getdns-1.5.0
+DISTNAME=	getdns-1.5.2
 CATEGORIES=	net
-MASTER_SITES=	https://getdnsapi.net/releases/getdns-1-5-0/
+MASTER_SITES=	https://getdnsapi.net/dist/
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://getdnsapi.net/
