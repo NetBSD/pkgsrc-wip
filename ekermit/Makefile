@@ -2,11 +2,11 @@
 
 DISTNAME=	ek16
 PKGNAME=	ekermit-${DISTNAME:S/ek//}
-CATEGORIES=	wip
+CATEGORIES=	sysutils
 MASTER_SITES=	http://www.columbia.edu/kermit/ftp/ek/tar/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://www.columbia.edu/kermit/ek.html
 COMMENT=	Implementation of the Kermit file transfer protocol
 LICENSE=	modified-bsd
