@@ -2,7 +2,7 @@
 
 DISTNAME=	ek16
 PKGNAME=	ekermit-${DISTNAME:S/ek//}
-CATEGORIES=	sysutils
+CATEGORIES=	comms
 MASTER_SITES=	http://www.columbia.edu/kermit/ftp/ek/tar/
 EXTRACT_SUFX=	.tar
 
