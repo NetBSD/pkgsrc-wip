@@ -5,9 +5,8 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/
 EXTRACT_SUFX=	.tar.bz2
 ABI=		32
-LIBABISUFFIX?=          /32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
 CFLAGS+=                -m32
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 
 PKGNAME=	compat${ABI}_${DISTNAME}
 
@@ -68,12 +67,6 @@ SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.13
-
-remove-non-libraries:
-	echo "Removing non-compat lib package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -or -type f -exec ${RM} {} +
-
-post-install: remove-non-libraries
 
 .include "../../wip/libgpg-error-32/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
