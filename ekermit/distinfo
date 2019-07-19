@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (ek16.tar) = f47bed8dc170eae7c953b260b59928ba7175dc1f
+RMD160 (ek16.tar) = 55ccb05dae82d33ab247715062c8b2b552e8f2f2
+SHA512 (ek16.tar) = 01ca9949cab1871c27fe45f8820f9abf1c0e4bb324c266a2500fc84af875f89975676d197f3695b0467c245d2bc246a931b4e507d3eb3d0b2663c9e365a5264c
+Size (ek16.tar) = 122880 bytes
+SHA1 (patch-main.c) = 5f91f8de4499cbf465887e614a00fbddae319419
+SHA1 (patch-unixio.c) = 377fe94e4f9b41e6a4a37d137f10f154b1dadfde
