@@ -14,14 +14,13 @@ COMMENT=	Font rendering engine and library API
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
-LIBABISUFFIX?=		/32
 USE_TOOLS+=		grep gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		builds/unix
 CFLAGS+=		-m32
 BUILD_DIRS=		.
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib${LIBABISUFFIX}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/emul/netbsd32/lib/freetype2
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-harfbuzz=no
 CONFIGURE_ENV+=		ac_cv_path_GREP=${GREP:Q} ac_cv_path_EGREP=${EGREP:Q}

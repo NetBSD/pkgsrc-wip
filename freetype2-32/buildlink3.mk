@@ -8,10 +8,10 @@ COMPAT32_FREETYPE2_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.compat32_freetype2+=	compat32_freetype2>=2.4.5
 BUILDLINK_ABI_DEPENDS.compat32_freetype2+=	compat32_freetype2>=2.4.11
 BUILDLINK_PKGSRCDIR.compat32_freetype2?=	../../wip/freetype2-32
-BUILDLINK_INCDIRS.compat32_freetype2?=		include/freetype2
-BUILDLINK_LIBDIRS.compat32_freetype2?=		lib/32
+BUILDLINK_INCDIRS.compat32_freetype2?=		emul/netbsd32/include
+BUILDLINK_LIBDIRS.compat32_freetype2?=		emul/netbsd32/lib/freetype2
 
-BUILDLINK_FILES.compat32_freetype2+=	bin/freetype-config
+BUILDLINK_FILES.compat32_freetype2+=	emul/netbsd32/bin/freetype-config
 
 FREETYPE_CONFIG?=	${BUILDLINK_PREFIX.freetype2}/bin/freetype-config
 CONFIGURE_ENV+=		FREETYPE_CONFIG=${FREETYPE_CONFIG:Q}
