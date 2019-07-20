@@ -3779,7 +3779,6 @@ SUBDIR+=	py-owslib
 SUBDIR+=	py-p4
 SUBDIR+=	py-paegan
 SUBDIR+=	py-pafy
-SUBDIR+=	py-paho-mqtt
 SUBDIR+=	py-paida
 SUBDIR+=	py-pam
 SUBDIR+=	py-pandoc
