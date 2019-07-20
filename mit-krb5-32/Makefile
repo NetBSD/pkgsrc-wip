@@ -12,7 +12,6 @@ HOMEPAGE=	http://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
 
 MAKE_JOBS_SAFE=		no
-GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CFLAGS+=                -m32
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -26,7 +25,9 @@ CONFLICTS+=	kth-krb4-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+PREFIX32=		emul/netbsd32
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/${PREFIX32}
 USE_TOOLS+=		autoconf gzip m4 msgfmt perl
 .if ${OPSYS} == "SunOS"
 USE_TOOLS+=		bison
@@ -61,16 +62,19 @@ INFO_FILES=		YES
 
 OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
-RCD_SCRIPTS=		kadmind kdc
+#RCD_SCRIPTS=		kadmind kdc
 
-INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
-			${PKGMANDIR}/man1 ${PKGMANDIR}/man5		\
-			${PKGMANDIR}/man7 ${PKGMANDIR}/man8		\
-			sbin share/examples/krb5 share/et		\
-			share/examples/rc.d share/gnats			\
-			lib/32/krb5/plugins/kdb lib/32/krb5/plugins/preauth	\
-			lib/32/krb5/plugins/tls include/krb5 include/kadm5 \
-			lib/32/pkgconfig
+INSTALLATION_DIRS=	${PREFIX32}/bin ${PREFIX32}/include/gssapi ${PREFIX32}/include/gssrpc   \				 ${PREFIX32}/info ${PREFIX32}/man/man1 ${PREFIX32}/man/man5		 \
+			${PREFIX32}/man/man7 ${PREFIX32}/man/man8 ${PREFIX32}/sbin		       	\
+			${PREFIX32}/share/examples/krb5			                       	\
+			${PREFIX32}/share/et							\
+			${PREFIX32}/share/examples/rc.d						\
+			${PREFIX32}/share/gnats							\
+			${PREFIX32}/lib/krb5/plugins/kdb 					\
+			${PREFIX32}/lib/krb5/plugins/preauth					\
+			${PREFIX32}/lib/krb5/plugins/tls					\
+			${PREFIX32}/include/krb5 ${PREFIX32}/include/kadm5 			\
+			${PREFIX32}/lib/pkgconfig
 
 pre-configure:
 	cd ${WRKSRC} && autoconf -I ${WRKSRC} -f
@@ -79,7 +83,7 @@ post-install:
 	cd ${WRKDIR}/${DISTNAME}/doc;					\
 	for f in *.info *.info-[0-9]*; do				\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
+		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PREFIX32}/info; \
 	done
 
 BUILDLINK_API_DEPENDS.openssl+= openssl>=1.0.1
