@@ -21,14 +21,16 @@ CFLAGS+=		-m32
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--with-default-fonts=${LOCALBASE}/share/fonts/X11
-CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
-CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-baseconfigdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-cache-dir=${VARBASE}/cache/fontconfig
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/emul/netbsd32/lib/fontconfig
 CONFIGURE_ARGS+=	--enable-docs
+CONFIGURE_ARGS+=	--x-includes=${PREFIX}/emul/netbsd/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/emul/netbsd/lib
 CONFIGURE_ENV+=		HASDOCBOOK=no
 
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
+_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/emul/netbsd32/lib/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
 
 PKG_SYSCONFSUBDIR=	fontconfig
 
@@ -64,12 +66,13 @@ SUBST_STAGE.prefix=	post-build
 SUBST_FILES.prefix=	conf.d/README
 SUBST_VARS.prefix=	PREFIX
 
-EGDIR=		${PREFIX}/share/examples/fontconfig
-CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
-CONF_FILES+=	${EGDIR}/conf.d/README ${PKG_SYSCONFDIR}/conf.d/README
+PKG_SYSCONFDIR32 = ${PREFIX}/emul/netbsd32/etc
+EGDIR=		${PREFIX}/emul/netbsd32/share/examples/fontconfig
+CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR32}/fonts.conf
+CONF_FILES+=	${EGDIR}/conf.d/README ${PKG_SYSCONFDIR32}/conf.d/README
 
-TMPLDIR=	${PREFIX}/share/fontconfig/conf.avail
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
+TMPLDIR=	${PREFIX}/emul/netbsd32/share/fontconfig/conf.avail
+MAKE_DIRS+=	${PKG_SYSCONFDIR32}/emul/conf.d
 # following list from ${WRKSRC}/conf.d/Makefile.am
 FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	10-hinting-medium.conf 10-hinting-none.conf 10-hinting-slight.conf \
@@ -79,9 +82,9 @@ FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf \
 	80-delicious.conf 90-synthetic.conf
 # pkgsrc addition
-FC_STDCONF+=	30-pkgsrc-aliases.conf
+#FC_STDCONF+=	30-pkgsrc-aliases.conf
 .for f in ${FC_STDCONF}
-CONF_FILES+=	${TMPLDIR}/${f} ${PKG_SYSCONFDIR}/conf.d/${f}
+CONF_FILES+=	${TMPLDIR}/${f} ${PKG_SYSCONFDIR32}/conf.d/${f}
 .endfor
 
 MAKE_DIRS+=	${VARBASE}/cache
@@ -107,5 +110,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 .include "../../wip/freetype2-32/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
+.include "../../wip/compat80-x11/buildlink3.mk"
+.include "../../wip/expat-32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
