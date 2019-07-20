@@ -1,0 +1,12 @@
+@comment $NetBSD$
+emul/netbsd32/bin/xmlwf
+emul/netbsd32/include/expat.h
+emul/netbsd32/include/expat_config.h
+emul/netbsd32/include/expat_external.h
+emul/netbsd32/lib/libexpat.la
+emul/netbsd32/lib/pkgconfig/expat.pc
+emul/netbsd32/man/man1/xmlwf.1
+emul/netbsd32/share/doc/expat/AUTHORS
+emul/netbsd32/share/doc/expat/changelog
+share/doc/expat/reference.html
+share/doc/expat/style.css
