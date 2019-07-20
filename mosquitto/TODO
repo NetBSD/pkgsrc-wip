@@ -1,7 +1,0 @@
-* get patches integrated upstream
-
-* rewrite -ldl patch
-
-* check and perhaps remove -lrt patch
-
-* run the tests on make test
