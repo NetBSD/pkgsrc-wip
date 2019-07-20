@@ -13,24 +13,24 @@ BUILDLINK_LIBDIRS.compat32_freetype2?=		emul/netbsd32/lib/freetype2
 
 BUILDLINK_FILES.compat32_freetype2+=	emul/netbsd32/bin/freetype-config
 
-FREETYPE_CONFIG?=	${BUILDLINK_PREFIX.freetype2}/bin/freetype-config
+FREETYPE_CONFIG?=	${BUILDLINK_PREFIX.freetype2}/emul/netbsd32/bin/freetype-config
 CONFIGURE_ENV+=		FREETYPE_CONFIG=${FREETYPE_CONFIG:Q}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
-# pkgbase := freetype2
-# .include "../../mk/pkg-build-options.mk"
+pkgbase := compat32_freetype2
+.include "../../mk/pkg-build-options.mk"
 
-# .if !empty(PKG_BUILD_OPTIONS.freetype2:Mpng)
-# CHECK_BUILTIN.freetype2:=	yes
-# .include "../../graphics/freetype2/builtin.mk"
-# CHECK_BUILTIN.freetype2:=	no
+.if !empty(PKG_BUILD_OPTIONS.compat32_freetype2:Mpng)
+CHECK_BUILTIN.compat32_freetype2:=	yes
+.include "../../wip/freetype2-32/builtin.mk"
+CHECK_BUILTIN.compat32_freetype2:=	no
 
-# .  if empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
-# .    include "../../graphics/png/buildlink3.mk"
-# .  endif
-# .endif
+.  if empty(USE_BUILTIN.compat32_freetype2:M[yY][eE][sS])
+.    include "../../wip/png-32/buildlink3.mk"
+.  endif
+.endif
 
 .endif # COMPAT32_FREETYPE2_BUILDLINK3_MK
 
