@@ -485,6 +485,7 @@ emul/netbsd32/share/fontconfig/conf.avail/11-lcdfilter-light.conf
 emul/netbsd32/share/fontconfig/conf.avail/20-unhint-small-vera.conf
 emul/netbsd32/share/fontconfig/conf.avail/25-unhint-nonlatin.conf
 emul/netbsd32/share/fontconfig/conf.avail/30-metric-aliases.conf
+emul/netbsd32/share/fontconfig/conf.avail/30-pkgsrc-aliases.conf
 emul/netbsd32/share/fontconfig/conf.avail/40-nonlatin.conf
 emul/netbsd32/share/fontconfig/conf.avail/45-generic.conf
 emul/netbsd32/share/fontconfig/conf.avail/45-latin.conf
