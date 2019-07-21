@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
 WINE32_ARGS+=		--x-libraries=${PREFIX}/emul/netbsd32/lib
 WINE32_ARGS+=		--with-wine64=${BUILD64}
-WINE32_ARGS+=		--libdir=${PREFIX}/lib/32
+WINE32_ARGS+=		--libdir=${PREFIX}/emul/netbsd32/lib/wine
 WINE64_ARGS+=		--enable-win64
 WINE64_ARGS+=		--libdir=${PREFIX}/lib
 WINE32_ENV+=		CFLAGS+=-m32
@@ -27,16 +27,19 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
-NOT_PAX_MPROTECT_SAFE+= bin/wine64
+NOT_PAX_MPROTECT_SAFE+=	bin/wine64
 
 BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
+#_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/emul/netbsd32/lib/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
 
 post-extract:
 	${MKDIR} ${BUILD32}
 	${MKDIR} ${BUILD64}
 
 pre-configure:
+	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*fontconfig*" -maxdepth 1 -type l -delete && find ./pkgconfig/ -name "*fontconfig.pc*" -type l -delete
+	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete && find ./pkgconfig/ -name "*freetype2.pc*" -type l -delete
 	cd ${WRKSRC} && autoconf
 
 do-configure:
@@ -56,6 +59,7 @@ do-install:
 .include "../../wip/lcms2-32/buildlink3.mk"
 .include "../../wip/png-32/buildlink3.mk"
 .include "../../wip/tiff-32/buildlink3.mk"
+.include "../../wip/fontconfig-32/buildlink3.mk"
 #.include "../../security/gnutls/buildlink3.mk"
 .include "../../wip/mit-krb5-32/buildlink3.mk"
 #.include "../../sysutils/desktop-file-utils/desktopdb.mk"
