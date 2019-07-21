@@ -8,11 +8,10 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
+GNU_CONFIGURE_PREFIX=   ${PREFIX}/emul/netbsd32/
+CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.compat32_libxml2}
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--with-html-subdir=libxslt
-LIBABISUFFIX?=          /32
-CONFIGURE_ARGS+=        --libdir=${PREFIX}/lib${LIBABISUFFIX}
 CFLAGS+=                -m32
 
 PKGCONFIG_OVERRIDE=	libxslt.pc.in
@@ -27,12 +26,6 @@ CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
-
-remove non-libraries:
-	echo "Removing non-compat library package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/lib${LIBABISUFFIX} -prune -o -type f -exec ${RM} {} +
-
-post-install: remove non-libraries
 
 .include "../../wip/libgcrypt-32/buildlink3.mk"
 .include "../../wip/libgpg-error-32/buildlink3.mk"
