@@ -20,13 +20,14 @@ USE_TOOLS+=		gmake pkg-config msgfmt
 CFLAGS+=		-m32
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
-CONFIGURE_ARGS+=	--with-default-fonts=${LOCALBASE}/share/fonts/X11
-CONFIGURE_ARGS+=	--with-baseconfigdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-default-fonts=${PREFIX}/emul/netbsd32/share/fonts/X11
+CONFIGURE_ARGS+=        --with-expat-includes=${PREFIX}/emul/netbsd32/include
+CONFIGURE_ARGS+=        --with-expat-lib=${PREFIX}/emul/netbsd32/lib
+CONFIGURE_ARGS+=	--with-baseconfigdir=${PREFIX}/emul/netbsd32/etc
 CONFIGURE_ARGS+=	--with-cache-dir=${VARBASE}/cache/fontconfig
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/emul/netbsd32/lib/fontconfig
 CONFIGURE_ARGS+=	--enable-docs
-CONFIGURE_ARGS+=	--x-includes=${PREFIX}/emul/netbsd/include
-CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/emul/netbsd/lib
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/emul/netbsd32/lib
 CONFIGURE_ENV+=		HASDOCBOOK=no
 
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
@@ -48,9 +49,9 @@ SUBST_SED.visibility+=		-e 's/, visibility("default")//g'
 
 .include "../../mk/bsd.prefs.mk"
 
-ADDFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts,${PREFIX}/share/fonts/X11
+ADDFONTS=	${PREFIX}/emul/netbsd32/share/fonts/urw,${PREFIX}/emul/netbsd32/share/ghostscript/fonts,${PREFIX}/emul/netbsd32/share/fonts/X11
 .if ${X11BASE} != ${LOCALBASE}
-ADDFONTS:=	${X11BASE}/lib/X11/fonts,${ADDFONTS}
+ADDFONTS:=	${PREFIX}/emul/netbsd32/lib/X11/fonts,${ADDFONTS}
 .else
 ADDFONTS:=	${LOCALBASE}/share/fonts/X11,${ADDFONTS}
 .endif
@@ -72,7 +73,7 @@ CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR32}/fonts.conf
 CONF_FILES+=	${EGDIR}/conf.d/README ${PKG_SYSCONFDIR32}/conf.d/README
 
 TMPLDIR=	${PREFIX}/emul/netbsd32/share/fontconfig/conf.avail
-MAKE_DIRS+=	${PKG_SYSCONFDIR32}/emul/conf.d
+MAKE_DIRS+=	${PKG_SYSCONFDIR32}/conf.d
 # following list from ${WRKSRC}/conf.d/Makefile.am
 FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	10-hinting-medium.conf 10-hinting-none.conf 10-hinting-slight.conf \
@@ -82,7 +83,7 @@ FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf \
 	80-delicious.conf 90-synthetic.conf
 # pkgsrc addition
-#FC_STDCONF+=	30-pkgsrc-aliases.conf
+FC_STDCONF+=	30-pkgsrc-aliases.conf
 .for f in ${FC_STDCONF}
 CONF_FILES+=	${TMPLDIR}/${f} ${PKG_SYSCONFDIR32}/conf.d/${f}
 .endfor
@@ -98,9 +99,10 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 
 pre-configure:
 	-cd ${BUILDLINK_X11_DIR:Q} && ${FIND} . -path "*fontconfig*" -type l -delete
+	-cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete
 
 post-install:
-#	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
+	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
