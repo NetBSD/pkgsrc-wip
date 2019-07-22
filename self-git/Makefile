@@ -15,7 +15,18 @@ USE_CMAKE=	yes
 
 BUILDLINK_TRANSFORM+=	rm:-O2
 
+CFLAGS+=	-I/usr/X11R7/include
+CXXFLAGS+=	-I/usr/X11R7/include
+
 .include "../../wip/mk/git-package.mk"
 
-.include "../../x11/libX11/buildlink3.mk"
+USE_X11=yes
+
+X11_LDFLAGS+=   ${COMPILER_RPATH_FLAG}${PREFIX}/emul/netbsd32/lib
+X11_LDFLAGS+=   -L${PREFIX}/emul/netbsd32/lib
+
+BUILTIN_INCLUDE_DIRS+=	-I/usr/X11/include/
+
+.include "../../wip/compat80-x11/buildlink3.mk"
+#.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

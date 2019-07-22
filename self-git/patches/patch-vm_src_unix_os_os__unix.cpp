@@ -2,7 +2,17 @@ $NetBSD$
 
 --- vm/src/unix/os/os_unix.cpp.orig	2019-07-22 01:11:46.000000000 +0000
 +++ vm/src/unix/os/os_unix.cpp
-@@ -195,6 +195,17 @@ void OS::init() {
+@@ -44,6 +44,9 @@
+                       zero_fd, 0)) 
+         return desiredAddress;
+         
++#ifdef __NetBSD__
++#define memalign aligned_alloc
++#endif
+       char* b = (char*)memalign(align, size);
+       if (b == NULL && mustAllocate)  allocate_failed(name);
+       return b;     
+@@ -195,6 +198,17 @@ void OS::init() {
    len = sizeof(mem_size);
    sysctl(mib, 2, &mem_size, &len, NULL, 0);
    real_mem_size = mem_size;
@@ -20,7 +30,7 @@ $NetBSD$
  # elif TARGET_OS_VERSION == LINUX_VERSION
    real_mem_size = 0x40000000; // punt for now
  # else
-@@ -348,7 +359,8 @@ bool OS::setup_snapshot_to_run(const cha
+@@ -348,7 +362,8 @@ bool OS::setup_snapshot_to_run(const cha
  void OS::set_log_buf(FILE* f, char* buf, int bs) {    
  # if  TARGET_OS_VERSION == SOLARIS_VERSION \
    ||  TARGET_OS_VERSION ==  MACOSX_VERSION \
@@ -30,7 +40,7 @@ $NetBSD$
    setvbuf(f, buf, _IOFBF, bs);
    
  # elif  TARGET_OS_VERSION == SUNOS_VERSION
-@@ -403,7 +415,8 @@ bool OS::get_swap_space_info(int &totalK
+@@ -403,7 +418,8 @@ bool OS::get_swap_space_info(int &totalK
  
  # elif  TARGET_OS_VERSION ==  SUNOS_VERSION \
      ||  TARGET_OS_VERSION == MACOSX_VERSION \
@@ -40,7 +50,7 @@ $NetBSD$
  
  bool OS::get_swap_space_info(int &, int &) {
    return false;
-@@ -559,7 +572,7 @@ int OS::min_core(caddr_t addr, size_t le
+@@ -559,7 +575,7 @@ int OS::min_core(caddr_t addr, size_t le
      normal_access((char*)0, (char*)~0);
    }
  
@@ -49,7 +59,7 @@ $NetBSD$
    void OS::setPageAdvisory(char *start, char *end, int code) {
      if (end - start < OS::dont_bother) return;
      char *ps= real_page_start(start);
-@@ -843,7 +856,8 @@ void OS::check_events() { 
+@@ -843,7 +859,8 @@ void OS::check_events() { 
  
  # if  TARGET_OS_VERSION == SOLARIS_VERSION \
    ||  TARGET_OS_VERSION ==  MACOSX_VERSION \
