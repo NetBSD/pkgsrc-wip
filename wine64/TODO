@@ -1,5 +1,7 @@
+* Double-check the `+=' usage in CFLAGS+= and X11_LDFLAGS+= in WINE32_ENV
+  definition
+* --x-libraries is passed via WINE32_ARGS, why X11_LDFLAGS is also passed via
+  WINE32_ENV, could it be handled via configure arguments as well?
 * We need to export LD_LIBRARY_PATH=/usr/pkg/emul/netbsd32/lib owing
   to X11 32-bit libs from compat80-x11 not linking against libxcb.so
   in ${PREFIX}/emul/netbsd32/lib.
-  
-
