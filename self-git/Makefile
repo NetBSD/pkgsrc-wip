@@ -5,7 +5,7 @@ CATEGORIES=	lang
 GIT_REPO=	http://github.com/russellallen/self.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rui314/8cc/
+HOMEPAGE=	http://www.selflanguage.org/
 COMMENT=	Prototype-based dynamic object-oriented programming language
 LICENSE=	# BSD
 
