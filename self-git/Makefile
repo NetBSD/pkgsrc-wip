@@ -13,5 +13,9 @@ USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
 
+BUILDLINK_TRANSFORM+=	rm:-O2
+
 .include "../../wip/mk/git-package.mk"
+
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

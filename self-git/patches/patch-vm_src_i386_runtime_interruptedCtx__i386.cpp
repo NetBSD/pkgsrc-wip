@@ -27,7 +27,7 @@ $NetBSD$
  
 +  # elif TARGET_OS_VERSION == NETBSD_VERSION
 +
-+    greg_t *gregs = ic->scp->uc_mcontext.__gregs;
++    __greg_t *gregs = ic->scp->uc_mcontext.__gregs;
 +    lprintf("eax       = 0x%x\n", gregs[_REG_EAX]);
 +    lprintf("ebx       = 0x%x\n", gregs[_REG_EBX]);
 +    lprintf("ecx       = 0x%x\n", gregs[_REG_ECX]);
