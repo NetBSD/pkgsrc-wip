@@ -1,8 +1,21 @@
 $NetBSD$
 
-SHA1 (patch-vm_cmake_netbsd.cmake) = b124b0d960c1ae73927e262176d52c9a50ef23da
-SHA1 (patch-vm_cmake_platform.cmake) = 390b55a1fecd0263c1c9eb7c2fa9aec8edd7dc9b
-SHA1 (patch-vm_src_unix_os_os__includes__unix.hh) = be0a5cd0a1328c84a7a4fc5415553aa2b680699a
-SHA1 (patch-vm_src_unix_os_os__unix.cpp) = f41ce3619a5b4fe89887a435a80c2ad740b4c926
-SHA1 (patch-vm_src_unix_os_os__unix.hh) = afc4d067f5737af892ef72b75342d2bb62dc3b4f
-SHA1 (patch-vm_src_unix_os_sig__unix.hh) = 2d0beed746b8568582a91277e2891d949e7f6395
+SHA1 (patch-vm_cmake_netbsd.cmake) = 5d6ccfb3d81a02090273cf5eae32771232f75325
+SHA1 (patch-vm_cmake_platform.cmake) = d286abe3036d6a91ecc4ce8784bcca8625066da5
+SHA1 (patch-vm_src_any_asm_asm.cpp) = 2e2c871392bad61f2d628457952431f9419e37b9
+SHA1 (patch-vm_src_any_fast__compiler_fcompiler.hh) = a335f367fd06e86b1c8ae3e4bc6ef0d8b8f99375
+SHA1 (patch-vm_src_any_runtime_allocation.cpp) = 2c3b7e31681f86e0f8ed3c9983cba476673564b5
+SHA1 (patch-vm_src_any_runtime_config.hh) = c0f472dfd418633ffc0cee8e8dba9feed354a7c8
+SHA1 (patch-vm_src_any_runtime_uncommonBranch.cpp) = abe1da1784b33b15b3e01798bf593796a0d17e76
+SHA1 (patch-vm_src_i386_runtime_interruptedCtx__i386.cpp) = 052d1ae22dfd3e08a34e23b3463afc9ae4e32a2f
+SHA1 (patch-vm_src_i386_runtime_runtime__i386.hh) = 1506e59e2e0fc4369317fdd74bb77f91c64aaec5
+SHA1 (patch-vm_src_unix_os_errorCodes__unix.cpp) = c5cb8f7ca2da40aca5dc56440f1d917d3c2faa95
+SHA1 (patch-vm_src_unix_os_itimer__unix.cpp) = e3f5e5abf9b62e69cf2b99b8846436af4309886f
+SHA1 (patch-vm_src_unix_os_os__includes__unix.hh) = 0d2c6898b2aee70d3425cb7ed7c75124523b03bd
+SHA1 (patch-vm_src_unix_os_os__unix.cpp) = 016c0c42da6d81afa77ebfb779ac1561a491eef6
+SHA1 (patch-vm_src_unix_os_os__unix.hh) = 0822df62ebd9c879fd96ffda669afe71343c49d8
+SHA1 (patch-vm_src_unix_os_sig__unix.cpp) = a62733df62c355be7b1b210298cdee6bddedf23e
+SHA1 (patch-vm_src_unix_os_sig__unix.hh) = 0179a4af82a0c15219d68033ec1ce0735b8d9001
+SHA1 (patch-vm_src_unix_prims_unixPrims.cpp) = ca010b6985bad6b86e6c774c0d3e161e8f97e8ed
+SHA1 (patch-vm_src_unix_runtime_machineCache__unix.cpp) = aa50bfbfd0c2829a3cf2281ffc829d2d40a4ea95
+SHA1 (patch-vm_src_unix_runtime_monitorPieces__unix.cpp) = d96b2f22b9e0034cbf3c5c312b46b443f478104d

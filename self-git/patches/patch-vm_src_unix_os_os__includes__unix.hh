@@ -1,6 +1,6 @@
 $NetBSD$
 
---- vm/src/unix/os/os_includes_unix.hh.orig	2019-07-21 22:47:42.000000000 +0000
+--- vm/src/unix/os/os_includes_unix.hh.orig	2019-07-22 01:11:46.000000000 +0000
 +++ vm/src/unix/os/os_includes_unix.hh
 @@ -41,7 +41,7 @@ extern "C" { 
  }

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- vm/src/unix/os/sig_unix.hh.orig	2019-07-21 22:47:42.000000000 +0000
+--- vm/src/unix/os/sig_unix.hh.orig	2019-07-22 01:11:46.000000000 +0000
 +++ vm/src/unix/os/sig_unix.hh
 @@ -42,7 +42,8 @@
  // So we use common code for both platforms as much as possible. -mabdelmalek 10/02

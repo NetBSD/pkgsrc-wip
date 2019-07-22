@@ -1,6 +1,6 @@
 $NetBSD$
 
---- vm/cmake/platform.cmake.orig	2019-07-21 22:47:42.000000000 +0000
+--- vm/cmake/platform.cmake.orig	2019-07-22 01:11:46.000000000 +0000
 +++ vm/cmake/platform.cmake
 @@ -53,6 +53,15 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "(Solar
    set(platform_name "Solaris")  

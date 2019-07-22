@@ -1,6 +1,6 @@
 $NetBSD$
 
---- vm/cmake/netbsd.cmake.orig	2019-07-21 23:10:42.764519867 +0000
+--- vm/cmake/netbsd.cmake.orig	2019-07-22 01:27:52.029840778 +0000
 +++ vm/cmake/netbsd.cmake
 @@ -0,0 +1,58 @@
 +#!/usr/bin/env cmake
@@ -59,5 +59,5 @@ $NetBSD$
 +#
 +macro(include_prefix_header target file)
 +  # "super"
-+  include_prefix_header_common(${target} ${file})
++#  include_prefix_header_common(${target} ${file})
 +endmacro()

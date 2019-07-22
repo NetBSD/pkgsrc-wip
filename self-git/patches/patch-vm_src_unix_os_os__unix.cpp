@@ -1,6 +1,6 @@
 $NetBSD$
 
---- vm/src/unix/os/os_unix.cpp.orig	2019-07-21 22:47:42.000000000 +0000
+--- vm/src/unix/os/os_unix.cpp.orig	2019-07-22 01:11:46.000000000 +0000
 +++ vm/src/unix/os/os_unix.cpp
 @@ -195,6 +195,17 @@ void OS::init() {
    len = sizeof(mem_size);
