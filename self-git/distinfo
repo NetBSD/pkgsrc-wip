@@ -1,2 +1,8 @@
 $NetBSD$
 
+SHA1 (patch-vm_cmake_netbsd.cmake) = b124b0d960c1ae73927e262176d52c9a50ef23da
+SHA1 (patch-vm_cmake_platform.cmake) = 390b55a1fecd0263c1c9eb7c2fa9aec8edd7dc9b
+SHA1 (patch-vm_src_unix_os_os__includes__unix.hh) = be0a5cd0a1328c84a7a4fc5415553aa2b680699a
+SHA1 (patch-vm_src_unix_os_os__unix.cpp) = f41ce3619a5b4fe89887a435a80c2ad740b4c926
+SHA1 (patch-vm_src_unix_os_os__unix.hh) = afc4d067f5737af892ef72b75342d2bb62dc3b4f
+SHA1 (patch-vm_src_unix_os_sig__unix.hh) = 2d0beed746b8568582a91277e2891d949e7f6395
