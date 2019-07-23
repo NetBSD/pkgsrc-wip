@@ -68,6 +68,6 @@ SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.13
 
-.include "../../wip/libgpg-error-32/buildlink3.mk"
+.include "../../wip/compat32_libgpg-error/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
