@@ -14,7 +14,7 @@ HOMEPAGE=	http://giflib.sourceforge.net/
 LICENSE=	mit
 
 #PATCHDIR=	${.CURDIR}/../../graphics/giflib/patches
-DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
+DISTINFO_FILE=	${.CURDIR}/../../wip/compat32_giflib/distinfo
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
