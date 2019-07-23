@@ -12,7 +12,6 @@ HOMEPAGE=	http://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
 
 MAKE_JOBS_SAFE=		no
-CFLAGS+=                -m32
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
