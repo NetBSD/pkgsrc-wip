@@ -35,7 +35,6 @@ ${PLIST.xatracker}include/xa_tracker.h
 @comment ${PLIST.vaapi}lib/dri/gallium_drv_video.so
 ${PLIST.i915}lib/dri/i915_dri.so
 ${PLIST.i965}lib/dri/i965_dri.so
-${PLIST.iris}lib/dri/iris_dri.so
 @comment ${PLIST.ilo}lib/dri/ilo_dri.so
 ${PLIST.freedreno}lib/dri/kgsl_dri.so
 ${PLIST.swrast}lib/dri/kms_swrast_dri.so
@@ -61,7 +60,7 @@ lib/libGL.so.1.2.0
 @comment ${PLIST.glesv1}lib/libGLESv1_CM.la
 ${PLIST.glesv1}lib/libGLESv1_CM.so
 ${PLIST.glesv1}lib/libGLESv1_CM.so.1
-${PLIST.glesv1}lib/libGLESv1_CM.so.1.1.0
+${PLIST.glesv1}lib/libGLESv1_CM.so.1.0.0
 @comment ${PLIST.glesv2}lib/libGLESv2.la
 ${PLIST.glesv2}lib/libGLESv2.so
 ${PLIST.glesv2}lib/libGLESv2.so.2
@@ -90,7 +89,7 @@ lib/libglapi.so.0.0.0
 @comment ${PLIST.xatracker}lib/libxatracker.la
 ${PLIST.xatracker}lib/libxatracker.so
 ${PLIST.xatracker}lib/libxatracker.so.2
-${PLIST.xatracker}lib/libxatracker.so.2.5.0
+${PLIST.xatracker}lib/libxatracker.so.2.4.0
 ${PLIST.dri}lib/pkgconfig/dri.pc
 ${PLIST.egl}lib/pkgconfig/egl.pc
 ${PLIST.gbm}lib/pkgconfig/gbm.pc
@@ -100,7 +99,7 @@ ${PLIST.glesv1}lib/pkgconfig/glesv1_cm.pc
 ${PLIST.glesv2}lib/pkgconfig/glesv2.pc
 ${PLIST.wayland}lib/pkgconfig/wayland-egl.pc
 ${PLIST.xatracker}lib/pkgconfig/xatracker.pc
-@comment ${PLIST.vdpau}lib/vdpau/libvdpau_gallium.so
+${PLIST.vdpau}lib/vdpau/libvdpau_gallium.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
 ${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0

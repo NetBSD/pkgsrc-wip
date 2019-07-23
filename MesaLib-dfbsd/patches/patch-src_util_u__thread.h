@@ -7,7 +7,9 @@ From FreeBSD ports / DragonFly dports
 - Implement setting thread name
 - Use monotonic clock for timeouts
 
---- src/util/u_thread.h.orig	2019-03-15 01:02:19.000000000 +0000
+https://reviews.freebsd.org/D17872
+
+--- src/util/u_thread.h.orig	2019-04-05 10:53:23.000000000 +0000
 +++ src/util/u_thread.h
 @@ -34,6 +34,13 @@
  
@@ -23,16 +25,18 @@ From FreeBSD ports / DragonFly dports
  #endif
  
  static inline thrd_t u_thread_create(int (*routine)(void *), void *param)
-@@ -65,6 +72,8 @@ static inline void u_thread_setname( con
+@@ -64,6 +71,10 @@ static inline void u_thread_setname( con
        (__GLIBC__ >= 3 || (__GLIBC__ == 2 && __GLIBC_MINOR__ >= 12)) && \
        defined(__linux__)
     pthread_setname_np(pthread_self(), name);
 +#  elif defined(__DragonFly__) || defined(__FreeBSD__)
 +   pthread_set_name_np(pthread_self(), name);
++#  elif defined(__NetBSD__)
++   pthread_setname_np(pthread_self(), "%s", (void*)name);
  #  endif
  #endif
     (void)name;
-@@ -84,6 +93,17 @@ static inline void
+@@ -83,6 +94,17 @@ static inline void
  util_pin_thread_to_L3(thrd_t thread, unsigned L3_index, unsigned cores_per_L3)
  {
  #if defined(HAVE_PTHREAD_SETAFFINITY)
@@ -50,7 +54,7 @@ From FreeBSD ports / DragonFly dports
     cpu_set_t cpuset;
  
     CPU_ZERO(&cpuset);
-@@ -91,6 +111,7 @@ util_pin_thread_to_L3(thrd_t thread, uns
+@@ -90,6 +112,7 @@ util_pin_thread_to_L3(thrd_t thread, uns
        CPU_SET(L3_index * cores_per_L3 + i, &cpuset);
     pthread_setaffinity_np(thread, sizeof(cpuset), &cpuset);
  #endif
@@ -58,7 +62,7 @@ From FreeBSD ports / DragonFly dports
  }
  
  /**
-@@ -104,6 +125,35 @@ static inline int
+@@ -103,6 +126,35 @@ static inline int
  util_get_L3_for_pinned_thread(thrd_t thread, unsigned cores_per_L3)
  {
  #if defined(HAVE_PTHREAD_SETAFFINITY)
@@ -94,7 +98,7 @@ From FreeBSD ports / DragonFly dports
     cpu_set_t cpuset;
  
     if (pthread_getaffinity_np(thread, sizeof(cpuset), &cpuset) == 0) {
-@@ -124,6 +174,7 @@ util_get_L3_for_pinned_thread(thrd_t thr
+@@ -123,6 +175,7 @@ util_get_L3_for_pinned_thread(thrd_t thr
        return L3_index;
     }
  #endif
@@ -102,7 +106,7 @@ From FreeBSD ports / DragonFly dports
     return -1;
  }
  
-@@ -135,7 +186,7 @@ util_get_L3_for_pinned_thread(thrd_t thr
+@@ -134,7 +187,7 @@ util_get_L3_for_pinned_thread(thrd_t thr
  static inline int64_t
  u_thread_get_time_nano(thrd_t thread)
  {

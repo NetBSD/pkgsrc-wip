@@ -2,8 +2,8 @@ $NetBSD: patch-src_mesa_drivers_dri_i965_intel__tiled__memcpy.c,v 1.1 2018/10/07
 
 From wip/MesaLib 13.0.1.
 
---- src/intel/isl/isl_tiled_memcpy.c.orig	2019-04-12 23:16:58.000000000 +0000
-+++ src/intel/isl/isl_tiled_memcpy.c
+--- src/mesa/drivers/dri/i965/intel_tiled_memcpy.c.orig	2019-02-18 18:28:16.000000000 +0000
++++ src/mesa/drivers/dri/i965/intel_tiled_memcpy.c
 @@ -64,6 +64,11 @@ ror(uint32_t n, uint32_t d)
     return (n >> d) | (n << (32 - d));
  }

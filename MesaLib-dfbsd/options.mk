@@ -11,8 +11,8 @@ PKG_SUPPORTED_OPTIONS+=		glesv1 glesv2
 PKG_SUPPORTED_OPTIONS+=		xa
 PKG_SUPPORTED_OPTIONS+=		asm
 PKG_SUPPORTED_OPTIONS+=		noatexit
-PKG_SUPPORTED_OPTIONS+=		iris
-PKG_SUGGESTED_OPTIONS+=		iris
+# PKG_SUPPORTED_OPTIONS+=		iris
+# PKG_SUGGESTED_OPTIONS+=		iris
 PKG_SUPPORTED_OPTIONS+=		vulkan
 
 PKG_SUPPORTED_OPTIONS+=		test_dri3_enable
@@ -34,9 +34,6 @@ PKG_SUPPORTED_OPTIONS+=		revert_copy_clear
 
 PKG_SUPPORTED_OPTIONS+=		no_getprogramname
 PKG_SUPPORTED_OPTIONS+=		strict_xsrc_netbsd
-
-PKG_SUPPORTED_OPTIONS+=		x86_tsd_openbsd
-PKG_SUPPORTED_OPTIONS+=		no_linear_alloc_destructor
 
 PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
@@ -89,17 +86,17 @@ PKG_SUGGESTED_OPTIONS+=		test_dri3_enable
 .endif
 
 # Revert patch removing support for no dedicated render nodes
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=		no_render_node
 .endif
 
 # Use clock_nanosleep() in os_time.c
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=		use_clock_nanosleep_os_time
 .endif
 
 # pthread_getcpuclockid only in NetBSD 8+
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=		use_pthread_getcpuclockid
 .endif
 
@@ -113,9 +110,10 @@ PKG_SUGGESTED_OPTIONS+=		revert_sdma_uploader
 PKG_SUGGESTED_OPTIONS+=		require_36_gen4
 .endif
 
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=		physmem_netbsd
-.endif
+# Option used in pkgsrc NetBSD but not xsrc
+# .if ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+=		physmem_netbsd
+# .endif
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		setaffinity_np_netbsd
@@ -131,21 +129,12 @@ PKG_SUGGESTED_OPTIONS+=		revert_threaded_context
 PKG_SUGGESTED_OPTIONS+=		revert_copy_clear
 .endif
 
-# .if ${OPSYS} == "NetBSD"
-# PKG_SUGGESTED_OPTIONS+=		no_getprogramname
-# .endif
-
-# .if ${OPSYS} == "NetBSD"
-# PKG_SUGGESTED_OPTIONS+=		strict_xsrc_netbsd
-# .endif
-
-# OpenBSD xenocara tsd dispatch assembly for entry_x86_tsd.h
-.if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=		x86_tsd_openbsd
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		no_getprogramname
 .endif
 
-.if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=		no_linear_alloc_destructor
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		strict_xsrc_netbsd
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -268,16 +257,16 @@ DRI_DRIVERS+=		i965
 .endif
 
 # Intel Iris support
-.if !empty(PKG_OPTIONS:Miris)
-GALLIUM_DRIVERS+=	iris
-PLIST.iris=		yes
-.endif
+# .if !empty(PKG_OPTIONS:Miris)
+# GALLIUM_DRIVERS+=	iris
+# PLIST.iris=		yes
+# .endif
 
 # Vulkan support
 .if !empty(PKG_OPTIONS:Mvulkan)
 # VULKAN_DRIVERS+=	intel
 # VULKAN_DRIVERS+=	radeon
-VULKAN_DRIVERS+=	auto
+VULKAN_DRIVERS+=	auto	
 PLIST.vulkan=		yes
 .endif
 
@@ -336,14 +325,14 @@ DRI_DRIVERS+=		nouveau
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-platforms=x11
-MESON_ARGS+=		-Dplatforms=x11
+MESON_ARGS+=	-Dplatforms=x11
 #.elif ${OPSYS} == "Linux"
 #.include "../../wip/wayland/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-platforms=x11,drm,wayland
 #PLIST.wayland=		yes
 .else
 CONFIGURE_ARGS+=	--with-platforms=x11,drm
-MESON_ARGS+=		-Dplatforms=x11,drm
+MESON_ARGS+=	-Dplatforms=x11,drm
 .endif
 
 .if !empty(PKG_OPTIONS:Mllvm)
@@ -372,10 +361,10 @@ MESON_ARGS+=	-Dgallium-vdpau=false
 # XA is useful for accelerating xf86-video-vmware
 .if !empty(PKG_OPTIONS:Mxa)
 CONFIGURE_ARGS+=	--enable-xa
-MESON_ARGS+=		-Dgallium-xa=true
+MESON_ARGS+=	-Dgallium-xa=true
 PLIST.xatracker=	yes
 .else
-MESON_ARGS+=		-Dgallium-xa=false
+MESON_ARGS+=	-Dgallium-xa=false
 .endif
 
 # AMD Radeon r300
@@ -522,12 +511,4 @@ CPPFLAGS+=	-DNO_GETPROGRAMNAME
 
 .if !empty(PKG_OPTIONS:Mstrict_xsrc_netbsd)
 CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
-.endif
-
-.if !empty(PKG_OPTIONS:Mx86_tsd_openbsd)
-CPPFLAGS+=	-DX86_TSD_OPENBSD
-.endif
-
-.if !empty(PKG_OPTIONS:Mno_linear_alloc_destructor)
-CPPFLAGS+=	-DNO_LINEAR_ALLOC_DESTRUCTOR
 .endif

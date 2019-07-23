@@ -1,8 +1,8 @@
 $NetBSD$
 
---- meson.build.orig	2019-03-15 01:02:19.000000000 +0000
+--- meson.build.orig	2019-04-05 10:53:23.000000000 +0000
 +++ meson.build
-@@ -50,6 +50,7 @@ with_tests = get_option('build-tests')
+@@ -53,6 +53,7 @@ with_tests = get_option('build-tests')
  with_valgrind = get_option('valgrind')
  with_libunwind = get_option('libunwind')
  with_asm = get_option('asm')
@@ -22,7 +22,7 @@ $NetBSD$
  if with_glx != 'disabled'
    if not (with_platform_x11 and with_any_opengl)
      error('Cannot build GLX support without X11 platform support and at least one OpenGL API')
-@@ -1011,7 +1015,7 @@ foreach h : ['xlocale.h', 'sys/sysctl.h'
+@@ -1008,7 +1012,7 @@ foreach h : ['xlocale.h', 'sys/sysctl.h'
    endif
  endforeach
  
@@ -31,7 +31,7 @@ $NetBSD$
    if cc.has_function(f)
      pre_args += '-DHAVE_@0@'.format(f.to_upper())
    endif
-@@ -1094,11 +1098,28 @@ else
+@@ -1091,11 +1095,28 @@ else
    dep_clock = cc.find_library('rt')
  endif
  
@@ -61,3 +61,11 @@ $NetBSD$
    pre_args += '-DHAVE_PTHREAD'
    if cc.has_function(
        'pthread_setaffinity_np',
+@@ -1220,6 +1241,7 @@ if _llvm != 'false'
+       with_gallium_opencl or _llvm == 'true'
+     ),
+     static : not _shared_llvm,
++    method : 'config-tool',
+   )
+   with_llvm = dep_llvm.found()
+ endif

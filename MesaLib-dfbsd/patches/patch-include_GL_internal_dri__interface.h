@@ -7,7 +7,7 @@ in drm.h also, which causes build issues in xorg-server.
 
 From NetBSD xsrc: prevent re-definitions from drm.h
 
---- include/GL/internal/dri_interface.h.orig	2019-04-17 22:16:19.000000000 +0000
+--- include/GL/internal/dri_interface.h.orig	2019-02-18 18:28:15.000000000 +0000
 +++ include/GL/internal/dri_interface.h
 @@ -40,13 +40,19 @@
  #ifndef DRI_INTERFACE_H
@@ -19,7 +19,7 @@ From NetBSD xsrc: prevent re-definitions from drm.h
  #ifdef HAVE_LIBDRM
  #include <drm.h>
  #else
-+#if !defined(_DRM_H_) || !defined(STRICT_XSRC_NETBSD)
++#if !defined(_DRM_H_) || !defined(__NetBSD__)
  typedef unsigned int drm_context_t;
  typedef unsigned int drm_drawable_t;
  typedef struct drm_clip_rect drm_clip_rect_t;
@@ -27,5 +27,5 @@ From NetBSD xsrc: prevent re-definitions from drm.h
 +#endif
 +#endif /* __FreeBSD__ || __DragonFly__ */
  
- #include <GL/gl.h>
+ #include <stdint.h>
  

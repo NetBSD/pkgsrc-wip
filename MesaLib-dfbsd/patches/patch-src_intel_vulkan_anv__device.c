@@ -10,7 +10,7 @@ https://reviews.freebsd.org/D17872
 
 * Define CLOCK_MONOTONIC_RAW if missing
 
---- src/intel/vulkan/anv_device.c.orig	2019-03-13 03:11:55.000000000 +0000
+--- src/intel/vulkan/anv_device.c.orig	2018-12-11 21:13:57.000000000 +0000
 +++ src/intel/vulkan/anv_device.c
 @@ -25,7 +25,9 @@
  #include <stdbool.h>
@@ -22,9 +22,9 @@ https://reviews.freebsd.org/D17872
  #include <unistd.h>
  #include <fcntl.h>
  #include <xf86drm.h>
-@@ -49,6 +51,17 @@
-  */
- #define MAX_DEBUG_MESSAGE_LENGTH    4096
+@@ -44,6 +46,17 @@
+ 
+ #include "genxml/gen7_pack.h"
  
 +#ifndef ETIME
 +#define ETIME ETIMEDOUT
@@ -39,9 +39,9 @@ https://reviews.freebsd.org/D17872
 +
  static void
  compiler_debug_log(void *data, const char *fmt, ...)
- {
-@@ -85,10 +98,18 @@ static uint64_t
- anv_compute_heap_size(int fd, uint64_t gtt_size)
+ { }
+@@ -64,10 +77,18 @@ static VkResult
+ anv_compute_heap_size(int fd, uint64_t gtt_size, uint64_t *heap_size)
  {
     /* Query the total ram from the system */
 +#ifdef __GLIBC__

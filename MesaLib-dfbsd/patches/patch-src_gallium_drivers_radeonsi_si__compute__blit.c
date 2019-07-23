@@ -5,9 +5,9 @@ Commit: 9b331e462e5021d994859756d46cd2519d9c9c6e
 
 https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2519d9c9c6e
 
---- src/gallium/drivers/radeonsi/si_compute_blit.c.orig	2019-04-23 07:24:08.000000000 +0000
+--- src/gallium/drivers/radeonsi/si_compute_blit.c.orig	2018-11-01 17:49:16.000000000 +0000
 +++ src/gallium/drivers/radeonsi/si_compute_blit.c
-@@ -34,10 +34,17 @@ static enum si_cache_policy get_cache_po
+@@ -32,10 +32,17 @@ static enum si_cache_policy get_cache_po
  					     enum si_coherency coher,
  					     uint64_t size)
  {
@@ -25,9 +25,9 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
  
  	return L2_BYPASS;
  }
-@@ -189,6 +196,52 @@ void si_clear_buffer(struct si_context *
- 		     uint32_t clear_value_size, enum si_coherency coher,
- 		     bool force_cpdma)
+@@ -149,6 +156,51 @@ void si_clear_buffer(struct si_context *
+ 		     uint64_t offset, uint64_t size, uint32_t *clear_value,
+ 		     uint32_t clear_value_size, enum si_coherency coher)
  {
 +#if defined(REVERT_COPY_CLEAR)
 +
@@ -38,7 +38,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
 +#define CP_DMA_CLEAR_PERF_THRESHOLD	(32 * 1024) /* guess (clear is much slower) */
 +
 +	struct radeon_winsys *ws = sctx->ws;
-+	struct si_resource *rdst = si_resource(dst);
++	struct r600_resource *rdst = r600_resource(dst);
 +	enum si_cache_policy cache_policy = get_cache_policy(sctx, coher, size);
 +
 +	if (!size)
@@ -67,9 +67,8 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
 +		offset += aligned_size;
 +		size -= aligned_size;
 +	} else if (aligned_size >= 4) {
-+		si_cp_dma_clear_buffer(sctx, sctx->gfx_cs, dst, offset,
-+				       aligned_size, *clear_value, 0, coher,
-+				       get_cache_policy(sctx, coher, size));
++		si_cp_dma_clear_buffer(sctx, dst, offset, aligned_size, *clear_value,
++				       coher, get_cache_policy(sctx, coher, size));
 +
 +		offset += aligned_size;
 +		size -= aligned_size;
@@ -78,7 +77,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
  	if (!size)
  		return;
  
-@@ -268,6 +321,7 @@ void si_clear_buffer(struct si_context *
+@@ -227,6 +279,7 @@ void si_clear_buffer(struct si_context *
  		offset += aligned_size;
  		size -= aligned_size;
  	}
@@ -86,7 +85,7 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
  
  	/* Handle non-dword alignment. */
  	if (size) {
-@@ -285,8 +339,61 @@ static void si_pipe_clear_buffer(struct 
+@@ -244,6 +297,58 @@ static void si_pipe_clear_buffer(struct 
  				 const void *clear_value,
  				 int clear_value_size)
  {
@@ -140,15 +139,20 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
 +	}
 +
 +	si_clear_buffer(sctx, dst, offset, size, &dword_value,
-+			clear_value_size, SI_COHERENCY_SHADER, false);
++			clear_value_size, SI_COHERENCY_SHADER);
 +#else
+ 	enum si_coherency coher;
+ 
+ 	if (dst->flags & SI_RESOURCE_FLAG_SO_FILLED_SIZE)
+@@ -253,6 +358,7 @@ static void si_pipe_clear_buffer(struct 
+ 
  	si_clear_buffer((struct si_context*)ctx, dst, offset, size, (uint32_t*)clear_value,
- 			clear_value_size, SI_COHERENCY_SHADER, false);
+ 			clear_value_size, coher);
 +#endif
  }
  
  void si_copy_buffer(struct si_context *sctx,
-@@ -299,6 +406,17 @@ void si_copy_buffer(struct si_context *s
+@@ -265,6 +371,17 @@ void si_copy_buffer(struct si_context *s
  	enum si_coherency coher = SI_COHERENCY_SHADER;
  	enum si_cache_policy cache_policy = get_cache_policy(sctx, coher, size);
  
@@ -157,20 +161,20 @@ https://cgit.freedesktop.org/mesa/mesa/commit/?id=9b331e462e5021d994859756d46cd2
 +			      0, coher, cache_policy);
 + 
 +	if (cache_policy != L2_BYPASS)
-+ 		si_resource(dst)->TC_L2_dirty = true;
++ 		r600_resource(dst)->TC_L2_dirty = true;
 + 
 +	/* If it's not a prefetch... */
 +	if (dst_offset != src_offset)
-+		sctx->num_cp_dma_calls++;
++ 		sctx->num_cp_dma_calls++;
 +#else
  	/* Only use compute for VRAM copies on dGPUs. */
  	if (sctx->screen->info.has_dedicated_vram &&
- 	    si_resource(dst)->domains & RADEON_DOMAIN_VRAM &&
-@@ -311,6 +429,7 @@ void si_copy_buffer(struct si_context *s
+ 	    r600_resource(dst)->domains & RADEON_DOMAIN_VRAM &&
+@@ -277,6 +394,7 @@ void si_copy_buffer(struct si_context *s
  		si_cp_dma_copy_buffer(sctx, dst, src, dst_offset, src_offset, size,
  				      0, coher, cache_policy);
  	}
 +#endif
  }
  
- void si_compute_copy_image(struct si_context *sctx,
+ void si_init_compute_blit_functions(struct si_context *sctx)

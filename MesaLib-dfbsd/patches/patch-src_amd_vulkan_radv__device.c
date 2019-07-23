@@ -4,11 +4,11 @@ From graphics/mesa-dri: update to 18.3.1
 
 https://reviews.freebsd.org/D17872
 
---- src/amd/vulkan/radv_device.c.orig	2019-04-23 23:49:39.000000000 +0000
+--- src/amd/vulkan/radv_device.c.orig	2018-12-11 21:13:57.000000000 +0000
 +++ src/amd/vulkan/radv_device.c
-@@ -51,6 +51,14 @@
- #include "compiler/glsl_types.h"
- #include "util/xmlpool.h"
+@@ -50,6 +50,14 @@
+ #include "util/debug.h"
+ #include "util/mesa-sha1.h"
  
 +#ifndef CLOCK_MONOTONIC_RAW
 +# ifdef CLOCK_MONOTONIC_FAST

@@ -9,9 +9,9 @@ https://bugs.freedesktop.org/show_bug.cgi?id=82246
 FreeBSD reported atexit bug for 10.6:
 https://bugs.freedesktop.org/show_bug.cgi?id=91869
 
---- src/mesa/main/context.c.orig	2019-05-03 15:59:12.000000000 +0000
+--- src/mesa/main/context.c.orig	2017-11-20 14:25:47.000000000 +0000
 +++ src/mesa/main/context.c
-@@ -357,11 +357,23 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
+@@ -354,11 +354,23 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
   * Calls all the various one-time-fini functions in Mesa
   */
  
@@ -35,7 +35,7 @@ https://bugs.freedesktop.org/show_bug.cgi?id=91869
  }
  
  /**
-@@ -376,7 +388,9 @@ one_time_fini(void)
+@@ -373,7 +385,9 @@ one_time_fini(void)
  static void
  one_time_init( struct gl_context *ctx )
  {
@@ -45,7 +45,7 @@ https://bugs.freedesktop.org/show_bug.cgi?id=91869
  
     mtx_lock(&OneTimeLock);
  
-@@ -401,7 +415,9 @@ one_time_init( struct gl_context *ctx )
+@@ -398,7 +412,9 @@ one_time_init( struct gl_context *ctx )
           _mesa_ubyte_to_float_color_tab[i] = (float) i / 255.0F;
        }
  
