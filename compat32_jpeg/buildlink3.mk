@@ -7,7 +7,7 @@ COMPAT32_JPEG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_jpeg+=	compat32_jpeg>=8nb1
 BUILDLINK_ABI_DEPENDS.compat32_jpeg+=	compat32_jpeg>=9
-BUILDLINK_PKGSRCDIR.compat32_jpeg?=	../../wip/jpeg-32
+BUILDLINK_PKGSRCDIR.compat32_jpeg?=	../../wip/compat32_jpeg
 BUILDLINK_LIBDIRS.compat32_jpeg=	/emul/netbsd32/lib
 BUILDLINK_INCDIRS.compat32_jpeg=	/emul/netbsd32/include
 .endif # COMPAT32_JPEG_BUILDLINK3_MK
