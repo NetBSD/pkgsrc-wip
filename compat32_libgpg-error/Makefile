@@ -17,7 +17,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-CFLAGS+=                -m32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/emul/netbsd32/share/
 INFO_FILES=		yes
