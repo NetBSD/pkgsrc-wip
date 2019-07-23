@@ -1,9 +1,0 @@
-When building as a user in `users' group the `remove-non-libs:' target leads to requiring
-user confirmation:
-
- echo "Removing non-compat lib package content"
- Removing non-compat lib package content
- find /tmp/pkgsrc/wip/mit-krb5-32/work/.destdir/usr/pkg -path /tmp/pkgsrc/wip/mit-krb5-32/work/.destdir/usr/pkg/lib/32 -prune -or -type f -exec /bin/rm {} +
- override r-sr-xr-x  leot:users for '/tmp/pkgsrc/wip/mit-krb5-32/work/.destdir/usr/pkg/bin/ksu'?
-
-Should the `${RM} -f' be used instead of `${RM}'.
