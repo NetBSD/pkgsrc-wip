@@ -18,11 +18,25 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
-CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/emul/netbsd32/share/
+#CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/emul/netbsd32/share/
+#CONFIGURE_ARGS+=	--localedir=${PREFIX}/emul/netbsd32/share/
 INFO_FILES=		yes
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
+
+SUBST_CLASSES+=         makefile
+SUBST_STAGE.makefile=   pre-build
+SUBST_MESSAGE.makefile= Fixing makefile
+SUBST_FILES.makefile+=  Makefile
+SUBST_FILES.makefile+= 	m4/Makefile
+SUBST_FILES.makefile+=	tests/Makefile
+SUBST_FILES.makefile+=	lang/cl/Makefile
+SUBST_FILES.makefile+=	lang/Makefile
+SUBST_FILES.makefile+=	doc/Makefile
+SUBST_FILES.makefile+=	src/Makefile
+SUBST_FILES.makefile+=	po/Makefile
+SUBST_SED.makefile=     -e 's, /usr/pkg/share/locale,${PREFIX}/emul/netbsd32/share/locale,g'
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
