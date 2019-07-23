@@ -7,7 +7,7 @@ COMPAT32_EXPAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_expat+=	compat32_expat>=1.95.7
 BUILDLINK_ABI_DEPENDS.compat32_expat+=	compat32_expat>=2.0.0nb1
-BUILDLINK_PKGSRCDIR.compat32_expat?=	../../wip/expat-32
+BUILDLINK_PKGSRCDIR.compat32_expat?=	../../wip/compat32_expat
 BUILDLINK_LIBDIRS.compat32_expat=	emul/netbsd32/lib
 BUILDLINK_INCDIRS.compat32_expat=	emul/netbsd32/include
 .endif # COMPAT32_EXPAT_BUILDLINK3_MK
