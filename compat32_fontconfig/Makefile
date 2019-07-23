@@ -21,8 +21,8 @@ CFLAGS+=		-m32
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--with-default-fonts=${PREFIX}/emul/netbsd32/share/fonts/X11
-CONFIGURE_ARGS+=        --with-expat-includes=${PREFIX}/emul/netbsd32/include
-CONFIGURE_ARGS+=        --with-expat-lib=${PREFIX}/emul/netbsd32/lib
+CONFIGURE_ARGS+=	--with-expat-includes=${PREFIX}/emul/netbsd32/include
+CONFIGURE_ARGS+=	--with-expat-lib=${PREFIX}/emul/netbsd32/lib
 CONFIGURE_ARGS+=	--with-baseconfigdir=${PREFIX}/emul/netbsd32/etc
 CONFIGURE_ARGS+=	--with-cache-dir=${VARBASE}/cache/fontconfig
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/emul/netbsd32/lib/fontconfig
@@ -57,23 +57,23 @@ ADDFONTS:=	${LOCALBASE}/share/fonts/X11,${ADDFONTS}
 .endif
 
 .if ${OPSYS} == "Darwin"
-ADDFONTS:=	~/Library/Fonts,/Library/Fonts,/System/Library/Fonts,${ADDFONTS}
+ADDFONTS:=		~/Library/Fonts,/Library/Fonts,/System/Library/Fonts,${ADDFONTS}
 CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
 .endif
 CONFIGURE_ARGS+=	--with-add-fonts=${ADDFONTS}
 
-SUBST_CLASSES+= prefix
+SUBST_CLASSES+= 	prefix
 SUBST_STAGE.prefix=	post-build
 SUBST_FILES.prefix=	conf.d/README
 SUBST_VARS.prefix=	PREFIX
 
-PKG_SYSCONFDIR32 = ${PREFIX}/emul/netbsd32/etc
-EGDIR=		${PREFIX}/emul/netbsd32/share/examples/fontconfig
-CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR32}/fonts.conf
-CONF_FILES+=	${EGDIR}/conf.d/README ${PKG_SYSCONFDIR32}/conf.d/README
+PKG_SYSCONFDIR32= 	${PREFIX}/emul/netbsd32/etc
+EGDIR=			${PREFIX}/emul/netbsd32/share/examples/fontconfig
+CONF_FILES=		${EGDIR}/fonts.conf ${PKG_SYSCONFDIR32}/fonts.conf
+CONF_FILES+=		${EGDIR}/conf.d/README ${PKG_SYSCONFDIR32}/conf.d/README
 
-TMPLDIR=	${PREFIX}/emul/netbsd32/share/fontconfig/conf.avail
-MAKE_DIRS+=	${PKG_SYSCONFDIR32}/conf.d
+TMPLDIR=		${PREFIX}/emul/netbsd32/share/fontconfig/conf.avail
+MAKE_DIRS+=		${PKG_SYSCONFDIR32}/conf.d
 # following list from ${WRKSRC}/conf.d/Makefile.am
 FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	10-hinting-medium.conf 10-hinting-none.conf 10-hinting-slight.conf \
@@ -98,8 +98,8 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
 pre-configure:
-	-cd ${BUILDLINK_X11_DIR:Q} && ${FIND} . -path "*fontconfig*" -type l -delete
-	-cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete
+	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
+	cd ${BUILDLINK_X11_DIR}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
