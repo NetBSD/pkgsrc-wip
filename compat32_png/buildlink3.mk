@@ -7,7 +7,7 @@ COMPAT32_PNG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_png+=	compat32_png>=1.2.4
 BUILDLINK_ABI_DEPENDS.compat32_png+=	compat32_png>=1.6.0nb1
-BUILDLINK_PKGSRCDIR.compat32_png?=	../../wip/png-32
+BUILDLINK_PKGSRCDIR.compat32_png?=	../../wip/compat32_png
 BUILDLINK_LIBDIRS.compat32_png=		emul/netbsd32/lib
 BUILDLINK_INCDIRS.compat32_png=		emul/netbsd32/include
 
