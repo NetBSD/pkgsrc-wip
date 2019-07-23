@@ -17,7 +17,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		grep gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		builds/unix
-CFLAGS+=		-m32
 BUILD_DIRS=		.
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/emul/netbsd32/lib/freetype2
