@@ -16,7 +16,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://invisible-island.net/ncurses/ncurses.html
 LICENSE=	mit
 
-CFLAGS+=		-m32
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config tbl
