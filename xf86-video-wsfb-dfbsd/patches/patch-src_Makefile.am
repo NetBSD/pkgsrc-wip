@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- src/Makefile.am.orig	2012-01-01 15:25:08.000000000 +0000
++++ src/Makefile.am
+@@ -29,4 +29,5 @@ wsfb_drv_la_LDFLAGS = -module -avoid-ver
+ wsfb_drv_ladir = @moduledir@/drivers
+ 
+ wsfb_drv_la_SOURCES = \
++         wsfb_driver.c \
+          wsfb_driver.c
