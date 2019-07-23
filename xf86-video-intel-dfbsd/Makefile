@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2018/03/07 11:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2018/05/15 10:50:19 wiz Exp $
 
-# Use the commit id to obtain a snapshot of the form:
+# Use the commit id to obtain a snapshot of the form: 
 # http://cgit.freedesktop.org/xorg/driver/xf86-video-intel/snapshot/xf86-video-intel-78d7a09b0343829c81257024b164b0b3764392ac.tar.xz
 
 # 2019-03-01 sna: Switch back to hwcursor on the next cursor update
@@ -13,7 +13,7 @@ COMMIT_ID=	6afed33b2d673d88674f0c76efe500ae414e8e1b
 # COMMIT_ID=	33ee0c3b21ea279e08d0863fcb2e874f0974b00e
 
 # 2019-01-10 sna: Switch off old outputs on topology changes
-# COMMIT_ID=	c37c7ee0748ba828ec5d2c7304cd2a17af2c8109
+# COMMIT_ID=	c37c7ee0748ba828ec5d2c7304cd2a17af2c8109	
 
 # 2018-05-12 configure: Set DRI1 to autodiscover
 # COMMIT_ID=	359477215092ac1b602ad1e2f17a28963d9224c2
@@ -24,12 +24,14 @@ COMMIT_ID=	6afed33b2d673d88674f0c76efe500ae414e8e1b
 # 2017-02-28 intel: Fix checking xf86LoadKernelModule for success
 # COMMIT_ID=	78d7a09b0343829c81257024b164b0b3764392ac
 
+# DISTNAME=	xf86-video-intel-2.99.917
 PORTNAME=	xf86-video-intel
-
 DISTNAME=	${PORTNAME}-${COMMIT_ID}
 PKGNAME=	${PORTNAME}-2.99.917
 PKGREVISION=	7
 CATEGORIES=	x11
+# MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
+# EXTRACT_SUFX=	.tar.bz2
 MASTER_SITES=	http://cgit.freedesktop.org/xorg/driver/${PORTNAME}/snapshot/
 EXTRACT_SUFX=	.tar.xz
 
@@ -53,7 +55,7 @@ CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 CONFIGURE_ENV.DragonFly+=	xorg_cv_cc_flag__Wno_maybe_uninitialized=no
 
 # DragonFly version 4.6-RELEASE, maybe other versions prior to 4.7
-# need -D_WITH_GETLINE=1 according to:
+# need -D_WITH_GETLINE=1 according to: 
 # https://github.com/DragonFlyBSD/DPorts/issues/184
 # FreeBSD ports now patches files individually.
 # CFLAGS.FreeBSD+=		-D_WITH_GETLINE=1
@@ -71,9 +73,14 @@ SUBST_SED.jmp_buf=		-e 's@[[:<:]]jmp_buf[[:>:]]@sigjmp_buf@g'
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-video-intel
-PKG_SUPPORTED_OPTIONS=	uxa dri3 debug
+PKG_SUPPORTED_OPTIONS=	uxa dri3 debug xvmc
 PKG_SUPPORTED_OPTIONS+=	set_dbg_no_unsynchronized_userptr
 PKG_SUPPORTED_OPTIONS+=	set_dbg_no_llc
+PKG_SUPPORTED_OPTIONS+= list_h_xserver
+PKG_SUPPORTED_OPTIONS+= kgem_null_bo
+PKG_SUPPORTED_OPTIONS+= handler_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+= reset_cursor_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
 PKG_SUGGESTED_OPTIONS=
 # PKG_SUGGESTED_OPTIONS+=	set_dbg_no_unsynchronized_userptr
 # PKG_SUGGESTED_OPTIONS+=	set_dbg_no_llc
@@ -81,15 +88,47 @@ PKG_SUGGESTED_OPTIONS=
 CONFIGURE_ARGS.FreeBSD+=	--disable-udev
 
 .if ${OPSYS} == "FreeBSD"
-# PKG_SUGGESTED_OPTIONS+=	uxa
+PKG_SUGGESTED_OPTIONS+=	uxa
 PKG_SUGGESTED_OPTIONS+=	set_dbg_no_unsynchronized_userptr
+.endif
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=	uxa
+.endif
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= xvmc
 .endif
 
 .if ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	set_dbg_no_llc
 .endif
 
+# Sync list.h definitions with xorg server, presumably safer.
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= list_h_xserver
+.endif
+
+# bo object possibly null in kgem.c
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= kgem_null_bo
+.endif
+
+# .if ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+= handler_xsrc_netbsd
+# .endif
+
+# .if ${OPSYS} == "NetBSD"
+# PKG_SUGGESTED_OPTIONS+= reset_cursor_xsrc_netbsd
+# .endif
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
+.endif
+
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	xvmc
 
 .if !empty(PKG_OPTIONS:Muxa)
 CONFIGURE_ARGS+=	--with-default-accel=uxa
@@ -109,12 +148,38 @@ CFLAGS+=		-O0 -g3
 CONFIGURE_ARGS+=	--enable-debug
 .endif
 
+.if !empty(PKG_OPTIONS:Mxvmc)
+# Seems required for actual xvmc support
+.include "../../x11/xcb-util/buildlink3.mk"
+PLIST.xvmc=		yes
+.endif
+
 .if !empty(PKG_OPTIONS:Mset_dbg_no_unsynchronized_userptr)
 CPPFLAGS+=	-DSET_DBG_NO_UNSYNCHRONIZED_USERPTR
 .endif
 
 .if !empty(PKG_OPTIONS:Mset_dbg_no_llc)
 CPPFLAGS+=	-DSET_DBG_NO_LLC
+.endif
+
+.if !empty(PKG_OPTIONS:Mlist_h_xserver)
+CPPFLAGS+=	-DLIST_H_XSERVER
+.endif
+
+.if !empty(PKG_OPTIONS:Mkgem_null_bo)
+CPPFLAGS+=	-DKGEM_NULL_BO
+.endif
+
+.if !empty(PKG_OPTIONS:Mhandler_xsrc_netbsd)
+CPPFLAGS+=	-DHANDLER_XSRC_NETBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mreset_cursor_xsrc_netbsd)
+CPPFLAGS+=	-DRESET_CURSOR_XSRC_NETBSD
+.endif
+
+.if !empty(PKG_OPTIONS:Mstrict_xsrc_netbsd)
+CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 .endif
 
 pre-configure:
@@ -127,8 +192,4 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-# Seems required for actual xvmc support
-.include "../../x11/xcb-util/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

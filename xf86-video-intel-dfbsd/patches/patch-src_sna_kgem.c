@@ -15,7 +15,7 @@ Fix SNA for drm-v4.11 or later by disabling I915_USERPTR_UNSYNCHRONIZED
 I915_USERPTR_UNSYNCHRONIZED is broken since drm-v4.11
 https://github.com/FreeBSDDesktop/kms-drm/issues/32
 
---- src/sna/kgem.c.orig	2019-02-21 22:26:50.000000000 +0000
+--- src/sna/kgem.c.orig	2019-03-01 18:22:07.000000000 +0000
 +++ src/sna/kgem.c
 @@ -29,6 +29,11 @@
  #include "config.h"
@@ -29,7 +29,7 @@ https://github.com/FreeBSDDesktop/kms-drm/issues/32
  #include "sna.h"
  #include "sna_reg.h"
  
-@@ -69,9 +74,17 @@ search_snoop_cache(struct kgem *kgem, unsigned int num
+@@ -69,9 +74,17 @@ search_snoop_cache(struct kgem *kgem, un
  #define DBG_NO_CPU 0
  #define DBG_NO_CREATE2 0
  #define DBG_NO_USERPTR 0
@@ -59,7 +59,7 @@ https://github.com/FreeBSDDesktop/kms-drm/issues/32
  	int err;
  
  	VG_CLEAR(arg);
-@@ -691,7 +708,12 @@ static void *__kgem_bo_map__cpu(struct kgem *kgem, str
+@@ -691,7 +708,12 @@ static void *__kgem_bo_map__cpu(struct k
  retry:
  	arg.handle = bo->handle;
  	arg.size = bytes(bo);
@@ -72,11 +72,11 @@ https://github.com/FreeBSDDesktop/kms-drm/issues/32
  		DBG(("%s: failed %d, throttling/cleaning caches\n",
  		     __FUNCTION__, err));
  		assert(err != -EINVAL || bo->prime);
-@@ -3313,11 +3335,21 @@ bool __kgem_ring_is_idle(struct kgem *kgem, int ring)
+@@ -3313,11 +3335,21 @@ bool __kgem_ring_is_idle(struct kgem *kg
  	if (rq) {
  		struct kgem_request *tmp;
  
-+#if defined(__DragonFly__)
++#if defined(KGEM_NULL_BO)
 +		if (rq->bo == NULL)
 +			fprintf(stderr, "__kgem_ring_is_idle: rq->bo == NULL\n");
 +		if (rq->bo && __kgem_busy(kgem, rq->bo->handle)) {
