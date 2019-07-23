@@ -107,11 +107,11 @@ post-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../wip/libuuid-32/buildlink3.mk"
+.include "../../wip/compat32_libuuid/buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
-.include "../../wip/freetype2-32/buildlink3.mk"
+.include "../../wip/compat32_freetype2/buildlink3.mk"
 .include "../../wip/compat80-x11/buildlink3.mk"
-.include "../../wip/expat-32/buildlink3.mk"
+.include "../../wip/compat32_expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

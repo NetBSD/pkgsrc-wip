@@ -14,9 +14,9 @@ BUILDLINK_INCDIRS.compat32_fontconfig?=		emul/netbsd32/include
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/libuuid-32/buildlink3.mk"
-.include "../../wip/freetype2-32/buildlink3.mk"
-.include "../../wip/expat-32/buildlink3.mk"
+.include "../../wip/compat32_libuuid/buildlink3.mk"
+.include "../../wip/compat32_freetype2/buildlink3.mk"
+.include "../../wip/compat32_expat/buildlink3.mk"
 .endif # COMPAT32_FONTCONFIG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-compat32_fontconfig
