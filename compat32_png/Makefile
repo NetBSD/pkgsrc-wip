@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.libpng.org/pub/png/libpng.html
 COMMENT=	Library for manipulating PNG images
 LICENSE=	zlib
 
-CFLAGS+=		-m32
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 # do not create libpng.la
