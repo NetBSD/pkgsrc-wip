@@ -17,7 +17,6 @@ CONFLICTS=		libjpeg-turbo-[0-9]*
 WRKSRC=			${WRKDIR}/jpeg-9c
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CFLAGS+=		-m32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--disable-ld-version-script
 
