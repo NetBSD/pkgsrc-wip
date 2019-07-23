@@ -17,7 +17,6 @@ BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt
-CFLAGS+=		-m32
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--with-default-fonts=${PREFIX}/emul/netbsd32/share/fonts/X11
