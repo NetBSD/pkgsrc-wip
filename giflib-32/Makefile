@@ -2,13 +2,12 @@
 
 .include "Makefile.common"
 
-COMMENT=	GIF image format library
+COMMENT=		GIF image format library
 
-CONFLICTS+=	libungif-[0-9]*
+CONFLICTS+=		libungif-[0-9]*
 
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
-CFLAGS+=		-m32
-BUILD_DIRS=	lib
-INSTALL_DIRS=	lib
+BUILD_DIRS=		lib
+INSTALL_DIRS=		lib
 
 .include "../../mk/bsd.pkg.mk"
