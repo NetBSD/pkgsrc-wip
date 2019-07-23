@@ -2,7 +2,8 @@
 
 .include "Makefile.common"
 
-PKGNAME=	compat32_${DISTNAME:S/util-linux/libuuid/}
+ABI=		32
+PKGNAME=	compat${ABI}_${DISTNAME:S/util-linux/libuuid/}
 CATEGORIES=	devel
 COMMENT=	Generate unique identifiers for objects
 LICENSE=	modified-bsd
