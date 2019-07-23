@@ -16,7 +16,6 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CFLAGS+=                -m32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
