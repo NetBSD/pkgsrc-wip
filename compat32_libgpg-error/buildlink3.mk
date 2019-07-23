@@ -7,7 +7,7 @@ compat32_LIBGPG_ERROR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_libgpg-error+=	compat32_libgpg-error>=0.6
 BUILDLINK_ABI_DEPENDS.compat32_libgpg-error+=	compat32_libgpg-error>=1.10nb1
-BUILDLINK_PKGSRCDIR.compat32_libgpg-error?=	../../wip/libgpg-error-32
+BUILDLINK_PKGSRCDIR.compat32_libgpg-error?=	../../wip/compat32_libgpg-error
 BUILDLINK_LIBDIRS.compat32_libgpg-error?=	emul/netbsd32/lib
 BUILDLINK_INCDIRS.compat32_libgpg-error?=	emul/netbsd32/include
 
