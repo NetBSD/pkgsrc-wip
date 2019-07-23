@@ -14,7 +14,6 @@ LICENSE=	mit
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-CFLAGS+=		-m32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 
 # C++ is needed for tests only
