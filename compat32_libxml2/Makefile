@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.152 2019/01/09 19:09:02 adam Exp $
 
-.include "../../wip/libxml2-32/Makefile.common"
+.include "../../wip/compat32_libxml2/Makefile.common"
 
 ABI=		32
 PKGNAME?=	compat${ABI}_${DISTNAME}
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}
 CONFIGURE_ARGS+=	--without-python
-CFLAGS+=                -m32
 PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
 USE_LANGUAGES+=		c99
