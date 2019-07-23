@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	compat32_libuuid
 COMPAT32_LIBUUID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_libuuid+=	compat32_libuuid>=2.18
-BUILDLINK_PKGSRCDIR.compat32_libuuid?=	../../wip/libuuid-32
+BUILDLINK_PKGSRCDIR.compat32_libuuid?=	../../wip/compat32_libuuid
 BUILDLINK_LIBDIRS.compat32_libuuid=	emul/netbsd32/lib
 BUILDLINK_INCDIRS.compat32_libuuid=	emul/netbsd32/include/uuid
 .endif	# COMPAT32_LIBUUID_BUILDLINK3_MK

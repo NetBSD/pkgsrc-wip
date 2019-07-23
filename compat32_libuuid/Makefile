@@ -7,7 +7,6 @@ CATEGORIES=	devel
 COMMENT=	Generate unique identifiers for objects
 LICENSE=	modified-bsd
 
-CFLAGS+=		-m32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--enable-libuuid
 CONFIGURE_ARGS+=	--enable-uuidgen
