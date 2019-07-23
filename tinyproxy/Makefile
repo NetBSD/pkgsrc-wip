@@ -48,10 +48,7 @@ SUBST_VARS.docs+=	VARBASE
 
 INSTALLATION_DIRS=	${EGDIR} share/doc/tinyproxy
 
-OWN_DIRS+=		${VARBASE}/log/tinyproxy
 OWN_DIRS_PERMS+=	${VARBASE}/log/tinyproxy ${TINYPROXY_USER} ${TINYPROXY_GROUP} 0755
-
-OWN_DIRS+=		${VARBASE}/run/tinyproxy
 OWN_DIRS_PERMS+=	${VARBASE}/run/tinyproxy ${TINYPROXY_USER} ${TINYPROXY_GROUP} 0755
 
 post-install:
