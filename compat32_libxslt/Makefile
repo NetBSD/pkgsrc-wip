@@ -12,7 +12,6 @@ GNU_CONFIGURE_PREFIX=   ${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.compat32_libxml2}
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--with-html-subdir=libxslt
-CFLAGS+=                -m32
 
 PKGCONFIG_OVERRIDE=	libxslt.pc.in
 PKGCONFIG_OVERRIDE+=	libexslt.pc.in
@@ -27,7 +26,7 @@ CPPFLAGS+=	-Dsocklen_t=int
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 
-.include "../../wip/libgcrypt-32/buildlink3.mk"
-.include "../../wip/libgpg-error-32/buildlink3.mk"
-.include "../../wip/libxml2-32/buildlink3.mk"
+.include "../../wip/compat32_libgcrypt/buildlink3.mk"
+.include "../../wip/compat32_libgpg-error/buildlink3.mk"
+.include "../../wip/compat32_libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
