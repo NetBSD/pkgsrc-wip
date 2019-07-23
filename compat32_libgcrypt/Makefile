@@ -5,7 +5,6 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/
 EXTRACT_SUFX=	.tar.bz2
 ABI=		32
-CFLAGS+=                -m32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 
 PKGNAME=	compat${ABI}_${DISTNAME}
