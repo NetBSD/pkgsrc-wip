@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (dlt-daemon/v2.16.0.tar.gz) = 417454c1ab01a8460706fa91d378908ee3fe95e9
-RMD160 (dlt-daemon/v2.16.0.tar.gz) = 299c79bafb91cad08c67788cfff2b608b84b9bb9
-SHA512 (dlt-daemon/v2.16.0.tar.gz) = a0e131008db3a07ab01e00cfaf7e36fc310f9165f98b3dbc5258e47d3dfe2698d8d28d8f23df076554475f428ca4aa90a722835bccbb1330a3075a78060e6444
-Size (dlt-daemon/v2.16.0.tar.gz) = 6158969 bytes
-SHA1 (patch-doc_CMakeLists.txt) = 24efaf33a37b3d9cfc8a2da272337083f79fd7c5
+SHA1 (dlt-daemon/v2.18.3.tar.gz) = c405d1081014052862ef87d94d2164008d0bfbe3
+RMD160 (dlt-daemon/v2.18.3.tar.gz) = e778cda9d9ac553c1825aba3b204e43e19dc25fd
+SHA512 (dlt-daemon/v2.18.3.tar.gz) = d0fc43f81255c990fe0510b6b874fe6c5ef7419538f53aeff2a78cb992ae0e57bbb26ec99c5f636ce1755836c7877c5fa61d977b438ef31b54b7fcdb8ef55e86
+Size (dlt-daemon/v2.18.3.tar.gz) = 6252773 bytes
+SHA1 (patch-doc_CMakeLists.txt) = 89335c90ea885385184c48fc2771f55ef99bb492
