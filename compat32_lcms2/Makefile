@@ -16,7 +16,6 @@ GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 
-
 # lcms does not need zlib, but will look for it and link it to tifficc
 # if present.  Therefore, we don't enjoin lcms from finding zlib, but
 # don't include it via bl3.
@@ -24,5 +23,5 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 PKGCONFIG_OVERRIDE=	lcms2.pc.in
 
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../wip/tiff-32/buildlink3.mk"
+.include "../../wip/compat32_tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
