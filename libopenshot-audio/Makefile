@@ -1,11 +1,9 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	libopenshot-audio
-DISTNAME=	v0.1.8
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenShot/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+DISTNAME=       libopenshot-audio-0.1.8
+CATEGORIES=     devel audio
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=OpenShot/}
+GITHUB_TAG=     v${PKGVERSION_NOREV}
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://github.com/OpenShot/libopenshot-audio/
