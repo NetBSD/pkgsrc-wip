@@ -1,0 +1,46 @@
+$NetBSD$
+
+--- include/meson.build.orig	2019-02-26 19:28:50.000000000 +0000
++++ include/meson.build
+@@ -68,7 +68,8 @@ conf_data.set('HAVE_DBUS', build_dbus)
+ conf_data.set('CONFIG_HAL', build_hal)
+ conf_data.set('SYSTEMD_LOGIND', build_systemd_logind)
+ conf_data.set('NEED_DBUS', build_systemd_logind or build_hal)
+-conf_data.set('CONFIG_WSCONS', host_machine.system() == 'openbsd')
++conf_data.set('CONFIG_WSCONS', host_machine.system() == 'openbsd' or build_wscons)
++conf_data.set('CONFIG_DEVD', build_devd)
+ 
+ # XXX: SHMDIR is weird in autoconf, probing the build system for
+ # various tmp directories.  Could we replace it with C code at runtime
+@@ -232,7 +233,7 @@ supports_syscons = false
+ supports_wscons = false
+ csrg_based = false
+ 
+-if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonflybsd'
++if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+   supports_pccons = true
+   supports_pcvt = true
+   supports_syscons = true
+@@ -324,7 +325,7 @@ xorg_data.set('XSERVER_PLATFORM_BUS', bu
+ xorg_data.set('WSCONS_SUPPORT', host_machine.system() == 'netbsd' or host_machine.system() == 'openbsd')
+ xorg_data.set('XF86PM', build_apm or build_acpi)
+ 
+-if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonflybsd'
++if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+     if host_machine.cpu_family() == 'x86' or host_machine.cpu_family() == 'x86_64'
+         xorg_data.set('USE_DEV_IO', true)
+     endif
+@@ -332,9 +333,12 @@ if host_machine.system() == 'freebsd' or
+ elif host_machine.system() == 'netbsd'
+     # XXX: USE_ALPHA_PIO
+     # XXX: Add link to libi386
+-    if host_machine.cpu_family() == 'x86' or host_machine.cpu_family() == 'x86_64'
++    if host_machine.cpu_family() == 'x86'
+         xorg_data.set('USE_I386_IOPL', true)
+     endif
++    if host_machine.cpu_family() == 'x86_64'
++        xorg_data.set('USE_AMD64_IOPL', true)
++    endif
+ elif host_machine.system() == 'openbsd'
+     # XXX: Add link to libi386, libamd64
+     if host_machine.cpu_family() == 'x86'

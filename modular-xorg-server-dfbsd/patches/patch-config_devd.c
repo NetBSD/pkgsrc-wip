@@ -5,11 +5,13 @@ x11-servers/xorg-server 1.18.4.
 
 Added many debugging statements with DebugF.
 
+Allow socket to return fd 0
+
 Adjust for update to 1.19.6 API.
 
---- config/devd.c.orig	2018-08-04 04:32:13.580868000 +0000
+--- config/devd.c.orig	2019-07-20 17:30:44.230844000 +0000
 +++ config/devd.c
-@@ -0,0 +1,613 @@
+@@ -0,0 +1,616 @@
 +/*
 + * Copyright (c) 2012 Baptiste Daroussin
 + * Copyright (c) 2013, 2014 Alex Kozlov
@@ -140,10 +142,13 @@ Adjust for update to 1.19.6 API.
 +		return false;
 +
 +	ret = stat(devpath, &st);
++	if (ret == 0) {
++		DebugF("[config/devd]: devpath_exists true for devpath (%s)\n", devpath);
++	}
++
 +	free(devpath);
 +
 +	if (ret == 0) {
-+		DebugF("[config/devd]: devpath_exists true for devpath (%s)\n", devpath);
 +		strncpy(devname, device->driver, devname_len);
 +		return true;
 +	}
@@ -522,13 +527,13 @@ Adjust for update to 1.19.6 API.
 +	char *walk;
 +	ssize_t sz;
 +
-+	DebugF("[config/devd]: wakeup_handler: sock_devd (%d), sock (%d), ready (%d)\n", sock_devd, sock, ready);
++/*	DebugF("[config/devd]: wakeup_handler: sock_devd (%d), sock (%d), ready (%d)\n", sock_devd, sock, ready); */
 +	
 +		sz = socket_getline(sock_devd, &line);
 +		if (sz < 0)
 +			return;
 +		if (sz == 0) {
-+			DebugF("[config/devd]: WARNING wakeup_handler: socket_getline returned zero length line\n", line);
++			DebugF("[config/devd]: WARNING wakeup_handler: socket_getline returned zero length line\n");
 +			free(line);
 +			return;
 +		}

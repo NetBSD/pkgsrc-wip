@@ -16,7 +16,7 @@ for bug #196678
 
 https://bugs.freebsd.org/bugzilla/attachment.cgi?id=191592&action=diff
 
---- hw/xfree86/os-support/bsd/bsd_init.c.orig	2018-10-25 14:13:21.000000000 +0000
+--- hw/xfree86/os-support/bsd/bsd_init.c.orig	2019-05-30 18:27:34.000000000 +0000
 +++ hw/xfree86/os-support/bsd/bsd_init.c
 @@ -48,6 +48,10 @@ static int devConsoleFd = -1;
  #if defined (SYSCONS_SUPPORT) || defined (PCVT_SUPPORT)
@@ -90,7 +90,28 @@ https://bugs.freebsd.org/bugzilla/attachment.cgi?id=191592&action=diff
              }
              else {              /* xf86Info.ShareVTs */
                  close(xf86Info.consoleFd);
-@@ -594,6 +627,10 @@ xf86CloseConsole()
+@@ -529,6 +562,9 @@ xf86OpenPcvt()
+             xf86Msg(X_PROBED, "Using pcvt driver (version %d.%d)\n",
+                     pcvt_version.rmajor, pcvt_version.rminor);
+ #endif
++#if defined(STRICT_XSRC_NETBSD)
++            xf86Msg(X_PROBED, "using VT number %d\n", xf86Info.vtno);
++#endif
+         }
+         else {
+             /* Not pcvt */
+@@ -581,8 +617,10 @@ xf86CloseConsole()
+     struct vt_mode VT;
+ #endif
+ 
++#if defined (SYSCONS_SUPPORT) || defined (PCVT_SUPPORT) || !defined(SHAREVTS_XSRC_NETBSD)
+     if (xf86Info.ShareVTs)
+         return;
++#endif
+ 
+     switch (xf86Info.consType) {
+ #ifdef PCCONS_SUPPORT
+@@ -594,6 +632,10 @@ xf86CloseConsole()
      case SYSCONS:
      case PCVT:
          ioctl(xf86Info.consoleFd, KDSETMODE, KD_TEXT);  /* Back to text mode */
