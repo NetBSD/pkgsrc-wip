@@ -15,16 +15,29 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
-CFLAGS.DragonFly+=	-Wno-array-bounds
+CFLAGS.DragonFly+= -Wno-array-bounds
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-SUBST_CLASSES+=			freebsdusb
+SUBST_CLASSES+=                 freebsdusb 
 SUBST_STAGE.freebsdusb=		post-extract
-SUBST_MESSAGE.freebsdusb=	Patching src/Makefile.in for DragonFly or FreeBSD compatible USB
+SUBST_MESSAGE.freebsdusb=	Patching src/Makefile.in for DragonFly or FreeBSD compatible USB 
 SUBST_FILES.freebsdusb+=	src/Makefile.in
 SUBST_SED.freebsdusb+=		-e 's|-module -avoid-version|-module -avoid-version -lusbhid|'
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-input-mouse
+PKG_SUPPORTED_OPTIONS=  debug	
+PKG_SUGGESTED_OPTIONS=  debug	
+
+.include "../../mk/bsd.options.mk"
+
+# Debug flags recommended for server and drivers by:
+# https://www.x.org/wiki/Development/Documentation/ServerDebugging/
+.if !empty(PKG_OPTIONS:Mdebug)
+CPPFLAGS+=		-DDEBUG
+CFLAGS+=		-O0 -g3
 .endif
 
 .include "../../x11/xorgproto/buildlink3.mk"
