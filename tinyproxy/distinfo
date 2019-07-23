@@ -8,3 +8,4 @@ SHA1 (patch-docs_man5_tinyproxy.conf.txt.in) = 1641f7c44ce84f2ebac6e945760af3ba7
 SHA1 (patch-docs_man8_tinyproxy.txt.in) = 12c43d0f874a8794cbe8da7c702e406e8b10a99b
 SHA1 (patch-etc_Makefile.in) = 05586bae07900c24dd418bddcbf0157ba2b302ef
 SHA1 (patch-etc_tinyproxy.conf.in) = 19481a177119b266034280d8923ea855021d8663
+SHA1 (patch-src_Makefile.in) = 47975fdb8b21b2cf221ef3b5160ba524aabba693
