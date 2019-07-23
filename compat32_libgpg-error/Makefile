@@ -34,12 +34,6 @@ CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
 LIBS+=	-lrt
 .endif
 
-remove non-libs-headers:
-	echo "Removing non-compat lib package content"
-	find ${DESTDIR}${PREFIX} -path ${DESTDIR}${PREFIX}/emul -prune -or -type f -exec ${RM} {} +
-
-post-install: remove non-libs-headers
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
