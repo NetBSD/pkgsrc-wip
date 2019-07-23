@@ -14,7 +14,6 @@ LICENSE=	mit
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
-CFLAGS+=		-m32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 
 
