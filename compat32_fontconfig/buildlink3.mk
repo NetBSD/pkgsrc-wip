@@ -7,7 +7,7 @@ COMPAT32_FONTCONFIG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.compat32_fontconfig+=	compat32_fontconfig>=2.10.93
 BUILDLINK_ABI_DEPENDS.compat32_fontconfig+=	compat32_fontconfig>=2.13.0
-BUILDLINK_PKGSRCDIR.compat32_fontconfig?=	../../wip/fontconfig-32
+BUILDLINK_PKGSRCDIR.compat32_fontconfig?=	../../wip/compat32_fontconfig
 BUILDLINK_LIBDIRS.compat32_fontconfig?=		emul/netbsd32/lib/fontconfig
 BUILDLINK_INCDIRS.compat32_fontconfig?=		emul/netbsd32/include
 
