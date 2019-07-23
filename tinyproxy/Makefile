@@ -12,7 +12,8 @@ HOMEPAGE=	https://tinyproxy.github.io/
 COMMENT=	Lightweight HTTP/SSL proxy
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+
 BUILD_DEFS+=		VARBASE
 
 PKG_SYSCONFSUBDIR=	tinyproxy
