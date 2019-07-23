@@ -62,12 +62,12 @@ CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
 .endif
 CONFIGURE_ARGS+=	--with-add-fonts=${ADDFONTS}
 
-SUBST_CLASSES+= 	prefix
+SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-build
 SUBST_FILES.prefix=	conf.d/README
 SUBST_VARS.prefix=	PREFIX
 
-PKG_SYSCONFDIR32= 	${PREFIX}/emul/netbsd32/etc
+PKG_SYSCONFDIR32=	${PREFIX}/emul/netbsd32/etc
 EGDIR=			${PREFIX}/emul/netbsd32/share/examples/fontconfig
 CONF_FILES=		${EGDIR}/fonts.conf ${PKG_SYSCONFDIR32}/fonts.conf
 CONF_FILES+=		${EGDIR}/conf.d/README ${PKG_SYSCONFDIR32}/conf.d/README
