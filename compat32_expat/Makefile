@@ -15,6 +15,7 @@ LICENSE=	mit
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
+CHECK_SHLIBS_SKIP=	*xmlwf
 
 # C++ is needed for tests only
 #USE_LANGUAGES=		c c++
