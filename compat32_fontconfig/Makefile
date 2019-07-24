@@ -96,9 +96,10 @@ TEST_TARGET=	check
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
+# XXX: Unlink libs and *.pc files of fontconfig and freetype that comes with compat80-x11
 pre-configure:
 	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
-	cd ${BUILDLINK_X11_DIR}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete
+	cd ${BUILDLINK_X11_DIR}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete && find ./pkgconfig/ -name "*freetype2.pc*" -type l -delete
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
@@ -109,7 +110,7 @@ post-install:
 .include "../../wip/compat32_libuuid/buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
+BUILDLINK_API_DEPENDS.compat32_freetype2+=	freetype2>=2.8.1
 .include "../../wip/compat32_freetype2/buildlink3.mk"
 .include "../../wip/compat80-x11/buildlink3.mk"
 .include "../../wip/compat32_expat/buildlink3.mk"
