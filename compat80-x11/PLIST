@@ -4576,9 +4576,6 @@ emul/netbsd32/lib/X11/locale/lib/common/xlcUTF8Load.so.2.0
 emul/netbsd32/lib/X11/locale/lib/common/xlibi18n.so
 emul/netbsd32/lib/X11/locale/lib/common/xlibi18n.so.2
 emul/netbsd32/lib/X11/locale/lib/common/xlibi18n.so.2.0
-emul/netbsd32/lib/X11/locale/lib/common/xlocale.so
-emul/netbsd32/lib/X11/locale/lib/common/xlocale.so.2
-emul/netbsd32/lib/X11/locale/lib/common/xlocale.so.2.0
 emul/netbsd32/lib/X11/locale/lib/common/xomGeneric.so
 emul/netbsd32/lib/X11/locale/lib/common/xomGeneric.so.2
 emul/netbsd32/lib/X11/locale/lib/common/xomGeneric.so.2.0
@@ -4602,6 +4599,9 @@ emul/netbsd32/lib/X11/locale/nokhchi-1/XLC_LOCALE
 emul/netbsd32/lib/X11/locale/pt_BR.UTF-8/Compose
 emul/netbsd32/lib/X11/locale/pt_BR.UTF-8/XI18N_OBJS
 emul/netbsd32/lib/X11/locale/pt_BR.UTF-8/XLC_LOCALE
+emul/netbsd32/lib/X11/locale/pt_PT.UTF-8/Compose
+emul/netbsd32/lib/X11/locale/pt_PT.UTF-8/XI18N_OBJS
+emul/netbsd32/lib/X11/locale/pt_PT.UTF-8/XLC_LOCALE
 emul/netbsd32/lib/X11/locale/ru_RU.UTF-8/Compose
 emul/netbsd32/lib/X11/locale/ru_RU.UTF-8/XI18N_OBJS
 emul/netbsd32/lib/X11/locale/ru_RU.UTF-8/XLC_LOCALE
@@ -4675,7 +4675,6 @@ emul/netbsd32/lib/X11/xedit/lisp/progmodes/xrdb.lsp
 emul/netbsd32/lib/X11/xedit/lisp/syntax.lsp
 emul/netbsd32/lib/X11/xedit/lisp/xedit.lsp
 emul/netbsd32/lib/X11/xkb/README
-emul/netbsd32/lib/X11/xkb/compat.dir
 emul/netbsd32/lib/X11/xkb/compat/README
 emul/netbsd32/lib/X11/xkb/compat/accessx
 emul/netbsd32/lib/X11/xkb/compat/basic
@@ -4695,7 +4694,6 @@ emul/netbsd32/lib/X11/xkb/compat/pc98
 emul/netbsd32/lib/X11/xkb/compat/xfree86
 emul/netbsd32/lib/X11/xkb/compat/xtest
 emul/netbsd32/lib/X11/xkb/compiled
-emul/netbsd32/lib/X11/xkb/geometry.dir
 emul/netbsd32/lib/X11/xkb/geometry/README
 emul/netbsd32/lib/X11/xkb/geometry/amiga
 emul/netbsd32/lib/X11/xkb/geometry/ataritt
@@ -4722,10 +4720,10 @@ emul/netbsd32/lib/X11/xkb/geometry/sgi_vndr/indigo
 emul/netbsd32/lib/X11/xkb/geometry/sgi_vndr/indy
 emul/netbsd32/lib/X11/xkb/geometry/sony
 emul/netbsd32/lib/X11/xkb/geometry/sun
+emul/netbsd32/lib/X11/xkb/geometry/teck
 emul/netbsd32/lib/X11/xkb/geometry/thinkpad
 emul/netbsd32/lib/X11/xkb/geometry/typematrix
 emul/netbsd32/lib/X11/xkb/geometry/winbook
-emul/netbsd32/lib/X11/xkb/keycodes.dir
 emul/netbsd32/lib/X11/xkb/keycodes/README
 emul/netbsd32/lib/X11/xkb/keycodes/aliases
 emul/netbsd32/lib/X11/xkb/keycodes/amiga
@@ -4737,6 +4735,7 @@ emul/netbsd32/lib/X11/xkb/keycodes/evdev
 emul/netbsd32/lib/X11/xkb/keycodes/fujitsu
 emul/netbsd32/lib/X11/xkb/keycodes/hp
 emul/netbsd32/lib/X11/xkb/keycodes/ibm
+emul/netbsd32/lib/X11/xkb/keycodes/jolla
 emul/netbsd32/lib/X11/xkb/keycodes/macintosh
 emul/netbsd32/lib/X11/xkb/keycodes/olpc
 emul/netbsd32/lib/X11/xkb/keycodes/sgi_vndr/indigo
@@ -4760,7 +4759,6 @@ emul/netbsd32/lib/X11/xkb/rules/xkb.dtd
 emul/netbsd32/lib/X11/xkb/rules/xorg
 emul/netbsd32/lib/X11/xkb/rules/xorg.lst
 emul/netbsd32/lib/X11/xkb/rules/xorg.xml
-emul/netbsd32/lib/X11/xkb/symbols.dir
 emul/netbsd32/lib/X11/xkb/symbols/af
 emul/netbsd32/lib/X11/xkb/symbols/al
 emul/netbsd32/lib/X11/xkb/symbols/altwin
@@ -4768,11 +4766,13 @@ emul/netbsd32/lib/X11/xkb/symbols/am
 emul/netbsd32/lib/X11/xkb/symbols/apl
 emul/netbsd32/lib/X11/xkb/symbols/ara
 emul/netbsd32/lib/X11/xkb/symbols/at
+emul/netbsd32/lib/X11/xkb/symbols/au
 emul/netbsd32/lib/X11/xkb/symbols/az
 emul/netbsd32/lib/X11/xkb/symbols/ba
 emul/netbsd32/lib/X11/xkb/symbols/bd
 emul/netbsd32/lib/X11/xkb/symbols/be
 emul/netbsd32/lib/X11/xkb/symbols/bg
+emul/netbsd32/lib/X11/xkb/symbols/bn
 emul/netbsd32/lib/X11/xkb/symbols/br
 emul/netbsd32/lib/X11/xkb/symbols/brai
 emul/netbsd32/lib/X11/xkb/symbols/bt
@@ -4793,6 +4793,7 @@ emul/netbsd32/lib/X11/xkb/symbols/digital_vndr/pc
 emul/netbsd32/lib/X11/xkb/symbols/digital_vndr/us
 emul/netbsd32/lib/X11/xkb/symbols/digital_vndr/vt
 emul/netbsd32/lib/X11/xkb/symbols/dk
+emul/netbsd32/lib/X11/xkb/symbols/dz
 emul/netbsd32/lib/X11/xkb/symbols/ee
 emul/netbsd32/lib/X11/xkb/symbols/empty
 emul/netbsd32/lib/X11/xkb/symbols/epo
@@ -4814,6 +4815,7 @@ emul/netbsd32/lib/X11/xkb/symbols/group
 emul/netbsd32/lib/X11/xkb/symbols/hp_vndr/us
 emul/netbsd32/lib/X11/xkb/symbols/hr
 emul/netbsd32/lib/X11/xkb/symbols/hu
+emul/netbsd32/lib/X11/xkb/symbols/id
 emul/netbsd32/lib/X11/xkb/symbols/ie
 emul/netbsd32/lib/X11/xkb/symbols/il
 emul/netbsd32/lib/X11/xkb/symbols/in
@@ -4822,6 +4824,7 @@ emul/netbsd32/lib/X11/xkb/symbols/iq
 emul/netbsd32/lib/X11/xkb/symbols/ir
 emul/netbsd32/lib/X11/xkb/symbols/is
 emul/netbsd32/lib/X11/xkb/symbols/it
+emul/netbsd32/lib/X11/xkb/symbols/jolla_vndr/sbj
 emul/netbsd32/lib/X11/xkb/symbols/jp
 emul/netbsd32/lib/X11/xkb/symbols/ke
 emul/netbsd32/lib/X11/xkb/symbols/keypad
@@ -4846,8 +4849,10 @@ emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/dk
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/fi
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/fr
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/gb
+emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/is
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/it
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/jp
+emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/latam
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/nl
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/no
 emul/netbsd32/lib/X11/xkb/symbols/macintosh_vndr/pt
@@ -4862,6 +4867,7 @@ emul/netbsd32/lib/X11/xkb/symbols/mm
 emul/netbsd32/lib/X11/xkb/symbols/mn
 emul/netbsd32/lib/X11/xkb/symbols/mt
 emul/netbsd32/lib/X11/xkb/symbols/mv
+emul/netbsd32/lib/X11/xkb/symbols/my
 emul/netbsd32/lib/X11/xkb/symbols/nbsp
 emul/netbsd32/lib/X11/xkb/symbols/nec_vndr/jp
 emul/netbsd32/lib/X11/xkb/symbols/ng
@@ -4872,6 +4878,7 @@ emul/netbsd32/lib/X11/xkb/symbols/nokia_vndr/rx-51
 emul/netbsd32/lib/X11/xkb/symbols/nokia_vndr/su-8w
 emul/netbsd32/lib/X11/xkb/symbols/np
 emul/netbsd32/lib/X11/xkb/symbols/olpc
+emul/netbsd32/lib/X11/xkb/symbols/parens
 emul/netbsd32/lib/X11/xkb/symbols/pc
 emul/netbsd32/lib/X11/xkb/symbols/ph
 emul/netbsd32/lib/X11/xkb/symbols/pk
@@ -4928,6 +4935,7 @@ emul/netbsd32/lib/X11/xkb/symbols/sun_vndr/ua
 emul/netbsd32/lib/X11/xkb/symbols/sun_vndr/us
 emul/netbsd32/lib/X11/xkb/symbols/sy
 emul/netbsd32/lib/X11/xkb/symbols/terminate
+emul/netbsd32/lib/X11/xkb/symbols/tg
 emul/netbsd32/lib/X11/xkb/symbols/th
 emul/netbsd32/lib/X11/xkb/symbols/tj
 emul/netbsd32/lib/X11/xkb/symbols/tm
@@ -4942,7 +4950,6 @@ emul/netbsd32/lib/X11/xkb/symbols/vn
 emul/netbsd32/lib/X11/xkb/symbols/xfree68_vndr/amiga
 emul/netbsd32/lib/X11/xkb/symbols/xfree68_vndr/ataritt
 emul/netbsd32/lib/X11/xkb/symbols/za
-emul/netbsd32/lib/X11/xkb/types.dir
 emul/netbsd32/lib/X11/xkb/types/README
 emul/netbsd32/lib/X11/xkb/types/basic
 emul/netbsd32/lib/X11/xkb/types/cancel
@@ -4966,12 +4973,12 @@ emul/netbsd32/lib/libFS_p.a
 emul/netbsd32/lib/libFS_pic.a
 emul/netbsd32/lib/libGL.a
 emul/netbsd32/lib/libGL.so
-emul/netbsd32/lib/libGL.so.2
-emul/netbsd32/lib/libGL.so.2.0
+emul/netbsd32/lib/libGL.so.3
+emul/netbsd32/lib/libGL.so.3.0
 emul/netbsd32/lib/libGLU.a
 emul/netbsd32/lib/libGLU.so
-emul/netbsd32/lib/libGLU.so.2
-emul/netbsd32/lib/libGLU.so.2.0
+emul/netbsd32/lib/libGLU.so.3
+emul/netbsd32/lib/libGLU.so.3.0
 emul/netbsd32/lib/libGLU_p.a
 emul/netbsd32/lib/libGLU_pic.a
 emul/netbsd32/lib/libGL_p.a
@@ -5143,10 +5150,16 @@ emul/netbsd32/lib/libXpm.so.5
 emul/netbsd32/lib/libXpm.so.5.0
 emul/netbsd32/lib/libXpm_p.a
 emul/netbsd32/lib/libXpm_pic.a
+emul/netbsd32/lib/libXpresent.a
+emul/netbsd32/lib/libXpresent.so
+emul/netbsd32/lib/libXpresent.so.1
+emul/netbsd32/lib/libXpresent.so.1.0
+emul/netbsd32/lib/libXpresent_p.a
+emul/netbsd32/lib/libXpresent_pic.a
 emul/netbsd32/lib/libXrandr.a
 emul/netbsd32/lib/libXrandr.so
 emul/netbsd32/lib/libXrandr.so.3
-emul/netbsd32/lib/libXrandr.so.3.1
+emul/netbsd32/lib/libXrandr.so.3.2
 emul/netbsd32/lib/libXrandr_p.a
 emul/netbsd32/lib/libXrandr_pic.a
 emul/netbsd32/lib/libXrender.a
@@ -5224,13 +5237,25 @@ emul/netbsd32/lib/libchromeXvMC_pic.a
 emul/netbsd32/lib/libdrm.a
 emul/netbsd32/lib/libdrm.so
 emul/netbsd32/lib/libdrm.so.3
-emul/netbsd32/lib/libdrm.so.3.2
+emul/netbsd32/lib/libdrm.so.3.4
+emul/netbsd32/lib/libdrm_amdgpu.a
+emul/netbsd32/lib/libdrm_amdgpu.so
+emul/netbsd32/lib/libdrm_amdgpu.so.1
+emul/netbsd32/lib/libdrm_amdgpu.so.1.0
+emul/netbsd32/lib/libdrm_amdgpu_p.a
+emul/netbsd32/lib/libdrm_amdgpu_pic.a
 emul/netbsd32/lib/libdrm_intel.a
 emul/netbsd32/lib/libdrm_intel.so
 emul/netbsd32/lib/libdrm_intel.so.0
-emul/netbsd32/lib/libdrm_intel.so.0.0
+emul/netbsd32/lib/libdrm_intel.so.0.2
 emul/netbsd32/lib/libdrm_intel_p.a
 emul/netbsd32/lib/libdrm_intel_pic.a
+emul/netbsd32/lib/libdrm_nouveau.a
+emul/netbsd32/lib/libdrm_nouveau.so
+emul/netbsd32/lib/libdrm_nouveau.so.3
+emul/netbsd32/lib/libdrm_nouveau.so.3.0
+emul/netbsd32/lib/libdrm_nouveau_p.a
+emul/netbsd32/lib/libdrm_nouveau_pic.a
 emul/netbsd32/lib/libdrm_p.a
 emul/netbsd32/lib/libdrm_pic.a
 emul/netbsd32/lib/libdrm_radeon.a
@@ -5239,6 +5264,12 @@ emul/netbsd32/lib/libdrm_radeon.so.0
 emul/netbsd32/lib/libdrm_radeon.so.0.0
 emul/netbsd32/lib/libdrm_radeon_p.a
 emul/netbsd32/lib/libdrm_radeon_pic.a
+emul/netbsd32/lib/libepoxy.a
+emul/netbsd32/lib/libepoxy.so
+emul/netbsd32/lib/libepoxy.so.0
+emul/netbsd32/lib/libepoxy.so.0.0
+emul/netbsd32/lib/libepoxy_p.a
+emul/netbsd32/lib/libepoxy_pic.a
 emul/netbsd32/lib/libfontconfig.a
 emul/netbsd32/lib/libfontconfig.so
 emul/netbsd32/lib/libfontconfig.so.2
@@ -5253,14 +5284,20 @@ emul/netbsd32/lib/libfontenc_p.a
 emul/netbsd32/lib/libfontenc_pic.a
 emul/netbsd32/lib/libfreetype.a
 emul/netbsd32/lib/libfreetype.so
-emul/netbsd32/lib/libfreetype.so.17
-emul/netbsd32/lib/libfreetype.so.17.4.11
+emul/netbsd32/lib/libfreetype.so.18
+emul/netbsd32/lib/libfreetype.so.1${PKGVERSION}.13
 emul/netbsd32/lib/libfreetype_p.a
 emul/netbsd32/lib/libfreetype_pic.a
+emul/netbsd32/lib/libgbm.a
+emul/netbsd32/lib/libgbm.so
+emul/netbsd32/lib/libgbm.so.1
+emul/netbsd32/lib/libgbm.so.1.0
+emul/netbsd32/lib/libgbm_p.a
+emul/netbsd32/lib/libgbm_pic.a
 emul/netbsd32/lib/libglapi.a
 emul/netbsd32/lib/libglapi.so
-emul/netbsd32/lib/libglapi.so.0
-emul/netbsd32/lib/libglapi.so.0.0
+emul/netbsd32/lib/libglapi.so.1
+emul/netbsd32/lib/libglapi.so.1.0
 emul/netbsd32/lib/libglapi_p.a
 emul/netbsd32/lib/libglapi_pic.a
 emul/netbsd32/lib/libglut.a
@@ -5269,12 +5306,6 @@ emul/netbsd32/lib/libglut.so.4
 emul/netbsd32/lib/libglut.so.4.0
 emul/netbsd32/lib/libglut_p.a
 emul/netbsd32/lib/libglut_pic.a
-emul/netbsd32/lib/liblisp.a
-emul/netbsd32/lib/liblisp_p.a
-emul/netbsd32/lib/liblisp_pic.a
-emul/netbsd32/lib/libmp.a
-emul/netbsd32/lib/libmp_p.a
-emul/netbsd32/lib/libmp_pic.a
 emul/netbsd32/lib/libpciaccess.a
 emul/netbsd32/lib/libpciaccess.so
 emul/netbsd32/lib/libpciaccess.so.0
@@ -5290,9 +5321,6 @@ emul/netbsd32/lib/libpixman-1_pic.a
 emul/netbsd32/lib/libpthread-stubs.a
 emul/netbsd32/lib/libpthread-stubs_p.a
 emul/netbsd32/lib/libpthread-stubs_pic.a
-emul/netbsd32/lib/libre.a
-emul/netbsd32/lib/libre_p.a
-emul/netbsd32/lib/libre_pic.a
 emul/netbsd32/lib/libxcb-atom.a
 emul/netbsd32/lib/libxcb-atom.so
 emul/netbsd32/lib/libxcb-atom.so.1
@@ -5437,12 +5465,6 @@ emul/netbsd32/lib/libxcb-sync.so.1
 emul/netbsd32/lib/libxcb-sync.so.1.0
 emul/netbsd32/lib/libxcb-sync_p.a
 emul/netbsd32/lib/libxcb-sync_pic.a
-emul/netbsd32/lib/libxcb-xevie.a
-emul/netbsd32/lib/libxcb-xevie.so
-emul/netbsd32/lib/libxcb-xevie.so.0
-emul/netbsd32/lib/libxcb-xevie.so.0.1
-emul/netbsd32/lib/libxcb-xevie_p.a
-emul/netbsd32/lib/libxcb-xevie_pic.a
 emul/netbsd32/lib/libxcb-xf86dri.a
 emul/netbsd32/lib/libxcb-xf86dri.so
 emul/netbsd32/lib/libxcb-xf86dri.so.0
@@ -5461,6 +5483,12 @@ emul/netbsd32/lib/libxcb-xinerama.so.0
 emul/netbsd32/lib/libxcb-xinerama.so.0.1
 emul/netbsd32/lib/libxcb-xinerama_p.a
 emul/netbsd32/lib/libxcb-xinerama_pic.a
+emul/netbsd32/lib/libxcb-xinput.a
+emul/netbsd32/lib/libxcb-xinput.so
+emul/netbsd32/lib/libxcb-xinput.so.0
+emul/netbsd32/lib/libxcb-xinput.so.0.1
+emul/netbsd32/lib/libxcb-xinput_p.a
+emul/netbsd32/lib/libxcb-xinput_pic.a
 emul/netbsd32/lib/libxcb-xkb.a
 emul/netbsd32/lib/libxcb-xkb.so
 emul/netbsd32/lib/libxcb-xkb.so.1
@@ -5503,6 +5531,12 @@ emul/netbsd32/lib/libxkbui.so.2
 emul/netbsd32/lib/libxkbui.so.2.0
 emul/netbsd32/lib/libxkbui_p.a
 emul/netbsd32/lib/libxkbui_pic.a
+emul/netbsd32/lib/libxshmfence.a
+emul/netbsd32/lib/libxshmfence.so
+emul/netbsd32/lib/libxshmfence.so.1
+emul/netbsd32/lib/libxshmfence.so.1.0
+emul/netbsd32/lib/libxshmfence_p.a
+emul/netbsd32/lib/libxshmfence_pic.a
 emul/netbsd32/lib/modules/dri/gallium_dri.so
 emul/netbsd32/lib/modules/dri/gallium_dri.so.0
 emul/netbsd32/lib/modules/dri/i915_dri.so
@@ -5632,6 +5666,7 @@ emul/netbsd32/lib/pkgconfig/damageproto.pc
 emul/netbsd32/lib/pkgconfig/dri.pc
 emul/netbsd32/lib/pkgconfig/dri2proto.pc
 emul/netbsd32/lib/pkgconfig/dri3proto.pc
+emul/netbsd32/lib/pkgconfig/epoxy.pc
 emul/netbsd32/lib/pkgconfig/evieproto.pc
 emul/netbsd32/lib/pkgconfig/fixesproto.pc
 emul/netbsd32/lib/pkgconfig/fontcacheproto.pc
@@ -5640,6 +5675,7 @@ emul/netbsd32/lib/pkgconfig/fontenc.pc
 emul/netbsd32/lib/pkgconfig/fontsproto.pc
 emul/netbsd32/lib/pkgconfig/fontutil.pc
 emul/netbsd32/lib/pkgconfig/freetype2.pc
+emul/netbsd32/lib/pkgconfig/gbm.pc
 emul/netbsd32/lib/pkgconfig/gl.pc
 emul/netbsd32/lib/pkgconfig/glproto.pc
 emul/netbsd32/lib/pkgconfig/glu.pc
@@ -5649,7 +5685,9 @@ emul/netbsd32/lib/pkgconfig/ice.pc
 emul/netbsd32/lib/pkgconfig/inputproto.pc
 emul/netbsd32/lib/pkgconfig/kbproto.pc
 emul/netbsd32/lib/pkgconfig/libdrm.pc
+emul/netbsd32/lib/pkgconfig/libdrm_amdgpu.pc
 emul/netbsd32/lib/pkgconfig/libdrm_intel.pc
+emul/netbsd32/lib/pkgconfig/libdrm_nouveau.pc
 emul/netbsd32/lib/pkgconfig/libdrm_radeon.pc
 emul/netbsd32/lib/pkgconfig/libfs.pc
 emul/netbsd32/lib/pkgconfig/pciaccess.pc
@@ -5695,10 +5733,10 @@ emul/netbsd32/lib/pkgconfig/xcb-screensaver.pc
 emul/netbsd32/lib/pkgconfig/xcb-shape.pc
 emul/netbsd32/lib/pkgconfig/xcb-shm.pc
 emul/netbsd32/lib/pkgconfig/xcb-sync.pc
-emul/netbsd32/lib/pkgconfig/xcb-xevie.pc
 emul/netbsd32/lib/pkgconfig/xcb-xf86dri.pc
 emul/netbsd32/lib/pkgconfig/xcb-xfixes.pc
 emul/netbsd32/lib/pkgconfig/xcb-xinerama.pc
+emul/netbsd32/lib/pkgconfig/xcb-xinput.pc
 emul/netbsd32/lib/pkgconfig/xcb-xkb.pc
 emul/netbsd32/lib/pkgconfig/xcb-xtest.pc
 emul/netbsd32/lib/pkgconfig/xcb-xv.pc
@@ -5732,12 +5770,14 @@ emul/netbsd32/lib/pkgconfig/xmuu.pc
 emul/netbsd32/lib/pkgconfig/xorg-mouse.pc
 emul/netbsd32/lib/pkgconfig/xorg-server.pc
 emul/netbsd32/lib/pkgconfig/xpm.pc
+emul/netbsd32/lib/pkgconfig/xpresent.pc
 emul/netbsd32/lib/pkgconfig/xproto.pc
 emul/netbsd32/lib/pkgconfig/xproxymngproto.pc
 emul/netbsd32/lib/pkgconfig/xrandr.pc
 emul/netbsd32/lib/pkgconfig/xrender.pc
 emul/netbsd32/lib/pkgconfig/xres.pc
 emul/netbsd32/lib/pkgconfig/xscrnsaver.pc
+emul/netbsd32/lib/pkgconfig/xshmfence.pc
 emul/netbsd32/lib/pkgconfig/xt.pc
 emul/netbsd32/lib/pkgconfig/xtrans.pc
 emul/netbsd32/lib/pkgconfig/xtrap.pc
@@ -5751,7 +5791,6 @@ emul/netbsd32/lib/xorg/protocol.txt
 emul/netbsd32/libexec/chooser
 @pkgdir emul/netbsd32/lib/modules/input
 @pkgdir emul/netbsd32/lib/modules/fonts
-@pkgdir emul/netbsd32/lib/X11/xkb/torture
 @pkgdir emul/netbsd32/lib/X11/x11perfcomp
 @pkgdir emul/netbsd32/lib/X11/fonts/local
 @pkgdir emul/netbsd32/lib/X11/fonts/Speedo
