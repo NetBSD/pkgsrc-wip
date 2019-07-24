@@ -1,0 +1,329 @@
+$NetBSD: patch-ac,v 1.23 2019/05/17 05:45:10 wiz Exp $
+
+- libtool support 
+- Install target cleanup
+- Also install muthreads and mupkcs7 libraries (needed by various tools)
+- Do not force `-O0' flag when building
+- Get rid of unused VERSION variable and `version:' target (otherwise `git' can
+  be invoked during the building phase)
+
+--- Makefile.orig	2019-07-23 12:23:08.000000000 +0000
++++ Makefile
+@@ -51,68 +51,68 @@ ifneq ($(verbose),yes)
+ endif
+ 
+ MKTGTDIR = mkdir -p $(dir $@)
+-CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
+-CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
+-AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(AR) cr $@ $^
++CC_CMD = $(QUIET_CC) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -MMD -MP -o $@ -c $<
++CXX_CMD = $(QUIET_CXX) $(MKTGTDIR) ; $(LIBTOOL) --mode=compile $(CXX) $(CFLAGS) -MMD -MP -o $@ -c $<
++AR_CMD = $(QUIET_AR) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ -version-info 0:0:0 -rpath $(PREFIX)/lib $^
+ ifdef RANLIB
+   RANLIB_CMD = $(QUIET_RANLIB) $(RANLIB) $@
+ endif
+-LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
++LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+ TAGS_CMD = $(QUIET_TAGS) ctags -R
+ WINDRES_CMD = $(QUIET_WINDRES) $(MKTGTDIR) ; $(WINDRES) $< $@
+ OBJCOPY_CMD = $(QUIET_OBJCOPY) $(MKTGTDIR) ; $(LD) -r -b binary -o $@ $<
+ 
+ # --- Rules ---
+ 
+-$(OUT)/%.a :
++$(OUT)/%.la :
+ 	$(AR_CMD)
+ 	$(RANLIB_CMD)
+ 
+ $(OUT)/%.exe: %.c
+ 	$(LINK_CMD)
+ 
+-$(OUT)/source/helpers/mu-threads/%.o : source/helpers/mu-threads/%.c
++$(OUT)/source/helpers/mu-threads/%.lo : source/helpers/mu-threads/%.c
+ 	$(CC_CMD) $(THREADING_CFLAGS)
+ 
+-$(OUT)/source/helpers/pkcs7/%.o : source/helpers/pkcs7/%.c
++$(OUT)/source/helpers/pkcs7/%.lo : source/helpers/pkcs7/%.c
+ 	$(CC_CMD) $(LIBCRYPTO_CFLAGS)
+ 
+-$(OUT)/source/tools/%.o : source/tools/%.c
++$(OUT)/source/tools/%.lo : source/tools/%.c
+ 	$(CC_CMD) -Wall $(THIRD_CFLAGS) $(THREADING_CFLAGS)
+ 
+-$(OUT)/generated/%.o : generated/%.c
++$(OUT)/generated/%.lo : generated/%.c
+ 	$(CC_CMD) -O0
+ 
+-$(OUT)/platform/x11/%.o : platform/x11/%.c
++$(OUT)/platform/x11/%.lo : platform/x11/%.c
+ 	$(CC_CMD) -Wall $(X11_CFLAGS)
+ 
+-$(OUT)/platform/x11/curl/%.o : platform/x11/%.c
++$(OUT)/platform/x11/curl/%.lo : platform/x11/%.c
+ 	$(CC_CMD) -Wall $(X11_CFLAGS) $(CURL_CFLAGS) -DHAVE_CURL
+ 
+-$(OUT)/platform/gl/%.o : platform/gl/%.c
++$(OUT)/platform/gl/%.lo : platform/gl/%.c
+ 	$(CC_CMD) -Wall $(THIRD_CFLAGS) $(GLUT_CFLAGS)
+ 
+ ifeq ($(HAVE_OBJCOPY),yes)
+-  $(OUT)/source/fitz/noto.o : source/fitz/noto.c
++  $(OUT)/source/fitz/noto.lo : source/fitz/noto.c
+ 	$(CC_CMD) -Wall -Wdeclaration-after-statement -DHAVE_OBJCOPY $(THIRD_CFLAGS)
+ endif
+ 
+-$(OUT)/source/%.o : source/%.c
++$(OUT)/source/%.lo : source/%.c
+ 	$(CC_CMD) -Wall -Wdeclaration-after-statement $(THIRD_CFLAGS)
+ 
+-$(OUT)/platform/%.o : platform/%.c
++$(OUT)/platform/%.lo : platform/%.c
+ 	$(CC_CMD) -Wall
+ 
+-$(OUT)/%.o: %.rc
++$(OUT)/%.lo: %.rc
+ 	$(WINDRES_CMD)
+ 
+-.PRECIOUS : $(OUT)/%.o # Keep intermediates from chained rules
++.PRECIOUS : $(OUT)/%.lo # Keep intermediates from chained rules
+ .PRECIOUS : $(OUT)/%.exe # Keep intermediates from chained rules
+ 
+ # --- File lists ---
+ 
+-THIRD_OBJ := $(THIRD_SRC:%.c=$(OUT)/%.o)
+-THIRD_OBJ := $(THIRD_OBJ:%.cc=$(OUT)/%.o)
++THIRD_OBJ := $(THIRD_SRC:%.c=$(OUT)/%.lo)
++THIRD_OBJ := $(THIRD_OBJ:%.cc=$(OUT)/%.lo)
+ 
+ MUPDF_SRC := $(sort $(wildcard source/fitz/*.c))
+ MUPDF_SRC += $(sort $(wildcard source/pdf/*.c))
+@@ -121,14 +121,14 @@ MUPDF_SRC += $(sort $(wildcard source/sv
+ MUPDF_SRC += $(sort $(wildcard source/html/*.c))
+ MUPDF_SRC += $(sort $(wildcard source/cbz/*.c))
+ 
+-MUPDF_OBJ := $(MUPDF_SRC:%.c=$(OUT)/%.o)
++MUPDF_OBJ := $(MUPDF_SRC:%.c=$(OUT)/%.lo)
+ 
+ THREAD_SRC := source/helpers/mu-threads/mu-threads.c
+-THREAD_OBJ := $(THREAD_SRC:%.c=$(OUT)/%.o)
++THREAD_OBJ := $(THREAD_SRC:%.c=$(OUT)/%.lo)
+ 
+ PKCS7_SRC := source/helpers/pkcs7/pkcs7-check.c
+ PKCS7_SRC += source/helpers/pkcs7/pkcs7-openssl.c
+-PKCS7_OBJ := $(PKCS7_SRC:%.c=$(OUT)/%.o)
++PKCS7_OBJ := $(PKCS7_SRC:%.c=$(OUT)/%.lo)
+ 
+ # --- Generated embedded font files ---
+ 
+@@ -149,13 +149,13 @@ generated/%.ttf.c : %.ttf $(HEXDUMP_EXE)
+ generated/%.ttc.c : %.ttc $(HEXDUMP_EXE) ; $(QUIET_GEN) $(MKTGTDIR) ; $(HEXDUMP_EXE) -s $@ $<
+ 
+ ifeq ($(HAVE_OBJCOPY),yes)
+-  MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.o)
+-  $(OUT)/%.cff.o : %.cff ; $(OBJCOPY_CMD)
+-  $(OUT)/%.otf.o : %.otf ; $(OBJCOPY_CMD)
+-  $(OUT)/%.ttf.o : %.ttf ; $(OBJCOPY_CMD)
+-  $(OUT)/%.ttc.o : %.ttc ; $(OBJCOPY_CMD)
++  MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.lo)
++  $(OUT)/%.cff.lo : %.cff ; $(OBJCOPY_CMD)
++  $(OUT)/%.otf.lo : %.otf ; $(OBJCOPY_CMD)
++  $(OUT)/%.ttf.lo : %.ttf ; $(OBJCOPY_CMD)
++  $(OUT)/%.ttc.lo : %.ttc ; $(OBJCOPY_CMD)
+ else
+-  MUPDF_OBJ += $(FONT_GEN:%.c=$(OUT)/%.o)
++  MUPDF_OBJ += $(FONT_GEN:%.c=$(OUT)/%.lo)
+ endif
+ 
+ generate: $(FONT_GEN)
+@@ -189,17 +189,17 @@ generate: source/pdf/js/util.js.h
+ 
+ # --- Library ---
+ 
+-MUPDF_LIB = $(OUT)/libmupdf.a
+-THIRD_LIB = $(OUT)/libmupdf-third.a
+-THREAD_LIB = $(OUT)/libmupdf-threads.a
+-PKCS7_LIB = $(OUT)/libmupdf-pkcs7.a
++MUPDF_LIB = $(OUT)/libmupdf.la
++THIRD_LIB = $(OUT)/libmupdf-third.la
++THREAD_LIB = $(OUT)/libmupdf-threads.la
++PKCS7_LIB = $(OUT)/libmupdf-pkcs7.la
+ 
+ $(MUPDF_LIB) : $(MUPDF_OBJ)
+ $(THIRD_LIB) : $(THIRD_OBJ)
+ $(THREAD_LIB) : $(THREAD_OBJ)
+ $(PKCS7_LIB) : $(PKCS7_OBJ)
+ 
+-INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB)
++INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB) $(PKCS7_LIB)
+ 
+ # --- Main tools and viewers ---
+ 
+@@ -210,13 +210,13 @@ MUTOOL_SRC += source/tools/murun.c
+ MUTOOL_SRC += source/tools/mutrace.c
+ MUTOOL_SRC += source/tools/cmapdump.c
+ MUTOOL_SRC += $(sort $(wildcard source/tools/pdf*.c))
+-MUTOOL_OBJ := $(MUTOOL_SRC:%.c=$(OUT)/%.o)
++MUTOOL_OBJ := $(MUTOOL_SRC:%.c=$(OUT)/%.lo)
+ MUTOOL_EXE := $(OUT)/mutool
+ $(MUTOOL_EXE) : $(MUTOOL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(THREAD_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
+ TOOL_APPS += $(MUTOOL_EXE)
+ 
+-MURASTER_OBJ := $(OUT)/source/tools/muraster.o
++MURASTER_OBJ := $(OUT)/source/tools/muraster.lo
+ MURASTER_EXE := $(OUT)/muraster
+ $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS)
+@@ -224,7 +224,7 @@ TOOL_APPS += $(MURASTER_EXE)
+ 
+ ifeq ($(HAVE_GLUT),yes)
+   MUVIEW_GLUT_SRC += $(sort $(wildcard platform/gl/*.c))
+-  MUVIEW_GLUT_OBJ := $(MUVIEW_GLUT_SRC:%.c=$(OUT)/%.o)
++  MUVIEW_GLUT_OBJ := $(MUVIEW_GLUT_SRC:%.c=$(OUT)/%.lo)
+   MUVIEW_GLUT_EXE := $(OUT)/mupdf-gl
+   $(MUVIEW_GLUT_EXE) : $(MUVIEW_GLUT_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(GLUT_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(LIBCRYPTO_LIBS) $(WIN32_LDFLAGS) $(GLUT_LIBS)
+@@ -232,10 +232,10 @@ ifeq ($(HAVE_GLUT),yes)
+ endif
+ 
+ ifeq ($(HAVE_X11),yes)
+-  MUVIEW_X11_EXE := $(OUT)/mupdf-x11
+-  MUVIEW_X11_OBJ += $(OUT)/platform/x11/pdfapp.o
+-  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_main.o
+-  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_image.o
++  MUVIEW_X11_EXE := $(OUT)/mupdf
++  MUVIEW_X11_OBJ += $(OUT)/platform/x11/pdfapp.lo
++  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_main.lo
++  MUVIEW_X11_OBJ += $(OUT)/platform/x11/x11_image.lo
+   $(MUVIEW_X11_EXE) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS)
+   VIEW_APPS += $(MUVIEW_X11_EXE)
+@@ -243,9 +243,9 @@ endif
+ 
+ ifeq ($(HAVE_WIN32),yes)
+   MUVIEW_WIN32_EXE := $(OUT)/mupdf-w32
+-  MUVIEW_WIN32_OBJ += $(OUT)/platform/x11/pdfapp.o
+-  MUVIEW_WIN32_OBJ += $(OUT)/platform/x11/win_main.o
+-  MUVIEW_WIN32_OBJ += $(OUT)/platform/x11/win_res.o
++  MUVIEW_WIN32_OBJ += $(OUT)/platform/x11/pdfapp.lo
++  MUVIEW_WIN32_OBJ += $(OUT)/platform/x11/win_main.lo
++  MUVIEW_WIN32_OBJ += $(OUT)/platform/x11/win_res.lo
+   $(MUVIEW_WIN32_EXE) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(WIN32_LDFLAGS) $(WIN32_LIBS) $(LIBCRYPTO_LIBS)
+   VIEW_APPS += $(MUVIEW_WIN32_EXE)
+@@ -255,11 +255,11 @@ ifeq ($(HAVE_X11),yes)
+ ifeq ($(HAVE_CURL),yes)
+ ifeq ($(HAVE_PTHREAD),yes)
+   MUVIEW_X11_CURL_EXE := $(OUT)/mupdf-x11-curl
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/pdfapp.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_main.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_image.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/curl_stream.o
+-  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/prog_stream.o
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/pdfapp.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_main.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/x11_image.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/curl_stream.lo
++  MUVIEW_X11_CURL_OBJ += $(OUT)/platform/x11/curl/prog_stream.lo
+   $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(CURL_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(X11_LIBS) $(LIBCRYPTO_LIBS) $(CURL_LIBS) $(PTHREAD_LIBS)
+   VIEW_APPS += $(MUVIEW_X11_CURL_EXE)
+@@ -269,19 +269,19 @@ endif
+ 
+ # --- Generated dependencies ---
+ 
+--include $(MUPDF_OBJ:%.o=%.d)
+--include $(PKCS7_OBJ:%.o=%.d)
+--include $(THREAD_OBJ:%.o=%.d)
+--include $(THIRD_OBJ:%.o=%.d)
+--include $(GLUT_OBJ:%.o=%.d)
+-
+--include $(MUTOOL_OBJ:%.o=%.d)
+--include $(MUVIEW_GLUT_OBJ:%.o=%.d)
+--include $(MUVIEW_X11_OBJ:%.o=%.d)
+--include $(MUVIEW_WIN32_OBJ:%.o=%.d)
++-include $(MUPDF_OBJ:%.lo=%.d)
++-include $(PKCS7_OBJ:%.lo=%.d)
++-include $(THREAD_OBJ:%.lo=%.d)
++-include $(THIRD_OBJ:%.lo=%.d)
++-include $(GLUT_OBJ:%.lo=%.d)
++
++-include $(MUTOOL_OBJ:%.lo=%.d)
++-include $(MUVIEW_GLUT_OBJ:%.lo=%.d)
++-include $(MUVIEW_X11_OBJ:%.lo=%.d)
++-include $(MUVIEW_WIN32_OBJ:%.lo=%.d)
+ 
+--include $(MURASTER_OBJ:%.o=%.d)
+--include $(MUVIEW_X11_CURL_OBJ:%.o=%.d)
++-include $(MURASTER_OBJ:%.lo=%.d)
++-include $(MUVIEW_X11_CURL_OBJ:%.lo=%.d)
+ 
+ # --- Examples ---
+ 
+@@ -292,10 +292,10 @@ $(OUT)/multi-threaded: docs/examples/mul
+ 
+ # --- Update version string header ---
+ 
+-VERSION = $(shell git describe --tags)
+-
+-version:
+-	sed -i~ -e '/FZ_VERSION /s/".*"/"'$(VERSION)'"/' include/mupdf/fitz/version.h
++#VERSION = $(shell git describe --tags)
++#
++#version:
++#	sed -i~ -e '/FZ_VERSION /s/".*"/"'$(VERSION)'"/' include/mupdf/fitz/version.h
+ 
+ # --- Format man pages ---
+ 
+@@ -323,27 +323,30 @@ tools: $(TOOL_APPS)
+ apps: $(TOOL_APPS) $(VIEW_APPS)
+ 
+ install: libs apps
+-	install -d $(DESTDIR)$(incdir)/mupdf
+-	install -d $(DESTDIR)$(incdir)/mupdf/fitz
+-	install -d $(DESTDIR)$(incdir)/mupdf/pdf
+-	install -m 644 include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
+-	install -m 644 include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
+-	install -m 644 include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
+-
+-	install -d $(DESTDIR)$(libdir)
+-	install -m 644 $(INSTALL_LIBS) $(DESTDIR)$(libdir)
+-
+-	install -d $(DESTDIR)$(bindir)
+-	install -m 755 $(TOOL_APPS) $(VIEW_APPS) $(DESTDIR)$(bindir)
+-
+-	install -d $(DESTDIR)$(mandir)/man1
+-	install -m 644 docs/man/*.1 $(DESTDIR)$(mandir)/man1
+-
+-	install -d $(DESTDIR)$(docdir)
+-	install -d $(DESTDIR)$(docdir)/examples
+-	install -m 644 README COPYING CHANGES $(DESTDIR)$(docdir)
+-	install -m 644 docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
+-	install -m 644 docs/examples/* $(DESTDIR)$(docdir)/examples
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir)/mupdf
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir)/mupdf/fitz
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir)/mupdf/pdf
++	${BSD_INSTALL_DATA} include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
++	${BSD_INSTALL_DATA} include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
++	${BSD_INSTALL_DATA} include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
++
++	${BSD_INSTALL_LIB_DIR} $(DESTDIR)$(libdir)
++	for f in $(INSTALL_LIBS); do \
++		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir); \
++	done
++
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(bindir)
++	for f in $(TOOL_APPS) $(VIEW_APPS); do \
++		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(bindir); \
++	done
++
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(mandir)/man1
++	${BSD_INSTALL_MAN} docs/man/*.1 $(DESTDIR)$(mandir)/man1
++
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/examples
++	${BSD_INSTALL_DATA} README COPYING CHANGES $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} docs/examples/* $(DESTDIR)$(docdir)/examples
+ 
+ tarball:
+ 	bash scripts/archive.sh
