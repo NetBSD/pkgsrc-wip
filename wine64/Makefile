@@ -24,8 +24,6 @@ WINE32_ENV+=		CFLAGS+=-m32
 # WINE32_ENV+=		X11_LDFLAGS+=-lX11
 # WINE32_ENV+=		PKG_CONFIG_PATH=${PREFIX}/emul/netbsd32/lib:${PREFIX}/lib
 
-BUILD_DEPENDS+=		bison-[0-9-*:../../devel/bison
-
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
