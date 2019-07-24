@@ -1,0 +1,4 @@
+- Run-time search paths checks fails:
+
+   => Checking for missing run-time search paths in compat32_expat-2.2.6
+   ERROR: emul/netbsd32/bin/xmlwf: missing library: libexpat.so.1
