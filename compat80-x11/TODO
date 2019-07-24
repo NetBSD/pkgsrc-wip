@@ -1,2 +1,3 @@
 - The package is called `compat80-x11' but it try to fetch 8.1_RC1 installation
   sets.  Why?  Is 8.1_RC1 really needed or could 8.1 or 8.0 be fetched instead?
+- Update MESSAGE
