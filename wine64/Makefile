@@ -31,6 +31,8 @@ USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
 NOT_PAX_MPROTECT_SAFE+=	bin/wine64
+# XXX: pkgsrc complains that libwine.so.1 is missing prior installation
+CHECK_SHLIBS_SKIP=	bin/wine*
 
 BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
