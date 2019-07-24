@@ -1,0 +1,6 @@
+- The checksum in distinfo seems incorrect (e.g. running `make checksum' fails
+  due different size).
+- The distfiles do not contain any version, to avoid any possible conflicts
+  DIST_SUBDIR should be defined.
+- The package is called `compat80-x11' but it try to fetch 8.1_RC1 installation
+  sets.  Why?  Is 8.1_RC1 really needed or could 8.1 or 8.0 be fetched instead?
