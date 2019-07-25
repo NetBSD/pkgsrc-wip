@@ -1,3 +1,7 @@
+* Fails due missing run-time search paths checks:
+   ERROR: emul/netbsd32/lib/wine/wine/acledit.dll.so: missing library: libi386.so.2
+   [...]
+   ERROR: emul/netbsd32/lib/wine/wine/xpssvcs.dll.so: missing library: libi386.so.2
 * Double-check the `+=' usage in CFLAGS+= and X11_LDFLAGS+= in WINE32_ENV
   definition
 * --x-libraries is passed via WINE32_ARGS, why X11_LDFLAGS is also passed via
