@@ -34,8 +34,7 @@ SUBST_SED.test+=	-e 's|^python|${PYTHONBIN}|g'
 CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
 
-# MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lopenblas"
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lcblas ${BLAS_LIBS}"
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lcblas ${LAPACK_LIBS} ${BLAS_LIBS}"
 # Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
@@ -46,19 +45,18 @@ MAKE_FILE=	${FILESDIR}/Makefile.generic
 
 DATADIR=	${PREFIX}/share/plink2
 
+post-patch:
+	${SED} -e "s|%%DATADIR%%|${DATADIR}|g" ${FILESDIR}/plink2-test.in \
+		> ${WRKDIR}/plink2-test
+
 post-install:
 	(cd ${WRKSRC} && pax -rw Tests ${DESTDIR}${DATADIR})
 	${CHMOD} a+x \
 		${DESTDIR}${DATADIR}/Tests/run_tests.sh \
 		${DESTDIR}${DATADIR}/Tests/*/run_tests.sh
-	# ${CHMOD} -R a+rX ${DESTDIR}${DATADIR}/Tests
-	${SED} -e "s|%%DATADIR%%|${DATADIR}|g" ${FILESDIR}/plink2-test.in \
-		> ${WRKDIR}/plink2-test
 	${INSTALL_SCRIPT} ${WRKDIR}/plink2-test ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${FILESDIR}/plink2-bench ${DESTDIR}${PREFIX}/bin
 
-# .include "../../wip/openblas/buildlink3.mk"
-# .include "../../math/blas/buildlink3.mk"
 .include "../../wip/mk/blas.buildlink3.mk"
 .include "../../wip/cblas/buildlink3.mk"
 .include "../../lang/python/application.mk"
