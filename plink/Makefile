@@ -26,8 +26,7 @@ WRKSRC=		${WRKDIR}/plink-ng-${GITHUB_TAG}/1.9
 
 CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -I.
 CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include
-# MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib -llapack -lcblas -lblas -lpthread"
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib ${BLAS_LIBS} -lcblas -lpthread"
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib ${LAPACK_LIBS} ${BLAS_LIBS} -lcblas -lpthread"
 INSTALL_TARGET=	install-strip
 
 PORTVERSION=	1.90b4
@@ -42,8 +41,6 @@ do-install:
 
 .include "../../wip/cblas/buildlink3.mk"
 .include "../../wip/mk/blas.buildlink3.mk"
-# .include "../../math/blas/buildlink3.mk"
-# .include "../../math/lapack/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
