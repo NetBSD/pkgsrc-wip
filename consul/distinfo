@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (consul-1.5.2.tar.gz) = f1a487052be99601446196cf1953bb798fa641af
-RMD160 (consul-1.5.2.tar.gz) = 18285546b0894092ae83a8d7fb05500dabe103ce
-SHA512 (consul-1.5.2.tar.gz) = e0820592abc5e119f74c8bf3d11a23726ee6dda7d193864a4486d64deef0bfd6ae4c9170b57d6f978e7ddfeb425229a019c45a8edcdea0938bce9315f2444fd6
-Size (consul-1.5.2.tar.gz) = 21697719 bytes
+SHA1 (consul-1.5.3.tar.gz) = 2c0ddec0f1014dfcbfc8e9852acb5a8028266add
+RMD160 (consul-1.5.3.tar.gz) = a9a61e34653af66e277c4f7d0880a9ef2cff73fa
+SHA512 (consul-1.5.3.tar.gz) = 3f275ec160b9e583b81ba8d463fdb05e9fc9058db2453d9393a56b67337ea04df98a89225323192230938e1abfb48fa60fe0a32b4d8980573b749217b69933e9
+Size (consul-1.5.3.tar.gz) = 21743194 bytes
