@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (gopass-v1.8.5.tar.gz) = 8d0f67a8826508c0a456e8ce9c24a2b7ec74fd41
-RMD160 (gopass-v1.8.5.tar.gz) = 3e985a234b622af34a4ba4b27dd60b65414deff2
-SHA512 (gopass-v1.8.5.tar.gz) = 1f451b10aa87141de635650489bf7227c252e10e5139dad274c95d5625db74fec0b8892a468800d3d3c5dd8b3d64f1c93bd6c75a0ba54fe5f6e630c77b2c6c71
-Size (gopass-v1.8.5.tar.gz) = 6561060 bytes
+SHA1 (gopass-v1.8.6.tar.gz) = 82d059166ca1cd5805b37519a04431873e6ad947
+RMD160 (gopass-v1.8.6.tar.gz) = f9b80b4d36d0689e201be93846cb5164305a5463
+SHA512 (gopass-v1.8.6.tar.gz) = 7acdb095cf8913954044c3206eab020f197542334798c6b94724709c3953b12f7e5b73ce8c1aa4bfd5df3acf1f424b64bfa94f9a8f68fa7116ed14c8a0f2e6f0
+Size (gopass-v1.8.6.tar.gz) = 7072723 bytes
