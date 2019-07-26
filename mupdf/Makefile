@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.69 2019/07/06 11:27:48 leot Exp $
 
-DISTNAME=	mupdf-1.16.0-rc1-source
-PKGNAME=	${DISTNAME:S/-rc1-source/rc1/}	# XXX: Only for rc1!
+DISTNAME=	mupdf-1.16.0-rc2-source
+PKGNAME=	${DISTNAME:S/-rc2-source/rc2/}	# XXX: Only for rc2!
 #PKGNAME=	${DISTNAME:S/-source//}		# XXX: Uncomment when 1.16.0 is out
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
