@@ -1,0 +1,16 @@
+Amp is a text editor which is heavily inspired by Vi/Vim. It aims to
+take the core interaction model of Vim, simplify it, and bundle in the
+essential features required for a modern text editor.
+
+Its features include:
+- File Finder: Quickly indexes and finds files using a simple, accurate
+  matching algorithm. Ignores git directories by default; easily
+  configurable to your own liking, if you must.
+- Easy Movement: Fast, precise cursor movement without repetitive
+  keystrokes or fancy expressions. Look where you'd like to move, and
+  type the token. That's it.
+- Symbol Jump: Move to any class, struct, or method definition within
+  the current buffer. Easily augment the default set of supported
+  languages using the .sublime-syntax format.
+- Flexible Keymaps: Simple YAML-based key mappings with the ability to
+  compose multiple built-in commands into new, custom macros.
