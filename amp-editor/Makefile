@@ -1,8 +1,6 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	amp
-DISTNAME=	0.6.0
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	amp-0.6.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmacdonald/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -12,7 +10,7 @@ HOMEPAGE=	https://github.com/jmacdonald/amp/
 COMMENT=	Texteditor inspired by Vim
 LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config cmake
 
 WRKSRC=			${WRKDIR}/amp-0.6.0
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.5.3
@@ -187,7 +185,7 @@ MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		yes
 BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
+REPLACE_PYTHON+=		../vendor/xcb-0.8.2/rs-client.py
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
@@ -200,4 +198,5 @@ do-install:
 .include "../../lang/rust/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
