@@ -30,6 +30,7 @@ MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib ${LAPACK_LIBS} ${BLAS_LIBS} -lc
 INSTALL_TARGET=	install-strip
 
 PORTVERSION=	1.90b4
+BLAS_ACCEPTED=	openblas_pthread
 
 INSTALLATION_DIRS=	bin
 
@@ -39,8 +40,8 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin
 
-.include "../../wip/cblas/buildlink3.mk"
 .include "../../wip/mk/blas.buildlink3.mk"
+.include "../../wip/cblas/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
