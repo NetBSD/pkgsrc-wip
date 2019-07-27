@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	console-setup_1.188
-PKGNAME=	bdf2psf-1.188
+DISTNAME=	console-setup_1.192
+PKGNAME=	bdf2psf-1.192
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/c/console-setup/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,7 @@ HOMEPAGE=	https://packages.debian.org/sid/bdf2psf
 COMMENT=	Convert a BDF font to PSF format for the Linux console
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/console-setup-1.188
+WRKSRC=		${WRKDIR}/console-setup
 
 NO_BUILD=	yes
 

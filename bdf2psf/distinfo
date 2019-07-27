@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (console-setup_1.188.tar.xz) = 878e179c9d5ad8095fac621fa72b1486b322e904
-RMD160 (console-setup_1.188.tar.xz) = c0a8c7a268edea5bf6e71727a6318524bcc715b5
-SHA512 (console-setup_1.188.tar.xz) = 563d580fcee25020b09024a2ac772ab6b04b97e451e3ee9f3ad917bfbafeb2d1065a7e26427f9f5a6a2596689c1264501c9b5f7a57b1daa2f5c651e6fd595586
-Size (console-setup_1.188.tar.xz) = 1649092 bytes
+SHA1 (console-setup_1.192.tar.xz) = 7fa9c69d97d63f13d913340f312c2721207ddf43
+RMD160 (console-setup_1.192.tar.xz) = 485a762c4bc73bb7a6721eee5597129df3113187
+SHA512 (console-setup_1.192.tar.xz) = 2a59b43d9e157034390c8a275752c39eee648cb87ccef4e4507e4a79a75adbb5c6b83aacd93b669b577fa896cef75821f54ce966177879aaec57c5d6759335c8
+Size (console-setup_1.192.tar.xz) = 1650264 bytes
