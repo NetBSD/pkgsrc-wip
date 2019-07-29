@@ -1,3 +1,4 @@
-[ ] pkglint complains about missing license
+[X] Fixed build for RELRO
+[X] pkglint complains about missing license
 [ ] Homepage looks dead
     => Try whether maintainer email address still works
