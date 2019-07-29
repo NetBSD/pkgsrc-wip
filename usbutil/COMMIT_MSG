@@ -1,5 +1,0 @@
-Failed to build with RELRO option
-
-- Honor LDFLAGS
-- Bump PKGREVISION
-- Added LICENSE (to fix pkglint error)

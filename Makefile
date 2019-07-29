@@ -4866,7 +4866,6 @@ SUBDIR+=	uqwk
 SUBDIR+=	urlwatch
 SUBDIR+=	urw-base35-ttf
 SUBDIR+=	usbmuxd
-SUBDIR+=	usbutil
 SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
