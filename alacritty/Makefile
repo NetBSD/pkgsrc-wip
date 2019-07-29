@@ -3,7 +3,7 @@
 DISTNAME=	alacritty-${GITHUB_TAG}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilm/}
-GITHUB_TAG=	84aca672964e29b5b4503b7da7bc34fc395f08ab
+GITHUB_TAG=	72dfa477a9785289931e8e05dfc8244bb6a4e81c
 
 MAINTAINER=	ng0@n0.is
 HOMEPAGE=	https://github.com/jwilm/alacritty
@@ -12,288 +12,288 @@ LICENSE=	apache-2.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config # For fontconfig-sys
 
-CARGO_CRATE_DEPENDS+=	adler32-1.0.3 \
-		aho-corasick-0.6.10 \
-		aho-corasick-0.7.4 \
-		andrew-0.2.1 \
-		android_glue-0.2.3 \
-		ansi_term-0.11.0 \
-		approx-0.3.2 \
-		arc-swap-0.3.11 \
-		argon2rs-0.2.5 \
-		arrayvec-0.4.11 \
-		atty-0.2.12 \
-		autocfg-0.1.4 \
-		backtrace-0.3.32 \
-		backtrace-sys-0.1.30 \
-		base64-0.10.1 \
-		bindgen-0.33.2 \
-		bitflags-1.1.0 \
-		blake2-rfc-0.2.18 \
-		block-0.1.6 \
-		byteorder-1.3.2 \
-		bzip2-0.3.3 \
-		bzip2-sys-0.1.7 \
-		c2-chacha-0.2.2 \
-		cc-1.0.37 \
-		cexpr-0.2.3 \
-		cfg-if-0.1.9 \
-		cgl-0.2.3 \
-		clang-sys-0.22.0 \
-		clap-2.33.0 \
-		clipboard-win-2.2.0 \
-		cloudabi-0.0.3 \
-		cmake-0.1.40 \
-		cocoa-0.18.4 \
-		color_quant-1.0.1 \
-		constant_time_eq-0.1.3 \
-		core-foundation-0.6.4 \
-		core-foundation-sys-0.6.2 \
-		core-graphics-0.17.3 \
-		core-text-13.2.0 \
-		crc32fast-1.2.0 \
-		crossbeam-channel-0.3.8 \
-		crossbeam-deque-0.6.3 \
-		crossbeam-epoch-0.7.1 \
-		crossbeam-queue-0.1.2 \
-		crossbeam-utils-0.6.5 \
-		deflate-0.7.20 \
-		derivative-1.0.2 \
-		dirs-1.0.5 \
-		dlib-0.4.1 \
-		downcast-rs-1.0.4 \
-		dtoa-0.4.4 \
-		dunce-1.0.0 \
-		dwrote-0.9.0 \
-		either-1.5.2 \
-		embed-resource-1.2.1 \
-		env_logger-0.5.13 \
-		env_logger-0.6.2 \
-		errno-0.2.4 \
-		errno-dragonfly-0.1.1 \
-		euclid-0.19.9 \
-		euclid_macros-0.1.0 \
-		expat-sys-2.1.6 \
-		failure-0.1.5 \
-		failure_derive-0.1.5 \
-		filetime-0.2.5 \
-		fnv-1.0.6 \
-		foreign-types-0.3.2 \
-		foreign-types-0.4.0 \
-		foreign-types-macros-0.1.0 \
-		foreign-types-shared-0.1.1 \
-		foreign-types-shared-0.2.0 \
-		freetype-rs-0.19.1 \
-		freetype-sys-0.7.1 \
-		fsevent-0.4.0 \
-		fsevent-sys-2.0.1 \
-		fuchsia-cprng-0.1.1 \
-		fuchsia-zircon-0.3.3 \
-		fuchsia-zircon-sys-0.3.3 \
-		gcc-0.3.55 \
-		getrandom-0.1.6 \
-		gif-0.10.2 \
-		gl_generator-0.11.0 \
-		gleam-0.6.18 \
-		glob-0.2.11 \
-		glutin-0.21.0 \
-		glutin_egl_sys-0.1.3 \
-		glutin_emscripten_sys-0.1.0 \
-		glutin_gles2_sys-0.1.3 \
-		glutin_glx_sys-0.1.5 \
-		glutin_wgl_sys-0.1.3 \
-		http_req-0.5.1 \
-		humantime-1.2.0 \
-		idna-0.1.5 \
-		image-0.21.2 \
-		inflate-0.4.5 \
-		inotify-0.6.1 \
-		inotify-sys-0.1.3 \
-		iovec-0.1.2 \
-		itoa-0.4.4 \
-		jpeg-decoder-0.1.15 \
-		kernel32-sys-0.2.2 \
-		khronos_api-3.1.0 \
-		lazy_static-1.3.0 \
-		lazycell-1.2.1 \
-		libc-0.2.59 \
-		libflate-0.1.25 \
-		libloading-0.5.2 \
-		libz-sys-1.0.25 \
-		line_drawing-0.7.0 \
-		linked-hash-map-0.5.2 \
-		lock_api-0.1.5 \
-		log-0.4.7 \
-		lzw-0.10.0 \
-		malloc_buf-0.0.6 \
-		matches-0.1.8 \
-		memchr-1.0.2 \
-		memchr-2.2.1 \
-		memmap-0.7.0 \
-		memoffset-0.2.1 \
-		mio-0.6.19 \
-		mio-anonymous-pipes-0.1.0 \
-		mio-extras-2.0.5 \
-		mio-named-pipes-0.1.6 \
-		mio-uds-0.6.7 \
-		miow-0.2.1 \
-		miow-0.3.3 \
-		named_pipe-0.3.0 \
-		native-tls-0.2.3 \
-		net2-0.2.33 \
-		nix-0.14.1 \
-		nodrop-0.1.13 \
-		nom-3.2.1 \
-		nom-4.2.3 \
-		notify-4.0.12 \
-		num-derive-0.2.5 \
-		num-integer-0.1.41 \
-		num-iter-0.1.39 \
-		num-rational-0.2.2 \
-		num-traits-0.2.8 \
-		num_cpus-1.10.1 \
-		objc-0.2.6 \
-		objc-foundation-0.1.1 \
-		objc_id-0.1.1 \
-		openssl-0.10.23 \
-		openssl-probe-0.1.2 \
-		openssl-sys-0.9.47 \
-		ordered-float-1.0.2 \
-		osmesa-sys-0.1.2 \
-		owning_ref-0.4.0 \
-		parking_lot-0.7.1 \
-		parking_lot_core-0.4.0 \
-		peeking_take_while-0.1.2 \
-		percent-encoding-1.0.1 \
-		phf-0.7.24 \
-		phf_codegen-0.7.24 \
-		phf_generator-0.7.24 \
-		phf_shared-0.7.24 \
-		pkg-config-0.3.14 \
-		png-0.14.1 \
-		podio-0.1.6 \
-		ppv-lite86-0.2.5 \
-		proc-macro2-0.4.30 \
-		quick-error-1.2.2 \
-		quote-0.3.15 \
-		quote-0.6.13 \
-		rand-0.6.5 \
-		rand-0.7.0 \
-		rand_chacha-0.1.1 \
-		rand_chacha-0.2.0 \
-		rand_core-0.3.1 \
-		rand_core-0.4.0 \
-		rand_core-0.5.0 \
-		rand_hc-0.1.0 \
-		rand_hc-0.2.0 \
-		rand_isaac-0.1.1 \
-		rand_jitter-0.1.4 \
-		rand_os-0.1.3 \
-		rand_pcg-0.1.2 \
-		rand_xorshift-0.1.1 \
-		rayon-1.1.0 \
-		rayon-core-1.5.0 \
-		rdrand-0.4.0 \
-		redox_syscall-0.1.56 \
-		redox_users-0.3.0 \
-		regex-0.2.11 \
-		regex-1.1.9 \
-		regex-syntax-0.5.6 \
-		regex-syntax-0.6.8 \
-		remove_dir_all-0.5.2 \
-		rle-decode-fast-1.0.1 \
-		rustc-demangle-0.1.15 \
-		rustc_tools_util-0.2.0 \
-		rustc_version-0.2.3 \
-		rusttype-0.7.7 \
-		ryu-1.0.0 \
-		same-file-1.0.4 \
-		schannel-0.1.15 \
-		scoped_threadpool-0.1.9 \
-		scopeguard-0.3.3 \
-		security-framework-0.3.1 \
-		security-framework-sys-0.3.1 \
-		semver-0.9.0 \
-		semver-parser-0.7.0 \
-		serde-1.0.94 \
-		serde_derive-1.0.94 \
-		serde_json-1.0.40 \
-		serde_yaml-0.8.9 \
-		servo-fontconfig-0.4.0 \
-		servo-fontconfig-sys-4.0.7 \
-		shared_library-0.1.9 \
-		signal-hook-0.1.9 \
-		signal-hook-registry-1.0.1 \
-		siphasher-0.2.3 \
-		slab-0.4.2 \
-		smallvec-0.6.10 \
-		smithay-client-toolkit-0.4.6 \
-		smithay-client-toolkit-0.6.3 \
-		smithay-clipboard-0.3.3 \
-		socket2-0.3.9 \
-		spin-0.5.0 \
-		spsc-buffer-0.1.1 \
-		stable_deref_trait-1.1.1 \
-		static_assertions-0.3.3 \
-		stb_truetype-0.2.6 \
-		strsim-0.8.0 \
-		syn-0.15.39 \
-		synstructure-0.10.2 \
-		take_mut-0.2.2 \
-		tempfile-3.1.0 \
-		termcolor-1.0.5 \
-		terminfo-0.6.1 \
-		textwrap-0.11.0 \
-		thread_local-0.3.6 \
-		tiff-0.2.2 \
-		time-0.1.42 \
-		ucd-util-0.1.3 \
-		unicase-2.4.0 \
-		unicode-bidi-0.3.4 \
-		unicode-normalization-0.1.8 \
-		unicode-width-0.1.5 \
-		unicode-xid-0.1.0 \
-		url-1.7.2 \
-		utf8-ranges-1.0.3 \
-		utf8parse-0.1.1 \
-		vcpkg-0.2.7 \
-		vec_map-0.8.1 \
-		version_check-0.1.5 \
-		void-1.0.2 \
-		vswhom-0.1.0 \
-		vswhom-sys-0.1.0 \
-		vte-0.3.3 \
-		walkdir-2.2.8 \
-		wayland-client-0.21.13 \
-		wayland-client-0.23.5 \
-		wayland-commons-0.21.13 \
-		wayland-commons-0.23.5 \
-		wayland-protocols-0.21.13 \
-		wayland-protocols-0.23.5 \
-		wayland-scanner-0.21.13 \
-		wayland-scanner-0.23.5 \
-		wayland-sys-0.21.13 \
-		wayland-sys-0.23.5 \
-		which-1.0.5 \
-		widestring-0.4.0 \
-		winapi-0.2.8 \
-		winapi-0.3.7 \
-		winapi-build-0.1.1 \
-		winapi-i686-pc-windows-gnu-0.4.0 \
-		winapi-util-0.1.2 \
-		winapi-x86_64-pc-windows-gnu-0.4.0 \
-		wincolor-1.0.1 \
-		winit-0.19.1 \
-		winpty-sys-0.4.3 \
-		winreg-0.5.1 \
-		ws2_32-sys-0.2.1 \
-		x11-clipboard-0.3.3 \
-		x11-dl-2.18.3 \
-		xcb-0.8.2 \
-		xdg-2.2.0 \
-		xml-rs-0.8.0 \
-		yaml-rust-0.4.3 \
-		zip-0.5.2
+CARGO_CRATE_DEPENDS+=	adler32-1.0.3
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.6.10
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.4
+CARGO_CRATE_DEPENDS+=	andrew-0.2.1
+CARGO_CRATE_DEPENDS+=	android_glue-0.2.3
+CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
+CARGO_CRATE_DEPENDS+=	approx-0.3.2
+CARGO_CRATE_DEPENDS+=	arc-swap-0.3.11
+CARGO_CRATE_DEPENDS+=	argon2rs-0.2.5
+CARGO_CRATE_DEPENDS+=	arrayvec-0.4.11
+CARGO_CRATE_DEPENDS+=	atty-0.2.13
+CARGO_CRATE_DEPENDS+=	autocfg-0.1.4
+CARGO_CRATE_DEPENDS+=	backtrace-0.3.30
+CARGO_CRATE_DEPENDS+=	backtrace-sys-0.1.30
+CARGO_CRATE_DEPENDS+=	base64-0.10.1
+CARGO_CRATE_DEPENDS+=	bindgen-0.33.2
+CARGO_CRATE_DEPENDS+=	bitflags-1.1.0
+CARGO_CRATE_DEPENDS+=	blake2-rfc-0.2.18
+CARGO_CRATE_DEPENDS+=	block-0.1.6
+CARGO_CRATE_DEPENDS+=	byteorder-1.3.2
+CARGO_CRATE_DEPENDS+=	bzip2-0.3.3
+CARGO_CRATE_DEPENDS+=	bzip2-sys-0.1.7
+CARGO_CRATE_DEPENDS+=	c2-chacha-0.2.2
+CARGO_CRATE_DEPENDS+=	cc-1.0.37
+CARGO_CRATE_DEPENDS+=	cexpr-0.2.3
+CARGO_CRATE_DEPENDS+=	cfg-if-0.1.9
+CARGO_CRATE_DEPENDS+=	cgl-0.2.3
+CARGO_CRATE_DEPENDS+=	clang-sys-0.22.0
+CARGO_CRATE_DEPENDS+=	clap-2.33.0
+CARGO_CRATE_DEPENDS+=	clipboard-win-2.2.0
+CARGO_CRATE_DEPENDS+=	cloudabi-0.0.3
+CARGO_CRATE_DEPENDS+=	cmake-0.1.40
+CARGO_CRATE_DEPENDS+=	cocoa-0.18.4
+CARGO_CRATE_DEPENDS+=	color_quant-1.0.1
+CARGO_CRATE_DEPENDS+=	constant_time_eq-0.1.3
+CARGO_CRATE_DEPENDS+=	core-foundation-0.6.4
+CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.6.2
+CARGO_CRATE_DEPENDS+=	core-graphics-0.17.3
+CARGO_CRATE_DEPENDS+=	core-text-13.2.0
+CARGO_CRATE_DEPENDS+=	crc32fast-1.2.0
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.3.8
+CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.6.3
+CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.7.1
+CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.1.2
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.6.5
+CARGO_CRATE_DEPENDS+=	deflate-0.7.20
+CARGO_CRATE_DEPENDS+=	derivative-1.0.2
+CARGO_CRATE_DEPENDS+=	dirs-1.0.5
+CARGO_CRATE_DEPENDS+=	dlib-0.4.1
+CARGO_CRATE_DEPENDS+=	downcast-rs-1.0.4
+CARGO_CRATE_DEPENDS+=	dtoa-0.4.4
+CARGO_CRATE_DEPENDS+=	dunce-1.0.0
+CARGO_CRATE_DEPENDS+=	dwrote-0.9.0
+CARGO_CRATE_DEPENDS+=	either-1.5.2
+CARGO_CRATE_DEPENDS+=	embed-resource-1.2.1
+CARGO_CRATE_DEPENDS+=	env_logger-0.5.13
+CARGO_CRATE_DEPENDS+=	env_logger-0.6.2
+CARGO_CRATE_DEPENDS+=	errno-0.2.4
+CARGO_CRATE_DEPENDS+=	errno-dragonfly-0.1.1
+CARGO_CRATE_DEPENDS+=	euclid-0.19.9
+CARGO_CRATE_DEPENDS+=	euclid_macros-0.1.0
+CARGO_CRATE_DEPENDS+=	expat-sys-2.1.6
+CARGO_CRATE_DEPENDS+=	failure-0.1.5
+CARGO_CRATE_DEPENDS+=	failure_derive-0.1.5
+CARGO_CRATE_DEPENDS+=	filetime-0.2.5
+CARGO_CRATE_DEPENDS+=	fnv-1.0.6
+CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
+CARGO_CRATE_DEPENDS+=	foreign-types-0.4.0
+CARGO_CRATE_DEPENDS+=	foreign-types-macros-0.1.0
+CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.1.1
+CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.2.0
+CARGO_CRATE_DEPENDS+=	freetype-rs-0.19.1
+CARGO_CRATE_DEPENDS+=	freetype-sys-0.7.1
+CARGO_CRATE_DEPENDS+=	fsevent-0.4.0
+CARGO_CRATE_DEPENDS+=	fsevent-sys-2.0.1
+CARGO_CRATE_DEPENDS+=	fuchsia-cprng-0.1.1
+CARGO_CRATE_DEPENDS+=	fuchsia-zircon-0.3.3
+CARGO_CRATE_DEPENDS+=	fuchsia-zircon-sys-0.3.3
+CARGO_CRATE_DEPENDS+=	gcc-0.3.55
+CARGO_CRATE_DEPENDS+=	getrandom-0.1.6
+CARGO_CRATE_DEPENDS+=	gif-0.10.2
+CARGO_CRATE_DEPENDS+=	gl_generator-0.11.0
+CARGO_CRATE_DEPENDS+=	gl_generator-0.13.0
+CARGO_CRATE_DEPENDS+=	gleam-0.6.18
+CARGO_CRATE_DEPENDS+=	glob-0.2.11
+CARGO_CRATE_DEPENDS+=	glutin-0.21.0
+CARGO_CRATE_DEPENDS+=	glutin_egl_sys-0.1.3
+CARGO_CRATE_DEPENDS+=	glutin_emscripten_sys-0.1.0
+CARGO_CRATE_DEPENDS+=	glutin_gles2_sys-0.1.3
+CARGO_CRATE_DEPENDS+=	glutin_glx_sys-0.1.5
+CARGO_CRATE_DEPENDS+=	glutin_wgl_sys-0.1.3
+CARGO_CRATE_DEPENDS+=	http_req-0.5.1
+CARGO_CRATE_DEPENDS+=	humantime-1.2.0
+CARGO_CRATE_DEPENDS+=	idna-0.1.5
+CARGO_CRATE_DEPENDS+=	image-0.21.2
+CARGO_CRATE_DEPENDS+=	inflate-0.4.5
+CARGO_CRATE_DEPENDS+=	inotify-0.6.1
+CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.3
+CARGO_CRATE_DEPENDS+=	iovec-0.1.2
+CARGO_CRATE_DEPENDS+=	itoa-0.4.4
+CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.1.15
+CARGO_CRATE_DEPENDS+=	kernel32-sys-0.2.2
+CARGO_CRATE_DEPENDS+=	khronos_api-3.1.0
+CARGO_CRATE_DEPENDS+=	lazy_static-1.3.0
+CARGO_CRATE_DEPENDS+=	lazycell-1.2.1
+CARGO_CRATE_DEPENDS+=	libc-0.2.60
+CARGO_CRATE_DEPENDS+=	libflate-0.1.25
+CARGO_CRATE_DEPENDS+=	libloading-0.5.2
+CARGO_CRATE_DEPENDS+=	libz-sys-1.0.25
+CARGO_CRATE_DEPENDS+=	line_drawing-0.7.0
+CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.2
+CARGO_CRATE_DEPENDS+=	lock_api-0.1.5
+CARGO_CRATE_DEPENDS+=	log-0.4.7
+CARGO_CRATE_DEPENDS+=	lzw-0.10.0
+CARGO_CRATE_DEPENDS+=	malloc_buf-0.0.6
+CARGO_CRATE_DEPENDS+=	matches-0.1.8
+CARGO_CRATE_DEPENDS+=	memchr-1.0.2
+CARGO_CRATE_DEPENDS+=	memchr-2.2.1
+CARGO_CRATE_DEPENDS+=	memmap-0.7.0
+CARGO_CRATE_DEPENDS+=	memoffset-0.2.1
+CARGO_CRATE_DEPENDS+=	mio-0.6.19
+CARGO_CRATE_DEPENDS+=	mio-anonymous-pipes-0.1.0
+CARGO_CRATE_DEPENDS+=	mio-extras-2.0.5
+CARGO_CRATE_DEPENDS+=	mio-named-pipes-0.1.6
+CARGO_CRATE_DEPENDS+=	miow-0.2.1
+CARGO_CRATE_DEPENDS+=	miow-0.3.3
+CARGO_CRATE_DEPENDS+=	named_pipe-0.3.0
+CARGO_CRATE_DEPENDS+=	native-tls-0.2.3
+CARGO_CRATE_DEPENDS+=	net2-0.2.33
+CARGO_CRATE_DEPENDS+=	nix-0.14.1
+CARGO_CRATE_DEPENDS+=	nodrop-0.1.13
+CARGO_CRATE_DEPENDS+=	nom-3.2.1
+CARGO_CRATE_DEPENDS+=	nom-4.2.3
+CARGO_CRATE_DEPENDS+=	notify-4.0.12
+CARGO_CRATE_DEPENDS+=	num-derive-0.2.5
+CARGO_CRATE_DEPENDS+=	num-integer-0.1.41
+CARGO_CRATE_DEPENDS+=	num-iter-0.1.39
+CARGO_CRATE_DEPENDS+=	num-rational-0.2.2
+CARGO_CRATE_DEPENDS+=	num-traits-0.2.8
+CARGO_CRATE_DEPENDS+=	num_cpus-1.10.1
+CARGO_CRATE_DEPENDS+=	objc-0.2.6
+CARGO_CRATE_DEPENDS+=	objc-foundation-0.1.1
+CARGO_CRATE_DEPENDS+=	objc_id-0.1.1
+CARGO_CRATE_DEPENDS+=	openssl-0.10.23
+CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.2
+CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.47
+CARGO_CRATE_DEPENDS+=	ordered-float-1.0.2
+CARGO_CRATE_DEPENDS+=	osmesa-sys-0.1.2
+CARGO_CRATE_DEPENDS+=	owning_ref-0.4.0
+CARGO_CRATE_DEPENDS+=	parking_lot-0.7.1
+CARGO_CRATE_DEPENDS+=	parking_lot_core-0.4.0
+CARGO_CRATE_DEPENDS+=	peeking_take_while-0.1.2
+CARGO_CRATE_DEPENDS+=	percent-encoding-1.0.1
+CARGO_CRATE_DEPENDS+=	phf-0.7.24
+CARGO_CRATE_DEPENDS+=	phf_codegen-0.7.24
+CARGO_CRATE_DEPENDS+=	phf_generator-0.7.24
+CARGO_CRATE_DEPENDS+=	phf_shared-0.7.24
+CARGO_CRATE_DEPENDS+=	pkg-config-0.3.14
+CARGO_CRATE_DEPENDS+=	png-0.14.1
+CARGO_CRATE_DEPENDS+=	podio-0.1.6
+CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.5
+CARGO_CRATE_DEPENDS+=	proc-macro2-0.4.30
+CARGO_CRATE_DEPENDS+=	quick-error-1.2.2
+CARGO_CRATE_DEPENDS+=	quote-0.3.15
+CARGO_CRATE_DEPENDS+=	quote-0.6.13
+CARGO_CRATE_DEPENDS+=	rand-0.6.5
+CARGO_CRATE_DEPENDS+=	rand-0.7.0
+CARGO_CRATE_DEPENDS+=	rand_chacha-0.1.1
+CARGO_CRATE_DEPENDS+=	rand_chacha-0.2.0
+CARGO_CRATE_DEPENDS+=	rand_core-0.3.1
+CARGO_CRATE_DEPENDS+=	rand_core-0.4.0
+CARGO_CRATE_DEPENDS+=	rand_core-0.5.0
+CARGO_CRATE_DEPENDS+=	rand_hc-0.1.0
+CARGO_CRATE_DEPENDS+=	rand_hc-0.2.0
+CARGO_CRATE_DEPENDS+=	rand_isaac-0.1.1
+CARGO_CRATE_DEPENDS+=	rand_jitter-0.1.4
+CARGO_CRATE_DEPENDS+=	rand_os-0.1.3
+CARGO_CRATE_DEPENDS+=	rand_pcg-0.1.2
+CARGO_CRATE_DEPENDS+=	rand_xorshift-0.1.1
+CARGO_CRATE_DEPENDS+=	rayon-1.1.0
+CARGO_CRATE_DEPENDS+=	rayon-core-1.5.0
+CARGO_CRATE_DEPENDS+=	rdrand-0.4.0
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.56
+CARGO_CRATE_DEPENDS+=	redox_users-0.3.0
+CARGO_CRATE_DEPENDS+=	regex-0.2.11
+CARGO_CRATE_DEPENDS+=	regex-1.1.9
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.5.6
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.8
+CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.2
+CARGO_CRATE_DEPENDS+=	rle-decode-fast-1.0.1
+CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.15
+CARGO_CRATE_DEPENDS+=	rustc_tools_util-0.2.0
+CARGO_CRATE_DEPENDS+=	rustc_version-0.2.3
+CARGO_CRATE_DEPENDS+=	rusttype-0.7.7
+CARGO_CRATE_DEPENDS+=	ryu-1.0.0
+CARGO_CRATE_DEPENDS+=	same-file-1.0.5
+CARGO_CRATE_DEPENDS+=	schannel-0.1.15
+CARGO_CRATE_DEPENDS+=	scoped_threadpool-0.1.9
+CARGO_CRATE_DEPENDS+=	scopeguard-0.3.3
+CARGO_CRATE_DEPENDS+=	security-framework-0.3.1
+CARGO_CRATE_DEPENDS+=	security-framework-sys-0.3.1
+CARGO_CRATE_DEPENDS+=	semver-0.9.0
+CARGO_CRATE_DEPENDS+=	semver-parser-0.7.0
+CARGO_CRATE_DEPENDS+=	serde-1.0.94
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.94
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.40
+CARGO_CRATE_DEPENDS+=	serde_yaml-0.8.9
+CARGO_CRATE_DEPENDS+=	servo-fontconfig-0.4.0
+CARGO_CRATE_DEPENDS+=	servo-fontconfig-sys-4.0.7
+CARGO_CRATE_DEPENDS+=	shared_library-0.1.9
+CARGO_CRATE_DEPENDS+=	signal-hook-0.1.10
+CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.0.1
+CARGO_CRATE_DEPENDS+=	siphasher-0.2.3
+CARGO_CRATE_DEPENDS+=	slab-0.4.2
+CARGO_CRATE_DEPENDS+=	smallvec-0.6.10
+CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.4.6
+CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.6.3
+CARGO_CRATE_DEPENDS+=	smithay-clipboard-0.3.3
+CARGO_CRATE_DEPENDS+=	socket2-0.3.9
+CARGO_CRATE_DEPENDS+=	spin-0.5.0
+CARGO_CRATE_DEPENDS+=	spsc-buffer-0.1.1
+CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.1.1
+CARGO_CRATE_DEPENDS+=	static_assertions-0.3.3
+CARGO_CRATE_DEPENDS+=	stb_truetype-0.2.6
+CARGO_CRATE_DEPENDS+=	strsim-0.8.0
+CARGO_CRATE_DEPENDS+=	syn-0.15.39
+CARGO_CRATE_DEPENDS+=	synstructure-0.10.2
+CARGO_CRATE_DEPENDS+=	take_mut-0.2.2
+CARGO_CRATE_DEPENDS+=	tempfile-3.1.0
+CARGO_CRATE_DEPENDS+=	termcolor-1.0.5
+CARGO_CRATE_DEPENDS+=	terminfo-0.6.1
+CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
+CARGO_CRATE_DEPENDS+=	thread_local-0.3.6
+CARGO_CRATE_DEPENDS+=	tiff-0.2.2
+CARGO_CRATE_DEPENDS+=	time-0.1.42
+CARGO_CRATE_DEPENDS+=	ucd-util-0.1.3
+CARGO_CRATE_DEPENDS+=	unicase-2.4.0
+CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.4
+CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.8
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.5
+CARGO_CRATE_DEPENDS+=	unicode-xid-0.1.0
+CARGO_CRATE_DEPENDS+=	url-1.7.2
+CARGO_CRATE_DEPENDS+=	utf8-ranges-1.0.3
+CARGO_CRATE_DEPENDS+=	utf8parse-0.1.1
+CARGO_CRATE_DEPENDS+=	vcpkg-0.2.7
+CARGO_CRATE_DEPENDS+=	vec_map-0.8.1
+CARGO_CRATE_DEPENDS+=	version_check-0.1.5
+CARGO_CRATE_DEPENDS+=	void-1.0.2
+CARGO_CRATE_DEPENDS+=	vswhom-0.1.0
+CARGO_CRATE_DEPENDS+=	vswhom-sys-0.1.0
+CARGO_CRATE_DEPENDS+=	vte-0.3.3
+CARGO_CRATE_DEPENDS+=	walkdir-2.2.8
+CARGO_CRATE_DEPENDS+=	wayland-client-0.21.13
+CARGO_CRATE_DEPENDS+=	wayland-client-0.23.5
+CARGO_CRATE_DEPENDS+=	wayland-commons-0.21.13
+CARGO_CRATE_DEPENDS+=	wayland-commons-0.23.5
+CARGO_CRATE_DEPENDS+=	wayland-protocols-0.21.13
+CARGO_CRATE_DEPENDS+=	wayland-protocols-0.23.5
+CARGO_CRATE_DEPENDS+=	wayland-scanner-0.21.13
+CARGO_CRATE_DEPENDS+=	wayland-scanner-0.23.5
+CARGO_CRATE_DEPENDS+=	wayland-sys-0.21.13
+CARGO_CRATE_DEPENDS+=	wayland-sys-0.23.5
+CARGO_CRATE_DEPENDS+=	which-1.0.5
+CARGO_CRATE_DEPENDS+=	widestring-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-0.2.8
+CARGO_CRATE_DEPENDS+=	winapi-0.3.7
+CARGO_CRATE_DEPENDS+=	winapi-build-0.1.1
+CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-util-0.1.2
+CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	wincolor-1.0.1
+CARGO_CRATE_DEPENDS+=	winit-0.19.1
+CARGO_CRATE_DEPENDS+=	winpty-sys-0.4.3
+CARGO_CRATE_DEPENDS+=	winreg-0.5.1
+CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
+CARGO_CRATE_DEPENDS+=	x11-clipboard-0.3.3
+CARGO_CRATE_DEPENDS+=	x11-dl-2.18.3
+CARGO_CRATE_DEPENDS+=	xcb-0.8.2
+CARGO_CRATE_DEPENDS+=	xdg-2.2.0
+CARGO_CRATE_DEPENDS+=	xml-rs-0.8.0
+CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.3
+CARGO_CRATE_DEPENDS+=	zip-0.5.2
 
 INSTALLATION_DIRS=	bin
 
@@ -323,5 +323,5 @@ do-install:
 .include "../../lang/rust/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xcb-util/buildlink3.mk"
+# .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
