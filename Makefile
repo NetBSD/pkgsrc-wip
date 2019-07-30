@@ -2228,6 +2228,7 @@ SUBDIR+=	mingw-w64-libgcc
 SUBDIR+=	mini18n
 SUBDIR+=	miniircd
 SUBDIR+=	minio
+SUBDIR+=	minisign
 SUBDIR+=	minizip192
 SUBDIR+=	minuit2
 SUBDIR+=	mipscope
