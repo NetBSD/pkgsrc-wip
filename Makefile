@@ -2381,7 +2381,6 @@ SUBDIR+=	neko
 SUBDIR+=	nemo
 SUBDIR+=	neovim
 SUBDIR+=	neovim-git
-SUBDIR+=	nestopia
 SUBDIR+=	nestopia-rpi
 SUBDIR+=	nestra
 SUBDIR+=	net-quanta
