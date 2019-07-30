@@ -4,9 +4,8 @@
 # (Basic Linear Algebra System) implementation instead of one particular one.
 #
 # Since pkgsrc always ships BLAS and LAPACK together (as upstream
-# implementations do), this sets both BLAS_LIBS to the linker flags needed to
-# pull in the BLAS library and LAPACK_LIBS to the flags for the LAPACK library.
-# Often, they will be identical or at least redundant. It is a matter
+# implementations do), this adds both BLAS_LIBS and LAPACK_LIBS to the linker
+# flags.  Often, they will be identical or at least redundant. It is a matter
 # of style to stay consistent in their use.
 #
 # Keywords: blas lapack atlas openblas mkl
@@ -17,8 +16,8 @@
 # === User-settable variables ===
 #
 # PKGSRC_BLAS_TYPES
-#  This value specifies an exhaustive list of BLAS implementations
-#  we wish to use on the system, in descending order of preference.
+#  This value specifies an exhaustive list of BLAS implementations we wish to
+#  use in this pkgsrc installation, in descending order of preference.
 #  The implementation selected for a build will be the first one in
 #  PKGSRC_BLAS_TYPES that also appears in BLAS_ACCEPTED (see below).
 #  Typically set in mk.conf.
@@ -27,16 +26,13 @@
 #    openblas_openmp, and accelerate.framework
 #    (to come: Intel MKL, other external optimized builds)
 #
-#  TODO: Should this be all currently supported implementations rather than
-#        just netlib?  Otherwise, builds will fail with BLAS_ACCEPTED does
-#        not include netlib.
-#  Default: netlib
+#  Default: All currently supported implementations (${_BLAS_TYPES})
 #
 # === Package-settable variables ===
 #
 # BLAS_ACCEPTED
 #   This is a list of blas packages that are compatible with the current
-#   package. If not set, any package is OK.
+#   package. If not set, any BLAS implementation is OK.
 #   Typically set in package Makefile.
 #
 # === Variables automatically set here for use in package builds ===
@@ -44,22 +40,28 @@
 # BLAS_TYPE
 #   This is the BLAS implemtation chosen for a particular package build from
 #   PKGSRC_BLAS_TYPES and BLAS_ACCEPTED.  If PKGSRC_BLAS_TYPES and
-#   BLAS_ACCEPTED have no implementations in common, it defaults to none.
+#   BLAS_ACCEPTED have no implementations in common, it defaults to none
+#   and the build fails.
 # BLAS_LIBS
 #   Linker flags used for linking to BLAS library
 # LAPACK_LIBS
 #   Linker flags used for linking to LAPACK library
 
+# TODO: Why are these set outside .if !defined(BLAS_BUILDLINK3_MK)?
 BUILD_DEFS+=		PKGSRC_BLAS_TYPES
 BUILD_DEFS_EFFECTS+=	BLAS_TYPE BLAS_LIBS LAPACK_LIBS
 
 .if !defined(BLAS_BUILDLINK3_MK)
 BLAS_BUILDLINK3_MK=
 
-# Upon commit change to: .include "bsd.prefs.mk"
+# TODO: Upon commit change to: .include "bsd.prefs.mk"
 .include "../../mk/bsd.prefs.mk"
 
-# List of all possible BLAS choices.
+# List of all possible BLAS choices, in order of *DEFAULT* preference.
+# netlib is the reference implementation to which all others conform and
+# should come first by default for maximum compatibility.  It is also the
+# slowest and not desirable in many situations.  Users can override by setting
+# PKGSRC_BLAS_TYPES. (See comment above)
 _BLAS_TYPES=	netlib openblas openblas_pthread openblas_openmp
 # Darwin
 .if exists(/System/Library/Frameworks/Accelerate.framework)
@@ -67,8 +69,6 @@ _BLAS_TYPES+=	accelerate.framework
 .endif
 
 BLAS_ACCEPTED?=	${_BLAS_TYPES}
-#  TODO: Should this be all currently supported implementations?
-#        See User-settable variables above.
 PKGSRC_BLAS_TYPES?= ${_BLAS_TYPES}
 
 _BLAS_MATCH=
@@ -100,8 +100,7 @@ LAPACK_LIBS=	${BLAS_LIBS}
 .elif ${BLAS_TYPE} == "accelerate.framework"
 BLAS_LIBS=	-framework Accelerate
 LAPACK_LIBS=	${BLAS_LIBS}
-# TODO: Add atlas
-# TODO: Add external BLAS (other OpenBLAS/ATLAS, Intel MKL)
+# TODO: Add ATLAS and other external BLAS options (e.g. Intel MKL)
 .else # invalid or unimplemented type
 PKG_FAIL_REASON+=	\
 	"There is no acceptable BLAS for ${PKGNAME} in: ${PKGSRC_BLAS_TYPES}."
