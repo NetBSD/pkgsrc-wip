@@ -14,9 +14,12 @@ ONLY_FOR_PLATFORM+=	*-*-x86_64
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
 WINE32_ARGS+=		--with-wine64=${BUILD64}
+WINE32_ARGS+=		--with-freetype=${PREFIX}/emul/netbsd32/lib/freetype2
+WINE32_ARGS+=		--with-fontconfig=${PREFIX}/emul/netbsd32/lib/fontconfig
 WINE32_ARGS+=		--libdir=${PREFIX}/emul/netbsd32/lib/wine
 WINE64_ARGS+=		--enable-win64
 WINE64_ARGS+=		--libdir=${PREFIX}/lib
+
 WINE32_ENV+=		CFLAGS+=-m32
 
 # XXX: Fix warning due to _FORTIFY_SOURCE being redefined
@@ -38,12 +41,6 @@ BUILD64=		${WRKSRC}/wine64
 post-extract:
 	${MKDIR} ${BUILD32}
 	${MKDIR} ${BUILD64}
-
-# XXX: Unlink libs and *.pc files of fontconfig and freetype that comes with compat80-x11
-pre-configure:
-	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*fontconfig*" -maxdepth 1 -type l -delete
-	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete
-	cd ${WRKSRC} && autoconf
 
 do-configure:
 	cd ${BUILD64} && ${SETENV} ${WINE_ENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE64_ARGS}
