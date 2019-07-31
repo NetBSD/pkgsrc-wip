@@ -41,8 +41,8 @@ post-extract:
 
 # XXX: Unlink libs and *.pc files of fontconfig and freetype that comes with compat80-x11
 pre-configure:
-	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*fontconfig*" -maxdepth 1 -type l -delete && find ./pkgconfig/ -name "*fontconfig.pc*" -type l -delete
-	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete && find ./pkgconfig/ -name "*freetype2.pc*" -type l -delete
+	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*fontconfig*" -maxdepth 1 -type l -delete
+	cd ${BUILDLINK_X11_DIR:Q}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete
 	cd ${WRKSRC} && autoconf
 
 do-configure:
