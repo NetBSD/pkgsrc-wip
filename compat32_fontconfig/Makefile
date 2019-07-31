@@ -110,7 +110,7 @@ post-install:
 .include "../../wip/compat32_libuuid/buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.compat32_freetype2+=	freetype2>=2.8.1
+BUILDLINK_API_DEPENDS.compat32_freetype2+=	compat32_freetype2>=2.8.1
 .include "../../wip/compat32_freetype2/buildlink3.mk"
 .include "../../wip/compat80-x11/buildlink3.mk"
 .include "../../wip/compat32_expat/buildlink3.mk"
