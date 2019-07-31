@@ -47,12 +47,11 @@
 # LAPACK_LIBS
 #   Linker flags used for linking to LAPACK library
 
-# TODO: Why are these set outside .if !defined(BLAS_BUILDLINK3_MK)?
-BUILD_DEFS+=		PKGSRC_BLAS_TYPES
-BUILD_DEFS_EFFECTS+=	BLAS_TYPE BLAS_LIBS LAPACK_LIBS
-
 .if !defined(BLAS_BUILDLINK3_MK)
 BLAS_BUILDLINK3_MK=
+
+BUILD_DEFS+=		PKGSRC_BLAS_TYPES
+BUILD_DEFS_EFFECTS+=	BLAS_TYPE BLAS_LIBS LAPACK_LIBS
 
 # TODO: Upon commit change to: .include "bsd.prefs.mk"
 .include "../../mk/bsd.prefs.mk"
