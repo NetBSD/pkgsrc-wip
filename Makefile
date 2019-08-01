@@ -2256,6 +2256,7 @@ SUBDIR+=	mona
 SUBDIR+=	monajat
 SUBDIR+=	monkey-bubble
 SUBDIR+=	mono
+SUBDIR+=	mono6
 SUBDIR+=	mono-git
 SUBDIR+=	mono-zeroconf
 SUBDIR+=	mop
