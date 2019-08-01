@@ -12,4 +12,6 @@ http://comments.gmane.org/gmane.comp.lib.boost.build/25685
 patch-src_Makefile.in linking works, the lib is usable,
 and the patch should be improved.
 
-CVE-2016-5301
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2016-5301, CVE-2017-9847
