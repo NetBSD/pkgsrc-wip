@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (conan-1.17.0.tar.gz) = 5d80c04e3342e11bc87daa8e823902854d59cebb
-RMD160 (conan-1.17.0.tar.gz) = 754da02741196564ee2fa6bbbb8ce07b9f4b6b51
-SHA512 (conan-1.17.0.tar.gz) = 888e9ba32f8d58ff93e6367bdee64d0ea7e3d59a74f290fb1810cddb3ac843b3e35921c6efab1459379fd471a6dc0c2f0dc23e98a9a0e1bd8bb5977abcef8e48
-Size (conan-1.17.0.tar.gz) = 529863 bytes
+SHA1 (conan-1.18.0.tar.gz) = f2d2be86820ebe568ab79349c8ccf3cc822832ad
+RMD160 (conan-1.18.0.tar.gz) = 7eb4dceddc43ec8528c206c6c894957ce76291b3
+SHA512 (conan-1.18.0.tar.gz) = a5f93d5c44688b00951824790b3e505b18112d64cc9bc10da3607e810499db06f33e0dfc0ad170d4070de627730e6a4606eed01156f1156b888491b2b45b7f73
+Size (conan-1.18.0.tar.gz) = 532696 bytes
