@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.107 2015/11/03 22:50:39 agc Exp $
+
+SHA1 (mono-6.0.0.313.tar.xz) = c5cccad2cb5be936f23e46b95df7628013e29e3c
+RMD160 (mono-6.0.0.313.tar.xz) = 801e5128561d2e95a6736cdfce040d8850be4e2f
+SHA512 (mono-6.0.0.313.tar.xz) = a1de452eb1c6edba503723217a4b5839563d154ff0c01852b551a41b3c98b5b617637e4e435de87bf275cfdce4066e70bfc763b607882f0b42e14196d7d5c156
+Size (mono-6.0.0.313.tar.xz) = 218124872 bytes
+SHA1 (patch-configure.ac) = cc4f5bf80495c3248a161d1b857e2aa63a437e4e
+SHA1 (patch-mcs_class_corlib_Test_Mono_MonoNativePlatformType.cs) = 3368edee232b184879091df3d68daf4900f744c2
+SHA1 (patch-mono_metadata_icall.c) = 292c7bc4c959a3a5c1a982ccf2bc26a5300a0730
+SHA1 (patch-mono_metadata_threads.c) = 5b55d0b3b5e506bf08ac14712f44a8db4594b254
+SHA1 (patch-mono_mini_Makefile.am.in) = d8d7e61587a018ebe42d3365a2c061e1ecba9695
+SHA1 (patch-mono_native_Makefile.am) = 47e57623ebfce32f13a5fc1c19a0dbcb31dad8d4
+SHA1 (patch-mono_native_mono-native-platform.h) = 845c921b4a84146b78f4f94c9380890892f5ff29
+SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
+SHA1 (patch-mono_utils_mono-state.c) = 6a6d83e1779a5167e8f22ba1dedce9b3203705c4
+SHA1 (patch-mono_utils_mono-utils-debug.c) = 30b0ab55c9227705026a8edd1e4bb693ae4f9953
