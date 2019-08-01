@@ -7,7 +7,8 @@ GIT_REPO=	http://github.com/russellallen/self.git
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.selflanguage.org/
 COMMENT=	Prototype-based dynamic object-oriented programming language
-LICENSE=	# BSD
+# BSD?
+# LICENSE=	
 
 USE_LANGUAGES=	c c++
 
