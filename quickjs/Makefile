@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	quickjs-2019-07-21
+DISTNAME=	quickjs-2019-07-28
 CATEGORIES=	lang
 MASTER_SITES=	https://bellard.org/quickjs/
 EXTRACT_SUFX=	.tar.xz
