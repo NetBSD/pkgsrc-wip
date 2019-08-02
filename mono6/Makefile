@@ -25,6 +25,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --with-icu=yes
 CONFIGURE_ARGS+=	--disable-dtrace
 
+USE_CWRAPPERS=		no
+
+USE_CWRAPPERS=		no
 MAKE_FLAGS+=		PERL=${PERL5:Q} mandir=${PREFIX}/${PKGMANDIR}
 UNLIMIT_RESOURCES=	datasize stacksize memorysize
 
@@ -57,39 +60,6 @@ REPLACE_BASH+=	libgc/mkinstalldirs
 REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
 
 EGDIR=		${PREFIX}/share/examples/mono
-CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
-CONF_FILES+=	${EGDIR}/browscap.ini ${PKG_SYSCONFDIR}/mono/browscap.ini
-CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
-			${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/2.0/machine.config \
-			${PKG_SYSCONFDIR}/mono/2.0/machine.config
-CONF_FILES+=	${EGDIR}/mconfig/config.xml \
-			${PKG_SYSCONFDIR}/mono/mconfig/config.xml
-CONF_FILES+=	${EGDIR}/2.0/settings.map \
-			${PKG_SYSCONFDIR}/mono/2.0/settings.map
-CONF_FILES+=	${EGDIR}/2.0/web.config \
-			${PKG_SYSCONFDIR}/mono/2.0/web.config
-CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
-			${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
-			${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/4.0/machine.config \
-			${PKG_SYSCONFDIR}/mono/4.0/machine.config
-CONF_FILES+=	${EGDIR}/4.0/settings.map \
-			${PKG_SYSCONFDIR}/mono/4.0/settings.map
-CONF_FILES+=	${EGDIR}/4.0/web.config \
-			${PKG_SYSCONFDIR}/mono/4.0/web.config
-CONF_FILES+=	${EGDIR}/4.0/Browsers/Compat.browser \
-			${PKG_SYSCONFDIR}/mono/4.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx \
-			${PKG_SYSCONFDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/4.5/machine.config \
-			${PKG_SYSCONFDIR}/mono/4.5/machine.config
-CONF_FILES+=	${EGDIR}/4.5/settings.map \
-			${PKG_SYSCONFDIR}/mono/4.5/settings.map
-CONF_FILES+=	${EGDIR}/4.5/web.config  ${PKG_SYSCONFDIR}/mono/4.5/web.config
-CONF_FILES+=	${EGDIR}/4.5/Browsers/Compat.browser \
-			${PKG_SYSCONFDIR}/mono/4.5/Browsers/Compat.browser
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
