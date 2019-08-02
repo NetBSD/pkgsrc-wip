@@ -3,6 +3,8 @@ $NetBSD$
 This is a JIT, we're using old boehm-gc that maps stuff RWX.
 We're going to need RWX mappings.
 
+Replace python executable name.
+
 --- mono/mini/Makefile.am.in.orig	2019-07-18 07:46:08.000000000 +0000
 +++ mono/mini/Makefile.am.in
 @@ -126,6 +126,7 @@ endif
@@ -13,3 +15,12 @@ We're going to need RWX mappings.
  	ln -sf $< $@
  
  mono.exe: mono-$(mono_bin_suffix).exe
+@@ -779,7 +780,7 @@ MemoryIntrinsics.dll: MemoryIntrinsics.i
+ 
+ GENMDESC_OPTS=
+ 
+-GENMDESC_PRG=python $(srcdir)/genmdesc.py $(target_define) $(srcdir)
++GENMDESC_PRG=@PYTHONBIN@ $(srcdir)/genmdesc.py $(target_define) $(srcdir)
+ 
+ cpu-wasm.h: mini-ops.h cpu-wasm.md
+ 	$(GENMDESC_PRG) cpu-wasm.h wasm_desc $(srcdir)/cpu-wasm.md

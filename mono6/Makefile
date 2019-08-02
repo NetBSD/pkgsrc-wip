@@ -127,6 +127,12 @@ SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
 SUBST_FILES.fix-libx11=		configure
 SUBST_VARS.fix-libx11=		X11BASE
 
+SUBST_CLASSES+=			fix-python
+SUBST_STAGE.fix-python=		pre-configure
+SUBST_MESSAGE.fix-python=	Fixing python binary name
+SUBST_FILES.fix-python=		mono/mini/Makefile.am.in
+SUBST_VARS.fix-python=		PYTHONBIN
+
 .include "../../mk/bsd.prefs.mk"
 
 # XXX remove
