@@ -19,4 +19,3 @@
   This is due a minor change in mupdf 1.16.0 API and fixed upstream via:
 
    <https://git.pwmt.org/pwmt/zathura-pdf-mupdf/commit/95c830c9f6cfe4ba99535ecfba0a700ceb15a25a>
-- Readd `curl' option?
