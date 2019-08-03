@@ -24,7 +24,6 @@ MAKE_FLAGS+=		build=release
 MAKE_ENV+=		HAVE_LIBCRYPTO=no	# Needs openssl-1.1.0
 MAKE_ENV+=		USE_SYSTEM_LIBS=yes
 
-CFLAGS+=	-DJBIG_NO_MEMENTO
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 .include "options.mk"
