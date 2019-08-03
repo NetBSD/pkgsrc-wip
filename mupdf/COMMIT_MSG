@@ -1,7 +1,9 @@
 mupdf: Update to 1.16.0
 
 pkgsrc changes:
- TODO
+ - (re)add curl option to build mupdf with curl support (disabled by default).
+   Unlike previous versions that supported curl now mupdf with curl support is
+   installed as a separate binary as `mupdf-curl' as done by upstream.
 
 Changes:
 1.16.0
