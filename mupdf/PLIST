@@ -1,5 +1,6 @@
 @comment $NetBSD: PLIST,v 1.18 2019/05/12 12:27:02 ryoon Exp $
 bin/mupdf
+${PLIST.curl}bin/mupdf-curl
 ${PLIST.opengl}bin/mupdf-gl
 bin/muraster
 bin/mutool
