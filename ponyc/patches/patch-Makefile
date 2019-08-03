@@ -1,0 +1,58 @@
+$NetBSD$
+
+Add NetBSD
+
+Avoid -Werror, avoid tuning for the package builder (create
+portable binaries)
+Only error is on netbsd:
+/usr/include/unwind.h:94:9: note: expected '_Unwind_Ptr {aka void *}' but argument is of type 'uintptr_t {aka long unsigned int}'
+ void    _Unwind_SetIP(struct _Unwind_Context *, _Unwind_Ptr);
+         ^~~~~~~~~~~~~
+
+Grab ldflags from llvm-config --ldflags, instead of assuming
+the output of llvm.libdir is only one argument we can prepend -L
+to.
+
+--- Makefile.orig	2019-07-27 10:37:45.000000000 +0000
++++ Makefile
+@@ -27,6 +27,11 @@ else
+     CXX = c++
+   endif
+ 
++  ifeq ($(UNAME_S),NetBSD)
++    OSTYPE = bsd
++    CXX = c++
++  endif
++
+   ifeq ($(UNAME_S),DragonFly)
+     OSTYPE = bsd
+     CXX = c++
+@@ -119,7 +124,7 @@ else
+ endif
+ 
+ LIB_EXT ?= a
+-BUILD_FLAGS = -march=$(arch) -mtune=$(tune) -Werror -Wconversion \
++BUILD_FLAGS = -Wconversion \
+   -Wno-sign-conversion -Wextra -Wall
+ LINKER_FLAGS = -march=$(arch) -mtune=$(tune) $(LDFLAGS)
+ AR_FLAGS ?= rcs
+@@ -319,8 +324,8 @@ ifneq ($(MAKECMDGOALS),clean)
+   # (2) the linker flags necessary to link against the prebuilt libraries
+   # (3) a list of include directories for a set of libraries
+   # (4) a list of the libraries to link against
+-  llvm.libdir := $(CROSS_SYSROOT)$(subst -L,,$(shell $(LLVM_CONFIG) --ldflags $(LLVM_LINK_STATIC)))
+-  llvm.ldflags := -L$(llvm.libdir)
++  llvm.libdir := $(CROSS_SYSROOT)$(shell $(LLVM_CONFIG) --libdir)
++  llvm.ldflags := $(CROSS_SYSROOT)$(shell $(LLVM_CONFIG) --ldflags)
+ 
+   # Set rpath for ponyc if we're dynamically linking LLVM_VENDOR
+   ifeq (,$(LLVM_LINK_STATIC))
+@@ -394,7 +399,7 @@ ifeq ($(runtime-bitcode),yes)
+ endif
+ 
+ makefile_abs_path := $(realpath $(lastword $(MAKEFILE_LIST)))
+-packages_abs_src := $(shell dirname $(makefile_abs_path))/packages
++packages_abs_src := $(ponydir)/packages
+ 
+ $(shell mkdir -p $(PONY_BUILD_DIR))
+ $(info Building into $(PONY_BUILD_DIR))

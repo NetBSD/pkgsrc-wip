@@ -1,0 +1,14 @@
+$NetBSD$
+
+SHA1 (ponyc/0.30.0.tar.gz) = 1a421c996c9f75bf70569d49bc73602752b8a889
+RMD160 (ponyc/0.30.0.tar.gz) = 1df124e2fe655a5f7b9d8601fb7937585d494be5
+SHA512 (ponyc/0.30.0.tar.gz) = fbf59a687e85d02ddcc5c8f56911005e2aaa5721c97f17f1cb5209f7a8de8e19182dce6aa2d6a9373d03e4cd7161ee595b3229b3b2443dbd647d59ce4e6cc435
+Size (ponyc/0.30.0.tar.gz) = 1398063 bytes
+SHA1 (patch-Makefile) = e7be27e216493b10014b5accb914823e1ae9874a
+SHA1 (patch-src_common_platform.h) = e18163348f15a5efb4ba1953605e76172fbd6737
+SHA1 (patch-src_common_pony_detail_atomics.h) = b7427e76af99bc2545420a3751e91a79ecf7802a
+SHA1 (patch-src_libponyc_pkg_package.c) = e3866195e22b0d49dd429e45d539c9082754021b
+SHA1 (patch-src_libponyc_pkg_program.c) = 63f1fdb777fffe3b36494720535e257c2aec7cd5
+SHA1 (patch-src_libponyc_platform_paths.c) = 893947e4916b34f3445f315cb983b19729540a2b
+SHA1 (patch-src_libponyrt_mem_alloc.c) = 4847bd20c6c1de7af798f7fb19b6d877b043097f
+SHA1 (patch-src_libponyrt_platform_threads.c) = b55d1453bb2bb255ca806d56374f340c2f871ec7
