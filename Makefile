@@ -3047,6 +3047,7 @@ SUBDIR+=	polkit-kde-agent
 SUBDIR+=	polyclipping
 SUBDIR+=	polylib
 SUBDIR+=	polymul
+SUBDIR+=	ponyc
 SUBDIR+=	pop3.proxy
 SUBDIR+=	popup-el-current
 SUBDIR+=	portfwd
