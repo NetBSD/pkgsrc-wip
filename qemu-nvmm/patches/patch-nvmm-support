@@ -376,7 +376,7 @@ Add NVMM support.
  obj-$(CONFIG_SEV) += sev.o
  obj-$(call lnot,$(CONFIG_SEV)) += sev-stub.o
 --- target/i386/nvmm-all.c	1970-01-01 01:00:00.000000000 +0100
-+++ target/i386/nvmm-all.c	2019-06-10 11:57:43.612013641 +0200
++++ target/i386/nvmm-all.c	2019-08-03 08:50:06.085935090 +0200
 @@ -0,0 +1,1168 @@
 +/*
 + * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
@@ -966,7 +966,7 @@ Add NVMM support.
 +        if (exit->u.msr.type == NVMM_EXIT_MSR_RDMSR) {
 +            val = 0;
 +        }
-+        error_report("NVMM: Unexpected %sMSR 0x%lx [val=%lx], ignored",
++        error_report("NVMM: Unexpected %sMSR 0x%lx [val=0x%lx], ignored",
 +            (exit->u.msr.type == NVMM_EXIT_MSR_RDMSR) ? "RD" : "WR",
 +            exit->u.msr.msr, val);
 +        break;
@@ -1134,7 +1134,7 @@ Add NVMM support.
 +            ret = 1;
 +            break;
 +        default:
-+            error_report("NVMM: Unexpected VM exit code %lx [hw=%lx]",
++            error_report("NVMM: Unexpected VM exit code 0x%lx [hw=0x%lx]",
 +                exit->reason, exit->u.inv.hwcode);
 +            nvmm_get_registers(cpu);
 +            qemu_mutex_lock_iothread();
