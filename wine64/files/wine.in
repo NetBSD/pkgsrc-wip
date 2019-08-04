@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export LD_LIBRARY_PATH=@PREFIX@/emul/netbsd32/lib
+exec @PREFIX@/libexec/wine "$@"
