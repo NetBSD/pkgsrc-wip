@@ -1,16 +1,5 @@
-* Fails due missing run-time search paths checks:
-   ERROR: emul/netbsd32/lib/wine/wine/acledit.dll.so: missing library: libi386.so.2
-   [...]
-   ERROR: emul/netbsd32/lib/wine/wine/xpssvcs.dll.so: missing library: libi386.so.2
-* Double-check the `+=' usage in CFLAGS+= and X11_LDFLAGS+= in WINE32_ENV
-  definition
-* --x-libraries is passed via WINE32_ARGS, why X11_LDFLAGS is also passed via
-  WINE32_ENV, could it be handled via configure arguments as well?
-* There are:
-   warning: "_FORTIFY_SOURCE" redefined
-  when building.  Investigate if fortify is supported upstream or if an
-  exception should be added.
 * We need to export LD_LIBRARY_PATH=/usr/pkg/emul/netbsd32/lib owing
   to X11 32-bit libs from compat80-x11 not linking against libxcb.so
   in ${PREFIX}/emul/netbsd32/lib.
-* Gracefully handle MAKE_JOBS when it is not defined
+  As a temporary solution, a wrapper script that sets LD_LIBRARY_PATH
+  is used.
