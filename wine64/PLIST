@@ -4828,6 +4828,7 @@ lib/wine/xmllite.dll.so
 lib/wine/xolehlp.dll.so
 lib/wine/xpsprint.dll.so
 lib/wine/xpssvcs.dll.so
+libexec/wine
 man/de.UTF-8/man1/wine.1
 man/de.UTF-8/man1/winemaker.1
 man/de.UTF-8/man1/wineserver.1

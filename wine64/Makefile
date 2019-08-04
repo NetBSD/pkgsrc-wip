@@ -33,7 +33,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine64
 
 # XXX: pkgsrc complains that i386.so.2 is missing
 CHECK_SHLIBS_SKIP+=	emul/netbsd32/lib/wine*
-CHECK_SHLIBS_SKIP+=	bin/wine
+CHECK_SHLIBS_SKIP+=	libexec/wine
 
 BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
@@ -53,6 +53,13 @@ do-build:
 do-install:
 	cd ${BUILD32} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
 	cd ${BUILD64} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE} ${INSTALL_MAKE_FLAGS} install
+
+post-install:
+	${SED} -e 's,@PREFIX@,${PREFIX},g' <${FILESDIR}/wine.in \
+	>${WRKDIR}/wine
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec
+	${MV} ${DESTDIR}${PREFIX}/bin/wine ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_SCRIPT} ${WRKDIR}/wine ${DESTDIR}${PREFIX}/bin/wine
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
