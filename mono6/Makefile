@@ -48,6 +48,7 @@ REPLACE_PYTHON+=	scripts/mono-heapviz
 
 REPLACE_BASH+=	mono/arch/arm/dpiops.sh
 REPLACE_BASH+=	mono/arch/arm/vfpops.sh
+REPLACE_BASH+=	scripts/mono-package-runtime
 REPLACE_BASH+=	scripts/mono-find-provides.in scripts/mono-find-requires.in
 REPLACE_BASH+=	scripts/mono-test-install web/mono-build-w32.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/gtk/compile.sh
@@ -59,50 +60,48 @@ REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
 
 EGDIR=		${PREFIX}/share/examples/mono
 
-CONF_FILES+=	${EGDIR}/mono/2.0/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/mono/2.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/2.0/machine.config
-CONF_FILES+=	${EGDIR}/mono/2.0/settings.map \
-		${PKG_SYSCONFDIR}/mono/2.0/settings.map
-CONF_FILES+=	${EGDIR}/mono/2.0/web.config \
-		${PKG_SYSCONFDIR}/mono/2.0/web.config
-CONF_FILES+=	${EGDIR}/mono/4.0/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/mono/4.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/mono/4.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/4.0/machine.config
-CONF_FILES+=	${EGDIR}/mono/4.0/settings.map \
-		${PKG_SYSCONFDIR}/mono/4.0/settings.map
-CONF_FILES+=	${EGDIR}/mono/4.0/web.config \
-		${PKG_SYSCONFDIR}/mono/4.0/web.config
-CONF_FILES+=	${EGDIR}/mono/4.5/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/mono/4.5/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/mono/4.5/machine.config \
-		${PKG_SYSCONFDIR}/mono/4.5/machine.config
-CONF_FILES+=	${EGDIR}/mono/4.5/settings.map \
-		${PKG_SYSCONFDIR}/mono/4.5/settings.map
-CONF_FILES+=	${EGDIR}/mono/4.5/web.config \
-		${PKG_SYSCONFDIR}/mono/4.5/web.config
-CONF_FILES+=	${EGDIR}/mono/browscap.ini \
-		${PKG_SYSCONFDIR}/mono/browscap.ini
-CONF_FILES+=	${EGDIR}/mono/config \
-		${PKG_SYSCONFDIR}/mono/config
+CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
+		${PKG_SYSCONFDIR}/2.0/Browsers/Compat.browser
+CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
+		${PKG_SYSCONFDIR}/2.0/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/2.0/machine.config \
+		${PKG_SYSCONFDIR}/2.0/machine.config
+CONF_FILES+=	${EGDIR}/2.0/settings.map \
+		${PKG_SYSCONFDIR}/2.0/settings.map
+CONF_FILES+=	${EGDIR}/2.0/web.config \
+		${PKG_SYSCONFDIR}/2.0/web.config
+CONF_FILES+=	${EGDIR}/4.0/Browsers/Compat.browser \
+		${PKG_SYSCONFDIR}/4.0/Browsers/Compat.browser
+CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
+		${PKG_SYSCONFDIR}/4.0/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/4.0/machine.config \
+		${PKG_SYSCONFDIR}/4.0/machine.config
+CONF_FILES+=	${EGDIR}/4.0/settings.map \
+		${PKG_SYSCONFDIR}/4.0/settings.map
+CONF_FILES+=	${EGDIR}/4.0/web.config \
+		${PKG_SYSCONFDIR}/4.0/web.config
+CONF_FILES+=	${EGDIR}/4.5/Browsers/Compat.browser \
+		${PKG_SYSCONFDIR}/4.5/Browsers/Compat.browser
+CONF_FILES+=	${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx \
+		${PKG_SYSCONFDIR}/4.5/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/4.5/machine.config \
+		${PKG_SYSCONFDIR}/4.5/machine.config
+CONF_FILES+=	${EGDIR}/4.5/settings.map \
+		${PKG_SYSCONFDIR}/4.5/settings.map
+CONF_FILES+=	${EGDIR}/4.5/web.config \
+		${PKG_SYSCONFDIR}/4.5/web.config
+CONF_FILES+=	${EGDIR}/browscap.ini \
+		${PKG_SYSCONFDIR}/browscap.ini
+CONF_FILES+=	${EGDIR}/config \
+		${PKG_SYSCONFDIR}/config
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0/Browsers
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5/Browsers
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
-
-INSTALLATION_DIRS+=	share/examples/mono/4.5
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/2.0
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/2.0/Browsers
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.0
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.0/Browsers
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.5
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.5/Browsers
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mconfig
 
 TEST_TARGET=	check
 
@@ -133,7 +132,8 @@ SUBST_VARS.fix-libx11=		X11BASE
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure
 SUBST_MESSAGE.fix-python=	Fixing python binary name
-SUBST_FILES.fix-python=		mono/mini/Makefile.am.in
+SUBST_FILES.fix-python+=	mono/mini/Makefile.am.in
+SUBST_FILES.fix-python+=	mono/tests/Makefile.am
 SUBST_VARS.fix-python=		PYTHONBIN
 
 .include "../../mk/bsd.prefs.mk"

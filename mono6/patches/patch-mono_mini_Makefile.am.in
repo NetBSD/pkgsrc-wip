@@ -1,21 +1,10 @@
 $NetBSD$
 
-This is a JIT, we're using old boehm-gc that maps stuff RWX.
-We're going to need RWX mappings.
-
 Replace python executable name.
 
 --- mono/mini/Makefile.am.in.orig	2019-07-18 07:46:08.000000000 +0000
 +++ mono/mini/Makefile.am.in
-@@ -126,6 +126,7 @@ endif
- if DISABLE_EXECUTABLES
- else
- mono: mono-$(mono_bin_suffix)
-+	-paxctl +m mono-$(mono_bin_suffix)
- 	ln -sf $< $@
- 
- mono.exe: mono-$(mono_bin_suffix).exe
-@@ -779,7 +780,7 @@ MemoryIntrinsics.dll: MemoryIntrinsics.i
+@@ -779,7 +779,7 @@ MemoryIntrinsics.dll: MemoryIntrinsics.i
  
  GENMDESC_OPTS=
  
