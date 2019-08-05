@@ -2009,7 +2009,6 @@ SUBDIR+=	libretro-fmsx
 SUBDIR+=	libretro-gearboy
 SUBDIR+=	libretro-gearsystem
 SUBDIR+=	libretro-mame2003
-SUBDIR+=	libretro-mame2010
 SUBDIR+=	libretro-mame2014
 SUBDIR+=	libretro-melonds
 SUBDIR+=	libretro-parallel-n64
