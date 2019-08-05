@@ -22,6 +22,7 @@ USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
+PKG_SYSCONFSUBDIR=	mono
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --with-icu=yes
 CONFIGURE_ARGS+=	--disable-dtrace
 
@@ -117,11 +118,12 @@ SUBST_MESSAGE.fix-cfgdir=	Fixing configuration files install dir
 SUBST_FILES.fix-cfgdir=		mcs/tools/mconfig/Makefile
 SUBST_SED.fix-cfgdir=		-e 's,$$(sysconfdir)/mono,${EGDIR},g'
 
-SUBST_CLASSES+=			fix-libx11
-SUBST_STAGE.fix-libx11=		pre-configure
-SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
-SUBST_FILES.fix-libx11=		configure
-SUBST_VARS.fix-libx11=		X11BASE
+SUBST_CLASSES+=			fix-libs
+SUBST_STAGE.fix-libs=		pre-configure
+SUBST_MESSAGE.fix-libs=		Fixing library search path configuration
+SUBST_FILES.fix-libs=		configure.ac
+SUBST_VARS.fix-libs+=		X11BASE
+SUBST_VARS.fix-libs+=		PREFIX
 
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure

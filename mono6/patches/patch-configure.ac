@@ -5,15 +5,21 @@ https://github.com/mono/mono/pull/15938
 
 --- configure.ac.orig	2019-07-18 07:52:31.000000000 +0000
 +++ configure.ac
-@@ -4066,7 +4066,7 @@ LIBC="libc.so.6"
+@@ -4066,10 +4066,10 @@ LIBC="libc.so.6"
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
 -X11="libX11.so"
+-GDKX11="libgdk-x11-2.0.so.0"
+-GTKX11="libgtk-x11-2.0.so.0"
+-XINERAMA="libXinerama.so.1"
 +X11="@X11BASE@/lib/libX11.so"
- GDKX11="libgdk-x11-2.0.so.0"
- GTKX11="libgtk-x11-2.0.so.0"
- XINERAMA="libXinerama.so.1"
++GDKX11="@PREFIX@/lib/libgdk-x11-2.0.so.0"
++GTKX11="@PREFIX@/lib/libgtk-x11-2.0.so.0"
++XINERAMA="@X11BASE@/lib/libXinerama.so"
+ 
+ sizeof_register="SIZEOF_VOID_P"
+ 
 @@ -6177,6 +6177,22 @@ elif test x$platform_android = xyes; the
  	MONO_NATIVE_PLATFORM=android
  
