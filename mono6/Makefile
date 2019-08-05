@@ -111,12 +111,6 @@ SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
 SUBST_FILES.fix-prefix=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.fix-prefix=		-e 's,$${pcfiledir}/../..,\@prefix\@,g'
 
-SUBST_CLASSES+=			fix-mcs
-SUBST_STAGE.fix-mcs=		post-patch
-SUBST_MESSAGE.fix-mcs=		Fixing mcs default prefix
-SUBST_FILES.fix-mcs=		mcs/build/config-default.make
-SUBST_VARS.fix-mcs=		PREFIX PKGMANDIR
-
 SUBST_CLASSES+=			fix-cfgdir
 SUBST_STAGE.fix-cfgdir=		post-patch
 SUBST_MESSAGE.fix-cfgdir=	Fixing configuration files install dir
@@ -165,6 +159,8 @@ CONFIGURE_ENV+=		ac_cv_func_getfsstat=no
 GNU_ARCH.i386=		i586
 CFLAGS+=		-march=i586
 .endif
+
+NOT_PAX_MPROTECT_SAFE+=	bin/mono-sgen
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/DefaultWsdlHelpGenerator.aspx \
