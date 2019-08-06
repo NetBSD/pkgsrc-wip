@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-h5py>=2.7.1:../../devel/py-h5py
 DEPENDS+=	${PYPKGPREFIX}-Keras_Applications>=1.0.6:../../wip/py-Keras_Applications
 DEPENDS+=	${PYPKGPREFIX}-Keras_Preprocessing>=1.0.5:../../wip/py-Keras_Preprocessing
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
