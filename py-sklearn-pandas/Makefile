@@ -13,6 +13,8 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.17:../../math/py-scikit-learn
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
