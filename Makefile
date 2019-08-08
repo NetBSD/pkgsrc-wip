@@ -4997,7 +4997,6 @@ SUBDIR+=	xar
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
-SUBDIR+=	xbmc
 SUBDIR+=	xbnbt
 SUBDIR+=	xbps
 SUBDIR+=	xbsql
