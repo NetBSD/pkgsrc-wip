@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cannonball-0.3
+DISTNAME=	cannonball-0.3.20171201
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djyt/}
 GITHUB_TAG=	0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6
