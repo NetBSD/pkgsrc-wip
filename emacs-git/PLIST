@@ -1133,6 +1133,8 @@ share/emacs/${PKGVERSION}/lisp/calendar/holidays.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.elc
+share/emacs/${PKGVERSION}/lisp/calendar/iso8601.el.gz
+share/emacs/${PKGVERSION}/lisp/calendar/iso8601.elc
 share/emacs/${PKGVERSION}/lisp/calendar/lunar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/lunar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/parse-time.el.gz
@@ -1587,8 +1589,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/crm.el.gz
@@ -2926,6 +2926,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/cl.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/cl.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/complete.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/complete.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/crisp.el.gz
