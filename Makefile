@@ -46,7 +46,6 @@ SUBDIR+=	R-bigmemory.sri
 SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-bnlearn
 SUBDIR+=	R-cubature
-SUBDIR+=	R-data.table
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-entropy
 SUBDIR+=	R-fitdistrplus
