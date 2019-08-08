@@ -3742,6 +3742,7 @@ SUBDIR+=	py-nimfa
 SUBDIR+=	py-nipy
 SUBDIR+=	py-nipy-data
 SUBDIR+=	py-nlib
+SUBDIR+=	py-nodemcu-uploader
 SUBDIR+=	py-node-semver
 SUBDIR+=	py-nodepy
 SUBDIR+=	py-nose-parameterized
