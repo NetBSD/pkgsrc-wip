@@ -1,0 +1,16 @@
+$NetBSD$
+
+kludge: link wine 32-bit against libwine.so.1.0 in
+${PREFIX}/emul/netbsd32/lib/wine
+
+--- loader/Makefile.in.orig	2019-08-02 19:24:39.000000000 +0000
++++ loader/Makefile.in
+@@ -19,7 +19,7 @@ preloader_EXTRADEFS = -fno-builtin
+ 
+ wine_OBJS = main.o
+ wine_DEPS = $(WINELOADER_DEPENDS)
+-wine_LDFLAGS = $(WINELOADER_LDFLAGS) $(LDEXECFLAGS) -lwine $(PTHREAD_LIBS)
++wine_LDFLAGS = $(WINELOADER_LDFLAGS) $(LDEXECFLAGS) -lwine $(PTHREAD_LIBS) -Wl,-rpath,/usr/pkg/emul/netbsd32/lib/wine
+ 
+ wine64_OBJS = main.o
+ wine64_DEPS = $(WINELOADER_DEPENDS)

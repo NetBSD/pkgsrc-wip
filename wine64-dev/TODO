@@ -1,0 +1,38 @@
+* Fails due missing run-time search paths checks:
+   ERROR: emul/netbsd32/lib/wine/wine/acledit.dll.so: missing library: libi386.so.2
+   [...]
+   ERROR: emul/netbsd32/lib/wine/wine/xpssvcs.dll.so: missing library: libi386.so.2
+* Double-check the `+=' usage in CFLAGS+= and X11_LDFLAGS+= in WINE32_ENV
+  definition
+* --x-libraries is passed via WINE32_ARGS, why X11_LDFLAGS is also passed via
+  WINE32_ENV, could it be handled via configure arguments as well?
+* There are:
+   warning: "_FORTIFY_SOURCE" redefined
+  when building.  Investigate if fortify is supported upstream or if an
+  exception should be added.
+* We need to export LD_LIBRARY_PATH=/usr/pkg/emul/netbsd32/lib owing
+  to X11 32-bit libs from compat80-x11 not linking against libxcb.so
+  in ${PREFIX}/emul/netbsd32/lib.
+* Gracefully handle MAKE_JOBS when it is not defined
+* MV instead of CD: fixed.
+* Investigate if wine uses a lower level of _FORTIFY_SOURCE
+* Investigate if we can use = instead of appending +=
+* Update wine64 version
+
+
+../../tools/winegcc/winegcc -o acledit.dll.so -B../../tools/winebuild -m64 -fPIC -fasynchronous-unwind-tables  -shared /usr/pkgsrc/wip/wine64-dev/work/wine-4.13/dlls/acledit/acledit.spec -mno-cygwin main.o  -lossaudio -L/usr/pkg/lib -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib -L/usr/lib -Wl,-R/usr/lib -Wl,-R/usr/pkg/lib -L/usr/pkg/emul/netbsd32/lib/fontconfig -Wl,-R/usr/pkg/emul/netbsd32/lib/fontconfig -L/usr/pkg/emul/netbsd32/lib -Wl,-R/usr/pkg/emul/netbsd32/lib -L/usr/pkg/emul/netbsd32/lib/freetype2 -Wl,-R/usr/pkg/emul/netbsd32/lib/freetype2 -L/usr/pkg//emul/netbsd32/lib -Wl,-R/usr/pkg//emul/netbsd32/lib -L/lib -Wl,-R/lib
+ld: ../../dlls/msvcrt/libmsvcrt.a(msvcrt.2hW3ed.o): in function `strcmp':
+(.text+0x0): undefined reference to `__wine$func$msvcrt$1035$strcmp'
+ld: ../../dlls/msvcrt/libmsvcrt.a(msvcrt.480Tqv.o): in function `strlen':
+(.text+0x0): undefined reference to `__wine$func$msvcrt$1043$strlen'
+ld: ../../dlls/msvcrt/libmsvcrt.a(msvcrt.H0njhy.o): in function `strncmp':
+(.text+0x0): undefined reference to `__wine$func$msvcrt$1046$strncmp'
+winegcc: gcc failed
+*** Error code 2
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/wine64-dev/work/wine-4.13/wine64/dlls/acledit
+
+* Is compat32_ossaudio required? Could that be the reason why build fails?
+* Wine opens debugger when initializing new profile - possible reason segfault.
+
