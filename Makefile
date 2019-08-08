@@ -61,7 +61,6 @@ SUBDIR+=	R-np
 SUBDIR+=	R-npsurv
 SUBDIR+=	R-optparse
 SUBDIR+=	R-png
-SUBDIR+=	R-readxl
 SUBDIR+=	R-rematch
 SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
