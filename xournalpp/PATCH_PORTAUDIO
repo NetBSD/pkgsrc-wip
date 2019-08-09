@@ -1,0 +1,70 @@
+cvs diff: Diffing audio/portaudio-devel
+Index: audio/portaudio-devel/Makefile
+===================================================================
+RCS file: /cvsroot/pkgsrc/audio/portaudio-devel/Makefile,v
+retrieving revision 1.13
+diff -u -r1.13 Makefile
+--- audio/portaudio-devel/Makefile	27 Apr 2017 07:14:01 -0000	1.13
++++ audio/portaudio-devel/Makefile	9 Aug 2019 16:45:07 -0000
+@@ -14,6 +14,7 @@
+ 
+ NOT_FOR_PLATFORM=	Interix-*-*
+ 
++USE_LANGUAGES+=		c c++
+ USE_TOOLS+=		gmake pkg-config
+ USE_LIBTOOL=		yes
+ GNU_CONFIGURE=		yes
+@@ -21,8 +22,10 @@
+ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/portaudio2
+ CONFIGURE_ARGS+=	--without-alsa
+ CONFIGURE_ARGS+=	--disable-mac-universal
++CONFIGURE_ARGS+=	--enable-cxx
+ LDFLAGS+=		${LIBOSSAUDIO}
+ PKGCONFIG_OVERRIDE=	portaudio-2.0.pc.in
++PKGCONFIG_OVERRIDE+=	bindings/cpp/portaudiocpp.pc.in
+ WRKSRC=			${WRKDIR}/portaudio
+ 
+ INSTALLATION_DIRS=	include/portaudio2 lib/portaudio2 lib/pkgconfig
+@@ -37,7 +40,7 @@
+ SUBST_CLASSES+=		pc
+ SUBST_STAGE.pc=		pre-configure
+ SUBST_MESSAGE.pc=	Fixing pkgconfig directory
+-SUBST_FILES.pc=		Makefile.in
++SUBST_FILES.pc=		Makefile.in bindings/cpp/Makefile.in
+ SUBST_SED.pc=		-e 's/$$(libdir)\/pkgconfig/$$(prefix)\/lib\/pkgconfig/g'
+ 
+ CFLAGS.Darwin+=		-Wno-deprecated-declarations
+Index: audio/portaudio-devel/PLIST
+===================================================================
+RCS file: /cvsroot/pkgsrc/audio/portaudio-devel/PLIST,v
+retrieving revision 1.3
+diff -u -r1.3 PLIST
+--- audio/portaudio-devel/PLIST	14 Jun 2009 17:32:20 -0000	1.3
++++ audio/portaudio-devel/PLIST	9 Aug 2019 16:45:07 -0000
+@@ -1,4 +1,25 @@
+ @comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:20 joerg Exp $
+ include/portaudio2/portaudio.h
++include/portaudio2/portaudiocpp/AutoSystem.hxx
++include/portaudio2/portaudiocpp/BlockingStream.hxx
++include/portaudio2/portaudiocpp/CFunCallbackStream.hxx
++include/portaudio2/portaudiocpp/CallbackInterface.hxx
++include/portaudio2/portaudiocpp/CallbackStream.hxx
++include/portaudio2/portaudiocpp/CppFunCallbackStream.hxx
++include/portaudio2/portaudiocpp/Device.hxx
++include/portaudio2/portaudiocpp/DirectionSpecificStreamParameters.hxx
++include/portaudio2/portaudiocpp/Exception.hxx
++include/portaudio2/portaudiocpp/HostApi.hxx
++include/portaudio2/portaudiocpp/InterfaceCallbackStream.hxx
++include/portaudio2/portaudiocpp/MemFunCallbackStream.hxx
++include/portaudio2/portaudiocpp/PortAudioCpp.hxx
++include/portaudio2/portaudiocpp/SampleDataFormat.hxx
++include/portaudio2/portaudiocpp/Stream.hxx
++include/portaudio2/portaudiocpp/StreamParameters.hxx
++include/portaudio2/portaudiocpp/System.hxx
++include/portaudio2/portaudiocpp/SystemDeviceIterator.hxx
++include/portaudio2/portaudiocpp/SystemHostApiIterator.hxx
+ lib/pkgconfig/portaudio-2.0.pc
++lib/pkgconfig/portaudiocpp.pc
+ lib/portaudio2/libportaudio.la
++lib/portaudio2/libportaudiocpp.la
+cvs diff: Diffing audio/portaudio-devel/patches
