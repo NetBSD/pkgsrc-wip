@@ -19,7 +19,6 @@ WINE32_ARGS+=		--with-fontconfig=${PREFIX}/emul/netbsd32/lib/fontconfig
 WINE32_ARGS+=		--libdir=${PREFIX}/emul/netbsd32/lib/wine
 WINE64_ARGS+=		--enable-win64
 WINE64_ARGS+=		--libdir=${PREFIX}/lib
-#WINE64_ARGS+=		--with-mingw=/usr/pkg/cross/i386--mingw32
 
 WINE32_ENV=		CFLAGS+=-m32
 
@@ -36,15 +35,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine64
 CHECK_SHLIBS_SKIP+=	emul/netbsd32/lib/wine*
 CHECK_SHLIBS_SKIP+=	libexec/wine
 
-# SUBST_CLASSES+=		ossaudio
-# SUBST_FILES.ossaudio+=	wine64/dlls/*/Makefile
-# SUBST_FILES.ossaudio+=	wine32/dlls/*/Makefile
-# SUBST_FILES.ossaudio+=	wine64/programs/arp/Makefile
-# SUBST_FILES.ossaudio+=	wine32/programs/arp/Makefile
-# SUBST_STAGE.ossaudio=	post-configure
-# SUBST_MESSAGE.ossaudio= Fixing libmsvcrt linking
-# SUBST_SED.ossaudio+=	-e 's,-lossaudio,,g'
-
 BUILD32=		${WRKSRC}/wine32
 BUILD64=		${WRKSRC}/wine64
 
@@ -52,8 +42,8 @@ post-extract:
 	${MKDIR} ${BUILD32}
 	${MKDIR} ${BUILD64}
 
-# pre-configure:
-# 	cd ${WRKSRC} && autoreconf
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 do-configure:
 	cd ${BUILD64} && ${SETENV} ${WINE_ENV} ${MAKE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS} ${WINE64_ARGS}
@@ -75,7 +65,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/wine ${DESTDIR}${PREFIX}/bin/wine
 
 .include "../../graphics/freetype2/buildlink3.mk"
-#.include "../../cross/mingw-gcc/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -98,6 +87,7 @@ post-install:
 .include "../../wip/compat80-x11/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
