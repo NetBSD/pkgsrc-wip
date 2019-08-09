@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use i386_LIBS to link ntdll against libi386
+
 --- dlls/ntdll/Makefile.in.orig	2019-08-02 19:24:39.000000000 +0000
 +++ dlls/ntdll/Makefile.in
 @@ -2,7 +2,7 @@ EXTRADEFS = -D_NTSYSTEM_

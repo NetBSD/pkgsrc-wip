@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use separate vars for -li386 and -lossaudio
+
 --- configure.ac.orig	2019-08-02 19:24:39.000000000 +0000
 +++ configure.ac
 @@ -406,9 +406,9 @@ WINE_WARNING_WITH(gettext,[test "$MSGFMT
