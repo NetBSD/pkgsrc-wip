@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (melonDS-0.8.2.tar.gz) = 15451d8c6ffd6f060473782fc7b3fd89eebb2f03
+RMD160 (melonDS-0.8.2.tar.gz) = 284f49cf100723302419e24b3a172763f9fb1411
+SHA512 (melonDS-0.8.2.tar.gz) = 4c7e7bf2b78504b711235a8366a10e946a4c52d46e913ccf08dd7138adbda74a80af9dbc62645d4ba5b808861fbe3d30b32f9674a103a926410afb852c93ea34
+Size (melonDS-0.8.2.tar.gz) = 964182 bytes
+SHA1 (patch-src_libui__sdl_LAN__PCap.cpp) = 1fd806b6b446622e5d214091e96aac3d6eec8490

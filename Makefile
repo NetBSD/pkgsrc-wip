@@ -2189,6 +2189,7 @@ SUBDIR+=	meep-mpi
 SUBDIR+=	meep-openmpi
 SUBDIR+=	megaglest
 SUBDIR+=	meka-git
+SUBDIR+=	melonds
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
