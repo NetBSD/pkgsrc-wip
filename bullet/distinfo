@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2016/06/15 20:10:50 rumko Exp $
-
-SHA1 (bullet-2.87.tar.gz) = 31c6f6c4116f4d919eaa5119f9131bedc64d3951
-RMD160 (bullet-2.87.tar.gz) = 3c49ce3488900e09dd496073688b888c8ec2fe1e
-SHA512 (bullet-2.87.tar.gz) = 649e470223295666eda6f7ff59d03097637c2645b5cd951977060ae14b89f56948ce03e437e83c986d26876f187d7ee34e790bc3882d5d66da9af89a4ab81c21
-Size (bullet-2.87.tar.gz) = 56691047 bytes
