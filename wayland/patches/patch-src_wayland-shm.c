@@ -58,7 +58,7 @@
  	munmap(pool->data, pool->size);
  	free(pool);
  }
-@@ -223,9 +241,76 @@ shm_pool_destroy(struct wl_client *clien
+@@ -223,6 +241,73 @@ shm_pool_destroy(struct wl_client *clien
  	wl_resource_destroy(resource);
  }
  
@@ -131,20 +131,7 @@
 +
  static void
  shm_pool_resize(struct wl_client *client, struct wl_resource *resource,
--		int32_t size)
-+		size_t size)
- {
- 	struct wl_shm_pool *pool = wl_resource_get_user_data(resource);
- 
-@@ -255,7 +340,7 @@ static const struct wl_shm_pool_interfac
- 
- static void
- shm_create_pool(struct wl_client *client, struct wl_resource *resource,
--		uint32_t id, int fd, int32_t size)
-+		uint32_t id, int fd, size_t size)
- {
- 	struct wl_shm_pool *pool;
- 
+ 		int32_t size)
 @@ -284,7 +369,14 @@ shm_create_pool(struct wl_client *client
  				       "failed mmap fd %d: %m", fd);
  		goto err_free;
