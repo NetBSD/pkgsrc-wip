@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/velox
+lib/pkgconfig/velox.pc
+libexec/velox/status_bar
+share/velox/velox.xml
