@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- Makefile.orig	2019-07-11 06:33:41.000000000 +0000
++++ Makefile
+@@ -28,7 +28,6 @@ include config.mk
+ # Dependencies
+ PACKAGES :=           \
+     libdrm            \
+-    libinput          \
+     pixman-1          \
+     wayland-server    \
+     wayland-protocols \
+@@ -39,7 +38,6 @@ ifeq ($(ENABLE_LIBUDEV),1)
+ PACKAGES += libudev
+ endif
+ 
+-libinput_CONSTRAINTS        := --atleast-version=0.4
+ wayland-server_CONSTRAINTS  := --atleast-version=1.6.0
+ 
+ define check

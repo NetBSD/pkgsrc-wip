@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/swc-launch
+include/swc.h
+lib/libswc.a
+lib/libswc.so
+lib/libswc.so.0
+lib/libswc.so.0.0
+lib/pkgconfig/swc.pc
+share/swc/swc.xml

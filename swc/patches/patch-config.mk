@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- config.mk.orig	2019-07-11 06:33:41.000000000 +0000
++++ config.mk
+@@ -16,5 +16,5 @@
+ ENABLE_DEBUG    = 1
+ ENABLE_STATIC   = 1
+ ENABLE_SHARED   = 1
+-ENABLE_LIBUDEV  = 1
++ENABLE_LIBUDEV  = 0
+ 
