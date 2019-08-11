@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	http://ed448goldilocks.sourceforge.net/
-COMMENT=	Implementation of elliptic curve cryptography
+COMMENT=	Implementation of Ed448-Goldilocks elliptic curve for cryptography
 LICENSE=	mit
 
 USE_CMAKE=	yes
@@ -22,7 +22,7 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 PYTHON_FOR_BUILD_ONLY=		tool
 
 # XXX: Avoid to pick up possibe installed libdecaf.so
-TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/src
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src
 
 TEST_TARGET=	test
 
