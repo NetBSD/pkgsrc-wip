@@ -1,6 +1,6 @@
 $NetBSD$
 
---- libswc/seat-ws.c.orig	2019-08-10 19:52:23.379366995 +0000
+--- libswc/seat-ws.c.orig	2019-08-11 16:54:52.381600368 +0000
 +++ libswc/seat-ws.c
 @@ -0,0 +1,332 @@
 +/* swc: libswc/seat-ws.c
@@ -242,10 +242,10 @@ $NetBSD$
 +static bool
 +initialize_wscons(void)
 +{
-+	if ((seat.mouse_fd = open("/dev/wsmouse", O_RDONLY | O_NONBLOCK)) == -1) {
++	if ((seat.mouse_fd = launch_open_device("/dev/wsmouse", O_RDONLY | O_NONBLOCK)) == -1) {
 +		goto error0;
 +	}
-+	if ((seat.kbd_fd = open("/dev/wskbd", O_RDONLY | O_NONBLOCK)) == -1) {
++	if ((seat.kbd_fd = launch_open_device("/dev/wskbd", O_RDONLY | O_NONBLOCK)) == -1) {
 +		goto error1;
 +	}
 +
