@@ -1,7 +1,7 @@
 ===========================================================================
 $NetBSD$
 
-In order for Cannonball to work you need to provide a copy of the
+In order for CannonBall to work you need to provide a copy of the
 OutRun revision B romset to the roms subdirectory. Rename the files if
 necessary.
 
@@ -11,6 +11,6 @@ which defaults to $HOME/.local/share/cannonball/roms
 Configuration can be found at $XDG_DATA_HOME/cannonball/config.xml
 which defaults to $HOME/.local/share/cannonball/config.xml
 
-NOTE: The directories will be created on the first run of Cannonball
+NOTE: The directories will be created on the first run of CannonBall
 if they do not exist.
 ===========================================================================
