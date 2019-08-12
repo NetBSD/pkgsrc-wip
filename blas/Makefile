@@ -10,15 +10,16 @@
 PKGNAME=	blas-3.8.0
 PKGREVISION=	1
 CATEGORIES=	math
-COMMENT=	Transitional BLAS package that depends on lapack
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	http://www.netlib.org/lapack/
+COMMENT=	Transitional BLAS package that depends on lapack
 LICENSE=	modified-bsd
+
+USE_LIBTOOL=	yes
 
 META_PACKAGE=	yes
 
-.include "../lapack/buildlink3.mk"
+.include "../../wip/lapack/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
-

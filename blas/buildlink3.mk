@@ -1,3 +1,3 @@
 # $NetBSD$
 
-.include "../lapack/buildlink3.mk"
+.include "../../wip/lapack/buildlink3.mk"
