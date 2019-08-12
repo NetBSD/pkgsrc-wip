@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.61 2019/01/23 15:03:34 kamil Exp $
+# $NetBSD: Makefile,v 1.62 2019/04/25 07:32:45 maya Exp $
 
 DISTNAME=	gdb-8.2.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MASTER_SITES=		${MASTER_SITE_GITHUB:=bminor/}
+GITHUB_PROJECT=		binutils-gdb
+GITHUB_TAG=		7e24fb63e7db33d3627623629b0e99fe322e26f9
+
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 LICENSE=	gnu-gpl-v3
@@ -12,21 +14,20 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		c c++11
 
 BROKEN_GETTEXT_DETECTION=	yes
-GNU_CONFIGURE=			YES
-USE_PKGLOCALEDIR=		YES
-USE_LIBTOOL=			YES
-USE_TOOLS+=			bash gmake msgfmt makeinfo perl:build
+GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	YES
+USE_LIBTOOL=		YES
+USE_TOOLS+=		gmake msgfmt makeinfo perl:build
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-REPLACE_BASH+=			gdb/gcore.in
-INSTALL_TARGET=			install install-info
-TEST_TARGET=			check
-INFO_FILES=			yes
-CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
+INSTALL_TARGET=		install install-info
+TEST_TARGET=		check
+INFO_FILES=		yes
+CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp
-SUBST_STAGE.fix-depcomp=	pre-configure
-SUBST_MESSAGE.fix-depcomp=	Read depcomp directly
+SUBST_STAGE.fix-depcomp+=	pre-configure
+SUBST_MESSAGE.fix-depcomp+=	Read depcomp directly
 SUBST_FILES.fix-depcomp+=	gdb/configure
 SUBST_SED.fix-depcomp+=		-e 's,< ./depcomp,${_OVERRIDE_PATH.depcomp},'
 
@@ -67,7 +68,7 @@ TARGET_STR=		${MACHINE_ARCH}--dragonfly
 BUILD_DEFS+=		${TARGET_STR}
 ## Remove "-pc" string, without this, getting following message:
 ##	   *** Gdb does not support native target i386-pc-dragonfly"
-CONFIGURE_ARGS+=	--target=${TARGET_STR}
+CONFIGURE_ARGS+=		--target=${TARGET_STR}
 TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
 .endif
 
