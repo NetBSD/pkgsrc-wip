@@ -19,7 +19,7 @@ CMAKE_ARG_PATH=		..
 BUILD_MAKE_FLAGS+=	VERBOSE=1
 
 INSTALLATION_DIRS+=	bin libexec share/cannonball share/cannonball/res \
-			share/cannonball/conf
+			share/cannonball/conf ${PKGMANDIR}/man6
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -48,6 +48,8 @@ do-install:
 	    ${DESTDIR}${PREFIX}/bin/cannonball
 	${INSTALL_PROGRAM} ${WRKSRC}/build/cannonball \
 	    ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_MAN} ${FILESDIR}/cannonball.6 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

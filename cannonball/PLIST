@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/cannonball
 libexec/cannonball
+man/man6/cannonball.6
 share/cannonball/conf/config.xml
 share/cannonball/res/tilemap.bin
 share/cannonball/res/tilepatch.bin
