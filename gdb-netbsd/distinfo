@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (gdb-8.2.1.tar.gz) = d6e40134c92e0f10636455cded0312cc799672c9
+RMD160 (gdb-8.2.1.tar.gz) = a92cabfd5da3e358e16aa424a4a3d8de63366614
+SHA512 (gdb-8.2.1.tar.gz) = 13f557290c7b3fbb99f90d95478d8c3b74f9222cfc391cbb0baad2eb7de76e31513521e4dfffcbbf4d7ab84fa72602df0e38c32666d598ac43ef12823deb84fa
+Size (gdb-8.2.1.tar.gz) = 37601384 bytes
+SHA1 (patch-Makefile.in) = 48f65798f96fdda2a35eb8b18a7cc2993023bcc7
+SHA1 (patch-sim_ppc_emul_netbsd.c) = 34fcb884c3c82e8eae6cd6f8c87ce42e9354c347
