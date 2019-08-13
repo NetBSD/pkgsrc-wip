@@ -2,9 +2,9 @@ $NetBSD$
 
 Adapt to NetBSD.
 
---- quickjs.c.orig	2019-07-28 15:03:03.000000000 +0000
+--- quickjs.c.orig	2019-08-10 10:58:42.000000000 +0000
 +++ quickjs.c
-@@ -106,6 +106,14 @@
+@@ -105,6 +105,14 @@
  #include <pthread.h>
  #include <stdatomic.h>
  #include <errno.h>
@@ -19,7 +19,7 @@ Adapt to NetBSD.
  #endif
  
  enum {
-@@ -1293,6 +1301,8 @@ static inline size_t js_def_malloc_usabl
+@@ -1335,6 +1343,8 @@ static inline size_t js_def_malloc_usabl
      return 0;
  #elif defined(__linux__)
      return malloc_usable_size(ptr);
@@ -28,7 +28,7 @@ Adapt to NetBSD.
  #else
      /* change this to `return 0;` if compilation fails */
      return malloc_usable_size(ptr);
-@@ -1367,6 +1377,8 @@ static const JSMallocFunctions def_mallo
+@@ -1409,6 +1419,8 @@ static const JSMallocFunctions def_mallo
      NULL,
  #elif defined(__linux__)
      (size_t (*)(const void *))malloc_usable_size,
