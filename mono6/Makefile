@@ -23,8 +23,7 @@ EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	mono
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --with-icu=yes
-CONFIGURE_ARGS+=	--disable-dtrace
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 USE_CWRAPPERS=		no
 MAKE_FLAGS+=		PERL=${PERL5:Q} mandir=${PREFIX}/${PKGMANDIR}
