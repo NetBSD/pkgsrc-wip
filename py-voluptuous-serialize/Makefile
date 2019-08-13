@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	voluptuous-serialize-2.2.0
+DISTNAME=	voluptuous-serialize-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/voluptuous-serialize/}

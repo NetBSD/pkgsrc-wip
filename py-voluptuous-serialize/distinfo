@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (voluptuous-serialize-2.2.0.tar.gz) = 9245ba5710b2a9780236c329d9002f20ea9f693e
-RMD160 (voluptuous-serialize-2.2.0.tar.gz) = 338f6f26ea9a0b61ba70f0c58335aefb9b02e9fe
-SHA512 (voluptuous-serialize-2.2.0.tar.gz) = af12dd129aa06a14cac1235f3faa7146971003ecaf5706701eecfc729512dd9009c6452627b568af868b36a3e4ac2662b5fdad2b390ac302c140884de4f40618
-Size (voluptuous-serialize-2.2.0.tar.gz) = 2848 bytes
+SHA1 (voluptuous-serialize-2.1.0.tar.gz) = 463b536a71adbc9908f284153f7a99a865ca84e9
+RMD160 (voluptuous-serialize-2.1.0.tar.gz) = 791e5abdc00ef32690f8608782a0c95ccef84754
+SHA512 (voluptuous-serialize-2.1.0.tar.gz) = 02e00b4f7d7334894d0db59a728c49131999b3b6383ef0718918e2222c5591d41fc72c3ef60b00f0c869434ed7d4fbfa61fe4f726b472f79b13df5e045f019ae
+Size (voluptuous-serialize-2.1.0.tar.gz) = 2785 bytes
