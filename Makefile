@@ -4160,6 +4160,7 @@ SUBDIR+=	py-visionegg-docs
 SUBDIR+=	py-vispy
 SUBDIR+=	py-vo
 SUBDIR+=	py-voluptuous
+SUBDIR+=	py-voluptuous-serialize
 SUBDIR+=	py-voronoi
 SUBDIR+=	py-voropy
 SUBDIR+=	py-vtk

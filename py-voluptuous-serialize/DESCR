@@ -1,0 +1,1 @@
+Convert Voluptuous schemas to dictionaries so they can be serialized.
