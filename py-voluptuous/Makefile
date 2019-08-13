@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	voluptuous-0.10.5
+DISTNAME=	voluptuous-0.11.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/voluptuous/}
