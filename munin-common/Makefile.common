@@ -4,7 +4,7 @@
 # used by wip/munin-master/Makefile
 # used by wip/munin-node/Makefile
 
-VERSION=	2.0.44
+VERSION=	2.0.49
 DISTNAME=	munin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.munin-monitoring.org/munin/stable/${VERSION}/
