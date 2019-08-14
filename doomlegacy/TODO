@@ -5,5 +5,6 @@
     => PKGREVISION not bumped, because binary package has not changed
 [X] Move man page to section 6 (it's a game)
    => Bump PKGREVISION
-[ ] Test building of the package again
-[ ] Remove patches after upstream integration
+[X] Test building of the package again
+    => Tested to work with SVN revision r1448
+[X] Remove patches after upstream integration

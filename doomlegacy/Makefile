@@ -1,12 +1,17 @@
 # $NetBSD$
 
 VERS=		1.47.2
-PKGNAME=	doomlegacy-${VERS}
-PKGREVISION=	1
+#PKGNAME=	doomlegacy-${VERS}
+SVNVERS=	1448
+DISTNAME=	doomlegacy-devel-r${SVNVERS}
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
-DISTNAME=	${PKGNAME_NOREV:S/-/_/}_source
-DISTFILES=	doomlegacy_${VERS}_source.tar.bz2 doomlegacy_${VERS}_common.zip
+
+DISTFILES=			doomlegacy_${VERS}_common.zip
+MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
+SVN_REPOSITORIES=		legacy_one
+SVN_REPO.legacy_one=		svn://svn.code.sf.net/p/doomlegacy/svn/legacy_one/trunk
+SVN_REVISION.legacy_one=	${SVNVERS}
+SVN_EXTRACTDIR.legacy_one=	doomlegacy-devel-r${SVNVERS}
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		http://doomlegacy.sourceforge.net/
@@ -23,6 +28,7 @@ USE_LANGUAGES+=		c99
 USE_TOOLS+=		gmake
 MAKE_JOBS_SAFE=		no
 
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/endian.mk"
 
@@ -36,7 +42,6 @@ MAKE_FLAGS+=		OS=MAC
 # Other Unix (should work for GNU/Linux, OpenBSD and SunOS)
 MAKE_FLAGS+=		OS=LINUX
 .endif
-MAKE_FLAGS+=		COMP_ENVIRONMENT=1 HAVE_MIXER=1
 
 .if ${MACHINE_ENDIAN} == "big"
 # Some compilers define this themselves (but maybe not all)
@@ -51,6 +56,13 @@ MESSAGE_SRC+=		MESSAGE.doomlegacy
 MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
 MESSAGE_SUBST+=		DOOMWADDIR_CONF="${PREFIX}/${DOOMWADDIR}"
 
+# Configure to honor environment
+SUBST_CLASSES+=		makeopt
+SUBST_STAGE.makeopt=	do-configure
+SUBST_MESSAGE.makeopt=	Preparing make_options file ...
+SUBST_FILES.makeopt=	make_options
+SUBST_SED.makeopt=	-e 's,\#COMP_ENVIRONMENT,COMP_ENVIRONMENT,'
+
 # Configure defaults for LEGACYWADDIR and DOOMWADDIR
 SUBST_CLASSES+=		doomdef
 SUBST_STAGE.doomdef=	do-configure
@@ -61,6 +73,7 @@ SUBST_SED.doomdef+=	-e 's,DEFWADS01  "~/games/doomlegacy/wads",DEFWADS01  "${PRE
 
 pre-configure:
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
+	cd ${WRKSRC} && ${CP} make_options_nix make_options
 
 # Move configure options and process manpage template
 do-configure:
