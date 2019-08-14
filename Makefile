@@ -241,7 +241,6 @@ SUBDIR+=	bashdb
 SUBDIR+=	bastard
 SUBDIR+=	bcftools
 SUBDIR+=	bdf2psf
-SUBDIR+=	bdfresize
 SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast

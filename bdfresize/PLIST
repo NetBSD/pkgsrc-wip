@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/bdfresize
-man/man1/bdfresize.1
