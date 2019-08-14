@@ -12,7 +12,6 @@ LICENSE=		gnu-lgpl-v2.1
 
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-tests
 WINE32_ARGS+=		--with-wine64=${BUILD64}
 WINE32_ARGS+=		--with-freetype=${PREFIX}/emul/netbsd32/lib/freetype2
 WINE32_ARGS+=		--with-fontconfig=${PREFIX}/emul/netbsd32/lib/fontconfig
