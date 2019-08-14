@@ -25,6 +25,9 @@ WINE32_ENV=		CFLAGS+=-m32
 # XXX: Fix warning due to _FORTIFY_SOURCE being redefined
 WINE_ENV=		ac_cv_c_fortify_enabled=no
 
+# XXX: Stop Wine from gethostbyname_r like in linux
+WINE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
