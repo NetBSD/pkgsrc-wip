@@ -19,7 +19,6 @@ SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 
 DOCDIR=		share/doc/ttyplot
 
-AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	bin ${DOCDIR}
 
 do-install:
