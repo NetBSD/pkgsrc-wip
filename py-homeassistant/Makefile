@@ -14,6 +14,7 @@ LICENSE=	apache-2.0
 #EGG_INFODIR=	homeassistant-${VERSION}-py${PYVERSSUFFIX}.egg-info
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.5.4:../../www/py-aiohttp
 #DEPENDS+=	${PYPKGPREFIX}-astral=1.10.1:../../FOO/py-astral

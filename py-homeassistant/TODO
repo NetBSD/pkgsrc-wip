@@ -1,3 +1,5 @@
-Add all dependencies and uncomment the lines.
+Add all dependencies to pkgsrc and uncomment the lines.
+
+Patch setup.py to allow >= intead of == for dependencies.
 
 Test.
