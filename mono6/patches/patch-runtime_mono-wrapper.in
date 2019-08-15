@@ -8,5 +8,5 @@ Mark the mono executable as not MPROTECT safe during the build.
  fi
  MONO_EXECUTABLE=${MONO_EXECUTABLE:-"$r/@mono_runtime@"}
  export MONO_CFG_DIR PATH
-+paxctl +m $(readlink -f "$MONO_EXECUTABLE") 2>/dev/null
++paxctl +m $(readlink -f "$MONO_EXECUTABLE") | true 2>/dev/null
  exec "$r/libtool" --mode=execute "${MONO_EXECUTABLE_WRAPPER}" --config "@mono_cfg_dir@/mono/config" "$@"

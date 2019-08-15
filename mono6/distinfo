@@ -22,4 +22,4 @@ SHA1 (patch-mono_tests_Makefile.am) = a5bf145619a50c8c256c32ffdb5b51f9e04f874c
 SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
 SHA1 (patch-mono_utils_mono-state.c) = 6a6d83e1779a5167e8f22ba1dedce9b3203705c4
 SHA1 (patch-mono_utils_mono-utils-debug.c) = 30b0ab55c9227705026a8edd1e4bb693ae4f9953
-SHA1 (patch-runtime_mono-wrapper.in) = aedf3d2cdfe2504f021c6dec7992164542db0463
+SHA1 (patch-runtime_mono-wrapper.in) = 6d396f9ddf92e522111421ce9b8ec26988438f48
