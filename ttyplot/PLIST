@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/ttyplot
-share/doc/ttyplot/README.md

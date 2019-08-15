@@ -4798,7 +4798,6 @@ SUBDIR+=	tsm62
 SUBDIR+=	ttf-indic-fonts
 SUBDIR+=	ttr
 SUBDIR+=	ttyload
-SUBDIR+=	ttyplot
 SUBDIR+=	ttysnoop
 SUBDIR+=	ttytter
 SUBDIR+=	tuareg-mode
