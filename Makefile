@@ -1593,6 +1593,7 @@ SUBDIR+=	i3-git
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	ibm-plex-ttf
+SUBDIR+=	ibm-plex-otf
 SUBDIR+=	ical2pcal
 SUBDIR+=	icecat
 SUBDIR+=	ices
