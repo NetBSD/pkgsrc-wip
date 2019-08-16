@@ -1,6 +1,7 @@
 $NetBSD$
 
-# Improve dynamic lib naming
+Improve dynamic lib naming
+
 --- exports/Makefile.orig	2018-12-31 23:09:59.000000000 +0100
 +++ exports/Makefile	2019-03-22 17:22:50.811953116 +0100
 @@ -160,6 +160,7 @@

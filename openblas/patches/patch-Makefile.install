@@ -1,6 +1,7 @@
-@NetBSD@
+$NetBSD$
 
 Second part of removing the special library names.
+
 --- Makefile.install.orig	2018-12-31 23:09:59.000000000 +0100
 +++ Makefile.install	2019-03-22 17:43:08.922196943 +0100
 @@ -61,8 +61,6 @@

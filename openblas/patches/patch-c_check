@@ -1,6 +1,7 @@
 $NetBSD$
 
-# Avoid name collision on ARCH
+Avoid name collision on ARCH
+
 --- c_check.orig	2015-10-27 20:44:50 UTC
 +++ c_check
 @@ -235,7 +235,7 @@ open(CONFFILE, "> $config"  ) || die "Ca

@@ -1,6 +1,7 @@
 $NetBSD$
 
-# Respect env
+Respect env
+
 --- Makefile.rule.orig	2015-10-27 20:44:50 UTC
 +++ Makefile.rule
 @@ -19,10 +19,10 @@ VERSION = 0.2.15

@@ -3,6 +3,7 @@
 # used by wip/openblas_pthread/Makefile
 # used by wip/openblas_openmp/Makefile
 # used by wip/openblas/Makefile
+#
 # This is the common Makefile for OpenBLAS builds. It depends on
 # OPENBLAS_VARIANT = (openblas|openblas_pthread|openblas_openmp)
 # being set.
@@ -27,7 +28,7 @@ PATCHDIR=	${.CURDIR}/../../wip/openblas/patches
 PLIST_SRC=	${.CURDIR}/../../wip/openblas/PLIST
 PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
 
-# NetBSD: Cannot find -lssp*
+# FIXME: NetBSD Cannot find -lssp*
 PKGSRC_USE_SSP=	no
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
@@ -56,8 +57,11 @@ MAKE_FLAGS+=	FFLAGS=${FFLAGS:Q}
 # Default is detected from build host.
 BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
 
+.include "../../mk/bsd.prefs.mk"
+
 # Default checks number of cores of build host.
 # Do we want a pkgsrc-wide default?
+OPENBLAS_THREAD_LIMIT?=	# empty
 .if !empty(OPENBLAS_THREAD_LIMIT)
 MAKE_FLAGS+=		NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
 .endif
@@ -90,20 +94,19 @@ MAKE_FLAGS+=	LIBNAMESUFFIX=openmp USE_OPENMP=1 NO_AFFINITY=1
 .endif
 
 SUBST_CLASSES+=		find
-SUBST_STAGE.find=	post-patch
+SUBST_STAGE.find=	pre-build
 SUBST_SED.find+=	-e "s+%%FIND%%+${FIND}+"
 SUBST_SED.find+=	-e "s+%%XARGS%%+${XARGS}+"
-SUBST_SED.find+=	-e "s+%%REINPLACE_CMD%%+${REINPLACE_CMD}+"
 SUBST_FILES.find+=	${WRKSRC}/Makefile
 
 SUBST_CLASSES+=		compiler
-SUBST_STAGE.compiler=	post-patch
-SUBST_SED.compiler+=	-e "s+%%FC%%+${FC}+"
-SUBST_SED.compiler+=	-e "s+%%CC%%+${CC}+"
+SUBST_STAGE.compiler=	pre-build
+SUBST_SED.compiler+=	-e "s+%%FC%%+"${FC:Q}"+"
+SUBST_SED.compiler+=	-e "s+%%CC%%+"${CC:Q}"+"
 SUBST_FILES.compiler+=	${WRKSRC}/Makefile.rule
 
 SUBST_CLASSES+=		arch
-SUBST_STAGE.arch=	post-patch
+SUBST_STAGE.arch=	pre-build
 SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+"
 SUBST_FILES.arch+=	${WRKSRC}/Makefile.rule
 SUBST_FILES.arch+=	${WRKSRC}/Makefile.tail
@@ -122,42 +125,41 @@ SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/LAPACKE/utils/Makefile
 SUBST_FILES.arch+=	${WRKSRC}/reference/Makefile
 
 SUBST_CLASSES+=		system
-SUBST_STAGE.system=	post-patch
+SUBST_STAGE.system=	pre-build
 SUBST_SED.system+=	-e "s+(ARCH)+(ARCH_)+"
-SUBST_SED.system+=	-e 's+%%LDFLAGS%%+${LDFLAGS}+'
+SUBST_SED.system+=	-e 's+%%LDFLAGS%%+'${LDFLAGS:Q}'+'
 SUBST_SED.system+=	-e 's+%%LOCALBASE%%+${PREFIX}+'
 SUBST_SED.system+=	-e 's+%%FIND%%+${FIND}+'
 SUBST_SED.system+=	-e 's+%%XARGS%%+${XARGS}+'
-SUBST_SED.system+=	-e 's+%%REINPLACE_CMD%%+${REINPLACE_CMD}+'
 SUBST_SED.system+=	-e 's+$${CROSS_SUFFIX}+${PREFIX}/bin/+'
 SUBST_SED.system+=	-e '/Clang.*OpenMP/g'
 SUBST_FILES.system+=	${WRKSRC}/Makefile.system
 
 SUBST_CLASSES+=		threads
-SUBST_STAGE.threads=	post-patch
+SUBST_STAGE.threads=	pre-build
 SUBST_SED.threads+=	-e "s+OPENBLAS_NUM_THREADS+OMP_NUM_THREADS+g"
 SUBST_FILES.threads+=	${WRKSRC}/test/Makefile
 SUBST_FILES.threads+=	${WRKSRC}/ctest/Makefile
 
 # Fix up pkgconfig file installation.
 SUBST_CLASSES+=		pc
-SUBST_STAGE.pc=		post-patch
+SUBST_STAGE.pc=		pre-build
 SUBST_SED.pc+=		-e 's+-lopenblas+-l${OPENBLAS_VARIANT}+'
 SUBST_SED.pc+=		-e 's+openblas.pc"+${OPENBLAS_VARIANT}.pc"+'
 SUBST_FILES.pc+=	Makefile.install openblas.pc.in
 
 post-extract:
-	cd ${DISTDIR}/${DIST_SUBDIR} ; \
-		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC}
+	(cd ${DISTDIR}/${DIST_SUBDIR} && \
+		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC})
 
 # This builds some benchmark programs you can call
 # from ${WRKSRC} afterwards.
 .PHONY: benchmark
 benchmark: build
-	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} ${BENCHMARK_ENV} \
-	  ${MAKE_PROGRAM} ${MAKE_FLAGS} hpl
-	cd ${WRKSRC}/benchmark ; ${SETENV} ${MAKE_ENV} \
-	  ${BENCHMARK_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BENCHMARK_ENV} \
+	  ${MAKE_PROGRAM} ${MAKE_FLAGS} hpl)
+	(cd ${WRKSRC}/benchmark && ${SETENV} ${MAKE_ENV} \
+	  ${BENCHMARK_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

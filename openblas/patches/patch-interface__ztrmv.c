@@ -1,6 +1,7 @@
 $NetBSD$
 
-# Avoid buffer overflow
+Avoid buffer overflow
+
 --- interface/ztrmv.c.orig	2016-09-01 03:58:42 UTC
 +++ interface/ztrmv.c
 @@ -242,7 +242,7 @@ void CNAME(enum CBLAS_ORDER order, enum 

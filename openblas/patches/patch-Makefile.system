@@ -2,6 +2,7 @@ $NetBSD$
 
 Fully control the library name via LIBNAMESUFFIX
 And the ARCH_ thing.
+
 --- Makefile.system.orig	2018-12-31 23:09:59.000000000 +0100
 +++ Makefile.system	2019-03-22 17:52:10.951870000 +0100
 @@ -265,6 +265,7 @@

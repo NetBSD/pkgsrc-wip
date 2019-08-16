@@ -1,6 +1,7 @@
 $NetBSD$
 
-# Clean up link flags
+Clean up link flags
+
 --- f_check.orig	2015-10-27 20:44:50 UTC
 +++ f_check
 @@ -261,7 +261,7 @@ if ($link ne "") {
