@@ -5,6 +5,7 @@ DISTNAME=		preacher
 PKGNAME=		doom2-pwad-${DISTNAME}-20181129
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.fu-berlin.de/pc/games/idgames/levels/doom2/Ports/p-r/
+MASTER_SITES+=		ftp://mirrors.syringanetworks.net/idgames/levels/doom2/Ports/p-r/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		micha@NetBSD.org
@@ -16,6 +17,9 @@ LICENSE=		preacher-license
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
 INSTALLATION_DIRS=	${DOOMWADDIR}
+
+MESSAGE_SRC+=		MESSAGE.doom2-pwad-preacher
+MESSAGE_SUBST+=		DOOMWADDIR="${PREFIX}/${DOOMWADDIR}"
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
