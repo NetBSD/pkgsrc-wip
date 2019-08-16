@@ -28,9 +28,6 @@ PATCHDIR=	${.CURDIR}/../../wip/openblas/patches
 PLIST_SRC=	${.CURDIR}/../../wip/openblas/PLIST
 PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
 
-# FIXME: NetBSD Cannot find -lssp*
-PKGSRC_USE_SSP=	no
-
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
