@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install libs here rather than from a separate package
+
 --- LAPACKE/lapacke.pc.in.orig	2019-03-27 14:35:14.016006535 +0000
 +++ LAPACKE/lapacke.pc.in
 @@ -6,5 +6,5 @@ Description: C Standard Interface to LAP

@@ -10,24 +10,21 @@
 PORTVERSION=	3.8.0
 DISTNAME=	lapack-${PORTVERSION}
 PKGNAME=	${LAPACK_PART}-${PORTVERSION}
-PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	http://www.netlib.org/lapack/
 LICENSE=	modified-bsd
 
 # All parts are in the same section (now wip, later math).
-PATCHDIR=	${.CURDIR}/../lapack/patches
-DISTINFO_FILE=	${.CURDIR}/../lapack/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/lapack/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/lapack/distinfo
 
 USE_LANGUAGES=		c fortran
 USE_CMAKE=		yes
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
-CONFIGURE_DIRS=		${WRKDIR}/build
+CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
 
 # Note: We patch the build to install both static and
@@ -38,7 +35,6 @@ CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
 		${LAPACK_PART_CMAKE_ARGS}
 
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${RUN} mkdir -p ${WRKSRC}/build
 
 .include "../../mk/bsd.pkg.mk"
-

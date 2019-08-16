@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install BLAS libs here rather than from a separate package
+
 --- CBLAS/cblas.pc.in.orig	2019-03-27 14:34:40.823289167 +0000
 +++ CBLAS/cblas.pc.in
 @@ -6,5 +6,5 @@ Description: C Standard Interface to BLA

@@ -7,4 +7,4 @@ LAPACK_PART_CMAKE_ARGS= \
 	-DUSE_OPTIMIZED_LAPACK=OFF \
 	-DCBLAS=OFF -DLAPACKE=OFF
 
-.include	"../lapack/Makefile.common"
+.include	"../../wip/lapack/Makefile.common"
