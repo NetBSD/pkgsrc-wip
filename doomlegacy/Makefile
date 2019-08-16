@@ -18,6 +18,8 @@ HOMEPAGE=		http://doomlegacy.sourceforge.net/
 COMMENT=		The legacy of Doom
 LICENSE=		gnu-gpl-v2
 
+CONFLICTS+=		doomlegacy-[0-9]*
+
 # Tested on Linux/ppc (32bit Big Endian) and NetBSD/amd64 (64bit Little Endian)
 # Untested: In general the source code has support for the other listed OS too
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
