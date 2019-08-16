@@ -11,24 +11,23 @@ HOMEPAGE=	https://packages.debian.org/sid/bdf2psf
 COMMENT=	Convert a BDF font to PSF format for the Linux console
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/console-setup-${PKGVERSION}
+WRKSRC=		${WRKDIR}/console-setup-${PKGVERSION_NOREV}
 
 NO_BUILD=	yes
 
-REPLACE_PERL=	Fonts/bdf2psf
+REPLACE_PERL+=	Fonts/${PKGBASE}
 
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 
-AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${SHAREDIR}/fontsets
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/Fonts/bdf2psf ${DESTDIR}${PREFIX}/bin
-	${RUN}${INSTALL_MAN} ${WRKSRC}/man/bdf2psf.1 \
+	${INSTALL_SCRIPT} ${WRKSRC}/Fonts/${PKGBASE} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/${PKGBASE}.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${RUN}${INSTALL_DATA} ${WRKSRC}/Fonts/standard.equivalents \
+	${INSTALL_DATA} ${WRKSRC}/Fonts/standard.equivalents \
 		${DESTDIR}${SHAREDIR}
-	${RUN}${INSTALL_DATA} ${WRKSRC}/Fonts/fontsets/* \
+	${INSTALL_DATA} ${WRKSRC}/Fonts/fontsets/* \
 		${DESTDIR}${SHAREDIR}/fontsets
 
 .include "../../mk/bsd.pkg.mk"
