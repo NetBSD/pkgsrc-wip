@@ -457,7 +457,6 @@ SUBDIR+=	colord
 SUBDIR+=	colord-gtk
 SUBDIR+=	colorfull
 SUBDIR+=	colorize
-SUBDIR+=	coma
 SUBDIR+=	comblas
 SUBDIR+=	commandergenius
 SUBDIR+=	common-mml
