@@ -10,3 +10,6 @@ on Linux or other systems, just made it working on NetBSD i386
 more testing is needed.
 
 Is there a workaround for the setuid bit to lock the screen?
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2016-10894
