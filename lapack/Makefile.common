@@ -13,7 +13,6 @@ PKGNAME=	${LAPACK_PART}-${PORTVERSION}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
 
-MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	http://www.netlib.org/lapack/
 LICENSE=	modified-bsd
 
