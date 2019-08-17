@@ -1,12 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	le-1.16.5
+DISTNAME=	le-1.16.6
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lavv17/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+MASTER_SITES=	http://lav.yar.ru/download/le/
 
 MAINTAINER=	fcambus@NetBSD.org
-HOMEPAGE=	https://github.com/lavv17/le/
+HOMEPAGE=	http://lav.yar.ru/programs.html
 COMMENT=	Full screen text editor inspired by Norton Editor
 LICENSE=	gnu-gpl-v3
 

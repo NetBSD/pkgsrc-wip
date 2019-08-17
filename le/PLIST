@@ -18,6 +18,8 @@ share/le/syntax
 share/le/syntax.d/ada
 share/le/syntax.d/as
 share/le/syntax.d/awk
+share/le/syntax.d/c
+share/le/syntax.d/c++
 share/le/syntax.d/c++-comment
 share/le/syntax.d/c-comment
 share/le/syntax.d/c-literal
@@ -43,6 +45,7 @@ share/le/syntax.d/pascal
 share/le/syntax.d/perl
 share/le/syntax.d/php
 share/le/syntax.d/pod
+share/le/syntax.d/puppet
 share/le/syntax.d/python
 share/le/syntax.d/sather
 share/le/syntax.d/shell
