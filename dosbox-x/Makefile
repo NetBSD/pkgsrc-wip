@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	dosbox-x
-PKGNAME=	dosbox-x-0.82.19
+PKGNAME=	dosbox-x-0.82.20
 DISTNAME=	${GITHUB_TAG}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
