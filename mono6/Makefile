@@ -25,7 +25,9 @@ GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	mono
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
+# Requires a cwrappers change: http://mail-index.netbsd.org/tech-pkg/2019/08/16/msg021791.html
 USE_CWRAPPERS=		no
+
 MAKE_FLAGS+=		PERL=${PERL5:Q} mandir=${PREFIX}/${PKGMANDIR}
 UNLIMIT_RESOURCES=	datasize stacksize memorysize
 
