@@ -1837,7 +1837,6 @@ SUBDIR+=	ldc
 SUBDIR+=	ldc-git
 SUBDIR+=	lde
 SUBDIR+=	ldtp
-SUBDIR+=	le
 SUBDIR+=	leo
 SUBDIR+=	lfe
 SUBDIR+=	lgogdownloader-git
