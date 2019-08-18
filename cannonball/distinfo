@@ -4,5 +4,5 @@ SHA1 (cannonball-0.3.20171201-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) =
 RMD160 (cannonball-0.3.20171201-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) = 79f33565344ec4f5b6d37ff0967c033ea8751bba
 SHA512 (cannonball-0.3.20171201-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) = b387e1d855c7949a9685d0fc9dac1a917962e2a1679a0ef5813f0efe6a936e5e25e57ccd80d54f28384c390a74f0285f40c673d2294c24693a52cb52ece80de0
 Size (cannonball-0.3.20171201-0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6.tar.gz) = 277449 bytes
-SHA1 (patch-cmake_CMakeLists.txt) = 1776821704ccf44ef788f1a64b8e65903465b0db
-SHA1 (patch-cmake_bsd.cmake) = c331da7ef49e2351395959da641cd7ec0847bd38
+SHA1 (patch-cmake_CMakeLists.txt) = bc474aa576a9d28fc2569f9c9c19b2a3808d5ddd
+SHA1 (patch-cmake_bsd.cmake) = 74fe1f8d35b7712ea69232971e37bfb6c48dec16

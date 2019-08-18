@@ -15,23 +15,17 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_CMAKE=		yes
 CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		..
-BUILD_MAKE_FLAGS+=	VERBOSE=1
+CMAKE_ARG_PATH=		${WRKSRC}/cmake
+CMAKE_ARGS.Linux+=	-DTARGET=debian
+CMAKE_ARGS.NetBSD+=	-G "Unix Makefiles"
+CMAKE_ARGS.NetBSD+=	-DTARGET=bsd
+CMAKE_ARGS.NetBSD+=	-DBSD_PREFIX_PATH:STRING=${PREFIX}
 
 INSTALLATION_DIRS+=	bin libexec share/cannonball share/cannonball/res \
 			share/cannonball/conf ${PKGMANDIR}/man6
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_MESSAGE.prefix=	Set correct prefix in bsd.cmake
-SUBST_FILES.prefix=	${WRKSRC}/cmake/bsd.cmake
-SUBST_VARS.prefix=	PREFIX
-
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
-
-do-configure:
-	cd ${WRKSRC}/build && cmake -G "Unix Makefiles" -DTARGET=bsd ${WRKSRC}/cmake
 
 post-build:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/cannonball.sh.in > \

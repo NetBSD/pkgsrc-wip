@@ -1,13 +1,15 @@
 $NetBSD$
 
-Create a cmake file for NetBSD build.
+Create a cmake file for BSD based builds.
 
---- cmake/bsd.cmake.orig	2019-06-09 15:29:08.087446737 +0000
+--- cmake/bsd.cmake.orig	2019-08-18 00:41:57.311525123 +0000
 +++ cmake/bsd.cmake
-@@ -0,0 +1,21 @@
-+# Default CMake Setup. Used for NetBSD Builds.
+@@ -0,0 +1,23 @@
++# Default CMake Setup. Used for BSD Builds.
 +
-+set(lib_base @PREFIX@/include)
++set(lib_base ${BSD_PREFIX_PATH}/include)
++
++set(BOOST_INCLUDEDIR ${lib_base})
 +
 +set(sdl_root ${lib_base}/SDL)
 +
@@ -19,7 +21,7 @@ Create a cmake file for NetBSD build.
 +
 +# Linking
 +link_directories(
-+    "@PREFIX@/lib"
++    "${BSD_PREFIX_PATH}/lib"
 +)
 +
 +# Location for Cannonball to create save files
