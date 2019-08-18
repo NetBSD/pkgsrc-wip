@@ -1,6 +1,8 @@
 ===========================================================================
 $NetBSD$
 
+Kindly enable USER_LDT option in kernel.
+
 If you are experiencing crashes, it may be due to a security measure
 blocking the mapping of the NULL page.
 
