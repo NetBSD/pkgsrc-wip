@@ -14,4 +14,6 @@ USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	TASKS=1
 
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"
