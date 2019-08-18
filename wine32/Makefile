@@ -21,6 +21,8 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine
 # XXX: Fix warning due to _FORTIFY_SOURCE being redefined
 WINE_ENV+=		ac_cv_c_fortify_enabled=no
 
+# XXX: Stop Wine from using gethostbyname_r like in linux
+WINE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
