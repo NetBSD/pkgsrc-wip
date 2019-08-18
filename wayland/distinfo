@@ -17,5 +17,5 @@ SHA1 (patch-tests_event-loop-test.c) = 79909fdce7b73a7b19c58d3711329f6288fe7204
 SHA1 (patch-tests_os-wrappers-test.c) = 0b45e6952d23589e4991149143331fdb9e0386e1
 SHA1 (patch-tests_queue-test.c) = 3ee8433faa50b033ab880d3c5b6a9846063d6bd6
 SHA1 (patch-tests_sanity-test.c) = 80e06834ccf344fda16a6a8f85e062f2b4a744ec
-SHA1 (patch-tests_test-helpers.c) = 59f75ac60e9bcbe7877f96628f2a6c6f31955334
+SHA1 (patch-tests_test-helpers.c) = 1895c0bdadefdaeaa421e7051b71a297b3a5e2c3
 SHA1 (patch-tests_test-runner.c) = 35d911064c1b65537ef2276797b8041fd6b023f7
