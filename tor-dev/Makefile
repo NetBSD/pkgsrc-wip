@@ -2,6 +2,7 @@
 
 DISTNAME=	tor-0.4.1.4-rc
 PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -19,6 +20,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--program-suffix=-dev
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/tordev
 CONFIGURE_ENV+=		CPP=${CPP:Q}
+CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 
 TEST_TARGET=		check
 
