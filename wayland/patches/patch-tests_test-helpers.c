@@ -1,6 +1,6 @@
 $NetBSD$
 
-SBD support for FreeBSD
+BSD support from FreeBSD
 
 --- tests/test-helpers.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ tests/test-helpers.c
