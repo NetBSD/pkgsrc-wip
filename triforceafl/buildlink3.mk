@@ -1,4 +1,5 @@
 # $NetBSD$
+
 BUILDLINK_TREE+=	triforceafl
 
 .if !defined(TRIFORCEAFL_BUILDLINK3_MK)

@@ -4,9 +4,9 @@ DISTNAME=	TriforceNetBSDSyscallFuzzer-0.0.${SNAPSHOT}
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=akulpillai/}
-GITHUB_TAG=	8318e3f598d4cbc99356402aafa4b7194b0ef2c6
+GITHUB_TAG=	d4a0bca264df072f2c8d4491fdcc94620e045ecb
 
-SNAPSHOT=	2019.07.19
+SNAPSHOT=	2019.08.18
 
 MAINTAINER=	vishnu@akulpillai.com
 HOMEPAGE=	https://github.com/akulpillai/TriforceNetBSDSyscallFuzzer/

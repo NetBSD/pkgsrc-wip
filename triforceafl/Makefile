@@ -36,6 +36,10 @@ post-install:
 	${RUN} cd ${WRKSRC} && \
 		${INSTALL_DATA} types.h \
 			${DESTDIR}${AFLPREFIX}
+	${RUN} cd ${WRKSRC} && \
+		${INSTALL_DATA_DIR} ${DESTDIR}${AFLPREFIX}/share/pc-bios
+	${RUN} cd ${WRKSRC}/qemu_mode/qemu/pc-bios/ && \
+		pax -wr * ${DESTDIR}${AFLPREFIX}/share/pc-bios
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
