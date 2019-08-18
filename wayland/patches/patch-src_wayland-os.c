@@ -2,9 +2,11 @@ $NetBSD$
 
 BSD support from FreeBSD
 
---- src/wayland-os.c.orig	2017-08-08 18:20:52 UTC
+https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
+
+--- src/wayland-os.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ src/wayland-os.c
-@@ -25,6 +25,8 @@
+@@ -25,14 +25,20 @@
  
  #define _GNU_SOURCE
  
@@ -13,15 +15,20 @@ BSD support from FreeBSD
  #include <sys/types.h>
  #include <sys/socket.h>
  #include <unistd.h>
-@@ -32,7 +34,6 @@
+ #include <fcntl.h>
  #include <errno.h>
++#ifdef HAVE_SYS_EPOLL_H
  #include <sys/epoll.h>
++#endif
++#ifdef HAVE_SYS_EVENT_H
++#include <sys/event.h>
++#endif
  
 -#include "../config.h"
  #include "wayland-os.h"
  
  static int
-@@ -62,26 +63,50 @@ wl_os_socket_cloexec(int domain, int type, int protoco
+@@ -62,26 +68,50 @@ wl_os_socket_cloexec(int domain, int typ
  {
  	int fd;
  
@@ -72,7 +79,7 @@ BSD support from FreeBSD
  
  	newfd = fcntl(fd, F_DUPFD, minfd);
  	return set_cloexec_or_close(newfd);
-@@ -123,15 +148,18 @@ wl_os_recvmsg_cloexec(int sockfd, struct msghdr *msg, 
+@@ -123,17 +153,20 @@ wl_os_recvmsg_cloexec(int sockfd, struct
  {
  	ssize_t len;
  
@@ -89,12 +96,24 @@ BSD support from FreeBSD
  
 +#ifdef HAVE_SYS_EPOLL_H
  int
- wl_os_epoll_create_cloexec(void)
+-wl_os_epoll_create_cloexec(void)
++wl_os_queue_create_cloexec(void)
  {
-@@ -148,6 +176,7 @@ wl_os_epoll_create_cloexec(void)
+ 	int fd;
+ 
+@@ -148,6 +181,16 @@ wl_os_epoll_create_cloexec(void)
  	fd = epoll_create(1);
  	return set_cloexec_or_close(fd);
  }
++#elif defined(HAVE_SYS_EVENT_H)
++int
++wl_os_queue_create_cloexec(void)
++{
++	int fd;
++
++	fd = kqueue();
++	return set_cloexec_or_close(fd);
++}
 +#endif
  
  int

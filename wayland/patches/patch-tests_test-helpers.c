@@ -1,5 +1,7 @@
---- tests/test-helpers.c.orig	2018-08-24 18:04:36 UTC
-+++ tests/test-helpers.c
+$NetBSD$
+
+SBD support for FreeBSD
+
 --- tests/test-helpers.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ tests/test-helpers.c
 @@ -25,6 +25,12 @@

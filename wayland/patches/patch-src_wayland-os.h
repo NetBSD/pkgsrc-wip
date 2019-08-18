@@ -2,9 +2,17 @@ $NetBSD$
 
 BSD support from FreeBSD
 
---- src/wayland-os.h.orig	2017-08-08 18:20:52 UTC
+https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
+
+--- src/wayland-os.h.orig	2019-03-21 00:55:25.000000000 +0000
 +++ src/wayland-os.h
-@@ -30,6 +30,9 @@ int
+@@ -26,17 +26,23 @@
+ #ifndef WAYLAND_OS_H
+ #define WAYLAND_OS_H
+ 
++#include "../config.h"
++
+ int
  wl_os_socket_cloexec(int domain, int type, int protocol);
  
  int
@@ -14,3 +22,12 @@ BSD support from FreeBSD
  wl_os_dupfd_cloexec(int fd, long minfd);
  
  ssize_t
+ wl_os_recvmsg_cloexec(int sockfd, struct msghdr *msg, int flags);
+ 
++
+ int
+-wl_os_epoll_create_cloexec(void);
++wl_os_queue_create_cloexec(void);
+ 
+ int
+ wl_os_accept_cloexec(int sockfd, struct sockaddr *addr, socklen_t *addrlen);

@@ -1,14 +1,13 @@
 # $NetBSD$
-#
 
 DISTNAME=	wayland-1.17.0
-CATEGORIES=	graphics
-MASTER_SITES=	http://wayland.freedesktop.org/releases/
+CATEGORIES=	devel
+MASTER_SITES=	https://wayland.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wayland.freedesktop.org
-COMMENT=	Computer display server protocol
+HOMEPAGE=	https://wayland.freedesktop.org/
+COMMENT=	Display server protocol - development libraries
 LICENSE=	mit
 
 USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
@@ -22,18 +21,11 @@ PKGCONFIG_OVERRIDE+=	src/wayland-cursor.pc.in
 PKGCONFIG_OVERRIDE+=	src/wayland-scanner.pc.in
 PKGCONFIG_OVERRIDE+=	src/wayland-server.pc.in
 
-
 pre-configure:
+	# https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
+	${CP} ${FILESDIR}/event-loop-kqueue.c ${WRKSRC}/src
 	cd ${WRKSRC} && autoreconf -fvi
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-CFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
-.include "../../wip/libepoll-shim/buildlink3.mk"
-.else
-BUILDLINK_TRANSFORM+=    rm:-lepoll-shim
-.endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

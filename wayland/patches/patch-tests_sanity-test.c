@@ -1,5 +1,7 @@
 $NetBSD$
 
+BSD support from FreeBSD
+
 --- tests/sanity-test.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ tests/sanity-test.c
 @@ -87,7 +87,8 @@ FAIL_TEST(sanity_fd_leak)

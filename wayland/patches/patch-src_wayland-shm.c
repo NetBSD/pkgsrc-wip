@@ -1,5 +1,7 @@
---- src/wayland-shm.c.orig	2018-04-09 17:19:26 UTC
-+++ src/wayland-shm.c
+$NetBSD$
+
+BSD support from FreeBSD
+
 --- src/wayland-shm.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ src/wayland-shm.c
 @@ -30,6 +30,8 @@

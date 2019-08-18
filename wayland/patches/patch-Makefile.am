@@ -1,31 +1,25 @@
 $NetBSD$
 
+https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
+
 --- Makefile.am.orig	2019-03-21 00:55:25.000000000 +0000
 +++ Makefile.am
-@@ -71,7 +71,7 @@ nodist_include_HEADERS =			\
- 	protocol/wayland-client-protocol.h
- 
- libwayland_server_la_CFLAGS = $(FFI_CFLAGS) $(AM_CFLAGS) -pthread
--libwayland_server_la_LIBADD = $(FFI_LIBS) libwayland-private.la libwayland-util.la -lrt -lm
-+libwayland_server_la_LIBADD = $(FFI_LIBS) $(EPOLLSHIM_LIBS) libwayland-private.la libwayland-util.la -lrt -lm
- libwayland_server_la_LDFLAGS = -version-info 1:0:1
+@@ -76,7 +76,8 @@ libwayland_server_la_LDFLAGS = -version-
  libwayland_server_la_SOURCES =			\
  	src/wayland-server.c			\
-@@ -83,7 +83,7 @@ nodist_libwayland_server_la_SOURCES =		\
- 	protocol/wayland-protocol.c
+ 	src/wayland-shm.c			\
+-	src/event-loop.c
++	src/event-loop.c 			\
++	src/event-loop-kqueue.c 
  
- libwayland_client_la_CFLAGS = $(FFI_CFLAGS) $(AM_CFLAGS) -pthread
--libwayland_client_la_LIBADD = $(FFI_LIBS) libwayland-private.la libwayland-util.la -lrt -lm
-+libwayland_client_la_LIBADD = $(FFI_LIBS) $(EPOLLSHIM_LIBS) libwayland-private.la libwayland-util.la -lrt -lm
- libwayland_client_la_LDFLAGS = -version-info 3:0:3
- libwayland_client_la_SOURCES =			\
- 	src/wayland-client.c
-@@ -227,7 +227,7 @@ libtest_runner_la_LIBADD =			\
+ nodist_libwayland_server_la_SOURCES =		\
+ 	protocol/wayland-server-protocol.h	\
+@@ -227,7 +228,7 @@ libtest_runner_la_LIBADD =			\
  	libwayland-client.la			\
  	libwayland-server.la			\
  	libtest-helpers.la			\
 -	-lrt -ldl $(FFI_LIBS)
-+	-lrt $(DL_LIBS) $(FFI_LIBS) $(EPOLLSHIM_LIBS)
++	-lrt $(DL_LIBS) $(FFI_LIBS)
  
  array_test_SOURCES = tests/array-test.c
  array_test_LDADD = libtest-runner.la

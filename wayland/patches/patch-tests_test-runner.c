@@ -1,5 +1,7 @@
 $NetBSD$
 
+BSD support from FreeBSD
+
 --- tests/test-runner.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ tests/test-runner.c
 @@ -25,6 +25,12 @@
