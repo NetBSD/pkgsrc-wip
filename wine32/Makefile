@@ -18,6 +18,10 @@ USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf perl
 REPLACE_PERL+=		tools/winemaker/winemaker tools/winedump/function_grep.pl
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
 
+# XXX: Fix warning due to _FORTIFY_SOURCE being redefined
+WINE_ENV+=		ac_cv_c_fortify_enabled=no
+
+
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
