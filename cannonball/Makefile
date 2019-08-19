@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	cannonball-0.3.20171201
+DISTNAME=	cannonball-0.3.20190819
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djyt/}
-GITHUB_TAG=	0c0814d8233ee4e5be7beb309b8e16e0eecbb2e6
+GITHUB_TAG=	48d2c6294b0bf3e16be4c2a83399da9108544d5f
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fox@NetBSD.org
@@ -42,7 +42,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/bin/cannonball
 	${INSTALL_PROGRAM} ${WRKSRC}/build/cannonball \
 	    ${DESTDIR}${PREFIX}/libexec
-	${INSTALL_MAN} ${FILESDIR}/cannonball.6 \
+	${INSTALL_MAN} ${WRKSRC}/docs/cannonball.6 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 .include "../../devel/boost-headers/buildlink3.mk"
