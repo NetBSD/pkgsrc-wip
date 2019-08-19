@@ -9,6 +9,9 @@ HOMEPAGE=	https://multimail.sourceforge.io/
 COMMENT=	Offline mail reader for Blue Wave, QWK, OMEN, SOUP and OPX
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	zip-[0-9]*:../../archivers/zip
+DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
