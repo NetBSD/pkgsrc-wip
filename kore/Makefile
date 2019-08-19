@@ -12,6 +12,7 @@ LICENSE=	isc
 USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake
 
+MAKE_ENV+=	MAN_DIR="${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	TASKS=1
 
 .include "options.mk"
