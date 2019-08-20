@@ -1,0 +1,28 @@
+$NetBSD$
+
+Fix the pkgsrc build, without this the application attempts
+to install to $PREFIX directly.
+
+--- Makefile~       2019-08-20 15:41:02.216585049 +0000
++++ Makefile    2019-08-20 15:43:46.000655016 +0000
+@@ -34,13 +34,13 @@
+	$(CC) $(CFLAGS) -c y.tab.c
+
+ install: $(BIN)
+-	mkdir -p $(PREFIX)/bin
+-	cp $(BIN) $(PREFIX)/bin/
+-	chmod 4755 $(PREFIX)/bin/$(BIN)
+-	mkdir -p $(PREFIX)/man/man1
+-	cp doas.1 $(PREFIX)/man/man1/
+-	mkdir -p $(PREFIX)/man/man5
+-	cp doas.conf.5 $(PREFIX)/man/man5/
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
++	cp $(BIN) $(DESTDIR)$(PREFIX)/bin/
++	chmod 4755 $(DESTDIR)$(PREFIX)/bin/$(BIN)
++	mkdir -p $(DESTDIR)$(PREFIX)/man/man1
++	cp doas.1 $(DESTDIR)$(PREFIX)/man/man1/
++	mkdir -p $(DESTDIR)$(PREFIX)/man/man5
++	cp doas.conf.5 $(DESTDIR)$(PREFIX)/man/man5/
+
+ clean:
+	rm -f $(BIN) $(OBJECTS) y.tab.c
