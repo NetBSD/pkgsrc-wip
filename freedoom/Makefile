@@ -8,13 +8,23 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://freedoom.github.io/
-COMMENT=	Free content game based on Doom engine
+COMMENT=	Free content game for Doom engine
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
+# DOOMWADDIR is intentionally shared with other Doom packages
+DOOMWADDIR=		share/doom
+INSTALLATION_DIRS=	${DOOMWADDIR}
+
+MESSAGE_SRC+=		MESSAGE.freedoom
+MESSAGE_SUBST+=		DOOMWADDIR="${PREFIX}/${DOOMWADDIR}"
+
+# The pkgsrc documentation says:
+# If there is no configure step at all, set NO_CONFIGURE to "yes".
+# Is NO_CONFIGURE required if NO_BUILD is set?
+NO_CONFIGURE=		yes
 NO_BUILD=		yes
-INSTALLATION_DIRS=	share/doom
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/freedoom1.wad \

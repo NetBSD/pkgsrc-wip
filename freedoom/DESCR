@@ -11,3 +11,5 @@ sound effects and music to make a completely free game.
 Freedoom is actually three games in one, consisting of two single
 player campaigns and one set of levels intended for multiplayer
 deathmatch (FreeDM).
+
+Note: This package contains no game engine, only the data (wad) files.
