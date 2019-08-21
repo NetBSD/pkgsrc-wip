@@ -20,13 +20,13 @@ do-build: do-build-cargo-binary
 .PHONY: do-build-cargo-binary
 
 do-build-cargo-binary:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --verbose --frozen --release
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release --jobs ${MAKE_JOBS:U1}
 
 do-install: install-cargo-binary
 .PHONY: install-cargo-binary
 
 install-cargo-binary:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo install --path . --root ${DESTDIR}${LOCALBASE}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo install --jobs ${MAKE_JOBS:U1} --path . --root ${DESTDIR}${LOCALBASE}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RM} ${DESTDIR}${LOCALBASE}/.crates.toml
 
 .include "../../lang/rust/cargo.mk"
