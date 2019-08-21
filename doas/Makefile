@@ -9,8 +9,6 @@ HOMEPAGE=	https://github.com/slicer69/doas/
 COMMENT=	Execute commands as another user
 LICENSE=	2-clause-bsd
 
-WRKSRC=	${WRKDIR}/doas-6.1
-
 # Upstream supports only NetBSD, FreeBSD, and Linux.
 ONLY_FOR_PLATFORM+=	NetBSD-*-*
 ONLY_FOR_PLATFORM+=	FreeBSD-*-*
