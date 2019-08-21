@@ -20,10 +20,6 @@ INSTALLATION_DIRS=	${DOOMWADDIR}
 MESSAGE_SRC+=		MESSAGE.freedoom
 MESSAGE_SUBST+=		DOOMWADDIR="${PREFIX}/${DOOMWADDIR}"
 
-# The pkgsrc documentation says:
-# If there is no configure step at all, set NO_CONFIGURE to "yes".
-# Is NO_CONFIGURE required if NO_BUILD is set?
-NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
 do-install:
