@@ -68,12 +68,5 @@ USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS=	bin
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/bindgen ${DESTDIR}${PREFIX}/bin/bindgen
-
-.include "../../lang/rust/buildlink3.mk"
-.include "../../lang/rust/cargo.mk"
+.include "../../wip/mk/cargo-binary.mk"
 .include "../../mk/bsd.pkg.mk"
