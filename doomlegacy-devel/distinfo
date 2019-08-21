@@ -4,3 +4,6 @@ SHA1 (doomlegacy_1.47.2_common.zip) = 9e6faaea797b988565a078a47e80bbe2119d78b9
 RMD160 (doomlegacy_1.47.2_common.zip) = 1ac1f47563ad2c0d7c5c1bea93a2aaeb1c001c10
 SHA512 (doomlegacy_1.47.2_common.zip) = 7c7c2a0cbab5b9b4645a3fe166addd597de533db7ab41f8011c6c526a868bb04c8dd6b0d27b48765406fbab328bf64fc7827770b395e6c0e5d861d99c4d3865a
 Size (doomlegacy_1.47.2_common.zip) = 981654 bytes
+SHA1 (patch-src_am__map.c) = 8d7d17d29c0934c92ca933e8976a5ecc692e465d
+SHA1 (patch-src_d__main.c) = 3311e44522e863fa3e1a855754b876c03c96f128
+SHA1 (patch-src_p__setup.c) = 615fda1d190ae20d2ee8fe662a13fd9ee6aff70d

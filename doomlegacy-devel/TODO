@@ -1,3 +1,7 @@
+Part 1: Port to NetBSD
+======================
+Build system doesn't support NetBSD.
+
 [X] Sent patches to upstream
 [X] Imported proposed patchset from upstream
     => PKGREVISION not bumped, because binary package has not changed
@@ -6,5 +10,33 @@
 [X] Move man page to section 6 (it's a game)
    => Bump PKGREVISION
 [X] Test building of the package again
-    => Tested to work with SVN revision r1448
-[X] Remove patches after upstream integration
+    => Tested to work with SVN revision 1448
+[X] Remove NetBSD specific patches after upstream integration
+
+
+Part 2: Fix large blockmaps on big endian machines
+==================================================
+On my Apple Power Mac G5 some modern (large) maps fail to load with errors like:
+| 
+| Error: Blockmap offset[5556]= -32745, exceeds bounds.
+
+This bug looks not security relevant, because the code catches it and gracefully
+terminate the engine.
+
+[X] Update to SVN revision 1453
+    => Problem still exist
+[X] Rework pkgsrc patches rejected by upstream (disable launcher and keyboard
+    setup +/- for automap zoom) for SVN revision 1453
+[X] Add patch for (int16_t) integer overflow while loading Blockmap
+    Note: This should never happen on little endian machines
+    => PKGREVISION not bumped (SVN based packages use build date in version)
+[ ] Sent Blockmap patch to upstream
+
+
+Part 3: Torches are displayed crippled with software renderer
+=============================================================
+This problem was not present in 1.47.2, maybe a side effect of OpenGL corona
+changes since last release.
+
+
+EOF
