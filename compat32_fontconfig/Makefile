@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/emul/netbsd32/lib
 CONFIGURE_ENV+=		HASDOCBOOK=no
 
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
-_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/emul/netbsd32/lib/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
+_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/emul/netbsd32/lib/pkgconfig:${BUILDLINK_DIR}/emul/netbsd32/lib/freetype2/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
 
 PKG_SYSCONFSUBDIR=	fontconfig
 
@@ -100,6 +100,7 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 pre-configure:
 	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
 	cd ${BUILDLINK_X11_DIR}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete && find ./pkgconfig/ -name "*freetype2.pc*" -type l -delete
+	cd ${BUILDLINK_X11_DIR}/lib && find . -name "*freetype*" -type l -delete && find ./pkgconfig/ -name "*freetype2.pc*" -type l -delete
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
