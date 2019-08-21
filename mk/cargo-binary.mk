@@ -3,7 +3,7 @@
 # Common logic that can be used by packages that build rust binaries.
 #
 # Usage example:
-# TODO
+# See wip/rust-bindgen
 #
 #
 # TODO:
