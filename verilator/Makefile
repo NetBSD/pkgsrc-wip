@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	verilator-3.886
+DISTNAME=	verilator-4.016
 CATEGORIES=	cad
 MASTER_SITES=	http://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz
