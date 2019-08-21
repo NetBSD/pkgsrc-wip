@@ -156,12 +156,5 @@ USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --features=all --locked --frozen --release
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tokei ${DESTDIR}${PREFIX}/bin
-
-.include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
+.include "../../wip/mk/cargo-binary.mk"
 .include "../../mk/bsd.pkg.mk"
