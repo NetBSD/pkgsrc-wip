@@ -1,3 +1,15 @@
+ProxyChains is a UNIX program, that hooks network-related libc functions
+in DYNAMICALLY LINKED programs via a preloaded DLL (dlsym(), LD_PRELOAD)
+and redirects the connections through SOCKS4a/5 or HTTP proxies.
+It supports TCP only (no UDP/ICMP etc).
+
+The way it works is basically a HACK; so it is possible that it doesn't
+work with your program, especially when it's a script, or starts
+numerous processes like background daemons or uses dlopen() to load
+"modules" (bug in glibc dynlinker).
+It should work with simple compiled (C/C++) dynamically linked programs
+though.
+
 Quick Facts:
  * It's a proxifier.
  * Dedicated OS: Linux/BSD/Solaris.

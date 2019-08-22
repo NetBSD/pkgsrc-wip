@@ -1,15 +1,11 @@
 # $NetBSD$
 
+DISTNAME=	proxychains-ng-4.14
 CATEGORIES=	net
-PKGBASE=	proxychains-ng
-PKGVERSION=	4.11
+MASTER_SITES=	http://ftp.barfooze.de/pub/sabotage/tarballs/
+EXTRACT_SUFX=	.tar.xz
 
-DISTNAME=	${PKGBASE}-${PKGVERSION}
-MASTER_SITES=	https://github.com/rofl0r/proxychains-ng/releases/download/v${PKGVERSION}/
-PKGNAME=	${PKGBASE}-${PKGVERSION}
-EXTRACT_SUFX=	.tar.bz2
-
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	sxvghd@firemail.cc
 HOMEPAGE=	https://github.com/rofl0r/proxychains-ng
 COMMENT=	Chain multiple SOCKS4/SOCKS5 proxies in a transparent way
 LICENSE=	gnu-gpl-v2
@@ -20,8 +16,14 @@ USE_TOOLS+=	gmake
 USE_LIBTOOL=	no
 GNU_CONFIGURE=	yes
 
-do-build:
-	cd ${WRKSRC} && gmake
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+SUBST_CLASSES+=         remove-link
+SUBST_STAGE.remove-link=  post-configure
+SUBST_MESSAGE.remove-link=        Removing libdl link.
+SUBST_FILES.remove-link=  Makefile
+SUBST_SED.remove-link=    -e 's,-ldl,,g'
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/proxychains/
