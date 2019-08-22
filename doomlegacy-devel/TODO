@@ -36,7 +36,20 @@ terminate the engine.
 Part 3: Torches are displayed crippled with software renderer
 =============================================================
 This problem was not present in 1.47.2, maybe a side effect of OpenGL corona
-changes since last release.
+changes since last release. Can be tested with:
+| 
+|    $ doomlegacy -iwad doom2.wad -warp 5
+
+(walk through the opening and look at the torch in front of you)
+
+Already reported upstream as Bug #652 (not present in OpenGL mode and really
+a side effect of the corona code changes).
+
+Suggested workaround: Deactivating coronas by going to:
+
+  "Options -> Effects Options -> Light Options"
+
+Set "Corona" option to "Off" (verified to work on NetBSD).
 
 
 EOF
