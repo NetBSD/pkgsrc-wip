@@ -22,6 +22,7 @@ SUBDIR+=	Geomyidae-git
 SUBDIR+=	GoogleEarth
 SUBDIR+=	I2util
 SUBDIR+=	LuaJIT21
+SUBDIR+=	MesaLib
 SUBDIR+=	MesaLib-dfbsd
 SUBDIR+=	MesaLib-dfbsd-meson
 SUBDIR+=	MoleInvasion
