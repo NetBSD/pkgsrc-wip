@@ -2,7 +2,7 @@
 
 DISTNAME=	qodem-1.0.0
 CATEGORIES=	comms
-MASTER_SITES=	https://downloads.sourceforge.net/project/qodem/qodem/1.0.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qodem/}
 
 MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	http://qodem.sourceforge.net/
