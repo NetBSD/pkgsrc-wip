@@ -235,11 +235,13 @@ MESON_ARGS+=		-Dgallium-xa=false
 MESON_ARGS+=		-Dllvm=false
 MESON_ARGS+=		-Dllvm-shared=false
 .  endif # llvm
+PLIST_SUBST+=		GLVER="1.2.0"
 MESON_ARGS+=		-Dgallium-drivers=${GALLIUM_DRIVERS:ts,}
 MESON_ARGS+=		-Ddri-drivers=${DRI_DRIVERS:ts,}
 MESON_ARGS+=		-Dvulkan-drivers=${VULKAN_DRIVERS:ts,}
 MESON_ARGS+=		-Dplatforms=${EGL_PLATFORMS:ts,}
 .else # !dri
+PLIST_SUBST+=		GLVER="1.6.0"
 MESON_ARGS+=		-Dgallium-drivers=
 MESON_ARGS+=		-Ddri-drivers=
 MESON_ARGS+=		-Dvulkan-drivers=
