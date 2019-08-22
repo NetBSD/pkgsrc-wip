@@ -1793,7 +1793,6 @@ SUBDIR+=	kodi
 SUBDIR+=	koha
 SUBDIR+=	kolourpaint
 SUBDIR+=	konsole
-SUBDIR+=	kore
 SUBDIR+=	kpimtextedit
 SUBDIR+=	kruler
 SUBDIR+=	krusader
