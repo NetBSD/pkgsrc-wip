@@ -23,8 +23,11 @@ PKG_OPTIONS_LEGACY_OPTS+=	xvmc:gallium-xvmc
 
 # The LLVM option enables JIT accelerated software rendering and
 # is also required to support the latest RADEON GPUs, so enable it
-# by default on platforms where such GPUs might be encountered.
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
+# by default on platforms where such GPUs might be encountered
+# or accelerated software rendering might be useful.
+.if (${MACHINE_ARCH} == "i386" || \
+     ${MACHINE_ARCH} == "x86_64" || \
+     ${MACHINE_ARCH} == "aarch64") && \
 	${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
