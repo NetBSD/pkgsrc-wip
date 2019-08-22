@@ -4,7 +4,7 @@ Adapt install target for pkgsrc.
 
 --- Makefile.orig	2019-06-03 13:29:24.000000000 +0000
 +++ Makefile
-@@ -1,13 +1,14 @@
+@@ -1,6 +1,7 @@
  # Kore Makefile
  
  CC?=cc
@@ -12,14 +12,6 @@ Adapt install target for pkgsrc.
  PREFIX?=/usr/local
  OBJDIR?=obj
  KORE=kore
- KODEV=kodev/kodev
- KORE_CRYPTO?=crypto
- INSTALL_DIR=$(PREFIX)/bin
--MAN_DIR=$(PREFIX)/share/man
-+MAN_DIR?=$(PREFIX)/share/man
- SHARE_DIR=$(PREFIX)/share/kore
- INCLUDE_DIR=$(PREFIX)/include/kore
- 
 @@ -46,8 +47,6 @@ endif
  
  ifneq ("$(NOOPT)", "")
