@@ -4235,7 +4235,6 @@ SUBDIR+=	qlcplus
 SUBDIR+=	qmc2
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
-SUBDIR+=	qodem
 SUBDIR+=	qrint
 SUBDIR+=	qrq
 SUBDIR+=	qrupdate
