@@ -222,7 +222,6 @@ MESON_ARGS+=		-Dllvm=true
 
 BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0
 .    include "../../devel/libelf/buildlink3.mk"
-.    include "../../lang/libunwind/buildlink3.mk"
 .    include "../../lang/llvm/buildlink3.mk"
 
 SUBST_CLASSES+=		llvm
