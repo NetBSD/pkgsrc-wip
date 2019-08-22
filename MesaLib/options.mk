@@ -132,8 +132,8 @@ DRI_DRIVERS+=		i965
 
 # Vulkan support
 .  if !empty(PKG_OPTIONS:Mvulkan)
+VULKAN_DRIVERS+=	amd
 VULKAN_DRIVERS+=	intel
-VULKAN_DRIVERS+=	radeon
 PLIST.vulkan=		yes
 .  endif
 
