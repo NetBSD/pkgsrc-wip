@@ -12,5 +12,10 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+DEPENDS+=       ${PYPKGPREFIX}-requests>=2.6.0:../../devel/py-requests
+DEPENDS+=       ${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
+DEPENDS+=       ${PYPKGPREFIX}-dateutil>=1.10.0:../../time/py-dateutil
+DEPENDS+=       ${PYPKGPREFIX}-pytz:../../time/py-pytz
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
