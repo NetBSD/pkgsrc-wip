@@ -8,7 +8,7 @@ for major() - sysmacros.h is non-portable
  #include <stdint.h>
  #include <string.h>
  
-+#ifdef __linux
++#ifdef MAJOR_IN_SYSMACROS
  #include <sys/sysmacros.h>
 +#endif
  
