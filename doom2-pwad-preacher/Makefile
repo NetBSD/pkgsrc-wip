@@ -3,6 +3,7 @@
 DISTNAME=		preacher
 # Use release date from preacher.txt as package version
 PKGNAME=		doom2-pwad-${DISTNAME}-20181129
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.fu-berlin.de/pc/games/idgames/levels/doom2/Ports/p-r/
 MASTER_SITES+=		ftp://mirrors.syringanetworks.net/idgames/levels/doom2/Ports/p-r/
@@ -16,12 +17,20 @@ LICENSE=		preacher-license
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
-INSTALLATION_DIRS=	${DOOMWADDIR}
+INSTALLATION_DIRS=	${DOOMWADDIR} share/doc/doom2-pwad-${DISTNAME}
 
-MESSAGE_SRC+=		MESSAGE.doom2-pwad-preacher
-MESSAGE_SUBST+=		DOOMWADDIR="${PREFIX}/${DOOMWADDIR}"
+# Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	do-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	INSTALL.pkgsrc
+SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 NO_BUILD=		yes
+
+pre-configure:
+	${MKDIR} ${WRKSRC}
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKSRC}
 
 do-install:
 	cd ${WRKDIR} &&							\
@@ -29,5 +38,8 @@ do-install:
 			${DESTDIR}${PREFIX}/${DOOMWADDIR}/PREACHER.wad;	\
 		${INSTALL_DATA} preacher.txt				\
 			${DESTDIR}${PREFIX}/${DOOMWADDIR}/PREACHER.txt
+	cd ${WRKSRC} &&							\
+		${INSTALL_DATA} INSTALL.pkgsrc				\
+			${DESTDIR}${PREFIX}/share/doc/doom2-pwad-${DISTNAME}/INSTALL.pkgsrc
 
 .include "../../mk/bsd.pkg.mk"
