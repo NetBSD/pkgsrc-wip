@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		micha@NetBSD.org
 COMMENT=		Doom II mod
-LICENSE=		preacher-license
+LICENSE=		doom-pwad-license
 
 .include "../../mk/bsd.prefs.mk"
 
