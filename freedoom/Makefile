@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	freedoom-0.11.3
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=freedoom/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -15,17 +16,27 @@ USE_LANGUAGES=	# none
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
-INSTALLATION_DIRS=	${DOOMWADDIR}
+INSTALLATION_DIRS=	${DOOMWADDIR} share/doc/freedoom
 
-MESSAGE_SRC+=		MESSAGE.freedoom
-MESSAGE_SUBST+=		DOOMWADDIR="${PREFIX}/${DOOMWADDIR}"
+# Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	do-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	INSTALL.pkgsrc
+SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 NO_BUILD=		yes
+
+pre-configure:
+	${MKDIR} ${WRKSRC}
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/freedoom1.wad \
 		${DESTDIR}${PREFIX}/share/doom/freedoom1.wad
 	${INSTALL_DATA} ${WRKSRC}/freedoom2.wad \
 		${DESTDIR}${PREFIX}/share/doom/freedoom2.wad
+	${INSTALL_DATA} ${WRKSRC}/INSTALL.pkgsrc \
+		${DESTDIR}${PREFIX}/share/doc/freedoom/INSTALL.pkgsrc
 
 .include "../../mk/bsd.pkg.mk"

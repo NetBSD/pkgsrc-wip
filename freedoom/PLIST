@@ -1,3 +1,4 @@
 @comment $NetBSD$
+share/doc/freedoom/INSTALL.pkgsrc
 share/doom/freedoom1.wad
 share/doom/freedoom2.wad
