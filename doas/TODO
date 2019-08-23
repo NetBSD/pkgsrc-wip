@@ -1,3 +1,0 @@
-* Fix build on FreeBSD, wants libutil.
-
-* warning: /usr/work/wip/doas/work/.destdir/usr/pkg/bin/doas: set-uid or set-gid files should not be writable by anyone.
