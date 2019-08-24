@@ -638,7 +638,6 @@ SUBDIR+=	dmt-ux
 SUBDIR+=	dnrd
 SUBDIR+=	dns2tcp
 SUBDIR+=	dnswalk
-SUBDIR+=	doas
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook2X
 SUBDIR+=	docbook2mdoc
