@@ -15,6 +15,10 @@
 #
 # if PKG_DEVELOPER=yes
 #   make cargo action verbose?
+#
+# Fix this warning:
+# WARN: Makefile:16: CARGO_CRATE_DEPENDS is defined but not used.
+
 
 do-build: do-build-cargo-binary
 .PHONY: do-build-cargo-binary
