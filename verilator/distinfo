@@ -1,9 +1,0 @@
-$NetBSD$
-
-SHA1 (verilator-4.016.tgz) = dce30a001574e743198179e4f95939d84b69c7f8
-RMD160 (verilator-4.016.tgz) = eba0e31b5b4a9769fb65b842c9a4b9d4b34ecfb6
-SHA512 (verilator-4.016.tgz) = 14bb1d0493103e702b1cbe0ea7c639c04cafa87f204952f88e629012dde1fcecf8e1e51569ff7a422b4dcb0566d0fae35acc681b2e47ae88fac6937362ff3254
-Size (verilator-4.016.tgz) = 2536449 bytes
-SHA1 (patch-Makefile.in) = 93d76b159e6dc2ce280a6edff794fc3d5d3a50d9
-SHA1 (patch-src_Makefile__obj.in) = 83058db4278fa25972b91f52f3eff79b4a457495
-SHA1 (patch-src_V3PreLex.h) = ed238e4bfe2ebe2dbdc6ee319e540471b859756a
