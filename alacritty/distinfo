@@ -1140,6 +1140,6 @@ SHA1 (zip-0.5.2.crate) = b4efe358b8267688f6e2f9ca36af9b8e764d55da
 RMD160 (zip-0.5.2.crate) = 0e4e10d7a43571fdb8926bf68bcc2728447bcb65
 SHA512 (zip-0.5.2.crate) = 4433cb75ec8bbaa946c8ffd8f1ee2f50b4117a660b850ceb5f38e688ad903979fbb4a885926cba14fac11eb8089e1155ce9041ec132be78952baa7fc4666880d
 Size (zip-0.5.2.crate) = 29522 bytes
-SHA1 (patch-2698PR) = f2e5466499899e8afb6187b24d03504d49eeb327
+SHA1 (patch-2698PR) = 4936c33f1525b10baf7d20b4fa8798f3129d45da
 SHA1 (patch-vendor_xcb-0.8.2_build_rs) = a459226fbc9600903e753e70045c588bfe3bd399
 SHA1 (patch-vendor_xcb-0.8.2_rs-client_py) = fccc10dfa3984c30adb71ed2ed6127130e6aa448

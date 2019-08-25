@@ -299,28 +299,35 @@ CARGO_CRATE_DEPENDS+=	zip-0.5.2
 
 INSTALLATION_DIRS=	bin
 
-DEPENDS+=	xcb-[0-9]*:../../x11/xcb
+#DEPENDS+=	xcb-[0-9]*:../../x11/xcb
+
+# These are reported as missing in run-time search paths on NetBSD/amd64
+# -lxcb -lfontconfig -lfreetype
+MAKE_ENV+=	RUSTFLAGS="-L native=${BUILDLINK_PREFIX.libxcb} -L native=${BUILDLINK_PREFIX.fontconfig} -L native=${BUILDLINK_PREFIX.freetype2}"
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 
-BUILD_DEPENDS+=			cmake-[0-9]*:../../devel/cmake
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
+BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+
+# The xcb 0.8.2 crate depends on any version of python 3.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		yes
 BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 #REPLACE_PYTHON+=		../vendor/xcb-0.8.2/rs-client.py
 #REPLACE_PYTHON+=		../vendor/xcb-0.8.2/build.rs
 
-.include "../../lang/python/application.mk"
-
-
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --verbose --locked --frozen --release
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty ${DESTDIR}${PREFIX}/bin
 
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+#.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

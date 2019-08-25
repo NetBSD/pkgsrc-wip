@@ -1,3 +1,5 @@
+$NetBSD$
+
 Remove errno depedency
 Fixes #2631.
 From upstream patch.
