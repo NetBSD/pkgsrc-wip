@@ -24,6 +24,9 @@ WINE32_ENV+=		CFLAGS+=-m32
 # XXX: Fix warning due to _FORTIFY_SOURCE being redefined
 WINE_ENV+=		ac_cv_c_fortify_enabled=no
 
+# XXX: Disable new_dtags as NetBSD -stable doesn't honor DT_RUNPATH
+WINE_ENV+=         ac_cv_cflags__Wl___enable_new_dtags=no
+
 # XXX: Stop Wine from using gethostbyname_r like in linux
 WINE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
 
