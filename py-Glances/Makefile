@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
-SUBST_MESSAGE.prefix=	Set correct prefix in bsd.cmake
+SUBST_MESSAGE.prefix=	Set correct prefix in setup.py
 SUBST_FILES.prefix=	${WRKSRC}/setup.py
 SUBST_VARS.prefix=	PREFIX
 
