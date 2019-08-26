@@ -30,7 +30,7 @@ terminate the engine.
 [X] Add patch for (int16_t) integer overflow while loading Blockmap
     Note: This should never happen on little endian machines
     => PKGREVISION not bumped (SVN based packages use build date in version)
-[ ] Sent Blockmap patch to upstream
+[X] Sent Blockmap patch to upstream (Bug #653)
 
 
 Part 3: Torches are displayed crippled with software renderer
