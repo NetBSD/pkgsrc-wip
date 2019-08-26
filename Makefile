@@ -647,7 +647,6 @@ SUBDIR+=	dolfin
 SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
 SUBDIR+=	doom-pwad-sigil
-SUBDIR+=	doom2-pwad-struggle
 SUBDIR+=	doomlegacy-devel
 SUBDIR+=	doorman
 SUBDIR+=	dosbox-svn
