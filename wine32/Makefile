@@ -20,7 +20,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine
 # XXX: Fix warning due to _FORTIFY_SOURCE being redefined
 CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
 
-# XXX: Disable new_dtags as NetBSD -stable doesn't honor DT_RUNPATH
+# XXX: Disable new_dtags as NetBSD versions prior to 9.0 don't honor DT_RUNPATH
 CONFIGURE_ENV+=         ac_cv_cflags__Wl___enable_new_dtags=no
 
 # XXX: Stop Wine from using gethostbyname_r like in linux
