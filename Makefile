@@ -3095,6 +3095,7 @@ SUBDIR+=	py-EditObj2
 SUBDIR+=	py-Fnorb
 SUBDIR+=	py-Fnorb-docs
 SUBDIR+=	py-Genetic
+SUBDIR+=	py-Glances
 SUBDIR+=	py-IOSXR
 SUBDIR+=	py-Kallithea
 SUBDIR+=	py-Keras_Applications
