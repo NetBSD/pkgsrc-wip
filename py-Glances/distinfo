@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (Glances-3.1.1.tar.gz) = 8e67a4f27bda6d8dc0ae18dcd873b977f6ed2295
+RMD160 (Glances-3.1.1.tar.gz) = fdc74ba3451cd05aef1b5a9673963e0d0b779a4c
+SHA512 (Glances-3.1.1.tar.gz) = a801ab12653cd21cc2b478089d85f3c550754f5da05935d5aba5bc8d6347d83f1ac681a17b67176731469181869c449222574270b864e6607f033b3a16e3184d
+Size (Glances-3.1.1.tar.gz) = 6715639 bytes
+SHA1 (patch-setup.py) = cc4ec69ac043fdeab650f42fc81e8a797765ffef
