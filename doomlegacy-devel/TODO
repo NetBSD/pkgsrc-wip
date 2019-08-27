@@ -51,5 +51,8 @@ Suggested workaround: Deactivating coronas by going to:
 
 Set "Corona" option to "Off" (verified to work on NetBSD).
 
+Other workaround: It seems that only the option "Corona_Draw" set to "Additive"
+is problematic. Coronas with other settings work.
+
 
 EOF
