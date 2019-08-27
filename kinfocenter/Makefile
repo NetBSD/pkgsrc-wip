@@ -27,7 +27,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/menus/kinfocenter.menu \
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
-.include "../../wip/kwayland/buildlink3.mk"
+.include "../../devel/kwayland/buildlink3.mk"
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -15,7 +15,7 @@ USE_TOOLS+=	msgmerge pkg-config
 
 .include "../../wip/kdecoration/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
-.include "../../wip/kwayland/buildlink3.mk"
+.include "../../devel/kwayland/buildlink3.mk"
 .include "../../x11/frameworkintegration/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

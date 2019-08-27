@@ -21,6 +21,6 @@ SPECIAL_PERMS+=	${PREFIX}/libexec/kcheckpass \
 .include "../../mk/pam.buildlink3.mk"
 .include "../../devel/kdeclarative/buildlink3.mk"
 .include "../../devel/kidletime/buildlink3.mk"
-.include "../../wip/kwayland/buildlink3.mk"
+.include "../../devel/kwayland/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

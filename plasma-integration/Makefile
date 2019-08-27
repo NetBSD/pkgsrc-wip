@@ -19,7 +19,7 @@ USE_TOOLS+=	msgmerge
 REPLACE_PERL+=	src/platformtheme/*.pl
 
 .include "../../devel/kio/buildlink3.mk"
-.include "../../wip/kwayland/buildlink3.mk"
+.include "../../devel/kwayland/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
