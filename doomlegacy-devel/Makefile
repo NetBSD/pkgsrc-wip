@@ -99,7 +99,6 @@ do-install:
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 # Ensure that at least the shareware Episode 1 of Doom is available
-# Note: The demos from games/doom1 are not compatible with the Legacy engine
 DEPENDS+=		doom1-[0-9]*:../../games/doom1
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7

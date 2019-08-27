@@ -8,14 +8,16 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://www.doomworld.com/classicdoom/info/shareware.php
+# The SHA1 hash listed here was checked while generating pkgsrc distinfo
+HOMEPAGE=	https://doomwiki.org/wiki/DOOM1.WAD
 COMMENT=	Shareware levels for Doom
 #LICENSE=	shareware
 
 CONFLICTS+=	xdoom<1.10nb4
-WRKSRC=		${WRKDIR}
 
+WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	share/doom
+
 NO_BUILD=		YES
 
 do-install:
