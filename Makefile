@@ -1804,7 +1804,6 @@ SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kwalletmanager
-SUBDIR+=	kwayland
 SUBDIR+=	kwin
 SUBDIR+=	kwrited
 SUBDIR+=	kyototycoon
