@@ -36,6 +36,7 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 .include "../../net/openslp/buildlink3.mk"
 .include "../../net/samba/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
+.include "../../textproc/syntax-highlighting/buildlink3.mk"
 .include "../../www/khtml/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
