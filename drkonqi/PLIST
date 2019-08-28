@@ -1,15 +1,19 @@
 @comment $NetBSD$
 libexec/drkonqi
 share/applications/org.kde.drkonqi.desktop
+share/drkonqi/debuggers/external.mac/lldbrc
+share/drkonqi/debuggers/external/cdbrc
 share/drkonqi/debuggers/external/gdbrc
 share/drkonqi/debuggers/external/kdbgrc
+share/drkonqi/debuggers/external/lldbrc
+share/drkonqi/debuggers/internal/cdbrc
 share/drkonqi/debuggers/internal/dbxrc
 share/drkonqi/debuggers/internal/gdbrc
 share/drkonqi/debuggers/internal/kdbgwinrc
+share/drkonqi/debuggers/internal/lldbrc
 share/drkonqi/mappings
 share/locale/af/LC_MESSAGES/drkonqi5.mo
 share/locale/ar/LC_MESSAGES/drkonqi5.mo
-share/locale/ast/LC_MESSAGES/drkonqi5.mo
 share/locale/be/LC_MESSAGES/drkonqi5.mo
 share/locale/bg/LC_MESSAGES/drkonqi5.mo
 share/locale/bn/LC_MESSAGES/drkonqi5.mo
@@ -96,3 +100,4 @@ share/locale/wa/LC_MESSAGES/drkonqi5.mo
 share/locale/xh/LC_MESSAGES/drkonqi5.mo
 share/locale/zh_CN/LC_MESSAGES/drkonqi5.mo
 share/locale/zh_TW/LC_MESSAGES/drkonqi5.mo
+share/qlogging-categories5/drkonqi.categories

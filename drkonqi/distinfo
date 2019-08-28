@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (drkonqi-5.12.4.tar.xz) = cccf49fc613a9707f1ff96223cefec0df4b03381
-RMD160 (drkonqi-5.12.4.tar.xz) = 9ce166835832d65e1a81f1e6d62866ecd248928a
-SHA512 (drkonqi-5.12.4.tar.xz) = 53c3d98e7545a20b3de9fbf7eacb633a2d50606fcaab645af096ffff423222913d8497dc2dfeab0426db66b1d3cb58a8e55b5e4f4ed013fbeb57729f9fd4c6c8
-Size (drkonqi-5.12.4.tar.xz) = 735824 bytes
+SHA1 (drkonqi-5.16.4.tar.xz) = 4d91cf77fa6dcf786ea4de18009313feccfc7359
+RMD160 (drkonqi-5.16.4.tar.xz) = 5a16fc229b160dda3e9b5b5d432b8828369662e3
+SHA512 (drkonqi-5.16.4.tar.xz) = 8623981b26cceea0238c7aa265453125970093d7edefe2cf2865b2e9384f59f44bd2f103c64f05c074c3f49d6691c22735d1884f86bead59f564544064b39f15
+Size (drkonqi-5.16.4.tar.xz) = 744380 bytes
+SHA1 (patch-CMakeLists.txt) = a290949951d6d8cb1409ab709d6151359292c64d
