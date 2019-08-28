@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/kdf
 bin/kwikdisk
-lib/libkdfprivate.so.18
+lib/libkdfprivate.so.19
 lib/libkdfprivate.so.${PKGVERSION}
 qt5/plugins/libkcm_kdf.so
 share/applications/org.kde.kdf.desktop
@@ -10,7 +10,6 @@ share/doc/HTML/ca/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/ca/kcontrol/blockdevices/index.docbook
 share/doc/HTML/ca/kdf/index.cache.bz2
 share/doc/HTML/ca/kdf/index.docbook
-share/doc/HTML/ca/kdf/kdf_config.png
 share/doc/HTML/de/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/de/kcontrol/blockdevices/index.docbook
 share/doc/HTML/de/kdf/index.cache.bz2
@@ -27,8 +26,6 @@ share/doc/HTML/es/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/es/kcontrol/blockdevices/index.docbook
 share/doc/HTML/es/kdf/index.cache.bz2
 share/doc/HTML/es/kdf/index.docbook
-share/doc/HTML/es/kdf/kdf.png
-share/doc/HTML/es/kdf/kdf_config.png
 share/doc/HTML/et/kdf/index.cache.bz2
 share/doc/HTML/et/kdf/index.docbook
 share/doc/HTML/fr/kdf/index.cache.bz2
@@ -57,6 +54,8 @@ share/doc/HTML/pt_BR/kdf/index.cache.bz2
 share/doc/HTML/pt_BR/kdf/index.docbook
 share/doc/HTML/pt_BR/kdf/kdf.png
 share/doc/HTML/pt_BR/kdf/kdf_config.png
+share/doc/HTML/ru/kcontrol/blockdevices/index.cache.bz2
+share/doc/HTML/ru/kcontrol/blockdevices/index.docbook
 share/doc/HTML/ru/kdf/index.cache.bz2
 share/doc/HTML/ru/kdf/index.docbook
 share/doc/HTML/sr/kcontrol/blockdevices/index.cache.bz2
@@ -73,6 +72,8 @@ share/doc/HTML/uk/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/uk/kcontrol/blockdevices/index.docbook
 share/doc/HTML/uk/kdf/index.cache.bz2
 share/doc/HTML/uk/kdf/index.docbook
+share/doc/HTML/uk/kdf/kdf.png
+share/doc/HTML/uk/kdf/kdf_config.png
 share/icons/hicolor/128x128/apps/kdf.png
 share/icons/hicolor/128x128/apps/kwikdisk.png
 share/icons/hicolor/16x16/apps/kcmdf.png
@@ -91,7 +92,6 @@ share/icons/hicolor/64x64/apps/kwikdisk.png
 share/kservices5/kcmdf.desktop
 share/kxmlgui5/kdf/kdfui.rc
 share/locale/ar/LC_MESSAGES/kdf.mo
-share/locale/ast/LC_MESSAGES/kdf.mo
 share/locale/bg/LC_MESSAGES/kdf.mo
 share/locale/bs/LC_MESSAGES/kdf.mo
 share/locale/ca/LC_MESSAGES/kdf.mo
@@ -144,3 +144,5 @@ share/locale/ug/LC_MESSAGES/kdf.mo
 share/locale/uk/LC_MESSAGES/kdf.mo
 share/locale/zh_CN/LC_MESSAGES/kdf.mo
 share/locale/zh_TW/LC_MESSAGES/kdf.mo
+share/metainfo/org.kde.kdf.appdata.xml
+share/qlogging-categories5/kdf.categories
