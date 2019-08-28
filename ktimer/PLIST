@@ -1,12 +1,8 @@
 @comment $NetBSD$
 bin/ktimer
 share/applications/org.kde.ktimer.desktop
-share/doc/HTML/ca/ktimer/first.png
 share/doc/HTML/ca/ktimer/index.cache.bz2
 share/doc/HTML/ca/ktimer/index.docbook
-share/doc/HTML/ca/ktimer/main.png
-share/doc/HTML/ca/ktimer/running.png
-share/doc/HTML/ca/ktimer/two_at_once.png
 share/doc/HTML/cs/ktimer/index.cache.bz2
 share/doc/HTML/cs/ktimer/index.docbook
 share/doc/HTML/de/ktimer/first.png
@@ -41,14 +37,17 @@ share/doc/HTML/sr/ktimer/index.cache.bz2
 share/doc/HTML/sr/ktimer/index.docbook
 share/doc/HTML/sv/ktimer/index.cache.bz2
 share/doc/HTML/sv/ktimer/index.docbook
+share/doc/HTML/uk/ktimer/first.png
 share/doc/HTML/uk/ktimer/index.cache.bz2
 share/doc/HTML/uk/ktimer/index.docbook
+share/doc/HTML/uk/ktimer/main.png
+share/doc/HTML/uk/ktimer/running.png
+share/doc/HTML/uk/ktimer/two_at_once.png
 share/icons/hicolor/128x128/apps/ktimer.png
 share/icons/hicolor/16x16/apps/ktimer.png
 share/icons/hicolor/32x32/apps/ktimer.png
 share/icons/hicolor/48x48/apps/ktimer.png
 share/locale/ar/LC_MESSAGES/ktimer.mo
-share/locale/ast/LC_MESSAGES/ktimer.mo
 share/locale/bg/LC_MESSAGES/ktimer.mo
 share/locale/bs/LC_MESSAGES/ktimer.mo
 share/locale/ca/LC_MESSAGES/ktimer.mo

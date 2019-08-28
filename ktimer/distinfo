@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ktimer-18.04.0.tar.xz) = 9d58848eefd7a6711d1c1bee30573d2d9b801a1b
-RMD160 (ktimer-18.04.0.tar.xz) = 656c3d3d06f428712762e0929b614608436bf76b
-SHA512 (ktimer-18.04.0.tar.xz) = 7bc95539988ab8ab00ba00a0ade688d27efcbfdcb4f6b5dbe6f6474a1aaa1218580b37937030a62ab8f14cf3207ef81c6445a9692f09d87f7ae15c6bb7145c58
-Size (ktimer-18.04.0.tar.xz) = 454600 bytes
+SHA1 (ktimer-19.08.0.tar.xz) = b7a3d8c9a2bd03833c9104cc4c8cd6989a8e45a6
+RMD160 (ktimer-19.08.0.tar.xz) = faedf9e47d9df31f26407118ca74c07110e4d16c
+SHA512 (ktimer-19.08.0.tar.xz) = b8dbbc6c928690dff3f5dedf42ff0c3e75c0b2fdeb812cc010409de8bab8e95ec1b8477482ef04d45ec44fa575360ee6a1929bc247734edd3f9da6af85f51098
+Size (ktimer-19.08.0.tar.xz) = 377004 bytes
