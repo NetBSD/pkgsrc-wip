@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libkipi-18.04.0.tar.xz) = d7cb67bb996ba625453d4234ffe1a9155c78988b
-RMD160 (libkipi-18.04.0.tar.xz) = 4df20c6f53737baefb7d4f06d3dc72f3468ef81b
-SHA512 (libkipi-18.04.0.tar.xz) = 177f4295ccc5c37b0db9cc73bca22adb8c244435663bde054f3960fea90d4e35050c97e9612e2d9f8539b3b3ddb594f3b7596d3d217f80f6d38e3cd26ad183db
-Size (libkipi-18.04.0.tar.xz) = 103508 bytes
+SHA1 (libkipi-19.08.0.tar.xz) = f242bc8dc361da768b503c16bc1da6fb725e9aa6
+RMD160 (libkipi-19.08.0.tar.xz) = 9bd30e7ecebbc611695a244e2c0b0c8f9ab29ddf
+SHA512 (libkipi-19.08.0.tar.xz) = 7e043f3542fb11fb0f25b4422956b6751d9d20d4ff859c34d1588fb93dda039fdca9774793b773eeec9067ca06ad219e93a4a70c505220e29d7de2c18f37eed8
+Size (libkipi-19.08.0.tar.xz) = 103516 bytes
