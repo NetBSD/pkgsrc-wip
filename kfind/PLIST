@@ -49,12 +49,13 @@ share/doc/HTML/sv/kfind/index.cache.bz2
 share/doc/HTML/sv/kfind/index.docbook
 share/doc/HTML/uk/kfind/index.cache.bz2
 share/doc/HTML/uk/kfind/index.docbook
-share/examples/kde-xdg/kfind.categories
+share/icons/hicolor/128x128/apps/kfind.png
 share/icons/hicolor/16x16/apps/kfind.png
 share/icons/hicolor/22x22/apps/kfind.png
 share/icons/hicolor/32x32/apps/kfind.png
 share/icons/hicolor/48x48/apps/kfind.png
 share/icons/hicolor/64x64/apps/kfind.png
+share/icons/hicolor/scalable/apps/kfind.svgz
 share/locale/ar/LC_MESSAGES/kfind.mo
 share/locale/ast/LC_MESSAGES/kfind.mo
 share/locale/bg/LC_MESSAGES/kfind.mo
@@ -89,6 +90,7 @@ share/locale/km/LC_MESSAGES/kfind.mo
 share/locale/ko/LC_MESSAGES/kfind.mo
 share/locale/lt/LC_MESSAGES/kfind.mo
 share/locale/lv/LC_MESSAGES/kfind.mo
+share/locale/ml/LC_MESSAGES/kfind.mo
 share/locale/mr/LC_MESSAGES/kfind.mo
 share/locale/nb/LC_MESSAGES/kfind.mo
 share/locale/nds/LC_MESSAGES/kfind.mo
@@ -111,3 +113,4 @@ share/locale/wa/LC_MESSAGES/kfind.mo
 share/locale/zh_CN/LC_MESSAGES/kfind.mo
 share/locale/zh_TW/LC_MESSAGES/kfind.mo
 share/metainfo/org.kde.kfind.appdata.xml
+share/qlogging-categories5/kfind.categories
