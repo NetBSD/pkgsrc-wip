@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (filelight-18.04.0.tar.xz) = a7bfaaee52efa949a565d169706264c67079d054
-RMD160 (filelight-18.04.0.tar.xz) = fe1c9d2814e2984d6ef55665edf9aef77c91eb9f
-SHA512 (filelight-18.04.0.tar.xz) = ec7a1985ff60b4553b365094de42fd961c44ed9b2f527bf8a7dd8b99f7175b7b29435d296d2933132b182320698dcb5b79e37458ec17d6dece4dd2af43c75864
-Size (filelight-18.04.0.tar.xz) = 657908 bytes
+SHA1 (filelight-19.08.0.tar.xz) = fd6e89e5082267a7581c7d939a4daadc904e46e9
+RMD160 (filelight-19.08.0.tar.xz) = 63b442d1a83e48d0ff1a2709b9be8ee7aa3bf84a
+SHA512 (filelight-19.08.0.tar.xz) = e4935bf88d1713f28db63e68524a5dd093c4ef38361bfe009f6e9bbbfc257acba754b09314248c92904d69b3ff23de4097648be08fc5ffa6724eb0fa9f1da861
+Size (filelight-19.08.0.tar.xz) = 660584 bytes
