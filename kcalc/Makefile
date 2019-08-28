@@ -17,5 +17,6 @@ USE_TOOLS+=	msgmerge
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/kio/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
