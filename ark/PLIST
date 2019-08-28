@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/ark
-lib/libkerfuffle.so.18
-lib/libkerfuffle.so.18.4.0
+lib/libkerfuffle.so.19
+lib/libkerfuffle.so.19.8.0
 man/ca/man1/ark.1
 man/de/man1/ark.1
 man/es/man1/ark.1
@@ -75,7 +75,6 @@ share/doc/HTML/uk/ark/create-protected-archive.png
 share/doc/HTML/uk/ark/extract-dialog.png
 share/doc/HTML/uk/ark/index.cache.bz2
 share/doc/HTML/uk/ark/index.docbook
-share/examples/kde-xdg/ark.categories
 share/icons/hicolor/128x128/apps/ark.png
 share/icons/hicolor/48x48/apps/ark.png
 share/icons/hicolor/64x64/apps/ark.png
@@ -84,7 +83,6 @@ share/kservices5/ark_part.desktop
 share/kservicetypes5/kerfufflePlugin.desktop
 share/kxmlgui5/ark/ark_viewer.rc
 share/locale/ar/LC_MESSAGES/ark.mo
-share/locale/ast/LC_MESSAGES/ark.mo
 share/locale/bg/LC_MESSAGES/ark.mo
 share/locale/bs/LC_MESSAGES/ark.mo
 share/locale/ca/LC_MESSAGES/ark.mo
@@ -138,3 +136,5 @@ share/locale/uk/LC_MESSAGES/ark.mo
 share/locale/zh_CN/LC_MESSAGES/ark.mo
 share/locale/zh_TW/LC_MESSAGES/ark.mo
 share/metainfo/org.kde.ark.appdata.xml
+share/mime/packages/kerfuffle.xml
+share/qlogging-categories5/ark.categories
