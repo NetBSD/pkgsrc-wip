@@ -2,7 +2,7 @@
 bin/konsole
 bin/konsoleprofile
 lib/libkdeinit5_konsole.so
-lib/libkonsoleprivate.so.18
+lib/libkonsoleprivate.so.19
 lib/libkonsoleprivate.so.${PKGVERSION}
 qt5/plugins/konsolepart.so
 share/applications/org.kde.konsole.desktop
@@ -27,10 +27,12 @@ share/doc/HTML/sr/konsole/index.cache.bz2
 share/doc/HTML/sr/konsole/index.docbook
 share/doc/HTML/sv/konsole/index.cache.bz2
 share/doc/HTML/sv/konsole/index.docbook
+share/doc/HTML/uk/konsole/draganddrop-contextmenu.png
 share/doc/HTML/uk/konsole/index.cache.bz2
 share/doc/HTML/uk/konsole/index.docbook
-share/examples/kde-xdg/konsole.knsrc
+share/khotkeys/konsole.khotkeys
 share/knotifications5/konsole.notifyrc
+share/knsrcfiles/konsole.knsrc
 share/konsole/BlackOnLightYellow.colorscheme
 share/konsole/BlackOnRandomLight.colorscheme
 share/konsole/BlackOnWhite.colorscheme
@@ -84,6 +86,7 @@ share/locale/km/LC_MESSAGES/konsole.mo
 share/locale/ko/LC_MESSAGES/konsole.mo
 share/locale/lt/LC_MESSAGES/konsole.mo
 share/locale/lv/LC_MESSAGES/konsole.mo
+share/locale/ml/LC_MESSAGES/konsole.mo
 share/locale/mr/LC_MESSAGES/konsole.mo
 share/locale/nb/LC_MESSAGES/konsole.mo
 share/locale/nds/LC_MESSAGES/konsole.mo
@@ -106,3 +109,4 @@ share/locale/wa/LC_MESSAGES/konsole.mo
 share/locale/zh_CN/LC_MESSAGES/konsole.mo
 share/locale/zh_TW/LC_MESSAGES/konsole.mo
 share/metainfo/org.kde.konsole.appdata.xml
+share/qlogging-categories5/konsole.categories

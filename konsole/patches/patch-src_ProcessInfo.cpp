@@ -1,8 +1,10 @@
 $NetBSD$
 
---- src/ProcessInfo.cpp.orig	2018-04-10 14:05:33.000000000 +0000
+NetBSD support
+
+--- src/ProcessInfo.cpp.orig	2019-08-08 23:59:38.000000000 +0000
 +++ src/ProcessInfo.cpp
-@@ -982,6 +982,163 @@ private:
+@@ -999,6 +999,163 @@ private:
          return false;
      }
  };
@@ -10,8 +12,8 @@ $NetBSD$
 +class NetBSDProcessInfo : public UnixProcessInfo
 +{
 +public:
-+    NetBSDProcessInfo(int aPid, const QString &titleFormat) :
-+        UnixProcessInfo(aPid, titleFormat)
++    NetBSDProcessInfo(int pid) :
++        UnixProcessInfo(pid)
 +    {
 +    }
 +
@@ -166,12 +168,12 @@ $NetBSD$
  #endif
  
  SSHProcessInfo::SSHProcessInfo(const ProcessInfo &process) :
-@@ -1169,6 +1326,8 @@ ProcessInfo *ProcessInfo::newInstance(in
-     info = new MacProcessInfo(pid, titleFormat);
+@@ -1186,6 +1343,8 @@ ProcessInfo *ProcessInfo::newInstance(in
+     info = new MacProcessInfo(pid);
  #elif defined(Q_OS_FREEBSD)
-     info = new FreeBSDProcessInfo(pid, titleFormat);
+     info = new FreeBSDProcessInfo(pid);
 +#elif defined(Q_OS_NETBSD)
-+    info = new NetBSDProcessInfo(pid, titleFormat);
++    info = new NetBSDProcessInfo(pid);
  #elif defined(Q_OS_OPENBSD)
-     info = new OpenBSDProcessInfo(pid, titleFormat);
+     info = new OpenBSDProcessInfo(pid);
  #else
