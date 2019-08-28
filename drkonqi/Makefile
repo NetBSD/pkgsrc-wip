@@ -11,6 +11,12 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	msgmerge
 
+SUBST_CLASSES+=		qlc
+SUBST_STAGE.qlc=	pre-configure
+SUBST_MESSAGE.qlc=	Move to new KDE location
+SUBST_FILES.qlc=	CMakeLists.txt
+SUBST_SED.qlc=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_LOGGINGCATEGORIESDIR}:'
+
 .include "../../devel/kidletime/buildlink3.mk"
 .include "../../net/kxmlrpcclient/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
