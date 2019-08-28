@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kmag-18.04.0.tar.xz) = a580684cace8f1e2a5896a91e2d19a19434e8c89
-RMD160 (kmag-18.04.0.tar.xz) = f6cc3c2d158fa3cfcc6304b364802a0bf4c1b7ab
-SHA512 (kmag-18.04.0.tar.xz) = ed669fe9b1b1f0b26519eeff649d60cbd850934fa07a75bf4fed0a8c7a20c9dbd8d1b223d762f087741c46b8f982344975ba47c0ed8ab6a8c142d7cc28fd06d2
-Size (kmag-18.04.0.tar.xz) = 588324 bytes
+SHA1 (kmag-19.08.0.tar.xz) = e9653e27ca027c1dd349b1abe2f6739715b3a962
+RMD160 (kmag-19.08.0.tar.xz) = 1dfed46affe368396a918c7ae7864883791122fa
+SHA512 (kmag-19.08.0.tar.xz) = dec8a5c863ba6e9cedaa1f1953841533adc3accf2270441e5e5c7ac217822eb23908fb0000c98a7fd967a8d25c47285455d365f3aa106a294c0bcd7678f7d6b3
+Size (kmag-19.08.0.tar.xz) = 673656 bytes
