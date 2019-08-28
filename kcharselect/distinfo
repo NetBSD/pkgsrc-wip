@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kcharselect-18.04.0.tar.xz) = 1b224ec19f6d15f50a03cca71e377514d9c043f9
-RMD160 (kcharselect-18.04.0.tar.xz) = 706e489e93ca54c65035d456e814fb82d76abc90
-SHA512 (kcharselect-18.04.0.tar.xz) = 6e73109e5e3112bd922a4ae660c79e0c6238499b8ca90facd17e499d1998f65c269575e9fe0528499e5019d2834e93eea0839f0af3dd34d58fac4d0055dcd379
-Size (kcharselect-18.04.0.tar.xz) = 351268 bytes
+SHA1 (kcharselect-19.08.0.tar.xz) = b79bfafc2180ac22fe281b40fa0903cbdc2d8ccb
+RMD160 (kcharselect-19.08.0.tar.xz) = 46d20dcb943ff464643c6528981f2c340ac7dbc8
+SHA512 (kcharselect-19.08.0.tar.xz) = 1428e1a88ce4de91fb151c6acf70ef073d6c68be0d8690a41dc0f1606a065f0f326ccfa9eeeda4bd642249690bf46b0181a63e5d81957c916e801698d3bf77f3
+Size (kcharselect-19.08.0.tar.xz) = 334680 bytes

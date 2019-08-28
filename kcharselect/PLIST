@@ -3,7 +3,6 @@ bin/kcharselect
 share/applications/org.kde.kcharselect.desktop
 share/doc/HTML/ca/kcharselect/index.cache.bz2
 share/doc/HTML/ca/kcharselect/index.docbook
-share/doc/HTML/ca/kcharselect/kcharselect.png
 share/doc/HTML/cs/kcharselect/index.cache.bz2
 share/doc/HTML/cs/kcharselect/index.docbook
 share/doc/HTML/de/kcharselect/index.cache.bz2
@@ -25,6 +24,8 @@ share/doc/HTML/gl/kcharselect/index.cache.bz2
 share/doc/HTML/gl/kcharselect/index.docbook
 share/doc/HTML/it/kcharselect/index.cache.bz2
 share/doc/HTML/it/kcharselect/index.docbook
+share/doc/HTML/ko/kcharselect/index.cache.bz2
+share/doc/HTML/ko/kcharselect/index.docbook
 share/doc/HTML/nl/kcharselect/index.cache.bz2
 share/doc/HTML/nl/kcharselect/index.docbook
 share/doc/HTML/pt/kcharselect/index.cache.bz2
@@ -42,7 +43,6 @@ share/doc/HTML/uk/kcharselect/index.cache.bz2
 share/doc/HTML/uk/kcharselect/index.docbook
 share/doc/HTML/uk/kcharselect/kcharselect.png
 share/locale/ar/LC_MESSAGES/kcharselect.mo
-share/locale/ast/LC_MESSAGES/kcharselect.mo
 share/locale/bg/LC_MESSAGES/kcharselect.mo
 share/locale/bs/LC_MESSAGES/kcharselect.mo
 share/locale/ca/LC_MESSAGES/kcharselect.mo
@@ -95,3 +95,4 @@ share/locale/ug/LC_MESSAGES/kcharselect.mo
 share/locale/uk/LC_MESSAGES/kcharselect.mo
 share/locale/zh_CN/LC_MESSAGES/kcharselect.mo
 share/locale/zh_TW/LC_MESSAGES/kcharselect.mo
+share/metainfo/org.kde.kcharselect.appdata.xml
