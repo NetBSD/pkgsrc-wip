@@ -14,6 +14,8 @@ DEPENDS+=	kimageformats>=5.19.0:../../graphics/kimageformats
 
 USE_TOOLS+=	msgmerge pkg-config
 
+REPLACE_PERL=	kconf_update/gwenview-imageview-alphabackgroundmode-update.pl
+
 .include "../../devel/cfitsio/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
