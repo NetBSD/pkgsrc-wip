@@ -1,6 +1,6 @@
 @comment $NetBSD$
-bin/kactivitymanagerd
 lib/libkactivitymanagerd_plugin.so
+libexec/kactivitymanagerd
 qt5/plugins/kactivitymanagerd/1/kactivitymanagerd_plugin_activitytemplates.so
 qt5/plugins/kactivitymanagerd/1/kactivitymanagerd_plugin_eventspy.so
 qt5/plugins/kactivitymanagerd/1/kactivitymanagerd_plugin_globalshortcuts.so
@@ -12,7 +12,6 @@ share/dbus-1/services/org.kde.activitymanager.service
 share/kservices5/kactivitymanagerd.desktop
 share/kservicetypes5/kactivitymanagerd-plugin.desktop
 share/locale/ar/LC_MESSAGES/kactivities5.mo
-share/locale/ast/LC_MESSAGES/kactivities5.mo
 share/locale/bg/LC_MESSAGES/kactivities5.mo
 share/locale/bs/LC_MESSAGES/kactivities5.mo
 share/locale/ca/LC_MESSAGES/kactivities5.mo
@@ -36,6 +35,7 @@ share/locale/hi/LC_MESSAGES/kactivities5.mo
 share/locale/hr/LC_MESSAGES/kactivities5.mo
 share/locale/hu/LC_MESSAGES/kactivities5.mo
 share/locale/ia/LC_MESSAGES/kactivities5.mo
+share/locale/id/LC_MESSAGES/kactivities5.mo
 share/locale/is/LC_MESSAGES/kactivities5.mo
 share/locale/it/LC_MESSAGES/kactivities5.mo
 share/locale/ja/LC_MESSAGES/kactivities5.mo
@@ -73,3 +73,4 @@ share/locale/uk/LC_MESSAGES/kactivities5.mo
 share/locale/wa/LC_MESSAGES/kactivities5.mo
 share/locale/zh_CN/LC_MESSAGES/kactivities5.mo
 share/locale/zh_TW/LC_MESSAGES/kactivities5.mo
+share/qlogging-categories5/kactivitymanagerd.categories

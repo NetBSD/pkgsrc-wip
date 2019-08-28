@@ -18,6 +18,12 @@ SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/service/plugins/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
+SUBST_CLASSES+=		qlc
+SUBST_STAGE.qlc=	pre-configure
+SUBST_MESSAGE.qlc=	Move to new KDE location
+SUBST_FILES.qlc=	CMakeLists.txt
+SUBST_SED.qlc=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_LOGGINGCATEGORIESDIR}:'
+
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
