@@ -327,7 +327,7 @@ DRI_DRIVERS+=		nouveau
 CONFIGURE_ARGS+=	--with-platforms=x11
 MESON_ARGS+=	-Dplatforms=x11
 #.elif ${OPSYS} == "Linux"
-#.include "../../wip/wayland/buildlink3.mk"
+#.include "../../devel/wayland/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-platforms=x11,drm,wayland
 #PLIST.wayland=		yes
 .else

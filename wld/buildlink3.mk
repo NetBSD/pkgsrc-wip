@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.wld?=	../../wip/wld
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../wip/wayland/buildlink3.mk"
+.include "../../devel/wayland/buildlink3.mk"
 .endif	# WLD_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-wld

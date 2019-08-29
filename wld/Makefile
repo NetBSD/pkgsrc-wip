@@ -24,5 +24,5 @@ PKGCONFIG_OVERRIDE+=	wld.pc.in
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../wip/wayland/buildlink3.mk"
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

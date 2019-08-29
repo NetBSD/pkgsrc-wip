@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.swc?=	../../wip/swc
 
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
-.include "../../wip/wayland/buildlink3.mk"
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../wip/wld/buildlink3.mk"
 .endif	# SWC_BUILDLINK3_MK
 
