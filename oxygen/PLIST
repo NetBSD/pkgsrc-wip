@@ -1,10 +1,8 @@
 @comment $NetBSD$
 bin/oxygen-demo5
 bin/oxygen-settings5
-lib/liboxygenstyle5.so
 lib/liboxygenstyle5.so.5
 lib/liboxygenstyle5.so.${PKGVERSION}
-lib/liboxygenstyleconfig5.so
 lib/liboxygenstyleconfig5.so.5
 lib/liboxygenstyleconfig5.so.${PKGVERSION}
 qt5/plugins/kstyle_oxygen_config.so
@@ -466,10 +464,6 @@ share/locale/ar/LC_MESSAGES/liboxygenstyleconfig.mo
 share/locale/ar/LC_MESSAGES/oxygen_kdecoration.mo
 share/locale/ar/LC_MESSAGES/oxygen_style_config.mo
 share/locale/ar/LC_MESSAGES/oxygen_style_demo.mo
-share/locale/ast/LC_MESSAGES/liboxygenstyleconfig.mo
-share/locale/ast/LC_MESSAGES/oxygen_kdecoration.mo
-share/locale/ast/LC_MESSAGES/oxygen_style_config.mo
-share/locale/ast/LC_MESSAGES/oxygen_style_demo.mo
 share/locale/be/LC_MESSAGES/oxygen_style_config.mo
 share/locale/be/LC_MESSAGES/oxygen_style_demo.mo
 share/locale/be@latin/LC_MESSAGES/oxygen_style_config.mo
@@ -526,6 +520,7 @@ share/locale/et/LC_MESSAGES/liboxygenstyleconfig.mo
 share/locale/et/LC_MESSAGES/oxygen_kdecoration.mo
 share/locale/et/LC_MESSAGES/oxygen_style_config.mo
 share/locale/et/LC_MESSAGES/oxygen_style_demo.mo
+share/locale/eu/LC_MESSAGES/liboxygenstyleconfig.mo
 share/locale/eu/LC_MESSAGES/oxygen_kdecoration.mo
 share/locale/eu/LC_MESSAGES/oxygen_style_config.mo
 share/locale/eu/LC_MESSAGES/oxygen_style_demo.mo
@@ -569,6 +564,8 @@ share/locale/ia/LC_MESSAGES/liboxygenstyleconfig.mo
 share/locale/ia/LC_MESSAGES/oxygen_kdecoration.mo
 share/locale/ia/LC_MESSAGES/oxygen_style_config.mo
 share/locale/ia/LC_MESSAGES/oxygen_style_demo.mo
+share/locale/id/LC_MESSAGES/liboxygenstyleconfig.mo
+share/locale/id/LC_MESSAGES/oxygen_kdecoration.mo
 share/locale/id/LC_MESSAGES/oxygen_style_config.mo
 share/locale/id/LC_MESSAGES/oxygen_style_demo.mo
 share/locale/is/LC_MESSAGES/oxygen_style_config.mo
