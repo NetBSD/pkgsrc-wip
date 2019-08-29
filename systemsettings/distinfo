@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (systemsettings-5.12.4.tar.xz) = 03c055d2931704c9fa9579685253f00035bada51
-RMD160 (systemsettings-5.12.4.tar.xz) = 5bae751e6a87e875b762b8521cf9ff58899d14eb
-SHA512 (systemsettings-5.12.4.tar.xz) = 8edf9e2f6724722b3405fae98073d8969cf61046cdd5e7ac1fdad28a7b1b09a5b6bc0315205bae0bb658b0b01cdcba9b8b0e444d5821e028017ce7d5c768b8cc
-Size (systemsettings-5.12.4.tar.xz) = 171740 bytes
+SHA1 (systemsettings-5.16.4.tar.xz) = 36550fdfc1a3d4fb6e80aca759af7dc907fe729d
+RMD160 (systemsettings-5.16.4.tar.xz) = 2166d7418be2337c0b46e14965d835d02d1149d2
+SHA512 (systemsettings-5.16.4.tar.xz) = 8bd4ffbda585e76bff8b42a588b6ce476ca46671e258a34b294859aea2d0a00e40425f783ee39ca139f54f858067c5ded109f8280193bd22e19ae01904744ae8
+Size (systemsettings-5.16.4.tar.xz) = 178620 bytes

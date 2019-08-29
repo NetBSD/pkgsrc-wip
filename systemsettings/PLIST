@@ -28,6 +28,10 @@ share/doc/HTML/pt/systemsettings/index.cache.bz2
 share/doc/HTML/pt/systemsettings/index.docbook
 share/doc/HTML/pt_BR/systemsettings/index.cache.bz2
 share/doc/HTML/pt_BR/systemsettings/index.docbook
+share/doc/HTML/ru/systemsettings/index.cache.bz2
+share/doc/HTML/ru/systemsettings/index.docbook
+share/doc/HTML/sv/systemsettings/index.cache.bz2
+share/doc/HTML/sv/systemsettings/index.docbook
 share/doc/HTML/uk/systemsettings/index.cache.bz2
 share/doc/HTML/uk/systemsettings/index.docbook
 share/kpackage/genericqml/org.kde.systemsettings.sidebar/contents/ui/ActionMenu.qml
@@ -74,7 +78,6 @@ share/kservicetypes5/systemsettingsexternalapp.desktop
 share/kservicetypes5/systemsettingsview.desktop
 share/kxmlgui5/systemsettings/systemsettingsui.rc
 share/locale/ar/LC_MESSAGES/systemsettings.mo
-share/locale/ast/LC_MESSAGES/systemsettings.mo
 share/locale/be/LC_MESSAGES/systemsettings.mo
 share/locale/be@latin/LC_MESSAGES/systemsettings.mo
 share/locale/bg/LC_MESSAGES/systemsettings.mo
@@ -155,6 +158,7 @@ share/locale/vi/LC_MESSAGES/systemsettings.mo
 share/locale/wa/LC_MESSAGES/systemsettings.mo
 share/locale/zh_CN/LC_MESSAGES/systemsettings.mo
 share/locale/zh_TW/LC_MESSAGES/systemsettings.mo
+share/qlogging-categories5/systemsettings.categories
 share/systemsettings/classic/main.html
 share/systemsettings/classic/systemsettings-classic.css
 share/systemsettings/systemsettings.kcfg

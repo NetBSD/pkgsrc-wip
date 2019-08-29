@@ -15,9 +15,20 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/kcmutils/buildlink3.mk"
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+
+SUBST_CLASSES+=		qlc
+SUBST_STAGE.qlc=	pre-configure
+SUBST_MESSAGE.qlc=	Move to new KDE location
+SUBST_FILES.qlc=	CMakeLists.txt
+SUBST_SED.qlc=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_LOGGINGCATEGORIESDIR}:'
+
 .include "../../www/khtml/buildlink3.mk"
 .include "../../x11/kactivities-stats/buildlink3.mk"
-.include "../../x11/kirigami2/buildlink3.mk"
+.include "../../wip/plasma-workspace/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
