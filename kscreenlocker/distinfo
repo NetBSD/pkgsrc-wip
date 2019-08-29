@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kscreenlocker-5.12.4.tar.xz) = bccfaa1cfeac2bd6b5494c7fca4d838acf4847dc
-RMD160 (kscreenlocker-5.12.4.tar.xz) = 1cf1c13a1b427bb8839c564aa658bf8e26478122
-SHA512 (kscreenlocker-5.12.4.tar.xz) = d967b6891c2ee83a1fef4b564e95ad1468803db26c0aa8657048e7d94279eea17b75f007c44e90727a4b5689765413055e64ff49800631e9a4db1fb047ce41ed
-Size (kscreenlocker-5.12.4.tar.xz) = 118380 bytes
+SHA1 (kscreenlocker-5.16.4.tar.xz) = 0eb9fffb9377ed9d75ea8c52e9dd13bca2fe83b7
+RMD160 (kscreenlocker-5.16.4.tar.xz) = 38584f394a38008a4345f866909f7854bc3c8850
+SHA512 (kscreenlocker-5.16.4.tar.xz) = 04c5d695d428fe0363277e8cc20a1d39b1fb662157ef42d0f74c3cf802bd39a8fd3ff35cc64bfa3ebaa5aa89fbe84d752809c24c8e3321b31abe8c2ebb7dc72d
+Size (kscreenlocker-5.16.4.tar.xz) = 122620 bytes
