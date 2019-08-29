@@ -1,4 +1,6 @@
 @comment $NetBSD$
 lib/kde4/kstyle_breeze_config.so
 lib/kde4/plugins/styles/breeze.so
+lib/libbreezecommon4.so.5
+lib/libbreezecommon4.so.${PKGVERSION}
 share/kde/apps/kstyle/themes/breeze.themerc
