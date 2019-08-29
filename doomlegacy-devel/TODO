@@ -13,6 +13,8 @@ Build system doesn't support NetBSD.
     => Tested to work with SVN revision 1448
 [X] Remove NetBSD specific patches after upstream integration
 
+Part 1 finished.
+
 
 Part 2: Fix large blockmaps on big endian machines
 ==================================================
@@ -31,6 +33,9 @@ terminate the engine.
     Note: This should never happen on little endian machines
     => PKGREVISION not bumped (SVN based packages use build date in version)
 [X] Sent Blockmap patch to upstream (Bug #653)
+[X] Imported proposed patchset d42_blockmap_endian.diff from upstream
+    => Drop former pkgsrc patch
+    => PKGREVISION not bumped (SVN based packages use build date in version)
 
 
 Part 3: Torches are displayed crippled with software renderer
@@ -53,6 +58,9 @@ Set "Corona" option to "Off" (verified to work on NetBSD).
 
 Other workaround: It seems that only the option "Corona_Draw" set to "Additive"
 is problematic. Coronas with other settings work.
+
+[ ] Test patch d41_draw8_alpha.diff from upstream
+    Patch not released yet
 
 
 EOF
