@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (kinfocenter-5.12.4.tar.xz) = d5d706e713502be0d9b494869440a237e5a0a9e7
-RMD160 (kinfocenter-5.12.4.tar.xz) = 652e0b14846201c761cd60f12893f24bc6e5f2e7
-SHA512 (kinfocenter-5.12.4.tar.xz) = 56e93f9e71c94a3c6906d042e0b9c40cbbcce3d7494fe5e5833324014d11d79fe8d480967e08292eab43754688e9f4582cabc6af79609a9b88eb992235aead83
-Size (kinfocenter-5.12.4.tar.xz) = 1267316 bytes
+SHA1 (kinfocenter-5.16.4.tar.xz) = e33610ef9c869dfe83f611ff6bf050d98bf5f6c0
+RMD160 (kinfocenter-5.16.4.tar.xz) = 977e0bb854f5a14caa319d6aa382adb849235752
+SHA512 (kinfocenter-5.16.4.tar.xz) = 407686f5bba77c5907e550e0c83fb6dcdb2095c87ba9654f1483eb784847a67f58c26c9ceaed1844353ab495c01326f6bf840eb9c20f11a20dc48bed99e1c732
+Size (kinfocenter-5.16.4.tar.xz) = 1322888 bytes
 SHA1 (patch-Modules_base_info__netbsd.cpp) = 3c4c886757d473518874a3d79f58cbb4ca365fc0
 SHA1 (patch-Modules_nics_nic.cpp) = d759de60f074d8e35d759cef3426c2f84ad9768e
