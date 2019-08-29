@@ -46,10 +46,6 @@ share/locale/ar/LC_MESSAGES/ksysguardlsofwidgets.mo
 share/locale/ar/LC_MESSAGES/processcore.mo
 share/locale/ar/LC_MESSAGES/processui.mo
 share/locale/as/LC_MESSAGES/processui.mo
-share/locale/ast/LC_MESSAGES/ksgrd.mo
-share/locale/ast/LC_MESSAGES/ksysguardlsofwidgets.mo
-share/locale/ast/LC_MESSAGES/processcore.mo
-share/locale/ast/LC_MESSAGES/processui.mo
 share/locale/be/LC_MESSAGES/processcore.mo
 share/locale/be/LC_MESSAGES/processui.mo
 share/locale/be@latin/LC_MESSAGES/ksysguardlsofwidgets.mo
@@ -153,6 +149,7 @@ share/locale/ia/LC_MESSAGES/ksgrd.mo
 share/locale/ia/LC_MESSAGES/ksysguardlsofwidgets.mo
 share/locale/ia/LC_MESSAGES/processcore.mo
 share/locale/ia/LC_MESSAGES/processui.mo
+share/locale/id/LC_MESSAGES/ksgrd.mo
 share/locale/id/LC_MESSAGES/ksysguardlsofwidgets.mo
 share/locale/id/LC_MESSAGES/processcore.mo
 share/locale/id/LC_MESSAGES/processui.mo
@@ -322,3 +319,4 @@ share/locale/zh_TW/LC_MESSAGES/ksysguardlsofwidgets.mo
 share/locale/zh_TW/LC_MESSAGES/processcore.mo
 share/locale/zh_TW/LC_MESSAGES/processui.mo
 share/polkit-1/actions/org.kde.ksysguard.processlisthelper.policy
+share/qlogging-categories5/libksysguard.categories

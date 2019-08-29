@@ -24,6 +24,12 @@ CMAKE_ARGS.NetBSD+=	-DKVM_LIB=kvm
 
 CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/libksysguard
 
+SUBST_CLASSES+=		qlc
+SUBST_STAGE.qlc=	pre-configure
+SUBST_MESSAGE.qlc=	Move to new KDE location
+SUBST_FILES.qlc=	CMakeLists.txt
+SUBST_SED.qlc=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_LOGGINGCATEGORIESDIR}:'
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
 CONF_FILES+=	${PREFIX}/share/examples/libksysguard/org.kde.ksysguard.processlisthelper.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf
@@ -33,5 +39,5 @@ INSTALLATION_DIRS+=	share/examples/libksysguard
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+#.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
