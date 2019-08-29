@@ -37,6 +37,6 @@ INSTALLATION_DIRS+=	share/examples/powerdevil
 .include "../../wip/libkscreen/buildlink3.mk"
 .include "../../wip/plasma-workspace/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
-.include "../../x11/kdelibs4support/buildlink3.mk"
+#.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (powerdevil-5.12.4.tar.xz) = fe1b05fe61e8beb1d2ca2c0aadf6eca0276389e0
-RMD160 (powerdevil-5.12.4.tar.xz) = 530c520351ecef19838be98ee20c06cd6731bac3
-SHA512 (powerdevil-5.12.4.tar.xz) = 098c02c640f04684f56aaac954a7af9f0297d4640bd47739b2da48deb50e298c9faf79d2688ae8116702a3b7072a39712b07937ee1d2fa261add6e1b54cb6708
-Size (powerdevil-5.12.4.tar.xz) = 381604 bytes
+SHA1 (powerdevil-5.16.4.tar.xz) = bf4c37fa6106af5762f309c040478d73962699a9
+RMD160 (powerdevil-5.16.4.tar.xz) = ce9ea70a81034a1e10c1c9f575ee25ab60683278
+SHA512 (powerdevil-5.16.4.tar.xz) = 15c7c2d4bc7eba68a59c538f8ea62b3fde8e62320dd9144e96534aaccafabc5cea5bb38900cec90a4946b0b531c83cd7c59db7d0d1fc186b216916b5a5d6a743
+Size (powerdevil-5.16.4.tar.xz) = 590444 bytes
