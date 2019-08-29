@@ -41,3 +41,4 @@ qt5/plugins/kf5/kscreen/KSC_QScreen.so
 qt5/plugins/kf5/kscreen/KSC_XRandR.so
 qt5/plugins/kf5/kscreen/KSC_XRandR11.so
 share/dbus-1/services/org.kde.kscreen.service
+share/qlogging-categories5/libkscreen.categories
