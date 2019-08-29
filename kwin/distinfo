@@ -1,10 +1,6 @@
 $NetBSD$
 
-SHA1 (kwin-5.12.4.tar.xz) = 995489416de2b5776dea7177b0661de1dea94bf7
-RMD160 (kwin-5.12.4.tar.xz) = 3c3447d0d85d0ca7b6ea4c57dc9525a4805b8dcc
-SHA512 (kwin-5.12.4.tar.xz) = 6e2c2f2a582c40d7eb13b704498c47185ac267f62a84b59c357df8b1e6685c4e261ffde0b62a86ffd56cf100930720d74af9d7d0d1b28c354d3c4126007bd538
-Size (kwin-5.12.4.tar.xz) = 4986536 bytes
-SHA1 (patch-kcmkwin_kwincompositing_CMakeLists.txt) = 77cf05fc7f9e75b969c746bf2bd051020354b785
-SHA1 (patch-kcmkwin_kwindesktop_CMakeLists.txt) = ac855325440b14ea079a87b2ca1d79f69a7602d6
-SHA1 (patch-kcmkwin_kwinscreenedges_CMakeLists.txt) = 39972987c11dee5ebd701d41a2ab22d7ab063e1a
-SHA1 (patch-kcmkwin_kwintabbox_CMakeLists.txt) = 6d031cd693fd6c716b0db4f53cfddd7585655449
+SHA1 (kwin-5.16.4.tar.xz) = 794170e8b155d834863cb4aae85d3943c280edc8
+RMD160 (kwin-5.16.4.tar.xz) = 0cb5eebfc2cacb8327e1a04826e0e79fa8e24938
+SHA512 (kwin-5.16.4.tar.xz) = da008c2fb31e0aab23dcefbdc53d9d53b53ee0aed3546585a93e87e1857fc929be3d013c7e75b8aee5651c54249a798afb1612535d03c189aeed9ad3c6b528e5
+Size (kwin-5.16.4.tar.xz) = 6262844 bytes
