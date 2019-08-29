@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (polkit-kde-agent-1-5.12.4.tar.xz) = 81da633257d22f81d8c1d79700cfdb9de7c66b00
-RMD160 (polkit-kde-agent-1-5.12.4.tar.xz) = e1666df6b543a2c009111db23e9eee411a7d32d3
-SHA512 (polkit-kde-agent-1-5.12.4.tar.xz) = 2f8bbaa4a7dd7ac53492a767cec13af74d1e254517313185b25d5b23304023063a7d4be0ac21fdde62d8610a5c72c2fede6fcf2e80f81a6bae09c1d67440b0dc
-Size (polkit-kde-agent-1-5.12.4.tar.xz) = 41576 bytes
+SHA1 (polkit-kde-agent-1-5.16.4.tar.xz) = e55b269655302d0e968501df3e1a3fac6b1e9af0
+RMD160 (polkit-kde-agent-1-5.16.4.tar.xz) = 4017b501dfb9e952276207fe9a045d7f6f276249
+SHA512 (polkit-kde-agent-1-5.16.4.tar.xz) = b85dc7a7883d98014681ad12c9d2f79e8deeb8df6f29b1bdcd5f0e4048cfa7188140e4f7808dba4db9392cf5fe49bda79f4b52caca8d8c4f51953166833046da
+Size (polkit-kde-agent-1-5.16.4.tar.xz) = 42988 bytes
