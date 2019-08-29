@@ -19,34 +19,20 @@ USE_TOOLS+=	msgmerge pkg-config
 
 CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/plasma-desktop
 
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	kcms/colors/CMakeLists.txt
-SUBST_FILES.xdg+=	kcms/cursortheme/CMakeLists.txt
-SUBST_FILES.xdg+=	kcms/desktoptheme/CMakeLists.txt
-SUBST_FILES.xdg+=	kcms/emoticons/CMakeLists.txt
-SUBST_FILES.xdg+=	kcms/icons/CMakeLists.txt
-SUBST_FILES.xdg+=	kcms/kfontinst/kcmfontinst/CMakeLists.txt
-SUBST_FILES.xdg+=	kcms/lookandfeel/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-SUBST_SED.xdg+=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	KDE_build/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/*/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colorschemes.knsrc \
-		${PKG_SYSCONFDIR}/xdg/colorschemes.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/emoticons.knsrc \
-		${PKG_SYSCONFDIR}/xdg/emoticons.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/icons.knsrc \
-		${PKG_SYSCONFDIR}/xdg/icons.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kfontinst.knsrc \
-		${PKG_SYSCONFDIR}/xdg/kfontinst.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/lookandfeel.knsrc \
-		${PKG_SYSCONFDIR}/xdg/lookandfeel.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/plasma-themes.knsrc \
-		${PKG_SYSCONFDIR}/xdg/plasma-themes.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/xcursor.knsrc \
-		${PKG_SYSCONFDIR}/xdg/xcursor.knsrc
+SUBST_CLASSES+=		qlc
+SUBST_STAGE.qlc=	pre-configure
+SUBST_MESSAGE.qlc=	Move to new KDE location
+SUBST_FILES.qlc=	CMakeLists.txt
+SUBST_SED.qlc=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_LOGGINGCATEGORIESDIR}:'
+
 CONF_FILES+=	${PREFIX}/share/examples/plasma-desktop/org.kde.fontinst.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.fontinst.conf
 CONF_FILES+=	${PREFIX}/share/examples/plasma-desktop/org.kde.kcontrol.kcmclock.conf \
@@ -65,6 +51,7 @@ pre-configure:
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/kitemmodels/buildlink3.mk"
 .include "../../devel/knotifyconfig/buildlink3.mk"
 .include "../../devel/kpeople/buildlink3.mk"
 .include "../../devel/krunner/buildlink3.mk"
