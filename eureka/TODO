@@ -1,1 +1,3 @@
-FATAL ERROR: Unable to find install directory!
+[X] Patch make install to work with nonpriviledged user
+[X] Patch internal search path for program files to include ${PREFIX}/share
+[X] Patch internal search path for IWADs to include ${PREFIX}/${DOOMWADDIR}
