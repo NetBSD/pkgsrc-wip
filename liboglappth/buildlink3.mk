@@ -8,7 +8,7 @@ LIBOGLAPPTH_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.liboglappth+=	liboglappth>=0.98
 BUILDLINK_PKGSRCDIR.liboglappth?=	../../wip/liboglappth
 
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .endif	# LIBOGLAPPTH_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-liboglappth

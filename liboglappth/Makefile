@@ -17,5 +17,5 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	liboglappth.pc.in
 
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

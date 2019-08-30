@@ -16,7 +16,7 @@ USE_CMAKE=	yes
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 

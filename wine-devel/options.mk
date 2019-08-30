@@ -71,7 +71,7 @@ CONFIGURE_ARGS+=	--without-pulse
 .if !empty(PKG_OPTIONS:Mopengl) && !empty(PKG_OPTIONS:Mx11)
 PLIST.opengl=		yes
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-opengl
 .endif

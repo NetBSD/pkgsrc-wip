@@ -15,7 +15,7 @@ pkgbase:= wine
 .include "../../graphics/freetype2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.wine:Mopengl)
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .endif
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

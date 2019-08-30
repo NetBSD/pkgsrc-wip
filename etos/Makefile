@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 GCC_REQD+=	4.2
 
 
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../parallel/openmpi/buildlink3.mk"

@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--disable-script-node-java --disable-script-node-javascript
 USE_TOOLS+=		gmake
 
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

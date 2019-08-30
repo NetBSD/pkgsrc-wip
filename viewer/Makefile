@@ -18,6 +18,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/viewer ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/viewer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -43,7 +43,7 @@ LIBS.SunOS+=		-R${PREFIX}/lib/mysql
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../multimedia/mpeg-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

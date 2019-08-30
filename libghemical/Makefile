@@ -31,5 +31,5 @@ CONFIGURE_ARGS+=		--enable-mopac7
 CONFIGURE_ARGS+=		enable-mpqc
 .endif
 
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/freeglut/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
