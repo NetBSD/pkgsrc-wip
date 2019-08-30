@@ -24,7 +24,6 @@ include/KF5/KContacts/KContacts/Related
 include/KF5/KContacts/KContacts/ResourceLocatorUrl
 include/KF5/KContacts/KContacts/Role
 include/KF5/KContacts/KContacts/Secrecy
-include/KF5/KContacts/KContacts/SortMode
 include/KF5/KContacts/KContacts/Sound
 include/KF5/KContacts/KContacts/TimeZone
 include/KF5/KContacts/KContacts/Title
@@ -56,7 +55,6 @@ include/KF5/KContacts/kcontacts/related.h
 include/KF5/KContacts/kcontacts/resourcelocatorurl.h
 include/KF5/KContacts/kcontacts/role.h
 include/KF5/KContacts/kcontacts/secrecy.h
-include/KF5/KContacts/kcontacts/sortmode.h
 include/KF5/KContacts/kcontacts/sound.h
 include/KF5/KContacts/kcontacts/timezone.h
 include/KF5/KContacts/kcontacts/title.h
@@ -69,13 +67,9 @@ lib/cmake/KF5Contacts/KF5ContactsTargets-noconfig.cmake
 lib/cmake/KF5Contacts/KF5ContactsTargets.cmake
 lib/libKF5Contacts.so
 lib/libKF5Contacts.so.5
-lib/libKF5Contacts.so.5.8.0
+lib/libKF5Contacts.so.5.12.0
 qt5/mkspecs/modules/qt_KContacts.pri
-share/examples/kde-xdg/kcontacts.categories
-share/examples/kde-xdg/kcontacts.renamecategories
-share/kf5/kcontacts/countrytransl.map
 share/locale/ar/LC_MESSAGES/kcontacts5.mo
-share/locale/ast/LC_MESSAGES/kcontacts5.mo
 share/locale/bs/LC_MESSAGES/kcontacts5.mo
 share/locale/ca/LC_MESSAGES/kcontacts5.mo
 share/locale/ca@valencia/LC_MESSAGES/kcontacts5.mo
@@ -121,3 +115,5 @@ share/locale/ug/LC_MESSAGES/kcontacts5.mo
 share/locale/uk/LC_MESSAGES/kcontacts5.mo
 share/locale/zh_CN/LC_MESSAGES/kcontacts5.mo
 share/locale/zh_TW/LC_MESSAGES/kcontacts5.mo
+share/qlogging-categories5/kcontacts.categories
+share/qlogging-categories5/kcontacts.renamecategories
