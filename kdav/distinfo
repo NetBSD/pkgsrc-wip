@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kdav-18.04.0.tar.xz) = fd1ff51a8bb9e272a7c05a459cd504aa7ca6c1ba
-RMD160 (kdav-18.04.0.tar.xz) = 96d3c37d2578534337ef88dd7845bcd3cd879c9b
-SHA512 (kdav-18.04.0.tar.xz) = fbafc995fc629023484574b0e7bea749b76632364297fc53dd085565a647f54e5a439d62c7756df44075767cc6d91614fd03f5e21ed1d94a4ac43bcda1b9cbdc
-Size (kdav-18.04.0.tar.xz) = 48760 bytes
+SHA1 (kdav-19.08.0.tar.xz) = 4ba947c97eb46c81463be4880af67c7b4662ce83
+RMD160 (kdav-19.08.0.tar.xz) = 4adfa1dc2a007d68ebbfdc84a033d5a6e0ec3be9
+SHA512 (kdav-19.08.0.tar.xz) = b079352f9861cb4e2fa3c89caa722b26a8318bd32f38a8cc0d63893d801125d9a8e2e587b88cda397375db2d5a9ed7f1b32cb0edf7019163077f1cc27fc8a83a
+Size (kdav-19.08.0.tar.xz) = 49920 bytes
