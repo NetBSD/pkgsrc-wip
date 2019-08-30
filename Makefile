@@ -2528,6 +2528,7 @@ SUBDIR+=	openvas-manager
 SUBDIR+=	openvas-scanner
 SUBDIR+=	openvrml
 SUBDIR+=	openxcom
+SUBDIR+=	openzwave
 SUBDIR+=	opera60-bin
 SUBDIR+=	ophcrack
 SUBDIR+=	oqtplayer

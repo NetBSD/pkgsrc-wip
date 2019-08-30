@@ -1,0 +1,6 @@
+- Send patches upstream.
+
+- Resolve "configuration file" issue (etc contents should perhaps be
+  in share)
+
+- Validate functioning
