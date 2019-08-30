@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kcalcore-18.04.0.tar.xz) = 38467c13827e9c09da5e258d10127bd0aa05f3a3
-RMD160 (kcalcore-18.04.0.tar.xz) = 4166da7044690509c6aa351036ee3f47794e0c18
-SHA512 (kcalcore-18.04.0.tar.xz) = 6e51adb1eb744b5e6ee4bcf672b74e4788857d0d7110ff4c86da125b331578a760ef0fd657bb6d4b473607a07e88e17ffa263761c093d78ca234629c12e4a439
-Size (kcalcore-18.04.0.tar.xz) = 253804 bytes
+SHA1 (kcalcore-19.08.0.tar.xz) = 40b8a4af6964471b58101ad7e99f04c64815ea2e
+RMD160 (kcalcore-19.08.0.tar.xz) = c163fd14854c8d285a6415d503bd5578d2fdb031
+SHA512 (kcalcore-19.08.0.tar.xz) = 4e383c69e5fdee6b754ff49935bf1255ee4267d5ce0fd1d21ec63cdc5d79ff1d769fef29be2285d17ec7e12c105d59e42fad1c643ac28141f644cccc6fc823c5
+Size (kcalcore-19.08.0.tar.xz) = 247656 bytes
