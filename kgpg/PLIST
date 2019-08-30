@@ -5,11 +5,6 @@ share/config.kcfg/kgpg.kcfg
 share/dbus-1/interfaces/org.kde.kgpg.Key.xml
 share/doc/HTML/ca/kgpg/index.cache.bz2
 share/doc/HTML/ca/kgpg/index.docbook
-share/doc/HTML/ca/kgpg/keygen.png
-share/doc/HTML/ca/kgpg/keyprop.png
-share/doc/HTML/ca/kgpg/keyserver.png
-share/doc/HTML/ca/kgpg/options.png
-share/doc/HTML/ca/kgpg/select-secret-key.png
 share/doc/HTML/de/kgpg/editor.png
 share/doc/HTML/de/kgpg/index.cache.bz2
 share/doc/HTML/de/kgpg/index.docbook
@@ -33,13 +28,8 @@ share/doc/HTML/en/kgpg/keyserver.png
 share/doc/HTML/en/kgpg/options.png
 share/doc/HTML/en/kgpg/select-secret-key.png
 share/doc/HTML/en/kgpg/systray.png
-share/doc/HTML/es/kgpg/editor.png
 share/doc/HTML/es/kgpg/index.cache.bz2
 share/doc/HTML/es/kgpg/index.docbook
-share/doc/HTML/es/kgpg/keygen.png
-share/doc/HTML/es/kgpg/keymanage.png
-share/doc/HTML/es/kgpg/keys.png
-share/doc/HTML/es/kgpg/options.png
 share/doc/HTML/et/kgpg/index.cache.bz2
 share/doc/HTML/et/kgpg/index.docbook
 share/doc/HTML/fr/kgpg/index.cache.bz2
@@ -138,7 +128,6 @@ share/kservices5/ServiceMenus/viewdecrypted.desktop
 share/kxmlgui5/kgpg/keysmanager.rc
 share/kxmlgui5/kgpg/kgpgeditor.rc
 share/locale/ar/LC_MESSAGES/kgpg.mo
-share/locale/ast/LC_MESSAGES/kgpg.mo
 share/locale/bg/LC_MESSAGES/kgpg.mo
 share/locale/bs/LC_MESSAGES/kgpg.mo
 share/locale/ca/LC_MESSAGES/kgpg.mo
@@ -191,3 +180,4 @@ share/locale/uk/LC_MESSAGES/kgpg.mo
 share/locale/zh_CN/LC_MESSAGES/kgpg.mo
 share/locale/zh_TW/LC_MESSAGES/kgpg.mo
 share/metainfo/org.kde.kgpg.appdata.xml
+share/qlogging-categories5/kgpg.categories

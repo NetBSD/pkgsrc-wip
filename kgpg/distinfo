@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kgpg-18.04.0.tar.xz) = 684a32527ba953b641390492113db1902f3a600e
-RMD160 (kgpg-18.04.0.tar.xz) = 00702ee89c2d0f57eb81d4dd653389d42e32403d
-SHA512 (kgpg-18.04.0.tar.xz) = b99f279aecccdb36d76bea3b244afd65ba317c95323dcf602f74fb6b6ad53487dae4aa0f1a503d999ff7cae320941cf747717c52c57bce4a361485653e1e3e3f
-Size (kgpg-18.04.0.tar.xz) = 2817252 bytes
+SHA1 (kgpg-19.08.0.tar.xz) = c45a416ef6d4fab75334fc413eca6f5f24cdf909
+RMD160 (kgpg-19.08.0.tar.xz) = e69593831354afbf9d14a6b192e3963729be2716
+SHA512 (kgpg-19.08.0.tar.xz) = a90a78556bbe26279917b55f582d3bb9d8376aec7f70e55ff10ed9f6a769d77ee2d2bd6ab1ef4c9aec27d20a098bd6d8c0e37db2fe57af8ad781ceb7493c1bc6
+Size (kgpg-19.08.0.tar.xz) = 2787784 bytes
