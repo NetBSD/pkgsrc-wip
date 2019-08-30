@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.kpimtextedit?=	../../wip/kpimtextedit
 .include "../../misc/kemoticons/buildlink3.mk"
 .include "../../textproc/syntax-highlighting/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtspeech/buildlink3.mk"
 .endif	# KPIMTEXTEDIT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-kpimtextedit
