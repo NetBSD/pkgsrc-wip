@@ -11,7 +11,7 @@ MAINTAINER=	micha@NetBSD.org
 # The SHA1 hash listed here was checked while generating pkgsrc distinfo
 HOMEPAGE=	https://doomwiki.org/wiki/DOOM1.WAD
 COMMENT=	Shareware levels for Doom
-#LICENSE=	shareware
+LICENSE=	doom1-iwad-shareware-license
 
 CONFLICTS+=	xdoom<1.10nb4
 
