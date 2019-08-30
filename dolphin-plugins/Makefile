@@ -15,6 +15,5 @@ USE_TOOLS+=	msgmerge
 
 .include "../../wip/dolphin5/buildlink3.mk"
 .include "../../devel/ktexteditor/buildlink3.mk"
-.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
