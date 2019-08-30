@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/OpenZWave/open-zwave/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
 
-WRKSRC=		${WRKDIR}/open-zwave-1.6
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${VERSION}
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
