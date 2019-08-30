@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kmime-18.04.0.tar.xz) = e34dcf8b58771a1e1b01f171f3ec48ed949bf848
-RMD160 (kmime-18.04.0.tar.xz) = 42ca4959cc9ccc79b3efe467a6b97de4b0bd7cc7
-SHA512 (kmime-18.04.0.tar.xz) = 43eab6346d55a3547d7722495fc85bedb29e71465511afd2c57b98c04fdd21feb3c1d8c960f5573ca0e5b224e3a12aafc4fd2e7fb3e418ed37e4a9588400d686
-Size (kmime-18.04.0.tar.xz) = 146480 bytes
+SHA1 (kmime-19.08.0.tar.xz) = 14b93c91e0973b6e1fa9b5bc24e503b1238bf334
+RMD160 (kmime-19.08.0.tar.xz) = 1ce47d9ecff72bfe98f1fe54d2379e206e0ef56f
+SHA512 (kmime-19.08.0.tar.xz) = 90f5b049c8a7e1a4b283ebda982b6a92296591544f8bd8f50f4e57daa99e9aca0821ca2df3b4a2baf7649c2982c8c340c0c65c2005d854eca747c3fa437d14be
+Size (kmime-19.08.0.tar.xz) = 147000 bytes
