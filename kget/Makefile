@@ -19,8 +19,7 @@ REPLACE_PERL+=	conf/kget_sensitive.pl conf/kget_limitdownloads.pl
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/transfer-plugins/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/extensions/konqueror/CMakeFiles/kget_browser_integration_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc=	_KDE_build/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../devel/boost-libs/buildlink3.mk"
