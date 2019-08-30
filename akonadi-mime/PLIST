@@ -36,14 +36,12 @@ lib/cmake/KF5AkonadiMime/KF5AkonadiMimeTargets-noconfig.cmake
 lib/cmake/KF5AkonadiMime/KF5AkonadiMimeTargets.cmake
 lib/libKF5AkonadiMime.so
 lib/libKF5AkonadiMime.so.5
-lib/libKF5AkonadiMime.so.5.8.0
+lib/libKF5AkonadiMime.so.5.12.0
 qt5/mkspecs/modules/qt_AkonadiMime.pri
 qt5/plugins/akonadi_serializer_mail.so
 share/akonadi/plugins/serializer/akonadi_serializer_mail.desktop
 share/config.kcfg/specialmailcollections.kcfg
-share/examples/kde-xdg/akonadi-mime.categories
 share/locale/ar/LC_MESSAGES/libakonadi-kmime5.mo
-share/locale/ast/LC_MESSAGES/libakonadi-kmime5.mo
 share/locale/bs/LC_MESSAGES/libakonadi-kmime5.mo
 share/locale/ca/LC_MESSAGES/libakonadi-kmime5.mo
 share/locale/ca@valencia/LC_MESSAGES/libakonadi-kmime5.mo
@@ -85,3 +83,4 @@ share/locale/uk/LC_MESSAGES/libakonadi-kmime5.mo
 share/locale/zh_CN/LC_MESSAGES/libakonadi-kmime5.mo
 share/locale/zh_TW/LC_MESSAGES/libakonadi-kmime5.mo
 share/mime/packages/x-vnd.kde.contactgroup.xml
+share/qlogging-categories5/akonadi-mime.categories
