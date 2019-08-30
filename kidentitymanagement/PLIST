@@ -19,13 +19,10 @@ lib/cmake/KF5IdentityManagement/KF5IdentityManagementTargets-noconfig.cmake
 lib/cmake/KF5IdentityManagement/KF5IdentityManagementTargets.cmake
 lib/libKF5IdentityManagement.so
 lib/libKF5IdentityManagement.so.5
-lib/libKF5IdentityManagement.so.5.8.0
+lib/libKF5IdentityManagement.so.5.12.0
 qt5/mkspecs/modules/qt_KIdentityManagement.pri
 share/dbus-1/interfaces/kf5_org.kde.pim.IdentityManager.xml
-share/examples/kde-xdg/kidentitymanagement.categories
-share/examples/kde-xdg/kidentitymanagement.renamecategories
 share/locale/ar/LC_MESSAGES/libkpimidentities5.mo
-share/locale/ast/LC_MESSAGES/libkpimidentities5.mo
 share/locale/bs/LC_MESSAGES/libkpimidentities5.mo
 share/locale/ca/LC_MESSAGES/libkpimidentities5.mo
 share/locale/ca@valencia/LC_MESSAGES/libkpimidentities5.mo
@@ -71,3 +68,5 @@ share/locale/ug/LC_MESSAGES/libkpimidentities5.mo
 share/locale/uk/LC_MESSAGES/libkpimidentities5.mo
 share/locale/zh_CN/LC_MESSAGES/libkpimidentities5.mo
 share/locale/zh_TW/LC_MESSAGES/libkpimidentities5.mo
+share/qlogging-categories5/kidentitymanagement.categories
+share/qlogging-categories5/kidentitymanagement.renamecategories

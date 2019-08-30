@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kidentitymanagement-18.04.0.tar.xz) = d22e2538419262e107a54320657945f262110b6a
-RMD160 (kidentitymanagement-18.04.0.tar.xz) = 61ae8d98ff1b2f8378795eeaa660f5c75cc9948a
-SHA512 (kidentitymanagement-18.04.0.tar.xz) = 5eb71a792c1b987ea3eb7d549dfd2e86e91a9e50fb679e5a62cd9dfd0e3a9253496fc5f692c5b5942ac89119ff365b4b93663df7f3319275037a74f2e60d9c92
-Size (kidentitymanagement-18.04.0.tar.xz) = 147884 bytes
+SHA1 (kidentitymanagement-19.08.0.tar.xz) = 743d0ff88417e609df83642c128dde0dc24b685b
+RMD160 (kidentitymanagement-19.08.0.tar.xz) = 908e9225124dadf2b90a07bae3963f4399f9c71e
+SHA512 (kidentitymanagement-19.08.0.tar.xz) = 2721a24a4c19fb781724cc3cb6c9f44ddb45c0ea37b518e539460191083bb4923a7ae46a33d79004cdad37c08bcc64cad9fbc8c09839f3bcb8ae29749139301b
+Size (kidentitymanagement-19.08.0.tar.xz) = 149104 bytes
