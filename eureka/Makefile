@@ -15,6 +15,23 @@ USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-source
 
+# DOOMWADDIR is intentionally shared with other Doom packages
+DOOMWADDIR=	share/doom
+
+# Modify internal search path to check ${PREFIX}/share hierarchy first
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	do-configure
+SUBST_MESSAGE.prefix=	Preparing main.cc file ...
+SUBST_FILES.prefix=	src/main.cc
+SUBST_SED.prefix=	-e 's,PKGSRC_PREFIX,${PREFIX},'
+
+# Modify internal search path for DOOMWADDIR (if environment variable not set)
+SUBST_CLASSES+=		dwd
+SUBST_STAGE.dwd=	do-configure
+SUBST_MESSAGE.dwd=	Preparing m_files.cc file ...
+SUBST_FILES.dwd=	src/m_files.cc
+SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/DOOMWADDIR,'
+
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/fltk14-devel/buildlink3.mk"

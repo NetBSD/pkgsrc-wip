@@ -5,4 +5,6 @@ RMD160 (eureka-124-source.tar.gz) = 9e6ea0f207d9445c64fca31531112adad6d0299d
 SHA512 (eureka-124-source.tar.gz) = 27f858ac0ea366932777830dca289db456ba68a90bbfa507dcf734f4aa0b0b72fd5654ab8cb0305c9a51793e97fb7b686a5860cc00d37304eab5db1cecbb3c05
 Size (eureka-124-source.tar.gz) = 1111598 bytes
 SHA1 (patch-Makefile) = 0f0930e3fae528b6bb72a7c841ffab6f6da071e7
+SHA1 (patch-src_m__files.cc) = 3a428c0da9c39c3e35a674bf362cf5e4da51d05f
+SHA1 (patch-src_main.cc) = 7e3a1db40d055f04622ac7cd6ae3997ed77e66ea
 SHA1 (patch-src_ui__window.cc) = c058e793e57b8208d3287c658ec2e2c7457380f9
