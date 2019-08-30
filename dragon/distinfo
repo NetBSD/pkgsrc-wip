@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (dragon-18.04.0.tar.xz) = 2799e8fcbcb60dd413694e05cf07816abbcb37a6
-RMD160 (dragon-18.04.0.tar.xz) = 0490b08cbfe578bef3df18749707b2043b65be1b
-SHA512 (dragon-18.04.0.tar.xz) = 734ff41eb868d8e1439b07c09e3bb705a691d5ae182968fcd507ed48c5dca2b4ebdfd36042f666968b31de6acddfdcf14827d24587051f21f8bae6dcd346c45c
-Size (dragon-18.04.0.tar.xz) = 1729408 bytes
+SHA1 (dragon-19.08.0.tar.xz) = 4d120cae68ba1aaf5fe3898ee9274c95871f2870
+RMD160 (dragon-19.08.0.tar.xz) = acc42c57cd87d7954e3db66b14dbc3a2dfaec29a
+SHA512 (dragon-19.08.0.tar.xz) = 1f9c410e314f075b4d73af68893d25dd406f222c34f62f0d57af96371a4e2cbcdbdd04a3684974435172c3a343fef45639e6a80a1729b1ab02d5829d08d46ed0
+Size (dragon-19.08.0.tar.xz) = 1350576 bytes
