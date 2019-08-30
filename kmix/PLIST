@@ -2,9 +2,9 @@
 bin/kmix
 bin/kmixctrl
 bin/kmixremote
-lib/libkdeinit5_kmix.so
-lib/libkdeinit5_kmixctrl.so
-qt5/plugins/libkded_kmixd.so
+lib/libkmixcore.so.5
+lib/libkmixcore.so.5.13.80
+qt5/plugins/kf5/kded/kmixd.so
 qt5/plugins/plasma/dataengine/plasma_engine_mixer.so
 share/applications/org.kde.kmix.desktop
 share/dbus-1/interfaces/org.kde.kmix.control.xml
@@ -33,8 +33,6 @@ share/doc/HTML/en/kmix/kmix-options.png
 share/doc/HTML/en/kmix/kmix.png
 share/doc/HTML/es/kmix/index.cache.bz2
 share/doc/HTML/es/kmix/index.docbook
-share/doc/HTML/es/kmix/kmix-channels.png
-share/doc/HTML/es/kmix/kmix-configure.png
 share/doc/HTML/es/kmix/kmix-file.png
 share/doc/HTML/es/kmix/kmix-master.png
 share/doc/HTML/es/kmix/kmix-options.png
@@ -113,12 +111,11 @@ share/kmix/profiles/MPRIS2.default.xml
 share/kmix/profiles/OSS.default.xml
 share/kmix/profiles/PulseAudio.default.xml
 share/kmix/profiles/SUNAudio.default.xml
-share/kservices5/kded/kmixd.desktop
+share/knotifications5/kmix.notifyrc
 share/kservices5/kmixctrl_restore.desktop
 share/kservices5/plasma-dataengine-mixer.desktop
 share/kxmlgui5/kmix/kmixui.rc
 share/locale/ar/LC_MESSAGES/kmix.mo
-share/locale/ast/LC_MESSAGES/kmix.mo
 share/locale/bg/LC_MESSAGES/kmix.mo
 share/locale/bs/LC_MESSAGES/kmix.mo
 share/locale/ca/LC_MESSAGES/kmix.mo
