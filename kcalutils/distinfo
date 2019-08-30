@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kcalutils-18.04.0.tar.xz) = 658a2851c08c4f857af4ac1a9fbf3731d64dd7f7
-RMD160 (kcalutils-18.04.0.tar.xz) = 4eca050ac08f2dbed638e2cc3222bb5a2de13048
-SHA512 (kcalutils-18.04.0.tar.xz) = 97ed56e5017809e7f76c1a4fddcf727a2c23999da65ef1fdae397f1fcb8d9a1b01bcfedf6aa06feabac157fd92d51fc267f29dbbb816e8d90ea74f8db7a11d4a
-Size (kcalutils-18.04.0.tar.xz) = 325260 bytes
+SHA1 (kcalutils-19.08.0.tar.xz) = 2fc2617c088c494d280b0c487e9ef1f66cc3433e
+RMD160 (kcalutils-19.08.0.tar.xz) = 98862082d3b50a781566530fa93f39c6e22f8b36
+SHA512 (kcalutils-19.08.0.tar.xz) = 585ff7ced662d5d559cf691d43d63f2094f4825c6cde10482ba1abd0ee2194c24bde51e107381c5836d11404e8749b78fd256ff5a77840fbfc15119334fffb36
+Size (kcalutils-19.08.0.tar.xz) = 323764 bytes
