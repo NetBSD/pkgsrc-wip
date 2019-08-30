@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (kde-gtk-config-5.12.4.tar.xz) = 98f004ef043cbcd9f01e9ff5d3953ca129455be5
-RMD160 (kde-gtk-config-5.12.4.tar.xz) = 27ddd859a4372e6fdbf686e0842557bf52702ebf
-SHA512 (kde-gtk-config-5.12.4.tar.xz) = 07563d2a7ea9784ddd7223c7b98d923e3506f5b3f16337313482e8d47d3ac34cd5f852b6cc4fba38cf20cc34154e34705b3cd72dbecdb2d6d3c4096843bc60b4
-Size (kde-gtk-config-5.12.4.tar.xz) = 156784 bytes
+SHA1 (kde-gtk-config-5.16.4.tar.xz) = 987b485cfaef266e167741065efadcf411b3e45a
+RMD160 (kde-gtk-config-5.16.4.tar.xz) = 55ffe5bece8891c793cc6ee3356e28b7f45f2273
+SHA512 (kde-gtk-config-5.16.4.tar.xz) = e3ecadaf706fe27e7fec0248266c4aab50c15358c19e79f253816c373902613e70448f2878814ca938a8fc7e217d4782d3f72640a99a4326f44e2260b4cfff6c
+Size (kde-gtk-config-5.16.4.tar.xz) = 154228 bytes
 SHA1 (patch-cmake_modules_FindGTK2.cmake) = 00edb6b5608e290511edb0de22cf410207b0ec94

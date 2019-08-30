@@ -15,17 +15,7 @@ DEPENDS+=	kde-cli-tools>=${PLASMAVER}:../../wip/kde-cli-tools
 
 USE_TOOLS+=	msgmerge pkg-config
 
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cgcgtk3.knsrc \
-		${PKG_SYSCONFDIR}/xdg/cgcgtk3.knsrc
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cgctheme.knsrc \
-		${PKG_SYSCONFDIR}/xdg/cgctheme.knsrc
+CFLAGS+=	-I${BUILDLINK_PREFIX.harfbuzz}/include/harfbuzz
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"
