@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kimap-18.04.0.tar.xz) = dbde55bfa92be9ab78ff316445ffbd0961cdc306
-RMD160 (kimap-18.04.0.tar.xz) = 97b23c87748ed993f6d10ce674a9ecca40371d49
-SHA512 (kimap-18.04.0.tar.xz) = 7e032f3a8a00c35dcf8c6677db7deaf9980735eb8daf7308bebbf2660485a164ad53b36ab4acaceadeec5f8587f6d70cddbb1c3d088eaa51a35472ff4de0afd9
-Size (kimap-18.04.0.tar.xz) = 118764 bytes
+SHA1 (kimap-19.08.0.tar.xz) = 3b96c31f69ab08afae52bf8a0f7b408a2fa6f7c7
+RMD160 (kimap-19.08.0.tar.xz) = 40ea17ab1856dbc075e5d23b54e644abe235f991
+SHA512 (kimap-19.08.0.tar.xz) = 63ce93e69dc06a78efcafa71f00054cdaad9c94a5b0842fbce0989291ca5261ee006083617a1f3921fd5a7f9d2add6f20b1b2d7c8728deaf32f14730420f2b17
+Size (kimap-19.08.0.tar.xz) = 119804 bytes

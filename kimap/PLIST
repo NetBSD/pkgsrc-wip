@@ -25,7 +25,9 @@ include/KF5/KIMAP/KIMAP/LogoutJob
 include/KF5/KIMAP/KIMAP/MetaDataJobBase
 include/KF5/KIMAP/KIMAP/MoveJob
 include/KF5/KIMAP/KIMAP/MyRightsJob
+include/KF5/KIMAP/KIMAP/NamespaceJob
 include/KF5/KIMAP/KIMAP/QuotaJobBase
+include/KF5/KIMAP/KIMAP/RFCCodecs
 include/KF5/KIMAP/KIMAP/RenameJob
 include/KF5/KIMAP/KIMAP/SearchJob
 include/KF5/KIMAP/KIMAP/SelectJob
@@ -64,7 +66,9 @@ include/KF5/KIMAP/kimap/LogoutJob
 include/KF5/KIMAP/kimap/MetaDataJobBase
 include/KF5/KIMAP/kimap/MoveJob
 include/KF5/KIMAP/kimap/MyRightsJob
+include/KF5/KIMAP/kimap/NamespaceJob
 include/KF5/KIMAP/kimap/QuotaJobBase
+include/KF5/KIMAP/kimap/RFCCodecs
 include/KF5/KIMAP/kimap/RenameJob
 include/KF5/KIMAP/kimap/SearchJob
 include/KF5/KIMAP/kimap/SelectJob
@@ -128,12 +132,9 @@ lib/cmake/KF5IMAP/KF5IMAPTargets-noconfig.cmake
 lib/cmake/KF5IMAP/KF5IMAPTargets.cmake
 lib/libKF5IMAP.so
 lib/libKF5IMAP.so.5
-lib/libKF5IMAP.so.5.8.0
+lib/libKF5IMAP.so.5.12.0
 lib/libkimaptest.a
 qt5/mkspecs/modules/qt_KIMAP.pri
-share/examples/kde-xdg/kimap.categories
-share/examples/kde-xdg/kimap.renamecategories
-share/locale/ast/LC_MESSAGES/libkimap5.mo
 share/locale/bs/LC_MESSAGES/libkimap5.mo
 share/locale/ca/LC_MESSAGES/libkimap5.mo
 share/locale/ca@valencia/LC_MESSAGES/libkimap5.mo
@@ -178,3 +179,5 @@ share/locale/ug/LC_MESSAGES/libkimap5.mo
 share/locale/uk/LC_MESSAGES/libkimap5.mo
 share/locale/zh_CN/LC_MESSAGES/libkimap5.mo
 share/locale/zh_TW/LC_MESSAGES/libkimap5.mo
+share/qlogging-categories5/kimap.categories
+share/qlogging-categories5/kimap.renamecategories
