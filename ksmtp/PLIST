@@ -17,11 +17,9 @@ lib/cmake/KPimSMTP/KPimSMTPTargets-noconfig.cmake
 lib/cmake/KPimSMTP/KPimSMTPTargets.cmake
 lib/libKPimSMTP.so
 lib/libKPimSMTP.so.5
-lib/libKPimSMTP.so.5.8.0
+lib/libKPimSMTP.so.5.12.0
 qt5/mkspecs/modules/qt_KSMTP.pri
-share/examples/kde-xdg/ksmtp.categories
 share/locale/ar/LC_MESSAGES/libksmtp5.mo
-share/locale/ast/LC_MESSAGES/libksmtp5.mo
 share/locale/bs/LC_MESSAGES/libksmtp5.mo
 share/locale/ca/LC_MESSAGES/libksmtp5.mo
 share/locale/ca@valencia/LC_MESSAGES/libksmtp5.mo
@@ -56,3 +54,5 @@ share/locale/tr/LC_MESSAGES/libksmtp5.mo
 share/locale/ug/LC_MESSAGES/libksmtp5.mo
 share/locale/uk/LC_MESSAGES/libksmtp5.mo
 share/locale/zh_CN/LC_MESSAGES/libksmtp5.mo
+share/locale/zh_TW/LC_MESSAGES/libksmtp5.mo
+share/qlogging-categories5/ksmtp.categories
