@@ -10,10 +10,9 @@ lib/cmake/KF5AkonadiNotes/KF5AkonadiNotesTargets-noconfig.cmake
 lib/cmake/KF5AkonadiNotes/KF5AkonadiNotesTargets.cmake
 lib/libKF5AkonadiNotes.so
 lib/libKF5AkonadiNotes.so.5
-lib/libKF5AkonadiNotes.so.5.8.0
+lib/libKF5AkonadiNotes.so.5.12.0
 qt5/mkspecs/modules/qt_AkonadiNotes.pri
 share/locale/ar/LC_MESSAGES/akonadinotes5.mo
-share/locale/ast/LC_MESSAGES/akonadinotes5.mo
 share/locale/bs/LC_MESSAGES/akonadinotes5.mo
 share/locale/ca/LC_MESSAGES/akonadinotes5.mo
 share/locale/ca@valencia/LC_MESSAGES/akonadinotes5.mo
