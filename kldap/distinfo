@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kldap-18.04.0.tar.xz) = fce67e9c346eb4077bfb1ed330f4122b00e21219
-RMD160 (kldap-18.04.0.tar.xz) = 32d8d3719cacb042d2c9d7877cfde40cb228db3f
-SHA512 (kldap-18.04.0.tar.xz) = 779914011c7c6f8ece6899d29973544c921b3583768ffbdf6786a9360c86e5c083ccd33c50e95db60d6c7321da8abe2b71dfd292b28ad647e104895fe925e52e
-Size (kldap-18.04.0.tar.xz) = 154088 bytes
+SHA1 (kldap-19.08.0.tar.xz) = 8e6f322344f245334fd7f28d747157aae1959ac3
+RMD160 (kldap-19.08.0.tar.xz) = 11372f808c2175b16d6ce8cbb6c1db782a45187a
+SHA512 (kldap-19.08.0.tar.xz) = 6ba7bc90b2e33863cced031cc33edf82c446075fdfca711f2178d8db59c39f5ff536ee77a9094c5c92ec09fe01b574aced6d4c58af85980b970b2ff67bc30ab0
+Size (kldap-19.08.0.tar.xz) = 155972 bytes

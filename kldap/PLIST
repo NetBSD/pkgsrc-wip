@@ -37,7 +37,7 @@ lib/cmake/KF5Ldap/KF5LdapTargets-noconfig.cmake
 lib/cmake/KF5Ldap/KF5LdapTargets.cmake
 lib/libKF5Ldap.so
 lib/libKF5Ldap.so.5
-lib/libKF5Ldap.so.5.8.0
+lib/libKF5Ldap.so.5.12.0
 qt5/mkspecs/modules/qt_Ldap.pri
 qt5/plugins/kf5/kio/ldap.so
 share/doc/HTML/ca/kioslave5/ldap/index.cache.bz2
@@ -62,16 +62,14 @@ share/doc/HTML/ru/kioslave5/ldap/index.cache.bz2
 share/doc/HTML/ru/kioslave5/ldap/index.docbook
 share/doc/HTML/sr/kioslave5/ldap/index.cache.bz2
 share/doc/HTML/sr/kioslave5/ldap/index.docbook
+share/doc/HTML/sv/kioslave5/ldap/index.cache.bz2
+share/doc/HTML/sv/kioslave5/ldap/index.docbook
 share/doc/HTML/uk/kioslave5/ldap/index.cache.bz2
 share/doc/HTML/uk/kioslave5/ldap/index.docbook
-share/examples/kde-xdg/kldap.categories
-share/examples/kde-xdg/kldap.renamecategories
 share/kservices5/ldap.protocol
 share/kservices5/ldaps.protocol
 share/locale/ar/LC_MESSAGES/kio_ldap.mo
 share/locale/ar/LC_MESSAGES/libkldap5.mo
-share/locale/ast/LC_MESSAGES/kio_ldap.mo
-share/locale/ast/LC_MESSAGES/libkldap5.mo
 share/locale/bg/LC_MESSAGES/kio_ldap.mo
 share/locale/bs/LC_MESSAGES/kio_ldap.mo
 share/locale/bs/LC_MESSAGES/libkldap5.mo
@@ -167,3 +165,5 @@ share/locale/zh_CN/LC_MESSAGES/kio_ldap.mo
 share/locale/zh_CN/LC_MESSAGES/libkldap5.mo
 share/locale/zh_TW/LC_MESSAGES/kio_ldap.mo
 share/locale/zh_TW/LC_MESSAGES/libkldap5.mo
+share/qlogging-categories5/kldap.categories
+share/qlogging-categories5/kldap.renamecategories
