@@ -1,0 +1,15 @@
+$NetBSD$
+
+Honor LDFLAGS (fixes RELRO).
+
+--- Makefile.orig	2015-05-24 22:26:34.000000000 +0000
++++ Makefile
+@@ -69,7 +68,7 @@ test: $(BINARY) test.bin
+ 	@sh -c "time ./$(BINARY) test.bin 1000000 13fbda0d"
+ 
+ $(BINARY): findcrcs.cc md5.c md5.h crcutil-1.0 crcutil.a
+-	$(BINPREFIX)g++ -O3 -D_FILE_OFFSET_BITS=64 -Wall -o $@ $(EXEFLAGS) findcrcs.cc md5.c crcutil.a -Icrcutil-1.0/code -Icrcutil-1.0/examples
++	$(BINPREFIX)g++ -O3 -D_FILE_OFFSET_BITS=64 -Wall -o $@ $(EXEFLAGS) $(LDFLAGS) findcrcs.cc md5.c crcutil.a -Icrcutil-1.0/code -Icrcutil-1.0/examples
+ 	$(BINPREFIX)strip -s $@
+ 
+ crcutil.a: crcutil-1.0
