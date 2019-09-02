@@ -1,0 +1,9 @@
+$NetBSD$
+
+--- gdb/config/powerpc/ppc64-nbsd.mh.orig	2019-09-02 20:02:23.496966514 +0000
++++ gdb/config/powerpc/ppc64-nbsd.mh
+@@ -0,0 +1,4 @@
++# Host: NetBSD/powerpc64
++NATDEPFILES= fork-child.o inf-ptrace.o nbsd-nat.o ppc-nbsd-nat.o bsd-kvm.o
++
++LOADLIBES= -lkvm

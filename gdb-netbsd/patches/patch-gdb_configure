@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- gdb/configure.orig	2019-07-16 00:00:27.000000000 +0000
++++ gdb/configure
+@@ -13532,6 +13532,9 @@ if ${am_cv_langinfo_codeset+:} false; th
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <sys/param.h>
++#define _KMEMUSER
++#include <sys/lwp.h>
+ #include <langinfo.h>
+ int
+ main ()
+@@ -13998,6 +14001,7 @@ if ${gdb_cv_struct_lwp+:} false; then :
+ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#define _KMEMUSER
+ #include <sys/param.h>
+ #define _KMEMUSER
+ #include <sys/lwp.h>

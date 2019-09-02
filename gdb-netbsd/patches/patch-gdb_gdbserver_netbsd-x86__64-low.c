@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gdb/gdbserver/netbsd-x86_64-low.c.orig	2019-08-12 16:19:29.741931595 +0000
+--- gdb/gdbserver/netbsd-x86_64-low.c.orig	2019-09-02 20:02:23.503455942 +0000
 +++ gdb/gdbserver/netbsd-x86_64-low.c
 @@ -0,0 +1,383 @@
 +/* Copyright (C) 2010-2019 Free Software Foundation, Inc.
