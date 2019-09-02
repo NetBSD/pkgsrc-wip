@@ -6,7 +6,6 @@ bin/emacs-${PKGVERSION}
 bin/emacsclient
 bin/etags
 include/emacs-module.h
-info/ada-mode.info.gz
 info/auth.info.gz
 info/autotype.info.gz
 info/bovine.info.gz
@@ -3344,14 +3343,6 @@ share/emacs/${PKGVERSION}/lisp/proced.el.gz
 share/emacs/${PKGVERSION}/lisp/proced.elc
 share/emacs/${PKGVERSION}/lisp/profiler.el.gz
 share/emacs/${PKGVERSION}/lisp/profiler.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-mode.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-prj.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-prj.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-stmt.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-stmt.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-xref.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/ada-xref.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/antlr-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/antlr-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/asm-mode.el.gz
