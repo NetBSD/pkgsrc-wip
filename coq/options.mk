@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS= coqide
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 CONFIGURE_ARGS+=	-with-doc yes
 PLIST.doc=		yes
 BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin

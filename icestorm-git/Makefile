@@ -14,7 +14,7 @@ LICENSE=	mit
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config gmake
 LIBS+=			-lm -lstdc++
-PYTHON_VERSIONS_ACCEPTED= 37 36
+PYTHON_VERSIONS_INCOMPATIBLE= 27
 
 WRKSRC=			${WRKDIR}/icestorm-${GITHUB_TAG}
 

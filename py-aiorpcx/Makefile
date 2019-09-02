@@ -11,7 +11,7 @@ COMMENT=	Generic async RPC implementation, including JSON-RPC
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-websockets-[0-9]*:../../www/py-websockets
 
