@@ -19,7 +19,7 @@ USE_LIBTOOL=			yes
 USE_TOOLS+=			pkg-config
 REPLACE_PYTHON=			dropbox.in
 REPLACE_PYTHON+=		rst2man.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2, py-docutils
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2, py-docutils
 
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

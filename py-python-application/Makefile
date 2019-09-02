@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.4.1
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.4.1
 
 USE_LANGUAGES=	# none
 

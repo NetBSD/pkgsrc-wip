@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 3.9.2
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.9.2
 
 SUBST_CLASSES+=         paths
 SUBST_MESSAGE.paths=    Substituting pkgsrc paths

@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8:../../wip/py-simplegeneric
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2, py-gobject
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/egg.mk"

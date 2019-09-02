@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 PKGCONFIG_OVERRIDE+=	pywebkitgtk.pc.in
 

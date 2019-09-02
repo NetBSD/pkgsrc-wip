@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/keyczar-python
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-m2crypto
+PYTHON_VERSIONS_ACCEPTED=	27 # py-m2crypto
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} tests/keyczar/alltests.py

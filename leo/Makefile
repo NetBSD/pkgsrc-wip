@@ -13,10 +13,9 @@ COMMENT=		Programmer's editor and a flexible browser
 DEPENDS+=		${PYPKGPREFIX}-docutils>=0.3.9:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-
 NO_BUILD=	yes
 REPLACE_PYTHON=	src/leo.py scripts/LinixInstall.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-docutils
+PYTHON_VERSIONS_ACCEPTED=	27 # py-docutils
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 

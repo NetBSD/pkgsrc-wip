@@ -15,7 +15,7 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-wxWidgets
+PYTHON_VERSIONS_ACCEPTED=	27 # py-wxWidgets
 
 INSTALLATION_DIRS=	share/applications share/pythontoolkit/icons
 

@@ -11,7 +11,7 @@ COMMENT=	Python modules for Analysis of Climate Variability
 LICENSE=	gnu-gpl-v2
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-Numeric
+PYTHON_VERSIONS_ACCEPTED=	27 # py-Numeric
 
 INSTALLATION_DIRS=	bin
 

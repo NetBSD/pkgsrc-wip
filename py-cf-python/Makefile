@@ -10,7 +10,7 @@ HOMEPAGE=	http://cfpython.bitbucket.org/
 COMMENT=	Python interface to the CF data model
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37
+PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy

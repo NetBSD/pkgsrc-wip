@@ -8,6 +8,6 @@ PKG_SUGGESTED_OPTIONS=	python
 
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
-PYTHON_VERSIONS_INCOMPATIBLE=	 36 37
+PYTHON_VERSIONS_ACCEPTED=	 27
 .include "../../lang/python/application.mk"
 .endif

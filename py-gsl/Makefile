@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-Numeric, py-numarray
+PYTHON_VERSIONS_ACCEPTED=	27 # py-Numeric, py-numarray
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_test.py

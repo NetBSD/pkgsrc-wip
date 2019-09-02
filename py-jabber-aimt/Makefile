@@ -30,7 +30,7 @@ REPLACE_PYTHON+=		PyAIMt.py
 REPLACE_PYTHON+=		tools/infodump.py
 REPLACE_PYTHON+=		tools/managessi.py
 REPLACE_PYTHON+=		tools/migrate.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-imaging
+PYTHON_VERSIONS_ACCEPTED=	27 # py-imaging
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

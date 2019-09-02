@@ -15,7 +15,7 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # as of 0.4.9.2
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.4.9.2
 
 USE_LANGUAGES=	# none
 

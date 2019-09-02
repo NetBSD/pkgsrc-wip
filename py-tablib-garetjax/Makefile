@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.9.12
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.12
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

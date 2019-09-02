@@ -56,7 +56,7 @@ REPLACE_PYTHON+=	kallithea/lib/dbmigrate/migrate/versioning/templates/*/*.py_tmp
 
 USE_PKGLOCALEDIR=		yes
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # as of 0.2.2
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.2.2
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

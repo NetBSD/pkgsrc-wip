@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2
 
 .include "options.mk"
 

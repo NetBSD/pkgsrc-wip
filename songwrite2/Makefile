@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 USE_PKGLOCALEDIR=		yes
 USE_LANGUAGES=			# none
 BUILD_OPTIONS=			# blank
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2, py-EditObj2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2, py-EditObj2
 
 #INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/locale/en/LC_MESSAGES/
 #INSTALLATION_DIRS+=	share/locale/fr/LC_MESSAGES share/${PKGBASE}

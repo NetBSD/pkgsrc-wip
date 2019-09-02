@@ -20,7 +20,7 @@ USE_TOOLS+=	intltool
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-ORBit via py-gnome2, py-gtk2, py-gobject
+PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2, py-gtk2, py-gobject
 
 GCONF_SCHEMAS+=	extra/gnome-activity-journal.schemas
 

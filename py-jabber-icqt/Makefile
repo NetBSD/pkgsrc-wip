@@ -38,7 +38,7 @@ REPLACE_PYTHON+=		PyICQt.py
 REPLACE_PYTHON+=		tools/infodump.py
 REPLACE_PYTHON+=		tools/managessi.py
 REPLACE_PYTHON+=		tools/migrate.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-imaging
+PYTHON_VERSIONS_ACCEPTED=	27 # py-imaging
 
 TRANSPORTDIR=		${JABBER_TRANSDIR}/pyicqt
 

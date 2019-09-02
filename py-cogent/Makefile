@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.5.6:../../databases/py-sqlalchemy
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-pyrex
+PYTHON_VERSIONS_ACCEPTED=	27 # py-pyrex
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} runtests.py

@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib>=0.87.2:../../graphics/py-matplotlib
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-imaging
+PYTHON_VERSIONS_ACCEPTED=	27 # py-imaging
 
 BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.12.1
 .include "../../devel/py-cython/buildlink3.mk"

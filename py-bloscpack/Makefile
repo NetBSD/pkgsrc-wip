@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-blosc>=1.2.3:../../wip/py-blosc
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # as of 0.6.0
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.6.0
 
 USE_LANGUAGES=	# none
 

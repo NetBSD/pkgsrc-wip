@@ -16,7 +16,7 @@ DEPENDS+=		${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
 
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 TARGET_DIR=		${PREFIX}/${PYSITELIB}/Pythonol
 SCRIPTNAME=		${PREFIX}/bin/pythonol

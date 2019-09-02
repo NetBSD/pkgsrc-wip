@@ -55,7 +55,7 @@ PKG_SYSCONFSUBDIR=	qemu
 
 REPLACE_PERL+=		scripts/texi2pod.pl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported yet as of 2.10.0
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported yet as of 2.10.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 

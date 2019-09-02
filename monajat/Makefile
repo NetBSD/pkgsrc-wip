@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-notify, py-gtk2, py-gobject
+PYTHON_VERSIONS_ACCEPTED=	27 # py-notify, py-gtk2, py-gobject
 
 INSTALLATION_DIRS+=	bin
 

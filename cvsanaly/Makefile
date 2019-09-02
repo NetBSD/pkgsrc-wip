@@ -15,7 +15,7 @@ DEPENDS+=	git>=1.7.0.5:../../devel/git
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-mysqldb
+PYTHON_VERSIONS_ACCEPTED=	27 # py-mysqldb
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

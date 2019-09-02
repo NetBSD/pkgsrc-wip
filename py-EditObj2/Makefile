@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2, py-gobject
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2, py-gobject
 
 do-test:
 	${RUN} cd ${WRKSRC}/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} regtest.py

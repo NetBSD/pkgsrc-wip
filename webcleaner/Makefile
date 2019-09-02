@@ -17,7 +17,7 @@ USE_LIBTOOL=			yes
 LIBTOOL_OVERRIDE=		${WRKSRC}/libtool
 GNU_CONFIGURE=			yes
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-imaging
+PYTHON_VERSIONS_ACCEPTED=	27 # py-imaging
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}

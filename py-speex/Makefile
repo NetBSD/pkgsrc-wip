@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0:../../lang/py-pyrex
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-pyrex
+PYTHON_VERSIONS_ACCEPTED=	27 # py-pyrex
 
 .include "../../lang/python/extension.mk"
 .include "../../audio/speex/buildlink3.mk"

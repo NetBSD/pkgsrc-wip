@@ -19,7 +19,7 @@ USE_TOOLS+=		intltool msgfmt
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../lang/python/extension.mk"

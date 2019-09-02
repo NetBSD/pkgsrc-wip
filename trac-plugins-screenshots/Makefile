@@ -14,7 +14,7 @@ COMMENT=	Screenshots plugin for Trac
 
 DEPENDS+=	trac>=0.11:../../www/trac
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-imaging
+PYTHON_VERSIONS_ACCEPTED=	27 # py-imaging
 
 SVN_REV=	7703
 SVN_MOD=	screenshotsplugin/0.11

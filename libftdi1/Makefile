@@ -16,7 +16,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config #cmake
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 1.4
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.4
 
 BUILD_DEPENDS+=		libusb1-[0-9]*:../../devel/libusb1
 # It is better off to have doxygen, but

@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/calypso
 
 INSTALLATION_DIRS=	share/examples/calypso
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # as of 20160824
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 20160824
 REPLACE_PYTHON=	calypso.py
 
 post-install:

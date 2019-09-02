@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ipython>=0.10.2:../../devel/py-ipython
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-ipython
+PYTHON_VERSIONS_ACCEPTED=	27 # py-ipython
 
 post-extract:
 	${MV} ${WRKSRC}/bin/idd.py ${WRKSRC}/bin/idd.py${PYVERSSUFFIX}

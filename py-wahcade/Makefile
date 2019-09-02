@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=		yes
 USE_LANGUAGES=			# none
 USE_TOOLS+=			bash
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-imaging
+PYTHON_VERSIONS_ACCEPTED=	27 # py-imaging
 
 REPLACE_BASH+=		doc/samples/run_mess.sh
 REPLACE_PYTHON+=	*.py

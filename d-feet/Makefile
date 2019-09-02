@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # py-gtk2, py-gobject
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2, py-gobject
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

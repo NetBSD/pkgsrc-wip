@@ -23,7 +23,7 @@ WRKSRC=				${WRKDIR}
 INSTALLATION_DIRS=	bin
 
 REPLACE_PYTHON+=		ConvertToMP3.py
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 # not yet ported as of 0.6.3
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.6.3
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ConvertToMP3.py \
