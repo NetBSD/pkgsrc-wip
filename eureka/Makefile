@@ -30,7 +30,7 @@ SUBST_CLASSES+=		dwd
 SUBST_STAGE.dwd=	do-configure
 SUBST_MESSAGE.dwd=	Preparing m_files.cc file ...
 SUBST_FILES.dwd=	src/m_files.cc
-SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/DOOMWADDIR,'
+SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
