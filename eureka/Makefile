@@ -32,7 +32,7 @@ SUBST_MESSAGE.dwd=	Preparing m_files.cc file ...
 SUBST_FILES.dwd=	src/m_files.cc
 SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
-# Needed by FLTK for fl_open_uri() on X11
+# Can be used by FLTK for fl_open_uri() on X11
 DEPENDS+=			xdg-utils>=1.1:../../misc/xdg-utils
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
