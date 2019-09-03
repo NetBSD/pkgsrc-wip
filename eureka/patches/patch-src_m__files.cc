@@ -1,6 +1,8 @@
 $NetBSD$
 
---- src/m_files.cc.orig	2019-08-30 15:58:23.000000000 +0000
+Add placeholder for pkgsrc DOOMEADDIR to beginning of search list.
+
+--- src/m_files.cc.orig	2018-06-23 11:29:07.000000000 +0000
 +++ src/m_files.cc
 @@ -721,6 +721,7 @@ static const char * SearchForIWAD(const 
  		"c:/doom2",
