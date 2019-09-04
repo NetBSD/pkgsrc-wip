@@ -14,8 +14,6 @@ LICENSE=		modified-bsd AND gnu-gpl-v2
 
 CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 
-USE_LIBTOOL=		yes
-
 .include "../../news/inn/Makefile.common"
 
 # Already done in Makefile.common
@@ -61,11 +59,21 @@ CONFIGURE_ENV+=		_PATH_SH=${TOOLS_SH}
 CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT}
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD}
 USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
+USE_LIBTOOL=		yes
 
+REPLACE_PERL+=		tests/docs/pod.t
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
+# Modify GnuPG path to ${PREFIX} in pgpverify Perl script
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Preparing pgpverify.in file ...
+SUBST_FILES.prefix=	control/pgpverify.in
+SUBST_SED.prefix=	-e 's,PKGSRC_PREFIX,${PREFIX},g'
+
 DEPENDS+=		p5-GD-[0-9]*:../../graphics/p5-GD
+DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
+DEPENDS+=		p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 
 USERGROUP_PHASE=	pre-install
