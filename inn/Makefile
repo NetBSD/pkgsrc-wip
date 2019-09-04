@@ -60,6 +60,7 @@ CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT}
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD}
 USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 USE_LIBTOOL=		yes
+PYTHON_VERSIONS_ACCEPTED=	27 36 37
 
 REPLACE_PERL+=		tests/docs/pod.t
 LDFLAGS.SunOS+=		-lsocket -lnsl

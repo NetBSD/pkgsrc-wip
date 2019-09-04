@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inn
 PKG_SUPPORTED_OPTIONS=	inet6 perl python uucp
-PKG_SUGGESTED_OPTIONS=	inet6 perl
+PKG_SUGGESTED_OPTIONS=	inet6 perl python
 
 .include "../../mk/bsd.options.mk"
 

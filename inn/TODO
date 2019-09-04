@@ -12,9 +12,11 @@
 [X] gpg is now supported in addition to gpgv
     Check dependencies
     => security/gnupg provides gpg too. Use it.
-[ ] Python3 is now supported
+[X] Python3 is now supported
     Check declaration of supported Python versions
+    => Declared support for versions 2.7, 3.6 and 3.7
     Enable python option by default?
+    => Yes
 [X] OpenSSL API 1.1 is now supported
     => Added comment to Makefile for future updates
 [X] Test suite fail
