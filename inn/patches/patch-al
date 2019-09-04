@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.2 2014/08/03 17:33:34 spz Exp $
+
+--- lib/fdlimit.c.orig	2014-05-17 08:24:49.000000000 +0000
++++ lib/fdlimit.c
+@@ -59,6 +59,10 @@ setfdlimit(unsigned int limit)
+     }
+ #endif
+ 
++    /* will we mind if the limit is higher? I think not. */
++    if (rl.rlim_cur >= limit)
++	return 0;
++
+     rl.rlim_cur = limit;
+     if (limit > rl.rlim_max)
+         rl.rlim_max = limit;
