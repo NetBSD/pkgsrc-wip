@@ -14,9 +14,12 @@ LICENSE=		modified-bsd AND gnu-gpl-v2
 
 CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 
+USE_LIBTOOL=		yes
+
 .include "../../news/inn/Makefile.common"
 
-BUILD_DEFS+=		INN_DATA_DIR
+# Already done in Makefile.common
+#BUILD_DEFS+=		INN_DATA_DIR
 BUILD_DEFS+=		VARBASE
 
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}

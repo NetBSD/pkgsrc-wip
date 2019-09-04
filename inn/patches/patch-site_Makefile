@@ -1,6 +1,8 @@
-$NetBSD: patch-ah,v 1.17 2017/05/20 06:53:05 spz Exp $
+$NetBSD$
 
---- site/Makefile.orig	2016-11-27 14:03:42.000000000 +0000
+Clear macros REST_INSTALLED and SPECIAL.
+
+--- site/Makefile.orig	2019-02-07 15:02:22.000000000 +0000
 +++ site/Makefile
 @@ -75,7 +75,8 @@ REST		= \
  

@@ -5,7 +5,8 @@
 
 INN_PREFIX?=	${PREFIX}
 INN_PATHBIN?=	libexec/inn
-INN_DATA_DIR?=	${VARBASE}/news
+# Provided via mk/bsd.prefs.mk
+#INN_DATA_DIR?=	${VARBASE}/news
 INN_SPOOL?=	${INN_DATA_DIR}/spool
 
 BUILD_DEFS+=	INN_DATA_DIR

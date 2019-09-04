@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.13 2014/08/03 17:33:34 spz Exp $
+$NetBSD$
 
---- configure.orig	2014-05-17 08:24:49.000000000 +0000
+Add yacc to list of parser generators to check for in configure phase.
+
+--- configure.orig	2019-02-07 15:02:22.000000000 +0000
 +++ configure
-@@ -13018,7 +13018,7 @@ else
+@@ -14959,7 +14959,7 @@ else
    RANLIB="$ac_cv_prog_RANLIB"
  fi
  
