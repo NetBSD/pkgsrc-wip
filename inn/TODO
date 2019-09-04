@@ -6,7 +6,7 @@
 [X] Check build for RELRO support
     => Good
 [X] Check pkglints complaint about INN_DATA_DIR
-    => Fixed.
+    => Fixed
 [X] Check pkglints complaint about USE_LIBTOOL
     => Added with value yes
 [X] gpg is now supported in addition to gpgv
