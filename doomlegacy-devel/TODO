@@ -36,6 +36,7 @@ terminate the engine.
 [X] Imported proposed patchset d42_blockmap_endian.diff from upstream
     => Drop former pkgsrc patch
     => PKGREVISION not bumped (SVN based packages use build date in version)
+    => Works as expected (Reported in bugtracker for #653)
 
 
 Part 3: Torches are displayed crippled with software renderer
