@@ -1,11 +1,14 @@
-[ ] Update patches
+[X] Update patches
     They still apply (with offsets), but documentation is missing
+    => Rebuilt for 2.6.3 with new naming conventions and comments
 [X] Check PLIST
     => Added new man page man8/auth_krb5.8
 [X] Check build for RELRO support
     => Good
-[ ] Check pkglints complaint about INN_DATA_DIR
-[ ] Check pkglints complaint about USE_LIBTOOL
+[X] Check pkglints complaint about INN_DATA_DIR
+    => Fixed.
+[X] Check pkglints complaint about USE_LIBTOOL
+    => Added with value yes
 [ ] gpg is now supported in addition to gpgv
     Check dependencies
 [ ] Python3 is now supported
