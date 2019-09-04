@@ -13,6 +13,7 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 TEST_TARGET=	test
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 
 PKGCONFIG_OVERRIDE+=	library_config/libcjson_utils.pc.in
 PKGCONFIG_OVERRIDE+=	library_config/libcjson.pc.in
