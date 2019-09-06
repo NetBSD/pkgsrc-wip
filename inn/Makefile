@@ -19,11 +19,6 @@ USE_LIBTOOL=		yes
 REPLACE_PERL+=		tests/docs/pod.t
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
-.endif
-
 .include "../../news/inn/Makefile.common"
 
 # INN_DATA_DIR is added to BUILD_DEFS by Makefile.common
@@ -92,10 +87,13 @@ PKG_GECOS.${INN_USER}=	Internet\ News
 PKG_HOME.${INN_USER}=	${INN_DATA_DIR}
 PKG_SHELL.${INN_USER}=	${SH}
 
-EXAMPLEDIR=		${PREFIX}/share/examples/inn
+INN_DIRS+=		${PKG_SYSCONFDIR}
+INN_DIRS+=		${INN_DATA_DIR}
 INN_DATADIRS=		log log/OLD run tmp db spool http
 INN_SPOOLDIRS=		archive articles overview incoming incoming/bad	\
 			outgoing uniover innfeed
+
+EXAMPLEDIR=		${PREFIX}/share/examples/inn
 
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	bin
@@ -105,9 +103,6 @@ INSTALLATION_DIRS+=	${EXAMPLEDIR}/filter
 MAKE_DIRS+=		${PREFIX}/bin
 MAKE_DIRS+=		${PREFIX}/sbin
 MAKE_DIRS+=		${PREFIX}/lib
-
-INN_DIRS+=		${PKG_SYSCONFDIR}
-INN_DIRS+=		${INN_DATA_DIR}
 
 OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}
 OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}/filter
@@ -143,6 +138,7 @@ FILTERFILES=		INN.py filter_innd.py nnrpd.py nnrpd_access.py \
 			nnrpd_auth.py nnrpd_dynamic.py \
 			filter_innd.pl filter_nnrpd.pl nnrpd_access.pl \
 			nnrpd_auth.pl startup_innd.pl
+
 .for file in ${CFILES}
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
 			${INN_USER} ${INN_GROUP} 0664
