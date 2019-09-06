@@ -1,4 +1,5 @@
 Distfile is unfetchable.
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2019-11407, CVE-2019-11408, CVE-2019-11409, CVE-2019-11410
+  CVE-2019-11407, CVE-2019-11408, CVE-2019-11409, CVE-2019-11410,
+  CVE-2019-15029
