@@ -18,6 +18,12 @@ USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 USE_LIBTOOL=		yes
 REPLACE_PERL+=		tests/docs/pod.t
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+GCC_REQD+=		2.95.3
+.endif
+
 .include "../../news/inn/Makefile.common"
 
 BUILD_DEFS+=		INN_PATHBIN
@@ -48,12 +54,19 @@ CONFIGURE_ARGS+=	--enable-setgid-inews 				\
 			--with-spool-dir=${INN_SPOOL:Q}			\
 			--with-news-user=${INN_USER}			\
 			--with-news-group=${INN_GROUP}
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail
+.else
+CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
+.endif
 CONFIGURE_ENV+=		_PATH_AWK=${TOOLS_AWK}
 CONFIGURE_ENV+=		_PATH_EGREP=${TOOLS_EGREP}
 CONFIGURE_ENV+=		_PATH_SED=${TOOLS_SED}
 CONFIGURE_ENV+=		_PATH_SH=${TOOLS_SH}
 CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT}
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD}
+
+.include "options.mk"
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
@@ -72,7 +85,6 @@ DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 USERGROUP_PHASE=	pre-install
 PKG_USERS_VARS+=	INN_USER
 PKG_GROUPS_VARS+=	INN_GROUP
-
 PKG_GROUPS+=		${INN_GROUP}
 PKG_USERS+=		${INN_USER}:${INN_GROUP}
 PKG_GECOS.${INN_USER}=	Internet\ News
@@ -124,30 +136,23 @@ CFILES=			actsync.cfg actsync.ign buffindexed.conf \
 			nntpsend.ctl nocem.ctl ovdb.conf passwd.nntp \
 			inn-radius.conf readers.conf send-uucp.cf \
 			storage.conf subscriptions
-.for file in ${CFILES}
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
-			${INN_USER} ${INN_GROUP} 0664
-.endfor
-
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/active.minimal ${INN_DATA_DIR}/db/active ${INN_USER} ${INN_GROUP} 0664
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/newsgroups.minimal ${INN_DATA_DIR}/db/newsgroups ${INN_USER} ${INN_GROUP} 0664
-
 DBFILES=		active.times history
-
 HTTPFILES=		innreport.css
-
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/innreport.css ${INN_DATA_DIR}/http/innreport.css ${INN_USER} ${INN_GROUP} 0664
-
-.for file in ${DBFILES}
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${INN_DATA_DIR}/db/${file} \
-			${INN_USER} ${INN_GROUP} 0664
-.endfor
-
 FILTERFILES=		INN.py filter_innd.py nnrpd.py nnrpd_access.py \
 			nnrpd_auth.py nnrpd_dynamic.py \
 			filter_innd.pl filter_nnrpd.pl nnrpd_access.pl \
 			nnrpd_auth.pl startup_innd.pl
-
+.for file in ${CFILES}
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
+			${INN_USER} ${INN_GROUP} 0664
+.endfor
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/active.minimal ${INN_DATA_DIR}/db/active ${INN_USER} ${INN_GROUP} 0664
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/newsgroups.minimal ${INN_DATA_DIR}/db/newsgroups ${INN_USER} ${INN_GROUP} 0664
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/innreport.css ${INN_DATA_DIR}/http/innreport.css ${INN_USER} ${INN_GROUP} 0664
+.for file in ${DBFILES}
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${INN_DATA_DIR}/db/${file} \
+			${INN_USER} ${INN_GROUP} 0664
+.endfor
 .for file in ${FILTERFILES}
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/filter/${file} ${INN_PATHBIN}/filter/${file} \
 			${INN_USER} ${INN_GROUP} 0664
@@ -157,21 +162,7 @@ RCD_SCRIPTS=		innd
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail
-.else
-CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
-.endif
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
-.endif
-
-.include "options.mk"
-
-TEST_TARGET=    tests
+TEST_TARGET=		tests
 
 pre-install:
 .for file in ${CFILES} active.minimal newsgroups.minimal
