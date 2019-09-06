@@ -26,6 +26,7 @@ GCC_REQD+=		2.95.3
 
 .include "../../news/inn/Makefile.common"
 
+# INN_DATA_DIR is added to BUILD_DEFS by Makefile.common
 BUILD_DEFS+=		INN_PATHBIN
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 FILES_SUBST+=		INN_PATHBIN=${PREFIX}/${INN_PATHBIN:Q}
