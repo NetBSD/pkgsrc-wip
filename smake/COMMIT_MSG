@@ -1,0 +1,20 @@
+smake: Update to 1.3nb4.
+
+Switch to latest distfile.
+
+Changelog
+=========
+
+Release 2019-07-22:
+- RULES/*: Changes CURDIR into CURWDIR as GNU make uses CURDIR and we
+           added compatibility support to SunPro Make and smake.
+- RULES: Added configuration symlinks for FreeBSD on PowerPC
+- smake: The -C option now gives GNU make compatibility.
+         - Multiple -C options are now supported
+         - A new variable CURDIR has been implemented
+         The old implementation from May 2009 did not yet support that.
+
+Release 2019-08-13:
+- smake: Added some code to trick out GCC that warns on a so called bit
+         loss while enlarging the fastalloc() size parameter for alignment
+         purposes.
