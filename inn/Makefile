@@ -18,6 +18,8 @@ USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 USE_LIBTOOL=		yes
 REPLACE_PERL+=		tests/docs/pod.t
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../news/inn/Makefile.common"
 
@@ -156,9 +158,6 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/filter/${file} ${INN_PATHBIN}/filter/${file} \
 .endfor
 
 RCD_SCRIPTS=		innd
-
-PKG_DESTDIR_SUPPORT=	destdir
-
 TEST_TARGET=		tests
 
 pre-install:
