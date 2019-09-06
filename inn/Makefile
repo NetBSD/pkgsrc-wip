@@ -14,21 +14,17 @@ LICENSE=		modified-bsd AND gnu-gpl-v2
 
 CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 
+USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
+USE_LIBTOOL=		yes
+REPLACE_PERL+=		tests/docs/pod.t
+
 .include "../../news/inn/Makefile.common"
 
-# Already done in Makefile.common
-#BUILD_DEFS+=		INN_DATA_DIR
-BUILD_DEFS+=		VARBASE
-
-FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
-
 BUILD_DEFS+=		INN_PATHBIN
+FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 FILES_SUBST+=		INN_PATHBIN=${PREFIX}/${INN_PATHBIN:Q}
-
 MESSAGE_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
-
 PLIST_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
-
 PKG_SYSCONFSUBDIR=	inn
 
 GNU_CONFIGURE=		YES
@@ -58,10 +54,7 @@ CONFIGURE_ENV+=		_PATH_SED=${TOOLS_SED}
 CONFIGURE_ENV+=		_PATH_SH=${TOOLS_SH}
 CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT}
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD}
-USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
-USE_LIBTOOL=		yes
 
-REPLACE_PERL+=		tests/docs/pod.t
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # Modify GnuPG path to ${PREFIX} in pgpverify Perl script
