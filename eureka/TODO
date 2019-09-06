@@ -2,3 +2,5 @@
 [X] Patch internal search path for program files to include ${PREFIX}/share
 [X] Patch internal search path for IWADs to include ${PREFIX}/${DOOMWADDIR}
 [X] Menu entry "Help->Online Docs" doesn't work
+[X] Test with FLTK 1.3.5
+    => Good
