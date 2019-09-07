@@ -3,17 +3,9 @@ $NetBSD$
 Rename queue to dma_queue because the struct is already defined in SunOS. 
 Include strings.h for bzero and bcopy function.
 
---- mail.c.orig	2016-02-07 12:41:49.000000000 +0000
+--- mail.c.orig	2019-08-20 09:52:52.000000000 +0000
 +++ mail.c
-@@ -36,6 +36,7 @@
- #include <errno.h>
- #include <inttypes.h>
- #include <signal.h>
-+#include <strings.h>
- #include <syslog.h>
- #include <unistd.h>
- 
-@@ -44,7 +45,7 @@
+@@ -46,7 +46,7 @@
  void
  bounce(struct qitem *it, const char *reason)
  {
@@ -22,7 +14,7 @@ Include strings.h for bzero and bcopy function.
  	char line[1000];
  	size_t pos;
  	int error;
-@@ -160,7 +161,7 @@ struct parse_state {
+@@ -162,7 +162,7 @@ struct parse_state {
   * XXX local addresses will need treatment
   */
  static int
@@ -31,7 +23,7 @@ Include strings.h for bzero and bcopy function.
  {
  	char *addr;
  
-@@ -342,7 +343,7 @@ newaddr:
+@@ -344,7 +344,7 @@ newaddr:
  }
  
  int

@@ -2,17 +2,9 @@ $NetBSD$
 
 Rename queue to dma_queue because the struct is already defined in SunOS. 
 
---- spool.c.orig	2016-02-07 12:41:49.000000000 +0000
+--- spool.c.orig	2019-08-20 09:52:52.000000000 +0000
 +++ spool.c
-@@ -46,6 +46,7 @@
- #include <inttypes.h>
- #include <unistd.h>
- #include <syslog.h>
-+#include <strings.h>
- 
- #include "dma.h"
- 
-@@ -69,7 +70,7 @@
+@@ -72,7 +72,7 @@
   */
  
  int
@@ -21,7 +13,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	char fn[PATH_MAX+1];
  	struct stat st;
-@@ -151,10 +152,10 @@ writequeuef(struct qitem *it)
+@@ -154,10 +154,10 @@ writequeuef(struct qitem *it)
  }
  
  static struct qitem *
@@ -34,7 +26,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  	FILE *queuef = NULL;
  	char *s;
  	char *queueid = NULL, *sender = NULL, *addr = NULL;
-@@ -229,7 +230,7 @@ out:
+@@ -232,7 +232,7 @@ out:
  }
  
  int
@@ -43,7 +35,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	struct stat st;
  	struct qitem *it;
-@@ -276,7 +277,7 @@ delfiles:
+@@ -279,7 +279,7 @@ delfiles:
  }
  
  int
@@ -52,7 +44,7 @@ Rename queue to dma_queue because the struct is already defined in SunOS.
  {
  	struct stat sb;
  	struct qitem *it;
-@@ -382,7 +383,7 @@ fail:
+@@ -385,7 +385,7 @@ fail:
  }
  
  void
