@@ -4593,7 +4593,6 @@ SUBDIR+=	structure
 SUBDIR+=	stumpwm
 SUBDIR+=	suitesparse
 SUBDIR+=	sulley
-SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
 SUBDIR+=	sunxi-mali-fb
 SUBDIR+=	supercat
