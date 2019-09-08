@@ -1,0 +1,26 @@
+$NetBSD$
+
+Add support for curses(3).
+
+--- src/config.h.in.orig	2017-01-28 21:11:20.000000000 +0000
++++ src/config.h.in
+@@ -6,6 +6,9 @@
+ /* C support */
+ #undef HAVE_C
+ 
++/* Define to 1 if you have the <curses.h> header file. */
++#undef HAVE_CURSES_H
++
+ /* Define to 1 if you have the <dlfcn.h> header file. */
+ #undef HAVE_DLFCN_H
+ 
+@@ -21,6 +24,9 @@
+ /* Define to 1 if you have the `curl' library (-lcurl). */
+ #undef HAVE_LIBCURL
+ 
++/* Define to 1 if you have the `curses' library (-lcurses). */
++#undef HAVE_LIBCURSES
++
+ /* Have libgpgme */
+ #undef HAVE_LIBGPGME
+ 
