@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	libmesode-0.9.1
-PKGREVISION=	1
+DISTNAME=	libmesode-0.9.2
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=boothj5/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=profanity-im/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/boothj5/libmesode

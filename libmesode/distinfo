@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (libmesode-0.9.1.tar.gz) = e9ab459e2fe2450d449545ad1ae08c42fe5579eb
-RMD160 (libmesode-0.9.1.tar.gz) = 4610078ecc61563e46729ce2e10939a932d69d81
-SHA512 (libmesode-0.9.1.tar.gz) = b549c17e61aa3e1d80a93783ac47d5a9e87767876173500c30613e9326d10ed413f284c7435b4f24c028a51f8a8d9be913cd7de9baaa5b358cac5951496d9076
-Size (libmesode-0.9.1.tar.gz) = 142880 bytes
+SHA1 (libmesode-0.9.2.tar.gz) = a721b8ac5fbfe3235f3757d26b0913afbf824b83
+RMD160 (libmesode-0.9.2.tar.gz) = 47d38c2f8cbf4f9b23ffa47e614b288c0032c025
+SHA512 (libmesode-0.9.2.tar.gz) = 019f548557fcbb0943e49472a9eb36ce8aaf6caea3a443004f41339987a721073c20b9d8f3eec79c92914e25dffcb26ef1fd43921ee0df76a4d99fc474f87ba5
+Size (libmesode-0.9.2.tar.gz) = 148867 bytes
 SHA1 (patch-configure.ac) = 72f6d77a9f0edbe6f681bb872e7f0ce1fefe210a
