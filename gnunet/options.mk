@@ -19,7 +19,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 # build the doc output. XXX: See README.
 .if !empty(PKG_OPTIONS:Mdoc)
 USE_TOOLS+=		makeinfo
-INFO_FILES=   yes
+INFO_FILES=		yes
 CONFIGURE_ARGS+=	--enable-documentation
 PLIST.doc=		yes
 .else

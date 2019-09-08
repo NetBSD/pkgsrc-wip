@@ -157,7 +157,9 @@ include/gnunet/gnunet_util_lib.h
 include/gnunet/gnunet_vpn_service.h
 include/gnunet/platform.h
 include/gnunet/plibc.h
+lib/gnunet/libexec/gnunet-communicator-tcp
 lib/gnunet/libexec/gnunet-communicator-unix
+lib/gnunet/libexec/gnunet-communicator-udp
 lib/gnunet/libexec/gnunet-daemon-exit
 lib/gnunet/libexec/gnunet-daemon-hostlist
 lib/gnunet/libexec/gnunet-daemon-latency-logger
@@ -228,8 +230,10 @@ lib/gnunet/libgnunet_plugin_datastore_sqlite.la
 lib/gnunet/libgnunet_plugin_gnsrecord_dns.la
 lib/gnunet/libgnunet_plugin_gnsrecord_gns.la
 lib/gnunet/libgnunet_plugin_gnsrecord_reclaim.la
+lib/gnunet/libgnunet_plugin_namestore_flat.a
+lib/gnunet/libgnunet_plugin_namestore_flat.la
+lib/gnunet/libgnunet_plugin_namestore_flat.so
 lib/gnunet/libgnunet_plugin_namecache_sqlite.la
-lib/gnunet/libgnunet_plugin_namestore_heap.la
 lib/gnunet/libgnunet_plugin_namestore_sqlite.la
 lib/gnunet/libgnunet_plugin_peerstore_sqlite.la
 lib/gnunet/libgnunet_plugin_reclaim_attribute_gnuid.la
@@ -435,7 +439,7 @@ share/gnunet/gns-form.xslt
 share/gnunet/gnunet-logo-color.png
 share/gnunet/gnunet-logo.pdf
 share/gnunet/hellos/Y924NSHMMZ1N1SQCE5TXF93ED6S6JY311K0QT86G9WJC68F6XVZ0
-share/gnunet/openssl.cnf
+share/gnunet/gnunet-gns-proxy-ca.template
 share/gnunet/services/openrc/gnunet.initd
 share/gnunet/services/systemd/gnunet.service
 share/gnunet/testing_hostkeys.ecc

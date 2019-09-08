@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.11.5
+DISTNAME=		gnunet-0.11.6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://gnunet.org/
 COMMENT=		Framework for secure P2P networking
 LICENSE=		gnu-agpl-v3
@@ -21,12 +21,12 @@ LDFLAGS+=		-lpthread -lintl
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+BUILD_DEFS+=		VARBASE
+
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=	--with-gnunetdns=gnunetdns
-
-BUILD_DEFS+=			VARBASE
 
 GNUNET_DIR?=			${VARBASE}/chroot/gnunet
 GNUNET_LOG_DIR?=		${VARBASE}/log/gnunet
