@@ -1,7 +1,19 @@
 $NetBSD$
 
+- Use `=' operator for test(1)
+- Simplify check for readline
+
 --- configure.ac.orig	2019-07-31 08:53:34.000000000 +0000
 +++ configure.ac
+@@ -81,7 +81,7 @@ elif test "x$enable_python_plugins" != x
+         rm -f Python.framework
+         ln -s $PYTHON_FRAMEWORK Python.framework ])
+     AC_CHECK_PROG(PYTHON_CONFIG_EXISTS, python-config, yes, no)
+-    if test "$PYTHON_CONFIG_EXISTS" == "yes"; then
++    if test "$PYTHON_CONFIG_EXISTS" = "yes"; then
+         AX_PYTHON_DEVEL
+         AM_CONDITIONAL([BUILD_PYTHON_API], [true])
+         AC_DEFINE([HAVE_PYTHON], [1], [Python support])
 @@ -179,23 +179,8 @@ AS_IF([test "x$enable_icons" != xno],
              [AC_MSG_ERROR([gtk+-2.0 or higher is required for icons])],
              [AC_MSG_NOTICE([gtk+-2.0 not found, icons not enabled])])])])

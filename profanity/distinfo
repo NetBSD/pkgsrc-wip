@@ -4,4 +4,4 @@ SHA1 (profanity-0.7.0.tar.gz) = da71a8352a8a34db29f0fdbf6e11abe5ef55bbc3
 RMD160 (profanity-0.7.0.tar.gz) = b136b747aef0e7ac32f37565647d2b701d98318a
 SHA512 (profanity-0.7.0.tar.gz) = d4be02ad560f53ba59f6d814b6489fe8b7fe59a9c26e72867e23aa33d8badadfd518bc27a1f63266cb5f651f422a5de70f474ff551f5e97f5eab7b643f3a9106
 Size (profanity-0.7.0.tar.gz) = 789373 bytes
-SHA1 (patch-configure.ac) = 4d9d60f2a354cae7f9c817a6afdd4ba1027d9ec1
+SHA1 (patch-configure.ac) = 5bf25dd8a896c8fb4fe42c0c573539a15aac0cef
