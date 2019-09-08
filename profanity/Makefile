@@ -1,12 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	profanity-0.5.1
-PKGREVISION=	2
+DISTNAME=	profanity-0.7.0
 CATEGORIES=	chat
-MASTER_SITES=	http://www.profanity.im/
+MASTER_SITES=	http://profanity-im.github.io/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.profanity.im/
+HOMEPAGE=	http://profanity-im.github.io/
 COMMENT=	Console based XMPP client inspired by irssi
 LICENSE=	gnu-gpl-v3
 
