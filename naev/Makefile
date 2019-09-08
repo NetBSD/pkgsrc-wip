@@ -38,6 +38,8 @@ pre-configure:
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../lang/lua51/buildlink3.mk"
