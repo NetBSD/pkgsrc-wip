@@ -26,7 +26,6 @@ OWN_DIRS_PERMS+=	${MUNIN_STATEDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0755
 REPLACE_PERL+=		node/sbin/munin-node
 REPLACE_PERL+=		node/sbin/munin-node-configure
 REPLACE_PERL+=		node/sbin/munin-run
-REPLACE_PERL+=		node/sbin/munin-sched
 REPLACE_PERL+=		plugins/node.d/slony_lag_.in
 
 CONF_FILES+=		${EGDIR}/munin-node.conf ${PKG_SYSCONFDIR}/munin-node.conf

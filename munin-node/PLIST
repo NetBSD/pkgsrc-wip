@@ -191,7 +191,6 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Configure/Plugin.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Configure/PluginList.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Logger.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/OS.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/ProxySpooler.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/SNMPConfig.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Server.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Service.pm
@@ -205,7 +204,6 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Plugin/SNMP.pm
 man/man1/munin-node-configure.1
 man/man1/munin-node.1
 man/man1/munin-run.1
-man/man1/munin-sched.1
 man/man1/munindoc.1
 man/man3/Munin::Node::Config.3
 man/man3/Munin::Node::Configure::Debug.3
@@ -215,7 +213,6 @@ man/man3/Munin::Node::Configure::Plugin.3
 man/man3/Munin::Node::Configure::PluginList.3
 man/man3/Munin::Node::Logger.3
 man/man3/Munin::Node::OS.3
-man/man3/Munin::Node::ProxySpooler.3
 man/man3/Munin::Node::SNMPConfig.3
 man/man3/Munin::Node::Server.3
 man/man3/Munin::Node::Service.3
@@ -229,7 +226,6 @@ man/man3/Munin::Plugin::SNMP.3
 sbin/munin-node
 sbin/munin-node-configure
 sbin/munin-run
-sbin/munin-sched
 share/examples/munin/munin-node.conf
 share/examples/rc.d/munin-node
 @pkgdir etc/munin/plugin-conf.d
