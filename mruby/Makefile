@@ -1,0 +1,24 @@
+# $NetBSD$
+
+DISTNAME=	mruby-2.0.1
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mruby/}
+
+MAINTAINER=	fcambus@NetBSD.org
+HOMEPAGE=	https://mruby.org/
+COMMENT=	Lightweight implementation of the Ruby language
+LICENSE=	mit
+
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	bison
+
+DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
+
+REPLACE_RUBY=	minirake
+
+do-build:
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./minirake --verbose
+
+.include "../../lang/ruby/replace.mk"
+.include "../../lang/ruby/rubyversion.mk"
+.include "../../mk/bsd.pkg.mk"
