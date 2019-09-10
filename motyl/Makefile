@@ -21,12 +21,11 @@ REPLACE_RUBY=	bin/motyl
 
 DOCDIR=		share/doc/motyl
 
-AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	bin ${DOCDIR}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/motyl ${DESTDIR}${PREFIX}/bin
-	${RUN}${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
-.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
