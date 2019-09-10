@@ -26,7 +26,7 @@ LDFLAGS+=	-lexecinfo
 .include "../../graphics/png/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
