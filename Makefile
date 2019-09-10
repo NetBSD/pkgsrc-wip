@@ -2081,6 +2081,7 @@ SUBDIR+=	llilc-git
 SUBDIR+=	llvm-dfbsd
 SUBDIR+=	lmdbg-current
 SUBDIR+=	lmod
+SUBDIR+=	lnd
 SUBDIR+=	logfmon-git
 SUBDIR+=	logrotate-git
 SUBDIR+=	logwatch
@@ -5100,7 +5101,6 @@ SUBDIR+=	zmap
 SUBDIR+=	zola
 SUBDIR+=	zoneminder
 SUBDIR+=	zvbi
-SUBDIR+=	lnd
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
