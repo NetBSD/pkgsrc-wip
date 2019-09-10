@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (lnd-source-v0.7.1-beta.tar.gz) = 7c44ce1e1a398e4a595b099aa2877168ad9ed5ac
+RMD160 (lnd-source-v0.7.1-beta.tar.gz) = 6a125db403b5b4c9310e8aa653a6c34d4998092b
+SHA512 (lnd-source-v0.7.1-beta.tar.gz) = e1b8ce9ce257c50d8da9d7cf7f9668856971a912bc19c150dd3ddae1275f5796d17a3224d7fd48a1b37377a1f5156871348e7375e653eb28d33c91bb3799792d
+Size (lnd-source-v0.7.1-beta.tar.gz) = 2011855 bytes
+SHA1 (vendor.tar.gz) = 23649c47b9121c1eb604721c3ecdaa4aa6210009
+RMD160 (vendor.tar.gz) = 16b2acc24e1f83cb22aada3a3d4dee7e60bc63f9
+SHA512 (vendor.tar.gz) = 9a46706dafb58f4330d98896606b56497cf304f68e49f0247c0fb1721c345c7644fd71dee409bd1f805df14606952bfbdd2a841d14b285f1909be220166106f9
+Size (vendor.tar.gz) = 5595511 bytes
+SHA1 (patch-btcwallet_internal_prompt_prompt.go) = 2241e0c6ddd3725709afcba640c2471902eb36ff
+SHA1 (patch-btcwallet_snacl_snacl.go) = 893b6f497549b4e9bc39f90313b50996f09a1cb0

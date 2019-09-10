@@ -5100,6 +5100,7 @@ SUBDIR+=	zmap
 SUBDIR+=	zola
 SUBDIR+=	zoneminder
 SUBDIR+=	zvbi
+SUBDIR+=	lnd
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
