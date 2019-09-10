@@ -84,7 +84,6 @@ SUBDIR+=	adjustmtu
 SUBDIR+=	adms
 SUBDIR+=	admsmb
 SUBDIR+=	adobe-source-sans-pro-ttf-otf
-SUBDIR+=	adplay
 SUBDIR+=	advancemame
 SUBDIR+=	ae-fonts-decorative
 SUBDIR+=	aegis-devel
