@@ -2249,7 +2249,6 @@ SUBDIR+=	morse
 SUBDIR+=	mothur
 SUBDIR+=	motion
 SUBDIR+=	motti
-SUBDIR+=	motyl
 SUBDIR+=	mousetweaks
 SUBDIR+=	mozart
 SUBDIR+=	mozjpeg
