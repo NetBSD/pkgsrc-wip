@@ -1,0 +1,340 @@
+smake: Update to 1.6.1
+
+Switch to latest distfile.
+Update PLIST.
+
+Changelog
+=========
+
+Release 2019-03-29:
+- libschily: the lutimens() emulation no longer returns ENOSYS in case
+  that the lstat() call fails, since this error code may e.g. be
+  ENAMETOOLONG and used as an important indicator for long path name
+  handling.
+
+  This bug caused incorrect behavior when star extracted long pathnames
+  on a platform without utimensat().
+
+- star: The code restructuring to openat() from Summer 2018 did not
+  only cause a noticeable speed up even when not using -find, it at
+  the same time resulted in a wrong error message when a file type
+  was seen that is not archivable (e.g. a socket while using the USTAR
+  format). The correct message was something like "Unsupported filetype",
+  while the bug caused a "file not found " message. This has been fixed
+  by adding a new parameter "fd" to the function stat_to_info().
+
+- star: header.c::get_xhtype() we did forgot to initialize:
+
+     finfo.f_devminorbits
+
+  and
+
+     finfo.f_xflags
+
+  This is now done.
+
+- star: The USTAR format now is able to create base-256 values in
+  the field "t_devmajor". "t_devminor" did already support base-256.
+
+- star: The GNU tar format now is able to create base-256 values in
+  the fields "t_devmajor" and "t_devminor".
+
+- star: The man page star.4 now mentions which fileds may have
+  base-256 numbers.
+
+- star: The man page star.4 now longer contains the doubled "field field"
+  in the explanation of the added UID/GID number for ACLs.
+
+- star: The man page star.4 now has a better description for the additional
+  numeric fields in the ACL entries to prevent GNU tar from continuing
+  with it's incompatible ACL implementation.
+
+- star: New ACL reference archives for the ultra compact format, that has
+  been defined together with the libachive people, have been added to the
+  directory testscripts/:
+
+  acl-nfsv4-compact-test.tar.gz
+  acl-nfsv4-compact-test2.tar.gz
+  acl-nfsv4-compact-test3.tar.gz
+  acl-nfsv4-compact-test4.tar.gz
+  acl-nfsv4-compact-test5.tar.gz
+
+- star: Linux now uses the new <linux/fs.h> instead of <ext2/ext2_fs.h>
+  to retrieve file flags.
+
+  Thanks to a hint from Martin Matuska <martin@matuska.org> from the
+  libarchive team.
+
+- star: Support for the following new BSD Flags:
+
+     compressed hidden offline rdonly reparse sparse system
+
+  has been added.
+
+  Thanks to a hint from Martin Matuska <martin@matuska.org> from the
+  libarchive team.
+
+- star: Support for the following new Linux flags:
+
+     dirsync nocow notail projinherit topdir
+
+  has been added.
+
+  Thanks to a hint from Martin Matuska <martin@matuska.org> from the
+  libarchive team.
+
+- star: Support for reading non-comliant libarchive tarballs that use.
+
+     "securedeletion" or "journal"
+
+  instead of the documented text has been added. This was used by
+  libarchive until March 20, when libarchive has been fixed. We introduce
+  the above names for compatibility with old TARs created by libarchive.
+
+- star: When an "old star" archive is read and this archive is from a system
+  like FreeBSD with non-continous minor bits, star no longer warns unless
+  there is a device file in the archive.
+
+- star: unit tests: the scripts now contain
+
+     LC_ALL=C export LC_ALL
+
+  instead of just LC_ALL=C to make the environment exported.
+
+- star/libstrar: The case where iconv() returns -1 and sets errno to E2BIG
+  is now handled correctly.
+
+- star: The testscripts/ directory now contains the tar test archives
+  from the portability tests from Michal Gorny. Check
+
+     http://cdrtools.sourceforge.net/private/portability-of-tar-features.html
+
+  for an updated (to match star-1.6) variant of the results from the portability
+  tests from Michal Gorny.
+
+- star: older versions of star did not print the messages:
+
+     "WARNING: Archive is 'xxx' compressed, trying to use the -xxx option.\n"
+
+  in case that the option -print-artype was in use. Later versions that
+  added support for more than "gzip" and "bzip2" forgot to add the same
+  exception for the new compression methods. We now ommit this message
+  for all compression types.
+
+- star: Support for the "lzma" compression has been added.
+
+- star: Support for the "freeze2" compression has been added.
+
+- star: The compression method name list did not include the text "zstd".
+  We added the missing text.
+
+- star: The hint messages that are printed when a compressed input archive
+  is not seekable did forgot to mention "lzip" and "zstd". We added the
+  forgotten messages.
+
+- star: New unit tests check whether star is able to auto-detect and auto
+  decompress various compression formats.
+
+- star: The unit tests now include the portability tests from Michal Gorny
+
+- A new option cli=name (must be argv[1]) allows to select all
+  supported command line interfaces (star, suntar, gnutar,
+  pax, cpio) when called as star.
+
+  This is needed to be able to test all command line interfaces from
+  out unit tests since star is not installed in this case and a selection
+  from argv[0] would not work.
+
+- star: The version date is now "2019/03/20"
+
+Release 2019-04-29:
+- libfind/star: the verbose listing code has ben restructured to have
+  the file permissions in the same string as the file type.
+  This is needed to implement the POSIX pax listformat interpreter
+  format %M in future.
+
+- libfind/star: the verbose listing no longer prints "l" for mandatory
+  record locking for non-directory type file, but rather only
+  for plain files.
+
+- star: The "gnutar" emulation now prints the --help output to stdout as
+  GNU tar does.
+
+- star: The gnutar.1 man page now mentions that the GNU tar
+  options -g / -G did never work and it thus makes no sense to
+  implement them.
+
+- star: very outdated code in list.c has been removed.
+
+- star: Added new unit tests for incremental backups and restores.
+  This in special include tests that always fail with GNU tar
+  as GNU tar is not usable and never was usable for incremental
+  restores in case that the differences are more than trivial.
+
+- star: new version date 2019-04-01
+
+Release 2019-06-13:
+- star: fixed a bug in the FIFO code that mainly happened on Linux (with
+  a 1000x higher probability than it happens on Solaris). The bug was.
+  caused, as a check for a flag has been done twice instead of only once
+  where it could change it's value between both locations. As a.
+  result, star reported "star: Implementation botch: with FIFO_MEOF"
+  as the tar side of the FIFO did sometimes not wait for the FIFO_IWAIT
+  state when called as "star -multivolume -tv f=... f=... ...
+  For this reason, star incorrectly got a wakeup at the wrong location.
+
+  The bug appeared in case that star -x/-t -multivol f=.. f=.. ....
+  has been called with very small tar archives.
+
+  Thanks to Heiko Eissfeldt for reporting.
+
+- star: The FIFO code renamed the "flag" member of the "m_head" structure
+  to "gflag" for better readability.
+
+- star: The debugging code in the FIFO has been enhanced to print the
+  names of the flag bits in addition to the hex values.
+
+- star: A deadlock situation that happens once every 500000 tries on
+  Linux with multi-volume archives has been fixed.
+
+  The problem was caused by a complex condition where the get side
+  of the FIFO needs to check the EOF FIFO flag and the amount of data
+  available in the FIFO and then decide whether to wait for a wakeup or
+  not.
+
+  Since the EOF flag needs to be checked first, a context switch in
+  the get side of the FIFO could allow the put side to set the EOF flag
+  before the get side did check the fill ratio of the FIFO. This
+  caused both the get side and the put side to wait for a wakeup.
+
+  The new code introduced a new variable mp->mayoblock that is set by
+  the get side before checking for EOF. This new flags allows the
+  put side to know that the get side is just in a critical situation
+  and lets the put side wait until mp->mayoblock is no longer set,
+  which signals a stable state in the get side. This permits to
+  avoid the deadlock.
+
+- star: Note that the FIFO has been initially written as a lock free
+  design in the late 1980's. This is to allow high portability to even
+  older UNIX versions. The star FIFO works on all UNIX variants that
+  support pipes and shared memory, which is e.g. the case for
+  SunOS-4.0 from 1988. At the time the FIFO has been designed, the
+  target OS did not support multi-CPU systems and problems in the
+  FIFO first appeared with massively faster multi-CPU systems around
+  y2000. The recently detected problems all have been triggered by a
+  different context switch behavior on Linux, even though they could
+  have appeared on any OS in case that many million tries are
+  attempted.
+
+- star: bumped version to 1.6.1
+
+Release 2019-07-15:
+- star: the compress unit test no longer fails on Cygwin because the
+  gzip binary is compiled incorrectly and does not support LZW.
+  The related test is now skipped.
+
+  Thanks to Heiko Eissfeldt for reporting
+
+- star: some new unit tests failed if the schilytools source tree has
+  been installed in a directory with spaces in it's name.
+
+  Thanks to Heiko Eissfeldt for reporting
+
+- star: The unit tests for incremental backups include archives that
+  include userid/groupid and username/groupname that may not be
+  restorable on a different computer. We now ignore these ID meta.
+  data when comparing the results.
+
+  Thanks to Heiko Eissfeldt for reporting
+
+- star: When comparing nanoseconds in time stamps, star now has a mode
+  that treats time stamps as equal in case that tv_nsec % 100 == 0
+  and the rest of the nano seconds is equal. This is needd on Cygwin
+  since NTFS counts in 1/10 microseconds since Januar 1 1601.
+
+  This applies to both star -diff and the "newer" check while extracting
+  files.
+
+  Thanks to Heiko Eissfeldt for reporting
+
+- star: a new option diffopts=dnlink has been implemented to support
+  filesystems that do not follow the historic UNIX model for hard links
+  on directories.
+
+  Since Cygwin usually has a linkcount of 1 on directories, you need
+  to use "star -diff diffopts=!dnlink ..." if you like to diff the
+  meta data from a historical UNIX filesystem.
+
+  Thanks to Heiko Eissfeldt for reporting
+
+- star: The incremental backup/restore tests now use.
+  "star -diff diffopts=!dnlink ..." to make them work on Cygwin.
+
+  Thanks to Heiko Eissfeldt for reporting
+
+- star: star -c -H exustar -acl -xattr-linux .
+  did cause file not found messages from the attempt to archive the
+  Linux xattrs. This was caused by a change from July 2018 when trying to
+  optimize directory access in (non-find) create mode. The call to read
+  the Linux xattrs has now been moved to the location where in former
+  times the ACL code has already been moved.
+
+  The move is needed because there is no ACL/XATTR related function
+  that is similar to openat().
+
+- star: A similar problem with get_xattr() did exist with star -diff
+
+- star: star -diff did not compare ACLs since getinfo() no longer
+  includes a call to get_acl(). We now call get_xattr() and get_acl()
+  in diff.c
+
+- star: The Solaris ACL interface now implelements lacl() / lacl_get() /
+  lacl_set() to support very long pathnames with ACLs.
+
+- star: The Linux ACL interface now implelements lacl_get_file() /
+  lacl_set_file() to support very long pathnames with ACLs on platforms
+  that implement the withdrawn POSIX ACL draft.
+
+- star: The Linux xattr interface now implelements.
+  llgetxattr() / llsetxattr() / lllistxattr() to support very long
+  pathnames with Linux xattrs.
+
+- star: New version date
+
+Release 2019-07-22:
+- star: "pax -pe" no longer sets the variable "doxattr" as this caused
+  an error message:
+
+     "NFSv4 extended attribute files are not yet supported.\n"
+
+  that caused the OpenSolaris-ON "nightly" compilation to abort as a
+  result of that error and exit code != 0.
+
+Release 2019-08-13:
+- libschily: Various functions and *at() emulation functions call stat()
+  even though the caller does not know about that call.
+
+  This could cause a missbehavior in case that a file returns EOVERFLOW
+  with a normal stat(). We now compile these functions in unconditional
+  large file mode to overcome that problem.
+
+  The affected files are:
+
+  diropen.c lutimens.c findinpath.c linkat.c mkdirs.c searchinpath.c
+  resolvepath.c  lchmod.c renameat.c.
+
+  Note that this problem affected star(1) on platforms that do not
+  fully implement all *at() interfaces, since star started to support
+  really long path names in July 2018.
+
+- star: Star did not compile on platforms without ACLs anymore since
+  we did rearrange the code with schilytools 2019-07-15.
+
+  We now have the needed #undef USE_ACL in diff.c as well.
+
+  Thanks to Dennis Clarke for reporting.
+
+- star: Avoid a warning when a star -dump archive is unpacked on FreeBSD
+  or Linux with non-contiguous minor bits. The warning is not needed
+  since we only use SCHILY.dev in order to detect mount points but
+  not to compute the major/minor parts.
