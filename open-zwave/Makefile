@@ -10,8 +10,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenZWave/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/OpenZWave/open-zwave/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Library for Z-Wave controllers
+LICENSE=	gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${VERSION}
 USE_TOOLS+=	pkg-config gmake
