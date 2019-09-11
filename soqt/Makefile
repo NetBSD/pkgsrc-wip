@@ -22,7 +22,7 @@ USE_LANGUAGES=	c c++
 REPLACE_PERL+=	cfg/gendsp.pl cfg/doxy4win.pl
 
 .include "../../graphics/Coin/buildlink3.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
