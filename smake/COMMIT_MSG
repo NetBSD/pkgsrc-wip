@@ -8,7 +8,9 @@ Changelog
 Release 2019-07-22:
 - RULES/*: Changes CURDIR into CURWDIR as GNU make uses CURDIR and we
            added compatibility support to SunPro Make and smake.
+
 - RULES: Added configuration symlinks for FreeBSD on PowerPC
+
 - smake: The -C option now gives GNU make compatibility.
          - Multiple -C options are now supported
          - A new variable CURDIR has been implemented
