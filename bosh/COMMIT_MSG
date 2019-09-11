@@ -1,0 +1,116 @@
+bosh: Switch to latest distfile.
+
+Changelog
+=========
+
+Release 2019-03-29:
+- Bourne Shell: local(1), export(1) and readonly(1) now all support to.
+  expand the '~' character in environment variables like e.g. PATH.
+
+- Bourne Shell: Added unit tests for the tilde expansion and the related
+  changes.
+
+Release 2019-04-29:
+- libshedit/bsh/Bourne Shell: The TAB file name expansion now uses a new
+  expansion funtion that is not based on pattern matching but on strstr()
+  and thus is no longer fooled by file names that contain pattern matching
+  meta characters.
+
+- Bourne Shell: "trap -- ..." now correctly handles "--" even if the next
+  argument is "-".
+
+- Bourne Shell: trap now supports a new option -p that allows to restore
+  the whole trap state using the following commands:
+
+     old_traps=$(trap -p)
+     trap "some commands" INT QUIT
+     ...
+     eval "$old_traps"
+
+  This is possible because "trap -p" outputs the state for all signals
+  and not only for those signals that are not in the default state.
+
+  The new trap interfase was agreed on in the 2019-04-11 POSIX
+  teleconference.
+
+  Bourne Shell: The exception for "while true; do date; done | uniq -c"
+  in job control handling that has been introduced in November 2015 has
+  been refined to prevent it from causing "(bosh)" to stop from SIGTTIN.
+
+  Thanks to Robert Elz <kre@munnari.OZ.AU> for reporting.
+
+- Bourne Shell: A new #define JOB_DEBUG has been added.
+
+- Bourne Shell: The command:
+
+     (trap '' SEGV; $SHELL -c 'kill -s SEGV $$; echo survived')
+
+  caused the shell not to print "survived" because a previous exception
+  for SIGSEGV from the 1977 Bourne Shell version had not been removed
+  for the POSIX variant of the shell. The problem occured because it
+  was possible to unignore an ignored (at startup) SIGSEGV.
+
+  Thanks to Robert Elz <kre@munnari.OZ.AU> for reporting.
+
+- Bourne Shell: The code now uses SIG2STR_MAX for the size of the
+  sig2str() output buffer.
+
+- Bourne Shell: the behavior related to SIGINT on the command line
+  in the case that the history editor is enabled has been changed to
+  match the behavior of ksh. The Bourne Shell now calls trap commands
+  for SIGINT when ^C is typed on the command line.
+
+  Note that the classical Bourne Shell behavior (which is still active
+  in case the history editor has been disabled via "set +o ved") is that
+  the trap command is called after ^C is followed by a CR if both are
+  typed on a PS1 prompt.
+
+  Note: The behavior for "trap" in this area is currently not specified
+  in POSIX.
+
+- Bourne Shell: After jobcontrol has been introduced into the Bourne
+  Shell: When in jobcontrol mode, the shell could no longer get
+  signals at the same time as foreground jobs because when using
+  jobcontrol, the shell is in a different process group than the
+  foreground job.
+
+  The Bourne Shell now derives the information about a delivered signal
+  from the waitid() return data and thus is now able to work the same
+  way as it has been designed in 1977. This is the same way as ksh works.
+
+  If a foreground program catches such signals, the shell is still not
+  able to detect the signal, but it is now closer to the original
+  behavior from 1977.
+
+- Bourne Shell: new version date 2019-04-17
+
+Release 2019-05-28:
+- Bourne Shell: Similar to what ksh88 does, scripts are now checked
+  before they are run. If there is a nul byte before a newline
+  in the first 256 bytes, a file is rejected as alien binary
+  instead of trying to interpret it as a script.
+
+Release 2019-06-13:
+- Bourne Shell: A new option "set -o globskipdot" has been added.
+  If set, the entries "."  and ".." are skipped and not shown in globbing
+  results. If not set, the entries "."  and ".." are always returned,
+  even when they are not part of the readdir(3) results.
+
+- Bourne Shell: The option "set -o globskipdot" has been made the
+  new dfault behavior for "bosh", but not for "pbosh"
+
+  Note that this new shell option has been introduced as a result
+  of a related BUG discussion in the Austin Group telephone conference.
+  The background is to permit shell scripts to check whether a shell
+  grants to hide the "."  and ".." for all filesystems.
+
+Release 2019-07-15:
+- Bourne Shell: If OPTIND is set to a new value, the getopt() internal
+  variable "_sp" is now reset to 1. This is needed in order to make sure
+  that a combined option string can be parsed correctly.
+
+- Bourne Shell/libshedit/bsh: The TAB expander now again gives .. as a.
+  result if the pattern is ..
+
+  This is needed in order to let ..TAB result in ../ on the command
+  line editor.

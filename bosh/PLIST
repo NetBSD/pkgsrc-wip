@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/bosh
+man/man1/bosh.1
