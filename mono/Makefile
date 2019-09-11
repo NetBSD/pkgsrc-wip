@@ -6,7 +6,7 @@ MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mono-project.com/
+HOMEPAGE=	https://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 

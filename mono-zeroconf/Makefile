@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.banshee-project.org/mono-zeroconf/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.mono-project.com/Mono.Zeroconf
+HOMEPAGE=	https://www.mono-project.com/Mono.Zeroconf
 COMMENT=	Cross platform Zero Configuration Networking library for Mono and .NET
 LICENSE=	mit
 
