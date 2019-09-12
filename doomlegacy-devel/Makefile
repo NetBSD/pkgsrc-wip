@@ -26,8 +26,8 @@ ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
 			NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
 USE_LANGUAGES+=		c99
-
 USE_TOOLS+=		gmake
+# Dependency generation fails with parallel build
 MAKE_JOBS_SAFE=		no
 
 .include "../../wip/mk/svn-package.mk"
@@ -54,10 +54,6 @@ CFLAGS+=		-D__BIG_ENDIAN__
 DOOMWADDIR=		share/doom
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/doc/doomlegacy ${DOOMWADDIR}
 
-MESSAGE_SRC+=		MESSAGE.doomlegacy
-MESSAGE_SUBST+=		PKGNAME=${PKGNAME:C/-.*//}
-MESSAGE_SUBST+=		DOOMWADDIR_CONF="${PREFIX}/${DOOMWADDIR}"
-
 # Configure to honor environment
 SUBST_CLASSES+=		makeopt
 SUBST_STAGE.makeopt=	do-configure
@@ -73,7 +69,15 @@ SUBST_FILES.doomdef=	src/doomdef.h
 SUBST_SED.doomdef=	-e 's,LEGACYWADDIR  "/usr/local/share/games/doomlegacy",LEGACYWADDIR  "${PREFIX}/${DOOMWADDIR}",g'
 SUBST_SED.doomdef+=	-e 's,DEFWADS01  "~/games/doomlegacy/wads",DEFWADS01  "${PREFIX}/${DOOMWADDIR}",'
 
+# Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	do-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
+SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
+
 pre-configure:
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
 	cd ${WRKSRC} && ${CP} make_options_nix make_options
 
@@ -96,7 +100,11 @@ do-install:
 			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad;	\
 	cd ${WRKDIR} &&							\
 		${INSTALL_MAN} ${WRKDIR}/doomlegacy.6			\
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man6;		\
+	cd ${WRKDIR} &&							\
+		${INSTALL_DATA} INSTALL.pkgsrc				\
+			${DESTDIR}${PREFIX}/share/doc/doomlegacy/INSTALL.pkgsrc
+
 
 # Ensure that at least the shareware Episode 1 of Doom is available
 DEPENDS+=		doom1-[0-9]*:../../games/doom1
