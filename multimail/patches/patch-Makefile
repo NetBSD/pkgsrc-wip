@@ -1,6 +1,6 @@
 $NetBSD$
 
-Link against ncursesw, honour CXXFLAGS, and adapt install target for pkgsrc.
+Honour CXXFLAGS, and adapt install target for pkgsrc.
 
 --- Makefile.orig	2019-02-22 01:00:59.000000000 +0000
 +++ Makefile
@@ -22,24 +22,6 @@ Link against ncursesw, honour CXXFLAGS, and adapt install target for pkgsrc.
  
  #--------------------------------------------------------------
  # Defaults are for the standard curses setup:
-@@ -37,7 +38,7 @@ ifeq ($(OS),Windows_NT)
- 	E = .exe
- else
- 	CURS_DIR = .
--	LIBS = -lcurses
-+	LIBS = -lncursesw
- 	RM = rm -f
- 	SEP = ;
- 	E =
-@@ -94,7 +95,7 @@ $(IOBJS) : %.o: $(isrc)/%.cc
- 	$(CXX) $(OPTS) -I$(CURS_DIR) -c $<
- 
- mm$(E):	$(MOBJS) $(IOBJS)
--	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) $(LIBS)
-+	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) $(LIBS) $(LDFLAGS)
- 	$(POST)
- 
- dep:
 @@ -106,9 +107,9 @@ clean:
  	$(RM) mm$(E)
  

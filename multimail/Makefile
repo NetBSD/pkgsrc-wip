@@ -18,5 +18,5 @@ USE_TOOLS+=	gmake
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
