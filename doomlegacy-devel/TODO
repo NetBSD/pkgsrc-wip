@@ -37,6 +37,10 @@ terminate the engine.
     => Drop former pkgsrc patch
     => PKGREVISION not bumped (SVN based packages use build date in version)
     => Works as expected (Reported in bugtracker for #653)
+[X] Patches merged in SVN revision 1456
+[X] Remove corresponding pkgsrc patches after upstream integration
+
+Part 2 finished.
 
 
 Part 3: Torches are displayed crippled with software renderer
@@ -60,8 +64,12 @@ Set "Corona" option to "Off" (verified to work on NetBSD).
 Other workaround: It seems that only the option "Corona_Draw" set to "Additive"
 is problematic. Coronas with other settings work.
 
-[ ] Test patch d41_draw8_alpha.diff from upstream
+[X] Test patch d41_draw8_alpha.diff from upstream
     Patch not released yet
+    => Patch merged in SVN revision 1455
+    => Works as expected with SVN revision 1458
+
+Part 3 finished.
 
 
 EOF
