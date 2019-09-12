@@ -1,10 +1,10 @@
 $NetBSD$
 
-Honour CXXFLAGS, and adapt install target for pkgsrc.
+Honour CXXFLAGS.
 
 --- Makefile.orig	2019-02-22 01:00:59.000000000 +0000
 +++ Makefile
-@@ -11,14 +11,15 @@ isrc = interfac
+@@ -11,7 +11,7 @@ isrc = interfac
  ifeq ($(DEBUG),Y)
  	OPTS = -g -Wall -pedantic
  else
@@ -13,26 +13,3 @@ Honour CXXFLAGS, and adapt install target for pkgsrc.
  	POST = strip mm$(E)
  endif
  
- # PREFIX is the base directory under which to install the binary and man
- # page; generally either /usr/local or /usr (or perhaps /opt...).
- 
--PREFIX = /usr/local
-+DESTDIR ?=
-+PREFIX ?= /usr/local
- 
- #--------------------------------------------------------------
- # Defaults are for the standard curses setup:
-@@ -106,9 +107,9 @@ clean:
- 	$(RM) mm$(E)
- 
- install::
--	install -c -s mm $(PREFIX)/bin
--	install -c -m 644 mm.1 $(HELPDIR)
--	$(RM) $(HELPDIR)/mmail.1
--	ln $(HELPDIR)/mm.1 $(HELPDIR)/mmail.1
-+	install -c -s mm $(DESTDIR)$(PREFIX)/bin
-+	install -c -m 644 mm.1 $(DESTDIR)$(HELPDIR)
-+	$(RM) $(DESTDIR)$(HELPDIR)/mmail.1
-+	ln $(HELPDIR)/mm.1 $(DESTDIR)$(HELPDIR)/mmail.1
- 
- include depend
