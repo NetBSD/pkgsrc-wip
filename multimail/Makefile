@@ -15,6 +15,12 @@ DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-configure
+SUBST_MESSAGE.makefile=	Adjust Makefile
+SUBST_FILES.makefile=	Makefile
+SUBST_SED.makefile+=	-e '/^	OPTS/ s,-O2,$${CXXFLAGS},'
+
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
