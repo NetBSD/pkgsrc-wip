@@ -1,4 +1,5 @@
 [X] Track 0.17 development branch
 [X] Make doxygen LaTeX/PDF documentation build again
+[X] Add Option "-4" to force IPv4 protocol
 [ ] Import final flnews 0.17 release
 [ ] Switch back to FLTK version from pkgsrc current
