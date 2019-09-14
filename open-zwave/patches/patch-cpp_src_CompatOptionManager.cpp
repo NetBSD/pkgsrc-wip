@@ -2,7 +2,7 @@ $NetBSD$
 
 Avoid compiler warning about possibly-uninitialized variable.
 
-Not yet sent upstream.
+(Upstream master has diverged from this patch.)
 
 --- cpp/src/CompatOptionManager.cpp.orig	2019-05-03 14:49:45.000000000 +0000
 +++ cpp/src/CompatOptionManager.cpp
