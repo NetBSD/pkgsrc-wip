@@ -2,7 +2,7 @@
 
 DISTNAME=	homeassistant-0.97.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/homeassistant/}
 
@@ -16,6 +16,8 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+DEPENDS+=	${PYPKGPREFIX}-sqlite3>=3.7.0:../../databases/py-sqlite3
 
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.5.4:../../www/py-aiohttp
 #DEPENDS+=	${PYPKGPREFIX}-astral=1.10.1:../../FOO/py-astral
