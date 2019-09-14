@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/clj
+bin/clojure
+clojure/deps.edn
+clojure/example-deps.edn
+clojure/libexec/clojure-tools-${PKGVERSION}.jar
+man/man1/clj.1
+man/man1/clojure.1
