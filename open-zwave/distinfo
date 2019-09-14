@@ -1,9 +1,7 @@
 $NetBSD$
 
-SHA1 (open-zwave-1.6.tar.gz) = ae58b3d8266c95ec0e4c6af1ad2bb32bd2f0e7e6
-RMD160 (open-zwave-1.6.tar.gz) = 540be46256a7d3d3654e95e7e273c80e98f94cbf
-SHA512 (open-zwave-1.6.tar.gz) = ae04fc7ad279f0b4bc5ffc62151c401bb40e2b50da7d6047506daeb39d5655be16dc1eeb15dc22b6cb75cac567609e2f804e6a07f438681e462088a50b6cf11a
-Size (open-zwave-1.6.tar.gz) = 5857049 bytes
+SHA1 (open-zwave-1.6.0.913-2f2b314f7d8c7b2fc943e57f09bcf9bb6670adbc.tar.gz) = 95cba506d26e629a083c0dda972d078c048bfc49
+RMD160 (open-zwave-1.6.0.913-2f2b314f7d8c7b2fc943e57f09bcf9bb6670adbc.tar.gz) = c59159cdb36726071cf6115a7f1775b67bf7e90c
+SHA512 (open-zwave-1.6.0.913-2f2b314f7d8c7b2fc943e57f09bcf9bb6670adbc.tar.gz) = 12adb482c9946d0ad35192bc3d1f1969a4b57b755cc661eb406c38943e98a26ff594026e2c3a5b6510f624cd873f5609e9fff01f4bfa0e7dde8fb25a626f4c3c
+Size (open-zwave-1.6.0.913-2f2b314f7d8c7b2fc943e57f09bcf9bb6670adbc.tar.gz) = 12113197 bytes
 SHA1 (patch-cpp_build_ozw__config.in) = 2f81ddf9250fc6c4d919f435e550597c7eaa3630
-SHA1 (patch-cpp_src_CompatOptionManager.cpp) = 2edbf9c1c8bd6e440d4c9f1275d1f864d0c6466b
-SHA1 (patch-cpp_src_platform_unix_ThreadImpl.cpp) = 5ba9904fcc7b98714f76a3bd8f451bf3841e8f05
