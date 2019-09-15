@@ -202,6 +202,7 @@ go113/misc/cgo/errors/testdata/issue18452.go
 go113/misc/cgo/errors/testdata/issue18889.go
 go113/misc/cgo/errors/testdata/issue28069.go
 go113/misc/cgo/errors/testdata/issue28721.go
+go113/misc/cgo/errors/testdata/issue33061.go
 go113/misc/cgo/errors/testdata/long_double_size.go
 go113/misc/cgo/errors/testdata/malloc.go
 go113/misc/cgo/fortran/answer.f90
@@ -468,6 +469,8 @@ go113/misc/cgo/testshared/testdata/iface_i/i.go
 go113/misc/cgo/testshared/testdata/implicit/implicit.go
 go113/misc/cgo/testshared/testdata/implicitcmd/implicitcmd.go
 go113/misc/cgo/testshared/testdata/issue25065/a.go
+go113/misc/cgo/testshared/testdata/issue30768/issue30768lib/lib.go
+go113/misc/cgo/testshared/testdata/issue30768/x_test.go
 go113/misc/cgo/testshared/testdata/trivial/trivial.go
 go113/misc/cgo/testsigfwd/main.go
 go113/misc/cgo/testso/noso_test.go
@@ -514,6 +517,7 @@ go113/misc/nacl/testdata/group
 go113/misc/nacl/testdata/hosts
 go113/misc/nacl/testdata/mime.types
 go113/misc/nacl/testzip.proto
+go113/misc/reboot/experiment_toolid_test.go
 go113/misc/reboot/overlaydir_test.go
 go113/misc/reboot/reboot_test.go
 go113/misc/swig/callback/callback.cc
@@ -781,6 +785,7 @@ go113/pkg/${GO_PLATFORM}/image/jpeg.a
 go113/pkg/${GO_PLATFORM}/image/png.a
 go113/pkg/${GO_PLATFORM}/index/suffixarray.a
 go113/pkg/${GO_PLATFORM}/internal/bytealg.a
+go113/pkg/${GO_PLATFORM}/internal/cfg.a
 go113/pkg/${GO_PLATFORM}/internal/cpu.a
 go113/pkg/${GO_PLATFORM}/internal/fmtsort.a
 go113/pkg/${GO_PLATFORM}/internal/goroot.a
@@ -880,7 +885,7 @@ go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/http/httpproxy.a
 go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/http2/hpack.a
 go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/idna.a
 go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/nettest.a
-go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/route.a
+${PLIST.route}go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/route.a
 go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/sys/cpu.a
 go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/secure/bidirule.a
 go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/transform.a
@@ -1226,6 +1231,7 @@ go113/src/cmd/compile/internal/gc/testdata/phi_test.go
 go113/src/cmd/compile/internal/gc/testdata/regalloc_test.go
 go113/src/cmd/compile/internal/gc/testdata/reproducible/issue20272.go
 go113/src/cmd/compile/internal/gc/testdata/reproducible/issue27013.go
+go113/src/cmd/compile/internal/gc/testdata/reproducible/issue30202.go
 go113/src/cmd/compile/internal/gc/testdata/short_test.go
 go113/src/cmd/compile/internal/gc/testdata/slice_test.go
 go113/src/cmd/compile/internal/gc/testdata/sqrtConst_test.go
@@ -1940,6 +1946,7 @@ go113/src/cmd/go/testdata/script/build_trimpath.txt
 go113/src/cmd/go/testdata/script/cache_unix.txt
 go113/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go113/src/cmd/go/testdata/script/clean_testcache.txt
+go113/src/cmd/go/testdata/script/cmd_import_error.txt
 go113/src/cmd/go/testdata/script/cover_atomic_pkgall.txt
 go113/src/cmd/go/testdata/script/cover_pkgall_multiple_mains.txt
 go113/src/cmd/go/testdata/script/cover_pkgall_runtime.txt
@@ -1996,8 +2003,10 @@ go113/src/cmd/go/testdata/script/mod_convert_vendor_yml.txt
 go113/src/cmd/go/testdata/script/mod_dir.txt
 go113/src/cmd/go/testdata/script/mod_doc.txt
 go113/src/cmd/go/testdata/script/mod_domain_root.txt
+go113/src/cmd/go/testdata/script/mod_dot.txt
 go113/src/cmd/go/testdata/script/mod_download.txt
 go113/src/cmd/go/testdata/script/mod_download_hash.txt
+go113/src/cmd/go/testdata/script/mod_download_latest.txt
 go113/src/cmd/go/testdata/script/mod_edit.txt
 go113/src/cmd/go/testdata/script/mod_edit_go.txt
 go113/src/cmd/go/testdata/script/mod_enabled.txt
@@ -2007,6 +2016,7 @@ go113/src/cmd/go/testdata/script/mod_fs_patterns.txt
 go113/src/cmd/go/testdata/script/mod_get_cmd.txt
 go113/src/cmd/go/testdata/script/mod_get_commit.txt
 go113/src/cmd/go/testdata/script/mod_get_downgrade.txt
+go113/src/cmd/go/testdata/script/mod_get_fallback.txt
 go113/src/cmd/go/testdata/script/mod_get_hash.txt
 go113/src/cmd/go/testdata/script/mod_get_incompatible.txt
 go113/src/cmd/go/testdata/script/mod_get_indirect.txt
@@ -2038,6 +2048,9 @@ go113/src/cmd/go/testdata/script/mod_help.txt
 go113/src/cmd/go/testdata/script/mod_import.txt
 go113/src/cmd/go/testdata/script/mod_import_mod.txt
 go113/src/cmd/go/testdata/script/mod_import_v1suffix.txt
+go113/src/cmd/go/testdata/script/mod_indirect.txt
+go113/src/cmd/go/testdata/script/mod_indirect_main.txt
+go113/src/cmd/go/testdata/script/mod_indirect_tidy.txt
 go113/src/cmd/go/testdata/script/mod_init_dep.txt
 go113/src/cmd/go/testdata/script/mod_init_empty.txt
 go113/src/cmd/go/testdata/script/mod_init_glide.txt
@@ -2047,7 +2060,9 @@ go113/src/cmd/go/testdata/script/mod_internal.txt
 go113/src/cmd/go/testdata/script/mod_invalid_version.txt
 go113/src/cmd/go/testdata/script/mod_list.txt
 go113/src/cmd/go/testdata/script/mod_list_bad_import.txt
+go113/src/cmd/go/testdata/script/mod_list_compiled_concurrent.txt
 go113/src/cmd/go/testdata/script/mod_list_dir.txt
+go113/src/cmd/go/testdata/script/mod_list_direct.txt
 go113/src/cmd/go/testdata/script/mod_list_pseudo.txt
 go113/src/cmd/go/testdata/script/mod_list_replace_dir.txt
 go113/src/cmd/go/testdata/script/mod_list_std.txt
@@ -2089,8 +2104,10 @@ go113/src/cmd/go/testdata/script/mod_sumdb_golang.txt
 go113/src/cmd/go/testdata/script/mod_sumdb_proxy.txt
 go113/src/cmd/go/testdata/script/mod_symlink.txt
 go113/src/cmd/go/testdata/script/mod_test.txt
+go113/src/cmd/go/testdata/script/mod_test_cached.txt
 go113/src/cmd/go/testdata/script/mod_test_files.txt
 go113/src/cmd/go/testdata/script/mod_tidy.txt
+go113/src/cmd/go/testdata/script/mod_tidy_error.txt
 go113/src/cmd/go/testdata/script/mod_tidy_quote.txt
 go113/src/cmd/go/testdata/script/mod_tidy_replace.txt
 go113/src/cmd/go/testdata/script/mod_tidy_sum.txt
@@ -2115,7 +2132,7 @@ go113/src/cmd/go/testdata/script/test_badtest.txt
 go113/src/cmd/go/testdata/script/test_compile_binary.txt
 go113/src/cmd/go/testdata/script/test_devnull.txt
 go113/src/cmd/go/testdata/script/test_generated_main.txt
-go113/src/cmd/go/testdata/script/test_init.txt
+go113/src/cmd/go/testdata/script/test_go111module_cache.txt
 go113/src/cmd/go/testdata/script/test_status.txt
 go113/src/cmd/go/testdata/script/test_timeout.txt
 go113/src/cmd/go/testdata/script/vendor_complex.txt
@@ -2258,6 +2275,7 @@ go113/src/cmd/go/testdata/standalone_main_wrong_test.go
 go113/src/cmd/go/testdata/standalone_parallel_sub_test.go
 go113/src/cmd/go/testdata/standalone_sub_test.go
 go113/src/cmd/go/testdata/standalone_test.go
+go113/src/cmd/go/testdata/standalone_testmain_flag_test.go
 go113/src/cmd/go/testdata/testcover/pkg1/a.go
 go113/src/cmd/go/testdata/testcover/pkg2/a.go
 go113/src/cmd/go/testdata/testcover/pkg2/a_test.go
@@ -3878,10 +3896,6 @@ go113/src/go/doc/testdata/g.0.golden
 go113/src/go/doc/testdata/g.1.golden
 go113/src/go/doc/testdata/g.2.golden
 go113/src/go/doc/testdata/g.go
-go113/src/go/doc/testdata/issue10858.0.golden
-go113/src/go/doc/testdata/issue10858.1.golden
-go113/src/go/doc/testdata/issue10858.2.golden
-go113/src/go/doc/testdata/issue10858.go
 go113/src/go/doc/testdata/issue12839.0.golden
 go113/src/go/doc/testdata/issue12839.1.golden
 go113/src/go/doc/testdata/issue12839.2.golden
@@ -4410,6 +4424,7 @@ go113/src/internal/bytealg/indexbyte_native.go
 go113/src/internal/bytealg/indexbyte_ppc64x.s
 go113/src/internal/bytealg/indexbyte_s390x.s
 go113/src/internal/bytealg/indexbyte_wasm.s
+go113/src/internal/cfg/cfg.go
 go113/src/internal/cpu/cpu.go
 go113/src/internal/cpu/cpu_386.go
 go113/src/internal/cpu/cpu_amd64.go
@@ -4441,7 +4456,6 @@ go113/src/internal/lazyregexp/lazyre.go
 go113/src/internal/lazytemplate/lazytemplate.go
 go113/src/internal/nettrace/nettrace.go
 go113/src/internal/oserror/errors.go
-go113/src/internal/oserror/errors_test.go
 go113/src/internal/poll/errno_unix.go
 go113/src/internal/poll/errno_windows.go
 go113/src/internal/poll/error_linux_test.go
@@ -5206,6 +5220,8 @@ go113/src/os/env_test.go
 go113/src/os/env_unix_test.go
 go113/src/os/env_windows.go
 go113/src/os/error.go
+go113/src/os/error_errno.go
+go113/src/os/error_plan9.go
 go113/src/os/error_posix.go
 go113/src/os/error_test.go
 go113/src/os/error_unix_test.go
@@ -6055,6 +6071,7 @@ go113/src/runtime/signal_solaris_amd64.go
 go113/src/runtime/signal_unix.go
 go113/src/runtime/signal_windows.go
 go113/src/runtime/sigqueue.go
+go113/src/runtime/sigqueue_note.go
 go113/src/runtime/sigqueue_plan9.go
 go113/src/runtime/sigtab_aix.go
 go113/src/runtime/sigtab_linux_generic.go
@@ -6967,6 +6984,7 @@ go113/test/chan/select4.go
 go113/test/chan/select5.go
 go113/test/chan/select6.go
 go113/test/chan/select7.go
+go113/test/chan/select8.go
 go113/test/chan/sendstmt.go
 go113/test/chan/sieve1.go
 go113/test/chan/sieve2.go
@@ -8371,6 +8389,38 @@ go113/test/fixedbugs/issue32595.dir/main.go
 go113/test/fixedbugs/issue32595.go
 go113/test/fixedbugs/issue32680.go
 go113/test/fixedbugs/issue32680.out
+go113/test/fixedbugs/issue32680b.go
+go113/test/fixedbugs/issue32778.dir/a.go
+go113/test/fixedbugs/issue32778.dir/b.go
+go113/test/fixedbugs/issue32778.go
+go113/test/fixedbugs/issue32901.dir/a.go
+go113/test/fixedbugs/issue32901.dir/b.go
+go113/test/fixedbugs/issue32901.dir/c.go
+go113/test/fixedbugs/issue32901.dir/main.go
+go113/test/fixedbugs/issue32901.go
+go113/test/fixedbugs/issue32922.dir/a.go
+go113/test/fixedbugs/issue32922.dir/b.go
+go113/test/fixedbugs/issue32922.go
+go113/test/fixedbugs/issue32959.go
+go113/test/fixedbugs/issue33013.dir/a.go
+go113/test/fixedbugs/issue33013.dir/b.go
+go113/test/fixedbugs/issue33013.dir/c.go
+go113/test/fixedbugs/issue33013.dir/d.go
+go113/test/fixedbugs/issue33013.go
+go113/test/fixedbugs/issue33020.dir/a.go
+go113/test/fixedbugs/issue33020.dir/b.go
+go113/test/fixedbugs/issue33020.go
+go113/test/fixedbugs/issue33062.go
+go113/test/fixedbugs/issue33158.dir/a.go
+go113/test/fixedbugs/issue33158.dir/b.go
+go113/test/fixedbugs/issue33158.go
+go113/test/fixedbugs/issue33219.dir/a.go
+go113/test/fixedbugs/issue33219.dir/b.go
+go113/test/fixedbugs/issue33219.dir/c.go
+go113/test/fixedbugs/issue33219.go
+go113/test/fixedbugs/issue33355.go
+go113/test/fixedbugs/issue33438.go
+go113/test/fixedbugs/issue33555.go
 go113/test/fixedbugs/issue3552.dir/one.go
 go113/test/fixedbugs/issue3552.dir/two.go
 go113/test/fixedbugs/issue3552.go

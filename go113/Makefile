@@ -3,7 +3,7 @@
 .include "../../lang/go/version.mk"
 
 # This should go into version.mk
-GO113_VERSION=	1.13beta1
+GO113_VERSION=	1.13
 
 DISTNAME=	go${GO113_VERSION}.src
 PKGNAME=	go113-${GO113_VERSION}
@@ -108,7 +108,7 @@ do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}
 	find ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} -name \*.orig -exec rm {} \;
 .for cmd in go gofmt
-	${LN} -sf ${PREFIX}/go112/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
+	${LN} -sf ${PREFIX}/go113/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
 .endfor
 
 do-test:
