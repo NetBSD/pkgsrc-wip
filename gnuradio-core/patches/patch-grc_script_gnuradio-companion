@@ -3,13 +3,13 @@ $NetBSD: patch-grc_script_gnuradio-companion,v 1.4 2015/09/17 13:48:05 makoto Ex
 Add message for NetBSD when failed to import gnuradio.
 Or missing gnuradio-core package.
 
---- grc/scripts/gnuradio-companion.orig	2015-08-23 21:36:38.000000000 +0900
-+++ grc/scripts/gnuradio-companion	2015-08-23 21:38:19.000000000 +0900
-@@ -35,6 +35,7 @@ warnings.filterwarnings("always")
+--- grc/scripts/gnuradio-companion.orig	2019-08-10 06:40:34.000000000 +0900
++++ grc/scripts/gnuradio-companion	2019-09-16 21:26:17.217333967 +0900
+@@ -23,6 +23,7 @@ import warnings
  
  GR_IMPORT_ERROR_MESSAGE = """\
  Cannot import gnuradio.
 +You may be missing gnuradio-core package or
  
- Is the python path environment variable set correctly?
+ Is the model path environment variable set correctly?
      All OS: PYTHONPATH
