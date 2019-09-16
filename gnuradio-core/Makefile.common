@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2019/09/02 13:19:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.18 2019/04/26 13:14:02 maya Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -29,7 +29,7 @@
 # used by ham/gnuradio-wxgui/Makefile
 # used by ham/gnuradio-zeromq/Makefile
 
-.include	"../../ham/gnuradio-core/Makefile.version"
+.include	"../../wip/gnuradio-core/Makefile.version"
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
@@ -50,10 +50,10 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # gr_filter_design in gnuradio-core ask for:
 DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
 
-DISTINFO_FILE=		${.CURDIR}/../../ham/gnuradio-core/distinfo
-PATCHDIR=		${.CURDIR}/../../ham/gnuradio-core/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/gnuradio-core/patches
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.3.0
+PYTHON_VERSIONS_INCOMPATIBLE=    36 37 # not yet ported as of 3.3.0
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PY_PATCHPLIST=	yes
@@ -123,7 +123,7 @@ SUBST_VARS.pyvers+=	PYVERSSUFFIX
 SUBST_STAGE.pyvers=	pre-configure
 
 # REPLACE_PYTHON is some 600 files
-.include	"../../ham/gnuradio-core/files/REPLACE_PYTHON"
+.include	"../../wip/gnuradio-core/files/REPLACE_PYTHON"
 
 pre-configure:
 	(${MKDIR} ${WRKSRC}/build;)

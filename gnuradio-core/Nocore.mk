@@ -1,6 +1,6 @@
 # $NetBSD: Nocore.mk,v 1.9 2016/07/12 11:36:46 mef Exp $
 
-DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
+DEPENDS+=	gnuradio-core-[0-9]*:../../wip/gnuradio-core
 
 # Default list for reducing PLIST
 # gnuradio-* names to be common (to get the list to reduce)
@@ -15,7 +15,7 @@ post-install:
 #			    ${DESTDIR}${PREFIX}/${EGDIR}/
 	for i in ${PLIST_MINUS} ; do				\
 	  for p in PLIST PLIST.oss PLIST.${OPSYS} ; do		\
-	    f="${PKGDIR}/../../ham/gnuradio-$${i}/$${p}";	\
+	    f="${PKGDIR}/../../wip/gnuradio-$${i}/$${p}";	\
 	    if [ -f "$${f}" ]; then				\
 	      ${SED} -e 's,$${PYSITELIB},${PYSITELIB},'		\
 	       -e 's,$${PKGVERSION},${PKGVERSION_NOREV},'	\
