@@ -123,7 +123,7 @@ SUBST_VARS.pyvers+=	PYVERSSUFFIX
 SUBST_STAGE.pyvers=	pre-configure
 
 # REPLACE_PYTHON is some 600 files
-.include	"../../wip/gnuradio-core/files/REPLACE_PYTHON"
+.include	"../../wip/gnuradio-core/replace-python.mk"
 
 pre-configure:
 	(${MKDIR} ${WRKSRC}/build;)
