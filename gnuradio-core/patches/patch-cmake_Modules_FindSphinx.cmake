@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_Modules_FindSphinx.cmake,v 1.2 2015/09/17 13:48:05 makoto Exp $
+$NetBSD: patch-cmake_Modules_FindSphinx.cmake,v 1.1 2015/03/07 05:10:45 mef Exp $
 
 (Starting with gnuradio-3.7.6), cmake wants sphinx-build exact executable
 name. With SUBST_CLASSES.pyvers in Makefile.common, tell the name.

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/09/17 13:48:06 makoto Exp $
+# $NetBSD: Makefile,v 1.16 2019/08/22 12:23:22 ryoon Exp $
 
 PKGNAME=	gnuradio-noaa-${VERSION}
+PKGREVISION=	2
 COMMENT=	NOAA, Weather Satellite Reception module of GNU Radio
 
-.include	"../../wip/gnuradio-core/Makefile.common"
-.include	"../../wip/gnuradio-core/Nocore.mk"
+.include	"../../ham/gnuradio-core/Makefile.common"
+.include	"../../ham/gnuradio-core/Nocore.mk"
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GR_NOAA=ON

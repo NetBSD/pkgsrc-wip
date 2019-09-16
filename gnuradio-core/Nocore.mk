@@ -1,6 +1,6 @@
-# $NetBSD: Nocore.mk,v 1.4 2015/09/17 13:48:04 makoto Exp $
+# $NetBSD: Nocore.mk,v 1.9 2016/07/12 11:36:46 mef Exp $
 
-DEPENDS+=	gnuradio-core-[0-9]*:../../wip/gnuradio-core
+DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
 
 # Default list for reducing PLIST
 # gnuradio-* names to be common (to get the list to reduce)
@@ -15,7 +15,7 @@ post-install:
 #			    ${DESTDIR}${PREFIX}/${EGDIR}/
 	for i in ${PLIST_MINUS} ; do				\
 	  for p in PLIST PLIST.oss PLIST.${OPSYS} ; do		\
-	    f="${PKGDIR}/../../wip/gnuradio-$${i}/$${p}";	\
+	    f="${PKGDIR}/../../ham/gnuradio-$${i}/$${p}";	\
 	    if [ -f "$${f}" ]; then				\
 	      ${SED} -e 's,$${PYSITELIB},${PYSITELIB},'		\
 	       -e 's,$${PKGVERSION},${PKGVERSION_NOREV},'	\
@@ -29,3 +29,11 @@ post-install:
 	> ${WRKDIR}/.PLIST.minus;
 	(cd ${WRKDIR}/.destdir/${PREFIX};			\
 	${RM} -f $$(cat ${WRKDIR}/.PLIST.minus)	);
+# workaround for gnuradio-doxygen
+#  (the same target can't be set on gnuradio-doxygen side
+#
+	(cd ${WRKDIR}/.destdir/${PREFIX};			\
+	${RM} -f share/doc/gnuradio-${PKGVERSION}/html/_formulas.aux; \
+	${RM} -f share/doc/gnuradio-${PKGVERSION}/html/_formulas.log; \
+	${RM} -f share/doc/gnuradio-${PKGVERSION}/html/_formulas.dvi; \
+	)

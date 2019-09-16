@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.17 2015/09/17 13:48:04 makoto Exp $
+# $NetBSD: options.mk,v 1.4 2019/06/15 17:54:22 adam Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
-PKG_SUPPORTED_OPTIONS=	ninja-build filter-design alsa
+PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio
+PKG_SUPPORTED_OPTIONS=  ninja-build filter-design alsa
 # ninja-build is said supported, but not working
 # alas        is said supported, but not good on NetBSD
 
 # Adding ninja-build to following line (now) stops
-# [164/850] cd /PATH/wip/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
-# FAILED: cd /PATH/wip/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
+# [164/850] cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
+# FAILED: cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
 # : permission denied
 
-PKG_SUGGESTED_OPTIONS=	filter-design
+PKG_SUGGESTED_OPTIONS= filter-design
 
 .include "../../mk/bsd.options.mk"
 
@@ -27,7 +27,7 @@ do-build:
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
 # Running gr_filter_design asks for the package
-DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
+DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy12
 .endif
 
 .if !empty(PKG_OPTIONS:Malsa)

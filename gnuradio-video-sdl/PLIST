@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/17 13:48:06 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/09/01 04:14:55 mef Exp $
 include/gnuradio/swig/video_sdl_swig.i
 include/gnuradio/swig/video_sdl_swig_doc.i
 include/gnuradio/video_sdl/api.h

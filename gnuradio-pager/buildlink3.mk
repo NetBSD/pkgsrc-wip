@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2015/09/17 13:48:06 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2014/10/13 12:51:09 mef Exp $
 
 BUILDLINK_TREE+=	gnuradio-pager
 
@@ -7,7 +7,7 @@ GNURADIO_PAGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-pager+=	gnuradio-pager>=3.7.5
 BUILDLINK_ABI_DEPENDS.gnuradio-pager+=	gnuradio-pager>=3.7.5
-BUILDLINK_PKGSRCDIR.gnuradio-pager?=	../../wip/gnuradio-pager
+BUILDLINK_PKGSRCDIR.gnuradio-pager?=	../../ham/gnuradio-pager
 
 #.include "../../devel/boost-headers/buildlink3.mk"
 #.include "../../devel/boost-libs/buildlink3.mk"

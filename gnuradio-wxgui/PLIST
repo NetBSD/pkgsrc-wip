@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.12 2015/12/06 15:34:15 mef Exp $
 include/gnuradio/swig/wxgui_swig.i
 include/gnuradio/swig/wxgui_swig_doc.i
 include/gnuradio/wxgui/api.h
