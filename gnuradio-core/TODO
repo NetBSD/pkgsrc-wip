@@ -15,6 +15,15 @@
   # : permission denied
   (updating cmake 3.0.2 in wip doesn't help)
 
+****************************************************************
+  generationg replace.mk
+****************************************************************
+ 
+  754  2019-09-16 23:08  grep INFO /tmp/log | awk '{print $6}' |sed -e 's/py.$/py/' |sort > nega
+  755  2019-09-16 23:08  (cd  /tmp/wip/gnuradio-core/work/gnuradio-3.8.0.0; find .  -name \*py ) | sed 's|./||' |sort > posi
+ 
+  775  2019-09-16 23:13  diff -u  posi nega |grep '^\-' | sed -e "s/-/    /" -e 's/$/  \\/' >!  replace-python.mk
+
 
 
 ****************************************************************
