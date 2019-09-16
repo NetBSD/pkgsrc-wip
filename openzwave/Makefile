@@ -14,6 +14,7 @@ MASTER_SITES=	http://old.openzwave.com/downloads/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.openzwave.com/
 #HOMEPAGE=	https://github.com/OpenZWave/open-zwave/
+#HOMEPAGE=	http://bamboo.my-ho.st/bamboo/allPlans.action
 COMMENT=	Library for Z-Wave controllers
 LICENSE=	gnu-lgpl-v3
 
@@ -25,7 +26,7 @@ PKGCONFIG_OVERRIDE+=	cpp/hidapi/pc/hidapi-hidraw.pc.in
 PKGCONFIG_OVERRIDE+=	cpp/hidapi/pc/hidapi-libusb.pc.in
 PKGCONFIG_OVERRIDE+=	cpp/hidapi/pc/hidapi.pc.in
 
-# \todo Figure out where this comes from.
+# \todo Remeeiate bashism and file upstream PR.
 CHECK_PORTABILITY_SKIP+=	cpp/examples/MinOZW/MinOZW.in
 
 .include "../../devel/libusb1/buildlink3.mk"
