@@ -24,9 +24,9 @@ INSTALLATION_DIRS=	bin \
 WRKSRC=	${WRKDIR}/clojure-tools
 
 SUBST_CLASSES+=		java
-SUBST_STAGE.java=	pre-install
+SUBST_STAGE.java=	pre-configure
 SUBST_FILES.java=	clojure
-SUBST_SED.java=		-e 's,PREFIX,${DESTDIR}${PREFIX}/clojure,g'
+SUBST_SED.java=		-e 's,PREFIX,${PREFIX}/clojure,g'
 
 DEPENDS+=	rlwrap-[0-9]*:../../misc/rlwrap
 
