@@ -16,6 +16,9 @@ USE_JAVA=	run
 USE_JAVA2=	8
 USE_TOOLS+=	bash
 
+REPLACE_BASH+=	clj
+REPLACE_BASH+=	clojure
+
 INSTALLATION_DIRS=	bin \
 			clojure \
 			clojure/libexec \
