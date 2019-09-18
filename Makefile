@@ -535,6 +535,7 @@ SUBDIR+=	cvsanaly
 SUBDIR+=	cvsnt
 SUBDIR+=	cvstrac
 SUBDIR+=	cwebx
+SUBDIR+=	cwm
 SUBDIR+=	cycle
 SUBDIR+=	cygwin
 SUBDIR+=	cygwin-binutils
