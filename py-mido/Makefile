@@ -13,5 +13,10 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/mido-1.2.9
 USE_LANGUAGES=	# none
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && for b in mido-connect mido-play mido-ports mido-serve; do \
+	  ${MV} $$b $$b-${PYVERSSUFFIX}; \
+	done
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
