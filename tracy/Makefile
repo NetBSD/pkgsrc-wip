@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	0.4.1
+VERSION=	0.5
 PKGNAME=	tracy-${VERSION}
 DISTNAME=	v${VERSION}
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ HOMEPAGE=	https://bitbucket.org/wolfpld/tracy
 COMMENT=	Real time, nanosecond resolution frame profiler
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/wolfpld-tracy-59ed5775d973
+WRKSRC=		${WRKDIR}/wolfpld-tracy-9b6328f96258
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=		gmake pkg-config
