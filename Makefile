@@ -1177,7 +1177,6 @@ SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
-SUBDIR+=	gnutls
 SUBDIR+=	gnutls-guile
 SUBDIR+=	go
 SUBDIR+=	go-argv
