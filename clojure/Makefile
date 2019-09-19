@@ -26,10 +26,17 @@ INSTALLATION_DIRS=	bin \
 
 WRKSRC=	${WRKDIR}/clojure-tools
 
-SUBST_CLASSES+=		java
-SUBST_STAGE.java=	pre-configure
-SUBST_FILES.java=	clojure
-SUBST_SED.java=		-e 's,PREFIX,${PREFIX}/clojure,g'
+SUBST_CLASSES+=		set-java
+SUBST_STAGE.set-java=	pre-configure
+SUBST_MESSAGE.set-java=	Setting JAVA_HOME path.
+SUBST_FILES.set-java=	clojure
+SUBST_SED.set-java=	-e '/^JAVA_CMD=/s,java,${PKG_JAVA_HOME}/bin/java,'
+
+SUBST_CLASSES+=		set-base
+SUBST_STAGE.set-base=	pre-configure
+SUBST_MESSAGE.set-base=	Setting package base path.
+SUBST_FILES.set-base=	clojure
+SUBST_SED.set-base=	-e 's,PREFIX,${PREFIX}/clojure,g'
 
 DEPENDS+=	rlwrap-[0-9]*:../../misc/rlwrap
 
