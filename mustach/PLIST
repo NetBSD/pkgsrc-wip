@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/mustach
-include/mustach/mustach-json-c.h
-include/mustach/mustach.h
-lib/libmustach.so
