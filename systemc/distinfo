@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (systemc-2.3.3.tar.gz) = f861e02ba3a89cc000b62a21cecabaae910b7ef9
+RMD160 (systemc-2.3.3.tar.gz) = be83b5d7825bf64fdf08a44ff16ceaf4e1ecf476
+SHA512 (systemc-2.3.3.tar.gz) = 831255f8e76e1cf776e0407c92c7a0b70ba63cf6b1785a2df372a6394440944540a8ae62264ef5293a7b951bd8b37de089ef0dbc0ee2d0354e69ce552c020ca2
+Size (systemc-2.3.3.tar.gz) = 7133464 bytes
+SHA1 (patch-CMakeLists.txt) = 7f5ffd79d3e45e8b53dff980fe63692dd99860d0
+SHA1 (patch-src_CMakeLists.txt) = 50660545f348f7973ffc5c3f9f523235b0123d48

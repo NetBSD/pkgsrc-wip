@@ -4639,6 +4639,7 @@ SUBDIR+=	sysklogd
 SUBDIR+=	sysstat
 SUBDIR+=	system-config-printer
 SUBDIR+=	system-tools-backends
+SUBDIR+=	systemc
 SUBDIR+=	systemsettings
 SUBDIR+=	sysvinit
 SUBDIR+=	syx

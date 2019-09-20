@@ -1,0 +1,15 @@
+$NetBSD$
+* don't write data into the home directories
+--- CMakeLists.txt.orig	2019-09-20 12:29:50.730145682 +0000
++++ CMakeLists.txt
+@@ -749,8 +749,8 @@ install (EXPORT SystemCLanguageTargets
+ 
+ # Register the SystemCLanguage and SystemCTLM packages for use from the
+ # build tree. (This registers the build tree with the global CMake-registry.)
+-export (PACKAGE SystemCLanguage)
+-export (PACKAGE SystemCTLM)
++#export (PACKAGE SystemCLanguage)
++#export (PACKAGE SystemCTLM)
+ 
+ # Create the <Package>Config.cmake and <Package>ConfigVersion files
+ include(CMakePackageConfigHelpers)
