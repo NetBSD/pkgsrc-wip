@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.2 2012/04/29 15:06:26 roelants Exp $
 
-SHA1 (deadbeef-1.8.1.tar.bz2) = 46f1110d4002f8b7e4f05cc0a2bfbf7c1b08379b
-RMD160 (deadbeef-1.8.1.tar.bz2) = 2212862083b5c0507008544a92720f41fe4592ce
-SHA512 (deadbeef-1.8.1.tar.bz2) = 16723050177b3515e6a73b28111d882b338bbbb5ebb7484ce3cb77143fa210b057563afab03174ab65c9ea64d3786dd273cf513c3b569ca614584a400fbcf5a2
-Size (deadbeef-1.8.1.tar.bz2) = 4875802 bytes
+SHA1 (deadbeef-1.8.2.tar.gz) = 2f76a69a67d59c8eb486481d6420698d95acf59d
+RMD160 (deadbeef-1.8.2.tar.gz) = 7149d772b91848b65064a472142338354867181e
+SHA512 (deadbeef-1.8.2.tar.gz) = 5ff2d82fcaaf83c773d464c4217201414b657a69b07d1032a40cb4f3bee638d9fecd71c006439e65f6a2da263460cadd685323d3884223ae1bfd560af205c589
+Size (deadbeef-1.8.2.tar.gz) = 12859310 bytes
+SHA1 (patch-intl_Makefile.in) = ae9496182c112bd14377adca7bfa191b37cabd2e

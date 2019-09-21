@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.6 2015/07/13 10:30:47 roelants Exp $
 
-DISTNAME=	deadbeef-1.8.1
+DISTNAME=	deadbeef-1.8.2
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=deadbeef/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=DeaDBeeF-Player/}
 
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://deadbeef.sourceforge.net/
@@ -13,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	autopoint aclocal autoheader autoconf automake
 USE_TOOLS+=	gmake intltool pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_TOOLS+=	bison perl
@@ -31,7 +31,8 @@ CONFIGURE_ARGS+=	--disable-oss
 # using mpg123 instead
 CONFIGURE_ARGS+=	--disable-libmad
 
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/deadbeef
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 .include "options.mk"
 .include "../../archivers/libzip/buildlink3.mk"
@@ -42,7 +43,6 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/deadbeef
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/musepack/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
-.include "../../audio/wavpack/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
