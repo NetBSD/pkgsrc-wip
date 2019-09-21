@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (freeserf-0.3.tar.gz) = f8c9e038536b8dc4519104d8ce32ebf66b909830
+RMD160 (freeserf-0.3.tar.gz) = 174287b4c95b26879c96d8a013c86e9a2871e4b0
+SHA512 (freeserf-0.3.tar.gz) = fe7ef340d736990218d561316812031f58af9f258bab296f1cbd8de0d4c58610a4e8d8d11f490fc873a596cf49f7b203cfb51881c25717ce31fa7ba3eb0299b1
+Size (freeserf-0.3.tar.gz) = 862188 bytes
+SHA1 (patch-CMakeLists.txt) = 15d6fc895f72fe25aa5cedd2c38e24119c9a2e8c

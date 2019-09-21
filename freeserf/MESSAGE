@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2018/10/15 17:53:23 nia Exp $
+
+The original data files from the DOS or Amiga versions is required for the
+game to function.
+
+The name of the Amiga files are: gfxheader, gfxfast, gfxchip, gfxpics,
+sounds, music.
+
+The name of the DOS file is SPAE.PA, SPAD.PA, SPAF.PA, or SPAU.PA,
+depending on the language.
+
+It is very important that you copy the data after actually installing the
+original game, otherwise the data file will be compressed. The DOS data
+file will be about 1.3MB.
+
+Place them in ${PREFIX}/share/freeserf or ~/.local/share/freeserf.
+
+===========================================================================

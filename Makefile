@@ -876,6 +876,7 @@ SUBDIR+=	freedup16
 SUBDIR+=	freefem++
 SUBDIR+=	freej
 SUBDIR+=	freerdp
+SUBDIR+=	freeserf
 SUBDIR+=	freeswitch-core
 SUBDIR+=	freeswitch-music
 SUBDIR+=	freesynd

@@ -1,0 +1,17 @@
+$NetBSD$
+
+Don't try to use git to find the version.
+
+--- CMakeLists.txt.orig	2019-01-20 08:58:53.000000000 +0000
++++ CMakeLists.txt
+@@ -10,10 +10,6 @@ set_property(GLOBAL PROPERTY USE_FOLDERS
+ 
+ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+ 
+-include(GitTools)
+-git_make_version(FREESERF_VERSION ${CMAKE_CURRENT_SOURCE_DIR} ${PROJECT_VERSION})
+-message(STATUS "FREESERF_VERSION = ${FREESERF_VERSION}")
+-
+ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+   set(CMAKE_CXX_FLAGS "-std=gnu++11 ${CMAKE_CXX_FLAGS}")
+ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
