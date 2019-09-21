@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-pandas>=0.23.4:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-fiona>=1.1.0:../../wip/py-fiona
 DEPENDS+=	${PYPKGPREFIX}-proj>=1.1.0:../../wip/py-proj
-DEPENDS+=	${PYPKGPREFIX}-xarray>=1.1.0:../../wip/py-xarray
+DEPENDS+=	${PYPKGPREFIX}-xarray-[0-9]*:../../math/py-xarray
 
 USE_LANGUAGES=	# none
 

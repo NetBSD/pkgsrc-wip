@@ -4181,7 +4181,6 @@ SUBDIR+=	py-wsgi-intercept
 SUBDIR+=	py-wsgiref
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xapp
-SUBDIR+=	py-xarray
 SUBDIR+=	py-xcal-raman
 SUBDIR+=	py-xcffib
 SUBDIR+=	py-xdgapp
