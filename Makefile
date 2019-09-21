@@ -2035,6 +2035,7 @@ SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libwebsockets
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
+SUBDIE+=	libxml++3
 SUBDIR+=	libzahl
 SUBDIR+=	libzeep
 SUBDIR+=	libzn-poly
