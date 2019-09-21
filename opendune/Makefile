@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenDUNE/}
 GITHUB_PROJECT=	OpenDUNE
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/OpenDUNE
+HOMEPAGE=	https://github.com/OpenDUNE/OpenDUNE
 COMMENT=	Open source recreation of Dune II
 LICENSE=	gnu-gpl-v2
 
