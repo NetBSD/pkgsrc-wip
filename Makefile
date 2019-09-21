@@ -2498,6 +2498,7 @@ SUBDIR+=	openca
 SUBDIR+=	opencascade
 SUBDIR+=	openclonk
 SUBDIR+=	opendchub
+SUBDIR+=	opendune
 SUBDIR+=	openerp-server
 SUBDIR+=	openfodder
 SUBDIR+=	openfodder-data
