@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/02/04 10:38:53 tron Exp $
+# $NetBSD$
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -21,7 +21,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw lucid
 # gtk3 is default in the logic below (even not included in SUGGESTED_=
 # gconf, gtk* and xft2 will be ignored for nextstep even shown as selected.
 
-PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 svg xaw3d xft2 xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 xaw3d xft2 xml x11
 
 .include "../../mk/bsd.options.mk"
 
