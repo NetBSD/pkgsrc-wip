@@ -2219,6 +2219,8 @@ share/emacs/${PKGVERSION}/lisp/image.el.gz
 share/emacs/${PKGVERSION}/lisp/image.elc
 share/emacs/${PKGVERSION}/lisp/image/compface.el.gz
 share/emacs/${PKGVERSION}/lisp/image/compface.elc
+share/emacs/${PKGVERSION}/lisp/image/exif.el.gz
+share/emacs/${PKGVERSION}/lisp/image/exif.elc
 share/emacs/${PKGVERSION}/lisp/image/gravatar.el.gz
 share/emacs/${PKGVERSION}/lisp/image/gravatar.elc
 share/emacs/${PKGVERSION}/lisp/imenu.el.gz
