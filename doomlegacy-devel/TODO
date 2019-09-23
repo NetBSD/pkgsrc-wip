@@ -72,4 +72,14 @@ is problematic. Coronas with other settings work.
 Part 3 finished.
 
 
+Part 4: Problem with loading compressed blockmaps
+=================================================
+Some compressed blockmaps can interfere with the overflow detection.
+
+[X] Reported upstream as Bug #654
+[X] Fixed in SVN revision 1460
+
+Part 4 finished.
+
+
 EOF

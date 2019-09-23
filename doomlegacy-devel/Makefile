@@ -1,8 +1,8 @@
 # $NetBSD$
 
-VERS=		1.47.2
+VERS=		1.48.3
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1458
+SVNVERS=	1460
 DISTNAME=	doomlegacy-devel-r${SVNVERS}
 CATEGORIES=	games
 
@@ -94,13 +94,13 @@ do-install:
 		${INSTALL_PROGRAM} bin/doomlegacy			\
 			${DESTDIR}${PREFIX}/bin;			\
 		${INSTALL_DATA} docs/legacy.css docs/whatsnew.html	\
-			${DESTDIR}${PREFIX}/share/doc/doomlegacy;	\
+			${DESTDIR}${PREFIX}/share/doc/doomlegacy
 	cd ${WRKDIR}/doomlegacy_${VERS} &&				\
 		${INSTALL_DATA} legacy.wad				\
-			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad;	\
+			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
 	cd ${WRKDIR} &&							\
 		${INSTALL_MAN} ${WRKDIR}/doomlegacy.6			\
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man6;		\
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 	cd ${WRKDIR} &&							\
 		${INSTALL_DATA} INSTALL.pkgsrc				\
 			${DESTDIR}${PREFIX}/share/doc/doomlegacy/INSTALL.pkgsrc
