@@ -1,11 +1,9 @@
 $NetBSD$
 
-SHA1 (bk-7.3ce.src.tar.gz) = 98303855a4cc84eea592bc6eca37c0d8feb83ed8
-RMD160 (bk-7.3ce.src.tar.gz) = 6573ddcaef75dfa5b0c8578cbb3525754c351825
-SHA512 (bk-7.3ce.src.tar.gz) = 671828afe094a2c834f70ea2e70070eec823e6c67e0e3eaa84fb7f7259caf026764194c04356ba5b6439f3813124a20eed7fc283f82de324b587c3bf779a8678
-Size (bk-7.3ce.src.tar.gz) = 20257094 bytes
+SHA1 (bk-7.3.3.src.tar.gz) = 198600097279f1749e13ee92cd6c43f9510a0a06
+RMD160 (bk-7.3.3.src.tar.gz) = eba72e926b0e6188c1c398ecd7abcd29925ab356
+SHA512 (bk-7.3.3.src.tar.gz) = 84f233f43ad8f09674e296f074ae800c3019880b3a591c56c77d9869d9062711904afb04cfd605695e6bb660afd0906004360067695b1dee54601b85d2d563fe
+Size (bk-7.3.3.src.tar.gz) = 20273074 bytes
 SHA1 (patch-Ldoc-install) = f7d8f10d501240f08f7a27d058a700ce5b09a6d6
-SHA1 (patch-src_cmd.pl) = d5ac40c44b6688890e20bad917b26eae9d2a3284
 SHA1 (patch-src_gui_tcltk_tcl_unix_Makefile.in) = 4811d75e4b37a8be0c2389c6d8265ce7ecae536c
 SHA1 (patch-src_gui_tcltk_tktable_configure) = a77542f18d9065a5c5d1b1130fb5bbe09e1feae3
-SHA1 (patch-src_slib.c) = 23b3c7af2ba4e523ec827215ac0942908827b99b

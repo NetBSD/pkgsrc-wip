@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/bk
-share/bitkeeper/RELEASE-NOTES
+share/bitkeeper/RELEASE-NOTES.md
 share/bitkeeper/b64wrap
 share/bitkeeper/bk
 share/bitkeeper/bk.script
@@ -607,4 +607,3 @@ share/bitkeeper/www/fonts/glyphicons-halflings-regular.woff2
 share/bitkeeper/www/markdown.min.js
 share/bitkeeper/www/sorttable.js
 share/bitkeeper/www/trailer.gif
-@pkgdir {share,bin}

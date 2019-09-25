@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	bk-7.3ce
+DISTNAME=	bk-7.3.3
 PKGNAME=	${DISTNAME:S/bk/bitkeeper/}
 CATEGORIES=	devel
-MASTER_SITES=	http://www.bitkeeper.org/downloads/7.3ce/
+MASTER_SITES=	http://www.bitkeeper.org/downloads/7.3.3/
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
