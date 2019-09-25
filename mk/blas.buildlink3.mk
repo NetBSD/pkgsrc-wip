@@ -9,9 +9,6 @@
 # of style to stay consistent in their use.
 #
 # Keywords: blas lapack atlas openblas mkl
-
-# TODO: Also set a variable to find a matching pkg-config file
-# to avoid duplicating its contents in BLAS_LIBS?
 #
 # === User-settable variables ===
 #
@@ -99,7 +96,6 @@ LAPACK_LIBS=	${BLAS_LIBS}
 .elif ${BLAS_TYPE} == "accelerate.framework"
 BLAS_LIBS=	-framework Accelerate
 LAPACK_LIBS=	${BLAS_LIBS}
-# TODO: Add ATLAS and other external BLAS options (e.g. Intel MKL)
 .else # invalid or unimplemented type
 PKG_FAIL_REASON+=	\
 	"There is no acceptable BLAS for ${PKGNAME} in: ${PKGSRC_BLAS_TYPES}."
