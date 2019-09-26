@@ -2,10 +2,10 @@
 
 DISTNAME=	ffxvid-1.4.0
 CATEGORIES=	multimedia
-MASTER_SITES=	https://downloads.sourceforge.net/sourceforge/ffxvid/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffxvid/}
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	https://downloads.sourceforge.net/sourceforge/ffxvid
+HOMEPAGE=	https://ffxvid.teambelgium.net/
 COMMENT=	Small script to encode to Xvid video
 LICENSE=	gnu-gpl-v2
 
