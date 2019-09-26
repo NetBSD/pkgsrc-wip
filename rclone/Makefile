@@ -3,6 +3,7 @@
 # XXX: When updating changelog is available in
 # XXX: ${WRKSRC}/docs/content/changelog.md
 DISTNAME=	rclone-1.48.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ncw/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

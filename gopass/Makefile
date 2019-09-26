@@ -1,6 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	gopass-1.8.6
+PKGREVISION=	1
 DISTNAME=	gopass-${GITHUB_TAG}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gopasspw/}

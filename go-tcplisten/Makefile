@@ -2,6 +2,7 @@
 
 DISTNAME=		go-tcplisten-${GITHUB_TAG}
 PKGNAME=		go-tcplisten-0.0.0
+PKGREVISION=		1
 GITHUB_PROJECT=		tcplisten
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=valyala/}

@@ -2,6 +2,7 @@
 
 DISTNAME=		go-compress-${GITHUB_TAG}
 PKGNAME=		go-compress-1.5.0
+PKGREVISION=		1
 GITHUB_PROJECT=		compress
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=klauspost/}

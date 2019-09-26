@@ -2,6 +2,7 @@
 
 DISTNAME=		go-cpuid-${GITHUB_TAG}
 PKGNAME=		go-cpuid-1.2.1
+PKGREVISION=		1
 GITHUB_PROJECT=		cpuid
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=klauspost/}

@@ -2,6 +2,7 @@
 
 DISTNAME=		go-pkgconfig-${GITHUB_TAG}
 PKGNAME=		go-pkgconfig-0.0.0
+PKGREVISION=		1
 GITHUB_PROJECT=		pkgconfig
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=xlab/}

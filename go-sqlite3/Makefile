@@ -2,6 +2,7 @@
 
 DISTNAME=		go-sqlite3-${GITHUB_TAG}
 PKGNAME=		go-sqlite3-1.10.0
+PKGREVISION=		1
 GITHUB_PROJECT=		go-sqlite3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mattn/}

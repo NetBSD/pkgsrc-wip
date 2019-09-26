@@ -2,6 +2,7 @@
 
 DISTNAME=		go-spew-${GITHUB_TAG}
 PKGNAME=		go-spew-1.1.1
+PKGREVISION=		1
 GITHUB_PROJECT=		go-spew
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=davecgh/}

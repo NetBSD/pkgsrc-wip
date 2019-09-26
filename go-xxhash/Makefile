@@ -2,6 +2,7 @@
 
 DISTNAME=		go-xxhash-${GITHUB_TAG}
 PKGNAME=		go-xxhash-2.0.0
+PKGREVISION=		1
 GITHUB_PROJECT=		xxhash
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cespare/}

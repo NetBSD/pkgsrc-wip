@@ -3,6 +3,7 @@
 
 DISTNAME=		go-bytebufferpool-${GITHUB_TAG}
 PKGNAME=		go-bytebufferpool-1.0.0
+PKGREVISION=		1
 GITHUB_PROJECT=		bytebufferpool
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=valyala/}
