@@ -154,7 +154,8 @@ ${WRKDIR}/cacerts.out:
 	mv ${.TARGET}.tmp ${.TARGET}
 
 do-build:
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib ${MAKE_PROGRAM}
+	rm -f ${WRKSRC}/make/data/fontconfig/*.orig
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}
