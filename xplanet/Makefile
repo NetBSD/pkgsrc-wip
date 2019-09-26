@@ -14,6 +14,11 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl
 MAKE_ENV+=		PERL5=${PERL5:Q}
 
+# \todo Fix Native PNM support
+CONFIGURE_ARGS+=	--without-pnm
+# \todo Remove when https://github.com/OpenSpace/Spice is in pkgsrc
+CONFIGURE_ARGS+=	ac_cv_lib_cspice_furnsh_c=no
+
 .include "options.mk"
 
 .include "../../mk/jpeg.buildlink3.mk"

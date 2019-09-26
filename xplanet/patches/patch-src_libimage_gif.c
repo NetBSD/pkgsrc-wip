@@ -51,6 +51,3 @@ $NetBSD: patch-src_libimage_gif.c,v 1.3 2014/05/25 09:18:06 obache Exp $
  
      {
  	QuitGifError(GifFile);
--- 
-2.23.0
-

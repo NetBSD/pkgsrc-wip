@@ -3,6 +3,10 @@ $NetBSD$
 pick from https://sourceforge.net/p/xplanet/code/209/
 Add 2017 leap second
 
+Upstream maintainer recommended to build from svn. The latest
+release is rather old, so we pick a couple of commits required
+for functionality on top of this release.
+
 --- src/xpUtil.cpp~
 +++ src/xpUtil.cpp
 @@ -434,6 +434,7 @@ deltaETpost1972(const double jd)
