@@ -1,0 +1,23 @@
+$NetBSD$
+
+SHA1 (openjdk-jdk11u-jdk-11.0.5-8-1.tar.gz) = a504adfdb0f63994831b45c15b40dc62c266b910
+RMD160 (openjdk-jdk11u-jdk-11.0.5-8-1.tar.gz) = 375b579a76fac1bf8af13b19f8968c5be13835e3
+SHA512 (openjdk-jdk11u-jdk-11.0.5-8-1.tar.gz) = 62009410d337e0da5b6f008659c401aa856346efdd57d179c081f7971881b289b075074738f1cd1a9085defebdfba8941fabdf7b6b75e226213503df9a065b4b
+Size (openjdk-jdk11u-jdk-11.0.5-8-1.tar.gz) = 117115267 bytes
+SHA1 (patch-make_autoconf_basics.m4) = 5a8d3cd229f73eef34fb3860dfae1a813ec39ab5
+SHA1 (patch-make_autoconf_flags-cflags.m4) = 7ec010eb62a1e4f057b7886caf0d0efaae4b6b63
+SHA1 (patch-make_autoconf_jdk-options.m4) = d0d9fbaf29cc521fa4b62b1ea2616dc8f3b07618
+SHA1 (patch-make_autoconf_lib-bundled.m4) = 8720c3f674955e8a51b2ab7dba80c36d34ba8594
+SHA1 (patch-make_autoconf_lib-freetype.m4) = 3dbdfea4011dc69593ab302626b9ec4dfc7a7d54
+SHA1 (patch-make_autoconf_lib-x11.m4) = f609a726f2d795f1d05cc933df587d3440c09b9f
+SHA1 (patch-make_common_NativeCompilation.gmk) = caeb8cda435acde159ea6faa8b3cae6d3999f959
+SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 9fd9f6ef4af0eece0b4ca0acbb44331566f17e07
+SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = ee20027e4323ebf63874cedd9e4549ebb702d335
+SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = 93a7098cb13adf5d28b16c123a390e5e13d626bf
+SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = e70e8c1e59f0be184a7a1d6e9d11ac7b934ce4b2
+SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = fbc0aa6656292535fb38344fee7178b6f625f58a
+SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.c) = 39c7afb3c36fa9557d2a660c4b4068b5684c552f
+SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.h) = 121357cb76b4a96c06cc2bf670579e0b27f66fc1
+SHA1 (patch-src_java.base_unix_native_libjsig_jsig.c) = 82e3a8bad9ca18478cad85ada8544712ff117459
+SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = c27a058dbcc836fa5a9f979f193284a706a7c50b
+SHA1 (patch-src_jdk.management_bsd_native_libmanagement__ext_UnixOperatingSystem.c) = 1478dabc215ba70ea83c5f6d9fd789856e96fa45
