@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ffxvid-1.4.0.tar.gz) = 6b268d4de93f238f2497222a430a7203fb8165fd
+RMD160 (ffxvid-1.4.0.tar.gz) = a60bb15ad93e82bb316d286ceeced54760987682
+SHA512 (ffxvid-1.4.0.tar.gz) = 06f28d0589ac3ea89726cc6ed8027fd1e7399ceaa0af64d582a80a2a0ebc22054198e9554d3c8af56789ab85ce79a043eca61d82597259e19c975d6f91d730ba
+Size (ffxvid-1.4.0.tar.gz) = 33565 bytes
+SHA1 (patch-Makefile) = d0efdb88cf4faf2df5ef5b32b1569216933a85f1
