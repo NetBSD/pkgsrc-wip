@@ -9,7 +9,7 @@ Disable PaX mprotect.
                    endif
                  endif
 +                ifeq ($(OPENJDK_TARGET_OS_ENV), bsd.netbsd)
-+		  paxctl +m $$@
++		  /usr/sbin/paxctl +m $$@
 +                endif
                  # This only works if the openjdk_codesign identity is present on the system. Let
                  # silently fail otherwise.
