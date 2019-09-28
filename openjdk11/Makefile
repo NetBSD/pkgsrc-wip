@@ -136,7 +136,7 @@ post-extract:
 # These libs are bundled w/ the netbsd-7 bootstrap to facilitate building with
 # MKLLVM=yes / MKGCC=no. Nuke them from bootstrap if they are present in base.
 .if exists(/lib/libgcc_s.so.1)
-        ${RM} -f ${ALT_BOOTDIR}/lib/libgcc_s.so*
+	${RM} -f ${ALT_BOOTDIR}/lib/libgcc_s.so*
 .endif
 
 pre-configure: ${WRKDIR}/cacerts.out
