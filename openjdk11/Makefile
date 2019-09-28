@@ -62,9 +62,6 @@ CONFIGURE_ARGS+=	--with-extra-cxxflags=${CXXFLAGS:Q}
 CONFIGURE_ARGS+=	--disable-warnings-as-errors
 CONFIGURE_ARGS+=	--with-cacerts-file=${WRKDIR}/cacerts.out
 CONFIGURE_ARGS+=	--with-default-make-target=product-images
-# static libstdc++ is useful for bootstrap binaries, otherwise not so much.
-# Note: on NetBSD you need to use libstdc++_pic.a
-CONFIGURE_ARGS+=	--with-stdc++lib=dynamic
 # It is intentional to use CONFIGURE_ARGS instead of CONFIGURE_ENV here.
 CONFIGURE_ARGS+=	USER=pkgsrc
 
@@ -133,6 +130,13 @@ PLIST.internal_vm_compiler=	yes
 
 .if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.unzip=
+.endif
+
+post-extract:
+# These libs are bundled w/ the netbsd-7 bootstrap to facilitate building with
+# MKLLVM=yes / MKGCC=no. Nuke them from bootstrap if they are present in base.
+.if exists(/lib/libgcc_s.so.1)
+        ${RM} -f ${ALT_BOOTDIR}/lib/libgcc_s.so*
 .endif
 
 pre-configure: ${WRKDIR}/cacerts.out

@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk11
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
 PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
-PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11
+PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11 static-libstdcpp
 PKG_SUGGESTED_OPTIONS=		jre-jce x11
 
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -68,8 +68,6 @@ BUILDLINK_DEPMETHOD.libXrandr?=build
 .include "../../x11/libXrandr/buildlink3.mk"
 .endif
 
-
-
 #
 # Debugging
 #
@@ -88,6 +86,21 @@ PLIST_SUBST+=		DBGEXT=.diz
 CONFIGURE_ARGS+=	--enable-dtrace=yes
 .else
 CONFIGURE_ARGS+=	--enable-dtrace=no
+.endif
+
+#
+# static libstdc++ and libgcc
+#
+# On NetBSD you need to use libstdc++_pic.a when creating a shared library,
+# but I don't think there is any easy way to tell the compiler to do this.
+# Also, -static-libgcc doesn't work because libpthread needs dynamic
+# linkage of libgcc.
+.if !empty(PKG_OPTIONS:Mstatic-libstdcpp)
+. if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc)
+BUILDLINK_TRANSFORM+=	rm:-static-libgcc
+. endif
+.else
+CONFIGURE_ARGS+=	--with-stdc++lib=dynamic
 .endif
 
 #
