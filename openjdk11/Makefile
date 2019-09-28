@@ -146,7 +146,7 @@ ${WRKDIR}/cacerts.out:
 		${PREFIX}/sbin/mozilla-rootcerts extract
 	for cert in ${WRKDIR}/cacerts/*.pem; do				\
 		${INFO_MSG} "Importing $$cert" &&			\
-		 ${SETENV} LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib LC_ALL=C	\
+		 ${SETENV} ${CONFIGURE_ENV} LC_ALL=C	\
 		  ${ALT_BOOTDIR}/bin/keytool				\
 		  -noprompt						\
 		  -importcert						\
