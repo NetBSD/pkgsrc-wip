@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (xournalpp/1.0.12.tar.gz) = 9df25b6a9d8403d0667a17b9145c7a6c325bf2da
+RMD160 (xournalpp/1.0.12.tar.gz) = a446f30fc7c9556d6d1e163f06189f7009d8e267
+SHA512 (xournalpp/1.0.12.tar.gz) = 6831da57c715bf70676fdd515f55475c72fb7b2e418157c2d110383bd7a5f37db1961b1b87b2af3a62f0d46f99310d499c113f3480025c6fa47ecec8a3153112
+Size (xournalpp/1.0.12.tar.gz) = 14694286 bytes
+SHA1 (patch-src_control_tools_StrokeHandler.cpp) = 80df57a9776a9919a95a04bf6c057dc021fc789e
+SHA1 (patch-src_util_DeviceListHelper.cpp) = 8f3534c80c79ec49dd9562c3ed4e3ff7c36b2ecb
