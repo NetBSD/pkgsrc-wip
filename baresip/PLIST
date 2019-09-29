@@ -41,7 +41,6 @@ ${PLIST.pulseaudio}lib/baresip/modules/pulse.so
 ${PLIST.sdl2}lib/baresip/modules/sdl2.so
 lib/baresip/modules/selfview.so
 ${PLIST.sndfile}lib/baresip/modules/sndfile.so
-${PLIST.speex}lib/baresip/modules/speex_aec.so
 ${PLIST.speex}lib/baresip/modules/speex_pp.so
 lib/baresip/modules/srtp.so
 lib/baresip/modules/stdio.so
