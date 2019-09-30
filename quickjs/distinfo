@@ -1,10 +1,10 @@
 $NetBSD$
 
-SHA1 (quickjs-2019-08-18.tar.xz) = ce503cb4ef2930c95fe3b2c74fb3688e08012253
-RMD160 (quickjs-2019-08-18.tar.xz) = 19a95f6289b2544a9ae658a1227fd6e785798b55
-SHA512 (quickjs-2019-08-18.tar.xz) = bc189a27ce82e8c0a5581b073dce39ea052111f7df098570e6ce9d161b7cecd9f16e586826e83c157278d25ec25d754da7ea0a1b9dd802fb56ca777b5b8f98a5
-Size (quickjs-2019-08-18.tar.xz) = 757856 bytes
-SHA1 (patch-Makefile) = d96c2a797bb9bc7becc7f1217fc3d3457527d55f
+SHA1 (quickjs-2019-09-18.tar.xz) = 024534cf52fb7799dc28a6fcfd580274ffd5357b
+RMD160 (quickjs-2019-09-18.tar.xz) = fa1433a512cc2c44af8916eda473c4b8a4acb7de
+SHA512 (quickjs-2019-09-18.tar.xz) = 7afa8e327af5775fcea10922a2c684c24690ceb89690a26d0df3628ea36817c5f8b839c5cd9e27e92bec54f08c633e1f9c27620cbcf9757fd40db546bc477872
+Size (quickjs-2019-09-18.tar.xz) = 761448 bytes
+SHA1 (patch-Makefile) = 5c6b9dcc722f030c78a8809aabbca8c640452e2b
 SHA1 (patch-cutils.h) = 9719a77add566ce6443af1ac2ba1d1ea61e5c248
 SHA1 (patch-qjs.c) = d26b8ac0f7bf84bdb17fb4784f637dcb012cbd93
 SHA1 (patch-qjsc.c) = 9a1f46b46807d9ff0393cd7944416a5bb082bbbb

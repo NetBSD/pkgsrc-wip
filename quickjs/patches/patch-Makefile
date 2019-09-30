@@ -1,11 +1,10 @@
 $NetBSD$
 
 Adapt for NetBSD & pkgsrc.
-Avoid to build 32 bit utilities: aarch64 gcc does not support `-m32'.
 
 --- Makefile.orig	2019-07-09 17:49:47.000000000 +0000
 +++ Makefile
-@@ -25,17 +25,26 @@
+@@ -25,10 +25,17 @@
  ifeq ($(shell uname -s),Darwin)
  CONFIG_DARWIN=y
  endif
@@ -22,17 +21,8 @@ Avoid to build 32 bit utilities: aarch64 gcc does not support `-m32'.
 +endif
  # consider warnings as errors (for development)
  #CONFIG_WERROR=y
- 
- ifndef CONFIG_WIN32
-+ifndef CONFIG_NETBSD
  # force 32 bit build for some utilities
- CONFIG_M32=y
- endif
-+endif
- ifdef CONFIG_DARWIN
- # use clang instead of gcc
- CONFIG_CLANG=y
-@@ -150,8 +159,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
+@@ -162,8 +169,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
  
  LIBS=-lm
  ifndef CONFIG_WIN32
@@ -43,28 +33,3 @@ Avoid to build 32 bit utilities: aarch64 gcc does not support `-m32'.
  
  $(OBJDIR):
  	mkdir -p $(OBJDIR)
-@@ -300,16 +311,16 @@ clean:
- 	rm -rf run-test262-debug run-test262-32 run-test262-bn32
- 
- install: all
--	mkdir -p "$(prefix)/bin"
--	install -m755 -s qjs qjsc qjsbn qjsbnc "$(prefix)/bin"
--	ln -sf qjsbn "$(prefix)/bin/qjscalc"
--	mkdir -p "$(prefix)/lib/quickjs"
--	install -m755 libquickjs.a libquickjs.bn.a "$(prefix)/lib/quickjs"
-+	mkdir -p "${DESTDIR}$(prefix)/bin"
-+	install -m755 -s qjs qjsc qjsbn qjsbnc "${DESTDIR}$(prefix)/bin"
-+	ln -sf qjsbn "${DESTDIR}$(prefix)/bin/qjscalc"
-+	mkdir -p "${DESTDIR}$(prefix)/lib/quickjs"
-+	install -m755 libquickjs.a libquickjs.bn.a "${DESTDIR}$(prefix)/lib/quickjs"
- ifdef CONFIG_LTO
--	install -m755 libquickjs.lto.a libquickjs.bn.lto.a "$(prefix)/lib/quickjs"
-+	install -m755 libquickjs.lto.a libquickjs.bn.lto.a "${DESTDIR}$(prefix)/lib/quickjs"
- endif
--	mkdir -p "$(prefix)/include/quickjs"
--	install -m755 quickjs.h quickjs-libc.h "$(prefix)/include/quickjs"
-+	mkdir -p "${DESTDIR}$(prefix)/include/quickjs"
-+	install -m755 quickjs.h quickjs-libc.h "${DESTDIR}$(prefix)/include/quickjs"
- 
- 
- ###############################################################################
