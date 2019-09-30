@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD$
+
+Some functions of testssl.sh require setting the variable
+
+  TESTSSL_INSTALL_DIR
+
+to
+
+  ${PREFIX}/etc/${PKGBASE}
+
+===========================================================================

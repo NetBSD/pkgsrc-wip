@@ -1,3 +1,10 @@
 @comment $NetBSD$
 bin/testssl
+etc/testssl/ca_hashes.txt
+etc/testssl/cipher-mapping.txt
+etc/testssl/client-simulation.txt
+etc/testssl/client-simulation.wiresharked.txt
+etc/testssl/common-primes.txt
+etc/testssl/curves.txt
+etc/testssl/tls_data.txt
 share/doc/testssl/README.md
