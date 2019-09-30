@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/09/06 20:10:45 yhardy Exp $
 
 DISTNAME=	Commander-Genius-v${PKGVERSION_NOREV}
-PKGNAME=	Commander-Genius-2.3.3
+PKGNAME=	Commander-Genius-2.3.6
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/Dringgstein/Commander-Genius/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +19,8 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=LINUX64
 CMAKE_ARGS+=	-DGAMES_SHAREDIR=${PREFIX}/share
 CMAKE_ARGS+=	-DDOCDIR=${PREFIX}/share/doc/commandergenius
 #CMAKE_ARGS+=	-DUSE_SDL2=NO
+# segmentation fault on startup
+CMAKE_ARGS+=	-DUSE_OPENGL=NO
 
 INSTALLATION_DIRS=	bin share/doc/commandergenius
 
@@ -37,6 +39,7 @@ post-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
