@@ -1,2 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1 2015/08/18 18:47:57 yhardy Exp $
 bin/ags
+share/doc/ags/Copyright.txt
+share/doc/ags/OPTIONS.md
+share/doc/ags/README.md

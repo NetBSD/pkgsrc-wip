@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/09/14 22:26:14 yhardy Exp $
 
-DISTNAME=	ags-3.4.4.0
+DISTNAME=	ags-3.4.4.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adventuregamestudio/}
 GITHUB_TAG=	v.${PKGVERSION_NOREV}
@@ -19,9 +19,13 @@ do-build:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} --directory=Engine
 
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/doc/ags
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Engine/ags ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${DESTDIR}${PREFIX}/share/doc/ags/
+	${INSTALL_DATA} ${WRKSRC}/OPTIONS.md ${DESTDIR}${PREFIX}/share/doc/ags/
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/ags/
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/allegro/buildlink3.mk"
