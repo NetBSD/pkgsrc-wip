@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.11 2013/07/09 14:18:12 noud4 Exp $
 
-SHA1 (httrack-3.47.21.tar.gz) = 2ba3da7784bcd67ff98ff09c419cfb700c97ba5b
-RMD160 (httrack-3.47.21.tar.gz) = 50438d75c1b9e52c2ec282f7381d3d00cec319e8
-Size (httrack-3.47.21.tar.gz) = 1777738 bytes
+SHA1 (httrack-3.49.2.tar.gz) = 982550bcb07f0dcbede2ad84f71dfb31bb742ab2
+RMD160 (httrack-3.49.2.tar.gz) = e1ce07330443a0f4db366d1355681319026eae05
+SHA512 (httrack-3.49.2.tar.gz) = 84a13a776b278533f7f0635ebd764387c3399b01c0644d8af9b46fc8112dc3c6e568c17969d4f6c2db32b5474344c39f86cf51957c09eb807ebe305a554ba5c8
+Size (httrack-3.49.2.tar.gz) = 1835116 bytes
 SHA1 (patch-html_Makefile.in) = 6c332ff784b40e50f3de432f5df6e43fcaa37650
-SHA1 (patch-src_webhttrack) = e9b19c122b710f36004432fae8ba810843526c36

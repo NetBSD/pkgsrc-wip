@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.28 2013/07/09 14:10:18 noud4 Exp $
 #
 
-DISTNAME=	httrack-3.47.21
+DISTNAME=	httrack-3.49.2
 CATEGORIES=	www
 MASTER_SITES=	http://download.httrack.com/cserv.php3?File= \
 		http://mirror.httrack.com/historical/
@@ -30,5 +30,6 @@ SUBST_SED.path=		-e "s|/usr/share/httrack/|${PREFIX}/share/httrack/|"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
