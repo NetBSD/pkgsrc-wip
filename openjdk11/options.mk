@@ -13,9 +13,6 @@ PKG_OPTIONS_GROUP.variant+=	jdk-zeroshark-vm
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
 PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
-#notyet
-#.elif !empty(PKGSRC_COMPILER:Mclang)
-#PKG_SUGGESTED_OPTIONS+		jdk-zeroshark-vm
 .else
 PKG_SUGGESTED_OPTIONS+=		jdk-zero-vm
 .endif
@@ -106,7 +103,6 @@ CONFIGURE_ARGS+=	--with-stdc++lib=dynamic
 #
 # Build variant. Zero VM builds a portable JVM without assembly optimization.
 #
-PLIST_VARS+=		native
 .if !empty(PKG_OPTIONS:Mjdk-zero-vm)
 BUILD_VARIANT=		zero
 .include "../../devel/libffi/buildlink3.mk"
@@ -115,8 +111,7 @@ BUILD_VARIANT=		zeroshark
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		LLVM_CONFIG=${LLVM_CONFIG_PATH}
-.else
+.elif !empty(PKG_OPTIONS:Mjdk-hotspot-vm)
 BUILD_VARIANT=		server
-PLIST.native=		yes
 .endif
 CONFIGURE_ARGS+=	--with-jvm-variants=${BUILD_VARIANT}
