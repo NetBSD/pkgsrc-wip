@@ -2507,7 +2507,6 @@ SUBDIR+=	opengrok
 SUBDIR+=	openh264
 SUBDIR+=	openjazz
 SUBDIR+=	openjdk8-openjfx-hg
-SUBDIR+=	openjdk11
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openmpi163
