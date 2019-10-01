@@ -649,7 +649,6 @@ SUBDIR+=	dolphin5
 SUBDIR+=	doomlegacy-devel
 SUBDIR+=	doorman
 SUBDIR+=	dosbox-svn
-SUBDIR+=	dosbox-x
 SUBDIR+=	dosemu2
 SUBDIR+=	dotclear
 SUBDIR+=	dotproject
