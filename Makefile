@@ -3706,7 +3706,6 @@ SUBDIR+=	py-neo
 SUBDIR+=	py-neovim
 SUBDIR+=	py-neqsys
 SUBDIR+=	py-netcdf
-SUBDIR+=	py-netcdf4
 SUBDIR+=	py-netflowvizu
 SUBDIR+=	py-netmiko
 SUBDIR+=	py-neupy
