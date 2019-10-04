@@ -19,3 +19,4 @@
 [X] Make xdg-utils an option (Default=on)
     => An option "xdg-utils" already exists in pkgsrc
 [ ] Import final eureka 1.25 release
+[ ] Switch back to FLTK version from pkgsrc current

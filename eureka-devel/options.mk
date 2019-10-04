@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	xdg-utils
 .include "../../mk/bsd.options.mk"
 
 # xdg-utils: Create dependency for xdg-utils (Portland project)
-# xdg-utils are used for WWW-Browser and eMail redirection
+# Can be used by FLTK for fl_open_uri() on X11
 .if !empty(PKG_OPTIONS:Mxdg-utils)
 DEPENDS+=	xdg-utils>=1.1:../../misc/xdg-utils
 .endif
