@@ -2823,7 +2823,6 @@ SUBDIR+=	payara41
 SUBDIR+=	pbbam
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbcopper
-SUBDIR+=	pbosh
 SUBDIR+=	pbseqan
 SUBDIR+=	pbzx
 SUBDIR+=	pcmanfm-qt
