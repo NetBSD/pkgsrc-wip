@@ -287,7 +287,6 @@ SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
 SUBDIR+=	boost-yap
 SUBDIR+=	boringssl
-SUBDIR+=	bosh
 SUBDIR+=	bowtie
 SUBDIR+=	bowtie2
 SUBDIR+=	bpcscripts
