@@ -4563,7 +4563,6 @@ SUBDIR+=	ssid
 SUBDIR+=	ssu
 SUBDIR+=	st-term-git
 SUBDIR+=	stackdriver-collectd
-SUBDIR+=	star
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	starfighter
