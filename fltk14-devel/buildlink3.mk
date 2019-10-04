@@ -17,12 +17,6 @@ pkgbase := fltk
 .  include "../../graphics/cairo/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mopengl)
-.  if ${OPSYS} != "Darwin"
-.    include "../../graphics/Mesa/buildlink3.mk"
-.  endif
-.endif
-
 .if !empty(PKG_BUILD_OPTIONS.fltk:Mpango)
 .  include "../../devel/pango/buildlink3.mk"
 .endif
