@@ -114,3 +114,46 @@ Release 2019-07-15:
 
   This is needed in order to let ..TAB result in ../ on the command
   line editor.
+
+Release 2019-09-22:
+- Bourne Shell: The new function isbinary() that has been introduced
+  in May and that should prevent the shell from interpreting binary
+  files as shell scripts had a problem:
+
+  In case that a disconnected TCP/IP based remote login caused a SIGTERM
+  followed by the read() function on stdin returning EIO, the shell
+  could go into a complex endless loop as the failing read() with
+  "trapnote" set caused a longjmp() before the next prompt without first
+  clearing "trapnote". As a result, the shell did hang endlessly around
+  while just consuming CPU time.
+
+  The shell now avoids to call the read() routine inside isbinary()
+  when "trapnote" is set and this way is able to avoid the longjmp() on
+  error.
+
+- Bourne Shell: Fixed some typos in comment
+
+  Thanks to Robert Clausecker for reporting
+
+- Bourne Shell: print.c: Changed err++ for a BOOL typed variable
+  into err = TRUE.
+
+  Thanks to Robert Clausecker for reporting
+
+- Bourne Shell, with obosh compilation type: Avoid an "unused" warning
+  with word.c
+
+- Bourne Shell: defs.h now includes an "extern int optopt;" in order
+  to support Ultrix where this delcaration is missing in unistd.h.
+
+  Thanks to Robert Clausecker for reporting
+
+- bsh/Bourne Shell: test.c Now using a
+
+     #if defined(S_IFPORT) && S_IFPORT != S_IFIFO
+
+  to work around a strange definition on Ultrix
+
+  Thanks to Robert Clausecker for reporting
+
+- Bourne Shell: New version date
