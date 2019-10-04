@@ -1,7 +1,8 @@
-smake: Update to 1.6.1
+star: Update to 1.6.1
 
 Switch to latest distfile.
 Update PLIST.
+Replaced MESSAGE with share/doc/star/INSTALL.pkgsrc.
 
 Changelog
 =========
@@ -338,3 +339,17 @@ Release 2019-08-13:
   or Linux with non-contiguous minor bits. The warning is not needed
   since we only use SCHILY.dev in order to detect mount points but
   not to compute the major/minor parts.
+
+Release 2019-08-13:
+- star: star -xdev -find typically works to exclude mounted files.
+  It still does not always do what is expected, e.g. in case that /proc
+  is in the tree of scanned files, where files deep in the new mounted
+  tree suddenly have the same FS ID as other filesystems, e.g. the file
+  /proc/<pid>/path/a.out.
+
+  In such cases, "star -find -xdev" is still recommended where the
+  mounted file exclusion is done inside libfind instead of being
+  done inside star.
+
+  Before, files on other filesystems have not been honored at all when
+  using "star -xdev -find ...".

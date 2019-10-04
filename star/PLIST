@@ -13,6 +13,7 @@ man/man1/star.1
 man/man1/suntar.1
 man/man1/ustar.1
 man/man5/star.5
+share/doc/star/INSTALL.pkgsrc
 share/doc/star/README
 share/doc/star/README.ACL
 share/doc/star/README.crash
