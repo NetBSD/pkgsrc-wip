@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (flowblade-2.2.tar.gz) = bab9aacbb882ba6667113e05fe31df3d4266d4a2
+RMD160 (flowblade-2.2.tar.gz) = b44f09448a0285bd92f3e3c68d7359fd3b5bf46e
+SHA512 (flowblade-2.2.tar.gz) = be740f758ab39f77c29874b7c3fdd32bf32d0048479d2da327a91e34b55c1473cf50add67eeea207aa3140bac225c483f58c860dedccc1e62e729ec9fa5362de
+Size (flowblade-2.2.tar.gz) = 13251069 bytes
+SHA1 (patch-flowblade) = 019c4b1ccd510b117d8ecae55afcc139820745e3
+SHA1 (patch-setup.py) = 0922a7ffa06cd30b63b3ae2baa35402c06fddd2e
