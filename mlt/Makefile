@@ -1,10 +1,8 @@
 # $NetBSD: Makefile,v 1.97 2019/07/21 22:25:27 wiz Exp $
 
-DISTNAME=	mlt-6.16.0
+.include "Makefile.common"
+
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mltframework/}
-GITHUB_PROJECT=	mlt
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mltframework.org/
@@ -31,14 +29,17 @@ PKGCONFIG_OVERRIDE+=	mlt-framework.pc.in
 post-configure:
 	${TOUCH} ${WRKSRC}/src/modules/disable-jackrack
 	${TOUCH} ${WRKSRC}/src/modules/disable-ndi
-	${TOUCH} ${WRKSRC}/src/modules/disable-sdl
 	${TOUCH} ${WRKSRC}/src/modules/disable-swfdec
+	# disable this until flowblade supports it
+	# https://github.com/jliljebl/flowblade/issues/603
+	${TOUCH} ${WRKSRC}/src/modules/disable-sdl2
 
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/sox/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"

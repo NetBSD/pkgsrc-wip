@@ -4,3 +4,5 @@ editors, media players, transcoders, web streamers and many more types of
 applications. The functionality of the system is provided via an assortment
 of ready to use tools, XML authoring components, and an extensible plug-in
 based API.
+
+This package contains the Python bindings for MLT.

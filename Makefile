@@ -3660,6 +3660,7 @@ SUBDIR+=	py-minecraft
 SUBDIR+=	py-minepy
 SUBDIR+=	py-minidb
 SUBDIR+=	py-mipp
+SUBDIR+=	py-mlt
 SUBDIR+=	py-mmLib
 SUBDIR+=	py-mne
 SUBDIR+=	py-mochi

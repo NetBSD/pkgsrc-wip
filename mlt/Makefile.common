@@ -1,0 +1,8 @@
+# $NetBSD$
+# used by wip/mlt/Makefile
+# used by wip/py-mlt/Makefile
+
+DISTNAME=	mlt-6.16.0
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mltframework/}
+GITHUB_PROJECT=	mlt
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}

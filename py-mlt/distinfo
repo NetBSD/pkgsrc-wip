@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (mlt-6.16.0.tar.gz) = 9048a0dbc9f9654526bcc57f01a6c04f03499bee
+RMD160 (mlt-6.16.0.tar.gz) = 6ee6d8e4e7a922d962a69d778b92e469486e11db
+SHA512 (mlt-6.16.0.tar.gz) = 554e8b9baa7a8578cc52315fe0583c61762bf6fbbcdd4a1e4f25753846d92f013e7d74745498625fcc781de993aa0526fd761920450b4314e67105783b9bde26
+Size (mlt-6.16.0.tar.gz) = 1414374 bytes
+SHA1 (patch-src_swig_python_build) = 4907a9247fc587ca06574c4e69e97c2a0dae155b
