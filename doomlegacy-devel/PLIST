@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/doomlegacy
+bin/doomlegacy.bin
 man/man6/doomlegacy.6
 share/doc/doomlegacy/INSTALL.pkgsrc
 share/doc/doomlegacy/legacy.css

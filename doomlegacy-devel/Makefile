@@ -2,8 +2,8 @@
 
 VERS=		1.47.2
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1460
-DISTNAME=	doomlegacy-devel-r${SVNVERS}
+SVNVERS=	1471
+DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
 DISTFILES=			doomlegacy_${VERS}_common.zip
@@ -11,7 +11,7 @@ MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
 SVN_REPOSITORIES=		legacy_one
 SVN_REPO.legacy_one=		svn://svn.code.sf.net/p/doomlegacy/svn/legacy_one/trunk
 SVN_REVISION.legacy_one=	${SVNVERS}
-SVN_EXTRACTDIR.legacy_one=	doomlegacy-devel-r${SVNVERS}
+SVN_EXTRACTDIR.legacy_one=	doomlegacy-devel-0r${SVNVERS}
 
 MAINTAINER=		micha@NetBSD.org
 HOMEPAGE=		http://doomlegacy.sourceforge.net/
@@ -78,32 +78,33 @@ SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 pre-configure:
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
+	${CP} ${FILESDIR}/doomlegacy.sh ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
 	cd ${WRKSRC} && ${CP} make_options_nix make_options
 
 # Move configure options and process manpage template
 do-configure:
-	cd ${WRKDIR} &&							\
-		${SED} -e 's,$$NAME,doomlegacy,g'			\
-			-e 's,$$VERSION,${VERS},g'			\
-			-e 's,$$WADDIR,${PREFIX}/${DOOMWADDIR},g'	\
-			doomlegacy.6.in >doomlegacy.6
+	cd ${WRKDIR} && ${SED} -e 's,$$PREFIX,${PREFIX},'		\
+		 doomlegacy.sh >doomlegacy
+	cd ${WRKDIR} && ${SED} -e 's,$$NAME,doomlegacy,g'		\
+		-e 's,$$VERSION,${VERS},g'				\
+		-e 's,$$WADDIR,${PREFIX}/${DOOMWADDIR},g'		\
+		doomlegacy.6.in >doomlegacy.6
 
 do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/doomlegacy			\
+		${DESTDIR}${PREFIX}/bin/doomlegacy.bin
+	${INSTALL_SCRIPT} ${WRKDIR}/doomlegacy				\
+		${DESTDIR}${PREFIX}/bin/doomlegacy
+	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/legacy.wad		\
+		${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
 	cd ${WRKSRC} &&							\
-		${INSTALL_PROGRAM} bin/doomlegacy			\
-			${DESTDIR}${PREFIX}/bin;			\
 		${INSTALL_DATA} docs/legacy.css docs/whatsnew.html	\
 			${DESTDIR}${PREFIX}/share/doc/doomlegacy
-	cd ${WRKDIR}/doomlegacy_${VERS} &&				\
-		${INSTALL_DATA} legacy.wad				\
-			${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
-	cd ${WRKDIR} &&							\
-		${INSTALL_MAN} ${WRKDIR}/doomlegacy.6			\
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
-	cd ${WRKDIR} &&							\
-		${INSTALL_DATA} INSTALL.pkgsrc				\
-			${DESTDIR}${PREFIX}/share/doc/doomlegacy/INSTALL.pkgsrc
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc			\
+		${DESTDIR}${PREFIX}/share/doc/doomlegacy/INSTALL.pkgsrc
+	${INSTALL_MAN} ${WRKDIR}/doomlegacy.6				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 
 # Ensure that at least the shareware Episode 1 of Doom is available

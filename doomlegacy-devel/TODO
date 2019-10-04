@@ -83,4 +83,11 @@ Some compressed blockmaps can interfere with the overflow detection.
 Part 4 finished.
 
 
+Part 5: Rendering problems on big endian machine
+================================================
+On some maps the rendering is broken (only in parts of the map).
+
+[X] Reported upstream as Bug #655
+
+
 EOF
