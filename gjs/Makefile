@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
-#
+# $NetBSD$
 
-DISTNAME=	gjs-1.44.0
+DISTNAME=	gjs-1.53.4
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/1.44/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/1.53/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,36 +10,35 @@ HOMEPAGE=	http://live.gnome.org/Gjs
 COMMENT=	Javascript binding for GNOME based on Spidermonkey
 LICENSE=	mit
 
-MAKE_JOBS_SAFE=		NO
+BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	aclocal autoconf autoreconf automake gettext gmake m4 pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	gjs-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	gjs-dbus-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	gjs-gi-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	gjs-internals-1.0.pc.in
 
-SUBST_CLASSES+=			fix-python
-SUBST_STAGE.fix-python=		pre-configure
-SUBST_MESSAGE.fix-python=	Fixing dynamic python
-SUBST_FILES.fix-python+=	scripts/make-tests
-SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+CONFIGURE_ARGS+=	--disable-profiler
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-#SUBST_CLASSES+=		libjs
-#SUBST_STAGE.libjs=		pre-configure
-#SUBST_MESSAGE.fix-python=	Convert libjs to libmozjs24
-#SUBST_FILES.fix-python+=	scripts/make-tests
-#SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+LDFLAGS.NetBSD+=	${X11_LDFLAGS}
 
-BUILDLINK_TRANSFORM+=	l:mozjs:mozjs24
+# Needed by the Javascript JIT used in gjs
+NOT_PAX_MPROTECT_SAFE+=	bin/gjs-console
+NOT_PAX_MPROTECT_SAFE+=	bin/gjs
+
+pre-configure:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} autoreconf -vfi
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../wip/spidermonkey24/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/spidermonkey52/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
