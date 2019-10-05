@@ -9,7 +9,9 @@ HOMEPAGE=	https://xwax.org/
 COMMENT=	Vinyl emulation software
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	bash:run gmake
+USE_TOOLS+=	bash:run gsed:run gmake
+
+DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 MAKE_FLAGS+=	EXECDIR=${PREFIX}/libexec
 
@@ -19,6 +21,13 @@ MAKE_FLAGS+=	OSS=1
 .endif
 
 REPLACE_BASH+=	scan
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Setting path to PREFIX in source files.
+SUBST_FILES.prefix+=	import
+SUBST_FILES.prefix+=	interface.c
+SUBST_VARS.prefix+=	PREFIX
 
 INSTALLATION_DIRS+=	bin libexec
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
