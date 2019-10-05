@@ -14,7 +14,8 @@ BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoconf autoreconf automake gettext gmake m4 pkg-config
+USE_TOOLS+=	autoconf autoreconf automake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	gjs-1.0.pc.in
