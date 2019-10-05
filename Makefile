@@ -858,6 +858,7 @@ SUBDIR+=	flyback
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	fogleman-craft
+SUBDIR+=	foliate
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
 SUBDIR+=	foxtrotgps
