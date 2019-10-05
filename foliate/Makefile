@@ -10,11 +10,9 @@ COMMENT=	Simple and modern GTK eBook viewer
 HOMEPAGE=	https://johnfactotum.github.io/foliate/
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gettext msgfmt msgmerge
+USE_TOOLS+=	pkg-config msgfmt xgettext
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-meson-[0-9]*:../../devel/py-meson
 BUILD_DEPENDS+=	gjs>=1.52.0:../../wip/gjs
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 # XXX fails without GNU msgfmt
 _TOOLS_USE_PKGSRC.msgfmt=	yes
@@ -27,17 +25,9 @@ REPLACE_PYTHON+=	${WRKSRC}/src/assets/KindleUnpack/unipath.py
 
 GLIB_SCHEMAS=	com.github.johnfactotum.Foliate.gschema.xml
 
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} meson build --prefix=${PREFIX}
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -C build
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ninja -C build install
-
 # Add options once the package is running correctly
 #.include "options.mk"
+.include "../../devel/py-meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../lang/python/application.mk"
