@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/xwax
+libexec/xwax-import
+libexec/xwax-scan
+man/man1/xwax.1
+share/doc/xwax/CHANGES
+share/doc/xwax/COPYING
+share/doc/xwax/README
