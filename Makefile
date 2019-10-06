@@ -1096,7 +1096,6 @@ SUBDIR+=	gitless
 SUBDIR+=	gitsome
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
-SUBDIR+=	gjs
 SUBDIR+=	gksu
 SUBDIR+=	gl2ps
 SUBDIR+=	glib-java
