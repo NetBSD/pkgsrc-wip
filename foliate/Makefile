@@ -17,8 +17,8 @@ BUILD_DEPENDS+=	gjs>=1.52.0:../../lang/gjs
 # XXX fails without GNU msgfmt
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 
-REPLACE_PYTHON+=	${WRKSRC}/build-aux/meson/postinstall.py
-REPLACE_PYTHON+=	${WRKSRC}/src/assets/KindleUnpack/*.py
+REPLACE_PYTHON+=	build-aux/meson/postinstall.py
+REPLACE_PYTHON+=	src/assets/KindleUnpack/*.py
 
 GLIB_SCHEMAS=	com.github.johnfactotum.Foliate.gschema.xml
 
