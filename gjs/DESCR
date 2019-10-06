@@ -1,3 +1,0 @@
-Gjs is a Javascript binding for GNOME. It's mainly based on
-Spidermonkey javascript engine and the GObject introspection
-framework.
