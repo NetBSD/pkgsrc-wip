@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
-BUILD_DEPENDS+=	gjs>=1.52.0:../../wip/gjs
+BUILD_DEPENDS+=	gjs>=1.52.0:../../lang/gjs
 
 # XXX fails without GNU msgfmt
 _TOOLS_USE_PKGSRC.msgfmt=	yes
