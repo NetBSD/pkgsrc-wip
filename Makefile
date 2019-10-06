@@ -2394,6 +2394,7 @@ SUBDIR+=	netwox
 SUBDIR+=	netx
 SUBDIR+=	newsboat
 SUBDIR+=	newsboat213
+SUBDIR+=	nget
 SUBDIR+=	nicotine+
 SUBDIR+=	nightfall
 SUBDIR+=	nih-current
