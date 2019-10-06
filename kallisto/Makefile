@@ -19,7 +19,7 @@ SUBST_STAGE.test=	post-build
 SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
-PV=		0.45.0
+PV=		0.46.0
 DATADIR=	${PREFIX}/share/kallisto
 
 INSTALLATION_DIRS=	bin ${DATADIR}
