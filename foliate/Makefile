@@ -18,15 +18,10 @@ BUILD_DEPENDS+=	gjs>=1.52.0:../../wip/gjs
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 
 REPLACE_PYTHON+=	${WRKSRC}/build-aux/meson/postinstall.py
-REPLACE_PYTHON+=	${WRKSRC}/src/assets/KindleUnpack/compatibility_utils.py
-REPLACE_PYTHON+=	${WRKSRC}/src/assets/KindleUnpack/mobi_split.py
-REPLACE_PYTHON+=	${WRKSRC}/src/assets/KindleUnpack/mobiml2xhtml.py
-REPLACE_PYTHON+=	${WRKSRC}/src/assets/KindleUnpack/unipath.py
+REPLACE_PYTHON+=	${WRKSRC}/src/assets/KindleUnpack/*.py
 
 GLIB_SCHEMAS=	com.github.johnfactotum.Foliate.gschema.xml
 
-# Add options once the package is running correctly
-#.include "options.mk"
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
