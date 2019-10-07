@@ -29,6 +29,13 @@ REPLACE_PYTHON+=	src/assets/KindleUnpack/*.py
 
 GLIB_SCHEMAS=	com.github.johnfactotum.Foliate.gschema.xml
 
+pre-install:
+	${RM} -f ${WRKSRC}/src/assets/KindleUnpack/*.orig
+
+post-install:
+	${LN} -s -f ${DESTDIR}${PREFIX}/bin/com.github.johnfactotum.Foliate \
+		${DESTDIR}${PREFIX}/bin/foliate
+
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
