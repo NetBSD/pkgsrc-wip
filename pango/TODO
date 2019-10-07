@@ -1,0 +1,10 @@
+The additional patches should not be required:
+| 
+| # pkg-config --cflags harfbuzz
+| -I/usr/pkg/include/harfbuzz -I/usr/pkg/include/glib-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include
+
+Thanks wiz@ for pointing out.
+
+
+But wip/fltk-devel doesn't work correctly without the patches, maybe the CFLAGS
+are ignored there. This package will be removed after fltk-devel is repaired.
