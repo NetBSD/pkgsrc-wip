@@ -1,0 +1,16 @@
+$NetBSD$
+
+SHA1 (pango-1.44.6.tar.xz) = 6d1067d29b314bc41fe34c9bd83867eac6df5bad
+RMD160 (pango-1.44.6.tar.xz) = ec6e791baaba57e81465a339e8ccee28bc0f45d2
+SHA512 (pango-1.44.6.tar.xz) = 141babfae7c6c762afc8c829303baac1c29d62760503b0dd1da70cc3b5f2e514436626ad6af43d02e316dcf2baff840ad92b47a86df75b1fc8e8169d90ad2e50
+Size (pango-1.44.6.tar.xz) = 521672 bytes
+SHA1 (patch-pango_pango-coverage.h) = 0de62f4e2f368a7fe53d9e2587272caba539174f
+SHA1 (patch-pango_pango-font.h) = 8842cc7a6d89dafe737028c064c84694c3baec3b
+SHA1 (patch-pango_pangocairo-coretextfont.c) = cfef0e1372d5770d5988af411d435ee87fdfd0bd
+SHA1 (patch-pango_pangocairo-coretextfontmap.c) = 395cb1f8472a319c4b1c58ea137e36452bc44cc6
+SHA1 (patch-pango_pangocoretext-fontmap.c) = 643dfdb0e9672382d4d5259c90e451a829b9875e
+SHA1 (patch-pango_pangocoretext-private.h) = 554d80a4f9b63cda37745a6fbb3dcc348f986e9c
+SHA1 (patch-pango_pangocoretext.c) = 44b65b64da1d2ae819a5e984b5c672ad9d333622
+SHA1 (patch-pango_pangocoretext.h) = d6817eb02f0020c102ab95d63202f9508a70e647
+SHA1 (patch-pango_pangofc-fontmap.h) = 1943cba634c5d2ca34725c26007f4715037bbfe1
+SHA1 (patch-pangocairo-coretext.h) = 2f7c8efad48b58398070f48e71c16d99d3d59f57
