@@ -39,6 +39,7 @@ post-install:
 .include "../../devel/py-meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=2.24.0
 .include "../../www/webkit-gtk/buildlink3.mk"
