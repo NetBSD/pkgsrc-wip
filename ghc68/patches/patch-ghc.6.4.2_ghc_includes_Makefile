@@ -1,0 +1,36 @@
+$NetBSD$
+
+libgmp.so.10 not found
+
+
+--- ghc-6.4.2/ghc/includes/Makefile.orig	2006-03-28 22:47:04.000000000 +0900
++++ ../ghc-6.4.2/ghc/includes/Makefile	2019-10-07 23:34:39.217354152 +0900
+@@ -116,10 +116,10 @@
+ mkDerivedConstants.c : $(H_CONFIG) $(H_PLATFORM)
+ 
+ mkDerivedConstantsHdr : mkDerivedConstants.o
+-	$(CC) -o $@ $(CC_OPTS) $(LD_OPTS) mkDerivedConstants.o
++	$(CC) -o $@ $(CC_OPTS) $(LD_OPTS) -lgmp -L@PREFIX@/lib -Wl,-rpath=@PREFIX@/lib mkDerivedConstants.o
+ 
+ DerivedConstants.h : mkDerivedConstantsHdr
+-	./mkDerivedConstantsHdr >$@
++	env LD_LIBRARY_PATH=@PREFIX@/lib ./mkDerivedConstantsHdr >$@
+ 
+ endif
+ 
+@@ -139,13 +139,13 @@
+ else
+ 
+ mkGHCConstants : mkGHCConstants.o
+-	$(CC) -o $@ $(CC_OPTS) $(LD_OPTS) mkGHCConstants.o
++	$(CC) -o $@ $(CC_OPTS) $(LD_OPTS) -lgmp -L@PREFIX@/lib -Wl,-rpath=@PREFIX@/lib mkGHCConstants.o
+ 
+ mkGHCConstants.o : mkDerivedConstants.c
+ 	$(CC) -o $@ -c $<  -DGEN_HASKELL
+ 
+ GHCConstants.h : mkGHCConstants
+-	./mkGHCConstants >$@
++	env LD_LIBRARY_PATH=@PREFIX@/lib ./mkGHCConstants >$@
+ 
+ endif
+ 

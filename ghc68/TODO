@@ -1,0 +1,15 @@
+Current build problem is:
+
+
+
+Stable.c:75:17: error: conflicting types for 'stable_ptr_table'
+ StgWord RTS_VAR(stable_ptr_table) = NULL;
+                 ^
+/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Stg.h:60:20: note: in definition of macro 'RTS_VAR'
+ #define RTS_VAR(x) x
+                    ^
+In file included from /export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Rts.h:126:0,
+                 from Stable.c:13:
+/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Stable.h:39:32: note: previous declaration of 'stable_ptr_table' was here
+        DLL_IMPORT_RTS snEntry *stable_ptr_table;
+

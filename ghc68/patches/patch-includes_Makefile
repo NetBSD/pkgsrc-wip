@@ -1,0 +1,32 @@
+$NetBSD$
+
+Done.
+./mkGHCConstants >GHCConstants.h
+./mkGHCConstants: Shared object "libgmp.so.10" not found
+Makefile:148: recipe for target 'GHCConstants.h' failed
+gmake[3]: *** [GHCConstants.h] Error 1
+gmake[3]: *** Deleting file 'GHCConstants.h'
+../mk/target.mk:1193: recipe for target 'boot' failed
+gmake[2]: *** [boot] Error 1
+gmake[2]: Leaving directory '/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc'
+
+--- includes/Makefile.orig	2008-06-17 02:27:16.000000000 +0900
++++ includes/Makefile	2019-10-07 23:04:38.792773375 +0900
+@@ -131,7 +131,7 @@ mkDerivedConstantsHdr : mkDerivedConstan
+ 	$(CC) -o $@ $(CC_OPTS) $(LD_OPTS) mkDerivedConstants.o
+ 
+ DerivedConstants.h : mkDerivedConstantsHdr
+-	./mkDerivedConstantsHdr >$@
++	env LD_LBRARY_PATH=@PREFIX@/lib ./mkDerivedConstantsHdr >$@
+ 
+ endif
+ 
+@@ -151,7 +151,7 @@ GHCConstants.h :
+ else
+ 
+ mkGHCConstants : mkGHCConstants.o
+-	$(CC) -o $@ $(CC_OPTS) $(LD_OPTS) mkGHCConstants.o
++	$(CC) -o $@ $(CC_OPTS) $(LD_OPTS) -Wl,-rpath=@PREFIX@/lib mkGHCConstants.o
+ 
+ mkGHCConstants.o : mkDerivedConstants.c
+ 	$(CC) -o $@ $(CC_OPTS) -c $<  -DGEN_HASKELL
