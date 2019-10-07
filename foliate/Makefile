@@ -14,6 +14,13 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 
 BUILD_DEPENDS+=	gjs>=1.52.0:../../lang/gjs
 
+SUBST_CLASSES+=		pyvers
+SUBST_MESSAGE.pyvers=	Substitute the correct python version.
+SUBST_STAGE.pyvers=	pre-configure
+SUBST_FILES.pyvers=	src/main.js
+SUBST_VARS.pyvers+=	PYVERSSUFFIX
+#SUBST_SED.pyvers+=	-e 's/@PYVERSSUFFIX@/${PYVERSSUFFIX}/g'
+
 # XXX fails without GNU msgfmt
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 
