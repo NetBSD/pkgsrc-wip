@@ -88,6 +88,8 @@ Part 5: Rendering problems on big endian machine
 On some maps the rendering is broken (only in parts of the map).
 
 [X] Reported upstream as Bug #655
+[X] Update to SVN revision 1473
+    => Problem is only partly fixed (for some maps)
 
 
 EOF
