@@ -435,7 +435,6 @@ SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
 SUBDIR+=	cloc
 SUBDIR+=	clockspeed
-SUBDIR+=	clojure
 SUBDIR+=	clustalx
 SUBDIR+=	cluster-admin
 SUBDIR+=	clustershell
