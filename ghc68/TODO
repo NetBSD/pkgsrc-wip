@@ -1,9 +1,12 @@
 Current build problem is:
 
 
-
+gcc -O -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/base/include -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/unix/include -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/parsec/include   -fno-defer-pop -fomit-frame-pointer  -DNO_REGS -DUSE_MINIINTERPRETER  -DDONT_WANT_WIN32_DLL_SUPPORT -D__GLASGOW_HASKELL__=604  -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/readline/include -Wall  -W -Wstrict-prototypes  -Wmissing-prototypes  -Wmissing-declarations -Winline -Waggregate-return -Wbad-function-cast -I../includes -I. -Iparallel -DCOMPILING_RTS -fomit-frame-pointer    -c Sparks.c -o Sparks.o
+gcc -O -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/base/include -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/unix/include -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/parsec/include   -fno-defer-pop -fomit-frame-pointer  -DNO_REGS -DUSE_MINIINTERPRETER  -DDONT_WANT_WIN32_DLL_SUPPORT -D__GLASGOW_HASKELL__=604  -I/export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/libraries/readline/include -Wall  -W -Wstrict-prototypes  -Wmissing-prototypes  -Wmissing-declarations -Winline -Waggregate-return -Wbad-function-cast -I../includes -I. -Iparallel -DCOMPILING_RTS -fomit-frame-pointer    -c Stable.c -o Stable.o
+In file included from /export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Rts.h:19:0,
+                 from Stable.c:13:
 Stable.c:75:17: error: conflicting types for 'stable_ptr_table'
- StgWord RTS_VAR(stable_ptr_table) = NULL;
+ snEntry RTS_VAR(stable_ptr_table) = NULL;
                  ^
 /export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Stg.h:60:20: note: in definition of macro 'RTS_VAR'
  #define RTS_VAR(x) x
@@ -12,4 +15,17 @@ In file included from /export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Rt
                  from Stable.c:13:
 /export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Stable.h:39:32: note: previous declaration of 'stable_ptr_table' was here
         DLL_IMPORT_RTS snEntry *stable_ptr_table;
-
+                                ^~~~~~~~~~~~~~~~
+In file included from /usr/include/stdlib.h:85:0,
+                 from /export/WRKOBJDIR/wip/ghc68/work/ghc-6.4.2/ghc/includes/Rts.h:86,
+                 from Stable.c:13:
+Stable.c:75:37: error: invalid initializer
+ snEntry RTS_VAR(stable_ptr_table) = NULL;
+                                     ^
+Stable.c: In function 'lookupStableName':
+Stable.c:186:26: error: invalid operands to binary - (have 'snEntry * {aka struct <anonymous> *}' and 'snEntry {aka struct <anonymous>}')
+     sn = stable_ptr_free - stable_ptr_table;
+                          ^
+Stable.c:188:21: error: subscripted value is neither array nor pointer nor vector
+     stable_ptr_table[sn].ref = 0;
+                     ^

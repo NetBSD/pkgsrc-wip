@@ -28,8 +28,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ghc=${WRKDIR}/ghc-6.4.2/ghc/compiler/ghc-inplace
 CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
 USE_TOOLS+=		gmake perl:run
-LDFLAGS+=		-L${PREFIX}/lib -lgmp
-MAKE_JOBS_SAFE=		no
+#LDFLAGS+=		-L${PREFIX}/lib -lgmp
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
