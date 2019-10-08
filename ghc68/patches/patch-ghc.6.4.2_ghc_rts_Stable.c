@@ -8,7 +8,7 @@ probably not necessary
    application, etc of a stable pointer.
  
  */
-+snEntry RTS_VAR(stable_ptr_table) = NULL;
++snEntry *stable_ptr_table = NULL;
  
  snEntry *stable_ptr_table = NULL;
  static snEntry *stable_ptr_free = NULL;
