@@ -1,6 +1,6 @@
 @comment $NetBSD$
-bin/com.github.johnfactotum.Foliate
 bin/foliate
+libexec/foliate/com.github.johnfactotum.Foliate
 share/applications/com.github.johnfactotum.Foliate.desktop
 share/com.github.johnfactotum.Foliate/assets/KindleUnpack/__init__.py
 share/com.github.johnfactotum.Foliate/assets/KindleUnpack/compatibility_utils.py

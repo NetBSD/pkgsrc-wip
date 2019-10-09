@@ -26,12 +26,15 @@ USE_BUILTIN.gettext=	no
 REPLACE_PYTHON+=	build-aux/meson/postinstall.py
 REPLACE_PYTHON+=	src/assets/KindleUnpack/*.py
 
+INSTALLATION_DIRS+=	libexec/foliate
 
 pre-install:
 	${RM} -f ${WRKSRC}/src/assets/KindleUnpack/*.orig
 
 post-install:
-	${LN} -s -f ${DESTDIR}${PREFIX}/bin/com.github.johnfactotum.Foliate \
+	${MV} ${DESTDIR}${PREFIX}/bin/com.github.johnfactotum.Foliate \
+		${DESTDIR}${PREFIX}/libexec/foliate/com.github.johnfactotum.Foliate
+	${LN} -s -f ${DESTDIR}${PREFIX}/libexec/foliate/com.github.johnfactotum.Foliate \
 		${DESTDIR}${PREFIX}/bin/foliate
 
 .include "../../devel/meson/build.mk"
