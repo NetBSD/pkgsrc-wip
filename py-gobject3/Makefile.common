@@ -29,5 +29,5 @@ BUILDLINK_API_DEPENDS.glib2=	glib2>=2.38.0
 BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.46.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/pyversion.mk"

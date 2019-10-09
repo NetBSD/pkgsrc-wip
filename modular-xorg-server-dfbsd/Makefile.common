@@ -193,7 +193,7 @@ CONFIGURE_ARGS+=	--with-sha1=libnettle
 #	cd ${WRKSRC} && autoreconf -vif
 
 # Meson
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
