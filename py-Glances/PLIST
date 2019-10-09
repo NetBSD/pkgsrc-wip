@@ -1,5 +1,13 @@
 @comment $NetBSD$
 bin/glances
+man/man1/glances.1
+share/doc/glances/AUTHORS
+share/doc/glances/CONTRIBUTING.md
+share/doc/glances/COPYING
+share/doc/glances/NEWS.rst
+share/doc/glances/README.rst
+share/doc/glances/glances.conf
+share/examples/glances/glances.conf
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -423,11 +431,3 @@ ${PYSITELIB}/glances/thresholds.py
 ${PYSITELIB}/glances/timer.py
 ${PYSITELIB}/glances/web_list.py
 ${PYSITELIB}/glances/webserver.py
-man/man1/glances.1
-share/doc/glances/AUTHORS
-share/doc/glances/CONTRIBUTING.md
-share/doc/glances/COPYING
-share/doc/glances/NEWS.rst
-share/doc/glances/README.rst
-share/doc/glances/glances.conf
-share/examples/glances/glances.conf
