@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.3.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-DEPENDS:=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
+DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
 
 USE_LANGUAGES=	# none
 
