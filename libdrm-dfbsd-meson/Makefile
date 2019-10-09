@@ -153,6 +153,6 @@ CPPFLAGS+=	-DSTRICT_XSRC_NETBSD
 
 # Meson
 # CPPFLAGS+=	-Wno-return-type
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 
 .include "../../mk/bsd.pkg.mk"

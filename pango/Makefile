@@ -59,5 +59,5 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.10
 # which corresponds to release version 2.8.1
 BUILDLINK_API_DEPENDS.freetype2+= freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

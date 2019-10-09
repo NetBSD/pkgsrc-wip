@@ -21,7 +21,7 @@ LDFLAGS.SunOS+=	-lsocket
 .include "../../wip/xapps/buildlink3.mk"
 
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"

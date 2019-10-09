@@ -23,7 +23,7 @@ PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

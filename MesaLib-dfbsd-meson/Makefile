@@ -182,7 +182,7 @@ CWRAPPERS_APPEND.cxx+=	-fuse-ld=${PKG_LD:Q}
 
 # Meson
 CFLAGS+=	-Wno-return-type
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"

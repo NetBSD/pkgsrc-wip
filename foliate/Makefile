@@ -36,7 +36,7 @@ post-install:
 	${LN} -s -f ${DESTDIR}${PREFIX}/bin/com.github.johnfactotum.Foliate \
 		${DESTDIR}${PREFIX}/bin/foliate
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

@@ -18,6 +18,6 @@ MESON_ARGS+=	-D with_introspection=false
 
 .include "../../devel/glib2/buildlink3.mk"
 #.include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

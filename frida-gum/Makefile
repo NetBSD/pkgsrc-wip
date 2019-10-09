@@ -45,5 +45,5 @@ BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/frida
 .include "../../wip/frida-capstone/buildlink3.mk"
 .include "../../wip/frida-glib2/buildlink3.mk"
 .include "../../wip/frida-libffi/buildlink3.mk"
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

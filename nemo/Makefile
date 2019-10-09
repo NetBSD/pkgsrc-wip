@@ -40,7 +40,7 @@ REPLACE_PYTHON=	data/merge_action_strings \
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-private
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libnemo-extension
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/exempi/buildlink3.mk"

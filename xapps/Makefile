@@ -33,7 +33,7 @@ REPLACE_BASH=	files/usr/bin/xfce4-set-wallpaper
 pre-install:
 	${CHMOD} +x ${WRKSRC}/schemas/meson_install_schemas.py
 
-.include "../../devel/py-meson/build.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"
