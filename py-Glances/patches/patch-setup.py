@@ -9,8 +9,8 @@ Fixes paths of the man page and sample configuration file.
          ('share/doc/glances', ['AUTHORS', 'COPYING', 'NEWS.rst', 'README.rst',
                                 'CONTRIBUTING.md', 'conf/glances.conf']),
 -        ('share/man/man1', ['docs/man/glances.1'])
-+        ('/usr/pkg/share/examples/glances', ['conf/glances.conf']),
-+        ('/usr/pkg/man/man1', ['docs/man/glances.1'])
++        ('@PREFIX@/share/examples/glances', ['conf/glances.conf']),
++        ('@PREFIX@/man/man1', ['docs/man/glances.1'])
      ]
  
      return data_files
