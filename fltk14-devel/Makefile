@@ -2,8 +2,8 @@
 
 DISTNAME=	fltk-1.4.x
 CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
 GITHUB_TAG=	940b7ba13d26dcde4fbd4574d56167501e598327
-MASTER_SITES=	https://github.com/fltk/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

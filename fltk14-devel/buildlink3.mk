@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2018/03/12 11:15:49 wiz Exp $
+# $NetBSD$
 
 BUILDLINK_TREE+=	fltk
 
