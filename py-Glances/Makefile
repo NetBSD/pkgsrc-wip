@@ -22,6 +22,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Set correct prefix in setup.py
 SUBST_FILES.prefix=	${WRKSRC}/setup.py
 SUBST_VARS.prefix=	PREFIX
+SUBST_VARS.prefix+=	PKGMANDIR
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
