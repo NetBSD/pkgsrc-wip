@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Glances-3.1.1
+DISTNAME=	Glances-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/Glances/}

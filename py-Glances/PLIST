@@ -311,8 +311,6 @@ ${PYSITELIB}/glances/plugins/glances_alert.pyo
 ${PYSITELIB}/glances/plugins/glances_alert.pyc
 ${PYSITELIB}/glances/plugins/glances_amps.pyo
 ${PYSITELIB}/glances/plugins/glances_amps.pyc
-${PYSITELIB}/glances/plugins/glances_batpercent.pyo
-${PYSITELIB}/glances/plugins/glances_batpercent.pyc
 ${PYSITELIB}/glances/plugins/glances_cloud.pyo
 ${PYSITELIB}/glances/plugins/glances_cloud.pyc
 ${PYSITELIB}/glances/plugins/glances_core.pyo
@@ -329,8 +327,6 @@ ${PYSITELIB}/glances/plugins/glances_fs.pyo
 ${PYSITELIB}/glances/plugins/glances_fs.pyc
 ${PYSITELIB}/glances/plugins/glances_gpu.pyo
 ${PYSITELIB}/glances/plugins/glances_gpu.pyc
-${PYSITELIB}/glances/plugins/glances_hddtemp.pyo
-${PYSITELIB}/glances/plugins/glances_hddtemp.pyc
 ${PYSITELIB}/glances/plugins/glances_help.pyo
 ${PYSITELIB}/glances/plugins/glances_help.pyc
 ${PYSITELIB}/glances/plugins/glances_ip.pyo
@@ -375,7 +371,6 @@ ${PYSITELIB}/glances/plugins/glances_wifi.pyo
 ${PYSITELIB}/glances/plugins/glances_wifi.pyc
 ${PYSITELIB}/glances/plugins/glances_alert.py
 ${PYSITELIB}/glances/plugins/glances_amps.py
-${PYSITELIB}/glances/plugins/glances_batpercent.py
 ${PYSITELIB}/glances/plugins/glances_cloud.py
 ${PYSITELIB}/glances/plugins/glances_core.py
 ${PYSITELIB}/glances/plugins/glances_cpu.py
@@ -384,7 +379,6 @@ ${PYSITELIB}/glances/plugins/glances_docker.py
 ${PYSITELIB}/glances/plugins/glances_folders.py
 ${PYSITELIB}/glances/plugins/glances_fs.py
 ${PYSITELIB}/glances/plugins/glances_gpu.py
-${PYSITELIB}/glances/plugins/glances_hddtemp.py
 ${PYSITELIB}/glances/plugins/glances_help.py
 ${PYSITELIB}/glances/plugins/glances_ip.py
 ${PYSITELIB}/glances/plugins/glances_irq.py
@@ -406,6 +400,15 @@ ${PYSITELIB}/glances/plugins/glances_smart.py
 ${PYSITELIB}/glances/plugins/glances_system.py
 ${PYSITELIB}/glances/plugins/glances_uptime.py
 ${PYSITELIB}/glances/plugins/glances_wifi.py
+${PYSITELIB}/glances/plugins/sensors/__init__.py
+${PYSITELIB}/glances/plugins/sensors/__init__.pyo
+${PYSITELIB}/glances/plugins/sensors/__init__.pyc
+${PYSITELIB}/glances/plugins/sensors/glances_batpercent.pyo
+${PYSITELIB}/glances/plugins/sensors/glances_batpercent.pyc
+${PYSITELIB}/glances/plugins/sensors/glances_hddtemp.pyo
+${PYSITELIB}/glances/plugins/sensors/glances_hddtemp.pyc
+${PYSITELIB}/glances/plugins/sensors/glances_batpercent.py
+${PYSITELIB}/glances/plugins/sensors/glances_hddtemp.py
 ${PYSITELIB}/glances/ports_list.py
 ${PYSITELIB}/glances/processes.py
 ${PYSITELIB}/glances/server.py
