@@ -19,15 +19,13 @@ SUBST_MESSAGE.pyvers=	Substitute the correct python version.
 SUBST_STAGE.pyvers=	pre-configure
 SUBST_FILES.pyvers=	src/main.js
 SUBST_VARS.pyvers+=	PYVERSSUFFIX
-#SUBST_SED.pyvers+=	-e 's/@PYVERSSUFFIX@/${PYVERSSUFFIX}/g'
 
-# XXX fails without GNU msgfmt
-_TOOLS_USE_PKGSRC.msgfmt=	yes
+# Fails without GNU msgfmt
+USE_BUILTIN.gettext=	no
 
 REPLACE_PYTHON+=	build-aux/meson/postinstall.py
 REPLACE_PYTHON+=	src/assets/KindleUnpack/*.py
 
-GLIB_SCHEMAS=	com.github.johnfactotum.Foliate.gschema.xml
 
 pre-install:
 	${RM} -f ${WRKSRC}/src/assets/KindleUnpack/*.orig
