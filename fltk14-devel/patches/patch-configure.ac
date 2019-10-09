@@ -4,16 +4,18 @@ Modifications for "--enable-libtool".
 
 Remove OS specific CXXFLAGS and PANGOLIBDIR selection
 (tested to fail on GNU/Linux).
+Use pkg-config for Pango Flags/Libs instead.
 
---- configure.ac.orig	2019-04-07 09:24:20.000000000 +0000
+--- configure.ac.orig	2019-09-24 10:57:29.000000000 +0000
 +++ configure.ac
-@@ -217,7 +217,20 @@ fi
+@@ -217,7 +217,21 @@ fi
  AC_ARG_ENABLE(gl, [  --enable-gl             turn on OpenGL support [[default=yes]]])
  
  AC_ARG_ENABLE(shared, [  --enable-shared         turn on shared libraries [[default=no]]])
 -if test x$enable_shared = xyes; then
 +
 +# Check whether --enable-libtool or --disable-libtool was given.
++AC_ARG_ENABLE(libtool, [  --enable-libtool        use libtool [[default=no]]])
 +if test "${enable_libtool+set}" = set; then
 +  enableval="$enable_libtool"
 +
@@ -29,7 +31,7 @@ Remove OS specific CXXFLAGS and PANGOLIBDIR selection
      PICFLAG=1
      SHAREDSUFFIX=""
      FLUID="fluid-shared"
-@@ -390,6 +403,21 @@ else
+@@ -390,6 +404,21 @@ else
      LINKSHARED="$LINKFLTKCAIRO ../lib/libfltk_images.a ../lib/libfltk_forms.a ../lib/libfltk.a"
  fi
  
@@ -51,7 +53,7 @@ Remove OS specific CXXFLAGS and PANGOLIBDIR selection
  AC_SUBST(DSOCOMMAND)
  AC_SUBST(DSOFLAGS)
  AC_SUBST(DSOLINK)
-@@ -1087,25 +1115,27 @@ case $host_os_gui in
+@@ -1087,33 +1116,58 @@ case $host_os_gui in
  
          pango_found=no
  	if test x$enable_pango = xyes; then
@@ -74,27 +76,66 @@ Remove OS specific CXXFLAGS and PANGOLIBDIR selection
 -	    	  LDFLAGS="-Wl,-rpath,/usr/pkg/lib $LDFLAGS"
 -	    	  ;;
 -   	    esac
+-	        CPPFLAGS="$PANGOLIBDIR $CXXFLAGS"
+-	        AC_CHECK_HEADERS([pango/pango.h pango/pangoxft.h],
+-		   AC_CHECK_LIB(pango-1.0, pango_layout_new,
+-		    AC_CHECK_LIB(pangoxft-1.0, pango_xft_render_layout,
+-			AC_DEFINE(USE_PANGO)
+-                        pango_found=yes
+-			LIBS="$PANGOLIBDIR -lpango-1.0 -lpangoxft-1.0 -lgobject-2.0 $LIBS")))
+-		CPPFLAGS=$CXXFLAGS
 +	dnl # Remove OS specific CXXFLAGS and PANGOLIBDIR selection for pkgsrc
 +	dnl # Use ${prefix} instead of hard coded locations
 +	dnl     case $host_os in
-+    	dnl 	darwin*)
++	dnl 	darwin*)
 +	dnl     	  CXXFLAGS="-I/sw/include/pango-1.0 -I/sw/include/glib-2.0 -I/sw/lib/glib-2.0/include $CXXFLAGS"
 +	dnl     	  PANGOLIBDIR="-L/sw/lib"
 +	dnl     	  ;;
-+    	dnl 	linux*)
++	dnl 	linux*)
 +	dnl     	  CXXFLAGS="-I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include $CXXFLAGS"
 +	dnl     	  CXXFLAGS="-I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include $CXXFLAGS"
-+    	dnl     	  ;;
-+    	dnl     	freebsd*)
++	dnl     	  ;;
++	dnl     	freebsd*)
 +	dnl     	  CXXFLAGS="-I/usr/local/include/pango-1.0 -I/usr/local/include/glib-2.0 -I/usr/local/lib/glib-2.0/include $CXXFLAGS"
 +	dnl     	  ;;
-+     	dnl     	netbsd*)
-+	    	  CXXFLAGS="-I$prefix/include/pango-1.0 -I$prefix/include/glib-2.0 -I$prefix/lib/glib-2.0/include $CXXFLAGS"
-+	    	  CXXFLAGS="-I$prefix/include/glib/glib-2.0 $CXXFLAGS"
-+	    	  PANGOLIBDIR="-L$prefix/lib"
-+	    	  LDFLAGS="-Wl,-rpath,$prefix/lib $LDFLAGS"
++	dnl     	netbsd*)
++	dnl     	  CXXFLAGS="-I$prefix/include/pango-1.0 -I$prefix/include/glib-2.0 -I$prefix/lib/glib-2.0/include $CXXFLAGS"
++	dnl     	  CXXFLAGS="-I$prefix/include/glib/glib-2.0 $CXXFLAGS"
++	dnl     	  PANGOLIBDIR="-L$prefix/lib"
++	dnl     	  LDFLAGS="-Wl,-rpath,$prefix/lib $LDFLAGS"
 +	dnl     	  ;;
-+   	dnl     esac
- 	        CPPFLAGS="$PANGOLIBDIR $CXXFLAGS"
- 	        AC_CHECK_HEADERS([pango/pango.h pango/pangoxft.h],
- 		   AC_CHECK_LIB(pango-1.0, pango_layout_new,
++	dnl     esac
++	dnl        CPPFLAGS="$PANGOLIBDIR $CXXFLAGS"
++		dnl -------------------------------------------------------------
++		dnl Use pkg-config instead for pkgsrc
++		AC_PATH_PROG(PKGCONFIG, pkg-config)
++		if test "x$PKGCONFIG" = x; then
++			AC_MSG_NOTICE([please install pkg-config or use 'configure --disable-pango'.])
++			AC_MSG_ERROR([Aborting.])
++                fi
++
++		TMP="`$PKGCONFIG --cflags-only-I pangoxft`"
++		if test "x$TMP" = x; then
++			AC_MSG_NOTICE([pkg-config failed for pango, consider use of 'configure --disable-pango'.])
++			AC_MSG_ERROR([Aborting.])
++		fi
++		CPPFLAGS="$TMP $CPPFLAGS"
++
++		TMP="`$PKGCONFIG --cflags-only-other pangoxft`"
++		CXXFLAGS="$TMP $CXXFLAGS"
++
++		TMP="`$PKGCONFIG --libs-only-L pangoxft`"
++		LDFLAGS="$TMP $LDFLAGS"
++
++		TMP="`$PKGCONFIG --libs-only-l pangoxft`"
++		LIBS="$TMP $LIBS"
++		dnl -------------------------------------------------------------
++		AC_CHECK_HEADERS([pango/pango.h pango/pangoxft.h],
++			AC_CHECK_LIB(pango-1.0, pango_layout_new,
++			AC_CHECK_LIB(pangoxft-1.0, pango_xft_render_layout,
++				AC_DEFINE(USE_PANGO)
++				pango_found=yes)))
++	dnl	CPPFLAGS=$CXXFLAGS
+ 	fi
+ 
+ 	dnl Check for the Xdbe extension unless disabled...
