@@ -24,5 +24,8 @@ SUBST_FILES.prefix=	${WRKSRC}/setup.py
 SUBST_VARS.prefix=	PREFIX
 SUBST_VARS.prefix+=	PKGMANDIR
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} glances glances${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

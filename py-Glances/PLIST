@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/glances
+bin/glances${PYVERSSUFFIX}
 man/man1/glances.1
 share/doc/glances/AUTHORS
 share/doc/glances/CONTRIBUTING.md
