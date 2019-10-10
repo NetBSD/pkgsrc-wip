@@ -4,3 +4,4 @@ SHA1 (cutadapt-2.5.tar.gz) = bc92e43825d5d10892b69cdbd21448f17353c477
 RMD160 (cutadapt-2.5.tar.gz) = dacb42583d0dea114b2bcf42ac7da9d2c79e3436
 SHA512 (cutadapt-2.5.tar.gz) = fa114dc4d8dfc03325c1bc8b41101aa1dfac7b3fbbf71d98bd3422cb054ae1b475e0cdc56519a49cba95e432d5fec3b8abe4f58b915ad487f335f0fd62994715
 Size (cutadapt-2.5.tar.gz) = 269321 bytes
+SHA1 (patch-setup.py) = c1ddc55533acc8c21d929c5fd61c7f755028f130
