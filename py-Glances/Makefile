@@ -25,7 +25,11 @@ SUBST_VARS.prefix=	PREFIX
 SUBST_VARS.prefix+=	PKGMANDIR
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} glances glances${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX} && \
+	${MV} bin/glances bin/glances${PYVERSSUFFIX} && \
+	${MV} ${PKGMANDIR}/man1/glances.1 ${PKGMANDIR}/man1/glances${PYVERSSUFFIX}.1 && \
+	${MV} share/doc/glances share/doc/glances${PYVERSSUFFIX} && \
+	${MV} share/examples/glances share/examples/glances${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
