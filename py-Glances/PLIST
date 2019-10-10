@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/glances${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -422,7 +423,6 @@ ${PYSITELIB}/glances/web_list.pyo
 ${PYSITELIB}/glances/webserver.py
 ${PYSITELIB}/glances/webserver.pyc
 ${PYSITELIB}/glances/webserver.pyo
-bin/glances${PYVERSSUFFIX}
 man/man1/glances${PYVERSSUFFIX}.1
 share/doc/glances${PYVERSSUFFIX}/AUTHORS
 share/doc/glances${PYVERSSUFFIX}/CONTRIBUTING.md
