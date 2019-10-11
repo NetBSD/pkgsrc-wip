@@ -90,6 +90,19 @@ On some maps the rendering is broken (only in parts of the map).
 [X] Reported upstream as Bug #655
 [X] Update to SVN revision 1473
     => Problem is only partly fixed (for some maps)
+       Bug #655 was a big endian problem, now fixed
+    => Rendering problems with other map are unrelated
+       Ticket #657 opened for them
+       Looks like the bugs are in the level data, not in the engine
+
+Part 5 finished.
+
+
+Part 6: Import final release
+============================
+
+[ ] Import version 1.48
+    Not released yet
 
 
 EOF
