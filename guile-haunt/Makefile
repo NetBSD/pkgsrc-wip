@@ -15,6 +15,8 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 USE_TOOLS+=		automake autoconf autoreconf pkg-config
 
+# Runtime depends? Check.
+# Add guile-reader, for Skribe support
 DEPENDS+=	guile-commonmark-[0-9]*:../../wip/guile-commonmark
 INFO_FILES=	YES
 
