@@ -3980,6 +3980,7 @@ SUBDIR+=	py-semidbm
 SUBDIR+=	py-sempy
 SUBDIR+=	py-semver
 SUBDIR+=	py-sentry
+SUBDIR+=	py-sentry-sdk
 SUBDIR+=	py-sep
 SUBDIR+=	py-setupdocs
 SUBDIR+=	py-setuptools-rust
