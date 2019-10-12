@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	foliate-1.5.3
-CATEGORIES=	misc
+CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnfactotum/}
 EXTRACT_USING=	bsdtar
 

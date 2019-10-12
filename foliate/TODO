@@ -1,6 +1,0 @@
-- Give a better executable name
-  Probably wrap the current bin/ entry with a shell script
-- Add the optional components via options.mk
-- Fix crash when starting the application
-  /usr/pkg/lib/libgdk-3.so.0: Undefined PLT symbol "epoxy_has_glx" (symnum = 63)
-- Fix the deprecate schema warning
