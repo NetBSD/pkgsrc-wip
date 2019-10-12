@@ -9,7 +9,7 @@ CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ppcoin/ppcoin/archive/}
 DIST_SUBDIR=	${PKGBASE}
 
-MAINTAINER=	pkgsrc-users@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://peercoin.com/
 COMMENT=	Open source peer-to-peer digital currency, favored by Shiba Inus
 LICENSE=	mit

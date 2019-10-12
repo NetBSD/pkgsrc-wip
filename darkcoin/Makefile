@@ -7,7 +7,7 @@ PKGNAME=	dash-${DISTNAME:S/v//1}
 CATEGORIES=	finance
 MASTER_SITES=	https://github.com/darkcoinproject/darkcoin/archive/
 
-MAINTAINER=	pkgsrc-users@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.darkcoin.io/
 COMMENT=	Secure, decentralized, and anonymous digital currency
 LICENSE=	mit

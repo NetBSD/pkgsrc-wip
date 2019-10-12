@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:S/-linux//1}
 CATEGORIES=	finance
 MASTER_SITES=	http://sourceforge.net/projects/primecoin/files/0.1.2/
 
-MAINTAINER=	pkgsrc-users@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://primecoin.io/
 COMMENT=	Cryptocurrency based on searching for prime numbers
 LICENSE=	mit

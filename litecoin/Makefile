@@ -6,7 +6,7 @@ PKGNAME=	litecoin-${DISTNAME:S/v//1}
 CATEGORIES=	finance
 MASTER_SITES=	https://github.com/litecoin-project/litecoin/archive/
 
-MAINTAINER=	pkgsrc-users@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.litecoin.org
 COMMENT=	Lite version of Bitcoin using scrypt as a proof-of-work algorithm
 LICENSE=	mit
