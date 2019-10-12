@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TurningWheel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-user@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/TurningWheel/Barony/
 COMMENT=	First person rogue-like
 LICENSE=	gnu-gpl-v3

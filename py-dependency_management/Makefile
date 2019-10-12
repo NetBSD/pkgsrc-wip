@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dependency_management/}
 
-MAINTAINER=	pkgsrc-user@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/dependency_management
 COMMENT=	coala Dependency Management
 LICENSE=	gnu-agpl-v3
