@@ -15,6 +15,4 @@ MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=		MANPREFIX=${PREFIX:Q}/${PKGMANDIR:Q}
 MAKE_FLAGS+=		CC=${CC:Q}
 
-#REPLACE_SH+=		sfeed_opml_export sfeed_update
-
 .include "../../mk/bsd.pkg.mk"
