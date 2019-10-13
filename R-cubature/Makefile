@@ -4,7 +4,6 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/cubature/
 COMMENT=	Adaptive Multivariate Integration over Hypercubes
 LICENSE=	gnu-gpl-v3
 

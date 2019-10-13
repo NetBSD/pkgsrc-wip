@@ -5,7 +5,6 @@ CATEGORIES=		databases math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		${R_HOMEPAGE_BASE}/rgdal.html
 COMMENT=		Provides bindings to GDAL and R
 
 R_PKGNAME=		rgdal
