@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_util_checksum_farmhash_farmhash.h,v 1.1 2019/01/07 15:00:11 bacon Exp $
 
 # __GNUC__ does not imply location of endian.h.  Check for BSD first.
 

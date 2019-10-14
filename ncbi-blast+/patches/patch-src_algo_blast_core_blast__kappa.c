@@ -1,4 +1,4 @@
-$NetBSD: patch-src_algo_blast_core_blast__kappa.c,v 1.1 2018/04/27 20:28:28 bacon Exp $
+$NetBSD: patch-src_algo_blast_core_blast__kappa.c,v 1.2 2019/01/07 15:00:10 bacon Exp $
 
 # Work around NetBSD stderr def choking macro
 

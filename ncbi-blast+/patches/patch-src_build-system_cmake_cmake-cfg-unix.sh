@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_build-system_cmake_cmake-cfg-unix.sh,v 1.1 2019/01/07 15:00:10 bacon Exp $
 
 # Portability
 

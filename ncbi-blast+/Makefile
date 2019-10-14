@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/07/20 03:34:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2019/08/11 13:18:00 wiz Exp $
 
 DISTNAME=	ncbi-blast-2.8.1+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
+PKGREVISION=	5
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
@@ -20,9 +21,10 @@ SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
 SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
 
-USE_TOOLS+=	bash gmake
+USE_TOOLS+=	bash gmake perl
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_STRICT=	no	# doesn't know --enable-option-checking
 REPLACE_BASH=	scripts/common/impl/define_random_macros.sh
 REPLACE_BASH+=	src/app/blast/get_species_taxids.sh
 REPLACE_PERL=	src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
