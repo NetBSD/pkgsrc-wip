@@ -48,7 +48,9 @@ CONFIGURE_ENV+=		ac_cv_func_statfs=no
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
+.if ${OPSYS} != Darwin
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
