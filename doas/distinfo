@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (doas/6.2p2.tar.gz) = 417cb9de4d1815b342f1bb3fb96f31e2c8b25479
-RMD160 (doas/6.2p2.tar.gz) = d80538763cb0a0367eb2a6e50369743ea66aa1a5
-SHA512 (doas/6.2p2.tar.gz) = 5020559461bc423852c2d30c07df671b8cbf93cec2171ac755eac04f2bf56fca37fda8d72718fbf4150bf70e7855d29d3027cb54d81062d28d2271a290c297a5
-Size (doas/6.2p2.tar.gz) = 25634 bytes
-SHA1 (patch-compat_compat.h) = 9ac2c76586e2a6c82ba9a329cbf0ea6d5cd87ede
