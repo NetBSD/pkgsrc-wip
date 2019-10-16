@@ -18,7 +18,6 @@ TEST_TARGET=		test
 
 # ------------------------------------------------------
 # Options
-
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk14
 PKG_SUPPORTED_OPTIONS=	cairo opengl pango
 PKG_SUGGESTED_OPTIONS=	opengl pango
@@ -47,7 +46,6 @@ CONFIGURE_ARGS+=	--enable-pango
 .else
 CONFIGURE_ARGS+=	--disable-pango
 .endif
-
 # ------------------------------------------------------
 
 PTHREAD_OPTS+=		require
@@ -66,11 +64,16 @@ CONFIGURE_ARGS+=	--enable-shared
 # Use pkgsrc versions, not package's bundled versions.
 CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 
-post-extract:
-	cd ${WRKSRC} && autoconf
-
+# ------------------------------------------------------
+# Clean the source tree first for snapshots
+# (CPPFLAGS/LDFLAGS are for modular X)
+# Remove this for release version
 pre-configure:
-	cd ${WRKSRC} && ${GMAKE} ${MAKE_FLAGS} clean
+	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && \
+		CPPFLAGS="-I ${PREFIX}/include" LDFLAGS="-L ${PREFIX}/lib" \
+		${GMAKE} ${MAKE_FLAGS} clean
+# ------------------------------------------------------
 
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
