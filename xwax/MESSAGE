@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2019/06/10 12:41:23 nia Exp $
+
+Install mpg123 for MP3 support.
+
+For other formats, install ffmpeg.
+
+On NetBSD, to connect to the default audio device, run
+xwax -d /dev/audio -l /path/to/library
+
+===========================================================================

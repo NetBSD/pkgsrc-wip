@@ -1,0 +1,39 @@
+$NetBSD$
+
+Make usage of find portable.
+
+--- scan.orig	2018-01-19 20:40:49.000000000 +0000
++++ scan
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/usr/pkg/bin/bash
+ #
+ # Take a pathname as an argument and output a playlist to standard
+ # output and errors to standard error.
+@@ -15,15 +15,14 @@ set -eu -o pipefail  # pipefail requires
+ PATHNAME="$1"
+ 
+ if [ -d "$PATHNAME" ]; then
+-	find -L "$PATHNAME" -type f -regextype posix-egrep \
+-		-iregex '.*\.(ogg|oga|aac|cdaudio|mp3|flac|wav|aif|aiff|m4a|wma)'
++	find -L "$PATHNAME" -type f | grep -Ei '.*\.(ogg|oga|aac|cdaudio|mp3|flac|wav|aif|aiff|m4a|wma)'
+ else
+ 	cat "$PATHNAME"
+ fi |
+ 
+ # Parse artist and title information from matching filenames
+ 
+-sed -n '
++gsed -n '
+ {
+ # /[<ABnum>[.]] <artist> - <title>.ext
+ s:/\([A-H]\?[A0-9]\?[0-9].\? \+\)\?\([^/]*\) \+- \+\([^/]*\)\.[A-Z0-9]*$:\0\t\2\t\3:pi
+@@ -39,7 +38,7 @@ s:/\([A-H]\?[A0-9]\?[0-9].\? \+\)\?\([^/
+ 
+ # Extract BPM metadata from title (eg. "Ghostbusters (115.6 BPM)")
+ 
+-sed '
++gsed '
+ {
+ # BPM
+ s:\(.*\) *(\([0-9]\+\.\?[0-9]\+\) *BPM)$:\1\t\2:
