@@ -16,4 +16,5 @@ WRKSRC=	${WRKDIR}/doas-6.2p2
 
 USE_TOOLS+=	gmake
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
