@@ -30,7 +30,7 @@ pkgbase := fltk
 # For "pango" option
 .if !empty(PKG_BUILD_OPTIONS.fltk:Mpango)
 .  if ${OPSYS} != "Darwin"
-      # Untested: Cocoa backend on macOS should use Core Text instead
+# Untested: Cocoa backend on macOS should use Core Text instead
 .     include "../../devel/pango/buildlink3.mk"
 .  endif
 .endif
