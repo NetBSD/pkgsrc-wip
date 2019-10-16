@@ -8,12 +8,12 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
 GITHUB_TAG=	branch-2.0
 EXTRACT_SUFX=	.zip
-# The LGPL license is relaxed to allow static linking
-LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
+# The LGPL license is relaxed to allow static linking
+LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		autoconf gmake
