@@ -4238,6 +4238,7 @@ SUBDIR+=	qrint
 SUBDIR+=	qrq
 SUBDIR+=	qrupdate
 SUBDIR+=	qstat214
+SUBDIR+=	qsynth
 SUBDIR+=	qt4-gstreamer
 SUBDIR+=	qt4-libqtlua
 SUBDIR+=	qt5-libqtlua
