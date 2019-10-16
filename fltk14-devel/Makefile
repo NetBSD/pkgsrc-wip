@@ -14,39 +14,10 @@ LICENSE=	gnu-lgpl-v2
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gmake nroff
+# Doesn't run tests, only build them (because they are GUI programs)
 TEST_TARGET=		test
 
-# ------------------------------------------------------
-# Options
-PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk14
-PKG_SUPPORTED_OPTIONS=	cairo opengl pango
-PKG_SUGGESTED_OPTIONS=	opengl pango
-PLIST_VARS+=		opengl
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcairo)
-.  include "../../graphics/cairo/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-cairo
-.else
-CONFIGURE_ARGS+=	--disable-cairo
-.endif
-
-.if !empty(PKG_OPTIONS:Mopengl)
-CONFIGURE_ARGS+=	--enable-gl
-PLIST.opengl=		yes
-.else
-CONFIGURE_ARGS+=	--disable-gl
-.endif
-
-.if !empty(PKG_OPTIONS:Mpango)
-.  include "../../devel/pango/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-pango
-.else
-CONFIGURE_ARGS+=	--disable-pango
-.endif
-# ------------------------------------------------------
+.include "options.mk"
 
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
@@ -76,8 +47,6 @@ pre-configure:
 # ------------------------------------------------------
 
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"

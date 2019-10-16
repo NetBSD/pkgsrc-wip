@@ -11,20 +11,31 @@ BUILDLINK_PKGSRCDIR.fltk?=	../../wip/fltk14-devel
 BUILDLINK_FILES.fltk+=		include/Fl/*
 
 pkgbase := fltk
+.include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/pkg-build-options.mk"
 
+# For "cairo" option
 .if !empty(PKG_BUILD_OPTIONS.fltk:Mcairo)
 .  include "../../graphics/cairo/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mpango)
-.  include "../../devel/pango/buildlink3.mk"
+# For "opengl" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mopengl)
+.  if ${OPSYS} != "Darwin"
+.     include "../../graphics/MesaLib/buildlink3.mk"
+.     include "../../graphics/glu/buildlink3.mk"
+.  endif
 .endif
 
-.include "../../mk/bsd.fast.prefs.mk"
+# For "pango" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mpango)
+.  if ${OPSYS} != "Darwin"
+      # Untested: Cocoa backend on macOS should use Core Text instead
+.     include "../../devel/pango/buildlink3.mk"
+.  endif
+.endif
+
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
-.  include "../../graphics/glu/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXinerama/buildlink3.mk"
