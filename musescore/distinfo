@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (MuseScore-2.0.3.zip) = be98f5867f2060aedf15e9f20a89bf2e33b423af
-RMD160 (MuseScore-2.0.3.zip) = 28748c9f554cfdb25cdcb799baaa9cc2235197f7
-SHA512 (MuseScore-2.0.3.zip) = d028b0fb7d042c3fc9b4eaaa52d72e4ad381c3aa4aacfce577fe7a7df4b8e5234fda9af3afff26e0cc612ca21a1801a6fdc804937384763e7ef4179d3c302211
-Size (MuseScore-2.0.3.zip) = 55961927 bytes
-SHA1 (patch-CMakeLists.txt) = 7089bc8d20da11d03d4bd9a2db3869bbb65cb2ab
-SHA1 (patch-mscore_CMakeLists.txt) = b226bd4dd4d20a0549baadb7196273467f07a594

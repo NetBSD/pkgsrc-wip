@@ -2324,7 +2324,6 @@ SUBDIR+=	muscle-mcardplugin
 SUBDIR+=	muscle-pam
 SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscletool
-SUBDIR+=	musescore
 SUBDIR+=	musl
 SUBDIR+=	muttprint
 SUBDIR+=	muttvcquery
