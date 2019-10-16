@@ -1,0 +1,19 @@
+$NetBSD$
+
+Fix string comparison with "==" to portable "=" sh syntax.
+
+--- fltk2-config.in.orig	2012-03-23 05:49:17.000000000 +0000
++++ fltk2-config.in
+@@ -254,10 +254,10 @@ fi
+ #
+ case `uname -s` in
+     MINGW*)
+-	if test "$includedir" == /usr/include; then
++	if test "$includedir" = /usr/include; then
+ 	  includes=-I$includedir
+ 	fi
+-	if test "$libdir" == /usr/lib; then
++	if test "$libdir" = /usr/lib; then
+ 	  libs=-L$libdir
+ 	fi
+ 	;;

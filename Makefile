@@ -853,6 +853,7 @@ SUBDIR+=	flnews-devel
 SUBDIR+=	flowblade
 SUBDIR+=	flpsed
 SUBDIR+=	fltk14-devel
+SUBDIR+=	fltk2
 SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace
 SUBDIR+=	flvmeta
