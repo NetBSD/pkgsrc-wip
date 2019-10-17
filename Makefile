@@ -1579,6 +1579,7 @@ SUBDIR+=	ht2html
 SUBDIR+=	html-xml-utils
 SUBDIR+=	html2latex
 SUBDIR+=	htmldoc
+SUBDIR+=	htmldoc-x11
 SUBDIR+=	htslib
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
