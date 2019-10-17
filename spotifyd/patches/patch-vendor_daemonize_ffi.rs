@@ -10,11 +10,10 @@ nobody:*:32767:39:Unprivileged user:/nonexistent:/sbin/nologin
 But I don't _think_ that 39 is going to be guaranteed everywhere.
 Therefore simplest solution seems to be to skip this test on NetBSD.
 
-Not submitted upstream because unsure about the gid issue.
+Submitted upstream here: https://github.com/knsd/daemonize/pull/37
 
-
---- ../vendor/daemonize-0.3.0/src/ffi.rs.orig	2018-03-19 18:50:44.000000000 +0000
-+++ ../vendor/daemonize-0.3.0/src/ffi.rs
+--- ../vendor/daemonize-0.4.1/src/ffi.rs.orig	2019-03-26 19:09:36.000000000 +0000
++++ ../vendor/daemonize-0.4.1/src/ffi.rs
 @@ -79,6 +79,11 @@ mod tests {
          (i16::max_value()) as libc::uid_t
      }
@@ -26,10 +25,10 @@ Not submitted upstream because unsure about the gid issue.
 +
      #[test]
      fn test_get_gid_by_name() {
-         let group_name = ::std::ffi::CString::new(match ::std::fs::metadata("/etc/debian_version") {
-@@ -86,8 +91,11 @@ mod tests {
-             Err(_) => "nobody",
-         }).unwrap();
+         let group_name =
+@@ -88,8 +93,11 @@ mod tests {
+             })
+             .unwrap();
          unsafe {
 -            let gid = get_gid_by_name(&group_name);
 -            assert_eq!(gid, Some(nobody_uid_gid()))

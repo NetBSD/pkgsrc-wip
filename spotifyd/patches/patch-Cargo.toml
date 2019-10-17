@@ -1,13 +1,22 @@
 $NetBSD$
 
---- Cargo.toml.orig	2019-06-19 20:25:58.000000000 +0000
+--- Cargo.toml.orig	2019-10-06 08:56:31.000000000 +0000
 +++ Cargo.toml
-@@ -29,7 +29,7 @@ xdg = "2.2"
+@@ -24,7 +24,7 @@ serde = { version = "1.0.99", features =
+ serde_ini = "0.2.0"
+ sha-1 = "0.8"
+ simplelog = "0.7"
+-structopt = { git = "https://github.com/TeXitoi/structopt/", rev = "0c888e962d842f2c90c6c290d3a2a40947b37005", features = ["color"] }
++structopt = { path = "../structopt", features = ["color"] }
+ syslog = "4.0.1"
+ tokio-core = "0.1"
+ tokio-io = "0.1"
+@@ -35,7 +35,7 @@ whoami = "0.5.3"
  [dependencies.librespot]
  default-features = false
  features = ["with-tremor"]
 -git = "https://github.com/librespot-org/librespot.git"
 +path = "../librespot"
  
- [features]
- alsa_backend = ["librespot/alsa-backend", "alsa"]
+ [dev-dependencies]
+ env_logger = "0.6"
