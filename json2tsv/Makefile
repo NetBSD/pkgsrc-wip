@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.9 2019/08/01 18:55:29 leot Exp $
 
-DISTNAME=	json2tsv-0.1
+DISTNAME=	json2tsv-0.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://codemadness.org/releases/json2tsv/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://codemadness.org/git/json2tsv/file/README.html
 COMMENT=	Convert JSON to TSV
 LICENSE=	isc
