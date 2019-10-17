@@ -27,7 +27,10 @@ CONFIGURE_ARGS+=	--disable-gl
 .endif
 
 .if !empty(PKG_OPTIONS:Mpango)
-.  include "../../devel/pango/buildlink3.mk"
+.  if ${OPSYS} != "Darwin"
+#     Untested: Cocoa backend on macOS should use Core Text instead
+.     include "../../devel/pango/buildlink3.mk"
+.  endif
 CONFIGURE_ARGS+=	--enable-pango
 .else
 CONFIGURE_ARGS+=	--disable-pango
