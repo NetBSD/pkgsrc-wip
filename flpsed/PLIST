@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/flpsed
-man/man1/flpsed.1
-share/doc/flpsed/README
