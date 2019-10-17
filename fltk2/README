@@ -1,0 +1,5 @@
+Attention: FLTK 2 is no longer considered a successor of FLTK 1!
+Attention: FLTK 3 is no longer considered a successor of FLTK 1 and 2!
+New applications should use the FLTK 1.3 API.
+
+This package is intended for potential users of the removed package x11/fltk2.
