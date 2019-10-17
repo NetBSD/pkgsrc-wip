@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (qsynth-0.5.7.tar.gz) = f741da07c86d8d8dfdec9783384053bdc4251583
-RMD160 (qsynth-0.5.7.tar.gz) = feeebed368c7224d3c980db9efb0c30e9ab3ff75
-SHA512 (qsynth-0.5.7.tar.gz) = cf28b2e16a7951bdd1539f4fd7624b8216652ba2debb8b3ccf60daf5ad510fea75b598aef7ef7264bee9c1aabbbce5161ad13e2ec879c9568c76794bb00fd017
-Size (qsynth-0.5.7.tar.gz) = 315715 bytes
-SHA1 (patch-src_qsynthOptions.cpp) = 737c2877f99fbd31a5872257fdce4c5fb3e4b284
