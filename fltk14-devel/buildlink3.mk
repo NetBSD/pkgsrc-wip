@@ -14,11 +14,6 @@ pkgbase := fltk
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/pkg-build-options.mk"
 
-# For "cairo" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mcairo)
-.  include "../../graphics/cairo/buildlink3.mk"
-.endif
-
 # For "opengl" option
 .if !empty(PKG_BUILD_OPTIONS.fltk:Mopengl)
 .  if ${OPSYS} != "Darwin"

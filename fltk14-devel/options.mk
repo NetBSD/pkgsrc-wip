@@ -1,19 +1,12 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk14
-PKG_SUPPORTED_OPTIONS=	cairo opengl pango
+PKG_SUPPORTED_OPTIONS=	opengl pango
 PKG_SUGGESTED_OPTIONS=	opengl pango
 PLIST_VARS+=		opengl
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcairo)
-.  include "../../graphics/cairo/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-cairo
-.else
-CONFIGURE_ARGS+=	--disable-cairo
-.endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .  if ${OPSYS} != "Darwin"
