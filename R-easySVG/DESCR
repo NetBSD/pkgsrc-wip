@@ -1,0 +1,3 @@
+This SVG elements generator can easily generate SVG elements such
+as rect, line, circle, ellipse, polygon, polyline, text and group.
+Also, it can combine and output SVG elements into a SVG file.
