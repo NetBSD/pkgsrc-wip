@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (htmldoc/v1.9.7.tar.gz) = c2c3c6a73dfc2bd779bb186b0497eb8de28b25b7
-RMD160 (htmldoc/v1.9.7.tar.gz) = 18908dcd30e36eb1fcdf208146ca704f391b382a
-SHA512 (htmldoc/v1.9.7.tar.gz) = e9481d32318902b5179f8d2dbaa382bcb0084bf3cc57958f8f05f52be5019ab54da5c265bbb674ca8808198c35d04bf19ad2149c2add18cfb630e66a2b9dc8f2
-Size (htmldoc/v1.9.7.tar.gz) = 4502752 bytes
-SHA1 (patch-htmldoc_http-addrlist.c) = 7c2db39b43cdbb31da0d884fbbba63e2ab258354
