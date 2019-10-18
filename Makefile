@@ -47,6 +47,7 @@ SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-bnlearn
 SUBDIR+=	R-cubature
 SUBDIR+=	R-doParallel
+SUBDIR+=	R-easySVG
 SUBDIR+=	R-entropy
 SUBDIR+=	R-fitdistrplus
 SUBDIR+=	R-foreach
