@@ -3,7 +3,7 @@
 .include "../../lang/go/version.mk"
 
 # This should go into version.mk
-GO113_VERSION=	1.13.1
+GO113_VERSION=	1.13.3
 
 DISTNAME=	go${GO113_VERSION}.src
 PKGNAME=	go113-${GO113_VERSION}
