@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 
 INSTALLATION_DIRS=	bin
 
-SETGIDGAME=		yes
+USE_GAMESGROUP=		yes
 SPECIAL_PERMS=		bin/fltk-sudoku ${SETGID_GAMES_PERMS}
 
 do-install:
