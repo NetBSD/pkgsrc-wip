@@ -1,0 +1,18 @@
+$NetBSD$
+
+Don't strip installed binary.
+Add support for DESTDIR.
+
+--- Makefile.orig	2015-12-14 18:43:32.000000000 +0000
++++ Makefile
+@@ -47,8 +47,8 @@ makedepend:
+ -include makedepend
+ 
+ install: $(PROGRAM)
+-	$(INSTALL) -s $(PROGRAM) $(bindir)/$(PROGRAM)
+-	$(INSTALL) $(PROGRAM).$(MANPAGE) $(mandir)/man$(MANPAGE)/$(PROGRAM).$(MANPAGE)
++	$(INSTALL) -s $(PROGRAM) ${DESTDIR}$(bindir)/$(PROGRAM)
++	$(INSTALL) $(PROGRAM).$(MANPAGE) ${DESTDIR}$(mandir)/man$(MANPAGE)/$(PROGRAM).$(MANPAGE)
+ 
+ uninstall:
+ 	-@ rm -f $(bindir)/$(PROGRAM)

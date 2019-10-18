@@ -1,0 +1,22 @@
+$NetBSD$
+
+Add CPPFLAGS to CFLAGS and CXXFLAGS.
+
+--- makeinclude.in.orig	2015-06-30 09:39:45.000000000 +0000
++++ makeinclude.in
+@@ -16,10 +16,11 @@ CC	=@CC@
+ MAKEDEPEND =@MAKEDEPEND@
+ 
+ # flags for C++ compiler:
+-CFLAGS		=@CFLAGS@
+-CFLAGS_D	=@CFLAGS_D@
+-CXXFLAGS	=@CXXFLAGS@
+-CXXFLAGS_D	=@CXXFLAGS_D@
++CPPFLAGS	=@CPPFLAGS@
++CFLAGS		=@CFLAGS@ $(CPPFLAGS)
++CFLAGS_D	=@CFLAGS_D@ $(CPPFLAGS)
++CXXFLAGS	=@CXXFLAGS@ $(CPPFLAGS)
++CXXFLAGS_D	=@CXXFLAGS_D@ $(CPPFLAGS)
+ 
+ # libraries to link with:
+ LDLIBS	=@LIBS@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
