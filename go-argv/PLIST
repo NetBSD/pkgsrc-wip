@@ -5,6 +5,7 @@ gopkg/src/github.com/cosiner/argv/README.md
 gopkg/src/github.com/cosiner/argv/argv.go
 gopkg/src/github.com/cosiner/argv/argv_test.go
 gopkg/src/github.com/cosiner/argv/cmd.go
+gopkg/src/github.com/cosiner/argv/go.mod
 gopkg/src/github.com/cosiner/argv/parser.go
 gopkg/src/github.com/cosiner/argv/scanner.go
 gopkg/src/github.com/cosiner/argv/scanner_test.go
