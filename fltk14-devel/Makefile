@@ -22,7 +22,13 @@ TEST_TARGET=		test
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
+CONFIGURE_ARGS+=	--enable-print
 CONFIGURE_ARGS+=	--enable-threads
+CONFIGURE_ARGS+=	--enable-xcursor
+CONFIGURE_ARGS+=	--enable-xfixes
+CONFIGURE_ARGS+=	--enable-xft
+CONFIGURE_ARGS+=	--enable-xinerama
+CONFIGURE_ARGS+=	--enable-xrender
 CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
 
 PLIST_VARS+=		cs	# case-sensitive
@@ -47,9 +53,13 @@ pre-configure:
 # ------------------------------------------------------
 
 .if ${OPSYS} != "Darwin"
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
+.  include "../../x11/libXfixes/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXinerama/buildlink3.mk"
+.  include "../../x11/libXrender/buildlink3.mk"
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
