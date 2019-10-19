@@ -4298,6 +4298,7 @@ SUBDIR+=	relaydb
 SUBDIR+=	remctl
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
+SUBDIR+=	residualvm-git
 SUBDIR+=	resin
 SUBDIR+=	restic
 SUBDIR+=	revealjs
