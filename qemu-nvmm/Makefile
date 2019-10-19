@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.200 2019/01/31 13:39:10 martin Exp $
 
-DISTNAME=	qemu-3.1.0
-PKGREVISION=	4
+DISTNAME=	qemu-4.1.0
+PKGNAME=	${DISTNAME:S/qemu/qemu-nvmm/}
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -13,18 +13,29 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		bison flex gmake makeinfo perl:build pkg-config
+USE_TOOLS+=		bison flex gmake makeinfo perl:build pod2man pkg-config
 FAKE_NCURSES=		yes
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
-BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
+GMAKE_REQD=		4.1 # needed for docs
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+CHECK_PORTABILITY_SKIP+=	roms/u-boot/tools/imx8m_image.sh
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
 SUBST_MESSAGE.prefix=		Setting PREFIX
 SUBST_FILES.prefix+=		configure
 SUBST_VARS.prefix+=		PREFIX
+
+SUBST_CLASSES+=			sphinx-build
+SUBST_STAGE.sphinx-build=	pre-configure
+SUBST_MESSAGE.sphinx-build=	Fix hardcoded sphinx-build
+SUBST_FILES.sphinx-build+=	Makefile configure
+SUBST_FILES.sphinx-build+=	roms/skiboot/doc/Makefile
+SUBST_FILES.sphinx-build+=	roms/u-boot/Documentation/Makefile
+SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build${PYVERSSUFFIX}/g'
 
 .include "options.mk"
 
@@ -37,6 +48,7 @@ CONFIGURE_ARGS+=	--python=${PYTHONBIN}
 CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
+CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ARGS+=	--enable-jemalloc
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--target-list=x86_64-softmmu
@@ -54,8 +66,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-x86_64
 PKG_SYSCONFSUBDIR=	qemu
 
 REPLACE_PERL+=		scripts/texi2pod.pl
-
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported yet as of 2.10.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
@@ -86,6 +96,11 @@ PLIST.${pvar}=		YES
 .endfor
 
 TEST_TARGET=		check
+
+pre-configure:
+	${CP} ${FILESDIR}/accel_stubs_nvmm-stub.c ${WRKSRC}/accel/stubs/nvmm-stub.c
+	${CP} ${FILESDIR}/include_sysemu_nvmm.h ${WRKSRC}/include/sysemu/nvmm.h
+	${CP} ${FILESDIR}/target_i386_nvmm-all.c ${WRKSRC}/target/i386/nvmm-all.c
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \

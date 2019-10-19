@@ -9,3 +9,5 @@ good emulation speed, QEMU has two operating modes:
       Linux processes compiled for one CPU on another CPU. It can be used
       to launch the Wine Windows API emulator or to ease cross-compilation
       and cross-debugging.
+
+This variant is patched to use NetBSD's NVMM acceleration.
