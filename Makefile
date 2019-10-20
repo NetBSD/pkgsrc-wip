@@ -2025,6 +2025,7 @@ SUBDIR+=	libtogl
 SUBDIR+=	libtorrent-rasterbar
 SUBDIR+=	libtxc_dxtn
 SUBDIR+=	libucl
+SUBDIR+=	libudev
 SUBDIR+=	libuna
 SUBDIR+=	libunibilium
 SUBDIR+=	libunwind-git
