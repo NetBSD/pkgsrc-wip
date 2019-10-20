@@ -1,0 +1,24 @@
+$NetBSD$
+
+Improve test portability to non-bash shells.
+
+--- configure.orig	2019-06-03 14:10:18.291079910 +0000
++++ configure
+@@ -63946,7 +63946,7 @@ _ACEOF
+ 
+ else
+ 
+-        if test "x$enable_nls" == "xcheck"
++        if test "x$enable_nls" = "xcheck"
+ 	then
+ 	  enable_nls=no
+ 	else
+@@ -63972,7 +63972,7 @@ _ACEOF
+  enable_nls=yes
+ else
+ 
+-      if test "x$enable_nls" == "xcheck"
++      if test "x$enable_nls" = "xcheck"
+       then
+         enable_nls=no
+       else

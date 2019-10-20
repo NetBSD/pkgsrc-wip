@@ -1,0 +1,2 @@
+- Seems to be unable to communicate with libvirtd via socket.
+  (Maybe take a look at systemd scripts for comparison)
