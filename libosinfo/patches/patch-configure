@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- configure.orig	2018-06-20 09:40:38.000000000 +0000
++++ configure
+@@ -15346,12 +15346,12 @@ fi
+ 
+ 
+                 if test "x$VAPIGEN" != "xno"; then
+-                        if test "x$enable_vala" == "xcheck" ; then
++                        if test "x$enable_vala" = "xcheck" ; then
+                                 enable_vala=yes
+                         fi
+ 
+                 else
+-                        if test "x$enable_vala" == "xyes" ; then
++                        if test "x$enable_vala" = "xyes" ; then
+                                 as_fn_error $? "Cannot find the \"vapigen\" binary in your PATH" "$LINENO" 5
+                         fi
+                 fi

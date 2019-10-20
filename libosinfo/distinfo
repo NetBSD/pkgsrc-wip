@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (libosinfo-1.2.0.tar.gz) = e79bcc14f0506e75e8fd4a2845155d50dc493a85
+RMD160 (libosinfo-1.2.0.tar.gz) = b342a28b7c5c328d73872d9af4abe5eaf63fea5d
+SHA512 (libosinfo-1.2.0.tar.gz) = d98a107a08c5e2cddd746631b3ceac4278184ea5561ad2372d772b8ae253dc1363f217778d105387e5b5c5e86be9607668aa94929ad9b4ee48ab7abf50fb6a01
+Size (libosinfo-1.2.0.tar.gz) = 916787 bytes
+SHA1 (patch-configure) = b2ff8f6934e7275ad08947c8869eaafdbbd05f25
