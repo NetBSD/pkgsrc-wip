@@ -1,0 +1,17 @@
+@comment $NetBSD$
+${PYSITELIB}/libvirt.pyo
+${PYSITELIB}/libvirt.pyc
+${PYSITELIB}/libvirt_lxc.pyo
+${PYSITELIB}/libvirt_lxc.pyc
+${PYSITELIB}/libvirt_qemu.pyo
+${PYSITELIB}/libvirt_qemu.pyc
+${PLIST.py3x}${PYSITELIB}/libvirtaio.pyo
+${PLIST.py3x}${PYSITELIB}/libvirtaio.pyc
+${PYSITELIB}/libvirt.py
+${PYSITELIB}/libvirt_lxc.py
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/libvirt_qemu.py
+${PLIST.py3x}${PYSITELIB}/libvirtaio.py
+${PYSITELIB}/libvirtmod.so
+${PYSITELIB}/libvirtmod_lxc.so
+${PYSITELIB}/libvirtmod_qemu.so
