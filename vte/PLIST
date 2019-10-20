@@ -7,6 +7,7 @@ include/vte-2.91/vte/vteenums.h
 include/vte-2.91/vte/vteglobals.h
 include/vte-2.91/vte/vtemacros.h
 include/vte-2.91/vte/vtepty.h
+include/vte-2.91/vte/vteregex.h
 include/vte-2.91/vte/vteterminal.h
 include/vte-2.91/vte/vtetypebuiltins.h
 include/vte-2.91/vte/vteversion.h

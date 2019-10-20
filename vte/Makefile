@@ -19,10 +19,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf automake gette
 USE_LANGUAGES+=		c c++
 
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
-# XXX: option
 CONFIGURE_ARGS+=	--enable-introspection
-# XXX: option
-CONFIGURE_ARGS+=	--enable-python
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && \
@@ -47,5 +44,6 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

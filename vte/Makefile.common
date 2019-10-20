@@ -2,7 +2,7 @@
 #
 # used by x11/py-vte/Makefile
 
-DISTNAME=	vte-0.42.1
+DISTNAME=	vte-0.48.3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
 HOMEPAGE=	https://www.gnome.org/
