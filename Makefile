@@ -1722,6 +1722,7 @@ SUBDIR+=	jruby
 SUBDIR+=	js-Gallery
 SUBDIR+=	jsl
 SUBDIR+=	json2tsv
+SUBDIR+=	json2tsv-git
 SUBDIR+=	jsoncpp-git
 SUBDIR+=	judy
 SUBDIR+=	juk

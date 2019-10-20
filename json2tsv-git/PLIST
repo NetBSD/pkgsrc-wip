@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/json2tsv
+man/man1/json2tsv.1
+share/doc/json2tsv/README
