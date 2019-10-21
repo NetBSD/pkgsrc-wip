@@ -1,2 +1,0 @@
-[X] pkglint doesn't like SETGIDGAME
-    => Replaced with USE_GAMESGROUP
