@@ -1,0 +1,5 @@
+Wrapper library for /dev/input/eventX listens to keyboard and mouse
+events. Maps codes and names. Finds buttons and LEDs. Checks the
+resolution, repeat delay and period. Modifies appearance and capability
+bits. Transparently synchronizes when the process does not read events
+fast enough and the kernel is forced to drop some events.
