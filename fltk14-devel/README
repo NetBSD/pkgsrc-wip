@@ -1,4 +1,8 @@
 FLTK 1.4.x development snapshot
-(intended to test X11 glyph substitution via pango)
 
+Intended to test glyph substitution via Pango with X11 backend.
 This allows applications to render text using multiple fonts.
+
+Also useful to test compatibility of packages with FLTK 1.4 API.
+In general application using the FLTK 1.3 API should work out-of-the-box
+with FLTK 1.4 too. Note: The ABI of the shared library is not compatible!

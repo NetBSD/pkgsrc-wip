@@ -30,15 +30,28 @@ pkgbase := fltk
 .  endif
 .endif
 
+# For "xft2" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mxft2)
+.  if ${OPSYS} != "Darwin"
+#     Untested: Cocoa backend on macOS should use Core Text instead
+.     include "../../x11/libXft/buildlink3.mk"
+.  endif
+.endif
+
+# For "xinerama" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mxinerama)
+.  if ${OPSYS} != "Darwin"
+.     include "../../x11/libXinerama/buildlink3.mk"
+.  endif
+.endif
+
+# FLTK uses Cocoa backend on macOS/Darwin (X11 backend otherwise)
 .if ${OPSYS} != "Darwin"
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXfixes/buildlink3.mk"
-.  include "../../x11/libXft/buildlink3.mk"
-.  include "../../x11/libXinerama/buildlink3.mk"
 .  include "../../x11/libXrender/buildlink3.mk"
-
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

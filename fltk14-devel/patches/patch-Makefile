@@ -1,7 +1,7 @@
 $NetBSD$
 
 Remove tests from directory list.
-Added makeinclude as dependency for test target.
+Add target "test" to build test programs.
 
 --- Makefile.orig	2016-09-30 11:33:14.000000000 +0000
 +++ Makefile

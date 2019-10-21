@@ -23,28 +23,35 @@ PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
 CONFIGURE_ARGS+=	--enable-print
+CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--enable-xcursor
 CONFIGURE_ARGS+=	--enable-xfixes
-CONFIGURE_ARGS+=	--enable-xft
-CONFIGURE_ARGS+=	--enable-xinerama
 CONFIGURE_ARGS+=	--enable-xrender
-CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
 
+# Use pkgsrc versions of libraries, not package's bundled versions.
+CONFIGURE_ARGS+=	--disable-localjpeg
+CONFIGURE_ARGS+=	--disable-localpng
+CONFIGURE_ARGS+=	--disable-localzlib
+
+# Create symlinks for common misspellings of headerfile names
+# (if filesystem is case-sensitive)
 PLIST_VARS+=		cs	# case-sensitive
 .if !exists(./descr) && ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--with-links
 PLIST.cs=		yes
 .endif
 
-CONFIGURE_ARGS+=	--enable-shared
-# Use pkgsrc versions, not package's bundled versions.
-CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
+# ------------------------------------------------------
+# No documentation where and why this was needed for FLTK 1.3 package
+# => Comment out for tests. Reenabled if problem still exists.
+#CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
+# ------------------------------------------------------
 
 # ------------------------------------------------------
 # Clean the source tree first for snapshots
 # (CPPFLAGS/LDFLAGS are for modular X)
-# Remove this for release version
+# => Remove this section for release version
 pre-configure:
 	cd ${WRKSRC} && autoconf
 	cd ${WRKSRC} && \
@@ -52,13 +59,12 @@ pre-configure:
 		${GMAKE} ${MAKE_FLAGS} clean
 # ------------------------------------------------------
 
+# FLTK uses Cocoa backend on macOS/Darwin (X11 backend otherwise)
 .if ${OPSYS} != "Darwin"
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXfixes/buildlink3.mk"
-.  include "../../x11/libXft/buildlink3.mk"
-.  include "../../x11/libXinerama/buildlink3.mk"
 .  include "../../x11/libXrender/buildlink3.mk"
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
