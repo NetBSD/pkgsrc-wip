@@ -8,7 +8,7 @@ GIT_REPO=	https://git.code.sf.net/p/eureka-editor/git
 #DISTNAME=	eureka-124-source
 #PKGNAME=	${DISTNAME:S/eureka/eureka-devel/:S/-source//:S/-1/-1./}
 CATEGORIES=	games
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eureka-editor}
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eureka-editor/}
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/eureka-editor/
@@ -42,9 +42,12 @@ SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
+# FLTK must be compiled with OpenGL support
 # FLTK version 1.4 is supported too
 #.include "../../wip/fltk13/buildlink3.mk"
 .include "../../wip/fltk14-devel/buildlink3.mk"
-
+.if empty(PKG_OPTIONS.fltk14:Mopengl)
+PKG_FAIL_REASON+=	"FLTK must be compiled with \"opengl\" option."
+.endif
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
