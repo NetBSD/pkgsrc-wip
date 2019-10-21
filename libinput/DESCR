@@ -1,0 +1,4 @@
+Full input stack library processes user input events for display servers
+and other applications. Generates relative pointer events from touchpads.
+Records pressure. Scales coordinates. Accelerates pointer. Debounces
+clicks. Emulates soft buttons. Detects palm and gestures.
