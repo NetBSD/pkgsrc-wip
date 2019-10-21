@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/mtdev-test
+include/mtdev-mapping.h
+include/mtdev-plumbing.h
+include/mtdev.h
+lib/libmtdev.la
+lib/pkgconfig/mtdev.pc
