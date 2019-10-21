@@ -2927,6 +2927,7 @@ SUBDIR+=	pentagram
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
 SUBDIR+=	pev
+SUBDIR+=	pfetch
 SUBDIR+=	pgp6
 SUBDIR+=	pgplot
 SUBDIR+=	pgstudio
