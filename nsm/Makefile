@@ -15,18 +15,5 @@ USE_LANGUAGES=		c++
 INSTALLATION_DIRS=	bin
 BUILD_TARGET=		nsm
 
-# https://github.com/nifty-site-manager/nsm/pull/1
-SUBST_CLASSES+=		cc
-SUBST_STAGE.cc=		pre-build
-SUBST_MESSAGE.cc=	fixing cc
-SUBST_FILES.cc=		Makefile
-SUBST_SED.cc+=		-e 's,g++,${CXX:Q},g'
-
-# We have lots of system specific assumptions and no
-# real portable install target in the Makefile
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nift ${DESTDIR}${PREFIX}/bin/nift
-	${INSTALL_PROGRAM} ${WRKSRC}/nsm ${DESTDIR}${PREFIX}/bin/nsm
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
