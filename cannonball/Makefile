@@ -20,6 +20,7 @@ CMAKE_ARGS.Linux+=	-DTARGET=debian
 CMAKE_ARGS.NetBSD+=	-G "Unix Makefiles"
 CMAKE_ARGS.NetBSD+=	-DTARGET=bsd
 CMAKE_ARGS.NetBSD+=	-DBSD_PREFIX_PATH:STRING=${PREFIX}
+CMAKE_ARGS.NetBSD+=	-DSDL2=1
 
 INSTALLATION_DIRS+=	bin libexec share/cannonball share/cannonball/res \
 			share/cannonball/conf ${PKGMANDIR}/man6
@@ -47,5 +48,5 @@ do-install:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
