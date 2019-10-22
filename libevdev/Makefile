@@ -11,10 +11,7 @@ COMMENT=	Keyboard and mouse events, capability bits
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-USE_TOOLS+=	autoconf automake gmake
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
-
-pre-configure:
-	cd ${WRKSRC} &&autoreconf -fiv
 
 .include "../../mk/bsd.pkg.mk"
