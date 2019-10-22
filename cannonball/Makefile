@@ -20,7 +20,6 @@ CMAKE_ARGS.Linux+=	-DTARGET=debian
 CMAKE_ARGS.NetBSD+=	-G "Unix Makefiles"
 CMAKE_ARGS.NetBSD+=	-DTARGET=bsd
 CMAKE_ARGS.NetBSD+=	-DBSD_PREFIX_PATH:STRING=${PREFIX}
-CMAKE_ARGS.NetBSD+=	-DSDL2=1
 
 INSTALLATION_DIRS+=	bin libexec share/cannonball share/cannonball/res \
 			share/cannonball/conf ${PKGMANDIR}/man6
