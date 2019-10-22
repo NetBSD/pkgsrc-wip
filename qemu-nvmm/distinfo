@@ -14,3 +14,4 @@ SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_usb_dev-mtp.c) = 0f9034fb3904e5d5e3b98d24b94e054181687d95
 SHA1 (patch-nvmm-support) = f164c48a25367d751d77faa87962321b0b086862
+SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd3af2e74fc

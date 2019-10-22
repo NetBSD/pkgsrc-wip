@@ -19,9 +19,8 @@ UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
 GMAKE_REQD=		4.1 # needed for docs
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-CHECK_PORTABILITY_SKIP+=	roms/u-boot/tools/imx8m_image.sh
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
@@ -35,7 +34,7 @@ SUBST_MESSAGE.sphinx-build=	Fix hardcoded sphinx-build
 SUBST_FILES.sphinx-build+=	Makefile configure
 SUBST_FILES.sphinx-build+=	roms/skiboot/doc/Makefile
 SUBST_FILES.sphinx-build+=	roms/u-boot/Documentation/Makefile
-SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build${PYVERSSUFFIX}/g'
+SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
 
 .include "options.mk"
 
@@ -115,8 +114,10 @@ post-install:
 .include "../../devel/jemalloc/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
