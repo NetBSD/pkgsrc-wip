@@ -6,9 +6,11 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/xnedit/
-COMMENT=	Fork of NEdit with unicode support and antialiased text
+COMMENT=	Fork of NEdit with Unicode support and antialiased text
 LICENSE=	gnu-gpl-v2
-VERS=		1.0.1
+VERS=		1.1.0
+
+USE_LANGUAGES=	c99
 
 WRKSRC=			${WRKDIR}/xnedit
 BUILD_TARGET=		netbsd
@@ -38,10 +40,15 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/doc/xnedit
 .endfor
 
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+# Not needed. Indirect dependency included via libXft
+#.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
+# Doesn't work with modular X (and is wrong anyway according to documentation)
+#.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
