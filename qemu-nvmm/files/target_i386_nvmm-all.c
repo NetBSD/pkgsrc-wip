@@ -394,7 +394,7 @@ nvmm_vcpu_pre_run(CPUState *cpu)
     struct nvmm_vcpu *vcpu = &qcpu->vcpu;
     X86CPU *x86_cpu = X86_CPU(cpu);
     struct nvmm_x64_state *state = vcpu->state;
-    struct nvmm_event *event = vcpu->event;
+    struct nvmm_vcpu_event *event = vcpu->event;
     bool has_event = false;
     bool sync_tpr = false;
     uint8_t tpr;
@@ -419,7 +419,7 @@ nvmm_vcpu_pre_run(CPUState *cpu)
     if (!has_event && (cpu->interrupt_request & CPU_INTERRUPT_NMI)) {
         if (nvmm_can_take_nmi(cpu)) {
             cpu->interrupt_request &= ~CPU_INTERRUPT_NMI;
-            event->type = NVMM_EVENT_INTERRUPT_HW;
+            event->type = NVMM_VCPU_EVENT_INTR;
             event->vector = 2;
             has_event = true;
         }
@@ -428,7 +428,7 @@ nvmm_vcpu_pre_run(CPUState *cpu)
     if (!has_event && (cpu->interrupt_request & CPU_INTERRUPT_HARD)) {
         if (nvmm_can_take_int(cpu)) {
             cpu->interrupt_request &= ~CPU_INTERRUPT_HARD;
-            event->type = NVMM_EVENT_INTERRUPT_HW;
+            event->type = NVMM_VCPU_EVENT_INTR;
             event->vector = cpu_get_pic_interrupt(env);
             has_event = true;
         }
@@ -471,7 +471,7 @@ nvmm_vcpu_pre_run(CPUState *cpu)
  * RFLAGS.
  */
 static void
-nvmm_vcpu_post_run(CPUState *cpu, struct nvmm_exit *exit)
+nvmm_vcpu_post_run(CPUState *cpu, struct nvmm_vcpu_exit *exit)
 {
     struct qemu_vcpu *qcpu = get_qemu_vcpu(cpu);
     struct CPUX86State *env = (CPUArchState *)(cpu->env_ptr);
@@ -525,7 +525,7 @@ nvmm_mem_callback(struct nvmm_mem *mem)
     current_cpu->vcpu_dirty = false;
 }
 
-static struct nvmm_callbacks nvmm_callbacks = {
+static struct nvmm_assist_callbacks nvmm_callbacks = {
     .io = nvmm_io_callback,
     .mem = nvmm_mem_callback
 };
@@ -561,8 +561,8 @@ nvmm_handle_io(struct nvmm_machine *mach, struct nvmm_vcpu *vcpu)
 }
 
 static int
-nvmm_handle_msr(struct nvmm_machine *mach, CPUState *cpu,
-    struct nvmm_exit *exit)
+nvmm_handle_rdmsr(struct nvmm_machine *mach, CPUState *cpu,
+    struct nvmm_vcpu_exit *exit)
 {
     struct qemu_vcpu *qcpu = get_qemu_vcpu(cpu);
     struct nvmm_vcpu *vcpu = &qcpu->vcpu;
@@ -571,49 +571,71 @@ nvmm_handle_msr(struct nvmm_machine *mach, CPUState *cpu,
     uint64_t val;
     int ret;
 
-    val = exit->u.msr.val;
-
-    switch (exit->u.msr.msr) {
+    switch (exit->u.rdmsr.msr) {
     case MSR_IA32_APICBASE:
-        if (exit->u.msr.type == NVMM_EXIT_MSR_RDMSR) {
-            val = cpu_get_apic_base(x86_cpu->apic_state);
-        } else {
-            cpu_set_apic_base(x86_cpu->apic_state, val);
-        }
+        val = cpu_get_apic_base(x86_cpu->apic_state);
         break;
-    default:
-        // TODO: more MSRs to add?
-        if (exit->u.msr.type == NVMM_EXIT_MSR_RDMSR) {
-            val = 0;
-        }
-        error_report("NVMM: Unexpected %sMSR 0x%lx [val=0x%lx], ignored",
-            (exit->u.msr.type == NVMM_EXIT_MSR_RDMSR) ? "RD" : "WR",
-            exit->u.msr.msr, val);
+    default: // More MSRs to add?
+        val = 0;
+        error_report("NVMM: Unexpected RDMSR 0x%x, ignored",
+            exit->u.rdmsr.msr);
         break;
     }
 
     ret = nvmm_vcpu_getstate(mach, vcpu, NVMM_X64_STATE_GPRS);
-    if (ret == -1) {
+    if (ret == -1)
         return -1;
-    }
 
-    if (exit->u.msr.type == NVMM_EXIT_MSR_RDMSR) {
-        state->gprs[NVMM_X64_GPR_RAX] = (val & 0xFFFFFFFF);
-        state->gprs[NVMM_X64_GPR_RDX] = (val >> 32);
-    }
-    state->gprs[NVMM_X64_GPR_RIP] = exit->u.msr.npc;
+    state->gprs[NVMM_X64_GPR_RAX] = (val & 0xFFFFFFFF);
+    state->gprs[NVMM_X64_GPR_RDX] = (val >> 32);
+    state->gprs[NVMM_X64_GPR_RIP] = exit->u.rdmsr.npc;
 
     ret = nvmm_vcpu_setstate(mach, vcpu, NVMM_X64_STATE_GPRS);
-    if (ret == -1) {
+    if (ret == -1)
         return -1;
+
+    return 0;
+}
+
+static int
+nvmm_handle_wrmsr(struct nvmm_machine *mach, CPUState *cpu,
+    struct nvmm_vcpu_exit *exit)
+{
+    struct qemu_vcpu *qcpu = get_qemu_vcpu(cpu);
+    struct nvmm_vcpu *vcpu = &qcpu->vcpu;
+    X86CPU *x86_cpu = X86_CPU(cpu);
+    struct nvmm_x64_state *state = vcpu->state;
+    uint64_t val;
+    int ret;
+
+    val = exit->u.wrmsr.val;
+
+    switch (exit->u.wrmsr.msr) {
+    case MSR_IA32_APICBASE:
+        cpu_set_apic_base(x86_cpu->apic_state, val);
+        break;
+    default: // More MSRs to add?
+        error_report("NVMM: Unexpected WRMSR 0x%x [val=0x%lx], ignored",
+            exit->u.wrmsr.msr, val);
+        break;
     }
+
+    ret = nvmm_vcpu_getstate(mach, vcpu, NVMM_X64_STATE_GPRS);
+    if (ret == -1)
+        return -1;
+
+    state->gprs[NVMM_X64_GPR_RIP] = exit->u.wrmsr.npc;
+
+    ret = nvmm_vcpu_setstate(mach, vcpu, NVMM_X64_STATE_GPRS);
+    if (ret == -1)
+        return -1;
 
     return 0;
 }
 
 static int
 nvmm_handle_halted(struct nvmm_machine *mach, CPUState *cpu,
-    struct nvmm_exit *exit)
+    struct nvmm_vcpu_exit *exit)
 {
     struct CPUX86State *env = (CPUArchState *)(cpu->env_ptr);
     int ret = 0;
@@ -636,11 +658,11 @@ nvmm_handle_halted(struct nvmm_machine *mach, CPUState *cpu,
 static int
 nvmm_inject_ud(struct nvmm_machine *mach, struct nvmm_vcpu *vcpu)
 {
-    struct nvmm_event *event = vcpu->event;
+    struct nvmm_vcpu_event *event = vcpu->event;
 
-    event->type = NVMM_EVENT_EXCEPTION;
+    event->type = NVMM_VCPU_EVENT_EXCP;
     event->vector = 6;
-    event->u.error = 0;
+    event->u.excp.error = 0;
 
     return nvmm_vcpu_inject(mach, vcpu);
 }
@@ -653,7 +675,7 @@ nvmm_vcpu_loop(CPUState *cpu)
     struct qemu_vcpu *qcpu = get_qemu_vcpu(cpu);
     struct nvmm_vcpu *vcpu = &qcpu->vcpu;
     X86CPU *x86_cpu = X86_CPU(cpu);
-    struct nvmm_exit *exit = vcpu->exit;
+    struct nvmm_vcpu_exit *exit = vcpu->exit;
     int ret;
 
     /*
@@ -726,32 +748,34 @@ nvmm_vcpu_loop(CPUState *cpu)
         nvmm_vcpu_post_run(cpu, exit);
 
         switch (exit->reason) {
-        case NVMM_EXIT_NONE:
+        case NVMM_VCPU_EXIT_NONE:
             break;
-        case NVMM_EXIT_MEMORY:
+        case NVMM_VCPU_EXIT_MEMORY:
             ret = nvmm_handle_mem(mach, vcpu);
             break;
-        case NVMM_EXIT_IO:
+        case NVMM_VCPU_EXIT_IO:
             ret = nvmm_handle_io(mach, vcpu);
             break;
-        case NVMM_EXIT_MSR:
-            ret = nvmm_handle_msr(mach, cpu, exit);
+        case NVMM_VCPU_EXIT_INT_READY:
+        case NVMM_VCPU_EXIT_NMI_READY:
             break;
-        case NVMM_EXIT_INT_READY:
-        case NVMM_EXIT_NMI_READY:
-            break;
-        case NVMM_EXIT_MONITOR:
-        case NVMM_EXIT_MWAIT:
-        case NVMM_EXIT_MWAIT_COND:
-            ret = nvmm_inject_ud(mach, vcpu);
-            break;
-        case NVMM_EXIT_HALTED:
+        case NVMM_VCPU_EXIT_HALTED:
             ret = nvmm_handle_halted(mach, cpu, exit);
             break;
-        case NVMM_EXIT_SHUTDOWN:
+        case NVMM_VCPU_EXIT_SHUTDOWN:
             qemu_system_reset_request(SHUTDOWN_CAUSE_GUEST_RESET);
             cpu->exception_index = EXCP_INTERRUPT;
             ret = 1;
+            break;
+        case NVMM_VCPU_EXIT_RDMSR:
+            ret = nvmm_handle_rdmsr(mach, cpu, exit);
+            break;
+        case NVMM_VCPU_EXIT_WRMSR:
+            ret = nvmm_handle_wrmsr(mach, cpu, exit);
+            break;
+        case NVMM_VCPU_EXIT_MONITOR:
+        case NVMM_VCPU_EXIT_MWAIT:
+            ret = nvmm_inject_ud(mach, vcpu);
             break;
         default:
             error_report("NVMM: Unexpected VM exit code 0x%lx [hw=0x%lx]",
@@ -861,6 +885,7 @@ int
 nvmm_init_vcpu(CPUState *cpu)
 {
     struct nvmm_machine *mach = get_nvmm_mach();
+    struct nvmm_vcpu_conf_cpuid cpuid;
     Error *local_error = NULL;
     struct qemu_vcpu *qcpu;
     int ret;
@@ -892,6 +917,28 @@ nvmm_init_vcpu(CPUState *cpu)
             " error=%d", errno);
         g_free(qcpu);
         return -EINVAL;
+    }
+
+    memset(&cpuid, 0, sizeof(cpuid));
+    cpuid.mask = 1;
+    cpuid.leaf = 0x00000001;
+    cpuid.u.mask.del.edx = CPUID_MCE | CPUID_MCA | CPUID_MTRR;
+    ret = nvmm_vcpu_configure(mach, &qcpu->vcpu, NVMM_VCPU_CONF_CPUID,
+        &cpuid);
+    if (ret == -1) {
+        error_report("NVMM: Failed to configure a virtual processor,"
+            " error=%d", errno);
+        g_free(qcpu);
+        return -EINVAL;
+    }
+
+    ret = nvmm_vcpu_configure(mach, &qcpu->vcpu, NVMM_VCPU_CONF_CALLBACKS,
+        &nvmm_callbacks);
+    if (ret == -1) {
+        error_report("NVMM: Failed to configure a virtual processor,"
+            " error=%d", errno);
+        g_free(qcpu);
+        return -ENOSPC;
     }
 
     cpu->vcpu_dirty = true;
@@ -1075,28 +1122,6 @@ nvmm_handle_interrupt(CPUState *cpu, int mask)
 /* -------------------------------------------------------------------------- */
 
 static int
-nvmm_accel_configure(struct nvmm_machine *mach)
-{
-    struct nvmm_mach_conf_x86_cpuid cpuid;
-    int ret;
-
-    memset(&cpuid, 0, sizeof(cpuid));
-    cpuid.leaf = 0x00000001;
-    cpuid.del.edx = CPUID_MCE | CPUID_MCA | CPUID_MTRR;
-
-    ret = nvmm_machine_configure(mach, NVMM_MACH_CONF_X86_CPUID, &cpuid);
-    if (ret == -1)
-        return -1;
-
-    ret = nvmm_machine_configure(mach, NVMM_MACH_CONF_CALLBACKS,
-        &nvmm_callbacks);
-    if (ret == -1)
-        return -1;
-
-    return 0;
-}
-
-static int
 nvmm_accel_init(MachineState *ms)
 {
     struct nvmm_capability cap;
@@ -1119,13 +1144,6 @@ nvmm_accel_init(MachineState *ms)
     ret = nvmm_machine_create(&qemu_mach.mach);
     if (ret == -1) {
         error_report("NVMM: Machine creation failed, error=%d", errno);
-        return -ENOSPC;
-    }
-
-    ret = nvmm_accel_configure(&qemu_mach.mach);
-    if (ret == -1) {
-        error_report("NVMM: Machine configuration failed, error=%d",
-            errno);
         return -ENOSPC;
     }
 
