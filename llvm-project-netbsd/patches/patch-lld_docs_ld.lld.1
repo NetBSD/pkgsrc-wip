@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- lld/docs/ld.lld.1.orig	2019-10-23 20:24:36.059771858 +0000
++++ lld/docs/ld.lld.1
+@@ -654,6 +654,10 @@ Set the
+ .Dv DF_1_NOOPEN
+ flag to indicate that the object may not be opened by
+ .Xr dlopen 3 .
++.It Cm nognustack
++Do not emit the
++.Dv PT_GNU_STACK
++segment.
+ .Pp
+ .It Cm norelro
+ Do not indicate that portions of the object shold be mapped read-only

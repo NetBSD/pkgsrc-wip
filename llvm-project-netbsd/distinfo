@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1 2019/02/01 16:30:00 mgorny Exp $
+
+SHA1 (lld-7.0.1.src.tar.xz) = 3b69e107f27d466488838d5fa65bdfd77b885007
+RMD160 (lld-7.0.1.src.tar.xz) = 44e0e851b957fef86352ebe6c2a37096f8595dcb
+SHA512 (lld-7.0.1.src.tar.xz) = e5d3ed280d8ac6014cd6bbe080b11e2c4ebbae81dc14b637e779ec027d818dbae91c6f0de9e94bcecd6bdaa37f12c35141b5d81f0a15251d27932aa9bebd4047
+Size (lld-7.0.1.src.tar.xz) = 912812 bytes
+SHA1 (llvm-7.0.1.src.tar.xz) = f97632fcc3186eb0d396492ef8acfc807648580f
+RMD160 (llvm-7.0.1.src.tar.xz) = dae96c6f85afb60e73564dc40d02171d01ffdb8f
+SHA512 (llvm-7.0.1.src.tar.xz) = ac43a3cb71a53deb55e3693653847cf20bf6f5d9056f224e6956c96d63bc59ebee9404f088eec9cabe65337b4607a905ef931354b373cf64e0004c6905a6b5df
+Size (llvm-7.0.1.src.tar.xz) = 28311056 bytes
+SHA1 (patch-clang_lib_Basic_Targets_OSTargets.h) = f4544fe5daf2febad4b5e9ff6b5d84a2d90b3c1e
+SHA1 (patch-clang_lib_Driver_ToolChains_NetBSD.cpp) = 1a85c66c8b3aa5b467c41c0f98efeaf55865a06f
+SHA1 (patch-clang_test_Sema_128bitfloat.cpp) = b3bd2d7cbb07a2d3c2ad14e75b3f91e0f5be43fc
+SHA1 (patch-clang_tools_clang-format_CMakeLists.txt) = 3c9d9f1d5c7b6d9ec68ea537f4c4c3ec2e4899ca
+SHA1 (patch-lld_CMakeLists.txt) = 3add301b0d0264622265b1f3c18eaed0665b11a6
+SHA1 (patch-lld_ELF_Arch_AArch64.cpp) = 193e9d26cd8b5720465891e1b548e09be08b9eae
+SHA1 (patch-lld_ELF_Config.h) = f625727b7b0ee4a7a60f5c7431ef15e533f56d5e
+SHA1 (patch-lld_ELF_Driver.cpp) = abf9a12f3caa1d7134692d34540c6cef327072c0
+SHA1 (patch-lld_ELF_Options.td) = 98c36caa39c5b207068aad2796e65b49dca52e13
+SHA1 (patch-lld_ELF_Writer.cpp) = bf668a5f54b0d95b80c1c3bc3c99557d18c7e022
+SHA1 (patch-lld_docs_ld.lld.1) = 3e7c0913b3f0f5c2a8539d17dfe383788710ffa1
+SHA1 (patch-lld_test_ELF_gnustack.s) = 8410db9a2c57c53ac62453d533e4a17b250cfd07
