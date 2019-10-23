@@ -1,5 +1,0 @@
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format-bbedit.applescript: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format-sublime.py: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format.el: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format.py: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/man/man1/scan-build.1: executable bit is set on non-executable file.
