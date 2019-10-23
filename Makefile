@@ -340,7 +340,6 @@ SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
 SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
-SUBDIR+=	cannonball
 SUBDIR+=	canto-curses
 SUBDIR+=	canto-daemon
 SUBDIR+=	canu
