@@ -38,7 +38,7 @@ DEPENDS+=	${PYPKGPREFIX}-sarge>=0.1.5:../../wip/py-sarge
 DEPENDS+=	${PYPKGPREFIX}-scandir>=1.10:../../devel/py-scandir
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.6:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
-DEPENDS+=	${PYPKGPREFIX}-sentry-sdk=0.7.7:../../wip/py-sentry-sdk
+DEPENDS+=	${PYPKGPREFIX}-sentry-sdk>=0.7.7:../../wip/py-sentry-sdk
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.5.3:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-typing>=3.6.6:../../devel/py-typing
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.9.0:../../sysutils/py-watchdog
