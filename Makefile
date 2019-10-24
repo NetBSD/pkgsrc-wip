@@ -3168,6 +3168,7 @@ SUBDIR+=	py-atpy
 SUBDIR+=	py-attrdict
 SUBDIR+=	py-autokey
 SUBDIR+=	py-automata
+SUBDIR+=	py-awesome-slugify
 SUBDIR+=	py-b3j0f.aop
 SUBDIR+=	py-backports.csv
 SUBDIR+=	py-bandicoot
