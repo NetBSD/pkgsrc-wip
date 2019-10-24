@@ -15,6 +15,7 @@ LICENSE=	gnu-agpl-v3
 PYTHON_VERSIONS_ACCEPTED=	27
 
 #TODO register the remaining dependencies (see https://github.com/foosel/OctoPrint/blob/master/setup.py#L19)
+DEPENDS+=	${PYPKGPREFIX}-chainmap>=1.0.3:../../wip/py-chainmap
 DEPENDS+=	${PYPKGPREFIX}-emoji>=0.5.1:../../converters/py-emoji
 DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.10.1:../../www/py-flask
