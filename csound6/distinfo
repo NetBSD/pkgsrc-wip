@@ -1,0 +1,21 @@
+$NetBSD$
+
+SHA1 (csound6-6.13.0/6.13.0.tar.gz) = 1775f3bdd273364995ba52a79c32795928cb3ec2
+RMD160 (csound6-6.13.0/6.13.0.tar.gz) = 780b93bb5547e5a3807affabfe1c9f0315d5fec3
+SHA512 (csound6-6.13.0/6.13.0.tar.gz) = 51a30cb426fc77ac648f6a9fb669b9298e6608b39ae3b12181d16ecf1fb6f2ed3db31471615a60d2ce7906b91fdb911b38c8dfa3f93699768f490f87a2bcbbbd
+Size (csound6-6.13.0/6.13.0.tar.gz) = 26328673 bytes
+SHA1 (patch-CMakeLists.txt) = 5b54e7af8010c421aa88f9e22558cffb05daffef
+SHA1 (patch-Engine_entry1.c) = cb0966ece67bcf40ac7333df7ebaacb7373be181
+SHA1 (patch-Engine_linevent.c) = cafd89379104c4c59fa676d041880d7367853425
+SHA1 (patch-Frontends_csound_csound__main.c) = 6a0cea4c5fdb2531b54c84c01f1c621afb93a67e
+SHA1 (patch-InOut_libsnd.c) = e3e748d71d34f116def18a63b3313dcf05770252
+SHA1 (patch-InOut_widgets.cpp) = b4673f5c53b898c2ff59fef86aee53f335c1729a
+SHA1 (patch-InOut_winEPS.c) = e5890f26a31788f439125f7e673e4dd56dcf087b
+SHA1 (patch-InOut_winFLTK.c) = b76ce0d3d6607ad7100a742d5d027f4af780544b
+SHA1 (patch-Opcodes_cpumeter.c) = 83967227c944bf5a5c47e1963a8c1192b8c0f618
+SHA1 (patch-Opcodes_wavegde.h) = ed6dd71799c209c196951b423e2e8e821594fc5b
+SHA1 (patch-Top_csmodule.c) = 8d5098fa438d208d1cc936c9598a5682ab438906
+SHA1 (patch-Top_csound.c) = d6498e7391eb28be8fafaaccb0ec6b80c48b9a58
+SHA1 (patch-Top_one_file.c) = 7464dd227f1c22d2e9470fc4f0e55933186dafb6
+SHA1 (patch-Top_threads.c) = d42fa2c4473a1b64c705f42df42f9e38b8b4eaea
+SHA1 (patch-include_interlocks.h) = 927e11ac8622ece8e55d0d7faa3042b5652177d5
