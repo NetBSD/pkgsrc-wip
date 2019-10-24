@@ -3223,6 +3223,7 @@ SUBDIR+=	py-cf-python
 SUBDIR+=	py-cgen
 SUBDIR+=	py-chaco
 SUBDIR+=	py-chainer
+SUBDIR+=	py-chainmap
 SUBDIR+=	py-chaintipy
 SUBDIR+=	py-chaos
 SUBDIR+=	py-chealpy

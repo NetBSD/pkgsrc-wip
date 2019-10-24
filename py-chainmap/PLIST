@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/chainmap/__init__.py
+${PYSITELIB}/chainmap/__init__.pyc
+${PYSITELIB}/chainmap/__init__.pyo
+${PYSITELIB}/chainmap/chainmap.py
+${PYSITELIB}/chainmap/chainmap.pyc
+${PYSITELIB}/chainmap/chainmap.pyo
+${PYSITELIB}/chainmap/version.py
+${PYSITELIB}/chainmap/version.pyc
+${PYSITELIB}/chainmap/version.pyo
