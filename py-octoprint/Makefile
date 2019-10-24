@@ -15,6 +15,7 @@ LICENSE=	gnu-agpl-v3
 PYTHON_VERSIONS_ACCEPTED=	27
 
 #TODO register the remaining dependencies (see https://github.com/foosel/OctoPrint/blob/master/setup.py#L19)
+DEPENDS+=	${PYPKGPREFIX}-awesome-slugify>=1.6.5:../../wip/py-awesome-slugify
 DEPENDS+=	${PYPKGPREFIX}-chainmap>=1.0.3:../../wip/py-chainmap
 DEPENDS+=	${PYPKGPREFIX}-emoji>=0.5.1:../../converters/py-emoji
 DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1:../../textproc/py-feedparser
@@ -32,6 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-monotonic>=1.5:../../time/py-monotonic
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.19:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.10.9:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.5.0.1:../../devel/py-pkginfo
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.1:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.21.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rsa>=4.0:../../security/py-rsa
 DEPENDS+=	${PYPKGPREFIX}-sarge>=0.1.5:../../wip/py-sarge
