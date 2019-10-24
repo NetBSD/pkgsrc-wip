@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (sarge-0.1.4.tar.gz) = a3eb4f1bf152b8870cb0be647eda128a64320d58
-RMD160 (sarge-0.1.4.tar.gz) = c4617ae4e03b8dec9123a3dd55ca886194830c0a
-SHA512 (sarge-0.1.4.tar.gz) = 150af169c18214dd600cec0c3d36b1fba266eef2103927405550d7c7b7256950aa753d294ad2aca02913cc0583a8be267d7e8b912ba585eabff26ca37d852c40
-Size (sarge-0.1.4.tar.gz) = 50472 bytes
+SHA1 (sarge-0.1.5.post0.tar.gz) = a015b62b9dbd4202888bae5f5e25a45792bb507a
+RMD160 (sarge-0.1.5.post0.tar.gz) = c09651802d6b06246aa24b10b090b71befbca67d
+SHA512 (sarge-0.1.5.post0.tar.gz) = b2bef7bc3d5b4f5540f77cd3ed26342106557498b556ffbcac6aa74e69b719bc2f132ebc6f99d6539c1ce539ca3c7c45bf0735960b8a25ea6237a4a1a8d65a72
+Size (sarge-0.1.5.post0.tar.gz) = 17860 bytes

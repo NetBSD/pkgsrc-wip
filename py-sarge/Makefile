@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sarge-0.1.4
+DISTNAME=	sarge-0.1.5.post0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sarge/}
