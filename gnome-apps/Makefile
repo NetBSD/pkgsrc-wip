@@ -13,7 +13,7 @@ META_PACKAGE=	yes
 
 # see http://ftp.gnome.org/pub/GNOME/apps/3.16/3.16.2/sources/
 
-DEPENDS+=	accerciser>=3.14.0:../../devel/accerciser3
+DEPENDS+=	accerciser>=3.14.0:../../devel/accerciser
 #DEPENDS+=	aisleriot>=3.16.2:../../devel/aisleriot
 DEPENDS+=	anjuta>=3.16.0:../../devel/anjuta
 #DEPENDS+=	bijiben>=3.16.2:../../devel/bijiben
