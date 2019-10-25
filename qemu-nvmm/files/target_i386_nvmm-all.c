@@ -888,7 +888,7 @@ nvmm_init_vcpu(CPUState *cpu)
     struct nvmm_vcpu_conf_cpuid cpuid;
     Error *local_error = NULL;
     struct qemu_vcpu *qcpu;
-    int ret;
+    int ret, err;
 
     nvmm_init_cpu_signals();
 
@@ -913,10 +913,11 @@ nvmm_init_vcpu(CPUState *cpu)
 
     ret = nvmm_vcpu_create(mach, cpu->cpu_index, &qcpu->vcpu);
     if (ret == -1) {
+        err = errno;
         error_report("NVMM: Failed to create a virtual processor,"
-            " error=%d", errno);
+            " error=%d", err);
         g_free(qcpu);
-        return -EINVAL;
+        return -err;
     }
 
     memset(&cpuid, 0, sizeof(cpuid));
@@ -926,19 +927,21 @@ nvmm_init_vcpu(CPUState *cpu)
     ret = nvmm_vcpu_configure(mach, &qcpu->vcpu, NVMM_VCPU_CONF_CPUID,
         &cpuid);
     if (ret == -1) {
+        err = errno;
         error_report("NVMM: Failed to configure a virtual processor,"
-            " error=%d", errno);
+            " error=%d", err);
         g_free(qcpu);
-        return -EINVAL;
+        return -err;
     }
 
     ret = nvmm_vcpu_configure(mach, &qcpu->vcpu, NVMM_VCPU_CONF_CALLBACKS,
         &nvmm_callbacks);
     if (ret == -1) {
+        err = errno;
         error_report("NVMM: Failed to configure a virtual processor,"
-            " error=%d", errno);
+            " error=%d", err);
         g_free(qcpu);
-        return -ENOSPC;
+        return -err;
     }
 
     cpu->vcpu_dirty = true;
@@ -1125,26 +1128,28 @@ static int
 nvmm_accel_init(MachineState *ms)
 {
     struct nvmm_capability cap;
-    int ret;
+    int ret, err;
 
     ret = nvmm_capability(&cap);
     if (ret == -1) {
+        err = errno;
         error_report("NVMM: No accelerator found, error=%d", errno);
-        return -ENOSPC;
+        return -err;
     }
     if (cap.version != 1) {
         error_report("NVMM: Unsupported version %lu", cap.version);
-        return -ENOSPC;
+        return -EPROGMISMATCH;
     }
     if (cap.state_size != sizeof(struct nvmm_x64_state)) {
         error_report("NVMM: Wrong state size %zu", cap.state_size);
-        return -ENOSPC;
+        return -EPROGMISMATCH;
     }
 
     ret = nvmm_machine_create(&qemu_mach.mach);
     if (ret == -1) {
+        err = errno;
         error_report("NVMM: Machine creation failed, error=%d", errno);
-        return -ENOSPC;
+        return -err;
     }
 
     memory_listener_register(&nvmm_memory_listener, &address_space_memory);
