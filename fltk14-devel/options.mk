@@ -3,7 +3,7 @@
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk14
-PKG_SUPPORTED_OPTIONS=	opengl pango xdbe x11 xft2 xinerama
+PKG_SUPPORTED_OPTIONS=	opengl pango x11 xdbe xft2 xinerama
 # FLTK has native backends for macOS and Windows (Cygwin)
 # Enabling the "x11" option forces X11 backend on such systems.
 # Most users want the native backends.
