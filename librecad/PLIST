@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/09/05 21:13:21 plunky Exp $
+@comment $NetBSD$
 bin/librecad
 bin/ttf2lff
 lib/librecad/fonts/OpenGostTypeA-Regular.lff
@@ -47,15 +47,6 @@ lib/librecad/fonts/symbol_misc2.lff
 lib/librecad/fonts/symeteo.lff
 lib/librecad/fonts/symusic.lff
 lib/librecad/fonts/unicode.lff
-lib/librecad/fonts/wqy-unicode.lff
-lib/librecad/plugins/libalign.la
-lib/librecad/plugins/libasciifile.la
-lib/librecad/plugins/libimportshp.la
-lib/librecad/plugins/liblist.la
-lib/librecad/plugins/libpicfile.la
-lib/librecad/plugins/libplotequation.la
-lib/librecad/plugins/libsameprop.la
-lib/librecad/plugins/libsample.la
 man/man1/librecad.1
 man/man1/ttf2lff.1
 share/applications/librecad.desktop
@@ -1433,6 +1424,7 @@ share/librecad/qm/librecad_it.qm
 share/librecad/qm/librecad_ja.qm
 share/librecad/qm/librecad_ko.qm
 share/librecad/qm/librecad_lv.qm
+share/librecad/qm/librecad_mk.qm
 share/librecad/qm/librecad_nl.qm
 share/librecad/qm/librecad_no.qm
 share/librecad/qm/librecad_pa.qm
@@ -1490,6 +1482,7 @@ share/librecad/qm/plugins_it.qm
 share/librecad/qm/plugins_ja.qm
 share/librecad/qm/plugins_ko.qm
 share/librecad/qm/plugins_lv.qm
+share/librecad/qm/plugins_mk.qm
 share/librecad/qm/plugins_nl.qm
 share/librecad/qm/plugins_no.qm
 share/librecad/qm/plugins_pa.qm
@@ -1507,3 +1500,11 @@ share/librecad/qm/plugins_tr.qm
 share/librecad/qm/plugins_uk.qm
 share/librecad/qm/plugins_zh_cn.qm
 share/librecad/qm/plugins_zh_tw.qm
+@pkgdir share/data/pixmaps
+@pkgdir share/data/mime/packages
+@pkgdir share/data/librecad/qm
+@pkgdir share/data/librecad/patterns
+@pkgdir share/data/librecad/library
+@pkgdir share/data/librecad/fonts
+@pkgdir lib/librecad/plugins
+@pkgdir include/librecad
