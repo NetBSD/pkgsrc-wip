@@ -16,7 +16,7 @@ pkgbase := fltk
 
 # For "opengl" option
 .if !empty(PKG_BUILD_OPTIONS.fltk:Mopengl)
-.  if ${OPSYS} != "Darwin"
+.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
 .     include "../../graphics/MesaLib/buildlink3.mk"
 .     include "../../graphics/glu/buildlink3.mk"
 .  endif
@@ -24,35 +24,39 @@ pkgbase := fltk
 
 # For "pango" option
 .if !empty(PKG_BUILD_OPTIONS.fltk:Mpango)
-.  if ${OPSYS} != "Darwin"
-#     Untested: Cocoa backend on macOS should use Core Text instead
+.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
 .     include "../../devel/pango/buildlink3.mk"
 .  endif
 .endif
 
-# For "xft2" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mxft2)
-.  if ${OPSYS} != "Darwin"
-#     Untested: Cocoa backend on macOS should use Core Text instead
-.     include "../../x11/libXft/buildlink3.mk"
-.  endif
-.endif
-
-# For "xinerama" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mxinerama)
-.  if ${OPSYS} != "Darwin"
-.     include "../../x11/libXinerama/buildlink3.mk"
-.  endif
-.endif
-
-# FLTK uses Cocoa backend on macOS/Darwin (X11 backend otherwise)
-.if ${OPSYS} != "Darwin"
+# For "x11" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXfixes/buildlink3.mk"
 .  include "../../x11/libXrender/buildlink3.mk"
 .endif
+
+# For "xdbe" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mxdbe)
+# No client library required
+.endif
+
+# For "xft2" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mxft2)
+.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
+.     include "../../x11/libXft/buildlink3.mk"
+.  endif
+.endif
+
+# For "xinerama" option
+.if !empty(PKG_BUILD_OPTIONS.fltk:Mxinerama)
+.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
+.     include "../../x11/libXinerama/buildlink3.mk"
+.  endif
+.endif
+
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

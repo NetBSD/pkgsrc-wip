@@ -17,8 +17,6 @@ USE_TOOLS+=		autoconf gmake nroff
 # Doesn't run tests, only build them (because they are GUI programs)
 TEST_TARGET=		test
 
-.include "options.mk"
-
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
@@ -34,6 +32,8 @@ CONFIGURE_ARGS+=	--enable-xrender
 CONFIGURE_ARGS+=	--disable-localjpeg
 CONFIGURE_ARGS+=	--disable-localpng
 CONFIGURE_ARGS+=	--disable-localzlib
+
+.include "options.mk"
 
 # Create symlinks for common misspellings of headerfile names
 # (if filesystem is case-sensitive)
@@ -60,14 +60,6 @@ pre-configure:
 		${GMAKE} ${MAKE_FLAGS} clean
 # ------------------------------------------------------
 
-# FLTK uses Cocoa backend on macOS/Darwin (X11 backend otherwise)
-.if ${OPSYS} != "Darwin"
-.  include "../../x11/libX11/buildlink3.mk"
-.  include "../../x11/libXcursor/buildlink3.mk"
-.  include "../../x11/libXext/buildlink3.mk"
-.  include "../../x11/libXfixes/buildlink3.mk"
-.  include "../../x11/libXrender/buildlink3.mk"
-.endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
