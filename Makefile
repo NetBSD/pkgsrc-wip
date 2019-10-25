@@ -268,6 +268,7 @@ SUBDIR+=	bleachbit
 SUBDIR+=	blink
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez
+SUBDIR+=	bluez-alsa
 SUBDIR+=	bluez-gnome
 SUBDIR+=	bluez-hcidump
 SUBDIR+=	bluez-hciemu
