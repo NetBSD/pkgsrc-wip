@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (scribus-1.5.5.tar.xz) = 2f657d42df810bcf1a223cf4c38bf18278486907
+RMD160 (scribus-1.5.5.tar.xz) = 9e7c15207c10d81c34ede88ecd4dd4cae36614bc
+SHA512 (scribus-1.5.5.tar.xz) = 2d62424ad609296df33ced550940fceb4e15133a595a740cc4f4b4ffbc92aa31737336ac7716c2eed20d2866e37f5a9b780a44d86128daa6bbad3ccb58168b50
+Size (scribus-1.5.5.tar.xz) = 73861836 bytes
+SHA1 (patch-CMakeLists.txt) = 9b1bfb83831b42af9ab9c3321a31217b39a6893f
+SHA1 (patch-scribus_CMakeLists.txt) = 1e7abcc99e0473abd642b9ba54217bdad101b28b
+SHA1 (patch-scribus_scclocale.cpp) = 92218572b6b760b3c0759b99c4ff7c0bd93d09e5
+SHA1 (patch-scribus_scclocale.h) = cc15dfa9d136fc7c7b996811b26e2da729b8d491
+SHA1 (patch-scribus_util__debug.cpp) = 01e7bb51e1dc822c876a76e08b5de65e0311ea8d

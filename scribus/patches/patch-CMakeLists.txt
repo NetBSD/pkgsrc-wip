@@ -1,0 +1,38 @@
+$NetBSD$
+
+Allow CAIRO_DIR and LCMS_DIR to be set from the Makefile
+
+--- CMakeLists.txt.orig	2019-07-30 22:34:43.000000000 +0000
++++ CMakeLists.txt
+@@ -883,7 +883,6 @@ if (RENDER_LIB)
+ 	endif()
+ endif()
+ 
+-set(CAIRO_DIR ${CMAKE_MODULE_PATH})
+ find_package(CAIRO REQUIRED)
+ if(CAIRO_FOUND)
+ 	message("CAIRO Library Found OK")
+@@ -915,7 +914,6 @@ endif()
+ #>>LibXML2
+ 
+ #<<LittleCMS
+-set(LCMS_DIR ${CMAKE_MODULE_PATH})
+ find_package(LCMS2 REQUIRED)
+ if(LCMS2_FOUND)
+ 	set(HAVE_LCMS2 ON)
+@@ -929,7 +927,6 @@ endif()
+ 
+ #<<FontConfig
+ if(NOT WIN32)
+-	set(FONTCONFIG_DIR ${CMAKE_MODULE_PATH})
+ 	find_package(FONTCONFIG)
+ 	if(FONTCONFIG_FOUND)
+ 		message("FontConfig Found OK")
+@@ -982,7 +979,6 @@ endif()
+ 
+ #<< GraphicsMagick for image import
+ if (WANT_GRAPHICSMAGICK)
+-	set(GMAGICK_DIR ${CMAKE_MODULE_PATH})
+ 	pkg_check_modules(GMAGICK GraphicsMagick)
+ 	# find_package(GMAGICK)
+ 	if(GMAGICK_FOUND)

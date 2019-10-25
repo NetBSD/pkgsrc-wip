@@ -4430,6 +4430,7 @@ SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scratchpad
 SUBDIR+=	scrc
+SUBDIR+=	scribus
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scummvm-bass
 SUBDIR+=	scummvm-fotaq
