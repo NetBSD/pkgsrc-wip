@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mackerel-agent-plugins-0.58.0
+DISTNAME=	mackerel-agent-plugins-0.59.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 PKGREVISION=	8
 CATEGORIES=	net
