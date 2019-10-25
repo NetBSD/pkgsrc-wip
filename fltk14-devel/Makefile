@@ -22,6 +22,7 @@ TEST_TARGET=		test
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
+CONFIGURE_ARGS+=	--enable-nanosvg
 CONFIGURE_ARGS+=	--enable-print
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-threads
@@ -29,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-xcursor
 CONFIGURE_ARGS+=	--enable-xfixes
 CONFIGURE_ARGS+=	--enable-xrender
 
-# Use pkgsrc versions of libraries, not package's bundled versions.
+# Use pkgsrc versions of libraries, not package's bundled versions
 CONFIGURE_ARGS+=	--disable-localjpeg
 CONFIGURE_ARGS+=	--disable-localpng
 CONFIGURE_ARGS+=	--disable-localzlib
