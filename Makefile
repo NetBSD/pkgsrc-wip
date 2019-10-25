@@ -4413,6 +4413,7 @@ SUBDIR+=	samhain
 SUBDIR+=	samtools0119
 SUBDIR+=	sara
 SUBDIR+=	sarf
+SUBDIR+=	sbc
 SUBDIR+=	sbcl-git
 SUBDIR+=	scantailor
 SUBDIR+=	scare

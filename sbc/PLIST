@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/sbcdec
+bin/sbcenc
+bin/sbcinfo
+include/sbc/sbc.h
+lib/libsbc.la
+lib/pkgconfig/sbc.pc
