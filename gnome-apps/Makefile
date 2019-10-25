@@ -24,7 +24,7 @@ DEPENDS+=	evolution>=3.16.2.1:../../mail/evolution
 DEPENDS+=	file-roller>=3.16.2:../../archivers/file-roller
 #DEPENDS+=	five-or-more>=3.16.1:../../devel/five-or-more
 #DEPENDS+=	four-in-a-row>=3.16.2:../../devel/four-in-a-row
-DEPENDS+=	gedit>=3.16.1:../../editors/gedit3
+DEPENDS+=	gedit>=3.16.1:../../editors/gedit
 DEPENDS+=	gitg>=3.16.1:../../wip/gitg
 DEPENDS+=	glade>=3.18.3:../../devel/glade
 #DEPENDS+=	gnome-boxes>=3.16.2:../../devel/gnome-boxes
