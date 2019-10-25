@@ -1,10 +1,16 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=		doc mdoc idn mysql pgsql tests experimental bluez
-PKG_SUGGESTED_OPTIONS=		mdoc
-PLIST_VARS+=			doc mdoc
-PLIST_VARS+=			experimental
+PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
+PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
+PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 json
+PKG_SUPPORTED_OPTIONS+=		gstreamer
+PKG_SUGGESTED_OPTIONS=		doc sqlite3 json
+PLIST_VARS+=			doc mdoc conversations
+PLIST_VARS+=			experimental json
+PLIST_VARS+=			pgsql mysql sqlite3
+PLIST_VARS+=			linux freebsd bluez
+PLIST_VARS+=			linuxfreebsd
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
 # src/gns/gnunet-gns-proxy-setup-ca
@@ -16,7 +22,6 @@ PLIST_VARS+=			experimental
 PYTHON_FOR_BUILD_ONLY=	yes
 .endif
 
-# build the doc output. XXX: See README.
 .if !empty(PKG_OPTIONS:Mdoc)
 USE_TOOLS+=		makeinfo
 INFO_FILES=		yes
@@ -45,26 +50,58 @@ CONFIGURE_ARGS+=	--with-libidn2=${BUILDLINK_PREFIX.libidn2}
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 .endif
 
+.if !empty(PKG_OPTIONS:Mjson)
+.include "../../textproc/jansson/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-jansson=${BUILDLINK_PREFIX.jansson}
+PLIST.json=		yes
+.else
+CONFIGURE_ARGS+=	--without-jansson
+.endif
+
 # database support - they don't exclude other databases,
 # you can have mysql, pgsql, and the default all built in.
+# ideally we would check for at least sqlite3 existing, but
+# the build won't build when you have none of them.
+.if !empty(PKG_OPTIONS:Msqlite3)
+.include "../../databases/sqlite3/buildlink3.mk"
+PLIST.sqlite3=		yes
+.endif
+
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../mk/mysql.buildlink3.mk"
+PLIST.mysql=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
+PLIST.pgsql=		yes
 .endif
 
-# Experimental
 .if !empty(PKG_OPTIONS:Mexperimental)
-.include "../../audio/libopus/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../math/glpk/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-experimental
 PLIST.experimental=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+PLIST.conversations=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mopus)
+.include "../../audio/libopus/buildlink3.mk"
+PLIST.conversations=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mogg)
+.include "../../multimedia/libogg/buildlink3.mk"
+PLIST.conversations=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mgstreamer)
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+PLIST.conversations=	yes
 .endif
 
 # FIXME: It would be good to provide a build of gnunet against
@@ -80,4 +117,17 @@ PLIST.experimental=	yes
 .if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mbluez)
 # Do we need more for bluez?
 .include "../../wip/bluez-libs/buildlink3.mk"
+PLIST.bluez=		yes
+.endif
+
+.if ${OPSYS} == "Linux"
+PLIST.linux=		yes
+.endif
+
+.if ${OPSYS} == "FreeBSD"
+PLIST.freebsd=		yes
+.endif
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+PLIST.linuxfreebsd=	yes
 .endif

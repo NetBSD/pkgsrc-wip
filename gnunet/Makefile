@@ -73,6 +73,7 @@ SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
 # Some helpers and functionalities are only supported on
 # some Operating Systems so far.
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-testbed ${SETUID_ROOT_PERMS}
+
 .if ${OPSYS} == "Linux"
 # ${CHMOD} root:${GNUNETDNS_GROUP} ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-dns
 # ${CHMOD} ${GNUNET_USER}:${GNUNETDNS_GROUP} ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-service-dns
@@ -83,13 +84,13 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-bluetooth $
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-transport-wlan ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-vpn ${SETUID_ROOT_PERMS}
 .endif
+
 .if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-client ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_ROOT_PERMS}
 .endif
 
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
@@ -100,7 +101,6 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
-.include "../../textproc/jansson/buildlink3.mk"
 .include "../../www/gnurl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
