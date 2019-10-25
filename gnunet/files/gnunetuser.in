@@ -7,6 +7,8 @@
 # You will need to set some variables in /etc/rc.conf to start gnunet:
 #
 # gnunetuser=YES
+# gnunetuser_user=name                  # your account name
+# gnunetuser_user_home="/home/name"     # your home location
 
 if [ -f /etc/rc.subr ]
 then
