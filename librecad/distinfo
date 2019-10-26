@@ -9,4 +9,4 @@ SHA1 (patch-librecad_src_main_qc__applicationwindow.cpp) = c4ea36a88cbf749cd9e21
 SHA1 (patch-librecad_src_ui_forms_qg__commandwidget.cpp) = fd9e14becf06a56973d57911c52c1598bb7a80a4
 SHA1 (patch-librecad_src_ui_generic_colorwizard.cpp) = 849b3392ba01449f24e9056b57d5b1f692f6d6b6
 SHA1 (patch-librecad_src_ui_generic_widgetcreator.cpp) = 9102805b8b9fb5faef051f85b6665899ed6284be
-SHA1 (patch-scripts_postprocess-unix.sh) = 9946bdade1463d4daeef081b738c29773d62f712
+SHA1 (patch-scripts_postprocess-unix.sh) = 3bdca17863553c55be7565f0733f505900b7f7c3

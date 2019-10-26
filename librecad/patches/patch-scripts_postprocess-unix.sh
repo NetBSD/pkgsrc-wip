@@ -7,7 +7,7 @@ $NetBSD$
  TSDIRPI="${PIDIR}/ts"
  SPTDIR="${LCDIR}/support"
 -LRELEASE="lrelease"
-+LRELEASE="/usr/pkg/qt5/bin/lrelease"
++LRELEASE="@QTDIR@/bin/lrelease"
  
  cd "${THISDIR}"
  
