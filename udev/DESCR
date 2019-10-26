@@ -1,0 +1,9 @@
+Monitors devices and executes rules for each insert or removal. Creates an
+index of paths in /var/run/udev/ that libudev uses at runtime. Need to
+trigger it once for weston to find a seat, that is a video card, keyboard
+and mouse combo. Run `udevd -d` and `udevadm trigger`.
+
+You can then backup the above dir and delete the package if your embedded
+device set never changes. Somebody should code a libudev API clone finding
+the seat using sysfs and watching /dev, which would eliminate the daemon
+on desktops and ease porting wayland to BSD counterparts.

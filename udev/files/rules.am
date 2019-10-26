@@ -1,0 +1,2 @@
+# Don't apply systemd naming or change owners, just index for libinput.
+dist_udevrules_DATA=60-drm.rules 60-evdev.rules 60-input-id.rules

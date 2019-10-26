@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	weston-7.0.0
-CATEGORIES=	local
+CATEGORIES=	wm
 MASTER_SITES=	https://wayland.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 

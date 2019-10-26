@@ -1,0 +1,21 @@
+# $NetBSD$
+# used by wip/libudev/Makefile
+# used by wip/udev/Makefile
+
+DISTNAME=	libudev-228
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gentoo/}
+GITHUB_PROJECT=	eudev
+GITHUB_TAG=	v3.2.8 # udev version 228 according to configure.ac
+DISTINFO_FILE=	${.CURDIR}/../../wip/libudev/distinfo
+
+MAINTAINER=	nykula@ukr.net
+HOMEPAGE=	https://wiki.gentoo.org/wiki/Project:Eudev
+LICENSE=	gnu-gpl-v2
+
+ONLY_FOR_PLATFORM=	Linux-*-*
+USE_TOOLS+=	autoconf automake gmake
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-rootrundir=${VARBASE}/run
+
+.include "../../mk/bsd.pkg.mk"

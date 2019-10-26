@@ -1,0 +1,11 @@
+# Limit to libudev-private.la, wip/libudev does the public lib.
+AM_CPPFLAGS=-include $(top_builddir)/config.h \
+	-DUDEV_ROOT_RUN=\"$(rootrundir)\" \
+	-DUDEV_CONF_FILE=\"$(udevconffile)\" \
+	-DUDEV_HWDB_BIN=\"$(udevhwdbbin)\" -I $(top_srcdir)/src/shared
+libudev_private_la_SOURCES=libudev.sym libudev-private.h libudev.c \
+	libudev-list.c libudev-util.c libudev-device.c \
+	libudev-enumerate.c libudev-monitor.c libudev-queue.c \
+	libudev-hwdb-def.h libudev-hwdb.c libudev-device-private.c
+libudev_private_la_CFLAGS=$(AM_CFLAGS) -fvisibility=default
+noinst_LTLIBRARIES=libudev-private.la

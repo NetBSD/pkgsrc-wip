@@ -4831,6 +4831,7 @@ SUBDIR+=	uade
 SUBDIR+=	ubit
 SUBDIR+=	uchime
 SUBDIR+=	uclibc
+SUBDIR+=	udev
 SUBDIR+=	udhcp
 SUBDIR+=	udp-ping
 SUBDIR+=	udunits2
