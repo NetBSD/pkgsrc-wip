@@ -53,6 +53,8 @@ QMAKE_OPTIONS+=	DISABLE_POSTSCRIPT=true
 
 do-configure:
 	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake ${QMAKE_OPTIONS:Q}
+	${RUN} cd ${WRKSRC}/plugins && ${QTDIR}/bin/qmake \
+		INSTALLS+=target target.path=${PREFIX}/lib/librecad/plugins
 
 do-install:
 	${RUN} cd ${WRKSRC} && ./scripts/postprocess-unix.sh

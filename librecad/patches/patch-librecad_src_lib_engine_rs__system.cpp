@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix pkgsrc PREFIX.
+
 --- librecad/src/lib/engine/rs_system.cpp.orig	2018-02-15 20:54:45.000000000 +0000
 +++ librecad/src/lib/engine/rs_system.cpp
 @@ -573,11 +573,8 @@ QStringList RS_System::getDirectoryList(

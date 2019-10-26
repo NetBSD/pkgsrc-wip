@@ -47,6 +47,15 @@ lib/librecad/fonts/symbol_misc2.lff
 lib/librecad/fonts/symeteo.lff
 lib/librecad/fonts/symusic.lff
 lib/librecad/fonts/unicode.lff
+lib/librecad/plugins/libalign.so
+lib/librecad/plugins/libasciifile.so
+lib/librecad/plugins/libgear.so
+lib/librecad/plugins/libimportshp.so
+lib/librecad/plugins/liblist.so
+lib/librecad/plugins/libpicfile.so
+lib/librecad/plugins/libplotequation.so
+lib/librecad/plugins/libsameprop.so
+lib/librecad/plugins/libsample.so
 man/man1/librecad.1
 man/man1/ttf2lff.1
 share/applications/librecad.desktop

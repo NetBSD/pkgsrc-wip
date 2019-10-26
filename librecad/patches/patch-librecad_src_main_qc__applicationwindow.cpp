@@ -1,5 +1,8 @@
 $NetBSD$
 
+ignore files in the plugins directory that do not contain '.so', as
+pkgsrc leaves some .la files there
+
 --- librecad/src/main/qc_applicationwindow.cpp.orig	2018-02-15 20:54:45.000000000 +0000
 +++ librecad/src/main/qc_applicationwindow.cpp
 @@ -399,6 +399,10 @@ void QC_ApplicationWindow::loadPlugins()
