@@ -3823,6 +3823,7 @@ SUBDIR+=	py-poppy
 SUBDIR+=	py-poster
 SUBDIR+=	py-postmarkup
 SUBDIR+=	py-pot
+SUBDIR+=	py-potr
 SUBDIR+=	py-pp
 SUBDIR+=	py-prayertime
 SUBDIR+=	py-prel

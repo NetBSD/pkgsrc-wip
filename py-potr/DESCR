@@ -1,0 +1,3 @@
+python-otr is a pure Python OTR implementation; it does not bind to libotr.
+According to the developers it is experimental and potentially insecure,
+you should not rely on it.
