@@ -4203,7 +4203,6 @@ SUBDIR+=	py-xcffib
 SUBDIR+=	py-xdgapp
 SUBDIR+=	py-xdress
 SUBDIR+=	py-xlutils
-SUBDIR+=	py-xopen
 SUBDIR+=	py-xpra
 SUBDIR+=	py-yams
 SUBDIR+=	py-yapf
