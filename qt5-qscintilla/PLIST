@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/25 17:46:26 nros Exp $
+@comment $NetBSD$
 qt5/include/Qsci/qsciabstractapis.h
 qt5/include/Qsci/qsciapis.h
 qt5/include/Qsci/qscicommand.h
@@ -17,14 +17,17 @@ qt5/include/Qsci/qscilexercss.h
 qt5/include/Qsci/qscilexercustom.h
 qt5/include/Qsci/qscilexerd.h
 qt5/include/Qsci/qscilexerdiff.h
+qt5/include/Qsci/qscilexeredifact.h
 qt5/include/Qsci/qscilexerfortran.h
 qt5/include/Qsci/qscilexerfortran77.h
 qt5/include/Qsci/qscilexerhtml.h
 qt5/include/Qsci/qscilexeridl.h
 qt5/include/Qsci/qscilexerjava.h
 qt5/include/Qsci/qscilexerjavascript.h
+qt5/include/Qsci/qscilexerjson.h
 qt5/include/Qsci/qscilexerlua.h
 qt5/include/Qsci/qscilexermakefile.h
+qt5/include/Qsci/qscilexermarkdown.h
 qt5/include/Qsci/qscilexermatlab.h
 qt5/include/Qsci/qscilexeroctave.h
 qt5/include/Qsci/qscilexerpascal.h
@@ -49,7 +52,10 @@ qt5/include/Qsci/qsciscintilla.h
 qt5/include/Qsci/qsciscintillabase.h
 qt5/include/Qsci/qscistyle.h
 qt5/include/Qsci/qscistyledtext.h
-qt5/lib/libqscintilla2.la
+qt5/lib/libqscintilla2_qt5.so
+qt5/lib/libqscintilla2_qt5.so.15
+qt5/lib/libqscintilla2_qt5.so.15.0
+qt5/lib/libqscintilla2_qt5.so.15.0.0
 qt5/mkspecs/features/qscintilla2.prf
 qt5/qsci/api/python/Python-2.4.api
 qt5/qsci/api/python/Python-2.5.api
@@ -59,6 +65,10 @@ qt5/qsci/api/python/Python-3.1.api
 qt5/qsci/api/python/Python-3.2.api
 qt5/qsci/api/python/Python-3.3.api
 qt5/qsci/api/python/Python-3.4.api
+qt5/qsci/api/python/Python-3.5.api
+qt5/qsci/api/python/Python-3.6.api
+qt5/qsci/api/python/Python-3.7.api
+qt5/qsci/api/python/Python-3.8.api
 qt5/translations/qscintilla_cs.qm
 qt5/translations/qscintilla_de.qm
 qt5/translations/qscintilla_es.qm

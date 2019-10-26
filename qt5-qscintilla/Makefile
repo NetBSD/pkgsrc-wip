@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2014/09/25 17:46:26 nros Exp $
 #
 
-DISTNAME=	QScintilla-gpl-2.8.4
-PKGNAME=	qt5-${DISTNAME:tl:S/-gpl-/-/}
+DISTNAME=	QScintilla_gpl-2.11.2
+PKGNAME=	qt5-${DISTNAME:tl:S/_gpl-/-/}
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
+MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/QScintilla/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.riverbankcomputing.co.uk/software/qscintilla/intro
