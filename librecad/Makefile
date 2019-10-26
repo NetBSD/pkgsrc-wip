@@ -33,32 +33,16 @@ SUBST_MESSAGE.prefix=	Fix hardcoded path
 SUBST_FILES.prefix+=	librecad/src/lib/engine/rs_system.cpp
 SUBST_VARS.prefix+=	PREFIX
 
-#
-# We disable long double math functions, because otherwise one of
-# the boost headers brings in a log1pl() function which was not
-# present (in NetBSD 7) causing compilation failure
-#
-# We configure the plugins directory separately so that we can use
-# make install below, which handles the libtooling of the shared
-# plugins automatically
-##
-
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mclang*)
 BUILDLINK_TRANSFORM+=   rm:-fext-numeric-literals
 .endif
 
-INSTALLATION_DIRS+=	lib/${PKGBASE}/plugins
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
-INSTALLATION_DIRS+=	share/data/pixmaps
-INSTALLATION_DIRS+=	share/data/mime/packages
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	include/${PKGBASE}
-INSTALLATION_DIRS+=	share/data/${PKGBASE}/fonts
-INSTALLATION_DIRS+=	share/data/${PKGBASE}/qm
-INSTALLATION_DIRS+=	share/data/${PKGBASE}/library
-INSTALLATION_DIRS+=	share/data/${PKGBASE}/patterns
+INSTALLATION_DIRS+=	share/${PKGBASE}
+INSTALLATION_DIRS+=	lib/${PKGBASE}
 
 QMAKE_OPTIONS+=	CONFIG+=release
 QMAKE_OPTIONS+=	BOOST_DIR=${PREFIX}
@@ -82,11 +66,11 @@ do-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/tools/ttf2lff/ttf2lff.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	cd ${WRKSRC}/plugins && \
+	${RUN} cd ${WRKSRC}/plugins && \
 	    ${SETENV} ${MAKE_ENV} ${MAKE} INSTALL_ROOT=${DESTDIR} install
-	cd ${WRKSRC}/unix/resources && ${PAX} -rwpm fonts \
+	${RUN} cd ${WRKSRC}/unix/resources && ${PAX} -rwpm fonts \
 	    ${DESTDIR}${PREFIX}/lib/librecad
-	cd ${WRKSRC}/unix/resources && ${PAX} -rwpm library patterns qm \
+	${RUN} cd ${WRKSRC}/unix/resources && ${PAX} -rwpm library patterns qm \
 	    ${DESTDIR}${PREFIX}/share/librecad
 
 .include "../../x11/qt5-qtsvg/buildlink3.mk"

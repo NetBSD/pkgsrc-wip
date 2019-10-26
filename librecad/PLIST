@@ -1500,11 +1500,3 @@ share/librecad/qm/plugins_tr.qm
 share/librecad/qm/plugins_uk.qm
 share/librecad/qm/plugins_zh_cn.qm
 share/librecad/qm/plugins_zh_tw.qm
-@pkgdir share/data/pixmaps
-@pkgdir share/data/mime/packages
-@pkgdir share/data/librecad/qm
-@pkgdir share/data/librecad/patterns
-@pkgdir share/data/librecad/library
-@pkgdir share/data/librecad/fonts
-@pkgdir lib/librecad/plugins
-@pkgdir include/librecad
