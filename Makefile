@@ -3599,7 +3599,6 @@ SUBDIR+=	py-kubernetes
 SUBDIR+=	py-lapack
 SUBDIR+=	py-larlib
 SUBDIR+=	py-larry
-SUBDIR+=	py-latexcodec
 SUBDIR+=	py-lazr.uri
 SUBDIR+=	py-lds
 SUBDIR+=	py-lea
