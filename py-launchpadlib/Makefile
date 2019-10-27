@@ -16,9 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 # These are in wip/ not in pkgsrc proper:
 DEPENDS+=	${PYPKGPREFIX}-wadllib-[0-9]*:../../wip/py-wadllib
-# These are required but still unpackaged:
-#DEPENDS+=	${PYPKGPREFIX}-lazr.uri-[0-9]*:../../wip/py-lazr.uri
-#DEPENDS+=	${PYPKGPREFIX}-lazr.restfulclient-[0-9]*:../../wip/py-lazr.restfulclient
+DEPENDS+=	${PYPKGPREFIX}-lazr.uri-[0-9]*:../../wip/py-lazr.uri
+DEPENDS+=	${PYPKGPREFIX}-lazr.restfulclient-[0-9]*:../../wip/py-lazr.restfulclient
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

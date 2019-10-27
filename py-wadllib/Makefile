@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.7 2014/06/01 12:49:48 thomasklausner Exp $
 #
 
-DISTNAME=	wadllib-1.1.4
+DISTNAME=	wadllib-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://launchpad.net/wadllib/trunk/1.1.4/+download/
+MASTER_SITES=	http://launchpad.net/wadllib/trunk/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/wadllib

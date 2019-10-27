@@ -3599,6 +3599,7 @@ SUBDIR+=	py-kubernetes
 SUBDIR+=	py-lapack
 SUBDIR+=	py-larlib
 SUBDIR+=	py-larry
+SUBDIR+=	py-lazr.restfulclient
 SUBDIR+=	py-lazr.uri
 SUBDIR+=	py-lds
 SUBDIR+=	py-lea

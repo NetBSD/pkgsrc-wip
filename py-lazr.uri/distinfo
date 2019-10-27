@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/05/08 16:01:41 jihbed Exp $
 
-SHA1 (lazr.uri-1.0.2.tar.gz) = 2e0bd18fcbc0808f01ed046f5dc490eeb0d0f727
-RMD160 (lazr.uri-1.0.2.tar.gz) = 75ecffd90894bc686ca68b109440b5690c49de06
-Size (lazr.uri-1.0.2.tar.gz) = 18929 bytes
+SHA1 (lazr.uri-1.0.3.tar.gz) = 3bd87d30186b3112837b56eeff64a8415cb9bbcb
+RMD160 (lazr.uri-1.0.3.tar.gz) = f68dacc8620e379056620ea7c85de01bb63423e6
+SHA512 (lazr.uri-1.0.3.tar.gz) = 10c66af36a1ca007125c0aeb48c1e61043ecba3cdf70729aae956e2ac3460b3b8c13d1a99e0510a70d99b758210d30068828a3ac367d75f6ac73e8694d9df05e
+Size (lazr.uri-1.0.3.tar.gz) = 18601 bytes
