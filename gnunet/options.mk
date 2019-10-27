@@ -1,16 +1,22 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
+
 PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 json
 PKG_SUPPORTED_OPTIONS+=		gstreamer
-PKG_SUGGESTED_OPTIONS=		doc sqlite3 json
+
+# in 0.11.7 when fixed, swap doc for mdoc
+# in 0.11.7 when fixed, add back idn
+PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer
+
 PLIST_VARS+=			doc mdoc conversations
 PLIST_VARS+=			experimental json
 PLIST_VARS+=			pgsql mysql sqlite3
 PLIST_VARS+=			linux freebsd bluez
 PLIST_VARS+=			linuxfreebsd
+
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
 # src/gns/gnunet-gns-proxy-setup-ca
@@ -20,6 +26,8 @@ PLIST_VARS+=			linuxfreebsd
 .if !empty(PKG_OPTIONS:Mtests)
 .include "../../lang/python/tool.mk"
 PYTHON_FOR_BUILD_ONLY=	yes
+.else
+CONFIGURE_ARGS+=	--disable-tests
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
@@ -65,43 +73,60 @@ CONFIGURE_ARGS+=	--without-jansson
 .if !empty(PKG_OPTIONS:Msqlite3)
 .include "../../databases/sqlite3/buildlink3.mk"
 PLIST.sqlite3=		yes
+.else
+CONFIGURE_ARGS+=	--without-sqlite3
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../mk/mysql.buildlink3.mk"
 PLIST.mysql=		yes
+.else
+CONFIGURE_ARGS+=	--without-mysql
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
 PLIST.pgsql=		yes
+.else
+CONFIGURE_ARGS+=	--without-postgres
 .endif
 
 .if !empty(PKG_OPTIONS:Mexperimental)
-.include "../../math/glpk/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-experimental
 PLIST.experimental=	yes
+.else
+CONFIGURE_ARGS+=	--disable-experimental
 .endif
 
-.if !empty(PKG_OPTIONS:Mpulseaudio)
-.include "../../audio/pulseaudio/buildlink3.mk"
-PLIST.conversations=	yes
-.endif
-
+# conversation submodule. if gstreamer + opus + ogg
+# exists, pulseaudio is not necessary.
 .if !empty(PKG_OPTIONS:Mopus)
 .include "../../audio/libopus/buildlink3.mk"
 PLIST.conversations=	yes
+.else
+CONFIGURE_ARGS+=	--without-libopus
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
 .include "../../multimedia/libogg/buildlink3.mk"
 PLIST.conversations=	yes
+.else
+CONFIGURE_ARGS+=	--without-libogg
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 PLIST.conversations=	yes
+.else
+CONFIGURE_ARGS+=	--without-gstreamer
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+PLIST.conversations=	yes
+.else
+CONFIGURE_ARGS+=	--without-libpulse
 .endif
 
 # FIXME: It would be good to provide a build of gnunet against
@@ -116,8 +141,11 @@ PLIST.conversations=	yes
 
 .if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mbluez)
 # Do we need more for bluez?
+# the switch will be valid starting with 0.11.7 release
 .include "../../wip/bluez-libs/buildlink3.mk"
 PLIST.bluez=		yes
+.else
+CONFIGURE_ARGS+=	--without-libbluetooth
 .endif
 
 .if ${OPSYS} == "Linux"
