@@ -43,6 +43,8 @@ do-install:
 
 JPEG_ACCEPTED=	libjpeg-turbo
 
+.include "../../lang/python/pyversion.mk"
+
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
