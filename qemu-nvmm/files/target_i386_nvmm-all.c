@@ -1130,10 +1130,17 @@ nvmm_accel_init(MachineState *ms)
     struct nvmm_capability cap;
     int ret, err;
 
+    ret = nvmm_init();
+    if (ret == -1) {
+        err = errno;
+        error_report("NVMM: Initialization failed, error=%d", errno);
+        return -err;
+    }
+
     ret = nvmm_capability(&cap);
     if (ret == -1) {
         err = errno;
-        error_report("NVMM: No accelerator found, error=%d", errno);
+        error_report("NVMM: Unable to fetch capability, error=%d", errno);
         return -err;
     }
     if (cap.version != 1) {
