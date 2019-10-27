@@ -40,6 +40,7 @@ struct qemu_vcpu {
 };
 
 struct qemu_machine {
+    struct nvmm_capability cap;
     struct nvmm_machine mach;
 };
 
@@ -575,6 +576,11 @@ nvmm_handle_rdmsr(struct nvmm_machine *mach, CPUState *cpu,
     case MSR_IA32_APICBASE:
         val = cpu_get_apic_base(x86_cpu->apic_state);
         break;
+    case MSR_MTRRcap:
+    case MSR_MTRRdefType:
+    case MSR_MCG_CAP:
+        val = 0;
+        break;
     default: // More MSRs to add?
         val = 0;
         error_report("NVMM: Unexpected RDMSR 0x%x, ignored",
@@ -758,6 +764,7 @@ nvmm_vcpu_loop(CPUState *cpu)
             break;
         case NVMM_VCPU_EXIT_INT_READY:
         case NVMM_VCPU_EXIT_NMI_READY:
+        case NVMM_VCPU_EXIT_TPR_CHANGED:
             break;
         case NVMM_VCPU_EXIT_HALTED:
             ret = nvmm_handle_halted(mach, cpu, exit);
@@ -886,6 +893,7 @@ nvmm_init_vcpu(CPUState *cpu)
 {
     struct nvmm_machine *mach = get_nvmm_mach();
     struct nvmm_vcpu_conf_cpuid cpuid;
+    struct nvmm_vcpu_conf_tpr tpr;
     Error *local_error = NULL;
     struct qemu_vcpu *qcpu;
     int ret, err;
@@ -923,7 +931,7 @@ nvmm_init_vcpu(CPUState *cpu)
     memset(&cpuid, 0, sizeof(cpuid));
     cpuid.mask = 1;
     cpuid.leaf = 0x00000001;
-    cpuid.u.mask.del.edx = CPUID_MCE | CPUID_MCA | CPUID_MTRR;
+    cpuid.u.mask.set.edx = CPUID_MCE | CPUID_MCA | CPUID_MTRR;
     ret = nvmm_vcpu_configure(mach, &qcpu->vcpu, NVMM_VCPU_CONF_CPUID,
         &cpuid);
     if (ret == -1) {
@@ -942,6 +950,19 @@ nvmm_init_vcpu(CPUState *cpu)
             " error=%d", err);
         g_free(qcpu);
         return -err;
+    }
+
+    if (qemu_mach.cap.arch.vcpu_conf_support & NVMM_CAP_ARCH_VCPU_CONF_TPR) {
+        memset(&tpr, 0, sizeof(tpr));
+        tpr.exit_changed = 1;
+        ret = nvmm_vcpu_configure(mach, &qcpu->vcpu, NVMM_VCPU_CONF_TPR, &tpr);
+        if (ret == -1) {
+            err = errno;
+            error_report("NVMM: Failed to configure a virtual processor,"
+                " error=%d", err);
+            g_free(qcpu);
+            return -err;
+        }
     }
 
     cpu->vcpu_dirty = true;
@@ -1127,7 +1148,6 @@ nvmm_handle_interrupt(CPUState *cpu, int mask)
 static int
 nvmm_accel_init(MachineState *ms)
 {
-    struct nvmm_capability cap;
     int ret, err;
 
     ret = nvmm_init();
@@ -1137,18 +1157,18 @@ nvmm_accel_init(MachineState *ms)
         return -err;
     }
 
-    ret = nvmm_capability(&cap);
+    ret = nvmm_capability(&qemu_mach.cap);
     if (ret == -1) {
         err = errno;
         error_report("NVMM: Unable to fetch capability, error=%d", errno);
         return -err;
     }
-    if (cap.version != 1) {
-        error_report("NVMM: Unsupported version %lu", cap.version);
+    if (qemu_mach.cap.version != 1) {
+        error_report("NVMM: Unsupported version %lu", qemu_mach.cap.version);
         return -EPROGMISMATCH;
     }
-    if (cap.state_size != sizeof(struct nvmm_x64_state)) {
-        error_report("NVMM: Wrong state size %zu", cap.state_size);
+    if (qemu_mach.cap.state_size != sizeof(struct nvmm_x64_state)) {
+        error_report("NVMM: Wrong state size %zu", qemu_mach.cap.state_size);
         return -EPROGMISMATCH;
     }
 
