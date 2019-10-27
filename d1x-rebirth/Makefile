@@ -27,6 +27,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/d1x-rebirth ${DESTDIR}${PREFIX}/bin
 
 .include "options.mk"
+.include "../../lang/python/pyversion.mk"
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
