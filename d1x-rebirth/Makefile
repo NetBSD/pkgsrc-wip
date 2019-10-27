@@ -13,7 +13,7 @@ COMMENT=	Source port of the Descent 1 engine
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
+BUILD_DEPENDS+=		${PYPKGPREFIX}-scons-[0-9]*:../../devel/scons
 SCONS=			${PREFIX}/bin/scons
 SCONS_ARGS+=		-C ${WRKSRC} prefix=${PREFIX}
 SCONS_ARGS+=		sharepath=${PREFIX}/share/d1x-rebirth
