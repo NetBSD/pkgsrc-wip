@@ -11,6 +11,8 @@ HOMEPAGE=	https://launchpad.net/lazr.uri
 COMMENT=	Library for parsing, manipulating, and generating URIs
 LICENSE=	gnu-lgpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
