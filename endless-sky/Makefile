@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3 AND cc-by-sa-v4.0 AND cc-by-sa-v3.0 AND public-domain
 WRKSRC=		${WRKDIR}/endless-sky-${PKGVERSION_NOREV}
 USE_LANGUAGES=	c++
 
-BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
+BUILD_DEPENDS+=		${PYPKGPREFIX}-scons-[0-9]*:../../devel/scons
 SCONS=			${PREFIX}/bin/scons
 SCONS_ARGS+=		-C ${WRKSRC} DESTDIR=${DESTDIR} PREFIX=${PREFIX}
 
