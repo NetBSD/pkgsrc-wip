@@ -1,6 +1,6 @@
 $NetBSD$
 
---- mkspecs/features/platform.prf.orig	2019-06-17 15:45:18.000000000 +0000
+--- mkspecs/features/platform.prf.orig	2019-08-19 08:19:35.000000000 +0000
 +++ mkspecs/features/platform.prf
 @@ -11,56 +11,11 @@ defineTest(isQtMinimum) {
  
@@ -22,7 +22,7 @@ $NetBSD$
 -      skipBuild("Qt WebEngine on Windows must be built on a 64-bit machine.")
 -    }
 -    !msvc|intel_icl {
--      skipBuild("Qt WebEngine on Windows requires MSVC.")
+-      skipBuild("Qt WebEngine on Windows requires MSVC or Clang (MSVC mode).")
 -      return(false)
 -    }
 -    !isMinWinSDKVersion(10, 16299): {

@@ -7,9 +7,9 @@ COMMENT=	Qt5 WebEngine module
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 
-USE_TOOLS+=		bison flex pkg-config sed
+USE_TOOLS+=		bison flex pkg-config sed gmake
 
-BUILD_TARGET=		sub-src
+#BUILD_TARGET=		sub-src
 MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
@@ -74,7 +74,7 @@ post-install:
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_ACCEPTED=	27
+#PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../lang/python/tool.mk"
 #.include "../../lang/ruby/buildlink3.mk"
 #BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
