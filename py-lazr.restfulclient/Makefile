@@ -8,7 +8,7 @@ MASTER_SITES=	http://launchpad.net/lazr.restfulclient/trunk/${PKGVERSION_NOREV}/
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://launchpad.net/lazr.restfulclient
-COMMENT=	XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+COMMENT=	Provide added functionality on top of wadllib
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
