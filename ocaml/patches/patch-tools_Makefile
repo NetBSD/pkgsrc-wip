@@ -1,9 +1,9 @@
 $NetBSD$
 
---- tools/Makefile.orig	2019-03-01 15:13:46.000000000 +0000
+--- tools/Makefile.orig	2019-09-11 14:40:30.000000000 +0000
 +++ tools/Makefile
-@@ -81,7 +81,7 @@ INCLUDES = $(addprefix -I $(ROOTDIR)/,ut
-                        middle_end middle_end/base_types driver toplevel)
+@@ -82,7 +82,7 @@ INCLUDES = $(addprefix -I $(ROOTDIR)/,ut
+                        file_formats lambda)
  COMPFLAGS = -absname -w +a-4-9-41-42-44-45-48 -strict-sequence -warn-error A \
   -safe-string -strict-formats -bin-annot $(INCLUDES)
 -LINKFLAGS = $(INCLUDES)
