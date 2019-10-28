@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.13 2015/11/03 00:08:43 agc Exp $
+
+SHA1 (merkaartor/0.18.3.tar.gz) = 8af58d66bc5bee5487f04df4e092e0b4783cd672
+RMD160 (merkaartor/0.18.3.tar.gz) = 36b840751fdf43c0aa164da39cd76eb4fa2457f3
+SHA512 (merkaartor/0.18.3.tar.gz) = b34087e0317c196b59dd1de57778b9293d23e4530bd5734661dc2ce53eef85317f512ee446056e045aa8a06146bd029d6274fa5a6f68128db27795d44f0ef915
+Size (merkaartor/0.18.3.tar.gz) = 7104234 bytes
+SHA1 (patch-3rdparty_qtsingleapplication-2.6__1-opensource_src_qtlocalpeer.cpp) = 1b3f1328a4bf016935a3ceb04b9339584b6e701d
+SHA1 (patch-aa) = bd8ac239c841f47260925a2749063849d67c839f
+SHA1 (patch-include_builtin-ggl_ggl_algorithms_overlay_get__intersection__points.hpp) = 4ac08df56c12c5a453548f3df53f85d4741c28b6
+SHA1 (patch-include_builtin-ggl_ggl_geometries_adapted_tuple.hpp) = 1c6537cf877417cf1b05b33174c2358af313f7ad
+SHA1 (patch-src_Features_Feature.h) = 1d31698414dd0da41377b776b4d6d40510413a1c
+SHA1 (patch-src_Features_Node.h) = 2a63be6047878b8fd31a88ef039e9ca4d050b715
+SHA1 (patch-src_Features_Way.h) = 17de3e44e62124e4244a0b33f1a9f6198b89e375
+SHA1 (patch-src_ImportExport_ImportCSVDialog.cpp) = 3f0c0a03ef46be0bc9d20dfeccee3cd994ed2f57
+SHA1 (patch-src_Maps_Coord.h) = 774d95301d20e11a13c60cfefac6a424fbdfa77d
+SHA1 (patch-src_Maps_Projection.h) = f75dabd1ca64844aaab0255fa3b61d7143bece73
