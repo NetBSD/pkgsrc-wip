@@ -1,0 +1,37 @@
+@comment $NetBSD$
+bin/jabberd
+bin/xdbfiletool
+include/base64.hh
+include/crc32.hh
+include/expat.hh
+include/hash.hh
+include/hmac.hh
+include/jabberd.h
+include/jabberid.hh
+include/jid.hh
+include/jpacket.hh
+include/jutil.hh
+include/karma.hh
+include/lwresc.hh
+include/messages.hh
+include/pool.hh
+include/rate.hh
+include/socket.hh
+include/str.hh
+include/xhash.hh
+include/xmlnode.hh
+include/xstream.hh
+lib/libjabberd.la
+lib/libjabberddialback.la
+lib/libjabberddnsrv.la
+lib/libjabberdproxy65.la
+lib/libjabberdpthsock.la
+lib/libjabberdresolver.la
+lib/libjabberdsm.la
+lib/libjabberdxdbfile.la
+lib/libjabberdxdbsql.la
+man/man5/jabber.xml.5
+man/man8/jabberd.8
+share/examples/jabberd/cacerts.pem
+share/examples/jabberd/jabber.xml
+@pkgdir etc
