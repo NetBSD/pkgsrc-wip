@@ -34,9 +34,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
 # Workaround for missing image libraries (cmake don't link them otherwise)
 LDFLAGS+=		-ljpeg -lpng
 # Link Backtrace Information Library on NetBSD (to fix unresolved symbols)
-.if ${OPSYS} == "NetBSD"
-LDFLAGS+=		-lexecinfo
-.endif
+LDFLAGS.NetBSD+=	-lexecinfo
 # Backtrace Information Library was introduced with NetBSD 7
 NOT_FOR_PLATFORM=	NetBSD-[0-6].*-*
 
