@@ -575,6 +575,7 @@ nvmm_handle_rdmsr(struct nvmm_machine *mach, CPUState *cpu,
     case MSR_MTRRcap:
     case MSR_MTRRdefType:
     case MSR_MCG_CAP:
+    case MSR_MCG_STATUS:
         val = 0;
         break;
     default: // More MSRs to add?
@@ -615,6 +616,9 @@ nvmm_handle_wrmsr(struct nvmm_machine *mach, CPUState *cpu,
     switch (exit->u.wrmsr.msr) {
     case MSR_IA32_APICBASE:
         cpu_set_apic_base(x86_cpu->apic_state, val);
+        break;
+    case MSR_MTRRdefType:
+    case MSR_MCG_STATUS:
         break;
     default: // More MSRs to add?
         error_report("NVMM: Unexpected WRMSR 0x%x [val=0x%lx], ignored",
@@ -1160,11 +1164,11 @@ nvmm_accel_init(MachineState *ms)
         return -err;
     }
     if (qemu_mach.cap.version != 1) {
-        error_report("NVMM: Unsupported version %lu", qemu_mach.cap.version);
+        error_report("NVMM: Unsupported version %u", qemu_mach.cap.version);
         return -EPROGMISMATCH;
     }
     if (qemu_mach.cap.state_size != sizeof(struct nvmm_x64_state)) {
-        error_report("NVMM: Wrong state size %zu", qemu_mach.cap.state_size);
+        error_report("NVMM: Wrong state size %u", qemu_mach.cap.state_size);
         return -EPROGMISMATCH;
     }
 
