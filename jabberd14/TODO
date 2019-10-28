@@ -1,1 +1,11 @@
 * handle option for PostgreSQL or MySQL
+
+# \todo This is jabberd14, which makes sense given jabberd2 in pkgsrc
+# proper, and longstanding confusion where people who intend to use
+# jabberd2 end up with 14.   If so, 
+
+# \todo Explain why, if the version is 1.6.1.1 this doesn't use the
+# 1.6.1.1 github release tag.  In particular, it looks like the tag is
+# on master, isn't actually the release, and has structural changes
+# relative to the release.  (Perhaps this is a clue that upstream is
+# overdue for a release :-).

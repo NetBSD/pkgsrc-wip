@@ -3,7 +3,9 @@
 DISTNAME=		jabberd-1.6.1.1
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mawis/}
+
 GITHUB_TAG=		b2b871eaf3f6455d7d37113ce23d6bc59c8da70f
+#GITHUB_TAG=		JABBERD14_1_6_1_1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://jabberd.org/
