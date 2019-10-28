@@ -1,6 +1,9 @@
 ===========================================================================
 $NetBSD$
 
+Big caveat warning: the rc.d scripts are still being debugged.
+
+
 To enable this package, put the following into your /etc/rc.conf:
 
 	gnunet=YES
@@ -22,6 +25,16 @@ START_USER_SERVICES = YES
 
 Finally, each user in this multi-user setup, must start
 gnunet with "gnunet-arm -s".
+
+You can achieve this (for one user) with this in your /etc/rc.conf:
+
+        gnunetuser=YES
+        gnunetuser_user=name
+        gnunetuser_user_home="/home/name"
+
+if your user name is "name", and
+
+	${RCD_SCRIPTS_DIR}/gnunetuser start
 
 Read the documentation (info gnunet) and provided example
 files as well as the man pages to learn how to customize
