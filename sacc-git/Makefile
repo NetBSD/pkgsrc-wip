@@ -19,6 +19,8 @@ MAKE_FLAGS+=	PREFIX="${PREFIX}"
 MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}/man1"
 MAKE_FLAGS+=	LIBS=${BUILDLINK_LDADD.terminfo:Q}
 
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE	# strcasestr, asprintf
+
 .include "../../mk/terminfo.buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
