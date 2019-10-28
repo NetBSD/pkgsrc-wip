@@ -5095,6 +5095,7 @@ SUBDIR+=	xwax
 SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	xxhash
+SUBDIR+=	xygrib
 SUBDIR+=	yabar
 SUBDIR+=	yad
 SUBDIR+=	yafray
