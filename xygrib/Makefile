@@ -16,15 +16,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 
-INSTALLATION_DIRS+=share/applications
-INSTALLATION_DIRS+=share/pixmaps
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/debian/xygrib.desktop \
-		${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/debian/xygrib.png \
-		${DESTDIR}${PREFIX}/share/pixmaps
-
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"

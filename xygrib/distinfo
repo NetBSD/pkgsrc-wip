@@ -4,4 +4,4 @@ SHA1 (XyGrib/XyGrib-1.2.6.1.tar.gz) = 8e3431ed6a5ef114d77ac57029129a26a381f696
 RMD160 (XyGrib/XyGrib-1.2.6.1.tar.gz) = 876e8a53b492b2e2ea0572e5b0cd31a2c04f505a
 SHA512 (XyGrib/XyGrib-1.2.6.1.tar.gz) = 33c8a0fc6791dbe3342524555dc90362560fed08b4e2a624111167d92e2c71890dcb5bfe7e85d7df2ffc11a382ea5afa484cdab84c29935d4be2e673c76a371c
 Size (XyGrib/XyGrib-1.2.6.1.tar.gz) = 14704088 bytes
-SHA1 (patch-CMakeLists.txt) = ea6de2db6b49091b58fee82d23ef9998630910aa
+SHA1 (patch-CMakeLists.txt) = 9effed4867c7d2698460aeb820ed7ed14b2ab171
