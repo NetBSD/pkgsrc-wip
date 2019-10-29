@@ -11,6 +11,13 @@ PKG_SUPPORTED_OPTIONS+=		gstreamer
 # in 0.11.7 when fixed, add back idn
 PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer
 
+# bluez is still in pkgsrc-wip, and I should test this
+# before claiming bluez from pkgsrc-wip on Linux works.
+# However, this is a supported option for GNUnet.
+.if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=		bluez
+.endif
+
 PLIST_VARS+=			doc mdoc conversations
 PLIST_VARS+=			experimental json
 PLIST_VARS+=			pgsql mysql sqlite3
