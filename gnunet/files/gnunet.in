@@ -33,7 +33,16 @@ start_precmd="gnunet_precmd"
 # XXX: We need to export PATH with appended /usr/pkg/{sbin,bin} to get
 # the upnpc binary and others.
 # We can not use export here.
-export PATH=${PATH}:@PREFIX@/bin:@PREFIX@/sbin
+check_path="@SU@ -m ${gnunet_user} -c '${PATH}'"
+case "$check_path" in
+    *@PREFIX@/bin*|*@PREFIX@/sbin*)
+    ;;
+    *)
+        PATH=${PATH}:@PREFIX@/bin:@PREFIX@/sbin
+        # echo $PATH
+        ;;
+esac
+
 gnunet_env="PATH=${PATH} HOME=${gnunet_home} USER=${gnunet_user} TMP=/tmp GNUNET_PREFIX=@PREFIX@ GNUNET_CACHE_HOME=${gnunet_home}/cache"
 
 check_pidfile()
