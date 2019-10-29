@@ -16,7 +16,7 @@ fi
 name="gnunet"
 rcvar=${name}
 command="@PREFIX@/lib/gnunet/libexec/gnunet-service-arm"
-command_args="-c @PKG_SYSCONFDIR@/gnunet.conf"
+command_args="-c @PKG_SYSCONFDIR@/gnunet.conf -d -l @VARBASE@/chroot/gnunet/cache/gnunet-%Y-%m-%d.log"
 required_files="@PKG_SYSCONFDIR@/gnunet.conf"
 pidfile="/dev/null"
 : ${gnunet_user:=gnunet}
@@ -30,7 +30,11 @@ start_precmd="gnunet_precmd"
 #restart_cmd="gnunet_stop ; gnunet_start"
 #restart_precmd="gnunet_precmd"
 
-gnunet_env="HOME=${gnunet_home} USER=${gnunet_user} TMP=/tmp GNUNET_PREFIX=@PREFIX@"
+# XXX: We need to export PATH with appended /usr/pkg/{sbin,bin} to get
+# the upnpc binary and others.
+# We can not use export here.
+export PATH=${PATH}:@PREFIX@/bin:@PREFIX@/sbin
+gnunet_env="PATH=${PATH} HOME=${gnunet_home} USER=${gnunet_user} TMP=/tmp GNUNET_PREFIX=@PREFIX@ GNUNET_CACHE_HOME=${gnunet_home}/cache"
 
 check_pidfile()
 {
@@ -51,6 +55,7 @@ gnunet_start()
 	@ECHO@ "Starting ${name}."
 	doit="@SU@ -m ${gnunet_user} -c '${gnunet_env} ${command} ${command_args}'"
 	eval $doit
+	# @SU@ -m ${gnunet_user} -c '${gnunet_env} echo "${PATH}"'
 }
 
 #gnunet_stop()
