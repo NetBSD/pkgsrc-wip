@@ -14,7 +14,8 @@ HOMEPAGE=	https://wiki.gentoo.org/wiki/Project:Eudev
 LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-USE_TOOLS+=	autoconf automake gmake
+USE_TOOLS+=	autoconf automake gmake pkg-config
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-rootrundir=${VARBASE}/run
 

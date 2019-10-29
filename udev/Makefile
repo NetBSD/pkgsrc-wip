@@ -12,5 +12,6 @@ pre-configure:
 	sed -i 's,/run,"UDEV_ROOT_RUN",' ${WRKSRC}/src/udev/*.c
 	cd ${WRKSRC} &&autoreconf -fiv
 
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../wip/libudev/buildlink3.mk"
 .include "../../wip/libudev/Makefile.common"
