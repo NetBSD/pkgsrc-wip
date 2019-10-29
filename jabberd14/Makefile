@@ -1,6 +1,20 @@
 # $NetBSD: Makefile,v 1.44 2019/07/30 18:41:58 gdt Exp $
 
-DISTNAME=		jabberd-1.6.1.1
+# Upstream's latest release is 1.6.1.1, but this is old and has build
+# problems.  Upstream master is better, but upstream is choosing not
+# to make a release.  Therefore, package master in wip, and use a
+# version number that's higher than 1.6.1.1 and lower than any version
+# upstream might choose next.
+#
+# Because upstream is not publishing a release because of stability
+# concerns, this blocks moving this package to pkgsrc proper, as we do
+# generally not package non-releases against the wishes of upstreams.
+#
+# When imported, this will be jabberd14, to avoid confusion with
+# jabberd2, and to follow the pattern of all names having versions, if
+# there is more than one.
+# 
+DISTNAME=		jabberd-1.6.1.1.80
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mawis/}
 
