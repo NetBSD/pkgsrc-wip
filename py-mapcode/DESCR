@@ -1,0 +1,2 @@
+Module to encode latitude/longitude pairs to mapcodes and to decode mapcodes
+back to latitude/longitude pairs.
