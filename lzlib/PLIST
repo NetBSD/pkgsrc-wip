@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/lzlib.h
+info/lzlib.info
+lib/liblz.a
