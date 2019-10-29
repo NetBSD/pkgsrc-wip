@@ -1,11 +1,8 @@
 $NetBSD$
 
-pick from https://sourceforge.net/p/xplanet/code/209/
 Add 2017 leap second
+Taken from upstream: https://sourceforge.net/p/xplanet/code/209/
 
-Upstream maintainer recommended to build from svn. The latest
-release is rather old, so we pick a couple of commits required
-for functionality on top of this release.
 
 --- src/xpUtil.cpp~
 +++ src/xpUtil.cpp

@@ -13,4 +13,4 @@ SHA1 (patch-src_libmultiple_RayleighScattering.cpp) = 3a64033dc0c6915c9cd2eed2e5
 SHA1 (patch-src_libmultiple_drawStars.cpp) = b6a3f3995f4f1ac77660fdad64524ef6a48c4d50
 SHA1 (patch-src_readConfig-fixclang.cpp) = d24cfc6f832e9445f8c968a75e4eb0a7688b0c84
 SHA1 (patch-src_readConfig.cpp) = c1a46209dfcbb6a37b6c7ff90f633a6450fbd5d9
-SHA1 (patch-src_xpUtil-Add2017LeapSecond.cpp) = 1c0842e391f92daa86fb89caa4f19be29c6ea37b
+SHA1 (patch-src_xpUtil-Add2017LeapSecond.cpp) = 6b48a78f29b441ebdcdd097d01d5479e3afc8edc
