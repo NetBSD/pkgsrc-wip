@@ -34,6 +34,7 @@ bin/gnunet-nse
 bin/gnunet-peerinfo
 bin/gnunet-peerstore
 bin/gnunet-publish
+${PLIST.zbar}bin/gnunet-qr
 bin/gnunet-reclaim
 bin/gnunet-resolver
 bin/gnunet-revocation

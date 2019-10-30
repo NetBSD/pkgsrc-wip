@@ -6,10 +6,12 @@ PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 json
 PKG_SUPPORTED_OPTIONS+=		gstreamer
+# Should we name this qrcode instead?
+PKG_SUPPORTED_OPTIONS+=		zbar
 
 # in 0.11.7 when fixed, swap doc for mdoc
 # in 0.11.7 when fixed, add back idn
-PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer
+PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer zbar
 
 # bluez is still in pkgsrc-wip, and I should test this
 # before claiming bluez from pkgsrc-wip on Linux works.
@@ -134,6 +136,20 @@ CONFIGURE_ARGS+=	--without-gstreamer
 PLIST.conversations=	yes
 .else
 CONFIGURE_ARGS+=	--without-libpulse
+.endif
+
+.if !empty(PKG_OPTIONS:Mzbar)
+#.include "../../graphics/openjpeg/buildlink3.mk"
+#.include "../../graphics/libjpeg-turbo/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../wip/zbar/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+PLIST.zbar=		yes
+.else
+CONFIGURE_ARGS+=	--without-zbar
 .endif
 
 # FIXME: It would be good to provide a build of gnunet against
