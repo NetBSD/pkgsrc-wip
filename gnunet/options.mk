@@ -9,8 +9,9 @@ PKG_SUPPORTED_OPTIONS+=		gstreamer
 # Should we name this qrcode instead?
 PKG_SUPPORTED_OPTIONS+=		zbar
 
-# in 0.11.7 when fixed, swap doc for mdoc
-# in 0.11.7 when fixed, add back idn
+# mdoc should be fixed in 0.11.9, missing files were included
+# post-0.11.8.
+# in 0.11.9 when fixed for pkgsrc, add back idn.
 PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer zbar
 
 # bluez is still in pkgsrc-wip, and I should test this
@@ -24,7 +25,7 @@ PLIST_VARS+=			doc mdoc conversations
 PLIST_VARS+=			experimental json
 PLIST_VARS+=			pgsql mysql sqlite3
 PLIST_VARS+=			linux freebsd bluez
-PLIST_VARS+=			linuxfreebsd
+PLIST_VARS+=			linuxfreebsd zbar
 
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation

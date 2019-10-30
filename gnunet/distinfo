@@ -1,8 +1,6 @@
 $NetBSD$
 
-SHA1 (gnunet-0.11.7.tar.gz) = 64b6fe28c0ce78026a2bc5885fbdff795d76234f
-RMD160 (gnunet-0.11.7.tar.gz) = b29dbfedd6e35d30aee61e4fadf5b0ac43dee1e2
-SHA512 (gnunet-0.11.7.tar.gz) = bd92e0c7ba1f87684f348eecd097b0c7de3d6c370bd7a3745555fc83518f17cbe49a30821d3d1338b45f14052d4a77f2f3673b961ccab36e6a82220b9acdf76b
-Size (gnunet-0.11.7.tar.gz) = 7352977 bytes
-SHA1 (patch-src_gns_test_plugin_rest_gns.sh) = b420b6ee51d174c5975b68a63d84461edb3bd0d4
-SHA1 (patch-src_namestore_test_plugin_rest_gns.sh) = 98729f9d1c4af5318a30682bb82aea6843756a6e
+SHA1 (gnunet-0.11.8.tar.gz) = d82e896c1017f8370e183671f98cfb69ae40296a
+RMD160 (gnunet-0.11.8.tar.gz) = ee0d41d3d38f66d04f928611229845b53467a2dc
+SHA512 (gnunet-0.11.8.tar.gz) = bcdcd9452a905dcc0c474517f2941ae5822bda23e918c4ba5d61d085016d69eba5b1477bb30cf8179a6d6290898ea23ec485e3f1acfb3cf4ed0979ce8054af7e
+Size (gnunet-0.11.8.tar.gz) = 7352208 bytes
