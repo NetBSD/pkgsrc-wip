@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/12/24 19:40:41 noud4 Exp $
-
-SHA1 (evolution-tray-0.0.8.tar.gz) = cd26765250209cdb6b17dee464b18c25c56aeed2
-RMD160 (evolution-tray-0.0.8.tar.gz) = f6bfbea281e9480976bd830f9cfa5c8abf6e060c
-Size (evolution-tray-0.0.8.tar.gz) = 348632 bytes
-SHA1 (patch-configure) = bc2d210d274266404ac38089ce67698e828bb63d

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2011/10/30 18:27:38 noud4 Exp $
-
-SHA1 (evolution-rss-0.2.1.tar.gz) = 036e85794eeb8d86134f44eb0d93b4f5f8d0604c
-RMD160 (evolution-rss-0.2.1.tar.gz) = d3f35508d7e933a17f3d9f8d1db9257b8efafcbc
-Size (evolution-rss-0.2.1.tar.gz) = 666132 bytes
-SHA1 (patch-aa) = f80ccb2cf054f1f6e7c94648c5471308835c57e0
-SHA1 (patch-bc) = a026465897ad0fdcafbe6813abc505e763644617
-SHA1 (patch-bd) = db1bb8b3831aa7a93e47292c4d633ea73e8ddd8e

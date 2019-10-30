@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/24 19:40:41 noud4 Exp $
-lib/evolution/2.32/plugins/liborg-gnome-evolution-tray.la
-lib/evolution/2.32/plugins/org-gnome-evolution-tray.eplug

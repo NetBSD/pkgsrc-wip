@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.84 2015/11/03 23:27:04 agc Exp $
-
-SHA1 (evolution-data-server-3.18.4.tar.xz) = 8c982e5ce5f609ffafe8d68b0db8366ceb95d1de
-RMD160 (evolution-data-server-3.18.4.tar.xz) = 7b2ce154239840aab2a756937e773b56ecf0c5a5
-SHA512 (evolution-data-server-3.18.4.tar.xz) = eb5a7d869f60ec104bdc778c6fc1d2e38aec5983e5996f3dff3fe582649074ba4e4a111d593729587ddbf36a43f76475370e7d70f21e95f9c63f1bbfe877adb3
-Size (evolution-data-server-3.18.4.tar.xz) = 5413312 bytes
-SHA1 (patch-bd) = 8df85b9ab7ae71558fb939565e944b614de628bb
