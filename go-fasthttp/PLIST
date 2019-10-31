@@ -12,6 +12,7 @@ gopkg/pkg/${GO_PLATFORM}/github.com/valyala/fasthttp/reuseport.a
 gopkg/pkg/${GO_PLATFORM}/github.com/valyala/fasthttp/stackless.a
 gopkg/src/github.com/valyala/fasthttp/LICENSE
 gopkg/src/github.com/valyala/fasthttp/README.md
+gopkg/src/github.com/valyala/fasthttp/SECURITY.md
 gopkg/src/github.com/valyala/fasthttp/TODO
 gopkg/src/github.com/valyala/fasthttp/allocation_test.go
 gopkg/src/github.com/valyala/fasthttp/args.go
@@ -22,6 +23,8 @@ gopkg/src/github.com/valyala/fasthttp/bytesconv_32.go
 gopkg/src/github.com/valyala/fasthttp/bytesconv_32_test.go
 gopkg/src/github.com/valyala/fasthttp/bytesconv_64.go
 gopkg/src/github.com/valyala/fasthttp/bytesconv_64_test.go
+gopkg/src/github.com/valyala/fasthttp/bytesconv_table.go
+gopkg/src/github.com/valyala/fasthttp/bytesconv_table_gen.go
 gopkg/src/github.com/valyala/fasthttp/bytesconv_test.go
 gopkg/src/github.com/valyala/fasthttp/bytesconv_timing_test.go
 gopkg/src/github.com/valyala/fasthttp/client.go
@@ -69,12 +72,18 @@ gopkg/src/github.com/valyala/fasthttp/fs.go
 gopkg/src/github.com/valyala/fasthttp/fs_example_test.go
 gopkg/src/github.com/valyala/fasthttp/fs_handler_example_test.go
 gopkg/src/github.com/valyala/fasthttp/fs_test.go
+gopkg/src/github.com/valyala/fasthttp/fuzzit.sh
+gopkg/src/github.com/valyala/fasthttp/fuzzit/cookie/cookie_fuzz.go
+gopkg/src/github.com/valyala/fasthttp/fuzzit/request/request_fuzz.go
+gopkg/src/github.com/valyala/fasthttp/fuzzit/response/response_fuzz.go
+gopkg/src/github.com/valyala/fasthttp/fuzzit/url/url_fuzz.go
 gopkg/src/github.com/valyala/fasthttp/go.mod
 gopkg/src/github.com/valyala/fasthttp/go.sum
 gopkg/src/github.com/valyala/fasthttp/header.go
 gopkg/src/github.com/valyala/fasthttp/header_regression_test.go
 gopkg/src/github.com/valyala/fasthttp/header_test.go
 gopkg/src/github.com/valyala/fasthttp/header_timing_test.go
+gopkg/src/github.com/valyala/fasthttp/headers.go
 gopkg/src/github.com/valyala/fasthttp/http.go
 gopkg/src/github.com/valyala/fasthttp/http_test.go
 gopkg/src/github.com/valyala/fasthttp/lbclient.go
@@ -87,8 +96,11 @@ gopkg/src/github.com/valyala/fasthttp/pprofhandler/pprof.go
 gopkg/src/github.com/valyala/fasthttp/requestctx_setbodystreamwriter_example_test.go
 gopkg/src/github.com/valyala/fasthttp/reuseport/LICENSE
 gopkg/src/github.com/valyala/fasthttp/reuseport/reuseport.go
+gopkg/src/github.com/valyala/fasthttp/reuseport/reuseport_error.go
 gopkg/src/github.com/valyala/fasthttp/reuseport/reuseport_example_test.go
 gopkg/src/github.com/valyala/fasthttp/reuseport/reuseport_test.go
+gopkg/src/github.com/valyala/fasthttp/reuseport/reuseport_windows.go
+gopkg/src/github.com/valyala/fasthttp/reuseport/reuseport_windows_test.go
 gopkg/src/github.com/valyala/fasthttp/server.go
 gopkg/src/github.com/valyala/fasthttp/server_example_test.go
 gopkg/src/github.com/valyala/fasthttp/server_test.go

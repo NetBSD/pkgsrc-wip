@@ -1,12 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		go-fasthttp-${GITHUB_TAG}
-PKGNAME=		go-fasthttp-1.3.0
-PKGREVISION=		1
-GITHUB_PROJECT=		fasthttp
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+DISTNAME=		go-fasthttp-1.6.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=valyala/}
-GITHUB_TAG=		46469b532d0621287a2184a890564a59a3d528f3
+GITHUB_PROJECT=		fasthttp
 
 MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/valyala/fasthttp/
@@ -14,7 +12,13 @@ COMMENT=		Fast HTTP package for Go
 LICENSE=		mit
 
 GO_SRCPATH=		github.com/valyala/fasthttp
-GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
+GO_DIST_BASE=		fasthttp-${PKGVERSION_NOREV}
+
+# This is an sh script, no Bash syntax found.
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-build
+SUBST_FILES.bash=	${WRKDIR}/src/github.com/valyala/fasthttp/fuzzit.sh
+SUBST_SED.bash=		-e "s,bash,sh,g"
 
 .include "../../wip/go-bytebufferpool/buildlink3.mk"
 .include "../../wip/go-tcplisten/buildlink3.mk"
