@@ -4,6 +4,7 @@ $NetBSD$
 * install bins and data into the right directory
 * don't install cmake files in the translation directory
 * install icon and desktop files
+* install hi-res maps
 --- CMakeLists.txt.orig	2019-07-05 09:01:01.000000000 +0000
 +++ CMakeLists.txt
 @@ -54,71 +54,23 @@ find_package(Qt5Xml CONFIG REQUIRED)
@@ -94,7 +95,7 @@ $NetBSD$
  endif()
  
  add_subdirectory(src)
-@@ -241,4 +194,13 @@ set_target_properties(${PROJECT_NAME} PR
+@@ -241,4 +194,14 @@ set_target_properties(${PROJECT_NAME} PR
  set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_VERSION "${XYGRIB_VERSION}")
  set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "${PROJECT_NAME} Authors")
  # Install data
@@ -109,3 +110,4 @@ $NetBSD$
 +        DESTINATION ${CMAKE_INSTALL_FULL_DATADIR}/applications)
 +install(FILES debian/xygrib.png
 +	DESTINATION ${CMAKE_INSTALL_FULL_DATADIR}/pixmaps)
++install(DIRECTORY ../data/ DESTINATION ${PREFIX_PKGDATA})

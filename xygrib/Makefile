@@ -5,13 +5,14 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	XyGrib-1.2.6.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opengribs/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://opengribs.org/
 COMMENT=	GRIB file viewer for weather data
 LICENSE=	gnu-gpl-v3
+
+.include "data.mk"
 
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
