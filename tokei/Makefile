@@ -1,18 +1,17 @@
 # $NetBSD$
 
-DISTNAME=	tokei-10.0.1
-CATEGORIES=	devel textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=XAMPPRocky/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_PROJECT=	tokei
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=		tokei-10.0.1
+CATEGORIES=		devel textproc
+MASTER_SITES=		${MASTER_SITE_GITHUB:=XAMPPRocky/}
+DIST_SUBDIR=		${GITHUB_PROJECT}
+GITHUB_PROJECT=		tokei
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=	ng0@NetBSD.org
-HOMEPAGE=	https://github.com/XAMPPRocky/tokei/
-COMMENT=	Displays statistics about code
-LICENSE=	apache-2.0 AND mit
+MAINTAINER=		ng0@NetBSD.org
+HOMEPAGE=		https://github.com/XAMPPRocky/tokei/
+COMMENT=		Displays statistics about code
+LICENSE=		apache-2.0 AND mit
 
-#WRKSRC=			${WRKDIR}/tokei-10.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.3
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	argon2rs-0.2.5
