@@ -4128,6 +4128,7 @@ SUBDIR+=	py-ua-parser
 SUBDIR+=	py-ufl
 SUBDIR+=	py-umalqurra
 SUBDIR+=	py-undebt
+SUBDIR+=	py-unidecode
 SUBDIR+=	py-unidiff
 SUBDIR+=	py-unpaddedbase64
 SUBDIR+=	py-upsilon
