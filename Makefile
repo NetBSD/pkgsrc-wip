@@ -3203,6 +3203,7 @@ SUBDIR+=	py-bruce
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-bxa
 SUBDIR+=	py-bytecodeassembler
+SUBDIR+=	py-cachelib
 SUBDIR+=	py-calphad
 SUBDIR+=	py-calverter
 SUBDIR+=	py-cameo
