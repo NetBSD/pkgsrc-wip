@@ -1,12 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		go-sqlite3-${GITHUB_TAG}
-PKGNAME=		go-sqlite3-1.10.0
-PKGREVISION=		1
-GITHUB_PROJECT=		go-sqlite3
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+DISTNAME=		go-sqlite3-1.11.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mattn/}
-GITHUB_TAG=		c7c4067b79cc51e6dfdcef5c702e74b1e0fa7c75
+GITHUB_PROJECT=		go-sqlite3
 
 MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/mattn/go-sqlite3
@@ -14,7 +12,7 @@ COMMENT=		Sqlite3 driver for Go using database/sql
 LICENSE=		mit
 
 GO_SRCPATH=		github.com/mattn/go-sqlite3
-GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
+GO_DIST_BASE=		go-sqlite3-${PKGVERSION_NOREV}
 
 MAKE_ENV+=		CGO_ENABLED=1
 
