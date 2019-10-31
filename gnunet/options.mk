@@ -12,7 +12,7 @@ PKG_SUPPORTED_OPTIONS+=		zbar
 # mdoc should be fixed in 0.11.9, missing files were included
 # post-0.11.8.
 # in 0.11.9 when fixed for pkgsrc, add back idn.
-PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer zbar
+PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer zbar idn
 
 # bluez is still in pkgsrc-wip, and I should test this
 # before claiming bluez from pkgsrc-wip on Linux works.
@@ -59,10 +59,11 @@ CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 .endif
 
 # idn is mandatory but idn or idn2 can be used with a preference
-# for idn2.
+# for idn2. Use different option content once
+# https://bugs.gnunet.org/view.php?id=5948 is fixed.
 .if !empty(PKG_OPTIONS:Midn)
 .include "../../devel/libidn2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-libidn2=${BUILDLINK_PREFIX.libidn2}
+CONFIGURE_ARGS+=	--with-libidn=no
 .else
 .include "../../devel/libidn/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
