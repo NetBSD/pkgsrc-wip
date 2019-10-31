@@ -5,7 +5,7 @@ PKGNAME=	guile-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/gash/
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://git.savannah.nongnu.org/cgit/gash.git
 COMMENT=	POSIX-compatible shell written in Guile Scheme
 LICENSE=	gnu-gpl-v3

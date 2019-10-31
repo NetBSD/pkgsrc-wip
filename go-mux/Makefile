@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gorilla/}
 GITHUB_TAG=		ed099d42384823742bba0bf9a72b53b55c9e2e38
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/gorilla/go-mux
 COMMENT=		URL router and dispatcher for Go
 LICENSE=		modified-bsd # bsd-3

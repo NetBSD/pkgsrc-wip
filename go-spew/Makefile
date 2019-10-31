@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=davecgh/}
 GITHUB_TAG=		8991bc29aa16c548c550c7ff78260e27b9ab7c73
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/davecgh/go-spew
 COMMENT=		Deep pretty printer for Go data structures
 LICENSE=		isc

@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mattn/}
 GITHUB_TAG=		c7c4067b79cc51e6dfdcef5c702e74b1e0fa7c75
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/mattn/go-sqlite3
 COMMENT=		Sqlite3 driver for Go using database/sql
 LICENSE=		mit

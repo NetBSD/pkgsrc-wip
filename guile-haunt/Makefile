@@ -5,7 +5,7 @@ PKGNAME=	guile-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://files.dthompson.us/haunt/
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://files.dthompson.us/haunt/
 COMMENT=	Functional static web site generator
 LICENSE=	gnu-gpl-v3

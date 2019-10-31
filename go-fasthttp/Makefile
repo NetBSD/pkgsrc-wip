@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=valyala/}
 GITHUB_TAG=		46469b532d0621287a2184a890564a59a3d528f3
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/valyala/fasthttp/
 COMMENT=		Fast HTTP package for Go
 LICENSE=		mit

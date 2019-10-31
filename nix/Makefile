@@ -4,7 +4,7 @@ DISTNAME=	nix-2.2.2
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NixOS/}
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://github.com/NixOS/nix/
 COMMENT=	Purely functional package manager
 LICENSE=	gnu-lgpl-v2.1

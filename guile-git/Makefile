@@ -4,7 +4,7 @@ DISTNAME=	guile-git-0.2.0
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/guile-git/guile-git/uploads/160f6a36c1be8d4fc1990a193081a04d/
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://gitlab.com/guile-git/guile-git/
 COMMENT=	Guile bindings of libgit2
 LICENSE=	gnu-lgpl-v3

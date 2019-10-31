@@ -4,7 +4,7 @@ DISTNAME=	guix-0.16.0
 CATEGORIES=	misc
 MASTER_SITES=	https://alpha.gnu.org/gnu/guix/
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/guix/
 COMMENT=	Functional package manager
 LICENSE=	gnu-gpl-v3

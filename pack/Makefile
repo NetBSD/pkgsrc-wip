@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maralla/}
 GITHUB_TAG=	v0.2.3
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://github.com/maralla/pack
 COMMENT=	Vim package manager
 LICENSE=	mit

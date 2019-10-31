@@ -9,7 +9,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=valyala/}
 GITHUB_TAG=		e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/valyala/bytebufferpool/
 COMMENT=		Implementation of a pool of byte buffers with anti-memory-waste protection for Go
 LICENSE=		mit

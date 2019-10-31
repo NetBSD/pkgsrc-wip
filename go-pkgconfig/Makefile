@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=xlab/}
 GITHUB_TAG=		cea12a0fd2454f031cbce19aec911c1e92af25da
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/xlab/pkgconfig/
 COMMENT=		Go clone of pkg-config(1)
 LICENSE=		mit

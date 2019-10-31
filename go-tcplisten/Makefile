@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=valyala/}
 GITHUB_TAG=		ceec8f93295a060cdb565ec25e4ccf17941dbd55
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/valyala/tcplisten/
 COMMENT=		Customizable TCP net.Listener for Go
 LICENSE=		mit

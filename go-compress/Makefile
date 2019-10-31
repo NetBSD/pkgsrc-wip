@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=klauspost/}
 GITHUB_TAG=		b4b6d9e7f099f14b3a4a08f0664986cd4c85ebd6
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/klauspost/compress/
 COMMENT=		Optimized compression packages for Go
 LICENSE=		modified-bsd

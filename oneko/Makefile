@@ -5,7 +5,7 @@ CATEGORIES=		x11 games
 MASTER_SITES=		https://d.n0.is/pub/oneko/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://n0.is/s/oneko/
 COMMENT=		Neko (cat) or other animals follow your pointer
 LICENSE=		2-clause-bsd # and public-domain

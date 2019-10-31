@@ -4,7 +4,7 @@ DISTNAME=	guile-json-3.1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.gnu.org/releases/guile-json/
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://github.com/aconchillo/guile-json
 COMMENT=	JSON module for Guile
 LICENSE=	gnu-gpl-v3

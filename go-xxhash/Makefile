@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cespare/}
 GITHUB_TAG=		3b82fb7d186719faeedd0c2864f868c74fbf79a1
 
-MAINTAINER=		ng0@n0.is
+MAINTAINER=		ng0@NetBSD.org
 HOMEPAGE=		https://github.com/cespare/xxhash/
 COMMENT=		Go implementation of the 64bit xxhash algorithm XXh64
 LICENSE=		mit

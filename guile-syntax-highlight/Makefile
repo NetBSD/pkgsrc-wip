@@ -4,7 +4,7 @@ DISTNAME=	guile-syntax-highlight-0.1
 CATEGORIES=	textproc
 MASTER_SITES=	https://files.dthompson.us/guile-syntax-highlight/
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://dthompson.us/projects/guile-syntax-highlight.html
 COMMENT=	General-purpose syntax highlighting library for GNU Guile
 LICENSE=	gnu-lgpl-v3

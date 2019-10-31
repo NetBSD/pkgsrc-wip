@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://notabug.org/cwebber/guile-gcrypt/archive/
 PKGREVISION=	1
 
-MAINTAINER=	ng0@n0.is
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://notabug.org/cwebber/guile-gcrypt/archive/
 COMMENT=	Guile bindings for libgcrypt
 LICENSE=	gnu-gpl-v3
