@@ -37,6 +37,9 @@ ${PYSITELIB}/octoprint/cli/plugins.pyo
 ${PYSITELIB}/octoprint/cli/server.py
 ${PYSITELIB}/octoprint/cli/server.pyc
 ${PYSITELIB}/octoprint/cli/server.pyo
+${PYSITELIB}/octoprint/cli/user.py
+${PYSITELIB}/octoprint/cli/user.pyc
+${PYSITELIB}/octoprint/cli/user.pyo
 ${PYSITELIB}/octoprint/daemon.py
 ${PYSITELIB}/octoprint/daemon.pyc
 ${PYSITELIB}/octoprint/daemon.pyo
@@ -84,6 +87,7 @@ ${PYSITELIB}/octoprint/plugins/action_command_prompt/__init__.pyc
 ${PYSITELIB}/octoprint/plugins/action_command_prompt/__init__.pyo
 ${PYSITELIB}/octoprint/plugins/action_command_prompt/static/clientjs/action_command_prompt.js
 ${PYSITELIB}/octoprint/plugins/action_command_prompt/static/js/action_command_prompt.js
+${PYSITELIB}/octoprint/plugins/action_command_prompt/templates/action_command_prompt_navbar.jinja2
 ${PYSITELIB}/octoprint/plugins/action_command_prompt/templates/action_command_prompt_settings.jinja2
 ${PYSITELIB}/octoprint/plugins/announcements/__init__.py
 ${PYSITELIB}/octoprint/plugins/announcements/__init__.pyc
