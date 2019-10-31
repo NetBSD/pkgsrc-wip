@@ -13,5 +13,8 @@ gopkg/src/github.com/cespare/xxhash/xxhash_safe.go
 gopkg/src/github.com/cespare/xxhash/xxhash_test.go
 gopkg/src/github.com/cespare/xxhash/xxhash_unsafe.go
 gopkg/src/github.com/cespare/xxhash/xxhash_unsafe_test.go
+gopkg/src/github.com/cespare/xxhash/xxhashbench/go.mod
+gopkg/src/github.com/cespare/xxhash/xxhashbench/go.sum
+gopkg/src/github.com/cespare/xxhash/xxhashbench/xxhashbench_test.go
 gopkg/src/github.com/cespare/xxhash/xxhsum/.gitignore
 gopkg/src/github.com/cespare/xxhash/xxhsum/xxhsum.go
