@@ -1,3 +1,9 @@
 * port to NetBSD?
   There is a high probability that in addition to packaging, supported platforms
   must be tested and non-supported (like NetBSD host) ported to.
+
+* building TODO:
+  LD     src/libutil/libnixutil.so
+/usr/pkg/lib: file not recognized: file format not recognized
+gmake: *** [mk/lib.mk:104: src/libutil/libnixutil.so] Error 1
+gmake: *** Waiting for unfinished jobs....
