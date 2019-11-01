@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lld/ELF/Arch/AArch64.cpp.orig	2019-10-23 20:24:31.973047369 +0000
+--- lld/ELF/Arch/AArch64.cpp.orig	2019-10-23 20:24:31.000000000 +0000
 +++ lld/ELF/Arch/AArch64.cpp
 @@ -67,9 +67,12 @@ AArch64::AArch64() {
    pltHeaderSize = 32;

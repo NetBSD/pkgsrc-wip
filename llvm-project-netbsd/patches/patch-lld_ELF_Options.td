@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lld/ELF/Options.td.orig	2019-10-23 20:24:31.979154507 +0000
+--- lld/ELF/Options.td.orig	2019-11-01 18:04:25.971104878 +0000
 +++ lld/ELF/Options.td
 @@ -168,6 +168,9 @@ defm filter: Eq<"filter", "Set DT_FILTER
  
@@ -12,7 +12,7 @@ $NetBSD$
  def fix_cortex_a53_843419: F<"fix-cortex-a53-843419">,
    HelpText<"Apply fixes for AArch64 Cortex-A53 erratum 843419">;
  
-@@ -346,6 +349,8 @@ defm symbol_ordering_file:
+@@ -350,6 +353,8 @@ defm symbol_ordering_file:
  
  defm sysroot: Eq<"sysroot", "Set the system root">;
  

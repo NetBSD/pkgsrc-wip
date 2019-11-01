@@ -1,6 +1,6 @@
 $NetBSD$
 
---- clang/lib/Driver/ToolChains/NetBSD.cpp.orig	2019-10-23 20:24:27.467144768 +0000
+--- clang/lib/Driver/ToolChains/NetBSD.cpp.orig	2019-10-23 20:24:27.000000000 +0000
 +++ clang/lib/Driver/ToolChains/NetBSD.cpp
 @@ -266,7 +266,7 @@ void netbsd::Linker::ConstructJob(Compil
    unsigned Major, Minor, Micro;

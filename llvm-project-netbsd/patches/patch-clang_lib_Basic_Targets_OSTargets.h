@@ -1,6 +1,6 @@
 $NetBSD$
 
---- clang/lib/Basic/Targets/OSTargets.h.orig	2019-10-23 20:24:27.393021814 +0000
+--- clang/lib/Basic/Targets/OSTargets.h.orig	2019-10-23 20:24:27.000000000 +0000
 +++ clang/lib/Basic/Targets/OSTargets.h
 @@ -436,12 +436,23 @@ protected:
      Builder.defineMacro("__ELF__");
