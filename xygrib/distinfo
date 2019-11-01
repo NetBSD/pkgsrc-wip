@@ -12,4 +12,4 @@ SHA1 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = eb82eb192bb3d6d97ebb32a21fdf7
 RMD160 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 1c47e3af9884e1a927b1e717f938178f12a17fa8
 SHA512 (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 6bb9362c87fec7633b0ad1fd3b8717408c0fffa36631db1d1a680928c724e8e49758c292cac164ad7a9773fd51a432d25628eecbaa1261f5f3c5ab6fc499fd01
 Size (XyGrib-1.1.1/XyGrib___cities_files.tar.gz) = 2487518 bytes
-SHA1 (patch-CMakeLists.txt) = f6c5740e9724b0c1f5ed933b3d2b9b303472fa25
+SHA1 (patch-CMakeLists.txt) = 011146a46621b1948a6d1bfae1605d769beff4df

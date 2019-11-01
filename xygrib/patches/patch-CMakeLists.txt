@@ -1,10 +1,12 @@
 $NetBSD$
+
 * sanitze the names and dirs to search for libs and headers files
 * use PATH_SUFFIX fix to find openjpeg
 * install bins and data into the right directory
 * don't install cmake files in the translation directory
 * install icon and desktop files
 * install hi-res maps
+
 --- CMakeLists.txt.orig	2019-07-05 09:01:01.000000000 +0000
 +++ CMakeLists.txt
 @@ -54,71 +54,23 @@ find_package(Qt5Xml CONFIG REQUIRED)

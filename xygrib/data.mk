@@ -1,21 +1,25 @@
-#$NetBSD$
+# $NetBSD$
 #
-XYGRIBDV=1.1.1
-XYGRIBDS=https://github.com/openGribs/XyGrib/releases/download/v${XYGRIBDV}/
-DISTFILES=${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=XyGrib___High_Resolution_Maps.tar.gz
-SITES.XyGrib___High_Resolution_Maps.tar.gz=${XYGRIBDS}
-DISTFILES+=XyGrib___cities_files.tar.gz
-SITES.XyGrib___cities_files.tar.gz=${XYGRIBDS}
-DIST_SUBDIR=XyGrib-${XYGRIBDV}
+XYGRIBDV=	1.1.1
+XYGRIBDS=	https://github.com/openGribs/XyGrib/releases/download/v${XYGRIBDV}/
 
-INSTALL_CITIES_FILES=  cities_0-300.txt.gz
-INSTALL_CITIES_FILES+= cities_300-1k.txt.gz
-INSTALL_CITIES_FILES+= cities_1k-3k.txt.gz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	XyGrib___High_Resolution_Maps.tar.gz
+DISTFILES+=	XyGrib___cities_files.tar.gz
 
+SITES.XyGrib___High_Resolution_Maps.tar.gz=	${XYGRIBDS}
+SITES.XyGrib___cities_files.tar.gz=		${XYGRIBDS}
+
+DIST_SUBDIR=	XyGrib-${XYGRIBDV}
+
+INSTALL_CITIES_FILES=	cities_0-300.txt.gz
+INSTALL_CITIES_FILES+=	cities_300-1k.txt.gz
+INSTALL_CITIES_FILES+=	cities_1k-3k.txt.gz
+
+.PHONY: install-cities
 install-cities:
 .for f in ${INSTALL_CITIES_FILES}
 	${INSTALL_DATA} ${WRKDIR}/${f} \
 		${DESTDIR}${PREFIX}/share/openGribs/XyGrib/data/gis/${f}
-.endfor	
+.endfor
 post-install: install-cities
