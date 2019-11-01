@@ -1,5 +1,6 @@
 @comment $NetBSD$
 ${OCAML_SITELIB}/gen/META
+${OCAML_SITELIB}/gen/dune-package
 ${OCAML_SITELIB}/gen/gen.a
 ${OCAML_SITELIB}/gen/gen.cma
 ${OCAML_SITELIB}/gen/gen.cmi
@@ -8,7 +9,6 @@ ${OCAML_SITELIB}/gen/gen.cmti
 ${OCAML_SITELIB}/gen/gen.cmx
 ${OCAML_SITELIB}/gen/gen.cmxa
 ${OCAML_SITELIB}/gen/gen.cmxs
-${OCAML_SITELIB}/gen/gen.dune
 ${OCAML_SITELIB}/gen/gen.ml
 ${OCAML_SITELIB}/gen/gen.mli
 ${OCAML_SITELIB}/gen/genClone.cmi

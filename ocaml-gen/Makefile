@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/c-cube/gen/
 COMMENT=	Simple, efficient iterators for OCaml
 LICENSE=	2-clause-bsd
 
-OCAML_USE_JBUILDER=	yes
+OCAML_USE_DUNE=		yes
 TEST_TARGET=		test
 
 .include "../../mk/ocaml.mk"
