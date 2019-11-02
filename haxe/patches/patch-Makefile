@@ -1,0 +1,16 @@
+$NetBSD$
+
+Support variable PREFIX (without modification)
+
+--- Makefile.orig	2019-10-25 23:09:16.000000000 +0000
++++ Makefile
+@@ -10,7 +10,8 @@
+ #
+ .SUFFIXES : .ml .mli .cmo .cmi .cmx .mly
+ 
+-INSTALL_DIR=/usr/local
++PREFIX?=/usr/local
++INSTALL_DIR=$(PREFIX)
+ INSTALL_BIN_DIR=$(INSTALL_DIR)/bin
+ INSTALL_LIB_DIR=$(INSTALL_DIR)/lib/haxe
+ INSTALL_STD_DIR=$(INSTALL_DIR)/share/haxe/std

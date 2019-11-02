@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.8 2019/05/15 09:01:03 jaapb Exp $
+
+SHA1 (haxe/ae0d8a85666199b52aed8987c9feaf297c3f66d4.tar.gz) = 1fe37e7d12835b8a79202e7e3c8152f040a2c007
+RMD160 (haxe/ae0d8a85666199b52aed8987c9feaf297c3f66d4.tar.gz) = 32e25fb3968a1f7c74d15a76bf7919377f2c0ad1
+SHA512 (haxe/ae0d8a85666199b52aed8987c9feaf297c3f66d4.tar.gz) = 2915b3d4933086ee323cddd666d6102e7cab97c05971aa5f13652f640b12a662ab0c735e7a8831ebcf22df1db2bebf5f32061a87bafca6e2e0e128d141067d07
+Size (haxe/ae0d8a85666199b52aed8987c9feaf297c3f66d4.tar.gz) = 44432 bytes
+SHA1 (haxe/haxe-4.0.0.tar.gz) = 6003a7659a6930902f6e47e5672cfe0befcc219e
+RMD160 (haxe/haxe-4.0.0.tar.gz) = 95e7ffd7148d894ad6056f5a3c32a29dd801f009
+SHA512 (haxe/haxe-4.0.0.tar.gz) = c7561a0b297c46224b01a8510cc17f0ed5204f2f308132cbc1295336f5455eb6c29618644550186cfb05c304bd2f462c116012f7034e28b1d3446a55381a803c
+Size (haxe/haxe-4.0.0.tar.gz) = 8420309 bytes
+SHA1 (haxe/haxelib-4.0.0.tar.gz) = bb94e14b59169f56419f019eebabc6376149a3b1
+RMD160 (haxe/haxelib-4.0.0.tar.gz) = 8068d862852f9dcb7ee0ab9a22fb2870bc812e37
+SHA512 (haxe/haxelib-4.0.0.tar.gz) = 359b70e0a3f6569eea8b4adacbd392a35264430c551de0ff30dd957c69b30e95e94bdfedcbf071f1e8a02e61b5197c034a7923442b19d70b54a71c05c893a330
+Size (haxe/haxelib-4.0.0.tar.gz) = 356348 bytes
+SHA1 (patch-Makefile) = 05468ec9c8e9b56622a9e585aaa930f5d46dc34d
+SHA1 (patch-libs_extc_process__stubs.c) = a2928bb946c34e0151d5faa8f8f93318d0ac32b4
+SHA1 (patch-libs_pcre_Makefile) = d5fac6961a555ebb2ce7492b2d3bb3392339884f

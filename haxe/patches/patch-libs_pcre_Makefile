@@ -1,0 +1,14 @@
+$NetBSD$
+
+Look for pcre in PREFIX/include.
+Done this way because ocamlc wants a space between -I and the argument,
+and the libpcre pkg-config file doesn't have the space.
+
+--- libs/pcre/Makefile.orig	2019-10-25 23:09:16.000000000 +0000
++++ libs/pcre/Makefile
+@@ -1,4 +1,4 @@
+-ALL_CFLAGS = $(CFLAGS) -I pcre
++ALL_CFLAGS = $(CFLAGS) -I @@PREFIX@@/include
+ LIBS =
+ OCAMLOPT=ocamlopt
+ OCAMLC=ocamlc
