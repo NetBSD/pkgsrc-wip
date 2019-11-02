@@ -1,20 +1,22 @@
 $NetBSD$
 
---- CMakeLists.txt.orig	2017-02-08 11:29:16.000000000 +0000
+--- CMakeLists.txt.orig	2018-10-15 19:41:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -202,11 +202,14 @@ if(SFML_OS_MACOSX)
-     set(XCODE_TEMPLATES_ARCH "\$(NATIVE_ARCH_ACTUAL)")
+@@ -140,7 +140,7 @@ endif()
+ # For miscellaneous files
+ if(SFML_OS_WINDOWS OR SFML_OS_IOS)
+     set(DEFAULT_INSTALL_MISC_DIR .)
+-elseif(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_OPENBSD)
++elseif(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_NETBSD OR SFML_OS_OPENBSD)
+     set(DEFAULT_INSTALL_MISC_DIR share/SFML)
+ elseif(SFML_OS_MACOSX)
+     set(DEFAULT_INSTALL_MISC_DIR /usr/local/share/SFML)
+@@ -277,7 +277,7 @@ endif()
+ # on Linux and BSD-like OS, install pkg-config files by default
+ set(SFML_INSTALL_PKGCONFIG_DEFAULT FALSE)
+ 
+-if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_OPENBSD)
++if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_NETBSD OR SFML_OS_OPENBSD)
+     set(SFML_INSTALL_PKGCONFIG_DEFAULT TRUE)
  endif()
  
--if(SFML_OS_LINUX OR SFML_OS_FREEBSD)
-+if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_NETBSD)
-     set(PKGCONFIG_DIR lib${LIB_SUFFIX}/pkgconfig)
-     if(SFML_OS_FREEBSD)
-         set(PKGCONFIG_DIR libdata/pkgconfig)
-     endif()
-+    if(SFML_OS_NETSD)
-+        set(PKGCONFIG_DIR lib/pkgconfig)
-+    endif()
-     if(BUILD_SHARED_LIBS)
-         sfml_set_option(SFML_INSTALL_PKGCONFIG_FILES FALSE BOOL "TRUE to automatically install pkg-config files so other projects can find SFML")
-         if(SFML_INSTALL_PKGCONFIG_FILES)

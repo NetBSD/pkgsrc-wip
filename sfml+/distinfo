@@ -1,20 +1,22 @@
 $NetBSD: distinfo,v 1.1 2012/10/03 15:05:59 othyro Exp $
 
-SHA1 (SFML-2.4.2-sources.zip) = 9cb3cdf2f679a4979f71d36041c950a82a31178a
-RMD160 (SFML-2.4.2-sources.zip) = 02c872a6937e59a710d3b1be97d7d2731b53f143
-SHA512 (SFML-2.4.2-sources.zip) = 14f2b9f244bbff681d1992581f20012f3073456e4baed0fb2bf2cf82538e9c5ddd8ce01b0cfb3874af47091ec19654aa23c426df04fe1ffcfa209623dc362f85
-Size (SFML-2.4.2-sources.zip) = 24961872 bytes
-SHA1 (patch-CMakeLists.txt) = 562f20c12b99c394f8cb0f28d04fdf1f5d129c91
-SHA1 (patch-cmake_Config.cmake) = 81e539daa3b13c2e93c31eec8de1f6177a2d6d43
-SHA1 (patch-include_SFML_Config.hpp) = 2ef6d01309fa039804dbaa73258e6eee4cf6a5f7
-SHA1 (patch-include_SFML_OpenGL.hpp) = 1320361b147b0baf5e882772ea5bcb7643680285
-SHA1 (patch-include_SFML_Window_WindowHandle.hpp) = feb03e491f89c2b48e32956821d005f3b32d1cda
-SHA1 (patch-src_SFML_System_CMakeLists.txt) = 2cfc1f05b414105549769c7658699972c9e88f86
-SHA1 (patch-src_SFML_Window_CMakeLists.txt) = ebc3841486a587b006e03e2edc7c2a5a26cc3499
+SHA1 (SFML-2.5.1-sources.zip) = a2d9d8ceed52bcff27d11f21e814b51ba19cd116
+RMD160 (SFML-2.5.1-sources.zip) = 3b137887696a223f0c3576b16bae9f0e3535f16f
+SHA512 (SFML-2.5.1-sources.zip) = 75b4f3076d817388b78aa060fba6a4c67b2cde3393ec6d9dc66052d9770636572e9bfcd6b63fcb5dc7888e00cda2161cd84b55e07d463159da52ac1142d8d1af
+Size (SFML-2.5.1-sources.zip) = 23283095 bytes
+SHA1 (patch-CMakeLists.txt) = 445189ad0ee05c3da0883877b86c1789c5571d2a
+SHA1 (patch-cmake_Config.cmake) = 295f6112d21c3843d97ef6f603535259b26aae34
+SHA1 (patch-include_SFML_Config.hpp) = c795545ce767f3641902368fb5e94715fd75f1a6
+SHA1 (patch-include_SFML_OpenGL.hpp) = 520341b68b61a1afcc5cb8ad9023947a3da883c3
+SHA1 (patch-include_SFML_Window_WindowHandle.hpp) = 3bb97d698b47d7df4c7333334c9708dcbb0697cb
+SHA1 (patch-src_SFML_System_CMakeLists.txt) = 50a7a109d755b074508ae9628b0c971ceb384b20
+SHA1 (patch-src_SFML_Window_CMakeLists.txt) = 4c468d54415df4d6925d98d6349d2da862aab29a
+SHA1 (patch-src_SFML_Window_ClipboardImpl.hpp) = b7265c1f49a810b04635520d8e70bd58e4aecbe9
+SHA1 (patch-src_SFML_Window_CursorImpl.hpp) = 0d5e55a80e1d01a6ec19b6a22d23f7e1a2d8deab
 SHA1 (patch-src_SFML_Window_FreeBSD_JoystickImpl.cpp) = 46e882a29624d86043ab15c239e20e70a97c116b
 SHA1 (patch-src_SFML_Window_FreeBSD_JoystickImpl.hpp) = a4eb1a07b937d0ad7677cff53b946a8d5a6546ab
-SHA1 (patch-src_SFML_Window_GlContext.cpp) = 1419707c8b71e1bfdfd29f049b6aac418713ccd6
-SHA1 (patch-src_SFML_Window_InputImpl.hpp) = 3cee9ad1eb3efe282f1044dfd1815a1a17323a1d
+SHA1 (patch-src_SFML_Window_GlContext.cpp) = fe812c8e1c1757f4e9e266548921ae2979046a63
+SHA1 (patch-src_SFML_Window_InputImpl.hpp) = 98e0f1b3712ba27d754bf32663718a6da71afbd6
 SHA1 (patch-src_SFML_Window_JoystickImpl.hpp) = 1940c192f030f08c99d7982933f0d44cd5e4cc49
-SHA1 (patch-src_SFML_Window_SensorImpl.hpp) = 0a8f349d1b57ff2fd980ee04ac66341c63eddf41
-SHA1 (patch-src_SFML_Window_WindowImpl.cpp) = c60bb2ca5b6444977be41ae04416442f4fdf7f46
+SHA1 (patch-src_SFML_Window_SensorImpl.hpp) = 4ed600254af277c7c45bb1b0ed39c0012b5e3d76
+SHA1 (patch-src_SFML_Window_WindowImpl.cpp) = fa6966a56a21db3c17f4ea0cc2471d1da4878d1c

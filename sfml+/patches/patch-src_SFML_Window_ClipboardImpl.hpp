@@ -1,13 +1,13 @@
 $NetBSD$
 
---- src/SFML/Window/InputImpl.hpp.orig	2018-10-15 19:41:39.000000000 +0000
-+++ src/SFML/Window/InputImpl.hpp
+--- src/SFML/Window/ClipboardImpl.hpp.orig	2018-10-15 19:41:39.000000000 +0000
++++ src/SFML/Window/ClipboardImpl.hpp
 @@ -32,7 +32,7 @@
  
  #if defined(SFML_SYSTEM_WINDOWS)
-     #include <SFML/Window/Win32/InputImpl.hpp>
+     #include <SFML/Window/Win32/ClipboardImpl.hpp>
 -#elif defined(SFML_SYSTEM_LINUX) || defined(SFML_SYSTEM_FREEBSD) || defined(SFML_SYSTEM_OPENBSD)
 +#elif defined(SFML_SYSTEM_LINUX) || defined(SFML_SYSTEM_FREEBSD) || defined(SFML_SYSTEM_NETBSD) || defined(SFML_SYSTEM_OPENBSD)
-     #include <SFML/Window/Unix/InputImpl.hpp>
+     #include <SFML/Window/Unix/ClipboardImpl.hpp>
  #elif defined(SFML_SYSTEM_MACOS)
-     #include <SFML/Window/OSX/InputImpl.hpp>
+     #include <SFML/Window/OSX/ClipboardImpl.hpp>
