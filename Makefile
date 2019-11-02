@@ -5078,7 +5078,6 @@ SUBDIR+=	xoreos
 SUBDIR+=	xoreos-tools
 SUBDIR+=	xorgxrdp
 SUBDIR+=	xosview
-SUBDIR+=	xournalpp
 SUBDIR+=	xournalpp-git
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
