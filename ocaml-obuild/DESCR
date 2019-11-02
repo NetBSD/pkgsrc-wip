@@ -1,0 +1,10 @@
+A parallel, incremental and declarative build system for OCaml.
+
+Features
+
+    Incremental & parallel build system. only rebuilding what's necessary.
+    Descriptive configuration file.
+    Easy for users: no rules to mess about, just describe what you want.
+    No building dependency apart from OCaml's stdlib: easy to build
+    No tool or binary dependencies apart from ocaml compilers
+    OCamlfind-like support integrated for faster compilation
