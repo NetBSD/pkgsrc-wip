@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2019/05/15 09:01:03 jaapb Exp $
+
+SHA1 (sha-1.12.tar.gz) = d8c6e9bd83fecb26f46377761791bd7b20527eb3
+RMD160 (sha-1.12.tar.gz) = d8405f2398d2410765448980040e1e6175af1727
+SHA512 (sha-1.12.tar.gz) = e6cdbc66202281a72ccc3592d6efba0448fe28dba7a23f8079d3a3cee12c03d01338191da88e4e4834f5ee19321ffed1c950e7a5babc73479221d8da3fe372d3
+Size (sha-1.12.tar.gz) = 13575 bytes
