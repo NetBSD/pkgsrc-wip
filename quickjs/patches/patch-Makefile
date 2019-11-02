@@ -2,7 +2,7 @@ $NetBSD$
 
 Adapt for NetBSD & pkgsrc.
 
---- Makefile.orig	2019-07-09 17:49:47.000000000 +0000
+--- Makefile.orig	2019-10-27 10:55:35.000000000 +0000
 +++ Makefile
 @@ -25,10 +25,17 @@
  ifeq ($(shell uname -s),Darwin)
@@ -22,7 +22,7 @@ Adapt for NetBSD & pkgsrc.
  # consider warnings as errors (for development)
  #CONFIG_WERROR=y
  # force 32 bit build for some utilities
-@@ -162,8 +169,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
+@@ -165,8 +172,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
  
  LIBS=-lm
  ifndef CONFIG_WIN32
@@ -32,4 +32,4 @@ Adapt for NetBSD & pkgsrc.
 +endif
  
  $(OBJDIR):
- 	mkdir -p $(OBJDIR)
+ 	mkdir -p $(OBJDIR) $(OBJDIR)/examples $(OBJDIR)/tests
