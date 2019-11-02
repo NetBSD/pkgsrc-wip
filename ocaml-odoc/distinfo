@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2019/05/15 09:01:03 jaapb Exp $
+
+SHA1 (odoc-1.4.2.tar.gz) = 1cf8211e32e5aa2387601d532a98721cc4d46376
+RMD160 (odoc-1.4.2.tar.gz) = d6f062a4128544de06d074a69ff5f95a85da1831
+SHA512 (odoc-1.4.2.tar.gz) = 0ad001cb03dbe12fa902604c98c62f755b689f7604241237749f1c02406978f1236411e1c73adef394c82ced775d302dfe9bbd6b5a75b20c9c7995972c72b7c4
+Size (odoc-1.4.2.tar.gz) = 333361 bytes
