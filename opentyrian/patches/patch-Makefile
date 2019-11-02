@@ -16,3 +16,12 @@ Work around "uname -o" which is not available on NetBSD.
      PLATFORM := WIN32
  else
      PLATFORM := UNIX
+@@ -26,7 +30,7 @@ ifneq ($(MAKECMDGOALS), release)
+ else
+     EXTRA_CFLAGS += -g0 -O2 -DNDEBUG
+ endif
+-EXTRA_CFLAGS += -MMD -pedantic -Wall -Wextra -Wno-missing-field-initializers
++EXTRA_CFLAGS += -MMD -pedantic -Wall -Wextra -Wno-missing-field-initializers -Wformat-truncation=0
+ ifeq ($(WITH_NETWORK), true)
+     EXTRA_CFLAGS += -DWITH_NETWORK
+ endif

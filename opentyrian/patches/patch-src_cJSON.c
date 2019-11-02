@@ -13,3 +13,13 @@ Fix isspace() usage on NetBSD (compiled with -Werror).
  			++str;
  	return str;
  }
+@@ -316,7 +316,9 @@ static const char *parse_string(cJSON *i
+ 					
+ 					switch (len) {
+ 						case 3: *--ptr2 =((uc | 0x80) & 0xBF); uc >>= 6;
++							/* FALLTHROUGH */
+ 						case 2: *--ptr2 =((uc | 0x80) & 0xBF); uc >>= 6;
++							/* FALLTHROUGH */
+ 						case 1: *--ptr2 =(uc | firstByteMark[len]);
+ 					}
+ 					ptr2+=len;ptr+=4;
