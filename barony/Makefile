@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DPNG_NAMES=png16 \
 		-DEDITOR_EXE_NAME=barony-editor \
