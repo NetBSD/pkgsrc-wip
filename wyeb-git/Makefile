@@ -18,7 +18,7 @@ BUILD_MAKE_FLAGS+=	DISTROURI=https://www.pkgsrc.org/
 INSTALLATION_DIRS+=	bin lib/wyebrowser share/applications share/pixmaps
 
 MAKE_FILE=	makefile
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 # only used in main configuration file, should these dependencies be optional?
 DEPENDS+=	p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
