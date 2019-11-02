@@ -1,0 +1,15 @@
+$NetBSD$
+
+DESTDIR support
+
+--- Makefile.orig	2018-07-23 07:03:49.000000000 +0000
++++ Makefile
+@@ -12,7 +12,7 @@ doc:
+ 	ocamldoc -d doc/ -html ptmap.mli
+ 
+ install: all
+-	obuild install
++	obuild install --destdir=${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}
+ 
+ uninstall:
+ 	ocamlfind -remove ptmap

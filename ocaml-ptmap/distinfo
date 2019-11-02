@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.8 2019/05/15 09:01:03 jaapb Exp $
+
+SHA1 (ptmap-2.0.4.tar.gz) = bf5a527ef8ccb2dcd8ad3a833bb6e56371221e10
+RMD160 (ptmap-2.0.4.tar.gz) = f57e5160353d260b0c8989b14d834447d6028ddb
+SHA512 (ptmap-2.0.4.tar.gz) = 3f11664f926244a212e2d782d338982826e608463eec22e91cd77350836cbab9d4aed7542fa9c5f3c1df572552a3797a149618ad370d1b47b4e03cf497100356
+Size (ptmap-2.0.4.tar.gz) = 14410 bytes
+SHA1 (patch-Makefile) = c609bac156f6c17632fbb2554bec84209568ded4

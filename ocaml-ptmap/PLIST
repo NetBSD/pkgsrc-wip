@@ -1,0 +1,10 @@
+@comment $NetBSD$
+${OCAML_SITELIB}/ptmap/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ptmap/ptmap.a
+${OCAML_SITELIB}/ptmap/ptmap.cma
+${OCAML_SITELIB}/ptmap/ptmap.cmi
+${OCAML_SITELIB}/ptmap/ptmap.cmt
+${OCAML_SITELIB}/ptmap/ptmap.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ptmap/ptmap.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ptmap/ptmap.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ptmap/ptmap.cmxs
