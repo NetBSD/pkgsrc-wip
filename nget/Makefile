@@ -1,13 +1,13 @@
 # $NetBSD$
 
 PKGNAME=		nget-${VER}
-VER=			0.30
+VER=			0.31
 CATEGORIES=		news
 MASTER_SITES=		https://gitlab.com/Rhialto/nget/-/archive/${GIT_TAG}/
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		${GIT_TAG}-${PKGNAME}
 GIT_TAG=		nget-${VER:S/./_/}
-GIT_REV=		9f094102c7ff90673f658aa7e3357311ae81a78a
+GIT_REV=		c2e85689c954dc52809dcf88b9373cc296d2dc3d
 WRKSRC=			${WRKDIR}/nget-${GIT_TAG}-${GIT_REV}
 
 MAINTAINER=		rhialto@NetBSD.org
