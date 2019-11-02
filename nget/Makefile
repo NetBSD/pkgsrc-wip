@@ -1,11 +1,14 @@
 # $NetBSD$
 
-DISTNAME=		nget-0.30
+PKGNAME=		nget-${VER}
+VER=			0.30
 CATEGORIES=		news
-MASTER_SITES=		https://gitlab.com/Rhialto/nget/
-GIT_REPO=		https://gitlab.com/Rhialto/nget.git
-GIT_TAG=		nget-0_30
-EXTRACT_SUFX=		# none
+MASTER_SITES=		https://gitlab.com/Rhialto/nget/-/archive/${GIT_TAG}/
+EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		${GIT_TAG}-${PKGNAME}
+GIT_TAG=		nget-${VER:S/./_/}
+GIT_REV=		9f094102c7ff90673f658aa7e3357311ae81a78a
+WRKSRC=			${WRKDIR}/nget-${GIT_TAG}-${GIT_REV}
 
 MAINTAINER=		rhialto@NetBSD.org
 HOMEPAGE=		https://gitlab.com/Rhialto/nget/
@@ -40,5 +43,4 @@ post-install:
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
