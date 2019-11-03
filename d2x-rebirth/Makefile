@@ -1,35 +1,41 @@
-# $NetBSD: Makefile,v 1.1 2015/08/19 19:11:02 yhardy Exp $
+# $NetBSD: Makefile,v 1.1 2015/08/19 19:06:08 yhardy Exp $
 
-DISTNAME=	d2x-rebirth_v0.58.1-src
-PKGNAME=	d2x-rebirth-0.58.1
+DISTNAME=	dxx-rebirth_20191018-src
+PKGNAME=	d2x-rebirth-20191018
 CATEGORIES=	games
-MASTER_SITES=	http://www.dxx-rebirth.com/download/dxx/
+MASTER_SITES=	https://www.dxx-rebirth.com/download/dxx/rebirth/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dxx-rebirth.com/
+HOMEPAGE=	https://www.dxx-rebirth.com/
 COMMENT=	Source port of the Descent 2 engine
-#LICENSE=	# TODO: (see mk/license.mk)
+#LICENSE=	parallax AND (gnu-gpl3-v3 WITH exception)
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-scons-[0-9]*:../../devel/scons
 SCONS=			${PREFIX}/bin/scons
-SCONS_ARGS+=		-C ${WRKSRC} prefix=${PREFIX}
-SCONS_ARGS+=		sharepath=${PREFIX}/share/d1x-rebirth
+SCONS_ARGS+=		-C ${WRKSRC}
+SCONS_ARGS+=		DESTDIR=${DESTDIR}
+SCONS_ARGS+=		d2x=
+SCONS_ARGS+=		prefix=${PREFIX}
+SCONS_ARGS+=		sdlmixer=1
+SCONS_ARGS+=		sharepath=${PREFIX}/share/d2x-rebirth
 
-INSTALLATION_DIRS=	bin
+PYTHON_VERSIONS_INCOMPATIBLE=	36 37 38
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/d2x-rebirth ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS} install
 
 .include "options.mk"
-.include "../../lang/python/pyversion.mk"
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
