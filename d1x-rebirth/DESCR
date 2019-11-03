@@ -1,10 +1,11 @@
-DXX-Rebirth is a Source Port of the Descent and Descent 2 Engines
-for Windows, Mac OS, Linux (most *NIX systems), offering OpenGL
-graphics and effects, advanced Multiplayer, many improvements and
-new features.
+DXX-Rebirth is based on the late D1X and D2X source ports (which,
+in turn, were based on the original Descent source and LDescent).
+The Rebirth Team has spent a lot of time working to improve the
+source code by fixing old bugs and adding some improvements, while
+always staying true to our philosophy: Keep it Descent!
 
-Descent and Descent 2 are pretty old games so you usually run into
-problems running it on more recent Hardware and Operating Systems.
-DXX-Rebirth will also take care about this for you.
+It is the goal of DXX-Rebirth to keep Descent 1 & 2 alive and well,
+updating them for modern PCs while also keeping them the same games
+you remember playing back in 1995!
 
 This is the Descent source port. The data files are not included.

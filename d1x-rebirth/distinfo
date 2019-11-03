@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:06:08 yhardy Exp $
 
-SHA1 (d1x-rebirth_v0.58.1-src.tar.gz) = edd9c42f113f5de330ab7f296b0328b2504794f8
-RMD160 (d1x-rebirth_v0.58.1-src.tar.gz) = 972b268c1dbbfc032ef73e7391b804bb26d7dfc4
-Size (d1x-rebirth_v0.58.1-src.tar.gz) = 1247599 bytes
+SHA1 (dxx-rebirth_20191018-src.tar.xz) = 32e889e5c75750497817e2427b1f5ecce1579351
+RMD160 (dxx-rebirth_20191018-src.tar.xz) = 28e10d43263ad45d96613e6414ed6af6ada893bc
+SHA512 (dxx-rebirth_20191018-src.tar.xz) = cfdea22b15112ef5013504cbb2a5df8e936c180ab41cbb48e0fe7fd990870dff0ac255091a80e46b33a67a7d4cf1136ab2cc351fa0e74dd905db3280bf784fc2
+Size (dxx-rebirth_20191018-src.tar.xz) = 1315824 bytes
+SHA1 (patch-SConstruct) = 046b2a5627a601d8654b538be410ae2946f194c6
