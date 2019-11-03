@@ -13,3 +13,12 @@ $NetBSD$
  
  dnl Check for programs
  AC_PROG_CC
+@@ -348,7 +348,7 @@ if test "$postgresql" != "no"; then
+         LDFLAGS="${LDFLAGS} -L$postgresql/lib"
+         CPPFLAGS="${CPPFLAGS} -I$postgresql/include"
+     fi
+-    AC_CHECK_HEADER(postgresql/libpq-fe.h,
++    AC_CHECK_HEADER(libpq-fe.h,
+                     AC_CHECK_LIB(pq, PQconnectdb,
+                                  [postgresql=yes LIBS="${LIBS} -lpq"], postgresql=no),
+                                  postgresql=no)

@@ -38,6 +38,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		aclocal autoconf automake gettext gmake pkg-config
 USE_LANGUAGES=		c c++11
 
+.include "options.mk"
+
 BUILD_DEFS+=		JABBERD_PIDDIR JABBERD_SPOOLDIR
 
 PKG_GROUPS=		${JABBERD_GROUP}
