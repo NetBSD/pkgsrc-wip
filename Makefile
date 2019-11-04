@@ -519,7 +519,6 @@ SUBDIR+=	cryptcat
 SUBDIR+=	crystal-bin
 SUBDIR+=	csmith
 SUBDIR+=	csoap
-SUBDIR+=	csound6
 SUBDIR+=	csp2b
 SUBDIR+=	csstidy
 SUBDIR+=	csv-mode
