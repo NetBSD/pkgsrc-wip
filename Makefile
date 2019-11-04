@@ -4726,6 +4726,7 @@ SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-mathtools-doc
 SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
+SUBDIR+=	texlive-tlpdb
 SUBDIR+=	textile-mode
 SUBDIR+=	tftp-hpa
 SUBDIR+=	thabit-ttf
