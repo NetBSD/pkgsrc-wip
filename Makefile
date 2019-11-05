@@ -1957,6 +1957,7 @@ SUBDIR+=	libmesode
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmobi-git
 SUBDIR+=	libmpg123
+SUBDIR+=	libmpq
 SUBDIR+=	libmusclecard
 SUBDIR+=	libncl
 SUBDIR+=	libnestedsums
