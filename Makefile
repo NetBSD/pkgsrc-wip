@@ -2529,7 +2529,6 @@ SUBDIR+=	opennurbs
 SUBDIR+=	openra
 SUBDIR+=	openrct2
 SUBDIR+=	openrw-git
-SUBDIR+=	openscad
 SUBDIR+=	openscep
 SUBDIR+=	opensips
 SUBDIR+=	openssl110
