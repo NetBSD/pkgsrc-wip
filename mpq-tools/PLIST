@@ -1,6 +1,5 @@
 @comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 bin/mpq-extract
 bin/mpq-info
-include/libmpq/mpq.h
-lib/libmpq.la
-share/libmpq/db/diablo2/setup.mpq.conf
+man/man1/mpq-extract.1
+man/man1/mpq-info.1
