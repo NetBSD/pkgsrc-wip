@@ -1,0 +1,2 @@
+Implements Cross Origin Resource Sharing (CORS) support for aiohttp
+asyncio-powered asynchronous HTTP server.
