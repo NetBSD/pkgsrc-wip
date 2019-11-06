@@ -21,8 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.4:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-typed-ast>=1.4.0:../../devel/py-typed-ast
 DEPENDS+=	${PYPKGPREFIX}-regex:../../textproc/py-regex
 # only for blackd:
-#DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.2:../../www/py-aiohttp
-#DEPENDS+=	${PYPKGPREFIX}-aiohttp-cors:../../www/py-aiohttp-cors # not in pkgsrc yet
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.2:../../www/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-aiohttp-cors:../../wip/py-aiohttp-cors
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && for b in black blackd; \
