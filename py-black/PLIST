@@ -1,6 +1,6 @@
 @comment $NetBSD$
-bin/black
-bin/blackd
+bin/black-${PYVERSSUFFIX}
+bin/blackd-${PYVERSSUFFIX}
 ${PYSITELIB}/_black_version.pyo
 ${PYSITELIB}/_black_version.pyc
 ${PYSITELIB}/black.pyo
