@@ -24,5 +24,10 @@ DEPENDS+=	${PYPKGPREFIX}-regex:../../textproc/py-regex
 #DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.2:../../www/py-aiohttp
 #DEPENDS+=	${PYPKGPREFIX}-aiohttp-cors:../../www/py-aiohttp-cors # not in pkgsrc yet
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && for b in black blackd; \
+          do ${MV} $$b $$b-${PYVERSSUFFIX}; \
+        done
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

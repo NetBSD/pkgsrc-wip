@@ -1,0 +1,2 @@
+bin/black @PREFIX@/bin/black-@PYVERSSUFFIX@
+bin/blackd @PREFIX@/bin/blackd-@PYVERSSUFFIX@
