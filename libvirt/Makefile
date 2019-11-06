@@ -10,11 +10,14 @@ HOMEPAGE=		http://libvirt.org/
 COMMENT=		Virtualisation toolkit for host operating systems
 LICENSE=		gnu-lgpl-v2
 
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+
 USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR} --localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN}
 TEST_TARGET=		check
 RCD_SCRIPTS=		libvirtd
 
@@ -48,4 +51,5 @@ CONFIGURE_ARGS.NetBSD+=	--with-qemu-group=wheel
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
