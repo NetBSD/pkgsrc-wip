@@ -764,6 +764,11 @@ share/emacs/${PKGVERSION}/etc/images/splash.pbm
 share/emacs/${PKGVERSION}/etc/images/splash.png
 share/emacs/${PKGVERSION}/etc/images/splash.svg
 share/emacs/${PKGVERSION}/etc/images/splash.xpm
+share/emacs/${PKGVERSION}/etc/images/tabs/README
+share/emacs/${PKGVERSION}/etc/images/tabs/close.xpm
+share/emacs/${PKGVERSION}/etc/images/tabs/left-arrow.xpm
+share/emacs/${PKGVERSION}/etc/images/tabs/new.xpm
+share/emacs/${PKGVERSION}/etc/images/tabs/right-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/README
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/close.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/close.xpm
@@ -914,6 +919,7 @@ share/emacs/${PKGVERSION}/etc/srecode/el.srt
 share/emacs/${PKGVERSION}/etc/srecode/getset-cpp.srt
 share/emacs/${PKGVERSION}/etc/srecode/java.srt
 share/emacs/${PKGVERSION}/etc/srecode/make.srt
+share/emacs/${PKGVERSION}/etc/srecode/proj-test.srt
 share/emacs/${PKGVERSION}/etc/srecode/template.srt
 share/emacs/${PKGVERSION}/etc/srecode/test.srt
 share/emacs/${PKGVERSION}/etc/srecode/texi.srt
@@ -2223,6 +2229,8 @@ share/emacs/${PKGVERSION}/lisp/image/exif.el.gz
 share/emacs/${PKGVERSION}/lisp/image/exif.elc
 share/emacs/${PKGVERSION}/lisp/image/gravatar.el.gz
 share/emacs/${PKGVERSION}/lisp/image/gravatar.elc
+share/emacs/${PKGVERSION}/lisp/image/image-converter.el.gz
+share/emacs/${PKGVERSION}/lisp/image/image-converter.elc
 share/emacs/${PKGVERSION}/lisp/imenu.el.gz
 share/emacs/${PKGVERSION}/lisp/imenu.elc
 share/emacs/${PKGVERSION}/lisp/indent.el.gz
@@ -3018,6 +3026,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/tpu-extras.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-extras.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/url-ns.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/url-ns.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-arch.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-arch.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vi.el.gz
@@ -3595,6 +3605,10 @@ share/emacs/${PKGVERSION}/lisp/svg.el.gz
 share/emacs/${PKGVERSION}/lisp/svg.elc
 share/emacs/${PKGVERSION}/lisp/t-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/t-mouse.elc
+share/emacs/${PKGVERSION}/lisp/tab-bar.el.gz
+share/emacs/${PKGVERSION}/lisp/tab-bar.elc
+share/emacs/${PKGVERSION}/lisp/tab-line.el.gz
+share/emacs/${PKGVERSION}/lisp/tab-line.elc
 share/emacs/${PKGVERSION}/lisp/tabify.el.gz
 share/emacs/${PKGVERSION}/lisp/tabify.elc
 share/emacs/${PKGVERSION}/lisp/talk.el.gz
@@ -3823,8 +3837,6 @@ share/emacs/${PKGVERSION}/lisp/url/url-news.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-news.elc
 share/emacs/${PKGVERSION}/lisp/url/url-nfs.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-nfs.elc
-share/emacs/${PKGVERSION}/lisp/url/url-ns.el.gz
-share/emacs/${PKGVERSION}/lisp/url/url-ns.elc
 share/emacs/${PKGVERSION}/lisp/url/url-parse.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-parse.elc
 share/emacs/${PKGVERSION}/lisp/url/url-privacy.el.gz
