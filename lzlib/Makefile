@@ -1,8 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	lzlib-1.11
-#PKGNAME=	${DISTNAME}
-CATEGORIES=	archivers
+CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/lzlib/
 
 MAINTAINER=	root@zta.lk
@@ -16,6 +15,6 @@ USE_TOOLS+=	gmake
 
 INFO_FILES=	yes
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${PKGINFODIR}
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${PKGINFODIR} --enable-shared
 
 .include "../../mk/bsd.pkg.mk"
