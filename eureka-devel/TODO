@@ -18,5 +18,7 @@
     => This patch was rejected by upstream
 [X] Make xdg-utils an option (Default=on)
     => An option "xdg-utils" already exists in pkgsrc
+[X] Update to Git commit 5ff8ed31515de647a636c4adf778ee63608f4aed
+    => Remove patches merged upstream
 [ ] Import final eureka 1.25 release
 [ ] Switch back to FLTK version from pkgsrc current
