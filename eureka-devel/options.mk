@@ -1,11 +1,16 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eureka-devel
-PKG_SUPPORTED_OPTIONS=	xdg-utils
-PKG_SUGGESTED_OPTIONS=	xdg-utils
+PKG_SUPPORTED_OPTIONS=	opengl xdg-utils
+PKG_SUGGESTED_OPTIONS=	opengl xdg-utils
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
+
+# opengl: Use OpenGL for drawing
+# If FLTK is compiled without opengl option, it is ignored.
+# If FLTK is compiled with opengl option, removing it here allows to force usage
+# of the software renderer (recommended without hardware acceleration).
 
 # xdg-utils: Create dependency for xdg-utils (Portland project)
 # Can be used by FLTK for fl_open_uri() on X11
