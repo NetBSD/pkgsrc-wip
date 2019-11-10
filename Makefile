@@ -4993,6 +4993,7 @@ SUBDIR+=	wvstreams
 SUBDIR+=	wxGTK-test
 SUBDIR+=	wxmaxima-git
 SUBDIR+=	wyeb-git
+SUBDIR+=	wyebadblock-git
 SUBDIR+=	xace
 SUBDIR+=	xalan-c
 SUBDIR+=	xalan-c-1.10
