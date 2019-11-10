@@ -1,25 +1,21 @@
 # $NetBSD$
 
-PKGNAME=	lariza-18.03
-PKGREVISION=	1
-GITHUB_PROJECT=	lariza
-DISTNAME=	${GITHUB_TAG}
+PKGNAME=	lariza-19.05
+PKGREVISION=	# override since GIT_TAG gives the version
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=vain/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GIT_REPO=	https://www.uninformativ.de/git/lariza.git
+GIT_TAG=	v19.05
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.uninformativ.de/projects/lariza/
+HOMEPAGE=	https://uninformativ.de/git/lariza
 COMMENT=	Experimental web browser using WebKit2GTK+
 LICENSE=	mit
-
-WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
 USE_TOOLS+=		gmake pkg-config
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 
+.include "../../wip/mk/git-package.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
