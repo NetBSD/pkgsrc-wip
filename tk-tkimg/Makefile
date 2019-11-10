@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	tkimg-1.3-2008-01-16
+PKGNAME=	tkimg-1.3.20080116
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.flightlab.com/~joe/downloads/
 
@@ -13,14 +14,18 @@ LICENSE=	2-clause-bsd # XXX ? Same as Tcl
 WRKSRC=			${WRKDIR}/tkimg-1.3
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
-INSTALLATION_DIRS+=	lib/Img${PKGVERSION}.9
+INSTALLATION_DIRS+=	lib/Img1.3.9
 
 .include "options.mk"
 
 .if ${MACHINE_ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--enable-64bit-vis
-.elif ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "ia64"
+.else
+.  for plat in ${LP64PLATFORMS}
+.    if ${MACHINE_PLATFORM:M${plat}}
 CONFIGURE_ARGS+=	--enable-64bit
+.    endif
+.  endfor
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
