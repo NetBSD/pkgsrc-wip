@@ -4741,7 +4741,6 @@ SUBDIR+=	tinylogin
 SUBDIR+=	tinyproxy
 SUBDIR+=	tipp10
 SUBDIR+=	tk-itk3
-SUBDIR+=	tk-tkimg
 SUBDIR+=	tkhtml3
 SUBDIR+=	tkpng
 SUBDIR+=	tktile
