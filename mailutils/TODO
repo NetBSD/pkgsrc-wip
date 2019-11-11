@@ -40,3 +40,6 @@ SMTP .......................... yes
 Sendmail ...................... yes
 
 *******************************************************************
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2019-18862
