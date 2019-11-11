@@ -11,8 +11,8 @@ BUILDLINK_PKGSRCDIR.akonadi-search?=	../../wip/akonadi-search
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/krunner/buildlink3.mk"
 .include "../../wip/akonadi-mime/buildlink3.mk"
-.include "../../wip/kcalcore/buildlink3.mk"
-.include "../../wip/kcontacts/buildlink3.mk"
+.include "../../time/kcalendarcore/buildlink3.mk"
+.include "../../misc/kcontacts/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# AKONADI_SEARCH_BUILDLINK3_MK
