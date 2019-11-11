@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tripwire/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/tripwire/
+HOMEPAGE=	https://github.com/Tripwire/tripwire-open-source
 COMMENT=	File and directory integrity checker
 LICENSE=	gnu-gpl-v2
 
