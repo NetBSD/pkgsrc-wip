@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/trigger-rally
+share/games/trigger-rally/data.md5
+share/games/trigger-rally/data.zip
+share/games/trigger-rally/trigger-rally
+share/games/trigger-rally/trigger-rally.config.defs

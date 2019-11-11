@@ -1,0 +1,17 @@
+A 3D rally simulation with a great physics engine for drifting, over 200 maps, 
+different terrain materials like dirt, asphalt, sand, ice etc. and various 
+weather, light and fog conditions give this rally simulation the edge over many
+other free games. You need to make it through the maps in often tight time
+limits and can further improve by beating the recorded high scores. All attached
+single races must be finished in time in order to win an event, unlocking
+additional events and cars. Most maps are equipped with spoken co-driver notes
+and co-driver icons.
+
+Many configuration details for display and audio adjustments can be edited in
+the well documented plain text configuration file.
+
+Additional contributed maps and events are ready for download as plugins.
+
+Trigger Rally works well with common low performance laptops from about 2008. 
+And if something like snow flakes and vegetation sprites demand to much from
+your system you can just disable it.
