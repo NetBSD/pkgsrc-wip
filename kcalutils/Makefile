@@ -11,7 +11,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	msgmerge
 
-.include "../../wip/kcalcore/buildlink3.mk"
+.include "../../time/kcalendarcore/buildlink3.mk"
 .include "../../wip/kidentitymanagement/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
