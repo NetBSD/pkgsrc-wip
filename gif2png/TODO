@@ -1,0 +1,2 @@
+- build and install manpages (needs xmlto as a tool)
+- figure out a way to have a stable distfile and version
