@@ -1083,6 +1083,7 @@ SUBDIR+=	ghc710
 SUBDIR+=	ghmm
 SUBDIR+=	ghostpcl-urwfonts-ttf
 SUBDIR+=	ghostscript-cidfonts-ryumin
+SUBDIR+=	gif2png
 SUBDIR+=	giggle
 SUBDIR+=	gimmie
 SUBDIR+=	gimp-dds
