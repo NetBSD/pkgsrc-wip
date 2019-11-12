@@ -1,5 +1,8 @@
 $NetBSD$
 
+Fix on NetBSD.
+https://gitlab.com/esr/gif2png/merge_requests/3
+
 --- gif2png.go.orig	2019-07-11 13:50:28.000000000 +0000
 +++ gif2png.go
 @@ -98,7 +98,7 @@ func processfilter() int {
