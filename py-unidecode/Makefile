@@ -14,8 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-EGG_NAME=	Unicode-${PKGVERSION_NOREV}
+EGG_NAME=	Unidecode-${PKGVERSION_NOREV}
 
-.include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
