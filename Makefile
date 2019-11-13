@@ -1294,7 +1294,6 @@ SUBDIR+=	guile-commonmark
 SUBDIR+=	guile-gcrypt
 SUBDIR+=	guile-haunt
 SUBDIR+=	guile-reader
-SUBDIR+=	guile-syntax-highlight
 SUBDIR+=	guitone
 SUBDIR+=	guix
 SUBDIR+=	gupnp-ui
