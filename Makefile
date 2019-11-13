@@ -1292,7 +1292,6 @@ SUBDIR+=	gucharmap
 SUBDIR+=	guichan
 SUBDIR+=	guile-commonmark
 SUBDIR+=	guile-gcrypt
-SUBDIR+=	guile-git
 SUBDIR+=	guile-haunt
 SUBDIR+=	guile-reader
 SUBDIR+=	guile-sqlite3
