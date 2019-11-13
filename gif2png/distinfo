@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (gif2png-master.tar.gz) = 8fcfceeb270c0a5a2cd86b74b096182615f772ce
-RMD160 (gif2png-master.tar.gz) = e7cb8e4836ee38dd5808150aa135cddd1e3ddbb7
-SHA512 (gif2png-master.tar.gz) = 17d8bb83d53b8f5c61dbdd0e697c8b85999c8dfb54d57c9621fe3600effd1222acb29bd8e12c28db93736789d5db24e208a32868ed462e589527221c6846e0f6
-Size (gif2png-master.tar.gz) = 94713 bytes
+SHA1 (gif2png-3.0.0.tar.gz) = 7fea41d8bd734217a9ec3b7b72693f183cddce1a
+RMD160 (gif2png-3.0.0.tar.gz) = 67404271170a902e478f7280908e6bd224528f35
+SHA512 (gif2png-3.0.0.tar.gz) = fd8c266444b17ca92973eeb3ca33bd23ca3bcab95870571133bb1d7d051e3b3ce2269f9d348621eb86c18dff3e5d36602d6aec7ba4ab87db5609067e439950ed
+Size (gif2png-3.0.0.tar.gz) = 81591 bytes
 SHA1 (patch-gif2png.go) = 44e8a24181a1df97cca322798888304513e8a835
