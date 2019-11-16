@@ -1,0 +1,12 @@
+ssh-copy-id is a script that uses ssh(1) to log into a remote machine
+(presumably using a login password, so password authentication should be
+enabled, unless you've done some clever use of multiple identities).  It
+assembles a list of one or more fingerprints (as described below) and tries
+to log in with each key, to see if any of them are already installed (of
+course, if you are not using ssh-agent(1) this may result in you being
+repeatedly prompted for pass-phrases).  It then assembles a list of those
+that failed to log in, and using ssh, enables logins with those keys on the
+remote server.  By default it adds the keys by appending them to the remote
+user's ~/.ssh/authorized_keys (creating the file, and directory, if
+necessary).  It is also capable of detecting if the remote system is a
+NetScreen, and using its 'set ssh pka-dsa key ...'  command instead.
