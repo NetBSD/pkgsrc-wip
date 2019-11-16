@@ -1,6 +1,6 @@
 $NetBSD$
 
---- Cargo.toml.orig	2019-10-06 08:56:31.000000000 +0000
+--- Cargo.toml.orig	2019-11-03 15:53:48.000000000 +0000
 +++ Cargo.toml
 @@ -24,7 +24,7 @@ serde = { version = "1.0.99", features =
  serde_ini = "0.2.0"
@@ -19,4 +19,4 @@ $NetBSD$
 +path = "../librespot"
  
  [dev-dependencies]
- env_logger = "0.6"
+ env_logger = "0.7"
