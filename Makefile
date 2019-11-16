@@ -5070,7 +5070,6 @@ SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpi-quick_locale_switcher
 SUBDIR+=	xpilot-ng
-SUBDIR+=	xplanet
 SUBDIR+=	xplore
 SUBDIR+=	xrdp
 SUBDIR+=	xspd
