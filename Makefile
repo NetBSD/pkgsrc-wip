@@ -1288,6 +1288,7 @@ SUBDIR+=	gtksourcecompletion
 SUBDIR+=	gts-snapshot
 SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
+SUBDIR+=	guest-oslogin
 SUBDIR+=	guichan
 SUBDIR+=	guile-commonmark
 SUBDIR+=	guile-gcrypt
