@@ -2512,7 +2512,6 @@ SUBDIR+=	openmpi163
 SUBDIR+=	openmx-openmpi
 SUBDIR+=	opennurbs
 SUBDIR+=	openra
-SUBDIR+=	openrct2
 SUBDIR+=	openrw-git
 SUBDIR+=	openscep
 SUBDIR+=	opensips
