@@ -678,7 +678,7 @@ share/cups/templates/test-page.tmpl
 share/cups/templates/trailer.tmpl
 share/cups/templates/users.tmpl
 ${PLIST.libusb}share/cups/usb/org.cups.usb-quirks
-share/doc/cups/LICENSE.txt
+share/doc/cups/LICENSE
 share/doc/cups/README.md
 share/doc/cups/apple-touch-icon.png
 share/doc/cups/cups-printable.css

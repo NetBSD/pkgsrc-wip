@@ -36,7 +36,6 @@ CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
 CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-ssl
-CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
@@ -143,7 +142,7 @@ post-extract:
 	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
-	set -e; for file in LICENSE.txt README.md; do			\
+	set -e; for file in LICENSE README.md; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
