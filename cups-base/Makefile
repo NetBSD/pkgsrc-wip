@@ -129,7 +129,6 @@ SUBST_STAGE.piefix=	pre-configure
 .endif
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
-INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
 pre-configure:
 .if !empty(CUPS_SYSTEM_GROUPS:M${CUPS_GROUP})
