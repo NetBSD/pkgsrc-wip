@@ -1058,7 +1058,6 @@ SUBDIR+=	gecko-sharp
 SUBDIR+=	gecode
 SUBDIR+=	geekcode
 SUBDIR+=	gemma
-SUBDIR+=	gemrb
 SUBDIR+=	geners
 SUBDIR+=	genus2reduction
 SUBDIR+=	geoclue
