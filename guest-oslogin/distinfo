@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (guest-oslogin-20191023-4d53cc0ffdb.zip) = fb9c244aba2644510e5847859734d78c409bb756
+RMD160 (guest-oslogin-20191023-4d53cc0ffdb.zip) = 13d40551f7245d08212867d44452b1eedf138dfb
+SHA512 (guest-oslogin-20191023-4d53cc0ffdb.zip) = 6a6fd366c71ae3fd7a89f8357d94872665e111d9272c3933da0b89cb5383a366f4a841577684344f2eb8554a143af816e6917784a4215eacd4adc78c4c0cf50a
+Size (guest-oslogin-20191023-4d53cc0ffdb.zip) = 60205 bytes
+SHA1 (patch-src_include_compat.h) = 04014ed64b8daa9c57fa23f4f28c18d7436aebd5
