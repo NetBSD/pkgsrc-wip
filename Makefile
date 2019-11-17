@@ -66,7 +66,6 @@ SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
 SUBDIR+=	R-tuneR
 SUBDIR+=	ReZound
-SUBDIR+=	SDLPoP
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	Terminal
