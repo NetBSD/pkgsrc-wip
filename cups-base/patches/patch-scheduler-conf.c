@@ -20,15 +20,6 @@ Add a PidFile configuration directive to write a PID file.
    cupsdSetString(&DocumentRoot, CUPS_DOCROOT);
    cupsdSetString(&AccessLog, CUPS_LOGDIR "/access_log");
    cupsdClearString(&ErrorLog);
-@@ -745,7 +747,7 @@ cupsdReadConfiguration(void)
-   DefaultShared            = CUPS_DEFAULT_DEFAULT_SHARED;
- 
- #if defined(HAVE_DNSSD) || defined(HAVE_AVAHI)
--  cupsdSetString(&DNSSDSubTypes, "_cups,_print");
-+  cupsdSetString(&DNSSDSubTypes, "_cups,_print,_universal");
-   cupsdClearString(&DNSSDHostName);
- #endif /* HAVE_DNSSD || HAVE_AVAHI */
- 
 @@ -3375,6 +3377,7 @@ read_cupsd_conf(cups_file_t *fp)	/* I - 
               !_cups_strcasecmp(line, "CacheDir") ||
               !_cups_strcasecmp(line, "ConfigFilePerm") ||
