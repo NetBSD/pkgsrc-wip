@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.common,v 1.8 2019/08/16 21:19:30 leot Exp $
+#
+# used by wip/cups/Makefile
+# used by wip/cups-base/Makefile
+
+CUPS_VERS=	2.2.12
+DISTNAME=	cups-${CUPS_VERS}-source
+CATEGORIES=	print
+
+HOMEPAGE=	https://www.cups.org/
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
