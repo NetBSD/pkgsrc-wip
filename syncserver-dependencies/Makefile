@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sync-server-dependencies-1.1
+DISTNAME=	syncserver-dependencies-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	#
@@ -12,9 +12,8 @@ LICENSE=	public-domain
 
 USE_TOOLS+=	gmake:run
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
-DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
 DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 
 META_PACKAGE=	yes
