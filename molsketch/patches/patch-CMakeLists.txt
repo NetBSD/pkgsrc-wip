@@ -1,5 +1,8 @@
 $NetBSD$
 
+Fix path of cmake_uninstall.cmake.in.
+CMAKE_MODULE_PATH is changed after running of the pkgsrc wrappers.
+
 --- CMakeLists.txt.orig	2019-03-13 20:46:48.000000000 +0000
 +++ CMakeLists.txt
 @@ -33,7 +33,7 @@ set(CPACK_SOURCE_IGNORE_FILES "/build;/.

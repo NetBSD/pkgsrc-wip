@@ -17,7 +17,19 @@ USE_CMAKE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c c++
 
+CMAKE_ARGS+=	-DMSK_PREFIX=${PREFIX:Q}
+CMAKE_ARGS+=	-DMSK_INSTALL_PREFIX=${PREFIX:Q}
+CMAKE_ARGS+=	-DMSK_INSTALL_DOCS=/share/doc/molsketch
+CMAKE_ARGS+=	-DMSK_INSTALL_LIBS64=/lib
+CMAKE_ARGS+=	-DMSK_INSTALL_LIBS=/lib
+CMAKE_ARGS+=	-DMSK_INSTALL_INCLUDES=/include
+
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/include/libmolsketch/molsketch_LIB_autogen
+	${RM} -rf ${DESTDIR}${PREFIX}/include/libmolsketch/CMakeFiles
+
 .include "../../biology/openbabel/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
