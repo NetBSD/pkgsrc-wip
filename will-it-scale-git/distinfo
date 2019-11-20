@@ -1,10 +1,13 @@
 $NetBSD$
 
 SHA1 (patch-Makefile) = fdf09838fe367c554f108aa92aef76264b790512
-SHA1 (patch-main.c) = 892b4fee8745289f1b4befedf527e5f3db8c575d
 SHA1 (patch-tests_eventfd1.c) = 290598658b7cbf564b0b34317f0f2c550b243fde
 SHA1 (patch-tests_fallocate1.c) = b6820c120ce5b8e1ddf7bbc925a17f567d5a9df5
+SHA1 (patch-tests_fallocate2.c) = 0ca2dd55dc1ef267e8a02c9fc5699e72e71eafe3
 SHA1 (patch-tests_futex1.c) = a45ffd09e0300e5f6c2b70d95fb3a2454112e588
 SHA1 (patch-tests_futex2.c) = ef36e22c01b00ea486bd139a361313c3269a3c2d
 SHA1 (patch-tests_futex3.c) = 6df2ef0e44085aa8829d66a9b7d591fc18b2adf7
 SHA1 (patch-tests_futex4.c) = cb80519781bd1b8f5539f3080379159f36b2476a
+SHA1 (patch-tests_tlb__flush1.c) = a2d9d8679ca90cafdd6d6ad6742f3732d3441817
+SHA1 (patch-tests_tlb__flush2.c) = ab23430f9b89131df163649a7a51cb300c866d80
+SHA1 (patch-tests_tlb__flush3.c) = 4b8aff09cfec2b9e06e457a432d417e049f74d72
