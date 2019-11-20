@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.libkdepim?=		../../wip/libkdepim
 
 .include "../../wip/akonadi-contacts/buildlink3.mk"
 .include "../../wip/akonadi-search/buildlink3.mk"
-.include "../../wip/kldap/buildlink3.mk"
+.include "../../databases/kldap/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# LIBKDEPIM_BUILDLINK3_MK
 

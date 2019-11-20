@@ -26,7 +26,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/akonadi-calendar.renamecategories 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/akonadi-contacts/buildlink3.mk"
 .include "../../wip/kmailtransport/buildlink3.mk"
-.include "../../wip/kcalutils/buildlink3.mk"
+.include "../../time/kcalutils/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

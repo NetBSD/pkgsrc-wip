@@ -15,8 +15,8 @@ USE_TOOLS+=	msgmerge
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/akonadi/buildlink3.mk"
-.include "../../wip/kcalutils/buildlink3.mk"
+.include "../../time/kcalutils/buildlink3.mk"
 .include "../../time/kholidays/buildlink3.mk"
-.include "../../wip/kidentitymanagement/buildlink3.mk"
+.include "../../misc/kidentitymanagement/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

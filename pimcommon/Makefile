@@ -26,8 +26,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/pimcommon.renamecategories \
 		${PKG_SYSCONFDIR}/xdg/pimcommon.renamecategories
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../wip/kimap/buildlink3.mk"
-.include "../../wip/kpimtextedit/buildlink3.mk"
+.include "../../mail/kimap/buildlink3.mk"
+.include "../../textproc/kpimtextedit/buildlink3.mk"
 .include "../../wip/libkdepim/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

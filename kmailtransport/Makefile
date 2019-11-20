@@ -35,7 +35,7 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/akonadi-mime/buildlink3.mk"
-.include "../../wip/ksmtp/buildlink3.mk"
+.include "../../mail/ksmtp/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
