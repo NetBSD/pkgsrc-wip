@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	0.17pre20
+FLNEWS_VERSION=	0.17pre21
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -77,6 +77,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 # OpenSSL 1.1 API is required for signature algorithm negotiation
 # OpenSSL 1.1 API is required for TLSv1.2 FFDHE group check
 # At least OpenSSL 1.1.1 is required for TLSv1.3
+# OpenSSL 3 API is required for FFDHE group negotiation
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 .include "../../security/openssl/buildlink3.mk"
 # FLTK must be compiled with multithreading support
