@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.gnome-panel?=	../../wip/gnome-panel
 pkgbase:= gnome-panel
 .include "../../mk/pkg-build-options.mk"
 .if !empty(PKG_BUILD_OPTIONS.gnome-panel:Mevolution)
-.include "../../wip/evolution-data-server/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
 .endif
 
 #.include "../../net/libgdata/buildlink3.mk"

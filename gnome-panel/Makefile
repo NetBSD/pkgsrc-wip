@@ -85,7 +85,7 @@ SUBST_SED.noundef=	-e 's/ -no-undefined//g'
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mevolution)
-.include "../../wip/evolution-data-server/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
 .endif
 .include "../../net/ORBit2/buildlink3.mk"
 # pkgsrc policykit is too old
