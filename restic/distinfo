@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (restic-v0.9.5.tar.gz) = 7dbfee8a2a11be34e12d416373eb4a660b06b734
-RMD160 (restic-v0.9.5.tar.gz) = 3d2c4fd1ca9acb64425877c90927528342ff5271
-SHA512 (restic-v0.9.5.tar.gz) = 2541b4d70d23d28360c4398427d65ed08a5eea8c171b93be7b7d54baa7b06099f5473ff2fbe3d6b3d6691592300062ba1b240cc03772868d2a0adb1217c8a85f
-Size (restic-v0.9.5.tar.gz) = 26933971 bytes
+SHA1 (restic-v0.9.6.tar.gz) = fdd6cc588b016c6041ae86cb503da8ceb4e55fbf
+RMD160 (restic-v0.9.6.tar.gz) = f3366ce505db272ab365baab4808a128d103d57f
+SHA512 (restic-v0.9.6.tar.gz) = f6f7797dc17644e8f0217d81f7194e8e6416f6e740bad0eb11bcf83ab72d1729025e59fd1b81eb9d57bdd60e98b3324026ddb2325c654eb1b51f8f30ed247089
+Size (restic-v0.9.6.tar.gz) = 27008812 bytes
