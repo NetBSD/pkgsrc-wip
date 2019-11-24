@@ -53,7 +53,6 @@ CONF_FILES+=		${EGDIR}/gnomecc.menu \
 .include "../../x11/libXcursor/buildlink3.mk"
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"
 .include "../../net/grilo/buildlink3.mk"
