@@ -6,7 +6,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproj/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://github.com/jswhit/pyproj
+HOMEPAGE=	https://github.com/pyproj4/pyproj
 COMMENT=	Python interface to PROJ.4 library
 
 .include "../../lang/python/egg.mk"
