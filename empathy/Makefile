@@ -49,13 +49,13 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.37.6
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.enchant+=		enchant>=1.2.0
-.include "../../wip/evolution-data-server/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../wip/gnome-keyring/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+BUILDLINK_API_DEPENDS.enchant+=		enchant>=1.2.0
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"

@@ -49,8 +49,7 @@ BUILDLINK_API_DEPENDS.cairo+=		cairo>=1.4.0
 BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.18.0
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=1.12.0
-.include "../../wip/evolution-data-server/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
