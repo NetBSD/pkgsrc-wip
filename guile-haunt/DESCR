@@ -1,7 +1,0 @@
-Haunt is a static site generator written in Guile Scheme.
-Haunt features a functional build system and an extensible
-interface for reading articles in any format.
-
-At the moment you can't use haunt serve with the "-w"
-option as this requires a build of guile 2.2 with
-threads.
