@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (bystand-0.7.2.zip) = 66973264a670ab63341514defae328475627664c
-RMD160 (bystand-0.7.2.zip) = fbbdfe26c249ebdfa001cf286169dd7b331847ce
-SHA512 (bystand-0.7.2.zip) = a6d1515de40fb944db515be06d4557a0dd0ade2e7553f577519f54c365b4c8fe046eb2c482ebd0c912e2b2abbb6cd52ce1fc024ce27c574ebc6cccb70646b563
-Size (bystand-0.7.2.zip) = 31014 bytes
-SHA1 (patch-bystand.c) = 8ff57b127feb681761629c7f9ef7879359a4bc20
+SHA1 (bystand-0.7.3.zip) = 5a26945c79dbce696c05f4b8da3b7dacdfb56ae2
+RMD160 (bystand-0.7.3.zip) = 58543fbf92aa67f5c166c83906636e9535cc4607
+SHA512 (bystand-0.7.3.zip) = 8946ad18beb180a77089813eb8ff1ef21b9e9b248be28df4ded6c87b8ae046ac5c9475cd38eaad075b86dc47824663df3cec7b9b4699b89a1532ad5dab946aaa
+Size (bystand-0.7.3.zip) = 31013 bytes
