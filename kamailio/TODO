@@ -1,0 +1,9 @@
+Fix libdir being lib64.
+
+Test.
+
+Read install instructions.
+
+Add options for at least pgsql.
+
+Consider adjusting DISTNAME/PKGNAME differently.
