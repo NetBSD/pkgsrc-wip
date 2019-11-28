@@ -1708,6 +1708,7 @@ SUBDIR+=	kactivitymanagerd
 SUBDIR+=	kahakai
 SUBDIR+=	kalarmcal
 SUBDIR+=	kallisto
+SUBDIR+=	kamailio
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapacitor
 SUBDIR+=	kawa
