@@ -1,19 +1,10 @@
 $NetBSD$
 
 Remediate bashisms.
-Not yet filed upstream.
+Fixed upstream via https://github.com/kamailio/kamailio/issues/2157
 
 --- utils/kamctl/kamdbctl.orig	2019-11-14 11:38:12.000000000 +0000
 +++ utils/kamctl/kamdbctl
-@@ -2,7 +2,7 @@
- #
- # control tool for maintaining Kamailio databases
- #
--#===================================================================
-+#==================================================================
- 
- ### version for this script
- VERSION='5.3.0'
 @@ -153,7 +153,7 @@ kamailio_dump()  # pars: <database name>
  		merr "kamailio_dump function takes two param"
  		exit 1
