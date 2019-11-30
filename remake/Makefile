@@ -6,25 +6,25 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bashdb/}
 
 MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	http://bashdb.sourceforge.net/remake/
-COMMENT=	gmake with debugger
+COMMENT=	GNU make with debugger
 LICENSE=	gnu-gpl-v3
 
-USE_FEATURES=           snprintf
+USE_FEATURES=	snprintf
 
-GNU_CONFIGURE=          yes
-TEXINFO_REQD+=          4.0
-INFO_FILES=             yes
+GNU_CONFIGURE=	yes
+TEXINFO_REQD+=	4.0
+INFO_FILES=	yes
 
-TEST_TARGET=            check
+TEST_TARGET=	check
 
 # workaround for broken strndup
-CONFIGURE_ARGS.MirBSD+= ac_cv_func_strndup=no
+CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 CONFIGURE_ARGS=		--without-guile
 # XXX: Do not install gmake setgid and do not override the owner group
 # XXX: based on possible /dev/kmem permissions.
-CONFIGURE_ARGS+=        ac_cv_func_getloadavg_setgid=no
+CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
 
-AUTO_MKDIRS=            yes
+AUTO_MKDIRS=	yes
 
 # \todo: patch upstream.
 post-install:
