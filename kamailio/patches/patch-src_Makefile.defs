@@ -1,5 +1,10 @@
 $NetBSD$
 
+Use lib as libdir, following pkgsrc norms (and perhaps norms for all
+but Linux).
+
+Not yet filed upstream.
+
 --- src/Makefile.defs.orig	2019-11-14 11:38:12.000000000 +0000
 +++ src/Makefile.defs
 @@ -440,15 +440,7 @@ endif
