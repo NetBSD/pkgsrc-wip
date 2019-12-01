@@ -141,8 +141,6 @@ CONFIGURE_ARGS+=	--without-libpulse
 .endif
 
 .if !empty(PKG_OPTIONS:Mzbar)
-#.include "../../graphics/openjpeg/buildlink3.mk"
-#.include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../wip/zbar/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
@@ -166,7 +164,6 @@ CONFIGURE_ARGS+=	--without-zbar
 
 .if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mbluez)
 # Do we need more for bluez?
-# the switch will be valid starting with 0.11.7 release
 .include "../../wip/bluez-libs/buildlink3.mk"
 PLIST.bluez=		yes
 .else

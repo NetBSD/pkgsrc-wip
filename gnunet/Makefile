@@ -74,8 +74,6 @@ SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-testbed ${SETUID_ROOT_PERMS}
 
 .if ${OPSYS} == "Linux"
-# ${CHMOD} root:${GNUNETDNS_GROUP} ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-helper-dns
-# ${CHMOD} ${GNUNET_USER}:${GNUNETDNS_GROUP} ${DESTDIR}${PREFIX}/lib/gnunet/libexec/gnunet-service-dns
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-dns ${REAL_ROOT_USER} ${GNUNETDNS_GROUP} 4750
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-service-dns ${GNUNET_USER} ${GNUNETDNS_GROUP} 2750
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-exit ${SETUID_ROOT_PERMS}
