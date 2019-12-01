@@ -15,8 +15,13 @@ WRKSRC=		${WRKDIR}/kamailio-${VERSION}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
+# Upstream does not explain versions.  Prepare to disallow 27.
+#PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 do-configure:
 	cd ${WRKSRC} && ${GMAKE} cfg include_modules="xmpp"
+
+REPLACE_PYTHON+=	utils/kamctl/dbtextdb/dbtextdb.py
 
 # Brute-force move the config files to the example directory, because
 # it's easier than teaching the kamailio build system the pkgsrc way
@@ -32,6 +37,7 @@ CONF_FILES+=	share/examples/kamailio/kamctlrc ${PKG_SYSCONFDIR}/kamailio/kamctlr
 FAKE_NCURSES=	yes
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
