@@ -48,6 +48,7 @@ gnunet_precmd()
 {
 	if [ ! -f ${required_files} ]; then
 		warn "${required_files} does not exist."
+		warn "You have to create a gnunet user config first."
 		return 1
 	fi
 }
