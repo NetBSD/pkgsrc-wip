@@ -141,8 +141,12 @@ CONFIGURE_ARGS+=	--without-libpulse
 .endif
 
 .if !empty(PKG_OPTIONS:Mzbar)
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../wip/zbar/buildlink3.mk"
+# \todo: We should not require the includes below,
+# they are directly what zbar must provide!
+# Maybe we must use libjpeg, other jpegs are untested:
+# .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
