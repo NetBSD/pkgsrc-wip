@@ -292,6 +292,8 @@ share/doc/kamailio/modules/README.xhttp_rpc
 share/doc/kamailio/modules/README.xlog
 share/doc/kamailio/modules/README.xmpp
 share/doc/kamailio/modules/README.xprint
+share/examples/kamailio/kamailio.cfg
+share/examples/kamailio/kamctlrc
 share/kamailio/dbtext/kamailio/acc
 share/kamailio/dbtext/kamailio/acc_cdrs
 share/kamailio/dbtext/kamailio/active_watchers
@@ -363,3 +365,4 @@ share/kamailio/dbtext/kamailio/version
 share/kamailio/dbtext/kamailio/watchers
 share/kamailio/dbtext/kamailio/xcap
 @pkgdir man/man7
+@pkgdir etc/kamailio

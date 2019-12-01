@@ -13,15 +13,23 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/kamailio-${VERSION}
 USE_LANGUAGES=	c c++
-
 USE_TOOLS+=	gmake
-MAKE_ENV=	include_modules="xmpp"
+
+do-configure:
+	cd ${WRKSRC} && ${GMAKE} cfg include_modules="xmpp"
+
+# Brute-force move the config files to the example directory, because
+# it's easier than teaching the kamailio build system the pkgsrc way
+# of config files.
+post-install:
+	mkdir -p ${DESTDIR}/${PREFIX}/share/examples/kamailio
+	mv ${DESTDIR}/${PKG_SYSCONFDIR}/kamailio/kamailio.cfg ${DESTDIR}/${PREFIX}/share/examples/kamailio/kamailio.cfg
+	mv ${DESTDIR}/${PKG_SYSCONFDIR}/kamailio/kamctlrc ${DESTDIR}/${PREFIX}/share/examples/kamailio/kamctlrc
+
+CONF_FILES+=	share/examples/kamailio/kamailio.cfg  ${PKG_SYSCONFDIR}/kamailio/kamailio.cfg
+CONF_FILES+=	share/examples/kamailio/kamctlrc ${PKG_SYSCONFDIR}/kamailio/kamctlrc
 
 FAKE_NCURSES=	yes
-
-CONF_FILES+=	share/examples/kamailio/kamailio.cfg  ${PKGSYSCONFDIR}/kamailio/kamailio.cfg
-CONF_FILES+=	share/examples/kamailio/kamctlrc ${PKGSYSCONFDIR}/kamailio/kamctlrc
-
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
