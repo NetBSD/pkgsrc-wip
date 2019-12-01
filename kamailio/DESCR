@@ -1,7 +1,7 @@
 Kamailio (successor of former OpenSER and SER) is an Open Source SIP
 Server released under GPL, able to handle thousands of call setups per
 second. Kamailio can be used to build large platforms for VoIP and
-realtime communications – presence, WebRTC, Instant messaging and
+realtime communications - presence, WebRTC, Instant messaging and
 other applications.  Moreover, it can be easily used for scaling up
 SIP-to-PSTN gateways, PBX systems or media servers like Asterisk,
 FreeSWITCH or SEMS.

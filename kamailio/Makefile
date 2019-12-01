@@ -19,6 +19,9 @@ MAKE_ENV=	include_modules="xmpp"
 
 FAKE_NCURSES=	yes
 
+CONF_FILES+=	share/examples/kamailio/kamailio.cfg  ${PKGSYSCONFDIR}/kamailio/kamailio.cfg
+CONF_FILES+=	share/examples/kamailio/kamctlrc ${PKGSYSCONFDIR}/kamailio/kamctlrc
+
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

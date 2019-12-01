@@ -1,6 +1,4 @@
 @comment $NetBSD$
-etc/kamailio/kamailio.cfg
-etc/kamailio/kamctlrc
 lib64/kamailio/kamctl/dbtextdb/dbtextdb.py
 lib64/kamailio/kamctl/kamctl.base
 lib64/kamailio/kamctl/kamctl.ctlbase
