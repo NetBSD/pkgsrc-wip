@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (Ardour-5.12.0.tar.bz2) = 8bf06a17638e89531cab14af67cfd59d7185518f
+RMD160 (Ardour-5.12.0.tar.bz2) = 71c25f13445f4036ff7127d071d8c1e0851d5eb8
+SHA512 (Ardour-5.12.0.tar.bz2) = c4b4332bddb2406924119c181622801725f4a7dd7741c1a66ddbc2236542764b786337da2f0a751f3bbe6e0389b5da765eb19b14a6a90c8f8a7fd68231e5067d
+Size (Ardour-5.12.0.tar.bz2) = 8852834 bytes
+SHA1 (patch-gtk2__ardour_ardour__ui.cc) = c8bbd019ecab91081520bdfa999f13f96c9dc39d
+SHA1 (patch-libs_ardour_ardour_session__configuration__vars.h) = 32785e3c57c99cdabcb5e3b5c1c27845d8002835
+SHA1 (patch-libs_backends_jack_jack__audiobackend.cc) = 91c7f9418db89b187dac87035cbca6d953e36741
+SHA1 (patch-libs_backends_jack_jack__utils.cc) = 5866320e2e73c38b17a782bd618c17af344cebf7
+SHA1 (patch-wscript) = 70d73deed21e8ccda804470dbd9e3dbee4b140bc
