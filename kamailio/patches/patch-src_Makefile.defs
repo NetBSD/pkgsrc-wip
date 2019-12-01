@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- src/Makefile.defs.orig	2019-11-14 11:38:12.000000000 +0000
++++ src/Makefile.defs
+@@ -440,15 +440,7 @@ endif
+ 
+ $(info target architecture <$(ARCH)>, host architecture <$(HOST_ARCH)>)
+ 
+-LIBDIR ?=
+-ifeq ($(LIBDIR),)
+-ARCHBSZ= $(shell echo $(ARCH) | sed -e 's/.*64.*/64b/')
+-ifeq ($(ARCHBSZ),64b)
+-	LIBDIR = lib64
+-else
+-	LIBDIR = lib
+-endif
+-endif
++LIBDIR = lib
+ 
+ # dirs
+ cfg_dir = etc/$(MAIN_NAME)/
