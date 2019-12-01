@@ -1,5 +1,6 @@
 @comment $NetBSD$
 @pkgdir man/man7
+${PLIST.experimental}bin/gnunet-abd
 bin/gnunet-arm
 bin/gnunet-ats
 ${PLIST.experimental}bin/gnunet-auction-create
@@ -13,7 +14,6 @@ bin/gnunet-consensus-profiler
 ${PLIST.conversations}bin/gnunet-conversation
 ${PLIST.conversations}bin/gnunet-conversation-test
 bin/gnunet-core
-${PLIST.experimental}bin/gnunet-abd
 bin/gnunet-datastore
 bin/gnunet-dht-get
 bin/gnunet-dht-monitor
@@ -226,6 +226,7 @@ ${PLIST.linux}lib/gnunet/libexec/gnunet-helper-transport-wlan
 ${PLIST.linux}lib/gnunet/libexec/gnunet-helper-vpn
 lib/gnunet/libexec/gnunet-namestore-fcfsd
 lib/gnunet/libexec/gnunet-rest-server
+${PLIST.experimental}lib/gnunet/libexec/gnunet-service-abd
 lib/gnunet/libexec/gnunet-service-arm
 lib/gnunet/libexec/gnunet-service-ats
 ${PLIST.experimental}lib/gnunet/libexec/gnunet-service-auction
@@ -233,7 +234,6 @@ lib/gnunet/libexec/gnunet-service-cadet
 lib/gnunet/libexec/gnunet-service-consensus
 ${PLIST.conversations}lib/gnunet/libexec/gnunet-service-conversation
 lib/gnunet/libexec/gnunet-service-core
-${PLIST.experimental}lib/gnunet/libexec/gnunet-service-abd
 lib/gnunet/libexec/gnunet-service-datastore
 lib/gnunet/libexec/gnunet-service-dht
 lib/gnunet/libexec/gnunet-service-dns
@@ -281,8 +281,8 @@ lib/gnunet/libgnunet_plugin_datacache_heap.la
 ${PLIST.sqlite3}lib/gnunet/libgnunet_plugin_datacache_sqlite.la
 lib/gnunet/libgnunet_plugin_datastore_heap.la
 ${PLIST.sqlite3}lib/gnunet/libgnunet_plugin_datastore_sqlite.la
-${PLIST.conversations}lib/gnunet/libgnunet_plugin_gnsrecord_conversation.la
 ${PLIST.experimental}lib/gnunet/libgnunet_plugin_gnsrecord_abd.la
+${PLIST.conversations}lib/gnunet/libgnunet_plugin_gnsrecord_conversation.la
 lib/gnunet/libgnunet_plugin_gnsrecord_dns.la
 lib/gnunet/libgnunet_plugin_gnsrecord_gns.la
 lib/gnunet/libgnunet_plugin_gnsrecord_reclaim.la
@@ -309,6 +309,7 @@ lib/gnunet/libgnunet_plugin_transport_https_server.la
 lib/gnunet/libgnunet_plugin_transport_tcp.la
 lib/gnunet/libgnunet_plugin_transport_udp.la
 lib/gnunet/libgnunet_plugin_transport_unix.la
+${PLIST.experimental}lib/libgnunetabd.la
 lib/libgnunetarm.la
 lib/libgnunetats.la
 lib/libgnunetatstesting.la
@@ -318,7 +319,6 @@ lib/libgnunetcadet.la
 lib/libgnunetconsensus.la
 ${PLIST.conversations}lib/libgnunetconversation.la
 lib/libgnunetcore.la
-${PLIST.experimental}lib/libgnunetabd.la
 lib/libgnunetcurl.la
 lib/libgnunetdatacache.la
 lib/libgnunetdatastore.la
@@ -451,6 +451,7 @@ ${PLIST.mdoc}man/man7/gnunet-c-tutorial.7
 ${PLIST.mdoc}man/man7/gnunet-documentation.7
 share/doc/gnunet/COPYING
 share/doc/gnunet/README
+${PLIST.experimental}share/gnunet/config.d/abd.conf
 share/gnunet/config.d/arm.conf
 share/gnunet/config.d/ats.conf
 ${PLIST.experimental}share/gnunet/config.d/auction.conf
@@ -459,7 +460,6 @@ share/gnunet/config.d/communicator-unix.conf
 share/gnunet/config.d/consensus.conf
 ${PLIST.conversations}share/gnunet/config.d/conversation.conf
 share/gnunet/config.d/core.conf
-${PLIST.experimental}share/gnunet/config.d/abd.conf
 share/gnunet/config.d/datacache.conf
 share/gnunet/config.d/datastore.conf
 share/gnunet/config.d/dht.conf
