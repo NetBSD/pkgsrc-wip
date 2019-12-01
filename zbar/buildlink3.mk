@@ -10,6 +10,11 @@ BUILDLINK_PKGSRCDIR.zbar?=	../../wip/zbar
 
 pkgbase:=	zbar
 .include "../../mk/pkg-build-options.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 
 .endif # ZBAR_BUILDLINK3_MK
 

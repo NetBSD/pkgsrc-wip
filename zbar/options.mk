@@ -25,9 +25,12 @@ CONFIGURE_ARGS+=	--without-imagemagick
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-xshm
 CONFIGURE_ARGS+=	--with-xv
-.  include "../../x11/libX11/buildlink3.mk"
-.  include "../../x11/libXext/buildlink3.mk"
-.  include "../../x11/libXv/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xshm
