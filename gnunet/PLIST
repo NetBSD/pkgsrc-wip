@@ -25,6 +25,9 @@ bin/gnunet-fs
 bin/gnunet-gns
 bin/gnunet-gns-proxy-setup-ca
 bin/gnunet-identity
+${PLIST.perl}bin/gnunet-logread
+${PLIST.perl}bin/gnunet-logread-ipc
+${PLIST.perl}bin/gnunet-logread-ipc-sdedit
 bin/gnunet-namecache
 bin/gnunet-namestore
 bin/gnunet-nat

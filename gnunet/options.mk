@@ -5,7 +5,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 json
-PKG_SUPPORTED_OPTIONS+=		gstreamer
+PKG_SUPPORTED_OPTIONS+=		gstreamer perl
 # Should we name this qrcode instead?
 PKG_SUPPORTED_OPTIONS+=		zbar
 
@@ -26,6 +26,7 @@ PLIST_VARS+=			experimental json
 PLIST_VARS+=			pgsql mysql sqlite3
 PLIST_VARS+=			linux freebsd bluez
 PLIST_VARS+=			linuxfreebsd zbar
+PLIST_VARS+=			perl
 
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
@@ -175,4 +176,13 @@ PLIST.freebsd=		yes
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
 PLIST.linuxfreebsd=	yes
+.endif
+
+# optional gnunet-logread
+.if !empty(PKG_OPTIONS:Mperl)
+USE_TOOLS+=		perl:run
+PLIST.perl=		yes
+CONFIGURE_ARGS+=	--with-gnunet-logread
+.else
+CONFIGURE_ARGS+=	--without-gnunet-logread
 .endif
