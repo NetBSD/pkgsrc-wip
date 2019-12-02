@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (Vulkan-Loader/sdk-1.1.126.0.tar.gz) = 899a419aa4330f2093366e8a10ddba4ae325afa9
+RMD160 (Vulkan-Loader/sdk-1.1.126.0.tar.gz) = 7e6f4aa16996f7f4c4901101888c3f3fccbe591d
+SHA512 (Vulkan-Loader/sdk-1.1.126.0.tar.gz) = 8712542b722f786e818f0bf7ded45a1a5153f31d64e8481816032a332b654b29fc198dd3c2a4845b0b51c9e5dccb99fdf2d9e4d068972277109f007174f72c3d
+Size (Vulkan-Loader/sdk-1.1.126.0.tar.gz) = 1399019 bytes
+SHA1 (patch-CMakeLists.txt) = b7d2ca7074327dbebe99d6b6d1fad4805c564858
+SHA1 (patch-loader_CMakeLists.txt) = f61a39ee9b97858931474f20ec1b05d33ef0d231
+SHA1 (patch-loader_loader.c) = 1b5a4d1c9591690944b0e23076c06dba92d36773
+SHA1 (patch-loader_vk__loader__platform.h) = 4f71c25fc8b9b1a5ce622a402549874907f58fe3
+SHA1 (patch-tests_test__common.h) = 8a1a730027929791b7bbc9ffc0172f0fc8aafb73
