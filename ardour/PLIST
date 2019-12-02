@@ -3,12 +3,6 @@ bin/ardour5
 bin/ardour5-copy-mixer
 bin/ardour5-export
 bin/ardour5-fix_bbtppq
-etc/ardour5/ardour.keys
-etc/ardour5/ardour.menus
-etc/ardour5/clearlooks.rc
-etc/ardour5/default_ui_config
-etc/ardour5/system_config
-etc/ardour5/trx.menus
 lib/ardour5/LV2/a-comp.lv2/a-comp#stereo.ttl
 lib/ardour5/LV2/a-comp.lv2/a-comp.so
 lib/ardour5/LV2/a-comp.lv2/a-comp.ttl
@@ -430,6 +424,12 @@ share/ardour5/themes/clear_gray-ardour.colors
 share/ardour5/themes/cubasish-ardour.colors
 share/ardour5/themes/dark-ardour.colors
 share/ardour5/themes/unastudia-ardour.colors
+share/examples/ardour5/ardour.keys
+share/examples/ardour5/ardour.menus
+share/examples/ardour5/clearlooks.rc
+share/examples/ardour5/default_ui_config
+share/examples/ardour5/system_config
+share/examples/ardour5/trx.menus
 share/icons/hicolor/16x16/apps/ardour5.png
 share/icons/hicolor/22x22/apps/ardour5.png
 share/icons/hicolor/256x256/apps/ardour5.png

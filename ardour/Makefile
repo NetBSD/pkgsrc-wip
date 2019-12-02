@@ -17,6 +17,19 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++11
 
+EGDIR=		${PREFIX}/share/examples/ardour5
+
+WAF_ENV+=	EGDIR=${EGDIR}
+
+PKG_SYSCONFSUBDIR=	ardour5
+
+CONF_FILES+=	${EGDIR}/ardour.keys ${PKG_SYSCONFDIR}/ardour.keys
+CONF_FILES+=	${EGDIR}/ardour.menus ${PKG_SYSCONFDIR}/ardour.menus
+CONF_FILES+=	${EGDIR}/clearlooks.rc ${PKG_SYSCONFDIR}/clearlooks.rc
+CONF_FILES+=	${EGDIR}/default_ui_config ${PKG_SYSCONFDIR}/default_ui_config
+CONF_FILES+=	${EGDIR}/system_config ${PKG_SYSCONFDIR}/system_config
+CONF_FILES+=	${EGDIR}/trx.menus ${PKG_SYSCONFDIR}/trx.menus
+
 ARD_BACKENDS=	dummy
 
 .include "options.mk"
