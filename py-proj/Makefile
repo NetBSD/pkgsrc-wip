@@ -5,7 +5,8 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproj/}
 
-MAINTAINER=	jihbed.research@gmail.com
+#MAINTAINER=	jihbed.research@gmail.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/pyproj4/pyproj
 COMMENT=	Python interface to PROJ.4 library
 
