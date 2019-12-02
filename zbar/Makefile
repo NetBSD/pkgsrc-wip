@@ -16,7 +16,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++	# c++ needed only for test
 
-# XXX: should we move some of them to options.mk?
 CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--disable-video
 CONFIGURE_ARGS+=	--without-gtk
