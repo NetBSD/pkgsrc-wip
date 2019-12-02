@@ -32,9 +32,9 @@ PKGCONFIG_OVERRIDE+=	zbar.pc.in
 
 TEST_TARGET=	check
 
-# Python is needed only for test
-REPLACE_PYTHON+=	test/barcodetest.py
-PYTHON_FOR_BUILD_ONLY=	yes
+REPLACE_PYTHON+=		test/barcodetest.py
+PYTHON_FOR_BUILD_ONLY=		test
+PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../lang/python/application.mk"
 
 .include "options.mk"
