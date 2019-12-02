@@ -1720,6 +1720,7 @@ SUBDIR+=	kde-runtime4
 SUBDIR+=	kdebugsettings
 SUBDIR+=	kdecoration
 SUBDIR+=	kdialog
+SUBDIR+=	kea
 SUBDIR+=	keditbookmarks
 SUBDIR+=	kfind
 SUBDIR+=	kgamma5
