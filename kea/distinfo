@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (kea-1.6.1.tar.gz) = 165ee499c40a1033d733e8a5197522562804a19b
+RMD160 (kea-1.6.1.tar.gz) = 261b0ea1bca0a70034532112011c64ad809c37ec
+SHA512 (kea-1.6.1.tar.gz) = 4220f46fc185f4434ad01886d2d43ba1f9dcca57f5afa33235c8593269220a79e2dcb4ad71298dec868444c29e7cb6febe66a1456fdc116a2d9fd3f019f740d8
+Size (kea-1.6.1.tar.gz) = 7155604 bytes
+SHA1 (patch-configure) = 53270e1f31426557781705b272dc8b9a3b7b3d62
+SHA1 (patch-src_bin_keactrl_Makefile.in) = 5dbf9e096f7da3edd497876c665c3d5b14399cf5
+SHA1 (patch-src_hooks_dhcp_high__availability_Makefile.in) = 1158d793f0511d2f5121bfc8396c54a842f63794
+SHA1 (patch-src_hooks_dhcp_lease__cmds_Makefile.in) = 7440ac8d8e657703c87b704b11451f2615b75883
+SHA1 (patch-src_hooks_dhcp_mysql__cb_Makefile.in) = 2bef7d52a8d7c8390400ae02c8ecc230aefa6e83
+SHA1 (patch-src_hooks_dhcp_stat__cmds_Makefile.in) = dc5dafedc2f743946806f9d4e62e510b804be6c9
+SHA1 (patch-src_hooks_dhcp_user__chk_Makefile.in) = 581c12c11c4dfc524d8b5ca1e0ab91a9ee799486

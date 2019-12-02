@@ -1,0 +1,23 @@
+$NetBSD$
+* install conf files in exemples heirarcy
+--- src/bin/keactrl/Makefile.in.orig	2019-11-24 09:44:41.003245379 +0000
++++ src/bin/keactrl/Makefile.in
+@@ -824,15 +824,15 @@ kea-netconf.conf: kea-netconf.conf.pre
+ # To preserve any user modifications to the old version of the file,
+ # this old file is backed up as keactrl.conf.bak.
+ @INSTALL_CONFIGURATIONS_TRUE@install-data-local:
+-@INSTALL_CONFIGURATIONS_TRUE@	$(mkinstalldirs) $(DESTDIR)/@sysconfdir@/@PACKAGE@
++@INSTALL_CONFIGURATIONS_TRUE@	$(mkinstalldirs) $(DESTDIR)/@datarootdir@/examples/@PACKAGE@
+ @INSTALL_CONFIGURATIONS_TRUE@	for f in $(CONFIGFILES) ; do	\
+ @INSTALL_CONFIGURATIONS_TRUE@		if test -f $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f && \
+ @INSTALL_CONFIGURATIONS_TRUE@		   test $$f = "keactrl.conf"; then \
+ @INSTALL_CONFIGURATIONS_TRUE@			mv $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f \
+ @INSTALL_CONFIGURATIONS_TRUE@			   $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f.bak; \
+ @INSTALL_CONFIGURATIONS_TRUE@		fi; \
+-@INSTALL_CONFIGURATIONS_TRUE@		if test ! -f $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f; then \
+-@INSTALL_CONFIGURATIONS_TRUE@			${INSTALL_DATA} $$f $(DESTDIR)$(sysconfdir)/@PACKAGE@/; \
++@INSTALL_CONFIGURATIONS_TRUE@		if test ! -f $(DESTDIR)$(datarootdir)/@PACKAGE@/$$f; then \
++@INSTALL_CONFIGURATIONS_TRUE@			${INSTALL_DATA} $$f $(DESTDIR)$(datarootdir)/examples/@PACKAGE@/; \
+ @INSTALL_CONFIGURATIONS_TRUE@		fi; \
+ @INSTALL_CONFIGURATIONS_TRUE@	done
+ 

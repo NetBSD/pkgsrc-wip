@@ -1,0 +1,24 @@
+$NetBSD$
+* use c++ for linking c++ code
+--- src/hooks/dhcp/high_availability/Makefile.in.orig	2019-11-19 14:50:58.000000000 +0000
++++ src/hooks/dhcp/high_availability/Makefile.in
+@@ -160,8 +160,8 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-libdhcp_ha_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
++libdhcp_ha_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
++	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+ 	$(libdhcp_ha_la_LDFLAGS) $(LDFLAGS) -o $@
+ libha_la_LIBADD =
+ am_libha_la_OBJECTS = libha_la-command_creator.lo \
+@@ -615,7 +615,7 @@ clean-noinstLTLIBRARIES:
+ 	}
+ 
+ libdhcp_ha.la: $(libdhcp_ha_la_OBJECTS) $(libdhcp_ha_la_DEPENDENCIES) $(EXTRA_libdhcp_ha_la_DEPENDENCIES) 
+-	$(AM_V_CCLD)$(libdhcp_ha_la_LINK) -rpath $(lib_hooksdir) $(libdhcp_ha_la_OBJECTS) $(libdhcp_ha_la_LIBADD) $(LIBS)
++	$(AM_V_CXXLD)$(libdhcp_ha_la_LINK) -rpath $(lib_hooksdir) $(libdhcp_ha_la_OBJECTS) $(libdhcp_ha_la_LIBADD) $(LIBS)
+ 
+ libha.la: $(libha_la_OBJECTS) $(libha_la_DEPENDENCIES) $(EXTRA_libha_la_DEPENDENCIES) 
+ 	$(AM_V_CXXLD)$(libha_la_LINK)  $(libha_la_OBJECTS) $(libha_la_LIBADD) $(LIBS)

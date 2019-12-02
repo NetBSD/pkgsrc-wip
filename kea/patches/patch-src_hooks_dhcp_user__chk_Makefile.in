@@ -1,0 +1,26 @@
+$NetBSD$
+* use c++ for linking c++ code
+--- src/hooks/dhcp/user_chk/Makefile.in.orig	2019-11-19 14:50:58.000000000 +0000
++++ src/hooks/dhcp/user_chk/Makefile.in
+@@ -122,9 +122,9 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-libdhcp_user_chk_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
+-	$(AM_CFLAGS) $(CFLAGS) $(libdhcp_user_chk_la_LDFLAGS) \
++libdhcp_user_chk_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
++	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
++	$(AM_CXXFLAGS) $(CXXFLAGS) $(libdhcp_user_chk_la_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
+ libduc_la_LIBADD =
+ am_libduc_la_OBJECTS = libduc_la-load_unload.lo \
+@@ -527,7 +527,7 @@ clean-noinstLTLIBRARIES:
+ 	}
+ 
+ libdhcp_user_chk.la: $(libdhcp_user_chk_la_OBJECTS) $(libdhcp_user_chk_la_DEPENDENCIES) $(EXTRA_libdhcp_user_chk_la_DEPENDENCIES) 
+-	$(AM_V_CCLD)$(libdhcp_user_chk_la_LINK)  $(libdhcp_user_chk_la_OBJECTS) $(libdhcp_user_chk_la_LIBADD) $(LIBS)
++	$(AM_V_CXXLD)$(libdhcp_user_chk_la_LINK)  $(libdhcp_user_chk_la_OBJECTS) $(libdhcp_user_chk_la_LIBADD) $(LIBS)
+ 
+ libduc.la: $(libduc_la_OBJECTS) $(libduc_la_DEPENDENCIES) $(EXTRA_libduc_la_DEPENDENCIES) 
+ 	$(AM_V_CXXLD)$(libduc_la_LINK)  $(libduc_la_OBJECTS) $(libduc_la_LIBADD) $(LIBS)

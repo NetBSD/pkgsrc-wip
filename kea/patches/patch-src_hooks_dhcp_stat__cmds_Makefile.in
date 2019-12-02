@@ -1,0 +1,26 @@
+$NetBSD$
+* use c++ for linking c++ code
+--- src/hooks/dhcp/stat_cmds/Makefile.in.orig	2019-11-19 14:50:58.000000000 +0000
++++ src/hooks/dhcp/stat_cmds/Makefile.in
+@@ -161,9 +161,9 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-libdhcp_stat_cmds_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
+-	$(AM_CFLAGS) $(CFLAGS) $(libdhcp_stat_cmds_la_LDFLAGS) \
++libdhcp_stat_cmds_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
++	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
++	$(AM_CXXFLAGS) $(CXXFLAGS) $(libdhcp_stat_cmds_la_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
+ libstat_cmds_la_LIBADD =
+ am_libstat_cmds_la_OBJECTS = libstat_cmds_la-stat_cmds.lo \
+@@ -613,7 +613,7 @@ clean-noinstLTLIBRARIES:
+ 	}
+ 
+ libdhcp_stat_cmds.la: $(libdhcp_stat_cmds_la_OBJECTS) $(libdhcp_stat_cmds_la_DEPENDENCIES) $(EXTRA_libdhcp_stat_cmds_la_DEPENDENCIES) 
+-	$(AM_V_CCLD)$(libdhcp_stat_cmds_la_LINK) -rpath $(lib_hooksdir) $(libdhcp_stat_cmds_la_OBJECTS) $(libdhcp_stat_cmds_la_LIBADD) $(LIBS)
++	$(AM_V_CXXLD)$(libdhcp_stat_cmds_la_LINK) -rpath $(lib_hooksdir) $(libdhcp_stat_cmds_la_OBJECTS) $(libdhcp_stat_cmds_la_LIBADD) $(LIBS)
+ 
+ libstat_cmds.la: $(libstat_cmds_la_OBJECTS) $(libstat_cmds_la_DEPENDENCIES) $(EXTRA_libstat_cmds_la_DEPENDENCIES) 
+ 	$(AM_V_CXXLD)$(libstat_cmds_la_LINK)  $(libstat_cmds_la_OBJECTS) $(libstat_cmds_la_LIBADD) $(LIBS)
