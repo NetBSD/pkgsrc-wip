@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2015/07/07 17:16:35 leot1990 Exp $
 
 SHA1 (zbar-0.10.tar.bz2) = 273b47c26788faba4325baecc34063e27a012963
 RMD160 (zbar-0.10.tar.bz2) = a68db3e81d596a506e50e797c3540a05b8b84a9f
+SHA512 (zbar-0.10.tar.bz2) = 76cb8a469e3ac9ea7932a95c500cf933501249cdb8dce4df558bf5681bd44c62111327b494e6e887079a5fd30b32154887dcc12962e6d27b1453f55457483db4
 Size (zbar-0.10.tar.bz2) = 592602 bytes
 SHA1 (patch-include_zbar_Exception.h) = 9addd50c1d7a6041e76b301620329d910a51d10f
 SHA1 (patch-zbarimg_zbarimg.c) = 52011ebc05ab10ac98b39c296c2bed679160a693
