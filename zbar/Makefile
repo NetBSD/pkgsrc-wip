@@ -35,7 +35,7 @@ TEST_TARGET=	check
 
 REPLACE_PYTHON+=		test/barcodetest.py
 PYTHON_FOR_BUILD_ONLY=		test
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_ACCEPTED=	27	# tests not ported to Python 3
 .include "../../lang/python/application.mk"
 
 .include "options.mk"
