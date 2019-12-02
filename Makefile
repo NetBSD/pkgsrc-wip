@@ -167,7 +167,6 @@ SUBDIR+=	arangodb
 SUBDIR+=	aravis
 SUBDIR+=	arcan
 SUBDIR+=	archimedes
-SUBDIR+=	ardour
 SUBDIR+=	arduino-builder
 SUBDIR+=	arduino-ctags
 SUBDIR+=	argouml
