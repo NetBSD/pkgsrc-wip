@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/compute-accuracy
-bin/distance
-bin/word-analogy
-bin/word2phrase
-bin/word2vec
