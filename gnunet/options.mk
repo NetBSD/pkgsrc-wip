@@ -12,13 +12,19 @@ PKG_SUPPORTED_OPTIONS+=		zbar
 # mdoc should be fixed in 0.11.9, missing files were included
 # post-0.11.8.
 # in 0.11.9 when fixed for pkgsrc, add back idn.
-PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer zbar idn
+PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer idn
 
 # bluez is still in pkgsrc-wip, and I should test this
 # before claiming bluez from pkgsrc-wip on Linux works.
 # However, this is a supported option for GNUnet.
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=		bluez
+.endif
+
+# gnunet-qr needs zbar with video support. v4l2 only supports a
+# limited range of Operating Systems.
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+PKG_SUGGESTED_OPTIONS+=		zbar
 .endif
 
 PLIST_VARS+=			doc mdoc conversations
