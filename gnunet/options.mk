@@ -5,7 +5,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 json
-PKG_SUPPORTED_OPTIONS+=		gstreamer perl
+PKG_SUPPORTED_OPTIONS+=		gstreamer perl verbose-logging
 # Should we name this qrcode instead?
 PKG_SUPPORTED_OPTIONS+=		zbar
 
@@ -106,6 +106,9 @@ CONFIGURE_ARGS+=	--without-postgres
 .if !empty(PKG_OPTIONS:Mexperimental)
 CONFIGURE_ARGS+=	--enable-experimental
 PLIST.experimental=	yes
+.  if !empty(PKG_OPTIONS:Mverbose-logging)
+CONFIGURE_ARGS+=	--enable-logging=verbose
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-experimental
 .endif
