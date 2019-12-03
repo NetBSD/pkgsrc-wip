@@ -31,6 +31,8 @@ PKGCONFIG_OVERRIDE+=	zbar.pc.in
 
 TEST_TARGET=	check
 
+#TEST_DEPENDS+=	argp-[0-9]*:../../devel/argp
+
 # Examples and tests require python
 # XXX: use big hammer to forcely disable python
 #REPLACE_PYTHON+=		test/barcodetest.py examples/upcrpc.py

@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.1 2015/07/07 16:24:57 leot1990 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zbar
-PKG_SUPPORTED_OPTIONS=	imagemagick x11
+PKG_SUPPORTED_OPTIONS=	imagemagick x11 tests
 PKG_SUGGESTED_OPTIONS=	imagemagick x11
 
 .include "../../mk/bsd.options.mk"
@@ -34,4 +34,8 @@ CONFIGURE_ARGS+=	--with-xv
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xshm
 CONFIGURE_ARGS+=	--without-xv
+.endif
+
+.if !empty(PKG_OPTIONS:Mtests)
+.include "../../devel/argp/buildlink3.mk"
 .endif
