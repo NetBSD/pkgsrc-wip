@@ -1,5 +1,3 @@
-* ImageMagick is not properly detected as version 7, as the guard for
-  it doesn't pick up version 7 include.
 * python3 support must be tested (new in this release)
 * `make test' no longer works, build of tests fail with:
 
