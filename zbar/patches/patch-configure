@@ -1,10 +1,11 @@
 # $NetBSD$
 
-portability patches.
-commited upstream as f326730fff1cb3ea7c98d30f67fc94481468d468.
+Avoid unportable `==' test(1) operator.
 
---- configure~	2019-12-03 00:20:34.563193890 +0000
-+++ configure	2019-12-03 00:26:36.840747736 +0000
+Commited upstream as f326730fff1cb3ea7c98d30f67fc94481468d468.
+
+--- configure.orig	2019-12-03 00:20:34.563193890 +0000
++++ configure
 @@ -21590,7 +21590,7 @@
  
  
