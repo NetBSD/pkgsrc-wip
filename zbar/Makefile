@@ -22,9 +22,6 @@ CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-qt
 
-# pkgsrc ImageMagick always provide also <MagickWand.h> there is no need
-# to check it also manually (and this breaks with ImageMagick-7)
-CONFIGURE_ENV+=		ac_cv_header_wand_MagickWand_h=yes
 # \todo: JAVAC=${JAVAC/ecj/ecj -1.5} is a bashim: ${parm/?/pat[/str]}
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
@@ -35,10 +32,11 @@ PKGCONFIG_OVERRIDE+=	zbar.pc.in
 TEST_TARGET=	check
 
 # Examples and tests require python
-REPLACE_PYTHON+=		test/barcodetest.py examples/upcrpc.py
-PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_ACCEPTED=	27	# tests not ported to Python 3?
-.include "../../lang/python/application.mk"
+# XXX: use big hammer to forcely disable python
+#REPLACE_PYTHON+=		test/barcodetest.py examples/upcrpc.py
+#PYTHON_FOR_BUILD_ONLY=		test
+#PYTHON_VERSIONS_ACCEPTED=	27	# tests not ported to Python 3?
+#.include "../../lang/python/application.mk"
 
 .include "options.mk"
 

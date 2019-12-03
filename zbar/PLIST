@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/07 16:24:57 leot1990 Exp $
+@comment $NetBSD$
 ${PLIST.imagemagick}bin/zbarimg
 include/zbar.h
 include/zbar/Decoder.h
@@ -12,11 +12,11 @@ include/zbar/Video.h
 include/zbar/Window.h
 lib/libzbar.la
 lib/pkgconfig/zbar.pc
-${PLIST.imagemagick}man/man1/zbarimg.1
+man/man1/zbarimg.1
 share/doc/zbar/COPYING
-share/doc/zbar/HACKING
-share/doc/zbar/INSTALL
-share/doc/zbar/LICENSE
-share/doc/zbar/NEWS
-share/doc/zbar/README
-share/doc/zbar/TODO
+share/doc/zbar/HACKING.md
+share/doc/zbar/INSTALL.md
+share/doc/zbar/LICENSE.md
+share/doc/zbar/NEWS.md
+share/doc/zbar/README.md
+share/doc/zbar/TODO.md
