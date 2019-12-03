@@ -536,6 +536,3 @@ share/kea/scripts/pgsql/upgrade_3.3_to_4.0.sh
 share/kea/scripts/pgsql/upgrade_4.0_to_5.0.sh
 share/kea/scripts/pgsql/upgrade_5.0_to_5.1.sh
 share/kea/scripts/pgsql/wipe_data.sh
-@pkgdir var/run/kea
-@pkgdir var/log
-@pkgdir var/lib/kea

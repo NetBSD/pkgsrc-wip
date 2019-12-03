@@ -31,6 +31,10 @@ KEA_CONF+=	keactrl.conf
 CONF_FILES+=	${EGDIR}/${cf} ${PKG_SYSCONFDIR}/${cf}
 .endfor
 
+OWN_DIRS+=	${VARBASE}/run/kea
+OWN_DIRS+=	${VARBASE}/lib/kea
+OWN_DIRS+=	${VARBASE}/log
+
 .include "options.mk"
 
 .include "../../devel/log4cplus/buildlink3.mk"
