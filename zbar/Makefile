@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config bash gmake
+USE_TOOLS+=	pkg-config bash
 USE_LANGUAGES=	c c++	# c++ needed only for test
 
 CONFIGURE_ARGS+=	--with-jpeg
