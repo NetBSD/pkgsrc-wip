@@ -1,0 +1,114 @@
+# $NetBSD$
+
+portability patches.
+commited upstream as f326730fff1cb3ea7c98d30f67fc94481468d468.
+
+--- configure~	2019-12-03 00:20:34.563193890 +0000
++++ configure	2019-12-03 00:26:36.840747736 +0000
+@@ -21590,7 +21590,7 @@
+ 
+ 
+ 
+-if test "x$with_gtk" == "xgtk3" || test "x$with_gtk" == "xauto"; then :
++if test "x$with_gtk" = "xgtk3" || test "x$with_gtk" = "xauto"; then :
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTK3" >&5
+@@ -21693,7 +21693,7 @@
+ 
+ fi
+ 
+-if test "x$with_gtk" == "xgtk2" || test "x$with_gtk" == "xauto"; then :
++if test "x$with_gtk" = "xgtk2" || test "x$with_gtk" = "xauto"; then :
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTK2" >&5
+@@ -21845,7 +21845,7 @@
+ 
+ 
+ if test -z "$PYTHON"; then :
+-  if test "x$with_python" == "xauto"; then :
++  if test "x$with_python" = "xauto"; then :
+   for ac_prog in python3 python2 python
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+@@ -21893,7 +21893,7 @@
+ test -n "$PYTHON" || PYTHON=":"
+ 
+ else
+-  if test "x$with_python" == "xpython3"; then :
++  if test "x$with_python" = "xpython3"; then :
+   for ac_prog in python3 python
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+@@ -21941,7 +21941,7 @@
+ test -n "$PYTHON" || PYTHON=":"
+ 
+ else
+-  if test "x$with_python" == "xpython2"; then :
++  if test "x$with_python" = "xpython2"; then :
+   for ac_prog in python2 python
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+@@ -22450,7 +22450,7 @@
+ 
+ 
+ 
+-if test "x$with_gir" == "xyes" && test "x$with_gtk" != "xno"; then :
++if test "x$with_gir" = "xyes" && test "x$with_gtk" != "xno"; then :
+ 
+ 
+ 
+@@ -23110,7 +23110,7 @@
+ done
+ test -n "$JAR" || JAR=":"
+ 
+-if test "x$JAR" == "x:"; then :
++if test "x$JAR" = "x:"; then :
+   have_java="no"
+ fi
+ 
+@@ -23163,7 +23163,7 @@
+ 
+ 
+ 
+-if test "x$CLASSPATH" == "x"; then :
++if test "x$CLASSPATH" = "x"; then :
+   CLASSPATH="."
+ fi
+ 
+@@ -26983,7 +26983,7 @@
+ echo "GObject introspection  --with-gir=$with_gir"
+ echo "Qt                     --with-qt=$with_qt            Qt${QT_VERSION}"
+ echo "Java                   --with-java=$with_java"
+-if test "x$win32" == "xno"; then :
++if test "x$win32" = "xno"; then :
+   echo "Dbus                   --with-dbus=$with_dbus"
+ fi
+ if test "x$have_GM" = "xyes"; then :
+@@ -27014,7 +27014,7 @@
+ if test "x$have_GM" = "xyes"; then :
+   echo "        => ImageMagick is preferred, as GraphicsMagick doesn't support https"
+ fi
+-if test "x$with_gtk" == "xno"; then :
++if test "x$with_gtk" = "xno"; then :
+   echo "        => GTK support will *NOT* be built"
+ fi
+ if test "x$with_pygtk2" != "xyes" && test "xPYTHON_VERSION_MAJOR" = "x2"; then :
+@@ -27023,7 +27023,7 @@
+ if test "x$with_qt" != "xyes"; then :
+   echo "        => the Qt widget will *NOT* be built"
+ fi
+-if test "x$with_qt" == "xyes" && test "x$enable_static_qt" == "xyes" ; then :
++if test "x$with_qt" = "xyes" && test "x$enable_static_qt" = "xyes" ; then :
+   echo "        => Building a static Qt library"
+ fi
+ if test "x$with_java" != "xyes"; then :
+@@ -27035,6 +27035,6 @@
+ #echo "NPAPI Plugin     --with-npapi=$with_npapi"
+ #AS_IF([test "x$with_mozilla" != "xyes"],
+ #  [echo "       => the Mozilla/Firefox/OpenOffice plugin will *NOT* be built"])
+-if test "x$enable_pdf417" == "xyes"; then :
++if test "x$enable_pdf417" = "xyes"; then :
+   echo "        => the pdf417 code support is incomplete!"
+ fi
