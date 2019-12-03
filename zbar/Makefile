@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config bash
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++	# c++ needed only for test
 
 CONFIGURE_ARGS+=	--with-jpeg
@@ -21,9 +21,6 @@ CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-qt
-
-# \todo: JAVAC=${JAVAC/ecj/ecj -1.5} is a bashim: ${parm/?/pat[/str]}
-CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 PKGCONFIG_OVERRIDE+=	zbar-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	zbar-qt.pc.in
