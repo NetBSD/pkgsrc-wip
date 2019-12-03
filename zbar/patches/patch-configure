@@ -1,7 +1,10 @@
 # $NetBSD$
 
-Avoid unportable `==' test(1) operator and a
-`${parameter/pattern/string}' bash-ism.
+- Avoid unportable `==' test(1) operator
+- Avoid `${parameter/pattern/string}' bash-ism
+- Only honor `--with-python' configure argument and completely ignore
+  possible PYTHON environment variable that could be passed via
+  CONFIGURE_ENV by pkgsrc
 
 `==' unportable test(1) operator commited upstream as
 f326730fff1cb3ea7c98d30f67fc94481468d468.
@@ -26,16 +29,18 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
  
  pkg_failed=no
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTK2" >&5
-@@ -21845,7 +21845,7 @@ fi
+@@ -21844,8 +21844,9 @@ fi
  
  
+ 
++if false; then
  if test -z "$PYTHON"; then :
 -  if test "x$with_python" == "xauto"; then :
 +  if test "x$with_python" = "xauto"; then :
    for ac_prog in python3 python2 python
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
-@@ -21893,7 +21893,7 @@ done
+@@ -21893,7 +21894,7 @@ done
  test -n "$PYTHON" || PYTHON=":"
  
  else
@@ -44,7 +49,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
    for ac_prog in python3 python
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
-@@ -21941,7 +21941,7 @@ done
+@@ -21941,7 +21942,7 @@ done
  test -n "$PYTHON" || PYTHON=":"
  
  else
@@ -53,7 +58,15 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
    for ac_prog in python2 python
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
-@@ -22450,7 +22450,7 @@ fi
+@@ -22000,6 +22001,7 @@ else
+   with_python="auto"
+ 
+ fi
++fi
+ 
+ if test "x$with_python" != "xno"; then :
+ 
+@@ -22450,7 +22452,7 @@ fi
  
  
  
@@ -62,7 +75,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
  
  
  
-@@ -23002,7 +23002,7 @@ else
+@@ -23002,7 +23004,7 @@ else
  fi
  
  
@@ -71,7 +84,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
  
  # Javah was obsoleted on Java 8 and removed on Java 11. So, we need to
  # look strictly at the $JAVA_HOME in order to avoid mixing different versions
-@@ -23110,7 +23110,7 @@ fi
+@@ -23110,7 +23112,7 @@ fi
  done
  test -n "$JAR" || JAR=":"
  
@@ -80,7 +93,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
    have_java="no"
  fi
  
-@@ -23163,7 +23163,7 @@ test -n "$JAVA" || JAVA="/bin/false"
+@@ -23163,7 +23165,7 @@ test -n "$JAVA" || JAVA="/bin/false"
  
  
  
@@ -89,7 +102,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
    CLASSPATH="."
  fi
  
-@@ -26981,7 +26981,7 @@ echo "GTK                    --with-gtk=
+@@ -26981,7 +26985,7 @@ echo "GTK                    --with-gtk=
  echo "GObject introspection  --with-gir=$with_gir"
  echo "Qt                     --with-qt=$with_qt            Qt${QT_VERSION}"
  echo "Java                   --with-java=$with_java"
@@ -98,7 +111,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
    echo "Dbus                   --with-dbus=$with_dbus"
  fi
  if test "x$have_GM" = "xyes"; then :
-@@ -27012,7 +27012,7 @@ fi
+@@ -27012,7 +27016,7 @@ fi
  if test "x$have_GM" = "xyes"; then :
    echo "        => ImageMagick is preferred, as GraphicsMagick doesn't support https"
  fi
@@ -107,7 +120,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
    echo "        => GTK support will *NOT* be built"
  fi
  if test "x$with_pygtk2" != "xyes" && test "xPYTHON_VERSION_MAJOR" = "x2"; then :
-@@ -27021,7 +27021,7 @@ fi
+@@ -27021,7 +27025,7 @@ fi
  if test "x$with_qt" != "xyes"; then :
    echo "        => the Qt widget will *NOT* be built"
  fi
@@ -116,7 +129,7 @@ f326730fff1cb3ea7c98d30f67fc94481468d468.
    echo "        => Building a static Qt library"
  fi
  if test "x$with_java" != "xyes"; then :
-@@ -27033,6 +27033,6 @@ fi
+@@ -27033,6 +27037,6 @@ fi
  #echo "NPAPI Plugin     --with-npapi=$with_npapi"
  #AS_IF([test "x$with_mozilla" != "xyes"],
  #  [echo "       => the Mozilla/Firefox/OpenOffice plugin will *NOT* be built"])

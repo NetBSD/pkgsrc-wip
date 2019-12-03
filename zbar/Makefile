@@ -28,12 +28,10 @@ PKGCONFIG_OVERRIDE+=	zbar.pc.in
 
 TEST_TARGET=	check
 
-# Examples and tests require python
-# XXX: use big hammer to forcely disable python
-#REPLACE_PYTHON+=		test/barcodetest.py examples/upcrpc.py
-#PYTHON_FOR_BUILD_ONLY=		test
-#PYTHON_VERSIONS_ACCEPTED=	27	# tests not ported to Python 3?
-#.include "../../lang/python/application.mk"
+REPLACE_PYTHON+=		test/barcodetest.py examples/upcrpc.py
+PYTHON_FOR_BUILD_ONLY=		test
+PYTHON_VERSIONS_ACCEPTED=	27	# XXX: double-check me!
+.include "../../lang/python/application.mk"
 
 .include "options.mk"
 

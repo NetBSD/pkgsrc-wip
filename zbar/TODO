@@ -13,5 +13,3 @@
    | ld: test/test_decode-test_decode.o: in function `main':
    | test_decode.c:(.text.startup+0x17): undefined reference to `argp_parse'
    | ld: test_decode.c:(.text.startup+0x2f5): undefined reference to `argp_help'
-
-* python2 is (probably) accidentally picked up
