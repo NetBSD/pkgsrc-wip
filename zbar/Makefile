@@ -6,7 +6,7 @@ MASTER_SITES=	https://linuxtv.org/downloads/zbar/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://zbar.sourceforge.net/
+HOMEPAGE=	https://github.com/mchehab/zbar
 COMMENT=	Bar code reader
 LICENSE=	gnu-lgpl-v2.1
 
