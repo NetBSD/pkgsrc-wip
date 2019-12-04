@@ -148,7 +148,7 @@ CONFIGURE_ARGS+=	--without-libpulse
 .endif
 
 .if !empty(PKG_OPTIONS:Mzbar)
-.include "../../wip/zbar/buildlink3.mk"
+.include "../../graphics/zbar/buildlink3.mk"
 PLIST.zbar=		yes
 .else
 CONFIGURE_ARGS+=	--without-zbar
