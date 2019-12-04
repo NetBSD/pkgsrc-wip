@@ -13,7 +13,6 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++	# c++ needed only for test
 
 CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--disable-video
@@ -25,13 +24,6 @@ CONFIGURE_ARGS+=	--without-qt
 PKGCONFIG_OVERRIDE+=	zbar-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	zbar-qt.pc.in
 PKGCONFIG_OVERRIDE+=	zbar.pc.in
-
-TEST_TARGET=	check
-
-REPLACE_PYTHON+=		test/barcodetest.py examples/upcrpc.py
-PYTHON_FOR_BUILD_ONLY=		test
-PYTHON_VERSIONS_ACCEPTED=	27	# XXX: double-check me!
-.include "../../lang/python/application.mk"
 
 .include "options.mk"
 
