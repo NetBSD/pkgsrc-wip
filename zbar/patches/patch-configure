@@ -1,4 +1,4 @@
-# $NetBSD$
+$NetBSD$
 
 - Avoid unportable `==' test(1) operator
 - Avoid `${parameter/pattern/string}' bash-ism
