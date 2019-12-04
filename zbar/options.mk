@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--with-xv
 .  include "../../x11/libICE/buildlink3.mk"
 .  include "../../x11/libSM/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--with-x=no
 CONFIGURE_ARGS+=	--without-xshm
 CONFIGURE_ARGS+=	--without-xv
 .endif
