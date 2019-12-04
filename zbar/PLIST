@@ -12,7 +12,7 @@ include/zbar/Video.h
 include/zbar/Window.h
 lib/libzbar.la
 lib/pkgconfig/zbar.pc
-man/man1/zbarimg.1
+${PLIST.imagemagick}man/man1/zbarimg.1
 share/doc/zbar/COPYING
 share/doc/zbar/HACKING.md
 share/doc/zbar/INSTALL.md
