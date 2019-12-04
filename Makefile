@@ -5073,7 +5073,6 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zbackup
-SUBDIR+=	zbar
 SUBDIR+=	zenity
 SUBDIR+=	zero-epwing-git
 SUBDIR+=	zetacoin
