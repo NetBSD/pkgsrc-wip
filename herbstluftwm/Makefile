@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2014/06/05 23:55:47 yrmt Exp $
 
-DISTNAME=	herbstluftwm-0.7.0
+DISTNAME=	herbstluftwm-0.7.2
 CATEGORIES=	wm
 MASTER_SITES=	http://herbstluftwm.org/tarballs/
 
