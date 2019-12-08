@@ -95,7 +95,6 @@ SUBDIR+=	agfl
 SUBDIR+=	agile
 SUBDIR+=	ags
 SUBDIR+=	aida
-SUBDIR+=	aiomixer
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
 SUBDIR+=	akonadi
