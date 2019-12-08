@@ -10,10 +10,6 @@ COMMENT=	Kernel multitouch event translation
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-USE_TOOLS+=	autoconf automake
 GNU_CONFIGURE=	yes
-
-pre-configure:
-	cd ${WRKSRC} &&autoreconf -fiv
 
 .include "../../mk/bsd.pkg.mk"
