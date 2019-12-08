@@ -2,11 +2,11 @@
 # used by wip/libudev/Makefile
 # used by wip/udev/Makefile
 
-DISTNAME=	libudev-228
+DISTNAME=	libudev-243
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gentoo/}
 GITHUB_PROJECT=	eudev
-GITHUB_TAG=	v3.2.8 # udev version 228 according to configure.ac
+GITHUB_TAG=	v3.2.9 # udev version 243 according to configure.ac
 DISTINFO_FILE=	${.CURDIR}/../../wip/libudev/distinfo
 
 MAINTAINER=	nykula@ukr.net

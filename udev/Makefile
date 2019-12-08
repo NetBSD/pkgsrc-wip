@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	udev-228
+PKGNAME=	udev-243
 COMMENT=	Hotplug daemon
 CONFIGURE_ARGS+=	--disable-hwdb
 

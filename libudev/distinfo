@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libudev-228.tar.gz) = 1cf0ed7275d631ade61df671644e617848a1de0a
-RMD160 (libudev-228.tar.gz) = c4a3e955c9c2ecdb0c9a56f03b6c1961a18e9146
-SHA512 (libudev-228.tar.gz) = 7fd95ee97882ccde46fe3d035629596480331b8131bddb70b490e526c1b86a3191b7d52d21ac09b236487bc643ba9cf59c9c965a1d34de384ed0efdad2b9b040
-Size (libudev-228.tar.gz) = 1945439 bytes
+SHA1 (libudev-243.tar.gz) = 0648c6e104057fc074a80a742d316cd0b6bee949
+RMD160 (libudev-243.tar.gz) = ba9fb2a43fa9687ab5b6d3065c42ef0b3121dd31
+SHA512 (libudev-243.tar.gz) = 33ee9849875fc381fc1bd9eef9119b96ed4014719ccf96f88c957e2c53ae6c46152bc0623e5efc99579a4063ab25251ed63ffe69441bca3b0074398cffda7747
+Size (libudev-243.tar.gz) = 2014826 bytes
