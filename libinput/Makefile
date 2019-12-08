@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libinput-1.14.2
+DISTNAME=	libinput-1.14.3
 CATEGORIES=	devel
 MASTER_SITES=	https://www.freedesktop.org/software/libinput/
 EXTRACT_SUFX=	.tar.xz
