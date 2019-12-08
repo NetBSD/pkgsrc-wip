@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bluez-5.51
+DISTNAME=	bluez-5.52
 CATEGORIES=	net
 MASTER_SITES=	https://mirrors.edge.kernel.org/pub/linux/bluetooth/
 
