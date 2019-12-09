@@ -4792,6 +4792,7 @@ SUBDIR+=	udp-ping
 SUBDIR+=	udunits2
 SUBDIR+=	uebimiau
 SUBDIR+=	ufc
+SUBDIR+=	ufetch
 SUBDIR+=	uffizi
 SUBDIR+=	uget
 SUBDIR+=	uhd-git
