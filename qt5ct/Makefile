@@ -26,6 +26,9 @@ do-configure:
 
 TOOL_DEPENDS+=		qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
+post-install:
+	(mv /usr/bin/qt5ct /usr/pkg/bin && mv /usr/share/qt5ct /usr/pkg/share)
+
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

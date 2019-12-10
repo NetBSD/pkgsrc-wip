@@ -1,7 +1,5 @@
 --The package builds, installs and works as intended.
 
---The packages installs in /usr/bin, should install in /usr/pkg/bin
-
 --Install message should be added so the user can use the package,
 Add line 'export QT_QPA_PLATFORMTHEME=qt5ct' to ~/.profile and re-login.
 Alternatively, create the file /etc/X11/Xsession.d/100-qt5ct with the following line:
