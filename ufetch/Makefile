@@ -17,6 +17,6 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
 do-install:
-	(cd ${WRKDIR}/${DISTNAME} && mv ufetch-netbsd ufetch &&  chmod +x ufetch && mv ufetch /usr/pkg/bin)
+	(cd ${WRKDIR}/${DISTNAME} && mv ufetch-netbsd ufetch && chmod +x ufetch && cp ufetch /usr/pkg/bin)
 
 .include "../../mk/bsd.pkg.mk"
