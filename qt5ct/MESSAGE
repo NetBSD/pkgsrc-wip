@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE, Exp $
+
+To use qt5ct add the line
+'export QT_QPA_PLARFORMTHEME=qt5ct'
+to ~/.profile and re-login.
+
+===========================================================================

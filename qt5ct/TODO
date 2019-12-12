@@ -1,11 +1,8 @@
 --The package builds, installs and works as intended.
 
---Install message should be added so the user can use the package,
-Add line 'export QT_QPA_PLATFORMTHEME=qt5ct' to ~/.profile and re-login.
-Alternatively, create the file /etc/X11/Xsession.d/100-qt5ct with the following line:
- 
-export QT_QPA_PLATFORMTHEME=qt5ct
-
-Now restart X11 server to take the changes effect.
-
 --make print-PLIST gives no output?
+Fixed PLIST manually. Don't know if this acceptable?
+
+--What's the correct way to fix the install path?
+My post-install hack feels ugly.
+Is this acceptable?

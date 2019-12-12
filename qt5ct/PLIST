@@ -1,1 +1,13 @@
 @comment $NetBSD$
+bin/qt5ct
+share/qt5ct/colors/airy.conf
+share/qt5ct/colors/darker.conf
+share/qt5ct/colors/dusk.conf
+share/qt5ct/colors/sand.conf
+share/qt5ct/colors/simple.conf
+share/qt5ct/colors/waves.conf
+share/qt5ct/qss/fusion-fixes.qss
+share/qt5ct/qss/scrollbar-simple.qss
+share/qt5ct/qss/sliders-simple.qss
+share/qt5ct/qss/tooltip-simple.qss
+share/qt5ct/qss/traynotification-simple.qss
