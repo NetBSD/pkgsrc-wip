@@ -3106,6 +3106,7 @@ SUBDIR+=	py-asciimathml
 SUBDIR+=	py-ase
 SUBDIR+=	py-aspects
 SUBDIR+=	py-aspell
+SUBDIR+=	py-aspy.yaml
 SUBDIR+=	py-aspyct
 SUBDIR+=	py-ass
 SUBDIR+=	py-astlib
