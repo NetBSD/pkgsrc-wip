@@ -1,0 +1,4 @@
+gnunet-go contains a Go implementation of GNUnet: It is WIP and only
+provides a very limited coverage of GNUnet. The goal is to have a
+complete, functionally equivalent implementation of the GNUnet
+protocol in Go.
