@@ -13,21 +13,14 @@ LICENSE=		2-clause-bsd
 USE_TOOLS=		pkg-config
 USE_LANGUAGES=		c c++
 
-WRKSRC=         	${WRKDIR}/${DISTNAME}
-
-QTDIR=			/usr/pkg/qt5
-MAKE_ENV+=		QTPREFIX=${QTDIR}
-QMAKE=			${QTPREFIX}/bin/qmake
-CONFIGURE_ENV+=		QMAKE=${QMAKE}
-CONFIGURE_ARGS+= 	QMAKE
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
-	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile)
+	cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} \
+	${QTDIR}/bin/qmake -o Makefile PREFIX=${PREFIX}
 
 TOOL_DEPENDS+=		qt5-qttools-[0-9]*:../../x11/qt5-qttools
-
-post-install:
-	(mv /usr/bin/qt5ct /usr/pkg/bin && mv /usr/share/qt5ct /usr/pkg/share)
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"

@@ -1,8 +1,0 @@
---The package builds, installs and works as intended.
-
---make print-PLIST gives no output?
-Fixed PLIST manually. Don't know if this acceptable?
-
---What's the correct way to fix the install path?
-My post-install hack feels ugly.
-Is this acceptable?
