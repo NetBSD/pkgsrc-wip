@@ -4,5 +4,5 @@ SHA1 (nix-2.3.1.tar.gz) = 7a08687d40b3f2fd80d3e315195e956eab787f10
 RMD160 (nix-2.3.1.tar.gz) = 65fe91b3cd5ea9ebf2a1fdaa848a8ffb02f2043e
 SHA512 (nix-2.3.1.tar.gz) = 47b2455cd9527bd6dae1eb35351c679e230b69429315be73b2c49c7d649044e5e39d09d6d95d5c946061548d2aa25eff62535655a6033a6740ab40641f02c11d
 Size (nix-2.3.1.tar.gz) = 894698 bytes
-SHA1 (patch-src_libexpr_primops_fetchGit.cc) = f2dedfdf5c0e579ac94fdad91f64c5dc679efe96
-SHA1 (patch-src_nix_main.cc) = 3e10eea84c4e9371952393837d8900c92a107a08
+SHA1 (patch-src_libexpr_primops_fetchGit.cc) = eed459c989279873a8b48044e0925de88cb358b0
+SHA1 (patch-src_nix_main.cc) = 060a7020ecfa416b5da2cf1afcd4c9307815362e

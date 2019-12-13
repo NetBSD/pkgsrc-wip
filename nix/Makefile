@@ -14,6 +14,8 @@ USE_TOOLS+=		automake autoconf autoreconf
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 
+BUILD_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
+
 PKGCONFIG_OVERRIDE+=	src/libexpr/nix-expr.pc.in
 PKGCONFIG_OVERRIDE+=	src/libmain/nix-main.pc.in
 PKGCONFIG_OVERRIDE+=	src/libstore/nix-store.pc.in
