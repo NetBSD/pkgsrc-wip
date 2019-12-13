@@ -1,0 +1,4 @@
+This package is WIP. It currently fails to build and exists to
+aid packaging once gnunet-go reaches a state mature enough to
+be considered release-worthy. Other issues (namespaces etc)
+will be addressed in time as well.
