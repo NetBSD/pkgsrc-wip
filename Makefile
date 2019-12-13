@@ -3498,6 +3498,7 @@ SUBDIR+=	py-ibis
 SUBDIR+=	py-ibmiotf
 SUBDIR+=	py-icane
 SUBDIR+=	py-idalink
+SUBDIR+=	py-identify
 SUBDIR+=	py-idx2numpy
 SUBDIR+=	py-ift-nifty
 SUBDIR+=	py-igraph
