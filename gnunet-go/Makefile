@@ -2,7 +2,7 @@
 
 DISTNAME=		gnunet-go-0.0.20191112
 CATEGORIES=		net
-MASTER_SITES=		https://git.gnznet.org/gnunet-go.git
+MASTER_SITES=		https://git.gnunet.org/gnunet-go.git
 
 GIT_REPOSITORIES=	gnunet-go
 GIT_REPO.gnunet-go=	https://git.gnunet.org/gnunet-go.git
@@ -13,8 +13,8 @@ HOMEPAGE=	https://git.gnunet.org/gnunet-go.git/
 COMMENT=	GNUnet implementation in Go
 LICENSE=	gnu-agpl-v3
 
-GO_DEFAULT_VERSION=	go113
 .include "../../mk/bsd.prefs.mk"
+GO_DEFAULT_VERSION=	go113
 
 GO_SRCPATH=		gnunet
 GO_DIST_BASE=		gnunet-go/src/*
