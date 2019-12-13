@@ -3694,6 +3694,7 @@ SUBDIR+=	py-nipy
 SUBDIR+=	py-nipy-data
 SUBDIR+=	py-nlib
 SUBDIR+=	py-node-semver
+SUBDIR+=	py-nodeenv
 SUBDIR+=	py-nodepy
 SUBDIR+=	py-nose-parameterized
 SUBDIR+=	py-nose-pathmunge
