@@ -20,5 +20,9 @@
     => An option "xdg-utils" already exists in pkgsrc
 [X] Update to Git commit 5ff8ed31515de647a636c4adf778ee63608f4aed
     => Remove patches merged upstream
+[X] Update to Git commit b0bd3ab3e50c96c8974927e703ec0c31690c1274
+    => Add patch for string parameter to FatalError()
+[X] Sent pkgsrc patch to upstream
+    => Ticket #37
 [ ] Import final eureka 1.25 release
 [ ] Switch back to FLTK version from pkgsrc current
