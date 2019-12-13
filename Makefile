@@ -2996,6 +2996,7 @@ SUBDIR+=	powwow
 SUBDIR+=	ppp
 SUBDIR+=	ppr
 SUBDIR+=	praat
+SUBDIR+=	pre-commit
 SUBDIR+=	preftools
 SUBDIR+=	preload
 SUBDIR+=	premake
