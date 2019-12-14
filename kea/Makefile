@@ -2,12 +2,14 @@
 
 DISTNAME=	kea-1.6.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/
-MASTER_SITES+=	https://downloads.isc.org/isc/kea/${PKGVERSION_NOREV}/
+MASTER_SITES=   https://downloads.isc.org/isc/kea/${PKGVERSION_NOREV}/
+MASTER_SITES+=	ftp://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/
+MASTER_SITES+=	ftp://ftp.ripe.net/mirrors/sites/ftp.isc.org/isc/kea/${PKGVERSION_NOREV}
+MASTER_SITES+=	ftp://ftp.iij.ad.jp/pub/network/isc/kea/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.isc.org/kea/
-COMMENT=	DHCP server from ISC
+COMMENT=	DHCP servers from ISC
 LICENSE=	mpl-2.0
 
 GNU_CONFIGURE=	yes
