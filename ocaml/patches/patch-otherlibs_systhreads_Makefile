@@ -1,5 +1,7 @@
 $NetBSD$
 
+Honor LFLAGS.
+
 --- otherlibs/systhreads/Makefile.orig	2019-03-01 15:13:46.000000000 +0000
 +++ otherlibs/systhreads/Makefile
 @@ -21,6 +21,7 @@ include $(ROOTDIR)/Makefile.common

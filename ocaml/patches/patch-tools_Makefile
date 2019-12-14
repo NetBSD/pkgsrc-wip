@@ -1,5 +1,7 @@
 $NetBSD$
 
+Honor LDFLAGS.
+
 --- tools/Makefile.orig	2019-09-11 14:40:30.000000000 +0000
 +++ tools/Makefile
 @@ -82,7 +82,7 @@ INCLUDES = $(addprefix -I $(ROOTDIR)/,ut

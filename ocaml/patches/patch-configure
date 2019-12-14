@@ -1,5 +1,12 @@
 $NetBSD$
 
+All kinds of OS-specific changes to configure
+Honor LDFLAGS.
+
+Add SunOS -lnsl -lsocket
+Recognise SunOS/amd64 as amd64
+Recognise SunOS as having shared libraries
+
 --- configure.orig	2019-09-11 14:40:30.000000000 +0000
 +++ configure
 @@ -13281,7 +13281,7 @@ sharedlib_cflags=''

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Honor LDFLAGS.
+
 --- ocamldoc/Makefile.orig	2019-03-01 15:13:46.000000000 +0000
 +++ ocamldoc/Makefile
 @@ -104,7 +104,7 @@ DEPINCLUDES=$(INCLUDES_DEP)

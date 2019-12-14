@@ -1,5 +1,8 @@
 $NetBSD$
 
+Use BSD_INSTALL_* instead of mkdir
+Honor LDFLAGS
+
 --- Makefile.orig	2019-04-18 10:10:54.000000000 +0000
 +++ Makefile
 @@ -54,7 +54,7 @@ INCLUDES=-I utils -I parsing -I typing -
