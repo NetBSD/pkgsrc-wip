@@ -1,13 +1,13 @@
-$NetBSD: patch-src_VBox_Additions_x11_vboxvideo_pointer.c,v 1.1 2015/09/15 20:56:04 tnn2 Exp $
+$NetBSD$
 
---- src/VBox/Additions/x11/vboxvideo/pointer.c.orig	2015-09-08 07:03:17.000000000 +0000
+--- src/VBox/Additions/x11/vboxvideo/pointer.c.orig	2019-10-10 18:28:12.000000000 +0000
 +++ src/VBox/Additions/x11/vboxvideo/pointer.c
-@@ -17,6 +17,8 @@
- 
- #include <VBox/VBoxGuestLib.h>
+@@ -28,6 +28,8 @@
+  * OTHER DEALINGS IN THE SOFTWARE.
+  */
  
 +#include "xorg-server.h"
 +
  #ifndef PCIACCESS
- # include <xf86Pci.h>
+ # include "xf86Pci.h"
  # include <Pci.h>

@@ -1,10 +1,10 @@
-$NetBSD: patch-include_VBox_VBoxGuest.h,v 1.1 2015/09/15 20:56:04 tnn2 Exp $
+$NetBSD$
 
---- include/VBox/VBoxGuest.h.orig	2015-09-08 07:03:01.000000000 +0000
+--- include/VBox/VBoxGuest.h.orig	2019-10-10 18:25:38.000000000 +0000
 +++ include/VBox/VBoxGuest.h
-@@ -527,7 +527,7 @@ typedef VBOXGUESTOS2IDCCONNECT *PVBOXGUE
+@@ -980,7 +980,7 @@ RT_C_DECLS_END
+ #endif
  
- #endif /* RT_OS_OS2 */
  
 -#if defined(RT_OS_LINUX) || defined(RT_OS_SOLARIS) || defined(RT_OS_FREEBSD)
 +#if defined(RT_OS_LINUX) || defined(RT_OS_SOLARIS) || defined(RT_OS_FREEBSD) || defined(RT_OS_NETBSD)
