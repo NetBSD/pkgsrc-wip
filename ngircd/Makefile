@@ -10,7 +10,9 @@ COMMENT=	A free, portable and lightweight IRC server.
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c
 
 RCD_SCRIPTS+=	ngircd
 
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
