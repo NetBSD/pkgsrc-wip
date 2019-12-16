@@ -6,7 +6,7 @@ CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yapf/}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	https://github.com/google/
+HOMEPAGE=	https://github.com/google/yapf/
 COMMENT=	Python files formatter
 LICENSE=	apache-2.0
 
