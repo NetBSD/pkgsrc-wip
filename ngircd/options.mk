@@ -1,6 +1,9 @@
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ngircd
-PKG_SUPPORTED_OPTIONS=	zlib openssl gnutls tcpwrap ident pam iconv ipv6 sniffer irc+ strictrfc
-PKG_SUGGESTED_OPTIONS=	zlib ident ipv6
+# $NetBSD$
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ngircd
+PKG_SUPPORTED_OPTIONS=		zlib tcpwrap ident pam iconv inet6 sniffer irc+ strictrfc
+PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls openssl
+PKG_SUGGESTED_OPTIONS=		zlib ident inet6 gnutls
 
 .include "../../mk/bsd.options.mk"
 
@@ -38,7 +41,7 @@ CONFIGURE_ARGS+=	--with-iconv
 .  include "../../converters/libiconv/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mipv6)
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
