@@ -10,13 +10,13 @@ HOMEPAGE=	https://gitlab.com/jschx/ufetch/-/archive/v0.1/
 COMMENT=	Tiny system info for Unix-like operating systems
 LICENSE=	isc
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-
 USE_LANGUAGES=	# none
-
+USE_TOOLS+=	pax
 NO_BUILD=	yes
+NO_CONFIGURE=	yes
 
 do-install:
-	(cd ${WRKDIR}/${DISTNAME} && mv ufetch-netbsd ufetch && chmod +x ufetch && cp ufetch /usr/pkg/bin)
+	cd ${WRKSRC} && mv ufetch-netbsd ufetch && \
+	${PAX} -rw ufetch ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
