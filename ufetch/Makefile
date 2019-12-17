@@ -13,10 +13,13 @@ LICENSE=	isc
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 NO_BUILD=	yes
-NO_CONFIGURE=	yes
+
+INSTALLATION_DIRS+=	share/doc/ufetch
 
 do-install:
 	cd ${WRKSRC} && mv ufetch-netbsd ufetch && \
 	${PAX} -rw ufetch ${DESTDIR}${PREFIX}/bin/
+	cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/LICENSE \
+	${DESTDIR}${PREFIX}/share/doc/ufetch/LICENSE
 
 .include "../../mk/bsd.pkg.mk"
