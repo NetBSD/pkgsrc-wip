@@ -17,5 +17,11 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
+post-install:
+.for b in bandit bandit-baseline bandit-config-generator
+	${MV} ${DESTDIR}${PREFIX}/bin/${b} \
+	    ${DESTDIR}${PREFIX}/bin/${b}${PYVERSSUFFIX} || ${TRUE}
+.endfor
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
