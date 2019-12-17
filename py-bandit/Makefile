@@ -6,7 +6,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bandit/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://wiki.openstack.org/wiki/Security/Projects/Bandit
+HOMEPAGE=	https://github.com/PyCQA/bandit
 COMMENT=	Security oriented static analyser for python code
 LICENSE=	apache-2.0
 
