@@ -77,9 +77,6 @@ ${PYSITELIB}/git/objects/tree.pyo
 ${PYSITELIB}/git/objects/util.py
 ${PYSITELIB}/git/objects/util.pyc
 ${PYSITELIB}/git/objects/util.pyo
-${PYSITELIB}/git/odict.py
-${PYSITELIB}/git/odict.pyc
-${PYSITELIB}/git/odict.pyo
 ${PYSITELIB}/git/refs/__init__.py
 ${PYSITELIB}/git/refs/__init__.pyc
 ${PYSITELIB}/git/refs/__init__.pyo
@@ -132,6 +129,10 @@ ${PYSITELIB}/git/test/fixtures/commit_with_gpgsig
 ${PYSITELIB}/git/test/fixtures/diff_2
 ${PYSITELIB}/git/test/fixtures/diff_2f
 ${PYSITELIB}/git/test/fixtures/diff_abbrev-40_full-index_M_raw_no-color
+${PYSITELIB}/git/test/fixtures/diff_change_in_type
+${PYSITELIB}/git/test/fixtures/diff_change_in_type_raw
+${PYSITELIB}/git/test/fixtures/diff_copied_mode
+${PYSITELIB}/git/test/fixtures/diff_copied_mode_raw
 ${PYSITELIB}/git/test/fixtures/diff_f
 ${PYSITELIB}/git/test/fixtures/diff_file_with_spaces
 ${PYSITELIB}/git/test/fixtures/diff_i
@@ -150,7 +151,9 @@ ${PYSITELIB}/git/test/fixtures/diff_rename_raw
 ${PYSITELIB}/git/test/fixtures/diff_tree_numstat_root
 ${PYSITELIB}/git/test/fixtures/for_each_ref_with_path_component
 ${PYSITELIB}/git/test/fixtures/git_config
+${PYSITELIB}/git/test/fixtures/git_config-inc.cfg
 ${PYSITELIB}/git/test/fixtures/git_config_global
+${PYSITELIB}/git/test/fixtures/git_config_multiple
 ${PYSITELIB}/git/test/fixtures/git_config_with_comments
 ${PYSITELIB}/git/test/fixtures/git_config_with_empty_value
 ${PYSITELIB}/git/test/fixtures/git_file
