@@ -534,6 +534,7 @@ SUBDIR+=	cvstrac
 SUBDIR+=	cwebx
 SUBDIR+=	cwm
 SUBDIR+=	cycle
+SUBDIR+=	cyclone
 SUBDIR+=	cygwin
 SUBDIR+=	cygwin-binutils
 SUBDIR+=	d-feet
