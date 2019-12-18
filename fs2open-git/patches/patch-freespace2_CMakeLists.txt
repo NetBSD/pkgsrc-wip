@@ -1,0 +1,15 @@
+$NetBSD$
+
+Don't use the architecture suffix.
+
+--- freespace2/CMakeLists.txt.orig	2019-11-03 18:11:22.000000000 +0000
++++ freespace2/CMakeLists.txt
+@@ -23,7 +23,7 @@ ADD_EXECUTABLE(Freespace2 ${EXE_GUI_TYPE
+ 
+ include(resources.cmake)
+ 
+-SET_TARGET_PROPERTIES(Freespace2 PROPERTIES OUTPUT_NAME "fs2_open_${FSO_BINARY_SUFFIX}")
++SET_TARGET_PROPERTIES(Freespace2 PROPERTIES OUTPUT_NAME "fs2_open")
+ 
+ TARGET_LINK_LIBRARIES(Freespace2 code)
+ TARGET_LINK_LIBRARIES(Freespace2 platform)

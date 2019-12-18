@@ -1,0 +1,2 @@
+@comment $NetBSD$
+bin/fs2_open

@@ -890,6 +890,7 @@ SUBDIR+=	frobtads
 SUBDIR+=	fs-uae-dev
 SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fs2open
+SUBDIR+=	fs2open-git
 SUBDIR+=	fsharp
 SUBDIR+=	fslsfonts
 SUBDIR+=	fsom

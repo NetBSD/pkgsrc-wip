@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (patch-cmake_platform-unix.cmake) = 54de840e05b9ac738e84e9e33f17ce623599ec6d
+SHA1 (patch-cmake_platforms.cmake) = b91c2544b2225f7d00fa35272dd2b20725e1ba3e
+SHA1 (patch-cmake_toolchain-clang.cmake) = b3c9375059a56d2963e60d83bac38e690ea6eabc
+SHA1 (patch-cmake_toolchain-gcc.cmake) = 957a15184012f3924f265ca467bcf5875d15ff96
+SHA1 (patch-code_libs_renderdoc_renderdoc__app.h) = 8c7179a15fc5015bd8f27267fda237f3e9c7b15e
+SHA1 (patch-code_network_multi__portfwd.cpp) = 4f08bfa9b1376a9c7c054067ff993dac157280c2
+SHA1 (patch-code_osapi_dialogs.cpp) = 10eb8c64f633c6b4db62bee7bc56e07631e22f08
+SHA1 (patch-freespace2_CMakeLists.txt) = 78cfadc9c91c90636c60bba164be387bf39b9a11
+SHA1 (patch-lib_libpcp_src_net_gateway.c) = 47cf7aff4231c5b1914609bde7025d8f9def8d67
+SHA1 (patch-lib_libpcp_src_net_sock__ntop.c) = 8d1dc4326c714010f6632ab7d229874e4357a982
