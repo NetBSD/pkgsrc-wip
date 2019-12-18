@@ -1,0 +1,10 @@
+Sagittarius is a Scheme script engine; it reads Scheme programs,
+compiles it on-the-fly and executes it on a virtual machine.
+Sagittarius conforms the language standard "Revised^6 Report on
+the Algorithmic Language Scheme" (R6RS), "Revised^7 Report on the
+Algorithmic Language Scheme" (R7RS), and supports various common
+libraries defined in "Scheme Requests for Implementation" (SRFI)s.
+
+There are a lot of Scheme implementations and they have different
+strong and weak points. Sagittarius focuses on "Flexibility" and
+"Easy to Use".

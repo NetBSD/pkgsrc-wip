@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (sagittarius-0.9.6.tar.gz) = 0a30c1d7edf016a68e2b9116bd209e4a653f309c
+RMD160 (sagittarius-0.9.6.tar.gz) = 6686d692abe76375310ca8b125a2cc3b752978ce
+SHA512 (sagittarius-0.9.6.tar.gz) = b399125b6bb1710e43334087813d22af0a58a647acb6aced1f68292713af6f7b910d642af31eb344175e52fc5b8985c1dda6f65d3bd239087c3a5a7889f00aca
+Size (sagittarius-0.9.6.tar.gz) = 7013686 bytes
+SHA1 (patch-ext_process_CMakeLists.txt) = 35c2fca79eb808362bf5ef1a41ad00260522d4f3

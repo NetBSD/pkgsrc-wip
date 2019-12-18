@@ -4366,6 +4366,7 @@ SUBDIR+=	s6-portable-utils
 SUBDIR+=	sabnzbdplus
 SUBDIR+=	sacc-git
 SUBDIR+=	safekeep
+SUBDIR+=	sagittarius
 SUBDIR+=	sailor
 SUBDIR+=	sais
 SUBDIR+=	sais-demo-data

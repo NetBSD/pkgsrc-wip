@@ -1,0 +1,25 @@
+$NetBSD$
+
+Add support for NetBSD.
+
+--- ext/process/CMakeLists.txt.orig	2019-06-09 21:33:58.000000000 +0000
++++ ext/process/CMakeLists.txt
+@@ -16,6 +16,8 @@ ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "Linux
+   # For shm_open, shm_unlink
+   # NB FreeBSD has it on libc
+   TARGET_LINK_LIBRARIES(sagittarius--process rt)
++ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++  TARGET_LINK_LIBRARIES(sagittarius--process rt)
+ ENDIF()
+ 
+ 
+@@ -39,6 +41,9 @@ IF(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+   # NB FreeBSD has it on libc
+   TARGET_LINK_LIBRARIES(test-shm rt)
+   TARGET_LINK_LIBRARIES(test-sem rt pthread)
++ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++  TARGET_LINK_LIBRARIES(test-shm rt)
++  TARGET_LINK_LIBRARIES(test-sem rt pthread)
+ ELSEIF (${SAGITTARIUS_PLATFORM} MATCHES ".*bsd" 
+     OR ${SAGITTARIUS_OS} STREQUAL "qnx")
+   TARGET_LINK_LIBRARIES(test-shm c)
