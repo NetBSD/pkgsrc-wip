@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.baresip
-PKG_SUPPORTED_OPTIONS=		alsa cairo ffmpeg gstreamer gtk x265 ilbc jack
+PKG_SUPPORTED_OPTIONS=		alsa cairo ffmpeg gstreamer gtk ilbc jack
 PKG_SUPPORTED_OPTIONS+=		libvpx oss opencore-amr opus portaudio
 PKG_SUPPORTED_OPTIONS+=		pulseaudio sdl2 sndfile sndio speex v4l2
 PKG_SUPPORTED_OPTIONS+=		x11
@@ -57,20 +57,6 @@ MAKE_FLAGS+=	USE_GTK=yes
 .include "../../x11/gtk2/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_GTK=
-.endif
-
-###
-### H265 support (video codec)
-###
-.if !empty(PKG_OPTIONS:Mx265)
-PLIST.x265=	yes
-MAKE_FLAGS+=	USE_H265=yes
-LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
-LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../multimedia/x265/buildlink3.mk"
-.else
-MAKE_FLAGS+=	USE_H265=
 .endif
 
 ###

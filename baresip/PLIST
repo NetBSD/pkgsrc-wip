@@ -23,7 +23,6 @@ lib/baresip/modules/gsm.so
 ${PLIST.gstreamer}lib/baresip/modules/gst1.so
 ${PLIST.gstreamer}lib/baresip/modules/gst_video1.so
 ${PLIST.gtk}lib/baresip/modules/gtk.so
-${PLIST.x265}lib/baresip/modules/h265.so
 lib/baresip/modules/httpd.so
 lib/baresip/modules/ice.so
 ${PLIST.ilbc}lib/baresip/modules/ilbc.so
@@ -38,7 +37,7 @@ lib/baresip/modules/plc.so
 ${PLIST.portaudio}lib/baresip/modules/portaudio.so
 lib/baresip/modules/presence.so
 ${PLIST.pulseaudio}lib/baresip/modules/pulse.so
-${PLIST.sdl2}lib/baresip/modules/sdl2.so
+${PLIST.sdl2}lib/baresip/modules/sdl.so
 lib/baresip/modules/selfview.so
 ${PLIST.sndfile}lib/baresip/modules/sndfile.so
 ${PLIST.speex}lib/baresip/modules/speex_pp.so
