@@ -772,6 +772,7 @@ SUBDIR+=	exult-snapshot
 SUBDIR+=	ez-pine-gpg
 SUBDIR+=	ezbounce
 SUBDIR+=	f1spirit
+SUBDIR+=	f2bgl
 SUBDIR+=	f3
 SUBDIR+=	faast
 SUBDIR+=	facedetect
