@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (rawgl-0.2.1.tar.gz) = b53b13be9013dd9834e86f54c16a08a917ce3525
+RMD160 (rawgl-0.2.1.tar.gz) = 319517586e95c18fa679ad381aa46afb6a3786e6
+SHA512 (rawgl-0.2.1.tar.gz) = 9f7fb55d375b38d7b05232250875c7174f52b6f9f390bdcbcad6866119525703036c99b56f6c5b09cddd6bbcfa67e364a24fe2d18bd69152f866f5e404e2cdc2
+Size (rawgl-0.2.1.tar.gz) = 65404 bytes
+SHA1 (patch-mixer.cpp) = e9ba0ed7da8d2684d693b32541f883525ceb87f8

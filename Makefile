@@ -4244,6 +4244,7 @@ SUBDIR+=	ratpoints
 SUBDIR+=	ratproxy
 SUBDIR+=	raw
 SUBDIR+=	rawdog
+SUBDIR+=	rawgl
 SUBDIR+=	rc.d.Interix
 SUBDIR+=	rclone
 SUBDIR+=	rdsn-git
