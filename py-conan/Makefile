@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	conan-1.19.1
+DISTNAME=	conan-1.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/conan/}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-JWT>=1.4.0<2.0.0:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.8.1<3.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.3<0.5.0:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11<6.0:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-patch-1.16:../../wip/py-patch
+DEPENDS+=	${PYPKGPREFIX}-patch-ng-1.17.2:../../wip/py-patch-ng
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-node-semver-0.6.1:../../wip/py-node-semver

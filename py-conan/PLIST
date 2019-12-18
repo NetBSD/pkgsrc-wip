@@ -28,12 +28,15 @@ ${PYSITELIB}/conans/unicode.pyc
 ${PYSITELIB}/conans/build_info/__init__.py
 ${PYSITELIB}/conans/build_info/__init__.pyo
 ${PYSITELIB}/conans/build_info/__init__.pyc
+${PYSITELIB}/conans/build_info/build_info.pyo
+${PYSITELIB}/conans/build_info/build_info.pyc
 ${PYSITELIB}/conans/build_info/command.pyo
 ${PYSITELIB}/conans/build_info/command.pyc
 ${PYSITELIB}/conans/build_info/conan_build_info.pyo
 ${PYSITELIB}/conans/build_info/conan_build_info.pyc
 ${PYSITELIB}/conans/build_info/model.pyo
 ${PYSITELIB}/conans/build_info/model.pyc
+${PYSITELIB}/conans/build_info/build_info.py
 ${PYSITELIB}/conans/build_info/command.py
 ${PYSITELIB}/conans/build_info/conan_build_info.py
 ${PYSITELIB}/conans/build_info/model.py
@@ -140,8 +143,6 @@ ${PYSITELIB}/conans/client/cmd/download.pyo
 ${PYSITELIB}/conans/client/cmd/download.pyc
 ${PYSITELIB}/conans/client/cmd/export.pyo
 ${PYSITELIB}/conans/client/cmd/export.pyc
-${PYSITELIB}/conans/client/cmd/export_linter.pyo
-${PYSITELIB}/conans/client/cmd/export_linter.pyc
 ${PYSITELIB}/conans/client/cmd/export_pkg.pyo
 ${PYSITELIB}/conans/client/cmd/export_pkg.pyc
 ${PYSITELIB}/conans/client/cmd/new.pyo
@@ -163,7 +164,6 @@ ${PYSITELIB}/conans/client/cmd/copy.py
 ${PYSITELIB}/conans/client/cmd/create.py
 ${PYSITELIB}/conans/client/cmd/download.py
 ${PYSITELIB}/conans/client/cmd/export.py
-${PYSITELIB}/conans/client/cmd/export_linter.py
 ${PYSITELIB}/conans/client/cmd/export_pkg.py
 ${PYSITELIB}/conans/client/cmd/new.py
 ${PYSITELIB}/conans/client/cmd/new_ci.py
@@ -397,6 +397,8 @@ ${PYSITELIB}/conans/client/tools/pkg_config.pyo
 ${PYSITELIB}/conans/client/tools/pkg_config.pyc
 ${PYSITELIB}/conans/client/tools/scm.pyo
 ${PYSITELIB}/conans/client/tools/scm.pyc
+${PYSITELIB}/conans/client/tools/settings.pyo
+${PYSITELIB}/conans/client/tools/settings.pyc
 ${PYSITELIB}/conans/client/tools/system_pm.pyo
 ${PYSITELIB}/conans/client/tools/system_pm.pyc
 ${PYSITELIB}/conans/client/tools/version.pyo
@@ -411,6 +413,7 @@ ${PYSITELIB}/conans/client/tools/net.py
 ${PYSITELIB}/conans/client/tools/oss.py
 ${PYSITELIB}/conans/client/tools/pkg_config.py
 ${PYSITELIB}/conans/client/tools/scm.py
+${PYSITELIB}/conans/client/tools/settings.py
 ${PYSITELIB}/conans/client/tools/system_pm.py
 ${PYSITELIB}/conans/client/tools/version.py
 ${PYSITELIB}/conans/client/tools/win.py
@@ -691,8 +694,6 @@ ${PYSITELIB}/conans/test/utils/cpp_test_files.pyo
 ${PYSITELIB}/conans/test/utils/cpp_test_files.pyc
 ${PYSITELIB}/conans/test/utils/deprecation.pyo
 ${PYSITELIB}/conans/test/utils/deprecation.pyc
-${PYSITELIB}/conans/test/utils/go_test_files.pyo
-${PYSITELIB}/conans/test/utils/go_test_files.pyc
 ${PYSITELIB}/conans/test/utils/multi_config.pyo
 ${PYSITELIB}/conans/test/utils/multi_config.pyc
 ${PYSITELIB}/conans/test/utils/profiles.pyo
@@ -710,7 +711,6 @@ ${PYSITELIB}/conans/test/utils/visual_project_files.pyc
 ${PYSITELIB}/conans/test/utils/conanfile.py
 ${PYSITELIB}/conans/test/utils/cpp_test_files.py
 ${PYSITELIB}/conans/test/utils/deprecation.py
-${PYSITELIB}/conans/test/utils/go_test_files.py
 ${PYSITELIB}/conans/test/utils/multi_config.py
 ${PYSITELIB}/conans/test/utils/profiles.py
 ${PYSITELIB}/conans/test/utils/python_test_files.py
