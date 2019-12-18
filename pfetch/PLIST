@@ -1,3 +1,2 @@
 @comment $NetBSD$
 bin/pfetch
-share/doc/pfetch/LICENSE.md

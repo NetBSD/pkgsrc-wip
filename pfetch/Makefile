@@ -14,12 +14,10 @@ USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS+=	bin share/doc/pfetch
+INSTALLATION_DIRS+=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} \
 		${DESTDIR}${PREFIX}/bin/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.md \
-		${DESTDIR}${PREFIX}/share/doc/pfetch/LICENSE.md
 
 .include "../../mk/bsd.pkg.mk"
