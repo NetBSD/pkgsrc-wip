@@ -11,14 +11,13 @@ COMMENT=	Tiny system info for Unix-like operating systems
 LICENSE=	isc
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pax
 NO_BUILD=	yes
 
-INSTALLATION_DIRS+=	share/doc/ufetch
+INSTALLATION_DIRS+=	bin share/doc/ufetch
 
 do-install:
 	cd ${WRKSRC} && mv ufetch-netbsd ufetch && \
-	${PAX} -rw ufetch ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/ufetch ${DESTDIR}${PREFIX}/bin/
 	cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/LICENSE \
 	${DESTDIR}${PREFIX}/share/doc/ufetch/LICENSE
 
