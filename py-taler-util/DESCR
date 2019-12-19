@@ -1,0 +1,6 @@
+taler-util contains util code for the GNU Taler project, specifically
+it contains python code for:
+
+- amount representation
+- logging
+- configuration parsing
