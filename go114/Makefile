@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2019/12/07 21:34:17 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
+GO114_VERSION=	1.14beta1 # This should be in go/version.mk
 
-DISTNAME=	go${GO113_VERSION}.src
-PKGNAME=	go113-${GO113_VERSION}
+DISTNAME=	go${GO114_VERSION}.src
+PKGNAME=	go114-${GO114_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	gtar
@@ -13,7 +14,7 @@ HOMEPAGE=	http://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
 
-GOVERSSUFFIX=	113
+GOVERSSUFFIX=	114
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
 
@@ -105,7 +106,7 @@ do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}
 	find ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} -name \*.orig -exec rm {} \;
 .for cmd in go gofmt
-	${LN} -sf ${PREFIX}/go113/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
+	${LN} -sf ${PREFIX}/go${GOVERSSUFFIX}/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
 .endfor
 
 do-test:
