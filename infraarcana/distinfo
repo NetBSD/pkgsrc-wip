@@ -1,13 +1,7 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-SHA1 (infraarcana/ia-19.2.tar.gz) = 3f0358fb61aa67421a3a034950a49233dd3a56ee
-RMD160 (infraarcana/ia-19.2.tar.gz) = c48d186c3ac2b5349f4518598850114c76ae6d93
-SHA512 (infraarcana/ia-19.2.tar.gz) = ebb6c867f4ea4475cc30c6f95ae5f571fbf825d0d0a7329e9a55c911209082234806808d24f4ff7aa8c4cdd0df63116ab54fd496fea6f8f88110cd039ae6b3e7
-Size (infraarcana/ia-19.2.tar.gz) = 40289272 bytes
-SHA1 (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = 31fbc2acf9d8fc99199cb6ff4ab41da5ca7fca27
-RMD160 (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = c3514d15cc7b3eccb4682415581dec2b4b7f0626
-SHA512 (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = 71a07c0e4d25ecdfba39e71d44df7927f7564af3d9a3f348cfd3f79387a86cc6ecd546c493cfc4db53f62d675896d21237e9ed3ed65e72d21b3be88bf1cc50f7
-Size (infraarcana/rl_utils-86c9cc3dfca4782f78050c282e435168d2b7ba29.zip) = 17982 bytes
-SHA1 (patch-CMakeLists.txt) = f57baac4f727c5af6c3893970a1916fd0bb194ab
-SHA1 (patch-src_config.cpp) = 1dfb902992f1dfdbff171991410a0b73c2f666b0
-SHA1 (patch-src_saving.cpp) = ea5ee85b2dea39d99bb4a5e609c89c166b578fb3
+SHA1 (ia-v20.0.tar.bz2) = cff36fda201baaf6fb7628abb7a8056248b89737
+RMD160 (ia-v20.0.tar.bz2) = fdce0894e41d05f94b2fb5bb5752131ebba1675b
+SHA512 (ia-v20.0.tar.bz2) = 6714304245a1c4018575f9c2f7674262a39cfbbc1a3a0fb5d5535c332b4c7bb06fa67eaeb85fc7b99ea0211948c2610c7b7f9b2f10dbe10d2eddfa4a866acdda
+Size (ia-v20.0.tar.bz2) = 42440247 bytes
+SHA1 (patch-CMakeLists.txt) = d48980a86d8e77739eebd8efaf67694eb36959ea

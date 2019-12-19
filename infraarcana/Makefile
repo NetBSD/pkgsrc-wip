@@ -1,12 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-DISTNAME=	ia-19.2
-PKGNAME=	infraarcana-19.2
+DISTNAME=	ia-v20.0
+PKGNAME=	infraarcana-20.0
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=martin-tornqvist/}
-GITHUB_PROJECT=	ia
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DIST_SUBDIR=	${PKGBASE}
+MASTER_SITES=	https://gitlab.com/martin-tornqvist/ia/-/archive/v20.0/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/infraarcana/

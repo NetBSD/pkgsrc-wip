@@ -2,21 +2,30 @@ $NetBSD$
 
 Use the pkgsrc installation prefix instead of the local directory.
 
---- CMakeLists.txt.orig	2017-07-29 19:46:52.843171112 +0000
+--- CMakeLists.txt.orig	2019-12-17 19:09:24.000000000 +0000
 +++ CMakeLists.txt
-@@ -484,10 +484,10 @@ endif()
+@@ -569,7 +569,7 @@ else()
+ 
+         # Not windows (e.g. Unix)
+ 
+-        set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
++        set (CMAKE_MODULE_PATH "/tmp/pkgsrc/wip/infraarcana/work/.buildlink/cmake-Modules" ${PROJECT_SOURCE_DIR}/cmake)
+ 
+         find_package(SDL2       REQUIRED)
+         find_package(SDL2_image REQUIRED)
+@@ -606,13 +606,7 @@ endif()
  # ------------------------------------------------------------------------------
  # Packaging
  # ------------------------------------------------------------------------------
 -set(CMAKE_INSTALL_PREFIX target)
-+#set(CMAKE_INSTALL_PREFIX target)
  
--install(TARGETS ia       DESTINATION ia)
+-install(TARGETS ia DESTINATION ia)
 -install(TARGETS ia-debug DESTINATION ia-debug)
 +install(TARGETS ia       DESTINATION share/InfraArcana/ia)
-+install(TARGETS ia-debug DESTINATION share/InfraArcana/ia-debug)
  
--install(DIRECTORY res DESTINATION ia)
--install(DIRECTORY res DESTINATION ia-debug)
-+install(DIRECTORY res DESTINATION share/InfraArcana/ia)
-+install(DIRECTORY res DESTINATION share/InfraArcana/ia-debug)
+-install(DIRECTORY installed_files/ DESTINATION ia)
+-install(DIRECTORY installed_files/ DESTINATION ia-debug)
+-
+-install(FILES ${GENERATED_GIT_SHA1_PATH} DESTINATION ia/data OPTIONAL)
+-install(FILES ${GENERATED_GIT_SHA1_PATH} DESTINATION ia-debug/data OPTIONAL)
++install(DIRECTORY installed_files/ DESTINATION share/InfraArcana/ia)
