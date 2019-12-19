@@ -14,16 +14,14 @@ USE_LANGUAGES=	c
 
 RCD_SCRIPTS+=	ngircd
 
-
 EGDIR=                  ${PREFIX}/share/doc/ngircd
 CONF_FILES+=            ${EGDIR}/sample-ngircd.conf ${PREFIX}/share/examples/ngircd/sample-ngircd.conf
 
+INSTALLATION_DIRS+=	${PREFIX}/share/examples/ngircd
+
 .include "options.mk"
 
-
 post-install:
-	${MKDIR} ${PREFIX}/share/examples/ngircd
-
 	${RM} ${DESTDIR}${EGDIR}/COPYING
 	${RM} ${DESTDIR}${EGDIR}/HowToRelease.txt
 	${RM} ${DESTDIR}${EGDIR}/INSTALL
