@@ -1,3 +1,2 @@
 @comment $NetBSD$
 bin/ufetch
-share/doc/ufetch/LICENSE
