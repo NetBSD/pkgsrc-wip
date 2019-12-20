@@ -36,13 +36,14 @@ do-install:
 		${INSTALL_SCRIPT} \
 			ufetch-${FLAVOR} ${DESTDIR}${PREFIX}/bin/ufetch
 .if ${OPSYS} == "Linux"
-.for f in alpine antergos arch archbang arco artix aux centos crux debian \
+.  for f in alpine antergos arch archbang arco artix aux centos crux debian \
           elementary fedora gentoo gnewsense guixsd hyperbola linuxlite mageia \
           manjaro mint mx nixos parabola popos pureos raspbian slackware suse \
           ubuntu void
 	${RUN} cd ${WRKSRC} && \
 		${INSTALL_SCRIPT} \
 			ufetch-${f} ${DESTDIR}${PREFIX}/bin/ufetch-${f}
+.  endfor
 .endif
 
 .include "../../mk/bsd.pkg.mk"
