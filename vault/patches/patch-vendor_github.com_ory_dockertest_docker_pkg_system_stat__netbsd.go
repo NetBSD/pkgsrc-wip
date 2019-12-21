@@ -1,5 +1,7 @@
 $NetBSD$
 
+Provides stat conversion function for NetBSD.
+
 --- vendor/github.com/ory/dockertest/docker/pkg/system/stat_netbsd.go.orig	2019-09-08 00:43:25.064582087 +0000
 +++ vendor/github.com/ory/dockertest/docker/pkg/system/stat_netbsd.go
 @@ -0,0 +1,13 @@
