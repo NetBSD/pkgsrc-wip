@@ -5,7 +5,7 @@ Remove date to make builds reproducible (based on Debian patch).
 
 --- src/main.cc.orig	2019-09-27 11:13:24.000000000 +0000
 +++ src/main.cc
-@@ -301,6 +301,7 @@ static void Determine_InstallPath(const 
+@@ -316,6 +316,7 @@ static void Determine_InstallPath(const 
  #else
  	static const char *prefixes[] =
  	{
@@ -13,7 +13,7 @@ Remove date to make builds reproducible (based on Debian patch).
  		"/usr/local",
  		"/usr",
  		"/opt",
-@@ -947,7 +948,7 @@ static void ShowHelp()
+@@ -964,7 +965,7 @@ static void ShowHelp()
  
  static void ShowVersion()
  {

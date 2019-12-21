@@ -24,5 +24,9 @@
     => Add patch for string parameter to FatalError()
 [X] Sent pkgsrc patch to upstream
     => Ticket #37
+    => Patch merged by upstream
+[X] Update to Git commit 19c0d7e5dd1bb8e5bf7c6840868e9f6eecd14a9a
+    => Remove patch for Ticket #37
+    => Remove patch for install with nonpriviledged user
 [ ] Import final eureka 1.25 release
 [ ] Switch back to FLTK version from pkgsrc current
