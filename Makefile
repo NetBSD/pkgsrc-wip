@@ -4362,6 +4362,7 @@ SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
 SUBDIR+=	ruby-travis
 SUBDIR+=	ruby-trollop
+SUBDIR+=	ruby-twitter-text1
 SUBDIR+=	ruby-typhoeus
 SUBDIR+=	ruby-vegas
 SUBDIR+=	ruby-versionomy
