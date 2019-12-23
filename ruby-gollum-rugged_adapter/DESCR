@@ -1,0 +1,8 @@
+Adapter for gollum to use Rugged (libgit2) at the backend. See the
+gollum wiki for more information on adapters. Currently gollum uses
+grit as a backend by default, but since that is abandonware, the plan
+is to make this adapter the default in the future.
+
+Please note that this adapter is currently in beta. It passes the unit
+tests for gollum and gollum-lib, but it needs more comprehensive
+testing. Please report any issues that you encounter.
