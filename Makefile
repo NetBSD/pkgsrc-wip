@@ -4352,6 +4352,7 @@ SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-review
 SUBDIR+=	ruby-rinku
 SUBDIR+=	ruby-roo-xls
+SUBDIR+=	ruby-rouge
 SUBDIR+=	ruby-simple-navigation
 SUBDIR+=	ruby-sinatra-simple-navigation
 SUBDIR+=	ruby-taskwarrior-web
