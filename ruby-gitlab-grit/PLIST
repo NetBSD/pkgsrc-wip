@@ -1,0 +1,45 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/grit.rb
+${GEM_LIBDIR}/lib/grit/actor.rb
+${GEM_LIBDIR}/lib/grit/blame.rb
+${GEM_LIBDIR}/lib/grit/blob.rb
+${GEM_LIBDIR}/lib/grit/commit.rb
+${GEM_LIBDIR}/lib/grit/commit_stats.rb
+${GEM_LIBDIR}/lib/grit/config.rb
+${GEM_LIBDIR}/lib/grit/diff.rb
+${GEM_LIBDIR}/lib/grit/errors.rb
+${GEM_LIBDIR}/lib/grit/git-ruby.rb
+${GEM_LIBDIR}/lib/grit/git-ruby/commit_db.rb
+${GEM_LIBDIR}/lib/grit/git-ruby/git_object.rb
+${GEM_LIBDIR}/lib/grit/git-ruby/internal/file_window.rb
+${GEM_LIBDIR}/lib/grit/git-ruby/internal/loose.rb
+${GEM_LIBDIR}/lib/grit/git-ruby/internal/pack.rb
+${GEM_LIBDIR}/lib/grit/git-ruby/internal/raw_object.rb
+${GEM_LIBDIR}/lib/grit/git-ruby/repository.rb
+${GEM_LIBDIR}/lib/grit/git.rb
+${GEM_LIBDIR}/lib/grit/grep.rb
+${GEM_LIBDIR}/lib/grit/index.rb
+${GEM_LIBDIR}/lib/grit/lazy.rb
+${GEM_LIBDIR}/lib/grit/merge.rb
+${GEM_LIBDIR}/lib/grit/ref.rb
+${GEM_LIBDIR}/lib/grit/repo.rb
+${GEM_LIBDIR}/lib/grit/ruby1.9.rb
+${GEM_LIBDIR}/lib/grit/status.rb
+${GEM_LIBDIR}/lib/grit/submodule.rb
+${GEM_LIBDIR}/lib/grit/tag.rb
+${GEM_LIBDIR}/lib/grit/tree.rb
+${GEM_LIBDIR}/lib/grit_ext.rb
+${GEM_LIBDIR}/lib/grit_ext/actor.rb
+${GEM_LIBDIR}/lib/grit_ext/blob.rb
+${GEM_LIBDIR}/lib/grit_ext/commit.rb
+${GEM_LIBDIR}/lib/grit_ext/diff.rb
+${GEM_LIBDIR}/lib/grit_ext/tag.rb
+${GEM_LIBDIR}/lib/grit_ext/tree.rb
+${GEM_LIBDIR}/lib/grit_ext/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.6.0/extensions
+@pkgdir lib/ruby/gems/2.6.0/build_info
