@@ -4361,6 +4361,7 @@ SUBDIR+=	ruby-rouge
 SUBDIR+=	ruby-sanitize
 SUBDIR+=	ruby-simple-navigation
 SUBDIR+=	ruby-sinatra-simple-navigation
+SUBDIR+=	ruby-sinatra1
 SUBDIR+=	ruby-taskwarrior-web
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
