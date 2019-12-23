@@ -4328,6 +4328,7 @@ SUBDIR+=	ruby-delegate_it
 SUBDIR+=	ruby-diaspora
 SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-ethon
+SUBDIR+=	ruby-gemojione
 SUBDIR+=	ruby-gh
 SUBDIR+=	ruby-ghi
 SUBDIR+=	ruby-git
