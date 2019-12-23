@@ -4323,6 +4323,7 @@ SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-asciidoctor
 SUBDIR+=	ruby-blockenspiel
 SUBDIR+=	ruby-cabin
+SUBDIR+=	ruby-charlock_holmes
 SUBDIR+=	ruby-chawan
 SUBDIR+=	ruby-delegate_it
 SUBDIR+=	ruby-diaspora
