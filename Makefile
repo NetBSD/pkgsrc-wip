@@ -4333,6 +4333,7 @@ SUBDIR+=	ruby-gh
 SUBDIR+=	ruby-ghi
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-git_stats
+SUBDIR+=	ruby-github-markup
 SUBDIR+=	ruby-httparty
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
