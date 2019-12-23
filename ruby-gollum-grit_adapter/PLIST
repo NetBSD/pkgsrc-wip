@@ -1,0 +1,10 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/grit_adapter.rb
+${GEM_LIBDIR}/lib/grit_adapter/git_layer_grit.rb
+${GEM_LIBDIR}/lib/grit_adapter/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.6.0/extensions
+@pkgdir lib/ruby/gems/2.6.0/build_info

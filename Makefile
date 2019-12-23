@@ -4336,6 +4336,7 @@ SUBDIR+=	ruby-git
 SUBDIR+=	ruby-git_stats
 SUBDIR+=	ruby-github-markup
 SUBDIR+=	ruby-gitlab-grit
+SUBDIR+=	ruby-gollum-grit_adapter
 SUBDIR+=	ruby-httparty
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
