@@ -4370,6 +4370,7 @@ SUBDIR+=	ruby-travis
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-twitter-text1
 SUBDIR+=	ruby-typhoeus
+SUBDIR+=	ruby-useragent
 SUBDIR+=	ruby-vegas
 SUBDIR+=	ruby-versionomy
 SUBDIR+=	ruby-xmpp4r
