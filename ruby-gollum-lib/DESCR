@@ -1,0 +1,9 @@
+Gollum is a simple wiki system built on top of Git that powers GitHub
+Wikis.
+
+Gollum-lib is the Ruby API that allows you to retrieve raw or
+formatted wiki content from a Git repository, write new content to the
+repository, and collect various meta data about the wiki as a whole.
+
+Gollum-lib follows the rules of Semantic Versioning and uses TomDoc
+for inline documentation.
