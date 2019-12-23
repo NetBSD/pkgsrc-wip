@@ -1,0 +1,16 @@
+Gollum is a simple wiki system built on top of Git. A Gollum Wiki is
+simply a git repository of a specific nature:
+
+    - A Gollum repository's contents are human-editable. Pages are
+      unique text files which may be organized into directories any
+      way you choose, as long as they have a recognized file
+      extension. Other content can also be included, for example
+      images, PDFs and headers/footers.
+    - Gollum pages:
+        - May be written in a variety of markup languages.
+        - Can be edited with your favourite system editor or IDE or
+          with the built-in web interface.
+        - Can be displayed in all versions, and can easily be rolled
+          back.
+    - Gollum supports advanced functionality like UML diagrams,
+      macros, metadata, and more.
