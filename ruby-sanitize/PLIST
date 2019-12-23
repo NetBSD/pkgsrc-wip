@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/HISTORY.md
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/sanitize.rb
+${GEM_LIBDIR}/lib/sanitize/config.rb
+${GEM_LIBDIR}/lib/sanitize/config/basic.rb
+${GEM_LIBDIR}/lib/sanitize/config/relaxed.rb
+${GEM_LIBDIR}/lib/sanitize/config/restricted.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_cdata.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_comment.rb
+${GEM_LIBDIR}/lib/sanitize/transformers/clean_element.rb
+${GEM_LIBDIR}/lib/sanitize/version.rb
+${GEM_LIBDIR}/test/test_sanitize.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.6.0/extensions
+@pkgdir lib/ruby/gems/2.6.0/build_info

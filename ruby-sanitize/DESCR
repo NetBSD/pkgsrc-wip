@@ -1,0 +1,16 @@
+Sanitize is a whitelist-based HTML and CSS sanitizer. Given a list of
+acceptable elements, attributes, and CSS properties, Sanitize will
+remove all unacceptable HTML and/or CSS from a string.
+
+Using a simple configuration syntax, you can tell Sanitize to allow
+certain HTML elements, certain attributes within those elements, and
+even certain URL protocols within attributes that contain URLs. You
+can also whitelist CSS properties, @ rules, and URL protocols you wish
+to allow in elements or attributes containing CSS. Any HTML or CSS
+that you don't explicitly allow will be removed.
+
+Sanitize is based on Google's Gumbo HTML5 parser, which parses HTML
+exactly the same way modern browsers do, and Crass, which parses CSS
+exactly the same way modern browsers do. As long as your whitelist
+config only allows safe markup and CSS, even the most malformed or
+malicious input will be transformed into safe output.
