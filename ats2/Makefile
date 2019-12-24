@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ATS2-Postiats-0.3.13
+DISTNAME=	ATS2-Postiats-0.4.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ats2-lang/}
 EXTRACT_SUFX=	.tgz
@@ -16,8 +16,6 @@ USE_TOOLS+=	gmake
 
 MAKE_JOBS_SAFE=	no
 MAKE_FLAGS+=	LDFLAGS+=
-
-WRKSRC=		${WRKDIR}/${PKGBASE}-gmp-${PKGVERSION_NOREV}
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
