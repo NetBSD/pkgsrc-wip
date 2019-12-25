@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
+@comment $NetBSD$
 UnrealTournament-server/Help/Logo.bmp
 UnrealTournament-server/Help/ReadMe.htm
 UnrealTournament-server/Help/Unreal.ico
@@ -287,7 +287,6 @@ UnrealTournament-server/System/Window.int
 UnrealTournament-server/System/de.int
 UnrealTournament-server/System/de.u
 UnrealTournament-server/System/libSDL-1.1.so.0
-UnrealTournament-server/System/libSDL-1.2.so.0
 UnrealTournament-server/System/ucc-bin
 UnrealTournament-server/Textures/AlfaFX.utx
 UnrealTournament-server/Textures/Ancient.utx
@@ -393,7 +392,12 @@ UnrealTournament-server/Textures/city.utx
 UnrealTournament-server/Textures/commandoskins.utx
 UnrealTournament-server/Textures/credits.utx
 UnrealTournament-server/Textures/eol.utx
+UnrealTournament-server/Textures/noxxpack.utx
 UnrealTournament-server/Textures/of1.utx
+UnrealTournament-server/Textures/tcowmeshskins.utx
+UnrealTournament-server/Textures/tnalimeshskins.utx
+UnrealTournament-server/Textures/tskmskins.utx
+UnrealTournament-server/Textures/xutfx.utx
 UnrealTournament-server/Web/current.uhtm
 UnrealTournament-server/Web/current_console.uhtm
 UnrealTournament-server/Web/current_console_log.uhtm
@@ -459,4 +463,5 @@ UnrealTournament-server/Web/plaintext/menu.uhtm
 UnrealTournament-server/Web/plaintext/message.uhtm
 UnrealTournament-server/Web/plaintext/root.uhtm
 UnrealTournament-server/Web/root.uhtm
+UnrealTournament-server/libSDL-1.2.so.0
 UnrealTournament-server/ucc

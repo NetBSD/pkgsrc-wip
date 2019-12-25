@@ -5,7 +5,9 @@ DISTNAME=	ut-server-436
 PKGNAME=	${DISTNAME:S/ut/unrealtournament/}
 WRKSRC=		${WRKDIR}/ut-server
 CATEGORIES=	games
-MASTER_SITES=	http://public.planetmirror.com/pub/lokigames/installers/ut/
+MASTER_SITES=	http://ut-files.com/Entire_Server_Download/
+# original source domain is gone
+#MASTER_SITES=	http://public.planetmirror.com/pub/lokigames/installers/ut/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Server for Unreal Tournament first person shooter
@@ -15,6 +17,9 @@ EMUL_MODULES.linux=	base
 
 BUILD_DIRS=		# empty
 USE_TOOLS+=		pax
+
+# game developer reply is pending
+# LICENSE=	#
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/UnrealTournament-server

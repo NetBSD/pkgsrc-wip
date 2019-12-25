@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
-SHA1 (ut-server-436.tar.gz) = e949133cdc19f7bf374a45a86dbbbe4d49827ae7
-RMD160 (ut-server-436.tar.gz) = 76332924697f71a2b5ebabff3921c01615210d82
-Size (ut-server-436.tar.gz) = 92769123 bytes
+SHA1 (ut-server-436.tar.gz) = deb480f9145e26e425da39498173af6b575704ba
+RMD160 (ut-server-436.tar.gz) = 061db810aeeabc93c22862322fed17d2234cb1ce
+SHA512 (ut-server-436.tar.gz) = cb44376c3d29f12a5828f3ac7edc22497b82722e0bdf373f7a953acd71ac47acb4ea31fbbcfab889057ae8d89fe3a0e64fc04eeee201f1a384add90d7e657571
+Size (ut-server-436.tar.gz) = 244068126 bytes
