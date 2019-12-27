@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (dash.el-2.16.0.tar.gz) = d83d24f6558961d73963f7d071c5d34252137209
+RMD160 (dash.el-2.16.0.tar.gz) = 6ad6765796d962c2fae07d68f053f46800d411e4
+SHA512 (dash.el-2.16.0.tar.gz) = a0196327c8e81d1b343bb56de00a3c2f59b1d3f86dc4e923cf350658590fa106aa0be933aa0f51ff3c02d9aff8450c5e055d169ae8fb876be068bf15a52af216
+Size (dash.el-2.16.0.tar.gz) = 148151 bytes
+SHA1 (patch-pre-commit.sh) = 747d63ab915b89e14633a66c965e21f87d3d792c
+SHA1 (patch-run-tests.sh) = 42b81d8337c957ba9a0d83397e98254177cbca82
