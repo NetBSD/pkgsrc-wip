@@ -1,2 +1,2 @@
 @comment $NetBSD$
-${EMACS_LISPPREFIX}/dash.el
+${EMACS_LISPPREFIX}/dash/dash.el

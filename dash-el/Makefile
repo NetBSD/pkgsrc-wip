@@ -11,10 +11,10 @@ LICENSE=	gnu-gpl-v3
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	${PREFIX}/share/emacs/site-lisp
+INSTALLATION_DIRS=	${PREFIX}/share/emacs/site-lisp/dash
 
 do-install:
-	${INSTALL} ${WRKSRC}/dash.el ${DESTDIR}${PREFIX}/share/emacs/site-lisp/
+	${INSTALL} ${WRKSRC}/dash.el ${DESTDIR}${PREFIX}/share/emacs/site-lisp/dash
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
