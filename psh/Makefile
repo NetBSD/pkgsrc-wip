@@ -11,13 +11,13 @@ DIST_SUBDIR=	psh
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnp.github.io/psh/
 COMMENT=	Perl Shell
+LICENSE=	${PERL5_LICENSE}
 
 PKG_SHELL=	${PREFIX}/bin/psh
 
 DEPENDS+=	p5-BSD-Resource>=1.24:../../devel/p5-BSD-Resource
 DEPENDS+=	p5-Term-ReadLine>=1.16:../../devel/p5-Term-ReadLine
 
-PERL5_MODULE_TYPE=	MakeMaker
 PERL5_PACKLIST=		auto/psh/.packlist
 
 USE_LANGUAGES=	# none
