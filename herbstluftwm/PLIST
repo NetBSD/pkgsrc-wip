@@ -15,6 +15,7 @@ share/doc/herbstluftwm/examples/dmenu.sh
 share/doc/herbstluftwm/examples/dumpbeautify.sh
 share/doc/herbstluftwm/examples/exec_on_tag.sh
 share/doc/herbstluftwm/examples/execwith.sh
+share/doc/herbstluftwm/examples/float-maximize.sh
 share/doc/herbstluftwm/examples/floatmon.sh
 share/doc/herbstluftwm/examples/herbstcommander.sh
 share/doc/herbstluftwm/examples/keychain.sh
