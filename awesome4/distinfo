@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.18 2016/08/27 08:04:42 maya Exp $
-
-SHA1 (awesome-4.1.tar.xz) = 90113f552f79e3ff664de6059c3a6be3dc9946a9
-RMD160 (awesome-4.1.tar.xz) = 26610615dd33945b5c9342fd356c24877e0a4262
-SHA512 (awesome-4.1.tar.xz) = e0c1ed5fc8f0455258ec2566e430b24e52b78d1ae54357f5de1bf08f2e44682e9b2c5548905a90cc4526d98d2b6700e087b679abc9e620d3751ea420df9434f6
-Size (awesome-4.1.tar.xz) = 960768 bytes
-SHA1 (patch-CMakeLists.txt) = 29f1621050efd03ecb3b4aea14e58668c0dde4bb
-SHA1 (patch-awesomeConfig.cmake) = 72af31ccd69d1711a7d0f646980f71bd69c38828
-SHA1 (patch-tests_examples_CMakeLists.txt) = f7d3cabe412016a1c32214cf9af57aa6557f58b2
