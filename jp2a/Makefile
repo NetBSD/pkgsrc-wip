@@ -3,7 +3,7 @@
 DISTNAME=	jp2a-1.0.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cslarsen/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	https://github.com/cslarsen/jp2a
