@@ -3,10 +3,13 @@
 
 DISTNAME=	psh-1.8.1
 CATEGORIES=	shells
-MASTER_SITES=	http://www.focusresearch.com/gregor/download/
+PKGREVISION=	1
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gnp/}
+GITHUB_TAG=	psh-${PKGVERSION_NOREV}
+DIST_SUBDIR=	psh
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.focusresearch.com/gregor/download/
+HOMEPAGE=	http://gnp.github.io/psh/
 COMMENT=	Perl Shell
 
 PKG_SHELL=	${PREFIX}/bin/psh
