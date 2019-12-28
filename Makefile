@@ -4653,6 +4653,7 @@ SUBDIR+=	taisei
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
+SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
 SUBDIR+=	tbb
