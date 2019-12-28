@@ -149,7 +149,6 @@ pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 	${CP} ${FILESDIR}/netbsd-d.c ${WRKSRC}/gcc/config/
 
-TEST_TARGET=	-j ${MAKE_JOBS} -k check || ${TRUE}
 pre-test:
 	${RUN} 							\
 	if runtest --version >/dev/null 2>/dev/null ; then	\
@@ -158,6 +157,11 @@ pre-test:
 	  ${ECHO} "ERROR: Please install devel/dejagnu in order to run the test suite." ; \
 	  exit 1 ;						\
 	fi
+
+test:
+	${RUN} cd ${WRKSRC} && cd ${OBJDIR} &&		\
+	gmake -j ${MAKE_JOBS} -sk check || ${TRUE}
+
 post-test:
 	${RUN} cd ${WRKSRC} && cd ${OBJDIR} &&		\
 	${SHELL} ${WRKSRC}/contrib/test_summary >${WRKDIR}/test_summary.log
