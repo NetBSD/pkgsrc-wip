@@ -1,4 +1,5 @@
 $NetBSD$
+
 Remove unncessary function qualifier.
 
 --- widget/lessondialog.cpp

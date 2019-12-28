@@ -1,4 +1,5 @@
 $NetBSD$
+
 Remove unnecessary qualifier.
 
 --- widget/settingspages.cpp

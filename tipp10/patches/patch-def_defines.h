@@ -1,4 +1,5 @@
 $NetBSD$
+
 automatically determine for what system to compile
 
 --- def/defines.h

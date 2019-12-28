@@ -1,4 +1,5 @@
 $NetBSD$
+
 Remove redundant qualifier.
 
 --- widget/tickerboard.cpp

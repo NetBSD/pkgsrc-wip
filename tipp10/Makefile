@@ -36,7 +36,7 @@ INSTALLATION_DIRS+=	share/tipp10/help/de/img share/tipp10/help/en/content
 INSTALLATION_DIRS+=	share/tipp10/help/en/img share/tipp10/img
 
 do-configure:
-	cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tipp10 ${DESTDIR}${PREFIX}/bin/tipp10
