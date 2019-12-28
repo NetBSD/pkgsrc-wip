@@ -3,6 +3,10 @@
 DISTNAME=	tipp10_2.1.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	games
+# \todo: https://www.tipp10.com/de/download/getfile/3/ is the
+# real source. We need a webbrowser user-agent string to get
+# this, otherwise we get a 0 length gzip file. This is why we
+# are using Debian as a source.
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/tipp10/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
