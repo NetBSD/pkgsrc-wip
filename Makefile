@@ -1690,7 +1690,6 @@ SUBDIR+=	jmtpfs
 SUBDIR+=	jobd
 SUBDIR+=	john-jumbo
 SUBDIR+=	joomla
-SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
 SUBDIR+=	jpicedt
 SUBDIR+=	jruby
