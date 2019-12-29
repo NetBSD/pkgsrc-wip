@@ -2693,6 +2693,7 @@ SUBDIR+=	p5-Proc-Fork
 SUBDIR+=	p5-RPC-PlClient
 SUBDIR+=	p5-RT-Authen-ExternalAuth
 SUBDIR+=	p5-RTF-Writer
+SUBDIR+=	p5-Regexp-Debugger
 SUBDIR+=	p5-Shell-Command
 SUBDIR+=	p5-Spread
 SUBDIR+=	p5-Startup
