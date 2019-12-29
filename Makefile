@@ -4536,6 +4536,7 @@ SUBDIR+=	sparse
 SUBDIR+=	spatt
 SUBDIR+=	spe
 SUBDIR+=	spectra
+SUBDIR+=	spectrwm
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	spice-gtk

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.7 2018/12/20 12:33:23 jaapb Exp $
+
+SHA1 (spectrwm-3.3.0.tar.gz) = bc15313171c590b9a906cab7516f7efe6ad3544d
+RMD160 (spectrwm-3.3.0.tar.gz) = 3bdc6b02da74b56ec15891625da1e399370bcfbe
+SHA512 (spectrwm-3.3.0.tar.gz) = 743affffd0437641a760ae29ccbd0084baee3354dadc48f3fc9ab70bffa2413ffe3af67f1223413aa1bbf8c679fbae1fbbdd71a840b3e44f5df83b527f63c1cc
+Size (spectrwm-3.3.0.tar.gz) = 161806 bytes
+SHA1 (patch-netbsd_Makefile) = a7b0c3c287a32bcd23f47339ac7f57d21ebe277c
+SHA1 (patch-netbsd_util.h) = ba27856f79e59c7841287fc48c61d89923ad515f
+SHA1 (patch-spectrwm.c) = fe95be29129ad3ba6e9d19c186eb5fd5f97d67e7
