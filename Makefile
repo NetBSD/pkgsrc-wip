@@ -1036,6 +1036,7 @@ SUBDIR+=	gcc47-libs
 SUBDIR+=	gcc6snapshot
 SUBDIR+=	gcc7-contrib
 SUBDIR+=	gcc9snapshot
+SUBDIR+=	gcc10snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
