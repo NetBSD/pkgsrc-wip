@@ -233,6 +233,7 @@ ${PYSITELIB}/diffoscope/comparators/xz.pyo
 ${PYSITELIB}/diffoscope/comparators/zip.py
 ${PYSITELIB}/diffoscope/comparators/zip.pyc
 ${PYSITELIB}/diffoscope/comparators/zip.pyo
+${PYSITELIB}/diffoscope/comparators/zst.py
 ${PYSITELIB}/diffoscope/config.py
 ${PYSITELIB}/diffoscope/config.pyc
 ${PYSITELIB}/diffoscope/config.pyo
@@ -321,4 +322,3 @@ ${PYSITELIB}/diffoscope/tools.py
 ${PYSITELIB}/diffoscope/tools.pyc
 ${PYSITELIB}/diffoscope/tools.pyo
 ${PYSITELIB}/diffoscope/utils.py
-${PYSITELIB}/diffoscope/comparators/zst.py
