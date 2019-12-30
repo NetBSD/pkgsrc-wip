@@ -1,0 +1,10 @@
+- Some files seems to not be compiled (only the `.py' are installed).
+  These are:
+
+   % awk '/.py[co]?$/ { sub(/.py[co]?$/, "", $0); f[$0]++ }  END { for (v in f) { if (f[v] != 3) { print v } } }' < PLIST
+   ${PYSITELIB}/diffoscope/comparators/ffprobe
+   ${PYSITELIB}/diffoscope/comparators/zst
+   ${PYSITELIB}/diffoscope/comparators/kbx
+   ${PYSITELIB}/diffoscope/utils
+
+  Investigate further!
