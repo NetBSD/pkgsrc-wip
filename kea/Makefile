@@ -15,10 +15,13 @@ LICENSE=	mpl-2.0
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS=	autoconf automake bison flex
 
 CONFIGURE_ARGS+=--with-openssl --enable-shell
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=--enable-generate-parser
+
 PY_PATCHPLIST= 	yes
 
 RCD_SCRIPTS+=	kea
@@ -38,6 +41,9 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/kea
 OWN_DIRS+=	${VARBASE}/run/kea
 OWN_DIRS+=	${VARBASE}/lib/kea
 OWN_DIRS+=	${VARBASE}/log
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 .include "options.mk"
 
