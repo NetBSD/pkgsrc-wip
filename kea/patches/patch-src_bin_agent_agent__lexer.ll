@@ -1,6 +1,8 @@
 $NetBSD$
+
 * put io_adress.h first so that map from net/if.h on solaris won't confict
   with std::map
+
 --- src/bin/agent/agent_lexer.ll.orig	2019-11-19 14:50:43.000000000 +0000
 +++ src/bin/agent/agent_lexer.ll
 @@ -9,12 +9,12 @@

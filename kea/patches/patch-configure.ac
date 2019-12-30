@@ -1,5 +1,7 @@
 $NetBSD$
-* don't create dir in varbase
+
+* fix compatability errors
+
 --- configure.ac.orig	2019-12-30 16:00:16.704565254 +0000
 +++ configure.ac
 @@ -1391,7 +1391,7 @@ if test "x$enable_generate_parser" != "x

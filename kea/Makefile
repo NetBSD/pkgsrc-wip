@@ -2,7 +2,7 @@
 
 DISTNAME=	kea-1.6.1
 CATEGORIES=	net
-MASTER_SITES=   https://downloads.isc.org/isc/kea/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://downloads.isc.org/isc/kea/${PKGVERSION_NOREV}/
 MASTER_SITES+=	ftp://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/
 MASTER_SITES+=	ftp://ftp.ripe.net/mirrors/sites/ftp.isc.org/isc/kea/${PKGVERSION_NOREV}
 MASTER_SITES+=	ftp://ftp.iij.ad.jp/pub/network/isc/kea/${PKGVERSION_NOREV}/
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=--enable-generate-parser
 
-PY_PATCHPLIST= 	yes
+PY_PATCHPLIST=	yes
 
 RCD_SCRIPTS+=	kea
 

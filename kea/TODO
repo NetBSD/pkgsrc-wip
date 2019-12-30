@@ -1,1 +1,4 @@
 install users to run kea with ??
+
+test build on GNU/linux.
+fix missing peices in code for illumos.
