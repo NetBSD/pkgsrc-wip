@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	ufetch-v0.1
+DISTNAME=	ufetch-v0.2
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.com/jschx/ufetch/-/archive/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	voidpin@protonmail.com
-HOMEPAGE=	https://gitlab.com/jschx/ufetch/-/archive/v0.1/
+HOMEPAGE=	https://gitlab.com/jschx/ufetch/-/archive/v0.2/
 COMMENT=	Tiny system info for Unix-like operating systems
 LICENSE=	isc
 
