@@ -1,8 +1,8 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	cyclone-bootstrap
-GITHUB_TAG=	v0.11.7
-DISTNAME=	v0.11.7
+GITHUB_TAG=	v0.11.8
+DISTNAME=	${GITHUB_TAG}
 PKGNAME=	cyclone-${DISTNAME:S,^v,,}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=justinethier/}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://justinethier.github.io/cyclone/
 COMMENT=	Scheme-to-C compiler
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/cyclone-bootstrap-0.11.7
+WRKSRC=		${WRKDIR}/cyclone-bootstrap-${DISTNAME:S,^v,,}
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	third-party/libtommath-1.2.0/libtommath.pc.in
