@@ -2,9 +2,17 @@ $NetBSD: patch-Engine_libsrc_libcda-0.5_linux.c,v 1.1 2015/08/18 18:47:58 yhardy
 
 Add CD support for NetBSD.
 
---- Engine/libsrc/libcda-0.5/linux.c.orig	2015-07-12 16:14:07.000000000 +0000
+--- Engine/libsrc/libcda-0.5/linux.c.orig	2019-12-29 17:06:00.000000000 +0000
 +++ Engine/libsrc/libcda-0.5/linux.c
-@@ -8,7 +8,21 @@
+@@ -3,14 +3,28 @@
+  * Peter Wang <tjaden@users.sf.net>
+  */
+ 
+-#ifdef __linux__
++#if defined(__linux__) || defined(__NetBSD__)
+ 
+ #include <string.h>
+ #include <stdlib.h>
  #include <unistd.h>
  #include <fcntl.h>
  #include <sys/ioctl.h>
@@ -26,7 +34,7 @@ Add CD support for NetBSD.
  #include <errno.h>
  #include "libcda.h"
  
-@@ -40,8 +54,13 @@ static void copy_cd_error(void)
+@@ -42,8 +56,13 @@ static void copy_cd_error(void)
  static int get_tocentry(int track, struct cdrom_tocentry *e)
  {
      memset(e, 0, sizeof(struct cdrom_tocentry));
@@ -40,7 +48,7 @@ Add CD support for NetBSD.
      
      if (ioctl(fd, CDROMREADTOCENTRY, e) < 0) {
  	copy_cd_error();
-@@ -55,11 +74,24 @@ static int get_tocentry(int track, struc
+@@ -57,11 +76,24 @@ static int get_tocentry(int track, struc
  static int get_subchnl(struct cdrom_subchnl *s)
  {
      memset(s, 0, sizeof(struct cdrom_subchnl));
@@ -65,7 +73,7 @@ Add CD support for NetBSD.
     
      return 0;
  }
-@@ -101,6 +133,21 @@ void cd_exit()
+@@ -103,6 +135,21 @@ void cd_exit()
  
  static int play(int t1, int t2)
  {
@@ -87,7 +95,7 @@ Add CD support for NetBSD.
  #ifdef USE_PLAYMSF
      struct cdrom_tocentry e0, e1;
      struct cdrom_msf msf;
-@@ -146,6 +193,7 @@ static int play(int t1, int t2)
+@@ -148,6 +195,7 @@ static int play(int t1, int t2)
  
      return 0;
  #endif
@@ -95,7 +103,7 @@ Add CD support for NetBSD.
  }
  
  
-@@ -189,8 +237,13 @@ int cd_current_track()
+@@ -191,8 +239,13 @@ int cd_current_track()
      struct cdrom_subchnl s;
  
      get_subchnl(&s);
@@ -109,7 +117,7 @@ Add CD support for NetBSD.
      else
  	return 0;
  }
-@@ -223,7 +276,11 @@ int cd_is_paused()
+@@ -225,7 +278,11 @@ int cd_is_paused()
      struct cdrom_subchnl s;
  
      get_subchnl(&s);
@@ -121,7 +129,7 @@ Add CD support for NetBSD.
  }
  
  
-@@ -241,6 +298,20 @@ void cd_stop()
+@@ -243,6 +300,20 @@ void cd_stop()
   */
  int cd_get_tracks(int *first, int *last)
  {
@@ -142,7 +150,7 @@ Add CD support for NetBSD.
      struct cdrom_tochdr toc;
  
      if (ioctl(fd, CDROMREADTOCHDR, &toc) < 0) {
-@@ -253,6 +324,7 @@ int cd_get_tracks(int *first, int *last)
+@@ -255,6 +326,7 @@ int cd_get_tracks(int *first, int *last)
      if (first) *first = toc.cdth_trk0;
      if (last)  *last  = toc.cdth_trk1;
      return 0;
@@ -150,7 +158,7 @@ Add CD support for NetBSD.
  }
  
  
-@@ -262,11 +334,21 @@ int cd_get_tracks(int *first, int *last)
+@@ -264,11 +336,21 @@ int cd_get_tracks(int *first, int *last)
   */
  int cd_is_audio(int track)
  {
@@ -172,7 +180,7 @@ Add CD support for NetBSD.
  }
  
  
-@@ -275,11 +357,19 @@ int cd_is_audio(int track)
+@@ -277,11 +359,19 @@ int cd_is_audio(int track)
   */
  void cd_get_volume(int *c0, int *c1)
  {
@@ -192,7 +200,7 @@ Add CD support for NetBSD.
  }
  
  
-@@ -288,6 +378,15 @@ void cd_get_volume(int *c0, int *c1)
+@@ -290,6 +380,15 @@ void cd_get_volume(int *c0, int *c1)
   */
  void cd_set_volume(int c0, int c1)
  {
@@ -208,7 +216,7 @@ Add CD support for NetBSD.
      struct cdrom_volctrl vol;
  
      vol.channel0 = MID(0, c0, 255);
-@@ -295,6 +394,7 @@ void cd_set_volume(int c0, int c1)
+@@ -297,6 +396,7 @@ void cd_set_volume(int c0, int c1)
      vol.channel2 = 0;
      vol.channel3 = 0;
      ioctl(fd, CDROMVOLCTRL, &vol);
@@ -216,3 +224,10 @@ Add CD support for NetBSD.
  }
  
  
+@@ -317,4 +417,4 @@ void cd_close()
+     ioctl(fd, CDROMCLOSETRAY);
+ }
+ 
+-#endif // __linux__
+\ No newline at end of file
++#endif // __linux__
