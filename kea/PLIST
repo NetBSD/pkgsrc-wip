@@ -108,7 +108,7 @@ include/kea/dhcp/pkt4o6.h
 include/kea/dhcp/pkt6.h
 include/kea/dhcp/pkt_filter.h
 include/kea/dhcp/pkt_filter6.h
-include/kea/dhcp/pkt_filter_bpf.h
+${PLIST.bpf}include/kea/dhcp/pkt_filter_bpf.h
 include/kea/dhcp/pkt_filter_inet.h
 include/kea/dhcp/pkt_filter_inet6.h
 include/kea/dhcp/protocol_util.h

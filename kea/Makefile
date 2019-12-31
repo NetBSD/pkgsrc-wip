@@ -17,7 +17,8 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	autoconf automake bison flex
 
-CONFIGURE_ARGS+=--with-openssl --enable-shell
+CONFIGURE_ARGS+=--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=--enable-shell
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=--enable-generate-parser
@@ -46,6 +47,11 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf
 
 .include "options.mk"
+
+PLIST_VARS+=	bpf
+.if !(${OPSYS} == "Linux")
+PLIST.bpf=	yes
+.endif
 
 .include "../../devel/log4cplus/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
