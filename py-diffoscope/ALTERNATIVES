@@ -1,1 +1,0 @@
-bin/diffoscope @PREFIX@/bin/diffoscope-@PYVERSSUFFIX@
