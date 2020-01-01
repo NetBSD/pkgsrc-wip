@@ -23,6 +23,12 @@ PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} >= 19
+CFLAGS.Darwin+=		-fno-stack-check
+MAKE_ARGS+=		XCFLAGS=-DLUAJIT_ENABLE_GC64
+.endif
+
+
 # Upstream doesn't support building shared libs on SunOS
 # http://www.freelists.org/post/luajit/LuaJIT-on-solaris-64
 PLIST_VARS+=		shared
