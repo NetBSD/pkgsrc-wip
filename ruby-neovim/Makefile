@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	neovim-0.5.1
+DISTNAME=	neovim-0.8.1
 CATEGORIES=	devel editors
 
-HOMEPAGE=	https://github.com/alexgenco/neovim-ruby
+HOMEPAGE=	https://github.com/neovim/neovim-ruby
 COMMENT=	Ruby client to Neovim
 LICENSE=	mit
 
