@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2015/05/20 06:48:02 jonthn Exp $
 
-DISTNAME=	libunibilium-1.2.0
+DISTNAME=	libunibilium-2.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mauke/}
 GITHUB_PROJECT=	unibilium
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake perl
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
