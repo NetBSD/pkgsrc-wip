@@ -1,4 +1,5 @@
 # $NetBSD$
+
 BUILDLINK_TREE+=	libmpack
 
 .if !defined(LIBMPACK_BUILDLINK3_MK)

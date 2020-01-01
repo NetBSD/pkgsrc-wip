@@ -1907,6 +1907,7 @@ SUBDIR+=	libm4ri
 SUBDIR+=	libmesode
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmobi-git
+SUBDIR+=	libmpack
 SUBDIR+=	libmpg123
 SUBDIR+=	libmpq
 SUBDIR+=	libmusclecard
