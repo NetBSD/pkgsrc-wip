@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/mpack.h
+lib/libmpack.la
+lib/pkgconfig/mpack.pc
