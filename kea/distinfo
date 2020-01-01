@@ -14,6 +14,7 @@ SHA1 (patch-src_bin_keactrl_Makefile.am) = 5b6fd816da6011858d1167d297c83eda7947e
 SHA1 (patch-src_bin_netconf_netconf__lexer.ll) = ec316d436f791470df9dd5c106c76f3026a19b0e
 SHA1 (patch-src_lib_dhcp_Makefile.am) = 452036d0100a85f41c52562292931bea2501e396
 SHA1 (patch-src_lib_dhcp_iface__mgr__sun.cc) = 7bf79c4a24b3c074f8cf53b79fc83ae8255f63d7
+SHA1 (patch-src_lib_dhcp_pkt__filter__inet.cc) = 979ca0bd1d87bdaf3bf54b3e11b18fef72ecc860
 SHA1 (patch-src_lib_dhcpsrv_Makefile.am) = bdd2be227d8c7f34b4329092e6de3bcaa7117284
 SHA1 (patch-src_lib_dhcpsrv_host__data__source__factory.cc) = a1bc71ec40b9eb5a6c9247360a84ce480521cad2
 SHA1 (patch-src_lib_util_encode_base__n.cc) = 61bf8402e4baf0578a7ec9444f396a9b6c69d87d
