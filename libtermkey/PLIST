@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/21 16:22:20 jonthn Exp $
+@comment $NetBSD$
 include/termkey.h
 lib/libtermkey.la
 lib/pkgconfig/termkey.pc
@@ -12,6 +12,7 @@ man/man3/termkey_interpret_csi.3
 man/man3/termkey_interpret_modereport.3
 man/man3/termkey_interpret_mouse.3
 man/man3/termkey_interpret_position.3
+man/man3/termkey_interpret_string.3
 man/man3/termkey_keycmp.3
 man/man3/termkey_keyname2sym.3
 man/man3/termkey_lookup_keyname.3

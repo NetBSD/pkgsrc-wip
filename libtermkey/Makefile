@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/21 16:22:19 jonthn Exp $
 
-DISTNAME=	libtermkey-0.18
+DISTNAME=	libtermkey-0.22
 CATEGORIES=	devel
 MASTER_SITES=	http://www.leonerd.org.uk/code/libtermkey/
 
