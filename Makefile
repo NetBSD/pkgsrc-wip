@@ -1326,7 +1326,6 @@ SUBDIR+=	heimdall
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
-SUBDIR+=	herbstluftwm
 SUBDIR+=	heroes
 SUBDIR+=	herwig
 SUBDIR+=	hgsubversion
