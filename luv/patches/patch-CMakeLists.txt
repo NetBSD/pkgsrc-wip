@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2019-12-31 14:38:46.000000000 +0000
++++ CMakeLists.txt
+@@ -136,6 +136,9 @@ else (BUILD_MODULE)
+   if (BUILD_SHARED_LIBS)
+     set_target_properties(luv
+       PROPERTIES VERSION ${LUV_VERSION} SOVERSION ${LUV_VERSION_MAJOR})
++    if(APPLE)
++      target_link_libraries(luv "-undefined dynamic_lookup")
++    endif()
+   endif (BUILD_SHARED_LIBS)
+ endif (BUILD_MODULE)
+ 

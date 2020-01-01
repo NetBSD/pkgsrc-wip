@@ -1,2 +1,9 @@
 @comment $NetBSD$
-lib/lua/luv.so
+include/luv/lhandle.h
+include/luv/lreq.h
+include/luv/luv.h
+include/luv/util.h
+lib/libluv.${PKGVERSION}.dylib
+lib/libluv.1.dylib
+lib/libluv.dylib
+lib/pkgconfig/libluv.pc

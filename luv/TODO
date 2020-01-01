@@ -1,3 +1,0 @@
-- The source code "vendors" Lua, LuaJIT and libuv as Git submodules --
-  should we just use them, or try to coerce this packge to use those as
-  dependiences?
