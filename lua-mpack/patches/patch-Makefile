@@ -1,0 +1,39 @@
+$NetBSD$
+
+--- Makefile.orig	2019-06-24 22:59:38.000000000 +0000
++++ Makefile
+@@ -51,7 +51,11 @@ endif
+ LUA_IMPL ?= lua-$(MPACK_LUA_VERSION_NOPATCH)
+ LUA_INCLUDE ?= $(shell $(PKG_CONFIG) --cflags $(LUA_IMPL) 2>/dev/null || echo "-I/usr/include/lua$(MPACK_LUA_VERSION_NOPATCH)")
+ INCLUDES = $(LUA_INCLUDE)
++ifeq ($(shell uname -s 2>/dev/null), Darwin)
++LIBS = -install_name $(PREFIX)/$(LUA_CDIR)/$(notdir $@) -undefined dynamic_lookup
++else
+ LIBS =
++endif
+ 
+ ifeq ($(USE_SYSTEM_MPACK),no)
+ MPACK_SRC = mpack-src
+@@ -112,8 +116,11 @@ gdb: $(BUSTED) $(MPACK)
+ $(DEPS_CMOD)/mpack.so: $(LUAROCKS) $(MPACK_SRC) lmpack.c
+ 	$(LUAROCKS) make CFLAGS='$(CFLAGS)' $(LUAROCKS_LDFLAGS)
+ 
+-mpack.so: lmpack.c $(MPACK_SRC)
+-	$(CC) -shared $(CFLAGS) $(INCLUDES) $(LDFLAGS) $< -o $@ $(LIBS)
++mpack.o: lmpack.c $(MPACK_SRC)
++	$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $<
++
++mpack.so: lmpack.o $(MPACK_SRC)
++	$(CC) -shared $(LIBS) $(LDFLAGS) $< -o $@
+ 
+ $(BUSTED): $(LUAROCKS)
+ 	$(LUAROCKS) install penlight 1.3.2-2
+@@ -147,7 +154,7 @@ ifeq ($(USE_SYSTEM_LUA),no)
+ 	@:
+ else
+ 	mkdir -p "$(DESTDIR)$(LUA_CMOD_INSTALLDIR)"
+-	install -Dm755 $< "$(DESTDIR)$(LUA_CMOD_INSTALLDIR)/$<"
++	install -m755 $< "$(DESTDIR)$(LUA_CMOD_INSTALLDIR)/$<"
+ endif
+ 
+ .PHONY: all clean depsclean install test gdb valgrind ci-test release

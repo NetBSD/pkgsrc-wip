@@ -1,33 +1,34 @@
 # $NetBSD$
 
-DISTNAME=	libmpack-1.0.3
-PKGNAME=	${DISTNAME:S/libmpack/${LUA_PKGPREFIX}-mpack/}
+DISTNAME=	libmpack-lua-1.0.8
+PKGNAME=	${DISTNAME:S/libmpack-lua/${LUA_PKGPREFIX}-mpack/}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tarruda/}
-GITHUB_PROJECT=	libmpack
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libmpack/}
+GITHUB_PROJECT=	libmpack-lua
 
-HOMEPAGE=	https://github.com/tarruda/libmpack
-COMMENT=	Simple implementation of msgpack in C
+HOMEPAGE=	https://github.com/libmpack/libmpack-lua
+COMMENT=	Lua binding for libmpack
 LICENSE=	mit
 
 USE_LANGUAGES=	c
 
-LUA_VERSIONS_ACCEPTED=	51
-
 INSTALLATION_DIRS+=	${LUA_CDIR}
+USE_TOOLS+=	gmake pkg-config
+
+
+MAKE_ENV+=	DEPS_PREFIX=${PREFIX}
+MAKE_ENV+=	USE_SYSTEM_LUA=yes
+MAKE_ENV+=	USE_SYSTEM_MPACK=yes
+MAKE_ENV+=	MPACK_LUA_VERSION=${_LUA_DOT_VERSION}.0
 
 .include "../../mk/bsd.prefs.mk"
 
-do-build:
-	cd ${WRKSRC}/binding/lua/ && ${CC} -O2 -fPIC -I${PREFIX}/${LUA_INCDIR} -c lmpack.c -o lmpack.o
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
-	cd ${WRKSRC}/binding/lua/ && ${CC} -bundle -undefined dynamic_lookup -all_load lmpack.o -o mpack.so
-.else
-	cd ${WRKSRC}/binding/lua/ && ${CC} -shared -fPIC lmpack.o -o mpack.so
+.if ${OPSYS} == "Darwin"
+BUILD_MAKE_FLAGS+=	LDFLAGS="-undefined dynamic_lookup"
+BUILD_MAKE_FLAGS+=	LUA_CDIR=${LUA_CDIR}
 .endif
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/binding/lua/mpack.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
-
+.include "../../lang/lua/luaversion.mk"
 .include "../../lang/lua/module.mk"
+.include "../../wip/libmpack/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

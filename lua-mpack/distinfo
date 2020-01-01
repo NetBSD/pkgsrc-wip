@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.3 2015/08/10 22:13:59 jonthn Exp $
 
-SHA1 (libmpack-1.0.3.tar.gz) = f4f2641c7590f3fb9038e630dad474bae0565c79
-RMD160 (libmpack-1.0.3.tar.gz) = 42a30eb44e49b552654f30b66f3def5c526c3019
-SHA512 (libmpack-1.0.3.tar.gz) = 3024d2830d83a7572a648ee6074467e2096dc6af7c92aaf3c6531e4c25c1c57d9853a60f5b2d1f50039ceeb80bae83f8fdc7241fa48f789cb636bba32fc2a9ba
-Size (libmpack-1.0.3.tar.gz) = 45720 bytes
+SHA1 (libmpack-lua-1.0.8.tar.gz) = 77060046d15cf40c59f8fd8aa2ef0978e925da11
+RMD160 (libmpack-lua-1.0.8.tar.gz) = 981b8129aeb608f6c9f805f2c269fa946150cb24
+SHA512 (libmpack-lua-1.0.8.tar.gz) = 6d21cc6bbdee583a1d808742991459e4b1796f347b2f4eaa747b576f5bb1ca989123339120e43246bac859c20e6f46ac57116ce9f135157256fecbd8cf817f75
+Size (libmpack-lua-1.0.8.tar.gz) = 15616 bytes
+SHA1 (patch-Makefile) = f2d984012c7d3d04378f6f86777eb6d4d5683358
