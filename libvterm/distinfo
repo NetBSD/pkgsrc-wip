@@ -1,1 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/03/01 15:44:34 jonthn Exp $
+$NetBSD$
+
+SHA1 (libvterm-0.1.2.tar.gz) = f7dbe69db3edfec6d99315d437b80b3e82831234
+RMD160 (libvterm-0.1.2.tar.gz) = 173a6a94b67b5bef4e463fb2dbf9e23ee94adb06
+SHA512 (libvterm-0.1.2.tar.gz) = 5d6a17b98d4dda9d0529c3686cadc1f788e48667fa133100bfb0cdc92a6b08d0ea2f1a6058f58941e1408788c4f1d5a86941ec2457e31c6582f5ddd13bcdf7c4
+Size (libvterm-0.1.2.tar.gz) = 69050 bytes
