@@ -10,22 +10,20 @@ COMMENT=	Free, portable and lightweight IRC server
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c
 
 RCD_SCRIPTS+=	ngircd
 
-EGDIR=                  ${PREFIX}/share/doc/ngircd
-CONF_FILES+=            ${EGDIR}/sample-ngircd.conf ${PREFIX}/share/examples/ngircd/sample-ngircd.conf
-CONF_FILES+=            ${EGDIR}/sample-ngircd.conf ${PKG_SYSCONFDIR}/ngircd.conf
+CONF_FILES+=	${PREFIX}/share/examples/ngircd/sample-ngircd.conf ${PKG_SYSCONFDIR}/ngircd.conf
 
-INSTALLATION_DIRS+=	${PREFIX}/share/examples/ngircd
+INSTALLATION_DIRS+=	share/examples/ngircd
 
 .include "options.mk"
 
 post-install:
-	${RM} ${DESTDIR}${EGDIR}/COPYING
-	${RM} ${DESTDIR}${EGDIR}/HowToRelease.txt
-	${RM} ${DESTDIR}${EGDIR}/INSTALL
+	${MV} ${DESTDIR}${PREFIX}/share/doc/ngircd/sample-ngircd.conf ${DESTDIR}${PREFIX}/share/examples/ngircd/
+	${RM} ${DESTDIR}${PREFIX}/share/doc/ngircd/COPYING
+	${RM} ${DESTDIR}${PREFIX}/share/doc/ngircd/HowToRelease.txt
+	${RM} ${DESTDIR}${PREFIX}/share/doc/ngircd/INSTALL
 	${RM} ${DESTDIR}${PREFIX}/etc/ngircd.conf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,13 @@
-. /etc/rc.subr
+#!@RCD_SCRIPTS_SHELL@
+#
+# $NetBSD $
+#
+# PROVIDE: ngircd
+# REQUIRE: DAEMON
+
+if [ -f /etc/rc.subr ]; then
+        . /etc/rc.subr
+fi
 
 name="ngircd"
 rcvar=$name

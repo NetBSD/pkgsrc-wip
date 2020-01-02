@@ -21,4 +21,4 @@ share/doc/ngircd/README-Interix.txt
 share/doc/ngircd/RFC.txt
 share/doc/ngircd/SSL.txt
 share/doc/ngircd/Services.txt
-share/doc/ngircd/sample-ngircd.conf
+share/examples/ngircd/sample-ngircd.conf
