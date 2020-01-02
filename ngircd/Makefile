@@ -16,6 +16,7 @@ RCD_SCRIPTS+=	ngircd
 
 EGDIR=                  ${PREFIX}/share/doc/ngircd
 CONF_FILES+=            ${EGDIR}/sample-ngircd.conf ${PREFIX}/share/examples/ngircd/sample-ngircd.conf
+CONF_FILES+=            ${EGDIR}/sample-ngircd.conf ${PKG_SYSCONFDIR}/ngircd.conf
 
 INSTALLATION_DIRS+=	${PREFIX}/share/examples/ngircd
 
