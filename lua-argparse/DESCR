@@ -1,0 +1,3 @@
+Argparse supports positional arguments, options, flags, optional arguments,
+subcommands and more.
+Argparse automatically generates usage, help and error messages.
