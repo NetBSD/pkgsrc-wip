@@ -85,6 +85,6 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/
 
-.include "../../wip/go-xerrors/buildlink3.mk"
+.include "../../devel/go-xerrors/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
