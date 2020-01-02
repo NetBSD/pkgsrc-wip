@@ -2060,6 +2060,7 @@ SUBDIR+=	lua-MessagePack
 SUBDIR+=	lua-cliargs
 SUBDIR+=	lua-compat53
 SUBDIR+=	lua-dkjson
+SUBDIR+=	lua-inspect
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-luafilesystem
