@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ncrack-0.6
+DISTNAME=	ncrack-0.7
 CATEGORIES=	security
 MASTER_SITES=	https://nmap.org/ncrack/dist/
 
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-WRKSRC=		${WRKDIR}/ncrack-0.6.0
+CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE	# reallocarray(3)
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

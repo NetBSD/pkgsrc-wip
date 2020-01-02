@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (ncrack-0.6.tar.gz) = b5c35e672332158b4756711ba6ca60cec3dc7183
-RMD160 (ncrack-0.6.tar.gz) = 86a71eab10dbaacbc8186f8768a3d0870821dfc7
-SHA512 (ncrack-0.6.tar.gz) = 08d9c19b91b661cb212d2d0061e3498e75438388365c85cbd7d7d0b45b85b8dd8b2ba5de53b375792bdec55513f9c71f331712ef4a13369c6c11425b70a4b53b
-Size (ncrack-0.6.tar.gz) = 3913259 bytes
+SHA1 (ncrack-0.7.tar.gz) = bc442be4a2c662a22b40318eaa8fdb2bb26f3c80
+RMD160 (ncrack-0.7.tar.gz) = e73e98e0dc8d12bd2a6a2c2e2618ee867ef2ea91
+SHA512 (ncrack-0.7.tar.gz) = 52b327b0330b2e46d71a9442fbacf8471462e093049b68b8f2fab008b7046762c82d0468d004cc042a1342082f5c6b5d20a792f028929a7f039bd8d5e2bd49e0
+Size (ncrack-0.7.tar.gz) = 8586213 bytes
+SHA1 (patch-portable__endian.h) = 9967d96b06962d523d01fe150795e4f67a3db170
