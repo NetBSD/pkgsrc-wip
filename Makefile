@@ -2057,6 +2057,7 @@ SUBDIR+=	ltp-git
 SUBDIR+=	ltrace
 SUBDIR+=	lua-argparse
 SUBDIR+=	lua-MessagePack
+SUBDIR+=	lua-cliargs
 SUBDIR+=	lua-compat53
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
