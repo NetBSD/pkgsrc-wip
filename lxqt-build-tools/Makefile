@@ -1,7 +1,6 @@
 # $NetBSD$
 
 DISTNAME=	lxqt-build-tools-0.6.0
-PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-build-tools/0.6.0/
 EXTRACT_SUFX=	.tar.xz
