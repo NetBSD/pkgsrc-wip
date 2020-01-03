@@ -2,6 +2,10 @@ $NetBSD$
 
 NetBSD does not need any macro (re)adjustments.
 
+Shared upstream via:
+
+ <https://github.com/nmap/ncrack/pull/71>
+
 --- portable_endian.h.orig	2019-08-24 22:25:32.000000000 +0000
 +++ portable_endian.h
 @@ -81,11 +81,11 @@
