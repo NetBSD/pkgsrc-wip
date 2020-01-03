@@ -1,0 +1,2 @@
+@comment $NetBSD$
+${LUA_LDIR}/say/init.lua
