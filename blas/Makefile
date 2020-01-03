@@ -7,7 +7,7 @@
 # until everyone uses mk/blas.buildlink3.mk (and people removed
 # math/blas from their pkgsrc-related scripts).
 
-PKGNAME=	blas-3.8.0
+PKGNAME=	blas-3.9.0
 PKGREVISION=	1
 CATEGORIES=	math
 

@@ -7,11 +7,11 @@
 # You set LAPACK_PART (lowercase) and LAPACK_PART_CMAKE_ARGS to choose
 # the library to install.
 
-PORTVERSION=	3.8.0
+PORTVERSION=	3.9.0
 DISTNAME=	lapack-${PORTVERSION}
 PKGNAME=	${LAPACK_PART}-${PORTVERSION}
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
+MASTER_SITES=	-https://github.com/Reference-LAPACK/lapack/archive/v${PORTVERSION}.tar.gz
 
 HOMEPAGE=	http://www.netlib.org/lapack/
 LICENSE=	modified-bsd

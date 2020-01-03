@@ -2,9 +2,9 @@ $NetBSD$
 
 Support combined build of shared and static libraries.
 
---- LAPACKE/CMakeLists.txt.orig	2017-11-13 04:15:54.000000000 +0000
-+++ LAPACKE/CMakeLists.txt
-@@ -71,6 +71,26 @@ endif()
+--- LAPACKE/CMakeLists.txt.orig	2020-01-03 19:33:52.766364829 +0100
++++ LAPACKE/CMakeLists.txt	2020-01-03 19:49:05.115280246 +0100
+@@ -94,6 +94,26 @@
  target_link_libraries(lapacke PRIVATE ${LAPACK_LIBRARIES})
  
  lapack_install_library(lapacke)
@@ -28,6 +28,11 @@ Support combined build of shared and static libraries.
 +  lapack_install_library(lapacke_static)
 +endif()
 +
- install(FILES ${LAPACKE_INCLUDE} ${LAPACK_BINARY_DIR}/include/lapacke_mangling.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
- 
- if(BUILD_TESTING)
+ install(
+   FILES ${LAPACKE_INCLUDE} ${LAPACK_BINARY_DIR}/include/lapacke_mangling.h
+   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+@@ -130,3 +150,4 @@
+   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
+   COMPONENT Development
+   )
++

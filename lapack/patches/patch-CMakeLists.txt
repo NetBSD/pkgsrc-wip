@@ -3,9 +3,9 @@ $NetBSD$
 Avoid installation of LAPACK CMake and pkg-config files when not installing
 LAPACK.
 
---- CMakeLists.txt.orig	2019-03-23 09:03:24.021091079 +0000
-+++ CMakeLists.txt
-@@ -332,10 +332,12 @@ include(CPack)
+--- CMakeLists.txt.orig	2019-11-21 08:57:43.000000000 +0100
++++ CMakeLists.txt	2020-01-03 19:48:54.141281263 +0100
+@@ -372,10 +372,12 @@
  
  if(NOT BLAS_FOUND)
    set(ALL_TARGETS ${ALL_TARGETS} blas)
@@ -18,26 +18,27 @@ LAPACK.
  endif()
  
  if(BUILD_TESTING OR LAPACKE_WITH_TMG)
-@@ -378,11 +380,13 @@ configure_file(${LAPACK_SOURCE_DIR}/CMAK
+@@ -420,12 +422,14 @@
    ${LAPACK_BINARY_DIR}/lapack-config.cmake @ONLY)
  
  
 -configure_file(${CMAKE_CURRENT_SOURCE_DIR}/lapack.pc.in ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc @ONLY)
--  install(FILES
--  ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc
--  DESTINATION ${PKG_CONFIG_DIR}
--  )
 +if(LAPACK)
 +  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/lapack.pc.in ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc @ONLY)
-+    install(FILES
+   install(FILES
+-  ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc
+-  DESTINATION ${PKG_CONFIG_DIR}
+-  COMPONENT Development
+-  )
 +    ${CMAKE_CURRENT_BINARY_DIR}/lapack.pc
 +    DESTINATION ${PKG_CONFIG_DIR}
++    COMPONENT Development
 +    )
 +endif()
  
  configure_file(${LAPACK_SOURCE_DIR}/CMAKE/lapack-config-install.cmake.in
    ${LAPACK_BINARY_DIR}/CMakeFiles/lapack-config.cmake @ONLY)
-@@ -394,8 +398,10 @@ write_basic_package_version_file(
+@@ -437,10 +441,12 @@
    COMPATIBILITY SameMajorVersion
    )
  
@@ -45,11 +46,16 @@ LAPACK.
 -  ${LAPACK_BINARY_DIR}/CMakeFiles/lapack-config.cmake
 -  ${LAPACK_BINARY_DIR}/lapack-config-version.cmake
 -  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapack-${LAPACK_VERSION}
+-  COMPONENT Development
 -  )
+-  
+\ Kein Zeilenumbruch am Dateiende.
 +if(LAPACK)
 +  install(FILES
 +    ${LAPACK_BINARY_DIR}/CMakeFiles/lapack-config.cmake
 +    ${LAPACK_BINARY_DIR}/lapack-config-version.cmake
 +    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapack-${LAPACK_VERSION}
++    COMPONENT Development
 +    )
 +endif()
++  
