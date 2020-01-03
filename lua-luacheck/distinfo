@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2015/08/10 22:13:59 jonthn Exp $
+
+SHA1 (lua-luacheck-0.23.0.tar.gz) = 95355bb1d8019ad4d42be3d72dd40fd120ae60db
+RMD160 (lua-luacheck-0.23.0.tar.gz) = b71157f35a927a2696ca62a82bc2ce35b8f877c3
+SHA512 (lua-luacheck-0.23.0.tar.gz) = d76e4b22f1e9d868a8531ad51fb98607e5bfb1fbbd55053105d9978ba6c0455de99202c53d4e199733ea997863b26527fb84e7e9717209fd588f1d02db9db028
+Size (lua-luacheck-0.23.0.tar.gz) = 158201 bytes
