@@ -1,5 +1,7 @@
 $NetBSD$
 
+Macro safety fix
+
 --- include/tig/tig.h.orig	2017-09-29 15:15:26.000000000 +0000
 +++ include/tig/tig.h
 @@ -108,7 +108,7 @@
