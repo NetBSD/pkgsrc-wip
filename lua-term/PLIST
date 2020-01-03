@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${LUA_CDIR}/term/core.so
+${LUA_LDIR}/term/colors.lua
+${LUA_LDIR}/term/cursor.lua
+${LUA_LDIR}/term/init.lua
