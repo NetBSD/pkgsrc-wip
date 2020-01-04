@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (profanity-0.7.0.tar.gz) = da71a8352a8a34db29f0fdbf6e11abe5ef55bbc3
-RMD160 (profanity-0.7.0.tar.gz) = b136b747aef0e7ac32f37565647d2b701d98318a
-SHA512 (profanity-0.7.0.tar.gz) = d4be02ad560f53ba59f6d814b6489fe8b7fe59a9c26e72867e23aa33d8badadfd518bc27a1f63266cb5f651f422a5de70f474ff551f5e97f5eab7b643f3a9106
-Size (profanity-0.7.0.tar.gz) = 789373 bytes
+SHA1 (profanity-0.7.1.tar.gz) = ddb36f278cdae4359987ea837263baad97c6ea5b
+RMD160 (profanity-0.7.1.tar.gz) = 77804a5d5a1ba4bbfda68fef6de16a69e3d80927
+SHA512 (profanity-0.7.1.tar.gz) = a6e159a5452ebb193dcff74dc8673de5dbc4bc5b2f2b8abc129641fc1b4b370aee9617dc0b26cfcc6aae58a1a900fda29356e61cdc17ee7ba69c879d6ccc2339
+Size (profanity-0.7.1.tar.gz) = 788754 bytes
 SHA1 (patch-configure.ac) = 16b2c5c64e0b227bd615121f133968024326ac3a
 SHA1 (patch-src_common.c) = 1df8ee42b0548c0a0f01e19361ddb6321deca0c9
 SHA1 (patch-src_config.h.in) = a6597f343bbb06128ce97849f02a6f6f2b57d25e

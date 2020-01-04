@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	profanity-0.7.0
+DISTNAME=	profanity-0.7.1
 CATEGORIES=	chat
 MASTER_SITES=	http://profanity-im.github.io/
 
@@ -15,6 +15,11 @@ AUTOCONF_REQD=	2.69
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
+CONFIGURE_ARGS+=	--enable-plugins 	\
+			--enable-c-plugins	\
+			--enable-python-plugins	\
+			--enable-omemo
+
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
@@ -23,6 +28,7 @@ pre-configure:
 .include "../../devel/readline/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
 .include "../../wip/libmesode/buildlink3.mk"
+.include "../../wip/libsignal-protocol-c/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
