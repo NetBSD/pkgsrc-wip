@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-1.20.0
+DISTNAME=	pre_commit-1.21.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-aspy.yaml-[0-9]*:../../wip/py-aspy.yaml
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv
+DEPENDS+=	${PYPKGPREFIX}-conda-[0-9]*:../../wip/py-conda
 DEPENDS+=	${PYPKGPREFIX}-identify>=1.0.0:../../wip/py-identify
 DEPENDS+=	${PYPKGPREFIX}-nodeenv>=0.11.1:../../wip/py-nodeenv
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3

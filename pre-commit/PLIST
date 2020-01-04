@@ -98,6 +98,8 @@ ${PYSITELIB}/pre_commit/languages/__init__.pyo
 ${PYSITELIB}/pre_commit/languages/__init__.pyc
 ${PYSITELIB}/pre_commit/languages/all.pyo
 ${PYSITELIB}/pre_commit/languages/all.pyc
+${PYSITELIB}/pre_commit/languages/conda.pyo
+${PYSITELIB}/pre_commit/languages/conda.pyc
 ${PYSITELIB}/pre_commit/languages/docker.pyo
 ${PYSITELIB}/pre_commit/languages/docker.pyc
 ${PYSITELIB}/pre_commit/languages/docker_image.pyo
@@ -129,6 +131,7 @@ ${PYSITELIB}/pre_commit/languages/swift.pyc
 ${PYSITELIB}/pre_commit/languages/system.pyo
 ${PYSITELIB}/pre_commit/languages/system.pyc
 ${PYSITELIB}/pre_commit/languages/all.py
+${PYSITELIB}/pre_commit/languages/conda.py
 ${PYSITELIB}/pre_commit/languages/docker.py
 ${PYSITELIB}/pre_commit/languages/docker_image.py
 ${PYSITELIB}/pre_commit/languages/fail.py
@@ -170,6 +173,7 @@ ${PYSITELIB}/pre_commit/resources/empty_template_setup.pyo
 ${PYSITELIB}/pre_commit/resources/empty_template_setup.pyc
 ${PYSITELIB}/pre_commit/resources/empty_template_.npmignore
 ${PYSITELIB}/pre_commit/resources/empty_template_Cargo.toml
+${PYSITELIB}/pre_commit/resources/empty_template_environment.yml
 ${PYSITELIB}/pre_commit/resources/empty_template_main.go
 ${PYSITELIB}/pre_commit/resources/empty_template_main.rs
 ${PYSITELIB}/pre_commit/resources/empty_template_package.json
