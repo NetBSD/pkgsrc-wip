@@ -2,6 +2,3 @@ Do not bring into pkgsrc proper yet, because too many depending
 packages will break. -gdt
 
 Add manual.  Howver, it is not at the same MASTER_SITE.
-
-Decide how to deal with tests, which break if the grids are installed
--- but without the grids, users get worse results.

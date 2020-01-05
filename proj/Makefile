@@ -2,7 +2,7 @@
 
 # I have an update to 6 ready, but it is on hold pending an assessment
 # of projects.h removal fallout - gdt.
-VERSION_BASE=	6.2.1
+VERSION_BASE=	6.3.0
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0
@@ -34,6 +34,9 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
 .if !empty(PKG_OPTIONS:Mproj-grids)
+# Ideally, upstream would have an approach which enables testing with
+# the grids that users ought to have.  Until then, fail if test
+# preconditions are not met.
 do-test:
 	${ECHO} "Tests assume extra grids are not installed."
 	${FALSE}

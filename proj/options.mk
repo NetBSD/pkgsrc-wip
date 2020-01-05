@@ -11,9 +11,9 @@ PLIST_VARS+=		grids
 
 .if !empty(PKG_OPTIONS:Mproj-grids)
 DISTFILES+=	proj-datumgrid-1.8${EXTRACT_SUFX}
-DISTFILES+=	proj-datumgrid-europe-1.4${EXTRACT_SUFX}
-DISTFILES+=	proj-datumgrid-north-america-1.2${EXTRACT_SUFX}
-DISTFILES+=	proj-datumgrid-oceania-1.0${EXTRACT_SUFX}
+DISTFILES+=	proj-datumgrid-europe-1.5${EXTRACT_SUFX}
+DISTFILES+=	proj-datumgrid-north-america-1.3${EXTRACT_SUFX}
+DISTFILES+=	proj-datumgrid-oceania-1.1${EXTRACT_SUFX}
 DISTFILES+=	proj-datumgrid-world-1.0${EXTRACT_SUFX}
 
 PLIST.grids=		yes
