@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 14:59:45 krytarowski Exp $
+@comment $NetBSD$
 include/sysstat-qt5/SysStat/BaseStat
 include/sysstat-qt5/SysStat/CpuStat
 include/sysstat-qt5/SysStat/Global
@@ -13,7 +13,9 @@ include/sysstat-qt5/sysstat_global.h
 include/sysstat-qt5/version.h
 lib/libsysstat-qt5.so
 lib/libsysstat-qt5.so.0
-lib/libsysstat-qt5.so.0.2.0
+lib/libsysstat-qt5.so.${PKGVERSION}
 lib/pkgconfig/sysstat-qt5.pc
+share/cmake/sysstat-qt5/sysstat-qt5-config-version.cmake
 share/cmake/sysstat-qt5/sysstat-qt5-config.cmake
-share/cmake/sysstat-qt5/sysstat_use.cmake
+share/cmake/sysstat-qt5/sysstat-qt5-targets-release.cmake
+share/cmake/sysstat-qt5/sysstat-qt5-targets.cmake

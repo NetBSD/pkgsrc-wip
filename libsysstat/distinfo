@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/05/31 00:36:14 krytarowski Exp $
+$NetBSD$
 
-SHA1 (libsysstat-0.3.0.tar.gz) = 9f418b8084b3ae565eddbd90c2c82e0b5cbf85c1
-RMD160 (libsysstat-0.3.0.tar.gz) = 96ceedae0af66d0ac1428d73752b9ef84d71bf05
-Size (libsysstat-0.3.0.tar.gz) = 19092 bytes
+SHA1 (libsysstat-0.4.2.tar.xz) = 50c186183db34091303885695df776b8a6878bd8
+RMD160 (libsysstat-0.4.2.tar.xz) = 65e76bf16f5f500a4bad5239bffdca3b46b3d520
+SHA512 (libsysstat-0.4.2.tar.xz) = 9059b9d20edbb7ecd89e722b48c6603b8042030ffad06d3eac167bb518691c2733d314649dc4c42a839d4812c7b65dcd043a13a6bd5b56678da112a8065717df
+Size (libsysstat-0.4.2.tar.xz) = 17508 bytes

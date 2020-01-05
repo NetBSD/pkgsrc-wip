@@ -1,14 +1,30 @@
-# $NetBSD: Makefile,v 1.2 2015/05/31 00:36:14 krytarowski Exp $
+# $NetBSD$
 
-.include "../../wip/liblxqt/Makefile.common"
-
-DISTNAME=	libsysstat-0.3.0
+DISTNAME=	libsysstat-0.4.2
 CATEGORIES=	devel
+MASTER_SITES=	https://downloads.lxqt.org/downloads/libsysstat/0.4.2/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/lxde/libsysstat/
+HOMEPAGE=	https://lxqt.org/
 COMMENT=	Library used to query system info and statistics
 LICENSE=	gnu-lgpl-v2.1
+
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
+
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+INSTALLATION_DIRS+=	lib
+
+pre-configure:
+	${MKDIR} -p ${WRKSRC}/build
+
+DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
