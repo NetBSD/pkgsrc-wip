@@ -2,7 +2,7 @@
 
 # I have an update to 6 ready, but it is on hold pending an assessment
 # of projects.h removal fallout - gdt.
-VERSION_BASE=	6.0.0
+VERSION_BASE=	6.2.1
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0
@@ -12,11 +12,7 @@ WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		proj-datumgrid-1.8${EXTRACT_SUFX} \
-		proj-datumgrid-europe-1.2${EXTRACT_SUFX} \
-		proj-datumgrid-north-america-1.2${EXTRACT_SUFX} \
-		proj-datumgrid-oceania-1.0${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://proj4.org/
@@ -28,6 +24,8 @@ COMMENT=	Cartographic projection software
 # cc-by (oceania)
 LICENSE=	mit
 
+.include "options.mk"
+
 PREV_PKGPATH=		misc/proj
 
 USE_LANGUAGES=		c99 c++11
@@ -35,7 +33,13 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
+.if !empty(PKG_OPTIONS:Mproj-grids)
+do-test:
+	${ECHO} "Tests assume extra grids are not installed."
+	${FALSE}
+.else
 TEST_TARGET=		check
+.endif
 
 # \todo Ideally, the files would be unpacked directly in data.
 # Assume that all of the stray files in ${WRKDIR} came from datumgrids.
