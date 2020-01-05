@@ -1,18 +1,33 @@
-# $NetBSD: Makefile,v 1.3 2015/05/30 01:23:41 krytarowski Exp $
+# $NetBSD$
 
-DISTNAME=	lxqt-openssh-askpass-0.10.0
+DISTNAME=	lxqt-openssh-askpass-0.14.1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxde/}
+MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-openssh-askpass/0.14.1/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Tool used with openssh to prompt the user for password
 LICENSE=	gnu-lgpl-v2.1
 
-EXTRACT_USING=	gtar
-
 USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
+
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+INSTALLATION_DIRS+=	bin
+
+pre-configure:
+	${MKDIR} -p ${WRKSRC}/build
+
+DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+DEPENDS+=	openssh-[0-9]*:../../security/openssh
+
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../wip/liblxqt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
