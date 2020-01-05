@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/11 11:07:19 krytarowski Exp $
+$NetBSD$
 
-SHA1 (libqtxdg-1.3.0.zip) = d4de838f0a53749e61d59c5e325451b4f5892604
-RMD160 (libqtxdg-1.3.0.zip) = 2b732851abdf0b9bf047f4a99ff5792e9a6d87b9
-SHA512 (libqtxdg-1.3.0.zip) = 28f95a4d042fd04eb2c02e90883ffb406b76a56d0e16e694aea4262a1c5bcc7c41ea2fe4d0ac4379d535dbc89dddac4983a5eae071397d6c8c638508c6a51568
-Size (libqtxdg-1.3.0.zip) = 97872 bytes
+SHA1 (libqtxdg-3.4.0.tar.xz) = 8c4f207b3cfa37a29373521a592c06000a102d0c
+RMD160 (libqtxdg-3.4.0.tar.xz) = 55a7c86cbeeed611b3dd5eb783e5e3b6be77e78c
+SHA512 (libqtxdg-3.4.0.tar.xz) = 9bd52ae3aa32f8c7de48e562ada1ff2413892c7ac58d5f7a06c0c512a4a6c03e9c5c44930f7781930c9c701894ea38a450a61a3c26afc047c76313ada0a890e6
+Size (libqtxdg-3.4.0.tar.xz) = 73060 bytes
