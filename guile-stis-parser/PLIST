@@ -1,0 +1,17 @@
+@comment $NetBSD$
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser.go
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser/fstream.go
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser/lang/python3-parser.go
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser/lang/python3/tool.go
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser/macros.go
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser/operator-parser.go
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser/pre.go
+guile/2.2/lib/guile/2.2/ccache/parser/stis-parser/scanner.go
+guile/2.2/share/guile/site/2.2/parser/stis-parser.scm
+guile/2.2/share/guile/site/2.2/parser/stis-parser/fstream.scm
+guile/2.2/share/guile/site/2.2/parser/stis-parser/lang/python3-parser.scm
+guile/2.2/share/guile/site/2.2/parser/stis-parser/lang/python3/tool.scm
+guile/2.2/share/guile/site/2.2/parser/stis-parser/macros.scm
+guile/2.2/share/guile/site/2.2/parser/stis-parser/operator-parser.scm
+guile/2.2/share/guile/site/2.2/parser/stis-parser/pre.scm
+guile/2.2/share/guile/site/2.2/parser/stis-parser/scanner.scm
