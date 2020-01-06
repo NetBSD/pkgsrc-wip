@@ -21,7 +21,8 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	rsf.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# Only for Python 3.x but still not ported to 3.8
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
