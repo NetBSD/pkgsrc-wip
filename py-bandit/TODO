@@ -1,0 +1,3 @@
+- py-git-3.0.5 is only for Python 3.x and this would make py-bandit only for
+  Python 3.x as well.  Should an older version be packaged as well in order to
+  being able to use py-bandit with Python 2.7 too?
