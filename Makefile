@@ -1855,6 +1855,7 @@ SUBDIR+=	libevhtp
 SUBDIR+=	libexact
 SUBDIR+=	libffi-git
 SUBDIR+=	libfirm-git
+SUBDIR+=	libfm-qt
 SUBDIR+=	libfolks
 SUBDIR+=	libfplll
 SUBDIR+=	libftdi1
