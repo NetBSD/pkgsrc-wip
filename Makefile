@@ -4282,7 +4282,6 @@ SUBDIR+=	refkeen
 SUBDIR+=	regexxer
 SUBDIR+=	reinteract
 SUBDIR+=	relaydb
-SUBDIR+=	remake
 SUBDIR+=	remctl
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
