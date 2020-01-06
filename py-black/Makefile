@@ -24,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.2:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-aiohttp-cors-[0-9]*:../../www/py-aiohttp-cors
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-aiohttp
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && for b in black blackd; \
           do ${MV} $$b $$b-${PYVERSSUFFIX}; \
