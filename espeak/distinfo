@@ -7,5 +7,5 @@ SHA1 (patch-aa) = 9cd957a808e1d5b468f89e8b52e9950dd9295719
 SHA1 (patch-ab) = b95e08f1422bbf7d880e13d30572e1cdebde967a
 SHA1 (patch-ac) = 8881c9015ccced93a6b42a4fc3427ba1428d5618
 SHA1 (patch-numbers.cpp) = a611bbc7c5b8ef0abaa84949635ad2dad9a67411
-SHA1 (patch-tr__languages.cpp) = 7b3bf013fc1566f4f0a07f2d8af3e386d8954a0a
+SHA1 (patch-tr__languages.cpp) = b337b87591717462acde77c0974a3ce50c6a6718
 SHA1 (patch-translate.h) = 7e5bfbf6a7fab6524b853ebedf08896f3a81d6d2

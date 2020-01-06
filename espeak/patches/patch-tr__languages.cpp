@@ -18,7 +18,7 @@ Avoid narrowing conversion errors.
  	tr->langopts.ascii_language[0] = 0;    // Non-Latin alphabet languages, use this language to speak Latin words, default is English
  	tr->langopts.alt_alphabet_lang = L('e','n');
 -	tr->langopts.roman_suffix = "";
-+	tr->langopts.roman_suffix = { 0 };
++	tr->langopts.roman_suffix = L"";
  
  	SetLengthMods(tr,201);
  //	tr->langopts.length_mods = length_mods_en;
