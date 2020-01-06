@@ -8,11 +8,6 @@ share/OpenFodder/Campaigns/Cannon Fodder 2.ofc
 share/OpenFodder/Campaigns/Cannon Fodder Plus.ofc
 share/OpenFodder/Campaigns/Cannon Fodder.ofc
 share/OpenFodder/Campaigns/PC Format.ofc
-share/OpenFodder/Campaigns/segras.ofc
-share/OpenFodder/Campaigns/segras/alessandro.map
-share/OpenFodder/Campaigns/segras/alessandro.spt
-share/OpenFodder/Campaigns/segras/segras first.map
-share/OpenFodder/Campaigns/segras/segras first.spt
 share/OpenFodder/Data/Amiga/_AmigaDataHere
 share/OpenFodder/Data/Amiga2/_Amiga2DataHere
 share/OpenFodder/Data/AmigaAction/apmenu.lbm
@@ -257,3 +252,46 @@ share/OpenFodder/Data/Plus/mapm4.map
 share/OpenFodder/Data/Plus/mapm4.spt
 share/OpenFodder/Data/Plus/pstuff.lbm
 share/OpenFodder/Saves/_SavesHere
+share/OpenFodder/Scripts/COPYING
+share/OpenFodder/Scripts/General/Background.js
+share/OpenFodder/Scripts/General/Helicopter.js
+share/OpenFodder/Scripts/General/Human.js
+share/OpenFodder/Scripts/General/Names/Desert.js
+share/OpenFodder/Scripts/General/Names/Jungle.js
+share/OpenFodder/Scripts/General/Names/Moors.js
+share/OpenFodder/Scripts/General/Names/Snow.js
+share/OpenFodder/Scripts/General/Names/Underground.js
+share/OpenFodder/Scripts/General/OpenFodder.js
+share/OpenFodder/Scripts/General/PhaseName.js
+share/OpenFodder/Scripts/General/Positioning.js
+share/OpenFodder/Scripts/General/Prototype.ts
+share/OpenFodder/Scripts/General/Scenario.js
+share/OpenFodder/Scripts/General/Session.js
+share/OpenFodder/Scripts/General/Sprites.js
+share/OpenFodder/Scripts/General/Strange.js
+share/OpenFodder/Scripts/General/Structures.js
+share/OpenFodder/Scripts/General/Structures/Barracks.js
+share/OpenFodder/Scripts/General/Structures/Bunker.js
+share/OpenFodder/Scripts/General/Structures/Hut.js
+share/OpenFodder/Scripts/General/Validation.js
+share/OpenFodder/Scripts/General/Weapons.js
+share/OpenFodder/Scripts/Objectives/Activate.Switches/Random.js
+share/OpenFodder/Scripts/Objectives/Base.js
+share/OpenFodder/Scripts/Objectives/Destroy.Computer/Random.js
+share/OpenFodder/Scripts/Objectives/Destroy.Enemy.Buildings/Random.js
+share/OpenFodder/Scripts/Objectives/Destroy.Factory/Random.js
+share/OpenFodder/Scripts/Objectives/Get.Civilian.Home/Random.js
+share/OpenFodder/Scripts/Objectives/Kidnap.Leader/Random.js
+share/OpenFodder/Scripts/Objectives/Kill.All.Enemy/Random.js
+share/OpenFodder/Scripts/Objectives/Protect.Civilians/Random.js
+share/OpenFodder/Scripts/Objectives/Rescue.Hostage/Random.js
+share/OpenFodder/Scripts/Objectives/Rescue.Hostages/Random.js
+share/OpenFodder/Scripts/README.md
+share/OpenFodder/Scripts/Scenarios/Intro.js
+share/OpenFodder/Scripts/Scenarios/Random.js
+share/OpenFodder/Scripts/Settings.js
+share/OpenFodder/Scripts/Terrain/Smoothing.js
+share/OpenFodder/Scripts/Terrain/Terrain.js
+share/OpenFodder/Scripts/jsconfig.json
+share/OpenFodder/Scripts/test.js
+share/OpenFodder/Scripts/test_template.js

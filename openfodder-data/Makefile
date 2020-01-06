@@ -5,7 +5,7 @@ GITHUB_PROJECT=	data
 DISTNAME=	Data.Pack.${GITHUB_RELEASE}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenFodder/}
-GITHUB_RELEASE=	1.6.0
+GITHUB_RELEASE=	1.7.0
 EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
@@ -39,6 +39,12 @@ do-install:
 		${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/share/OpenFodder/$$d" || exit 1; \
 	done
 	cd ${WRKDIR} && ${FIND} Saves -type f | while read f; do \
+		${INSTALL_DATA} "$$f" "${DESTDIR}${PREFIX}/share/OpenFodder/$${f%/*}" || exit 1; \
+	done
+	cd ${WRKDIR} && ${FIND} Scripts -type d -and ! -path "Scripts/.*" | while read d; do \
+		${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/share/OpenFodder/$$d" || exit 1; \
+	done
+	cd ${WRKDIR} && ${FIND} Scripts -type f -and ! -path "Scripts/.*" | while read f; do \
 		${INSTALL_DATA} "$$f" "${DESTDIR}${PREFIX}/share/OpenFodder/$${f%/*}" || exit 1; \
 	done
 
