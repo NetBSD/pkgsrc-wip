@@ -1,0 +1,3 @@
+guile-persist is a serialization library for serializing objects like
+classes and objects, closures and structs.  This currently does not
+support serializing continuations or delimited continuations.
