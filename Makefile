@@ -2099,6 +2099,7 @@ SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-runner
 SUBDIR+=	lxqt-session
+SUBDIR+=	lxqt-themes
 SUBDIR+=	lzlib
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
