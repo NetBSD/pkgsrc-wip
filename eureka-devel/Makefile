@@ -1,6 +1,6 @@
 # $NetBSD$
 
-GIT_REVISION=	19c0d7e5dd1bb8e5bf7c6840868e9f6eecd14a9a
+GIT_REVISION=	afe25263ebfca349226500653eed3975206c3d41
 PKGNAME=	eureka-devel-0
 GIT_REPO=	https://git.code.sf.net/p/eureka-editor/git
 #GIT_EXTRACTDIR=	eureka-124-source
