@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2013/03/30 19:54:45 jgoamakf Exp $
 
 SHA1 (AI-Prolog-0.741.tar.gz) = c5db1d77908b226074d6e64c3200b71be2d4bddf
 RMD160 (AI-Prolog-0.741.tar.gz) = 6053a28432cbf31109b4ad360ffbcdea605d5a95
+SHA512 (AI-Prolog-0.741.tar.gz) = c878393bb816c6ad93164eb211e1db32cbccca4ff168a079e7c1596c29b958b6882a8a4e76346cd6d98918270d88db6a2112161c2876f55ca4ae3d838aca7012
 Size (AI-Prolog-0.741.tar.gz) = 69834 bytes
 SHA1 (patch-aa) = d1c06727e4f705140fd3ec6b5d7c16f0f05391cd

@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2013/03/30 19:54:45 jgoamakf Exp $
-#
+# $NetBSD$
 
 DISTNAME=	AI-Prolog-0.741
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	perl5 lang
+CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AI/}
 
-MAINTAINER=	athaba@users.sourceforge.net
-HOMEPAGE=	https://metacpan.org/release/AI-Prolog
-COMMENT=	Pure Perl predicate logic engine
-LICENSE=	${PERL5_LICENSE}
+MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+HOMEPAGE=	https://cpan.perl.org/CPAN/modules/by-module/AI/
+COMMENT=	TODO: Short description of the package
+#LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	p5-Clone>=0.15:../../devel/p5-Clone
 DEPENDS+=	p5-Exporter-Tidy>=0.06:../../wip/p5-Exporter-Tidy
 DEPENDS+=	p5-Hash-AsObject>=0.05:../../wip/p5-Hash-AsObject
+DEPENDS+=	p5-Pod-Usage>=1.12:../../devel/p5-Pod-Usage
 DEPENDS+=	p5-Regexp-Common>=2.119:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Term-ReadLine>=1.01:../../devel/p5-Term-ReadLine
