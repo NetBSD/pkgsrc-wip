@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/11 17:26:42 krytarowski Exp $
+$NetBSD$
 
-SHA1 (lxqt-runner-0.9.0.tar.gz) = b82727e827a11ca0f8ecb4c3e5356648410cfab6
-RMD160 (lxqt-runner-0.9.0.tar.gz) = ae68cf5f5119b811f0f27c98cde73cc8b3bd46de
-Size (lxqt-runner-0.9.0.tar.gz) = 199615 bytes
+SHA1 (lxqt-runner-0.14.1.tar.xz) = 1f7afd052d457caa23e348f344fe8709bd09c17b
+RMD160 (lxqt-runner-0.14.1.tar.xz) = 060f3ad96b343dd6543b2a347542744e5803336c
+SHA512 (lxqt-runner-0.14.1.tar.xz) = 62d196d37e87bc9154fa2cd9abcb8671277bffdb8673a6531bcb93161944cb8a31298587f8323d79a290292fc73765ea15990106828335879b87029ff1aba28c
+Size (lxqt-runner-0.14.1.tar.xz) = 223628 bytes

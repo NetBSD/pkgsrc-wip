@@ -1,29 +1,32 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 17:26:42 krytarowski Exp $
+@comment $NetBSD$
 bin/lxqt-runner
-share/lxqt/lxqt-runner/lxqt-targets-noconfig.cmake
+etc/xdg/autostart/lxqt-runner.desktop
+man/man1/lxqt-runner.1
 share/lxqt/translations/lxqt-runner/lxqt-runner_ar.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_ca.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_cs.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_cs_CZ.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_cy.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_da.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_da_DK.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_de.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_de_DE.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_el_GR.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_el.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_eo.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_es.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_es_VE.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_eu.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_fi.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_fr_FR.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_fr.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_gl.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_he.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_hu.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ia.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_id_ID.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_it_IT.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_id.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_it.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ja.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ko.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_lt.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_nb_NO.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_nl.qm
-share/lxqt/translations/lxqt-runner/lxqt-runner_pl_PL.qm
+share/lxqt/translations/lxqt-runner/lxqt-runner_pl.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_pt.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_pt_BR.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_ro_RO.qm
@@ -39,3 +42,4 @@ share/lxqt/translations/lxqt-runner/lxqt-runner_tr.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_uk.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_zh_CN.qm
 share/lxqt/translations/lxqt-runner/lxqt-runner_zh_TW.qm
+@pkgdir lib
