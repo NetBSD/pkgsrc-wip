@@ -4428,6 +4428,7 @@ SUBDIR+=	scorched3d
 SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scratchpad
+SUBDIR+=	screengrab
 SUBDIR+=	scrc
 SUBDIR+=	scribus
 SUBDIR+=	scsh-install-lib
