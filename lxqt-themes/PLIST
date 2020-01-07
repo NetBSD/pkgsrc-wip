@@ -97,4 +97,3 @@ share/lxqt/themes/system/lxqt-panel.qss
 share/lxqt/themes/system/preview.png
 share/lxqt/themes/system/spacer-plugin/spacer-dots.svg
 share/lxqt/themes/system/spacer-plugin/spacer-line.svg
-@pkgdir lib

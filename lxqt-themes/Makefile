@@ -19,8 +19,6 @@ CMAKE_ARG_PATH=	..
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-INSTALLATION_DIRS+=	lib
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
