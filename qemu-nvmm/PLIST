@@ -4,6 +4,7 @@ bin/qemu-edid
 bin/qemu-ga
 bin/qemu-img
 bin/qemu-io
+bin/qemu-keymap
 bin/qemu-nbd
 bin/qemu-system-x86_64
 man/man1/qemu-img.1
