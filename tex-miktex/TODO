@@ -1,0 +1,41 @@
+Useful: https://miktex.org/howto/build-unx
+
+Build Fails:
+Scanning dependencies of target fmt-static
+[  0%] Generating miktex-zzdb1-2.9.tar.lzma
+[  0%] Building CXX object Libraries/MiKTeX/Util/shared/CMakeFiles/MiKTeX209-util.dir/__/StringUtil.cpp.o
+[  0%] Building CXX object Libraries/3rd/fmt/static/CMakeFiles/fmt-static.dir/__/source/src/format.cc.o
+[  0%] Building CXX object Libraries/3rd/fmt/shared/CMakeFiles/MiKTeX209-fmt.dir/__/source/src/format.cc.o
+[  0%] Generating miktex-zzdb3-2.9.tar.lzma
+[  1%] Building CXX object Libraries/MiKTeX/Util/shared/CMakeFiles/MiKTeX209-util.dir/__/Tokenizer.cpp.o
+In file included from /usr/work/wip/tex-miktex/work/miktex-2.9.7250/Libraries/MiKTeX/Util/include/miktex/Util/CharBuffer.h:34,
+                 from /usr/work/wip/tex-miktex/work/miktex-2.9.7250/Libraries/MiKTeX/Util/Tokenizer.cpp:33:
+/usr/work/wip/tex-miktex/work/miktex-2.9.7250/Libraries/MiKTeX/Util/include/miktex/Util/StringUtil.h:127:75: error: 'va_list' has not been declared
+   static MIKTEXUTILCEEAPI(std::string) FormatStringVA(const char* format, va_list arglist);
+                                                                           ^~~~~~~
+--- Libraries/MiKTeX/Util/shared/CMakeFiles/MiKTeX209-util.dir/__/Tokenizer.cpp.o ---
+*** [Libraries/MiKTeX/Util/shared/CMakeFiles/MiKTeX209-util.dir/__/Tokenizer.cpp.o] Error code 1
+
+make[2]: stopped in /usr/work/wip/tex-miktex/work/miktex-2.9.7250
+1 error
+
+make[2]: stopped in /usr/work/wip/tex-miktex/work/miktex-2.9.7250
+--- Libraries/MiKTeX/Util/shared/CMakeFiles/MiKTeX209-util.dir/all ---
+*** [Libraries/MiKTeX/Util/shared/CMakeFiles/MiKTeX209-util.dir/all] Error code 2
+
+make[1]: stopped in /usr/work/wip/tex-miktex/work/miktex-2.9.7250
+A failure has been detected in another branch of the parallel make
+
+make[2]: stopped in /usr/work/wip/tex-miktex/work/miktex-2.9.7250
+--- CMakeFiles/gen-bootstrapping-files.dir/all ---
+*** [CMakeFiles/gen-bootstrapping-files.dir/all] Error code 2
+
+make[1]: stopped in /usr/work/wip/tex-miktex/work/miktex-2.9.7250
+A failure has been detected in another branch of the parallel make
+
+make[2]: stopped in /usr/work/wip/tex-miktex/work/miktex-2.9.7250
+--- Libraries/3rd/fmt/shared/CMakeFiles/MiKTeX209-fmt.dir/all ---
+*** [Libraries/3rd/fmt/shared/CMakeFiles/MiKTeX209-fmt.dir/all] Error code 2
+
+make[1]: stopped in /usr/work/wip/tex-miktex/work/miktex-2.9.7250
+A failure has been detected in another branch of the parallel make

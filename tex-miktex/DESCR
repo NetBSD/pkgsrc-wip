@@ -1,0 +1,11 @@
+MiKTeX is both a modern C/C++ implementation of TeX & Friends and a
+TeX distribution.
+
+- MiKTeX is a scalable TeX distribution (["Just enough
+  TeX"](https://miktex.org/kb/just-enough-tex)):
+  * you can start with MiKTeX executables and man pages
+  * in the course of authoring your documents: only necessary packages
+    will be downloaded and installed
+
+The MiKTeX source code is documented here:
+https://docs.miktex.org/hacking/index.html
