@@ -1,0 +1,13 @@
+@comment $NetBSD$
+share/fonts/X11/TTF/TT2020Base-Italic.ttf
+share/fonts/X11/TTF/TT2020Base-Regular.ttf
+share/fonts/X11/TTF/TT2020StyleB-Italic.ttf
+share/fonts/X11/TTF/TT2020StyleB-Regular.ttf
+share/fonts/X11/TTF/TT2020StyleD-Italic.ttf
+share/fonts/X11/TTF/TT2020StyleD-Regular.ttf
+share/fonts/X11/TTF/TT2020StyleE-Italic.ttf
+share/fonts/X11/TTF/TT2020StyleE-Regular.ttf
+share/fonts/X11/TTF/TT2020StyleF-Regular-ASCII.ttf
+share/fonts/X11/TTF/TT2020StyleF-Regular.ttf
+share/fonts/X11/TTF/TT2020StyleG-Regular-ASCII.ttf
+share/fonts/X11/TTF/TT2020StyleG-Regular.ttf
