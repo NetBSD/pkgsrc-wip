@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/doc/doom-pwad-shotgun-symphony/History.txt
+share/doc/doom-pwad-shotgun-symphony/INSTALL.pkgsrc
+share/doom/Sgnsym.txt
+share/doom/Sgnsym.wad
