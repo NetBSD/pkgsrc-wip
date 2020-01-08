@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (openblas/OpenBLAS-0.3.5.tar.gz) = 3ec3607d37c2ea1f7ec1d255f5f38d437489c24d
-RMD160 (openblas/OpenBLAS-0.3.5.tar.gz) = 9b7aa282cc2e5925219d14502bdd32917d0bbcdd
-SHA512 (openblas/OpenBLAS-0.3.5.tar.gz) = 91b3074eb922453bf843158b4281cde65db9e8bbdd7590e75e9e6cdcb486157f7973f2936f327bb3eb4f1702ce0ba51ae6729d8d4baf2d986c50771e8f696df0
-Size (openblas/OpenBLAS-0.3.5.tar.gz) = 11848689 bytes
+SHA1 (openblas/OpenBLAS-0.3.7.tar.gz) = 6a79b36d1bf73584a513139806d226f9189d621e
+RMD160 (openblas/OpenBLAS-0.3.7.tar.gz) = 72103fa62efaa9ab77f80f9ae70b1417fa6f2122
+SHA512 (openblas/OpenBLAS-0.3.7.tar.gz) = 9c4898301c675471bbce2bb99b6bbe7c90724784fac06504416d4bd5da3cd4488f727b0a118c9a38ea342daac2af9e32597a847004241cc57de693b58b856262
+Size (openblas/OpenBLAS-0.3.7.tar.gz) = 11986592 bytes
 SHA1 (openblas/large.tgz) = a689e5b180595b40c5719b0f358b31b15b57a2db
 RMD160 (openblas/large.tgz) = 8010ff4002ef42cf22a9ee9345011d68fc27d855
 SHA512 (openblas/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
@@ -12,17 +12,17 @@ SHA1 (openblas/timing.tgz) = fd47fc3f26d142a791df51e4a422a49662507252
 RMD160 (openblas/timing.tgz) = f0fe220e7ab611d4db8d8cab960361955e2ab093
 SHA512 (openblas/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
 Size (openblas/timing.tgz) = 1059485 bytes
-SHA1 (patch-Makefile) = e430fecf10b51ebc5fd0d38258b03a2af8c7fdb6
-SHA1 (patch-Makefile.install) = d7c5ee17feb43843060a36e9b7de693f06944db9
-SHA1 (patch-Makefile.rule) = ec2663c22ca68059181fe90047b97131764ea32a
-SHA1 (patch-Makefile.system) = a288bb24a8d2352a2da6d76c5042a2f50fc89a67
+SHA1 (patch-Makefile) = 6029076c34765e53a26617fb4bd36b56ba413f1b
+SHA1 (patch-Makefile.install) = 08c80677f8040623eaf5277cf92b5f5969fb4a07
+SHA1 (patch-Makefile.rule) = 7074d322579d77edcd6cfa938ed862037a777187
+SHA1 (patch-Makefile.system) = c8479e170ec0ec657e1c14ee505d0da41cb3d221
 SHA1 (patch-c_check) = c5990809434a259399c75e660aad5abe83899548
 SHA1 (patch-common__arm.h) = f08ec61bee8317daac267e90a79f46097b3431c9
 SHA1 (patch-cpuid__arm.c) = 20f95cede90cbe548c0cd09ed2e3d37d1d4aeabd
 SHA1 (patch-cpuid__arm64.c) = bbeb7222b32ec821511a6798fc27ff7269700662
 SHA1 (patch-cpuid_ia64.c) = 39649319b8c0a37b8d494e3c03b1ddb6fb616603
-SHA1 (patch-driver_others_memory.c) = 24adfd60c4baade965745bb6c21c6a3f955e4e50
-SHA1 (patch-exports+Makefile) = b1b087f07cffa3b0338a1cae8155995ebb658b30
+SHA1 (patch-exports+Makefile) = 10d84c9d04bcb8cc88374dabc60016c9c25feb70
 SHA1 (patch-f_check) = 9162d6a31f96c6af5aada82f6e78cf0385384215
 SHA1 (patch-getarch.c) = 3d0ea5b989c6402d9e2f03a6cc2de848f06ca16d
 SHA1 (patch-interface__ztrmv.c) = 6038946f8fb9542e680178ece2bd0d0d5853baad
+SHA1 (patch-utest_Makefile) = f6347c95c7da3b7d4488cbfb7001b367b042a421

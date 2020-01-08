@@ -2,18 +2,18 @@ $NetBSD$
 
 Second part of removing the special library names.
 
---- Makefile.install.orig	2018-12-31 23:09:59.000000000 +0100
-+++ Makefile.install	2019-03-22 17:43:08.922196943 +0100
-@@ -61,8 +61,6 @@
- ifndef NO_STATIC
+--- Makefile.install.orig	2019-08-11 21:23:27.000000000 +0000
++++ Makefile.install
+@@ -61,8 +61,6 @@ endif
+ ifneq ($(NO_STATIC),1)
  	@echo Copying the static library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
  	@install -pm644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
 -	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
 -	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
  endif
  #for install shared library
- ifndef NO_SHARED
-@@ -70,8 +68,7 @@
+ ifneq ($(NO_SHARED),1)
+@@ -70,8 +68,7 @@ ifneq ($(NO_SHARED),1)
  ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android Haiku))
  	@install -pm755 $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
@@ -23,3 +23,21 @@ Second part of removing the special library names.
  endif
  
  ifeq ($(OSNAME), $(filter $(OSNAME),FreeBSD OpenBSD NetBSD DragonFly))
+@@ -110,16 +107,13 @@ endif
+ ifneq ($(NO_STATIC),1)
+ 	@echo Copying the static library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
+ 	@installbsd -c -m 644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
+-	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
+-	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
+ endif
+ #for install shared library
+ ifneq ($(NO_SHARED),1)
+ 	@echo Copying the shared library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
+ 	@installbsd -c -m 755 $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
+ 	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
+-	ln -fs $(LIBSONAME) $(LIBPREFIX).so ; \
+-	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
++	ln -fs $(LIBSONAME) $(LIBPREFIX).so
+ endif
+ 
+ endif

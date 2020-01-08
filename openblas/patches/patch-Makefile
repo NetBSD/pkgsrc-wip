@@ -2,9 +2,9 @@ $NetBSD$
 
 Remove special library names.
 
---- Makefile.orig	2018-12-31 23:09:59.000000000 +0100
-+++ Makefile	2019-03-22 18:49:13.168527565 +0100
-@@ -100,7 +100,6 @@
+--- Makefile.orig	2019-08-11 21:23:27.000000000 +0000
++++ Makefile
+@@ -100,7 +100,6 @@ ifneq ($(NO_SHARED), 1)
  ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android Haiku))
  	@$(MAKE) -C exports so
  	@ln -fs $(LIBSONAME) $(LIBPREFIX).so
@@ -12,15 +12,16 @@ Remove special library names.
  endif
  ifeq ($(OSNAME), $(filter $(OSNAME),FreeBSD OpenBSD NetBSD DragonFly))
  	@$(MAKE) -C exports so
-@@ -108,7 +107,6 @@
+@@ -108,8 +107,6 @@ ifeq ($(OSNAME), $(filter $(OSNAME),Free
  endif
  ifeq ($(OSNAME), Darwin)
  	@$(MAKE) -C exports dyn
 -	@ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib
+-	@ln -fs $(LIBDYNNAME) $(LIBPREFIX).$(MAJOR_VERSION).dylib
  endif
  ifeq ($(OSNAME), WINNT)
  	@$(MAKE) -C exports dll
-@@ -142,7 +140,6 @@
+@@ -146,7 +143,6 @@ ifeq ($(NO_SHARED), 1)
  	$(error OpenBLAS: neither static nor shared are enabled.)
  endif
  endif
@@ -28,7 +29,7 @@ Remove special library names.
  	@for d in $(SUBDIRS) ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d $(@F) || exit 1 ; \
-@@ -176,7 +173,6 @@
+@@ -180,7 +176,6 @@ endif
  prof : prof_blas prof_lapack
  
  prof_blas :
@@ -36,7 +37,7 @@ Remove special library names.
  	for d in $(SUBDIRS) ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d prof || exit 1 ; \
-@@ -187,7 +183,6 @@
+@@ -191,7 +186,6 @@ ifeq ($(DYNAMIC_ARCH), 1)
  endif
  
  blas :
@@ -44,7 +45,7 @@ Remove special library names.
  	for d in $(BLASDIRS) ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d libs || exit 1 ; \
-@@ -195,7 +190,6 @@
+@@ -199,7 +193,6 @@ blas :
  	done
  
  hpl :
@@ -52,7 +53,7 @@ Remove special library names.
  	for d in $(BLASDIRS) ../laswp exports ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d $(@F) || exit 1 ; \
-@@ -209,7 +203,6 @@
+@@ -213,7 +206,6 @@ ifeq ($(DYNAMIC_ARCH), 1)
  endif
  
  hpl_p :
@@ -60,7 +61,7 @@ Remove special library names.
  	for d in $(SUBDIRS) ../laswp exports ; \
  	do if test -d $$d; then \
  	  $(MAKE) -C $$d $(@F) || exit 1 ; \
-@@ -251,7 +244,7 @@
+@@ -255,7 +247,7 @@ ifeq ($(NOFORTRAN), $(filter 0,$(NOFORTR
  	-@echo "LOADOPTS    = $(FFLAGS) $(EXTRALIB)" >> $(NETLIB_LAPACK_DIR)/make.inc
  	-@echo "CC          = $(CC)" >> $(NETLIB_LAPACK_DIR)/make.inc
  	-@echo "override CFLAGS      = $(LAPACK_CFLAGS)" >> $(NETLIB_LAPACK_DIR)/make.inc
