@@ -11,6 +11,7 @@ SUBDIR+=	7kaa
 SUBDIR+=	7kaa-music
 SUBDIR+=	8cc-git
 SUBDIR+=	ARC
+SUBDIR+=	Aseprite
 SUBDIR+=	Bear
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
