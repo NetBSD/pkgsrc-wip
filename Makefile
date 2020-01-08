@@ -68,6 +68,7 @@ SUBDIR+=	R-tuneR
 SUBDIR+=	ReZound
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
+SUBDIR+=	TT2020-ttf-git
 SUBDIR+=	Terminal
 SUBDIR+=	TextEdit
 SUBDIR+=	VASSAL
