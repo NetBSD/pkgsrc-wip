@@ -1,0 +1,8 @@
+This is Theorafile, a library for quickly and easily decoding Ogg Theora
+videos.
+
+Theorafile was written to be used for FNA's VideoPlayer. We access this
+library via Theorafile#, which you can find in the 'csharp/' directory.
+
+Theorafile depends solely on the C runtime. libogg, libvorbis, and
+libtheoradec are statically linked into Theorafile.

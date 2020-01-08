@@ -1977,6 +1977,7 @@ SUBDIR+=	libstrophe
 SUBDIR+=	libsysstat
 SUBDIR+=	libtermkey
 SUBDIR+=	libtextcat
+SUBDIR+=	libtheorafile
 SUBDIR+=	libtlen2
 SUBDIR+=	libtogl
 SUBDIR+=	libtxc_dxtn
