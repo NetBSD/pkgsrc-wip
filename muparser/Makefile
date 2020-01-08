@@ -1,19 +1,15 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	muparser
-GITHUB_TAG=	v2.2.6.1
-DISTNAME=	v2.2.6.1
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	muparser-2.2.6.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=beltoforion/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://beltoforion.de/article.php?a=muparser
 COMMENT=	Parser for mathematical expressions
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/muparser-2.2.6.1
 MAKE_JOBS_SAFE=	no
 GNU_CONFIGURE=	yes
 USE_CMAKE=	yes
