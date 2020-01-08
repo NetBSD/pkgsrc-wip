@@ -59,20 +59,21 @@ CMAKE_ARGS+=	-DUSE_SHARED_FREETYPE=ON
 CMAKE_ARGS+=	-DUSE_SHARED_HARFBUZZ=ON
 
 post-install:
-.for i in bin/bsd* bin/img2webp include lib share/WebP share/man
+.for i in bin/bsd* include lib share/man
 	${RM} -rf ${DESTDIR}${PREFIX}/${i}
 .endfor
 
-.include "../../fonts/harfbuzz/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/giflib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../textproc/cmark/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../textproc/cmark/buildlink3.mk"
 .include "../../textproc/tinyxml/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
