@@ -24,7 +24,5 @@ INSTALLATION_DIRS+=	bin
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=		qt5-qttools-[0-9]*:../../x11/qt5-qttools
-
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
