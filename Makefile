@@ -1082,6 +1082,7 @@ SUBDIR+=	ghc
 SUBDIR+=	ghc-core
 SUBDIR+=	ghc68
 SUBDIR+=	ghc710
+SUBDIR+=	glusterfs	
 SUBDIR+=	ghmm
 SUBDIR+=	ghostpcl-urwfonts-ttf
 SUBDIR+=	ghostscript-cidfonts-ryumin

@@ -1,0 +1,151 @@
+DISTNAME=		glusterfs-7.1
+PKGREVISION=		1
+CATEGORIES=		filesystems
+
+DEPENDS+=		argp>=1.3:../../devel/argp
+
+MASTER_SITES=		http://bits.gluster.org/pub/gluster/glusterfs/src/
+EXTRACT_SUFX=		.tar.gz
+
+MAINTAINER=		jhigh@NetBSD.org
+HOMEPAGE=		https://www.gluster.org/
+COMMENT=		Cluster filesystem
+LICENSE=		gnu-gpl-v3
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+
+USE_TOOLS+=		flex bison pkg-config bash 
+EXTRACT_USING?=		bsdtar
+
+LDADD+=			" -L${BUILDLINK_DIR}/lib -largp"
+
+CONFIGURE_ARGS+=	--disable-fusermount
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+
+MAKE_FLAGS+=		LEXLIB=""
+PYTHON_VERSIONS_ACCEPTED=	27 # only 2.x supported as of 3.8.x
+
+REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
+REPLACE_PYTHON+=	events/src/glustereventsd.py
+REPLACE_PYTHON+=	events/src/peer_eventsapi.py
+REPLACE_PYTHON+=	events/tools/eventsdash.py
+REPLACE_PYTHON+=	extras/ganesha/scripts/generate-epoch.py
+REPLACE_PYTHON+=	extras/geo-rep/schedule_georep.py.in
+REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py
+REPLACE_PYTHON+=	extras/snap_scheduler/snap_scheduler.py
+REPLACE_PYTHON+=	geo-replication/src/peer_georep-sshkey.py.in
+REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.in
+REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.py
+REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.py.in
+REPLACE_PYTHON+=	geo-replication/syncdaemon/changelogagent.py
+REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncd.py
+REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncdstatus.py
+REPLACE_PYTHON+=	tools/gfind_missing_files/gfid_to_path.py
+REPLACE_PYTHON+=	tools/glusterfind/S57glusterfind-delete-post.py
+REPLACE_PYTHON+=	tools/glusterfind/glusterfind.in
+REPLACE_PYTHON+=	tools/glusterfind/src/__init__.py
+REPLACE_PYTHON+=	tools/glusterfind/src/brickfind.py
+REPLACE_PYTHON+=	tools/glusterfind/src/changelog.py
+REPLACE_PYTHON+=	tools/glusterfind/src/changelogdata.py
+REPLACE_PYTHON+=	tools/glusterfind/src/conf.py
+REPLACE_PYTHON+=	tools/glusterfind/src/libgfchangelog.py
+REPLACE_PYTHON+=	tools/glusterfind/src/main.py
+REPLACE_PYTHON+=	tools/glusterfind/src/nodeagent.py
+REPLACE_PYTHON+=	tools/glusterfind/src/utils.py
+
+REPLACE_BASH+=		extras/ganesha/ocf/ganesha_grace
+REPLACE_BASH+=		extras/ganesha/ocf/ganesha_mon
+REPLACE_BASH+=		extras/ganesha/ocf/ganesha_nfsd
+REPLACE_BASH+=		extras/ganesha/scripts/copy-export-ganesha.sh
+REPLACE_BASH+=		extras/ganesha/scripts/create-export-ganesha.sh
+REPLACE_BASH+=		extras/ganesha/scripts/dbus-send.sh
+REPLACE_BASH+=		extras/ganesha/scripts/ganesha-ha.sh
+REPLACE_BASH+=		extras/geo-rep/generate-gfid-file.sh
+REPLACE_BASH+=		extras/geo-rep/get-gfid.sh
+REPLACE_BASH+=		extras/geo-rep/gsync-upgrade.sh
+REPLACE_BASH+=		extras/geo-rep/slave-upgrade.sh
+REPLACE_BASH+=		extras/peer_add_secret_pub.in
+REPLACE_BASH+=		extras/peer_add_secret_pub.in
+REPLACE_BASH+=		extras/post-upgrade-script-for-quota.sh
+REPLACE_BASH+=		extras/pre-upgrade-script-for-quota.sh
+REPLACE_BASH+=		extras/stop-all-gluster-processes.sh
+REPLACE_BASH+=		geo-replication/src/gverify.sh
+REPLACE_BASH+=		geo-replication/src/peer_gsec_create.in
+REPLACE_BASH+=		geo-replication/src/set_geo_rep_pem_keys.sh
+
+SUBST_CLASSES+=		urcu	
+SUBST_STAGE.urcu=	post-configure
+SUBST_FILES.urcu+=	libglusterfs/src/glusterfs/async.h	
+SUBST_SED.urcu=		-e "s,<urcu/wfcqueue.h>,<contrib/userspace-rcu/wfcqueue.h>,g"
+SUBST_SED.urcu=		-e "s,<urcu/wfstack.h>,<contrib/userspace-rcu/wfstack.h>,g"
+
+SUBST_CLASSES+=		mtab
+SUBST_STAGE.mtab=	post-build
+SUBST_FILES.mtab+=	doc/mount.glusterfs.8
+SUBST_FILES.mtab+=	libglusterfs/src/compat.h
+SUBST_FILES.mtab+=	xlators/mount/fuse/utils/mount.glusterfs.in
+SUBST_SED.mtab=		-e "s,/etc/mtab,/proc/mounts,g"
+
+SUBST_CLASSES+=		etc
+SUBST_STAGE.etc=	pre-build
+SUBST_FILES.etc+=	libglusterfs/src/logging.c
+SUBST_FILES.etc+=	extras/ocf/volume
+SUBST_FILES.etc+=	doc/glusterfsd.8
+SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
+
+SUBST_CLASSES+=		vol
+SUBST_STAGE.vol=	post-build
+SUBST_FILES.vol+=	extras/Makefile
+SUBST_SED.vol=		-e "/vol_DATA/s/glusterd.vol/glusterd.vol.sample/g"
+
+EGDIR=			${PREFIX}/etc/glusterfs
+CONF_FILES+=		${EGDIR}/glusterd.vol ${EGDIR}/glusterd.vol.sample
+OWN_DIRS+=		${VARBASE}/log/glusterfs
+BUILD_DEFS+=		VARBASE
+
+RCD_SCRIPTS=		glusterd
+
+PLIST_SRC=		${PLIST_SRC_DFLT}
+PLIST_SUBST+=		VARBASE=${VARBASE}
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
+PLIST_SUBST+=		GLUSTERFS_VERSION=${DISTNAME:S/glusterfs-//}
+
+MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
+
+#pre-build:
+#	#cd ${WRKSRC}/extras && 					\
+#	${ECHO} "glusterd.vol.sample: glusterd.vol" >> Makefile &&	\
+#	${ECHO} "	cp glusterd.vol glusterd.vol.sample" >> Makefile
+
+post-install:
+	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
+	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
+
+LIBS+=	-L${BUILDLINK_PREFIX}/lib -largp
+
+# Debug
+#CFLAGS+=		-g
+#INSTALL_UNSTRIPPED=	yes
+#CONFIGURE_ARGS+=	--enable-debug
+#.include "../../devel/boehm-gc/buildlink3.mk"
+#CFLAGS+=		-DGC_DEBUG
+#CFLAGS+=		-include gc.h
+#LIBS+=			-largp
+
+.include "../../mk/bsd.prefs.mk"
+
+.include "../../devel/argp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/userspace-rcu/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
+.include "../../devel/libuuid/buildlink3.mk"
+
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
+LIBS+=	-lexecinfo
+.endif
+
+.include "../../mk/bsd.pkg.mk"
