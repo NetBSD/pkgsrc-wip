@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	bin
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 DEPENDS+=	openssh-[0-9]*:../../security/openssh
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
