@@ -1,11 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-discosrv-1.0.0
+PKGNAME=	syncthing-discosrv-1.3.3
 CATEGORIES=	net
-DISTNAME=	syncthing-1.0.0
+DISTNAME=	syncthing-source-v1.3.3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	izaac@setec.org
 HOMEPAGE=	https://github.com/syncthing/discosrv/
@@ -16,6 +16,8 @@ EXTRACT_USING=		bsdtar
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c # and go
+GO_SRCPATH=		github.com/syncthing/syncthing
+GO_DIST_BASE=		syncthing
 INSTALLATION_DIRS=	bin
 
 BUILD_DEFS+=			VARBASE
@@ -37,17 +39,11 @@ FILES_SUBST+=			STDISCO_GROUP=${STDISCO_GROUP}
 FILES_SUBST+=			STDISCO_USER=${STDISCO_USER}
 RCD_SCRIPTS=			stdisco
 
-MAKE_ENV+=	GOPATH=${WRKSRC}
-
-post-extract:
-	${MKDIR} ${WRKSRC}/github.com/syncthing
-	${LN} -s ../.. ${WRKSRC}/github.com/syncthing/syncthing
-	${LN} -s . ${WRKSRC}/src
-
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build stdiscosrv
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} run build.go build stdiscosrv
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stdiscosrv ${DESTDIR}${PREFIX}/bin/syncthing-discosrv
 
+.include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
