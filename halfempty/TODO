@@ -1,8 +1,0 @@
-Uses Linux-specific functions:
-
-ld: proc.o: in function `write_pipe':
-/scratch/wip/halfempty/work/halfempty-0.30/proc.c:93: undefined reference to `splice'
-ld: util.o: in function `g_sendfile':
-/scratch/wip/halfempty/work/halfempty-0.30/util.c:175: undefined reference to `sendfile'
-
-https://github.com/googleprojectzero/halfempty/issues/12
