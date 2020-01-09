@@ -22,7 +22,7 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
