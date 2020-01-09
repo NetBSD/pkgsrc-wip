@@ -24,11 +24,11 @@ INSTALLATION_DIRS+=	qt5
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
-.include "../../wip/liblxqt/buildlink3.mk"
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.include "../../wip/libqtxdg/buildlink3.mk"
 .include "../../wip/libfm-qt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
