@@ -19,12 +19,12 @@ CMAKE_ARG_PATH=	..
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-INSTALLATION_DIRS+=	lib
+INSTALLATION_DIRS+=	bin lib qt5
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
