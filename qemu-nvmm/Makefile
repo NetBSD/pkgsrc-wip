@@ -120,6 +120,7 @@ post-install:
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
