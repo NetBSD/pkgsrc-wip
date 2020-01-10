@@ -5,11 +5,12 @@ bin/batch_rubber_sheet
 bin/light_correct
 bin/shrink_width
 bin/vips
-bin/vips-8.8
+bin/vips-8.9
 bin/vipsedit
 bin/vipsheader
 bin/vipsprofile
 bin/vipsthumbnail
+include/vips/VConnection8.h
 include/vips/VError8.h
 include/vips/VImage8.h
 include/vips/VInterpolate8.h
@@ -19,6 +20,7 @@ include/vips/basic.h
 include/vips/buf.h
 include/vips/cimg_funcs.h
 include/vips/colour.h
+include/vips/connection.h
 include/vips/conversion.h
 include/vips/convolution.h
 include/vips/create.h
@@ -49,6 +51,7 @@ include/vips/private.h
 include/vips/rect.h
 include/vips/region.h
 include/vips/resample.h
+include/vips/sbuf.h
 include/vips/semaphore.h
 include/vips/soname.h
 include/vips/thread.h
@@ -93,6 +96,8 @@ share/gtk-doc/html/libvips/VipsInterpolate.html
 share/gtk-doc/html/libvips/VipsObject.html
 share/gtk-doc/html/libvips/VipsOperation.html
 share/gtk-doc/html/libvips/VipsRegion.html
+share/gtk-doc/html/libvips/VipsSbuf.html
+share/gtk-doc/html/libvips/VipsTargetCustom.html
 share/gtk-doc/html/libvips/VipsThreadState.html
 share/gtk-doc/html/libvips/annotation-glossary.html
 share/gtk-doc/html/libvips/api-index-full.html
@@ -151,5 +156,5 @@ share/gtk-doc/html/libvips/using-cli.html
 share/gtk-doc/html/libvips/using-from-c.html
 share/gtk-doc/html/libvips/using-from-cpp.html
 share/gtk-doc/html/libvips/using-threads.html
-share/locale/de/LC_MESSAGES/vips8.8.mo
-share/locale/en_GB/LC_MESSAGES/vips8.8.mo
+share/locale/de/LC_MESSAGES/vips8.9.mo
+share/locale/en_GB/LC_MESSAGES/vips8.9.mo
