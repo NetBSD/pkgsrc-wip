@@ -4,7 +4,7 @@ DISTNAME=	hpl-2.3
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.netlib.org/benchmark/hpl/
 
-MAINTAINER=	json.high@gmail.com
+MAINTAINER=	jhigh@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/benchmark/hpl/
 COMMENT=	Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers
 LICENSE=	modified-bsd
