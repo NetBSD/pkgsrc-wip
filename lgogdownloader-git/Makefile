@@ -24,7 +24,6 @@ CMAKE_ARGS+=	-DINSTALL_SHARE_DIR:PATH=${PREFIX}
 PKGSRC_USE_STACK_CHECK=	no
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../security/liboauth/buildlink3.mk"
 .include "../../textproc/tinyxml2/buildlink3.mk"
 .include "../../www/htmlcxx/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
