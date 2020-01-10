@@ -1,0 +1,33 @@
+[ 94%] Building CXX object CMakeFiles/lxqt-sudo.dir/main.cpp.o
+/usr/pkgsrc/wip/lxqt-sudo/work/lxqt-sudo-0.14.1/sudo.cpp:41:10: fatal error: pty.h
+ #include <pty.h>
+          ^~~~~~~
+compilation terminated.
+--- CMakeFiles/lxqt-sudo.dir/sudo.cpp.o ---
+*** [CMakeFiles/lxqt-sudo.dir/sudo.cpp.o] Error code 1
+
+make[2]: stopped in /usr/pkgsrc/wip/lxqt-sudo/work/lxqt-sudo-0.14.1/build
+1 error
+
+make[2]: stopped in /usr/pkgsrc/wip/lxqt-sudo/work/lxqt-sudo-0.14.1/build
+--- CMakeFiles/lxqt-sudo.dir/all ---
+*** [CMakeFiles/lxqt-sudo.dir/all] Error code 2
+
+make[1]: stopped in /usr/pkgsrc/wip/lxqt-sudo/work/lxqt-sudo-0.14.1/build
+1 error
+
+make[1]: stopped in /usr/pkgsrc/wip/lxqt-sudo/work/lxqt-sudo-0.14.1/build
+*** [all] Error code 2
+
+make: stopped in /usr/pkgsrc/wip/lxqt-sudo/work/lxqt-sudo-0.14.1/build
+1 error
+
+make: stopped in /usr/pkgsrc/wip/lxqt-sudo/work/lxqt-sudo-0.14.1/build
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/lxqt-sudo
+*** Error code 1
+
+Stop.
+
