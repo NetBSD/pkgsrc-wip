@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (VVVVVVV-0.0.0.20200110-9e5e9f3e670a0cc48475a20486b0630e83ae14b4.tar.gz) = 7efdc53b9c86bcdbcbbdaced32390cd64e9ee4a0
+RMD160 (VVVVVVV-0.0.0.20200110-9e5e9f3e670a0cc48475a20486b0630e83ae14b4.tar.gz) = b12109fa84a6a87573210a2ffc99fb54cf62a605
+SHA512 (VVVVVVV-0.0.0.20200110-9e5e9f3e670a0cc48475a20486b0630e83ae14b4.tar.gz) = 5e1ab96261afa091496bb79b6c2a5f5c5f304dbf03214cc87bfb01e722fe26fde14e9a659fff2ac9411be2247fd53bf0d6e400ea2ac2a78637bda0ddd8f87078
+Size (VVVVVVV-0.0.0.20200110-9e5e9f3e670a0cc48475a20486b0630e83ae14b4.tar.gz) = 828498 bytes
+SHA1 (patch-desktop__version_physfs_physfs__platform__unix.c) = ea51d0a19203c3a1c7f4298f4774d080addf5892
+SHA1 (patch-desktop__version_src_FileSystemUtils.cpp) = ed58d10e669b6ed1e101be99d708f09b554df962
+SHA1 (patch-desktop__version_src_SteamNetwork.c) = 736b435c0df1df81ecd449b9440503d075a4f5e7

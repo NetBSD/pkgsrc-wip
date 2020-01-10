@@ -4954,6 +4954,7 @@ SUBDIR+=	vsearch
 SUBDIR+=	vte
 SUBDIR+=	vulkan-headers
 SUBDIR+=	vulkan-loader
+SUBDIR+=	vvvvvv
 SUBDIR+=	wackamole
 SUBDIR+=	waffle
 SUBDIR+=	wanderer
