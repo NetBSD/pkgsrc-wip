@@ -1,0 +1,34 @@
+[ 61%] Building CXX object CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o
+/usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/lib/kpty.cpp:87:11: fatal error: libutil.h: No such file or directory
+ # include <libutil.h>
+           ^~~~~~~~~~~
+compilation terminated.
+--- CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o ---
+*** [CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o] Error code 1
+
+make[2]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
+1 error
+
+make[2]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
+--- CMakeFiles/qtermwidget5.dir/all ---
+*** [CMakeFiles/qtermwidget5.dir/all] Error code 2
+
+make[1]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
+1 error
+
+make[1]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
+*** [all] Error code 2
+
+make: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
+1 error
+
+make: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/qtermwidget
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/qtermwidget
+
