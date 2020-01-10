@@ -6,7 +6,7 @@ MASTER_SITES=	https://downloads.lxqt.org/downloads/qtermwidget/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://downloads.lxqt.org/downloads/qtermwidget/0.14.1/
+HOMEPAGE=	https://lxqt.org/
 COMMENT=	Terminal emulator widget for Qt5
 LICENSE=	gnu-lgpl-v2.1
 
