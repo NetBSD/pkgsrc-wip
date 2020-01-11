@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/imv
+bin/imv-msg
+bin/imv-wayland
+bin/imv-x11
+man/man1/imv-msg.1
+man/man1/imv.1
+man/man5/imv.5
+share/applications/imv.desktop
