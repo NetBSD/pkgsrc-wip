@@ -5142,6 +5142,7 @@ SUBDIR+=	zodiac
 SUBDIR+=	zola
 SUBDIR+=	zoneminder
 SUBDIR+=	zvbi
+SUBDIR+=	prosody
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
