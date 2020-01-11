@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/eXeC64/imv
 COMMENT=	Image viewer for X11/Wayland
 LICENSE=	mit
 
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c99
 
