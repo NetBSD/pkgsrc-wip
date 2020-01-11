@@ -15,7 +15,6 @@ META_PACKAGE=	yes
 
 DEPENDS+=	deforaos-accessories>=0.0.3:../../wip/deforaos-accessories
 DEPENDS+=	deforaos-camera>=0.0.1:../../wip/deforaos-camera
-DEPENDS+=	deforaos-editor>=0.2.1:../../wip/deforaos-editor
 DEPENDS+=	deforaos-framer>=0.0.0:../../wip/deforaos-framer
 DEPENDS+=	deforaos-keyboard>=0.2.1:../../wip/deforaos-keyboard
 DEPENDS+=	deforaos-mailer>=0.1.5:../../wip/deforaos-mailer

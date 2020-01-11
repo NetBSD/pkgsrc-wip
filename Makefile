@@ -573,7 +573,6 @@ SUBDIR+=	deepstate
 SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-camera
 SUBDIR+=	deforaos-desktop
-SUBDIR+=	deforaos-editor
 SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init
 SUBDIR+=	deforaos-keyboard
