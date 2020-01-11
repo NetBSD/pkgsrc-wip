@@ -17,7 +17,7 @@ DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 DEPENDS+=		icu-[0-9]*:../../textproc/icu
 
 HAS_CONFIGURE=		yes
-USE_LANGUAGES+=		c c99
+USE_LANGUAGES=		c99
 USE_TOOLS+=		gmake
 BUILD_DEFS+=		VARBASE
 
