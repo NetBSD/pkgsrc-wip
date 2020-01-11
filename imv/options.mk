@@ -19,7 +19,9 @@ MAKE_FLAGS+=		BACKEND_LIBRSVG="yes"
 MAKE_FLAGS+=		BACKEND_LIBRSVG="no"
 .endif
 
+PLIST_VARS+=		all
 .if !empty(PKG_OPTIONS:Mwayland) && !empty(PKG_OPTIONS:Mx11)
+PLIST.all=		yes
 MAKE_FLAGS+=		WINDOWS="all"
 .elif !empty(PKG_OPTIONS:Mwayland)
 MAKE_FLAGS+=		WINDOWS="wayland"
