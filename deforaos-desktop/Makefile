@@ -20,7 +20,6 @@ DEPENDS+=	deforaos-keyboard>=0.2.1:../../wip/deforaos-keyboard
 DEPENDS+=	deforaos-mailer>=0.1.5:../../wip/deforaos-mailer
 DEPENDS+=	deforaos-mixer>=0.1.1:../../wip/deforaos-mixer
 DEPENDS+=	deforaos-pdfviewer>=0.0.1:../../wip/deforaos-pdfviewer
-DEPENDS+=	deforaos-player>=0.1.5:../../wip/deforaos-player
 DEPENDS+=	deforaos-terminal>=0.0.0:../../wip/deforaos-terminal
 DEPENDS+=	deforaos-todo>=0.1.2:../../wip/deforaos-todo
 

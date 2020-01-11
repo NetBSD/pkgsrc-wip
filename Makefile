@@ -579,7 +579,6 @@ SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-mailer
 SUBDIR+=	deforaos-mixer
 SUBDIR+=	deforaos-pdfviewer
-SUBDIR+=	deforaos-player
 SUBDIR+=	deforaos-probe
 SUBDIR+=	deforaos-terminal
 SUBDIR+=	deforaos-todo
