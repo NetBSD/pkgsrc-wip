@@ -13,6 +13,7 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/black-19.10b0
 USE_LANGUAGES=	# none
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-click>=6.5:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.6<1:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
