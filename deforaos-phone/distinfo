@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.16 2014/10/21 22:16:52 khorben Exp $
-
-SHA1 (Phone-0.4.1.tar.gz) = c4a3c775b8e98ce5ed681c6c7dcb44b3a29b1e44
-RMD160 (Phone-0.4.1.tar.gz) = 83a1f164ed61fa6a134ee40b8cbd0409a6e0096a
-Size (Phone-0.4.1.tar.gz) = 313098 bytes
-SHA1 (patch-src_modems_Makefile) = a777723ac13c87da99eb329be20ebfa2a4330786
-SHA1 (patch-src_plugins_Makefile) = 895e2e4c2587ec5f9c38aab745718c9ac5c1d9e1
-SHA1 (patch-tools_Makefile) = 14815abaa97ae20a656977c0d0a3230a044c3231
