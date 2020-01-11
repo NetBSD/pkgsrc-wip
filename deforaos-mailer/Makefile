@@ -32,7 +32,7 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../wip/deforaos-libdesktop/buildlink3.mk"
+.include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

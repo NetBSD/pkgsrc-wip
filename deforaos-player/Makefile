@@ -32,6 +32,6 @@ post-install:
 
 .include "options.mk"
 
-.include "../../wip/deforaos-libdesktop/buildlink3.mk"
+.include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

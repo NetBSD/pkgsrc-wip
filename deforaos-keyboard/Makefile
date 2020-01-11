@@ -20,5 +20,5 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../wip/deforaos-libdesktop/buildlink3.mk"
+.include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
