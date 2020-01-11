@@ -3045,6 +3045,7 @@ SUBDIR+=	progreiserfs
 SUBDIR+=	proj
 SUBDIR+=	proplib
 SUBDIR+=	proselint
+SUBDIR+=	prosody
 SUBDIR+=	prover9
 SUBDIR+=	proxychains
 SUBDIR+=	proxychains-ng
@@ -5142,7 +5143,6 @@ SUBDIR+=	zodiac
 SUBDIR+=	zola
 SUBDIR+=	zoneminder
 SUBDIR+=	zvbi
-SUBDIR+=	prosody
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
