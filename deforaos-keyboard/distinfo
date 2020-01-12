@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2013/11/06 01:28:00 khorben Exp $
-
-SHA1 (Keyboard-0.2.1.tar.gz) = f852d01c172fd7bebb9f73b6709050b7ed8d7526
-RMD160 (Keyboard-0.2.1.tar.gz) = 9f3206cc67b7e68ad81aebb767ca258bbe8853ca
-Size (Keyboard-0.2.1.tar.gz) = 29127 bytes
-SHA1 (patch-src_keyboard.c) = ffc100bea3bd5d6dd643bf19d41567011d988e87
-SHA1 (patch-tools_Makefile) = 48d50a887ed39397d0f893acbaba918698c2df8b

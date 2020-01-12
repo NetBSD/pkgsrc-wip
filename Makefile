@@ -575,7 +575,6 @@ SUBDIR+=	deforaos-camera
 SUBDIR+=	deforaos-desktop
 SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init
-SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-mailer
 SUBDIR+=	deforaos-mixer
 SUBDIR+=	deforaos-pdfviewer
