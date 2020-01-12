@@ -2,7 +2,7 @@
 #
 
 
-DISTNAME=	deforaos-desktop-0.0.3
+DISTNAME=	deforaos-desktop-0.0.4
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
