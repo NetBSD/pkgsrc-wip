@@ -2,7 +2,7 @@
 #
 
 
-DISTNAME=	deforaos-desktop-0.0.4
+DISTNAME=	deforaos-desktop-0.0.5
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
@@ -16,7 +16,6 @@ META_PACKAGE=	yes
 DEPENDS+=	deforaos-accessories>=0.0.3:../../wip/deforaos-accessories
 DEPENDS+=	deforaos-camera>=0.0.1:../../wip/deforaos-camera
 DEPENDS+=	deforaos-framer>=0.0.0:../../wip/deforaos-framer
-DEPENDS+=	deforaos-mailer>=0.1.5:../../wip/deforaos-mailer
 DEPENDS+=	deforaos-mixer>=0.1.1:../../wip/deforaos-mixer
 DEPENDS+=	deforaos-pdfviewer>=0.0.1:../../wip/deforaos-pdfviewer
 DEPENDS+=	deforaos-terminal>=0.0.0:../../wip/deforaos-terminal
