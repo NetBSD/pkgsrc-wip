@@ -1,34 +1,9 @@
-[ 61%] Building CXX object CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o
-/usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/lib/kpty.cpp:87:11: fatal error: libutil.h: No such file or directory
- # include <libutil.h>
-           ^~~~~~~~~~~
-compilation terminated.
---- CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o ---
-*** [CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o] Error code 1
-
-make[2]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
-1 error
-
-make[2]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
---- CMakeFiles/qtermwidget5.dir/all ---
-*** [CMakeFiles/qtermwidget5.dir/all] Error code 2
-
-make[1]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
-1 error
-
-make[1]: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
-*** [all] Error code 2
-
-make: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
-1 error
-
-make: stopped in /usr/pkgsrc/wip/qtermwidget/work/qtermwidget-0.14.1/build
-*** Error code 2
-
-Stop.
-make[1]: stopped in /usr/pkgsrc/wip/qtermwidget
-*** Error code 1
-
-Stop.
-make: stopped in /usr/pkgsrc/wip/qtermwidget
+[100%] Linking CXX shared library libqtermwidget5.so
+ld: CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o: in function `KPty::login(char const*, char const*)':
+kpty.cpp:(.text+0xd39): undefined reference to `__login50'
+ld: CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o: in function `KPty::logout()':
+kpty.cpp:(.text+0xdb7): undefined reference to `logout'
+ld: kpty.cpp:(.text+0xde0): undefined reference to `logout'
+--- libqtermwidget5.so.0.14.1 ---
+*** [libqtermwidget5.so.0.14.1] Error code 1
 
