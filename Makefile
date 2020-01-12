@@ -1588,7 +1588,6 @@ SUBDIR+=	ilohamail
 SUBDIR+=	imagination
 SUBDIR+=	imgui
 SUBDIR+=	imonc
-SUBDIR+=	imv
 SUBDIR+=	inetdxtra
 SUBDIR+=	influxdb
 SUBDIR+=	info2man
