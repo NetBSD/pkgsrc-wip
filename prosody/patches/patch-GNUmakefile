@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix installation directories and scripts
+
 --- GNUmakefile.orig	2019-08-31 14:08:45.000000000 +0000
 +++ GNUmakefile
 @@ -3,10 +3,11 @@ include config.unix

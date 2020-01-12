@@ -1,12 +1,12 @@
 # $NetBSD$
 #
 
-DISTNAME=		prosody-0.11.3
+DISTNAME=		prosody-0.11.4
 CATEGORIES=		chat
-MASTER_SITES=		http://prosody.im/downloads/source/
+MASTER_SITES=		https://prosody.im/downloads/source/
 
 MAINTAINER=		fhajny@NetBSD.org
-HOMEPAGE=		http://prosody.im/
+HOMEPAGE=		https://prosody.im/
 COMMENT=		Flexible communications server for Jabber/XMPP written in Lua
 LICENSE=		mit
 

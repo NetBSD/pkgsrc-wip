@@ -1,5 +1,7 @@
 $NetBSD$
 
+Avoid conflict with NetBSD's hmac.
+
 --- util-src/hashes.c.orig	2019-08-31 14:08:45.000000000 +0000
 +++ util-src/hashes.c
 @@ -75,7 +75,7 @@ struct hash_desc {

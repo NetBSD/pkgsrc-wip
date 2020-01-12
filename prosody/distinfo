@@ -1,11 +1,11 @@
 $NetBSD$
 
-SHA1 (prosody-0.11.3.tar.gz) = 87ec8039bf297ba9bc4da44b2ba42f4b035e73ca
-RMD160 (prosody-0.11.3.tar.gz) = bdfc9e054b68699722d8745e100f17a8a7e12240
-SHA512 (prosody-0.11.3.tar.gz) = 07239433c7c65184ca24d665c92b787ff9e4a5ee190ab90dede802ffd2cbd97855356d818858871e62284e9923f485b3468ab1baed5d3fb13aac0551a38967eb
-Size (prosody-0.11.3.tar.gz) = 424098 bytes
-SHA1 (patch-GNUmakefile) = 0e84f03f2f93180f2f74b316820d42f8ca354d51
-SHA1 (patch-prosody.cfg.lua.dist) = 50ea01f7b9c16e5571df84aa41916fe7a32a041c
-SHA1 (patch-util-src_GNUmakefile) = 217e7556e5bf2dc5e851bb0d5fd6be5fbc8cd37e
-SHA1 (patch-util-src_hashes.c) = 9f0ecb528046d71a242ccae66473a3226a007fde
-SHA1 (patch-util-src_signal.c) = bccc5066a28e9dd3402a9505f3acb6dddcf69ef3
+SHA1 (prosody-0.11.4.tar.gz) = 59e9e684230c26daf53526e18b0e6e2efb0d63c5
+RMD160 (prosody-0.11.4.tar.gz) = c177c6f58054bd595e11b9d83b2889c8d67ba611
+SHA512 (prosody-0.11.4.tar.gz) = 0c3aa3373c53f803b88a87dad4ca18b215de7a485d29b0bc4b186d97f7c48262840199a74f62aba6b7b4f1766fdfb37327ed4ff24e877c3a6dfca58764a035c3
+Size (prosody-0.11.4.tar.gz) = 423518 bytes
+SHA1 (patch-GNUmakefile) = e0fce25e95a4e765eba588e903de59526433ae54
+SHA1 (patch-prosody.cfg.lua.dist) = e8cc3a467b21bfe606a87beb412cebac71a627a9
+SHA1 (patch-util-src_GNUmakefile) = d64699fb842be5fb963085dcb1edff67cd130161
+SHA1 (patch-util-src_hashes.c) = e955d3ab2d170dce179bee8eed559ba57f825497
+SHA1 (patch-util-src_signal.c) = 2492ccd0a82498a50f76722e0e2036e16eead180
