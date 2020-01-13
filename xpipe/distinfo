@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (xpipe-20200113-1b1bc2a.tar.gz) = 47e2a629096b83acbee4c1eabb8bd1c8f95771b9
+RMD160 (xpipe-20200113-1b1bc2a.tar.gz) = f6c0c565ea6ba83d8909a3e6335d7eff651d1db4
+SHA512 (xpipe-20200113-1b1bc2a.tar.gz) = b59f2ba0171fc5c37b120ecab1ac02abf0b21f1164f706aa60370b4af9d7acdc9db72c716f0a4417617be6b0043dc4f7a9f18bb27744024e49b45e2570fa38df
+Size (xpipe-20200113-1b1bc2a.tar.gz) = 12420 bytes
+SHA1 (patch-Makefile) = 3f756f30d5842c48ea94decf48d0b75121e23fbc
