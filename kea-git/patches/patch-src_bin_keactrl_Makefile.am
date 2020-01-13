@@ -1,0 +1,25 @@
+$NetBSD$
+
+* install conf files in examples heirarchy
+
+--- src/bin/keactrl/Makefile.am.orig	2019-12-30 15:49:38.601325408 +0000
++++ src/bin/keactrl/Makefile.am
+@@ -54,15 +54,15 @@ if INSTALL_CONFIGURATIONS
+ # To preserve any user modifications to the old version of the file,
+ # this old file is backed up as keactrl.conf.bak.
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)/@sysconfdir@/@PACKAGE@
++	$(mkinstalldirs) $(DESTDIR)/@datarootdir@/examples/@PACKAGE@
+ 	for f in $(CONFIGFILES) ; do	\
+ 		if test -f $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f && \
+ 		   test $$f = "keactrl.conf"; then \
+ 			mv $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f \
+ 			   $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f.bak; \
+ 		fi; \
+-		if test ! -f $(DESTDIR)$(sysconfdir)/@PACKAGE@/$$f; then \
+-			${INSTALL_DATA} $$f $(DESTDIR)$(sysconfdir)/@PACKAGE@/; \
++		if test ! -f $(DESTDIR)$(datarootdir)/examples/@PACKAGE@/$$f; then \
++			${INSTALL_DATA} $$f $(DESTDIR)$(datarootdir)/examples/@PACKAGE@/; \
+ 		fi; \
+ 	done
+ 

@@ -1,0 +1,21 @@
+$NetBSD$
+
+* don't install dirs in varbase
+
+--- Makefile.am.orig	2019-12-30 16:02:34.138915584 +0000
++++ Makefile.am
+@@ -152,10 +152,10 @@ docs:
+ 
+ 
+ # These steps are necessary during installation
+-install-exec-hook:
+-	mkdir -p $(DESTDIR)${localstatedir}/log/
+-	mkdir -p $(DESTDIR)${localstatedir}/lib/${PACKAGE_NAME}
+-	mkdir -p $(DESTDIR)${runstatedir}/${PACKAGE_NAME}
++#install-exec-hook:
++#	mkdir -p $(DESTDIR)${localstatedir}/log/
++#	mkdir -p $(DESTDIR)${localstatedir}/lib/${PACKAGE_NAME}
++#	mkdir -p $(DESTDIR)${runstatedir}/${PACKAGE_NAME}
+ 
+ EXTRA_DIST  = tools/path_replacer.sh
+ EXTRA_DIST += tools/mk_cfgrpt.sh

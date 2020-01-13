@@ -1,0 +1,24 @@
+$NetBSD$
+
+* fix compatability errors
+
+--- configure.ac.orig	2019-12-30 16:00:16.704565254 +0000
++++ configure.ac
+@@ -1391,7 +1391,7 @@ if test "x$enable_generate_parser" != "x
+        AC_MSG_ERROR([Flex is required for enable-generate-parser, but was not found])
+     fi
+ 
+-    if test "x$YACC" == "x"; then
++    if test "x$YACC" = "x"; then
+        AC_MSG_ERROR([Bison is required for enable-generate-parser, but was not found])
+     fi
+ 
+@@ -1515,7 +1515,7 @@ if test "x$enable_generate_docs" != xno
+ 
+   if test -z "$PDFLATEX"; then
+     PDFLATEX=no
+-  elif test "x$PDFLATEX" == "xno"; then
++  elif test "x$PDFLATEX" = "xno"; then
+     AC_MSG_CHECKING([for pdflatex])
+     AC_MSG_RESULT([no (disabled)])
+   else
