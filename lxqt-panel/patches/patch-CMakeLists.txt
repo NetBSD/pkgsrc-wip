@@ -1,0 +1,69 @@
+$NetBSD$
+
+Allow the package to build on non-Linux systems
+
+--- CMakeLists.txt.orig	2020-01-13 14:06:07.302370816 +0000
++++ CMakeLists.txt
+@@ -86,7 +86,7 @@ if(COLORPICKER_PLUGIN)
+     add_subdirectory(plugin-colorpicker)
+ endif()
+ 
+-setByDefault(CPULOAD_PLUGIN Yes)
++setByDefault(CPULOAD_PLUGIN No)
+ if(CPULOAD_PLUGIN)
+     find_library(STATGRAB_LIB statgrab)
+ 
+@@ -117,7 +117,7 @@ if(DESKTOPSWITCH_PLUGIN)
+     add_subdirectory(plugin-desktopswitch)
+ endif()
+ 
+-setByDefault(KBINDICATOR_PLUGIN Yes)
++setByDefault(KBINDICATOR_PLUGIN No)
+ if(KBINDICATOR_PLUGIN)
+     list(APPEND ENABLED_PLUGINS "Keyboard Indicator")
+     add_subdirectory(plugin-kbindicator)
+@@ -131,7 +131,7 @@ if(MAINMENU_PLUGIN)
+     add_subdirectory(plugin-mainmenu)
+ endif()
+ 
+-setByDefault(MOUNT_PLUGIN Yes)
++setByDefault(MOUNT_PLUGIN No)
+ if(MOUNT_PLUGIN)
+     list(APPEND ENABLED_PLUGINS "Mount")
+     add_subdirectory(plugin-mount)
+@@ -145,7 +145,7 @@ if(QUICKLAUNCH_PLUGIN)
+     add_subdirectory(plugin-quicklaunch)
+ endif()
+ 
+-setByDefault(SENSORS_PLUGIN Yes)
++setByDefault(SENSORS_PLUGIN No)
+ if(SENSORS_PLUGIN)
+     find_library(SENSORS_LIB sensors)
+ 
+@@ -164,7 +164,7 @@ if(SHOWDESKTOP_PLUGIN)
+     add_subdirectory(plugin-showdesktop)
+ endif()
+ 
+-setByDefault(NETWORKMONITOR_PLUGIN Yes)
++setByDefault(NETWORKMONITOR_PLUGIN No)
+ if(NETWORKMONITOR_PLUGIN)
+     find_library(STATGRAB_LIB statgrab)
+ 
+@@ -175,7 +175,7 @@ if(NETWORKMONITOR_PLUGIN)
+     add_subdirectory(plugin-networkmonitor)
+ endif()
+ 
+-setByDefault(SYSSTAT_PLUGIN Yes)
++setByDefault(SYSSTAT_PLUGIN No)
+ if(SYSSTAT_PLUGIN)
+     list(APPEND ENABLED_PLUGINS "System Stats")
+     add_subdirectory(plugin-sysstat)
+@@ -207,7 +207,7 @@ endif()
+ 
+ setByDefault(VOLUME_PLUGIN Yes)
+ setByDefault(VOLUME_USE_PULSEAUDIO Yes)
+-setByDefault(VOLUME_USE_ALSA Yes)
++setByDefault(VOLUME_USE_ALSA No)
+ if(VOLUME_PLUGIN)
+     if (VOLUME_USE_PULSEAUDIO)
+         find_package(PulseAudio)
