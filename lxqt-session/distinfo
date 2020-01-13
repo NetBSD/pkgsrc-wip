@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/04/11 17:34:05 krytarowski Exp $
+$NetBSD$
 
-SHA1 (lxqt-session-0.9.0.tar.gz) = f7a2681bc9596e5db889608f6ea4c969a14073da
-RMD160 (lxqt-session-0.9.0.tar.gz) = 5c9c6e853e773926c2b5fa6064fe756f88e67334
-Size (lxqt-session-0.9.0.tar.gz) = 72443 bytes
+SHA1 (lxqt-session-0.14.1.tar.xz) = 15deb8ef8f209ed0293253e67a40283013b6ab9d
+RMD160 (lxqt-session-0.14.1.tar.xz) = d6bf29c8d4923c3d7a8a984d7650850b69edff7b
+SHA512 (lxqt-session-0.14.1.tar.xz) = 9274564f3eabe33744bbe8555b1177d8ff6f241f5849bef29f0bb344f506e590e1deab87bf2fdeb867872ebaa0262cda0400f16179951fd66fbcb4d9f7358c4c
+Size (lxqt-session-0.14.1.tar.xz) = 178600 bytes
+SHA1 (patch-CMakeLists.txt) = 1094af8288d8423bb646ced7047e8708d8020c0c
