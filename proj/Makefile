@@ -33,6 +33,11 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
+# \todo Debug this.
+# Tests fail if proj relies on NetBSD 8's C99 math, vs proj's
+# replacement functions.
+CFLAGS+=		-DHAVE_C99_MATH=0
+
 .if !empty(PKG_OPTIONS:Mproj-grids)
 # Ideally, upstream would have an approach which enables testing with
 # the grids that users ought to have.  Until then, fail if test
