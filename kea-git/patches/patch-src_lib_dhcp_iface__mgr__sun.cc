@@ -1,6 +1,12 @@
 $NetBSD$
 
 * map conflicts with map from net/if.h, use std::map explicitly
+* enable bpf filter
+* get the mac adresses the right way on illumos
+  based on illumos-ims.diff from
+  https://gitlab.isc.org/isc-projects/kes/issues/631
+  copyright ISC licensed under mpl-2.0
+  https://www.mozilla.org/en-US/MPL/2.0/
 
 --- src/lib/dhcp/iface_mgr_sun.cc.orig	2020-01-02 23:01:48.000000000 +0000
 +++ src/lib/dhcp/iface_mgr_sun.cc
