@@ -1,27 +1,9 @@
-$NetBSD: patch-gcc_config_netbsd-protos.h,v 1.1 2017/05/03 00:21:03 maya Exp $
-
---- gcc/config/netbsd-protos.h.orig	2019-01-01 12:31:55.000000000 +0000
-+++ gcc/config/netbsd-protos.h
-@@ -1,4 +1,33 @@
- /* Prototypes.
-+   Copyright (C) 2001-2014 Free Software Foundation, Inc.
-+
-+This file is part of GCC.
-+
-+GCC is free software; you can redistribute it and/or modify
-+it under the terms of the GNU General Public License as published by
-+the Free Software Foundation; either version 3, or (at your option)
-+any later version.
-+
-+GCC is distributed in the hope that it will be useful,
-+but WITHOUT ANY WARRANTY; without even the implied warranty of
-+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-+GNU General Public License for more details.
-+
-+You should have received a copy of the GNU General Public License
-+along with GCC; see the file COPYING3.  If not see
-+<http://www.gnu.org/licenses/>.  */
-+
+--- gcc/config/netbsd-protos.h.orig	2020-01-01 12:51:42.000000000 +0100
++++ gcc/config/netbsd-protos.h	2020-01-12 17:50:32.027540861 +0100
+@@ -17,4 +17,15 @@
+ along with GCC; see the file COPYING3.  If not see
+ <http://www.gnu.org/licenses/>.  */
+ 
 +#ifndef _NETBSD_PROTOS_H_
 +#define _NETBSD_PROTOS_H_
 +
@@ -32,7 +14,5 @@ $NetBSD: patch-gcc_config_netbsd-protos.h,v 1.1 2017/05/03 00:21:03 maya Exp $
 +void netbsd_patch_builtins (void);
 +
 +#endif /* _NETBSD_PROTOS_H_ */
-+/* Prototypes.
-    Copyright (C) 2017-2019 Free Software Foundation, Inc.
- 
- This file is part of GCC.
++
+ extern void netbsd_patch_builtins (void);
