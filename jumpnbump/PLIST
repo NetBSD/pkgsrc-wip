@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:49 thomasklausner Exp $
-bin/gobpack
-bin/jnbpack
-bin/jnbunpack
-bin/jumpnbump
-man/man6/jumpnbump.6
-share/jumpnbump/jumpbump.dat

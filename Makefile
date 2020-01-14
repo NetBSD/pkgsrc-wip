@@ -1700,7 +1700,6 @@ SUBDIR+=	json2tsv-git
 SUBDIR+=	jsoncpp-git
 SUBDIR+=	judy
 SUBDIR+=	julia
-SUBDIR+=	jumpnbump
 SUBDIR+=	junit
 SUBDIR+=	jupp
 SUBDIR+=	jython
