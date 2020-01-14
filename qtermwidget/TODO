@@ -1,9 +1,0 @@
-[100%] Linking CXX shared library libqtermwidget5.so
-ld: CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o: in function `KPty::login(char const*, char const*)':
-kpty.cpp:(.text+0xd39): undefined reference to `__login50'
-ld: CMakeFiles/qtermwidget5.dir/lib/kpty.cpp.o: in function `KPty::logout()':
-kpty.cpp:(.text+0xdb7): undefined reference to `logout'
-ld: kpty.cpp:(.text+0xde0): undefined reference to `logout'
---- libqtermwidget5.so.0.14.1 ---
-*** [libqtermwidget5.so.0.14.1] Error code 1
-
