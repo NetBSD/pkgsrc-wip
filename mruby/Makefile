@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mruby-2.0.1
+DISTNAME=	mruby-2.1.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mruby/}
 

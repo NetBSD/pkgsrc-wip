@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mruby-2.0.1.tar.gz) = b9e087b0499c2ffb5614cbaf913df776475ac4bb
-RMD160 (mruby-2.0.1.tar.gz) = e1edabcacc65050726bb958a5377b524f567b8e3
-SHA512 (mruby-2.0.1.tar.gz) = 74403f928c5af52c615ee2490b0aa685b4d62238f3da3778b3e44748e523e1916f110b42f2e73729be24d561b89a9ae498ff32f549ebe241e97a70d83cf39ded
-Size (mruby-2.0.1.tar.gz) = 517932 bytes
+SHA1 (mruby-2.1.0.tar.gz) = 4ef030a2d31b1252ec8615bbb59e1379484ad1a7
+RMD160 (mruby-2.1.0.tar.gz) = 2e6d6e962b6c7015e71f56b066a5d99113a7f7d8
+SHA512 (mruby-2.1.0.tar.gz) = da28b5a078e121c75edf62fc68fad6d5810212bd53a3424d4f585ffe5bbd09f652393ffea0f4b3ddd802e5fe178554dc67040c39c9d5069bdfad4ef22ead7e8d
+Size (mruby-2.1.0.tar.gz) = 584901 bytes
