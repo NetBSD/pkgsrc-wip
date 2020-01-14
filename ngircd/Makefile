@@ -21,7 +21,6 @@ INSTALLATION_DIRS+=	share/examples/ngircd
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/doc/ngircd/sample-ngircd.conf ${DESTDIR}${PREFIX}/share/examples/ngircd/
-	${RM} ${DESTDIR}${PREFIX}/share/doc/ngircd/COPYING
 	${RM} ${DESTDIR}${PREFIX}/share/doc/ngircd/HowToRelease.txt
 	${RM} ${DESTDIR}${PREFIX}/share/doc/ngircd/INSTALL
 	${RM} ${DESTDIR}${PREFIX}/etc/ngircd.conf

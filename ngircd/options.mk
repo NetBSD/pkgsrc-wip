@@ -1,6 +1,6 @@
 # $NetBSD$
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ngircd
-PKG_SUPPORTED_OPTIONS=		zlib tcpwrap ident pam iconv inet6 sniffer irc+ strictrfc
+PKG_SUPPORTED_OPTIONS=		zlib tcpwrappers ident pam iconv inet6 ngircd-sniffer ngircd-irc+ ngircd-strictrfc
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 PKG_SUGGESTED_OPTIONS=		zlib ident inet6 gnutls
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-gnutls
 .  include "../../security/gnutls/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mtcpwrap)
+.if !empty(PKG_OPTIONS:Mtcpwrappers)
 CONFIGURE_ARGS+=	--with-tcp-wrappers
 .endif
 
@@ -45,14 +45,14 @@ CONFIGURE_ARGS+=	--with-iconv
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-.if !empty(PKG_OPTIONS:Msniffer)
+.if !empty(PKG_OPTIONS:Mngircd-sniffer)
 CONFIGURE_ARGS+=	--enable-sniffer
 .endif
 
-.if !empty(PKG_OPTIONS:Mirc+)
+.if !empty(PKG_OPTIONS:Mngircd-irc+)
 CONFIGURE_ARGS+=	--enable-ircplus
 .endif
 
-.if !empty(PKG_OPTIONS:Mstrictrfc)
+.if !empty(PKG_OPTIONS:Mngircd-strictrfc)
 CONFIGURE_ARGS+=	--enable-strict-rfc
 .endif
