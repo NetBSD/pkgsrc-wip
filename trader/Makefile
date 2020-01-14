@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	trader-7.13
+DISTNAME=	trader-7.14
 CATEGORIES=	games
 MASTER_SITES=	https://ftp.zap.org.au/pub/trader/unix/
 

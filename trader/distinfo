@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (trader-7.13.tar.gz) = e7646a6b357834daaf478d3920a30412f331a60f
-RMD160 (trader-7.13.tar.gz) = 6d63dd41af9ff878b7cb549f743141d30158f673
-SHA512 (trader-7.13.tar.gz) = a9ff4c0ca06cd2f2544950cf86ce416bea27f968a8c0a4944b920708ecfc300b29d17b1220bdca31042825608dc697e20715698d20e15320f4136a75fad032f8
-Size (trader-7.13.tar.gz) = 1182226 bytes
+SHA1 (trader-7.14.tar.gz) = 782add72a779951d369699005bbdde5bbba03220
+RMD160 (trader-7.14.tar.gz) = 15b66a3bf069781c2c880a90a48f6a1c9baca498
+SHA512 (trader-7.14.tar.gz) = 452f64fa4a9c1d88d20fac2b943fd71ea14e1a34f951b62cf736aa6b2cb953969445b90ae14a7a83cf91d585df1fb4dd79a42d2198b2699df59e7eebd273d77d
+Size (trader-7.14.tar.gz) = 1184470 bytes
