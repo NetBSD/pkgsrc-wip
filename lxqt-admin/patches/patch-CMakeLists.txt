@@ -1,0 +1,18 @@
+$NetBSD$
+
+Allow building on NetBSD
+
+--- CMakeLists.txt.orig	2019-02-25 22:10:39.000000000 +0000
++++ CMakeLists.txt
+@@ -37,10 +37,9 @@ include(LXQtPreventInSourceBuilds)
+ include(LXQtCompilerSettings NO_POLICY_SCOPE)
+ include(LXQtTranslate)
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
+     message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-user")
+     message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-time")
+ else()
+     add_subdirectory(lxqt-admin-user)
+-    add_subdirectory(lxqt-admin-time)
+ endif()

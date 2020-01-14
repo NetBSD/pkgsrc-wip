@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/04/11 13:39:06 krytarowski Exp $
+$NetBSD$
 
-SHA1 (lxqt-admin-0.10.0.tar.gz) = 308059f45dd1a9f8c61bb3ff0802630ba478f49b
-RMD160 (lxqt-admin-0.10.0.tar.gz) = 3bdcd731dcc097ff559b10607eac9780e6b953ed
-SHA512 (lxqt-admin-0.10.0.tar.gz) = d443b7101a6ea4feece93f5ffbc9260d904ccc4558d8290741c3041729956ef1d03b40f5df31202e97cfba7fa5776e9bf14245d5079ed818e24596998138f601
-Size (lxqt-admin-0.10.0.tar.gz) = 36098 bytes
+SHA1 (lxqt-admin-0.14.1.tar.xz) = 4c4c76f1b1441063b6a77664fb45ba69792dd81c
+RMD160 (lxqt-admin-0.14.1.tar.xz) = 2519de22bdb1c90caa956d12e6ea6ae711c6f19a
+SHA512 (lxqt-admin-0.14.1.tar.xz) = bd6272a3042a71e9e00b2ba10be2575649c2d2750a4e00a6e11adaae6b91ccab5e3cf79a8ceb7bfbe808ec80c139b93e02cd96990f80b68a77a974c063e6a373
+Size (lxqt-admin-0.14.1.tar.xz) = 141088 bytes
+SHA1 (patch-CMakeLists.txt) = fddadeef6ca0161d2816ebf98b16f108d1d174dd
