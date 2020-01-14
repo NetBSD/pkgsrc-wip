@@ -4247,6 +4247,7 @@ SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qt5-qtwebengine
 SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtcreator
+SUBDIR+=	qterminal
 SUBDIR+=	qtermwidget
 SUBDIR+=	qtile
 SUBDIR+=	qtnotifydaemon
