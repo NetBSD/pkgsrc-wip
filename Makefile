@@ -1288,6 +1288,7 @@ SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
 SUBDIR+=	guest-oslogin
 SUBDIR+=	guichan
+SUBDIR+=	guile30
 SUBDIR+=	guile-persist
 SUBDIR+=	guile-reader
 SUBDIR+=	guile-stis-parser
