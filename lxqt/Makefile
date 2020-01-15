@@ -9,6 +9,8 @@ COMMENT=	Meta-package for LXQt desktop environment
 
 META_PACKAGE=	yes
 
+.include "options.mk"
+
 DEPENDS+=	liblxqt>=0.14.1:../../wip/liblxqt
 DEPENDS+=	lximage-qt>=0.14.1:../../wip/lximage-qt
 DEPENDS+=	lxqt-about>=0.14.1:../../wip/lxqt-about
@@ -28,9 +30,7 @@ DEPENDS+=	libfm-qt>=0.14.1:../../wip/libfm-qt
 DEPENDS+=	lxqt-sudo>=0.14.1:../../wip/lxqt-sudo
 DEPENDS+=	lxqt-themes>=0.14.0:../../wip/lxqt-themes
 DEPENDS+=	qterminal>=0.14.1:../../wip/qterminal
-DEPENDS+=	obconf-qt>=0.14.1:../../wip/obconf-qt
 DEPENDS+=	pavucontrol-qt>=0.14.1:../../wip/pavucontrol-qt
 DEPENDS+=	screengrab>=1.101:../../wip/screengrab
-DEPENDS+=	openbox>=3.6.1:../../wm/openbox
 
 .include "../../mk/bsd.pkg.mk"
