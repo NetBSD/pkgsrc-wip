@@ -79,6 +79,9 @@ lib/ocaml/caml/compatibility.h
 lib/ocaml/caml/config.h
 lib/ocaml/caml/custom.h
 lib/ocaml/caml/debugger.h
+lib/ocaml/caml/domain.h
+lib/ocaml/caml/domain_state.h
+lib/ocaml/caml/domain_state.tbl
 lib/ocaml/caml/dynlink.h
 lib/ocaml/caml/exec.h
 lib/ocaml/caml/fail.h
@@ -103,6 +106,7 @@ lib/ocaml/caml/m.h
 lib/ocaml/caml/major_gc.h
 lib/ocaml/caml/md5.h
 lib/ocaml/caml/memory.h
+lib/ocaml/caml/memprof.h
 lib/ocaml/caml/minor_gc.h
 lib/ocaml/caml/misc.h
 lib/ocaml/caml/mlvalues.h
@@ -376,6 +380,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_id.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.cmx
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_middle_end.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_offsets.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_offsets.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/closure_offsets.cmti
@@ -396,6 +405,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.cmx
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmm_helpers.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen.cmti
@@ -538,6 +552,11 @@ lib/ocaml/compiler-libs/docstrings.cmt
 lib/ocaml/compiler-libs/docstrings.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/docstrings.cmx
 lib/ocaml/compiler-libs/docstrings.mli
+lib/ocaml/compiler-libs/domainstate.cmi
+lib/ocaml/compiler-libs/domainstate.cmt
+lib/ocaml/compiler-libs/domainstate.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/domainstate.cmx
+lib/ocaml/compiler-libs/domainstate.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/effect_analysis.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/effect_analysis.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/effect_analysis.cmti
@@ -777,6 +796,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.cmx
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linear.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linearize.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linearize.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linearize.cmti
@@ -870,6 +894,9 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlbytecomp.cmxa
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlcommon.a
 lib/ocaml/compiler-libs/ocamlcommon.cma
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlcommon.cmxa
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.a
+lib/ocaml/compiler-libs/ocamlmiddleend.cma
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.cmxa
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.a
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.cma
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.cmxa
@@ -1302,6 +1329,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/traverse_for_exported_symbols.mli
+lib/ocaml/compiler-libs/type_immediacy.cmi
+lib/ocaml/compiler-libs/type_immediacy.cmt
+lib/ocaml/compiler-libs/type_immediacy.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/type_immediacy.cmx
+lib/ocaml/compiler-libs/type_immediacy.mli
 lib/ocaml/compiler-libs/typeclass.cmi
 lib/ocaml/compiler-libs/typeclass.cmt
 lib/ocaml/compiler-libs/typeclass.cmti
@@ -2180,6 +2212,7 @@ man/man3/Depend.String.3
 man/man3/Digest.3
 man/man3/Docstrings.3
 man/man3/Docstrings.WithMenhir.3
+man/man3/Domainstate.3
 man/man3/Dynlink.3
 man/man3/Ephemeron.3
 man/man3/Ephemeron.GenHashTable.3
@@ -2388,6 +2421,10 @@ man/man3/Strongly_connected_components.S.3
 man/man3/Strongly_connected_components.S.Id.3
 man/man3/Syntaxerr.3
 man/man3/Sys.3
+man/man3/Sys.Immediate64.3
+man/man3/Sys.Immediate64.Immediate.3
+man/man3/Sys.Immediate64.Make.3
+man/man3/Sys.Immediate64.Non_immediate.3
 man/man3/Targetint.3
 man/man3/Terminfo.3
 man/man3/Thread.3

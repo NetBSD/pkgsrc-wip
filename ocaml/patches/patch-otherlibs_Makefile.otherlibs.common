@@ -2,13 +2,14 @@ $NetBSD$
 
 Honor LDFLAGS.
 
---- otherlibs/Makefile.otherlibs.common.orig	2019-02-08 14:34:10.000000000 +0000
+--- otherlibs/Makefile.otherlibs.common.orig	2020-01-10 16:10:46.000000000 +0000
 +++ otherlibs/Makefile.otherlibs.common
-@@ -48,6 +48,7 @@ MKLIB=$(CAMLRUN) $(ROOTDIR)/tools/ocamlm
- #LINKOPTS=
- #LDOPTS=
- #HEADERS=
-+LDOPTS=	-ldopt "$(LDFLAGS)"
- 
+@@ -51,7 +51,7 @@ COBJS ?=
+ EXTRACFLAGS ?=
+ EXTRACAMLFLAGS ?=
+ LINKOPTS ?=
+-LDOPTS ?=
++LDOPTS ?= -ldopt "$(LDFLAGS)"
+ HEADERS ?=
  CMIFILES ?= $(CAMLOBJS:.cmo=.cmi)
  CAMLOBJS_NAT ?= $(CAMLOBJS:.cmo=.cmx)
