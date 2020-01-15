@@ -49,7 +49,7 @@ lib/baresip/modules/uuid.so
 ${PLIST.v4l2}lib/baresip/modules/v4l2.so
 ${PLIST.v4l2}lib/baresip/modules/v4l2_codec.so
 lib/baresip/modules/vidbridge.so
-${PLIST.cairo}lib/baresip/modules/vidinfo.so
+lib/baresip/modules/vidinfo.so
 lib/baresip/modules/vidloop.so
 ${PLIST.libvpx}lib/baresip/modules/vp8.so
 ${PLIST.libvpx}lib/baresip/modules/vp9.so
