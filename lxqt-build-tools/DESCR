@@ -1,1 +1,2 @@
-LXQt build tools
+This package provides several tools needed to build LXQt itself
+as well as other components maintained by the LXQt project.
