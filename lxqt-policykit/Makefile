@@ -17,8 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
-
 EGDIR=			share/lxqt/lxqt-policykit-agent
 PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/lxqt
