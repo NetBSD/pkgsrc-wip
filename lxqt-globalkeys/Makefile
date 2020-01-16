@@ -17,8 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
-
 EGDIR=			share/examples/lxqt-globalkeys
 PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
