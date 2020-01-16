@@ -17,7 +17,18 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CMAKE_ARGS+=	-DWITH_INPUT=OFF
+
+EGDIR=			share/examples/lxqt
+PKG_SYSCONFSUBDIR=	xdg
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/menus
+CONF_FILES=		${EGDIR}/xdg/menus/lxqt-config.menu \
+			${PKG_SYSCONFDIR}/menus/lxqt-config.menu
+
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf=	src/CMakeLists.txt
+SUBST_SED.conf=		-e 's,$${LXQT_ETC_XDG_DIR}/,${EGDIR}/xdg/,'
+SUBST_STAGE.conf=	pre-configure
 
 INSTALLATION_DIRS+=	bin lib
 
@@ -26,9 +37,6 @@ pre-configure:
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 DEPENDS+=	lxqt-themes-[0-9]*:../../wip/lxqt-themes
-
-post-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/etc/xdg/menus/lxqt-config.menu
 
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
