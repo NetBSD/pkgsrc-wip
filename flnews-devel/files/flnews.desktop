@@ -1,0 +1,15 @@
+[Desktop Entry]
+# Conformant to desktop-entry-spec-1.1 (spec says 1.0 what is likely an error)
+Version=1.1
+Type=Application
+Name=flnews
+GenericName=Newsreader
+Comment=A fast and lightweight USENET newsreader
+Exec=flnews
+Terminal=false
+DBusActivatable=false
+Keywords=Network;
+# Conformant to menu-spec-1.0.html
+Categories=Network;
+# Conformant to icon-theme-spec-0.11
+Icon=flnews

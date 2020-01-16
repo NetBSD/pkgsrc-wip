@@ -3,6 +3,7 @@
 FLNEWS_VERSION=	0.18pre1
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
@@ -65,8 +66,29 @@ SUBST_SED.edit-config+=		-e 's,@DEP_MD@,\#,g'
 SUBST_SED.edit-config+=		-e 's,@DEP_COMP@,,g'
 .endif
 
+INSTALLATION_DIRS+=		share/applications
+INSTALLATION_DIRS+=		share/icons/hicolor/48x48/apps
+INSTALLATION_DIRS+=		share/icons/hicolor/64x64/apps
+
+pre-configure:
+	${MKDIR} ${WRKDIR}/desktop
+	${CP} ${FILESDIR}/flnews.desktop ${WRKDIR}/desktop
+	${MKDIR} ${WRKDIR}/desktop/48x48
+	${CP} ${FILESDIR}/48x48/flnews.png ${WRKDIR}/desktop/48x48
+	${MKDIR} ${WRKDIR}/desktop/64x64
+	${CP} ${FILESDIR}/64x64/flnews.png ${WRKDIR}/desktop/64x64
+
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} config
+	cd ${WRKSRC} && \
+		${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} config
+
+post-install:
+	${INSTALL_DATA} ${WRKDIR}/desktop/flnews.desktop \
+		${DESTDIR}${PREFIX}/share/applications/flnews.desktop
+	${INSTALL_DATA} ${WRKDIR}/desktop/48x48/flnews.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/flnews.png
+	${INSTALL_DATA} ${WRKDIR}/desktop/64x64/flnews.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/64x64/apps/flnews.png
 
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER:Msunpro}
 BUILD_DEPENDS+=			makedepend-[0-9]*:../../devel/makedepend
@@ -74,12 +96,19 @@ BUILD_DEPENDS+=			makedepend-[0-9]*:../../devel/makedepend
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 # OpenSSL 1.1 API is required for signature algorithm negotiation
 # OpenSSL 1.1 API is required for TLSv1.2 FFDHE group check
 # At least OpenSSL 1.1.1 is required for TLSv1.3
 # OpenSSL 3 API is required for FFDHE group negotiation
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 .include "../../security/openssl/buildlink3.mk"
+# Quoted from comment:
+# | This Makefile fragment is intended to be included by packages that install
+# | desktop entries.
+# There is a desktop entry, but no MIME types are associated with this program.
+# Is this nevertheless required?
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 # FLTK must be compiled with multithreading support
 # FLTK version 1.4 is supported (should be compiled with pango support)
 #.include "../../x11/fltk13/buildlink3.mk"
