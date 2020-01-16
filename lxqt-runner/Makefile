@@ -17,8 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
-
 EGDIR=			share/examples/lxqt-runner
 PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
@@ -38,5 +36,5 @@ pre-configure:
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 
 .include "../../wip/lxqt-globalkeys/buildlink3.mk"
-.include "../../math/muparser/buildlink3.mk"
+.include "../../wip/muparser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
