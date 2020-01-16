@@ -1,3 +1,0 @@
-Rouge is a pure Ruby syntax highlighter. It can highlight over 100
-different languages, and output HTML or ANSI 256-color text. Its HTML
-output is compatible with stylesheets designed for Pygments.
