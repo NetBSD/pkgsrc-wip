@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Core library of PCManFM-Qt
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
@@ -16,8 +16,6 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
-
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 INSTALLATION_DIRS+=	lib
 
