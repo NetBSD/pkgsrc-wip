@@ -575,7 +575,6 @@ SUBDIR+=	deforaos-camera
 SUBDIR+=	deforaos-desktop
 SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init
-SUBDIR+=	deforaos-pdfviewer
 SUBDIR+=	deforaos-probe
 SUBDIR+=	deforaos-terminal
 SUBDIR+=	deforaos-todo
