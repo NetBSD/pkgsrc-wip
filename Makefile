@@ -827,7 +827,6 @@ SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox
 SUBDIR+=	firefox-hg
-SUBDIR+=	firefox-webrtc
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firehose
 SUBDIR+=	flam3-svn
