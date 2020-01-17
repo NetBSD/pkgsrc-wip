@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kea
-PKG_SUPPORTED_OPTIONS=		mysql pgsql
+PKG_SUPPORTED_OPTIONS=		mysql pgsql tests
 PKG_SUGGESTED_OPTIONS=		mysql pgsql
 PLIST_VARS+=			mysql pgsql
 
@@ -21,4 +21,9 @@ PLIST.mysql=yes
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=--with-pgsql=${PGSQL_PREFIX}/bin/pg_config
 PLIST.pgsql=yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mtests)
+.  include "../../devel/googletest/buildlink3.mk"
+CONFIGURE_ARGS+=--with-gtest=${BUILDLINK_PREFIX.googletest}
 .endif

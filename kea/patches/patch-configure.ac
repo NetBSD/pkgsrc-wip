@@ -1,9 +1,19 @@
 $NetBSD$
 
+* fix typo to find googletest
 * fix compatability errors
 
---- configure.ac.orig	2019-12-30 16:00:16.704565254 +0000
+--- configure.ac.orig	2019-11-19 14:50:46.000000000 +0000
 +++ configure.ac
+@@ -1148,7 +1148,7 @@ if test "x$enable_gtest" = "xyes" ; then
+             GTEST_FOUND="false"
+             for dir in $GTEST_PATHS; do
+                 if test -f "$dir/include/gtest/gtest.h"; then
+-                    if ! test -f "$dir/lib/libgtests.a"; then
++                    if ! test -f "$dir/lib/libgtest.a"; then
+                         AC_MSG_WARN([Found Google Test include but not the library in $dir.])
+                         continue
+                     fi
 @@ -1391,7 +1391,7 @@ if test "x$enable_generate_parser" != "x
         AC_MSG_ERROR([Flex is required for enable-generate-parser, but was not found])
      fi

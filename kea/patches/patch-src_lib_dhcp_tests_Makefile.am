@@ -1,0 +1,17 @@
+$NetBSD$
+
+* illumos uses bpf
+
+--- src/lib/dhcp/tests/Makefile.am.orig	2020-01-02 23:01:48.000000000 +0000
++++ src/lib/dhcp/tests/Makefile.am
+@@ -97,6 +97,10 @@ if OS_BSD
+ libdhcp___unittests_SOURCES += pkt_filter_bpf_unittest.cc
+ endif
+ 
++if OS_SOLARIS
++libdhcp___unittests_SOURCES += pkt_filter_bpf_unittest.cc
++endif
++
+ libdhcp___unittests_SOURCES += protocol_util_unittest.cc
+ libdhcp___unittests_SOURCES += duid_unittest.cc
+ 
