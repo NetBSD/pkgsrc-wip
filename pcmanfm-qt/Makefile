@@ -17,8 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
-
 EGDIR=			share/examples/pcmanfm-qt
 PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
@@ -39,7 +37,6 @@ TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
 DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../wip/liblxqt/buildlink3.mk"
 .include "../../wip/libfm-qt/buildlink3.mk"
