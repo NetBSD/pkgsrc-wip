@@ -2094,7 +2094,6 @@ SUBDIR+=	lxqt
 SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-admin
 SUBDIR+=	lxqt-build-tools
-SUBDIR+=	lxqt-common
 SUBDIR+=	lxqt-config
 SUBDIR+=	lxqt-globalkeys
 SUBDIR+=	lxqt-notificationd
