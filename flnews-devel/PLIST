@@ -2,7 +2,7 @@
 bin/flnews
 ${PLIST.nls}lib/flnews/nls/de_DE.cat
 man/man1/flnews.1
-share/applications/flnews.desktop
+${PLIST.xdg}share/applications/flnews.desktop
 share/flnews/license.txt
-share/icons/hicolor/48x48/apps/flnews.png
-share/icons/hicolor/64x64/apps/flnews.png
+${PLIST.xdg}share/icons/hicolor/48x48/apps/flnews.png
+${PLIST.xdg}share/icons/hicolor/64x64/apps/flnews.png
