@@ -11,6 +11,8 @@ META_PACKAGE=	yes
 
 .include "options.mk"
 
+DEPENDS+=	libsysstat>=0.4.2:../../wip/libsysstat
+DEPENDS+=	libqtxdg>=3.4.0:../../wip/libqtxdg
 DEPENDS+=	liblxqt>=0.14.1:../../wip/liblxqt
 DEPENDS+=	lximage-qt>=0.14.1:../../wip/lximage-qt
 DEPENDS+=	lxqt-about>=0.14.1:../../wip/lxqt-about
