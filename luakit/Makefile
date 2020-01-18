@@ -11,15 +11,14 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake pkg-config
 
-LUAKIT_MAKE_FLAGS+=	DEVELOPMENT_PATHS=0
-LUAKIT_MAKE_FLAGS+=	APPDIR=${PREFIX}/share/applications
-LUAKIT_MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/luakit
-LUAKIT_MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
-LUAKIT_MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/pixmaps
-LUAKIT_MAKE_FLAGS+=	XDGPREFIX=${PREFIX}/etc/xdg
-LUAKIT_MAKE_FLAGS+=	USE_LUAJIT=0
-BUILD_MAKE_FLAGS+=	${LUAKIT_MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	${LUAKIT_MAKE_FLAGS}
+MAKE_FLAGS+=	DEVELOPMENT_PATHS=0
+MAKE_FLAGS+=	APPDIR=${PREFIX}/share/applications
+MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/luakit
+MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/pixmaps
+MAKE_FLAGS+=	XDGPREFIX=${PREFIX}/etc/xdg
+
+MAKE_ENV+=	DISPLAY=${DISPLAY:Q}
 
 LUA_VERSIONS_ACCEPTED=	51
 
@@ -40,8 +39,6 @@ DISPLAY= :2
 	@${FALSE}
 .endif  #Xvfb
 
-MAKE_ENV+=	DISPLAY=${DISPLAY:Q}
-
 teardownx:
 	${ECHO} teardownx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
 	sleep 5
@@ -54,8 +51,8 @@ post-build:	teardownx
 pre-install:
 	${RM} -f ${WRKSRC}/lib/*.orig
 
+.include "options.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
