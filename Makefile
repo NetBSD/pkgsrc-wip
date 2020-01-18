@@ -828,6 +828,7 @@ SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox
 SUBDIR+=	firefox-hg
 SUBDIR+=	firefox-wrapper
+SUBDIR+=	firefox69-2019Q4
 SUBDIR+=	firehose
 SUBDIR+=	flam3-svn
 SUBDIR+=	flang-git
