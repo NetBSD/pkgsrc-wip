@@ -1234,6 +1234,7 @@ SUBDIR+=	greenbone-security-assistant
 SUBDIR+=	gretl
 SUBDIR+=	greybird-theme
 SUBDIR+=	grilo-plugins
+SUBDIR+=	grim
 SUBDIR+=	grisbi
 SUBDIR+=	gromacs
 SUBDIR+=	gromacs2018
