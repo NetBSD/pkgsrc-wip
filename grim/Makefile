@@ -1,10 +1,9 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	grim
 DISTNAME=	grim-1.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emersion/}
-GITHUB_RELEASE=	v1.3.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://wayland.emersion.fr/grim/
