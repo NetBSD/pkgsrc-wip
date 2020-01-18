@@ -1,0 +1,40 @@
+This is essentially www/firefox (69.0.1) from pkgsrc-2019Q3.
+It installs as firefox, not firefox69, so it can directly replace
+www/firefox.
+
+Because it failed to build for me when I tried to in the context of
+2019-Q4, I randomly hacked on it until it did. I wanted to build it
+because the normal firefox in 2019-Q4 is broken (about:logins, the saved
+login page shows no logins), and you can't downgrade versions to
+www/firefox68 (which did build).
+
+In particular, ff 69 had build failures like this (and many more):
+
+error[E0204]: the trait `Copy` may not be implemented for this type
+    --> /pkg_comp/obj/pkgsrc/www/firefox69/default/build/x86_64-unknown-netbsd/release/build/style-cfb58b4e6cf6f71b/out/gecko/structs.rs:4399:29
+     |
+4399 |             #[derive(Debug, Copy, Clone)]
+     |                             ^^^^
+4400 |             pub struct URLParams_Param {
+4401 |                 pub mKey: ::gecko_bindings::structs::nsString,
+     |                 --------------------------------------------- this field does not implement `Copy`
+4402 |                 pub mValue: ::gecko_bindings::structs::nsString,
+     |                 ----------------------------------------------- this field does not implement `Copy`
+
+What worked in the end was to copy the rust bindgen crate 0.49.4 from
+www/firefox68 into this firefox, but pretending to be 0.49.3, which
+is what it expects. I had to adjust some version numbers here and there,
+and because of that, SHA256 sums as well.
+
+=====================================================================
+
+Mozilla Firefox is a free, open-source and cross-platform web browser
+for Windows, Linux, MacOS X and many other operating systems.
+
+It is fast and easy to use, and offers many advantages over other web
+browsers, such as tabbed browsing and the ability to block pop-up
+windows.
+
+Firefox also offers excellent bookmark and history management, and it
+can be extended by developers using industry standards such as XML,
+CSS, JavaScript, C++, etc. Many extensions are available.
