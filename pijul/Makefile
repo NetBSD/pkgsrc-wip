@@ -286,7 +286,7 @@ MAKE_ENV+=		SODIUM_LIB_DIR=${BUILDLINK_PREFIX.libsodium:Q}
 #MAKE_ENV+=		SODIUM_STATIC
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${_MAKE_JOBS_N}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nary ${DESTDIR}${PREFIX}/bin
