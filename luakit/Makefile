@@ -16,7 +16,7 @@ MAKE_FLAGS+=	APPDIR=${PREFIX}/share/applications
 MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/luakit
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/pixmaps
-MAKE_FLAGS+=	XDGPREFIX=${PREFIX}/etc/xdg
+MAKE_FLAGS+=	XDGPREFIX=${PKG_SYSCONFDIR}
 
 MAKE_ENV+=	DISPLAY=${DISPLAY:Q}
 
@@ -25,6 +25,14 @@ LUA_VERSIONS_ACCEPTED=	51
 .include "../../lang/lua/luaversion.mk"
 
 DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
+
+OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/luakit
+
+CONF_FILES+=	${PREFIX}/share/examples/luakit/rc.lua \
+		${PKG_SYSCONFDIR}/xdg/luakit/rc.lua
+
+CONF_FILES+=	${PREFIX}/share/examples/luakit/theme.lua \
+		${PKG_SYSCONFDIR}/xdg/luakit/theme.lua
 
 # Based on lang/swi-prolog-packages:
 setupx:

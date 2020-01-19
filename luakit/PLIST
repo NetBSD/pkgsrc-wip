@@ -1,7 +1,5 @@
 @comment $NetBSD$
 bin/luakit
-etc/xdg/luakit/rc.lua
-etc/xdg/luakit/theme.lua
 lib/luakit/luakit.so
 man/man1/luakit.1
 share/applications/luakit.desktop
@@ -123,6 +121,8 @@ share/doc/luakit/pages/04-migration-guide.html
 share/doc/luakit/pages/05-configuration.html
 share/doc/luakit/pages/06-tests.html
 share/doc/luakit/pages/07-build-debian-package.html
+share/examples/luakit/rc.lua
+share/examples/luakit/theme.lua
 share/luakit/lib/adblock.lua
 share/luakit/lib/adblock_chrome.lua
 share/luakit/lib/adblock_wm.lua
