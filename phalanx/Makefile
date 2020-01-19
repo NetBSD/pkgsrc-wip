@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phalanx/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/phalanx/
+HOMEPAGE=	https://sourceforge.net/projects/phalanx/
 COMMENT=	Xboard/Winboard compatible chess engine
 LICENSE=	gnu-gpl-v2
 

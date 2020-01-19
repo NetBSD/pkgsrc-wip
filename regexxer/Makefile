@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regexxer/}
 
 MAINTAINER=	dhowland@users.sourceforge.net
-HOMEPAGE=	http://regexxer.sourceforge.net/
+HOMEPAGE=	https://regexxer.sourceforge.net/
 COMMENT=	Interactive tool for performing search and replace operations
 LICENSE=	gnu-gpl-v2
 

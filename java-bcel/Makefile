@@ -8,7 +8,7 @@ MASTER_SITES=		http://archive.apache.org/dist/commons/bcel/binaries/
 LICENSE=		apache-2.0
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jakarta.apache.org/bcel/
+HOMEPAGE=		https://jakarta.apache.org/bcel/
 COMMENT=		ByteCode Engineering Library
 
 NO_BUILD=		yes

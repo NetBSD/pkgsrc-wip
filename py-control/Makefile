@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://downloads.sourceforge.net/project/python-control/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://python-control.sourceforge.net
+HOMEPAGE=	https://python-control.sourceforge.net
 COMMENT=	Python Control Systems Library
 LICENSE=	2-clause-bsd
 

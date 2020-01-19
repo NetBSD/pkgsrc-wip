@@ -3,7 +3,7 @@
 DISTNAME=	konsole-${KAPPSVER}
 CATEGORIES=	x11
 
-HOMEPAGE=	http://kde.org/applications/system/konsole/
+HOMEPAGE=	https://kde.org/applications/system/konsole/
 COMMENT=	Terminal emulator for the K Desktop Environment
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.2
 

@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netclasses/}
 
 MAINTAINER=	adam.hoka@gmail.com
-HOMEPAGE=	http://netclasses.sourceforge.net/
+HOMEPAGE=	https://netclasses.sourceforge.net/
 COMMENT=	Asynchronous networking library
 
 

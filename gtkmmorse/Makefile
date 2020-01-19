@@ -6,7 +6,7 @@ MASTER_SITES=	http://savannah.nongnu.org/download/gtkmmorse/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/gtkmmorse/
+HOMEPAGE=	https://www.nongnu.org/gtkmmorse/
 COMMENT=	Morse Code Trainer
 LICENSE=	gnu-gpl-v2
 

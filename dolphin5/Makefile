@@ -3,7 +3,7 @@
 DISTNAME=	dolphin-${KAPPSVER}
 CATEGORIES=	misc
 
-HOMEPAGE=	http://kde.org/applications/system/dolphin/
+HOMEPAGE=	https://kde.org/applications/system/dolphin/
 COMMENT=	KDE File Manager
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 

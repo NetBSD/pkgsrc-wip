@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cgit.freedesktop.org/xorg/app/intel-gpu-tools/
+HOMEPAGE=	https://cgit.freedesktop.org/xorg/app/intel-gpu-tools/
 COMMENT=	Test & development tools for the intel DRM kernel driver
 #LICENSE=	# various, mostly mit-style
 

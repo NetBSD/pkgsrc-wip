@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		ccatrian@eml.cc
-HOMEPAGE=		http://chbg.sourceforge.net/
+HOMEPAGE=		https://chbg.sourceforge.net/
 COMMENT=		Changes destop background pictures with some period
 
 DEPENDS+=		ImageMagick>=6.0.2.7:../../graphics/ImageMagick

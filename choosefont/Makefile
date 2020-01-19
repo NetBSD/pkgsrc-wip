@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://downloads.sourceforge.net/project/choosefont/choosefont/choosefont-0.3/
 
 MAINTAINER=	francksys@free.fr
-HOMEPAGE=	http://choosefont.sourceforge.net/
+HOMEPAGE=	https://choosefont.sourceforge.net/
 COMMENT=	Choosefont permit you to choose fonts out of a big amount of fonts
 LICENSE=	gnu-gpl-v2
 

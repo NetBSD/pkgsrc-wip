@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/05/03 15:01:12 spz Exp $
 
 DISTNAME=		netbsd-x11-i386-7.0
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-7/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-7/index.html
 COMMENT=		Shared X11 libraries for NetBSD 7.0/i386
 CATEGORIES=		emulators
 LICENSE=		mit

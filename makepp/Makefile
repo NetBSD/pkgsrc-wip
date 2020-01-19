@@ -6,7 +6,7 @@ MASTER_SITES=	http://sourceforge.net/projects/makepp/files/2.1/snapshots/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://makepp.sourceforge.net/
+HOMEPAGE=	https://makepp.sourceforge.net/
 COMMENT=	Compatible and reliable make replacement written in Perl
 LICENSE=	artistic
 

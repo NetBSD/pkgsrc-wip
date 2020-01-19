@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mtop/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mtop.sourceforge.net/
+HOMEPAGE=	https://mtop.sourceforge.net/
 COMMENT=	Curses-based MySQL server monitor
 LICENSE=	gnu-gpl-v2
 

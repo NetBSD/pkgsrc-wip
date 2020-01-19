@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcmt/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://sourceforge.net/projects/libcmt/
+HOMEPAGE=	https://sourceforge.net/projects/libcmt/
 COMMENT=	Composable Memory Transactions Library for C
 LICENSE=	gnu-lgpl-v2.1
 
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	libcmt-sharp.pc.in
 PKGCONFIG_OVERRIDE+=	libcmt.pc.in
 
-CONFIGURE_ARGS+=	--disable-csharp-binding\
+CONFIGURE_ARGS+=	--disable-csharp-binding \
 			--disable-checks \
 			--enable-save-signal-mask
 

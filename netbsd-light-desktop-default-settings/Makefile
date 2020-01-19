@@ -9,7 +9,7 @@ DISTFILES=	# none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # TODO: point to wiki for this package
-HOMEPAGE=	http://wiki.NetBSD.org/
+HOMEPAGE=	https://wiki.NetBSD.org/
 COMMENT=	Default settings for NetBSD Light Desktop
 #LICENSE=	# TODO: (see mk/license.mk)
 

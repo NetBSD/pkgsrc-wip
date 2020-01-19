@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rezound/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://rezound.sourceforge.net/
+HOMEPAGE=		https://rezound.sourceforge.net/
 COMMENT=		Audio editor with graphical interface
 LICENSE=		gnu-gpl-v2
 

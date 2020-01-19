@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarf/}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://sourceforge.net/projects/sarf/
+HOMEPAGE=	https://sourceforge.net/projects/sarf/
 COMMENT=	Arabic Morphology System
 LICENSE=	gnu-gpl-v2
 

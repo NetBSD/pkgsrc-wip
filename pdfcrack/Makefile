@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdfcrack/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://pdfcrack.sourceforge.net/
+HOMEPAGE=	https://pdfcrack.sourceforge.net/
 COMMENT=	Password Recovery Tool for PDF-files
 LICENSE=	gnu-gpl-v2
 

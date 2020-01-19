@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-xine/4.4.4/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://phonon.kde.org
+HOMEPAGE=	https://phonon.kde.org
 COMMENT=	Multimedia API for KDE and QT - xine backend
 LICENSE=	gnu-lgpl-v2.1
 

@@ -9,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/polkit
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/polkit
 COMMENT=	Authorization Manager
 LICENSE=	gnu-lgpl-v2
 
@@ -62,7 +62,7 @@ OWN_DIRS_PERMS+=	${PREFIX}/share/polkit-1/rules.d \
 SPECIAL_PERMS+=		lib/polkit-1/polkit-agent-helper-1 ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		bin/pkexec ${SETUID_ROOT_PERMS}
 
-CONF_FILES+=	${PREFIX}/share/examples/polkit/dbus-1/system.d/org.freedesktop.PolicyKit1.conf	\
+CONF_FILES+=	${PREFIX}/share/examples/polkit/dbus-1/system.d/org.freedesktop.PolicyKit1.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
 CONF_FILES+=	${PREFIX}/share/examples/polkit/polkit-1/rules.d/50-default.rules \
 		${PKG_SYSCONFDIR}/polkit-1/rules.d/50-default.rules

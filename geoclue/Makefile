@@ -6,7 +6,7 @@ MASTER_SITES=	https://www.freedesktop.org/software/geoclue/releases/2.2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/GeoClue
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/GeoClue
 COMMENT=	Geoinformation service API and base providers
 LICENSE=	gnu-gpl-v2 # or later
 

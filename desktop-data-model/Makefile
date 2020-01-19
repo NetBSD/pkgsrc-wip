@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/desktop-data-model/1.2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://ftp.gnome.org/pub/GNOME/sources/desktop-data-model
+HOMEPAGE=	https://ftp.gnome.org/pub/GNOME/sources/desktop-data-model
 COMMENT=	Engine providing live updates of online data to the desktop
 LICENSE=	gnu-lgpl-v2.1
 

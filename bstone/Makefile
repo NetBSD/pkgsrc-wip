@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bibendovsky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bibendovsky.github.io/bstone/
+HOMEPAGE=	https://bibendovsky.github.io/bstone/
 COMMENT=	Source port of Blake Stone game engines
 LICENSE=	gnu-gpl-v3
 

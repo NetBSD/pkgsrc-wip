@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scantailor/0.9.9.2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/scantailor/
+HOMEPAGE=	https://sourceforge.net/projects/scantailor/
 COMMENT=	Interactive post-processing tool for scanned pages
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 

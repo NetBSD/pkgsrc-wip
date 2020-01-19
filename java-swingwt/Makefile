@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swingwt/}
 LICENSE=		cpl-1.0 AND gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://swingwt.sourceforge.net/
+HOMEPAGE=		https://swingwt.sourceforge.net/
 COMMENT=		Swing binding to SWT for java
 
 DEPENDS+=		java-swt>=2.1.2:../../wip/java-swt

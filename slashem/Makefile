@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slashem/}
 
 MAINTAINER=	lifanov@mail.lifanov.com
-HOMEPAGE=	http://slashem.sourceforge.net/
+HOMEPAGE=	https://slashem.sourceforge.net/
 COMMENT=	Slash'EM is a Nethack variant with more stuff
 LICENSE=	gnu-gpl-v2
 

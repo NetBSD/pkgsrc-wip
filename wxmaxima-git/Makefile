@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=andrejv/}
 GITHUB_TAG=	Version-${PKGVERSION_NOREV}
 
 MAINTAINER=	helgoman@users.sourceforge.net
-HOMEPAGE=	http://andrejv.github.io/wxmaxima/
+HOMEPAGE=	https://andrejv.github.io/wxmaxima/
 COMMENT=	Graphical UI for maxima
 LICENSE=	gnu-gpl-v2
 

@@ -11,7 +11,7 @@ CATEGORIES=		security mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mixmaster/}
 
 MAINTAINER=		tv@NetBSD.org
-HOMEPAGE=		http://mixmaster.sourceforge.net/
+HOMEPAGE=		https://mixmaster.sourceforge.net/
 COMMENT=		The Mixmaster anonymous remailer client
 
 BUILD_DIRS=		${WRKSRC}/Src

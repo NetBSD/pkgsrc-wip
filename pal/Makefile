@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tgz
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		esg@sdf.lonestar.org
-HOMEPAGE=		http://palcal.sourceforge.net/
+HOMEPAGE=		https://palcal.sourceforge.net/
 COMMENT=		Command-line calendar program
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src

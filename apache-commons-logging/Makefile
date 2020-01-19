@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://archive.apache.org/dist/commons/logging/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://commons.apache.org/logging/
+HOMEPAGE=	https://commons.apache.org/logging/
 COMMENT=	Commmon wrapper interface for several logging APIs
 LICENSE=	apache-2.0
 

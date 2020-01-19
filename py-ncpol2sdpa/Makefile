@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ncpol2sdpa/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://peterwittek.github.io/ncpol2sdpa/
+HOMEPAGE=	https://peterwittek.github.io/ncpol2sdpa/
 COMMENT=	Converter from noncommutative variables to sparse SDPA
 LICENSE=	gnu-gpl-v3
 

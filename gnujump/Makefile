@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/gnujump/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://gnujump.es.gnu.org/index.php/Main_Page
+HOMEPAGE=	https://gnujump.es.gnu.org/index.php/Main_Page
 COMMENT=	GNUjump is a clone of the simple yet addictive game Xjump
 LICENSE=	gnu-gpl-v3
 

@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 
 
 MAINTAINER=	clamiax@gmail.com
-HOMEPAGE=	http://logfmon.sourceforge.net/
+HOMEPAGE=	https://logfmon.sourceforge.net/
 COMMENT=	Log file monitor
 
 GIT_REPOSITORIES=	logfmon

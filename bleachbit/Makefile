@@ -6,7 +6,7 @@ MASTER_SITES=	http://sourceforge.net/projects/bleachbit/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://bleachbit.sourceforge.net/
+HOMEPAGE=	https://bleachbit.sourceforge.net/
 COMMENT=	Bleachbit is a privacy and cleaning tool
 LICENSE=	gnu-gpl-v3
 

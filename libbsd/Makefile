@@ -5,7 +5,7 @@ MASTER_SITES=	http://libbsd.freedesktop.org/releases/
 
 CATEGORIES=	devel
 
-HOMEPAGE=	http://libbsd.freedesktop.org/
+HOMEPAGE=	https://libbsd.freedesktop.org/
 COMMENT=	Compatibility library for BSD functions under other systems
 LICENSE=	original-bsd
 MAINTAINER=	matthias@rampke.de

@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://download.savannah.gnu.org/releases/starfighter/1.6/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://starfighter.nongnu.org/
+HOMEPAGE=	https://starfighter.nongnu.org/
 COMMENT=	Side-scrolling shoot 'em up space game
 LICENSE=	gnu-gpl-v3 AND public-domain AND cc-by-sa-v3.0 AND cc0-1.0-universal
 

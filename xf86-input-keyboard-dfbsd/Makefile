@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg keyboard driver
 LICENSE=	mit
 
@@ -20,10 +20,10 @@ CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-input-keyboard
-PKG_SUPPORTED_OPTIONS=  debug	
-# PKG_SUGGESTED_OPTIONS=  debug	
+PKG_SUPPORTED_OPTIONS=	debug
+# PKG_SUGGESTED_OPTIONS=  debug
 
-PKG_SUPPORTED_OPTIONS+=  delay_kdsetled
+PKG_SUPPORTED_OPTIONS+=	delay_kdsetled
 .if ${OPSYS} == "DragonFly"
 # PKG_SUGGESTED_OPTIONS+=  delay_kdsetled
 .endif

@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=4.4.0/src/extragear/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://extragear.kde.org/
+HOMEPAGE=	https://extragear.kde.org/
 COMMENT=	Screen Grabbing Program (KDE4)
 LICENSE=	gnu-gpl-v2
 

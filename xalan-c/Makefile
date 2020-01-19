@@ -10,7 +10,7 @@ DISTFILES+=	xerces-c-3.1.1.tar.gz
 SITES.xerces-c-3.1.1.tar.gz=	${MASTER_SITE_APACHE:=xerces/c/3/sources/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xml.apache.org/xalan-c/
+HOMEPAGE=	https://xml.apache.org/xalan-c/
 COMMENT=	XSLT processor of the Apache Project
 LICENSE=	apache-2.0
 

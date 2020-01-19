@@ -7,7 +7,7 @@ MASTER_SITES=	http://apache.cyberuse.com/lucene/java/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://lucene.apache.org/
+HOMEPAGE=	https://lucene.apache.org/
 COMMENT=	Full-text search engine for Java
 LICENSE=	apache-2.0
 

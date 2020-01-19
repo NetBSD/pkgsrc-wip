@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=d/dolo/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://albop.github.com/dolo/
+HOMEPAGE=	https://albop.github.com/dolo/
 COMMENT=	Economic modelling in Python
 LICENSE=	2-clause-bsd
 

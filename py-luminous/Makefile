@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyLuminous/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://sourceforge.net/projects/pyluminous/
+HOMEPAGE=	https://sourceforge.net/projects/pyluminous/
 COMMENT=	Optical Transfer Matrix and simple Quantum Well modelling
 LICENSE=	gnu-gpl-v3
 

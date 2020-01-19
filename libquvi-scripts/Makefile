@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quvi/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://quvi.sourceforge.net/
+HOMEPAGE=	https://quvi.sourceforge.net/
 COMMENT=	Scripts for libquvi
 LICENSE=	gnu-lgpl-v2.1
 

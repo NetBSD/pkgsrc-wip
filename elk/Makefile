@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elk/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://elk.sourceforge.net/
+HOMEPAGE=	https://elk.sourceforge.net/
 COMMENT=	All-electron full-potential linearised augmented-planewave
 LICENSE=	gnu-gpl-v3
 

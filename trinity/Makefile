@@ -39,7 +39,7 @@ GITHUB_PROJECT=	trinityrnaseq
 GITHUB_TAG=	Trinity-v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://trinityrnaseq.github.io/
+HOMEPAGE=	https://trinityrnaseq.github.io/
 COMMENT=	Assembles transcript sequences from Illumina RNA-Seq data
 LICENSE=	modified-bsd
 

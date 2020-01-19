@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.tar
 EXTRACT_CMD=	${TAR} xzf $$extract_file
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://desmume.sourceforge.net/
+HOMEPAGE=	https://desmume.sourceforge.net/
 COMMENT=	Nintendo DS emulator
 LICENSE=	gnu-gpl-v2
 

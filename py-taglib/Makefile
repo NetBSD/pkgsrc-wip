@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.berlios.de/namingmuse/ \
 LICENSE=	gnu-lgpl-v3 AND mpl-1.1
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://developer.kde.org/~wheeler/taglib.html
+HOMEPAGE=	https://developer.kde.org/~wheeler/taglib.html
 COMMENT=	Python bindings for the taglib audio file tagging library
 
 USE_TOOLS=	gmake

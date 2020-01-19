@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://download.savannah.gnu.org/releases/yauap/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/yauap/index.html
+HOMEPAGE=	https://www.nongnu.org/yauap/index.html
 COMMENT=	Yauap is a simple commandline audio player
 LICENSE=	gnu-lgpl-v2.1
 

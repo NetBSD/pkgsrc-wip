@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymetrics/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://sourceforge.net/projects/pymetrics/
+HOMEPAGE=	https://sourceforge.net/projects/pymetrics/
 COMMENT=	Metrics for python files
 LICENSE=	gnu-gpl-v2
 

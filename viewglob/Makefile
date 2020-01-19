@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viewglob/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://viewglob.sourceforge.net/
+HOMEPAGE=		https://viewglob.sourceforge.net/
 COMMENT=		Utility designed to complement the shell in graphical environments
 
 DEPENDS+=		bash>=2.0:../../shells/bash

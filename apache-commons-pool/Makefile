@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://archive.apache.org/dist/commons/pool/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://commons.apache.org/pool/
+HOMEPAGE=	https://commons.apache.org/pool/
 COMMENT=	Pooling implementation for Java objects
 LICENSE=	apache-2.0
 

@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dssi/}
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://dssi.sourceforge.net/
+HOMEPAGE=	https://dssi.sourceforge.net/
 COMMENT=	API for audio processing plugins
 LICENSE=	gnu-lgpl-v2.1
 

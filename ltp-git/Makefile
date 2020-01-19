@@ -7,7 +7,7 @@ GIT_REPO.ltp=		https://github.com/linux-test-project/ltp.git
 WRKSRC=			${WRKDIR}/ltp
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linux-test-project.github.io/
+HOMEPAGE=	https://linux-test-project.github.io/
 COMMENT=	Testing Linux, one syscall at a time
 LICENSE=	gnu-gpl-v2
 

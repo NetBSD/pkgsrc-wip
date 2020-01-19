@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ciwiki/}
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://ciwiki.sourceforge.net/
+HOMEPAGE=	https://ciwiki.sourceforge.net/
 COMMENT=	CiWiki is a small and simple WikiWikiWeb implementation written in C
 
 LICENSE=	gnu-gpl-v2

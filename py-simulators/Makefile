@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysimulators/}
 #LICENSE=	CeCILL-B
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pchanial.github.com/pysimulators
+HOMEPAGE=	https://pchanial.github.com/pysimulators
 COMMENT=	Tools to build an instrument model
 
 DEPENDS+=	${PYPKGPREFIX}-astropy>=1.1.1:../../wip/py-astropy

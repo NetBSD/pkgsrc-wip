@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.zip
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/classpathx/jaxp/
+HOMEPAGE=		https://www.gnu.org/software/classpathx/jaxp/
 COMMENT=		XML extensions for GNU classpath
 
 

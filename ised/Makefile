@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ised/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://ised.sourceforge.net/
+HOMEPAGE=	https://ised.sourceforge.net/
 COMMENT=	Tool for generating number sequences and arithmetic evaluation
 LICENSE=	gnu-gpl-v3
 

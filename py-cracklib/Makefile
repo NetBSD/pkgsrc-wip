@@ -6,7 +6,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cracklib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/cracklib/
+HOMEPAGE=	https://sourceforge.net/projects/cracklib/
 COMMENT=	Tool for preventing users from choosing bad passwords
 LICENSE=	gnu-lgpl-v2.1
 

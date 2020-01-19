@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gnump3d/
+HOMEPAGE=		https://www.gnu.org/software/gnump3d/
 COMMENT=		The GNU Streaming MP3 / Media Server
 
 

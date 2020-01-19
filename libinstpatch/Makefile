@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swami/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://swami.sourceforge.net/
+HOMEPAGE=	https://swami.sourceforge.net/
 COMMENT=	Software library for editing and manipulating instrument files
 LICENSE=	gnu-gpl-v2
 

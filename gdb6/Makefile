@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gdb/gdb.html
+HOMEPAGE=		https://www.gnu.org/software/gdb/gdb.html
 COMMENT=		The GNU Project Debugger
 
 # This (outdated) gdb does not understand mach-o (hence macos) and has

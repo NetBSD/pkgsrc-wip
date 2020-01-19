@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=proxyknife/}
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/proxyknife/proxyknife.html
+HOMEPAGE=	https://www.gnu.org/software/proxyknife/proxyknife.html
 COMMENT=	Proxyknife is a tool to validate free proxies
 LICENSE=	gnu-gpl-v3
 

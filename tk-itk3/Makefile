@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=incrtcl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://incrtcl.sourceforge.net/
+HOMEPAGE=	https://incrtcl.sourceforge.net/
 COMMENT=	Framework for building mega-widgets for Tcl/Tk
 LICENSE=	mit # Standard ML of New Jersey Variant
 

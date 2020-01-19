@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/Software/dbus
+HOMEPAGE=	https://www.freedesktop.org/Software/dbus
 COMMENT=	Message bus system
 LICENSE=	gnu-gpl-v2
 

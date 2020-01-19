@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gnuzilla/${ICECAT_VER}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gnuzilla/
+HOMEPAGE=	https://www.gnu.org/software/gnuzilla/
 COMMENT=	GNU version of www/firefox
 
 WRKSRC=		${WRKDIR}/${DISTNAME}

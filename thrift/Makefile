@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://archive.apache.org/dist/thrift/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thrift.apache.org/
+HOMEPAGE=	https://thrift.apache.org/
 COMMENT=	Framework for cross-language services development
 LICENSE=	apache-2.0
 

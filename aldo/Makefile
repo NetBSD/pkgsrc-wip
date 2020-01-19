@@ -6,7 +6,7 @@ MASTER_SITES=	http://download.savannah.gnu.org/releases/aldo/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/aldo/
+HOMEPAGE=	https://www.nongnu.org/aldo/
 COMMENT=	Morse code training program
 LICENSE=	gnu-gpl-v2
 

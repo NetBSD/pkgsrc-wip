@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/discident-glib/0.9/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://git.gnome.org/browse/discident-glib/
+HOMEPAGE=	https://git.gnome.org/browse/discident-glib/
 COMMENT=	Discident-glib is a convenience library for the DiscIdent Web Service
 LICENSE=	gnu-gpl-v2
 

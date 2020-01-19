@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-jabber/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gnome-jabber.sourceforge.net/
+HOMEPAGE=	https://gnome-jabber.sourceforge.net/
 COMMENT=	Instant message client for Gnome using the Jabber protocol
 LICENSE=	gnu-gpl-v2
 

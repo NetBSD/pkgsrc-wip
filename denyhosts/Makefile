@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://downloads.sourceforge.net/project/denyhosts/denyhosts/2.6/
+HOMEPAGE=	https://downloads.sourceforge.net/project/denyhosts/denyhosts/2.6/
 COMMENT=	Block hosts with too many failed login attempts
 LICENSE=	gnu-gpl-v2
 

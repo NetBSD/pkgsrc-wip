@@ -9,7 +9,7 @@ DIST_SUBDIR=		${GITHUB_PROJECT}
 GITHUB_TAG=		872079cfe80f912af50dabdcf09ff1bd4bb72a9a
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://exult.sourceforge.net/
+HOMEPAGE=		https://exult.sourceforge.net/
 COMMENT=		Open-source Ultima 7 engine
 
 WRKSRC=			${WRKDIR}/exult-${GITHUB_TAG}

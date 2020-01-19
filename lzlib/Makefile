@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/lzlib/
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	http://www.nongnu.org/lzip/lzlib.html
+HOMEPAGE=	https://www.nongnu.org/lzip/lzlib.html
 COMMENT=	In-memory LZMA compression and decompression library
 LICENSE=	2-clause-bsd
 

@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bio-rainbow/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/bio-rainbow/
+HOMEPAGE=	https://sourceforge.net/projects/bio-rainbow/
 COMMENT=	Short reads clustering and local assembly
 LICENSE=	gnu-gpl-v3
 

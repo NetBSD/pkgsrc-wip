@@ -5,7 +5,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icmpchat/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://icmpchat.sourceforge.net/
+HOMEPAGE=	https://icmpchat.sourceforge.net/
 COMMENT=	Simple chat using ICMP and Rijndael-256 encryptation
 LICENSE=	modified-bsd
 

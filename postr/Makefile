@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://projects.gnome.org/postr/
+HOMEPAGE=	https://projects.gnome.org/postr/
 COMMENT=	GNOME flickr uploader
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted

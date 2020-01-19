@@ -4,7 +4,7 @@ DISTNAME=	pusher-client-0.6.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/pusher/pusher-ruby-client
+HOMEPAGE=	https://github.com/pusher/pusher-ruby-client
 COMMENT=	Ruby WebSocket client for Pusher Channels
 LICENSE=	mit
 

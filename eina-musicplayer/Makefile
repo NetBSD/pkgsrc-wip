@@ -7,7 +7,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://launchpad.net/eina/trunk/0.14.0/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://eina.sourceforge.net/
+HOMEPAGE=	https://eina.sourceforge.net/
 COMMENT=	Traditional audio player with a GTK2 interface
 LICENSE=	gnu-gpl-v3
 

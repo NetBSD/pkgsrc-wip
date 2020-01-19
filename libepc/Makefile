@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libepc/0.4/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/libepc/
+HOMEPAGE=	https://live.gnome.org/libepc/
 COMMENT=	Easy Publish and Consume Library
 LICENSE=	gnu-lgpl-v2.1
 

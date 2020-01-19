@@ -7,7 +7,7 @@ MASTER_SITES=	http://sourceforge.net/projects/jabref/files/jabref/2.10/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pouya@san-serriffe.org
-HOMEPAGE=	http://jabref.sourceforge.net/
+HOMEPAGE=	https://jabref.sourceforge.net/
 COMMENT=	JabRef is an advanced reference manager uses the BibTeX format
 LICENSE=	gnu-gpl-v2
 

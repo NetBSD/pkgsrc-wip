@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygsl/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pygsl.sourceforge.net/
+HOMEPAGE=	https://pygsl.sourceforge.net/
 COMMENT=	Python interface for the GNU scientific library
 LICENSE=	gnu-gpl-v3
 

@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-gpl-v3 AND gnu-lgpl-v3
 
 MAINTAINER=		blair.sadewitz@gmail.com
-HOMEPAGE=		http://gcc.gnu.org/
+HOMEPAGE=		https://gcc.gnu.org/
 COMMENT=		This is the GCC 4.3.2 compiler
 
 USE_TOOLS+=		awk:run bash:build perl chmod ar \

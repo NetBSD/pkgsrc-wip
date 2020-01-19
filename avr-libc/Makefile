@@ -6,7 +6,7 @@ MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		makoto@ki.nu
-HOMEPAGE=		http://savannah.nongnu.org/projects/avr-libc
+HOMEPAGE=		https://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 LICENSE=		modified-bsd
 

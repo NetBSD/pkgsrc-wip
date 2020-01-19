@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arpdig/}
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
-HOMEPAGE=	http://arpdig.sourceforge.net/
+HOMEPAGE=	https://arpdig.sourceforge.net/
 COMMENT=	Arp digger utility
 LICENSE=	2-clause-bsd
 

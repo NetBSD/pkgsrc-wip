@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doorman/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://doorman.sourceforge.net/
+HOMEPAGE=		https://doorman.sourceforge.net/
 COMMENT=		Open ports when requested by a *secret knock*
 LICENSE=		gnu-gpl-v2
 

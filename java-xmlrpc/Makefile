@@ -10,7 +10,7 @@ MASTER_SITES=		http://apache.rediris.es/ws/xmlrpc/v1.2-b1/ \
 LICENSE=		apache-2.0
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ws.apache.org/xmlrpc/
+HOMEPAGE=		https://ws.apache.org/xmlrpc/
 COMMENT=		Java implementation of XML-RPC
 
 

@@ -6,7 +6,7 @@ CATEGORIES=		net linux
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bridge/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.linuxfoundation.org/collaborate/workgroups/networking/bridge
+HOMEPAGE=		https://www.linuxfoundation.org/collaborate/workgroups/networking/bridge
 COMMENT=		Ethernet bridging utilities for GNU/Linux
 LICENSE=		gnu-gpl-v2
 

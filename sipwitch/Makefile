@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=sipwitch/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/sipwitch/
+HOMEPAGE=	https://www.gnu.org/software/sipwitch/
 COMMENT=	Secure peer-to-peer VoIP server that uses the SIP protocol
 LICENSE=	gnu-gpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pxlib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pxlib.sourceforge.net/
+HOMEPAGE=	https://pxlib.sourceforge.net/
 COMMENT=	C language library for reading Paradox database files
 LICENSE=	gnu-gpl-v2
 

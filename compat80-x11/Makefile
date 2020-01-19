@@ -3,7 +3,7 @@
 COMPAT_PKG=		compat80	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		8.0
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-8/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-8/index.html
 COMMENT=		Shared X11 libraries for NetBSD 8.0 compatibility
 LICENSE=		mit
 CATEGORIES=		emulators
@@ -22,7 +22,7 @@ ONLY_FOR_PLATFORM=	NetBSD-[7-9]*-* NetBSD-[1-9][0-9]*-*
 DISTNAME=		compat80-x11-${EMUL_ARCH}-${COMPAT_VERSION}
 COMPAT_VERSION=		8.0
 DIST_SUBDIR=		18072019
-MASTER_SITES=           https://cdn.NetBSD.org/pub/NetBSD/NetBSD-8.0/i386/binary/sets/
+MASTER_SITES=		https://cdn.NetBSD.org/pub/NetBSD/NetBSD-8.0/i386/binary/sets/
 
 DISTFILES=		xbase.tgz xcomp.tgz xetc.tgz xfont.tgz xserver.tgz
 

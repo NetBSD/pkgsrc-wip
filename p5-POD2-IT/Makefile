@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EN/ENRYS/}
 
 MAINTAINER=	leot1990@users.sourceforge.net
-HOMEPAGE=	http://pod2it.sourceforge.net/
+HOMEPAGE=	https://pod2it.sourceforge.net/
 COMMENT=	Italian translation of Perl core documentation
 LICENSE=	${PERL5_LICENSE}
 

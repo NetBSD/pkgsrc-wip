@@ -6,7 +6,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nilearn/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://nilearn.github.io
+HOMEPAGE=	https://nilearn.github.io
 COMMENT=	Statistical learning for neuroimaging in Python
 LICENSE=	modified-bsd
 

@@ -14,7 +14,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=multisync/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ola@mrEriksson.net
-HOMEPAGE=		http://multisync.sourceforge.net/
+HOMEPAGE=		https://multisync.sourceforge.net/
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

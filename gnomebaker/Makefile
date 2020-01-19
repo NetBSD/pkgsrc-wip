@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomebaker/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	leuzi@trash.net
-HOMEPAGE=	http://gnomebaker.sourceforge.net/v2/
+HOMEPAGE=	https://gnomebaker.sourceforge.net/v2/
 COMMENT=	GTK2/GNOME CD/DVD burning application
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools

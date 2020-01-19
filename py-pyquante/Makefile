@@ -7,7 +7,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyquante/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pyquante.sourceforge.net/
+HOMEPAGE=	https://pyquante.sourceforge.net/
 COMMENT=	Quantum chemistry in Python
 LICENSE=	modified-bsd
 

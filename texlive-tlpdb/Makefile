@@ -7,7 +7,7 @@ MASTER_SITES=	http://mirrors.ctan.org/systems/texlive/tlnet/tlpkg/
 EXTRACT_SUFX=	.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mirrors.ctan.org/systems/texlive/tlnet/tlpkg/
+HOMEPAGE=	https://mirrors.ctan.org/systems/texlive/tlnet/tlpkg/
 COMMENT=	TeX Live (plain text) database
 #LICENSE=	# TODO: (see mk/license.mk)
 

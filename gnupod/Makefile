@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gnupod/
+HOMEPAGE=		https://www.gnu.org/software/gnupod/
 COMMENT=		GNU iPod tools
 
 DEPENDS+=		p5-Digest-MD5>=2.36:../../security/p5-Digest-MD5

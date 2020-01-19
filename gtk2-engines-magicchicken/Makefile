@@ -7,7 +7,7 @@ CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.debian.org/debian/pool/main/g/gtk2-engines-magicchicken/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://art.gnome.org/
+HOMEPAGE=		https://art.gnome.org/
 COMMENT=		MagicChicken theme engine for GTK+ 2.x
 
 

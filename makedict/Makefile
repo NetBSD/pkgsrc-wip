@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdxf/}
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/xdxf/
+HOMEPAGE=	https://sourceforge.net/projects/xdxf/
 COMMENT=	Dictionary converting tool
 LICENSE=	gnu-gpl-v2
 

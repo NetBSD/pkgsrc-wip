@@ -6,7 +6,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	https://github.com/khenriks/mp3fs/releases/download/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://khenriks.github.io/mp3fs/
+HOMEPAGE=	https://khenriks.github.io/mp3fs/
 COMMENT=	MP3 transcoding FUSE file system
 LICENSE=	gnu-gpl-v3
 

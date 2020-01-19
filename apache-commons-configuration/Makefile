@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://www.bizdirusa.com/mirrors/apache//commons/configuration/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://commons.apache.org/configuration/
+HOMEPAGE=	https://commons.apache.org/configuration/
 COMMENT=	Java based library providing a generic configuration interface
 LICENSE=	apache-2.0
 

@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=logwatch/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://logwatch.sourceforge.net/
+HOMEPAGE=	https://logwatch.sourceforge.net/
 COMMENT=	Customizable log analysis system
 LICENSE=	mit
 

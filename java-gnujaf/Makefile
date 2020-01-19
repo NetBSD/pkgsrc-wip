@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.gnu.org/gnu/classpathx/
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ftp.gnu.org/gnu/classpathx/
+HOMEPAGE=		https://ftp.gnu.org/gnu/classpathx/
 COMMENT=		GNU Java Activation Framework
 
 

@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyevolve/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pyevolve.sourceforge.net/
+HOMEPAGE=	https://pyevolve.sourceforge.net/
 COMMENT=	Complete genetic algorithm framework written in pure python
 #LICENSE=	# TODO: (see mk/license.mk)
 

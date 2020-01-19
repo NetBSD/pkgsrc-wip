@@ -6,7 +6,7 @@ MASTER_SITES=	http://l2tpd.sourceforge.net/l2tpd.org/downloads/
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://l2tpd.sourceforge.net/
+HOMEPAGE=	https://l2tpd.sourceforge.net/
 # NOTE: "The l2tpd project is now officially inactive"
 COMMENT=	Implementation of the layer two tunneling protocol (l2tp)
 

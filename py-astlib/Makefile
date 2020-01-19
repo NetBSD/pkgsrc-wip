@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://cznic.dl.sourceforge.net/project/astlib/astlib/0.7.0/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://astlib.sourceforge.net/
+HOMEPAGE=	https://astlib.sourceforge.net/
 COMMENT=	Set of python modules for producing simple plots, statistics
 LICENSE=	gnu-lgpl-v3
 

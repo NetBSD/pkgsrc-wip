@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=model-builder/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://model-builder.sourceforge.net/
+HOMEPAGE=	https://model-builder.sourceforge.net/
 COMMENT=	Graphical ODE simulator
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib

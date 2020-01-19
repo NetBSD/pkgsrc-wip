@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://savannah.gnu.org/download/alive/
 
 MAINTAINER=	oht@users.sourceforge.net
-HOMEPAGE=	http://www.gnu.org/software/alive/
+HOMEPAGE=	https://www.gnu.org/software/alive/
 COMMENT=	Login software for Swedish Telia ADSL/Comhem cable Internet users
 LICENSE=	gnu-gpl-v2
 

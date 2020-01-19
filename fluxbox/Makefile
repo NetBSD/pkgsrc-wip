@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	mit
 
 MAINTAINER=	loki.vt@gmail.com
-HOMEPAGE=	http://fluxbox.sourceforge.net/
+HOMEPAGE=	https://fluxbox.sourceforge.net/
 COMMENT=	Window Manager for X based on Blackbox
 
 USE_LANGUAGES=	c c++

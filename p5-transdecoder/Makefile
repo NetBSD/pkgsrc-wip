@@ -15,7 +15,7 @@ GITHUB_PROJECT=	TransDecoder
 GITHUB_TAG=	TransDecoder-v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://transdecoder.github.io/
+HOMEPAGE=	https://transdecoder.github.io/
 COMMENT=	Identify candidate coding regions within transcript sequences
 LICENSE=	modified-bsd
 

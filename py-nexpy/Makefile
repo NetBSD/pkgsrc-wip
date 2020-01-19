@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=N/NeXpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://nexpy.github.io/nexpy/
+HOMEPAGE=	https://nexpy.github.io/nexpy/
 COMMENT=	Python GUI to analyze NeXus data
 LICENSE=	modified-bsd
 

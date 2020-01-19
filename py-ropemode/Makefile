@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ropemode/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://rope.sf.net/
+HOMEPAGE=	https://rope.sf.net/
 COMMENT=	Ropemode, a helper for using rope refactoring library in IDEs
 LICENSE=	gnu-gpl-v3
 

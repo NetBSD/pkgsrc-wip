@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyfdm/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pyfdm.sourceforge.net/
+HOMEPAGE=	https://pyfdm.sourceforge.net/
 COMMENT=	Framework for solving PDEs with FDM using Python
 LICENSE=	gnu-gpl-v3
 

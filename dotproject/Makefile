@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dotproject/}
 
 MAINTAINER=	hallmann@ahatec.de
-HOMEPAGE=	http://dotproject.sourceforge.net/
+HOMEPAGE=	https://dotproject.sourceforge.net/
 COMMENT=	Webserver base project management
 LICENSE=	gnu-gpl-v2
 

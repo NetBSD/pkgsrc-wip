@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=muttprint/}
 
 MAINTAINER=	mayuresh@acm.org
-HOMEPAGE=	http://muttprint.sourceforge.net/
+HOMEPAGE=	https://muttprint.sourceforge.net/
 COMMENT=	Utility to pretty print email
 LICENSE=	gnu-gpl-v1
 

@@ -7,7 +7,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyvib2/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pyvib2.sourceforge.net/
+HOMEPAGE=	https://pyvib2.sourceforge.net/
 COMMENT=	Analyzing vibrational motion and vibrational spectra
 LICENSE=	gnu-gpl-v3
 

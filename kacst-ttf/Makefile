@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://sourceforge.net/projects/arabeyes/files/kacst_fonts/
+HOMEPAGE=	https://sourceforge.net/projects/arabeyes/files/kacst_fonts/
 COMMENT=	Truetype Arabic fonts created by KACST
 LICENSE=	gnu-lgpl-v2.1
 

@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://newcontinuum.dl.sourceforge.net/project/openipmi/OpenIPMI%202.0%20Library/
 
 MAINTAINER=	noahmehl@gmail.com
-HOMEPAGE=	http://openipmi.sourceforge.net/
+HOMEPAGE=	https://openipmi.sourceforge.net/
 COMMENT=	User-level library that provides a higher-level abstraction of IPMI
 LICENSE=	gnu-lgpl-v2
 

@@ -8,7 +8,7 @@ DISTFILES=	glibc-${VERSION}${EXTRACT_SUFX} \
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/libc/libc.html
+HOMEPAGE=	https://www.gnu.org/software/libc/libc.html
 COMMENT=	GNU C library
 
 VERSION=	2.3.2

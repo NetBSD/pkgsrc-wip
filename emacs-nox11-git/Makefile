@@ -6,7 +6,7 @@ CATEGORIES=	editors
 GIT_REPO=	git://repo.or.cz/emacs.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor, no x11)
 LICENSE=	gnu-gpl-v3
 

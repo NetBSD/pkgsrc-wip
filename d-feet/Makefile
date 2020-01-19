@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/d-feet/0.1/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-gnome@gmail.com
-HOMEPAGE=	http://live.gnome.org/d-feet/
+HOMEPAGE=	https://live.gnome.org/d-feet/
 COMMENT=	D-Feet is a powerful dbus debugger
 LICENSE=	gnu-gpl-v2
 

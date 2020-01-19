@@ -3,7 +3,7 @@
 DISTNAME=	kget-${KAPPSVER}
 CATEGORIES=	net
 
-HOMEPAGE=	http://kde.org/applications/internet/kget/
+HOMEPAGE=	https://kde.org/applications/internet/kget/
 COMMENT=	download manager for KDE
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.2
 

@@ -7,7 +7,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ncl/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://ncl.sourceforge.net/
+HOMEPAGE=	https://ncl.sourceforge.net/
 COMMENT=	The NEXUS Class Library is a C++ library for parsing NEXUS files
 LICENSE=	gnu-gpl-v2 AND 2-clause-bsd
 

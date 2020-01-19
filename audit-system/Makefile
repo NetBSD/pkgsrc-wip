@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/support/security/
+HOMEPAGE=	https://www.NetBSD.org/support/security/
 COMMENT=	Check the NetBSD base OS for known vulnerabilities
 LICENSE=	2-clause-bsd
 

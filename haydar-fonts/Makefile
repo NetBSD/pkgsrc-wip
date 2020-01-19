@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://garr.dl.sourceforge.net/project/arabeyes/Fonts/haydar_fonts/
+HOMEPAGE=	https://garr.dl.sourceforge.net/project/arabeyes/Fonts/haydar_fonts/
 COMMENT=	Free X11 fonts (BDF format) for HaydarLinux
 
 WRKSRC=		${WRKDIR}/fonts

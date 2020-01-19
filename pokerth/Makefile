@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 #LICENSE=	Affero General Public License, version 3
 
 MAINTAINER=	ahoka@NetBSD.org
-HOMEPAGE=	http://pokerth.sourceforge.net/
+HOMEPAGE=	https://pokerth.sourceforge.net/
 COMMENT=	Texas Holdem poker with online play
 
 EXTRACT_USING=	gtar

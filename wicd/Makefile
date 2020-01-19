@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wicd/}
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://wicd.sourceforge.net/
+HOMEPAGE=	https://wicd.sourceforge.net/
 COMMENT=	Wired and Wireless network manager for Linux
 LICENSE=	gnu-gpl-v2
 

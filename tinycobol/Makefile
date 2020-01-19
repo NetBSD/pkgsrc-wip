@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tiny-cobol/}
 #MASTER_SITES=		http://umn.dl.sourceforge.net/sourceforge/tiny-cobol/
 
 MAINTAINER=		lrfurtado@yahoo.com.br
-HOMEPAGE=		http://tiny-cobol.sourceforge.net/
+HOMEPAGE=		https://tiny-cobol.sourceforge.net/
 COMMENT=		Tiny COBOL compiler for IA32 platforms
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 

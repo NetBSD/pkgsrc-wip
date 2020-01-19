@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ranger/}
 GITHUB_TAG=	v${RANGER_VERSION}
 
 MAINTAINER=	jake.slazenger@yandex.com
-HOMEPAGE=	http://ranger.github.io/
+HOMEPAGE=	https://ranger.github.io/
 COMMENT=	VIM-inspired filemanager for the console
 LICENSE=	gnu-gpl-v3
 

@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=moe/}
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/moe/moe.html
+HOMEPAGE=	https://www.gnu.org/software/moe/moe.html
 COMMENT=	Moe Editor - A powerful and user-friendly text editor
 LICENSE=	gnu-gpl-v2
 

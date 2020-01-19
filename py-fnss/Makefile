@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fnss/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://fnss.github.io/
+HOMEPAGE=	https://fnss.github.io/
 COMMENT=	Fast creation and configuration of topologies, traffic matrices
 LICENSE=	modified-bsd
 

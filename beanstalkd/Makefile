@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=kr/}
 DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kr.github.io/beanstalkd/
+HOMEPAGE=	https://kr.github.io/beanstalkd/
 COMMENT=	Simple, fast work queue
 LICENSE=	mit
 

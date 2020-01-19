@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libavc1394/}
 LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://sourceforge.net/projects/libavc1394/
+HOMEPAGE=		https://sourceforge.net/projects/libavc1394/
 COMMENT=		Interface for the 1394 Audio/Video Controls
 
 

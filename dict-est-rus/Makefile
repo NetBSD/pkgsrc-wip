@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/er-dict
+HOMEPAGE=	https://sourceforge.net/projects/er-dict
 COMMENT=	DICTD data for Estonian-Russian dictionary
 
 BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server

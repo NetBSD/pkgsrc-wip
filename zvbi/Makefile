@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zapping/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://zapping.sourceforge.net/Zapping/
+HOMEPAGE=		https://zapping.sourceforge.net/Zapping/
 COMMENT=		Library for accessing raw VBI sampling devices
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 

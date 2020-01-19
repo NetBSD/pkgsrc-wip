@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/c/chemeq/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://savannah.nongnu.org/projects/chemeq/
+HOMEPAGE=	https://savannah.nongnu.org/projects/chemeq/
 COMMENT=	Chemical Equation Parser and Renderer
 LICENSE=	gnu-gpl-v3
 

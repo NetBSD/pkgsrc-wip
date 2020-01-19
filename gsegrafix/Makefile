@@ -5,7 +5,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.gnu.org/gnu/gsegrafix/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.gnu.org/software/gsegrafix/
+HOMEPAGE=	https://www.gnu.org/software/gsegrafix/
 COMMENT=	GNOME canvas for creating scientific and engineering plots
 LICENSE=	gnu-gpl-v3
 

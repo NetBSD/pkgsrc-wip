@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openglut/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://OpenGLUT.sourceforge.net/
+HOMEPAGE=	https://OpenGLUT.sourceforge.net/
 COMMENT=	OpenGLUT is an open source evolution of the GLUT API
 
 USE_LIBTOOL=	yes

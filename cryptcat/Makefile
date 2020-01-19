@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cryptcat/}
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cryptcat.sourceforge.net/
+HOMEPAGE=	https://cryptcat.sourceforge.net/
 COMMENT=	Standard netcat enhanced with twofish encryption
 LICENSE=	gnu-gpl-v2
 

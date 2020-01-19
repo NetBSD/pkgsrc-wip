@@ -6,7 +6,7 @@ CATEGORIES=	misc python
 MASTER_SITES=	https://github.com/downloads/sahg/PyTOPKAPI/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://sahg.github.com/PyTOPKAPI
+HOMEPAGE=	https://sahg.github.com/PyTOPKAPI
 COMMENT=	TOPKAPI hydrological model in Python
 LICENSE=	modified-bsd
 

@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=graphql/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://facebook.github.io/graphql/
+HOMEPAGE=	https://facebook.github.io/graphql/
 COMMENT=	GraphQL query parser in C++ with C and C++ APIs
 LICENSE=	modified-bsd
 

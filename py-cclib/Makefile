@@ -7,7 +7,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cclib/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://cclib.sourceforge.net/wiki/index.php/Main_Page
+HOMEPAGE=	https://cclib.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Parsers and algorithms for computational chemistry
 LICENSE=	gnu-lgpl-v2
 

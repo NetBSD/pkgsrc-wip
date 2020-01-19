@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 SVN_REPO=	http://svn.code.sf.net/p/xmlsig/code/trunk
 
 MAINTAINER=	gianni-pkgsrc-wip@daprile.net
-HOMEPAGE=	http://sourceforge.net/projects/xmlsig/
+HOMEPAGE=	https://sourceforge.net/projects/xmlsig/
 COMMENT=	Multi-language, multi-platform implementation of XML signatures
 LICENSE=	apache-2.0
 

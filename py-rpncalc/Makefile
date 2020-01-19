@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calcrpnpy/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://calcrpnpy.sourceforge.net/
+HOMEPAGE=	https://calcrpnpy.sourceforge.net/
 COMMENT=	RPN Calculator For Python
 LICENSE=	gnu-gpl-v3
 

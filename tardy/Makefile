@@ -5,7 +5,7 @@ CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tardy/}
 
 MAINTAINER=		MarkoSchuetz@web.de
-HOMEPAGE=		http://tardy.sourceforge.net/
+HOMEPAGE=		https://tardy.sourceforge.net/
 COMMENT=		Manipulate attributes of files within tar archives
 LICENSE=		gnu-gpl-v3
 

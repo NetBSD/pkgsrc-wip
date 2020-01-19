@@ -6,7 +6,7 @@ CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=e00pg/}
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://e00pg.sourceforge.net/
+HOMEPAGE=		https://e00pg.sourceforge.net/
 COMMENT=		Converting ESRI-E00 coverages into PostgreSQL/PostGIS sql instructions
 LICENSE=		gnu-gpl-v2
 

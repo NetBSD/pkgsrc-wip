@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oorexx/}
 LICENSE=	gnu-gpl-v2 AND cpl-1.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://oorexx.sourceforge.net/
+HOMEPAGE=	https://oorexx.sourceforge.net/
 COMMENT=	Powerful typeless object-oriented scripting language
 
 CONFLICTS=	rexx-imc-[0-9]* rexx-regina-[0-9]*

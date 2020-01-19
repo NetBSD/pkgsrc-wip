@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hamopy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://srouchier.github.io/hamopy/
+HOMEPAGE=	https://srouchier.github.io/hamopy/
 COMMENT=	Heat, air and moisture transfer modelling in python
 LICENSE=	gnu-gpl-v3
 

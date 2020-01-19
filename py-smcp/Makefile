@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/smcp/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://cvxopt.github.io/smcp
+HOMEPAGE=	https://cvxopt.github.io/smcp
 COMMENT=	Python extension for solving sparse matrix cone programs
 LICENSE=	gnu-gpl-v3
 

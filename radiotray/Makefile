@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radiotray/}
 LICENSE=	gnu-gpl-v1
 
 MAINTAINER=	pouya@san-serriffe.org
-HOMEPAGE=	http://radiotray.sourceforge.net/
+HOMEPAGE=	https://radiotray.sourceforge.net/
 COMMENT=	Internet radio player with a minimal GUI
 
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.1.5:../../textproc/py-lxml

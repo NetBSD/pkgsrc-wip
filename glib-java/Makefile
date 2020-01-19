@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-java/0.4/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://java-gnome.sourceforge.net/
+HOMEPAGE=	https://java-gnome.sourceforge.net/
 COMMENT=	Glib bindings for Java
 LICENSE=	gnu-lgpl-v2.1
 

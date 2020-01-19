@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=parafly/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/parafly/
+HOMEPAGE=	https://sourceforge.net/projects/parafly/
 COMMENT=	Process the commands in parallel on a single server
 LICENSE=	modified-bsd
 

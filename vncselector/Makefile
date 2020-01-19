@@ -8,7 +8,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vncselector/}
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://vncselector.sourceforge.net/
+HOMEPAGE=		https://vncselector.sourceforge.net/
 COMMENT=		Tool for managing VNC sessions
 LICENSE=		gnu-gpl-v2
 

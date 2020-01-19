@@ -6,7 +6,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GNU:=gtypist/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gtypist/
+HOMEPAGE=		https://www.gnu.org/software/gtypist/
 COMMENT=		Universal typing tutor
 LICENSE=		gnu-gpl-v3
 

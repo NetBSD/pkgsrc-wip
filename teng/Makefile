@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=teng/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ondrej.tuma@firma.seznam.cz
-HOMEPAGE=	http://teng.sourceforge.net/
+HOMEPAGE=	https://teng.sourceforge.net/
 COMMENT=	Teng is a general purpose templating engine (whence Teng)
 LICENSE=	gnu-lgpl-v2.1
 

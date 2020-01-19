@@ -7,7 +7,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/pymmlib/pymmlib/pymmlib-1.2.0/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pymmlib.sourceforge.net/
+HOMEPAGE=	https://pymmlib.sourceforge.net/
 COMMENT=	Python Macromolecular Library
 LICENSE=	artistic
 

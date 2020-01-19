@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qico/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/qico/
+HOMEPAGE=	https://sourceforge.net/projects/qico/
 COMMENT=	FidoNet mailer
 LICENSE=	2-clause-bsd AND gnu-gpl-v2
 

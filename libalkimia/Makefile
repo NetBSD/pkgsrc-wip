@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=alkimia/5.0.0/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	gary@duzan.org
-HOMEPAGE=	http://community.kde.org/Alkimia/libalkimia
+HOMEPAGE=	https://community.kde.org/Alkimia/libalkimia
 COMMENT=	Common finance routines for kde4 applications
 LICENSE=	gnu-lgpl-v2.1
 

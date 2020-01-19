@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=kawa/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/kawa/
+HOMEPAGE=		https://www.gnu.org/software/kawa/
 COMMENT=		Scheme interpreter written in Java
 
 

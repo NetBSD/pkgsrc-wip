@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	https://github.com/SIPp/sipp/archive/
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://sipp.sourceforge.net/
+HOMEPAGE=	https://sipp.sourceforge.net/
 COMMENT=	SIPp is a free Open Source SIP test tool/traffic generator
 LICENSE=	gnu-gpl-v2
 

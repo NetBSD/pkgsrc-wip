@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/mk-configure
+HOMEPAGE=	https://sourceforge.net/projects/mk-configure
 COMMENT=	Lightweight but powerful replacement for GNU autotools
 LICENSE=	modified-bsd
 

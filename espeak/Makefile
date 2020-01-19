@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=espeak/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://espeak.sourceforge.net/
+HOMEPAGE=	https://espeak.sourceforge.net/
 COMMENT=	Speech synthesizer
 LICENSE=	gnu-gpl-v3
 

@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tgz
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jgloss.sourceforge.net/
+HOMEPAGE=		https://jgloss.sourceforge.net/
 COMMENT=		Add reading and translation annotations in a Japanese text document
 
 NO_BUILD=		yes

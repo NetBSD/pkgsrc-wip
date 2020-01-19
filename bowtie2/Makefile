@@ -12,7 +12,7 @@ GITHUB_PROJECT=	bowtie2
 GITHUB_TAG=	v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://bowtie-bio.sourceforge.net/index.shtml
+HOMEPAGE=	https://bowtie-bio.sourceforge.net/index.shtml
 COMMENT=	Ultrafast, memory-efficient short read aligner
 LICENSE=	artistic
 

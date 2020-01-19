@@ -7,7 +7,7 @@ MASTER_SITES=	https://files.pythonhosted.org/packages/a7/07/2a4845ee6025e6ba72a4
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://tmmurali.github.io/halp/
+HOMEPAGE=	https://tmmurali.github.io/halp/
 COMMENT=	Hypergraph Algorithms Package
 LICENSE=	gnu-gpl-v3
 

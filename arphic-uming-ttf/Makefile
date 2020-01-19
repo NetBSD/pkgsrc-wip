@@ -7,7 +7,7 @@ CATEGORIES=	fonts chinese
 MASTER_SITES=	http://ftp5.gwdg.de/pub/linux/archlinux/extra/os/x86_64/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/CJKUnifonts
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/CJKUnifonts
 COMMENT=	High-quality Chinese Unicode TrueType font, Mingti style
 LICENSE=	arphic-public
 

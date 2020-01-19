@@ -13,7 +13,7 @@ EXTRACT_OPTS_ZIP=	-aaqo
 
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://sourceforge.net/projects/piquant/
+HOMEPAGE=	https://sourceforge.net/projects/piquant/
 COMMENT=	Extending NumPy and SciPy to specification of numbers and arrays
 LICENSE=	modified-bsd
 

@@ -8,7 +8,7 @@ MASTER_SITES=	http://ldapdns.sourceforge.net/
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ldapdns.sourceforge.net
+HOMEPAGE=	https://ldapdns.sourceforge.net
 COMMENT=	Tiny, fast authoritative nameserver that queries LDAP
 
 USE_TOOLS+=	gmake

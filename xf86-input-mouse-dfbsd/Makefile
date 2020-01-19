@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg mouse driver
 LICENSE=	mit
 
@@ -15,21 +15,21 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
-CFLAGS.DragonFly+= -Wno-array-bounds
+CFLAGS.DragonFly+=	-Wno-array-bounds
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-SUBST_CLASSES+=                 freebsdusb 
+SUBST_CLASSES+=			freebsdusb
 SUBST_STAGE.freebsdusb=		post-extract
-SUBST_MESSAGE.freebsdusb=	Patching src/Makefile.in for DragonFly or FreeBSD compatible USB 
+SUBST_MESSAGE.freebsdusb=	Patching src/Makefile.in for DragonFly or FreeBSD compatible USB
 SUBST_FILES.freebsdusb+=	src/Makefile.in
 SUBST_SED.freebsdusb+=		-e 's|-module -avoid-version|-module -avoid-version -lusbhid|'
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-input-mouse
-PKG_SUPPORTED_OPTIONS=  debug	
-PKG_SUGGESTED_OPTIONS=  debug	
+PKG_SUPPORTED_OPTIONS=	debug
+PKG_SUGGESTED_OPTIONS=	debug
 
 .include "../../mk/bsd.options.mk"
 

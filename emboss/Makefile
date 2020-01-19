@@ -10,7 +10,7 @@ DISTFILES=	#empty
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	dprice@cs.nmsu.edu
-HOMEPAGE=	http://emboss.sourceforge.net/
+HOMEPAGE=	https://emboss.sourceforge.net/
 COMMENT=	European Molecular Biology Open Software Suite
 
 DEPENDS+=	emboss-base>=2.9.0:../../wip/emboss-base

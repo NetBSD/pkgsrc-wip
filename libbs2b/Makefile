@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bs2b/}
 EXTRACT_SUFX=	.tar.lzma
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bs2b.sourceforge.net/
+HOMEPAGE=	https://bs2b.sourceforge.net/
 COMMENT=	Bauer stereophonic-to-binaural DSP
 LICENSE=	mit
 

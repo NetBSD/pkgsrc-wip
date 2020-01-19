@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pypol/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypol.sourceforge.net/
+HOMEPAGE=	https://pypol.sourceforge.net/
 COMMENT=	Python module to manage monomials and polynomials
 LICENSE=	mit
 

@@ -7,7 +7,7 @@ CATEGORIES=	chat audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin-festival/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pidgin-festival.sourceforge.net/
+HOMEPAGE=	https://pidgin-festival.sourceforge.net/
 COMMENT=	Pidgin plugin that interfaces with festival
 LICENSE=	gnu-gpl-v2
 

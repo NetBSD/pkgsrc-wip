@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://people.gnome.org/~ryanl/src/
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://people.gnome.org/~ryanl/src/
+HOMEPAGE=	https://people.gnome.org/~ryanl/src/
 COMMENT=	GVariant is a new datatype in glib that stores complex values
 LICENSE=	gnu-gpl-v3
 

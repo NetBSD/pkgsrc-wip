@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=umix/}
 
 MAINTAINER=	cez@compsoc.man.ac.uk
-HOMEPAGE=	http://umix.sourceforge.net/
+HOMEPAGE=	https://umix.sourceforge.net/
 COMMENT=	Adjust mix levels
 LICENSE=	gnu-gpl-v2
 

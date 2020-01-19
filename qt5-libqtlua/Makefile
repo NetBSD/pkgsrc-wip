@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://download.savannah.gnu.org/releases/libqtlua/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/libqtlua/
+HOMEPAGE=	https://www.nongnu.org/libqtlua/
 COMMENT=	Lua alternative to the Qt5Script module
 LICENSE=	gnu-gpl-v3 OR gnu-lgpl-v3
 

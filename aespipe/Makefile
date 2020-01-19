@@ -8,7 +8,7 @@ MASTER_SITES=		http://loop-aes.sourceforge.net/aespipe/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		evaldo@gardenali.biz
-HOMEPAGE=		http://loop-aes.sourceforge.net/aespipe/
+HOMEPAGE=		https://loop-aes.sourceforge.net/aespipe/
 COMMENT=		AES encryption pipe from the loop-aes project
 
 

@@ -6,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ionize/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://lewisamarshall.github.io/ionize/
+HOMEPAGE=	https://lewisamarshall.github.io/ionize/
 COMMENT=	Package for calculating electrolyte properties.
 LICENSE=	gnu-gpl-v2
 

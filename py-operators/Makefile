@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyoperators/}
 #LICENSE=	CeCILL-B
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pchanial.github.com/pyoperators/
+HOMEPAGE=	https://pchanial.github.com/pyoperators/
 COMMENT=	Operators and solvers for high-performance computing
 
 DEPENDS+=	${PYPKGPREFIX}-numexpr-[0-9]*:../../math/py-numexpr

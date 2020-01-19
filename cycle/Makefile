@@ -9,19 +9,19 @@ NO_BUILD=	yes
 LICENSE=	gnu-gpl-v2 # or later
 
 MAINTAINER=	ckoeni@gmail.com
-HOMEPAGE=	http://cycle.sourceforge.net/
+HOMEPAGE=	https://cycle.sourceforge.net/
 COMMENT=	Cycle is a fertility calendar program for women
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-wxWidgets
 REPLACE_PYTHON=	cycle.py
 
 INSTALLATION_DIRS=	lib/cycle lib/cycle/bitmaps \
-	lib/cycle/icons lib/cycle/icons/large lib/cycle/icons/mini \
-	lib/cycle/msg lib/cycle/msg/ca/LC_MESSAGES \
-	lib/cycle/msg/cs/LC_MESSAGES lib/cycle/msg/de/LC_MESSAGES \
-	lib/cycle/msg/es/LC_MESSAGES lib/cycle/msg/gl/LC_MESSAGES \
-	lib/cycle/msg/ru/LC_MESSAGES lib/cycle/msg/sk/LC_MESSAGES \
-	bin ${PKGMANDIR}/man1	# XXX man quick fix
+			lib/cycle/icons lib/cycle/icons/large lib/cycle/icons/mini \
+			lib/cycle/msg lib/cycle/msg/ca/LC_MESSAGES \
+			lib/cycle/msg/cs/LC_MESSAGES lib/cycle/msg/de/LC_MESSAGES \
+			lib/cycle/msg/es/LC_MESSAGES lib/cycle/msg/gl/LC_MESSAGES \
+			lib/cycle/msg/ru/LC_MESSAGES lib/cycle/msg/sk/LC_MESSAGES \
+			bin ${PKGMANDIR}/man1	# XXX man quick fix
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/cycle.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/

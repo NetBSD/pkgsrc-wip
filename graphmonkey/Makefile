@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphmonkey/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://graphmonkey.sourceforge.net/
+HOMEPAGE=	https://graphmonkey.sourceforge.net/
 COMMENT=	GTK\#-based graphing calculator
 LICENSE=	gnu-gpl-v2
 

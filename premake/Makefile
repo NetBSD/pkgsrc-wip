@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=premake/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://premake.sourceforge.net/
+HOMEPAGE=		https://premake.sourceforge.net/
 COMMENT=		Build script generator
 LICENSE=		gnu-gpl-v2
 

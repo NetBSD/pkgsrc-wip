@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/bakery/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bakery.sourceforge.net/
+HOMEPAGE=	https://bakery.sourceforge.net/
 COMMENT=	C++ Framework for creating GNOME applications using gtkmm
 LICENSE=	gnu-lgpl-v2
 

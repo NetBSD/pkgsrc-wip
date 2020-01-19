@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=felt/}
 #DISTFILES=		felt-3.07.src.tar.gz felt-3.07.ps.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://felt.sourceforge.net/
+HOMEPAGE=		https://felt.sourceforge.net/
 COMMENT=		Free system for introductory level finite element analysis
 LICENSE=		gnu-gpl-v2
 

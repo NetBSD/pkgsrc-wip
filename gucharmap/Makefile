@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/10.0/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/Gucharmap
+HOMEPAGE=	https://live.gnome.org/Gucharmap
 COMMENT=	Unicode/ISO10646 character map and font viewer
 LICENSE=	gnu-gpl-v3 AND unicode
 
@@ -18,10 +18,10 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 UNICODE_DISTFILES= \
 	Blocks.txt \
 	DerivedAge.txt \
-        NamesList.txt \
-        Scripts.txt \
-        UnicodeData.txt \
-        Unihan.zip
+	NamesList.txt \
+	Scripts.txt \
+	UnicodeData.txt \
+	Unihan.zip
 
 .for ud in ${UNICODE_DISTFILES}
 DISTFILES+=		${ud}

@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DeaDBeeF-Player/}
 
 MAINTAINER=	dieter.NetBSD@pandora.be
-HOMEPAGE=	http://deadbeef.sourceforge.net/
+HOMEPAGE=	https://deadbeef.sourceforge.net/
 COMMENT=	Modular music player
 LICENSE=	gnu-gpl-v2
 

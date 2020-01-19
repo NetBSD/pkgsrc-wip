@@ -3,7 +3,7 @@
 DISTNAME=	khelpcenter-${KAPPSVER}
 CATEGORIES=	misc
 
-HOMEPAGE=	http://kde.org/applications/utilities/kcalc/
+HOMEPAGE=	https://kde.org/applications/utilities/kcalc/
 COMMENT=	Application to show KDE Applications' documentation
 LICENSE=	gnu-gpl-v2
 

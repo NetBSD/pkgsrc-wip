@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bch@methodlogic.net
-HOMEPAGE=	http://mpg123.sourceforge.net/
+HOMEPAGE=	https://mpg123.sourceforge.net/
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 

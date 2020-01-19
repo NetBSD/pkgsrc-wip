@@ -5,7 +5,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	http://xmpp4r.github.io/
+HOMEPAGE=	https://xmpp4r.github.io/
 COMMENT=	XMPP/Jabber library for Ruby
 LICENSE=	ruby-license
 

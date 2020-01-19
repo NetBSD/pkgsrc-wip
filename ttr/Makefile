@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ttr/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ttr.sourceforge.net/
+HOMEPAGE=		https://ttr.sourceforge.net/
 COMMENT=		Text Text Revolution
 LICENSE=		gnu-gpl-v2
 

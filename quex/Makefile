@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quex/DOWNLOAD/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://quex.sourceforge.net/
+HOMEPAGE=	https://quex.sourceforge.net/
 COMMENT=	Lexical analyzer generator
 LICENSE=	gnu-lgpl-v2.1
 

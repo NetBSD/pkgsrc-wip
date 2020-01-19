@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CosmoloPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://roban.github.com/CosmoloPy/
+HOMEPAGE=	https://roban.github.com/CosmoloPy/
 COMMENT=	Python for Cosmology
 LICENSE=	mit
 

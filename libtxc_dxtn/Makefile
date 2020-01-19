@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://people.freedesktop.org/~cbrill/libtxc_dxtn/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://people.freedesktop.org/~cbrill/libtxc_dxtn/
+HOMEPAGE=	https://people.freedesktop.org/~cbrill/libtxc_dxtn/
 COMMENT=	S3 texture compression support for MesaLib
 LICENSE=	mit
 

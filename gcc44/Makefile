@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sbd@NetBSD.org
-HOMEPAGE=		http://gcc.gnu.org/
+HOMEPAGE=		https://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection 4.4
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 

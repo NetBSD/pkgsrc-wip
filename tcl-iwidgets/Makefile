@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=incrtcl/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://incrtcl.sourceforge.net/iwidgets
+HOMEPAGE=	https://incrtcl.sourceforge.net/iwidgets
 COMMENT=	Object-oriented mega-widget set which extends Tcl/Tk
 LICENSE=	2-clause-bsd # ?
 

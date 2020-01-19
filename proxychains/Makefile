@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		haad@netbsd.org
-HOMEPAGE=		http://haad.github.com/proxychains/
+HOMEPAGE=		https://haad.github.com/proxychains/
 COMMENT=		Chain multiple proxies in a transparent way
 
 # pkgsrc is not currently able to fetch distfiles from https web servers

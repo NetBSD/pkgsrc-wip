@@ -7,7 +7,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=movix/eMoviX/0.9/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://movix.sourceforge.net/
+HOMEPAGE=	https://movix.sourceforge.net/
 COMMENT=	Tiny GNU/Linux distribution that plays video files when booted
 LICENSE=	gnu-gpl-v2
 

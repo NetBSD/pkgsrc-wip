@@ -6,7 +6,7 @@ CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/binutils/
+HOMEPAGE=	https://www.gnu.org/software/binutils/
 COMMENT=	GNU binutils for win32/64 cross-development
 LICENSE=	gnu-gpl-v3
 

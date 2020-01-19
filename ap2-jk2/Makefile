@@ -9,7 +9,7 @@ MASTER_SITES=	https://archive.apache.org/dist/tomcat/tomcat-connectors/jk2/sourc
 LICENSE=	apache-2.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tomcat.apache.org/
+HOMEPAGE=	https://tomcat.apache.org/
 COMMENT=	Apache2 JK2 module for connecting to Tomcat using AJP1X
 
 

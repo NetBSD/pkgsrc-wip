@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ptns/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	david@netbsd-fr.org
-HOMEPAGE=	http://ptns.sourceforge.net
+HOMEPAGE=	https://ptns.sourceforge.net
 COMMENT=	Perl TetriNET Server
 
 DEPENDS+=	p5-Config-IniFiles>=2.20:../../devel/p5-Config-IniFiles

@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tleenx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tleenx.sourceforge.net/
+HOMEPAGE=	https://tleenx.sourceforge.net/
 COMMENT=	Client to tlen.pl - polish IM / chat system
 LICENSE=	gnu-gpl-v2
 

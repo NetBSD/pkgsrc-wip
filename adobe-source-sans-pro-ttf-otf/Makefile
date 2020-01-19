@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sourcesans.adobe/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/sourcesans.adobe/
+HOMEPAGE=	https://sourceforge.net/projects/sourcesans.adobe/
 COMMENT=	Adobe Source Sans Pro TTF fonts
 LICENSE=	ofl-v1.1
 

@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcsx-df/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pcsx-df.sourceforge.net/
+HOMEPAGE=	https://pcsx-df.sourceforge.net/
 COMMENT=	Playstation 1 emulator optimized for Open Source Unix systems
 LICENSE=	gnu-gpl-v2
 

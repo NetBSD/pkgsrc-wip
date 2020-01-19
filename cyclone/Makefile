@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=justinethier/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://justinethier.github.io/cyclone/
+HOMEPAGE=	https://justinethier.github.io/cyclone/
 COMMENT=	Scheme-to-C compiler
 LICENSE=	mit
 

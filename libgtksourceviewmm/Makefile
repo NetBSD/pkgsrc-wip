@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgtksourceviewmm/0.3/}
 
 MAINTAINER=	makoto@ki.nu
-HOMEPAGE=	http://projects.gnome.org/gtksourceviewmm/
+HOMEPAGE=	https://projects.gnome.org/gtksourceviewmm/
 COMMENT=	C++ API for gtksourceview
 LICENSE=	gnu-gpl-v2
 

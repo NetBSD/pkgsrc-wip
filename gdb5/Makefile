@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
+HOMEPAGE=	https://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 
 # This (ancient) version of gdb does not understand or has never heard of

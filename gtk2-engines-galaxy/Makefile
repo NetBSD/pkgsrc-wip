@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=teams/art.gnome.org/archive/themes/gtk2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://art.gnome.org/
+HOMEPAGE=	https://art.gnome.org/
 COMMENT=	Another theme engine for GTK+ 2.x
 LICENSE=	gnu-gpl-v2
 

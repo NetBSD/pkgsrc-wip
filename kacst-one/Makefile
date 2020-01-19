@@ -7,7 +7,7 @@ MASTER_SITES=	http://garr.dl.sourceforge.net/project/arabeyes/kacst_fonts/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://sourceforge.net/projects/arabeyes/files/kacst_fonts/
+HOMEPAGE=	https://sourceforge.net/projects/arabeyes/files/kacst_fonts/
 COMMENT=	TrueType font designed for Arabic language
 LICENSE=	gnu-gpl-v2
 

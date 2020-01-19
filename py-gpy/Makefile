@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/a6/d8/de80ebdc3e88da66512b3ad1b7b4655ba82300ce77beab9a0c479d9c24d1/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://sheffieldml.github.com/GPy/
+HOMEPAGE=	https://sheffieldml.github.com/GPy/
 COMMENT=	The Gaussian Process Toolbox
 LICENSE=	2-clause-bsd
 

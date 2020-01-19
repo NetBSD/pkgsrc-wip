@@ -7,7 +7,7 @@ CATEGORIES=		comms
 MASTER_SITES=		http://bluez.sourceforge.net/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://bluez.sourceforge.net/
+HOMEPAGE=		https://bluez.sourceforge.net/
 COMMENT=		BlueZ helpers for Gnome
 # AND? OR?
 #LICENSE=		gnu-gpl-v2 gnu-lgpl-v2.1

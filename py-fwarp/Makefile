@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fwrap/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://fwrap.sourceforge.net/
+HOMEPAGE=	https://fwrap.sourceforge.net/
 COMMENT=	Tool to wrap Fortran 77/90/95 code in C, Cython & Python
 LICENSE=	modified-bsd
 

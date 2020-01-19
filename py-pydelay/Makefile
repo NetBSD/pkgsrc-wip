@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pydelay/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pydelay.sourceforge.net/
+HOMEPAGE=	https://pydelay.sourceforge.net/
 COMMENT=	Translates a system of delay differential equations (DDEs)
 LICENSE=	mit
 

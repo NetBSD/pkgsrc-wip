@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://apache.multihomed.net//commons/io/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://commons.apache.org/io/
+HOMEPAGE=	https://commons.apache.org/io/
 COMMENT=	Common useful IO related classes
 LICENSE=	apache-2.0
 

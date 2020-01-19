@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNU:=xnee/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/xnee/
+HOMEPAGE=	https://www.gnu.org/software/xnee/
 COMMENT=	Record, replay, and distribute user actions under X11
 LICENSE=	gnu-gpl-v3
 

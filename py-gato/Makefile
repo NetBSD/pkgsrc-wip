@@ -6,7 +6,7 @@ CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/Gato/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://gato.sf.net/
+HOMEPAGE=	https://gato.sf.net/
 COMMENT=	Python-based toolbox to visualise algorithms on graphs
 LICENSE=	gnu-gpl-v2
 

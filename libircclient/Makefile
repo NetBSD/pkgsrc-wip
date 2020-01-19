@@ -5,7 +5,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libircclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/libircclient/
+HOMEPAGE=	https://sourceforge.net/projects/libircclient/
 COMMENT=	Library which implements client-server IRC protocol
 LICENSE=	gnu-lgpl-v2
 

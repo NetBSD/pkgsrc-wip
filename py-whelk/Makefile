@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whelk/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://seveas.github.io/whelk/
+HOMEPAGE=	https://seveas.github.io/whelk/
 COMMENT=	Pretending python is a shell
 LICENSE=	zlib
 

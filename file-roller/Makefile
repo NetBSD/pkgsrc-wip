@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/file-roller/3.${GNOME3_MAJOR_VERSION
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fileroller.sourceforge.net/
+HOMEPAGE=	https://fileroller.sourceforge.net/
 COMMENT=	Front-end to archiving programs like tar and zip
 LICENSE=	gnu-gpl-v2
 

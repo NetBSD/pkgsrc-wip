@@ -7,7 +7,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://savannah.nongnu.org/download/xmakemol/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.nongnu.org/xmakemol/
+HOMEPAGE=	https://www.nongnu.org/xmakemol/
 COMMENT=	Program for visualizing atomic and molecular systems
 LICENSE=	gnu-gpl-v2
 

@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freesynd/freesynd/freesynd-0.7.5/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://freesynd.sourceforge.net/
+HOMEPAGE=	https://freesynd.sourceforge.net/
 COMMENT=	GPLed reimplementation of the engine for the game Syndicate
 LICENSE=	gnu-gpl-v2
 

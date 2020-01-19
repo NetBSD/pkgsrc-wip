@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tktable/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://tktable.sourceforge.net/tile/
+HOMEPAGE=	https://tktable.sourceforge.net/tile/
 COMMENT=	Improved themeing engine for Tk
 LICENSE=	mit
 

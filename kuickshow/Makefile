@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=extragear/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://extragear.kde.org/
+HOMEPAGE=	https://extragear.kde.org/
 COMMENT=	Very fast and comfortable imageviewer (KDE4)
 LICENSE=	gnu-gpl-v2
 

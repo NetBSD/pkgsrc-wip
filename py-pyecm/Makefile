@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyecm/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pyecm.sourceforge.net/
+HOMEPAGE=	https://pyecm.sourceforge.net/
 COMMENT=	Integer factorization with the Elliptic Curve Method (ECM)
 LICENSE=	gnu-gpl-v2
 

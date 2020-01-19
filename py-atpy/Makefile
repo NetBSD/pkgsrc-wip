@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://cloud.github.com/downloads/atpy/atpy/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://atpy.github.com/
+HOMEPAGE=	https://atpy.github.com/
 COMMENT=	Astronomical Tables in Python
 LICENSE=	mit
 

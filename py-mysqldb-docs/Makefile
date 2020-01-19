@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 #LICENSE	GPL or the original license based on Python 1.5.2's license. (at the time python's license is CNRI)
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/mysql-python
+HOMEPAGE=	https://sourceforge.net/projects/mysql-python
 COMMENT=	HTML documentation for MySQL interface for Python
 
 NO_BUILD=	yes

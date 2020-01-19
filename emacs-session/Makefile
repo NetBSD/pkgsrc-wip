@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=${PKGBASE}/}
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://emacs-session.sourceforge.net/
+HOMEPAGE=	https://emacs-session.sourceforge.net/
 COMMENT=	Session Management for Emacs
 LICENSE=	gnu-gpl-v2
 

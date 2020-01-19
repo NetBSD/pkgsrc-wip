@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gaphas/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://gaphor.sourceforge.net/
+HOMEPAGE=	https://gaphor.sourceforge.net/
 COMMENT=	Gaphas is a GTK+ based diagramming widget
 LICENSE=	gnu-lgpl-v2
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nfs/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://sourceforge.net/projects/nfs/
+HOMEPAGE=	https://sourceforge.net/projects/nfs/
 COMMENT=	Linux NFS client and server utilities
 
 

@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://archive.apache.org/dist/commons/lang/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://commons.apache.org/lang/
+HOMEPAGE=	https://commons.apache.org/lang/
 COMMENT=	Extension of the java.lang package
 LICENSE=	apache-2.0
 

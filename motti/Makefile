@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://ftp.gnu.org/gnu/motti/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.gnu.org/software/motti/
+HOMEPAGE=	https://www.gnu.org/software/motti/
 COMMENT=	GNU motti is a simple multiplayer strategy game
 LICENSE=	gnu-gpl-v3
 

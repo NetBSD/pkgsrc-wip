@@ -8,7 +8,7 @@ ABI=		32
 PKGNAME=	compat${ABI}_${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://expat.sourceforge.net/
+HOMEPAGE=	https://expat.sourceforge.net/
 COMMENT=	XML parser library written in C
 LICENSE=	mit
 

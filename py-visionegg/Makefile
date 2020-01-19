@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=visionegg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://visionegg.sourceforge.net/
+HOMEPAGE=	https://visionegg.sourceforge.net/
 COMMENT=	Visual stimulus creation and control in Python
 LICENSE=	gnu-lgpl-v2.1
 

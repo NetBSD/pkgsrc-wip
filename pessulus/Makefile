@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pessulus/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://live.gnome.org/Pessulus
+HOMEPAGE=	https://live.gnome.org/Pessulus
 COMMENT=	Pessulus is a lockdown editor for GNOME
 LICENSE=	gnu-gpl-v2
 

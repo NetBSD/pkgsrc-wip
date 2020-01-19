@@ -10,7 +10,7 @@ CATEGORIES=		cross lang
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/
+HOMEPAGE=		https://www.gnu.org/
 COMMENT=		Unified GNU binutils for cross build environments
 LICENSE=		gnu-gpl-v3 AND gnu-lgpl-v3
 

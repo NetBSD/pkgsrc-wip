@@ -9,7 +9,7 @@ DISTFILES=	# empty
 LICENSE=	apache-2.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://apr.apache.org/
+HOMEPAGE=	https://apr.apache.org/
 COMMENT=	Libtool replacement from the apache APR, written in C
 
 NO_CONFIGURE=		yes

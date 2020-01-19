@@ -7,7 +7,7 @@ MASTER_SITES=	https://gitlab.com/Dringgstein/Commander-Genius/-/archive/v${PKGVE
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://clonekeenplus.sourceforge.net/
+HOMEPAGE=	https://clonekeenplus.sourceforge.net/
 COMMENT=	The ultimate Commander Keen interpreter
 LICENSE=	gnu-gpl-v2
 

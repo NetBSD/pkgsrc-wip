@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://launchpad.net/dreampie/trunk/1.1/+download/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://dreampie.sourceforge.net/
+HOMEPAGE=	https://dreampie.sourceforge.net/
 COMMENT=	Advanced graphical interactive Python shell
 LICENSE=	gnu-gpl-v3
 

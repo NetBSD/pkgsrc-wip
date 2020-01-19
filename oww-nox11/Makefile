@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oww/}
 
 MAINTAINER=	pettai@nordu.net
-HOMEPAGE=	http://oww.sourceforge.net/
+HOMEPAGE=	https://oww.sourceforge.net/
 COMMENT=	One-wire weather
 
 

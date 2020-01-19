@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs devel
 MASTER_SITES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://aegis.sourceforge.net/
+HOMEPAGE=	https://aegis.sourceforge.net/
 COMMENT=	Infrastructure meta-package to develop on Aegis
 
 META_PACKAGE=		yes

@@ -5,7 +5,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=obmenu/}
 
 MAINTAINER=	ccatrian@eml.cc
-HOMEPAGE=	http://obmenu.sourceforge.net/
+HOMEPAGE=	https://obmenu.sourceforge.net/
 COMMENT=	Openbox menu editor
 LICENSE=	gnu-gpl-v2
 

@@ -9,7 +9,7 @@ MASTER_SITES=	http://downloads.sourceforge.net/project/digitizer/Engauge%20Digit
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	slitvinov@gmail.com
-HOMEPAGE=	http://digitizer.sourceforge.net/
+HOMEPAGE=	https://digitizer.sourceforge.net/
 COMMENT=	Converts an image file with graph or map into numbers
 LICENSE=	gnu-gpl-v2
 

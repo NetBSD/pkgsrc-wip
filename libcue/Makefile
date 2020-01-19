@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcue/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ishit@users.sourceforge.net
-HOMEPAGE=	http://libcue.sourceforge.net/
+HOMEPAGE=	https://libcue.sourceforge.net/
 COMMENT=	Library to access a cue sheet data
 LICENSE=	modified-bsd OR gnu-gpl-v2
 

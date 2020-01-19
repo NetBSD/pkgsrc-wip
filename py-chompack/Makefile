@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chompack/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://cvxopt.github.io/chompack/
+HOMEPAGE=	https://cvxopt.github.io/chompack/
 COMMENT=	Library for chordal matrix computations
 LICENSE=	gnu-gpl-v3
 

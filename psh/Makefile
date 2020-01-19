@@ -9,7 +9,7 @@ GITHUB_TAG=	psh-${PKGVERSION_NOREV}
 DIST_SUBDIR=	psh
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gnp.github.io/psh/
+HOMEPAGE=	https://gnp.github.io/psh/
 COMMENT=	Perl Shell
 LICENSE=	${PERL5_LICENSE}
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=assimp/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	cfkoch@edgebsd.org
-HOMEPAGE=	http://assimp.sourceforge.net/
+HOMEPAGE=	https://assimp.sourceforge.net/
 COMMENT=	Library to import various 3D model formats
 LICENSE=	modified-bsd
 

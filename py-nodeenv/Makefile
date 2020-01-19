@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nodeenv/}
 
 MAINTAINER=	iku.iwasa@gmail.com
-HOMEPAGE=	http://ekalinin.github.io/nodeenv/
+HOMEPAGE=	https://ekalinin.github.io/nodeenv/
 COMMENT=	Node.js virtual environment
 LICENSE=	modified-bsd
 

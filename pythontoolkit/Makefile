@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pythontoolkit/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pythontoolkit.sourceforge.net/
+HOMEPAGE=	https://pythontoolkit.sourceforge.net/
 COMMENT=	PythonToolkit (PTK) an interactive python environment
 LICENSE=	2-clause-bsd
 

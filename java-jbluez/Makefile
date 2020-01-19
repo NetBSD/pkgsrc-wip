@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jbluez/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jbluez.sourceforge.net/
+HOMEPAGE=		https://jbluez.sourceforge.net/
 COMMENT=		Java interface for BlueZ stack
 
 USE_TOOLS=	gmake

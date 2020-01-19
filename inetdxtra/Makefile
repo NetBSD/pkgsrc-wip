@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=inetdxtra/}
 
 MAINTAINER=		hauke@NetBSD.org
-HOMEPAGE=		http://inetdxtra.sourceforge.net/
+HOMEPAGE=		https://inetdxtra.sourceforge.net/
 COMMENT=		Collection of inetd based servers
 
 LICENSE=		gnu-gpl-v2

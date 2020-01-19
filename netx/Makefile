@@ -9,7 +9,7 @@ VERSION=	0.5
 LICENSE=	gnu-lgpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jnlp.sourceforge.net/netx/
+HOMEPAGE=	https://jnlp.sourceforge.net/netx/
 COMMENT=	Free JNLP implementation
 
 NO_BUILD=	yes

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=naihe2010/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://naihe2010.github.io/apvlv/
+HOMEPAGE=	https://naihe2010.github.io/apvlv/
 COMMENT=	PDF/DJVU/UMD/TXT Viewer which behaves like Vim
 LICENSE=	gnu-gpl-v2
 

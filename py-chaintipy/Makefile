@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=C/ChiantiPy/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://sourceforge.net/projects/chiantipy
+HOMEPAGE=	https://sourceforge.net/projects/chiantipy
 COMMENT=	CHIANTI atomic database for astrophysical spectroscopy
 LICENSE=	gnu-gpl-v2
 

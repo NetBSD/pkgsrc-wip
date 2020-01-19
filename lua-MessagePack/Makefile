@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}/1}
 CATEGORIES=	devel
 MASTER_SITES=	-https://github.com/fperrad/lua-MessagePack/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
-HOMEPAGE=	http://fperrad.github.io/lua-MessagePack
+HOMEPAGE=	https://fperrad.github.io/lua-MessagePack
 COMMENT=	MessagePack library for Lua
 LICENSE=	mit
 

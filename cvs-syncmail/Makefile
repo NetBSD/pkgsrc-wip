@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cvs-syncmail/}
 EXTRACT_SUFX=		# empty
 
 MAINTAINER=		roland.illig@gmx.de
-HOMEPAGE=		http://sourceforge.net/projects/cvs-syncmail/
+HOMEPAGE=		https://sourceforge.net/projects/cvs-syncmail/
 COMMENT=		Automatically send cvs commit messages via mail
 
 WRKSRC=			${WRKDIR}

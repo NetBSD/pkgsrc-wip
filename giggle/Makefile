@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/giggle/0.5/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	netbsd@guigui2.net
-HOMEPAGE=	http://live.gnome.org/giggle
+HOMEPAGE=	https://live.gnome.org/giggle
 COMMENT=	GTK2 graphical frontend to git SCM tool
 LICENSE=	gnu-gpl-v2
 

@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyfixedpoint/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pyfixedpoint.sourceforge.net/
+HOMEPAGE=	https://pyfixedpoint.sourceforge.net/
 COMMENT=	Tools for arithmetic on fixed-point (binary) numbers
 LICENSE=	python-software-foundation
 

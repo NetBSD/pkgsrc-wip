@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fnorb/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fnorb.sourceforge.net/
+HOMEPAGE=		https://fnorb.sourceforge.net/
 COMMENT=		Documentation for py-Fnorb in HTML format
 
 NO_CONFIGURE=	yes

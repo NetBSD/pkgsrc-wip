@@ -5,7 +5,7 @@ CATEGORIES=	devel
 GIT_REPO=	https://github.com/kaz-utashiro/sdif
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kaz-utashiro.github.io/sdif/
+HOMEPAGE=	https://kaz-utashiro.github.io/sdif/
 COMMENT=	Side-by-side diff viewer (for ANSI color terminal)
 LICENSE=	mit
 

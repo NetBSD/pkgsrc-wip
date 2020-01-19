@@ -5,7 +5,7 @@ DISTNAME=	ibest-ARC-v1.1.4-beta-0-g3831cb8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibest/ARC/tarball/master/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ibest.github.io/ARC/
+HOMEPAGE=	https://ibest.github.io/ARC/
 COMMENT=	Genomics pipeline for de novo assemblies
 LICENSE=	apache-2.0
 

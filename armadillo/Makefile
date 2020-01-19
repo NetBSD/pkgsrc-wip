@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arma/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/arma/
+HOMEPAGE=	https://sourceforge.net/projects/arma/
 COMMENT=	C++ linear algebra library
 LICENSE=	mpl-2.0
 

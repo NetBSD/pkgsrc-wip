@@ -109,7 +109,7 @@ DISTFILES=	GKT2-Quantumcurve.tar.gz \
 		GTK2-yglacier.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://art.gnome.org/
+HOMEPAGE=		https://art.gnome.org/
 COMMENT=		Art for your GTK+ 2.x desktop
 
 # TODO: buildlinks?

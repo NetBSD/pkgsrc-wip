@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/3.12/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/Mousetweaks/Home
+HOMEPAGE=	https://live.gnome.org/Mousetweaks/Home
 COMMENT=	Mouse accessibility software
 LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.3
 

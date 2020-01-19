@@ -6,7 +6,7 @@ MASTER_SITES=	http://downloads.sourceforge.net/project/lmod/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://downloads.sourceforge.net/project/lmod/
+HOMEPAGE=	https://downloads.sourceforge.net/project/lmod/
 COMMENT=	Dynamic modification of a user's environment
 LICENSE=	mit
 

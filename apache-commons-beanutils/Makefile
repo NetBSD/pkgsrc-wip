@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://archive.apache.org/dist/commons/beanutils/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://commons.apache.org/beanutils/
+HOMEPAGE=	https://commons.apache.org/beanutils/
 COMMENT=	Utility for manipulating JavaBeans
 LICENSE=	apache-2.0
 

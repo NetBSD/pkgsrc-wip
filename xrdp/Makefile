@@ -5,7 +5,7 @@ CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xrdp/}
 
 MAINTAINER=		mwilhelmy@users.sourceforge.net
-HOMEPAGE=		http://xrdp.sourceforge.net/
+HOMEPAGE=		https://xrdp.sourceforge.net/
 COMMENT=		Remote Desktop Protocol server
 LICENSE=		gnu-gpl-v2
 

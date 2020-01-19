@@ -8,7 +8,7 @@ MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/libbtctl/0.6/
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://live.gnome.org/GnomeBluetooth
+HOMEPAGE=		https://live.gnome.org/GnomeBluetooth
 COMMENT=		GObject Bluetooth controller
 
 

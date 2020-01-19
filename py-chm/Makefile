@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnochm/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://gnochm.sourceforge.net/
+HOMEPAGE=	https://gnochm.sourceforge.net/
 COMMENT=	Python bindings for the CHMLIB library
 
 PYDISTUTILSPKG=		yes

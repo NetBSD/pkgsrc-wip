@@ -7,7 +7,7 @@ CATEGORIES=	databases  java
 MASTER_SITES=	http://mirror.cloudera.com/apache//commons/dbcp/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://commons.apache.org/dbcp/
+HOMEPAGE=	https://commons.apache.org/dbcp/
 COMMENT=	Database Connection Pooling Services
 LICENSE=	apache-2.0
 

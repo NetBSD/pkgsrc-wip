@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=preload/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://preload.sourceforge.net/
+HOMEPAGE=	https://preload.sourceforge.net/
 COMMENT=	Adaptive readahead daemon
 LICENSE=	gnu-gpl-v2
 

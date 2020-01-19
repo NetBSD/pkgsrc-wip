@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-python/
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://telepathy.freedesktop.org/releases/telepathy-python/
+HOMEPAGE=	https://telepathy.freedesktop.org/releases/telepathy-python/
 COMMENT=	Python bindings for the Telepathy framework
 LICENSE=	gnu-lgpl-v2.1
 

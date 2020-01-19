@@ -7,7 +7,7 @@ CATEGORIES=	local
 MASTER_SITES=	http://download.sourceforge.net/volnorm/
 
 MAINTAINER=	izaac@setec.org
-HOMEPAGE=	http://volnorm.sourceforge.net/index.html
+HOMEPAGE=	https://volnorm.sourceforge.net/index.html
 COMMENT=	Volumne normalizer for XMMS
 LICENSE=	gnu-gpl-v2
 

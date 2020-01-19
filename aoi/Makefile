@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aoi/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		jfranz@bsdprojects.net
-HOMEPAGE=		http://aoi.sourceforge.net/
+HOMEPAGE=		https://aoi.sourceforge.net/
 COMMENT=		Open source 3D modelling and rendering studio based on Java
 LICENSE=		gnu-gpl-v2
 

@@ -7,7 +7,7 @@ CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sabnzbdplus/sabnzbdplus/}${DISTVERSION}/
 
 MAINTAINER=	wongk@apt.homeunix.net
-HOMEPAGE=	http://sabnzbdplus.sourceforge.net/
+HOMEPAGE=	https://sabnzbdplus.sourceforge.net/
 COMMENT=	Web-interface based binary newsgrabber in python, with nzb support
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd AND mit
 

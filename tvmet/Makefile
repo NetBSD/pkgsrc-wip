@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tvmet/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://tvmet.sourceforge.net/
+HOMEPAGE=	https://tvmet.sourceforge.net/
 COMMENT=	Tiny Vector and Matrix template library
 LICENSE=	gnu-lgpl-v2.1
 

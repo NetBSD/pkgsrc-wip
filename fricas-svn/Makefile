@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		asau@inbox.ru
-HOMEPAGE=		http://fricas.sourceforge.net/
+HOMEPAGE=		https://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
 LICENSE=		modified-bsd
 

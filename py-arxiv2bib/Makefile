@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=a/arxiv2bib/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://nathan11g.github.com/arxiv2bib
+HOMEPAGE=	https://nathan11g.github.com/arxiv2bib
 COMMENT=	Get arXiv.org metadata in BibTeX format
 LICENSE=	2-clause-bsd
 

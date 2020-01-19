@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.scattpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://scattpy.github.com/
+HOMEPAGE=	https://scattpy.github.com/
 COMMENT=	Light Scattering methods for Python
 LICENSE=	modified-bsd
 

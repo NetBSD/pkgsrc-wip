@@ -5,7 +5,7 @@ CATEGORIES=		cross
 MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nongnu.org/avrdude/
+HOMEPAGE=		https://www.nongnu.org/avrdude/
 COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2
 

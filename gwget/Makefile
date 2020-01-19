@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gwget/1.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://projects.gnome.org/gwget/
+HOMEPAGE=	https://projects.gnome.org/gwget/
 COMMENT=	GNOME wget front-end
 LICENSE=	gnu-gpl-v2
 

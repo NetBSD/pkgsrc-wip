@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 DISTFILES=		# See download.mk
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/grub/
+HOMEPAGE=		https://www.gnu.org/software/grub/
 COMMENT=		GRand Unified Bootloader, version 2 (development snapshot)
 LICENSE=		gnu-gpl-v3
 

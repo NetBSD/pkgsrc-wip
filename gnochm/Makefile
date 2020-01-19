@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnochm/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gnochm.sourceforge.net/
+HOMEPAGE=	https://gnochm.sourceforge.net/
 COMMENT=	CHM file viewer for Gnome2
 
 DEPENDS+=	${PYPKGPREFIX}-chm>=0.8.4:../../wip/py-chm

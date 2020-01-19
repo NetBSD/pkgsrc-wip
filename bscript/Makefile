@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bscript/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://bscript.sourceforge.net/
+HOMEPAGE=		https://bscript.sourceforge.net/
 COMMENT=		Portable, fast, lightweight BASIC interpreter
 LICENSE=		gnu-gpl-v2
 

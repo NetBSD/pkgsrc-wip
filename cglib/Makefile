@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cglib/}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cglib.sourceforge.net/
+HOMEPAGE=	https://cglib.sourceforge.net/
 COMMENT=	Code generation library for Java
 LICENSE=	apache-2.0
 

@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lives/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lives.sourceforge.net/
+HOMEPAGE=	https://lives.sourceforge.net/
 COMMENT=	Linux Video Editing System
 LICENSE=	gnu-gpl-v3
 
@@ -28,7 +28,7 @@ REPLACE_PERL+=	build-lives-rfx-plugin-multi build-lives-rfx-plugin \
 		tools/autolives.pl \
 		smogrify \
 		lives-plugins/plugins/encoders/encodedv_encoder \
-		lives-plugins/plugins/encoders/ffmpeg_encoder  \
+		lives-plugins/plugins/encoders/ffmpeg_encoder \
 		lives-plugins/plugins/encoders/mencoder_encoder \
 		lives-plugins/plugins/encoders/qtutils_encoder \
 		lives-plugins/plugins/encoders/mjpegtools_encoder \

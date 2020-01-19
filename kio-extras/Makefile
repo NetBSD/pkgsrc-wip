@@ -3,7 +3,7 @@
 DISTNAME=	kio-extras-${KAPPSVER}
 CATEGORIES=	misc
 
-HOMEPAGE=	http://kde.org/applications/internet/
+HOMEPAGE=	https://kde.org/applications/internet/
 COMMENT=	Additional components to increase the functionality of KIO
 LICENSE=	gnu-gpl-v2
 

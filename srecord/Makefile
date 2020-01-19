@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://srecord.sourceforge.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://srecord.sourceforge.net/
+HOMEPAGE=	https://srecord.sourceforge.net/
 COMMENT=	Manipulate EPROM load files
 LICENSE=	gnu-gpl-v3
 

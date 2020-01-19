@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mmm-mode/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mmm-mode.sourceforge.net/
+HOMEPAGE=		https://mmm-mode.sourceforge.net/
 COMMENT=		Multiple Major Modes for emacs
 
 USE_TOOLS+=		makeinfo

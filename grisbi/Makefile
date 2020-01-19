@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://grisbi.sourceforge.net/
+HOMEPAGE=	https://grisbi.sourceforge.net/
 COMMENT=	Personal Finance Manager under Gnome/GTK
 
 GNU_CONFIGURE=	yes

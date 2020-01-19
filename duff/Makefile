@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=duff/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	http://duff.sourceforge.net/
+HOMEPAGE=	https://duff.sourceforge.net/
 COMMENT=	Quickly finds duplicates in a given set of files
 LICENSE=	zlib
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg wsdisplay framebuffer video driver
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
@@ -25,27 +25,27 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-video-wsfb
 PKG_SUPPORTED_OPTIONS=
 PKG_SUGGESTED_OPTIONS=
 
-PKG_SUPPORTED_OPTIONS+= ramdac_xsrc_netbsd
-PKG_SUPPORTED_OPTIONS+= hwcursor_xsrc_netbsd
-PKG_SUPPORTED_OPTIONS+= luna68k_xsrc_netbsd
-PKG_SUPPORTED_OPTIONS+= bgra_xsrc_netbsd
-PKG_SUPPORTED_OPTIONS+= wildcat_xsrc_netbsd
-PKG_SUPPORTED_OPTIONS+= modesetting_fb_xsrc_netbsd
-PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	ramdac_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	hwcursor_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	luna68k_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	bgra_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	wildcat_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	modesetting_fb_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	strict_xsrc_netbsd
 
 # As of 2019-01-30 core ramdac code and ramdac drivers
 # removed from xorg server
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= ramdac_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	ramdac_xsrc_netbsd
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= hwcursor_xsrc_netbsd
-PKG_SUGGESTED_OPTIONS+= luna68k_xsrc_netbsd
-PKG_SUGGESTED_OPTIONS+= bgra_xsrc_netbsd
-PKG_SUGGESTED_OPTIONS+= wildcat_xsrc_netbsd
-PKG_SUGGESTED_OPTIONS+= modesetting_fb_xsrc_netbsd
-PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	hwcursor_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	luna68k_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	bgra_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	wildcat_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	modesetting_fb_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	strict_xsrc_netbsd
 .endif
 
 .include "../../mk/bsd.options.mk"

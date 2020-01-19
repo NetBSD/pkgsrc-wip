@@ -5,7 +5,7 @@ CATEGORIES=		graphics x11
 MASTER_SITES=		http://cgit.freedesktop.org/piglit
 
 MAINTAINER=		tnn@NetBSD.org
-HOMEPAGE=		http://piglit.freedesktop.org/
+HOMEPAGE=		https://piglit.freedesktop.org/
 COMMENT=		OpenGL driver testing framework
 #LICENSE=		mostly 2-clause-bsd but some GPL
 

@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spectralpython/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://spectralpython.sourceforge.net/
+HOMEPAGE=	https://spectralpython.sourceforge.net/
 COMMENT=	Python module for hyperspectral image processing
 LICENSE=	gnu-gpl-v3
 

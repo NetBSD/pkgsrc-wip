@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/lightdm/1.3/1.3.3/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/LightDM
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/LightDM
 COMMENT=	Light cross-desktop display manager
 LICENSE=	gnu-gpl-v3
 

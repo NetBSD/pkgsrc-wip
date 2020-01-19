@@ -8,7 +8,7 @@ GITHUB_PROJECT=	libvips
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	base@atomicules.co.uk
-HOMEPAGE=	http://jcupitt.github.io/libvips/
+HOMEPAGE=	https://jcupitt.github.io/libvips/
 COMMENT=	Libvips is a demand-driven, horizontally threaded image processing lib
 LICENSE=	gnu-lgpl-v2.1
 

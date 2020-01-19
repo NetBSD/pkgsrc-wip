@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnomad2/}
 
 MAINTAINER=		ku3@sl.aanet.ru
-HOMEPAGE=		http://gnomad2.sourceforge.net/
+HOMEPAGE=		https://gnomad2.sourceforge.net/
 COMMENT=		GTK+2 tool for managing Creative and Dell mp3 players
 LICENSE=		gnu-gpl-v2
 

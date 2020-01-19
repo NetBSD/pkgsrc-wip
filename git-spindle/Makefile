@@ -5,7 +5,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/git-spindle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://seveas.github.io/git-spindle
+HOMEPAGE=	https://seveas.github.io/git-spindle
 COMMENT=	Command-line interface to GitHub and other central git services
 LICENSE=	gnu-gpl-v3
 

@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tagtool/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	netbsd@guigui2.net
-HOMEPAGE=	http://tagtool.sourceforge.net/
+HOMEPAGE=	https://tagtool.sourceforge.net/
 COMMENT=	GTK-based Ogg Vorbis and MP3 file tagger
 LICENSE=	gnu-gpl-v2
 

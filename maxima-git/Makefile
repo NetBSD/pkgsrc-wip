@@ -8,7 +8,7 @@ CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://maxima.sourceforge.net/
+HOMEPAGE=		https://maxima.sourceforge.net/
 COMMENT=		Computer algebra system
 LICENSE=		gnu-gpl-v2
 

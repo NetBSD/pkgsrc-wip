@@ -5,7 +5,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://profanity-im.github.io/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://profanity-im.github.io/
+HOMEPAGE=	https://profanity-im.github.io/
 COMMENT=	Console based XMPP client inspired by irssi
 LICENSE=	gnu-gpl-v3
 

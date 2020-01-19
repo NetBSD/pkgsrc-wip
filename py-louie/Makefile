@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=L/Louie/}
 
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://11craft.github.com/louie/
+HOMEPAGE=	https://11craft.github.com/louie/
 COMMENT=	Python signal dispatching mechanism
 LICENSE=	modified-bsd
 

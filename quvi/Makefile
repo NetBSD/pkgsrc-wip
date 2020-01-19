@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quvi/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://quvi.sourceforge.net/
+HOMEPAGE=	https://quvi.sourceforge.net/
 COMMENT=	Command line tool for parsing video links
 LICENSE=	gnu-lgpl-v2.1
 

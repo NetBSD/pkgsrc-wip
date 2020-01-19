@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=x42/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://x42.github.io/libltc/
+HOMEPAGE=	https://x42.github.io/libltc/
 COMMENT=	POSIX-C Library for handling Linear/Logitudinal Time Code (LTC)
 LICENSE=	gnu-lgpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libecc/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://libecc.sourceforge.net/
+HOMEPAGE=	https://libecc.sourceforge.net/
 COMMENT=	C++ elliptic curve library
 LICENSE=	gnu-gpl-v2
 

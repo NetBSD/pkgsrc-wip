@@ -8,7 +8,7 @@ CATEGORIES=	x11 gnustep
 MASTER_SITES=	ftp://ftp.it.debian.org/debian/pool/main/t/terminal.app/
 
 MAINTAINER=	metaridley@mchsi.com
-HOMEPAGE=	http://www.nongnu.org/backbone/apps.html
+HOMEPAGE=	https://www.nongnu.org/backbone/apps.html
 COMMENT=	GNUstep terminal emulator
 LICENSE=	gnu-gpl-v2
 

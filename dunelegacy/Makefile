@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dunelegacy/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://dunelegacy.sourceforge.net/
+HOMEPAGE=		https://dunelegacy.sourceforge.net/
 COMMENT=		Open source Dune 2 clone
 LICENSE=		gnu-gpl-v2
 

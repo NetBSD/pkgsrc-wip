@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://gerris.dalembert.upmc.fr/gerris/
 
 MAINTAINER=	slitvinov@gmail.com
-HOMEPAGE=	http://gfs.sourceforge.net/wiki/index.php/Main_Page
+HOMEPAGE=	https://gfs.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Software the solution of the PDE describing fluid flow
 WRKSRC=		${WRKDIR}/gerris-snapshot-${SNAPDATE}
 LICENSE=	gnu-gpl-v3
