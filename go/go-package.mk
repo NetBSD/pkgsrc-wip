@@ -53,12 +53,12 @@
 
 .include "../../lang/go/version.mk"
 
-_GO_DIST_BASE!=		basename ${GO_SRCPATH}
-GO_DIST_BASE?=		${_GO_DIST_BASE}
-
 .if !empty(GO_MODULE:M[Yy][Ee][Ss])
 GO_BUILD_PATTERN?=	...
 .else
+_GO_DIST_BASE!=		basename ${GO_SRCPATH}
+GO_DIST_BASE?=		${_GO_DIST_BASE}
+
 GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
 .endif
@@ -75,7 +75,8 @@ PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
 .if !empty(GO_MODULE:M[Yy][Ee][Ss])
-MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.gopath/pkg/mod/
+MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath
+# GOPROXY=file://${WRKDIR}/.gopath/pkg/mod/cache/download
 .else
 MAKE_ENV+=	GO111MODULE=off GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg 
 .endif
@@ -107,8 +108,9 @@ do-install:
 .if !empty(GO_MODULE:M[Yy][Ee][Ss])
 .PHONY: show-go-modules
 show-go-modules:
-	cd ${WRKSRC} && ${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
-	cd ${WRKDIR}/.gopath/pkg/mod && ${RUN} ${FIND} . | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
+	# cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} env
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
+	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 .endif
 
 _VARGROUPS+=		go
