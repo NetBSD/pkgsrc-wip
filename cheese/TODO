@@ -1,4 +1,0 @@
-Missing schemas, crashes at runtime from it.
-
-(cheese:11865): GLib-GIO-ERROR **: Settings schema 'org.gnome.Cheese' is not installed
-
