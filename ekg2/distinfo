@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.16 2013/11/27 15:36:48 shindenmorr Exp $
-
-SHA1 (ekg2-0.3.1.tar.gz) = 8b6f53086e8e1d2890fdc1ec274a7b1615da0fa1
-RMD160 (ekg2-0.3.1.tar.gz) = 5e06cfc855aa8a5266c166a59ed21174be454a74
-Size (ekg2-0.3.1.tar.gz) = 1704772 bytes
-SHA1 (patch-aa) = 62b23a53e5426eec4e9120458cfb4dbb267dfc23
-SHA1 (patch-ekg_Makefile.in) = bfcfeba39b32487fec53cdcea1b08a6f2a8f302e
-SHA1 (patch-plugins_gg_pubdir50.c) = 5e79e70a87d8fe6173072f1821bdabac818a99a7

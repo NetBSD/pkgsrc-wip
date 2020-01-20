@@ -1,6 +1,0 @@
-EKG2 is an open source IM client for Unix systems (Linux, *BSD,
-SunOS, Solaris, MacOS, X, BeOS). The source code is protected by
-the GPL.
-
-The program supports plugins, which make it possible to support
-many different protocols.
