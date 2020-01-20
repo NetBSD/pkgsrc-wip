@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (visidata-1.5.2.tar.gz) = 67ae888ef6f7a385bb5f8bf2bd446252ba9959e8
+RMD160 (visidata-1.5.2.tar.gz) = fa08b1d1434f1624bbe0789cd5725c0bff20c407
+SHA512 (visidata-1.5.2.tar.gz) = df236bb74909b3d0bbff012d20b01546ca9058038877a12e94fd2274d7b6465e68c0b652e37776e0b693916070c7185a773d54ead291c996bbb32625897bd4df
+Size (visidata-1.5.2.tar.gz) = 123785 bytes
+SHA1 (patch-visidata_vdtui.py) = 714357a9b384329b8527f0d98a469e04afa8303d

@@ -4926,6 +4926,7 @@ SUBDIR+=	virtualjaguar-git
 SUBDIR+=	virus
 SUBDIR+=	vis
 SUBDIR+=	vis-editor
+SUBDIR+=	visidata
 SUBDIR+=	vista-fonts
 SUBDIR+=	vkeybd
 SUBDIR+=	vlevel
