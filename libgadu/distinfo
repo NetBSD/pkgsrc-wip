@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2015/07/05 13:03:29 krytarowski Exp $
-
-SHA1 (libgadu-1.12.1.tar.gz) = 6ecf7ca5213d6af74e636b67a1fdb92479096bb1
-RMD160 (libgadu-1.12.1.tar.gz) = 8e4b8d1b5ca63df2d25010c632645aa9c3ef6530
-Size (libgadu-1.12.1.tar.gz) = 296079 bytes

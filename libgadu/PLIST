@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/15 22:16:03 shindenmorr Exp $
-include/libgadu.h
-lib/libgadu.la
-lib/pkgconfig/libgadu.pc

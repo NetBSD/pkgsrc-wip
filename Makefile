@@ -1856,7 +1856,6 @@ SUBDIR+=	libfolks
 SUBDIR+=	libfplll
 SUBDIR+=	libftdi1
 SUBDIR+=	libgabe
-SUBDIR+=	libgadu
 SUBDIR+=	libgda-bdb
 SUBDIR+=	libgda-ldap
 SUBDIR+=	libgda-mdb
