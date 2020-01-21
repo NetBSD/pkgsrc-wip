@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (patch-configure.ac) = d81aef4ac06a8b7f6e29bfea3638365e13132526
+SHA1 (patch-keama_confparse.c) = c7eeaba29e6917e4d81586e4b4049da4f8be3bc7
+SHA1 (patch-keama_eval.c) = 992cdbefee4c57e74ca4053851bd7db7f475068d
+SHA1 (patch-keama_keama.c) = e687a64b12eb2f5c38a4ed7e9a3fca89972b3eee
+SHA1 (patch-keama_print.c) = dbd9a0697525467d9b5c5be2ce0bbb86495b3472
+SHA1 (patch-keama_reduce.c) = 941ad90699b1190341e6001f3250c3fc0d19ceb3

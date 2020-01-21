@@ -1,0 +1,15 @@
+$NetBSD$
+
+* gethostname is guaranteed to be in libnsl on solaris and derivates
+
+--- configure.ac.orig	2020-01-18 20:15:59.996202788 +0000
++++ configure.ac
+@@ -605,7 +605,7 @@ AC_CHECK_HEADERS(sys/socket.h net/if_dl.
+ 
+ # Solaris needs some libraries for functions
+ AC_SEARCH_LIBS(socket, [socket])
+-AC_SEARCH_LIBS(inet_ntoa, [nsl])
++AC_SEARCH_LIBS(gethostbyname, [nsl])
+ 
+ AC_SEARCH_LIBS(inet_aton, [socket nsl], ,
+ 	AC_DEFINE([NEED_INET_ATON], [1],
