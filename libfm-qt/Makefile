@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+CMAKE_PREFIX_PATH+=	${QTDIR}
+
 INSTALLATION_DIRS+=	lib
 
 pre-configure:
