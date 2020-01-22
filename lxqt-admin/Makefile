@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+CHECK_PORTABILITY_SKIP=	yes
+
 INSTALLATION_DIRS+=	bin
 
 pre-configure:
