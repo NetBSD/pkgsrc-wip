@@ -254,7 +254,6 @@ SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	bip
 SUBDIR+=	bitkeeper
-SUBDIR+=	bitlbee
 SUBDIR+=	bkchem
 SUBDIR+=	blad
 SUBDIR+=	blas
