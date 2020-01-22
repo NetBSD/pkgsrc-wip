@@ -497,7 +497,6 @@ SUBDIR+=	cpm
 SUBDIR+=	cpqarrayd
 SUBDIR+=	cpuminer-multi
 SUBDIR+=	crabemu
-SUBDIR+=	crawl-stone-soup
 SUBDIR+=	creal
 SUBDIR+=	cream
 SUBDIR+=	creduce-git
