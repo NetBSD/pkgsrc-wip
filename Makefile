@@ -816,7 +816,6 @@ SUBDIR+=	filevercmp
 SUBDIR+=	findcrcs
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
-SUBDIR+=	firefox
 SUBDIR+=	firefox-hg
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firefox69-2019Q4
