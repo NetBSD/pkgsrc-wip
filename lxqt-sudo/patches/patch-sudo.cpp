@@ -1,6 +1,6 @@
 $NetBSD$
 
-Make it possible to build on NetBSD
+sudo.cpp: Make pty header conditional depending on linux
 
 --- sudo.cpp.orig	2019-02-23 23:40:30.000000000 +0000
 +++ sudo.cpp
@@ -8,12 +8,12 @@ Make it possible to build on NetBSD
  #include <QThread>
  #include <QProcessEnvironment>
  #include <QTimer>
-+#if defined(__NetBSD__)
++#if defined(__Linux__)
+ #include <pty.h>
++#else
 +#include <errno.h>
 +#include <termios.h>
 +#include <util.h>
-+#else
- #include <pty.h>
 +#endif
  #include <unistd.h>
  #include <memory>
