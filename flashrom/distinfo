@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2016/12/22 21:07:17 joerg Exp $
-
-SHA1 (flashrom-0.9.9.tar.bz2) = f083c61dcfcb1c794d5238a479cb42aca33558cd
-RMD160 (flashrom-0.9.9.tar.bz2) = 1dc23e946bfcd0381068a36c3c7d0fdd6f676e21
-SHA512 (flashrom-0.9.9.tar.bz2) = 155445ce7acab97f91596aad704aa2211da1c3f71fb463fc65c621dfea41e44b5de7db801c5b5cfc37450e8a8cfed5b202553715d999710422c830a0c38ae153
-Size (flashrom-0.9.9.tar.bz2) = 495199 bytes
-SHA1 (patch-hwaccess.c) = 666c0266eaf94782ba8ce033b599f975a103932b
-SHA1 (patch-platform.h) = efefdfcaa9e893c65b3b7e01b26a599d5c28a8df

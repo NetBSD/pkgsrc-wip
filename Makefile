@@ -822,7 +822,6 @@ SUBDIR+=	firefox69-2019Q4
 SUBDIR+=	firehose
 SUBDIR+=	flam3-svn
 SUBDIR+=	flang-git
-SUBDIR+=	flashrom
 SUBDIR+=	flasm
 SUBDIR+=	flexdock
 SUBDIR+=	flexdump
