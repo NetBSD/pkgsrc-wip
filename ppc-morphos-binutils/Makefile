@@ -19,9 +19,11 @@ USE_TOOLS+=		xzcat gtar patch
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
+GNU_CONFIGURE_PREFIX=	${PREFIX}/gg
 CONFIGURE_ARGS+=	--target=ppc-morphos
 CONFIGURE_ARGS+=	--enable-plugins=no
 CONFIGURE_ARGS+=	--disable-initfini-array
+CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	CFLAGS="${CFLAGS} -DMORPHOS_TARGET"
 
 post-extract:
