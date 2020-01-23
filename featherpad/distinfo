@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (FeatherPad-V0.12.0.tar.gz) = b0bd8ba27ae7a8111b0a848c782f3d5c1d875d3e
+RMD160 (FeatherPad-V0.12.0.tar.gz) = 80c8454a0766f502b8fb4778b452dc9ab8304c9a
+SHA512 (FeatherPad-V0.12.0.tar.gz) = ce02a75e62723bb7d8bec345c352fae18b917bcce39c667b870f70f025740c428e8b34387c00710cb4979238930575f87809d54d70ef30ce131801526fcb998d
+Size (FeatherPad-V0.12.0.tar.gz) = 774318 bytes
+SHA1 (patch-featherpad_x11.h) = 137904f26e6c0ec8711a369a3f6d141374232bd4
