@@ -2474,6 +2474,7 @@ SUBDIR+=	openbsc
 SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
 SUBDIR+=	opencascade
+SUBDIR+=	opencl-headers
 SUBDIR+=	openclonk
 SUBDIR+=	opendchub
 SUBDIR+=	opendune
