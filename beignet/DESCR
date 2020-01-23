@@ -1,0 +1,5 @@
+Beignet is an open source implementation of the OpenCL specification - a generic
+compute oriented API. This code base contains the code to run OpenCL programs on
+Intel GPUs which basically defines and implements the OpenCL host functions
+required to initialize the device, create the command queues, the kernels and
+the programs and run them on the GPU.

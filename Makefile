@@ -241,6 +241,7 @@ SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
 SUBDIR+=	bedtools2
+SUBDIR+=	beignet
 SUBDIR+=	belle-sip
 SUBDIR+=	bertini
 SUBDIR+=	bfgminer
