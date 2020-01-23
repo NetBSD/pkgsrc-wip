@@ -25,4 +25,4 @@ SHA1 (patch-exports+Makefile) = 10d84c9d04bcb8cc88374dabc60016c9c25feb70
 SHA1 (patch-f_check) = 9162d6a31f96c6af5aada82f6e78cf0385384215
 SHA1 (patch-getarch.c) = 3d0ea5b989c6402d9e2f03a6cc2de848f06ca16d
 SHA1 (patch-interface__ztrmv.c) = 6038946f8fb9542e680178ece2bd0d0d5853baad
-SHA1 (patch-utest_Makefile) = f6347c95c7da3b7d4488cbfb7001b367b042a421
+SHA1 (patch-utest_Makefile) = e6f816dfd5b905db93a1a963d86ae3afbeed81d3

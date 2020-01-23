@@ -1,5 +1,7 @@
 $NetBSD$
 
+Limit regression tests to working configs
+
 --- utest/Makefile.orig	2020-01-08 19:47:09.730906975 +0000
 +++ utest/Makefile
 @@ -16,8 +16,12 @@ OBJS=utest_main.o test_amax.o test_rotmg
