@@ -1,6 +1,6 @@
 $NetBSD$
 
-Include NetBSD xlib.h
+Allow building on NetBSD
 
 --- featherpad/x11.h.orig	2019-12-26 23:10:16.000000000 +0000
 +++ featherpad/x11.h
