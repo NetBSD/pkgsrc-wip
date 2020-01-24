@@ -6,7 +6,6 @@ SHA512 (kea-1.6.1.tar.gz) = 4220f46fc185f4434ad01886d2d43ba1f9dcca57f5afa33235c8
 Size (kea-1.6.1.tar.gz) = 7155604 bytes
 SHA1 (patch-Makefile.am) = 4e4896be44290114160be878666878bb44d71a8e
 SHA1 (patch-configure.ac) = 70d7a8235ed6459a23f5404303d5babfdfec14db
-SHA1 (patch-m4macros_ax__gtest.m4) = 079952701633cf6761deb54dc74527aa429dbb11
 SHA1 (patch-src_bin_agent_agent__lexer.ll) = de64c9ad03b1c6812f95f52c8fcd5f6c1aa1ef27
 SHA1 (patch-src_bin_d2_d2__lexer.ll) = 400b9f54b5bb9c9eb9c52c1ef23c9a377f29960e
 SHA1 (patch-src_bin_dhcp4_dhcp4__lexer.ll) = dfcca8319ca3b6b8902676bb1662ceb9abca74bc
