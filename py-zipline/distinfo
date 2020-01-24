@@ -4,3 +4,6 @@ SHA1 (zipline-1.2.0.tar.gz) = 22ddbd436a90a7d82eeef873948b17bb92a7e14c
 RMD160 (zipline-1.2.0.tar.gz) = 866b8ec00545efa9db85ad8a5a4c4af036646e91
 SHA512 (zipline-1.2.0.tar.gz) = 435646dbdb0eda6954fc8dcaeced3fe29b3a3eeb54735aabd769cf827b49e227e6b7fb6f14cae89456274d9106db643beb6ffcff69c5aa7af77a2d77e69e1e44
 Size (zipline-1.2.0.tar.gz) = 659617 bytes
+SHA1 (patch-zipline_assets_asset__writer.py) = 7d83ce61414a41eb53c2dc08cc08b27d7de0e7d0
+SHA1 (patch-zipline_assets_assets.py) = cbe5412b797206e0c55e2b0b2afab7e7c731c4ed
+SHA1 (patch-zipline_testing_core.py) = f499e381370422fa9b75214b94d629b5d4ee5aaa
