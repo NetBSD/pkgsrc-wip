@@ -13,8 +13,6 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-alembic>=0.7.7:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-bcolz>=0.12.1:../../devel/py-bcolz
 DEPENDS+=	${PYPKGPREFIX}-click>=4.0.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-contextlib2>=0.4.0:../../devel/py-contextlib2
-DEPENDS+=	${PYPKGPREFIX}-cyordereddict>=0.2.2:../../devel/py-cyordereddict
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-empyrical>=0.2.2:../../finance/py-empyrical
@@ -38,6 +36,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0.8:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.6.1:../../math/py-statsmodels
 DEPENDS+=	${PYPKGPREFIX}-tables>=3.3.0:../../math/py-tables
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.22.1
 .include "../../devel/py-cython/buildlink3.mk"
