@@ -5,7 +5,7 @@ CATEGORIES=		emulators
 GIT_REPO=		git://git.savannah.nongnu.org/simulavr.git
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nongnu.org/simulavr/
+HOMEPAGE=		https://www.nongnu.org/simulavr/
 COMMENT=		Simulator for Atmel AVR microcontrollers
 LICENSE=		gnu-gpl-v2
 

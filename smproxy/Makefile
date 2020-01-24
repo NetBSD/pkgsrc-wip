@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	metaridley@mchsi.com
-HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/app/
+HOMEPAGE=	https://xorg.freedesktop.org/releases/individual/app/
 COMMENT=	Proxy to allow non-XSMP apps to be managed by xsm
 
 

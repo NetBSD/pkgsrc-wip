@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=recutils/}
 
 MAINTAINER=	esg@sdf.org
-HOMEPAGE=	http://www.gnu.org/software/recutils/
+HOMEPAGE=	https://www.gnu.org/software/recutils/
 COMMENT=	Tools and libraries to access plain text databases
 LICENSE=	gnu-gpl-v3
 

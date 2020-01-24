@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.freedesktop.org/software/accountsservice/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/software/accountsservice/
+HOMEPAGE=	https://www.freedesktop.org/software/accountsservice/
 COMMENT=	Set of D-Bus interfaces for accessing account information
 LICENSE=	gnu-gpl-v3
 

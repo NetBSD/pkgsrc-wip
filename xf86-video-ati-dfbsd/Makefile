@@ -24,7 +24,7 @@ EXTRACT_SUFX=	.tar.xz
 # EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ATI Radeon video driver
 LICENSE=	mit AND x11
 

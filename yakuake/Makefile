@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.berlios.de/yakuake/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	drjumba@bigmir.net
-HOMEPAGE=	http://extragear.kde.org/apps/yakuake/
+HOMEPAGE=	https://extragear.kde.org/apps/yakuake/
 COMMENT=	Drop-down terminal emulator based on KDE Konsole technology
 LICENSE=	gnu-gpl-v2
 

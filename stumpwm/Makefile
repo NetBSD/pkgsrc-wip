@@ -10,7 +10,7 @@ DISTFILES=		${DISTNAME}.tgz
 SITES.${DISTNAME}.tgz=	http://download.savannah.nongnu.org/releases/stumpwm/
 
 MAINTAINER=		jfranz@bsdprojects.net
-HOMEPAGE=		http://www.nongnu.org/stumpwm/
+HOMEPAGE=		https://www.nongnu.org/stumpwm/
 COMMENT=		Tiling, keyboard driven X11 Window Manager written in Common Lisp
 LICENSE=		gnu-gpl-v2
 

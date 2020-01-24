@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-bluetooth/3.7/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/GnomeBluetooth
+HOMEPAGE=	https://live.gnome.org/GnomeBluetooth
 COMMENT=	Fork of bluez-gnome focused on integration with GNOME
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

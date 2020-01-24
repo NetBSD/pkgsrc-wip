@@ -4,7 +4,7 @@ DISTNAME=	blockenspiel-0.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dazuma.github.io/blockenspiel/
+HOMEPAGE=	https://dazuma.github.io/blockenspiel/
 COMMENT=	Library to create DSL blocks
 LICENSE=	modified-bsd
 

@@ -4,7 +4,7 @@ DISTNAME=	taskwarrior-web-1.1.12
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://theunraveler.github.io/taskwarrior-web/
+HOMEPAGE=	https://theunraveler.github.io/taskwarrior-web/
 COMMENT=	Lightweight web interface for Taskwarrior
 LICENSE=	mit
 

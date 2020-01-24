@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gcc.gnu.org/
+HOMEPAGE=	https://gcc.gnu.org/
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=		mingw-w64-binutils-[0-9]*:../../wip/mingw-w64-binutils

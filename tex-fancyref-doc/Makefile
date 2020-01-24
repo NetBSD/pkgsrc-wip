@@ -5,7 +5,7 @@ PKGNAME=	tex-${DISTNAME:S/./-/}-0.9c
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fancyref
+HOMEPAGE=	https://ctan.org/pkg/fancyref
 COMMENT=	Documentation for tex-fancyref
 LICENSE=	gnu-gpl-v2
 

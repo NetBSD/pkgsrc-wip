@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_APACHE:=xerces/c/2/sources/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xerces.apache.org/xerces-c/
+HOMEPAGE=	https://xerces.apache.org/xerces-c/
 COMMENT=	Validating C++ XML parser with DOM and SAX support
 LICENSE=	apache-2.0
 

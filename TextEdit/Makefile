@@ -8,7 +8,7 @@ CATEGORIES=	editors gnustep
 MASTER_SITES=	http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/t/textedit.app/
 
 MAINTAINER=	metaridley@mchsi.com
-HOMEPAGE=	http://www.nongnu.org/backbone/apps.html
+HOMEPAGE=	https://www.nongnu.org/backbone/apps.html
 COMMENT=	GNUstep text editor
 
 WRKSRC=		${WRKDIR}/textedit-4.0

@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/driver/
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Synaptics touchpad driver for X.Org
 LICENSE=	mit
 
