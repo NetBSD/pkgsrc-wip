@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.121 2019/05/05 22:49:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.128 2020/01/24 15:54:48 jaapb Exp $
 #
 
-DISTNAME=	coq-8.10+beta1
+DISTNAME=	coq-8.11+beta1
 CATEGORIES=	lang math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coq/}
 GITHUB_TAG=	V${PKGVERSION_NOREV:S/_/+/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://coq.inria.fr/
+HOMEPAGE=	https://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 LICENSE=	gnu-lgpl-v2.1
 
@@ -28,20 +28,20 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/ocaml.mk"
 
-PLIST_VARS+=	native
+PLIST_VARS+=		native
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-COQIDE_TYPE=	opt
-PLIST.native=	yes
+COQIDE_TYPE=		opt
+PLIST.native=		yes
 CONFIGURE_ARGS+=	-native-compiler yes
 UNLIMIT_RESOURCES+=	stacksize # compilation of some files needs this
-BUILD_TARGET=	world
+BUILD_TARGET=		world
 .else
-COQIDE_TYPE=	byte
+COQIDE_TYPE=		byte
 CONFIGURE_ARGS+=	-native-compiler no
-BUILD_TARGET=	byte
-INSTALL_TARGET=	install-byte
+BUILD_TARGET=		byte
+INSTALL_TARGET=		install-byte
 .endif
-PLIST_SUBST+=	COQIDE_TYPE=${COQIDE_TYPE}
+PLIST_SUBST+=		COQIDE_TYPE=${COQIDE_TYPE}
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
@@ -55,14 +55,14 @@ PLIST.natdynlink=	yes
 
 .include "../../lang/python/pyversion.mk"
 
-REPLACE_SH=	configure install.sh
+REPLACE_SH=		configure install.sh
 REPLACE_INTERPRETER=	python
-REPLACE.python.old=	python
+REPLACE.python.old=	python3
 REPLACE.python.new=	${PYTHONBIN}
 REPLACE_FILES.python=	tools/TimeFileMaker.py \
-	tools/make-both-single-timing-files.py \
-	tools/make-both-time-files.py \
-	tools/make-one-time-file.py
+			tools/make-both-single-timing-files.py \
+			tools/make-both-time-files.py \
+			tools/make-one-time-file.py
 
 INSTALL_ENV+=	COQINSTALLPREFIX=${DESTDIR}
 
@@ -73,11 +73,11 @@ PLIST_VARS+=		coqide natdynlink doc
 EGDIR=		${PREFIX}/share/coq/examples
 #CONF_FILES=	{EGDIR}/coqide-gtk2rc ${PKG_SYSCONFDIR}/xdg/coq/coqide-gtk2rc
 
-SUBST_CLASSES+=	fix-paths
-SUBST_STAGE.fix-paths=	post-configure
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		post-configure
 SUBST_MESSAGE.fix-paths=	Remove buildlink references from Coq_config module
-SUBST_FILES.fix-paths=	config/coq_config.ml
-SUBST_SED.fix-paths=	-e "s,${BUILDLINK_DIR},${PREFIX},g"
+SUBST_FILES.fix-paths=		config/coq_config.ml
+SUBST_SED.fix-paths=		-e "s,${BUILDLINK_DIR},${PREFIX},g"
 
 .include "../../math/ocaml-num/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

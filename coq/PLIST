@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/03/06 09:28:23 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/01/24 15:54:48 jaapb Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -134,6 +134,7 @@ lib/coq/engine/univops.cmi
 ${PLIST.ocaml-opt}lib/coq/engine/univops.cmx
 ${PLIST.ocaml-opt}lib/coq/gramlib/.pack/gramlib.a
 lib/coq/gramlib/.pack/gramlib.cmi
+${PLIST.ocaml-opt}lib/coq/gramlib/.pack/gramlib.cmx
 ${PLIST.ocaml-opt}lib/coq/gramlib/.pack/gramlib.cmxa
 lib/coq/gramlib/.pack/gramlib__Gramext.cmi
 ${PLIST.ocaml-opt}lib/coq/gramlib/.pack/gramlib__Gramext.cmx
@@ -517,6 +518,10 @@ lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrHaskellZNum.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrHaskellZNum.cmx
 ${PLIST.natdynlink}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrHaskellZNum.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrHaskellZNum.o
+lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrOCamlInt63.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrOCamlInt63.cmx
+${PLIST.natdynlink}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrOCamlInt63.cmxs
+${PLIST.ocaml-opt}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrOCamlInt63.o
 lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrOcamlBasic.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrOcamlBasic.cmx
 ${PLIST.natdynlink}lib/coq/plugins/extraction/.coq-native/NCoq_extraction_ExtrOcamlBasic.cmxs
@@ -577,6 +582,9 @@ lib/coq/plugins/extraction/ExtrHaskellZInteger.vo
 lib/coq/plugins/extraction/ExtrHaskellZNum.glob
 lib/coq/plugins/extraction/ExtrHaskellZNum.v
 lib/coq/plugins/extraction/ExtrHaskellZNum.vo
+lib/coq/plugins/extraction/ExtrOCamlInt63.glob
+lib/coq/plugins/extraction/ExtrOCamlInt63.v
+lib/coq/plugins/extraction/ExtrOCamlInt63.vo
 lib/coq/plugins/extraction/ExtrOcamlBasic.glob
 lib/coq/plugins/extraction/ExtrOcamlBasic.v
 lib/coq/plugins/extraction/ExtrOcamlBasic.vo
