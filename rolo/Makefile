@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rolo/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://rolo.sourceforge.net/
+HOMEPAGE=		http://rolo.sourceforge.net/
 COMMENT=		Text-based contact manager
 LICENSE=		gnu-gpl-v2
 

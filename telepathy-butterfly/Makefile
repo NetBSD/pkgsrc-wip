@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-butterfly/
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	https://telepathy.freedesktop.org/releases/telepathy-butterfly/
+HOMEPAGE=	http://telepathy.freedesktop.org/releases/telepathy-butterfly/
 COMMENT=	Telepathy-butterfly is the MSN connection manager for telepathy
 LICENSE=	gnu-gpl-v2
 

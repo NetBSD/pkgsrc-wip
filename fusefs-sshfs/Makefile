@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://fuse.sourceforge.net/
+HOMEPAGE=		http://fuse.sourceforge.net/
 COMMENT=		Mount remote directories using ssh and FUSE
 
 GNU_CONFIGURE=		YES

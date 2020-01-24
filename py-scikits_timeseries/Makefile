@@ -8,7 +8,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytseries/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pytseries.sourceforge.net/
+HOMEPAGE=	http://pytseries.sourceforge.net/
 COMMENT=	Time series manipulation
 LICENSE=	modified-bsd
 

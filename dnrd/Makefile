@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dnrd/}
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	https://dnrd.sourceforge.net/
+HOMEPAGE=	http://dnrd.sourceforge.net/
 COMMENT=	Dnrd is a caching forwarding DNS proxy
 LICENSE=	gnu-gpl-v2
 

@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swami/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://swami.sourceforge.net/
+HOMEPAGE=		http://swami.sourceforge.net/
 COMMENT=		SoundFont2 instrument editor
 LICENSE=		gnu-gpl-v2
 

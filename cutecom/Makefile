@@ -8,7 +8,7 @@ CATEGORIES=	comms
 MASTER_SITES=	http://cutecom.sourceforge.net/
 
 MAINTAINER=	helgoman@users.sourceforge.net
-HOMEPAGE=	https://cutecom.sourceforge.net/
+HOMEPAGE=	http://cutecom.sourceforge.net/
 COMMENT=	Graphical serial terminal
 LICENSE=	gnu-gpl-v2
 

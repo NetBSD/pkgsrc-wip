@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=parcellite/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://parcellite.sourceforge.net/
+HOMEPAGE=	http://parcellite.sourceforge.net/
 COMMENT=	Parcellite is a lightweight GTK+ clipboard manager
 LICENSE=	gnu-gpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyphant/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pyphant.sourceforge.net/
+HOMEPAGE=	http://pyphant.sourceforge.net/
 COMMENT=	Workflow modelling app
 #LICENSE=	# TODO: (see mk/license.mk)
 

@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ariamaestosa/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ariamaestosa.sourceforge.net/
+HOMEPAGE=	http://ariamaestosa.sourceforge.net/
 COMMENT=	Open-source (GPL) midi tracker/editor
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND public-domain
 

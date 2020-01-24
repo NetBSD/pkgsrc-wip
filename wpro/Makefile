@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wgetpro/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	clamiax@gmail.com
-HOMEPAGE=	https://wgetpro.sourceforge.net/
+HOMEPAGE=	http://wgetpro.sourceforge.net/
 COMMENT=	Wget with "PRO" features
 LICENSE=	gnu-gpl-v2
 

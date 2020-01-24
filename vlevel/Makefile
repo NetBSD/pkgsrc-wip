@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vlevel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://vlevel.sourceforge.net/
+HOMEPAGE=	http://vlevel.sourceforge.net/
 COMMENT=	Dynamic compressor LADSPA plugin with look-ahead
 LICENSE=	gnu-gpl-v2
 

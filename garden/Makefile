@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=garden/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://garden.sourceforge.net/drupal/
+HOMEPAGE=	http://garden.sourceforge.net/drupal/
 COMMENT=	Vertical shoot-em-up with nontraditional elements
 LICENSE=	gnu-gpl-v3
 

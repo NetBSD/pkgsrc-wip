@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysparse/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pysparse.sourceforge.net/
+HOMEPAGE=	http://pysparse.sourceforge.net/
 COMMENT=	Sparse linear algebra extension for Python
 LICENSE=	modified-bsd
 

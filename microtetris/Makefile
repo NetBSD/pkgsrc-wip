@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.py
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@netbsd.org
-HOMEPAGE=	https://microtetris.sourceforge.net/
+HOMEPAGE=	http://microtetris.sourceforge.net/
 COMMENT=	MicroTetris is a simple and compact popular game Tetris
 
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo

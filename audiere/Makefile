@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audiere/}
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	https://audiere.sourceforge.net/
+HOMEPAGE=	http://audiere.sourceforge.net/
 COMMENT=	Audiere is a high-level audio API
 LICENSE=	gnu-lgpl-v2.1
 

@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pev/}
 WRKSRC=		${WRKDIR}/pev
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://pev.sourceforge.net/
+HOMEPAGE=	http://pev.sourceforge.net/
 COMMENT=	The PE analysis toolkit
 
 LICENSE=	gnu-gpl-v3

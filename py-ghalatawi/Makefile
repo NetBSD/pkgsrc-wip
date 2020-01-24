@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=g/ghalatawi/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://ghalatawi.sourceforge.net/
+HOMEPAGE=	http://ghalatawi.sourceforge.net/
 COMMENT=	Ghalatawi: Arabic AUtocorrec
 LICENSE=	gnu-gpl-v3
 

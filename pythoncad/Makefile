@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pythoncad/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	https://pythoncad.sourceforge.net/dokuwiki/doku.php
+HOMEPAGE=	http://pythoncad.sourceforge.net/dokuwiki/doku.php
 COMMENT=	PythonCAD is a CAD package written, surprisingly enough, in Python
 LICENSE=	gnu-gpl-v2
 

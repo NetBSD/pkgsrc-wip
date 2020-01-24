@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=smplayer/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://smplayer.sourceforge.net/
+HOMEPAGE=	http://smplayer.sourceforge.net/
 COMMENT=	Free open source media player
 LICENSE=	gnu-gpl-v2 AND modified-bsd
 

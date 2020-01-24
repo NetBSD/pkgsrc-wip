@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tgz
 LICENSE=	original-bsd
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=	https://fonteditfs.sourceforge.net/
+HOMEPAGE=	http://fonteditfs.sourceforge.net/
 COMMENT=	Small, simple font editor, designed for editing console fonts
 
 

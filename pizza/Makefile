@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.jar
 LICENSE=		artistic
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://pizzacompiler.sourceforge.net/
+HOMEPAGE=		http://pizzacompiler.sourceforge.net/
 COMMENT=		Pizza language is an extension to Java
 
 WRKSRC=			${WRKDIR}

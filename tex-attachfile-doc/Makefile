@@ -7,7 +7,7 @@ TEXLIVE_REV=	42099
 TEXLIVE_USE_CTAN=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ctan.org/pkg/attachfile
+HOMEPAGE=	http://ctan.org/pkg/attachfile
 COMMENT=	Documentation for tex-attachfile
 LICENSE=	lppl-1.3c
 

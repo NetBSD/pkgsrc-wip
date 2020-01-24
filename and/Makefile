@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=and/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://and.sourceforge.net/
+HOMEPAGE=	http://and.sourceforge.net/
 COMMENT=	Auto nice daemon
 LICENSE=	gnu-gpl-v3
 

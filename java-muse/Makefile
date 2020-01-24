@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=muse/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://muse.sourceforge.net/
+HOMEPAGE=		http://muse.sourceforge.net/
 COMMENT=		Java-XML API for networking with modules like Jabber
 
 WRKSRC=		${WRKDIR}/

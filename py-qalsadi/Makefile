@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=q/qalsadi/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://qalsadi.sourceforge.net/
+HOMEPAGE=	http://qalsadi.sourceforge.net/
 COMMENT=	Qalsadi Arabic Morpholoc=gical Analyzer for Python
 LICENSE=	gnu-gpl-v3
 

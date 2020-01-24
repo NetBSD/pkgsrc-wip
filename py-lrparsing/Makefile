@@ -6,7 +6,7 @@ CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lrparsing/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://lrparsing.sourceforge.net/
+HOMEPAGE=	http://lrparsing.sourceforge.net/
 COMMENT=	LR(1) parser hiding behind a pythonic interface
 LICENSE=	gnu-agpl-v3
 

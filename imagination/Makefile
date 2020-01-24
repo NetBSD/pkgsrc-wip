@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=imagination/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	https://imagination.sourceforge.net/
+HOMEPAGE=	http://imagination.sourceforge.net/
 COMMENT=	Imagination a simple and lightweight DVD slideshow maker
 
 GNU_CONFIGURE=		yes

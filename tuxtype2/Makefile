@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxtype/}
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	https://tuxtype.sourceforge.net/
+HOMEPAGE=	http://tuxtype.sourceforge.net/
 COMMENT=	Educational typing tutorial game for children
 LICENSE=	gnu-gpl-v2
 

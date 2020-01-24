@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ogre.sourceforge.net/
+HOMEPAGE=	http://ogre.sourceforge.net/
 COMMENT=	Object-Oriented Graphics Rendering Engine
 
 WRKSRC=		${WRKDIR}/${DISTNAME}

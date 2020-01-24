@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pythondirector/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pythondirector.sourceforge.net/
+HOMEPAGE=	http://pythondirector.sourceforge.net/
 COMMENT=	Pure-python TCP load balancer
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted

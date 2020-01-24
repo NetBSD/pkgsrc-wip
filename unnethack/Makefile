@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unnethack/}
 VER=		510
 
 MAINTAINER=	rhialto@falu.nl
-HOMEPAGE=	https://sourceforge.net/apps/trac/unnethack/
+HOMEPAGE=	http://sourceforge.net/apps/trac/unnethack/
 COMMENT=	Variant and further development of NetHack
 LICENSE=	nethack-license
 

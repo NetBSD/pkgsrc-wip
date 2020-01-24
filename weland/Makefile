@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=weland/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	christtrekker@users.sourceforge.net
-HOMEPAGE=	https://weland.sourceforge.net/
+HOMEPAGE=	http://weland.sourceforge.net/
 COMMENT=	Marathon game map editor
 LICENSE=	gnu-gpl-v2
 

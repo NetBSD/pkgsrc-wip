@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siptoolbox/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	matias@dotbsd.org
-HOMEPAGE=	https://siptoolbox.sourceforge.net/
+HOMEPAGE=	http://siptoolbox.sourceforge.net/
 COMMENT=	Scilab Image Processing toolbox
 LICENSE=	gnu-gpl-v2
 

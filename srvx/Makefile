@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=srvx/}
 
 MAINTAINER=	virtus@wanadoo.nl
-HOMEPAGE=	https://srvx.sourceforge.net/
+HOMEPAGE=	http://srvx.sourceforge.net/
 COMMENT=	Srvx IRC services
 LICENSE=	gnu-gpl-v2
 

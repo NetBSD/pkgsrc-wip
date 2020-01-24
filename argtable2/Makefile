@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=argtable/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://argtable.sourceforge.net/
+HOMEPAGE=	http://argtable.sourceforge.net/
 COMMENT=	ANSI C Library for parsing GNU style command line arguments
 LICENSE=	gnu-gpl-v2
 

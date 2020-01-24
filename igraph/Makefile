@@ -5,7 +5,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://igraph.org/nightly/get/c/
 
 MAINTAINER=	wenheping@gmail.com
-HOMEPAGE=	https://igraph.sf.net/
+HOMEPAGE=	http://igraph.sf.net/
 COMMENT=	Package For Manipulating Undirected And Directed Graphs
 LICENSE=	gnu-gpl-v2
 

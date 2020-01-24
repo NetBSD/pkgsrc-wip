@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vassalengine/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://vassalengine.sourceforge.net/
+HOMEPAGE=	http://vassalengine.sourceforge.net/
 COMMENT=	Game engine for building and playing board and card games
 LICENSE=	gnu-lgpl-v2.1
 

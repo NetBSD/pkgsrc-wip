@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		cg@cgall.de
-HOMEPAGE=		https://fprobe.sourceforge.net/
+HOMEPAGE=		http://fprobe.sourceforge.net/
 COMMENT=		Collect network traffic data and emit it as NetFlow flows
 
 

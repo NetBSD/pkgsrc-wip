@@ -8,7 +8,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		https://emboss.sourceforge.net/
+HOMEPAGE=		http://emboss.sourceforge.net/
 COMMENT=		Interface between emboss and jemboss
 LICENSE=		gnu-lgpl-v2.1
 

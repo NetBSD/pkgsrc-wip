@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ranmacgen/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ranmacgen.sf.net/
+HOMEPAGE=	http://ranmacgen.sf.net/
 COMMENT=	Random MAC address generator
 LICENSE=	gnu-gpl-v2
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pypedal/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://pypedal.sourceforge.net/
+HOMEPAGE=	http://pypedal.sourceforge.net/
 COMMENT=	Tools for pedigree analysis
 LICENSE=	gnu-lgpl-v2
 

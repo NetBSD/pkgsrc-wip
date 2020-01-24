@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=csoap/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://csoap.sourceforge.net/
+HOMEPAGE=	http://csoap.sourceforge.net/
 COMMENT=	SOAP C Framework C API functions
 
 GNU_CONFIGURE=	YES

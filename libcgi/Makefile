@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://prdownloads.sourceforge.net/libcgi/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://libcgi.sourceforge.net/
+HOMEPAGE=	http://libcgi.sourceforge.net/
 COMMENT=	Library for authoring cgi
 LICENSE=	generic-nonlicense
 

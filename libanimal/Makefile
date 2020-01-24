@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	matias@dotbsd.org
-HOMEPAGE=	https://siptoolbox.sourceforge.net/
+HOMEPAGE=	http://siptoolbox.sourceforge.net/
 COMMENT=	Imaging and computer vision library
 
 

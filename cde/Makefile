@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/}
 
 MAINTAINER=	jelle@jellehermsen.nl
-HOMEPAGE=	https://cdesktopenv.sourceforge.net/
+HOMEPAGE=	http://cdesktopenv.sourceforge.net/
 COMMENT=	Common Desktop Environment
 LICENSE=	gnu-lgpl-v2
 

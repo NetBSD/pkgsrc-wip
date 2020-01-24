@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nuvie/Nuvie/0.3/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://nuvie.sourceforge.net/
+HOMEPAGE=	http://nuvie.sourceforge.net/
 COMMENT=	Game engine for Ultima 6
 LICENSE=	gnu-gpl-v2
 

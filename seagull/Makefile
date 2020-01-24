@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gull/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gull.sourceforge.net/
+HOMEPAGE=	http://gull.sourceforge.net/
 COMMENT=	Open source multi-protocol traffic generator
 LICENSE=	gnu-gpl-v2
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dnswalk/}
 LICENSE=	artistic
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://dnswalk.sourceforge.net/
+HOMEPAGE=	http://dnswalk.sourceforge.net/
 COMMENT=	DNS debugger
 
 DEPENDS+=	p5-Net-DNS>=0.42:../../net/p5-Net-DNS

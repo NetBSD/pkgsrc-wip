@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=west/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://west.sourceforge.net/
+HOMEPAGE=	http://west.sourceforge.net/
 COMMENT=	Web scripting/stress tool
 LICENSE=	gnu-gpl-v3
 

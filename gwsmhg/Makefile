@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwsmhg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gwsmhg.sourceforge.net/
+HOMEPAGE=	http://gwsmhg.sourceforge.net/
 COMMENT=	Mercurial PyGtk GUI client
 LICENSE=	gnu-gpl-v2
 

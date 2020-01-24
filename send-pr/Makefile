@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=gnats/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnu.org/software/gnats/
+HOMEPAGE=	http://www.gnu.org/software/gnats/
 COMMENT=	Problem reporting tool for GNATS bug-tracker
 LICENSE=	gnu-gpl-v2
 

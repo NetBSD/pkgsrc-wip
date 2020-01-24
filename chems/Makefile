@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=chems/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	clamiax@gmail.com
-HOMEPAGE=	https://chems.sourceforge.net/
+HOMEPAGE=	http://chems.sourceforge.net/
 COMMENT=	The geekest content helper management system
 LICENSE=	gnu-gpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quantlib/}
 
 MAINTAINER=	slitvinov@gmail.com
-HOMEPAGE=	https://quantlib.sourceforge.net/
+HOMEPAGE=	http://quantlib.sourceforge.net/
 COMMENT=	Framework for quantitative finance
 LICENSE=	modified-bsd
 

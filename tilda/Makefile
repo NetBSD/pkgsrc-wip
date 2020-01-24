@@ -7,7 +7,7 @@ CATEGORIES=	x11 sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilda/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://tilda.sourceforge.net/
+HOMEPAGE=	http://tilda.sourceforge.net/
 COMMENT=	Terminal like the classic first-person-shooter games
 LICENSE=	gnu-gpl-v2
 

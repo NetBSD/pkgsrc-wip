@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=pentagram-u8/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pentagram.sf.net/
+HOMEPAGE=	http://pentagram.sf.net/
 COMMENT=	A reimplementation of the Ultima 8 game engine
 LICENSE=	gnu-gpl-v2
 

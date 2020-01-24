@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmds/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://xmds.sourceforge.net/
+HOMEPAGE=	http://xmds.sourceforge.net/
 COMMENT=	XMDS is a code generator that integrates equations
 LICENSE=	gnu-gpl-v2
 

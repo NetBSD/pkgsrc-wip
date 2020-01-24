@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bastard/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://bastard.sourceforge.net/
+HOMEPAGE=		http://bastard.sourceforge.net/
 COMMENT=		Disassembler for ELF x86 binarys
 
 

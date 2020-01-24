@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pxlib/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://pxlib.sourceforge.net/
+HOMEPAGE=		http://pxlib.sourceforge.net/
 COMMENT=		Simple utility to view Paradox database files
 
 

@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://krusader.sourceforge.net/
+HOMEPAGE=	http://krusader.sourceforge.net/
 COMMENT=	Advanced twin-panel (commander-style) file-manager for KDE 4.x
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4

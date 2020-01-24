@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.spamassassin.org/devel/		\
 		http://au.spamassassin.org/devel/
 
 MAINTAINER=	tom@replic8.net
-HOMEPAGE=	https://spamassassin.apache.org/
+HOMEPAGE=	http://spamassassin.apache.org/
 COMMENT=	Mail filter to identify spam (CVS snapshot)
 LICENSE=	apache-2.0
 
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 
-CONFLICTS=	p5-Mail-SpamAssassin-[1-9]* \
+CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*			\
 		spamassassin-[1-9]*
 
 

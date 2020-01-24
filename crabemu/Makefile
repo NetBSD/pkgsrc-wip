@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crabemu/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://crabemu.sourceforge.net/
+HOMEPAGE=	http://crabemu.sourceforge.net/
 COMMENT=	Primarily a Sega Master System emulator
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND isc AND public-domain AND zlib AND mame-license AND gnu-lgpl-v2 AND modified-bsd AND original-bsd
 

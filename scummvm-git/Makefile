@@ -5,7 +5,7 @@ CATEGORIES=	games
 GIT_REPO=	git@github.com:scummvm/scummvm.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://scummvm.sourceforge.net/
+HOMEPAGE=	http://scummvm.sourceforge.net/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 LICENSE=	gnu-gpl-v2
 

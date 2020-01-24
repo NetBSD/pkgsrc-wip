@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://gts.sf.net/
 
 MAINTAINER=	slitvinov@gmail.com
-HOMEPAGE=	https://gts.sf.net/
+HOMEPAGE=	http://gts.sf.net/
 COMMENT=	GTS stands for the GNU Triangulated Surface Library
 LICENSE=	gnu-gpl-v2
 

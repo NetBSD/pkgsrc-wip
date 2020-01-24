@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=despotify/}
 
 MAINTAINER=	pettai@nordu.net
-HOMEPAGE=	https://despotify.sourceforge.net/
+HOMEPAGE=	http://despotify.sourceforge.net/
 COMMENT=	Open Source Spotify client
 
 USE_TOOLS+=	gmake

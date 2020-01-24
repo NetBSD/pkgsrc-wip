@@ -8,7 +8,7 @@ CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_GITHUB:=nzbget/}
 
 MAINTAINER=		amoibos@gmail.com
-HOMEPAGE=		https://nzbget.sourceforge.net/
+HOMEPAGE=		http://nzbget.sourceforge.net/
 COMMENT=		Binary newsreader with NZB support
 LICENSE=		gnu-gpl-v2
 

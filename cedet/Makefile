@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
 MAINTAINER=		pho@cielonegro.org
-HOMEPAGE=		https://cedet.sourceforge.net/
+HOMEPAGE=		http://cedet.sourceforge.net/
 COMMENT=		Collection of Emacs Development Environment Tools
 LICENSE=		gnu-gpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guppy/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://guppy-pe.sourceforge.net/
+HOMEPAGE=	http://guppy-pe.sourceforge.net/
 COMMENT=	Guppy-PE -- A Python Programming Environment
 LICENSE=	mit
 

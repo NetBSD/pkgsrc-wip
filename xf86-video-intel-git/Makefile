@@ -8,7 +8,7 @@ GIT_REPO.xf86-video-intel=	https://gitlab.freedesktop.org/xorg/driver/xf86-video
 WRKSRC=				${WRKDIR}/${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://xorg.freedesktop.org/
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Intel video driver
 
 CONFLICTS+=	xf86-video-i810-[0-9]*

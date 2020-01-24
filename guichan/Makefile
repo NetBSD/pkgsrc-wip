@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=guichan/}
 
 MAINTAINER=	Pseudo.Statistic@gmail.com
-HOMEPAGE=	https://guichan.sourceforge.net/
+HOMEPAGE=	http://guichan.sourceforge.net/
 COMMENT=	Portable C++ GUI library for games
 
 

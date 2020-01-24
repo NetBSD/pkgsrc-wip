@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLObject/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sqlobject.sourceforge.net/
+HOMEPAGE=	http://sqlobject.sourceforge.net/
 COMMENT=	Allows you to translate RDBMS table rows into Python objects
 LICENSE=	gnu-lgpl-v2
 

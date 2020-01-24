@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecb/}
 
 MAINTAINER=		pho@cielonegro.org
-HOMEPAGE=		https://ecb.sourceforge.net/
+HOMEPAGE=		http://ecb.sourceforge.net/
 COMMENT=		Emacs Code Browser
 LICENSE=		gnu-gpl-v2
 

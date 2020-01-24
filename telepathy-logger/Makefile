@@ -6,7 +6,7 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-logger/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://telepathy.freedesktop.org/
+HOMEPAGE=	http://telepathy.freedesktop.org/
 COMMENT=	Logger module for telepathy
 LICENSE=	gnu-lgpl-v2.1
 

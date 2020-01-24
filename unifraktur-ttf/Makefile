@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unifraktur/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://unifraktur.sourceforge.net/
+HOMEPAGE=	http://unifraktur.sourceforge.net/
 COMMENT=	Modification of the Berthold Mainzer Fraktur font from Peter Wiegel
 LICENSE=	ofl-v1.1
 

@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkglext/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	https://gtkglext.sourceforge.net/
+HOMEPAGE=	http://gtkglext.sourceforge.net/
 COMMENT=	C++ wrapper for GtkGLExt
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

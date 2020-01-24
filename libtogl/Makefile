@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=togl/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://togl.sourceforge.net/index.html#intro
+HOMEPAGE=	http://togl.sourceforge.net/index.html#intro
 COMMENT=	Tk OpenGL widget
 
 WRKSRC=		${WRKDIR}/Togl2.0

@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/la/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://larry.sourceforge.net/
+HOMEPAGE=	http://larry.sourceforge.net/
 COMMENT=	Label the rows, columns, any dimension, of your NumPy arrays
 LICENSE=	modified-bsd
 

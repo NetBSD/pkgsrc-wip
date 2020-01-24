@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcpxtract/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://tcpxtract.sourceforge.net/
+HOMEPAGE=		http://tcpxtract.sourceforge.net/
 COMMENT=		Extract files from network traffic based on file signatures
 LICENSE=		gnu-gpl-v2
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://scintilla.sourceforge.net/
+HOMEPAGE=	http://scintilla.sourceforge.net/
 COMMENT=	Source code editor
 LICENSE=	mit
 

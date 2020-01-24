@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=supercollider/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://supercollider.github.io/
+HOMEPAGE=	http://supercollider.github.io/
 COMMENT=	Real time audio synthesis and composition programming language
 LICENSE=	gnu-gpl-v3
 

@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scourge/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://scourge.sourceforge.net/
+HOMEPAGE=		http://scourge.sourceforge.net/
 COMMENT=		Graphical 3D roguelike, vermin extermination
 LICENSE=		gnu-gpl-v2
 

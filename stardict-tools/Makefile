@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stardict/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	https://stardict.sourceforge.net/
+HOMEPAGE=	http://stardict.sourceforge.net/
 COMMENT=	StarDict tools for dictionary conversions
 LICENSE=	gnu-gpl-v3
 

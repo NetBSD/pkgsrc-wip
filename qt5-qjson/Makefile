@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=flavio/}
 GITHUB_PROJECT=	qjson
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	https://qjson.sourceforge.net/
+HOMEPAGE=	http://qjson.sourceforge.net/
 COMMENT=	Qt5 library for handling JSON data
 LICENSE=	gnu-lgpl-v2
 

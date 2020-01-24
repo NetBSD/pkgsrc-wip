@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
-HOMEPAGE=	https://xorg.freedesktop.org/
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	XFree86-derived "rush" protocol headers
 
 

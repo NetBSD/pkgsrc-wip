@@ -10,7 +10,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://sourceforge.net/projects/golly/files/golly/${PKGNAME_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://golly.sourceforge.net/
+HOMEPAGE=	http://golly.sourceforge.net/
 COMMENT=	Fast Game-Of-Life (and similar automata) visualizer
 LICENSE=	gnu-gpl-v2
 

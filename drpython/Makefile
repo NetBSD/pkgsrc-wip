@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drpython/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://drpython.sourceforge.net/
+HOMEPAGE=	http://drpython.sourceforge.net/
 COMMENT=	Source code editor, written in Python, for Python
 LICENSE=	gnu-gpl-v3
 

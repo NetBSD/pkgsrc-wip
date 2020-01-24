@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gfontview/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		ccatrian@eml.cc
-HOMEPAGE=		https://gfontview.sourceforge.net/
+HOMEPAGE=		http://gfontview.sourceforge.net/
 COMMENT=		Outline font viewer for X11
 
 

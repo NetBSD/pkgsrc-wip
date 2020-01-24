@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jpgtn/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://jpgtn.sourceforge.net/
+HOMEPAGE=		http://jpgtn.sourceforge.net/
 COMMENT=		Thumbnail generator for JPEG images
 
 

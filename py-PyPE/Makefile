@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.zip
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://pype.sourceforge.net/
+HOMEPAGE=		http://pype.sourceforge.net/
 COMMENT=		Lightweight, but powerful editor for Python
 
 DEPENDS=	${PYPKGPREFIX}-wxWidgets>=2.4.2.4:../../x11/py-wxWidgets

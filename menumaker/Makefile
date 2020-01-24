@@ -6,7 +6,7 @@ CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=menumaker/}
 
 MAINTAINER=		low@ameba6.com
-HOMEPAGE=		https://menumaker.sourceforge.net/
+HOMEPAGE=		http://menumaker.sourceforge.net/
 COMMENT=		Generates menus for X WMs by scanning for installed programs
 
 PYDISTUTILSPKG=	yes

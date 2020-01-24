@@ -8,7 +8,7 @@ CATEGORIES=	audio ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jbmgen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://jbmgen.sourceforge.net/
+HOMEPAGE=	http://jbmgen.sourceforge.net/
 COMMENT=	Archos Gmini playlist generator
 LICENSE=	gnu-gpl-v2
 

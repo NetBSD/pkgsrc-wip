@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rapidxml/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://rapidxml.sourceforge.net/
+HOMEPAGE=	http://rapidxml.sourceforge.net/
 COMMENT=	RapidXml is an attempt to create the fastest XML parser possible
 LICENSE=	boost-license OR mit
 

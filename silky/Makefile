@@ -7,7 +7,7 @@ CATEGORIES=	chat security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silky/}
 
 MAINTAINER=	oherrala@ee.oulu.fi
-HOMEPAGE=	https://silky.sourceforge.net/
+HOMEPAGE=	http://silky.sourceforge.net/
 COMMENT=	Silky is an easy-to-use graphical SILC client
 LICENSE=	gnu-gpl-v2
 

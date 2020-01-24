@@ -6,7 +6,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ogmrip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ogmrip.sourceforge.net/
+HOMEPAGE=	http://ogmrip.sourceforge.net/
 COMMENT=	Application for ripping and encoding DVD into DivX/OGM files
 LICENSE=	gnu-lgpl-v2.1
 

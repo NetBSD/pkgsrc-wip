@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailfilter/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	virtus@wanadoo.nl
-HOMEPAGE=	https://mailfilter.sourceforge.net/
+HOMEPAGE=	http://mailfilter.sourceforge.net/
 COMMENT=	Filter mail on a POP3 server
 
 

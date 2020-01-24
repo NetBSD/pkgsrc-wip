@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=marsyas/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://marsyas.sourceforge.net/
+HOMEPAGE=	http://marsyas.sourceforge.net/
 COMMENT=	Music Analysis, Retrieval and Synthesis for Audio Signals
 
 

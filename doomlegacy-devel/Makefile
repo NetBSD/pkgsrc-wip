@@ -14,7 +14,7 @@ SVN_REVISION.legacy_one=	${SVNVERS}
 SVN_EXTRACTDIR.legacy_one=	doomlegacy-devel-0r${SVNVERS}
 
 MAINTAINER=		micha@NetBSD.org
-HOMEPAGE=		https://doomlegacy.sourceforge.net/
+HOMEPAGE=		http://doomlegacy.sourceforge.net/
 COMMENT=		The legacy of Doom
 LICENSE=		gnu-gpl-v2
 

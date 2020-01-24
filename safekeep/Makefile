@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=safekeep/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://safekeep.sourceforge.net/
+HOMEPAGE=	http://safekeep.sourceforge.net/
 COMMENT=	Centralized and easy to use backup application
 LICENSE=	gnu-gpl-v2
 
