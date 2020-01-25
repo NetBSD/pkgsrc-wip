@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2012/11/09 18:14:45 jihbed Exp $
 
-DISTNAME=	zipline-1.2.0
+DISTNAME=	zipline-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipline/}
@@ -36,6 +36,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0.8:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.6.1:../../math/py-statsmodels
 DEPENDS+=	${PYPKGPREFIX}-tables>=3.3.0:../../math/py-tables
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
+DEPENDS+=	${PYPKGPREFIX}-trading-calendars>=1.0.1:../../time/py-trading-calendars
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -44,6 +45,12 @@ BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.22.1
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.11.1
 .include "../../math/py-numpy/buildlink3.mk"
+
+post-extract:
+	${FIND} ${WRKSRC} -name *.c | ${XARGS} ${RM}
+
+pre-install:
+	${RM} -f ${WRKSRC}/zipline.egg-info/requires.txt.orig
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/zipline \

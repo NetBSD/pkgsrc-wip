@@ -1,0 +1,35 @@
+$NetBSD$
+
+- Use contextlib from the standard library.
+- Allow to use newer versions of dependencies.
+- Remove unnecessary dependencies.
+
+--- zipline.egg-info/requires.txt.orig	2018-07-17 00:59:16.000000000 +0000
++++ zipline.egg-info/requires.txt
+@@ -1,11 +1,10 @@
+-pip>=7.1.0
+ setuptools>18.0
+ Logbook>=0.12.5
+ pytz>=2016.4
+ numpy>=1.11.1
+ requests-file>=1.4.1
+ scipy>=0.17.1
+-pandas<=0.22,>=0.18.1
++pandas>=0.18.1
+ pandas-datareader>=0.2.1
+ patsy>=0.4.0
+ statsmodels>=0.6.1
+@@ -15,11 +14,10 @@ requests>=2.9.1
+ Cython>=0.25.2
+ cyordereddict>=0.2.2
+ bottleneck>=1.0.0
+-contextlib2>=0.4.0
+ decorator>=4.0.0
+-networkx<2.0,>=1.9.1
++networkx>=1.9.1
+ numexpr>=2.6.1
+-bcolz<1,>=0.12.1
++bcolz>=0.12.1
+ click>=4.0.0
+ toolz>=0.8.2
+ multipledispatch>=0.4.8

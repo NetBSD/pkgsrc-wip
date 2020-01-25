@@ -1,6 +1,6 @@
 $NetBSD$
 
-Compatibility with Python 3.7 and 3.8
+Fix syntax errors with Python 3.7 and 3.8.
 
 --- zipline/testing/core.py.orig	2018-03-12 17:33:52.000000000 +0000
 +++ zipline/testing/core.py
