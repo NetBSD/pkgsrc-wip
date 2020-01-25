@@ -1,5 +1,0 @@
-- I only have been testing with NetBSD so far
-
-- No proper installation yet, instead do this: 
-
-    $ cd ${WRKSRC} && ./source/darkplaces/darkplaces-sdl -xonotic
