@@ -1,0 +1,5 @@
+fix va_start warnings
+fix alloca warnings
+is kqueue_timers.cc really working
+correctly without EVFILT_USER ?
+perhaps implement thread affinity for netbsd and irix

@@ -1,0 +1,29 @@
+$NetBSD$
+
+* use a provided ffsll implementation if the system does not have one
+* use noop implementation (apple) for binding threads to a cpu
+TODO: netbsd and irix has apis for this, perhaps implement this.
+
+--- sql/CMakeLists.txt.orig	2019-12-09 19:53:17.000000000 +0000
++++ sql/CMakeLists.txt
+@@ -567,6 +567,10 @@ SET(SQL_SHARED_SOURCES
+   ${MYSQL_SERVER_SUB_COMPONENT_SOURCES}
+ )
+ 
++IF(NOT HAVE_FFSLL)
++LIST(APPEND SQL_SHARED_SOURCES ffsll.cc)
++ENDIF()
++
+ # BISON_TARGET(<Name> <YaccInput> <CodeOutput>
+ #              [COMPILE_FLAGS <flags>]
+ #              [DEFINES_FILE <file>]
+@@ -663,6 +667,9 @@ ELSEIF(SOLARIS)
+ ELSEIF(WIN32)
+   LIST(APPEND SQL_SHARED_SOURCES
+     resourcegroups/platform/thread_attrs_api_win.cc)
++ELSE()
++  LIST(APPEND SQL_SHARED_SOURCES
++    resourcegroups/platform/thread_attrs_api_apple.cc)
+ ENDIF()
+ 
+ SET(SQL_SOURCE

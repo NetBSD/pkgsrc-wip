@@ -1,0 +1,15 @@
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+
+Split configuration between mysql-client and mysql-server.
+
+--- scripts/CMakeLists.txt.orig	2019-12-09 19:53:17.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -414,7 +414,7 @@ ELSE()
+     ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}
+     ESCAPE_QUOTES @ONLY)
+ 
+-  IF(INSTALL_PKGCONFIGDIR)
++  IF(INSTALL_PKGCONFIGDIR AND WITHOUT_SERVER)
+     MESSAGE(STATUS "INSTALL ${PKGCONFIG_FILE} ${INSTALL_PKGCONFIGDIR}")
+     INSTALL(FILES
+       ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}
