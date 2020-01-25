@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/feathernotes
+share/applications/feathernotes.desktop
+share/icons/hicolor/scalable/apps/feathernotes.svg
+share/icons/hicolor/scalable/mimetypes/text-feathernotes-fnx.svg
+share/mime/packages/feathernotes.xml
