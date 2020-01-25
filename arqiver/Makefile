@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/Arqiver-0.3.2
 USE_LANGUAGES=	c++
 USE_TOOLS=	pkg-config
 
-INSTALLATION_DIRS+=	bin
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && \
