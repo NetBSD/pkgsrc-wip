@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=			${WRKDIR}/sdk-source/binutils/binutils-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		xzcat gtar patch gmake
+USE_TOOLS+=		xzcat gtar patch gmake makeinfo
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
