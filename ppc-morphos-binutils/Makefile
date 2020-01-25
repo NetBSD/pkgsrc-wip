@@ -11,10 +11,10 @@ HOMEPAGE=	https://www.morphos-team.net/
 COMMENT=	Binutils for ppc-morphos
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/sdk-source/binutils/binutils-2.33.1
+WRKSRC=			${WRKDIR}/sdk-source/binutils/binutils-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		xzcat gtar patch
+USE_TOOLS+=		xzcat gtar patch gmake
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
@@ -28,11 +28,11 @@ CONFIGURE_ARGS+=	CFLAGS="${CFLAGS} -DMORPHOS_TARGET"
 
 post-extract:
 	${RUN} cd ${WRKDIR}/sdk-source/binutils && \
-		${XZCAT} binutils-2.33.1.tar.xz | ${GTAR} xf -
+		${XZCAT} binutils-${PKGVERSION_NOREV}.tar.xz | ${GTAR} xf -
 
 do-patch:
 	${RUN} cd ${WRKDIR}/sdk-source/binutils && \
-		${PATCH} -p0 <binutils-2.33.1-morphos.diff
+		${PATCH} -p0 <binutils-${PKGVERSION_NOREV}-morphos.diff
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
