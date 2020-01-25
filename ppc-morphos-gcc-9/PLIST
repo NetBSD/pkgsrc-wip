@@ -1422,7 +1422,6 @@ gg/share/gcc-${PKGVERSION}/python/libstdcxx/v6/printers.py
 gg/share/gcc-${PKGVERSION}/python/libstdcxx/v6/xmethods.py
 gg/share/info/cpp.info
 gg/share/info/cppinternals.info
-gg/share/info/dir
 gg/share/info/gcc.info
 gg/share/info/gccinstall.info
 gg/share/info/gccint.info

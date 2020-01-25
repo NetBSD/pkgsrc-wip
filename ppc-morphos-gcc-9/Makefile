@@ -54,6 +54,9 @@ pre-patch:
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
+post-install:
+	${RUN} rm -f ${DESTDIR}${PREFIX}/gg/share/info/dir
+
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/mpcomplex/buildlink3.mk"
