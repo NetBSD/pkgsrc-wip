@@ -67,7 +67,6 @@ lib/slurm/job_submit_partition.la
 lib/slurm/job_submit_pbs.la
 lib/slurm/job_submit_require_timelimit.la
 lib/slurm/job_submit_throttle.la
-lib/slurm/jobacct_gather_cgroup.la
 lib/slurm/jobacct_gather_linux.la
 lib/slurm/jobacct_gather_none.la
 lib/slurm/jobcomp_elasticsearch.la
@@ -96,7 +95,6 @@ lib/slurm/preempt_partition_prio.la
 lib/slurm/preempt_qos.la
 lib/slurm/priority_basic.la
 lib/slurm/priority_multifactor.la
-lib/slurm/proctrack_cgroup.la
 lib/slurm/proctrack_linuxproc.la
 lib/slurm/proctrack_pgid.la
 lib/slurm/route_default.la
@@ -117,7 +115,6 @@ lib/slurm/switch_cray_aries.la
 lib/slurm/switch_generic.la
 lib/slurm/switch_none.la
 lib/slurm/task_affinity.la
-lib/slurm/task_cgroup.la
 lib/slurm/task_cray_aries.la
 lib/slurm/task_none.la
 lib/slurm/topology_3d_torus.la
