@@ -47,6 +47,6 @@ BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.11.1
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/zipline \
-		${DESTDIR}${PREFIX}/bin/zipline${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/zipline-${PYVERSSUFFIX}
 
 .include "../../mk/bsd.pkg.mk"

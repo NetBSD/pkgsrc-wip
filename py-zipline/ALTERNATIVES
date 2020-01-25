@@ -1,0 +1,1 @@
+bin/zipline @PREFIX@/bin/zipline-@PYVERSSUFFIX@
