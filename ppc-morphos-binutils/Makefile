@@ -37,4 +37,7 @@ do-patch:
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
+post-install:
+	${RUN} rm -f ${DESTDIR}${PREFIX}/gg/share/info/dir
+
 .include "../../mk/bsd.pkg.mk"

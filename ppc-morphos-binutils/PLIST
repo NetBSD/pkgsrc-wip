@@ -58,6 +58,5 @@ gg/ppc-morphos/lib/ldscripts/morphos_baserel.xu
 gg/share/info/as.info
 gg/share/info/bfd.info
 gg/share/info/binutils.info
-gg/share/info/dir
 gg/share/info/gprof.info
 gg/share/info/ld.info
