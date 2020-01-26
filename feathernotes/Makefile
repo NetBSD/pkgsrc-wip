@@ -23,6 +23,8 @@ do-configure:
 	${SETENV} ${CONFIGURE_ENV} \
 	${QTDIR}/bin/qmake -o Makefile PREFIX=${PREFIX}
 
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
