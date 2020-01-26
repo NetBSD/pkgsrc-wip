@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
 CONFIGURE_ARGS+=	--with-libssh2=${PREFIX}
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_sched_setaffinity=yes
 
 LDFLAGS+=		-llz4
 
