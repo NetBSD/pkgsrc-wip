@@ -1,19 +1,19 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 19:57:17 asau Exp $
 #
 
-DISTNAME=	xtrlock_2.0-12
+DISTNAME=	xtrlock-2.12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
+EXTRACT_SUFX=	.tar.xz
+DISTFILES=	xtrlock_2.12.tar.xz
 
-MAINTAINER=	uli@habel.name
-HOMEPAGE=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Simple X11 screen lock tool
-
-PKG_DESTDIR_SUPPORT=	destdir
+LICENSE=	gnu-gpl-v3
 
 USE_IMAKE=	yes
 
-WRKSRC=		${WRKDIR}/xtrlock-2.0
+WRKSRC=		${WRKDIR}/xtrlock-2.12
 MAN_PAGE=	${WRKSRC}/xtrlock.man
 
 do-build:
