@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://chromium.googlesource.com/chromium/tools/depot_tools.git/+archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dev.chromium.org/developers/how-tos/install-depot-tools
+HOMEPAGE=	https://dev.chromium.org/developers/how-tos/install-depot-tools
 COMMENT=	Chromium depot tools
 LICENSE=	modified-bsd
 

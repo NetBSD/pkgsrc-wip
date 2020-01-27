@@ -6,7 +6,7 @@ CATEGORIES=	parallel python
 MASTER_SITES=	http://www.parallelpython.com/downloads/pp/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.parallelpython.com/
+HOMEPAGE=	https://www.parallelpython.com/
 COMMENT=	Parallel and distributed programming for Python
 LICENSE=	2-clause-bsd
 

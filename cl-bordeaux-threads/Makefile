@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/project/bordeaux-threads/releases/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://common-lisp.net/project/bordeaux-threads/
+HOMEPAGE=	https://common-lisp.net/project/bordeaux-threads/
 COMMENT=	Portable shared-state concurrency for Common Lisp
 LICENSE=	public-domain
 DEPENDS+=	${LISP_PREFIX}-alexandria-[0-9]*:../../wip/cl-alexandria

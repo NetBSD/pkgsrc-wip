@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.imcce.fr/trip/scscp/download/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.imcce.fr/trip/scscp/
+HOMEPAGE=	https://www.imcce.fr/trip/scscp/
 COMMENT=	Library of the Symbolic Computation Software Composibility Protocol
 
 GNU_CONFIGURE=	yes

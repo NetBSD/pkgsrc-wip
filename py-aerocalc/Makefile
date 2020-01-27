@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://www.kilohotel.com/python/aerocalc/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.kilohotel.com/python/aerocalc/
+HOMEPAGE=	https://www.kilohotel.com/python/aerocalc/
 COMMENT=	Aeronautical Engineering Calculations
 #LICENSE=	# TODO: (see mk/license.mk)
 

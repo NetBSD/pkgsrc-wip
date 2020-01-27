@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.mathematik.uni-kl.de/ftp/pub/Math/Singular/SOURCES/3-1-0/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.singular.uni-kl.de/
+HOMEPAGE=	https://www.singular.uni-kl.de/
 COMMENT=	SINGULAR is a Computer Algebra System for polynomial computations
 LICENSE=	gnu-gpl-v3
 

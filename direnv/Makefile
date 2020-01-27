@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=direnv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	terin@terinstock.com
-HOMEPAGE=	http://direnv.net/
+HOMEPAGE=	https://direnv.net/
 COMMENT=	Environment switcher for the shell
 LICENSE=	mit
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=kliment/}
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pronterface.com/
+HOMEPAGE=	https://www.pronterface.com/
 COMMENT=	3D printing host suite
 LICENSE=	gnu-gpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.astropy.org/
+HOMEPAGE=	https://www.astropy.org/
 COMMENT=	Community-developed python astronomy tools
 LICENSE=	modified-bsd
 

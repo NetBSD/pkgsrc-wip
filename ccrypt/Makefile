@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.mathstat.dal.ca/~selinger/ccrypt/download/
 
 MAINTAINER=	poff@sixbit.org
-HOMEPAGE=	http://www.mathstat.dal.ca/~selinger/ccrypt/
+HOMEPAGE=	https://www.mathstat.dal.ca/~selinger/ccrypt/
 COMMENT=	Encrypts/decrypts files using Rijndael block cipher
 LICENSE=	gnu-gpl-v2
 

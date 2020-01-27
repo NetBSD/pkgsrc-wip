@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.erlang.org/
+HOMEPAGE=		https://www.erlang.org/
 COMMENT=		Concurrent functional programming language
 LICENSE=		erlang-public-license
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wsmake/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/wsmake/
+HOMEPAGE=	https://sourceforge.net/projects/wsmake/
 COMMENT=	Software for production and maintenance of web sites
 LICENSE=	gnu-gpl-v2
 

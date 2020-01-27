@@ -8,7 +8,7 @@ MASTER_SITES=		http://download.tuxfamily.org/xmoto/xmoto/${VERSION}/ \
 VERSION=		0.5.11
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xmoto.tuxfamily.org/
+HOMEPAGE=		https://xmoto.tuxfamily.org/
 COMMENT=		2D motocross platform game
 LICENSE=		gnu-gpl-v2
 

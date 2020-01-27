@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=irrlicht/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ambiera.com/irrxml/
+HOMEPAGE=	https://www.ambiera.com/irrxml/
 COMMENT=	Simple and fast open source xml parser for C++
 LICENSE=	zlib
 

@@ -6,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://expiretable.fnord.se/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	http://expiretable.fnord.se/
+HOMEPAGE=	https://expiretable.fnord.se/
 COMMENT=	Removes entries from pf tables based on their age
 
 ONLY_FOR_PLATFORM=	DragonFly-*-* FreeBSD-[5-9]*-*

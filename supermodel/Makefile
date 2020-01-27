@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.supermodel3.com/Files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.supermodel3.com/
+HOMEPAGE=	https://www.supermodel3.com/
 COMMENT=	Sega Model 3 Arcade Emulator
 LICENSE=	gnu-gpl-v3
 

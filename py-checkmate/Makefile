@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	https://www.hepforge.org/archive/checkmate/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://checkmate.hepforge.org/
+HOMEPAGE=	https://checkmate.hepforge.org/
 COMMENT=	Tool to easily test simulated event files against LHC results
 LICENSE=	gnu-gpl-v2
 

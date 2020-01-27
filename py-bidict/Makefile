@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bidict/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://bitbucket.org/jab/bidict
+HOMEPAGE=	https://bitbucket.org/jab/bidict
 COMMENT=	Bidirectional (one-to-one) mapping data structure
 LICENSE=	mit
 

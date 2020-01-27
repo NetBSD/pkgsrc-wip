@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tads.org/
+HOMEPAGE=	https://www.tads.org/
 COMMENT=	Portable TADS toolkit
 #LICENSE=	tads3
 

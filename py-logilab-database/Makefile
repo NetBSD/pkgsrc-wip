@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/logilab-database/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.logilab.org/project/logilab-database
+HOMEPAGE=	https://www.logilab.org/project/logilab-database
 COMMENT=	Logilab utilities for database manipulation
 LICENSE=	gnu-lgpl-v2.1
 

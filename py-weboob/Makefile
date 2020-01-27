@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	https://symlink.me/attachments/download/289/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://weboob.org/
+HOMEPAGE=	https://weboob.org/
 COMMENT=	Weboob, Web Out Of Browsers
 LICENSE=	gnu-agpl-v3
 

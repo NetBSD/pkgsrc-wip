@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rosegarden/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rosegardenmusic.com/
+HOMEPAGE=	https://www.rosegardenmusic.com/
 COMMENT=	Notation editor & MIDI sequencer
 LICENSE=	gnu-gpl-v2
 

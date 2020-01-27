@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ripe.net/ripe/dbase/software/
 
 MAINTAINER=	tech-pkg@netbsd.org
-HOMEPAGE=	http://www.ripe.net/
+HOMEPAGE=	https://www.ripe.net/
 COMMENT=	RPSL Object Library
 
 

@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xenocara.org/
+HOMEPAGE=	https://xenocara.org/
 COMMENT=	OpenBSDs wscons input driver for modular X.org
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
@@ -22,34 +22,34 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-input-ws
 PKG_SUPPORTED_OPTIONS=
 PKG_SUGGESTED_OPTIONS=
 
-PKG_SUPPORTED_OPTIONS+= keyboard_button_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	keyboard_button_xsrc_netbsd
 # .if ${OPSYS} == "NetBSD"
 # PKG_SUGGESTED_OPTIONS+= keyboard_button_xsrc_netbsd
 # .endif
 
-PKG_SUPPORTED_OPTIONS+= undef_tpanel_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	undef_tpanel_xsrc_netbsd
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= undef_tpanel_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	undef_tpanel_xsrc_netbsd
 .endif
 
-PKG_SUPPORTED_OPTIONS+= calibration_kernel_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	calibration_kernel_xsrc_netbsd
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= calibration_kernel_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	calibration_kernel_xsrc_netbsd
 .endif
 
-PKG_SUPPORTED_OPTIONS+= strict_xsrc_netbsd
+PKG_SUPPORTED_OPTIONS+=	strict_xsrc_netbsd
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+= strict_xsrc_netbsd
+PKG_SUGGESTED_OPTIONS+=	strict_xsrc_netbsd
 .endif
 
-PKG_SUPPORTED_OPTIONS+= read_eio_xenocara_openbsd
+PKG_SUPPORTED_OPTIONS+=	read_eio_xenocara_openbsd
 .if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+= read_eio_xenocara_openbsd
+PKG_SUGGESTED_OPTIONS+=	read_eio_xenocara_openbsd
 .endif
 
-PKG_SUPPORTED_OPTIONS+= strict_xenocara_openbsd
+PKG_SUPPORTED_OPTIONS+=	strict_xenocara_openbsd
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+= strict_xenocara_openbsd
+PKG_SUGGESTED_OPTIONS+=	strict_xenocara_openbsd
 .endif
 
 .include "../../mk/bsd.options.mk"

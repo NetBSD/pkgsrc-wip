@@ -7,7 +7,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	http://theory.stanford.edu/~amitp/yapps/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://theory.stanford.edu/~amitp/yapps/
+HOMEPAGE=	https://theory.stanford.edu/~amitp/yapps/
 COMMENT=	Yet Another Python Parser System
 LICENSE=	mit
 

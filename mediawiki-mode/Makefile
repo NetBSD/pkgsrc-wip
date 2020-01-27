@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.el
 # web servers. See http://gnats.netbsd.org/45680
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.emacswiki.org/emacs/MediaWikiMode
+HOMEPAGE=	https://www.emacswiki.org/emacs/MediaWikiMode
 COMMENT=	Emacs frontend for MediaWiki
 LICENSE=	gnu-gpl-v3
 

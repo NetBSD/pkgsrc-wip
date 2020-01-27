@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	tez@NetBSD.org
-HOMEPAGE=	http://web.mit.edu/kerberos/
+HOMEPAGE=	https://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
 
 MAKE_JOBS_SAFE=		no
@@ -63,16 +63,16 @@ OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 #RCD_SCRIPTS=		kadmind kdc
 
-INSTALLATION_DIRS=	${PREFIX32}/bin ${PREFIX32}/include/gssapi ${PREFIX32}/include/gssrpc   \				 ${PREFIX32}/info ${PREFIX32}/man/man1 ${PREFIX32}/man/man5		 \
-			${PREFIX32}/man/man7 ${PREFIX32}/man/man8 ${PREFIX32}/sbin		       	\
-			${PREFIX32}/share/examples/krb5			                       	\
-			${PREFIX32}/share/et							\
-			${PREFIX32}/share/examples/rc.d						\
-			${PREFIX32}/share/gnats							\
-			${PREFIX32}/lib/krb5/plugins/kdb 					\
-			${PREFIX32}/lib/krb5/plugins/preauth					\
-			${PREFIX32}/lib/krb5/plugins/tls					\
-			${PREFIX32}/include/krb5 ${PREFIX32}/include/kadm5 			\
+INSTALLATION_DIRS=	${PREFIX32}/bin ${PREFIX32}/include/gssapi ${PREFIX32}/include/gssrpc   \				 ${PREFIX32}/info ${PREFIX32}/man/man1 ${PREFIX32}/man/man5 \
+			${PREFIX32}/man/man7 ${PREFIX32}/man/man8 ${PREFIX32}/sbin \
+			${PREFIX32}/share/examples/krb5			\
+			${PREFIX32}/share/et				\
+			${PREFIX32}/share/examples/rc.d			\
+			${PREFIX32}/share/gnats				\
+			${PREFIX32}/lib/krb5/plugins/kdb		\
+			${PREFIX32}/lib/krb5/plugins/preauth		\
+			${PREFIX32}/lib/krb5/plugins/tls		\
+			${PREFIX32}/include/krb5 ${PREFIX32}/include/kadm5 \
 			${PREFIX32}/lib/pkgconfig
 
 pre-configure:

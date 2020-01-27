@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.hcs.harvard.edu/~dholland/computers/netkit.html
+HOMEPAGE=		https://www.hcs.harvard.edu/~dholland/computers/netkit.html
 COMMENT=		The inetd super server and ping for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-*

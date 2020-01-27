@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	https://download3.ebz.epson.net/dsc/f/03/00/10/49/18/f3016be6120a7271a6d9cb64872f817bce1920b8/
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
+HOMEPAGE=	https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
 COMMENT=	Epson Inkjet Printer Driver (ESC/P-R)
 LICENSE=	gnu-gpl-v2
 

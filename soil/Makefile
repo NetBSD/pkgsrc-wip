@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 EXTRACT_OPTS=	-d SOIL
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lonesock.net/soil.html
+HOMEPAGE=	https://www.lonesock.net/soil.html
 COMMENT=	Tiny C library used primarily for uploading textures into OpenGL
 LICENSE=	public-domain
 

@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://tinylogin.busybox.net/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tinylogin.busybox.net/
+HOMEPAGE=	https://tinylogin.busybox.net/
 COMMENT=	Suite of tiny Unix utilities for handling logging
 
 

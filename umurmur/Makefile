@@ -6,7 +6,7 @@ CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=umurmur/}
 
 MAINTAINER=	ahoka@NetBSD.org
-HOMEPAGE=	http://umurmur.net/
+HOMEPAGE=	https://umurmur.net/
 COMMENT=	Mumble (murmur) server for embedded systems
 LICENSE=	modified-bsd
 

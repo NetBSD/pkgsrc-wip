@@ -13,7 +13,7 @@ PKGNAME=	${LAPACK_PART}-${PORTVERSION}
 CATEGORIES=	math
 MASTER_SITES=	-https://github.com/Reference-LAPACK/lapack/archive/v${PORTVERSION}.tar.gz
 
-HOMEPAGE=	http://www.netlib.org/lapack/
+HOMEPAGE=	https://www.netlib.org/lapack/
 LICENSE=	modified-bsd
 
 # All parts are in the same section (now wip, later math).

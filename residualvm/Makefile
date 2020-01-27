@@ -7,7 +7,7 @@ CATEGORIES=	games
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://residualvm.org/
+HOMEPAGE=	https://residualvm.org/
 COMMENT=	Lucas Arts' LUA-based 3D adventure engine
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

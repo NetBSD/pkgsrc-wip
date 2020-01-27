@@ -39,7 +39,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://pike.lysator.liu.se/pub/pike/${PIKE_RELEASE_TYPE}/${PIKE_VERSION}/
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mpl-1.1
 MAINTAINER=	william@welliver.org
-HOMEPAGE=	http://pike.lysator.liu.se/
+HOMEPAGE=	https://pike.lysator.liu.se/
 COMMENT=	${MODULENAME} module for Pike ${PIKEVERSUFFIX}
 
 BUILD_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf

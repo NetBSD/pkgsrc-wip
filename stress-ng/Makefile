@@ -5,7 +5,7 @@ CATEGORIES=	benchmark
 MASTER_SITES=	http://kernel.ubuntu.com/~cking/tarballs/stress-ng/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kernel.ubuntu.com/~cking/stress-ng/
+HOMEPAGE=	https://kernel.ubuntu.com/~cking/stress-ng/
 COMMENT=	Stress test benchmarks
 LICENSE=	gnu-gpl-v2
 

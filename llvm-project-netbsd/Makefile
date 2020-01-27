@@ -11,7 +11,7 @@ CATEGORIES=		devel
 #DISTFILES=		${DEFAULT_DISTFILES}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://llvm.org/
+HOMEPAGE=		https://llvm.org/
 COMMENT=		The LLVM Compiler Infrastructure
 LICENSE=		apache2
 

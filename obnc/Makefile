@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://miasap.se/obnc/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://miasap.se/obnc/
+HOMEPAGE=	https://miasap.se/obnc/
 COMMENT=	Compiler for the Oberon programming language
 LICENSE=	gnu-gpl-v3
 

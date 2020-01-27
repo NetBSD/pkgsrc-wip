@@ -7,7 +7,7 @@ MASTER_SITES=	http://xpra.org/src/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xpra.org/
+HOMEPAGE=	https://xpra.org/
 COMMENT=	screen(1) for X
 LICENSE=	gnu-gpl-v2
 

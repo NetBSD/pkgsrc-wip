@@ -8,7 +8,7 @@ CATEGORIES=	time
 # The getsite.sh script uses cURL download the attached file.
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openastro.org/
+HOMEPAGE=	https://www.openastro.org/
 COMMENT=	Open source astrology program, openastro.org
 LICENSE=	gnu-gpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman/}
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	http://www.list.org/
+HOMEPAGE=	https://www.list.org/
 COMMENT=	GNU mailing list manager
 LICENSE=	gnu-gpl-v3
 

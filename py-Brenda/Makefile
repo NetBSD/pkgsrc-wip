@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.gz
 LICENSE=	artistic
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://wiki.python.org/moin/PyBrenda
+HOMEPAGE=		https://wiki.python.org/moin/PyBrenda
 COMMENT=		Parallel computation system
 
 WRKSRC=	${WRKDIR}/PyBrenda-0.4.1

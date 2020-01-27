@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.pogo.org.uk/~mark/xosview/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pogo.org.uk/~mark/xosview/
+HOMEPAGE=	https://www.pogo.org.uk/~mark/xosview/
 COMMENT=	X11 graphical display of OS statistics
 
 USE_X11BASE=	yes

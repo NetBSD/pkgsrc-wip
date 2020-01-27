@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pythonol/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.phrozensmoke.com/projects/pythonol/
+HOMEPAGE=		https://www.phrozensmoke.com/projects/pythonol/
 COMMENT=		Gtk-based frontend for several translation services on web
 
 

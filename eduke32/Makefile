@@ -10,7 +10,7 @@ MASTER_SITES=	http://dukeworld.duke4.net/eduke32/synthesis/${EDUKE_DATE}-${EDUKE
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://eduke32.com/
+HOMEPAGE=	https://eduke32.com/
 COMMENT=	Engine for Duke Nukem 3D
 LICENSE=	gnu-gpl-v2
 

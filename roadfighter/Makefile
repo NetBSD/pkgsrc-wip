@@ -7,7 +7,7 @@ MASTER_SITES=	http://braingames.jorito.net/roadfighter/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://roadfighter.jorito.net/
+HOMEPAGE=	https://roadfighter.jorito.net/
 COMMENT=	Remake the Konami MSX classic game Road Fighter
 LICENSE=	unlicense
 

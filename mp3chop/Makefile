@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.fysh.org/~mac/mp3chop/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.fysh.org/~mac/mp3chop/
+HOMEPAGE=		https://www.fysh.org/~mac/mp3chop/
 COMMENT=		Program for chopping up mp3 files
 LICENSE=		gnu-gpl-v2
 

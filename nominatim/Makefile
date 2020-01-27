@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.nominatim.org/release/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiedi@frubar.net
-HOMEPAGE=	http://www.nominatim.org/
+HOMEPAGE=	https://www.nominatim.org/
 COMMENT=	Open Source search based on OpenStreetMap data
 LICENSE=	gnu-gpl-v2
 

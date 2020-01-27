@@ -8,7 +8,7 @@ CATEGORIES=		archivers
 MASTER_SITES=		http://www.rarlab.com/rar/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.rarlab.com/
+HOMEPAGE=		https://www.rarlab.com/
 COMMENT=		File archiver (binary only)
 LICENSE=		rar4-license
 

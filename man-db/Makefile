@@ -7,7 +7,7 @@ EXTRACT_SUFX=		.tar.xz
 LICENSE=		gnu-gpl-v2 # or later
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.chiark.greenend.org.uk/~cjwatson/code/man-db/
+HOMEPAGE=		https://www.chiark.greenend.org.uk/~cjwatson/code/man-db/
 COMMENT=		Manual pager and related man page utilities
 
 CONFLICTS+=		man-[0-9]*

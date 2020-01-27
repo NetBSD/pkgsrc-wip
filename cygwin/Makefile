@@ -7,7 +7,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		makoto@ki.nu
-HOMEPAGE=		http://www.cygwin.com/
+HOMEPAGE=		https://www.cygwin.com/
 COMMENT=		GNU C Compiler for win32 cross development
 LICENSE=		gnu-gpl-v3
 

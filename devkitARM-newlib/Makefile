@@ -7,7 +7,7 @@ GITHUB_PROJECT=	newlib
 GITHUB_TAG=	f75b38917dc5daf8e31000067d60b66604c39434
 
 MAINTAINER=	js@heap.zone
-HOMEPAGE=	http://devkitpro.org/
+HOMEPAGE=	https://devkitpro.org/
 COMMENT=	Newlib for devkitARM toolchain
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND modified-bsd
 

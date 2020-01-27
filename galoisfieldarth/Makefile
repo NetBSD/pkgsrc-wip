@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.partow.net/downloads/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.partow.net/
+HOMEPAGE=	https://www.partow.net/
 COMMENT=	Galois Field Arithmetic Library
 LICENSE=	cpl-1.0
 

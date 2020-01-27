@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/b3/ae/9d956c334b21f404a512b50abeae018a81e5be939a35c73b8291a31f7e24/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://igraph.org/
+HOMEPAGE=	https://igraph.org/
 COMMENT=	Manipulating Undirected and Directed Graphs for Python
 LICENSE=	gnu-gpl-v2
 

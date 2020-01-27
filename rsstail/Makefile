@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.vanheusden.com/rsstail/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	leot1990@users.sourceforge.net
-HOMEPAGE=	http://www.vanheusden.com/rsstail/
+HOMEPAGE=	https://www.vanheusden.com/rsstail/
 COMMENT=	RSS feeds reader with a tail(1)-like interface
 LICENSE=	gnu-gpl-v2
 

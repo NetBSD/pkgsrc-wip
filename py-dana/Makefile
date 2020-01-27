@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dana/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://dana.loria.fr/
+HOMEPAGE=	https://dana.loria.fr/
 COMMENT=	Framework for distributed, asynchronous and adaptive computing
 LICENSE=	modified-bsd
 

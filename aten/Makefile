@@ -6,7 +6,7 @@ CATEGORIES=	graphics math
 MASTER_SITES=	http://www.projectaten.org/download/1.7/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.projectaten.org/
+HOMEPAGE=	https://www.projectaten.org/
 COMMENT=	Aten is a tool to create, edit, and visualise coordinates
 LICENSE=	gnu-gpl-v2
 

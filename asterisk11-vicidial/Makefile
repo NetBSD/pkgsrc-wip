@@ -16,7 +16,7 @@ DISTFILES=	${DEFAULT_DISTFILES}
 
 COMMENT=	The Asterisk Software PBX
 OWNER=		alberto.m@futurelinkcorporation.com
-HOMEPAGE=	http://www.asterisk.org/
+HOMEPAGE=	https://www.asterisk.org/
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/asterisk-11.22.0

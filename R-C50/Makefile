@@ -4,7 +4,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://cran.r-project.org/web/packages/C50/index.html
+HOMEPAGE=	https://cran.r-project.org/web/packages/C50/index.html
 COMMENT=	C5.0 decision trees and rule-based models
 LICENSE=	gnu-lgpl-v3
 

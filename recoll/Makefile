@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.lesbonscomptes.com/recoll/
 
 MAINTAINER=	slitvinov@gmail.com
-HOMEPAGE=	http://www.lesbonscomptes.com/recoll/
+HOMEPAGE=	https://www.lesbonscomptes.com/recoll/
 COMMENT=	Full text desktop search engine
 LICENSE=	gnu-gpl-v2
 

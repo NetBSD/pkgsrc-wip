@@ -6,7 +6,7 @@ CATEGORIES=	biology databases
 MASTER_SITES=	https://launchpad.net/mmdb/${PKGVERSION_NOREV:R:R}/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://strucbio.biologie.uni-konstanz.de/ccp4wiki/index.php/Mmdb
+HOMEPAGE=	https://strucbio.biologie.uni-konstanz.de/ccp4wiki/index.php/Mmdb
 COMMENT=	Macromolecular coordinate library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v3
 

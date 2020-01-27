@@ -7,7 +7,7 @@ MASTER_SITES=		http://electricsheep.org/
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		rhialto@falu.nl
-HOMEPAGE=		http://electricsheep.org/
+HOMEPAGE=		https://electricsheep.org/
 COMMENT=		Distributed fractal flame screensaver
 
 DEPENDS+=		curl>=7.12.1:../../www/curl

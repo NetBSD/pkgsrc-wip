@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=naturaldocs/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc@blackmouse.biz
-HOMEPAGE=	http://www.naturaldocs.org/
+HOMEPAGE=	https://www.naturaldocs.org/
 COMMENT=	Open-source, extensible, multi-language documentation generator
 
 USE_TOOLS+=	perl:run

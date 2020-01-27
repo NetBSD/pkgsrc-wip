@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://omnibus.uni-freiburg.de/~sd565/programs/hawk/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://omnibus.uni-freiburg.de/~sd565/programs/hawk/
+HOMEPAGE=	https://omnibus.uni-freiburg.de/~sd565/programs/hawk/
 COMMENT=	HAWK is a Monte Carlo integrator for pp -> H + 2jets
 
 VERSION=	1.1

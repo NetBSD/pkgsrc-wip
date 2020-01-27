@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.redmine.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.redmine.org/
+HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2
 

@@ -9,7 +9,7 @@ MASTER_SITES=	-https://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	roy@NetBSD.org
-HOMEPAGE=	http://trac.edgewall.org/wiki/GitPlugin
+HOMEPAGE=	https://trac.edgewall.org/wiki/GitPlugin
 COMMENT=	GIT plugin for Trac
 LICENSE=	gnu-gpl-v2
 

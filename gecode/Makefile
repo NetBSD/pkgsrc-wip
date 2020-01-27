@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.gecode.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gecode.org/
+HOMEPAGE=	https://www.gecode.org/
 COMMENT=	Toolkit for developing constraint-based systems
 LICENSE=	mit
 

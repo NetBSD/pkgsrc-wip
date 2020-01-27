@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.kernel.org/
+HOMEPAGE=		https://www.kernel.org/
 COMMENT=		Linux kernel module utilities
 
 CONFLICTS+=		linux-module-init-tools-[0-9]*

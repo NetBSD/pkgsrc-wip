@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	tpaul@NetBSD.org
-HOMEPAGE=	http://jwilk.net/software/recidivm
+HOMEPAGE=	https://jwilk.net/software/recidivm
 COMMENT=	Estimates a program's peak virtual memory use
 LICENSE=	mit
 

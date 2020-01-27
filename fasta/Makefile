@@ -6,7 +6,7 @@ CATEGORIES=		biology
 MASTER_SITES=		http://faculty.virginia.edu/wrpearson/fasta/fasta36/
 
 MAINTAINER=		hdp@cs.nmsu.edu
-HOMEPAGE=		http://fasta.bioch.virginia.edu/
+HOMEPAGE=		https://fasta.bioch.virginia.edu/
 COMMENT=		FASTA sequence comparison programs
 LICENSE=		apache-2.0
 

@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://qutrub.arabeyes.org/index
+HOMEPAGE=	https://qutrub.arabeyes.org/index
 COMMENT=	Qutrub is an Arabic verb conjugator
 LICENSE=	gnu-gpl-v2
 

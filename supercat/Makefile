@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://supercat.nosredna.net/
 
 MAINTAINER=	youri.mout@gmail.com
-HOMEPAGE=	http://supercat.nosredna.net/
+HOMEPAGE=	https://supercat.nosredna.net/
 COMMENT=	Supercat is a text colorizer
 LICENSE=	gnu-gpl-v3
 

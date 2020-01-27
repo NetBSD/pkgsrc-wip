@@ -6,7 +6,7 @@ CATEGORIES=	ham
 MASTER_SITES=	http://fkurz.net/ham/qrq/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fkurz.net/ham/qrq.html
+HOMEPAGE=	https://fkurz.net/ham/qrq.html
 COMMENT=	Open source Morse telegraphy trainer
 LICENSE=	gnu-gpl-v2
 

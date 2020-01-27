@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/allegro/allegro/${VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://liballeg.org/
+HOMEPAGE=	https://liballeg.org/
 COMMENT=	Allegro game programming library
 #LICENSE=	# TODO: (see mk/license.mk)
 

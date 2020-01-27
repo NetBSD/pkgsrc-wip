@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 LICENSE=	2-clause-bsd
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://work.thaslwanter.at/
+HOMEPAGE=	https://work.thaslwanter.at/
 COMMENT=	Collection of Python utilities for signal analysis
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib

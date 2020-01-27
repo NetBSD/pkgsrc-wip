@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=kmymoney/4.8.3/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	gary@duzan.org
-HOMEPAGE=	http://kmymoney.org/
+HOMEPAGE=	https://kmymoney.org/
 COMMENT=	Personal finance manager for KDE 4
 LICENSE=	gnu-gpl-v2
 

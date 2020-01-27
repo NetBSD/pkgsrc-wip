@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=brlcad/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://brlcad.org/
+HOMEPAGE=	https://brlcad.org/
 COMMENT=	Cross-platform solid modeling system
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 

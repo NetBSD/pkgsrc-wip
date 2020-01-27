@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	roy@NetBSD.org
-HOMEPAGE=	http://trac.edgewall.org/wiki/SpamFilter
+HOMEPAGE=	https://trac.edgewall.org/wiki/SpamFilter
 COMMENT=	Spam Filter plugin for Trac
 
 DEPENDS+=	trac>=0.12:../../www/trac

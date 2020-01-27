@@ -8,7 +8,7 @@ MASTER_SITES=	http://software.wise-guys.nl/download/
 LICENSE=	2-clause-bsd
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://software.wise-guys.nl/libtextcat/
+HOMEPAGE=	https://software.wise-guys.nl/libtextcat/
 COMMENT=	Libtextcat library the Cavnar & Trenkle
 
 GNU_CONFIGURE=	yes

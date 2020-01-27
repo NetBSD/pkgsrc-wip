@@ -22,7 +22,7 @@ GITHUB_PROJECT=	mothur
 GITHUB_TAG=	v${PORTVERSION}
 
 MAINTAINER=	dsiercks@uwm.edu
-HOMEPAGE=	http://www.mothur.org/
+HOMEPAGE=	https://www.mothur.org/
 COMMENT=	Bioinformatics tool for the microbial ecology community
 # Check this
 LICENSE=	gnu-gpl-v3

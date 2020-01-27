@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openca/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pki.openca.org/
+HOMEPAGE=	https://pki.openca.org/
 COMMENT=	Robust, full-featured out-of-the-box Certification Authority
 
 DEPENDS+=	p5-Authen-SASL>=2.04:../../security/p5-Authen-SASL

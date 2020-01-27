@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://download.crossroads.io/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.crossroads.io/
+HOMEPAGE=	https://www.crossroads.io/
 COMMENT=	Fork of ZeroMQ, high-performance asynchronous messaging library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 

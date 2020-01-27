@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.spida.net/projects/software/dmt-ux/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.spida.net/projects/software/dmt-ux/index.de.html
+HOMEPAGE=	https://www.spida.net/projects/software/dmt-ux/index.de.html
 COMMENT=	DSL modem tool for Unix
 LICENSE=	gnu-gpl-v2
 

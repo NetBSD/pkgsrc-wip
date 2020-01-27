@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://www.hepforge.org/archive/debinning/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://debinning.hepforge.org/
+HOMEPAGE=	https://debinning.hepforge.org/
 COMMENT=	The bias inherent when binning data  into histograms
 LICENSE=	gnu-gpl-v3
 

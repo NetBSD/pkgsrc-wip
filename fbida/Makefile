@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.kraxel.org/releases/fbida/
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.kraxel.org/blog/linux/fbida/
+HOMEPAGE=		https://www.kraxel.org/blog/linux/fbida/
 COMMENT=		Image viewer and editor
 
 MAKE_FILE=		GNUmakefile

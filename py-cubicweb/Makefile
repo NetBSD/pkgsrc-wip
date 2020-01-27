@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cubicweb/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.cubicweb.org/
+HOMEPAGE=	https://www.cubicweb.org/
 COMMENT=	Repository of entities / relations for knowledge management
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 

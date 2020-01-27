@@ -19,7 +19,7 @@ GITHUB_PROJECT=	bcftools
 GITHUB_TAG=	${PV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.htslib.org/
+HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating BCF (binary VCF) sequence files
 LICENSE=	mit
 

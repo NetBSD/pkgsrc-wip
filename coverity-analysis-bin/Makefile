@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	# http://scan.coverity.com/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://scan.coverity.com/
+HOMEPAGE=	https://scan.coverity.com/
 COMMENT=	Static Analysis for Java, C/C++, C\#, JavaScript, Ruby, or Python
 #LICENSE=	# TODO: (see mk/license.mk)
 

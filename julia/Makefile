@@ -8,7 +8,7 @@ GITHUB_RELEASE=	v0.3.8
 WRKSRC=		${WRKDIR}/julia
 
 MAINTAINER=	pkgsrc-users@netbsd.org
-HOMEPAGE=	http://julialang.org/
+HOMEPAGE=	https://julialang.org/
 COMMENT=	Julia is a high-level, high-performance dynamic programming language for technical computing
 LICENSE=	mit
 

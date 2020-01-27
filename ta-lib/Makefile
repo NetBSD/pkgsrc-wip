@@ -7,7 +7,7 @@ CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ta-lib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.ta-lib.org/
+HOMEPAGE=	https://www.ta-lib.org/
 COMMENT=	Unix POSIX Library for Technical Analysis
 
 WRKSRC=		${WRKDIR}/ta-lib

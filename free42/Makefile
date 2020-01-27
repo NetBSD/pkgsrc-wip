@@ -9,7 +9,7 @@ MASTER_SITES=	http://thomasokken.com/free42/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thomasokken.com/free42/
+HOMEPAGE=	https://thomasokken.com/free42/
 COMMENT=	HP42S Calculator Simulator
 LICENSE=	gnu-gpl-v2
 

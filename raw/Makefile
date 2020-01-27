@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	amoibos@gmail.com
-HOMEPAGE=	http://fabiensanglard.net/anotherWorld_code_review/index.php/
+HOMEPAGE=	https://fabiensanglard.net/anotherWorld_code_review/index.php/
 COMMENT=	Open Source implementation of Another World engine
 
 DIST_SUBDIR=	Another-World-Bytecode-Interpreter

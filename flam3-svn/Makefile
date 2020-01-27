@@ -7,7 +7,7 @@ MASTER_SITES=		http://electricsheep.org/
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		rhialto@falu.nl
-HOMEPAGE=		http://flam3.com/
+HOMEPAGE=		https://flam3.com/
 COMMENT=		Cosmic Recursive Fractal Flames
 
 USE_X11BASE=		YES

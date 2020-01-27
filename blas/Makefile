@@ -12,7 +12,7 @@ PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
-HOMEPAGE=	http://www.netlib.org/lapack/
+HOMEPAGE=	https://www.netlib.org/lapack/
 COMMENT=	Transitional BLAS package that depends on lapack
 LICENSE=	modified-bsd
 

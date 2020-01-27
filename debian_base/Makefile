@@ -10,7 +10,7 @@ MASTER_SITES=		# none
 LICENSE=		gnu-lgpl-v2.1 AND zlib AND gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.debian.org/
+HOMEPAGE=		https://www.debian.org/
 COMMENT=		Debian Linux compatibility base package
 
 # Last updated: 2005-11-03.

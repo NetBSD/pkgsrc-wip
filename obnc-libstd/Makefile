@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://miasap.se/obnc/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://miasap.se/obnc/
+HOMEPAGE=	https://miasap.se/obnc/
 LICENSE=	mpl-2.0
 
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}

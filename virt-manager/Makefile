@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://virt-manager.org/download/sources/virt-manager/
 
 MAINTAINER=	gls@NetBSD.org
-HOMEPAGE=	http://virt-manager.org/
+HOMEPAGE=	https://virt-manager.org/
 COMMENT=	GUI to manage virtual machines
 LICENSE=	gnu-gpl-v2
 

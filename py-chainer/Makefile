@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/8f/e0/b1860a9e79ed84831eed6320c3b810d44f99536346d99d05f3694c5cf0d3/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://chainer.org/
+HOMEPAGE=	https://chainer.org/
 COMMENT=	Flexible framework of neural networks
 LICENSE=	mit
 

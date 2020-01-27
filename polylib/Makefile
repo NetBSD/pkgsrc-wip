@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://icps.u-strasbg.fr/polylib/polylib_src/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://icps.u-strasbg.fr/polylib/polylib_src/
+HOMEPAGE=	https://icps.u-strasbg.fr/polylib/polylib_src/
 COMMENT=	The polyhedral library - long int version
 LICENSE=	gnu-gpl-v3
 

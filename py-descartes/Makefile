@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/descartes/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://bitbucket.org/sgillies/descartes/
+HOMEPAGE=	https://bitbucket.org/sgillies/descartes/
 COMMENT=	Use geometric objects as matplotlib paths and patches
 LICENSE=	modified-bsd
 

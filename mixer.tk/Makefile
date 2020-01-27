@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://gnorw.net/netbsd/
 
 MAINTAINER=	jaka.jejcic@gmail.com
-HOMEPAGE=	http://gnorw.net/netbsd/mixer.tk-0.4/
+HOMEPAGE=	https://gnorw.net/netbsd/mixer.tk-0.4/
 COMMENT=	Tcl/Tk audio mixer using mixerctl utility
 
 NO_CONFIGURE=	yes

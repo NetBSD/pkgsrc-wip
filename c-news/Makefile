@@ -26,7 +26,7 @@ PATCHFILES=	c-news-patch-fileart.c c-news-patch-namecheck.awk \
 		c-news-patch-gawk3
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://www.dinoex.net/c-news.html
+HOMEPAGE=	https://www.dinoex.net/c-news.html
 COMMENT=	The 3rd generation USENET news server
 LICENSE=	c-news-license
 LICENSE_FILE=	c-news-license

@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.cs.unc.edu/Research/compgeom/gzstream/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.cs.unc.edu/Research/compgeom/gzstream/#src
+HOMEPAGE=	https://www.cs.unc.edu/Research/compgeom/gzstream/#src
 COMMENT=	Gzstream is a small C++ library, basically just a wrapper
 LICENSE=	gnu-lgpl-v2.1
 

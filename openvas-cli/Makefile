@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/2332/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openvas.org/
+HOMEPAGE=	https://www.openvas.org/
 COMMENT=	Commandline Interface for OpenVAS
 LICENSE=	gnu-gpl-v2
 

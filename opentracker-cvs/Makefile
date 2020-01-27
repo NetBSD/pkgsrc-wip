@@ -5,7 +5,7 @@ CATEGORIES=		net
 CVS_ROOT=		:pserver:anoncvs:@cvs.erdgeist.org:/home/cvsroot
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://erdgeist.org/arts/software/opentracker/
+HOMEPAGE=		https://erdgeist.org/arts/software/opentracker/
 COMMENT=		High performance bittorrent tracker
 
 WRKSRC=			${WRKDIR}/opentracker

@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.unixuser.org/~euske/python/pyntch/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.unixuser.org/~euske/python/pyntch/index.html
+HOMEPAGE=	https://www.unixuser.org/~euske/python/pyntch/index.html
 COMMENT=	Examine python code and detect possible errors
 LICENSE=	mit
 

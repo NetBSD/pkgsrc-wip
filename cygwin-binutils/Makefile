@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	makoto@ki.nu
-HOMEPAGE=	http://www.cygwin.com/
+HOMEPAGE=	https://www.cygwin.com/
 COMMENT=	GNU binutils ported to Win32/Cygwin environment
 
 GNU_CONFIGURE=		yes

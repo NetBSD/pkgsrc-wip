@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/py/}
 EXTRACT_SUFX=	.tar.gz#md5=d64444015bac78e0c73ac285f9423750
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pylib.org/
+HOMEPAGE=	https://pylib.org/
 COMMENT=	Agile development and test support library
 LICENSE=	mit
 

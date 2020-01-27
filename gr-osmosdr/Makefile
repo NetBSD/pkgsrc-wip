@@ -6,7 +6,7 @@ CATEGORIES=		ham
 MASTER_SITES+=		http://git.osmocom.org/gr-osmosdr/snapshot/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://git.osmocom.org/gr-osmosdr
+HOMEPAGE=		https://git.osmocom.org/gr-osmosdr
 COMMENT=		SDR Hardware support for OsmoSDR and so many more
 LICENSE=		gnu-gpl-v2
 
@@ -24,7 +24,7 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 # Python 36 and 37 result in build errors; 27 builds ok.
 PYTHON_VERSIONS_ACCEPTED=	27
-REPLACE_PYTHON+=	apps/osmocom_siggen_base.py
+REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"

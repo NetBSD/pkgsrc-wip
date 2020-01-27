@@ -9,7 +9,7 @@ MASTER_SITES=	http://paraview.org/files/v4.0/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pouya@san-serriffe.org
-HOMEPAGE=	http://www.paraview.org/
+HOMEPAGE=	https://www.paraview.org/
 COMMENT=	ParaView is a data analysis and scientific visualization application
 LICENSE=	paraview-license
 

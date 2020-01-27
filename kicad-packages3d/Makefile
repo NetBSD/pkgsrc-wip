@@ -9,7 +9,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kicad-pcb.org/
+HOMEPAGE=	https://kicad-pcb.org/
 COMMENT=	3D models for rendering and the MCAD software
 LICENSE=	cc-by-sa-v4.0
 WRKSRC=		${WRKDIR}/kicad-packages3D-${V}

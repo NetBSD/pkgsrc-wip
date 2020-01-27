@@ -5,7 +5,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.mindrot.org/files/softflowd/
 
 MAINTAINER=		cg@cgall.de
-HOMEPAGE=		http://www.mindrot.org/projects/softflowd/
+HOMEPAGE=		https://www.mindrot.org/projects/softflowd/
 COMMENT=		Flow-based network traffic analyser capable of Cisco NetFlow export
 
 

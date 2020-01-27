@@ -6,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
 MAINTAINER=	alnsn@NetBSD.org
-HOMEPAGE=	http://www.torproject.org/
+HOMEPAGE=	https://www.torproject.org/
 COMMENT=	Anonymizing overlay network for TCP
 LICENSE=	modified-bsd
 

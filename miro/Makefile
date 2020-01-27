@@ -6,7 +6,7 @@ CATEGORIES=	multimedia net
 MASTER_SITES=	http://ftp.osuosl.org/pub/pculture.org/miro/src/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.getmiro.com/
+HOMEPAGE=	https://www.getmiro.com/
 COMMENT=	Miro is a integrated video downloader and player
 LICENSE=	gnu-gpl-v2
 

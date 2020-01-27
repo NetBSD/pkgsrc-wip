@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.kannel.org/download/1.2.1/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.kannel.org/download/1.2.1/
+HOMEPAGE=		https://www.kannel.org/download/1.2.1/
 COMMENT=		Kannel WAP gateway
 
 

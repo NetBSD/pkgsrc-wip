@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xenocara.org/
+HOMEPAGE=	https://xenocara.org/
 COMMENT=	X.org USB tablet driver from OpenBSD
 
 GNU_CONFIGURE=	yes

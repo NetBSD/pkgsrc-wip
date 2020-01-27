@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.digitalmars.com/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.digitalmars.com/d/
+HOMEPAGE=	https://www.digitalmars.com/d/
 COMMENT=	Digital Mars D compiler
 #LICENSE=	# TODO: (see mk/license.mk)
 

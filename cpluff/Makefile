@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.c-pluff.org/downloads/
 DESCR=		plug-in framework for C programs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.c-pluff.org/downloads/
+HOMEPAGE=	https://www.c-pluff.org/downloads/
 COMMENT=	TODO: Short description of the package
 LICENSE=	mit
 

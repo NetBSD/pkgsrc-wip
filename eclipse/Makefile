@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.eclipse.org/downloads/download.php?file=/eclipse/downlo
 VERSION=	4.2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eclipse.org/
+HOMEPAGE=	https://www.eclipse.org/
 COMMENT=	Java IDE
 LICENSE=	eclipse-license
 

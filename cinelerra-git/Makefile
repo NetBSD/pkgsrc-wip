@@ -4,7 +4,7 @@ DISTNAME=	cinelerra-cv-2.1
 CATEGORIES=	multimedia
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://cinelerra.org/
+HOMEPAGE=	https://cinelerra.org/
 COMMENT=	Non-linear video and audio editor and compositor
 LICENSE=	gnu-gpl-v2
 

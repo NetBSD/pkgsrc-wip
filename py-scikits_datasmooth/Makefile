@@ -7,7 +7,7 @@ CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.datasmooth/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://scikits.appspot.com/
+HOMEPAGE=	https://scikits.appspot.com/
 COMMENT=	Scikits data smoothing package
 LICENSE=	modified-bsd
 

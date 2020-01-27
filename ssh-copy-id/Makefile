@@ -5,7 +5,7 @@ PKGNAME=	ssh-copy-id-${DISTNAME:S/openssh-//:S/p1/.1/}
 CATEGORIES=	security
 
 MAINTAINER=	iku.iwasa@gmail.com
-HOMEPAGE=	http://www.openssh.com/
+HOMEPAGE=	https://www.openssh.com/
 COMMENT=	Use locally available keys to authorise logins on a remote machine
 LICENSE=	modified-bsd
 

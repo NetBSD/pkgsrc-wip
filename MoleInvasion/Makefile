@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://download.tuxfamily.org/minvasion/packages/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://moleinvasion.tuxfamily.org/dokuwiki/doku.php?id=wiki:minv_en
+HOMEPAGE=	https://moleinvasion.tuxfamily.org/dokuwiki/doku.php?id=wiki:minv_en
 COMMENT=	Platform game with moles
 LICENSE=	gnu-gpl-v2
 

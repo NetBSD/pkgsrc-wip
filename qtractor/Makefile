@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qtractor/}
 
 MAINTAINER=	gianni-pkgsrc-wip@daprile.net
-HOMEPAGE=	http://qtractor.sourceforge.net/
+HOMEPAGE=	https://qtractor.sourceforge.io/
 COMMENT=	Qt Audio/MIDI multi-track sequencer application
 LICENSE=	gnu-gpl-v2
 

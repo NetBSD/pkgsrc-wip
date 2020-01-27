@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FiPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.ctcms.nist.gov/fipy/
+HOMEPAGE=	https://www.ctcms.nist.gov/fipy/
 COMMENT=	Finite volume PDE solver in Python
 LICENSE=	public-domain
 

@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.directfb.org/download/DFBPoint/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.directfb.org/
+HOMEPAGE=	https://www.directfb.org/
 COMMENT=	Simple presentation viewer that uses the DirectFB
 LICENSE=	gnu-lgpl-v2.1
 

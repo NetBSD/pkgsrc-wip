@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://software.internet2.edu/sources/owamp/
 
 MAINTAINER=	mbowie@rocketspace.com
-HOMEPAGE=	http://software.internet2.edu/owamp/
+HOMEPAGE=	https://software.internet2.edu/owamp/
 COMMENT=	One-way active measurement protocol
 LICENSE=	apache-2.0
 

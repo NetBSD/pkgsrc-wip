@@ -6,7 +6,7 @@ MASTER_SITES=		http://www.harding.motd.ca/autossh/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mj@mjturner.net
-HOMEPAGE=		http://www.harding.motd.ca/autossh/
+HOMEPAGE=		https://www.harding.motd.ca/autossh/
 COMMENT=		Monitor and automatically restart SSH sessions and tunnels
 #LICENSE=		autossh
 

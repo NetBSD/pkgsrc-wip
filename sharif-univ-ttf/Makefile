@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://sourceforge.net/projects/arabeyes/files/
+HOMEPAGE=	https://sourceforge.net/projects/arabeyes/files/
 COMMENT=	This font was created by Sharif University
 
 WRKSRC=	${WRKDIR}

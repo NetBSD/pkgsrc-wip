@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.cs.uit.no/~daniels/PingTunnel/ \
 		http://dag.wieers.com/packages/ptunnel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cs.uit.no/~daniels/PingTunnel/
+HOMEPAGE=	https://www.cs.uit.no/~daniels/PingTunnel/
 COMMENT=	TCP tunnel over ICMP
 LICENSE=	modified-bsd
 

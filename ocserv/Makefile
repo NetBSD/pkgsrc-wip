@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.infradead.org/pub/ocserv/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.infradead.org/ocserv/
+HOMEPAGE=	https://www.infradead.org/ocserv/
 COMMENT=	SSL VPN server
 LICENSE=	gnu-gpl-v2
 

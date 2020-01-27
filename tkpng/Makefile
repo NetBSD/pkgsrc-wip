@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tkpng/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.muonics.com/FreeStuff/TkPNG/
+HOMEPAGE=	https://www.muonics.com/FreeStuff/TkPNG/
 COMMENT=	Open source package that adds PNG photo image support to Tcl/Tk
 LICENSE=	2-clause-bsd # ?
 

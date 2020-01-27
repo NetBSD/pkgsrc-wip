@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.evl.uic.edu/cavern/quanta/downloads/
 LICENSE=		gnu-lgpl-v2.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.evl.uic.edu/cavern/quanta/
+HOMEPAGE=		https://www.evl.uic.edu/cavern/quanta/
 COMMENT=		Toolkit for extremely high bandwidth networking
 
 

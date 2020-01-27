@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/glk/implementations/}
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eblong.com/zarf/glk/index.html
+HOMEPAGE=	https://www.eblong.com/zarf/glk/index.html
 COMMENT=	Curses port of Glk interface
 
 # uses halfkey (present since 1.6M)

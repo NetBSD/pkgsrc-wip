@@ -19,7 +19,7 @@ GITHUB_PROJECT=	anvio
 GITHUB_TAG=	v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://merenlab.org/software/anvio/
+HOMEPAGE=	https://merenlab.org/software/anvio/
 COMMENT=	Analysis and visualization platform for 'omics data
 LICENSE=	gnu-gpl-v3
 

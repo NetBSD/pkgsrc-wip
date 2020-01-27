@@ -7,7 +7,7 @@ MASTER_SITES=	-http://www.floodgap.com/software/ttytter/dist1/1.2.02.txt
 EXTRACT_SUFX=
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.floodgap.com/software/ttytter/dist1/
+HOMEPAGE=	https://www.floodgap.com/software/ttytter/dist1/
 COMMENT=	Twitter client written in perl
 #LICENSE=	# The Floodgap Free Software License
 

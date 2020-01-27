@@ -7,7 +7,7 @@ MASTER_SITES=	http://directory.fedoraproject.org/sources/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://www.port389.org/
+HOMEPAGE=	https://www.port389.org/
 COMMENT=	389 Directory Server (LDAP) Base package
 LICENSE=	gnu-gpl-v2
 

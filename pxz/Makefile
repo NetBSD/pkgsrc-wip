@@ -5,7 +5,7 @@ CATEGORIES=	archivers
 GIT_REPO=	https://github.com/jnovy/pxz.git
 
 MAINTAINER=	ishit@users.sourceforge.net
-HOMEPAGE=	http://jnovy.fedorapeople.org/pxz/
+HOMEPAGE=	https://jnovy.fedorapeople.org/pxz/
 COMMENT=	Parallel LZMA compressor using liblzma
 LICENSE=	gnu-gpl-v2
 

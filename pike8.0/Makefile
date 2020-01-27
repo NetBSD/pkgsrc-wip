@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mpl-1.1
 #LICENSE+=	gnu-lgpl-v2.1
 #LICENSE+=	mpl-v1.1
 MAINTAINER=	william@welliver.org
-HOMEPAGE=	http://pike.lysator.liu.se/
+HOMEPAGE=	https://pike.lysator.liu.se/
 COMMENT=	Dynamic language with a syntax similar to Java and C
 
 CHECK_SSP=	no

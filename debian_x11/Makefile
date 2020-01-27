@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/x/xfree86/} \
 			http://security.debian.org/debian-security/pool/updates/main/x/xfree86/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.debian.org/
+HOMEPAGE=		https://www.debian.org/
 COMMENT=		Debian Linux X11 compatibility libraries
 
 DEPENDS+=		debian_base-[0-9]*:../../wip/debian_base

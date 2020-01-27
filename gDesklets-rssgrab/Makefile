@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.gdesklets.info/archive/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.gdesklets.info/archive/#R
+HOMEPAGE=	https://www.gdesklets.info/archive/#R
 COMMENT=	RSS/RDF News Feed Grabber
 
 DEPENDS+=	gDesklets-[0-9]*:../../wip/gDesklets

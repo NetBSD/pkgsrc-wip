@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://simgrid.org/
+HOMEPAGE=	https://simgrid.org/
 COMMENT=	Simulator of distributed applications
 LICENSE=	gnu-lgpl-v2.1
 

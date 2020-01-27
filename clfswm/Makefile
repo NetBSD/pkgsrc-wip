@@ -7,7 +7,7 @@ CATEGORIES=		wm
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		lomka@gero.in
-HOMEPAGE=		http://common-lisp.net/project/clfswm/
+HOMEPAGE=		https://common-lisp.net/project/clfswm/
 COMMENT=		A(nother) Common Lisp FullScreen Window Manager
 LICENSE=		gnu-gpl-v3
 

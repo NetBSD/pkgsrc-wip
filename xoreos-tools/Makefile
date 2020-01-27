@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	cfkoch@edgebsd.org
-HOMEPAGE=	http://xoreos.org/
+HOMEPAGE=	https://xoreos.org/
 COMMENT=	Tools to help the development of xoreos
 LICENSE=	gnu-gpl-v3
 

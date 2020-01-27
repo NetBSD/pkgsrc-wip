@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://people.freebsd.org/~harti/bsnmp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://people.freebsd.org/~harti/bsnmp/
+HOMEPAGE=	https://people.freebsd.org/~harti/bsnmp/
 COMMENT=	Minimal SNMP daemon
 LICENSE=	2-clause-bsd
 

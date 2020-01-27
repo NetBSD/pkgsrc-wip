@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://labs.libre-entreprise.org/frs/download.php/857/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://labs.libre-entreprise.org/projects/gurlchecker/
+HOMEPAGE=	https://labs.libre-entreprise.org/projects/gurlchecker/
 COMMENT=	Gnome2 program to check a page/website for broken links
 LICENSE=	gnu-gpl-v2
 

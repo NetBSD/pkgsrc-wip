@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://guitone.thomaskeller.biz/
+HOMEPAGE=	https://guitone.thomaskeller.biz/
 COMMENT=	Graphical Monotone VCS Tool
 
 ###

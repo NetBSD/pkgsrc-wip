@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.atzm.org/etc/files/pymigemo/
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.atzm.org/etc/pymigemo.html
+HOMEPAGE=	https://www.atzm.org/etc/pymigemo.html
 COMMENT=	Python bindings for C/Migemo
 LICENSE=	2-clause-bsd
 

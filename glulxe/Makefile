@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eblong.com/zarf/glulx/index.html
+HOMEPAGE=	https://www.eblong.com/zarf/glulx/index.html
 COMMENT=	Interpreter for Glulx text adventures
 
 WRKSRC=		${WRKDIR}/glulxe

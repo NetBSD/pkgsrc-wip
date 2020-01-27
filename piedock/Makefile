@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.markusfisch.de/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.markusfisch.de/
+HOMEPAGE=	https://www.markusfisch.de/
 COMMENT=	Task bar and application menu launcher in shape of a pie menu
 LICENSE=	mit
 

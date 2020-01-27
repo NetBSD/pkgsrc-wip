@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://koeln.ccc.de/ablage/brainfuck/
 
 MAINTAINER=		thomaspfaff@users.sourceforge.net
-HOMEPAGE=		http://koeln.ccc.de/ablage/brainfuck/
+HOMEPAGE=		https://koeln.ccc.de/ablage/brainfuck/
 COMMENT=		Nbfc - the "new brainfuck compiler"
 
 WRKSRC=			${WRKDIR}/nbfc-0.1

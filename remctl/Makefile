@@ -7,7 +7,7 @@ CATEGORIES=	sysutils security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eyrie.org/~eagle/software/remctl/
+HOMEPAGE=	https://www.eyrie.org/~eagle/software/remctl/
 COMMENT=	Client/server protocol for running commands using Kerberos v5 auth
 LICENSE=	mit
 

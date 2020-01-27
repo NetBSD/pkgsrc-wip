@@ -8,7 +8,7 @@ MASTER_SITES=	http://math.nist.gov/scimark2/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://math.nist.gov/scimark2/index.html
+HOMEPAGE=	https://math.nist.gov/scimark2/index.html
 COMMENT=	Java benchmark for scientific and numerical computing
 
 WRKSRC=		${WRKDIR}

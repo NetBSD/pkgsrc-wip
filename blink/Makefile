@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://download.ag-projects.com/BlinkQt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ag-projects.com/blink-products-283
+HOMEPAGE=	https://ag-projects.com/blink-products-283
 COMMENT=	Qt version of Blink, a state of the art, easy to use SIP client
 LICENSE=	gnu-gpl-v3
 

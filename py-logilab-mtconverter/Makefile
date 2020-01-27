@@ -7,7 +7,7 @@ CATEGORIES=	converters python
 MASTER_SITES=	http://ftp.logilab.org/pub/mtconverter/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.logilab.org/project/logilab-mtconverter
+HOMEPAGE=	https://www.logilab.org/project/logilab-mtconverter
 COMMENT=	Library convert from a MIME type to another
 LICENSE=	gnu-gpl-v2
 

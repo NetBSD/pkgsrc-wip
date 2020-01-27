@@ -5,7 +5,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://jameslick.com/clamassassin/
 
 MAINTAINER=	ura@jp.NetBSD.org
-HOMEPAGE=	http://jameslick.com/clamassassin/
+HOMEPAGE=	https://jameslick.com/clamassassin/
 COMMENT=	Simple virus filter wrapper for ClamAV
 
 DEPENDS+=	clamav>=0.84:../../security/clamav

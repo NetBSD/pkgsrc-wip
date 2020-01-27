@@ -5,7 +5,7 @@ CATEGORIES=	devel ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=osmocom/}
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.osmocom.org/
+HOMEPAGE=	https://www.osmocom.org/
 COMMENT=	Utility library for Software Defined Radio
 LICENSE=	gnu-gpl-v2
 

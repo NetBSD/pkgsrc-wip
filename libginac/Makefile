@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.ginac.de/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.ginac.de/
+HOMEPAGE=	https://www.ginac.de/
 COMMENT=	The GiNaC symbolic framework
 LICENSE=	gnu-gpl-v2
 

@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://icculus.org/rott/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://icculus.org/rott/
+HOMEPAGE=	https://icculus.org/rott/
 COMMENT=	Fast scrolling first-person perspective 3D action game
 LICENSE=	gnu-gpl-v2
 

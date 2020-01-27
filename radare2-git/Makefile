@@ -7,7 +7,7 @@ GIT_REPO.radare2=	https://github.com/radare/radare2.git
 WRKSRC=			${WRKDIR}/radare2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.radare.org/
+HOMEPAGE=	https://www.radare.org/
 COMMENT=	Reverse engineering framework
 LICENSE=	gnu-gpl-v3
 

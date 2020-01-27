@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.emacswiki.org/emacs/download/
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.emacswiki.org/emacs/CsvMode
+HOMEPAGE=	https://www.emacswiki.org/emacs/CsvMode
 COMMENT=	Emacs mode for editing comma-separated value files
 LICENSE=	gnu-gpl-v2
 

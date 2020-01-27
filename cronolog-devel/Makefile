@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 WRKSRC=		${WRKDIR}/cronolog-1.7.1
 
 MAINTAINER=	otis@sk.FreeBSD.org
-HOMEPAGE=	http://www.freshports.org/sysutils/cronolog-devel/
+HOMEPAGE=	https://www.freshports.org/sysutils/cronolog-devel/
 COMMENT=	Web log rotation utility that provides datestamp filenames
 LICENSE=	gnu-gpl-v2
 

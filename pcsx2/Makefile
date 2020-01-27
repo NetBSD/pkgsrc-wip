@@ -8,7 +8,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pcsx2.net/
+HOMEPAGE=	https://pcsx2.net/
 COMMENT=	Playstation 2 Emulator
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND mit AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND public-domain AND sgi-free-software-b-v2.0
 

@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://bertini.nd.edu/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://bertini.nd.edu/
+HOMEPAGE=	https://bertini.nd.edu/
 COMMENT=	Software for Numerical Algebraic Geometry
 LICENSE=	modified-bsd
 

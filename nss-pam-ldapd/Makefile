@@ -5,7 +5,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://arthurdejong.org/nss-pam-ldapd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://arthurdejong.org/nss-pam-ldapd/
+HOMEPAGE=	https://arthurdejong.org/nss-pam-ldapd/
 COMMENT=	LDAP client for nsswitch
 LICENSE=	gnu-lgpl-v2
 

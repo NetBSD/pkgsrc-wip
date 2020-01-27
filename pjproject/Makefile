@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.pjsip.org/release/2.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=	http://www.pjsip.org/
+HOMEPAGE=	https://www.pjsip.org/
 COMMENT=	FOSS multimedia communication library written in C language
 LICENSE=	gnu-gpl-v2
 

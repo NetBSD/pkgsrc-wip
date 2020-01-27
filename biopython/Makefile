@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://biopython.org/DIST/
 
 MAINTAINER=	dprice@cs.nmsu.edu
-HOMEPAGE=	http://biopython.org/
+HOMEPAGE=	https://biopython.org/
 COMMENT=	Python libraries for computational molecular biology
 LICENSE=	Biopython
 

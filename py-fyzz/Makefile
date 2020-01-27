@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fyzz/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.logilab.org/project/fyzz
+HOMEPAGE=	https://www.logilab.org/project/fyzz
 COMMENT=	SPARQL parser written in Python using yapps
 LICENSE=	gnu-lgpl-v2
 

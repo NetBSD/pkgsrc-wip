@@ -5,7 +5,7 @@ CATEGORIES=	news
 MASTER_SITES=	http://codemadness.org/releases/tscrape/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://codemadness.org/git/tscrape/file/README.html
+HOMEPAGE=	https://codemadness.org/git/tscrape/file/README.html
 COMMENT=	Twitter scraper
 LICENSE=	isc
 

@@ -8,7 +8,7 @@ MASTER_SITES+=	http://www.schedmd.com/download/latest/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.schedmd.com/
+HOMEPAGE=	https://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2

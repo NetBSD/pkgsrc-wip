@@ -6,7 +6,7 @@ CATEGORIES=	geography
 MASTER_SITES=	http://www.foxtrotgps.org/releases/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.foxtrotgps.org/
+HOMEPAGE=	https://www.foxtrotgps.org/
 COMMENT=	GPS application
 
 LICENSE=	gnu-gpl-v2

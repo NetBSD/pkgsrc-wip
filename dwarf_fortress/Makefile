@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.bay12games.com/dwarves/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bay12games.com/dwarves/
+HOMEPAGE=	https://www.bay12games.com/dwarves/
 COMMENT=	Single-player fantasy game in a randomly generated, persistent world
 LICENSE=	unlicense
 

@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	-http://marutan.net/rpcemu/cgi/download.php?sFName=${RPCEMUVER}/rpcemu-${RPCEMUVER}.tar.gz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://marutan.net/rpcemu/
+HOMEPAGE=	https://marutan.net/rpcemu/
 COMMENT=	Acorn RiscPC and A7000 emulator
 LICENSE=	gnu-gpl-v2
 

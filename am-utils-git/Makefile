@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 GIT_REPO=	git://git.fsl.cs.sunysb.edu/am-utils-6.2.git
 
 MAINTAINER=		hauke@NetBSD.org
-HOMEPAGE=		http://www.am-utils.org/
+HOMEPAGE=		https://www.am-utils.org/
 COMMENT=		Berkeley automounter suite of utilities
 LICENSE=		original-bsd
 

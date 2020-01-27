@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/1675/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sonicvisualiser.org/
+HOMEPAGE=	https://www.sonicvisualiser.org/
 COMMENT=	Application for viewing and analysing music audio files
 LICENSE=	gnu-gpl-v2
 

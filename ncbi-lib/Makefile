@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/old/${PKGVERSION_NOREV}
 DIST_SUBDIR=		ncbi-${PKGVERSION_NOREV}
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/
+HOMEPAGE=		https://www.ncbi.nlm.nih.gov/IEB/ToolBox/
 COMMENT=		Portable, modular software for molecular biology
 
 WRKSRC=			${WRKDIR}/ncbi

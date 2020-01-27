@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
 MAINTAINER=		nils@NetBSD.org
-HOMEPAGE=		http://docs.cacti.net/
+HOMEPAGE=		https://docs.cacti.net/
 COMMENT=		Provides a method to view Cacti graphs with a resolution of upto 5 sec
 LICENSE=		gnu-gpl-v2
 

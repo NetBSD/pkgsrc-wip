@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.phildev.net/iptstate/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		roland.illig@gmx.de
-HOMEPAGE=		http://www.phildev.net/iptstate/
+HOMEPAGE=		https://www.phildev.net/iptstate/
 COMMENT=		Display Netfilter state tables in a "top"-like interface
 
 ONLY_FOR_PLATFORM=	Linux-*-*

@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlworker/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lowagie.com/iText/
+HOMEPAGE=	https://www.lowagie.com/iText/
 COMMENT=	Java classes to generate and parse XML files
 LICENSE=	gnu-agpl-v3
 

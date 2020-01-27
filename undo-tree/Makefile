@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.dr-qubit.org/${DISTNAME}/
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.emacswiki.org/emacs/UndoTree
+HOMEPAGE=	https://www.emacswiki.org/emacs/UndoTree
 COMMENT=	Treat Emacs undo history as a tree
 LICENSE=	gnu-gpl-v3
 

@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.hepforge.org/archive/dispred/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://dispred.hepforge.org/
+HOMEPAGE=	https://dispred.hepforge.org/
 COMMENT=	Tools for calculating DIS cross sections at LO and NLO in QCD
 #LICENSE=	# TODO: (see mk/license.mk)
 

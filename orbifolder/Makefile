@@ -7,7 +7,7 @@ MASTER_SITES=	http://orbifolder.hepforge.org/source/V1.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://orbifolder.hepforge.org/
+HOMEPAGE=	https://orbifolder.hepforge.org/
 COMMENT=	Study the Low Energy Effective Theory of Heterotic Orbifolds
 LICENSE=	gnu-gpl-v3
 

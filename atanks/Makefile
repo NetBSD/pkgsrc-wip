@@ -7,7 +7,7 @@ CATEGORIES=	wip
 MASTER_SITES=	https://sourceforge.net/projects/atanks/files/atanks/atanks-6.5/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://atanks.sourceforge.net/
+HOMEPAGE=	https://atanks.sourceforge.io/
 COMMENT=	Multi-platform Scorched Earth clone
 LICENSE=	gnu-gpl-v2
 

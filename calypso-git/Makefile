@@ -4,7 +4,7 @@ DISTNAME=	calypso-1.5
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://keithp.com/blogs/calypso/
+HOMEPAGE=	https://keithp.com/blogs/calypso/
 COMMENT=	CardDAV/CalDAV server (git version)
 LICENSE=	gnu-gpl-v3
 

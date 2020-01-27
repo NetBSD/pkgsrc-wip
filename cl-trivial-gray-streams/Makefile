@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/project/cl-plus-ssl/download/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://www.cliki.net/trivial-gray-streams
+HOMEPAGE=	https://www.cliki.net/trivial-gray-streams
 COMMENT=	Trivial-gray-streams is a compatibility layer for Gray streams
 LICENSE=	mit
 

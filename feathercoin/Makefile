@@ -8,7 +8,7 @@ MASTER_SITES=	https://github.com/FeatherCoin/Feathercoin/archive/
 DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://feathercoin.com/
+HOMEPAGE=	https://feathercoin.com/
 COMMENT=	Open source Internet currency
 LICENSE=	mit
 

@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.donhopkins.com/home/micropolis/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.donhopkins.com/home/micropolis/
+HOMEPAGE=	https://www.donhopkins.com/home/micropolis/
 COMMENT=	City-building simulation
 LICENSE=	gnu-gpl-v3
 

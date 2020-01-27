@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.libimobiledevice.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.libimobiledevice.org/
+HOMEPAGE=	https://www.libimobiledevice.org/
 COMMENT=	Multiplexing connections over USB for Apple iOS devices
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 

@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	https://people.freedesktop.org/~jwhite/spice-html5/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.spice-space.org/
+HOMEPAGE=	https://www.spice-space.org/
 COMMENT=	Pure Javascript SPICE client
 LICENSE=	gnu-lgpl-v3
 

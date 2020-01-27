@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=nltk/}
 GITHUB_TAG=	f3dc1f388b08aa310933dbddf21e12b9fc6b50f1
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.nltk.org/nltk_data/
+HOMEPAGE=	https://www.nltk.org/nltk_data/
 COMMENT=	Data distribution for NLTK
 
 NO_BUILD=	yes

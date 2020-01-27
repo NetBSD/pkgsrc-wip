@@ -5,7 +5,7 @@ CATEGORIES=	time
 MASTER_SITES=	http://calcurse.org/files/
 
 MAINTAINER=	jan.smydke@jh-inst.cas.cz
-HOMEPAGE=	http://calcurse.org/
+HOMEPAGE=	https://calcurse.org/
 COMMENT=	Text based calendar and scheduling application
 LICENSE=	2-clause-bsd
 

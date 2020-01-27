@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luakit/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://luakit.org/
+HOMEPAGE=	https://luakit.org/
 COMMENT=	Webkit based browser framework extensible by Lua
 LICENSE=	gnu-gpl-v3
 

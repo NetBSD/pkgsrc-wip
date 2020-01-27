@@ -6,7 +6,7 @@ CATEGORIES=	misc
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cfkoch@edgebsd.org
-HOMEPAGE=	http://www.libimobiledevice.org/
+HOMEPAGE=	https://www.libimobiledevice.org/
 COMMENT=	Libraries and tools to communicate with iOS devices
 LICENSE=	gnu-gpl-v2
 

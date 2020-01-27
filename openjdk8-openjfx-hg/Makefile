@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	# hg package, intentionally left blank
 
 MAINTAINER=	tnn@NetBSD.org
-HOMEPAGE=	http://wiki.openjdk.java.net/display/OpenJFX/Main
+HOMEPAGE=	https://wiki.openjdk.java.net/display/OpenJFX/Main
 COMMENT=	JavaFX application toolkit
 #LICENSE=	GPL2 + classpath exception
 

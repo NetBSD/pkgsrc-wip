@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://zork.net/~nick/sais/
+HOMEPAGE=		https://zork.net/~nick/sais/
 COMMENT=		Strange Adventures in Infinite Space engine (SDL port)
 LICENSE=		gnu-gpl-v2
 

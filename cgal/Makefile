@@ -10,7 +10,7 @@ GITHUB_RELEASE=	releases/CGAL-${VERSION}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reinoud@NetBSD.org
-HOMEPAGE=	http://www.cgal.org/
+HOMEPAGE=	https://www.cgal.org/
 COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
 

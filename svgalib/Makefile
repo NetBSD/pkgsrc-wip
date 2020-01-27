@@ -5,7 +5,7 @@ CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.svgalib.org/
 
 MAINTAINER=	collver1@comcast.net
-HOMEPAGE=	http://www.svgalib.org/
+HOMEPAGE=	https://www.svgalib.org/
 COMMENT=	Low level console graphics library
 
 

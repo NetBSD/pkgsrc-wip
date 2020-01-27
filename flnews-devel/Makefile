@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 #EXTRACT_USING=	bsdtar
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	http://micha.freeshell.org/flnews/
+HOMEPAGE=	https://micha.freeshell.org/flnews/
 COMMENT=	Fast and lightweight USENET newsreader with GUI
 LICENSE=	modified-bsd AND 2-clause-bsd AND unicode
 

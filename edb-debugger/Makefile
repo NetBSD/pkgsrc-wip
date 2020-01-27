@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=eteran/}
 #WRKSRC=		${WRKDIR}/debugger
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://codef00.com/projects#debugger
+HOMEPAGE=	https://codef00.com/projects#debugger
 COMMENT=	Cross platform x86/x86-64 debugger
 LICENSE=	gnu-gpl-v2
 

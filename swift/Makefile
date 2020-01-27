@@ -5,7 +5,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://swift.im/downloads/releases/${DISTNAME}/
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://swift.im/
+HOMEPAGE=	https://swift.im/
 COMMENT=	Swift XMPP Client
 LICENSE=	gnu-gpl-v3
 

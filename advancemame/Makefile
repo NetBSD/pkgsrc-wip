@@ -7,7 +7,7 @@ GITHUB_PROJECT=	advancemame
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	http://www.advancemame.it/
+HOMEPAGE=	https://www.advancemame.it/
 COMMENT=	Arcade game emulator with advanced video support
 LICENSE=	gnu-gpl-v2
 

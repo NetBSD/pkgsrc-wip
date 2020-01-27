@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.fefe.de/fnord/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.fefe.de/fnord/
+HOMEPAGE=	https://www.fefe.de/fnord/
 COMMENT=	Small HTTP server
 LICENSE=	gnu-gpl-v2
 

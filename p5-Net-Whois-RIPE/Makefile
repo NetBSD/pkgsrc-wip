@@ -6,7 +6,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	geeogeegeeoh@users.sourceforge.net
-HOMEPAGE=	http://www.ripe.net/
+HOMEPAGE=	https://www.ripe.net/
 COMMENT=	Implementation of RIPE Whois
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww

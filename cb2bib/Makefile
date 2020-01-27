@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		http://www.molspaces.com/dl/progs/
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://www.molspaces.com/cb2bib/
+HOMEPAGE=		https://www.molspaces.com/cb2bib/
 COMMENT=		Extract and organize bibliographic references
 LICENSE=		gnu-gpl-v3
 

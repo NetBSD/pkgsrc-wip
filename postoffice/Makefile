@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://www.pell.portland.or.us/~orc/Code/postoffice/
 
 MAINTAINER=		pbraun@nethence.com
-HOMEPAGE=		http://www.pell.portland.or.us/~orc/Code/postoffice/
+HOMEPAGE=		https://www.pell.portland.or.us/~orc/Code/postoffice/
 COMMENT=		Simple SMTP mail server and client
 LICENSE=		original-bsd
 

@@ -5,7 +5,7 @@ CATEGORIES=	news
 MASTER_SITES=	http://offog.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://offog.org/code/rawdog/
+HOMEPAGE=	https://offog.org/code/rawdog/
 COMMENT=	RSS Aggregator Without Delusions Of Grandeur
 LICENSE=	gnu-gpl-v2
 

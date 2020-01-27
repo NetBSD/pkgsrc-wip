@@ -8,7 +8,7 @@ MASTER_SITES=	http://docutils.sourceforge.net/tools/editors/emacs/
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://docutils.sourceforge.net/docs/user/emacs.html
+HOMEPAGE=	https://docutils.sourceforge.io/docs/user/emacs.html
 COMMENT=	Emacs mode for reStructuredText documents
 
 WRKSRC=		${WRKDIR}

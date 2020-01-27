@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
 MAINTAINER=		nils@NetBSD.org
-HOMEPAGE=		http://docs.cacti.net/plugin:aggregate
+HOMEPAGE=		https://docs.cacti.net/plugin:aggregate
 COMMENT=		Aggregate plugin to cacti
 LICENSE=		gnu-gpl-v2
 

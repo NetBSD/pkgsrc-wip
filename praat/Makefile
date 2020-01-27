@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=praat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	cherry@NetBSD.org
-HOMEPAGE=	http://www.praat.org/
+HOMEPAGE=	https://www.praat.org/
 COMMENT=	Doing phonetics by computer
 LICENSE=	gnu-gpl-v2
 

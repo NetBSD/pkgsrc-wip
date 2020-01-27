@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.cs.unm.edu/~mccune/prover9/download/
 
 MAINTAINER=	pouya@san-serriffe.org
-HOMEPAGE=	http://www.cs.unm.edu/~mccune/prover9/
+HOMEPAGE=	https://www.cs.unm.edu/~mccune/prover9/
 COMMENT=	Prover9 is an automated theorem prover
 LICENSE=	gnu-gpl-v2
 

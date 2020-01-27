@@ -5,7 +5,7 @@ CATEGORIES=	news
 MASTER_SITES=	http://codemadness.org/releases/sfeed/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://codemadness.org/git/sfeed/file/README.html
+HOMEPAGE=	https://codemadness.org/git/sfeed/file/README.html
 COMMENT=	RSS and Atom parser
 LICENSE=	isc
 

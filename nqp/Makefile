@@ -5,7 +5,7 @@ CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/nqp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rakudo.org/
+HOMEPAGE=	https://rakudo.org/
 COMMENT=	Not Quite Perl -- lightweight Perl 6-like environment for VM
 LICENSE=	artistic-2.0
 

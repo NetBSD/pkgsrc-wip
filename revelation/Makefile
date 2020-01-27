@@ -6,7 +6,7 @@ MASTER_SITES=	https://bitbucket.org/erikg/revelation/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://revelation.olasagasti.info/
+HOMEPAGE=	https://revelation.olasagasti.info/
 COMMENT=	Password manager for the GNOME desktop
 LICENSE=	gnu-gpl-v2
 

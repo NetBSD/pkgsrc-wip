@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sipe/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	yacht@users.sourceforge.net
-HOMEPAGE=	http://sipe.sourceforge.net/
+HOMEPAGE=	https://sipe.sourceforge.io/
 COMMENT=	Pidgin plugin for Microsoft Office Communicator
 LICENSE=	gnu-gpl-v2
 

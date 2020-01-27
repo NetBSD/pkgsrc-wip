@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fplll/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
 
 MAINTAINER=	alnsn@NetBSD.org
-HOMEPAGE=	http://perso.ens-lyon.fr/damien.stehle/#software
+HOMEPAGE=	https://perso.ens-lyon.fr/damien.stehle/#software
 COMMENT=	Lattice algorithms using floating-point arithmetic
 LICENSE=	gnu-lgpl-v2.1
 

@@ -6,7 +6,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER?=		brook@nmsu.edu
-HOMEPAGE?=		http://www.boost.org/
+HOMEPAGE?=		https://www.boost.org/
 COMMENT?=		Run the Boost test suite
 LICENSE=		boost-license
 

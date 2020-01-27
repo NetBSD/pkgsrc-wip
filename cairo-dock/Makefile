@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Cairo-Dock/}
 GITHUB_PROJECT=	cairo-dock-core
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.glx-dock.org/
+HOMEPAGE=	https://www.glx-dock.org/
 COMMENT=	Dock application
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2
 

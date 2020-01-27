@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.billposer.org/Software/Downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	http://www.billposer.org/Software/a2b.html
+HOMEPAGE=	https://www.billposer.org/Software/a2b.html
 COMMENT=	Convert between textual representations of numbers and binary
 LICENSE=	gnu-gpl-v3
 

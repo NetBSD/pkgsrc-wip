@@ -7,7 +7,7 @@ GITHUB_PROJECT=	buildscripts
 GITHUB_TAG=	v20151213
 
 MAINTAINER=	js@heap.zone
-HOMEPAGE=	http://devkitpro.org/
+HOMEPAGE=	https://devkitpro.org/
 COMMENT=	Build rules for devkitARM
 # They currently don't have a license:
 # https://github.com/devkitPro/buildscripts/issues/20

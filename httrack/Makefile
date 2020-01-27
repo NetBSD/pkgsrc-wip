@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.httrack.com/cserv.php3?File= \
 		http://mirror.httrack.com/historical/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.httrack.com/
+HOMEPAGE=	https://www.httrack.com/
 COMMENT=	Easy-to-use offline browser utility
 LICENSE=	gnu-gpl-v2
 

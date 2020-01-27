@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=autopsy/}
 
 MAINTAINER=		oivulf@gmail.com
-HOMEPAGE=		http://www.sleuthkit.org/
+HOMEPAGE=		https://www.sleuthkit.org/
 COMMENT=		Browser interface to sleuthkit
 LICENSE=		gnu-gpl-v2
 

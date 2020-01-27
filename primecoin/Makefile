@@ -6,7 +6,7 @@ CATEGORIES=	finance
 MASTER_SITES=	http://sourceforge.net/projects/primecoin/files/0.1.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://primecoin.io/
+HOMEPAGE=	https://primecoin.io/
 COMMENT=	Cryptocurrency based on searching for prime numbers
 LICENSE=	mit
 

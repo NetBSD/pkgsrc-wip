@@ -11,7 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} nst140_lnx_release_h.zip
 SITES.nst140_lnx_release_h.zip=	http://rbelmont.mameworld.info/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rbelmont.mameworld.info/?page_id=200
+HOMEPAGE=	https://rbelmont.mameworld.info/?page_id=200
 COMMENT=	Portable, very accurate NES emulator with UNIF support
 LICENSE=	gnu-gpl-v2
 

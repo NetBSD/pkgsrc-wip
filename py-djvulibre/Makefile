@@ -6,7 +6,7 @@ CATEGORIES=	graphics textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-djvulibre/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://jwilk.net/software/python-djvulibre
+HOMEPAGE=	https://jwilk.net/software/python-djvulibre
 COMMENT=	Python bindings for the DjVuLibre library
 LICENSE=	gnu-gpl-v2
 

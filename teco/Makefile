@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	http://almy.us/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://almy.us/teco.html
+HOMEPAGE=	https://almy.us/teco.html
 COMMENT=	Powerful and compact editor with nongrafical user interface
 
 MAKE_FILE=	makefile

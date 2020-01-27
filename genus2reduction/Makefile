@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.math.u-bordeaux.fr/~qliu/G2R/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.math.u-bordeaux.fr/~qliu/G2R/
+HOMEPAGE=	https://www.math.u-bordeaux.fr/~qliu/G2R/
 COMMENT=	Conductor and Reduction Types for Genus 2 Curves
 #LICENSE=	# TODO: (see mk/license.mk)
 

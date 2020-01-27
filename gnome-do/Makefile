@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/do/trunk/0.8.5/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://do.davebsd.com/
+HOMEPAGE=	https://do.davebsd.com/
 COMMENT=	Panel replacement
 LICENSE=	gnu-gpl-v3
 

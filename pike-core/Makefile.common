@@ -13,7 +13,7 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://pike.lysator.liu.se/pub/pike/all/${PIKE_VERSION:Q}/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://pike.lysator.liu.se/
+HOMEPAGE=	https://pike.lysator.liu.se/
 
 PATCHDIR=	${PKGDIR}/../../wip/pike-core/patches
 DISTINFO_FILE=	${PKGDIR}/../../wip/pike-core/distinfo
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--with-threads
 .endif
 
 CONFIGURE_ARGS+=	--with-gmp --without-nls --enable-rtldebug \
-	--without-dmalloc --without-
+			--without-dmalloc --without-
 
 PIKE_MODULES=
 

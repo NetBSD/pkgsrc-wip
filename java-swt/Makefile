@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-2014060
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eclipse.org/swt/
+HOMEPAGE=	https://www.eclipse.org/swt/
 COMMENT=	Standard Widget Toolkit for Java
 LICENSE=	eclipse-license
 

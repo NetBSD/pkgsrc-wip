@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		2-clause-bsd
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.stacken.kth.se/project/pptout/
+HOMEPAGE=		https://www.stacken.kth.se/project/pptout/
 COMMENT=		Desktop publishing for X
 
 

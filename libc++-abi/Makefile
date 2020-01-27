@@ -7,7 +7,7 @@ MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://llvm.org/
+HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine C++ standard library support
 LICENSE=	modified-bsd
 

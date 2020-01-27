@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/z/zipios++/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://zipios.sourceforge.net/
+HOMEPAGE=	https://zipios.sourceforge.io/
 COMMENT=	java.util.zip-like C++ library for reading and writing Zip files
 LICENSE=	gnu-lgpl-v2.1
 

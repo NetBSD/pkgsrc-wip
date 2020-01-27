@@ -5,7 +5,7 @@ CATEGORIES=	graphics
 GIT_REPO=	git://github.com/FLIF-hub/flif.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://flif.info/
+HOMEPAGE=	https://flif.info/
 COMMENT=	Free Lossless Image Format
 LICENSE=	gnu-lgpl-v3 AND apache-2.0
 

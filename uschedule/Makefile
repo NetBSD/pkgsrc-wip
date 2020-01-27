@@ -5,7 +5,7 @@ CATEGORIES=	time
 MASTER_SITES=	http://www.ohse.de/uwe/uschedule/
 
 MAINTAINER=	neil@daikokuya.co.uk
-HOMEPAGE=	http://www.ohse.de/uwe/uschedule.html
+HOMEPAGE=	https://www.ohse.de/uwe/uschedule.html
 COMMENT=	Secure management of job scheduling
 
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}

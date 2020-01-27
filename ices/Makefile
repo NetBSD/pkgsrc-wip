@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.icecast.org/releases/
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.icecast.org/
+HOMEPAGE=	https://www.icecast.org/
 COMMENT=	MP3/Vorbis encoder for icecast servers
 
 

@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mac-robber/}
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.sleuthkit.org/mac-robber/
+HOMEPAGE=		https://www.sleuthkit.org/mac-robber/
 COMMENT=		Collect mac-times from a computer
 
 INSTALLATION_DIRS=	bin

@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://www.bioinformatics.org/ghemical/download/release20090911/
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://www.bioinformatics.org/ghemical/libghemical/index.html
+HOMEPAGE=	https://www.bioinformatics.org/ghemical/libghemical/index.html
 COMMENT=	Molecular modelling library
 LICENSE=	gnu-gpl-v2
 

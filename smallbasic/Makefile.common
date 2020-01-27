@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=smallbasic/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-HOMEPAGE=	http://smallbasic.sourceforge.net/
+HOMEPAGE=	https://smallbasic.sourceforge.io/
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	aclocal autoheader autoconf automake bash pkg-config

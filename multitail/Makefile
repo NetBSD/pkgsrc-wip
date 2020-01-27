@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.vanheusden.com/multitail/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vanheusden.com/multitail/
+HOMEPAGE=	https://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
 LICENSE=	gnu-gpl-v2
 

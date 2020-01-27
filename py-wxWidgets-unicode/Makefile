@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 #LICENSE=	wxWindows Library Licence
 
 MAINTAINER=	milos.negovanovic@googlemail.com
-HOMEPAGE=	http://wxpython.org/
+HOMEPAGE=	https://wxpython.org/
 COMMENT=	Python bindings for wxWidgets (unicode version)
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wxPython

@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://varnish-cache.org/
+HOMEPAGE=	https://varnish-cache.org/
 COMMENT=	High-performace HTTP accelerator
 LICENSE=	modified-bsd
 

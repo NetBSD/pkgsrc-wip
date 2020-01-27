@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NO
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.qt.io/
+HOMEPAGE=	https://www.qt.io/
 COMMENT=	Cross-platform IDE for Qt and C++
 LICENSE=	gnu-lgpl-v3
 

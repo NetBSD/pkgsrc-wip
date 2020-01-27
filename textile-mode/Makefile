@@ -8,7 +8,7 @@ MASTER_SITES=	http://dev.nozav.org/scripts/
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.emacswiki.org/emacs/TextileMode
+HOMEPAGE=	https://www.emacswiki.org/emacs/TextileMode
 COMMENT=	Emacs mode for editing Textile documents
 LICENSE=	gnu-gpl-v2
 

@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 # MASTER_SITES+=	http://archlinux-stuff.googlecode.com/files/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.gpsbabel.org/
+HOMEPAGE=	https://www.gpsbabel.org/
 #HOMEPAGE=	https://github.com/gpsbabel/gpsbabel
 COMMENT=	Utility to convert and fetch GPS related data
 LICENSE=	gnu-gpl-v2

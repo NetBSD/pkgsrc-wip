@@ -6,7 +6,7 @@ CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
 MAINTAINER=		ola@mreriksson.net
-HOMEPAGE=		http://www.stacken.kth.se/project/arla/
+HOMEPAGE=		https://www.stacken.kth.se/project/arla/
 COMMENT=		Free AFS implementation from KTH
 
 

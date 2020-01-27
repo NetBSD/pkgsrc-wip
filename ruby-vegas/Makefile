@@ -4,7 +4,7 @@ DISTNAME=	vegas-0.1.11
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.quirkey.com/vegas/
+HOMEPAGE=	https://code.quirkey.com/vegas/
 COMMENT=	Sinatra/Rack app wrapper
 LICENSE=	mit
 

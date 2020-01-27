@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opende/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.ode.org/
+HOMEPAGE=	https://www.ode.org/
 COMMENT=	Open Dynamics Engine
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 

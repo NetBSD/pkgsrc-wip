@@ -8,7 +8,7 @@ MASTER_SITES=	http://higan.googlecode.com/files/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://byuu.org/higan/
+HOMEPAGE=	https://byuu.org/higan/
 COMMENT=	Nintendo multi-system emulator
 LICENSE=	gnu-gpl-v3
 

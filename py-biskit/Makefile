@@ -7,7 +7,7 @@ CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=biskit/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://biskit.pasteur.fr/
+HOMEPAGE=	https://biskit.pasteur.fr/
 COMMENT=	Python platform for structural bioinformatics
 LICENSE=	gnu-gpl-v2
 

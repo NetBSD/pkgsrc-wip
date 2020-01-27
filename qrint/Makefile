@@ -8,7 +8,7 @@ MASTER_SITES=	http://people.math.gatech.edu/~dieci/qrint/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://people.math.gatech.edu/~dieci/software-qrint.html
+HOMEPAGE=	https://people.math.gatech.edu/~dieci/software-qrint.html
 COMMENT=	Orthonormal integrators
 #LICENSE=	# TODO: (see mk/license.mk)
 

@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.hack.org/mc/hacks/mcwm/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hack.org/mc/hacks/mcwm/
+HOMEPAGE=	https://www.hack.org/mc/hacks/mcwm/
 COMMENT=	Window manager for the X Window System written entirely with XCB
 LICENSE=	isc
 

@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://hyvatti.iki.fi/~jaakko/pic/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hyvatti.iki.fi/~jaakko/pic/picprog.html
+HOMEPAGE=	https://hyvatti.iki.fi/~jaakko/pic/picprog.html
 COMMENT=	PIC16, PIC12 and PIC18 microcontroller programmer
 LICENSE=	gnu-gpl-v3
 

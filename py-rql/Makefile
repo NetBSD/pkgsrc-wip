@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rql/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.logilab.org/project/rql
+HOMEPAGE=	https://www.logilab.org/project/rql
 COMMENT=	Relationship query language (RQL) utilities
 LICENSE=	gnu-lgpl-v2.1
 

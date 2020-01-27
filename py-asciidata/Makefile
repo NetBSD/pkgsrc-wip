@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.stecf.org/software/PYTHONtools/astroasciidata/source/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.stecf.org/software/PYTHONtools/astroasciidata/
+HOMEPAGE=	https://www.stecf.org/software/PYTHONtools/astroasciidata/
 COMMENT=	Asciidata , to handle (read/modify/write) ASCII tables
 LICENSE=	gnu-lgpl-v3
 

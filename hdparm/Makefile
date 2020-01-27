@@ -6,7 +6,7 @@ CATEGORIES=		linux sysutils
 MASTER_SITES=		http://www.ibiblio.org/pub/Linux/system/hardware/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ibiblio.org/pub/Linux/system/hardware/
+HOMEPAGE=		https://www.ibiblio.org/pub/Linux/system/hardware/
 COMMENT=		Linux tool for view and manipulate IDE drive parameters
 
 ONLY_FOR_PLATFORM=	Linux-*-*

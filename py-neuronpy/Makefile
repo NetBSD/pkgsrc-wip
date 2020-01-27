@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=n/neuronpy/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://bitbucket.org/tommctavish/neuronpy/
+HOMEPAGE=	https://bitbucket.org/tommctavish/neuronpy/
 COMMENT=	The NEURON simulator and analyzing neural data
 LICENSE=	mit
 

@@ -7,7 +7,7 @@ MASTER_SITES=	http://bisqwit.iki.fi/src/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bisqwit.iki.fi/src/
+HOMEPAGE=	https://bisqwit.iki.fi/src/
 COMMENT=	Download multimedia stream from a Microsoft Windows Media Server
 LICENSE=	zlib
 

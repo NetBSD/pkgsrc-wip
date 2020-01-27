@@ -6,7 +6,7 @@ CATEGORIES=	games
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://residualvm.org/
+HOMEPAGE=	https://residualvm.org/
 COMMENT=	Lucas Arts' LUA-based 3D adventure engine
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND isc AND ofl-v1.1 AND zlib
 

@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://dvegas.hepforge.org/downloads/?f=
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://dvegas.hepforge.org/
+HOMEPAGE=	https://dvegas.hepforge.org/
 COMMENT=	Parallel Adaptive Monte Carlo Integration in C++
 LICENSE=	gnu-lgpl-v2.1
 

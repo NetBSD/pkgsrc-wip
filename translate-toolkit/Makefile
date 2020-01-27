@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/translate-${GIT_LEVEL}
 #EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://toolkit.translatehouse.org/
+HOMEPAGE=	https://toolkit.translatehouse.org/
 COMMENT=	Essential Toolkit for Localization Engineers
 LICENSE=	gnu-gpl-v1
 

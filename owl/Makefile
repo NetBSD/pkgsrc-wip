@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.ktools.org/dist/owl/
 LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		jdw-pkgsrc@menelos.com
-HOMEPAGE=		http://www.ktools.org/dist/owl/
+HOMEPAGE=		https://www.ktools.org/dist/owl/
 COMMENT=		Curses-based instant messaging client
 
 

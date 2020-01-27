@@ -6,7 +6,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	http://djwong.org/programs/bogomips/
 
 MAINTAINER=	schaecsn@gmx.net
-HOMEPAGE=	http://djwong.org/programs/bogomips/
+HOMEPAGE=	https://djwong.org/programs/bogomips/
 COMMENT=	Unscientific measurement of CPU speed
 LICENSE=	gnu-gpl-v2
 

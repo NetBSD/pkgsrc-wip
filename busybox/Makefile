@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.busybox.net/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.busybox.net/
+HOMEPAGE=	https://www.busybox.net/
 COMMENT=	The Swiss Army Knife of Embedded Linux
 LICENSE=	gnu-gpl-v2
 

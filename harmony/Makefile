@@ -8,7 +8,7 @@ CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bugzilla/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bugzilla.org/
+HOMEPAGE=	https://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
 LICENSE=	mpl-2.0
 

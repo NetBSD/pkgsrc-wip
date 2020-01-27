@@ -5,7 +5,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tools.suckless.org/sent/
+HOMEPAGE=	https://tools.suckless.org/sent/
 COMMENT=	Simple plaintext presentation tool
 LICENSE=	mit
 

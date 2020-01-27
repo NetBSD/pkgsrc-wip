@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://gwolf.org/soft/eot/
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://gwolf.org/soft/eot/
+HOMEPAGE=	https://gwolf.org/soft/eot/
 COMMENT=	Expire Old Threads
 LICENSE=	gnu-gpl-v2
 

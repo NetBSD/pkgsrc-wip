@@ -7,7 +7,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cartopy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://scitools.org.uk/cartopy/docs/latest/
+HOMEPAGE=	https://scitools.org.uk/cartopy/docs/latest/
 COMMENT=	Cartographic python library with matplotlib support for visualisation
 LICENSE=	gnu-lgpl-v3
 

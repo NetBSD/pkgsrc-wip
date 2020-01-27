@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://www.hepforge.org/archive/gosam/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://gosam.hepforge.org/
+HOMEPAGE=	https://gosam.hepforge.org/
 COMMENT=	Automated One-Loop matrix element generator
 LICENSE=	gnu-gpl-v3
 

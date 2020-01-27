@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ophcrack/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://ophcrack.sourceforge.net/
+HOMEPAGE=	https://ophcrack.sourceforge.io/
 COMMENT=	Ophcrack is a free Windows password cracker based on rainbow tables
 LICENSE=	gnu-gpl-v2
 

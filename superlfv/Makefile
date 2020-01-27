@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.hepforge.org/archive/superlfv/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://superlfv.hepforge.org/Super_LFV.html
+HOMEPAGE=	https://superlfv.hepforge.org/Super_LFV.html
 COMMENT=	Calculate lepton flavor violating observables
 LICENSE=	mit
 

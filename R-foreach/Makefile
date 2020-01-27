@@ -4,7 +4,7 @@ CATEGORIES=	devel math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://cran.r-project.org/web/packages/foreach/index.html
+HOMEPAGE=	https://cran.r-project.org/web/packages/foreach/index.html
 COMMENT=	Foreach looping construct for R
 LICENSE=	apache-2.0
 

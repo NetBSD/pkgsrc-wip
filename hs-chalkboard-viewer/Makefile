@@ -5,7 +5,7 @@ DISTNAME=	chalkboard-viewer-0.1
 CATEGORIES=	graphics
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://ittc.ku.edu/~andygill/chalkboard.php
+HOMEPAGE=	https://ittc.ku.edu/~andygill/chalkboard.php
 COMMENT=	OpenGL based viewer for chalkboard rendered images
 LICENSE=	modified-bsd
 

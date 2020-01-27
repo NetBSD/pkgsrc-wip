@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.musl-libc.org/releases/
 
 MAINTAINER=	maya@NetBSD.org
-HOMEPAGE=	http://www.musl-libc.org/
+HOMEPAGE=	https://www.musl-libc.org/
 COMMENT=	C standard library
 LICENSE=	mit
 

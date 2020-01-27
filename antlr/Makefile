@@ -42,7 +42,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.antlr2.org/download/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.antlr2.org/
+HOMEPAGE=	https://www.antlr2.org/
 
 COMMENT=	ANother Tool for Language Recognition
 LICENSE=	public-domain

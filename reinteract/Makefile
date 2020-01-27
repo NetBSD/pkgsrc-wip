@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.reinteract.org/sources/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.reinteract.org/
+HOMEPAGE=	https://www.reinteract.org/
 COMMENT=	Reinteract is a system for interactive experimentation with Python
 LICENSE=	2-clause-bsd
 

@@ -13,7 +13,7 @@ GITHUB_HASH=	8506092
 GITHUB_USER=	yvs2014
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bitwizard.nl/mtr/
+HOMEPAGE=	https://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 LICENSE=	gnu-gpl-v2
 

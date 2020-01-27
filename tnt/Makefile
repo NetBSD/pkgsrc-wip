@@ -8,7 +8,7 @@ MASTER_SITES=	http://math.nist.gov/tnt/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://math.nist.gov/tnt/
+HOMEPAGE=	https://math.nist.gov/tnt/
 COMMENT=	Template Numerical Toolkit
 #LICENSE=	# TODO: (see mk/license.mk)
 

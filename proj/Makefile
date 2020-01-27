@@ -15,7 +15,7 @@ MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://proj4.org/
+HOMEPAGE=	https://proj4.org/
 COMMENT=	Cartographic projection software
 
 # Grid files also have the following "cc-by ish" licenses:

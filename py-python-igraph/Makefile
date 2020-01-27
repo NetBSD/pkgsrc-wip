@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-igraph/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://igraph.org/python/
+HOMEPAGE=	https://igraph.org/python/
 COMMENT=	Library for creating and manipulating graphs
 LICENSE=	gnu-gpl-v2
 

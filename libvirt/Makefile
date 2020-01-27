@@ -6,7 +6,7 @@ MASTER_SITES=		http://libvirt.org/sources/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://libvirt.org/
+HOMEPAGE=		https://libvirt.org/
 COMMENT=		Virtualisation toolkit for host operating systems
 LICENSE=		gnu-lgpl-v2
 
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN}
 TEST_TARGET=		check
 RCD_SCRIPTS=		libvirtd
 
-SUBST_CLASSES+= 		reserved-name
+SUBST_CLASSES+=			reserved-name
 SUBST_STAGE.reserved-name=	pre-configure
 SUBST_FILES.reserved-name=	src/qemu/qemu_process.h src/qemu/qemu_process.c
 SUBST_SED.reserved-name=	-e 's|stderr|qemu_stderr|g'

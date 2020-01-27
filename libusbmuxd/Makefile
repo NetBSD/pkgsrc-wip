@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.libimobiledevice.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	weabot@protonmail.com
-HOMEPAGE=	http://www.libimobiledevice.org/
+HOMEPAGE=	https://www.libimobiledevice.org/
 COMMENT=	Communication interface library for usbmuxd
 LICENSE=	gnu-lgpl-v2.1
 

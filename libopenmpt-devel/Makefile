@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://buildbot.openmpt.org/builds/auto/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lib.openmpt.org/libopenmpt/
+HOMEPAGE=	https://lib.openmpt.org/libopenmpt/
 COMMENT=	Library to decode tracked music files into a raw PCM audio stream (development version)
 LICENSE=	modified-bsd
 

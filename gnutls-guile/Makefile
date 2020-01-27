@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnutls.org/
+HOMEPAGE=	https://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
@@ -64,12 +64,12 @@ SUBST_FILES.configure+=		configure
 SUBST_MESSAGE.configure=	Fixing supported Guile versions
 
 # Might not be enough for guile bindings...
-SUBST_CLASSES+=         target
-SUBST_STAGE.target=     pre-configure
-SUBST_FILES.target+=    build-aux/config.guess
-SUBST_FILES.target+=    configure
-SUBST_SED.target=       -e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
-SUBST_MESSAGE.target=   Fixing target name.
+SUBST_CLASSES+=		target
+SUBST_STAGE.target=	pre-configure
+SUBST_FILES.target+=	build-aux/config.guess
+SUBST_FILES.target+=	configure
+SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
+SUBST_MESSAGE.target=	Fixing target name.
 
 SUBST_CLASSES+=		shell
 SUBST_SED.shell+=	-e 's,define POSIX_SHELL .*,define POSIX_SHELL "'${TOOLS_PATH.bash}'",'

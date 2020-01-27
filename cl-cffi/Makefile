@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/project/cffi/releases/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://common-lisp.net/project/cffi/
+HOMEPAGE=	https://common-lisp.net/project/cffi/
 COMMENT=	The Common Foreign Function Interface for Common Lisp
 LICENSE=	public-domain
 DEPENDS+=	${LISP_PREFIX}-trivial-features-[0-9]*:../../wip/cl-trivial-features

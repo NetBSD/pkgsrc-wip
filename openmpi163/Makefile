@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	modified-bsd
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://www.open-mpi.org/
+HOMEPAGE=	https://www.open-mpi.org/
 COMMENT=	Open source MPI-2 implementation
 
 MPI_SUBPREFIX=		openmpi

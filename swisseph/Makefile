@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	ftp://ftp.astro.com/pub/swisseph/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.astro.com/swisseph/swephinfo_e.htm
+HOMEPAGE=	https://www.astro.com/swisseph/swephinfo_e.htm
 COMMENT=	High precision ephemeris developed by Astrodienst
 LICENSE=	gnu-gpl-v2
 

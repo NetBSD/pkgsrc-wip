@@ -6,7 +6,7 @@ CATEGORIES=	lang
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://www.complang.tuwien.ac.at/forth/gforth/
+HOMEPAGE=	https://www.complang.tuwien.ac.at/forth/gforth/
 COMMENT=	Fast interpreter for the Forth language
 
 GIT_REPOSITORIES=	gforth

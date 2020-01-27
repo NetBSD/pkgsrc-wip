@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=overgod/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.allegro.cc/depot/Overgod
+HOMEPAGE=	https://www.allegro.cc/depot/Overgod
 COMMENT=	Shoot'em Up
 LICENSE=	gnu-gpl-v2
 

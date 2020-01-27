@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PixarAnimationStudios/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/./_/g:tu}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://graphics.pixar.com/opensubdiv/docs/intro.html
+HOMEPAGE=	https://graphics.pixar.com/opensubdiv/docs/intro.html
 COMMENT=	High performance subdivision surface for parallel architectures
 LICENSE=	apache-2.0
 

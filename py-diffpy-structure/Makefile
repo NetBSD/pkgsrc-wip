@@ -8,7 +8,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://www.diffpy.org/packages/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.diffpy.org/
+HOMEPAGE=	https://www.diffpy.org/
 COMMENT=	Crystal structure container and parsers for structure formats
 LICENSE=	modified-bsd
 

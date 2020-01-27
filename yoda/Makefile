@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/yoda/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://yoda.hepforge.org/
+HOMEPAGE=	https://yoda.hepforge.org/
 COMMENT=	Yet more Objects for Data Analysis
 LICENSE=	gnu-gpl-v2
 

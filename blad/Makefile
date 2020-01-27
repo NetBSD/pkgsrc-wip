@@ -6,7 +6,7 @@ MASTER_SITES=	http://cristal.univ-lille.fr/~boulier/BLAD/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://cristal.univ-lille.fr/~boulier/BLAD/
+HOMEPAGE=	https://cristal.univ-lille.fr/~boulier/BLAD/
 COMMENT=	Bibliotheques Lilloises Algebre Differentielle
 LICENSE=	gnu-lgpl-v3
 

@@ -12,7 +12,7 @@ MASTER_SITES=	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+HOMEPAGE=	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 COMMENT=	Quality control tool for high throughput sequence data
 # Check this
 LICENSE=	gnu-gpl-v3

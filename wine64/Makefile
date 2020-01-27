@@ -6,7 +6,7 @@ MASTER_SITES=		https://dl.winehq.org/wine/source/4.x/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		zerous@nocebo.space
-HOMEPAGE=		http://www.winehq.org/
+HOMEPAGE=		https://www.winehq.org/
 COMMENT=		Compatibility layer for running Microsoft Windows Applications
 LICENSE=		gnu-lgpl-v2.1
 
@@ -25,7 +25,7 @@ WINE32_ENV+=		CFLAGS+=-m32
 WINE_ENV+=		ac_cv_c_fortify_enabled=no
 
 # XXX: Disable new_dtags as NetBSD versions prior to 9.0 don't honor DT_RUNPATH
-WINE_ENV+=         ac_cv_cflags__Wl___enable_new_dtags=no
+WINE_ENV+=	ac_cv_cflags__Wl___enable_new_dtags=no
 
 # XXX: Stop Wine from using gethostbyname_r like in linux
 WINE_ENV+=		wine_cv_linux_gethostbyname_r_6=no

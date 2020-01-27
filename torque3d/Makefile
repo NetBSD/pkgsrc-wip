@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GarageGames/}
 
 MAINTAINER=	pkgsrc-users@NetBSd.org
-HOMEPAGE=	http://torque3d.org/
+HOMEPAGE=	https://torque3d.org/
 COMMENT=	Open Source version of Torque 3D from GarageGames
 LICENSE=	mit
 

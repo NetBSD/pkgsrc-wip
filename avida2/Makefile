@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avida/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://avida.devosoft.org/
+HOMEPAGE=	https://avida.devosoft.org/
 COMMENT=	Avida is an auto-adaptive genetic system
 LICENSE=	gnu-gpl-v3
 

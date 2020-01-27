@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.kozachuk.info/netbsd/contrib/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://common-lisp.net/project/alexandria/
+HOMEPAGE=	https://common-lisp.net/project/alexandria/
 COMMENT=	Alexandria is a collection utilities for Common Lisp
 LICENSE=	public-domain
 

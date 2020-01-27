@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
 MAINTAINER=		nils@NetBSD.org
-HOMEPAGE=		http://docs.cacti.net/plugin:rrdclean
+HOMEPAGE=		https://docs.cacti.net/plugin:rrdclean
 COMMENT=		Cacti RRD File Cleaner
 LICENSE=		gnu-gpl-v2
 

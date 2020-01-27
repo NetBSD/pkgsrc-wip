@@ -6,7 +6,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yams/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.logilab.org/project/yams
+HOMEPAGE=	https://www.logilab.org/project/yams
 COMMENT=	Entity / relation schema
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

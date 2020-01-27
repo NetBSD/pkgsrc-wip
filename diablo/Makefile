@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.openusenet.org/diablo/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pettai@nordu.net
-HOMEPAGE=	http://www.openusenet.org/diablo/
+HOMEPAGE=	https://www.openusenet.org/diablo/
 COMMENT=	Newsfeeding and newsreading server software
 
 

@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.jalview.org/version118/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://www.jalview.org/
+HOMEPAGE=		https://www.jalview.org/
 COMMENT=		Jalview is a multiple alignment editor written in java
 
 USE_JAVA=		run

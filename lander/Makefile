@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.nickg.me.uk/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.doof.me.uk/lunar-lander/
+HOMEPAGE=	https://www.doof.me.uk/lunar-lander/
 COMMENT=	Lunar Lander clone
 LICENSE=	gnu-gpl-v3
 
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config xgettext
 
-CONFIGURE_ARGS+=	--with-boost="${PREFIX}"\
+CONFIGURE_ARGS+=	--with-boost="${PREFIX}" \
 			--with-boost-filesystem=boost_filesystem
 #LDFLAGS=		-L${LOCALBASE}/lib
 

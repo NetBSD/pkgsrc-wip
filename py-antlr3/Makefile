@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.antlr3.org/download/Python/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.antlr3.org/
+HOMEPAGE=	https://www.antlr3.org/
 COMMENT=	ANother Tool for Language Recognition, Python bindings
 LICENSE=	modified-bsd
 

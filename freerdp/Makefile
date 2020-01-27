@@ -8,7 +8,7 @@ GITHUB_PROJECT=	FreeRDP
 GITHUB_TAG=	${PKGVERSION_NOREV:S/rc/-rc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freerdp.com/
+HOMEPAGE=	https://www.freerdp.com/
 COMMENT=	Free implementation of the Remote Desktop Protocol
 LICENSE=	apache-2.0
 

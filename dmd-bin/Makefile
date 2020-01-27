@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.digitalmars.com/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.digitalmars.com/d/dcompiler.html
+HOMEPAGE=		https://www.digitalmars.com/d/dcompiler.html
 COMMENT=		The D Programming Language from Digital Mars
 
 

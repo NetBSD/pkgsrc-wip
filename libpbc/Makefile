@@ -5,7 +5,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://crypto.stanford.edu/pbc/files/
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://crypto.stanford.edu/pbc/
+HOMEPAGE=		https://crypto.stanford.edu/pbc/
 COMMENT=		Pair-based cryptographic library based on Gap Diffie Helman groups
 LICENSE=		gnu-lgpl-v2
 

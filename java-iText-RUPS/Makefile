@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=itextrups/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lowagie.com/iText/
+HOMEPAGE=	https://www.lowagie.com/iText/
 COMMENT=	Reading and Updating PDF Syntax tool from iText
 LICENSE=	gnu-agpl-v3
 

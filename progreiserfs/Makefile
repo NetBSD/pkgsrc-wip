@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://reiserfs.osdn.org.ua/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://reiserfs.osdn.org.ua/
+HOMEPAGE=	https://reiserfs.osdn.org.ua/
 COMMENT=	Library to manipulate reiserfs filesystems
 
 

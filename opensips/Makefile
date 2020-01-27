@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://opensips.org/pub/opensips/${VER}/src/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.opensips.org/
+HOMEPAGE=		https://www.opensips.org/
 COMMENT=		Open Source implementation of a SIP server
 LICENSE=		gnu-gpl-v2
 

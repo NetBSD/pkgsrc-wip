@@ -5,7 +5,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strophe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://strophe.im/libstrophe/
+HOMEPAGE=	https://strophe.im/libstrophe/
 COMMENT=	Simple, lightweight C library for writing XMPP clients
 LICENSE=	mit OR gnu-gpl-v3
 

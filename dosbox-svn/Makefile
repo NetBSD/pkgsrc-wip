@@ -4,7 +4,7 @@ DISTNAME=	dosbox-svn-0
 CATEGORIES=	emulators
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dosbox.com/
+HOMEPAGE=	https://www.dosbox.com/
 COMMENT=	Multi-platform DOS emulator using SDL
 LICENSE=	gnu-gpl-v2
 

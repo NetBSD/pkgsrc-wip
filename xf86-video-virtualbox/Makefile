@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.virtualbox.org/
+HOMEPAGE=	https://www.virtualbox.org/
 COMMENT=	Modular Xorg Virtualbox video driver
 LICENSE=	gnu-gpl-v2
 

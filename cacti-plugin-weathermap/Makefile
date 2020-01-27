@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.network-weathermap.com/files/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pettai@nordu.net
-HOMEPAGE=		http://www.network-weathermap.com/
+HOMEPAGE=		https://www.network-weathermap.com/
 COMMENT=		Generate maps and diagrams using data collected by Cacti
 LICENSE=		gnu-gpl-v2
 

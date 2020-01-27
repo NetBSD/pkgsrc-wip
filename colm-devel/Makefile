@@ -5,7 +5,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.colm.net/files/colm/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.colm.net/open-source/colm/
+HOMEPAGE=	https://www.colm.net/open-source/colm/
 COMMENT=	Programming language for computer language analysis
 LICENSE=	mit
 

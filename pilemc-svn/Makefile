@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME}-svn-1.2alpha0
 CATEGORIES=	math
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pilemc.hepforge.org/
+HOMEPAGE=	https://pilemc.hepforge.org/
 COMMENT=	Tool for the simulation of pile-up events at HepMC level
 
 SVN_REPO=	http://pilemc.hepforge.org/svn/trunk/

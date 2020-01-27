@@ -7,7 +7,7 @@ MASTER_SITES+=		${MASTER_SITE_OPERA:=${OPERA_DIR}/}
 EXTRACT_SUFX=		.deb
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.opera.com/
+HOMEPAGE=		https://www.opera.com/
 COMMENT=		Standards-compliant graphical Web browser
 LICENSE=		opera-1200-license #FIXME: new license, opera-2014
 
@@ -55,26 +55,26 @@ EMUL_MODULES.linux=	base x11 fontconfig curl nss dbus cups nspr glib2 expat alsa
 EMUL_REQD=		suse>=11.3
 OPERA_ARCH.x86_64=	amd64
 OPERA_OPSYS_SUBDIR=	linux
-.if !defined(EMUL_IS_NATIVE) && ${OPSYS} == "NetBSD"
+.  if !defined(EMUL_IS_NATIVE) && ${OPSYS} == "NetBSD"
 TOOLS_CREATE+=		md5
 TOOLS_SCRIPT.md5=	/usr/bin/md5 -n "$$2" | { read sum file; echo $$sum; }
-.endif
-.if ${EMUL_ARCH} == "x86_64"
+.  endif
+.  if ${EMUL_ARCH} == "x86_64"
 PLIST.ia32w=		yes
-.endif
+.  endif
 PLIST.linux=		yes
 
 .elif ${EMUL_OPSYS} == "freebsd"
-OPERA_ARCH.x86_64=	amd64
-OPERA_OPSYS_SUBDIR=	unix
+OPERA_ARCH.x86_64=		amd64
+OPERA_OPSYS_SUBDIR=		unix
 # XXX: TBD
 #.  if defined(EMUL_IS_NATIVE)
-#DEPENDS+=		{gtk2+-[0-9]*,kdelibs4-[0-9]*}:../../x11/gtk2
+#DEPENDS+=			{gtk2+-[0-9]*,kdelibs4-[0-9]*}:../../x11/gtk2
 #CHECK_SHLIBS_SUPPORTED=	no
 #.  endif
 .endif
-OPERA_ARCH=		${OPERA_ARCH.${EMUL_ARCH}:U${EMUL_ARCH}}
-OPERA_DIR=		${OPERA_PKG_VERSION_DIR}/${OPERA_OPSYS_SUBDIR}
+OPERA_ARCH=			${OPERA_ARCH.${EMUL_ARCH}:U${EMUL_ARCH}}
+OPERA_DIR=			${OPERA_PKG_VERSION_DIR}/${OPERA_OPSYS_SUBDIR}
 
 MANCOMPRESSED=		yes
 

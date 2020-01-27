@@ -6,7 +6,7 @@ MASTER_SITES=	http://libnfo.geexbox.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jrbleboss@gmail.com
-HOMEPAGE=	http://libnfo.geexbox.org/
+HOMEPAGE=	https://libnfo.geexbox.org/
 COMMENT=	Library used to parse and write NFO files
 LICENSE=	gnu-lgpl-v2.1
 

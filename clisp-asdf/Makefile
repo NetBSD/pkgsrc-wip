@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.kozachuk.info/netbsd/contrib/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://common-lisp.net/project/asdf/
+HOMEPAGE=	https://common-lisp.net/project/asdf/
 COMMENT=	Another System Definition Facility for Common Lisp
 LICENSE=	mit
 

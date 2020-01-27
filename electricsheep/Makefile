@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://electricsheep.org/
 
 MAINTAINER=		dyeske@yahoo.com
-HOMEPAGE=		http://electricsheep.org/
+HOMEPAGE=		https://electricsheep.org/
 COMMENT=		Distributed fractal flame screensaver
 
 DEPENDS+=		xli-[0-9]*:../../graphics/xli

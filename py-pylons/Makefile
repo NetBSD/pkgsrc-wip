@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pylons/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pylonshq.com/
+HOMEPAGE=	https://pylonshq.com/
 COMMENT=	Pylons Web Framework
 LICENSE=	modified-bsd
 

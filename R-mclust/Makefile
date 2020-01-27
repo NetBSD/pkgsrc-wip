@@ -4,7 +4,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://www.stat.washington.edu/mclust/
+HOMEPAGE=	https://www.stat.washington.edu/mclust/
 COMMENT=	Model-based clustering and normal mixture modeling
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 

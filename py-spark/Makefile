@@ -8,7 +8,7 @@ MASTER_SITES=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
 LICENSE=	mit
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
+HOMEPAGE=	https://pages.cpsc.ucalgary.ca/~aycock/spark/
 COMMENT=	Scanning, Parsing, and Rewriting Kit for Python
 
 USE_TOOLS+=	pax

@@ -5,7 +5,7 @@ GIT_REPO=	git://git.openafs.org/openafs.git
 CATEGORIES=	filesystems net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openafs.org/
+HOMEPAGE=	https://www.openafs.org/
 COMMENT=	File system for sharing, scalability and transparent data migration
 LICENSE=	ipl-1.0 AND mit AND modified-bsd # AND sun-rpc?
 

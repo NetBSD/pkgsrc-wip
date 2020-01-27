@@ -7,7 +7,7 @@ CATEGORIES=	net audio
 MASTER_SITES=	http://www.flyn.org/projects/dmapd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.flyn.org/projects/dmapd/
+HOMEPAGE=	https://www.flyn.org/projects/dmapd/
 COMMENT=	DAAP (iTunes) and DPAP (iPhoto) shares server
 LICENSE=	gnu-gpl-v2
 

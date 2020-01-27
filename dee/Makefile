@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/dee/1.0/1.2.7/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://launchpad.net/dee
+HOMEPAGE=	https://launchpad.net/dee
 COMMENT=	Model to synchronize mutiple instances over DBus
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 

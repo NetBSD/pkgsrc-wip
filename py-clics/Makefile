@@ -7,7 +7,7 @@ MASTER_SITES=	http://coryk.afraid.org/downloads/CLICS/source/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.swag.uwaterloo.ca/
+HOMEPAGE=	https://www.swag.uwaterloo.ca/
 COMMENT=	Clone detector and GUI
 #LICENSE=	# TODO: (see mk/license.mk)
 

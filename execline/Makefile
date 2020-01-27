@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://skarnet.org/software/execline/
 
 MAINTAINER=	cfkoch@edgebsd.org
-HOMEPAGE=	http://skarnet.org/software/execline/
+HOMEPAGE=	https://skarnet.org/software/execline/
 COMMENT=	The execline scripting language
 LICENSE=	isc
 

@@ -8,7 +8,7 @@ MASTER_SITES=	http://labix.org/download/python-constraint/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://labix.org/python-constraint
+HOMEPAGE=	https://labix.org/python-constraint
 COMMENT=	Python module implementing support for handling CSPs
 LICENSE=	gnu-gpl-v2
 

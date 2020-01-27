@@ -9,7 +9,7 @@ MASTER_SITES=		http://gdal.org/dl/
 LICENSE=		x11 AND mit
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://gdal.org/
+HOMEPAGE=		https://gdal.org/
 COMMENT=		Documentation for GDAL
 
 DEPENDS+=		doxygen>=1.4.1:../../devel/doxygen

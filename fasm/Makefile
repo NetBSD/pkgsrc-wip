@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://flatassembler.net/
 
 MAINTAINER=		athaba@users.sourceforge.net
-HOMEPAGE=		http://flatassembler.net/
+HOMEPAGE=		https://flatassembler.net/
 COMMENT=		Open source assembly language compiler
 LICENSE=		modified-bsd
 

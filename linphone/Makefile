@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/${PKGVERSION_NOREV:R}.x/sources/
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.linphone.org/
+HOMEPAGE=	https://www.linphone.org/
 COMMENT=	SIP-based IP telephony client
 LICENSE=	gnu-gpl-v2
 

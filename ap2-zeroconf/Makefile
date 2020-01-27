@@ -8,7 +8,7 @@ MASTER_SITES=	http://people.apache.org/~sctemme/Apcon2003/TU10/
 LICENSE=	apache-2.0
 
 MAINTAINER=	eggert@macvaerk.dtu.dk
-HOMEPAGE=	http://www.temme.net/sander/mod_zeroconf/
+HOMEPAGE=	https://www.temme.net/sander/mod_zeroconf/
 COMMENT=	Allows apache2 to register on a Zero Configuration network
 
 

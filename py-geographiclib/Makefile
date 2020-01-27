@@ -6,7 +6,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geographiclib/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://geographiclib.sourceforge.net/
+HOMEPAGE=	https://geographiclib.sourceforge.io/
 COMMENT=	Translation of the GeographicLib::Geodesic class to Python
 LICENSE=	mit
 

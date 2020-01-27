@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.directfb.org/download/DirectFB/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.directfb.org/
+HOMEPAGE=	https://www.directfb.org/
 COMMENT=	Thin library that provides hardware graphics acceleration
 LICENSE=	gnu-lgpl-v2.1
 

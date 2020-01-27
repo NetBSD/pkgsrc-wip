@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://kivy.org/#home
+HOMEPAGE=	https://kivy.org/#home
 COMMENT=	Innovative user interfaces made easy
 LICENSE=	gnu-lgpl-v3
 

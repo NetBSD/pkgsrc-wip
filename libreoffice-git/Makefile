@@ -11,7 +11,7 @@ GIT_REPO.core=		git://gerrit.libreoffice.org/core.git
 
 #EXTRACT_SUFX=	.tar.bz2
 
-HOMEPAGE=	http://www.libreoffice.org/
+HOMEPAGE=	https://www.libreoffice.org/
 COMMENT=	Office productivity suite from The Document Foundation
 LICENSE=	gnu-lgpl-v3
 

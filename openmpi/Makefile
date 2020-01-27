@@ -6,7 +6,7 @@ MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v4.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.open-mpi.org/
+HOMEPAGE=	https://www.open-mpi.org/
 COMMENT=	Open source implementation
 LICENSE=	modified-bsd
 

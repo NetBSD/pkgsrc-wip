@@ -8,7 +8,7 @@ MASTER_SITES=	http://fredrik.hubbe.net/plugger/
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fredrik.hubbe.net/plugger.html
+HOMEPAGE=	https://fredrik.hubbe.net/plugger.html
 COMMENT=	Plugin for multimedia types in Mozilla, Netscape and Opera
 
 REL_EGDIR=		share/examples/plugger

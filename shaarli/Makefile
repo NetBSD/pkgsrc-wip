@@ -9,7 +9,7 @@ MASTER_SITES=	http://sebsauvage.net/files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	frederic@fauberteau.org
-HOMEPAGE=	http://sebsauvage.net/wiki/doku.php?id=php:shaarli
+HOMEPAGE=	https://sebsauvage.net/wiki/doku.php?id=php:shaarli
 COMMENT=	Shaarli is a minimalist delicious clone
 LICENSE=	zlib
 

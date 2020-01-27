@@ -4,7 +4,7 @@ CATEGORIES=	math graphics
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://www.rforge.net/png/
+HOMEPAGE=	https://www.rforge.net/png/
 COMMENT=	Read and write PNG images
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 

@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcmi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vcmi.eu/
+HOMEPAGE=	https://vcmi.eu/
 COMMENT=	Open-source engine for Heroes of Might and Magic 3
 LICENSE=	gnu-gpl-v2
 

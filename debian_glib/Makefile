@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/g/glib1.2/}
 LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.debian.org/
+HOMEPAGE=		https://www.debian.org/
 COMMENT=		Debian Linux glib1.2 package
 
 ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386

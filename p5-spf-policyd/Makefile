@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://launchpad.net/postfix-policyd-spf-perl/trunk/release2.010/+download/
 
 MAINTAINER=	morr@NetBSD.org
-HOMEPAGE=	http://launchpad.net/postfix-policyd-spf-perl/
+HOMEPAGE=	https://launchpad.net/postfix-policyd-spf-perl/
 COMMENT=	Basic Postfix policy engine for SPF checking
 LICENSE=	gnu-gpl-v2
 

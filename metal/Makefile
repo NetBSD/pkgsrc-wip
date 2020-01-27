@@ -14,7 +14,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://csg.sph.umich.edu/abecasis/Metal/download/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://genome.sph.umich.edu/wiki/METAL_Program
+HOMEPAGE=	https://genome.sph.umich.edu/wiki/METAL_Program
 COMMENT=	Meta-analysis of genomewide association scans
 # Check this
 LICENSE=	modified-bsd

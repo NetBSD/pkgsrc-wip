@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://graveman.tuxfamily.org/
+HOMEPAGE=		https://graveman.tuxfamily.org/
 COMMENT=		GTK2 frontend for CD writing and audio conversion
 
 DEPENDS+=		dvd+rw-tools>5.21:../../sysutils/dvd+rw-tools

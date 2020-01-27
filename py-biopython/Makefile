@@ -17,7 +17,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://www.biopython.org/DIST/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://biopython.org/
+HOMEPAGE=	https://biopython.org/
 COMMENT=	Collection of Python modules for bioinformatics
 LICENSE=	modified-bsd
 

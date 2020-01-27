@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.jar
 LICENSE=		gnu-lgpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.urbanophile.com/arenn/hacking/download.html
+HOMEPAGE=		https://www.urbanophile.com/arenn/hacking/download.html
 COMMENT=		GNU getopt port for Java
 
 INSTALLATION_DIRS=	share/classpath

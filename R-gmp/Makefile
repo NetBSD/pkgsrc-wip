@@ -4,7 +4,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://cran.r-project.org/web/packages/gmp/
+HOMEPAGE=	https://cran.r-project.org/web/packages/gmp/
 COMMENT=	Multiple Precision Arithmetic for R
 LICENSE=	gnu-gpl-v2
 

@@ -7,7 +7,7 @@ CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prayertime/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://bitbucket.org/xmonader/pyprayertime/
+HOMEPAGE=	https://bitbucket.org/xmonader/pyprayertime/
 COMMENT=	Prayertime algorithm implementation in python
 LICENSE=	gnu-gpl-v2
 

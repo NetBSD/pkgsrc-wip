@@ -8,7 +8,7 @@ MASTER_SITES=	http://zakalwe.fi/uade/uade2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://zakalwe.fi/uade/
+HOMEPAGE=	https://zakalwe.fi/uade/
 COMMENT=	Unix Amiga Delitracker Emulator
 LICENSE=	gnu-gpl-v2
 

@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/ghostscript/AFPL/GhostPCL/}
 DISTFILES=	${DISTNAME}.tar.bz2 urwfonts-1.41.tar.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://www.ghostscript.com/GhostPCL.html
+HOMEPAGE=	https://www.ghostscript.com/GhostPCL.html
 COMMENT=	PCL 80 std ttf fonts under AFPL (except for PostScript 35 std fonts)
 #LICENSE=	aladdin-free-public-license
 

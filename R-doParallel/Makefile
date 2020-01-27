@@ -4,7 +4,7 @@ CATEGORIES=	devel math parallel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://cran.r-project.org/web/packages/doParallel/index.html
+HOMEPAGE=	https://cran.r-project.org/web/packages/doParallel/index.html
 COMMENT=	Foreach parallel adaptor for the parallel package
 LICENSE=	gnu-gpl-v2
 

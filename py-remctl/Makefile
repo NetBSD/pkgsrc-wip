@@ -8,7 +8,7 @@ CATEGORIES=	sysutils security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eyrie.org/~eagle/software/remctl/
+HOMEPAGE=	https://www.eyrie.org/~eagle/software/remctl/
 COMMENT=	Python bindings for remctl remote command execution
 LICENSE=	mit
 

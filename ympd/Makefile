@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=notandy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ympd.org/
+HOMEPAGE=	https://www.ympd.org/
 COMMENT=	Standalone MPD Web GUI written in C
 LICENSE=	gnu-gpl-v2
 

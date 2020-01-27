@@ -5,7 +5,7 @@ CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.klayout.de/
+HOMEPAGE=	https://www.klayout.de/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 

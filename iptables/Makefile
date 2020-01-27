@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.netfilter.org/
+HOMEPAGE=		https://www.netfilter.org/
 COMMENT=		Interface to Linux netfilter firewalling subsystem
 
 # This package requires a Linux 2.4.4 kernel, or above.

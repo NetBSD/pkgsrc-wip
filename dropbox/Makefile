@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://dl-web.dropbox.com/u/17/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dropbox.com/
+HOMEPAGE=	https://www.dropbox.com/
 COMMENT=	Dropbox sync server
 #LICENSE=	# TODO: (see mk/license.mk)
 

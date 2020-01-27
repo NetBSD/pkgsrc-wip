@@ -5,7 +5,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/elegent/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://elegent.hepforge.org/
+HOMEPAGE=	https://elegent.hepforge.org/
 COMMENT=	Generator of elastic (anti)proton-proton collisions
 LICENSE=	gnu-gpl-v3
 

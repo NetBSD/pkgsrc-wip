@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://launchpad.net/jokosher/trunk/0.11.5/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jokosher.org/
+HOMEPAGE=	https://www.jokosher.org/
 COMMENT=	Simple, yet powerful, multi-track studio
 LICENSE=	gnu-gpl-v2
 

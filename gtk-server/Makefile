@@ -7,7 +7,7 @@ CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-server/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gtk-server.org/
+HOMEPAGE=	https://www.gtk-server.org/
 COMMENT=	Small tool to enable GUI access for shell scripts
 LICENSE=	gnu-gpl-v2
 

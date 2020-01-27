@@ -5,7 +5,7 @@ CATEGORIES=	time
 MASTER_SITES=	http://cr.yp.to/clockspeed/
 
 MAINTAINER=	neil@daikokuya.co.uk
-HOMEPAGE=	http://cr.yp.to/clockspeed.html
+HOMEPAGE=	https://cr.yp.to/clockspeed.html
 COMMENT=	Suite of clock synchronization utilities
 LICENSE=	public-domain
 

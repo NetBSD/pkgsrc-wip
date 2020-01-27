@@ -10,6 +10,6 @@ GITHUB_TAG=	a1a383436ba147767af1887c2015e5a863359669
 
 GITHUB_PROJECT=	capstone
 
-HOMEPAGE=	http://www.capstone-engine.org/
+HOMEPAGE=	https://www.capstone-engine.org/
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/frida-capstone/distinfo

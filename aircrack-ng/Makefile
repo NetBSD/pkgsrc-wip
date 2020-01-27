@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=aircrack-ng/}
 GITHUB_TAG=	caa946dad310ce6bf53b08ba5fc98a2d7c7a8053
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.aircrack-ng.org/
+HOMEPAGE=	https://www.aircrack-ng.org/
 COMMENT=	Tools for auditing wireless networks
 LICENSE=	gnu-gpl-v3
 

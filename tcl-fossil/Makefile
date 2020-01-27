@@ -6,7 +6,7 @@ CATEGORIES=	lang
 FOSSIL_REPO=	http://core.tcl.tk/tcl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tcl.tk/
+HOMEPAGE=	https://www.tcl.tk/
 COMMENT=	Tool Command Language, a dynamic language
 LICENSE=	2-clause-bsd
 

@@ -9,7 +9,7 @@ MASTER_SITES=	https://launchpad.net/mocker/trunk/1.1/+download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://labix.org/mocker
+HOMEPAGE=	https://labix.org/mocker
 COMMENT=	Graceful platform for test doubles in Python
 LICENSE=	2-clause-bsd
 

@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
 MAINTAINER=	frederic@fauberteau.org
-HOMEPAGE=	http://pear.horde.org/
+HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Controller part of an MVC system for horde
 LICENSE=	2-clause-bsd
 

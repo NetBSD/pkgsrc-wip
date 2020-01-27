@@ -7,7 +7,7 @@ MASTER_SITES=		http://valgrind.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://valgrind.org/
+HOMEPAGE=		https://valgrind.org/
 COMMENT=		Debugging and profiling tools
 LICENSE=		gnu-gpl-v2
 

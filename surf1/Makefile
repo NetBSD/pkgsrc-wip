@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://dl.suckless.org/surf/
 
 MAINTAINER=	pouya@san-serriffe.org
-HOMEPAGE=	http://surf.suckless.org/
+HOMEPAGE=	https://surf.suckless.org/
 COMMENT=	Surf is a fast and minimalistic web browser based on WebKit/GTK+
 LICENSE=	mit
 

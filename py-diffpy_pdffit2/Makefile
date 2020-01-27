@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.diffpy.org/packages/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.diffpy.org/
+HOMEPAGE=	https://www.diffpy.org/
 COMMENT=	PDFfit2 - real space structure refinement program
 LICENSE=	modified-bsd
 

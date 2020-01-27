@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/~sionescu/files/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://www.cliki.net/SPLIT-SEQUENCE
+HOMEPAGE=	https://www.cliki.net/SPLIT-SEQUENCE
 COMMENT=	Common Lisp utility to split sequences
 LICENSE=	public-domain
 

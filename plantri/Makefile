@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://users.cecs.anu.edu.au/~bdm/plantri/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://users.cecs.anu.edu.au/~bdm/plantri/
+HOMEPAGE=	https://users.cecs.anu.edu.au/~bdm/plantri/
 COMMENT=	Plantri programs for generation of certain types of planar graph
 #LICENSE=	# TODO: (see mk/license.mk)
 

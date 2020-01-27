@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.mulliner.org/bluetooth/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mulliner.org/bluetooth/btfs.php
+HOMEPAGE=		https://www.mulliner.org/bluetooth/btfs.php
 COMMENT=		Bluetooth Filesystem for FUSE
 
 MAKE_FILE=		makefile

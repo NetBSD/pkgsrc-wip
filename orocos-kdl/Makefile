@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=orocos/}
 GITHUB_PROJECT=	orocos_kinematics_dynamics
 
 MAINTAINER=	rumko@NetBSD.org
-HOMEPAGE=	http://www.orocos.org/kdl
+HOMEPAGE=	https://www.orocos.org/kdl
 COMMENT=	Kinematics and Dynamics Library (KDL)
 LICENSE=	gnu-lgpl-v2.1
 

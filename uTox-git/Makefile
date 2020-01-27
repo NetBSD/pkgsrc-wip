@@ -10,7 +10,7 @@ GIT_BRANCH.uTox=	develop
 WRKSRC=			${WRKDIR}/uTox
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://utox.org/
+HOMEPAGE=	https://utox.org/
 COMMENT=	Lightweight Tox client for the desktop
 LICENSE=	gnu-gpl-v3
 

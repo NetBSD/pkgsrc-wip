@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gkernel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sf.net/projects/gkernel/
+HOMEPAGE=	https://sourceforge.net/projects/gkernel/
 COMMENT=	Random collection of Linux kernel-related projects and source code
 LICENSE=	gnu-gpl-v2
 

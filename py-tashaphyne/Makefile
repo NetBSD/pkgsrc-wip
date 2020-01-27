@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=T/Tashaphyne/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://tashaphyne.sourceforge.net/
+HOMEPAGE=	https://tashaphyne.sourceforge.io/
 COMMENT=	Arabic Light Stemmer and segmentor
 LICENSE=	gnu-gpl-v3
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyArabic/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pyarabic.sourceforge.net/
+HOMEPAGE=	https://pyarabic.sourceforge.io/
 COMMENT=	Arabic text tools
 LICENSE=	gnu-gpl-v2
 

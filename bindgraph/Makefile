@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.linux.it/~md/software/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	frederic@fauberteau.org
-HOMEPAGE=	http://www.linux.it/~md/software/
+HOMEPAGE=	https://www.linux.it/~md/software/
 COMMENT=	Tool that makes graphs from BIND queries
 LICENSE=	gnu-gpl-v2
 

@@ -6,7 +6,7 @@ CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=taskcoach/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.taskcoach.org/
+HOMEPAGE=	https://www.taskcoach.org/
 COMMENT=	Task Coach is a simple open source todo manager
 LICENSE=	gnu-gpl-v3
 

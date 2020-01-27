@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.shoutcast.com/downloads/sc1-9-2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.shoutcast.com/
+HOMEPAGE=	https://www.shoutcast.com/
 COMMENT=	Internet Streaming server for MP3 audio
 
 EMUL_PLATFORMS=		linux-i386

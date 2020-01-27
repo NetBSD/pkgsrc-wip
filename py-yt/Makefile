@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://yt-project.org/
+HOMEPAGE=	https://yt-project.org/
 COMMENT=	Analyzing and visualizing astrophysical simulation output
 LICENSE=	gnu-gpl-v3
 

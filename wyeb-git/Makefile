@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jun7/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wyeb.org/
+HOMEPAGE=	https://wyeb.org/
 COMMENT=	Vim-like webkit2gtk browser
 LICENSE=	gnu-gpl-v3
 

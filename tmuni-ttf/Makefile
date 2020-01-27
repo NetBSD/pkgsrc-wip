@@ -7,7 +7,7 @@ CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/t/ttf-tmuni/}
 
 MAINTAINER=		pho@cielonegro.org
-HOMEPAGE=		http://www.thlib.org/tools/scripts/wiki/tibetan%20machine%20uni.html
+HOMEPAGE=		https://www.thlib.org/tools/scripts/wiki/tibetan%20machine%20uni.html
 COMMENT=		Unicode Font for Tibetan, Dzongkha and Ladakhi
 LICENSE=		gnu-gpl-v2
 

@@ -12,7 +12,7 @@ GITHUB_TAG=		v${PORTREVISION}
 EXTRACT_OPTS_TAR=	-s/facedetect-${PORTREVISION}/${DISTNAME}/p
 
 MAINTAINER=	ast@NetBSD.org
-HOMEPAGE=	http://www.thregr.org/~wavexx/software/facedetect/
+HOMEPAGE=	https://www.thregr.org/~wavexx/software/facedetect/
 COMMENT=	Simple face detector for batch processing
 LICENSE=	gnu-gpl-v2
 

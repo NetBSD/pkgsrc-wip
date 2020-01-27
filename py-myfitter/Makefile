@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://www.hepforge.org/archive/myfitter/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://myfitter.hepforge.org/
+HOMEPAGE=	https://myfitter.hepforge.org/
 COMMENT=	Maximum Likelihood Fits in Python
 LICENSE=	gnu-gpl-v3
 

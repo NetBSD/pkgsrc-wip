@@ -6,7 +6,7 @@ CATEGORIES=	comms
 MASTER_SITES=	http://www.digitemp.com/software/linux/
 
 MAINTAINER=	bartosz@maciejewski.org
-HOMEPAGE=	http://www.digitemp.com/
+HOMEPAGE=	https://www.digitemp.com/
 COMMENT=	Reads temperature from serial and USB thermometers
 LICENSE=	gnu-gpl-v3
 

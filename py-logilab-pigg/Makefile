@@ -7,7 +7,7 @@ CATEGORIES=	x11 python
 MASTER_SITES=	http://ftp.logilab.org/pub/pigg/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.logilab.org/project/pigg
+HOMEPAGE=	https://www.logilab.org/project/pigg
 COMMENT=	Python Interface Generator for Gtk implementation of the MVC pattern
 LICENSE=	gnu-gpl-v2
 

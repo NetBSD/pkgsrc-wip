@@ -8,7 +8,7 @@ MASTER_SITES=	http://angelcode.com/angelscript/sdk/files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	cfkoch@edgebsd.org
-HOMEPAGE=	http://angelcode.com/angelscript/
+HOMEPAGE=	https://angelcode.com/angelscript/
 COMMENT=	The AngelScript programming language
 LICENSE=	zlib
 

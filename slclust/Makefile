@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slclust/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/slclust/
+HOMEPAGE=	https://sourceforge.net/projects/slclust/
 COMMENT=	Single-linkage clustering with Jaccard similarity
 LICENSE=	artistic
 

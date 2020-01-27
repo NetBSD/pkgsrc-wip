@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.klomp.org/snark/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.klomp.org/snark/
+HOMEPAGE=	https://www.klomp.org/snark/
 COMMENT=	BitTorrent application suite in Java
 LICENSE=	gnu-gpl-v2
 

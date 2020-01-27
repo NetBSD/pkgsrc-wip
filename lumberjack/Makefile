@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=natefinch/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		bsiegert@NetBSD.org
-HOMEPAGE=		http://gopkg.in/natefinch/lumberjack.v2
+HOMEPAGE=		https://gopkg.in/natefinch/lumberjack.v2
 COMMENT=		Rolling logger for Go
 LICENSE=		mit
 

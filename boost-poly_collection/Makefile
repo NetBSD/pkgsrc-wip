@@ -8,7 +8,7 @@ DIST_SUBDIR=	${PKGNAME}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	brook@NetBSD.org
-HOMEPAGE=	http://rawgit.com/joaquintides/poly_collection/website/doc/html/index.html
+HOMEPAGE=	https://rawgit.com/joaquintides/poly_collection/website/doc/html/index.html
 COMMENT=	Containers supporting dynamic polymorphism in C++
 LICENSE=	boost-license
 

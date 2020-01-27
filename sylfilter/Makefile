@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylfilter/src/
 
 MAINTAINER=	ishit@users.sorceforge.net
-HOMEPAGE=	http://sylpheed.sraoss.jp/sylfilter/
+HOMEPAGE=	https://sylpheed.sraoss.jp/sylfilter/
 COMMENT=	Bayesian spam filter
 LICENSE=	modified-bsd
 

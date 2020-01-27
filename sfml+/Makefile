@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.sfml-dev.org/files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sfml-dev.org/
+HOMEPAGE=	https://www.sfml-dev.org/
 COMMENT=	Free multimedia C++ API
 LICENSE=	zlib
 

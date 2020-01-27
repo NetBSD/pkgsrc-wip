@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://www.grsecurity.net/~spender/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pax.grsecurity.net/
+HOMEPAGE=	https://pax.grsecurity.net/
 COMMENT=	Test program for PaX functionality
 LICENSE=	gnu-gpl-v2
 

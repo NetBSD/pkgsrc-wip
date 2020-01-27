@@ -5,7 +5,7 @@ CATEGORIES=	mail
 FETCH_CMD=	${FILESDIR}/fetch.sh
 
 MAINTAINER=	carton@Ivy.NET
-HOMEPAGE=	http://gnus.org/
+HOMEPAGE=	https://gnus.org/
 COMMENT=	Gnus is a flexible message reader running under GNU Emacs
 
 DEPENDS+=	semi>=1.14.6:../../devel/semi

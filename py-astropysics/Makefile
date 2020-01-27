@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Astropysics/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.physics.uci.edu/~etolleru/software.html#astropysics
+HOMEPAGE=	https://www.physics.uci.edu/~etolleru/software.html#astropysics
 COMMENT=	Astrophysics libraries for Python
 LICENSE=	apache-2.0
 

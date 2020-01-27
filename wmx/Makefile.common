@@ -8,7 +8,7 @@ CATEGORIES+=	x11 wm
 MASTER_SITES=	http://www.all-day-breakfast.com/wmx/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
+HOMEPAGE=	https://www.all-day-breakfast.com/wmx/
 # XXX "BSD License" ??? cf.http://sourceforge.net/projects/wm2/
 LICENSE=	generic-nonlicense
 

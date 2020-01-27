@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=slime}/slime/archive/
 DIST_SUBDIR=		${PKGBASE}
 
 MAINTAINER=		jfranz@bsdprojects.net
-HOMEPAGE=		http://common-lisp.net/project/slime/
+HOMEPAGE=		https://common-lisp.net/project/slime/
 COMMENT=		Superior Lisp Interaction Mode for Emacs
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND \
 			mit AND public-domain AND gnu-llgpl

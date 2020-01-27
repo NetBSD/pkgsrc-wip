@@ -11,7 +11,7 @@ SITES.${DEBIAN_KEYRING_DEB}=	${MASTER_SITE_DEBIAN:=pool/main/d/debian-archive-ke
 SITES.${UBUNTU_KEYRING_DEB}=	${MASTER_SITE_DEBIAN:=pool/main/u/ubuntu-keyring/}
 
 MAINTAINER=	tnn@NetBSD.org
-HOMEPAGE=	http://wiki.debian.org/Debootstrap
+HOMEPAGE=	https://wiki.debian.org/Debootstrap
 COMMENT=	Debian GNU/Linux (and Ubuntu) cross-bootstrapping utility
 LICENSE=	mit
 

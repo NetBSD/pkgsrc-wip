@@ -6,7 +6,7 @@ CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylzma/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.joachim-bauch.de/projects/pylzma/
+HOMEPAGE=	https://www.joachim-bauch.de/projects/pylzma/
 COMMENT=	Python bindings for the LZMA library by Igor Pavlov
 LICENSE=	gnu-lgpl-v3
 

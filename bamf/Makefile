@@ -6,7 +6,7 @@ CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://launchpad.net/bamf/0.5/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://launchpad.net/bamf/
+HOMEPAGE=	https://launchpad.net/bamf/
 COMMENT=	DBus daemon and C wrapper library of applications matching framework
 LICENSE=	gnu-lgpl-v3
 

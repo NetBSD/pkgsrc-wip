@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://colorfull.hepforge.org/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://colorfull.hepforge.org/
+HOMEPAGE=	https://colorfull.hepforge.org/
 COMMENT=	ColorFull is a C++ code for calculations in QCD color space
 LICENSE=	gnu-gpl-v2
 

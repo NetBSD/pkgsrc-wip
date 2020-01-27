@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/project/babel/releases/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://www.cliki.net/Babel
+HOMEPAGE=	https://www.cliki.net/Babel
 COMMENT=	Babel is a character encoding/decoding library for Common Lisp
 LICENSE=	public-domain
 DEPENDS+=	${LISP_PREFIX}-alexandria-*:../../wip/cl-alexandria

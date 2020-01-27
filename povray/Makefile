@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.povray.org/beta/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.povray.org/
+HOMEPAGE=	https://www.povray.org/
 COMMENT=	Persistence of Vision Ray Tracer
 LICENSE=	povray-license
 

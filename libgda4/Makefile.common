@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/4.2/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome-db.org/
+HOMEPAGE=		https://www.gnome-db.org/
 COMMENT=		GNU database access library
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/libgda4/distinfo

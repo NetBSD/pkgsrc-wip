@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jabref/}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jabref.org/
+HOMEPAGE=	https://www.jabref.org/
 COMMENT=	Open source bibliography reference manager
 LICENSE=	mit
 

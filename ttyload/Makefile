@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.daveltd.com/src/util/ttyload/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		esg@sdf.lonestar.org
-HOMEPAGE=		http://www.daveltd.com/src/util/ttyload/
+HOMEPAGE=		https://www.daveltd.com/src/util/ttyload/
 COMMENT=		Color-coded console load graph
 LICENSE=		isc
 

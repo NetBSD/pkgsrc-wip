@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	https://kicad-downloads.s3.cern.ch/docs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kicad-pcb.org/
+HOMEPAGE=	https://kicad-pcb.org/
 COMMENT=	Documentation for the PCB CAD software
 LICENSE=	gnu-gpl-v3
 NO_BUILD=	yes

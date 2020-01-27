@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.un4seen.com/files/ \
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://www.un4seen.com/mo3.html
+HOMEPAGE=		https://www.un4seen.com/mo3.html
 COMMENT=		MO3 decoder
 LICENSE=		no-profit
 

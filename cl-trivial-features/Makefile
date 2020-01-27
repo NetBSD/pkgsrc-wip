@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/~loliveira/tarballs/trivial-features/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://www.cliki.net/trivial-features
+HOMEPAGE=	https://www.cliki.net/trivial-features
 COMMENT=	Trivial-features ensures consistent *FEATURES* in Common Lisp
 LICENSE=	mit
 

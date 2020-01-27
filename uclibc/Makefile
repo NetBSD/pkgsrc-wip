@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.uclibc.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.uclibc.org/
+HOMEPAGE=	https://www.uclibc.org/
 COMMENT=	C library for developing embedded Linux systems
 LICENSE=	gnu-lgpl-v2.1
 

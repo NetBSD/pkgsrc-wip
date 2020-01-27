@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/ \
 			${MASTER_SITE_SUNSITE:=system/network/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.hcs.harvard.edu/~dholland/computers/netkit.html
+HOMEPAGE=		https://www.hcs.harvard.edu/~dholland/computers/netkit.html
 COMMENT=		Network RIP and router discovery daemon for Linux
 
 

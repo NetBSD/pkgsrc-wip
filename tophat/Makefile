@@ -11,7 +11,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://ccb.jhu.edu/software/tophat/downloads/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://ccb.jhu.edu/software/tophat/index.shtml
+HOMEPAGE=	https://ccb.jhu.edu/software/tophat/index.shtml
 COMMENT=	Fast splice junction mapper for RNA-Seq reads
 LICENSE=	boost-license
 

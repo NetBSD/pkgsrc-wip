@@ -4,7 +4,7 @@ DISTNAME=	libmirisdr-0.1
 CATEGORIES=	ham
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cgit.osmocom.org/libmirisdr/
+HOMEPAGE=	https://cgit.osmocom.org/libmirisdr/
 COMMENT=	Osmocom Mirics MSi2500 + MSi001 SDR library
 LICENSE=	gnu-gpl-v2
 

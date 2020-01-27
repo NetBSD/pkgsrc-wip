@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://perso.ens-lyon.fr/damien.stehle/downloads/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://perso.ens-lyon.fr/damien.stehle/#software
+HOMEPAGE=	https://perso.ens-lyon.fr/damien.stehle/#software
 COMMENT=	Library for LLL-reduction of Euclidean lattices
 LICENSE=	gnu-lgpl-v2.1
 

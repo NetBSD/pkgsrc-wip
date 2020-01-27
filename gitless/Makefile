@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=sdg-mit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gitless.com/
+HOMEPAGE=	https://gitless.com/
 COMMENT=	Experimental version control system built on top of Git
 LICENSE=	gnu-gpl-v2
 

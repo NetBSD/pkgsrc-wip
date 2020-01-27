@@ -6,7 +6,7 @@ GITHUB_PROJECT=	collectd
 MASTER_SITES=	https://github.com/Stackdriver/collectd/archive/stack-build/
 CATEGORIES=	sysutils
 
-HOMEPAGE=	http://collectd.org/
+HOMEPAGE=	https://collectd.org/
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/collectd-stack-build-${DISTNAME}

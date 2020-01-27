@@ -5,7 +5,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://www.hepforge.org/archive/kstest/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://kstest.hepforge.org/
+HOMEPAGE=	https://kstest.hepforge.org/
 COMMENT=	Kolmogorov-Smirnov Test Statistic with High Precision
 LICENSE=	gnu-lgpl-v3
 

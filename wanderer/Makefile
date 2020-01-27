@@ -9,7 +9,7 @@ DIST_SUBDIR=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	catskillmarina@gmail.com
-HOMEPAGE=	http://e271.net/~marina/wanderer.html
+HOMEPAGE=	https://e271.net/~marina/wanderer.html
 COMMENT=	Wanderer is a game similar to Boulderdash, Repton, XOR and others
 LICENSE=	gnu-gpl-v2
 

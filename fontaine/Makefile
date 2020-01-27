@@ -6,7 +6,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fontaine/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.unifont.org/fontaine/
+HOMEPAGE=	https://www.unifont.org/fontaine/
 COMMENT=	CLI utility to display font meta information
 LICENSE=	gnu-gpl-v2
 

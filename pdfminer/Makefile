@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdfminer/}
 EXTRACT_SUFX=	.gz#md5=d69836472cd1d555a7340e0fe75c5e20
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.unixuser.org/~euske/python/pdfminer/index.html
+HOMEPAGE=	https://www.unixuser.org/~euske/python/pdfminer/index.html
 COMMENT=	PDF parser and analyzer
 LICENSE=	mit
 

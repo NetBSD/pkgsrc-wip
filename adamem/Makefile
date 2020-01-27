@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.komkon.org/~dekogel/files/coleco/
 
 MAINTAINER=		xmor61@users.sourceforge.net
-HOMEPAGE=		http://www.komkon.org/~dekogel/adamem.html
+HOMEPAGE=		https://www.komkon.org/~dekogel/adamem.html
 COMMENT=		Emulator for the Colecovision game console and Adam computer system
 
 MAKE_FILE=		Makefile.X

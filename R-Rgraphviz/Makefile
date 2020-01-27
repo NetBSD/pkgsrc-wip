@@ -4,7 +4,7 @@ CATEGORIES=	graphics math
 MASTER_SITES=	http://www.bioconductor.org/packages/2.10/bioc/src/contrib/
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://www.bioconductor.org/packages/release/bioc/html/Rgraphviz.html
+HOMEPAGE=	https://www.bioconductor.org/packages/release/bioc/html/Rgraphviz.html
 COMMENT=	Plotting capabilities for R graph objects
 LICENSE=	artistic-2.0
 

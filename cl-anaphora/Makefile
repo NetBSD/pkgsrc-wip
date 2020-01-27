@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://common-lisp.net/project/anaphora/files/
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://common-lisp.net/project/anaphora/
+HOMEPAGE=	https://common-lisp.net/project/anaphora/
 COMMENT=	Anaphora is the anaphoric macro collection
 LICENSE=	public-domain
 

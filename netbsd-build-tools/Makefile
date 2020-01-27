@@ -10,7 +10,7 @@ DISTFILES+=	src${EXTRACT_SUFX}
 DISTFILES+=	syssrc${EXTRACT_SUFX}
 
 MAINTAINER=	cfkoch@edgebsd.org
-HOMEPAGE=	http://netbsd.org/
+HOMEPAGE=	https://netbsd.org/
 COMMENT=	NetBSD cross-toolchain
 
 WRKSRC=		${WRKDIR}/usr/src

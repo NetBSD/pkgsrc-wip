@@ -7,7 +7,7 @@ MASTER_SITES=	http://braingames.jorito.net/f1spirit/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://f1spirit.jorito.net/
+HOMEPAGE=	https://f1spirit.jorito.net/
 COMMENT=	Remake the Konami MSX1 classic F-1 Spirit
 LICENSE=	unlicense
 

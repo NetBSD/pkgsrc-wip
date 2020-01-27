@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://luajit.org/download/
 
 MAINTAINER=	alnsn@NetBSD.org
-HOMEPAGE=	http://luajit.org/
+HOMEPAGE=	https://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 

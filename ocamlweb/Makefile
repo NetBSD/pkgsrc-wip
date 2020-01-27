@@ -5,7 +5,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/ocamlweb/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.lri.fr/~filliatr/ocamlweb/
+HOMEPAGE=	https://www.lri.fr/~filliatr/ocamlweb/
 COMMENT=	Ocamlweb is a literate programming tool for Objective Caml
 LICENSE=	gnu-lgpl-v2
 

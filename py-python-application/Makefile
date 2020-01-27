@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-application/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ag-projects.com/
+HOMEPAGE=	https://ag-projects.com/
 COMMENT=	Basic building blocks for python applications
 LICENSE=	gnu-lgpl-v2
 

@@ -5,7 +5,7 @@ CATEGORIES=	devel net
 MASTER_SITES=	http://www.inerd.com/software/portscout/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.inerd.com/software/portscout/
+HOMEPAGE=	https://www.inerd.com/software/portscout/
 COMMENT=	Check for new versions of software in the ports/pkgsrc tree
 LICENSE=	2-clause-bsd
 

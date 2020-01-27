@@ -7,7 +7,7 @@ MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.chromium.org/Home
+HOMEPAGE=	https://www.chromium.org/Home
 COMMENT=	Chromium web browser
 LICENSE=	modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 

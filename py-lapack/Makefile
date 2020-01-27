@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://kochanski.org/gpk/misc/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://kochanski.org/gpk/misc/PyLapack.html
+HOMEPAGE=	https://kochanski.org/gpk/misc/PyLapack.html
 COMMENT=	PyLapack is a python interface to LAPACK
 LICENSE=	gnu-lgpl-v2.1
 

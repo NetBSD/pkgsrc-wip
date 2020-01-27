@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lscsoft-glue/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lsc-group.phys.uwm.edu/daswg/projects/glue.html
+HOMEPAGE=	https://www.lsc-group.phys.uwm.edu/daswg/projects/glue.html
 COMMENT=	Grid LSC User Environment
 LICENSE=	gnu-gpl-v3
 

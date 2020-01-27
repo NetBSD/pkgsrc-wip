@@ -6,7 +6,7 @@ CATEGORIES=	graphics textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djvusmooth/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://jwilk.net/software/djvusmooth
+HOMEPAGE=	https://jwilk.net/software/djvusmooth
 COMMENT=	Graphical editor for DjVu documents
 LICENSE=	gnu-gpl-v2
 

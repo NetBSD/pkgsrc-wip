@@ -5,7 +5,7 @@ CATEGORIES=	mail
 MASTER_SITES=	-https://github.com/djcb/mu/archive/v${PKGVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.djcbsoftware.nl/code/mu/
+HOMEPAGE=	https://www.djcbsoftware.nl/code/mu/
 COMMENT=	E-mail searching and indexing tools
 LICENSE=	gnu-gpl-v3
 

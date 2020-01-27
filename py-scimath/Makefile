@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	https://www.enthought.com/repo/ets/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.enthought.com/
+HOMEPAGE=	https://www.enthought.com/
 COMMENT=	Scientific and Mathematical calculations
 LICENSE=	modified-bsd
 

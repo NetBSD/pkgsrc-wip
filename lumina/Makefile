@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=trueos/}
 GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lumina-desktop.org/
+HOMEPAGE=	https://lumina-desktop.org/
 COMMENT=	Lumina Desktop Environment
 LICENSE=	modified-bsd
 

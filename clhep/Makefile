@@ -7,7 +7,7 @@ MASTER_SITES=	http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/tarFiles/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hugor@users.sourceforge.net
-HOMEPAGE=	http://proj-clhep.web.cern.ch/proj-clhep/
+HOMEPAGE=	https://proj-clhep.web.cern.ch/proj-clhep/
 COMMENT=	Class library for high energy physics
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 

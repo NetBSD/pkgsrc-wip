@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://embed.cs.utah.edu/csmith/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://embed.cs.utah.edu/csmith/
+HOMEPAGE=	https://embed.cs.utah.edu/csmith/
 COMMENT=	Random generator of C programs
 LICENSE=	modified-bsd
 

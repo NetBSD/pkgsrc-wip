@@ -6,7 +6,7 @@ MASTER_SITES=	-https://github.com/fsharp/fsharp/archive/${fsharp_version}.tar.gz
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fsharp.org/
+HOMEPAGE=	https://fsharp.org/
 COMMENT=	Fsharp compiler and interpreter
 LICENSE=	apache-2.0
 

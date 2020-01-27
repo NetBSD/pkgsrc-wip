@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=A/ARS/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://bitbucket.org/glarrain/ars
+HOMEPAGE=	https://bitbucket.org/glarrain/ars
 COMMENT=	Physically-accurate robotics simulator
 LICENSE=	2-clause-bsd
 

@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://hgm.nubati.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.hccnet.nl/h.g.muller/CVfairy.html
+HOMEPAGE=	https://home.hccnet.nl/h.g.muller/CVfairy.html
 COMMENT=	AI for playing user-defined Chess variants
 # Uncommon permissive license
 #LICENSE=	fairymax

@@ -12,7 +12,7 @@ GITHUB_TYPE=	release
 # GIT_MODULE.msgpack=	msgpack-c
 # WRKSRC=			${WRKDIR}/${GIT_MODULE.msgpack}
 
-HOMEPAGE=	http://msgpack.org/
+HOMEPAGE=	https://msgpack.org/
 COMMENT=	Binary-based efficient object serialization library
 LICENSE=	apache-2.0
 

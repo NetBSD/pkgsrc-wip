@@ -10,7 +10,7 @@ LICENSE=	mit
 
 MAINTAINER=	cfkoch@edgebsd.org
 COMMENT=	Free clone of the touhou games
-HOMEPAGE=	http://taisei-project.org/
+HOMEPAGE=	https://taisei-project.org/
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

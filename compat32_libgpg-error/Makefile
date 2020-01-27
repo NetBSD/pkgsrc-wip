@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 PKGNAME=	compat${ABI}_${DISTNAME}
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.gnupg.org/
+HOMEPAGE=	https://www.gnupg.org/
 COMMENT=	Definitions of common error values for all GnuPG components
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
@@ -25,18 +25,18 @@ TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
-SUBST_CLASSES+=         makefile
-SUBST_STAGE.makefile=   pre-build
-SUBST_MESSAGE.makefile= Fixing makefile
-SUBST_FILES.makefile+=  Makefile
-SUBST_FILES.makefile+= 	m4/Makefile
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-build
+SUBST_MESSAGE.makefile=	Fixing makefile
+SUBST_FILES.makefile+=	Makefile
+SUBST_FILES.makefile+=	m4/Makefile
 SUBST_FILES.makefile+=	tests/Makefile
 SUBST_FILES.makefile+=	lang/cl/Makefile
 SUBST_FILES.makefile+=	lang/Makefile
 SUBST_FILES.makefile+=	doc/Makefile
 SUBST_FILES.makefile+=	src/Makefile
 SUBST_FILES.makefile+=	po/Makefile
-SUBST_SED.makefile=     -e 's, /usr/pkg/share/locale,${PREFIX}/emul/netbsd32/share/locale,g'
+SUBST_SED.makefile=	-e 's, /usr/pkg/share/locale,${PREFIX}/emul/netbsd32/share/locale,g'
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}

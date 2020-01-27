@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://codemadness.org/releases/seturgent/
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://codemadness.org/git/seturgent/file/README.html
+HOMEPAGE=	https://codemadness.org/git/seturgent/file/README.html
 COMMENT=	Set an application urgency hint using x11
 LICENSE=	mit
 

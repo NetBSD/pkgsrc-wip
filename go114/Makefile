@@ -10,7 +10,7 @@ MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	gtar
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://golang.org/
+HOMEPAGE=	https://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
 

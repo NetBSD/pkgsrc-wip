@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 LICENSE=		mpl-1.1
 
 MAINTAINER=		nel@soraneko.com, adam.hoka@gmail.com
-HOMEPAGE=		http://www.firebirdsql.org/
+HOMEPAGE=		https://www.firebirdsql.org/
 COMMENT=		SQL database, opensource version of InterBase
 
 USE_PKGLOCALEDIR=	yes

@@ -4,11 +4,11 @@ DISTNAME=	ding-1.7
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/	\
 		ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/de-en/
-DISTFILES=	ding-1.7.tar.gz		\
+DISTFILES=	ding-1.7.tar.gz \
 		de-en.txt.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www-user.tu-chemnitz.de/~fri/ding/
+HOMEPAGE=	https://www-user.tu-chemnitz.de/~fri/ding/
 COMMENT=	Ding is a Dictionary lookup program for the X window system
 LICENSE=	gnu-gpl-v2
 

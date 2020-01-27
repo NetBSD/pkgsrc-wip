@@ -9,7 +9,7 @@ DIST_SUBDIR=		jpeg-9c-v2
 PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ijg.org/
+HOMEPAGE=		https://www.ijg.org/
 COMMENT=		IJG's jpeg compression utilities
 
 CONFLICTS=		libjpeg-turbo-[0-9]*

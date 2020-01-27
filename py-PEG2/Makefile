@@ -6,7 +6,7 @@ CATEGORIES=	devel textproc python
 MASTER_SITES=	http://fdik.org/pyPEG2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fdik.org/pyPEG2/
+HOMEPAGE=	https://fdik.org/pyPEG2/
 COMMENT=	Intrinsic PEG Parser-Interpreter for Python
 LICENSE=	gnu-gpl-v2
 

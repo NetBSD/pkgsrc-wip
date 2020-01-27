@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.hepforge.org/archive/agile/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://agile.hepforge.org/
+HOMEPAGE=	https://agile.hepforge.org/
 COMMENT=	Interface for a variety of Fortran-based Monte Carlo generators
 LICENSE=	gnu-gpl-v2
 

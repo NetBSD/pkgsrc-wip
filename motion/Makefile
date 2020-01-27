@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Motion-Project/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lavrsen.dk/foswiki/bin/view/Motion/WebHome
+HOMEPAGE=	https://lavrsen.dk/foswiki/bin/view/Motion/WebHome
 COMMENT=	Motion detecting video camera package
 LICENSE=	gnu-gpl-v2
 

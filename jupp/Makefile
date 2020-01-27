@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/jupp/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam.hoka@gmail.com
-HOMEPAGE=	http://www.mirbsd.org/jupp.htm
+HOMEPAGE=	https://www.mirbsd.org/jupp.htm
 COMMENT=	The portable version of joe from the MirOS project
 LICENSE=	gnu-gpl-v1
 WRKSRC=		${WRKDIR}/jupp

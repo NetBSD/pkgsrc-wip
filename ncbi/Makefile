@@ -8,7 +8,7 @@ MASTER_SITES=		#empty
 DISTFILES=		#empty
 
 MAINTAINER=		mchittur@nmsu.edu
-HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/
+HOMEPAGE=		https://www.ncbi.nlm.nih.gov/IEB/ToolBox/
 COMMENT=		Portable, modular software for molecular biology
 
 META_PACKAGE=		yes

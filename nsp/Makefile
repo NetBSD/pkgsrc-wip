@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://cermics.enpc.fr/~jpc/nsp-tiddly/files/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://cermics.enpc.fr/~jpc/nsp-tiddly/
+HOMEPAGE=	https://cermics.enpc.fr/~jpc/nsp-tiddly/
 COMMENT=	Scientific software package similiar to Matlab, Scilab, octave
 LICENSE=	gnu-gpl-v2
 

@@ -5,7 +5,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	http://www.nsc.liu.se/~kent/python-hostlist/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.nsc.liu.se/~kent/python-hostlist/
+HOMEPAGE=	https://www.nsc.liu.se/~kent/python-hostlist/
 COMMENT=	Manage SLURM host lists
 LICENSE=	gnu-gpl-v2
 

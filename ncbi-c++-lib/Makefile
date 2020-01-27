@@ -8,7 +8,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/2004/Nov_30_2004/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/index.cgi
+HOMEPAGE=		https://www.ncbi.nlm.nih.gov/IEB/ToolBox/index.cgi
 COMMENT=		Libraries needed by apps dependent on NCBI C++ toolkit
 
 CONFLICTS=		ncbi_cxx-lib-[0-9]*

@@ -7,7 +7,7 @@ CATEGORIES=	finance python
 MASTER_SITES=	http://download.electrum.org/${ELECT_VER}/
 
 MAINTAINER=	kyuupichan@gmail.com
-HOMEPAGE=	http://electrum.org/
+HOMEPAGE=	https://electrum.org/
 COMMENT=	Electrum is an easy to use Bitcoin client
 LICENSE=	gnu-gpl-v3
 

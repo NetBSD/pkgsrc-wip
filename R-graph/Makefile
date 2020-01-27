@@ -4,7 +4,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://bioconductor.org/packages/release/bioc/src/contrib/
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://www.bioconductor.org/packages/release/bioc/html/graph.html
+HOMEPAGE=	https://www.bioconductor.org/packages/release/bioc/html/graph.html
 COMMENT=	R package to handle graph data structures
 LICENSE=	artistic-2.0
 

@@ -7,7 +7,7 @@ CATEGORIES=	x11 misc
 MASTER_SITES=	http://gotmor.googlepages.com/
 
 MAINTAINER=	pikapika@8-0.net
-HOMEPAGE=	http://sites.google.com/site/gotmor/dzen
+HOMEPAGE=	https://sites.google.com/site/gotmor/dzen
 COMMENT=	General purpose messaging and notification program
 LICENSE=	mit
 

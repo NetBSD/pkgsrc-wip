@@ -12,7 +12,7 @@ MASTER_SITES+=		ftp://ftp.slackware.pl/pub/gnokii/gnokii/0.6.x/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnokii.org/
+HOMEPAGE=		https://www.gnokii.org/
 COMMENT=		Open source tools for your mobile phone
 LICENSE=		gnu-gpl-v2
 

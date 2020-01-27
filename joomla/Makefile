@@ -7,7 +7,7 @@ MASTER_SITES=	https://downloads.joomla.org/cms/joomla3/3-9-3/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	http://www.joomla.org/
+HOMEPAGE=	https://www.joomla.org/
 COMMENT=	Dynamic web content management system (CMS)
 LICENSE=	gnu-gpl-v2
 

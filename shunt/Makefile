@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.serice.net/shunt/
 
 MAINTAINER=	fgudin@nerim.net
-HOMEPAGE=	http://www.serice.net/shunt/
+HOMEPAGE=	https://www.serice.net/shunt/
 COMMENT=	Burning multi-set CDROM backups
 LICENSE=	modified-bsd
 

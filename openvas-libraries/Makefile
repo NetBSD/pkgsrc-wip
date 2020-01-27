@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/2351/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openvas.org/
+HOMEPAGE=	https://www.openvas.org/
 COMMENT=	Libraries for the Open Vulnerability Assessment System
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 

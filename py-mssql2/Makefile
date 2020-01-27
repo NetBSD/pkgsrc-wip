@@ -6,7 +6,7 @@ CATEGORIES=		databases python
 MASTER_SITES=		${MASTER_SITE_PYPI:=p/pymssql/}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://pymssql.org/
+HOMEPAGE=		https://pymssql.org/
 COMMENT=		Python interface to MS SQL
 LICENSE=		gnu-lgpl-v2.1
 

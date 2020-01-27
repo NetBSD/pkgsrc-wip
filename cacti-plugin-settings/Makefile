@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
 MAINTAINER=		pettai@nordu.net
-HOMEPAGE=		http://docs.cacti.net/
+HOMEPAGE=		https://docs.cacti.net/
 COMMENT=		Settings plugin to cacti
 LICENSE=		gnu-gpl-v2
 

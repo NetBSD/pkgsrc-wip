@@ -5,7 +5,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://codemadness.org/releases/json2tsv/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://codemadness.org/git/json2tsv/file/README.html
+HOMEPAGE=	https://codemadness.org/git/json2tsv/file/README.html
 COMMENT=	Convert JSON to TSV
 LICENSE=	isc
 

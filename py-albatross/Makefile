@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.object-craft.com.au/projects/albatross/download/
 LICENSE=	modified-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.object-craft.com.au/projects/albatross/
+HOMEPAGE=	https://www.object-craft.com.au/projects/albatross/
 COMMENT=	Toolkit for Stateful Web Applications
 
 

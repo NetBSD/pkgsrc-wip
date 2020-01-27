@@ -5,7 +5,7 @@ CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/star/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rakudo.org/
+HOMEPAGE=	https://rakudo.org/
 COMMENT=	Perl 6 reference implementation
 LICENSE=	artistic-2.0
 

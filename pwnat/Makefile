@@ -4,7 +4,7 @@ DISTNAME=	pwnat-0.3
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://samy.pl/pwnat/
+HOMEPAGE=	https://samy.pl/pwnat/
 COMMENT=	NAT to NAT client-server communication
 LICENSE=	gnu-gpl-v3
 

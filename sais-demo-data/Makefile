@@ -7,7 +7,7 @@ MASTER_SITES=	http://zork.net/~nick/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://zork.net/~nick/
+HOMEPAGE=	https://zork.net/~nick/
 COMMENT=	Strange Adventures in Infinite Space engine (SDL port) (demo data files)
 LICENSE=	sais-demo-data-license
 

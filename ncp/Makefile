@@ -7,7 +7,7 @@ MASTER_SITES=	http://dl.fefe.de/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fefe.de/ncp/
+HOMEPAGE=	https://www.fefe.de/ncp/
 COMMENT=	Fast file copy tool for LANs
 #LICENSE=	asked upstream, will fill in when he replies
 

@@ -10,7 +10,7 @@ GIT_BRANCH.uzbl=	next
 WRKSRC=			${WRKDIR}/uzbl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.uzbl.org/
+HOMEPAGE=	https://www.uzbl.org/
 COMMENT=	Web interface tools which adhere to the UNIX philosophy
 LICENSE=	gnu-gpl-v3
 

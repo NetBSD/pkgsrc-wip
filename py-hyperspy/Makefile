@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperspy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://hyperspy.org/
+HOMEPAGE=	https://hyperspy.org/
 COMMENT=	Multidimensional data analysis toolbox
 LICENSE=	gnu-gpl-v3
 

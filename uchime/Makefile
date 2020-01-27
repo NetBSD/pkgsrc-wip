@@ -11,7 +11,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://drive5.com/uchime/
 
 MAINTAINER=	dsiercks@uwm.edu
-HOMEPAGE=	http://drive5.com/usearch/manual/uchime_algo.html
+HOMEPAGE=	https://drive5.com/usearch/manual/uchime_algo.html
 COMMENT=	Algorithm for detecting chimeric sequences
 # Check this
 LICENSE=	public-domain

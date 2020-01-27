@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.cship.info/mirror/dnstunnel/ http://beta.ivancover.com/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://dankaminsky.com/2004/07/29/51/
+HOMEPAGE=	https://dankaminsky.com/2004/07/29/51/
 COMMENT=	Tool to enable ssh tunnel over DNS using TXT records
 
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS

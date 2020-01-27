@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=adventuregamestudio/}
 GITHUB_TAG=	v.${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.adventuregamestudio.co.uk/
+HOMEPAGE=	https://www.adventuregamestudio.co.uk/
 COMMENT=	Adventure Game Studio runtime engine
 LICENSE=	artistic-2.0
 

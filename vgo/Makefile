@@ -8,7 +8,7 @@ GITHUB_PROJECT=		vgo
 GITHUB_TAG=		085872f6d9
 
 MAINTAINER=		bsiegert@NetBSD.org
-HOMEPAGE=		http://godoc.org/golang.org/x/vgo
+HOMEPAGE=		https://godoc.org/golang.org/x/vgo
 COMMENT=		Versioned Go prototype
 LICENSE=		modified-bsd
 

@@ -4,7 +4,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://cran.r-project.org/web/packages/gsl/
+HOMEPAGE=	https://cran.r-project.org/web/packages/gsl/
 COMMENT=	R wrapper for the Gnu Scientific Library
 LICENSE=	gnu-gpl-v2
 

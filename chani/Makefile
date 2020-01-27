@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/chani/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://chani.hepforge.org/
+HOMEPAGE=	https://chani.hepforge.org/
 COMMENT=	Tool for transient simulation of charge transport
 #LICENSE=	# TODO: (see mk/license.mk)
 

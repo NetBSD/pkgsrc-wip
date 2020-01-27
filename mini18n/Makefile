@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://download.tuxfamily.org/yabause/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://yabause.org/
+HOMEPAGE=	https://yabause.org/
 COMMENT=	Minimal translation library
 LICENSE=	gnu-gpl-v2
 

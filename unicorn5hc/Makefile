@@ -8,7 +8,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.elf-emulation.com/rcs/unicorn5/index.html
+HOMEPAGE=	https://www.elf-emulation.com/rcs/unicorn5/index.html
 COMMENT=	Quest for the Unicorn version 5, a rogue-like game, Hard Core edition
 #LICENSE=	no-commercial-use
 

@@ -5,7 +5,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://pottonen.kapsi.fi/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pottonen.kapsi.fi/libexact.html
+HOMEPAGE=	https://pottonen.kapsi.fi/libexact.html
 COMMENT=	Solve combinatorial exact covering problems
 LICENSE=	gnu-gpl-v2
 

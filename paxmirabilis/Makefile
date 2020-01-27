@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/mir/cpio/
 EXTRACT_SUFX=	.cpio.gz
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://launchpad.net/paxmirabilis
+HOMEPAGE=	https://launchpad.net/paxmirabilis
 COMMENT=	Archiving utility for tar, cpio and ar
 LICENSE=	miros
 

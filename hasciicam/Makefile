@@ -7,7 +7,7 @@ CATEGORIES=		graphics net
 MASTER_SITES=		https://files.dyne.org/hasciicam/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ascii.dyne.org/
+HOMEPAGE=		https://ascii.dyne.org/
 COMMENT=		Live ascii video on the web
 LICENSE=		gnu-gpl-v3
 

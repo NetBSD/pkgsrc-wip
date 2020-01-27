@@ -9,7 +9,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kicad-pcb.org/
+HOMEPAGE=	https://kicad-pcb.org/
 COMMENT=	Project templates for the schematic CAD software
 LICENSE=	cc-by-sa-v4.0
 

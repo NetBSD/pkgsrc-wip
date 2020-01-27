@@ -5,7 +5,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/rk/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://rk.hepforge.org/
+HOMEPAGE=	https://rk.hepforge.org/
 COMMENT=	Relativistic Kinematics
 LICENSE=	gnu-lgpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-gnutls/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ag-projects.com/
+HOMEPAGE=	https://ag-projects.com/
 COMMENT=	Python wrapper for the GNUTLS library
 LICENSE=	gnu-lgpl-v2
 

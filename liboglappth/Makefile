@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://www.bioinformatics.org/ghemical/download/release20090911/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.bioinformatics.org/ghemical/ghemical/
+HOMEPAGE=	https://www.bioinformatics.org/ghemical/ghemical/
 COMMENT=	Support libraries of science/ghemical port
 LICENSE=	gnu-gpl-v2
 
