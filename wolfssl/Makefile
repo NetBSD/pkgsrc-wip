@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.wolfssl.com/
 COMMENT=	Embedded SSL C-Library
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--enable-dh
 CONFIGURE_ARGS+=	--enable-dsa
