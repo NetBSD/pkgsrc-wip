@@ -4,3 +4,7 @@ At least on NetBSD/amd64 9.99.17 the test suite fails due
  mutex    test failed!
   error = -9906
  FAIL testsuite/testsuite.test (exit status: 255)
+
+This seems to be an issue with mismatch of linux vs netbsd pthread API.
+
+https://netbsd.org/~kamil/patch-00217-check-alive-mutex.txt

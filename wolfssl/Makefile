@@ -34,7 +34,6 @@ CONFIGURE_ARGS+=	--enable-tls13-draft28
 
 PKGCONFIG_OVERRIDE+=	support/wolfssl.pc.in
 
-USE_TOOLS+=	gawk gmake pkg-config zip
 USE_LIBTOOL=	yes
 
 TEST_TARGET=	check
