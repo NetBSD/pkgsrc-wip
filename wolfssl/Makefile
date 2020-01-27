@@ -32,13 +32,11 @@ CONFIGURE_ARGS+=	--enable-tls13-draft23
 CONFIGURE_ARGS+=	--enable-tls13-draft26
 CONFIGURE_ARGS+=	--enable-tls13-draft28
 
-USE_TOOLS+=	autoreconf autoconf automake gawk gmake m4 pkg-config zip
-USE_LANGUAGES=	c c++
+PKGCONFIG_OVERRIDE+=	support/wolfssl.pc.in
+
+USE_TOOLS+=	gawk gmake pkg-config zip
 USE_LIBTOOL=	yes
 
 TEST_TARGET=	check
-
-pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} autoreconf -vif
 
 .include "../../mk/bsd.pkg.mk"
