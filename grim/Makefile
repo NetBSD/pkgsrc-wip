@@ -5,7 +5,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emersion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wayland.emersion.fr/grim/
 COMMENT=	Tool to grab images from a Wayland compositor
 LICENSE=	mit
