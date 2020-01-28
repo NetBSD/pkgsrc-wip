@@ -364,6 +364,7 @@ SUBDIR+=	cdhit
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
+SUBDIR+=	celluloid
 SUBDIR+=	centrifuge
 SUBDIR+=	cereal
 SUBDIR+=	cfiles
