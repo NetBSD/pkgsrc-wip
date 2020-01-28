@@ -1374,7 +1374,6 @@ SUBDIR+=	hs-basic-prelude
 SUBDIR+=	hs-bifunctors
 SUBDIR+=	hs-binary-strict
 SUBDIR+=	hs-bindings-DSL
-SUBDIR+=	hs-bindings-EsounD
 SUBDIR+=	hs-bindings-audiofile
 SUBDIR+=	hs-bindings-librrd
 SUBDIR+=	hs-blaze-builder-conduit
