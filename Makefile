@@ -1963,6 +1963,7 @@ SUBDIR+=	libsocialweb
 SUBDIR+=	libspt
 SUBDIR+=	libsquish
 SUBDIR+=	libstacktrace
+SUBDIR+=	libstatgrab
 SUBDIR+=	libstrophe
 SUBDIR+=	libsysstat
 SUBDIR+=	libtermkey
