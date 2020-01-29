@@ -1,41 +1,37 @@
 # $NetBSD: Makefile,v 1.9 2015/08/18 20:48:41 yhardy Exp $
 #
 
-DISTNAME=	fs2_open_${PKGVERSION_NOREV:S/./_/g}_src
-PKGNAME=	fs2_open-3.7.4
+DISTNAME=	fs2_open_19_0_0-source-Unix
+PKGNAME=	fs2_open-19.0.0
 CATEGORIES=	games
-MASTER_SITES=	http://swc.fs2downloads.com/builds/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=scp-fs2open/fs2open.github.com/releases/download/release_19_0_0/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scp.indiegames.us/
 COMMENT=	Freespace 2 source code project
 
-WRKSRC=		${WRKDIR}/fs2_open_${PKGVERSION_NOREV:S/./_/g}
+WRKSRC=		${WRKDIR}/fs2open.github.com
 
-GNU_CONFIGURE=	yes
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	aclocal autoconf automake pkg-config
-USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
+CMAKE_ARGS+=	-DBINARY_DESTINATION=bin
+
 LUA_VERSIONS_ACCEPTED=	51
 
 pre-configure:
-	set -e; cd ${WRKSRC}; \
-	aclocal; libtoolize; automake -a --foreign -i; autoconf
+	${MKDIR} ${WRKSRC}/build
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/code/fs2_open_${PKGVERSION_NOREV} ${DESTDIR}${PREFIX}/bin/fs2_open
-
-.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
