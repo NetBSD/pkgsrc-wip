@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.125 2019/01/07 18:52:23 jaapb Exp $
 
-SHA1 (ocaml-4.10.0+beta1.tar.gz) = 06fd8f4214e7b5de22b9193b92b068944426b286
-RMD160 (ocaml-4.10.0+beta1.tar.gz) = f2c36fd178ad1979ecce85db5fd578cdef74046c
-SHA512 (ocaml-4.10.0+beta1.tar.gz) = b3dbe539a83cd45624b247de5c72a4f114a8959a0f36785f3d4b5c1a63d9d0b72223241c720bd720830cfa1b758fcebe4ccd79e1fa7141f05629c669537e1ccf
-Size (ocaml-4.10.0+beta1.tar.gz) = 4921837 bytes
+SHA1 (ocaml-4.10.0+beta2.tar.gz) = 9dd2e4c0b9eef2000aeafd7d2e62c11e89e98e39
+RMD160 (ocaml-4.10.0+beta2.tar.gz) = 73e2d2f11acc0f9d0623f19fd4ed5149d136e05a
+SHA512 (ocaml-4.10.0+beta2.tar.gz) = 190b4edd9a433c53cebd4872d5bcfda80ef6c5ca2870325fcccddf6525157aa86d91fa75e429a0eb812eb2aebf4c8893f74e8ebfd0c8526ef1f83ad665ca5d6e
+Size (ocaml-4.10.0+beta2.tar.gz) = 4921681 bytes
 SHA1 (patch-Makefile) = 50103df7b34f110a1d7f2b9c2d7f47c9885e8b52
 SHA1 (patch-Makefile.common.in) = 37d880f7125040fd4a125ff0e24615811ce9c827
 SHA1 (patch-asmcomp_amd64_emit.mlp) = c2b90f50bc3c4bf9817916bdd455a8bfc03cb69b
