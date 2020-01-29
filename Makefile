@@ -4282,7 +4282,6 @@ SUBDIR+=	recidivm
 SUBDIR+=	recoll
 SUBDIR+=	recutils
 SUBDIR+=	redfang
-SUBDIR+=	redshift
 SUBDIR+=	reduze
 SUBDIR+=	refkeen
 SUBDIR+=	regexxer
