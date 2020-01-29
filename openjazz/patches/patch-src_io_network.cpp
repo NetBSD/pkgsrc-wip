@@ -1,15 +1,16 @@
 $NetBSD$
---- ./src/io/network.cpp.orig	2018-05-22 08:17:03.000000000 -0700
-+++ ./src/io/network.cpp	2018-11-21 23:17:27.447313979 -0800
-@@ -60,6 +60,7 @@
- 	#include <arpa/inet.h>
+--- src/io/network.cpp.orig	2019-01-06 13:41:53.000000000 +0000
++++ src/io/network.cpp
+@@ -63,6 +63,8 @@
+ 	#include <sys/select.h>
  #endif
  
 +#include <sys/time.h>
- 
++
  /**
   * Initialise networking.
-@@ -172,7 +173,7 @@
+  */
+@@ -174,7 +176,7 @@ int Network::join (char *address) {
  #ifdef USE_SOCKETS
  	sockaddr_in sockAddr;
  	fd_set writefds;
