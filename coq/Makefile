@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.128 2020/01/24 15:54:48 jaapb Exp $
 #
 
-DISTNAME=	coq-8.11+beta1
+DISTNAME=	coq-8.11.0
 CATEGORIES=	lang math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coq/}
 GITHUB_TAG=	V${PKGVERSION_NOREV:S/_/+/}

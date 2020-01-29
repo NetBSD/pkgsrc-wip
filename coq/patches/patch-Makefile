@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.orig	2020-01-24 22:02:03.000000000 +0000
++++ Makefile
+@@ -48,7 +48,7 @@
+ # !! FIND_SKIP_DIRS section of dev/doc/build-system.dev.txt         !!
+ # "-not -name ." to avoid skipping everything since we "find ."
+ # "-type d" to be able to find .merlin.in files
+-FIND_SKIP_DIRS:=-not -name . '(' \
++FIND_SKIP_DIRS:=! -name . '(' \
+   -name '{arch}' -o \
+   -name '.*' -type d -o \
+   -name '_darcs' -o \
