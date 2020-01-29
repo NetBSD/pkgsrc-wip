@@ -489,6 +489,7 @@ SUBDIR+=	coreclr-git
 SUBDIR+=	corefx-git
 SUBDIR+=	corert-git
 SUBDIR+=	cortex-var
+SUBDIR+=	cosmo-engine
 SUBDIR+=	coturn
 SUBDIR+=	courierpassd
 SUBDIR+=	coverity-analysis-bin
