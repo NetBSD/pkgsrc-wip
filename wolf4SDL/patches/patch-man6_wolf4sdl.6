@@ -1,0 +1,36 @@
+$NetBSD$
+
+Elaborate on the (pkgsrc) executable names.
+
+--- man6/wolf4sdl.6.orig	2015-04-17 01:23:41.000000000 +0000
++++ man6/wolf4sdl.6
+@@ -24,15 +24,28 @@ can work and run in any machine from 199
+ The
+ .B wolf4sdl
+ produced binaries start one of the 
++.TP
++wolf4sdl-14gt
+ .B Wolf3d Full v1.4 GT/ID/Activision,
++.TP
++wolf4sdl-14, wolf4sdl
+ .B Wolf3d Full v1.4 Apogee (with ReadThis),
++.TP
++wolf4sdl-14sw
+ .B Wolf3d Shareware v1.4,
++.TP
++wolf4sdl-sod
+ .B Spear of Destiny Full and Mission Disks
+ and
++.TP
++wolf4sdl-soddemo
+ .B Spear of Destiny Demo
++.P
+ games, respectively as compilation flags that compiler may provide.
+ Run the binary and there's a notification around what its compiled and what game for.
+-
++Wolf4SDL searches for game data in
++.TP
++	@PREFIX@/share/games/wolf3d
+ 
+ .SH OPTIONS
+ .TP

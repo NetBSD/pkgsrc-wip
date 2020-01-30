@@ -1,2 +1,13 @@
 @comment $NetBSD: PLIST,v 1.1 2015/08/17 20:10:44 yhardy Exp $
-bin/wolf3d
+bin/wolf4sdl
+bin/wolf4sdl-11
+bin/wolf4sdl-14
+bin/wolf4sdl-14gt
+bin/wolf4sdl-10sw
+bin/wolf4sdl-11sw
+bin/wolf4sdl-12sw
+bin/wolf4sdl-14sw
+bin/wolf4sdl-sod
+bin/wolf4sdl-soddemo
+man/man6/wolf4sdl.6
+@pkgdir share/games/wolf3d

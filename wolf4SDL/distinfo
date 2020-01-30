@@ -1,5 +1,8 @@
 $NetBSD: distinfo,v 1.1 2015/08/17 20:10:44 yhardy Exp $
 
-SHA1 (Wolf4SDL-1.7-src.zip) = 09c51a8ccdc6918daa7a1471a75e8c520795b173
-RMD160 (Wolf4SDL-1.7-src.zip) = df45a4468224fb7d93a4753a76584a381445410d
-Size (Wolf4SDL-1.7-src.zip) = 681316 bytes
+SHA1 (wolf4sdl/5387b99d32fc5bac39c87defcb0abbf1018d8083-5387b99d32fc5bac39c87defcb0abbf1018d8083.tar.gz) = 4ce55c3998f682febd065170aec576a4d9a54adf
+RMD160 (wolf4sdl/5387b99d32fc5bac39c87defcb0abbf1018d8083-5387b99d32fc5bac39c87defcb0abbf1018d8083.tar.gz) = d5a9ab623026f0fb616ba063de4b3885fcd46f42
+SHA512 (wolf4sdl/5387b99d32fc5bac39c87defcb0abbf1018d8083-5387b99d32fc5bac39c87defcb0abbf1018d8083.tar.gz) = 14e30272ba753b1f94934bcbff2d3e8ce58411ea79bbb7030718970d9187d0c3e9a464e577ae7bc1841a857403202393d40ddb6284912d44f644c86370bdefac
+Size (wolf4sdl/5387b99d32fc5bac39c87defcb0abbf1018d8083-5387b99d32fc5bac39c87defcb0abbf1018d8083.tar.gz) = 664674 bytes
+SHA1 (patch-man6_wolf4sdl.6) = 80182ef0e3607504ac4d9266886da39f4c50b9a8
+SHA1 (patch-version.h) = 15e7b7b4c8ce793ea0509ce1103ff0fac5de5ed8
