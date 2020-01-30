@@ -569,7 +569,6 @@ SUBDIR+=	decode-dimms
 SUBDIR+=	dee
 SUBDIR+=	deepstate
 SUBDIR+=	deforaos-accessories
-SUBDIR+=	deforaos-camera
 SUBDIR+=	deforaos-desktop
 SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init

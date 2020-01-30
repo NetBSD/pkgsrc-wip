@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 META_PACKAGE=	yes
 
 DEPENDS+=	deforaos-accessories>=0.0.3:../../wip/deforaos-accessories
-DEPENDS+=	deforaos-camera>=0.0.1:../../wip/deforaos-camera
 DEPENDS+=	deforaos-framer>=0.0.0:../../wip/deforaos-framer
 DEPENDS+=	deforaos-terminal>=0.0.0:../../wip/deforaos-terminal
 
