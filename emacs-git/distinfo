@@ -1,3 +1,4 @@
 $NetBSD$
 
 SHA1 (patch-configure.ac) = c9731094e059ac80d25e5a32894404a14be64433
+SHA1 (patch-src_systhread.c) = 1b27f4f7de6e8efc61852fbbcf4ab638502ed7f8
