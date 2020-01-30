@@ -152,6 +152,7 @@ libexec/mcomix/mcomix/thumbnail_tools.py
 libexec/mcomix/mcomix/thumbnail_view.py
 libexec/mcomix/mcomix/tools.py
 libexec/mcomix/mcomix/ui.py
+libexec/mcomix/mcomix/upgrade_tools.py
 libexec/mcomix/mcomix/worker_thread.py
 libexec/mcomix/mcomix/zoom.py
 libexec/mcomix/mcomixstarter.py
