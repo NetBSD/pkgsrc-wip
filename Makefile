@@ -5039,6 +5039,7 @@ SUBDIR+=	xmakemol
 SUBDIR+=	xmds
 SUBDIR+=	xmim
 SUBDIR+=	xml-light
+SUBDIR+=	xml2tsv-git
 SUBDIR+=	xmlformat-docs
 SUBDIR+=	xmlformat-perl
 SUBDIR+=	xmlformat-ruby
