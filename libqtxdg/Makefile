@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/libqtxdg/3.4.0/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Qt implementation of freedesktop.org xdg specs
 LICENSE=	gnu-lgpl-v2.1
@@ -23,8 +23,8 @@ pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

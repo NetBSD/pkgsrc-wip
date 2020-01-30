@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-build-tools/0.6.0/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	LXQt build tools
 LICENSE=	modified-bsd
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
+
+CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/share/examples/lxqt
 
 INSTALLATION_DIRS+=	bin
 
