@@ -575,7 +575,6 @@ SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init
 SUBDIR+=	deforaos-probe
 SUBDIR+=	deforaos-terminal
-SUBDIR+=	deforaos-todo
 SUBDIR+=	deluge
 SUBDIR+=	delve
 SUBDIR+=	denyhosts
