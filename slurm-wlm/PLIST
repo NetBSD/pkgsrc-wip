@@ -111,10 +111,8 @@ lib/slurm/slurmctld_nonstop.la
 lib/slurm/spank_pbs.la
 lib/slurm/src/sattach/sattach.wrapper.c
 lib/slurm/src/srun/srun.wrapper.c
-lib/slurm/switch_cray_aries.la
 lib/slurm/switch_generic.la
 lib/slurm/switch_none.la
-lib/slurm/task_affinity.la
 lib/slurm/task_cray_aries.la
 lib/slurm/task_none.la
 lib/slurm/topology_3d_torus.la

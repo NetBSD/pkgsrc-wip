@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2018/08/22 09:46:10 wiz Exp $
 
 DISTNAME=	slurm-19.05.5
-PKGNAME=	slurm-wlm-19.05.5
+PKGNAME=	${DISTNAME:S/-/-wlm-/}
 CATEGORIES=	parallel
 MASTER_SITES=	http://download.schedmd.com/slurm/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/
@@ -12,9 +12,6 @@ HOMEPAGE=	https://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2
-
-# Still need this since 17.11.5 was committed?
-SUPERSEDES+=	slurm-2.6.4.*
 
 BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 BUILD_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
@@ -31,7 +28,8 @@ CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
 CONFIGURE_ARGS+=	--with-libssh2=${PREFIX}
-CONFIGURE_ARGS.NetBSD+=	ac_cv_func_sched_setaffinity=yes
+# Future: Enable task affinity code is fully patched for NetBSD
+# CONFIGURE_ARGS.NetBSD+=	ac_cv_func_sched_setaffinity=yes
 
 LDFLAGS+=		-llz4
 
@@ -59,7 +57,7 @@ SUBST_SED.linuxinit+=	-e 's|@sbindir@|$${exec_prefix}/sbin|'
 SUBST_SED.linuxinit+=	-e 's|@libdir@|$${exec_prefix}/lib|'
 SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|$${prefix}/etc|'
 
-# Configure flag to disable gtk does not work, so set an impossible requirement
+# Config flag for disabling gtk does not work, so set an impossible requirement
 SUBST_CLASSES+=		gtk
 SUBST_STAGE.gtk=	pre-configure
 SUBST_SED.gtk=		-e 's|min_gtk_version=.*|min_gtk_version=2000.0.0|'
