@@ -17,17 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-EGDIR=			share/lxqt/lxqt-policykit-agent
-PKG_SYSCONFSUBDIR=	xdg
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/lxqt
-CONF_FILES=		${EGDIR}/xdg/autostart/lxqt-policykit-agent.desktop \
-			${PKG_SYSCONFDIR}/autostart/lxqt-policykit-agent.desktop
-
-SUBST_CLASSES+=		conf
-SUBST_FILES.conf=	autostart/CMakeLists.txt
-SUBST_SED.conf=		-e 's,$${LXQT_ETC_XDG_DIR}/,${EGDIR}/xdg/,'
-SUBST_STAGE.conf=	pre-configure
-
 INSTALLATION_DIRS+=	bin
 
 pre-configure:

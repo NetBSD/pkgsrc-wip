@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/lxqt-policykit-agent
 man/man1/lxqt-policykit-agent.1
-share/lxqt/lxqt-policykit-agent/xdg/autostart/lxqt-policykit-agent.desktop
+share/examples/lxqt/xdg/autostart/lxqt-policykit-agent.desktop
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ar.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ca.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_cs.qm
