@@ -2,7 +2,7 @@
 bin/lxqt-config-notificationd
 bin/lxqt-notificationd
 share/applications/lxqt-config-notificationd.desktop
-share/examples/lxqt-notifications/xdg/autostart/lxqt-notifications.desktop
+share/examples/lxqt/xdg/autostart/lxqt-notifications.desktop
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ar.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ca.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_cs.qm
