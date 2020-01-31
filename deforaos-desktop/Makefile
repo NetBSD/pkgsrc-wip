@@ -15,6 +15,5 @@ META_PACKAGE=	yes
 
 DEPENDS+=	deforaos-accessories>=0.0.3:../../wip/deforaos-accessories
 DEPENDS+=	deforaos-framer>=0.0.0:../../wip/deforaos-framer
-DEPENDS+=	deforaos-terminal>=0.0.0:../../wip/deforaos-terminal
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/05 00:53:36 khorben Exp $
-bin/terminal
-man/man1/terminal.1
-share/applications/terminal.desktop
-share/doc/html/Terminal/terminal.html
-share/locale/fr/LC_MESSAGES/Terminal.mo

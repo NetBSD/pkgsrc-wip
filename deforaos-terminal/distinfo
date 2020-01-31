@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/03/05 01:07:05 khorben Exp $
-
-SHA1 (Terminal-0.0.0.tar.gz) = 43e1cdd665d1b8139b7624ff188d6045ac5db6f8
-RMD160 (Terminal-0.0.0.tar.gz) = c9b816953916749df0a3d4eea4975d4969785653
-Size (Terminal-0.0.0.tar.gz) = 9285 bytes
-SHA1 (patch-src_terminal.c) = 89c8d7118645b7316510e815917d47f2b8b868a2
