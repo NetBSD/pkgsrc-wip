@@ -64,6 +64,7 @@ SUBST_FILES.gtk=	configure
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
+SUBST_SED.prefix=	-e 's|/opt/local /sw||g'
 SUBST_FILES.prefix=	configure
 
 SUBST_CLASSES+=		make-ex
