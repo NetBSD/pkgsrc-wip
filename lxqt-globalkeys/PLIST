@@ -28,7 +28,7 @@ share/cmake/lxqt-globalkeys/lxqt-globalkeys-config-version.cmake
 share/cmake/lxqt-globalkeys/lxqt-globalkeys-config.cmake
 share/cmake/lxqt-globalkeys/lxqt-globalkeys-targets-release.cmake
 share/cmake/lxqt-globalkeys/lxqt-globalkeys-targets.cmake
-share/examples/lxqt-globalkeys/xdg/autostart/lxqt-globalkeyshortcuts.desktop
+share/examples/lxqt/xdg/autostart/lxqt-globalkeyshortcuts.desktop
 share/lxqt/globalkeyshortcuts.conf
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_ar.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_ast.qm
