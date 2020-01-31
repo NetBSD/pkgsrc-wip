@@ -31,8 +31,6 @@ CONFIGURE_ARGS+=	--with-libssh2=${PREFIX}
 # Future: Enable task affinity code is fully patched for NetBSD
 # CONFIGURE_ARGS.NetBSD+=	ac_cv_func_sched_setaffinity=yes
 
-LDFLAGS+=		-llz4
-
 REPLACE_PYTHON=		doc/html/shtml2html.py
 REPLACE_PYTHON+=	doc/man/man2html.py
 REPLACE_PYTHON+=	testsuite/expect/regression.py
@@ -62,6 +60,11 @@ SUBST_CLASSES+=		gtk
 SUBST_STAGE.gtk=	pre-configure
 SUBST_SED.gtk=		-e 's|min_gtk_version=.*|min_gtk_version=2000.0.0|'
 SUBST_FILES.gtk=	configure
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
+SUBST_FILES.prefix=	configure
 
 SUBST_CLASSES+=		make-ex
 SUBST_STAGE.make-ex=	post-install
