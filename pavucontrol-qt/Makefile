@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	https://downloads.lxqt.org/downloads/pavucontrol-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Pulseaudio mixer in Qt
 LICENSE=	gnu-lgpl-v2
