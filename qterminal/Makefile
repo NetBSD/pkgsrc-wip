@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://lxqt.org/
-COMMENT=	Terminal emulator widget for Qt5
+COMMENT=	Terminal emulator for Qt5
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
