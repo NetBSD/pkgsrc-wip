@@ -1,6 +1,7 @@
 $NetBSD$
 
 Adapt pthread_setname_np calling convention for NetBSD.
+http://debbugs.gnu.org/cgi/bugreport.cgi?bug=39363
 
 --- src/systhread.c.orig	2020-01-30 22:42:52.049505198 +0000
 +++ src/systhread.c
