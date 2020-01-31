@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/liblxqt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Core utility library for all LXQt components
 LICENSE=	gnu-lgpl-v2.1
@@ -23,9 +23,9 @@ pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../wip/libqtxdg/buildlink3.mk"
