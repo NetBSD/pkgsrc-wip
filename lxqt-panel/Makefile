@@ -37,10 +37,10 @@ DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
 .include "../../wip/lxqt-globalkeys/buildlink3.mk"
 .include "../../sysutils/solid/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
+.include "../../x11/kguiaddons/buildlink3.mk"
 .include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
