@@ -21,17 +21,6 @@ CMAKE_ARGS+=	-DWITH_LIBUDEV=OFF
 
 INSTALLATION_DIRS+=	bin
 
-EGDIR=			share/examples/lxqt-session
-PKG_SYSCONFSUBDIR=	xdg
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
-CONFIG_FILES=		${EGDIR}/xdg/autostart/lxqt-xscreensaver-autostart.desktop \
-			${PKG_SYSCONFDIR}/autostart/lxqt-xscreensaver-autostart.desktop
-
-SUBST_CLASSES+=		conf
-SUBST_FILES.conf=	autostart/CMakeLists.txt
-SUBST_SED.conf=		-e 's,$${LXQT_ETC_XDG_DIR}/,${EGDIR}/xdg/,'
-SUBST_STAGE.conf=	pre-configure
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 

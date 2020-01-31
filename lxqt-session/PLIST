@@ -15,7 +15,8 @@ share/applications/lxqt-logout.desktop
 share/applications/lxqt-reboot.desktop
 share/applications/lxqt-shutdown.desktop
 share/applications/lxqt-suspend.desktop
-share/examples/lxqt-session/xdg/autostart/lxqt-xscreensaver-autostart.desktop
+share/examples/lxqt/xdg/autostart/lxqt-xscreensaver-autostart.desktop
+share/examples/lxqt/xdg/openbox/lxqt-rc.xml
 share/kdm/sessions/lxqt.desktop
 share/lxqt/lxqt.conf
 share/lxqt/session.conf
@@ -127,4 +128,3 @@ share/lxqt/translations/lxqt-session/lxqt-session_zh_CN.qm
 share/lxqt/translations/lxqt-session/lxqt-session_zh_TW.qm
 share/lxqt/windowmanagers.conf
 share/xsessions/lxqt.desktop
-@pkgdir etc/xdg/openbox
