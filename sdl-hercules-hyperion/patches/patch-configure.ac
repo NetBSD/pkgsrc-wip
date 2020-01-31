@@ -1,0 +1,15 @@
+$NetBSD$
+
+test == is not portable.
+
+--- configure.ac.orig	2019-09-10 18:06:20.000000000 +0000
++++ configure.ac
+@@ -1202,7 +1202,7 @@ AC_CHECK_SIZEOF(size_t)
+ AC_CHECK_SIZEOF(int *)
+ AC_CHECK_SIZEOF(off_t)
+ 
+-if test "$hc_cv_have_pthread_h" == "yes"; then
++if test "$hc_cv_have_pthread_h" = "yes"; then
+   AC_CHECK_SIZEOF(pthread_t)
+ fi
+ 
