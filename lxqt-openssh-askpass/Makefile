@@ -23,9 +23,9 @@ pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	openssh-[0-9]*:../../security/openssh
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../wip/liblxqt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
