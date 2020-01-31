@@ -5,7 +5,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-themes/0.14.0/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Themes, graphics and icons for LXQt
 LICENSE=	gnu-lgpl-v2.1
