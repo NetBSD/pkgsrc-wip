@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-config/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 COMMENT=	System configuration (control center)
 HOMEPAGE=	https://downloads.lxqt.org/
 LICENSE=	gnu-lgpl-v2.1
@@ -18,17 +18,6 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DWITH_INPUT=OFF
-
-EGDIR=			share/examples/lxqt
-PKG_SYSCONFSUBDIR=	xdg
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/menus
-CONF_FILES=		${EGDIR}/xdg/menus/lxqt-config.menu \
-			${PKG_SYSCONFDIR}/menus/lxqt-config.menu
-
-SUBST_CLASSES+=		conf
-SUBST_FILES.conf=	src/CMakeLists.txt
-SUBST_SED.conf=		-e 's,$${LXQT_ETC_XDG_DIR}/,${EGDIR}/xdg/,'
-SUBST_STAGE.conf=	pre-configure
 
 INSTALLATION_DIRS+=	bin lib
 
