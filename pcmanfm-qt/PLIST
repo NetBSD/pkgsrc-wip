@@ -3,7 +3,7 @@ bin/pcmanfm-qt
 man/man1/pcmanfm-qt.1
 share/applications/pcmanfm-qt-desktop-pref.desktop
 share/applications/pcmanfm-qt.desktop
-share/examples/pcmanfm-qt/xdg/autostart/lxqt-desktop.desktop
+share/examples/lxqt/xdg/autostart/lxqt-desktop.desktop
 share/pcmanfm-qt/lxqt/settings.conf
 share/pcmanfm-qt/translations/pcmanfm-qt_ar.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ca.qm
