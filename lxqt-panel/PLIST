@@ -10,8 +10,8 @@ lib/lxqt-panel/libvolume.so
 man/man1/lxqt-panel.1
 share/desktop-directories/lxqt-leave.directory
 share/desktop-directories/lxqt-settings.directory
-share/examples/lxqt-panel/xdg/autostart/lxqt-panel.desktop
-share/examples/lxqt-panel/xdg/menus/lxqt-applications.menu
+share/examples/lxqt/xdg/autostart/lxqt-panel.desktop
+share/examples/lxqt/xdg/menus/lxqt-applications.menu
 share/lxqt/lxqt-panel/colorpicker.desktop
 share/lxqt/lxqt-panel/desktopswitch.desktop
 share/lxqt/lxqt-panel/directorymenu.desktop
