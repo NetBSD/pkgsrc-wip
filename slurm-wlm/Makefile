@@ -13,7 +13,7 @@ COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
+# BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 BUILD_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
 
 GNU_CONFIGURE=	yes
@@ -71,8 +71,8 @@ SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
 INSTALLATION_DIRS+=	share/examples/slurm
 
 post-install:
-	${RM} -f ${WRKSRC}/etc/init.d.slurm.in.orig
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/slurm
+	${RM} -f ${DESTDIR}${PREFIX}/share/examples/slurm/init.d.slurm.in.orig
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/tool.mk"

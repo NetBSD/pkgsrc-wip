@@ -11,4 +11,4 @@ SHA1 (patch-src_slurmd_common_task__plugin.h) = d4ad9f350efe1e873809adfe9dc4f559
 SHA1 (patch-src_slurmd_slurmd_slurmd.c) = 93f2da51d2a766a5817cc51e7de40e4ab2306649
 SHA1 (patch-src_slurmd_slurmd_slurmd.h) = a610b0bbe5b6b04be70eb2f8eac2a231139e6d1a
 SHA1 (patch-src_slurmd_slurmstepd_io.c) = b56782887621edb539be70d53dff8029a89e90ed
-SHA1 (patch-src_slurmd_slurmstepd_task.c) = 7948c76ce65b0e5211486d2e7b1901664c1f7016
+SHA1 (patch-src_slurmd_slurmstepd_task.c) = 756dd8eb7201d003a6a7f01aa84b699f9a3ce11b
