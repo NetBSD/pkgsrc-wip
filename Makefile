@@ -4358,6 +4358,7 @@ SUBDIR+=	ruby-gollum
 SUBDIR+=	ruby-gollum-grit_adapter
 SUBDIR+=	ruby-gollum-lib
 SUBDIR+=	ruby-gollum-rugged_adapter
+SUBDIR+=	ruby-htmlentities
 SUBDIR+=	ruby-httparty
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
