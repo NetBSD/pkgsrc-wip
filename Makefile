@@ -4342,6 +4342,7 @@ SUBDIR+=	ruby-blockenspiel
 SUBDIR+=	ruby-cabin
 SUBDIR+=	ruby-charlock_holmes
 SUBDIR+=	ruby-chawan
+SUBDIR+=	ruby-csv
 SUBDIR+=	ruby-delegate_it
 SUBDIR+=	ruby-diaspora
 SUBDIR+=	ruby-ditz
