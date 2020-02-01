@@ -4336,6 +4336,7 @@ SUBDIR+=	rtv
 SUBDIR+=	rubiks
 SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
+SUBDIR+=	ruby-actionpack52-xml_parser
 SUBDIR+=	ruby-asciidoctor
 SUBDIR+=	ruby-blockenspiel
 SUBDIR+=	ruby-cabin

@@ -1,0 +1,11 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/action_pack/xml_parser.rb
+${GEM_LIBDIR}/lib/action_pack/xml_parser/railtie.rb
+${GEM_LIBDIR}/lib/action_pack/xml_parser/version.rb
+${GEM_LIBDIR}/lib/actionpack-xml_parser.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.6.0/extensions
+@pkgdir lib/ruby/gems/2.6.0/build_info
