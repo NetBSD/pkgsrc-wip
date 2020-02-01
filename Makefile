@@ -4371,6 +4371,7 @@ SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-rack-protection1
 SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-redmine
+SUBDIR+=	ruby-request_store
 SUBDIR+=	ruby-review
 SUBDIR+=	ruby-rinku
 SUBDIR+=	ruby-roo-xls
