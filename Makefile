@@ -4373,6 +4373,7 @@ SUBDIR+=	ruby-pusher-client
 SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-rack-protection1
 SUBDIR+=	ruby-rake-compiler
+SUBDIR+=	ruby-rbpdf
 SUBDIR+=	ruby-rbpdf-font
 SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-request_store
