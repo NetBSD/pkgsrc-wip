@@ -4375,6 +4375,7 @@ SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-request_store
 SUBDIR+=	ruby-review
 SUBDIR+=	ruby-rinku
+SUBDIR+=	ruby-roadie
 SUBDIR+=	ruby-roo-xls
 SUBDIR+=	ruby-sanitize
 SUBDIR+=	ruby-simple-navigation

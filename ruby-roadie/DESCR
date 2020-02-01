@@ -1,0 +1,3 @@
+Roadie tries to make sending HTML emails a little less painful by
+inlining stylesheets and rewriting relative URLs for you inside your
+emails.
