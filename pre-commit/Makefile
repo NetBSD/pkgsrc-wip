@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-1.21.0
+DISTNAME=	pre_commit-2.0.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
@@ -9,6 +9,8 @@ MAINTAINER=	iku.iwasa@gmail.com
 HOMEPAGE=	https://pre-commit.com/
 COMMENT=	Framework for managing and maintaining multi-language pre-commit hook
 LICENSE=	mit
+
+PYTHON_VERSIONS_ACCEPTED=	38 37 36 # Only supports 3.6+ since pre-commit v2.0.0
 
 DEPENDS+=	${PYPKGPREFIX}-aspy.yaml-[0-9]*:../../wip/py-aspy.yaml
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv

@@ -18,8 +18,6 @@ ${PYSITELIB}/pre_commit/clientlib.pyo
 ${PYSITELIB}/pre_commit/clientlib.pyc
 ${PYSITELIB}/pre_commit/color.pyo
 ${PYSITELIB}/pre_commit/color.pyc
-${PYSITELIB}/pre_commit/color_windows.pyo
-${PYSITELIB}/pre_commit/color_windows.pyc
 ${PYSITELIB}/pre_commit/constants.pyo
 ${PYSITELIB}/pre_commit/constants.pyc
 ${PYSITELIB}/pre_commit/envcontext.pyo
@@ -28,10 +26,10 @@ ${PYSITELIB}/pre_commit/error_handler.pyo
 ${PYSITELIB}/pre_commit/error_handler.pyc
 ${PYSITELIB}/pre_commit/file_lock.pyo
 ${PYSITELIB}/pre_commit/file_lock.pyc
-${PYSITELIB}/pre_commit/five.pyo
-${PYSITELIB}/pre_commit/five.pyc
 ${PYSITELIB}/pre_commit/git.pyo
 ${PYSITELIB}/pre_commit/git.pyc
+${PYSITELIB}/pre_commit/hook.pyo
+${PYSITELIB}/pre_commit/hook.pyc
 ${PYSITELIB}/pre_commit/logging_handler.pyo
 ${PYSITELIB}/pre_commit/logging_handler.pyc
 ${PYSITELIB}/pre_commit/main.pyo
@@ -56,7 +54,6 @@ ${PYSITELIB}/pre_commit/xargs.pyo
 ${PYSITELIB}/pre_commit/xargs.pyc
 ${PYSITELIB}/pre_commit/clientlib.py
 ${PYSITELIB}/pre_commit/color.py
-${PYSITELIB}/pre_commit/color_windows.py
 ${PYSITELIB}/pre_commit/commands/__init__.py
 ${PYSITELIB}/pre_commit/commands/__init__.pyo
 ${PYSITELIB}/pre_commit/commands/__init__.pyc
@@ -66,6 +63,8 @@ ${PYSITELIB}/pre_commit/commands/clean.pyo
 ${PYSITELIB}/pre_commit/commands/clean.pyc
 ${PYSITELIB}/pre_commit/commands/gc.pyo
 ${PYSITELIB}/pre_commit/commands/gc.pyc
+${PYSITELIB}/pre_commit/commands/hook_impl.pyo
+${PYSITELIB}/pre_commit/commands/hook_impl.pyc
 ${PYSITELIB}/pre_commit/commands/init_templatedir.pyo
 ${PYSITELIB}/pre_commit/commands/init_templatedir.pyc
 ${PYSITELIB}/pre_commit/commands/install_uninstall.pyo
@@ -81,6 +80,7 @@ ${PYSITELIB}/pre_commit/commands/try_repo.pyc
 ${PYSITELIB}/pre_commit/commands/autoupdate.py
 ${PYSITELIB}/pre_commit/commands/clean.py
 ${PYSITELIB}/pre_commit/commands/gc.py
+${PYSITELIB}/pre_commit/commands/hook_impl.py
 ${PYSITELIB}/pre_commit/commands/init_templatedir.py
 ${PYSITELIB}/pre_commit/commands/install_uninstall.py
 ${PYSITELIB}/pre_commit/commands/migrate_config.py
@@ -91,8 +91,8 @@ ${PYSITELIB}/pre_commit/constants.py
 ${PYSITELIB}/pre_commit/envcontext.py
 ${PYSITELIB}/pre_commit/error_handler.py
 ${PYSITELIB}/pre_commit/file_lock.py
-${PYSITELIB}/pre_commit/five.py
 ${PYSITELIB}/pre_commit/git.py
+${PYSITELIB}/pre_commit/hook.py
 ${PYSITELIB}/pre_commit/languages/__init__.py
 ${PYSITELIB}/pre_commit/languages/__init__.pyo
 ${PYSITELIB}/pre_commit/languages/__init__.pyc
@@ -112,8 +112,6 @@ ${PYSITELIB}/pre_commit/languages/helpers.pyo
 ${PYSITELIB}/pre_commit/languages/helpers.pyc
 ${PYSITELIB}/pre_commit/languages/node.pyo
 ${PYSITELIB}/pre_commit/languages/node.pyc
-${PYSITELIB}/pre_commit/languages/pcre.pyo
-${PYSITELIB}/pre_commit/languages/pcre.pyc
 ${PYSITELIB}/pre_commit/languages/pygrep.pyo
 ${PYSITELIB}/pre_commit/languages/pygrep.pyc
 ${PYSITELIB}/pre_commit/languages/python.pyo
@@ -138,7 +136,6 @@ ${PYSITELIB}/pre_commit/languages/fail.py
 ${PYSITELIB}/pre_commit/languages/golang.py
 ${PYSITELIB}/pre_commit/languages/helpers.py
 ${PYSITELIB}/pre_commit/languages/node.py
-${PYSITELIB}/pre_commit/languages/pcre.py
 ${PYSITELIB}/pre_commit/languages/pygrep.py
 ${PYSITELIB}/pre_commit/languages/python.py
 ${PYSITELIB}/pre_commit/languages/python_venv.py
