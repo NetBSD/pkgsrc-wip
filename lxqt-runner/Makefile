@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-runner/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Launch applications quickly by typing commands
 LICENSE=	gnu-lgpl-v2.1

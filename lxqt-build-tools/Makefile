@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-build-tools/0.6.0/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	LXQt build tools
 LICENSE=	modified-bsd

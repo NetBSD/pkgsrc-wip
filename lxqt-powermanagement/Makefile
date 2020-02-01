@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-powermanagement/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Daemon use for power management and auto-suspend
 LICENSE=	gnu-lgpl-v2.1

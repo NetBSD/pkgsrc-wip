@@ -3,7 +3,7 @@
 PKGNAME=	lxqt-0.14.1
 CATEGORIES=	meta-pkgs
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Meta-package for LXQt desktop environment
 
@@ -30,6 +30,10 @@ DEPENDS+=	lxqt-session>=0.14.1:../../wip/lxqt-session
 DEPENDS+=	pcmanfm-qt>=0.14.1:../../wip/pcmanfm-qt
 DEPENDS+=	qterminal>=0.14.1:../../wip/qterminal
 DEPENDS+=	lxqt-panel>=0.14.1:../../wip/lxqt-panel
+DEPENDS+=	pavucontrol-qt>=0.14.1:../../wip/pavucontrol-qt
+DEPENDS+=	lxqt-openssh-askpass>=0.14.1:../../wip/lxqt-openssh-askpass
+DEPENDS+=	lxqt-powermanagement>=0.14.1:../../wip/lxqt-powermanagement
+DEPENDS+=	lxqt-sudo>=0.14.1:../../wip/lxqt-sudo
 DEPENDS+=	lxqt-runner>=0.14.1:../../wip/lxqt-runner
 
 .include "../../mk/bsd.pkg.mk"
