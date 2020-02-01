@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (redmine-4.1.0.tar.gz) = af8c9433c6f27d9f9495deaa7064d05c2aada0da
+RMD160 (redmine-4.1.0.tar.gz) = 062f5449726ce80e84ff9951834b09127d09e725
+SHA512 (redmine-4.1.0.tar.gz) = d77eb4efe8d83a247c4462add8800297bd845276b93c7fd38b3eb5e36b7013dce39b8193b2c687de98d9da196fe8251b104363b1f16cdcbfd5a1af02d55812e7
+Size (redmine-4.1.0.tar.gz) = 2709603 bytes
+SHA1 (patch-Gemfile) = bef91b75c32af934ce076ee5840ed1513a43355e

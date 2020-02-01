@@ -4376,6 +4376,7 @@ SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-rbpdf
 SUBDIR+=	ruby-rbpdf-font
 SUBDIR+=	ruby-redmine
+SUBDIR+=	ruby-redmine41
 SUBDIR+=	ruby-request_store
 SUBDIR+=	ruby-review
 SUBDIR+=	ruby-rinku
