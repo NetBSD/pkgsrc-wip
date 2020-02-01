@@ -2275,6 +2275,7 @@ SUBDIR+=	multisync-palm
 SUBDIR+=	multisync-syncml
 SUBDIR+=	multisync-syncml-moto
 SUBDIR+=	multitail
+SUBDIR+=	munge
 SUBDIR+=	munin-c-git
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
