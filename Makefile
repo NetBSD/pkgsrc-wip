@@ -1299,6 +1299,7 @@ SUBDIR+=	gxmms2
 SUBDIR+=	h323plus
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc
+SUBDIR+=	hackgen-ttf
 SUBDIR+=	haddock
 SUBDIR+=	hammer
 SUBDIR+=	hanazono-ttf
