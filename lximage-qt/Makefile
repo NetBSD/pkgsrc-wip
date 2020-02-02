@@ -5,7 +5,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lximage-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Image viewer and screenshot tool for the LXQt desktop
 LICENSE=	gnu-gpl-v2
