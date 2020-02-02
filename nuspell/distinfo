@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (nuspell-3.0.0.tar.gz) = 65e8427b3e12dc53c5222c28607342b0ff5317c6
+RMD160 (nuspell-3.0.0.tar.gz) = 0ee980f14b82a0a19cf78d87e65ec519153b01e4
+SHA512 (nuspell-3.0.0.tar.gz) = d9cd7dd276e2bca43dec3abaf11c5206695949b9fda8c9b86f2772cc7e8fa95bf17c685a2ef9ca87fe3c4f0b55f2fcb435bc21c187355f5e3fa35dcafab2c8c2
+Size (nuspell-3.0.0.tar.gz) = 403043 bytes
+SHA1 (patch-src_nuspell_utils.cxx) = 4537567092ef580a9ab22801fdfbde218ea8af92
+SHA1 (patch-src_nuspell_utils.hxx) = b5b4f5819cb98c6ec827f02f24755fd0a6de9edf
