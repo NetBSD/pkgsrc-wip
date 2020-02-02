@@ -2,10 +2,9 @@
 
 # XXX: When updating changelog is available in
 # XXX: ${WRKSRC}/docs/content/changelog.md
-DISTNAME=	rclone-1.48.0
-PKGREVISION=	4
+DISTNAME=	rclone-1.51.0
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ncw/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rclone/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
@@ -14,7 +13,7 @@ COMMENT=	Rsync for cloud storage
 LICENSE=	mit
 
 GO_DIST_BASE=		${DISTNAME}
-GO_SRCPATH=		github.com/ncw/rclone
+GO_SRCPATH=		github.com/rclone/rclone
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
