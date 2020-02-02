@@ -2411,6 +2411,7 @@ SUBDIR+=	nullpop
 SUBDIR+=	num-utils
 SUBDIR+=	numactl
 SUBDIR+=	nuppelvideo
+SUBDIR+=	nuspell
 SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
 SUBDIR+=	nvidia-freebsd
