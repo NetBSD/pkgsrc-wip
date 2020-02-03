@@ -23,5 +23,6 @@ BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-ronn-[0-9]*:../../devel/ruby-ronn
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/catch2/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
