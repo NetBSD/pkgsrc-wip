@@ -1,0 +1,6 @@
+There is currently no game engine in pkgsrc that really can handle this PWAD.
+
+General Boom compatibility is not sufficient because the levels are huge and
+create blockmap and other problems. Some levels are playable with more or less
+clipping problems on Doom Legacy and PrBoom+, but others don't even load or
+crash the engine.
