@@ -7,8 +7,11 @@ include/nuspell/structures.hxx
 include/nuspell/utils.hxx
 lib/cmake/nuspell/NuspellConfig.cmake
 lib/cmake/nuspell/NuspellConfigVersion.cmake
-lib/cmake/nuspell/NuspellTargets-noconfig.cmake
+lib/cmake/nuspell/NuspellTargets-release.cmake
 lib/cmake/nuspell/NuspellTargets.cmake
-lib/libnuspell.a
+lib/libnuspell.${RUBY_DLEXT}
+lib/libnuspell.so.3
+lib/libnuspell.so.${PKGVERSION}
 lib/pkgconfig/nuspell.pc
+man/man1/nuspell.1
 share/doc/nuspell/README.md
