@@ -4430,7 +4430,6 @@ SUBDIR+=	sbc
 SUBDIR+=	sbcl-git
 SUBDIR+=	scantailor
 SUBDIR+=	scare
-SUBDIR+=	schismtracker
 SUBDIR+=	schur
 SUBDIR+=	scilab
 SUBDIR+=	scim-git
