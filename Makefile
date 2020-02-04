@@ -296,6 +296,7 @@ SUBDIR+=	breeze-gtk
 SUBDIR+=	breeze-kde4
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
+SUBDIR+=	briskmenu
 SUBDIR+=	brlcad
 SUBDIR+=	brltty
 SUBDIR+=	brogue
