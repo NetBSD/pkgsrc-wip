@@ -1914,7 +1914,6 @@ SUBDIR+=	libode
 SUBDIR+=	liboglappth
 SUBDIR+=	liboobs
 SUBDIR+=	libopenmodeller
-SUBDIR+=	libopenmpt-devel
 SUBDIR+=	libopenshot-audio
 SUBDIR+=	libopensync-dev
 SUBDIR+=	libopensync-plugin-moto
