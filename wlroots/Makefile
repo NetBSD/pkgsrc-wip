@@ -20,4 +20,5 @@ WRKSRC=	${WRKDIR}/wlroots-0.10.0
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
