@@ -1,7 +1,7 @@
 # $NebBSD$
 
 DISTNAME=           range-v3-0.10.0
-CATEGORIES=         dev
+CATEGORIES=         devel
 MASTER_SITES=       ${MASTER_SITE_GITHUB:=ericniebler/}
 GITHUB_TAG=         ${PKGVERSION_NOREV}
 
