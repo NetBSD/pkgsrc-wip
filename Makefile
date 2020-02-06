@@ -748,6 +748,7 @@ SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
 SUBDIR+=	etos
 SUBDIR+=	euca2ools
+SUBDIR+=	eureka
 SUBDIR+=	eureka-devel
 SUBDIR+=	eventd
 SUBDIR+=	ever-note-mode
