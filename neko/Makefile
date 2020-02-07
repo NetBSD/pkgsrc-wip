@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	neko-2.2.0
+DISTNAME=	neko-2.3.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HaxeFoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/./-/g}
