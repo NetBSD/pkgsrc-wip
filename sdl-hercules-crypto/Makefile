@@ -14,25 +14,6 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	cmake
 USE_LANGUAGES+=	c c++
 
-#INSTDIR=	${DESTDIR}${PREFIX}
-#DOCDIR=		${DESTDIR}${PREFIX}/share/doc/sdl-hercules
-#BLDDIR=		${WRKDIR}/build
-#
-#do-build:
-#	${MKDIR} ${BLDDIR}
-#	${MKDIR} ${INSTDIR}
-#	cd ${WRKDIR} && \
-#	    mkdir build && \
-#	    cd build && \
-#	    ${WRKSRC}/build --pkgdir ${WRKSRC} \
-#	                    --pkgname crypto \
-#			    --install ${INSTDIR}
-#	${MKDIR} ${DOCDIR}
-#	if [ -f ${DESTDIR}${PREFIX}/crypto.LICENSE.txt ]; then ${MV} -f ${DESTDIR}${PREFIX}/crypto.* ${DOCDIR}; fi
-#
-#do-install:
-#	@echo "Install work has been done by do-build."
-
 USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/crypto64.Release
 CONFIGURE_DIRS=	${BLDDIR}

@@ -18,7 +18,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake flex gawk grep gm4 gmake perl gsed
 USE_LANGUAGES+=	c c++
 
-
 CONFIGURE_ARGS+=	--disable-ipv6	# configure can't find header
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/sdlhercules
 

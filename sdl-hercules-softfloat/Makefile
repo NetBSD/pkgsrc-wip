@@ -4,7 +4,7 @@ PKGNAME=	sdl-hercules-softfloat-3.5.0
 CATEGORIES=	emulators
 GIT_REPO=	https://github.com/SDL-Hercules-390/SoftFloat.git
 GIT_REVISION=	4bd642a52f9d631254315cdeb80f49dcc0ad6f7b # Nov 29, 2019
-CHECKOUT_DATE=	2019-11-30
+CHECKOUT_DATE=	2019-11-29
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/SoftFloat
@@ -13,25 +13,6 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	cmake
 USE_LANGUAGES+=	c c++
-
-#INSTDIR=	${DESTDIR}${PREFIX}
-#DOCDIR=		${DESTDIR}${PREFIX}/share/doc/sdl-hercules
-#BLDDIR=		${WRKDIR}/build
-#
-#do-build:
-#	${MKDIR} ${BLDDIR}
-#	${MKDIR} ${INSTDIR}
-#	cd ${WRKDIR} && \
-#	    mkdir build && \
-#	    cd build && \
-#	    ${WRKSRC}/build --pkgdir ${WRKSRC} \
-#	                    --pkgname decNumber \
-#			    --install ${INSTDIR}
-#	${MKDIR} ${DOCDIR}
-#	if [ -f ${DESTDIR}${PREFIX}/softfloat.LICENSE.txt ]; then ${MV} -f ${DESTDIR}${PREFIX}/softfloat.* ${DOCDIR}; fi
-#
-#do-install:
-#	@echo "Install work has been done by do-build."
 
 USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/SoftFloat64.Release

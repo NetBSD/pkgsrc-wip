@@ -14,25 +14,6 @@ LICENSE=	qpl-v1.0
 USE_TOOLS+=	cmake
 USE_LANGUAGES+=	c c++
 
-#INSTDIR=	${DESTDIR}${PREFIX}
-#DOCDIR=		${DESTDIR}${PREFIX}/share/doc/sdl-hercules
-#BLDDIR=		${WRKDIR}/build
-#
-#do-build:
-#	${MKDIR} ${BLDDIR}
-#	${MKDIR} ${INSTDIR}
-#	cd ${WRKDIR} && \
-#	    mkdir build && \
-#	    cd build && \
-#	    ${WRKSRC}/build --pkgdir ${WRKSRC} \
-#	                    --pkgname decNumber \
-#			    --install ${INSTDIR}
-#	${MKDIR} ${DOCDIR}
-#	if [ -f ${DESTDIR}${PREFIX}/decnumber.ERRATA ]; then ${MV} -f ${DESTDIR}${PREFIX}/decnumber.* ${DOCDIR}; fi
-#
-#do-install:
-#	@echo "Install work has been done by do-build."
-
 USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/decNumber64.Release
 CONFIGURE_DIRS=	${BLDDIR}
