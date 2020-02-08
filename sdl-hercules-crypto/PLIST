@@ -7,4 +7,4 @@ lib/sdlhercules/include/rijndael.h
 lib/sdlhercules/include/sha1.h
 lib/sdlhercules/include/sha2.h
 lib/sdlhercules/include/sshdes.h
-lib/sdlhercules/lib/libcrypto64.a
+lib/sdlhercules/lib/libcrypto_pic.a

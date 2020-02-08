@@ -5,7 +5,7 @@ lib/sdlhercules/doc/SoftFloat.html
 lib/sdlhercules/include/softfloat.h
 lib/sdlhercules/include/softfloat_types.h
 lib/sdlhercules/include/softfloat_version.h
-lib/sdlhercules/lib/libSoftFloat64.a
+lib/sdlhercules/lib/libSoftFloat_pic.a
 lib/sdlhercules/softfloat.LICENSE.txt
 lib/sdlhercules/softfloat.README.html
 lib/sdlhercules/softfloat.README.txt

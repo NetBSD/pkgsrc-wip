@@ -8,7 +8,7 @@ CHECKOUT_DATE=	2019-11-29
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/telnet
-COMMENT=	The SoftDevLabs version of SoftFloat for Hercules 4.x
+COMMENT=	The SoftDevLabs version of telnet library for Hercules 4.x
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	cmake
@@ -22,6 +22,9 @@ CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/sdlhercules
 
 pre-configure:
 	${MKDIR} ${BLDDIR}
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libtelnet64.a libtelnet_pic.a
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

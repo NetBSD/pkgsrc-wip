@@ -23,5 +23,8 @@ CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/sdlhercules
 pre-configure:
 	${MKDIR} ${BLDDIR}
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libdecNumber64.a libdecNumber_pic.a
+
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

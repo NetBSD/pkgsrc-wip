@@ -16,21 +16,27 @@ GITHUB_TAG=	Release_${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake flex gawk grep gm4 gmake perl gsed
+USE_LIBTOOL=	YES
 USE_LANGUAGES+=	c c++
+PTHREAD_OPTS+=	require
 
 CONFIGURE_ARGS+=	--disable-ipv6	# configure can't find header
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/sdlhercules
+MAKE_ARGS+=	V=1
 
 pre-configure:
+	${RM} ${WRKSRC}/ltdl.h ${WRKSRC}/ltdl.c
 	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../wip/sdl-hercules-crypto/buildlink3.mk"
 .include "../../wip/sdl-hercules-decnumber/buildlink3.mk"
 .include "../../wip/sdl-hercules-softfloat/buildlink3.mk"
 .include "../../wip/sdl-hercules-telnet/buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

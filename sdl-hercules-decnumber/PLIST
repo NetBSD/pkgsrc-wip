@@ -11,4 +11,4 @@ lib/sdlhercules/include/decimal128.h
 lib/sdlhercules/include/decimal32.h
 lib/sdlhercules/include/decimal64.h
 lib/sdlhercules/include/decnumber_version.h
-lib/sdlhercules/lib/libdecNumber64.a
+lib/sdlhercules/lib/libdecNumber_pic.a

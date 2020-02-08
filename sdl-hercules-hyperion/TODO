@@ -1,4 +1,4 @@
 This doesn't build properly yet:
 
-libtool somehow doesn't like the static libraries of dynamic objects,
-and the symbols that are supposed to be resolved by them remain unresolved.
+The programs link, but since lots of *.a files are not installed (even though
+the *.la file references them), packaging fails.
