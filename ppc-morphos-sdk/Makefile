@@ -1,6 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	ppc-morphos-${DISTNAME}
+PKGREVISION=	1
 DISTNAME=	sdk-20191111
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/
@@ -10,6 +11,8 @@ MAINTAINER=	js-pkgsrc@heap.zone
 HOMEPAGE=	https://www.morphos-team.net/
 COMMENT=	SDK for ppc-morphos-gcc
 #LICENSE=	# TODO: (see mk/license.mk)
+
+DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 
 WRKSRC=		${WRKDIR}/morphossdk
 USE_TOOLS+=	xzcat gtar
