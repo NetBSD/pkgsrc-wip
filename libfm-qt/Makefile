@@ -19,12 +19,11 @@ CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt5
 
-INSTALLATION_DIRS+=	lib
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
