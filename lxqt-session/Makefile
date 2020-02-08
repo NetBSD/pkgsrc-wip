@@ -19,8 +19,6 @@ CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DWITH_LIBUDEV=OFF
 
-INSTALLATION_DIRS+=	bin
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
@@ -28,6 +26,7 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/etc/xdg/openbox/lxqt-rc.xml
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
