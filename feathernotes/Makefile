@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/FeatherNotes-0.5.1
 USE_LANGUAGES=	c++
-
 USE_TOOLS=	pkg-config
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
