@@ -17,8 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-INSTALLATION_DIRS+=	bin
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
