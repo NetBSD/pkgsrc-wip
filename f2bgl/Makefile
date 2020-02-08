@@ -1,8 +1,8 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	f2bgl
-GITHUB_TAG=	0.2.7
-DISTNAME=	0.2.7
+GITHUB_TAG=	0.3.1
+DISTNAME=	0.3.1
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cyxx/}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://cyxdown.free.fr/f2b/
 COMMENT=	Re-implementation of the engine used in the game Fade To Black
 #LICENSE=	# TODO: (see mk/license.mk)
 
-WRKSRC=		${WRKDIR}/f2bgl-0.2.7
+WRKSRC=		${WRKDIR}/f2bgl-0.3.1
 USE_LANGUAGES=	c++
 
 BUILD_TARGET=		f2bgl

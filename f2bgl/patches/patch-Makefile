@@ -2,14 +2,14 @@ $NetBSD$
 
 Avoid having to use gmake.
 
---- Makefile.orig	2018-03-13 23:38:13.000000000 +0000
+--- Makefile.orig	2019-12-26 10:08:08.000000000 +0000
 +++ Makefile
-@@ -20,7 +20,7 @@ DEPS = $(SRCS:.cpp=.d)
- CXXFLAGS += -MMD $(DEFINES) $(SDL_CFLAGS)
+@@ -18,7 +18,7 @@ OBJS = $(SRCS:.cpp=.o)
+ DEPS = $(SRCS:.cpp=.d)
  
  f2bgl: $(OBJS)
--	$(CXX) -o $@ $^ $(LIBS)
-+	$(CXX) -o $@ $(OBJS) $(LIBS)
+-	$(CXX) $(LDFLAGS) -o $@ $^ $(LIBS)
++	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
  
  clean:
  	rm -f *.o *.d

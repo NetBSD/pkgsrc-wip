@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (f2bgl/0.2.7.tar.gz) = 914b2c08e71873006e50f00cb848ca2cf134a139
-RMD160 (f2bgl/0.2.7.tar.gz) = 8fbe3539ebfccc7f41c54da5ba4bae8bb8c713c3
-SHA512 (f2bgl/0.2.7.tar.gz) = d4d94e448282ad936b86e64a830ada41f61fabe36e857f356373fb4c5a4bd70cdd6c0be5d32c54fe4edd744bbb5a1a4507f63812d40b28363e5e6b09e318a28a
-Size (f2bgl/0.2.7.tar.gz) = 123720 bytes
-SHA1 (patch-Makefile) = 2f2c13781847c6a4a0e292f6090566069b028aad
+SHA1 (f2bgl/0.3.1.tar.gz) = 5a585affa42e6fb4294a4110878589be1071c677
+RMD160 (f2bgl/0.3.1.tar.gz) = a3912b9b64d8952a199b60018bc686b99e9f57eb
+SHA512 (f2bgl/0.3.1.tar.gz) = e465008911d3b0182604e44f0c96843ac8aa9d82d9f4cfdc56f6451a73c1961bb13a7a5cf6b5def4d6c9333ed955c95f2ef81c00ff2849bcfde446b6adb9d5f2
+Size (f2bgl/0.3.1.tar.gz) = 135301 bytes
+SHA1 (patch-Makefile) = 5753fe99f6cfee6775fe4ab580ec165b28784d56
