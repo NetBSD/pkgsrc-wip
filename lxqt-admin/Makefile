@@ -19,12 +19,11 @@ CMAKE_ARG_PATH=	..
 
 CHECK_PORTABILITY_SKIP=	yes
 
-INSTALLATION_DIRS+=	bin
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxqt-policykit-[0-9]*:../../wip/lxqt-policykit
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
