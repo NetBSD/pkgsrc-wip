@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-CMakeLists.txt) = 01db46d5ee7bdadce825cd49f6cdaa00afd9fea3
+SHA1 (patch-src_config.h) = 829ce4ce93d132fa0a94be68a0423b0e778147b7

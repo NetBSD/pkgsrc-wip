@@ -1,0 +1,25 @@
+$NetBSD$
+
+Set the policy CMP0012 so that INSTALL_FHS works as intended,
+and use the recommended command for adding definitions.
+
+--- CMakeLists.txt.orig	2020-02-08 14:45:34.000000000 +0000
++++ CMakeLists.txt
+@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.6)
+ 
+ project(FreeGish C)
+ 
++cmake_policy(SET CMP0012 NEW)
++
+ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-extras/;${CMAKE_MODULE_PATH}")
+ 
+ option(INSTALL_FHS "Install into Linux FHS" OFF)
+@@ -44,7 +46,7 @@ if(NOT DATA_DIR)
+ endif(NOT DATA_DIR)
+ 
+ if(${INSTALL_FHS})
+-    ADD_DEFINITIONS(-DDATAPATH="${DATA_DIR}")
++    ADD_COMPILE_DEFINITIONS(DATAPATH="${DATA_DIR}")
+ endif(${INSTALL_FHS})
+ 
+ 
