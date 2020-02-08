@@ -19,8 +19,6 @@ CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt5
 
-INSTALLATION_DIRS+=	bin
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
