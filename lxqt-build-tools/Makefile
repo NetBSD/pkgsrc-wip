@@ -19,8 +19,6 @@ CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/share/examples/lxqt/xdg
 
-INSTALLATION_DIRS+=	bin
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
