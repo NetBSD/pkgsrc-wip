@@ -1,8 +1,1 @@
-THIS DOES NOT WORK!
-
-This is supposed to be an activiely developed version of emulators/hercules.
-Unfortunately, the distribution contains static library binaries,
-with no corresponding source.
-
-Without the source, you can't compile it on your favorite CPU or operating
-system.
+This is an activiely developed version of emulators/hercules.

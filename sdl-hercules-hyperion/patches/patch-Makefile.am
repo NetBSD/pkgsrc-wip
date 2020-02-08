@@ -22,6 +22,15 @@ $NetBSD$
  
  DYNMOD_LD_FLAGS =   \
    -module           \
+@@ -162,7 +162,7 @@ LIB_LD_FLAGS =      \
+   -export-dynamic   \
+    $(XSTATIC)       \
+    -no-undefined    \
+-   -avoid-version
++   -avoid-version -pthread
+ 
+ #------------------------------------------------------------------------------
+ 
 @@ -500,7 +500,6 @@ libherc_la_SOURCES = \
    $(DYNSRC)
  
@@ -30,6 +39,15 @@ $NetBSD$
    memrchr.c          \
    $(dynamic_SRC)     \
    $(dyndev_SRC)      \
+@@ -521,7 +520,7 @@ libherc_la_LIBADD = \
+ #  THIS is the hercules executable.
+ #--------------------------------------------------------
+ 
+-HLDFLAGS = -dlopen self
++HLDFLAGS = -dlopen self -pthread
+ HDEPS    = $(extpkg_ldadd)
+ 
+ hercules_SOURCES = \
 @@ -939,7 +938,6 @@ noinst_HEADERS =          \
    inline.h                \
    linklist.h              \

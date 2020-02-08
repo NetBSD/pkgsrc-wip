@@ -1,0 +1,14 @@
+@comment $NetBSD$
+lib/sdlhercules/include/decContext.h
+lib/sdlhercules/include/decNumber.h
+lib/sdlhercules/include/decPacked.h
+lib/sdlhercules/include/decQuad.h
+lib/sdlhercules/include/decimal128.h
+lib/sdlhercules/include/decimal32.h
+lib/sdlhercules/include/decimal64.h
+lib/sdlhercules/include/decnumber_version.h
+lib/sdlhercules/lib/libdecNumber64.a
+lib/sdlhercules/decnumber.ERRATA
+lib/sdlhercules/decnumber.ICU-license.html
+lib/sdlhercules/decnumber.pdf
+lib/sdlhercules/decnumber.readme.txt
