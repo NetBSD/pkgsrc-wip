@@ -26,7 +26,7 @@ PKG_SYSCONFSUBDIR=	roundcube/plugins/carddav
 
 CDDIR=			${RCDIR}/plugins/carddav
 
-CD_SUBDIRS=		localization skins vendor
+CD_SUBDIRS=		dbmigrations localization skins vendor
 
 .for d in ${CD_SUBDIRS}
 INSTALLATION_DIRS+=	${CDDIR}/${d}
@@ -65,4 +65,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config.inc.php.dist \
 		${DESTDIR}${PREFIX}/${CDDIR}/config.inc.php.dist
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
