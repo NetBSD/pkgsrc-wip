@@ -20,7 +20,6 @@ USE_LIBTOOL=	YES
 USE_LANGUAGES+=	c c++
 PTHREAD_OPTS+=	require
 
-CONFIGURE_ARGS+=	--disable-ipv6	# configure can't find header
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/sdlhercules
 MAKE_ARGS+=	V=1
 

@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Fix build. Use devel/libltdl instead of internal libltdl.
+- Build dynamic modules only dynamic (-shared), not also static.
 
 --- Makefile.am.orig	2019-09-10 18:06:20.000000000 +0000
 +++ Makefile.am
@@ -13,9 +14,12 @@ $NetBSD$
  
  #------------------------------------------------------------------------------
  
-@@ -142,7 +142,7 @@ dyndev_SRC =  \
+@@ -140,9 +140,9 @@ dyndev_SRC =  \
+ #                    to Windows DLLs
+ #-----------------------------------------------------------------
  
- XSTATIC =
+-XSTATIC =
++XSTATIC = -shared
  DYNSRC  =
 -LTDL    =  ltdl.c
 +LTDL    =
