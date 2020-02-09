@@ -1,2 +1,4 @@
 This is same as ../../devel/py-kqueue with minor modifications to work with
 Twisted reactor.
+
+Note: users should probably use Python built-in select.kevent instead
