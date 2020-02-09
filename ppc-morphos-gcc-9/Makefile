@@ -2,6 +2,7 @@
 
 DISTNAME=	sdk-source-20191111
 PKGNAME=	ppc-morphos-gcc-9-9.2.0
+PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/src/sdk/
 EXTRACT_SUFX=	.tar.xz
