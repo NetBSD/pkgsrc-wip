@@ -14,9 +14,6 @@ HOMEPAGE=              https://desktop.telegram.org/
 COMMENT=               Telegram Desktop messaging app
 LICENSE=               gnu-gpl-v3
 
-USE_LANGUAGES=	       c c++
-USE_CMAKE=             yes
-
 ONLY_FOR_COMPILER=     gcc
 USE_LANGUAGES=         c c++ gnu++14
 USE_CMAKE=             yes
