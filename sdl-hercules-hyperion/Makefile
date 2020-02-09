@@ -21,17 +21,20 @@ USE_LANGUAGES+=	c c++
 PTHREAD_OPTS+=	require
 
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/sdlhercules
-MAKE_ARGS+=	V=1
+
+INSTALLATION_DIRS+=	share/examples/hercules
 
 pre-configure:
 	${RM} ${WRKSRC}/ltdl.h ${WRKSRC}/ltdl.c
 	cd ${WRKSRC} && ./autogen.sh
 
-.include "../../archivers/bzip2/builtin.mk"
-.include "../../devel/zlib/builtin.mk"
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/hercules.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/sdl-hercules-crypto/buildlink3.mk"
 .include "../../wip/sdl-hercules-decnumber/buildlink3.mk"
 .include "../../wip/sdl-hercules-softfloat/buildlink3.mk"

@@ -8,6 +8,7 @@ SHA1 (patch-Makefile.am) = 354add1d50bbbc09226e848f6b2e7350ad34f915
 SHA1 (patch-autoconf_hercules.m4) = 2ea0beaa0a0470050f0c41befcaebd9f73dad4d5
 SHA1 (patch-configure.ac) = 5e2a92b3530fa4bd61a4f1e28ff98eab20f7d1b5
 SHA1 (patch-hercifc.c) = 5661ca325cb3575726a44ecadbaeb951fcf2d0fd
+SHA1 (patch-hercules.cnf) = cd0a09d39175e9673dab785703d2f8c1b92c8dc6
 SHA1 (patch-hifr.h) = d364bbd32143cf137aed84eb79f5af9f62f8210b
 SHA1 (patch-hostopts.h) = d464925f82570cbcf368f0b76d1b545a5eebacfd
 SHA1 (patch-hscutl.c) = 72ff77bff284e63bc42e124b56051fe735f74de6

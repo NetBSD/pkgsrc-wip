@@ -72,6 +72,7 @@ man/man1/cckddiag.1
 man/man1/dasdseq.1
 man/man1/vmfplc2.1
 man/man4/cckd.4
+share/examples/hercules/hercules.cnf
 share/hercules/TMOUNT.txt
 share/hercules/awssl-v19g
 share/hercules/awswrite.jcl
