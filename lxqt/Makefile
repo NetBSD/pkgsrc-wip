@@ -9,7 +9,7 @@ COMMENT=	Meta-package for LXQt desktop environment
 
 META_PACKAGE=	yes
 
-#.include "options.mk"
+.include "options.mk"
 
 TOOL_DEPENDS+=	lxqt-build-tools>=0.6.0:../../wip/lxqt-build-tools
 
