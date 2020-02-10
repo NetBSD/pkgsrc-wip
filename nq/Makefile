@@ -12,7 +12,7 @@ LICENSE=	public-domain
 
 EXTRACT_USING=	gtar
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 INSTALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"
