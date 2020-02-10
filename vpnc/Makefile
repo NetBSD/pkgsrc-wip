@@ -7,7 +7,7 @@ CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/v/vpnc/}
 LICENSE=		gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.unix-ag.uni-kl.de/~massar/vpnc/
