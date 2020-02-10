@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	snallygaster-0.0.3
+DISTNAME=	snallygaster-0.0.4
 CATEGORIES=	security python
 MASTER_SITES=	# none
 
