@@ -238,6 +238,7 @@ SUBDIR+=	basepkg
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
 SUBDIR+=	bcftools
+SUBDIR+=	bdf2sfd
 SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
