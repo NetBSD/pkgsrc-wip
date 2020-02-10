@@ -1,0 +1,12 @@
+This is a utility to reset the password of any user that has a valid local
+account on your Windows system.
+
+It supports all Windows from NT3.5 to Win8.1, also 64 bit and also the Server
+versions (like 2003, 2008, 2012)
+
+Knowing the old password is not needed to set a new one.
+
+It will detect and offer to unlock locked or disabled out user accounts!
+
+There is also a registry editor and other registry utilities that works under
+linux/unix, and can be used for other things than password editing.

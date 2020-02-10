@@ -384,6 +384,7 @@ SUBDIR+=	chems
 SUBDIR+=	cherokee
 SUBDIR+=	chezscheme
 SUBDIR+=	chibi-scheme
+SUBDIR+=	chntpw
 SUBDIR+=	choosefont
 SUBDIR+=	chora
 SUBDIR+=	chromium

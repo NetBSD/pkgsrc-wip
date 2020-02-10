@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/chntpw
+bin/cpnt
+bin/reged
+bin/sampasswd
+bin/samusrgrp
+share/doc/chntpw/COPYING.txt
+share/doc/chntpw/GPL.txt
+share/doc/chntpw/HISTORY.txt
+share/doc/chntpw/INSTALL.txt
+share/doc/chntpw/LGPL.txt
+share/doc/chntpw/MANUAL.txt
+share/doc/chntpw/README.txt
+share/doc/chntpw/WinReg.txt
+share/doc/chntpw/regedit.txt
+share/doc/chntpw/syskey.txt
