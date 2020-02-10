@@ -2,7 +2,7 @@
 bin/lxqt-config-powermanagement
 bin/lxqt-powermanagement
 share/applications/lxqt-config-powermanagement.desktop
-share/examples/lxqt-powermanagement/xdg/autostart/lxqt-powermanagement.desktop
+share/examples/lxqt/xdg/autostart/lxqt-powermanagement.desktop
 share/icons/hicolor/scalable/devices/laptop-lid.svg
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ar.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ca.qm

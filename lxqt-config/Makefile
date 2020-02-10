@@ -19,6 +19,9 @@ CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DWITH_INPUT=OFF
 
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/lxqt-config \
+		-L${PREFIX}/lib/lxqt-config/
+
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 

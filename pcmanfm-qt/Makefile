@@ -21,6 +21,7 @@ pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
