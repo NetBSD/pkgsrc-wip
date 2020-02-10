@@ -6,7 +6,7 @@ CATEGORIES=	    devel
 MASTER_SITES=   -https://www.zlib.net/zlib-${ZLIB_VERSION}.tar.gz
 WRKSRC=         ${WRKDIR}/zlib-${ZLIB_VERSION}/contrib/minizip/
 
-MAINTAINER=	    pkg-users@pkgsrc.org
+MAINTAINER=	    pkgsrc-users@pkgsrc.org
 HOMEPAGE=       https://www.zlib.net/
 COMMENT=        Zip and UnZip additionnal library
 LICENSE=        zlib
