@@ -3861,7 +3861,6 @@ SUBDIR+=	py-pylith
 SUBDIR+=	py-pylons
 SUBDIR+=	py-pylru
 SUBDIR+=	py-pymbolic
-SUBDIR+=	py-pymc
 SUBDIR+=	py-pymigemo
 SUBDIR+=	py-pymvpa
 SUBDIR+=	py-pynfo
