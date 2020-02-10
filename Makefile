@@ -4549,7 +4549,6 @@ SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	smw
-SUBDIR+=	snallygaster
 SUBDIR+=	snallygaster-git
 SUBDIR+=	snark
 SUBDIR+=	sndio
