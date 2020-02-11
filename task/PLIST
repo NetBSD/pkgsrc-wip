@@ -1,2 +1,4 @@
 @comment $NetBSD$
 bin/task
+share/bash-completion/completions/task
+share/zsh/site-functions/_task
