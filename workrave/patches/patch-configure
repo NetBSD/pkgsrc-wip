@@ -1,0 +1,68 @@
+$NetBSD$
+
+--- configure.orig	2013-06-12 16:55:18.000000000 +0000
++++ configure
+@@ -19093,7 +19093,7 @@ if test "x$ac_cv_lib_Xss_XScreenSaverReg
+ fi
+ 
+ 
+-    if test "x$have_xscreensaver" == "xyes"; then
++    if test "x$have_xscreensaver" = "xyes"; then
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -19221,11 +19221,11 @@ fi
+ if test "x$platform_os_unix" = "xyes"
+ then
+ 
+-    if test "x$enable_monitors" == "x"; then
+-        if test "x$have_xrecord" == "xyes" ; then
++    if test "x$enable_monitors" = "x"; then
++        if test "x$have_xrecord" = "xyes" ; then
+ 	  enable_monitors="record"
+         fi
+-        if test "x$have_xscreensaver" == "xyes" ; then
++        if test "x$have_xscreensaver" = "xyes" ; then
+ 	    if test "x$enable_monitors" != "x"; then
+ 	        enable_monitors="$enable_monitors,"
+ 	    fi
+@@ -19239,11 +19239,8 @@ then
+ 
+     loop=${enable_monitors},
+ 
+-    while echo $loop | grep \, &> /dev/null
++    for monitor in `echo ${loop} | sed -e 's/,/ /g'`;
+     do
+-        monitor=${loop%%\,*}
+-        loop=${loop#*\,}
+-
+         case "$monitor" in
+            record)
+ 	       if test "x$have_xrecord" != "xyes" ; then
+@@ -19357,7 +19354,7 @@ $as_echo "yes" >&6; }
+ fi
+ fi
+ 
+-if test "x$config_dbus_gio" == "xno" -a "x$enable_dbus" != "xno"
++if test "x$config_dbus_gio" = "xno" -a "x$enable_dbus" != "xno"
+ then
+     if test "x$platform_os_win32" = "xyes"
+     then
+@@ -19602,7 +19599,7 @@ $as_echo "#define HAVE_DBUS /**/" >>conf
+ $as_echo "#define HAVE_DBUSGLIB /**/" >>confdefs.h
+ 
+     fi
+-    if test "x$config_dbus_gio" == "xyes";
++    if test "x$config_dbus_gio" = "xyes";
+     then
+ 
+ $as_echo "#define HAVE_DBUS_GIO 1" >>confdefs.h
+@@ -20119,7 +20116,7 @@ fi
+ config_gsettings=no
+ if test "x$enable_gsettings" != "xno" -a "x$config_gnome3" = "xyes"
+ then
+-   if test "x$platform_os_unix" == "xyes"; then
++   if test "x$platform_os_unix" = "xyes"; then
+ 
+ 
+   # Check whether --enable-schemas-compile was given.

@@ -1,0 +1,55 @@
+$NetBSD$
+
+--- configure.ac.orig	2013-06-12 16:40:10.000000000 +0000
++++ configure.ac
+@@ -385,7 +385,7 @@ then
+ 			[],
+ 			[-lX11 -lXext -lm])
+ 
+-    if test "x$have_xscreensaver" == "xyes"; then
++    if test "x$have_xscreensaver" = "xyes"; then
+ 	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+ 		#include <X11/Xlib.h>
+ 		#include <X11/extensions/scrnsaver.h>
+@@ -408,11 +408,11 @@ dnl
+ if test "x$platform_os_unix" = "xyes"
+ then
+ 
+-    if test "x$enable_monitors" == "x"; then
+-        if test "x$have_xrecord" == "xyes" ; then
++    if test "x$enable_monitors" = "x"; then
++        if test "x$have_xrecord" = "xyes" ; then
+ 	  enable_monitors="record"
+         fi
+-        if test "x$have_xscreensaver" == "xyes" ; then
++        if test "x$have_xscreensaver" = "xyes" ; then
+ 	    if test "x$enable_monitors" != "x"; then
+ 	        enable_monitors="$enable_monitors,"
+ 	    fi
+@@ -475,7 +475,7 @@ PKG_CHECK_MODULES([GIO],
+ 		   ], [ config_dbus_gio=no])
+ fi
+ 
+-if test "x$config_dbus_gio" == "xno" -a "x$enable_dbus" != "xno"
++if test "x$config_dbus_gio" = "xno" -a "x$enable_dbus" != "xno"
+ then
+     if test "x$platform_os_win32" = "xyes"
+     then
+@@ -504,7 +504,7 @@ then
+     then
+         AC_DEFINE(HAVE_DBUSGLIB, , [DBus-glib support])
+     fi
+-    if test "x$config_dbus_gio" == "xyes";
++    if test "x$config_dbus_gio" = "xyes";
+     then
+         AC_DEFINE(HAVE_DBUS_GIO, 1, [Have GIO DBUS support])
+     fi
+@@ -608,7 +608,7 @@ PKG_CHECK_MODULES([GLIB],
+ config_gsettings=no		  
+ if test "x$enable_gsettings" != "xno" -a "x$config_gnome3" = "xyes"
+ then
+-   if test "x$platform_os_unix" == "xyes"; then		  
++   if test "x$platform_os_unix" = "xyes"; then		  
+       GLIB_GSETTINGS
+       config_gsettings=yes
+       AC_DEFINE(HAVE_GSETTINGS, 1, [Have GSettings])

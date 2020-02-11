@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.2 2007/10/01 22:51:22 briandealwis Exp $
 
-SHA1 (workrave-1.8.5.tar.gz) = d40c3d536f1a37b849fcf8d1e7a6591e043cf19d
-RMD160 (workrave-1.8.5.tar.gz) = 306364cbae2a1a4270cbd624864dc111b27ef388
-Size (workrave-1.8.5.tar.gz) = 1940651 bytes
-SHA1 (patch-ab) = d2d95b7489e447add4f37131830261c3950bcee8
-SHA1 (patch-ac) = be17bb8f1dfba1a810d86d0d642022ee8192de13
-SHA1 (patch-ad) = c4bedf25eb0d4b3e0b26d7491580047efcd7295c
+SHA1 (workrave-1.10.1.tar.gz) = b5ad2c6748b0b9eb5e997532dd1401ebcb33dc40
+RMD160 (workrave-1.10.1.tar.gz) = 2dd2578b49d31971167473214775fa2fd5b10b11
+SHA512 (workrave-1.10.1.tar.gz) = 4f721ebaceb43f542c25b0eb3fcd2e2d205290c982ddb57628c56bfed0c63fdde85adf304b4fdaf07908e31e8e31942ffdf17a9f1f0a3e62fec71aa5722d946a
+Size (workrave-1.10.1.tar.gz) = 6800197 bytes
+SHA1 (patch-configure) = 3c056eb9601a1bf9fbd09da44de2e988dee0f947
+SHA1 (patch-configure.ac) = 368216f3cf678fd6ed9b20f7e59ac601b1f0a989
