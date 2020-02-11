@@ -1,8 +1,9 @@
 # $NetBSD: Makefile,v 1.6 2012/10/07 20:11:07 asau Exp $
 
-DISTNAME=		workrave-1.10.1
+DISTNAME=		workrave-1.10.34
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=workrave/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=rcaelers/}
+GITHUB_TAG=		v${PKGVERSION_NOREV:C/\./_/g}
 
 MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://www.workrave.org/
