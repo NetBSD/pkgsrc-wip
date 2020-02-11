@@ -26,3 +26,5 @@ man/man1/restic-tag.1
 man/man1/restic-unlock.1
 man/man1/restic-version.1
 man/man1/restic.1
+share/bash-completion/completions/restic
+share/zsh/site-functions/_restic

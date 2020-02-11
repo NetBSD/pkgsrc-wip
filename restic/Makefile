@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	restic-0.9.6
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	restic-${GITHUB_TAG}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
@@ -18,10 +18,16 @@ EXTRACT_USING=	bsdtar
 GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/restic/restic/
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 \
+			share/bash-completion/completions \
+			share/zsh/site-functions
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/restic ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/doc/bash-completion.sh \
+			${DESTDIR}${PREFIX}/share/bash-completion/completions/restic
+	${INSTALL_DATA} ${WRKSRC}/doc/zsh-completion.zsh \
+			${DESTDIR}${PREFIX}/share/zsh/site-functions/_restic
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-backup.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-cache.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-cat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
