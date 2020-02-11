@@ -8,7 +8,6 @@ include/cyclone/runtime-main.h
 include/cyclone/runtime.h
 include/cyclone/types.h
 lib/libcyclone.a
-lib/libcyclonebn.a
 share/cyclone/cyclone/concurrent.o
 share/cyclone/cyclone/concurrent.sld
 share/cyclone/cyclone/concurrent.so

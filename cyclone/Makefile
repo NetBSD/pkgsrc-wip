@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	cyclone-bootstrap
-GITHUB_TAG=	v0.12
+GITHUB_TAG=	v0.14
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	cyclone-${DISTNAME:S,^v,,}
 CATEGORIES=	lang
@@ -19,4 +19,5 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	third-party/libtommath-1.2.0/libtommath.pc.in
 
 .include "../../devel/concurrencykit/buildlink3.mk"
+.include "../../math/ltm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,46 @@
+$NetBSD$
+
+Use pkgsrc libtommath (internally named libcyclonebn).
+
+--- Makefile.orig	2020-02-10 21:34:59.000000000 +0000
++++ Makefile
+@@ -8,8 +8,8 @@ include Makefile.config
+ 
+ # Libraries
+ CYC_RT_LIB = libcyclone.a
+-CYC_BN_LIB = libcyclonebn.a
+-CYC_BN_LIB_SUBDIR = third-party/libtommath-1.2.0
++#CYC_BN_LIB = libcyclonebn.a
++#CYC_BN_LIB_SUBDIR = third-party/libtommath-1.2.0
+ CYC_LIBS = $(CYC_RT_LIB) $(CYC_BN_LIB)
+ 
+ COBJ = scheme/base \
+@@ -95,8 +95,8 @@ $(CYC_RT_LIB): runtime.c include/cyclone
+ 	  $(CREATE_LIBRARY_COMMAND) $(CREATE_LIBRARY_FLAGS) $(LIBRARY_OUTPUT_FILE) runtime.o gc.o dispatch.o mstreams.o hashset.o
+ 	  $(RANLIB_COMMAND)
+ 
+-$(CYC_BN_LIB) : $(CYC_BN_LIB_SUBDIR)/*.c
+-	cd $(CYC_BN_LIB_SUBDIR) ; $(MAKE) LIBNAME=$(CYC_BN_LIB) && cp $(CYC_BN_LIB) ../..
++#$(CYC_BN_LIB) : $(CYC_BN_LIB_SUBDIR)/*.c
++#	cd $(CYC_BN_LIB_SUBDIR) ; $(MAKE) LIBNAME=$(CYC_BN_LIB) && cp $(CYC_BN_LIB) ../..
+ 
+ cyclone: $(CFILES) $(COBJECTS) $(C_SHARED_OBJECTS) $(CYC_LIBS)
+ 	$(CC) cyclone.c $(CFLAGS) -c -o cyclone.o
+@@ -145,7 +145,7 @@ install:
+ #install-libs:
+ 	$(MKDIR) $(DESTDIR)$(LIBDIR)
+ 	$(INSTALL) -m0644 $(CYC_RT_LIB) $(DESTDIR)$(LIBDIR)/
+-	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/
++#	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/
+ #install-cyclone:
+ 	$(MKDIR) $(DESTDIR)$(BINDIR)
+ 	$(MKDIR) $(DESTDIR)$(DATADIR)/scheme/cyclone
+@@ -169,7 +169,7 @@ install:
+ 	$(INSTALL) -m0755 cyclone $(DESTDIR)$(BINDIR)/
+ 	$(INSTALL) -m0755 icyc $(DESTDIR)$(BINDIR)/
+ 	$(INSTALL) -m0644 $(CYC_RT_LIB) $(DESTDIR)$(LIBDIR)/
+-	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/
++#	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/
+ 	$(INSTALL) -m0644 include/cyclone/*.h $(DESTDIR)$(INCDIR)/
+ 	$(INSTALL) -m0644 scheme/*.sld $(DESTDIR)$(DATADIR)/scheme
+ 	$(INSTALL) -m0644 scheme/*.o $(DESTDIR)$(DATADIR)/scheme
