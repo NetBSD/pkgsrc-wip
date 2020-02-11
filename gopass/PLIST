@@ -1,2 +1,5 @@
 @comment $NetBSD$
 bin/gopass
+share/bash-completion/completions/gopass
+share/fish/vendor_completions.d/gopass.fish
+share/zsh/site-functions/_gopass
