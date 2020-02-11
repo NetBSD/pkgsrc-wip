@@ -1,8 +1,5 @@
 # $NetBSD: $
 
-CONF_PLUGINS=	carddav
-.include "../../mail/roundcube/Makefile.common"
-
 DISTNAME=	carddav-3.0.3
 PKGNAME=	${PHP_PKG_PREFIX}-roundcube-plugin-${DISTNAME}
 CATEGORIES=	mail
@@ -16,24 +13,37 @@ MAINTAINER=	triaxx@NetBSD.org
 COMMENT=	CardDAV adapter for Roundcube
 LICENSE=	gnu-gpl-v2
 
+.include "../../mk/bsd.prefs.mk"
+
+NO_BUILD=	yes
+
 DEPENDS+=	${PHP_PKG_PREFIX}-roundcube>=1.0.0:../../mail/roundcube
 
 WRKSRC=		${WRKDIR}/carddav
 
 DISTINFO_FILE=		distinfo
 
-PKG_SYSCONFSUBDIR=	roundcube/plugins/carddav
+PKG_SYSCONFSUBDIR=	roundcube
 
+WWW_USER?=		${APACHE_USER}
+WWW_GROUP?=		${APACHE_GROUP}
+PKG_GROUPS_VARS+=	WWW_GROUP
+PKG_USERS_VARS=		WWW_USER
+BUILD_DEFS+=		WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
+
+RCDIR=			share/roundcube
 CDDIR=			${RCDIR}/plugins/carddav
+EGDIR=			share/examples/roundcube/plugins/carddav
 
 CD_SUBDIRS=		dbmigrations localization skins vendor
 
 .for d in ${CD_SUBDIRS}
 INSTALLATION_DIRS+=	${CDDIR}/${d}
 .endfor
+INSTALLATION_DIRS+=	${EGDIR}
 
-CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/plugins/carddav/config.inc.php \
-			${PKG_SYSCONFDIR}/config.inc.php \
+CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/config.inc.php \
+			${PKG_SYSCONFDIR}/plugins/carddav/config.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
@@ -63,7 +73,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${CDDIR}/${i}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/config.inc.php.dist \
-		${DESTDIR}${PREFIX}/${CDDIR}/config.inc.php.dist
+		${DESTDIR}${PREFIX}/${EGDIR}/config.inc.php
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
