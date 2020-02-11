@@ -2343,6 +2343,7 @@ SUBDIR+=	necpp-git
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	neko
 SUBDIR+=	nemo
+SUBDIR+=	neofetch
 SUBDIR+=	neovim
 SUBDIR+=	neovim-git
 SUBDIR+=	nestopia-rpi
