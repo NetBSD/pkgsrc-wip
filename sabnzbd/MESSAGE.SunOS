@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.SunOS,v 1.1 2013/10/02 11:47:48 wongk Exp $
+
+To use sabnzbdplus on Solaris, you'll need to import and enable the service
+via SMF:
+    svccfg import /opt/local/share/sabnzbdplus/sabnzbd.xml
+    svcadm enable sabnzbd
+
+
+===========================================================================

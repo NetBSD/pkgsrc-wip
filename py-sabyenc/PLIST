@@ -1,0 +1,6 @@
+@comment $NetBSD$
+${PYSITELIB}/sabyenc-3.3.5-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/sabyenc-3.3.5-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/sabyenc-3.3.5-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/sabyenc-3.3.5-py2.7.egg-info/top_level.txt
+${PYSITELIB}/sabyenc.so
