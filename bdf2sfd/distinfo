@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (bdf2sfd-1.0.0.tar.gz) = fe80e7b6a318a5c3ef8388bf3e18394f87b5cf12
-RMD160 (bdf2sfd-1.0.0.tar.gz) = 9cca4d740db552d76bdde24a1345341b6fc4bb20
-SHA512 (bdf2sfd-1.0.0.tar.gz) = b349e8748acaad44f5c5bc5c3ce2aeee66759523fe4a53321d792692bb63178aecc2c9d3891461dcb04dea77bf3e74fae44f6cdf53a74842d3532bbf786880fb
-Size (bdf2sfd-1.0.0.tar.gz) = 8399 bytes
+SHA1 (bdf2sfd-1.1.0.tar.gz) = f284a2e5f40c2cd02aa68e4e1b003aa8137df84d
+RMD160 (bdf2sfd-1.1.0.tar.gz) = f22f3ad5a16bd51fd0132e5e83d52fd64b0cd0a1
+SHA512 (bdf2sfd-1.1.0.tar.gz) = 7213b8fb064bfee5bd3432b317d5ea38a1c66087e123d6f8f697d639175aaae2ba749f01f970dac51190b4a2e0b81229bccacf5f05479068cf1ab568509531fd
+Size (bdf2sfd-1.1.0.tar.gz) = 8729 bytes

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bdf2sfd-1.0.0
+DISTNAME=	bdf2sfd-1.1.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
