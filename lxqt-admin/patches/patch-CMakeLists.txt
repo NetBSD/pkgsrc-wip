@@ -5,15 +5,13 @@ lxqt-admin-time depends on systemd
 
 --- CMakeLists.txt.orig	2019-02-25 22:10:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -37,10 +37,9 @@ include(LXQtPreventInSourceBuilds)
- include(LXQtCompilerSettings NO_POLICY_SCOPE)
+@@ -38,8 +38,8 @@ include(LXQtCompilerSettings NO_POLICY_S
  include(LXQtTranslate)
  
--if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
-+if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
-     message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-user")
+ if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
+-    message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-user")
      message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-time")
++    add_subdirectory(lxqt-admin-user)
  else()
      add_subdirectory(lxqt-admin-user)
--    add_subdirectory(lxqt-admin-time)
- endif()
+     add_subdirectory(lxqt-admin-time)
