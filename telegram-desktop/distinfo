@@ -5,3 +5,4 @@ RMD160 (tdesktop/telegram-desktop-1.9.9.tar.gz) = 077087a0b57d6950ab1431c7d8fa11
 SHA512 (tdesktop/telegram-desktop-1.9.9.tar.gz) = ba6400e6f5eec5bda6e8a54b43846e695b2cce731cb6b39f17407cc39e3e9b8078d977253d29962671f30e33dbe012f8e40f340f781fd8ca73487e5f2d42e3de
 Size (tdesktop/telegram-desktop-1.9.9.tar.gz) = 25221934 bytes
 SHA1 (patch-build_config.h) = 17bccca2d70671fe0f8345af8a7710c2caa3db19
+SHA1 (patch-lib_base-CMakeLists.txt) = e982fa8b8fc48e3100c98d65789ab4131a707beb
