@@ -36,5 +36,6 @@ DEPENDS+=	pcmanfm-qt>=0.14.1:../../wip/pcmanfm-qt
 DEPENDS+=	qterminal>=0.14.1:../../wip/qterminal
 DEPENDS+=	lxqt-panel>=0.14.1:../../wip/lxqt-panel
 DEPENDS+=	lxqt-runner>=0.14.1:../../wip/lxqt-runner
+DEPENDS+=	qt5-qttranslations>=5.14.1:../../x11/qt5-qttranslations
 
 .include "../../mk/bsd.pkg.mk"
