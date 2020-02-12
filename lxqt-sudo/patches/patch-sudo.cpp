@@ -8,7 +8,7 @@ sudo.cpp: Make pty header conditional depending on linux
  #include <QThread>
  #include <QProcessEnvironment>
  #include <QTimer>
-+#if defined(__Linux__)
++#if defined(Q_OS_LINUX)
  #include <pty.h>
 +#else
 +#include <errno.h>
