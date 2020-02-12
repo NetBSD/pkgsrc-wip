@@ -1,0 +1,10 @@
+@comment $NetBSD$
+share/fonts/X11/TTF/JetBrainsMono-Bold-Italic.ttf
+share/fonts/X11/TTF/JetBrainsMono-Bold.ttf
+share/fonts/X11/TTF/JetBrainsMono-ExtraBold-Italic.ttf
+share/fonts/X11/TTF/JetBrainsMono-ExtraBold.ttf
+share/fonts/X11/TTF/JetBrainsMono-Italic.ttf
+share/fonts/X11/TTF/JetBrainsMono-Medium-Italic.ttf
+share/fonts/X11/TTF/JetBrainsMono-Medium.ttf
+share/fonts/X11/TTF/JetBrainsMono-Regular.ttf
+@pkgdir share/fonts/X11/OTF

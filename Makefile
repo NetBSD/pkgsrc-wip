@@ -1680,6 +1680,7 @@ SUBDIR+=	jedit
 SUBDIR+=	jellyfish
 SUBDIR+=	jellyfish2
 SUBDIR+=	jemboss-standalone
+SUBDIR+=	jetbrains-mono
 SUBDIR+=	jfsw-git
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
