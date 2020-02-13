@@ -2925,6 +2925,7 @@ SUBDIR+=	phantomjs2
 SUBDIR+=	pheanstalk
 SUBDIR+=	phonon-backend-xine
 SUBDIR+=	php-composer
+SUBDIR+=	php-gnupg
 SUBDIR+=	php-imagick-imagick6
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder

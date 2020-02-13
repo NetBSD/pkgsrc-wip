@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/php/20191128/gnupg.so
+share/examples/php/gnupg.ini
+@pkgdir include/php/ext/gnupg
