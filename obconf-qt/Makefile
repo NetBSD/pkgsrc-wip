@@ -11,7 +11,7 @@ COMMENT=	Qt based configurator of OpenBox window manager
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_TOOLS=	pkg-config
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
