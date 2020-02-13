@@ -64,3 +64,11 @@ The build fails because dependencies are not provided:
  | *** Error code 1
 
 Should we package all these dependencies?
+
+Please also note that by including lang/go/go-dep.mk and running `print-go-deps'
+it fails due:
+
+ | % make print-go-deps
+ | /usr/bin/awk: can't open file /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/Gopkg.lock
+ |  source line number 1
+ | *** Error code 2
