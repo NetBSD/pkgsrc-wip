@@ -7,9 +7,12 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dylanaraps/neofetch
-COMMENT=	A command-line system information tool written in bash 3.2+
+COMMENT=	Command-line system information tool written in bash 3.2+
 LICENSE=	mit
 
 REPLACE_BASH+=	neofetch
+USE_TOOLS+=	bash:run
+
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"

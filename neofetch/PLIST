@@ -1,3 +1,3 @@
 @comment $NetBSD$
 bin/neofetch
-share/man/man1/neofetch.1
+man/man1/neofetch.1
