@@ -6,7 +6,7 @@ MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-panel/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	voidpin@protonmail.com
-HOMEPAGE=	https://downloads.lxqt.org/
+HOMEPAGE=	https://lxqt.org/
 COMMENT=	Desktop panel
 LICENSE=	gnu-lgpl-v2.1
 

@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	voidpin@protonmail.com
 COMMENT=	System configuration (control center)
-HOMEPAGE=	https://downloads.lxqt.org/
+HOMEPAGE=	https://lxqt.org/
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
