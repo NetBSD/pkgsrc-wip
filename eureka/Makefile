@@ -38,16 +38,5 @@ SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-# FLTK version 1.4 is supported too
-.include "../../x11/fltk13/buildlink3.mk"
-
-.if empty(PKG_OPTIONS.fltk13:Mopengl) || empty(PKG_OPTIONS:Mopengl)
-SUBST_CLASSES+=		opengl
-SUBST_STAGE.opengl=	do-configure
-SUBST_MESSAGE.opengl=	Preparing Makefile ...
-SUBST_FILES.opengl=	Makefile
-SUBST_SED.opengl=	-e 's,\# CXXFLAGS += -DNO_OPENGL,CXXFLAGS += -DNO_OPENGL,'
-SUBST_SED.opengl+=	-e 's, --use-gl,,'
-.endif
 
 .include "../../mk/bsd.pkg.mk"

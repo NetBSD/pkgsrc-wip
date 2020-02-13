@@ -28,5 +28,10 @@
 [X] Update to Git commit 19c0d7e5dd1bb8e5bf7c6840868e9f6eecd14a9a
     => Remove patch for Ticket #37
     => Remove patch for install with nonpriviledged user
+[X] Make OpenGL an option (Default=on)
+    => An option "opengl" already exists in pkgsrc
+    => Ignore this option if FLTK is compiled without OpenGL support
 [X] Import final eureka 1.27 release
 [X] Switch back to FLTK version from pkgsrc current
+[X] Test with FLTK 1.3.5 again
+    => Good

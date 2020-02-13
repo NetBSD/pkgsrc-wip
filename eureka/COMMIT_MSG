@@ -1,5 +1,11 @@
 eureka: Update to 1.27
 
+The OpenGL renderer can be disabled with the new package option "opengl"
+(recommended on machines without hardware acceleration for OpenGL).
+The option "opengl" is ignored if the FLTK package was compiled without OpenGL
+support.
+
+
 CHANGES IN Eureka 1.27
 ======================
 
@@ -21,8 +27,12 @@ CHANGES IN Eureka 1.27
 - beginning of support for UDMF maps (not usable yet...)
 
 - render BOOM's deep water effect (linetype 242)
+  [pkgrc note: Legacy linetype 301 "Translucent 3D water" is now visible
+               with the OpenGL renderer too]
 - render 3D Floors for EDGE, LEGACY and ZDOOM ports
+  [pkgrc note: 3D floors are only visible with the OpenGL renderer]
 - render basic slopes for EDGE, ETERNITY, ODAMEX and ZDOOM
+  [pkgrc note: Slopes are only visible with the OpenGL renderer]
 - render things with a NULL sprite as a blue triangle
 - render Hexen map-spots as a green triangle
 - render unknown things with a smaller '?' sprite
