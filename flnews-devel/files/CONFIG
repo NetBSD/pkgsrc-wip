@@ -23,7 +23,7 @@ CFG_IP6_DISABLE=@IP6@
 
 # Disable compression
 # Set this to 1 if NNTP COMPRESS extension should never be used, even if the
-# required libraries (currently libz) are installed and usable.
+# required libraries (currently libz) are installed and usable
 # Otherwise the compression negotiation can be enabled and disabled in the GUI
 # (disabled by default)
 CFG_CMPR_DISABLE=0
@@ -165,10 +165,18 @@ CFG_LICENSE_PATH="$CFG_PREFIX/share/$CFG_NAME"
 # (must be an absolute path without trailing slash)
 # The FHS defines "/usr[/local]/share/nls" for NLS catalogs but the whole
 # hierarchy below "share" is dedicated to files that are portable between
-# architectures - what our catalogs are not!
+# architectures - what our NLS catalogs are not!
 CFG_NLS_PATH="$CFG_PREFIX/lib/$CFG_NAME/nls"
 
-# If you require reproducible builds for a binary package of a distribution,
+# Installation path for desktop files
+# (must be an absolute path without trailing slash)
+CFG_XDG_DESKTOP_PATH="$CFG_PREFIX/share/applications"
+
+# Installation path for icons
+# (must be an absolute path without trailing slash)
+CFG_XDG_ICON_THEME_PATH="$CFG_PREFIX/share/icons"
+
+# If you need reproducible builds for a binary package of a distribution,
 # set this to '1'.
 CFG_REPRODUCIBLE=1
 # ==============================================================================
