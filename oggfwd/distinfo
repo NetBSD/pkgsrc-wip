@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (oggfwd.git) = e4328426a21175db2df4e36630f67d31ca9631fd
+RMD160 (oggfwd.git) = 9ff453afe215fa355645b1d0638fd45f6216255b
+SHA512 (oggfwd.git) = 156c6219d8dfd99c9ce754cc55c45288ae38c3302b72fd007ddd2c93499d31f805850e9fa63a73525d7a8a555eddf650d824dcce48cbba22fff8327d5ae9433a
+Size (oggfwd.git) = 17791 bytes
+SHA1 (patch-Makefile) = 58aec68ba72bc8a44ec678b0279e56e9ed63da60
