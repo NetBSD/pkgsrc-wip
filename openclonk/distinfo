@@ -4,3 +4,4 @@ SHA1 (openclonk-8.1-src.tar.bz2) = cad119b97ae4f1da772ef180c3c67741b812e466
 RMD160 (openclonk-8.1-src.tar.bz2) = 65ae54147aa12d50972cf3bf9ef454338063e6d6
 SHA512 (openclonk-8.1-src.tar.bz2) = b52a2fba0906cc80fffe2ce308bb4631d4e2d4ada6b8442856deb5e729d37d5c473c3c1a50765eb0bd978d9e3c874d83e0d60f67f44d9535a3ac432029849f6c
 Size (openclonk-8.1-src.tar.bz2) = 120149164 bytes
+SHA1 (patch-CMakeLists.txt) = f0d0eac3227c0bf3ff11cb85203ba471de8d9344

@@ -19,6 +19,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 GCC_REQD+=	4.9
 
+#CMAKE_ARGS+=	-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=FALSE
+MAKE_FLAGS+=	VERBOSE=1
+
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -30,8 +33,8 @@ GCC_REQD+=	4.9
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/gtksourceview3/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
