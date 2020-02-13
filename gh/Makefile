@@ -16,6 +16,22 @@ GO_SRCPATH=	github.com/cli/cli
 
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 
+# TODO: fill the :sha part
+#GO_DEPS+=	github.com/AlecAivazis/survey/v2
+#GO_DEPS+=	github.com/google/shlex
+#GO_DEPS+=	github.com/hashicorp/go-version
+#GO_DEPS+=	github.com/kballard/go-shellquote
+#GO_DEPS+=	github.com/mattn/go-colorable
+#GO_DEPS+=	github.com/mattn/go-isatty
+#GO_DEPS+=	github.com/mgutz/ansi
+#GO_DEPS+=	github.com/mitchellh/go-homedir
+#GO_DEPS+=	github.com/spf13/cobra
+#GO_DEPS+=	github.com/spf13/pflag
+#GO_DEPS+=	github.com/vilmibm/go-termd
+# TODO: ...and also use GODEP_REDIRECTS for these ones!
+#GO_DEPS+=	golang.org/x/crypto/ssh/terminal
+#GO_DEPS+=	gopkg.in/yaml.v3
+
 CHECK_RELRO_SKIP+=	bin/gh
 
 INSTALLATION_DIRS+=	bin
