@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (love-11.2-linux-src.tar.gz) = 4511232e7dcd3fcd529e34d4403784d76b658b07
-RMD160 (love-11.2-linux-src.tar.gz) = d988a3ea1c3011fa98a1e40597c6688da7f4971a
-SHA512 (love-11.2-linux-src.tar.gz) = f72148abc890cfb3daf0e3fae564eba0726ae7591e2d2e32b9072ef53a9ca0bda481ee6dadc9cb171ae6ec48d15780daa269dd74ea548b2084a7b9229e7c1509
-Size (love-11.2-linux-src.tar.gz) = 2766364 bytes
+SHA1 (love-11.3-linux-src.tar.gz) = d4615bc1ccfbf0de34f4354827e369887fa1d78e
+RMD160 (love-11.3-linux-src.tar.gz) = a757d77ab58f93e043de32917205ab67ef1075f9
+SHA512 (love-11.3-linux-src.tar.gz) = d02900bbad658da7127bdbc52ceb8282a725b32d6a17fc51962327411be94f81b2c871d21b3c4bd8492a4ca355c3cfb1f04a7fe010d6c69ae35c7c5d64579e1b
+Size (love-11.3-linux-src.tar.gz) = 2898851 bytes
 SHA1 (patch-src_libraries_physfs_physfs_platform_unix.c) = 3beac368e70909dd3df64d5046abfd6af8b4e2a4

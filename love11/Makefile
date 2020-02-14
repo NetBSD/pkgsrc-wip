@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	love-11.2-linux-src
+DISTNAME=	love-11.3-linux-src
 PKGNAME=	${DISTNAME:S/-linux-src//:S/love/love11/}
 CATEGORIES=	games
 MASTER_SITES=	https://bitbucket.org/rude/love/downloads/
