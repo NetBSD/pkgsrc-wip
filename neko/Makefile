@@ -13,14 +13,7 @@ EXTRACT_USING=	gtar
 USE_LANGUAGES=	c
 USE_CMAKE=	yes
 
-# XXX Minimal configuration for now. Should use options.mk instead.
-CMAKE_ARGS+=	-DWITH_REGEXP:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_UI:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_SSL:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_MYSQL:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_SQLITE:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_APACHE:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_NEKOML:BOOL=OFF
+.include "options.mk"
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
