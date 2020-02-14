@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	1.8.4
+VERSION=	1.9.3
 PKGNAME=	${PHP_PKG_PREFIX}-composer-${VERSION}
 DISTNAME=	composer
 CATEGORIES=	devel
@@ -37,6 +37,5 @@ SUBST_FILES.fix-paths=		composer
 SUBST_VARS.fix-paths=		PREFIX
 
 .include "../../lang/php/phpversion.mk"
-.include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"
