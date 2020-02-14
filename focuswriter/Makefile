@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gottcode/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://gottcode.org/focuswriter/
 COMMENT=	Simple, distraction-free writing environment
 LICENSE=	gnu-gpl-v3
