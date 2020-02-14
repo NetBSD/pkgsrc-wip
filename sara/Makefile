@@ -41,7 +41,7 @@ SUBST_SED.fping=	-e 's,: $$(PROG),:,g'
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-install
 SUBST_FILES.path=	sara perl/* perllib/* bin/* html/*.pl
-SUBST_SED.path=	-e 's,config\/,${EGDIR}/,g'
+SUBST_SED.path=		-e 's,config\/,${EGDIR}/,g'
 SUBST_SED.path+=	-e 's,perl.*\/,${PREFIX}/share/sara/,g'
 SUBST_SED.path+=	-e 's,rules/,${PREFIX}/share/sara/rules/,g'
 SUBST_SED.path+=	-e 's,`pwd`,\"${PREFIX}/share/sara/\",g'
@@ -54,8 +54,8 @@ SUBST_SED.defpath=	-e 's,\"bin/,\"${PREFIX}/bin/,g'
 SUBST_SED.defpath+=	-e 's,config,${EGDIR}/,g'
 
 REPLACE_PERL=	bin/get_targets bin/faux_fping sara add_user \
-	bin/*.sara* bin/*.sara.ext perl/*.pl perl/contrib/* html/*.pl \
-	html/docs/*.pl plugins/*.pi bin/fwping
+		bin/*.sara* bin/*.sara.ext perl/*.pl perl/contrib/* html/*.pl \
+		html/docs/*.pl plugins/*.pi bin/fwping
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 

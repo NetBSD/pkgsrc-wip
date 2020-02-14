@@ -10,6 +10,6 @@ COMMENT=	Kernel multitouch event translation
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

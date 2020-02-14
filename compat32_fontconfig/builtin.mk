@@ -19,7 +19,7 @@ IS_BUILTIN.fontconfig=	yes
 IS_BUILTIN.fontconfig=	no
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.fontconfig
+MAKEVARS+=		IS_BUILTIN.fontconfig
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -36,7 +36,7 @@ BUILTIN_VERSION.fontconfig!=						\
 		${H_FONTCONFIG}
 BUILTIN_PKG.fontconfig=	fontconfig-${BUILTIN_VERSION.fontconfig}
 .endif
-MAKEVARS+=	BUILTIN_PKG.fontconfig
+MAKEVARS+=		BUILTIN_PKG.fontconfig
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -64,7 +64,7 @@ USE_BUILTIN.fontconfig!=						\
 .    endif
 .  endif  # PREFER.fontconfig
 .endif
-MAKEVARS+=	USE_BUILTIN.fontconfig
+MAKEVARS+=		USE_BUILTIN.fontconfig
 
 ###
 ### The section below only applies if we are not including this file

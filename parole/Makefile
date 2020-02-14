@@ -4,18 +4,18 @@ DISTNAME=	parole-${VERS}
 VERS=		1.0.2
 CATEGORIES=	multimedia
 MASTER_SITES=	https://archive.be.xfce.org/src/apps/parole/1.0/
-EXTRACT_SUFX=   .tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.xfce.org/apps/parole/start
 COMMENT=	Simple media player based on the GStreamer framework
-LICENSE=        gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake pkg-config intltool
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+= --prefix=${PREFIX}
+USE_TOOLS+=		gmake pkg-config intltool
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.parole
 PKG_SUPPORTED_OPTIONS=	libnotify

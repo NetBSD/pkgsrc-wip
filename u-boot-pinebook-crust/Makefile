@@ -5,7 +5,7 @@ UBOOT_TARGET=		pinebook
 UBOOT_CONFIG=		pinebook_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 
-UBOOT_INSTALLBOOT_PLIST=installboot.plist
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 # Use anarsoul's fork of mainline U-Boot with Pinebook support patched in
 MASTER_SITES=		${MASTER_SITE_GITHUB:=anarsoul/}
@@ -30,4 +30,4 @@ post-build:
 .include "../../wip/arm-trusted-firmware-sun50i_a64-crust/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
 
-CHECK_PORTABILITY_SKIP+=tools/imx_cntr_image.sh
+CHECK_PORTABILITY_SKIP+=	tools/imx_cntr_image.sh

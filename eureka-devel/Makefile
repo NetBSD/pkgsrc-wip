@@ -1,8 +1,8 @@
 # $NetBSD$
 
-GIT_REVISION=	8f033a12dcb8a93919734f98d2a6540ae2d05fa8
-PKGNAME=	eureka-devel-0
-GIT_REPO=	https://git.code.sf.net/p/eureka-editor/git
+GIT_REVISION=		8f033a12dcb8a93919734f98d2a6540ae2d05fa8
+PKGNAME=		eureka-devel-0
+GIT_REPO=		https://git.code.sf.net/p/eureka-editor/git
 #GIT_EXTRACTDIR=	eureka-124-source
 
 #DISTNAME=	eureka-124-source
@@ -19,7 +19,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c++03
 USE_TOOLS+=	gmake
 
-#WRKSRC=		${WRKDIR}/eureka-1.24-source
+#WRKSRC=	${WRKDIR}/eureka-1.24-source
 WRKSRC=		${WRKDIR}/git
 
 # DOOMWADDIR is intentionally shared with other Doom packages

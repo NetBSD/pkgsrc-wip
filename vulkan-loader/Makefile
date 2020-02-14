@@ -22,7 +22,7 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBUILD_WSI_WAYLAND_SUPPORT=OFF
 CMAKE_ARGS+=	-DBUILD_TESTS=ON
 
-PKGCONFIG_OVERRIDE+=loader/vulkan.pc.in
+PKGCONFIG_OVERRIDE+=	loader/vulkan.pc.in
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/tool.mk"

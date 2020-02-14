@@ -1,6 +1,6 @@
 # $NetBSD$
 
-COMMENT=	Device enumeration and database of constants
+COMMENT=		Device enumeration and database of constants
 CONFIGURE_ARGS+=	--disable-programs
 
 pre-configure:

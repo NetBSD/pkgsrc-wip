@@ -42,6 +42,6 @@ do-install:
 
 # XXX kludge. pkgsrc passes down run path flags in LDFLAGS assuming
 # gcc is used for linking, but here we call the linker directly.
-COMPILER_RPATH_FLAG=-R
+COMPILER_RPATH_FLAG=	-R
 
 .include "../../mk/bsd.pkg.mk"

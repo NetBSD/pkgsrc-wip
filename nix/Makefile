@@ -28,13 +28,13 @@ CONFIGURE_ARGS+=	--enable-gc
 # s3 option needs s3-cpp, this was reported as a cause for error if
 # left unchanged.
 CONFIGURE_ENV+=		ac_cv_header_aws_s3_S3Client_h=no
-#CONFIGURE_ENV+=		EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include
-#CONFIGURE_ENV+=		EDITLINE_LIBS=${BUILDLINK_PREFIX.editlinereadline:Q}/lib
-#CONFIGURE_ENV+=		EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include/readline
+#CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include
+#CONFIGURE_ENV+=	EDITLINE_LIBS=${BUILDLINK_PREFIX.editlinereadline:Q}/lib
+#CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include/readline
 CONFIGURE_ENV+=		EDITLINE_CFLAGS="-DREADLINE"
 CONFIGURE_ENV+=		EDITLINE_LIBS=${BUILDLINK_PREFIX.editlinereadline:Q}/lib
-#CONFIGURE_ENV+=		EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editline:Q}/include/readline
-#CONFIGURE_ENV+=		EDITLINE_LIBS=${BUILDLINK_PREFIX.editline:Q}/lib
+#CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editline:Q}/include/readline
+#CONFIGURE_ENV+=	EDITLINE_LIBS=${BUILDLINK_PREFIX.editline:Q}/lib
 CONFIGURE_ENV+=		LIBLZMA_CFLAGS=${BUILDLINK_PREFIX.lzmalib:Q}/include
 CONFIGURE_ENV+=		LIBLZMA_LIBS=${BUILDLINK_PREFIX.lzmalib:Q}/lib
 CONFIGURE_ENV+=		BOOST_ROOT=${BUILDLINK_PREFIX.boost:Q}/lib
@@ -73,8 +73,8 @@ SUBST_FILES.docbook2+=	doc/manual/local.mk
 SUBST_STAGE.docbook2=	pre-configure
 SUBST_SED.docbook2+=	-e 's,http://docbook.org/xml/5.0/rng/docbook.rng,${PREFIX}/share/xsl/docbook,g'
 
-BUILD_DEPENDS+= libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+= docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 #.if ${OPSYS} == "NetBSD"
 #USE_BUILTIN.editline=	yes

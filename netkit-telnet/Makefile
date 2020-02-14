@@ -22,6 +22,6 @@ CONFIGURE_ARGS+=	--installroot=${DESTDIR}
 SUBST_CLASSES+=		warn
 SUBST_STAGE.warn=	pre-configure
 SUBST_FILES.warn=	configure
-SUBST_SED.warn=	-e s,^WARNINGS=,\#WARNINGS=,g
+SUBST_SED.warn=		-e s,^WARNINGS=,\#WARNINGS=,g
 
 .include "../../mk/bsd.pkg.mk"

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxml++3
 LIBXML++3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxml++3+=	libxml++3>=3.0.1
-BUILDLINK_PKGSRCDIR.libxml++3?=	../../wip/libxml++3
+BUILDLINK_PKGSRCDIR.libxml++3?=		../../wip/libxml++3
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

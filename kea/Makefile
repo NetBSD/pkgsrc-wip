@@ -17,11 +17,11 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	autoconf automake bison flex
 
-CONFIGURE_ARGS+=--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=--enable-shell
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=--enable-generate-parser
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--enable-shell
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--enable-generate-parser
 
 PY_PATCHPLIST=	yes
 

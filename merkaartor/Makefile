@@ -38,7 +38,7 @@ do-configure:
 		${QMAKE} ${CONFIGURE_ARGS} Merkaartor.pro && \
 		${MAKE} qmake
 
-CHECK_PORTABILITY_SKIP+=	 ci/travis-osx-install.sh
+CHECK_PORTABILITY_SKIP+=	ci/travis-osx-install.sh
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"

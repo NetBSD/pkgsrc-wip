@@ -18,11 +18,11 @@ USE_LANGUAGES=
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.9.2
 
-SUBST_CLASSES+=         paths
-SUBST_MESSAGE.paths=    Substituting pkgsrc paths
-SUBST_STAGE.paths=      pre-configure
-SUBST_FILES.paths=      setup.cfg
-SUBST_VARS.paths=       PREFIX
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Substituting pkgsrc paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	setup.cfg
+SUBST_VARS.paths=	PREFIX
 
 # These versions are probably higher than necessary, but there is little value
 # in testing with versions older than are in pkgsrc.

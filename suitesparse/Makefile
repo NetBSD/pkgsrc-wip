@@ -48,8 +48,8 @@ WRKSRC=		${WRKDIR}/SuiteSparse
 SVERSION=	1
 
 .if defined (WITH_METIS)
-METIS=			${PREFIX}/lib/libmetis.a
-METIS_PATH=		${PREFIX}/include/metis
+METIS=		${PREFIX}/lib/libmetis.a
+METIS_PATH=	${PREFIX}/include/metis
 CHOLMOD_CONFIG=
 .else
 CHOLMOD_CONFIG=	-DNPARTITION

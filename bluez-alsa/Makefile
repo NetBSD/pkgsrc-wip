@@ -11,8 +11,8 @@ COMMENT=	Stream audio from/to a Bluetooth device
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-USE_TOOLS+=	autoconf automake pkg-config
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		autoconf automake pkg-config
+GNU_CONFIGURE=		yes
 
 pre-configure:
 	cd ${WRKSRC} &&autoreconf -fiv

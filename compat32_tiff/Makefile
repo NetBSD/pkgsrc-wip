@@ -3,7 +3,7 @@
 DISTNAME=	tiff-4.0.10
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
-ABI?=          	32
+ABI?=		32
 PKGNAME=	compat${ABI}_tiff-4.0.10
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

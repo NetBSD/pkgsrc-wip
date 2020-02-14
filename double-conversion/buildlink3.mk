@@ -7,7 +7,7 @@ DOUBLE_CONVERSION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.double-conversion+=	double-conversion>=3.0.0
 BUILDLINK_ABI_DEPENDS.double-conversion+=	double-conversion>=3.0.0
-BUILDLINK_PKGSRCDIR.double-conversion?=	../../wip/double-conversion
+BUILDLINK_PKGSRCDIR.double-conversion?=		../../wip/double-conversion
 
 .endif # DOUBLE_CONVERSION_BUILDLINK3_MK
 

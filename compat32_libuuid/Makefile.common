@@ -33,6 +33,6 @@ TEST_TARGET=		check
 
 # XXX PR pkg/52877: configure is broken on netbsd6
 .if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0123456].*))
-USE_TOOLS+=            ksh
-CONFIG_SHELL=          ksh
+USE_TOOLS+=	ksh
+CONFIG_SHELL=	ksh
 .endif

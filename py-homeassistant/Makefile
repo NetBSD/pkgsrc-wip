@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.home-assistant.io/
 COMMENT=	Home automation server
 LICENSE=	apache-2.0
 
-#WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${VERSION}
+#WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${VERSION}
 #EGG_INFODIR=	homeassistant-${VERSION}-py${PYVERSSUFFIX}.egg-info
 
 USE_LANGUAGES=	# none

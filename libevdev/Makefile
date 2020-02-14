@@ -11,7 +11,7 @@ COMMENT=	Keyboard and mouse events, capability bits
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-USE_TOOLS+=	gmake
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

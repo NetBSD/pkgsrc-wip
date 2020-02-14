@@ -13,9 +13,9 @@ LICENSE=		2-clause-bsd # and public-domain
 USE_CMAKE=		yes
 USE_LANGUAGES=		c
 
-RESTRICTED=             Includes deriviatives from CARDCAPTOR SAKURA. See http://www.clamp-net.com/ -> INFORMATION
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
+RESTRICTED=		Includes deriviatives from CARDCAPTOR SAKURA. See http://www.clamp-net.com/ -> INFORMATION
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
 

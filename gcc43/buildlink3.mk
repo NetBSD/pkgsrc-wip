@@ -26,7 +26,7 @@ BUILDLINK_INCDIRS.gcc43+=	include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc43}\//
 .  endif
 .endif
 
-BUILDLINK_FILES_CMD.gcc43=	\
+BUILDLINK_FILES_CMD.gcc43=		\
 	(cd  ${BUILDLINK_PREFIX.gcc43} &&	\
 	${FIND} bin libexec lib \( -type f -o -type l \) -print)
 BUILDLINK_FNAME_TRANSFORM.gcc43=	-e s:\buildlink:buildlink/gcc43:

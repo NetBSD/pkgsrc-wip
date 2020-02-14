@@ -9,7 +9,7 @@ HOMEPAGE=	http://hoopajoo.net/projects/powwow.html
 COMMENT=	Client to play MUDs
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-bsd
 
 .include "../../mk/curses.buildlink3.mk"

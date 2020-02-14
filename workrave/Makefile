@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.workrave.org/
 COMMENT=		Wrist break reminder program for prevention of RSI
 LICENSE=		gnu-gpl-v3
 
-PYTHON_VERSIONS_ACCEPTED= 27 # 1.10.1
+PYTHON_VERSIONS_ACCEPTED=	27 # 1.10.1
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pkg-config intltool

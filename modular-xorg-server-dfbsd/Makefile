@@ -22,10 +22,10 @@ CONFIGURE_ARGS+=	--enable-xorg
 CONFIGURE_ARGS+=	--disable-xephyr
 CONFIGURE_ARGS+=	--disable-kdrive
 CONFIGURE_ARGS.SunOS+=	--disable-input-thread
-MESON_ARGS+=	-Dxorg=true
-MESON_ARGS+=	-Dxephyr=false
+MESON_ARGS+=		-Dxorg=true
+MESON_ARGS+=		-Dxephyr=false
 .if ${OPSYS} == "SunOS"
-MESON_ARGS+=	-Dinput_thread=false
+MESON_ARGS+=		-Dinput_thread=false
 .endif
 
 .include "options.mk"

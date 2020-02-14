@@ -13,11 +13,11 @@ OWNER=		kristerw@NetBSD.org
 HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 
-SITES.ghc-6.4.2-src.tar.bz2=http://www.haskell.org/ghc/dist/6.4.2/
-SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
+SITES.ghc-6.4.2-src.tar.bz2=	http://www.haskell.org/ghc/dist/6.4.2/
+SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz= ${MASTER_SITE_LOCAL}
 
 # There is only an i386 bootstrap kit available.
-ONLY_FOR_PLATFORM= Darwin-*-i386 FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 SunOS-*-i386
+ONLY_FOR_PLATFORM=	Darwin-*-i386 FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 SunOS-*-i386
 
 CHECK_PORTABILITY_SKIP=	distrib/prep-bin-dist-mingw
 
@@ -35,7 +35,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	../ghc-6.4.2/mk/bootstrap.mk
 SUBST_FILES.prefix+=	../ghc-6.4.2/ghc/rts/package.conf.in
 SUBST_FILES.prefix+=	../ghc-6.4.2/ghc/includes/Makefile
-SUBST_FILES.prefix+=	             ghc/includes/Makefile
+SUBST_FILES.prefix+=	ghc/includes/Makefile
 SUBST_FILES.prefix+=	../ghc-6.4.2/libraries/readline/package.conf.in
 SUBST_FILES.prefix+=	libraries/readline/configure
 SUBST_FILES.prefix+=	libraries/readline/readline.cabal

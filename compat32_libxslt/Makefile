@@ -8,7 +8,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=   ${PREFIX}/emul/netbsd32/
+GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.compat32_libxml2}
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--with-html-subdir=libxslt

@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.selflanguage.org/
 COMMENT=	Prototype-based dynamic object-oriented programming language
 # BSD?
-# LICENSE=	
+# LICENSE=
 
 USE_LANGUAGES=	c c++
 
@@ -21,10 +21,10 @@ CXXFLAGS+=	-I/usr/X11R7/include
 
 .include "../../wip/mk/git-package.mk"
 
-USE_X11=yes
+USE_X11=	yes
 
-X11_LDFLAGS+=   ${COMPILER_RPATH_FLAG}${PREFIX}/emul/netbsd32/lib
-X11_LDFLAGS+=   -L${PREFIX}/emul/netbsd32/lib
+X11_LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/emul/netbsd32/lib
+X11_LDFLAGS+=	-L${PREFIX}/emul/netbsd32/lib
 
 BUILTIN_INCLUDE_DIRS+=	-I/usr/X11/include/
 

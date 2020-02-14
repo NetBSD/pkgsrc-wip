@@ -16,15 +16,15 @@ WRKSRC=			${WRKDIR}/xnedit
 BUILD_TARGET=		netbsd
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/xnedit
 
-SUBST_CLASSES+=                   fix-include
-SUBST_STAGE.fix-include=          pre-configure
-SUBST_MESSAGE.fix-include=        Fixing include Xft.h.
-SUBST_FILES.fix-include=          util/fontsel.c
-SUBST_FILES.fix-include+=         source/textP.h
-SUBST_FILES.fix-include+=         source/textDisp.h
-SUBST_FILES.fix-include+=         source/nedit.h
-#SUBST_FILES.fix-include+=         Microline/XmL/XmL.c
-SUBST_SED.fix-include=            -e 's,Xft/Xft.h>,X11/&,'
+SUBST_CLASSES+=			fix-include
+SUBST_STAGE.fix-include=	pre-configure
+SUBST_MESSAGE.fix-include=	Fixing include Xft.h.
+SUBST_FILES.fix-include=	util/fontsel.c
+SUBST_FILES.fix-include+=	source/textP.h
+SUBST_FILES.fix-include+=	source/textDisp.h
+SUBST_FILES.fix-include+=	source/nedit.h
+#SUBST_FILES.fix-include+=	Microline/XmL/XmL.c
+SUBST_SED.fix-include=		-e 's,Xft/Xft.h>,X11/&,'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/xnedit ${DESTDIR}${PREFIX}/bin

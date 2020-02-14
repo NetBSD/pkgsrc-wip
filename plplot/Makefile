@@ -13,7 +13,7 @@ COMMENT=	Scientific plotting library
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++ # fortran77
 USE_TOOLS+=	perl
-CHECK_PORTABILITY_SKIP+=	 plplot_test/test_single_tcl.sh
+CHECK_PORTABILITY_SKIP+= plplot_test/test_single_tcl.sh
 
 
 CMAKE_ARGS+=	-DENABLE_f77:BOOL=OFF

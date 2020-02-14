@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 ###
 .if !empty(PKG_OPTIONS:Muucp)
 CONFIGURE_ARGS+=	--enable-uucp-rnews
-PKG_GROUPS+= uucp
+PKG_GROUPS+=		uucp
 .else
 CONFIGURE_ARGS+=	--disable-uucp-rnews
 .endif

@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	udev-243
-COMMENT=	Hotplug daemon
+PKGNAME=		udev-243
+COMMENT=		Hotplug daemon
 CONFIGURE_ARGS+=	--disable-hwdb
 
 pre-configure:

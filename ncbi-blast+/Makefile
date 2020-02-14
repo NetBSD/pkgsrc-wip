@@ -21,14 +21,14 @@ SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
 SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
 
-USE_TOOLS+=	bash gmake perl
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		bash gmake perl
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no	# doesn't know --enable-option-checking
-REPLACE_BASH=	scripts/common/impl/define_random_macros.sh
-REPLACE_BASH+=	src/app/blast/get_species_taxids.sh
-REPLACE_PERL=	src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
-REPLACE_PYTHON=	src/app/winmasker/windowmasker_2.2.22_adapter.py
+REPLACE_BASH=		scripts/common/impl/define_random_macros.sh
+REPLACE_BASH+=		src/app/blast/get_species_taxids.sh
+REPLACE_PERL=		src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
+REPLACE_PYTHON=		src/app/winmasker/windowmasker_2.2.22_adapter.py
 
 # The test for amq can hang, but amq is not needed so just avoid the test
 # configure chooses /usr/local/bin/ar with no flags

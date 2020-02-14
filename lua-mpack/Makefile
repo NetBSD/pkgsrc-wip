@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=	c
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=		gmake pkg-config
 
 
 MAKE_ENV+=	DEPS_PREFIX=${PREFIX}

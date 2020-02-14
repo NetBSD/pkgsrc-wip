@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.96 2018/11/02 23:08:29 adam Exp $
 
-DISTNAME=	libgcrypt-1.8.4
-CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/
-EXTRACT_SUFX=	.tar.bz2
-ABI=		32
+DISTNAME=		libgcrypt-1.8.4
+CATEGORIES=		security
+MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/libgcrypt/
+EXTRACT_SUFX=		.tar.bz2
+ABI=			32
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 
 PKGNAME=	compat${ABI}_${DISTNAME}

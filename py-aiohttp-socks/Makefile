@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/romis2012/aiohttp-socks
 COMMENT=	SOCKS proxy connector for aiohttp
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=       27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=2.3.2*:../../www/py-aiohttp
 

@@ -9,11 +9,11 @@ HOMEPAGE=	http://www.bluez.org/
 COMMENT=	Bluetooth scan, pair, connect and power toggle
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS=	bluez-libs # v3
+CONFLICTS=		bluez-libs # v3
 ONLY_FOR_PLATFORM=	Linux-*-*
-USE_TOOLS+=	gmake pkg-config
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-obex --disable-systemd --disable-udev
 CONFIGURE_ARGS+=	--disable-tools --enable-library
 

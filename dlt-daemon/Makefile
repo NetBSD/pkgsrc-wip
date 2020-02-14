@@ -24,16 +24,16 @@ PKGCONFIG_OVERRIDE+=	automotive-dlt.pc.in
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-EGDIR=          ${PREFIX}/share/examples/${PKGBASE}
-CONFS=          dlt.conf dlt_gateway.conf
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONFS=		dlt.conf dlt_gateway.conf
 
 .for f in ${CONFS}
-CONF_FILES+=    ${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/examples/${PKGBASE}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/examples/${PKGBASE}
 
-OWN_DIRS+=      ${PKG_SYSCONFDIR}/xbps.d
+OWN_DIRS+=	${PKG_SYSCONFDIR}/xbps.d
 
 post-install:
 	${MKDIR} ${DESTDIR}${EGDIR} &&\

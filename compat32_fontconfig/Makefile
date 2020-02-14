@@ -74,7 +74,8 @@ CONF_FILES+=		${EGDIR}/conf.d/README ${PKG_SYSCONFDIR32}/conf.d/README
 TMPLDIR=		${PREFIX}/emul/netbsd32/share/fontconfig/conf.avail
 MAKE_DIRS+=		${PKG_SYSCONFDIR32}/conf.d
 # following list from ${WRKSRC}/conf.d/Makefile.am
-FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
+FC_STDCONF=		\
+	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	10-hinting-medium.conf 10-hinting-none.conf 10-hinting-slight.conf \
 	20-unhint-small-vera.conf \
 	30-metric-aliases.conf 40-nonlatin.conf \

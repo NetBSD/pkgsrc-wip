@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/claunia/findcrcs/
 COMMENT=	Find and extract pieces of data by CRC, size and MD5
 LICENSE=	gnu-gpl-v3 AND apache-2.0
 
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c++
-TEST_TARGET=	test
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c++
+TEST_TARGET=		test
 INSTALLATION_DIRS=	bin share/doc/findcrcs
 
 do-install:
