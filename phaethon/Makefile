@@ -4,11 +4,11 @@ DISTNAME=	phaethon-${GITHUB_TAG}
 PKGNAME=	phaethon-${GITHUB_TAG:S/v//}
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
-GITHUB_TAG=	v0.0.4
+GITHUB_TAG=	v0.0.5
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://xoreos.org/
-COMMENT=	"A FLOSS resource explorer for BioWare's Aurora engine games"
+COMMENT=	Resource explorer for BioWare Aurora engine games
 LICENSE=	gnu-lgpl-v2.1
 
 EXTRACT_USING=	gtar
@@ -30,5 +30,5 @@ do-install:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
