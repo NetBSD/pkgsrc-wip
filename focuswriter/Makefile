@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gottcode/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gottcode.org/focuswriter/
 COMMENT=	Simple, distraction-free writing environment
 LICENSE=	gnu-gpl-v3
@@ -27,6 +27,7 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
