@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=			${WRKDIR}/focuswriter-1.7.4
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++
-USE_TOOLS=		pkg-config
+USE_TOOLS+=		pkg-config
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
