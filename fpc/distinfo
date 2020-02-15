@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (fpc-3.0.4.source.tar.gz) = 7b4d214f2de56e5a60cca6b6ab8f192e786894b4
+RMD160 (fpc-3.0.4.source.tar.gz) = 40e1be365e69ed30b4114303c6891cbc60d4b8f3
+SHA512 (fpc-3.0.4.source.tar.gz) = fc64fd94c39f220bd7531126d6281fa2141aed61c218595a7906a025660b46629a305ff7eb023f5e1359eafdec2dba69aa5405f1bbc3c1182414968689cbb52e
+Size (fpc-3.0.4.source.tar.gz) = 40347617 bytes
+SHA1 (x86_64-macosx-10.7-ppcx64.tar.bz2) = 2f1e11c8dc2f2bd06c6c34d4954064c74feeea49
+RMD160 (x86_64-macosx-10.7-ppcx64.tar.bz2) = 25fb3c2eb9fa364ee56a5f3c2667151143f39777
+SHA512 (x86_64-macosx-10.7-ppcx64.tar.bz2) = db60937f1ff09d4087d8d169da98ffbe6f8cc7eef5726ad59d50d1933e5aeb16d5996863c60fd1f9451d2d36b090707572c240c090e7020cafa341fa163baec2
+Size (x86_64-macosx-10.7-ppcx64.tar.bz2) = 1095556 bytes
+SHA1 (patch-compiler_systems_t_bsd.pas) = f2b536e27f7a5f1686c6be0cc61b2ee1f16f7870
