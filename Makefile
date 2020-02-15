@@ -354,7 +354,6 @@ SUBDIR+=	castget
 SUBDIR+=	catfish
 SUBDIR+=	cb2bib
 SUBDIR+=	cblas
-SUBDIR+=	cc65
 SUBDIR+=	ccnet-server
 SUBDIR+=	ccrypt
 SUBDIR+=	cdbfasta
