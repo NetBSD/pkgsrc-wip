@@ -1,15 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	z.lua-0.0.0.20190131
+DISTNAME=	z.lua-1.8.4
 PKGNAME=	${DISTNAME:S/z.lua/zlua/}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skywind3000/}
 GITHUB_PROJECT=	z.lua
-GITHUB_TAG=	9fe0fc67a002ce122b10e85e047ef136a4544096
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/skywind3000/z.lua
-COMMENT=	Tool that lets you quickly jump around your filesystem
+COMMENT=	Lightweight tool that lets you quickly jump around your filesystem
 LICENSE=	mit
 
 NO_BUILD=	yes
@@ -25,7 +24,9 @@ INSTALLATION_DIRS+=		share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/z.lua ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/omz.plugin.zsh ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/z.lua.plugin.zsh ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/init.fish ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ranger_zlua.py ${DESTDIR}${PREFIX}/share/${PKGBASE} # Doesn't include Python hashbang at top
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.cn.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 

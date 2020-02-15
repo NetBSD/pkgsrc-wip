@@ -3,5 +3,8 @@
   Using this name for now, until we can evaluate
   whether such a name will play nice with pkgsrc.
 
-- Figure out a better places to install z.lua.plugin.zsh
-  for zsh users.
+- There's also an images/ dir referenced by README.md, which
+  we may want to include.
+
+- See if there's a way to replace the `lua' statement in the eval
+  in MESSAGE with the selected version of lua (eg, lua52 or lua53).
