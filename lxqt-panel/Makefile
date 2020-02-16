@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 CMAKE_ARGS+=	-DCPULOAD_PLUGIN=No

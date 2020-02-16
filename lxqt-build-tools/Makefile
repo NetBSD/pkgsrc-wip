@@ -18,6 +18,7 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/share/examples/lxqt/xdg
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build

@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
