@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	focuswriter-v1.7.4
-PKGNAME=	focuswriter-1.7.4
+DISTNAME=	focuswriter-1.7.4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gottcode/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +10,6 @@ HOMEPAGE=	https://gottcode.org/focuswriter/
 COMMENT=	Simple, distraction-free writing environment
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/focuswriter-1.7.4
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++
 USE_TOOLS+=		pkg-config
@@ -21,7 +19,8 @@ INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 do-configure:
 	cd ${WRKSRC} && \
 	${SETENV} ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake -o Makefile PREFIX=${PREFIX}
+	${QTDIR}/bin/qmake -o Makefile \
+		PREFIX=${PREFIX} PKGMANDIR=${PKGMANDIR}
 
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 

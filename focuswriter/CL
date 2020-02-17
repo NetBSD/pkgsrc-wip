@@ -1,0 +1,7 @@
+focuswriter: Use some default values and install a man page under PKGMANDIR
+
+* https://github.com/gottcode/focuswriter/archive/v1.7.4.tar.gz returns
+  focuswriter-1.7.4.tar.gz. Use this as DISTNAME.
+* Use default WRKSRC.
+
+* Install the man page under PKGMANDIR.

@@ -9,7 +9,7 @@ Add man to the correct location
  
  	man.files = resources/unix/focuswriter.1
 -	man.path = $$PREFIX/share/man/man1
-+	man.path = $$PREFIX/man/man1
++	man.path = $$PREFIX/$$PKGMANDIR/man1
  
  	qm.files = $$replace(TRANSLATIONS, .ts, .qm)
  	qm.path = $$DATADIR/focuswriter/translations
