@@ -1,3 +1,3 @@
-spice-html5 is a Javascript SPICE client.  This includes a simple HTML
+spice-html5 is a JavaScript SPICE client.  This includes a simple HTML
 page to initiate a session, and the client itself.  It includes a configuration
 file for Apache, but should work with any web server.
