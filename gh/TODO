@@ -1,40 +1,19 @@
-The build fails because dependencies are not provided:
+- The build fails because dependencies are not provided:
 
- | ===> Building for gh-0.5.4
- | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/highlight.go:6:2: cannot find package "github.com/alecthomas/chroma" in any of:
- |         /usr/pkg/go113/src/github.com/alecthomas/chroma (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/alecthomas/chroma (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/alecthomas/chroma
- | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/highlight.go:7:2: cannot find package "github.com/alecthomas/chroma/lexers" in any of:
- |         /usr/pkg/go113/src/github.com/alecthomas/chroma/lexers (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/alecthomas/chroma/lexers (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/alecthomas/chroma/lexers
- | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/theme.go:7:2: cannot find package "github.com/aybabtme/rgbterm" in any of:
- |         /usr/pkg/go113/src/github.com/aybabtme/rgbterm (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/aybabtme/rgbterm (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/aybabtme/rgbterm
- | /tmp/pkgsrc/wip/gh/work/src/github.com/spf13/cobra/doc/man_docs.go:27:2: cannot find package "github.com/cpuguy83/go-md2man/v2/md2man" in any of:
- |         /usr/pkg/go113/src/github.com/cpuguy83/go-md2man/v2/md2man (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/cpuguy83/go-md2man/v2/md2man (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/cpuguy83/go-md2man/v2/md2man
- | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/termd.go:9:2: cannot find package "github.com/kr/text" in any of:
- |         /usr/pkg/go113/src/github.com/kr/text (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/kr/text (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/kr/text
- | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/termd.go:10:2: cannot find package "github.com/mitchellh/go-wordwrap" in any of:
- |         /usr/pkg/go113/src/github.com/mitchellh/go-wordwrap (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/mitchellh/go-wordwrap (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/mitchellh/go-wordwrap
- | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/termd.go:11:2: cannot find package "github.com/russross/blackfriday/v2" in any of:
- |         /usr/pkg/go113/src/github.com/russross/blackfriday/v2 (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/russross/blackfriday/v2 (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/russross/blackfriday/v2
- | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/theme.go:8:2: cannot find package "github.com/tj/go-css/csshex" in any of:
- |         /usr/pkg/go113/src/github.com/tj/go-css/csshex (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/tj/go-css/csshex (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/tj/go-css/csshex
+ | ===> Building for gh-0.5.5
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/alecthomas/chroma/lexers/internal/api.go:9:2: cannot find package "github.com/danwakefield/fnmatch" in any of:
+ |         /usr/pkg/go113/src/github.com/danwakefield/fnmatch (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/danwakefield/fnmatch (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/danwakefield/fnmatch
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/alecthomas/chroma/regexp.go:11:2: cannot find package "github.com/dlclark/regexp2" in any of:
+ |         /usr/pkg/go113/src/github.com/dlclark/regexp2 (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/dlclark/regexp2 (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/dlclark/regexp2
  | /tmp/pkgsrc/wip/gh/work/src/github.com/spf13/cobra/doc/yaml_docs.go:26:2: cannot find package "gopkg.in/yaml.v2" in any of:
  |         /usr/pkg/go113/src/gopkg.in/yaml.v2 (from $GOROOT)
  |         /tmp/pkgsrc/wip/gh/work/src/gopkg.in/yaml.v2 (from $GOPATH)
  |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/gopkg.in/yaml.v2
  | *** Error code 1
+
+- Figure out how gopkg.in/yaml.v2 and gopkg.in/yaml.v3 could peacefully
+  cohexists.
