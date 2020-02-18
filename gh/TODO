@@ -1,74 +1,40 @@
 The build fails because dependencies are not provided:
 
  | ===> Building for gh-0.5.4
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/pkg/browser/browser.go:9:2: cannot find package "github.com/google/shlex" in any of:
- |         /usr/pkg/go113/src/github.com/google/shlex (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/google/shlex (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/google/shlex
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/command/title_body_survey.go:6:2: cannot find package "github.com/AlecAivazis/survey/v2" in any of:
- |         /usr/pkg/go113/src/github.com/AlecAivazis/survey/v2 (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/AlecAivazis/survey/v2 (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/AlecAivazis/survey/v2
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/pkg/surveyext/editor.go:16:2: cannot find package "github.com/AlecAivazis/survey/v2/terminal" in any of:
- |         /usr/pkg/go113/src/github.com/AlecAivazis/survey/v2/terminal (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/AlecAivazis/survey/v2/terminal (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/AlecAivazis/survey/v2/terminal
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/pkg/surveyext/editor.go:17:2: cannot find package "github.com/kballard/go-shellquote" in any of:
- |         /usr/pkg/go113/src/github.com/kballard/go-shellquote (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/kballard/go-shellquote (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/kballard/go-shellquote
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/utils/color.go:7:2: cannot find package "github.com/mattn/go-colorable" in any of:
- |         /usr/pkg/go113/src/github.com/mattn/go-colorable (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/mattn/go-colorable (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/mattn/go-colorable
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/utils/color.go:8:2: cannot find package "github.com/mattn/go-isatty" in any of:
- |         /usr/pkg/go113/src/github.com/mattn/go-isatty (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/mattn/go-isatty (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/mattn/go-isatty
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/utils/color.go:9:2: cannot find package "github.com/mgutz/ansi" in any of:
- |         /usr/pkg/go113/src/github.com/mgutz/ansi (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/mgutz/ansi (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/mgutz/ansi
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/git/ssh_config.go:12:2: cannot find package "github.com/mitchellh/go-homedir" in any of:
- |         /usr/pkg/go113/src/github.com/mitchellh/go-homedir (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/mitchellh/go-homedir (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/mitchellh/go-homedir
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/internal/cobrafish/completion.go:12:2: cannot find package "github.com/spf13/cobra" in any of:
- |         /usr/pkg/go113/src/github.com/spf13/cobra (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/spf13/cobra (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/spf13/cobra
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/cmd/gen-docs/main.go:8:2: cannot find package "github.com/spf13/cobra/doc" in any of:
- |         /usr/pkg/go113/src/github.com/spf13/cobra/doc (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/spf13/cobra/doc (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/spf13/cobra/doc
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/internal/cobrafish/completion.go:13:2: cannot find package "github.com/spf13/pflag" in any of:
- |         /usr/pkg/go113/src/github.com/spf13/pflag (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/spf13/pflag (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/spf13/pflag
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/utils/utils.go:9:2: cannot find package "github.com/vilmibm/go-termd" in any of:
- |         /usr/pkg/go113/src/github.com/vilmibm/go-termd (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/vilmibm/go-termd
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/utils/table_printer.go:12:2: cannot find package "golang.org/x/crypto/ssh/terminal" in any of:
- |         /usr/pkg/go113/src/golang.org/x/crypto/ssh/terminal (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/golang.org/x/crypto/ssh/terminal (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/golang.org/x/crypto/ssh/terminal
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/context/config_file.go:10:2: cannot find package "gopkg.in/yaml.v3" in any of:
- |         /usr/pkg/go113/src/gopkg.in/yaml.v3 (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/gopkg.in/yaml.v3 (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/gopkg.in/yaml.v3
- | /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/update/update.go:9:2: cannot find package "github.com/hashicorp/go-version" in any of:
- |         /usr/pkg/go113/src/github.com/hashicorp/go-version (from $GOROOT)
- |         /tmp/pkgsrc/wip/gh/work/src/github.com/hashicorp/go-version (from $GOPATH)
- |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/hashicorp/go-version
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/highlight.go:6:2: cannot find package "github.com/alecthomas/chroma" in any of:
+ |         /usr/pkg/go113/src/github.com/alecthomas/chroma (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/alecthomas/chroma (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/alecthomas/chroma
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/highlight.go:7:2: cannot find package "github.com/alecthomas/chroma/lexers" in any of:
+ |         /usr/pkg/go113/src/github.com/alecthomas/chroma/lexers (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/alecthomas/chroma/lexers (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/alecthomas/chroma/lexers
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/theme.go:7:2: cannot find package "github.com/aybabtme/rgbterm" in any of:
+ |         /usr/pkg/go113/src/github.com/aybabtme/rgbterm (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/aybabtme/rgbterm (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/aybabtme/rgbterm
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/spf13/cobra/doc/man_docs.go:27:2: cannot find package "github.com/cpuguy83/go-md2man/v2/md2man" in any of:
+ |         /usr/pkg/go113/src/github.com/cpuguy83/go-md2man/v2/md2man (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/cpuguy83/go-md2man/v2/md2man (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/cpuguy83/go-md2man/v2/md2man
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/termd.go:9:2: cannot find package "github.com/kr/text" in any of:
+ |         /usr/pkg/go113/src/github.com/kr/text (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/kr/text (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/kr/text
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/termd.go:10:2: cannot find package "github.com/mitchellh/go-wordwrap" in any of:
+ |         /usr/pkg/go113/src/github.com/mitchellh/go-wordwrap (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/mitchellh/go-wordwrap (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/mitchellh/go-wordwrap
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/termd.go:11:2: cannot find package "github.com/russross/blackfriday/v2" in any of:
+ |         /usr/pkg/go113/src/github.com/russross/blackfriday/v2 (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/russross/blackfriday/v2 (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/russross/blackfriday/v2
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/vilmibm/go-termd/theme.go:8:2: cannot find package "github.com/tj/go-css/csshex" in any of:
+ |         /usr/pkg/go113/src/github.com/tj/go-css/csshex (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/github.com/tj/go-css/csshex (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/github.com/tj/go-css/csshex
+ | /tmp/pkgsrc/wip/gh/work/src/github.com/spf13/cobra/doc/yaml_docs.go:26:2: cannot find package "gopkg.in/yaml.v2" in any of:
+ |         /usr/pkg/go113/src/gopkg.in/yaml.v2 (from $GOROOT)
+ |         /tmp/pkgsrc/wip/gh/work/src/gopkg.in/yaml.v2 (from $GOPATH)
+ |         /tmp/pkgsrc/wip/gh/work/.buildlink/gopkg/src/gopkg.in/yaml.v2
  | *** Error code 1
-
-Should we package all these dependencies?
-
-Please also note that by including lang/go/go-dep.mk and running `print-go-deps'
-it fails due:
-
- | % make print-go-deps
- | /usr/bin/awk: can't open file /tmp/pkgsrc/wip/gh/work/src/github.com/cli/cli/Gopkg.lock
- |  source line number 1
- | *** Error code 2
