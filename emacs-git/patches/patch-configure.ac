@@ -1,12 +1,7 @@
 $NetBSD$
 
-1. chunk:
 Do not inject X11 LDFLAGS, pkgsrc handles that.
 Fixes PR pkg/53688.
-
-2. chunk:
-Adapt pthread_setname_np calling convention for NetBSD.
-http://debbugs.gnu.org/cgi/bugreport.cgi?bug=39363
 
 --- configure.ac.orig	2020-01-31 17:00:50.659618322 +0000
 +++ configure.ac
@@ -20,25 +15,3 @@ http://debbugs.gnu.org/cgi/bugreport.cgi?bug=39363
  esac
  
  C_SWITCH_MACHINE=
-@@ -4192,6 +4193,21 @@ if test "$ac_cv_func_pthread_setname_np"
-     AC_DEFINE(
-       HAVE_PTHREAD_SETNAME_NP_1ARG, 1,
-       [Define to 1 if pthread_setname_np takes a single argument.])
-+  else
-+    AC_CACHE_CHECK(
-+     [whether pthread_setname_np takes three arguments],
-+     [emacs_cv_pthread_setname_np_3arg],
-+     [AC_COMPILE_IFELSE(
-+       [AC_LANG_PROGRAM(
-+         [[#include <pthread.h>]],
-+         [[pthread_setname_np (0, "%s", "a");]])],
-+       [emacs_cv_pthread_setname_np_3arg=yes],
-+       [emacs_cv_pthread_setname_np_3arg=no])])
-+     if test "$emacs_cv_pthread_setname_np_3arg" = "yes"; then
-+       AC_DEFINE(
-+         HAVE_PTHREAD_SETNAME_NP_3ARG, 1,
-+         [Define to 1 if pthread_setname_np takes three arguments.])
-+     fi
-   fi
- fi
- 
