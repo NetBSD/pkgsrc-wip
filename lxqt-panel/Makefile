@@ -17,8 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
-
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 CMAKE_ARGS+=	-DCPULOAD_PLUGIN=No
@@ -28,12 +26,14 @@ CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
 CMAKE_ARGS+=	-DNETWORKMONITOR_PLUGIN=No
 CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
 CMAKE_ARGS+=	-DVOLUME_USE_ALSA=No
+# Uncomment the following line if you do not wish to use pulseaudio
+#CMAKE_ARGS+=	-DVOLUME_USE_PULSEAUDIO=No
 .endif
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 
@@ -41,6 +41,7 @@ DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
 .include "../../wip/lxqt-globalkeys/buildlink3.mk"
+# Comment the following line if you do not wish to use pulseaudio
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../sysutils/solid/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
