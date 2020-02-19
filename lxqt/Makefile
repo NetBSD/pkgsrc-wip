@@ -11,9 +11,9 @@ META_PACKAGE=	yes
 
 .include "options.mk"
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.6.0:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.6.0:../../devel/lxqt-build-tools
 
-DEPENDS+=	libqtxdg>=3.4.0:../../wip/libqtxdg
+DEPENDS+=	libqtxdg>=3.4.0:../../x11/libqtxdg
 DEPENDS+=	libsysstat>=0.4.2:../../wip/libsysstat
 DEPENDS+=	liblxqt>=0.14.1:../../wip/liblxqt
 DEPENDS+=	libfm-qt>=0.14.1:../../wip/libfm-qt
