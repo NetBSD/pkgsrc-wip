@@ -346,8 +346,8 @@ ${PYSITELIB}/conans/client/rest/client_routes.pyo
 ${PYSITELIB}/conans/client/rest/client_routes.pyc
 ${PYSITELIB}/conans/client/rest/conan_requester.pyo
 ${PYSITELIB}/conans/client/rest/conan_requester.pyc
-${PYSITELIB}/conans/client/rest/multipart_decode.pyo
-${PYSITELIB}/conans/client/rest/multipart_decode.pyc
+${PYSITELIB}/conans/client/rest/download_cache.pyo
+${PYSITELIB}/conans/client/rest/download_cache.pyc
 ${PYSITELIB}/conans/client/rest/rest_client.pyo
 ${PYSITELIB}/conans/client/rest/rest_client.pyc
 ${PYSITELIB}/conans/client/rest/rest_client_common.pyo
@@ -362,7 +362,7 @@ ${PYSITELIB}/conans/client/rest/auth_manager.py
 ${PYSITELIB}/conans/client/rest/cacert.py
 ${PYSITELIB}/conans/client/rest/client_routes.py
 ${PYSITELIB}/conans/client/rest/conan_requester.py
-${PYSITELIB}/conans/client/rest/multipart_decode.py
+${PYSITELIB}/conans/client/rest/download_cache.py
 ${PYSITELIB}/conans/client/rest/rest_client.py
 ${PYSITELIB}/conans/client/rest/rest_client_common.py
 ${PYSITELIB}/conans/client/rest/rest_client_v1.py
@@ -739,6 +739,8 @@ ${PYSITELIB}/conans/util/log.pyo
 ${PYSITELIB}/conans/util/log.pyc
 ${PYSITELIB}/conans/util/progress_bar.pyo
 ${PYSITELIB}/conans/util/progress_bar.pyc
+${PYSITELIB}/conans/util/runners.pyo
+${PYSITELIB}/conans/util/runners.pyc
 ${PYSITELIB}/conans/util/sha.pyo
 ${PYSITELIB}/conans/util/sha.pyc
 ${PYSITELIB}/conans/util/templates.pyo
@@ -755,6 +757,7 @@ ${PYSITELIB}/conans/util/files.py
 ${PYSITELIB}/conans/util/locks.py
 ${PYSITELIB}/conans/util/log.py
 ${PYSITELIB}/conans/util/progress_bar.py
+${PYSITELIB}/conans/util/runners.py
 ${PYSITELIB}/conans/util/sha.py
 ${PYSITELIB}/conans/util/templates.py
 ${PYSITELIB}/conans/util/tracer.py
