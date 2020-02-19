@@ -18,12 +18,11 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DMSK_INSTALL_INCLUDES=/include
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	sudo-[0-9]*:../../security/sudo
 
