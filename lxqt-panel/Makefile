@@ -26,7 +26,8 @@ CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
 CMAKE_ARGS+=	-DNETWORKMONITOR_PLUGIN=No
 CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
 CMAKE_ARGS+=	-DVOLUME_USE_ALSA=No
-# Uncomment the following line if you do not wish to use pulseaudio
+# Uncomment the following two lines if you do not wish to use pulseaudio
+#CMAKE_ARGS+=	-DVOLUME_PLUGIN=No
 #CMAKE_ARGS+=	-DVOLUME_USE_PULSEAUDIO=No
 .endif
 
