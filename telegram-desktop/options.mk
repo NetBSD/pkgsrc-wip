@@ -47,3 +47,14 @@ CMAKE_ARGS+=              -DTDESKTOP_DISABLE_DBUS_INTEGRATION=ON
 .else
 .include "../../security/openssl/buildlink3.mk"
 .endif
+
+###
+### PulseAudio
+###
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.include "../../security/pulseaudio/buildlink3.mk"
+CMAKE_ARGS+=           -DTDESKTOP_WITHOUT_PULSE=OFF
+.else
+CMAKE_ARGS+=           -DTDESKTOP_WITHOUT_PULSE=ON
+.endif
+

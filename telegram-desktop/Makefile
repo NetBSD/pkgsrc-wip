@@ -36,6 +36,15 @@ CMAKE_ARGS+=           -DTDESKTOP_DISABLE_DESKTOP_FILE_GENERATION=ON
 CMAKE_ARGS+=           -DTDESKTOP_USE_PACKAGED_TGVOIP=OFF
 CMAKE_ARGS+=           -DDESKTOP_APP_SPECIAL_TARGET=""
 CMAKE_ARGS+=           -DTDESKTOP_LAUNCHER_BASENAME="telegram-desktop"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" # NetBSD-specific config
+CMAKE_ARGS+=           -DTDESKTOP_WITHOUT_ALSA=ON
+.elif ${OPSYS} == "Linux"
+CMAKE_ARGS+=           -DTDESKTOP_WITHOUT_ALSA=OFF
+.endif
+
+
 
 .include "options.mk"
 
