@@ -1,3 +1,8 @@
 @comment $NetBSD$
 bin/squashfuse
+include/squashfs_fs.h
+include/squashfuse.h
+lib/libfuseprivate.la
+lib/libsquashfuse.la
+lib/pkgconfig/squashfuse.pc
 man/man1/squashfuse.1

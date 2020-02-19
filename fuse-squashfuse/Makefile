@@ -1,6 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	squashfuse-0.1.100
+GITHUB_PROJECT=	squashfuse
+DISTNAME=	squashfuse-0.1.103
 PKGNAME=	fuse-${DISTNAME}
 GITHUB_RELEASE=	${DISTNAME_NOREV}
 CATEGORIES=	filesystems
