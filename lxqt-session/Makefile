@@ -30,5 +30,5 @@ DEPENDS+=	xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../wip/liblxqt/buildlink3.mk"
+.include "../../x11/liblxqt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

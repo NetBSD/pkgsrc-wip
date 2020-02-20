@@ -27,5 +27,5 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	sudo-[0-9]*:../../security/sudo
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../wip/liblxqt/buildlink3.mk"
+.include "../../x11/liblxqt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

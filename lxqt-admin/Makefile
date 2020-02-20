@@ -29,5 +29,5 @@ DEPENDS+=	lxqt-policykit-[0-9]*:../../wip/lxqt-policykit
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../security/polkit-qt5/buildlink3.mk"
-.include "../../wip/liblxqt/buildlink3.mk"
+.include "../../x11/liblxqt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

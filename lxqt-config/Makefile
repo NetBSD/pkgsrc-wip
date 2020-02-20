@@ -32,6 +32,6 @@ DEPENDS+=	lxqt-themes-[0-9]*:../../wip/lxqt-themes
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/liblxqt/buildlink3.mk"
+.include "../../x11/liblxqt/buildlink3.mk"
 .include "../../wip/libkscreen/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -27,5 +27,5 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/libqtxdg/buildlink3.mk"
-.include "../../wip/libfm-qt/buildlink3.mk"
+.include "../../x11/libfm-qt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
