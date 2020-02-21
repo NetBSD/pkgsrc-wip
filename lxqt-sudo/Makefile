@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-sudo/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	LXQt GUI frontend for sudo
 LICENSE=	gnu-lgpl-v2.1

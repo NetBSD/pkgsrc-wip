@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://downloads.lxqt.org/downloads/libsysstat/0.4.2/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Library used to query system info and statistics
 LICENSE=	gnu-lgpl-v2.1

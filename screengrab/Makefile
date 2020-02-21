@@ -17,8 +17,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-INSTALLATION_DIRS+=	bin lib
-
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
@@ -26,7 +24,7 @@ pre-configure:
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
-.include "../../wip/libqtxdg/buildlink3.mk"
+.include "../../x11/libqtxdg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
