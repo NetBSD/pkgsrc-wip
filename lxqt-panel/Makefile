@@ -26,8 +26,6 @@ CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
 CMAKE_ARGS+=	-DNETWORKMONITOR_PLUGIN=No
 CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
 CMAKE_ARGS+=	-DVOLUME_USE_ALSA=No
-# Uncomment the following line if you do not wish to use pulseaudio
-#CMAKE_ARGS+=	-DVOLUME_USE_PULSEAUDIO=No
 .endif
 
 pre-configure:
@@ -41,7 +39,6 @@ DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
 .include "../../wip/lxqt-globalkeys/buildlink3.mk"
-# Comment the following line if you do not wish to use pulseaudio
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../sysutils/solid/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
