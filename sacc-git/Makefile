@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2018/02/28 16:32:56 leot Exp $
 
-DISTNAME=	sacc-v1.00
-PKGNAME=	${DISTNAME:S/-v/-/}
+DISTNAME=	sacc-1.01
 CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/sacc/
 EXTRACT_SUFX=	.tgz
