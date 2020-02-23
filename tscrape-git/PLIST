@@ -4,6 +4,11 @@ bin/tscrape_html
 bin/tscrape_plain
 bin/tscrape_update
 man/man1/tscrape.1
+man/man1/tscrape_html.1
+man/man1/tscrape_plain.1
+man/man1/tscrape_update.1
+man/man5/tscrape.5
+man/man5/tscraperc.5
 share/doc/tscrape/README
 share/doc/tscrape/style.css
 share/doc/tscrape/tscraperc.example
