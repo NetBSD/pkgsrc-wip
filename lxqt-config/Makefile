@@ -6,7 +6,7 @@ MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-config/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	System configuration (control center)
+COMMENT=	System configuration control center
 HOMEPAGE=	https://lxqt.org/
 LICENSE=	gnu-lgpl-v2.1
 
