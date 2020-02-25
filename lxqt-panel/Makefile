@@ -39,6 +39,9 @@ DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
 .include "../../wip/lxqt-globalkeys/buildlink3.mk"
+#.include "../../wip/libsysstat/buildlink3.mk"
+# libsysstat is required for SYSSTAT_PLUGIN, the panel fails to build
+# with this plugin
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../sysutils/solid/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
