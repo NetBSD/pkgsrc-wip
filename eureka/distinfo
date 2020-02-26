@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (eureka-127-source.tar.gz) = 296ac2bef8bcb4af5587097a8f3c0cf1ca8856bf
-RMD160 (eureka-127-source.tar.gz) = cdb971d15402f41e634fc44a6eb91a7fa7f28780
-SHA512 (eureka-127-source.tar.gz) = 738b2647a31491737503b428f30f4d468ce32cdbd0e7c8d8abc2e4e825de037ee28b04339d3fa5cd2c340c106f8295671a812c278047bca1a8c37dd98e08e08a
-Size (eureka-127-source.tar.gz) = 1159208 bytes
-SHA1 (patch-src_m__files.cc) = 5bdfaefa324408632a8e649c8994479e7ec00ae1
-SHA1 (patch-src_main.cc) = 7c107f89e64ec2de5588880c71ba0e24b1aaf354
