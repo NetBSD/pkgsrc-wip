@@ -837,6 +837,7 @@ SUBDIR+=	flnews-devel
 SUBDIR+=	flowblade
 SUBDIR+=	fltk14-devel
 SUBDIR+=	fltk2
+SUBDIR+=	fluid
 SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace
 SUBDIR+=	flvmeta
