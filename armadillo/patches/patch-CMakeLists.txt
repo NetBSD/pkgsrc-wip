@@ -1,0 +1,53 @@
+$Netbsd$
+
+Make the build use LAPACK_LIBS and BLAS_LIBS from the environment.
+Could this be acceptible to upstream?
+
+--- CMakeLists.txt.orig	2020-02-24 22:11:41.093696230 +0100
++++ CMakeLists.txt	2020-02-24 22:14:52.780347663 +0100
+@@ -151,6 +151,16 @@
+ ##
+ 
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake_aux/Modules/")
++if(APPLE)
++  if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
++    message(STATUS "Clang compiler on MacOS X detected. Added '-stdlib=libc++' to compiler flags")
++  endif()
++  
++  set(CMAKE_MACOSX_RPATH 1)
++endif()
++
++if("$ENV{BLAS_LIBS}" STREQUAL "")
+ 
+ if(APPLE)
+   
+@@ -162,13 +172,6 @@
+   set(ARMA_LIBS ${ARMA_LIBS} "-framework Accelerate")  # or "-framework accelerate" ?
+   message(STATUS "MacOS X detected. Added '-framework Accelerate' to compiler flags")
+   
+-  if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+-    message(STATUS "Clang compiler on MacOS X detected. Added '-stdlib=libc++' to compiler flags")
+-  endif()
+-  
+-  set(CMAKE_MACOSX_RPATH 1)
+-  
+ else()
+   
+   set(ARMA_OS unix)
+@@ -284,6 +287,14 @@
+   
+ endif()
+ 
++else()
++
++set(ARMA_USE_BLAS   true)
++set(ARMA_USE_LAPACK true)
++set(ARMA_LIBS ${ARMA_LIBS} $ENV{LAPACK_LIBS} $ENV{BLAS_LIBS})
++message(STATUS "Using BLAS/LAPACK from BLAS_LIBS and LAPACK_LIBS environment variables.")
++
++endif()
+ 
+ find_package(PkgConfig)
+ 

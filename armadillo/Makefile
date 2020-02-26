@@ -21,16 +21,21 @@ PKG_MINOR=	40
 DIST_MINOR=	${PKG_MINOR}0
 
 CMAKE_ARGS+=	-DINSTALL_LIB_DIR=${PREFIX}/lib
+CONFIGURE_ENV+=	LAPACK_LIBS=${LAPACK_LIBS:Q} BLAS_LIBS=${BLAS_LIBS:Q}
 
 SUBST_CLASSES=		minor
 SUBST_STAGE.minor=	post-patch
 SUBST_FILES.minor=	CMakeLists.txt
 SUBST_SED.minor=	-e "s|ARMA_MINOR ${DIST_MINOR}|ARMA_MINOR ${PKG_MINOR}|g"
 
-# Upstream requires both lapack and openblas, so we cannot use
-# mk/blas.buildlink.mk without extensive hacking
-.include "../../wip/openblas/buildlink3.mk"
-.include "../../wip/lapack/buildlink3.mk"
+# wip/superlu has that because I do not know better how to force
+# a specifc blas lib (easily). We need to ensure to avoid mixing BLAS libs.
+# If this setting is dropped, it should be dropped for both.
+BLAS_ACCEPTED=          openblas netlib
+
+.include "../../wip/mk/blas.buildlink3.mk"
+.include "../../wip/superlu/buildlink3.mk"
+.include "../../math/arpack/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
