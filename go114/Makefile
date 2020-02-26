@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2019/12/07 21:34:17 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
-GO114_VERSION=	1.14beta1 # This should be in go/version.mk
+GO114_VERSION=	1.14
 
 DISTNAME=	go${GO114_VERSION}.src
 PKGNAME=	go114-${GO114_VERSION}
@@ -25,16 +25,9 @@ BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 GOROOT_FINAL=		${PREFIX}/go${GOVERSSUFFIX}
 INSTALLATION_DIRS=	bin go${GOVERSSUFFIX}
 
-REPLACE_BASH+=	doc/articles/wiki/test.bash
-REPLACE_BASH+=	doc/codewalk/run
 REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
-REPLACE_BASH+=	misc/benchcmp
 REPLACE_BASH+=	misc/cgo/fortran/test.bash
-REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
-REPLACE_BASH+=	misc/nacl/go_nacl_386_exec
-REPLACE_BASH+=	misc/nacl/go_nacl_amd64p32_exec
-REPLACE_BASH+=	misc/nacl/go_nacl_arm_exec
 REPLACE_BASH+=	misc/wasm/go_js_wasm_exec
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/bootstrap.bash
@@ -46,11 +39,8 @@ REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
 REPLACE_BASH+=	src/iostest.bash
 REPLACE_BASH+=	src/make.bash
-REPLACE_BASH+=	src/naclmake.bash
-REPLACE_BASH+=	src/nacltest.bash
 REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
-REPLACE_BASH+=	src/runtime/mknacl.sh
 REPLACE_BASH+=	src/syscall/mkall.sh
 REPLACE_BASH+=	src/syscall/mkerrors.sh
 REPLACE_BASH+=	src/syscall/mksysnum_plan9.sh
