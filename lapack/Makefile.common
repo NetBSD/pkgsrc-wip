@@ -4,14 +4,15 @@
 # used by wip/lapack/Makefile
 
 # Common Makefile for packages derived from the Netlib LAPACK sources.
-# You set LAPACK_PART (lowercase) and LAPACK_PART_CMAKE_ARGS to choose
-# the library to install.
+# Package Makefile sets LAPACK_COMPONENT and LAPACK_COMPONENT_CMAKE_ARGS to
+# choose the library to install.
+# LAPACK_COMPONENT can be "lapack", "lapacke", or "cblas"
 
-PORTVERSION=	3.9.0
-DISTNAME=	lapack-${PORTVERSION}
-PKGNAME=	${LAPACK_PART}-${PORTVERSION}
+DISTNAME=	lapack-${NETLIB_BLAS_VERSION}
+PKGNAME=	${LAPACK_COMPONENT}-${NETLIB_BLAS_VERSION}
 CATEGORIES=	math
-MASTER_SITES=	-https://github.com/Reference-LAPACK/lapack/archive/v${PORTVERSION}.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Reference-LAPACK/}
+GITHUB_TAG=	v${NETLIB_BLAS_VERSION}
 
 HOMEPAGE=	https://www.netlib.org/lapack/
 LICENSE=	modified-bsd
@@ -23,6 +24,7 @@ DISTINFO_FILE=	${.CURDIR}/../../wip/lapack/distinfo
 USE_LANGUAGES=		c fortran
 USE_CMAKE=		yes
 
+WRKSRC=			${WRKDIR}/${DISTNAME}
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
 
@@ -31,7 +33,9 @@ CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
 		-DBUILD_SHARED_LIBS=ON \
 		-DBUILD_STATIC_LIBS=ON \
-		${LAPACK_PART_CMAKE_ARGS}
+		${LAPACK_COMPONENT_CMAKE_ARGS}
+
+.include "../../wip/lapack/version.mk"
 
 post-extract:
 	${RUN} mkdir -p ${WRKSRC}/build

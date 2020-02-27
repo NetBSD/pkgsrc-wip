@@ -7,8 +7,7 @@
 # until everyone uses mk/blas.buildlink3.mk (and people removed
 # math/blas from their pkgsrc-related scripts).
 
-PKGNAME=	blas-3.9.0
-PKGREVISION=	1
+PKGNAME=	blas-${NETLIB_BLAS_VERSION}
 CATEGORIES=	math
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
@@ -20,6 +19,7 @@ USE_LIBTOOL=	yes
 
 META_PACKAGE=	yes
 
+.include "../../wip/lapack/version.mk"
 .include "../../wip/lapack/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
