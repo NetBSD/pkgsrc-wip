@@ -2404,6 +2404,7 @@ SUBDIR+=	nq
 SUBDIR+=	nqp
 SUBDIR+=	nrg4iso
 SUBDIR+=	nsc2ke
+SUBDIR+=	nsnake
 SUBDIR+=	nsp
 SUBDIR+=	nspluginwrapper
 SUBDIR+=	nspr-hg
