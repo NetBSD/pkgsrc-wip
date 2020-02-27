@@ -4,20 +4,20 @@ DISTNAME=	sabnzbd-${DISTVERSION}
 DISTVERSION=	2.3.9
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sabnzbd/}
-GITHUB_PROJECT= sabnzbd
+GITHUB_PROJECT=	sabnzbd
 GITHUB_TAG=	${DISTVERSION}
 
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	https://sabnzbd.org
+HOMEPAGE=	https://sabnzbd.org/
 COMMENT=	Web-interface based binary newsgrabber in python, with nzb support
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd AND mit
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-sabyenc-[0-9]*:../../wip/py-sabyenc
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj #??
-# DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3 #??
 # DEPENDS+=	${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml #??
 
 # in options.mk
@@ -26,10 +26,10 @@ DEPENDS+=	${PYPKGPREFIX}-sabyenc-[0-9]*:../../wip/py-sabyenc
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	p7zip-[0-9]*:../../archivers/p7zip
 
-NO_BUILD=	yes
-#PYDISTUTILSPKG=YES
-USE_TOOLS=	pax git
-USE_LANGUAGES+=	c
+NO_BUILD=		yes
+#PYDISTUTILSPKG=	YES
+USE_TOOLS=		pax
+USE_LANGUAGES+=		c
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-cheetah, py-xml
 
@@ -50,7 +50,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fix absolute paths.
 SUBST_FILES.fix-paths=		SABnzbd.py
-SUBST_SED.fix-paths=		-e 's,%%PREFIX%%,${PREFIX},g'
+SUBST_VARS.fix-paths=		PREFIX
 
 do-install:
 	${MKDIR} ${DESTDIR}/${PREFIX}/bin

@@ -10,7 +10,7 @@ Fix path.
  
 +# Force python to load the patched version of cherrypy included with the port,
 +# instead of any version that may be installed otherwise.
-+sys.path.insert(0,'%%PREFIX%%/share/sabnzbd')
++sys.path.insert(0,'@PREFIX@/share/sabnzbd')
 +
  try:
      import Cheetah
@@ -21,7 +21,7 @@ Fix path.
      sabnzbd.MY_NAME = os.path.basename(sabnzbd.MY_FULLNAME)
 -    sabnzbd.DIR_PROG = os.path.dirname(sabnzbd.MY_FULLNAME)
 +    # sabnzbd.DIR_PROG = os.path.dirname(sabnzbd.MY_FULLNAME)
-+    sabnzbd.DIR_PROG = "%%PREFIX%%/share/sabnzbd"
++    sabnzbd.DIR_PROG = "@PREFIX@/share/sabnzbd"
      sabnzbd.DIR_INTERFACES = real_path(sabnzbd.DIR_PROG, DEF_INTERFACES)
      sabnzbd.DIR_LANGUAGE = real_path(sabnzbd.DIR_PROG, DEF_LANGUAGE)
      org_dir = os.getcwd()
