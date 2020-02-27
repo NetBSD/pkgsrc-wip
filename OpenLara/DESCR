@@ -1,0 +1,13 @@
+Classic Tomb Raider open-source engine inspired by OpenTomb project.
+
+To try it out, download
+
+ https://www.classicdosgames.com/files/games/eidos/tombdemo.zip
+
+and then
+
+ $ OpenLara DATA/LEVEL2.PHD
+
+or try the webgl version
+
+ http://xproger.info/projects/OpenLara/

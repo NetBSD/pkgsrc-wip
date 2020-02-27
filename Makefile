@@ -27,6 +27,7 @@ SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenGLUT
 SUBDIR+=	OpenIPMI
 SUBDIR+=	OpenJK-git
+SUBDIR+=	OpenLara
 SUBDIR+=	OpenTESArena
 SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
