@@ -1193,7 +1193,6 @@ SUBDIR+=	go-rateio
 SUBDIR+=	go-rest
 SUBDIR+=	go-trie
 SUBDIR+=	go-upspin
-SUBDIR+=	go114
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict
