@@ -1,18 +1,16 @@
 # $NetBSD: Makefile,v 1.28 2019/08/11 13:17:49 wiz Exp $
 
-PORTVERSION=		5.2.1
-DISTNAME=		superlu-${PORTVERSION}
-PKGNAME=		superlu-${PORTVERSION}
-PKGREVISION=		8
+DISTNAME=		superlu-5.2.1
 CATEGORIES=		math
-MASTER_SITES=		-https://github.com/xiaoyeli/superlu/archive/v${PORTVERSION}.tar.gz
+MASTER_SITES=		${MASTER_SITE_GITHUB:=xiaoyeli/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		thomas.orgis@uni-hamburg.de
 HOMEPAGE=		https://portal.nersc.gov/project/sparse/superlu/
-COMMENT=		ANSI C routine library for the solution of sparse linear systems
+COMMENT=		Library for solving large, sparse, nonsymmetric systems of linear equations
 
-USE_LANGUAGES=		c fortran
 USE_CMAKE=		yes
+USE_LANGUAGES=		c fortran
 
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
@@ -26,9 +24,6 @@ CMAKE_ARGS=		-Denable_blaslib=off \
 # do not know how to insert a specific lib. But single-threaded
 # openblas does make sense, I suppose, for sparse matrices.
 BLAS_ACCEPTED=		openblas netlib
-
-# /usr/bin/ar: ../libsuperlu.a: Error reading dlamch.o: File truncated
-#MAKE_JOBS_SAFE=		no
 
 TEST_TARGET=		test
 
