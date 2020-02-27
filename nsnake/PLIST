@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/nsnake
-man/nsnake.6
+man/man6/nsnake.6
 share/applications/nsnake.desktop
 share/games/nsnake/levels/3-hearts.nsnake
 share/games/nsnake/levels/NSNAKE.nsnake

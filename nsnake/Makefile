@@ -14,7 +14,7 @@ USE_TOOLS+=	gmake
 
 FAKE_NCURSES=	yes
 
-MAKE_FLAGS+=	DESTDIR=${DESTDIR} MANDIR=${PREFIX}/${PKGMANDIR} PREFIX=${PREFIX}
+MAKE_FLAGS+=	DESTDIR=${DESTDIR} MANDIR=${PREFIX}/${PKGMANDIR}/man6 PREFIX=${PREFIX}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
