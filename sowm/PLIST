@@ -1,3 +1,2 @@
 @comment $NetBSD$
 bin/sowm
-@pkgdir doc
