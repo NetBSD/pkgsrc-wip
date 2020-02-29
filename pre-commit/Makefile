@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-2.0.1
+DISTNAME=	pre_commit-2.1.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv>=15.2:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON=	pre-commit.py
+REPLACE_PYTHON=	pre-commit.py pre_commit/resources/hook-tmpl
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

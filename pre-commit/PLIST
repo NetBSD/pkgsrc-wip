@@ -112,6 +112,8 @@ ${PYSITELIB}/pre_commit/languages/helpers.pyo
 ${PYSITELIB}/pre_commit/languages/helpers.pyc
 ${PYSITELIB}/pre_commit/languages/node.pyo
 ${PYSITELIB}/pre_commit/languages/node.pyc
+${PYSITELIB}/pre_commit/languages/perl.pyo
+${PYSITELIB}/pre_commit/languages/perl.pyc
 ${PYSITELIB}/pre_commit/languages/pygrep.pyo
 ${PYSITELIB}/pre_commit/languages/pygrep.pyc
 ${PYSITELIB}/pre_commit/languages/python.pyo
@@ -136,6 +138,7 @@ ${PYSITELIB}/pre_commit/languages/fail.py
 ${PYSITELIB}/pre_commit/languages/golang.py
 ${PYSITELIB}/pre_commit/languages/helpers.py
 ${PYSITELIB}/pre_commit/languages/node.py
+${PYSITELIB}/pre_commit/languages/perl.py
 ${PYSITELIB}/pre_commit/languages/pygrep.py
 ${PYSITELIB}/pre_commit/languages/python.py
 ${PYSITELIB}/pre_commit/languages/python_venv.py
@@ -170,6 +173,7 @@ ${PYSITELIB}/pre_commit/resources/empty_template_setup.pyo
 ${PYSITELIB}/pre_commit/resources/empty_template_setup.pyc
 ${PYSITELIB}/pre_commit/resources/empty_template_.npmignore
 ${PYSITELIB}/pre_commit/resources/empty_template_Cargo.toml
+${PYSITELIB}/pre_commit/resources/empty_template_Makefile.PL
 ${PYSITELIB}/pre_commit/resources/empty_template_environment.yml
 ${PYSITELIB}/pre_commit/resources/empty_template_main.go
 ${PYSITELIB}/pre_commit/resources/empty_template_main.rs
