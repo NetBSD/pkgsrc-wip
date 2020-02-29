@@ -4,5 +4,5 @@ SHA1 (findcrcs-0.3.tar.gz) = 5144f3d17c318706b3e8113242bccfc59b62bfb7
 RMD160 (findcrcs-0.3.tar.gz) = 05e6c25a15f1cfa78bad06a76e8862ffaf25e897
 SHA512 (findcrcs-0.3.tar.gz) = b55a59fc3b2d11f10c87cb05d428409043bdcaaefc42a10c456f5fffc3ede18cc02f09397399cc60a6295666872776eb10662ec089d315f512129faac26b7d4f
 Size (findcrcs-0.3.tar.gz) = 3981565 bytes
-SHA1 (patch-Makefile) = 9d7784dcc6e44fbb70625b5b658604f7a41e87ed
+SHA1 (patch-Makefile) = 39cae0bee0e4507fe7afa25371b35c44bd3e3568
 SHA1 (patch-findcrcs.cc) = 80cc824ca3e3470050f488cdf35e136886922825
