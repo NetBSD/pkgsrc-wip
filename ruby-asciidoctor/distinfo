@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (asciidoctor-1.5.7.1.gem) = c544cfc99a591663d3ce0bcec5893a92ec43fdaf
-RMD160 (asciidoctor-1.5.7.1.gem) = d4957b579bd0d69c5cc9737fd298d7169b037663
-SHA512 (asciidoctor-1.5.7.1.gem) = 104a320cd2efdb1d01bd3a0a4a144d9946a668a7d7e57d61cba3e424abd73a3fa0c4840ab7719e556d077a943301ef67b5464f1b69bdf6a79eade293d54e9bdc
-Size (asciidoctor-1.5.7.1.gem) = 406528 bytes
+SHA1 (asciidoctor-2.0.10.gem) = b3640ffc8decab7111e2ca87ecdb4a3b5c628449
+RMD160 (asciidoctor-2.0.10.gem) = c6b19601be97fe66f083c0444c26e8e0c7604d08
+SHA512 (asciidoctor-2.0.10.gem) = 41db1947da60be27079eaef99c76ae7a20797f0291313ac82582466774a569130e995c674f7ef884a05d3d3783d70df3d5ef83b42ded1c722dd9ab7b1a3357ab
+Size (asciidoctor-2.0.10.gem) = 268288 bytes
