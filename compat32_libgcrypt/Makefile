@@ -17,6 +17,10 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
+CONFIGURE_ARGS+=	--with-gpg-error-prefix=${PREFIX}/emul/netbsd32
+
 TEST_TARGET=		check
 
 TEXINFO_REQD=		4.0

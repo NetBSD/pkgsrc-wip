@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-harfbuzz=no
 CONFIGURE_ENV+=		ac_cv_path_GREP=${GREP:Q} ac_cv_path_EGREP=${EGREP:Q}
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 # Remove this when all dependent packages have switched to pkg-config
 CONFIGURE_ARGS+=	--enable-freetype-config
 

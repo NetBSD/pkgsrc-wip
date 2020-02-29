@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--disable-unversioned-links
 # until pkgsrc is fixed to use libpng-config or the pc file everywhere
 INSTALL_TARGET=		install install-header-links
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 PKGCONFIG_OVERRIDE=	scripts/libpng.pc.in libpng.pc.in
 TEST_TARGET=		check
 

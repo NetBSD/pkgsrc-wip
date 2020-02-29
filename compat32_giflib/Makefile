@@ -10,4 +10,6 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 BUILD_DIRS=		lib
 INSTALL_DIRS=		lib
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 .include "../../mk/bsd.pkg.mk"

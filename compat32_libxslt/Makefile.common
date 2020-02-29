@@ -14,8 +14,8 @@ HOMEPAGE=	http://xmlsoft.org/XSLT/
 COMMENT=	XSLT parser library from the GNOME project
 LICENSE=	mit # with advertisement clause
 
-PATCHDIR=	${.CURDIR}/../../textproc/libxslt/patches
-DISTINFO_FILE=	${.CURDIR}/../../textproc/libxslt/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/compat32_libxslt/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/compat32_libxslt/distinfo
 
 post-extract:
 	cp ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms

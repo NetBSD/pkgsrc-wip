@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
 TEST_TARGET=		check

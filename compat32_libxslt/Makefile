@@ -17,6 +17,8 @@ PKGCONFIG_OVERRIDE=	libxslt.pc.in
 PKGCONFIG_OVERRIDE+=	libexslt.pc.in
 TEST_TARGET=		check
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 
 .include "../../mk/bsd.prefs.mk"

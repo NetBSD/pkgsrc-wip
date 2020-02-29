@@ -12,6 +12,8 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--enable-libuuid
 CONFIGURE_ARGS+=	--enable-uuidgen
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 PKGCONFIG_OVERRIDE+=	libuuid/uuid.pc.in
 
 .include "../../mk/bsd.pkg.mk"

@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/emul/netbsd32/lib
 CONFIGURE_ENV+=		HASDOCBOOK=no
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
 _PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/emul/netbsd32/lib/pkgconfig:${BUILDLINK_DIR}/emul/netbsd32/lib/freetype2/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
 

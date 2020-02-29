@@ -17,6 +17,8 @@ CATEGORIES=		emulators
 EMUL_PLATFORMS=		netbsd-i386
 ONLY_FOR_PLATFORM=	NetBSD-[7-9]*-* NetBSD-[1-9][0-9]*-*
 
+CHECK_RELRO_SUPPORTED=	no
+
 #.include "../../emulators/compat_netbsd/Makefile.common"
 
 DISTNAME=		compat80-x11-${EMUL_ARCH}-${COMPAT_VERSION}

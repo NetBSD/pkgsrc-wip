@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}
 CONFIGURE_ARGS+=	--without-python
 PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 USE_LANGUAGES+=		c99
 
 .include "options.mk"

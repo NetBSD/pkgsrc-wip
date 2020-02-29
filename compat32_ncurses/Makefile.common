@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 SUBST_CLASSES+=		rpath
 SUBST_FILES.rpath+=	misc/ncurses-config
 SUBST_STAGE.rpath=	post-configure

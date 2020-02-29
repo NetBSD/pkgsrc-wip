@@ -11,5 +11,5 @@ MASTER_SITES+=	http://xmlsoft.org/sources/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
 
-DISTINFO_FILE=	${.CURDIR}/../../textproc/libxml2/distinfo
-PATCHDIR=	${.CURDIR}/../../textproc/libxml2/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/compat32_libxml2/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/compat32_libxml2/patches

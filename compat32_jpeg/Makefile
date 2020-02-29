@@ -20,6 +20,8 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 CONFIGURE_ARGS+=	--disable-ld-version-script
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 INSTALLATION_DIRS=	bin include share/doc/jpeg
 
 PKGCONFIG_OVERRIDE=	libjpeg.pc.in

@@ -23,6 +23,8 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/emul/netbsd32/
 INFO_FILES=		yes
 TEST_TARGET=		check
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		makefile

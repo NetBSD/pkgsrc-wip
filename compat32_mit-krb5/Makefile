@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 BUILD_TARGET=	generate-files-mac all
 
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
+
 .include "../../mk/bsd.prefs.mk"
 
 CONFLICTS+=	heimdal-[0-9]*

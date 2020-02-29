@@ -10,8 +10,7 @@ BUILDLINK_ABI_DEPENDS.compat32_libgcrypt+=	compat32_libgcrypt>=1.6.0
 BUILDLINK_PKGSRCDIR.compat32_libgcrypt?=	../../wip/compat32_libgcrypt
 BUILDLINK_LIBDIRS.compat32_libgcrypt?=		emul/netbsd32/lib
 
-
-.include "../../security/libgpg-error/buildlink3.mk"
+.include "../../wip/compat32_libgpg-error/buildlink3.mk"
 .endif # COMPAT32_LIBGCRYPT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-compat32_libgcrypt
