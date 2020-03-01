@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	asciidoctor-pdf-1.5.2
+DISTNAME=	asciidoctor-pdf-1.5.3
 CATEGORIES=	print
 
 MAINTAINER=	cfkoch@edgebsd.org
