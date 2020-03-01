@@ -15,6 +15,12 @@ USE_LANGUAGES=		c++
 TEST_TARGET=		test
 INSTALLATION_DIRS=	bin share/doc/findcrcs
 
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc*)
+CXXFLAGS+=	-mcrc32
+.endif
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/findcrcs ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/findcrcs
