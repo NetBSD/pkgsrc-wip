@@ -15,6 +15,15 @@ LICENSE=		2-clause-bsd
 
 GO_MODULE=		yes
 
+DIST_SUBDIR=		${PKGNAME_NOREV}
+DISTFILES?=		${DEFAULT_DISTFILES}
+
+GO_MODULE_FILES+=       github.com/mattn/go-runewidth/@v/v0.0.4.mod
+GO_MODULE_FILES+=       github.com/mattn/go-runewidth/@v/v0.0.4.zip
+GO_MODULE_FILES+=       github.com/nsf/termbox-go/@v/v0.0.0-20190325093121-288510b9734e.zip
+GO_MODULE_FILES+=       github.com/nsf/termbox-go/@v/v0.0.0-20190325093121-288510b9734e.mod
+
+
 .include "../../devel/go-termbox/buildlink3.mk"
 .include "../../wip/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"

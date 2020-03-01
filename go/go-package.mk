@@ -75,8 +75,7 @@ PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
 .if !empty(GO_MODULE:M[Yy][Ee][Ss])
-MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath
-# GOPROXY=file://${WRKDIR}/.gopath/pkg/mod/cache/download
+MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.goproxy
 .else
 MAKE_ENV+=	GO111MODULE=off GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg 
 .endif
@@ -110,11 +109,25 @@ do-install:
 .endif
 
 .if !empty(GO_MODULE:M[Yy][Ee][Ss])
+# FIXME This needs to depend on extract
 .PHONY: show-go-modules
 show-go-modules:
 	# cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} env
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
-	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
+	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.mod" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
+	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.zip" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
+
+.for i in ${GO_MODULE_FILES}
+DISTFILES+= ${i:!basename $i!}
+SITES.${i:!basename $i!}= https://proxy.golang.org/${i:!dirname $i!}/
+.endfor
+
+post-extract:
+.for i in ${GO_MODULE_FILES}
+	${MKDIR} ${WRKDIR}/.goproxy/${i:!dirname $i!}
+	cp ${DISTDIR}/${DIST_SUBDIR}/${i:!basename $i!} ${WRKDIR}/.goproxy/$i
+.endfor
+
 .endif
 
 _VARGROUPS+=		go
