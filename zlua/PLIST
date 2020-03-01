@@ -5,4 +5,5 @@ share/doc/zlua/README.md
 share/zlua/init.fish
 share/zlua/ranger_zlua.py
 share/zlua/z.cmd
+share/zlua/z.lua
 share/zlua/z.lua.plugin.zsh

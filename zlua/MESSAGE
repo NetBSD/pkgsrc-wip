@@ -18,9 +18,14 @@ above with:
 
     z.lua --init bash
 	    -or-
-    z.lua --init fish
-	    -or-
     z.lua --init zsh
+
+To use z.lua with the fish shell, put the following in
+~/.config/fish/init.fish:
+
+    if test -e ${PREFIX}/share/zlua/init.fish
+        source ${PREFIX}/share/zlua/init.fish
+    end
 
 See ${PREFIX}/share/doc/zlua/README.md for more details.
 
