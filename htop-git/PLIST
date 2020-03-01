@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/htop
+man/man1/htop.1
+share/applications/htop.desktop
+share/pixmaps/htop.png
