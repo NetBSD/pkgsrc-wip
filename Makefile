@@ -1551,6 +1551,7 @@ SUBDIR+=	hs-zip-archive
 SUBDIR+=	ht2html
 SUBDIR+=	html-xml-utils
 SUBDIR+=	html2latex
+SUBDIR+=	htop-git
 SUBDIR+=	htslib
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
