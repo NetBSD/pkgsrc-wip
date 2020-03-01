@@ -4346,6 +4346,7 @@ SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-actionpack52-xml_parser
 SUBDIR+=	ruby-asciidoctor
+SUBDIR+=	ruby-asciidoctor-pdf
 SUBDIR+=	ruby-blockenspiel
 SUBDIR+=	ruby-cabin
 SUBDIR+=	ruby-charlock_holmes
