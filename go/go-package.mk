@@ -91,18 +91,22 @@ post-extract:
 
 .if !target(do-build)
 do-build:
-	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-test)
 do-test:
-	${RUN} ${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_ENV} ${GO} test -v ${GO_BUILD_PATTERN}
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_ENV} ${GO} test -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-install)
 do-install:
+.if empty(GO_MODULE:M[Yy][Ee][Ss])
 	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
 	${RUN} cd ${WRKDIR}; [ ! -d pkg ] || ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
+.else
+	${RUN} cd ${WRKDIR}/.gopath && [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
+.endif
 .endif
 
 .if !empty(GO_MODULE:M[Yy][Ee][Ss])
