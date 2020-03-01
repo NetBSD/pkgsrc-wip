@@ -4379,6 +4379,7 @@ SUBDIR+=	ruby-net-http-pipeline
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-prawn-icon
 SUBDIR+=	ruby-prawn-svg
+SUBDIR+=	ruby-prawn-table
 SUBDIR+=	ruby-pusher-client
 SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-rack-protection1
