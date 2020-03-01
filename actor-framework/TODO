@@ -1,0 +1,2 @@
+- Seems to build object files with debug symbols by default,
+  which is pointless since they get stripped at install time.

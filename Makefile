@@ -79,6 +79,7 @@ SUBDIR+=	accountsservice
 SUBDIR+=	acme-client
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
+SUBDIR+=	actor-framework
 SUBDIR+=	adamem
 SUBDIR+=	adept
 SUBDIR+=	adjustmtu
