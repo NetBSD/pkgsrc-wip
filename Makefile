@@ -4401,6 +4401,7 @@ SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
 SUBDIR+=	ruby-travis
+SUBDIR+=	ruby-treetop16
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-twitter-text1
 SUBDIR+=	ruby-typhoeus
