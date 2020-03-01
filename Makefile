@@ -4380,6 +4380,7 @@ SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-prawn-icon
 SUBDIR+=	ruby-prawn-svg
 SUBDIR+=	ruby-prawn-table
+SUBDIR+=	ruby-prawn-templates
 SUBDIR+=	ruby-pusher-client
 SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-rack-protection1
