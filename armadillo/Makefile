@@ -35,7 +35,7 @@ BLAS_ACCEPTED=          openblas netlib
 
 .include "../../wip/mk/blas.buildlink3.mk"
 .include "../../wip/superlu/buildlink3.mk"
-.include "../../math/arpack/buildlink3.mk"
+.include "../../math/arpack-ng/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
