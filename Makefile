@@ -3029,6 +3029,7 @@ SUBDIR+=	ppc-morphos-sdk
 SUBDIR+=	ppp
 SUBDIR+=	ppr
 SUBDIR+=	praat
+SUBDIR+=	prboom-plus
 SUBDIR+=	pre-commit
 SUBDIR+=	preftools
 SUBDIR+=	preload
