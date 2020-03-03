@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.phar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://getcomposer.org/
 COMMENT=	Dependency Manager for PHP
-LICENSE=	modified-bsd
+LICENSE=	mit
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
