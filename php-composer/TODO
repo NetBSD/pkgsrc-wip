@@ -1,2 +1,0 @@
-- check the necessity of php-iconv
-- or, options.mk to add DEPENDS+= php-iconv
