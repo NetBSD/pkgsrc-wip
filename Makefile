@@ -5000,6 +5000,7 @@ SUBDIR+=	wine64-dev
 SUBDIR+=	wings
 SUBDIR+=	winwrangler
 SUBDIR+=	wireless-tools
+SUBDIR+=	wireshark2
 SUBDIR+=	wise2
 SUBDIR+=	wise3
 SUBDIR+=	witchblast
