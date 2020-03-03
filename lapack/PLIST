@@ -3,13 +3,8 @@ lib/cmake/lapack-${PKGVERSION}/lapack-config-version.cmake
 lib/cmake/lapack-${PKGVERSION}/lapack-config.cmake
 lib/cmake/lapack-${PKGVERSION}/lapack-targets-release.cmake
 lib/cmake/lapack-${PKGVERSION}/lapack-targets.cmake
-lib/libblas.a
-lib/libblas.so
-lib/libblas.so.3
-lib/libblas.so.${PKGVERSION}
 lib/liblapack.a
 lib/liblapack.so
 lib/liblapack.so.3
 lib/liblapack.so.${PKGVERSION}
-lib/pkgconfig/blas.pc
 lib/pkgconfig/lapack.pc

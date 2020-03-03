@@ -2,6 +2,12 @@
 
 BUILDLINK_TREE+=	blas
 
-.include "../../wip/lapack/buildlink3.mk"
+.if !defined(BLAS_BUILDLINK3_MK)
+BLAS_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.blas+=	blas>=3.8.0
+BUILDLINK_ABI_DEPENDS.blas+=	blas>=3.8.0
+BUILDLINK_PKGSRCDIR.blas?=	../../wip/blas
+.endif # BLAS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-blas
