@@ -74,7 +74,6 @@ SUBDIR+=	TextEdit
 SUBDIR+=	VASSAL
 SUBDIR+=	WEPCrack
 SUBDIR+=	a2ps-sharatype
-SUBDIR+=	abduco
 SUBDIR+=	accountsservice
 SUBDIR+=	acme-client
 SUBDIR+=	acpiclient
