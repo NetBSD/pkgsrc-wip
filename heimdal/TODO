@@ -2,3 +2,4 @@ In NetBSD-HEAD, hcrypto components are installed and the PLIST check fails.
 Are glob, vis and afskauth redundant now?
 Handle su which comes with Heimdal.
 Port remaining patches if applicable.
+Record build-time dependency on ../../converters/p5-JSON -- how?

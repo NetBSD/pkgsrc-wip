@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.129 2018/12/09 18:52:07 adam Exp $
 
-DISTNAME=	heimdal-7.5.0
+DISTNAME=	heimdal-7.7.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heimdal/}
 GITHUB_PROJECT=	heimdal
 GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.h5l.org/
+HOMEPAGE=	https://heimdal.software/
 COMMENT=	Kerberos 5 implementation
 LICENSE=	modified-bsd
 
@@ -20,7 +20,7 @@ CONFLICTS+=	kth-krb4-[0-9]*
 MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bison flex:run
+USE_TOOLS+=		bison flex:run perl
 PKGCONFIG_OVERRIDE+=	tools/heimdal-gssapi.pc.in
 MAKE_ENV+=		INSTALL_CATPAGES=no
 
