@@ -12,6 +12,9 @@ bits if the target data type is unsigned.
 If memory allocation returns NULL, do not continue (dereference the
 NULL pointer and crash).
 
+Reported upstream as bug #256:
+https://sourceforge.net/p/prboom-plus/bugs/256/
+
 --- src/p_setup.c.orig	2016-01-10 18:01:30.000000000 +0000
 +++ src/p_setup.c
 @@ -1024,6 +1024,7 @@ static void CheckZNodesOverflow(int *siz
