@@ -555,6 +555,7 @@ SUBDIR+=	dates
 SUBDIR+=	davical-git
 SUBDIR+=	dazz_db
 SUBDIR+=	dbf
+SUBDIR+=	dbip-country-lite
 SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer
 SUBDIR+=	dcdis
