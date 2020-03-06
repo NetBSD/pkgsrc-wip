@@ -4743,6 +4743,7 @@ SUBDIR+=	tengwar-ttf
 SUBDIR+=	tenmado
 SUBDIR+=	termbox
 SUBDIR+=	terminology
+SUBDIR+=	termtosvg
 SUBDIR+=	termit
 SUBDIR+=	tesseract-game
 SUBDIR+=	tesseract-game-svn
