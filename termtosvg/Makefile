@@ -3,7 +3,6 @@
 DISTNAME=	termtosvg-1.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nbedos/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://nbedos.github.io/termtosvg/
