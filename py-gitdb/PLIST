@@ -77,9 +77,6 @@ ${PYSITELIB}/gitdb/util.pyo
 ${PYSITELIB}/gitdb/utils/__init__.py
 ${PYSITELIB}/gitdb/utils/__init__.pyc
 ${PYSITELIB}/gitdb/utils/__init__.pyo
-${PYSITELIB}/gitdb/utils/compat.py
-${PYSITELIB}/gitdb/utils/compat.pyc
-${PYSITELIB}/gitdb/utils/compat.pyo
 ${PYSITELIB}/gitdb/utils/encoding.py
 ${PYSITELIB}/gitdb/utils/encoding.pyc
 ${PYSITELIB}/gitdb/utils/encoding.pyo
