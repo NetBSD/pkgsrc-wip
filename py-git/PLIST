@@ -187,9 +187,6 @@ ${PYSITELIB}/git/test/fixtures/uncommon_branch_prefix_stderr
 ${PYSITELIB}/git/test/lib/__init__.py
 ${PYSITELIB}/git/test/lib/__init__.pyc
 ${PYSITELIB}/git/test/lib/__init__.pyo
-${PYSITELIB}/git/test/lib/asserts.py
-${PYSITELIB}/git/test/lib/asserts.pyc
-${PYSITELIB}/git/test/lib/asserts.pyo
 ${PYSITELIB}/git/test/lib/helper.py
 ${PYSITELIB}/git/test/lib/helper.pyc
 ${PYSITELIB}/git/test/lib/helper.pyo
