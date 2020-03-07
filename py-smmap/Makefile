@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.7 2015/07/04 02:41:41 jihbed Exp $
 
-DISTNAME=	smmap2-2.0.5
+DISTNAME=	smmap-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap2/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/Byron/smmap
