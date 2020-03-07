@@ -51,16 +51,3 @@ HEIMDAL_TRANSFORM=	s/^ftp/k&/
 
 PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX:Q}
 CONFIGURE_ARGS+=	--program-transform-name=${HEIMDAL_TRANSFORM:Q}
-#
-# Fix some places in the Heimdal sources that don't point to the correct
-# Kerberized binaries when exec'ing programs.
-#
-SUBST_CLASSES+=		heimdal
-SUBST_STAGE.heimdal=	pre-configure
-SUBST_FILES.heimdal=	appl/rcp/rcp.c appl/rcp/rcp_locl.h
-SUBST_FILES.heimdal+=	appl/rsh/rsh_locl.h
-SUBST_FILES.heimdal+=	appl/telnet/telnetd/telnetd.h
-SUBST_SED.heimdal=	-e "/RSH_PROGRAM/s,rsh,${KRB5_PREFIX}rsh,g"
-SUBST_SED.heimdal+=	-e "/PATH_RSH/s,\"/usr/bin/rsh\",BINDIR \"${KRB5_PREFIX}rsh\",g"
-SUBST_SED.heimdal+=	-e "/PATH_RSH/s,/rsh,/${KRB5_PREFIX}rsh,g"
-SUBST_SED.heimdal+=	-e "/PATH_LOGIN/s,/login,/${KRB5_PREFIX}login,g"

@@ -11,6 +11,8 @@ HOMEPAGE=	https://heimdal.software/
 COMMENT=	Kerberos 5 implementation
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+
 CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	mit-krb5-[0-9]*
 CONFLICTS+=	openafs-[0-9]*
@@ -110,7 +112,7 @@ pre-build:
 CHECK_BUILTIN.openssl:=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl:=no
-.if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
+.if ${MACHINE_PLATFORM:MNetBSD-*} != "" || \
     (${OPSYS} == "SunOS" && ${USE_BUILTIN.openssl} == yes &&	\
 		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
 PLIST.hcrypto=		yes
