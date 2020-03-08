@@ -6,17 +6,23 @@ suggestions or active support.
 
 Next steps:
 
-1) Make it build the most basic way
+1) Make it build the most basic way [DONE]
 
-2) Evaluation of the patches of the existing Cyrus-imap-pkgs and
+2) Update PLIST (take care of ldap / http options)
+
+3) Evaluation of the patches of the existing Cyrus-imap-pkgs and
    their applicability for cyrus-imap 3
 
-3) Possibly create further patches for cyrus-imap 3 (especially with
+4) Possibly create further patches for cyrus-imap 3 (especially with
    regard to the newly added functions CalDAV / CardDAV), if necessary
 
-4) Review and adjustment of scripts / provided files (configuration
+5) Review and adjustment of scripts / provided files (configuration
    examples, man pages)
 
-5) Fine-tuning of the build
+6) Fine-tuning of the build
 
 For questions, tips or offers of help you can contact me at mp@petermann-it.de
+
+Bugs:
+
+- Kerberos support, PostgreSQL and MySQL are currently not tested

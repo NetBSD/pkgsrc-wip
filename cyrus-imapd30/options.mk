@@ -3,12 +3,12 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
 PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap pcre snmp
-PKG_SUPPORTED_OPTIONS+=	bdb mysql pgsql sqlite
-PKG_SUGGESTED_OPTIONS=	bdb pcre
+PKG_SUPPORTED_OPTIONS+=	mysql pgsql sqlite http
+PKG_SUGGESTED_OPTIONS=	pcre http
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	ldap
+PLIST_VARS+=	ldap http
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  if empty(PKG_OPTIONS:Mgssapi)
@@ -79,16 +79,6 @@ USE_TOOLS+=		perl:run
 CONFIGURE_ARGS+=	--without-snmp
 .endif
 
-.if !empty(PKG_OPTIONS:Mbdb)
-BDB_ACCEPTED=		db3 db4 db5
-.  include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-bdb=${BDB_TYPE}
-CONFIGURE_ARGS+=	--with-bdb-incdir=${BDBBASE}/include/${BDB_TYPE}
-CONFIGURE_ARGS+=	--with-bdb-libdir=${BDBBASE}/lib
-.else
-CONFIGURE_ARGS+=	--without-bdb
-.endif
-
 .if !empty(PKG_OPTIONS:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
@@ -115,4 +105,15 @@ CONFIGURE_ARGS+=	--without-sqlite
 CONFIGURE_ARGS+=	--enable-pcre
 .else
 CONFIGURE_ARGS+=	--disable-pcre
+.endif
+
+.if !empty(PKG_OPTIONS:Mhttp)
+.  include "../../databases/sqlite3/buildlink3.mk"
+.  include "../../textproc/libxml2/buildlink3.mk"
+.  include "../../time/libical/buildlink3.mk"
+CONFIGURE_ARGS+=        --enable-http
+CONFIGURE_ARGS+=        --with-sqlite=${BUILDLINK_PREFIX.sqlite3}
+PLIST.http=		yes
+.else
+CONFIGURE_ARGS+=        --disable-http
 .endif

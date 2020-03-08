@@ -14,7 +14,8 @@ COMMENT=	Cyrus IMAP server
 
 MAKE_JOBS_SAFE=	no
 
-USE_TOOLS+=		perl:run makedepend
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		perl:run makedepend yacc pkg-config sed awk gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
@@ -37,8 +38,6 @@ FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP}
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
-CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
-CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/cyrus-master.pid
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
@@ -77,7 +76,7 @@ PERL5_PACKLIST= \
 
 pre-build:
 	${RUN}${_ULIMIT_CMD} \
-	cd ${WRKSRC} && ${BUILD_MAKE_CMD} depend
+#	cd ${WRKSRC} && ${BUILD_MAKE_CMD} depend
 
 .include "../../lang/perl5/module.mk"
 BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.17
@@ -139,4 +138,6 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+.include "../../textproc/jansson/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
