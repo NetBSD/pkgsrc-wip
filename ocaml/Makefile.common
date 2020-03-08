@@ -1,8 +1,8 @@
 # $NetBSD: Makefile.common,v 1.55 2018/11/12 16:09:34 jaapb Exp $
 
 # used by x11/labltk/Makefile
-DISTNAME=	ocaml-4.10.0+beta2
-PKGNAME=	ocaml-4.10.0beta2
+DISTNAME=	ocaml-4.10.0
+#PKGNAME=	ocaml-4.10.0
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.10/
 #EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	-with-pthread
 #CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
 #CONFIGURE_ARGS+=	-mandir ${PREFIX}/lib/ocaml/${PKGMANDIR}
-CONFIGURE_ARGS+=	--without-x
+#CONFIGURE_ARGS+=	--without-x
 #CPPFLAGS+=		-DDB_DBM_HSEARCH
 
 #DISTINFO_FILE=	${.CURDIR}/../../lang/ocaml/distinfo
