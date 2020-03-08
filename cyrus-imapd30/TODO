@@ -1,0 +1,22 @@
+Warning: this pkg is currently under construction. It was created as a
+copy of mail/cyrus-imap24. It cannot currently be expected that it can
+be built, let alone that it will work as expected. I plan to keep the
+pkg up to date here so that the progress is transparent. I am open to
+suggestions or active support.
+
+Next steps:
+
+1) Make it build the most basic way
+
+2) Evaluation of the patches of the existing Cyrus-imap-pkgs and
+   their applicability for cyrus-imap 3
+
+3) Possibly create further patches for cyrus-imap 3 (especially with
+   regard to the newly added functions CalDAV / CardDAV), if necessary
+
+4) Review and adjustment of scripts / provided files (configuration
+   examples, man pages)
+
+5) Fine-tuning of the build
+
+For questions, tips or offers of help you can contact me at mp@petermann-it.de

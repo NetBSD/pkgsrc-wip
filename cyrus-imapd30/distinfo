@@ -1,0 +1,13 @@
+$NetBSD: $
+
+SHA1 (cyrus-imapd-3.0.13.tar.gz) = 69d29e09ae4e4f3c8ae0c49a1024b7ec4dffbf57
+RMD160 (cyrus-imapd-3.0.13.tar.gz) = b789c903620e83160fce4de3e06bbe0c842f7957
+SHA512 (cyrus-imapd-3.0.13.tar.gz) = 5cd066916797efb975cdb97720f65edc72d3fe82afbd78a26aa8369d95ae4ca09c0593dd4bec5521156c64ea38af7a13065f3b35447a76267dec93feb0ac6ac6
+Size (cyrus-imapd-3.0.13.tar.gz) = 10840005 bytes
+SHA1 (patch-ac) = c3b0f801b17bad99a2d84c4885aadbdfca2c28ce
+SHA1 (patch-ah) = 4bc62dfdeafdca83ddac02aff0ffd05db28fe0b9
+SHA1 (patch-ai) = 9167678988f411479d187b232eb10ad8622b4151
+SHA1 (patch-am) = e100e13d5137116f5bd7674e954031b2615e5ab1
+SHA1 (patch-ao) = c01c9d32b4d73cbc32d2ad8bfca8b8b021ca2474
+SHA1 (patch-aq) = 101f5d253dae303f187e15eca28aa687f846ba6b
+SHA1 (patch-imap_mailbox.c) = 9a000763a153863f6c40f8939fe19eab41973cea
