@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vault-1.3.2
-PKGREVISION=	1
+DISTNAME=	vault-1.3.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -20,6 +19,8 @@ GO_SRCPATH=	github.com/hashicorp/vault
 USE_TOOLS+=		bash gmake
 
 INSTALLATION_DIRS+=	bin
+
+REPLACE_BASH+=	scripts/gen_openapi.sh
 
 # Clumsy workaround for https://github.com/golang/go/issues/22409
 pre-build:
