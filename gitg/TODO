@@ -1,3 +1,3 @@
-0.1.x requires wip/gsettings-desktop-schemas
+0.1.x requires sysutils/gsettings-desktop-schemas
 
 0.2.x requires GTK+ 3
