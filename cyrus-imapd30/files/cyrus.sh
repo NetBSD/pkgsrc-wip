@@ -18,7 +18,7 @@ rcd_dir=`@DIRNAME@ $0`
 
 name="cyrus"
 rcvar=$name
-command="@PREFIX@/cyrus/bin/master"
+command="@PREFIX@/bin/master"
 command_args="-d"
 pidfile="@VARBASE@/run/cyrus-master.pid"
 sig_stop=QUIT
@@ -65,7 +65,7 @@ cyrus_mkimap()
 				@CHGRP@ @CYRUS_GROUP@ "$dir"
 			fi
 		done
-		@SU@ -m @CYRUS_USER@ -c "@PREFIX@/cyrus/bin/mkimap"
+		@SU@ -m @CYRUS_USER@ -c "@PREFIX@/bin/mkimap"
 	fi
 }
 

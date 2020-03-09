@@ -4,25 +4,31 @@ be built, let alone that it will work as expected. I plan to keep the
 pkg up to date here so that the progress is transparent. I am open to
 suggestions or active support.
 
+Done:
+
+- Make it build the most basic way [DONE]
+
 Next steps:
 
-1) Make it build the most basic way [DONE]
+- Make it install
 
-2) Update PLIST (take care of ldap / http options)
+- Update PLIST (take care of ldap / http options)
 
-3) Evaluation of the patches of the existing Cyrus-imap-pkgs and
-   their applicability for cyrus-imap 3
+- Integrate / regenerate documentation at build time
 
-4) Possibly create further patches for cyrus-imap 3 (especially with
-   regard to the newly added functions CalDAV / CardDAV), if necessary
+- Evaluation of the patches of the existing Cyrus-imap-pkgs and
+  their applicability for cyrus-imap 3
 
-5) Review and adjustment of scripts / provided files (configuration
-   examples, man pages)
+- Possibly create further patches for cyrus-imap 3 (especially with
+  regard to the newly added functions CalDAV / CardDAV), if necessary
 
-6) Fine-tuning of the build
+- Review and adjustment of scripts / provided files (configuration
+  examples, man pages)
 
-For questions, tips or offers of help you can contact me at mp@petermann-it.de
+- Fine-tuning of the build
 
 Bugs:
 
 - Kerberos support, PostgreSQL and MySQL are currently not tested
+
+For questions, tips or offers of help you can contact me at mp@petermann-it.de

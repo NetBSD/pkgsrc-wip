@@ -1,22 +1,23 @@
 # $NetBSD: $
 
 DISTNAME=	cyrus-imapd-3.0.13
-#PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PKGNAME}/
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrusimap/}
-#GITHUB_TAG=     v${PKGVERSION_NOREV}
 
 MAINTAINER=	mp@petermann-it.de
 HOMEPAGE=	https://www.cyrusimap.org/
 COMMENT=	Cyrus IMAP server
 #LICENSE=	original-bsd # like license
 
+DEPENDS+=       p5-Term-ReadLine>=1.20:../../devel/p5-Term-ReadLine
+
 MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		perl:run makedepend yacc pkg-config sed awk gmake
+
 USE_PKGLOCALEDIR=	yes
+
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
 
@@ -26,9 +27,6 @@ CHECK_PORTABILITY_SKIP=	configure.lineno
 
 .include "../../mk/bsd.prefs.mk"
 
-# CYRUS_USER		username of the Cyrus administrator
-# CYRUS_GROUP		group of the Cyrus administrator
-#
 CYRUS_USER?=		cyrus
 CYRUS_GROUP?=		mail
 
@@ -49,34 +47,35 @@ CONFIGURE_ARGS+=	--enable-idled
 CONFIGURE_ARGS+=	--enable-murder
 CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--enable-replication
+CONFIGURE_ARGS+=	--htmldir=${DESTDIR}${HTMLDIR}
 
 CONFIGURE_ARGS+=	andrew_cv_runpath_switch=${COMPILER_RPATH_FLAG}
 
 .include "options.mk"
 
 MAKE_ENV+=		PERL=${PERL5:Q}
+MAKE_ENV+=		PERLLIBDIR=${PERL5_INSTALLVENDORLIB}
 
 HTMLDIR=		${PREFIX}/share/doc/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
 CONF_FILES=		${EGDIR}/imapd.conf ${PKG_SYSCONFDIR}/imapd.conf
-CONF_FILES+=		${EGDIR}/normal.conf ${PKG_SYSCONFDIR}/cyrus.conf
+CONF_FILES+=		${EGDIR}/cyrus.conf ${PKG_SYSCONFDIR}/cyrus.conf
 RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
 REPLACE_PERL+=		tools/rehash
 
-SUBST_CLASSES+=		sh
-SUBST_STAGE.sh=		post-build
-SUBST_FILES.sh=		perl/imap/blib/script/cyradm
-SUBST_SED.sh+=		-e 's|^\#!.*|\#!/bin/sh|'
+#SUBST_CLASSES+=		sh
+#SUBST_STAGE.sh=		post-build
+#SUBST_FILES.sh=		perl/imap/blib/script/cyradm
+#SUBST_SED.sh+=		-e 's|^\#!.*|\#!/bin/sh|'
 
-PERL5_PACKLIST= \
-	auto/Cyrus/IMAP/.packlist			\
-	auto/Cyrus/SIEVE/managesieve/.packlist
+#PERL5_PACKLIST= \
+#	auto/Cyrus/IMAP/.packlist				\
+#	auto/Cyrus/SIEVE/managesieve/.packlist
 
 pre-build:
-	${RUN}${_ULIMIT_CMD} \
-#	cd ${WRKSRC} && ${BUILD_MAKE_CMD} depend
+	${RUN}${_ULIMIT_CMD}
 
 .include "../../lang/perl5/module.mk"
 BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.17
@@ -96,10 +95,10 @@ BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.17
 post-patch:
 	cd ${WRKSRC}/man;						\
 	set --	deliver 8 fetchnews 8 idled 8 imapd 8 lmtpd 8 master 8	\
-		nntpd 8	notifyd 8 pop3d 8 quota 8;			\
+		nntpd 8	notifyd 8 pop3d 8 quota 8 httpd 8 httpdtest 8;			\
 	while [ $$# -gt 0 ]; do						\
 		man=$$1.$$2;						\
-		for file in Makefile.in *.[0-9]; do			\
+		for file in *.[0-9]; do			\
 			sed	-e "s|\(\$$(srcdir)/\)\($$man\)|\1cyrus-\2|g" \
 				-e "s|\(\\\fB\)\($$1($$2)\\\fR\)|\1cyrus-\2|g" \
 				$$file > $$file.fixed;			\
@@ -120,21 +119,20 @@ post-patch:
 	done
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/masssievec ${DESTDIR}${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/migrate-metadata ${DESTDIR}${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${DESTDIR}${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/mknewsgroups ${DESTDIR}${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/translatesieve ${DESTDIR}${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/masssievec ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mknewsgroups ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/translatesieve ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${DESTDIR}${EGDIR}
-	cd ${WRKSRC}/master/conf; for file in *.conf; do		\
-		${INSTALL_DATA} $${file} ${DESTDIR}${EGDIR};		\
-	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
-	cd ${WRKSRC}/doc; for file in *.html cyrusv2.mc; do		\
-		${INSTALL_DATA} $${file} ${DESTDIR}${HTMLDIR};		\
-	done
+	${INSTALL_DATA} ${FILESDIR}/cyrus.conf ${DESTDIR}${EGDIR}
+	#${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	# TODO: incomplete - source HTML folder contains subdirs not
+	# taken care of yet
+	#cd ${WRKSRC}/doc/html; for file in *.html; do		\
+	#	${INSTALL_DATA} $${file} ${DESTDIR}${HTMLDIR};		\
+	#done
 
 .include "../../devel/zlib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
