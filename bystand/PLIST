@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/bystand
+share/doc/bystand/bystand.doc
 share/doc/bystand/setup/README
 share/doc/bystand/setup/schema
 share/doc/bystand/setup/template

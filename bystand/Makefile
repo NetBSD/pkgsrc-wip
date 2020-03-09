@@ -14,7 +14,7 @@ USE_LANGUAGES+=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	bin share/doc/bystand/setup
+INSTALLATION_DIRS=	bin share/doc/bystand share/doc/bystand/setup
 
 do-build:
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
@@ -23,6 +23,8 @@ do-build:
 do-install:
 		cd ${WRKSRC} && ${INSTALL_PROGRAM} ${WRKSRC}/bystand \
 			${DESTDIR}${PREFIX}/bin/bystand
+		cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/bystand.doc \
+			${DESTDIR}${PREFIX}/share/doc/bystand/bystand.doc
 		cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/README \
 			${DESTDIR}${PREFIX}/share/doc/bystand/setup/README
 		cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/schema \
