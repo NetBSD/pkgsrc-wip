@@ -2642,7 +2642,6 @@ SUBDIR+=	p5-FFI-Platypus
 SUBDIR+=	p5-File-Map
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
-SUBDIR+=	p5-GeoIP2
 SUBDIR+=	p5-Getopt-GUI-Long
 SUBDIR+=	p5-Google-API-Client
 SUBDIR+=	p5-Gtk2-Spell
