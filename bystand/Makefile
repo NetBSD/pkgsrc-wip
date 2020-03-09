@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bystand-0.7.3
+DISTNAME=	bystand-1.0.1
 CATEGORIES=	news
 MASTER_SITES=	http://zzo38computer.org/prog/bystand/
 EXTRACT_SUFX=	.zip
