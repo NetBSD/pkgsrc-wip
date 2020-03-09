@@ -1,9 +1,8 @@
 $NetBSD$
 
-SHA1 (kamailio-5.3.1_src.tar.gz) = 04e4f1dc636b1154b58515b05bb0162d163a8830
-RMD160 (kamailio-5.3.1_src.tar.gz) = 514f7b5e9416d39418f31912b04a28a08de99159
-SHA512 (kamailio-5.3.1_src.tar.gz) = ed9e8babfa3122eafa246012e4e7a31a0ee9f2393cc06c731d29dd9bde664a5f24c41a88cd28a65da5b3fe88eb6efc0a2443a5794d0ea41d321959d9380931f1
-Size (kamailio-5.3.1_src.tar.gz) = 12434594 bytes
+SHA1 (kamailio-5.3.2_src.tar.gz) = e1d6c7e7e628906534383147716001042af3677e
+RMD160 (kamailio-5.3.2_src.tar.gz) = a2119e9116feb9ed77e3bdb50f61fd9ffe6b8759
+SHA512 (kamailio-5.3.2_src.tar.gz) = 60ac9d8a3a652f6f433e88ae41c5018608917a716826044bec90c9622a77a35c88e50c781341b1a7377211660c53bf6cf8f46ceb9ee69b993f9cc24b4892a5dc
+Size (kamailio-5.3.2_src.tar.gz) = 12448971 bytes
 SHA1 (patch-src_Makefile.defs) = 8446fc371d34888cc0347c79e19c9bc52cdd7779
 SHA1 (patch-src_lib_srdb1_db__ut.c) = ecdc2d3185e9497127a4662794a8ec779cb20165
-SHA1 (patch-utils_kamctl_kamdbctl) = 1c6289cb569de45dea6a71ad6f23de32757902d8
