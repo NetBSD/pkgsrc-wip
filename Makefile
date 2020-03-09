@@ -556,7 +556,6 @@ SUBDIR+=	davical-git
 SUBDIR+=	dazz_db
 SUBDIR+=	dbf
 SUBDIR+=	dbip-city-lite
-SUBDIR+=	dbip-country-lite
 SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer
 SUBDIR+=	dcdis
