@@ -2,7 +2,7 @@
 
 # I have an update to 6 ready, but it is on hold pending an assessment
 # of projects.h removal fallout - gdt.
-VERSION_BASE=	6.3.0
+VERSION_BASE=	6.3.1
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0
@@ -36,7 +36,9 @@ GNU_CONFIGURE=		yes
 # \todo Debug this.
 # Tests fail if proj relies on NetBSD 8's C99 math, vs proj's
 # replacement functions.
+.if ${OPSYS} == "NetBSD"
 CFLAGS+=		-DHAVE_C99_MATH=0
+.endif
 
 .if !empty(PKG_OPTIONS:Mproj-grids)
 # Ideally, upstream would have an approach which enables testing with

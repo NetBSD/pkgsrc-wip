@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.13 2019/02/21 00:55:04 gdt Exp $
 
-SHA1 (proj-6.3.0.tar.gz) = d56b265cee08d6e77fdec178949375e51afc9761
-RMD160 (proj-6.3.0.tar.gz) = e99eda095cecc33e5f0fc530154260d2e0e8b055
-SHA512 (proj-6.3.0.tar.gz) = 679fd2e57f27feeb956d2a8843cb9028895a78f0dac104c920cc9060afade434b953fb381fed350e5c8ac15cd796f795220e0f1ad276a4f7482d6e7f5681d06e
-Size (proj-6.3.0.tar.gz) = 2758388 bytes
+SHA1 (proj-6.3.1.tar.gz) = bc6baa7c494bc30992aaa5e3bd4dc4f443ece635
+RMD160 (proj-6.3.1.tar.gz) = 67394c6fc3382449de61fc7a4dba29e3508deb84
+SHA512 (proj-6.3.1.tar.gz) = 669b752f491bd99e320b0750c7129251a562a303e008e3d89c8e71baefd7f6d4ccb08234b3039c03694e2cc93b8dde81771cd7ffd981ff8045d855240a480a5e
+Size (proj-6.3.1.tar.gz) = 2823891 bytes
 SHA1 (proj-datumgrid-1.8.tar.gz) = ede1c255adebb903f9ec33c5760ecb0df7b3b03c
 RMD160 (proj-datumgrid-1.8.tar.gz) = 074fcfba2e41cbe81e5be45eddc0e38683d891ef
 SHA512 (proj-datumgrid-1.8.tar.gz) = 23153f5b57d210e37cd6e9e0fced23bdabb1c67476e9fb50eb83a68ae066a5c3675822472f5d558d10ddf36ac1d73d538b75304d112a1bfcd8d0bbd26c6481a5
