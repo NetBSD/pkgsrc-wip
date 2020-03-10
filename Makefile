@@ -4741,7 +4741,6 @@ SUBDIR+=	tenmado
 SUBDIR+=	termbox
 SUBDIR+=	terminology
 SUBDIR+=	termit
-SUBDIR+=	termtosvg
 SUBDIR+=	tesseract-game
 SUBDIR+=	tesseract-game-svn
 SUBDIR+=	testssl
