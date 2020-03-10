@@ -2,19 +2,22 @@
 
 DISTNAME=	cyrus-imapd-3.0.13
 CATEGORIES=	mail
-MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PKGNAME}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrusimap/}
+GITHUB_RELEASE=	${PKGNAME_NOREV}
 
 MAINTAINER=	mp@petermann-it.de
 HOMEPAGE=	https://www.cyrusimap.org/
 COMMENT=	Cyrus IMAP server
-#LICENSE=	original-bsd # like license
-
-DEPENDS+=       p5-Term-ReadLine>=1.20:../../devel/p5-Term-ReadLine
+LICENSE=	original-bsd # like license
+DEPENDS+=	p5-Term-ReadLine>=1.20:../../devel/p5-Term-ReadLine
+DEPENDS+=	p5-Authen-SASL-Cyrus>=0.13:../../security/p5-Authen-SASL-Cyrus
+DEPENDS+=	cyrus-saslauthd>=2.1.17:../../security/cyrus-saslauthd
 
 MAKE_JOBS_SAFE=	no
 
-USE_LANGUAGES+=		c c++
-USE_TOOLS+=		perl:run makedepend yacc pkg-config sed awk gmake
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	perl:run makedepend yacc pkg-config sed awk gmake
+USE_LIBTOOL=	yes
 
 USE_PKGLOCALEDIR=	yes
 
@@ -26,9 +29,6 @@ BUILD_DEFS+=		VARBASE
 CHECK_PORTABILITY_SKIP=	configure.lineno
 
 .include "../../mk/bsd.prefs.mk"
-
-CYRUS_USER?=		cyrus
-CYRUS_GROUP?=		mail
 
 BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
@@ -64,15 +64,6 @@ RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
 REPLACE_PERL+=		tools/rehash
-
-#SUBST_CLASSES+=		sh
-#SUBST_STAGE.sh=		post-build
-#SUBST_FILES.sh=		perl/imap/blib/script/cyradm
-#SUBST_SED.sh+=		-e 's|^\#!.*|\#!/bin/sh|'
-
-#PERL5_PACKLIST= \
-#	auto/Cyrus/IMAP/.packlist				\
-#	auto/Cyrus/SIEVE/managesieve/.packlist
 
 pre-build:
 	${RUN}${_ULIMIT_CMD}

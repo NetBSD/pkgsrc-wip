@@ -71,7 +71,6 @@ lib/libcyrus_com_err.la
 lib/libcyrus_imap.la
 lib/libcyrus_min.la
 lib/libcyrus_sieve.la
-${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
 lib/perl5/site_perl/5.30.0/Cyrus/Annotator/AnnotateInlinedCIDs.pm
 lib/perl5/site_perl/5.30.0/Cyrus/Annotator/Daemon.pm
 lib/perl5/site_perl/5.30.0/Cyrus/Annotator/Message.pm

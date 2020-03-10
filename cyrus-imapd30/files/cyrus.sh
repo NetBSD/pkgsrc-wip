@@ -18,7 +18,7 @@ rcd_dir=`@DIRNAME@ $0`
 
 name="cyrus"
 rcvar=$name
-command="@PREFIX@/bin/master"
+command="@PREFIX@/libexec/master"
 command_args="-d"
 pidfile="@VARBASE@/run/cyrus-master.pid"
 sig_stop=QUIT
@@ -27,6 +27,9 @@ extra_commands="mkimap reload"
 
 mkimap_cmd="cyrus_mkimap"
 start_precmd="cyrus_prestart"
+
+# required to provide perl in PATH for mkimap
+PATH=$PATH:/usr/pkg/bin:/usr/pkg/sbin
 
 cyrus_prestart()
 {

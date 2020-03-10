@@ -32,10 +32,10 @@ CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
 CONFIGURE_ARGS+=	--without-krb
 CONFIGURE_ARGS+=	--disable-gssapi
 CHECK_BUILTIN.heimdal:=		yes
-.  include "../../security/heimdal/builtin.mk"
+.  include "../../security/heimdal/buildlink3.mk"
 CHECK_BUILTIN.heimdal:=		no
 CHECK_BUILTIN.mit-krb5:=	yes
-.  include "../../security/mit-krb5/builtin.mk"
+.  include "../../security/mit-krb5/buildlink3.mk"
 CHECK_BUILTIN.mit-krb5:=	no
 .  if ( !empty(USE_BUILTIN.heimdal:M[Yy][Ee][Ss]) || \
 	!empty(USE_BUILTIN.mit-krb5:M[Yy][Ee][Ss])) && \

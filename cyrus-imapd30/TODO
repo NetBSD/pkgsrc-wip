@@ -6,24 +6,27 @@ suggestions or active support.
 
 Done:
 
-- Make it build the most basic way [DONE]
-
-Next steps:
+- Make it build the most basic way 
 
 - Make it install
 
 - Update PLIST (take care of ldap / http options)
 
-- Integrate / regenerate documentation at build time
-
 - Evaluation of the patches of the existing Cyrus-imap-pkgs and
   their applicability for cyrus-imap 3
 
-- Possibly create further patches for cyrus-imap 3 (especially with
-  regard to the newly added functions CalDAV / CardDAV), if necessary
-
 - Review and adjustment of scripts / provided files (configuration
   examples, man pages)
+
+- Performed first integration tests (client connection to IMAP, 
+  authenticated via saslauthd with ldap)
+
+Next steps:
+
+- Integrate / regenerate documentation at build time
+
+- Possibly create further patches for cyrus-imap 3 (especially with
+  regard to the newly added functions CalDAV / CardDAV), if necessary
 
 - Fine-tuning of the build
 
