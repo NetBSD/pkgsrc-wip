@@ -14,15 +14,15 @@ USE_LANGUAGES+=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	bin share/doc/bystand share/doc/bystand/setup
-
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "GNUkFreeBSD"
 # Makefile for GNU userland
 BYSTAND_MAKEFILE=	Makefile
 .else
-# Makefile that builds GNU compatibility module
+# This Makefile builds a GNU compatibility module
 BYSTAND_MAKEFILE=	Makefile.BSD
 .endif
+
+INSTALLATION_DIRS=	bin share/doc/bystand share/doc/bystand/setup
 
 do-build:
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
