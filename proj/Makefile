@@ -18,6 +18,8 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://proj4.org/
 COMMENT=	Cartographic projection software
 
+# \todo: Add pdf manual.
+
 # Grid files also have the following "cc-by ish" licenses:
 # cc-by, 2-clause-bsd,  License Ouverte, cc0 (eu)
 # open-government, cc-by, public-domain (na)

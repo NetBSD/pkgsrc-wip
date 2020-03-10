@@ -1,4 +1,0 @@
-Do not bring into pkgsrc proper yet, because too many depending
-packages will break. -gdt
-
-Add manual.  Howver, it is not at the same MASTER_SITE.
