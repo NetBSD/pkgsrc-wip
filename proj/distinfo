@@ -24,3 +24,4 @@ SHA1 (proj-datumgrid-world-1.0.tar.gz) = b66863826b2387f28c860abf2c6ee2366b96708
 RMD160 (proj-datumgrid-world-1.0.tar.gz) = a21a6320eb7da3bbf72b7ad685a08255b8f9663d
 SHA512 (proj-datumgrid-world-1.0.tar.gz) = 9f79f4c24f1a4a472f2747e4bb147c7140a92f3043b283f2a0326775393ebb39f634f2715a4d085dc33eabbbed4c3fb1871753ecf6c238c179ac0bbe83b9ca3e
 Size (proj-datumgrid-world-1.0.tar.gz) = 134373680 bytes
+SHA1 (patch-data_Makefile.in) = 41d5e2a9abbe1fef5036a427c45c4b838c4c373a
