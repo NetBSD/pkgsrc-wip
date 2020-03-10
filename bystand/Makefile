@@ -16,9 +16,17 @@ USE_LANGUAGES+=	c99
 
 INSTALLATION_DIRS=	bin share/doc/bystand share/doc/bystand/setup
 
+.if ${OPSYS} == "Linux"
+# Makefile for GNU userland
+BYSTAND_MAKEFILE=	Makefile
+.else
+# Makefile that builds GNU compatibility module
+BYSTAND_MAKEFILE=	Makefile.BSD
+.endif
+
 do-build:
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-			${MAKE} ${MAKE_FLAGS} -f Makefile.BSD
+			${MAKE} ${MAKE_FLAGS} -f ${BYSTAND_MAKEFILE}
 
 do-install:
 		cd ${WRKSRC} && ${INSTALL_PROGRAM} ${WRKSRC}/bystand \
@@ -36,5 +44,4 @@ do-install:
 # Minimum required API version is undocumented (use tested one)
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.29.0
 .include "../../databases/sqlite3/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
