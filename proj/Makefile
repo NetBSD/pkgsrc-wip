@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.17 2019/02/27 14:29:58 gdt Exp $
 
-# I have an update to 6 ready, but it is on hold pending an assessment
-# of projects.h removal fallout - gdt.
-VERSION_BASE=	6.3.1
+# Do not merge to pkgsrc without gdt approval; I have not yet
+# evaluated how much this will break.
+VERSION_BASE=	7.0.0
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0
@@ -20,6 +20,7 @@ COMMENT=	Cartographic projection software
 
 # \todo: Add pdf manual.
 
+# \todo Think about how this works with the new grid CDN.
 # Grid files also have the following "cc-by ish" licenses:
 # cc-by, 2-clause-bsd,  License Ouverte, cc0 (eu)
 # open-government, cc-by, public-domain (na)
@@ -61,5 +62,7 @@ post-extract:
 	cd ${WRKDIR} && for f in *; do if [ $$f != ${WRKFINAL} ]; then mv $$f ${WRKFINAL}/data; fi; done
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

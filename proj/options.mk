@@ -3,7 +3,8 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proj
 
 PKG_SUPPORTED_OPTIONS=	proj-grids
-PKG_SUGGESTED_OPTIONS=	proj-grids
+# \todo Convert to the proj7 new world order.
+#PKG_SUGGESTED_OPTIONS=	proj-grids
 
 .include "../../mk/bsd.options.mk"
 

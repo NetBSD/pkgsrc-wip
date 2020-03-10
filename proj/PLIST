@@ -7,8 +7,8 @@ bin/invgeod
 bin/invproj
 bin/proj
 bin/projinfo
+bin/projsync
 include/geodesic.h
-include/org_proj4_PJ.h
 include/proj.h
 include/proj/common.hpp
 include/proj/coordinateoperation.hpp
@@ -31,8 +31,7 @@ man/man1/geod.1
 man/man1/gie.1
 man/man1/proj.1
 man/man1/projinfo.1
-man/man3/geodesic.3
-man/man3/pj_init.3
+man/man1/projsync.1
 ${PLIST.grids}share/proj/100800401.gsb
 ${PLIST.grids}share/proj/A66_National_13_09_01.gsb
 ${PLIST.grids}share/proj/AT_GIS_GRID.gsb
@@ -222,7 +221,7 @@ ${PLIST.grids}share/proj/nmhpgn.gsb
 ${PLIST.grids}share/proj/ntf_r93.gsb
 ${PLIST.grids}share/proj/ntv1_can.dat
 ${PLIST.grids}share/proj/ntv2_0.gsb
-share/proj/null
+@comment share/proj/null
 ${PLIST.grids}share/proj/nvhpgn.gsb
 ${PLIST.grids}share/proj/nyhpgn.gsb
 ${PLIST.grids}share/proj/nzgd2kgrid0005.gsb
@@ -234,6 +233,7 @@ ${PLIST.grids}share/proj/ontpht1964-nzvd2016.gtx
 share/proj/other.extra
 ${PLIST.grids}share/proj/pahpgn.gsb
 share/proj/proj.db
+share/proj/proj.ini
 share/proj/projjson.schema.json
 ${PLIST.grids}share/proj/prvi
 ${PLIST.grids}share/proj/pvhpgn.gsb
