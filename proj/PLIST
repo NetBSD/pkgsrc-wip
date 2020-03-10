@@ -221,7 +221,6 @@ ${PLIST.grids}share/proj/nmhpgn.gsb
 ${PLIST.grids}share/proj/ntf_r93.gsb
 ${PLIST.grids}share/proj/ntv1_can.dat
 ${PLIST.grids}share/proj/ntv2_0.gsb
-@comment share/proj/null
 ${PLIST.grids}share/proj/nvhpgn.gsb
 ${PLIST.grids}share/proj/nyhpgn.gsb
 ${PLIST.grids}share/proj/nzgd2kgrid0005.gsb
