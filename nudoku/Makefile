@@ -21,8 +21,8 @@ SUBST_SED.includes+=	-e 's,"gettext.h",<libintl.h>,'
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
-FAKE_NCURSES=		yes
+USE_NCURSES=		yes # wmove() doesn't move the cursor in the grid window
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
