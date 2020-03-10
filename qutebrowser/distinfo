@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (qutebrowser-1.5.2.tar.gz) = 104b420208895317c843f040a1b5af226548eb03
-RMD160 (qutebrowser-1.5.2.tar.gz) = 132105fea69591061268a78f8b8d6390ed9dce31
-SHA512 (qutebrowser-1.5.2.tar.gz) = 0ac494bad10e5af093e23233b63a8eb828e3e9ed3e6351b4b2d8b429c609ee6b5c66edcd5ec24c7d68966f6bd7f502ce2d73188e27097a042fffe0391706badf
-Size (qutebrowser-1.5.2.tar.gz) = 3148291 bytes
+SHA1 (qutebrowser-1.10.1.tar.gz) = 2db9dccd3f594ae6fb4ceffe4377a0c8e382864c
+RMD160 (qutebrowser-1.10.1.tar.gz) = e1749cae293268075c38450802125250c909f867
+SHA512 (qutebrowser-1.10.1.tar.gz) = 19e7fb82acccc883aec59a253b51f8a52cd1b1bbf89ace04625213e77cf492d18c9ba9ebd5787856c41a0f4e66a719f18866beca6350319c87d6f48cf2b5f3c5
+Size (qutebrowser-1.10.1.tar.gz) = 3220842 bytes
