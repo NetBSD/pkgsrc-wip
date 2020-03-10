@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	1.9.3
+VERSION=	1.10.0
 PKGNAME=	${PHP_PKG_PREFIX}-composer-${VERSION}
 DISTNAME=	composer
 CATEGORIES=	devel
