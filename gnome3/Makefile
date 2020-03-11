@@ -58,7 +58,7 @@ DEPENDS+=	gnome-desktop>=2.26.2:../../x11/gnome-desktop
 DEPENDS+=	gnome-desktop-sharp>=2.26.0:../../x11/gnome-desktop-sharp
 .endif
 DEPENDS+=	gnome-doc-utils>=0.16.1:../../textproc/gnome-doc-utils
-DEPENDS+=	gnome-games>=2.26.2:../../games/gnome-games
+#DEPENDS+=	gnome-games>=2.26.2:../../games/gnome-games
 DEPENDS+=	gnome-icon-theme>=2.26.0:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-keyring>=2.26.1:../../security/gnome-keyring
 .if ${X11_TYPE} != "native" || exists(${X11BASE}/lib/libXdamage.so)
