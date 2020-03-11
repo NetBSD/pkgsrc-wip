@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	neofetch-6.1.0
+DISTNAME=	neofetch-7.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dylanaraps/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
