@@ -6,7 +6,7 @@ suggestions or active support.
 
 Done:
 
-- Make it build the most basic way 
+- Make it build the most basic way
 
 - Make it install
 
@@ -18,17 +18,17 @@ Done:
 - Review and adjustment of scripts / provided files (configuration
   examples, man pages)
 
-- Performed first integration tests (client connection to IMAP, 
+- Performed first integration tests (client connection to IMAP,
   authenticated via saslauthd with ldap)
+
+- Integrated documentation from source package into the package
 
 Next steps:
 
-- Integrate / regenerate documentation at build time
+- regenerate documentation at build time using Sphinx
 
 - Possibly create further patches for cyrus-imap 3 (especially with
   regard to the newly added functions CalDAV / CardDAV), if necessary
-
-- Fine-tuning of the build
 
 Bugs:
 

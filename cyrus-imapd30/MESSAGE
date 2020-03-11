@@ -3,15 +3,10 @@ $NetBSD: $
 
 Please refer to:
 
-	${PREFIX}/share/doc/cyrus-imapd/install.html
+	${PREFIX}/share/doc/cyrus-imapd/imap/installing.html
 
-for more detailed instructions on setting up the environment before
-starting the Cyrus IMAP server.  In particular, several services may
-need to be added to /etc/services.
-
-Anyone upgrading from an earlier version of the Cyrus IMAP server should
-read:
-
-	${PREFIX}/share/doc/cyrus-imapd/install-upgrade.html
+for more detailed instructions on setting up or upgrading the environment
+before starting the Cyrus IMAP server.  In particular, several services
+may need to be added to /etc/services.
 
 ===========================================================================

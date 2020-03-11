@@ -118,12 +118,13 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/cyrus.conf ${DESTDIR}${EGDIR}
-	#${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
-	# TODO: incomplete - source HTML folder contains subdirs not
-	# taken care of yet
-	#cd ${WRKSRC}/doc/html; for file in *.html; do		\
-	#	${INSTALL_DATA} $${file} ${DESTDIR}${HTMLDIR};		\
-	#done
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	cd ${WRKSRC}/doc/html; for directory in `find . -type d`; do \
+		${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/$${directory}; \
+	done
+	cd ${WRKSRC}/doc/html; for file in `find . -type f \\( -iname \\*.html -o -iname \\*.jpg -o -iname \\*.png -o -iname \\*.css -o -iname \\*.js -o -iname \\*.json \\)`; do \
+		${INSTALL_DATA} $${file} ${DESTDIR}${HTMLDIR}/$${file}; \
+	done
 
 .include "../../devel/zlib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
