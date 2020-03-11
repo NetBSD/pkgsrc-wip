@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-com-err=yes
 post-configure:		generate-compile-et
 .endif
 
-generate-compile-et:
+.PHONY: generate-compile-et
 	${RUN}cd ${WRKSRC}/com_err/et;				\
 	if ${TEST} ! -f Makefile -a  ! -f compile_et; then	\
 		${SED} 	-e 's,@SED@,${SED},g'			\
