@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/08 22:40:11 jihbed Exp $
-
-SHA1 (pessulus-2.30.0.tar.bz2) = 94ba2f68979f4dff111446ff574e54078e3f81fe
-RMD160 (pessulus-2.30.0.tar.bz2) = 45dbd64c77ed7228524d2934f02247b4d1becb4a
-Size (pessulus-2.30.0.tar.bz2) = 182629 bytes
-SHA1 (patch-aa) = d5096c93089f621d7529ce4f98a44820ed4a5e2f
