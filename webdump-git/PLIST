@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/webdump
+man/man1/webdump.1
+share/doc/webdump/README

@@ -4983,6 +4983,7 @@ SUBDIR+=	wbox
 SUBDIR+=	weatherman
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
+SUBDIR+=	webdump-git
 SUBDIR+=	weland
 SUBDIR+=	weplab
 SUBDIR+=	west
