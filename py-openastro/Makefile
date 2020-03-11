@@ -12,6 +12,8 @@ HOMEPAGE=	https://www.openastro.org/
 COMMENT=	Open source astrology program, openastro.org
 LICENSE=	gnu-gpl-v3
 
+BROKEN=		Needs to be updated to a version that does not use py-gnome2-desktop.
+
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
@@ -52,6 +54,4 @@ post-install:
 .include "../../wip/swisseph/buildlink3.mk"
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../x11/py-gnome2-desktop/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

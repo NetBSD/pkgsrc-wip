@@ -73,7 +73,6 @@ DEPENDS+=	gnome-panel>=2.26.2:../../x11/gnome-panel
 #DEPENDS+=	gnome-power-manager>=2.26.1:../../sysutils/gnome-power-manager
 DEPENDS+=	gnome-power-manager>=2.24.2:../../sysutils/gnome-power-manager
 .endif
-DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.26.0:../../x11/py-gnome2-desktop
 DEPENDS+=	gnome-screensaver>=2.26.1:../../x11/gnome-screensaver
 DEPENDS+=	gnome-session>=2.26.1:../../x11/gnome-session
 DEPENDS+=	gnome-settings-daemon>=2.26.1:../../sysutils/gnome-settings-daemon

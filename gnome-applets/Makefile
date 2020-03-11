@@ -91,8 +91,6 @@ BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.13.0
 .include "../../x11/gtk2/buildlink3.mk"
 #.include "../../x11/libgnomekbd/buildlink3.mk"
 #.include "../../x11/libxklavier/buildlink3.mk"
-#.include "../../x11/py-gnome2-desktop/buildlink3.mk"
-#.include "../../x11/py-gnome2/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
