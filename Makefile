@@ -187,6 +187,7 @@ SUBDIR+=	arora
 SUBDIR+=	arpdig
 SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
+SUBDIR+=	arqiver
 SUBDIR+=	artemis
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
