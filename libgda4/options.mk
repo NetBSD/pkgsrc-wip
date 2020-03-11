@@ -132,7 +132,7 @@ post-install:
 .endif
 
 .if !empty(PKG_OPTIONS:Mgui)
-.  include "../../graphics/goocanvas/buildlink3.mk"
+.  include "../../graphics/goocanvas2/buildlink3.mk"
 .  include "../../graphics/graphviz/buildlink3.mk"
 .endif
 
