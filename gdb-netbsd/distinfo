@@ -119,7 +119,6 @@ SHA1 (patch-sim_mips_Makefile.in) = 21db438aba5935cccc744b0f9d65992f32a9aa69
 SHA1 (patch-sim_mn10300_Makefile.in) = 9ef75b2651ca1813b2a09dc7f327af4ee045458f
 SHA1 (patch-sim_moxie_configure) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-sim_ppc_emul__netbsd.c) = beeeeaab89a06301c9626824851c6bc43594058c
-SHA1 (patch-sim_ppc_hw__memory.c) = 1bb1788515ac1aa90192a4d6680cff7363bcaddc
 SHA1 (patch-sim_testsuite_sim_bfin_run-tests.sh) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-sim_v850_Makefile.in) = 910357bba7ec1c97e0eba1286c31534a2746d854
 SHA1 (patch-src-release.sh) = da39a3ee5e6b4b0d3255bfef95601890afd80709
