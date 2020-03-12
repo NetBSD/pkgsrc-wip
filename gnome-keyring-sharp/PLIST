@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:13 thomasklausner Exp $
-lib/mono/gac/Gnome.Keyring/1.0.0.0__1a73e1bde00c9b66/Gnome.Keyring.dll
-lib/mono/gac/Gnome.Keyring/1.0.0.0__1a73e1bde00c9b66/Gnome.Keyring.dll.mdb
-lib/mono/gnome-keyring-sharp-1.0/Gnome.Keyring.dll
-lib/monodoc/sources/Gnome.Keyring.source
-lib/monodoc/sources/Gnome.Keyring.tree
-lib/monodoc/sources/Gnome.Keyring.zip
-lib/pkgconfig/gnome-keyring-sharp-1.0.pc

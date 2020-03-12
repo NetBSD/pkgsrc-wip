@@ -1124,7 +1124,6 @@ SUBDIR+=	gnome-do
 SUBDIR+=	gnome-jabber
 SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-keyring
-SUBDIR+=	gnome-keyring-sharp
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-paint
 SUBDIR+=	gnome-panel
