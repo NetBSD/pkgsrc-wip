@@ -13,7 +13,6 @@ HOMEPAGE=	https://getcomposer.org/
 COMMENT=	Dependency Manager for PHP
 LICENSE=	mit
 
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
