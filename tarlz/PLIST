@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/tarlz
+man/man1/tarlz.1
+share/info/dir
+share/info/tarlz.info
