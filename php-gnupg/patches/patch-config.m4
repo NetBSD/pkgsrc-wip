@@ -1,6 +1,8 @@
 $NetBSD$
 
-$host_os is "netbsd" (all lowercase) according to config.log
+$host_os could be "netbsd" (all lowercase) according to config.log
+
+Upstream PR: https://github.com/php-gnupg/php-gnupg/pull/17
 
 --- config.m4.orig	2016-08-29 19:02:44.000000000 +0000
 +++ config.m4
