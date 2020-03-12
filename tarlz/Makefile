@@ -15,9 +15,11 @@ USE_LANGUAGES=	c++
 
 TOOLS+=	gmake
 
-CONFIGURE_ARGS+=    --prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=    CXXFLAGS="${CFLAGS}"
-CONFIGURE_ARGS+=    LDFLAGS="${LDFLAGS}"
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
+CONFIGURE_ARGS+=	CXXFLAGS="${CFLAGS}"
+CONFIGURE_ARGS+=	LDFLAGS="${LDFLAGS}"
 
 .include "../../wip/lzlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
