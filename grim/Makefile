@@ -10,7 +10,7 @@ HOMEPAGE=	https://wayland.emersion.fr/grim/
 COMMENT=	Tool to grab images from a Wayland compositor
 LICENSE=	mit
 
-USE_TOOLS=	pkg-config
+USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
@@ -26,6 +26,7 @@ do-configure:
 
 
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
