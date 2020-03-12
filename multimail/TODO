@@ -1,3 +1,0 @@
-If curses(3) is used on NetBSD, there are displays issues. In the main screen,
-background color is not rendered when there is no character in a cell, so the
-cells appear black. Same issue also happens in most dialog boxes.
