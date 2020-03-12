@@ -93,7 +93,6 @@ SHA1 (patch-include_opcode_bfin.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-intl_Makefile.in) = cb9c50bbdfc086a59a549799254365a27d52feec
 SHA1 (patch-libctf_swap.h) = b4755fa27f4d3d98aec03ea4c13a8e3985496d8b
 SHA1 (patch-libiberty_make-temp-file.c) = 6e5c3fc9dde722a263cdbe3d51a714538a0c6cd1
-SHA1 (patch-libiberty_strerror.c) = 16ffa959c95aed579747566cc9ce7d80a1435432
 SHA1 (patch-opcodes_cgen.sh) = ace9d4c93194da654e27af63d045c3220879ade6
 SHA1 (patch-readline_display.c) = daa5bd3dc68c2ef4f5b5cfb412df888317d92c8b
 SHA1 (patch-readline_doc_texi2dvi) = dc857093f77a95413151a54e1186322f98f6c489
