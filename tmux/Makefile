@@ -1,0 +1,41 @@
+# $NetBSD: Makefile,v 1.53 2020/03/12 11:35:33 leot Exp $
+
+DISTNAME=	tmux-3.1-rc2
+PKGNAME=	tmux-3.1rc2
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV:C/rc[0-9]//}
+
+MAINTAINER=	leot@NetBSD.org
+HOMEPAGE=	https://tmux.github.io/
+COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
+LICENSE=	modified-bsd
+
+GNU_CONFIGURE=	yes
+USE_TERMINFO=	yes
+
+USE_TOOLS+=	pkg-config
+
+SUBST_CLASSES+=			sysconfdir
+SUBST_STAGE.sysconfdir=		pre-configure
+SUBST_MESSAGE.sysconfdir=	Do not force sysconfdir to /etc
+SUBST_FILES.sysconfdir=		configure configure.ac
+SUBST_SED.sysconfdir=		-e '/Default tmux\.conf goes in \/etc/d'
+SUBST_SED.sysconfdir+=		-e '/sysconfdir=\/etc/d'
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
+.if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
+    !empty(CC_VERSION:Mgcc-4.[6-9].*)
+BUILDLINK_TRANSFORM+=	opt:-D_XPG4_2:-D_XPG6
+.endif
+
+# https://trac.macports.org/changeset/127986
+.if !empty(MACHINE_PLATFORM:MDarwin-1[0-9].*)
+CPPFLAGS+=	-D__DARWIN_VERS_1050=0
+.endif
+
+.include "../../devel/libevent/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
