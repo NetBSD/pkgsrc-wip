@@ -505,35 +505,3 @@ $NetBSD$
  };
  
  static char *(netbsd_error_names[]) = {
-@@ -1373,7 +1645,22 @@ static char *(netbsd_error_names[]) = {
-   /* 79 */ "EFTYPE",
-   /* 80 */ "EAUTH",
-   /* 81 */ "ENEEDAUTH",
--  /* 81 */ "ELAST",
-+  /* 82 */ "EIDRM",
-+  /* 83 */ "ENOMSG",
-+  /* 84 */ "EOVERFLOW",
-+  /* 85 */ "EILSEQ",
-+  /* 86 */ "ENOTSUP",
-+  /* 87 */ "ECANCELED",
-+  /* 88 */ "EBADMSG",
-+  /* 89 */ "ENODATA",
-+  /* 90 */ "ENOSR",
-+  /* 91 */ "ENOSTR",
-+  /* 92 */ "ETIME",
-+  /* 93 */ "ENOATTR",
-+  /* 94 */ "EMULTIHOP",
-+  /* 95 */ "ENOLINK",
-+  /* 96 */ "EPROTO",
-+  /* 96 */ "ELAST",
- };
- 
- static char *(netbsd_signal_names[]) = {
-@@ -1409,6 +1696,7 @@ static char *(netbsd_signal_names[]) = {
-   /* 29 */ "SIGINFO",
-   /* 30 */ "SIGUSR1",
-   /* 31 */ "SIGUSR2",
-+  /* 32 */ "SIGPWR",
- };
- 
- static emul_syscall emul_netbsd_syscalls = {
