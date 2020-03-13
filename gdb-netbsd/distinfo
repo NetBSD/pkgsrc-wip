@@ -105,7 +105,6 @@ SHA1 (patch-sim_common_callback.c) = ac55e639ed6ba51c5daef5fffccc3413abeb1df2
 SHA1 (patch-sim_common_genmloop.sh) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-sim_common_gennltvals.sh) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-sim_common_gentvals.sh) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-sim_configure) = 438ab3cfdae78a73cd05a9689133bce8739562ef
 SHA1 (patch-sim_cr16_configure) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-sim_ft32_configure) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-sim_lm32_ChangeLog) = da39a3ee5e6b4b0d3255bfef95601890afd80709
