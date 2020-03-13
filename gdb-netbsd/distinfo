@@ -6,7 +6,6 @@ SHA512 (gdb-8.2.1-7e24fb63e7db33d3627623629b0e99fe322e26f9.tar.gz) = d7a8692ee1b
 Size (gdb-8.2.1-7e24fb63e7db33d3627623629b0e99fe322e26f9.tar.gz) = 59113538 bytes
 SHA1 (patch-bfd_config.bfd) = 0fd42301a1577e353381a0bf677a7bcb5d32c3d8
 SHA1 (patch-bfd_configure) = 2345b0527e83debbfffd574eee74d10feecf2a00
-SHA1 (patch-bfd_doc_Makefile.in) = 63a289d492cbf51b3ce39969b67dfebf86096715
 SHA1 (patch-bfd_merge.c) = dcb36bfd014e0b5bec17d6b6d475bf988021daee
 SHA1 (patch-gdb_Makefile.in) = dc465eda202863a23ce660ae5f8065a74e5c8fb4
 SHA1 (patch-gdb_aarch64-nbsd-nat.c) = 04ffc8ed696cb2349a67d302c2f8fa596484a9e6
