@@ -1,5 +1,3 @@
-If curses(3) is used on NetBSD, there are displays issues. In the main game
-view, background color is not rendered when there is no character in a cell,
-so the cells appear black. Same issue also happens in some dialog boxes.
+Trader crashes when LANG is set to anything else than C.
 
-There are issues with internationalization, notably in strfmon(3) output. 
+There are issues with internationalization, notably in strfmon(3) output.
