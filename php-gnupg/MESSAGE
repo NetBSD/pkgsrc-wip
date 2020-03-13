@@ -1,4 +1,4 @@
-This Php extension supports only gnupg version 1.
+This PHP extension supports only gnupg version 1.
 
 This can be achieved by setting:
 
