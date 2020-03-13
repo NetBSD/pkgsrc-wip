@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=				${WRKDIR}/dotproject
 USE_LANGUAGES=			# none
 
-MYSQL_VERSIONS_ACCEPTED=	51 55
+MYSQL_VERSIONS_ACCEPTED=	55
 
 # base on PHP package
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.4.0:../../www/ap-php
