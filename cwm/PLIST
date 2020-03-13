@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/cwm
-man/man1/cwm.1
-man/man5/cwmrc.5
