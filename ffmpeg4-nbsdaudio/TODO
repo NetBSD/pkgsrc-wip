@@ -1,0 +1,6 @@
+* Read and write blocksize bytes at a time.
+* indev: Add options for available formats (precision/encoding)?
+* indev: Verify that selected format is supported?
+* in/outdev: Add option for gain.
+* in/outdev: Add option for port.
+* outdev: Add option for balance.
