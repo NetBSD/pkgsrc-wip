@@ -10,13 +10,7 @@ HOMEPAGE=		https://${GO_SRCPATH}
 COMMENT=		Terminal file manager
 LICENSE=		2-clause-bsd
 
-#GO_SRCPATH=		github.com/gokcehan/lf
-# GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
-
-GO_MODULE=		yes
-
 DIST_SUBDIR=		${PKGNAME_NOREV}
-DISTFILES?=		${DEFAULT_DISTFILES}
 
 GO_MODULE_FILES+=       github.com/mattn/go-runewidth/@v/v0.0.4.mod
 GO_MODULE_FILES+=       github.com/mattn/go-runewidth/@v/v0.0.4.zip
@@ -24,6 +18,5 @@ GO_MODULE_FILES+=       github.com/nsf/termbox-go/@v/v0.0.0-20190325093121-28851
 GO_MODULE_FILES+=       github.com/nsf/termbox-go/@v/v0.0.0-20190325093121-288510b9734e.mod
 
 
-.include "../../devel/go-termbox/buildlink3.mk"
-.include "../../wip/go/go-package.mk"
+.include "../../wip/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"

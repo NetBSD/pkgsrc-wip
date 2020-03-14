@@ -4,33 +4,16 @@
 #
 # === Package-settable variables ===
 #
-# GO_MODULE (optional)
-#	Set to "yes" to do a module-based build (EXPERIMENTAL).
-#
-# GO_SRCPATH (required)
-#	The patch that can be used with "go get" to import the current
-#	package. This is usually the URL without the leading protocol.
-#
-#	Examples:
-#		github.com/username/repository
-#		gopkg.in/check.v1
-#
-# GO_DIST_BASE (optional)
-#	Path this package extracts to.
-#
-#	Default:
-#		The last path component of ${GO_SRCPATH}
-#	Examples:
-#		${GITHUB_PROJECT}-${GITHUB_TAG}*
-#		${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
-#		${DISTNAME}
-#
 # GO_BUILD_PATTERN (optional)
 #	Argument used for 'go install'.
 #	In most cases, the default is fine.
 #
 #	Default:
-#		"${GO_SRCPATH}/...", which means all files below GO_SRCPATH.
+#		"...", which means all files below the top-level directory.
+#
+# GO_MODULE_FILES (optional)
+#	List of dependency files to be downloaded from the Go module proxy.
+#	Can be filled out from the output of "make show-go-modules".
 #
 # Keywords: go golang
 #
@@ -53,40 +36,16 @@
 
 .include "../../lang/go/version.mk"
 
-.if !empty(GO_MODULE:M[Yy][Ee][Ss])
 GO_BUILD_PATTERN?=	...
-.else
-_GO_DIST_BASE!=		basename ${GO_SRCPATH}
-GO_DIST_BASE?=		${_GO_DIST_BASE}
-
-GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
-WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
-.endif
 
 MAKE_JOBS_SAFE=		no
-INSTALLATION_DIRS+=	bin gopkg
+INSTALLATION_DIRS+=	bin
 USE_TOOLS+=		pax
 
-BUILD_DEPENDS+=		${GO_PACKAGE_DEP}
-
-GOTOOLDIR=		go${GOVERSSUFFIX}/pkg/tool/${GO_PLATFORM}
-
 PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
-PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
-.if !empty(GO_MODULE:M[Yy][Ee][Ss])
 MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.goproxy
-.else
-MAKE_ENV+=	GO111MODULE=off GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg 
-.endif
 MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
-
-.if !target(post-extract) && empty(GO_MODULE:M[Yy][Ee][Ss])
-post-extract:
-	${RUN} ${MKDIR} ${WRKSRC}
-	${RUN} ${RM} -fr ${WRKDIR}/${GO_DIST_BASE}/.hg
-	${RUN} ${MV} ${WRKDIR}/${GO_DIST_BASE}/* ${WRKSRC}
-.endif
 
 .if !target(do-build)
 do-build:
@@ -100,15 +59,9 @@ do-test:
 
 .if !target(do-install)
 do-install:
-.if empty(GO_MODULE:M[Yy][Ee][Ss])
-	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
-	${RUN} cd ${WRKDIR}; [ ! -d pkg ] || ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
-.else
 	${RUN} cd ${WRKDIR}/.gopath && [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
 .endif
-.endif
 
-.if !empty(GO_MODULE:M[Yy][Ee][Ss])
 # FIXME This needs to depend on extract
 .PHONY: show-go-modules
 show-go-modules:
@@ -117,8 +70,9 @@ show-go-modules:
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.mod" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.zip" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 
+DISTFILES?=	${DEFAULT_DISTFILES}
 .for i in ${GO_MODULE_FILES}
-DISTFILES+= ${i:!basename $i!}
+DISTFILES+=	${i:!basename $i!}
 SITES.${i:!basename $i!}= https://proxy.golang.org/${i:!dirname $i!}/
 .endfor
 
@@ -128,10 +82,8 @@ post-extract:
 	cp ${DISTDIR}/${DIST_SUBDIR}/${i:!basename $i!} ${WRKDIR}/.goproxy/$i
 .endfor
 
-.endif
-
 _VARGROUPS+=		go
-_PKG_VARS.go=		GO_SRCPATH GO_DIST_BASE GO_BUILD_PATTERN
+_PKG_VARS.go=		GO_BUILD_PATTERN
 _USER_VARS.go=		GO_VERSION_DEFAULT
 _SYS_VARS.go=		GO GO_VERSION GOVERSSUFFIX GOARCH GOCHAR \
 			GOOPT GOTOOLDIR GO_PLATFORM
