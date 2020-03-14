@@ -1,0 +1,17 @@
+$NetBSD$
+
+Add documentation for NetBSD audio.
+
+--- doc/outdevs.texi.orig	2019-12-31 21:35:22.000000000 +0000
++++ doc/outdevs.texi
+@@ -220,6 +220,10 @@ ffmpeg -re -i INPUT -c:v rawvideo -pix_f
+ 
+ See also @url{http://linux-fbdev.sourceforge.net/}, and fbset(1).
+ 
++@section nbsdaudio
++
++NetBSD audio output.
++
+ @section opengl
+ OpenGL output device.
+ 

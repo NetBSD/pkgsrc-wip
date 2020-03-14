@@ -1,0 +1,90 @@
+$NetBSD$
+
+Enable PIC on NetBSD, even on i386 to avoid text relocations.
+Do not use 'rsync'.
+Portability fixes.
+Search for 'sys/audioio.h' to support NetBSD audio.
+
+--- configure.orig	2020-03-14 15:39:48.847772360 +0000
++++ configure
+@@ -2115,6 +2115,7 @@ HEADERS_LIST="
+     opencv2_core_core_c_h
+     OpenGL_gl3_h
+     poll_h
++    sys_audioio_h
+     sys_param_h
+     sys_resource_h
+     sys_select_h
+@@ -2257,7 +2258,6 @@ TOOLCHAIN_FEATURES="
+     inline_asm_labels
+     inline_asm_nonlocal_labels
+     pragma_deprecated
+-    rsync_contimeout
+     symver_asm_label
+     symver_gnu_asm
+     vfp_args
+@@ -3331,6 +3331,8 @@ kmsgrab_indev_deps="libdrm"
+ lavfi_indev_deps="avfilter"
+ libcdio_indev_deps="libcdio"
+ libdc1394_indev_deps="libdc1394"
++nbsdaudio_indev_deps_any="sys_audioio_h"
++nbsdaudio_outdev_deps_any="sys_audioio_h"
+ openal_indev_deps="openal"
+ opengl_outdev_deps="opengl"
+ opengl_outdev_suggest="sdl2"
+@@ -4950,9 +4952,9 @@ elif enabled mips; then
+                 disable mipsdsp
+                 disable mipsdspr2
+                 # When gcc version less than 5.3.0, add -fno-expensive-optimizations flag.
+-                if [ $cc == gcc ]; then
++                if [ $cc = gcc ]; then
+                     gcc_version=$(gcc -dumpversion)
+-                    if [ "$(echo "$gcc_version 5.3.0" | tr " " "\n" | sort -rV | head -n 1)" == "$gcc_version" ]; then
++                    if [ "$(echo "$gcc_version 5.3.0" | tr " " "\n" | sort -rV | head -n 1)" = "$gcc_version" ]; then
+                         expensive_optimization_flag=""
+                     else
+                         expensive_optimization_flag="-fno-expensive-optimizations"
+@@ -5247,6 +5249,7 @@ case $target_os in
+         ;;
+     netbsd)
+         disable symver
++        enable pic
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         enabled gcc || check_ldflags -Wl,-zmuldefs
+@@ -5639,10 +5642,13 @@ done
+ check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
+ 
+ # The global variable ensures the bits appear unchanged in the object file.
+-test_cc <<EOF || die "endian test failed"
+-unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
++test_exec <<EOF || enable bigendian
++int main()
++{
++ long one = 1;
++ return !(*((char *)(&one)));
++}
+ EOF
+-od -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
+ 
+ check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
+ 
+@@ -6427,7 +6433,6 @@ enabled makeinfo \
+ disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
+ perl -v            > /dev/null 2>&1 && enable perl      || disable perl
+ pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
+-rsync --help 2> /dev/null | grep -q 'contimeout' && enable rsync_contimeout || disable rsync_contimeout
+ 
+ # check V4L2 codecs available in the API
+ check_headers linux/fb.h
+@@ -6461,6 +6466,10 @@ check_headers "dev/bktr/ioctl_meteor.h d
+     check_headers "dev/video/meteor/ioctl_meteor.h dev/video/bktr/ioctl_bt848.h" ||
+     check_headers "dev/ic/bt8xx.h"
+ 
++if check_struct sys/audioio.h audio_info_t blocksize; then
++    enable_sanitized sys/audioio.h
++fi
++
+ if check_struct sys/soundcard.h audio_buf_info bytes; then
+     enable_sanitized sys/soundcard.h
+ else

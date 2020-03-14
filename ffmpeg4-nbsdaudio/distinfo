@@ -1,0 +1,21 @@
+$NetBSD$
+
+SHA1 (ffmpeg-4.2.2.tar.xz) = 2557ec7d1dee31169980a8a10404129f94bd5809
+RMD160 (ffmpeg-4.2.2.tar.xz) = 2f1ff99e3a2db7a17bb6b692dd394e6f3afd803d
+SHA512 (ffmpeg-4.2.2.tar.xz) = 381cd6732fa699eb89000621cf34256920596ed1f9de3c2194dbad35fdf2165269eb7d3a147a0eb75dc18fbb6d601382b5801750e09fc63547766842f84208e3
+Size (ffmpeg-4.2.2.tar.xz) = 9094140 bytes
+SHA1 (patch-Makefile) = 2d27f218ee49179fdea14bb5c86c506dfb64dbd6
+SHA1 (patch-configure) = 63253696e75f8d12953cb938ca452e0ec36994f2
+SHA1 (patch-doc_Makefile) = 3b86307323fa565f9ad19c5bcb6ea71d323062fc
+SHA1 (patch-doc_indevs.texi) = 0ca344129aca5abe1b664b39745676d2f24af9c7
+SHA1 (patch-doc_outdevs.texi) = cc014637c2d8928596e4db6019f9c9e7f7fd5752
+SHA1 (patch-libavdevice_Makefile) = 1d1073a3c73468e4c2c00aae48acbb7f2b402146
+SHA1 (patch-libavdevice_alldevices.c) = 8662bced2511d3ab6a6f0a7b7055978a3f6d06db
+SHA1 (patch-libavdevice_nbsdaudio.c) = 4e876a88375cc4d556475e8f4f23fb01d159d18b
+SHA1 (patch-libavdevice_nbsdaudio.h) = 3fde4e36921ab1219158effb94e7e9e14c3adae7
+SHA1 (patch-libavdevice_nbsdaudio__dec.c) = 7ccc2cb5c89e7a179e59ea82f4ad6e1e51a649df
+SHA1 (patch-libavdevice_nbsdaudio__enc.c) = a9e50c61fb31422e57918bf9b9b72d63ebf4253f
+SHA1 (patch-libavformat_sctp.c) = 22bad9c7dc152aec3c60e0009899af241f495535
+SHA1 (patch-libavutil_common.h) = d0f1093bc82567807b39dde990ee347f90a082c9
+SHA1 (patch-libavutil_x86_asm.h) = 8f48f9e8ec08b5176bb40fc0021f3bb913dbef22
+SHA1 (patch-libavutil_x86_cpu.c) = 9c97e68fde0fcb19741e034a803d509040ea4487
