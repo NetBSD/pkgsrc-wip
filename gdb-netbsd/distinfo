@@ -48,7 +48,6 @@ SHA1 (patch-gdb_i386-nbsd-nat.c) = 12583799f643f31849063acf10cb0dc36c68101f
 SHA1 (patch-gdb_i386-nbsd-tdep.c) = 002ece7989025a4bed1ce1eece9d225faf02c538
 SHA1 (patch-gdb_ia64-nbsd-tdep.c) = 4d1795b806b1b957f7959d57cdab7090c9510fe5
 SHA1 (patch-gdb_inf-ptrace.c) = caef41fb10c585b7b403a3dc6e82a924cc90becb
-SHA1 (patch-gdb_m68k-bsd-nat.c) = 5740879c53ea6db0ac9c54dd2426014493e03014
 SHA1 (patch-gdb_mips-nbsd-nat.c) = 1f71cb0d0c8792bfc80a456d294dad6d75b526b5
 SHA1 (patch-gdb_mips-tdep.h) = 24b3cf83513716492297645b2d5c4281ab12b493
 SHA1 (patch-gdb_nat_fork-inferior.c) = c15d3964c448e010958d8977825d6d46f8708e09
