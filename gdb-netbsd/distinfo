@@ -10,7 +10,6 @@ SHA1 (patch-gdb_Makefile.in) = dc465eda202863a23ce660ae5f8065a74e5c8fb4
 SHA1 (patch-gdb_aarch64-nbsd-nat.c) = 04ffc8ed696cb2349a67d302c2f8fa596484a9e6
 SHA1 (patch-gdb_aarch64-nbsd-tdep.c) = 7720b954f12031b60e1fa0a48ce668b104e09d41
 SHA1 (patch-gdb_aarch64-nbsd-tdep.h) = 814627b2b2ce5dc0dc095451183fbe03789f1513
-SHA1 (patch-gdb_alpha-bsd-nat.c) = 4d74177d2255c81fb91c293daaebfc29c4cb8398
 SHA1 (patch-gdb_alpha-nbsd-tdep.c) = 8fe9d1f08baa252b61b49c2672391c3349768444
 SHA1 (patch-gdb_alpha-tdep.c) = 9030c31dcef6660f58fc27e7979f0dae26e4f970
 SHA1 (patch-gdb_amd64-bsd-nat.c) = dea0bd38155f2a39f89f4f62dcbaf3e54ccd654f
