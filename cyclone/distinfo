@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (cyclone-bootstrap/v0.15.tar.gz) = 5e12d5b4944ddd2cede64ae578684383769fb552
-RMD160 (cyclone-bootstrap/v0.15.tar.gz) = 14e2c6547a2b748ab12a7a190ffae364296699f1
-SHA512 (cyclone-bootstrap/v0.15.tar.gz) = 48efe0e7e77dd0eef7bea9f7f4bd427a05a3e748695a02fb9d3a2f62d3c9e87b52457ea29080164d1c5981a736a8f6ddd40773feb1c12f215bbd7e1701110dfa
-Size (cyclone-bootstrap/v0.15.tar.gz) = 3112479 bytes
+SHA1 (cyclone-bootstrap/v0.16.tar.gz) = e1968a3d49beeb1b8824bc5b928c1976684786cc
+RMD160 (cyclone-bootstrap/v0.16.tar.gz) = 9a113688a2722f5bec86f157e09f60b75bb70c28
+SHA512 (cyclone-bootstrap/v0.16.tar.gz) = 44f13387b160808f6ae4a7173be5c67ad8899ecfe6266a11e1e88c64956fa9e656acc32c86dec6680ee3c1034b5772d9d616c31df310496c9440d81f5f9dd97c
+Size (cyclone-bootstrap/v0.16.tar.gz) = 3113257 bytes
 SHA1 (patch-Makefile) = 161e365902752ed81c987e862f79a20915828965
 SHA1 (patch-Makefile.config) = b5f857305be64f8c05c04449bf5125746e44eb51
