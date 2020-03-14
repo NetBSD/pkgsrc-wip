@@ -76,6 +76,5 @@ SHA1 (patch-gdb_user-regs.c) = ced798a4bb8765193bbde67811cea5b98e41d56f
 SHA1 (patch-gdb_vax-bsd-nat.c) = 999589c89a2db8a4b38435aa6e9263e72791f60c
 SHA1 (patch-gdb_x86-bsd-nat.c) = 615cbfb2b8b00a79fe94b2538d1b1dfc404b3262
 SHA1 (patch-include_elf_common.h) = 60e8ee09e6c4727af20686808a637e6d84758e5a
-SHA1 (patch-intl_Makefile.in) = cb9c50bbdfc086a59a549799254365a27d52feec
 SHA1 (patch-libiberty_make-temp-file.c) = 6e5c3fc9dde722a263cdbe3d51a714538a0c6cd1
 SHA1 (patch-sim_common_callback.c) = ac55e639ed6ba51c5daef5fffccc3413abeb1df2
