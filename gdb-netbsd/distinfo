@@ -5,7 +5,6 @@ RMD160 (gdb-8.2.1-7e24fb63e7db33d3627623629b0e99fe322e26f9.tar.gz) = 96040eb8f7e
 SHA512 (gdb-8.2.1-7e24fb63e7db33d3627623629b0e99fe322e26f9.tar.gz) = d7a8692ee1b27aecac64bf4176e5fa3e44e315e88da079c24107f3e5318e0e335f35b38426e72c118bd044d547fdd94650781fb1dd1297d33dd5a54c77e78988
 Size (gdb-8.2.1-7e24fb63e7db33d3627623629b0e99fe322e26f9.tar.gz) = 59113538 bytes
 SHA1 (patch-bfd_config.bfd) = 0fd42301a1577e353381a0bf677a7bcb5d32c3d8
-SHA1 (patch-bfd_configure) = 2345b0527e83debbfffd574eee74d10feecf2a00
 SHA1 (patch-bfd_merge.c) = dcb36bfd014e0b5bec17d6b6d475bf988021daee
 SHA1 (patch-gdb_Makefile.in) = dc465eda202863a23ce660ae5f8065a74e5c8fb4
 SHA1 (patch-gdb_aarch64-nbsd-nat.c) = 04ffc8ed696cb2349a67d302c2f8fa596484a9e6
