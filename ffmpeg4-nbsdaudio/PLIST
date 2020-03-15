@@ -214,6 +214,7 @@ ${PLIST.doc}share/doc/ffmpeg4/libavformat.html
 ${PLIST.doc}share/doc/ffmpeg4/libavutil.html
 ${PLIST.doc}share/doc/ffmpeg4/libswresample.html
 ${PLIST.doc}share/doc/ffmpeg4/libswscale.html
+${PLIST.doc}share/doc/ffmpeg4/mailing-list-faq.html
 share/doc/ffmpeg4/mips.txt
 share/doc/ffmpeg4/multithreading.txt
 ${PLIST.doc}share/doc/ffmpeg4/nut.html
