@@ -2,11 +2,11 @@ $NetBSD$
 
 Add support for NetBSD audio.
 
---- libavdevice/nbsdaudio_enc.c.orig	2020-03-14 15:39:35.204240213 +0000
+--- libavdevice/nbsdaudio_enc.c.orig	2020-03-15 17:33:20.411872730 +0000
 +++ libavdevice/nbsdaudio_enc.c
-@@ -0,0 +1,113 @@
+@@ -0,0 +1,107 @@
 +/*
-+ * Sun and NetBSD play and grab interface
++ * NetBSD play and grab interface
 + * Copyright (c) 2020 Yorick Hardy
 + *
 + * This file is part of FFmpeg.
@@ -48,17 +48,11 @@ Add support for NetBSD audio.
 +{
 +    NBSDAudioData *s = s1->priv_data;
 +    AVStream *st;
-+    int ret;
 +
 +    st = s1->streams[0];
 +    s->sample_rate = st->codecpar->sample_rate;
 +    s->channels = st->codecpar->channels;
-+    ret = ff_nbsdaudio_audio_open(s1, 1, s1->url);
-+    if (ret < 0) {
-+        return AVERROR(EIO);
-+    } else {
-+        return 0;
-+    }
++    return ff_nbsdaudio_audio_open(s1, 1, s1->url) < 0 ? AVERROR(EIO) : 0;
 +}
 +
 +static int audio_write_packet(AVFormatContext *s1, AVPacket *pkt)

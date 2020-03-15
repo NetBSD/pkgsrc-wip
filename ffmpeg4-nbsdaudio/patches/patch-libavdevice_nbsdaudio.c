@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD audio.
 
---- libavdevice/nbsdaudio.c.orig	2020-03-14 15:39:35.169889227 +0000
+--- libavdevice/nbsdaudio.c.orig	2020-03-15 17:26:08.418265764 +0000
 +++ libavdevice/nbsdaudio.c
-@@ -0,0 +1,129 @@
+@@ -0,0 +1,106 @@
 +/*
 + * NetBSD play and grab interface
 + * Copyright (c) 2020 Yorick Hardy
@@ -48,34 +48,14 @@ Add support for NetBSD audio.
 +                          const char *audio_device)
 +{
 +    NBSDAudioData *s = s1->priv_data;
-+    audio_info_t info;
++    struct audio_info info;
 +    struct audio_prinfo *prinfo;
 +    int audio_fd, err;
 +
-+    if (is_output)
-+        audio_fd = avpriv_open(audio_device, O_WRONLY);
-+    else
-+        audio_fd = avpriv_open(audio_device, O_RDONLY);
++    audio_fd = avpriv_open(audio_device, is_output ? O_WRONLY : O_RDONLY);
 +    if (audio_fd < 0) {
 +        av_log(s1, AV_LOG_ERROR, "%s: %s\n", audio_device, av_err2str(AVERROR(errno)));
 +        return AVERROR(EIO);
-+    }
-+
-+#if 0
-+    /* non blocking mode */
-+    if (!is_output) {
-+        if (fcntl(audio_fd, F_SETFL, O_NONBLOCK) < 0) {
-+            av_log(s1, AV_LOG_WARNING, "%s: Could not enable non block mode (%s)\n", audio_device, av_err2str(AVERROR(errno)));
-+        }
-+    }
-+#endif
-+
-+    s->frame_size = NBSDAUDIO_BLOCK_SIZE;
-+
-+#define CHECK_IOCTL_ERROR(event)                                              \
-+    if (err < 0) {                                                            \
-+        av_log(s1, AV_LOG_ERROR, #event ": %s\n", av_err2str(AVERROR(errno)));\
-+        goto fail;                                                            \
 +    }
 +
 +    AUDIO_INITINFO(&info);
@@ -92,24 +72,23 @@ Add support for NetBSD audio.
 +    prinfo->sample_rate = s->sample_rate;
 +    prinfo->channels = s->channels;
 +    prinfo->precision = 16;
-+    prinfo->pause = 0;
-+    
-+    err=ioctl(audio_fd, AUDIO_SETINFO, &info);
-+    CHECK_IOCTL_ERROR(AUDIO_SETINFO)
 +
-+    err=ioctl(audio_fd, AUDIO_GETINFO, &info);
-+    CHECK_IOCTL_ERROR(AUDIO_GETINFO)
-+
-+    s->fd = audio_fd;
-+    if (is_output) {
-+        s->sample_rate = prinfo->sample_rate;
-+        s->channels = prinfo->channels;
-+    } else {
-+        s->sample_rate = prinfo->sample_rate;
-+        s->channels = prinfo->channels;
++    if ((err = ioctl(audio_fd, AUDIO_SETINFO, &info)) < 0) {
++        av_log(s1, AV_LOG_ERROR, "AUDIO_SETINFO: %s\n", av_err2str(AVERROR(errno)));
++        goto fail;
 +    }
 +
-+    switch(prinfo->encoding) {
++    if ((err = ioctl(audio_fd, AUDIO_GETINFO, &info)) < 0) {
++        av_log(s1, AV_LOG_ERROR, "AUDIO_SETINFO: %s\n", av_err2str(AVERROR(errno)));
++        goto fail;
++    }
++
++    s->fd = audio_fd;
++    s->sample_rate = prinfo->sample_rate;
++    s->channels = prinfo->channels;
++    s->frame_size = NBSDAUDIO_BLOCK_SIZE;
++
++    switch (prinfo->encoding) {
 +    case AUDIO_ENCODING_SLINEAR_LE:
 +        s->codec_id = AV_CODEC_ID_PCM_S16LE;
 +        break;
@@ -117,16 +96,14 @@ Add support for NetBSD audio.
 +        s->codec_id = AV_CODEC_ID_PCM_S16BE;
 +        break;
 +    default:
-+        av_log(s1, AV_LOG_ERROR, "Soundcard does not support signed 16 bit sample format\n");
-+        close(audio_fd);
-+        return AVERROR(EIO);
++        av_log(s1, AV_LOG_ERROR, "Could not configure device for signed 16 bit sample format\n");
++        goto fail;
 +    }
 +
 +    return 0;
 + fail:
 +    close(audio_fd);
 +    return AVERROR(EIO);
-+#undef CHECK_IOCTL_ERROR
 +}
 +
 +int ff_nbsdaudio_audio_close(NBSDAudioData *s)
