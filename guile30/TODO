@@ -1,0 +1,8 @@
+  CCLD     libguile-3.0.la
+ld: .libs/libguile_3.0_la-posix.o: in function `scm_tmpnam':
+/scratch/wip/guile30/work/guile-3.0.1/libguile/posix.c:1605: warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
+  CCLD     guile
+ld: ./.libs/libguile-3.0.so: warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
+ld: ./.libs/libguile-3.0.so: undefined reference to `scm_i_pthread_key_create'
+
+Reported upstream as http://debbugs.gnu.org/cgi/bugreport.cgi?bug=40075

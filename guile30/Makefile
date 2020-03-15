@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	guile-3.0.0
+DISTNAME=	guile-3.0.1
 PKGNAME=	${DISTNAME:S/guile/guile30/}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
@@ -18,7 +18,7 @@ GUILE_SUBDIR=	guile/3.0
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-shared
 # not until boehm-gc is threaded
-CONFIGURE_ARGS+=	--without-threads
+#CONFIGURE_ARGS+=	--without-threads
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl

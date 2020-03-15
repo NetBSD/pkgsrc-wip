@@ -1,19 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.2 2019/07/14 21:46:22 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3.0019/07/14 21:46:30 rillig Exp $
 
-BUILDLINK_TREE+=	guile22
+BUILDLINK_TREE+=	guile30
 
-.if !defined(GUILE22_BUILDLINK3_MK)
-GUILE22_BUILDLINK3_MK:=
+.if !defined(GUILE30_BUILDLINK3_MK)
+GUILE30_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.guile22+=	guile22>=2.2
-BUILDLINK_PKGSRCDIR.guile22?=	../../lang/guile22
+BUILDLINK_API_DEPENDS.guile30+=	guile30>=3.0
+BUILDLINK_PKGSRCDIR.guile30?=	../../lang/guile30
 
-BUILDLINK_PASSTHRU_DIRS=		${PREFIX}/guile/2.2
-BUILDLINK_FILES.guile22+=		guile/2.2/bin/*
-BUILDLINK_FNAME_TRANSFORM.guile22+=	-e s,guile/2.2/bin,bin,
-BUILDLINK_FNAME_TRANSFORM.guile22+=	-e s,guile/2.2/lib/pkgconfig,lib/pkgconfig,
+BUILDLINK_PASSTHRU_DIRS=		${PREFIX}/guile/3.0
+BUILDLINK_FILES.guile30+=		guile/3.0/bin/*
+BUILDLINK_FNAME_TRANSFORM.guile30+=	-e s,guile/3.0/bin,bin,
+BUILDLINK_FNAME_TRANSFORM.guile30+=	-e s,guile/3.0/lib/pkgconfig,lib/pkgconfig,
 
-GUILE22_SUBDIR=				guile/2.2
+GUILE30_SUBDIR=				guile/3.0
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
@@ -23,6 +23,6 @@ GUILE22_SUBDIR=				guile/2.2
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
-.endif # GUILE22_BUILDLINK3_MK
+.endif # GUILE30_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-guile22
+BUILDLINK_TREE+=	-guile30

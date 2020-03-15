@@ -14,11 +14,11 @@
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 
-.if defined(GUILE_NEED_BOOTSTRAP)
+.  if defined(GUILE_NEED_BOOTSTRAP)
 USE_TOOLS+=		automake autoconf autoreconf
 pre-configure:
 	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -I${PREFIX}/guile/2.2/share/aclocal -vif)
-.endif
+.  endif
 
 .include "../../lang/guile22/buildlink3.mk"
 .endif
