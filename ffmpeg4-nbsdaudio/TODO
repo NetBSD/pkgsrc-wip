@@ -1,4 +1,4 @@
-* Read and write blocksize bytes at a time.
+* Check which items are sun compatible below.
 * indev: Add options for available formats (precision/encoding)?
 * indev: Verify that selected format is supported?
 * indev: Read one frame to start recording, i.e. the minimum number of bytes.
