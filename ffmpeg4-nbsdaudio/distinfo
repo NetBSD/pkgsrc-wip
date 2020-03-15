@@ -7,6 +7,7 @@ Size (ffmpeg-4.2.2.tar.xz) = 9094140 bytes
 SHA1 (patch-Makefile) = 2d27f218ee49179fdea14bb5c86c506dfb64dbd6
 SHA1 (patch-configure) = 63253696e75f8d12953cb938ca452e0ec36994f2
 SHA1 (patch-doc_Makefile) = 3b86307323fa565f9ad19c5bcb6ea71d323062fc
+SHA1 (patch-doc_general.texi) = 9d6209d427f422275b8f9ee622b459bab7af7b69
 SHA1 (patch-doc_indevs.texi) = 0ca344129aca5abe1b664b39745676d2f24af9c7
 SHA1 (patch-doc_outdevs.texi) = cc014637c2d8928596e4db6019f9c9e7f7fd5752
 SHA1 (patch-libavdevice_Makefile) = 1d1073a3c73468e4c2c00aae48acbb7f2b402146
