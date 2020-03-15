@@ -119,7 +119,7 @@ MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 BUILDLINK_TARGETS+=	fake-krb5-config
 
 fake-krb5-config:
-	${_PKG_SILENT}${_PKG_DEBUG} \
+	${RUN} \
 	src=../../security/heimdal/files/krb5-config \
         dst=${BUILDLINK_DIR}/bin/krb5-config; \
 	${SED} -e s/@HEIMDAL_VERSION@/${BUILTIN_VERSION.heimdal}/ \
