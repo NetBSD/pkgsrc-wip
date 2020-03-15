@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD audio.
 
---- libavdevice/nbsdaudio.c.orig	2020-03-15 17:26:08.418265764 +0000
+--- libavdevice/nbsdaudio.c.orig	2020-03-15 19:23:38.114268444 +0000
 +++ libavdevice/nbsdaudio.c
-@@ -0,0 +1,106 @@
+@@ -0,0 +1,102 @@
 +/*
 + * NetBSD play and grab interface
 + * Copyright (c) 2020 Yorick Hardy
@@ -30,9 +30,7 @@ Add support for NetBSD audio.
 +
 +#include <string.h>
 +
-+#if HAVE_UNISTD_H
 +#include <unistd.h>
-+#endif
 +#include <fcntl.h>
 +#include <sys/audioio.h>
 +#include <sys/ioctl.h>
@@ -60,18 +58,16 @@ Add support for NetBSD audio.
 +
 +    AUDIO_INITINFO(&info);
 +
-+    if (is_output) {
-+        prinfo = &(info.play);
-+        info.mode = AUMODE_PLAY;
-+    } else {
-+        prinfo = &(info.record);
-+        info.mode = AUMODE_RECORD;
-+    }
++#ifdef AUMODE_PLAY /* BSD only */
++    info.mode = is_output ? AUMODE_PLAY : AUMODE_RECORD;
++#endif
 +
-+    prinfo->encoding = AUDIO_ENCODING_SLINEAR;
++    prinfo = is_output ? &info.play : &info.record;
++
++    prinfo->encoding = AUDIO_ENCODING_LINEAR;
++    prinfo->precision = 16;
 +    prinfo->sample_rate = s->sample_rate;
 +    prinfo->channels = s->channels;
-+    prinfo->precision = 16;
 +
 +    if ((err = ioctl(audio_fd, AUDIO_SETINFO, &info)) < 0) {
 +        av_log(s1, AV_LOG_ERROR, "AUDIO_SETINFO: %s\n", av_err2str(AVERROR(errno)));
@@ -79,24 +75,24 @@ Add support for NetBSD audio.
 +    }
 +
 +    if ((err = ioctl(audio_fd, AUDIO_GETINFO, &info)) < 0) {
-+        av_log(s1, AV_LOG_ERROR, "AUDIO_SETINFO: %s\n", av_err2str(AVERROR(errno)));
++        av_log(s1, AV_LOG_ERROR, "AUDIO_GETINFO: %s\n", av_err2str(AVERROR(errno)));
 +        goto fail;
 +    }
 +
 +    s->fd = audio_fd;
++#ifdef HAVE_BIGENDIAN
++    s->codec_id = AV_CODEC_ID_PCM_S16BE;
++#else
++    s->codec_id = AV_CODEC_ID_PCM_S16LE;
++#endif
++    s->precision = prinfo->precision;
 +    s->sample_rate = prinfo->sample_rate;
 +    s->channels = prinfo->channels;
-+    s->frame_size = NBSDAUDIO_BLOCK_SIZE;
 +
-+    switch (prinfo->encoding) {
-+    case AUDIO_ENCODING_SLINEAR_LE:
-+        s->codec_id = AV_CODEC_ID_PCM_S16LE;
-+        break;
-+    case AUDIO_ENCODING_SLINEAR_BE:
-+        s->codec_id = AV_CODEC_ID_PCM_S16BE;
-+        break;
-+    default:
-+        av_log(s1, AV_LOG_ERROR, "Could not configure device for signed 16 bit sample format\n");
++    s->frame_size = 32 * prinfo->precision * prinfo->channels;
++
++    if ((s->buffer = malloc(s->frame_size)) == NULL) {
++        av_log(s1, AV_LOG_ERROR, "malloc: %s\n", av_err2str(AVERROR(errno)));
 +        goto fail;
 +    }
 +

@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD audio.
 
---- libavdevice/nbsdaudio.h.orig	2020-03-14 15:39:35.182631007 +0000
+--- libavdevice/nbsdaudio.h.orig	2020-03-15 19:23:38.138784844 +0000
 +++ libavdevice/nbsdaudio.h
-@@ -0,0 +1,44 @@
+@@ -0,0 +1,43 @@
 +/*
 + * This file is part of FFmpeg.
 + *
@@ -30,16 +30,15 @@ Add support for NetBSD audio.
 +
 +#include "libavformat/avformat.h"
 +
-+#define NBSDAUDIO_BLOCK_SIZE 4096
-+
 +typedef struct NBSDAudioData {
 +    AVClass *class;
 +    int fd;
 +    int sample_rate;
 +    int channels;
 +    int frame_size; /* in bytes ! */
++    int precision;
 +    enum AVCodecID codec_id;
-+    uint8_t buffer[NBSDAUDIO_BLOCK_SIZE];
++    uint8_t *buffer;
 +    int buffer_ptr;
 +} NBSDAudioData;
 +

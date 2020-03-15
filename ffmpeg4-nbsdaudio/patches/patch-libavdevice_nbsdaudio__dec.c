@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD audio.
 
---- libavdevice/nbsdaudio_dec.c.orig	2020-03-15 17:26:08.461803619 +0000
+--- libavdevice/nbsdaudio_dec.c.orig	2020-03-15 19:23:38.163902783 +0000
 +++ libavdevice/nbsdaudio_dec.c
-@@ -0,0 +1,141 @@
+@@ -0,0 +1,133 @@
 +/*
 + * NetBSD play and grab interface
 + * Copyright (c) 2020 Yorick Hardy
@@ -30,9 +30,7 @@ Add support for NetBSD audio.
 +
 +#include <stdint.h>
 +
-+#if HAVE_UNISTD_H
 +#include <unistd.h>
-+#endif
 +#include <fcntl.h>
 +#include <poll.h>
 +#include <sys/audioio.h>
@@ -53,16 +51,13 @@ Add support for NetBSD audio.
 +{
 +    NBSDAudioData *s = s1->priv_data;
 +    AVStream *st;
-+    int ret;
-+    uint8_t b[4]; /* enough for 1 frame: 2 channels * 16 bit */
 +
 +    st = avformat_new_stream(s1, NULL);
 +    if (!st) {
 +        return AVERROR(ENOMEM);
 +    }
 +
-+    ret = ff_nbsdaudio_audio_open(s1, 0, s1->url);
-+    if (ret < 0) {
++    if (ff_nbsdaudio_audio_open(s1, 0, s1->url) < 0) {
 +        return AVERROR(EIO);
 +    }
 +
@@ -73,9 +68,6 @@ Add support for NetBSD audio.
 +    st->codecpar->channels = s->channels;
 +
 +    avpriv_set_pts_info(st, 64, 1, 1000000);  /* 64 bits pts in us */
-+
-+    /* start recording */
-+    read(s->fd, b, 4);
 +
 +    return 0;
 +}
@@ -106,7 +98,7 @@ Add support for NetBSD audio.
 +    }
 +
 +    /* subtract time represented by the number of bytes in the audio fifo */
-+    cur_time -= (bdelay * 1000000LL) / (s->sample_rate * s->channels);
++    cur_time -= (bdelay * 1000000LL) / (s->sample_rate * s->channels * s->precision);
 +
 +    /* convert to wanted units */
 +    pkt->pts = cur_time;

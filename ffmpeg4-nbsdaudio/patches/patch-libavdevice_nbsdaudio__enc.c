@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD audio.
 
---- libavdevice/nbsdaudio_enc.c.orig	2020-03-15 17:33:20.411872730 +0000
+--- libavdevice/nbsdaudio_enc.c.orig	2020-03-15 19:23:38.188567160 +0000
 +++ libavdevice/nbsdaudio_enc.c
-@@ -0,0 +1,107 @@
+@@ -0,0 +1,106 @@
 +/*
 + * NetBSD play and grab interface
 + * Copyright (c) 2020 Yorick Hardy
@@ -28,9 +28,7 @@ Add support for NetBSD audio.
 +
 +#include "config.h"
 +
-+#if HAVE_UNISTD_H
 +#include <unistd.h>
-+#endif
 +#include <fcntl.h>
 +#include <sys/audioio.h>
 +#include <sys/ioctl.h>
@@ -52,6 +50,7 @@ Add support for NetBSD audio.
 +    st = s1->streams[0];
 +    s->sample_rate = st->codecpar->sample_rate;
 +    s->channels = st->codecpar->channels;
++    s->codec_id = st->codecpar->codec_id;
 +    return ff_nbsdaudio_audio_open(s1, 1, s1->url) < 0 ? AVERROR(EIO) : 0;
 +}
 +
@@ -63,12 +62,12 @@ Add support for NetBSD audio.
 +    uint8_t *buf= pkt->data;
 +
 +    while (size > 0) {
-+        len = FFMIN(NBSDAUDIO_BLOCK_SIZE - s->buffer_ptr, size);
++        len = FFMIN(s->frame_size - s->buffer_ptr, size);
 +        memcpy(s->buffer + s->buffer_ptr, buf, len);
 +        s->buffer_ptr += len;
-+        if (s->buffer_ptr >= NBSDAUDIO_BLOCK_SIZE) {
++        if (s->buffer_ptr >= s->frame_size) {
 +            for(;;) {
-+                ret = write(s->fd, s->buffer, NBSDAUDIO_BLOCK_SIZE);
++                ret = write(s->fd, s->buffer, s->frame_size);
 +                if (ret > 0)
 +                    break;
 +                if (ret < 0 && (errno != EAGAIN && errno != EINTR))
