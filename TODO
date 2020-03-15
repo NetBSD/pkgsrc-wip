@@ -36,6 +36,7 @@ Suggested package updates
 	o gcc42-4.2.4
 	o gcc43-4.3.4
 	o geant-4.10.01p02
+	o geoclue-2.4.13
 	o gforge-4.5.11
 	o giggle-0.6.1
 	o gitg-0.3.2
@@ -90,6 +91,7 @@ Suggested package updates
 	o neovim-0.4.0
 	o ogmrip-1.0.0
 	o omega-1.2.10
+	o openblas-0.3.9
 	o openvrml-0.18.9
 	o parted-1.9.0
 	o passepartout-0.7.1
