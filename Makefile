@@ -2131,6 +2131,7 @@ SUBDIR+=	mat
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	matiec-hg
+SUBDIR+=	mattermost-server
 SUBDIR+=	mawk-libc
 SUBDIR+=	mawk-onig
 SUBDIR+=	mawk-rxspencer
