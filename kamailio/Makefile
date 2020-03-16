@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	5.3.2
+VERSION=	5.3.3
 DISTNAME=	kamailio-${VERSION}_src
 PKGNAME=	kamailio-${VERSION}
 CATEGORIES=	comms

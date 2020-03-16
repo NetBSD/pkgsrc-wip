@@ -5,9 +5,18 @@ but Linux).
 
 Not yet filed upstream.
 
---- src/Makefile.defs.orig	2019-11-14 11:38:12.000000000 +0000
+--- src/Makefile.defs.orig	2020-03-16 14:17:27.000000000 +0000
 +++ src/Makefile.defs
-@@ -440,15 +440,7 @@ endif
+@@ -212,7 +212,7 @@ endif
+ 
+ ifeq ($(LIBSSL_SET_MUTEX_SHARED), 1)
+ CC_PMUTEX_OPTS = -pthread -DKSR_PTHREAD_MUTEX_SHARED
+-LD_PMUTEX_OPTS = -pthread -rdynamic -ldl -Wl,-Bsymbolic-functions
++LD_PMUTEX_OPTS = -pthread -rdynamic -Wl,-Bsymbolic-functions
+ else
+ CC_PMUTEX_OPTS =
+ LD_PMUTEX_OPTS =
+@@ -443,15 +443,7 @@ endif
  
  $(info target architecture <$(ARCH)>, host architecture <$(HOST_ARCH)>)
  
@@ -24,3 +33,20 @@ Not yet filed upstream.
  
  # dirs
  cfg_dir = etc/$(MAIN_NAME)/
+@@ -1821,7 +1813,7 @@ ifeq ($(YACC),)
+ endif
+ YACC_FLAGS=-d -b core/cfg
+ # on solaris add -lxnet (e.g. LIBS= -lxnet)
+-LIBS= -ldl -lresolv
++LIBS= -lresolv
+ LIB_PREFIX:=lib
+ LIB_SUFFIX:=.so
+ 
+@@ -2042,6 +2034,7 @@ ifeq ($(OS), netbsd)
+ 	ifneq ($(found_lock_method), yes)
+ 		C_DEFS+= -DUSE_SYSV_SEM  # try pthread sems
+ 		found_lock_method=yes
++		LIBS+= -pthread   #dlopen is in libc
+ 	endif
+ 	# check for ver >= 2.0.0
+ 	ifeq ($(shell [ $(OSREL_N) -ge 2000000 ] && echo has_kqueue), has_kqueue)
