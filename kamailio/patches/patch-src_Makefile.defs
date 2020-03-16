@@ -7,9 +7,12 @@ Not yet filed upstream.
 
 --- src/Makefile.defs.orig	2020-03-16 14:17:27.000000000 +0000
 +++ src/Makefile.defs
-@@ -212,7 +212,7 @@ endif
+@@ -210,9 +210,9 @@ endif
  
- ifeq ($(LIBSSL_SET_MUTEX_SHARED), 1)
+ endif
+ 
+-ifeq ($(LIBSSL_SET_MUTEX_SHARED), 1)
++ifeq ($(LIBSSL_SET_MUTEX_SHARED), 2)
  CC_PMUTEX_OPTS = -pthread -DKSR_PTHREAD_MUTEX_SHARED
 -LD_PMUTEX_OPTS = -pthread -rdynamic -ldl -Wl,-Bsymbolic-functions
 +LD_PMUTEX_OPTS = -pthread -rdynamic -Wl,-Bsymbolic-functions

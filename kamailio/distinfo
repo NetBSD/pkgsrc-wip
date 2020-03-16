@@ -4,5 +4,5 @@ SHA1 (kamailio-5.3.3_src.tar.gz) = 89552042bf8cdc04ccf183fa86df4af699d70fbf
 RMD160 (kamailio-5.3.3_src.tar.gz) = f2d25772de8418f887a3977f35554ee6ca5b36bf
 SHA512 (kamailio-5.3.3_src.tar.gz) = 99c0216a32a0b70ad7608dd9967890107a47a0692a1305bca98cbcecbdca8fe1ac6a1377a1d09ea6f1e99ba011b0fe2bd69a8bf4c92113b249e608fa14f66e3d
 Size (kamailio-5.3.3_src.tar.gz) = 12447194 bytes
-SHA1 (patch-src_Makefile.defs) = eacc2d36bf93b0a0d8a7f606434c4e90d4a17f29
+SHA1 (patch-src_Makefile.defs) = e3ceaa0e1ffd1520b5e64b59a9aba2867ad0e1ba
 SHA1 (patch-src_lib_srdb1_db__ut.c) = ecdc2d3185e9497127a4662794a8ec779cb20165
