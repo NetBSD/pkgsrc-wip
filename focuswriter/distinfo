@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (focuswriter-1.7.4.tar.gz) = 1509242e22eed2d51b3e439d7e7f736cda55f734
-RMD160 (focuswriter-1.7.4.tar.gz) = e74330854c3bad04781cc5e643b951520e6e5a0e
-SHA512 (focuswriter-1.7.4.tar.gz) = ffe2827f3209eafb35c37eda76d218808760ac287e1c3462ccf05a96d8f546699eb5cf21ecfdf8960b4ef414e2a0aca04f1b6bd8b507a7edda4e0029fd83e875
-Size (focuswriter-1.7.4.tar.gz) = 10512419 bytes
+SHA1 (focuswriter-1.7.5.tar.gz) = 01cee2ef864eecf8f1ee1a483b23f4ded1c04633
+RMD160 (focuswriter-1.7.5.tar.gz) = 4a5c606ed76c38f50c2bd83114cee9bf55033f0f
+SHA512 (focuswriter-1.7.5.tar.gz) = eda2f56e761dcc62eebaed4800e24843351bd5617c8f84db22c3af0619fb16be983230165dd9b45991e91d65617d3793bf03b8fd7d5c26dbd8140bbd269e2bc0
+Size (focuswriter-1.7.5.tar.gz) = 10512339 bytes
 SHA1 (patch-focuswriter.pro) = 23764285b604fc533c28b67d25e62d5498d5f7b0

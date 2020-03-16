@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	focuswriter-1.7.4
+DISTNAME=	focuswriter-1.7.5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gottcode/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
