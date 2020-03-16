@@ -2409,7 +2409,6 @@ SUBDIR+=	nspr-hg
 SUBDIR+=	nss-hg
 SUBDIR+=	nss-pam-ldapd
 SUBDIR+=	ntimed-git
-SUBDIR+=	nudoku
 SUBDIR+=	nuget-git
 SUBDIR+=	nullpop
 SUBDIR+=	num-utils
