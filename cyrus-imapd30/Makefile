@@ -1,6 +1,7 @@
 # $NetBSD: $
 
 DISTNAME=	cyrus-imapd-3.0.13
+REVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrusimap/}
 GITHUB_RELEASE=	${PKGNAME_NOREV}
@@ -84,29 +85,34 @@ BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.17
 # "/etc/{cyrus,imapd}.conf" into "${PKG_SYSCONFDIR}/{cyrus,imapd}.conf".
 #
 post-patch:
-	cd ${WRKSRC}/man;						\
-	set --	deliver 8 fetchnews 8 idled 8 imapd 8 lmtpd 8 master 8	\
-		nntpd 8	notifyd 8 pop3d 8 quota 8 httpd 8 httpdtest 8;			\
-	while [ $$# -gt 0 ]; do						\
-		man=$$1.$$2;						\
-		for file in *.[0-9]; do			\
+	cd ${WRKSRC}/man; \
+	set --	deliver 8 fetchnews 8 idled 8 imapd 8 lmtpd 8 master 8 \
+		nntpd 8 notifyd 8 pop3d 8 quota 8 httpd 8 httpdtest 8; \
+	while [ $$# -gt 0 ]; do	\
+		man=$$1.$$2; \
+		for file in *.[0-9]; do \
 			sed	-e "s|\(\$$(srcdir)/\)\($$man\)|\1cyrus-\2|g" \
 				-e "s|\(\\\fB\)\($$1($$2)\\\fR\)|\1cyrus-\2|g" \
-				$$file > $$file.fixed;			\
-			mv -f $$file.fixed $$file;			\
-		done;							\
-		if [ -f $$man ]; then					\
-			mv $$man cyrus-$$man;			\
-		fi;							\
-		shift 2;						\
+				$$file > $$file.fixed; \
+			mv -f $$file.fixed $$file; \
+		done; \
+		if [ -f $$man ]; then \
+			mv $$man cyrus-$$man; \
+		fi; \
+		for file in ../Makefile.in ../Makefile.am; do	\
+			sed	-e "s|man/$$man|man/cyrus-$$man|g" \
+				$$file > $$file.fixed; \
+			mv -f $$file.fixed $$file; \
+		done; \
+		shift 2; \
 	done
-	find ${WRKSRC} -type f -print |					\
+	find ${WRKSRC} -type f -print | \
 	xargs -n 1 ${GREP} -l -e /etc/imapd\.conf -e /etc/cyrus\.conf | \
-	while read file; do						\
+	while read file; do \
 		sed	-e "s|/etc/\(cyrus\.conf\)|${PKG_SYSCONFDIR}/\1|g" \
 			-e "s|/etc/\(imapd\.conf\)|${PKG_SYSCONFDIR}/\1|g" \
-			$${file} > $${file}.fixed;			\
-		mv -f $${file}.fixed $${file};			\
+			$${file} > $${file}.fixed; \
+		mv -f $${file}.fixed $${file}; \
 	done
 
 post-install:
