@@ -57,7 +57,6 @@ SHA1 (patch-gdb_regformats_regdef.h) = a126d2537ade44f669a7a6bcd59dcd89188554d1
 SHA1 (patch-gdb_sh-nbsd-nat.c) = f316feea0192b6926ebe01d0fc83effe632ae063
 SHA1 (patch-gdb_sh-nbsd-tdep.c) = 868d765ebf6c2d4dfb1319653c9312da1ce45a8e
 SHA1 (patch-gdb_sh-nbsd-tdep.h) = 6dca499544ec3e95cd2c10a07926d1e80ab6d109
-SHA1 (patch-gdb_sparc-nat.h) = 1a10f19afb13dd25eb0aef1486a48d8c6c4ac647
 SHA1 (patch-gdb_sparc-nbsd-nat.c) = 4aa8d16cf1210125f9117680014f2d8eaa36e681
 SHA1 (patch-gdb_sparc-nbsd-tdep.c) = c61b63a6673402852a2e95b06d382b8eda1653e9
 SHA1 (patch-gdb_sparc-nbsd-tdep.h) = 7520c8d0d465883abc4a302f1efabd9e52492acc
