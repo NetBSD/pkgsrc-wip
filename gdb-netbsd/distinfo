@@ -23,7 +23,6 @@ SHA1 (patch-gdb_configure) = 681e095fdd15432dbc094bf70e5a5b7c67637ad7
 SHA1 (patch-gdb_configure.host) = 427f6dbc2f4373e7e9bede77ccb7a3cd28c74d14
 SHA1 (patch-gdb_configure.nat) = ba5ad6fe4c31b5f5e81bd69c81feb70c36b0f7df
 SHA1 (patch-gdb_configure.tgt) = 6e32066a87234a90c905a0ab17a32ef84a903d0a
-SHA1 (patch-gdb_doc_stabs.texinfo) = 42e4864a3e5725b139aaabcadd4b982e39826f8a
 SHA1 (patch-gdb_gdbserver_Makefile.in) = c14e0e580515b849b1ddac65d50b2f757645cea6
 SHA1 (patch-gdb_gdbserver_configure.srv) = d492edda5a6f7e70a2279ebe7409e557672b92aa
 SHA1 (patch-gdb_gdbserver_netbsd-low.c) = 6b79896787cfde6b1c7029e4ad7cd62e274dd23d

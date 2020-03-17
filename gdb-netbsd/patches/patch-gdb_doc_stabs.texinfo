@@ -1,5 +1,0 @@
-Cannot strip away RCS IDs, please handle manually!
-These are the matching lines:
-   -\xdef\manvers{\$Revision$}  % For use in headers, footers too
-Setting PKGDIFF_FMT might help.
-Otherwise you may need to run diff by hand.
