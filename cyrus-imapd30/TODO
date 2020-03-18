@@ -23,14 +23,26 @@ Done:
 
 - Integrated documentation from source package into the package
 
+- Possibly create further patches for cyrus-imap 3 (especially with
+  regard to the newly added functions CalDAV / CardDAV), if necessary
+
 Next steps:
 
 - regenerate documentation at build time using Sphinx
 
-- Possibly create further patches for cyrus-imap 3 (especially with
-  regard to the newly added functions CalDAV / CardDAV), if necessary
-
 Bugs:
+
+- The way how the Dav-Patch is integrated. It is not a security patch
+  nor a patch that would be necessary to ensure the build.
+  In principle, it eliminates a functional deficiency, which may
+  not be a deficiency at all, but simply an implementation gap.
+  pkgsrc is therefore not the right place to deal with this problem,
+  I'm almost sure of that. Without this patch, the CalDAV / CardDAV
+  functionality cannot be used meaningfully for me, and in my
+  experience it will also be for most other users who want to
+  maintain a shared calendar, for example. I will definitely keep
+  an eye on what is going on upstream. In the meantime, I would like
+  to keep the patch here if there are no important reasons why.
 
 - Kerberos support, PostgreSQL and MySQL are currently not tested
 
