@@ -17,8 +17,6 @@ GUILE_SUBDIR=	guile/3.0
 # guile does not like the --build and --host triplets on NetBSD
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-shared
-# not until boehm-gc is threaded
-#CONFIGURE_ARGS+=	--without-threads
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl
@@ -81,10 +79,10 @@ post-configure:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
-# needs a particular bug fix on NetBSD
-BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4.2nb1
+# needs threaded boehm-gc
+BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=8.0.4nb1
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-#.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

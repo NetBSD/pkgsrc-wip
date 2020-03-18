@@ -1,3 +1,30 @@
+On NetBSD:
+
+With threads support:
+
+Needs "sysctl -w security.pax.mprotect.enabled=0".
+
+Test failures:
+error: 'guild compile' failed to remove 't-guild-compile-23088.go.RI4Ae9'
+FAIL: test-guild-compile
+...
+SKIP: test-pthread-create-secondary
+...
+wrote `/scratch/wip/guile30/work/guile-3.0.1/cache/guile/ccache/3.0-LE-8-4.2/scratch/wip/guile30/work/guile-3.0.1/test-suite/standalone/test-out-of-memory.go'                 GC Warning: Failed to expand heap by 134348800 bytes
+GC Warning: Failed to expand heap by 134217728 bytes
+GC Warning: Out of Memory! Heap size: 1 MiB. Returning NULL!
+error creating finalization thread: Cannot allocate memory
+GC Warning: Failed to expand heap by 1000132608 bytes
+GC Warning: Failed to expand heap by 1000001536 bytes
+GC Warning: Out of Memory! Heap size: 1 MiB. Returning NULL!
+mmap(PROT_NONE) failed
+[1]   Abort trap (core dumped) top_srcdir="../.." srcdir="." builddir="." CHA...
+FAIL: test-out-of-memory
+
+  (same as with guile22-2.2.7)
+
+Without threads support, doesn't build:
+
   CCLD     libguile-3.0.la
 ld: .libs/libguile_3.0_la-posix.o: in function `scm_tmpnam':
 /scratch/wip/guile30/work/guile-3.0.1/libguile/posix.c:1605: warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
