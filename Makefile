@@ -3821,7 +3821,6 @@ SUBDIR+=	py-processing
 SUBDIR+=	py-prody
 SUBDIR+=	py-progressbar
 SUBDIR+=	py-progressbar2
-SUBDIR+=	py-proj
 SUBDIR+=	py-propyte
 SUBDIR+=	py-psamm
 SUBDIR+=	py-pseudopy
