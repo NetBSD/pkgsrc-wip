@@ -60,7 +60,6 @@ REPLACE_PYTHON+=	codelite_open_helper.py
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
 
 .include "../../lang/nodejs/application.mk"
-.include "../../lang/nodejs/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
