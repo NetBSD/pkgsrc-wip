@@ -317,7 +317,6 @@ SUBDIR+=	bugzilla
 SUBDIR+=	bup-git
 SUBDIR+=	busybox
 SUBDIR+=	bwa
-SUBDIR+=	bystand
 SUBDIR+=	byzanz
 SUBDIR+=	c-graph
 SUBDIR+=	c-news
