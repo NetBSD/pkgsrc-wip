@@ -1,0 +1,30 @@
+$NetBSD$
+
+--- make.local.orig	2011-08-03 15:03:55.000000000 +0000
++++ make.local
+@@ -11,7 +11,7 @@
+ ifeq ($(USEGLPK),1)
+ 
+ # Path to GLPK main dir
+-GLPKDIR=$(PWD)/../glpk
++GLPKDIR=/usr/pkg
+ 
+ # Path to the GPLK include files
+ GLPKINC=$(GLPKDIR)/include/
+@@ -34,13 +34,13 @@ endif
+ ifeq ($(USELPSOLVE),1)
+ 
+ # Path to the LPSOLVE main dir
+-LPSOLVEDIR=$(PWD)/../lpsolve/dev
++LPSOLVEDIR=/usr/pkg
+ 
+ # Path to the LPSOLVE include files
+-LPSOLVEINC=${LPSOLVEDIR}
++LPSOLVEINC=${LPSOLVEDIR}/include/lpsolve
+ 
+ # LPSOLVE library path and options
+-LPSOLVELD=-L${LPSOLVEDIR} -llpsolve55 -Wl,-rpath,${LPSOLVEDIR}
++LPSOLVELD=-L${LPSOLVEDIR}/lib -llpsolve55 -Wl,-rpath,${LPSOLVEDIR}/lib
+ 
+ endif
+ 

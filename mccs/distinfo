@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (mccs-1.1-srcs.tgz) = 1d421690ccdc79feb0d8f1776300ac7fbbc9ca10
+RMD160 (mccs-1.1-srcs.tgz) = e6ee8542c021aced01f82a8992622eba39fc6766
+SHA512 (mccs-1.1-srcs.tgz) = 95cd0af58115202dc1bb8deaae28b25662e06cbbcb195c608a01083d4c602bcc1ede213dbc4e8ece7b9ab4afc9ef419fa57c284602dc0c908595e77710281de4
+Size (mccs-1.1-srcs.tgz) = 65553 bytes
+SHA1 (patch-make.local) = 174dd71f0c657f1398401b825a4c813b207d04ac
+SHA1 (patch-sources_leximax__combiner.c) = 16cf583cbca9971dfceb6ccb6f63ae20fce0fbb7
+SHA1 (patch-sources_leximin__combiner.c) = 5ab838bc1b7f67893e1e46bdd4807f694b55aaa5
+SHA1 (patch-sources_lexleximax__combiner.c) = 3b5715c0a85787ad73e2909fbf088172e33f1624
+SHA1 (patch-sources_lexleximin__combiner.c) = 49ce2cf6dfcba758615f66b90eba6a2d9911708d
