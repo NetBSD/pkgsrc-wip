@@ -12,13 +12,16 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c fortran
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake flex
 MAKE_FILE=	GNUmakefile
+MAKE_JOBS_SAFE=	NO
 PKGCONFIG_OVERRIDE+=	wcslib.pc.in
 
 # We could use pgplot, but it is not legally
 # mirror-able and also really, really old.
 CONFIGURE_ARGS+=	--without-pgplot
+CONFIGURE_ARGS+=	--with-cfitsiolib=${BUILDLINK_PREFIX.cfitsio:Q}/lib
+CONFIGURE_ARGS+=	--with-cfitsioinc=${BUILDLINK_PREFIX.cfitsio:Q}/include
 
 .include "../../devel/cfitsio/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
