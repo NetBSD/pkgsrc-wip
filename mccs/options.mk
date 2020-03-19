@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mccs
-PKG_OPTIONS_REQUIRED_GROUP=	solver
+PKG_OPTIONS_REQUIRED_GROUPS=	solver
 PKG_OPTIONS_GROUP.solver=	lpsolve glpk
 PKG_SUPPORTED_OPTIONS=		lpsolve glpk
 PKG_SUGGESTED_OPTIONS=		lpsolve
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=		lpsolve
 
 .if !empty(PKG_OPTIONS:Mglpk)
 BUILD_MAKE_FLAGS+=USEGLPK=1
-.include "../../math/glkp/buildlink3.mk"
+.include "../../math/glpk/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mlpsolve)

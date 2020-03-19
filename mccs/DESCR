@@ -1,12 +1,12 @@
-mccs (which stands for Multi Criteria CUDF Solver) provides a mean to
-solve cudf problems as defined in the MANCOOSI european project
+mccs (which stands for Multi Criteria CUDF Solver) provides a mean
+to solve cudf problems as defined in the MANCOOSI european project
 (http://www.mancoosi.org) and was partially supported by the European
-Community's 7th Framework Programme (FP7/2007-2013), MANCOOSI project,
-grant agreement n. 214898.
+Community's 7th Framework Programme (FP7/2007-2013), MANCOOSI
+project, grant agreement n. 214898.
 
-mccs has been developed under linux and has not been tested on other
-platforms.  The provided mccs is statically linked and run under linux
-32 bits.
+mccs has been developed under linux and has not been tested on
+other platforms.  The provided mccs is statically linked and run
+under linux 32 bits.
 
-mccs translate the cudf problem into an integer linear program which
-is then solved by an underlying solver.
+mccs translate the cudf problem into an integer linear program
+which is then solved by an underlying solver.
