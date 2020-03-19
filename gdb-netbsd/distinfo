@@ -59,5 +59,4 @@ SHA1 (patch-gdb_sparc-tdep.h) = 74eb0364017aa8b41ef1a06dcb35d8b4a2a31852
 SHA1 (patch-gdb_sparc64-nbsd-nat.c) = d7b9988c09f483d9d57dccc36610cb52751dac0b
 SHA1 (patch-gdb_sparc64-nbsd-tdep.c) = 1e4562ab7f7a2c8b61b2becc70c9d6aa35140598
 SHA1 (patch-gdb_tui_tui-winsource.c) = fc0eb13c8c367bed20630921a6bacce186a80fd8
-SHA1 (patch-libiberty_make-temp-file.c) = 6e5c3fc9dde722a263cdbe3d51a714538a0c6cd1
 SHA1 (patch-sim_common_callback.c) = ac55e639ed6ba51c5daef5fffccc3413abeb1df2
