@@ -17,7 +17,6 @@ SHA1 (patch-gdb_arm-nbsd-nat.c) = 09a21d2eed39dc4e74a1f442c6ee59dfbf9c6f54
 SHA1 (patch-gdb_arm-nbsd-tdep.c) = 63009d506e2f92e681529d96150b1c4d04a7afbe
 SHA1 (patch-gdb_bsd-kvm.c) = d04c44fb4c779dd3ecd12c3179ad8a63351e5239
 SHA1 (patch-gdb_config_aarch64_nbsd.mh) = 6d7793009bda1568717ed897c02e77137e47b83b
-SHA1 (patch-gdb_config_ia64_netbsd.mh) = ed89b31ad808e15e1823af1a022ce37194e6f78e
 SHA1 (patch-gdb_config_powerpc_ppc64-nbsd.mh) = bef62de0ebc162aeac12939d4f4fb220be99efe2
 SHA1 (patch-gdb_configure) = 681e095fdd15432dbc094bf70e5a5b7c67637ad7
 SHA1 (patch-gdb_configure.host) = 427f6dbc2f4373e7e9bede77ccb7a3cd28c74d14
