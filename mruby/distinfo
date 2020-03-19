@@ -4,3 +4,4 @@ SHA1 (mruby-2.1.0.tar.gz) = 4ef030a2d31b1252ec8615bbb59e1379484ad1a7
 RMD160 (mruby-2.1.0.tar.gz) = 2e6d6e962b6c7015e71f56b066a5d99113a7f7d8
 SHA512 (mruby-2.1.0.tar.gz) = da28b5a078e121c75edf62fc68fad6d5810212bd53a3424d4f585ffe5bbd09f652393ffea0f4b3ddd802e5fe178554dc67040c39c9d5069bdfad4ef22ead7e8d
 Size (mruby-2.1.0.tar.gz) = 584901 bytes
+SHA1 (patch-build__config.rb) = 62c1122ebc2ef7a3dde7ca4cb8cad6b7475c9e78
