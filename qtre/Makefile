@@ -14,7 +14,6 @@ COMMENT=		Quick Tool for Raw Editing
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config perl
 GNU_CONFIGURE=		yes
-GNU_MAKE=		yes
 USE_LANGUAGES+=		c c++
 
 # CONF_FILES=		${PREFIX}/etc/qtre.pl	# It crahes with "shift: can't shift that many"
