@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake flex
 MAKE_FILE=	GNUmakefile
 MAKE_JOBS_SAFE=	NO
+
 PKGCONFIG_OVERRIDE+=	wcslib.pc.in
 
 # We could use pgplot, but it is not legally
