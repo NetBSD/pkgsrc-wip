@@ -14,6 +14,7 @@ USE_LANGUAGES=	c fortran
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
+PKGCONFIG_OVERRIDE+=	wcslib.pc.in
 
 # We could use pgplot, but it is not legally
 # mirror-able and also really, really old.
