@@ -7,7 +7,7 @@ $NetBSD$
  
  # Path to GLPK main dir
 -GLPKDIR=$(PWD)/../glpk
-+GLPKDIR=/usr/pkg
++GLPKDIR=${PREFIX}
  
  # Path to the GPLK include files
  GLPKINC=$(GLPKDIR)/include/
@@ -16,7 +16,7 @@ $NetBSD$
  
  # Path to the LPSOLVE main dir
 -LPSOLVEDIR=$(PWD)/../lpsolve/dev
-+LPSOLVEDIR=/usr/pkg
++LPSOLVEDIR=${PREFIX}
  
  # Path to the LPSOLVE include files
 -LPSOLVEINC=${LPSOLVEDIR}
