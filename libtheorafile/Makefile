@@ -12,7 +12,6 @@ COMMENT=	Ogg Theora video decoder library
 LICENSE=	zlib
 
 EXTRACT_USING=	gtar
-GNU_MAKE=	yes
 USE_TOOLS+=	gmake
 
 do-install:
