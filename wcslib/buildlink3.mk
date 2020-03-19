@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	wcslib
+
+.if !defined(WCSLIB_BUILDLINK3_MK)
+WCSLIB_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.wcslib+=	wcslib>=7.2
+BUILDLINK_ABI_DEPENDS.wcslib+=	wcslib>=7.2
+BUILDLINK_PKGSRCDIR.wcslib?=	../../wip/wcslib
+.endif # WCSLIB_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-wcslib
