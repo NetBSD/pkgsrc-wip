@@ -4974,7 +4974,6 @@ SUBDIR+=	warsow
 SUBDIR+=	watch
 SUBDIR+=	wayland-protocols
 SUBDIR+=	wbox
-SUBDIR+=	wcslib
 SUBDIR+=	weatherman
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
