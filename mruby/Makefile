@@ -28,6 +28,9 @@ do-install:
 	cd ${WRKSRC}/include && ${PAX} -wr *  ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/doc/guides/* ${DESTDIR}${PREFIX}/${DOCDIR}
 
+do-test:
+	cd ${WRKSRC} && RUBY=${RUBY} ${RUBY} ./minirake test
+
 .include "../../lang/ruby/replace.mk"
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/bsd.pkg.mk"
