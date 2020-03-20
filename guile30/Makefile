@@ -74,6 +74,12 @@ PLIST.charset=	yes
 post-configure:
 	${ECHO} '#define FLEXIBLE_ARRAY_MEMBER /**/' >> ${WRKSRC}/config.h
 
+.include "../../mk/pax.mk"
+# \todo Mark the guile with paxctl +m after it is built but before
+# it is used in the build.
+# \todo Make this actually work; manual paxctl +m after install does.
+NOT_MPROTECT_SAFE+=	${GUILE_PREFIX}/bin/guile
+
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
