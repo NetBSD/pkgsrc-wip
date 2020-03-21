@@ -3990,7 +3990,6 @@ SUBDIR+=	py-setupdocs
 SUBDIR+=	py-setuptools_git
 SUBDIR+=	py-sexy
 SUBDIR+=	py-sfepy
-SUBDIR+=	py-sh
 SUBDIR+=	py-shapely
 SUBDIR+=	py-shedskin
 SUBDIR+=	py-shp
