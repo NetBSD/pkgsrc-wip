@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	delve-1.0.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	wip devel
 MASTER_SITES=	https://github.com/derekparker/delve/files/1738674/
 

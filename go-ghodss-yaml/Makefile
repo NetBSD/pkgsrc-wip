@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	go-ghodss-yaml-1.0.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ghodss/}
 GITHUB_PROJECT=	yaml

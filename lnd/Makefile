@@ -2,7 +2,7 @@
 
 DISTNAME=	lnd-source-v0.7.1-beta
 PKGNAME=	${DISTNAME:S/source-v//:S/-beta/beta/}
-PKGREVISION=	4
+PKGREVISION=	5
 DISTFILES=	${DEFAULT_DISTFILES} vendor.tar.gz
 SITES.vendor.tar.gz = \
     ${MASTER_SITE_GITHUB:=lightningnetwork/${GITHUB_PROJECT}/releases/download/${DISTNAME:S/lnd-source-//}}/

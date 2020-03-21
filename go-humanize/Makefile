@@ -3,7 +3,7 @@
 # XXX 0.0.1 is a made-up release number, watch for a release:
 # https://github.com/dustin/go-humanize/issues/56
 PKGNAME=	go-humanize-0.0.1
-PKGREVISION=	11
+PKGREVISION=	12
 GITHUB_TAG=	383332499bf02f79d3e696220c2713722438529c
 DISTNAME=	go-humanize-${GITHUB_TAG}
 CATEGORIES=	devel

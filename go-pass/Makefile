@@ -2,7 +2,7 @@
 
 # XXX 0.0.1 is a made-up release number, ask upstream to make a release.
 PKGNAME=	go-pass-0.0.1
-PKGREVISION=	11
+PKGREVISION=	12
 GITHUB_TAG=	bf9dde6d0d2c004a008c27aaee91170c786f6db8
 DISTNAME=	gopass-${GITHUB_TAG}
 CATEGORIES=	security devel

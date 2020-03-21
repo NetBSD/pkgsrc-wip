@@ -2,7 +2,7 @@
 
 # XXX 0.0.1 is a made-up release number, ask upstream to make a release.
 PKGNAME=	go-log-0.0.1
-PKGREVISION=	11
+PKGREVISION=	12
 GITHUB_TAG=	61e686294e58a8698a9e1091268bb4ac1116bd5e
 DISTNAME=	log-${GITHUB_TAG}
 CATEGORIES=	devel
