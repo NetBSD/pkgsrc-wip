@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (identify-1.4.11.tar.gz) = 5438039bd1c065a19ba4b7d188e79ebf50749a00
-RMD160 (identify-1.4.11.tar.gz) = 3f3d73f29443f290d5d7d9877562fccfd0e7643a
-SHA512 (identify-1.4.11.tar.gz) = d26789f591a33b0aa227d90f62a6e4cf148ef3f6b19be57fe33b6d516c1ca892715c1ee0ffa36205afd6f9a29a5bf47845aee08bcb2b05c3a9b3fe0aff037784
-Size (identify-1.4.11.tar.gz) = 94874 bytes
+SHA1 (identify-1.4.12.tar.gz) = c0ffb3810046788c9d999bf4a399b664e6d50543
+RMD160 (identify-1.4.12.tar.gz) = 09f1138369aead5960d876bd042c9df3c60cac33
+SHA512 (identify-1.4.12.tar.gz) = 9190ca1ddbba7b50eef97f04b6f364ab5dd4133dd3eb7736d24d25df51eaa7c22d755a720d4fff579a4d5f09160e13b01c12221b55fc63a9b9982f6342fb915f
+Size (identify-1.4.12.tar.gz) = 95317 bytes
