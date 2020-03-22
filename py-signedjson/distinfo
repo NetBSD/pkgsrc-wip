@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (python-signedjson-1.0.0.zip) = 5589df94823d5b046033f736630f36cb6cc0338c
-RMD160 (python-signedjson-1.0.0.zip) = 3010f5a0633a7e6c15c7beda5a9e16b7e0c8844e
-SHA512 (python-signedjson-1.0.0.zip) = c8b1148af5f0136e91e65b34c0ea811b6f8611a8a32226552937d17c22322f0732bd074ea36e3d6bfc10313660450ff897d33bd8f3d8e56e6031f9e2dfa3a863
-Size (python-signedjson-1.0.0.zip) = 13146 bytes
+SHA1 (signedjson-1.1.tar.gz) = d5b8d63f2863596f8e7a315df7421fa3cba49a3e
+RMD160 (signedjson-1.1.tar.gz) = d01ca8d1949292dd781267cdf85c77a68e269e94
+SHA512 (signedjson-1.1.tar.gz) = 1e03a20c7074825a1357dc4dd683a5debb32dc8dbda3d58ca68cd4b3d35482d92b7fb068cfa06076038e0df04ff5503d2c42806b62d4dd3ef38934ba7d6dc200
+Size (signedjson-1.1.tar.gz) = 10053 bytes
