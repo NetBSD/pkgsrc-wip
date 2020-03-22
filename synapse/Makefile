@@ -13,6 +13,7 @@ HOMEPAGE=	https://github.com/matrix-org/synapse/
 COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-simplejson:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.5.1:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-frozendict>=1:../../wip/py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../wip/py-unpaddedbase64
