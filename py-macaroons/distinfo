@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pymacaroons-0.9.0.zip) = d5129644b41c81bd7b3cc1cf871d20376e802b09
-RMD160 (pymacaroons-0.9.0.zip) = 3b492388ff8aaef07e365d3265f489968d3ae60b
-SHA512 (pymacaroons-0.9.0.zip) = 93e7afa6a18be78165df42f3173b03e4ec74e86605960ff600819b1142ef28c7328e934e73082d9306f09228e81fdd4094acf11ad2feeaedf31f661d023158d9
-Size (pymacaroons-0.9.0.zip) = 34859 bytes
+SHA1 (pymacaroons-0.13.0.tar.gz) = 8de1e6ffd7d3f38bded9062f04c1896ea2571d38
+RMD160 (pymacaroons-0.13.0.tar.gz) = ffcebf23570e6f9f194acf40e06264be5d713160
+SHA512 (pymacaroons-0.13.0.tar.gz) = 1929a63755dcfdc2e154217f3ce65a489b4ffdb8f4f9a27d6eb1f1899eba6d7f3f92c7db4401337e948306b6a97dd3b249196c89533991c9986d5702ad98e4ca
+Size (pymacaroons-0.13.0.tar.gz) = 21083 bytes
