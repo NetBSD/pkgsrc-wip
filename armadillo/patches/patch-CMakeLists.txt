@@ -3,6 +3,15 @@ $Netbsd$
 Make the build use LAPACK_LIBS and BLAS_LIBS from the environment.
 Could this be acceptible to upstream?
 
+Also, override the possibly badly detected HDF5 include directory.
+On my system, where there are some paths external to pkgrc (compiler,
+Open MPI), and HDF5 is just available without any extra hassle,
+the firsts of the external include paths is picked up as alleged
+HDF5 include directory. It's Open MPI's include directory. No
+hdf5.h in there! This breaks users of armadillo, obviously. I don't
+get the sense of hardcoding the path to hdf5.h at all. This is all
+so wrong.
+
 --- CMakeLists.txt.orig	2020-02-24 22:11:41.093696230 +0100
 +++ CMakeLists.txt	2020-02-24 22:14:52.780347663 +0100
 @@ -151,6 +151,16 @@
@@ -50,4 +59,14 @@ Could this be acceptible to upstream?
 +endif()
  
  find_package(PkgConfig)
+ 
+@@ -334,6 +345,9 @@ if(DETECT_HDF5)
+     message(STATUS "*** rerun cmake with HDF5 detection disabled:")
+     message(STATUS "*** cmake -D DETECT_HDF5=false .")
+     message(STATUS "")
++    set(ARMA_HDF5_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include)
++    message(STATUS "Overriding silly HDF5 include dir hardcode to common install prefix for pkgsrc.")
++    message(STATUS "ARMA_HDF5_INCLUDE_DIR = ${ARMA_HDF5_INCLUDE_DIR}")
+   endif()
+ endif()
  

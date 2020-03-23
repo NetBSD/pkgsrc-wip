@@ -28,11 +28,6 @@ SUBST_STAGE.minor=	post-patch
 SUBST_FILES.minor=	CMakeLists.txt
 SUBST_SED.minor=	-e "s|ARMA_MINOR ${DIST_MINOR}|ARMA_MINOR ${PKG_MINOR}|g"
 
-# wip/superlu has that because I do not know better how to force
-# a specifc blas lib (easily). We need to ensure to avoid mixing BLAS libs.
-# If this setting is dropped, it should be dropped for both.
-BLAS_ACCEPTED=          openblas netlib
-
 .include "../../wip/mk/blas.buildlink3.mk"
 .include "../../wip/superlu/buildlink3.mk"
 .include "../../math/arpack-ng/buildlink3.mk"
