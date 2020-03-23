@@ -15,11 +15,11 @@ PYSETUPSUBDIR=	bindings/python
 CONFIGURE_ARGS+=	--with-boost-python
 CONFIGURE_ARGS+=	--enable-python-binding
 
-PATCHDIR=	${.CURDIR}/../../wip/libtorrent-rasterbar/patches
-DISTINFO_FILE=	${.CURDIR}/../../wip/libtorrent-rasterbar/distinfo
+PATCHDIR=	${.CURDIR}/../../net/libtorrent-rasterbar/patches
+DISTINFO_FILE=	${.CURDIR}/../../net/libtorrent-rasterbar/distinfo
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/py-boost/buildlink3.mk"
-.include "../../wip/libtorrent-rasterbar/buildlink3.mk"
+.include "../../net/libtorrent-rasterbar/buildlink3.mk"
 
-.include "../../wip/libtorrent-rasterbar/Makefile.common"
+#.include "../../net/libtorrent-rasterbar/Makefile.common"
