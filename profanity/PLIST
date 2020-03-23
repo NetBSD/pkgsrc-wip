@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/profanity
-include/profapi.h
-lib/libprofanity.la
+@comment include/profapi.h
+@comment lib/libprofanity.la
 man/man1/profanity.1
 share/profanity/icons/proIcon.png
 share/profanity/icons/proIconMsg.png

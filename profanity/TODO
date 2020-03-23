@@ -1,2 +1,4 @@
 - Review curses(3) patches
 - Check if also non-monochromatic themes work
+- Re-enable Python and OMEMO support (python-config and python are not found in
+  the configure phase and needs to be fixed)
