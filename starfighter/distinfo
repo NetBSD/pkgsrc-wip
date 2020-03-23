@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (starfighter-1.6-src.tar.gz) = af3825e1510df70030274aab516438c4d1e867f5
-RMD160 (starfighter-1.6-src.tar.gz) = c4e072371621b5ad9708858891fb92c8dc7084e6
-SHA512 (starfighter-1.6-src.tar.gz) = 794fa9727679e0f90d3b280f1ae15468e12b17e8fb8f451d81c9f2d875476037b77f26c23d7ca0c90f50f47a12179477154b59638ace22477c20a3010dbe659b
-Size (starfighter-1.6-src.tar.gz) = 46254932 bytes
+SHA1 (starfighter-2.0.0.3.tar.gz) = e092b6e1c3749fda8511851b4eaf34bfa907c497
+RMD160 (starfighter-2.0.0.3.tar.gz) = ede3736ebd0ae4e6594397204345feb6b59ab3e4
+SHA512 (starfighter-2.0.0.3.tar.gz) = 7682a14bc2692aef32b7e07e5948d9ac2f5ef1e72616179d43a1e6f60c7379d4b75ad12761dbc53c633d7677b714a38cdeabae6f773c35a8a715981465ae423f
+Size (starfighter-2.0.0.3.tar.gz) = 50153102 bytes
+SHA1 (patch-src_Makefile.am) = 5f1d79a5efce95b014b4976035f83af7ca471f2f
