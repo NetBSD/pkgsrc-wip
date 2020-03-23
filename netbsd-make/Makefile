@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.18 2014/06/29 17:16:25 cheusov Exp $
 #
 
-DISTNAME=	bmake-20170421
+DISTNAME=	bmake-20200212
 PKGNAME=	${DISTNAME:S/bmake/nbmake/}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
