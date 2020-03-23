@@ -15,10 +15,10 @@ AUTOCONF_REQD=	2.69
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-CONFIGURE_ARGS+=	--enable-plugins 	\
-			--enable-c-plugins	\
-			--enable-python-plugins	\
-			--enable-omemo
+CONFIGURE_ARGS+=	--enable-plugins
+CONFIGURE_ARGS+=	--enable-c-plugins
+CONFIGURE_ARGS+=	--enable-python-plugins
+CONFIGURE_ARGS+=	--enable-omemo
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
