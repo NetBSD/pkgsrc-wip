@@ -18,12 +18,8 @@ CMAKE_ARG_PATH=		${WRKSRC}
 # Armadillo needs shared lib, best would be to install both.
 CMAKE_ARGS=		-Denable_blaslib=off \
 			-Denable_doc=off \
-			-DBUILD_SHARED_LIBS=on
-
-# The cmake machinery finds plain openblas first,
-# do not know how to insert a specific lib. But single-threaded
-# openblas does make sense, I suppose, for sparse matrices.
-BLAS_ACCEPTED=		openblas netlib
+			-DBUILD_SHARED_LIBS=on \
+			-DTPL_BLAS_LIBRARIES=${BLAS_LIBS:Q}
 
 TEST_TARGET=		test
 
