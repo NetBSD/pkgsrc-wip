@@ -1,10 +1,10 @@
 $NetBSD$
 
 - Use `=' operator for test(1)
-- Add support for curses(3)
 - Simplify check for readline
+- Add support for curses(3)
 
---- configure.ac.orig	2019-07-31 08:53:34.000000000 +0000
+--- configure.ac.orig	2020-02-07 20:47:31.000000000 +0000
 +++ configure.ac
 @@ -81,7 +81,7 @@ elif test "x$enable_python_plugins" != x
          rm -f Python.framework
@@ -25,9 +25,9 @@ $NetBSD$
  AM_CPPFLAGS="$AM_CPPFLAGS $NCURSES_CFLAGS"
  LIBS="$NCURSES_LIBS $LIBS"
  
-@@ -179,23 +180,8 @@ AS_IF([test "x$enable_icons" != xno],
+@@ -182,23 +183,8 @@ AS_IF([test "x$enable_icons_and_clipboar
              [AC_MSG_ERROR([gtk+-2.0 or higher is required for icons])],
-             [AC_MSG_NOTICE([gtk+-2.0 not found, icons not enabled])])])])
+             [AC_MSG_NOTICE([gtk+-2.0 not found, icons and clipboard not enabled])])])])
  
 -AS_IF([test "x$PLATFORM" = xosx],
 -    [AC_CHECK_FILE([/usr/local/opt/readline/lib],
@@ -51,7 +51,7 @@ $NetBSD$
  
  ### Check for desktop notification support
  ### Linux/FreeBSD require libnotify
-@@ -317,6 +303,7 @@ AC_CHECK_LIB([expect], [main], [AM_CONDI
+@@ -320,6 +306,7 @@ AC_CHECK_LIB([expect], [main], [AM_CONDI
  ### Check for ncursesw/ncurses.h first, Arch linux uses ncurses.h for ncursesw
  AC_CHECK_HEADERS([ncursesw/ncurses.h], [], [])
  AC_CHECK_HEADERS([ncurses.h], [], [])

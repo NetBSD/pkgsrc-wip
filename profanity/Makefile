@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	profanity-0.7.1
+DISTNAME=	profanity-0.8.1
 CATEGORIES=	chat
 MASTER_SITES=	http://profanity-im.github.io/
 

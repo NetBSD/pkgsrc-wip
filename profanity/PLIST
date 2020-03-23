@@ -1,7 +1,5 @@
 @comment $NetBSD$
 bin/profanity
-@comment include/profapi.h
-@comment lib/libprofanity.la
 man/man1/profanity.1
 share/profanity/icons/proIcon.png
 share/profanity/icons/proIconMsg.png
@@ -13,6 +11,7 @@ share/profanity/themes/boothj5_laptop
 share/profanity/themes/boothj5_slack
 share/profanity/themes/complex
 share/profanity/themes/forest
+share/profanity/themes/gruvbox
 share/profanity/themes/hacker
 share/profanity/themes/headache
 share/profanity/themes/joker
@@ -22,5 +21,7 @@ share/profanity/themes/original
 share/profanity/themes/original_bright
 share/profanity/themes/shade
 share/profanity/themes/simple
+share/profanity/themes/solarized-dark
+share/profanity/themes/solarized-light
 share/profanity/themes/spawn
 share/profanity/themes/whiteness
