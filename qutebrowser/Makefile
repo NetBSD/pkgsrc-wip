@@ -27,5 +27,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
