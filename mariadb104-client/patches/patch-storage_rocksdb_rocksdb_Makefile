@@ -1,0 +1,15 @@
+$NetBSD$
+
+Shell portability.
+
+--- storage/rocksdb/rocksdb/Makefile.orig	2020-01-26 20:43:50.000000000 +0000
++++ storage/rocksdb/rocksdb/Makefile
+@@ -1830,7 +1830,7 @@ rocksdbjavastatic: $(java_static_all_lib
+ 	  -o ./java/target/$(ROCKSDBJNILIB) $(JNI_NATIVE_SOURCES) \
+ 	  $(java_static_all_libobjects) $(COVERAGEFLAGS) \
+ 	  $(JAVA_COMPRESSIONS) $(JAVA_STATIC_LDFLAGS)
+-	cd java/target;if [ "$(DEBUG_LEVEL)" == "0" ]; then \
++	cd java/target;if [ "$(DEBUG_LEVEL)" = "0" ]; then \
+ 		strip $(STRIPFLAGS) $(ROCKSDBJNILIB); \
+ 	fi
+ 	cd java;jar -cf target/$(ROCKSDB_JAR) HISTORY*.md

@@ -1,0 +1,23 @@
+$NetBSD$
+
+SHA1 (mariadb-10.4.12.tar.gz) = 8a07057e1249c66c7cb11a92936d45ef242581b1
+RMD160 (mariadb-10.4.12.tar.gz) = 1e7557957e163fe350b093794912c9d9294fda84
+SHA512 (mariadb-10.4.12.tar.gz) = 518dae18c04a1f7fcc6fd4d2dfbfbfbdf5e83e72ca41e66e1074328df8d92ab41b458e6a9973771419ac09a7348f264f158916cd198c335085d6e823e707bbc6
+Size (mariadb-10.4.12.tar.gz) = 79120835 bytes
+SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
+SHA1 (patch-CMakeLists.txt) = 3f3a5fa151b5f51a7521ef6ee295c081f1dc5d60
+SHA1 (patch-extra_wolfssl_wolfssl_certs_intermediate_genintcerts.sh) = cd9a982889b88f811c3e14ebdf9795b0fa5d1fad
+SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
+SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
+SHA1 (patch-plugin_auth__pam_CMakeLists.txt) = b941343898ddc175818b161021fb7fccccee3e28
+SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
+SHA1 (patch-sql_mysqld.cc) = 21f9ea79ca90a78f18598d55f209a1835b95858f
+SHA1 (patch-storage_connect_tabvct.cpp) = 2e3c7cd7e4b0a86d443da47d3cc514b8b276d836
+SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
+SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
+SHA1 (patch-storage_rocksdb_rocksdb_Makefile) = bc46f2991c66c20bf323a1d3c271a0ef329aafb0
+SHA1 (patch-storage_tokudb_PerconaFT_portability_file.cc) = 830b4c6b20713c811fcd847c1e1abfd8441d0d4a
+SHA1 (patch-storage_tokudb_PerconaFT_portability_toku__htod.h) = 66635f0f79310bb3b2975c64ba6432e9a40ece70
+SHA1 (patch-storage_tokudb_PerconaFT_portability_toku__portability.h) = 75ede1251371eb467901a59672d39443d8c28031
+SHA1 (patch-storage_tokudb_PerconaFT_src_CMakeLists.txt) = 3a9fb10c8515d256a9d58f18605733840bba1039
+SHA1 (patch-support-files_mysql.server.sh) = a98d82cdda1dbd5ef8ebb7e457bb51661b5fd275
