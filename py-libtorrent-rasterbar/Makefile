@@ -22,4 +22,4 @@ DISTINFO_FILE=	${.CURDIR}/../../net/libtorrent-rasterbar/distinfo
 .include "../../devel/py-boost/buildlink3.mk"
 .include "../../net/libtorrent-rasterbar/buildlink3.mk"
 
-#.include "../../net/libtorrent-rasterbar/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
