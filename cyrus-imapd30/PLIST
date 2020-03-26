@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/cyradm
 bin/httptest
 bin/imtest
 bin/installsieve

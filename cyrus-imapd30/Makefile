@@ -1,7 +1,7 @@
 # $NetBSD: $
 
 DISTNAME=	cyrus-imapd-3.0.13
-REVISION=	2
+REVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrusimap/}
 GITHUB_RELEASE=	${PKGNAME_NOREV}
@@ -131,6 +131,7 @@ post-install:
 	cd ${WRKSRC}/doc/html; for file in `find . -type f \\( -iname \\*.html -o -iname \\*.jpg -o -iname \\*.png -o -iname \\*.css -o -iname \\*.js -o -iname \\*.json \\)`; do \
 		${INSTALL_DATA} $${file} ${DESTDIR}${HTMLDIR}/$${file}; \
 	done
+	${LN} -sf ../lib/perl5/site_perl/bin/cyradm ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/zlib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
