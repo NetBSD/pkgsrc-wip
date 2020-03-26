@@ -1,7 +1,7 @@
 # $NetBSD: $
 
 DISTNAME=	cyrus-imapd-3.0.13
-REVISION=	4
+REVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrusimap/}
 GITHUB_RELEASE=	${PKGNAME_NOREV}
@@ -65,6 +65,7 @@ RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
 REPLACE_PERL+=		tools/rehash
+REPLACE_PERL+=		perl/annotator/Daemon.pm
 
 SUBST_CLASSES+=		sh
 SUBST_STAGE.sh=		post-build
