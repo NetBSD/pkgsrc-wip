@@ -2,8 +2,8 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mariadb104
 
-PKG_SUPPORTED_OPTIONS+=	ssl
-PKG_SUGGESTED_OPTIONS+=	ssl
+PKG_SUPPORTED_OPTIONS+=	embedded-server ssl
+PKG_SUGGESTED_OPTIONS+=	embedded-server ssl
 
 .include "../../mk/bsd.options.mk"
 

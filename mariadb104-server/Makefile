@@ -7,13 +7,18 @@ CONFLICTS=	mysql-server-[0-9]*
 
 .include "../../wip/mariadb104-client/Makefile.common"
 
+.if !empty(PKG_OPTIONS:Membedded-server)
+CMAKE_ARGS+=			-DWITH_EMBEDDED_SERVER=ON
+PLIST_SRC+=			PLIST.embedded
+.else
+CMAKE_ARGS+=			-DWITH_EMBEDDED_SERVER=OFF
 # We only need readline to placate the configure script if we don't build
 # the embedded server as it is the only binary linked against "readline".
+BUILDLINK_DEPMETHOD.editline=	build
 BUILDLINK_DEPMETHOD.readline=	build
+.endif
 
 CMAKE_ARGS+=		-DPYTHON_SHEBANG=${PYTHONBIN}
-
-PLIST_VARS+=		embedded
 
 .include "../../mk/bsd.fast.prefs.mk"
 
