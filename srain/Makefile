@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	srain-1.0.0rc9999
+DISTNAME=	srain-1.0.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SrainApp/}
 

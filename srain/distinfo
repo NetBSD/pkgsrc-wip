@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (srain-1.0.0rc9999.tar.gz) = 6f4b097a3fffb33b8dc732cd3b14b6bbbe632a42
-RMD160 (srain-1.0.0rc9999.tar.gz) = be881ba7ee418fb3c0f46d5f1a8072829e7c7e4d
-SHA512 (srain-1.0.0rc9999.tar.gz) = c3c760f3a88e82a4716d7f2afd8436b99f0058ba546b45b38ea1b63cde348be492bac3f3c9301ac5a71c3e23e5db2046ff29e31cf47f2dfd803598f2f46c241e
-Size (srain-1.0.0rc9999.tar.gz) = 1015541 bytes
+SHA1 (srain-1.0.1.tar.gz) = 8b1b4628e0a404defe74f1656f9877e047f652a4
+RMD160 (srain-1.0.1.tar.gz) = 21c2eccaeffc4edc5191ea1c3e9702bb486e434b
+SHA512 (srain-1.0.1.tar.gz) = e6a878f804b8188affb088dd113aab7fc28c03ff1c46c28f9dabe6559d0a4d182f91a10a9d56e021bbee294bb4048ffc5e8209d3661fba0e6cdf37d4bf30280e
+Size (srain-1.0.1.tar.gz) = 938233 bytes
 SHA1 (patch-data_Makefile) = 9330228df6a9648c332417a2658417a8ed445499

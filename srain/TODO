@@ -1,3 +1,0 @@
-Cannot connect to servers.
-
-"Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files"
