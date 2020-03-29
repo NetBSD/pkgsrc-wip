@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	guile-3.0.1
+DISTNAME=	guile-3.0.2
 PKGNAME=	${DISTNAME:S/guile/guile30/}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
