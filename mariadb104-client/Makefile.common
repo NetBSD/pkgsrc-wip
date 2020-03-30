@@ -85,12 +85,6 @@ CPPFLAGS.SunOS+=	-fPIC
 REPLACE_PERL+=		scripts/mytop.sh
 REPLACE_PERL+=		sql-bench/*.sh
 
-SUBST_CLASSES+=		fixpaths
-SUBST_STAGE.fixpaths=	post-install
-SUBST_FILES.fixpaths=	${DESTDIR}${PREFIX}/bin/mysqlbug
-SUBST_SED.fixpaths=	-e "s,${WRAPPER_BINDIR}/gcc,${CCPATH},g"
-SUBST_SED.fixpaths+=	-e "s,${WRAPPER_BINDIR}/g++,${CXXPATH},g"
-
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
 SUBST_FILES.perl=	${WRKSRC}/scripts/CMakeLists.txt
