@@ -12,5 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
 
+TEST_TARGET=	test
+
 .include "../../devel/uthash/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
