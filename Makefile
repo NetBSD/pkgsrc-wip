@@ -4603,7 +4603,6 @@ SUBDIR+=	squirrelmail-avelsieve
 SUBDIR+=	squirrelmail-chg_sasl_passwd
 SUBDIR+=	squirrelmail-compatibility
 SUBDIR+=	squirrelmail-vlogin
-SUBDIR+=	srain
 SUBDIR+=	src
 SUBDIR+=	srecord
 SUBDIR+=	srvx
