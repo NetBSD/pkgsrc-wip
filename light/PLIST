@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/light
+man/man1/light.1
+share/doc/light/COPYING
+share/doc/light/ChangeLog.md
+share/doc/light/README.md

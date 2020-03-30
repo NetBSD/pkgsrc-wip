@@ -1998,6 +1998,7 @@ SUBDIR+=	libzn-poly
 SUBDIR+=	libzrtp
 SUBDIR+=	lidia
 SUBDIR+=	lie
+SUBDIR+=	light
 SUBDIR+=	light-desktop
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
