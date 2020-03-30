@@ -1091,6 +1091,7 @@ SUBDIR+=	glib2
 SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glimmerm
+SUBDIR+=	glimpse
 SUBDIR+=	glista
 SUBDIR+=	glkgit
 SUBDIR+=	glkloader

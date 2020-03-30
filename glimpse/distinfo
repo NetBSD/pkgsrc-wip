@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.101 2020/03/13 16:51:00 tnn Exp $
+
+SHA1 (glimpse-0.1.2.tar.xz) = 63aec9ff4a3c46190b234bbdd97b5a836ab3732a
+RMD160 (glimpse-0.1.2.tar.xz) = 0ecd5df7a39871905ec7f2ed1d35de4fdf2007bf
+SHA512 (glimpse-0.1.2.tar.xz) = efd3b97475f1f0359bea9b5d3a74708a42bcf736381ce78b72f7efe9395ec626b5360f9e76a272dc8d75d42a214757e3618cf51bc20cd639cbb3c2dc5a628c1d
+Size (glimpse-0.1.2.tar.xz) = 21884256 bytes
+SHA1 (patch-aa) = 35624eefc4cabcfddc050c7694a387bfc8787350
+SHA1 (patch-ab) = 37820b9e03702248294f0030ffbd09e7f14f3dcb
+SHA1 (patch-plug-ins_common_file-mng.c) = 8ed244997cdef7125e1aa5da4d0fac5068ad5159
+SHA1 (patch-plug-ins_pygimp_py-compile) = 59dcdd00073b737f8f52e6a56832722033ee5703
+SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = c424b1a8e345ec3d0763ac2cf1f8535da9e10797

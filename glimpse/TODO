@@ -1,0 +1,232 @@
+```
+Glimpse version 2.10.12
+git-describe: f32663b334
+C compiler:
+	Using built-in specs.
+	COLLECT_GCC=/usr/bin/gcc
+	COLLECT_LTO_WRAPPER=/usr/libexec/lto-wrapper
+	Target: x86_64--netbsd
+	Configured with: /usr/src/tools/gcc/../../external/gpl3/gcc/dist/configure --target=x86_64--netbsd --enable-long-long --enable-threads --with-bugurl=http://www.NetBSD.org/Misc/send-pr.html --with-pkgversion='NetBSD nb3 20190319' --with-system-zlib --without-isl --enable-__cxa_atexit --enable-libstdcxx-time=rt --enable-libstdcxx-threads --with-diagnostics-color=auto-if-env --with-tune=nocona --with-default-libstdcxx-abi=new --with-mpc-lib=/var/obj/mknative/amd64-x86_64/usr/src/external/lgpl3/mpc/lib/libmpc --with-mpfr-lib=/var/obj/mknative/amd64-x86_64/usr/src/external/lgpl3/mpfr/lib/libmpfr --with-gmp-lib=/var/obj/mknative/amd64-x86_64/usr/src/external/lgpl3/gmp/lib/libgmp --with-mpc-include=/usr/src/external/lgpl3/mpc/dist/src --with-mpfr-include=/usr/src/external/lgpl3/mpfr/dist/src --with-gmp-include=/usr/src/external/lgpl3/gmp/lib/libgmp/arch/x86_64 --enable-tls --disable-multilib --disable-libstdcxx-pch --build=x86_64--netbsd --host=x86_64--netbsd --with-sysroot=/var/obj/mknative/amd64-x86_64/usr/src/destdir.amd64
+	Thread model: posix
+	gcc version 7.4.0 (nb3 20190319) 
+
+using GEGL version 0.4.22 (compiled against version 0.4.22)
+using GLib version 2.64.0 (compiled against version 2.64.0)
+using GdkPixbuf version 2.40.0 (compiled against version 2.40.0)
+using GTK+ version 2.24.32 (compiled against version 2.24.32)
+using Pango version 1.44.7 (compiled against version 1.44.7)
+using Fontconfig version 2.13.1 (compiled against version 2.13.1)
+using Cairo version 1.16.0 (compiled against version 1.16.0)
+
+```
+> fatal error: Segmentation fault
+
+Stack trace:
+```
+[New LWP 8 of process 11958]
+[New LWP 7 of process 11958]
+[New LWP 6 of process 11958]
+[New LWP 5 of process 11958]
+[New LWP 4 of process 11958]
+[New LWP 3 of process 11958]
+[New LWP 2 of process 11958]
+[New LWP 1 of process 11958]
+[Switching to LWP 9 of process 11958]
+0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+  Id   Target Id                             Frame 
+* 1    LWP 9 of process 11958 "pool-glimpse" 0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+  2    LWP 8 of process 11958 "async"        0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+  3    LWP 7 of process 11958 "gdbus"        0x00007ed011c429ba in poll () from /usr/lib/libc.so.12
+  4    LWP 6 of process 11958 "gmain"        0x00007ed011c429ba in poll () from /usr/lib/libc.so.12
+  5    LWP 5 of process 11958 "pool-spawner" 0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+  6    LWP 4 of process 11958 "worker"       0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+  7    LWP 3 of process 11958 "worker"       0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+  8    LWP 2 of process 11958 "worker"       0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+  9    LWP 1 of process 11958 ""             0x00007ed011c4295a in read () from /usr/lib/libc.so.12
+
+Thread 9 (LWP 1 of process 11958):
+#0  0x00007ed011c4295a in read () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e07ebf in read () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed01b218674 in gimp_stack_trace_print () from /usr/pkg/lib/libgimpbase-2.0.so.0
+No symbol table info available.
+#3  0x00000000004a056c in gimp_eek ()
+No symbol table info available.
+#4  0x00000000004a0b98 in gimp_fatal_error ()
+No symbol table info available.
+#5  0x00000000004a13dd in gimp_sigfatal_handler ()
+No symbol table info available.
+#6  0x00007ed011ca1d20 in opendir () from /usr/lib/libc.so.12
+No symbol table info available.
+#7  0x000000010000000b in ?? ()
+No symbol table info available.
+#8  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 8 (LWP 2 of process 11958):
+#0  0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e0a71f in pthread_cond_timedwait () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e8fef0 in g_cond_wait () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ed016620f85 in gegl_parallel_distribute_thread_func () from /usr/pkg/lib/libgegl-0.4.so.0
+No symbol table info available.
+#4  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#6  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#7  0x00010102464c457f in ?? ()
+No symbol table info available.
+#8  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 7 (LWP 3 of process 11958):
+#0  0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e0a71f in pthread_cond_timedwait () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e8fef0 in g_cond_wait () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ed016620f85 in gegl_parallel_distribute_thread_func () from /usr/pkg/lib/libgegl-0.4.so.0
+No symbol table info available.
+#4  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#6  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#7  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 6 (LWP 4 of process 11958):
+#0  0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e0a71f in pthread_cond_timedwait () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e8fef0 in g_cond_wait () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ed016620f85 in gegl_parallel_distribute_thread_func () from /usr/pkg/lib/libgegl-0.4.so.0
+No symbol table info available.
+#4  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#6  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#7  0x0000000000200000 in ?? ()
+No symbol table info available.
+#8  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 5 (LWP 5 of process 11958):
+#0  0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e0a71f in pthread_cond_timedwait () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e8fef0 in g_cond_wait () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ed013e1e718 in g_async_queue_pop_intern_unlocked () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007ed013e7016e in g_thread_pool_spawn_thread () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#7  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#8  0x0000000000200000 in ?? ()
+No symbol table info available.
+#9  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 4 (LWP 6 of process 11958):
+#0  0x00007ed011c429ba in poll () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e07d52 in poll () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e4a454 in g_main_context_iterate.isra () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ed013e4a590 in g_main_context_iteration () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007ed013e4a5c6 in glib_worker_main () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#7  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#8  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 3 (LWP 7 of process 11958):
+#0  0x00007ed011c429ba in poll () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e07d52 in poll () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e4a454 in g_main_context_iterate.isra () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ed013e4a76a in g_main_loop_run () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007ed014701c25 in gdbus_shared_thread_func () from /usr/pkg/lib/libgio-2.0.so.0
+No symbol table info available.
+#5  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#7  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#8  0x0000000000200000 in ?? ()
+No symbol table info available.
+#9  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 2 (LWP 8 of process 11958):
+#0  0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e0a71f in pthread_cond_timedwait () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e8fef0 in g_cond_wait () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x000000000073a8b3 in gimp_parallel_run_async_thread_func ()
+No symbol table info available.
+#4  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#6  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#7  0x00010102464c457f in ?? ()
+No symbol table info available.
+#8  0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 1 (LWP 9 of process 11958):
+#0  0x00007ed011ca1f7a in ___lwp_park60 () from /usr/lib/libc.so.12
+No symbol table info available.
+#1  0x00007ed014e0a71f in pthread_cond_timedwait () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#2  0x00007ed013e900b7 in g_cond_wait_until () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ed013e1e6db in g_async_queue_pop_intern_unlocked () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007ed013e1ebdc in g_async_queue_timeout_pop () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007ed013e7041c in g_thread_pool_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007ed013e6fbee in g_thread_proxy () from /usr/pkg/lib/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007ed014e0c072 in ?? () from /usr/lib/libpthread.so.1
+No symbol table info available.
+#8  0x00007ed011c87af0 in ?? () from /usr/lib/libc.so.12
+No symbol table info available.
+#9  0x0000000000000000 in ?? ()
+No symbol table info available.
+[Inferior 1 (process 11958) detached]
+
+```
