@@ -1,2 +1,3 @@
 @comment $NetBSD$
 bin/statzone
+man/man1/statzone.1

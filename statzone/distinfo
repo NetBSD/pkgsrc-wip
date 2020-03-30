@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (statzone-1.0.0.tar.gz) = 47917989b8d17e5d4410b48bc681e9f007f5ef7f
-RMD160 (statzone-1.0.0.tar.gz) = 36c7515d68c5b05615fa7e0a8f999d9b1cdc492f
-SHA512 (statzone-1.0.0.tar.gz) = 097a2b8598df31d36ad41ac25b347495843b6af6122a619d3fbcd6c6909bf66756c62be73ede16a23d314df7b9b68b3b4066fa11f97a32209d3d172d1672279d
-Size (statzone-1.0.0.tar.gz) = 6714 bytes
+SHA1 (statzone-1.0.1.tar.gz) = 5e1f183e335eec42eec43d2699eaa60861b0f53f
+RMD160 (statzone-1.0.1.tar.gz) = 58c03fe3ed0868462a72b06ba4fea9ef10468b21
+SHA512 (statzone-1.0.1.tar.gz) = a80c89957e23e321395cc4e783197d62090e7397935a8ee57647b414c0f20774aa73159acf786a1da8f22106572ad3ec6698c0dfbb0c9c36caa00486229fd9de
+Size (statzone-1.0.1.tar.gz) = 17522 bytes
