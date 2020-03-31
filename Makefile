@@ -4262,7 +4262,6 @@ SUBDIR+=	radare2-git
 SUBDIR+=	radiotray
 SUBDIR+=	rainbow
 SUBDIR+=	rakudo-star
-SUBDIR+=	range-v3
 SUBDIR+=	ranmacgen
 SUBDIR+=	rapidxml
 SUBDIR+=	rar4
