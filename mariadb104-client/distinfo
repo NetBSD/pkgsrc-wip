@@ -10,6 +10,7 @@ SHA1 (patch-extra_wolfssl_wolfssl_certs_intermediate_genintcerts.sh) = cd9a98288
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-plugin_auth__pam_CMakeLists.txt) = b941343898ddc175818b161021fb7fccccee3e28
+SHA1 (patch-scripts_CMakeLists.txt) = afbab5f9c8044adb63f0e770802c67376a5f64e9
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 21f9ea79ca90a78f18598d55f209a1835b95858f
 SHA1 (patch-sql_threadpool__generic.cc) = 73df368457a2e88f3cc3221031e565c4208b87ab

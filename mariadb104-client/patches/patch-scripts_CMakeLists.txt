@@ -1,0 +1,60 @@
+$NetBSD$
+
+Install missing scripts.
+
+We install all scripts with the client, for Reasons.
+
+--- scripts/CMakeLists.txt.orig	2020-01-26 20:43:53.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -91,7 +91,7 @@ SET(ADD_GIS_SP_EOL ";")
+ CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/maria_add_gis_sp.sql.in
+   ${CMAKE_CURRENT_BINARY_DIR}/maria_add_gis_sp_bootstrap.sql ESCAPE_QUOTES @ONLY)
+ 
+-IF (NOT WITHOUT_SERVER)
++IF (TRUE)
+ INSTALL(FILES 
+   ${CMAKE_CURRENT_SOURCE_DIR}/mysql_system_tables.sql 
+   ${CMAKE_CURRENT_SOURCE_DIR}/mysql_system_tables_data.sql
+@@ -103,7 +103,7 @@ INSTALL(FILES 
+   ${CMAKE_CURRENT_BINARY_DIR}/maria_add_gis_sp.sql
+   ${CMAKE_CURRENT_BINARY_DIR}/maria_add_gis_sp_bootstrap.sql
+   ${FIX_PRIVILEGES_SQL}
+-  DESTINATION ${INSTALL_MYSQLSHAREDIR} COMPONENT Server
++  DESTINATION ${INSTALL_MYSQLSHAREDIR}
+ )
+ ENDIF()
+ 
+@@ -122,9 +122,9 @@ ENDIF()
+ 
+ 
+ IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
+-  SET (PERL_PATH "/usr/local/bin/perl")
++  SET (PERL_PATH "/usr/pkg/bin/perl")
+ ELSE()
+-  SET (PERL_PATH "/usr/bin/perl")
++  SET (PERL_PATH "/usr/pkg/bin/perl")
+ ENDIF()
+ 
+ IF(UNIX)
+@@ -202,10 +202,9 @@ CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DI
+   COMMAND chmod +x ${CMAKE_CURRENT_BINARY_DIR}/mysql_install_db
+   )
+ 
+-INSTALL_SCRIPT(
+- "${CMAKE_CURRENT_BINARY_DIR}/mysql_install_db"
++INSTALL(
++  FILES "${CMAKE_CURRENT_BINARY_DIR}/mysql_install_db"
+   DESTINATION ${INSTALL_SCRIPTDIR}
+-  COMPONENT Server
+   )
+ ENDIF()
+ 
+@@ -282,7 +281,7 @@ ELSE()
+       wsrep_sst_common
+     )
+   ENDIF()
+-  IF (NOT WITHOUT_SERVER)
++  IF (TRUE)
+     SET(SERVER_SCRIPTS
+       mysql_fix_extensions
+       mysqld_multi

@@ -7,6 +7,7 @@ bin/mariadb-check
 bin/mariadb-dump
 bin/mariadb-find-rows
 bin/mariadb-import
+bin/mariadb-install-db
 bin/mariadb-plugin
 bin/mariadb-show
 bin/mariadb-slap
@@ -16,6 +17,7 @@ bin/msql2mysql
 bin/mysql
 bin/mysql_config
 bin/mysql_find_rows
+bin/mysql_install_db
 bin/mysql_plugin
 bin/mysqlaccess
 bin/mysqladmin
@@ -310,3 +312,12 @@ man/man1/wsrep_sst_rsync.1
 man/man1/wsrep_sst_rsync_wan.1
 man/man8/mariadbd.8
 man/man8/mysqld.8
+share/mysql/fill_help_tables.sql
+share/mysql/maria_add_gis_sp.sql
+share/mysql/maria_add_gis_sp_bootstrap.sql
+share/mysql/mysql_performance_tables.sql
+share/mysql/mysql_system_tables.sql
+share/mysql/mysql_system_tables_data.sql
+share/mysql/mysql_test_data_timezone.sql
+share/mysql/mysql_test_db.sql
+share/mysql/mysql_to_mariadb.sql
