@@ -1,8 +1,0 @@
-@comment $NetBSD$
-include/minizip/crypt.h
-include/minizip/ioapi.h
-include/minizip/mztools.h
-include/minizip/unzip.h
-include/minizip/zip.h
-lib/libminizip.la
-lib/pkgconfig/minizip.pc

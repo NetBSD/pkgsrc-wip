@@ -2189,7 +2189,6 @@ SUBDIR+=	mingw-w64-headers
 SUBDIR+=	mingw-w64-libgcc
 SUBDIR+=	mini18n
 SUBDIR+=	minio
-SUBDIR+=	minizip
 SUBDIR+=	minizip192
 SUBDIR+=	minuit2
 SUBDIR+=	mipscope
