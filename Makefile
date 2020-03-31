@@ -2203,7 +2203,6 @@ SUBDIR+=	mixmaster
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcabal
 SUBDIR+=	mle
-SUBDIR+=	mlmmj
 SUBDIR+=	mlocate
 SUBDIR+=	mlt
 SUBDIR+=	mlton-git
