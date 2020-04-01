@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- gdb/gdbserver/Makefile.in.orig	2019-07-16 00:00:27.000000000 +0000
++++ gdb/gdbserver/Makefile.in
+@@ -179,6 +179,7 @@ SFILES = \
+ 	$(srcdir)/linux-x86-low.c \
+ 	$(srcdir)/linux-xtensa-low.c \
+ 	$(srcdir)/mem-break.c \
++	$(srcdir)/netbsd-low.c \
+ 	$(srcdir)/proc-service.c \
+ 	$(srcdir)/proc-service.list \
+ 	$(srcdir)/regcache.c \

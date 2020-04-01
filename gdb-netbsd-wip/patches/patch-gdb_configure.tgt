@@ -1,0 +1,79 @@
+$NetBSD$
+
+--- gdb/configure.tgt.orig	2019-07-16 00:00:27.000000000 +0000
++++ gdb/configure.tgt
+@@ -128,6 +128,16 @@ aarch64*-*-linux*)
+ 	build_gdbserver=yes
+ 	;;
+ 
++aarch64*-*-netbsd*)
++	# Target: AArch64 NetBSD
++	gdb_target_obs="aarch64-tdep.o aarch64-nbsd-tdep.o \
++			arch/aarch64-insn.o"
++	;;
++
++alpha*-*-osf*)
++	# Target: Little-endian Alpha running OSF/1
++	gdb_target_obs="alpha-tdep.o alpha-osf1-tdep.o alpha-mdebug-tdep.o"
++	;;
+ alpha*-*-linux*)
+ 	# Target: Little-endian Alpha running Linux
+ 	gdb_target_obs="alpha-mdebug-tdep.o alpha-linux-tdep.o \
+@@ -172,7 +182,7 @@ arm*-*-freebsd*)
+ 	;;
+ arm*-*-netbsd* | arm*-*-knetbsd*-gnu)
+ 	# Target: NetBSD/arm
+-	gdb_target_obs="arm-nbsd-tdep.o"
++	gdb_target_obs="arm-bsd-tdep.o arm-nbsd-tdep.o"
+ 	;;
+ arm*-*-openbsd*)
+ 	# Target: OpenBSD/arm
+@@ -246,11 +256,11 @@ hppa*-*-linux*)
+ 	;;
+ hppa*-*-netbsd*)
+ 	# Target: NetBSD/hppa
+-	gdb_target_obs="hppa-bsd-tdep.o hppa-nbsd-tdep.o solib-svr4.o"
++	gdb_target_obs="hppa-bsd-tdep.o hppa-nbsd-tdep.o"
+ 	;;
+ hppa*-*-openbsd*)
+ 	# Target: OpenBSD/hppa
+-	gdb_target_obs="hppa-bsd-tdep.o hppa-obsd-tdep.o solib-svr4.o"
++	gdb_target_obs="hppa-bsd-tdep.o hppa-obsd-tdep.o"
+ 	;;
+ 
+ i[34567]86-*-darwin*)
+@@ -380,7 +390,7 @@ m68*-*-linux*)
+ 			linux-tdep.o glibc-tdep.o symfile-mem.o"
+ 	build_gdbserver=yes
+ 	;;
+-m68*-*-netbsd* | m68*-*-knetbsd*-gnu)
++m68*-*-netbsd* | m68*-*-knetbsd*-gnu | m5407-*-netbsdelf*)
+ 	# Target: NetBSD/m68k
+ 	gdb_target_obs="m68k-tdep.o m68k-bsd-tdep.o"
+ 	;;
+@@ -492,7 +502,7 @@ powerpc*-*-freebsd*)
+ 			ravenscar-thread.o ppc-ravenscar-thread.o"
+ 	;;
+ 
+-powerpc-*-netbsd* | powerpc-*-knetbsd*-gnu)
++powerpc-*-netbsd* | powerpc-*-knetbsd*-gnu | powerpc64-*-netbsd*)
+ 	# Target: NetBSD/powerpc
+ 	gdb_target_obs="rs6000-tdep.o ppc-sysv-tdep.o ppc-nbsd-tdep.o \
+ 			ravenscar-thread.o ppc-ravenscar-thread.o"
+@@ -714,7 +724,7 @@ v850*-*-elf | v850*-*-rtems*)
+ 
+ vax-*-netbsd* | vax-*-knetbsd*-gnu)
+ 	# Target: NetBSD/vax
+-	gdb_target_obs="vax-tdep.o solib-svr4.o"
++	gdb_target_obs="vax-tdep.o"
+ 	;;
+ vax-*-openbsd*)
+ 	# Target: OpenBSD/vax
+@@ -762,6 +772,7 @@ x86_64-*-mingw* | x86_64-*-cygwin*)
+ x86_64-*-netbsd* | x86_64-*-knetbsd*-gnu)
+ 	# Target: NetBSD/amd64
+ 	gdb_target_obs="amd64-nbsd-tdep.o ${i386_tobjs}"
++	build_gdbserver=yes
+ 	;;
+ x86_64-*-openbsd*)
+ 	# Target: OpenBSD/amd64
