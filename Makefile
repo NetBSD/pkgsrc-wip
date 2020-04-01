@@ -2425,7 +2425,6 @@ SUBDIR+=	nx-client-bin
 SUBDIR+=	nxengine-evo
 SUBDIR+=	nyh-hoc
 SUBDIR+=	nzbget
-SUBDIR+=	obconf-qt
 SUBDIR+=	objfw-git
 SUBDIR+=	obmenu
 SUBDIR+=	obnc
