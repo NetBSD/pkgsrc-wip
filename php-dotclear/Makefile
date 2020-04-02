@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	dotclear-2.9.1
+PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
 		https://download.dotclear.org/attic/
