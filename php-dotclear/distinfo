@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (dotclear-2.9.1.tar.gz) = 8fd53e04a8fb8d482047224dcf78eca485c3b69e
-RMD160 (dotclear-2.9.1.tar.gz) = f427e5d164c6cf3b743758e461a5972ada71621b
-SHA512 (dotclear-2.9.1.tar.gz) = 09630bf45a51ab986cbdb83aceb74b1c48c4406d5fcad7f8c49dff60cdbe55d96ad6f041cacb7e2df4dc7e83f3dac77f722774c720792145782a2b68a576d9d4
-Size (dotclear-2.9.1.tar.gz) = 2664581 bytes
+SHA1 (dotclear-2.16.tar.gz) = cabff2922b11dd2f486148cce5716b075874a39f
+RMD160 (dotclear-2.16.tar.gz) = 86c6c701b71a7823f49688e8283ec4010a651946
+SHA512 (dotclear-2.16.tar.gz) = 604e28c20a59d381c243fe89e41872f2a94a32aa7af95a954e95bef6a935b65e88f7731182a4f510db96142665468c61061022b055bfd65fd7e6e209acc6fbf8
+Size (dotclear-2.16.tar.gz) = 3759792 bytes
 SHA1 (patch-admin_install_index.php) = 7abbb34e307f2eb17a243feaca7d1cdee5948afa
 SHA1 (patch-admin_install_wizard.php) = dedc2135305ea8dd6e7282ee0957ca43917abf17
 SHA1 (patch-inc_config.php.in) = cd5b8f5693089c3c319c4755f7b86f7e80970bd1
