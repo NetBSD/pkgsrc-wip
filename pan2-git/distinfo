@@ -1,4 +1,5 @@
 $NetBSD$
 
 SHA1 (patch-configure.ac) = e71544a02c6c3fa09fe79f78eb39ebd31e0d8a3c
+SHA1 (patch-filenames) = e68d7cd688a5b80a515cbe8e93e5bc4f5204033c
 SHA1 (patch-pan-general-e-util.cc) = c252f074b139b100f3f879261b1ba894b5f3350c

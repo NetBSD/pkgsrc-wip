@@ -1,0 +1,278 @@
+diff --git a/pan/tasks/decoder.cc b/pan/tasks/decoder.cc
+index b4c21ae..04ea40a 100644
+--- pan/tasks/decoder.cc
++++ pan/tasks/decoder.cc
+@@ -61,7 +61,8 @@ Decoder :: enqueue (TaskArticle                     * task,
+                     const strings_t                 & input_files,
+                     const TaskArticle::SaveMode     & save_mode,
+                     const TaskArticle::SaveOptions  & options,
+-                    const StringView                & filename)
++                    const StringView                & filename,
++                    const Article                   & article)
+ {
+   disable_progress_update ();
+ 
+@@ -71,6 +72,7 @@ Decoder :: enqueue (TaskArticle                     * task,
+   this->save_mode = save_mode;
+   this->options = options;
+   this->attachment_filename = filename;
++  this->article_subject = article.subject;
+ 
+   mark_read = false;
+ 
+@@ -149,7 +151,12 @@ Decoder :: do_work()
+       {
+ 
+         if (was_cancelled()) break;
+-        if ((res = UULoadFileWithPartNo (const_cast<char*>(it->c_str()), 0, 0, ++i)) != UURET_OK) {
++        const char *global_subject = NULL;
++        // In SAVE_ALL mode, article_subject is the subject from the NZB file, if known
++        if (options == TaskArticle::SAVE_ALL && !article_subject.empty()) {
++          global_subject = article_subject.c_str();
++        }
++        if ((res = UULoadFileWithPartNo (const_cast<char*>(it->c_str()), 0, 0, ++i, global_subject)) != UURET_OK) {
+           g_snprintf(buf, bufsz,
+                      _("Error reading from %s: %s"),
+                      it->c_str(),
+@@ -171,8 +178,8 @@ Decoder :: do_work()
+       {
+         // skip all other attachments in SAVE_AS mode (single attachment download)
+         /// DBG why is this failing if article isn't cached????
+-        if (!attachment_filename.empty())
+-          if(strcmp(item->filename, attachment_filename.str) != 0 && options == TaskArticle::SAVE_AS) continue;
++        if (options == TaskArticle::SAVE_AS && !attachment_filename.empty())
++          if(strcmp(item->filename, attachment_filename.str) != 0) continue;
+ 
+         file_errors.clear ();
+ 
+diff --git a/pan/tasks/decoder.h b/pan/tasks/decoder.h
+index 74403c1..c0cff51 100644
+--- pan/tasks/decoder.h
++++ pan/tasks/decoder.h
+@@ -61,7 +61,8 @@ namespace pan
+                     const strings_t                & input_files,
+                     const TaskArticle::SaveMode    & save_mode,
+                     const TaskArticle::SaveOptions & options,
+-                    const StringView               & filename);
++                    const StringView               & filename,
++                    const Article                  & article);
+ 
+     public:
+ 
+@@ -82,6 +83,7 @@ namespace pan
+       TaskArticle::SaveMode save_mode;
+       TaskArticle::SaveOptions options;
+       StringView attachment_filename;
++      Quark article_subject;
+ 
+       // These are set in the worker thread and polled in the main thread.
+       Mutex mut;
+diff --git a/pan/tasks/task-article.cc b/pan/tasks/task-article.cc
+index 9c96b7d..beaed60 100644
+--- pan/tasks/task-article.cc
++++ pan/tasks/task-article.cc
+@@ -350,7 +350,7 @@ TaskArticle :: use_decoder (Decoder* decoder)
+   _state.set_working();
+   const Article::mid_sequence_t mids (_article.get_part_mids());
+   ArticleCache :: strings_t filenames (_cache.get_filenames (mids));
+-  _decoder->enqueue (this, _save_path, filenames, _save_mode, _options, _attachment);
++  _decoder->enqueue (this, _save_path, filenames, _save_mode, _options, _attachment, _article);
+   set_status_va (_("Decoding %s"), _article.subject.c_str());
+   debug ("decoder thread was free, enqueued work");
+ }
+diff --git a/uulib/uucheck.c b/uulib/uucheck.c
+index 98cb8e0..0f128d0 100644
+--- uulib/uucheck.c
++++ uulib/uucheck.c
+@@ -86,6 +86,12 @@ static char *nofname = "UNKNOWN";
+ 
+ static char *fnchars = "._-~!";
+ 
++/*
++ * special characters we forbid a quoted filename to have
++ */
++
++static char *fnqchars = "/:\\\"";
++
+ /*
+  * Policy for extracting a part number from the subject line.
+  * usually, look for part numbers in () brackets first, then in []
+@@ -148,23 +154,27 @@ UUGetFileName (char *subject, char *ptonum, char *ptonend)
+   }
+ 
+   /*
+-   * If the file was encoded by uuenview, then the filename is enclosed
+-   * in [brackets]. But check what's inside these bracket's, try not to
+-   * fall for something other than a filename
++   * Try try to find a file name between quotes.
++   * With yEnc this format is compulsory.
+    */
+ 
+   ptr = subject;
+-  while ((iter = strchr (ptr, '[')) != NULL) {
+-    if (strchr (iter, ']') == NULL) {
++  while ((iter = strchr (ptr, '"')) != NULL) {
++    /* Don't overlap the sequence number */
++    if (ptonum && ptonend && iter >= ptonum && iter <= ptonend) {
+       ptr = iter + 1;
+       continue;
+     }
+     iter++;
++    if (strchr (iter, '"') == NULL) {
++      ptr = iter + 1;
++      continue;
++    }
+     while (isspace (*iter))
+       iter++;
+     count = length = alflag = 0;
+     while (iter[count] && 
+-	   (isalnum (iter[count]) || strchr (fnchars, iter[count])!=NULL)) {
++	   (strchr (fnqchars, iter[count])==NULL)) {
+       if (isalpha (iter[count]))
+ 	alflag++;
+       count++;
+@@ -173,10 +183,15 @@ UUGetFileName (char *subject, char *ptonum, char *ptonend)
+       ptr = iter + 1;
+       continue;
+     }
++    /* Don't overlap the sequence number */
++    if (ptonum && ptonend && iter+count >= ptonum && iter+count <= ptonend) {
++      ptr = iter + 1;
++      continue;
++    }
+     length = count;
+     while (isspace (iter[count]))
+       count++;
+-    if (iter[count] == ']') {
++    if (iter[count] == '"') {
+       ptr = iter;
+       break;
+     }
+@@ -184,6 +199,46 @@ UUGetFileName (char *subject, char *ptonum, char *ptonend)
+     ptr = iter + 1;
+   }
+ 
++
++  /*
++   * If the file was encoded by uuenview, then the filename is enclosed
++   * in [brackets]. But check what's inside these bracket's, try not to
++   * fall for something other than a filename
++   */
++
++  if (length == 0) {
++    ptr = subject;
++    while ((iter = strchr (ptr, '[')) != NULL) {
++      if (strchr (iter, ']') == NULL) {
++        ptr = iter + 1;
++        continue;
++      }
++      iter++;
++      while (isspace (*iter))
++        iter++;
++      count = length = alflag = 0;
++      while (iter[count] &&
++             (isalnum (iter[count]) || iter[count] == ' ' || strchr (fnchars, iter[count])!=NULL)) {
++        if (isalpha (iter[count]))
++          alflag++;
++        count++;
++      }
++      if (count<4 || alflag==0) {
++        ptr = iter + 1;
++        continue;
++      }
++      length = count;
++      while (isspace (iter[count]))
++        count++;
++      if (iter[count] == ']') {
++        ptr = iter;
++        break;
++      }
++      length = 0;
++      ptr = iter + 1;
++    }
++  }
++
+   /*
+    * new filename detection routine, fists mostly for files by ftp-by-email
+    * servers that create subject lines with ftp.host.address:/full/path/file
+diff --git a/uulib/uudeview.h b/uulib/uudeview.h
+index 753279d..16ad363 100644
+--- uulib/uudeview.h
++++ uulib/uudeview.h
+@@ -206,7 +206,7 @@ int	UUEXPORT UUSetFNameFilter	_ANSI_ARGS_((void *,
+ 								 char *)));
+ char *	UUEXPORT UUFNameFilter		_ANSI_ARGS_((char *));
+ int	UUEXPORT UULoadFile		_ANSI_ARGS_((char *, char *, int));
+-int	UUEXPORT UULoadFileWithPartNo	_ANSI_ARGS_((char *, char *, int, int));
++int	UUEXPORT UULoadFileWithPartNo	_ANSI_ARGS_((char *, char *, int, int, const char *));
+ uulist *UUEXPORT UUGetFileListItem	_ANSI_ARGS_((int));
+ int	UUEXPORT UURenameFile		_ANSI_ARGS_((uulist *, char *));
+ int	UUEXPORT UUDecodeToTemp		_ANSI_ARGS_((uulist *));
+diff --git a/uulib/uulib.c b/uulib/uulib.c
+index 2d6816d..1286f43 100644
+--- uulib/uulib.c
++++ uulib/uulib.c
+@@ -655,11 +655,11 @@ UUFNameFilter (char *fname)
+ int UUEXPORT
+ UULoadFile (char *filename, char *fileid, int delflag)
+ {
+-  return UULoadFileWithPartNo(filename, fileid, delflag, -1);
++  return UULoadFileWithPartNo(filename, fileid, delflag, -1, NULL);
+ }
+ 
+ int UUEXPORT
+-UULoadFileWithPartNo (char *filename, char *fileid, int delflag, int partno)
++UULoadFileWithPartNo (char *filename, char *fileid, int delflag, int partno, const char *global_subject)
+ {
+   int res, sr, count=0;
+   struct stat finfo;
+@@ -667,6 +667,7 @@ UULoadFileWithPartNo (char *filename, char *fileid, int delflag, int partno)
+   uufile *fload;
+   itbd *killem;
+   FILE *datei;
++  int overridden_subject;
+ 
+   if ((datei = fopen (filename, "rb")) == NULL) {
+     UUMessage (uulib_id, __LINE__, UUMSG_ERROR,
+@@ -779,6 +780,23 @@ UULoadFileWithPartNo (char *filename, char *fileid, int delflag, int partno)
+       continue;
+     }
+ 
++    if (partno != -1 && global_subject &&
++        loaded->uudet == YENC_ENCODED && /* only yEnc has a filename in each part */
++        (loaded->subject && loaded->filename &&
++         strstr(loaded->subject, loaded->filename) == NULL)) {
++      /*
++       * Sometimes articles derived from an NZB file have corrupt Subject: lines.
++       * That also makes that UUInsertPartToList() fails to combine files properly.
++       * We detect this situation by checking if the filename from the
++       * part can be found in the Subject: header.
++       */
++      _FP_free(loaded->subject);
++      loaded->subject = _FP_strdup((char *)global_subject);
++      overridden_subject = 1;
++    } else {
++      overridden_subject = 0;
++    }
++
+     if ((fload = UUPreProcessPart (loaded, &res)) == NULL) {
+       /*
+        * no useful data found
+@@ -793,6 +811,17 @@ UULoadFileWithPartNo (char *filename, char *fileid, int delflag, int partno)
+       continue;
+     }
+ 
++    if (overridden_subject) {
++      /*
++       * If the yEnc file gives a different file name than the subject,
++       * this is a security risk.
++       *
++       * Override the part file name with the one derived from the global subject.
++       */
++      _FP_free(fload->filename);
++      fload->filename = _FP_strdup(fload->subfname);
++    }
++
+     if ((loaded->subject && *(loaded->subject)) ||
+ 	(loaded->mimeid  && *(loaded->mimeid))  ||
+ 	(loaded->filename&& *(loaded->filename))||
