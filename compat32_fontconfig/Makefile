@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		HASDOCBOOK=no
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/emul/netbsd32
 
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
-_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/emul/netbsd32/lib/pkgconfig:${BUILDLINK_DIR}/emul/netbsd32/lib/freetype2/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
+_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/emul/netbsd32/lib/freetype2/pkgconfig:${BUILDLINK_DIR}/emul/netbsd32/lib/pkgconfig:${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig
 
 PKG_SYSCONFSUBDIR=	fontconfig
 
@@ -99,12 +99,6 @@ TEST_TARGET=	check
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
-# XXX: Unlink libs and *.pc files of fontconfig and freetype that comes with compat80-x11
-pre-configure:
-	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
-	cd ${BUILDLINK_X11_DIR}/emul/netbsd32/lib && find . -name "*freetype*" -maxdepth 1 -type l -delete && find ./pkgconfig/ -name "*freetype2.pc*" -type l -delete
-	cd ${BUILDLINK_X11_DIR}/lib && find . -name "*freetype*" -type l -delete && find ./pkgconfig/ -name "*freetype2.pc*" -type l -delete
-
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
 
@@ -116,6 +110,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.compat32_freetype2+=	compat32_freetype2>=2.8.1
 .include "../../wip/compat32_freetype2/buildlink3.mk"
-.include "../../wip/compat80-x11/buildlink3.mk"
+#.include "../../wip/compat80-x11/buildlink3.mk"
 .include "../../wip/compat32_expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
