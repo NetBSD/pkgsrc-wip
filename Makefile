@@ -442,7 +442,6 @@ SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
 SUBDIR+=	cmusfm
 SUBDIR+=	coccinelle
-SUBDIR+=	codelite
 SUBDIR+=	collectd-CGP
 SUBDIR+=	collectd-haproxy
 SUBDIR+=	collectd-redis
