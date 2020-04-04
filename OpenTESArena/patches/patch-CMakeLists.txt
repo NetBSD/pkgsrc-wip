@@ -1,0 +1,15 @@
+$NetBSD$
+
+Disable the SSE4 code so that older CPU's are supported.
+
+--- CMakeLists.txt.orig	2020-04-04 20:30:08.638946764 +0000
++++ CMakeLists.txt
+@@ -24,7 +24,7 @@ IF (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CX
+     ENDIF ()
+ 
+     # Optimizations.
+-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse4.1")
++    # SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse4.1")
+ ENDIF ()
+ 
+ # We want RelWithDebInfo to actually include debug stuff (define _DEBUG
