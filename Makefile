@@ -3091,7 +3091,6 @@ SUBDIR+=	py-Xlib
 SUBDIR+=	py-achemkit
 SUBDIR+=	py-acq4
 SUBDIR+=	py-adal
-SUBDIR+=	py-adb
 SUBDIR+=	py-addons
 SUBDIR+=	py-adsbibdesk
 SUBDIR+=	py-aerocalc

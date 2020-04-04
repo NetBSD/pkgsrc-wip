@@ -1,2 +1,0 @@
-bin/pyadb @PREFIX@/bin/pyadb-@PYVERSSUFFIX@
-bin/pyfastboot @PREFIX@/bin/pyfastboot-@PYVERSSUFFIX@

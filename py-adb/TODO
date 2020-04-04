@@ -1,6 +1,0 @@
-At the moment this package was only tested using attaching ADB via
-the network.
-It would be nice to also test it using USB before importing but
-unfortunately I have no device adb-able via USB.
-
-  -- leot (2018/04/11)
