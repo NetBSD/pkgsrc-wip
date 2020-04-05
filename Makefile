@@ -2919,6 +2919,7 @@ SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
 SUBDIR+=	php-msgpack
 SUBDIR+=	php-tclink
+SUBDIR+=	php-uuid
 SUBDIR+=	php-xdiff
 SUBDIR+=	php-zmq
 SUBDIR+=	picolisp
