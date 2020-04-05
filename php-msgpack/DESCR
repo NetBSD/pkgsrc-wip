@@ -1,3 +1,4 @@
-php-msgpack provides bindings to the functions of MessagePack,
-an efficient binary serialization format which may be used
-to exchange data among multiple languages.
+This extension provide API for communicating with MessagePack serialization.
+MessagePack is a binary-based efficient object serialization library.
+It enables to exchange structured objects between many languages like JSON.
+But unlike JSON, it is very fast and small.

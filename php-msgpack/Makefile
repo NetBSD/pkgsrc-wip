@@ -2,8 +2,7 @@
 #
 
 MODNAME=		msgpack
-# all versions are listed as "beta" state
-PECL_VERSION=		2.0.1
+PECL_VERSION=		2.1.0
 CATEGORIES+=		devel
 
 MAINTAINER=		pkgsrc-users@pkgsrc.org
