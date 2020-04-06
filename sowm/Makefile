@@ -12,9 +12,5 @@ LICENSE=	mit
 
 INSTALLATION_DIRS+=	bin
 
-pre-configure:
-	${RUN} cd ${WRKSRC} && \
-	cp config.def.h config.h
-
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
