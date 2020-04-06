@@ -842,7 +842,6 @@ SUBDIR+=	flvmeta
 SUBDIR+=	flyback
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
-SUBDIR+=	focuswriter
 SUBDIR+=	fogleman-craft
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
