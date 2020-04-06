@@ -1,0 +1,6 @@
+On PaX mprotect systems, the g-ir-scanner used to generate the typelib
+loads the mozjs68 javascript interpreter library and fails to run.
+
+sysctl -w security.pax.mprotect.enabled=0
+
+works around this, but I found no other workaround.
