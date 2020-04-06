@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-patch-ng-1.17.2:../../wip/py-patch-ng
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-node-semver-0.6.1:../../wip/py-node-semver
-DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.2<1.2.0:../../wip/py-distro
+DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.2<1.2.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.3.1:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-future>=0.16.0<0.19.0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0<3.0:../../textproc/py-pygments

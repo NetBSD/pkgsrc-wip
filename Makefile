@@ -3322,7 +3322,6 @@ SUBDIR+=	py-dill
 SUBDIR+=	py-dimarray
 SUBDIR+=	py-diofant
 SUBDIR+=	py-distob
-SUBDIR+=	py-distro
 SUBDIR+=	py-distutils-extra
 SUBDIR+=	py-divisi2
 SUBDIR+=	py-divmod-epsilon
