@@ -16,9 +16,11 @@ GITHUB_TAG=	Release_${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake flex gawk grep gm4 gmake perl gsed
+USE_TOOLS+=	bash
 USE_LIBTOOL=	YES
 USE_LANGUAGES+=	c c++
 PTHREAD_OPTS+=	require
+REPLACE_BASH=	_dynamic_version
 
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/sdlhercules
 
