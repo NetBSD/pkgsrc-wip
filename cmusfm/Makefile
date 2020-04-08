@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.1 2014/06/05 21:26:12 leot1990 Exp $
+# $NetBSD$
 
-DISTNAME=	cmusfm-0.2.0
+DISTNAME=	cmusfm-0.3.3
 CATEGORIES=	audio
-MASTER_SITES=	-https://github.com/Arkq/cmusfm/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Arkq/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Arkq/cmusfm
 COMMENT=	Last.fm standalone scrobbler for the cmus music player
 LICENSE=	gnu-gpl-v3
 
-NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	autoconf automake pkg-config
+GNU_CONFIGURE=	yes
 
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.makefile=	Fixing Makefile.
-SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e 's/gcc/${CC:Q}/'
-SUBST_SED.makefile+=	-e 's,^CFLAGS *=,CFLAGS +=,'
-SUBST_SED.makefile+=	-e 's,^LDFLAGS *=,LDFLAGS +=,'
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 INSTALLATION_DIRS=	bin ${DOCDIR}
 
 DOCDIR=			${PREFIX}/share/doc/cmusfm
 
+TEST_TARGET=		check
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -i
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cmusfm ${DESTDIR}${PREFIX}/bin/cmusfm
+	${INSTALL_PROGRAM} ${WRKSRC}/src/cmusfm ${DESTDIR}${PREFIX}/bin/cmusfm
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
 
 .include "../../www/curl/buildlink3.mk"
