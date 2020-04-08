@@ -14,6 +14,7 @@ INSTALLATION_DIRS+=	bin
 
 DEPENDS+=	dmenu-[0-9]*:../../x11/dmenu
 DEPENDS+=	st-term-[0-9]*:../../x11/st-term
+DEPENDS+=	scrot-[0-9]*:../../graphics/scrot
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
