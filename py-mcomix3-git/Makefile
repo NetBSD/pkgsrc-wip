@@ -11,7 +11,7 @@ COMMENT=	Comic viewer
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.24:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.24:../../graphics/py-gobject3
 
 USE_LANGUAGES=			# empty
 PYTHON_VERSIONS_INCOMPATIBLE=	27
