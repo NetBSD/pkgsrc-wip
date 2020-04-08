@@ -48,6 +48,7 @@ bin/gnunet-search
 bin/gnunet-secretsharing-profiler
 bin/gnunet-set-profiler
 bin/gnunet-statistics
+bin/gnunet-suidfix
 bin/gnunet-testbed-profiler
 bin/gnunet-testing
 bin/gnunet-transport
@@ -408,6 +409,7 @@ man/man1/gnunet-arm.1
 man/man1/gnunet-ats.1
 man/man1/gnunet-auto-share.1
 man/man1/gnunet-bcd.1
+man/man1/gnunet-bugreport.1
 man/man1/gnunet-cadet.1
 man/man1/gnunet-config.1
 man/man1/gnunet-conversation-test.1
@@ -453,6 +455,7 @@ man/man5/gnunet.conf.5
 ${PLIST.mdoc}man/man7/gnunet-c-tutorial.7
 ${PLIST.mdoc}man/man7/gnunet-documentation.7
 share/doc/gnunet/COPYING
+share/gnunet/LICENSE
 share/doc/gnunet/README
 ${PLIST.experimental}share/gnunet/config.d/abd.conf
 share/gnunet/config.d/arm.conf
@@ -500,6 +503,8 @@ share/gnunet/config.d/util.conf
 share/gnunet/config.d/vpn.conf
 share/gnunet/config.d/zonemaster.conf
 share/gnunet/def.tex
+share/gnunet/existence.sh
+share/gnunet/existence_python.sh
 share/gnunet/gns-bcd.html
 share/gnunet/gns-bcd.tex
 share/gnunet/gns-form-fields.xml
@@ -507,7 +512,12 @@ share/gnunet/gns-form.xslt
 share/gnunet/gnunet-gns-proxy-ca.template
 share/gnunet/gnunet-logo-color.png
 share/gnunet/gnunet-logo.pdf
+share/gnunet/gnunet-logo.png
 share/gnunet/hellos/Y924NSHMMZ1N1SQCE5TXF93ED6S6JY311K0QT86G9WJC68F6XVZ0
+share/gnunet/msg.sh
+share/gnunet/progname.sh
+share/gnunet/python.sh
+share/gnunet/version_gnunet.sh
 share/gnunet/services/openrc/gnunet.initd
 share/gnunet/services/systemd/gnunet.service
 share/gnunet/testing_hostkeys.ecc

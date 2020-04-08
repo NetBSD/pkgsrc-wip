@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.11.8
+DISTNAME=		gnunet-0.12.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
-MAINTAINER=		ng0@NetBSD.org
+MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://gnunet.org/
 COMMENT=		Framework for secure P2P networking
 LICENSE=		gnu-agpl-v3
@@ -69,6 +69,13 @@ SUBST_SED.sysconfdir+=		-e 's,^DEFAULTCONFIG.*,DEFAULTCONFIG = ${PKG_SYSCONFDIR}
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DIR}/data,g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
+
+# But really I should fix this upstream
+SUBST_CLASSES+=			binsh
+SUBST_STAGE.binsh=		pre-configure
+SUBST_MESSAGE.binsh=		Fixing env sh to /bin/sh
+SUBST_FILES.binsh=		contrib/scripts/gnunet-bugreport
+SUBST_SED.binsh+=		-e 's,/usr/bin/env sh,/bin/sh,g'
 
 # All helpers have to be suid. fs helper must not be suid.
 # Some helpers and functionalities are only supported on
