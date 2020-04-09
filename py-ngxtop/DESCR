@@ -1,0 +1,1 @@
+Parses your nginx access log and outputs useful, metrics of your nginx server. So you can tell what is happening with your server in real-time.

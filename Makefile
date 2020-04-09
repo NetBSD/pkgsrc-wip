@@ -3712,6 +3712,7 @@ SUBDIR+=	py-neurolab
 SUBDIR+=	py-neuronpy
 SUBDIR+=	py-nexpy
 SUBDIR+=	py-nfg
+SUBDIR+=	py-ngxtop
 SUBDIR+=	py-nibabel
 SUBDIR+=	py-nilearn
 SUBDIR+=	py-nimfa

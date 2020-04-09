@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/${PKGVERSION}
+${PYSITELIB}/${PKGVERSION}-0.0.2-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/${PKGVERSION}-0.0.2-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/${PKGVERSION}-0.0.2-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/${PKGVERSION}-0.0.2-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/${PKGVERSION}-0.0.2-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/${PKGVERSION}-0.0.2-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${PKGVERSION}/__init__.py
+${PYSITELIB}/${PKGVERSION}/__init__.pyo
+${PYSITELIB}/${PKGVERSION}/__init__.pyc
+${PYSITELIB}/${PKGVERSION}/config_parser.pyo
+${PYSITELIB}/${PKGVERSION}/config_parser.pyc
+${PYSITELIB}/${PKGVERSION}/${PKGVERSION}.pyo
+${PYSITELIB}/${PKGVERSION}/${PKGVERSION}.pyc
+${PYSITELIB}/${PKGVERSION}/utils.pyo
+${PYSITELIB}/${PKGVERSION}/utils.pyc
+${PYSITELIB}/${PKGVERSION}/config_parser.py
+${PYSITELIB}/${PKGVERSION}/${PKGVERSION}.py
+${PYSITELIB}/${PKGVERSION}/utils.py
