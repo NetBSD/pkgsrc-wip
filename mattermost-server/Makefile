@@ -13,6 +13,7 @@ LICENSE=	mit
 
 GO_BUILD_PATTERN= -mod=vendor -trimpath ./cmd/mattermost
 USE_LANGUAGES=	c # go
+CHECK_RELRO_SKIP=	bin/mattermost
 
 .include "../../wip/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
