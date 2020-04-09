@@ -2373,6 +2373,7 @@ SUBDIR+=	netwox
 SUBDIR+=	netx
 SUBDIR+=	newsboat
 SUBDIR+=	newsboat213
+SUBDIR+=	newt
 SUBDIR+=	nget
 SUBDIR+=	ngircd
 SUBDIR+=	nicotine+
