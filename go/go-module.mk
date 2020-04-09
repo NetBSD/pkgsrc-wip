@@ -63,7 +63,6 @@ do-install:
 	${RUN} cd ${WRKDIR}/.gopath && [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
 .endif
 
-# FIXME This needs to depend on extract
 .PHONY: show-go-modules
 show-go-modules: ${WRKDIR}/.extract_done
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
@@ -72,14 +71,14 @@ show-go-modules: ${WRKDIR}/.extract_done
 
 DISTFILES?=	${DEFAULT_DISTFILES}
 .for i in ${GO_MODULE_FILES}
-DISTFILES+=	${${i}:!basename ${i}!}
-SITES.${${i}:!basename ${i}!}= https://proxy.golang.org/${${i}:!dirname ${i}!}/
+DISTFILES+=	${i:S/\//_/g}
+SITES.${i:S/\//_/g}= -https://proxy.golang.org/${i}
 .endfor
 
 post-extract:
 .for i in ${GO_MODULE_FILES}
-	${MKDIR} ${WRKDIR}/.goproxy/${${i}:!dirname ${i}!}
-	cp ${DISTDIR}/${DIST_SUBDIR}/${${i}:!basename ${i}!} ${WRKDIR}/.goproxy/${i}
+	${MKDIR} ${WRKDIR}/.goproxy/${i:H}
+	cp ${DISTDIR}/${DIST_SUBDIR}/${i:S/\//_/g} ${WRKDIR}/.goproxy/${i}
 .endfor
 
 _VARGROUPS+=		go
