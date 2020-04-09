@@ -13,10 +13,10 @@ LICENSE=	mit
 WRKSRC=         ${WRKDIR}/${DISTNAME}-${GITHUB_TAG}
 
 DEPENDS+=       ${PYPKGPREFIX}-docopt>=0.6.2:../../devel/py-docopt
-DEPENDS+=       ${PYPKGPREFIX}-tabulate>=0.8.6:../../textproc/py-tabulate
-DEPENDS+=       ${PYPKGPREFIX}-pyparsing>=2.4.5:../../devel/py-pyparsing
-DEPENDS+=       ${PYPKGPREFIX}-curses>=3.7.6:../../devel/py-curses
-DEPENDS+=       ${PYPKGPREFIX}-sqlite3>=3.7.6:../../databases/py-sqlite3 
+DEPENDS+=       ${PYPKGPREFIX}-tabulate>=0.8.3:../../textproc/py-tabulate
+DEPENDS+=       ${PYPKGPREFIX}-pyparsing>=2.3.1:../../devel/py-pyparsing
+DEPENDS+=       ${PYPKGPREFIX}-curses>=2.7.16:../../devel/py-curses
+DEPENDS+=       ${PYPKGPREFIX}-sqlite3>=2.7.16:../../databases/py-sqlite3
 
 
 post-install:
