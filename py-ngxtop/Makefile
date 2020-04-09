@@ -1,19 +1,14 @@
 # $NetBSD$
 
-DISTNAME= 	ngxtop	
+DISTNAME=       ngxtop-0.0.2
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lebinh/}
-GITHUB_TAG=     0.0.2
-EXTRACT_SUFX=	.zip
+MASTER_SITES=   ${MASTER_SITE_PYPI:=n/ngxtop/}
 CATEGORIES= 	sysutils
 
-MAINTAINER=	kethzer.dr@gmail.com	
+MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/lebinh/
 COMMENT=	real-time metrics for nginx server
-LICENSE=	mit	
-
-
-#PYTHON_VERSIONS_ACCEPTED=      27
+LICENSE=	mit
 
 WRKSRC=         ${WRKDIR}/${DISTNAME}-${GITHUB_TAG}
 
@@ -28,5 +23,4 @@ post-install:
 	${CP} -r ${WRKDIR}/.destdir/usr/pkg/bin/ngxtop ${PREFIX}/bin
 
 .include "../../lang/python/egg.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
