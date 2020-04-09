@@ -42,6 +42,7 @@ MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin
 USE_TOOLS+=		pax
 
+BUILD_DEPENDS+=		${GO_PACKAGE_DEP}
 PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 
 MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.goproxy
@@ -49,12 +50,12 @@ MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
 
 .if !target(do-build)
 do-build:
-	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
+	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-test)
 do-test:
-	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_ENV} ${GO} test -v ${GO_BUILD_PATTERN}
+	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_ENV} ${GO} test -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-install)
@@ -64,22 +65,21 @@ do-install:
 
 # FIXME This needs to depend on extract
 .PHONY: show-go-modules
-show-go-modules:
-	# cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} env
+show-go-modules: ${WRKDIR}/.extract_done
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.mod" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.zip" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 
 DISTFILES?=	${DEFAULT_DISTFILES}
 .for i in ${GO_MODULE_FILES}
-DISTFILES+=	${i:!basename $i!}
-SITES.${i:!basename $i!}= https://proxy.golang.org/${i:!dirname $i!}/
+DISTFILES+=	${${i}:!basename ${i}!}
+SITES.${${i}:!basename ${i}!}= https://proxy.golang.org/${${i}:!dirname ${i}!}/
 .endfor
 
 post-extract:
 .for i in ${GO_MODULE_FILES}
-	${MKDIR} ${WRKDIR}/.goproxy/${i:!dirname $i!}
-	cp ${DISTDIR}/${DIST_SUBDIR}/${i:!basename $i!} ${WRKDIR}/.goproxy/$i
+	${MKDIR} ${WRKDIR}/.goproxy/${${i}:!dirname ${i}!}
+	cp ${DISTDIR}/${DIST_SUBDIR}/${${i}:!basename ${i}!} ${WRKDIR}/.goproxy/${i}
 .endfor
 
 _VARGROUPS+=		go
