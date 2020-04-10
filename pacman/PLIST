@@ -1,12 +1,10 @@
 @comment $NetBSD$
-bin/cleanupdelta
 bin/makepkg
 bin/makepkg-template
 bin/pacman
 bin/pacman-conf
 bin/pacman-db-upgrade
 bin/pacman-key
-bin/pkgdelta
 bin/repo-add
 bin/repo-elephant
 bin/repo-remove
@@ -24,13 +22,15 @@ man/man5/alpm-hooks.5
 man/man5/makepkg.conf.5
 man/man5/pacman.conf.5
 man/man8/makepkg.8
+man/man8/pacman-conf.8
 man/man8/pacman-key.8
 man/man8/pacman.8
-man/man8/pkgdelta.8
 man/man8/repo-add.8
 man/man8/repo-remove.8
 man/man8/vercmp.8
-share/examples/pacman/bash_completion-pacman
+share/bash-completion/completions/makepkg
+share/bash-completion/completions/pacman
+share/bash-completion/completions/pacman-key
 share/examples/pacman/makepkg.conf
 share/examples/pacman/pacman.conf
 share/locale/ar/LC_MESSAGES/libalpm.mo
@@ -100,7 +100,6 @@ share/locale/ja/LC_MESSAGES/libalpm.mo
 share/locale/ja/LC_MESSAGES/pacman-scripts.mo
 share/locale/ja/LC_MESSAGES/pacman.mo
 share/locale/kk/LC_MESSAGES/libalpm.mo
-share/locale/kk/LC_MESSAGES/pacman.mo
 share/locale/ko/LC_MESSAGES/libalpm.mo
 share/locale/ko/LC_MESSAGES/pacman-scripts.mo
 share/locale/ko/LC_MESSAGES/pacman.mo
@@ -132,6 +131,7 @@ share/locale/sk/LC_MESSAGES/libalpm.mo
 share/locale/sk/LC_MESSAGES/pacman-scripts.mo
 share/locale/sk/LC_MESSAGES/pacman.mo
 share/locale/sl/LC_MESSAGES/libalpm.mo
+share/locale/sl/LC_MESSAGES/pacman-scripts.mo
 share/locale/sl/LC_MESSAGES/pacman.mo
 share/locale/sr/LC_MESSAGES/libalpm.mo
 share/locale/sr/LC_MESSAGES/pacman-scripts.mo
@@ -154,13 +154,31 @@ share/locale/zh_CN/LC_MESSAGES/pacman.mo
 share/locale/zh_TW/LC_MESSAGES/libalpm.mo
 share/locale/zh_TW/LC_MESSAGES/pacman-scripts.mo
 share/locale/zh_TW/LC_MESSAGES/pacman.mo
+share/makepkg/buildenv.sh
+share/makepkg/buildenv/buildflags.sh
+share/makepkg/buildenv/compiler.sh
+share/makepkg/buildenv/debugflags.sh
+share/makepkg/buildenv/makeflags.sh
+share/makepkg/executable.sh
+share/makepkg/executable/ccache.sh
+share/makepkg/executable/checksum.sh
+share/makepkg/executable/distcc.sh
+share/makepkg/executable/fakeroot.sh
+share/makepkg/executable/gpg.sh
+share/makepkg/executable/gzip.sh
+share/makepkg/executable/pacman.sh
+share/makepkg/executable/strip.sh
+share/makepkg/executable/sudo.sh
+share/makepkg/executable/vcs.sh
 share/makepkg/integrity.sh
 share/makepkg/integrity/generate_checksum.sh
 share/makepkg/integrity/generate_signature.sh
 share/makepkg/integrity/verify_checksum.sh
 share/makepkg/integrity/verify_signature.sh
 share/makepkg/lint_config.sh
+share/makepkg/lint_config/ext.sh
 share/makepkg/lint_config/paths.sh
+share/makepkg/lint_config/source_date_epoch.sh
 share/makepkg/lint_config/variable.sh
 share/makepkg/lint_package.sh
 share/makepkg/lint_package/build_references.sh
@@ -169,17 +187,20 @@ share/makepkg/lint_package/file_names.sh
 share/makepkg/lint_package/missing_backup.sh
 share/makepkg/lint_pkgbuild.sh
 share/makepkg/lint_pkgbuild/arch.sh
+share/makepkg/lint_pkgbuild/arch_specific.sh
 share/makepkg/lint_pkgbuild/backup.sh
 share/makepkg/lint_pkgbuild/changelog.sh
 share/makepkg/lint_pkgbuild/checkdepends.sh
 share/makepkg/lint_pkgbuild/conflicts.sh
 share/makepkg/lint_pkgbuild/depends.sh
 share/makepkg/lint_pkgbuild/epoch.sh
+share/makepkg/lint_pkgbuild/fullpkgver.sh
 share/makepkg/lint_pkgbuild/install.sh
 share/makepkg/lint_pkgbuild/makedepends.sh
 share/makepkg/lint_pkgbuild/optdepends.sh
 share/makepkg/lint_pkgbuild/options.sh
 share/makepkg/lint_pkgbuild/package_function.sh
+share/makepkg/lint_pkgbuild/package_function_variable.sh
 share/makepkg/lint_pkgbuild/pkgbase.sh
 share/makepkg/lint_pkgbuild/pkglist.sh
 share/makepkg/lint_pkgbuild/pkgname.sh
@@ -207,20 +228,24 @@ share/makepkg/tidy/strip.sh
 share/makepkg/tidy/zipman.sh
 share/makepkg/util.sh
 share/makepkg/util/compress.sh
+share/makepkg/util/config.sh
+share/makepkg/util/dirsize.sh
 share/makepkg/util/error.sh
 share/makepkg/util/message.sh
 share/makepkg/util/option.sh
 share/makepkg/util/parseopts.sh
 share/makepkg/util/pkgbuild.sh
+share/makepkg/util/schema.sh
 share/makepkg/util/source.sh
 share/makepkg/util/util.sh
 share/pacman/PKGBUILD-split.proto
 share/pacman/PKGBUILD-vcs.proto
 share/pacman/PKGBUILD.proto
 share/pacman/proto.install
+share/pkgconfig/libmakepkg.pc
 share/zsh/site-functions/_pacman
-@pkgdir etc/bash_completion.d
 @pkgdir var/lib/pacman
 @pkgdir var/cache/pacman/pkg
 @pkgdir share/makepkg-template
 @pkgdir share/libalpm/hooks
+@pkgdir etc
