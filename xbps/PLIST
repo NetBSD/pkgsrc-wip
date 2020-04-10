@@ -3,7 +3,9 @@ bin/xbps-alternatives
 bin/xbps-checkvers
 bin/xbps-create
 bin/xbps-dgraph
+bin/xbps-digest
 bin/xbps-fbulk
+bin/xbps-fetch
 bin/xbps-install
 bin/xbps-pkgdb
 bin/xbps-query
@@ -23,14 +25,16 @@ include/xbps/xbps_object.h
 include/xbps/xbps_string.h
 lib/libxbps.a
 lib/libxbps.so
-lib/libxbps.so.3
-lib/libxbps.so.3.0.0
+lib/libxbps.so.5
+lib/libxbps.so.5.0.0
 lib/pkgconfig/libxbps.pc
 man/man1/xbps-alternatives.1
 man/man1/xbps-checkvers.1
 man/man1/xbps-create.1
 man/man1/xbps-dgraph.1
+man/man1/xbps-digest.1
 man/man1/xbps-fbulk.1
+man/man1/xbps-fetch.1
 man/man1/xbps-install.1
 man/man1/xbps-pkgdb.1
 man/man1/xbps-query.1
@@ -54,3 +58,4 @@ share/examples/xbps/00-repository-main.conf
 share/examples/xbps/xbps.conf
 share/zsh/site-functions/_xbps
 share/zsh/site-functions/_xbps_src
+@pkgdir share/xbps.d
