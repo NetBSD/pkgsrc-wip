@@ -11,12 +11,13 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c99
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/doc/sowm
 
-SUBST_CLASSES+=         optimize
-SUBST_STAGE.optimize=   pre-configure
-SUBST_SED.optimize+=    -e 's|-O3||g'
-SUBST_FILES.optimize+=  ${WRKSRC}/Makefile
+#Do not force -O3 optimizations
+SUBST_CLASSES+=		optimize
+SUBST_STAGE.optimize=	pre-configure
+SUBST_SED.optimize+=	-e 's|-O3||g'
+SUBST_FILES.optimize+=	Makefile
 
 DEPENDS+=	dmenu-[0-9]*:../../x11/dmenu
 DEPENDS+=	st-term-[0-9]*:../../x11/st-term
@@ -26,6 +27,10 @@ DEPENDS+=	scrot-[0-9]*:../../graphics/scrot
 .if ${OPSYS} != "NetBSD"
 DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
 .endif
+
+post-install:
+	${RUN} cd ${WRKSRC} && ${INSTALL_DATA} README.md \
+	${DESTDIR}${PREFIX}/share/doc/sowm
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
