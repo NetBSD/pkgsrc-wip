@@ -16,5 +16,10 @@ DEPENDS+=	dmenu-[0-9]*:../../x11/dmenu
 DEPENDS+=	st-term-[0-9]*:../../x11/st-term
 DEPENDS+=	scrot-[0-9]*:../../graphics/scrot
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
+.endif
+
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
