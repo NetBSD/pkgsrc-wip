@@ -7,7 +7,7 @@ CATEGORIES+=		security
 # See TODO
 MASTER_SITES=		https://travispaul.me/distfiles/
 
-MAINTAINER=		tpaul@pkgsrc.org
+MAINTAINER=		tpaul@NetBSD.org
 HOMEPAGE=		https://snuffleupagus.readthedocs.io/
 COMMENT=		Security module for PHP7
 LICENSE=		gnu-lgpl-v3
