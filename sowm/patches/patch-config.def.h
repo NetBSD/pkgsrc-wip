@@ -4,8 +4,12 @@ Use mixerctl instead of amixer on NetBSD
 
 --- config.def.h.orig	2020-02-21 16:08:47.000000000 +0000
 +++ config.def.h
-@@ -8,9 +8,15 @@ const char* term[]    = {"st",          
- const char* scrot[]   = {"scr",            0};
+@@ -5,12 +5,18 @@
+ 
+ const char* menu[]    = {"dmenu_run",      0};
+ const char* term[]    = {"st",             0};
+-const char* scrot[]   = {"scr",            0};
++const char* scrot[]   = {"scrot",          0};
  const char* briup[]   = {"bri", "10", "+", 0};
  const char* bridown[] = {"bri", "10", "-", 0};
 +#if defined (__NetBSD__)
