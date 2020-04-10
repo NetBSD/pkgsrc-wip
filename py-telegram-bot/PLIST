@@ -34,6 +34,8 @@ ${PYSITELIB}/telegram/forcereply.pyo
 ${PYSITELIB}/telegram/forcereply.pyc
 ${PYSITELIB}/telegram/keyboardbutton.pyo
 ${PYSITELIB}/telegram/keyboardbutton.pyc
+${PYSITELIB}/telegram/keyboardbuttonpolltype.pyo
+${PYSITELIB}/telegram/keyboardbuttonpolltype.pyc
 ${PYSITELIB}/telegram/loginurl.pyo
 ${PYSITELIB}/telegram/loginurl.pyc
 ${PYSITELIB}/telegram/message.pyo
@@ -105,6 +107,10 @@ ${PYSITELIB}/telegram/ext/messagequeue.pyo
 ${PYSITELIB}/telegram/ext/messagequeue.pyc
 ${PYSITELIB}/telegram/ext/picklepersistence.pyo
 ${PYSITELIB}/telegram/ext/picklepersistence.pyc
+${PYSITELIB}/telegram/ext/pollanswerhandler.pyo
+${PYSITELIB}/telegram/ext/pollanswerhandler.pyc
+${PYSITELIB}/telegram/ext/pollhandler.pyo
+${PYSITELIB}/telegram/ext/pollhandler.pyc
 ${PYSITELIB}/telegram/ext/precheckoutqueryhandler.pyo
 ${PYSITELIB}/telegram/ext/precheckoutqueryhandler.pyc
 ${PYSITELIB}/telegram/ext/regexhandler.pyo
@@ -135,6 +141,8 @@ ${PYSITELIB}/telegram/ext/jobqueue.py
 ${PYSITELIB}/telegram/ext/messagehandler.py
 ${PYSITELIB}/telegram/ext/messagequeue.py
 ${PYSITELIB}/telegram/ext/picklepersistence.py
+${PYSITELIB}/telegram/ext/pollanswerhandler.py
+${PYSITELIB}/telegram/ext/pollhandler.py
 ${PYSITELIB}/telegram/ext/precheckoutqueryhandler.py
 ${PYSITELIB}/telegram/ext/regexhandler.py
 ${PYSITELIB}/telegram/ext/shippingqueryhandler.py
@@ -294,6 +302,7 @@ ${PYSITELIB}/telegram/inline/inputmessagecontent.py
 ${PYSITELIB}/telegram/inline/inputtextmessagecontent.py
 ${PYSITELIB}/telegram/inline/inputvenuemessagecontent.py
 ${PYSITELIB}/telegram/keyboardbutton.py
+${PYSITELIB}/telegram/keyboardbuttonpolltype.py
 ${PYSITELIB}/telegram/loginurl.py
 ${PYSITELIB}/telegram/message.py
 ${PYSITELIB}/telegram/messageentity.py
