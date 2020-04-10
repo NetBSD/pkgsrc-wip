@@ -1,0 +1,8 @@
+Convince lang/php/ext.mk and mk/fetch/github.mk to cooporate on fetching the
+distfile from upstream.
+
+Look further into the need for the memcpy patch.
+
+Add an example rules file.
+
+Failing tests expected?
