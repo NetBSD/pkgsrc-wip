@@ -65,20 +65,20 @@ do-install:
 
 .PHONY: show-go-modules
 show-go-modules: ${WRKDIR}/.extract_done
-	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get -d
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} GOPROXY= ${GO} get -d
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.mod" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -name "*.zip" | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/'
 
 DISTFILES?=	${DEFAULT_DISTFILES}
 .for i in ${GO_MODULE_FILES}
-DISTFILES+=	${i:S/\//_/g}
-SITES.${i:S/\//_/g}= -https://proxy.golang.org/${i}
+DISTFILES+=	${i:C/[\/!]/_/g}
+SITES.${i:C/[\/!]/_/g}= -https://proxy.golang.org/${i}
 .endfor
 
 post-extract:
 .for i in ${GO_MODULE_FILES}
 	${MKDIR} ${WRKDIR}/.goproxy/${i:H}
-	cp ${DISTDIR}/${DIST_SUBDIR}/${i:S/\//_/g} ${WRKDIR}/.goproxy/${i}
+	cp ${DISTDIR}/${DIST_SUBDIR}/${i:C/[\/!]/_/g} ${WRKDIR}/.goproxy/${i}
 .endfor
 
 _VARGROUPS+=		go
