@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (golly-3.2-src.tar.gz) = 1851bcbe4be0ea908c7077ed1362fb700ab4b8ba
-RMD160 (golly-3.2-src.tar.gz) = 81e184cf781b79f7f65fe3795d1fecb21aaa8305
-SHA512 (golly-3.2-src.tar.gz) = bff5bbe75c0914bfcd416101894f8be1fd644c147fb90e0ad2cf87b4472c132c5d50be1829345fae59038e3d2e106ac417c5bc3cbc5c7d3a32a03c241b7a8eca
-Size (golly-3.2-src.tar.gz) = 5261483 bytes
+SHA1 (golly-3.3-src.tar.gz) = 36538899c8938411769964f75bd1cd2e1e48f6a9
+RMD160 (golly-3.3-src.tar.gz) = 17ed762b5d61ce22343b009540dfd163b96c9947
+SHA512 (golly-3.3-src.tar.gz) = 2aa9c2e7b2ebe3fe85bcb6177e58ee83bd08475e0a37a04cdb7e649b9faf5c2f936c534af62c8cf2322baade65c6e5197768901dfb464c17b20b941e1fa77265
+Size (golly-3.3-src.tar.gz) = 5465595 bytes
 SHA1 (patch-cmdline_bgolly.cpp) = 3b1fa67e7fedfcab1e4a4dab8ee1335c2c18458f
 SHA1 (patch-configure) = b57f3815708a8456367ad9fd2c93f64d507ad37f

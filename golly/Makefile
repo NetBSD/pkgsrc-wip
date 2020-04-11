@@ -1,9 +1,8 @@
 # $NetBSD$
 
-VERSION=	3.2
+VERSION=	3.3
 PKGNAME=	golly-${VERSION}
 DISTNAME=	${PKGNAME_NOREV}-src
-PKGREVISION=	1
 CATEGORIES=	x11
 # MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=golly/} results in http://downloads.sourceforge.net/sourceforge/golly/golly-3.1.tar.gz
 # we want https://sourceforge.net/projects/golly/files/golly/golly-3.1/golly-3.1-src.tar.gz
