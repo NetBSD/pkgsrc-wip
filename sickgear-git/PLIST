@@ -778,7 +778,6 @@ lib/sickgear/gui/slick/images/providers/bb.png
 lib/sickgear/gui/slick/images/providers/bithdtv.png
 lib/sickgear/gui/slick/images/providers/blutopia.png
 lib/sickgear/gui/slick/images/providers/btn.png
-lib/sickgear/gui/slick/images/providers/digitalhive.png
 lib/sickgear/gui/slick/images/providers/drunkenslug.png
 lib/sickgear/gui/slick/images/providers/ettv.png
 lib/sickgear/gui/slick/images/providers/ezrss.png
@@ -1257,8 +1256,9 @@ lib/sickgear/lib/dateutil/tz/tz.py
 lib/sickgear/lib/dateutil/tz/win.py
 lib/sickgear/lib/dateutil/tzwin.py
 lib/sickgear/lib/dateutil/utils.py
-lib/sickgear/lib/dateutil/zoneinfo/.gitignore
+lib/sickgear/lib/dateutil/zoneinfo/Greenwich
 lib/sickgear/lib/dateutil/zoneinfo/__init__.py
+lib/sickgear/lib/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
 lib/sickgear/lib/dateutil/zoneinfo/rebuild.py
 lib/sickgear/lib/diskcache/__init__.py
 lib/sickgear/lib/diskcache/cli.py
@@ -3154,7 +3154,6 @@ lib/sickgear/sickbeard/providers/bb.py
 lib/sickgear/sickbeard/providers/bithdtv.py
 lib/sickgear/sickbeard/providers/blutopia.py
 lib/sickgear/sickbeard/providers/btn.py
-lib/sickgear/sickbeard/providers/dh.py
 lib/sickgear/sickbeard/providers/ettv.py
 lib/sickgear/sickbeard/providers/eztv.py
 lib/sickgear/sickbeard/providers/fano.py
