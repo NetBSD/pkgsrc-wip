@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mailsend-go-v1.0.8.tar.gz) = 593482444a5038f7b543c1210922789802b94f8e
-RMD160 (mailsend-go-v1.0.8.tar.gz) = 900ef84b657cf063134977f6fd0a2c9abb2debeb
-SHA512 (mailsend-go-v1.0.8.tar.gz) = a761e98ced0cc2687e9e43803f2680dabea205a73754b0908fce7a0e6341ba3de6725c08ff2aa6e78513a97802633ecf787fea9848b531483b73da17908d1501
-Size (mailsend-go-v1.0.8.tar.gz) = 235525 bytes
+SHA1 (mailsend-go-v1.0.9.tar.gz) = 8e6e7fc081701bb62d95d657b3fcadc95800b2ed
+RMD160 (mailsend-go-v1.0.9.tar.gz) = 41e79d560c7da98f2eedc1a006afc146194753cb
+SHA512 (mailsend-go-v1.0.9.tar.gz) = 49303624383e12066d61110c760dc1ae4d8d4e845f9e53089cdf1a8dfc3e280c5ae6c4fa43bd91ec246f16cf8006c040f7ecb021da70dddd11d886fb1a6f30f6
+Size (mailsend-go-v1.0.9.tar.gz) = 235783 bytes
