@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/07/14 11:48:35 noud4 Exp $
-
-To use Xdebug with PHP,
-Be sure to have the following line in ${PREFIX}/etc/php.ini.
-
-zend_extension="${PREFIX}/${PHP_EXTENSION_DIR}/xdebug.so"
-===========================================================================

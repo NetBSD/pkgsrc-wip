@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/14 11:48:35 noud4 Exp $
-${PHP_EXTENSION_DIR}/xdebug.so

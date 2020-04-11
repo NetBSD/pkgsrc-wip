@@ -5041,7 +5041,6 @@ SUBDIR+=	xbps
 SUBDIR+=	xbsql
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
-SUBDIR+=	xdebug
 SUBDIR+=	xdiskusage
 SUBDIR+=	xebece
 SUBDIR+=	xentools48
