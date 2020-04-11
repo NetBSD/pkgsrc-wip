@@ -13,10 +13,10 @@ USE_LANGUAGES=	c99
 
 INSTALLATION_DIRS+=	bin share/doc/sowm
 
-#Do not force -O3 optimizations
 SUBST_CLASSES+=		optimize
 SUBST_STAGE.optimize=	pre-configure
 SUBST_SED.optimize+=	-e 's|-O3||g'
+SUBST_MESSAGE.optimize=	Do not force -O3 optimizations
 SUBST_FILES.optimize+=	Makefile
 
 DEPENDS+=	dmenu-[0-9]*:../../x11/dmenu
@@ -29,8 +29,7 @@ DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
 .endif
 
 post-install:
-	${RUN} cd ${WRKSRC} && ${INSTALL_DATA} README.md \
-	${DESTDIR}${PREFIX}/share/doc/sowm
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/sowm
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

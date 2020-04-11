@@ -1,6 +1,7 @@
 $NetBSD$
 
 Use mixerctl instead of amixer on NetBSD
+Use scrot instead of scr as no scr is provided by pkg scrot
 
 --- config.def.h.orig	2020-02-21 16:08:47.000000000 +0000
 +++ config.def.h
