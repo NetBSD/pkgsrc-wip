@@ -20,6 +20,14 @@ PLIST_SRC=	${PKGDIR}/PLIST ${PKGDIR}/PLIST.oss
 # set default as minimum
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 
+# --------------------------------
+# some mech. overwrite
+#        * PYTHON_VERSION_DEFAULT = 37
+# to
+#        * PYPACKAGE = python38
+PYPKGPREFIX=	py37
+# --------------------------------
+
 # Take care CONF_FILES stuff (The same code in Nocore.mk)
 #post-install:
 #	${MV} ${DESTDIR}${PREFIX}/etc/gnuradio/conf.d/* \

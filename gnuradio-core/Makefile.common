@@ -44,7 +44,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS=	perl gmake cmake pkg-config
 USE_CMAKE=	yes
 
-DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
+DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # gr_filter_design in gnuradio-core ask for:
@@ -133,7 +133,7 @@ do-install:
 
 .include	"../../audio/gsm/buildlink3.mk"
 .include	"../../audio/jack/buildlink3.mk"
-.include	"../../audio/portaudio-devel/buildlink3.mk"
+.include	"../../audio/portaudio/buildlink3.mk"
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
