@@ -4571,7 +4571,6 @@ SUBDIR+=	songwrite2
 SUBDIR+=	sonic-visualiser
 SUBDIR+=	sophia
 SUBDIR+=	soqt
-SUBDIR+=	sowm
 SUBDIR+=	spacefm
 SUBDIR+=	spade
 SUBDIR+=	spai
