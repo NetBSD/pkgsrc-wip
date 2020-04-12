@@ -10,8 +10,7 @@ HOMEPAGE=		https://pecl.php.net/package/msgpack
 COMMENT=		PHP extension for interfacing with MessagePack
 LICENSE=		modified-bsd
 
-PHP_VERSIONS_ACCEPTED=	70 71
-# 5.x versions use 0.5.7 version of the php msgpack
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 TEST_TARGET=		test
 TEST_ENV=		NO_INTERACTION=set
