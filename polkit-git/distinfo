@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/06/06 23:28:10 krytarowski Exp $
-
-SHA1 (polkit-0.112.tar.gz) = 374397f1c32fa1290be0fce378fe9bab541ee4bf
-RMD160 (polkit-0.112.tar.gz) = 0fecdcbfffe5f79dbb44f38dee9c4f060d60e7b1
-Size (polkit-0.112.tar.gz) = 1429240 bytes
