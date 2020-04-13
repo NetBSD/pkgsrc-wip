@@ -1,6 +1,0 @@
-This package is a testbed for making module-based builds work.
-
-Building and installing works, but all module files are downloaded into a flat
-directory named after the package. Ideally, we would want a dynamic
-subdirectory based on the path in GO_MODULE_FILES. Otherwise, there will be
-clashes when multiple packages have the same version.

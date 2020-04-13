@@ -1788,7 +1788,6 @@ SUBDIR+=	ldc-git
 SUBDIR+=	lde
 SUBDIR+=	ldtp
 SUBDIR+=	leo
-SUBDIR+=	lf
 SUBDIR+=	lfe
 SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lhapdf
