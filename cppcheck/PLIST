@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.7 2016/10/25 01:24:02 kamil Exp $
+bin/cert.py
+bin/cppcheck
+${PLIST.qt5}bin/cppcheck-gui
+bin/cppcheck-htmlreport
+bin/cppcheckdata.py
+bin/findcasts.py
+bin/naming.py
+bin/threadsafety.py
+bin/y2038.py
+man/man1/cppcheck.1
+share/cppcheck/cfg/avr.cfg
+share/cppcheck/cfg/cppcheck-cfg.rng
+share/cppcheck/cfg/gnu.cfg
+share/cppcheck/cfg/gtk.cfg
+share/cppcheck/cfg/microsoft_sal.cfg
+share/cppcheck/cfg/posix.cfg
+share/cppcheck/cfg/qt.cfg
+share/cppcheck/cfg/sdl.cfg
+share/cppcheck/cfg/std.cfg
+share/cppcheck/cfg/windows.cfg
+share/cppcheck/cfg/wxwidgets.cfg
