@@ -2,7 +2,8 @@
 
 DISTNAME=		oneko-1.2.1
 CATEGORIES=		x11 games
-MASTER_SITES=		https://d.n0.is/pub/oneko/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=teknokatze/}
+GITHUB_RELEASE=		1.2.1
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		ng0@NetBSD.org
