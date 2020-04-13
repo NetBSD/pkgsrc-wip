@@ -817,6 +817,7 @@ SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	filevercmp
 SUBDIR+=	findcrcs
+SUBDIR+=        fio
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox-hg
