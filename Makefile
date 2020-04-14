@@ -441,7 +441,6 @@ SUBDIR+=	clustershell
 SUBDIR+=	clutter-gst
 SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
-SUBDIR+=	cmusfm
 SUBDIR+=	coccinelle
 SUBDIR+=	collectd-CGP
 SUBDIR+=	collectd-haproxy
