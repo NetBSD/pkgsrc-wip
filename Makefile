@@ -1761,6 +1761,7 @@ SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
+SUBDIR+=	kvantum
 SUBDIR+=	kwalletmanager
 SUBDIR+=	kwin
 SUBDIR+=	kwrited
