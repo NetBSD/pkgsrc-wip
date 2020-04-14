@@ -3410,6 +3410,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/cc-vars.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-vars.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cfengine.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cfengine.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/cl-font-lock.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/cl-font-lock.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cmacexp.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cmacexp.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/compile.el.gz
