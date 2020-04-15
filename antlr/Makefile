@@ -54,6 +54,8 @@ HAS_CONFIGURE=	yes
 # FIXME: Add a check here to notify users trying to install
 USE_JAVA=	yes
 
+CHECK_PORTABILITY_SKIP=	configure.in
+
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
