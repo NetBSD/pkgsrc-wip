@@ -4497,7 +4497,6 @@ SUBDIR+=	showmesh
 SUBDIR+=	shttpd
 SUBDIR+=	shunt
 SUBDIR+=	sic
-SUBDIR+=	sickgear-git
 SUBDIR+=	sickle
 SUBDIR+=	signify
 SUBDIR+=	sil

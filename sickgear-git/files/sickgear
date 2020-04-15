@@ -1,7 +1,0 @@
-#!/bin/sh
-set -e
-cd @PREFIX@/lib/sickgear
-exec ./sickgear.py				\
-	--config @PKG_SYSCONFDIR@/sickgear.ini	\
-	--datadir @VARBASE@/sickgear		\
-	"$@"
