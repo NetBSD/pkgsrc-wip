@@ -40,6 +40,6 @@ do-install:
 
 #.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../wip/allegro52/buildlink3.mk"
+.include "../../devel/allegro5/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
