@@ -6,6 +6,4 @@ SHA512 (linphone-3.9.1.tar.gz) = 1824ef0012995985788b2a14dc886c82a05a6ad547d60be
 Size (linphone-3.9.1.tar.gz) = 13443595 bytes
 SHA1 (patch-aa) = d27f9fe2c7f86fbf30e9a8a76b8c2c23f001b331
 SHA1 (patch-ab) = fd1174da58b5610b6c92cae784f4623aaa03c71c
-SHA1 (patch-ac) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
-SHA1 (patch-ae) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
-SHA1 (patch-configure) = b7513bb52da1e7ee7c2f9d70d4b377b3e162c776
+SHA1 (patch-configure) = 47bdab8b59e2b0329963d552c45750cc8a46c9cb

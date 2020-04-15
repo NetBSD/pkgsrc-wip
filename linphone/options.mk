@@ -10,15 +10,14 @@ PKG_SUGGESTED_OPTIONS=	inet6 linphone-gui linphone-video gsm
 CONFIGURE_ARGS+=	--enable-alsa
 .endif
 
-.if empty(PKG_OPTIONS:Mlinphone-gui)
-CONFIGURE_ARGS+=	--enable-gnome_ui=no
+.if !empty(PKG_OPTIONS:Mlinphone-gui)
+PLIST_SUBST+=	GUI=
+CONFIGURE_ARGS+=	--enable-gtk_ui=yes
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 PLIST_SUBST+=	GUI="@comment "
 .else
-PLIST_SUBST+=	GUI=
-CONFIGURE_ARGS+=	--enable-gnome_ui=yes
-.include "../../x11/gnome-panel/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gtk_ui=no
 .endif
 
 .if empty(PKG_OPTIONS:Mlinphone-gui) || empty(PKG_OPTIONS:Mlinphone-video)
@@ -31,10 +30,6 @@ CONFIGURE_ARGS+=	--enable-video=yes
 
 .if !empty(PKG_OPTIONS:Mgsm)
 .include "../../audio/gsm/buildlink3.mk"
-SUBST_CLASSES+=		gsm
-SUBST_STAGE.gsm=	post-patch
-SUBST_FILES.gsm=	mediastreamer2/src/gsm.c mediastreamer2/configure
-SUBST_SED.gsm=		-e 's,gsm/gsm.h,gsm.h,g'
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
