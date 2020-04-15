@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.21 2015/11/03 03:27:13 agc Exp $
-
-SHA1 (allegro-5.2.1.1.tar.gz) = 110af97e7190a8b96c5e6bd94de468566657575c
-RMD160 (allegro-5.2.1.1.tar.gz) = ea35ac930370a691ca24b9e5f8e5f5c4b98fd8a9
-SHA512 (allegro-5.2.1.1.tar.gz) = fb7b68ab47afdbc825841f4b38cce647121ecdbf8257b569594af257536ef610ae89f0bf090f47c97995839911a78f8e6c460c2768b7c88301bfc7694f6b03fe
-Size (allegro-5.2.1.1.tar.gz) = 7535320 bytes
