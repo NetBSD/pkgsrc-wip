@@ -2,4 +2,4 @@ Crashes at runtime. presumably needs schemas.
 Need to update list of supported whatevers in DESCR.
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2019-16680
+  CVE-2019-16680, CVE-2020-11736
