@@ -1,3 +1,5 @@
+$NetBSD$
+
 diff --git a/pan/tasks/decoder.cc b/pan/tasks/decoder.cc
 index b4c21ae..04ea40a 100644
 --- pan/tasks/decoder.cc

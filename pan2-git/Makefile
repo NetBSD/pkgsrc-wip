@@ -2,7 +2,7 @@
 
 DISTNAME=		pan2-2
 CATEGORIES=		news
-MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan
+MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/
 GIT_REPO=		https://gitlab.gnome.org/GNOME/pan.git
 
 MAINTAINER=		rhialto@falu.nl
