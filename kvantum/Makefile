@@ -2,7 +2,7 @@
 
 VERSION=	0.15.2
 DISTNAME=	Kvantum-V${VERSION}
-PKGNAME=	Kvantum-${VERSION}
+PKGNAME=	kvantum-${VERSION}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -12,9 +12,10 @@ HOMEPAGE=	https://github.com/tsujan/Kvantum/
 COMMENT=	SVG-based theme engine for Qt and KDE
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/Kvantum-0.15.2
+WRKSRC=		${WRKDIR}/Kvantum-${VERSION}/Kvantum
 USE_CMAKE=	yes
-USE_LANGUAGES=	c++
+USE_TOOLS+=	gmake
+USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
