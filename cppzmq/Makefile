@@ -1,12 +1,9 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	cppzmq
-GITHUB_TAG=	v4.6.0
-DISTNAME=	v4.6.0
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
-CATEGORIES=	# TODO: add primary category
+DISTNAME=	cppzmq-4.6.0
+CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zeromq/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://www.zeromq.org
