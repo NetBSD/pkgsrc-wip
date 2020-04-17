@@ -29,5 +29,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run gmake
 REPLACE_SH+=	afl-plot
 REPLACE_BASH+=	afl-cmin
+REPLACE_BASH+=	afl-cmin.bash
 
 .include "../../mk/bsd.pkg.mk"
