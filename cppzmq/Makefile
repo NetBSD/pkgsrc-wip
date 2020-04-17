@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=zeromq/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	https://www.zeromq.org
+HOMEPAGE=	https://www.zeromq.org/
 COMMENT=	C++ binding for libzmq
 LICENSE=	mit
 

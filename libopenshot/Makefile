@@ -14,10 +14,11 @@ WRKSRC=		${WRKDIR}/libopenshot-0.2.5
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 DEPENDS+=	swig4>=4.0.0:../../wip/swig4
 
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../net/zeromq/buildlink3.mk"
 .include "../../wip/cppzmq/buildlink3.mk"
 .include "../../wip/libopenshot-audio/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
@@ -25,7 +26,6 @@ DEPENDS+=	swig4>=4.0.0:../../wip/swig4
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../devel/unittest-cpp/buildlink3.mk"
 
-#.include "../../lang/python/pyversion.mk"
-.include "../../lang/python37/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
