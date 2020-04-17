@@ -9,9 +9,9 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=zeromq/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	https://github.com/zeromq/cppzmq/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+HOMEPAGE=	https://www.zeromq.org
+COMMENT=	C++ binding for libzmq
+LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/cppzmq-4.6.0
 USE_CMAKE=	yes
