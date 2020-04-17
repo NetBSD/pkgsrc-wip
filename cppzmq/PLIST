@@ -1,0 +1,7 @@
+@comment $NetBSD$
+include/zmq.hpp
+include/zmq_addon.hpp
+share/cmake/cppzmq/cppzmqConfig.cmake
+share/cmake/cppzmq/cppzmqConfigVersion.cmake
+share/cmake/cppzmq/cppzmqTargets.cmake
+share/cmake/cppzmq/libzmq-pkg-config/FindZeroMQ.cmake
