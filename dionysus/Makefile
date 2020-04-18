@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2012/09/28 21:24:36 asau Exp $
 
-DISTNAME=	dionysus-1.3.0
+DISTNAME=	dionysus-1.4.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=dionysus/}
 EXTRACT_SUFX=	.tar.bz2
