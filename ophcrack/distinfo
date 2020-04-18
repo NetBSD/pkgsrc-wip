@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/01/24 14:27:04 gschwarz Exp $
 
-SHA1 (ophcrack-3.7.0.tar.bz2) = a8c89671b510468cdbcd8e4e9dc280f19029ee81
-RMD160 (ophcrack-3.7.0.tar.bz2) = 6966aa2227e64dfea0b43665003191670e6e581d
-SHA512 (ophcrack-3.7.0.tar.bz2) = 89d7decb0b7b4749878427924062121de9136b52b2b87c385bf80a0805d44a3cf9013e986947e1154ac1c5b741e748ab695223255eff60adb8e4a04bfbc57a01
-Size (ophcrack-3.7.0.tar.bz2) = 724590 bytes
+SHA1 (ophcrack-3.8.0.tar.bz2) = 5dea7466f17ab2d50e1c8e5533f0dc66c36a4fc0
+RMD160 (ophcrack-3.8.0.tar.bz2) = ed635704144b5d2613615a4c7e9d720680a281bc
+SHA512 (ophcrack-3.8.0.tar.bz2) = c66276b72299744d3e0c9fc14220c7f568e383bd324c1ede228bda5d51da78db817388421c9f5f8cd2f18687e7e53cfb0c65bcc0354b3d55ac16324c61f62dbd
+Size (ophcrack-3.8.0.tar.bz2) = 293033 bytes
