@@ -237,6 +237,8 @@ lib/libobjfw.so.9
 lib/libobjfw.so.9.1
 share/ofarc/lang/de.json
 share/ofarc/lang/languages.json
+share/ofdns/lang/de.json
+share/ofdns/lang/languages.json
 share/ofhash/lang/de.json
 share/ofhash/lang/languages.json
 share/ofhttp/lang/de.json

@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	objfw-0.91
+DISTNAME=	objfw-1.1
 CATEGORIES=	devel
 
 COMMENT=	Portable, lightweight framework for the Objective-C language
 LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
 HOMEPAGE=	https://heap.zone/objfw/
-MAINTAINER=	js@heap.zone
+MAINTAINER=	js@pkgsrc.org
 
 GIT_REPOSITORIES=	objfw
 GIT_REPO.objfw=		https://github.com/ObjFW/ObjFW.git
