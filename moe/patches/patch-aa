@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2015/05/08 20:18:18 gschwarz Exp $
+$NetBSD$
 
---- Makefile.in.orig	2015-04-21 22:43:12.000000000 +0200
-+++ Makefile.in	2015-05-08 21:52:07.000000000 +0200
+--- Makefile.in.orig	2017-02-14 17:00:19.000000000 +0100
++++ Makefile.in	2020-04-01 21:34:46.000000000 +0200
 @@ -1,11 +1,11 @@
  
  DISTNAME = $(pkgname)-$(pkgversion)
@@ -16,10 +16,10 @@ $NetBSD: patch-aa,v 1.10 2015/05/08 20:18:18 gschwarz Exp $
  LIBS = -lncurses
 -SHELL = /bin/sh
 +#SHELL = /bin/sh
+ CAN_RUN_INSTALLINFO = $(SHELL) -c "install-info --version" > /dev/null 2>&1
  
  edobjs = basic_buffer.o block.o buffer.o buffer_handle.o \
-          encoding.o iso_8859.o menu_file.o menu_help.o menu_opts.o \
-@@ -72,7 +72,7 @@
+@@ -73,7 +73,7 @@
  	if [ ! -d "$(DESTDIR)$(bindir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(bindir)" ; fi
  	if [ ! -d "$(DESTDIR)$(sysconfdir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(sysconfdir)" ; fi
  	$(INSTALL_PROGRAM) ./$(progname) "$(DESTDIR)$(bindir)/$(progname)"
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.10 2015/05/08 20:18:18 gschwarz Exp $
  
  install-bin-strip : all
  	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install-bin
-@@ -89,7 +89,7 @@
+@@ -92,7 +92,7 @@
  install-man :
  	if [ ! -d "$(DESTDIR)$(mandir)/man1" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(mandir)/man1" ; fi
  	-rm -f "$(DESTDIR)$(mandir)/man1/$(progname).1"*

@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.13 2015/05/08 20:18:18 gschwarz Exp $
 
-SHA1 (moe-1.8.tar.lz) = 1b7c11f09ff8bebe655fb38fb7ab1a8e331e590f
-RMD160 (moe-1.8.tar.lz) = 982a9ffebb4536ce270fd4fabed78a81ec96c47e
-SHA512 (moe-1.8.tar.lz) = c43d76f948bcd8cdd466069a29a7c43b42efdd3c9f890d3479f94e8d75b0cd978085e120d5675ba4a972672991a9f179d4fe7cfb3654c2d424d28c7d9c847019
-Size (moe-1.8.tar.lz) = 79396 bytes
-SHA1 (patch-aa) = eae4344061e7d0ec35fa740c0b7595405ded5577
-SHA1 (patch-ab) = 811e45cf578384ed915d480ea9b04075956e5afb
+SHA1 (moe-1.9.tar.lz) = 6e7f45ccb5796544d415c3bf2206d50f4d8ee646
+RMD160 (moe-1.9.tar.lz) = 004a64d33a3b83cc6ddc28c38e5f01125339539f
+SHA512 (moe-1.9.tar.lz) = 277700e4a796e1a7aee42de55ba4599a350a612f95a1a2eca5078d85f6f9a7db190fb5611eb2f286c98580af847a2934bf38a4bce10176db4c5cddc2d257f929
+Size (moe-1.9.tar.lz) = 82046 bytes
+SHA1 (patch-aa) = cef5b4e810cb4c6605ae7d4d7e851cd680fb1d18
+SHA1 (patch-ab) = d2f4e0450403dccdd90d5d7f50ff3662c260a23e

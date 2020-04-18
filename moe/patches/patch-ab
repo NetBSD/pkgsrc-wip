@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2015/05/08 20:18:18 gschwarz Exp $
+$NetBSD$
 
---- configure.orig	2015-04-29 00:00:38.000000000 +0200
-+++ configure	2015-05-08 21:48:39.000000000 +0200
+--- configure.orig	2017-06-02 19:25:44.000000000 +0200
++++ configure	2020-04-01 21:30:46.000000000 +0200
 @@ -21,10 +21,10 @@
  infodir='$(datarootdir)/info'
  mandir='$(datarootdir)/man'
@@ -16,4 +16,4 @@ $NetBSD: patch-ab,v 1.7 2015/05/08 20:18:18 gschwarz Exp $
 +#LDFLAGS=
  
  # checking whether we are using GNU C++.
- ${CXX} --version > /dev/null 2>&1
+ /bin/sh -c "${CXX} --version" > /dev/null 2>&1 ||
