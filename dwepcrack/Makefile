@@ -3,12 +3,13 @@
 DISTNAME=	dwepcrack-0.4
 PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	http://index-of.es/Hacking-Wireless-Networks/WEP-WPA%20Cracking%20Tools/dwepcrack/
-MASTER_SITES+=	http://www.hacker-soft.net/tools/Assessment/
+MASTER_SITES=	https://web.archive.org/web/20120103232602if_/http://www.e.kth.se/%7Epvz/wifi/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20070322102507/http://www.dachb0den.com/projects/dwepcrack.html
 COMMENT=	Dwepcrack uses varioius methods to extract WEP keys
+
+EXTRACT_CMD=	${TAR} xf $$extract_file
 
 NO_CONFIGURE=	YES
 

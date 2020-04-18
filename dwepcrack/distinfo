@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.4 2009/11/22 11:17:27 gschwarz Exp $
 
-SHA1 (dwepcrack-0.4.tar.gz) = 42ac1153a190a9a5469df9c643bd86faa2edfd70
-RMD160 (dwepcrack-0.4.tar.gz) = 7ab7bea50553f3e7457ae34063ea36e24288a907
-Size (dwepcrack-0.4.tar.gz) = 14391 bytes
+SHA1 (dwepcrack-0.4.tar.gz) = f9adbaf9e6e634e1a5d87986a43cd81bf3343d82
+RMD160 (dwepcrack-0.4.tar.gz) = 8801801fdd28fa64756b8883ca16ffde56ed9b34
+SHA512 (dwepcrack-0.4.tar.gz) = 6c931630a62adf9f039f4436eb0aac94307ffdbc09322e2b424330f7f4d804e89466a3d161f1d168f85092612c20dbce179542ddfb428a07f4d49f31b5359afd
+Size (dwepcrack-0.4.tar.gz) = 71680 bytes
 SHA1 (patch-aa) = 297c396af57fd3ae8564406b6b098778312b5c40
 SHA1 (patch-ab) = 96cf332426df705afaa963692050aa27caea39fa
 SHA1 (patch-ac) = 25ec269a914977e1a811ef575204656cd658c4f3
