@@ -5153,7 +5153,6 @@ SUBDIR+=	zipios
 SUBDIR+=	zlua
 SUBDIR+=	zmap
 SUBDIR+=	zodiac
-SUBDIR+=	zola
 SUBDIR+=	zoneminder
 SUBDIR+=	zvbi
 
