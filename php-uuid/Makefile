@@ -11,6 +11,8 @@ COMMENT=		Wrapper around libuuid from the ext2utils project
 
 CONFIGURE_ARGS+=	--with-uuid=${PREFIX}
 
+PHP_VERSIONS_INCOMPATIBLE=	56
+
 TEST_TARGET=		test
 TEST_ENV=		NO_INTERACTION=set
 
