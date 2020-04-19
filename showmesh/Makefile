@@ -3,11 +3,11 @@
 DISTNAME=	showmesh-1.0
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	http://www-dinma.univ.trieste.it/nirftc/research/easymesh/
+MASTER_SITES=	https://web.archive.org/web/20170109013501/http://www-dinma.univ.trieste.it/nirftc/research/easymesh/
 DISTFILES=	showmesh_1_0.c
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www-dinma.univ.trieste.it/nirftc/research/easymesh/
+HOMEPAGE=	https://web.archive.org/web/20170109013501/http://www-dinma.univ.trieste.it/nirftc/research/easymesh/
 COMMENT=	Display program for easymesh
 
 WRKSRC=		${WRKDIR}
