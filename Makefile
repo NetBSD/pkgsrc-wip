@@ -4104,6 +4104,7 @@ SUBDIR+=	py-txWS
 SUBDIR+=	py-txZMQ
 SUBDIR+=	py-txdbus
 SUBDIR+=	py-typedecorator
+SUBDIR+=	py-typedload
 SUBDIR+=	py-u2flib-server
 SUBDIR+=	py-ua-parser
 SUBDIR+=	py-ufl
