@@ -1,0 +1,9 @@
+If you see crashes only with certain maps and only on big endian machines
+like PowerPC or SPARC, try this patched version.
+
+This package fixes the following bug in prboom+ 2.5.1.4:
+Loading maps using ZDoom extended nodes crashes on big endian machines
+(because 32-bit values are imported with wrong byte order).
+
+This bug was reported and is already fixed upstream.
+This package will stay in wip until the next release of prboom+.
