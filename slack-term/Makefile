@@ -17,6 +17,8 @@ INSTALLATION_DIRS+=	bin share/doc/slack-term
 
 CHECK_RELRO_SKIP+=	bin/slack-term
 
+# XXX: Double-check that kludge and extend to other Unix-like operating
+# XXX: systems, maybe in a less kludgy way and share that with upstream.
 post-patch:
 	${CP} ${WRKSRC}/vendor/github.com/OpenPeeDeeP/xdg/xdg_linux.go \
 	    ${WRKSRC}/vendor/github.com/OpenPeeDeeP/xdg/xdg_netbsd.go 
