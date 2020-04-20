@@ -4263,7 +4263,6 @@ SUBDIR+=	rawdog
 SUBDIR+=	rawgl
 SUBDIR+=	rawgl-git
 SUBDIR+=	rc.d.Interix
-SUBDIR+=	rclone
 SUBDIR+=	rdsn-git
 SUBDIR+=	rdup
 SUBDIR+=	re2-git
