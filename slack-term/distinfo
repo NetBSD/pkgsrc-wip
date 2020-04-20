@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (slack-term-0.5.0.tar.gz) = 1a481d3392ba355e11d004ba45d9cfd368f982fb
+RMD160 (slack-term-0.5.0.tar.gz) = 0699bc7a78b5eac3483d9bd170512e5b7bd5b58e
+SHA512 (slack-term-0.5.0.tar.gz) = 2ede8cddab22aaef5c6c851f591d2c06eb26ed63b8cd3e6f020fba5dc339b72740da9ec035a5cb7c4c260947d480e599c55abf22c7ec2b9eb9ab2fc1fe7ce1f1
+Size (slack-term-0.5.0.tar.gz) = 540745 bytes
+SHA1 (patch-cmd_mountlib_mounttest_write__non__unix.go) = 8c6222c6f3e7a24243e94b768b20e5f686763cf6
+SHA1 (patch-cmd_mountlib_mounttest_write__unix.go) = eeddb2e8bba6f455d8069758dc37227f2f389a25
