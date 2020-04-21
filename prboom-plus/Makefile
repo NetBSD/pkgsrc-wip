@@ -9,8 +9,11 @@ HOMEPAGE=	https://prboom-plus.sourceforge.net/
 COMMENT=	Multiplayer-capable and modified version of DOOM
 LICENSE=	gnu-gpl-v2
 
+# DOOMWADDIR is intentionally shared with other Doom packages
+DOOMWADDIR=	share/doom
+
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-waddir=${PREFIX}/share/doom
+CONFIGURE_ARGS+=	--with-waddir=${PREFIX}/${DOOMWADDIR}
 
 SUBST_CLASSES+=		gamesdir
 SUBST_STAGE.gamesdir=	pre-configure
