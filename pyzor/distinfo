@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2015/09/02 20:28:57 fhajny Exp $
 
 SHA1 (pyzor-1.0.0.tar.gz) = af23991fcdcbc3219c61dafd22446c4422c618ea
 RMD160 (pyzor-1.0.0.tar.gz) = 294a1b74fc23ee31af73dd16dea1ac7ffb9c03b8
+SHA512 (pyzor-1.0.0.tar.gz) = b3fb8b2c5261e187a2ab3a5a3b12d221df7de08766c6bb2ad9990c0f23517534871ecc9d5ad529e79b0d0aef8b2b800728320c57435a8c0d8c3f80a4ba0f7e4a
 Size (pyzor-1.0.0.tar.gz) = 126276 bytes
