@@ -18,6 +18,17 @@ CMAKE_ARGS+=	-G "Unix Makefiles" ..
 CONFIGURE_DIRS=	build
 WRKSRC=		${WRKDIR}/woof-${DISTNAME}
 
+# DOOMWADDIR is intentionally shared with other Doom packages
+DOOMWADDIR=	share/doom
+
+# Add DOOMWADDIR to search path
+SUBST_CLASSES+=		waddir
+SUBST_STAGE.waddir=	pre-configure
+SUBST_MESSAGE.waddir=	Preparing d_iwad.c file ...
+SUBST_FILES.waddir=	Source/d_iwad.c
+SUBST_SED.waddir=	-e 's,PKGSRC_PREFIX,"${PREFIX}",'
+SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
+
 pre-configure:
 		cd ${WRKSRC}; mkdir build
 
