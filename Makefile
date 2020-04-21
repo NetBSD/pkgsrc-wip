@@ -420,7 +420,6 @@ SUBDIR+=	clasp
 SUBDIR+=	classgen
 SUBDIR+=	classic-mac-font-pack
 SUBDIR+=	claws-mail-fancy
-SUBDIR+=	cleanscore
 SUBDIR+=	clearsans-ttf
 SUBDIR+=	clementine
 SUBDIR+=	clfswm
