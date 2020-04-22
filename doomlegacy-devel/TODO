@@ -105,4 +105,10 @@ Part 6: Import final release
     Not released yet
 
 
+Part 7: Support for extended nodes
+==================================
+[X] Add patch to support DeeP and ZDoom extended nodes
+    This code is based on woof 1.2.0
+
+
 EOF

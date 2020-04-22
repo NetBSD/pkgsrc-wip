@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add object file for import of extended nodes.
+
+--- src/Makefile.orig	2020-04-20 10:32:33.000000000 +0000
++++ src/Makefile
+@@ -1070,7 +1070,7 @@ screen.o v_video.o \
+ r_draw.o r_plane.o r_segs.o r_sky.o r_things.o r_splats.o \
+ r_bsp.o r_data.o r_main.o \
+ z_zone.o \
+-p_sight.o p_mobj.o p_enemy.o p_user.o p_inter.o p_pspr.o \
++p_sight.o p_mobj.o p_enemy.o p_extnodes.o p_user.o p_inter.o p_pspr.o \
+ p_lights.o p_ceilng.o p_doors.o p_plats.o p_floor.o p_spec.o \
+ p_switch.o p_genlin.o p_telept.o p_tick.o p_fab.o p_info.o p_setup.o \
+ p_map.o p_maputl.o \
