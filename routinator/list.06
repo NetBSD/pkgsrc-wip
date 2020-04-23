@@ -1,0 +1,18 @@
+===> Checking for vulnerabilities in routinator-0.6.4
+===> Installing for routinator-0.6.4
+WARNING: Your umask is ``0002''.
+WARNING: If this is not desired, set it to an appropriate value (0022) and install
+WARNING: this package again by ``/usr/bin/make deinstall reinstall''.
+=> Generating pre-install file lists
+=> Creating installation directories
+cd /usr/pkgsrc/wip/routinator/work/routinator-0.6.4 && /usr/bin/env USETOOLS=no CC=gcc CFLAGS=-O2\ -D_FORTIFY_SOURCE=2\ -I/usr/pkg/include CPPFLAGS=-I/usr/pkg/include CXX=c++ CXXFLAGS=-O2\ -D_FORTIFY_SOURCE=2\ -I/usr/pkg/include COMPILER_RPATH_FLAG=-Wl,-R F77=gfortran FC=gfortran FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGES=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-L/usr/pkg/lib\ -Wl,-R/usr/pkg/lib LINKER_RPATH_FLAG=-R PATH=/usr/pkgsrc/wip/routinator/work/.cwrapper/bin:/usr/pkgsrc/wip/routinator/work/.buildlink/bin:/usr/pkgsrc/wip/routinator/work/.gcc/bin:/usr/pkgsrc/wip/routinator/work/.tools/bin:/usr/pkg/bin:/home/he/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R7/bin:/usr/X11R6/bin:/usr/pkg/bin:/usr/pkg/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/local/bin:/usr/pkg/bin:/usr/X11R7/bin PREFIX=/usr/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/usr/pkg/etc CXXCPP=cpp HOME=/usr/pkgsrc/wip/routinator/work/.home CWRAPPERS_CONFIG_DIR=/usr/pkgsrc/wip/routinator/work/.cwrapper/config CPP=cpp LOCALBASE=/usr/pkg X11BASE=/usr/X11R7 PKGMANDIR=man PKGINFODIR=info PKGGNUDIR=gnu/ MAKECONF=/dev/null OBJECT_FMT=ELF USETOOLS=no BSD_INSTALL_PROGRAM=/usr/bin/install\ -c\ -s\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_SCRIPT=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_LIB=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_DATA=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 644 BSD_INSTALL_MAN=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 644 BSD_INSTALL=/usr/bin/install BSD_INSTALL_PROGRAM_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_SCRIPT_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_LIB_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_DATA_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_MAN_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_GAME=/usr/bin/install\ -c\ -s\ -o\ he\ -g\ he\ -m\ 2555 BSD_INSTALL_GAME_DATA=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 664 BSD_INSTALL_GAME_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 775 INSTALL_INFO= MAKEINFO=/usr/pkgsrc/wip/routinator/work/.tools/bin/makeinfo FLEX= BISON= PKG_CONFIG= PKG_CONFIG_LIBDIR=/usr/pkgsrc/wip/routinator/work/.buildlink/lib/pkgconfig:/usr/pkgsrc/wip/routinator/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/usr/pkgsrc/wip/routinator/work/.pkg-config.log PKG_CONFIG_PATH= CWRAPPERS_CONFIG_DIR=/usr/pkgsrc/wip/routinator/work/.cwrapper/config /usr/pkg/bin/cargo install --locked --frozen routinator
+error: attempting to make an HTTP request, but --frozen was specified
+*** Error code 101
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/routinator
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/routinator
+0.700u 0.457s 0:01.14 100.8%	400+1090k 0+7io 0pf+0w

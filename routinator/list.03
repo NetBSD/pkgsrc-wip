@@ -1,0 +1,741 @@
+===> Checking for vulnerabilities in routinator-0.6.4
+=> Checksum SHA1 OK for adler32-1.0.4.crate
+=> Checksum RMD160 OK for adler32-1.0.4.crate
+=> Checksum SHA512 OK for adler32-1.0.4.crate
+=> Checksum SHA1 OK for aho-corasick-0.7.6.crate
+=> Checksum RMD160 OK for aho-corasick-0.7.6.crate
+=> Checksum SHA512 OK for aho-corasick-0.7.6.crate
+=> Checksum SHA1 OK for ansi_term-0.11.0.crate
+=> Checksum RMD160 OK for ansi_term-0.11.0.crate
+=> Checksum SHA512 OK for ansi_term-0.11.0.crate
+=> Checksum SHA1 OK for arc-swap-0.4.4.crate
+=> Checksum RMD160 OK for arc-swap-0.4.4.crate
+=> Checksum SHA512 OK for arc-swap-0.4.4.crate
+=> Checksum SHA1 OK for arrayref-0.3.5.crate
+=> Checksum RMD160 OK for arrayref-0.3.5.crate
+=> Checksum SHA512 OK for arrayref-0.3.5.crate
+=> Checksum SHA1 OK for arrayvec-0.5.1.crate
+=> Checksum RMD160 OK for arrayvec-0.5.1.crate
+=> Checksum SHA512 OK for arrayvec-0.5.1.crate
+=> Checksum SHA1 OK for atty-0.2.13.crate
+=> Checksum RMD160 OK for atty-0.2.13.crate
+=> Checksum SHA512 OK for atty-0.2.13.crate
+=> Checksum SHA1 OK for autocfg-0.1.7.crate
+=> Checksum RMD160 OK for autocfg-0.1.7.crate
+=> Checksum SHA512 OK for autocfg-0.1.7.crate
+=> Checksum SHA1 OK for backtrace-0.3.40.crate
+=> Checksum RMD160 OK for backtrace-0.3.40.crate
+=> Checksum SHA512 OK for backtrace-0.3.40.crate
+=> Checksum SHA1 OK for backtrace-sys-0.1.32.crate
+=> Checksum RMD160 OK for backtrace-sys-0.1.32.crate
+=> Checksum SHA512 OK for backtrace-sys-0.1.32.crate
+=> Checksum SHA1 OK for base64-0.10.1.crate
+=> Checksum RMD160 OK for base64-0.10.1.crate
+=> Checksum SHA512 OK for base64-0.10.1.crate
+=> Checksum SHA1 OK for bcder-0.4.0.crate
+=> Checksum RMD160 OK for bcder-0.4.0.crate
+=> Checksum SHA512 OK for bcder-0.4.0.crate
+=> Checksum SHA1 OK for bitflags-1.2.1.crate
+=> Checksum RMD160 OK for bitflags-1.2.1.crate
+=> Checksum SHA512 OK for bitflags-1.2.1.crate
+=> Checksum SHA1 OK for blake2b_simd-0.5.9.crate
+=> Checksum RMD160 OK for blake2b_simd-0.5.9.crate
+=> Checksum SHA512 OK for blake2b_simd-0.5.9.crate
+=> Checksum SHA1 OK for boxfnonce-0.1.1.crate
+=> Checksum RMD160 OK for boxfnonce-0.1.1.crate
+=> Checksum SHA512 OK for boxfnonce-0.1.1.crate
+=> Checksum SHA1 OK for byteorder-1.3.2.crate
+=> Checksum RMD160 OK for byteorder-1.3.2.crate
+=> Checksum SHA512 OK for byteorder-1.3.2.crate
+=> Checksum SHA1 OK for bytes-0.4.12.crate
+=> Checksum RMD160 OK for bytes-0.4.12.crate
+=> Checksum SHA512 OK for bytes-0.4.12.crate
+=> Checksum SHA1 OK for c2-chacha-0.2.3.crate
+=> Checksum RMD160 OK for c2-chacha-0.2.3.crate
+=> Checksum SHA512 OK for c2-chacha-0.2.3.crate
+=> Checksum SHA1 OK for cc-1.0.47.crate
+=> Checksum RMD160 OK for cc-1.0.47.crate
+=> Checksum SHA512 OK for cc-1.0.47.crate
+=> Checksum SHA1 OK for cfg-if-0.1.10.crate
+=> Checksum RMD160 OK for cfg-if-0.1.10.crate
+=> Checksum SHA512 OK for cfg-if-0.1.10.crate
+=> Checksum SHA1 OK for chrono-0.4.10.crate
+=> Checksum RMD160 OK for chrono-0.4.10.crate
+=> Checksum SHA512 OK for chrono-0.4.10.crate
+=> Checksum SHA1 OK for clap-2.33.0.crate
+=> Checksum RMD160 OK for clap-2.33.0.crate
+=> Checksum SHA512 OK for clap-2.33.0.crate
+=> Checksum SHA1 OK for cloudabi-0.0.3.crate
+=> Checksum RMD160 OK for cloudabi-0.0.3.crate
+=> Checksum SHA512 OK for cloudabi-0.0.3.crate
+=> Checksum SHA1 OK for constant_time_eq-0.1.4.crate
+=> Checksum RMD160 OK for constant_time_eq-0.1.4.crate
+=> Checksum SHA512 OK for constant_time_eq-0.1.4.crate
+=> Checksum SHA1 OK for cookie-0.12.0.crate
+=> Checksum RMD160 OK for cookie-0.12.0.crate
+=> Checksum SHA512 OK for cookie-0.12.0.crate
+=> Checksum SHA1 OK for cookie_store-0.7.0.crate
+=> Checksum RMD160 OK for cookie_store-0.7.0.crate
+=> Checksum SHA512 OK for cookie_store-0.7.0.crate
+=> Checksum SHA1 OK for crc32fast-1.2.0.crate
+=> Checksum RMD160 OK for crc32fast-1.2.0.crate
+=> Checksum SHA512 OK for crc32fast-1.2.0.crate
+=> Checksum SHA1 OK for crossbeam-deque-0.7.2.crate
+=> Checksum RMD160 OK for crossbeam-deque-0.7.2.crate
+=> Checksum SHA512 OK for crossbeam-deque-0.7.2.crate
+=> Checksum SHA1 OK for crossbeam-epoch-0.8.0.crate
+=> Checksum RMD160 OK for crossbeam-epoch-0.8.0.crate
+=> Checksum SHA512 OK for crossbeam-epoch-0.8.0.crate
+=> Checksum SHA1 OK for crossbeam-queue-0.1.2.crate
+=> Checksum RMD160 OK for crossbeam-queue-0.1.2.crate
+=> Checksum SHA512 OK for crossbeam-queue-0.1.2.crate
+=> Checksum SHA1 OK for crossbeam-utils-0.6.6.crate
+=> Checksum RMD160 OK for crossbeam-utils-0.6.6.crate
+=> Checksum SHA512 OK for crossbeam-utils-0.6.6.crate
+=> Checksum SHA1 OK for crossbeam-utils-0.7.0.crate
+=> Checksum RMD160 OK for crossbeam-utils-0.7.0.crate
+=> Checksum SHA512 OK for crossbeam-utils-0.7.0.crate
+=> Checksum SHA1 OK for ct-logs-0.5.1.crate
+=> Checksum RMD160 OK for ct-logs-0.5.1.crate
+=> Checksum SHA512 OK for ct-logs-0.5.1.crate
+=> Checksum SHA1 OK for daemonize-0.4.1.crate
+=> Checksum RMD160 OK for daemonize-0.4.1.crate
+=> Checksum SHA512 OK for daemonize-0.4.1.crate
+=> Checksum SHA1 OK for derive_more-0.15.0.crate
+=> Checksum RMD160 OK for derive_more-0.15.0.crate
+=> Checksum SHA512 OK for derive_more-0.15.0.crate
+=> Checksum SHA1 OK for dirs-2.0.2.crate
+=> Checksum RMD160 OK for dirs-2.0.2.crate
+=> Checksum SHA512 OK for dirs-2.0.2.crate
+=> Checksum SHA1 OK for dirs-sys-0.3.4.crate
+=> Checksum RMD160 OK for dirs-sys-0.3.4.crate
+=> Checksum SHA512 OK for dirs-sys-0.3.4.crate
+=> Checksum SHA1 OK for dtoa-0.4.4.crate
+=> Checksum RMD160 OK for dtoa-0.4.4.crate
+=> Checksum SHA512 OK for dtoa-0.4.4.crate
+=> Checksum SHA1 OK for either-1.5.3.crate
+=> Checksum RMD160 OK for either-1.5.3.crate
+=> Checksum SHA512 OK for either-1.5.3.crate
+=> Checksum SHA1 OK for encoding_rs-0.8.20.crate
+=> Checksum RMD160 OK for encoding_rs-0.8.20.crate
+=> Checksum SHA512 OK for encoding_rs-0.8.20.crate
+=> Checksum SHA1 OK for error-chain-0.11.0.crate
+=> Checksum RMD160 OK for error-chain-0.11.0.crate
+=> Checksum SHA512 OK for error-chain-0.11.0.crate
+=> Checksum SHA1 OK for error-chain-0.12.1.crate
+=> Checksum RMD160 OK for error-chain-0.12.1.crate
+=> Checksum SHA512 OK for error-chain-0.12.1.crate
+=> Checksum SHA1 OK for failure-0.1.6.crate
+=> Checksum RMD160 OK for failure-0.1.6.crate
+=> Checksum SHA512 OK for failure-0.1.6.crate
+=> Checksum SHA1 OK for failure_derive-0.1.6.crate
+=> Checksum RMD160 OK for failure_derive-0.1.6.crate
+=> Checksum SHA512 OK for failure_derive-0.1.6.crate
+=> Checksum SHA1 OK for fern-0.5.9.crate
+=> Checksum RMD160 OK for fern-0.5.9.crate
+=> Checksum SHA512 OK for fern-0.5.9.crate
+=> Checksum SHA1 OK for flate2-1.0.13.crate
+=> Checksum RMD160 OK for flate2-1.0.13.crate
+=> Checksum SHA512 OK for flate2-1.0.13.crate
+=> Checksum SHA1 OK for fnv-1.0.6.crate
+=> Checksum RMD160 OK for fnv-1.0.6.crate
+=> Checksum SHA512 OK for fnv-1.0.6.crate
+=> Checksum SHA1 OK for fuchsia-cprng-0.1.1.crate
+=> Checksum RMD160 OK for fuchsia-cprng-0.1.1.crate
+=> Checksum SHA512 OK for fuchsia-cprng-0.1.1.crate
+=> Checksum SHA1 OK for fuchsia-zircon-0.3.3.crate
+=> Checksum RMD160 OK for fuchsia-zircon-0.3.3.crate
+=> Checksum SHA512 OK for fuchsia-zircon-0.3.3.crate
+=> Checksum SHA1 OK for fuchsia-zircon-sys-0.3.3.crate
+=> Checksum RMD160 OK for fuchsia-zircon-sys-0.3.3.crate
+=> Checksum SHA512 OK for fuchsia-zircon-sys-0.3.3.crate
+=> Checksum SHA1 OK for futures-0.1.29.crate
+=> Checksum RMD160 OK for futures-0.1.29.crate
+=> Checksum SHA512 OK for futures-0.1.29.crate
+=> Checksum SHA1 OK for futures-cpupool-0.1.8.crate
+=> Checksum RMD160 OK for futures-cpupool-0.1.8.crate
+=> Checksum SHA512 OK for futures-cpupool-0.1.8.crate
+=> Checksum SHA1 OK for getrandom-0.1.13.crate
+=> Checksum RMD160 OK for getrandom-0.1.13.crate
+=> Checksum SHA512 OK for getrandom-0.1.13.crate
+=> Checksum SHA1 OK for h2-0.1.26.crate
+=> Checksum RMD160 OK for h2-0.1.26.crate
+=> Checksum SHA512 OK for h2-0.1.26.crate
+=> Checksum SHA1 OK for hermit-abi-0.1.3.crate
+=> Checksum RMD160 OK for hermit-abi-0.1.3.crate
+=> Checksum SHA512 OK for hermit-abi-0.1.3.crate
+=> Checksum SHA1 OK for http-0.1.20.crate
+=> Checksum RMD160 OK for http-0.1.20.crate
+=> Checksum SHA512 OK for http-0.1.20.crate
+=> Checksum SHA1 OK for http-body-0.1.0.crate
+=> Checksum RMD160 OK for http-body-0.1.0.crate
+=> Checksum SHA512 OK for http-body-0.1.0.crate
+=> Checksum SHA1 OK for httparse-1.3.4.crate
+=> Checksum RMD160 OK for httparse-1.3.4.crate
+=> Checksum SHA512 OK for httparse-1.3.4.crate
+=> Checksum SHA1 OK for hyper-0.12.35.crate
+=> Checksum RMD160 OK for hyper-0.12.35.crate
+=> Checksum SHA512 OK for hyper-0.12.35.crate
+=> Checksum SHA1 OK for hyper-rustls-0.16.1.crate
+=> Checksum RMD160 OK for hyper-rustls-0.16.1.crate
+=> Checksum SHA512 OK for hyper-rustls-0.16.1.crate
+=> Checksum SHA1 OK for idna-0.1.5.crate
+=> Checksum RMD160 OK for idna-0.1.5.crate
+=> Checksum SHA512 OK for idna-0.1.5.crate
+=> Checksum SHA1 OK for idna-0.2.0.crate
+=> Checksum RMD160 OK for idna-0.2.0.crate
+=> Checksum SHA512 OK for idna-0.2.0.crate
+=> Checksum SHA1 OK for indexmap-1.3.0.crate
+=> Checksum RMD160 OK for indexmap-1.3.0.crate
+=> Checksum SHA512 OK for indexmap-1.3.0.crate
+=> Checksum SHA1 OK for iovec-0.1.4.crate
+=> Checksum RMD160 OK for iovec-0.1.4.crate
+=> Checksum SHA512 OK for iovec-0.1.4.crate
+=> Checksum SHA1 OK for itoa-0.4.4.crate
+=> Checksum RMD160 OK for itoa-0.4.4.crate
+=> Checksum SHA512 OK for itoa-0.4.4.crate
+=> Checksum SHA1 OK for json-0.11.15.crate
+=> Checksum RMD160 OK for json-0.11.15.crate
+=> Checksum SHA512 OK for json-0.11.15.crate
+=> Checksum SHA1 OK for kernel32-sys-0.2.2.crate
+=> Checksum RMD160 OK for kernel32-sys-0.2.2.crate
+=> Checksum SHA512 OK for kernel32-sys-0.2.2.crate
+=> Checksum SHA1 OK for lazy_static-1.4.0.crate
+=> Checksum RMD160 OK for lazy_static-1.4.0.crate
+=> Checksum SHA512 OK for lazy_static-1.4.0.crate
+=> Checksum SHA1 OK for libc-0.2.65.crate
+=> Checksum RMD160 OK for libc-0.2.65.crate
+=> Checksum SHA512 OK for libc-0.2.65.crate
+=> Checksum SHA1 OK for listenfd-0.3.3.crate
+=> Checksum RMD160 OK for listenfd-0.3.3.crate
+=> Checksum SHA512 OK for listenfd-0.3.3.crate
+=> Checksum SHA1 OK for lock_api-0.3.2.crate
+=> Checksum RMD160 OK for lock_api-0.3.2.crate
+=> Checksum SHA512 OK for lock_api-0.3.2.crate
+=> Checksum SHA1 OK for log-0.4.8.crate
+=> Checksum RMD160 OK for log-0.4.8.crate
+=> Checksum SHA512 OK for log-0.4.8.crate
+=> Checksum SHA1 OK for log-reroute-0.1.4.crate
+=> Checksum RMD160 OK for log-reroute-0.1.4.crate
+=> Checksum SHA512 OK for log-reroute-0.1.4.crate
+=> Checksum SHA1 OK for matches-0.1.8.crate
+=> Checksum RMD160 OK for matches-0.1.8.crate
+=> Checksum SHA512 OK for matches-0.1.8.crate
+=> Checksum SHA1 OK for maybe-uninit-2.0.0.crate
+=> Checksum RMD160 OK for maybe-uninit-2.0.0.crate
+=> Checksum SHA512 OK for maybe-uninit-2.0.0.crate
+=> Checksum SHA1 OK for memchr-2.2.1.crate
+=> Checksum RMD160 OK for memchr-2.2.1.crate
+=> Checksum SHA512 OK for memchr-2.2.1.crate
+=> Checksum SHA1 OK for memoffset-0.5.3.crate
+=> Checksum RMD160 OK for memoffset-0.5.3.crate
+=> Checksum SHA512 OK for memoffset-0.5.3.crate
+=> Checksum SHA1 OK for mime-0.3.14.crate
+=> Checksum RMD160 OK for mime-0.3.14.crate
+=> Checksum SHA512 OK for mime-0.3.14.crate
+=> Checksum SHA1 OK for mime_guess-2.0.1.crate
+=> Checksum RMD160 OK for mime_guess-2.0.1.crate
+=> Checksum SHA512 OK for mime_guess-2.0.1.crate
+=> Checksum SHA1 OK for miniz_oxide-0.3.5.crate
+=> Checksum RMD160 OK for miniz_oxide-0.3.5.crate
+=> Checksum SHA512 OK for miniz_oxide-0.3.5.crate
+=> Checksum SHA1 OK for mio-0.6.21.crate
+=> Checksum RMD160 OK for mio-0.6.21.crate
+=> Checksum SHA512 OK for mio-0.6.21.crate
+=> Checksum SHA1 OK for mio-uds-0.6.7.crate
+=> Checksum RMD160 OK for mio-uds-0.6.7.crate
+=> Checksum SHA512 OK for mio-uds-0.6.7.crate
+=> Checksum SHA1 OK for miow-0.2.1.crate
+=> Checksum RMD160 OK for miow-0.2.1.crate
+=> Checksum SHA512 OK for miow-0.2.1.crate
+=> Checksum SHA1 OK for net2-0.2.33.crate
+=> Checksum RMD160 OK for net2-0.2.33.crate
+=> Checksum SHA512 OK for net2-0.2.33.crate
+=> Checksum SHA1 OK for num-integer-0.1.41.crate
+=> Checksum RMD160 OK for num-integer-0.1.41.crate
+=> Checksum SHA512 OK for num-integer-0.1.41.crate
+=> Checksum SHA1 OK for num-traits-0.2.10.crate
+=> Checksum RMD160 OK for num-traits-0.2.10.crate
+=> Checksum SHA512 OK for num-traits-0.2.10.crate
+=> Checksum SHA1 OK for num_cpus-1.11.1.crate
+=> Checksum RMD160 OK for num_cpus-1.11.1.crate
+=> Checksum SHA512 OK for num_cpus-1.11.1.crate
+=> Checksum SHA1 OK for once_cell-1.2.0.crate
+=> Checksum RMD160 OK for once_cell-1.2.0.crate
+=> Checksum SHA512 OK for once_cell-1.2.0.crate
+=> Checksum SHA1 OK for parking_lot-0.9.0.crate
+=> Checksum RMD160 OK for parking_lot-0.9.0.crate
+=> Checksum SHA512 OK for parking_lot-0.9.0.crate
+=> Checksum SHA1 OK for parking_lot_core-0.6.2.crate
+=> Checksum RMD160 OK for parking_lot_core-0.6.2.crate
+=> Checksum SHA512 OK for parking_lot_core-0.6.2.crate
+=> Checksum SHA1 OK for percent-encoding-1.0.1.crate
+=> Checksum RMD160 OK for percent-encoding-1.0.1.crate
+=> Checksum SHA512 OK for percent-encoding-1.0.1.crate
+=> Checksum SHA1 OK for percent-encoding-2.1.0.crate
+=> Checksum RMD160 OK for percent-encoding-2.1.0.crate
+=> Checksum SHA512 OK for percent-encoding-2.1.0.crate
+=> Checksum SHA1 OK for ppv-lite86-0.2.6.crate
+=> Checksum RMD160 OK for ppv-lite86-0.2.6.crate
+=> Checksum SHA512 OK for ppv-lite86-0.2.6.crate
+=> Checksum SHA1 OK for proc-macro2-0.4.30.crate
+=> Checksum RMD160 OK for proc-macro2-0.4.30.crate
+=> Checksum SHA512 OK for proc-macro2-0.4.30.crate
+=> Checksum SHA1 OK for proc-macro2-1.0.6.crate
+=> Checksum RMD160 OK for proc-macro2-1.0.6.crate
+=> Checksum SHA512 OK for proc-macro2-1.0.6.crate
+=> Checksum SHA1 OK for publicsuffix-1.5.4.crate
+=> Checksum RMD160 OK for publicsuffix-1.5.4.crate
+=> Checksum SHA512 OK for publicsuffix-1.5.4.crate
+=> Checksum SHA1 OK for quick-xml-0.16.1.crate
+=> Checksum RMD160 OK for quick-xml-0.16.1.crate
+=> Checksum SHA512 OK for quick-xml-0.16.1.crate
+=> Checksum SHA1 OK for quote-0.6.13.crate
+=> Checksum RMD160 OK for quote-0.6.13.crate
+=> Checksum SHA512 OK for quote-0.6.13.crate
+=> Checksum SHA1 OK for quote-1.0.2.crate
+=> Checksum RMD160 OK for quote-1.0.2.crate
+=> Checksum SHA512 OK for quote-1.0.2.crate
+=> Checksum SHA1 OK for rand-0.6.5.crate
+=> Checksum RMD160 OK for rand-0.6.5.crate
+=> Checksum SHA512 OK for rand-0.6.5.crate
+=> Checksum SHA1 OK for rand-0.7.2.crate
+=> Checksum RMD160 OK for rand-0.7.2.crate
+=> Checksum SHA512 OK for rand-0.7.2.crate
+=> Checksum SHA1 OK for rand_chacha-0.1.1.crate
+=> Checksum RMD160 OK for rand_chacha-0.1.1.crate
+=> Checksum SHA512 OK for rand_chacha-0.1.1.crate
+=> Checksum SHA1 OK for rand_chacha-0.2.1.crate
+=> Checksum RMD160 OK for rand_chacha-0.2.1.crate
+=> Checksum SHA512 OK for rand_chacha-0.2.1.crate
+=> Checksum SHA1 OK for rand_core-0.3.1.crate
+=> Checksum RMD160 OK for rand_core-0.3.1.crate
+=> Checksum SHA512 OK for rand_core-0.3.1.crate
+=> Checksum SHA1 OK for rand_core-0.4.2.crate
+=> Checksum RMD160 OK for rand_core-0.4.2.crate
+=> Checksum SHA512 OK for rand_core-0.4.2.crate
+=> Checksum SHA1 OK for rand_core-0.5.1.crate
+=> Checksum RMD160 OK for rand_core-0.5.1.crate
+=> Checksum SHA512 OK for rand_core-0.5.1.crate
+=> Checksum SHA1 OK for rand_hc-0.1.0.crate
+=> Checksum RMD160 OK for rand_hc-0.1.0.crate
+=> Checksum SHA512 OK for rand_hc-0.1.0.crate
+=> Checksum SHA1 OK for rand_hc-0.2.0.crate
+=> Checksum RMD160 OK for rand_hc-0.2.0.crate
+=> Checksum SHA512 OK for rand_hc-0.2.0.crate
+=> Checksum SHA1 OK for rand_isaac-0.1.1.crate
+=> Checksum RMD160 OK for rand_isaac-0.1.1.crate
+=> Checksum SHA512 OK for rand_isaac-0.1.1.crate
+=> Checksum SHA1 OK for rand_jitter-0.1.4.crate
+=> Checksum RMD160 OK for rand_jitter-0.1.4.crate
+=> Checksum SHA512 OK for rand_jitter-0.1.4.crate
+=> Checksum SHA1 OK for rand_os-0.1.3.crate
+=> Checksum RMD160 OK for rand_os-0.1.3.crate
+=> Checksum SHA512 OK for rand_os-0.1.3.crate
+=> Checksum SHA1 OK for rand_pcg-0.1.2.crate
+=> Checksum RMD160 OK for rand_pcg-0.1.2.crate
+=> Checksum SHA512 OK for rand_pcg-0.1.2.crate
+=> Checksum SHA1 OK for rand_xorshift-0.1.1.crate
+=> Checksum RMD160 OK for rand_xorshift-0.1.1.crate
+=> Checksum SHA512 OK for rand_xorshift-0.1.1.crate
+=> Checksum SHA1 OK for rdrand-0.4.0.crate
+=> Checksum RMD160 OK for rdrand-0.4.0.crate
+=> Checksum SHA512 OK for rdrand-0.4.0.crate
+=> Checksum SHA1 OK for redox_syscall-0.1.56.crate
+=> Checksum RMD160 OK for redox_syscall-0.1.56.crate
+=> Checksum SHA512 OK for redox_syscall-0.1.56.crate
+=> Checksum SHA1 OK for redox_users-0.3.1.crate
+=> Checksum RMD160 OK for redox_users-0.3.1.crate
+=> Checksum SHA512 OK for redox_users-0.3.1.crate
+=> Checksum SHA1 OK for regex-1.3.1.crate
+=> Checksum RMD160 OK for regex-1.3.1.crate
+=> Checksum SHA512 OK for regex-1.3.1.crate
+=> Checksum SHA1 OK for regex-syntax-0.6.12.crate
+=> Checksum RMD160 OK for regex-syntax-0.6.12.crate
+=> Checksum SHA512 OK for regex-syntax-0.6.12.crate
+=> Checksum SHA1 OK for remove_dir_all-0.5.2.crate
+=> Checksum RMD160 OK for remove_dir_all-0.5.2.crate
+=> Checksum SHA512 OK for remove_dir_all-0.5.2.crate
+=> Checksum SHA1 OK for reqwest-0.9.19.crate
+=> Checksum RMD160 OK for reqwest-0.9.19.crate
+=> Checksum SHA512 OK for reqwest-0.9.19.crate
+=> Checksum SHA1 OK for ring-0.14.6.crate
+=> Checksum RMD160 OK for ring-0.14.6.crate
+=> Checksum SHA512 OK for ring-0.14.6.crate
+=> Checksum SHA1 OK for routinator-0.6.4.crate
+=> Checksum RMD160 OK for routinator-0.6.4.crate
+=> Checksum SHA512 OK for routinator-0.6.4.crate
+=> Checksum SHA1 OK for rpki-0.8.1.crate
+=> Checksum RMD160 OK for rpki-0.8.1.crate
+=> Checksum SHA512 OK for rpki-0.8.1.crate
+=> Checksum SHA1 OK for rust-argon2-0.5.1.crate
+=> Checksum RMD160 OK for rust-argon2-0.5.1.crate
+=> Checksum SHA512 OK for rust-argon2-0.5.1.crate
+=> Checksum SHA1 OK for rustc-demangle-0.1.16.crate
+=> Checksum RMD160 OK for rustc-demangle-0.1.16.crate
+=> Checksum SHA512 OK for rustc-demangle-0.1.16.crate
+=> Checksum SHA1 OK for rustc_version-0.2.3.crate
+=> Checksum RMD160 OK for rustc_version-0.2.3.crate
+=> Checksum SHA512 OK for rustc_version-0.2.3.crate
+=> Checksum SHA1 OK for rustls-0.15.2.crate
+=> Checksum RMD160 OK for rustls-0.15.2.crate
+=> Checksum SHA512 OK for rustls-0.15.2.crate
+=> Checksum SHA1 OK for ryu-1.0.2.crate
+=> Checksum RMD160 OK for ryu-1.0.2.crate
+=> Checksum SHA512 OK for ryu-1.0.2.crate
+=> Checksum SHA1 OK for scopeguard-1.0.0.crate
+=> Checksum RMD160 OK for scopeguard-1.0.0.crate
+=> Checksum SHA512 OK for scopeguard-1.0.0.crate
+=> Checksum SHA1 OK for sct-0.5.0.crate
+=> Checksum RMD160 OK for sct-0.5.0.crate
+=> Checksum SHA512 OK for sct-0.5.0.crate
+=> Checksum SHA1 OK for semver-0.9.0.crate
+=> Checksum RMD160 OK for semver-0.9.0.crate
+=> Checksum SHA512 OK for semver-0.9.0.crate
+=> Checksum SHA1 OK for semver-parser-0.7.0.crate
+=> Checksum RMD160 OK for semver-parser-0.7.0.crate
+=> Checksum SHA512 OK for semver-parser-0.7.0.crate
+=> Checksum SHA1 OK for serde-1.0.103.crate
+=> Checksum RMD160 OK for serde-1.0.103.crate
+=> Checksum SHA512 OK for serde-1.0.103.crate
+=> Checksum SHA1 OK for serde_derive-1.0.103.crate
+=> Checksum RMD160 OK for serde_derive-1.0.103.crate
+=> Checksum SHA512 OK for serde_derive-1.0.103.crate
+=> Checksum SHA1 OK for serde_json-1.0.42.crate
+=> Checksum RMD160 OK for serde_json-1.0.42.crate
+=> Checksum SHA512 OK for serde_json-1.0.42.crate
+=> Checksum SHA1 OK for serde_urlencoded-0.5.5.crate
+=> Checksum RMD160 OK for serde_urlencoded-0.5.5.crate
+=> Checksum SHA512 OK for serde_urlencoded-0.5.5.crate
+=> Checksum SHA1 OK for signal-hook-0.1.12.crate
+=> Checksum RMD160 OK for signal-hook-0.1.12.crate
+=> Checksum SHA512 OK for signal-hook-0.1.12.crate
+=> Checksum SHA1 OK for signal-hook-registry-1.2.0.crate
+=> Checksum RMD160 OK for signal-hook-registry-1.2.0.crate
+=> Checksum SHA512 OK for signal-hook-registry-1.2.0.crate
+=> Checksum SHA1 OK for slab-0.4.2.crate
+=> Checksum RMD160 OK for slab-0.4.2.crate
+=> Checksum SHA512 OK for slab-0.4.2.crate
+=> Checksum SHA1 OK for smallvec-0.6.13.crate
+=> Checksum RMD160 OK for smallvec-0.6.13.crate
+=> Checksum SHA512 OK for smallvec-0.6.13.crate
+=> Checksum SHA1 OK for socks-0.3.2.crate
+=> Checksum RMD160 OK for socks-0.3.2.crate
+=> Checksum SHA512 OK for socks-0.3.2.crate
+=> Checksum SHA1 OK for spin-0.5.2.crate
+=> Checksum RMD160 OK for spin-0.5.2.crate
+=> Checksum SHA512 OK for spin-0.5.2.crate
+=> Checksum SHA1 OK for string-0.2.1.crate
+=> Checksum RMD160 OK for string-0.2.1.crate
+=> Checksum SHA512 OK for string-0.2.1.crate
+=> Checksum SHA1 OK for strsim-0.8.0.crate
+=> Checksum RMD160 OK for strsim-0.8.0.crate
+=> Checksum SHA512 OK for strsim-0.8.0.crate
+=> Checksum SHA1 OK for syn-0.15.44.crate
+=> Checksum RMD160 OK for syn-0.15.44.crate
+=> Checksum SHA512 OK for syn-0.15.44.crate
+=> Checksum SHA1 OK for syn-1.0.9.crate
+=> Checksum RMD160 OK for syn-1.0.9.crate
+=> Checksum SHA512 OK for syn-1.0.9.crate
+=> Checksum SHA1 OK for synstructure-0.12.3.crate
+=> Checksum RMD160 OK for synstructure-0.12.3.crate
+=> Checksum SHA512 OK for synstructure-0.12.3.crate
+=> Checksum SHA1 OK for syslog-4.0.1.crate
+=> Checksum RMD160 OK for syslog-4.0.1.crate
+=> Checksum SHA512 OK for syslog-4.0.1.crate
+=> Checksum SHA1 OK for tempfile-3.1.0.crate
+=> Checksum RMD160 OK for tempfile-3.1.0.crate
+=> Checksum SHA512 OK for tempfile-3.1.0.crate
+=> Checksum SHA1 OK for textwrap-0.11.0.crate
+=> Checksum RMD160 OK for textwrap-0.11.0.crate
+=> Checksum SHA512 OK for textwrap-0.11.0.crate
+=> Checksum SHA1 OK for thread_local-0.3.6.crate
+=> Checksum RMD160 OK for thread_local-0.3.6.crate
+=> Checksum SHA512 OK for thread_local-0.3.6.crate
+=> Checksum SHA1 OK for time-0.1.42.crate
+=> Checksum RMD160 OK for time-0.1.42.crate
+=> Checksum SHA512 OK for time-0.1.42.crate
+=> Checksum SHA1 OK for tokio-0.1.22.crate
+=> Checksum RMD160 OK for tokio-0.1.22.crate
+=> Checksum SHA512 OK for tokio-0.1.22.crate
+=> Checksum SHA1 OK for tokio-buf-0.1.1.crate
+=> Checksum RMD160 OK for tokio-buf-0.1.1.crate
+=> Checksum SHA512 OK for tokio-buf-0.1.1.crate
+=> Checksum SHA1 OK for tokio-codec-0.1.1.crate
+=> Checksum RMD160 OK for tokio-codec-0.1.1.crate
+=> Checksum SHA512 OK for tokio-codec-0.1.1.crate
+=> Checksum SHA1 OK for tokio-current-thread-0.1.6.crate
+=> Checksum RMD160 OK for tokio-current-thread-0.1.6.crate
+=> Checksum SHA512 OK for tokio-current-thread-0.1.6.crate
+=> Checksum SHA1 OK for tokio-executor-0.1.9.crate
+=> Checksum RMD160 OK for tokio-executor-0.1.9.crate
+=> Checksum SHA512 OK for tokio-executor-0.1.9.crate
+=> Checksum SHA1 OK for tokio-fs-0.1.6.crate
+=> Checksum RMD160 OK for tokio-fs-0.1.6.crate
+=> Checksum SHA512 OK for tokio-fs-0.1.6.crate
+=> Checksum SHA1 OK for tokio-io-0.1.12.crate
+=> Checksum RMD160 OK for tokio-io-0.1.12.crate
+=> Checksum SHA512 OK for tokio-io-0.1.12.crate
+=> Checksum SHA1 OK for tokio-reactor-0.1.11.crate
+=> Checksum RMD160 OK for tokio-reactor-0.1.11.crate
+=> Checksum SHA512 OK for tokio-reactor-0.1.11.crate
+=> Checksum SHA1 OK for tokio-rustls-0.9.4.crate
+=> Checksum RMD160 OK for tokio-rustls-0.9.4.crate
+=> Checksum SHA512 OK for tokio-rustls-0.9.4.crate
+=> Checksum SHA1 OK for tokio-sync-0.1.7.crate
+=> Checksum RMD160 OK for tokio-sync-0.1.7.crate
+=> Checksum SHA512 OK for tokio-sync-0.1.7.crate
+=> Checksum SHA1 OK for tokio-tcp-0.1.3.crate
+=> Checksum RMD160 OK for tokio-tcp-0.1.3.crate
+=> Checksum SHA512 OK for tokio-tcp-0.1.3.crate
+=> Checksum SHA1 OK for tokio-threadpool-0.1.16.crate
+=> Checksum RMD160 OK for tokio-threadpool-0.1.16.crate
+=> Checksum SHA512 OK for tokio-threadpool-0.1.16.crate
+=> Checksum SHA1 OK for tokio-timer-0.2.12.crate
+=> Checksum RMD160 OK for tokio-timer-0.2.12.crate
+=> Checksum SHA512 OK for tokio-timer-0.2.12.crate
+=> Checksum SHA1 OK for tokio-udp-0.1.5.crate
+=> Checksum RMD160 OK for tokio-udp-0.1.5.crate
+=> Checksum SHA512 OK for tokio-udp-0.1.5.crate
+=> Checksum SHA1 OK for tokio-uds-0.2.5.crate
+=> Checksum RMD160 OK for tokio-uds-0.2.5.crate
+=> Checksum SHA512 OK for tokio-uds-0.2.5.crate
+=> Checksum SHA1 OK for toml-0.5.5.crate
+=> Checksum RMD160 OK for toml-0.5.5.crate
+=> Checksum SHA512 OK for toml-0.5.5.crate
+=> Checksum SHA1 OK for try-lock-0.2.2.crate
+=> Checksum RMD160 OK for try-lock-0.2.2.crate
+=> Checksum SHA512 OK for try-lock-0.2.2.crate
+=> Checksum SHA1 OK for try_from-0.3.2.crate
+=> Checksum RMD160 OK for try_from-0.3.2.crate
+=> Checksum SHA512 OK for try_from-0.3.2.crate
+=> Checksum SHA1 OK for unicase-2.6.0.crate
+=> Checksum RMD160 OK for unicase-2.6.0.crate
+=> Checksum SHA512 OK for unicase-2.6.0.crate
+=> Checksum SHA1 OK for unicode-bidi-0.3.4.crate
+=> Checksum RMD160 OK for unicode-bidi-0.3.4.crate
+=> Checksum SHA512 OK for unicode-bidi-0.3.4.crate
+=> Checksum SHA1 OK for unicode-normalization-0.1.9.crate
+=> Checksum RMD160 OK for unicode-normalization-0.1.9.crate
+=> Checksum SHA512 OK for unicode-normalization-0.1.9.crate
+=> Checksum SHA1 OK for unicode-width-0.1.6.crate
+=> Checksum RMD160 OK for unicode-width-0.1.6.crate
+=> Checksum SHA512 OK for unicode-width-0.1.6.crate
+=> Checksum SHA1 OK for unicode-xid-0.1.0.crate
+=> Checksum RMD160 OK for unicode-xid-0.1.0.crate
+=> Checksum SHA512 OK for unicode-xid-0.1.0.crate
+=> Checksum SHA1 OK for unicode-xid-0.2.0.crate
+=> Checksum RMD160 OK for unicode-xid-0.2.0.crate
+=> Checksum SHA512 OK for unicode-xid-0.2.0.crate
+=> Checksum SHA1 OK for untrusted-0.6.2.crate
+=> Checksum RMD160 OK for untrusted-0.6.2.crate
+=> Checksum SHA512 OK for untrusted-0.6.2.crate
+=> Checksum SHA1 OK for unwrap-1.2.1.crate
+=> Checksum RMD160 OK for unwrap-1.2.1.crate
+=> Checksum SHA512 OK for unwrap-1.2.1.crate
+=> Checksum SHA1 OK for url-1.7.2.crate
+=> Checksum RMD160 OK for url-1.7.2.crate
+=> Checksum SHA512 OK for url-1.7.2.crate
+=> Checksum SHA1 OK for url-2.1.0.crate
+=> Checksum RMD160 OK for url-2.1.0.crate
+=> Checksum SHA512 OK for url-2.1.0.crate
+=> Checksum SHA1 OK for uuid-0.6.5.crate
+=> Checksum RMD160 OK for uuid-0.6.5.crate
+=> Checksum SHA512 OK for uuid-0.6.5.crate
+=> Checksum SHA1 OK for uuid-0.7.4.crate
+=> Checksum RMD160 OK for uuid-0.7.4.crate
+=> Checksum SHA512 OK for uuid-0.7.4.crate
+=> Checksum SHA1 OK for vec_map-0.8.1.crate
+=> Checksum RMD160 OK for vec_map-0.8.1.crate
+=> Checksum SHA512 OK for vec_map-0.8.1.crate
+=> Checksum SHA1 OK for version_check-0.1.5.crate
+=> Checksum RMD160 OK for version_check-0.1.5.crate
+=> Checksum SHA512 OK for version_check-0.1.5.crate
+=> Checksum SHA1 OK for version_check-0.9.1.crate
+=> Checksum RMD160 OK for version_check-0.9.1.crate
+=> Checksum SHA512 OK for version_check-0.9.1.crate
+=> Checksum SHA1 OK for want-0.2.0.crate
+=> Checksum RMD160 OK for want-0.2.0.crate
+=> Checksum SHA512 OK for want-0.2.0.crate
+=> Checksum SHA1 OK for wasi-0.7.0.crate
+=> Checksum RMD160 OK for wasi-0.7.0.crate
+=> Checksum SHA512 OK for wasi-0.7.0.crate
+=> Checksum SHA1 OK for webpki-0.19.1.crate
+=> Checksum RMD160 OK for webpki-0.19.1.crate
+=> Checksum SHA512 OK for webpki-0.19.1.crate
+=> Checksum SHA1 OK for webpki-roots-0.16.0.crate
+=> Checksum RMD160 OK for webpki-roots-0.16.0.crate
+=> Checksum SHA512 OK for webpki-roots-0.16.0.crate
+=> Checksum SHA1 OK for winapi-0.2.8.crate
+=> Checksum RMD160 OK for winapi-0.2.8.crate
+=> Checksum SHA512 OK for winapi-0.2.8.crate
+=> Checksum SHA1 OK for winapi-0.3.8.crate
+=> Checksum RMD160 OK for winapi-0.3.8.crate
+=> Checksum SHA512 OK for winapi-0.3.8.crate
+=> Checksum SHA1 OK for winapi-build-0.1.1.crate
+=> Checksum RMD160 OK for winapi-build-0.1.1.crate
+=> Checksum SHA512 OK for winapi-build-0.1.1.crate
+=> Checksum SHA1 OK for winapi-i686-pc-windows-gnu-0.4.0.crate
+=> Checksum RMD160 OK for winapi-i686-pc-windows-gnu-0.4.0.crate
+=> Checksum SHA512 OK for winapi-i686-pc-windows-gnu-0.4.0.crate
+=> Checksum SHA1 OK for winapi-x86_64-pc-windows-gnu-0.4.0.crate
+=> Checksum RMD160 OK for winapi-x86_64-pc-windows-gnu-0.4.0.crate
+=> Checksum SHA512 OK for winapi-x86_64-pc-windows-gnu-0.4.0.crate
+=> Checksum SHA1 OK for winreg-0.6.2.crate
+=> Checksum RMD160 OK for winreg-0.6.2.crate
+=> Checksum SHA512 OK for winreg-0.6.2.crate
+=> Checksum SHA1 OK for ws2_32-sys-0.2.1.crate
+=> Checksum RMD160 OK for ws2_32-sys-0.2.1.crate
+=> Checksum SHA512 OK for ws2_32-sys-0.2.1.crate
+===> Installing dependencies for routinator-0.6.4
+=> Tool dependency bsdtar-[0-9]*: found bsdtar-3.4.0
+=> Tool dependency digest>=20010302: found digest-20190127
+=> Tool dependency checkperms>=1.1: found checkperms-1.12
+=> Build dependency rust-[0-9]*: found rust-1.41.0
+=> Build dependency cwrappers>=20150314: found cwrappers-20180325
+=> Full dependency rust>=1.20.0: found rust-1.41.0
+===> Overriding tools for routinator-0.6.4
+===> Extracting for routinator-0.6.4
+=> Extracting local cargo crates
+===> Patching for routinator-0.6.4
+===> Creating toolchain wrappers for routinator-0.6.4
+===> Configuring for routinator-0.6.4
+=> Checking for portability problems in extracted files
+===> Building for routinator-0.6.4
+cd /usr/pkgsrc/wip/routinator/work/routinator-0.6.4 && /usr/bin/env USETOOLS=no CC=gcc CFLAGS=-O2\ -D_FORTIFY_SOURCE=2\ -I/usr/pkg/include CPPFLAGS=-I/usr/pkg/include CXX=c++ CXXFLAGS=-O2\ -D_FORTIFY_SOURCE=2\ -I/usr/pkg/include COMPILER_RPATH_FLAG=-Wl,-R F77=gfortran FC=gfortran FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGES=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-L/usr/pkg/lib\ -Wl,-R/usr/pkg/lib LINKER_RPATH_FLAG=-R PATH=/usr/pkgsrc/wip/routinator/work/.cwrapper/bin:/usr/pkgsrc/wip/routinator/work/.buildlink/bin:/usr/pkgsrc/wip/routinator/work/.gcc/bin:/usr/pkgsrc/wip/routinator/work/.tools/bin:/usr/pkg/bin:/home/he/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R7/bin:/usr/X11R6/bin:/usr/pkg/bin:/usr/pkg/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/local/bin:/usr/pkg/bin:/usr/X11R7/bin PREFIX=/usr/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/usr/pkg/etc CXXCPP=cpp HOME=/usr/pkgsrc/wip/routinator/work/.home CWRAPPERS_CONFIG_DIR=/usr/pkgsrc/wip/routinator/work/.cwrapper/config CPP=cpp LOCALBASE=/usr/pkg X11BASE=/usr/X11R7 PKGMANDIR=man PKGINFODIR=info PKGGNUDIR=gnu/ MAKECONF=/dev/null OBJECT_FMT=ELF USETOOLS=no BSD_INSTALL_PROGRAM=/usr/bin/install\ -c\ -s\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_SCRIPT=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_LIB=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_DATA=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 644 BSD_INSTALL_MAN=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 644 BSD_INSTALL=/usr/bin/install BSD_INSTALL_PROGRAM_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_SCRIPT_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_LIB_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_DATA_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_MAN_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 755 BSD_INSTALL_GAME=/usr/bin/install\ -c\ -s\ -o\ he\ -g\ he\ -m\ 2555 BSD_INSTALL_GAME_DATA=/usr/bin/install\ -c\ -o\ he\ -g\ he\ -m\ 664 BSD_INSTALL_GAME_DIR=/usr/bin/install\ -d\ -o\ he\ -g\ he\ -m\ 775 INSTALL_INFO= MAKEINFO=/usr/pkgsrc/wip/routinator/work/.tools/bin/makeinfo FLEX= BISON= PKG_CONFIG= PKG_CONFIG_LIBDIR=/usr/pkgsrc/wip/routinator/work/.buildlink/lib/pkgconfig:/usr/pkgsrc/wip/routinator/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/usr/pkgsrc/wip/routinator/work/.pkg-config.log PKG_CONFIG_PATH= CWRAPPERS_CONFIG_DIR=/usr/pkgsrc/wip/routinator/work/.cwrapper/config /usr/pkg/bin/cargo build --locked --frozen
+   Compiling libc v0.2.65
+   Compiling cfg-if v0.1.10
+   Compiling autocfg v0.1.7
+   Compiling lazy_static v1.4.0
+   Compiling semver-parser v0.7.0
+   Compiling log v0.4.8
+   Compiling byteorder v1.3.2
+   Compiling maybe-uninit v2.0.0
+   Compiling futures v0.1.29
+   Compiling either v1.5.3
+   Compiling cc v1.0.47
+   Compiling proc-macro2 v1.0.6
+   Compiling unicode-xid v0.2.0
+   Compiling slab v0.4.2
+   Compiling scopeguard v1.0.0
+   Compiling syn v1.0.9
+   Compiling fnv v1.0.6
+   Compiling rand_core v0.4.2
+   Compiling memchr v2.2.1
+   Compiling matches v0.1.8
+   Compiling spin v0.5.2
+   Compiling untrusted v0.6.2
+   Compiling serde v1.0.103
+   Compiling itoa v0.4.4
+   Compiling version_check v0.9.1
+   Compiling getrandom v0.1.13
+   Compiling version_check v0.1.5
+   Compiling regex-syntax v0.6.12
+   Compiling proc-macro2 v0.4.30
+   Compiling rustc-demangle v0.1.16
+   Compiling percent-encoding v1.0.1
+   Compiling httparse v1.3.4
+   Compiling ryu v1.0.2
+   Compiling unicode-xid v0.1.0
+   Compiling failure_derive v0.1.6
+   Compiling try-lock v0.2.2
+   Compiling ppv-lite86 v0.2.6
+   Compiling crc32fast v1.2.0
+   Compiling syn v0.15.44
+   Compiling percent-encoding v2.1.0
+   Compiling arc-swap v0.4.4
+   Compiling encoding_rs v0.8.20
+   Compiling bitflags v1.2.1
+   Compiling adler32 v1.0.4
+   Compiling unwrap v1.2.1
+   Compiling dtoa v0.4.4
+   Compiling mime v0.3.14
+   Compiling unicode-width v0.1.6
+   Compiling strsim v0.8.0
+   Compiling boxfnonce v0.1.1
+   Compiling vec_map v0.8.1
+   Compiling once_cell v1.2.0
+   Compiling ansi_term v0.11.0
+   Compiling remove_dir_all v0.5.2
+   Compiling json v0.11.15
+   Compiling try_from v0.3.2
+   Compiling lock_api v0.3.2
+   Compiling crossbeam-utils v0.6.6
+   Compiling thread_local v0.3.6
+   Compiling unicode-bidi v0.3.4
+   Compiling semver v0.9.0
+   Compiling rand_core v0.3.1
+   Compiling rand_jitter v0.1.4
+   Compiling crossbeam-utils v0.7.0
+   Compiling crossbeam-epoch v0.8.0
+   Compiling indexmap v1.3.0
+   Compiling rand_pcg v0.1.2
+   Compiling num-traits v0.2.10
+   Compiling rand_chacha v0.1.1
+   Compiling num-integer v0.1.41
+   Compiling rand v0.6.5
+   Compiling unicase v2.6.0
+   Compiling error-chain v0.12.1
+   Compiling ring v0.14.6
+   Compiling backtrace-sys v0.1.32
+   Compiling miniz_oxide v0.3.5
+   Compiling tokio-sync v0.1.7
+   Compiling c2-chacha v0.2.3
+   Compiling textwrap v0.11.0
+   Compiling rand_xorshift v0.1.1
+   Compiling rand_hc v0.1.0
+   Compiling rand_isaac v0.1.1
+   Compiling tokio-executor v0.1.9
+   Compiling crossbeam-queue v0.1.2
+   Compiling rustc_version v0.2.3
+   Compiling smallvec v0.6.13
+   Compiling want v0.2.0
+   Compiling log-reroute v0.1.4
+   Compiling tokio-timer v0.2.12
+   Compiling tokio-current-thread v0.1.6
+   Compiling base64 v0.10.1
+   Compiling iovec v0.1.4
+   Compiling num_cpus v1.11.1
+   Compiling net2 v0.2.33
+   Compiling time v0.1.42
+   Compiling rand_os v0.1.3
+   Compiling atty v0.2.13
+   Compiling dirs-sys v0.3.4
+   Compiling socks v0.3.2
+   Compiling signal-hook-registry v1.2.0
+   Compiling daemonize v0.4.1
+   Compiling listenfd v0.3.3
+   Compiling quote v1.0.2
+   Compiling parking_lot_core v0.6.2
+   Compiling parking_lot v0.9.0
+   Compiling memoffset v0.5.3
+   Compiling hyper v0.12.35
+   Compiling routinator v0.6.4 (/usr/pkgsrc/wip/routinator/work/routinator-0.6.4)
+   Compiling aho-corasick v0.7.6
+   Compiling quick-xml v0.16.1
+   Compiling bytes v0.4.12
+   Compiling rand_core v0.5.1
+   Compiling clap v2.33.0
+   Compiling flate2 v1.0.13
+   Compiling unicode-normalization v0.1.9
+   Compiling quote v0.6.13
+   Compiling mime_guess v2.0.1
+   Compiling futures-cpupool v0.1.8
+   Compiling mio v0.6.21
+   Compiling dirs v2.0.2
+error: Failed to delete invalidated or incompatible incremental compilation session directory contents `/usr/pkgsrc/wip/routinator/work/routinator-0.6.4/target/debug/incremental/build_script_build-68057wbkwdne/s-fmrtl5b9lf-xbr86a-working/dep-graph.bin`: No such file or directory (os error 2).
+
+error: aborting due to previous error
+
+error: could not compile `routinator`.
+warning: build failed, waiting for other jobs to finish...
+error: build failed
+*** Error code 101
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/routinator
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/routinator
+256.022u 79.053s 1:49.73 305.3%	33+97k 83+2268io 10830pf+0w

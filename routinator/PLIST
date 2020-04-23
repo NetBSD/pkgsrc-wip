@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/routinator
+man/man1/routinator.1
+share/doc/routinator/README.md
+share/examples/routinator/routinator.conf.example
