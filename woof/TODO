@@ -1,1 +1,26 @@
 [X] Add ${PREFIX}/share/doom directory to search list
+[ ] QUERZ keyboard layout does not work
+[X] Fix crashes on big endian machines
+
+$ uname
+Linux
+$ uname -m
+ppc
+$ woof -iwad doom2.wad -file Avactor.wad -warp 9
+[...]
+D_CheckNetGame: Checking network game status.
+startskill 2  deathmatch: 0  startmap: 9  startepisode: 1
+player 1 of 1 (1 nodes)
+S_Init: Setting up sound.
+HU_Init: Setting up heads up display.
+ST_Init: Init status bar.
+Segmentation fault
+$ woof -iwad doom2.wad -file Eviternity.wad -warp 32
+[...]
+D_CheckNetGame: Checking network game status.
+startskill 2  deathmatch: 0  startmap: 32  startepisode: 1
+player 1 of 1 (1 nodes)
+S_Init: Setting up sound.
+HU_Init: Setting up heads up display.
+ST_Init: Init status bar.
+Segmentation fault
