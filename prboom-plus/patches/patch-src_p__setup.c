@@ -1,23 +1,49 @@
 $NetBSD$
 
-Loading maps using ZDoom extended nodes crashes on big endian machines
+Loading maps using extended nodes crashes on big endian machines
 (because 32-bit values are imported with wrong byte order).
 
-Note that the endianess conversion macros return 16-bit or 32-bit
-signed values using data types short int and long int. Both data types
-are allowed to be larger (implementation defined) and in this case
-additional bits are sign extended. This patch mask such additional
-bits if the target data type is unsigned.
-
-If memory allocation returns NULL, do not continue (dereference the
-NULL pointer and crash).
-
-Reported upstream as bug #256:
+Reported upstream as bug #256 and #257:
 https://sourceforge.net/p/prboom-plus/bugs/256/
+https://sourceforge.net/p/prboom-plus/bugs/257/
 
 --- src/p_setup.c.orig	2016-01-10 18:01:30.000000000 +0000
 +++ src/p_setup.c
-@@ -1024,6 +1024,7 @@ static void CheckZNodesOverflow(int *siz
+@@ -628,8 +628,9 @@ static void P_LoadSegs_V4(int lump)
+     int side, linedef;
+     line_t *ldef;
+ 
+-    v1 = ml->v1;
+-    v2 = ml->v2;
++    // MB 2020-04-22: Fix endianess for DeePBSP V4 extended nodes
++    v1 = LittleLong(ml->v1);
++    v2 = LittleLong(ml->v2);
+ 
+     li->miniseg = false; // figgi -- there are no minisegs in classic BSP nodes
+ 
+@@ -832,8 +833,9 @@ static void P_LoadSubsectors_V4(int lump
+ 
+   for (i = 0; i < numsubsectors; i++)
+   {
+-    subsectors[i].numlines = (int)data[i].numsegs;
+-    subsectors[i].firstline = (int)data[i].firstseg;
++    // MB 2020-04-22: Fix endianess for DeePBSP V4 extended nodes
++    subsectors[i].numlines = (unsigned short)LittleShort(data[i].numsegs);
++    subsectors[i].firstline = LittleLong(data[i].firstseg);
+   }
+ 
+   W_UnlockLumpNum(lump); // cph - release the data
+@@ -1004,7 +1006,8 @@ static void P_LoadNodes_V4(int lump)
+       for (j=0 ; j<2 ; j++)
+         {
+           int k;
+-          no->children[j] = (unsigned int)(mn->children[j]);
++          // MB 2020-04-22: Fix endianess for DeePBSP V4 extended nodes
++          no->children[j] = LittleLong(mn->children[j]);
+ 
+           for (k=0 ; k<4 ; k++)
+             no->bbox[j][k] = LittleShort(mn->bbox[j][k])<<FRACBITS;
+@@ -1024,6 +1027,7 @@ static void CheckZNodesOverflow(int *siz
    }
  }
  
@@ -25,7 +51,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
  static void P_LoadZSegs (const byte *data)
  {
    int i;
-@@ -1037,12 +1038,12 @@ static void P_LoadZSegs (const byte *dat
+@@ -1037,12 +1041,12 @@ static void P_LoadZSegs (const byte *dat
      seg_t *li = segs+i;
      const mapseg_znod_t *ml = (const mapseg_znod_t *) data + i;
  
@@ -41,7 +67,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
  
      //e6y: check for wrong indexes
      if ((unsigned int)linedef >= (unsigned int)numlines)
-@@ -1098,6 +1099,8 @@ static void P_LoadZSegs (const byte *dat
+@@ -1098,6 +1102,8 @@ static void P_LoadZSegs (const byte *dat
    }
  }
  
@@ -50,7 +76,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
  static void P_LoadZNodes(int lump, int glnodes)
  {
    const byte *data;
-@@ -1112,18 +1115,18 @@ static void P_LoadZNodes(int lump, int g
+@@ -1112,18 +1118,18 @@ static void P_LoadZNodes(int lump, int g
  
    data = W_CacheLumpNum(lump);
    len =  W_LumpLength(lump);
@@ -72,7 +98,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
    data += sizeof(newVerts);
  
    if (!samelevel)
-@@ -1135,16 +1138,21 @@ static void P_LoadZNodes(int lump, int g
+@@ -1135,16 +1141,21 @@ static void P_LoadZNodes(int lump, int g
      else
      {
        newvertarray = calloc(orgVerts + newVerts, sizeof(vertex_t));
@@ -96,7 +122,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
        data += sizeof(newvertarray[0].y);
      }
  
-@@ -1172,28 +1180,37 @@ static void P_LoadZNodes(int lump, int g
+@@ -1172,28 +1183,37 @@ static void P_LoadZNodes(int lump, int g
  
    // Read the subsectors
    CheckZNodesOverflow(&len, sizeof(numSubs));
@@ -138,7 +164,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
    data += sizeof(numSegs);
  
    // The number of segs stored should match the number of
-@@ -1205,6 +1222,11 @@ static void P_LoadZNodes(int lump, int g
+@@ -1205,6 +1225,11 @@ static void P_LoadZNodes(int lump, int g
  
    numsegs = numSegs;
    segs = calloc_IfSameLevel(segs, numsegs, sizeof(seg_t));
@@ -150,7 +176,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
  
    if (glnodes == 0)
    {
-@@ -1220,11 +1242,16 @@ static void P_LoadZNodes(int lump, int g
+@@ -1220,11 +1245,16 @@ static void P_LoadZNodes(int lump, int g
  
    // Read nodes
    CheckZNodesOverflow(&len, sizeof(numNodes));
@@ -168,7 +194,7 @@ https://sourceforge.net/p/prboom-plus/bugs/256/
  
    CheckZNodesOverflow(&len, numNodes * sizeof(mapnode_znod_t));
    for (i = 0; i < numNodes; i++)
-@@ -1233,17 +1260,17 @@ static void P_LoadZNodes(int lump, int g
+@@ -1233,17 +1263,17 @@ static void P_LoadZNodes(int lump, int g
      node_t *no = nodes + i;
      const mapnode_znod_t *mn = (const mapnode_znod_t *) data + i;
  
