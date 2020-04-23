@@ -109,6 +109,7 @@ Part 7: Support for extended nodes
 ==================================
 [X] Add patch to support DeeP and ZDoom extended nodes
     This code is based on woof 1.2.0
+[X] Created upstream feature request #95
 
 
 EOF
