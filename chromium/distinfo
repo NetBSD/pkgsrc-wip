@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (chromium-56.0.2924.87.tar.xz) = e61013b257e0818be5d347cbb94070ddfb25cbe9
-RMD160 (chromium-56.0.2924.87.tar.xz) = 87ba33280652e0fa165d4ffb63c430e2a0f87bfc
-SHA512 (chromium-56.0.2924.87.tar.xz) = 1c154004a9bca73e2491c73520a5f7d5c50c5b9d66e8e2660bf46585dd9b6ad3db706a9d824356f319794fa790bc3918ae6199843bcba717b9e74efbf26882c9
-Size (chromium-56.0.2924.87.tar.xz) = 514429808 bytes
+SHA1 (chromium-84.0.4115.5.tar.xz) = f70e9c83a79bf81219db0dd67e24fe646989483d
+RMD160 (chromium-84.0.4115.5.tar.xz) = b0aadc703765559d1597f92a73ab0b51fb7114c7
+SHA512 (chromium-84.0.4115.5.tar.xz) = a4bfb212b6f45246fc24c74f223cfbc063a3316377ec32821a62be90a55bedff8f2ea989d23dfae56d29713e29203948ae1a9eb6d78adb8bc296132a4422e91e
+Size (chromium-84.0.4115.5.tar.xz) = 813755400 bytes
 SHA1 (patch-BUILD.gn) = 6048c60cbea6db3da66111983b287aa13c13b864
 SHA1 (patch-apps_ui_views_app__window__frame__view.cc) = 76d3579b2f0724da307e72abd745d0a2d06a1b2a
 SHA1 (patch-ash_display_mirror__window__controller.cc) = 7141713c7cd313283e93b1fcd2914d15053016d2

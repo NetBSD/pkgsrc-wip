@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
-DISTNAME=	chromium-56.0.2924.87
-PKGREVISION=	2
+DISTNAME=	chromium-84.0.4115.5
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
@@ -363,8 +362,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	opt:-lpci:-lpciutils
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
-# Not yet
-#.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 # Conflict between OpenSSL and BoringSSL.
