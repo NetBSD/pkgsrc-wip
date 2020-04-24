@@ -366,6 +366,7 @@ ${PYSITELIB}/qutebrowser/javascript/print.js
 ${PYSITELIB}/qutebrowser/javascript/scroll.js
 ${PYSITELIB}/qutebrowser/javascript/stylesheet.js
 ${PYSITELIB}/qutebrowser/javascript/webelem.js
+${PYSITELIB}/qutebrowser/javascript/whatsapp_web_quirk.user.js
 ${PYSITELIB}/qutebrowser/keyinput/__init__.py
 ${PYSITELIB}/qutebrowser/keyinput/__init__.pyo
 ${PYSITELIB}/qutebrowser/keyinput/__init__.pyc
