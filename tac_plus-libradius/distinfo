@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.9 2010/09/05 16:27:36 gschwarz Exp $
 
-SHA1 (tac_plus.F5.0.0.alpha-libradius.tgz) = 937508cb00e70425890b53d1dde3e8a0ca570bb3
-RMD160 (tac_plus.F5.0.0.alpha-libradius.tgz) = c6ea0ab7c77c9b1684fcf9d26cdb7f689254e255
-Size (tac_plus.F5.0.0.alpha-libradius.tgz) = 202070 bytes
+SHA1 (tac_plus.F5.0.0.alpha-libradius.tgz) = aef47b9d43b73ff4beef31fe39cb759dcfc97773
+RMD160 (tac_plus.F5.0.0.alpha-libradius.tgz) = b0ccb6ce67919f39153a8b81c5f2c3423ed55e91
+SHA512 (tac_plus.F5.0.0.alpha-libradius.tgz) = b20e92e2dd2ba1e96ee70dae06f71467b37e78b5408dbaf8487adeff86bd980f7fe305e429b7255d0c3ad89acd55448e1f82983ee80ab9f006be666ad01dedfa
+Size (tac_plus.F5.0.0.alpha-libradius.tgz) = 880640 bytes
 SHA1 (patch-aa) = edd1694be30e868a266c7c96f18e1aa72beb4e03
 SHA1 (patch-ab) = 9e4d13b7dd23e49f35657f4a03e428de09a10351
 SHA1 (patch-ac) = 32083a03856b2057eb2b031ae6e78ed7985f9e3a

@@ -3,12 +3,14 @@
 DISTNAME=	tac_plus.F5.0.0.alpha-libradius
 PKGNAME=	tac_plus-libradius-5.0.0
 CATEGORIES=	net security
-MASTER_SITES=	http://www.portal-to-web.de/tacacs/
+MASTER_SITES=	https://web.archive.org/web/20040613103123if_/http://portal-to-web.de:80/tacacs/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.portal-to-web.de/tacacs/
+HOMEPAGE=	https://web.archive.org/web/20040613103123/http://portal-to-web.de/tacacs/
 COMMENT=	Version of Cisco's tac_plus Tacacs server with RADIUS support
+
+EXTRACT_CMD=	${TAR} xf $$extract_file
 
 INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man8 share/doc/tac_plus \
 			share/examples/tac_plus
@@ -29,6 +31,10 @@ CPPFLAGS+=	-DMIPS
 
 .if !empty(MACHINE_PLATFORM:MDarwin-9.*) || !empty(MACHINE_PLATFORM:MDarwin-1[0-9].*) # MacOS 10.5 or higher
 CPPFLAGS+=	-DMACOSX5PLUS
+.endif
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-return-type
 .endif
 
 do-install:
