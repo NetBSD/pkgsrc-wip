@@ -2,10 +2,10 @@
 
 DISTNAME=	weplab-0.1.5
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=weplab/}
+MASTER_SITES=	https://dl.packetstormsecurity.net/wireless/
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://weplab.sourceforge.net/
+HOMEPAGE=	https://web.archive.org/web/20170622004051/http://weplab.sourceforge.net/
 COMMENT=	Weplab is a tool to review the security of WEP encryption
 LICENSE=	gnu-gpl-v2
 
