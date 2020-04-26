@@ -3,7 +3,9 @@
 DISTNAME=	smap-20081016
 PKGNAME=	smap-0.6.0
 CATEGORIES=	security
-MASTER_SITES=	https://downloads.openwrt.org/sources/
+MASTER_SITES=	http://dev.gateworks.com/sources/
+MASTER_SITES+=	https://github.com/jslink/openwrt-trunk-dl/raw/master/
+MASTER_SITES+=	http://pandorabox.tuuz.cc:8000/sources/
 MASTER_SITES+=	http://mirror2.openwrt.org/sources/
 
 MAINTAINER=	schwarz@NetBSD.org
