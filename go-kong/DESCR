@@ -1,0 +1,6 @@
+Kong aims to support arbitrarily complex command-line structures with
+as little developer effort as possible.
+
+To achieve that, command-lines are expressed as Go types, with the
+structure and tags directing how the command line is mapped onto the
+struct.
