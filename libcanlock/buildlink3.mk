@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcanlock
 LIBCANLOCK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcanlock+=	libcanlock>=3.0.0
-BUILDLINK_PKGSRCDIR.libcanlock?=	../../news/libcanlock
+BUILDLINK_PKGSRCDIR.libcanlock?=	../../wip/libcanlock
 .endif	# LIBCANLOCK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libcanlock
