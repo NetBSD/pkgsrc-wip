@@ -1,0 +1,15 @@
+$NetBSD$
+
+memset_s() corresponds to C11.
+
+--- README.orig	2020-04-27 07:54:13.000000000 +0000
++++ README
+@@ -26,7 +26,7 @@ the exception that 16 bit platforms are 
+ For reliable overwriting of secret data in memory, libcanlock needs explicit
+ memory access. The following functions are currently supported (automatically
+ detected by configure script, if available):
+-- memset_s() [available as option in C99 Annex K]
++- memset_s() [available as option in C11 Annex K]
+ - explicit_memset() [available e.g. since NetBSD 7]
+ - explicit_bzero() [available e.g. since GNU libc 2.25]
+ If none of them can be used, memset() is used as fallback. But a "too smart"
