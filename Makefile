@@ -2081,6 +2081,7 @@ SUBDIR+=	luv
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
+SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lzlib
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
