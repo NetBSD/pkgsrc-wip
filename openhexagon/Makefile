@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake
 USE_CMAKE=	yes
 
+CMAKE_ARGS+=	-DLUA_INCLUDE_DIR=${PREFIX}/${LUA_INCDIR}
+
 # Workaround required because a full recursive clone fails with git-package.mk
 # and all dependencies are only handled via git submodules.
 pre-configure:
@@ -31,6 +33,5 @@ pre-configure:
 
 .include "../../devel/sparsehash/buildlink3.mk"
 .include "../../wip/sfml+/buildlink3.mk"
-.include "../../lang/lua52/buildlink3.mk"
-.include "../../lang/lua/application.mk"
+.include "../../lang/lua51/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
