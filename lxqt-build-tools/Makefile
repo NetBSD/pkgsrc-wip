@@ -3,7 +3,7 @@
 VERSION=	0.7.0
 DISTNAME=	lxqt-build-tools-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-build-tools/releases/download/0.7.0/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-build-tools/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

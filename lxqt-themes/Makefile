@@ -3,7 +3,7 @@
 VERSION=	0.15.0
 DISTNAME=	lxqt-themes-${VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-themes/releases/download/0.15.0/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-themes/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

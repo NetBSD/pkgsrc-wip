@@ -3,7 +3,7 @@
 VERSION=	3.5.0
 DISTNAME=	libqtxdg-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/libqtxdg/releases/download/3.5.0/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/libqtxdg/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
