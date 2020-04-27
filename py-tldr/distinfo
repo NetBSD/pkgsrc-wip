@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.53 2020/04/27 19:54:53 leot Exp $
+
+SHA1 (tldr-0.5.tar.gz) = e74124d98bd266679047ea0bedaa65b0a214dbcc
+RMD160 (tldr-0.5.tar.gz) = 026f11455ac4192f758fab45bbd2b58d57fe010e
+SHA512 (tldr-0.5.tar.gz) = cc471171ace81ff3f68721d7b9d16a2cb3e632ae4624bf48308bf1d11cd8c085d4b49725fb052773be7f748a32cd930cd07799c4351d86f1623bc7277ba7fcdd
+Size (tldr-0.5.tar.gz) = 8896 bytes
+SHA1 (patch-gallery__dl_version.py) = bcfd1666f21b9c050908a7e5592dfbce3b8791ce

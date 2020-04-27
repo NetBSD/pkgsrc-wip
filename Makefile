@@ -4064,6 +4064,7 @@ SUBDIR+=	py-tils
 SUBDIR+=	py-tinydb
 SUBDIR+=	py-tkinter-help
 SUBDIR+=	py-tklsystem
+SUBDIR+=	py-tldr
 SUBDIR+=	py-tmatrix
 SUBDIR+=	py-tmux
 SUBDIR+=	py-toeplitz
