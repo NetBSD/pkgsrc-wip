@@ -1,0 +1,14 @@
+$NetBSD$
+
+Do not install mbox manpage.
+
+--- src/Makefile.in.orig
++++ src/Makefile.in
+@@ -340,7 +340,6 @@ install_manpage : $(DESTDIR)$(INS_MANUAL
+ 	@-$(RM) -f $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
+ 	@$(ECHO) ".so $(INS_MANUAL_DIR)5/$(PROJECT).5" > $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
+ 	@$(CHMOD) 444 $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
+-	@-if test ! -f $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 ; then $(INSTALL) -m 444 $(DOCDIR)/mbox.5 $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 ; else $(ECHO) "  ... skipping $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 - file already exists" ; fi
+ 	@-if test ! -f $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 ; then $(INSTALL) -m 444 $(DOCDIR)/mmdf.5 $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 ; else $(ECHO) "  ... skipping $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 - file already exists" ; fi
+ 
+ uninstall_manpage :

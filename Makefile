@@ -4741,6 +4741,7 @@ SUBDIR+=	thrift
 SUBDIR+=	tig
 SUBDIR+=	tilda
 SUBDIR+=	timewarrior
+SUBDIR+=	tin
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta

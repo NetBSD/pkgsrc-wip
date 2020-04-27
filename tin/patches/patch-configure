@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.2 2019/01/15 15:48:17 wiz Exp $
+
+Skip missing include directories.
+
+--- configure.orig
++++ configure
+@@ -11429,6 +11429,9 @@ echo "$ac_t""$cf_cv_ncurses_h2" 1>&6
+ if test -n "$cf_1st_incdir" ; then
+   for cf_add_incdir in $cf_1st_incdir
+   do
++    if ! [ -d $cf_add_incdir ]; then
++      continue;
++    fi
+ 	while test $cf_add_incdir != /usr/include
+ 	do
+ 	  if test -d $cf_add_incdir
