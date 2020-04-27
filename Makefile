@@ -2082,6 +2082,7 @@ SUBDIR+=	lwc
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-build-tools
+SUBDIR+=	lxqt-themes
 SUBDIR+=	lzlib
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
