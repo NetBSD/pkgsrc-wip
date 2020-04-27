@@ -1931,6 +1931,7 @@ SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libpwquality
 SUBDIR+=	libquantum
+SUBDIR+=	libqtxdg
 SUBDIR+=	libquvi
 SUBDIR+=	libquvi-scripts
 SUBDIR+=	libraw1394
