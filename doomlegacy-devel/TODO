@@ -98,18 +98,25 @@ On some maps the rendering is broken (only in parts of the map).
 Part 5 finished.
 
 
-Part 6: Import final release
-============================
-
-[ ] Import version 1.48.1
-    Not released yet
-
-
 Part 7: Support for extended nodes
 ==================================
 [X] Add patch to support DeeP and ZDoom extended nodes
     This code is based on woof 1.2.0
 [X] Created upstream feature request #95
+
+
+Part 8: Fix output of ENDOOM lump to terminal
+=============================================
+[X] Add patch to fix endianess
+[X] Add patch to fix interpretation of blinking flag
+[X] Add patch to convert text from IBM437 codepage to Unicode
+
+
+Part 6: Import final release
+============================
+
+[ ] Import version 1.48.2
+    Not released yet
 
 
 EOF
