@@ -228,6 +228,7 @@ SUBDIR+=	baloo-widgets
 SUBDIR+=	bamf
 SUBDIR+=	bamtools
 SUBDIR+=	banshee
+SUBDIR+=	bashtop
 SUBDIR+=	bareos
 SUBDIR+=	bareos-clientonly
 SUBDIR+=	baresip

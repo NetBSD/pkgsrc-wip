@@ -1,0 +1,15 @@
+Resource monitor that shows usage and stats for processor, memory, disks,
+network and processes.
+
+## Features
+
+* Easy to use, with a game inspired menu system.
+* Fast and responsive UI with UP, DOWN keys process selection.
+* Function for showing detailed stats for selected process.
+* Ability to filter processes.
+* Easy switching between sorting options.
+* Send SIGTERM, SIGKILL, SIGINT to selected process.
+* UI menu for changing all config file options.
+* Auto scaling graph for network usage.
+* Shows message in menu if new version is available
+...
