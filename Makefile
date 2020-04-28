@@ -2083,6 +2083,7 @@ SUBDIR+=	lumina
 SUBDIR+=	luv
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
+SUBDIR+=	lximage-qt
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lxqt-themes
