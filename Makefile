@@ -1180,7 +1180,6 @@ SUBDIR+=	go-madon
 SUBDIR+=	go-notify
 SUBDIR+=	go-pass
 SUBDIR+=	go-paths-helper
-SUBDIR+=	go-pkgconfig
 SUBDIR+=	go-properties-map
 SUBDIR+=	go-pty
 SUBDIR+=	go-rateio
