@@ -2087,6 +2087,7 @@ SUBDIR+=	lximage-qt
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-build-tools
+SUBDIR+=	lxqt-policykit
 SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzlib
