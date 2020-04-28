@@ -3,4 +3,4 @@
 
 This package has known vulnerabilities, please investigate and fix if possible:
  http://secunia.com/advisories/43166/,
- CVE-2019-5624, CVE-2019-5642
+ CVE-2019-5624, CVE-2019-5642, CVE-2020-7350
