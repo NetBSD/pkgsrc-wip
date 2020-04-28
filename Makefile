@@ -1172,7 +1172,6 @@ SUBDIR+=	go-fsnotify
 SUBDIR+=	go-ghodss-yaml
 SUBDIR+=	go-gomail
 SUBDIR+=	go-gopacket
-SUBDIR+=	go-gospel
 SUBDIR+=	go-humanize
 SUBDIR+=	go-junit-report
 SUBDIR+=	go-kr-text
