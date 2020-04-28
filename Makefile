@@ -1846,6 +1846,7 @@ SUBDIR+=	libevdev
 SUBDIR+=	libevhtp
 SUBDIR+=	libexact
 SUBDIR+=	libfirm-git
+SUBDIR+=	libfm-qt
 SUBDIR+=	libfolks
 SUBDIR+=	libfplll
 SUBDIR+=	libftdi1
