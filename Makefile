@@ -2086,6 +2086,7 @@ SUBDIR+=	lxdm
 SUBDIR+=	lximage-qt
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-about
+SUBDIR+=	lxqt-admin
 SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lxqt-policykit
 SUBDIR+=	lxqt-qtplugin
