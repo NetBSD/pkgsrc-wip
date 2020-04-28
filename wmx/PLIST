@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/05 13:07:00 ishit Exp $
-bin/wmx
-share/doc/wmx/README
-share/doc/wmx/README.contrib
