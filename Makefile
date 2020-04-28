@@ -1895,6 +1895,7 @@ SUBDIR+=	libksysguard
 SUBDIR+=	liblas
 SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
+SUBDIR+=	liblxqt
 SUBDIR+=	libm4ri
 SUBDIR+=	libmesode
 SUBDIR+=	libmirisdr-git
