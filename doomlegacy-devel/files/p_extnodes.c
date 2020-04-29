@@ -98,7 +98,7 @@ typedef PACKED_STRUCT (
 
 typedef PACKED_STRUCT (
 {
-    unsigned int numsegs;
+    uint32_t numsegs;
 }) mapsubsector_zdbsp_t;
 
 // [FG] support maps with NODES in compressed or uncompressed ZDBSP format
