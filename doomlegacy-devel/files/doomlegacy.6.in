@@ -1,10 +1,10 @@
 .\"=============================================================================
 .\" Header
 .\"
-.\" Copyright (c) 2019 by Michael Baeuerle.
+.\" Copyright (c) 2019-2020 by Michael Baeuerle.
 .\" License: GNU Free Documentation License (GFDL)
 .\"
-.TH $NAME 6 2019-06-16 Unix "$NAME $VERSION manual"
+.TH $NAME 6 2020-04-29 Unix "$NAME $VERSION manual"
 .\"
 .\"
 .\"=============================================================================
@@ -81,6 +81,10 @@ network communication is faster, we have upped the maximum number of players to
 Set the configfile to use.
 .br
 Default: config.cfg
+.TP
+.BI -deh " file [file ...]
+Load one or more DEH (DeHackEd) files or BEX files, which can change monster
+abilities and game text.
 .TP
 .BI -file " file [file ...]
 Set PWAD (Patch WAD) files to use.
