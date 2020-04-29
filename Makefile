@@ -2087,6 +2087,7 @@ SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lxqt-globalkeys
 SUBDIR+=	lxqt-notificationd
 SUBDIR+=	lxqt-policykit
+SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzlib
