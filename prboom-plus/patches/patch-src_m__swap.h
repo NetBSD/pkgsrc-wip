@@ -2,6 +2,7 @@ $NetBSD$
 
 Use doom_wtohs() for LittleShort() because these macros are used for
 importing data from WAD files. Add comments for returned data types.
+Rejected by upstream.
 
 --- src/m_swap.h.orig	2014-05-20 04:47:44.000000000 +0000
 +++ src/m_swap.h

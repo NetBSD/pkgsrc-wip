@@ -5,7 +5,6 @@ This package fixes the following bug in prboom+ 2.5.1.4:
 Loading maps using extended nodes crashes on big endian machines
 (because 32-bit values are imported with wrong byte order).
 
-Bug was reported and is already fixed upstream for ZDoom extended nodes.
-Bug was reported for DeepBSP extended nodes (not fixed upstream yet).
+Bug was reported and is already fixed upstream
 
-This package will stay in wip until the next release of prboom+.
+This package will stay in wip until the next release of PrBoom+.
