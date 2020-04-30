@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/SSVJsonCpp/SSVJsonCpp.h
+include/SSVJsonCpp/json/json-forwards.h
+include/SSVJsonCpp/json/json.h
+lib/cmake/SSVJsonCpp/FindSSVJsonCpp.cmake
+lib/libSSVJsonCpp-s.a
