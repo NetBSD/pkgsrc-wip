@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.dillo.org/
 COMMENT=	Very small and fast graphical web-browser
 LICENSE=	gnu-gpl-v3
