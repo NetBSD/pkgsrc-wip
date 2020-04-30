@@ -510,6 +510,7 @@ SUBDIR+=	crabemu
 SUBDIR+=	creal
 SUBDIR+=	cream
 SUBDIR+=	creduce-git
+SUBDIR+=	crispy-doom
 SUBDIR+=	crm114
 SUBDIR+=	cronolog-devel
 SUBDIR+=	cross-binutils
