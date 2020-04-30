@@ -1,0 +1,70 @@
+# $NetBSD$
+
+VERSION=	0.15.0
+DISTNAME=	lxqt-panel-${VERSION}
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-panel/releases/download/${VERSION}/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/lxqt/lxqt-panel/
+COMMENT=	Desktop panel
+LICENSE=	gnu-lgpl-v2.1
+
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+CMAKE_ARGS+=	-DCPULOAD_PLUGIN=No
+CMAKE_ARGS+=	-DKBINDICATOR_PLUGIN=No
+CMAKE_ARGS+=	-DMOUNT_PLUGIN=No
+CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
+CMAKE_ARGS+=	-DNETWORKMONITOR_PLUGIN=No
+CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
+CMAKE_ARGS+=	-DVOLUME_USE_ALSA=No
+.endif
+
+MENU_CONF=		share/examples/lxqt/xdg/menus
+AUTOSTART_CONF=		share/examples/lxqt/xdg/autostart
+PKG_SYSCONFSUBDIR=	xdg
+MAKE_DIRS=		${PKG_SYSCONFDIR}/menus
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing paths.
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	plugin-directorymenu/directorymenuconfiguration.cpp
+SUBST_FILES.prefix+=	plugin-mainmenu/lxqtmainmenuconfiguration.cpp
+SUBST_FILES.prefix+=	plugin-kbindicator/src/x11/kbdlayout.cpp
+SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
+SUBST_SED.prefix+=	-e 's,/usr/bin,${PREFIX}/bin,g'
+SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
+
+CONF_FILES=	${MENU_CONF}/lxqt-applications.menu \
+		${PKG_SYSCONFDIR}/menus/lxqt-applications.menu
+CONF_FILES+=	${AUTOSTART_CONF}/lxqt-panel.desktop \
+		${PKG_SYSCONFDIR}/autostart/lxqt-panel.desktop
+
+pre-configure:
+	${MKDIR} -p ${WRKSRC}/build
+
+TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../wip/lxqt-build-tools
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
+
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../devel/libdbusmenu-qt5/buildlink3.mk"
+.include "../../wip/lxqt-globalkeys/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../sysutils/solid/buildlink3.mk"
+.include "../../x11/kwindowsystem/buildlink3.mk"
+.include "../../x11/kguiaddons/buildlink3.mk"
+.include "../../sysutils/menu-cache/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
