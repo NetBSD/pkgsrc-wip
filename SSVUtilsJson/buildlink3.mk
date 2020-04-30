@@ -1,0 +1,17 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	SSVUtilsJson
+
+.if !defined(SSVUTILSJSON_BUILDLINK3_MK)
+SSVUTILSJSON_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.SSVUtilsJson+=	SSVUtilsJson>=20130714
+BUILDLINK_PKGSRCDIR.SSVUtilsJson?=	../../wip/SSVUtilsJson
+
+SSVUTILSJSON_MODULE=	${PREFIX}/lib/cmake/SSVUtilsJson
+
+.include "../../wip/SSVJsonCpp/buildlink3.mk"
+
+.endif	# SSVUTILSJSON_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-SSVUtilsJson
