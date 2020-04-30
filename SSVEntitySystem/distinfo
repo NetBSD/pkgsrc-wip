@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (SSVEntitySystem-8123beabe3bc8ffe91cb94e6ba061254f3bba18b.tar.gz) = e950b4d6dc4e9304baaefff7080203480304cf4a
+RMD160 (SSVEntitySystem-8123beabe3bc8ffe91cb94e6ba061254f3bba18b.tar.gz) = 9c149e64d7e44c552afd24ee2766c70d5460e7d9
+SHA512 (SSVEntitySystem-8123beabe3bc8ffe91cb94e6ba061254f3bba18b.tar.gz) = e1baa7cb26bc2215baf569b1aa1a4240b17310b2e1717a23f9e9978cf8bc4f72df64573aa474b17bbfe6896793c48a9facd0ed80e4d0f792631297dd548aaf81
+Size (SSVEntitySystem-8123beabe3bc8ffe91cb94e6ba061254f3bba18b.tar.gz) = 8727 bytes
+SHA1 (patch-CMakeLists.txt) = d4659ae4005801a1caebd1ff3651f41d9974f056
