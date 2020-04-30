@@ -30,7 +30,7 @@ SUBST_SED.waddir=	-e 's,PKGSRC_PREFIX,"${PREFIX}",'
 SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
 
 pre-configure:
-		cd ${WRKSRC}; mkdir build
+	cd ${WRKSRC}; mkdir build
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
