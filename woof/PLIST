@@ -2,6 +2,7 @@
 bin/woof
 share/applications/woof.desktop
 share/doc/woof/COPYING
+share/doc/woof/INSTALL.pkgsrc
 share/doc/woof/README.md
 share/doc/woof/boom.txt
 share/doc/woof/boomdeh.txt

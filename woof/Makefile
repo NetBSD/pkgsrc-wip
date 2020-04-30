@@ -31,6 +31,11 @@ SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
 
 pre-configure:
 	cd ${WRKSRC}; mkdir build
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
+		${DESTDIR}${PREFIX}/share/doc/woof/INSTALL.pkgsrc
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
