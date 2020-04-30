@@ -105,6 +105,7 @@ SUBDIR+=	ags
 SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
+SUBDIR+=	ajbsp
 SUBDIR+=	akonadi
 SUBDIR+=	akonadi-calendar
 SUBDIR+=	akonadi-contacts
