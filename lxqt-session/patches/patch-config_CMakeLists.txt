@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install fallback .conf files to a consistent location.
+
+--- config/CMakeLists.txt.orig	2020-04-23 18:28:17.000000000 +0000
++++ config/CMakeLists.txt
+@@ -3,7 +3,7 @@ install(FILES
+     lxqt.conf
+     session.conf
+     windowmanagers.conf
+-    DESTINATION "${CMAKE_INSTALL_DATADIR}/lxqt"
++    DESTINATION "${LXQT_ETC_XDG_DIR}/lxqt"
+     COMPONENT Runtime
+ )
+ install(DIRECTORY openbox
