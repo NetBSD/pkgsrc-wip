@@ -1,0 +1,3 @@
+C++14 lambda-based library for quick creation of menus. Supports
+multiple nested menus (categories). Supports Single/Toggle/Slider
+menu item types. Useful in game development or console applications
