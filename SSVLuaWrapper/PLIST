@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/SSVLuaWrapper/LuaContext/LuaContext.h
+include/SSVLuaWrapper/SSVLuaWrapper.h
+lib/cmake/SSVLuaWrapper/FindSSVLuaWrapper.cmake
+lib/libSSVLuaWrapper-s.a
