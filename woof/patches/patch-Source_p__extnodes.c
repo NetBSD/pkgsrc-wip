@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix endianess for import of extended nodes.
+https://github.com/fabiangreffrath/woof/commit/e5f7ae07c6cf6f8ab0dcd223b1dae2a133907333
 
 --- Source/p_extnodes.c.orig	2020-04-14 06:39:44.000000000 +0000
 +++ Source/p_extnodes.c

@@ -1,5 +1,4 @@
 [X] Add ${PREFIX}/share/doom directory to search list
-[ ] QUERZ keyboard layout does not work
 [X] Fix crashes on big endian machines
 
 $ uname
@@ -24,3 +23,6 @@ S_Init: Setting up sound.
 HU_Init: Setting up heads up display.
 ST_Init: Init status bar.
 Segmentation fault
+
+[X] QUERZ keyboard layout does not work
+    According to upstream this is intended behaviour (as with original MBF)
