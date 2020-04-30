@@ -4,6 +4,7 @@ Set automap "zoom in" key to '+'.
 
 This patch was rejected upstream, because it works for my german keyboard
 but not for any other layout (patch is as broken as the original code).
+https://sourceforge.net/p/doomlegacy/feature-requests/90/
 
 --- src/am_map.c.orig	2018-07-16 09:17:06.000000000 +0000
 +++ src/am_map.c

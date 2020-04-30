@@ -2,6 +2,9 @@ $NetBSD$
 
 Refer to segments and subsectors with 32-Bit values.
 
+Created upstream feature request:
+https://sourceforge.net/p/doomlegacy/feature-requests/95/
+
 --- src/r_defs.h.orig	2020-04-20 10:32:32.000000000 +0000
 +++ src/r_defs.h
 @@ -130,8 +130,7 @@

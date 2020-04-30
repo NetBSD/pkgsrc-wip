@@ -4,6 +4,9 @@ Fix printing of exit text from ENDOOM lump.
 This works only if the terminal uses an Unicode locale and can handle
 ANSI control sequences.
 
+Upstream bug report:
+https://sourceforge.net/p/doomlegacy/bugs/659/
+
 --- src/sdl/endtxt.c.orig	2020-04-29 12:06:57.000000000 +0000
 +++ src/sdl/endtxt.c
 @@ -28,13 +28,35 @@

@@ -2,6 +2,9 @@ $NetBSD$
 
 Refer to subsectors with 32-Bit values (required for extended nodes).
 
+Created upstream feature request:
+https://sourceforge.net/p/doomlegacy/feature-requests/95/
+
 --- src/doomdata.h.orig	2020-04-20 10:32:30.000000000 +0000
 +++ src/doomdata.h
 @@ -203,7 +203,8 @@ typedef struct

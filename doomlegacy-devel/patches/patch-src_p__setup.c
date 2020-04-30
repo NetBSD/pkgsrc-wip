@@ -2,6 +2,9 @@ $NetBSD$
 
 Add support for DeeP and ZDoom extended nodes.
 
+Created upstream feature request:
+https://sourceforge.net/p/doomlegacy/feature-requests/95/
+
 --- src/p_setup.c.orig	2020-04-20 10:32:30.000000000 +0000
 +++ src/p_setup.c
 @@ -150,6 +150,7 @@
