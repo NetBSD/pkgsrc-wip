@@ -5156,6 +5156,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zbackup
+SUBDIR+=	zdbsp
 SUBDIR+=	zenity
 SUBDIR+=	zero-epwing-git
 SUBDIR+=	zetacoin
