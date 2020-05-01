@@ -4,4 +4,4 @@ include/SSVUtilsJson/SSVUtilsJson.h
 include/SSVUtilsJson/Utils/Internal/Helper.h
 include/SSVUtilsJson/Utils/Internal/Typedefs.h
 include/SSVUtilsJson/Utils/UtilsJson.h
-lib/cmake/SSVUtilsJson/FindSSVUtilsJson.cmake
+lib/cmake/FindSSVUtilsJson.cmake

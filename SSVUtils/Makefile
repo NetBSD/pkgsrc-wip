@@ -19,10 +19,10 @@ USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIB:BOOL=OFF
 
-INSTALLATION_DIRS+=	include/${PKGBASE} lib/cmake/${PKGBASE}
+INSTALLATION_DIRS+=	include/${PKGBASE} lib/cmake
 
 post-install:
-	${INSTALL_LIB} ${WRKSRC}/cmake/modules/Find${PKGBASE}.cmake \
-		${DESTDIR}${PREFIX}/lib/cmake/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/cmake/modules/Find${PKGBASE}.cmake \
+		${DESTDIR}${PREFIX}/lib/cmake/
 
 .include "../../mk/bsd.pkg.mk"

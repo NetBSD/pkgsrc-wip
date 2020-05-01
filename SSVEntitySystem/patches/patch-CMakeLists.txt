@@ -10,7 +10,7 @@ allow pkgsrc to point to dependencies
  set(CMAKE_CXX_FLAGS_DEBUG "-fno-omit-frame-pointer -g3 -gdwarf-2 -O0" CACHE STRING "" FORCE)
 -set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${CMAKE_MODULE_PATH}")
 -set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/extlibs/SSVUtils/cmake/modules/;${CMAKE_MODULE_PATH}")
-+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${MODULES}")
++set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${MODULE_PATH}")
  
  set(BUILD_SHARED_LIB TRUE CACHE BOOL "Build shared libraries.")
  if(BUILD_SHARED_LIB)

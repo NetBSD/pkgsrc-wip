@@ -30,5 +30,5 @@ include/SSVUtils/Utils/Utils.h
 include/SSVUtils/Utils/UtilsContainers.h
 include/SSVUtils/Utils/UtilsMakeUnique.h
 include/SSVUtils/Utils/UtilsMath.h
-lib/cmake/SSVUtils/FindSSVUtils.cmake
+lib/cmake/FindSSVUtils.cmake
 lib/libSSVUtils-s.a

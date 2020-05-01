@@ -7,5 +7,5 @@ include/SSVMenuSystem/Menu/Category.h
 include/SSVMenuSystem/Menu/ItemBase.h
 include/SSVMenuSystem/Menu/Menu.h
 include/SSVMenuSystem/SSVMenuSystem.h
-lib/cmake/SSVMenuSystem/FindSSVMenuSystem.cmake
+lib/cmake/FindSSVMenuSystem.cmake
 lib/libSSVMenuSystem-s.a

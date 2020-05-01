@@ -27,5 +27,5 @@ include/SSVStart/Tileset/Tileset.h
 include/SSVStart/Utils/ThreadWrapper.h
 include/SSVStart/Utils/Utils.h
 include/SSVStart/Utils/UtilsInput.h
-lib/cmake/SSVStart/FindSSVStart.cmake
+lib/cmake/FindSSVStart.cmake
 lib/libSSVStart-s.a

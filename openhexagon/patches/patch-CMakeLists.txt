@@ -16,7 +16,7 @@ find dependencies and install in relation to pkgsrc
 -set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_SOURCE_DIR}/extlibs/SSVLuaWrapper/cmake/modules/")
 -set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_SOURCE_DIR}/extlibs/SSVEntitySystem/cmake/modules/")
 -set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_SOURCE_DIR}/extlibs/SSVStart/cmake/modules/")
-+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/;${MODULES}")
++set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/;${MODULE_PATH}")
  
  set(SFML_STATIC_LIBRARIES FALSE CACHE BOOL "Look for static SFML libraries.")
  find_package(SFML 2 COMPONENTS audio graphics window system network)

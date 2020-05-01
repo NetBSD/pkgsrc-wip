@@ -4,4 +4,4 @@ SHA1 (openhexagon-2.0.tar.gz) = 6bb86de3a194e816957d8cdd55fc423259c2c000
 RMD160 (openhexagon-2.0.tar.gz) = 7feefde13a795d687dbe09b96062e149851f5d5c
 SHA512 (openhexagon-2.0.tar.gz) = 0836b6b477227ee768ce43f411b065b1b25fff6ba16401d5ebde1443cde3f03e36d9bb1d11043e958a3f4a38e9af2f0b801aecd39b4edb31007c45c9ce074fdb
 Size (openhexagon-2.0.tar.gz) = 317548 bytes
-SHA1 (patch-CMakeLists.txt) = 07a5cf6436652fd023741f655c4a7c11fe4c6eb0
+SHA1 (patch-CMakeLists.txt) = be352f48dd9285853e2cacf89e81df9baed6fca9

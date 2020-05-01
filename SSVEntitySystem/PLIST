@@ -4,5 +4,5 @@ include/SSVEntitySystem/Core/Entity.h
 include/SSVEntitySystem/Core/Manager.h
 include/SSVEntitySystem/Global/Typedefs.h
 include/SSVEntitySystem/SSVEntitySystem.h
-lib/cmake/SSVEntitySystem/FindSSVEntitySystem.cmake
+lib/cmake/FindSSVEntitySystem.cmake
 lib/libSSVEntitySystem-s.a

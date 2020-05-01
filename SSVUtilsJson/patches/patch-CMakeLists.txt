@@ -11,7 +11,7 @@ allow pkgsrc to point to dependencies
 -set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${CMAKE_MODULE_PATH}")
 -set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/extlibs/SSVJsonCpp/cmake/modules/;${CMAKE_MODULE_PATH}")
 -set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/extlibs/SSVUtils/cmake/modules/;${CMAKE_MODULE_PATH}")
-+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${MODULES}")
++set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${MODULE_PATH}")
  
  find_package(SSVJsonCpp REQUIRED)
  find_package(SSVUtils REQUIRED)

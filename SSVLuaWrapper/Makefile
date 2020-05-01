@@ -29,11 +29,11 @@ SUBST_MESSAGE.include=	Fixing hardcoded path
 SUBST_FILES.include=	include/SSVLuaWrapper/LuaContext/LuaContext.h
 SUBST_SED.include=	-e 's,lua5.1,lua-${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR},'
 
-INSTALLATION_DIRS+=	include/${PKGBASE} lib/cmake/${PKGBASE}
+INSTALLATION_DIRS+=	include/${PKGBASE} lib/cmake
 
 post-install:
-	${INSTALL_LIB} ${WRKSRC}/cmake/modules/Find${PKGBASE}.cmake \
-		${DESTDIR}${PREFIX}/lib/cmake/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/cmake/modules/Find${PKGBASE}.cmake \
+		${DESTDIR}${PREFIX}/lib/cmake
 
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

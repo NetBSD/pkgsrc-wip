@@ -17,16 +17,14 @@ LICENSE=	afl-3.0
 USE_LANGUAGES=	c c++14
 USE_CMAKE=	yes
 
-MODULES=	${SSVJSONCPP_MODULE} ${SSVUTILS_MODULE} ${SSVUTILSJSON_MODULE}
-
 CMAKE_ARGS+=	-DBUILD_SHARED_LIB:BOOL=OFF
-CMAKE_ARGS+=	-DMODULES=${MODULES:ts;:Q}
+CMAKE_ARGS+=	-DMODULE_PATH=${PREFIX}/lib/cmake
 
-INSTALLATION_DIRS+=	include/${PKGBASE} lib/cmake/${PKGBASE}
+INSTALLATION_DIRS+=	include/${PKGBASE} lib/cmake
 
 post-install:
-	${INSTALL_LIB} ${WRKSRC}/cmake/modules/Find${PKGBASE}.cmake \
-		${DESTDIR}${PREFIX}/lib/cmake/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/cmake/modules/Find${PKGBASE}.cmake \
+		${DESTDIR}${PREFIX}/lib/cmake/
 
 .include "../../wip/sfml+/buildlink3.mk"
 .include "../../wip/SSVJsonCpp/buildlink3.mk"
