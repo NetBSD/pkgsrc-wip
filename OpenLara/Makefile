@@ -28,7 +28,7 @@ do-build:
 		`sdl2-config --cflags` \
 		${PTHREAD_CPPFLAGS} ${PTHREAD_CFLAGS} \
 		-fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wl,--gc-sections \
-		-DNDEBUG -D__SDL2__ -DGL_GLEXT_PROTOTYPES \
+		-DNDEBUG -D__SDL2__ -D_SDL2_OPENGL \
 		main.cpp \
 		../../libs/stb_vorbis/stb_vorbis.c \
 		../../libs/minimp3/minimp3.cpp \
