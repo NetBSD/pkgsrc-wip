@@ -5,7 +5,7 @@ CATEGORIES=	devel
 
 COMMENT=	Portable, lightweight framework for the Objective-C language
 LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
-HOMEPAGE=	https://heap.zone/objfw/
+HOMEPAGE=	https://objfw.nil.im/
 MAINTAINER=	js@pkgsrc.org
 
 GIT_REPOSITORIES=	objfw
@@ -24,6 +24,9 @@ PLIST_VARS+=	runtime bridge
 
 .if ${OPSYS} != "Darwin"
 PLIST.runtime=	yes
+.endif
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+PLIST.ipx=	yes
 .endif
 
 pre-configure:

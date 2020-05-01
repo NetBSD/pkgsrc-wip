@@ -51,6 +51,7 @@ include/ObjFW/OFData+ASN1DERValue.h
 include/ObjFW/OFData+CryptoHashing.h
 include/ObjFW/OFData+MessagePackValue.h
 include/ObjFW/OFData.h
+include/ObjFW/OFDatagramSocket.h
 include/ObjFW/OFDate.h
 include/ObjFW/OFDictionary.h
 include/ObjFW/OFEnumerationMutationException.h
@@ -148,6 +149,7 @@ include/ObjFW/OFSandboxActivationFailedException.h
 include/ObjFW/OFSecureData.h
 include/ObjFW/OFSeekFailedException.h
 include/ObjFW/OFSeekableStream.h
+include/ObjFW/OFSequencedPacketSocket.h
 include/ObjFW/OFSerialization.h
 include/ObjFW/OFSet.h
 include/ObjFW/OFSetItemAttributesFailedException.h

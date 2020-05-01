@@ -44,6 +44,7 @@ Library/Frameworks/ObjFW.framework/Headers/OFData+ASN1DERValue.h
 Library/Frameworks/ObjFW.framework/Headers/OFData+CryptoHashing.h
 Library/Frameworks/ObjFW.framework/Headers/OFData+MessagePackValue.h
 Library/Frameworks/ObjFW.framework/Headers/OFData.h
+Library/Frameworks/ObjFW.framework/Headers/OFDatagramSocket.h
 Library/Frameworks/ObjFW.framework/Headers/OFDate.h
 Library/Frameworks/ObjFW.framework/Headers/OFDictionary.h
 Library/Frameworks/ObjFW.framework/Headers/OFEnumerationMutationException.h
@@ -141,6 +142,7 @@ Library/Frameworks/ObjFW.framework/Headers/OFSandboxActivationFailedException.h
 Library/Frameworks/ObjFW.framework/Headers/OFSecureData.h
 Library/Frameworks/ObjFW.framework/Headers/OFSeekFailedException.h
 Library/Frameworks/ObjFW.framework/Headers/OFSeekableStream.h
+Library/Frameworks/ObjFW.framework/Headers/OFSequencedPacketSocket.h
 Library/Frameworks/ObjFW.framework/Headers/OFSerialization.h
 Library/Frameworks/ObjFW.framework/Headers/OFSet.h
 Library/Frameworks/ObjFW.framework/Headers/OFSetItemAttributesFailedException.h
