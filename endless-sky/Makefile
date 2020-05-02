@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	endless-sky
-PKGNAME=	${GITHUB_PROJECT}-0.9.10
+PKGNAME=	${GITHUB_PROJECT}-0.9.12
 DISTNAME=	${GITHUB_TAG}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=endless-sky/}
@@ -14,7 +14,7 @@ COMMENT=	Space exploration and combat game similar to Escape Velocity
 LICENSE=	gnu-gpl-v3 AND cc-by-sa-v4.0 AND cc-by-sa-v3.0 AND public-domain
 
 WRKSRC=		${WRKDIR}/endless-sky-${PKGVERSION_NOREV}
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-scons-[0-9]*:../../devel/scons
 SCONS=			${PREFIX}/bin/scons
