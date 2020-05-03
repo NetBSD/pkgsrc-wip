@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/dir2point
+bin/md2point
+bin/point2pdf
+man/man1/md2point.1

@@ -3011,6 +3011,7 @@ SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
 SUBDIR+=	pointfree
 SUBDIR+=	pointless
+SUBDIR+=	pointtools-git
 SUBDIR+=	pokerth
 SUBDIR+=	polarssl11
 SUBDIR+=	polipo
