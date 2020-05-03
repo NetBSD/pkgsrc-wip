@@ -2,7 +2,7 @@
 
 # Do not merge to pkgsrc without gdt approval; I have not yet
 # evaluated how much this will break.
-VERSION_BASE=	7.0.0
+VERSION_BASE=	7.0.1
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0

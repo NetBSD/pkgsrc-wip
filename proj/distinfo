@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.13 2019/02/21 00:55:04 gdt Exp $
 
-SHA1 (proj-7.0.0.tar.gz) = f6bf56a1d9b92de1d20cf0c88d66665b0b324708
-RMD160 (proj-7.0.0.tar.gz) = e6c894b27e8185451131da35fe05c321fd567b39
-SHA512 (proj-7.0.0.tar.gz) = fd92937656c85c7f6969947323fa2752df0c931dd9c942b11c67dcae132f61f404c8da57ed7e7177aaa82f579e42b1c3611e6c2cc34d70454e548ad8afece243
-Size (proj-7.0.0.tar.gz) = 2893700 bytes
-SHA1 (patch-data_Makefile.in) = 41d5e2a9abbe1fef5036a427c45c4b838c4c373a
+SHA1 (proj-7.0.1.tar.gz) = e7e8b166a8788414ed039e8d645362d5bf882114
+RMD160 (proj-7.0.1.tar.gz) = 7b947434b0b08c7cce227880b2ccb3dfbef9be78
+SHA512 (proj-7.0.1.tar.gz) = 034d1b916980c80fe9f8e67d2897814e611920af3e852f152fcd9e3fc4ec8cbc39bbd8f8296949a3c3f5e6708bb9d84e61c4cba9c01476a3888448135e97dc33
+Size (proj-7.0.1.tar.gz) = 5312488 bytes
