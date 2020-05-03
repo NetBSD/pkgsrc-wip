@@ -1,12 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	screengrab-1.101
+VERSION=	2.0.1
+DISTNAME=	screengrab-${VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	https://downloads.lxqt.org/downloads/screengrab/1.101/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/screengrab/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lxqt.org/
+HOMEPAGE=	https://github.com/lxqt/screengrab/
 COMMENT=	Crossplatform tool for grabbing screenshots of your desktop
 LICENSE=	gnu-gpl-v2
 
@@ -17,13 +18,18 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_ARGS+=	-DSG_EXT_UPLOADS=OFF
+
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libqtxdg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

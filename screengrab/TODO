@@ -1,0 +1,2 @@
+Fix installation error
+ERROR: bin/screengrab: missing library: libextedit.so.1.0.0
