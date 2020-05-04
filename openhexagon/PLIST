@@ -1,5 +1,5 @@
 @comment $NetBSD$
-games/openhexagon
+bin/openhexagon
 lib/openhexagon/Assets/assets.json
 lib/openhexagon/Assets/beep.ogg
 lib/openhexagon/Assets/bottomBar.png

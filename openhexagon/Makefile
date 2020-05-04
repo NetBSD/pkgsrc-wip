@@ -41,7 +41,7 @@ CMAKE_ARGS+=	-DPKGBASE=${PKGBASE}
 
 WRKSRC=	${WRKDIR}/${MODULES:MSSVOpenHexagon-*}
 
-INSTALLATION_DIRS+=	games lib/${PKGBASE}
+INSTALLATION_DIRS+=	bin lib/${PKGBASE}
 
 post-extract:
 	${CP} ${FILESDIR}/${PKGBASE}.sh ${WRKSRC}/${PKGBASE}
@@ -52,7 +52,7 @@ post-build:
 	done
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/games
+	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin
 	cd ${WRKDIR}/${MODULES:MSSVOpenHexagonAssets-*}/_RELEASE && \
 	    ${PAX} -rwpm Assets Packs ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 
