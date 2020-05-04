@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2018/09/08 14:10:52 leot Exp $
 
-DISTNAME=	tscrape-0.4
+DISTNAME=	tscrape-0.5
 CATEGORIES=	news
 MASTER_SITES=	http://codemadness.org/releases/tscrape/
 
