@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.99 2020/04/14 10:35:17 wiz Exp $
+
+SHA1 (gnucash-3.902.tar.bz2) = 8a38b27c89cb60aeedbdaf64b4b32178e594e979
+RMD160 (gnucash-3.902.tar.bz2) = 97d28b449986752bbacf98b280f54ccdd0ab86a1
+SHA512 (gnucash-3.902.tar.bz2) = fac5f3bf5a2876e174b89782870bcf6acb72e3bc48360595606c921f814bc3780e1aee5f351670988c7b0f2f0c150762feb9f7ea9daf35ff054fdd854be6a30a
+Size (gnucash-3.902.tar.bz2) = 13816713 bytes
