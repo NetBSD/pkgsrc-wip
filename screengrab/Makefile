@@ -19,7 +19,9 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
-CMAKE_ARGS+=	-DSG_EXT_UPLOADS=OFF
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/screengrab \
+		-L${PREFIX}/lib/screengrab/
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
