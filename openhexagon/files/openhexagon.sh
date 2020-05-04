@@ -31,4 +31,4 @@ do
 	fi
 done
 
-exec @PREFIX@/lib/@PKGBASE@/@GITHUB_PROJECT@
+exec @PREFIX@/lib/@PKGBASE@/SSVOpenHexagon

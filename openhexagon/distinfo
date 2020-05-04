@@ -1,7 +1,11 @@
 $NetBSD$
 
-SHA1 (openhexagon-2.0.tar.gz) = 6bb86de3a194e816957d8cdd55fc423259c2c000
-RMD160 (openhexagon-2.0.tar.gz) = 7feefde13a795d687dbe09b96062e149851f5d5c
-SHA512 (openhexagon-2.0.tar.gz) = 0836b6b477227ee768ce43f411b065b1b25fff6ba16401d5ebde1443cde3f03e36d9bb1d11043e958a3f4a38e9af2f0b801aecd39b4edb31007c45c9ce074fdb
-Size (openhexagon-2.0.tar.gz) = 317548 bytes
+SHA1 (SSVOpenHexagon-2.0-preview.tar.gz) = 6bb86de3a194e816957d8cdd55fc423259c2c000
+RMD160 (SSVOpenHexagon-2.0-preview.tar.gz) = 7feefde13a795d687dbe09b96062e149851f5d5c
+SHA512 (SSVOpenHexagon-2.0-preview.tar.gz) = 0836b6b477227ee768ce43f411b065b1b25fff6ba16401d5ebde1443cde3f03e36d9bb1d11043e958a3f4a38e9af2f0b801aecd39b4edb31007c45c9ce074fdb
+Size (SSVOpenHexagon-2.0-preview.tar.gz) = 317548 bytes
+SHA1 (SSVOpenHexagonAssets-1d125de695be2e74c9f2ad3198e8b5b29911d010.tar.gz) = 10e28692d4c97218587b9c381fb811128964d6ae
+RMD160 (SSVOpenHexagonAssets-1d125de695be2e74c9f2ad3198e8b5b29911d010.tar.gz) = c4d0a272df325b2475a59fa12eeb3d1ab0828fd9
+SHA512 (SSVOpenHexagonAssets-1d125de695be2e74c9f2ad3198e8b5b29911d010.tar.gz) = 616491b2378031f0b1ca124ecfb54448ad19a13979927ac58a588b6aa7af1ac4059194cfc2ee78739352938b843f09df8564e6dcd82201e8ccadae3cd7523d2e
+Size (SSVOpenHexagonAssets-1d125de695be2e74c9f2ad3198e8b5b29911d010.tar.gz) = 43488512 bytes
 SHA1 (patch-CMakeLists.txt) = be352f48dd9285853e2cacf89e81df9baed6fca9
