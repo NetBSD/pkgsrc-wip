@@ -2091,6 +2091,7 @@ SUBDIR+=	lwc
 SUBDIR+=	lxdm
 SUBDIR+=	lximage-qt
 SUBDIR+=	lxmusic
+SUBDIR+=	lxqt
 SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-admin
 SUBDIR+=	lxqt-archiver
