@@ -5,4 +5,5 @@ RMD160 (llvm-3.8.1.src.tar.xz) = 5e4d2193e7d58abaa70ab53e67b6fe058b781e6a
 SHA512 (llvm-3.8.1.src.tar.xz) = 99bbb2cc5f337fd5edf1621f8028c8cb74011aa4af2531018dc05409b27f7b8d0c2f76a00115f677f7c013029d5d9f55d085a5b40433409aac4e9161d53bd366
 Size (llvm-3.8.1.src.tar.xz) = 16551472 bytes
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = ec89e9469115b22feeb106e1c36b36af1f079576
+SHA1 (patch-include_llvm_IR_ValueMap.h) = 8d8fdde528099d0860e810a25c001727cbee6906
 SHA1 (patch-include_llvm_Support_Host.h) = 55a9fab6ee49ec09a2fd644747a6dddd6b39f942
