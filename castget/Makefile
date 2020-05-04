@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.15 2012/09/24 18:26:52 asau Exp $
 
-DISTNAME=	castget-1.2.4
+DISTNAME=	castget-2.0.1
 CATEGORIES=	audio www
 MASTER_SITES=	http://download.savannah.gnu.org/releases/castget/
 EXTRACT_SUFX=	.tar.bz2

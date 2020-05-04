@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2010/04/27 05:22:20 guigui2 Exp $
 
-SHA1 (castget-1.2.4.tar.bz2) = 852f5821bef8eb351e6dc934ebc6dd8c9fde45d5
-RMD160 (castget-1.2.4.tar.bz2) = d2d2605a00bd5fb36395dd55711f607d76ce665d
-SHA512 (castget-1.2.4.tar.bz2) = 568b8a0eb8ced082b8004c0d724098c9ea165b9e276d74aafabcbcba6022be036892ca14fd51cc4718da9dcac959bc93ee64d311e3af544a09a7d790dd21669f
-Size (castget-1.2.4.tar.bz2) = 302845 bytes
+SHA1 (castget-2.0.1.tar.bz2) = 1fa83cdcd3337c3827e1e45f5f6f43f2fe94b5fe
+RMD160 (castget-2.0.1.tar.bz2) = 4a833a80d4fbc6779fb8236b5595124c5de3c6ef
+SHA512 (castget-2.0.1.tar.bz2) = c4559538fbd4805e6f68c986e7175ecebc2ebcc07f0292f5ae228f6629fdc202408815b0c27f507e89828cad417cbd4a428bc0a9a24df3b580e189f447c51df5
+Size (castget-2.0.1.tar.bz2) = 320226 bytes
