@@ -4,3 +4,5 @@ SHA1 (zdbsp-1.19.tar.gz) = 96ad52ab3364c58f80024b285e328b1f88487d1f
 RMD160 (zdbsp-1.19.tar.gz) = a0d2e3559ed7ef7000a667af55e77143f9367897
 SHA512 (zdbsp-1.19.tar.gz) = bfd13e38ed5c8596f10c6ff79e2fb70a0a20921d98c2a49560ed20787fb52279a5f6e7c10b57f30a5afdde8ba37635871a27f13bbff071d3cf6bec775657ad93
 Size (zdbsp-1.19.tar.gz) = 208407 bytes
+SHA1 (patch-processor.cpp) = 79333e70b6fd7183037b5cb08cf36760d9840cd2
+SHA1 (patch-wad.cpp) = 28b17377fdacc4d135a9e52a0f9ec7c9fbd2508c
