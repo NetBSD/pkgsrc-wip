@@ -1,6 +1,8 @@
 $NetBSD$
 
 Fix endianess for import of extended nodes.
+Merged in git commit 565f85dd0f224a6de805ec83d12665fdc96534bc.
+https://github.com/fabiangreffrath/crispy-doom/commit/565f85dd0f224a6de805ec83d12665fdc96534bc
 
 --- src/doom/p_extnodes.c.orig	2020-04-16 07:24:32.000000000 +0000
 +++ src/doom/p_extnodes.c

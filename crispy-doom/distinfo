@@ -5,4 +5,4 @@ RMD160 (crispy-doom-5.8.0.tar.gz) = 4f4dc7d28d67279dfe501125bdb2fc1eccbb24ae
 SHA512 (crispy-doom-5.8.0.tar.gz) = c6a4833c27b81e9808565b352214001a0d621f8bf6dbb7f4235d2bedaa35db68a1cf2567f77e7139da29df1d56a1097419e16791d1b49e5882674e33ce8c4649
 Size (crispy-doom-5.8.0.tar.gz) = 2627570 bytes
 SHA1 (patch-Source_d__iwad.c) = 96a2ea9bba5a62431f99e3b35b7bd8bba36b34ff
-SHA1 (patch-src_doom_p__extnodes.c) = 59be17f740c90749ed6fdce750e87ca3fc5e44ab
+SHA1 (patch-src_doom_p__extnodes.c) = d749ae8f9ca21898171e72b95df127c6a51e1dc7
