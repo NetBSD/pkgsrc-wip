@@ -4,7 +4,7 @@
 .\" Copyright (c) 2019-2020 by Michael Baeuerle.
 .\" License: GNU Free Documentation License (GFDL)
 .\"
-.TH $NAME 6 2020-04-29 Unix "$NAME $VERSION manual"
+.TH $NAME 6 2020-05-05 Unix "$NAME $VERSION manual"
 .\"
 .\"
 .\"=============================================================================
@@ -109,7 +109,12 @@ This also determines the game mode when -game is not used.
 .BI -noendtext
 Suppress the game EndText screen, which could disrupt some terminal emulations
 because of the special character attributes used.
-.TP
+.PP
+.RS 25
+For encoding of EndText data see config.cfg file entry textout.
+Supported values: Off, Vanilla, UTF8.
+.RE
+.TP 25
 .BI -opengl
 Hardware accelerated rendering using the OpenGL library.
 Will use hardware acceleration for OpenGL if available.

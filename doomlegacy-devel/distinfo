@@ -9,4 +9,3 @@ SHA1 (patch-src_am__map.c) = 14b3c8b70c63778ad043827ab2f0b6f4fe07bcde
 SHA1 (patch-src_doomdata.h) = 8c3186dafbf11a8a75262a06755dd9807cb58612
 SHA1 (patch-src_p__setup.c) = 526a5dcf97d4b2db3d05a8c655126fcd70deac21
 SHA1 (patch-src_r__defs.h) = 91e6543674e3474c9afdb0ba19d6869b658d0543
-SHA1 (patch-src_sdl_endtxt.c) = 4a9fe6a2eb271b04a499d83e51f288527c93e2ff

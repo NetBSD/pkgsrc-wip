@@ -98,25 +98,47 @@ On some maps the rendering is broken (only in parts of the map).
 Part 5 finished.
 
 
-Part 6: Import final release
-============================
-
-[ ] Import version 1.48.2
-    Not released yet
-
-
-Part 7: Support for extended nodes
-==================================
-[X] Add patch to support DeeP and ZDoom extended nodes
-    This code is based on woof 1.2.0
-[X] Created upstream feature request #95
-
-
-Part 8: Fix output of ENDOOM lump to terminal
+Part 6: Fix output of ENDOOM lump to terminal
 =============================================
+Documentation says "-noendtext" to disable output, but the implementation
+uses "-noendtxt".
+
 [X] Add patch to fix endianess
 [X] Add patch to fix interpretation of blinking flag
 [X] Add patch to convert text from IBM437 codepage to Unicode
+[X] Reported upstream as Bug #659
+[X] Fixed in SVN revision 1521
+    => "-noendtext", as documented, was added
+    => Works as expected (Reported in bugtracker for #659)
+[X] pkgsrc patch removed
+[X] man page updated
+
+Part 6 finished.
+
+
+Part 7: Import final release
+============================
+
+[ ] Import version 1.48.3
+    Not released yet
+
+
+Part 8: Support for extended nodes
+==================================
+[X] Add patch to support DeeP and ZDoom extended nodes
+    This code is based on woof 1.2.0
+    Fixes Bug #657
+[X] Created upstream feature request #95
+    => Deferred (not considered for 1.48 release)
+
+
+Part 9: Support for internal blockmap creation
+==============================================
+Make it possible to play maps with broken blockmaps (or no blockmaps at all).
+
+[ ] Fix for NOVA II (Bug #658)
+[ ] Fix for NOVA III (blockmaps missing completely)
+[ ] Command line option "-blockmap" like in PrBoom+
 
 
 EOF
