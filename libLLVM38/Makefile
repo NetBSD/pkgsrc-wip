@@ -12,6 +12,7 @@ CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 #MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc2/
 EXTRACT_SUFX=	.tar.xz
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://llvm.org/
@@ -29,7 +30,23 @@ CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
+CMAKE_ARGS+=	-DLLVM_INCLUDE_UTILS=OFF
+CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=OFF
+CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
+
+.for tool in 	bugpoint bugpoint_passes dsymutil gold llc lli llvm_ar	\
+	llvm_as llvm_as_fuzzer llvm_bcanalyzer llvm_c_test llvm_cat	\
+	llvm_cov llvm_cxxdump llvm_cxxfilt llvm_diff llvm_dis		\
+	llvm_dwarfdump llvm_dwp llvm_extract llvm_go llvm_jitlistener	\
+	llvm_link llvm_lto llvm_lto2 llvm_mc llvm_mc_fuzzer		\
+	llvm_mcmarkup llvm_modextract llvm_nm llvm_objdump		\
+	llvm_opt_report llvm_pdbdump llvm_profdata llvm_readobj		\
+	llvm_rtdyld llvm_size llvm_split llvm_stress llvm_strings	\
+	llvm_symbolizer llvm_xray lto msbuild obj2yaml opt sancov	\
+	sanstats verify_uselistorder xcode_toolchain yaml2obj
+
+CMAKE_ARGS+=	-DLLVM_TOOL_${tool:tu}_BUILD=OFF
+.endfor
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 

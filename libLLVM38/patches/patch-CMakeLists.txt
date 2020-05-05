@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2016-03-28 18:13:48.000000000 +0000
++++ CMakeLists.txt
+@@ -728,7 +728,7 @@ add_subdirectory(cmake/modules)
+ 
+ if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
+   install(DIRECTORY include/llvm include/llvm-c
+-    DESTINATION include
++    DESTINATION include/libLLVM38
+     COMPONENT llvm-headers
+     FILES_MATCHING
+     PATTERN "*.def"
+@@ -740,7 +740,7 @@ if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
+     )
+ 
+   install(DIRECTORY ${LLVM_INCLUDE_DIR}/llvm
+-    DESTINATION include
++    DESTINATION include/libLLVM38
+     COMPONENT llvm-headers
+     FILES_MATCHING
+     PATTERN "*.def"
