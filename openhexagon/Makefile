@@ -48,7 +48,7 @@ post-extract:
 
 post-build:
 	for p in ${WRKDIR}/${MODULES:MSSVOpenHexagonAssets-*}/_RELEASE/Packs/*; do \
-	    echo "{ \"name\":\"$${p##*/}\", \"priority\":0 }" >$${p}/pack.json; \
+	    ${ECHO} "{ \"name\":\"$${p##*/}\", \"priority\":0 }" >$${p}/pack.json; \
 	done
 
 post-install:
