@@ -20,7 +20,7 @@ GITHUB_MODULES= \
 .for mod tag in ${GITHUB_MODULES}
 DISTFILES+=	${mod}-${tag}${EXTRACT_SUFX}
 SITES.${mod}-${tag}${EXTRACT_SUFX}+= \
-	-http://github.com/SuperV1234/${mod}/archive/${tag}${EXTRACT_SUFX}
+		${MASTER_SITE_GITHUB:S,^,-,:=SuperV1234/${mod}/archive/${tag}${EXTRACT_SUFX}}
 MODULES+=	${mod}-${tag}
 .endfor
 
