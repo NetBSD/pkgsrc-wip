@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=		openbox
 
 .if !empty(PKG_OPTIONS:Mopenbox)
 DEPENDS+=	openbox>=3.6.1:../../wm/openbox
-DEPENDS+=	obconf-qt>=0.14.1:../../wm/obconf-qt
+DEPENDS+=	obconf-qt>=0.15.0:../../wm/obconf-qt
 .endif
 
 .if !empty(PKG_OPTIONS:Mxfce4-wm)
