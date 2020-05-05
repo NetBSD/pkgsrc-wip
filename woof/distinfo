@@ -1,8 +1,7 @@
 $NetBSD$
 
-SHA1 (woof_1.2.0.tar.gz) = 3680a312ed80f2229d59e94a49b7b13cd72aaaea
-RMD160 (woof_1.2.0.tar.gz) = 92a74545a0e5e7c5272783450a678e347a20305c
-SHA512 (woof_1.2.0.tar.gz) = 9672f6d2326eea8cc0027583489ad4cb817105e8a6a567e51ef49b777ca900099fb0f20357e86613532c6dd85dda81c138a421f47ac3a8442658f9642e1f66ff
-Size (woof_1.2.0.tar.gz) = 1875308 bytes
+SHA1 (woof_1.2.1.tar.gz) = 9eecbdfa5a5cdb9a01f3e54f57247ed9ac933668
+RMD160 (woof_1.2.1.tar.gz) = 7f9eb2a2747a2ef930543a07c2dadc9982a1b92b
+SHA512 (woof_1.2.1.tar.gz) = 9ac0e723290fd098ae8c120ab40f205ce7cde85ee56edc136460612b96ae20008770ba1e3b9a19d12365109d170cca52d19ed5348debd565557cca19948c03af
+Size (woof_1.2.1.tar.gz) = 1875956 bytes
 SHA1 (patch-Source_d__iwad.c) = fc897f508e31653495bfed26152a7e6d70021089
-SHA1 (patch-Source_p__extnodes.c) = 1fcb98336adedc8169d7e877a76477150587ad44

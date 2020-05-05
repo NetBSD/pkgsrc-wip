@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	woof_1.2.0
+DISTNAME=	woof_1.2.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
