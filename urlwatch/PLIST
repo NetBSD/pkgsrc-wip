@@ -3,11 +3,14 @@ bin/urlwatch
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/urlwatch/__init__.py
 ${PYSITELIB}/urlwatch/__init__.pyo
 ${PYSITELIB}/urlwatch/__init__.pyc
+${PYSITELIB}/urlwatch/cli.pyo
+${PYSITELIB}/urlwatch/cli.pyc
 ${PYSITELIB}/urlwatch/command.pyo
 ${PYSITELIB}/urlwatch/command.pyc
 ${PYSITELIB}/urlwatch/config.pyo
@@ -36,6 +39,7 @@ ${PYSITELIB}/urlwatch/util.pyo
 ${PYSITELIB}/urlwatch/util.pyc
 ${PYSITELIB}/urlwatch/worker.pyo
 ${PYSITELIB}/urlwatch/worker.pyc
+${PYSITELIB}/urlwatch/cli.py
 ${PYSITELIB}/urlwatch/command.py
 ${PYSITELIB}/urlwatch/config.py
 ${PYSITELIB}/urlwatch/filters.py
