@@ -3,25 +3,18 @@
 
 DISTNAME=	openhexagon-2.0
 CATEGORIES=	games
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://vittorioromeo.info/projects.html
 COMMENT=	Open-source clone of the game "Super Hexagon by Terry Cavanagh"
 LICENSE=	afl-3.0
 
-GITHUB_MODULES= \
-	SSVOpenHexagon		2.0-preview \
-	SSVOpenHexagonAssets	1d125de695be2e74c9f2ad3198e8b5b29911d010
+MODULES=	SSVOpenHexagon-2.0-preview \
+		SSVOpenHexagonAssets-1d125de695be2e74c9f2ad3198e8b5b29911d010
 
-# EXTRACT_SUFX must be defined here otherwise we cannot
-# set the SITES.* variables correctly
-
-.for mod tag in ${GITHUB_MODULES}
-DISTFILES+=	${mod}-${tag}${EXTRACT_SUFX}
-SITES.${mod}-${tag}${EXTRACT_SUFX}+= \
-		${MASTER_SITE_GITHUB:S,^,-,:=SuperV1234/${mod}/archive/${tag}${EXTRACT_SUFX}}
-MODULES+=	${mod}-${tag}
+.for dist in ${MODULES:=.tar.gz}
+DISTFILES+=	${dist}
+SITES.${dist}+=	${MASTER_SITE_GITHUB:S,^,-,:=SuperV1234/${dist:S,-,/archive/,}}
 .endfor
 
 USE_LANGUAGES=	c c++14
