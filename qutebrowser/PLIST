@@ -352,6 +352,7 @@ ${PYSITELIB}/qutebrowser/html/styled.html
 ${PYSITELIB}/qutebrowser/html/tabs.html
 ${PYSITELIB}/qutebrowser/html/version.html
 ${PYSITELIB}/qutebrowser/html/warning-old-qt.html
+${PYSITELIB}/qutebrowser/html/warning-sessions.html
 ${PYSITELIB}/qutebrowser/html/warning-webkit.html
 ${PYSITELIB}/qutebrowser/img/broken_qutebrowser_logo.png
 ${PYSITELIB}/qutebrowser/img/file.svg
