@@ -3543,7 +3543,6 @@ SUBDIR+=	py-idx2numpy
 SUBDIR+=	py-ift-nifty
 SUBDIR+=	py-igraph
 SUBDIR+=	py-iisignature
-SUBDIR+=	py-impacket
 SUBDIR+=	py-imread
 SUBDIR+=	py-imreg-dft
 SUBDIR+=	py-influxdb
