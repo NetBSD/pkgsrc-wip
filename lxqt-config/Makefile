@@ -19,7 +19,7 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+.if ${OPSYS} != "Linux"
 CMAKE_ARGS+=	-DWITH_INPUT=OFF
 .endif
 
