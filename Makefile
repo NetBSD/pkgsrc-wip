@@ -3277,7 +3277,6 @@ SUBDIR+=	py-cosat
 SUBDIR+=	py-cosmolopy
 SUBDIR+=	py-coveralls
 SUBDIR+=	py-cracklib
-SUBDIR+=	py-cryptodomex
 SUBDIR+=	py-cryptoidlib
 SUBDIR+=	py-cryptoim
 SUBDIR+=	py-csa
