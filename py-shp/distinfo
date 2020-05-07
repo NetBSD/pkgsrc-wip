@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pyshp-1.2.3.tar.gz) = 355c2e37232c34855d3221bc7323abcd942b6180
-RMD160 (pyshp-1.2.3.tar.gz) = 47b64bca853f1d0e3ac5300e40cae588e3b57587
-SHA512 (pyshp-1.2.3.tar.gz) = ca5c66b7766b7f6ca2f9881ff5a957595ab4124e11889c9ad183b6708b07980885c117bcfded8bf33e90f2e4afdd43e62900bd3d1002c51f4095b97588adb668
-Size (pyshp-1.2.3.tar.gz) = 28708 bytes
+SHA1 (pyshp-2.1.0.tar.gz) = 76f4d871e4c62114d0c9322f03c9c3739e72e8ad
+RMD160 (pyshp-2.1.0.tar.gz) = 9bba1a6132c2b36a00ac5a0b6b7a0c037e0f74d2
+SHA512 (pyshp-2.1.0.tar.gz) = ab0c7832f7e480ec3cdbf94ec29f84b590486625bde3d5cf465e5dc6ddca02998b99510b6c14d5ba005816c5b091044badc1e68988fd971f9e18266096ad86cb
+Size (pyshp-2.1.0.tar.gz) = 215360 bytes

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pyshp-1.2.3
+DISTNAME=	pyshp-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyshp/}
