@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/arpa/inet.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/arpa/inet.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/arpa/inet.d
-@@ -124,6 +124,32 @@ else version( FreeBSD )
+@@ -173,6 +173,32 @@ else version( Solaris )
      const(char)*    inet_ntop(int, in void*, char*, socklen_t);
      int             inet_pton(int, in char*, void*);
  }
@@ -37,11 +37,11 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( Solaris )
  {
      alias uint16_t in_port_t;
-@@ -235,6 +261,10 @@ else version( FreeBSD )
+@@ -264,6 +290,10 @@ else version( DragonFlyBSD )
  {
      enum INET6_ADDRSTRLEN = 46;
  }
-+else version( NetBSD )
++else version ( NetBSD ) 
 +{
 +    enum INET6_ADDRSTRLEN = 46;
 +}

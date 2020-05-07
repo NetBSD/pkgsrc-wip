@@ -1,10 +1,8 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/sys/posix/ucontext.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/ucontext.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/ucontext.d
-@@ -701,6 +701,62 @@ else version( FreeBSD )
+@@ -766,6 +766,62 @@ else version( DragonFlyBSD )
          int[4]          __spare__;
      }
  }

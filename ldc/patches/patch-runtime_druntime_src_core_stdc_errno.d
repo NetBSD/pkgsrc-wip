@@ -1,12 +1,10 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/stdc/errno.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/stdc/errno.d.orig	2020-05-07 08:52:13.684688490 +0000
 +++ runtime/druntime/src/core/stdc/errno.d
-@@ -1000,6 +1000,138 @@ else version( FreeBSD )
-     enum EPROTO             = 92;       /// Protocol error
-     enum ELAST              = 92;       /// Must be equal largest errno
+@@ -1414,6 +1414,138 @@ else version( DragonFlyBSD )
+     enum EASYNC             = 99;
+     enum ELAST              = 99;
  }
 +else version (NetBSD)
 +{

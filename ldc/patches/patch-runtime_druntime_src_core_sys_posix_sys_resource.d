@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/sys/resource.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/sys/resource.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/sys/resource.d
-@@ -234,6 +234,64 @@ else version (FreeBSD)
+@@ -292,6 +292,64 @@ else version (DragonFlyBSD)
          RLIMIT_AS     = 10,
      }
  }
@@ -69,16 +69,16 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum
-@@ -406,6 +464,12 @@ else version (FreeBSD)
+@@ -473,6 +531,12 @@ else version (DragonFlyBSD)
+ {
+     int getrlimit(int, rlimit*);
      int getrusage(int, rusage*);
-     int setrlimit(int, in rlimit*);
- }
++    int setrlimit(int, in rlimit*);
++}
 +else version (NetBSD)
 +{
 +    int getrlimit(int, rlimit*);
 +    int getrusage(int, rusage*);
-+    int setrlimit(int, in rlimit*);
-+}
+     int setrlimit(int, in rlimit*);
+ }
  else version (Solaris)
- {
-     int getrlimit(int, rlimit*);

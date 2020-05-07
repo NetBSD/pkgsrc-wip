@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/signal.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/signal.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/signal.d
-@@ -395,6 +395,31 @@ else version( FreeBSD )
+@@ -423,6 +423,31 @@ else version( DragonFlyBSD )
      enum SIGUSR2    = 31;
      enum SIGURG     = 16;
  }
@@ -36,7 +36,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum SIGALRM = 14;
-@@ -453,6 +478,19 @@ else version( FreeBSD )
+@@ -494,6 +519,19 @@ else version( DragonFlyBSD )
          sigset_t sa_mask;
      }
  }
@@ -56,7 +56,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      struct sigaction_t
-@@ -855,6 +893,100 @@ else version( FreeBSD )
+@@ -960,6 +998,100 @@ else version( DragonFlyBSD )
      int sigsuspend(in sigset_t *);
      int sigwait(in sigset_t*, int*);
  }
@@ -157,7 +157,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum SIG_HOLD = cast(sigfn_t2)2;
-@@ -1626,6 +1758,130 @@ else version( FreeBSD )
+@@ -1860,6 +1992,130 @@ else version( DragonFlyBSD )
      int sigpause(int);
      int sigrelse(int);
  }
@@ -288,7 +288,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum SIGPOLL = 22;
-@@ -1929,6 +2185,14 @@ else version( FreeBSD )
+@@ -2199,6 +2455,14 @@ else version( DragonFlyBSD )
          c_long  tv_nsec;
      }
  }
@@ -303,7 +303,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      struct timespec
-@@ -2024,6 +2288,21 @@ else version( FreeBSD )
+@@ -2321,6 +2585,21 @@ else version( DragonFlyBSD )
      int sigtimedwait(in sigset_t*, siginfo_t*, in timespec*);
      int sigwaitinfo(in sigset_t*, siginfo_t*);
  }
@@ -325,15 +325,15 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (OSX)
  {
  }
-@@ -2097,6 +2376,11 @@ else version( FreeBSD )
+@@ -2398,6 +2677,11 @@ else version( DragonFlyBSD )
+ {
      int pthread_kill(pthread_t, int);
      int pthread_sigmask(int, in sigset_t*, sigset_t*);
- }
++}
 +else version( NetBSD )
 +{
 +    int pthread_kill(pthread_t, int);
 +    int pthread_sigmask(int, in sigset_t*, sigset_t*);
-+}
+ }
  else version (Solaris)
  {
-     int pthread_kill(pthread_t, int);

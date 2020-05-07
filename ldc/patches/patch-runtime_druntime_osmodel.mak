@@ -1,8 +1,6 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/osmodel.mak.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/osmodel.mak.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/osmodel.mak
 @@ -15,6 +15,9 @@ ifeq (,$(OS))
    ifeq (OpenBSD,$(uname_S))

@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
 
---- runtime/phobos/std/file.d.orig	2016-02-13 20:04:46.000000000 +0000
+--- runtime/phobos/std/file.d.orig	2018-08-23 23:30:04.000000000 +0000
 +++ runtime/phobos/std/file.d
-@@ -1816,6 +1816,9 @@ version (OSX)
+@@ -1826,6 +1826,9 @@ version (OSX)
  else version (FreeBSD)
      private extern (C) int sysctl (const int* name, uint namelen, void* oldp,
          size_t* oldlenp, const void* newp, size_t newlen);
@@ -14,9 +14,9 @@ Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
  
  /**
   * Returns the full path of the current executable.
-@@ -1885,6 +1888,10 @@ else version (FreeBSD)
- 
-         return buffer.assumeUnique;
+@@ -1899,6 +1902,10 @@ else version (FreeBSD)
+     {
+         return readLink("/proc/curproc/file");
      }
 +    else version (NetBSD)
 +    {

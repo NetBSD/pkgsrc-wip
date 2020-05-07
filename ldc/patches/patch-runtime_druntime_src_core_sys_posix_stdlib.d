@@ -1,10 +1,8 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/sys/posix/stdlib.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/stdlib.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/stdlib.d
-@@ -91,6 +91,10 @@ else version( FreeBSD )
+@@ -95,6 +95,10 @@ else version( DragonFlyBSD )
  {
      int posix_memalign(void**, size_t, size_t);
  }
@@ -15,21 +13,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( Solaris )
  {
      int posix_memalign(void**, size_t, size_t);
-@@ -125,6 +129,13 @@ else version( FreeBSD )
- 
-     void* valloc(size_t); // LEGACY non-standard
- }
-+else version( NetBSD )
-+{
-+    int setenv(in char*, in char*, int);
-+    int __unsetenv13(in char*);
-+    alias __unsetenv13 unsetenv;
-+    void* valloc(size_t); // LEGACY non-standard
-+}
- else version( Android )
- {
-     int setenv(in char*, in char*, int);
-@@ -159,6 +170,10 @@ else version( FreeBSD )
+@@ -174,6 +178,10 @@ else version( DragonFlyBSD )
  {
      int rand_r(uint*);
  }
@@ -40,14 +24,10 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( Solaris )
  {
      int rand_r(uint*);
-@@ -342,6 +357,47 @@ else version( FreeBSD )
-     void   srandom(uint);
-     int    unlockpt(int);
- }
-+else version( NetBSD )
-+{
-+    //WNOHANG     (defined in core.sys.posix.sys.wait)
-+    //WUNTRACED   (defined in core.sys.posix.sys.wait)
+@@ -361,6 +369,47 @@ else version( DragonFlyBSD )
+ {
+     //WNOHANG     (defined in core.sys.posix.sys.wait)
+     //WUNTRACED   (defined in core.sys.posix.sys.wait)
 +    //WEXITSTATUS (defined in core.sys.posix.sys.wait)
 +    //WIFEXITED   (defined in core.sys.posix.sys.wait)
 +    //WIFSIGNALED (defined in core.sys.posix.sys.wait)
@@ -85,6 +65,10 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 +    void   srandom(uint);
 +    int    unlockpt(int);
 +}
- else version( CRuntime_Bionic )
- {
-     double  drand48();
++else version( NetBSD )
++{
++    //WNOHANG     (defined in core.sys.posix.sys.wait)
++    //WUNTRACED   (defined in core.sys.posix.sys.wait)
+     //WEXITSTATUS (defined in core.sys.posix.sys.wait)
+     //WIFEXITED   (defined in core.sys.posix.sys.wait)
+     //WIFSIGNALED (defined in core.sys.posix.sys.wait)

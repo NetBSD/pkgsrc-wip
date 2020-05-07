@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/sched.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/sched.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/sched.d
-@@ -86,6 +86,17 @@ else version( FreeBSD )
+@@ -97,6 +97,17 @@ else version( DragonFlyBSD )
      enum SCHED_OTHER    = 2;
      enum SCHED_RR       = 3;
  }
@@ -22,7 +22,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      struct sched_param
-@@ -144,6 +155,10 @@ else version( FreeBSD )
+@@ -159,6 +170,10 @@ else version( DragonFlyBSD )
  {
      int sched_yield();
  }
@@ -33,16 +33,16 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      int sched_yield();
-@@ -184,6 +199,12 @@ else version( FreeBSD )
+@@ -203,6 +218,12 @@ else version( DragonFlyBSD )
+ {
+     int sched_get_priority_min(int);
      int sched_get_priority_max(int);
-     int sched_rr_get_interval(pid_t, timespec*);
- }
++    int sched_rr_get_interval(pid_t, timespec*);
++}
 +else version( NetBSD )
 +{
 +    int sched_get_priority_min(int);
 +    int sched_get_priority_max(int);
-+    int sched_rr_get_interval(pid_t, timespec*);
-+}
+     int sched_rr_get_interval(pid_t, timespec*);
+ }
  else version (Solaris)
- {
-     int sched_get_priority_max(int);

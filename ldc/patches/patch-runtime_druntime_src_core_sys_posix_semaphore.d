@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/semaphore.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/semaphore.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/semaphore.d
-@@ -81,6 +81,12 @@ else version( FreeBSD )
+@@ -96,6 +96,12 @@ else version( DragonFlyBSD )
  
      enum SEM_FAILED = cast(sem_t*) null;
  }
@@ -17,11 +17,11 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      struct sem_t
-@@ -137,6 +143,10 @@ else version( FreeBSD )
+@@ -156,6 +162,10 @@ else version( DragonFlyBSD )
  {
      int sem_timedwait(sem_t*, in timespec*);
  }
-+else version( NetBSD )
++else version ( NetBSD )
 +{
 +    int sem_timedwait(sem_t*, in timespec*);
 +}

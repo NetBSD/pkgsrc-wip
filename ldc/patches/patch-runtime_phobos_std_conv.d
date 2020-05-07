@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
 
---- runtime/phobos/std/conv.d.orig	2016-02-13 20:04:46.000000000 +0000
+--- runtime/phobos/std/conv.d.orig	2020-05-07 08:52:18.564674573 +0000
 +++ runtime/phobos/std/conv.d
-@@ -2859,7 +2859,17 @@ unittest
+@@ -2756,7 +2756,17 @@ unittest
  
      // min and max
      real r = to!real(to!string(real.min_normal));
@@ -22,4 +22,4 @@ Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
 +    }
      r = to!real(to!string(real.max));
      assert(to!string(r) == to!string(real.max));
- }
+ 

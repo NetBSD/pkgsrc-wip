@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/ldc2
 bin/ldmd2
+etc/bash_completion.d/ldc2
 include/d/core/atomic.d
 include/d/core/bitop.d
 include/d/core/checkedint.d
@@ -43,6 +44,21 @@ include/d/core/sync/exception.d
 include/d/core/sync/mutex.d
 include/d/core/sync/rwmutex.d
 include/d/core/sync/semaphore.d
+include/d/core/sys/dragonflybsd/dlfcn.d
+include/d/core/sys/dragonflybsd/execinfo.d
+include/d/core/sys/dragonflybsd/netinet/in_.d
+include/d/core/sys/dragonflybsd/pthread_np.d
+include/d/core/sys/dragonflybsd/sys/_bitset.d
+include/d/core/sys/dragonflybsd/sys/_cpuset.d
+include/d/core/sys/dragonflybsd/sys/cdefs.d
+include/d/core/sys/dragonflybsd/sys/elf.d
+include/d/core/sys/dragonflybsd/sys/elf32.d
+include/d/core/sys/dragonflybsd/sys/elf64.d
+include/d/core/sys/dragonflybsd/sys/elf_common.d
+include/d/core/sys/dragonflybsd/sys/event.d
+include/d/core/sys/dragonflybsd/sys/link_elf.d
+include/d/core/sys/dragonflybsd/sys/mman.d
+include/d/core/sys/dragonflybsd/time.d
 include/d/core/sys/freebsd/dlfcn.d
 include/d/core/sys/freebsd/execinfo.d
 include/d/core/sys/freebsd/sys/cdefs.d
@@ -70,17 +86,6 @@ include/d/core/sys/linux/sys/xattr.d
 include/d/core/sys/linux/termios.d
 include/d/core/sys/linux/time.d
 include/d/core/sys/linux/tipc.d
-include/d/core/sys/netbsd/dlfcn.d
-include/d/core/sys/netbsd/execinfo.d
-include/d/core/sys/netbsd/sys/cdefs.d
-include/d/core/sys/netbsd/sys/elf.d
-include/d/core/sys/netbsd/sys/elf32.d
-include/d/core/sys/netbsd/sys/elf64.d
-include/d/core/sys/netbsd/sys/elf_common.d
-include/d/core/sys/netbsd/sys/event.d
-include/d/core/sys/netbsd/sys/link_elf.d
-include/d/core/sys/netbsd/sys/mman.d
-include/d/core/sys/netbsd/time.d
 include/d/core/sys/osx/execinfo.d
 include/d/core/sys/osx/mach/dyld.d
 include/d/core/sys/osx/mach/getsect.d
@@ -179,12 +184,9 @@ include/d/ldc/eh/fixedpool.d
 include/d/ldc/eh/libunwind.d
 include/d/ldc/eh/win32.d
 include/d/ldc/eh/win64.d
+include/d/ldc/eh_asm.S
 include/d/ldc/gccbuiltins_aarch64.di
-include/d/ldc/gccbuiltins_arm.di
-include/d/ldc/gccbuiltins_mips.di
-include/d/ldc/gccbuiltins_ppc.di
-include/d/ldc/gccbuiltins_s390.di
-include/d/ldc/gccbuiltins_x86.di
+include/d/ldc/internal/vararg.di
 include/d/ldc/intrinsics.di
 include/d/ldc/llvmasm.di
 include/d/ldc/msvc.c
@@ -330,3 +332,4 @@ lib/libdruntime-ldc.a
 lib/libphobos2-ldc-debug.a
 lib/libphobos2-ldc.a
 share/examples/ldc/ldc2.conf
+@pkgdir include/d/etc/c/zlib

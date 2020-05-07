@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/netinet/in_.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/netinet/in_.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/netinet/in_.d
-@@ -202,6 +202,42 @@ else version( FreeBSD )
+@@ -245,6 +245,42 @@ else version( DragonFlyBSD )
  
      //enum INET_ADDRSTRLEN       = 16;
  }
@@ -47,7 +47,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( Solaris )
  {
      struct sockaddr_in
-@@ -712,6 +748,145 @@ else version( FreeBSD )
+@@ -895,6 +931,145 @@ else version( DragonFlyBSD )
                 __IPV6_ADDR_MC_SCOPE(a) == __IPV6_ADDR_SCOPE_GLOBAL;
      }
  }
@@ -193,11 +193,11 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( Solaris )
  {
      struct in6_addr
-@@ -988,6 +1163,10 @@ else version( FreeBSD )
+@@ -1175,6 +1350,10 @@ else version( DragonFlyBSD )
  {
      enum uint IPPROTO_RAW = 255;
  }
-+else version( NetBSD )
++else version ( NetBSD )
 +{
 +    enum uint IPPROTO_RAW = 255;
 +}

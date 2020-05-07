@@ -2,7 +2,7 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/thread.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/thread.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/thread.d
 @@ -588,7 +588,6 @@ class Thread
      // General Actions
@@ -47,15 +47,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
          else version( Posix )
          {
              static if(__traits(compiles, pthread_setschedprio))
-@@ -982,6 +995,7 @@ class Thread
-                 // NOTE: pthread_setschedprio is not implemented on OSX or FreeBSD, so use
-                 //       the more complicated get/set sequence below.
-                 int         policy;
-+
-                 sched_param param;
- 
-                 if (auto err = pthread_getschedparam(m_addr, &policy, &param))
-@@ -991,6 +1005,7 @@ class Thread
+@@ -991,6 +1004,7 @@ class Thread
                      throw new ThreadException("Unable to set thread priority");
                  }
                  param.sched_priority = val;
@@ -63,15 +55,15 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
                  if (auto err = pthread_setschedparam(m_addr, policy, &param))
                  {
                      // ignore error if thread is not running => Bugzilla 8960
-@@ -3195,6 +3210,7 @@ extern (C)
- nothrow:
+@@ -3213,6 +3227,7 @@ nothrow:
      version (CRuntime_Glibc) int pthread_getattr_np(pthread_t thread, pthread_attr_t* attr);
      version (FreeBSD) int pthread_attr_get_np(pthread_t thread, pthread_attr_t* attr);
+     version (DragonFlyBSD) int pthread_attr_get_np(pthread_t thread, pthread_attr_t* attr);
 +    version (NetBSD) int pthread_attr_get_np(pthread_t thread, pthread_attr_t* attr);
      version (Solaris) int thr_stksegment(stack_t* stk);
      version (CRuntime_Bionic) int pthread_getattr_np(pthread_t thid, pthread_attr_t* attr);
  }
-@@ -3322,6 +3338,17 @@ private void* getStackBottom() nothrow
+@@ -3351,6 +3366,17 @@ private void* getStackBottom() nothrow
          pthread_attr_destroy(&attr);
          return addr + size;
      }
@@ -89,25 +81,18 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
      else version (Solaris)
      {
          stack_t stk;
-@@ -3905,6 +3932,13 @@ version( LDC )
-         version( X86 ) version = CheckFiberMigration;
-         version( X86_64 ) version = CheckFiberMigration;
+@@ -3940,6 +3966,14 @@ version( LDC )
+         version( ARM ) version = CheckFiberMigration;
+         version( AArch64 ) version = CheckFiberMigration;
      }
-+    version( NetBSD )
++
++    version ( NetBSD )
 +    {
 +        version( ARM ) version = CheckFiberMigration;
 +        version( AArch64 ) version = CheckFiberMigration;
 +        version( X86 ) version = CheckFiberMigration;
-+        version( X86_64 ) version = CheckFiberMigration;
++        version( x86_64 ) version = CHeckFiberMigration;
 +    }
  }
  
  // Fiber support for SjLj style exceptions
-@@ -4663,6 +4697,7 @@ private:
-         {
-             version (Posix) import core.sys.posix.sys.mman; // mmap
-             version (FreeBSD) import core.sys.freebsd.sys.mman : MAP_ANON;
-+            version (NetBSD) import core.sys.netbsd.sys.mman : MAP_ANON;
-             version (CRuntime_Glibc) import core.sys.linux.sys.mman : MAP_ANON;
-             version (OSX) import core.sys.osx.sys.mman : MAP_ANON;
- 

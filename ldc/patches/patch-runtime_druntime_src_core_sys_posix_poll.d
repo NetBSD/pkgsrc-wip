@@ -1,10 +1,8 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/sys/posix/poll.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/poll.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/poll.d
-@@ -143,6 +143,41 @@ else version( FreeBSD )
+@@ -177,6 +177,41 @@ else version( DragonFlyBSD )
  
      int poll(pollfd*, nfds_t, int);
  }

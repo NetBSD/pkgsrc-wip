@@ -2,10 +2,10 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/pwd.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/pwd.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/pwd.d
-@@ -85,6 +85,22 @@ else version( FreeBSD )
-         int pw_fields;      /* internal: fields filled in */
+@@ -102,6 +102,22 @@ else version( DragonFlyBSD )
+         int pw_fields;          /* internal: fields filled in */
      }
  }
 +else version( NetBSD )
@@ -27,7 +27,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      struct passwd
-@@ -143,6 +159,13 @@ else version( FreeBSD )
+@@ -165,6 +181,13 @@ else version( DragonFlyBSD )
      int getpwnam_r(in char*, passwd*, char*, size_t, passwd**);
      int getpwuid_r(uid_t, passwd*, char*, size_t, passwd**);
  }
@@ -41,16 +41,16 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      int getpwnam_r(in char*, passwd*, char*, size_t, passwd**);
-@@ -183,6 +206,12 @@ else version ( FreeBSD )
+@@ -209,6 +232,12 @@ else version ( DragonFlyBSD )
+ {
+     void    endpwent();
      passwd* getpwent();
-     void    setpwent();
- }
++    void    setpwent();
++}
 +else version ( NetBSD )
 +{
 +    void    endpwent();
 +    passwd* getpwent();
-+    void    setpwent();
-+}
+     void    setpwent();
+ }
  else version (Solaris)
- {
-     void endpwent();

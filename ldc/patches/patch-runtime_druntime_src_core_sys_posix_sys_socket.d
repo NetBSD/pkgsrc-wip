@@ -2,11 +2,11 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/sys/socket.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/sys/socket.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/sys/socket.d
-@@ -927,6 +927,205 @@ else version( FreeBSD )
-     int     sockatmark(int);
+@@ -1230,6 +1230,205 @@ else version( DragonFlyBSD )
      int     socketpair(int, int, int, ref int[2]);
+ //  void    pfctlinput(int, struct sockaddr *);
  }
 +else version( NetBSD )
 +{
@@ -210,7 +210,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      alias uint socklen_t;
-@@ -1311,6 +1510,13 @@ else version( FreeBSD )
+@@ -1657,6 +1856,13 @@ else version( DragonFlyBSD )
          AF_INET6    = 28
      }
  }
@@ -224,17 +224,17 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum
-@@ -1358,6 +1564,13 @@ else version( FreeBSD )
-         SOCK_RAW    = 3
-     }
- }
+@@ -1708,6 +1914,13 @@ else version( DragonFlyBSD )
+ {
+     enum
+     {
++        SOCK_RAW    = 3
++    }
++}
 +else version( NetBSD )
 +{
 +    enum
 +    {
-+        SOCK_RAW    = 3
-+    }
-+}
- else version (Solaris)
- {
-     enum
+         SOCK_RAW    = 3
+     }
+ }

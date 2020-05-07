@@ -2,11 +2,11 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/netdb.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/netdb.d.orig	2020-05-07 08:52:15.364683708 +0000
 +++ runtime/druntime/src/core/sys/posix/netdb.d
-@@ -387,6 +387,113 @@ else version( FreeBSD )
-     enum EAI_SYSTEM         = 11;
-     enum EAI_OVERFLOW       = 14;
+@@ -488,6 +488,112 @@ else version( DragonFlyBSD )
+     enum NI_NUMERICSCOPE    = 0x40;
+ 
  }
 +else version( NetBSD )
 +{
@@ -36,7 +36,6 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 +    (defined(__sh__) && defined(_LP64) && (_BYTE_ORDER == _LITTLE_ENDIAN))
 +        int             __n_pad0;       /* ABI compatibility */
 +#endif
-+
 ++/
 +    }
 +

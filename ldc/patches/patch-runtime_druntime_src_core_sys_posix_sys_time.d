@@ -1,10 +1,8 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/sys/posix/sys/time.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/sys/time.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/sys/time.d
-@@ -123,6 +123,27 @@ else version( FreeBSD )
+@@ -149,6 +149,27 @@ else version( DragonFlyBSD )
      int setitimer(int, in itimerval*, itimerval*);
      int utimes(in char*, ref const(timeval)[2]);
  }

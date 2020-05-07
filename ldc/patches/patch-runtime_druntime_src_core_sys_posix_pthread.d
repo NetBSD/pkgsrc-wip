@@ -1,10 +1,8 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/sys/posix/pthread.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/pthread.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/pthread.d
-@@ -209,6 +209,85 @@ else version( FreeBSD )
+@@ -249,6 +249,85 @@ else version( DragonFlyBSD )
      enum PTHREAD_COND_INITIALIZER               = null;
      enum PTHREAD_RWLOCK_INITIALIZER             = null;
  }
@@ -90,41 +88,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum
-@@ -362,6 +441,33 @@ else version( FreeBSD )
-     void __pthread_cleanup_push_imp(_pthread_cleanup_routine, void*, _pthread_cleanup_info*);
-     void __pthread_cleanup_pop_imp(int);
- }
-+else version( NetBSD )
-+{
-+    alias void function(void*) _pthread_cleanup_routine;
-+
-+    struct _pthread_cleanup_store
-+    {
-+        void*[4]    pthread_cleanup_pad;
-+    }
-+
-+    struct pthread_cleanup
-+    {
-+        _pthread_cleanup_store __cleanup_info__ = void;
-+
-+        extern (D) void push()( _pthread_cleanup_routine cleanup_routine, void* cleanup_arg )
-+        {
-+            pthread__cleanup_push( cleanup_routine, cleanup_arg, &__cleanup_info__ );
-+        }
-+
-+        extern (D) void pop()( int execute )
-+        {
-+            pthread__cleanup_pop( execute, &__cleanup_info__ );
-+        }
-+    }
-+
-+    void pthread__cleanup_push(_pthread_cleanup_routine, void*, void*);
-+    void pthread__cleanup_pop(int, void *);
-+}
- else version (Solaris)
- {
-     alias void function(void*) _pthread_cleanup_routine;
-@@ -507,6 +613,18 @@ else version( FreeBSD )
+@@ -589,6 +668,18 @@ else version( DragonFlyBSD )
      int pthread_barrierattr_init(pthread_barrierattr_t*);
      int pthread_barrierattr_setpshared(pthread_barrierattr_t*, int);
  }
@@ -143,7 +107,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (OSX)
  {
  }
-@@ -565,6 +683,14 @@ else version( FreeBSD )
+@@ -655,6 +746,14 @@ else version( DragonFlyBSD )
      int pthread_spin_trylock(pthread_spinlock_t*);
      int pthread_spin_unlock(pthread_spinlock_t*);
  }
@@ -158,7 +122,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (OSX)
  {
  }
-@@ -648,6 +774,24 @@ else version( FreeBSD )
+@@ -756,6 +855,24 @@ else version( DragonFlyBSD )
      int pthread_mutexattr_settype(pthread_mutexattr_t*, int) @trusted;
      int pthread_setconcurrency(int);
  }
@@ -183,7 +147,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum
-@@ -698,6 +842,10 @@ else version( FreeBSD )
+@@ -810,6 +927,10 @@ else version( DragonFlyBSD )
  {
      int pthread_getcpuclockid(pthread_t, clockid_t*);
  }
@@ -194,7 +158,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (OSX)
  {
  }
-@@ -740,6 +888,12 @@ else version( FreeBSD )
+@@ -858,6 +979,12 @@ else version( DragonFlyBSD )
      int pthread_rwlock_timedrdlock(pthread_rwlock_t*, in timespec*);
      int pthread_rwlock_timedwrlock(pthread_rwlock_t*, in timespec*);
  }
@@ -207,32 +171,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      int pthread_mutex_timedlock(pthread_mutex_t*, in timespec*);
-@@ -876,6 +1030,24 @@ else version( FreeBSD )
-     int pthread_setschedparam(pthread_t, int, sched_param*);
-     // int pthread_setschedprio(pthread_t, int); // not implemented
- }
-+else version( NetBSD )
-+{
-+    enum
-+    {
-+        PTHREAD_SCOPE_PROCESS   = 0,
-+        PTHREAD_SCOPE_SYSTEM    = 0x1
-+    }
-+
-+    int pthread_attr_getinheritsched(in pthread_attr_t*, int*);
-+    int pthread_attr_getschedpolicy(in pthread_attr_t*, int*);
-+    int pthread_attr_getscope(in pthread_attr_t*, int*);
-+    int pthread_attr_setinheritsched(pthread_attr_t*, int);
-+    int pthread_attr_setschedpolicy(pthread_attr_t*, int);
-+    int pthread_attr_setscope(in pthread_attr_t*, int);
-+    int pthread_getschedparam(pthread_t, int*, sched_param*);
-+    int pthread_setschedparam(pthread_t, int, sched_param*);
-+    //int pthread_setschedprio(pthread_t, int);
-+}
- else version (Solaris)
- {
-     enum
-@@ -953,6 +1125,15 @@ else version( FreeBSD )
+@@ -1097,6 +1224,15 @@ else version( DragonFlyBSD )
      int pthread_attr_setstackaddr(pthread_attr_t*, void*);
      int pthread_attr_setstacksize(pthread_attr_t*, size_t);
  }
@@ -248,19 +187,19 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      int pthread_attr_getstack(in pthread_attr_t*, void**, size_t*);
-@@ -1006,6 +1187,15 @@ else version( FreeBSD )
-     int pthread_rwlockattr_getpshared(in pthread_rwlockattr_t*, int*);
-     int pthread_rwlockattr_setpshared(pthread_rwlockattr_t*, int);
- }
-+else version( NetBSD )
-+{
-+    int pthread_condattr_getpshared(in pthread_condattr_t*, int*);
-+    int pthread_condattr_setpshared(pthread_condattr_t*, int);
+@@ -1154,6 +1290,15 @@ else version( DragonFlyBSD )
+ {
+     int pthread_condattr_getpshared(in pthread_condattr_t*, int*);
+     int pthread_condattr_setpshared(pthread_condattr_t*, int);
 +    int pthread_mutexattr_getpshared(in pthread_mutexattr_t*, int*);
 +    int pthread_mutexattr_setpshared(pthread_mutexattr_t*, int);
 +    int pthread_rwlockattr_getpshared(in pthread_rwlockattr_t*, int*);
 +    int pthread_rwlockattr_setpshared(pthread_rwlockattr_t*, int);
 +}
- else version( OSX )
- {
-     int pthread_condattr_getpshared(in pthread_condattr_t*, int*);
++else version( NetBSD )
++{
++    int pthread_condattr_getpshared(in pthread_condattr_t*, int*);
++    int pthread_condattr_setpshared(pthread_condattr_t*, int);
+     int pthread_mutexattr_getpshared(in pthread_mutexattr_t*, int*);
+     int pthread_mutexattr_setpshared(pthread_mutexattr_t*, int);
+     int pthread_rwlockattr_getpshared(in pthread_rwlockattr_t*, int*);

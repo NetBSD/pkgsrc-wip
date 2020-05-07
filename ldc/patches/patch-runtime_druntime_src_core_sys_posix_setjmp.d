@@ -1,10 +1,8 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/sys/posix/setjmp.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/setjmp.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/setjmp.d
-@@ -170,6 +170,26 @@ else version( FreeBSD )
+@@ -185,6 +185,26 @@ else version( DragonFlyBSD )
      int  setjmp(ref jmp_buf);
      void longjmp(ref jmp_buf, int);
  }
@@ -31,10 +29,11 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( CRuntime_Bionic )
  {
      // <machine/setjmp.h>
-@@ -238,6 +258,24 @@ else version( FreeBSD )
+@@ -270,6 +290,24 @@ else version( DragonFlyBSD )
+ 
      int  sigsetjmp(ref sigjmp_buf);
      void siglongjmp(ref sigjmp_buf, int);
- }
++}
 +else version( NetBSD )
 +{
 +    // <machine/setjmp.h>
@@ -52,20 +51,6 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 +
 +    int  sigsetjmp(ref sigjmp_buf);
 +    void siglongjmp(ref sigjmp_buf, int);
-+}
- else version( CRuntime_Bionic )
- {
-     alias c_long[_JBLEN + 1] sigjmp_buf;
-@@ -264,6 +302,12 @@ else version( FreeBSD )
-     int  _setjmp(ref jmp_buf);
-     void _longjmp(ref jmp_buf, int);
  }
-+else version( NetBSD )
-+{
-+    int  _setjmp(ref jmp_buf);
-+    void _longjmp(ref jmp_buf, int);
-+}
-+
  else version( CRuntime_Bionic )
  {
-     int  _setjmp(ref jmp_buf);

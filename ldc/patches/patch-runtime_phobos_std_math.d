@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
 
---- runtime/phobos/std/math.d.orig	2016-02-13 20:04:46.000000000 +0000
+--- runtime/phobos/std/math.d.orig	2018-08-23 23:30:04.000000000 +0000
 +++ runtime/phobos/std/math.d
-@@ -750,7 +750,8 @@ ireal sin(ireal y) @safe pure nothrow @n
+@@ -752,7 +752,8 @@ ireal sin(ireal y) @safe pure nothrow @n
  @safe pure nothrow @nogc unittest
  {
    assert(sin(0.0+0.0i) == 0.0);
@@ -14,7 +14,7 @@ Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
  }
  
  /***********************************
-@@ -775,7 +776,8 @@ real cos(ireal y) @safe pure nothrow @no
+@@ -777,7 +778,8 @@ real cos(ireal y) @safe pure nothrow @no
  @safe pure nothrow @nogc unittest
  {
      assert(cos(0.0+0.0i)==1.0);
@@ -24,7 +24,7 @@ Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
      assert(cos(5.2Li)== cosh(5.2L));
  }
  
-@@ -1001,7 +1003,7 @@ Lret: {}
+@@ -1032,7 +1034,7 @@ Lret: {}
  
  unittest
  {
@@ -33,19 +33,17 @@ Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
  }
  
  /***************
-@@ -2420,8 +2422,9 @@ creal expi(real y) @trusted pure nothrow
- 
+@@ -2579,7 +2581,8 @@ creal expi(real y) @trusted pure nothrow
  ///
  @safe pure nothrow @nogc unittest
--{
+ {
 -    assert(expi(1.3e5L) == cos(1.3e5L) + sin(1.3e5L) * 1i);
-+{
 +    assert(feqrel(expi(1.3e5L).re, (cos(1.3e5L) + sin(1.3e5L) * 1i).re)> real.mant_dig-15);
 +    assert(feqrel(expi(1.3e5L).im, (cos(1.3e5L) + sin(1.3e5L) * 1i).im)> real.mant_dig-15);
      assert(expi(0.0L) == 1L + 0.0Li);
  }
  
-@@ -3541,8 +3544,8 @@ real log2(real x) @safe pure nothrow @no
+@@ -3694,8 +3697,8 @@ real log2(real x) @safe pure nothrow @no
  ///
  unittest
  {
@@ -56,14 +54,10 @@ Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
  }
  
  /*****************************************
-@@ -7415,6 +7418,34 @@ private real polyImpl(real x, in real[] 
-                 ;
-             }
-         }
-+        else version (NetBSD)
-+        {
-+            asm pure nothrow @nogc // assembler by W. Bright
-+            {
+@@ -7639,6 +7642,34 @@ private real polyImpl(real x, in real[]
+         {
+             asm pure nothrow @nogc // assembler by W. Bright
+             {
 +                // EDX = (A.length - 1) * real.sizeof
 +                mov     ECX,A[EBP]              ; // ECX = A.length
 +                dec     ECX                     ;
@@ -88,6 +82,10 @@ Stolen from https://github.com/nrTQgc/phobos/tree/netbsd
 +                ;
 +            }
 +        }
-         else
-         {
-             static assert(0);
++        else version (NetBSD)
++        {
++            asm pure nothrow @nogc // assembler by W. Bright
++            {
+                 // EDX = (A.length - 1) * real.sizeof
+                 mov     ECX,A[EBP]              ; // ECX = A.length
+                 dec     ECX                     ;

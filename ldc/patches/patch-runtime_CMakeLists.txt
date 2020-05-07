@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- runtime/CMakeLists.txt.orig	2018-08-23 23:29:39.000000000 +0000
++++ runtime/CMakeLists.txt
+@@ -575,7 +575,7 @@ set(DRUNTIME_PACKAGES core etc ldc)
+ 
+ install(FILES ${RUNTIME_DIR}/src/object.d DESTINATION ${INCLUDE_INSTALL_DIR}/ldc)
+ foreach(p ${DRUNTIME_PACKAGES})
+-    install(DIRECTORY ${RUNTIME_DIR}/src/${p} DESTINATION ${INCLUDE_INSTALL_DIR})
++    install(DIRECTORY ${RUNTIME_DIR}/src/${p} DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT copy-files PATTERN "*.orig" EXCLUDE)
+ endforeach()
+ if(PHOBOS2_DIR)
+     install(DIRECTORY ${PHOBOS2_DIR}/std DESTINATION ${INCLUDE_INSTALL_DIR} FILES_MATCHING PATTERN "*.d")

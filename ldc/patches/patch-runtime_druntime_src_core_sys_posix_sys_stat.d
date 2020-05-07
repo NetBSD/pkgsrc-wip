@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/sys/stat.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/sys/stat.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/sys/stat.d
-@@ -777,6 +777,70 @@ else version( FreeBSD )
+@@ -839,6 +839,70 @@ else version( DragonFlyBSD )
      extern (D) bool S_ISLNK( mode_t mode )  { return S_ISTYPE( mode, S_IFLNK );  }
      extern (D) bool S_ISSOCK( mode_t mode ) { return S_ISTYPE( mode, S_IFSOCK ); }
  }
@@ -75,7 +75,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      private enum _ST_FSTYPSZ = 16;
-@@ -1105,6 +1169,15 @@ else version( FreeBSD )
+@@ -1200,6 +1264,15 @@ else version( DragonFlyBSD )
      int   lstat(in char*, stat_t*);
      int   stat(in char*, stat_t*);
  }
@@ -91,14 +91,10 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( CRuntime_Bionic )
  {
      int   fstat(int, stat_t*) @trusted;
-@@ -1174,6 +1247,19 @@ else version( FreeBSD )
- 
-     int mknod(in char*, mode_t, dev_t);
- }
-+else version( NetBSD )
-+{
-+    enum S_IFMT     = 0xF000; // octal 0170000
-+    enum S_IFBLK    = 0x6000; // octal 0060000
+@@ -1273,6 +1346,19 @@ else version( DragonFlyBSD )
+ {
+     enum S_IFMT     = 0xF000; // octal 0170000
+     enum S_IFBLK    = 0x6000; // octal 0060000
 +    enum S_IFCHR    = 0x2000; // octal 0020000
 +    enum S_IFIFO    = 0x1000; // octal 0010000
 +    enum S_IFREG    = 0x8000; // octal 0100000
@@ -108,6 +104,10 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 +
 +    int mknod(in char*, mode_t, dev_t);
 +}
- else version (Solaris)
- {
-     enum S_IFMT = 0xF000;
++else version( NetBSD )
++{
++    enum S_IFMT     = 0xF000; // octal 0170000
++    enum S_IFBLK    = 0x6000; // octal 0060000
+     enum S_IFCHR    = 0x2000; // octal 0020000
+     enum S_IFIFO    = 0x1000; // octal 0010000
+     enum S_IFREG    = 0x8000; // octal 0100000

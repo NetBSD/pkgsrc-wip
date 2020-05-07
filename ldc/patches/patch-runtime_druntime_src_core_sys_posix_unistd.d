@@ -1,10 +1,8 @@
 $NetBSD$
 
-Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
-
---- runtime/druntime/src/core/sys/posix/unistd.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/unistd.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/unistd.d
-@@ -116,6 +116,11 @@ else version( FreeBSD )
+@@ -121,6 +121,11 @@ else version( DragonFlyBSD )
      off_t lseek(int, off_t, int) @trusted;
      int   ftruncate(int, off_t) @trusted;
  }
@@ -16,7 +14,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( Solaris )
  {
      version ( D_LP64 )
-@@ -808,6 +813,143 @@ else version( FreeBSD )
+@@ -968,6 +973,143 @@ else version( DragonFlyBSD )
          _CS_POSIX_V6_WIDTH_RESTRICTED_ENVS =  14,
      }
  }
@@ -160,25 +158,10 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version( CRuntime_Bionic )
  {
      enum F_OK       = 0;
-@@ -1106,6 +1248,10 @@ else version( FreeBSD )
+@@ -1428,6 +1570,31 @@ else version( DragonFlyBSD )
  {
-     int fsync(int) @trusted;
- }
-+else version( NetBSD )
-+{
-+    int fsync(int) @trusted;
-+}
- else version( Android )
- {
-     int fsync(int) @trusted;
-@@ -1260,6 +1406,31 @@ else version( FreeBSD )
-     int        usleep(useconds_t) @trusted;
-     pid_t      vfork();
- }
-+else version( NetBSD )
-+{
-+    char*      crypt(in char*, in char*);
-+    //char*      ctermid(char*);
+     char*      crypt(in char*, in char*);
+     //char*      ctermid(char*);
 +    void       encrypt(ref char[64], int) @trusted;
 +    int        fchdir(int) @trusted;
 +    c_long     gethostid() @trusted;
@@ -200,6 +183,10 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 +    int        usleep(useconds_t) @trusted;
 +    pid_t      vfork();
 +}
- else version( CRuntime_Bionic )
- {
++else version( NetBSD )
++{
++    char*      crypt(in char*, in char*);
++    //char*      ctermid(char*);
+     void       encrypt(ref char[64], int) @trusted;
      int        fchdir(int) @trusted;
+     c_long     gethostid() @trusted;

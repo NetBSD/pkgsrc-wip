@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/sys/mman.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/sys/mman.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/sys/mman.d
-@@ -76,6 +76,16 @@ else version( FreeBSD )
+@@ -85,6 +85,16 @@ else version( DragonFlyBSD )
      enum POSIX_MADV_DONTNEED    = 4;
      int posix_madvise(void *addr, size_t len, int advice);
  }
@@ -21,7 +21,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
  }
-@@ -118,6 +128,13 @@ else version( FreeBSD )
+@@ -134,6 +144,13 @@ else version( DragonFlyBSD )
      enum PROT_WRITE     = 0x02;
      enum PROT_EXEC      = 0x04;
  }
@@ -35,7 +35,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum PROT_NONE = 0x00;
-@@ -164,6 +181,11 @@ else version( FreeBSD )
+@@ -185,6 +202,11 @@ else version( DragonFlyBSD )
      void* mmap(void*, size_t, int, int, int, off_t);
      int   munmap(void*, size_t);
  }
@@ -47,7 +47,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      void* mmap(void*, size_t, int, int, int, off_t);
-@@ -318,6 +340,21 @@ else version( FreeBSD )
+@@ -354,6 +376,21 @@ else version( DragonFlyBSD )
  
      int msync(void*, size_t, int);
  }
@@ -69,7 +69,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum MAP_SHARED = 0x0001;
-@@ -429,6 +466,14 @@ else version( FreeBSD )
+@@ -477,6 +514,14 @@ else version( DragonFlyBSD )
      int mlockall(int);
      int munlockall();
  }
@@ -84,7 +84,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      enum MCL_CURRENT = 0x0001;
-@@ -473,6 +518,11 @@ else version( FreeBSD )
+@@ -526,6 +571,11 @@ else version( DragonFlyBSD )
      int mlock(in void*, size_t);
      int munlock(in void*, size_t);
  }
@@ -96,7 +96,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      int mlock(in void*, size_t);
-@@ -507,6 +557,10 @@ else version( FreeBSD )
+@@ -564,6 +614,10 @@ else version( DragonFlyBSD )
  {
      int mprotect(void*, size_t, int);
  }
@@ -107,15 +107,15 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      int mprotect(void*, size_t, int);
-@@ -543,6 +597,11 @@ else version( FreeBSD )
+@@ -604,6 +658,11 @@ else version( DragonFlyBSD )
+ {
      int shm_open(in char*, int, mode_t);
      int shm_unlink(in char*);
- }
++}
 +else version( NetBSD )
 +{
 +    int shm_open(in char*, int, mode_t);
 +    int shm_unlink(in char*);
-+}
+ }
  else version (Solaris)
  {
-     int shm_open(in char*, int, mode_t);

@@ -2,9 +2,9 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/dirent.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/dirent.d.orig	2018-08-23 23:29:55.000000000 +0000
 +++ runtime/druntime/src/core/sys/posix/dirent.d
-@@ -142,6 +142,36 @@ else version( FreeBSD )
+@@ -172,6 +172,36 @@ else version( DragonFlyBSD )
  
      dirent* readdir(DIR*);
  }
@@ -41,7 +41,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      struct dirent
-@@ -205,11 +235,20 @@ else
+@@ -243,11 +273,20 @@ else
      static assert(false, "Unsupported platform");
  }
  
@@ -63,7 +63,7 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  //
  // Thread-Safe Functions (TSF)
  //
-@@ -237,6 +276,12 @@ else version( FreeBSD )
+@@ -279,6 +318,12 @@ else version( DragonFlyBSD )
  {
      int readdir_r(DIR*, dirent*, dirent**);
  }
@@ -76,15 +76,15 @@ Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
  else version (Solaris)
  {
      static if (__USE_LARGEFILE64)
-@@ -276,6 +321,11 @@ else version( FreeBSD )
+@@ -322,6 +367,11 @@ else version( DragonFlyBSD )
+ {
      void   seekdir(DIR*, c_long);
      c_long telldir(DIR*);
- }
++}
 +else version( NetBSD )
 +{
 +    void   seekdir(DIR*, c_long);
 +    c_long telldir(DIR*);
-+}
+ }
  else version (OSX)
  {
- }

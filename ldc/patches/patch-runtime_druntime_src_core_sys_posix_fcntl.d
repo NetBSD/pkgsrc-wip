@@ -2,11 +2,11 @@ $NetBSD$
 
 Stolen from https://github.com/nrTQgc/druntime/tree/netbsd
 
---- runtime/druntime/src/core/sys/posix/fcntl.d.orig	2016-02-13 20:02:16.000000000 +0000
+--- runtime/druntime/src/core/sys/posix/fcntl.d.orig	2020-05-07 08:52:15.234684078 +0000
 +++ runtime/druntime/src/core/sys/posix/fcntl.d
-@@ -367,6 +367,59 @@ else version( FreeBSD )
-     int creat(in char*, mode_t);
-     int open(in char*, int, ...);
+@@ -462,6 +462,59 @@ else version( DragonFlyBSD )
+     //int fcntl(int, int, ...);  /*defined below*/
+     //int flock(int, int);
  }
 +else version( NetBSD )
 +{
