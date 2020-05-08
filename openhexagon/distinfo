@@ -36,12 +36,5 @@ SHA1 (SSVUtilsJson-95836250e3a9b65883f22991190e652a455121c1.tar.gz) = 31338e8e2f
 RMD160 (SSVUtilsJson-95836250e3a9b65883f22991190e652a455121c1.tar.gz) = 2c38b263bfd125772dd4c2799a5579a41e941b3f
 SHA512 (SSVUtilsJson-95836250e3a9b65883f22991190e652a455121c1.tar.gz) = bcc01f6dc70353100ca3cf184d16c65ebac0cc0b256aa31c0c9c8925b96eb6cd3dc79c685d4d250f83ca3656498d927da796c5fdd813518db3d15cf096a11f97
 Size (SSVUtilsJson-95836250e3a9b65883f22991190e652a455121c1.tar.gz) = 8298 bytes
-<<<<<<< HEAD
-SHA1 (patch-SSVEntitySystem-8123beabe3bc8ffe91cb94e6ba061254f3bba18b_CMakeLists.txt) = 98103b65ed2d871d2095c90dab073339024cab6c
-SHA1 (patch-SSVOpenHexagon-2.0-preview_CMakeLists.txt) = a29047c7d863e96c353a4ab86cb590150415dcd3
-SHA1 (patch-SSVStart-112229f184f5e4cf88c71fe67b4588806d290f71_CMakeLists.txt) = 508ac106c391ec1800873236407776f479e0bf53
-SHA1 (patch-SSVUtilsJson-95836250e3a9b65883f22991190e652a455121c1_CMakeLists.txt) = 9f67af75893a1c191eb88ce96a74d282fd061104
-SHA1 (patch-src_SSVOpenHexagon_Online_Online.cpp) = 0676a63784d6e5ac0a24ba4b6a7ae5513c6c8d3a
-=======
 SHA1 (patch-CMakeLists.txt) = 7dacdc7f2596b7586b9b73bac1404621f2b01009
->>>>>>> 4296dd44a... openhexagon: rework build
+SHA1 (patch-src_SSVOpenHexagon_Online_Online.cpp) = 0676a63784d6e5ac0a24ba4b6a7ae5513c6c8d3a
