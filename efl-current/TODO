@@ -1,0 +1,29 @@
+:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-05-08 >> build fail
+
+Message: ecore_buffer disabled! <[dependency('wayland-client'), dependency('wayland-server'), ecore]
+Message: ecore_cocoa disabled! < osx
+Message: ecore_drm disabled! < dep: eeze
+Message: ecore_drm2 disabled! < dep: eeze
+Message: ecore_fb disabled! < deafault false, Framebuffer (/dev/fb / fbocon) support in efl
+Message: ecore_wayland disabled! <[dependency('wayland-client', version: '>= 1.8.0'), dependency('wayland-cursor', version: '>= 1.8.0 '), \
+				   dependency('xkbcommon', version: '>= 0.5.0'), dependency('uuid')]
+Message: ecore_wl2 disabled! <[dependency('wayland-client'), dependency('wayland-server'), dependency('xkbcommon'), \
+				  wayland_protocol, dl, m, ecore, ecore_input, libdrm, buildsystem]
+Message: eeze disabled! < linuxism
+Message: efl_canvas_wl disabled! <[eo, efl, evas, dependency('wayland-server', version : '>= 1.11.0'), dependency('xkbcommon', version : '>= 0.6.0')]
+Message: elput disabled! < dep: eeze
+
+FAILED: src/lib/elementary/efl_ui_default_item.eo.h                                                                                                                        
+/home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/output/src/bin/eolian/eolian_gen -S -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/elementar 
+y -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/eo -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib -I /home/kikadf/work/pkgsrc/w 
+ip/efl-current/work/efl-1.24.0/src/lib/efl/interfaces -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/ecore -I /home/kikadf/work/pkgsrc/wip/efl-curren 
+t/work/efl-1.24.0/src/lib/eldbus -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/ecore_con -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0 
+/src/lib/ector -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/evas -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/evas/include - 
+I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/eio -I /home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/src/lib/edje -I /home/kikadf/work/pkgsr 
+c/wip/efl-current/work/efl-1.24.0/src/lib/emotion -o h:/home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/output/src/lib/elementary/efl_ui_default_item.eo.h -o c:/h 
+ome/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/output/src/lib/elementary/efl_ui_default_item.eo.c -o d:/home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/ou 
+tput/src/lib/elementary/efl_ui_default_item.eo.d -gchd ../src/lib/elementary/efl_ui_default_item.eo                                                                        
+/home/kikadf/work/pkgsrc/wip/efl-current/work/efl-1.24.0/output/src/bin/eolian/eolian_gen: Shared object "libeolian.so.1" not found
+
+:: Plan
+1. Build on Arch Linux to check: is build fail NetBSD specific or not

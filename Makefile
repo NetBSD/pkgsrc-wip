@@ -693,6 +693,7 @@ SUBDIR+=	edbrowse
 SUBDIR+=	edelib
 SUBDIR+=	eduke32
 SUBDIR+=	efgallery
+SUBDIR+=	efl-current
 SUBDIR+=	efl121
 SUBDIR+=	efltk
 SUBDIR+=	eic
