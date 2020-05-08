@@ -1,5 +1,0 @@
-C++14 simple entity/component system for realtime games. Simplicity
-of use is preferred over a real "entity-component-system" hierarchy.
-Components update and draw themselves (users create their own components
-and override the virtual methods). Fast, easy to use and to expand.
-Should be fine for any simple game.

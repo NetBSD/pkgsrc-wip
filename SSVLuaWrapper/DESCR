@@ -1,3 +1,0 @@
-A C++11 LUA wrapper written by Tomaka17.
-The original project is discontinued. This was created with the original
-code, removed the non-C++11 parts and formatted it.

@@ -1,7 +1,0 @@
-@comment $NetBSD$
-include/SSVUtilsJson/LinkedValue/LinkedValue.h
-include/SSVUtilsJson/SSVUtilsJson.h
-include/SSVUtilsJson/Utils/Internal/Helper.h
-include/SSVUtilsJson/Utils/Internal/Typedefs.h
-include/SSVUtilsJson/Utils/UtilsJson.h
-lib/cmake/FindSSVUtilsJson.cmake
