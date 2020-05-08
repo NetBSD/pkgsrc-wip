@@ -7,11 +7,6 @@ This seems to be working if slow on my computer
 - this is the last tagged version of OpenHexagon and is 7
   years old but there has been some work upstream since
 
-- the dependencies suck there are no version numbers have
-  just used the tag that was used in the submodule. The
-  submodules need to be built before we run cmake here so
-  have packaged them separately
-
 - I have written a wrapper script which sets up a
   $HOME/.openhexagon dir with symlinks to the assets etc
   it kind of works but could be better, particularly

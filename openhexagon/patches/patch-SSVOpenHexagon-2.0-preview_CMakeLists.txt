@@ -1,9 +1,11 @@
 $NetBSD$
 
-find dependencies and install in relation to pkgsrc
+find submodules correctly
 
---- CMakeLists.txt.orig	2013-07-13 23:37:47.000000000 +0000
-+++ CMakeLists.txt
+install in pkgsrc dirs
+
+--- SSVOpenHexagon-2.0-preview/CMakeLists.txt.orig	2013-07-13 23:37:47.000000000 +0000
++++ SSVOpenHexagon-2.0-preview/CMakeLists.txt
 @@ -6,14 +6,7 @@ project(SSVOpenHexagon)
  set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Wextra -W -pedantic" CACHE STRING "" FORCE)
  set(CMAKE_CXX_FLAGS_RELEASE "-DNDEBUG -O3" CACHE STRING "" FORCE)

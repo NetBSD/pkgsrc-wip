@@ -1,0 +1,16 @@
+$NetBSD$
+
+find submodules correctly
+
+--- SSVEntitySystem-8123beabe3bc8ffe91cb94e6ba061254f3bba18b/CMakeLists.txt.orig	2013-07-13 23:17:16.000000000 +0000
++++ SSVEntitySystem-8123beabe3bc8ffe91cb94e6ba061254f3bba18b/CMakeLists.txt
+@@ -6,8 +6,7 @@ project(SSVEntitySystem)
+ set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Wextra -W -pedantic" CACHE STRING "" FORCE)
+ set(CMAKE_CXX_FLAGS_RELEASE "-DNDEBUG -O3" CACHE STRING "" FORCE)
+ set(CMAKE_CXX_FLAGS_DEBUG "-fno-omit-frame-pointer -g3 -gdwarf-2 -O0" CACHE STRING "" FORCE)
+-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${CMAKE_MODULE_PATH}")
+-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/extlibs/SSVUtils/cmake/modules/;${CMAKE_MODULE_PATH}")
++set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/;${MODULE_PATH}")
+ 
+ set(BUILD_SHARED_LIB TRUE CACHE BOOL "Build shared libraries.")
+ if(BUILD_SHARED_LIB)
