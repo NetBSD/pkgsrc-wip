@@ -2402,6 +2402,7 @@ SUBDIR+=	nodau
 SUBDIR+=	nodm
 SUBDIR+=	noip
 SUBDIR+=	noiptun
+SUBDIR+=	nomad
 SUBDIR+=	nomadio
 SUBDIR+=	nominatim
 SUBDIR+=	nongnu-libunwind-git
