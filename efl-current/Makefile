@@ -10,6 +10,20 @@ HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Enlightenment foundation libraries
 LICENSE=	2-clause-bsd
 
+EFL_LIBRARY_PATH=	${WRKSRC}/output/src/lib
+
+EFLLIBS=	ecore ecore_audio ecore_avahi ecore_con ecore_evas
+EFLLIBS+=	ecore_file ecore_imf ecore_imf_evas ecore_input ecore_input_evas
+EFLLIBS+=	ecore_ipc ecore_sdl ecore_x ector edje eet efl efreet
+EFLLIBS+=	eina eio eldbus elementary elua embryo emile emotion
+EFLLIBS+=	eo eolian ephysics ethumb ethumb_client evas evil
+
+.for e in ${EFLLIBS}
+EFL_LIBRARY_PATH:=	${EFL_LIBRARY_PATH}:${WRKSRC}/output/src/lib/${e}
+.endfor
+
+MAKE_ENV+=	LD_LIBRARY_PATH=${EFL_LIBRARY_PATH}
+
 MESON_ARGS+=	-Dsystemd=false
 MESON_ARGS+=	-Deeze=false
 MESON_ARGS+=	-Dpulseaudio=false
@@ -18,15 +32,11 @@ MESON_ARGS+=	-Dphysics=true
 MESON_ARGS+=	-Davahi=true
 MESON_ARGS+=	-Dsdl=true
 
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS=		pkg-config
-LDFLAGS+=		-lcompat
 ICON_THEMES=		yes
 
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
-BUILD_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
