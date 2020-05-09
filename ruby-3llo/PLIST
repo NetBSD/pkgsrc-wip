@@ -90,5 +90,3 @@ ${GEM_LIBDIR}/lib/3llo/view/list/help.rb
 ${GEM_LIBDIR}/lib/3llo/view/list/list.rb
 ${GEM_LIBDIR}/lib/container.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.6.0/extensions
-@pkgdir lib/ruby/gems/2.6.0/build_info
