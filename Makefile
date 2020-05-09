@@ -4353,6 +4353,7 @@ SUBDIR+=	rtspdump
 SUBDIR+=	rtv
 SUBDIR+=	rubiks
 SUBDIR+=	rubrica2
+SUBDIR+=	ruby-3llo
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-actionpack52-xml_parser
 SUBDIR+=	ruby-asciidoctor
