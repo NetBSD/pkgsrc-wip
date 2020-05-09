@@ -168,10 +168,10 @@ MAKE_FLAGS+=	USE_PULSE=
 ###
 .if !empty(PKG_OPTIONS:Msdl2)
 PLIST.sdl2=	yes
-MAKE_FLAGS+=	USE_SDL2=yes
+MAKE_FLAGS+=	USE_SDL=yes
 .include "../../devel/SDL2/buildlink3.mk"
 .else
-MAKE_FLAGS+=	USE_SDL2=
+MAKE_FLAGS+=	USE_SDL=
 .endif
 
 ###
