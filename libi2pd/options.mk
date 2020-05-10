@@ -34,22 +34,3 @@ CMAKE_ARGS+=	-DWITH_AESNI=ON
 .else
 CMAKE_ARGS+=	-DWITH_AESNI=OFF
 .endif
-
-###
-### Used when building i2lua
-###
-.if !empty(PKG_OPTIONS:Mi2lua)
-CMAKE_ARGS+=	-DWITH_I2LUA=yes
-.else
-CMAKE_ARGS+=	-DWITH_I2LUA=no
-.endif
-
-###
-### Enable websocket server
-###
-.if !empty(PKG_OPTIONS:Mwebsockets)
-CMAKE_ARGS+=	-DWITH_WEBSOCKETS=yes
-.include "../../net/websocketpp/buildlink3.mk"
-.else
-CMAKE_ARGS+=	-DWITH_WEBSOCKETS=no
-.endif
