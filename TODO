@@ -90,6 +90,7 @@ Suggested package updates
 	o mythtv-0.28.0
 	o nautilus-open-terminal-0.19
 	o neovim-0.4.0
+	o nuspell-3.1.1
 	o ogmrip-1.0.0
 	o omega-1.2.10
 	o openblas-0.3.9
@@ -104,6 +105,7 @@ Suggested package updates
 	o py-bitstring-3.1.3
 	o py-kivy-1.9.1
 	o py-rpyc-3.2.1
+	o py-smmap-3.0.4
 	o py-smop-0.29
 	o py-vanguards-0.3.1
 	o py-xpra-2.2.1
@@ -130,7 +132,7 @@ Suggested package updates
 	o taglib-sharp-2.1.0.0
 	o taskcoach-1.3.14
 	o tmw-0.0.29.1
-	o tokei-11.1.0
+	o tokei-11.1.1
 	o torcs-1.3.6
 	o trinity-14.0.3
 	o umurmur-0.2.17
