@@ -28,6 +28,7 @@ MESON_ARGS+=	-Dsystemd=false
 MESON_ARGS+=	-Deeze=false
 MESON_ARGS+=	-Dpulseaudio=false
 MESON_ARGS+=	-Dbuild-tests=false
+MESON_ARGS+=	-Dbuild-examples=false
 MESON_ARGS+=	-Dphysics=true
 MESON_ARGS+=	-Davahi=true
 MESON_ARGS+=	-Dsdl=true
@@ -35,6 +36,16 @@ MESON_ARGS+=	-Dsdl=true
 USE_LANGUAGES=		c c++
 USE_TOOLS=		pkg-config
 ICON_THEMES=		yes
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing exactness library paths.
+SUBST_FILES.fix-paths=		src/bin/exactness/*.in
+SUBST_SED.fix-paths=		-e 's,@EXACTNESS_PLAY_PRELOAD_PATH@,${PREFIX}/lib/libexactness_play.so.${PKGVERSION},g'
+SUBST_SED.fix-paths+=		-e 's,@EXACTNESS_RECORD_PRELOAD_PATH@,${PREFIX}/lib/libexactness_record.so.${PKGVERSION},g'
+
+REPLACE_PYTHON+=	src/bin/exactness/exactness_play.in
+REPLACE_PYTHON+=	src/bin/exactness/exactness_record.in
 
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 
@@ -51,6 +62,7 @@ BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../inputmethod/scim/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
