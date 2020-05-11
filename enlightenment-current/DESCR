@@ -1,0 +1,5 @@
+Enlightenment is the graphical desktop shell from the Enlightenment project.
+It resembles a traditional UNIX/X1 style desktop by design but has a range
+of add-ons, as well as a different core design philosophy.  Enlightenment
+manages windows and files. It's a compositor and is also capable of launching
+applications, handling the user interface and even system settings.
