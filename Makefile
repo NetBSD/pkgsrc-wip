@@ -5025,7 +5025,6 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wmsupermon
 SUBDIR+=	wmswallow
 SUBDIR+=	wolf4SDL
-SUBDIR+=	woof
 SUBDIR+=	workrave
 SUBDIR+=	wp2md-git
 SUBDIR+=	wpro
