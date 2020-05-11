@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config bsdtar:run gzip:run 7za:run
+USE_TOOLS+=	pkg-config bsdtar:run gzip:run 7za:run gtar:run bzip2:run unzip:run zip:run xz:run
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
