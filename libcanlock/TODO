@@ -1,1 +1,1 @@
-[ ] Make testsuite work again without exporting all internal symbols.
+[X] Make testsuite work again without exporting all internal symbols.
