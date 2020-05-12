@@ -136,6 +136,7 @@ Part 9: Support for internal blockmap creation
 ==============================================
 Make it possible to play maps with broken blockmaps (or no blockmaps at all).
 
+[X] Imported code based on Crispy Doom 5.8.0
 [ ] Fix for NOVA II (Bug #658)
 [ ] Fix for NOVA III (blockmaps missing completely)
 [ ] Command line option "-blockmap" like in PrBoom+
