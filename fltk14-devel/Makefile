@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
 GITHUB_TAG=	940b7ba13d26dcde4fbd4574d56167501e598327
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 LICENSE=	gnu-lgpl-v2
