@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libcanlock-3.2.0rc1
+DISTNAME=	libcanlock-3.2.0rc2
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,9 +15,6 @@ USE_LANGUAGES+=	c99
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-# For testing patch only, remove for release
-USE_TOOLS+=	autoconf automake
-
 TEST_TARGET=	test
 
 # Recent NetBSD has a namespace clash with its implementation defined extensions
@@ -28,9 +25,5 @@ CONFIGURE_ARGS+=	--enable-pc-files
 CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/lib/pkgconfig
 # The header parsers are available as a separate package news/canlock-hp
 CONFIGURE_ARGS+=	--disable-hp
-
-# For testing patch only, remove for release
-pre-configure:
-	set -e; cd ${WRKSRC}; autoreconf -v -i -f
 
 .include "../../mk/bsd.pkg.mk"
