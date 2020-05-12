@@ -3,7 +3,7 @@
 DISTNAME=	qutebrowser-1.11.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qutebrowser/}
-GITHUB_TAG=	v1.11.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://qutebrowser.org/
