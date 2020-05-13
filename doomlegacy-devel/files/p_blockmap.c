@@ -4,6 +4,7 @@
 //                   Rand Phares, Ty Halderman
 // Copyright(C) 2005-2014 Simon Howard
 // Copyright(C) 2017 Fabian Greffrath
+// Copyright(C) 2020 by DooM Legacy Team
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -16,32 +17,40 @@
 // GNU General Public License for more details.
 //
 // DESCRIPTION:
-//    [crispy] Create Blockmap
+// [crispy] Create Blockmap
+// [MB] 2020-05-13: Description of blockmap lump format:
+//      https://doomwiki.org/wiki/Blockmap
 //
 
-#include <inttypes.h>
+#include <stdint.h>      // [MB] 2020-05-13: Added for C99 integer data types
 #include <stdlib.h>
-#include <string.h>
+#include <string.h>      // [MB] 2020-05-12: Added for memset()
 
-//#include "i_system.h"
-#include "doomincl.h"  // [MB] 2020-05-12: Added for I_Error()
+//#include "i_system.h"  // [MB] 2020-05-12: I_Realloc() is now here
+#include "doomincl.h"    // [MB] 2020-05-12: Added for I_Error()
 #include "p_local.h"
 #include "r_state.h"
 #include "z_zone.h"
 
 
-// [MB] 2020-05-12: Imported from Crispy Doom 5.8.0 (src/i_system.c)
 // I_Realloc
+/*
+ * [MB] 2020-05-12: Ported from Crispy Doom 5.8.0 (src/i_system.c)
+ * - Reject zero new size (would be implementation defined behaviour)
+ * - Use (unsigned long) for I_Error() (size is not a pointer)
+ */
 static void *I_Realloc(void *ptr, size_t size)
 {
-    void *new_ptr;
+    void *new_ptr = NULL;
 
-    new_ptr = realloc(ptr, size);
-
-    if (size != 0 && new_ptr == NULL)
+    if (0 == size)
+        I_Error("I_Realloc: Failed on zero new size");
+    else
     {
-        I_Error("I_Realloc: failed on reallocation of %" PRIuPTR " bytes",
-                size);
+        new_ptr = realloc(ptr, size);
+        if (NULL == new_ptr)
+            I_Error("I_Realloc: Failed on reallocation of %lu bytes",
+                    (unsigned long) size);
     }
 
     return new_ptr;
@@ -49,11 +58,15 @@ static void *I_Realloc(void *ptr, size_t size)
 
 
 // [crispy] taken from mbfsrc/P_SETUP.C:547-707, slightly adapted
-// [MB] 2020-05-12: Change indentation to 4 SPs (matching Doom Legacy style)
-// [MB] 2020-05-12: Replace blockmap with blockmapindex (unsigned)
-// [MB] 2020-05-12: Replace blockmaplump with blockmaphead (unsigned)
-// [MB] 2020-05-12: Added typecasts for unsigned target types
-
+/*
+ *  [MB] 2020-05-12: Ported from Crispy Doom 5.8.0 (src/doom/p_blockmap.c)
+ *  - Change indentation to 4 SPs (matching DooM Legacy style)
+ *  - Replace blockmap with blockmapindex (int32_t* => uint32_t*)
+ *    Global pointer to header of the blockmap lump
+ *  - Replace blockmaplump with blockmaphead (int32_t* => uint32_t*)
+ *    Global pointer to beginning of the part containing the offsets
+ *  - Added typecasts for unsigned target types
+ */
 void P_CreateBlockMap(void)
 {
     register int i;
@@ -121,12 +134,12 @@ void P_CreateBlockMap(void)
 
             // difference in preferring to move across y (>0) instead of x (<0)
             diff = !adx ? 1 : !ady ? -1 :
-                (((x >> MAPBTOFRAC) << MAPBTOFRAC) +
-                    (dx > 0 ? MAPBLOCKUNITS-1 : 0) - x) *
-                        (ady = abs(ady)) * dx -
-                (((y >> MAPBTOFRAC) << MAPBTOFRAC) +
-                    (dy > 0 ? MAPBLOCKUNITS-1 : 0) - y) *
-                        (adx = abs(adx)) * dy;
+                ( ((x >> MAPBTOFRAC) << MAPBTOFRAC) +
+                    (dx > 0 ? MAPBLOCKUNITS-1 : 0) - x ) *
+                    (ady = abs(ady)) * dx -
+                ( ((y >> MAPBTOFRAC) << MAPBTOFRAC) +
+                    (dy > 0 ? MAPBLOCKUNITS-1 : 0) - y ) *
+                    (adx = abs(adx)) * dy;
 
             // starting block, and pointer to its blocklist structure
             b = (y >> MAPBTOFRAC)*bmapwidth + (x >> MAPBTOFRAC);
@@ -149,8 +162,9 @@ void P_CreateBlockMap(void)
                 // Increase size of allocated list if necessary
                 if (bmap[b].n >= bmap[b].nalloc)
                     bmap[b].list = I_Realloc(bmap[b].list,
-                    (bmap[b].nalloc = bmap[b].nalloc ?
-                        bmap[b].nalloc*2 : 8)*sizeof*bmap->list);
+                        ( bmap[b].nalloc = bmap[b].nalloc ?
+                            bmap[b].nalloc*2 : 8 ) *
+                            sizeof*bmap->list);
 
                 // Add linedef to end of list
                 bmap[b].list[bmap[b].n++] = i;
@@ -211,20 +225,35 @@ void P_CreateBlockMap(void)
                 else       // Empty blocklist: point to reserved empty blocklist
                     blockmaphead[i] = tot;
 
-            free(bmap);    // Free uncompressed blockmap
         }
+
+        // [MB] 2020-05-13: Moved outside of last nested block to make it more
+        //                  obvious that the free() is always executed
+        free(bmap);  // Free uncompressed blockmap
     }
 
+#if 1
+    // [MB] 2020-05-13: Populate blockmap lump header
+    /*
+     * Currently DooM Legacy 1.48 does not use this header. Maybe useful for
+     * debugging.
+     */
+    {
+        blockmaphead[0] = bmaporgx>>FRACBITS;  // x coordinate of grid origin
+        blockmaphead[1] = bmaporgy>>FRACBITS;  // y coordinate of grid origin
+        blockmaphead[2] = bmapwidth;           // Number of columns
+        blockmaphead[3] = bmapheight;          // Number of rows
+    }
+#endif
+
     // [crispy] copied over from P_LoadBlockMap()
+    // [MB] 2020-05-13: Modified to match "clear out mobj chains" of DooM Legacy
     {
         int count = sizeof(*blocklinks) * bmapwidth * bmapheight;
 
         blocklinks = Z_Malloc(count, PU_LEVEL, 0);
         memset(blocklinks, 0, count);
-        blockmapindex = blockmaphead+4;
+        //blockmapindex = blockmaphead+4;
+        blockmapindex = & blockmaphead[4];
     }
-
-#if 0
-    fprintf(stderr, "+BLOCKMAP)\n");
-#endif
 }

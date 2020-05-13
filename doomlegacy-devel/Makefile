@@ -81,6 +81,7 @@ pre-configure:
 	${CP} ${FILESDIR}/doomlegacy.sh ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
 	${CP} ${FILESDIR}/p_blockmap.c ${WRKSRC}/src
+	${CP} ${FILESDIR}/p_blockmap.h ${WRKSRC}/src
 	${CP} ${FILESDIR}/p_extnodes.c ${WRKSRC}/src
 	${CP} ${FILESDIR}/p_extnodes.h ${WRKSRC}/src
 	cd ${WRKSRC} && ${CP} make_options_nix make_options
