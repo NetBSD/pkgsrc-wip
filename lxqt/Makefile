@@ -35,8 +35,8 @@ DEPENDS+=	pcmanfm-qt>=0.15.0:../../wip/pcmanfm-qt
 DEPENDS+=	qterminal>=0.15.0:../../wip/qterminal
 DEPENDS+=	lxqt-panel>=0.15.0:../../wip/lxqt-panel
 DEPENDS+=	lxqt-runner>=0.15.0:../../wip/lxqt-runner
-DEPENDS+=	screengrab>=2.0.1:../wip/screengrab
-DEPENDS+=	lxqt-archiver>=0.1.1:../wip/lxqt-archiver
+DEPENDS+=	screengrab>=2.0.1:../../wip/screengrab
+DEPENDS+=	lxqt-archiver>=0.1.1:../../wip/lxqt-archiver
 # The Oxygen icon set is the default that LXQt expects, and a compatible icon
 # theme must be present for it to be fully usable. Breeze is another option.
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
