@@ -5,6 +5,8 @@ Add support for DeeP and ZDoom extended nodes.
 Created upstream feature request:
 https://sourceforge.net/p/doomlegacy/feature-requests/95/
 
+Add support to internally create blockmap.
+
 --- src/p_setup.c.orig	2020-05-11 09:40:34.000000000 +0000
 +++ src/p_setup.c
 @@ -150,6 +150,9 @@

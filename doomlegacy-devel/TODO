@@ -137,6 +137,7 @@ Make it possible to play maps with broken blockmaps (or no blockmaps at all).
 
 [X] Import blockmap creation code based on Crispy Doom 5.8.0
 [X] Add command line option "-blockmap" like in PrBoom+
+[X] Document option "-blockmap" in man page
 [X] Usable as workaround for NOVA II (blockmap load error, Bug #658)
 [X] Usable as workaround for NOVA III (blockmaps missing completely)
 [ ] Usable as workaround for Lost Civilization
