@@ -110,7 +110,7 @@ uses "-noendtxt".
 [X] Fixed in SVN revision 1521
     => "-noendtext", as documented, was added
     => Works as expected (Reported in bugtracker for #659)
-[X] pkgsrc patch removed
+[X] pkgsrc patch removed after upstream integration
 [X] man page updated
 
 Part 6 finished.
@@ -118,7 +118,7 @@ Part 6 finished.
 
 Part 7: Import final release
 ============================
-[ ] Import version 1.48.3
+[ ] Import version 1.48.4
     Not released yet
 
 
@@ -129,19 +129,27 @@ Part 8: Support for extended nodes
     Fixes Bug #657
 [X] Created upstream feature request #95
     => Deferred (not considered for 1.48 release)
+[ ] Add optional zlib dependency for build system
+[ ] Add support for compressed ZDoom extended nodes
 
 
 Part 9: Support for internal blockmap creation
 ==============================================
 Make it possible to play maps with broken blockmaps (or no blockmaps at all).
 
-[X] Import blockmap creation code based on Crispy Doom 5.8.0
+[X] Add patch to support internal blockmap creation
+    This code is based on Crispy Doom 5.8.0
 [X] Add command line option "-blockmap" like in PrBoom+
 [X] Document option "-blockmap" in man page
-[X] Usable as workaround for NOVA II (blockmap load error, Bug #658)
-[X] Usable as workaround for NOVA III (blockmaps missing completely)
-[ ] Usable as workaround for Lost Civilization
+[X] Test as workaround for NOVA II
+    Blockmap load error, Bug #658
+    => Works as expected
+[X] Test as as workaround for NOVA III
+    Blockmaps missing completely
+    => Works as expected
+[X] Test as workaround for Lost Civilization
     It's unclear whether the blockmaps are broken or not imported correctly
+    => Works as expected
 
 
 EOF
