@@ -27,6 +27,7 @@ DEPENDS+=	guile-sqlite3-[0-9]*:../../databases/guile-sqlite3
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -I${PREFIX}/guile/2.2/share/aclocal -vif
 
+.include "../../devel/argp/buildlink3.mk"
 .include "../../lang/guile22/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
