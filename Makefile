@@ -1291,7 +1291,6 @@ SUBDIR+=	guile-reader
 SUBDIR+=	guile-stis-parser
 SUBDIR+=	guile30
 SUBDIR+=	guitone
-SUBDIR+=	guix
 SUBDIR+=	gupnp-ui
 SUBDIR+=	gurlchecker
 SUBDIR+=	gvariant

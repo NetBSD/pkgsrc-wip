@@ -1,6 +1,0 @@
-$NetBSD$
-
-SHA1 (guix-1.1.0.tar.gz) = 52f3cccd7443cb6a557f23ac45ecf051146adaf5
-RMD160 (guix-1.1.0.tar.gz) = 6ac1c6bd82ae610e9440801729453289d542276c
-SHA512 (guix-1.1.0.tar.gz) = 9f675d1cb15c9ed9003b8e2a995bd59ea1abfd50642cef234baa23c9b035d1cbe2c23d7ed6e1db44713729b3f47917260f62fe95c1009e54d7b32b7085d734a7
-Size (guix-1.1.0.tar.gz) = 26600502 bytes
