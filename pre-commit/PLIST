@@ -118,8 +118,6 @@ ${PYSITELIB}/pre_commit/languages/pygrep.pyo
 ${PYSITELIB}/pre_commit/languages/pygrep.pyc
 ${PYSITELIB}/pre_commit/languages/python.pyo
 ${PYSITELIB}/pre_commit/languages/python.pyc
-${PYSITELIB}/pre_commit/languages/python_venv.pyo
-${PYSITELIB}/pre_commit/languages/python_venv.pyc
 ${PYSITELIB}/pre_commit/languages/ruby.pyo
 ${PYSITELIB}/pre_commit/languages/ruby.pyc
 ${PYSITELIB}/pre_commit/languages/rust.pyo
@@ -141,7 +139,6 @@ ${PYSITELIB}/pre_commit/languages/node.py
 ${PYSITELIB}/pre_commit/languages/perl.py
 ${PYSITELIB}/pre_commit/languages/pygrep.py
 ${PYSITELIB}/pre_commit/languages/python.py
-${PYSITELIB}/pre_commit/languages/python_venv.py
 ${PYSITELIB}/pre_commit/languages/ruby.py
 ${PYSITELIB}/pre_commit/languages/rust.py
 ${PYSITELIB}/pre_commit/languages/script.py
@@ -175,6 +172,7 @@ ${PYSITELIB}/pre_commit/resources/empty_template_.npmignore
 ${PYSITELIB}/pre_commit/resources/empty_template_Cargo.toml
 ${PYSITELIB}/pre_commit/resources/empty_template_Makefile.PL
 ${PYSITELIB}/pre_commit/resources/empty_template_environment.yml
+${PYSITELIB}/pre_commit/resources/empty_template_go.mod
 ${PYSITELIB}/pre_commit/resources/empty_template_main.go
 ${PYSITELIB}/pre_commit/resources/empty_template_main.rs
 ${PYSITELIB}/pre_commit/resources/empty_template_package.json
