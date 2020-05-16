@@ -1,5 +1,36 @@
 On NetBSD:
 
+* with CONFIGURE_ARGS+=       --disable-tmpnam
+  as per https://debbugs.gnu.org/cgi/bugreport.cgi?bug=29001
+
+  SNARF  regex-posix.doc
+  CCLD     libguile-3.0.la
+  CCLD     guile
+  GEN      guile-procedures.texi
+allocating JIT code buffer failed: Permission denied
+jit.c:5612: fatal: assertion failed
+[1]   Broken pipe             cat alist.doc array-handle.doc array-map.doc a... |
+      Abort trap (core dumped) GUILE_AUTO_COMPILE=0 ../meta/build-env guild s...
+gmake[3]: *** [Makefile:4311: guile-procedures.texi] Error 1
+gmake[3]: Leaving directory '/usr/work/wip/guile30/work/guile-3.0.2/libguile'
+gmake[2]: *** [Makefile:2426: all] Error 2
+gmake[2]: Leaving directory '/usr/work/wip/guile30/work/guile-3.0.2/libguile'
+gmake[1]: *** [Makefile:1849: all-recursive] Error 1
+gmake[1]: Leaving directory '/usr/work/wip/guile30/work/guile-3.0.2'
+gmake: *** [Makefile:1735: all] Error 2
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/guile30
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/guile30
+
+
+
+* older TODO:
+
 With threads support:
 
 Needs "sysctl -w security.pax.mprotect.enabled=0".
@@ -23,7 +54,9 @@ FAIL: test-out-of-memory
 
   (same as with guile22-2.2.7)
 
-Without threads support, doesn't build:
+
+
+* Without threads support, doesn't build:
 
   CCLD     libguile-3.0.la
 ld: .libs/libguile_3.0_la-posix.o: in function `scm_tmpnam':
