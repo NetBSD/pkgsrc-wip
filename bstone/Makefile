@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2015/09/13 20:07:57 yhardy Exp $
 
-DISTNAME=	bstone-1.2.0
+DISTNAME=	bstone-1.2.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bibendovsky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
