@@ -1,0 +1,25 @@
+$NetBSD$
+
+shutdown commands are different on non-Linux.
+
+--- CMakeLists.txt.orig	2020-05-16 10:59:08.837532317 +0000
++++ CMakeLists.txt
+@@ -167,8 +167,16 @@ add_feature_info("elogind" ELOGIND_FOUND
+ 
+ # Default behaviour if neither systemd nor elogind is used
+ if (NOT ELOGIND_FOUND AND NOT SYSTEMD_FOUND)
+-    set(MINIMUM_VT 7)
+-    set(HALT_COMMAND "/sbin/shutdown -h -P now")
++    if (${CMAKE_SYSTEM} MATCHES "FreeBSD")
++        set(MINIMUM_VT 9)
++        set(HALT_COMMAND "/sbin/shutdown -p now")
++    elseif (${CMAKE_SYSTEM} MATCHES "NetBSD")
++        set(MINIMUM_VT 7)
++        set(HALT_COMMAND "/sbin/shutdown -p now")
++    else()
++        set(MINIMUM_VT 7)
++        set(HALT_COMMAND "/sbin/shutdown -h -P now")
++    endif()
+     set(REBOOT_COMMAND "/sbin/shutdown -r now")
+ endif()
+ 

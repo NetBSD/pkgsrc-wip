@@ -1,0 +1,26 @@
+$NetBSD$
+
+Support FreeBSD and NetBSD.
+
+--- src/daemon/CMakeLists.txt.orig	2019-03-31 07:59:59.000000000 +0000
++++ src/daemon/CMakeLists.txt
+@@ -29,9 +29,18 @@ set(DAEMON_SOURCES
+     SeatManager.cpp
+     SignalHandler.cpp
+     SocketServer.cpp
+-    VirtualTerminal.cpp
+ )
+ 
++# Different implementations of the VT switching code
++# (where the FreeBSD version does nothing).
++if(${CMAKE_SYSTEM} MATCHES "FreeBSD")
++    list(APPEND DAEMON_SOURCES VirtualTerminal_FreeBSD.cpp)
++elseif(${CMAKE_SYSTEM} MATCHES "FreeBSD")
++    list(APPEND DAEMON_SOURCES VirtualTerminal_NetBSD.cpp)
++else()
++    list(APPEND DAEMON_SOURCES VirtualTerminal.cpp)
++endif()
++
+ qt5_add_dbus_adaptor(DAEMON_SOURCES "${CMAKE_SOURCE_DIR}/data/interfaces/org.freedesktop.DisplayManager.xml"          "DisplayManager.h" SDDM::DisplayManager)
+ qt5_add_dbus_adaptor(DAEMON_SOURCES "${CMAKE_SOURCE_DIR}/data/interfaces/org.freedesktop.DisplayManager.Seat.xml"     "DisplayManager.h" SDDM::DisplayManagerSeat)
+ qt5_add_dbus_adaptor(DAEMON_SOURCES "${CMAKE_SOURCE_DIR}/data/interfaces/org.freedesktop.DisplayManager.Session.xml"  "DisplayManager.h" SDDM::DisplayManagerSession)

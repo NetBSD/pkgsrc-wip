@@ -1,0 +1,14 @@
+$NetBSD$
+
+SHA1 (sddm-0.18.1.tar.xz) = ca4f453fd32e68faca437d66d9fbad59258c505c
+RMD160 (sddm-0.18.1.tar.xz) = bcd59920e4db4f263604cd47fb362e9b502983f5
+SHA512 (sddm-0.18.1.tar.xz) = ff0637600cda2f4da1f643f047f8ee822bd9651ae4ccbb614b9804175c97360ada7af93e07a7b63832f014ef6e7d1b5380ab2b8959f8024ea520fa5ff17efd60
+Size (sddm-0.18.1.tar.xz) = 3402972 bytes
+SHA1 (patch-CMakeLists.txt) = 03f41795b978eb186b61537fa7c63604127de16d
+SHA1 (patch-src_daemon_CMakeLists.txt) = 42c47a49f18b81eda28466a5919697b5aa7581e6
+SHA1 (patch-src_daemon_DaemonApp.cpp) = 12d86d2985cc3e96411d307ca4d724aae6494f13
+SHA1 (patch-src_daemon_VirtualTerminal.cpp) = ab1ea7a4543d47f6203c749f16dbd10a03d85b3a
+SHA1 (patch-src_daemon_VirtualTerminal__FreeBSD.cpp) = abaf6b2b21a8f4fc410714f9a0677733606b94c3
+SHA1 (patch-src_daemon_VirtualTerminal__NetBSD.cpp) = 1ddec9550a311dd602b913b288045e4819982fd7
+SHA1 (patch-src_greeter_UserModel.cpp) = 5e4deb3bc4d383d55c2125c058fadaf537ef80fb
+SHA1 (patch-src_helper_UserSession.cpp) = 4da90793d4d1b535562273a5f85c14e156973a9b
