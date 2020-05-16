@@ -117,6 +117,8 @@ lib/deadbeef/data68/Replay/utopia.bin
 lib/deadbeef/data68/Replay/vikingchild.bin
 lib/deadbeef/data68/Replay/xbiossound.bin
 lib/deadbeef/data68/Replay/zonewarrior.bin
+lib/deadbeef/aac.la
+lib/deadbeef/cdda.la
 lib/deadbeef/dca.la
 lib/deadbeef/ddb_dumb.la
 lib/deadbeef/ddb_gui_GTK3.la
@@ -124,7 +126,7 @@ lib/deadbeef/ddb_mono2stereo.la
 lib/deadbeef/ddb_shn.la
 lib/deadbeef/dsp_libsrc.la
 lib/deadbeef/ffap.la
-lib/deadbeef/ffmpeg.la
+${PLIST.ffmpeg}lib/deadbeef/ffmpeg.la
 lib/deadbeef/flac.la
 lib/deadbeef/gme.la
 lib/deadbeef/hotkeys.la
@@ -133,11 +135,10 @@ lib/deadbeef/lastfm.la
 lib/deadbeef/m3u.la
 lib/deadbeef/mms.la
 lib/deadbeef/mp3.la
-lib/deadbeef/musepack.la
+${PLIST.musepack}lib/deadbeef/musepack.la
 lib/deadbeef/notify.la
-lib/deadbeef/nullout.la
 lib/deadbeef/opus.la
-lib/deadbeef/oss.la
+${PLIST.oss}lib/deadbeef/oss.la
 lib/deadbeef/pltbrowser_gtk3.la
 lib/deadbeef/psf.la
 lib/deadbeef/rg_scanner.la
@@ -152,6 +153,7 @@ lib/deadbeef/vfs_zip.la
 lib/deadbeef/vorbis.la
 lib/deadbeef/vtx.la
 lib/deadbeef/wildmidi.la
+${PLIST.wavpack}lib/deadbeef/wavpack.la
 lib/deadbeef/wma.la
 share/applications/deadbeef.desktop
 share/deadbeef/pixmaps/buffering_16.png
@@ -206,6 +208,7 @@ share/locale/km/LC_MESSAGES/deadbeef.mo
 share/locale/lg/LC_MESSAGES/deadbeef.mo
 share/locale/lt/LC_MESSAGES/deadbeef.mo
 share/locale/lv/LC_MESSAGES/deadbeef.mo
+share/locale/nb/LC_MESSAGES/deadbeef.mo
 share/locale/nl/LC_MESSAGES/deadbeef.mo
 share/locale/pl/LC_MESSAGES/deadbeef.mo
 share/locale/pt/LC_MESSAGES/deadbeef.mo
