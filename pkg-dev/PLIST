@@ -6,6 +6,12 @@ sbin/pkg-check
 sbin/pkg-diff
 sbin/pkg-grep
 sbin/pkg-list
+sbin/pkg-merge-plists
+sbin/pkg-mkpatch
+sbin/pkg-patch-vi
 sbin/pkg-reinstall
 sbin/pkg-remake
 sbin/pkg-vuln
+sbin/pkgsrc-add-license
+sbin/pkgsrc-make
+sbin/pkgsrc-wip-checkout
