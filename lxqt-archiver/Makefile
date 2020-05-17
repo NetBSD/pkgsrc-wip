@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	0.1.1
+VERSION=	0.2.0
 DISTNAME=	lxqt-archiver-${VERSION}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-archiver/releases/download/${VERSION}/}

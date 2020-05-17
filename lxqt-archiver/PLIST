@@ -3,6 +3,7 @@ bin/lxqt-archiver
 libexec/lxqt-archiver/isoinfo.sh
 libexec/lxqt-archiver/rpm2cpio
 share/applications/lxqt-archiver.desktop
+share/icons/hicolor/scalable/apps/lxqt-archiver.svg
 share/lxqt-archiver/translations/lxqt-archiver_ar.qm
 share/lxqt-archiver/translations/lxqt-archiver_arn.qm
 share/lxqt-archiver/translations/lxqt-archiver_ast.qm
