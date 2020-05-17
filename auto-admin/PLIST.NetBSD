@@ -1,7 +1,0 @@
-@comment $NetBSD$
-sbin/auto-desktop-setup
-sbin/auto-install-packages
-sbin/auto-install-packages-from-source
-sbin/auto-install-pkgsrc-tree
-sbin/auto-package-installed
-sbin/auto-select-pkgsrc-dist

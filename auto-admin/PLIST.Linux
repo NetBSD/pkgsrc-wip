@@ -1,8 +1,0 @@
-@comment $NetBSD$
-sbin/auto-cuda-install
-sbin/auto-disable-file-transfers
-sbin/auto-disable-hyperthreading
-sbin/auto-ldap-client-setup
-sbin/auto-pxe-installer-setup
-sbin/auto-register-dhcp-hostname
-sbin/auto-set-memory-limits
