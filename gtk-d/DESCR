@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# GtkD
+
+GtkD is the Digital Mars D programming language OO wrapper for Gtk+ 3.22.  GtkD
+is release on the LGPL license with additional exceptions.
+
+Please view COPYING for GtkD's license.
+
+## Requirements
+
+- Linux, Windows, or Mac
+- Gtk libs
+- dmd, gdc or ldc installation
+
+optional:
+
+- OpenGL libs (mesa is fine on Linux)
+- GtkGLext 3
+
+## Who are you?
+
+...

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (GtkD-3.9.0.zip) = 72a00d6b702b2377c5a4f456ebf4616dd4329fd2
+RMD160 (GtkD-3.9.0.zip) = 89c7fa4ee46a4dae3157eb31fa0a4515c51963e1
+SHA512 (GtkD-3.9.0.zip) = f8b8a7b83a23af990abb77f16e4bddf2f72bb65ad210ff8f138b0d4ff66fb5fb2a73a3cbe868a8d2ecf3abf98ece5af771af63068dc2fbf8668e46039320cf0f
+Size (GtkD-3.9.0.zip) = 4576099 bytes
+SHA1 (patch-GNUmakefile) = 8eefabfd7bc2e9c72b78b6fc7e44d1df33404ba9
