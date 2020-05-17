@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (pcmanfm-qt-0.15.0.tar.xz) = 13035caa159e242b7222ac9f56a029370c84a080
-RMD160 (pcmanfm-qt-0.15.0.tar.xz) = 224ac5426c993aee00edf4ff556ccd3a4d352674
-SHA512 (pcmanfm-qt-0.15.0.tar.xz) = 11ea2962322f4e5800dea616684e0519c2fd714c6f3a7305ff06373ea4abaa43da34b5f181896b6a68d214b1326b0be92ec07ff8b2b574b0e3e0cec4d36e9c2c
-Size (pcmanfm-qt-0.15.0.tar.xz) = 254536 bytes
+SHA1 (pcmanfm-qt-0.15.1.tar.xz) = 8b25f4d52cee6b916ba015bb35c133fe9d1fd666
+RMD160 (pcmanfm-qt-0.15.1.tar.xz) = b83a43eed1361922b381db6c78c84825512bb1b9
+SHA512 (pcmanfm-qt-0.15.1.tar.xz) = db0d3cc683b5c94cabab5a8c68b3ae8bf5938735b34989a420692e933bb54d53ebb15da9af4a59039bfd101de0cc00c521c08207e81bfad9d80315e2d94bc559
+Size (pcmanfm-qt-0.15.1.tar.xz) = 257832 bytes
 SHA1 (patch-config_CMakeLists.txt) = f9fa729a592d0d9683af9408f115ec2383b27aa1

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	0.15.0
+VERSION=	0.15.1
 DISTNAME=	pcmanfm-qt-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/pcmanfm-qt/releases/download/${VERSION}/}
