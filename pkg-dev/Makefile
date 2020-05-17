@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/pkg-dev
 COMMENT=	Scripts to automate common tasks in pkgsrc development
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
