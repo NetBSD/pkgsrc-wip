@@ -631,6 +631,7 @@ SUBDIR+=	dns2tcp
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook2X
+SUBDIR+=	docviewer
 SUBDIR+=	dogecoin
 SUBDIR+=	dokuwiki
 SUBDIR+=	dolfin
