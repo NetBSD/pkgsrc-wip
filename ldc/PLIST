@@ -31,6 +31,8 @@ include/d/core/internal/attributes.d
 include/d/core/internal/convert.d
 include/d/core/internal/dassert.d
 include/d/core/internal/destruction.d
+include/d/core/internal/elf/dl.d
+include/d/core/internal/elf/io.d
 include/d/core/internal/entrypoint.d
 include/d/core/internal/execinfo.d
 include/d/core/internal/hash.d
@@ -74,6 +76,7 @@ include/d/core/stdc/wctype.d
 include/d/core/stdcpp/allocator.d
 include/d/core/stdcpp/array.d
 include/d/core/stdcpp/exception.d
+include/d/core/stdcpp/memory.d
 include/d/core/stdcpp/new_.d
 include/d/core/stdcpp/string.d
 include/d/core/stdcpp/string_view.d
@@ -388,6 +391,7 @@ include/d/core/sys/windows/rpcnsi.d
 include/d/core/sys/windows/rpcnsip.d
 include/d/core/sys/windows/rpcnterr.d
 include/d/core/sys/windows/schannel.d
+include/d/core/sys/windows/sdkddkver.d
 include/d/core/sys/windows/secext.d
 include/d/core/sys/windows/security.d
 include/d/core/sys/windows/servprov.d
@@ -454,6 +458,7 @@ include/d/etc/linux/memoryerror.d
 include/d/ldc/asan.d
 include/d/ldc/attributes.d
 include/d/ldc/dcompute.d
+include/d/ldc/dynamic_compile.d
 include/d/ldc/eh_msvc.d
 include/d/ldc/gccbuiltins_aarch64.di
 include/d/ldc/gccbuiltins_arm.di
@@ -610,8 +615,24 @@ include/d/std/windows/syserror.d
 include/d/std/xml.d
 include/d/std/zip.d
 include/d/std/zlib.d
+lib/libdruntime-ldc-debug-shared.so
+lib/libdruntime-ldc-debug-shared.so.2.0.91
+lib/libdruntime-ldc-debug-shared.so.91
 lib/libdruntime-ldc-debug.a
+lib/libdruntime-ldc-shared.so
+lib/libdruntime-ldc-shared.so.2.0.91
+lib/libdruntime-ldc-shared.so.91
 lib/libdruntime-ldc.a
+lib/libldc-jit-rt.a
+lib/libldc-jit.so
+lib/libldc-jit.so.2.0.91
+lib/libldc-jit.so.91
+lib/libphobos2-ldc-debug-shared.so
+lib/libphobos2-ldc-debug-shared.so.2.0.91
+lib/libphobos2-ldc-debug-shared.so.91
 lib/libphobos2-ldc-debug.a
+lib/libphobos2-ldc-shared.so
+lib/libphobos2-ldc-shared.so.2.0.91
+lib/libphobos2-ldc-shared.so.91
 lib/libphobos2-ldc.a
 @pkgdir include/d/etc/c/zlib
