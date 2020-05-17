@@ -1,0 +1,8 @@
+Run the best available document viewer installed on the system.  Intended for
+use mainly as a proxy application in browsers, email clients, etc. that work
+with PDF attachments.  By configuring the applications to use docviewer instead
+of a specific document viewer, you can avoid having to reconfigure multiple
+applications when switching viewers.  Your viewer selection is configured in
+one place.
+
+WWW: https://github.com/outpaddling/docviewer
