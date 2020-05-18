@@ -1,0 +1,32 @@
+$NetBSD$
+
+--- meson.build.orig	2019-04-22 14:46:58.000000000 +0000
++++ meson.build
+@@ -94,13 +94,15 @@ sources_dir = include_directories('sourc
+ 
+ # Dependencies
+ # Note relying on dub to fetch and build dependencies before running meson build is temporary due to a bug in Meson 0.48
+-# gtkd_dep = dependency('gtkd-3', version: '>= 3.8.5')
+-# vted_dep = dependency('vted-3', version: '>= 3.8.5')
++gtkd_dep = dependency('gtkd-3', version: '>= 3.8.5')
++vted_dep = dependency('vted-3', version: '>= 3.8.5')
+ 
+-gtkd_dep = dependency('gtk-d:gtkd', version: '>=3.8.5', method: 'dub')
+-vted_dep = dependency('gtk-d:vte', version: '>=3.8.5', method: 'dub')
++#gtkd_dep = dependency('gtk-d:gtkd', version: '>=3.8.5', method: 'dub')
++#vted_dep = dependency('gtk-d:vte', version: '>=3.8.5', method: 'dub')
+ xlib_dep = dependency('x11')
+-libunwind_dep = dependency('libunwind')
++buildlink_inc = include_directories('../.buildlink/lib')
++libunwind_lib = static_library('libunwind.a')
++libunwind_dep = declare_dependency(link_with: libunwind_lib, include_directories: buildlink_inc)
+ msgfmt = find_program('msgfmt')
+ 
+ subdir('po')
+@@ -130,4 +132,4 @@ executable('tilix',
+ #)
+ #test('tilix_test', tilix_test_exe)
+ 
+-meson.add_install_script('meson_post_install.py')
+\ No newline at end of file
++meson.add_install_script('meson_post_install.py')
