@@ -4585,6 +4585,7 @@ SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
 SUBDIR+=	sparse
 SUBDIR+=	spatt
+SUBDIR+=	spcm
 SUBDIR+=	spe
 SUBDIR+=	spectra
 SUBDIR+=	speedx
