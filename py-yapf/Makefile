@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/04/23 09:49:45 ahp-nils Exp $
 
-DISTNAME=	yapf-0.29.0
+DISTNAME=	yapf-0.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yapf/}
