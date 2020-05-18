@@ -580,6 +580,7 @@ SUBDIR+=	deskcribe
 SUBDIR+=	desktop-data-model
 SUBDIR+=	desmume
 SUBDIR+=	despotify-svn
+SUBDIR+=	detab
 SUBDIR+=	detachtty
 SUBDIR+=	devd
 SUBDIR+=	deviceatlas-enterprise-c
