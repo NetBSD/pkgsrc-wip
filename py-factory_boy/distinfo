@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (factory_boy-2.10.0.tar.gz) = d8a8eca74765f08a8e4a6cabe7e26a3c6cdedb18
-RMD160 (factory_boy-2.10.0.tar.gz) = ee1f0a53604a456a9f01f5a28ff0b9219fa8eaf6
-SHA512 (factory_boy-2.10.0.tar.gz) = 89db5a0630e428548ebf1cfd6fba6ab2025b25418c02f869539b0155b4ac33ecb26474106d1c8e1ad64186ab90797d356e94714ceea515c018b57b944cfbf80d
-Size (factory_boy-2.10.0.tar.gz) = 42769 bytes
+SHA1 (factory_boy-2.12.0.tar.gz) = 29b59501719a2ef52025129bacfb66f86a796405
+RMD160 (factory_boy-2.12.0.tar.gz) = 7d4f1e2b18abade51262651b2db6c60adfc1e83e
+SHA512 (factory_boy-2.12.0.tar.gz) = f87963fb650df9b6e2e5bd7bea5fdc6c35d352839edfea7ff79f3ff236e85098879a506d132d63a47c3290d5beee925ab19943eb4ecdb522f33f8ffff69dc742
+Size (factory_boy-2.12.0.tar.gz) = 153557 bytes

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	factory_boy-2.10.0
+DISTNAME=	factory_boy-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/factory_boy/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/FactoryBoy/factory_boy
 COMMENT=	Versatile test fixtures replacement
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-faker>=0.7.0:../../devel/py-faker
 
 .include "../../lang/python/egg.mk"
