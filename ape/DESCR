@@ -1,0 +1,15 @@
+APE is a programmer's editor, designed to function as a complete
+programming environment for Unix.  APE users can easily code,
+compile and test from within the editor, rather than repeatedly
+typing complicated Unix commands at the shell prompt.  APE provides
+a convenient interface to many of the standard programming tools,
+including compilers, debuggers, on-line manuals, etc.  This interface
+can be customized to suit each programmer's particular needs.  APE
+is capable of interfacing with any programming language, as well
+as other file processing commands such as nroff and LaTeX, so you
+can use the same environment for both code and documentation
+development.
+
+APE is designed to get the most out of your existing hardware.
+The first time you run APE, you'll probably be surprised to see
+what an ASCII terminal can do!
