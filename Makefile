@@ -155,6 +155,7 @@ SUBDIR+=	apache-commons-lang
 SUBDIR+=	apache-commons-logging
 SUBDIR+=	apache-commons-pool
 SUBDIR+=	apache-log4j
+SUBDIR+=	ape
 SUBDIR+=	apel-git
 SUBDIR+=	apinger
 SUBDIR+=	apstget
