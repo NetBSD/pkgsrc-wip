@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/biostring.h
+include/samio.h
+include/tsvio.h
+include/vcfio.h
+lib/libbiolibc.a
