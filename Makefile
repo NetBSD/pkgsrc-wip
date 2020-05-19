@@ -252,6 +252,7 @@ SUBDIR+=	bigdft
 SUBDIR+=	bijiben
 SUBDIR+=	bindgraph
 SUBDIR+=	binutils-gold-git
+SUBDIR+=	biolibc
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	bip
