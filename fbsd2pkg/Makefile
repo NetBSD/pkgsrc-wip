@@ -5,7 +5,7 @@
 
 DISTNAME=	fbsd2pkg-0.6.0
 CATEGORIES=	pkgtools
-MASTER_SITES=	${MASTER_SITE_GITHUB}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
