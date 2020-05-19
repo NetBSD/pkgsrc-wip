@@ -53,7 +53,7 @@ CMAKE_ARGS+=	-D${mod:tu}_INCLUDE_DIR=${WRKSRC}/extlibs/${mod}/include
 CMAKE_ARGS+=	-D${mod:tu}_LIBRARY_RELEASE=${WRKSRC}/extlibs/${mod}/lib${mod}-s.a
 .endfor
 
-CONFIGURE_DIRS+=	${MODULES:NSSVOpenHexagon*:C/-.*//:=extlibs/%} .
+CONFIGURE_DIRS+=	${MODULES:NSSVOpenHexagon*:C/-.*//:%=extlibs/%} .
 
 INSTALL_DIRS+=		.
 
