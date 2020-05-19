@@ -1809,7 +1809,6 @@ SUBDIR+=	libbsd
 SUBDIR+=	libbtctl
 SUBDIR+=	libc++
 SUBDIR+=	libc++-abi
-SUBDIR+=	libcanlock
 SUBDIR+=	libcdata
 SUBDIR+=	libcerror
 SUBDIR+=	libcfile
