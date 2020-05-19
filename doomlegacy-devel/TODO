@@ -1,125 +1,8 @@
-Part 1: Port to NetBSD
-======================
-Build system doesn't support NetBSD.
-
-[X] Sent patches to upstream
-[X] Imported proposed patchset from upstream
-    => PKGREVISION not bumped, because binary package has not changed
-[X] Renamed man page template to doomlegacy.1.in (suggested by wiz@)
-    => PKGREVISION not bumped, because binary package has not changed
-[X] Move man page to section 6 (it's a game)
-   => Bump PKGREVISION
-[X] Test building of the package again
-    => Tested to work with SVN revision 1448
-[X] Remove NetBSD specific patches after upstream integration
-
-Part 1 finished.
-
-
-Part 2: Fix large blockmaps on big endian machines
-==================================================
-On my Apple Power Mac G5 some modern (large) maps fail to load with errors like:
-| 
-| Error: Blockmap offset[5556]= -32745, exceeds bounds.
-
-This bug looks not security relevant, because the code catches it and gracefully
-terminate the engine.
-
-[X] Update to SVN revision 1453
-    => Problem still exist
-[X] Rework pkgsrc patches rejected by upstream (disable launcher and keyboard
-    setup +/- for automap zoom) for SVN revision 1453
-[X] Add patch for (int16_t) integer overflow while loading Blockmap
-    Note: This should never happen on little endian machines
-    => PKGREVISION not bumped (SVN based packages use build date in version)
-[X] Sent Blockmap patch to upstream (Bug #653)
-[X] Imported proposed patchset d42_blockmap_endian.diff from upstream
-    => Drop former pkgsrc patch
-    => PKGREVISION not bumped (SVN based packages use build date in version)
-    => Works as expected (Reported in bugtracker for #653)
-[X] Patches merged in SVN revision 1456
-[X] Remove corresponding pkgsrc patches after upstream integration
-
-Part 2 finished.
-
-
-Part 3: Torches are displayed crippled with software renderer
-=============================================================
-This problem was not present in 1.47.2, maybe a side effect of OpenGL corona
-changes since last release. Can be tested with:
-| 
-|    $ doomlegacy -iwad doom2.wad -warp 5
-
-(walk through the opening and look at the torch in front of you)
-
-Already reported upstream as Bug #652 (not present in OpenGL mode and really
-a side effect of the corona code changes).
-
-Suggested workaround: Deactivating coronas by going to:
-
-  "Options -> Effects Options -> Light Options"
-
-Set "Corona" option to "Off" (verified to work on NetBSD).
-
-Other workaround: It seems that only the option "Corona_Draw" set to "Additive"
-is problematic. Coronas with other settings work.
-
-[X] Test patch d41_draw8_alpha.diff from upstream
-    Patch not released yet
-    => Patch merged in SVN revision 1455
-    => Works as expected with SVN revision 1458
-
-Part 3 finished.
-
-
-Part 4: Problem with loading compressed blockmaps
-=================================================
-Some compressed blockmaps can interfere with the overflow detection.
-
-[X] Reported upstream as Bug #654
-[X] Fixed in SVN revision 1460
-    => Works as expected (Reported in bugtracker for #654)
-
-Part 4 finished.
-
-
-Part 5: Rendering problems on big endian machine
-================================================
-On some maps the rendering is broken (only in parts of the map).
-
-[X] Reported upstream as Bug #655
-[X] Update to SVN revision 1473
-    => Problem is only partly fixed (for some maps)
-       Bug #655 was a big endian problem, now fixed
-    => Rendering problems with other map are unrelated
-       Ticket #657 opened for them
-       Looks like the bugs are in the level data, not in the engine
-
-Part 5 finished.
-
-
-Part 6: Fix output of ENDOOM lump to terminal
-=============================================
-Documentation says "-noendtext" to disable output, but the implementation
-uses "-noendtxt".
-
-[X] Add patch to fix endianess
-[X] Add patch to fix interpretation of blinking flag
-[X] Add patch to convert text from IBM437 codepage to Unicode
-[X] Reported upstream as Bug #659
-[X] Fixed in SVN revision 1521
-    => "-noendtext", as documented, was added
-    => Works as expected (Reported in bugtracker for #659)
-[X] pkgsrc patch removed after upstream integration
-[X] man page updated
-
-Part 6 finished.
-
 
 Part 7: Import final release
 ============================
-[ ] Import version 1.48.4
-    Not released yet
+[X] Import version 1.48.4 to pkgsrc
+    Parts 1 to 6 are now available in games/doomlegacy
 
 
 Part 8: Support for extended nodes
@@ -129,8 +12,9 @@ Part 8: Support for extended nodes
     Fixes Bug #657
 [X] Created upstream feature request #95
     => Deferred (not considered for 1.48 release)
-[ ] Add optional zlib dependency for build system
-[ ] Add support for compressed ZDoom extended nodes
+[X] Add optional zlib dependency for build system
+[X] Add support for compressed ZDoom extended nodes
+    => Works as expected
 
 
 Part 9: Support for internal blockmap creation
@@ -150,6 +34,7 @@ Make it possible to play maps with broken blockmaps (or no blockmaps at all).
 [X] Test as workaround for Lost Civilization
     It's unclear whether the blockmaps are broken or not imported correctly
     => Works as expected
+[ ] Create upstream feature request
 
 
 EOF

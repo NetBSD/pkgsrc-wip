@@ -1,8 +1,8 @@
 # $NetBSD$
 
-VERS=		1.47.2
+VERS=		1.48.4
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1530
+SVNVERS=	1535
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -43,12 +43,17 @@ MAKE_FLAGS+=		OS=MAC
 .else
 # Other Unix (should work for GNU/Linux, OpenBSD and SunOS)
 MAKE_FLAGS+=		OS=LINUX
+CFLAGS.SunOS+=		-DSOLARIS
 .endif
 
 .if ${MACHINE_ENDIAN} == "big"
 # Some compilers define this themselves (but maybe not all)
 CFLAGS+=		-D__BIG_ENDIAN__
 .endif
+
+# Required by extended node patch for ZDoom compressed node format
+CFLAGS+=		-DHAVE_ZLIB
+LDFLAGS+=		-lz
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
@@ -114,6 +119,8 @@ do-install:
 # Ensure that at least the shareware Episode 1 of Doom is available
 DEPENDS+=		doom1-[0-9]*:../../games/doom1
 
+BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.3
+.include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7
 .include "../../audio/SDL_mixer/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.10

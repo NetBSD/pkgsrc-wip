@@ -1,7 +1,7 @@
 // Emacs style mode select   -*- C++ -*- 
 //-----------------------------------------------------------------------------
 //
-// $Id: r_defs.h,v 1.18 1998/04/27 02:12:59 killough Exp $
+// $Id: p_extnodes.c,v 1.1 2020/05/19 11:20:16 micha Exp $
 //
 //  Copyright (C) 1999 by
 //  id Software, Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
@@ -36,6 +36,7 @@
 
 // [FG] support maps with NODES in compressed ZDBSP format
 #ifdef HAVE_ZLIB
+#include <string.h>  // [MB] 2020-05-19: For memcpy()
 #include <zlib.h>
 #endif  // HAVE_ZLIB
 
@@ -361,7 +362,17 @@ void P_LoadNodes_ZDBSP (int lump, boolean compressed)
         {
             int outlen_old = outlen;
             outlen = 2 * outlen_old;
+#   if 0
             output = Z_Realloc(output, outlen, PU_STATIC, 0);
+#   else
+            // DooM Legacy has no Z_Realloc()
+            byte *output_new;
+
+            output_new = Z_Malloc(outlen, PU_STATIC, 0);
+            memcpy( (void*)output_new, (void*)output, (size_t)outlen_old);
+            Z_Free(output);
+            output = output_new;
+#   endif
             zstream->next_out = output + outlen_old;
             zstream->avail_out = outlen - outlen_old;
         }
