@@ -1,0 +1,3 @@
+@comment $NetBSD$
+include/bacon.h
+lib/libbacon.a
