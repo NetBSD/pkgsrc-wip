@@ -3396,7 +3396,6 @@ SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
 SUBDIR+=	py-exocode
 SUBDIR+=	py-extremes
-SUBDIR+=	py-factory_boy
 SUBDIR+=	py-fancyimpute
 SUBDIR+=	py-fanova
 SUBDIR+=	py-fastaudio
