@@ -1803,6 +1803,7 @@ SUBDIR+=	libaec
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
 SUBDIR+=	libavc1394
+SUBDIR+=	libbacon
 SUBDIR+=	libbfio
 SUBDIR+=	libbpg
 SUBDIR+=	libbrahe
