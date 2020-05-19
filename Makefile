@@ -79,6 +79,7 @@ SUBDIR+=	acme-client
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
 SUBDIR+=	actor-framework
+SUBDIR+=	ad2vcf
 SUBDIR+=	adamem
 SUBDIR+=	adept
 SUBDIR+=	adjustmtu
