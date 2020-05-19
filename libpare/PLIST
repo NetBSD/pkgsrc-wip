@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/pare.h
+lib/libpare.a
+man/man3/pare.3
