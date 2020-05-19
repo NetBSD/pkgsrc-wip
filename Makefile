@@ -4854,6 +4854,7 @@ SUBDIR+=	tuxpaint-cvs
 SUBDIR+=	tuxtype2
 SUBDIR+=	tvmet
 SUBDIR+=	twemproxy
+SUBDIR+=	twintk
 SUBDIR+=	twitim
 SUBDIR+=	twitmail
 SUBDIR+=	twittering-mode-git
