@@ -4,7 +4,7 @@
 # on github are not actually releases.  We use releases from the
 # website (which is the old website with not-old releases).
 
-DISTNAME=	openzwave-1.6.913
+DISTNAME=	openzwave-1.6.1123
 CATEGORIES=	comms
 MASTER_SITES=	http://old.openzwave.com/downloads/
 

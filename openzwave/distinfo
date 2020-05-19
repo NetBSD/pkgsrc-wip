@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (openzwave-1.6.913.tar.gz) = e03da3dac9509585b3ec0c113b4e6c5e5cc1cff6
-RMD160 (openzwave-1.6.913.tar.gz) = 4dfcd9cbd50d03aaa4a0271466959e806f26b048
-SHA512 (openzwave-1.6.913.tar.gz) = 82a91091ddfd06dbf2d7907f29b25e73bf98d8d518620606443bc3bf55e4989ff66fceb47b4b087505081a6f89f69c1d5b30b49349d16e4436aec1afb062ef04
-Size (openzwave-1.6.913.tar.gz) = 12152898 bytes
-SHA1 (patch-cpp_build_ozw__config.in) = 2f81ddf9250fc6c4d919f435e550597c7eaa3630
+SHA1 (openzwave-1.6.1123.tar.gz) = 2e34b8356f280455e3e1fdb3bce35bacdf9c33c4
+RMD160 (openzwave-1.6.1123.tar.gz) = fc3c16c1d010ecf5dd183bc5e3c62a8889e6586d
+SHA512 (openzwave-1.6.1123.tar.gz) = 710269d87300670b762225401ebc98f9bcb52eefa14d37434fcf0664ccc9cfa820a6e18523133a4fe3bd648d52ca0cce18d3b85328c4415abc00957d6142c096
+Size (openzwave-1.6.1123.tar.gz) = 13535321 bytes
