@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.26 2020/03/20 10:25:15 micha Exp $
-
-SHA1 (tin-2.4.5.tar.gz) = 6bdaeb1ab0ef034b1d3ab9e3b5213491cb06599b
-RMD160 (tin-2.4.5.tar.gz) = 3b79686019cc88fd6eab14f2f42021ec0e4e60f7
-SHA512 (tin-2.4.5.tar.gz) = 684fb9a9929a4a33c2a10c3ebb45d59eec42888996ca812ebad28b968936a73ead839170e1beb6261d0c94000a9ed083ed3b5381490d94c0d5b70c316dedf7ff
-Size (tin-2.4.5.tar.gz) = 3227159 bytes
-SHA1 (patch-Makefile) = 7f9048d31e70d9630ba6511d834db5d0c60a7de1
-SHA1 (patch-configure) = 02f6c943c7e6cbf8552f163c8ff4922413c9c340
-SHA1 (patch-src_Makefile.in) = c8dcd48762c9c9159a3e30f446ba69d42df26d06

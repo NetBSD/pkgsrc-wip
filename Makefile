@@ -4769,7 +4769,6 @@ SUBDIR+=	tig
 SUBDIR+=	tilda
 SUBDIR+=	tilix
 SUBDIR+=	timewarrior
-SUBDIR+=	tin
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta
