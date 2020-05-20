@@ -1,0 +1,38 @@
+$NetBSD: patch-bin_named_Makefile.in,v 1.2 2019/07/18 03:02:02 taca Exp $
+
+* Add support for blacklistd.
+
+--- bin/named/Makefile.in.orig	2019-07-09 18:15:48.000000000 +0000
++++ bin/named/Makefile.in
+@@ -89,6 +89,7 @@ SUBDIRS =	unix
+ 
+ TARGETS =	named@EXEEXT@
+ 
++BLACKLISTLINKOBJS= pfilter.@O@
+ GEOIP2LINKOBJS = geoip.@O@
+ 
+ OBJS =		builtin.@O@ config.@O@ control.@O@ \
+@@ -97,12 +98,13 @@ OBJS =		builtin.@O@ config.@O@ control.@
+ 		log.@O@ logconf.@O@ main.@O@ \
+ 		server.@O@ statschannel.@O@ \
+ 		tkeyconf.@O@ tsigconf.@O@ zoneconf.@O@ \
+-		${DLZDRIVER_OBJS} ${DBDRIVER_OBJS}
++		${BLACKLISTLINKOBJS} ${DLZDRIVER_OBJS} ${DBDRIVER_OBJS}
+ 
+ UOBJS =		unix/os.@O@ unix/dlz_dlopen_driver.@O@
+ 
+ SYMOBJS =	symtbl.@O@
+ 
++BLACKLISTLINKSRCS= pfilter.c
+ GEOIP2LINKSRCS = geoip.c
+ 
+ SRCS =		builtin.c config.c control.c \
+@@ -111,7 +113,7 @@ SRCS =		builtin.c config.c control.c \
+ 		log.c logconf.c main.c \
+ 		server.c statschannel.c \
+ 		tkeyconf.c tsigconf.c zoneconf.c \
+-		${DLZDRIVER_SRCS} ${DBDRIVER_SRCS}
++		${BLACKLISTLINKSRCS} ${DLZDRIVER_SRCS} ${DBDRIVER_SRCS}
+ 
+ MANPAGES =	named.8 named.conf.5
+ 
