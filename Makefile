@@ -238,6 +238,7 @@ SUBDIR+=	barrier
 SUBDIR+=	basepkg
 SUBDIR+=	bashdb
 SUBDIR+=	bashtop
+SUBDIR+=	basic-stats
 SUBDIR+=	bastard
 SUBDIR+=	bcftools
 SUBDIR+=	beads
