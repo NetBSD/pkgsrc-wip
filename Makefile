@@ -634,7 +634,6 @@ SUBDIR+=	dokuwiki
 SUBDIR+=	dolfin
 SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
-SUBDIR+=	doom2-pwad-lost-civilization
 SUBDIR+=	doomlegacy-devel
 SUBDIR+=	doorman
 SUBDIR+=	dosbox-svn
