@@ -760,7 +760,6 @@ SUBDIR+=	execline
 SUBDIR+=	exhume
 SUBDIR+=	expiretable
 SUBDIR+=	exult-snapshot
-SUBDIR+=	eyeD3
 SUBDIR+=	ez-pine-gpg
 SUBDIR+=	ezbounce
 SUBDIR+=	f1spirit
