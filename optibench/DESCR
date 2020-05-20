@@ -1,0 +1,5 @@
+OptiBench is a simple program to measure optimal sustained memory and disk
+performance.
+
+Unlike many benchmarks, it does not attempt to simulate naturally occurring
+loads. Rather, it indicates what is the best performance you can expect out of
