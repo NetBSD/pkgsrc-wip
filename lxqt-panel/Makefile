@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	0.15.0
+VERSION=	0.15.1
 DISTNAME=	lxqt-panel-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/lxqt-panel/releases/download/${VERSION}/}
