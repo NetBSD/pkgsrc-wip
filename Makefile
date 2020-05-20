@@ -4925,6 +4925,7 @@ SUBDIR+=	varnish-modules
 SUBDIR+=	varnish4
 SUBDIR+=	vault
 SUBDIR+=	vba-m
+SUBDIR+=	vcf-split
 SUBDIR+=	vcflib
 SUBDIR+=	vcftools
 SUBDIR+=	vcg
