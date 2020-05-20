@@ -2532,6 +2532,7 @@ SUBDIR+=	openxcom
 SUBDIR+=	openzwave
 SUBDIR+=	opera60-bin
 SUBDIR+=	ophcrack
+SUBDIR+=	optibench
 SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	oranchelo-icon-theme
