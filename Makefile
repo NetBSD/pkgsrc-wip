@@ -1030,6 +1030,7 @@ SUBDIR+=	gcc47
 SUBDIR+=	gcc47-libs
 SUBDIR+=	gcc7-contrib
 SUBDIR+=	gcc9snapshot
+SUBDIR+=	gcc10-libatomic
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
