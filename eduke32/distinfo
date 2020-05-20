@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/08/19 20:36:32 yhardy Exp $
+$NetBSD$
 
-SHA1 (eduke32_src_20161225-5974.tar.xz) = 266e7faefc632fafe2071a5603a206782a33f52d
-RMD160 (eduke32_src_20161225-5974.tar.xz) = a41cf9b3575778088844c621ae6352c6f25fc168
-SHA512 (eduke32_src_20161225-5974.tar.xz) = a0af8f76b46aa9be494d45cb2ecd30e6249940f305b43e6bcb5d6bd27abdf8e291c7f005391a7628d60d0248001750bd9989357ff8f02528e1b942424cf579fa
-Size (eduke32_src_20161225-5974.tar.xz) = 14567240 bytes
-SHA1 (patch-build_include_compat.h) = 2a3f4f3e5f8e0fa92249cb6136a8734bbc6a09c1
-SHA1 (patch-build_src_glbuild.c) = 26eb91f06cbcfeaf6a53ad39055d7c78f6e006d1
-SHA1 (patch-source_m32exec.c) = 1e755affe64bc54fb9d237a1b815fd353a41ecf9
+SHA1 (eduke32_src_20200404-8798.tar.xz) = bb196a077fe0c2354c37740175f9c81d30fed3cb
+RMD160 (eduke32_src_20200404-8798.tar.xz) = 05230e12e08d01744d746a801617791fefc5cf67
+SHA512 (eduke32_src_20200404-8798.tar.xz) = c0cb8713fdda11d25926fce37d7e2a44a17149a11c5365819aa5ed3eb46684760077ed904fd98033589bd5ad90e67f46195d00c6bde1b8c431e2ecf908a97ee3
+Size (eduke32_src_20200404-8798.tar.xz) = 16565732 bytes
+SHA1 (patch-gnumakefile) = 57d03359a84a4881026a4745bfe13f7f2001b663
+SHA1 (patch-mmulti.cpp) = faa77608cb3a60f5bada13351a34ae9f6b06fc9e

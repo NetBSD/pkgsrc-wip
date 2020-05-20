@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/julius
+share/applications/com.github.bvschaik.julius.desktop
+share/icons/hicolor/256x256/apps/com.github.bvschaik.julius.png
+share/icons/hicolor/48x48/apps/com.github.bvschaik.julius.png
+share/icons/hicolor/512x512/apps/com.github.bvschaik.julius.png
+share/metainfo/com.github.bvschaik.julius.metainfo.xml

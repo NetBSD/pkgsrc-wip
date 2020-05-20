@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD$
+The data seg size is too low and needs to be raised above 2GB !
+Please run the following command (under the user that executed eduke32)
+for eduke32 to work on NetBSD
+
+$ ulimit -d 2097152
+===========================================================================
