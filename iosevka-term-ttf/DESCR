@@ -1,9 +1,0 @@
-Iosevka is a slender monospace sans-serif and slab-serif typeface inspired
-by Pragmata Pro, M+ and PF DIN Mono, designed to be the ideal font for
-programming.
-
-This package is "Terminal" variant.
-
-Exact monospaced font without ligatures and full-width glyphs. Since some
-environments cannot interpret Iosevka as monospaced, and have difficulties
-with ligatures included, you can use Iosevka Term as an alternative.

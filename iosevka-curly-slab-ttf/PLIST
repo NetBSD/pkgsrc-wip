@@ -1,0 +1,10 @@
+@comment $NetBSD$
+share/fonts/X11/TTF/iosevka-curly-slab-bold.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-extrabold.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-extralight.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-heavy.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-light.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-medium.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-regular.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-semibold.ttc
+share/fonts/X11/TTF/iosevka-curly-slab-thin.ttc

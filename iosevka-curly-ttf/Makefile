@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	iosevka-type-slab-ttf-2.3.3
-DISTNAME=	07-${PKGNAME:S/-ttf//}
+PKGNAME=	iosevka-curly-ttf-3.0.1
+DISTNAME=	ttc-${PKGNAME:S/-ttf//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
 GITHUB_PROJECT=	Iosevka
@@ -23,6 +23,6 @@ FONTSDIR=	share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTSDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${DESTDIR}/${PREFIX}/${FONTSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.ttc ${DESTDIR}/${PREFIX}/${FONTSDIR}
 
 .include "../../mk/bsd.pkg.mk"
