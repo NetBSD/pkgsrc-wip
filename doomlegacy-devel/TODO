@@ -14,6 +14,7 @@ Part 8: Support for extended nodes
     => Deferred (not considered for 1.48 release)
 [X] Add optional zlib dependency for build system
 [X] Add support for compressed ZDoom extended nodes
+    Use "zdbsp -z" to create test map with compressed ZDoom extended nodes
     => Works as expected
 
 
@@ -27,14 +28,22 @@ Make it possible to play maps with broken blockmaps (or no blockmaps at all).
 [X] Document option "-blockmap" in man page
 [X] Test as workaround for NOVA II
     Blockmap load error, Bug #658
-    => Works as expected
+    => Works as expected (needs Feature #95 too)
 [X] Test as as workaround for NOVA III
-    Blockmaps missing completely
+    Blockmaps missing completely (needs Feature #95 too)
     => Works as expected
 [X] Test as workaround for Lost Civilization
     It's unclear whether the blockmaps are broken or not imported correctly
     => Works as expected
-[ ] Create upstream feature request
+[X] Created upstream feature request #96
+
+
+Part 10: Some textures show pink/black/pink stripes
+===================================================
+Just a cosmetic problem.
+
+[X] Created upstream bug report #663
+
 
 
 EOF
