@@ -1,15 +1,14 @@
 # $NetBSD: Makefile,v 1.1 2013/08/14 01:13:50 outpaddling Exp $
 #
 
-DISTNAME=	webbrowser-0.3
+DISTNAME=	webbrowser-0.3.0
 CATEGORIES=	www
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+HOMEPAGE=	https://github.com/outpaddling/webbrowser/releases/new
+COMMENT=	Proxy script for launching "best" available web browser
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (webbrowser-0.3.tar.xz) = c3101bc2afc2a9ef7cb29a7f8d47a17e461ec616
-RMD160 (webbrowser-0.3.tar.xz) = 28fd4efebcc1dbdc8cdb35e2c9e4ca605857484d
-Size (webbrowser-0.3.tar.xz) = 1656 bytes
+SHA1 (webbrowser-0.3.0.tar.gz) = 3e6132fe33bead42f953f735db92b70bd51ae4f1
+RMD160 (webbrowser-0.3.0.tar.gz) = a94e73433ab614f8099f64064bd4757257032f90
+SHA512 (webbrowser-0.3.0.tar.gz) = d39f39602f2efbff43d677845020cecbb5041485d463f2f806edaf3eb49d52969e621a2708946a20340ac6d09c413ec5dc0a771cd145dcf07bd2e277eb1cd565
+Size (webbrowser-0.3.0.tar.gz) = 2570 bytes
