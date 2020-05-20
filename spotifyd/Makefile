@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	spotifyd-v0.2.24
+DISTNAME=	spotifyd-0.2.24
 PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	base@atomicules.co.uk
 HOMEPAGE=	https://github.com/Spotifyd/spotifyd/
