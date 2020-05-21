@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (htslib-1.9.tar.gz) = 0bf3cb05883a38ea4da10711e833b007df723cc1
-RMD160 (htslib-1.9.tar.gz) = 8dbb5b435c91c461e17c71b2c14f1939884188e1
-SHA512 (htslib-1.9.tar.gz) = d44f6e47c4afb83adf78931fdd4dee38c2ffbf20c562f5c591369d875335dee669c3b9d93b7993e988f396fce34e23de0443f8cd41bdef0f21a8585ef95a9f29
-Size (htslib-1.9.tar.gz) = 1285580 bytes
+SHA1 (htslib-1.10.2.tar.gz) = 0ac4b86e49556d7dcaa89d4cce2661c9ca706631
+RMD160 (htslib-1.10.2.tar.gz) = 6d8b6a362297345420dc9acc544029276ce4b1b6
+SHA512 (htslib-1.10.2.tar.gz) = 7a91c15ca1de35653d068dc57ae511ad791ae0bd8504867d4e60c46e813e58b441409541197cde3b2a37840e60331336aebc627ecbf5c64fca1af63dd05f8f9e
+Size (htslib-1.10.2.tar.gz) = 1452177 bytes
