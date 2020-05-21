@@ -1,12 +1,12 @@
 # $NetBSD: buildlink3.mk,v 1.1 2012/10/03 15:05:59 othyro Exp $
 
-BUILDLINK_TREE+=	sfml+
+BUILDLINK_TREE+=	sfml
 
-.if !defined(SFML+_BUILDLINK3_MK)
-SFML+_BUILDLINK3_MK:=
+.if !defined(SFML_BUILDLINK3_MK)
+SFML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.sfml++=	sfml+>=1.6
-BUILDLINK_PKGSRCDIR.sfml+?=	../../wip/sfml+
+BUILDLINK_API_DEPENDS.sfml+=	sfml>=1.6
+BUILDLINK_PKGSRCDIR.sfml?=	../../wip/sfml
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
@@ -16,6 +16,6 @@ BUILDLINK_PKGSRCDIR.sfml+?=	../../wip/sfml+
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.endif	# SFML+_BUILDLINK3_MK
+.endif	# SFML_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-sfml+
+BUILDLINK_TREE+=	-sfml

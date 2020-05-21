@@ -33,5 +33,5 @@ do-install:
 	${INSTALL_GAME_DATA} ${WRKSRC}/media/*.* ${DESTDIR}${PREFIX}/${WITCHBLAST_DATA_DIR}/media/
 	${INSTALL_GAME_DATA} ${WRKSRC}/media/sound/* ${DESTDIR}${PREFIX}/${WITCHBLAST_DATA_DIR}/media/sound/
 
-.include "../../wip/sfml+/buildlink3.mk"
+.include "../../wip/sfml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

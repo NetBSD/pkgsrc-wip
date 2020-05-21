@@ -21,7 +21,7 @@ USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DVERSION=${VERSION}
 CMAKE_ARGS+=	-DENABLE_WX=OFF # "wx is not even beta state at present"
 CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
-CMAKE_ARGS+=	-DSFML_LIBRARY=${BUILDLINK_PREFIX.sfml+}/lib/libsfml-system.so
+CMAKE_ARGS+=	-DSFML_LIBRARY=${BUILDLINK_PREFIX.sfml}/lib/libsfml-system.so
 EGDIR=		${PREFIX}/share/examples/vbam
 CONF_FILES+=	${EGDIR}/vbam.cfg ${PKG_SYSCONFDIR}/vbam.cfg
 
@@ -35,7 +35,7 @@ BUILDLINK_DEPMETHOD.glibmm=	build
 .include "../../devel/glibmm/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gtkmm=	build
 .include "../../x11/gtkmm/buildlink3.mk"
-.include "../../wip/sfml+/buildlink3.mk"
+.include "../../wip/sfml/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 #.include "../../x11/wxGTK28/buildlink3.mk"

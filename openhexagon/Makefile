@@ -79,6 +79,6 @@ post-install:
 
 LUA_VERSIONS_ACCEPTED=	51
 
-.include "../../wip/sfml+/buildlink3.mk"
+.include "../../wip/sfml/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

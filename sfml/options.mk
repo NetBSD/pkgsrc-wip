@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.1 2012/10/03 15:05:59 othyro Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.sfml+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sfml
 PKG_SUPPORTED_OPTIONS=	debug static
 PKG_SUGGESTED_OPTIONS=	# blank
 

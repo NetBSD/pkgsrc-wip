@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/24 17:25:10 blef Exp $
 
 DISTNAME=	SFML-2.5.1-sources
-PKGNAME=	sfml+-2.5.1
+PKGNAME=	${DISTNAME:S/-sources//:tl}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.sfml-dev.org/files/
 EXTRACT_SUFX=	.zip

@@ -1,6 +1,6 @@
 This seems to be working if slow on my computer
 
-- depends on wip/sfml+ which has a note that joystick input
+- depends on wip/sfml which has a note that joystick input
   is not available but might not be too much work and I don't
   know if relevant for this game
 
