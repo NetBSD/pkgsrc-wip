@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.sfml-dev.org/
 COMMENT=	Free multimedia C++ API
 LICENSE=	zlib
 
-WRKSRC=			${WRKDIR}/SFML-2.5.1
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-sources//}
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		rm
