@@ -8,7 +8,7 @@ LAPACK_COMPONENT_CMAKE_ARGS= \
 	-DUSE_OPTIMIZED_BLAS=ON \
 	-DBLAS_LIBRARIES=${BLAS_LIBS:Q} \
 	-DUSE_OPTIMIZED_LAPACK=OFF \
-	-DCBLAS=OFF -DLAPACKE=OFF
+	-DCBLAS=OFF -DLAPACKE=OFF -DLAPACK=ON
 
 # This always uses Netlib BLAS. Other optimized BLAS packages bring
 # their own LAPACK, hence cblas and lapacke packages use
