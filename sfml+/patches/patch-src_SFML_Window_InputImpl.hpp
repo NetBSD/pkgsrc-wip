@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- src/SFML/Window/InputImpl.hpp.orig	2018-10-15 19:41:39.000000000 +0000
 +++ src/SFML/Window/InputImpl.hpp
 @@ -32,7 +32,7 @@

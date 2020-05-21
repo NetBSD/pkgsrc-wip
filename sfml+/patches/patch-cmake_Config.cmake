@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- cmake/Config.cmake.orig	2018-10-15 19:41:39.000000000 +0000
 +++ cmake/Config.cmake
 @@ -31,6 +31,10 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "^k?Fre

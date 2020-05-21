@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- src/SFML/System/CMakeLists.txt.orig	2018-10-15 19:41:39.000000000 +0000
 +++ src/SFML/System/CMakeLists.txt
 @@ -90,7 +90,7 @@ sfml_add_library(sfml-system

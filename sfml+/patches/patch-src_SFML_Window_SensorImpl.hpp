@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- src/SFML/Window/SensorImpl.hpp.orig	2018-10-15 19:41:39.000000000 +0000
 +++ src/SFML/Window/SensorImpl.hpp
 @@ -35,7 +35,7 @@

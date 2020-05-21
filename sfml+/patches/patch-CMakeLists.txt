@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- CMakeLists.txt.orig	2018-10-15 19:41:39.000000000 +0000
 +++ CMakeLists.txt
 @@ -140,7 +140,7 @@ endif()

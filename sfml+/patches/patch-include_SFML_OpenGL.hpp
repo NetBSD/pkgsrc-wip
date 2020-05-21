@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- include/SFML/OpenGL.hpp.orig	2018-10-15 19:41:39.000000000 +0000
 +++ include/SFML/OpenGL.hpp
 @@ -45,7 +45,7 @@

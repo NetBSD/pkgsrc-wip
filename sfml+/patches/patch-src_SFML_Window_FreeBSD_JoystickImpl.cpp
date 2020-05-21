@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- src/SFML/Window/FreeBSD/JoystickImpl.cpp.orig	2017-02-08 11:29:16.000000000 +0000
 +++ src/SFML/Window/FreeBSD/JoystickImpl.cpp
 @@ -53,6 +53,16 @@ namespace

@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- include/SFML/Window/WindowHandle.hpp.orig	2018-10-15 19:41:39.000000000 +0000
 +++ include/SFML/Window/WindowHandle.hpp
 @@ -42,7 +42,7 @@ namespace sf

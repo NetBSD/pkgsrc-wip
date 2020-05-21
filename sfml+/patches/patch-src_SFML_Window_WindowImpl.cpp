@@ -1,5 +1,7 @@
 $NetBSD$
 
+add NetBSD support
+
 --- src/SFML/Window/WindowImpl.cpp.orig	2018-10-15 19:41:39.000000000 +0000
 +++ src/SFML/Window/WindowImpl.cpp
 @@ -38,7 +38,7 @@
