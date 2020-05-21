@@ -4495,7 +4495,6 @@ SUBDIR+=	service
 SUBDIR+=	seturgent
 SUBDIR+=	sfeed-git
 SUBDIR+=	sflphoned
-SUBDIR+=	sfml
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
 SUBDIR+=	shadow

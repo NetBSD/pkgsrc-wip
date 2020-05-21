@@ -35,12 +35,12 @@ BUILDLINK_DEPMETHOD.glibmm=	build
 .include "../../devel/glibmm/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gtkmm=	build
 .include "../../x11/gtkmm/buildlink3.mk"
-.include "../../wip/sfml/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 #.include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../multimedia/sfml/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
