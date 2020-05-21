@@ -33,7 +33,7 @@ DEPENDS+=	lxqt-session>=0.15.0:../../wip/lxqt-session
 DEPENDS+=	lxqt-sudo>=0.15.0:../../wip/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=0.15.1:../../wip/pcmanfm-qt
 DEPENDS+=	qterminal>=0.15.0:../../wip/qterminal
-DEPENDS+=	lxqt-panel>=0.15.0:../../wip/lxqt-panel
+DEPENDS+=	lxqt-panel>=0.15.1:../../wip/lxqt-panel
 DEPENDS+=	lxqt-runner>=0.15.0:../../wip/lxqt-runner
 DEPENDS+=	screengrab>=2.0.1:../../wip/screengrab
 DEPENDS+=	lxqt-archiver>=0.2.0:../../wip/lxqt-archiver
