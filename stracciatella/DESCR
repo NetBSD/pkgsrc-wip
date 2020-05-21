@@ -1,0 +1,6 @@
+Opensource re-implementation of Jagged Alliance 2
+
+-Note: on NetBSD 8.2 adm64 following was  observed
+
+For RUSTC/CARGO to work set a symlink from /usr/pkg/etc/openssl/certs to
+/etc/openssl/certs

@@ -1,0 +1,2 @@
+For RUSTC/CARGO to work set a symlink from /usr/pkg/etc/openssl/certs to 
+/etc/openssl/certs
