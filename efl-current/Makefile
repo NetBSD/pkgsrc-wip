@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 0.3 2018/09/07 20:03:10 andyb Exp $
 
-DISTNAME=	efl-1.24.0
+DISTNAME=	efl-1.24.1
 CATEGORIES=	x11
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
 EXTRACT_SUFX=	.tar.xz
