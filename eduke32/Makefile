@@ -1,6 +1,5 @@
 # $NetBSD$
 
-SUBDIR+=	eduke32
 EDUKE_SVN=	8798
 EDUKE_DATE=	20200404
 DISTNAME=	eduke32_src_${EDUKE_DATE}-${EDUKE_SVN}
@@ -14,6 +13,8 @@ HOMEPAGE=	https://eduke32.com/
 COMMENT=	Engine for Duke Nukem 3D
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS=	nasm-[0-9]*:../../devel/nasm
+
 WRKSRC=		${WRKDIR}/eduke32_${EDUKE_DATE}-${EDUKE_SVN}
 USE_LANGUAGES=	c c++
 
@@ -21,9 +22,6 @@ USE_TOOLS+=	gmake pkg-config
 NO_CONFIGURE=	yes
 MAKE_ENV+=	prefix=${PREFIX}
 MAKE_FILE=	GNUmakefile
-
-
-BUILD_DEPENDS=	nasm-[0-9]*:../../devel/nasm
 
 BUILD_MAKE_FLAGS+=	LTO=0 RELEASE=1 USE_LIBVPX=0
 
