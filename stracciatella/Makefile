@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ja2-stracciatella/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	astr0b4by@gmail.com
 HOMEPAGE=	https://github.com/ja2-stracciatella/ja2-stracciatella/
 COMMENT=	Improved, cross-platform, stable Jagged Alliance 2 runtime
 LICENSE=	public-domain

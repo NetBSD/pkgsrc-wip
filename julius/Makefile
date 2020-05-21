@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bvschaik/}
 GITHUB_RELEASE=	v1.4.0
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	astr0b4by@gmail.com
 HOMEPAGE=	https://github.com/bvschaik/julius/
 COMMENT=	Open source re-implementation of Caesar III
 LICENSE=	gnu-gpl-v3
