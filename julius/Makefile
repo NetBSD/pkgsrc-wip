@@ -1,19 +1,15 @@
 # $NetBSD$
 
-SUBDIR+=	julius
-GITHUB_PROJECT=	julius
-DISTNAME=	julius-1.4.0-source
-PKGNAME=	julius-1.4.0
+DISTNAME=	julius-1.4.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bvschaik/}
-GITHUB_RELEASE=	v1.4.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	astr0b4by@gmail.com
 HOMEPAGE=	https://github.com/bvschaik/julius/
 COMMENT=	Open source re-implementation of Caesar III
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/julius-1.4.0
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 LDFLAGS.NetBSD+=	-lexecinfo
