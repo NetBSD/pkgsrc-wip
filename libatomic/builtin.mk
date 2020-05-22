@@ -6,7 +6,10 @@ BUILTIN_FIND_LIBS:=	atomic
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
-.if !empty(BUILTIN_LIB_FOUND.atomic:M[yY][eE][sS])
+# Use builtin libatomic if the compiler isn't GCC
+# This package is broken with non-GCC compilers.
+.if !empty(BUILTIN_LIB_FOUND.atomic:M[yY][eE][sS]) && \
+    empty(PKGSRC_COMPILER:Mgcc*)
 BUILTIN_LIBNAME.libatomic=	atomic
 USE_BUILTIN.libatomic=		yes
 .endif
