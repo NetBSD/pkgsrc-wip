@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
-COMMENT=	Atomic fallback implementation
+COMMENT=	Atomic fallback implementation for GCC
 LICENSE=	gnu-gpl-v3
 
 .if empty(PKGSRC_COMPILER:Mgcc*)
