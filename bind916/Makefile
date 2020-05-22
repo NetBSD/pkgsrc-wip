@@ -18,8 +18,8 @@ MAKE_JOBS_SAFE=	no
 BIND_VERSION=	9.16.3
 
 # For libatomic and 64-bit operations
-USE_PKGSRC_GCC=	yes
-GCC_REQD=	7
+#USE_PKGSRC_GCC=	yes
+#GCC_REQD=	7
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -88,4 +88,5 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
+.include "../../wip/libatomic/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
