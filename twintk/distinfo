@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (twintk-0.9.4.tar.gz) = 1fae76e4a521ccf8934769fb2ac3ebc041dd8483
-RMD160 (twintk-0.9.4.tar.gz) = b3fa01cd9530cdf024c98241a24864512be9715a
-SHA512 (twintk-0.9.4.tar.gz) = b3ea224d86e569ee42aa488f008d6d7fce35e5ffe958a7815a5499f414033d35862334b6e33af228d57f43760b07e350c4c57ae3b81b7bd7365fb71ad66d754b
-Size (twintk-0.9.4.tar.gz) = 849871 bytes
+SHA1 (twintk-0.9.4.1-440383cf0b9b88ff93bfa71b6ecafbdfb3c3045d.tar.gz) = 9c31c0c8080860d3addcc6cca6870059081f009f
+RMD160 (twintk-0.9.4.1-440383cf0b9b88ff93bfa71b6ecafbdfb3c3045d.tar.gz) = b24e4e5c7c1f121ab96e5a49ff5b23021c314f7b
+SHA512 (twintk-0.9.4.1-440383cf0b9b88ff93bfa71b6ecafbdfb3c3045d.tar.gz) = 02a36bde1d83238a7dd31b0074cdc351241c9a14fdcfc700541d8a15b91ebb3acb48cedcf798538e6d8c6aa51c33e48840f2f5a3f8cb1deb2cadff693f3fd50f
+Size (twintk-0.9.4.1-440383cf0b9b88ff93bfa71b6ecafbdfb3c3045d.tar.gz) = 849950 bytes
