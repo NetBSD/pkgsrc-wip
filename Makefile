@@ -2495,6 +2495,7 @@ SUBDIR+=	opencascade
 SUBDIR+=	opencl-clhpp
 SUBDIR+=	opencl-headers
 SUBDIR+=	openclonk
+SUBDIR+=	openconnect
 SUBDIR+=	opendchub
 SUBDIR+=	opendune
 SUBDIR+=	openerp-server
