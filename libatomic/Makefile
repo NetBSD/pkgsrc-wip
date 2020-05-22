@@ -14,10 +14,6 @@ HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	Atomic fallback implementation for GCC
 LICENSE=	gnu-gpl-v3
 
-.if empty(PKGSRC_COMPILER:Mgcc*)
-PKG_SKIP_REASON+=	"Uses esoteric GCC-specific features"
-.endif
-
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake
 
@@ -35,6 +31,10 @@ UNLIMIT_RESOURCES+=	stacksize
 CHECK_PORTABILITY_SKIP+=	contrib/*
 
 .include "../../mk/bsd.prefs.mk"
+
+.if empty(PKGSRC_COMPILER:Mgcc*)
+PKG_SKIP_REASON+=	"Uses esoteric GCC-specific features"
+.endif
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
