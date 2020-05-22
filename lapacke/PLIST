@@ -6,8 +6,6 @@ include/lapacke_mangling.h
 include/lapacke_utils.h
 lib/cmake/lapacke-${PKGVERSION}/lapacke-config-version.cmake
 lib/cmake/lapacke-${PKGVERSION}/lapacke-config.cmake
-lib/cmake/lapacke-${PKGVERSION}/lapacke-targets-release.cmake
-lib/cmake/lapacke-${PKGVERSION}/lapacke-targets.cmake
 lib/liblapacke.a
 lib/liblapacke.so
 lib/liblapacke.so.3

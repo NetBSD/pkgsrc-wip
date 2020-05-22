@@ -31,8 +31,16 @@ Support combined build of shared and static libraries.
  install(
    FILES ${LAPACKE_INCLUDE} ${LAPACK_BINARY_DIR}/include/lapacke_mangling.h
    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-@@ -130,3 +150,4 @@
-   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
+@@ -126,7 +146,8 @@
    COMPONENT Development
    )
+ 
+-install(EXPORT lapacke-targets
+-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
+-  COMPONENT Development
+-  )
++#install(EXPORT lapacke-targets
++#  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lapacke-${LAPACK_VERSION}
++#  COMPONENT Development
++#  )
 +
