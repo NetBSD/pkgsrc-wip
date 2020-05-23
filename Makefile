@@ -735,7 +735,6 @@ SUBDIR+=	epacts
 SUBDIR+=	epix
 SUBDIR+=	epson-inkjet-printer-escpr
 SUBDIR+=	erlang-basho
-SUBDIR+=	erlang15
 SUBDIR+=	es40-cvs
 SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
