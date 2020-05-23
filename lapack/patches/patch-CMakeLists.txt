@@ -6,15 +6,6 @@ packaging.
 
 --- CMakeLists.txt.orig	2020-03-03 15:36:43.155560348 +0100
 +++ CMakeLists.txt	2020-03-03 15:36:34.827560837 +0100
-@@ -11,7 +11,7 @@
-   )
- 
- # Add the CMake directory for custon CMake modules
--set(CMAKE_MODULE_PATH "${LAPACK_SOURCE_DIR}/CMAKE" ${CMAKE_MODULE_PATH})
-+set (CMAKE_MODULE_PATH "/tmp/work-with-system-gcc/pkgsrc/cvs-20200227/pkgsrc-cvs-20200227/math/blas/work/.buildlink/cmake-Modules" "/tmp/work-with-system-gcc/pkgsrc/cvs-20200227/pkgsrc-cvs-20200227/math/blas/work/.buildlink/cmake-Modules" "/tmp/work-with-system-gcc/pkgsrc/cvs-20200227/pkgsrc-cvs-20200227/math/blas/work/.buildlink/cmake-Modules" "${LAPACK_SOURCE_DIR}/CMAKE" ${CMAKE_MODULE_PATH})
- 
- # Export all symbols on Windows when building shared libraries
- SET(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 @@ -112,8 +112,10 @@
  
  
