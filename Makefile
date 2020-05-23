@@ -2320,7 +2320,6 @@ SUBDIR+=	nestopia-rpi
 SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
-SUBDIR+=	netatalk
 SUBDIR+=	netbsd-awk
 SUBDIR+=	netbsd-build-tools
 SUBDIR+=	netbsd-icon-theme
