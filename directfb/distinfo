@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/30 14:10:18 moubctez Exp $
-
-SHA1 (DirectFB-0.9.22.tar.gz) = f3a586c654086c287cd1bcc683be0f234973ee17
-RMD160 (DirectFB-0.9.22.tar.gz) = 0a92014c4657a02b73fa4efe427343641c42b9f3
-Size (DirectFB-0.9.22.tar.gz) = 1977888 bytes
-SHA1 (patch-aa) = 34dfbcb63ff552dabf715f8ab980f6b1c2b54a92
-SHA1 (patch-ab) = 9335942238574830dfb31abce2be5f435a8ff90e

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/06/14 23:33:55 othyro Exp $
-
-SHA1 (DFBSee-0.7.4.tar.gz) = 11db8261b1cbfe380e68636c5b6d7fc6e3118707
-RMD160 (DFBSee-0.7.4.tar.gz) = 148ca388cc4966f301bcc2d124583bbfb85572cc
-Size (DFBSee-0.7.4.tar.gz) = 147346 bytes
-SHA1 (patch-aa) = 56816639a4908031eec852ebde16b8f232e0239c
