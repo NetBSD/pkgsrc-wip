@@ -1,0 +1,13 @@
+Fix:
+
+v4l1compat.c:115:23: error: redefinition of 'read'
+ LIBV4L_PUBLIC ssize_t read(int fd, void *buffer, size_t n)
+                       ^~~~
+In file included from /usr/include/ssp/stdio.h:34,
+                 from /usr/include/stdio.h:602,
+                 from ../../lib/include/libv4l1.h:26,
+                 from v4l1compat.c:31:
+/usr/include/ssp/unistd.h:39:1: note: previous definition of 'read' was here
+ __ssp_redirect0(ssize_t, read, (int __fd, void *__buf, size_t __len), \
+ ^~~~~~~~~~~~~~~
+
