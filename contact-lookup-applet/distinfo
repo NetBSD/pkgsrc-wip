@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/12/24 19:00:26 noud4 Exp $
-
-SHA1 (contact-lookup-applet-0.17.tar.gz) = 66f5502d8c4f7fbcf4f4c8c5369783c295f767a2
-RMD160 (contact-lookup-applet-0.17.tar.gz) = 3a7466cb4c5119f07022d58fc0942f001b4c772a
-Size (contact-lookup-applet-0.17.tar.gz) = 440307 bytes
-SHA1 (patch-aa) = 2c2178947f217f9b17682f8ca6f0fdd93cd0585f

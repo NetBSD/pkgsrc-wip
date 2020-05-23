@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/06/13 09:31:17 othyro Exp $
-
-SHA1 (bibliographer-0.1.3.tar.gz) = 7251038f99df1575a01928ba74e1567c220cdf19
-RMD160 (bibliographer-0.1.3.tar.gz) = e4003fc69e517179c0927c66bba4d5e91eff5d4d
-Size (bibliographer-0.1.3.tar.gz) = 138410 bytes
-SHA1 (patch-aa) = d8a8f448c8e2df314ef1941deba1cdcb9e1cfe13

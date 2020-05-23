@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/10/26 15:07:06 noud4 Exp $
-
-SHA1 (multiminer-3.6.2.tar.gz) = 1ddb728c732624174c1ddcb8dc296c96e2651111
-RMD160 (multiminer-3.6.2.tar.gz) = 8f31a6bb6defa558d845f2823b57f532c73638c4
-SHA512 (multiminer-3.6.2.tar.gz) = c569869793e00acb55c7949e720980533a1527b0ca0bd1423c47da0ef94abdc576316469caf840b74407dc100e96651c55e4f460b3b948080ba78f0421ee084b
-Size (multiminer-3.6.2.tar.gz) = 3421793 bytes

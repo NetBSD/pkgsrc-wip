@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 00:34:59 agc Exp $
-
-SHA1 (ekiga-4.0.1.tar.xz) = da489d3aed19272016d297314abdcde42a1af0fb
-RMD160 (ekiga-4.0.1.tar.xz) = 378eac3477644ee181c946442111ee6a5449323e
-SHA512 (ekiga-4.0.1.tar.xz) = 3c4dd5eab6e91434da4bbfe5728ac5943ed5ae89b8b2241fb59abb3e41bcd08ba187b5d60c9d839b1010edd7fc97b53cc6db57a6eec40ba81757a772febd2217
-Size (ekiga-4.0.1.tar.xz) = 8339364 bytes
-SHA1 (patch-configure) = 0b82cc31bd6a564c3e8ed741a142cec78c81da86

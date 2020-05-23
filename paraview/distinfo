@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2013/07/22 12:19:55 slitvinov Exp $
-
-SHA1 (ParaView-v4.0.1-source.tgz) = 098b80f3220e824e6bddee92ca7f731f9f2cb7c8
-RMD160 (ParaView-v4.0.1-source.tgz) = 4c0b5f5e10aa6b2e498780f0342012866b227b10
-Size (ParaView-v4.0.1-source.tgz) = 47827831 bytes

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2009/09/24 17:44:55 thomasklausner Exp $
-
-SHA1 (muine-0.8.11.tar.gz) = b7cf4be9121e48f03970e82c799a1977549d1f11
-RMD160 (muine-0.8.11.tar.gz) = 14f0f7474c9e34e859c9030410ad3347f2e197ad
-Size (muine-0.8.11.tar.gz) = 804303 bytes
-SHA1 (patch-ab) = 4cb01f8adb7bfc6f7639693eb6989b26212c9ab6

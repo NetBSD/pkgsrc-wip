@@ -1,5 +1,0 @@
-GSEGrafix is a GNOME application which uses an anti-aliased GNOME canvas for
-creating scientific and engineering plots. The program is written in C and reads
-ASCII parameter files and data files. The parameter files contain keywords and
-corresponding arguments for specifying plot parameters (such as data file names,
-data file formats, plot type, plot style, axis type, axis labels, etc).
