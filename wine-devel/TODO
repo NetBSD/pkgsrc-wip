@@ -1,4 +1,0 @@
-- make a proper x11-links-i386, so this package works
-- make that package actually compile things, not extract a binary.
-- compile lacks -li386, for whatever reason.
-- res_state is still an issue - we're disabling the check for resolv.h

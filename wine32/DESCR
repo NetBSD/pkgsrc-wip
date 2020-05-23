@@ -1,6 +1,0 @@
-Wine is a program which facilitates running Microsoft Windows Programs
-on Unix. It acts as a compatibility layer by translating Windows API
-calls into POSIX calls on the fly; thereby allowing you to run Windows
-Applications on your UNIX desktop.
-
-Note: This package is intended for i386 only.
