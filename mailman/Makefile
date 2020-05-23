@@ -1,8 +1,6 @@
 # $NetBSD: Makefile,v 1.89 2019/11/02 16:25:22 rillig Exp $
 
 DISTNAME=	mailman-2.1.33
-PKGNAME=	mailman-2.1.33
-PKGREVISION=	0
 CATEGORIES=	mail www
 MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.33/+download/
 EXTRACT_SUFX=	.tgz
@@ -69,7 +67,7 @@ RCD_SCRIPTS=		mailman
 INSTALL_TEMPLATES+=	${FILESDIR}/INSTALL
 DEINSTALL_TEMPLATES+=	${FILESDIR}/DEINSTALL
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.1.14.1
+PYTHON_VERSIONS_ACCEPTED=	27 # Mailman 2.1.x is stuck in Python 2.7
 REPLACE_PYTHON+=		Mailman/Archiver/pipermail.py
 REPLACE_PYTHON+=		Mailman/Post.py
 REPLACE_PYTHON+=		bin/msgfmt.py
