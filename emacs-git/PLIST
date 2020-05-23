@@ -2966,8 +2966,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/levents.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/levents.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.el.gz
