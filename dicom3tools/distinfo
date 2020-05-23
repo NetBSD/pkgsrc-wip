@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/10/14 12:16:08 shattered Exp $
-
-SHA1 (dicom3tools_1.00.snapshot.20061010.tar.bz2) = 3fedb36c9b3583a3b19202fb9ab1ad7a374ab082
-RMD160 (dicom3tools_1.00.snapshot.20061010.tar.bz2) = 8ee226eb4f25274c10324902435c52f1c188a856
-Size (dicom3tools_1.00.snapshot.20061010.tar.bz2) = 1005482 bytes
-SHA1 (patch-aa) = 05a6204afa5fe0a6b3d00be3f0790ec9e50ba11a

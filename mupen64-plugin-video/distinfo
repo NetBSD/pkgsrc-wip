@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2012/12/27 06:15:04 othyro Exp $
-
-SHA1 (tr64_oglv078_src.tar.bz2) = 539d452b13245425317082b88c47248280457e87
-RMD160 (tr64_oglv078_src.tar.bz2) = f2fe432c5d1c3922fe8ca5d1df6ee46bfb26cf33
-Size (tr64_oglv078_src.tar.bz2) = 285068 bytes
-SHA1 (patch-aa) = 50cbe70a49e95c893127f141c34810bd0e2fa124
-SHA1 (patch-ab) = d77e87d9bff08261437f68af99124f8c2ba563f5

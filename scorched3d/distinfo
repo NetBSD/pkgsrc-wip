@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2009/09/13 15:19:01 yacht Exp $
-
-SHA1 (Scorched3D-42.1-src.tar.gz) = 041e3b3dd47a7881738eb5d66885d7f339eb01ce
-RMD160 (Scorched3D-42.1-src.tar.gz) = ed8a621875d19eb4d7314293439f4c2a0b5a5276
-Size (Scorched3D-42.1-src.tar.gz) = 64491145 bytes
-SHA1 (patch-aa) = 7ecd1a4188abfd6b1d95d25427a5e37ca6a463c6
-SHA1 (patch-ab) = c311b6d6443d75b82ec6bed33d0a99ca804c0c7a
-SHA1 (patch-ac) = 5f035ee66fbddae0cf17021779e7c296a8cc2883

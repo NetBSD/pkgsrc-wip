@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2018/03/01 13:59:11 mef Exp $
-
-SHA1 (kicad-symbols-5.1.0.zip) = 8346c1f6ded8fb410ec3d90cbdce88e3120d1f6a
-RMD160 (kicad-symbols-5.1.0.zip) = 8805430543ce47613468ad00339441c57d2241c6
-SHA512 (kicad-symbols-5.1.0.zip) = 581bd0688fc08e2f139f53fee231d57a03a5c0d7853a1ae623efd7735bcb2fb20b590fa003edadcba816a96741e49156447302064fd48c6d0351eb1e9b0c8632
-Size (kicad-symbols-5.1.0.zip) = 2914561 bytes

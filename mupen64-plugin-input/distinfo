@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2012/12/27 05:56:25 othyro Exp $
-
-SHA1 (mupen64_input.tar.bz2) = 691bdb0e238b659e1db93fb50723892d8f2411c6
-RMD160 (mupen64_input.tar.bz2) = 8e2d9b278ff8988c5fc171b25bd1a279fb44b994
-Size (mupen64_input.tar.bz2) = 4438 bytes
-SHA1 (patch-aa) = 01bc63a42e28ab9887e1c4d4426d0a23b7fc82b5

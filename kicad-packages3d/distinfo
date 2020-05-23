@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2018/03/01 13:59:11 mef Exp $
-
-SHA1 (kicad-packages3d-5.1.0.zip) = 59dadababe2f59e9007f4e28ab1ceaf27039c3c2
-RMD160 (kicad-packages3d-5.1.0.zip) = 1ef093a0f8774897f3a6d5ce27267afb44b5d120
-SHA512 (kicad-packages3d-5.1.0.zip) = 09cae4724045ff805d03fdb66c1ec86447c21b8d68d31c6468fda87bb6d117b9fa040d5409ba9e8b8561d96d81d48ca1472dbfb059814c0ac044c914deefcb08
-Size (kicad-packages3d-5.1.0.zip) = 861402371 bytes
