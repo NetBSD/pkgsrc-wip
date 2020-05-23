@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.42 2020/04/16 21:54:06 nia Exp $
+
+SHA1 (audacity-2.4.1.tar.gz) = f164b6a2e02947809cee2e313cb61279a60d4829
+RMD160 (audacity-2.4.1.tar.gz) = 8c0b5643d015c7dd5bbe1b47eae0025201eb51b2
+SHA512 (audacity-2.4.1.tar.gz) = 2f0a3f7e24dce91ae520e285dbb05778b68e0fe37b8ded55ac568b5f8135069951b3986764adc5d0791c165b283a3c19596f1d6f51ba17028e0eb04558c63f25
+Size (audacity-2.4.1.tar.gz) = 63935461 bytes
+SHA1 (patch-CMakeLists.txt) = 633bd63588271947d3992397f6106d2568bedf24
+SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
+SHA1 (patch-cmake-proxies_CMakeLists.txt) = 468fb2e8812c86f1a681bdd7bb70c5575af14bfa
+SHA1 (patch-cmake-proxies_portaudio-v19_CMakeLists.txt) = 6ab7d63fc7ae0a37dbce77887b0f8a1d24f3d059
+SHA1 (patch-cmake-proxies_portmidi_CMakeLists.txt) = 661dd5714908299fea9b8612a762e57bba613472
+SHA1 (patch-lib-src_libnyquist_nyquist_cmupv_src_cmupv.c) = 3d6cb845d82b1bcbe31dabd4bad30cb1f7ea27d5
+SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = dbc0b5b88043c7b2895742e78e6a5990f65012ef
+SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = d313f137f11d3e0fafa383ddeccbc89021e9ddee
+SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 2d4558f059d86633a1fcdda22ef0c914758b35a0
+SHA1 (patch-src_AudioIO.cpp) = 1b44c68c4233b24a5fa4e17515eb237fee0e283a
+SHA1 (patch-src_CMakeLists.txt) = 7f88c6433e70b900d401f04871a4591b6c991983
+SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2

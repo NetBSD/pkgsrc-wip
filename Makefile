@@ -200,6 +200,7 @@ SUBDIR+=	atftp
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
 SUBDIR+=	ats2
+SUBDIR+=	audacity-cmake
 SUBDIR+=	audiere
 SUBDIR+=	audio-mml
 SUBDIR+=	audit-system

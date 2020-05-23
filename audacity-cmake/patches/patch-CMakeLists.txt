@@ -1,0 +1,15 @@
+$NetBSD$
+
+NetBSD support.
+
+--- CMakeLists.txt.orig	2020-05-19 09:43:53.000000000 +0000
++++ CMakeLists.txt
+@@ -246,7 +246,7 @@ check_include_file( "fcntl.h" HAVE_FCNTL
+ check_include_file( "fenv.h" HAVE_FENV_H )
+ check_include_file( "inttypes.h" HAVE_INTTYPES_H )
+ check_include_file( "limits.h" HAVE_LIMITS_H )
+-if( CMAKE_SYSTEM_NAME MATCHES "FreeBSD" )
++if( CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "NetBSD" )
+   check_include_file( "stdlib.h" HAVE_MALLOC_H )
+   check_include_file( "sys/endian.h" HAVE_ENDIAN_H )
+ else()

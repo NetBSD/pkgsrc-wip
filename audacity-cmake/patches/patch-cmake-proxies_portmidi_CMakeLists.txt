@@ -1,0 +1,42 @@
+$NetBSD$
+
+NetBSD support.
+
+--- cmake-proxies/portmidi/CMakeLists.txt.orig	2020-05-19 09:43:53.000000000 +0000
++++ cmake-proxies/portmidi/CMakeLists.txt
+@@ -3,7 +3,7 @@ add_library( ${TARGET} STATIC )
+ 
+ def_vars()
+ 
+-if( CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD" )
++if( CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD|NetBSD" )
+    if( ${_OPT}use_pa_alsa )
+       find_package( ALSA )
+    endif()
+@@ -29,7 +29,7 @@ list( APPEND SOURCES
+          ${TARGET_ROOT}/porttime/ptmacosx_mach.c
+       >
+ 
+-      $<$<PLATFORM_ID:Linux,FreeBSD,CYGWIN>:
++      $<$<PLATFORM_ID:Linux,FreeBSD,NetBSD,CYGWIN>:
+          ${TARGET_ROOT}/pm_linux/finddefault.c
+          ${TARGET_ROOT}/pm_linux/pmlinux.c
+          ${TARGET_ROOT}/porttime/ptlinux.c
+@@ -53,7 +53,7 @@ list( APPEND INCLUDES
+          ${TARGET_ROOT}/pm_mac
+       >
+ 
+-      $<$<PLATFORM_ID:Linux,FreeBSD>:
++      $<$<PLATFORM_ID:Linux,FreeBSD,NetBSD>:
+          ${TARGET_ROOT}/pm_linux
+       >
+ )
+@@ -79,7 +79,7 @@ list( APPEND LIBRARIES
+       $<$<PLATFORM_ID:Darwin>:
+          "-framework CoreMIDI"
+       >
+-      $<$<PLATFORM_ID:FreeBSD>:
++      $<$<PLATFORM_ID:FreeBSD,NetBSD>:
+          compat
+       >
+ )

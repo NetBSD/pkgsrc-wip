@@ -1,0 +1,34 @@
+$NetBSD$
+
+NetBSD support. This doesn't actually get used since we use portaudio
+from pkgsrc, but it's useful for upstream.
+
+--- cmake-proxies/portaudio-v19/CMakeLists.txt.orig	2020-05-19 09:43:53.000000000 +0000
++++ cmake-proxies/portaudio-v19/CMakeLists.txt
+@@ -56,7 +56,7 @@ else()
+          "Use the portaudio CoreAudio interface if available"
+          YES
+       )
+-   elseif( CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD" )
++   elseif( CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD|NetBSD" )
+       cmd_option(
+          ${_OPT}use_pa_alsa
+          "Use the portaudio ALSA interface if available"
+@@ -118,7 +118,7 @@ list( APPEND SOURCES
+          ${TARGET_ROOT}/src/hostapi/coreaudio/pa_mac_core_utilities.c
+       >
+ 
+-      $<$<PLATFORM_ID:Darwin,Linux,FreeBSD,CYGWIN>:
++      $<$<PLATFORM_ID:Darwin,Linux,FreeBSD,NetBSD,CYGWIN>:
+          ${TARGET_ROOT}/src/os/unix/pa_unix_hostapis.c
+          ${TARGET_ROOT}/src/os/unix/pa_unix_util.c
+       >
+@@ -158,7 +158,7 @@ list( APPEND INCLUDES
+          ${TARGET_ROOT}/src/os/win
+       >
+ 
+-      $<$<PLATFORM_ID:Darwin,Linux,FreeBSD,CYGWIN>:
++      $<$<PLATFORM_ID:Darwin,Linux,FreeBSD,NetBSD,CYGWIN>:
+          ${TARGET_ROOT}/src/os/unix
+       >
+ 
