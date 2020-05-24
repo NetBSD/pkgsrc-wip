@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (task-v2.8.0.tar.gz) = d84852cfeab03428b962fc624514c3d331bfedff
-RMD160 (task-v2.8.0.tar.gz) = 154f0f59d5584b9a90ad74faf6e70556da18aecc
-SHA512 (task-v2.8.0.tar.gz) = 3e7dd5f9bc16b49f383374ffaabffaaa2f36b90e52ee7b292da23379a4abb13762027ffd1dd9cb7e82498a0117fbb0af9299f5fde9fe66c6c5908fa84af994dc
-Size (task-v2.8.0.tar.gz) = 1791658 bytes
+SHA1 (task-v2.8.1.tar.gz) = 2600038a08c04547eb93efa49a14486e1c71314c
+RMD160 (task-v2.8.1.tar.gz) = acb2d2a78f5e1c39d8781168f83169956bcda756
+SHA512 (task-v2.8.1.tar.gz) = 840257a07c87f788606af56b1658cb2d2ac24bee7224c6fea568b4b084e621f96595cfa7d76f59b4dff0147a20901ea8edc6285135ad88f106432862558f1ce6
+Size (task-v2.8.1.tar.gz) = 1834464 bytes
