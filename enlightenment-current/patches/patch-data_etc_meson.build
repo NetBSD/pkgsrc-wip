@@ -1,0 +1,29 @@
+$NetBSD$
+
+* Install etc files to examples area
+
+--- data/etc/meson.build.orig	2020-05-17 19:40:56.324665500 +0000
++++ data/etc/meson.build
+@@ -16,19 +16,19 @@ sysactions.set('EJECT'    , EJECT)
+ if get_option('install-sysactions')
+   configure_file(input        : 'sysactions.conf.in',
+                  output       : 'sysactions.conf',
+-                 install_dir  : join_paths(dir_sysconf, 'enlightenment'),
++                 install_dir  : join_paths(dir_prefix, 'share/examples/enlightenment'),
+                  configuration: sysactions
+                 )
+ endif
+ 
+ if get_option('install-enlightenment-menu')
+   install_data('e-applications.menu',
+-               install_dir: join_paths(dir_sysconf, 'xdg/menus')
++                install_dir  : join_paths(dir_prefix, 'share/examples/enlightenment'),
+               )
+ endif
+ 
+ if get_option('install-system')
+   install_data('system.conf',
+-               install_dir: join_paths(dir_sysconf, 'enlightenment')
++                install_dir  : join_paths(dir_prefix, 'share/examples/enlightenment'),
+               )
+ endif

@@ -1,2 +1,27 @@
-:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-05-11 >> 
+:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-05-21 >> build OK
 
+MESON_ARGS+=    -Dbattery=false
+>> modules/battery/e_mod_sysctl.c
+MESON_ARGS+=    -Dcpufreq=false
+>> src/modules/cpufreq/e_mod_main.c
+MESON_ARGS+=    -Dsysinfo=false
+>> src/modules/sysinfo/batman/batman.c
+>> src/modules/sysinfo/batman/batman_sysctl.c
+>> src/modules/sysinfo/cpuclock/cpuclock.c
+>> src/modules/sysinfo/cpuclock/cpuclock_config.c
+>> src/modules/sysinfo/cpuclock/cpuclock_sysctl.c
+>> src/modules/sysinfo/cpumonitor/cpumonitor.c
+>> src/modules/sysinfo/cpumonitor/cpumonitor_sysctl.c
+>> src/modules/sysinfo/memusage/memusage_sysctl.c
+>> src/modules/sysinfo/memusage/memusage.c
+>> src/modules/sysinfo/mod.c
+>> src/modules/sysinfo/netstatus/netstatus_sysctl.c
+>> src/modules/sysinfo/netstatus/netstatus.c:
+>> src/modules/sysinfo/sysinfo.c
+>> src/modules/sysinfo/sysinfo.h
+>> src/modules/sysinfo/thermal/thermal.c
+>> src/modules/sysinfo/thermal/thermal.h
+>> src/modules/sysinfo/thermal/thermal_sysctl.c
+MESON_ARGS+=    -Dtemperature=false
+>> src/modules/temperature/e_mod_tempget.c
+>> src/modules/temperature/e_mod_main.c

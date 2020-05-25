@@ -1,6 +1,10 @@
 $NetBSD$
 
-SHA1 (enlightenment-0.22.4.tar.xz) = 312ac7b1a65db38517b3b5b41487cf588732fe06
-RMD160 (enlightenment-0.22.4.tar.xz) = d9634c88baaf8c486c6255bd47caa4045091b5dc
-SHA512 (enlightenment-0.22.4.tar.xz) = 9f4366bfed4d65e7baaeffd4f5b8ba6febf6f9888e6156dd3e100c9fca42c377f76f156f3dd1f6ab97745ffcb69e1e8d320937e41333797580624a9b74d298ba
-Size (enlightenment-0.22.4.tar.xz) = 25656972 bytes
+SHA1 (enlightenment-0.24.0.tar.xz) = 5a5b717885f6438392b7b8ce8d3ded90bd5a757a
+RMD160 (enlightenment-0.24.0.tar.xz) = 98ab2d7b455107080cc944ef6c0477c16785799b
+SHA512 (enlightenment-0.24.0.tar.xz) = 7255ec5c2e85143df8d92e37456f5392feb3a264daa81ec6b10ae57886d714c524869392ddc753914f3a9c5fd71e1b2c5dd1d1e1f7a5a649fb6aaaed81214b95
+Size (enlightenment-0.24.0.tar.xz) = 28712348 bytes
+SHA1 (patch-data_etc_meson.build) = 164a5ebd5b046381f46226d05d0cb17fcd7edbd7
+SHA1 (patch-src_modules_wizard_page__011.c) = a588344a09fef8abc007743518b39d76c415e549
+SHA1 (patch-src_modules_wizard_page__120.c) = 6a3b89f1a60da6f67cc65acc6d3dd1e9ef29f882
+SHA1 (patch-src_modules_xkbswitch_e__mod__parse.c) = 64f8ab82dc37340f7a5572438c88f4ac3a257b22
