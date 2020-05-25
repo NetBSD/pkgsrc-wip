@@ -44,6 +44,13 @@ SUBST_FILES.fix-paths=		src/bin/exactness/*.in
 SUBST_SED.fix-paths=		-e 's,@EXACTNESS_PLAY_PRELOAD_PATH@,${PREFIX}/lib/libexactness_play.so.${PKGVERSION},g'
 SUBST_SED.fix-paths+=		-e 's,@EXACTNESS_RECORD_PRELOAD_PATH@,${PREFIX}/lib/libexactness_record.so.${PKGVERSION},g'
 
+SUBST_CLASSES+=		xdg
+SUBST_MESSAGE.xdg=	Fixing XDG_DATA_DIRS and XDG_CONFIG_DIRS
+SUBST_STAGE.xdg=	pre-configure
+SUBST_FILES.xdg=	src/lib/efreet/efreet_base.c
+SUBST_SED.xdg=		-e 's,/usr/share:/usr/local/share,${PREFIX}/share,'
+SUBST_SED.xdg+=		-e 's,/etc/xdg,${PKG_SYSCONFDIR}/xdg,'
+
 REPLACE_PYTHON+=	src/bin/exactness/exactness_play.in
 REPLACE_PYTHON+=	src/bin/exactness/exactness_record.in
 
