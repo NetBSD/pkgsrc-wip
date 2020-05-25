@@ -1,4 +1,0 @@
-Mupen64 is a Nintendo 64 emulator designed to be multi-OS. It has been
-developed on/for Linux originally but the emulator has already been ported
-successfully on Windows and Mac OS X for example. Actually the program can be
-easily ported on all OS supported by the SDL library.

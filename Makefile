@@ -2263,7 +2263,6 @@ SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node
 SUBDIR+=	muparser
-SUBDIR+=	mupen64
 SUBDIR+=	mupen64plus
 SUBDIR+=	mupen64plus-extraplugins
 SUBDIR+=	muscle
