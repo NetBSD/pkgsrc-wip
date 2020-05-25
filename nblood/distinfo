@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (NBlood/NBlood-current-197c38fe2a6a05cfd35c1c9bb039dcbee6e9c095.zip) = c017f299945f98c0ddd91fe465a97eb0a0d49230
+RMD160 (NBlood/NBlood-current-197c38fe2a6a05cfd35c1c9bb039dcbee6e9c095.zip) = c7b6c4ec9b842599835e42f82e5752548c490349
+SHA512 (NBlood/NBlood-current-197c38fe2a6a05cfd35c1c9bb039dcbee6e9c095.zip) = aca2b31786dedbf207e8392d74055c8c3f097e432892217f66c0bda0b6e3613e23ab8a25fb5e5ceb57be3b36198f47089e1169da0ee681562f89d3493973e01d
+Size (NBlood/NBlood-current-197c38fe2a6a05cfd35c1c9bb039dcbee6e9c095.zip) = 35988447 bytes
+SHA1 (patch-gnumakefile) = 5d596dffcb906a14d6329ed7753f85aeab7599c5
+SHA1 (patch-mmulti.cpp) = faa77608cb3a60f5bada13351a34ae9f6b06fc9e

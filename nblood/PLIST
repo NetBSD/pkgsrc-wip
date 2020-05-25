@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/nblood
+bin/pcexhumed
+bin/rednukem

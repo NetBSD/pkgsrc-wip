@@ -1,0 +1,16 @@
+$NetBSD$
+
+Was failing without this with GNUMakefile Error 1
+
+--- GNUmakefile.orig	2020-05-21 14:39:30.000000000 +0000
++++ GNUmakefile
+@@ -1442,8 +1442,7 @@ all: \
+     rr \
+     exhumed \
+ 
+-start:
+-	$(BUILD_STARTED)
++start: blood
+ 
+ tools: $(addsuffix $(EXESUFFIX),$(tools_targets)) | start
+ 	@$(call LL,$^)
