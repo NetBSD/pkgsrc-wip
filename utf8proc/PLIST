@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/utf8proc.h
+lib/libutf8proc.la
+lib/pkgconfig/libutf8proc.pc

@@ -1,0 +1,15 @@
+converters/utf8proc: Update to 2.5.0
+
+pkgsrc changes:
+- Drop cmake
+  Drive libtool directly (utf8proc can be build with a single compiler call).
+  This removes the C++11 build dependency for cmake (C99 is now sufficient)
+  and more build dependencies that at least an order of magnitude larger than
+  utf8proc itself.
+- Add support for pkgconfig
+  Install "libutf8proc.pc"
+
+Upstream changelog for utf8proc 2.5.0 (2020-03-27):
+- Unicode 13 support (#179).
+- No longer report zero width for category Sk (#167).
+- cmake support improvements (#173).
