@@ -5,9 +5,10 @@ converters/utf8proc: Update to 2.5.0nb1
   This removes the C++11 build dependency for cmake (C99 is now sufficient)
   and more build dependencies that are at least an order of magnitude larger
   than utf8proc itself.
+- Drop patch for cmake
 - Add support for pkgconfig
   Install "libutf8proc.pc".
-  Bump PKGREVISION for additional installed files.
+- Bump PKGREVISION for additional installed files.
 - Take maintainership
 
 OK from minskim@
