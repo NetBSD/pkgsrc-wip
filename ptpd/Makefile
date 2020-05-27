@@ -5,7 +5,7 @@ DISTNAME=	ptpd-2.2.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ptpd/}
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ptpd.sourceforge.net/
 COMMENT=	Precision Time Protocol Daemon
 LICENSE=	2-clause-bsd

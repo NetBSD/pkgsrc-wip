@@ -4,7 +4,7 @@ DISTNAME=	wackamole-2.1.4
 CATEGORIES=	net
 MASTER_SITES=	http://mirrors.omniti.com/wackamole/
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.backhand.org/wackamole/
 COMMENT=	Peer-to-peer high availability cluster
 #LICENSE=	# TODO: (see mk/license.mk)

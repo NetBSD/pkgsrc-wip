@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/-/-1.0pre/}
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/scunningham/libeio/archive/
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://software.schmorp.de/pkg/libeio.html
 COMMENT=	Full-featured asynchronous I/O library for C
 LICENSE=	2-clause-bsd OR gnu-gpl-v2

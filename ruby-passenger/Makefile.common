@@ -6,7 +6,7 @@ DISTNAME=		passenger-5.1.12
 CATEGORIES=		www
 
 MASTER_SITES=		http://s3.amazonaws.com/phusion-passenger/releases/
-MAINTAINER?=		fhajny@NetBSD.org
+MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.phusionpassenger.com/
 LICENSE=		mit
 

@@ -4,7 +4,7 @@ DISTNAME=	therubyracer-0.12.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 
-MAINTAINER=	fhajny@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cowboyd/libv8
 COMMENT=	Embedded V8 Javascript
 LICENSE=	mit
