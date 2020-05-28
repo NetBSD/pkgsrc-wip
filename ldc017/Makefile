@@ -29,6 +29,9 @@ EGDIR=	${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/ldc2.conf ${PKG_SYSCONFDIR}/ldc2.conf
 
+GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX}; \
+                        ${FIND} * \( -type f -or -type l \) | ${SORT};
+
 post-install:
 	${MKDIR} -p ${DESTDIR}${EGDIR}	\
 		&& ${MV} ${DESTDIR}${PREFIX}/etc/ldc2.conf	\

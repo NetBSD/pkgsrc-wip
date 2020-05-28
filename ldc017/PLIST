@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/ldc2
 bin/ldmd2
-etc/bash_completion.d/ldc2
 include/d/core/atomic.d
 include/d/core/bitop.d
 include/d/core/checkedint.d

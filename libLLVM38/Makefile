@@ -130,16 +130,6 @@ SOEXT=		so
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
-.if ${OPSYS} == "Darwin"
-.PHONY: fix-darwin-install-name
-post-install: fix-darwin-install-name
-fix-darwin-install-name:
-.  for lib in BugpointPasses LLVMHello libLTO
-	install_name_tool -id ${PREFIX}/lib/${lib}.${SOEXT}	\
-		${DESTDIR}${PREFIX}/lib/${lib}.${SOEXT}
-.  endfor
-.endif
-
 .include "options.mk"
 
 # replacing config.guess is required even for cmake.
