@@ -25,9 +25,7 @@ SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Fixing hard-coded paths
 SUBST_FILES.paths=	src/airodump-ng.h
 SUBST_FILES.paths+=	scripts/*
-SUBST_FILES.paths+=	scripts/*/*
 SUBST_FILES.paths+=	scripts/*/*/*
-SUBST_FILES.paths+=	scripts/*/*/*/*
 SUBST_SED.paths=	-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
 pre-configure:
