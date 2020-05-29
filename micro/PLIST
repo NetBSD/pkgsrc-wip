@@ -1,2 +1,3 @@
 @comment $NetBSD$
 bin/micro
+man/man1/micro.1

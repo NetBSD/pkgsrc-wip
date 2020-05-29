@@ -10,6 +10,8 @@ HOMEPAGE=	https://micro-eidtor.github.io
 COMMENT=	Modern and intuitive terminal-based text editor
 LICENSE=	mit 
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
 GO_BUILD_PATTERN=	./cmd/micro
 
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.4.mod
@@ -79,6 +81,9 @@ GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.11.zip
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.7.zip
 GO_MODULE_FILES+=	github.com/yuin/gopher-lua/@v/v0.0.0-20191220021717-ab39c6098bdb.zip
 GO_MODULE_FILES+=	layeh.com/gopher-luar/@v/v1.0.7.zip
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/assets/packaging/micro.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
