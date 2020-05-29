@@ -10,8 +10,6 @@ HOMEPAGE=	https://micro-eidtor.github.io
 COMMENT=	Modern and intuitive terminal-based text editor
 LICENSE=	mit 
 
-#GO_DIST_BASE=		${DISTNAME}
-#GO_SRCPATH=		github.com/zyedidia/${PKGBASE}
 GO_BUILD_PATTERN=	./cmd/micro
 
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.4.mod
