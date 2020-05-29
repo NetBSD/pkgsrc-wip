@@ -5,7 +5,15 @@ $NetBSD$
 
 --- meson.build.orig	2019-04-23 15:16:09.000000000 +0000
 +++ meson.build
-@@ -79,6 +79,8 @@ endforeach
+@@ -60,6 +60,7 @@ check_headers = [
+   'paths.h',
+   'shadow.h',
+   'utmpx.h',
++  'grp.h',
+ ]
+ 
+ foreach header: check_headers
+@@ -79,6 +80,8 @@ endforeach
  
  if cc.has_header_symbol('utmpx.h', 'WTMPX_FILENAME', prefix: '#define _GNU_SOURCE')
    config_h.set('PATH_WTMP', 'WTMPX_FILENAME')
@@ -14,7 +22,7 @@ $NetBSD$
  elif cc.has_header_symbol('paths.h', '_PATH_WTMPX')
    config_h.set('PATH_WTMP', '_PATH_WTMPX')
  else
-@@ -138,8 +140,9 @@ install_systemd_unit_dir = (systemd_syst
+@@ -138,8 +141,9 @@ install_systemd_unit_dir = (systemd_syst
  
  if install_systemd_unit_dir and systemd_system_unit_dir == ''
    systemd_dep = dependency('systemd', required: false)
