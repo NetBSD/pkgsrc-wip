@@ -1,6 +1,5 @@
 # $NetBSD$
 
-COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	0ad
 SUBDIR+=	0ad-data
@@ -2153,6 +2152,7 @@ SUBDIR+=	mg-cvs
 SUBDIR+=	mg-lsh
 SUBDIR+=	mic-paren
 SUBDIR+=	michabo
+SUBDIR+=	micro
 SUBDIR+=	microbiomeutil
 SUBDIR+=	microblog-purple
 SUBDIR+=	microcom
