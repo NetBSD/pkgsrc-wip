@@ -6,7 +6,7 @@ $NetBSD$
          if (spent)
                  passwd = spent->sp_pwdp;
  
-+#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
 +        pw = getpwnam_shadow (pwent->pw_name);
 +        if (pw)
 +                passwd = pw->pw_passwd;
@@ -15,7 +15,7 @@ $NetBSD$
 +#endif
 +
 +
-+#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
 +        if (passwd && passwd[0] == '*') {
 +#else
          if (passwd && passwd[0] == '!') {
@@ -27,7 +27,7 @@ $NetBSD$
                           accounts_user_get_user_name (ACCOUNTS_USER (user)),
                           accounts_user_get_uid (ACCOUNTS_USER (user)));
                  argv[0] = "/usr/sbin/usermod";
-+#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
 +                argv[1] = locked ? "-Z" : "-U";
 +#else
                  argv[1] = locked ? "-L" : "-U";

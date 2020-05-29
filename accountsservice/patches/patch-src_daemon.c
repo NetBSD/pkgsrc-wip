@@ -61,7 +61,7 @@ $NetBSD$
 + * we need to explicitely remove the user's group if it contains no more
 + * members and matches the username.
 + */
-+#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
 +        struct group *grp;
 +        GError *grperror;
 +        const gchar *grpargv[3];
@@ -91,7 +91,7 @@ $NetBSD$
  
          argv[0] = "/usr/sbin/userdel";
          if (ud->remove_files) {
-+#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
 +                argv[1] = "-r";
 +                argv[2] = "--";
 +                argv[3] = pwent->pw_name;
