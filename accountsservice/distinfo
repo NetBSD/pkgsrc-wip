@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.1 2015/06/06 13:52:41 krytarowski Exp $
 
-SHA1 (accountsservice-0.6.42.tar.xz) = 4461347acf3878e100afcc2e3f960fb2c9fd87f4
-RMD160 (accountsservice-0.6.42.tar.xz) = 72b3025468b855d50517729530a92e5cb31ca82e
-SHA512 (accountsservice-0.6.42.tar.xz) = b31d77b88793a8264d32963a98ad446537292a134a3f80fabb4e2ce30f796e5f3066d02a27515c993133fa493b511a6abba6ff1a7827b5a54ea6a4f62a7b6fc9
-Size (accountsservice-0.6.42.tar.xz) = 380500 bytes
-SHA1 (patch-data_Makefile.am) = b059cd214a346adb371e4a006f497d652c9d9234
+SHA1 (accountsservice-0.6.55.tar.xz) = bab4f37144196d8ba06195bc72b4a9937c62b9fd
+RMD160 (accountsservice-0.6.55.tar.xz) = 80144b2c703645e15cb59e8aa8f2966b70054484
+SHA512 (accountsservice-0.6.55.tar.xz) = c12e6a8e80f9b087f97238da4734d2d3a14a7c5cbd870a32a04b00116f176c818c39fb886f6dc72c3e93c136b0c2074ddf8f77e20431fa3bd54f138bea9d262d
+Size (accountsservice-0.6.55.tar.xz) = 97972 bytes
+SHA1 (patch-meson.build) = dc85949c195f43aba8697c09a8e367bda5f12e32
 SHA1 (patch-src_wtmp-helper.c) = eb32d598784f31e9baac44bd63ab248f5873c9c3
