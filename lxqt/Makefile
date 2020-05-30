@@ -14,7 +14,7 @@ META_PACKAGE=	yes
 TOOL_DEPENDS+=	lxqt-build-tools>=0.7.0:../../wip/lxqt-build-tools
 
 DEPENDS+=	libqtxdg>=3.5.0:../../wip/libqtxdg
-DEPENDS+=	liblxqt>=0.15.0:../../wip/liblxqt
+DEPENDS+=	liblxqt>=0.15.1:../../wip/liblxqt
 DEPENDS+=	libfm-qt>=0.15.1:../../wip/libfm-qt
 DEPENDS+=	lxqt-themes>=0.15.0:../../wip/lxqt-themes
 DEPENDS+=	pavucontrol-qt>=0.15.0:../../wip/pavucontrol-qt
