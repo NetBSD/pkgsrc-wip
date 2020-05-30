@@ -4,7 +4,6 @@ include/lxqt/ilxqtpanel.h
 include/lxqt/ilxqtpanelplugin.h
 include/lxqt/lxqtpanelglobals.h
 include/lxqt/pluginsettings.h
-lib/lxqt-panel/libbacklight.so
 lib/lxqt-panel/libcolorpicker.so
 lib/lxqt-panel/libdirectorymenu.so
 lib/lxqt-panel/libvolume.so
@@ -14,7 +13,6 @@ share/desktop-directories/lxqt-settings.directory
 share/examples/lxqt/xdg/autostart/lxqt-panel.desktop
 share/examples/lxqt/xdg/lxqt/panel.conf
 share/examples/lxqt/xdg/menus/lxqt-applications.menu
-share/lxqt/lxqt-panel/backlight.desktop
 share/lxqt/lxqt-panel/colorpicker.desktop
 share/lxqt/lxqt-panel/desktopswitch.desktop
 share/lxqt/lxqt-panel/directorymenu.desktop
