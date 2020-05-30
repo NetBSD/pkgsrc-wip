@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (liblxqt-0.15.0.tar.xz) = a94e8f16017ac3e2a7d83f33651f3df219ccd985
-RMD160 (liblxqt-0.15.0.tar.xz) = 264b7c72f61d9ec2abfda746a6f18a4ca52694f0
-SHA512 (liblxqt-0.15.0.tar.xz) = 6693be070fe641d590e3187abb2797ea470af5101efc4e9aed88a12cb28cc31aff60b6086cf717cd778353b50164d2365d88968a96a7fa00f6bc53e6855ddf7f
-Size (liblxqt-0.15.0.tar.xz) = 80624 bytes
+SHA1 (liblxqt-0.15.1.tar.xz) = c1d0807208466fadcad3f596c5bb4c126eb5fdfe
+RMD160 (liblxqt-0.15.1.tar.xz) = 6e1c9c6f8d5274bba9d5189eabb9136833b61c5e
+SHA512 (liblxqt-0.15.1.tar.xz) = a0eb00ca5b228ef32d1a3952d3cb4702273dda16c9e70cc75046bfe1f51e5a7849d5306cca9d616ff82bd91715d97d703c458d406ba9e2425aa3fd26f155493c
+Size (liblxqt-0.15.1.tar.xz) = 80040 bytes
