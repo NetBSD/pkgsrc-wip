@@ -6,9 +6,9 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=zyedidia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	sjmulder@NetBSD.org
-HOMEPAGE=	https://micro-eidtor.github.io
+HOMEPAGE=	https://micro-eidtor.github.io/
 COMMENT=	Modern and intuitive terminal-based text editor
-LICENSE=	mit 
+LICENSE=	mit
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
@@ -86,7 +86,7 @@ GO_MODULE_FILES+=	github.com/yuin/gopher-lua/@v/v0.0.0-20191220021717-ab39c6098b
 GO_MODULE_FILES+=	layeh.com/gopher-luar/@v/v1.0.7.zip
 
 do-build:
-	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_ARGS} ${GO_BUILD_PATTERN}
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_ARGS} ${GO_BUILD_PATTERN}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/assets/packaging/micro.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
