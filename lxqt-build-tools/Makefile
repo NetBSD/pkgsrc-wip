@@ -23,5 +23,7 @@ CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/share/examples/lxqt/xdg
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
+TOOL_DEPENDS+=	glib2-tools-[0-9]*:../../devel/glib2-tools
+
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
