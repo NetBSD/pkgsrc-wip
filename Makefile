@@ -1105,6 +1105,7 @@ SUBDIR+=	gnome-applets
 SUBDIR+=	gnome-apps
 SUBDIR+=	gnome-backgrounds
 SUBDIR+=	gnome-bluetooth
+SUBDIR+=	gnome-builder
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-control-center
 SUBDIR+=	gnome-core
