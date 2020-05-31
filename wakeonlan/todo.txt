@@ -1,0 +1,1 @@
+ - man can't deal with the UTF-8 chars in the page
