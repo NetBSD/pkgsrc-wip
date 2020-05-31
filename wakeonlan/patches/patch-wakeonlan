@@ -1,8 +1,8 @@
 $NetBSD$
 
-Set encoding to fix man page.
+Set encoding to fix man page, and convert to UTF-8.
 
---- wakeonlan.orig	2020-05-31 15:20:38.000000000 +0000
+--- wakeonlan.orig	2011-11-11 20:07:52.000000000 +0000
 +++ wakeonlan
 @@ -137,6 +137,8 @@ __END__
  
@@ -13,3 +13,17 @@ Set encoding to fix man page.
  =head1 NAME
  
  wakeonlan - Perl script to wake up computers
+@@ -201,11 +203,11 @@ Using a file as source of hardware and I
+ 
+ =head1 AUTHOR
+ 
+-José Pedro Oliveira <jpo@di.uminho.pt> maintaining and expanding original work done by Ico Doornekamp <ico@edd.dhs.org>.
++JosÃ© Pedro Oliveira <jpo@di.uminho.pt> maintaining and expanding original work done by Ico Doornekamp <ico@edd.dhs.org>.
+ 
+ =head1 COPYRIGHT
+ 
+-Copyright (c) 2000-2005 José Pedro Oliveira.
++Copyright (c) 2000-2005 JosÃ© Pedro Oliveira.
+ 
+ This is free software.  You may modify it and distribute it under Perl's Artistic Licence.  Modified versions must be clearly indicated.                                                    
+ 
