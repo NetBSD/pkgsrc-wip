@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:19:38 jihbed Exp $
 
 SHA1 (yt-2.2.tar.gz) = 007da4aa8118dd3a6d8fabeb91646f5a4af011de
 RMD160 (yt-2.2.tar.gz) = efad15bfc81b5a5b35a2019d9ae44fda2de5ce2e
+SHA512 (yt-2.2.tar.gz) = 76a4a975471618e8aa3d7bdcb997ecd28bf0d28aabb77ebf845332843f92d3ba44b2281395f7a162f5bb9b4da11fba0e69ab6f6fd33f0bf652db3775867968e7
 Size (yt-2.2.tar.gz) = 1357155 bytes

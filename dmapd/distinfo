@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/12/03 20:56:54 thomasklausner Exp $
 
 SHA1 (dmapd-0.0.50.tar.gz) = 502104ce7072a23d39d9c7d00fec5415ac893b37
 RMD160 (dmapd-0.0.50.tar.gz) = 85bf543b2716cebe77f4e4324d058e813ec70fb1
+SHA512 (dmapd-0.0.50.tar.gz) = 78fdbfefe63ef24665a4753c11e869f4ec8db21d5af96b9283b673f1b152efffcfc4b69160b302068054748e4b8ff0cf32e151eb5eb4e633968f9c26c23e9a0f
 Size (dmapd-0.0.50.tar.gz) = 393020 bytes
 SHA1 (patch-configure) = 7bb579aa5324a01bc13137e39091abf441080255

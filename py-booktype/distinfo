@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/03 23:10:51 jihbed Exp $
 
 SHA1 (Booktype-1.5.tar.gz) = 3e3eff646f4c599714b6564b3c6f014e7b4992dc
 RMD160 (Booktype-1.5.tar.gz) = 981d30b1232c8973f8b906d605762310336434c7
+SHA512 (Booktype-1.5.tar.gz) = b78d617ed9c807904d8dadf031dbaf149103209e21d06d72bf53fafd4b1b14820bd854ca1d9fb52328eb87174f43a2772128f4ae41441af6629b7ecd633fa3a1
 Size (Booktype-1.5.tar.gz) = 3070967 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/26 14:41:51 jihbed Exp $
 
 SHA1 (cubicweb-3.19.3.tar.gz) = 2805516732bb011a893dc61701a2bb6ca77519b7
 RMD160 (cubicweb-3.19.3.tar.gz) = e763a62a3e7be849ee6651ec7ad8bf13ddea324f
+SHA512 (cubicweb-3.19.3.tar.gz) = b0e94d41b9d31f32e5659b30440cf0efb2b70923589aa334e07b5f51816529719090b76f641c807d25278e70b0c6abac3cebfb75776eae182e71978b6f4d5e05
 Size (cubicweb-3.19.3.tar.gz) = 5884885 bytes

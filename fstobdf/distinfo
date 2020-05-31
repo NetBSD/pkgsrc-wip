@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2014/12/31 14:15:08 thomasklausner Exp $
 
 SHA1 (fstobdf-1.0.6.tar.bz2) = aeafc2cd82092168d0bc4b94c5a27d7e070598fd
 RMD160 (fstobdf-1.0.6.tar.bz2) = 18d0cc9eabffa804c6809895be1838330b50ce3a
+SHA512 (fstobdf-1.0.6.tar.bz2) = ec5b8f62019ba51725bb47241d4fc244412f354e7c12094ed884109a88e3db9d25d41a6142fd002e6c49877b4c7f2c5dde549682dcc05f7ce102621d2c71671f
 Size (fstobdf-1.0.6.tar.bz2) = 127170 bytes

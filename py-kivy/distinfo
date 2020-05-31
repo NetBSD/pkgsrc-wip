@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/28 10:08:17 jihbed Exp $
 
 SHA1 (Kivy-1.0.9.tar.gz) = da4d4ca2b7bcc57a207cd6bc5a4acdbce228c623
 RMD160 (Kivy-1.0.9.tar.gz) = f759bb944705b5cd2e04ee914600d129fe8d2fd7
+SHA512 (Kivy-1.0.9.tar.gz) = 7e6306445ae40aca21e4cd4dcd30ce91b1cbfd5bdf880d70714434c6b5a900102df061a226c6793e8465a8c6c43ef4da3edc032d18b2f20e5f6b8fa4179316d8
 Size (Kivy-1.0.9.tar.gz) = 7420763 bytes

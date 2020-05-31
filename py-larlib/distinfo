@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (larlib-0.1.1.tar.gz) = 2c5a98fd0455b3754f7945568fa5c9e7aaab5dda
 RMD160 (larlib-0.1.1.tar.gz) = 4583878b0434993335ed2a3a90ef3be050cb8df6
+SHA512 (larlib-0.1.1.tar.gz) = 5147897e04fc2f4341b9ce2b5f1366ebf9d60fb76d4d07023f7ef5b322fb530ea9114ec1342946ecb400fc773e62fef3569d310f0d40e18c87e7be1fadc0fde4
 Size (larlib-0.1.1.tar.gz) = 65698 bytes

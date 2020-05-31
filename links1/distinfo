@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.16 2007/04/15 21:51:46 thomasklausner Exp $
 
 SHA1 (links-1.00pre20.tar.gz) = c736a7c91aa3c541790d19b0b41855c2cd91140f
 RMD160 (links-1.00pre20.tar.gz) = 8a70b32ac433166d91a6b2289e815abfcab3995a
+SHA512 (links-1.00pre20.tar.gz) = 799f5335bec96343d94d2d32cdf0ee68a821d47956b28fef5e4081106a28e965c36e5ef7e93880d73c1f8242af77d2dcd86534713ca808ae99c5ee6a0d106e70
 Size (links-1.00pre20.tar.gz) = 620455 bytes

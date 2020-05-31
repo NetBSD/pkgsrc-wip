@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:09 rillig Exp $
 
 SHA1 (bastard-0.17-pre.tgz) = d01333882bc1706fbc74da86703bb3cb8c8ebc91
 RMD160 (bastard-0.17-pre.tgz) = 705aff71586cf7b5bb16beae3c87d028c5062b1c
+SHA512 (bastard-0.17-pre.tgz) = 194a02279d22b6e964714aadb1bab2dcb488ee1ed0e37cdf90b57e1a6d20b8e397138750c9fb0448d0e145bbba3dc52c9275160404d6e3b6b2c2ed9375ac161d
 Size (bastard-0.17-pre.tgz) = 1679793 bytes
 SHA1 (patch-aa) = c07e6c5cda342fb75b8a235f64d2ef5b098814fb
 SHA1 (patch-ab) = 851ef82e523dc3e1a46c4f998c43068434d64696

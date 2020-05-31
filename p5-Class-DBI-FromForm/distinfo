@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/04/16 07:26:33 jgoamakf Exp $
 
 SHA1 (Class-DBI-FromForm-0.04.tar.gz) = b19d98b89c75122c8a48e76983e2d1c844a82440
 RMD160 (Class-DBI-FromForm-0.04.tar.gz) = 4b118a5b4dd791d92213a6933211edeea21bbb97
+SHA512 (Class-DBI-FromForm-0.04.tar.gz) = f2c1ac06e01200b2fc2c29794ec4e721a555016a559856973e1db3a11ae67ba42241746755fb5fd011c9c21e8e19d0b53eaa3ea1cb4cdc9f2a48c90ffa783013
 Size (Class-DBI-FromForm-0.04.tar.gz) = 2100 bytes

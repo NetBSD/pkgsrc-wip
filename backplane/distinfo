@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:09 rillig Exp $
 
 SHA1 (backplane-1.05.tar.gz) = c4ea5c4d0c47849a47196a5e5987a5bde361ac81
 RMD160 (backplane-1.05.tar.gz) = 035f51fc5604d4ac111a7f3859e77fbd02797ace
+SHA512 (backplane-1.05.tar.gz) = 136ba23bf7c6d22e7fc57c7c5a4e573475bb69cf4bcbdc6964edb35fbef1b83d38562e2363697df03527b6e24f5a8bf4ece0cc480e4a7cfb187954a34d0adb11
 Size (backplane-1.05.tar.gz) = 361707 bytes
 SHA1 (patch-aa) = f719c0625f5c56576d0f92862951efc4d426b1aa
 SHA1 (patch-ab) = 3f7d40ef2ba4ba59d99891aa1933a7a3d7dc4897

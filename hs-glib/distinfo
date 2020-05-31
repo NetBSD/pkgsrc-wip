@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/03/11 07:39:34 phonohawk Exp $
 
 SHA1 (glib-0.12.3.tar.gz) = aca2c29f160a496fd96ef2000b47297c71f6e0c2
 RMD160 (glib-0.12.3.tar.gz) = 1aacdb0292cdc2432b802dcaef798146fb39897e
+SHA512 (glib-0.12.3.tar.gz) = 27112649597a40ccb659c3ccbe8d3854d209683389c33907e534442af1dbfadf685ec757d83b534fdc8f8cceb38d6e0556e0864794bc32e3b0dabd77dc9bd69d
 Size (glib-0.12.3.tar.gz) = 45433 bytes

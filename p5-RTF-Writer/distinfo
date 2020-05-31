@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/12/10 09:08:21 netcap Exp $
 
 SHA1 (RTF-Writer-1.11.tar.gz) = 52276e5701224158bece4afd2e57c24b03ed5d67
 RMD160 (RTF-Writer-1.11.tar.gz) = 98ad35c084ad91f163b79f505a9aae0f52f76ec8
+SHA512 (RTF-Writer-1.11.tar.gz) = 0533181d0f3a7fafbf5a7738a6649d1ad6c10cf112e654cafaaa47a5a1255b8c94367ac7b5d2b8f708534f01a1fa6243389140d0883163ddcbab4bd4c0bc8c3f
 Size (RTF-Writer-1.11.tar.gz) = 57731 bytes

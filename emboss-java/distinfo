@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:12 rillig Exp $
 
 SHA1 (emboss/emboss-2.9.0/EMBOSS-2.9.0.tar.gz) = 761832b9c6cf1939a769b1f27bc1b7e44cbeab89
 RMD160 (emboss/emboss-2.9.0/EMBOSS-2.9.0.tar.gz) = 2b4d4ec90989a7b56272ff121125c270367b38fe
+SHA512 (emboss/emboss-2.9.0/EMBOSS-2.9.0.tar.gz) = 8cd21d37bbc906e80ce3bd03bbcee8096f22c48979a393bad271f4f2787d2abf6f54b8373a3f2f4127e101ea2d542ef0ac4c955afcd25a22c53fe59a1a56369b
 Size (emboss/emboss-2.9.0/EMBOSS-2.9.0.tar.gz) = 14479274 bytes

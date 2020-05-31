@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/10/25 00:37:27 poppnk Exp $
 
 SHA1 (panda-0.5.4.tar.bz2) = 36feb781272fc47e8a98f2d3b7dfaf37edfd2633
 RMD160 (panda-0.5.4.tar.bz2) = aad2b0b916565be8ecb1cc7e11efec5a9c7892c0
+SHA512 (panda-0.5.4.tar.bz2) = aef5d4a2b908bf7d30d2e44a94580cff1d92b4b18376a73fa6fac5b6d70c64d1c95cee56495bc6176bef065b0ad7e7606df0b3c4db588fc5415dd3a8aefb1811
 Size (panda-0.5.4.tar.bz2) = 2288345 bytes

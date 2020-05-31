@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2008/09/12 20:40:48 ficovh Exp $
 
 SHA1 (CGI-Untaint-email-0.03.tar.gz) = a63c30b75d0fd2a447d8cb6db4cc6f0c054db985
 RMD160 (CGI-Untaint-email-0.03.tar.gz) = 8a38ad6574cf7616c71e3767c5f43336d79730ed
+SHA512 (CGI-Untaint-email-0.03.tar.gz) = a4597735ce926c8d10956aac898e25c31cc9917930b2299a80daf204334b56bc8bbaa55c881b38dd776aa3673a212f718b25a77c0d53df941954cafb106c6ede
 Size (CGI-Untaint-email-0.03.tar.gz) = 1769 bytes

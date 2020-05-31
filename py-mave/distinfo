@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:56:48 jihbed Exp $
 
 SHA1 (mave-0.0.1.tar.gz) = 674e1d691fadac8bfaa7b5852a0b7ec5665d0f61
 RMD160 (mave-0.0.1.tar.gz) = 7abd39928379e016fc47cad7aa147672c9f8970a
+SHA512 (mave-0.0.1.tar.gz) = 8e3e5cdfc8208acbbb6925b53c15330d035a274d7e7ed3741268aafce396a5514a410d2c964d0bf42adf04667aaa755f2ab83ab8b76b8e2a83f15c302ea7409d
 Size (mave-0.0.1.tar.gz) = 8851 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:35 rillig Exp $
 
 SHA1 (pts-0.20a.tar.gz) = 93014af696a0be2c30bac8d3c1ea8f6edc2d5326
 RMD160 (pts-0.20a.tar.gz) = b2bce3414fd09dd2c14655695ee7c98312571bb1
+SHA512 (pts-0.20a.tar.gz) = 4fae8f2a93d579517073c3cb5656912cf31722f8474df06ebf5c128bc39551878a7b71eb3f93409d5dd91add7cde82c4e3548ffeb5e9f5b86326ac897076e3de
 Size (pts-0.20a.tar.gz) = 104052 bytes
 SHA1 (patch-aa) = 090fd176701146181bdf3c405f4a1cc01290dbdc
 SHA1 (patch-ab) = 304652ebd87000694eaa7e7dbd71ad699fdc3768

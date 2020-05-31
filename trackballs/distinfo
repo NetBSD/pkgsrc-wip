@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/01/23 00:39:31 netcap Exp $
 
 SHA1 (trackballs-1.1.2.tar.gz) = 2ed0d8c73ddddca57cbee783be6e01a4d7537f7e
 RMD160 (trackballs-1.1.2.tar.gz) = 5abba7f1642d1d47614a1dec36b2e298ed49e395
+SHA512 (trackballs-1.1.2.tar.gz) = 0df631bb22499399572541843ff5b8af940cb67010a7846128cf4e547cb7813290388d9a246c69dd147146666b223128f4899c960106d16a71e2f3a1e3e17994
 Size (trackballs-1.1.2.tar.gz) = 7063832 bytes

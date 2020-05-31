@@ -2,9 +2,11 @@ $NetBSD: distinfo,v 1.1.1.1 2006/09/08 04:18:14 samott Exp $
 
 SHA1 (quickie-1.1.pdf) = d4bbe6047d7368040463dcb3de56dd9d61cfae64
 RMD160 (quickie-1.1.pdf) = e43504d7a92eadff825d1b54096e216e4aa1c5d3
+SHA512 (quickie-1.1.pdf) = 190bd954570a45cdebbc7a7da6dae59b00e4e3cf5542420fb3fb965b65306373e9c33f40d1ffe1b70d7cb86f45cfe07eeef1dbf26ca8e99b38ef9002d097480e
 Size (quickie-1.1.pdf) = 76778 bytes
 SHA1 (quickie-1.1.tar.gz) = 6725a71fa8661af779f644320f285db4f8efa87f
 RMD160 (quickie-1.1.tar.gz) = 2621cde0cdd3fee816b01b987d355d498855c6a1
+SHA512 (quickie-1.1.tar.gz) = 6b5f413e45756c4b8047c1d75bcb938220988ea69f2e0b9e67193a0927a128622255f6206c29601d79b3f4ac0be203bf498e31bb0682ce62bffab5f403890519
 Size (quickie-1.1.tar.gz) = 278045 bytes
 SHA1 (patch-aa) = c0c3b3e852c0931ecbfcdef834e47e767ecd07f3
 SHA1 (patch-ab) = a9179a9acb2716b9469e768332ffe133048daf01

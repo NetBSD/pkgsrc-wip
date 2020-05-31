@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/24 09:01:26 jihbed Exp $
 
 SHA1 (pygnm-0.1.tar.gz) = ed833eef45b0abcfd558d9fbb35e515dbe0063fd
 RMD160 (pygnm-0.1.tar.gz) = 27320dac304633007416535e7b24af4c1d35a999
+SHA512 (pygnm-0.1.tar.gz) = 28fda301285fac8619a7eeccd4e942bb9393c55ebd8f28b4f443edcc0734baa696eaf4cb0849c132d73d8bed92f60a180a8e51ac7c75efb68056cd8b2d915e24
 Size (pygnm-0.1.tar.gz) = 81311 bytes

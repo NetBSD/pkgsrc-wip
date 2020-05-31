@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:26 rillig Exp $
 
 SHA1 (libparsifal-0.9.0.tar.gz) = 00cc8e629b0584fb6018dd4c48a032da5dfd3dab
 RMD160 (libparsifal-0.9.0.tar.gz) = 6c12cca6df896e1ae6a24c7f65d39252d5d547e4
+SHA512 (libparsifal-0.9.0.tar.gz) = df54e42aaeb8b6a5c7b10732110fb3290e96f6ec06e5e9bb1094f9f79ce0c8a01fc25d22067b85fc8b3b553d3dbe83063f6cb9d96e9ad1065fe647af253dd4ff
 Size (libparsifal-0.9.0.tar.gz) = 492268 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:16:19 jihbed Exp $
 
 SHA1 (paida-3.2.1_2.10.1.tar.gz) = ebe6e0201bfceae3ba6d76183bdb39c8ac98c183
 RMD160 (paida-3.2.1_2.10.1.tar.gz) = 5e1c063ffd940cc942ed9c107699420b1b7db6b1
+SHA512 (paida-3.2.1_2.10.1.tar.gz) = 3aaf70499a4329c49ce2205bd029f0d1f22bbd452330a1f70a6a51b10a932553c3906d30bdb670ea309b7c1b0a33b04efca2c2e67da47d1f5a1b860ba6587b01
 Size (paida-3.2.1_2.10.1.tar.gz) = 150476 bytes

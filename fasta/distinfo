@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2012/10/15 22:31:09 asau Exp $
 
 SHA1 (fasta-36.3.5d.tar.gz) = 447bc89074ca5568c4c287ee86a7c606e2d0c221
 RMD160 (fasta-36.3.5d.tar.gz) = 435d3f07f119d7946843d2e970caf26865e494aa
+SHA512 (fasta-36.3.5d.tar.gz) = 0c891c6d892120ced45f0191ea3d07ad4ab681a9b80e813d60ab1abca103c2b6ea6db13f297d2b4f3b5ca46b9e2345a349ad6970b89c737cc962962e337137d0
 Size (fasta-36.3.5d.tar.gz) = 942752 bytes
 SHA1 (patch-make_Makefile.NetBSD) = 195c80916b0462a96b7633ad1bbc19ae8d8c91c0
 SHA1 (patch-src_mm__file.h) = 9ba083053ef7c5bb99efa8819b6f16790f3001fa

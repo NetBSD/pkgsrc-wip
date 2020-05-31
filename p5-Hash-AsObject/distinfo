@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2010/02/05 15:33:03 athaba Exp $
 
 SHA1 (Hash-AsObject-0.13.tar.gz) = e46930b26ed6ef66b3de4194214db54412ad9c6b
 RMD160 (Hash-AsObject-0.13.tar.gz) = f70db0ab5934ed9624f56310bb14a136cd5c9376
+SHA512 (Hash-AsObject-0.13.tar.gz) = 2281191b3ed93218c60b32b079dec2781ed2c1d8b4094ac38c3263b0b81f72776fcb19815b68106e5c6f7ece09f16c5a8a560c424a1460e781c378fad4588489
 Size (Hash-AsObject-0.13.tar.gz) = 8116 bytes

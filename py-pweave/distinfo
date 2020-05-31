@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:08:13 jihbed Exp $
 
 SHA1 (Pweave-0.20.1.tar.gz) = 50136b4fd4c9bdabfb3c779ee565091fa3a9c290
 RMD160 (Pweave-0.20.1.tar.gz) = 8c347b912aeb55c2dfd2587d9242661650a363af
+SHA512 (Pweave-0.20.1.tar.gz) = 026525871b7b2a1260f41ce89aa7c1bec1bc6f555284007d388cca6f8b16205aa507a369d222acb3ef1acf3e9b015d7c21bb7eedbf225319727f6a095c048f02
 Size (Pweave-0.20.1.tar.gz) = 10473 bytes

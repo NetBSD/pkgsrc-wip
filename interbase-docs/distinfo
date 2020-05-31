@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:22 rillig Exp $
 
 SHA1 (60All.zip) = 3bfc1cb3111eb6178c4d7fda033f0dfa705523ce
 RMD160 (60All.zip) = 04c2343b46c717d78127495fa2adc8698ea28703
+SHA512 (60All.zip) = 97344ea6ed49aa1a04f6cf442a6bc91c9c6f7eb9192a0bb1d2b76092fd5e0e54e07d1f122994b9027ab8ce2b653ab8e335387c2ed16ed19d03e17e070206c5ad
 Size (60All.zip) = 9312390 bytes

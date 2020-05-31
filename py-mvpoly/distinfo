@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/12/03 00:44:55 jihbed Exp $
 
 SHA1 (mvpoly-0.93.2.tar.gz) = b2254e68fcdf3c1720d9533afe7b3142f923753d
 RMD160 (mvpoly-0.93.2.tar.gz) = 3d597b1485acf4b6385a841e0b69df9e875be632
+SHA512 (mvpoly-0.93.2.tar.gz) = 4e8372e5b1b5bcd43ebd4c283aa83de0510950c66330e96348b76034978d1003c5eca489334ca63b43ccfa97ffa90fac08d945adbb4349fa2ba79af04226ccb0
 Size (mvpoly-0.93.2.tar.gz) = 20310 bytes

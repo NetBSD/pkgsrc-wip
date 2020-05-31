@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:37:09 jihbed Exp $
 
 SHA1 (HepMCVisual-1.1.6.tar.gz) = c80bfb7a6a9cf624633b80a62a5ab47816448324
 RMD160 (HepMCVisual-1.1.6.tar.gz) = 04cf545d1fe3ba25269f155a1f80b0ba95d05c97
+SHA512 (HepMCVisual-1.1.6.tar.gz) = cc9ac5a9d5b853cfceb3b88af97cc9ffc3a645ac911ffe8e7535be9aa02ae02828e64c78e428898aef758c99855bbf33605821299799fb30cf21d48f20cbf7b2
 Size (HepMCVisual-1.1.6.tar.gz) = 381408 bytes

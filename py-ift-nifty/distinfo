@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 21:06:54 jihbed Exp $
 
 SHA1 (ift-nifty-1.0.7.tar.gz) = ef761d28d515204afd15c649f6ade37814f1367c
 RMD160 (ift-nifty-1.0.7.tar.gz) = fb2961831e2e1bb8428e50c88e40f77627ce7c8c
+SHA512 (ift-nifty-1.0.7.tar.gz) = 2a1640b15cee8b3d40df3c8abfc74f41b7504eaf6974625d68b91e48e9bb62c53cdec5f6643cfae1fb1150dcf9da8de7b877c06ba02e5ed481c2ae6ba99f9568
 Size (ift-nifty-1.0.7.tar.gz) = 1649962 bytes

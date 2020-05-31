@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2015/08/19 21:02:45 wiedi Exp $
 
 SHA1 (kibana-4.1.1.tar.gz) = 2ed57e73f2348f61063bcc439d61504693929a1c
 RMD160 (kibana-4.1.1.tar.gz) = c2dce33c10d51770882962f1f9d0b86a99d9a79f
+SHA512 (kibana-4.1.1.tar.gz) = bc744b6eff8518e80815d933046eca371b6b4e25a719ee2c80fc4a70da419bdd24c8d7ac7e8f7a70ba7772830fca7e23b79f26073f18a8b3c34d4fcd7ccda0f2
 Size (kibana-4.1.1.tar.gz) = 6408248 bytes
 SHA1 (patch-Gruntfile.js) = e47622a6d2fa5e2a6fac691108b67bdde4bf87a7
 SHA1 (patch-package.json) = d0957bd298d260791e7c02f8f0a56ef63420775e

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/07 10:45:51 jihbed Exp $
 
 SHA1 (pygist-1.5.28.tar.gz) = c71df27d5a57a53dcda67130f7c0f1be8eb44983
 RMD160 (pygist-1.5.28.tar.gz) = c6ec549569c908dc222a90bb750bbfdee380e4ca
+SHA512 (pygist-1.5.28.tar.gz) = 35fff03874f5407e5103d8f7f588975bd7b8a554a6e37788f5dfc3093ea60e86d35f8d6244d1df0f639336af3fdcd976d88f57c4c808fe150d5a0ba54cd88b6e
 Size (pygist-1.5.28.tar.gz) = 592736 bytes

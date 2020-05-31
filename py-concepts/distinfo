@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/01/17 20:18:23 jihbed Exp $
 
 SHA1 (concepts-0.2.2.zip) = 02ba0b49a915ca20f4ead1a43cc83f2a296dd63d
 RMD160 (concepts-0.2.2.zip) = fa11075f5846ab2e6b079bf890477587c7d7c840
+SHA512 (concepts-0.2.2.zip) = b5d367948c0ee98cd316b0eb9d6f5333c6c30b8cd8bb75e5198060bb6f1e3be91a242afa6efb0f17b9e08836ca1ff5cb0008fe6b1692145e69189a6108f818cf
 Size (concepts-0.2.2.zip) = 105760 bytes

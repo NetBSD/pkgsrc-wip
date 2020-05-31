@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/01/02 13:37:58 marttikuparinen Exp $
 
 SHA1 (shttpd-1.38.tar.gz) = 5ebea91c4d15c2acdab84dd465e0e812bee7000c
 RMD160 (shttpd-1.38.tar.gz) = b78c35e74571abf8f794eb94962eea765fbce476
+SHA512 (shttpd-1.38.tar.gz) = 4e30dd83d4c1e6cfad94bb9e0d106ff1c194cfc0fb46c7e299c9531ad6f0d38dbdbe8b7507b597e6a6742816e3a89da16d02dc5588647283a4dd22bc613b11b8
 Size (shttpd-1.38.tar.gz) = 76390 bytes

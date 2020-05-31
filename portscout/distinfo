@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/09/07 08:50:29 thomasklausner Exp $
 
 SHA1 (portscout-0.8.1.tar.gz) = 156a61ca8c59f6501e6f909b744f1bed5396242b
 RMD160 (portscout-0.8.1.tar.gz) = a0c666e9d1c9cfe913a88c4c51ac18b73d46f5c8
+SHA512 (portscout-0.8.1.tar.gz) = 545170e34e55129197e7e790b3c6c931d03fc9e0e3bf90a95aac8782f742a14166b95525cb3f3619b043938163330d295b2257545270de49d843d2620c6e8b16
 Size (portscout-0.8.1.tar.gz) = 56079 bytes

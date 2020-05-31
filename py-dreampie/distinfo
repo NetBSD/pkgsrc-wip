@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2012/08/25 17:02:04 jihbed Exp $
 
 SHA1 (dreampie-1.1.tar.gz) = 49934479eef95598dd03d2b0ef30e3b402597161
 RMD160 (dreampie-1.1.tar.gz) = 36adfe0cfe2aa90033f76bd405b27a75464beda8
+SHA512 (dreampie-1.1.tar.gz) = 4ff02dbda9fad8a9da73260d9cb6928e579e659006485edc1f574083dd8d7b143ca27a5c2dd4b7de58674a710322a2b20e1b3f49f3f7314f60519b4d2a0ad2d4
 Size (dreampie-1.1.tar.gz) = 110940 bytes
 SHA1 (patch-setup.py) = 399c94be0261d7af011e945448cf84207454ab43

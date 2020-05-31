@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/12/11 10:45:11 netcap Exp $
 
 SHA1 (scrobbler-1.0.0a1.tar.gz) = 507928664eeb144a86b8e5b6de4c7c2d41aa72a0
 RMD160 (scrobbler-1.0.0a1.tar.gz) = 5622295aac1191573ddda337da60603076e1d7b3
+SHA512 (scrobbler-1.0.0a1.tar.gz) = d9c78a168c70af44ee17f471c593b0041af98aa617d3a0ac7c3430a7059afd4534ff12068ad933d9363becd3b00d70c56bdd37c7f145b752a86b1b6e9ecb71be
 Size (scrobbler-1.0.0a1.tar.gz) = 3912 bytes

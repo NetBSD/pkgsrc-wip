@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/05/21 19:24:27 blef Exp $
 
 SHA1 (lxmusic-0.4.6.tar.xz) = 69209b26aefbb0f1cd45bbb3da85526a4137c39c
 RMD160 (lxmusic-0.4.6.tar.xz) = 8a9b8d34402e90717cb2ff43bb903f5a5b7ff6d0
+SHA512 (lxmusic-0.4.6.tar.xz) = 323729a02dc1424942aa55dded3eb4d5ae75195b38c32073b8e658e84705b6bf7fd2a58e521603783f8a10b6e8328b03b3c1fc9b3deabb2a3d363faad73c4dad
 Size (lxmusic-0.4.6.tar.xz) = 179820 bytes

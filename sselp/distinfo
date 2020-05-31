@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/03 00:32:19 rubengonzalez Exp $
 
 SHA1 (sselp-0.2.tar.gz) = 8a89cb11388f09458d7e9c549cdf394c8abada04
 RMD160 (sselp-0.2.tar.gz) = 008c3bf94225c20a98b95a3dc766a3e9003a0c5f
+SHA512 (sselp-0.2.tar.gz) = f53163bd6bf257ef912d23dd813690a6a8700344bcc3caad73556917f12e76364b6ebc9bd11224fe8f4013d83518459440f113a313fc9721de2a124277270044
 Size (sselp-0.2.tar.gz) = 2562 bytes

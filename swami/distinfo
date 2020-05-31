@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (swami-0.9.2.tar.gz) = 47a2ceb91af1012966eb88e95bf001cc5e9e14aa
 RMD160 (swami-0.9.2.tar.gz) = 4fb8b7198ab03583d79ed0233445f7a694692361
+SHA512 (swami-0.9.2.tar.gz) = aa94880dc13c9f900081f767f78c77f94c2984f2701487f2ff2c2860a374b15e6d97e5be2e3c2e6298b485e17ac2c25bc9d34ad56e1a82e9e0c33f9ee2df8795
 Size (swami-0.9.2.tar.gz) = 904137 bytes
 SHA1 (patch-aa) = b4f9761fc9b98e4dce179b622f90e3b854014672
 SHA1 (patch-ab) = ca42dffaa77838cf4b2a4ba809046ef40401080a

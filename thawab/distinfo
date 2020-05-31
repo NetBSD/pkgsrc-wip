@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/25 23:46:19 jihbed Exp $
 
 SHA1 (thawab_3.0.13.orig.tar.bz2) = 08f4ab4c039da178961c07b921b3d1e54f1bea28
 RMD160 (thawab_3.0.13.orig.tar.bz2) = 9fa603588a0e919558bd627ef9718b83f75d5d11
+SHA512 (thawab_3.0.13.orig.tar.bz2) = 0a68c0ee673b20977866fb0646c148680a4a6bb5197cc2759a7cc2c526a15cc776bbc98a2b6421324f6fc05a731bcf95660bd342f6ce6b11d67e0e19653ec87d
 Size (thawab_3.0.13.orig.tar.bz2) = 189388 bytes

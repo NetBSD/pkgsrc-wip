@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/20 10:10:36 jihbed Exp $
 
 SHA1 (moksha.common-1.2.3.tar.gz) = 3fe47f50a38468f087fd3165ab375e5df5fc7755
 RMD160 (moksha.common-1.2.3.tar.gz) = 546ac57a71da849e888ee571bb37c1ca6fdfd637
+SHA512 (moksha.common-1.2.3.tar.gz) = 5d0c7b3b95c173253f83bf77355a0f4c16a503c405c2f0493eb5fce1da1d80f69de093fad9039b7c3db93469c7e69199b608411f1f945bae5820a058d7cb5efa
 Size (moksha.common-1.2.3.tar.gz) = 16108 bytes

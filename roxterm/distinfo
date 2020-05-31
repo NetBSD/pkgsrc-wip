@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/10/05 11:06:01 ryo-on Exp $
 
 SHA1 (roxterm-2.2.1.tar.gz) = dfa66f3fc5bf44d99fb94115c5d50e16d2b79d19
 RMD160 (roxterm-2.2.1.tar.gz) = c439bf2099daec02e59eaeaa4e36edf21be66274
+SHA512 (roxterm-2.2.1.tar.gz) = b6bcc0a50f86bf15dffcceec7299872a7b0157158d7f81dbb0d41d00253860ce7e9e99b2338546e5319d59a03a3811975e613365ec932218fcea785289b63fca
 Size (roxterm-2.2.1.tar.gz) = 949677 bytes
 SHA1 (patch-Makefile.in) = 0880e533e15793587d6ed5cf0f8002fcbf23d809

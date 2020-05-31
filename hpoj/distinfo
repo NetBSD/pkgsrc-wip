@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (hpoj-0.91.tgz) = 36785cf1a925f569ed3983b8c068620e2c9b4456
 RMD160 (hpoj-0.91.tgz) = 916cbfc1c21306ce4e297b24af16d654e3e41788
+SHA512 (hpoj-0.91.tgz) = fff34e97735552032e695ff3f9e8be0f2bba716dc0b32b0a33ca88aeac567550e945a29c238d7e944e4c1a2672aaf36f1290ac0ffe022d54625eec526bc8e61c
 Size (hpoj-0.91.tgz) = 542475 bytes
 SHA1 (patch-aa) = 77a01a3e5bb774b2024ebc7d2f11a3d4038962b0
 SHA1 (patch-ab) = 4fed4fa5e6546f2c9039779095879319aab9acbe

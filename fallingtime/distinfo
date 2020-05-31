@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (FallingTime-1.0.1.tar.gz) = 40abd3595f891b33fcc26f39379ea04be73fa5ba
 RMD160 (FallingTime-1.0.1.tar.gz) = 47591713db84edbc6ed7450dcd9ec4695e676703
+SHA512 (FallingTime-1.0.1.tar.gz) = 1e169faf407d6ba6137275e459eb14d7759bf248eec615d139236e8bbc0acffe92cdd1309d66f415847d5682681bbff9ea10a63626cc604ac7698c126d2cf446
 Size (FallingTime-1.0.1.tar.gz) = 1875727 bytes
 SHA1 (patch-CMakeLists.txt) = bc3613d36e72038b85aa6667ca859e0d1272feba
 SHA1 (patch-cfgpath.h) = e615ce4cd230be2f02e9c3d3a33a4481c71d75f6

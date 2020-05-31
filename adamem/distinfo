@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2005/03/29 04:57:42 xmor61 Exp $
 
 SHA1 (adamem.tar.gz) = 43703b7766de142e924bb9eb6f9113191481f774
 RMD160 (adamem.tar.gz) = 8d5f941cfb2683784e27b4e161a20b970a1d0a99
+SHA512 (adamem.tar.gz) = c2f5fe4549f6a049bb48a6640fd8e2aa97f4f907a75257d4ae5b2e093cf24410296ed7e5708b32d8f5b235a2878b15bee6fedc85d652d759011fc87b9d479c97
 Size (adamem.tar.gz) = 559250 bytes
 SHA1 (patch-aa) = 4de833052ff4acc75e0643e10a6d5ff859c0d9f2
 SHA1 (patch-ab) = c7e0e76d200dc26281b01b13354d43c5299514a3

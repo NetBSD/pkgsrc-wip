@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/02/27 03:18:02 ficovh Exp $
 
 SHA1 (Class-DBI-Pager-0.08.tar.gz) = 301b6e7e72369ccaa5c7cbf379d61a3d7325c699
 RMD160 (Class-DBI-Pager-0.08.tar.gz) = b9c503f796fc6d0749b8b005a79f52d38be92341
+SHA512 (Class-DBI-Pager-0.08.tar.gz) = 2d9baccc06b448ddfebe02c84fd3ea073bb37940bb1e1d2677586f42bbcf5fc2d9616d51b7503925321b5db093bd7626397895426ef4cdb6c39b60040c2aa0f7
 Size (Class-DBI-Pager-0.08.tar.gz) = 4004 bytes

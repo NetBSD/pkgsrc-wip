@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/09/07 21:06:17 jihbed Exp $
 
 SHA1 (nibabel-1.3.0.tar.gz) = c2883bbc5d38349bbf655d78a3798ee6f04e4ad1
 RMD160 (nibabel-1.3.0.tar.gz) = cff54439e38e1bdcd726cf45136d01417b7a02b8
+SHA512 (nibabel-1.3.0.tar.gz) = a883ad61b748330073577d4259a2a62e2d414af7af17177aad72d6cb174902f5a2b7e6ce3a11cffba9a3a9954da844b03c1eb26028aa9c57721ff31145ae8dda
 Size (nibabel-1.3.0.tar.gz) = 2172896 bytes

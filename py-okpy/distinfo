@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/02 22:16:41 jihbed Exp $
 
 SHA1 (okpy-v1.4.1.tar.gz) = b3da88b0cb9bc833e3bcc6e3f19eadc87ad50a69
 RMD160 (okpy-v1.4.1.tar.gz) = 18139ea77752481f63ec4ed155e4dc2eb61820a4
+SHA512 (okpy-v1.4.1.tar.gz) = 5a863eb5e0edc84ebf5a851c974f77dcccf4624ccc912e54389119976089e2327f82cc56b92a77c26163056dbee085dce8d0929c03b5856c00fc61d93d0c0a62
 Size (okpy-v1.4.1.tar.gz) = 43653 bytes

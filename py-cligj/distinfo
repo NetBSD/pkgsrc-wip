@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:59:38 jihbed Exp $
 
 SHA1 (cligj-0.2.0.tar.gz) = 9319b12098973ef75ee64dd4a3607c15dd64d015
 RMD160 (cligj-0.2.0.tar.gz) = 6911650c19bcec47f8535be42ae8ab423aa04150
+SHA512 (cligj-0.2.0.tar.gz) = bb1048550cb4cd01165d8322849ba1c4fc207664ac2889ac34f2551c796700b0eac284ca03b1f0fd105b928f1262e484f2abd062f62b007764b29aa874a3f4a2
 Size (cligj-0.2.0.tar.gz) = 5569 bytes

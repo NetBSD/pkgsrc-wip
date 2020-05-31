@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/23 10:21:01 jihbed Exp $
 
 SHA1 (pyse-0.3.1.tar.gz) = 679ba112ca53c6e5412bcae988b6bdfbe800b236
 RMD160 (pyse-0.3.1.tar.gz) = 9f2c2a20ff03cea07d8c25f76261c435520c9a30
+SHA512 (pyse-0.3.1.tar.gz) = 3098795bf2ecb8888233d2d23a92a3921d2d98c9f62a3a0f70d7eaef5208541db9308db25dfd8740a13265135c323a66c17c4e5649fe21fa346cf04d6e82c9f3
 Size (pyse-0.3.1.tar.gz) = 95066 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/07 00:57:41 jihbed Exp $
 
 SHA1 (qutrub-0.5.tar.gz) = 71e06fe279541c88664a8db7aa7db9194415fe16
 RMD160 (qutrub-0.5.tar.gz) = 57006ac35b19c5bcfdffae0ff9b87686f0c31d7c
+SHA512 (qutrub-0.5.tar.gz) = ca18de7cced662dc4d351692fdc87598f4701091962a608e729d0378290c2f466df268469fe2ecfdf546503519d540fdc0725efb2b6a37687c3a1b9ac4e2a037
 Size (qutrub-0.5.tar.gz) = 429827 bytes

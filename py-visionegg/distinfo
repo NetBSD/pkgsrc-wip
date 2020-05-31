@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:39 rillig Exp $
 
 SHA1 (visionegg-0.9.9.tar.gz) = f184a64d27a2f8b73ee2a8e6943c3432ec504098
 RMD160 (visionegg-0.9.9.tar.gz) = 4f18513338fa6c32aafdda6b3a8b16c71e6d63c6
+SHA512 (visionegg-0.9.9.tar.gz) = f7247be0804a42c984c2eed451a921a92ab61a089eacbbdf359cbcf30072b41a6e2ee17987477e3a4c39e1bbfc22dd579f7d65780ad37b6984a573bbb81307cd
 Size (visionegg-0.9.9.tar.gz) = 990678 bytes
 SHA1 (patch-aa) = fb3489be05fef0e613b2072ff9980ef2756996c3

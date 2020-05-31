@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2012/12/04 21:07:43 othyro Exp $
 
 SHA1 (PingTunnel-0.72.tar.gz) = d5d874ec7b4f68d2307cacc83a1c408aeb4206a5
 RMD160 (PingTunnel-0.72.tar.gz) = 8c0f8b34ac928f3960518ed028b711d92fa90477
+SHA512 (PingTunnel-0.72.tar.gz) = 943fc571ca95bb6af59f2a74458470865a89a502145bb1e5cf9b86159d61d897418d10d100691337f299892af7aba65964624462068a77ef1645890a4abf5d17
 Size (PingTunnel-0.72.tar.gz) = 64188 bytes
 SHA1 (patch-aa) = 65da34950a1185be026f5add834761436cd810a1

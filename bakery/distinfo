@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2009/03/11 16:10:02 jihbed Exp $
 
 SHA1 (bakery-2.6.3.tar.bz2) = a379f36983b203c3759a05d49253fbe2c4d2bd60
 RMD160 (bakery-2.6.3.tar.bz2) = 41089a0c9664933a9d67f97cf1d05d70d4038961
+SHA512 (bakery-2.6.3.tar.bz2) = 62adc8742461d401bd63fbdcfd8a8e1f698abfaa199a0dded35c3d21a555d1f2c72e2b1442acee1a045bd2839cd8d3522b72fdad7f2511378474388a79f3bbcf
 Size (bakery-2.6.3.tar.bz2) = 1502637 bytes

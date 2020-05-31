@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2011/03/14 11:13:15 obache Exp $
 
 SHA1 (efltk-2.0.8.tar.gz) = e6c9838fb01628616e1ec854dc25ac8f151f5725
 RMD160 (efltk-2.0.8.tar.gz) = 770473fd3596e47bc7d93c7467dfbb26d7f33d3c
+SHA512 (efltk-2.0.8.tar.gz) = 9a87260a65d53e703ee48491c06b60b20bc3dfc12aa4a6f3e08999368d865945ea7f94a60d17c3d47cee496c0b06efb7ec9a594db23a345db5cb7aa879148e4f
 Size (efltk-2.0.8.tar.gz) = 1579590 bytes
 SHA1 (patch-src_images_Fl__Png.cpp) = 389be63b48cddd5e753edc5d9f17bc6c7b91094c

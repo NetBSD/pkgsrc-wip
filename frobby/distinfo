@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2009/12/27 20:57:50 jihbed Exp $
 
 SHA1 (frobby_v0.8.2.tar.gz) = 0e75a0b78eeef43df491393a5c1fd1421b9e47d8
 RMD160 (frobby_v0.8.2.tar.gz) = 3644813d14feea3e361c1669c3f5460e1fa0974e
+SHA512 (frobby_v0.8.2.tar.gz) = a443a77ce207cc6b77cac65168fd81577f42cd72aaa2139869fd11b8e81ed7bb1cd39feb18e555ba7fc07047bf19400ed2a396175660b4f82c34853a17a5f2e2
 Size (frobby_v0.8.2.tar.gz) = 746484 bytes
 SHA1 (patch-aa) = b2d78c44dc4ee550e7bd0a10b5f916409f5456c5

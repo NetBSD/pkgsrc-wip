@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/12 12:20:42 ryo-on Exp $
 
 SHA1 (zipios++_0.1.5.9+cvs.2007.04.28.orig.tar.gz) = d0eb05a9fcaae018d9566a4c4a9979d8c915c70d
 RMD160 (zipios++_0.1.5.9+cvs.2007.04.28.orig.tar.gz) = 8f29b7b4b5ffb33651b9051e4847616fc74a8d4b
+SHA512 (zipios++_0.1.5.9+cvs.2007.04.28.orig.tar.gz) = 36570ac26bc84c00990e6d56be6d1b0e5447110f6960ba80e63af8345f5e86e2eec758bca43b5f3781971188a609a66d3a6ce009456d641c237705e0a013b8b9
 Size (zipios++_0.1.5.9+cvs.2007.04.28.orig.tar.gz) = 501625 bytes
 SHA1 (patch-Makefile.in) = ad672d327982b995129e55e436d5f169dd3b2393

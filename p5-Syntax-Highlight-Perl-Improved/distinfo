@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/05/11 19:53:12 ficovh Exp $
 
 SHA1 (Syntax-Highlight-Perl-Improved-1.01.tar.gz) = f8061cb41dde2d9d028f8a5dc41e7e5390825dc1
 RMD160 (Syntax-Highlight-Perl-Improved-1.01.tar.gz) = 03217ccc812df1889d85f148595234a6fc2a865a
+SHA512 (Syntax-Highlight-Perl-Improved-1.01.tar.gz) = 13230a0bde3648aca6bf91b5fed4b932375041eafe4f0419c0ba774fdb9b5ea9284579e6052e8507c7c8f7f13d337cfb0e544ae6d99119a3b63834a868dc6731
 Size (Syntax-Highlight-Perl-Improved-1.01.tar.gz) = 30051 bytes

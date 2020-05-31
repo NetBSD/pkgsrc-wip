@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 10:37:14 jihbed Exp $
 
 SHA1 (py-sphviewer-0.88.tar.gz) = 5f575b986bc0c571c345a9ffd146903da13462e3
 RMD160 (py-sphviewer-0.88.tar.gz) = 0125eec2914ecd3d54da3143d2ce294abdf8fd2f
+SHA512 (py-sphviewer-0.88.tar.gz) = 3cfd7b865165c2e5240c2afb66d9fc7c89a928ff918c1cf92bf0b038a67d9b1a61fde6d2bbdb5a9d5f125cf96bf5d784b2965dbd088fc65af35b329c85d02dd4
 Size (py-sphviewer-0.88.tar.gz) = 11650 bytes

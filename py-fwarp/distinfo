@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/09 20:39:37 jihbed Exp $
 
 SHA1 (fwrap-0.1.1.tar.gz) = 274b2e10f67f699df3cab078bb5d18ea3ee24ae9
 RMD160 (fwrap-0.1.1.tar.gz) = b0aeadb2ed9d046269a6032960c3b3dc857dfe4e
+SHA512 (fwrap-0.1.1.tar.gz) = d08f9c09cd991a27e5407270c446553440dbf570a1a2d3cc72cb9b32f95140ad3f919a77def28b9e547169e89e360e6a570742b6ea8295e296c56c357b0663fd
 Size (fwrap-0.1.1.tar.gz) = 203543 bytes

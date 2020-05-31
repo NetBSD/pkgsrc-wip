@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:38:06 jihbed Exp $
 
 SHA1 (Escher-1.1.2.post2.tar.gz) = aec777d11d8bd18529a3d7859fec80391f44c9a9
 RMD160 (Escher-1.1.2.post2.tar.gz) = 176eddf3a85e094f1b3fef43906440ef94586a5f
+SHA512 (Escher-1.1.2.post2.tar.gz) = bc6432559db16804dcd22ecf092efb804f18d3605fdfefc6d09cee19288f2a3fef48e864cadc6867bd1297eb3c467719daf75b3b6870b781b3cb300fb0ae807a
 Size (Escher-1.1.2.post2.tar.gz) = 1187073 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/10/21 02:40:29 jgoamakf Exp $
 
 SHA1 (ocaml-comparelib/109.60.00.tar.gz) = 6f939f1b4733f72c573e7603cbb4fa15fd47e4ed
 RMD160 (ocaml-comparelib/109.60.00.tar.gz) = da080d1cb9bd95439fd6e251bc68f82aab9bf993
+SHA512 (ocaml-comparelib/109.60.00.tar.gz) = 0a20267b06ddb840f31b3aec7b4cc0a77aa5a5e7f454c1d163944e4b233233b5cc1d266aae52eaffbc0721e8d83f2ec345444032af1dc2e0b75bb78ae06e33cb
 Size (ocaml-comparelib/109.60.00.tar.gz) = 56707 bytes

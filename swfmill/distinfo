@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2014/04/12 17:54:47 thomasklausner Exp $
 
 SHA1 (swfmill-0.3.3.tar.gz) = 7aa2c674e20f5649985b6dde3838393c5efefb6e
 RMD160 (swfmill-0.3.3.tar.gz) = 4e46794a2c0ca90040a5c4f6da0c604e8d8cdd7a
+SHA512 (swfmill-0.3.3.tar.gz) = d953f38c606c4da6a2178ad10490e0ae1c05372ec50a258a6bc68707de156254dad24b4f5754e2e48a1e51657620c447152ac8291a956500d069b12e6105ef2a
 Size (swfmill-0.3.3.tar.gz) = 1386829 bytes
 SHA1 (patch-configure) = 868b53f487f6bd6f79913a120cd67a9cdbdd16ab
 SHA1 (patch-src_swft_swft__import__ttf.cpp) = efa62425bbc41f5f05774f5e7e6ed0b92cc95f04

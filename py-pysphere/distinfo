@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2015/06/10 12:53:37 ahp-nils Exp $
 
 SHA1 (pysphere-0.1.8-0829ccbe4ef3de6d9222c3a9e3cd9be0543887d6.tar.gz) = 9cd2791eb0ffc46fcb2239c77c2bb809ab8cf13a
 RMD160 (pysphere-0.1.8-0829ccbe4ef3de6d9222c3a9e3cd9be0543887d6.tar.gz) = 52c3378eb1b3345ae8218235002b3e6e2b1fd5ab
+SHA512 (pysphere-0.1.8-0829ccbe4ef3de6d9222c3a9e3cd9be0543887d6.tar.gz) = c82e3a32410276acfacb0101408376a32433d9ea6d8f8aec4ddd068dbea31aaddd709563bb98eabd0dcf6f12be106c381a4efdb44d2f7133ae4d79bd415d0234
 Size (pysphere-0.1.8-0829ccbe4ef3de6d9222c3a9e3cd9be0543887d6.tar.gz) = 504572 bytes

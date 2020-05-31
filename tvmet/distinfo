@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:15:12 jihbed Exp $
 
 SHA1 (tvmet-1.7.2.tar.bz2) = aea83958968cce70e9b9cd9ed34b83019be8f619
 RMD160 (tvmet-1.7.2.tar.bz2) = f777cfe42e221d3cb09172dfb4de67b360cb0acd
+SHA512 (tvmet-1.7.2.tar.bz2) = 0e57d2ec68566d02c09c3d8b35662b3737e6f074271e5e90c1354956636d2ada74859bb867d63684edaa93d7ab6a470a3141d02a04164101ff9d8d14f3d6c5fb
 Size (tvmet-1.7.2.tar.bz2) = 532599 bytes

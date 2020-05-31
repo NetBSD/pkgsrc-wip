@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:36 rillig Exp $
 
 SHA1 (Fnorb-Guide.html.tgz) = a532d771e6878907ae2d1004912ea43f60190146
 RMD160 (Fnorb-Guide.html.tgz) = e4190fa58c735edebae2303a670641b5e0504684
+SHA512 (Fnorb-Guide.html.tgz) = 735835d06fe90f4d88c620c4964938a88db824e188eb100e700e283a104e431275e9e6047e29d4263dcd3ad878036646f4361a8603706113765559d14ed3727c
 Size (Fnorb-Guide.html.tgz) = 33791 bytes

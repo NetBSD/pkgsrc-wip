@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/07 00:59:04 jihbed Exp $
 
 SHA1 (islamic-menus-1.0.2.tar.gz) = f72e44deeebe4b6cd31943f291f22a98bec0eb00
 RMD160 (islamic-menus-1.0.2.tar.gz) = 1c07955e47d90a8b6cc0328b6ac92403504a87be
+SHA512 (islamic-menus-1.0.2.tar.gz) = 3c3dcde17ab9313b9d4fa1691a633fbb0ccfb6f8b2cbb5c7537306039bc85091f361c701f0349eb1730ec2cf8f3e8fb31eb9143bb740eb529e3c2ef9343fcedd
 Size (islamic-menus-1.0.2.tar.gz) = 46760 bytes
 SHA1 (patch-aa) = cc41b296e57ba14616758d9249efc0f494fc6fb3

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/31 19:52:24 helgoman Exp $
 
 SHA1 (xlutils-1.4.1.tar.gz) = d2d7584ecbf16b2eaef1a8f2b19231a6d43f7a1e
 RMD160 (xlutils-1.4.1.tar.gz) = 8eaee6ee04a878b9854320d2037971566f19da49
+SHA512 (xlutils-1.4.1.tar.gz) = f097e02ddbd3dc37e5c38620534e4d98a1d3348ec4e3e142a535757235c1dcff4d8f428434bdb2e57553d4188441f0371241bdf099dd7c471f3e956d2ac9aa6d
 Size (xlutils-1.4.1.tar.gz) = 40231 bytes

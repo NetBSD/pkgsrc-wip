@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/01 19:49:25 thomasklausner Exp $
 
 SHA1 (smw-1.8-beta2-src.zip) = a0f836505c08c324c7184a0acc94fa43e8a7b0b0
 RMD160 (smw-1.8-beta2-src.zip) = 4b50737b8c0b1b6bec6dbbb66cc1b0cbca34ce8c
+SHA512 (smw-1.8-beta2-src.zip) = 0c2ad50633594950a781efa329c54892aa8753ad0663561b015a5f689c23d2fbaa6706811dcea4c94f01c89733b7b487059d7b075468d1b787ec8853018b2dab
 Size (smw-1.8-beta2-src.zip) = 14973633 bytes
 SHA1 (patch-aa) = d1f1376b333305bbb57bcec54ad01cac650a7bda

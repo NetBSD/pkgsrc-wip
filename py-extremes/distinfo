@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:13:37 jihbed Exp $
 
 SHA1 (Extremes-1.1.1.zip) = 07021558159bfa1e8f59904dcd1c9af07888be98
 RMD160 (Extremes-1.1.1.zip) = 8663e9f4990b1f29454841ca184f69b8c730b15f
+SHA512 (Extremes-1.1.1.zip) = a0b951306e9d5ef84c6498268a3476e7ed889f0be950a529774e2d8c4f155d4c10cbacd20864ed37aea5512ba65a267e414eb2b4f7cc6d67b21a020d82da8ec2
 Size (Extremes-1.1.1.zip) = 10360 bytes

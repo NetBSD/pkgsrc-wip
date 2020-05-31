@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/04/18 21:25:07 thomasklausner Exp $
 
 SHA1 (pdftools.pdfposter-0.6.0.tar.bz2) = 35b5b660f20fe5ed4d72e7763d7534b8fa7e02d8
 RMD160 (pdftools.pdfposter-0.6.0.tar.bz2) = 897068423034fc1a1ddbff7f15c304f39113020a
+SHA512 (pdftools.pdfposter-0.6.0.tar.bz2) = 36d8eb6c6f47f64c9cf78284815c992de7a395b6537d936e489a1233d9c61c28b49437425fc8b84218ff31e9adac624b7114813d182c5e25f624419ba0c87865
 Size (pdftools.pdfposter-0.6.0.tar.bz2) = 178517 bytes

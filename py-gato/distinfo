@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/02/16 22:06:44 jihbed Exp $
 
 SHA1 (Gato-1.2.2.tar.gz) = 70f5cdf87dc26b614d683b33dd988f726a418ca0
 RMD160 (Gato-1.2.2.tar.gz) = 05f2798a9549bb4dc441b998c85f06656369f43b
+SHA512 (Gato-1.2.2.tar.gz) = a628827b989f28817bcd427903d09f6571b3c2e571b57242d7c41562e558a00b278e87699565d16bf2584a0c8d33c07bf0a3c5113c9feeff417546a0a712c0c9
 Size (Gato-1.2.2.tar.gz) = 274369 bytes
 SHA1 (patch-setup.py) = f342dea0b8d5117916e628ebbf442cede0b87c32

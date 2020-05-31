@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/05/02 23:07:56 jihbed Exp $
 
 SHA1 (linop-0.8.2.tar.gz) = cf981bd7e37f19fbb5516c93143b5ba9327b951a
 RMD160 (linop-0.8.2.tar.gz) = 37f4836ff869aa3ce29a0b8ef7767dc430442a90
+SHA512 (linop-0.8.2.tar.gz) = aab10d4b6f7dd65de2f22765c3ff3ffffffdd5ec4945a4627ba78fa48c3f4cf0c09e44c0ea67a46ae7a9b05f6de5dec3a8a87105a34b12452ccf48a6ce120859
 Size (linop-0.8.2.tar.gz) = 17157 bytes

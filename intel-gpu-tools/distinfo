@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (intel-gpu-tools-1.12.tar.bz2) = ac705e8538771a215a1f20774b760828b89ffc66
 RMD160 (intel-gpu-tools-1.12.tar.bz2) = f06c01ab501b5e523a082d9dce040b86fd8a9bf0
+SHA512 (intel-gpu-tools-1.12.tar.bz2) = 0643ffcc5198ad3c03d7fb2323f95b1a23fabc529ab00b5165a2355fe7b7d4d5e81b76627bf19f41fb6111fc3c9a32e83010e09941aa78097c9e58dce5832c81
 Size (intel-gpu-tools-1.12.tar.bz2) = 1621343 bytes
 SHA1 (patch-benchmarks_gem__exec__tracer.c) = da03d66971943cea4ac470976a16716a16d2dd85
 SHA1 (patch-lib_igt__core.c) = 19e2600f84276fda2c109768d5d3eaa41e66a171

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:17:33 jihbed Exp $
 
 SHA1 (arxiver-0.0.3.tar.gz) = 023a63f8ee98db338c0c3016c9e38eb67e014457
 RMD160 (arxiver-0.0.3.tar.gz) = c30c2234228064328f6c0a89bafddb082b747c2e
+SHA512 (arxiver-0.0.3.tar.gz) = 18ce1e845fbcb985d02cf9d0a4475b70da8fd2ee5b8c7fa7b54c96969b97f4eabe11792fc7fbde537977f7ab59cb5311b55097486162e4d487863e3da4ae7c8f
 Size (arxiver-0.0.3.tar.gz) = 4923 bytes

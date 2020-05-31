@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2010/06/16 12:02:22 asau Exp $
 
 SHA1 (gretl-1.9.0.tar.bz2) = f17a7dcd11633a629367f3018e54c821e1cd66cc
 RMD160 (gretl-1.9.0.tar.bz2) = 91a086e875d5d1eeae6e70e15cf504578ee70924
+SHA512 (gretl-1.9.0.tar.bz2) = 453127ae82ca58e802c9eb9c9e6a41b84c8dd8620a35fba58189993a1b0477015fddbdbbab5be542681081430c980d79b199364405357638de789dd024d3e272
 Size (gretl-1.9.0.tar.bz2) = 7497022 bytes

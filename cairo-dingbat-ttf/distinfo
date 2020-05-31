@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/13 20:54:15 christtrekker Exp $
 
 SHA1 (CairoUnicode.tgz) = 7cb360feca63ac506633e1f4eb1ab70f8d96c45d
 RMD160 (CairoUnicode.tgz) = f441db3a5872a36f73f4a86bace2947474993610
+SHA512 (CairoUnicode.tgz) = 41aa7972063ee1cba00671d3bea896d9763837f06aa61d85ddbc2d177649a6d6d0c8a80d1abcbc5a2f43d5e23d211915b52ad81dc4ff198f77479b9e589ba048
 Size (CairoUnicode.tgz) = 173479 bytes

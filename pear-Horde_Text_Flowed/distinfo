@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/05/11 14:22:25 triaxx Exp $
 
 SHA1 (pear/Horde_Text_Flowed-1.0.1.tgz) = 681eb9ee0766b3328165a3492784a7890b196683
 RMD160 (pear/Horde_Text_Flowed-1.0.1.tgz) = 0b02bbf11a236a227a2cdaa4e78840031cd814f1
+SHA512 (pear/Horde_Text_Flowed-1.0.1.tgz) = a512fcd94cf131d1c4c4cc15339be1a2cdb40b0880e445fa27c7fa5b8ac35dd13e103fe8429ae55b4ef3458bb0858585bd38957489231588c3918013d64b3420
 Size (pear/Horde_Text_Flowed-1.0.1.tgz) = 14258 bytes

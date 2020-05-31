@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.6 2013/01/27 15:21:08 othyro Exp $
 
 SHA1 (bsdbuild-3.0.tar.gz) = cb76f5a5f83fd8503b910fb39a5057be4155b5e0
 RMD160 (bsdbuild-3.0.tar.gz) = a60991367273d69a62a126d039ef7822b18353d5
+SHA512 (bsdbuild-3.0.tar.gz) = e6635d8d37957ef7942fe5c1f837ae8668e5715f85c11925d9a7cf136b31bf11794b179822f7fac2bcf31990e70ef2d350b0acafac422d82aa7c95f1e4ead2d4
 Size (bsdbuild-3.0.tar.gz) = 218099 bytes
 SHA1 (patch-ManReader_Makefile) = 7a88556980da4d41d7e3701c9cbb8fa23dfab146
 SHA1 (patch-ab) = 7f666a834c355057a44ede2a8988d2ab0786701c

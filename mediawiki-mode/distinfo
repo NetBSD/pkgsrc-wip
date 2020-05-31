@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/07/20 08:35:53 phonohawk Exp $
 
 SHA1 (mediawiki.el) = 0d6ca70f38c5392733af890f1fde124cb50bf5eb
 RMD160 (mediawiki.el) = 703a9fb4d7c050c416a6bb0786424b66aeae1df6
+SHA512 (mediawiki.el) = 86f7ad135f8aa01ddedf511d4a0d9298675939cf04acd3bb572c25327c3788a9d0530f15ddcac130a9911687040f0f0d5b50718b18afb1d6c5c7869f1a42c25d
 Size (mediawiki.el) = 82567 bytes

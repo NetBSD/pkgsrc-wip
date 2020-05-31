@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2015/08/17 21:22:15 yhardy Exp $
 
 SHA1 (nuvie-0.5.tgz) = d4de34d0d9a01bfa1f5cd895d4e31b394dee19fc
 RMD160 (nuvie-0.5.tgz) = 3dec5d61888ff7c06eed1b1179f0dccfc32c3d69
+SHA512 (nuvie-0.5.tgz) = 3803c9c7abe059b12b5398563c1b8d4772eec2433b7e638294cb40b0b0e30d73ff2e8d882921bb662d89f95feb30d6c3d78429eb9e6be0c04ebebbabfdc1e09f
 Size (nuvie-0.5.tgz) = 1656332 bytes
 SHA1 (patch-Effect.cpp) = 3f40d8001378bf8ae2c3010f924019ee23e4cb2b
 SHA1 (patch-Look.cpp) = 1fe19b491c040096005c6e8e9786626993506f58

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/02/20 10:33:15 ddeus Exp $
 
 SHA1 (trivial-gray-streams-2008-11-02.tar.gz) = 308e71a557e33b2efb46b413c980468b8377c75b
 RMD160 (trivial-gray-streams-2008-11-02.tar.gz) = dd1ad7e8a4d96fc900c028e143ca873af0aaa9a7
+SHA512 (trivial-gray-streams-2008-11-02.tar.gz) = 81ca798988511237a5a4c9ae4e0b15253404c47e245cc644211ffc58015fd46fa1623fecf7f07ea5df7acf80fff24782410ef832f08fd55f71c57daad6ced787
 Size (trivial-gray-streams-2008-11-02.tar.gz) = 3522 bytes

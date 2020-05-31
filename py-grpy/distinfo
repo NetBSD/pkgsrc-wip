@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/09/16 18:48:07 jihbed Exp $
 
 SHA1 (GRPy0.2.tar.gz) = 06b205fcd4431ac2295d63efe327400701d31847
 RMD160 (GRPy0.2.tar.gz) = c3c95e9da4e0b057f61434d66f8d3b872878296d
+SHA512 (GRPy0.2.tar.gz) = 02d27ff1bc857d67d089b9a1418a550a0b6c9bd47d42b500633fb8fcc80af2ca76b7e66b16164a093b6b6777687af12af9ae23246ab334dfbd88a34e2d3abfde
 Size (GRPy0.2.tar.gz) = 16944 bytes

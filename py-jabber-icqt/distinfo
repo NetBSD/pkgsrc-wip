@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.15 2010/01/26 18:17:17 schnoebe Exp $
 
 SHA1 (pyicqt-0.8.1.5.tar.gz) = 47606a4f84f6237c391a1c07139f8715913ea2ea
 RMD160 (pyicqt-0.8.1.5.tar.gz) = 205583d07d938a6d2d5b5af58d1a04682fd8318e
+SHA512 (pyicqt-0.8.1.5.tar.gz) = 5b83adf86746c2af60bed2759c7d4e3a3839bea532e0882a6dc087aee5e0afa1320c6d2d2296a667ec45c5b36be879034f079fd30cef924e8db5f66a2f1d3fde
 Size (pyicqt-0.8.1.5.tar.gz) = 183865 bytes
 SHA1 (patch-aa) = 20380de4db720a39f8c0e3dc559637e77a7a5363
 SHA1 (patch-ab) = d4391599bbbd1c467947d4b2bd9f0aea34983ffb

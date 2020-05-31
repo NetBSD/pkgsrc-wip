@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 21:32:58 jihbed Exp $
 
 SHA1 (gsw-3.0.3.tar.gz) = 426a8ee8600790e4e48fa902d60b9d647c9c0754
 RMD160 (gsw-3.0.3.tar.gz) = 5f5acd114792df2f8ed2a710175489128d875ed2
+SHA512 (gsw-3.0.3.tar.gz) = 91642257e8a4e9ef3addb7a0306ee4b115427b1fa012eb6cd9e6d71abbae15e2323f5ece24813970abb2f97701d773a4786c510d2a06b4aae1a1326b7c46f0f2
 Size (gsw-3.0.3.tar.gz) = 2799184 bytes

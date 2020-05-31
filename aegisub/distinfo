@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/01/14 17:16:09 thomasklausner Exp $
 
 SHA1 (aegisub-3.2.2.tar.xz) = c98e6a34e0e5ae3ad15a4e9207924fba2d35c17f
 RMD160 (aegisub-3.2.2.tar.xz) = 20d165892ea32d720f09678757ed601e62ecbc08
+SHA512 (aegisub-3.2.2.tar.xz) = 54f825e52f238fef8d5cc31c37436e21355aee27883347f905271e5d2a8ff2a77e1b67d5aef38b0f8468bd0bad851fe944e02de27ec96310b902fbe5b1086722
 Size (aegisub-3.2.2.tar.xz) = 5252052 bytes
 SHA1 (patch-configure) = 38f1691c060092296ba7f9edca81f6d557cfd552

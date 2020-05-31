@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (STonX-0.6.7.6.tar.gz) = fb0705a98393c6334b3e57e76a8d10afb945a857
 RMD160 (STonX-0.6.7.6.tar.gz) = 18589c826bc383085c8a631e8ebc83f6650f6c2d
+SHA512 (STonX-0.6.7.6.tar.gz) = b56de510690991a9e46a737a3cc8926f9a69ae8b85ff4532dba38f72ee5ad067c5e9227921bad1df907a3b3d63dd625dcd46f4c93c89af225df7b024c2d60193
 Size (STonX-0.6.7.6.tar.gz) = 379738 bytes
 SHA1 (patch-aa) = 23d922a963a0a4007f6743780409e30e2cf975a8
 SHA1 (patch-ab) = 1ca8b052d8d257fc726753b8bb6c5eacba44318c

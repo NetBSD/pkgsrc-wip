@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.12 2014/10/05 11:12:29 heidnes Exp $
 
 SHA1 (v8-3.29.9.1.tar.bz2) = 7dbcc43f9c223aa68e9fb27800813807e18f3e46
 RMD160 (v8-3.29.9.1.tar.bz2) = 662887694a72d83f67f00b2040f25e24dc97bbf3
+SHA512 (v8-3.29.9.1.tar.bz2) = 1863e438725a83f5b158b43e0bfe276f02d1bbb5ce2db5305b2500a05ae902035d3eea42392a239e085dffd8467bef55365897ff3849754bed21772a74777cf0
 Size (v8-3.29.9.1.tar.bz2) = 53483510 bytes
 SHA1 (patch-Makefile) = 34f3e15418fdadaa14d8b8e0daaf248b3b4f61cc
 SHA1 (patch-Makefile.nacl) = 10487166db16c9c960ae092f4f916610b5b45c16

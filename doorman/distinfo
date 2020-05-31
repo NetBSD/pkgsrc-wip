@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2009/10/03 08:49:31 shindenmorr Exp $
 
 SHA1 (doorman-0.81.tgz) = 2458184e36a88aac21f6e9ddeef835cba86924b7
 RMD160 (doorman-0.81.tgz) = a28ba16513bbe27cbc58836eab2d0b33b5d17a6b
+SHA512 (doorman-0.81.tgz) = 8664047c782d338ace2851739802577d9e11fae06a4ec3cad7251a5b935f9003d26bed78067ba29d4c54f941ba4ebe1d19b780be72a75cbf0baf0764138cac2f
 Size (doorman-0.81.tgz) = 140643 bytes
 SHA1 (patch-aa) = eb55bdaa6feb53946ee4b0cc051fe4c6a6766e93
 SHA1 (patch-ab) = fcba25fb17afc69aecb4401c61298322f273abd7

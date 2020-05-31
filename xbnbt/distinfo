@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2007/04/16 19:07:18 loic-hoguin Exp $
 
 SHA1 (xbnbt-81b.3.5.zip) = 27a2caa39aaa32b04e99ee83da0db718f43c1f03
 RMD160 (xbnbt-81b.3.5.zip) = 7518223359fee79b4b4563ac05da44a06634c8f3
+SHA512 (xbnbt-81b.3.5.zip) = 9bf1fdbb631b89a7ad7e2e209cde66767c7b86df64a1209dd5eb9641a236f520ad70c8fe5c8506e3e470d50659d1aefc3ed900c8a900ec120324650c44e1e98c
 Size (xbnbt-81b.3.5.zip) = 6931978 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/06/22 13:04:27 jihbed Exp $
 
 SHA1 (datatree-0.1.8.tar.gz) = 0e12ed3d9b3949d1649953cc9fe33841cb66501c
 RMD160 (datatree-0.1.8.tar.gz) = 4b41875ad045c7f712fb6d664f1ee2edefa376f7
+SHA512 (datatree-0.1.8.tar.gz) = 869251ceb31d434d1be01e46e8ef5e71511b26f7e1f322bd67ca8be7432e26694a9616c25a8e36c41c700cfae3693ff96aa204506d894dea1abe254f94cb9285
 Size (datatree-0.1.8.tar.gz) = 12142 bytes

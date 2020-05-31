@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/10/28 17:30:05 jihbed Exp $
 
 SHA1 (HAWK.tar.gz) = bfa15ed8f0078141ee044572f8b2fdc5aa8d2f1e
 RMD160 (HAWK.tar.gz) = b4ada5c8adad7ff53831bb79de4e32072f07f6ca
+SHA512 (HAWK.tar.gz) = 62f3c33cfa00cf2fbc36b8fc98a75a2f8a60f23ea35d44898641b9f8db23ed711c7b38e641c4fabf206da3b7b6d9f48269ca308643e3098fec8ab58df1f615a8
 Size (HAWK.tar.gz) = 974614 bytes
 SHA1 (patch-makefile) = 4f9f44b3fff4584a1e11e79f2ec54cd4a210c3b6

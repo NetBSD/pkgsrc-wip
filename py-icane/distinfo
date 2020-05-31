@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 21:31:17 jihbed Exp $
 
 SHA1 (pyicane-0.1.2.tar.gz) = bcc8407f0a45090bc12cca4c7e24426fbb49c977
 RMD160 (pyicane-0.1.2.tar.gz) = 09c8fb413e4415acb431164232a0b3e9d65b1c88
+SHA512 (pyicane-0.1.2.tar.gz) = c6092858a0eb720a3f682d9b2475b3603f2c1a6977c2c480ae9d2b713d5138332b1995eaf36cd0330043f112107753c02dd154ceaf6683025685bd486aaf39bd
 Size (pyicane-0.1.2.tar.gz) = 183214 bytes

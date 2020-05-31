@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/31 23:01:56 jihbed Exp $
 
 SHA1 (bctpy-0.3.tar.gz) = dd6b5d731acb52c7369fe8c5d1b9a4a62ed2d35f
 RMD160 (bctpy-0.3.tar.gz) = 5360686f1786e1584543f1bcc1a6fce0ff139648
+SHA512 (bctpy-0.3.tar.gz) = fd97921e6a9cf0ea12b6cdf070d847302e25db52bc4e477e88ec7b05c920f3366c3699bc4646fe600b4e708833e7b0f8ca3ee5a0c4809eccec47b77c8fc6c2fc
 Size (bctpy-0.3.tar.gz) = 97161 bytes

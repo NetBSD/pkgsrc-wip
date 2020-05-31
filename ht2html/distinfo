@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (ht2html-2.0.tar.gz) = 1ce13ce9b7e958ed777fe0f8aa0a10b5034654ad
 RMD160 (ht2html-2.0.tar.gz) = 08a65023aad73895e73ae93435425c897e96071e
+SHA512 (ht2html-2.0.tar.gz) = d74934c96fe917f645bd23c9e0bc214841751fe3f79723cc9689e0b0a4b799e4d8a85dee190e3c8c64668bea933f7daaa6154df1174d02010af1b6e5beb9ed84
 Size (ht2html-2.0.tar.gz) = 31419 bytes

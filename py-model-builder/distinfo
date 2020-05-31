@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/23 11:00:51 jihbed Exp $
 
 SHA1 (Model-Builder-0.4.6.tar.gz) = 0e18938fb19e33aef02322d1aff8866344d6571b
 RMD160 (Model-Builder-0.4.6.tar.gz) = 53540ac6ed4db94585872d13f9c8c856087f08cb
+SHA512 (Model-Builder-0.4.6.tar.gz) = f7f57435c09ef429adb928b461f4e1e1e55e7465aa34e75d528e072a94268f544908ebd07f6201e99273df9db34ae69e60d59c4cd44148324bc923e3a381549e
 Size (Model-Builder-0.4.6.tar.gz) = 68647 bytes
 SHA1 (patch-aa) = fb48a9162fc53cc10ea2e008e6ec1a2aaa4fb69e

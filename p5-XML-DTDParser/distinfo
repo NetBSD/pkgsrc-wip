@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/12/10 09:21:04 netcap Exp $
 
 SHA1 (XML-DTDParser-2.01.tar.gz) = 253120630c77c0cb76e60001db0257daad09f2db
 RMD160 (XML-DTDParser-2.01.tar.gz) = f9bf2c9e9d54f46ec064f5f37359f889374e729d
+SHA512 (XML-DTDParser-2.01.tar.gz) = 43aa10a070fff0af875a3f85693e6e17a29ad97829eca1edcbba406c18503eeb452dbab58ba2bbea85d75187a1a90cec62d094b552c93bd8ec79523f0a7ef231
 Size (XML-DTDParser-2.01.tar.gz) = 6799 bytes

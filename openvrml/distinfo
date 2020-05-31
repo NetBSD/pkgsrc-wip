@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:32 rillig Exp $
 
 SHA1 (openvrml-0.14.3.tar.gz) = 2605342cbdcae058e0c5ae8bf931203dc226d422
 RMD160 (openvrml-0.14.3.tar.gz) = a6c38ba583679927bb9e8a2046227c05b144a72a
+SHA512 (openvrml-0.14.3.tar.gz) = dd5c4a17ed1ff4998bbd8d64890e32a460070b47a0a2f82e04bcdc5c6f5eab723ca7d7b53f2d52fa0f147be6684dad0282bb6e7187d8f266cf496e361484082b
 Size (openvrml-0.14.3.tar.gz) = 2996458 bytes

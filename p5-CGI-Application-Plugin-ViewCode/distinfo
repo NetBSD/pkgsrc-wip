@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/10 05:59:19 ficovh Exp $
 
 SHA1 (CGI-Application-Plugin-ViewCode-1.02.tar.gz) = 5b8097597431c3e089a9ff8a70281c62d3625273
 RMD160 (CGI-Application-Plugin-ViewCode-1.02.tar.gz) = 09b22a4b2124a5a9dfd4a0a5b1ccaf08e18596d9
+SHA512 (CGI-Application-Plugin-ViewCode-1.02.tar.gz) = 0394410586ae4933240c6fe9f36405627ae60ff21ef871431e8a60dc5e25cf5759318e35ebe479e24d1a23a5386a207631bca6fb3549304b1dd8725610a75002
 Size (CGI-Application-Plugin-ViewCode-1.02.tar.gz) = 6951 bytes

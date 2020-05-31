@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.5 2013/03/03 17:27:54 othyro Exp $
 
 SHA1 (pxlib-0.6.5.tar.gz) = 6eacbc663af3e219dc8bdde95faf9aa97384d5e2
 RMD160 (pxlib-0.6.5.tar.gz) = d112a78b01dd2a289e673cb0b58c4364580662f5
+SHA512 (pxlib-0.6.5.tar.gz) = 11b7010db6b63d6fbb9dd16f2b381f904517007dfdc84f569b7aef5ee33ae4c2ff1a9d6294e120858d2b906a421e112f0325f62acb2c2fc97d41c6b76d0826d6
 Size (pxlib-0.6.5.tar.gz) = 522092 bytes
 SHA1 (patch-aa) = 1918416a191653b390fc5ab3e50bf63e87494886

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/04/21 10:08:29 poppnk Exp $
 
 SHA1 (cryptcat-unix-1.2.1.tar) = c5cb80bdd599a410feb8f8a6bb78174a571ec9fc
 RMD160 (cryptcat-unix-1.2.1.tar) = 90c66c134deb7a3188bf27c1b0a42e8ef9bf2b27
+SHA512 (cryptcat-unix-1.2.1.tar) = 2de6521903e489bc6d4f242aaac7f35a3a7fb226e1812ef5f1c3554420fce4378427e94b3e90eca5476d1068f1a9b44d9c5dbd0362888ad893cf66be106deb17
 Size (cryptcat-unix-1.2.1.tar) = 190464 bytes

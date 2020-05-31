@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2011/12/19 22:34:08 gschwarz Exp $
 
 SHA1 (tftp-hpa-5.2.tar.bz2) = e7879f0bdab1fc6f226db6f6f848d58f50548de4
 RMD160 (tftp-hpa-5.2.tar.bz2) = dc3935af75f2919c55cac6c04b61488af425918c
+SHA512 (tftp-hpa-5.2.tar.bz2) = c51aec068e71702c0134cfcb0d0e3147d56775b32b4495bbe7e19af60c4fe53cadfce72cfb9be84f4be418302eaf98698ab973398f69cb099d2ef99083337c18
 Size (tftp-hpa-5.2.tar.bz2) = 93992 bytes
 SHA1 (patch-aa) = 746b24bad6c1d3a8b27e6f7b5c4c0613aabd44f3
 SHA1 (patch-ab) = eb33ae675ec98589a56fa83ce59790ad43f9e2e3

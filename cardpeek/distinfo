@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/04/11 18:59:30 gschwarz Exp $
 
 SHA1 (cardpeek-0.8.4.tar.gz) = 007b1992fd1c6ee1b3e39e06bef2fab986b93ae9
 RMD160 (cardpeek-0.8.4.tar.gz) = 0d1118586f85512d4483d6be027921ecc222c1f8
+SHA512 (cardpeek-0.8.4.tar.gz) = f6eebc7a17f270dd56529ee36815fee72b2f9d62b24d6cc90060f20c7604b9b99ab76858d9c04c60aaec838b02b8db76476a91ee22a4e10f01f852cd1f536efb
 Size (cardpeek-0.8.4.tar.gz) = 1520613 bytes

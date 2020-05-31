@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2012/01/18 08:58:58 dukzcry Exp $
 
 SHA1 (stumpwm-0.9.7.tgz) = bd7785f44f70c7c64775737bdb9f2d42ce9d8d9f
 RMD160 (stumpwm-0.9.7.tgz) = 7e0d521a12a0d0f28097d3756dd8ebcb01ce528b
+SHA512 (stumpwm-0.9.7.tgz) = 5c2ba6794bcb43f5988f1cd1a79daba28ea3b2ccbe5a13da64c904e99be439013653532540ccd06c0f0334239794cd53312f3873cc6a08f9e621f789be6bb260
 Size (stumpwm-0.9.7.tgz) = 497663 bytes
 SHA1 (patch-Makefile_in) = 07861b61f8677238ca52764a4b4861bb3b87aea4
 SHA1 (patch-configure_ac-temp) = 89f80222425b6209175895800f7a7bf50fb16f3f

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/09/20 00:00:37 jihbed Exp $
 
 SHA1 (gwyddion-2.20.tar.bz2) = 65cedd25bfc7cda86946c3c13cc74d09ae1a5457
 RMD160 (gwyddion-2.20.tar.bz2) = 5864a997c9141da99f6955467b2a783d984ecbe7
+SHA512 (gwyddion-2.20.tar.bz2) = b861d87b397c018b50454f70da45f96af669e7c94e56ba5789802052061abdaaa0ed9e46268f0a6d09f80ff0edfa40a7fdcdfce73ffacebeffd35a9c707d0549
 Size (gwyddion-2.20.tar.bz2) = 3279974 bytes

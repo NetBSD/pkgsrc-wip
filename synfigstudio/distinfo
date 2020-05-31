@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2011/03/23 04:37:07 phonohawk Exp $
 
 SHA1 (synfigstudio-0.62.02.tar.gz) = 2c4878fcd93aa4d226633ca5eee7003786a5acad
 RMD160 (synfigstudio-0.62.02.tar.gz) = b59e53a9ee6d6185dd2b4224a6af07da403341f7
+SHA512 (synfigstudio-0.62.02.tar.gz) = 19fbf9c0997b46e45a9284da0d058a7a5012fd28369671202b9852025a6e673cd81c1060641314cad5223a6fb821e047c703f093bd6990e9702997e2bf5498eb
 Size (synfigstudio-0.62.02.tar.gz) = 2890827 bytes
 SHA1 (patch-src_gui_app.cpp) = 0ea7bbb6afc77247d20d48146e6dd57876629c4d
 SHA1 (patch-src_gui_autorecover.cpp) = 0c6f0d5248233e806507aab9fbd8f0e254d10ae9

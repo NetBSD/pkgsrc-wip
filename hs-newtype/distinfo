@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/29 22:18:15 szptvlfn Exp $
 
 SHA1 (newtype-0.2.tar.gz) = 2c800ef28c45ab33f6289fa596e86a2acb6ebc46
 RMD160 (newtype-0.2.tar.gz) = 93e5bc3220fc12687d11f38b07ceda5d7c386350
+SHA512 (newtype-0.2.tar.gz) = 9f5115df618223b5acf81ef7d15dc95db5930b39863ee89e2613500bd5a5b4cf421510a4330bbe77d7c456b56f4e93072b53fe31aec2f4dbebd966b80f667958
 Size (newtype-0.2.tar.gz) = 3476 bytes

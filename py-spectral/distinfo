@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/20 22:38:26 jihbed Exp $
 
 SHA1 (spectral-0.6.tar.gz) = 5180af493a954c8cb30dfe979c359d36955383ea
 RMD160 (spectral-0.6.tar.gz) = 134fc04cda8868b7a25687430c7a2e71f5cd9b25
+SHA512 (spectral-0.6.tar.gz) = 3492869157ca115155e35aa893a03fcd6327758fa51056b320874b8dd3da116f6bec4b453bf3d8f007d6a1086e7048b3a790c864b4f71c937091b58bc5d24bd6
 Size (spectral-0.6.tar.gz) = 69486 bytes

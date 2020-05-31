@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/04/09 00:24:10 jgoamakf Exp $
 
 SHA1 (zed-1.2.tar.gz) = 3d3bac427f10dd6d93fa38d6672c92956f6d75ec
 RMD160 (zed-1.2.tar.gz) = 6e18a3c218af993ecfd3bdfea88d3ffc7a3ef285
+SHA512 (zed-1.2.tar.gz) = 59cbafa2d7bbf17b7757798446640c5365ca825fec0a1cda320f0fdd2db1158ff4bc99aef6400ae090cd81c80fe4d5b50803da86ee154f6025469dc390e7c1fc
 Size (zed-1.2.tar.gz) = 68672 bytes

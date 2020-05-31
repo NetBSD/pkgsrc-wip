@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/04/02 22:15:39 jihbed Exp $
 
 SHA1 (OneLOop-1.1.tgz) = 5f8df33678f8edf51d4b4b3eef2f3bc947ffb2d6
 RMD160 (OneLOop-1.1.tgz) = 9a76e43745fea546d1a43cb2ab977c8e9997bbe4
+SHA512 (OneLOop-1.1.tgz) = 49dba151f7c232c9a7fd3a8d2daf5e3029e30bcc50fc1ee26369ecee1616a19983ae38ac8996ec34086b847693de2c670ac8676af43b664e24ebf7143d5205ed
 Size (OneLOop-1.1.tgz) = 72732 bytes
 SHA1 (patch-aa) = 4d01969876b38806f660ce81290508a519edb5be

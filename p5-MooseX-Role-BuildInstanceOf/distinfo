@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/11/15 11:34:21 noud4 Exp $
 
 SHA1 (MooseX-Role-BuildInstanceOf-0.08.tar.gz) = a97f2241426f78a2e5e04fc03ebef256fd938dfa
 RMD160 (MooseX-Role-BuildInstanceOf-0.08.tar.gz) = bb2e2ead9e421e84aad4cc3a7bf6cd8259cae27b
+SHA512 (MooseX-Role-BuildInstanceOf-0.08.tar.gz) = 9a868fa3fd8a87631329703f5be20d7875dcc711c5f9fd6f6ea401923d53cb94797321413e6a1ddcd5995b05e84562ee1871efdb78fca2789c6ef88d8f0e6a6c
 Size (MooseX-Role-BuildInstanceOf-0.08.tar.gz) = 442985 bytes

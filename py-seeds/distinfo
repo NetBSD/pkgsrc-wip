@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/15 20:30:56 jihbed Exp $
 
 SHA1 (seeds-1.0.13.tar.gz) = 3f560bae59dfa882474b9581fba884d02fcd6b72
 RMD160 (seeds-1.0.13.tar.gz) = fb5acb28d1f46c93addbbf189aa65949f2adb889
+SHA512 (seeds-1.0.13.tar.gz) = adbaeffb04c8569133ddb1fcd2ae73c7a38f5255cf81731a58f089d766df2574f12649a4eaad2b1c1eded87ddb767db0699a1f11518732c1778286a5fce32a0c
 Size (seeds-1.0.13.tar.gz) = 48968 bytes

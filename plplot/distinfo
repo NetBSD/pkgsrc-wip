@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/02/27 14:34:42 emil_s Exp $
 
 SHA1 (plplot-5.9.2.tar.gz) = 271b7792e547f71ae7123b4bef10d92720fb7e5c
 RMD160 (plplot-5.9.2.tar.gz) = b134b99a40b320d2e03601191aefa8967701acf8
+SHA512 (plplot-5.9.2.tar.gz) = 0c9eee76a6210e2e5cc5242e15affa6a88329375d6e82ef956ff768a9803a691713c7288d376d48a5dcc7384e2410cbb858eb4a96e249e6710a6c0c6650d22ea
 Size (plplot-5.9.2.tar.gz) = 6666641 bytes

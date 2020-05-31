@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/01/14 08:49:59 phonohawk Exp $
 
 SHA1 (uconv-0.0.3.tar.gz) = d1caede850aed6188a2036c186ff0249237c2954
 RMD160 (uconv-0.0.3.tar.gz) = bebe9c63ca32324083fc02b3d8af1eeaa9bffec8
+SHA512 (uconv-0.0.3.tar.gz) = 914fd288eb9f41afe4a3ca68b6fcd1c58696e61e7146aeb973ff01720c30ea2cf321038eaf2544b68a99dc562d0998f84db624787927254ca9cf5a1624dd49f6
 Size (uconv-0.0.3.tar.gz) = 4347 bytes

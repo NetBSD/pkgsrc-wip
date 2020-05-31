@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/05/11 13:44:41 triaxx Exp $
 
 SHA1 (pear/Horde_Injector-1.0.1.tgz) = faeb5ad04e3c0b46311bf27880dc58f4e288aee3
 RMD160 (pear/Horde_Injector-1.0.1.tgz) = a4b9f4a00499cedd01187bf0f82bc48479317816
+SHA512 (pear/Horde_Injector-1.0.1.tgz) = fd357011d5b9d5de4c17797092be49059cb3e3fd2ef7dfaf2c54697ffaf1680b18c5a9f3c30e3c5b0bd56d5c97708b7349c4a6e8b711ac91e76aaca64a8d8309
 Size (pear/Horde_Injector-1.0.1.tgz) = 21477 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2015/03/04 13:41:51 nros Exp $
 
 SHA1 (gmetadom-0.2.6.tar.gz) = 04d162583193c5b8e5e1ea7a224c24e1a50f6b67
 RMD160 (gmetadom-0.2.6.tar.gz) = db56a122853b6b2881d54cb5396c70ea94760e18
+SHA512 (gmetadom-0.2.6.tar.gz) = 69521b8d667d832259687d34c8855ece51fbcbffe3b54a8d588cad402cb45e8e30259b0627dd0badc4aa7efcf39f8ceb3c62eb76916ca1104481f65ddc31c6bf
 Size (gmetadom-0.2.6.tar.gz) = 509165 bytes
 SHA1 (patch-src_gdome__cpp__smart_Makefile.in) = e8d940353c9873034faa4331a3240d602fcb8d36
 SHA1 (patch-src_gdome__cpp__smart_include_GdomeSmartDOMTraits.hh) = 05a41e3f920b9f01528fb9e9ee6311cba9c1e4aa

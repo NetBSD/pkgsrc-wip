@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/05/24 11:40:31 othyro Exp $
 
 SHA1 (cowpatty-4.3.tgz) = 8b7cb2015d0534031827f2f06135bf5cf5929d35
 RMD160 (cowpatty-4.3.tgz) = 3eff935f1532f84c60bfd576801be4d6911964d1
+SHA512 (cowpatty-4.3.tgz) = 221757c79f6bd31e51c19b4de3687f5ed22d44483591ab0cbfcfc37b91e76e9aa7bdd380fc89154350f420f812580d8fb92796b1e6ce4afe5d1171aa0bc28c9b
 Size (cowpatty-4.3.tgz) = 103720 bytes
 SHA1 (patch-Makefile) = 0aa406d52d1a4c9b134aa921acbae12e0d7f6c08
 SHA1 (patch-common.h) = 06f1aa83a1dfc1dd2e286a4eafb54e7978e95d65

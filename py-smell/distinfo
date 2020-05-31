@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/06 22:10:29 jihbed Exp $
 
 SHA1 (pysmell-0.7.3.zip) = 98e79e7bf2d528a69ae7cffdb3ba99822413814d
 RMD160 (pysmell-0.7.3.zip) = 23a2fc7511391e5a581f0d2d1920ceeb8525c34c
+SHA512 (pysmell-0.7.3.zip) = a60ce397b79f820013379566c8bebec70fb86c04248853931c405ec64f60e61750144386cfc6948dce005b48e22e159f0a1723c0bc3e80fdcd661e6805d6b813
 Size (pysmell-0.7.3.zip) = 48246 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/03/15 22:47:55 jihbed Exp $
 
 SHA1 (hieroglyph-0.6.5.tar.gz) = ca91206f22430c483c780149348063775fe0e8e3
 RMD160 (hieroglyph-0.6.5.tar.gz) = cbfef582621f6c3444cd82ff441ec4d0466fefdb
+SHA512 (hieroglyph-0.6.5.tar.gz) = 39bdc1b094e756b86ed62fbda3de26289f9f1a744a3dd6c44b4c43e1406f0c8b7b6ea0fc2a1587f06600962aa5150498247645e03775420b59c671203bcd417f
 Size (hieroglyph-0.6.5.tar.gz) = 785429 bytes

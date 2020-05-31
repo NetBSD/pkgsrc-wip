@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/02/27 15:32:10 thomasklausner Exp $
 
 SHA1 (gmpc-lyricsplugin-0.20.0.tar.gz) = f2599e4abf9d81f05cb2375387246f971ce873c8
 RMD160 (gmpc-lyricsplugin-0.20.0.tar.gz) = 2a711fc27edd1f4448c05598c34ef50779888f1d
+SHA512 (gmpc-lyricsplugin-0.20.0.tar.gz) = af3be2e23fd2bee5a0fecf498b93ab57bd0df35dbc31e4450cf7151cddb32acc43dfc1fbc710c461f24383403a88a558dd8eaa767723a98e5ff41e8432621223
 Size (gmpc-lyricsplugin-0.20.0.tar.gz) = 296752 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2012/05/02 08:21:29 noud4 Exp $
 
 SHA1 (mdbtools-0.6pre1.tar.gz) = 37a50d623a444ec690d2677b12b59c2f11e497c0
 RMD160 (mdbtools-0.6pre1.tar.gz) = e6a89d6984ba84aa9895ab0b6e6b68ac86881be3
+SHA512 (mdbtools-0.6pre1.tar.gz) = 57f252af3f6d7d046927338b6046ee5e28e4dca59851af30a7b21fe42cc1af4055edf313c2c9015592dff2b6dd956c7867f02a2204ceb53ca0ab23e3210f7aaf
 Size (mdbtools-0.6pre1.tar.gz) = 611756 bytes
 SHA1 (patch-aa) = 2c58c5626d6a7c9e47628d502346beb17d389b9a
 SHA1 (patch-ab) = 387cd1d68c3b1c51d4c1a3ba1a274eff1cf66eed

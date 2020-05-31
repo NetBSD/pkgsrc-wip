@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2012/10/14 17:55:00 asau Exp $
 
 SHA1 (ncbi-20120620/ncbi.tar.gz) = d0a931a9cdf7f390aea68eba579a2b407b1f12ba
 RMD160 (ncbi-20120620/ncbi.tar.gz) = b37a6eda9f370d02632c1497cd66a3ca64aa0a36
+SHA512 (ncbi-20120620/ncbi.tar.gz) = 4622bd61838d22122370e4ee29caee4404a8ee018ef14452fe4e1cccc0b45b70b3a3e8e46b494f25b45c92ebf10e763674fb676662bbbb51e2954c311f483904
 Size (ncbi-20120620/ncbi.tar.gz) = 68428744 bytes
 SHA1 (patch-aa) = 9c1e9f70efd2d8d809621dd7ae4a84acf7ac6a34

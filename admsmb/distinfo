@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2012/12/03 13:10:48 othyro Exp $
 
 SHA1 (ADMsmb_0.3.tar.gz) = 66e50105ace44643f45fb8f48b1ba5fe5d44e987
 RMD160 (ADMsmb_0.3.tar.gz) = 55fe365fab58e968eb96fa4d7ec49da4c6d4222a
+SHA512 (ADMsmb_0.3.tar.gz) = 64205428ffeee7980e2145142ef5c3d6c29f3922e234929ebb516a4bd38e7a8bcabe4d845d1aa42db64b08cde3d056fcdd2a474c32e10aab7e943af6dbc38cd2
 Size (ADMsmb_0.3.tar.gz) = 576182 bytes
 SHA1 (patch-ADMsmb.c) = 76a4bd251224824db58ac76126ca1d53393a6497
 SHA1 (patch-md4.c) = 2aef5a2d83f8fb307fe6245313acb6cf34b7e227

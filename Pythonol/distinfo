@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2005/09/28 06:41:06 rillig Exp $
 
 SHA1 (Pythonol-2.0_i586.tar.bz2) = 767a3a3a24a4e6657d461e8cb261038c171d63a6
 RMD160 (Pythonol-2.0_i586.tar.bz2) = 35e90b78a6817749c231fdcd39bbd93eb23a799c
+SHA512 (Pythonol-2.0_i586.tar.bz2) = d4f22601bce37291d3fc2df2ea21bc3537cacd1cf2d91f9a5a63597e7a1a24ef02930854c3cd2ab60049a3720f7761500625ea8e00f260136c11c012e9169716
 Size (Pythonol-2.0_i586.tar.bz2) = 1577205 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/02 22:15:13 jihbed Exp $
 
 SHA1 (semidbm-0.5.1.tar.gz) = 2e5b024a2d16035c36480c1f73b12e7f37c74c6d
 RMD160 (semidbm-0.5.1.tar.gz) = 3f16aec1ec80c9cfbba6bbd5baaa15df14895d37
+SHA512 (semidbm-0.5.1.tar.gz) = adb99fcc4e55a1f01e917b8f92ed7d19ec08e4002e18b61fea37f7e09effc1cb103fa1a44978122b364848cffddd67290c0114e150b9bc1f23fe9b816856a9a2
 Size (semidbm-0.5.1.tar.gz) = 11376 bytes

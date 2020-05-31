@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/11 10:08:47 jihbed Exp $
 
 SHA1 (sympow_1.019.orig.tar.gz) = 4dcec2d7e95bc2264d5517c5242a6c472c27a9cd
 RMD160 (sympow_1.019.orig.tar.gz) = f8eaa0da397d6474920caa3e459364ce0f1f33c1
+SHA512 (sympow_1.019.orig.tar.gz) = 42d7db988e8ea93555fcdb4b689d968e245c44bb06bb13455d30fa19dc4efbbaf0d75b5fc03bcc643059dfd1ae3bb6bca8468ebde99011229dc737cdc4173098
 Size (sympow_1.019.orig.tar.gz) = 52389 bytes

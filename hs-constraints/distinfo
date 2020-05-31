@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/29 22:21:37 szptvlfn Exp $
 
 SHA1 (constraints-0.3.4.2.tar.gz) = 71c397b9bfc19300944952e7d16104fe4040b9ec
 RMD160 (constraints-0.3.4.2.tar.gz) = 1ea204dcda5df1fe24dbf4f69d1df6c889ad8010
+SHA512 (constraints-0.3.4.2.tar.gz) = a2d6cd42dc870c5f6af6ea3ed4ebad03ca0fc06e61d4153bf1fb13914b94302653b2c1d84c0155f97fb80a06a1dffb12417654771b5ee92ba5822176a49d1880
 Size (constraints-0.3.4.2.tar.gz) = 4910 bytes

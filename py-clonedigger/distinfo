@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/07 15:28:14 jihbed Exp $
 
 SHA1 (clonedigger-1.1.0.tar.gz) = b14ac26f722af6356236c73a42eed58c662a7560
 RMD160 (clonedigger-1.1.0.tar.gz) = 564d062490f642731ccc663ac9d966089386539a
+SHA512 (clonedigger-1.1.0.tar.gz) = ef4d06b52512736b5151d99adddad93637ee082c9af8f4e5f4838d346897e12b42b73f24c6b6be87e03f61f96e6c2df3766ab5dc9f7bdf34563e6d9db169098f
 Size (clonedigger-1.1.0.tar.gz) = 2595412 bytes

@@ -2,4 +2,5 @@ $Id: distinfo,v 1.1 2015/04/28 14:37:16 bartoszkuzma Exp $
 
 SHA1 (pygeoip-0.3.2.tar.gz) = 608365dc820b54ac44d368e6e33766444e0a5098
 RMD160 (pygeoip-0.3.2.tar.gz) = 3d7dec098f3a2094d3fe8c4f6f32009d034829dd
+SHA512 (pygeoip-0.3.2.tar.gz) = 7d7a6d04b7b00c068ae4b78176bbe5467a54e4c688034c3024013c1c42a2a23264d04ba2d0c9bf023e31601dff1b392d64c41c2f0d835758c1b65da91710122e
 Size (pygeoip-0.3.2.tar.gz) = 25036 bytes

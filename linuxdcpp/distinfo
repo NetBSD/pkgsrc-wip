@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.13 2009/09/20 07:53:20 tnn2 Exp $
 
 SHA1 (linuxdcpp-1.0.3.tar.bz2) = 383a55bbc2169280e982571aac92555a25dc05e4
 RMD160 (linuxdcpp-1.0.3.tar.bz2) = b44fe8fb540150786458aa85fbf4631bd9de16cd
+SHA512 (linuxdcpp-1.0.3.tar.bz2) = c0eb38b89b6a47a4a29ade90b3813e302b8c4dd8bea39770fce4e232ff17035ba355b36feb6b69195ba7c8448a69943ee61722e335ad514f426238fb8a089e79
 Size (linuxdcpp-1.0.3.tar.bz2) = 289891 bytes
 SHA1 (patch-aa) = af758d8f65caae32b289df683e39c032d986e818

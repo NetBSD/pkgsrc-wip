@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/12 05:36:32 makoto Exp $
 
 SHA1 (anthy-dic-jis34-0.2.tar.gz) = 4cedf6c03ec5fab7ca0e0a94e276b1fb0e82dd00
 RMD160 (anthy-dic-jis34-0.2.tar.gz) = 253470acbe169cdd8f3d3beab7f170453b729ff4
+SHA512 (anthy-dic-jis34-0.2.tar.gz) = 4d8f9bc31166c404c6b849048e444729cd0e795d36b6fcb40947175560ee8ea8ffd8d27fae8600fa417203a6e45e1c766d835062a805f2a405febfca7a982fc0
 Size (anthy-dic-jis34-0.2.tar.gz) = 94713 bytes

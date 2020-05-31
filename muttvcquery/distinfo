@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/08/05 21:08:27 poppnk Exp $
 
 SHA1 (mutt_vc_query-002.tar.gz) = 94f49d8c6893b9d76eea501833f1ccea77a83d8e
 RMD160 (mutt_vc_query-002.tar.gz) = 0bb11151d9fafb0bfd26c22d0fd53a20be9faec8
+SHA512 (mutt_vc_query-002.tar.gz) = 35765b658ccaff2cf0ec9d90e561507356f1aee8299833950f4f26af301a73a926e753989e31259e017ca1a220714d891dc333bd4f24639d54ffd5c6d345d7b1
 Size (mutt_vc_query-002.tar.gz) = 77427 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/29 02:59:47 othyro Exp $
 
 SHA1 (iwidgets-4.0.1.zip) = e121c88f476309f08f225023b85839ea92f58acd
 RMD160 (iwidgets-4.0.1.zip) = c09726d9ead66086b429d424f946e794d46b6f89
+SHA512 (iwidgets-4.0.1.zip) = 8abe29bfaab59d6286259ec3119ac789251686b5cddeb97efcb9bdb57e2350df6f78d215f8191ea74d3f03036f201d7ea9fc29514b28f13b43a72c4bfe40d719
 Size (iwidgets-4.0.1.zip) = 530925 bytes

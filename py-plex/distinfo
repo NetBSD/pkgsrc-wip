@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/02 21:35:03 jihbed Exp $
 
 SHA1 (plex-2.0.0dev.tar.gz) = e80d1220bb5991f42272c8abbb47af13b3293be1
 RMD160 (plex-2.0.0dev.tar.gz) = 0fefce89fe68bcdf87090e597b73526caa53d316
+SHA512 (plex-2.0.0dev.tar.gz) = 30fe836b22b4e90c2acd0ef8de31ebaa739d46093d7470b0b628cb365a372ee50114bd2703e2902dd29560a7e7d40ef55883b5545073272374f7d23a70c15a2c
 Size (plex-2.0.0dev.tar.gz) = 20712 bytes

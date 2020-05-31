@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (twilio-4.5.0.tar.gz) = a93e58a18bd7c435551fc5b8fefe0797bd0ff37c
 RMD160 (twilio-4.5.0.tar.gz) = ec4b01141a09a0c5f12a6935b9ca2a9bb06d7813
+SHA512 (twilio-4.5.0.tar.gz) = 4ae67767df36946ef20f8051c5849deace05b091ae5fd7c095b216deb84c524f601bf60472dad920929ab04e96b746ce163e0f107245a204fe4d86e0cb4e29a4
 Size (twilio-4.5.0.tar.gz) = 183634 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2012/12/15 13:35:23 cheusov Exp $
 
 SHA1 (Pike-v7.8.700.tar.gz) = 877bd50d2bb202aa485d1f7c62398922d60696c7
 RMD160 (Pike-v7.8.700.tar.gz) = 241c6d531ac74a64322ef57bdd7dee306be1e8c3
+SHA512 (Pike-v7.8.700.tar.gz) = 55ac63bd647c8f30bc28f3bc20edc5c24470e4c8d64158dee2cedcbbdc592ccba0801a38eac99e1037fe51195a4615f3efe0bcc0054a54a2aaab912825f453f1
 Size (Pike-v7.8.700.tar.gz) = 14874033 bytes
 SHA1 (patch-Makefile.in) = 159f01fe17c42a638e448a0fb7505cc3ce8397a8
 SHA1 (patch-aa) = 5b8c18680e5c01f85eed945a5b4f7834af8b1790

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/10/16 12:07:34 jihbed Exp $
 
 SHA1 (qmath-0.3.0.tar.gz) = c9f26c706015e86515995cd1267cb48c76bcc55c
 RMD160 (qmath-0.3.0.tar.gz) = 5592717518a8bed76d01f066e28b924f7f745ab8
+SHA512 (qmath-0.3.0.tar.gz) = 504cd8f319205a113bda0b93b049fa66f1e715a9e3350b5f22eac8566eca2b6ebac72cb5187b077cd4e0c786fd159402d6b86176910e4853f94d81a7c5d08301
 Size (qmath-0.3.0.tar.gz) = 155270 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2007/01/07 01:58:19 shattered Exp $
 
 SHA1 (emboss/mse-1.0.0-20041107/MSE-1.0.0.tar.gz) = bcd7ec95314d354cf95eda5e147899b46ee5da3d
 RMD160 (emboss/mse-1.0.0-20041107/MSE-1.0.0.tar.gz) = a22ef98dcc5ee0ab818293915076559de35eb1b4
+SHA512 (emboss/mse-1.0.0-20041107/MSE-1.0.0.tar.gz) = a6908cf223307e0e3b7cdc5e91fee8241bbbd463444557d137367e3e34d2be784c9dddd46102a008bc05758fea458437f5659616077e33b7b4b83c9a7fe4afc8
 Size (emboss/mse-1.0.0-20041107/MSE-1.0.0.tar.gz) = 407726 bytes
 SHA1 (patch-aa) = 0408aadfa10c505cbdf93d8022da1550d9073b52
 SHA1 (patch-ab) = 0ed3942c71f223f31008244b4bb9a76af2607be8

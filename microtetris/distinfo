@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/13 18:31:11 jihbed Exp $
 
 SHA1 (microtetris.py) = 9de65954b198e30e4d1a594055126a41477d8e35
 RMD160 (microtetris.py) = e92e8dece56d3c652a5c36ed8c4e213f66a2615a
+SHA512 (microtetris.py) = 83f40e26fbb028434bb3ed8e94ada2267447a32b7a73624daf06e56524495052bda0b865fe7265c1a231c90fa5c36e132202716ac522871f9d1ef52e99fb741b
 Size (microtetris.py) = 13274 bytes

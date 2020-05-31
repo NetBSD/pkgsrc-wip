@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/28 10:49:28 jihbed Exp $
 
 SHA1 (ta-lib-0.4.0-src.tar.gz) = b326b91e79ca1e569e95aad91e87a38640dd5f1b
 RMD160 (ta-lib-0.4.0-src.tar.gz) = 9da16be4b8c856ff59c7b0fcbc3fdae412a9dfb3
+SHA512 (ta-lib-0.4.0-src.tar.gz) = d7ae2acd830cd23b58bded8a90759edfabc73923fbed3cc09501c121cc937caf728c29678f456c2dc7e72fabb52166bccc19ab51ab1131c7d8d35c201c94ed4c
 Size (ta-lib-0.4.0-src.tar.gz) = 1330299 bytes

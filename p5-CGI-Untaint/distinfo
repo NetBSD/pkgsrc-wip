@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/02/27 03:18:02 ficovh Exp $
 
 SHA1 (CGI-Untaint-1.26.tar.gz) = 730353532a8745a359bec8d347b4cdd35ef6b73b
 RMD160 (CGI-Untaint-1.26.tar.gz) = 36d51f19d617f1a0bcee82fcd22f91ee112959f8
+SHA512 (CGI-Untaint-1.26.tar.gz) = 9a0381c99239e406d7704f6d107071a44f4eadb85b276a98c29bb4e1baa65c60e33d05dc1fdcf06be152a5c45b81e014aa95fd137ee90de816024e8292a77914
 Size (CGI-Untaint-1.26.tar.gz) = 8875 bytes

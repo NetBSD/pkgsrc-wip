@@ -2,7 +2,9 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
 
 SHA1 (glibc-2.3.2.tar.gz) = 7251e2bc6e418090e48a4a348ed5b366a41992a0
 RMD160 (glibc-2.3.2.tar.gz) = 83881ed3a828419f120295b48bfc374c92ca1eda
+SHA512 (glibc-2.3.2.tar.gz) = d491cd8ca4fc7a20f0f6bef2802f08eece54a0b9113119d08caf156e27676aa11f6d76331c1a59125bedde5b261d783977c4d1130699d5fc76c9d206cd6950b7
 Size (glibc-2.3.2.tar.gz) = 18115189 bytes
 SHA1 (glibc-linuxthreads-2.3.2.tar.gz) = 54b880552f86e0625c84faec82e71045fae1cfd4
 RMD160 (glibc-linuxthreads-2.3.2.tar.gz) = 50cd6a06f22912f9a1586ee900bb1258a774edf7
+SHA512 (glibc-linuxthreads-2.3.2.tar.gz) = c8d66e29a0cc3bb5338182474c9a4f9bd2d7ee8c107aaf2dc3e4c19e682cb5fb7e5b59936ed06c88c9777254a21a78d62c46fd9894607913ce584ca0abda6f74
 Size (glibc-linuxthreads-2.3.2.tar.gz) = 285547 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2015/04/10 12:26:52 krytarowski Exp $
 
 SHA1 (system-tools-backends-2.10.2.tar.gz) = a4a00b701a936514eb96fd10096a7c1a3e50bd57
 RMD160 (system-tools-backends-2.10.2.tar.gz) = 18eddfccf03ad11665aec7a5783d1e9982eb86f1
+SHA512 (system-tools-backends-2.10.2.tar.gz) = e5589ea302544397afc2a7a4e2295923fe43fc1b1c5cf49b2ae7db988df240185025226ae5f9d73db84e80e3996f5d778e16b063d8e79001516502ddac2a9d8c
 Size (system-tools-backends-2.10.2.tar.gz) = 588232 bytes
 SHA1 (patch-aa) = f523c20200fcce9655056bb0a2a9ccbef3497dff
 SHA1 (patch-ab) = 610dbd0608d93b74d02442b2ad081e5c78c326c1

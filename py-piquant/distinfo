@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/07 11:07:27 jihbed Exp $
 
 SHA1 (piquant-0.1.zip) = 562b0d4bbcd00afca3159d753cd1ea70a163bd8a
 RMD160 (piquant-0.1.zip) = f8e136a0e9d40ee388bdfdfbed3a1e8ae7c8dc68
+SHA512 (piquant-0.1.zip) = e186637538abc6ad072969fecd7335f53cfe19accf2c5e1095291caf609be67c597011234c2beea068d173377b0d0378541bb395d8055d7225f91ed6c0e32670
 Size (piquant-0.1.zip) = 32592 bytes

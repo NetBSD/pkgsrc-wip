@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/20 10:58:13 jihbed Exp $
 
 SHA1 (hdf5storage-0.1.1.zip) = 369fe476b61c106103475f6236eed2e1675b3c72
 RMD160 (hdf5storage-0.1.1.zip) = cf19416678c25e5a20eaa8e86894cb7ae647ccc9
+SHA512 (hdf5storage-0.1.1.zip) = 009dd713faa5b5beba819e5f7e94f592a0adbdaad88c96376552c81cf7807ef9f4b3bbc8baa33952aeb52c03b1fc3b5d10bde943d6ef9738f7e13375203c449e
 Size (hdf5storage-0.1.1.zip) = 87042 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (svgalib-1.4.3.tar.gz) = b89ddf5fd948dd5b9e801e5cc58401e190de4c50
 RMD160 (svgalib-1.4.3.tar.gz) = 611269f70ed378b6460f5e34f8c35d89646e92c5
+SHA512 (svgalib-1.4.3.tar.gz) = 05d0b2d860a3c0be0a5d10778665fe9f980a2f7304dcf2339f8ff2ca625072b190694ebd7ac9ed688fc6695f04541f663bb2c603c89064a0e7ad59c262d9efe8
 Size (svgalib-1.4.3.tar.gz) = 840282 bytes
 SHA1 (patch-aa) = 13314ed7507cd4fe06dc94124eebe797e18b5c52
 SHA1 (patch-ab) = c5e61ae5378e5d110ecc6c44897d1c42e73c75b8

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/22 08:21:39 jihbed Exp $
 
 SHA1 (scikits.vectorplot-0.1.1.tar.gz) = 09bbbaff799f5561abc65cb5a4d2879de0dfdbb9
 RMD160 (scikits.vectorplot-0.1.1.tar.gz) = b3a9c63b09711c4e8225818e330d85cc948a1d2f
+SHA512 (scikits.vectorplot-0.1.1.tar.gz) = 5feaf244131ccd637ae43ca1840c17b6f1b6da8779325db4c0f858015e2ca8d4dbbe550d8ef69bc2358a3722d6ae075579fd753413c9aa3c3f711af6cbebf771
 Size (scikits.vectorplot-0.1.1.tar.gz) = 26974 bytes

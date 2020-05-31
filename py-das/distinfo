@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/07 17:04:23 jihbed Exp $
 
 SHA1 (pydas-0.2.32.tar.gz) = 49d32e4aa0d6527cb3cc487e69cbe8aa4f96da09
 RMD160 (pydas-0.2.32.tar.gz) = 49bb8e8625afb88be0bde2a5aec1fc5a797d30b5
+SHA512 (pydas-0.2.32.tar.gz) = b7939f793e651f3b12542a22c11921c833dd23573455be5a2d7e7390c7c3964f0386e2e217de36037a345a8648ec086df6b5b0eddf490f84cd8d2bbda1544628
 Size (pydas-0.2.32.tar.gz) = 18922 bytes

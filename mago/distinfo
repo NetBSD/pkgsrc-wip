@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/26 16:11:17 jihbed Exp $
 
 SHA1 (mago-0.2.tar.gz) = c905e5fb8d5074b70541c060a8a8c5edde00fc61
 RMD160 (mago-0.2.tar.gz) = d78f774332a1eb56d6b34b4a70f7dcc0eb6c9e3c
+SHA512 (mago-0.2.tar.gz) = 18c6ed3136bf2abc5b5e2444051d193d35c4d06ad3efe8f78ca9d85622c7705ce165f0d011a097ba9e75f020ed14ed39c5093efe6a9c27fb780d732100b65896
 Size (mago-0.2.tar.gz) = 92113 bytes

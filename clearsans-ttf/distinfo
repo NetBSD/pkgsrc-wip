@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/02 10:10:26 nros Exp $
 
 SHA1 (clearsans-1.00.zip) = 092c5d8e19621d78cb7e14a7eac02c29415d3e0c
 RMD160 (clearsans-1.00.zip) = 4f9d22b41d446ab7763e09d915205120ce8fc6a3
+SHA512 (clearsans-1.00.zip) = 83faebae8b1041ab16bb3c6586574374f70ad1da406ad5d20f07f14b65e00e8645c5393471cea0194b14f2c2d926d6de814f745299062a4dccef2581e6de332d
 Size (clearsans-1.00.zip) = 3972903 bytes

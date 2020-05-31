@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/30 13:02:43 noud4 Exp $
 
 SHA1 (festvox_nitech_us_awb_arctic_hts-2.0.1.tar.bz2) = 2fcdd0935c8e22a2e9f93f74b3a6231d6ac693d7
 RMD160 (festvox_nitech_us_awb_arctic_hts-2.0.1.tar.bz2) = 781238c971f4680d12fcbdf29732297eef3576cd
+SHA512 (festvox_nitech_us_awb_arctic_hts-2.0.1.tar.bz2) = b6d9bab429f62f5b0d479ec784fbb4cf19574ba9c92517fe2d08c9a15cf75a4f8c7866759c6892e6cee54d40fe7548d6bf9b32cf2d7fa83bb2489714bff64c81
 Size (festvox_nitech_us_awb_arctic_hts-2.0.1.tar.bz2) = 1565433 bytes

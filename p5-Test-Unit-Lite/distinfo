@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/05/15 03:30:11 jgoamakf Exp $
 
 SHA1 (Test-Unit-Lite-0.1202.tar.gz) = f1eee9468bce0bc660f38bbb6f7add71e6f0ef18
 RMD160 (Test-Unit-Lite-0.1202.tar.gz) = 332b7c95cd2035c4bb439ba93249cf1dbef80409
+SHA512 (Test-Unit-Lite-0.1202.tar.gz) = 4a02b5761df60f01b3f4dce2d31f287eee7725e1c3a2d22fca2e3c333dc9cb14b34ae7badc09acff53a37bdb11a791b7914ca42876647204535324ed001c13b5
 Size (Test-Unit-Lite-0.1202.tar.gz) = 36199 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/02/26 14:15:24 phonohawk Exp $
 
 SHA1 (largeword-1.0.4.tar.gz) = 0e816d2da3a2cab0d86d6514ec57174c7a1ff01c
 RMD160 (largeword-1.0.4.tar.gz) = 1724af51dd55edd35239865b04938ce3150932db
+SHA512 (largeword-1.0.4.tar.gz) = a7787ad55349b51ee11f76d75d0137d496452401b07aec60b045bc14146c2758c0c6a44d49299e6812cc42f51df67fc060eb90c72872258ed3e77213b1e9c5a9
 Size (largeword-1.0.4.tar.gz) = 3023 bytes

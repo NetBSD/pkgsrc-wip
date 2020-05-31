@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/12/04 23:08:21 shattered Exp $
 
 SHA1 (orange-0.3.tar.gz) = 9352b36619560d01f1d246fe64c16ce543d9b2d1
 RMD160 (orange-0.3.tar.gz) = 758cfa031b4bdb189dd14be5403f9b30d33bc4a3
+SHA512 (orange-0.3.tar.gz) = 606a96aef0d21e03ecb439fc145b2372d0819e53b51a1c6e65ffdd7f683f6e9a3b3f32a5f9114f411d57958f53f50e7a37b205553710f6f75e9f2a3032da8a89
 Size (orange-0.3.tar.gz) = 336931 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (gtk-theme-switch-1.0.1.tar.gz) = 5be8b703c494d65cdc88339df92c267c77c35009
 RMD160 (gtk-theme-switch-1.0.1.tar.gz) = f602a5d390ba58fd7239ca91d068ad274359d882
+SHA512 (gtk-theme-switch-1.0.1.tar.gz) = 995bf111137b02807b50338b99f28837bdf2a419d6f93b22e10e544adc7b96d65a6c54940d5de91f0c9e0104ee479559e3b1ce929c90f1ee8f4df7c8d6e2ea6d
 Size (gtk-theme-switch-1.0.1.tar.gz) = 12886 bytes

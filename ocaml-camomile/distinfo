@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2014/04/06 17:32:40 jgoamakf Exp $
 
 SHA1 (camomile-0.8.4.tar.bz2) = 20fc38316e19bcca2401f799afb84e05a3553e3c
 RMD160 (camomile-0.8.4.tar.bz2) = a3c1cba2d4e8d2597bf420ae64e93128e9c85d70
+SHA512 (camomile-0.8.4.tar.bz2) = f8d9b5288636eb3123b539a2c09bcd2f674acf10b16b83abea5d9e7f7f34a7359e36572f4ab3bc1ebeb42562e30f4fa9a1986e50060175186c0c2739e64130d1
 Size (camomile-0.8.4.tar.bz2) = 2649800 bytes
 SHA1 (patch-Makefile.in) = dca64a3c40ce15a8d635bab8d14677cefd620eac
 SHA1 (patch-configure) = d5cb5dc69f977d3c7a03a2bf068ec5e598367a94

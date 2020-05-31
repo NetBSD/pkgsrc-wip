@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/30 13:16:15 noud4 Exp $
 
 SHA1 (festvox_cstr_pl_em_diphone.tar.gz) = 083c83cc321793aedc5e511ffbfe4a978a1effda
 RMD160 (festvox_cstr_pl_em_diphone.tar.gz) = 6e81c21e7cd9208dafa712cdb3268be74458215f
+SHA512 (festvox_cstr_pl_em_diphone.tar.gz) = bd47acc33f43a8697beeb79965fe8acbbf17e6ecb9f026bcca423a77dbf43ed0ac3f895e7c8fe6f306b45a56779931e8547befc879862e472dc090345625527b
 Size (festvox_cstr_pl_em_diphone.tar.gz) = 3134354 bytes

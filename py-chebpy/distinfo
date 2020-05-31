@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/11/09 18:13:07 jihbed Exp $
 
 SHA1 (chebpy-0.2.tar.gz) = cdddf80976b24914606cd05b1ea19badf2586f90
 RMD160 (chebpy-0.2.tar.gz) = e633d91741137373f9ce9ca42c603b41a3120bb4
+SHA512 (chebpy-0.2.tar.gz) = 005a34ebe7ab3116f22a2c041f0d0e366f657137709109a2fbb7115944abb85d0ca815215df8d6aa5a76f6d6c86de1903ff06bee0fcb6bf45804b838f54cc6a8
 Size (chebpy-0.2.tar.gz) = 13572 bytes

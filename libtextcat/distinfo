@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2011/02/17 13:19:17 ftigeot Exp $
 
 SHA1 (libtextcat-2.2.tar.gz) = e98d7149d6a20fdbb58cc0b79cb5e3f95ae304e4
 RMD160 (libtextcat-2.2.tar.gz) = 2058bab6642460fdaee13993dd05da29aa516efa
+SHA512 (libtextcat-2.2.tar.gz) = ccfadb4cec68faa5a97e2d37c341ef2c343dadfc7372eba2768cd08462aa6dd9116a0891ad85ca515d13d7a54b98359891845a4a445417b820266571adaaab6b
 Size (libtextcat-2.2.tar.gz) = 540999 bytes
 SHA1 (patch-src_Makefile.in) = d7e39583302bb0a0a6e3045b2b81291ce5a56f6f
 SHA1 (patch-src_common.c) = 5c345fef52cfb24f0f1bcf9593afd37a0db5f839

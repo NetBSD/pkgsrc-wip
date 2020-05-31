@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/10/25 13:15:23 absd Exp $
 
 SHA1 (png2ico-src-2002-12-08.tar.gz) = 955004bee9a20f12b225aa01895762cbbafaeb28
 RMD160 (png2ico-src-2002-12-08.tar.gz) = d71f49992f152df580e0c264f723a2a4c20fac2c
+SHA512 (png2ico-src-2002-12-08.tar.gz) = f9410d2d15a14b5350cab7bf93f91b80f9e1d0b6a1fdae8b8850d11f29c9f4000bc8c3778fe24acec75f1f182d5ea383cff38e22b8ac5da6432c0a7a2d0e3208
 Size (png2ico-src-2002-12-08.tar.gz) = 26527 bytes
 SHA1 (patch-aa) = 88b2b3efbc0be7b5ae2dbd3652a351d548b657dd

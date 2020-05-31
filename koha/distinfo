@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/11/25 04:46:08 philnelson Exp $
 
 SHA1 (koha-2.2.9.tar.gz) = e3e0a9207f2fe1a4879df31d38b3bc5279c1306c
 RMD160 (koha-2.2.9.tar.gz) = 6df392cde6a183a778dde1f37f42df7dbf12286b
+SHA512 (koha-2.2.9.tar.gz) = 9140d7992d0885ddf5dc55c3f76b3e32d841158cc8f4e562ce152bfca3ed5a146940d4ae5a06fdbf61a56777603daf90d5a7ce85c0fc5c740e4bea7ba48afb3f
 Size (koha-2.2.9.tar.gz) = 8185551 bytes

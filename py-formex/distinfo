@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:40:35 jihbed Exp $
 
 SHA1 (pyformex-0.8.5.tar.gz) = 2736fbca6d75db7ee0583aac525c4a6bd9c3bf17
 RMD160 (pyformex-0.8.5.tar.gz) = 5fc3b3d469b732153899debd93e1640b2cd53a2e
+SHA512 (pyformex-0.8.5.tar.gz) = dcba4128e339cbeddf197b57a3a6ce659776ac8083216151452556c2402742a9735ff4734759f97fdef4cbbcc84245d9d590af4d22829e78ef69ff29acd5dd52
 Size (pyformex-0.8.5.tar.gz) = 2503591 bytes
 SHA1 (patch-configure_py) = e68d49a85393b632c0b078ea0fec3b880a3c4d55

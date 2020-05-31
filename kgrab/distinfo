@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2010/04/10 03:44:14 mwdavies Exp $
 
 SHA1 (kgrab-0.1.1-kde4.4.0.tar.bz2) = b6fe4ea26ab07e4f269f2024f65affbd3ab0cfe9
 RMD160 (kgrab-0.1.1-kde4.4.0.tar.bz2) = ae94ba5a456503f0f3b488e9d450fd33dc73ce74
+SHA512 (kgrab-0.1.1-kde4.4.0.tar.bz2) = e7e11e023c2407c50062f9bf47179cb4b64b6aa827547cc61bd44adc4b0fa920e5c7ecc5fdf037846c77eb605d500d5139f5114ab57960229fe59eeb99d81ecf
 Size (kgrab-0.1.1-kde4.4.0.tar.bz2) = 99258 bytes

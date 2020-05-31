@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2008/02/25 18:52:23 tnn2 Exp $
 
 SHA1 (dxmake-2.12.tar.gz) = 8bc5affbf517ef4ed5b8b4cf19394a5bdee28359
 RMD160 (dxmake-2.12.tar.gz) = 6511d4e83e89c5510fdefb7c2b2f29d935a7aae4
+SHA512 (dxmake-2.12.tar.gz) = a14ca18d3a5602c14d6ab4a7ce6a89696853aab8f06807838f415dd7608e82eb950eee9ff25e27852769274beaa3ca71a83e45f1f90b6050045a1e0cdd76c240
 Size (dxmake-2.12.tar.gz) = 19104 bytes
 SHA1 (patch-aa) = 75383e0dc738cbe2d2a3b4cc5b9b172e2b4fcdc3

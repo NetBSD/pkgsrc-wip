@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2012/12/03 20:51:43 thomasklausner Exp $
 
 SHA1 (rygel-0.16.3.tar.xz) = b1b8b256cf8f9738e9342668b0d66a00d8f2e533
 RMD160 (rygel-0.16.3.tar.xz) = 69b5a6e68088875c0399d93cb413ae762f3b9422
+SHA512 (rygel-0.16.3.tar.xz) = d3b3bec34d7026496c7743d31eb287524ed0df22210e1531d76b3461c92b5f8b62299ce6bce720bcc0f14d15147d5d1db56a5f5f657dcde11fcdf2217a29a18b
 Size (rygel-0.16.3.tar.xz) = 1838868 bytes
 SHA1 (patch-configure) = c418fecb4c640cd58a5a3d4025404f41243e0ccc
 SHA1 (patch-po_LINGUAS) = aa9b5621563b005874453f906d28ed3dc370b749

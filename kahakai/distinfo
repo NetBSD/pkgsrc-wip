@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:24 rillig Exp $
 
 SHA1 (kahakai-0.6.2.tar.bz2) = 794c2c5759a34fb83d6d3b24abb081ffb33debdd
 RMD160 (kahakai-0.6.2.tar.bz2) = f2a876f87b8fdf6454afacb790a8c8f57f8f52fa
+SHA512 (kahakai-0.6.2.tar.bz2) = 8a7928e29124c6cd30b7f913eed24ea6eae55bd794ab9d82db79895b6c18994a232b23a0bca908cfb1f75591bb34eef3ffe0238c393bc11e070dc63e99fc3615
 Size (kahakai-0.6.2.tar.bz2) = 697492 bytes

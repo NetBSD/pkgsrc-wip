@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/12/25 12:46:14 yeled Exp $
 
 SHA1 (URI-Find-Rule-0.8.tar.gz) = 236a6b0507237d2d3eeeab13cf0a6252991b6420
 RMD160 (URI-Find-Rule-0.8.tar.gz) = 19ac6252a6b4a77a34ffe67103e5b9001825551f
+SHA512 (URI-Find-Rule-0.8.tar.gz) = 34f069fc819b813adea3c7b1c7e0bc26e6d67c733a3737b3b19f7087b59cd51306b9da8674d3d7e95a3cff334874de611764643592cd110501b2967ed1df8497
 Size (URI-Find-Rule-0.8.tar.gz) = 5557 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2012/12/04 01:30:29 othyro Exp $
 
 SHA1 (firehose-0.6.0-src.tar.bz2) = 65367ba3cfff0dbb20a4c9dbef114a2d58d22710
 RMD160 (firehose-0.6.0-src.tar.bz2) = 60bc9b09552cbec586b621d4eae73dcf839bd291
+SHA512 (firehose-0.6.0-src.tar.bz2) = e64c4eb894896765c62e4584f1d8d913ea19ace64188f07aa7b3f0d58c86ed8e2d6b1116e4666fd93583eb927eb6780cc068eedac31dfb9b44abe940cefa5a4d
 Size (firehose-0.6.0-src.tar.bz2) = 20420 bytes
 SHA1 (patch-bottom.c) = 7e79f9461ee8bbcd6d16e333b0c53bcd94b46469
 SHA1 (patch-firesend.c) = 9c45b458076814b5e3029939cf2805e5112a11b5

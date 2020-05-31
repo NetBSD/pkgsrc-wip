@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/01/10 14:15:40 othyro Exp $
 
 SHA1 (jokosher-0.11.5.tar.gz) = 018c365b8c8a4e112cf01962882fcbb1f3b1784a
 RMD160 (jokosher-0.11.5.tar.gz) = 8231dbae76adb2606edb3afe557f12cb2e01b0e0
+SHA512 (jokosher-0.11.5.tar.gz) = b00728abe74c76a1fcfd6f70fea542add43629c40c1b55f41496e3bf940e09a3f57c1028eac458c10e68a43e3eb40f8ee5ae3102d1d931e5a6edff0f3ff1ca8d
 Size (jokosher-0.11.5.tar.gz) = 1265726 bytes

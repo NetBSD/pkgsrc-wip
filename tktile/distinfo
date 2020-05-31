@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/17 13:26:29 jihbed Exp $
 
 SHA1 (tile-0.8.4.0.tar.gz) = c24efd5a105f83c1dc4619f95746511247cb1217
 RMD160 (tile-0.8.4.0.tar.gz) = 6fa5eb19345f3d889dce5db942e9177433bce015
+SHA512 (tile-0.8.4.0.tar.gz) = aaad9f5021adea5130146b2d20838bef3ccd3c312478eb2718c23ec6f3f3ef74ce5d5187e92d768c5d00da19c3f181215ad31be42a848e94dc8fb7c005dc408d
 Size (tile-0.8.4.0.tar.gz) = 628069 bytes
 SHA1 (patch-Makefile.in) = 66508df69cd1966c9ab951118dd195f54920d3b3

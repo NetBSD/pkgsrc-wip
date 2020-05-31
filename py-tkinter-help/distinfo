@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:29:24 jihbed Exp $
 
 SHA1 (tkinter.help-2.0.zip) = ace1d795a59a6ee71f38b0c765f0f0a74235bc09
 RMD160 (tkinter.help-2.0.zip) = cb9e2ed6b37ebc2b561f1aa3edd3f40e5b30078e
+SHA512 (tkinter.help-2.0.zip) = ed5894a7551e4c4bbe8e782acd05c7e35b2634226ce3e0c610810d2f13bc667ee97b047dfd519290ff2b08939bbb788e286a6c59b43e82f96d290a4683c817d4
 Size (tkinter.help-2.0.zip) = 4213 bytes

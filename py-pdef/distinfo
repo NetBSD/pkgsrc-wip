@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 16:50:42 jihbed Exp $
 
 SHA1 (pdef-1.1.1.tar.gz) = 415e4a51ba51ce26618717c3436534db1cae42dc
 RMD160 (pdef-1.1.1.tar.gz) = e9090dcb79426070b4e4813147a249a4ad1a2145
+SHA512 (pdef-1.1.1.tar.gz) = de0d32c7963aa89a9a50af8f93314ceee9ab23a6730ac15e51a5784e7c3e06680b24e67e5bd8339400d30956857bd1955d6e3440797b2e5713577f67fa6d270a
 Size (pdef-1.1.1.tar.gz) = 20915 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (spfmilter-1.0.8.tar.gz) = 3e56f97ce548534d227cad98735171673495f935
 RMD160 (spfmilter-1.0.8.tar.gz) = 53fa33a7e3a58bb17dd2314b1a91d621764b07fc
+SHA512 (spfmilter-1.0.8.tar.gz) = 73fceda62e16308e7a6541d0fef86b102401d663358618f9fe999cf9488f093d81c06c1ffad23d3b653d93f7c47401eb929015b7ea0d86c3eef2f8554705a23e
 Size (spfmilter-1.0.8.tar.gz) = 144779 bytes

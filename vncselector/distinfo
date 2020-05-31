@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2006/08/01 04:13:41 dhowland Exp $
 
 SHA1 (vncselector_1.6.1.tar.gz) = da4f417cf1d185bd56e0561a46f9603e1fc23b74
 RMD160 (vncselector_1.6.1.tar.gz) = a87296ec6c763b5c2725405251a7c2e9fbd4288b
+SHA512 (vncselector_1.6.1.tar.gz) = 8c1b06d9c9116440fe6bd886ea3f5cffdb9f683db487e7dc9a58e4e160de5108d1c43982a34b69fb14bce63fc8a96ca0b14382b120e199fdcc52a3f4ed9fda14
 Size (vncselector_1.6.1.tar.gz) = 487028 bytes
 SHA1 (patch-aa) = 85391d9c1b964538a281e6b0570c646504b7366b
 SHA1 (patch-ab) = 5bc6b90bc9f9354411ad20435c234be8acdd0caa

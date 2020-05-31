@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2011/10/07 12:42:01 makoto Exp $
 
 SHA1 (vgabios-0.6b.bin) = 1a8c473d22fcbd48abd6b18c073b9e59314fef68
 RMD160 (vgabios-0.6b.bin) = 30c47136334ccf92fc40b8d8ab7b595f5eb96b5d
+SHA512 (vgabios-0.6b.bin) = a29175ccd9d68c6265a25c7ddc98357f50e56a22e03b13e288d700d48e48004b072a306cf74a76e336f0cd1363199ac9a1b9e78119cf8ffc77ade9d947d00bb3
 Size (vgabios-0.6b.bin) = 38400 bytes

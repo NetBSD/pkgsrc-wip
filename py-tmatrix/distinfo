@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 10:50:50 jihbed Exp $
 
 SHA1 (pytmatrix-0.2.1.zip) = e1acef42efa679051472c48b865150a52f925a7a
 RMD160 (pytmatrix-0.2.1.zip) = f890129effe973a455a689432e8f8683bc07c057
+SHA512 (pytmatrix-0.2.1.zip) = 1bdbede77ab705afbae00f5e60767d2941169bc21f5e8dec86ef29551bd8c6809d15ce8b7087aaef9aaf302a3e8b200f20635e7167294c5485a4c7c76945586d
 Size (pytmatrix-0.2.1.zip) = 62987 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:31:21 jihbed Exp $
 
 SHA1 (sempy-0.0.18.tar.gz) = c93f4ee5edb7f2e24baacdd2ae4d4809d681bbd8
 RMD160 (sempy-0.0.18.tar.gz) = 13d43ca9c862649905c381ef50a62c886a6d52ed
+SHA512 (sempy-0.0.18.tar.gz) = 5d2b480caab5ddd386761f595e10c32bc5d81f7be4dc63321b4620546b6c045efc455ee22f713c36cd3aca03b34971e53cf038ac8330214b9a5f9914b8205440
 Size (sempy-0.0.18.tar.gz) = 605581 bytes

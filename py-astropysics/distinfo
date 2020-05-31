@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/10 22:08:53 jihbed Exp $
 
 SHA1 (Astropysics-0.1.dev-r596.tar.gz) = ce666b0ab643a2ac839aeeeafc4cc75ba4851280
 RMD160 (Astropysics-0.1.dev-r596.tar.gz) = 478e7b73b98cd1dd56e4a62ea97c5a8f37bd2dd5
+SHA512 (Astropysics-0.1.dev-r596.tar.gz) = 41120c72c39bf4784c7ffb2d788b406d5a68ad6edbfdbda8a58341ff0d06aeae85daf432554715649c479ec73d8ab151d7598c186010a3ded33bcc137b294ec4
 Size (Astropysics-0.1.dev-r596.tar.gz) = 307791 bytes

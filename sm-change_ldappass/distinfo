@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2005/07/06 12:31:32 marttikuparinen Exp $
 
 SHA1 (change_ldappass-1.8.tar.gz) = 0d5b2b69622ddba2a6bb53699999597ecf2d182f
 RMD160 (change_ldappass-1.8.tar.gz) = 05a1c1d62620b212eedddd61628726a6fd6bc791
+SHA512 (change_ldappass-1.8.tar.gz) = 83ac19875a10cdeff18f7c345bce68b20ebcc473979fc4dba46a33e64bb26e0813a3fdf27dac080c6279defd4c2d90d586fff7306c1911e70ffd308edc0f0a59
 Size (change_ldappass-1.8.tar.gz) = 17275 bytes
 SHA1 (patch-aa) = 0ffa6156e26f077a506f34ddf547ad6faecb799c

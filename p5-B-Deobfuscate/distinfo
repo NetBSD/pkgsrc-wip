@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/02/18 15:55:35 jgoamakf Exp $
 
 SHA1 (B-Deobfuscate-0.20.tar.gz) = d4ae945c1858c48c546c33849f93f547435fdc8b
 RMD160 (B-Deobfuscate-0.20.tar.gz) = 1874478d220d9934eb6ee65b521d049bbd84ec9e
+SHA512 (B-Deobfuscate-0.20.tar.gz) = c6c520612c321284b7f57a254b3bea1ddcc68c48c08ef26e5d82952ce601567e00612df6941ed4e04e5f347eb75e94ce30de3ba0032def533dd7e6b4f18bd5b1
 Size (B-Deobfuscate-0.20.tar.gz) = 17792 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/02 19:49:59 kuli0020 Exp $
 
 SHA1 (Encode-compat-0.07.tar.gz) = 77ac8064304ca1993da652c0cf5fe1d956fc4bbd
 RMD160 (Encode-compat-0.07.tar.gz) = 03633f5eee07d3f995437c7754a87e3b006f9045
+SHA512 (Encode-compat-0.07.tar.gz) = 0722f27933bbceaba9750c655c06bb23cdbf6e5e54160d85ee2e9ae26405e87721a7cd382c3a467d78123827433802fc0f0ee32f269f0fecb667a3194c0565a5
 Size (Encode-compat-0.07.tar.gz) = 9070 bytes

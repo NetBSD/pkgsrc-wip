@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 20:33:47 jihbed Exp $
 
 SHA1 (pyLuminous-0.7.zip) = 5e0e8e7a1a53be813b65e01a0764055bbad4b0af
 RMD160 (pyLuminous-0.7.zip) = ec08129d9ac72f14d247ee4d0e54873d11cac04a
+SHA512 (pyLuminous-0.7.zip) = 567b85795f872c2200ada87f2906001753fa8fd0e492e36dca318a1eec84443af28636c05ab1a75db1d22ee2da435d91a70b73b3233cf0ff38948a3d25e93eb3
 Size (pyLuminous-0.7.zip) = 3611117 bytes

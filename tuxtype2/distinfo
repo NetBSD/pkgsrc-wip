@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (Tuxtype2-1.5.0.tar.gz) = cb664d674232f676ef0af7339b934c98e4662ab1
 RMD160 (Tuxtype2-1.5.0.tar.gz) = ee7cf6a7fd18c641ce0c851113b0916f50a25dc1
+SHA512 (Tuxtype2-1.5.0.tar.gz) = 368ba16f92b2986a2ebbf19a1d7c57195d9ff29b1a87609f0a9552c7326849f17a507775b2dc2937aea68b57acfff8bdf2ee5e15fec354984a8e6b2cf1db6171
 Size (Tuxtype2-1.5.0.tar.gz) = 13944319 bytes
 SHA1 (patch-aa) = 1a484dcc29111144cb132b321e39b4032a2a8c32
 SHA1 (patch-ab) = c66f47574ef96b570c30c0573bbe6761080953df

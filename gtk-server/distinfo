@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/01/01 01:38:05 othyro Exp $
 
 SHA1 (gtk-server-2.3.1-sr.tar.gz) = ae3ae447399f6659cb314ffc3b9753d7f1eb7b56
 RMD160 (gtk-server-2.3.1-sr.tar.gz) = b05df146986c4ee3502c84b7e0ff326d375604ef
+SHA512 (gtk-server-2.3.1-sr.tar.gz) = c8f23342b6431f4cc3fdbe67de8ee6e9392777a5380b77fc93370b641147a35e7ee69c14dc938cd18ff30d6a106460c904bd23f79cc19e6c593b992d203079ff
 Size (gtk-server-2.3.1-sr.tar.gz) = 334516 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2005/11/06 11:25:57 leonardschmidt Exp $
 
 SHA1 (mailfilter-0.7.1.tar.gz) = e50ffbf39046b43870c408f2c188c7aeb07b5da9
 RMD160 (mailfilter-0.7.1.tar.gz) = 2b2afe04e2146ba2786eaa582781dcfd8cfc83ba
+SHA512 (mailfilter-0.7.1.tar.gz) = 8a04ca29dbdaa98b24f58e52f00d2db5ccf5899ec8e5d976372fba68e7dc36af9e3ecb61b630d9fcde5479b8002f604ccbc3bd3200b5e8e3e5b45c94479fb61e
 Size (mailfilter-0.7.1.tar.gz) = 506799 bytes
 SHA1 (patch-aa) = 0f73effbd55c232683e21c57d8abbe856e310888
 SHA1 (patch-ab) = e7dda8946a5ceb3af1b8057e52ce301afd3fb011

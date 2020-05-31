@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (vlogin-3.5-1.2.7.tar.gz) = cb6be8ea7987ef23c732902da61609262f3999ed
 RMD160 (vlogin-3.5-1.2.7.tar.gz) = 0fa7e9f3a47d1b4f66bca7cbeb81c96ade7eb448
+SHA512 (vlogin-3.5-1.2.7.tar.gz) = efc95c88941ba0cec88dfdf1e11c54b4e9e4a7b2afb18c5d8bbd25b0df86d97fafd96bd4d71ecc5b7d9618ee9eebbfc4544d5bfdbe461438f94487d9b76e3228
 Size (vlogin-3.5-1.2.7.tar.gz) = 34681 bytes

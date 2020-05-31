@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/22 18:42:18 jihbed Exp $
 
 SHA1 (dimarray-0.1.8.tar.gz) = cfd042ce4c66f81a02c3e656e797eb9de550415e
 RMD160 (dimarray-0.1.8.tar.gz) = 763c3a343578d149204baf0db8c542ea0638c7cb
+SHA512 (dimarray-0.1.8.tar.gz) = 5092fd59c61ee260baea568e611b4ee4a8f6530dc763fb109d20718397b223240d5350cd1c60747af95f262b486a5ed35b503710ae4add582880c7118b43c810
 Size (dimarray-0.1.8.tar.gz) = 90515 bytes

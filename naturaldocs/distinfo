@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/10/04 11:54:25 ondratu Exp $
 
 SHA1 (NaturalDocs-1.35.zip) = 6ecd583d6d01beb27b9362c9cef9077c1a50cb5f
 RMD160 (NaturalDocs-1.35.zip) = 940720d88fcfca4884435cb1019f62d127ed5e2f
+SHA512 (NaturalDocs-1.35.zip) = c9b65613aaeb1835f511fe8f466b3461f6c25460b84167a6698da2e281574a9f223db437032c29099bf4abc601ce185f05f41c7f4c882a6659a8c1cecdfe7829
 Size (NaturalDocs-1.35.zip) = 344357 bytes

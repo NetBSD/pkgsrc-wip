@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (lci-v0.11.2.tar.gz) = 6c5b996bb4defb77542a8fb525df9991b21139f9
 RMD160 (lci-v0.11.2.tar.gz) = 5ff8c426b75d94a1e349e3e3ad96af32d702d224
+SHA512 (lci-v0.11.2.tar.gz) = 37e94cb6c51c0a41e6cc8953c5314b0f25a898f853053f748ad09af82f9c1948054866f7f2cee8e9f9c517a05bd7b367ea44f73aa74f63719ea25d9e0f507a73
 Size (lci-v0.11.2.tar.gz) = 312257 bytes

@@ -2,4 +2,5 @@ $Id: distinfo,v 1.4 2013/10/01 20:52:48 tonnerre Exp $
 
 SHA1 (serendipity-1.7.3.tar.gz) = ab70bbf7ce66ba88c6aeb968c94958c0b701240e
 RMD160 (serendipity-1.7.3.tar.gz) = d47f618c03dae1f9a9d2c492b869dc36ee49ea58
+SHA512 (serendipity-1.7.3.tar.gz) = 63f9eef6153ffb49ca8e82188aa72ae9dcfcf5b867939cce83265c85c9317d20c3daf3e5792c7dbcfb0aabf9db61251f9135b46fe27f405ac58e809e8aed3606
 Size (serendipity-1.7.3.tar.gz) = 5665896 bytes

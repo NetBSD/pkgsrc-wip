@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (3.2.1/wanderer_dev-3.2.1.tgz) = 5532fc9a8319159944f5168d0ebda8a5f36a9897
 RMD160 (3.2.1/wanderer_dev-3.2.1.tgz) = df17a2a13662d1b27380d2b2731727789a3b9b98
+SHA512 (3.2.1/wanderer_dev-3.2.1.tgz) = 137873b273189bd32577cdbcf8a67141126dc9bff6bc1cef04861a0c9e22bd3b96eff6595cae6cedacb3f74d6455cf288990c263dc24c1f23cb0766a05bacd7d
 Size (3.2.1/wanderer_dev-3.2.1.tgz) = 165019 bytes
 SHA1 (patch-wand__head.h) = ff9cb5c4d9c5591e15df5341ff94f29d0b6a28b2

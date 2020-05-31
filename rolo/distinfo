@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2005/08/05 21:04:58 poppnk Exp $
 
 SHA1 (rolo-011.tar.gz) = b45a8c135beced38ac33097fe95be0bbde27cc9a
 RMD160 (rolo-011.tar.gz) = 2f68ed39774c13fbe7423fa4db2cb0e7a2e59966
+SHA512 (rolo-011.tar.gz) = 5fbdb3dc76f0ea54a58e75c5fd263296d812f8bc6978b87c8604dfc33db64b3e972dc3337a4498f03ef0c8ffb39c2338fb041568568c5a2818b478721d7172ea
 Size (rolo-011.tar.gz) = 113631 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/08/31 00:34:12 jihbed Exp $
 
 SHA1 (pynetcdf-0.7.tar.gz) = 38e3be2da0b2e73ea8cde2866a5f14b011ba4b1c
 RMD160 (pynetcdf-0.7.tar.gz) = 8c3b9c1fbfe19f27d93b86c15e0b16c76f00f25b
+SHA512 (pynetcdf-0.7.tar.gz) = a1f1eab0bc707b275ba94b039fccf31f31ce513425ae1973ae0466059b2dc82c1e42f6cc92ad0949073997585a8f2791e19bb36de1b3a86c9c98d7616de771f8
 Size (pynetcdf-0.7.tar.gz) = 23724 bytes

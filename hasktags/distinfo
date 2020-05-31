@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/10/19 12:36:29 szptvlfn Exp $
 
 SHA1 (hasktags-0.68.2.tar.gz) = 7a8306b52dcd2676a3b63ae7506e08331bec4fe7
 RMD160 (hasktags-0.68.2.tar.gz) = 6112cf52667247cdf872389b68926a0312e5ff7c
+SHA512 (hasktags-0.68.2.tar.gz) = 31ded9f08e5bb62424a04128f6b9a4e2791c4b20278eb1b5a72fa85df3d2753e0fa68ced4cd8fc05123295a4fe5b65b5cd4261e856b85475c9c4b65d1a343b6f
 Size (hasktags-0.68.2.tar.gz) = 9542 bytes

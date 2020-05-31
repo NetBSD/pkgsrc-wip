@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/09 00:09:38 jihbed Exp $
 
 SHA1 (debacl-0.2.0.tar.gz) = 807bfa3d83e465176c132eeffd94308743dcf49f
 RMD160 (debacl-0.2.0.tar.gz) = 12b34506e0e49354df3d6276fcee6d248cd30df0
+SHA512 (debacl-0.2.0.tar.gz) = 0b85d0f24e4fa8adbb7ead9bc155595d84ef99797e24573e030884c03c3f0b289eeffc422bef0304dea608889f459d57ba1bb79d59076a241543e6f60f880135
 Size (debacl-0.2.0.tar.gz) = 30795 bytes

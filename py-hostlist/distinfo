@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/06 15:24:19 outpaddling Exp $
 
 SHA1 (python-hostlist-1.14.tar.gz) = 483e66a452ef8f78dfc2863555f24d17ae7c26ad
 RMD160 (python-hostlist-1.14.tar.gz) = 24775a1e8df068733fc9f96f39664c2468c958e9
+SHA512 (python-hostlist-1.14.tar.gz) = e7b821923ad7b5ce410ae67c75ee84df0f3d1faa244524835d80963199d9fab83a6c4a746bcb285ef553e4f276ed837854e3936076c08608fa6b31aa74aceb4f
 Size (python-hostlist-1.14.tar.gz) = 31260 bytes

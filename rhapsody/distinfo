@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2006/05/20 11:39:22 poppnk Exp $
 
 SHA1 (rhapsody_0.28b.tgz) = 5905ffe04a92b9a79e436d354d2f3002f4372806
 RMD160 (rhapsody_0.28b.tgz) = e797093945eafe3372bab18c4fc8d7774a2b8081
+SHA512 (rhapsody_0.28b.tgz) = 1ff9f29d281421b7fe3dcdccbd8b2559572cc6e7167ff9e0f1a46dcff07486115de245055b3d72107f40f40a484d9aef94c7ed21b55a7bdf80094198d69dec6d
 Size (rhapsody_0.28b.tgz) = 110062 bytes

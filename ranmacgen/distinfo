@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/08/24 15:19:30 othyro Exp $
 
 SHA1 (macgen_src_v1.1.zip) = b797b0651cdf3605a9df2b79aa04e1968180ccbf
 RMD160 (macgen_src_v1.1.zip) = 4184fada20b8f015ce2de4f92e4d0a2a331db4e4
+SHA512 (macgen_src_v1.1.zip) = 340c8d7722a823fcd67e11caf4972a1c13fa44c645037efd4765c0f9fa20cc36cee819c8a24ef3805408f766e61f58ace63d296d831a456cf6b6c218abf4d5cc
 Size (macgen_src_v1.1.zip) = 7980 bytes

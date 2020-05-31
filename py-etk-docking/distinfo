@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/10/03 22:30:36 jihbed Exp $
 
 SHA1 (etk.docking-0.2.tar.bz2) = 3a2be007cc3b374d318149c8faf0dd6ec71385b2
 RMD160 (etk.docking-0.2.tar.bz2) = b011a95e9a0b6937a8cbbec62443423eaf5e6bdc
+SHA512 (etk.docking-0.2.tar.bz2) = e368594e5a46e48badd13fa89e2cd7b33e9739054c821cf0028e72cc1d2ffaedeac832d328c2716ff2b937ebb21ec701407f48c3b25e04634988b78d3d8fe42f
 Size (etk.docking-0.2.tar.bz2) = 64205 bytes
 SHA1 (patch-setup.py) = 4928ea2fd6c4778eb87322575c1319e4a9719214

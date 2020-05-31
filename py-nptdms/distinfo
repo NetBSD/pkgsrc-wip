@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/13 09:35:53 jihbed Exp $
 
 SHA1 (npTDMS-0.6.4.tar.gz) = 9d011703e6e798fec84dc205325a29841336d67a
 RMD160 (npTDMS-0.6.4.tar.gz) = ad193f276dc41addf87d5b1a3ca9cd34a2ccbf8f
+SHA512 (npTDMS-0.6.4.tar.gz) = 720abf0802b9d9d2d3a26dd5711c1b29f2fdb437be7b1be51c1da2ce38eeb7cbc92dcd78f3c26f323f8a912ce9b3128a0853d2233be78c5d51632fefeb91bbf7
 Size (npTDMS-0.6.4.tar.gz) = 23566 bytes

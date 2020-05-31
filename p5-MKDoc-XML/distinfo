@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/10/04 08:14:13 jgoamakf Exp $
 
 SHA1 (MKDoc-XML-0.75.tar.gz) = cf3c40ec9725c89879e263f44696e49a6765f0f5
 RMD160 (MKDoc-XML-0.75.tar.gz) = f39e1793a14d8b8fde5c02ad99100b9a4f9b55d6
+SHA512 (MKDoc-XML-0.75.tar.gz) = 7564f46d101e9ad5de9e56b0ddbe1f9ae3f7925e40e80dbdd2c993543a21712e82244e84518c8acf3a2e827e1a4483f3e692f0edd606b6b90fec92c151d1f335
 Size (MKDoc-XML-0.75.tar.gz) = 40990 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:19:36 jihbed Exp $
 
 SHA1 (scikits.scattpy-0.1.0.tar.gz) = 6b6b9d8f62bfcde1ce2891bca2d4b0431843766c
 RMD160 (scikits.scattpy-0.1.0.tar.gz) = cfc5c36e50c6ac37c26a1c133ecc97a80c059556
+SHA512 (scikits.scattpy-0.1.0.tar.gz) = 1804832a2ffbaa9dab06ab5779039175b9916f42c1e5092564e1944e07c3999e224d239f01c0b61a1a3b9e5993bca73086fe4bb0e1844c8622e4c1fe099901f6
 Size (scikits.scattpy-0.1.0.tar.gz) = 18906 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/01/14 17:52:32 jihbed Exp $
 
 SHA1 (minepy-1.0.0.tar.gz) = 66824c98d340bd07233e6cbcc43b7b6a3c2124e1
 RMD160 (minepy-1.0.0.tar.gz) = 5bbd7209f69a7bb8935cecfa8aa219c688a06776
+SHA512 (minepy-1.0.0.tar.gz) = adb55850decf6fb121afcbbc0857863dae0b92cb8dd7b133c81450c4e9fac330de1b3fbf55ec01d2de716dcc0d599cae3c88c4deccb7ac6fcfefc120bc3c30ab
 Size (minepy-1.0.0.tar.gz) = 330069 bytes
 SHA1 (patch-setup.py) = 0a21571ea0b4f7f2d46d88a3c5c97aa43d808492

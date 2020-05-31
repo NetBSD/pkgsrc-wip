@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/06/10 12:17:06 hoka_adam Exp $
 
 SHA1 (TalkSoup-1.0alpha.tar.gz) = 0c8a03c435f55e75601bb6be1cf2f3fb5998dd03
 RMD160 (TalkSoup-1.0alpha.tar.gz) = adf4eaf50d34cd86eb55de14a9de5a52210a47c4
+SHA512 (TalkSoup-1.0alpha.tar.gz) = 95f23ba57f5f4e87a168a45c774490bce05012cc7b01593a41c4bbdd18d7fae1feb87f83d0f7645dad76efda67b8a92b302d59fc7ca86d96aa41546aa74e58cb
 Size (TalkSoup-1.0alpha.tar.gz) = 342181 bytes

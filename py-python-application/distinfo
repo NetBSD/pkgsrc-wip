@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2015/06/26 22:18:55 othyro Exp $
 
 SHA1 (python-application-1.5.0.tar.gz) = 43eafbebe5fbd7d9c552a512e86974dc224107a8
 RMD160 (python-application-1.5.0.tar.gz) = 918a3e6b726341cbe0a75348d9d7eae8eefb631c
+SHA512 (python-application-1.5.0.tar.gz) = 9bf683a88bfb11ab5cf86b2d1ef86e22cf6fcb6004f0059b1d3cb2e1cde46827ced57a1cdd313c1d48dbd1ad610e9d36617619f79af748c55c517089720cb2b1
 Size (python-application-1.5.0.tar.gz) = 43552 bytes

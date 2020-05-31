@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.6 2013/02/17 21:19:26 othyro Exp $
 
 SHA1 (uade-2.13.tar.bz2) = 61c5ce9dfecc37addf233de06be196c9b15a91d8
 RMD160 (uade-2.13.tar.bz2) = 10034302e848ea7c974429ae302ca52403909ded
+SHA512 (uade-2.13.tar.bz2) = 675c3369ed55a314cab81ae7ba8a09b277ab1cfe2354eac92194f746803ec2464b7603d665cf30da41caef5997c21515e69f0313d8d2b079c242a08fef786183
 Size (uade-2.13.tar.bz2) = 2897931 bytes
 SHA1 (patch-Makefile.in) = a38fa7a4f26fac79d9b10145fa0b2bc127de95d2
 SHA1 (patch-src_Makefile.in) = 2069cebf22e3eb71ab54394ccc26f1263cfe7d7d

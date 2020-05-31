@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/11/05 17:49:07 jihbed Exp $
 
 SHA1 (SphinxReport-2.0.tar.gz) = 33c391d0d72f8b1d52cbd1e109888ab122736a3e
 RMD160 (SphinxReport-2.0.tar.gz) = fc0d3e5729764a4cb784b315eb4538fd46fa68a6
+SHA512 (SphinxReport-2.0.tar.gz) = 9425d1be69a5cf0750706701758096a1045ccbcac302f73a761fdb9289f6dc31ddd98c6040ccf173ab0f2dd7bfa8d8ad470b42c372da4a1e80ad5074b7cd27a8
 Size (SphinxReport-2.0.tar.gz) = 171101 bytes

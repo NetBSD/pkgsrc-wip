@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/22 13:14:48 jihbed Exp $
 
 SHA1 (plasti-1.0.0.tar.gz) = 7819288017fbbd1fd0553a59b83dc7cc31eb424b
 RMD160 (plasti-1.0.0.tar.gz) = 0f16e02f6dd6e2550c5f91a41ee5cc1d987dd9f2
+SHA512 (plasti-1.0.0.tar.gz) = 680df20b389b6847779dd3a3af2795f88cc78a4583f223983c9747c9d164c19be6e80f15fd3cc117278713481e49008917f565110d2a2a598074b1ff89322831
 Size (plasti-1.0.0.tar.gz) = 83393 bytes
 SHA1 (patch-aa) = 7027a378eea49d5daec6c2ac2ba4758f7910d18a

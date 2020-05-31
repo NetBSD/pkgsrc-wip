@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2011/10/20 01:19:40 jgoamakf Exp $
 
 SHA1 (Template-Plugin-Class-0.14.tar.gz) = ad000bf6df2d3d8d2198f0165a6290f489cc2a3d
 RMD160 (Template-Plugin-Class-0.14.tar.gz) = b81e70b42f4deaefffad536f345047dea997ca0e
+SHA512 (Template-Plugin-Class-0.14.tar.gz) = 97eb7874e90cfbb6b4de7638d1d7f833095e5e7e6fecc3e3beed8d118c50a211d5b61fa3fe6edf01bf528f81feda98cdc81fdee5669f59d20fe48cd337b4bada
 Size (Template-Plugin-Class-0.14.tar.gz) = 2399 bytes

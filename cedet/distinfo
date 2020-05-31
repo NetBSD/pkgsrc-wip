@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2012/01/28 14:11:06 phonohawk Exp $
 
 SHA1 (cedet-1.0.1.tar.gz) = 583cf48c50720a8944d5b2f499ecaac5adad5090
 RMD160 (cedet-1.0.1.tar.gz) = 1862ccd138297b24282b10edb7b1f74450923d5b
+SHA512 (cedet-1.0.1.tar.gz) = 74341d733722aff6dbbdc1869aeda3295218db257041a375e698a154dc3eb148b0d4c771f3e20ff8929499b4bd283b076c792c6c30967c23c430acb82fab464d
 Size (cedet-1.0.1.tar.gz) = 2101932 bytes

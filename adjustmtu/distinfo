@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/13 15:58:55 ishit Exp $
 
 SHA1 (adjustmtu-1.00.tar.gz) = 31e8a7d027a8cda0fb433f455537332d18160fbf
 RMD160 (adjustmtu-1.00.tar.gz) = 664d948dafb14740963a769d13974e5c0b5fff24
+SHA512 (adjustmtu-1.00.tar.gz) = da08d349e70de13c28823ac08b0d49cd5d97815ea55fe3d2e3b8629019428c400d58895dad2dcbb178fe1e6273223da48c5351352fc666b9f7827cc0f31ef749
 Size (adjustmtu-1.00.tar.gz) = 5749 bytes

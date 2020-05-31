@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/03/20 17:57:35 nros Exp $
 
 SHA1 (premake-4.3-src.zip) = 8f37a3599121580f18b578811162b9b49a2e122f
 RMD160 (premake-4.3-src.zip) = 8c414790cb7481809ef65f0dcac023d77ed0381d
+SHA512 (premake-4.3-src.zip) = df3a4f1e04afb6ae9acf06c063b084a4bcc7c48a98eebeb242eafef40de4097c6a6fe549369d9538b93efea35244222b9d26c15824f126a67b8f80abaecdf001
 Size (premake-4.3-src.zip) = 514366 bytes

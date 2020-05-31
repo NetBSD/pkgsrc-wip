@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:30 rillig Exp $
 
 SHA1 (msworkbench-0.3.tar.gz) = 1e3aa90fdfb19aa69682222f4347ec6a46bd2ced
 RMD160 (msworkbench-0.3.tar.gz) = a38a00518a6766468654acd7db0ccc71089500a5
+SHA512 (msworkbench-0.3.tar.gz) = e05013b3f77f4f34b77f0b7c548a5e944dc7322f2f494cec16cb9cacddc5c703783e93835354eed500acc394499167fe562ab21dfa55433b3651e160f12d5b32
 Size (msworkbench-0.3.tar.gz) = 181015 bytes
 SHA1 (patch-aa) = 89a6a41276a1acdae101874005537bce45669759

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/21 21:19:36 jihbed Exp $
 
 SHA1 (sharif.univ_ttf.bz2) = ec092b8d51a6f65ab2a425876a7a55e5a54f8fb8
 RMD160 (sharif.univ_ttf.bz2) = 45ba76b47308b806bb07bf24ebb28d784d2379ca
+SHA512 (sharif.univ_ttf.bz2) = 6c8fa385049718271056dfb28b07b3f1e637e6160044af9a54de35b1670963023433ce28bef7c90a65c292d32d56bdb4ac222afa8637fee625d228e0cb63bb55
 Size (sharif.univ_ttf.bz2) = 60342 bytes

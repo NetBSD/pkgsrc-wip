@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.5 2012/12/09 21:16:39 othyro Exp $
 
 SHA1 (xmail-1.27.tar.gz) = 151f427ce3abbbd70e66af3d18081e3cdc390507
 RMD160 (xmail-1.27.tar.gz) = 2f8c81f18b3edb28fc77cbc557b6e8aa64be0295
+SHA512 (xmail-1.27.tar.gz) = ee1e733dfc99299166bf906f2a71fe1e8d9909b4e42ac74bfe7b66ef21099d984dc749ba05ab9c78f77e2f9bd4aaa1b2254abd2429896bcf5a7a00ed45d91d89
 Size (xmail-1.27.tar.gz) = 1662592 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
 SHA1 (webcleaner-2.8.tar.gz) = fcd39cae3b88b13ec29742d68e7f83bdda0aa01e
 RMD160 (webcleaner-2.8.tar.gz) = d17c0e83b237a99bbf3f6ef1d086a3470e405b1c
+SHA512 (webcleaner-2.8.tar.gz) = ccd3c40365ff5e779535ea79dad23894fef36cd151875a232dfb0cd75dce0c81bd148b338ef628be5d3b4229d945966669fd626ef137c77a25f1365b1af27c82
 Size (webcleaner-2.8.tar.gz) = 1189177 bytes
 SHA1 (patch-aa) = a9c121b33835ad4ef2ddc13f5cf9caeab6398aef

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2011/03/23 16:30:42 erinlalouve Exp $
 
 SHA1 (seeks-0.3.2.tar.gz) = 93b0457ef4c276031927216b08d52253e31cd2bf
 RMD160 (seeks-0.3.2.tar.gz) = aa38a015cec96b6a1474ac63e3c6117680a00a3b
+SHA512 (seeks-0.3.2.tar.gz) = 55124da366b80d00b9fbba540dfd41771b778e7e23cb627144ecdff6910c68dd819b2f6cc3b24cb4de7eb548496eace86984f9ecac105d895054a1711913c010
 Size (seeks-0.3.2.tar.gz) = 1236460 bytes
 SHA1 (patch-aa) = cdb3e615e1fdfe849f8ecda727b31656773b353e

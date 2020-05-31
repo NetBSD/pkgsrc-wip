@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/08/22 21:12:24 jihbed Exp $
 
 SHA1 (cma-1.1.01.tar.gz) = 73e60f981096299615260b9d22ca7cf1acb55c71
 RMD160 (cma-1.1.01.tar.gz) = cd7f045298a8aefc4ba922dfdbd1bba87746aeb0
+SHA512 (cma-1.1.01.tar.gz) = 817a3db66c563579e00a8739fdafbef6465f561c910c9e99e82863208e21413ec9026664fe20192d071ecd1b01adb5a4ed2b1e969ac31071e0c37785bbedcccc
 Size (cma-1.1.01.tar.gz) = 100356 bytes

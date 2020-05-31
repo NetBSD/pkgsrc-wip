@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/05 20:28:50 jihbed Exp $
 
 SHA1 (uptime-3.0.1.tar.gz) = d52dcfd7b13bf058b2918ad12e532be6662c252a
 RMD160 (uptime-3.0.1.tar.gz) = 9b00f187d5e057d71b2b882602d05d9b51253a12
+SHA512 (uptime-3.0.1.tar.gz) = 55df1c30aa4be3e873ad36d0f784d49bc127d2bd38041c1453b112474dd52033e55d277172d8fdd73b3fabc7bf5071f29329d2a828244ef420d2da7db0f49a54
 Size (uptime-3.0.1.tar.gz) = 6630 bytes

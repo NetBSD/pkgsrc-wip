@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/01/03 22:19:30 jihbed Exp $
 
 SHA1 (gappa-0.12.3.tar.gz) = c6d90e7e1cd0a797f726cd0b7b68c326a5da78e3
 RMD160 (gappa-0.12.3.tar.gz) = b79deb8fe57d368099bcc27044fc31f3103b2f6e
+SHA512 (gappa-0.12.3.tar.gz) = 1e1321d1ad30aa139387d277f42f3d965c25b79e5e05fc8fd1a70fc90c37635a32dc71e50e7ea05815f34172a43c507a9904263e9186f39a28bc3d247f2f21ca
 Size (gappa-0.12.3.tar.gz) = 250188 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/11/09 18:19:29 jihbed Exp $
 
 SHA1 (paegan-0.9.0.tar.gz) = e2979837457ac436c5326338556fdb845c6f77eb
 RMD160 (paegan-0.9.0.tar.gz) = 7e435df19b8161077041aa2db9a1443cd9c358bb
+SHA512 (paegan-0.9.0.tar.gz) = 53ecf64f32ae83b99e0fabce03e6aeecf69146b035e70dbeec630d51c42e2493c30b8931924d92f448e960eb4c8eda5ddab8709d0bed7d157d62b772ed6d8fa8
 Size (paegan-0.9.0.tar.gz) = 3602753 bytes

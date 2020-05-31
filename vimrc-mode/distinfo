@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/06/06 01:44:07 phonohawk Exp $
 
 SHA1 (vimrc-mode-0.2.1.el) = cf923615bdf478976bf5a7b1164d0c8305be979c
 RMD160 (vimrc-mode-0.2.1.el) = 8a1bdc7acac46991e08fe0ba1f0ba6f479fd6ec9
+SHA512 (vimrc-mode-0.2.1.el) = bb6d1ee5717bf636dcb1a699da40c5f609e442e15c9ca5716d1cd81a6ab94dba1b45d925765585f8aed3831a497f72b8e4d029bace1ee4730e8eff0447e84a46
 Size (vimrc-mode-0.2.1.el) = 76870 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/05 20:46:38 szptvlfn Exp $
 
 SHA1 (categories-1.0.6.tar.gz) = c8eb2d0e6d97e3a60171e1af96bf5381abc2c61e
 RMD160 (categories-1.0.6.tar.gz) = 9e5bf05bbc85ada78e1b5eca5155dcb60d9aea53
+SHA512 (categories-1.0.6.tar.gz) = aad5ef04c1c8a0d68f36084af7f8dc3bcff5110cea5e6c89ccd526dfd4b8be2623f5bdbce3ebfceef43aa412bbb40067b5d7b714ff3e229bafbdbb96549e6f73
 Size (categories-1.0.6.tar.gz) = 9061 bytes

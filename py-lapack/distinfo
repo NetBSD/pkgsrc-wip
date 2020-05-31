@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/24 09:18:14 jihbed Exp $
 
 SHA1 (PyLapack.tar.gz) = af1524e56121c82350f97d3b4b163d344a880401
 RMD160 (PyLapack.tar.gz) = 344dd46c21a29823270ab365f7174212787d6c5a
+SHA512 (PyLapack.tar.gz) = b6ef63f654071c5f27daf5dae4c7d87eec317ec59de9c84d2c7de41d6a617fabfdc26c6d9e64e3a51ae38e0ac93a04a091d5ec7c4e361036a3e6b745e002ec47
 Size (PyLapack.tar.gz) = 156298 bytes

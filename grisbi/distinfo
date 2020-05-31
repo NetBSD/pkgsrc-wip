@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2009/05/12 20:23:13 fgudin Exp $
 
 SHA1 (grisbi-0.5.9.tar.bz2) = 6fb6ebf5855ac9275c4da539ff94479d2e486261
 RMD160 (grisbi-0.5.9.tar.bz2) = 533c398443003c4f13204baa679932fccd777649
+SHA512 (grisbi-0.5.9.tar.bz2) = 2cde9f7f1e1ba3899249052ecd04d5671013d35d2f22d79520f691803f137387110bd5f675309feb1754aa638ec3eea9607cbe94faec239b58b967ef7a0d2ccb
 Size (grisbi-0.5.9.tar.bz2) = 1003327 bytes

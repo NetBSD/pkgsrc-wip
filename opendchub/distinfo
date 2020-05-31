@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2006/12/07 23:57:53 dhowland Exp $
 
 SHA1 (opendchub-0.7.15.tar.gz) = 7b72322fbbfe7b314f10bc3c6c3ae8becb4f3df7
 RMD160 (opendchub-0.7.15.tar.gz) = 200e2aae3fe522617ccff7a8d5c345f6da1d33b4
+SHA512 (opendchub-0.7.15.tar.gz) = 9bdeede91c80bd881437c592204e3987d74178217099fe6770b648914472dc659f5cf21095c873238cb572ee43c17b9458b27de4b16eef6137443527fb987bdf
 Size (opendchub-0.7.15.tar.gz) = 193507 bytes

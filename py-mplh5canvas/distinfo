@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/03/19 22:17:19 jihbed Exp $
 
 SHA1 (mplh5canvas-0.7.tar.gz) = 460dd3db30d8286e4f2b5c14ee6f545974276cc8
 RMD160 (mplh5canvas-0.7.tar.gz) = 08a4547b52c994b8785f7bcf2ee1e2fadc4807ca
+SHA512 (mplh5canvas-0.7.tar.gz) = cad760e7ac736f62a83eb7277b740b250f93b4fab5a79cac5a2a82a6d0dc23eaac6c1453b72cb26c83c06f94389375ff1416499c285e0ec41767ae381930c13b
 Size (mplh5canvas-0.7.tar.gz) = 63757 bytes

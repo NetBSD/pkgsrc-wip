@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/02/20 10:18:07 ddeus Exp $
 
 SHA1 (trivial-features_0.6.tar.gz) = 0b340b3a865fcb2fb4778ff9e66621d652a0b2ca
 RMD160 (trivial-features_0.6.tar.gz) = 6952e3c22f5a59ec954059dc784c12b6a65fed0d
+SHA512 (trivial-features_0.6.tar.gz) = 0591fc068419f6698de48d65a994ae6e05e62bfef56fb4d7d689a0bb705ba0d44da150efcb7c8e229b32680689f4d1f432b2ecb34e33e0dd2d60919f11059d6f
 Size (trivial-features_0.6.tar.gz) = 7680 bytes

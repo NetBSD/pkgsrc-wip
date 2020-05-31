@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (pyodeint-0.4.3.tar.gz) = b28cccc12ccfb45fdc6822ad05159662f7d9aa68
 RMD160 (pyodeint-0.4.3.tar.gz) = 2ea62b5f1093b83d5bc35a1d497e788636a5658d
+SHA512 (pyodeint-0.4.3.tar.gz) = 6832ae4725b609a03447384f499b180b41c69d4765b5137dbe3d2eeb4d8480a458beaafab4ac94d96a771f2d8439408275292757994faa08dad16072133cc1be
 Size (pyodeint-0.4.3.tar.gz) = 64232 bytes

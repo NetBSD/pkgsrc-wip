@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/08 21:03:13 jihbed Exp $
 
 SHA1 (pycaptcha-0.4.tar.bz2) = 70a5d248a3ab14f8617cbf6df066097de1804057
 RMD160 (pycaptcha-0.4.tar.bz2) = 447db7cc8d6333f6616d7a6c51cf071860f86d48
+SHA512 (pycaptcha-0.4.tar.bz2) = bdddb2195dfae4ac2c69c2dc814bf71ef2464fbe2f9b32c5529c13a8b6c91f0c7574365e3ad47777c37350f9adc90511c04b47a6f98e460113640c06fe136cd5
 Size (pycaptcha-0.4.tar.bz2) = 662966 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/11/17 01:03:27 makoto Exp $
 
 SHA1 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 94a0dadc4c1370dadfacf4bc6cac591e3e47959b
 RMD160 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = de056d240a73236d6d8be4851813d8b15d16808f
+SHA512 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 1577ed24d5dfe7436a3f96ef8b906459578777f73a0a07aacc97a87708999a72a0eb0b2ce54306de55e43ce9f1e2dc171f06e7256f59b272af399fb1d29b943b
 Size (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 251136787 bytes
 SHA1 (patch-gdb_config_djgpp_djconfig_sh) = 833bace70abb0b831c99bf325ef98f70288f930f
 SHA1 (patch-gdb_corefile.c) = faa4e815b3a821812e578417cbd8cd081dba8e99

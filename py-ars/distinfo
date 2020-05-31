@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/02 22:18:01 jihbed Exp $
 
 SHA1 (ARS-0.5b1.zip) = ed9159b5dcff55fe48d69add25510093442ab61c
 RMD160 (ARS-0.5b1.zip) = 639be2ea561a36f230b75ea295fbf265e629332d
+SHA512 (ARS-0.5b1.zip) = 255d289d5e963645c4e4965abf8101ee74789b41f8dd76f0b4920a3d120c4eba73cee34deeb0a30dc70c0ac4223c805d2bb4eaafdeaf7e4e1ba04af22da440fb
 Size (ARS-0.5b1.zip) = 113103 bytes

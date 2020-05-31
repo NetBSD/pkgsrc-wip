@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/09 23:08:01 jihbed Exp $
 
 SHA1 (bxa-2.3.tar.gz) = cf9886b7aaee24e99ca309bb51f06abc4300b7d0
 RMD160 (bxa-2.3.tar.gz) = 56ade86785cecfc6c5a45797d6f325b5de5b10d0
+SHA512 (bxa-2.3.tar.gz) = 9100250c92d086cb8b8674cd1eda545a80ea99c4c04a40e9c19942970babc97c21a12883785c7c565715b10a8fe88da114645f11fe87c4df623b7296d539539c
 Size (bxa-2.3.tar.gz) = 35201 bytes

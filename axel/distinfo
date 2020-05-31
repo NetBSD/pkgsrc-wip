@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/04/05 20:03:22 alchow Exp $
 
 SHA1 (axel-1.0b.tar.gz) = b9c9a4bb86ac5ffd53974af211edbfaefc182183
 RMD160 (axel-1.0b.tar.gz) = 97e11b6ef5ffbf60ad2d39df106a42e680144359
+SHA512 (axel-1.0b.tar.gz) = 1732d562f364cd489db7c6d32528dfb72040b4399c620df8b517ca9e696b9bccbe7bedef6ae5e989a158945406d09f10c9c8656c6a0fa3ac5481934235f36386
 Size (axel-1.0b.tar.gz) = 43293 bytes

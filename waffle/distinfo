@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2015/09/19 14:51:52 tnn2 Exp $
 
 SHA1 (waffle-1.5.2.tar.gz) = 585cc87675530681b8daea645a32b590e716d2e7
 RMD160 (waffle-1.5.2.tar.gz) = 0f73fc5933e323a3237536aaba5e87b90707cdf4
+SHA512 (waffle-1.5.2.tar.gz) = 9baa8dee8467625606f4b85f2a3116ca56b0326b2ee8dfd8c7aa7210ec23e81811465f29873e6cd48f42da38e4b81f9f06248ec6e230fcca185d21bf580f8d09
 Size (waffle-1.5.2.tar.gz) = 262667 bytes
 SHA1 (patch-cmake_modules_WaffleDefineOS.cmake) = 2dc602294c6a468b954f8df00bfb976b417ad1b2
 SHA1 (patch-third__party_threads_threads__posix.c) = a439ecc2f22cc14d2c2c15c757d5ee96677fee06

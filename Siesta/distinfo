@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2008/03/08 15:32:55 hoka_adam Exp $
 
 SHA1 (Siesta-0.66.tar.gz) = 150ec5bee19ca7862c7a953fb094d0f1dc7d0757
 RMD160 (Siesta-0.66.tar.gz) = fa7c0673dd10c1fa3cff4c9479d34d552431cb71
+SHA512 (Siesta-0.66.tar.gz) = 1add0d9c9ee34e8d030ec5bf495003fd5e5b3ae73033ed70f63301d4de680c9a03d23a991d9341f090d2a5efa8816befd5b54c20d01907154b9e27d79e6f384f
 Size (Siesta-0.66.tar.gz) = 53828 bytes

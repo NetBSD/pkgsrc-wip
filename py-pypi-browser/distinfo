@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/14 14:54:29 jihbed Exp $
 
 SHA1 (PyPI-Browser-1.5.zip) = 56c8add28abd097b8df3884ade8752862bb6b015
 RMD160 (PyPI-Browser-1.5.zip) = 1a071c96dd20d38ac5e968ddc511f34ddfaddf08
+SHA512 (PyPI-Browser-1.5.zip) = 6d7dafe8c3e376f8a630680937daf1f739b017bd3a47928e993b41c9a5e0b12e6c687fb9f402eb6b6ac30106c9ff1c77014a6a21bfe4f3e162adc44a511c1ed3
 Size (PyPI-Browser-1.5.zip) = 87042 bytes

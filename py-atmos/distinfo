@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/01 21:54:33 jihbed Exp $
 
 SHA1 (atmos-0.2.2.tar.gz) = 27b711871a7ac0b39194772fb5b166a5753517ec
 RMD160 (atmos-0.2.2.tar.gz) = 082b3b7d08302e993a90bcdb52f9941a4641eaa0
+SHA512 (atmos-0.2.2.tar.gz) = 0c9451705407f9029f289a11ec6f5e8bdaee730b672ec4efe3efc86fdda3f5433b8e4b92663b8882eb986e00486d800c28022a84862d16e7b2e9f425bbf20d6e
 Size (atmos-0.2.2.tar.gz) = 27727 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/12 17:25:41 jihbed Exp $
 
 SHA1 (fastjet-3.0.3.tar.gz) = a2ff5a5026fdc0908270a27bc344fe31498fa0ee
 RMD160 (fastjet-3.0.3.tar.gz) = 43e2bccaac4a40674997d33ec73dd4806e883957
+SHA512 (fastjet-3.0.3.tar.gz) = 1fcdd0998d222ae089f10676ae1048fdce3e90f6aef3cd51463719b7ab26f8bcdd599d9521c6f9ef18e3989dbffd7f06da717ce845ab7e486a99433129b56f41
 Size (fastjet-3.0.3.tar.gz) = 2240610 bytes

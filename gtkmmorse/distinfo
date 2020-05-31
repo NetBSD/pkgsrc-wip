@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (gtkmmorse-0.9.27.tar.bz2) = 1ce2baeac661e76ef22e1eedf7c381da4eb66816
 RMD160 (gtkmmorse-0.9.27.tar.bz2) = b25a2df7713bc362c2b0db9aab41af156ab9d5d1
+SHA512 (gtkmmorse-0.9.27.tar.bz2) = b396a8188bcc79d6b9f037662469d5e6d17217ecd113aa528d8f020bc4353084fbf35ab2e2bc1a64542f5621c370204052be4553d46cf32db4c07229348abc99
 Size (gtkmmorse-0.9.27.tar.bz2) = 96435 bytes
 SHA1 (patch-astream.cc) = 4643c71ba2e6568c2fcaa0a58ed5a3f0b50f8f36

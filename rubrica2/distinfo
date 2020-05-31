@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/10/04 00:22:50 othyro Exp $
 
 SHA1 (rubrica2-2.1.6.tar.bz2) = e117b42c43e8ae5fc3e54babb6994adc913504b5
 RMD160 (rubrica2-2.1.6.tar.bz2) = fedf6cf5236acf337e7cb9f8bfd2916bb2fad66f
+SHA512 (rubrica2-2.1.6.tar.bz2) = 120d6007a6dc59e32b18b56d00d673dd8f3d2efb41508277a6672c82f28c2f8374694c7d87d9723b53bfd07e7e043de0d444899180d05dc81b936145f642701a
 Size (rubrica2-2.1.6.tar.bz2) = 710715 bytes

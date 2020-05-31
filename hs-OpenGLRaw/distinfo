@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2009/11/10 07:41:23 phonohawk Exp $
 
 SHA1 (OpenGLRaw-1.1.0.1.tar.gz) = 97ce7d7796fe6a9dfabe4a6413066aec2f46d115
 RMD160 (OpenGLRaw-1.1.0.1.tar.gz) = 219b9058f6a6f24f2bb005d777f6e72070b62981
+SHA512 (OpenGLRaw-1.1.0.1.tar.gz) = 960e2a0809cbed19708416cd9cd6af8c5a56951856da958d149083075fc6e5edc0f78817d4d293325dfa61706a4b4996a14847220f60c038bfa3120dea3ff3d5
 Size (OpenGLRaw-1.1.0.1.tar.gz) = 73758 bytes

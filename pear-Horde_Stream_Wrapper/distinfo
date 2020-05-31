@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/05/11 12:16:15 triaxx Exp $
 
 SHA1 (pear/Horde_Stream_Wrapper-1.0.1.tgz) = 13dfca69169cf2c00235a14af5d7d0d2c279b6bb
 RMD160 (pear/Horde_Stream_Wrapper-1.0.1.tgz) = 0a6a394837313803b6391b7e55482cb04b835abe
+SHA512 (pear/Horde_Stream_Wrapper-1.0.1.tgz) = 843ff4325bd973599465e951cb6653a31bbffa36ee6dcab786e7ae1ac6f1939afe29a1c2ea5a8ba85275f905abd36dc811de49c40421ae735b6de6b6890edfd4
 Size (pear/Horde_Stream_Wrapper-1.0.1.tgz) = 11727 bytes

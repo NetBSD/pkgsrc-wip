@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2005/07/06 12:32:50 marttikuparinen Exp $
 
 SHA1 (change_qldforward-1.00-1.2.0.tar.gz) = 5e00019b6516f9d83106afa028a3bfdbd405e1dc
 RMD160 (change_qldforward-1.00-1.2.0.tar.gz) = 21c29415112bfe0f52c123d34fc77e4aa35550f6
+SHA512 (change_qldforward-1.00-1.2.0.tar.gz) = f1e689694c34e1a031b059e8e9870d4a0ad528a6d4ae25bb014a2da978add79d07057651a527b31cb9775094f4b3d802ed3a08a30763a10e6b0bcc4e1af07b8c
 Size (change_qldforward-1.00-1.2.0.tar.gz) = 4515 bytes
 SHA1 (patch-aa) = 0bb30e7f72052e2f1294a0350cf0e5ba72f1c3c4

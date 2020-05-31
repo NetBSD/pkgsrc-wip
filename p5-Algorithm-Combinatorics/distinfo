@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/04/11 14:22:40 bubuchka Exp $
 
 SHA1 (Algorithm-Combinatorics-0.27.tar.gz) = c219a1b3f11d8fb32e42bf994d0bf8b492c6b931
 RMD160 (Algorithm-Combinatorics-0.27.tar.gz) = 6e6b5480aaba4966cd60971cbd39fdfef06cb194
+SHA512 (Algorithm-Combinatorics-0.27.tar.gz) = 0140c9ec790ae15dbaed4bc634cef0a418815a3b9745ffcd04754d22fef076e88df9a105908183f48a8da4a9403b1af84b7d29ac98e0bdefe92cba72c03d8854
 Size (Algorithm-Combinatorics-0.27.tar.gz) = 17548 bytes

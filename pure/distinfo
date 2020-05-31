@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.5 2015/03/04 18:31:09 tnn2 Exp $
 
 SHA1 (pure-0.64.tar.gz) = 738d25de30a20bbdd0722aeb923d6be9051b730f
 RMD160 (pure-0.64.tar.gz) = fa5d57b94fad999ada281edaf30db4212a0a28ae
+SHA512 (pure-0.64.tar.gz) = c29994263c52889be5cd89a467986d522a3e20c10385d1a268f1ed4cb632b4fef624d2e18b8857d04f930449f96966478c7982f91fca76cdb3e0efef2c584e27
 Size (pure-0.64.tar.gz) = 1491066 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/04/14 16:07:05 jihbed Exp $
 
 SHA1 (pyvib2-1.1.tar.gz) = 18f99b223fe30d0c5f2e2ab3daabaaf87f405dfe
 RMD160 (pyvib2-1.1.tar.gz) = a3059b31ee0ae3baeb795d7e423ba1e06cfd2847
+SHA512 (pyvib2-1.1.tar.gz) = 5e2803ad01c6f9a68a28753f417daaff109ba788f5a1ceb10dd4509f93bcd09a7ac2038858c873860661f57f11e9e4bae71032b00aa3f86f292fe8d4c3c1229f
 Size (pyvib2-1.1.tar.gz) = 735372 bytes

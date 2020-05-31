@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/04/10 18:28:22 angelmm1 Exp $
 
 SHA1 (locustio-0.7.2.tar.gz) = e0bdf624d6dc18c355c9dd41b6733cec8be6fcb4
 RMD160 (locustio-0.7.2.tar.gz) = 5c813094017d80d6812e1300255abe1948d210e4
+SHA512 (locustio-0.7.2.tar.gz) = 12a92865735714ce4cea7dc6ba48091fde42c83307e1693b8a899fdbf7f441dcf583b2f39f77c97d0b1df86364869369e72f8be85d58613fb4d42e5685d0653d
 Size (locustio-0.7.2.tar.gz) = 88889 bytes

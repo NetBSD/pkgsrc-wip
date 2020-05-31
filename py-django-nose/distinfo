@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/01/18 07:14:42 noud4 Exp $
 
 SHA1 (django-nose-0.1.2.tar.gz) = d86714ca26c5ac8584424a07ab481bd70f63a28e
 RMD160 (django-nose-0.1.2.tar.gz) = 0ae85d2ba9bfc6adc56df2f0813dc1fe0138ca20
+SHA512 (django-nose-0.1.2.tar.gz) = 2d11cdb13ed6071c589ef6fff61b617465a7b95a807cc7e03552d719e7f08c388fc622c4cc7a17f2ba6741e855e0c98b73cc85b79ba96eb2379172253ab4fb80
 Size (django-nose-0.1.2.tar.gz) = 7014 bytes

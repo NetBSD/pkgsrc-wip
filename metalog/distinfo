@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/06/19 22:21:20 hisazumi Exp $
 
 SHA1 (metalog-0.8-rc1.tar.gz) = 0c704ec61ebb799a1826116207d2ac5945d50192
 RMD160 (metalog-0.8-rc1.tar.gz) = 29747402e79fdbe73a1880c792d62af534d407a4
+SHA512 (metalog-0.8-rc1.tar.gz) = 8acec5fc96d474df82cf4d777be83c8c96ac0921c19a2d6f7c1e03101c6d5e839d57e2fb4e85c2512ed0b1d19a7a31ab60e9c25db00b42d8c0c063001c1c731e
 Size (metalog-0.8-rc1.tar.gz) = 121744 bytes

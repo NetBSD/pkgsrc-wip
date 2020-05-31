@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/02/16 15:23:40 jihbed Exp $
 
 SHA1 (SimpleParse-2.1.1a2.tar.gz) = d5c53e57eb90cfa32be30799b52857b4ae3f158f
 RMD160 (SimpleParse-2.1.1a2.tar.gz) = 3edea7ddf714d77549785b4f64f94001eac1ce45
+SHA512 (SimpleParse-2.1.1a2.tar.gz) = 8a690a2ea6611ec720c45cc24d353d08c4ccdb69a90af256056a32efcc4d83f58acef34ffb7a5a9934402e386d34dca8d372dd26663256abe0f292c5bfab0da0
 Size (SimpleParse-2.1.1a2.tar.gz) = 207821 bytes

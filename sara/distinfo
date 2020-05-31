@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2007/11/27 14:21:39 netcap Exp $
 
 SHA1 (sara-7.4.4.tgz) = 670169fdde76c13a5ff0aa0cfab95eb101bc3eae
 RMD160 (sara-7.4.4.tgz) = bd5784255df0630fe27d77aeeda2e30a26c2caf2
+SHA512 (sara-7.4.4.tgz) = 9e0825d8a22009a1e7441a8adc874f176ca36703a8ae3cddf6509e547eec913903dcc5853e353b98874f279fff596d1e9ef537d6b98b34d3e997c5b610f3a431
 Size (sara-7.4.4.tgz) = 6520435 bytes
 SHA1 (patch-aa) = f7326224bbb65f182cdfa0d4efc74215a82879f5
 SHA1 (patch-ab) = 9079dbb6a2fafe5a309c48ae170a82b1b69b5c0e

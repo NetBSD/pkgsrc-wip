@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2005/07/25 13:41:54 thomasklausner Exp $
 
 SHA1 (rezound-0.12.0beta.tar.gz) = 0c558ec6fd0df399d1c25f578d14d5ddd765f9e1
 RMD160 (rezound-0.12.0beta.tar.gz) = 48a95822509c785ef540db72d5abdff2cdd8c4d9
+SHA512 (rezound-0.12.0beta.tar.gz) = e645e4c9dbc1db207194b3f55256fdbb266d75bcccf4d7e00ff2868876b155ec600664cfab0feb6fae9783d44a3f0f937f0266a9c1da89a8922423060177b28d
 Size (rezound-0.12.0beta.tar.gz) = 1784776 bytes
 SHA1 (patch-aa) = 969ba056340489da418502fca2fadc63144086d9
 SHA1 (patch-ab) = acaad5a5c20ce5d724cdc36365276d1d864a7ab2

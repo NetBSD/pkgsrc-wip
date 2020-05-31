@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (twemproxy/v0.4.1.tar.gz) = 22a9fd4711dc682b9fde7c97b9fd7bc5525599ad
 RMD160 (twemproxy/v0.4.1.tar.gz) = b7366683eea156fe1cbc714f41271691bb656f62
+SHA512 (twemproxy/v0.4.1.tar.gz) = 581fae1d12feb983ed25b22cd6f597fd28b7070906ac29d3990669ae5c626a468914021cee152a6a2299a2838c838ad907e4c911b911ef04166ac7bbb2982da1
 Size (twemproxy/v0.4.1.tar.gz) = 1163442 bytes

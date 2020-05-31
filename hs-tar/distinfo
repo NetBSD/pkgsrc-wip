@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/05 03:10:15 phonohawk Exp $
 
 SHA1 (tar-0.4.0.1.tar.gz) = 4feb4329e2d9213a2f0198d21cf29865995ee098
 RMD160 (tar-0.4.0.1.tar.gz) = 87de253e69a99f6b6823944c1f2bfe93a182dfbf
+SHA512 (tar-0.4.0.1.tar.gz) = 7cb042f77dc70b856b4dfd5d0a06620f669f9260a84800ad27e1803ec24a50932bb3775b35a6cc91cefb30ea4cd2b453dd6566007d586327acea0edccc0dee47
 Size (tar-0.4.0.1.tar.gz) = 17875 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (mod_macro-1.1.5.tar.gz) = 8a3d76a6b76369f52c546794f45270d80bf2e945
 RMD160 (mod_macro-1.1.5.tar.gz) = 0eb2face3cf846fb82f96181fd31e859fd9b5bad
+SHA512 (mod_macro-1.1.5.tar.gz) = 34ae08b574093176134de37c4cc42cf6b93372d1076baf13a2c1689367678c7d512a482f00897e4fe62c9f5927d9799a75275d1f4945b207b0e5248516adc815
 Size (mod_macro-1.1.5.tar.gz) = 13273 bytes

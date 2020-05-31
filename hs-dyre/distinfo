@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/07/08 10:10:44 phonohawk Exp $
 
 SHA1 (dyre-0.8.6.tar.gz) = 21b86b8a2fb9051baec10fb8120e5ad11608013c
 RMD160 (dyre-0.8.6.tar.gz) = a375e884ee34af88382d3b5dbc9256867bca8e62
+SHA512 (dyre-0.8.6.tar.gz) = 1c2e61b8f048a0de42fdd1dffc40fb7ce48ab839d64110fb4b0aeea75e5448c741b529e9e81a3369ee64574cec38b128be36d64ff198efbf13224806f15e0c33
 Size (dyre-0.8.6.tar.gz) = 13008 bytes

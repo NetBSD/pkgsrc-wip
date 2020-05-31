@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/13 12:16:46 phonohawk Exp $
 
 SHA1 (stream-fusion-0.1.2.2.tar.gz) = 634deb9d4780ab2d35eb7d90013e04991f79ddcb
 RMD160 (stream-fusion-0.1.2.2.tar.gz) = 6e2ac9a95b603c2b1473563bf31a40e784501e3d
+SHA512 (stream-fusion-0.1.2.2.tar.gz) = 31f8dc14d6b0c157c1fa0a035276bce6eef04fc2801138bfdc5714cb25c3ae93539c83b4a10b46f6008a196ae62e59a152156504ea034818241b2f3cfaa74979
 Size (stream-fusion-0.1.2.2.tar.gz) = 189589 bytes

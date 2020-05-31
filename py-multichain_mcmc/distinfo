@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/23 09:53:08 jihbed Exp $
 
 SHA1 (multichain_mcmc-0.3.tar.gz) = 3f57568c3070924c047e2aa78b103096f1912216
 RMD160 (multichain_mcmc-0.3.tar.gz) = e671b019c763a6d13445d1053321fa68bb979b7a
+SHA512 (multichain_mcmc-0.3.tar.gz) = b2a8aeacd7ad67008d771273aa9d349051cc4b961597b9817ff03a33ba6e8b9c759e6ba96e604e76d37124041e367a436997cb6f3b6307ce12bb4ebe0b590d86
 Size (multichain_mcmc-0.3.tar.gz) = 3898686 bytes

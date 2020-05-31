@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2013/05/17 18:06:17 shattered Exp $
 
 SHA1 (AcePerl-1.92.tar.gz) = 2d6d09f18a17737eb6170da5e261d6eb35770fcb
 RMD160 (AcePerl-1.92.tar.gz) = a4be784b35f739f62dd170a89e92682fe80d100a
+SHA512 (AcePerl-1.92.tar.gz) = 0db8392336dd48c58bdaf8d8d9ac6d1106124259f27fa95951aa8d496014e1e8b89ed87f6df276473e3bcb44a8d323f864178a9b84dd1e787d614bd0b8e93be9
 Size (AcePerl-1.92.tar.gz) = 300163 bytes
 SHA1 (patch-aa) = 5e946b20422c2cf1d0694b192083fb14a092ec41

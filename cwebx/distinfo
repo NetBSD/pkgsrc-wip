@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:07:32 jihbed Exp $
 
 SHA1 (cweb-x3.5.tgz) = 3ae914130aaa0f9ef37176b2ae7089d1307344a6
 RMD160 (cweb-x3.5.tgz) = 1adc9d77559ff34315917e4e9ded8d51a3af3a1f
+SHA512 (cweb-x3.5.tgz) = fb03a9d2ce6873a47ac80ca4be0021cd718823e3dc9284d5f220cf124f16c78ad60470810d9802ef5b372c684cc3a648b11152a14b37257de164fa13abb94d65
 Size (cweb-x3.5.tgz) = 250986 bytes

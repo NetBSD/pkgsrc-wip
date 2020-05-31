@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:42:40 jihbed Exp $
 
 SHA1 (ThePEG-1.6.1.tar.bz2) = e8f2a0bb418c8c3cb62fcffe8c5d621ca8fc8664
 RMD160 (ThePEG-1.6.1.tar.bz2) = aecd45b2acd5e782c043b79ddeff4d8dea347f2f
+SHA512 (ThePEG-1.6.1.tar.bz2) = 130bccfe8e863acf33f174b3b54b1a3488058f1bbf242b30f76042acfdf8001d7e844982656fa71c72b94d9dca65fff996c491ec66d1ab9b5eae6a0ae8e46c79
 Size (ThePEG-1.6.1.tar.bz2) = 996106 bytes

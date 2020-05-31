@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/01/03 22:19:21 jihbed Exp $
 
 SHA1 (processing-0.52.zip) = 242cd025d80a5e077de01676465f6b8582222bf4
 RMD160 (processing-0.52.zip) = c04aa3ce3bf5534fa9d98dbfbec8c0ee0cf3fbd7
+SHA512 (processing-0.52.zip) = ce5244eefe1bed629afddf2309ea61f44a2a5fe913b97032752ecd92e58add278f7bcf02c5dc9e1985720ceaaa2e4d547f67e9b018313a26ca084c2a86f0efb3
 Size (processing-0.52.zip) = 178013 bytes

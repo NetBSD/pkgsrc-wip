@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (TleenX3-0.1.tar.gz) = 5224e942dd41feaa985109d420be4607bbe43276
 RMD160 (TleenX3-0.1.tar.gz) = 7bffa793b703c7d92df64b7cc512cda86689842a
+SHA512 (TleenX3-0.1.tar.gz) = 8ba124d5a897d418130d4acdfb2807757d18b8ed7c0f9609b399e440aa8fca33d4e7aeb1166407b90f8dcd36d9b3798cb7d7da898639b824d1a44316bf3f2688
 Size (TleenX3-0.1.tar.gz) = 197445 bytes

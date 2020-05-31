@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/08/25 17:16:29 jihbed Exp $
 
 SHA1 (AeroCalc-0.11.tar.gz) = 91dca8c6a3b2ce25535b58cef1b82e122cabfbe4
 RMD160 (AeroCalc-0.11.tar.gz) = 1c95ee065041abdae5cbfed68db4e41608e29111
+SHA512 (AeroCalc-0.11.tar.gz) = 57d9f25de9eafdd0c88ad2e05f8dcaa164493e66ddd33801d72d54c0971faa8b2c29537caa01d40a268f9033cd9cb9263c30c33e6fbfd512f4855dbc62c5e3b3
 Size (AeroCalc-0.11.tar.gz) = 42472 bytes

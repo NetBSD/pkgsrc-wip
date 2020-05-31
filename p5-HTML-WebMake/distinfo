@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/03/25 12:43:04 cherrymathew Exp $
 
 SHA1 (HTML-WebMake-2.4.tar.gz) = d6b88ea25ff6d974fd27433891c0b0aa872c552c
 RMD160 (HTML-WebMake-2.4.tar.gz) = 87aca8df0cc365e49c3b7dbb1016d73eda23d516
+SHA512 (HTML-WebMake-2.4.tar.gz) = fd17d69a0665f4bff9c7569217b52abc1133d35f8376dd4419a753f327ec0d5530873c8aa3f57420568f9ce11528d91f869137473ebbbda077bd4ae1533f7f03
 Size (HTML-WebMake-2.4.tar.gz) = 614008 bytes

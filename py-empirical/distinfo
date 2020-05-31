@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 23:55:55 jihbed Exp $
 
 SHA1 (empirical-0.2.tar.gz) = e585cb71c552a2b8928003fa54d0ce7e1a55780e
 RMD160 (empirical-0.2.tar.gz) = 2322a78a9f5300d504145a48226f415e6b731e18
+SHA512 (empirical-0.2.tar.gz) = 68641bfb75a2dcf74c244dd1c489c279e58ac8315cf56568bdade73b73130b301da6e9a4136c347be1c7e7a39ede46ea416ac5fe2546c21601424cdbb26e710f
 Size (empirical-0.2.tar.gz) = 59247 bytes

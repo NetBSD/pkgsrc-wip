@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/08/06 21:40:27 jihbed Exp $
 
 SHA1 (msdas-0.0.1.tar.gz) = 8c29e2bc3c24397e903a4c20379a18b2561a8db8
 RMD160 (msdas-0.0.1.tar.gz) = b7cad6efad69be037e5281c30c51ca3b2d320c45
+SHA512 (msdas-0.0.1.tar.gz) = 4fc5f3d015cd522dde2084c0fde49c54436ac379f61a31e73f7f5b96c7d7c8337a9315128b9fab08327b0c9f20af9a6c1054452a052a1c9439b59586712feb8e
 Size (msdas-0.0.1.tar.gz) = 102943 bytes

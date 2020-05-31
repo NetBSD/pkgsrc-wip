@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/11/17 13:48:03 yhardy Exp $
 
 SHA1 (xine-plugin-1.0.2.tar.bz2) = 57a9f6368a72c3f08623cff11876a1d0e8f611c0
 RMD160 (xine-plugin-1.0.2.tar.bz2) = eb62d4290229d7f25be71ed2787e6e6157b207db
+SHA512 (xine-plugin-1.0.2.tar.bz2) = 457a55e813720303b7118853a324a930170e15e587d2c3c475fc470b1f95cfd29d86340d35da4de8121bfea926a81aaf55102e0ed29846f3f15e9e8a07ebf1ef
 Size (xine-plugin-1.0.2.tar.bz2) = 583971 bytes

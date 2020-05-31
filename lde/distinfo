@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:24 rillig Exp $
 
 SHA1 (lde-2.6.0.tar.gz) = 9a946f8f2f3bba0de17db5c2dff83c3e7ad5de0e
 RMD160 (lde-2.6.0.tar.gz) = 472f2e07171aad94a9ee81b6ecf91f05837597db
+SHA512 (lde-2.6.0.tar.gz) = ca4092eaa84fb93a4ef5aa7d5306469dbf83a23239d9c6c70abd810bc2921f69272b58159e6e540b4c44d280c18a18c1d30830c0b32eeb91ab10207b188092bf
 Size (lde-2.6.0.tar.gz) = 436665 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/04 22:44:15 jihbed Exp $
 
 SHA1 (cliff-1.6.1.tar.gz) = f6acb625a78cddc1c072341fa4e36fe854c5abf9
 RMD160 (cliff-1.6.1.tar.gz) = 117f8edb7917fb711213da396ed33b4c09f49d3f
+SHA512 (cliff-1.6.1.tar.gz) = 02a870e3f1ccbde419c6f74d9daaae964b4013bc1e5d043231a71156539fc7ea4887fd1e97ec59bd95031087f210c5e2c9f08334ba051d3e75771a296016c217
 Size (cliff-1.6.1.tar.gz) = 43250 bytes

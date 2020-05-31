@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2009/02/19 16:13:39 fulviociriaco Exp $
 
 SHA1 (autopsy-2.21.tar.gz) = 083f6e1794e19ad07989d088a35da16e9418c83b
 RMD160 (autopsy-2.21.tar.gz) = d9b0c5c16c2462997cfe217211f46e1e75464204
+SHA512 (autopsy-2.21.tar.gz) = 4f3b405280fb8e5c552d87d2c9a769f434dd109e5fa54f11a44a2f3e0ea8a2ba269442f144d33242d81f383c4964cd94a5f90b3517a4a478076fe8a53b9012c9
 Size (autopsy-2.21.tar.gz) = 387288 bytes
 SHA1 (patch-aa) = 3424de10a05ff359b4e0d17274e6c964064ebcc5

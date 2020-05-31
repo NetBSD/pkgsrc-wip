@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/04/08 22:03:29 bubuchka Exp $
 
 SHA1 (Math-Gauss-0.01.tar.gz) = 878d0696d9ea93664f67272d4b0aefaa1899ad89
 RMD160 (Math-Gauss-0.01.tar.gz) = 2d705ad86c7e1be7a1ad98eeceba4bbed1cc6183
+SHA512 (Math-Gauss-0.01.tar.gz) = e382c511084a910b992c5d87aa80d86a7fa0b265807cf351ee731069ed20002d5c4658a133bf490eb50ff890b3fcc9f491014b1b136f7a7a4f839bac68f4371f
 Size (Math-Gauss-0.01.tar.gz) = 5546 bytes

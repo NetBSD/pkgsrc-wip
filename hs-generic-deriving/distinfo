@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/09/28 01:39:17 szptvlfn Exp $
 
 SHA1 (generic-deriving-1.6.2.tar.gz) = cd32777e2367bebf4cb5d454ed0d3d7381f985fb
 RMD160 (generic-deriving-1.6.2.tar.gz) = f82d2826c047f624ce64d92e5c0b0c50464581c8
+SHA512 (generic-deriving-1.6.2.tar.gz) = 37ba2fe042f8e8c3c77ad9722dfd6a697698c5f421cbb1db9ba2bb793a865e0aedd18f86d7d1eac9e611fbac4e82bb5903b2be1f7f79532949debccaa5dc65c4
 Size (generic-deriving-1.6.2.tar.gz) = 25264 bytes

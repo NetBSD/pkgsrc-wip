@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2006/11/25 16:22:48 shattered Exp $
 
 SHA1 (l2tpd-0.69.tar.gz) = 09cbbc63ce0f644805ecc50c943e144351941f88
 RMD160 (l2tpd-0.69.tar.gz) = 62c4b787c52822882611f5eb65af4a58be3b0b9d
+SHA512 (l2tpd-0.69.tar.gz) = 15b926d987f135e3af9ae32464437a4ca30a3b333b7cbbb7deff6f7959dd32fceee1f21391e38ba00c145727edac823e77eba0e8f31e9150c682cb81a2083bce
 Size (l2tpd-0.69.tar.gz) = 127693 bytes
 SHA1 (patch-ab) = c930a12945aeb03aaaf340d4e023fd2167b13032
 SHA1 (patch-ac) = c97c8691842093d38a6e9b3fd1ee182762afca80

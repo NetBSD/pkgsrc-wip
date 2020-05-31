@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2003/10/05 19:06:39 adrian_p Exp $
 
 SHA1 (smtprc-0.9.7.tgz) = 4cca603733626d73f93a4221d490b8ae8d167017
+RMD160 (smtprc-0.9.7.tgz) = 424a1c0522a2aff4f3d4d3249f014acba66380eb
+SHA512 (smtprc-0.9.7.tgz) = 9c889b70935e281cfd7fbffa13d2a33aa2d033dbc1398455a5c2df586ef09ac771eb2e6c5f9b92c9143f2b2dd0acf3fdf02fcafb3b6172298f9b2eefbacef0ca
 Size (smtprc-0.9.7.tgz) = 41581 bytes
 SHA1 (patch-aa) = d5af3b2e50ec37517f42ef5cab537ea99f8f6973

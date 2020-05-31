@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/09/19 23:28:41 jihbed Exp $
 
 SHA1 (jsonrequester-0.1.3.tar.gz) = 480e0d9f72d143347eacf4d328b34676b3889654
 RMD160 (jsonrequester-0.1.3.tar.gz) = d32a40573c76d7f89eb66ca3e4b1c32e61111f73
+SHA512 (jsonrequester-0.1.3.tar.gz) = a54a5eb7a189c3531e7cd914fe6b9b139cc6d5c78b856fb4aa9c66d50df8a44731ece07699e5a226dcc9950f4923f1dd2ed91e92611ac0a935ff4160ba3bba2c
 Size (jsonrequester-0.1.3.tar.gz) = 2577 bytes

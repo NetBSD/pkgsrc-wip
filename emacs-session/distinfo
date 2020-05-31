@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/09/21 04:42:53 phonohawk Exp $
 
 SHA1 (session-2.3.tar.gz) = 493c70b282c38758a074fd610d287adf7fafbaf1
 RMD160 (session-2.3.tar.gz) = 3f9491a428949ef6e21d7a54edf8870e23b369f5
+SHA512 (session-2.3.tar.gz) = e4d419780bc156706796816e6db2b7f6ea2afe9d942ef79b8c5b05e6612111c071352bf6ed48457a5a9318894d8edb660b861753bd9341de835482bc52def89b
 Size (session-2.3.tar.gz) = 25838 bytes

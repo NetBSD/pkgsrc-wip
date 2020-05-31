@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2013/05/28 18:27:23 slitvinov Exp $
 
 SHA1 (Sumatra-0.5.2.tar.gz) = 0c7defc46dee3e05a55c4b032389ec42b191279d
 RMD160 (Sumatra-0.5.2.tar.gz) = c1fcf99f4a8cd104459dddab4b76e7fea6f42faf
+SHA512 (Sumatra-0.5.2.tar.gz) = c628781e9d7c81e1daa465079eb898c0e30269a18b0c53bd1482dcef6c19aad771763f2ae9f7613b23336fc98a7c366a31f76a11cfa23ed5a4b12dba1bcb10c5
 Size (Sumatra-0.5.2.tar.gz) = 1459543 bytes
 SHA1 (patch-setup.py) = ababcc59c904b6bf347ba03567c55bfdea2a6b12
 SHA1 (patch-test_unittests_all__tests.sh) = 969378fd397407fb37ac00ccc411746a4fc2d96c

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2007/08/23 13:45:53 bubuchka Exp $
 
 SHA1 (xmlformat-1.04.tar.gz) = 405057df0b8160775d486b671348820359b4b85d
 RMD160 (xmlformat-1.04.tar.gz) = 320ec471367c5679a2f1698eefb904994eaea1a8
+SHA512 (xmlformat-1.04.tar.gz) = e45471accf0c04e016d3a9a5bbc2f984a9a76e1d5406a80300bf9da9d04bd78b67716055271923669462b70a1713b94a1e1937318115dfd9eb9d258b69a3c14d
 Size (xmlformat-1.04.tar.gz) = 156498 bytes

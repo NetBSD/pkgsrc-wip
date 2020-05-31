@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:58:14 jihbed Exp $
 
 SHA1 (rdopkg-0.29.tar.gz) = ad4e75fc5bdb35b03af454d9b94552a13b286980
 RMD160 (rdopkg-0.29.tar.gz) = 666f1c25e759692dfc0fe63bd5a9da9259d80202
+SHA512 (rdopkg-0.29.tar.gz) = b160c2083e16b00a830061a8884cadb03e3115f5dff0c129f326c9a1065993df8d6c0a7928add5f9c2d10e4b195713d4d5696c28700ae8a222a4fb43b6bf8049
 Size (rdopkg-0.29.tar.gz) = 97991 bytes

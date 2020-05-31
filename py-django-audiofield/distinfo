@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/10/04 00:27:48 jihbed Exp $
 
 SHA1 (django-audiofield-0.4.6.tar.gz) = c75a083283aa32e9c7344902f347675da6ec8fec
 RMD160 (django-audiofield-0.4.6.tar.gz) = cdd112718da20fd5b98b4cefc07e4ed21c9d8a9b
+SHA512 (django-audiofield-0.4.6.tar.gz) = 23cde79d03c565904c611dcaba4df1fef85726edd816418069429d469964228757ec077d5470c7ce636acf632027c7a68e20aa8b824bfb48d4350626a85edaf4
 Size (django-audiofield-0.4.6.tar.gz) = 1149341 bytes

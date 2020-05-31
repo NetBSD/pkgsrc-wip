@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/08/31 21:33:51 jihbed Exp $
 
 SHA1 (neurolab-0.2.3.tar.gz) = b3ce80951a89d15b6326a71fdf921b5d2833ffc4
 RMD160 (neurolab-0.2.3.tar.gz) = 53a78abedee500178c8cc859a5dcd7c1a2a06624
+SHA512 (neurolab-0.2.3.tar.gz) = 382e96ad164a176a83273fd4b2049047fd0d097cad7677862621f67d14acf37586d03661d0f443efd3aa416b3469be315f676329e2418703d3ad90afa26ae9a4
 Size (neurolab-0.2.3.tar.gz) = 658507 bytes

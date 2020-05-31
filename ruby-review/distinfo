@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/11/16 02:37:45 makoto Exp $
 
 SHA1 (review-1.4.0.gem) = a69faf9b166a29da12911630ab2766e293e33be9
 RMD160 (review-1.4.0.gem) = c34f7febbdbd807ecab8df8fc0a5a81cd74e4154
+SHA512 (review-1.4.0.gem) = 1b41be587b2ba2d7151492fa8f00860ed89dad21888084fc912eea084b6d1e4c30e4e922aca11ee094582a3c9b065fb34a531cad1fc2612d628e0138e4751e79
 Size (review-1.4.0.gem) = 340992 bytes

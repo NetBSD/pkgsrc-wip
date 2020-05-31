@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/17 21:51:10 jihbed Exp $
 
 SHA1 (qeutil-0.1.7.tar.gz) = f5c18868927c2d5795ad35394492698a519ef00a
 RMD160 (qeutil-0.1.7.tar.gz) = c13357a845442a7d41bb56f43e8a253b562cadc6
+SHA512 (qeutil-0.1.7.tar.gz) = 3451d034534cbbdd18253183e1c3dde07d8961800316c801cf981ebce923a9f41da23b95e96757ed90d0aa1532790bff9a922c71d7445d0b8676d085ebba8984
 Size (qeutil-0.1.7.tar.gz) = 35588 bytes

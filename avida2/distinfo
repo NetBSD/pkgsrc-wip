@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2013/01/20 01:10:40 othyro Exp $
 
 SHA1 (avida-2.12.4-src.tar.gz) = 9d91eeeb4433f749cc85d69bc555e2c745f4ef5b
 RMD160 (avida-2.12.4-src.tar.gz) = d33df4e9dc7e46f04a30479a4185430ca57824be
+SHA512 (avida-2.12.4-src.tar.gz) = ca9b5f1c63b5a100c2ba179714dfaa6eeeb55858f7f0413f2e36928fa4f595b882779953174fb3d08159ad51adfb4ae7f3165d59126f1a08979b67bcc9117fe2
 Size (avida-2.12.4-src.tar.gz) = 7754659 bytes

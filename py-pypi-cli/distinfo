@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/14 13:24:00 jihbed Exp $
 
 SHA1 (pypi-cli-0.4.0.tar.gz) = 51d272f3d228a70eb58cc8ba6988246c61fe4632
 RMD160 (pypi-cli-0.4.0.tar.gz) = a8f731b0163aa91095a9bad20c23cbe8a89b556b
+SHA512 (pypi-cli-0.4.0.tar.gz) = 13acbc6b341d9e8377d3ac191e4e394b9ff30708006e9ed894fcf7f1a0e90d7d229ffd832592b679fcf95c9f34a5518e2e1283862f0b9de207881d9f2011331f
 Size (pypi-cli-0.4.0.tar.gz) = 9948 bytes

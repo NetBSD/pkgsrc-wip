@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (xinvaders3d-1.3.6.src.tar.gz) = 680c81416f25548e373fdaefa1a8eb71112e049d
 RMD160 (xinvaders3d-1.3.6.src.tar.gz) = df7174f8ca1a74407462e9fe573ab35aa0ef8ca3
+SHA512 (xinvaders3d-1.3.6.src.tar.gz) = 2d6cda7a28833f5eb958fa9f008872548dd39383faaee928c4a387d7ece14048ee658e2ffd0523aa74d8d40c8f4a5ea2c8d387f34a0a757892e326536ea09018
 Size (xinvaders3d-1.3.6.src.tar.gz) = 37124 bytes
 SHA1 (patch-aa) = 1503ff3f203f50f4aa8b761deb068eda5fb59afa

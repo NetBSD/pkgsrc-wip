@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/28 20:20:37 jihbed Exp $
 
 SHA1 (cerridwen-1.3.1.tar.gz) = 4694eb237d62a4b0f434d9069eca7217d9f5fbf0
 RMD160 (cerridwen-1.3.1.tar.gz) = 80ead436309d962ac8116d7aca311191e9ffafa1
+SHA512 (cerridwen-1.3.1.tar.gz) = 0f7b5ac05a8318f976eebb2f070d525ac9157b0946882e258e556d76eb596e228856521c9688d4373de09da076cfcea4100d5bcdbd9bd36e84aa8482365f8617
 Size (cerridwen-1.3.1.tar.gz) = 34591952 bytes

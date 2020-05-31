@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/03 14:57:45 jihbed Exp $
 
 SHA1 (libslab-2.30.0.tar.bz2) = 3da745a8a3a86c16a8d4529c7586446533e67f47
 RMD160 (libslab-2.30.0.tar.bz2) = 5d4748a0d46fd1159045c6f6cafce93863ca3182
+SHA512 (libslab-2.30.0.tar.bz2) = 44a9b0a19e059f107d219d56da06a20f5aa21d9e3e2b02690805ffa237122d6777a5d53e0207381631fa27d0174b90c8e76e3fe26b97e431cfdcf2081fc27128
 Size (libslab-2.30.0.tar.bz2) = 435384 bytes

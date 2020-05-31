@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2009/10/11 10:26:50 thomasklausner Exp $
 
 SHA1 (exact-image-0.7.5.tar.bz2) = 9e0a57df673ffa3b97dd858935c9f0732f09cc82
 RMD160 (exact-image-0.7.5.tar.bz2) = ec83a3f124ac0e6dc7d2724fdf9d2e5c77893227
+SHA512 (exact-image-0.7.5.tar.bz2) = 216e67cacb3d0dc3820914d5da295a25599193b3c121d03551f43d652936dfdb46f5903b38d6162bb1f268d6eda9ed9d62228a61df082fba71d5bdc6ce3bc313
 Size (exact-image-0.7.5.tar.bz2) = 532314 bytes
 SHA1 (patch-aa) = 84bd6b6041db9ac8b6e350ec3f05eb96d594e5b7

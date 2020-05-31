@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/03 13:16:17 rubengonzalez Exp $
 
 SHA1 (ssid-0.1.tar.gz) = f73e203aa6105b1288376758b7ced16f1cad4306
 RMD160 (ssid-0.1.tar.gz) = f9522f3817239a4ca816a72c0347314f0ec579b4
+SHA512 (ssid-0.1.tar.gz) = 649dc62b1953caf983796fd8ae2981856439452b1bb1a6f1dd86dbe13a31e185362320ff15187c94edec8b0b73ee370da3fff0fec064dfc4f7a01d07a4c09c24
 Size (ssid-0.1.tar.gz) = 2072 bytes

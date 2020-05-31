@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/03/11 08:38:37 phonohawk Exp $
 
 SHA1 (ghc-syb-utils-0.2.1.0.tar.gz) = a07b1957a93f1b3d993395f40d919de47a644f72
 RMD160 (ghc-syb-utils-0.2.1.0.tar.gz) = d100bd141290530bb77a04b2b1946294167e2458
+SHA512 (ghc-syb-utils-0.2.1.0.tar.gz) = 3ffad9726d70aac64a1e852cc104b27f11d9fbd3d1f553079767a926c5d18241beac1d0d8dc6f7df47648fc92f46ddf00644c99390793462482bda3afec3b689
 Size (ghc-syb-utils-0.2.1.0.tar.gz) = 3799 bytes

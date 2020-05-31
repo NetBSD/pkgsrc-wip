@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/10/19 21:45:49 othyro Exp $
 
 SHA1 (tkpng0.9.tgz) = 9389ed9f61377a745b00c4e35c087ceaa0c3b19f
 RMD160 (tkpng0.9.tgz) = a3196300450074e5ae49eee567145e8327e0edc9
+SHA512 (tkpng0.9.tgz) = 7f832ec19b53ba0f98d3db24d7b7106ae9bb6983d46ee33c46e90a1b152646f2a99ea417c9c6f9bed1f2859ef509510b531d26b3bb81f20d4e291ea1092896fb
 Size (tkpng0.9.tgz) = 127804 bytes

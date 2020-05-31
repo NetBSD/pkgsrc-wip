@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/11/09 18:17:08 jihbed Exp $
 
 SHA1 (pyraphrase-0.1.tar.gz) = 7ae26e6433103f3f8ad648d9c822755a2cc707db
 RMD160 (pyraphrase-0.1.tar.gz) = 9be03a1ea86f1a1792bcf13a32bb9fcee476aa61
+SHA512 (pyraphrase-0.1.tar.gz) = 5238d09cbc7ccd339441c93d055728f7984b242fa5231954233bf06469a7e7378279be54973953fb86421277bf0e377c3108e4f97fd7c7ce18e3edd1426c187f
 Size (pyraphrase-0.1.tar.gz) = 3626 bytes

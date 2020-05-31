@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/22 13:23:48 jihbed Exp $
 
 SHA1 (probcons_v1_12.tar.gz) = ee6ce81777c9ce366f575ab4096ff07f39af9829
 RMD160 (probcons_v1_12.tar.gz) = 4d7d9a89c2c95f22056719c8349216ca1ba635c9
+SHA512 (probcons_v1_12.tar.gz) = ce061ea5cca4204d6e66beb893c1ba508f094b7ea3ee08196dc75a5443ebd0afca14dc8d7cd6c8da4ce1578b8750ea1981e5815408c0b122e8f97ec27b3bf008
 Size (probcons_v1_12.tar.gz) = 43200 bytes

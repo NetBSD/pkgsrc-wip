@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2010/03/17 20:12:09 jihbed Exp $
 
 SHA1 (clipboard-daemon-1.0.tar.bz2) = c728893040ae4ab01014e61bd053f2f0d1a92a8e
 RMD160 (clipboard-daemon-1.0.tar.bz2) = dc8342b02066ae2a3868922d66fb8ad0ead69f32
+SHA512 (clipboard-daemon-1.0.tar.bz2) = ae1df87765336c2ced4aaf1e6d8d37d345b625a31ddd3f5eb4c4b696365b11305efd0fdb2b4e813a3116d95b161d2d296c9b58e132f7ce78c970b754edde4fa4
 Size (clipboard-daemon-1.0.tar.bz2) = 2971 bytes

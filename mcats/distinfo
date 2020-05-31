@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:29 rillig Exp $
 
 SHA1 (mcats-0.1.0.tar.gz) = a984acbcb302ae189175d4c0034f80922ee47c1a
 RMD160 (mcats-0.1.0.tar.gz) = caaa185b9732343c2706eda11e20275cdf5a43bf
+SHA512 (mcats-0.1.0.tar.gz) = fdf058866cb3b377433b95ceef88f141872b16048b7dc0a38a7e3d00ea6f22d5a76d7315d3500f3a3561cfa71eec99850b1cdc54dfb7faacd5904ca1291fbc73
 Size (mcats-0.1.0.tar.gz) = 167322 bytes

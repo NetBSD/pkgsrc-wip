@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/11/25 11:43:11 jihbed Exp $
 
 SHA1 (duali-0.1.1.tar.gz) = e672a55cfdb23cd1f175025eef07624bb18e742a
 RMD160 (duali-0.1.1.tar.gz) = d18d26b921c346167d3d8b6e4e8815d45843f74e
+SHA512 (duali-0.1.1.tar.gz) = f1d56c904c66c0e57e8cfcbe4991eb3b92c97476d7ec310ea002198aa8d0d8faab1aeb51d0c06d27337e38c1d93af4599d2517a3238090c013244c3aec7439e0
 Size (duali-0.1.1.tar.gz) = 11444 bytes

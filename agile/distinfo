@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/11/09 18:38:46 jihbed Exp $
 
 SHA1 (AGILe-1.4.0.tar.bz2) = 18ae9c17c896f7c71950029f6a4764d38e7ada13
 RMD160 (AGILe-1.4.0.tar.bz2) = 198f72461532f826d99c667f6c2ac56d19102920
+SHA512 (AGILe-1.4.0.tar.bz2) = d1d651d5357013a0abdbbbe504f6e3cbe35714a4a89bd4c6cdfeb5512eccb762f0b5d4665456c00dcaaeb4cb63052c6f64d75897382c13cef7656ff2e5b93f75
 Size (AGILe-1.4.0.tar.bz2) = 419714 bytes
 SHA1 (patch-configure) = a9ad176d5338dbc1308daea8476fd4d8142ebbd8

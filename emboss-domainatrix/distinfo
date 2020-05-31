@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2006/08/26 15:41:20 kristerw Exp $
 
 SHA1 (emboss/domainatrix-1.0.0-20040715/DOMAINATRIX-1.0.0.tar.gz) = 07e819e1884f406200edef2922cf0bd4d32fd45d
 RMD160 (emboss/domainatrix-1.0.0-20040715/DOMAINATRIX-1.0.0.tar.gz) = 12b798ea19a74659df134bc44c170fb52e0879a9
+SHA512 (emboss/domainatrix-1.0.0-20040715/DOMAINATRIX-1.0.0.tar.gz) = 2bdd2b0da4e5818cc24450c7f5b2900794211c93e58bf50a1230c934d0dc97118c70c53e6b5b12ebd8a899b46e5177c8481391207624fa6b476f170e2f9f9396
 Size (emboss/domainatrix-1.0.0-20040715/DOMAINATRIX-1.0.0.tar.gz) = 551090 bytes
 SHA1 (patch-aa) = cabe38402d2da8b447c53b820059c2eaed4db7bd
 SHA1 (patch-ab) = e72d544c796489d4b441a21147af9a125c4f370f

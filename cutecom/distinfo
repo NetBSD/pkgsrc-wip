@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2012/11/16 22:25:07 helgoman Exp $
 
 SHA1 (cutecom-0.22.0.tar.gz) = a23f9ddf3d1a4467568c872477fc8c6da07c1711
 RMD160 (cutecom-0.22.0.tar.gz) = 32111bcf756b7972e5428f96e2b4352083794c39
+SHA512 (cutecom-0.22.0.tar.gz) = 507b42b943f20d07429c3629ebdf358ca6551a57a2addc4c8560993b7c2d1304ef258f7d2ac8c62b13bcdfc797574b7e1dfac8b0c0086072407de7f71a2d0a26
 Size (cutecom-0.22.0.tar.gz) = 23208 bytes
 SHA1 (patch-qcppdialogimpl.cpp) = d728a010be6816d6f255c4c78871948061b11843
 SHA1 (patch-qcppdialogimpl.h) = 99e6ef41438ed671b8cd55d84c115fa7e441becb

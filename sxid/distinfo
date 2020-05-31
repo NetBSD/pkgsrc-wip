@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2014/10/30 08:57:03 bartoszkuzma Exp $
 
 SHA1 (sxid-4.20130802.tar.gz) = 8cf8692ec2d204f9afe0651ea36a74f8aa8a6fe9
 RMD160 (sxid-4.20130802.tar.gz) = 877eae3cb8bebc8644836511712ab35080684ff3
+SHA512 (sxid-4.20130802.tar.gz) = 8269808a925ba9a2dcce7400494de5e4c3bd133010faefd0f46b7feafed6fac750b8226f0b3d51edd6ab086caf730ba627a72fba59c8c0aeacf9859019e1cfd5
 Size (sxid-4.20130802.tar.gz) = 117411 bytes
 SHA1 (patch-Makefile.in) = d405aff29a979126cc4a75d3868099ce48803d3c
 SHA1 (patch-src_sxid.c) = 6575833376aaf2f88ed62cbc9d0a286d0cd9d0f9

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/17 13:29:56 jihbed Exp $
 
 SHA1 (pyttk-0.3.2.tar.gz) = 0a08d7cdeb6558b7f3a504c4a5f59b4bb5c54fe3
 RMD160 (pyttk-0.3.2.tar.gz) = aac274c83c66020184e598a24eb1a4d599f3df31
+SHA512 (pyttk-0.3.2.tar.gz) = 621094a836849789e2df83a6077b041fe557329bbb4b9dd2474e2c37143f95aacda5c7466121458583d554feba3433d587f12ea8c1df99bbb3222efcaae31a39
 Size (pyttk-0.3.2.tar.gz) = 127263 bytes

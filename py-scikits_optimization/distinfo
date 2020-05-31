@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:22:47 jihbed Exp $
 
 SHA1 (scikits.optimization-0.1.zip) = cda4724ad40355ed596f8325c10a162b65b6f7b4
 RMD160 (scikits.optimization-0.1.zip) = 8a5e32e74ed06729b92de673e5e8dbccc854b789
+SHA512 (scikits.optimization-0.1.zip) = d6c6d3085ab7a024c5b81fc072fa8452b4716d5b089d3e66641b809ac7cb600d317024f48b45b0c6a3884a7cc1f1d5e9860d9059591d6429d0fabd70c8550369
 Size (scikits.optimization-0.1.zip) = 41906 bytes

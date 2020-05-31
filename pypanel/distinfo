@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2005/07/24 22:55:21 cetrox Exp $
 
 SHA1 (PyPanel-2.4.tar.gz) = 10935d671bcfa04cec7c45785668fea5a4fbad1d
 RMD160 (PyPanel-2.4.tar.gz) = 2e3eab5ac00c3b69b44e6b77c80902f18b76207a
+SHA512 (PyPanel-2.4.tar.gz) = acda16cbf4f725ee3f0e97e11f04177fc819f6c09d0bcc864c9de1fc0c1bc0bfe2593233e5b8b85399ad41bc07763ad87d7045bac4dece9dc15d6eaf3136895e
 Size (PyPanel-2.4.tar.gz) = 29857 bytes
 SHA1 (patch-aa) = 06709071df910710c4846c52b2d3e121255e1323

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/03/24 20:37:45 outpaddling Exp $
 
 SHA1 (ffc-1.2.0.tar.gz) = f8dced1f00c269c7b1081a2921343f1bf23cfc09
 RMD160 (ffc-1.2.0.tar.gz) = 7d62c9c903b5eb64dc7d5e67eaeb4617aa82e6dc
+SHA512 (ffc-1.2.0.tar.gz) = fd2a54764716c03894d779c6574deaea732df8e925e9c77474b969168fa2add8c189e0e9e7e163aa67008650fd1918dd2257cc990b5ab19e65a86b95f5eaed1b
 Size (ffc-1.2.0.tar.gz) = 4457544 bytes

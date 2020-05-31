@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/07 16:59:32 emil_s Exp $
 
 SHA1 (freecell-1.0.tar.gz) = cda85ad1292ae142a9d8ef6223b0f8aa908c6fe8
 RMD160 (freecell-1.0.tar.gz) = 01a67f31dc4cb6222f344b36ae45f6e70950ee55
+SHA512 (freecell-1.0.tar.gz) = 5e2bbf9d1296d2a53eb7c1622701df8f9fe1e2f57a2668967463d6862ed86ad53d9c2d282a1a2a0666a823d2b97f8e2390b44171a6bfbc25571ede4f47168938
 Size (freecell-1.0.tar.gz) = 87713 bytes

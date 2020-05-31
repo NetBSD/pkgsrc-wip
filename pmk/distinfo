@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2009/11/20 12:33:33 cheusov Exp $
 
 SHA1 (pmk-0.10.4.tar.gz) = 0c3392226a89aac264afda0252d0e0a719c85564
 RMD160 (pmk-0.10.4.tar.gz) = ea93ac1f71404cf7e42a6659f299d458c54aad6f
+SHA512 (pmk-0.10.4.tar.gz) = 906ee690b6cae55d54b1e248847a61ddcb15d7404fb8914040047876eb906f868607b38b59dbbd9687a0f8b409d6c3852249d558119af1bea4c64775f34ea32d
 Size (pmk-0.10.4.tar.gz) = 208475 bytes
 SHA1 (patch-aa) = 370de4da727bfbd687ad8939cb47f56d5d51bbd5

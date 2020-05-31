@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2012/12/29 13:14:11 othyro Exp $
 
 SHA1 (wsmake-0.6.4.tar.bz2) = 7bd163c0f76f1ad768458964cebdf495a3fa18ce
 RMD160 (wsmake-0.6.4.tar.bz2) = cfb48e73191b63cfb57fe318de8111d4feb11666
+SHA512 (wsmake-0.6.4.tar.bz2) = 0f5d125053222c624f9c19f4147f0d97311acb11050e09112ae7b13175ea64d0ba75942c5772e2ffe12d2913cea370ed663d7cb649eef67e0f8379775a3459c4
 Size (wsmake-0.6.4.tar.bz2) = 351688 bytes
 SHA1 (patch-aa) = e99e21b542d3e2fb8dae8bb8418d9dffd478085b
 SHA1 (patch-ab) = 97df297c5420351c5a2938dd7d8989ac9769c376

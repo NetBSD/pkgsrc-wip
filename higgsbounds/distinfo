@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/09/16 13:29:47 jihbed Exp $
 
 SHA1 (HiggsBounds-3.8.0.tar.gz) = f0c4b9fdaad41dabce2441fdd8ae920f6d117491
 RMD160 (HiggsBounds-3.8.0.tar.gz) = 2a2b21eedc2887d3124ba00c2ef094e85f0a8cf4
+SHA512 (HiggsBounds-3.8.0.tar.gz) = cd658067bceb004bdcf8cb3739d18c985cb72cf45f75b4d69e92298c2f63accaf8187f9dd4ade2914fe21dd8d957b1d7f9a33a4ef5227625173a8b9830c6349f
 Size (HiggsBounds-3.8.0.tar.gz) = 1389026 bytes
 SHA1 (patch-configure) = 35f5b9bb2d27414dbdde972a5ccdccf907217d9c

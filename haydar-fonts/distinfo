@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/21 21:15:47 jihbed Exp $
 
 SHA1 (haydar_fonts.tar.bz2) = e63837718a54aef6f2cce4d96427407b7cbde1a0
 RMD160 (haydar_fonts.tar.bz2) = 63fefd650457b2b1782efb5e91ef92d63fc51126
+SHA512 (haydar_fonts.tar.bz2) = 2306f3a79c912b2d468af909bdeec1bbe2874d1fee8416c21ce6c62d271b4a5da8c26caa796405dcde1ff9e04b603535c6389c4d8dd3be5f8f0055f7088b602f
 Size (haydar_fonts.tar.bz2) = 438281 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2010/04/15 17:12:57 khorben Exp $
 
 SHA1 (Init-0.0.0.tar.gz) = c2814d827d5556cb334d9bdd8760d811277f89a4
 RMD160 (Init-0.0.0.tar.gz) = 8eff1a7005d3778ebf4c7506d45f37373279b021
+SHA512 (Init-0.0.0.tar.gz) = 98278d9ec66827543e2443b187aeffc0c47956955632b177a868110aeff88cb9526d069322de96d2830b60633e4b8619ec9ea3474bd1ae9b3f035fddfccf10fa
 Size (Init-0.0.0.tar.gz) = 19413 bytes

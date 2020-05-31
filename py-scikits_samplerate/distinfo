@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/22 08:24:23 jihbed Exp $
 
 SHA1 (scikits.samplerate-0.3.3.tar.gz) = 5edef3e300e16075f349496cf2f91b01b1c7dea5
 RMD160 (scikits.samplerate-0.3.3.tar.gz) = 8eec6aa95de1b064bdc2c3c86170aa26f686712f
+SHA512 (scikits.samplerate-0.3.3.tar.gz) = 0fdb0e0b706c8777b7aa1990cc94f64bf6c9879c17984c66139572b77be3f027940d8fe5d65ce8dbc30744f056eb500aae2ca1efdf7a9761ac33fddb3bfd3f85
 Size (scikits.samplerate-0.3.3.tar.gz) = 377339 bytes

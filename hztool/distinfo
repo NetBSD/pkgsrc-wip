@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:56:36 jihbed Exp $
 
 SHA1 (hztool-4.3.tar.gz) = 1c91e3159c800537bd4a357f12206dd3e216139b
 RMD160 (hztool-4.3.tar.gz) = 78f92c0ddbfeaeba0514e6d51926fa3b9beee3a7
+SHA512 (hztool-4.3.tar.gz) = ae40d35c81e60611de6b553041f22bbd5b4fa8dbee45e5fb824ed03abe0c591a61236a95e42fb88778e71a01b55a1d8616fee84bed8e7baad6c5daeec817ca18
 Size (hztool-4.3.tar.gz) = 1262163 bytes
 SHA1 (patch-Makefile.in) = daba01030b37434cead83017c74f7af6df4e6d10

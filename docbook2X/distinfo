@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/04/30 10:10:18 thomasklausner Exp $
 
 SHA1 (docbook2X-0.8.8.tar.gz) = 7dc34d420f8aae2a0c0cdb39f52146ce005bf902
 RMD160 (docbook2X-0.8.8.tar.gz) = 35c8dcbe86e91e787a67b1d17251bf00fed9aabf
+SHA512 (docbook2X-0.8.8.tar.gz) = cc336017ad734fc62d96d289105e8ea154c418a03a37f3e21b0b3520063f8b466b4aae5a5aec2e0b83f6324c6c79b5557247a93338d0a9882a94a44112f6b65c
 Size (docbook2X-0.8.8.tar.gz) = 723909 bytes

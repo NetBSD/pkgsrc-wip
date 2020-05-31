@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/07/26 13:29:59 jihbed Exp $
 
 SHA1 (TkLsystem-0.2.0.zip) = c0f87ca30bd80dbe2bbe8d04bc54a67a37ccd0a2
 RMD160 (TkLsystem-0.2.0.zip) = 9dea69c531b48160570e4a5a0fa96e691bbeae79
+SHA512 (TkLsystem-0.2.0.zip) = 31beb6082c63e231ebdfe1b1fb37734e5ddc6572951fb6c6b8a9c397384f2db3eacf7c64ff8504248fc394445ba56722d659f9ddbef351009c10363c3129010e
 Size (TkLsystem-0.2.0.zip) = 24031 bytes
 SHA1 (patch-setup.py) = eb0f41248fee55e623d739db3d2bb34b17e74c25

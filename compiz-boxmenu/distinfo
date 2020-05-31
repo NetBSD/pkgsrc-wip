@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/01/06 23:09:41 othyro Exp $
 
 SHA1 (compiz-boxmenu_-_1.1.9.tar.gz) = 9c3127897ef8b08cf62f85ba466436a110d54fd7
 RMD160 (compiz-boxmenu_-_1.1.9.tar.gz) = 082316b68ffd5074da31a3f8339d51b2883fa5c0
+SHA512 (compiz-boxmenu_-_1.1.9.tar.gz) = ea1b7c800f2a46a6675af9ad9b6367332c15db0185f0560e0799278e3d0a2336772c4d7e3a3b2d2342d95f62de4b11b267d32b6f9b809f6297a2bb1807dd5bfe
 Size (compiz-boxmenu_-_1.1.9.tar.gz) = 71825 bytes

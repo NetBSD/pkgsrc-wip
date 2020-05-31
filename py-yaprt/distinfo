@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/01/31 12:11:07 jihbed Exp $
 
 SHA1 (yaprt-0.0.7.tar.gz) = 436b4a67a07e6a9f844e9e9c3ae234bc90b4b772
 RMD160 (yaprt-0.0.7.tar.gz) = b395d237606ba5d650a6b3ed44236d144f51c456
+SHA512 (yaprt-0.0.7.tar.gz) = 25ab88e0ff52669cfb3897c01c3639bfaeb14c30da21653e55b80911271b7dbdf9ca8ca6e4085ed4e7182be116f15beb040990cc4fa08c1067f48fc96a80f011
 Size (yaprt-0.0.7.tar.gz) = 19750 bytes

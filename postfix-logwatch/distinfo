@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/07/01 11:41:44 noud4 Exp $
 
 SHA1 (postfix-logwatch-1.40.00.tgz) = ec2f1f41c9480968b98ba7fd009d6ac4e0b6f415
 RMD160 (postfix-logwatch-1.40.00.tgz) = 25894bb05ada78181d6b6d65f6b56ca5de86a359
+SHA512 (postfix-logwatch-1.40.00.tgz) = c388cfefceeefcc19bc987865dbe0312ef0f470524ebd8af33abe639137cce699ad79f33b2b64168d2d572981372a9af58e60f6cdfbc661fc56ab64f1c19be03
 Size (postfix-logwatch-1.40.00.tgz) = 107441 bytes

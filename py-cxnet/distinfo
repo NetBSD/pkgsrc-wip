@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/08/19 19:58:09 jihbed Exp $
 
 SHA1 (cxnet-0.3.tar.gz) = 03a8985ba38dab0a7fdb28f52ae52819b82633bd
 RMD160 (cxnet-0.3.tar.gz) = 10400b70102a3283b3cd62adf1d5bd9d792add4d
+SHA512 (cxnet-0.3.tar.gz) = 06e6b3bad4978841490b5f92367da4c6da0eadccd30b92f66881fd6b1427eddb7549c0d288d4877c270338a7b1a1a05676478d47772fc22204a5b46669ea28b7
 Size (cxnet-0.3.tar.gz) = 689562 bytes

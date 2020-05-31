@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/06/18 10:29:14 fhajny Exp $
 
 SHA1 (ptpd-2.2.2.tar.gz) = fab79cda0a4ebebb52ec6299367376e6f36c2d1e
 RMD160 (ptpd-2.2.2.tar.gz) = 98051ecb459aa6eb59f349d016ab0770444056e1
+SHA512 (ptpd-2.2.2.tar.gz) = 94bc0a475ac51eafb10f4a54512201e86c4d598d3226b1958302f3470e6019762bc36b93428523580038bdea91a4c0138d7e0ee3cfa3c751bc8812462c957296
 Size (ptpd-2.2.2.tar.gz) = 634289 bytes
 SHA1 (patch-Makefile) = 86a8fe231a281d41b098a355f8e1ec64a42a0d35
 SHA1 (patch-dep_constants__dep.h) = a78dea947ada2e6ae51f80421f9e85821e015ecc

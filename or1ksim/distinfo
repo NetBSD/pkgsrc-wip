@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2013/10/14 13:00:04 ryo-on Exp $
 
 SHA1 (or1ksim-or1ksim-0.5.1rc1.tar.gz) = ce4720211af1d0421e277698d37ff61d1b536166
 RMD160 (or1ksim-or1ksim-0.5.1rc1.tar.gz) = 24aefc2431b94f2d1ae4a348e2eb21ab8b4bb824
+SHA512 (or1ksim-or1ksim-0.5.1rc1.tar.gz) = 2874f33af37fdbddfea4ae35252d998ef8aea40a719b259b4f3f8701abcf2ebfc97434cdc6fbfe22b22ccda166fe4fd05c0e8b133580378e8e48c69698b1f3e8
 Size (or1ksim-or1ksim-0.5.1rc1.tar.gz) = 2256456 bytes
 SHA1 (patch-peripheral_atadevice.c) = fd3302b9ea6c7b59aaea007cd2f7a722e569b8b4
 SHA1 (patch-peripheral_eth.c) = eff5a065858fb40dd3f29d315453e41738cb5e4e

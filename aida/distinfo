@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/09/19 03:20:57 hugor Exp $
 
 SHA1 (aida-3.2.1.tar.gz) = 923e637d056646f97f1d0b8997821ea895986aba
 RMD160 (aida-3.2.1.tar.gz) = f0313883856dbadb4ba14a8e9b17624e0e0858a0
+SHA512 (aida-3.2.1.tar.gz) = 1127d56013f596ffabbd304316873fe312688f20157504bed6e13c36951f2f76464e87d3f526e8ee7d7dbc62f6e887bef9ad7fa67615fdfbc4760bdb00157a9d
 Size (aida-3.2.1.tar.gz) = 313562 bytes

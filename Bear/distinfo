@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.6 2015/09/07 19:16:42 jonthn Exp $
 
 SHA1 (Bear-2.1.1.tar.gz) = 804ff347708b5b1b2545510e178635ea96d0245e
 RMD160 (Bear-2.1.1.tar.gz) = 5ac215afb799d8f3b63a4d789b2e0fcd96e54e13
+SHA512 (Bear-2.1.1.tar.gz) = aae661c45e60e266d312180419b26014a89912fbdb8cb84635c07b39729f472c14e478ca4db8f22f950a0d5b2c8bac3f3b40edfbfeeee56ef69b47ef22333587
 Size (Bear-2.1.1.tar.gz) = 33300 bytes

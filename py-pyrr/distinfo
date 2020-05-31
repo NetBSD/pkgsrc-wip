@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/26 09:19:58 jihbed Exp $
 
 SHA1 (pyrr-0.2.0.tar.gz) = 64dc46852a10e386c4e5b06fd3a3b4136c855fbd
 RMD160 (pyrr-0.2.0.tar.gz) = a5a5e0115bf7b9cfbd78a3a7a5d32c1c410c8410
+SHA512 (pyrr-0.2.0.tar.gz) = 0901c0a836821a6cceef0185aba6ccae10ec5d08eeedfcccc97325bb86786dad0ca1c8fef0e6d23f01339e2ffa1735fd5e82fb1ca1cef13428550f4b2c3975b0
 Size (pyrr-0.2.0.tar.gz) = 24850 bytes

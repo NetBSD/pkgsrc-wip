@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/08/13 21:04:06 jihbed Exp $
 
 SHA1 (nlib-0.2.tar.gz) = eff9429bd41f51d5f424c9a635bbf0dffb8d0105
 RMD160 (nlib-0.2.tar.gz) = e360267bde901d8161aa606a5197cc094d878e48
+SHA512 (nlib-0.2.tar.gz) = 74796e755c3f8e0d17b98c0626ef2fe32280894d784726240b997260334210398550d1cc4ba6417e12be6013487ea6a576b29f193c2bbf3370c25e92fe9b4bcb
 Size (nlib-0.2.tar.gz) = 21690 bytes

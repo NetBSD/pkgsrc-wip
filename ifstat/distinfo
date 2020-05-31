@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (ifstat-1.1.tar.gz) = 4ebf59207d24e53461f841a2480a6710d774fce2
 RMD160 (ifstat-1.1.tar.gz) = dd3449590f3b5caf0a4190579518e1014b34be68
+SHA512 (ifstat-1.1.tar.gz) = b1aef8e7b14cbf265e2d42277478fd12a565287f90f37b0a826ba3e7d29640df757c7d56f149e406bf5890663ed734b2c658c4f1e2b258ded3649f2fc3e9ac64
 Size (ifstat-1.1.tar.gz) = 67920 bytes

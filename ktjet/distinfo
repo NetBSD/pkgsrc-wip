@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:50:20 jihbed Exp $
 
 SHA1 (KtJet-1.08.tar.gz) = 8b5c54743897c6beaa965b8c1855212d74a889d4
 RMD160 (KtJet-1.08.tar.gz) = 0d1c6cadde10dd492f5d6119e8e1528f841eb620
+SHA512 (KtJet-1.08.tar.gz) = cd65f8831b570d4cf1a2669fab09701b9d6fb5e125d15e85e927e250478b8cb0ddabdb21df0d32adc19c303c3a50ca797ba5d5a7d95eea5070261a361ad4e8b7
 Size (KtJet-1.08.tar.gz) = 315720 bytes

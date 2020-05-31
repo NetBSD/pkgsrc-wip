@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 23:49:53 jihbed Exp $
 
 SHA1 (otb-0.2.1.tar.gz) = fbd262b5871659e2c4d11430b2c9b7c1a89c72f3
 RMD160 (otb-0.2.1.tar.gz) = 71915fba5bc9e6de7643c1f1e5c66cba16d90322
+SHA512 (otb-0.2.1.tar.gz) = 46d2b62b626f44f174c391fdde33b1a5d167389bee03cf8630e6d92cd3081a158b80652486f6bdd8aff08d0481574ea56ead20b65176d7e0c5dec37c5165e14b
 Size (otb-0.2.1.tar.gz) = 27269 bytes

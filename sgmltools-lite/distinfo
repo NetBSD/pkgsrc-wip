@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (sgmltools-lite-3.0.3.tar.gz) = e7bf0c173cf668782c9212bbd03e1473d1ee7e94
 RMD160 (sgmltools-lite-3.0.3.tar.gz) = a4d1435e16c5dc951d3aeda6b61c06c2367880cc
+SHA512 (sgmltools-lite-3.0.3.tar.gz) = 36709ba726859b734a7402c533ba7d2abc0546007bc97dba76ac824bc42f6f8ac7ef263b3740d0be51749cbc0982d010ba938646fca2006fa2c5094a296b3c81
 Size (sgmltools-lite-3.0.3.tar.gz) = 61342 bytes
 SHA1 (patch-aa) = 3438bb5edbdd5d7dc776ea50ac4cfba47416f835

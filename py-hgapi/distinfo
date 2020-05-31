@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/07/03 20:57:28 jihbed Exp $
 
 SHA1 (hgapi-1.7.2.tar.gz) = 4557a0349fa6ffff75362ac36ea55363bcc01214
 RMD160 (hgapi-1.7.2.tar.gz) = db72d1b1c47c683d48bbf2553c1eabd0b546c561
+SHA512 (hgapi-1.7.2.tar.gz) = ff6685386878ac0c71072601f91acf9a077822491680edc11841bcea85bab38b3c41867e72e8c1adf8f85765fa763d168cf7bb76ce1832605c7b24f8cad3be65
 Size (hgapi-1.7.2.tar.gz) = 13324 bytes

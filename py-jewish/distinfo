@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/11/21 13:49:00 jihbed Exp $
 
 SHA1 (jewish-0.1.tar.gz) = 849792de494560887d1de5a1aa5b4a37419843bf
 RMD160 (jewish-0.1.tar.gz) = 3bb5a41cc0c90e05e6e90b18d17a4350d6d521d9
+SHA512 (jewish-0.1.tar.gz) = ea3694d3d20c4c68dcbe6982d43ad6b11424b6a3878d42498672bbf9e9dcbcfcb02b1734d68b3a0679238073f596186fe1acae8aaf4e87d07c4fb2943f1bbfdc
 Size (jewish-0.1.tar.gz) = 5296 bytes

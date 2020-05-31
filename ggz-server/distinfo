@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/03/05 15:36:07 mrohrer Exp $
 
 SHA1 (ggz-server-0.0.14.tar.gz) = 8be05511beee0e537beeb8f3cba37625edac41ea
 RMD160 (ggz-server-0.0.14.tar.gz) = 91de4f2cef1952dbd8554c1c8f3ddd8016d4c3d4
+SHA512 (ggz-server-0.0.14.tar.gz) = 2615134470b1d48f185ef96bef15c391843470d5e56096da08a826b6523fcf35523d4a936b5b83dd276601b678e20167abfc66987303b98ea4b72d33c4299248
 Size (ggz-server-0.0.14.tar.gz) = 1210918 bytes

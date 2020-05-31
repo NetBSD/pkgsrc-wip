@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:18:16 jihbed Exp $
 
 SHA1 (descartes-1.0.tar.gz) = 5ce0f75931377b4ee6966dd76733db179967cb02
 RMD160 (descartes-1.0.tar.gz) = 63d5195e7098967a1ed23534e28ce7abbbb8cb71
+SHA512 (descartes-1.0.tar.gz) = 6f28b2a92883559285d7b31038f20dd882daa9b1accc86bd48cee769eeec7b51935060d4f5fc9edb39a1d97040b8aa2e2f4b6a80361ffd317a219dbe4712b984
 Size (descartes-1.0.tar.gz) = 3337 bytes

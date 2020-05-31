@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/15 00:42:26 jihbed Exp $
 
 SHA1 (screenutils-0.0.1.5.4.tar.gz) = 0cb4b20070bdf04262519de3cb1e3056bc5d695f
 RMD160 (screenutils-0.0.1.5.4.tar.gz) = 8cb9a865bd6c69128c8d463913016f6f98623a9b
+SHA512 (screenutils-0.0.1.5.4.tar.gz) = 0408ebb41dd7271ce867b2dea0e4c5a127fdfc408cb58c6cde2e970032f3905a8fc1cdccff0cbcec24d10c760ed6fcc6c2ba48ef54ed5cb4d4f95c12a2789580
 Size (screenutils-0.0.1.5.4.tar.gz) = 3865 bytes

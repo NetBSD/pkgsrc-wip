@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/02 20:53:54 jihbed Exp $
 
 SHA1 (bibtexparser-0.5.1.tar.gz) = dfac50cfe0a4880c467f84022aaf1d34a0cbcce1
 RMD160 (bibtexparser-0.5.1.tar.gz) = 6c0b778a8ef70c148b3a8d9ec62b6284ae1a09c1
+SHA512 (bibtexparser-0.5.1.tar.gz) = ee0d8dd0ca22f47af587def343fca1b91eddbf626f66aa66cf9a36aefcf6259c165abccbd0f8d75190108f466d3bcec4ce3de1d9bebe582d1c786b52dcdfe2e2
 Size (bibtexparser-0.5.1.tar.gz) = 22434 bytes

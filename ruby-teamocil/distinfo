@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/03/07 18:18:40 ishit Exp $
 
 SHA1 (teamocil-1.1.gem) = 6c0e81b6082472afce71fb2f0a116f27a9e3d4b8
 RMD160 (teamocil-1.1.gem) = fa4e02c3638d1e93eb0bdfd649629f4e256fc409
+SHA512 (teamocil-1.1.gem) = cb92cb564a377f2740d965289ba77f6fe7ec5c50999606903ff21dcfa783deb8783942f2fca23302d7caa1cc77b2b77f67c6be396d95dc017f37a0d39b19ef2c
 Size (teamocil-1.1.gem) = 14336 bytes

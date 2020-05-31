@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/03/18 12:07:53 adanbsd Exp $
 
 SHA1 (apinger-0.6.1.tar.gz) = 2c76d8eecabb5fcef42cf89b010f8b78615b8132
 RMD160 (apinger-0.6.1.tar.gz) = 9b2b86b4d0e079d900bddfb966b38201894cf9d4
+SHA512 (apinger-0.6.1.tar.gz) = eca6cee186d538200619188d9481154114ef9d7eae4f11f389eb61382f507d108bc64622fe99b1bae17ecc3ca7b2bc4ff4d0a3156ebf2913803e7be24b0d3f94
 Size (apinger-0.6.1.tar.gz) = 134127 bytes

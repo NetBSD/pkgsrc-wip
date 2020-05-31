@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/12/14 22:30:18 noud4 Exp $
 
 SHA1 (plconfig-0.2.tar.gz) = 93f0e834d451c7481e2c594ccc2e2b88d0a74c31
 RMD160 (plconfig-0.2.tar.gz) = 5115e40aacc4e3a9f1e5d9343bf3490e3d2161f2
+SHA512 (plconfig-0.2.tar.gz) = d7ff9dad23e57bc4f33de4b1a9ce29b5b7fa84362dca10c0d5c177522ed54c5500a32234f0d06b270a2ab395867230af4fd3e2b8bc35c195cdee6c2db1179eb8
 Size (plconfig-0.2.tar.gz) = 9151 bytes

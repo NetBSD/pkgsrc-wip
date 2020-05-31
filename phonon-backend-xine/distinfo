@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2011/05/13 23:25:13 mwdavies Exp $
 
 SHA1 (phonon-backend-xine-4.4.4.tar.bz2) = 978102346592424865ddbf44fc666334cb3606f1
 RMD160 (phonon-backend-xine-4.4.4.tar.bz2) = 34bb6b751453b6b336fe10450feb87fd2657c5c7
+SHA512 (phonon-backend-xine-4.4.4.tar.bz2) = 14312a8c13cf34aa1ea8046abae5b82643a7ad6a58e25e6681fcf9f036904318da681b9eedfea33837e30634f866b0a296e1b2093003e88939d0e95836d50b34
 Size (phonon-backend-xine-4.4.4.tar.bz2) = 94556 bytes

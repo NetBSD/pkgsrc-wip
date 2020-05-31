@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/07/28 12:34:58 ryo-on Exp $
 
 SHA1 (qrq-0.3.1.tar.gz) = 9979fb90d2329df4ce63634472ca8f90e583d03b
 RMD160 (qrq-0.3.1.tar.gz) = 75a0e9a241c3fd58ceeda138d659262f7b36de54
+SHA512 (qrq-0.3.1.tar.gz) = ce6e3b6f79575f11457f56e1044267dbefda20b13ba43fd79b2ad5821b4502a8a2badacbd891e154472d6f26334a0a8fcddf9521d905d8e7a72d8a687346e23d
 Size (qrq-0.3.1.tar.gz) = 131508 bytes
 SHA1 (patch-Makefile) = b53ef66cedaa80ad30cebb70ce3ee001e0b552bb

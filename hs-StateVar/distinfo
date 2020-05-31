@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/22 13:53:08 phonohawk Exp $
 
 SHA1 (StateVar-1.0.0.0.tar.gz) = 603ed2716a8c2503949dd2a6305a0c06754d56c4
 RMD160 (StateVar-1.0.0.0.tar.gz) = 3660f10c8fbbf9c9e11ae0402658cae1e990399a
+SHA512 (StateVar-1.0.0.0.tar.gz) = 0196fc184e638fae736020fdc7139fa1a08adebcc495424316795e7e775c5d7ab1df89792ea088745854dbeb396bdf5f3c07942126b8227743fb2b7bd599b8c5
 Size (StateVar-1.0.0.0.tar.gz) = 2728 bytes

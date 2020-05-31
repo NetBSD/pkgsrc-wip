@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 16:14:15 jihbed Exp $
 
 SHA1 (vegas-2.1.3.tar.gz) = b4c18c3a8110574da7b23a2e34f5319021c99c64
 RMD160 (vegas-2.1.3.tar.gz) = 199db7eca9c1b52c75816a3f149f6d1563f14683
+SHA512 (vegas-2.1.3.tar.gz) = 430b35d98db6893e3ff5fe7630f13ff3007eb6e60516645df5c445d567ab9267f25685303df29de80afd48b9fe8523b7654cfd862c1402149d7dd637e6ba53f2
 Size (vegas-2.1.3.tar.gz) = 1085232 bytes

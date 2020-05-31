@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/01/18 13:14:42 noud4 Exp $
 
 SHA1 (genetic_0.1.1b.orig.tar.gz) = ab9e1899448c663a0a6052d28657aa2aaf3ad904
 RMD160 (genetic_0.1.1b.orig.tar.gz) = 7e0a1f5312d24a340862e64feed292b69beaddde
+SHA512 (genetic_0.1.1b.orig.tar.gz) = fd0b5f859cc6ca2c633ec614539e7b7d8e1caab19708c92a066f6e9c2807a15f855b7b73c1c12aa34d3b050a523192edb3cc3fe4406019c244dcd28bd6053c43
 Size (genetic_0.1.1b.orig.tar.gz) = 24916 bytes

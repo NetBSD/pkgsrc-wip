@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/04 19:05:15 noud4 Exp $
 
 SHA1 (fala_0.1-1.tar.gz) = 35f927b2efa2aea22e2ac8e1512441942252cc1d
 RMD160 (fala_0.1-1.tar.gz) = 39e309f7b8f67255aa5b380a9dc1feb033c3e60e
+SHA512 (fala_0.1-1.tar.gz) = 5ecd309ac4842e4aace3592dfbd7cc63a5302aad2d67d2f57081bcf269d18242707c0c3d1830549c3f4a46db614c2137be6d5acd8a03c73d6ec8dac82705c0f1
 Size (fala_0.1-1.tar.gz) = 15673 bytes
 SHA1 (patch-aa) = 1faaa791c86bbd990bbcab90f166cf06cddc296a

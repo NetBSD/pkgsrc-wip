@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/03/09 21:03:09 othyro Exp $
 
 SHA1 (wahcade-0.99pre8.tar.gz) = 044966cadef7b45e014a35b27274f0ec897c7697
 RMD160 (wahcade-0.99pre8.tar.gz) = 090df1603b5b22a0a096ca751c3fa8506e6ef8d8
+SHA512 (wahcade-0.99pre8.tar.gz) = 828ee1d96c3094700d12bf0ca53d66ab037154614bb7e40377c07e08d0d295737e1238f8cbb957f63f0513f55417a1a7e4c7441b59097b3bbdfacb6098b4239a
 Size (wahcade-0.99pre8.tar.gz) = 525471 bytes
 SHA1 (patch-setup.py) = 3a491331148cb1e1e64b8724d5c01c7376924086

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/09 17:20:14 thomasklausner Exp $
 
 SHA1 (dzen2-0.8.5.tar.gz) = 9216163e86e02b2a75de1dfec1954b1058a829e4
 RMD160 (dzen2-0.8.5.tar.gz) = bbefbff779cd8eb3ea06eda0666f5b0fe99b7b90
+SHA512 (dzen2-0.8.5.tar.gz) = 04b808ebb7a3a0135a9bab9e79ae0c16cb5d777458d34d5ab39a5279228fb7fa771b5fee8e4a14b325433359ef751dafa95cb1f4f75db7683404e0fe12beb273
 Size (dzen2-0.8.5.tar.gz) = 33274 bytes
 SHA1 (patch-aa) = a2facab3fbf41afd5b3c0010d7493677b343d4da
 SHA1 (patch-ab) = 1706ddc35bcdf14cb207c60561fba50f0c39a15b

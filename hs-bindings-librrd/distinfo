@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/04/21 03:39:30 phonohawk Exp $
 
 SHA1 (bindings-librrd-0.1.tar.gz) = 45e8a8b1144584659c214efaf27d38f6738b3c59
 RMD160 (bindings-librrd-0.1.tar.gz) = f30c40f47547b33a2a95172674aa20de00090c32
+SHA512 (bindings-librrd-0.1.tar.gz) = ae081a5508099afd6dcd2d6ea50559845beffc3e8f04844e0388127601e5d62ed285cd3315332a28d63a8fc7050bf303037fa7061a7bbb54129711ade8853820
 Size (bindings-librrd-0.1.tar.gz) = 3646 bytes

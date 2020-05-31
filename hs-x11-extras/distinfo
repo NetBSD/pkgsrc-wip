@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2007/12/10 16:50:45 emil_s Exp $
 
 SHA1 (X11-extras-0.4.tar.gz) = 9cfedd51cce8fcd66a5e0e517d2ebddaadf68652
 RMD160 (X11-extras-0.4.tar.gz) = 7be5706b0df44560fd92b8a9bc1f607537fa2069
+SHA512 (X11-extras-0.4.tar.gz) = 3c0e004bee3e42abdb3a81a331d34e5e356fa0fbaf1433f3c1585a242161af2ed145407ad392c8f9de85436eba03b21f82eba84a974c187feffc0c4ac9643461
 Size (X11-extras-0.4.tar.gz) = 48853 bytes

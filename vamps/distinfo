@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2009/12/04 13:16:19 rhialto Exp $
 
 SHA1 (vamps-0.99.2.tar.gz) = b25e68508f43bee37156fd83cde09a519e0db778
 RMD160 (vamps-0.99.2.tar.gz) = 1b0d34ba3b583d9d35fc4cee30014c704e64a36d
+SHA512 (vamps-0.99.2.tar.gz) = 27d26a5b63982e3b68b69b6e4f739e93a8eff2ca2e433e07a1350cafe9733f0b6a684e6bc51bce97612bc85fef9d4bf4ea0e781e493b227896de4cce4cd4662b
 Size (vamps-0.99.2.tar.gz) = 47062 bytes
 SHA1 (patch-aa) = 9fee51e301bd3def81cc3448278629da3e139ebd
 SHA1 (patch-ab) = 5b61e37e9ae5e048cc229bc9c909b8cbb975b025

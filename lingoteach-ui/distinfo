@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:26 rillig Exp $
 
 SHA1 (lingoteach-ui-0.3.9a.tar.gz) = 557c60d3be97383c3766c60dfef4d2d2b944bbd4
 RMD160 (lingoteach-ui-0.3.9a.tar.gz) = f0a4a2d54264767ec09351528fb20aa734c5e286
+SHA512 (lingoteach-ui-0.3.9a.tar.gz) = 17860f69f603ddaccbbf7996d8150a92eeb0f7bab6d710130a1913361b4de78df8f7bfaa342866e70cfbc3b1ede6ae5f21f472e94fc99090629a692c40734ba4
 Size (lingoteach-ui-0.3.9a.tar.gz) = 596192 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/10/22 21:32:34 kh-p Exp $
 
 SHA1 (csstidy-source-1.2.zip) = 2865a9a9212b2f54d7e5c876b9352f816a135b4a
 RMD160 (csstidy-source-1.2.zip) = 2c642897d5049e83870f69ec8876f07548c90174
+SHA512 (csstidy-source-1.2.zip) = 31d07706ff854f9f71ea70cdf18cc28e3241c284d37597450ac324024f1e4cb138b4f9584b12437d10b5ce4ebdc7a4d1ec57b9df2becd32a7e0467c536391bf2
 Size (csstidy-source-1.2.zip) = 44565 bytes

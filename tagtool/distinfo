@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2007/03/01 20:58:14 guigui2 Exp $
 
 SHA1 (tagtool-0.12.3.tar.bz2) = e7ed4ebf8f9881cf38b2340b18e95947f658308e
 RMD160 (tagtool-0.12.3.tar.bz2) = 9f5ae223580948c403cd44d82ecef0d03040ff09
+SHA512 (tagtool-0.12.3.tar.bz2) = f32cf8ab072b9e8f52c5afd27e93f348a6d573085f71efedf81764a2d20941e580583c6536d420f25956eae84dcb6d1930229e60bc068ec7948247cfa64ff385
 Size (tagtool-0.12.3.tar.bz2) = 303743 bytes

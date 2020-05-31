@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2005/12/28 00:46:04 bencollver Exp $
 
 SHA1 (gplbasic.tar.gz) = 7f108f509f123600f72b7a9e7ff12280c0a807ee
 RMD160 (gplbasic.tar.gz) = 0ffe2369bc2f3c06bb1251a9b9440bbfb529480b
+SHA512 (gplbasic.tar.gz) = e80bac9beca57e8baf74aa1de6be699fff9d9aca30380e6f56edf16a6e5860b42dc7e1716f4ea8874fa948e5ae543f07941bfae81b81256892b8ed2b5662019e
 Size (gplbasic.tar.gz) = 143569 bytes
 SHA1 (patch-aa) = e1ab5c14416e27e35e9df3a96c754fcab9173188

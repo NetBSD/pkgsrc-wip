@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/02/03 11:30:41 othyro Exp $
 
 SHA1 (unagi-0.3.4.tar.gz) = b26041f6dbb1232104a924d78ab03d37103c523f
 RMD160 (unagi-0.3.4.tar.gz) = 7d04d0d00afa79323582a40e140c0f7fe97d714e
+SHA512 (unagi-0.3.4.tar.gz) = b611e918f9f53fe15a9f402a103d7f83572f4794e617221a19e102b33d6b21b8e96785bd49da1ce4babc1e43f5f6a1476c97f7714fed2be135b1f65c6197bacd
 Size (unagi-0.3.4.tar.gz) = 432957 bytes

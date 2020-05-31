@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/02 22:19:29 jihbed Exp $
 
 SHA1 (EasyModeler-2.2.5.zip) = a9b68106e1cf2ad97d675f80c19c286b2c0444e1
 RMD160 (EasyModeler-2.2.5.zip) = 52a945e16a6b26ad1baf360e18977e5c417f7928
+SHA512 (EasyModeler-2.2.5.zip) = d4b888ce6e15d0dfd0177e7937ed7fcd800ea06a06ca4f4f4519e5aa42cdd3fbbe72931d9e7faddd42a7c2a29f7bc8302046f90a15b84d0a81ecb3574c4226a0
 Size (EasyModeler-2.2.5.zip) = 38231 bytes

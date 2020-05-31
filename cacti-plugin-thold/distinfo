@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2013/07/23 08:09:52 ahp-nils Exp $
 
 SHA1 (thold-v0.5.0.tgz) = 5176ae9ea494ff29eb0b74717a0a8b6fc0d47380
 RMD160 (thold-v0.5.0.tgz) = e775f2c435ce9bd5f773d8466eb3cd0e18272197
+SHA512 (thold-v0.5.0.tgz) = fa1404757c90b61aa8ea3e3cbd797a8151e26d3f66baff18328746378e9394f1444484a93b381f140981883769914ef544102d11d2a9983df5e8ce8378bdeb1a
 Size (thold-v0.5.0.tgz) = 118252 bytes

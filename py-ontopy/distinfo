@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/06/13 19:15:38 jihbed Exp $
 
 SHA1 (ontopy-0.1.1.tar.gz) = 4739c85aac862e37180e43eaecb3c3fe0d21e98f
 RMD160 (ontopy-0.1.1.tar.gz) = 0062f522f65acdbbbc979aa6912240ffb48bf8fe
+SHA512 (ontopy-0.1.1.tar.gz) = f006f2fb739ff05b26e957efb3f13ce66d501da20f0c9e7d768983e2ea899c891b38890f72c7ea80c91d1c93076d3b1d98ff183ffe1bd4c86e332595741039ae
 Size (ontopy-0.1.1.tar.gz) = 5517 bytes

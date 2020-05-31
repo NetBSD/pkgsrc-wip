@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/09/14 14:54:34 poppnk Exp $
 
 SHA1 (bluez-gnome-0.4.tar.gz) = 5a75be7d559586cc4c0d6ba8b050e1f09bfd54cc
 RMD160 (bluez-gnome-0.4.tar.gz) = 9d66ccae18900a1f25505e82657b2008c6792e58
+SHA512 (bluez-gnome-0.4.tar.gz) = b5962b8e27fe1173c2323955a360122109969271e2980c6fb84e26bbab9f5232055b825d7e44475032a7a08d3af4c2c007748e4341b587e5c0adb9191bd2b471
 Size (bluez-gnome-0.4.tar.gz) = 168508 bytes

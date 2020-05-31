@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/09 20:18:03 jihbed Exp $
 
 SHA1 (cubature-20101018.tgz) = f633f195214b31ed863a645b630c65799cf0ad6b
 RMD160 (cubature-20101018.tgz) = 3d053a905fb4a17a02b52ecafaf078f23bf9b3d9
+SHA512 (cubature-20101018.tgz) = ec0f86f144c7a1205b0c931dd5ba29ccee7d4257fccb9ddae08e284923d0bc665d01bef099428013b91f5e964c6211e914a282740fb207f8b7d4fb05c38b05a4
 Size (cubature-20101018.tgz) = 29159 bytes

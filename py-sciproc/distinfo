@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2014/05/04 20:45:49 jihbed Exp $
 
 SHA1 (sciproc-0.7.22.tar.gz) = a2f739da92f741ccc45e426e5892e38873f16d51
 RMD160 (sciproc-0.7.22.tar.gz) = 1303ea91856f4decd2262b0ec6cff128283e22e3
+SHA512 (sciproc-0.7.22.tar.gz) = 5ef25fe547225af4f0643ce5a6af939f6dec3b21eebdbc215c3e66dbb4409cbfe8dc148998f6a4dbf96bc0256e1291489bcab78ba95ce95268da96fb30055849
 Size (sciproc-0.7.22.tar.gz) = 27034 bytes

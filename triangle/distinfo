@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/10/28 16:38:52 jihbed Exp $
 
 SHA1 (triangle.zip) = 63d11e0b5bf097eb946a4da4ee18ddf279e16fc4
 RMD160 (triangle.zip) = 12be39ae4e34fc14ef3f9982e28a242abe200307
+SHA512 (triangle.zip) = c9c1ac527c4bf836ed877b1c5495abf9fd2c453741f4c9698777e23cde939ebf0dd73c84cec64f35a93ca01bff4b86ce32ec559da33e570a0744a764e46d2186
 Size (triangle.zip) = 158528 bytes
 SHA1 (patch-makefile) = 4c04ae02138d0bbfc1026d8662539d7522f83e0d

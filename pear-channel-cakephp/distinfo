@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/07/14 11:12:19 noud4 Exp $
 
 SHA1 (pear/channels/pear.cakephp.org/2013.07.12/channel.xml) = 6d7701544e4266c6b2e76900d157d3d541214457
 RMD160 (pear/channels/pear.cakephp.org/2013.07.12/channel.xml) = 79240841479ef2503ffdc054ebfa4c9638a6d45d
+SHA512 (pear/channels/pear.cakephp.org/2013.07.12/channel.xml) = 954f26297797ed6361d2bf820d77fc0eb2c3000f0e50653069b25632a7cda35a3ee9b13081345a5deca2883a19c083722c10c47ee6d3dc3dc683217193bd2969
 Size (pear/channels/pear.cakephp.org/2013.07.12/channel.xml) = 809 bytes

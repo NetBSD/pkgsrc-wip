@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2011/05/21 18:27:39 marko_schuetz Exp $
 
 SHA1 (why-2.29.tar.gz) = 2b649673964d3273eb995f2e70797c5a2b10925d
 RMD160 (why-2.29.tar.gz) = 2438151fd7ecb309b1a1fb79f09db032b9338c08
+SHA512 (why-2.29.tar.gz) = 4ce18936bc0e505c2a9da1c972c1e1e9872be913f6b0bae2db76cc3a3c1e4af34e2eeeb87c3b4f79020daaa01df1c067672b9198ec7e03fff3cb9520d9a0b027
 Size (why-2.29.tar.gz) = 2962977 bytes

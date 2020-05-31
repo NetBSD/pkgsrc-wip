@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/03 00:37:05 mbowie Exp $
 
 SHA1 (I2util-1.2.tar.gz) = 56218a6e0f1306a70b641246fa6f63dd686e6766
 RMD160 (I2util-1.2.tar.gz) = a0e6a676eb1a955a80e87bc88f2a011d9a7de038
+SHA512 (I2util-1.2.tar.gz) = 363a50f36e1f7aea057d359ef13ec83774a262de6e11811c8a1eaba8fe354a51fe5e5e26ee9a810826393e8cd55c5e29bc6f3ad5400deb481dc561bf492d75fd
 Size (I2util-1.2.tar.gz) = 204981 bytes

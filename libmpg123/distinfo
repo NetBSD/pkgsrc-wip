@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2010/07/13 05:31:28 bharder Exp $
 
 SHA1 (mpg123-1.12.3.tar.bz2) = 5e92d3c918f6095264089f711a9f38a5d2168b31
 RMD160 (mpg123-1.12.3.tar.bz2) = af4c6b7eec924316c40c8f9a0e064c711e016f30
+SHA512 (mpg123-1.12.3.tar.bz2) = 4e3d490251fe2b1118373857371b4246b61ca50547560f0125ef7ccd1785ea0867ade2a700601adb46bfc515c00ad3fcbc54badd71c79cfeed1ccaee7268fd66
 Size (mpg123-1.12.3.tar.bz2) = 809725 bytes
 SHA1 (patch-aa) = faf686e1b47bc53ef5155129da2fd0b81632c2f9
 SHA1 (patch-ab) = 7d1d36cf5ea4a3e3d0a43da351ac7e3c97c636bf

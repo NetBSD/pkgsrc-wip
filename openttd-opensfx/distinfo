@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/29 09:32:09 ggergely Exp $
 
 SHA1 (opensfx-0.2.3-all.zip) = 368480f627b0563af80ca724695875a4aa898db3
 RMD160 (opensfx-0.2.3-all.zip) = 426b641b5a29556598d8a3033b4c4dc5b98630ce
+SHA512 (opensfx-0.2.3-all.zip) = ee4f4659201f1b6829fcea3c66416573d11e50988ef33452c2e9867bee8e68ddbf978ca805802b2b4188c624e814816300e69c8b78bb80c9604841be706c96cc
 Size (opensfx-0.2.3-all.zip) = 11359588 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/11 22:44:54 jihbed Exp $
 
 SHA1 (drawnow-0.44.tar.gz) = 27eda7c4afd2b6f729dc8550279d480bacb4fd3f
 RMD160 (drawnow-0.44.tar.gz) = 6a54aecc07b5940c2d6c5c8e9bd509d479237331
+SHA512 (drawnow-0.44.tar.gz) = 641d526d22cbcb2659f5a6825005c8bf23e7b102e813c6ef0cb81dcc5949bd41305bacfd0e969ec26fa8b88d9d5d75a45a434673653de2677263d768ceafa56d
 Size (drawnow-0.44.tar.gz) = 2286 bytes

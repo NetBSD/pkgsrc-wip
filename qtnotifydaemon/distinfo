@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/09/27 20:15:17 othyro Exp $
 
 SHA1 (qtnotifydaemon_1.0.14.orig.tar.gz) = 3b5e66db9dd8ac70b61a1ff2cbe8028c955927ca
 RMD160 (qtnotifydaemon_1.0.14.orig.tar.gz) = 5699b88960d52158eaf63ae54b56cd8dedfedf4e
+SHA512 (qtnotifydaemon_1.0.14.orig.tar.gz) = 409f911be7d0e55f8a9f23db67ad6eefac1d215c598f54bab35bd704feee3a68ae21a3c416bd8848aacbdd82ca751ea1170c566d5615d4ac8a30adb87d487b8f
 Size (qtnotifydaemon_1.0.14.orig.tar.gz) = 1136779 bytes
 SHA1 (patch-Makefile) = 6c19f1c8aa76c95245ab0a74979d6ad9a747ae58

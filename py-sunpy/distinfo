@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/06 18:35:09 jihbed Exp $
 
 SHA1 (sunpy-0.6.1.tar.gz) = 39cca4ca4144034d0c0e9b4ba31e2a4df7663156
 RMD160 (sunpy-0.6.1.tar.gz) = dcb3831906f2ec8cab6e0cda8b742da0dd6c2ba2
+SHA512 (sunpy-0.6.1.tar.gz) = 9af76d3f101853403cd1bfda565d7fa520e4485cc5af2e70815c42475c376ba0dd1be8db28321ec4910bc7304f49e1b957d563c0e5b76fd8ad454716cd92bf67
 Size (sunpy-0.6.1.tar.gz) = 5515927 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/07/10 22:45:07 jihbed Exp $
 
 SHA1 (ccdproc-0.3.1.tar.gz) = d830d0d92ae8cf131972a22aa7055ec4afdb56e1
 RMD160 (ccdproc-0.3.1.tar.gz) = 0be0c95e0154309437d9a9cc2c95727b363dbaa2
+SHA512 (ccdproc-0.3.1.tar.gz) = 3f9ea61d7569aa4a1e782b7fc2e9d4d5d3bcddc460a04f04d529df2300df9dc0c14e7afe133419fe75d4f811db3a4c1d945ea02f2882f057ce352c43ca37ff05
 Size (ccdproc-0.3.1.tar.gz) = 642280 bytes

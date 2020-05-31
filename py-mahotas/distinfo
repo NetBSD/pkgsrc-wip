@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/18 21:20:51 jihbed Exp $
 
 SHA1 (mahotas-1.1.0.tar.gz) = 0748a151ae21bab79015a0e0bc7327ecd2bc7633
 RMD160 (mahotas-1.1.0.tar.gz) = 57a7818b423c7dfdbcf0e205312726af926a20f9
+SHA512 (mahotas-1.1.0.tar.gz) = 7cf337545ff212f2a2eb950655e5c98e9ad164ab3597173046ed2daad20cb0e0d146448e839dc945efbf2f4d0a01c85ad9735ac4fe495a58a0514f82e07564c8
 Size (mahotas-1.1.0.tar.gz) = 1516935 bytes

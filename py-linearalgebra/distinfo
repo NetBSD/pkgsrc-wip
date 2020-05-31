@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:26:05 jihbed Exp $
 
 SHA1 (LinearAlgebra-1.3.0.tar.gz) = 58f5c9d845591344f449b7a92a52a5a8987162d0
 RMD160 (LinearAlgebra-1.3.0.tar.gz) = 7c25bfc050329db4c2a34346e6a61ae47b04148b
+SHA512 (LinearAlgebra-1.3.0.tar.gz) = 19959a31c41bb0bc0cc7f660d6bc4f3c56e133d59d096b0a8c981486d073af8f399074c049a15129217dc7310621cb67e2a8f298e4018ef9d3f729c75260876e
 Size (LinearAlgebra-1.3.0.tar.gz) = 5061 bytes

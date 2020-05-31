@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/20 19:28:47 jihbed Exp $
 
 SHA1 (m2ext-0.1.tar.gz) = d2868d6ea9a798af4923416c82fe83d520b34316
 RMD160 (m2ext-0.1.tar.gz) = 00b77952d820dbbbf9178bd8418b9046cf005435
+SHA512 (m2ext-0.1.tar.gz) = 433d822212b043220c7a1fda34e08a6bb3db685adc18a873113b234a45888684dd98beac0470df329b7ee84bbbb362970349e503c4650354cae606b281e6befc
 Size (m2ext-0.1.tar.gz) = 2911 bytes

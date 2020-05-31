@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/02/20 22:45:12 jihbed Exp $
 
 SHA1 (linbox-1.1.7rc0.tar.gz) = a2b2eabfee94b990ed74ae980510f811ef7c24a1
 RMD160 (linbox-1.1.7rc0.tar.gz) = bcba7705652403c51faf13b3764cb7fac905a3e0
+SHA512 (linbox-1.1.7rc0.tar.gz) = 46025aa5c5ad797075c35c33fa614d144a7334dd46053307c6d3bacec76c211f969fdd08f6d41a839c00f8d2459e6eea9831f73148c5482f382cfd3d73580bfd
 Size (linbox-1.1.7rc0.tar.gz) = 1325532 bytes

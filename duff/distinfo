@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2012/07/05 14:48:27 othyro Exp $
 
 SHA1 (duff-0.5.2.tar.bz2) = 5e2f3b785bf57d38cda0b124f18ddeecbc90bfa6
 RMD160 (duff-0.5.2.tar.bz2) = c2df2d5c19a9fb69277f632bcd9edaa8f5a57637
+SHA512 (duff-0.5.2.tar.bz2) = 5f64c28ab86523dd4dffaf26dac67d10bea71bd5cf7b4eaa3dfa27309cf8e7cf37a74ee62b5f3df3cb0114a847711b3147a083cbdd72ab8e4b5f9a45c908f333
 Size (duff-0.5.2.tar.bz2) = 174545 bytes
 SHA1 (patch-join-duplicates.sh) = ffbb100b515d995759c5df8cc0cdaca8e9db34c4

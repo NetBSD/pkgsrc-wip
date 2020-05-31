@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/05 22:07:56 jihbed Exp $
 
 SHA1 (OWSLib-0.8.6.tar.gz) = da0b9ab3b2471d3d9c5a5e617faa60c3dd1d2764
 RMD160 (OWSLib-0.8.6.tar.gz) = f1d4501f141e12d14e927f59cac5de8cf4d107a3
+SHA512 (OWSLib-0.8.6.tar.gz) = bbf6d040fa7cff9c1bdffeb5bde750c7e8d70716137685b36e705f1d6b34ebaf0154f2db9edf4fd4ba3c50e16ca0e475ab8de53e312849c83f969d3bb8d38527
 Size (OWSLib-0.8.6.tar.gz) = 97199 bytes

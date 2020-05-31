@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/09/23 03:00:43 poppnk Exp $
 
 SHA1 (flexbackup-1.2.1.tar.gz) = 77247f1161208ca65b7cc6fe1743108d2078a166
 RMD160 (flexbackup-1.2.1.tar.gz) = d2a56ce6a3770498ef96ffbf75f65026b04f492c
+SHA512 (flexbackup-1.2.1.tar.gz) = 17630bc46657becdf5d5bde4852fd6cebe189fe54d381bda6471aa2e1db1ff082ba24461e2c22ba5805c2d93ac7f9805ffbdc4904da017f1b163cc21b5a3974b
 Size (flexbackup-1.2.1.tar.gz) = 80158 bytes

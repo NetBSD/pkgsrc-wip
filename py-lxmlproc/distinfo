@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2012/08/25 16:59:53 jihbed Exp $
 
 SHA1 (lxmlproc-0.1.tar.gz) = fffdf7ba31098a5534a56f1efe43a316fc1e66d6
 RMD160 (lxmlproc-0.1.tar.gz) = 0e221c79f1ec3249c5be292e156136d476049866
+SHA512 (lxmlproc-0.1.tar.gz) = 47b5a79ebf72e3a13ea537ba53dcc5518b7e83797972a5a71c4e4020e8b04c2c6e82d0275663fa7f09e22614f540e8faedc6fc2e3a44931c800467aded6c887c
 Size (lxmlproc-0.1.tar.gz) = 1996 bytes
 SHA1 (patch-setup.py) = c374ecd3e7adba1c138b71bb3b5b8d1c400f16ed

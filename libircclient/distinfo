@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/12/05 21:26:34 thomasklausner Exp $
 
 SHA1 (libircclient-1.7.tar.gz) = 02f1502d486c89ca26a59d6ba2cc5a4f92be95b1
 RMD160 (libircclient-1.7.tar.gz) = bf3911f778021882a0fa659316dab83ca85d6818
+SHA512 (libircclient-1.7.tar.gz) = 5bc0b400e706b2da7c5ce2bc480b32cad4edb5f11046af4b34ca39c86cea915f8ece7f1e75b83e61fe85cb25db1be0b519fac5ea0d3224bd29ada2b7324430b8
 Size (libircclient-1.7.tar.gz) = 291829 bytes
 SHA1 (patch-Makefile.am) = 4c69a55b1ce508e55e1f9f9fddc2af2984f6b38e
 SHA1 (patch-configure.in) = cdfebbfd00b3f679c6a73c365fd00f81b0703a1c

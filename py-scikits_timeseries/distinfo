@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:21:34 jihbed Exp $
 
 SHA1 (scikits.timeseries-0.91.3.tar.gz) = 63e87663876650254fa6152459835e08a1b21084
 RMD160 (scikits.timeseries-0.91.3.tar.gz) = 24d2b6c1024265a59669aa99fd536b0334f60646
+SHA512 (scikits.timeseries-0.91.3.tar.gz) = ea7292bf4d9bcce416b6f0e2c99fc40afe97a3a0210c535bd68f43a4a553d8a30cb77ce00f96ffc26340d5ff837faf5d480ea775385769495eccb5a196a88617
 Size (scikits.timeseries-0.91.3.tar.gz) = 323771 bytes

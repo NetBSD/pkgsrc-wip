@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/04/13 07:01:05 jgoamakf Exp $
 
 SHA1 (Class-DBI-Sweet-0.11.tar.gz) = 111548799023e11841edfc1e6c211812cffa52e9
 RMD160 (Class-DBI-Sweet-0.11.tar.gz) = 49e3edf30f3c9fe8a54c7b2f7bd955f6c017ed12
+SHA512 (Class-DBI-Sweet-0.11.tar.gz) = 82965b4be422d178773cff8235eef1ecde90010bbafe53b7ae23bb706bc4f0162682b12c0c0fb4303842055a7ab76eb4447e8e7afe14769110488d8c93955481
 Size (Class-DBI-Sweet-0.11.tar.gz) = 98927 bytes

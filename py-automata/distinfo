@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 21:20:57 jihbed Exp $
 
 SHA1 (automata-0.1.4.tar.gz) = 7c3b7881d1e843d9731dd171badd25934071e13b
 RMD160 (automata-0.1.4.tar.gz) = 78c1f19cc63ea9d8b722d501afdd255955e8277b
+SHA512 (automata-0.1.4.tar.gz) = 655978a39d2d0b12bc04083e8ce347ade73e50f13391d67ef2011f9f7557c10c98622144426a8ffcbbde2cbe5e94b84752aa3b36ae6fc2d3f41a6852eb16657f
 Size (automata-0.1.4.tar.gz) = 18382 bytes

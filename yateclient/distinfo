@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/08/12 02:51:45 othyro Exp $
 
 SHA1 (yate-4.3.0-1.tar.gz) = 3dacad1c8731953d3141e76a07cf34a3589bbe56
 RMD160 (yate-4.3.0-1.tar.gz) = 822b04a7f772a576e0c3ed6a734cf5f52c402957
+SHA512 (yate-4.3.0-1.tar.gz) = 3a9b484d77cd633092ef10a37c8c0c6dcc51e38a7b2771d0e3dd75ddd1dac5be0e2a9b99787f89cfeb38e6eb50a18b4dd3d6eb57dec632c7671c2f56331539c6
 Size (yate-4.3.0-1.tar.gz) = 3826549 bytes
 SHA1 (patch-yateclass.h) = 8f64563fc3e58610b59ee6315750c0c2e0efb746

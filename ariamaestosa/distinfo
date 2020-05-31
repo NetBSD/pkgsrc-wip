@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2012/11/02 20:40:13 othyro Exp $
 
 SHA1 (AriaSrc-1.4.5.tar.bz2) = 06483e161cfbd5579ca317feef12a476fb4b37ea
 RMD160 (AriaSrc-1.4.5.tar.bz2) = a36e402785287e10e3735243189690b13640326b
+SHA512 (AriaSrc-1.4.5.tar.bz2) = 8c5d192c9d51d7ddc745c1d4620eedba1d127227d1900c4425d064299383ff5145bf417e90f749bb7f3b8be3dc7b8ceac97c1733568a855503b7457356775eba
 Size (AriaSrc-1.4.5.tar.bz2) = 2656420 bytes
 SHA1 (patch-Freedesktop_Aria.desktop) = 077180c0a0819f4ea357f6a014416330de5de469
 SHA1 (patch-SConstruct) = 525a4890b784fe027bda8d4772759d32503db7a9

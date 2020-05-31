@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/08/12 23:35:17 jihbed Exp $
 
 SHA1 (cgnslib_3.1.3-2.tar.gz) = ab310941551d4ec877df50b82c95ee59921e05e9
 RMD160 (cgnslib_3.1.3-2.tar.gz) = 0d29c758d0cd22b592db565483c803aea96ceb4e
+SHA512 (cgnslib_3.1.3-2.tar.gz) = b143d90357dc8f7de4ab3d34aa7a175fe21d2cd4dc08e8d8b30060b69d54dcd7339ae3dda5028d159ea33393d817f9677f4c458eaf375e8e00f171ed2e5bb80e
 Size (cgnslib_3.1.3-2.tar.gz) = 1571497 bytes

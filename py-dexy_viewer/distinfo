@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/05 01:19:30 jihbed Exp $
 
 SHA1 (dexy_viewer-0.0.4.tar.gz) = f50daddf87d17f51cad818c2ac91d718a495a18b
 RMD160 (dexy_viewer-0.0.4.tar.gz) = 828dca95e27b2971cc7bd778938b603008393c72
+SHA512 (dexy_viewer-0.0.4.tar.gz) = 81220fb245c29d3457801abf91c4d9316f426c11174ad091bdbdbdbc28bbb78fa2fb911dd11129770f021f2d63a0635e1870d1fdc461de03195661a209a87ef5
 Size (dexy_viewer-0.0.4.tar.gz) = 112428 bytes

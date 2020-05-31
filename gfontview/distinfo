@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2007/01/07 02:33:32 shattered Exp $
 
 SHA1 (gfontview-0.5.0.tar.gz) = 4b2c9a050a7ca153df51c25326b112bbe9d56c4e
 RMD160 (gfontview-0.5.0.tar.gz) = c5ebe7c3b2b049d01e6952f033997875f1504c35
+SHA512 (gfontview-0.5.0.tar.gz) = a4da4ca0bbf3618374441566d984eee99f1d0de1711a88617c2df144a975cfbf2b47362db5a08020db3819a1ec7b057ccf269524e89ce88510bbd5176e4152a5
 Size (gfontview-0.5.0.tar.gz) = 207053 bytes
 SHA1 (patch-aa) = c79d29fc6182783cb07d13181addd299b4ecac71
 SHA1 (patch-ab) = f380b72bcb9f1687a6ed0c2ba332a8bacc540b51

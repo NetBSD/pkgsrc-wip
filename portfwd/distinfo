@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2015/06/28 01:33:35 mbowie Exp $
 
 SHA1 (portfwd-0.29.tar.gz) = 6805134b89b28dbe7f6fa9a459ec29c40d8648d3
 RMD160 (portfwd-0.29.tar.gz) = 404f8c1fa4d476ffaa83f47fb78df85e757cfea0
+SHA512 (portfwd-0.29.tar.gz) = 790d30afb42eb5e03846534e5098c7d1cb4241758df77fd56fc3f4fdbb05dae88ef84e16b27434035dd39a7c82beb77d490f64741181c38efc3b3928face51d1
 Size (portfwd-0.29.tar.gz) = 168318 bytes
 SHA1 (patch-src_portfwd.h) = 3f13f8e076d9394b9c0d31b76ba7b1839c208464
 SHA1 (patch-src_util.h) = a9b2ea9ec9974a5c00be366583f04f1b34aec330

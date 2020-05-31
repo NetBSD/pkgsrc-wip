@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/12/24 13:24:17 othyro Exp $
 
 SHA1 (gambatte_src-r550.tar.gz) = 91841a8da04f1a9661e0ef3f4f83ac8e94849ba1
 RMD160 (gambatte_src-r550.tar.gz) = 72877edbf8b98dff3c7b22f39c5c42225aa1d5ec
+SHA512 (gambatte_src-r550.tar.gz) = 533c7fce0050bb823a9ad9d6418617ba265c524cbde4945d30507bf9af4cf511f29ff07bb9261a5cbe529c6d2f82050dacf408a7eae6be12f7bb028ee32aa92c
 Size (gambatte_src-r550.tar.gz) = 520348 bytes
 SHA1 (patch-aa) = 524f2689f0ffcc70ba4c4d4377b481502ed58b49
 SHA1 (patch-ab) = 9fd24ea3d738d3c97a68317f861863bcc6564c9d

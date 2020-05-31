@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:32:21 jihbed Exp $
 
 SHA1 (pytkgen-1.4.tar.gz) = 89b1648db355c29021e8b4044f32d6190a72d661
 RMD160 (pytkgen-1.4.tar.gz) = 26f7335001e33a7eddefc62cf668fedb5036be6a
+SHA512 (pytkgen-1.4.tar.gz) = 5d1d43f259c1f530606e8a1155e39d98e111dcf6768f0afca9b7313aea71298a22070c955b0fcea6bd749d564ee98fb962399bc7aea47eddb312a651f85f6733
 Size (pytkgen-1.4.tar.gz) = 4382 bytes

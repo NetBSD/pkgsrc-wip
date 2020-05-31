@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/01/23 02:17:06 noud4 Exp $
 
 SHA1 (Xalan-C_1_10_0-src.tar.gz) = 3fc63045048176e0ab00ce8aa0d15b2c1e5d646b
 RMD160 (Xalan-C_1_10_0-src.tar.gz) = 537ba0be6a14e47eb4453c2d813b31ec416835ab
+SHA512 (Xalan-C_1_10_0-src.tar.gz) = 6a025ac4a21d0c1dd4100a7e93673c528427fa091c2fcb1895a3730bc4eefa7a27b28034f04be1e91db22abbbfd21eb275bcf09b0e3d35b18dd1fddb99e70d30
 Size (Xalan-C_1_10_0-src.tar.gz) = 1554940 bytes
 SHA1 (xerces-c-src_2_8_0.tar.gz) = f0803b1330daec3f44b17dee64c3c99de6b3cd3e
 RMD160 (xerces-c-src_2_8_0.tar.gz) = d576df7870b043a338358834a0e1180dca39e838

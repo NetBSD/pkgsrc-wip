@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/11/09 18:34:24 jihbed Exp $
 
 SHA1 (teafiles-0.7.4.zip) = 4743da8eafd68ca6d764dd0871febf3824e516c1
 RMD160 (teafiles-0.7.4.zip) = d0ac61278658b8e03eb75c736d9fc8696cbaaf6c
+SHA512 (teafiles-0.7.4.zip) = d6a4ceec02fe6b6387956f5ebbdd25552633069bc59f5f8a15dbffcfc0815296dbe124cbc5ba32c63eea51a687cfefc964c2ea16d22ce351a3f2603427f02f14
 Size (teafiles-0.7.4.zip) = 44925 bytes

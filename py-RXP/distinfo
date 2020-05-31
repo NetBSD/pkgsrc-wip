@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2015/07/11 01:49:07 jihbed Exp $
 
 SHA1 (pyRXP-2.1.0.tar.gz) = 1316f83ee866ae430be800fd8f3f96bf262c1d85
 RMD160 (pyRXP-2.1.0.tar.gz) = 62140c9da21066772582d5e0908c28e5971255ac
+SHA512 (pyRXP-2.1.0.tar.gz) = cf0088cdd48d14629fd355103acc9e73312cedbe08436c5a27c0a15cccbcaa174300a473ab78ed8a3402d7a1197350636c9bc22014aef6b37c09146494efd133
 Size (pyRXP-2.1.0.tar.gz) = 251820 bytes

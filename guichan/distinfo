@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/02/05 00:03:41 pseudo_anim Exp $
 
 SHA1 (guichan-0.6.0-src.tar.gz) = 19536c5e64369a3d7cc50df1210dd6f6efd625a1
 RMD160 (guichan-0.6.0-src.tar.gz) = b016a63dd37a3a552e5cbd39b2f5a82c8557f49d
+SHA512 (guichan-0.6.0-src.tar.gz) = 6bbb8bc87f460b0effe15282fdce28331a825f910e68c2642c6552f1cd265e603186cb8a2042f5a49956435cbbc83fe2c390169eac1ca5c0238ce7eda5f0390e
 Size (guichan-0.6.0-src.tar.gz) = 2646139 bytes

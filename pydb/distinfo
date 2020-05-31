@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2009/04/25 20:22:06 jihbed Exp $
 
 SHA1 (pydb-1.26.tar.bz2) = 7f2de4530c3399cfb380fccdc440f5a8e14cc989
 RMD160 (pydb-1.26.tar.bz2) = ecefe104f58b0857ec2e17d6d0421e28030d6160
+SHA512 (pydb-1.26.tar.bz2) = 39365ddcd863404079e4a7159bbbedbfa6a99b3d46e95c07fe14be61a2805b9237df5e51a8a68db159fca2df4b0bd46bddaebbe610d1597064f2df4e64393355
 Size (pydb-1.26.tar.bz2) = 572184 bytes
 SHA1 (patch-aa) = adc0654c741fa1321ecb63cb3707d4e1f1eaecc7
 SHA1 (patch-ab) = 36ec3fc43ae8d0e1f7ed1633ac60d8a08701464f

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/04/21 13:51:17 shattered Exp $
 
 SHA1 (Encode-IMAPUTF7-1.05.tar.gz) = a587bee41bb22cb15d5107567f4ee360c473e8f2
 RMD160 (Encode-IMAPUTF7-1.05.tar.gz) = fd45cace47e6d1d1a82e7053a1bfa83b3b940c25
+SHA512 (Encode-IMAPUTF7-1.05.tar.gz) = e286e059db72c498173a312223152ca492700282345cccbd21ea49e0334fedcd922ae40b018aa8a6b474a10fbff9ac49f46d4c6f9920f3e508adab42bdca976f
 Size (Encode-IMAPUTF7-1.05.tar.gz) = 25646 bytes

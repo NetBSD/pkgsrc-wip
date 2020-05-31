@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2014/02/06 15:12:17 fhajny Exp $
 
 SHA1 (mozjs-24.2.0.tar.bz2) = ce779081cc11bd0c871c6f303fc4a0091cf4fe66
 RMD160 (mozjs-24.2.0.tar.bz2) = c560f0ed343caa15f816a2cdea307a7015e0e8b1
+SHA512 (mozjs-24.2.0.tar.bz2) = 49805e256f6fa797505c01b7596d5bb941ed7a2454862c52ed42ad48b5ae4540b777e77ed8da1b98c89f8622ed2c76052187983687008a4ff53594addb328df4
 Size (mozjs-24.2.0.tar.bz2) = 15624530 bytes
 SHA1 (patch-Makefile.in) = c7730e978ec83ad330329cd94b74c5110fd2d46d
 SHA1 (patch-config_Makefile.in) = 61d2baa6e223506a24135827d0f830f952150dd6

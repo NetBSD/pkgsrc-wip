@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/12/09 21:11:33 jihbed Exp $
 
 SHA1 (ComplexSystems-0.3.2.tar.gz) = 703a1bee47beaeb6019c152aa897a34ea8ea82ca
 RMD160 (ComplexSystems-0.3.2.tar.gz) = 949d1ed4365ccccb8aa608c806a2d0a05bbed870
+SHA512 (ComplexSystems-0.3.2.tar.gz) = 94df808177771ba8016b54d6a7a9be73557caaeaa660f6ceb46b71b80ca67eb8f7af2a8664884b5da52683d54ced2fead6a8572dadc6ec2a38b56060cd9117fb
 Size (ComplexSystems-0.3.2.tar.gz) = 14755 bytes

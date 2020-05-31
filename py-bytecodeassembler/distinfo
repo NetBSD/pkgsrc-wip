@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:10:47 jihbed Exp $
 
 SHA1 (BytecodeAssembler-0.5.1.zip) = ad9905379855c02df77ef44ad84c1ec6cfa144f4
 RMD160 (BytecodeAssembler-0.5.1.zip) = e6b2c9df7e87f64ead9d69a25c4cf1d774674b85
+SHA512 (BytecodeAssembler-0.5.1.zip) = 86f4b5245ab083fa6901fb324da91c186b97d0c7a53dfae5ce1cbc4a71eeb5094c559c017bf32eaf4f9f13a2a3b90d6116338cd363fe13b5ab5f1fcc3c7821f5
 Size (BytecodeAssembler-0.5.1.zip) = 49327 bytes

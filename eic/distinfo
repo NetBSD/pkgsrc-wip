@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:12 rillig Exp $
 
 SHA1 (EiCsrc_4.3.0.tgz) = 31be22542fe0e6d2005b36d84eaebefcd66ec200
 RMD160 (EiCsrc_4.3.0.tgz) = 359345899fcf71f5b662c7423d838e76276e0620
+SHA512 (EiCsrc_4.3.0.tgz) = ac65d51e0de34c24f8b13624a023f9c76561fb5e1b773b7e6c2f831dbef39c577cf7566d2e5497b2733365de0982e8c917dd4cc1dcbceb5083d6d806d25e0091
 Size (EiCsrc_4.3.0.tgz) = 618274 bytes
 SHA1 (patch-aa) = c3126064f21fbf0c30ab10f5ae89208b211ac6d1

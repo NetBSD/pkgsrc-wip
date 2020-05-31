@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:14:10 jihbed Exp $
 
 SHA1 (ghalatawi-0.2.zip) = 6be3e51a2f5e759fd2855a00ddf762cdc30ebb97
 RMD160 (ghalatawi-0.2.zip) = 2bcce4b1572561d9dcafb4bdfd04367095786acd
+SHA512 (ghalatawi-0.2.zip) = 873c33487244f4938872ddb877b7a4e416ebe7a4e3e5099796cacb95e2cc9470f0eb41f0dc5a45b9a533195bfbfca03e668514b04bb3be1ecfee8f612c87e0c7
 Size (ghalatawi-0.2.zip) = 930380 bytes

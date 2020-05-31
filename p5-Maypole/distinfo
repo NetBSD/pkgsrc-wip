@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2008/09/16 01:14:07 ficovh Exp $
 
 SHA1 (Maypole-2.13.tar.gz) = fa562cbe47191fe06222942965501fdb9ff2afed
 RMD160 (Maypole-2.13.tar.gz) = 39b29fa43be58750a05c1e2871eb1ba9084b32ac
+SHA512 (Maypole-2.13.tar.gz) = 75292f3336948d9082fc905d4ad3fb816da6d65462158cb751c1700fd3073451ecd049f7bc0901285b973214fac59bca17ec51423c8b0d939e23e39708b28fc1
 Size (Maypole-2.13.tar.gz) = 153590 bytes

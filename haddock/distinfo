@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2006/10/17 13:35:10 emil_s Exp $
 
 SHA1 (haddock-0.8-src.tar.gz) = e171d4446ac6fcef526cad4c688892fe587fe90e
 RMD160 (haddock-0.8-src.tar.gz) = 80b7a582ea91fb36b97675d7ea8a027221a28b8e
+SHA512 (haddock-0.8-src.tar.gz) = c29fccdfd5b9407098ce048b84b65d2ceece2d6f2af9a9edcc38d05a159d5391756a205da929ff870e18e886bfd006c9eb5a4b697b3405421f4beea42fbb3ba0
 Size (haddock-0.8-src.tar.gz) = 162872 bytes

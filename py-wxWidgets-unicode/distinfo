@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2008/10/20 08:59:58 tonnerre Exp $
 
 SHA1 (wxPython-src-2.8.8.1.tar.bz2) = 96027778c9d8dbfbc08a1aecb2dbe358b947b897
 RMD160 (wxPython-src-2.8.8.1.tar.bz2) = 4ee33e256cc0d8caae1676b023db0b56fa435ba7
+SHA512 (wxPython-src-2.8.8.1.tar.bz2) = b639f227991ec2f835d00237dfb7a2fbf278bd27cc89d536fe47b20152d02ce21fc3387aa0f29e2475f5ef176f077a82945e89067eb97996753d0a9c5413d393
 Size (wxPython-src-2.8.8.1.tar.bz2) = 27712841 bytes

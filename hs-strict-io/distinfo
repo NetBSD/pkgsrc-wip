@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/05/01 19:48:23 szptvlfn Exp $
 
 SHA1 (strict-io-0.2.1.tar.gz) = 460db620c7ae889d403e24ed2efb65ef4458f665
 RMD160 (strict-io-0.2.1.tar.gz) = 59ab34ec4d53cf0422f4be7a7a1e0e4301c5f3fb
+SHA512 (strict-io-0.2.1.tar.gz) = 7b9110db2f92ddff994ba74b7f91dc44fb784306031a792d31e48ee335b0cf5ee85a1fea795a8e57f6907952caa94cd69609536c97d0ada3ebcdf66f3a810261
 Size (strict-io-0.2.1.tar.gz) = 5425 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/09 20:20:10 jihbed Exp $
 
 SHA1 (genus2reduction-0.3.tar.gz) = 14f42561d654fc5c3f177f68cb7142baa990aefe
 RMD160 (genus2reduction-0.3.tar.gz) = a1815b9ac6102a48124f3b07ba2f8a215cc7fea9
+SHA512 (genus2reduction-0.3.tar.gz) = 1ff5f114f693c12fa1b3744c9248b62385eb061c3fedef71493074ede6446696d977851c9de27063fa3b8c75c5c22e08365f869c40bb4652902a8f4f20545aa4
 Size (genus2reduction-0.3.tar.gz) = 16322 bytes
 SHA1 (patch-aa) = 4e16dbf74d358113b6084cf878f40076cc3090b0
 SHA1 (patch-ab) = 483f0d0f2343263e1e18819b085c419c9d00a07a

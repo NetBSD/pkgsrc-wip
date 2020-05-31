@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/26 18:25:02 jihbed Exp $
 
 SHA1 (HDDM-0.5.4.tar.gz) = cb1c11d58d1ff38c650d86f09a7053565343d3df
 RMD160 (HDDM-0.5.4.tar.gz) = b0d69d430b87fced9327b8517f6ed42581ade58d
+SHA512 (HDDM-0.5.4.tar.gz) = 9b901f183c74078f559f96000a9afa80af3c84fb70fac428842e446ffa8d825defabc53d1885cc7bda092edc5e72ddea2678db06cb97bf6ae9445740ce9027b0
 Size (HDDM-0.5.4.tar.gz) = 1335395 bytes

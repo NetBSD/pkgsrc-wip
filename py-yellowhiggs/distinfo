@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/09/16 15:08:05 jihbed Exp $
 
 SHA1 (yellowhiggs-1.0a4.tar.gz) = fd57dcb74f2c78b8c66019f660aa8d0f7a3861a1
 RMD160 (yellowhiggs-1.0a4.tar.gz) = 6e96c8a952a8d761756b808312e3fe4b40a35b4e
+SHA512 (yellowhiggs-1.0a4.tar.gz) = d6004a207d6f16f3e35daf090a46480c3a3e4cb42c1b3f0123f8f93d544a6b9f09a6d3fa7ec07ad5c59342dbc125ce916a60aa84f21b464b3fc71d5c3cc4fee3
 Size (yellowhiggs-1.0a4.tar.gz) = 59637 bytes
 SHA1 (patch-setup.py) = 97851c837278cc1dddd3262a038cceec1e467bf9

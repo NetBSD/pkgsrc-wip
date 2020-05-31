@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2014/07/17 23:10:37 jihbed Exp $
 
 SHA1 (igraph-0.7.1.tar.gz) = 2cf3528a60c52810a3d5ed9f117692f8f639aac1
 RMD160 (igraph-0.7.1.tar.gz) = f3452b3fe12c23eacd1b7cf8b6dc7fc22c53fddc
+SHA512 (igraph-0.7.1.tar.gz) = ac7d7e3fbc6d27ae69079224881ca03db2c7e0b50d016706f3e167c614e2c9332c675d2fcd3cde12874e13a8fc402d42222308c6195afadee15152cec93f94dd
 Size (igraph-0.7.1.tar.gz) = 2967134 bytes

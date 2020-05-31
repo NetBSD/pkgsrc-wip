@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2013/03/10 13:58:15 othyro Exp $
 
 SHA1 (soil.zip) = f7500cd708202743e9d074f5bab1dd3aecdfef45
 RMD160 (soil.zip) = d2467c9d6552a2e9d475db815d0f4acbbd79ba46
+SHA512 (soil.zip) = a575a84aa65b7556320779d635561341f5cf156418d0462473e5d1eb082829be3bcb30600b4887af75aeddd3715de16bdb3ca1668ebaa93eea62bacf22b79548
 Size (soil.zip) = 474967 bytes
 SHA1 (patch-projects_makefile_makefile) = 194f200435e5afec5b523be8503042e48aa13a55

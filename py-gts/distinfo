@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/08/22 16:58:41 jihbed Exp $
 
 SHA1 (pygts-0.3.1.tar.gz) = ed56967a31ff682d34df3f35ec6eb2b5af8756cc
 RMD160 (pygts-0.3.1.tar.gz) = 1d4a7853868c3eb272813e3f4936693839e5b65b
+SHA512 (pygts-0.3.1.tar.gz) = b065cdef1c020406519bf7b10af9a7bcc01ae50c333986db1543c5207c33f6ca76510f7ee14c1ad60f01f9bde016704a656fad7e3a76a2e7dd13cac4dce1da61
 Size (pygts-0.3.1.tar.gz) = 118340 bytes

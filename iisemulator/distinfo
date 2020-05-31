@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:22 rillig Exp $
 
 SHA1 (iisemulator-0.95.tar.gz) = 28b38b1e1b4a78ecd88ecd26ef9d2e59171aa9c2
 RMD160 (iisemulator-0.95.tar.gz) = f52259ab206c0f8d045a1961a2f3c4d4b1e9e622
+SHA512 (iisemulator-0.95.tar.gz) = 93c401d0d084470366bf73df59f23e8be7a9b7317d26c0661617263777629072751187d44cac19117f43c1dd52803e72708833ac3b9d86f4bb91558a4f2c63df
 Size (iisemulator-0.95.tar.gz) = 49914 bytes
 SHA1 (patch-aa) = 90365a97b40616d0952981f352e76dc69c15d86f

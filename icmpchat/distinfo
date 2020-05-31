@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (icmpchat-0.6.tar.gz) = bb980081481ba887fea5832a42f99486dc508261
 RMD160 (icmpchat-0.6.tar.gz) = 1ab67f2baf08379245c2e3afd6b58f9ef5243798
+SHA512 (icmpchat-0.6.tar.gz) = 75f6f05f7c74f3c1b177aead486401acb392a0c2b36ad2a8b87653c7c0897271747e825b0042a5b5b12223bca860d841b271a8c26549223679e9aa70e6218c3b
 Size (icmpchat-0.6.tar.gz) = 36782 bytes
 SHA1 (patch-aa) = 428d515447da98d5a61fa0b61855e4b4cdd06b2f
 SHA1 (patch-ab) = b89f6a0dc398c0173026839d371aff79d8bc7738

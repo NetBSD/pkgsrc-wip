@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/03/01 15:13:40 lkundrak Exp $
 
 SHA1 (wrcs-0.99.3.tar.gz) = 18f7d7e9c690832ecf2d24c791f3169bc794a35d
 RMD160 (wrcs-0.99.3.tar.gz) = 981336e13cdcfb92ad807b0b9d5d82e143fc96d1
+SHA512 (wrcs-0.99.3.tar.gz) = 4bd1b450e2b9246cf36d236bd9449cb7b367a0aaa188f6af43cd812e57db131ad8704d1ccc88fe4c91a563c48622713b6b63077cdfd199569e3e1890779cd3a1
 Size (wrcs-0.99.3.tar.gz) = 76136 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:11:02 jihbed Exp $
 
 SHA1 (DecoratorTools-1.8.zip) = f8876d4e2a744600a51ed126214b9729a713fa5d
 RMD160 (DecoratorTools-1.8.zip) = c4cc286a557588ec4d45ebbbc6d848fdee107a19
+SHA512 (DecoratorTools-1.8.zip) = b107b61d76c1c41ebe4f663d42fff3ecf184364fa46c234a8ad9df0d626bdd113c7527c6e1d97fc2d38c0fc76ff43dbe0190fc1297240c44d9ba490b11f6fa51
 Size (DecoratorTools-1.8.zip) = 29566 bytes

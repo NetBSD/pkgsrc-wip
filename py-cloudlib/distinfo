@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/01/31 11:52:05 jihbed Exp $
 
 SHA1 (cloudlib-0.3.0.tar.gz) = 1c1a45566c971e16a69164988188998de193c6f4
 RMD160 (cloudlib-0.3.0.tar.gz) = 468772754dfbb33382fffe799594f0ccf56f2b74
+SHA512 (cloudlib-0.3.0.tar.gz) = 2eade7cebe22b15b3b37cf1358cab732f1d03b3c8d1751b65850b6ed7b1a7827e9d96cabab4f98bfe767eaa6fb3606bcfe46943731394f4205c17f9c9859d0aa
 Size (cloudlib-0.3.0.tar.gz) = 125063 bytes

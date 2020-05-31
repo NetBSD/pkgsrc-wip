@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2006/08/14 01:42:32 splitscreen Exp $
 
 SHA1 (bioruby-0.6.2.tar.gz) = 61423783a07904c26a39e1539da8ef9d77c518c0
 RMD160 (bioruby-0.6.2.tar.gz) = 21527cc9d65e14a6e29c5bb9a6a365f23b877869
+SHA512 (bioruby-0.6.2.tar.gz) = 01e32b737f543dd668c4cd45fac3a172ed1dc693c2063389248c578af6aa80d3e579f0cf7be6120c8c33e00aef0f255d4a1598bd6420822d827e238ba1039f11
 Size (bioruby-0.6.2.tar.gz) = 270444 bytes

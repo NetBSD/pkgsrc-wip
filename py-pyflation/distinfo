@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/12/02 16:06:17 jihbed Exp $
 
 SHA1 (pyflation-0.2.3.tar.gz) = 0f9396c88ec7a8795c7801a1168244dd84fc84db
 RMD160 (pyflation-0.2.3.tar.gz) = 28553d4e6f48ab1c832e9be214bfe9d17540778d
+SHA512 (pyflation-0.2.3.tar.gz) = 25e9a3571745620d29d8ccfb9edffa1c601516a6a052f4ccae871c898d1ee76bc547083d32c29db1e493f1c243b95a11922e287dbc930403005967e1c67c0ba3
 Size (pyflation-0.2.3.tar.gz) = 153094 bytes
 SHA1 (patch-setup.py) = c8e89dd6959da75f587cf612b88d13f9800a445a

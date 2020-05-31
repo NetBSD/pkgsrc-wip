@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/03/09 21:37:54 jihbed Exp $
 
 SHA1 (telepathy-python-0.15.15.tar.gz) = 535be5c1b0cc950b0af7fe3273012fd9ae69bb16
 RMD160 (telepathy-python-0.15.15.tar.gz) = 2bd9a9dbff1bfcdff1d48d1a3dfc9b7d7e3912a6
+SHA512 (telepathy-python-0.15.15.tar.gz) = 97a98c17414bdf7cdfde696179007c9044f5da5c51f9781ac15d0407942aa2bf01cfbfeaefdfa2aa82797b48edd4629ca3ae1a5ad31737a41b57fd9720c772a5
 Size (telepathy-python-0.15.15.tar.gz) = 306197 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/05 23:21:54 jihbed Exp $
 
 SHA1 (dsltools-0.2.6.tar.gz) = 135fef8da7be2d9e52cbd9c663a6500c091dcd08
 RMD160 (dsltools-0.2.6.tar.gz) = 69c4eb9cc5064001cddfba08ad60d2ed100c9f8b
+SHA512 (dsltools-0.2.6.tar.gz) = 16c1ba56b8df1867fe27be3f2a59c1022e6e3ae7c08b46a89bbbb49aaefbb2287b8f3207b1b7ebde1348cc001a740a0a3ee1328a8379d5ab4d7bbc8508d8db89
 Size (dsltools-0.2.6.tar.gz) = 4293 bytes

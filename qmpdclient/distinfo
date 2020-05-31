@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/12/31 19:05:22 phonohawk Exp $
 
 SHA1 (qmpdclient-1.1.2.tar.bz2) = a978e939c558b6c6fef07b6e8021d01c5a551de4
 RMD160 (qmpdclient-1.1.2.tar.bz2) = 098ac9b04ae00bad19687a403073a0c4470e9007
+SHA512 (qmpdclient-1.1.2.tar.bz2) = 68691a44fb8daf57e474c66f06cf337ba894012f291ececc383360a913be89f9e0c468273870039b6e607d831128e6b26ebda481385cc3065b7e58ecd3d61421
 Size (qmpdclient-1.1.2.tar.bz2) = 260718 bytes

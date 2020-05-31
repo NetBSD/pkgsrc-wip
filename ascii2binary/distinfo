@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/04/13 10:27:32 bartoszkuzma Exp $
 
 SHA1 (ascii2binary-2.14.tar.bz2) = 8bd9c21906efb1ead0f0d3c96dd6428e03a001ac
 RMD160 (ascii2binary-2.14.tar.bz2) = e5b1f250ecc4e78d70c602e72f88b5ebc9647044
+SHA512 (ascii2binary-2.14.tar.bz2) = de3773ae53412b8d46b4ca4e2ae1bf8d577f550e97824298b3a9db6504f93c02aa2fb6aac727da8da38825dac90c1483426ce4204c6deba579d4e8b5fd70a881
 Size (ascii2binary-2.14.tar.bz2) = 83091 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2013/05/10 13:20:49 francksys Exp $
 
 SHA1 (choosefont-0.3.tar.gz) = f9118ffb856ff47944adab32ef580c2320d3be40
 RMD160 (choosefont-0.3.tar.gz) = 8f266a0ef02e90161127999c171d55499c97b58d
+SHA512 (choosefont-0.3.tar.gz) = 19a36063093a5510a25f7ce8181f4512d4639adbc854b082c715406cd9770d141722d86e1267c3e35ef872f310164724dc284ea48a411f58e58524ef568f1612
 Size (choosefont-0.3.tar.gz) = 30573 bytes
 SHA1 (patch-choosefont.tcl) = ba349b69433da84d02bc862d5638d001948e7640

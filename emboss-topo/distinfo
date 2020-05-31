@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2006/08/26 15:41:20 kristerw Exp $
 
 SHA1 (emboss/topo-1.0.0-20041107/TOPO-1.0.0.tar.gz) = b96203b99a0f6d2af15cfa509bfbfb3a5d28d473
 RMD160 (emboss/topo-1.0.0-20041107/TOPO-1.0.0.tar.gz) = 2172cef2a870f6b6b8c91a5841cebb84241394eb
+SHA512 (emboss/topo-1.0.0-20041107/TOPO-1.0.0.tar.gz) = f7e68c14d2af1c716b4d7d7b546e6c51a8745aa464597cd0212e73503e8d56d0eceecf560ae940e5514daec5acb9c6d0101814523cec8a76545b468e8a4c9ec8
 Size (emboss/topo-1.0.0-20041107/TOPO-1.0.0.tar.gz) = 345281 bytes
 SHA1 (patch-aa) = acbd68a1b0e9516abcebba93cd6897e2d28d7621
 SHA1 (patch-ab) = c510e8ed9c43990f04456ae312e8b42eea196759

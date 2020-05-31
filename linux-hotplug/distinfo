@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:27 rillig Exp $
 
 SHA1 (hotplug-2002_04_01.tar.gz) = 4ab648a4e0ebc6b3306f8661a0748ba39bb8683e
 RMD160 (hotplug-2002_04_01.tar.gz) = 8c88a8188792b219661938618d53001ada62689a
+SHA512 (hotplug-2002_04_01.tar.gz) = 9270212f9788fbc825861ba149fd9179bbf337a4c530ba42cd655c3cdf072d59eefe729cd3a49ab987bec75740dde462456b36a2b0d3dd5d981c4d12f3d22607
 Size (hotplug-2002_04_01.tar.gz) = 36984 bytes

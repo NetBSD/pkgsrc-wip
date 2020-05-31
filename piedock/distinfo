@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/02/16 11:16:33 thomasklausner Exp $
 
 SHA1 (piedock-1.6.1.tar.bz2) = 433bacfb0e9cc015709d5f18a50b2038874a1542
 RMD160 (piedock-1.6.1.tar.bz2) = 78f0b3ad456229155c3f2ad065376586d9dbc5f1
+SHA512 (piedock-1.6.1.tar.bz2) = e956497411d55005e369a405191a208874779c87651fa7d02f7db84cf209e87f22c89aaa259a35d2a9a558ede2999925a05b65322717088400e8bbd15c4e1060
 Size (piedock-1.6.1.tar.bz2) = 251927 bytes
 SHA1 (patch-src_Png.h) = 6d2e7eea66f218ec771531f579848aa8210c5401

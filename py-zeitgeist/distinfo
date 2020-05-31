@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2010/03/22 14:20:56 jihbed Exp $
 
 SHA1 (zeitgeist-0.3.2.tar.gz) = 7180cb3a884a7f17addd356b09363c420a137ac5
 RMD160 (zeitgeist-0.3.2.tar.gz) = 64ac80039da685ab506fff23f68a74282e531f79
+SHA512 (zeitgeist-0.3.2.tar.gz) = c7d8f98da3e09f45597e965819936ad268f38938f51fb64acbac5fae62618e8e2873cb2a43e53350c54baf95471943b0229adf334f11fac8a8a02ef2a6cf097f
 Size (zeitgeist-0.3.2.tar.gz) = 694760 bytes

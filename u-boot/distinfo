@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2008/04/13 12:24:19 noud4 Exp $
 
 SHA1 (u-boot-1.3.2.tar.bz2) = 44b408fd733a2b1ada497bdc10ad76beef00975b
 RMD160 (u-boot-1.3.2.tar.bz2) = 90721175bdfbfe52e1248a76066f6c29c595b488
+SHA512 (u-boot-1.3.2.tar.bz2) = df129723c55e40790af2892e15f931e91ad417d5992dbc8eacab9194fc6bd08f4bc3d5e7126c87ff8f2e859794565f7e6649656759ea2117bd3cd21af918c280
 Size (u-boot-1.3.2.tar.bz2) = 7304253 bytes

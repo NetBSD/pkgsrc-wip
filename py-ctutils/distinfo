@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/20 09:40:55 jihbed Exp $
 
 SHA1 (ctutils-0.1.tar.gz) = d896c7192fdf9d4a6421ec9672b261af01941e6d
 RMD160 (ctutils-0.1.tar.gz) = 7ff7c58f78bc0732b92de6c454b83d69bc0a1418
+SHA512 (ctutils-0.1.tar.gz) = 921042a171c2418f7634b3f80f7b9482f1ebf61f0f8903ef9530098a1ef9dd06d557b1a09c5f35c8ccaeded50a7a23c44298f79e1fc41ab05e0fa9c6a0ebf9fc
 Size (ctutils-0.1.tar.gz) = 23206 bytes

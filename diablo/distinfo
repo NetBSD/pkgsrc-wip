@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/29 00:31:59 pettai Exp $
 
 SHA1 (diablo-5.1-REL.tgz) = b6473a0cce366ad547ed070e5677fbbc506591c7
 RMD160 (diablo-5.1-REL.tgz) = a568a7941b4a38b442ecbe471a35976118b0e03f
+SHA512 (diablo-5.1-REL.tgz) = c16a4f13a73095e8cf6a01a7027f4f728d25bcfa2fed15545d5e58591616dcb7e0dbf890594eee6be0978a63cde361cf9bb1654178d0b804ed87c6fc471cca31
 Size (diablo-5.1-REL.tgz) = 694765 bytes
 SHA1 (patch-aa) = 7c5d222cd37e827652c7942850ce6737d7e52605
 SHA1 (patch-ab) = a2a6ecfef0056d661a4af328cb23e4fe27155cdc

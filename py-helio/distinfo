@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/13 23:32:19 jihbed Exp $
 
 SHA1 (helio-1.0.0b1.tar.gz) = e392bccdae4bb74db20168b2f39d89b379d2f13a
 RMD160 (helio-1.0.0b1.tar.gz) = 0f7e20dcf4e5f0f7663ec2a1db59160ae554f3ab
+SHA512 (helio-1.0.0b1.tar.gz) = 3d7ffb1f4467d019c116c2cd354bfb83a35e4ca8fdcc09a249656cbe30ff50549590d8aa97da046656d35906cc36186a1a2b11a131fdd50fc895049687191247
 Size (helio-1.0.0b1.tar.gz) = 80103 bytes

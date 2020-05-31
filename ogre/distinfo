@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2010/06/10 23:19:28 marko_schuetz Exp $
 
 SHA1 (ogre_src_v1-7-1.tar.bz2) = 14aba12f91d66a5746a5ca5ac05db21e12e11ce7
 RMD160 (ogre_src_v1-7-1.tar.bz2) = f3c7d2c6178cd1bd20090d8cd44ac5a1bb6db5ee
+SHA512 (ogre_src_v1-7-1.tar.bz2) = 5c5335b8f4a56b0cee27a9eb6bf760bdba44de1d5f3ecc4ef6d6700834d0db841c4db8b6ddd94d2fa7da21cf85ff4cdbbad92df421350872f20c02fb41b87577
 Size (ogre_src_v1-7-1.tar.bz2) = 62959218 bytes
 SHA1 (patch-aa) = aef9f1dfc86b0a4fe4df437ade3e3ec27a18c0ba

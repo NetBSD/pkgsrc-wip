@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (atomicfile-1.0.tar.gz) = 58ff4296aa004d4d32349be273360c07fe5ae822
 RMD160 (atomicfile-1.0.tar.gz) = e3a84ebe51ca673f730276b2eeb2bbc15d6925bf
+SHA512 (atomicfile-1.0.tar.gz) = fa77dce3e5b82bb8ebffb92bf2d66d731d932d2fd463183f7da7be56225765da87cbf9864697ee3b5f7fd3be3689c89cc1736f2e1b257dbf6795c4f1f4e42808
 Size (atomicfile-1.0.tar.gz) = 1894 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/09 20:30:19 jihbed Exp $
 
 SHA1 (FiPy-2.1.2.tar.gz) = 58a6e87198e832e777a4dd0e2db21030f9a09a32
 RMD160 (FiPy-2.1.2.tar.gz) = 48164723f53ad71c2347969f3361bbe0a0ba7e5d
+SHA512 (FiPy-2.1.2.tar.gz) = 70882ed5432510bb5350b9278fd04e6f135ac0f6a849797c67b3e476ca5f40ad05e841cdd7d7acd350fc2a69a29a1b53050d9a5c34d25f78536b1ef6913aec60
 Size (FiPy-2.1.2.tar.gz) = 2384704 bytes

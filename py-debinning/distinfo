@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 21:34:32 jihbed Exp $
 
 SHA1 (debinning-1.0.0.tar.gz) = 2cca6d431a54e0a5a0f446f3d55d91c37c7d24a8
 RMD160 (debinning-1.0.0.tar.gz) = 29cb4ea4c1f71545926459f7e67657f9c752035a
+SHA512 (debinning-1.0.0.tar.gz) = 9c0ffeed9225949214d5c1a385dd75b790f38bf5021298bf9d6a308ddb8bd824c2838d69b656c90e7c094e84844cce134ba1ce134ee9e0221f072d09d8d57e1d
 Size (debinning-1.0.0.tar.gz) = 37694 bytes

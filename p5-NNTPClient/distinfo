@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
 
 SHA1 (NNTPClient-0.37.tar.gz) = 0340afb1dd6eba853a3f6b537e5c92ee2d9376c0
 RMD160 (NNTPClient-0.37.tar.gz) = c268301d67732b52f349bab82d81d2c3303b0ba4
+SHA512 (NNTPClient-0.37.tar.gz) = 7179a4cb96ba877c7f870fa2e3edc91e3811e1db99ae5a05a0eec47febda69ecd231f4658f2253f59295262737f91f92462bc5d6a18dd2da2580f7565e976863
 Size (NNTPClient-0.37.tar.gz) = 15380 bytes

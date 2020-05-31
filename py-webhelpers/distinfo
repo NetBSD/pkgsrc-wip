@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/07/15 17:58:08 thomasklausner Exp $
 
 SHA1 (WebHelpers-1.3.tar.gz) = 5ef6e48aade8c625577def09cf670ef10d197911
 RMD160 (WebHelpers-1.3.tar.gz) = 9df2b54f2fefba26aaf668a92ee9c8a94ebe87ac
+SHA512 (WebHelpers-1.3.tar.gz) = ff1f19c5b878bdcb05664523d16fce1abb012957f00a97c06b3b5db581c6a361a2db5516b47a0e2b107bc9ba73270ccb323afb240cc67a34d6f15ce9462fad77
 Size (WebHelpers-1.3.tar.gz) = 729963 bytes

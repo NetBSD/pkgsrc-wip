@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2012/06/18 12:28:39 ddeus Exp $
 
 SHA1 (cffi_0.10.7.1.tar.gz) = 3be9749b36f936877f8fa6fd9bd9c8ff95f89d6c
 RMD160 (cffi_0.10.7.1.tar.gz) = 4eb275fe603c232995694b49d2c7ba0ec05d34bd
+SHA512 (cffi_0.10.7.1.tar.gz) = 74c90309622552361e6f804dfdd37db04d53be61472ecc6f7d9ab8ec47bf76b1e20736f2d93eca52186e49bc0f963fd3372187ea44dcd1464b160366b0ebea85
 Size (cffi_0.10.7.1.tar.gz) = 198459 bytes
 SHA1 (patch-aa) = 2333345b262e934df7350b4206b209d0e19fea2b
 SHA1 (patch-ab) = 0051446082050a2597bfc4de86d7bace2400d070

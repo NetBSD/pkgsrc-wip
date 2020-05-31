@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/22 16:18:40 jihbed Exp $
 
 SHA1 (scikits.datasmooth-0.5.tar.gz) = a97a01d51a2c0d87d10af587511941729c3428be
 RMD160 (scikits.datasmooth-0.5.tar.gz) = 55486e667fb9d8b023f45326b5dbd471110fc7b9
+SHA512 (scikits.datasmooth-0.5.tar.gz) = 0efb168ce3c4d99dace195e42f73a822845c99eef9a17257a9f0a5a1f8ea08f0052ee719a29b3c981f415274c3c1abd8d5e7fbf0f364467217e89d44ae4b35e2
 Size (scikits.datasmooth-0.5.tar.gz) = 7865 bytes

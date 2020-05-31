@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/13 10:00:34 jihbed Exp $
 
 SHA1 (dclab-0.1.0.tar.gz) = 82e26253b322ca4cea70015f849e127e8511a0a9
 RMD160 (dclab-0.1.0.tar.gz) = 16a4cc2b2df776aa47fd1ecf3f29a6a98aaffa4c
+SHA512 (dclab-0.1.0.tar.gz) = 328cd1e199cbda6d5b8e2059d77dc175d245f66df34243dd78756abc2b21eb516bd18d32689cfc0967eb5c2203fd1faddb0b3483ff9e384972840fecf7e9bd31
 Size (dclab-0.1.0.tar.gz) = 194316 bytes

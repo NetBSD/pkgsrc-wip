@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2005/03/28 13:18:37 tvierling Exp $
 
 SHA1 (mixmaster-2.9.1.tar.gz) = 27780dcbffb74e8259999141391f84e5d52ac1cf
 RMD160 (mixmaster-2.9.1.tar.gz) = bedb7b55cd735c4d96d5275a7f41f601aa1681e0
+SHA512 (mixmaster-2.9.1.tar.gz) = fcace589b2bc40c15772d303a70ff8a98dce3013cf8ec1a08a8e47cc62dd2dcf887c1e8294ffc3812b3669dabfd9069ad16e4b0e14fbdcef8b7767be41ec5052
 Size (mixmaster-2.9.1.tar.gz) = 534816 bytes
 SHA1 (patch-aa) = 4f680b623152e66152d3a2fdf974b6b8d362be18
 SHA1 (patch-ab) = 9583892453d38a62550e06c3434d5e2381cab271

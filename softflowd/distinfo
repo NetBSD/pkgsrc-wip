@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2008/01/12 22:53:40 christian_gall Exp $
 
 SHA1 (softflowd-0.9.8.tar.gz) = 6ea18cfe9d3d3865749f59f9b466a56fc7fb86cb
 RMD160 (softflowd-0.9.8.tar.gz) = 5ef469c561bef055c7417e7b51e1597f3ee1fb08
+SHA512 (softflowd-0.9.8.tar.gz) = 7b11c2c860b4c3edf3456a8966ea29668628ebe63fd1a1c84e670d1cf7deab7082f2c306a676dbb4722d1647dfc0e27e9612642e7a0b96e39d009050425744a1
 Size (softflowd-0.9.8.tar.gz) = 89839 bytes
 SHA1 (patch-aa) = 441fee0746a80b22434402be421a31f65b402175
 SHA1 (patch-ab) = 6f53942fa09889c9b9c08908a9fce639a9c8374c

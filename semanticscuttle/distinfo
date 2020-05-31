@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/10 10:09:14 triaxx Exp $
 
 SHA1 (SemanticScuttle-0.98.3.zip) = 40f307dfaf8b62f4ffc997f858b40042b320c967
 RMD160 (SemanticScuttle-0.98.3.zip) = cd0bbf91a0626de3ff829f365317dbae75918598
+SHA512 (SemanticScuttle-0.98.3.zip) = 4cb3001632cb7662da4f5b7f426a4d1b52a4aa61eaa5deecc47715515f3e8fc5fb460f2c4a5e39c346bebefc535576fe9cf985550217f595e07f76a0213f5d75
 Size (SemanticScuttle-0.98.3.zip) = 721111 bytes

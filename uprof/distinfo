@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/02/17 01:09:19 othyro Exp $
 
 SHA1 (uprof/0.3.tar.gz) = 3818c075dfb55fe3403fdcc9067831320a23e24c
 RMD160 (uprof/0.3.tar.gz) = 62d4cd63fbbd3bcf183f9a73682537cd6b6537a7
+SHA512 (uprof/0.3.tar.gz) = 18f829a594bb9643352a98fd3b8c7455f39a6e05509eecf3bb2b2556fd7cc938a3c08ea2a8b819131f432af3edb3aa92a11aba08a6fe484c99c8aacd2ab80623
 Size (uprof/0.3.tar.gz) = 65103 bytes

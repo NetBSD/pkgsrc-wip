@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/16 16:01:21 jihbed Exp $
 
 SHA1 (desktop-data-model-1.2.5.tar.bz2) = 4b5c096bbe9dfc5f995980f0740afe3105f69859
 RMD160 (desktop-data-model-1.2.5.tar.bz2) = 80cb6cf14de8055dd1167d38370d27d7a66a8cc5
+SHA512 (desktop-data-model-1.2.5.tar.bz2) = d20119583773f75c08efd048ff5cd8ba28ce297b437341da060428bf1c01fca9fb49075bf494a0e0608734c64dbff52eb68dd814170892f1c5529d1fc2298429
 Size (desktop-data-model-1.2.5.tar.bz2) = 435369 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2008/08/18 17:14:52 ficovh Exp $
 
 SHA1 (igal-1.4.7-wt.tar.gz) = 5a278ef8252b566394e22f4e6be63b60bac209e6
 RMD160 (igal-1.4.7-wt.tar.gz) = 1d8827ffaf0ab72df4e9084cb3a4b768b0f644ad
+SHA512 (igal-1.4.7-wt.tar.gz) = 677db8b2c7fd391b3cffc37390c1603937217c0673dab6e3ade8f95064787a05f7cb44abf4a8274be2fcfb3b06bc00cce2283388e51ee0aa4a707e499e9b89e6
 Size (igal-1.4.7-wt.tar.gz) = 33894 bytes

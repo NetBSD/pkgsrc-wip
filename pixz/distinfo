@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2015/06/20 19:27:51 ishit Exp $
 
 SHA1 (pixz-1.0.2.tgz) = 953b2b55504ba349f1e7e47bdfcd4165ba206827
 RMD160 (pixz-1.0.2.tgz) = e9aa82f0f72b786d5ea07e8d9bdd88f10ef30f06
+SHA512 (pixz-1.0.2.tgz) = ea3f37b725a0f08e87a6bc0af19522e92bb5b34fad49cfbfcc04e7054f4537cb09c8f3b56abda7f6d27ce64535b158a676a9e69f92141190840bd9ba255961f3
 Size (pixz-1.0.2.tgz) = 21425 bytes
 SHA1 (patch-Makefile) = 6361f414405719995b99f012855a789140d0941d
 SHA1 (patch-pixz.h) = 80f0c8e1b316249e94fd0716bb544d025001dceb

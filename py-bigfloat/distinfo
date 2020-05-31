@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/06 13:54:52 jihbed Exp $
 
 SHA1 (bigfloat-0.2.1.tar.gz) = 50f339585c0f6fe88bd63606e8c97192b10c53ce
 RMD160 (bigfloat-0.2.1.tar.gz) = 04453e3784f3c3f837ed2a043b81ae1b839ec12c
+SHA512 (bigfloat-0.2.1.tar.gz) = a339b1495c392bb13f8738c16ea549159fe020622c455465dc25af352dbc4bda5e2efc0a3d8b77c107fbb457d6593bf8c73d24a6e2354398245162822c8c6e87
 Size (bigfloat-0.2.1.tar.gz) = 129540 bytes

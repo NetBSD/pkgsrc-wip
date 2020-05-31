@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/05/12 22:21:49 jihbed Exp $
 
 SHA1 (corrfitter-3.7.tar.gz) = 6ac8a4e19e0e923d02275f2bc4ce97dc29999ffb
 RMD160 (corrfitter-3.7.tar.gz) = 62cfe724cf3a66f7f8208e221a583ad2d007654c
+SHA512 (corrfitter-3.7.tar.gz) = fa745c86a9528d64ec99a3de3b4c29fd539c16962a49bf036ef712359f1ec0629e8b3813b8e81b8824d8e92376235bfe9547e565d4fdc698e6eeb86b5b4c6315
 Size (corrfitter-3.7.tar.gz) = 1672212 bytes

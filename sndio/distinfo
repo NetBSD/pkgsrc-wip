@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (sndio-1.0.1.tar.gz) = a34d746b32cd4fd6dc36f0483a65b2a1261d42ad
 RMD160 (sndio-1.0.1.tar.gz) = da5f0a674124d7cab00854132fc1ec8913768368
+SHA512 (sndio-1.0.1.tar.gz) = 7cccb2bd7cff72bffc146f83b6603bb77a07adef0a2381c93ea9294353956a57d0dfc9117ef27ef3397ec6a7017ae7a1d218b57c3a00276d6724774a62c56348
 Size (sndio-1.0.1.tar.gz) = 119832 bytes
 SHA1 (patch-configure) = 98552eeeddb75cb30c84c05838d6ffc3311aec1b
 SHA1 (patch-sndiod_sndiod.c) = c81f9c6c56ef24c4bb6876c169c8a588b4fbe9cf

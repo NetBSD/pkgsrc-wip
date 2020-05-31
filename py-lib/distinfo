@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2009/08/28 22:05:50 jihbed Exp $
 
 SHA1 (py-1.0.2.tar.gz) = 04b0acc6739b94e7b65434f1e06fbc4a5f7d5589
 RMD160 (py-1.0.2.tar.gz) = 53ea535a0a6aafeb78c795af444ba4ebc8ca363b
+SHA512 (py-1.0.2.tar.gz) = 4c62076957592efacdf9a243e7b36dfa9f54ca90e71cffe9f3862f7e28f1bcece7452118c4808bf0f386e673f39da5186c6ae5d959ccefc72474f1d1472b8ce3
 Size (py-1.0.2.tar.gz) = 530372 bytes

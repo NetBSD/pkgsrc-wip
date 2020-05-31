@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/03 23:06:17 jihbed Exp $
 
 SHA1 (sympol-0.1.7.tar.gz) = 673db311cfb19580970f66f75704447290abaa1a
 RMD160 (sympol-0.1.7.tar.gz) = db53bbe00f7a688b76e875f6bc402bb387b62430
+SHA512 (sympol-0.1.7.tar.gz) = ce65bd2ba1f82479ba6bcfe2c694b4e7444ea2113ab56e05d635bb1096c4000b51ba69f9635ccf748d553113acb691ce27d5b52bb02a4385538c944188a0b2f3
 Size (sympol-0.1.7.tar.gz) = 311346 bytes

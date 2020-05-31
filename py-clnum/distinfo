@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/06 13:49:09 jihbed Exp $
 
 SHA1 (clnum-1.6.tar.gz) = 13d22216539b157d0369f44483c30390495c6a63
 RMD160 (clnum-1.6.tar.gz) = 1e86c3df9ab44c7a777c637f274a736c81e4b231
+SHA512 (clnum-1.6.tar.gz) = 203153148d6df5aba6f6df1e9173541da75c4a5f792e146ab7799a0de6f9ff9ade3c58c877b9bf05e9cdaaf80588ca56ec76f44ec234140087fc5582ec3ca47d
 Size (clnum-1.6.tar.gz) = 40085 bytes

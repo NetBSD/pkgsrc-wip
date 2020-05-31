@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.5 2014/07/24 00:17:49 jihbed Exp $
 
 SHA1 (bleachbit-1.2.tar.bz2) = 4b083c388f2fcea3ca84fc151fbf4d6716cc9764
 RMD160 (bleachbit-1.2.tar.bz2) = 3bb7645717fc5fe455438f1cb223d9dd48ca10d4
+SHA512 (bleachbit-1.2.tar.bz2) = a84881789c408335493b0923b51e66940295c430b2ea8838e420603ef8ee7548a0a1d605564070034bfe3a2d9159015e403db14470d6b33cf5260c3e4b43d267
 Size (bleachbit-1.2.tar.bz2) = 346530 bytes

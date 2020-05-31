@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/04/10 14:02:52 lkundrak Exp $
 
 SHA1 (Text-CHM-0.01.tar.gz) = 710885515fb61f5683c590bf6ad3e545a24ce35d
 RMD160 (Text-CHM-0.01.tar.gz) = ba2cb05e37e023d80b57a4d2f87030b9b6b5f5a7
+SHA512 (Text-CHM-0.01.tar.gz) = e773cc81a223e50dc7950da9a3bb6fc829e9ba3be04944c6ba9cca689bf6790da8e7f54821a3c524869eb66166aaa8f673e47f0975c5a46701d5646d9f8c69de
 Size (Text-CHM-0.01.tar.gz) = 14578 bytes

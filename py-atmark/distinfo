@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/21 18:36:57 jihbed Exp $
 
 SHA1 (atmark-0.6.0.tar.gz) = 85b968d83ea95e4df7ea37e658f7dbda55073bd2
 RMD160 (atmark-0.6.0.tar.gz) = 7b6300eb4ef2da753325fa33a949da417d92c90e
+SHA512 (atmark-0.6.0.tar.gz) = 47ad6979d0a7d47488969e2e88349046ecb8386a8dc59ef8223538e5cca6281bc8b83332451b28fd2243f5c04d521752683256a5afe1a200a3cfeabc03571fab
 Size (atmark-0.6.0.tar.gz) = 8809 bytes

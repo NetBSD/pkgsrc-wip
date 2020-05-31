@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/29 09:46:25 jihbed Exp $
 
 SHA1 (setuptools_git-0.3.4.tar.gz) = edb35a38e6b81b69334a9d71f6917227e5e81e00
 RMD160 (setuptools_git-0.3.4.tar.gz) = 3d3c9ac2c047614ce189f578dea5e358986cdf8c
+SHA512 (setuptools_git-0.3.4.tar.gz) = a0547558f821eb64ff1ee0dc0f852054031600f877ecfbc3e855b05a45ff9e502c25ee30d1b1b0a9d7d3eb3bb7ff02941052caad3656036531ce9c5a97c3864f
 Size (setuptools_git-0.3.4.tar.gz) = 3584 bytes

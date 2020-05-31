@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:22:32 jihbed Exp $
 
 SHA1 (bkchem-0.13.0.tar.gz) = ab38ba090682f36b1f34c7805f888c5c92e75186
 RMD160 (bkchem-0.13.0.tar.gz) = d6fba65d2c4cb58f9d9c3f6a4e8e850e2338ec8e
+SHA512 (bkchem-0.13.0.tar.gz) = 4f115196344dcf0d234f2afa84096026207f5d1a44578ce2d68b71b7f549728e0bc66edcc02035f8c8f0bf3a9341e73806a7acd0dd17f85184894a852efacf6e
 Size (bkchem-0.13.0.tar.gz) = 965969 bytes
 SHA1 (patch-aa) = 13b81d70e591bfcec8017055d19a089019d43ec8

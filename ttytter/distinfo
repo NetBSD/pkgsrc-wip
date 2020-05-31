@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/10/20 14:10:51 ryo-on Exp $
 
 SHA1 (ttytter-1.2.02) = 710903124c7b562a246fd2981fb7b09dc008b608
 RMD160 (ttytter-1.2.02) = e35db32e347f2e934af0d11dcdafdb47f0ae12de
+SHA512 (ttytter-1.2.02) = c1eabe07dd30bc6dddfd7d5b3a556a4ace133a5e4d572024715b205991bf85394dbc2faf3fb3b6438f3f6e37304d9baf9232d2937e49305b5ab1c591b674722f
 Size (ttytter-1.2.02) = 198074 bytes

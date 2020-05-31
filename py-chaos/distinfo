@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/20 23:17:13 jihbed Exp $
 
 SHA1 (chaos.tgz) = 37a76f20b447712d8422f3d020799698d9f48e0e
 RMD160 (chaos.tgz) = f5d92d3cfc7af71d9946db8697c3c6945284b59e
+SHA512 (chaos.tgz) = 17a239b1de08a09fe370c29d368c9c5c27a76fe2f80c5ac1ba8bf10817990af701fab69f4adec89ab4f8e166a0b809c874b0ac425596a789400339e1a3bffbc8
 Size (chaos.tgz) = 16953 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/11/30 18:23:27 jihbed Exp $
 
 SHA1 (datarray-0.0.6.tar.gz) = 2a9503977d1c9090276a40649c2af64c75c98524
 RMD160 (datarray-0.0.6.tar.gz) = 7005a80cecd4e510b2e8bf52855716dcab71c33f
+SHA512 (datarray-0.0.6.tar.gz) = c71d2d03e31c1f60c46154efb1b23e64cb57d16ed2a3c54396bed46110363f1f355efd06a298b61dee7b6ec2ca564454dec41d260300f48933aef77be490e5d3
 Size (datarray-0.0.6.tar.gz) = 63793 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/17 20:02:15 jihbed Exp $
 
 SHA1 (fdasrsf-1.0.1.tar.gz) = 9156df9a50061d8d86bd5ce0719734cd64159a63
 RMD160 (fdasrsf-1.0.1.tar.gz) = f696a164b199e4db074c2d0edfbf7670917c4a35
+SHA512 (fdasrsf-1.0.1.tar.gz) = 6f4c2c1a8cf0da73cfd95de84446f69450c1be29286a32b2eee0138c172005d717fa3fe4a4a96e538267622212b255194d4615604f7a178ae2e0af98281c8d8b
 Size (fdasrsf-1.0.1.tar.gz) = 84431 bytes

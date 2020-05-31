@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:12 rillig Exp $
 
 SHA1 (emirror-2.1.21.tar.gz) = 14dced0c99f9df39e4d557d795eba619713b92e2
 RMD160 (emirror-2.1.21.tar.gz) = a575b4095b268622c62eb4356aa2433ac8c0e9e4
+SHA512 (emirror-2.1.21.tar.gz) = 5ef90079ef0686d1a96cbc70f93910d76abae8be3941884d581681013632180b996ae59bfec98d356def232974b10a3dd8716fac776f26d15f533f9779644be4
 Size (emirror-2.1.21.tar.gz) = 105328 bytes
 SHA1 (patch-aa) = ecde4543b73f737729f67a13a2d9119c3bf3e0ef
 SHA1 (patch-ab) = ee598fe87eda47c2c528cbd1e124a38e9f4569ad

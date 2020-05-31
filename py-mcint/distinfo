@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 21:59:40 jihbed Exp $
 
 SHA1 (mcint-0.1dev5.zip) = 0c3e33c2a5dedf1a66757f57d6aa3de0dce68769
 RMD160 (mcint-0.1dev5.zip) = e68a958cab8ba1e9f7d1fde32c7273be960a077c
+SHA512 (mcint-0.1dev5.zip) = b538bb6061ae4056f51820fa7380af806c3bcf461c60b080b081cd1a3d33cb18725eb6aec331cbfde9542f921e2093e2ac8213b809f51340bfbad4b19c669751
 Size (mcint-0.1dev5.zip) = 3318 bytes

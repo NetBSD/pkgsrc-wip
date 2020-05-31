@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2012/11/03 01:09:36 othyro Exp $
 
 SHA1 (creal-0.7.tar.gz) = 3c32df98898a032d6dd59a4b075a78a88ea4d2d3
 RMD160 (creal-0.7.tar.gz) = cd13518c0665cbe8f2f92bb6f171291ff8775bc1
+SHA512 (creal-0.7.tar.gz) = d36ea03ccb2216802395404fc9a2923917fe311b887ad06947166a79b59e056a443cd3a1ad08f3af5acab56031c1a482eeb4a6c3c31d28a9bde9def0310c0802
 Size (creal-0.7.tar.gz) = 59218 bytes
 SHA1 (patch-Makefile.in) = d83d534578fd2bebce72b64f87242d9b6fe3a716

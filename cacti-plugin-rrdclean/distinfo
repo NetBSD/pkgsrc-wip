@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/07/23 16:39:01 ahp-nils Exp $
 
 SHA1 (rrdclean-v0.41.tgz) = 817ef03e5a2b79107d8d8fae1978c60710f731b4
 RMD160 (rrdclean-v0.41.tgz) = 5089b54b486f28f7bef53321b2d38782999f8a4c
+SHA512 (rrdclean-v0.41.tgz) = e5315f32957c87cfaa9725331c6b8ba646b2f5ffc781baef358130423c2400bea338dd1cd2a29953922e0e7d5680c09e6dc4d91222d6572eebdd06fe40d79619
 Size (rrdclean-v0.41.tgz) = 17143 bytes

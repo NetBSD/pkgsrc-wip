@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/08/05 10:20:22 jihbed Exp $
 
 SHA1 (aravis-0.1.0.tar.bz2) = 31602bc507b92081e092b793c599acf45af36862
 RMD160 (aravis-0.1.0.tar.bz2) = 076a0bbc6dafd0c474cdc6b32bfbb4c3ca301c8c
+SHA512 (aravis-0.1.0.tar.bz2) = d2f45d86b874224916076a8cbe4f6e3f038f8be0530222942f9b5c8f9376545f2347d94a00db2e2fa022fdf4fb490fa39f2eda81ec1d41b634505f9105932134
 Size (aravis-0.1.0.tar.bz2) = 391890 bytes
 SHA1 (patch-aa) = 541dc74070a769d0e1bfd67923fbd633f764e146

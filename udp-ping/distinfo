@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/12 14:05:47 gschwarz Exp $
 
 SHA1 (udp-ping.tgz) = dbbd7214678fe5616d7ecd974bf8e574d9145fb5
 RMD160 (udp-ping.tgz) = dc967c8c62bfdf5812d2c0e051b15f85377a9bce
+SHA512 (udp-ping.tgz) = 7365408688b0f7879dd343cd57fedd6e7accb556c76c2aa538748fc87d8c71dd5a878bb50185902560e91211ba3cddff0db5ca5273e779280f146c1cbf2de5f0
 Size (udp-ping.tgz) = 90707 bytes

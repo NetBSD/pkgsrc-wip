@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.8 2008/11/26 20:54:55 gschwarz Exp $
 
 SHA1 (noip-duc-linux.tar.gz) = 1de79cacbf8ac3e6a08530d167a33e3c35a4dd18
 RMD160 (noip-duc-linux.tar.gz) = cb56b11197a6a31ebd42a3a95b3e675cf87ec244
+SHA512 (noip-duc-linux.tar.gz) = 6c32397f31e6f4875a2429398c2627cbe52abba569830ddc1190fed3f4c6cb23e232e60b23d9fa97940f98a1c5c019a89812844f92a655c6ebf275b784015125
 Size (noip-duc-linux.tar.gz) = 134188 bytes
 SHA1 (patch-aa) = 6df9e33cad0ab810403c45061d1d5b0c808ef01b

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/25 18:15:28 jihbed Exp $
 
 SHA1 (okasha_0.2.4.orig.tar.bz2) = baf507415cf5b220e2f7b184a35990f3884628f1
 RMD160 (okasha_0.2.4.orig.tar.bz2) = ffee701c3186054db0b6d58a4b8f2b3c42d89a7e
+SHA512 (okasha_0.2.4.orig.tar.bz2) = e7c92db678f837332e7e47a48f70cc53362a564b30397b6210b06eab654c8e643806b0d6c7c65d10e6431a8856cbb4a8f6bf2b304ec82b15016b5d3d6821addb
 Size (okasha_0.2.4.orig.tar.bz2) = 243364 bytes

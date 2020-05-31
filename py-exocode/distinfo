@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/14 09:52:31 jihbed Exp $
 
 SHA1 (exocode-1.2.0.tar.gz) = 3fe6b832f6ff68a16826488bf0720cc258f17a60
 RMD160 (exocode-1.2.0.tar.gz) = c4028bf83e0c54ec49b737fec046c86cd595649e
+SHA512 (exocode-1.2.0.tar.gz) = 6a142432006d5d9b6f87d6929ec8a19fd4391ca16de635fedc0e9a5e2fc423f9d4a9b2947dedab361f9b7244bd34a6ef61e230bc53d94ae633532db8c1520d0c
 Size (exocode-1.2.0.tar.gz) = 30429640 bytes

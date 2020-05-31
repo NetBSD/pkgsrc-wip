@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/06 00:14:25 jihbed Exp $
 
 SHA1 (rf-0.1.3.tar.gz) = 03838087627c8954ff1993bcbc04b9534e3a0963
 RMD160 (rf-0.1.3.tar.gz) = b35b33d0577b7bd10f5b6abaf427ba5aca5a7cf8
+SHA512 (rf-0.1.3.tar.gz) = cfa04a2c7fa8f0b4326aaf8f81de4e160455936166ccdfb1056d5e2088cfe2546cc9039a719b529320a1331706dd264855b1f55a95fbb83b10564ee932dbbd2d
 Size (rf-0.1.3.tar.gz) = 20056 bytes

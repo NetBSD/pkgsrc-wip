@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/08/13 20:08:02 dvol Exp $
 
 SHA1 (GSCommander-0.1.tar.gz) = e384dc366154dec2d90f9f4482ab0f34af5ab35e
 RMD160 (GSCommander-0.1.tar.gz) = f4e94b4f708ca7ed673211070bebc615df8180b1
+SHA512 (GSCommander-0.1.tar.gz) = a4937df795b21dfb4078029214a5533dc9d53bd3603a42a49f0714942c80166c5b1d509ca091dfdd6fad91f24c48cc319e4def4b9e458320d3292e82768d5145
 Size (GSCommander-0.1.tar.gz) = 17932 bytes

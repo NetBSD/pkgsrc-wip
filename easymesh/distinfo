@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/07/02 19:05:51 gschwarz Exp $
 
 SHA1 (easymesh_1_4.c) = 8555667fff26ff53bd657ba2e592a94c03f82023
 RMD160 (easymesh_1_4.c) = 6b72cfc980acebbad2cb01dc9f9b29e6ab663fa8
+SHA512 (easymesh_1_4.c) = 5375034333c9f04287d5ad58ecafbf520bd69841b4777fb2bdd660259b492f20a7584ad2127756a627dc09b71ea65e1eadc9521c96102c378ceb204506c2f774
 Size (easymesh_1_4.c) = 64488 bytes

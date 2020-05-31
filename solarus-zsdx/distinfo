@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/12/04 23:58:22 othyro Exp $
 
 SHA1 (zsdx-1.9.0.tar.gz) = ae80e921fd803b942c51b3244249be2f69ba81a1
 RMD160 (zsdx-1.9.0.tar.gz) = b1ce989ddb957b70f2daa06e2d0e1187f9cdd1f1
+SHA512 (zsdx-1.9.0.tar.gz) = 673a7db1dadfae09df23b189b9e18af1182cb731897e4067f47867387c04b21308991116c6f840cb228adee9c459565c2f5e6f1a01e885ea23c00347d4d64540
 Size (zsdx-1.9.0.tar.gz) = 20760682 bytes

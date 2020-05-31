@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/07/16 18:08:04 jihbed Exp $
 
 SHA1 (yauap-0.2.4.tar.gz) = a8d12d1b2f6b55e2794d2de15313e1b84a59d9fd
 RMD160 (yauap-0.2.4.tar.gz) = cb5acb30bfd12049b4482d6e6aee57fac9a27875
+SHA512 (yauap-0.2.4.tar.gz) = 098fc88060ffae99cab652c9142af9a7134794db6d19a0334c25a17cc928ff9b893828563c6e83bae089c13df2bdadb079e7badd55908aeb37e6bd7b30194f5c
 Size (yauap-0.2.4.tar.gz) = 29134 bytes

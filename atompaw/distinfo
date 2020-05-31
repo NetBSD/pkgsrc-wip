@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/16 09:45:47 jihbed Exp $
 
 SHA1 (atompaw-3.0.1.8.tar.gz) = 817ae96d650159423a14af2ac38f5f909f9d9b42
 RMD160 (atompaw-3.0.1.8.tar.gz) = 0975b95f4314cd6bb4be6fd732975bacd314a378
+SHA512 (atompaw-3.0.1.8.tar.gz) = e94821dcc372160fed26f7758e1294a81cfcb35f81da5da0666ec5b4d77eef7596a1bb77ca2319fc82396b72b4bcc8895c9504ee750759dec75f7db2f6833abd
 Size (atompaw-3.0.1.8.tar.gz) = 3785830 bytes

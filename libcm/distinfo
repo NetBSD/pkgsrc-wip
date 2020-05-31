@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2007/04/29 17:08:50 bsadewitz Exp $
 
 SHA1 (libcm-0.1.1.tar.bz2) = f8b38a84fd83d5cc3c9e3268ebaa89b259a1fc9f
 RMD160 (libcm-0.1.1.tar.bz2) = 0eec9c09a245fb006a8e5e425856b1af6f62ac2c
+SHA512 (libcm-0.1.1.tar.bz2) = a94df29cbeed5e0c76e43731364d454d1e598d579167200a02979f904530d380ba03aff633a33b3053655ac02e6ba525cfaef051c880a61c9b79a8f6b899bea8
 Size (libcm-0.1.1.tar.bz2) = 274997 bytes

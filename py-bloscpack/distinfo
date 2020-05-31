@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/05/09 23:11:15 jihbed Exp $
 
 SHA1 (bloscpack-0.6.0.tar.gz) = 867f3a724a3ca2b96c61ffa961d68104d1e9f345
 RMD160 (bloscpack-0.6.0.tar.gz) = 9ffaebe1f65b08d2e7952db477cd165782391d73
+SHA512 (bloscpack-0.6.0.tar.gz) = cd0b6e67d90fb8e320bfd5ddb41ee5d437543826f85931eb4cf3abbcb5eb6bc9581db88c2454b82b333ce2555f18670100f8df018299ce621eccd2e7c9e7d099
 Size (bloscpack-0.6.0.tar.gz) = 60571 bytes
 SHA1 (patch-setup.py) = 0d2fdeca1cb9fa775cabd45c1ef23c25ca6bfa89

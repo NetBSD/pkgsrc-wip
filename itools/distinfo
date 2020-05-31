@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/07 00:54:21 jihbed Exp $
 
 SHA1 (itools-1.0.tar.gz) = 7b9e8b0f7d3971f4b026f3c13e185e95bf9f4bcc
 RMD160 (itools-1.0.tar.gz) = 227cde60ad0467b722f9763562226b26ee9be049
+SHA512 (itools-1.0.tar.gz) = 00c06884f24273b3b6de2ec2670b58b8001864f03d6be24e69e66e93e973d32f6b908302bacebe7f8e3bd820e06f64fc70ae2949cb0bbf9ad16419c8dc9f9f61
 Size (itools-1.0.tar.gz) = 71762 bytes
 SHA1 (patch-aa) = 75e65bfa1c445712504ccac04be9c1c05b0a1a37

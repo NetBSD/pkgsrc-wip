@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:27:19 jihbed Exp $
 
 SHA1 (sas7bdat-2.0.4.tar.gz) = ac415571a48e3c3100a8636e5987a20bcf92e8d9
 RMD160 (sas7bdat-2.0.4.tar.gz) = 24b5479f4a6cbdd95da6aaa156119c4a057aae6e
+SHA512 (sas7bdat-2.0.4.tar.gz) = 2406d070a651ee39e7a479f3e5c09c716965052755cf56c8c710060600de140ff01bf26331dbae78a6abbbc6b42e12073edbcde4ddb8c0e6de64df0f3d21a4f7
 Size (sas7bdat-2.0.4.tar.gz) = 14509 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/22 14:46:34 phonohawk Exp $
 
 SHA1 (chalkboard-viewer-0.1.tar.gz) = d837af87709486c8f8a03d3725b669c494f19ff2
 RMD160 (chalkboard-viewer-0.1.tar.gz) = 217dfa630794eb0eeeba7949b487698e97ee1a50
+SHA512 (chalkboard-viewer-0.1.tar.gz) = 315cafd78800632dd8b3d7cb79d8ac7364e06afb68b34ef98bb6df24fefc50a966ca79b81d728e96ce3942cad693d157088d6bd7287588d4c48ee8d9a528131c
 Size (chalkboard-viewer-0.1.tar.gz) = 4524 bytes
 SHA1 (patch-aa) = c466fc86184d28ed145a48c1cdf0a14a7e35195d

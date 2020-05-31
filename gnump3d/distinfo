@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.5 2005/10/28 17:34:03 poppnk Exp $
 
 SHA1 (gnump3d-2.9.7.tar.bz2) = cfaa35ed61fb2f010dae4eeed2debda1d2b5ff04
 RMD160 (gnump3d-2.9.7.tar.bz2) = 68cc98137e1b254fd9a4cbcdbbb84c0f82393b70
+SHA512 (gnump3d-2.9.7.tar.bz2) = 67dc0cf698625b4648fa1533be53fb6f9e8c798733f3d63c351eddad351bb7a9a1feaa07cb79dcca9d5ba34ac3fed438346dc242628b118f53a9b1735deb4755
 Size (gnump3d-2.9.7.tar.bz2) = 617906 bytes
 SHA1 (patch-aa) = 61d14628e4a08f4091a77711891d576cf16c766e

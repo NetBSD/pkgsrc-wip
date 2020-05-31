@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2009/11/14 23:32:43 mwdavies Exp $
 
 SHA1 (krusader-2.1.0-beta1.tar.bz2) = f1c18d41b380938266030139af5a4357319f344b
 RMD160 (krusader-2.1.0-beta1.tar.bz2) = 295fd49399635ef5ebfee8ce2a05d0a8580dc610
+SHA512 (krusader-2.1.0-beta1.tar.bz2) = 7c6b95b67f49451a655c3b4cd85fc5fdc0cf4a5a10be6bd7d42757e92a0bccfc1d4508f9803eb80b82c720add2b873d629d5b015be4e8696927bdbba485bd4f3
 Size (krusader-2.1.0-beta1.tar.bz2) = 3434269 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/27 14:03:09 jihbed Exp $
 
 SHA1 (Aesthete-0.4.1-7.tar.gz) = 57a32ca7a7fed946153aaef6af601030570671b8
 RMD160 (Aesthete-0.4.1-7.tar.gz) = efd1f5c0b08c77ae51931cd1b1594d5cf8ad46ad
+SHA512 (Aesthete-0.4.1-7.tar.gz) = fe3ded48e251b01b2f35dfd37db1590e5d6fef7eb42e9c481de339ecc4d1e4088747c5d35311932d59db93b5a7772d838ebbc7ae27d8f94fed2788722580b55c
 Size (Aesthete-0.4.1-7.tar.gz) = 4921476 bytes
 SHA1 (patch-setup.py) = b56405a0f6d0113c2c5eda9bb7f4cac69e6e4d86

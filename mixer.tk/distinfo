@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.6 2011/03/27 20:03:24 jejcic Exp $
 
 SHA1 (mixer.tk-0.4.tar.gz) = 4023328dee5819f3af62f01da3835d702396725a
 RMD160 (mixer.tk-0.4.tar.gz) = 587cc6289e62f55cda5cdc514e0e38a79fe10636
+SHA512 (mixer.tk-0.4.tar.gz) = 32fbbee539e8c8e8de725a56104a0e5fb102efb0bf0a442856ce74430bb824ffe967949adfd92db130c36c27263a83849649a3310d1492ad5a5e0594844231f1
 Size (mixer.tk-0.4.tar.gz) = 2773 bytes

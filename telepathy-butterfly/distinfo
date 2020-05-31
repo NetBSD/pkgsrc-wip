@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/03/21 15:14:12 jihbed Exp $
 
 SHA1 (telepathy-butterfly-0.5.4.tar.gz) = abbe97ca801d1ad1e90791f21fe6b58b78ab1243
 RMD160 (telepathy-butterfly-0.5.4.tar.gz) = 2e12f43bea3f049b27015c10ed0a0d7723af38b5
+SHA512 (telepathy-butterfly-0.5.4.tar.gz) = 488376881082c6245c82f944d00c5465bc442a797a901421a9af808ffa09aacc6ffc70a68539268e91040ab715e24f33afcea382498145a8e860039b3f56ec74
 Size (telepathy-butterfly-0.5.4.tar.gz) = 138553 bytes

@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (volnorm-0.8.3.tar.gz) = 6c5ba86aed257514c6f94febeea1668f1b18a04d
 RMD160 (volnorm-0.8.3.tar.gz) = 8b2a5a7cc1a5876f7c182f4bf76f55ee55dd5197
+SHA512 (volnorm-0.8.3.tar.gz) = d045a50668b9519a1a68e5b6684340df3b2c03ce93bf06f9f7dc13fb6a649b0b85403acac35d0a4bdafbf7828cee923b5340727c402559f40dc6305e21d1f711
 Size (volnorm-0.8.3.tar.gz) = 695631 bytes

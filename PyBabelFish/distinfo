@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2005/09/28 06:41:06 rillig Exp $
 
 SHA1 (PyBabelPhish-2.0_All_Platforms.tar.bz2) = e1371f8010823fa3904efeb24f3d54f3d6f4feaf
 RMD160 (PyBabelPhish-2.0_All_Platforms.tar.bz2) = b2f039967432f0e54ad881f1ddb3462a6cfbb6e4
+SHA512 (PyBabelPhish-2.0_All_Platforms.tar.bz2) = 46a921f3d0870420daf19b65216bfee4dde54cc75e1d5dffd8157394b835415dec31f437b1ccdee0877e8ea5479de31e21e72167b1ef2314cf541b5047b3e4fe
 Size (PyBabelPhish-2.0_All_Platforms.tar.bz2) = 62159 bytes
 SHA1 (patch-aa) = faaf652b388bac2e080ec52af69cc782ad47eac5

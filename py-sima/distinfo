@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/01/11 23:37:24 jihbed Exp $
 
 SHA1 (sima-0.3.2.tar.gz) = b58ae425fc7c19fffd4c7a6fec8cbbb2218fdf95
 RMD160 (sima-0.3.2.tar.gz) = 3971ccf236030d1c61357524fa725fa5933c632a
+SHA512 (sima-0.3.2.tar.gz) = e81f92e46597e7ca84995e40f2bc62b5ed6584d3fb727f03c1bab1badbc059a5fb35b0a05532ec79db70192ff84b43b1edcb41161df3f74d5f5cef10bbc1f31b
 Size (sima-0.3.2.tar.gz) = 2548146 bytes

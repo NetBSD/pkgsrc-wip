@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (pyodesys-0.1.1.tar.gz) = 104b9fed8d780d2e23b855f35b9eba77f74c4082
 RMD160 (pyodesys-0.1.1.tar.gz) = d1cdae384246e7fa042be9b9fe83f4cb5956f12e
+SHA512 (pyodesys-0.1.1.tar.gz) = b67fcac0871cc30427888425c187a3f3229839545055222f88c0b1a8be359ba80756bf7ba5238fef341706a071caf69feac0798502990748a0d2b39256057f2a
 Size (pyodesys-0.1.1.tar.gz) = 10601 bytes

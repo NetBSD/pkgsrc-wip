@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2013/01/27 17:09:10 othyro Exp $
 
 SHA1 (jbmgen-1.1.0.tar.gz) = 8fdb8b32b2a39b5b21718b41b251712edbca749a
 RMD160 (jbmgen-1.1.0.tar.gz) = 720b5451da19b5e93fd11b37a74b1f97c5028ada
+SHA512 (jbmgen-1.1.0.tar.gz) = fbd19ec8ec9dc0ff9ad145ac93f963852ca0bb217da9af6e4e52c1b0cd641d960364d1254b3153d07c7e2bdefeb43b67e82f1faec633f7061de3bbbf68dad87f
 Size (jbmgen-1.1.0.tar.gz) = 22464 bytes
 SHA1 (patch-aa) = a3e6c30d8c3138ae6a9858b82f973343ec892546
 SHA1 (patch-ab) = 92861ba036cd445914e533c1ef8add0c5a29e8c4

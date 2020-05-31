@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/21 15:31:47 phonohawk Exp $
 
 SHA1 (dependent-sum-0.2.0.1.tar.gz) = 3ed1d7f956183f701dfbce136d8b6dfd656065ef
 RMD160 (dependent-sum-0.2.0.1.tar.gz) = 4edf10dd07f40da1abbab64a71c785a2ba9803d6
+SHA512 (dependent-sum-0.2.0.1.tar.gz) = 6bdd042b8e112113e97b35c9b62c785a2f029d6594a4e690b9c99cb688bce67137007b7b7196bc3a9790514b2e9976f6486e6003b2a7ef39d79b551ad187016f
 Size (dependent-sum-0.2.0.1.tar.gz) = 5652 bytes

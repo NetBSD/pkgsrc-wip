@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2008/02/21 17:09:10 netcap Exp $
 
 SHA1 (WebService-CIA-1.4.tar.gz) = 4279a76bcf5be6883e12c7cd1e189233b6a9e074
 RMD160 (WebService-CIA-1.4.tar.gz) = ab4f5445097de14da662d5628dccbd923c3b9164
+SHA512 (WebService-CIA-1.4.tar.gz) = c153ff21e016104d540daaada6d6d3a96b18efd0d696fc9392259d03fdda62436bb9afec4a07c8b2715196aac9470e9cd432cfedbd3de25bba3f4b235d8d1959
 Size (WebService-CIA-1.4.tar.gz) = 26667 bytes

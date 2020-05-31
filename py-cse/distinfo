@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2013/09/07 21:35:24 jihbed Exp $
 
 SHA1 (pycse-1.42.zip) = 83c8dead369e226e9adc4bf7ee9e0e1af105b834
 RMD160 (pycse-1.42.zip) = 834137c0fd4d0812de61da45364c6cd9bd41ffe7
+SHA512 (pycse-1.42.zip) = c36b23bffdf890e36339c4b9f4668f7f02c0fa3dfd5ef7fc2cbe0e2a5d9bac370585a36d54fc94931adf124fa81fa1328a0c337298546cc58e1acb4e3eb48ae6
 Size (pycse-1.42.zip) = 27512 bytes
 SHA1 (patch-setup.py) = 97d6d80dab2cd419273f782d64ed8a9f20427e8a

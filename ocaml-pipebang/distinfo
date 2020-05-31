@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/12 08:03:34 jgoamakf Exp $
 
 SHA1 (ocaml-pa_test/110.01.00.tar.gz) = 58f4a6eccb135acf56feec7961093549e766c73d
 RMD160 (ocaml-pa_test/110.01.00.tar.gz) = 6c8d09e3898bfde65772513f2aedf13bc2e8e647
+SHA512 (ocaml-pa_test/110.01.00.tar.gz) = 3720aef1e4214a9aed855ae23833c9f97b62ae090478713553d97a78b6ec5ed04a361b3ae83fc8db434255da0242fe09db3d8c6690cc1ac6e7f359fb259e226d
 Size (ocaml-pa_test/110.01.00.tar.gz) = 47043 bytes

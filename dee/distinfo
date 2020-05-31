@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2014/11/25 12:28:53 thomasklausner Exp $
 
 SHA1 (dee-1.2.7.tar.gz) = def3383ac4aa750f2c40a3cb05fd2204428afe2c
 RMD160 (dee-1.2.7.tar.gz) = 1fb66184be6209e0ba8207f515e6ed812edf71fa
+SHA512 (dee-1.2.7.tar.gz) = 32e25a2164cf052a76cf021006e1cdeca9b25081d19b5e7f1700308ddc21f65b4b5230fef0197fdda1739281b96af39fbf9d1df50d79c812cea8a6f60fbb7248
 Size (dee-1.2.7.tar.gz) = 712167 bytes

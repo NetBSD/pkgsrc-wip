@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2007/03/03 15:22:17 shattered Exp $
 
 SHA1 (qico-0.55si.tar.bz2) = 25c3c5612c9eaacb2d61c1f45f8b488e21b109f1
 RMD160 (qico-0.55si.tar.bz2) = 9f223d59466f7940c64760774369c029504d16ee
+SHA512 (qico-0.55si.tar.bz2) = df55578168f4fa25fb727ca13f57350ba04d0afaf04ba7d6b35524e791014f36d0eb8e3517aab1d4b1f9d38f4a6b4812f037b02af78b653b4bec0d4137734856
 Size (qico-0.55si.tar.bz2) = 266992 bytes

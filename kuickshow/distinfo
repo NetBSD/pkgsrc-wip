@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2010/04/10 03:45:56 mwdavies Exp $
 
 SHA1 (kuickshow-0.9.1-kde4.4.0.tar.bz2) = ab8bd2372d146595e9e8e398c91db2611927de69
 RMD160 (kuickshow-0.9.1-kde4.4.0.tar.bz2) = 0cdf343db22ce4f25855d6cd425a14c791a8e496
+SHA512 (kuickshow-0.9.1-kde4.4.0.tar.bz2) = 394b95c6b7c3b655a96729559271cd837ff5995aefc7e229f3bc7905f7e64f3fb05d34a67c9a9ba584c1cdbc459b7349d0e134a16afe9e0505b5a494e85ab87e
 Size (kuickshow-0.9.1-kde4.4.0.tar.bz2) = 915108 bytes

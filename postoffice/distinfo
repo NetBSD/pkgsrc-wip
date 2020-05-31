@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.6 2009/02/07 16:20:15 pbraun9 Exp $
 
 SHA1 (postoffice-1.4.9.tar.gz) = 839d098fc607085199537e5d0d5c33a79124e45b
 RMD160 (postoffice-1.4.9.tar.gz) = 45dea253162ce4d1712ca38260f560606922506c
+SHA512 (postoffice-1.4.9.tar.gz) = d6712c785c2fa4247dbb69d735c546ece2362b16c5fe2f0037d3d45f4dc67f9e97f5dbc8c38a87a3204dcb22282f81070df3c4f5545c0def57b7f25d7b886ff2
 Size (postoffice-1.4.9.tar.gz) = 100786 bytes
 SHA1 (patch-aa) = cb14ca975d52841e1dba0f0af4addd2c32691e24

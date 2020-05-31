@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/21 21:17:22 jihbed Exp $
 
 SHA1 (Thabit-0.02.tar.gz) = 479e64badcbf8b561d3205f2f135b4fdcff345c0
 RMD160 (Thabit-0.02.tar.gz) = 695c73ca7e772918c86efa3af3a6989d03caa403
+SHA512 (Thabit-0.02.tar.gz) = fa9755cb18ba45731db901a799e63581c3c72c7bfbad59162b85502e2a67edbde25f9f7e3fcabe57566d7d59d454aefc2bfd483e250614b2f83bfcb4562ca618
 Size (Thabit-0.02.tar.gz) = 243818 bytes

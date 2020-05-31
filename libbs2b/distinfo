@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/03/09 15:24:49 othyro Exp $
 
 SHA1 (libbs2b-3.1.0.tar.lzma) = ec847e38a3a6f7eeed245b44e53f02cfff056df0
 RMD160 (libbs2b-3.1.0.tar.lzma) = 8cf76e2aeb7652a011e29972be0ef54173b9e041
+SHA512 (libbs2b-3.1.0.tar.lzma) = 0192f37344763c582fbe6c6a5349a5694886543b7da8773c90500457b9123c0302fda16f7bbe0d532b5b8b5991a5e71492b1ba01ac6601bd78a355516a34a769
 Size (libbs2b-3.1.0.tar.lzma) = 489773 bytes

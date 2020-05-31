@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:13 rillig Exp $
 
 SHA1 (fluxspace-0.0.3.tar.gz) = 29ae69384656c104ed202f7124d9bf881524eaf4
 RMD160 (fluxspace-0.0.3.tar.gz) = 3e8aabdbff63c112037d35b540f85ef045e786b2
+SHA512 (fluxspace-0.0.3.tar.gz) = e53bb252deeea2ee129e60ae785c25905a3205336917a3a165a17ed54d4f87dae55889fd228d30609211c4ecd09f7d51bf5a3453bccb8a69209bbc1a48ea8fca
 Size (fluxspace-0.0.3.tar.gz) = 2228750 bytes
 SHA1 (patch-aa) = 99e2c833313f589e2f725b0b7073fe100c000cba

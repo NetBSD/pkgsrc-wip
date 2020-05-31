@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/05/11 12:37:02 triaxx Exp $
 
 SHA1 (pear/Horde_ActiveSync-1.2.6.tgz) = 31b16a16a71fe6ebf3f93287e7d476968c474bbc
 RMD160 (pear/Horde_ActiveSync-1.2.6.tgz) = aaf2bd651fd2887bca3cf461e5f7226127770276
+SHA512 (pear/Horde_ActiveSync-1.2.6.tgz) = d5bae0a0fb75f2b5fd48eadddbc5c7de0a8084602037451fa0dc7597af2e8db8a3aadf9e0615fd9e5767b4456048c3aa2cd5c9d2d2f80f895dce877b94115c5c
 Size (pear/Horde_ActiveSync-1.2.6.tgz) = 88821 bytes

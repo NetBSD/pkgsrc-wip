@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/06 13:59:00 jihbed Exp $
 
 SHA1 (xmds-1.6.6.tar.gz) = 339d14a40b04e766acdfa33a7cc38b78f712e7f2
 RMD160 (xmds-1.6.6.tar.gz) = bab887f775cdbef4a69a4b2a606ab8a9b4c69146
+SHA512 (xmds-1.6.6.tar.gz) = be01753fdaa93fc053f9859440925e1e754decf8e99dd3b648778240a1aa6210eb0ab2bc6286a0af8947c5fa4cd523f53a7892feac0f4e749774c2b92d06ab5c
 Size (xmds-1.6.6.tar.gz) = 607585 bytes

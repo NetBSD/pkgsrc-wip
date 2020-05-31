@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/02/18 10:10:29 ahp-nils Exp $
 
 SHA1 (realtime-v0.5-2.tgz) = 11c3e9bd4c8c3777b24cdae9cbc0ee2c54a0f171
 RMD160 (realtime-v0.5-2.tgz) = f9f034db1dbabc98cc27d22df0477496bdd9e7af
+SHA512 (realtime-v0.5-2.tgz) = 15f99e4dfb51f3d11a3e14d0801f76f1f9a13044ff2e6bbb9e8834a6f5b1977b4955310858184920d9aa929d7f7e92cb09443785c84dab76670c7994ba4db2f1
 Size (realtime-v0.5-2.tgz) = 39599 bytes

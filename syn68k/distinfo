@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2012/02/21 15:17:05 christtrekker Exp $
 
 SHA1 (ctm-syn68k-8821995.tar.gz) = 0dd629141858de68f59852e23b08d54558265316
 RMD160 (ctm-syn68k-8821995.tar.gz) = 1cd6d2ab29d51fe97e7f5a9c449745d0d47caf5a
+SHA512 (ctm-syn68k-8821995.tar.gz) = 380ef7a72abfd7c9fdc89f642cb9f7380b2109ef5b3aa8973d8b8842d30f063cb7d9e4caf5de4b9755293d0226cdbc9e9125f81141c6e4ce5f5210547f45e932
 Size (ctm-syn68k-8821995.tar.gz) = 317417 bytes
 SHA1 (patch-configure.ac) = 4be9d43c4b09f592f26a18d1f64d6935a31a683c
 SHA1 (patch-include__syn68k_public.h) = b4f34a1d419339f6a13915133526ecd940f03738

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2006/03/18 17:30:08 pulahti Exp $
 
 SHA1 (xpilot-ng-4.7.2.tar.gz) = b61f05c9041866bcb58d7808dfd1dba09a6e930e
 RMD160 (xpilot-ng-4.7.2.tar.gz) = acc4266fd14467168cf3412ed747c5377b34ed41
+SHA512 (xpilot-ng-4.7.2.tar.gz) = 8ab600f2e3087f5983d2ebed729ac89dc583aec920e74fe76f2ac307f6eda94b9e5e3287020d14bce3a6b04efdbc74ad93b0b449634cbc3bc45eee7fa515ebc3
 Size (xpilot-ng-4.7.2.tar.gz) = 2807988 bytes
 SHA1 (patch-aa) = 846115e4d2e65569039a6809e0ddf5dc2afa621a
 SHA1 (patch-ab) = fe16db031f2a3b31fb3ce8bce7a922bf5eedd9fb

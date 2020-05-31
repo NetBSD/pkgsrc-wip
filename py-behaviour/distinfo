@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/07/16 17:55:33 jihbed Exp $
 
 SHA1 (Behaviour-0.1a4.tar.gz) = cbc631b3f04cb6e9c5516092424c9af5cffe41c3
 RMD160 (Behaviour-0.1a4.tar.gz) = 19cc10a1c3357213fce248974c93ba74cb921851
+SHA512 (Behaviour-0.1a4.tar.gz) = 19e4f39bb25694de2a69941f36ff9642043ff10e2401c03f55854caf5a95f6320f9d717fafbae0432d49c4a16be3dc8e2cb7664a900cf505367079b7e4d4ba4c
 Size (Behaviour-0.1a4.tar.gz) = 29448 bytes

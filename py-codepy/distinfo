@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/12/27 20:58:43 jihbed Exp $
 
 SHA1 (codepy-0.90.tar.gz) = 367830678e445df8f2ca4959ccbee2a4f82c0667
 RMD160 (codepy-0.90.tar.gz) = 55f5f2a9baa4f6a729d5cde794b1db5a43b810a6
+SHA512 (codepy-0.90.tar.gz) = 7aff109845e3581424a8eb4e9a8c6f387678d171ab967b4c2da6b11d019736a8dbdff679993609c6dd6e7f34a0dddc4a32f456ba1605a765641d9911002311c5
 Size (codepy-0.90.tar.gz) = 21676 bytes

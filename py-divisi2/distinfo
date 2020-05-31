@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/03 14:57:53 jihbed Exp $
 
 SHA1 (Divisi2-2.0b1.tar.gz) = ca94f89bab5406bb3a061532c14960e9abf491f7
 RMD160 (Divisi2-2.0b1.tar.gz) = 272ca8279e3265782abaf440b0ad24820c50af68
+SHA512 (Divisi2-2.0b1.tar.gz) = 290a7c3040cb81f2c02a9dc3bd1ef582c298691e193dd27b5a155e3599ce29e998bae68ddaaaec992d1445ee2949fd2ba89a2af82869498507bf94f58ddeb4a9
 Size (Divisi2-2.0b1.tar.gz) = 4688578 bytes

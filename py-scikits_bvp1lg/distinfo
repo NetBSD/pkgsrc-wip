@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/19 14:32:20 jihbed Exp $
 
 SHA1 (scikits.bvp1lg-0.2.5.tar.gz) = 94cedf9064ee31eb68b1f4f075199c170acaa8ad
 RMD160 (scikits.bvp1lg-0.2.5.tar.gz) = 3a2001ce0f71522b74a13d3bd6efa2418b84dafe
+SHA512 (scikits.bvp1lg-0.2.5.tar.gz) = cc1ddfc6cb0bf00699ead5649b9c82a2e2191f155a8d2facc67ed4276447a1a732b125265049e3dd20919e7dbf7303177d7e8d85f483fbddb1a13b593719825e
 Size (scikits.bvp1lg-0.2.5.tar.gz) = 83323 bytes

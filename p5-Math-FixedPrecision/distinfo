@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/06/28 03:57:11 geeohgeegeeoh Exp $
 
 SHA1 (Math-FixedPrecision-0.21.tar.gz) = d5bd6af1523a6cdae2dabfedcfa5584d54d53af1
 RMD160 (Math-FixedPrecision-0.21.tar.gz) = 1a52085dbbd108df03e1846150a914c740ee2bf8
+SHA512 (Math-FixedPrecision-0.21.tar.gz) = bca8126259c8be656be956796a5f68f0f3d7787b4227c12a1a085e2aff683ead4f35f1438a72b8c0b24860d1b3d50b8d6fecf49e62d66827bc5ed529e6a82379
 Size (Math-FixedPrecision-0.21.tar.gz) = 5282 bytes

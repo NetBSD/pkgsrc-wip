@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 21:28:52 jihbed Exp $
 
 SHA1 (inspyred-1.0.1.tar.gz) = 46fb3c79d5b648d162fb3dc4b7e15c05b0a35e9f
 RMD160 (inspyred-1.0.1.tar.gz) = 7ca2f27996370b512f4e24ad1517991a37dc95d5
+SHA512 (inspyred-1.0.1.tar.gz) = dda068b5ee35d569a858035ce024a00bc3a8edca31d49f0e25c7e6c9cd2eab9ada7b25582e3883849b1ba44e17c55276749a3c1464c820defd35240cfb3085c9
 Size (inspyred-1.0.1.tar.gz) = 58566 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 21:58:32 jihbed Exp $
 
 SHA1 (pyfeyn-0.3.2.tar.gz) = 7848fbbabc2258f658aae84c0a2be093e0d6f462
 RMD160 (pyfeyn-0.3.2.tar.gz) = 0127cb178ccc8d3be4b572c0a63f381b0e372ee1
+SHA512 (pyfeyn-0.3.2.tar.gz) = e498c0203078cc4bd9edb18cecf0f38d38a5878736db49a547d3043cfa663fbb04283174cdb9e54b0f74a1c994515175d0fe214ec5a4ac5fe10c426bcddefc5f
 Size (pyfeyn-0.3.2.tar.gz) = 41906 bytes
 SHA1 (patch-setup.py) = 7336314c9875de6180167d8f39b6be56151cc7f9

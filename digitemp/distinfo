@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2011/10/29 06:08:03 errellion Exp $
 
 SHA1 (digitemp-3.6.0.tar.gz) = 68be8b577ba2db3cab3bc59524c3f5917113da56
 RMD160 (digitemp-3.6.0.tar.gz) = c1011dd160d7d47fca585e5cdb4df727b870dfde
+SHA512 (digitemp-3.6.0.tar.gz) = 56d28119baadc368d832fb546dceb6258b6ec42f762675a490ad616c416a5becac3ae3520c2b3d3f0dd2bab65757843a9acea748f9ce60da5cf8c501860b5115
 Size (digitemp-3.6.0.tar.gz) = 290107 bytes
 SHA1 (patch-src_digitemp.c) = 00fc1511c1425ec20b1f8bbb4445cd7a54aa342c
 SHA1 (patch-userial_ds9097_linuxses.c) = c51775b26abd859cccea91da333306627c23d6d4

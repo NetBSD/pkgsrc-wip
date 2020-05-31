@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2007/08/12 16:10:50 rillig Exp $
 
 SHA1 (vche-1.7.2.tar.gz) = e2071b8180af5bba937c556dd224f8dc22cf2f08
 RMD160 (vche-1.7.2.tar.gz) = 048502c365802c93b1f56fcfb1e93d9ecbc2e1d2
+SHA512 (vche-1.7.2.tar.gz) = 58f669467d22f6679958e46daa3c83ebdcaf60f2f7298904fc03ea549a9d77ed3d5e94c4dfb54b193f68f319f527c94fc85a63a18b88364f8f93061b6ad74a38
 Size (vche-1.7.2.tar.gz) = 44248 bytes
 SHA1 (patch-aa) = 99783383a1e9af12aae5aa9056579f226fc28d6a

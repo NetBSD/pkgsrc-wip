@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/27 12:44:09 jihbed Exp $
 
 SHA1 (monajat-2.3.1.tar.gz) = 68a1a29e4ddbc9499a77deefb260c68fb4d4846d
 RMD160 (monajat-2.3.1.tar.gz) = d2dff398e2a13c7086154419f57c0d814bb3b70e
+SHA512 (monajat-2.3.1.tar.gz) = 79c7e8978fa83645780643bde5cde93e2df2e3fdaf7805f0badc874f22ecb89c8c4ae15b5581e4eb54eadd870b7204ad1cb79b06026a458e5bf8dfd20889d044
 Size (monajat-2.3.1.tar.gz) = 52770 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2007/02/04 01:04:22 christian_gall Exp $
 
 SHA1 (mod_auth_imap2-2.2.0.tar.gz) = 88adaa834f85968eefab55b8a3a4f16e621ed89b
 RMD160 (mod_auth_imap2-2.2.0.tar.gz) = 25867f4c7c0f3f8b4bcd9c7effab6abaef7ebd9c
+SHA512 (mod_auth_imap2-2.2.0.tar.gz) = bfd547bc08b62a7a3ace3a634e5d0ae7ff2c27448c4732e1ee0f9a1b9cdafbdc366dfe3e1eb4edc8cfc37ee6211f8d68b1bbc33278015531519a46249c83c40d
 Size (mod_auth_imap2-2.2.0.tar.gz) = 12787 bytes

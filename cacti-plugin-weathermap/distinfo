@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2014/05/27 11:54:23 ahp-nils Exp $
 
 SHA1 (php-weathermap-0.97c.zip) = dcc94c1c08155483afd8ab9549ca25c8d40d30f9
 RMD160 (php-weathermap-0.97c.zip) = 76181bfbf6850157265d1851897ada95007c1898
+SHA512 (php-weathermap-0.97c.zip) = c10e4feea672f977c8dd61bb540c1d062dbc846ece2558eefef622dfd1e90424236ecc7aec3987e24e52d1834b36935819a62c692d09da21d25766ff6a61455c
 Size (php-weathermap-0.97c.zip) = 2997650 bytes

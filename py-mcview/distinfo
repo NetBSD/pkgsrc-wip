@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/07 10:17:26 jihbed Exp $
 
 SHA1 (mcview-0.4.0.tar.gz) = 53f15a91aa1430b480c5d623631d88f64e38a91f
 RMD160 (mcview-0.4.0.tar.gz) = 80543be131ca62cc54df687be5a44265fe515555
+SHA512 (mcview-0.4.0.tar.gz) = 8eea86896c4fefac4e5887122f2739702ecc299833744616b2690394a424628fe27a97edc8cd3dbb48a9e16fa6a29e90cb64d1cd62486b20e7873c4ede141c6c
 Size (mcview-0.4.0.tar.gz) = 11877 bytes

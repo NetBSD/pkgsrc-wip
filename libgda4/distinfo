@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2013/06/25 14:19:41 noud4 Exp $
 
 SHA1 (libgda-4.2.13.tar.xz) = 61d0b498202b780750633cc2e957c40325d6c705
 RMD160 (libgda-4.2.13.tar.xz) = f487af2620fc241e6608a80b863b40a81ea3c548
+SHA512 (libgda-4.2.13.tar.xz) = 54506b65ac7127ab67168f8169aba4d366ea1c7f9e5401c27c00a7eee7ea5ce33821faef0c7f2d397455869bd98025990b527cb7ad8cca1a88d32bd699d44f22
 Size (libgda-4.2.13.tar.xz) = 11247816 bytes
 SHA1 (patch-ab) = 574f75157ffd29e06cac243e10951987ed9ccf8c
 SHA1 (patch-ad) = 42cdcc7d0b90ac7ccf7d6209ddb1e804bdc05bf0

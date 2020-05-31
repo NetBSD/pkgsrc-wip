@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2006/08/26 15:41:20 kristerw Exp $
 
 SHA1 (emboss/meme-2.3.1-20041107/MEME-2.3.1.tar.gz) = 7f43041d3b4bbc5ba5b7c39c7320906966c079df
 RMD160 (emboss/meme-2.3.1-20041107/MEME-2.3.1.tar.gz) = b7e6a60c49d758bb79f4b97f82d8675a839782ee
+SHA512 (emboss/meme-2.3.1-20041107/MEME-2.3.1.tar.gz) = f0b86c2860f229d90ac4f9ccdd6ef2324dc7925b3a7c23590bc8c60c6e6e130b6ccfa1ac8891df2cfc248e356dcb2cb8b0b9c17eb281570477f32c3c9392cdce
 Size (emboss/meme-2.3.1-20041107/MEME-2.3.1.tar.gz) = 417514 bytes
 SHA1 (patch-aa) = d7b7d55c81df79f4c437fb6b2378322a69bbd204
 SHA1 (patch-ab) = 125cd943e6fe3e4133f1ab947caa1d01d84b76fb

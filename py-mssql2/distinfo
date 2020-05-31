@@ -2,4 +2,5 @@ $Id: distinfo,v 1.1 2014/10/31 12:24:41 bartoszkuzma Exp $
 
 SHA1 (pymssql-2.1.0.tar.gz) = eed4e0ed81d51b3a861fcae5340b3fe77bb940d8
 RMD160 (pymssql-2.1.0.tar.gz) = 4a66ad05af080684b5aa9f4096819a0523c13556
+SHA512 (pymssql-2.1.0.tar.gz) = 3129f8b8765bde56f359dd8141f94fc55272e81c6f505d1150790aa130f7a772c21e7cb7d6461b76a2d215b24239bb16766482935b469e7a600ef0da48ce58fc
 Size (pymssql-2.1.0.tar.gz) = 2410002 bytes

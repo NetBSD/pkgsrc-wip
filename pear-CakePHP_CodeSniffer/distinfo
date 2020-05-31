@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 
 SHA1 (pear/CakePHP_CodeSniffer-0.1.18.tgz) = aa9ca9247cf1a7a75ce2c0ed56eccaa555ce565c
 RMD160 (pear/CakePHP_CodeSniffer-0.1.18.tgz) = 21b4d594fbb75424d2d646a4f612d29de0f60366
+SHA512 (pear/CakePHP_CodeSniffer-0.1.18.tgz) = 754e84e7fb4592533ab14f05b027b21b7832d09dfe13cc982e10ab03ad11e9b6d5447affc9660e114407e0ab6b51a3ca09a43a03aa854ae755978664d03c7791
 Size (pear/CakePHP_CodeSniffer-0.1.18.tgz) = 25337 bytes

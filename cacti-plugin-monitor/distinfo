@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/02/18 09:23:57 ahp-nils Exp $
 
 SHA1 (monitor-v1.3-1.tgz) = dfa7d2f313bd6127f1912310c3b8fd870dc0e7c5
 RMD160 (monitor-v1.3-1.tgz) = 3a021699848f4b835b79c515a2e9c48292744cc6
+SHA512 (monitor-v1.3-1.tgz) = 9a7fe428f2280809fe401c4c0b26a028ddff398cb79f513ea4c9731cc10906ea647a95d69789fb13eff1370bc5236ea25a409e4d71ac018965fc061cd25fd93e
 Size (monitor-v1.3-1.tgz) = 236682 bytes

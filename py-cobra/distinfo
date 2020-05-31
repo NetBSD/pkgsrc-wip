@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:35:45 jihbed Exp $
 
 SHA1 (cobra-0.4.0b1.tar.gz) = fdfed5a225bc4afb2bb2032a45ac842348445598
 RMD160 (cobra-0.4.0b1.tar.gz) = 13e47c0b1a976dfaf5db6b2fdabc34d3a68cce8f
+SHA512 (cobra-0.4.0b1.tar.gz) = 630328a55af72f79e8fd0ddf90895d5dbe769a094710db4404511577d0b4839b6c39f0f3b3954d633d688c0d29a14b10854bb9285b1addc1565f9e1cfd744062
 Size (cobra-0.4.0b1.tar.gz) = 1515479 bytes

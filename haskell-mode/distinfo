@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2010/04/13 19:17:53 emil_s Exp $
 
 SHA1 (haskell-mode-2.7.0.tar.gz) = 1ebf17e499e601e0aa9aeb400b9f1df3bef3ec6e
 RMD160 (haskell-mode-2.7.0.tar.gz) = d1b8eb7fcf6c3749952cf3f12cf4d3e94dc1af7e
+SHA512 (haskell-mode-2.7.0.tar.gz) = c71083f46552c337206bfc523e6b0ff0236fc83da52a6d27cbbbee94eb78846e616ce0962c1d5e8af4b4d83debd96061d3a0db6d00e49cef189647f1a294c289
 Size (haskell-mode-2.7.0.tar.gz) = 109796 bytes

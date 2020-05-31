@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/05/23 13:27:11 jihbed Exp $
 
 SHA1 (pystatgrab-0.5.tar.gz) = e886963ab5036850e987fbea5411a543e2939531
 RMD160 (pystatgrab-0.5.tar.gz) = 605772852ccea62fb565bbd0f5546cb8fdab03b6
+SHA512 (pystatgrab-0.5.tar.gz) = 3c80670a4a59c0b433e34eda756c0111685ea6fd93874389b83935ff34b9bedb79a6902e59c327c17e8ee0a70d1a3b03bda0ad3bc18d97a6b185c9bb952c86fd
 Size (pystatgrab-0.5.tar.gz) = 26867 bytes

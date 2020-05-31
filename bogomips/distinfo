@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/04/07 05:05:54 schaecsn Exp $
 
 SHA1 (bogomips-1.4.2.tar.gz) = d44faea66ad92bb53a04817d5e1333cf44a62822
 RMD160 (bogomips-1.4.2.tar.gz) = 5279686a1119b61c570b9ab0b3d4f65703b4fa0c
+SHA512 (bogomips-1.4.2.tar.gz) = b32cab487030be693b28d60711acaa43dcd7ed2a6322ff8b0cf10716fd7ab5753870f5f4ec9b32a34f5dd178dcb2c08a0d5a0c7002f510c368d17542f62f8ca1
 Size (bogomips-1.4.2.tar.gz) = 12629 bytes

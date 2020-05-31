@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/01/14 02:40:48 phonohawk Exp $
 
 SHA1 (mime-0.3.0.tar.gz) = 0237c5c8b6caf3e80178e40336030e25c38a7c42
 RMD160 (mime-0.3.0.tar.gz) = 79b8c2e400b14c339c1c42d5daa6f4578e87655b
+SHA512 (mime-0.3.0.tar.gz) = 27c503a00935d08d792d6d63df4f16ee6aae46c2539d447a7b6eb17f60012bd24e73421abea8a7878e413eda7be8df18b2437015290f5240a3e0ccb7742888df
 Size (mime-0.3.0.tar.gz) = 8297 bytes

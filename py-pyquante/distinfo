@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/13 12:37:29 jihbed Exp $
 
 SHA1 (PyQuante-1.6.3.tar.gz) = 55a5832451588589dd932eab2cb8a317c5615d1f
 RMD160 (PyQuante-1.6.3.tar.gz) = 40f3178a40389a7d1781518deb2b400b04421527
+SHA512 (PyQuante-1.6.3.tar.gz) = 7442fd1a25bf10db81f86d6811a3e57c38a3c5a6ac26764663e25028b45a1a3ae5da896a5219e467265d7128829386e2295fccf470018c45dc70b8a20d592fbf
 Size (PyQuante-1.6.3.tar.gz) = 329029 bytes

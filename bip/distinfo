@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (bip-0.8.9.tar.gz) = 6c6828dde0ec9c41237bac42a679aa8237bdeffe
 RMD160 (bip-0.8.9.tar.gz) = 709f56d6b09cbd28f64e8614a899bfdd3e18fad2
+SHA512 (bip-0.8.9.tar.gz) = 572adb6e0982d74a39b0380ef6af51ba7f55b880f78e110b93e09616e6345bb4a9a60475df644ec891cae368287d502ba00bbf734370ba50c57b29de6934c138
 Size (bip-0.8.9.tar.gz) = 256711 bytes
 SHA1 (patch-Makefile.in) = 1ae208c3f19b6519636d6c63a7fff576b1e06143
 SHA1 (patch-src_util.c) = 92571ea470d3af9a4bc08829f3259e7580839ae0

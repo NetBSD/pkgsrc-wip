@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/09/06 14:38:34 slitvinov Exp $
 
 SHA1 (gfsview-snapshot.tar.gz) = cc0be8494d62878b958a951a59f9dbcc0af87043
 RMD160 (gfsview-snapshot.tar.gz) = 0eaa794d67f3f215283fc0c7b68cff16942bef55
+SHA512 (gfsview-snapshot.tar.gz) = ce105a8016c8d3416a1c1c3b41847fff7f485106c23acb73010ee4371dd24529ce19a65e2d6e99c283253d04e54271b4cabcca770e11bb4b5511435d3919b7cb
 Size (gfsview-snapshot.tar.gz) = 707424 bytes

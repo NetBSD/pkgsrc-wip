@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:32 rillig Exp $
 
 SHA1 (noiptun-1.0.tar.gz) = ae242386385706e2d394e6bbc70c954499fcb22f
 RMD160 (noiptun-1.0.tar.gz) = bc53d93df983c49d9f8e5fa5b2d596b78205dcac
+SHA512 (noiptun-1.0.tar.gz) = 1ce247c509b54e34d43f2833e9af1dd16f45ac77f5ed77d127a1170f102083059f25b73586d67ef39d477cf4c0051f4ac20789a58bdca3198595cb5f729bd5ec
 Size (noiptun-1.0.tar.gz) = 63250 bytes
 SHA1 (patch-aa) = 98c270af736aeca9d5ec368cd01870138f538446

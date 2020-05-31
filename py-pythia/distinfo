@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/09/16 18:01:30 jihbed Exp $
 
 SHA1 (pythia-0.8.1.14.tar.gz) = 8eb2086fa6a2516aa8ab2135cad2d0cea1c86248
 RMD160 (pythia-0.8.1.14.tar.gz) = 453538d623b20600d11d768c8466a3b5a9afa0e6
+SHA512 (pythia-0.8.1.14.tar.gz) = 957d5a0e5148c5cabb1342b5b8ef53e536e836536f0e05be0c8f824f242b31696b922ed068f797829fa933cfb0c657a27cdf7de38026136d307e9ab8f9b8b918
 Size (pythia-0.8.1.14.tar.gz) = 147249 bytes
 SHA1 (patch-setup.py) = 2668884c5b2db955e43688e847f8f45097792a3b

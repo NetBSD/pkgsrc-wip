@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2013/01/10 14:50:15 othyro Exp $
 
 SHA1 (drow-0.2.22.tar.gz) = cbee9e54836e65b755f178105bda36674ab04d94
 RMD160 (drow-0.2.22.tar.gz) = 57cc2607c476efd8f826c7be728653fd87d42e17
+SHA512 (drow-0.2.22.tar.gz) = 42c25df57e0c98af751ccd499803c2a58a29815cda21224abfc3c7bac7d14e571ff0e87f77ce70d61acd723f827d79b1409402164c18ec57f2e5736f59280fa7
 Size (drow-0.2.22.tar.gz) = 27876 bytes
 SHA1 (patch-Makefile.in) = b532ed892e4f1419c5e79578189810f323dd5d5b
 SHA1 (patch-drow.c) = 6920d8e0e6b6c6064d40eb2a775e0774f084404b

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/01/29 12:49:33 jihbed Exp $
 
 SHA1 (duplo_0.2.0_src.tar.gz) = 5a301d84e98527d2d24dca60028776ba2507226f
 RMD160 (duplo_0.2.0_src.tar.gz) = 105dbdb2e769cea11c4ed91fc62e592aba8e629b
+SHA512 (duplo_0.2.0_src.tar.gz) = 499c1a121b02f0513acae01191d4e1870e02ffb2fd25ecdc6003bc97a23f881d332e4c01423cf4345b739b66243423cbe117ed67b501787816f7568db52bbf02
 Size (duplo_0.2.0_src.tar.gz) = 22246 bytes
 SHA1 (patch-Duplo.cpp) = 2a02d59b2b7557f27c576b3d4482d902d98db534

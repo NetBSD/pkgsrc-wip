@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/07/03 14:14:54 jihbed Exp $
 
 SHA1 (sdt_metrics-0.1.2.1.zip) = e07dd373018876d91fed0fa41e2a2cce1cf752a5
 RMD160 (sdt_metrics-0.1.2.1.zip) = 8f63963ac9a4ea3ac8f901dbef88da384092384c
+SHA512 (sdt_metrics-0.1.2.1.zip) = d9eb1aa83054c824cd2b3694306d2aea021fc4dc3152b0629c7b783b7a90e568953aad1bfdc23dd1eaf49bad64cf1df9c416dc03ad928bcc58bc113a4a30c73b
 Size (sdt_metrics-0.1.2.1.zip) = 42986 bytes

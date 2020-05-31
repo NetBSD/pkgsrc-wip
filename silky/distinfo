@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2006/11/25 14:52:24 shattered Exp $
 
 SHA1 (silky-0.5.2.tar.gz) = 3a589ecad01f527c694c017a6a3d6072d1de5209
 RMD160 (silky-0.5.2.tar.gz) = f774d63f50d92e2e57f22b27ddafdd871b46b8d4
+SHA512 (silky-0.5.2.tar.gz) = c8ad3b9f75c170eeb104be9b789bbaf989efaa436d59aa8be1c03950ad27cd8b62a17efa84ff989bed15e94691b949228f4a1d9773e5ca2ebb7da7b842015317
 Size (silky-0.5.2.tar.gz) = 874236 bytes
 SHA1 (patch-aa) = 189466e1c14c6ee7a0164adfdfbc02cc60da1576
 SHA1 (patch-ab) = f1769902a4ab844b12c89dcde3c7ffde75a44101

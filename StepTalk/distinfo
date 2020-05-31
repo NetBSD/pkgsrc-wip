@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/12/15 04:03:44 dvol Exp $
 
 SHA1 (StepTalk-0.10.0.tar.gz) = bf330dc51fbdd3b4243f7601e1fb9cf6562f2f9f
 RMD160 (StepTalk-0.10.0.tar.gz) = 02a85d4063b0a40b4ba546185de44c834ca4364c
+SHA512 (StepTalk-0.10.0.tar.gz) = bfbaf5c2693d1405051bee7fb454f49abc41cc3d6eabd0b1378595e63b3f018c39ba5d7c92a0b9a39072292c7886ca455a540d97a9dfd4eb4c56bef10aa396ec
 Size (StepTalk-0.10.0.tar.gz) = 307139 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/22 23:10:36 jihbed Exp $
 
 SHA1 (PyAMF-0.5.1.tar.bz2) = a6aa4f880965fe94cc90b07f2529d578834a6206
 RMD160 (PyAMF-0.5.1.tar.bz2) = 3ee3f6f170092f10a0279f99428de4443af02508
+SHA512 (PyAMF-0.5.1.tar.bz2) = bbf4e38e43c8cd22f7a76dc9fbdd388493f58f7f9fbdaf249ee7be3e6d92004f565de8dfc84b73dfa2d7efe9ae198965f0079b469d0961cea4e5e718c3074bf8
 Size (PyAMF-0.5.1.tar.bz2) = 2085922 bytes

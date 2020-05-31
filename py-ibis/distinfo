@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/10 23:20:59 jihbed Exp $
 
 SHA1 (ibis-1.4.1.tar.gz) = ea796cb095267813de18dfb9e1aec759c807df2e
 RMD160 (ibis-1.4.1.tar.gz) = 0c21c5bfa739820804de0c9594d6a57ea54a3657
+SHA512 (ibis-1.4.1.tar.gz) = 9d577520deef1527c523c1175132c58117c58b0b5e3d8d1c1f411d0d1967918ac071f5bf61a04dc69b8f048fccbc89eb6b07b311e2c192d69c4f7c607ad6be9c
 Size (ibis-1.4.1.tar.gz) = 13316 bytes

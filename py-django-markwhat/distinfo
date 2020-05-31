@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (django-markwhat-1.4.tar.gz) = adbb804b4f1f6ab6cef8e10d2835ce07d75bb8bb
 RMD160 (django-markwhat-1.4.tar.gz) = 870336f74aafff7b7677bdd475d65a9fcc68fc4a
+SHA512 (django-markwhat-1.4.tar.gz) = 974d514c66b775525c1f657fa43e50468a2921ac38f8e21b9bbcc53dc7aa0ca8a0cffa58115a545396d4b127281675c8a99e5f52dc007e1f6ae3ef902c8fbf91
 Size (django-markwhat-1.4.tar.gz) = 7222 bytes

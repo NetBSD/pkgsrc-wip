@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2013/06/02 22:30:24 thomasklausner Exp $
 
 SHA1 (safekeep-1.4.2.tar.gz) = 706d9aec3322d08775ae80e81a4f1f4b33b31fc6
 RMD160 (safekeep-1.4.2.tar.gz) = 18bc6decc141c0977aaf82a1f518c0e63fc9a56c
+SHA512 (safekeep-1.4.2.tar.gz) = 4161d902a8aaf51715cbb3ed285a82e378dfa369bd98dbd044ed488e7a5080abd756ed30c4f3e33f88d1ee4261a7f669d0a5046cdb0614058ec3cc2d22f7229b
 Size (safekeep-1.4.2.tar.gz) = 89781 bytes
 SHA1 (patch-Makefile) = 1d5d93a6a265962298ae9b3021bdb9588c9e94df

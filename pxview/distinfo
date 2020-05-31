@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2006/08/26 15:41:20 kristerw Exp $
 
 SHA1 (pxview_0.1.4.orig.tar.gz) = 610d40a23961f57a8bea6dfe8dcf87b10efc051f
 RMD160 (pxview_0.1.4.orig.tar.gz) = cfd57e2b66ff5106b0584cb7090b8c49d9fcde1a
+SHA512 (pxview_0.1.4.orig.tar.gz) = 633ed0ca9048f34a05eb896383f5083919394f8cfc9ee27418b8d79491184c403fcfae54ded9ff6b6e728717cd1542f3a18f1437f037347d3d3ec5672f7194e8
 Size (pxview_0.1.4.orig.tar.gz) = 335472 bytes
 SHA1 (patch-aa) = c89a406dc06e3d59919c9c885951d1310f2d5d55

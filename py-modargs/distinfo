@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/05 00:51:14 jihbed Exp $
 
 SHA1 (python-modargs-1.7.tar.gz) = ace9bb2af4d6f62501792a3bc0fc39e60df02e2b
 RMD160 (python-modargs-1.7.tar.gz) = c990b031d9be1fd422551e673713f29001c1de7f
+SHA512 (python-modargs-1.7.tar.gz) = e5fad347f346d2f6757d079199bdd3753203f0cdadc94ea7470209dc577819fde48d2ab76099d9a909a31f30a3bd051c06988335473a8a887783a8a9656f3969
 Size (python-modargs-1.7.tar.gz) = 7273 bytes

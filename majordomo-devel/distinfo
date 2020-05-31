@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2006/08/17 19:43:21 kheinz Exp $
 
 SHA1 (majordomo-20060817.tar.gz) = f49736e1f37c1f916365a17316d5daec194588e6
 RMD160 (majordomo-20060817.tar.gz) = 39efd58ee76de0019947d58e6a7a6dec55e6ad96
+SHA512 (majordomo-20060817.tar.gz) = b2de68b1875b04c376e996ee25eef6ea2bd215a27cb846f35edb2daaefbf06cb91be7abcf8ee4d3794bf1f2b1e483202c2b72d41bc584bc89304106841712d2c
 Size (majordomo-20060817.tar.gz) = 1365589 bytes
 SHA1 (patch-aa) = 40e6fd546a2560c6ec3b61727866aec323d4626a
 SHA1 (patch-ab) = 89dee656e2e9dc57ae5257d378e47f116547644d

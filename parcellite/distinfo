@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2012/12/27 13:02:47 othyro Exp $
 
 SHA1 (parcellite-1.0.2rc5.tar.gz) = bf52a7fb45d99bd2a900335464f0b379d1f255bb
 RMD160 (parcellite-1.0.2rc5.tar.gz) = 85cff264d685eaf928e6eaee117275b1c2907796
+SHA512 (parcellite-1.0.2rc5.tar.gz) = fa67eb178abd39849a905ffa4085aa5282087aa19bac2995244606bb13ca988f351074adbe2d718a456b24f717f113a0739aba5e87b11363ad9e8c03fef7d866
 Size (parcellite-1.0.2rc5.tar.gz) = 726550 bytes
 SHA1 (patch-aa) = a4f2519759a40ea265c628aaec3e1d20850c2368

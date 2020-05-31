@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2007/11/17 08:07:12 netcap Exp $
 
 SHA1 (nicotine+-1.2.9.tar.bz2) = f4c67a0361e8ab08328d49e664b08aa6040a3dfd
 RMD160 (nicotine+-1.2.9.tar.bz2) = fe542c1559626f6ef8e4ff483ed00d9129ca5f73
+SHA512 (nicotine+-1.2.9.tar.bz2) = 9eb4d5f0b04fb6e37459da329a052c31601a39d8836ebfad188820752e3ed07bb73461f156b7a84928966d4e9f320578196b0c3e7da2a8eaee21a86c016b5dfb
 Size (nicotine+-1.2.9.tar.bz2) = 1148442 bytes

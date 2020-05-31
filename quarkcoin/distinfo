@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (quarkcoin/v0.9.2.4.tar.gz) = 5d462175e63068fdb978de66658ae6f59ee96c2f
 RMD160 (quarkcoin/v0.9.2.4.tar.gz) = 10b7070adf4e83e4bf2b830c97e068de42206f35
+SHA512 (quarkcoin/v0.9.2.4.tar.gz) = b19bd36750e6ecbe58d60a59e5a1df1e861eec3c1bee6854632cf99a5f5b84670ad16c1bcf8fd9054168d80a3662630221cf79ac8d20a42b5548f94bb39f2ee9
 Size (quarkcoin/v0.9.2.4.tar.gz) = 5682978 bytes
 SHA1 (patch-src_chainparams.cpp) = ea45666649ddf2bc07df6eee238ea39f384e36d9
 SHA1 (patch-src_db.h) = db437da5974f71bfb60ad4318ab60799ffdd14ba

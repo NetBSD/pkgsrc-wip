@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/09/30 23:08:00 phonohawk Exp $
 
 SHA1 (hxt-unicode-9.0.2.1.tar.gz) = d198cfa5edfbe2be7631d36b13ff13eb68c2791e
 RMD160 (hxt-unicode-9.0.2.1.tar.gz) = 50d91c923726095b4af6ffb00e9ba8a94864137d
+SHA512 (hxt-unicode-9.0.2.1.tar.gz) = 43d4c73120d29e1a8af3efc4158062b750c64c4722621ebb9c88ec77110475e7953758ad5c812b661fed740c6a043bef1b4a3925a1034aa68273105d919abdbe
 Size (hxt-unicode-9.0.2.1.tar.gz) = 13648 bytes

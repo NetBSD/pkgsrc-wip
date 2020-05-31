@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/03 18:39:33 jihbed Exp $
 
 SHA1 (nodepy-0.5.tar.gz) = bf69c4650dc9e472a721782c5d06b0079473701b
 RMD160 (nodepy-0.5.tar.gz) = a8c7bde1928633ed903555b55ee11482c71a7e18
+SHA512 (nodepy-0.5.tar.gz) = 94b9648fd410a193b140c38bf803e476c82337fef1df88a1c8f77ea72aa85d2295cfba71a6710f04b6bc8548c544a1bcf8b70150fa74f2aa553ed2cec3be3b85
 Size (nodepy-0.5.tar.gz) = 676805 bytes

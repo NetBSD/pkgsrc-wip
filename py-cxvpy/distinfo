@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/08/06 21:45:12 jihbed Exp $
 
 SHA1 (cvxpy-0.2.7.tar.gz) = fac4313e4681f85a86d40a7b215669145ad158fc
 RMD160 (cvxpy-0.2.7.tar.gz) = 2aaa02bdec498ab835d3a4c970a872184cf3bde6
+SHA512 (cvxpy-0.2.7.tar.gz) = 5c60c8a9f40f8d25440f7fd4cc9260f8fc1def68ff7d1acd3f9a344a60cadab1d6cd839a36ac0a34b30dc77c494e009ab08546304cb3ce056951a88f4a968d70
 Size (cvxpy-0.2.7.tar.gz) = 78960 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/12/26 15:23:05 netcap Exp $
 
 SHA1 (ooRexx-3.2.0.tar.gz) = d21dbc130cd38831cdc35c38d889defa97cfef82
 RMD160 (ooRexx-3.2.0.tar.gz) = 3f1c08611eb24b05b2657a9de9da583a0699e1b8
+SHA512 (ooRexx-3.2.0.tar.gz) = 513e8594ff82f1e898f25c550013f187f53bf2f0bdc591f5524ad69d73f7abcbe930e20f0ef93f10b809ef042cc81b48a7c3743b67060eb8f250298c115128b6
 Size (ooRexx-3.2.0.tar.gz) = 3765565 bytes

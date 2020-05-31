@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:30 rillig Exp $
 
 SHA1 (mtrack-0.3.tar.gz) = c2e343f6fb429e912738b47c89a01963da5e8733
 RMD160 (mtrack-0.3.tar.gz) = 772b74f75d470a6bb868eeca454a4de63c456bf2
+SHA512 (mtrack-0.3.tar.gz) = 78d12bff4c2f050020603a2de050bfc292a7f1b81829dcb80dc4aac6bfe8b7453b2fb62fc80bf8f714a27e59261f04c4ff5a5ba5cf78a38ef94c00a6708d168b
 Size (mtrack-0.3.tar.gz) = 171809 bytes
 SHA1 (patch-aa) = dbfa82d3f6f617f4589bc16e594b9d0df30558bf

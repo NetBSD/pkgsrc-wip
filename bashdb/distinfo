@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/12/25 20:42:51 slitvinov Exp $
 
 SHA1 (bashdb-4.2-0.8.tar.gz) = c2640aa3a35037d08fcd19e8b33002984a3f477c
 RMD160 (bashdb-4.2-0.8.tar.gz) = b96c72adfc19505823719c60a5d13f1c819c57d0
+SHA512 (bashdb-4.2-0.8.tar.gz) = 27f87d434ac6344656e2c2fb810c2b4ab4a537512b087fab323b88b2e14828c722a214af8b6e3c9848a5e1ac972c46fb9f67fc5ab8e040554a9c183ea61ed4bc
 Size (bashdb-4.2-0.8.tar.gz) = 745064 bytes

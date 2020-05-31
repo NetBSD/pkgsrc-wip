@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:32 rillig Exp $
 
 SHA1 (oqtplayer-0.5-src.tgz) = e64b0281cecbe8fcb09bc40bdb77fe99b8dcfb84
 RMD160 (oqtplayer-0.5-src.tgz) = acbc6af838dec762b2219c4b79f76ea6fc90becf
+SHA512 (oqtplayer-0.5-src.tgz) = b33f8a73ba3bed614b7e9753475ded83cc464e0bd9b1f6153e997baf319358e146857e80a9b77dcdd5afbc394f12438dfe22912fbd30ce67bb576ff2681da260
 Size (oqtplayer-0.5-src.tgz) = 8953 bytes

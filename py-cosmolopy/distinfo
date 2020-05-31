@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/01/31 23:41:28 jihbed Exp $
 
 SHA1 (CosmoloPy-0.1.104.tar.gz) = 4e7592c4aa8476db94be9a22d919d9b30ccf9b33
 RMD160 (CosmoloPy-0.1.104.tar.gz) = 44e05618b1e44879b530a4573a1ffd21903a8c89
+SHA512 (CosmoloPy-0.1.104.tar.gz) = b79b5b264a6bdd68082fc3f62f40957421d9a6914d1623cc89bac9b64598e5fca5d52290632ab55878c893223aeb3283c9b088987a0927d2c22160bc521359fa
 Size (CosmoloPy-0.1.104.tar.gz) = 65162 bytes

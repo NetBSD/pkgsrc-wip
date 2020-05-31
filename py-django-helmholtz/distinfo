@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/20 21:59:19 jihbed Exp $
 
 SHA1 (Helmholtz-0.1.0.tar.gz) = ff60175dc7d615ad0f625063783e020bad5b6fad
 RMD160 (Helmholtz-0.1.0.tar.gz) = 58f98956e44006371c83ac869ff4cd9974ec186e
+SHA512 (Helmholtz-0.1.0.tar.gz) = 962c2ea9ad68278b2c2c576810fa44de898b68336ebfd69f605f2d74030cdfdfb14a12f54c71ca3c7f2b97a2a3504ea9fd1ecc6d3321f42a3f4f8d35034756c5
 Size (Helmholtz-0.1.0.tar.gz) = 93719 bytes

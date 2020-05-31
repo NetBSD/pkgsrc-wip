@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/02/06 23:37:25 poppnk Exp $
 
 SHA1 (bss-0.6.tar.gz) = 5aa002797cfc56c69e2738967818eb21639250c1
 RMD160 (bss-0.6.tar.gz) = fa6390806a01404e83a1e7f7a9bbea88535c4e4b
+SHA512 (bss-0.6.tar.gz) = 749c19cf31e6e9240ad2b5f16b9d234219698f979dbeea87370bf16b2c972dc97d8decdde13816502b4903dab834649bbbdcbd3e386c8dc9f158b73c3ff6bacc
 Size (bss-0.6.tar.gz) = 2044955 bytes

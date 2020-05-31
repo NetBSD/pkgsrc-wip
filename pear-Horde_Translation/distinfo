@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/05/11 08:23:42 triaxx Exp $
 
 SHA1 (pear/Horde_Translation-1.0.2.tgz) = 5aa377321e52bed78445aaf9f03fd4403a68159b
 RMD160 (pear/Horde_Translation-1.0.2.tgz) = 70176e122bd8b70433924e5131543f4d5151c0c6
+SHA512 (pear/Horde_Translation-1.0.2.tgz) = bf3947e6e6aac78bee813de8ef679d70229706314c5e27e5dd88decf56fcd550246b9469ea8c02e962d33126bc72643bdcaccff03199a6184b7a1895c1de0540
 Size (pear/Horde_Translation-1.0.2.tgz) = 13483 bytes

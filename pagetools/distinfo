@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2014/09/08 21:24:08 thomasklausner Exp $
 
 SHA1 (pagetools-0.1.tar.gz) = 4a5237577ad67f899b1baf5f7427b370fce9ac67
 RMD160 (pagetools-0.1.tar.gz) = 88ed20cf59e0cf194c2eff481821e1755a8aef68
+SHA512 (pagetools-0.1.tar.gz) = a61e7975a003ad774bde00d95b2e1dcff200caa7eb31e2f80be3654a0bb7e760516c5b4594603afa587243e71e3b6a6892948d7d5aed55ee5af1e9d16cd09afc
 Size (pagetools-0.1.tar.gz) = 13985 bytes
 SHA1 (patch-Makefile) = 192633a9d30328f028b4b29ff34ca82a0a7535b1

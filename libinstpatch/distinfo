@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/12/29 01:01:16 othyro Exp $
 
 SHA1 (libinstpatch-1.0.0.tar.gz) = 7a347558cc71528e3b475302e4f6a3cd727ffc51
 RMD160 (libinstpatch-1.0.0.tar.gz) = 4cbecfb3851981ddbf0b01739a340679ca529cd5
+SHA512 (libinstpatch-1.0.0.tar.gz) = 3b2cb56043dba45f3b313fa3d54ce7afa6333767b1de63acba77c4710387cb693162c3613d1de42b20ad3249a5cc3008657fc0221e72644083827d0cd238d661
 Size (libinstpatch-1.0.0.tar.gz) = 1158291 bytes
 SHA1 (patch-configure) = 2bf703275d5da1b94ea46d80479ded61bc1077e2

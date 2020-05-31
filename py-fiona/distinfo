@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/02 22:32:46 jihbed Exp $
 
 SHA1 (Fiona-1.6.0.tar.gz) = 3dbcf935503535186b1d889375fe4ee06a8f44e6
 RMD160 (Fiona-1.6.0.tar.gz) = 0922b6b07d5269ddf65e6fac2464401ebbdbc70d
+SHA512 (Fiona-1.6.0.tar.gz) = 34bd46056f6711702bbafd275ccbb8de2b55b43b271c102719ce3f396bb3abcd61c1ef4a881cc17368d9bf697fb8777035ce89d73e3bd24e84a8d876136c2aa1
 Size (Fiona-1.6.0.tar.gz) = 981170 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2006/12/17 11:22:10 gschwarz Exp $
 
 SHA1 (gtk-imonc-0.6.4.1.tar.gz) = 482534990a441cd8cff41a641d94e226a12a0cd5
 RMD160 (gtk-imonc-0.6.4.1.tar.gz) = ad0daf91d4ebe4314bfd997b08659ecaf1dd54d5
+SHA512 (gtk-imonc-0.6.4.1.tar.gz) = 026c655bda4aba684d5bb0121c663259d449e2edc8bf28f7ec1b6d4240a0424d19d3558f8abe307088f9042d01fb09d8839275659f5988bfc7bb9236dd6f081f
 Size (gtk-imonc-0.6.4.1.tar.gz) = 216002 bytes
 SHA1 (patch-aa) = 34b6fb7a74baa4e47b93e73c02e511e65d8297a3
 SHA1 (patch-ab) = 76fa075d448409638d14f04c195e5a34e9956953

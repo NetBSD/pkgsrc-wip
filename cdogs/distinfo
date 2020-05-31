@@ -2,9 +2,11 @@ $NetBSD: distinfo,v 1.2 2008/02/29 05:03:30 dhowland Exp $
 
 SHA1 (cdogs-data-current.tar.bz2) = a99400f3991e456e7f25d9cc2a93c6dd3138b6e0
 RMD160 (cdogs-data-current.tar.bz2) = b4fde498e91a35614ca976ebcf0999046b3f24ff
+SHA512 (cdogs-data-current.tar.bz2) = 9e645d64bcc0b99df9fb113f7103590eb8045ca9439700279c8ea55a6277d10fc38aff38bb1137887bc5697c505fe18e15d6c62eaf2790c065b1261fa7418a84
 Size (cdogs-data-current.tar.bz2) = 218810 bytes
 SHA1 (cdogs-sdl-current.tar.bz2) = 35093151884e106075f5c9bd241f8a004cb52b73
 RMD160 (cdogs-sdl-current.tar.bz2) = e8bf45abf60bf41261949fb40bf2ea6e15d77a34
+SHA512 (cdogs-sdl-current.tar.bz2) = 69fbac533207e38c85cf0f71db47df50405a5ff220a6662f7e186d1f54c4181ee56e1ff8049a427acec7fcf0529b8df66db36a693978bb0aa04eb0594a8b5adc
 Size (cdogs-sdl-current.tar.bz2) = 164804 bytes
 SHA1 (patch-aa) = e55d94c83b301c9237fbf10b69e79f032a4f0018
 SHA1 (patch-ab) = 8fe32439dd20fa091d3f0c729a75614b5f47ebf5

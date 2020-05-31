@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2006/10/31 21:22:57 rillig Exp $
 
 SHA1 (libopenmodeller-0.3.3.tar.gz) = bad1cd69975810427d45194d35afce7e934a3310
 RMD160 (libopenmodeller-0.3.3.tar.gz) = 72a54c35641b6dc3e2204e7c10feb533ed123345
+SHA512 (libopenmodeller-0.3.3.tar.gz) = 717f27975d0c3ecfa1ea9264672b0c54c9aeab89b3b99be8b389dd31ad8ed8cbaa207fad25d536fd3636c706add914b15734f8b1591501327fca52accbc241d3
 Size (libopenmodeller-0.3.3.tar.gz) = 728960 bytes
 SHA1 (patch-aa) = 677880b753f9d04380ee1e66c123584ad708e25d

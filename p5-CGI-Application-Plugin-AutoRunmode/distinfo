@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/04/06 09:45:09 uhabel Exp $
 
 SHA1 (CGI-Application-Plugin-AutoRunmode-0.18.tar.gz) = 59d594362c25d15eae2c8aadd02eeb6d3d714f5b
 RMD160 (CGI-Application-Plugin-AutoRunmode-0.18.tar.gz) = 1db63072034511edf9727adafb8848461647dbad
+SHA512 (CGI-Application-Plugin-AutoRunmode-0.18.tar.gz) = c7ed53a440d6fc24043347da5f307325301e4dc98612b881dc01ed4452e9f22bff99c3a0c47028fd39935643ec149789f40db324c3af134c0c6ece38b58c6e8b
 Size (CGI-Application-Plugin-AutoRunmode-0.18.tar.gz) = 12080 bytes

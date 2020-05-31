@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/11/11 01:31:24 pmatias Exp $
 
 SHA1 (animal-0.15.0.tar.bz2) = f4999734bfb0592105d7affc2fee1aad898d9051
 RMD160 (animal-0.15.0.tar.bz2) = 82db45a8a25f9f5dfb2fee6468de6589e408b06b
+SHA512 (animal-0.15.0.tar.bz2) = 82bfef75236be5f80a6f15e031773b6318d07bb1cba3919b208688721663d8f839b0811e3bb9fd3b08854127b3a71517d2d9d8f30bd241ade2c2d8cdcb50e6d6
 Size (animal-0.15.0.tar.bz2) = 333666 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/21 18:39:29 jihbed Exp $
 
 SHA1 (pypet-0.1b.6.tar.gz) = 8cace15630430a6f016ed510401f23001bf11b28
 RMD160 (pypet-0.1b.6.tar.gz) = 3bfc99f0d52092acd89d92c11aa0eec22e95a1e0
+SHA512 (pypet-0.1b.6.tar.gz) = 7c29032d15a858a70b3670f835594392a22b0d9e5459b1ea233105c5da54cd0e40a08cd7b4bd6d645dd65677c4a6527891e2fc6759049fcd2655504ac0fcb991
 Size (pypet-0.1b.6.tar.gz) = 197312 bytes

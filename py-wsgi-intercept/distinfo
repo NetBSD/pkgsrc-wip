@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/04/14 20:27:59 jihbed Exp $
 
 SHA1 (wsgi_intercept-0.4.tar.gz) = 12a18b7ffd4a5e3b5ffe04cd35deeac9284907f3
 RMD160 (wsgi_intercept-0.4.tar.gz) = d160a1e43a21e3b6fb6c2fa4d02c9b182d155956
+SHA512 (wsgi_intercept-0.4.tar.gz) = 2b3d6ff19bbf181d862fe2f5909bc245dec1f39e21c9a1a298d677651b119aa44a9b7ba0f886ae97d6e186a1d81246b6dc9324089e14d496208e4af8ec70c579
 Size (wsgi_intercept-0.4.tar.gz) = 41124 bytes

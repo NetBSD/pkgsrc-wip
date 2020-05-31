@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:21:59 jihbed Exp $
 
 SHA1 (sphereTS-1.0.zip) = e6dd15b2aced8b0fb352dc434451812c1ce6767d
 RMD160 (sphereTS-1.0.zip) = c67de5bc2c597b7cdb4dea9503050bb81ac264ac
+SHA512 (sphereTS-1.0.zip) = 5513d2af6b85da1e5d6afd8561fb109de0b9e8ca724e0d025e1a309d15f99362309d485d595aff43e7eea2fb4bca1c263c8c0956e7e07208d5a83c7004cfa623
 Size (sphereTS-1.0.zip) = 25306 bytes

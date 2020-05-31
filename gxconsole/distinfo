@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/14 13:54:54 jihbed Exp $
 
 SHA1 (gxconsole-0.3.1.tar.gz) = 9f0e797635deffa774d05f67ccba17e154bd1fce
 RMD160 (gxconsole-0.3.1.tar.gz) = eb604ba30ad36995538fe372187d3ead50886e8b
+SHA512 (gxconsole-0.3.1.tar.gz) = cf77e1b9f80135437a804dddd15de332ba383c3cd402ac7177e8906cf70e6cd7ae9f4b825e3114d473f4950c2fe480d587dfcc044ef0e96a1247cc04e072df5f
 Size (gxconsole-0.3.1.tar.gz) = 87288 bytes
 SHA1 (patch-aa) = ec7c1aeb6946f5c8554fe191fe1f8e1a364fcce6

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/02/02 21:11:17 jihbed Exp $
 
 SHA1 (rasterio-0.5.1.tar.gz) = 074ea8d840ac087f1afd9b5b0a8faf1acceef040
 RMD160 (rasterio-0.5.1.tar.gz) = 579469d8942de95ad7c07d3ac455b3bf71d84564
+SHA512 (rasterio-0.5.1.tar.gz) = 349dfa75781e3c497dcf7f4c256f5de9286beb94e025881cdbe6cda6ffde8ac79367e154610d9659ab78b3e5b968675eb3ff5051dfeafb67e058f8489c2de776
 Size (rasterio-0.5.1.tar.gz) = 256768 bytes

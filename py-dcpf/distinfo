@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/14 23:59:53 jihbed Exp $
 
 SHA1 (pydcpf-1.4.tar.gz) = 856f60da3fd06f6d7eacb22ebe968005223b0653
 RMD160 (pydcpf-1.4.tar.gz) = 0aa04045bb949088383465c54a429380c6b76d17
+SHA512 (pydcpf-1.4.tar.gz) = 2ea59493cf0b2c2cabead142a4655bd15229b9d47e4e9072adea2244e0a86281f7b40ff5253bd6e7b31297c2ad5efb9685c9c9df862897aaa764026542b62fd1
 Size (pydcpf-1.4.tar.gz) = 15784 bytes

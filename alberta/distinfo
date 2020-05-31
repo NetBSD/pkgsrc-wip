@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/19 14:05:03 jihbed Exp $
 
 SHA1 (alberta-2.0.1.tar.gz) = 8052e0e4567438b43167d2f471528e7f8e03766b
 RMD160 (alberta-2.0.1.tar.gz) = 9e7a106177dfe66e58940d552bcffe5447d840fc
+SHA512 (alberta-2.0.1.tar.gz) = 159716a1a1a9cdb71cf6c7c4c52dcef9c000014b7ff34e1d276f86d3987445ddc57feedded2d7179fcd21d9d2d16e224e3f9176f6d07ff2f533e6301d1c636b1
 Size (alberta-2.0.1.tar.gz) = 963581 bytes

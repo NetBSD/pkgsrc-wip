@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/08/26 17:40:22 poppnk Exp $
 
 SHA1 (jpgtn-2.06.tar.gz) = e7e97c2b601e75f300d3cdfad1d22461b6851ca5
 RMD160 (jpgtn-2.06.tar.gz) = 0daa320165f911b36f93c02e7295b207c606509f
+SHA512 (jpgtn-2.06.tar.gz) = 99227601b6047b00489363d4e0b9d59f8acda6b017a40e1d872519806121a9acbcdeed79ddaf5cf5bf2ecb44da127997e26bac0b49560199d26d8b5460918985
 Size (jpgtn-2.06.tar.gz) = 118413 bytes

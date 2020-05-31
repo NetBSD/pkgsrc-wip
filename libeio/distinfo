@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2013/08/28 09:02:29 fhajny Exp $
 
 SHA1 (libeio-4.18.tar.gz) = 485d7abdcca43e6670f9f09953b2ae55177c260e
 RMD160 (libeio-4.18.tar.gz) = d4457de7f5660b5561eefdb59017b8c0e42ca04f
+SHA512 (libeio-4.18.tar.gz) = c326787f5af53ae0fe658451b15ba09acc685bd3c59a93041483ff6513155abd802c083cc6d6c0c92ffa744ba4788b88ea9384b8755a3bce07000f25a66f2acc
 Size (libeio-4.18.tar.gz) = 94772 bytes
 SHA1 (patch-configure.ac) = 2769794352d10f139ee216acd511dc6722f7c607

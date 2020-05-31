@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/03/25 12:40:40 cherrymathew Exp $
 
 SHA1 (Text-EtText-2.3.tar.gz) = e9b919db2f7cca735413f1d20782be1e063d1ba0
 RMD160 (Text-EtText-2.3.tar.gz) = 3b300606b80bb371b736b3cee18d9e54a249e0a4
+SHA512 (Text-EtText-2.3.tar.gz) = 0934455551f79fcc589277383918d2afe7cda94d90d91ae37a963b44d3e150d9e56ef0b9a0582d2c0b5d6f4dea07aa97e29218710ed028df6fb856e3842bfe55
 Size (Text-EtText-2.3.tar.gz) = 150911 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2015/01/23 18:52:15 christtrekker Exp $
 
 SHA1 (fontaine_svn_r57_2012.02.01.tar.gz) = 578266d09af2fcc5814a6f3551673b8cf341850b
 RMD160 (fontaine_svn_r57_2012.02.01.tar.gz) = 4329f7a15e37346ade093351be2fb100825ac797
+SHA512 (fontaine_svn_r57_2012.02.01.tar.gz) = b5243f186b1af4f22151e973fdcaddd7aa1e7978ed8eb864edf6a8e91a6f105e35654ef52a4157dd6015d66a8c0df6ae3204f8a04335c396b0b880207b21aac4
 Size (fontaine_svn_r57_2012.02.01.tar.gz) = 1226513 bytes
 SHA1 (patch-cmake_modules_FindFreetype.cmake) = 2997fa5f251f776c5efbd9f3369d10f6e8b64639
 SHA1 (patch-src_CLP.cpp) = 2f3e8a1cd655873de882da88866220afe1db5127

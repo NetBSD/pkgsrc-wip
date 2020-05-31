@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/02 14:18:10 jihbed Exp $
 
 SHA1 (pyCalverter-1.5.tar.gz) = b9ae7073168c0673e18cb8be20527d8bff985399
 RMD160 (pyCalverter-1.5.tar.gz) = 91e10139d224f0205df53ac466fc94d677a32e05
+SHA512 (pyCalverter-1.5.tar.gz) = a28fe87d3b5158eb7c872ade03cff7cd36c45ff6e880148616556d73079e4ef2d8476dd338a74ebdc43ae59c2f19af5f108e2ff932767addd806b8e847f1c55e
 Size (pyCalverter-1.5.tar.gz) = 10549 bytes
 SHA1 (patch-aa) = be2f64b83b546e505b9340f4db2995a286933fd7

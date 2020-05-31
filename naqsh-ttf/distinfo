@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/22 14:28:10 jihbed Exp $
 
 SHA1 (lateef.shaikh_fonts.tar.bz2) = 8e5d4728305ae6eae3eb7f4208e7d8bd49cb950c
 RMD160 (lateef.shaikh_fonts.tar.bz2) = 099fca3aae2235aa4588a08974665b086cd7d5c3
+SHA512 (lateef.shaikh_fonts.tar.bz2) = 4f283643ad79c45f5eef68da3d2d888e2c0ec64e3cc39b2967e4782c4f24d0f8cc74783e488006a2fc1a20f796f98c29475b308360ac4abf01721c8ad4057a4b
 Size (lateef.shaikh_fonts.tar.bz2) = 223101 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/04/04 07:00:46 jgoamakf Exp $
 
 SHA1 (Lingua-StopWords-0.09.tar.gz) = ec8714c86a5b054909ffe05cee52ba23eb57dbe8
 RMD160 (Lingua-StopWords-0.09.tar.gz) = 041fcdcb8db5b46159b15436b901befda10a3f00
+SHA512 (Lingua-StopWords-0.09.tar.gz) = b696aeb4ff0892b03cd8eb747de809aa67377dc9940eb4f9a805be2a5e0fa50e4663e35b403ba48439aecb88379b9a18aab187d20ca5f5179ced7507fd1f08f5
 Size (Lingua-StopWords-0.09.tar.gz) = 14867 bytes

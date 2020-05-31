@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
 SHA1 (sunterlib-0.7.tar.gz) = 50e17a486d545e34c5c181f622e200bbe38b33cf
 RMD160 (sunterlib-0.7.tar.gz) = 289f4d73d43be95acc2dd7bfde3e318b65c82bda
+SHA512 (sunterlib-0.7.tar.gz) = c97387ac113c7bc300a79cb1383573c25835bc671555202f853bf904e39a481f1ad0372e45a06714c1b9fe334010bfe7878ace0d60248c40309d0be23679d48a
 Size (sunterlib-0.7.tar.gz) = 119243 bytes

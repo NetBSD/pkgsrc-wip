@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/24 09:36:05 jihbed Exp $
 
 SHA1 (aipy-2.1.0.tar.gz) = 2191b6f83d072ec11e3f11e45870fab0fb39199b
 RMD160 (aipy-2.1.0.tar.gz) = ef6e1186bd6ccd216d8e822138dc5961ccce1e21
+SHA512 (aipy-2.1.0.tar.gz) = 6b94dc5b742a804db99c45465ddd6d35495e39a331db7252e2372f48e09a764fd06b97b7ceb985cb4b1f0be4faf6e0ff5eb76ca7a2cea5eee8d693a52bb83531
 Size (aipy-2.1.0.tar.gz) = 981319 bytes

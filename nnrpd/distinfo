@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.5 2011/09/21 20:10:17 hfath Exp $
 
 SHA1 (inn-1.7.2.insync-1.1d.tar.gz) = d04027cbfcdfd4756282aa561ded2a5feb967f5c
 RMD160 (inn-1.7.2.insync-1.1d.tar.gz) = 87b775d1f776a357c4d6118f0a86f3677e266c3f
+SHA512 (inn-1.7.2.insync-1.1d.tar.gz) = 9f240c78594e8ae7bcc9025336dbf76b7ac8e493321ab4baf70d54119047ac4563be76f01c20d3a51513116e19ef52d8a13c6e260a69a1b70e1f3bd3f0d16789
 Size (inn-1.7.2.insync-1.1d.tar.gz) = 1251798 bytes
 SHA1 (patch-aa) = 94a801f0b6b2cef2f6394619fca0a5366fd99920
 SHA1 (patch-ab) = ea2c65f9425445dfc8d3203c9306c841d4883a36

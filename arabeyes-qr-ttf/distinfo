@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/21 21:14:32 jihbed Exp $
 
 SHA1 (arabeyes-qr.ttf.bz2) = b685dbe35c454618bc408efafcc29087565d83eb
 RMD160 (arabeyes-qr.ttf.bz2) = a4e01061a90ed84efb9e528fcc5d04427decf87c
+SHA512 (arabeyes-qr.ttf.bz2) = 8b55f7869647a0b05077a1d67720a65e2f084f66fdfde8cb41156ed37196d0c3ce9ca7a17687af6c7c0be43327e870587e2810584166aa0d924cbc6482c70ecd
 Size (arabeyes-qr.ttf.bz2) = 120568 bytes

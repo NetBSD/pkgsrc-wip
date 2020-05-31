@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/02 21:05:56 jihbed Exp $
 
 SHA1 (getdp-2.4.1-source.tgz) = f2d275b9ee4517edb32499f2aa0290b707787e2d
 RMD160 (getdp-2.4.1-source.tgz) = c704e3db02c3cc79b0df8163b876b813d9fb499f
+SHA512 (getdp-2.4.1-source.tgz) = eb4b8a4c1b450b5485e1882e3dfa229bbedafe426e56fabcde7bb93dd49796d83e3f5cb038f1a4d6e1765bf1b4a51e2deeb6429a3089fd2b4f72b4c901dc523e
 Size (getdp-2.4.1-source.tgz) = 1480471 bytes

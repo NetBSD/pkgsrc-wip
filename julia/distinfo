@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2015/05/18 03:40:54 genolopolis Exp $
 
 SHA1 (julia-0.3.8_79599ada44.tar.gz) = 74135918243e9190d6400713fb797c2589bf9532
 RMD160 (julia-0.3.8_79599ada44.tar.gz) = 8ebe445b3cf33ea0a64091ac821cd02463e2c60a
+SHA512 (julia-0.3.8_79599ada44.tar.gz) = 3a9ac6d655d4af87b774d6fe5527f5e3cbd60f7172dd483edd6d79ebd3544613471e79beddfba706ba5cbb83cb10722cc930cda34605f50169e12bfe9c0e0f0b
 Size (julia-0.3.8_79599ada44.tar.gz) = 76753568 bytes
 SHA1 (patch-contrib_mac_app_run-install-name-tool-change.sh) = 8409998e842b0a707c275652a57dd98e7bbb5ab2
 SHA1 (patch-deps__openlibm_include_fpmath.h) = 7ca9cb911c2bb6dfd661c10120b0c98e35b6b528

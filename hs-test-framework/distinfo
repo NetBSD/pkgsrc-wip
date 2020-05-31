@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/03/02 11:24:03 phonohawk Exp $
 
 SHA1 (test-framework-0.8.tar.gz) = 97c2494e9045c97d9e6c65d02759b57410dec1b6
 RMD160 (test-framework-0.8.tar.gz) = 222500c2239637b7828f497a769293d1ad3dc1e4
+SHA512 (test-framework-0.8.tar.gz) = 5f2238b65d644faf14a1b057abd642c31bcfc337b345d155cd7b04d99589aa269b74ce9b5225b843db8fcab25454b677a05c498c873ee26635c206f6470a438b
 Size (test-framework-0.8.tar.gz) = 20253 bytes

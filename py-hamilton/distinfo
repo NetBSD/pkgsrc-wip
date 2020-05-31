@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/12 20:26:38 jihbed Exp $
 
 SHA1 (Hamilton-0.1.0.tar.gz) = 35cb779164775b5c696de383af98f65c9692ff7d
 RMD160 (Hamilton-0.1.0.tar.gz) = 60fc4a9e0694e53c170f0413f6a0b45aaadaa921
+SHA512 (Hamilton-0.1.0.tar.gz) = 617a028882b2fa6f257eae808fa92872ed1c8ced2ae491b47feadf19936d51d2150eb17c8cf41244967bcb53c9321da94cd361d1adab7cbf8ccedc779bcd2006
 Size (Hamilton-0.1.0.tar.gz) = 43905 bytes

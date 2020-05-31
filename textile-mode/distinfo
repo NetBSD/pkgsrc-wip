@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/03/19 07:34:07 phonohawk Exp $
 
 SHA1 (textile-mode.el) = dc911eddd6fc825b9b16d0c515ac17dee5259266
 RMD160 (textile-mode.el) = faf6f6a929151e6df416e4a0e72d45af4e0dbf2e
+SHA512 (textile-mode.el) = 6bdb2eaf5b88184d6e9ce16cdbdd8646e3981a25fccf4822de43d1bc3bd7160f880359c8257a5e7be864def33287080adcb23a0f94958fa2f3d5d66b365c10a1
 Size (textile-mode.el) = 12074 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/02/22 13:43:00 phonohawk Exp $
 
 SHA1 (yaml_waml-0.3.0.gem) = 073ea395beb50f1877128315e62ecaee38655f5d
 RMD160 (yaml_waml-0.3.0.gem) = a3807c688fce3fec02661e70db50cb3c09a7c3fc
+SHA512 (yaml_waml-0.3.0.gem) = fdc5cd7c4bcb61ba1aa1d3e1b5f4e38cd397d7f997d7b36cae2510b987cabc61367a5b7a565f6806acece3c4f3d957f1ce9489fee564ddc91c9fddd4bc605070
 Size (yaml_waml-0.3.0.gem) = 8704 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2015/01/03 14:14:32 gschwarz Exp $
 
 SHA1 (arpdig-0.5.6.tar.gz) = f1a725061a4fff9ca0280eef50fa404ceee2b14e
 RMD160 (arpdig-0.5.6.tar.gz) = 8900e7abb846f2bfdea04d47e8b02149b89880c0
+SHA512 (arpdig-0.5.6.tar.gz) = 5b9be6cb872792d98a809976a512b6d961f2e0ce62dda0220f6a8eff29e6979b9fb1d7547a26ccca31906ca535ad5b4bfdd7c20f782806744207ceb31e19ba81
 Size (arpdig-0.5.6.tar.gz) = 7972 bytes
 SHA1 (patch-aa) = 2913bec8c4942acc3906e16afececf425031333f
 SHA1 (patch-ab) = a9c72a08dedb1ceb0d1e4f6367b7132ac06a0408

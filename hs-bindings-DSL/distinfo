@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2011/05/10 12:23:01 phonohawk Exp $
 
 SHA1 (bindings-DSL-1.0.10.tar.gz) = db4c8a0814cd7a44de66680dcb04471594da71ac
 RMD160 (bindings-DSL-1.0.10.tar.gz) = 4f4b7a53b1d5f2a884b78344178ca0ad36dc4cea
+SHA512 (bindings-DSL-1.0.10.tar.gz) = 1480f1e0a1bd5074040f45d3f3ae4501e0414a2f7bfc55d0072ef47a5e3f4c66f629de41bbdfe51831f71ef9eb4bf51a3f1ab188fcb132b5fd07c547b616180a
 Size (bindings-DSL-1.0.10.tar.gz) = 5008 bytes

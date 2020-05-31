@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2005/06/16 08:37:28 jeremy-c-reed Exp $
 
 SHA1 (scr2png-1.1.tar.gz) = 1efb6e3f31f5cae66cb51d220b04c3ba08688f01
 RMD160 (scr2png-1.1.tar.gz) = 420f2c426b4a61cd0791f1f117976e1a6792f295
+SHA512 (scr2png-1.1.tar.gz) = 38aaac608568d34059f01bd7436844320db1b7f8c540280856cbb1f8663f67405ac9e3a97c02154e3d1980fca72be51327418802a97a70930269748226af2b23
 Size (scr2png-1.1.tar.gz) = 6803 bytes
 SHA1 (patch-aa) = 4aeaac76adeed14bc58dbb11c646e9ee6cf6b312
 SHA1 (patch-ab) = 82057257b2e9dd4833f00d37e577b474e701898a

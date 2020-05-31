@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/08/25 16:53:16 jihbed Exp $
 
 SHA1 (pyphant-1.0b1.tar.gz) = dc553110cab10769a35075fd6e8a6f461f2d54c5
 RMD160 (pyphant-1.0b1.tar.gz) = bc1046a2db6b79721257bc002e509cd475c4ecf6
+SHA512 (pyphant-1.0b1.tar.gz) = f1d01f6b21fa914538e58a3cdc5e39ecc0a35665463ac7a1da61390cdd4cbc79b8920b840a4b5e01fc576fb68861249ca9c8ab9737ba320c72fb6a722949b214
 Size (pyphant-1.0b1.tar.gz) = 273977 bytes

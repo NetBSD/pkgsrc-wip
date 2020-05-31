@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2006/12/15 22:10:37 cheusov Exp $
 
 SHA1 (eng-fra.tar.gz) = 29d9b8646d8af8c8388b70726a702866943da505
 RMD160 (eng-fra.tar.gz) = d02ed44500c8c8e446cd252e3137fe3d40c72d52
+SHA512 (eng-fra.tar.gz) = 4db3629603e463ae8a83996f4812fca8ad2fec59ba4c2258c676707d72a568bc7f05c01bbaa8dc883ad98c16164a813b11a660fb35a0991c3757778d67d8e8c9
 Size (eng-fra.tar.gz) = 209654 bytes

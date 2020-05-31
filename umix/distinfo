@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2005/08/11 15:01:56 leonardschmidt Exp $
 
 SHA1 (umix-1.0.2.tar.gz) = fbf243df96bbda280dd9397bc424ae24555a1bc6
 RMD160 (umix-1.0.2.tar.gz) = 9dd8aefb0313df1ca17db7c1fabee62a933f23a6
+SHA512 (umix-1.0.2.tar.gz) = 9e59a26c0b6cd60bbcfa715694ed58e023c119840080ccb46d9e6b17a9613fd42c1346233a5185d02ece77e3f3e456e18be25573fd34e2f265c5b0b3dc593468
 Size (umix-1.0.2.tar.gz) = 225866 bytes
 SHA1 (patch-aa) = 3ad8dfc81e959d778a37e5c7d9d85881cd08b926
 SHA1 (patch-ab) = 0ed2bd80a75df937c7a23f5fed063b852c128142

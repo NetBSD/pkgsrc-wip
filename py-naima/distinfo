@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 21:56:30 jihbed Exp $
 
 SHA1 (naima-0.5.tar.gz) = 59c6d2d0935f35bb0c0a813787eb4538cd915425
 RMD160 (naima-0.5.tar.gz) = b904bcadcb0b65b931fb163ea7c5a52103e39267
+SHA512 (naima-0.5.tar.gz) = a9232b8c51eceab66c1ce4b413a9884339def7e5e20e2c9ad7807dfb42b653886fb35ac7a070af62bb858e12e5a093cae88eb6e350e76e7697c244d916bf4244
 Size (naima-0.5.tar.gz) = 4870124 bytes

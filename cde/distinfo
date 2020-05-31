@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2014/07/28 13:56:46 obache Exp $
 
 SHA1 (cde-src-2.2.2.tar.gz) = ae6621e5fd8612b6e97ae96679acfa6596c5efd1
 RMD160 (cde-src-2.2.2.tar.gz) = df07b4c43fcfd0bdb3d3e4b95affbaced948fc94
+SHA512 (cde-src-2.2.2.tar.gz) = 34a43d998e42ad98062bbaf9bb764b4a60bea3e2b50e2f2753c3beb6081a0d0c422a3afd8cc34fdce910e223045b367776ef57439c1e8649ab7f24e27c526a3c
 Size (cde-src-2.2.2.tar.gz) = 60675335 bytes
 SHA1 (patch-lib_DtHelp_HelpXlate.c) = 225d9c31aacb316cc8f1241a60303a4fecd07e02
 SHA1 (patch-programs_dtlogin_dm.c) = 46a4312cac388a4484b6791297eb51fd29053afe

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/03 23:31:51 jihbed Exp $
 
 SHA1 (CryptoIM-0.1.1.tar.gz) = 3b24b1c1285ac36bbb00a8ff479b8af02726573f
 RMD160 (CryptoIM-0.1.1.tar.gz) = 65eef7a94ab25737275f79be2d921f850aba0d75
+SHA512 (CryptoIM-0.1.1.tar.gz) = 7110550f01438c7f80c90c406cd10d59bd8ff096c97b655b608e8b32d3cb56c72c39d45ee8156fb0c11798d4082cac16e7724e52a5239652d4c47f607f01cba1
 Size (CryptoIM-0.1.1.tar.gz) = 25954 bytes

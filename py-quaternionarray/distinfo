@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/06 14:04:11 jihbed Exp $
 
 SHA1 (quaternionarray-0.6.1.tar.gz) = 8480992e772497cb749c7e93692b1ccbd6f74a50
 RMD160 (quaternionarray-0.6.1.tar.gz) = 84b3f6a5a552e01a711b2268ef37ebe7b094e3ef
+SHA512 (quaternionarray-0.6.1.tar.gz) = 0447ad669ccdbdedecac645621340156ea82c98276dfd1e12595e2d7d8ab8d283009ccb2122e705da8da6e1fcef672eb1130f35d58162a3b3e495d0100770d00
 Size (quaternionarray-0.6.1.tar.gz) = 2159 bytes
 SHA1 (patch-aa) = dd18f52d01864b1d3d38285e05336a2929017bfd

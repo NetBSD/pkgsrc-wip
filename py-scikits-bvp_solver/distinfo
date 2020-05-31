@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/19 14:29:25 jihbed Exp $
 
 SHA1 (scikits.bvp_solver-0.3.0.tar.gz) = d2254e7855842696bc39d7aa1602319a9ef0e102
 RMD160 (scikits.bvp_solver-0.3.0.tar.gz) = c29994032230be7aaa7dcf0ee283b19d3636bc0f
+SHA512 (scikits.bvp_solver-0.3.0.tar.gz) = e4d372ba5d3126e312ddf52ab9fe60aeb108f7c3ea67a2c0621e01c90790b50aa11640efea193d5e5f43437299c33a88eb7e8bf93f2a8815bb9b8cbf032a0c20
 Size (scikits.bvp_solver-0.3.0.tar.gz) = 1015474 bytes

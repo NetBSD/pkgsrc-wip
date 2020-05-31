@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2007/02/14 16:34:44 lkundrak Exp $
 
 SHA1 (netrik-1.15.4.tar.gz) = c35d90b945b4484a61bb213fa0a40b074b559462
 RMD160 (netrik-1.15.4.tar.gz) = 9559c2610001bd5d423d5020c3f9530ec13cdcf8
+SHA512 (netrik-1.15.4.tar.gz) = 75d9e7315a399c7eeaa9ddafd4b178be762bbc9a9f90ad50eecda8825ab55838753487981544651cf7181a220823f7c8e949de0201cf03743c6b4959f35161bf
 Size (netrik-1.15.4.tar.gz) = 471359 bytes

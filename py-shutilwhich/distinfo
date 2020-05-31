@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/10 15:23:39 jihbed Exp $
 
 SHA1 (shutilwhich-1.0.1.tar.gz) = afddff27854b2e8c2b97c025bf6ae1b164c3f715
 RMD160 (shutilwhich-1.0.1.tar.gz) = fd55942e8c15073b5123ea8a79d16878bca1247f
+SHA512 (shutilwhich-1.0.1.tar.gz) = 356c79a4661d87d930dc869a153e5ae9b207eb00fae290491f8fda5393ccabd9da3e7f01c755c9d456727ef01d61f2275b7793c6fa5c03839726f5b9de5ffe34
 Size (shutilwhich-1.0.1.tar.gz) = 2099 bytes

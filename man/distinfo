@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2007/05/11 12:03:52 obache Exp $
 
 SHA1 (man-1.6e.tar.gz) = 7264bda7dd7bf08bdb9dac6ec7734e755ec0a8d1
 RMD160 (man-1.6e.tar.gz) = 486099dc1b34fe86a2c1d19b7c89dc19b9787837
+SHA512 (man-1.6e.tar.gz) = 8604b37798f807eb74c7947d483212c394f5e13293e064dc615a9fd28c60f5733c4033d293c75bb10be1a18c9f45c80e3fbe170f34bc7e1382c0a9e2c29a4a2e
 Size (man-1.6e.tar.gz) = 252657 bytes
 SHA1 (patch-aa) = 42b791e986b962459f3cfe849ffca707a191f4a0
 SHA1 (patch-ab) = dcc5296ea7debcdc829440205330c8f9bba7ec58

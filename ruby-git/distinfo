@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2010/11/04 22:01:30 fhajny Exp $
 
 SHA1 (git-1.2.5.gem) = bbdc317d75a888d1cdacf9f56ad8edff3813c871
 RMD160 (git-1.2.5.gem) = 8338ec7647d48d85b9d6951ead0d30194711fdc2
+SHA512 (git-1.2.5.gem) = 6297bc2d25214b460caa92fd05997df814de30dbb4cdfc312becd947044ee6167b7b88a492b382dc6a5e0079b23821d87c4c0b6a212970d0a852974b51ec9f80
 Size (git-1.2.5.gem) = 19968 bytes

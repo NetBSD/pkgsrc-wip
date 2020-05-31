@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2015/02/23 16:11:06 leot1990 Exp $
 
 SHA1 (phantomjs-2.0.0-source.zip) = a565193a79dd9bf2c1cf3591dbcc1003cffec29f
 RMD160 (phantomjs-2.0.0-source.zip) = 84f80e82a4dc48110f02dc4734c938c9abd8acb0
+SHA512 (phantomjs-2.0.0-source.zip) = c8262353ee4daa842ef891b41e006baccf1815a99cf3262aeba457cfc37bbef6cb2ca234e69bd33a5446014fe802b3e35591e2eb0d49d8483c1f75bacf9d6f42
 Size (phantomjs-2.0.0-source.zip) = 110092872 bytes
 SHA1 (patch-Source_JavaScriptCore_API_ObjCCallbackFunction.h) = 117e73454911ad58b98e19699655ab198b5adbef
 SHA1 (patch-Source_JavaScriptCore_DerivedSources.pri) = 955594a2b2ed9d7831bfd5405b465ca75a9412e5

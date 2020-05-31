@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/01/02 14:07:32 netcap Exp $
 
 SHA1 (py-libmpdclient2-1.0.tgz) = 7996f42a025b72d3c6a5b8ae80d194dedfc3cdbe
 RMD160 (py-libmpdclient2-1.0.tgz) = a6d3e602f8cef4c1afd9dfa97fcdd9b4a8bcdd61
+SHA512 (py-libmpdclient2-1.0.tgz) = 860bbd5b3035c72450df53a5829ea0d2caacd488a95159acad10541d5a8b6dd25cb531486f065f10e9dbde5a782bf8f4752207a649967ef5da3bdf742ccddfcd
 Size (py-libmpdclient2-1.0.tgz) = 3813 bytes

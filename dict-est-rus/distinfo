@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2006/08/20 19:02:47 cheusov Exp $
 
 SHA1 (er-dict-gtk-0.23.tar.bz2) = 5f8479250c56319f61fcf17f1e852a70505761f1
 RMD160 (er-dict-gtk-0.23.tar.bz2) = cfa35e57f234604ea771f455c2458f3c6fa6eac1
+SHA512 (er-dict-gtk-0.23.tar.bz2) = 368d6f08fea9e22b50cee787770b204a679a11707f5025633b438e20454e94a43584a60e14235e46e0d725f4efc9f3d3dd823302d30ec399ef132c87a7b20175
 Size (er-dict-gtk-0.23.tar.bz2) = 661037 bytes

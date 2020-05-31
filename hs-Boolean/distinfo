@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/05/24 22:01:52 szptvlfn Exp $
 
 SHA1 (Boolean-0.2.tar.gz) = 621e4310c8f8b9aec813769b53499a371ad1d616
 RMD160 (Boolean-0.2.tar.gz) = 197c2fd0d6c0b79bad81201d95834eb54e07d997
+SHA512 (Boolean-0.2.tar.gz) = d3da7fce0f12b427e58dcdb4a19e1fe9f181efcf93defcfb55f659da56b7b8142d0707095d35d5b09adbc14ec86647e9fdce11fd30cc2a51fccd94ef75a2b4cc
 Size (Boolean-0.2.tar.gz) = 6547 bytes

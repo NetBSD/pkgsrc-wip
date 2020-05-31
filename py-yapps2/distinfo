@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/12 16:08:56 jihbed Exp $
 
 SHA1 (yapps2.1.1.tar.gz) = b1c4dd215100f50522b791f9d53764728446ac18
 RMD160 (yapps2.1.1.tar.gz) = 3d33001b0eee4028d88953800f8072514e2929d9
+SHA512 (yapps2.1.1.tar.gz) = 4060fbd788543fd7b976dc080ff18a24bd5d02aa4f0c43f080afa4fa53e32fa4311e49d58a71137ad17b0fd6ccd3b5c4351c7de695a9e6df188d4221174970e5
 Size (yapps2.1.1.tar.gz) = 19685 bytes

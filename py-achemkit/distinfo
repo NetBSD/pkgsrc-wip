@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/17 22:01:40 jihbed Exp $
 
 SHA1 (AChemKit-0.3.0.tar.gz) = 353746f08e9b2ccb89bca83ca97beea7c83f52c1
 RMD160 (AChemKit-0.3.0.tar.gz) = f6700b11a09085d4504ef52c7109e9ccddb3daa9
+SHA512 (AChemKit-0.3.0.tar.gz) = b74cee031d1de19cd4b0b586302294171e5c0889884a770e251149db09880d18bfa94cafb623c30f10f90f068992f25b457bc653c22872807a91be8762fa12bf
 Size (AChemKit-0.3.0.tar.gz) = 280437 bytes

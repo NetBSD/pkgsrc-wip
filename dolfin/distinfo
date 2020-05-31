@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.9 2013/09/01 17:24:38 asau Exp $
 
 SHA1 (dolfin-1.2.0.tar.gz) = bd2be4b18dcd5ef96eb01ef6996c40e32ee03b47
 RMD160 (dolfin-1.2.0.tar.gz) = b35dcc8d4a4fac1dd3c3e719297501744c104d51
+SHA512 (dolfin-1.2.0.tar.gz) = fd383169e0202ae387a367a47bf9e7a47a6cf382cec699ad7a0f356c5f1c594cf15bedf07c98d576490036db9cfc95db933e11d2c68ec19cfc09a2773ae3c848
 Size (dolfin-1.2.0.tar.gz) = 10144756 bytes
 SHA1 (patch-dolfin_adaptivity_ErrorControl.h) = 696e7b3516b04efac311831e0a5397ef810f4f83
 SHA1 (patch-dolfin_fem_LinearVariationalProblem.h) = e6d53cd3c43d2498358680d4877fd6900d97e148

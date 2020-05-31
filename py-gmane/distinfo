@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:40:34 jihbed Exp $
 
 SHA1 (gmane-0.1.dev25.tar.gz) = 7bf09821ec37f986edcf2840544a0e51b5454ce3
 RMD160 (gmane-0.1.dev25.tar.gz) = 86e6a4c1820c4757101dc91f32a57423760e51e5
+SHA512 (gmane-0.1.dev25.tar.gz) = 10c2ecb9109eea6ecb350186c1879b9f2006ab62ec1bb5aa9f74c2e30732f9ea62a393777347a0afd56d040fbacf7870a305964d7d9f603eb6666a7c23c0e9a9
 Size (gmane-0.1.dev25.tar.gz) = 26727 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/15 20:55:41 jihbed Exp $
 
 SHA1 (jBessel-0.1.4.tar.gz) = da54d74d39d065daae9646068c9bf00e08ef2706
 RMD160 (jBessel-0.1.4.tar.gz) = f7887657e5e2efe1144dbac7719ac949b91e5766
+SHA512 (jBessel-0.1.4.tar.gz) = 3561cf88b4eb65e4b19581abb98e6cdd81449bfc09965d46efa100e671c91de86e486e42f577f2f8dba12ddaf707bbcf56b617aea16f7bd1f998dc1a7d080012
 Size (jBessel-0.1.4.tar.gz) = 2681 bytes

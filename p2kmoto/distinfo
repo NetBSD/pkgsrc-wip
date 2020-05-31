@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/01/18 07:11:22 thomasklausner Exp $
 
 SHA1 (p2kmoto-0.1-rc1.tar.gz) = f3cf3e9968b7e4c8ed96217089fe3ca490b859ce
 RMD160 (p2kmoto-0.1-rc1.tar.gz) = cb243a637a23353f596f313124f71f7eb354a3bd
+SHA512 (p2kmoto-0.1-rc1.tar.gz) = 5c35eb95d015002665307b4df62df173217c41fbd8d7f00e4b9785e8523ccf4493f1a1ed359716c39b1489e5404fa1fd46d4e8b99fb3d2e014b549cdec00bcd1
 Size (p2kmoto-0.1-rc1.tar.gz) = 281950 bytes

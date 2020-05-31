@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/22 13:26:28 jihbed Exp $
 
 SHA1 (wafo-0.1.2.zip) = fa6c648d2aff37d7d9c5df441abe00e289f8ffb9
 RMD160 (wafo-0.1.2.zip) = 624c20ffd21ebfa332167f576d7ab171168b3f72
+SHA512 (wafo-0.1.2.zip) = a14f85fcb91e682f36794d32a4082c9ae034fcc6407be45d2f327049ed8c9b29a8137bee774194f15cca706319e545b2dcbd0cdbe1f66fea93364847ac68ce62
 Size (wafo-0.1.2.zip) = 6800318 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/05 23:29:11 jihbed Exp $
 
 SHA1 (parakeet-0.23.2.tar.gz) = e0b89bbb7a23fc49c1863f5a4dd2cbe7b8a59da0
 RMD160 (parakeet-0.23.2.tar.gz) = 4be5f907a467c352cfc255bccd7e334c0ef0f1c5
+SHA512 (parakeet-0.23.2.tar.gz) = f472f2a0826bc62b773ec9dd2cdd0404cd804b62696af738e946fc10760bfabd6d82e4b217fc5d369fa456110da674cd85cea761f9509447f6f5fa33f14ba181
 Size (parakeet-0.23.2.tar.gz) = 248036 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2015/06/09 08:19:23 thomasklausner Exp $
 
 SHA1 (hgsubversion/1.8.1.tar.gz) = 9e4220ddbd77e1c95260a5ba31a4be6e4d74d44d
 RMD160 (hgsubversion/1.8.1.tar.gz) = 655049a23dfaf836b486af370350c9385d1622b9
+SHA512 (hgsubversion/1.8.1.tar.gz) = 52ebfc365a361a172b18fb852c41fa8bbe71d146c99c784e337e99cb8854d1e634a5b3d04f8ad29349f92e247248ae468e0501334d1c8d4686756ad4af2c02a6
 Size (hgsubversion/1.8.1.tar.gz) = 285463 bytes
 SHA1 (patch-hgsubversion_____init____.py) = 24883a8290fd4de61ece1230883412ba596c669f
 SHA1 (patch-hgsubversion_svncommands.py) = 9cf0f17c5b7877f81cce025424eeab2d59e77d68

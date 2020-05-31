@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:23 rillig Exp $
 
 SHA1 (gnujaxp-1.0beta1.zip) = d88006463c7feae13928399ad82bb1c47e5fb1fb
 RMD160 (gnujaxp-1.0beta1.zip) = 4ef1de6ee364a702776d0e23f133bbe9f5393fb5
+SHA512 (gnujaxp-1.0beta1.zip) = af460df379c92df7c83eaaf4cac6c62887f1871cf51957f5200a182d6a253b44bbab61aef5d461359089443a68e5f38862ed455b0f7ac17cdea4b1ece1a298a2
 Size (gnujaxp-1.0beta1.zip) = 1652312 bytes

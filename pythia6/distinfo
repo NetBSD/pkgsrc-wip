@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/04/23 22:00:55 jihbed Exp $
 
 SHA1 (pythia-6.4.25.f.gz) = 4eb645c5460b545b977b4cefd5f072d91397eb86
 RMD160 (pythia-6.4.25.f.gz) = 08eb3a642b4ecadf23dfdd4542f046fe4309e86c
+SHA512 (pythia-6.4.25.f.gz) = e4d01852d262a76c694bc8170ed34a0fbbb527ed1222a2d3f239cdbdde74827061464bfc68da360f34d29ef7a6df5c0b219bcd07209ef05f8701bbf0d5ca9a29
 Size (pythia-6.4.25.f.gz) = 601098 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2008/08/28 16:37:57 phonohawk Exp $
 
 SHA1 (mpc.el-p29.tar.gz) = 09ecc5618428acd166e9ffe39cd8df658b38b203
 RMD160 (mpc.el-p29.tar.gz) = abbcab94b1f9a167df24ba0c9793d2d2eb2c7997
+SHA512 (mpc.el-p29.tar.gz) = 83c28c0aa6862339088dd9bba03171625d463c57d7210957b26c210c539979abdc6d8f48dc78ed5ddeb40f83b18b0ed4917860bc7216ddacb8b5608689c8fb8f
 Size (mpc.el-p29.tar.gz) = 77272 bytes
 SHA1 (patch-aa) = 167d839edb7a2899c82bf233f378165e96abf664

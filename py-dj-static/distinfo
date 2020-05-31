@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/05 22:17:48 jihbed Exp $
 
 SHA1 (dj-static-0.0.5.tar.gz) = ca9329eee41fa96d25f1b2a86edc365ae1245f26
 RMD160 (dj-static-0.0.5.tar.gz) = 18fe80e42f4da7ffe31bc47ca6092fe8ddb46004
+SHA512 (dj-static-0.0.5.tar.gz) = eb56270aca768ac045141e7068644dd94edbc5cb31cc6dbae4534277c0b648070504d34a4e655866eefe1b3de2899ee2f06d134df88c23f4670b8e1ae916400f
 Size (dj-static-0.0.5.tar.gz) = 2232 bytes

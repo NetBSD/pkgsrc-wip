@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/07/11 00:59:05 jihbed Exp $
 
 SHA1 (reducer-0.1.tar.gz) = 8f698802991f1d5d1df5ec6b29b9f09495bd003a
 RMD160 (reducer-0.1.tar.gz) = 062da56a69a2fc14783327eceed0f043cf1822b5
+SHA512 (reducer-0.1.tar.gz) = ed2f540611a549c3b0bddd6a04ad0b1b15e3b410dad81478cf3ba8f8cb3a7a64e6b7aeb5fe901fc974f2ebe0a76e44e17f30d01abf8ea6f2dc49a8cc4beb29df
 Size (reducer-0.1.tar.gz) = 11657177 bytes

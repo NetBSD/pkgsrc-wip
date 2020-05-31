@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/30 13:21:27 noud4 Exp $
 
 SHA1 (pjwstk_ks_multisyn_mbrola.tar.bz2) = 829bbb310a28e585cdcb88cbcd36e0f3e7a81a67
 RMD160 (pjwstk_ks_multisyn_mbrola.tar.bz2) = 29061ab879c00c4e0689ce71607ac1292d14a7c2
+SHA512 (pjwstk_ks_multisyn_mbrola.tar.bz2) = c2186bb4fe4b064bf765f341ac6dbb70d5e2df94db1640813bf4e9dfd506975b6cd7e29152dc5495e5a30a92da873d03f95a2fd9116eaebd70343103609e0cd3
 Size (pjwstk_ks_multisyn_mbrola.tar.bz2) = 495428480 bytes

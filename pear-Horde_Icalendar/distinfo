@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/05/11 14:39:09 triaxx Exp $
 
 SHA1 (pear/Horde_Icalendar-1.1.1.tgz) = 1ce2191d8764d4fb13c5fa6ef9f25ecd601c69fc
 RMD160 (pear/Horde_Icalendar-1.1.1.tgz) = 7b2890942a52b570aab3201766e4fb4f1172dc1a
+SHA512 (pear/Horde_Icalendar-1.1.1.tgz) = 8c3601a35c5b12fe7fb4a8e8fbca31527cda8fd73a9ae75a8cc2a3e307ce8fe2ab4b771c0898b68c1dd1d9433aeac5e2e026022a99e12c5a440a96e610219498
 Size (pear/Horde_Icalendar-1.1.1.tgz) = 97744 bytes

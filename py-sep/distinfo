@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/01 20:37:33 jihbed Exp $
 
 SHA1 (sep-0.4.0.tar.gz) = 749e9c775762f8695cd2975d493b0913a46dfbef
 RMD160 (sep-0.4.0.tar.gz) = 4d86c0e396629631d5945b4f9ad80c41d4d683af
+SHA512 (sep-0.4.0.tar.gz) = 1b6e6d45cf4f972de3b61eb857913b31c96c5b0f410ddddacc4dad0ecbe70f01d13081c8a7c91bae1c1bbf405b66d2a3801d61a346d55cbcf12e6bfdff57d35d
 Size (sep-0.4.0.tar.gz) = 241468 bytes

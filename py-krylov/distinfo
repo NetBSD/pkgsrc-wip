@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/12/09 22:05:04 jihbed Exp $
 
 SHA1 (pykrylov-0.2.tar.gz) = 0b7d446865d144c580b2edbcd535524160b7dcb9
 RMD160 (pykrylov-0.2.tar.gz) = cc6a950d4b19ca2493a3a2be0eb08cb6c3e1e677
+SHA512 (pykrylov-0.2.tar.gz) = 8d0129635e65e3fa6b780029f8a9c2db78a84245756c521313870032ecb7ccbdae1879eecc6f28657ff5778a55d09e3f3a2eeff826ccdd9e654f00b1c68123ab
 Size (pykrylov-0.2.tar.gz) = 38768 bytes

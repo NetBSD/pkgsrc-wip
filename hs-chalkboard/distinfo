@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/22 13:00:23 phonohawk Exp $
 
 SHA1 (chalkboard-0.2.tar.gz) = e0d8a3e7abda04058a9ffd6d0dbf5f01a98d66d9
 RMD160 (chalkboard-0.2.tar.gz) = 03d5934baf43cb9e291c43572cd0210f269dd516
+SHA512 (chalkboard-0.2.tar.gz) = 2f21cf38024afdda9a90d87e6268892e8b619ed86017353c165813fc46908dd4723590011376600f024190c90a82cd029cadde23fd268329f499f608e2b16949
 Size (chalkboard-0.2.tar.gz) = 42715 bytes

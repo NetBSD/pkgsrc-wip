@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/04/02 22:10:45 jihbed Exp $
 
 SHA1 (Minuit2-5.28.00.tar.gz) = edb79806c99501cd2cef336608135ec5def29041
 RMD160 (Minuit2-5.28.00.tar.gz) = 9f2538b9881dbce6bc928b645702f2612b973fef
+SHA512 (Minuit2-5.28.00.tar.gz) = b543171fe1d3629e5b58af36b2d31c574fd65bcb7d231403a4270f8ea830a9fae335749a3028f003e3b1fe9635e443f5689f37859621a0d1dd1ed1c84e37ac4c
 Size (Minuit2-5.28.00.tar.gz) = 471275 bytes

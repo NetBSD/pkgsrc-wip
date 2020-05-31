@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/26 13:28:16 jihbed Exp $
 
 SHA1 (pyliblzma-0.5.3.tar.bz2) = 6240ec6f830f35f4087b8926a95c2074320b7ed5
 RMD160 (pyliblzma-0.5.3.tar.bz2) = b9062beec2bc745ea4fa64aef04f081a33b3d79c
+SHA512 (pyliblzma-0.5.3.tar.bz2) = 272983aac426e86d6d636ccba4fe78a07d7282560081df937114162bfd317bd8023814693b8d473d0f7884e38a968ebeaf8f954a5a27c1f7e5da084f3fd05c65
 Size (pyliblzma-0.5.3.tar.bz2) = 43498 bytes

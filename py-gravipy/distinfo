@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/14 22:05:45 jihbed Exp $
 
 SHA1 (GraviPy-0.1.0.tar.gz) = c6f44b84e582476550360ba4eea51ac56b8bbb01
 RMD160 (GraviPy-0.1.0.tar.gz) = 81747a4d279e9cc68a6af6a4ed6f15d1b82edb28
+SHA512 (GraviPy-0.1.0.tar.gz) = 703d20f3d6a9ad422fb416099dd12b0730f450dfc8110de3bc6e0a9b38e9a8448c530fcc85a9bae087ba3afe3bddf4f2494b32d5eeebd529261ceb28e78f8fe3
 Size (GraviPy-0.1.0.tar.gz) = 79693 bytes

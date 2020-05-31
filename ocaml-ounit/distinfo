@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/31 06:13:51 jgoamakf Exp $
 
 SHA1 (ounit-2.0.0.tar.gz) = 28e558f810611acb49eac8920fa354997d3db6f5
 RMD160 (ounit-2.0.0.tar.gz) = dcd716e242a329d8e9ad4bed578c8dd68a29feef
+SHA512 (ounit-2.0.0.tar.gz) = e12c8fb534ef88de7a83a34e5a578060a90abfce601d8532408412a56e843f69b89cfd6ce69bd7c5519e9a04e306d46339e9b8f13975727a3458afe20cd776d0
 Size (ounit-2.0.0.tar.gz) = 103504 bytes

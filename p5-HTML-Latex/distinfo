@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2006/01/17 10:20:46 rillig Exp $
 
 SHA1 (html2latex-1.1.tar.gz) = fc374d25b273ab0b326cb2535f4c8296d1034750
 RMD160 (html2latex-1.1.tar.gz) = dd7b9c348af56b2b342f30406b137cc6c7b88a63
+SHA512 (html2latex-1.1.tar.gz) = ceddb3b33359e07fdbfe0263a1ffd7dddfc95cfb256468a921513ed41777b14d4433117b9143cf23d46c867514be66235acd62065591a403c19c6f8f768be73a
 Size (html2latex-1.1.tar.gz) = 48439 bytes
 SHA1 (patch-aa) = 82c1551d1987a0173eb7cefb4b54542d5ea5eba2

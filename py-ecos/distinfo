@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/09 21:41:06 jihbed Exp $
 
 SHA1 (ecos-1.1.0.tar.gz) = c17450e6b8be124ca62aebee8a808f89d496f909
 RMD160 (ecos-1.1.0.tar.gz) = 537115c0d6255a793998ef98d7b8eac44314d30f
+SHA512 (ecos-1.1.0.tar.gz) = 33afe5ddbbc6cc3d5504e48d3c68a1cdd4168a8d45e585e378cb4da2ed48028499d3be885994a91ec5c85f835723f618e785a531b60f32e22f088109018aa3b1
 Size (ecos-1.1.0.tar.gz) = 105209 bytes

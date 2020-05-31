@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/21 21:49:37 jihbed Exp $
 
 SHA1 (ColorFull-0.90.tar.gz) = 9cecc52e47538b26be4400ce92d6950dc7013a8b
 RMD160 (ColorFull-0.90.tar.gz) = fde8e4c9bf4d2837abf2dcff52af3e1f8eadb715
+SHA512 (ColorFull-0.90.tar.gz) = fb53f6ff632aff6338e3d2f18a94b7b259a575692528db8a42e968970e5600a4c5f93790b74762e943f0a6d0b4e0f8979a7cdb619be4096b30a6dbab044e09a5
 Size (ColorFull-0.90.tar.gz) = 974340 bytes

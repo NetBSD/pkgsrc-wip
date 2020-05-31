@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
 
 SHA1 (srvx-1.1.3.tar.gz) = ee28969bf49f7fea394f467e8ab18ad91528df3f
 RMD160 (srvx-1.1.3.tar.gz) = a9eac06a67e60eba7f2ee3c735aef45f1f6e79a4
+SHA512 (srvx-1.1.3.tar.gz) = b38280474328c404b0709893f51499e504731136eb69b8d78e67917c3e7c44c86071568326c611965c2ba4b802d2ac70c733c560e912429c030e9074fefa0d36
 Size (srvx-1.1.3.tar.gz) = 485332 bytes
 SHA1 (patch-aa) = 38e678dd2c34d1ef215e45f763a09955c873385e

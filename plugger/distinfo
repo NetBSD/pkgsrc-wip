@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2005/09/28 06:41:34 rillig Exp $
 
 SHA1 (plugger-5.0.tar.gz) = 524b80d3ac7df4ffc73e66e627ca4e6818125c05
 RMD160 (plugger-5.0.tar.gz) = fdc57090ea2e68d57468054213e71b5ba9990ed5
+SHA512 (plugger-5.0.tar.gz) = 2fcb6af17adbba5f5ccae4cd346ccae95d9c2bb59066b3d94a66aaeb4d265b590226f6837d3981f530912b842839d59c918537dc0daefbcbc091532ee5bbd8d2
 Size (plugger-5.0.tar.gz) = 55005 bytes
 SHA1 (patch-aa) = fa592b3baf721ffe2c29b9b702300de0f5a579ad
 SHA1 (patch-ab) = 3e39280f7e51308846a9c637a9bc5a186ed3ea9c

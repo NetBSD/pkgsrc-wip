@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2011/07/31 09:54:09 bartoszkuzma Exp $
 
 SHA1 (wbox-5.tar.gz) = 5f20fca378c8abf53bb6a9069ecdebeb40a74147
 RMD160 (wbox-5.tar.gz) = 9cd031d65a0ca9113ab696a33ec420e8d59da984
+SHA512 (wbox-5.tar.gz) = cf652ae48a79f48d6f7530a14d7d2eddd4d3a925ef56c547312546bb41c2bbc75156783ff35fe6f079b52aa6090db3a9d6703f5e98f65117c7a161c4437f009b
 Size (wbox-5.tar.gz) = 16465 bytes

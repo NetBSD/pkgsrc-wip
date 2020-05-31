@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2011/11/09 16:38:56 noud4 Exp $
 
 SHA1 (kacst_fonts_2.01.tar.bz2) = b2f645a7a72ad7170b67c44b20828429c9277242
 RMD160 (kacst_fonts_2.01.tar.bz2) = 847aa6afe2892461eabd21fa1accd99a68ac951f
+SHA512 (kacst_fonts_2.01.tar.bz2) = 4d79ff0d95830e3b5fdb69dc95e40b9070346ce8529686af4469442fe7ec54abed5e6836f27698728f9cb12c2bf5d56797c1b9592ee548a237ada419eb8b3b59
 Size (kacst_fonts_2.01.tar.bz2) = 323467 bytes

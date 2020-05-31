@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/04/20 10:53:48 poppnk Exp $
 
 SHA1 (mac-robber-1.00.tar.gz) = 4d506e1a4f7c96ca9048432e376f8410140b9f8f
 RMD160 (mac-robber-1.00.tar.gz) = 702e33935dddc92e3f0d5c970bb05bd9d32397a1
+SHA512 (mac-robber-1.00.tar.gz) = 03a13ee5f7fde82c7d8e523467bc4b824f57cc3427c2abb9f77a023a54e225640ade844db7be99ae8a1f7e78e075e79be5ed0098a5dcb0174afb6d87b1c5cb36
 Size (mac-robber-1.00.tar.gz) = 11483 bytes

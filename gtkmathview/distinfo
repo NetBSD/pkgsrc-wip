@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2015/03/04 13:54:26 nros Exp $
 
 SHA1 (gtkmathview-0.8.0.tar.gz) = dc6db75a64b8dcde05185c3c54eec310dd7b14d6
 RMD160 (gtkmathview-0.8.0.tar.gz) = 6ed60ee9253fd0fdd9bc595a9178ede5100e1644
+SHA512 (gtkmathview-0.8.0.tar.gz) = aa7eb4aa031f9b9727be3fd8635fdac0e912585de9b91c5e71400edc5fa0b3257724244f796fea0122e32318d00701e63ee7fb12b97b7abbb7940a5439d31adb
 Size (gtkmathview-0.8.0.tar.gz) = 987328 bytes
 SHA1 (patch-config_Makefile.in) = 9dd3300ec88c1b7643d66bf74ada6c8e9243731e
 SHA1 (patch-mathmlps_main.cc) = fc0de9ae0a931ce4e23f40505e60e29f30883cb8

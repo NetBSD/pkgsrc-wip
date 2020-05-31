@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2013/11/08 23:07:20 szptvlfn Exp $
 
 SHA1 (cereal-0.4.0.1.tar.gz) = 20f07473e48cad0ee712f21957ad544f75773744
 RMD160 (cereal-0.4.0.1.tar.gz) = 0ed2df6c41d1f56dfbdeaeca80239069b580fba3
+SHA512 (cereal-0.4.0.1.tar.gz) = 9ea997af2cd84ecbd0660b5799a2d1fd4f6e5715ff5191922b69b98eee0664fbc4e5e6f2d67af808517a3f5e85931fdef093360a1d693bb81ea9cb430be6d21f
 Size (cereal-0.4.0.1.tar.gz) = 22305 bytes

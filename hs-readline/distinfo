@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/01/22 05:56:11 phonohawk Exp $
 
 SHA1 (readline-1.0.1.0.tar.gz) = ffcb2569194037c28c6288dbcec75c169c7fa89c
 RMD160 (readline-1.0.1.0.tar.gz) = 6554e24718cc1469e4c19b3e9c7244b527252a7a
+SHA512 (readline-1.0.1.0.tar.gz) = 37e710b6f8b24edec0062752b323cea7e88c6cc988b67292b86065f166ec22a3214881421065cb98d18b154919e5ab56e70783f83a8c9a58011c4501d79d02f5
 Size (readline-1.0.1.0.tar.gz) = 52394 bytes

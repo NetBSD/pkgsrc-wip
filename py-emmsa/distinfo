@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/09 21:20:04 jihbed Exp $
 
 SHA1 (EMMSA-0.0.3.tar.gz) = 4602cd4a0a4809b7469f90ef4bb60228999f13b0
 RMD160 (EMMSA-0.0.3.tar.gz) = ea7a61e8fb99291c173b9eafb2f1cfafdde5a1fd
+SHA512 (EMMSA-0.0.3.tar.gz) = b7555ffda2eb53ebd650f67f70439b0d7fbe21b5512ac4ab9129d9ce25699ef8ce5962d33d2d22cc795cdfb267cd0fd6a5775f094720090f04be9320f98f487c
 Size (EMMSA-0.0.3.tar.gz) = 76966 bytes

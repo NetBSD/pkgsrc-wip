@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/17 13:44:57 jihbed Exp $
 
 SHA1 (symeig-1.5.tar.gz) = c0d28bee551c16494bd90d0a7e2b31a17cb80b78
 RMD160 (symeig-1.5.tar.gz) = 8d723b9655573e043a703539617f387e659cd6cd
+SHA512 (symeig-1.5.tar.gz) = 6e9cfe028d3dfdd432fc8993090584f8a8d51d460a68a585a9041653c3b83933f694292c2e990f17143cfe0d1662c5cc212b8db556ec48556ba3163ef14947e3
 Size (symeig-1.5.tar.gz) = 16180 bytes

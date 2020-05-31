@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:36 rillig Exp $
 
 SHA1 (Fnorb-1.3.tar.gz) = 6c33e325386035b1ee016521c257e88042dfe0f6
 RMD160 (Fnorb-1.3.tar.gz) = cf20eb1cb4d416c5366fe32039578ac186ffcdf1
+SHA512 (Fnorb-1.3.tar.gz) = 44ff4ba39e143bca16475497376d69da2615bae85849ca5fc3a1679fcb35dbe56f2c8ecdc796808053b059aa7fd9d2df3ea43e1efa7838a7d4c63499a91d2e42
 Size (Fnorb-1.3.tar.gz) = 295703 bytes

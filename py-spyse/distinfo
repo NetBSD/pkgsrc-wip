@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/02 21:38:35 jihbed Exp $
 
 SHA1 (spyse-0.2.zip) = 19f58dc0b85a027301e811c3e68250d703c522f9
 RMD160 (spyse-0.2.zip) = 300b2175cfa23a34b0f5e7ca42900a410a3c4c4b
+SHA512 (spyse-0.2.zip) = 18d07bc2492624a7f4bb87ceadee2debcb39a79ca7f1bafc1743ed00f2aeed3b496cb4ae735e45719e7e004774237e096cd809fe9278ed7497c08d73fe2a84e0
 Size (spyse-0.2.zip) = 1037858 bytes

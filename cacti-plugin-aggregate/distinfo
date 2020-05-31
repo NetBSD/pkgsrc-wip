@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/07/23 16:37:56 ahp-nils Exp $
 
 SHA1 (aggregate-v0.75.tgz) = c2eadb5bc57350a3dc5a289d6fe7a79714349602
 RMD160 (aggregate-v0.75.tgz) = 68f9875394197471638c024b5b855e4c6f4b943b
+SHA512 (aggregate-v0.75.tgz) = a61af3774d410f94c993d51a91ff188d1ca53e96b3342de6162135cb84dcba6a0811265fab128fc9e89b8780cb08a0f40b0a7b87bd7d10efd9f95b610b842d8b
 Size (aggregate-v0.75.tgz) = 1063681 bytes

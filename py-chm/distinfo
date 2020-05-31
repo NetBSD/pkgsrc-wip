@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/23 22:19:57 jihbed Exp $
 
 SHA1 (pychm-0.8.4.tar.gz) = 73104f4a351dc1450a16f07680d772817b05442d
 RMD160 (pychm-0.8.4.tar.gz) = 0d7e5bc293b856fc0ac8f76acc7d18e63447c6f7
+SHA512 (pychm-0.8.4.tar.gz) = 0c0c107e59ea9f5fef97a0c2869349b5e90fc9eb7a37c35e8a929eaf764c7abe5a06a389340a912b9ba2f71172f3c94a78da016707bb201bbd07bdc3feddfe0d
 Size (pychm-0.8.4.tar.gz) = 28803 bytes

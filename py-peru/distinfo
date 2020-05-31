@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/20 17:54:15 jihbed Exp $
 
 SHA1 (peru-0.2.3.tar.gz) = c13f90c3a4b369baafd44aec3757467641ee9eca
 RMD160 (peru-0.2.3.tar.gz) = 6f073a4018061ddd1e69be3bacee38ec6dbd537b
+SHA512 (peru-0.2.3.tar.gz) = 3a93643883532b5e45d5eaf00d6e9b34094375893aae1dbaed0878a6fcb78d2bf9d8bd62d9af42f0524e741aa69ab3aca7e1a03ffa60cc5e7dd53dbe3c40924f
 Size (peru-0.2.3.tar.gz) = 37534 bytes

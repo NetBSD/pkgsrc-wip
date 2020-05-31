@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2013/01/10 14:26:25 othyro Exp $
 
 SHA1 (and-1.2.2.tar.gz) = 03944882043f8d33ccf0c6c5495a49135180ffbf
 RMD160 (and-1.2.2.tar.gz) = dbbfb00c4cb3af4c94b2e8d17f0762be554a3ab6
+SHA512 (and-1.2.2.tar.gz) = f9ae5a6193a0029b6d1e6ce3c160635d39b152c49ad88b7ae686f3abf8ebcb5ec994edce5915a7f0eaa0f327c3ee7c4f0be2fc7c8bb01b7f374afdd594d6b609
 Size (and-1.2.2.tar.gz) = 29989 bytes
 SHA1 (patch-aa) = 765df715bad777233c49d04a52c28bed3bc95b6e
 SHA1 (patch-and-OpenBSD.c) = 33fe6d2e95f29a075e57b4ae5ec24aeec6397ca9

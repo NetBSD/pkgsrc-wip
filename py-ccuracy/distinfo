@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/22 23:37:52 jihbed Exp $
 
 SHA1 (Pyccuracy-1.2.23.tar.gz) = 0bf8345b377663b5d43808458d1d756ef576d3ec
 RMD160 (Pyccuracy-1.2.23.tar.gz) = daf7bdd7af94326c7ced6a31abafc5f07b6d3262
+SHA512 (Pyccuracy-1.2.23.tar.gz) = 535937edd99d961854c4c8eb60849c1d4f86cb31152a0189f1a3e01ef7f296933a0e0c942b8bfda65256279ddddfd165119ac0387e5db65d9d7be77e30de6fec
 Size (Pyccuracy-1.2.23.tar.gz) = 53693 bytes

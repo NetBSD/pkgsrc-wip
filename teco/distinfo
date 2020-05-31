@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2007/12/06 17:41:49 asau Exp $
 
 SHA1 (tecoclinux0398.tar.gz) = 84dc0668205cecaef440f40e2ee6868872f8fe6e
 RMD160 (tecoclinux0398.tar.gz) = 70b77e40b65c0a013a2b04a53dc87952beb88ce4
+SHA512 (tecoclinux0398.tar.gz) = 88451d1d681df74908ae9fcd49c1ce9418fd10e25349c6cc3a6f94f54f88f904dd8d0c9eef4927fc89fd394191020dcd9acd125e61154f58d634c850b807d419
 Size (tecoclinux0398.tar.gz) = 374792 bytes
 SHA1 (patch-aa) = 0f175c0657b0c77b8793c124c061a6e03dd14b48
 SHA1 (patch-ab) = f4ced7378ff36aac0b558cf44037d99bfd8cd3f0

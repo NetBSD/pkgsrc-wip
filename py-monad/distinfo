@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/28 18:48:28 jihbed Exp $
 
 SHA1 (PyMonad-1.3.tar.gz) = 3509bb10b7711783f0d1fabcfd09c97b88859d60
 RMD160 (PyMonad-1.3.tar.gz) = e3347362943b470f372ef89387a44d26e3555cc3
+SHA512 (PyMonad-1.3.tar.gz) = 488940db11784c9f0c29d2c515f316c20dbdf5c37565fd62185cd9eeed5270dc29f3600ce920e72aa13fc4520d24f928f93898185e6266eec84ad146845455b5
 Size (PyMonad-1.3.tar.gz) = 25315 bytes

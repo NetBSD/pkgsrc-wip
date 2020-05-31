@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/08/31 18:12:52 jihbed Exp $
 
 SHA1 (qit-0.9.12.tar.gz) = 5286dfbb76b1cb8f53f5c61f87701cf3fada05c9
 RMD160 (qit-0.9.12.tar.gz) = 1f1d32a6ecde9ae5d9bd70668f157773e1d8918e
+SHA512 (qit-0.9.12.tar.gz) = 7971eec6fff42bacd4f9bb917bd13cc783c21d91bc6e0d4d411a657fe637070e72b89ea7ee31e0857dd5b3a14fe94bab64d0b3921797d7351e43d1e1b3c6a20f
 Size (qit-0.9.12.tar.gz) = 72134 bytes

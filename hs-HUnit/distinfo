@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.7 2013/09/30 22:57:11 phonohawk Exp $
 
 SHA1 (HUnit-1.2.5.2.tar.gz) = a9f40187acdff6416fb7a219e32c26a6361a7236
 RMD160 (HUnit-1.2.5.2.tar.gz) = f6ac9ac12c152609174ea80a3a0c694210c81594
+SHA512 (HUnit-1.2.5.2.tar.gz) = ee16c33faacc1c26e242095823ae8df47889946a6a161affab3789d7f40b423d2f002526f6cad018084dc7b151a911cf28b37b2aeef91d186bb765e940534fc4
 Size (HUnit-1.2.5.2.tar.gz) = 24889 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/11 13:14:49 jihbed Exp $
 
 SHA1 (deskscribe-0.4.2.tar.bz2) = 9e5f274845adc94ed4e67cf72769a171ef0e0ada
 RMD160 (deskscribe-0.4.2.tar.bz2) = 43919a27fe98657665dafdea9f06fa690f56014f
+SHA512 (deskscribe-0.4.2.tar.bz2) = 870756f70b3595c9ef53b7578c68eb2302c4eeeb969fa9b72e497e2fc9d3a4365a8dd16e89add464899b1b9e3158b5cc62ab896273b37296e645905344df110a
 Size (deskscribe-0.4.2.tar.bz2) = 156606 bytes

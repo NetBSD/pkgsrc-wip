@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/08/13 15:57:24 poppnk Exp $
 
 SHA1 (gnormalize-0.35.tar.gz) = c8594e9734ecf2a9afe1cb7e5f156564874ec41a
 RMD160 (gnormalize-0.35.tar.gz) = 875938ff585757449170206e203e7092c1360c8e
+SHA512 (gnormalize-0.35.tar.gz) = 703c0965d9b2e5114400daa2ff883bc721ff2e43271452e77daf94cb9df73da36533f86b1e89214f45f4a497912838c9d21749cd9e1cc800042373b3de769c67
 Size (gnormalize-0.35.tar.gz) = 430537 bytes

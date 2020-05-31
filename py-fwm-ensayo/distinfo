@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/15 09:52:24 jihbed Exp $
 
 SHA1 (fwm_ensayo-0.1.1.tar.gz) = 610c279c96b2e38cc714cafcab23cde374f19fe4
 RMD160 (fwm_ensayo-0.1.1.tar.gz) = 4ba16ef2eee94c2f6b3dae4d9e926d9573c645a8
+SHA512 (fwm_ensayo-0.1.1.tar.gz) = f8838f2a5d4f2574844dfd9a41f3424edce2a73d34ec5a776c34874999d185c54de4c633158cf43072566337dd443978d9fe8a8e54fa51bf8f5ad4c69ae476d6
 Size (fwm_ensayo-0.1.1.tar.gz) = 52085 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2011/01/17 09:26:28 emil_s Exp $
 
 SHA1 (libharu-2.2.1.tar.gz) = b75ec6052b8d72aa7f23d67adcdf9df4847b64ca
 RMD160 (libharu-2.2.1.tar.gz) = d18f1998df1ccc9bd5d399b01816b44e8cf2eefd
+SHA512 (libharu-2.2.1.tar.gz) = fbe234e1f9e64ea0d532cd5900d7dab39d91ff266b7cdd7eb3a60bcfb32f73a78f7f3582ff18a97640f3e766f0bd35d854abde75f72458fab687754230b1d51c
 Size (libharu-2.2.1.tar.gz) = 967530 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2010/10/28 20:29:25 mjoellnir Exp $
 
 SHA1 (libpar2-0.2.tar.gz) = 4b3da928ea6097a8299aadafa703fc6d59bdfb4b
 RMD160 (libpar2-0.2.tar.gz) = 7b93bc3e2a8b10f095761c26fd008322befde7a2
+SHA512 (libpar2-0.2.tar.gz) = 312814dcce7f1cb50343c2d51683a6a57b0fff2ac191c7673c707b1ccf03225ebe51ea10315160bd83aeadffef28329b7221adf11423169cc3fcf45a12a4e877
 Size (libpar2-0.2.tar.gz) = 401700 bytes

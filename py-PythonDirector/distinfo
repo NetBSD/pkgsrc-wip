@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2009/03/25 14:16:44 jihbed Exp $
 
 SHA1 (pydirector-1.0.0.tar.gz) = 33754afbec436135800d2be52577b02db755ef5c
 RMD160 (pydirector-1.0.0.tar.gz) = 1ec09e5b4f623bf7b52b75df6388e6d873d41ddf
+SHA512 (pydirector-1.0.0.tar.gz) = 09537f9fbdcbcebd48df9f75058b5d8ba8acb9d3ec0a533e7ff2e3fbde9799645f71a2464d3927b4ff41d91e7c07348a6aa48eaacba1877141754111b3a17cc1
 Size (pydirector-1.0.0.tar.gz) = 32569 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/07 16:49:14 jihbed Exp $
 
 SHA1 (pyplete-0.0.5.tar.gz) = 0d37018225811ddf96e66467a2fff1dca7a28191
 RMD160 (pyplete-0.0.5.tar.gz) = 14fb1353a0ba7ba8c09b1c8e05046eb49405fe3c
+SHA512 (pyplete-0.0.5.tar.gz) = e7fa3bb53f33974033ace7e501578060f31eb079def1763bdd6ea5100ee7c0c239f802bb0c48c39e75573767cdc559d4debed8325f31e1c2899671d12aa6b2b9
 Size (pyplete-0.0.5.tar.gz) = 9562 bytes

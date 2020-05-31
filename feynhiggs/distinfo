@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/04/02 22:32:34 jihbed Exp $
 
 SHA1 (FeynHiggs-2.7.3.tar.gz) = b6f1644fabf194c3527b57e52d30f72c24037a90
 RMD160 (FeynHiggs-2.7.3.tar.gz) = c8ce95c83bb2cc02c255a3c3b458482b9b0f8f42
+SHA512 (FeynHiggs-2.7.3.tar.gz) = cb67c236e30513bb34e825e404f9d295544881efe3bdfb7ee09c96499f4ae90e754ad23e8d71f3037dc26b86a48b381164c9dc7aba43b523cf4cb592aa54a6d5
 Size (FeynHiggs-2.7.3.tar.gz) = 1559844 bytes
 SHA1 (patch-aa) = 96f11841484a5f152e524cbeb8a07e4bc0a25a5e

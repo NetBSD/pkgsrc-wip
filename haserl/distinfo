@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/01/04 20:46:32 xmor61 Exp $
 
 SHA1 (haserl-0.8.0.tar.gz) = ed310b91fd8d3abf322d248cc6c945cd627074c6
 RMD160 (haserl-0.8.0.tar.gz) = 51a97b4c2e41bb6cbc6c0b1c20b6ba3978ce674a
+SHA512 (haserl-0.8.0.tar.gz) = 87b9938288a896e28457b14e096e53a8f2d58bb3825c67345d631768598af260fcf474f3b0d7012d47c539b42c065390002ce4ca85b45ba2ac16f6c2f4afd029
 Size (haserl-0.8.0.tar.gz) = 116700 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/29 23:50:35 pettai Exp $
 
 SHA1 (oww-0.82.2.tar.gz) = e013f45ca55f06f08227aa02be830398d23c0856
 RMD160 (oww-0.82.2.tar.gz) = 8ecf3fa640541ba533f849dda70e3f65a95d8cdd
+SHA512 (oww-0.82.2.tar.gz) = ec8e8ae6edbe48ebf401fc0eafa3e232a7f7d231c40117376f7f3e3ff010db4e8bd9a4739f9c64d75b626d7501dbdd0513efaa73f9a0aaec9ef39559414b9fca
 Size (oww-0.82.2.tar.gz) = 899068 bytes

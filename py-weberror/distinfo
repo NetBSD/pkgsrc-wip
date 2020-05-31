@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:21:25 jihbed Exp $
 
 SHA1 (WebError-0.10.2.tar.gz) = 64dd76676eb6371f22544eb4b3d21c7690ff75f7
 RMD160 (WebError-0.10.2.tar.gz) = 9ecb657c8dfa4a6cd915cc4a97abd0c6a0009c08
+SHA512 (WebError-0.10.2.tar.gz) = 423e59ffe4d274d3675b1ec8a50842d3d49b536723a131b94cf46649abf0f1c8a404b93e54ea02dc7592b683abd4c8a297c0dc1888a923d00bf818c8e817e71b
 Size (WebError-0.10.2.tar.gz) = 81038 bytes

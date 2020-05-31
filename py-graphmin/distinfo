@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/06/13 20:27:03 jihbed Exp $
 
 SHA1 (graphmin-0.1.8.tar.gz) = 4e134cd2f6585228ded652b0fb9b569276974bc0
 RMD160 (graphmin-0.1.8.tar.gz) = a8ee16bac5614e94af7c86a1cb9c0f714db6c023
+SHA512 (graphmin-0.1.8.tar.gz) = ab82df25c9da71f31c4e29d08c0bb843d99af39d133e29f8db098a6dcd93a764c409660f134911242bf03d7549d11a44d1641c62d7204afbc91dbd785f59fbcb
 Size (graphmin-0.1.8.tar.gz) = 3651 bytes

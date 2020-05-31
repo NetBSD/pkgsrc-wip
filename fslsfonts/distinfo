@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2014/12/31 14:14:16 thomasklausner Exp $
 
 SHA1 (fslsfonts-1.0.5.tar.bz2) = 0a0d37c65a8cdd3aff22d633b5ed164e864929d4
 RMD160 (fslsfonts-1.0.5.tar.bz2) = 13f7f4e02af98ba416c042b059a0f21d0fc0c924
+SHA512 (fslsfonts-1.0.5.tar.bz2) = 3a30598ace981c7396bfe44f0d8f76d40fca3f77158dceb3914a524594a12187dcad0b0f225fa81f251f0b7896bf046cec4ba610b4676da9be311eec5d8c6cc2
 Size (fslsfonts-1.0.5.tar.bz2) = 125650 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/07/11 10:44:14 bartoszkuzma Exp $
 
 SHA1 (vdesk-1.2.tar.gz) = ca9df56eb7fba6aca4a8f3bea136f7fda3cd305c
 RMD160 (vdesk-1.2.tar.gz) = 77a26122b3c99f2c31fc43fee25d16d4cd565b0a
+SHA512 (vdesk-1.2.tar.gz) = 0812c363bf51e4b602f3789f73588a8f6bedc6a8803030a71e7b4cd29945b73e9ce31f917845f448a6b318cf2e51b76f954271b28c3ecf239b86333b5f74aea4
 Size (vdesk-1.2.tar.gz) = 64595 bytes

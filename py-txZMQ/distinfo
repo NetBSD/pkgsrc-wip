@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/02/20 10:38:34 jihbed Exp $
 
 SHA1 (txZMQ-0.7.3.tar.gz) = 97134d0900fc680ac4accf4b0a738fc4c5a4c8e7
 RMD160 (txZMQ-0.7.3.tar.gz) = 63094968eb842b0a059100745693338db987158e
+SHA512 (txZMQ-0.7.3.tar.gz) = f86304b3f9af4f5448e6afc2b10b109909ca88ff56a31daed89c98ad7934c9c1db5e3e84bb0f3118f884c3e37098e58027b1d90fb18d720a6b144a7b348ed0b5
 Size (txZMQ-0.7.3.tar.gz) = 18663 bytes
 SHA1 (patch-README.rst) = 8cb3afeee67edf352ec86511405815823ad5dafd

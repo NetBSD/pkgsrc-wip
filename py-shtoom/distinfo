@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2012/06/17 12:56:23 spzeidler Exp $
 
 SHA1 (shtoom-0.2.tar.gz) = 2a8bae8b3e3bbbff6240c83884fdd7fd016f09cb
 RMD160 (shtoom-0.2.tar.gz) = 85e23ac6846879c96b0dad00bafc9a4fee36b886
+SHA512 (shtoom-0.2.tar.gz) = 8c11d46c269a22569729094a99c182ea92afbb9407481b46a262450d17a791b89f65ff855095565e668ea13382a94efdd3154ee579134df09cd61eda57900ecb
 Size (shtoom-0.2.tar.gz) = 73953 bytes
 SHA1 (patch-shtoom_Options.py) = 409b4d4990de5ea3f684acbf220762b11efc91a7
 SHA1 (patch-shtoom_app_interfaces.py) = fda8ac4a6120033903adf9718ead175d126908de

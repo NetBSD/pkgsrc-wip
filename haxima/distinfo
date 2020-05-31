@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/19 19:53:42 yhardy Exp $
 
 SHA1 (nazghul-0.7.0.tar.gz) = 1d67c3fb3b03b3f8b5170305f3d97428932e6c4f
 RMD160 (nazghul-0.7.0.tar.gz) = 406f1e98c4de628603de7e39288129e1c126db3e
+SHA512 (nazghul-0.7.0.tar.gz) = ffad66d7e62c38a02a6432e8e228f35fd05cd50605d696044c4104c983ca0b0209916f18df40873884592cc87f4597d008e8bf2977c3031038ddb67681c5cd2b
 Size (nazghul-0.7.0.tar.gz) = 7819035 bytes

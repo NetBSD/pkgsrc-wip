@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/02/13 11:16:08 athaba Exp $
 
 SHA1 (Metadata-0.24.tar.gz) = 0ffe34723430f0396a49fd9ec82979f2eb2e5f7b
 RMD160 (Metadata-0.24.tar.gz) = 4bdaa0bba3c6a6e6e97c1a3ce6edfa6cb4184e9b
+SHA512 (Metadata-0.24.tar.gz) = b7d3d9c569dd3733facbc361364bcb2329434a206b73a93bfb80e2e5eea9b93197a986cb68d40f10c57b727978aeaeaff73403cef7b2e4d7a32762655435c709
 Size (Metadata-0.24.tar.gz) = 18089 bytes

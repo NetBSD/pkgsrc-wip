@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/13 12:44:50 jihbed Exp $
 
 SHA1 (papy-1.0b1.tar.gz) = 31ec968a84e8b636b149770087823cd79455a5dd
 RMD160 (papy-1.0b1.tar.gz) = b845d72781f9e732a05f53a25198f0877b2080ba
+SHA512 (papy-1.0b1.tar.gz) = c88253d116fcaf4f7a14bee98749d81d83375b7c70ff5e3584c20ca61d2116bf00539271949fe3a20f036caff430cea6fa9b6d869d63e1b22212ed6e2066cd68
 Size (papy-1.0b1.tar.gz) = 1818982 bytes

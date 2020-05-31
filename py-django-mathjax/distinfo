@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/06 23:06:21 jihbed Exp $
 
 SHA1 (django-mathjax-0.0.5.tar.gz) = 3c231b5e807cf34c64d671822145b4ae6bde150a
 RMD160 (django-mathjax-0.0.5.tar.gz) = 0aaed22d4bd820a198a0e2943eadcc497a3a6ebd
+SHA512 (django-mathjax-0.0.5.tar.gz) = 15cdf7efe57142345f8c5d386d4c26c8170a6d24f20014d8cc5948a4834b8bbaf0a57858fd4165b085bd117936d1111f2778e02b88b3b411e3d73a760059d522
 Size (django-mathjax-0.0.5.tar.gz) = 2367 bytes

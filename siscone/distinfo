@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/03 18:56:37 jihbed Exp $
 
 SHA1 (siscone-2.0.6.tar.gz) = 5f555c91791fd4596631b1e41b7a53c241a5f7e5
 RMD160 (siscone-2.0.6.tar.gz) = 63db60ff76ec731547db42506c2418966bea0e21
+SHA512 (siscone-2.0.6.tar.gz) = 3a1bbd50db8800a2ce00eac4f4cd498d7e6674ba739ed8157f6e0c0e32fd7724d19d227b5a023fa945a5b4be5c415c5c77c2e2a60e80ec4029c016e3fd95983d
 Size (siscone-2.0.6.tar.gz) = 473370 bytes

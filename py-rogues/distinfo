@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/08 16:11:10 jihbed Exp $
 
 SHA1 (rogues-0.3.0.tar.gz) = 0322525f4eb2b2be17cdee6df66987e6ec874837
 RMD160 (rogues-0.3.0.tar.gz) = 41b52b3aa685a15294566e4d48d031a0fc50b4f5
+SHA512 (rogues-0.3.0.tar.gz) = 602b018219b7f537243e25f299442ba0f10b952cf1a0f6284195732a5df40603147195510586343523ef8677bacc61a394f4c96ed5259eae8974ef03f934d17f
 Size (rogues-0.3.0.tar.gz) = 58854 bytes

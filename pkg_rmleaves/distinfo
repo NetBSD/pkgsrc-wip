@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/12/10 16:57:42 ghen Exp $
 
 SHA1 (pkg_rmleaves-20050922.tar.gz) = a8ace90acd990611c463869312b94dfc94634c72
 RMD160 (pkg_rmleaves-20050922.tar.gz) = 03ae5c2309849bb11ed20c1d87f24c5b57373d51
+SHA512 (pkg_rmleaves-20050922.tar.gz) = 842bd10622ac25aa71d5939ca84acb0dcc0cdab83021789273d6a9c6b26c3b749437c351edb6b55956d83281cf9425f18ba220cee793c5b6e4f5d0aa487ccda2
 Size (pkg_rmleaves-20050922.tar.gz) = 2571 bytes
 SHA1 (patch-aa) = af46a9e2d4043cb5d3f0e8ebf8e6f0166aac29f1
 SHA1 (patch-ab) = 6d34c1df1decd9979b15e15bbde2b6490fd9c370

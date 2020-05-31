@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/11/14 08:33:26 phonohawk Exp $
 
 SHA1 (collections-base-instances-1.0.0.0.tar.gz) = ac276f1d4f9da0c96c3ee5fe4ae27ed6f5be4f9e
 RMD160 (collections-base-instances-1.0.0.0.tar.gz) = 14f2536dead9bdedc191822af6b4bc1aa76c21c6
+SHA512 (collections-base-instances-1.0.0.0.tar.gz) = 9fa86d3a358054324b6c485fc547fc0f9a1c5c621e581a9a1a6c724dfe04de0f0ec1bd55e60acbf1fcc5db968f362b6e645350c742ee5322b357cc15f9b71e15
 Size (collections-base-instances-1.0.0.0.tar.gz) = 5889 bytes

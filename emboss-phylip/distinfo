@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2006/08/26 15:41:20 kristerw Exp $
 
 SHA1 (emboss/phylip-3.57c-20041107/PHYLIP-3.57c.tar.gz) = f6d469d4e1931bd8c864168815ddfaf2612d4667
 RMD160 (emboss/phylip-3.57c-20041107/PHYLIP-3.57c.tar.gz) = 5ea09fd74cc384808d73c9ed6169a53ac0d25dbf
+SHA512 (emboss/phylip-3.57c-20041107/PHYLIP-3.57c.tar.gz) = 4925c8dba3d5ff900a30051888fab0f254b02c9e96faf2c598103d424fd9ce2c86aeb72ec116996720b4fb63c25303003fff25d93447be29368eb1a44067f326
 Size (emboss/phylip-3.57c-20041107/PHYLIP-3.57c.tar.gz) = 856814 bytes
 SHA1 (patch-aa) = 2bdc12ddba3e42d3de93d4ae3647a0334f4d5431
 SHA1 (patch-ab) = b221e8a888a81c85899b8d207cc3be07b7370617

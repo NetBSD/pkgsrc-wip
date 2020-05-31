@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/09 19:58:45 ryo-on Exp $
 
 SHA1 (wqy-microhei-0.2.0-beta.tar.gz) = 28023041b22b6368bcfae076de68109b81e77976
 RMD160 (wqy-microhei-0.2.0-beta.tar.gz) = 7aa6e837ccc11b9d140b8db8876b2af6e953e788
+SHA512 (wqy-microhei-0.2.0-beta.tar.gz) = c1e09c83f6427f637b3c93c7f89e427bde7fb22cedcfbb806fb036f13a553551f28d985516c7ab4c2602b4159502de36b52e6cc9b41c9b6d6e36778a6de74037
 Size (wqy-microhei-0.2.0-beta.tar.gz) = 2418536 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2014/05/12 21:59:10 jihbed Exp $
 
 SHA1 (lsqfit-4.8.tar.gz) = 104e14d8f2ea506ff5c1327d1709f1d6aae3a3e4
 RMD160 (lsqfit-4.8.tar.gz) = 9b6d5632c9d0eca045f5b144feee0d09b95567c2
+SHA512 (lsqfit-4.8.tar.gz) = 64f511ff93fcd416d3ea5c41310a5b693d9e47956899828950e82fa4c685eb66230d769d43419cf22f9cc2b0be6dd6261b174fbd06240ddbbb1b7ba761e4a95d
 Size (lsqfit-4.8.tar.gz) = 1373244 bytes

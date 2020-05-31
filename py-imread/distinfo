@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/18 21:06:49 jihbed Exp $
 
 SHA1 (imread-0.3.2.tar.gz) = 5a0284c4f750f6f12ab844bce09fd654ae74c946
 RMD160 (imread-0.3.2.tar.gz) = de0efbaa84eac25cd60658fcc0786741056c461e
+SHA512 (imread-0.3.2.tar.gz) = b1d2ec0bd1291ea5bb0592faef3b9b7206249f0749ebf59293141bf84b12f357b7cb5fe5cea972b822a0a46a0e424e901f3e088c8dc993f7da5e486d9785e4d8
 Size (imread-0.3.2.tar.gz) = 91397 bytes

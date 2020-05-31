@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
 
 SHA1 (mtd-utils-1.0.0.tar.gz) = 5ae8b095eb452db4319af2db863b36d1c5d3d62f
 RMD160 (mtd-utils-1.0.0.tar.gz) = 4bb59c57a46dc9179dc37f618ac98ad972834bab
+SHA512 (mtd-utils-1.0.0.tar.gz) = 00bd20dd208b01be33a9c651e1d28a9f5e1a6b1e36d05f323963c3d5ae71d63e01a922fd93c0f28ab1cd0c9b4542916a9e3fe073ee2fc17bedf61fa546186fc6
 Size (mtd-utils-1.0.0.tar.gz) = 280041 bytes
 SHA1 (patch-aa) = 81e80a8566f61ae63e992a954214c9ba82ad84b4
 SHA1 (patch-ab) = 417a8636063b8197d6953b6e38f5023765f6df17

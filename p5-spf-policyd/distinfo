@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/08/13 20:02:17 shindenmorr Exp $
 
 SHA1 (postfix-policyd-spf-perl-2.010.tar.gz) = 168ed64b0db379ce9fd4d068e99ec880600af7ba
 RMD160 (postfix-policyd-spf-perl-2.010.tar.gz) = 3df52b9d42ad8c50f8ba592ca8ca7679fc9c2e21
+SHA512 (postfix-policyd-spf-perl-2.010.tar.gz) = 5a2031cbb16d9aa8f143de523aa3e72380f213815517d998a654c00c90de3f264256edaec78a045e146aa22b53547332c67c2e6ef03db85812166cd24dbe9c4a
 Size (postfix-policyd-spf-perl-2.010.tar.gz) = 13981 bytes

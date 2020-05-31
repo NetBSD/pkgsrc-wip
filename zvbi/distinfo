@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/07/24 23:43:17 thomasklausner Exp $
 
 SHA1 (zvbi-0.2.16.tar.bz2) = c0173ce6417ff6552076ffb38d8dfa9df1a10057
 RMD160 (zvbi-0.2.16.tar.bz2) = 7974527e6cfc67eeaed066e2f99c9d5fb474d3f0
+SHA512 (zvbi-0.2.16.tar.bz2) = b4b694b467c42dab8535e6dde4ce6832bfa09128b7274c954643204b3712cdaab98050e08d4ae6d274eeda8ef595ff6ae404c519f17610f5559b96d97d7ff999
 Size (zvbi-0.2.16.tar.bz2) = 699343 bytes

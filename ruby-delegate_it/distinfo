@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/08/26 15:30:34 yhardy Exp $
 
 SHA1 (delegate_it/v1.1.1.tar.gz) = f2488400ccb89d2ba84c2ee8c68bd92c5a5f361d
 RMD160 (delegate_it/v1.1.1.tar.gz) = 334ec180c493222b2e4f1cc5e645974cb1a0e956
+SHA512 (delegate_it/v1.1.1.tar.gz) = 2fee0f0dad4b8f5c87ef9432ef9bb50e939e3e25a9b9ae3fd8f03ad6b28e47efd0eb6cb7ee3a77a64c04fae8c25669df48fad84ff8a7837f878605ea6a253fa5
 Size (delegate_it/v1.1.1.tar.gz) = 3312 bytes
 SHA1 (patch-delegate_it.gemspec) = 5a458a2feff29384959080519d3d87636828e9c1

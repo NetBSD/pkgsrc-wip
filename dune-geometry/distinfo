@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/15 23:59:12 jihbed Exp $
 
 SHA1 (dune-geometry-2.2.0.tar.gz) = fb716cc35602eca9091d418f971c6cbecb6bd244
 RMD160 (dune-geometry-2.2.0.tar.gz) = 42f38fd52c0e056e87413a156a73097028cec8c9
+SHA512 (dune-geometry-2.2.0.tar.gz) = ee334981a75529176fbbf891194b63965d3bbca31248713220b80f3c2c85a454b59057face5dac6fe7f2e23375f67325d65090c1d7e5910a723256c4ef9d5b8a
 Size (dune-geometry-2.2.0.tar.gz) = 3375973 bytes

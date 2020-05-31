@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/30 13:19:37 noud4 Exp $
 
 SHA1 (festvox_nitech_us_jmk_arctic_hts-2.0.1.tar.bz2) = 7fe0b0997f063d37f1c48779f2e50148a5983683
 RMD160 (festvox_nitech_us_jmk_arctic_hts-2.0.1.tar.bz2) = ef1450b2399aa8c9e4ce45203b96c03eb43115ee
+SHA512 (festvox_nitech_us_jmk_arctic_hts-2.0.1.tar.bz2) = df2c61f7c2033b07cd8d55d2a6ac4234597c86d48dd1440108e69487f4c9f1bc8f899855066169dd346d53a9d9935e1dc71ba0fff241caf40493c3b26ba1fd66
 Size (festvox_nitech_us_jmk_arctic_hts-2.0.1.tar.bz2) = 1476383 bytes

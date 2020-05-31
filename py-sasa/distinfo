@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/01 18:20:58 jihbed Exp $
 
 SHA1 (sasa-0.1.3.tar.gz) = 9cff2b13390da6d0a67a68ba465db632e4248658
 RMD160 (sasa-0.1.3.tar.gz) = 3bc1a8fdf075608792dc379475cef5bb2b2d7b48
+SHA512 (sasa-0.1.3.tar.gz) = 35612f92cd6891c93c3caccc96d7034a2e14174f15cd117986026d5d5191e840a547386fe5fc6648dc64c188d25d0987bb43b03f1380777e7fd1066b8f80bffa
 Size (sasa-0.1.3.tar.gz) = 2857109 bytes

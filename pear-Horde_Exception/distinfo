@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/05/11 08:43:46 triaxx Exp $
 
 SHA1 (pear/Horde_Exception-1.0.9.tgz) = 509ad0cf04420cb4e2ad112daec80d628994aa46
 RMD160 (pear/Horde_Exception-1.0.9.tgz) = f936f2fbb41230bfe9737851e101f1cf780cd083
+SHA512 (pear/Horde_Exception-1.0.9.tgz) = 817fe2fb4fc4b836a269b32116b702200404dda08836000019e30699b93c407163dbe352bb89fbfbf96ceb7f419fbd52b4537338734ea9d234c5dc85dd6be7a8
 Size (pear/Horde_Exception-1.0.9.tgz) = 23680 bytes

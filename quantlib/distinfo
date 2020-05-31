@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/02/28 18:57:25 slitvinov Exp $
 
 SHA1 (QuantLib-1.1.tar.gz) = 901934af7084cca95c16849b3bdf74d371ac175b
 RMD160 (QuantLib-1.1.tar.gz) = f7a8f2497e89043da280620ed5c96032d40dc838
+SHA512 (QuantLib-1.1.tar.gz) = 7dca0d0a40dce4cd02cccea27a1be305afc85e87edf62af84beef0e888d2f932ce8aaf7d4764763f30e4bfe24470164e22e989f046fcf4da259166088504110f
 Size (QuantLib-1.1.tar.gz) = 3899589 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
 
 SHA1 (MasonX-Apache2Handler-0.05.tar.gz) = 4e6e9872921af62db078906a94f4f1a75fafb825
 RMD160 (MasonX-Apache2Handler-0.05.tar.gz) = 2b07aabebb72615cce0a13d2f8de379dbd520281
+SHA512 (MasonX-Apache2Handler-0.05.tar.gz) = 82d6912b87ef1bc709e2d029017649e95dd26133e7bd6704728fcbfa7d83bf8b0bbba23a4a6f07fd836c9068ace0fe1354b50a01d6e7511d323ac90e99b32d02
 Size (MasonX-Apache2Handler-0.05.tar.gz) = 74113 bytes
 SHA1 (patch-aa) = 589d4fc96413430022c04a008a789a215e56cad8

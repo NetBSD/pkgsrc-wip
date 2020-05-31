@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2006/03/06 20:28:03 danieleggert Exp $
 
 SHA1 (mod_zeroconf-0.3.tar.gz) = 53a0ae8b13a54d745acceef4f4334649c0d92cde
 RMD160 (mod_zeroconf-0.3.tar.gz) = 6c99637d3d733388420ef2ef93609a796cf805ee
+SHA512 (mod_zeroconf-0.3.tar.gz) = 026dea7ba459fc3ffa9940a58d34b6e8e8d50e47ebebde73bc19ecbbb4d87647da22f15b50ebd9b9eae6d5454e39339dd7497b9fd115253e1bfc2a212ad0a5ca
 Size (mod_zeroconf-0.3.tar.gz) = 24686 bytes
 SHA1 (patch-aa) = 9130ab2d71bd4f0422ab45749d6aaf057e662ace

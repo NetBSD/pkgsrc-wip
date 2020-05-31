@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/17 16:32:20 jihbed Exp $
 
 SHA1 (lifelines-0.2.2.2.tar.gz) = ac2106cf58607ddaa15f72ad3ec3b8e29ac6dd65
 RMD160 (lifelines-0.2.2.2.tar.gz) = 08204f7300db9df388eb38a6c82f9d594711ae69
+SHA512 (lifelines-0.2.2.2.tar.gz) = aeda81cdf81ff674e37e43c6072f9dcbff0c09475e1d5e1d569e7786b0403901ff4db50c473faca2c98fc0d65166c4143fe03fdeeb30669394937e765fc076f4
 Size (lifelines-0.2.2.2.tar.gz) = 1301494 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/11/14 08:12:09 phonohawk Exp $
 
 SHA1 (collections-api-1.0.0.0.tar.gz) = 627ef87200f05bf249f6c553ef0312d4915edeb5
 RMD160 (collections-api-1.0.0.0.tar.gz) = 45a369ee4a47344758fe7922fa2e14d6f460f146
+SHA512 (collections-api-1.0.0.0.tar.gz) = 29e653ae1ae1256faa94b20953584bb8fc67d89a1c797773ba4db5fb8eafec5968ac76ca78f2a995140f50dbe31d4898d391c445af4889ced3d05c768cbf29e4
 Size (collections-api-1.0.0.0.tar.gz) = 16197 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2008/07/10 20:23:06 bsadewitz Exp $
 
 SHA1 (marsyas-0.2.16.tar.gz) = c96b4e9184300a4d0222fc72792ff08eac199396
 RMD160 (marsyas-0.2.16.tar.gz) = bf5fb4f94afe20094969f2874363af1ed1edf579
+SHA512 (marsyas-0.2.16.tar.gz) = eb7111d659206aefe0b35b7b9316649eda6887cc416067850ee46d194c9a5ef38bf50b65033b0363aff6c78b79349705695c212ddefd02f54c714e089c1fb740
 Size (marsyas-0.2.16.tar.gz) = 48829911 bytes
 SHA1 (patch-aa) = 516ecd5bc0f1684bc31868bad075349dc4ecb2c4
 SHA1 (patch-ab) = cce518d18d5560bc34111fdcfb1b40c007d0ea26

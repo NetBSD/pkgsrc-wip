@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2006/05/28 17:28:23 gizm00 Exp $
 
 SHA1 (Spread-3.17.3-1.07.tar.gz) = d5c0fd74a14a37db256a333f16b3feb2c649ed0d
 RMD160 (Spread-3.17.3-1.07.tar.gz) = 353db82bc3c6f604f5926aa6c85882d155f12933
+SHA512 (Spread-3.17.3-1.07.tar.gz) = 0dbc04307898125ba19e4e771e2404e564631ee8a0705c8a129afae185bae8f014e69ffc39a99617e6a881cf0382a9dac49df029947fbf346655b5cae8d88d58
 Size (Spread-3.17.3-1.07.tar.gz) = 9323 bytes
 SHA1 (patch-aa) = 58b63a675ed5626a5a6568ee977bf4f7a1f331fc

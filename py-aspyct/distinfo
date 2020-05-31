@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/04/12 08:32:34 jihbed Exp $
 
 SHA1 (Aspyct-3.0_beta_4.tar.bz2) = e73c883de9036afd8cd8ef62bd8a1402b7e1d9ed
 RMD160 (Aspyct-3.0_beta_4.tar.bz2) = 3499c8e22d3a3b07f65e675778e758219b85cb09
+SHA512 (Aspyct-3.0_beta_4.tar.bz2) = ae9fa8aa4e501152959aec709c3b587e8e07a6a5a115f868a5d37a1122915fdc260679d26600fe6e3dd1e7c5af412b302d2841fd9317aa5f4d9ade528e986006
 Size (Aspyct-3.0_beta_4.tar.bz2) = 7499 bytes

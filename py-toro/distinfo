@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/03/21 21:08:35 jihbed Exp $
 
 SHA1 (toro-0.5.tar.gz) = aee12c079bdfa6ff7af03bdd349056cea04768be
 RMD160 (toro-0.5.tar.gz) = 066b4e4b6edeb80fee2a467434c1775791e447bd
+SHA512 (toro-0.5.tar.gz) = d09e6336502a9e7956dfe5e9186fc7acd72f779941f4501bc0f9ac6c953abebb467eefad7ceb11a471c181ee55092c9309adc2657dd4d9de2f7442e2e30a992a
 Size (toro-0.5.tar.gz) = 54750 bytes

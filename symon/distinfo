@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2012/05/17 16:36:23 hfath Exp $
 
 SHA1 (symon-2.85.tar.gz) = 96e4d0e6dbd763249fcc09c5e25e1ae233781fea
 RMD160 (symon-2.85.tar.gz) = c355c188d23284de175756e044c43e8c9f6cc6e2
+SHA512 (symon-2.85.tar.gz) = e018950834620a581a9208727b3a8b70f714a4e8f8108ef261f8063e37b4491b0c9b1c174bedfd7402a9751c911275cca0d31e8773ededb0af90185e019d6db4
 Size (symon-2.85.tar.gz) = 106011 bytes
 SHA1 (patch-platform_NetBSD_sm_smart.c) = 5a26950be22e7569d4e7064dac50d0bc33cacefd
 SHA1 (patch-symon_symon.8) = 4b91b79e33d2cc681ab6481e9726f919f2365d5a

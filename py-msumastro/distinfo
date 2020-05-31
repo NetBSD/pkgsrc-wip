@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/07/11 00:36:05 jihbed Exp $
 
 SHA1 (msumastro-0.8.2.tar.gz) = 3ad8f148ac86945ae1ef74321b42c666befa7b6b
 RMD160 (msumastro-0.8.2.tar.gz) = 943656a914fe97e9fef6b2132c3f24ec7b5ece64
+SHA512 (msumastro-0.8.2.tar.gz) = cdda68526cf3dc90328dafdf6fc9c02f36779fd020fdfe3b90affb551ab0374f3da53372de077a8cff19280b0370ac69b8ea86fe826754982b83d54e6526887c
 Size (msumastro-0.8.2.tar.gz) = 625399 bytes

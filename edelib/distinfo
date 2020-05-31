@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2012/11/05 21:35:38 christtrekker Exp $
 
 SHA1 (edelib-2.0.tar.gz) = eb83219e634184ae9429f7304500cd21dee49250
 RMD160 (edelib-2.0.tar.gz) = 36bc1ecfaaae70015d723c4af6e753ee2566341a
+SHA512 (edelib-2.0.tar.gz) = 9788b01d55daaa530dbf8d67c1dc47a087ffcb48bcdf069950ef20526f3a9e9e2ef78b4cd2df3bd3b66ff0c3a9e1fa28ecb3b869f61419ed6a1e0216f6f9a9de
 Size (edelib-2.0.tar.gz) = 759985 bytes

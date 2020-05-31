@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/21 20:28:11 jihbed Exp $
 
 SHA1 (ghmm-0.9-rc3.tar.gz) = c3f2be9c27010a6f82df6f136821673112ed41a5
 RMD160 (ghmm-0.9-rc3.tar.gz) = e79bcb3a239096799651198a9c629442e036176d
+SHA512 (ghmm-0.9-rc3.tar.gz) = 1d3100252e7d90b09631eaed5b41e6173b9d1d328d0a52c3ca18eea5aca9660130cd29739fc50a19d922237b0125647285a3a6e65109ed0613831cedcd267437
 Size (ghmm-0.9-rc3.tar.gz) = 770526 bytes

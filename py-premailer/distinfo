@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/09/06 21:22:05 jihbed Exp $
 
 SHA1 (python-premailer-0.5.7.tar.gz) = bb1829d92d598c3ad0b061db168b23a317b9a12b
 RMD160 (python-premailer-0.5.7.tar.gz) = b1356087aa3fdb9d037ff1e7d36af006d0062f61
+SHA512 (python-premailer-0.5.7.tar.gz) = f2968d0eba10a164d10326df0a2f160ccbb9492159ccb547f2fe675ed4b064ecf15e120951875bd96393facb80b7f0832d646cb7e01799b2c22538cf83661cf0
 Size (python-premailer-0.5.7.tar.gz) = 2555 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2005/05/06 08:58:00 hfath Exp $
 
 SHA1 (ppr-1.53.tar.gz) = f7e7cb1ea43396cdd0e0f6a9422f84bff2e6c566
 RMD160 (ppr-1.53.tar.gz) = caf82a4330310e777b58d28002f3b97b53efa72d
+SHA512 (ppr-1.53.tar.gz) = 1a15b50031efb8690f35d06b239a8d0cdb9b77f202a1e7ee1475714693abcff1a3d9c55896ba56fb3316f931a29e79f28f92c912799b0a006d396af66c8bbf32
 Size (ppr-1.53.tar.gz) = 4808655 bytes
 SHA1 (patch-aa) = 766cefb81610f9f43ab9cd5228e5aa78ba165c50
 SHA1 (patch-ab) = 6f070822ccf6072208222cbc10ee6d8feb08c5c9

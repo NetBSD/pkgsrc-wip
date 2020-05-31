@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/08/20 11:23:07 shattered Exp $
 
 SHA1 (gitg-0.2.7.tar.xz) = 7b1428819666e4797d64dc94bb1624d5e7b75e6a
 RMD160 (gitg-0.2.7.tar.xz) = 0344a5935ee9b2186533dbef01f5a4174b16a0e1
+SHA512 (gitg-0.2.7.tar.xz) = 8d07e3410691a9ea4772e8db546d3da87f4517ac35111156c6cba3b9317e02fc7dd63a79c05aa0700ce59d2739d0c680d33825e3a8c8c7c242db7ac8ae6962c4
 Size (gitg-0.2.7.tar.xz) = 528904 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:35 rillig Exp $
 
 SHA1 (DirectoryStorage_1_1_7.tgz) = 0599c68e0fa6a1279e4c60140f007bccb34c6b4d
 RMD160 (DirectoryStorage_1_1_7.tgz) = 7a833d871cbbaa27b7a4d34e2d35e00f142b1c0c
+SHA512 (DirectoryStorage_1_1_7.tgz) = 3a38a101842168c389ad399400d54b2e705ab39b9ba9e7015f18d5531f3b23882a9bd64b756e4f7bcf7adcc9fff34cc5a84bb089cc3467ca41e52d49c1212272
 Size (DirectoryStorage_1_1_7.tgz) = 84299 bytes

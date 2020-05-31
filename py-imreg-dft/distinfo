@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/02/21 16:46:10 jihbed Exp $
 
 SHA1 (imreg_dft-1.0.2.tar.gz) = 1b5e594339b474152d04b32ce08ec60a97776a8b
 RMD160 (imreg_dft-1.0.2.tar.gz) = 612d0821d3ba8b279ad29de4958d327889784e28
+SHA512 (imreg_dft-1.0.2.tar.gz) = ae5e308ef3a997abc0fb1323110f70732b3efad56ac4ef5f780d189e3baf8f941cb54e6059d8fa052853e2356ce91542c8a24be513022c21951bf697e299b0c7
 Size (imreg_dft-1.0.2.tar.gz) = 83143 bytes
 SHA1 (patch-setup.py) = dcbf9190105fe277381864c0f2693779002de232

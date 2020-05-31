@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/03/24 20:17:23 outpaddling Exp $
 
 SHA1 (ufc-2.2.0.tar.gz) = c57c3d2c3bf89676581e7f8ded8cff361865acd4
 RMD160 (ufc-2.2.0.tar.gz) = f8d053649032f7354d66ab76f43d08ccb7ca3431
+SHA512 (ufc-2.2.0.tar.gz) = a41ad09179f007fedb481d5d1e8ceea4e9c402008993eff955629d8adcb6eca9f6baad3fc7c3df1d5c5e098a02d0067497b37d70cf7e13f8b4dfb384ecf6000b
 Size (ufc-2.2.0.tar.gz) = 602068 bytes

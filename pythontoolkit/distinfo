@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/10/16 17:46:16 jihbed Exp $
 
 SHA1 (PythonToolkit-12.08.18.zip) = ee390b4204ce3e0451a935a84a98c72621a5bc76
 RMD160 (PythonToolkit-12.08.18.zip) = 6c7bc62e323c9f20a44751bb4782ee54e801cec3
+SHA512 (PythonToolkit-12.08.18.zip) = cfb1f46bb29fea10d76e0082b090449bc241341e380f76c4e16d3f75b89f9ee6855dd0ac6f0b099d84318b687396a6cc975a93fe3e8876846ebe80564b078782
 Size (PythonToolkit-12.08.18.zip) = 495236 bytes

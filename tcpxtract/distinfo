@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/02/04 11:39:27 thomasklausner Exp $
 
 SHA1 (tcpxtract-1.0.1.tar.gz) = 48fce86ac87e5467cb671236a7247474f69bac9d
 RMD160 (tcpxtract-1.0.1.tar.gz) = 0577bdaa1ab57457c805fb49376aa305ae4d9457
+SHA512 (tcpxtract-1.0.1.tar.gz) = 30c8bb7db09121889cd5a3e359deb494503038b4c6ea8dd12d397c9215693cf9a97a21a8d0c1331cdad8f1139c17a4ff75b800b7508ad32ec705cb8547640337
 Size (tcpxtract-1.0.1.tar.gz) = 127102 bytes

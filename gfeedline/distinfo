@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/12/21 15:14:08 noud4 Exp $
 
 SHA1 (gfeedline-2.4.1.tar.gz) = f214a5c70bb70dd46bab7da49d1036d9f81bc1ee
 RMD160 (gfeedline-2.4.1.tar.gz) = 6fe120c8e0ab3aa38f8cdac2ca7085f746f47703
+SHA512 (gfeedline-2.4.1.tar.gz) = 4fd5baebaadd94a652a286cb8f4d6005d0870752fa6191afb56b25cdfb15ae1fd6990c36d54859b78050955a973e4eea2feac0103d1f1d03a109b0fa8c3d37b1
 Size (gfeedline-2.4.1.tar.gz) = 179112 bytes
 SHA1 (patch-lib_____init____.py) = 739078c93bb4a662ccdf24664daa4057fc2988a1
 SHA1 (patch-lib_constants.py) = edd807a0e8867c274aba9b895cad90452e83591c

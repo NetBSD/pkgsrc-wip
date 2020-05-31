@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/02/20 10:38:59 ddeus Exp $
 
 SHA1 (babel_0.3.0.tar.gz) = 003d0bf0cf1dedb754b6e021cd43de560156a15f
 RMD160 (babel_0.3.0.tar.gz) = 9c2ce421f84deabf99bdc7199250c706f9263dfd
+SHA512 (babel_0.3.0.tar.gz) = 8ddf55469fa67da1715bd81fddfedae3dd5203d25adda9bd5e140d99a445f1fd5ecc74bb48cc2b966feb703483dc46cb890cc9296fe960c567a9d4c023d6cc2b
 Size (babel_0.3.0.tar.gz) = 91665 bytes

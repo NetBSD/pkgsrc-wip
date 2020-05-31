@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:12:12 jihbed Exp $
 
 SHA1 (Naftawayh-0.1.zip) = 2bb83a2be2dd4dc106e311c031ba9b62ad5df6c0
 RMD160 (Naftawayh-0.1.zip) = 920179a936bcb0f8e304eea3245ffea28cb12b13
+SHA512 (Naftawayh-0.1.zip) = 04b6cae26e68fb92b3bb1608547041e1743a10c9aab8a1b0b4bb10b67b15e88c9b25582ddc861868cd39385f379dd050526b693e5bbc3583a0fcd4c3b52036ad
 Size (Naftawayh-0.1.zip) = 328623 bytes

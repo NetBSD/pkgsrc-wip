@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2005/09/28 06:41:16 rillig Exp $
 
 SHA1 (galib245.tar.gz) = 7fb5de20b01aa73365112872936dae545c049711
 RMD160 (galib245.tar.gz) = 901aa8fbe7836c1a80e13f7a691def7f007a3f8c
+SHA512 (galib245.tar.gz) = cd0f53f42ab7af7eac4caefd922a8ef99c95dc310e71e36b6a2b14bfbd0acda74611ea9ec2a9b852e1abf5ef281ae7cb07746852ad034254bcee06a16480f79f
 Size (galib245.tar.gz) = 385224 bytes
 SHA1 (patch-aa) = 2019cf2bde67679518b1ccf25033ee5050f974f9

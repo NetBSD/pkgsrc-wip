@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/01 17:58:55 jihbed Exp $
 
 SHA1 (adsbibdesk-3.1.1.tar.gz) = 6166fbec485075caa63e3fabd7aeb066b77fcdcd
 RMD160 (adsbibdesk-3.1.1.tar.gz) = 26f742ad9208d174da6b7d08a9ec3c605f30b337
+SHA512 (adsbibdesk-3.1.1.tar.gz) = c24362ae4b0561c9981904920037b141aa1ea1fbd789429a9c0bb108afae33f2842688f62ce345e234efef1e431330c28220f240f1c7f9f47cd92a0137aa71bd
 Size (adsbibdesk-3.1.1.tar.gz) = 19416 bytes

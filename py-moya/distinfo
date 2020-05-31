@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/09/06 23:13:52 jihbed Exp $
 
 SHA1 (moya-0.5.20.tar.gz) = 7102bfebd00b4000e09e0026e08bf2098f3a6adb
 RMD160 (moya-0.5.20.tar.gz) = 46afdfdbeadfc26aa9d02962c101c9291c91893c
+SHA512 (moya-0.5.20.tar.gz) = b71826bf268637d73b88dba43b616d91547143bfdb1941b9d402393047e4cca6fefcdd0e16352be6d53be450ffcd79fe723756ebebc4f2a79934d229718a05cf
 Size (moya-0.5.20.tar.gz) = 2362857 bytes

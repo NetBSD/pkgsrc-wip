@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/08/01 22:58:11 jihbed Exp $
 
 SHA1 (radontea-0.1.2.tar.gz) = 27d64e0cabb5d8860e1c3852f3cc314487df9255
 RMD160 (radontea-0.1.2.tar.gz) = d9494299d638a59eef341dbfe17eb85f207a915c
+SHA512 (radontea-0.1.2.tar.gz) = e935bf9564da2a76d3e0be2ebcb3974165de89c5d22db79e623d4bf751b37f34676963e439164dc24b75a9c8f0c8066e6e60f316bd3e5670cd7e71ea439e9801
 Size (radontea-0.1.2.tar.gz) = 14104 bytes

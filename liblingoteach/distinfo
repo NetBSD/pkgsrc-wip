@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:26 rillig Exp $
 
 SHA1 (liblingoteach-0.2.1.tar.gz) = 45515453582fe7b39c9a2627314c5ef8b432e02f
 RMD160 (liblingoteach-0.2.1.tar.gz) = 0b51e23fb46235c17efd1fb4552f825b19c6e07d
+SHA512 (liblingoteach-0.2.1.tar.gz) = ae747db3e2b94d00e388dc9c08d0df1f358d3ca412c937c63b2bf8ae7e7088371f609275d3a56e155a86b786d6e062e3a6802f1ee79b7f8bcce01a85fc40a34d
 Size (liblingoteach-0.2.1.tar.gz) = 190273 bytes

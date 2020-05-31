@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/12/27 04:01:37 cetrox Exp $
 
 SHA1 (obmenu-1.0.tar.gz) = 7b638d5309ca463980782c60d94e76f02565b596
 RMD160 (obmenu-1.0.tar.gz) = 039d82e7e59eed951397def51c0068099b2738f8
+SHA512 (obmenu-1.0.tar.gz) = 64f36c5847c9e20ad989ba1e5a1fd780e420ad52ed3c188b06910a5bebb54373ad6b826621916fbcb1f900a34569f1d7c484094de99a227ed31cd2ff87ef78c5
 Size (obmenu-1.0.tar.gz) = 26375 bytes

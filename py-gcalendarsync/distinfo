@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/05/02 00:14:15 jihbed Exp $
 
 SHA1 (googlecalendarsync-0.4.tar.gz) = 0641110e1195e64b91c892157ed176c1f4a53408
 RMD160 (googlecalendarsync-0.4.tar.gz) = a58c3a20a190c7e3858856ca52800e9cd06b9a9a
+SHA512 (googlecalendarsync-0.4.tar.gz) = d1246d3abad6514693a2269c0c8641a48b20eb243c001d85def21df3bfac14dd76f047cfbf6cda7eae34fdffb02ca61ecaf55ad1dd83c10bd167f393d5ec89a3
 Size (googlecalendarsync-0.4.tar.gz) = 13049 bytes

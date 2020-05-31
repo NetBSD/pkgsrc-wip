@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/09 23:38:17 jihbed Exp $
 
 SHA1 (chemview-0.1.1.tar.gz) = fb22f55999a220b949b50b1c8d6737f45600d78c
 RMD160 (chemview-0.1.1.tar.gz) = d6d1acb0ce8ea719aa71ac1ac8052b509458d53a
+SHA512 (chemview-0.1.1.tar.gz) = 03af706505291af0e05f43a1254948a0f42a7420e8847efd325879644bab2d8df1645aa77614c3a51a2a5bf38e4a921112cd6e9ff95828c0daa5326fac00c4fb
 Size (chemview-0.1.1.tar.gz) = 11833 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/12/30 22:57:28 cetrox Exp $
 
 SHA1 (xdiskusage-1.48.tgz) = 8069d521beec27004baa1f534559cdc7ff99e27f
 RMD160 (xdiskusage-1.48.tgz) = a656484c71f74a2f0a8e703954bc212e9bd86cf5
+SHA512 (xdiskusage-1.48.tgz) = 65512ec4fa58701263aaebc9f2f789c1ffddc6fa028428a3c677202f61ff5bdb6d6768bcbdd8f9c13a43e18a4573dd4b35fbe73e21ff0e167661a4c366e09c1b
 Size (xdiskusage-1.48.tgz) = 37332 bytes

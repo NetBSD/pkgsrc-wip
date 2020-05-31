@@ -2,16 +2,21 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (heroes-0.21.tar.bz2) = 756b2d0ba255484fa2c830798f5f9e62088f3af1
 RMD160 (heroes-0.21.tar.bz2) = 4d189160ee8b4e2f306ecc3086f50cd564590a8a
+SHA512 (heroes-0.21.tar.bz2) = fc0ac1fdf7e686388c90162b6cd76d638d295fa5919a9fdd4e944a85ca4f60b1b0a01873820b2c718ae9c960ca3d7e28ec62c09d6cd0f052e62fd2e76a96be82
 Size (heroes-0.21.tar.bz2) = 709079 bytes
 SHA1 (heroes-data-1.5.tar.bz2) = 2aa90ac7c1760f5b137e5ee175729572d9c93d26
 RMD160 (heroes-data-1.5.tar.bz2) = 7bcbbc57537318db2e4c661f46dd951947a5d58d
+SHA512 (heroes-data-1.5.tar.bz2) = a4cb1508c2010b2157dc0e1d0a7973131fa167cb1f3c93649c3bc9b2c37419e4429e33cde14f3b67c7a4670f751ff4c28d88604102780bdb1fe5c77a93e1a213
 Size (heroes-data-1.5.tar.bz2) = 391970 bytes
 SHA1 (heroes-sound-tracks-1.0.tar.bz2) = a05c5e232d62c5b80c8b9d25639e65b9ade3c5b2
 RMD160 (heroes-sound-tracks-1.0.tar.bz2) = e1ddc451b79947c2e34be8a67360411174c1840a
+SHA512 (heroes-sound-tracks-1.0.tar.bz2) = 3e7ee2890c47366a39cfc7d7b9a1e5fdf3c3379013ca96072586ba909e2a602b114c728ffbe9dfe8eb6b62232cb6c25b13475f2a33da0243ea1ffb3f040842f0
 Size (heroes-sound-tracks-1.0.tar.bz2) = 1245613 bytes
 SHA1 (heroes-hq-sound-tracks-1.0.tar.bz2) = e601dead584dfe91ad1c44919983e65f070487ec
 RMD160 (heroes-hq-sound-tracks-1.0.tar.bz2) = 0d9cf4300fd8dc8fbf9512d944833da78212e0ba
+SHA512 (heroes-hq-sound-tracks-1.0.tar.bz2) = 675379f350d58734b1f03aaa6e83dd30926088b0f05cb1d1c28bd72736b9e2b4993d8425f539bdf401d907fa8349cc4d124d4bfff4643e481601cebcd560f099
 Size (heroes-hq-sound-tracks-1.0.tar.bz2) = 1506125 bytes
 SHA1 (heroes-sound-effects-1.0.tar.bz2) = a265bc8b9ee2923e3c7539ac02346b10e767f95b
 RMD160 (heroes-sound-effects-1.0.tar.bz2) = 5b696068614f2c9259a41b63fa6876c57d26ee82
+SHA512 (heroes-sound-effects-1.0.tar.bz2) = 51da63373f1bdb2314a8c3164028ee9cbb95958bfe8f13b1119236f035282a711efcc6ef5a84fd647c1e8451b4da788a74e4b8506e1476a437299dfc7b2046d1
 Size (heroes-sound-effects-1.0.tar.bz2) = 389883 bytes

@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (conda-env-2.4.2.tar.gz) = 507b4157761857d4348664cff16775486696fba1
 RMD160 (conda-env-2.4.2.tar.gz) = 07200e47d2852b917168535c4a948547e63573c0
+SHA512 (conda-env-2.4.2.tar.gz) = 9493a800300b3bbb776f56cfd6ff9867333675b69f06f6043fb2f3e82938edee6654d036e1bc45b1f4ea43cee0df07fe7f87fcae4bb1e9eb4fa1babf93fc87d0
 Size (conda-env-2.4.2.tar.gz) = 13348 bytes
 SHA1 (patch-setup.py) = c99a9e8f051d417a3cfc88c1090e449caa7a8706

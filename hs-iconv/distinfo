@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2009/01/29 10:14:21 phonohawk Exp $
 
 SHA1 (iconv-0.4.0.2.tar.gz) = 3a126976da4070ebbcb44c0617681cc28910bd17
 RMD160 (iconv-0.4.0.2.tar.gz) = 83bf08c07d348b96edcf5db3b1909b13dbb75eee
+SHA512 (iconv-0.4.0.2.tar.gz) = 3e4ade0de90fef7976e4a84ef1ca55d5753f4e4278ddea42b179fcab18ce12c9c6fd8c9f1427b22b4266d38bbbe4c165d6db693d4c7653a39b3d72637994b79a
 Size (iconv-0.4.0.2.tar.gz) = 12319 bytes
 SHA1 (patch-aa) = b7ffd6f9746f8afdefb5428ca557b4180dd55e99
 SHA1 (patch-ab) = 2f4b806c79c5264396e6a0ac9c45ca8a07280f4b

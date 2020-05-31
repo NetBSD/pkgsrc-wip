@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2012/06/13 22:51:34 othyro Exp $
 
 SHA1 (briquolo-0.5.7.tar.bz2) = 72823b6548e0b76bbf5fdf63fe1803eec89a1cba
 RMD160 (briquolo-0.5.7.tar.bz2) = 47f100dd842050f033dbe0efce29b5fef4be3e42
+SHA512 (briquolo-0.5.7.tar.bz2) = 4ef78193c80ac3554b72149b8da9b5cfd5b8fd68932e5b52666d74642e94a7a3a596dbb6d2865cba526929dd6d9be89743847d5e77b6fbc687c32394bc3be3d2
 Size (briquolo-0.5.7.tar.bz2) = 2588084 bytes
 SHA1 (patch-desktop_Makefile.in) = 3dd85c473d1227a5a50b17c9dc75c38fc33930ef
 SHA1 (patch-src_Constante.cpp) = cca2533e943951578f3922b0873a5c686ea73351

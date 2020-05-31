@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/05/06 10:32:00 jihbed Exp $
 
 SHA1 (libcmt-0.1.0.tar.bz2) = bbaa1e14cb391c1f3cd70b382b454f8543e29410
 RMD160 (libcmt-0.1.0.tar.bz2) = a1c89e733602db489db33ef4e92496cb2562e5ee
+SHA512 (libcmt-0.1.0.tar.bz2) = 2eb9a60eab0f59f688fd15d2633c9d7f23a8f633510f3081b6f2885aa65d91f976caed44f09008ecf02bd69154d8d3bd0f37bbaaf1df506751c71e3b2f796e85
 Size (libcmt-0.1.0.tar.bz2) = 256466 bytes

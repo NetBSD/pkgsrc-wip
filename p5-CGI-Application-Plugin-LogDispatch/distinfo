@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/05/01 23:16:38 ficovh Exp $
 
 SHA1 (CGI-Application-Plugin-LogDispatch-1.02.tar.gz) = 11dd5d100994dc3f5dcf56b53831f876e9e1fb84
 RMD160 (CGI-Application-Plugin-LogDispatch-1.02.tar.gz) = cee3c51076c819a21bfddbdcc053e8b881569060
+SHA512 (CGI-Application-Plugin-LogDispatch-1.02.tar.gz) = ad1e8e26d4cad8a3764acef3cbbb0cc7dbb3d6ee7bde480b765601b0d4eb90dbaf0f609bfc84cdfd62590242ded01cae996253cba1ac4c7628103b45c23dec99
 Size (CGI-Application-Plugin-LogDispatch-1.02.tar.gz) = 9656 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/10/11 08:58:14 jihbed Exp $
 
 SHA1 (Louie-1.1.tar.gz) = 8d9df8fb3eab98064463d587da9e14ee29be3ad5
 RMD160 (Louie-1.1.tar.gz) = 85b963990e49a07e2931855c947c0d337e69f3e0
+SHA512 (Louie-1.1.tar.gz) = 4f5426da4bfbf7a5928007a82e155414e7db9d466397eb9cba6a5fcfddccf4bd162071e5d551fb6ffd41f0b780097a89eea6c268e2d4fb32264683f796d85ec0
 Size (Louie-1.1.tar.gz) = 22306 bytes

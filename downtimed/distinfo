@@ -2,4 +2,5 @@ $Id: distinfo,v 1.2 2014/10/31 12:45:46 bartoszkuzma Exp $
 
 SHA1 (downtimed-0.6.tar.gz) = 74bc1c6042fee89f640b5855bd9fc85487c12a71
 RMD160 (downtimed-0.6.tar.gz) = 90f2a3b6a7506da6a70162d6bb034cd7bd27ec30
+SHA512 (downtimed-0.6.tar.gz) = d020aafb5405c6946770c74a9e8e73d452083cd9c953a3376ff7c030b81eddad6b152f873fd7302dad7be57e52cd914e37967f6dc027e4fb9b6f841365101a84
 Size (downtimed-0.6.tar.gz) = 108855 bytes

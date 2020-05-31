@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:36:58 jihbed Exp $
 
 SHA1 (PySPH-0.9beta.tar.gz) = d7f979229735a0a89b536c84c1ce68911acd26f5
 RMD160 (PySPH-0.9beta.tar.gz) = 18e7c550f6475ab51094b51ad58a1c377613f98c
+SHA512 (PySPH-0.9beta.tar.gz) = 373c153f535e577edcb3e7ce552bbeb051ee4a47886c8e88f27026bb2f336d98424b2257cf9768b4a0b41451e8fc1b1f1dfa93eaf160f2bc45a79eabcfc4cc1e
 Size (PySPH-0.9beta.tar.gz) = 3290077 bytes

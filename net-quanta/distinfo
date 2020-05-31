@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:31 rillig Exp $
 
 SHA1 (QUANTA-0.3.tar.gz) = d0008523c76d3f4ef3f210fdeed9ea34c06bcae8
 RMD160 (QUANTA-0.3.tar.gz) = 551ac5ea461c7a6544398c9efd3e522bd790bd57
+SHA512 (QUANTA-0.3.tar.gz) = 1421ba50974c75891c7c9cc279e70cd4b76b36122b150e8c580d92a7c0ed50e9930dc10ab953f8cb01622f28fee5583a7836bd01ea1bd34d92b2694d601ca09a
 Size (QUANTA-0.3.tar.gz) = 878767 bytes
 SHA1 (patch-aa) = 5eb4ac77849d216e6703c3eee0103becf3c8fe7c
 SHA1 (patch-ab) = a5e4cf068bcccae986af7b58b12c0ae88d664af1

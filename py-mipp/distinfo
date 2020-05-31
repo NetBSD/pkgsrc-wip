@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/20 09:33:49 jihbed Exp $
 
 SHA1 (mipp-0.9.tar.gz) = 788ab3a067e3701436fca2461c1682df2907b23c
 RMD160 (mipp-0.9.tar.gz) = d1832a952beaa37007573fcfc11cfb38409f3177
+SHA512 (mipp-0.9.tar.gz) = 6864f9e115aaeccdc6e0df6161af51ff8a01bbbdcc93d3616e567a7e7cf799df038d333863e1b69ffbd17c96f67c273aa0bef3927e63751cf34b6f5bda17bbaf
 Size (mipp-0.9.tar.gz) = 38580 bytes

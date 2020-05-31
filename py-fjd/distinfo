@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/03/21 23:12:39 jihbed Exp $
 
 SHA1 (fjd-0.1.42.tar.gz) = c1e768ef932f2e38989937869166ba3a7855af6b
 RMD160 (fjd-0.1.42.tar.gz) = 24f02861c38533ba981ef49f0605f538be8bdd5f
+SHA512 (fjd-0.1.42.tar.gz) = 51a5dd49b6c51ff54b51f2dc54b6ab093697e4b64c551ab0ff53ec17ce77de813408f3399697bc31f92fd863d9caaa1371c59233479821ef0a85449a1ac8eacd
 Size (fjd-0.1.42.tar.gz) = 13033 bytes

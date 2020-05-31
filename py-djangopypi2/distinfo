@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/10/06 23:23:21 jihbed Exp $
 
 SHA1 (djangopypi2-0.5.4.tar.gz) = 8e934810b294b896a14158bc06c6364b35346da4
 RMD160 (djangopypi2-0.5.4.tar.gz) = 358ea29995bde6025a02f5f7e19a465a5932dc73
+SHA512 (djangopypi2-0.5.4.tar.gz) = 1f300979d85a51cb0d42e7f9cda23e7f837df36b149d661f25e05ca1ca3918dffa3e51f0de7ed406120de1ce7187f4c79ff53ea319541b4d8ea553fd2e1cd7af
 Size (djangopypi2-0.5.4.tar.gz) = 124375 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/24 09:26:54 jihbed Exp $
 
 SHA1 (pysofa-0.1.0a2.tar.gz) = 6b0e936ab2cb385e1ed769a271b1ec8217c5476f
 RMD160 (pysofa-0.1.0a2.tar.gz) = b5410460b979bfb13267499c1fd42bf7a82857db
+SHA512 (pysofa-0.1.0a2.tar.gz) = 798fb69923432cbf42ee3c33ccdbf24e665992936c32f208da2c14ed166f37bc3093f76dc7bb54a071a3957a154459866627e50dcc2305202b3bbde00e7c53bd
 Size (pysofa-0.1.0a2.tar.gz) = 36045 bytes

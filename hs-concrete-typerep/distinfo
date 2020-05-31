@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/02/20 11:52:21 szptvlfn Exp $
 
 SHA1 (concrete-typerep-0.1.0.2.tar.gz) = 7dc356eef28c83f606b792e3d39b68a04c1a6d98
 RMD160 (concrete-typerep-0.1.0.2.tar.gz) = ae298f986695091a6b55491d84a63553b4e5afc4
+SHA512 (concrete-typerep-0.1.0.2.tar.gz) = 9b333e3797fafc9d3e7538cf8a4a7bf091281944f316aa4f5d5d2a9835a31449822ebaccd42f1b0ab76111d3025dfa462539e202edbff4fb5b775effb0d30e0e
 Size (concrete-typerep-0.1.0.2.tar.gz) = 3159 bytes

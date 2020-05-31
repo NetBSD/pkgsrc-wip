@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/04/10 11:16:07 nsloss Exp $
 
 SHA1 (plasma-widget-menubar-0.2.0.tar.bz2) = f45df20379c59c100e8305e344211d4d6c08c079
 RMD160 (plasma-widget-menubar-0.2.0.tar.bz2) = badb06a88c4f07d9155974f60a7d1c6db54d831c
+SHA512 (plasma-widget-menubar-0.2.0.tar.bz2) = 73a675a170e53dfc5a8471f879f8b25ead59e3dc2ef30e87777c80994594d3849bca8e139679d33df77ec317fa0467590fb3a4c5b5d0c395ab89a0cc9158df8f
 Size (plasma-widget-menubar-0.2.0.tar.bz2) = 27631 bytes

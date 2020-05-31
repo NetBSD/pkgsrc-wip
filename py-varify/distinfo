@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/04 21:30:34 jihbed Exp $
 
 SHA1 (varify-0.7.0.tar.gz) = 09362b08239502a9d2466251cec969d4a87d41aa
 RMD160 (varify-0.7.0.tar.gz) = 865684cf2d764bd801f7eb8acb5d38accb96d753
+SHA512 (varify-0.7.0.tar.gz) = e75b076c89ee3064d4ca71e19d639bdab4abe3a07c25352ee1b96a05b8c84e0d2f2fddc257f3b8ac96c5f6387b34bbc2fb24650f82c5d34f8104f297779d8d3b
 Size (varify-0.7.0.tar.gz) = 1635276 bytes

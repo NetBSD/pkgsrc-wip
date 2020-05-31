@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (primecoin-0.1.2-linux.tar.gz) = e8f0a1f700d666af46228fbbed2d9f40d475a8ac
 RMD160 (primecoin-0.1.2-linux.tar.gz) = 84deec1c901e039f8172a226d0a81607f82e0021
+SHA512 (primecoin-0.1.2-linux.tar.gz) = cff71b0e6459c4e534e78acef9491090d05c0cb864a068c0a3cb289310a1ee13fd69c7b61a7d6cb9732af54fbcf1fa4e77db8c8528a09bbdafd36421fdf7aff1
 Size (primecoin-0.1.2-linux.tar.gz) = 16521236 bytes
 SHA1 (patch-bitcoin-qt.pro) = 065f52b10b8da1d76d3c98c5537da647665e8197
 SHA1 (patch-src_db.h) = bb24554af13e6a052835ef7a985306314119f887

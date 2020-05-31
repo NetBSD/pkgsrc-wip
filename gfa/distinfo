@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/10 23:58:40 jihbed Exp $
 
 SHA1 (gfa-0.4.1.tar.gz) = 20925feb4ed3afb46e51c16691c0db5ef6714850
 RMD160 (gfa-0.4.1.tar.gz) = b8ce27467d5f87122e8403c8693d8634006b78da
+SHA512 (gfa-0.4.1.tar.gz) = 764d2e856cfc90d4b7d5b55a40372b5dc4520a2d83a1e65e1cabe3a0a9d8f62be61ed6829e8fae7268fc3f4eff3623d9803e7d54fbd1b9cf230849782cd71cd1
 Size (gfa-0.4.1.tar.gz) = 115809 bytes

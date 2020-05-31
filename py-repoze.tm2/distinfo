@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:22:27 jihbed Exp $
 
 SHA1 (repoze.tm2-1.0a5.tar.gz) = 61fec138fe684723a9071ded110f49aaf04476c3
 RMD160 (repoze.tm2-1.0a5.tar.gz) = e4e9ba31300085c4c63504f6517a1b74032ef760
+SHA512 (repoze.tm2-1.0a5.tar.gz) = f787841518b0a02a91d32e7ebafb9d010f2ff5ba50ab83bc8d040f44ecc954159be1cadd5c313665c6d3fddc3a43fb6039d0bbe5987e5bccd51652cc0221c89f
 Size (repoze.tm2-1.0a5.tar.gz) = 19427 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/16 14:18:33 thomasklausner Exp $
 
 SHA1 (rtspdump-2.7/rtspdump.zip) = 921744f0e1f314a4276048f59d29aa59208da815
 RMD160 (rtspdump-2.7/rtspdump.zip) = 47fc4ca513ed07d6cf1967412cf8efa38c5dfbbc
+SHA512 (rtspdump-2.7/rtspdump.zip) = befaadf80c61cc0efe5ccd5d33c3fae30bd93b9f57ec718f2b5c95e23da075925c6a18db120ffd3bb1dbd2d55a3a84c5faf6b29dd7ee621174877e8191446a0f
 Size (rtspdump-2.7/rtspdump.zip) = 28642 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2008/02/15 14:40:57 sebpierrel Exp $
 
 SHA1 (pyaim-t-0.8a.tar.gz) = ef98a3a161e151706ad80481aefc3c14eb01c9f8
 RMD160 (pyaim-t-0.8a.tar.gz) = ddc6485dc481cd97f1db3ceaa485387ba4669e56
+SHA512 (pyaim-t-0.8a.tar.gz) = 83443314cb34acfac2df326634211ca7c9f94455c82d059befbbe0565b1e840728e8074a68086a11e08f046cdacfcc5c52c907b03c48bc32ed8617a5c26c02ff
 Size (pyaim-t-0.8a.tar.gz) = 165035 bytes
 SHA1 (patch-aa) = 40474ccd1cf37a969d8e06fc1f9ae9077a4e5b5c
 SHA1 (patch-ab) = 3905e30474ade9e9f247b506c5b4ff9a444f94df

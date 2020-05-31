@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:22:17 jihbed Exp $
 
 SHA1 (SymbolType-1.0.zip) = 3caa8a808859703d9abdeab4d63b876c6ec3155e
 RMD160 (SymbolType-1.0.zip) = 41583f87fefa48a6defd2ae54444ccfa5d0456b5
+SHA512 (SymbolType-1.0.zip) = 1484adf4bd2df4f6def5cb6dab50e17d21a2baacb12af8a03aa981478deb97d1cfd3620c0e7d0e6e8c631b0c6bfc3912196c20a0feb39a3ddd4cf9e9dc42b6b2
 Size (SymbolType-1.0.zip) = 9507 bytes

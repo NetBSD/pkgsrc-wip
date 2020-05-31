@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/22 14:01:20 phonohawk Exp $
 
 SHA1 (Tensor-1.0.0.1.tar.gz) = 34f6980e1b0ece11c2ab904bceda11076c7eb905
 RMD160 (Tensor-1.0.0.1.tar.gz) = 1f59470c8c07c6342e708380e4d028349012b1da
+SHA512 (Tensor-1.0.0.1.tar.gz) = 8808d71cb3a3d19991a07c2652751f35bf6c4a4d5dc4090b1ce4835c4cabe29d04b968555663ec7facd93fbb3239031b6540d8afd0661fa4d7b4652a1bf2fd96
 Size (Tensor-1.0.0.1.tar.gz) = 3314 bytes

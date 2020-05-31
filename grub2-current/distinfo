@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.52 2013/09/09 09:47:45 gregoire Exp $
 
 SHA1 (unifont-5.1.20080820.pcf.gz) = 87f8600ba24e521b5d20bdf6c4b71af8ae861e3a
 RMD160 (unifont-5.1.20080820.pcf.gz) = ddc87231a7c1e18e81a6f4578a4f0279bcd0c292
+SHA512 (unifont-5.1.20080820.pcf.gz) = 8939e2bc82ca97b60e6678f3ff079a2be7ba9b702f2e8ee289e853af5823695f7baafbf14b674fc5e41071f2a6de4f2dadd56bf8b4653849dd756d59622f1649
 Size (unifont-5.1.20080820.pcf.gz) = 1379965 bytes
 SHA1 (patch-autogen.sh) = 6232040d6a25f483021b195326639852fbd1e6f9
 SHA1 (patch-grub-core_kern_emu_misc.c) = 4a1dec4fa3e0d8bc043fe96c4599c74dfd1388f5

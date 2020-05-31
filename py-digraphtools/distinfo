@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 21:54:57 jihbed Exp $
 
 SHA1 (digraphtools-0.2.1.tar.gz) = d23e6238f40f2c6f2d8703412c7e33598b9c7e59
 RMD160 (digraphtools-0.2.1.tar.gz) = 4d46e8d3edf2599f5dfefdcc3d4e7b2bcc3acf2a
+SHA512 (digraphtools-0.2.1.tar.gz) = a61b30fa9107f70db5fa0394ec2a85eb9ae477e6fc40524c50fef3aa5104cc89a402200194f51e12c173ccb284f1e88d95b1906f71f7543ea953e183eddbfdc3
 Size (digraphtools-0.2.1.tar.gz) = 8150 bytes

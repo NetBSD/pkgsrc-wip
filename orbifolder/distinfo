@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/08/31 18:21:50 jihbed Exp $
 
 SHA1 (orbifolder-1.2.tgz) = dff3946657dc35848477cd3b2213bad0f798ae3d
 RMD160 (orbifolder-1.2.tgz) = c4b47a68bdda44cd5a0e70286238696780388f76
+SHA512 (orbifolder-1.2.tgz) = 7ad2f7d9eb6de4432d0e668455e5543bf1d28d50b3d8213bf5661bfa3d5639a6d2536678e4d8e9784b855f73d4ebcf6f9741fffee555fe23d387d8a5f4afb8e1
 Size (orbifolder-1.2.tgz) = 933356 bytes

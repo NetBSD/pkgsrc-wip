@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2014/07/18 11:10:22 fhajny Exp $
 
 SHA1 (spread-src-4.4.0.tar.gz) = 944d31501517c892a446fa484a7fd928e9ede941
 RMD160 (spread-src-4.4.0.tar.gz) = f05cbca46efdd9dd1a4219188f4a5483188bb109
+SHA512 (spread-src-4.4.0.tar.gz) = 6785727bd9aadb432922f750d7c9e8cf6f48be095b3113e09de325be034209f91aa42a37c6598e7ad4f3013eee103e402a586346fdbc990180cbb2ec6fac1646
 Size (spread-src-4.4.0.tar.gz) = 763723 bytes
 SHA1 (patch-configure) = 283f0e86e9cd149f5051e0b9a75471636a52191d
 SHA1 (patch-daemon_auth-ip.c) = 24e438cc78b40ae86f7d1380ae3b6415f859d43a

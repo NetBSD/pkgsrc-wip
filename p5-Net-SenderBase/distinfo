@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/01 12:46:00 udontknow Exp $
 
 SHA1 (Net-SenderBase-1.01.tar.gz) = 95e33d052d62c550529f6ee262ec22a757f740a2
 RMD160 (Net-SenderBase-1.01.tar.gz) = f56c65b3056fb3da451fa68a564d526ddd8884f0
+SHA512 (Net-SenderBase-1.01.tar.gz) = 370146a790b58b85a936b412bcb2d6ad4788d240a50dd03c757beeba47d54caf8e26db1368ffefb3dac464f4450f26fc63d9a8d0c7f058b49ee813199b0e02d2
 Size (Net-SenderBase-1.01.tar.gz) = 5890 bytes
 SHA1 (patch-aa) = 62586082b4c63e66d83d952b7efd5bf3a25f97de

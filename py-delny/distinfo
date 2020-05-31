@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/04/27 22:22:34 jihbed Exp $
 
 SHA1 (Delny-0.4.1.tar.gz) = 0f166d23b3e38e9d2332099fd65695e2e8a3cc0f
 RMD160 (Delny-0.4.1.tar.gz) = b5a45374fa8a617cf6a1a90d13edd67733906ab2
+SHA512 (Delny-0.4.1.tar.gz) = 4b28defb602b7b67b4f75de2a6c31a174a6bcb057d1ad8d7b4a37100719ee7613718e3da8d3a9619cc1267e18f8c608521b6e1e7ab347a38de39dbbe4f6d0f3e
 Size (Delny-0.4.1.tar.gz) = 19406 bytes

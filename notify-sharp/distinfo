@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/03/10 17:49:08 othyro Exp $
 
 SHA1 (notify-sharp_0.4.0~r3032.orig.tar.gz) = 8cfc23eef30de3829e3f8b9feae9e4bfcfe68487
 RMD160 (notify-sharp_0.4.0~r3032.orig.tar.gz) = 39c5a202f3315d044a0e40e6b5bd57721988e9c5
+SHA512 (notify-sharp_0.4.0~r3032.orig.tar.gz) = ce87de9a64d2e519298a0c3ed0508563b8c507ea9f6f275397cc28e7f31e95475e1583274491ba7d8081d6b7d52b2913534cc93e1eb564a5a21388bb0844a077
 Size (notify-sharp_0.4.0~r3032.orig.tar.gz) = 92371 bytes

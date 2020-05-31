@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2015/05/26 11:10:46 f8l Exp $
 
 SHA1 (dwb-2014.03.07.tar.gz) = 006e9df0c52219b9f022c1b4a3aa0518ff96295d
 RMD160 (dwb-2014.03.07.tar.gz) = 3eaeb5f2158f5c66dc3cb44bc2f2344632993b4d
+SHA512 (dwb-2014.03.07.tar.gz) = 7d3eb353ab7f7aa50bd678c75d72d1bbab0e5831991a1f4a1b2c4a8e134ccc90ab699932f5fd64efba157049c4863f258e329738529b7e03e2a56da737ca03a1
 Size (dwb-2014.03.07.tar.gz) = 474179 bytes
 SHA1 (patch-config.mk) = d46c1759d6ea0168fcf6c6d4573b6f769a2ae656
 SHA1 (patch-dwbem_Makefile) = de80c402c20d33d085f65e0d54204ef1d7316791

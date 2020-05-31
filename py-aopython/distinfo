@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/31 12:08:02 jihbed Exp $
 
 SHA1 (AOPython-1.0.3.zip) = 752157e87291648ecf6b4f3b789c9496a36d28d9
 RMD160 (AOPython-1.0.3.zip) = 060adf5b3103e3dbbeb8f3a65c093af754ab289c
+SHA512 (AOPython-1.0.3.zip) = 651894436282fa60c85899552a2308efd3252a5b9b41a3f0c07b00d56b390c47c0b28f2e269ef3d8956e22404f7cebb85b6e13cef85cf56893569c6df793322b
 Size (AOPython-1.0.3.zip) = 13443 bytes

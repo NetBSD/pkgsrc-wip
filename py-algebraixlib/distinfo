@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:24:11 jihbed Exp $
 
 SHA1 (algebraixlib-1.1.zip) = 6ea2817d9f87f7345f0f0bb7f6ff2e66b9980800
 RMD160 (algebraixlib-1.1.zip) = 57eb4b92f5bd50a7ea9be38fcb8db2f7e3231346
+SHA512 (algebraixlib-1.1.zip) = 8657cdf08046e7f9ae5faf8fad7307fbddf14e188514fc5eddbc97f0bb8d0c7cd2cdbfbdb9c301d8332c3964249a88c98f13481bdf3a33b264d1364e378146d4
 Size (algebraixlib-1.1.zip) = 136385 bytes

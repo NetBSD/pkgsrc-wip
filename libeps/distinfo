@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/12/29 19:14:53 nros Exp $
 
 SHA1 (eps-1.7.tar.gz) = 94af7a7ddc7f02c1f521ec33e4504be604dcf969
 RMD160 (eps-1.7.tar.gz) = d6723263ff485a0c5e10108ed697a71207fc626a
+SHA512 (eps-1.7.tar.gz) = be7df0d5bce5798afda0573b5d943da7e69e6b99817f4ed6d87e2858e75d7c2408d7fa9942dfc6277db0bedb73cf1f5ca64542d070075dda544cbc695134b1a0
 Size (eps-1.7.tar.gz) = 29913 bytes

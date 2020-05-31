@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/02/26 16:14:20 jgoamakf Exp $
 
 SHA1 (ocaml-typerep/112.17.00.tar.gz) = 437ff0282e9ce3a76eb82e45ed07ba325c4c443a
 RMD160 (ocaml-typerep/112.17.00.tar.gz) = 950b5c0270d290ea8300f176d70d09f1c1c1d383
+SHA512 (ocaml-typerep/112.17.00.tar.gz) = c05b82414dafa0d1f750e48c81ee7f637b5fd30fda65abbfe59bdd87ef1c54657ad540dd108d34905f01fad177f35bb2e82ed5fe04754e2559925f7bc2114472
 Size (ocaml-typerep/112.17.00.tar.gz) = 115452 bytes

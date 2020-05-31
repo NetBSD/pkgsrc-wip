@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/08/25 16:02:47 jihbed Exp $
 
 SHA1 (ncl-2.1.18.tar.gz) = 54e4f1ff4fef52cfd633b467a839e57a2670a397
 RMD160 (ncl-2.1.18.tar.gz) = 10ea2df0e5f2b7aae2eb1ae3b60d555affd167a2
+SHA512 (ncl-2.1.18.tar.gz) = 2c5e10fac76ab7a828ec040dfe5d3fbd147289b191b29bdb47699e2c77bd0c12493ccd38aea7a8324f4b943f4717d7d031e5457b841e77d22b4cea5185d8abcc
 Size (ncl-2.1.18.tar.gz) = 1313547 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/17 20:49:53 yhardy Exp $
 
 SHA1 (rott-1.1.2.tar.gz) = 2c8841934008b1afe704b6b8743d82492def35ba
 RMD160 (rott-1.1.2.tar.gz) = 009cf7ac62ff4d96c69446df8bbbc2cc40e8932f
+SHA512 (rott-1.1.2.tar.gz) = 809a9064fe31c63afccb9a6397ac2c9d4172cdd802b055697cf3b0090ee6a78c9e40b52a4a8df25196489d9a0259304c91e2f84f95413a293bc66192502cf200
 Size (rott-1.1.2.tar.gz) = 749079 bytes

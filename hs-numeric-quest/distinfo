@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/23 14:50:32 phonohawk Exp $
 
 SHA1 (numeric-quest-0.1.1.tar.gz) = e6eca93a142a3ef448fdb8b48a775c1b5bdfcb3b
 RMD160 (numeric-quest-0.1.1.tar.gz) = 8702b13cd81c13a7b914e42349a9c52d6c0ac2a1
+SHA512 (numeric-quest-0.1.1.tar.gz) = 3a24b6919b2d5c264220bc991e8e814a547a6b4b1f4707acb68d018ae3e7fe9086c51cdedd5e505b70a770bd183f60efd22e7f2258bd2fd2eadf07763a5cb83d
 Size (numeric-quest-0.1.1.tar.gz) = 65994 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:33 rillig Exp $
 
 SHA1 (Net-PcapUtils-0.01.tar.gz) = 6bfa7c68f44b58a6e5a42fa2cefafca8ec0e666a
 RMD160 (Net-PcapUtils-0.01.tar.gz) = b9b9a0762a414aa0b311fcdc61d680637c139da9
+SHA512 (Net-PcapUtils-0.01.tar.gz) = 19fa2215f6ee69005c585e7d381738c6a5fdbf6b09267a38014b7d4bd0f604ba21a7b16dd8d4aba20b8e290044c3a6ab1fc6f29070a666d7785a690bac228708
 Size (Net-PcapUtils-0.01.tar.gz) = 4370 bytes

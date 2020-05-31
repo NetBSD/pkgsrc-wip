@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2005/08/05 21:06:17 poppnk Exp $
 
 SHA1 (libvc-003.tar.gz) = 0749401dd30c97d99afe8dd89eb804fa6ab1b81f
 RMD160 (libvc-003.tar.gz) = 450133cab114a4d5da5d27666e541667700d4ffa
+SHA512 (libvc-003.tar.gz) = c2d95f9cdcd902d04c89dcd011467c64df15a158751f519526c925e98fe65833b8cc7d1f54279a415d5de652c9e2a50119cf318975df773bde675cd5d12780ce
 Size (libvc-003.tar.gz) = 334282 bytes

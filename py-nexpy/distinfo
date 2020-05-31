@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/03 16:59:00 jihbed Exp $
 
 SHA1 (NeXpy-0.4.5.tar.gz) = 63710b1a958007f545d86acdf793780bd320c06f
 RMD160 (NeXpy-0.4.5.tar.gz) = 654c2fdd3760d001c681fb0296a5e0ebe507bc40
+SHA512 (NeXpy-0.4.5.tar.gz) = 14ee2bd711c146b12404aa69f31454ba5b0fdc2c9aced067a64003fa618923db1695220b9f05200afb3bdb6fef5c7c404e48536974da7be65e5b98035514fd64
 Size (NeXpy-0.4.5.tar.gz) = 146564 bytes

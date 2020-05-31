@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/13 12:42:59 jihbed Exp $
 
 SHA1 (texml-2.0.1.tar.gz) = f5e4492e6848d382bef6c1d673d0de7ab89e95f2
 RMD160 (texml-2.0.1.tar.gz) = 7caae885681de7de18aa3e23272fa0c61ca36a60
+SHA512 (texml-2.0.1.tar.gz) = 5506f5482a7683eab952e8f35f3013f6fef953511e3d7397f233eb2348e4f24e4a7036355e2b9c04a47c33add0363cc479ef89614fbe191c1a93849da1a33d90
 Size (texml-2.0.1.tar.gz) = 90178 bytes

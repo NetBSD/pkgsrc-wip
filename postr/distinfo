@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/01/14 08:32:40 jihbed Exp $
 
 SHA1 (postr-0.12.4.tar.bz2) = 7dd5e3fa2b7c85ccf215089df85c8afaab7483cb
 RMD160 (postr-0.12.4.tar.bz2) = 9260f973448d70e09a7c896aea449425d3a8aaf4
+SHA512 (postr-0.12.4.tar.bz2) = bc6f30032f71ccafe304a5f961a79050f3617603537b3a6bef72da84a8737b26a4566d04ad22613ce2767f5759944ba04366be0f1e19a64a5ea9cfe93c6d1525
 Size (postr-0.12.4.tar.bz2) = 68195 bytes

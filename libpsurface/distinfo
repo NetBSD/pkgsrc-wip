@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/15 21:58:24 jihbed Exp $
 
 SHA1 (libpsurface-1.3.1.tar.gz) = 713ee4b9ea478671e693f2bf69675f14d44a749f
 RMD160 (libpsurface-1.3.1.tar.gz) = 209f3eec25bc984786908548b4bf5a9e384dfa02
+SHA512 (libpsurface-1.3.1.tar.gz) = c3ab8be90ccc84e418a1d8d768e006efcb3604bbae4566edb9ae204dd1c19b2299370e47efc475ec71bf1dbed0986dc5f66202b7d4197a239aa4652f5c6d7f89
 Size (libpsurface-1.3.1.tar.gz) = 130434 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2014/02/11 20:31:14 jihbed Exp $
 
 SHA1 (shedskin-0.9.4.tgz) = d337488b7072ab0c4c69616af42ef6c0b9fe7db0
 RMD160 (shedskin-0.9.4.tgz) = 73f285f04fd6cea493d19e501fb7dbcec9e45c32
+SHA512 (shedskin-0.9.4.tgz) = 7f6b0630c2be60cb1727ae9a64a67af5c702f7e7be5127ba344ad7851224be2713320a20c2c3097c2f1e83c9d71c2d710b13b5e72967fab65d56fa65653f2cad
 Size (shedskin-0.9.4.tgz) = 358544 bytes
 SHA1 (patch-setup.py) = 0f5c84cf74401c5c9af328cf2c570e90e6771675

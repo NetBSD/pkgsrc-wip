@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/08 20:20:07 jihbed Exp $
 
 SHA1 (siginterrupt-1.0.tar.gz) = 21bb685a0e51adcb4304becc3b30b66e8e17dcc9
 RMD160 (siginterrupt-1.0.tar.gz) = 33b8d1f23c6666bc5c6413731c3d16d726e69f0f
+SHA512 (siginterrupt-1.0.tar.gz) = e7a7839751daccb1a18ef9c51696ac25cecc181392b964d692d40109c8e2f2ad8a69c51cc64363fd282defb195a61d0b666fa3c7a8636b947e526816658d320c
 Size (siginterrupt-1.0.tar.gz) = 1356 bytes

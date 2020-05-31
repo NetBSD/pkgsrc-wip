@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/01/18 21:33:00 jihbed Exp $
 
 SHA1 (etmtk-3.0.43.tar.gz) = e47f1f57952bc66884dd1fdbe8753982575adbad
 RMD160 (etmtk-3.0.43.tar.gz) = d6eb1332cddab487da54d308979088872412be0d
+SHA512 (etmtk-3.0.43.tar.gz) = c6cd6a1cdeb96d0d66c6d1be1dff41429cc1099c134cd10528778bdfd9d2d6f5322a80a03c43c1646fcaece37ca19752d658d81fcb3ef874b8ee58789ced17ac
 Size (etmtk-3.0.43.tar.gz) = 334316 bytes
 SHA1 (patch-setup.py) = 39b209ba7e26dcf124944bb4de0bf83ae6d723fc

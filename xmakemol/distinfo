@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/20 23:43:21 jihbed Exp $
 
 SHA1 (xmakemol-5.16.tar.gz) = 88d588eb5d6f94fa040e68ecdd48ed2b9d2625eb
 RMD160 (xmakemol-5.16.tar.gz) = da4fdbd98bbba7cc8cc40a46a201b10fd2337cb2
+SHA512 (xmakemol-5.16.tar.gz) = e967d992e0c72045022764dee9ec2ffee89f37208a313ff0154351c545cc9466e0c4ce2d07e5568ee693fc48322361c5b4579efc072443445e94f5228988d509
 Size (xmakemol-5.16.tar.gz) = 284962 bytes

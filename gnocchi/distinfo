@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2009/02/18 19:49:36 marko_schuetz Exp $
 
 SHA1 (gnocchi-0.35.tar.gz) = 2c250d8550be838a2217d5c3ff834061ca633378
 RMD160 (gnocchi-0.35.tar.gz) = bafdc9d70ddb96d993ad46cbe86ed11676c78e0f
+SHA512 (gnocchi-0.35.tar.gz) = 64e31273ac3eee5247b1cf62a3358bb56fc9377cc60be570cb513962430a864a24202d71f13f738eef6782e02e0bca596a06cc82d8c534ae58a268d3ce11874c
 Size (gnocchi-0.35.tar.gz) = 335756 bytes
 SHA1 (patch-aa) = 26113ab00ecac975553dbe1bcadabcf1358d04a3
 SHA1 (patch-ab) = 8ac4d8f4a06551c967f22cc2828860b4fa8cb157

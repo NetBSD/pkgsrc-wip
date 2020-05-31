@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/09 08:06:42 uccwen Exp $
 
 SHA1 (clustershell-1.2.83.tgz) = 085d073a6c62997c03bd25d0a64e63eb0dc95d8a
 RMD160 (clustershell-1.2.83.tgz) = eb88e48b75792a2f8e1eb2f8224a11b6883a0c3e
+SHA512 (clustershell-1.2.83.tgz) = 543cd540e8d852325b2f664c539082e0345dc61e0e9d26c2cd815c3ef909b2bab4034835a25f4eba3b8e88cb35f3282b7be378f99f7d93590d038687df9b1423
 Size (clustershell-1.2.83.tgz) = 124135 bytes

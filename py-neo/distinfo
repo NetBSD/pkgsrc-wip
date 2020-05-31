@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/12 21:40:56 jihbed Exp $
 
 SHA1 (neo-0.3.3.tar.gz) = 6b77f46899eae7dc0a12a0f2495c8d5df2551c3a
 RMD160 (neo-0.3.3.tar.gz) = 9c20f781a3d51ea997dcd9eb901235b8567236ac
+SHA512 (neo-0.3.3.tar.gz) = d7fb9a4e7161988b5d8e07204b661bea2f04ad1b6ed0b7dc5afa488cbe2ab53937e2c5fd03e012cd60beadb126c225ce5bbd60081b3b4db8a9ed21248777b40c
 Size (neo-0.3.3.tar.gz) = 1406110 bytes

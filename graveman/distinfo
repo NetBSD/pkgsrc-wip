@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.5 2007/12/02 02:44:31 hoka_adam Exp $
 
 SHA1 (graveman-0.3.12-5.tar.bz2) = 9c099a777314717cee5fb4d6dc640ef0a16235b0
 RMD160 (graveman-0.3.12-5.tar.bz2) = 80e97be9b03ce38a565cd250e177acf420afee29
+SHA512 (graveman-0.3.12-5.tar.bz2) = 6543edac57e99e4fff785b46a84c3a0792d87da0a4ade116435069333e13e20d5fcfb17ad7fe26d1200deb17eac8031c8aad8c824149501a847a986721f317a0
 Size (graveman-0.3.12-5.tar.bz2) = 780870 bytes
 SHA1 (patch-aa) = 1d04cf14e64291db543f8ea4a4c187e1401d505f

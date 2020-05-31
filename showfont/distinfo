@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2014/12/31 14:17:17 thomasklausner Exp $
 
 SHA1 (showfont-1.0.5.tar.bz2) = 203f4e655333723af7b2c47a85dfba8258f22ebc
 RMD160 (showfont-1.0.5.tar.bz2) = 04cef59ac457e661ffea8587b4082a648c7fa5ef
+SHA512 (showfont-1.0.5.tar.bz2) = d90d6d99ca573f2632435ccfd46de606994e3792deb58bab6261ff950481ec71eef032b828da0ee5333d6946c5f54594dfb2dadf930825971d3f4baa5c0ff6fd
 Size (showfont-1.0.5.tar.bz2) = 125618 bytes

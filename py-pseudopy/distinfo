@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/20 10:46:03 jihbed Exp $
 
 SHA1 (pseudopy-1.2.1.tar.gz) = eb12f4afd863e1afa5f3678624a24da403ffd0b4
 RMD160 (pseudopy-1.2.1.tar.gz) = 295fe1e86b025d7f8606b513dfd243bc9dc9621a
+SHA512 (pseudopy-1.2.1.tar.gz) = 02bc50b42f54294456703bf89cf26a50b521785e0a4fdeb5f6a6ddbfb0b9baf25f16a2fabb83085c6f74cebdef7499c8c9e257b5a3ea6e6d992b4a10617a3ce4
 Size (pseudopy-1.2.1.tar.gz) = 7352 bytes

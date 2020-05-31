@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2008/01/07 13:32:39 christian_gall Exp $
 
 SHA1 (fprobe-1.1.tar.bz2) = 0013e7ca55cd7fa42179d3195b3c84315e801495
 RMD160 (fprobe-1.1.tar.bz2) = 109945003626cbb1597455ad2777f53fd590633c
+SHA512 (fprobe-1.1.tar.bz2) = 35fa4bedf2c615093b6637630322115e12f005bc43186b86c55c6bdc76ae5308dd31e1d05632e26e07a30fba88d76b9acc98632bee4f372edcf9df5da3e32210
 Size (fprobe-1.1.tar.bz2) = 104358 bytes
 SHA1 (patch-aa) = 2e0ca73a42218af987e1474a58ab6f7e95c5b502

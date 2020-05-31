@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2010/12/24 13:16:24 noud4 Exp $
 
 SHA1 (rssgrab-0.6.4.tar.gz) = 4d0266190dbed182676244bcc6e7d93dcdc892d0
 RMD160 (rssgrab-0.6.4.tar.gz) = 23f6dbf82e9ed7eefd0bf533f7ea45a18be6fe4d
+SHA512 (rssgrab-0.6.4.tar.gz) = 0b91660004ff5934ba415bb5fe1ed62f2aacb3f5e6741010365f17eeecb6c51a3dafd0705e26208b535a8fc72207ba3ae31d1f21ddbb4a7f66eb15814e90eb95
 Size (rssgrab-0.6.4.tar.gz) = 168967 bytes

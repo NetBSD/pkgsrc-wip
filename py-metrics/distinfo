@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2015/03/14 17:49:21 jihbed Exp $
 
 SHA1 (pymetrics-0.8.1.tar.gz) = 64e9894ea204f146a8c9163830c59ae604a5645c
 RMD160 (pymetrics-0.8.1.tar.gz) = 81dc9f509141a60a12bd870f70e386fb1c31af96
+SHA512 (pymetrics-0.8.1.tar.gz) = 971ff2c00fef38cbd8b7b105d021447213cf4581633597ffa8e963cf42b0400f48febbb6d374e95be199fdcf6c9640245141024c9fc14e5d0e6840f95dfac49e
 Size (pymetrics-0.8.1.tar.gz) = 135819 bytes
 SHA1 (patch-setup.py) = 76f49a88101d31b3c69b58dbba15878aac698321

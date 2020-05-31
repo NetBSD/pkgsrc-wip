@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2011/12/28 23:40:09 jihbed Exp $
 
 SHA1 (d-feet-0.1.14.tar.bz2) = 8026d26af2ef6f5f943b28b38af7cfcc2279cb5f
 RMD160 (d-feet-0.1.14.tar.bz2) = 90f3986081fee1b60e5428699404c0bb7482b9be
+SHA512 (d-feet-0.1.14.tar.bz2) = 6bd45e98d790e02d4a222a9f6a6ea7d4aed92e73655befc9d4a2d21aa52c782687a3093c4f9d2b9ce92aaf194b339644825878006539b12fad601e6ef1f443e3
 Size (d-feet-0.1.14.tar.bz2) = 117737 bytes
 SHA1 (patch-setup.py) = e69310a7a10d29132d8190e2bb66f6f422076879

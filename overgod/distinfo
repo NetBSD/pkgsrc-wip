@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/07/18 15:25:55 thomasklausner Exp $
 
 SHA1 (ogsrc10.zip) = 3656eabb287d9f8ce25a6ba9af0c9e3cbeff20df
 RMD160 (ogsrc10.zip) = df872c4e8f61741c7003c09118fb617daf81418a
+SHA512 (ogsrc10.zip) = cf9a17be43d9787fc42f744cb23551d39a07d7ee4bf19480f69f538241b74f57c72a43d2c8912c5f6e973eafcf94c7a971ef7056869b1493f9da20c122916bb2
 Size (ogsrc10.zip) = 1774796 bytes

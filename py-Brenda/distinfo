@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2009/04/17 23:08:54 jihbed Exp $
 
 SHA1 (PyBrenda041-tar.gz) = 6f837f3b3a2bce3706ffa3680052983d17f83e11
 RMD160 (PyBrenda041-tar.gz) = e17cc970124fb13a4f7bf320c6927796a53124e3
+SHA512 (PyBrenda041-tar.gz) = 19ea2f6366612acb548048b0bc5db1a50ea386f724658ebab1fbcf8aa38cf8df3996612425d9e46331516480d683647d89eef09225a650684b472e6dda9e1ac0
 Size (PyBrenda041-tar.gz) = 14437 bytes

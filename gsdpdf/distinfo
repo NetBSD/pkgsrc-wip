@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:25:06 jihbed Exp $
 
 SHA1 (gs2009code.tar.gz) = c9cd997276b4d0d978d8a8a729a721766c137d1e
 RMD160 (gs2009code.tar.gz) = 2c900f47a1c0683ee00d199b740d3ebf40c63620
+SHA512 (gs2009code.tar.gz) = c335e2012d0cba4f35358932cb882fad2e52a735771085278be7c576beac13a4b22d2d93d7a94df3682f8f869e13eab3320d7c6228a4c8e78a6e10ca2dca1760
 Size (gs2009code.tar.gz) = 7126 bytes

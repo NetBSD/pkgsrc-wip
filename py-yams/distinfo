@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/19 10:04:31 jihbed Exp $
 
 SHA1 (yams-0.39.1.tar.gz) = 7d9181a4698a802d9f23ca9179832d8efd72d370
 RMD160 (yams-0.39.1.tar.gz) = 2851e80b4783aa22a22ea651c41cedfe01fd8caf
+SHA512 (yams-0.39.1.tar.gz) = 80b34a79e8c1c82903f8c179da0c25fa857b297306885c7fc5ae89b3595ef4e44491e8ce80ab412674fdfe7cef4cc3a8b66276ec5ad88bba2d3915f1ab0a45ac
 Size (yams-0.39.1.tar.gz) = 77910 bytes

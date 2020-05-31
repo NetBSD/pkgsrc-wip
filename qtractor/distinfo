@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (qtractor-0.7.2.tar.gz) = f8afe4fb4c763ffdaa07701c692c281ddfe5e679
 RMD160 (qtractor-0.7.2.tar.gz) = 86bf1f9bfc01161e165bfcb2d6b372a18a8e1b45
+SHA512 (qtractor-0.7.2.tar.gz) = 3af60cb88f4ce6105dde4a201d0cbb43e694a7e64ecf0558bfa7cd1fa2315e9d12d148524b13f5883e70e10c8eb6b16a3893305546927d9e28fffe43a0e99a08
 Size (qtractor-0.7.2.tar.gz) = 1452910 bytes
 SHA1 (patch-Makefile.in) = cbf533494f8b78bf40605b72f90288b38e61e025

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/12 23:29:43 jihbed Exp $
 
 SHA1 (Pyevolve-0.6rc1.tar.gz) = 8884e6f712f6f96dfc0112cb46a9b361d33eb4b1
 RMD160 (Pyevolve-0.6rc1.tar.gz) = 56a2b5ac007a6187d38b3d970fdac8169a767427
+SHA512 (Pyevolve-0.6rc1.tar.gz) = 428cbeac518ff3d9599d0a4e78a65bed97edc233f2ed50964ee61382135d10ab3c2e921c4a80f01361ebeae3de0ac43a121f0af89fada482f411959085b22380
 Size (Pyevolve-0.6rc1.tar.gz) = 2362561 bytes

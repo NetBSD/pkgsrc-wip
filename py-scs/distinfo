@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/01 22:06:44 jihbed Exp $
 
 SHA1 (scs-1.0.7.tar.gz) = bfe012538e4192a705c3a73dfe3ebe64dcaae4ae
 RMD160 (scs-1.0.7.tar.gz) = d2f905d15beefd42d934ca71f522a309ebe887be
+SHA512 (scs-1.0.7.tar.gz) = 2fbad02735584da665fea627d52a6f2b72cf96bddd09c35e3427184e211e574eccae3ec96c1085e9816f835e280d232a4734a8f3add85f6061153f821a34cb08
 Size (scs-1.0.7.tar.gz) = 276014 bytes

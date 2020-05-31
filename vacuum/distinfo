@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/11/18 13:22:55 thomasklausner Exp $
 
 SHA1 (vacuum-0.7.tar.gz) = d8ef2151fb82e305ff0f7692e9c0ebfde2ce4d9e
 RMD160 (vacuum-0.7.tar.gz) = 2f306f80d5eb63fe76844d1522b1ed860328a307
+SHA512 (vacuum-0.7.tar.gz) = 606dcb50eb2e4a635fb581eba888a5036af7b564a7e6e75b7b70160ea621806c7478bde8db52c0964a833e20f61a42734aad920ffb80386ae0c142ec11f479bb
 Size (vacuum-0.7.tar.gz) = 4925239 bytes

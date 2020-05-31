@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/11/30 17:57:40 jihbed Exp $
 
 SHA1 (gaphas-0.7.2.tar.gz) = db546771c2de14bff834758f325f814236b85772
 RMD160 (gaphas-0.7.2.tar.gz) = 1c5322df74a896bc3494fba40a7564bfa6c6167e
+SHA512 (gaphas-0.7.2.tar.gz) = 6f8b9fe7617316312de967672aa9d2011a22abae25ac6069f689d5864343cae6abcaf2a4f69a78a1e66b92a2aecf46ca42652da28e90b96d5915efc0da6107ed
 Size (gaphas-0.7.2.tar.gz) = 335643 bytes

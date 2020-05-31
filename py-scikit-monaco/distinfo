@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/05 20:03:52 jihbed Exp $
 
 SHA1 (scikit-monaco-0.1.5.tar.gz) = 0cb7c98b2fcf21887c7248818798b17d770cf1d8
 RMD160 (scikit-monaco-0.1.5.tar.gz) = b71d4ee25a2eae55da8cc3adfcdfb6dbde1a35ed
+SHA512 (scikit-monaco-0.1.5.tar.gz) = ed52b4cc9da1f51f58354faefd0a2ce88e52b39cf8ffb45da9bc232b28bbcb90c7f75bc58eab2ae0c59bc9a615b8a756ff32e85c6b2c780af8679dec4f067624
 Size (scikit-monaco-0.1.5.tar.gz) = 667112 bytes

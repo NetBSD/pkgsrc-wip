@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:27 rillig Exp $
 
 SHA1 (manatee-1.8.4.1.tar.gz) = 5e8461d8240561a6d5d5ef6e51c640f5113a62e3
 RMD160 (manatee-1.8.4.1.tar.gz) = 0a94e4112ce96609925bd022fad51f2b062698f3
+SHA512 (manatee-1.8.4.1.tar.gz) = 4de5cc8e11f4933e284cf197ba30e8e89e68535ea74ddb4b613fe8a845071dcf27ad552fbe85c6e8bbabdd6b2e5efb9dfe179dc3347dd0f18506fcea52da604b
 Size (manatee-1.8.4.1.tar.gz) = 1221043 bytes
 SHA1 (patch-aa) = 67fc8d55a6a61da5d3c5c7bbdf58ec2a0342da5a

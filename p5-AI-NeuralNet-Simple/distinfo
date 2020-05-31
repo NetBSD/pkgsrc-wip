@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/02/03 15:38:43 athaba Exp $
 
 SHA1 (AI-NeuralNet-Simple-0.11.tar.gz) = 214eec6f3793b32c39c061e6f0f1d128bb28b341
 RMD160 (AI-NeuralNet-Simple-0.11.tar.gz) = a7acd8c081b5ef3481d3c23b880fb94789e2e748
+SHA512 (AI-NeuralNet-Simple-0.11.tar.gz) = 873a7b91a49bb3ebab0e7c8cfa90c4c23fd1905ff6c89667cdfa4cccde9048be606ba619cd49049468cfd6063938489e38b30aad96e932110d25dae2e86ad6ac
 Size (AI-NeuralNet-Simple-0.11.tar.gz) = 18503 bytes

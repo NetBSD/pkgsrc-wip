@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/07/12 15:55:52 phonohawk Exp $
 
 SHA1 (rosezipper-0.1.tar.gz) = 2c292b3eb18452d0a7f3ec2e3938946ff176959f
 RMD160 (rosezipper-0.1.tar.gz) = 4a8e7aa77d0c7a73e5ee13f433f731d70b991088
+SHA512 (rosezipper-0.1.tar.gz) = c32a6aca2a645293b029581b602f40680613acff76fa13c6b353153aa2ce93862371ff18fe8d085516d52b8e91e8d7f402109631bd9d6d088ca4f28b464ebdcb
 Size (rosezipper-0.1.tar.gz) = 3290 bytes

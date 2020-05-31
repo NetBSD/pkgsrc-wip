@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/01/30 08:34:45 noud4 Exp $
 
 SHA1 (transaction-1.1.1.tar.gz) = af22af9e737dfdc59627b3686aead6dbc199bc1d
 RMD160 (transaction-1.1.1.tar.gz) = 29bb6d288dc22ea0a70e04d8150f13af69efee9d
+SHA512 (transaction-1.1.1.tar.gz) = 6b24dd3d10fc7aef3336d9b599f275b67e59259fb0ecf22e015667134ae5779673cebae3d34953d146ab20567187688178efaadea861a9730e18f7f133132c38
 Size (transaction-1.1.1.tar.gz) = 37391 bytes

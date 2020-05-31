@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/02/10 09:16:03 othyro Exp $
 
 SHA1 (vlevel-0.5.tar.gz) = 2ff3f6a4d8342751e10492912522d039ea940fa0
 RMD160 (vlevel-0.5.tar.gz) = de2d7cc9f5cf669d36a84b692bc2b51af3c1a3ab
+SHA512 (vlevel-0.5.tar.gz) = b84a989f7493f6f008134408fcdc235980c2ef71069125399c67a6144a6f86863d795f1c7b8c10ac21d126e2e819ba117578f3da9bcac29025cfc6580ff3e8f4
 Size (vlevel-0.5.tar.gz) = 25873 bytes

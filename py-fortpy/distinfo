@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/08/06 21:34:53 jihbed Exp $
 
 SHA1 (Fortpy-1.1.1.tar.gz) = d70378f46d65cce6b910b7b893583b4d8e6fcd28
 RMD160 (Fortpy-1.1.1.tar.gz) = bcc19215f9f40960cf6d05d5d182092e9c80a779
+SHA512 (Fortpy-1.1.1.tar.gz) = 98a5781e7425b071e3bc11e4bcdf99f3ed6edf1d2c4d78d97cdfd957e301f68befab6a7ba92f964d2ef0ab77ad5c0439730f01ed1ad9d8dbcb9c30caef61ec5c
 Size (Fortpy-1.1.1.tar.gz) = 397340 bytes
 SHA1 (patch-setup.py) = 27140325fec1e53207a234fb755142833a47e644

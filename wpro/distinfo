@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/10/12 22:18:44 smoppy Exp $
 
 SHA1 (wgetpro-0.1.3.tgz) = 22f35a84e5c202b6b1bf87f6ddd5f48176e7b19f
 RMD160 (wgetpro-0.1.3.tgz) = 0686ae0b5237d1d48418c3e0d794c26c6bc3e120
+SHA512 (wgetpro-0.1.3.tgz) = 7b343629e81ca08696cd96d1866a46670b20c711d969c9ba77ac9828eba46cc4e49c6b642abb561554031d32e6a5c9233189ea1d15eb633670b884822aaf171e
 Size (wgetpro-0.1.3.tgz) = 1005027 bytes

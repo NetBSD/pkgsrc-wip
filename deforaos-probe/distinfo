@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2010/04/15 15:54:57 khorben Exp $
 
 SHA1 (Probe-0.0.2.tar.gz) = 4f5eeb31cf9af20f60799445fc88bf887f21d15b
 RMD160 (Probe-0.0.2.tar.gz) = af3d8232d49f718e5a271891f327a5a2ea543d84
+SHA512 (Probe-0.0.2.tar.gz) = 2ae49360b57d19b0269d346f012c36ef24b6233ae4efd180441aac351bf2edbee369b7d69f1cef1592a021ab725b0e2a8accc103cb7cdaf7e099e6136bb20af1
 Size (Probe-0.0.2.tar.gz) = 22530 bytes

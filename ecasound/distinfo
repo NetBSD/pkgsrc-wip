@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2007/09/06 22:20:16 thomasklausner Exp $
 
 SHA1 (ecasound-2.4.1.tar.gz) = 51bd39684d3087d1ddd706f25c8b3405020aaa8e
 RMD160 (ecasound-2.4.1.tar.gz) = 63ffeb84f81795f3cc85ede8c0526edfeadb4af3
+SHA512 (ecasound-2.4.1.tar.gz) = 82a27ff95ea88f25e9791f14ae4f6d3e4ea2af8c50b648bd9c5503b194c3955959274d14ed8bcaeabcede5d4d21d74c1fac26660f1017d069141901cda9a9223
 Size (ecasound-2.4.1.tar.gz) = 1103065 bytes
 SHA1 (patch-aa) = 84a870e58230361128227bfd9171d55d4aa3fad6

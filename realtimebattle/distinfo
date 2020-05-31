@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/07/21 23:56:25 poppnk Exp $
 
 SHA1 (RealTimeBattle-1.0.7-Std.tar.gz) = c5dd69aa7401220113f2f0612e8b45c9102bdd54
 RMD160 (RealTimeBattle-1.0.7-Std.tar.gz) = f450b1eb00bc7406d375e47394ff05d0b558e74e
+SHA512 (RealTimeBattle-1.0.7-Std.tar.gz) = 12937c234745466831bc54113ad6078c4062d7521797f36b1443532d499d4ae24d8bb3000ece6eff84f7b6e1ed9e98d489d46f3b2a5b005d61098ca16a66363d
 Size (RealTimeBattle-1.0.7-Std.tar.gz) = 574676 bytes

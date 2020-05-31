@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/03/10 20:17:14 kuli0020 Exp $
 
 SHA1 (Catalyst-Model-DBIC-Plain-0.02.tar.gz) = 7ce39e476b6d5d37be234d64485f07e7aa2200d0
 RMD160 (Catalyst-Model-DBIC-Plain-0.02.tar.gz) = 23410c692f7224f589e7100af4415907484403f9
+SHA512 (Catalyst-Model-DBIC-Plain-0.02.tar.gz) = ef0bded6028f6cdfd0afa9f0e84e269e53f0c1749762dcddb559377cbbfca8119b170a0a30a56fe1616020daed70503a3a146f02527b8bc78d577affec00158c
 Size (Catalyst-Model-DBIC-Plain-0.02.tar.gz) = 2463 bytes

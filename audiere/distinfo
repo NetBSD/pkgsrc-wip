@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2012/11/29 14:22:55 ryo-on Exp $
 
 SHA1 (audiere-1.9.4.tar.gz) = 3219f1569ff7f2f754570ddc903d65e9a56754b9
 RMD160 (audiere-1.9.4.tar.gz) = 105fbc74b52a60f73afa029895030c0a1ddc6739
+SHA512 (audiere-1.9.4.tar.gz) = 08ac0f01145a9d368d28d3e5da0b88cbcb77e923f5f95c84fa508fadd2ec6f0450dbcf20fe796acbebf1ba54881236db2b4a3d1e7d15ef4e5fa1f1eb6f92853b
 Size (audiere-1.9.4.tar.gz) = 453279 bytes
 SHA1 (patch-src_audiere.h) = 51a4f53c82d9339dcf3840e3dc58deec1d793862
 SHA1 (patch-src_debug.h) = aae838e6e2bb1dec6c6ea1c3924aa40e73f9c1cc

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2014/01/31 19:42:43 jihbed Exp $
 
 SHA1 (PySAL-1.7.0.tar.gz) = cf7b8823f8a9f187c333f1e75a5bae58f21852c5
 RMD160 (PySAL-1.7.0.tar.gz) = c0e197a5f3a311b48b38131b764bf927d666f9db
+SHA512 (PySAL-1.7.0.tar.gz) = 93b9de5793f54fcbd5167481ace42f30fcb58668c12420c418e7af7ca12bf9569bba1dcfb52dee77683def9a18219f20cbae7be456ab52aad29b2e9e68c452df
 Size (PySAL-1.7.0.tar.gz) = 4633688 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/01/20 23:02:46 jihbed Exp $
 
 SHA1 (rdoupdate-0.13.1.tar.gz) = 1af049a3c459fde31ee94dd690b961a655a1e4ed
 RMD160 (rdoupdate-0.13.1.tar.gz) = 788af94bd391bc524535ba002f9d0d1ec8489564
+SHA512 (rdoupdate-0.13.1.tar.gz) = 4b6b8106ceb51c1b30683074b57eea1b5db263e2d0698910b9a4306920b082b25e29acce23d7f3af77fc282ea703ca4070a349dc2c04fb1d364f4c2c80cfbd2c
 Size (rdoupdate-0.13.1.tar.gz) = 13522 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/03/24 20:41:42 outpaddling Exp $
 
 SHA1 (instant-1.2.0.tar.gz) = b9523ce3b7e5370b7a20081fa2672f0b8aecea09
 RMD160 (instant-1.2.0.tar.gz) = c64471077f1d9295bb0adab33c300eb21794f94a
+SHA512 (instant-1.2.0.tar.gz) = 574f2e56ea14e19928d53f46b781d2e77fd11dd1bb3c84e38466977999b03028a9780f1f3888084484feef2fe42e40b7a500eeb35af360034247fcfe019b86eb
 Size (instant-1.2.0.tar.gz) = 125833 bytes

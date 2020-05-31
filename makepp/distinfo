@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/19 16:40:23 keckhardt Exp $
 
 SHA1 (makepp-2.0.98.4.tgz) = e34940968da49b62c25e73303653ab63b3c6be10
 RMD160 (makepp-2.0.98.4.tgz) = 7f1b889bc6ffb884b23c0fb1a19faf12c5a4ec03
+SHA512 (makepp-2.0.98.4.tgz) = 1f98c801d82bdb5d2d7e673d73da0f3b6f85a15b4043e6fc8ba8df07820c9e4e405bdc6589608d83da2c863321a07ba711246c199cd81aa5ab94fd4314ee41a5
 Size (makepp-2.0.98.4.tgz) = 677383 bytes

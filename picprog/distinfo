@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2014/08/23 23:07:16 leot1990 Exp $
 
 SHA1 (picprog-1.9.1.tar.gz) = 7956eabb6ff9a8427ad65e3186ef17a172c31620
 RMD160 (picprog-1.9.1.tar.gz) = 63293485f27e88a6de684bc10bbeb52c85681a53
+SHA512 (picprog-1.9.1.tar.gz) = 1f24c372aa149d86dd4778904f0abb782510168ce36676b820a5b675f53a7207f62cdcb374c8ec2c60fc51fdfd5780ad9f8f464365403d3d2232187dade91887
 Size (picprog-1.9.1.tar.gz) = 76452 bytes
 SHA1 (patch-Makefile) = 81774a72092ae41343095ab9e87ab6c44a623b1b
 SHA1 (patch-picport.cc) = c8472c19dba42ad95d72f4a3d63e3cebe6c6f102

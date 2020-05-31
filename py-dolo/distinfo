@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2014/05/14 21:57:06 jihbed Exp $
 
 SHA1 (dolo-0.4.9.2.zip) = 9b4555dfa215324f706cf772f09790569438c125
 RMD160 (dolo-0.4.9.2.zip) = dbe94d4c7a12769cd7603b05d21e143a930b171c
+SHA512 (dolo-0.4.9.2.zip) = 04870d220575e77a0eda7b6e8ad17330423dfee774dddfaf1a9f3fdd505af028b80fe45950195b78ff18debfd2bb6edd63f4eeceac6ca90338529dc97cc95876
 Size (dolo-0.4.9.2.zip) = 121429 bytes
 SHA1 (patch-setup.py) = 6aff8cddfaf05fefbf41bedd2dbc06cc7eab50e8

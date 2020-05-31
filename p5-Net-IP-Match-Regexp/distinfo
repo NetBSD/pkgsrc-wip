@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/01 12:57:08 udontknow Exp $
 
 SHA1 (Net-IP-Match-Regexp-1.01.tar.gz) = 062484cd6cb0f19602d1301a7a56a621c33b7594
 RMD160 (Net-IP-Match-Regexp-1.01.tar.gz) = ce046da3066853cb113325eb2a6f8ba2743fbea6
+SHA512 (Net-IP-Match-Regexp-1.01.tar.gz) = dd30c5933db0ce4421a1bf1e339a436dd75008b6847c982bc3623f24ab9203fd3e5a1482982e0b9ec66df71024007daaffc0a991e11afe37293352ccb1dfa791
 Size (Net-IP-Match-Regexp-1.01.tar.gz) = 12265 bytes

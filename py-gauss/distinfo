@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:47:56 jihbed Exp $
 
 SHA1 (pygauss-0.5.1.tar.gz) = 58a86c5e50b919bdbb2fba172a400d263d88866b
 RMD160 (pygauss-0.5.1.tar.gz) = f9b42b44c359835543ca66d622d2d13bfef41781
+SHA512 (pygauss-0.5.1.tar.gz) = 54d1b3def326f0d3beee98846c1d02ff5d184ad9d8fbd387d0d618a983c7c90fed762eccfd43f638d8a4f2ebc05566e3af60b8fb365c518923f061d03e4fe58b
 Size (pygauss-0.5.1.tar.gz) = 4869731 bytes

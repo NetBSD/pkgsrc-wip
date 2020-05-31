@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2014/03/25 07:57:36 realzhtw Exp $
 
 SHA1 (rippled-0.23.0.tar.bz2) = 3802d8acda41ebefaec292dc963d7ba053774ff8
 RMD160 (rippled-0.23.0.tar.bz2) = ed030771472c7430ef2b8c45601d094b171dee62
+SHA512 (rippled-0.23.0.tar.bz2) = 75dd59217376a6c26b4e262544c538e51a4e737f1e10033173f7f1f1eea60dffa04e41a5bb2e80f9e77ecc13fbd19afcf56b2eab700ed0e30df71de7289cce77
 Size (rippled-0.23.0.tar.bz2) = 4966223 bytes
 SHA1 (patch-SConstruct) = d6f683a46c2639a279eeca2052e41034a4578286

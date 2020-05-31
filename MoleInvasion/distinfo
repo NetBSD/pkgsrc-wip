@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2011/05/14 22:28:47 ryo-on Exp $
 
 SHA1 (MoleInvasion-0.4.tar.bz2) = 2a4c6c34e57fe9df51fed02fbd0f955d0490567b
 RMD160 (MoleInvasion-0.4.tar.bz2) = 6075fc2947e0811b46b7f15024f2ec8684122bab
+SHA512 (MoleInvasion-0.4.tar.bz2) = e1d661758391c24b9daab8ba183a265b77f4b2454c8a55f8405b63a78e040491d0c1421a64736a590a574c364e43a8989ef1b958fa565419938d0c8daadbe03f
 Size (MoleInvasion-0.4.tar.bz2) = 11213919 bytes
 SHA1 (patch-aa) = 4bba2d4fb92c30a550edcb9fd2e7f72be7cdc49f

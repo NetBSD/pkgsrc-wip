@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2008/03/08 19:57:00 dhowland Exp $
 
 SHA1 (mtf-0.2.1.tgz) = 6b4deec089ab87a8bab7409b6860ac1de6a1a7f5
 RMD160 (mtf-0.2.1.tgz) = 70a9477d0367e742c51e7d968b16791945b882ad
+SHA512 (mtf-0.2.1.tgz) = 90517d3cd4fd7ece8b76cb83a97e2069f50dfa94efbcabea20d040e3a27953f66432ee092e33b58636f0cf1f206635b2800a2239d17f257830f8237da42f8817
 Size (mtf-0.2.1.tgz) = 24188 bytes
 SHA1 (patch-aa) = a27f72f23ad84ba82b05d1d7e65b4814a933b965
 SHA1 (patch-ab) = 6803e5443915ecd1c64930da5a8a91f9a4b8750f

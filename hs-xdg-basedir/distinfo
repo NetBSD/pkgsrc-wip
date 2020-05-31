@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/07/08 10:03:04 phonohawk Exp $
 
 SHA1 (xdg-basedir-0.2.1.tar.gz) = 60aa1e37b64c855c24e32c86841a95bd19b80966
 RMD160 (xdg-basedir-0.2.1.tar.gz) = 24ff7f240904b5d447d264b42faca154b73d7901
+SHA512 (xdg-basedir-0.2.1.tar.gz) = eb40c0e7bbacac8f08334860f9706e4de4b27faf61e3f48a5c71ad117ae80df1c94e825ae85d65b26dc2410bec734d1868533f7dbc3af0c03a1475e4f0dfe505
 Size (xdg-basedir-0.2.1.tar.gz) = 2555 bytes

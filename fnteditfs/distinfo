@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2007/02/15 17:41:35 lkundrak Exp $
 
 SHA1 (fnteditfs-1.1.tgz) = 38119faba96d0dc4042b2ca32ef10ce8f9056d9b
 RMD160 (fnteditfs-1.1.tgz) = 77584822b73cb908e8c8b7b25a2b727819acd748
+SHA512 (fnteditfs-1.1.tgz) = 8ebcc3b21050f052686342459989640adacf1afabf780201516dfb95c0979f0c2e5963235a9afa8bb267941731fb13c85efa07c57897e9232cc6436f8ed72944
 Size (fnteditfs-1.1.tgz) = 6160 bytes
 SHA1 (patch-aa) = d28dbe49e4a31f8e39d8bce0e08d72f46310c539

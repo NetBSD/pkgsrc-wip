@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:38:49 jihbed Exp $
 
 SHA1 (csmith-2.1.0.tar.gz) = 2c3c1f5f5e4283af4c835c48dbdaf9431623c45c
 RMD160 (csmith-2.1.0.tar.gz) = 2e0319b85adc02538db29a73e3a95a0f912c7ca2
+SHA512 (csmith-2.1.0.tar.gz) = 56a01f158ab3e1a21b60d9971e0c7e0e81aa57db8530efe8508d2ead209ef3524529c85fbd29cd181e02ca8592b188158d4369c7394644f2054ba0a635fbd063
 Size (csmith-2.1.0.tar.gz) = 575381 bytes

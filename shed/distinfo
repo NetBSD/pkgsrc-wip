@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2007/02/16 11:55:20 lkundrak Exp $
 
 SHA1 (shed-1.13.tar.gz) = 09421d55caa1cb3b3becc8a58a8fbc63a2399d32
 RMD160 (shed-1.13.tar.gz) = 6b6445a2da3df151673c6fa16602d7ad5d236e2f
+SHA512 (shed-1.13.tar.gz) = abea90115820c50bba140a486d74e28cd20704905bb868aa75b94a346faf8d1a0e0739f9558131cff9c5250ac9ef2505cc375f2bdf24c75b6ff464ba767c1832
 Size (shed-1.13.tar.gz) = 78699 bytes
 SHA1 (patch-aa) = de42c2d9974f3305c6824bb802efb2d58fcb0749

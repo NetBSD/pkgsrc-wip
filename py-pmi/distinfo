@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/05/16 15:52:28 jihbed Exp $
 
 SHA1 (pmi-1.0.tar.gz) = dbd137a8f1bcba38ac68ee63ec55c77e4f0b5015
 RMD160 (pmi-1.0.tar.gz) = bda19a5ccf2caa72709c63ce64b44fe306762120
+SHA512 (pmi-1.0.tar.gz) = 5453bd8ce014e3bf7643e6e834be27093635ab99f988fb141e1495ca965c082b5ab654ecffc5cdb281d393d1c83eef990483bd0b0c13e74c5d8b8b08adb046ea
 Size (pmi-1.0.tar.gz) = 23882 bytes

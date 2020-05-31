@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/28 20:39:28 jihbed Exp $
 
 SHA1 (smcp-0.4.tar.gz) = 8f6c9513aff6fc30095c9f0a978b218693a50cda
 RMD160 (smcp-0.4.tar.gz) = 3b5319eceb01710f20da1aab3ba055fac120ff40
+SHA512 (smcp-0.4.tar.gz) = 2d18efb0d0de83fa4be91a0cd883a7c916e366672adf4a58cbecbee2a9a886567f26b7308448ca9a1b500a219a8761bc5d64e72b4c95dac587be7b9394834793
 Size (smcp-0.4.tar.gz) = 915123 bytes

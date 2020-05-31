@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:16:29 jihbed Exp $
 
 SHA1 (ruffus-2.2.zip) = a1e21cdeaa5fffcea3c5c9c484302a23392c6c58
 RMD160 (ruffus-2.2.zip) = 564e8b57d7f52f93418e666bc6f765e7d90eeba0
+SHA512 (ruffus-2.2.zip) = d068c730d9f6b6032b2a91e184d830af0da2e9431c0ec0247b6e79ea009fb92327971164702ac615e0b1c76bcd57916ccb11b09e4db8c58deeb3b5493c4fe0ba
 Size (ruffus-2.2.zip) = 5946177 bytes

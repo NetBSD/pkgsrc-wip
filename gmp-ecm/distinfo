@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.4 2009/03/25 22:46:04 athaba Exp $
 
 SHA1 (ecm-6.2.2.tar.gz) = 4e94a7356f30a763cdbc0e2c5858adfb52335142
 RMD160 (ecm-6.2.2.tar.gz) = dde1429667f39c3cca52498a7f6d0201206c62d2
+SHA512 (ecm-6.2.2.tar.gz) = 00b059a02c2bd2bd693241fd5de9c0ca2fdb09c1ea6c4ddf3f7e70f766de8b1fe0738241ce92b0b6bfaaa713d07e9bcc36cd6705f1b34c69c6149cbb770ae611
 Size (ecm-6.2.2.tar.gz) = 754417 bytes
 SHA1 (patch-aa) = 7af00c54af3af45d2769dcd80980eb9a2796caed

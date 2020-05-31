@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/11 03:36:33 phonohawk Exp $
 
 SHA1 (pymigemo-0.4.tar.gz) = bcd193c77af0dd7cfb50e6ede35d257a01afb219
 RMD160 (pymigemo-0.4.tar.gz) = a8bab218411d1b3c7b7b1e5bfe4a9a1d38efb304
+SHA512 (pymigemo-0.4.tar.gz) = 6a414ce49957b2a6ee095581d530736cd398b5e98b3af276450f57ed1b1a4b490305a604ca2c2e26794963e3bd004b1398660a5b8a06a12898641261de69236a
 Size (pymigemo-0.4.tar.gz) = 7039 bytes

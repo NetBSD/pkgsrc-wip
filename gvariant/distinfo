@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/02/25 12:54:20 jihbed Exp $
 
 SHA1 (gvariant-0.tar.gz) = bf5cb1ed61a973c7aa95a2ae36445e9ab2bf83d5
 RMD160 (gvariant-0.tar.gz) = 653c50e4083812998fbc0c190f5bd755ac44dd52
+SHA512 (gvariant-0.tar.gz) = 1cd1ba57ec258a92cc24e0d9c974e5624d0a7ad4227fd30f40fd867bb075ac037e61a4b2f00206f9069682f8dd950c2a39c3b0be4fb5ba8878c98512fdb3d971
 Size (gvariant-0.tar.gz) = 465970 bytes

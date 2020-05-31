@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2014/07/15 13:38:02 jihbed Exp $
 
 SHA1 (chemeq_2.12.orig.tar.gz) = c937844efc24f8b94133180f1b9f904647ca1520
 RMD160 (chemeq_2.12.orig.tar.gz) = 83478506478176af349c54d2037dd6d3c00affbf
+SHA512 (chemeq_2.12.orig.tar.gz) = b1b3cb5534b5e91dc33b631f32047105c1181b107fc0662efbc2cc8b23571237eeadda35290e5dc880b7e91316ad3e4d635a277384b8abc473ffe516776550fb
 Size (chemeq_2.12.orig.tar.gz) = 484198 bytes
 SHA1 (patch-aa) = d503a443bcaa6352105c180698ce7f593a086dd9
 SHA1 (patch-ab) = a5c7c31d932b650cdcb3c0e1b91d6777c985c144

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/09/02 20:50:04 kuli0020 Exp $
 
 SHA1 (PluceneSimple-1.04.tar.gz) = 8e78a0d679656d88b596dcd8d6f3b03690ebdfc4
 RMD160 (PluceneSimple-1.04.tar.gz) = 3f49973cf01d24afed75a9f946820a4fc6801ac8
+SHA512 (PluceneSimple-1.04.tar.gz) = bf0794c077a21a067f0e400993635b57fed83dc0dd0f4f1cb1d4565f69a9ff10433edd6fe970961d27c9243e57fe5fc779c0a87ecdf904b1a704e859bff537c4
 Size (PluceneSimple-1.04.tar.gz) = 6133 bytes

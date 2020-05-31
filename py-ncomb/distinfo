@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2011/12/29 00:03:18 jihbed Exp $
 
 SHA1 (pyncomb-1.0.2.tar.gz) = 30de3b863b88a767fc363be86e1319bfeb0d04cf
 RMD160 (pyncomb-1.0.2.tar.gz) = dde31b87a4926d68d98ffb33f908de010dc9984a
+SHA512 (pyncomb-1.0.2.tar.gz) = e167e42508676cf3a477885943e5aa689bfdc6e9fdc9ef16af95d475bc8af343ebaa5a24bfa7d04a3b961c2e1d78a4cbf9400a28adf57e24d8a5f6eabda747e0
 Size (pyncomb-1.0.2.tar.gz) = 11703 bytes

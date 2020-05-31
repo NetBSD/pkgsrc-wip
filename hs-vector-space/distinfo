@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/05/24 22:16:19 szptvlfn Exp $
 
 SHA1 (vector-space-0.8.6.tar.gz) = 5a194dc50d042a9e5efd07b4b310e3149393ac6a
 RMD160 (vector-space-0.8.6.tar.gz) = 3af3130e031de795b77af50da973336759bcd3fe
+SHA512 (vector-space-0.8.6.tar.gz) = 7aecff7575a8cd8384c3cb88eb8eee23126db6d54db2f519dabc53051c1e7117064120384c7c482a97f091d074466f3cc4c32ac2f52983dc740dae6797741917
 Size (vector-space-0.8.6.tar.gz) = 13630 bytes

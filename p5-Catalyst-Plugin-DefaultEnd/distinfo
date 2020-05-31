@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/04/03 01:27:02 jgoamakf Exp $
 
 SHA1 (Catalyst-Plugin-DefaultEnd-0.08.tar.gz) = 409a08a018f72559c56e9a206fa654546463bd2f
 RMD160 (Catalyst-Plugin-DefaultEnd-0.08.tar.gz) = 998243ecb6b057582ea6f910b116b04b68f16479
+SHA512 (Catalyst-Plugin-DefaultEnd-0.08.tar.gz) = 4dbef58693fb40ea77e928e86c3e2edf817f3c6c5b1c5362df80fbe8b183ab7c49aaf991062b9d48e90b7408be767cb4f3d2b669980a9d3269778f150a048344
 Size (Catalyst-Plugin-DefaultEnd-0.08.tar.gz) = 4369 bytes

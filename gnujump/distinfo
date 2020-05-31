@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (gnujump-1.0.8.tar.gz) = b3f521499f2e96e608337e51d60093657ccb614b
 RMD160 (gnujump-1.0.8.tar.gz) = d511c2d01f0310f6df5092c5e3182cf751126a0e
+SHA512 (gnujump-1.0.8.tar.gz) = fb8a06e17f700ea1e8c264b23a9f286d595cf48cc78efbe60ffdad298bc33ff0ecb2035a1db8281886614fbc8280d2b0c86a2099d55e31bff970f3b3c3caa421
 Size (gnujump-1.0.8.tar.gz) = 2508641 bytes
 SHA1 (patch-src_main.c) = c6b2f5111d6c08df59d36adc1a9567fa64b27c12

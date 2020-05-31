@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.6 2013/06/12 16:59:52 noud4 Exp $
 
 SHA1 (xbase-2.1.1.tar.gz) = dfa79ff9db7fb00afab1fe2ce3cec32afd95aeac
 RMD160 (xbase-2.1.1.tar.gz) = a3c1c3168d22ca69c2bc8aef30c78df040f1a7d9
+SHA512 (xbase-2.1.1.tar.gz) = 6cc2609e2cf052f7a6fb3c7ff77bed30c8490cb2907214dcfb5a9ddbd514a19ab3cfdd03f0e126b8eada10b4e65236d29964f0b9d624c47e456a105a9ba59145
 Size (xbase-2.1.1.tar.gz) = 504958 bytes
 SHA1 (patch-ad) = 2e2bc8ba9879598a6d7a4f1b5f82f2eca8145ad1
 SHA1 (patch-ba) = df35b16168524fa454b35e70fd4e54a30c948194

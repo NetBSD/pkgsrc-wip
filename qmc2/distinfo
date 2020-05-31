@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2014/01/02 19:36:06 thomasklausner Exp $
 
 SHA1 (qmc2-0.42.tar.bz2) = 86d5935e0e623b9bc7cf537105d286acce3d9e55
 RMD160 (qmc2-0.42.tar.bz2) = 692ba043f2b561adfd6a1ea4471f9b3a3018d5e2
+SHA512 (qmc2-0.42.tar.bz2) = 6ed473e804043d68ab75bdb96526e3f2e98ce8c1e23564405f820b5639509b69caf077d90ec841ae934fe8e1c853cdad3339ebea27f3643f885c8e9a44fe0336
 Size (qmc2-0.42.tar.bz2) = 17324420 bytes
 SHA1 (patch-runonce_runonce.c) = 8f3767d28cce8eeb7b645217b39df4201f3a47fd
 SHA1 (patch-scripts_make-man-pages.sh) = c0c718b393f4cf425358a72ae23d0d811aa73df0

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/11/05 02:35:32 othyro Exp $
 
 SHA1 (spe-0.8.4.h-wx2.6.1.0.tar.gz) = 09d89c347976d984cd1e2c9c0c14d999520c8219
 RMD160 (spe-0.8.4.h-wx2.6.1.0.tar.gz) = 211c0465dce7aeab5b8a3d7fd9cf444b3efbe845
+SHA512 (spe-0.8.4.h-wx2.6.1.0.tar.gz) = 895be59a79a69b4144f7caf0abe250fb0361b856a4e31d8fd14152dcb0183a1126815a5cf286113e1e8a6aaffc50275128e68512eb99612fdef0939848b27eba
 Size (spe-0.8.4.h-wx2.6.1.0.tar.gz) = 1210145 bytes

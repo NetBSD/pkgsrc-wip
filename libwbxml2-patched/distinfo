@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:26 rillig Exp $
 
 SHA1 (wbxml2-0.9.0-patched.tar.gz) = 867f2a046a32d36a183aec6058ab7dfdbc0175b3
 RMD160 (wbxml2-0.9.0-patched.tar.gz) = 73ce9e8e4ac6a8197657057285576c9cae7d7356
+SHA512 (wbxml2-0.9.0-patched.tar.gz) = 304463fd84394d33a59679bb502026360353fafbc94dd2cb75295b22b66ba5b6db7c0b5fe69796f6b657a853b6e98a243a2bb5edf53543fb3a65aa948d871aa0
 Size (wbxml2-0.9.0-patched.tar.gz) = 301970 bytes
 SHA1 (patch-aa) = 2cf2bd894ec597dee3228a37241ad7a8daa5bf32
 SHA1 (patch-ab) = 84bf5cd960548cd6670756946cfc135876d048fb

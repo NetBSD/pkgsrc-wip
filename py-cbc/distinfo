@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:34:07 jihbed Exp $
 
 SHA1 (PyCBC-1.1.0.tar.gz) = 4e7ad0392c8f47af95231d5360dd5fb4f9de4114
 RMD160 (PyCBC-1.1.0.tar.gz) = a4a2d92c98df723ea86744e93d50cf0d8310ecb6
+SHA512 (PyCBC-1.1.0.tar.gz) = a74fbc0eeb37a3afbf8c1aa20cf00f75d7af09329fa33c4d188cfda82ecfbdedab02d1420964d4af6eb2961c074adc5c6e4b8f269f47c99108f7d9f115346744
 Size (PyCBC-1.1.0.tar.gz) = 2501400 bytes

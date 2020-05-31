@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2005/05/25 14:15:25 thomasklausner Exp $
 
 SHA1 (mpgedit_0-7p2beta_src.tgz) = 516cf6637435db7848a53ba6daaae42d3212bc86
 RMD160 (mpgedit_0-7p2beta_src.tgz) = 24776f7369582edab6871d983ff99375b8cdb638
+SHA512 (mpgedit_0-7p2beta_src.tgz) = cfe3892e55fc6588fb08c007b5067d8b2cedb01f828d02b821d0f41662cb915864e446f6e23a234d6cd30332953e4a8b5109af8239c9265d90e5e6a3441495cc
 Size (mpgedit_0-7p2beta_src.tgz) = 1339563 bytes
 SHA1 (patch-aa) = e2bcef7e41ca5eb5fe0bab6661f1b18533e2d673
 SHA1 (patch-ab) = c8f9bf2f0416d683402c12f13b061a80de223556

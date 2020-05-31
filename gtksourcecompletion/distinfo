@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/05/23 15:34:40 jihbed Exp $
 
 SHA1 (gtksourcecompletion-0.5.2.tar.gz) = 29b88d0e490c38fa02faeabf5644868b8dda926c
 RMD160 (gtksourcecompletion-0.5.2.tar.gz) = 8f59bab3dc277cbbf0e806f7dd7ace120313b30d
+SHA512 (gtksourcecompletion-0.5.2.tar.gz) = a3714cb734c19a2e866917759863e600f17c6e846a8390b64a5314ce22d2c02867e57496e9b2aff5ad17733fc45f7b5a87201196ce00a30cebb2ec5ac3a5ea74
 Size (gtksourcecompletion-0.5.2.tar.gz) = 431699 bytes

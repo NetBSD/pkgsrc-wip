@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:40:18 tonnerre Exp $
 
 SHA1 (threadpool-0_2_5-src.zip) = cc46ac874a4f0bd478fa336d8d4d9370e6b2b1d9
 RMD160 (threadpool-0_2_5-src.zip) = 2fca8c04606234b187ed21b7c43915dd1df300bf
+SHA512 (threadpool-0_2_5-src.zip) = 961576b619e5227098fa37a3c8d903128b3c2a9cf1e55c057c6f9126062bcccfa6fe2510b4e8ee5d1a0e3d0425f0077c50eccad2120a423f69e2705460780e7c
 Size (threadpool-0_2_5-src.zip) = 58599 bytes

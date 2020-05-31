@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2005/06/20 00:03:47 hisazumi Exp $
 
 SHA1 (Gauche-fastcgi-0.1.tar.gz) = eb1cd147931c3e6742f4490915c76b4c5fb881d7
 RMD160 (Gauche-fastcgi-0.1.tar.gz) = 10f00a1e08c3de3daabac9145a7dd9fd445ba580
+SHA512 (Gauche-fastcgi-0.1.tar.gz) = 4529855560e76601df0557d98c296268de221929d0bfa04613041d37f1e21662ed4d48a0f583f64ae4cd49c5fc75d6da530871a1d1d7a19499f6b1e368f1717e
 Size (Gauche-fastcgi-0.1.tar.gz) = 71186 bytes
 SHA1 (patch-aa) = 115de6f51623ae382ec089fd7de8e1f1df01b9bf

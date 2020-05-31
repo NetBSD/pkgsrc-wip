@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/10/06 23:08:59 jihbed Exp $
 
 SHA1 (gosam-2.0.0-700.tar.gz) = 876a610d2054f14561edd7ef77caf0491b384052
 RMD160 (gosam-2.0.0-700.tar.gz) = 6e32810b80c2266f679ee8fbcf99b62cbe77bd7e
+SHA512 (gosam-2.0.0-700.tar.gz) = 344561c8957d7b10d51ded8cc9129a64618f74daebe8a6e32b2bf45ed5de01577a9b42db2ca396972f7642f82aace5e31ab624d9cd55111c42f238eb70d253ca
 Size (gosam-2.0.0-700.tar.gz) = 1357452 bytes
 SHA1 (patch-setup.py) = 578374590a3d2e08e55c3d8f256d6ce5a03ef181

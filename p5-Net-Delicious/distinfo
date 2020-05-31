@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2012/02/18 15:56:31 jgoamakf Exp $
 
 SHA1 (Net-Delicious-1.14.tar.gz) = 316da731ef612d5dae798731cb060bb0eb7f9134
 RMD160 (Net-Delicious-1.14.tar.gz) = 7c8b98a8e316b29a957ddf3e6b6fd9b042f545e0
+SHA512 (Net-Delicious-1.14.tar.gz) = baa4eee35a7676eeb82ef37f8353d22ff381155377b8d8381f6fca72e877cbeee5ee041a7811def8ce16c894d9b74c9dd0631bc431f22adac573e5dd2ebd18c3
 Size (Net-Delicious-1.14.tar.gz) = 21688 bytes

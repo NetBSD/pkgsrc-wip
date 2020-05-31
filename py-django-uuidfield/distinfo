@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/10/03 23:58:06 jihbed Exp $
 
 SHA1 (django-uuidfield-0.4.0.tar.gz) = 44de2ff7fce1cb38fdba479276064e48947c6b1c
 RMD160 (django-uuidfield-0.4.0.tar.gz) = 3d94f3e5acd9768d2b109fec7fe2367de8d710ed
+SHA512 (django-uuidfield-0.4.0.tar.gz) = a4ea58cdd210db343e868109d41e292b80d7cd2d4e4c3cdde8446917f6a58da24d084c225438df6492841c7c6e46ba917560572c25f795ab81f76a0f9c017c78
 Size (django-uuidfield-0.4.0.tar.gz) = 4388 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.3 2006/08/19 15:42:23 kristerw Exp $
 
 SHA1 (aolserver-4.01-src.tar.gz) = 4c5aaa1755cef1c0ae69f48da31619f8c2368970
 RMD160 (aolserver-4.01-src.tar.gz) = 6a12134a25b7544f4d885a6438eb07016866dddd
+SHA512 (aolserver-4.01-src.tar.gz) = a70ce7055b6ead8cac28494222349bb6d29f9fdf776ca50b4d966e9e3419bef3552b5a5eb2632f294cf786fdae2a97a48b99d8dde914fc332e7070cd5020f1ff
 Size (aolserver-4.01-src.tar.gz) = 586019 bytes
 SHA1 (patch-aa) = 9470dfc80c9462adf558c920b2ce0e6cc4c6a5c9

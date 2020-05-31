@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/05/10 13:24:36 leot1990 Exp $
 
 SHA1 (xtags-0.5.tar.bz2) = d853aa4eab17c2cb1ecd59e8a5ee0516e6266172
 RMD160 (xtags-0.5.tar.bz2) = c0667d9913abc2711126174ebda2877d60ff1fd4
+SHA512 (xtags-0.5.tar.bz2) = 5d7fee69e5359950baa80cf6c6b50ac2594734f5a0259acc821b6502b2be2202b6037a1a41c440723d48fe42cda0792d496c04dd6e5538df85e3f52c222ccdbd
 Size (xtags-0.5.tar.bz2) = 23995 bytes

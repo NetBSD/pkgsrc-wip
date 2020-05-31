@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2009/06/23 14:24:21 smoppy Exp $
 
 SHA1 (chems-0x04.tar.bz2) = 8391d1bfb5e22b495f6fd5b7a665a68fef8530e5
 RMD160 (chems-0x04.tar.bz2) = 37247469d6ae6198ab588ce4adc1e861825b2c1c
+SHA512 (chems-0x04.tar.bz2) = 20dadd79808f739563654f6ad129c8cb0621bdbc61e65893001c184953fbb10dc3988e80757f6e74d74329eeb07c53d97e1bcf418a8533070a2876200deb99c9
 Size (chems-0x04.tar.bz2) = 321126 bytes

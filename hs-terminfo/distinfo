@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.6 2013/12/04 10:22:06 phonohawk Exp $
 
 SHA1 (terminfo-0.3.2.6.tar.gz) = 8d27153bcd9091d6c8bd33be0c7340b165635dc8
 RMD160 (terminfo-0.3.2.6.tar.gz) = 2d2e443dc5db88850a47dead4e2c08d93ea4014f
+SHA512 (terminfo-0.3.2.6.tar.gz) = 31227bd7d1f026173f6d191465e22a152c8d054fd7632479971d79c04dc907238f5be97633e5874fbcf657d921ee16474b7e01e469accbd3916a915757912d74
 Size (terminfo-0.3.2.6.tar.gz) = 45438 bytes

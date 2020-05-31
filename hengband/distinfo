@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/08/22 05:10:37 phonohawk Exp $
 
 SHA1 (hengband-1.6.2.tar.bz2) = 32156fe9363309ba75273d6c8ebb8f2043c97129
 RMD160 (hengband-1.6.2.tar.bz2) = 59f41666dd1724f03739d5fa078e537467dbf36e
+SHA512 (hengband-1.6.2.tar.bz2) = 24c67f00556d7899b4f18f3071c4bd50bc754566c4c4736c18248ced243b1332e6c84381250c1a59358e7a914e5d62db05c47ab0921bcf40fbd6cfe4b6717520
 Size (hengband-1.6.2.tar.bz2) = 2029169 bytes

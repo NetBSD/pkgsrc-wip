@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:39 rillig Exp $
 
 SHA1 (spark-0.6.1.tar.gz) = 268af56cfffac1e50644e86e871e443d96f57f86
 RMD160 (spark-0.6.1.tar.gz) = 3fcd303b6b499238ce94326c984651508007922f
+SHA512 (spark-0.6.1.tar.gz) = 5ae1bddc614fd36ab811e5edb16020e12b15e27a5e7f22c7e44558cd8be96d398e939063995d0ebce4b60c4852e5e9095b44b040a0ad50d97b48f235b539223d
 Size (spark-0.6.1.tar.gz) = 63792 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/06/05 23:35:52 yrmt Exp $
 
 SHA1 (geekcode-1.7.3.tar.gz) = 059ee4d64b406a34bc29314295cbab6a3d241fc0
 RMD160 (geekcode-1.7.3.tar.gz) = 539f7613e167488d94d488d6cd6ec907639d5391
+SHA512 (geekcode-1.7.3.tar.gz) = eca8489dafee507246538bbb8d35cc17c5712571603bad1f470803883cdbaf9658769df77e214704b6a5adec382f76e599a2f6c48ec3759861159ac626131bfa
 Size (geekcode-1.7.3.tar.gz) = 60617 bytes
 SHA1 (patch-geekcode.h) = 4a5342095df00fe5d3e84e942b4047f46714bdd7

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/19 20:21:01 jihbed Exp $
 
 SHA1 (SetupDocs-1.0.4.tar.gz) = e80c622cc30e348e0513746d094a4c41d77d31c9
 RMD160 (SetupDocs-1.0.4.tar.gz) = b127187fbc0b10e4729ee9585f9a380a23bd147c
+SHA512 (SetupDocs-1.0.4.tar.gz) = 1499477cdd5315120495e9541e4038c4810bf1866bfd35f7c06d409c39770206507bedabe5802d69192c40097b8c2ab779080f7b5f6aaf28fac6115ccbfc2385
 Size (SetupDocs-1.0.4.tar.gz) = 7821 bytes

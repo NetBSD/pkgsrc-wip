@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2005/06/20 00:28:37 hisazumi Exp $
 
 SHA1 (scmail-1.3.tar.gz) = bb1b9cecdaa994b76307162fe2f4e67240c5d13d
 RMD160 (scmail-1.3.tar.gz) = 484d8ca291b970dd070680ece1ed155646b5fa96
+SHA512 (scmail-1.3.tar.gz) = ae94de7f34f9279e892533137d76f07642ade63f9d179bbc96202003f49cf8ae6dd6cc5b9d53fa1d2f8be2bebcbe071635910d48593c9e57fb6609cc7ec6e95d
 Size (scmail-1.3.tar.gz) = 52744 bytes
 SHA1 (patch-aa) = 145e995cfaa447bfeffc07370250a7430bd00273

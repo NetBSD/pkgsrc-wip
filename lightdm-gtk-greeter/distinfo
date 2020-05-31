@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.4 2012/09/27 22:09:40 othyro Exp $
 
 SHA1 (lightdm-gtk-greeter-1.3.1.tar.gz) = 44effbd38cc228913fda8631b7c8c4bb42c05a1d
 RMD160 (lightdm-gtk-greeter-1.3.1.tar.gz) = 4e93d60fbce4b7a5adb5f31dc85ba362660d3fb7
+SHA512 (lightdm-gtk-greeter-1.3.1.tar.gz) = 3a597fcf3dff930c5ed9cc13675c0af6f385987718527a4a2598a92d2c114df5752d8ab7867d027b4c5de71fa76f0127b57b4d73400a096e530835bf9e2e945a
 Size (lightdm-gtk-greeter-1.3.1.tar.gz) = 374479 bytes

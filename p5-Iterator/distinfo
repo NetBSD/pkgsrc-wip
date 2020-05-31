@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/11/15 09:46:01 noud4 Exp $
 
 SHA1 (Iterator-0.03.tar.gz) = f6745732dff8f9f76e91ab9f340b43a58daf468f
 RMD160 (Iterator-0.03.tar.gz) = 8f39f0d755b3a7255e861f93b0edde1e0076c3b9
+SHA512 (Iterator-0.03.tar.gz) = c14a7952aa9dfbf2922ff5ce5091ae008221382130fce6d608808f61d8131366bd37a1dfe1f0ad9e802dd6ace14705e119535d0f037e33c4d9d478d397293b73
 Size (Iterator-0.03.tar.gz) = 22454 bytes

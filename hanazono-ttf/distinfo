@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.5 2011/11/09 16:31:59 noud4 Exp $
 
 SHA1 (hanazono-20110915.zip) = 7fdd1ad11c33d9f52f77ee1b641aa3f2f012b3fc
 RMD160 (hanazono-20110915.zip) = 58cfd1a6ce7bdd65d6c98e6bcf5c1f9bc926d1ea
+SHA512 (hanazono-20110915.zip) = b4b2204a6f9b1b4c290da4dce56df0585419587f0b593421a3444df342992bae5b1ecfb6496f220d389f75e64e5b1fc666147e9cf1b137c60a9b9f849be182dd
 Size (hanazono-20110915.zip) = 22396661 bytes

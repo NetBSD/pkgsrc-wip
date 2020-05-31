@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/01/10 00:05:24 ficovh Exp $
 
 SHA1 (Test-WWW-Mechanize-CGIApp-0.05.tar.gz) = 5caa9fe9ec918ad75657228ae0a41ac0a5efb108
 RMD160 (Test-WWW-Mechanize-CGIApp-0.05.tar.gz) = 36346559adf26614267c5ea9800cac80e912afec
+SHA512 (Test-WWW-Mechanize-CGIApp-0.05.tar.gz) = 8ef9d5fce5e5d0227aa7da5e2a1d11f9fa061ffd4f6282c6a911e4d505c9d22cbd8973074686b248c23af48914182d9d83cc3748493346c207d9070642137d07
 Size (Test-WWW-Mechanize-CGIApp-0.05.tar.gz) = 13289 bytes

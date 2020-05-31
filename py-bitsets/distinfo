@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/11 21:34:46 jihbed Exp $
 
 SHA1 (bitsets-0.1.3.zip) = 0679639816dd8f06b4b7d7ec1d3d2d55fb265220
 RMD160 (bitsets-0.1.3.zip) = 33d6414c6eecba32e757c255c197b259d05dcb08
+SHA512 (bitsets-0.1.3.zip) = 30e0a8ef39c1bb97d5cf98ea84fa416c13b69f53eeec965b99c57cd775eee0ef30c9d9eaa45a6cf4fc6a1d64bcb04948060d556e7efb94ba6c80d8b1d02f9bfb
 Size (bitsets-0.1.3.zip) = 13641 bytes

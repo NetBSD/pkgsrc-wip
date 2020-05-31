@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/11/14 09:03:48 noud4 Exp $
 
 SHA1 (Catalyst-Helper-Model-Email-0.04.tar.gz) = 08124471e90cc6881c7a0458374dc0fc3b740532
 RMD160 (Catalyst-Helper-Model-Email-0.04.tar.gz) = a8f04e6eb5c0b6cc6a4aebe43b2ee5e97770fa23
+SHA512 (Catalyst-Helper-Model-Email-0.04.tar.gz) = e545c46abef35f4c2c460354c91fb1661f90d010b2c3493ec7eb816ddb04c1a10b96f8e16f2b6a9f6642a3e0b4c884bc4834a71ed401214b1176ec70bf0f4ba6
 Size (Catalyst-Helper-Model-Email-0.04.tar.gz) = 9863 bytes

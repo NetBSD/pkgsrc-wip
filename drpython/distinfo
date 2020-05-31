@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2010/07/23 15:59:18 jihbed Exp $
 
 SHA1 (DrPython_3.11.2.zip) = 68c96157951dca462baf5a4c6e8f31758c669c56
 RMD160 (DrPython_3.11.2.zip) = 28425ee6fd92c4cc1840672cc790e3c5a610b4dd
+SHA512 (DrPython_3.11.2.zip) = 32c8c4b406e73c1fbb5c4a7b020b43382e101923e368d81a2dd0c4b876221bffc3835284fc4339cab317fc89cb1345153ed88b61bad6dd855a780c7451898c58
 Size (DrPython_3.11.2.zip) = 625006 bytes
 SHA1 (patch-aa) = 96edab875d44b55a01285e2a0b1f0b73bbb6fb6b
 SHA1 (patch-ab) = c582ce902c7fe622961296063309ec7dd6a3c531

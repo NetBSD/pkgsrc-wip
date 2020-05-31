@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2005/07/24 23:47:11 thomasklausner Exp $
 
 SHA1 (rte-0.5.6.tar.bz2) = 70bcb82e91732e1975de6065bda69b5beaec82f6
 RMD160 (rte-0.5.6.tar.bz2) = 635ac3e6afab65b213486df677a7ae7bd3ad3181
+SHA512 (rte-0.5.6.tar.bz2) = a7b7501598d4a96e5df8489b9d40f52aa1ec53d4596ebcf7af3ddc477474431c77813bd48ae0b061a33d158ef7b4467be3baa1c82c6422951ac1ca7df78baa48
 Size (rte-0.5.6.tar.bz2) = 804350 bytes
 SHA1 (patch-aa) = e50665ea509a696fc25ff265cc6d4b88b36684c1

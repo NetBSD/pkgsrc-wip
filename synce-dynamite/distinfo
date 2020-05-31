@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/12/04 23:07:12 shattered Exp $
 
 SHA1 (dynamite-0.1.tar.gz) = 265d1d9fcb6199c98f7a798d911a81a8f588c60b
 RMD160 (dynamite-0.1.tar.gz) = 781ebb008caf78eec3498a47a6eec291c93235a1
+SHA512 (dynamite-0.1.tar.gz) = c75dfa9fec3cd06373c99ac52f9f4d891f27786ae352b4a10c601a44d485f6f4068e07b8d7be71f051b4b373985d7f17f9ede507fbe704a4ff394433e9585453
 Size (dynamite-0.1.tar.gz) = 194544 bytes

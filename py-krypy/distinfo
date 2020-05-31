@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/03 18:51:26 jihbed Exp $
 
 SHA1 (krypy-2.1.1.tar.gz) = cf1d33ed180afe5bc86977505aaa8f4fdec47a4a
 RMD160 (krypy-2.1.1.tar.gz) = cbc13067851f926f35c15676a6f7b432f900e1b7
+SHA512 (krypy-2.1.1.tar.gz) = 0c24d67e859fce11d2c487596470c73e1e312a8899fa84623d6551f2a8eb33e0074c7edec76eb26766594ea33a33f0002e84ac2cc390db9b9812327fc662a00e
 Size (krypy-2.1.1.tar.gz) = 44819 bytes

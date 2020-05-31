@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/02 00:20:43 jihbed Exp $
 
 SHA1 (Numdifftools-0.4.0.zip) = 855cee9a5d3c72da058b2f6a9e704d5cb07da992
 RMD160 (Numdifftools-0.4.0.zip) = f76197f5e282a4b43b30d1ff8a8698cfc13cf28b
+SHA512 (Numdifftools-0.4.0.zip) = 7157b5e5024b186da693e436b628ffbd8306952551813afe0d553db113013f55e7ded0c98f5f3c100c6002c50323d5155aba69b6ebc216920d36059062cf3f62
 Size (Numdifftools-0.4.0.zip) = 170443 bytes

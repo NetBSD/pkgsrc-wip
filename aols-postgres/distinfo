@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (nspostgres-4.0.tar.gz) = 3018b9dca24a3d9c2958e7baea4654fb93f0aa7d
 RMD160 (nspostgres-4.0.tar.gz) = faafbab3c835130e7cdf5f0ddf2200aa202260bc
+SHA512 (nspostgres-4.0.tar.gz) = a58e6a727f666e59d805f4046347b0635763d138a6eaae4e68c4556410f05b9b0eaa44cf08fa25e063afc194ccf079a7965a90750d11093e8a34a0c737e7560d
 Size (nspostgres-4.0.tar.gz) = 20960 bytes
 SHA1 (patch-aa) = 95c16707b90119b49b4c92f5fcb93f9f0ad03315

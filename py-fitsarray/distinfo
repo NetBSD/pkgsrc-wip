@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/20 22:21:46 jihbed Exp $
 
 SHA1 (fitsarray-0.2.0.tar.gz) = e3cf4d07590dbddf81a89dcb6d0452919a58ebb0
 RMD160 (fitsarray-0.2.0.tar.gz) = 56d35e152f736cd5465cc22bebb6e5aab8f44d2f
+SHA512 (fitsarray-0.2.0.tar.gz) = 2605c38b822161af4aadbca075f6d087b88d3f0a9fe37171a094f6b909bc3fc06cece6f572fdf57c826adcfed9390ebba4554aed7f9668c7ea7035ffcae47b78
 Size (fitsarray-0.2.0.tar.gz) = 2580 bytes

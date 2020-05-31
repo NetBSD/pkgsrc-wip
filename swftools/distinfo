@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.10 2015/02/17 10:36:29 fhajny Exp $
 
 SHA1 (swftools-0.9.2.tar.gz) = d7cf8874c4187d2edd3e40d20ba325ca17b91973
 RMD160 (swftools-0.9.2.tar.gz) = 6743d847b3adcc2724799dc6a75c1359ff5a0377
+SHA512 (swftools-0.9.2.tar.gz) = 91bbd48914f9a8a1cdf85532b371721b01982c5f88648b908fbe99fbf4e17e9893ce575e4fd699927e9bc1c79d846f6bcd4f1d868578fb17403467cc1e28259b
 Size (swftools-0.9.2.tar.gz) = 2675939 bytes
 SHA1 (patch-lib_pdf_BitmapOutputDev.cc) = 66cbbebbadac3d6cfbd5061286151f3e88b3e3aa
 SHA1 (patch-lib_pdf_xpdf_GString.cc) = 30a5d65866c9d8f243ce181db7258a6cae6a644f

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/08/31 18:23:40 jihbed Exp $
 
 SHA1 (myfitter-0.1.tar.gz) = 1f6d52b7d7584e4e82aa7b55d21e2f10f4c5059a
 RMD160 (myfitter-0.1.tar.gz) = 851cef435b4fc3d800dc947577ad93bc54649c5c
+SHA512 (myfitter-0.1.tar.gz) = 8064830bdb9ca24006f4bc74d5eb42696b0512e29a9a149a6cdc460d35565ddd1bacfcaa9de7d4d94377dd63cf08064946122abfbfd3608f88927371a2880160
 Size (myfitter-0.1.tar.gz) = 493744 bytes

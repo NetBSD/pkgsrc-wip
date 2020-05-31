@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/12/01 20:24:22 jihbed Exp $
 
 SHA1 (ProDy-1.4.10.tar.gz) = fdc03ae22aacd54bc0bcc41c22b9706a591b463c
 RMD160 (ProDy-1.4.10.tar.gz) = fa30b0d53b0a2872ad84cdef115fb11f3dd1a120
+SHA512 (ProDy-1.4.10.tar.gz) = fefcd0ae0b8ca5ef3cd0d7b0c56ef0cb1d670bc8bf4748e850020bfe927310d42502b298458c30cccaa98539fdfa552262ece873ba4cab86341fd4dc04ad8243
 Size (ProDy-1.4.10.tar.gz) = 878555 bytes

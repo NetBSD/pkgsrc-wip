@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2013/06/03 02:20:00 phonohawk Exp $
 
 SHA1 (tcptunnel-0.7.tar.gz) = bfa186ff57602d761cd21d1354aa89463cf8fe4f
 RMD160 (tcptunnel-0.7.tar.gz) = 0c2a3894a49a855f2c58e983753d8a4896b7db1a
+SHA512 (tcptunnel-0.7.tar.gz) = 3dbaa721a61dea1c0980de2289efb957e126f4b182436f029de2d4a4a85a1b921d7b561600637cc9d7d9e0449786c2d08b2b4c55f91e25a9850cabfb9ef266ab
 Size (tcptunnel-0.7.tar.gz) = 11789 bytes
 SHA1 (patch-src_Makefile.in) = f7de789da3526402076d37a798ae52d32ae33cec

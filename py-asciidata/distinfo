@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/06/14 13:13:53 jihbed Exp $
 
 SHA1 (asciidata-1.1.1.tar.gz) = 815307ab8a4063d18a064778cda3c23b2dd7ef80
 RMD160 (asciidata-1.1.1.tar.gz) = d66edac0d1418d990de102e87f591d8c5905b9bf
+SHA512 (asciidata-1.1.1.tar.gz) = 17feb70bf3383a2689322eceae797c3512afb3f6ba0bddd6a161a29b867bc14d290324daa1c9538240a3f852f108c7521dd17ce786f6d7752eade422c21e2534
 Size (asciidata-1.1.1.tar.gz) = 482467 bytes

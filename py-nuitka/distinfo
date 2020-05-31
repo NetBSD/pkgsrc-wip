@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:15:24 jihbed Exp $
 
 SHA1 (Nuitka-0.5.13.4.tar.gz) = 1d94ac15effdf5bca362dda32e03875829415cd7
 RMD160 (Nuitka-0.5.13.4.tar.gz) = ce105d2264f3be1622cebf0a22d3b21ed2d183c6
+SHA512 (Nuitka-0.5.13.4.tar.gz) = 2a2c931299c4baa13611ffec7d93da6b0d48bdf135989ae1541276d1fcbae5e778eec31d9739f339fca253e8037f6153a1cd9cdf183baa0edf24f2f6e66d6f59
 Size (Nuitka-0.5.13.4.tar.gz) = 1443330 bytes
 SHA1 (patch-setup.py) = 902e0ab87b365c40bb04684d82de0de4311aa759

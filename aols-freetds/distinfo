@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (nsfreetds-0.4-src.tar.gz) = 7c9a098b64a26035b89063d0ac169e7ff84ceb18
 RMD160 (nsfreetds-0.4-src.tar.gz) = 8a505314b9e5e6277886b4f72a94aa820da92293
+SHA512 (nsfreetds-0.4-src.tar.gz) = e313d138175c066cf8d59f5b88a4f30b1f164f4e4a1c2a437c4db404dff059135798cb560b2040b4aa5e682bfdf00a7687107b459de535ce0455b6daca69fa46
 Size (nsfreetds-0.4-src.tar.gz) = 7399 bytes
 SHA1 (patch-aa) = 41327c76244244f6cd3f49ac69789fb1e2cd1ab8

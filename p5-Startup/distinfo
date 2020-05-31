@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/07/01 13:51:32 tonnerre Exp $
 
 SHA1 (Startup-0.103.tar.gz) = 0a5219c19d8ed81b144815fcb2b1eab8192b4ebb
 RMD160 (Startup-0.103.tar.gz) = b0ddce00d1ca328711295346db91c51e2c1e7a0e
+SHA512 (Startup-0.103.tar.gz) = 2cd51ff0635145e120024b7e467bddbcec367dfafedaa504938999db06e7995a5b2cda7491b59ff233667bd172c0b730cdf5ba2311d1c3f1bac6ddc9bacd68a5
 Size (Startup-0.103.tar.gz) = 12568 bytes

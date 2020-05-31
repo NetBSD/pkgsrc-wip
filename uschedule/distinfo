@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2006/04/25 13:31:09 akihabara Exp $
 
 SHA1 (uschedule-0.7.1.tar.gz) = 0a9535c2a03b2d76a851d0d7a34a9a877dc49311
 RMD160 (uschedule-0.7.1.tar.gz) = 05d18a60a69021af3e71a149c60e5ee74fa7aa05
+SHA512 (uschedule-0.7.1.tar.gz) = b35f1734e1bccf8a0aa43df7b6d649aa2990e896abb0e3d775ee59bd8b92d36f42f081984f34fdf7667e93a35070c5056ec7a8798a24a85095b5778e1e542bd4
 Size (uschedule-0.7.1.tar.gz) = 80120 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/21 20:37:19 jihbed Exp $
 
 SHA1 (Chani-1.0.0.tar.gz) = bfd1eec0792ee468532eff0e80cd6d0f6a3e2c06
 RMD160 (Chani-1.0.0.tar.gz) = 8817caafb69baa5c7ff0a36e604255ca29fc3177
+SHA512 (Chani-1.0.0.tar.gz) = 02adb833a1b792ea0f862612db0c97873b6bff816ac4f38af9d1088e1a29c5fd03b6e9d2d5ca55bf69e77c3a3492e277e297fc8591b8296f8f41c2ab522e376e
 Size (Chani-1.0.0.tar.gz) = 13147 bytes

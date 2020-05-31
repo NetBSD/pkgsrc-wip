@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/06 13:55:53 jihbed Exp $
 
 SHA1 (spfpm-0.6.1.zip) = 4344e59cfcc4d9f961a17489601d296141bb6d59
 RMD160 (spfpm-0.6.1.zip) = db8a20653f598e6015099d689ee5978096d207fd
+SHA512 (spfpm-0.6.1.zip) = 56e2efbdd269239871610e680059e9e29d4658ee677b8702dd86fd821758b369d3b41f5a74eea1c2c3f7ae7de54c594edb07420e9a83dc73638fbaacf4cdd263
 Size (spfpm-0.6.1.zip) = 18705 bytes

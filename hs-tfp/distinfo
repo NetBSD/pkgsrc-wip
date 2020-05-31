@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2010/05/10 11:54:12 phonohawk Exp $
 
 SHA1 (tfp-0.2.tar.gz) = 78b694b7d39300b1fddf2e1de42ef8980b2f0703
 RMD160 (tfp-0.2.tar.gz) = e3fd10c8cd627c07d022e3678c924d1ba767ab8f
+SHA512 (tfp-0.2.tar.gz) = 07864ded79b7900fb9ede2d264ba216336038e799d90077c97f9c17cfb2f28797a44449f56ea50f5d46a2ade9cdacea4082e91690fb86c502788ecd33987c48e
 Size (tfp-0.2.tar.gz) = 13319 bytes
 SHA1 (patch-aa) = bc89c1d4ca56d7ea853e0cfb6d4838d34c1b9cf5

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/09/06 18:54:21 jihbed Exp $
 
 SHA1 (postmarkup-1.2.2.tar.gz) = 20c675bf8834c1558d97d2b92845ed0dafa5f593
 RMD160 (postmarkup-1.2.2.tar.gz) = 04e8d69225d5411b7e2880cd01ff454e9e0c8142
+SHA512 (postmarkup-1.2.2.tar.gz) = 803eecca08b5946b7aae37a11e52d8d1ee57c1855f101c6657a24db112df2b63411f0515e2697096a8a29e5a33a8f2fe7c4a1e04e466fb1bdc92bc53367bfc5c
 Size (postmarkup-1.2.2.tar.gz) = 32474 bytes

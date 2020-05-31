@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (neupy-0.1.1.tar.gz) = 1c1f959dfaf24e769c7b64e1fda582b3dfc60ae7
 RMD160 (neupy-0.1.1.tar.gz) = 2b1b8187b7c1c90417c6833d1c7e09cbdee75f53
+SHA512 (neupy-0.1.1.tar.gz) = 66f29dd222bae02fea63b2e86bb027c908a595feaa6c143820a9315bcb273f2def3f2152e84ba79de181e5402ff9d56963de35c136eb65dfc5969290bcfd0ca5
 Size (neupy-0.1.1.tar.gz) = 52653 bytes

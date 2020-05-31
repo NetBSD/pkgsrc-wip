@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/05/25 14:15:04 thomasklausner Exp $
 
 SHA1 (viewglob-0.9.tar.gz) = 163a3ff38207d47cd5abebbabd852daa6149c07e
 RMD160 (viewglob-0.9.tar.gz) = 65b9fcdccfe61d668353f7c5587605294f842100
+SHA512 (viewglob-0.9.tar.gz) = bd22c15e1903bc215a619331cba71658d16bccf21b6cccbaa8421d066b6974af4b9dbf2d34023ca45272bcda13a8730de1ba79373d5613bef37b0882a8db2c56
 Size (viewglob-0.9.tar.gz) = 187422 bytes

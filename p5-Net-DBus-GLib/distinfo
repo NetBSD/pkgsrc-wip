@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/11/13 10:53:19 ryo-on Exp $
 
 SHA1 (Net-DBus-GLib-0.33.0.tar.gz) = 42e243e09f7406da276c73d91579bf4a3df3fc78
 RMD160 (Net-DBus-GLib-0.33.0.tar.gz) = 71b3c6b1c1981ddce9a27d08b154e8f035730d57
+SHA512 (Net-DBus-GLib-0.33.0.tar.gz) = d9257f0841e1eece4eb236a9e97a6314a61a6ed10b7887445b6677c0eb3f65a4036a93cae5e08a60072859c949c0d760fc7754c621cb0027f58acfc37380f789
 Size (Net-DBus-GLib-0.33.0.tar.gz) = 14862 bytes

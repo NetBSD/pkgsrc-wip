@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.13 2015/07/16 08:09:01 phabrics Exp $
 
 SHA1 (tme-0.10.tar.xz) = effaa274cda0733b051d048212ac0f473cda58f0
 RMD160 (tme-0.10.tar.xz) = 358e191da2cfede930a154241489159368d5b015
+SHA512 (tme-0.10.tar.xz) = 43bcdccae3a449105df0754160aae92fcbc55f21e52188097b9ce1a485f943b8e2ec1d8f787e20f55a709d2fd2fc28a15a353217452ba72637dd12aad042a817
 Size (tme-0.10.tar.xz) = 1169896 bytes

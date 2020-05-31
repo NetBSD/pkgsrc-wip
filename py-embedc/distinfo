@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2012/09/30 09:55:06 noud4 Exp $
 
 SHA1 (embedc-0.22.tar.gz) = e6a768dbf7b0eca3fb33e86403b11029176d318a
 RMD160 (embedc-0.22.tar.gz) = 2a8bd69422a05eba41a66c9c4df2bc71696c0097
+SHA512 (embedc-0.22.tar.gz) = e04e9c0ef6048ba4c6b4c2cee3ad055e436e318b9bbe68532ac54e71316cef244dce8983a3ca0a66b88d2438ad8f0584a4162d5a92caabe759c7aa384181b33c
 Size (embedc-0.22.tar.gz) = 9205 bytes

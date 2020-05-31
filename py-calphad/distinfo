@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:33:59 jihbed Exp $
 
 SHA1 (pycalphad-0.1.1.post1.tar.gz) = baaf8b142012be3614330330bacedb6520b7f57b
 RMD160 (pycalphad-0.1.1.post1.tar.gz) = d01a9d712145f8f16d65120173b0fac9baa74899
+SHA512 (pycalphad-0.1.1.post1.tar.gz) = 4b8ac190d8572f9730a13fbedd894ec024c03f564ffee91532e76ce0340a6f6f161ad8cab81f49089f75dfb26123ed38ee4bdd03c3346b48c90875fb9d2b0070
 Size (pycalphad-0.1.1.post1.tar.gz) = 52546 bytes
 SHA1 (patch-setup.py) = d01d8a10ca61595f35995db671bf02784e1751b3

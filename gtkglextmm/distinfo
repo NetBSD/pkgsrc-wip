@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2011/12/26 23:10:29 othyro Exp $
 
 SHA1 (gtkglextmm-1.2.0.tar.gz) = 5cd489e07517a88262cd6050f723227664e82996
 RMD160 (gtkglextmm-1.2.0.tar.gz) = 2dd9122f8991b2cbfd839ab0aaa6dd444751b7b0
+SHA512 (gtkglextmm-1.2.0.tar.gz) = 0edc374d1b798569410804141bf452bc868ee7b038c2d8412096c62ae681915294ab6bd252210b8d287a0bccb4ff419bde2b5413c4e3c60d7c9dd245287f80b9
 Size (gtkglextmm-1.2.0.tar.gz) = 826309 bytes
 SHA1 (patch-gtkglext_gtkmm_gl_widget.cc) = 5e441a40d4b0c779ff4a582e758758f901c1523c

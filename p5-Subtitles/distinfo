@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/12/24 15:43:59 leot1990 Exp $
 
 SHA1 (Subtitles-1.04.tar.gz) = 03927965c6abddf6e38dcf680dd7c46c49add2bf
 RMD160 (Subtitles-1.04.tar.gz) = 7d5a27061034a9befb54e0283daa4503abcc2d7a
+SHA512 (Subtitles-1.04.tar.gz) = 2bd670a0d2d61e76ede1f2c8f4b219e53b07cc28a08d67dfb5b20e54a1b6b0338ab284800fbf8c436cb5e038b47d120690f3ecd7edecf0b6749ece8fa790e8a2
 Size (Subtitles-1.04.tar.gz) = 16655 bytes

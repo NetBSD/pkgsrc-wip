@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/05/03 18:58:38 jihbed Exp $
 
 SHA1 (mcerp-0.10.1.tar.gz) = a0d0e369d041f1371eb6d4e7ce2d150904f4f47a
 RMD160 (mcerp-0.10.1.tar.gz) = 6ec76a4694ef5e46b29d84db010fa46eb34bfdd1
+SHA512 (mcerp-0.10.1.tar.gz) = a0af3aa92632982bb4cf897fd40dd284abc17e8909c66600b40c03f78de573409e6be92e5505fb6ac29518c9606f3e6ec9a1d284952d33300160daa2786a9b8a
 Size (mcerp-0.10.1.tar.gz) = 22113 bytes

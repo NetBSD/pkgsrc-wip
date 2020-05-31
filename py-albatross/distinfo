@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2005/09/28 06:41:36 rillig Exp $
 
 SHA1 (albatross-1.10.tar.gz) = 2e1483d7c382f17b6682d14857a1401ff8486284
 RMD160 (albatross-1.10.tar.gz) = 3b2bae1f00c197d87b8b4962f15aa43dd8670e94
+SHA512 (albatross-1.10.tar.gz) = 74561f184d649883424ad24cc746e2094b0d34db0a5c0c866a020cf790b43b8ed3f06014b7bca8a291f3318055bf52a69c78b439b30384eb3928e0fc4cf5c971
 Size (albatross-1.10.tar.gz) = 232724 bytes

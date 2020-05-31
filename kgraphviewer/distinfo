@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2010/04/10 03:49:49 mwdavies Exp $
 
 SHA1 (kgraphviewer-2.0.2-kde4.4.0.tar.bz2) = e96ccdcdc6daba4bdf876df0473a2d1df6a6bc57
 RMD160 (kgraphviewer-2.0.2-kde4.4.0.tar.bz2) = 5b29c82e43c1344e496f6a57676fbaa44284455f
+SHA512 (kgraphviewer-2.0.2-kde4.4.0.tar.bz2) = 7ca7625cbc9899e5c5ef23730324b0939bb7f675c763b1742d6b8dc5c142695e2f66ce00ca7b901acde8a549a7192a66d25eed940e86d361c692fb423e787b99
 Size (kgraphviewer-2.0.2-kde4.4.0.tar.bz2) = 1075677 bytes

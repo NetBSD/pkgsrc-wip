@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/05 20:46:14 jihbed Exp $
 
 SHA1 (odeViz-0.2.tar.gz) = 1ddd3b3755ad6e97a47bc73f55855b3dd37fe9ad
 RMD160 (odeViz-0.2.tar.gz) = 1b08d36d74a4cfd42015900ca0d100b9df70c7db
+SHA512 (odeViz-0.2.tar.gz) = 1da2254daeba08badb6f597ebd4a40658f554f8a6d6bf3095365cd3ae09a8fb78003eee4cfeb861e36d47706c76abdfeb32adb9fe5f1f5fb018e2622516be702
 Size (odeViz-0.2.tar.gz) = 6131 bytes

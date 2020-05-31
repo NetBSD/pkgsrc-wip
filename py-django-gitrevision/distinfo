@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/01/06 11:35:47 jihbed Exp $
 
 SHA1 (django-gitrevision-0.1.4.tar.gz) = 6ba40ee8a32e14e88e19fb7f1e0af8b1df5bd99f
 RMD160 (django-gitrevision-0.1.4.tar.gz) = 2a691ecc59e46a31b02c545891922ae8f07e6c01
+SHA512 (django-gitrevision-0.1.4.tar.gz) = 0584644a211e578ef019238bc721cf9ed7298b854968ee960fcd94bd0f6b282e4b8504745a90f42fb07dcda7582fab8ebec6d55ac8aa741c75af049ec880439e
 Size (django-gitrevision-0.1.4.tar.gz) = 3110 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2008/12/18 14:10:15 x400 Exp $
 
 SHA1 (vale-0.0.2.tgz) = cba8406b60d0600a9346a056a212f3369fb07a0f
 RMD160 (vale-0.0.2.tgz) = 99c0cab2833129ec25e4e06ded2c995f70ad3764
+SHA512 (vale-0.0.2.tgz) = 264b3c6ee27a958967051797c0bd7a02d4e61c1c94639b00a258c4a5f889554c2c7ed157bdbe885f1007faee5acbade9db3fe530590b2c844b3809883e65f1da
 Size (vale-0.0.2.tgz) = 407206 bytes
 SHA1 (patch-aa) = 15f8e60adab46dac54f25f84a12d3379efbba469

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2009/10/13 21:56:47 khorben Exp $
 
 SHA1 (Framer-0.0.0.tar.gz) = 6b602bdb7c352b7b7db53d4b88ac091a45913eea
 RMD160 (Framer-0.0.0.tar.gz) = ce4d2161c239badf343db881552d88bb2263336a
+SHA512 (Framer-0.0.0.tar.gz) = b3139c3defbb23bcf4c50f0b955bbd0ece8fd12a414041c387372428c5ce0eb1ede293022af03efe0ca52911347c66e28ba25d847a91ead31873296a7022e24e
 Size (Framer-0.0.0.tar.gz) = 6051 bytes

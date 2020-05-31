@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/02/28 00:39:13 poppnk Exp $
 
 SHA1 (gnome-jabber-0.4.tar.bz2) = 196c8bcd7af5accadcc5fed2566b266dea88b4b8
 RMD160 (gnome-jabber-0.4.tar.bz2) = ebb37107a28d7d345091e62214f5f4a9b2c4583f
+SHA512 (gnome-jabber-0.4.tar.bz2) = 94239121b37861366063131232e4d0dc83ba16e3e5638194d5f7cad2cedcca5b37eafeb259b227c8006511c1a8ef4d45fa136bf8623904c1cc6bfa57f4fa4312
 Size (gnome-jabber-0.4.tar.bz2) = 760076 bytes

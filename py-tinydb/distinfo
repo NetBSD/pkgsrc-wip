@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:29:18 jihbed Exp $
 
 SHA1 (tinydb-2.3.2.zip) = 0c2d92f15657bbd0341eed2b89c6be5d61a1e5cb
 RMD160 (tinydb-2.3.2.zip) = 1812904b4f3ef8bce2322125c89789c516f91360
+SHA512 (tinydb-2.3.2.zip) = fb164ff17ffd055b9f3a8814c0fd1dbcf05ee1a76d31ebdf22b7d4426f75b30b08ab49196919c5d1d3b28e32c7e735342ba6e0fbc58832bd4e13dc9d25053f49
 Size (tinydb-2.3.2.zip) = 36107 bytes

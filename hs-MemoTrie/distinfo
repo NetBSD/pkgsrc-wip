@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/05/24 21:46:56 szptvlfn Exp $
 
 SHA1 (MemoTrie-0.6.1.tar.gz) = 1897f8cdc95e66813f93dbd6347cb95cda447f29
 RMD160 (MemoTrie-0.6.1.tar.gz) = f08c0ec4dcf2eae58a22907e6ef9e458d231445d
+SHA512 (MemoTrie-0.6.1.tar.gz) = 39ce546e4a110a6aa05b9cdccf9f4a8a22160eccabfd01b67da834be20825cef085ea16c8995b60afd3affc1ac4643db0fc1b9f13ef387b1722b628657f7a33d
 Size (MemoTrie-0.6.1.tar.gz) = 6227 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1.1.1 2008/04/27 20:02:29 asau Exp $
 
 SHA1 (UsingMPI.tar.gz) = 3a374d24534386ac7faaf4ec56407cc472db276f
 RMD160 (UsingMPI.tar.gz) = 7242df811e563b8955ae7d32aa84243226046236
+SHA512 (UsingMPI.tar.gz) = 78104d65aaecfdda4056fffe8a8fc513d48e818c4dc23ba2b1905814e4b10f2ecd80c149c179ba7ae7aba77a9045f843502fb43b36796b6fa816bac56aa33049
 Size (UsingMPI.tar.gz) = 30322 bytes
 SHA1 (patch-aa) = 87a052a760ad54f2608e83fa8b05ccdc94fe9b1a
 SHA1 (patch-ab) = 0597dd12b4a4fa54836aa7b732f436b61225cd45

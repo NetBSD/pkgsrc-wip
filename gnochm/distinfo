@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/25 10:22:09 thomasklausner Exp $
 
 SHA1 (gnochm-0.9.11.tar.gz) = 872a444f86731c8143b72ed5fdc6ec63c34447c3
 RMD160 (gnochm-0.9.11.tar.gz) = 9edb9d7f75749e8d09b7c27fe53f7f51d20b074c
+SHA512 (gnochm-0.9.11.tar.gz) = 1ecd412baa40181415b268b67ff94fd0a9551a3219f60c13d5e48bf5b4aa9112e9bed4f9aa4acfc962d4a44bbac70d5048f42e5926208d553bc8dc355d6fa323
 Size (gnochm-0.9.11.tar.gz) = 406640 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/10/25 23:33:13 szptvlfn Exp $
 
 SHA1 (entropy-0.2.2.4.tar.gz) = b8d89fe765578bf50e31c52222d9e8d7297840e9
 RMD160 (entropy-0.2.2.4.tar.gz) = 570c1502827908e44c5605748b5ce18c9bc3e049
+SHA512 (entropy-0.2.2.4.tar.gz) = 257289daadb414ba82d7e18cadfc4e8a654297746984d22a7f202054271f4e19c29d4194cf21b3dadfd06f10d96bc6a29f909d4bd36a98eb18bdae4a13e56b49
 Size (entropy-0.2.2.4.tar.gz) = 5107 bytes

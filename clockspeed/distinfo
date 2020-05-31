@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2006/05/04 13:55:38 akihabara Exp $
 
 SHA1 (clockspeed-0.62.tar.gz) = 333ede8961622ed3504e3df3deb64297aa52b0cf
 RMD160 (clockspeed-0.62.tar.gz) = c1c863ddd91b77554f6924438979cff58b351377
+SHA512 (clockspeed-0.62.tar.gz) = 4dae1cfcfc5eb1398fd5a7642ff91987487d9828d314d4bd9f93cdadc60fe99889280a7f8e9192674ed19d246bd4a450ad32b1258e450216111c488074db7978
 Size (clockspeed-0.62.tar.gz) = 25797 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.6 2015/07/13 21:32:57 leot1990 Exp $
 
 SHA1 (sic-1.2.tar.gz) = a91a603d536ae9cff9a806d6b2737053d262e722
 RMD160 (sic-1.2.tar.gz) = 19810b37d5635dbf7e3155344a6dff71b9c8bacc
+SHA512 (sic-1.2.tar.gz) = 5659ed9d8a5986dda90dbe1155c27a5fd0ab4b1fcad2c1a20997c530bf03864e6c08bdeffc025c728629ab11872af6a1250761160b91f148dc37d77a49046dc9
 Size (sic-1.2.tar.gz) = 4563 bytes

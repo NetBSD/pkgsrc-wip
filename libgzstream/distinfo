@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2012/08/25 18:20:52 jihbed Exp $
 
 SHA1 (gzstream.tgz) = 3cdd797c7e5a10408eb664aca9666525fe00652a
 RMD160 (gzstream.tgz) = 871d6b91bd1c16205ebcf9da12807c5359188143
+SHA512 (gzstream.tgz) = bf097163698e937b3c36246b3bdb68a31bfd81d899a3fe9a61388a5ea760f5df58ad3d68628907d68f6f36a42d665f09e543e054e6c04a7e6191200c3c7c7be2
 Size (gzstream.tgz) = 20503 bytes
 SHA1 (patch-Makefile) = 7e248481d2ae17af98e8976e1be63d3ebe1b2123

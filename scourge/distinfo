@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
 
 SHA1 (scourge-0.4.tar.gz) = fcf5e16c234b919ed165d87a05df28dba9d05b13
 RMD160 (scourge-0.4.tar.gz) = 40cc1279703b3270ad28a2a8fe7220b1f124f2eb
+SHA512 (scourge-0.4.tar.gz) = 0801c96ebb2756ebef6b7843806f383c0f10e0f3c869d8ce2a9092cb037415f2ad5dcf67e870d4a4fe5efcf3643fd6e0ab24db0f486a7b92108efd7a84107fa6
 Size (scourge-0.4.tar.gz) = 3999387 bytes
 SHA1 (patch-aa) = 505f5550a4acd9490d001064fa60606084c03285
 SHA1 (patch-ab) = d6bc44a05f43529ac2c7737476adabf9e2a9f263

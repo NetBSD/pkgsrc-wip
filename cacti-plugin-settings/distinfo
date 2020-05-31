@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/02/18 09:42:59 ahp-nils Exp $
 
 SHA1 (settings-v0.71-1.tgz) = ac622d4df18d4196842852aadfc639226152c308
 RMD160 (settings-v0.71-1.tgz) = 37f925957274b3282b27180828d03afc22e23c37
+SHA512 (settings-v0.71-1.tgz) = c9e5f026ecbd49d101904bdbcb6ab98d6344055538d213cef93fff2a2a80599a0be79b5255c2c7ce6a3e294d6fbaad73e9c22be026252d2dda77f64599ded75a
 Size (settings-v0.71-1.tgz) = 17759 bytes

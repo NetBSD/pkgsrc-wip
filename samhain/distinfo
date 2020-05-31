@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.4 2008/05/08 09:31:31 moubctez Exp $
 
 SHA1 (samhain_signed-2.4.4.tar.gz) = dc07060977de5e64ba66fbeff998dbf8449f9932
 RMD160 (samhain_signed-2.4.4.tar.gz) = 0d5ed35a5aa05972a254bf445aadf880739c7848
+SHA512 (samhain_signed-2.4.4.tar.gz) = 2338e9d2f7a8660c2f6dfae0ea779cbe932453bf0dbe27c23e56e2bdefa356f3d252994ed3686d6aa0198559f717be692bbbf682e9d2da89f13f48703901a4d2
 Size (samhain_signed-2.4.4.tar.gz) = 1724507 bytes
 SHA1 (patch-aa) = c11b3a303a3689078a1827a1937e1505b1d3959c
 SHA1 (patch-ab) = 04625b0a5fe985373af1bc83a471a16d7d4ce87a

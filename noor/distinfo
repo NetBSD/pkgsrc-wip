@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/01/03 22:18:50 jihbed Exp $
 
 SHA1 (noor-1.2.1.tar.gz) = 9085afbcb6a92196f10f2571ff3a30dd5979339d
 RMD160 (noor-1.2.1.tar.gz) = 28d43db23e6ad4c51c1f3181797e150a80e858f4
+SHA512 (noor-1.2.1.tar.gz) = a9c43c280225078807a2afa299bd95b3f4f6f9eb33c5a46675a4d8d43a25786b2256b6bee47d15eb33935e1dab1406afd9625d696d9fd715b14c35a8ce911bbb
 Size (noor-1.2.1.tar.gz) = 381128 bytes
 SHA1 (patch-aa) = cb72dcdb83927198e9414c2529d102b7f84eeb95

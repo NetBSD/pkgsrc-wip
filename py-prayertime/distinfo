@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2010/04/18 14:09:52 jihbed Exp $
 
 SHA1 (prayertime-2.2.tar.gz) = 22650f329641fad7c693498a43309cc8f6db16c3
 RMD160 (prayertime-2.2.tar.gz) = 16ac17ab7e09f8e872b075caf708791add4b608f
+SHA512 (prayertime-2.2.tar.gz) = 487685a0d380f2612a83b48fafc62aa1f2cfd345966ca148ee6355c59cf10f0423fcedc7630057f24a0d01f64f561fef1dd78e5559d180783797728e9d17ba1a
 Size (prayertime-2.2.tar.gz) = 3416 bytes

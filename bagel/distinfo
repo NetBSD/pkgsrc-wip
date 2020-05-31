@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/05/09 21:02:50 jihbed Exp $
 
 SHA1 (bagel-2.0.0.tar.gz) = 21e86aab0e34473ddd6c4eac5376021345fa3440
 RMD160 (bagel-2.0.0.tar.gz) = ed3a00003b2bb9e0472e08b4c7720b8e112685d6
+SHA512 (bagel-2.0.0.tar.gz) = b2fe3722ae8a07c383f2d83b79cf0f996ce3c42268bf3fd623efa813b27374d40015bdf7bf02c6e49329250666df906d3cc1d54a36c98edc5ba951c4febc060b
 Size (bagel-2.0.0.tar.gz) = 377679 bytes

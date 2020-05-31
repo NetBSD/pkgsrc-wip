@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/28 22:37:43 jihbed Exp $
 
 SHA1 (winwrangler-0.2.1.tar.gz) = 93cd7bba4eff5a2a931a3cdb0a38bb4fa1ab5cd1
 RMD160 (winwrangler-0.2.1.tar.gz) = 2f5abc26791d028b01ce99b03a7c8eb9ea35fcc2
+SHA512 (winwrangler-0.2.1.tar.gz) = 935bb21e94d4f723473be00ae610a633a09784278cf04becf417f13a4e2a5331ac639bd0b2687c6733961b9a9834346f2999923da9211cf760dd3a2dda5ddb25
 Size (winwrangler-0.2.1.tar.gz) = 322039 bytes
 SHA1 (patch-aa) = 444d2367db737427020c1add4eb31afa4335d30c

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/11/30 16:08:02 jihbed Exp $
 
 SHA1 (toeplitz-0.1.2.tar.gz) = dd652880592b6bf8df8ae12ba4957693cb75eea3
 RMD160 (toeplitz-0.1.2.tar.gz) = 4b7de99f5b8150031ca802e87d7ac29ce7265a1d
+SHA512 (toeplitz-0.1.2.tar.gz) = 7c45a77d8859e1a93a430441cde6ab8c645fbb034502ab6f68c6e62579c0941565971628c6c152acaa46cc8f619b0b7dab7b8f4f4288fabce15d16da5c49ac85
 Size (toeplitz-0.1.2.tar.gz) = 22004 bytes
 SHA1 (patch-setup.py) = 5978ee2d467bb0802d6fe221260f96172bd0b08c

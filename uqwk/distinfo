@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2006/09/23 18:23:14 gschwarz Exp $
 
 SHA1 (uqwk-2.21.tar.gz) = dfe239bc1dad9bc11f60a118d9c2d7455fafec6c
 RMD160 (uqwk-2.21.tar.gz) = 739c38186a268e953d1d8841afd92b807d61773c
+SHA512 (uqwk-2.21.tar.gz) = df6c71a9b9abd4d27b5857f398f7c99a17f8010602fbeabd6df9a96383d75f17ded9b330599ec427e5cebc16acb7d7b2b0eb72f7eab5bb9c4026f74e1c169a35
 Size (uqwk-2.21.tar.gz) = 86206 bytes
 SHA1 (patch-aa) = 78fdc298bad0b298c0e1cc0c1f4a6de5d0e00a8c
 SHA1 (patch-ab) = 219bc5520545cbeba4cfec0f4458981bddf45d5f

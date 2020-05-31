@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:06:52 jihbed Exp $
 
 SHA1 (ised-2.2.2.tar.bz2) = 9cfe38e4f61caf45baab8b6f40d43706f31863d4
 RMD160 (ised-2.2.2.tar.bz2) = ea970bc73ed93fe25b1c525ce6a02ff99e25184a
+SHA512 (ised-2.2.2.tar.bz2) = 16fc860f0e6e7b27e1e7853de0d3fe401b0e17caa366df0f193e4597baf24e2ecaad2908d644f6f009180b029b0dc0f8941a1536e72582f2272f47c6f8b02003
 Size (ised-2.2.2.tar.bz2) = 99694 bytes

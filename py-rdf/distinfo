@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/06/13 19:20:24 jihbed Exp $
 
 SHA1 (rdf-0.9a6.tar.gz) = e8406786442f79cc8ed843283a39b5cda896c42c
 RMD160 (rdf-0.9a6.tar.gz) = 3e12fda7f421ab09ab9c3e72aba876c2dd912f88
+SHA512 (rdf-0.9a6.tar.gz) = a98f88a541f01959cda081f4de9e90dd047dbaf8939b118b22126cf11c2ab2a22da6c9285d30c3d49250ab97b96b4081f2259a75e7dfece65afa98943590d21a
 Size (rdf-0.9a6.tar.gz) = 48512 bytes

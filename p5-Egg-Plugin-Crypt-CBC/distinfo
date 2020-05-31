@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/11/13 17:40:27 noud4 Exp $
 
 SHA1 (Egg-Plugin-Crypt-CBC-3.01.tar.gz) = 13eec1c1f39528abb8b70dd5a48d22ad86b64aa1
 RMD160 (Egg-Plugin-Crypt-CBC-3.01.tar.gz) = de75c3f609cc92306cb1bc628bdfe3104fb6a482
+SHA512 (Egg-Plugin-Crypt-CBC-3.01.tar.gz) = 09d456dffd380fff4a0df42a854863e53c1d537eabc557b75987e2a6d149a13a9bd371ba366de35c22257cf07dc15050960468f672ec26845606c6d18ad0927a
 Size (Egg-Plugin-Crypt-CBC-3.01.tar.gz) = 21601 bytes

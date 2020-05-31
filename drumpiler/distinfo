@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/01/30 16:56:58 netcap Exp $
 
 SHA1 (drumpiler-0.9.0.tar.gz) = 249dc1e8107314cdf0de60e1181e5e11062b624a
 RMD160 (drumpiler-0.9.0.tar.gz) = 045008b57ca587c33ba74b63378f170033920463
+SHA512 (drumpiler-0.9.0.tar.gz) = 49d1f85aa7814670aa38276158cb967353797c4e61f769b3b7f71bf410b22aa5dfc3c0223f6442d60920a8a054d412f8d4c0cd04f8b0854d63f10f3ea3fb7726
 Size (drumpiler-0.9.0.tar.gz) = 12330 bytes

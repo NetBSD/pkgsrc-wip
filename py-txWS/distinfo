@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/20 16:09:19 jihbed Exp $
 
 SHA1 (txWS-0.9.1.tar.gz) = 08680d07cd7a9b02d4d922b83db01b9a41f545d5
 RMD160 (txWS-0.9.1.tar.gz) = 37499d56ac339c27ddf81cc98913d25c4a296de1
+SHA512 (txWS-0.9.1.tar.gz) = aafd884f18c66bf8909f15a2382afef69dbb1b55475873e262a5055878197ed83d4fac27cc0dddc3acb077bd4b6c1817296f289ca6942c35bb4d0e29d70f188d
 Size (txWS-0.9.1.tar.gz) = 9899 bytes

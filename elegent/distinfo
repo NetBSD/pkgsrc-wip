@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/21 22:55:06 jihbed Exp $
 
 SHA1 (elegent-1.2.1.tar.gz) = e529fbe25c05b23c5f5f3aadc4b73ca3d8d9eb11
 RMD160 (elegent-1.2.1.tar.gz) = b32f5861f8ea469a1922110f8dff420bda3eb5df
+SHA512 (elegent-1.2.1.tar.gz) = f65d348e7c1f9ad7eb0e2980fc5db19214888c1c1045acfb11d7afaa36242a5c06238d60f52da4bcf95ef2d0b30bdef0e837aff733fe2513f73e4e67d8adbd85
 Size (elegent-1.2.1.tar.gz) = 70813 bytes

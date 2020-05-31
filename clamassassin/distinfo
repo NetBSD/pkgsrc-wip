@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/06/02 07:49:29 ura Exp $
 
 SHA1 (clamassassin-1.2.2.tar.gz) = 64b84d4b3d49308b7ac448e27062a6e72f1ffb6e
 RMD160 (clamassassin-1.2.2.tar.gz) = 44191b7828ff5ecebd5e88660240a11b0a1097c1
+SHA512 (clamassassin-1.2.2.tar.gz) = 1a369a033017a212a1c6d8f4d1211b225543e6f1415f230dc8f13357b5034ce25d41e78321ed9692ac7b1a85afa3ba4e2a596d2566106bbe5859fd8f591fb729
 Size (clamassassin-1.2.2.tar.gz) = 33748 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/07/11 10:20:05 phonohawk Exp $
 
 SHA1 (fingertree-0.0.1.0.tar.gz) = 8bb5b4e9965c90dcbd19ec36a879eb451b3aa41a
 RMD160 (fingertree-0.0.1.0.tar.gz) = 84fc80c6432892b01ba905d5c6af8c756ecfaf71
+SHA512 (fingertree-0.0.1.0.tar.gz) = e7b92634875c91b52d49a684414a1477c83346fc50b11a0e2acc88801b4934ad410996a666eebb56ef814624978feee8399f27a9540ff4a15e756cb806528c7f
 Size (fingertree-0.0.1.0.tar.gz) = 10068 bytes

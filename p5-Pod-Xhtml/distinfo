@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2011/10/15 16:07:18 jgoamakf Exp $
 
 SHA1 (Pod-Xhtml-1.61.tar.gz) = 8907cc740b00f354d03a65d907f8fd95bef0c618
 RMD160 (Pod-Xhtml-1.61.tar.gz) = 0c02961ce627c23daa8b0edf424d6bf8e93ffc1a
+SHA512 (Pod-Xhtml-1.61.tar.gz) = a3a62c7502ec714127476948068cf38578280d48924657b3db7579adb276d455c86a3a1d9e99cc1eb31e4d566906babba0fd74cab1a7dfe18fc738c76c979ebb
 Size (Pod-Xhtml-1.61.tar.gz) = 26725 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2012/09/16 00:00:25 jihbed Exp $
 
 SHA1 (dune-istl-2.2.0.tar.gz) = df246cd0b3f0d96309c96301504f4bc17be7041c
 RMD160 (dune-istl-2.2.0.tar.gz) = b181de5a4740d0934fba4b5cb6d4fa78dd922725
+SHA512 (dune-istl-2.2.0.tar.gz) = 82535e0812ded33eedbdf53070949e5986b37121bf318a0f4873d25b869f25c736e578ae00c17543a561997fc37cea928a2ed817b32a6462c663e18dd4dabfc7
 Size (dune-istl-2.2.0.tar.gz) = 4294014 bytes

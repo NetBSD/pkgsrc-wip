@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2010/07/23 12:10:32 tnn2 Exp $
 
 SHA1 (mtop-0.6.6.tar.gz) = f22fd1972c64f11c0877fe46f1f03cc39ee79bfd
 RMD160 (mtop-0.6.6.tar.gz) = 0db07a98cfa412de543dfda3404259dbb52be39c
+SHA512 (mtop-0.6.6.tar.gz) = 9befb1d44ef537c4abe0246ebbf20019499875d7e8efeac2fd1cf068dc577c2809bb0333ebf633982852446a0160d73ccfa0006dcfa42f7d95bbbf765f12ce17
 Size (mtop-0.6.6.tar.gz) = 48161 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:26 rillig Exp $
 
 SHA1 (lingoteach-lesson-0.4.1.tar.gz) = 56425b6d761b23ad0513538f43577acf6d344977
 RMD160 (lingoteach-lesson-0.4.1.tar.gz) = b5b4a5fabad677b9e977dfa481d0d4d0a89d3749
+SHA512 (lingoteach-lesson-0.4.1.tar.gz) = 46887eb25404fff9fec5f8f5dd79780f064626142cc5eb013fd24a319998d9a042e6b691a393106be618a4ef18b08bb407a93bb9744369d1f77518e66f08656d
 Size (lingoteach-lesson-0.4.1.tar.gz) = 530306 bytes
 SHA1 (patch-aa) = e765ae7cc9211af14e571a70b6edee0e516ea1ba

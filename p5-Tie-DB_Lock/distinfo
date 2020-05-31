@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2006/03/03 09:55:58 jgoamakf Exp $
 
 SHA1 (Tie-DB_Lock-0.07.tar.gz) = 53565cdb842a85a23281d0a902c7b2be6ff45b62
 RMD160 (Tie-DB_Lock-0.07.tar.gz) = beed695cf1d1985c86833540643379a4389f32a5
+SHA512 (Tie-DB_Lock-0.07.tar.gz) = b0c49001b618924994359e85d844fb6eab1293c9eba166bea11c032ccd47dbd7ea3faf2f4aca68c61348aaa0fc2f9343b9a1eefd832bff90ba6a159f67910ad1
 Size (Tie-DB_Lock-0.07.tar.gz) = 6876 bytes

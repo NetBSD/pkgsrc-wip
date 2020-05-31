@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/08/06 04:34:04 phonohawk Exp $
 
 SHA1 (containers-unicode-symbols-0.3.0.2.tar.gz) = 77308131ceb6644ab4a9fe3071bd35bee3c9d8b0
 RMD160 (containers-unicode-symbols-0.3.0.2.tar.gz) = 0783dcf4a90ed392ef2d8e3f5a9dadd7a61ceb45
+SHA512 (containers-unicode-symbols-0.3.0.2.tar.gz) = dd2dddcf4edec3d03f6ab094a1a7a2bca6dd6b3903b92a58302f66e16919b1ee1cb4ba4968574b8870c40c39ad2fcf8f6aa2fa0a55a5cb90e24c579a20d6821f
 Size (containers-unicode-symbols-0.3.0.2.tar.gz) = 3418 bytes

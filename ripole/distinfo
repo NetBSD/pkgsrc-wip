@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/05/10 21:28:18 yeled Exp $
 
 SHA1 (ripole-0.1.4.tar.gz) = 76bae7aae765643f93865d557e311ef38301d1fa
 RMD160 (ripole-0.1.4.tar.gz) = 2651c539cb269c40c7cf4af2d2778e66fbd9eaf0
+SHA512 (ripole-0.1.4.tar.gz) = 8b41f675574835c94df535b6c509525b6a6549f99a49e3c3f98609551ee0914ab1ab8199a71ce0a43eeec2258ed3005d44727b04bf22a984466438f829d6cdeb
 Size (ripole-0.1.4.tar.gz) = 25386 bytes

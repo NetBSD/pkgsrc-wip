@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/11/15 09:31:10 noud4 Exp $
 
 SHA1 (CGI-Expand-2.05.tar.gz) = f715c8b56ed2945a88ffa504ecbcf8e784977c41
 RMD160 (CGI-Expand-2.05.tar.gz) = 52c9a372410cf308fccb6aa14b67aacd9e474032
+SHA512 (CGI-Expand-2.05.tar.gz) = 77905578fc9f7e9b030ab80d26fd85940f1fe550121d75432052e0e197183befa6ac229d380bbea19bca706ee498469f48a152d7cea2f746723e9470fe092ea3
 Size (CGI-Expand-2.05.tar.gz) = 9379 bytes

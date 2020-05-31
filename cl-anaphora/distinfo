@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/11/24 08:08:50 ddeus Exp $
 
 SHA1 (anaphora-0.9.4.tar.gz) = 1e9faa00efff11b45ca7bed64a1fb60e9ce55dbd
 RMD160 (anaphora-0.9.4.tar.gz) = 3fae80113c84d77f2e40ce6eaf5c1695c96e15fe
+SHA512 (anaphora-0.9.4.tar.gz) = 638e44a15387d2d926312770ddec56e5ccadbc6d131233b23340105e24ea81f14d9546e4f0efca2dfe576a58a2a6fb5729cb51ff8f66c3757cf9b6adea660aba
 Size (anaphora-0.9.4.tar.gz) = 5136 bytes

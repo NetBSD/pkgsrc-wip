@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/04/27 22:18:43 jihbed Exp $
 
 SHA1 (neuronpy-0.1.2.zip) = 5b6d198fe702c9cd1702264c7402432668e1c270
 RMD160 (neuronpy-0.1.2.zip) = 425f45594b8d778e4a6176d48adaa6a810fd3eff
+SHA512 (neuronpy-0.1.2.zip) = 5e594cdc8f9f453c1876e18cdbeabc2c598e64d9a46fabe124c131947ab7e91a82be7df500a579297a0c207af2c0a8c1b2956c0e121ff507f7f461afb6404521
 Size (neuronpy-0.1.2.zip) = 60609 bytes

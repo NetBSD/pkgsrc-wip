@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2013/09/03 22:04:53 jihbed Exp $
 
 SHA1 (YODA-1.0.2.tar.gz) = 01fbb39561c64711fa5ddca57df8d5f0feb92fe8
 RMD160 (YODA-1.0.2.tar.gz) = 777d9baa965b917e36493b09a56a5fffd9f43476
+SHA512 (YODA-1.0.2.tar.gz) = 83c3d9d0616bc22b7cec3201a9da4cde643d237db4d4ef240df7eca301a152e6231a4088ce189092775f4af0a50c0cd5b119175af2f917531266a3b71b6cfc54
 Size (YODA-1.0.2.tar.gz) = 590723 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/01/14 21:45:11 jihbed Exp $
 
 SHA1 (NetFlowVizu-0.6.tar.gz) = bfa76eb08735ad6407a4dfb250b46cf8df40f465
 RMD160 (NetFlowVizu-0.6.tar.gz) = 033f83cb707b4cc9bcb631d7526cb14e20ce9d77
+SHA512 (NetFlowVizu-0.6.tar.gz) = ed32cfb29af5e569ca6df8eaaf31d1bbe76d31bf7f3c38d76d95ef93afa61b0d631516cb910b2751862eb921f42f2db4dc534f122cc200c8e2aa27cfa56e4eea
 Size (NetFlowVizu-0.6.tar.gz) = 9433 bytes
 SHA1 (patch-setup.py) = fb1bd9db135621fefec4c913fb8283ddeda95f82

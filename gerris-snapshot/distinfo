@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/09/06 14:35:45 slitvinov Exp $
 
 SHA1 (gerris-snapshot.tar.gz) = 16c121e4b526d5a2c0386d36cb23dff3897bf1c1
 RMD160 (gerris-snapshot.tar.gz) = 5575376c8d9ce252215dd361443dfeb1c8e82144
+SHA512 (gerris-snapshot.tar.gz) = b3855d51eea04c496d2e5f662c148560d9ab8d5dfa97e4f7d1c22c70405b9b801b46f30aa0d159b1bd6a8182f171a1649b5f510f0e13feeb55f29cafe57b45dd
 Size (gerris-snapshot.tar.gz) = 2841686 bytes

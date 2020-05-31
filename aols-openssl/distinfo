@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:08 rillig Exp $
 
 SHA1 (nsopenssl-3.0b23-src.tar.gz) = df52cacc7b42961498c446ff38d8f90038351343
 RMD160 (nsopenssl-3.0b23-src.tar.gz) = f2dec1c05e7458be6d1765de2c482c5ca03ce5d7
+SHA512 (nsopenssl-3.0b23-src.tar.gz) = d668c1f9db85d4955df6a1dcc8a4b3ecc549ec4958fdee6b0ea5fd11ddf4f31f94ea0b849fcec1c47a7ce9181e568cb48be5300e3371a7abc172dbac7f7212c9
 Size (nsopenssl-3.0b23-src.tar.gz) = 71314 bytes

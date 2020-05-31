@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2005/08/07 19:33:30 jgoamakf Exp $
 
 SHA1 (Class-DBI-Plugin-Type-0.02.tar.gz) = 2801f42e7511f0ec6c3367f3efcf86d8296d93eb
 RMD160 (Class-DBI-Plugin-Type-0.02.tar.gz) = 36ff2f143e06894ba764761cbe807b35fd543f6f
+SHA512 (Class-DBI-Plugin-Type-0.02.tar.gz) = b48102e896fc4cb1e492538ea5fb1a0eab7ab1486cb2cbe39a49dad14ec0f4a76b31d32bac1eae2cb6749a4d5b6758a3725f9527e6c4af3410ba6283973a95a5
 Size (Class-DBI-Plugin-Type-0.02.tar.gz) = 2811 bytes

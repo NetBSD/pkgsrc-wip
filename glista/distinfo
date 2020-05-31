@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (glista-0.3.tar.gz) = 59822f8cafe032cd4e940fda4a08de9d6dc07a06
 RMD160 (glista-0.3.tar.gz) = 01f27591ecab1d11c80627a23375e7f25d7eb220
+SHA512 (glista-0.3.tar.gz) = 3555b96e61fc7f4f00fe37cb0a875fcf9e1d7b530ea41748b65d426abe60b98991f1efccc39f7aeb2252c894dc97749cd5c8c018242554f7d918f882abcba00d
 Size (glista-0.3.tar.gz) = 135846 bytes
 SHA1 (patch-aa) = a76d78736d498a86f05e167fbf19ada0fea4f199

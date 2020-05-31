@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/07/26 12:38:07 jihbed Exp $
 
 SHA1 (pylire-0.3.8.tar.gz) = ea5de392eb70e2bced890f0fc6dc5e0fbf02336e
 RMD160 (pylire-0.3.8.tar.gz) = 1a7219fd0c6b48516d079e98cf31f383012fb974
+SHA512 (pylire-0.3.8.tar.gz) = e91e9fa4231c1ad3f6ae20f99ee3f92447bc2f14b5080222e1c305f22df587a58e57771d2e738c443d52e07f39c3f943c6112270ff6e9caab5d62ce195541205
 Size (pylire-0.3.8.tar.gz) = 17275767 bytes

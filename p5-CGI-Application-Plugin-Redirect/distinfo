@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/01/09 06:08:26 ficovh Exp $
 
 SHA1 (CGI-Application-Plugin-Redirect-1.00.tar.gz) = 3d97505a63a31c768090aa12cb81e3672cbbf786
 RMD160 (CGI-Application-Plugin-Redirect-1.00.tar.gz) = 63ccc007444dc4565899298abcf305de3e771c52
+SHA512 (CGI-Application-Plugin-Redirect-1.00.tar.gz) = 7af14c87e0aa36dd78fdf6d669f07f4305a5f3ed4a3a5ccb586dc11a111ed16986e374463c73b293069751d46f1b400d4ae8cfa7072c4c82d52c480e079b12e5
 Size (CGI-Application-Plugin-Redirect-1.00.tar.gz) = 3645 bytes

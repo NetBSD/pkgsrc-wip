@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/10/04 21:41:46 jihbed Exp $
 
 SHA1 (conda-3.17.0.tar.bz2) = 1d15db2a28a05d682aca8069716052f633483a7b
 RMD160 (conda-3.17.0.tar.bz2) = 72d70a3a8105a0992093f26a20e463d62597cc19
+SHA512 (conda-3.17.0.tar.bz2) = 37a19f9f21208f64dfe1df4e1bb098c52a9a595de711f53494dae742fe178514c83e357b862a127b834018a1fc5e4d952735ccffbc70c477c70faccdb6b781c9
 Size (conda-3.17.0.tar.bz2) = 138681 bytes

@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2012/05/25 10:12:21 jeremy-c-reed Exp $
 
 SHA1 (lubuntu-artwork_0.27.tar.gz) = 15e0478cb55fdc130d59405f127f48431752c7b8
 RMD160 (lubuntu-artwork_0.27.tar.gz) = 069a3af705f880a821c1860a18db290fdbb2dc01
+SHA512 (lubuntu-artwork_0.27.tar.gz) = a77b2647e3419db959308e4100d33babf56fa1bead5ebc06c070f4b9c073ef3364f5868895d17b873f3aabb910a52449058376ff0e7d46a4067c94e006a5249b
 Size (lubuntu-artwork_0.27.tar.gz) = 6708304 bytes
 SHA1 (patch-aa) = 77a0b9475a1b5322e121133f3c15ab8f3ba7051c
 SHA1 (patch-ab) = 9685c4ee141250a22371919051f7274045057395

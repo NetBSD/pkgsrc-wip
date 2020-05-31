@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2015/05/28 05:38:12 phonohawk Exp $
 
 SHA1 (pib-0.3.1.tgz) = 1515d111704ccb22b94588d2e4820c138161c452
 RMD160 (pib-0.3.1.tgz) = d1cf1ccf15727d03fcb066ba1442908fa43f4d63
+SHA512 (pib-0.3.1.tgz) = 26ca550e1a759e5e0fb6e9080301118540534aed4932e3f7d5edff9e64f3c6ea01f7bcb67e8c05ddb99b75d51c85032214db3fa28d5fddd964cbaef7317b0bd4
 Size (pib-0.3.1.tgz) = 44829 bytes
 SHA1 (patch-lib_Makefile.in) = 1bfd9f1b3d4a8467264bb6a0518dcd7536c0fad9
 SHA1 (patch-lib_pib.scm) = f67c53f938b8877bc37c1baa2049244a00db9632

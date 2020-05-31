@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/02/01 13:58:39 jihbed Exp $
 
 SHA1 (CythonGSL-0.1.tar.gz) = e30d16f7200341458a0399642d54524ffbedeb49
 RMD160 (CythonGSL-0.1.tar.gz) = 7328d8e03331d4c52eb363bc4b4d028b8937a1b2
+SHA512 (CythonGSL-0.1.tar.gz) = d8e8684de51dba585d84ce0e06ae62a0a0958c156af4b55966956a31c279c72296ecfa06a3c13a3cd24dd6637f18d8a16fede0974f49a7e0cc5a5f34a42c74f8
 Size (CythonGSL-0.1.tar.gz) = 24322 bytes

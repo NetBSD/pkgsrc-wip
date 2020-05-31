@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2011/02/28 18:32:39 thomasklausner Exp $
 
 SHA1 (scantailor-0.9.9.2.tar.gz) = 7bdd390a32355685af53160aa5b9bd3b280a0c1a
 RMD160 (scantailor-0.9.9.2.tar.gz) = 39286377d1b328286c8c35543fb97c1a5695bf73
+SHA512 (scantailor-0.9.9.2.tar.gz) = fd1bb5bf17da825ee1ea46a6ce5d56fcbecc5542bd90da6a2675006ed8d5e7ef4e95e1918166920dbf81f193f056e2a270efcf79e826537ca8cf4b7f539ff02c
 Size (scantailor-0.9.9.2.tar.gz) = 969691 bytes
 SHA1 (patch-cmake_SetDefaultGccFlags.cmake) = 57cbd02d5b3b097642c5b07d247e7c6a98babee9

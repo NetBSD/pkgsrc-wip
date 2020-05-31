@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/01/26 17:16:04 mrohrer Exp $
 
 SHA1 (ggz-gtk-games-0.0.14.tar.gz) = f812a6294786aa78a3639e166312397ca5ff5b65
 RMD160 (ggz-gtk-games-0.0.14.tar.gz) = ded0a759cf3c2f8cfe2ab7beef4ee3a197704317
+SHA512 (ggz-gtk-games-0.0.14.tar.gz) = faa47b8a413d9a83278b47257a593aa2359f832eccfd3f83b86514ba143716f138f98bb36ae58ae495ca792f52c3276f8a1148de871149ee5c4a9b28c8b017ba
 Size (ggz-gtk-games-0.0.14.tar.gz) = 1693534 bytes

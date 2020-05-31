@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/05/01 23:19:47 ficovh Exp $
 
 SHA1 (CGI-Application-Standard-Config-1.01.tar.gz) = 7db11443193e7fae6fab8d9a6220dbfbd8a22efe
 RMD160 (CGI-Application-Standard-Config-1.01.tar.gz) = d9f58d86e43efa2e89b4a680a44b7d0c6e56601b
+SHA512 (CGI-Application-Standard-Config-1.01.tar.gz) = b19d575efc11111eb6c00fdb5b66048a86a7b47cbafe303a4e8fb337174272cd2969332dcc4f3f27cdd40729279329e03c6397a183c3afee0a3b40a3c85b2a94
 Size (CGI-Application-Standard-Config-1.01.tar.gz) = 4740 bytes

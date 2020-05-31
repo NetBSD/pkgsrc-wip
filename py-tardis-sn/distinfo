@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/17 21:48:13 jihbed Exp $
 
 SHA1 (tardis-sn-0.9rc1.tar.gz) = 7855601fa882cce7b7562fc69ee0b04626b6a197
 RMD160 (tardis-sn-0.9rc1.tar.gz) = cfcafc72e4437b7ebc3cb59155bbdb34e1bce945
+SHA512 (tardis-sn-0.9rc1.tar.gz) = 874a39ca6f4bd10c68241df2e61b541ee3195a9c6a06d6e219562422017fd82df4f045ae1bbe702a6de866dc5f35ba4563609aec73c488fe1812951d8bb3a2eb
 Size (tardis-sn-0.9rc1.tar.gz) = 3132929 bytes

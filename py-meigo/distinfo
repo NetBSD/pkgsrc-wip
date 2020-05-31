@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/09 20:24:03 jihbed Exp $
 
 SHA1 (pymeigo-1.0.0.tar.gz) = 5f7ddd2da7a13e6842f4e61e5005de0936824844
 RMD160 (pymeigo-1.0.0.tar.gz) = 66c960140d29a5502960bf248157185f7df7ba94
+SHA512 (pymeigo-1.0.0.tar.gz) = e9cfe6bcbeee259c558b8414d02016d7a32506b7b62020508cb495176050d47de67c7895a1e5989bf8d6f5e28e8bc98a86cd89c3e01c65bdee1df7102b7feaf8
 Size (pymeigo-1.0.0.tar.gz) = 18525 bytes

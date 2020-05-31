@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/03/20 23:38:15 jihbed Exp $
 
 SHA1 (rpncalc-2.7.zip) = c37e00f94aaac5799836ef7b4c251e02f3070cdd
 RMD160 (rpncalc-2.7.zip) = 8a3ae1439be73f85b4e0eef6cff19ded6112a75c
+SHA512 (rpncalc-2.7.zip) = dd0fa70c4567a45c7fd67f3902aa99704923602bf678e9472938f42eb8cd14703ba805f6ec68ba55a833a0207c122c79658e62f00ad777ee0b045eb033071554
 Size (rpncalc-2.7.zip) = 119663 bytes

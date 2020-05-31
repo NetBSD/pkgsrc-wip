@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/02/20 16:43:35 jihbed Exp $
 
 SHA1 (fedmsg-0.16.1.tar.gz) = 1e39a8576e43712a71d26768731f67dcb7876be0
 RMD160 (fedmsg-0.16.1.tar.gz) = c3c4b4704bab7a443f7b20117cd59b7a88637df5
+SHA512 (fedmsg-0.16.1.tar.gz) = 336087aeb7a6d474402e05c50e85c52fb693657d8b974e84aaeedf97e53e7cb82bde2b42c1091a8c223eda92e227c7a7e729405a88b50153264d45825417a38a
 Size (fedmsg-0.16.1.tar.gz) = 525973 bytes

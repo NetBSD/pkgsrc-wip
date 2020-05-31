@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2012/10/02 00:10:26 jihbed Exp $
 
 SHA1 (loggly-0.1.2.tar.gz) = a81ae69163db92d4aeb2a1d944f36bff598c56f3
 RMD160 (loggly-0.1.2.tar.gz) = 4b14c20142c463d44b4c36c27a0a134faed80814
+SHA512 (loggly-0.1.2.tar.gz) = f4409ac94d13209462a60a4d32e737536d395cb1f81e3a5cb81208f8bc1c1b3690032268b2e7f818efeab3cff860eba4e55e74beb99b8adca3cc4fae67cdd3b5
 Size (loggly-0.1.2.tar.gz) = 5671 bytes
 SHA1 (patch-setup.py) = bc107b4901c35d2cf8ba3699afdd4e1983d9f5b8

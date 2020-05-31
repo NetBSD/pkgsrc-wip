@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2013/06/16 08:36:45 noud4 Exp $
 
 SHA1 (tasks-0.20.tar.bz2) = d8beac587fb409e1f40f7e7c7095600850ff1e16
 RMD160 (tasks-0.20.tar.bz2) = 2802645aaed7be791d0d01688eb25d70a69bdda9
+SHA512 (tasks-0.20.tar.bz2) = 4c47ad9cd7771e4ed25e0f75cf92590b1832f532e1f04d0fb1c2422bde7f550103e0fb06ba0a3df767dfa99c7f167b103ea2fca74ab904db216bc0afa8a2e211
 Size (tasks-0.20.tar.bz2) = 209632 bytes

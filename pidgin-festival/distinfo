@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.3 2013/06/14 13:37:56 noud4 Exp $
 
 SHA1 (pidgin-festival-2.4.tar.gz) = 4440d063e3bbe9dff965525bc64af22a4db1b9e6
 RMD160 (pidgin-festival-2.4.tar.gz) = 4435670a1ecca4a4505f056f577c686038fc906f
+SHA512 (pidgin-festival-2.4.tar.gz) = 6f929e53eb3dd6b53cf18e217676f62230c016f955aa18985f186ac3c697318321a3138279bfe6d01a292b371af47d6f0759585ec57490e0fd04e7020e7abd3d
 Size (pidgin-festival-2.4.tar.gz) = 359230 bytes
 SHA1 (patch-aa) = f1eb4328adfebd8ffd09317a68faa4c2d4f9557c
 SHA1 (patch-ab) = 671166da13c76b3c609010548fff6b4fd03c44ff

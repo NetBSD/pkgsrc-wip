@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/08/01 22:12:08 jihbed Exp $
 
 SHA1 (pylds-0.0.1.tar.gz) = ab31742753c8eefee01b2e041c15025cc0c1c3ea
 RMD160 (pylds-0.0.1.tar.gz) = 1c842812b325eaa68e726ef3b515d69dc903b7bc
+SHA512 (pylds-0.0.1.tar.gz) = c12c51e6fcd571429848e1546ab3366cf9f5c89a2e4578a3eda194da675ffa56483285539fafa435cc9b25a3dd66a7ca2758d0b7441c862c97e28eb14bae82ba
 Size (pylds-0.0.1.tar.gz) = 353159 bytes

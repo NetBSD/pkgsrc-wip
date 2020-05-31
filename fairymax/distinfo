@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/11/13 19:58:10 krytarowski Exp $
 
 SHA1 (fairymax.tar.gz) = bec902b5cf9c1148fb879638cb9dc07e1a2a59a1
 RMD160 (fairymax.tar.gz) = d260d3af1bf1067d5ab202835bbd64602ab78ee9
+SHA512 (fairymax.tar.gz) = e3e81ce16a69694b8732cbd9af199f494e531da282122158634fa41a54b509d1416077897a2e041cbf09cd328215ff20eb3b5700b932c102983f4307fe1b709a
 Size (fairymax.tar.gz) = 37135 bytes
 SHA1 (patch-Makefile) = 855aff8e90745740bd8db3c8458dd7602460077a

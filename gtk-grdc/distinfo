@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/03/15 23:02:37 jihbed Exp $
 
 SHA1 (grdc-0.4.0.tar.gz) = 1abbdc240f0fbdb9483d113c655d6aa0904fb023
 RMD160 (grdc-0.4.0.tar.gz) = 3aa1fd5e0af9493b107aa1a3f0449513c36f0be3
+SHA512 (grdc-0.4.0.tar.gz) = 9e052cad62e4d74e55c75fb96990ab7f22cb1bdf3667f2951f58a84a0b7b70fa8afff7d0de46554e8c77dd106dea0866ad48555eccb96953629d1292e2799807
 Size (grdc-0.4.0.tar.gz) = 190366 bytes

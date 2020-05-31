@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/01/15 19:58:18 jihbed Exp $
 
 SHA1 (scikit-aero-v0.1.0.tar.gz) = c7cd3cd34d7c68761681371cdcd7f4a01361ee49
 RMD160 (scikit-aero-v0.1.0.tar.gz) = 49a376154f799bafa22321b62564bab5cd65aa98
+SHA512 (scikit-aero-v0.1.0.tar.gz) = c3c256ea34492974912f798d90caf4969091740ffad8cc67dd2749d2a5adf0b8ac1d61d63c45b066bc8e5998c62b5a13bbe88f6ef0c521ae83bd81d3e078e98c
 Size (scikit-aero-v0.1.0.tar.gz) = 20187 bytes

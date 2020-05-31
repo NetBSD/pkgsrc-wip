@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.7 2007/10/02 21:22:38 briandealwis Exp $
 
 SHA1 (fbpanel-4.12.tgz) = 7ccd0f677cc74bb8f9b88cb02957e0435371bd05
 RMD160 (fbpanel-4.12.tgz) = 4fc07a2f442914fe5d2bf0697acf1ca96cb09bb3
+SHA512 (fbpanel-4.12.tgz) = c0f0be5a34f5692dd347a93798894cf2b7c6e137f4791848429487f83f7b776f35b3570778327841125d227a5ef8530276ad2e409df89f28f1730b6f6874b998
 Size (fbpanel-4.12.tgz) = 179131 bytes
 SHA1 (patch-ab) = 43b99e1a67477fde2d7611aa8372b52d36f5eb48
 SHA1 (patch-ac) = dd0e1d5bcee53583025b265f76f7e601f5d0cb2a

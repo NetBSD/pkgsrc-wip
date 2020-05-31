@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2007/04/05 20:07:07 alchow Exp $
 
 SHA1 (mysqltcl-3.02/mysqltcl-3.02.tar.gz) = 592cc5d000a4ec18bc4ff16b6caedaaf5142f270
 RMD160 (mysqltcl-3.02/mysqltcl-3.02.tar.gz) = f110df1b9f2f2bd960257577fe5a72b6159fc1cd
+SHA512 (mysqltcl-3.02/mysqltcl-3.02.tar.gz) = 96d64b20879c6378945696b080a9fd520ebe1145ecddae1112f7f04f43c80fe44eb4ead5a7bc1cd472f9f1986092ba9fca41653bc84518215122098ba142f2a6
 Size (mysqltcl-3.02/mysqltcl-3.02.tar.gz) = 193912 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2009/09/22 14:09:27 phonohawk Exp $
 
 SHA1 (OpenGL-2.4.0.1.tar.gz) = a9d5c2e009b8b64e06215f8dc99c4c49350a22f2
 RMD160 (OpenGL-2.4.0.1.tar.gz) = fc9b693b1a52d44a4dbeadb208e3362fbe77d305
+SHA512 (OpenGL-2.4.0.1.tar.gz) = 6c1eade22839ba39d0ad1450806ab9a3b36a432931284d377cdf2da05015a7e451db742453cdc8fef2363d1596a183c94ca7efdee3df0d5e1423c3c4fde05820
 Size (OpenGL-2.4.0.1.tar.gz) = 105262 bytes

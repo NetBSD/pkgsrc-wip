@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2008/01/13 05:46:23 claytonk Exp $
 
 SHA1 (cycle-0.3.1.tar.bz2) = 150f5d2c4c77d89692b1b494cd00bb08e4dd5ca4
 RMD160 (cycle-0.3.1.tar.bz2) = a29bef0f0eb1c7b0c2137ef200497d2c9e53ee89
+SHA512 (cycle-0.3.1.tar.bz2) = 41c5db24e60b6f3eaaf930502d097bcd87eeb53f50732e352f7dd0f7c2694357e8f6a17202707592d51aa99e757661e703d84d72bb454aedbdb8331744efb2a2
 Size (cycle-0.3.1.tar.bz2) = 52281 bytes

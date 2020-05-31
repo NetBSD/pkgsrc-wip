@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/01/21 20:27:30 othyro Exp $
 
 SHA1 (libepc-0.4.4.tar.xz) = 38bb8f1e7e2ee53f7c5a978cf1b59a6c4ddee8e6
 RMD160 (libepc-0.4.4.tar.xz) = 21eb62f94467c880c98a6717c64464a209f898d2
+SHA512 (libepc-0.4.4.tar.xz) = c6d7fbce53628002fecc13f1f33ec41d9dc6bc36233bf61f46f45b5f5b47fd6220f5ce8944466583d51e3c67b23f3da62cd67bacfe3bfa5c1bdb3aac3314ff5f
 Size (libepc-0.4.4.tar.xz) = 375332 bytes
 SHA1 (patch-ab) = f2e102e7d07f5204b30529737b412121e52f7806

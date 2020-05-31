@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/02/05 20:42:48 jihbed Exp $
 
 SHA1 (pytmux-0.1.0.tar.gz) = 7cb6f89481f3d13e579fa4c67333a817a0b51940
 RMD160 (pytmux-0.1.0.tar.gz) = 0d633af8d6230026c6d695bbce7125b6de605f3d
+SHA512 (pytmux-0.1.0.tar.gz) = 7539bff799bfcd8d9fb5c5344ff9333632d9f61afabeffe47d79d65e5e8bad2e4db548ec369d2bdcb65a6840b5ad392c6a49b46df83a7cb5e34b853a289bd44f
 Size (pytmux-0.1.0.tar.gz) = 8776 bytes

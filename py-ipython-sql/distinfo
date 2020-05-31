@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2015/06/21 23:31:33 jihbed Exp $
 
 SHA1 (ipython-sql-0.3.6.tar.gz) = 9a58c99560255ac477ed68822c31d9a91c18e1e3
 RMD160 (ipython-sql-0.3.6.tar.gz) = 1ff68bab124e3121562b2f2bc0ff09941df0e75f
+SHA512 (ipython-sql-0.3.6.tar.gz) = 8afe66efc78343d549b6f5c150f0fe37e5c537f30daeed8efc82e33798cacc2cb54b895646c20b4575446ed6470c9bb66386a2e5262f0cf88f19bc9588eb57e0
 Size (ipython-sql-0.3.6.tar.gz) = 11812 bytes

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2011/01/24 00:20:59 emil_s Exp $
 
 SHA1 (gf2x-1.0.tar.gz) = 137fd73f116a590ec7c5f72068f2d3c3144d697e
 RMD160 (gf2x-1.0.tar.gz) = e3b507485cfb25aab4bb25bcd5f134bf97ab8448
+SHA512 (gf2x-1.0.tar.gz) = f4658698972e31428d8349b423762e9ef5aaeb52d8081c9831baa4eb066737ab3e9667a700d5df79e0f0df2626db39f2f994df17da14719506d44dbb9b33af40
 Size (gf2x-1.0.tar.gz) = 460810 bytes

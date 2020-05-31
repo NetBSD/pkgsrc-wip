@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1 2014/06/06 22:26:12 jihbed Exp $
 
 SHA1 (TSGeom-0.1.5.tar.gz) = a8a657cb6bbbc93ff5d0480f6b5a8569b04e35cd
 RMD160 (TSGeom-0.1.5.tar.gz) = c0b98fc9f2f78cb8c862c6ec5fa47ae6c659602b
+SHA512 (TSGeom-0.1.5.tar.gz) = a5fe36a58b48fc66eef1f38f4790909d938da4730df57dfff70a3b7cd1584674a5dc29bb44a247ae8c1c4c65330911326a3c091a3aa3437bd3d2887ee3244b5a
 Size (TSGeom-0.1.5.tar.gz) = 3003 bytes

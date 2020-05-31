@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.1 2013/09/02 19:08:24 thomasklausner Exp $
 
 SHA1 (seagull-1.8.2/seagull.svn.tar.gz) = c81b49d4a37fff51c8bf64a58834366bdbdf222e
 RMD160 (seagull-1.8.2/seagull.svn.tar.gz) = 14c9940eb7bfeacf387bbf3d7d73c8eee89d674f
+SHA512 (seagull-1.8.2/seagull.svn.tar.gz) = 822e9028571ae0554fac32e69dbf6c32463928667207f5dde7f6c0eabeef996da6ef9e93db9d1a294f47d332a0887967e6efdcf091a7be5f47f8a07f0c49adf2
 Size (seagull-1.8.2/seagull.svn.tar.gz) = 14811741 bytes
 SHA1 (patch-build.conf) = d82286994f50d5f3b94fb561028737749583e28a
 SHA1 (patch-build.ksh) = 72d2907a7c6190448fa0cd84b857f9aa7158adb5

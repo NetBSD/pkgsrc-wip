@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/11/06 06:39:32 noud4 Exp $
 
 SHA1 (ups-monitor-0.8.3.tar.gz) = d7dc99157bb6a5d5d8ccec6efea0e27aae5bd137
 RMD160 (ups-monitor-0.8.3.tar.gz) = 2fe344c7a9e10ccae914fded22cadd6cbc1595fc
+SHA512 (ups-monitor-0.8.3.tar.gz) = 8577e2333c9ec682678dee1007fc62bcd1e86ed7759e7b1b31a03e92c73388b47643b03ea193fd17dbca3b14799bd39aa42291813cad248cdeebf17eb4790eeb
 Size (ups-monitor-0.8.3.tar.gz) = 123308 bytes
 SHA1 (patch-aa) = 28619f00e72094e7f51013eb37ba70501369b143

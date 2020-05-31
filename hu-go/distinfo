@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
 
 SHA1 (hugo-2.11-preview.tar.gz) = 3c3831ceac84ae759978d30d76f1ea051cf03079
 RMD160 (hugo-2.11-preview.tar.gz) = f55e14ddf7125783dabb83838e0818d6134fd704
+SHA512 (hugo-2.11-preview.tar.gz) = 690866ebf57faa08422426aa8e66f838baaab8f83a9207976c761cecb6d031a4d8659db0c22e060ecbee99962535e9ea202259980d878e7b030ec508074268d1
 Size (hugo-2.11-preview.tar.gz) = 435310 bytes
 SHA1 (patch-ab) = e3399cc8f398dbf2b8fa76da39b137a82a58f43e
 SHA1 (patch-ac) = 82f34fdfd0491b6d1469b92845aa4c3a224aa006

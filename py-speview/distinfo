@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1 2014/10/03 21:12:34 jihbed Exp $
 
 SHA1 (speview-0.1.3.tar.gz) = 94a084a47474661911a45e6d87cb7a8ac2b005b6
 RMD160 (speview-0.1.3.tar.gz) = ed80e4591fb5084af17d3a5c649d112ae6c61a8c
+SHA512 (speview-0.1.3.tar.gz) = 48da06b26b427b0567bb208f7ff23eecabad3e15f7b38cd6e697ab54c41ed09a24591511a19b7772bbd07a10f1556a00cf6b5899077e7f185dcdf812baf9e7aa
 Size (speview-0.1.3.tar.gz) = 29335 bytes
 SHA1 (patch-setup.py) = 87895d064fff227f0b2e60512053e24f68f17bb4

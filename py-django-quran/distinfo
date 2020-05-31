@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.1.1.1 2010/08/02 21:39:51 jihbed Exp $
 
 SHA1 (django-quran-0.1.tar.gz) = 5ad8bcda34b10fe63b04f4659505cfafbeb038f7
 RMD160 (django-quran-0.1.tar.gz) = f85bbd242ebac1264781135e0c164c7e058b61b9
+SHA512 (django-quran-0.1.tar.gz) = 011d35851eb5989dc25283d1b2d7e8b0aac029de8b0852c3e76a1984be0770817c1c0de31fada3b0ff2df33a06f766381f6c262e85b27fd53f0ae414285ae17b
 Size (django-quran-0.1.tar.gz) = 7864 bytes
 SHA1 (patch-aa) = c924b284d86119e7627eef36acc99e11991e6d1b

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2013/04/25 02:11:21 jgoamakf Exp $
 
 SHA1 (MMapDB-0.15.tar.gz) = c6e72eafdd661b56804d00aad1c5b35e8d4c0e6a
 RMD160 (MMapDB-0.15.tar.gz) = 4fdfeb75f0794075110755df091001e70f69ffd8
+SHA512 (MMapDB-0.15.tar.gz) = f6b975bb4a49d9305b24247fd8ee250ff8a210ec903b9acbfc477e401c55628b45692f3358df9b75c89866b7debd52366ea52b5064fb56524468cccf8a764d16
 Size (MMapDB-0.15.tar.gz) = 90206 bytes

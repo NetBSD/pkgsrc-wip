@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.2 2015/08/17 12:49:44 leot1990 Exp $
 
 SHA1 (rsstail-2.0.tgz) = 24d7518d4a33da0a9241bbb6622ae59ae0e4f4d1
 RMD160 (rsstail-2.0.tgz) = 87330ca65d85766531bd31136604abfb1f99323e
+SHA512 (rsstail-2.0.tgz) = 7288ef4358eff2720671b576e3e1f121404fad44043d6161e87f3bd4e9c0a0b2a39072ed2e2b22674a359ac75b02c521301a0450dceeaef943ee580441da12dc
 Size (rsstail-2.0.tgz) = 5650 bytes
