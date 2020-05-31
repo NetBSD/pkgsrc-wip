@@ -4690,6 +4690,7 @@ SUBDIR+=	telegraf
 SUBDIR+=	telegram-desktop
 SUBDIR+=	telepathy-butterfly
 SUBDIR+=	telepathy-logger
+SUBDIR+=	template-glib
 SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
 SUBDIR+=	teng
