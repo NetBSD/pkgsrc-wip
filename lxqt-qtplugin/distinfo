@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (lxqt-qtplugin-0.15.0.tar.xz) = b2ae89684166dd173d2971703464df02f5ae53aa
-RMD160 (lxqt-qtplugin-0.15.0.tar.xz) = f80aeccdf1b3fe07ab220a9101252be2210c8c9e
-SHA512 (lxqt-qtplugin-0.15.0.tar.xz) = 9a73b9d38e1c2e2e030b551f92d53afef69fedee8f0ff4c7147680c0037a3eacb98f5514e09f16762c03cdaded7e5f760a89d66461bab4d7e8877ebaba28160e
-Size (lxqt-qtplugin-0.15.0.tar.xz) = 22776 bytes
+SHA1 (lxqt-qtplugin-0.15.1.tar.xz) = 79a35183639ad30d7e7ceb0253a77a351f024c4e
+RMD160 (lxqt-qtplugin-0.15.1.tar.xz) = 90b06605819fefa84d7ca6d19496549b0a22ccb2
+SHA512 (lxqt-qtplugin-0.15.1.tar.xz) = 6fc19cf5f763d7879e5a052c5638b5b396f659f4e199493c8b87cdb661c910921ecda865de2900a047c96dd63c3ef6dbfa486d1dbe0257c26984a25a139dce2f
+Size (lxqt-qtplugin-0.15.1.tar.xz) = 23100 bytes
