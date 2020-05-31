@@ -134,7 +134,7 @@ _FOSSIL_CMD.open_repo.${repo}= \
 	${STEP_MSG} "Opening Fossil repo $${archive\#\#*/}.";		\
 	${MKDIR} "$$extractdir";					\
 	cd "$$extractdir";						\
-	${_FOSSIL_CMD} open "$$archive"
+	${_FOSSIL_CMD} open --nested "$$archive"
 
 # Pull changes from remote repository and save them in local repository
 _FOSSIL_CMD.pull.${repo}= \
