@@ -1,0 +1,15 @@
+$NetBSD$
+
+Set encoding to fix man page.
+
+--- wakeonlan.orig	2020-05-31 15:20:38.000000000 +0000
++++ wakeonlan
+@@ -137,6 +137,8 @@ __END__
+ 
+ # Script documentation
+ 
++=encoding utf8
++
+ =head1 NAME
+ 
+ wakeonlan - Perl script to wake up computers

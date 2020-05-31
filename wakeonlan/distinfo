@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (wakeonlan-0.41.tar.gz) = 5937a27e818f4765e3bc8fd6742375240a90d5d1
+RMD160 (wakeonlan-0.41.tar.gz) = 48a4b5c75cb2c8b95dccbd9f5ad46db176c53545
+SHA512 (wakeonlan-0.41.tar.gz) = 8cb6b9accd54cac8561f70c702629ae7f5c25b70d9f0e993caf5600eef6c74903802eabdc4ed5378aafa66e986240d2ced978ab039f82c72302e902b5b181875
+Size (wakeonlan-0.41.tar.gz) = 6099 bytes
+SHA1 (patch-wakeonlan) = 312c4aa71d7b815fbde39e7f6fb1cc7268ffd317
