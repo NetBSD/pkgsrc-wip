@@ -8,8 +8,7 @@ LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
 HOMEPAGE=	https://objfw.nil.im/
 MAINTAINER=	js@pkgsrc.org
 
-GIT_REPOSITORIES=	objfw
-GIT_REPO.objfw=		https://github.com/ObjFW/ObjFW.git
+FOSSIL_REPO=		https://objfw.nil.im
 
 WRKSRC=			${WRKDIR}/objfw
 USE_TOOLS=		aclocal automake
@@ -32,5 +31,5 @@ PLIST.ipx=	yes
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
-.include "../../wip/mk/git-package.mk"
+.include "../../wip/mk/fossil-package.mk"
 .include "../../mk/bsd.pkg.mk"

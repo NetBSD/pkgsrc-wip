@@ -6,6 +6,7 @@ bin/ofarc
 bin/ofdns
 bin/ofhash
 bin/ofhttp
+bin/ofsock
 include/ObjFW/OFASN1BitString.h
 include/ObjFW/OFASN1Boolean.h
 include/ObjFW/OFASN1DERRepresentation.h
