@@ -4,10 +4,11 @@ DISTNAME=	gnome-builder-3.36.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-builder/3.36/}
 EXTRACT_SUFX=	.tar.xz
+PKGREVISION=	1
 
 MAINTAINER=	dan@alt.md
 HOMEPAGE=	https://wiki.gnome.org/Apps/Builder
-COMMENT=	A toolsmith for GNOME-based applications
+COMMENT=	IDE/toolsmith for GNOME-based applications
 LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
@@ -22,6 +23,7 @@ MESON_ARGS+=		-Dplugin_update_manager=false
 
 CFLAGS+=		-Wno-error=shadow
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"
 .include "../../devel/glade/buildlink3.mk"
