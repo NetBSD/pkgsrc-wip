@@ -1201,6 +1201,7 @@ SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-gsm
 SUBDIR+=	gr-osmosdr
 SUBDIR+=	gr-osmosdr-git
+SUBDIR+=	grabtitle-git
 SUBDIR+=	grafana
 SUBDIR+=	grandr
 SUBDIR+=	graphmonkey
