@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (lxqt-panel-0.15.1.tar.xz) = 7eab6a7d8c09524a776a34498167ce0c77468082
-RMD160 (lxqt-panel-0.15.1.tar.xz) = e70367893df26d6d6020faf95630b790d4d88890
-SHA512 (lxqt-panel-0.15.1.tar.xz) = 8eb9856faa2ce56c56df7514772d3ae6d31339a10d16e1ed659be0a2affc57fd16e01e05cb67c4205dfb773234ca9b8a69f414f742ccc30495bf4e2acfa0513f
-Size (lxqt-panel-0.15.1.tar.xz) = 473356 bytes
-SHA1 (patch-panel_CMakeLists.txt) = 503d92f919776787cf797ef40ab4f054a2709ed3

@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (lxqt-config-0.15.0.tar.xz) = f6f7541a1f5be26d379c063024ae08ef7fdd82e9
-RMD160 (lxqt-config-0.15.0.tar.xz) = 005e6f0918b26f080d621baa8be9415dbdafc810
-SHA512 (lxqt-config-0.15.0.tar.xz) = 68dc8ecc38033a7a93167fb0afbe45b3e14eb1132c3faf3395ebed1fc96b5836e8db003ecffde0417dfaf9e73b70fcc69a06523319f1f858cd2020eb61113a0d
-Size (lxqt-config-0.15.0.tar.xz) = 312468 bytes
-SHA1 (patch-lxqt-config-input_keyboardlayoutconfig.h) = ba7ce5b75579f4478fe14a96dd852027f3570a79
