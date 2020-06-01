@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/ksh
+bin/ksh93
+bin/shcomp
+man/man1/ksh.1
