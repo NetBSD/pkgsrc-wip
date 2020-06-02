@@ -18,11 +18,6 @@ DEPENDS+=	auto-admin>0:../../wip/auto-admin
 
 NO_BUILD=	yes
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_SED.prefix=	-e 's|/usr/pkgsrc|${BUILD_DIR}/../..|g'
-SUBST_FILES.prefix=	Scripts/pkg-grep
-
 INSTALLATION_DIRS=	sbin
 
 do-install:
