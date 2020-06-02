@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2017/02/17 17:02:01 joerg Exp $
-
-SHA1 (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = 0a5eb683d712aa7bbc68d57d220939a7d3b0691f
-RMD160 (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = a4287b63b88f519a68d579092762540747587665
-SHA512 (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = dafa91ad8d7bca755ea4e8d3d3c50908c4de703d8f76745c68ad83bf9b4970f681c06eebd3fee5051a8c59954ed27a5abc779abe6c6dbe88cdbf00c9c8851e2c
-Size (libretro-pcsx-rearmed-20170901-09d454e73bc251b44848abba4026efcd452df752.tar.gz) = 877749 bytes
