@@ -6,7 +6,7 @@ converters/utf8proc: Update to 2.5.0nb1
   and more build dependencies that are at least an order of magnitude larger
   than utf8proc itself.
 - Drop patch for cmake
-- Add support for pkgconfig
+- Add support for pkg-config
   Install "libutf8proc.pc".
 - Bump PKGREVISION for additional installed files.
 - Take maintainership
