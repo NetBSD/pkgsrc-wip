@@ -3,8 +3,8 @@
 # Upstream does not have releases, and does not even have tags.
 # Create a faux version that will always increase, by date, and .N if
 # necessary.
-GITHUB_TAG=	afaca4132d671aa171c65deda61ba9759f5c5272
-VERSION=	20200522.0
+GITHUB_TAG=	96d896d2ad3955e2d42bc58fa5595046fb36c907
+VERSION=	20200602.0
 DISTNAME=	qt-openzwave-${VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openzwave/}
 CATEGORIES=	comms
