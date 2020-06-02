@@ -5,6 +5,14 @@ This package fixes the following bug in prboom+ 2.5.1.4:
 Loading maps using extended nodes crashes on big endian machines
 (because 32-bit values are imported with wrong byte order).
 
-Bug was reported and is already fixed upstream
+Bug was reported and is already fixed upstream.
+
+=========
+
+If you see crashes in multiplayer games, try this patched version.
+
+This package contains fixes for CVE-2019-20797 backported from 2.5.1.5.
+
+=========
 
 This package will stay in wip until the next release of PrBoom+.
