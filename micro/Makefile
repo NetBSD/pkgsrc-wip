@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=zyedidia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	sjmulder@NetBSD.org
-HOMEPAGE=	https://micro-eidtor.github.io/
+HOMEPAGE=	https://micro-editor.github.io/
 COMMENT=	Modern and intuitive terminal-based text editor
 LICENSE=	mit
 
