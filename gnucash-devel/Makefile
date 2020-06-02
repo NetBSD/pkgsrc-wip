@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.292 2020/04/14 10:35:17 wiz Exp $
 
-DISTNAME=		gnucash-3.902
+DISTNAME=		gnucash-3.903
 CATEGORIES=		finance
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
+GITHUB_RELEASE=		${PKGVERSION_NOREV}
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/

@@ -4,6 +4,7 @@ bin/gnc-fq-dump
 bin/gnc-fq-helper
 bin/gnc-fq-update
 bin/gnucash
+bin/gnucash-cli
 bin/gnucash-valgrind
 include/gnucash/Account.h
 include/gnucash/FreqSpec.h
@@ -22,6 +23,7 @@ include/gnucash/TransLog.h
 include/gnucash/Transaction.h
 include/gnucash/account-quickfill.h
 include/gnucash/assistant-xml-encoding.h
+include/gnucash/assoccell.h
 include/gnucash/basiccell.h
 include/gnucash/business-options.h
 include/gnucash/cap-gains.h
@@ -32,6 +34,7 @@ include/gnucash/checkboxcell.h
 include/gnucash/combocell.h
 include/gnucash/datecell.h
 include/gnucash/dialog-account.h
+include/gnucash/dialog-assoc-utils.h
 include/gnucash/dialog-book-close.h
 include/gnucash/dialog-commodity.h
 include/gnucash/dialog-dup-trans.h
@@ -516,19 +519,7 @@ share/doc/gnucash/Money95mfunds_fr.qif
 share/doc/gnucash/Money95stocks_fr.qif
 share/doc/gnucash/NEWS
 share/doc/gnucash/README
-share/doc/gnucash/README-ca.win32-bin.txt
-share/doc/gnucash/README-de.win32-bin.txt
-share/doc/gnucash/README-fr.win32-bin.txt
-share/doc/gnucash/README-hr.win32-bin.txt
-share/doc/gnucash/README-it.win32-bin.txt
-share/doc/gnucash/README-lv.win32-bin.txt
-share/doc/gnucash/README-nl.win32-bin.txt
-share/doc/gnucash/README-zh_CN.win32-bin.txt
-share/doc/gnucash/README-zh_TW.win32-bin.txt
 share/doc/gnucash/README.dependencies
-share/doc/gnucash/README.francais
-share/doc/gnucash/README.german
-share/doc/gnucash/README.win32-bin.txt
 share/doc/gnucash/README_invoice
 share/doc/gnucash/abc-all.qif
 share/doc/gnucash/abc.qif
@@ -537,10 +528,8 @@ share/doc/gnucash/cbb-export.qif
 share/doc/gnucash/currency_tree_xml.gnucash
 share/doc/gnucash/every.qif
 share/doc/gnucash/gtk-3.0.css
-share/doc/gnucash/guile-hackers.txt
 share/doc/gnucash/invoice.csv
 share/doc/gnucash/ms-money.qif
-share/doc/gnucash/projects.html
 share/doc/gnucash/quicktest.qif
 share/doc/gnucash/swipe.qif
 share/doc/gnucash/taxreport.gnucash
@@ -1007,6 +996,7 @@ share/gnucash/gtkbuilder/business-options-gnome.glade
 share/gnucash/gtkbuilder/business-prefs.glade
 share/gnucash/gtkbuilder/dialog-account-picker.glade
 share/gnucash/gtkbuilder/dialog-account.glade
+share/gnucash/gtkbuilder/dialog-assoc.glade
 share/gnucash/gtkbuilder/dialog-bi-import-gui.glade
 share/gnucash/gtkbuilder/dialog-billterms.glade
 share/gnucash/gtkbuilder/dialog-book-close.glade
@@ -1043,7 +1033,6 @@ share/gnucash/gtkbuilder/dialog-sx.glade
 share/gnucash/gtkbuilder/dialog-tax-info.glade
 share/gnucash/gtkbuilder/dialog-tax-table.glade
 share/gnucash/gtkbuilder/dialog-totd.glade
-share/gnucash/gtkbuilder/dialog-trans-assoc.glade
 share/gnucash/gtkbuilder/dialog-transfer.glade
 share/gnucash/gtkbuilder/dialog-userpass.glade
 share/gnucash/gtkbuilder/dialog-vendor.glade
