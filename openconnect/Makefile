@@ -22,7 +22,9 @@ CONFIGURE_ARGS+=	--disable-nls
 REPLACE_PYTHON=		trojans/*.py
 REPLACE_BASH=		trojans/*.sh
 
-INSTALLATION_DIRS=	sbin include lib ${PKGMANDIR}/man8
+# Why is this here?
+# I think this is not necessary when upstream build has an install target
+# INSTALLATION_DIRS=	sbin include lib ${PKGMANDIR}/man8
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
