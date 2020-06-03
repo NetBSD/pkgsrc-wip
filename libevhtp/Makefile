@@ -2,6 +2,7 @@
 
 DISTNAME=	libevhtp-${VERSION}
 VERSION=	1.2.15
+PKGREVISION=	1
 
 CATEGORIES=	www
 
@@ -21,4 +22,5 @@ USE_LANGUAGES+=	c99 c++
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../textproc/oniguruma/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
