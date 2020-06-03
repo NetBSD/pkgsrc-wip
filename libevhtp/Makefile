@@ -1,10 +1,12 @@
 # $NetBSD$
-VERSION=	1.2.11n
-PKGNAME=	libevhtp-${VERSION}
+
+DISTNAME=	libevhtp-${VERSION}
+VERSION=	1.2.15
+
 CATEGORIES=	www
-GITHUB_TAG=	${VERSION}
-DISTNAME=	${GITHUB_TAG}
+
 MASTER_SITES=	${MASTER_SITE_GITHUB:=criticalstack/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	https://github.com/ellzey/libevhtp
@@ -12,7 +14,6 @@ COMMENT=	Flexible replacement for libevent's httpd API
 LICENSE=	modified-bsd
 
 DIST_SUBDIR=	libevhtp
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_CMAKE=	yes
 
