@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/retrying.pyo
+${PYSITELIB}/retrying.pyc
+${PYSITELIB}/retrying-1.3.3-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/retrying-1.3.3-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/retrying-1.3.3-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/retrying-1.3.3-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/retrying-1.3.3-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/retrying.py
