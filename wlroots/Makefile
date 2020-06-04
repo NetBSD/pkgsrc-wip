@@ -1,20 +1,17 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	wlroots
-GITHUB_TAG=	0.10.1
-DISTNAME=	0.10.1
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	wlroots-0.10.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
 EXTRACT_SUFX=	.zip
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/swaywm/wlroots/
 COMMENT=	Wayland compositor library
 LICENSE=	mit
 
-WRKSRC=	${WRKDIR}/wlroots-0.10.1
+.include "options.mk"
 
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"

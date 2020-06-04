@@ -85,3 +85,5 @@ lib/libwlroots.so
 lib/libwlroots.so.5
 lib/libwlroots.so.5.9.1
 lib/pkgconfig/wlroots.pc
+${PLIST.x11}include/wlr/backend/x11.h
+${PLIST.xwayland}include/wlr/xwayland.h
