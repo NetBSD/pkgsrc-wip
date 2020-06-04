@@ -1,19 +1,13 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	sway
-GITHUB_TAG=	1.4
-DISTNAME=	1.4
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	sway-1.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swaywm/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	dan@alt.md
 HOMEPAGE=	https://github.com/swaywm/sway/
 COMMENT=	Sway is an i3-compatible Wayland compositor
 LICENSE=	mit
-
-WRKSRC=	${WRKDIR}/sway-1.4
 
 .include "../../wip/wlroots/buildlink3.mk"
 .include "../../wip/libinput/buildlink3.mk"
