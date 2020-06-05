@@ -20,8 +20,8 @@ REPLACE_PERL+=		test/test.pl
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
-SUBST_SED.version=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PKGVERSION_NOREV}]|"
-SUBST_FILES.version=	${WRKSRC}/configure.ac
+SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
+SUBST_FILES.version=	configure.ac
 
 pre-configure:
 	(cd ${WRKSRC} && autoreconf)
