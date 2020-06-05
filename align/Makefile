@@ -9,4 +9,6 @@ HOMEPAGE=	https://github.com/sjmulder/align
 COMMENT=	Center or right-align text files
 LICENSE=	2-clause-bsd
 
+MAKE_ENV+=	MANDIR=${PKGMANDIR}
+
 .include "../../mk/bsd.pkg.mk"
