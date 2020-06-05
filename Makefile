@@ -108,7 +108,6 @@ SUBDIR+=	alac_decoder
 SUBDIR+=	alacritty
 SUBDIR+=	alberta
 SUBDIR+=	aldo
-SUBDIR+=	align
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib-git
 SUBDIR+=	alsa-plugins
