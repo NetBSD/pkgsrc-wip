@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	qutebrowser-1.11.1
+DISTNAME=	qutebrowser-1.12.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qutebrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-cssutils-[0-9]*:../../textproc/py-cssutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-DEPENDS+=	glib2-tools-[0-9]*:../../devel/glib2-tools
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
