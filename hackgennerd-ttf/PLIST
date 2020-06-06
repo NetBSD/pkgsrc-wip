@@ -1,0 +1,9 @@
+@comment $NetBSD$
+share/fonts/X11/TTF/HackGen35Nerd-Bold.ttf
+share/fonts/X11/TTF/HackGen35Nerd-Regular.ttf
+share/fonts/X11/TTF/HackGen35NerdConsole-Bold.ttf
+share/fonts/X11/TTF/HackGen35NerdConsole-Regular.ttf
+share/fonts/X11/TTF/HackGenNerd-Bold.ttf
+share/fonts/X11/TTF/HackGenNerd-Regular.ttf
+share/fonts/X11/TTF/HackGenNerdConsole-Bold.ttf
+share/fonts/X11/TTF/HackGenNerdConsole-Regular.ttf
