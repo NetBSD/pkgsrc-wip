@@ -1288,6 +1288,7 @@ SUBDIR+=	h323plus
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc
 SUBDIR+=	hackgen-ttf
+SUBDIR+=	hackgennerd-ttf
 SUBDIR+=	haddock
 SUBDIR+=	halfempty
 SUBDIR+=	hammer
