@@ -1,8 +1,9 @@
 # $NetBSD: $
 
 DISTNAME=	zim-0.72.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	editors
+CATEGORIES=	wip editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
 
 MAINTAINER=	mp@petermann-it.de
@@ -18,14 +19,8 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON=	${WRKSRC}/zim.py
+REPLACE_PYTHON=	zim.py
 PYTHON_VERSIONS_ACCEPTED=	37
-
-SUBST_CLASSES+=		data-path
-SUBST_STAGE.data-path=	pre-configure
-SUBST_FILES.data-path=	tests/config.py
-SUBST_FILES.data-path+=	zim/config/basedirs.py
-SUBST_SED.data-path=	-e 's,/usr/local/share/,${PREFIX}/share/,'
 
 SUBST_CLASSES+=			man-path
 SUBST_STAGE.man-path=		pre-configure
