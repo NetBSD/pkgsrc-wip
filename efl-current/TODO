@@ -1,4 +1,4 @@
-:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-05-09 >> build OK
+:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-06-06 >> build OK
 
 Message: ecore_buffer disabled! <[dependency('wayland-client'), dependency('wayland-server'), ecore]
 Message: ecore_cocoa disabled! < osx
@@ -14,4 +14,5 @@ Message: efl_canvas_wl disabled! <[eo, efl, evas, dependency('wayland-server', v
 Message: elput disabled! < dep: eeze
 
 :: Plan
-1. Test with enlightenment-current build
+1. Test with enlightenment-current, optimize depends
+2. Add another OS support

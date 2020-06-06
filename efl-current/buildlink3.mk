@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl-current
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"

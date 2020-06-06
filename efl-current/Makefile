@@ -32,6 +32,8 @@ MESON_ARGS+=	-Dbuild-examples=false
 MESON_ARGS+=	-Dphysics=true
 MESON_ARGS+=	-Davahi=true
 MESON_ARGS+=	-Dsdl=true
+MESON_ARGS+=	-Dglib=true
+MESON_ARGS+=	-Dg-mainloop=true
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		pkg-config
@@ -48,17 +50,30 @@ SUBST_CLASSES+=		xdg
 SUBST_MESSAGE.xdg=	Fixing XDG_DATA_DIRS and XDG_CONFIG_DIRS
 SUBST_STAGE.xdg=	pre-configure
 SUBST_FILES.xdg=	src/lib/efreet/efreet_base.c
-SUBST_SED.xdg=		-e 's,/usr/share:/usr/local/share,${PREFIX}/share,'
-SUBST_SED.xdg+=		-e 's,/etc/xdg,${PKG_SYSCONFDIR}/xdg,'
+SUBST_SED.xdg=		-e 's,/usr/share:/usr/local/share,${PREFIX}/share,g'
+SUBST_SED.xdg+=		-e 's,/etc/xdg,${PKG_SYSCONFDIR}/xdg,g'
 
 REPLACE_PYTHON+=	src/bin/exactness/exactness_play.in
 REPLACE_PYTHON+=	src/bin/exactness/exactness_record.in
 
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} != "modular"
+SUBST_CLASSES+=			fix-options
+SUBST_MESSAGE.fix-options=	Fixing meson opengl options
+SUBST_STAGE.fix-options=	pre-configure
+SUBST_FILES.fix-options=	meson_options.txt
+SUBST_SED.fix-options=		-e "s|'es-egl', 'none'|'es-egl', 'base', 'none'|g"
+
+MESON_ARGS+=	-Dopengl=base
+.endif
+
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
