@@ -1,4 +1,4 @@
-:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-05-21 >> build OK
+:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-06-06 >> build&run OK
 
 MESON_ARGS+=    -Dbattery=false
 >> modules/battery/e_mod_sysctl.c
@@ -25,3 +25,8 @@ MESON_ARGS+=    -Dsysinfo=false
 MESON_ARGS+=    -Dtemperature=false
 >> src/modules/temperature/e_mod_tempget.c
 >> src/modules/temperature/e_mod_main.c
+
+:: Plan
+1. Test, optimize dependencies
+2. Try to enbale battery with upower
+3. Add another OS support
