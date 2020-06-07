@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (clisp-cur-20200607.tar.bz2) = b2786570d6eb19bd2770f175a3ffde1e1358fbbf
+RMD160 (clisp-cur-20200607.tar.bz2) = 85470d4fac74686d6be4e0afe6a12696f0142735
+SHA512 (clisp-cur-20200607.tar.bz2) = 3ae3887ef8a26abb52770ba2719bad412877bc8c683b3dd76ebb2aa5d97c034aac01a0bad5f64fde0b7224d20de966694a7b76184b89fa53d8afcb34772ca7a3
+Size (clisp-cur-20200607.tar.bz2) = 8803692 bytes
+SHA1 (patch-src_gmalloc.c) = 9f66b6d8e8145bb65e5b70778d8a38de55aad891
+SHA1 (patch-src_lispbibl.d) = 4964b81a1a8925bc0db3a66e29a45d218dac4da6
