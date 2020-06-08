@@ -2,8 +2,7 @@
 #
 
 DISTNAME=	phoronix-test-suite-${PTS_VERSION}
-PTS_VERSION=	8.8.1
-PKGREVISION=	1
+PTS_VERSION=	9.6.1
 CATEGORIES=	benchmarks
 MASTER_SITES=	https://www.phoronix-test-suite.com/releases/
 
@@ -11,6 +10,8 @@ MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	https://www.phoronix-test-suite.com/
 COMMENT=	Phoronix Benchmarking Suite
 LICENSE=	gnu-gpl-v3
+
+USE_TOOLS+=	bash
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3:../../graphics/php-gd
@@ -21,6 +22,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3:../../archivers/php-zlib
 
 INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	lib/systemd/system/
 INSTALLATION_DIRS+=	share/bash-completion.d
 INSTALLATION_DIRS+=	share/phoronix-test-suite
 INSTALLATION_DIRS+=	share/doc/phoronix-test-suite
@@ -34,11 +36,17 @@ WRKSRC=		${WRKDIR}/phoronix-test-suite
 
 ICON_THEMES=	yes
 
-PLIST_VARS+=	systemd
-
-.if exists(/bin/systemd)
-PLIST.systemd=	yes
-.endif
+REPLACE_BASH+=	ob-cache/test-profiles/pts/csgo-1.5.1/pre_linux.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/dota2-1.2.2/pre_linux.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/portal-1.1.1/pre_linux.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.0/install.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.0/interim.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.0/post.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.0/pre.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.1/install.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.1/interim.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.1/post.sh
+REPLACE_BASH+=	ob-cache/test-profiles/pts/shadowofthetombraider-1.0.1/pre.sh
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f

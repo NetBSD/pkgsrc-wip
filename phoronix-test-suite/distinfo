@@ -1,7 +1,10 @@
 $NetBSD: distinfo,v 1.5 2019/06/10 02:48:23 jym Exp $
 
-SHA1 (phoronix-test-suite-8.8.1.tar.gz) = 079676796c52fc9afbc3cbfde7488fb47cf0a4a4
-RMD160 (phoronix-test-suite-8.8.1.tar.gz) = 4236bc53588a9a32337f0c74d4bc1f44f3fd5300
-SHA512 (phoronix-test-suite-8.8.1.tar.gz) = 3395eee510f546447173306152704b9729a39a04062459a8153badcf53c6a63ae294833e377667cf521ee4e73c4b3ed175bacc1e7baa27a33cf6bd1a87338c25
-Size (phoronix-test-suite-8.8.1.tar.gz) = 904758 bytes
-SHA1 (patch-install-sh) = bdabbdccf8bb106cd1d48106cd40822cf997450e
+SHA1 (phoronix-test-suite-9.6.1.tar.gz) = be0804b67123089204603af58d9e954b71a74630
+RMD160 (phoronix-test-suite-9.6.1.tar.gz) = 923e14818d716c630abde83bf9dbaea269a6111e
+SHA512 (phoronix-test-suite-9.6.1.tar.gz) = f2e94adbd21384aaa2627c354de88e873df42ef074041dfef49bb25625e4a1b5c6135706fa777e002f292f9e33892a0456f2012c96488b56fe07c00310cfc78d
+Size (phoronix-test-suite-9.6.1.tar.gz) = 1781439 bytes
+SHA1 (patch-install-sh) = 9e4b93b0717b792a0c5933c86439e2bb23c0444c
+SHA1 (patch-ob-cache_test-profiles_pts_civilization-vi-1.0.0_install.sh) = 4dd81739176efbf2b4d420c89aa38848c6c653dc
+SHA1 (patch-ob-cache_test-profiles_pts_mysqlslap-1.1.0_pre.sh) = 0772b6d497c2beb9aabbdd3bec8549cdad374dfd
+SHA1 (patch-pts-core_static_sample-pts-client-update-script.sh) = 7169988683dba0db0a49096fd71c73bbe1390f00
