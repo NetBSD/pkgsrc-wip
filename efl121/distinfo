@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (efl-1.21.0.tar.xz) = 3bb687c635e20d8cd4e96d8be97ee9475b0c1bc0
-RMD160 (efl-1.21.0.tar.xz) = 5a2c4cb98d52b473325f5eb34e6c762a34f8f151
-SHA512 (efl-1.21.0.tar.xz) = 497735f518976d70b96023b013a6d821f6695fe56def2abf5bd1e1c7ad89d324428017d7909c7b73bfb332b811b5596592b105bb4c3d2f6a40929f1cefc2b789
-Size (efl-1.21.0.tar.xz) = 71030532 bytes
-SHA1 (patch-configure) = ad38a4bf4bcf647666e731faa141fe967d5758c3
-SHA1 (patch-configure.ac) = 151236171b7231ed08dc67943067f1c68c3938ef

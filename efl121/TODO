@@ -1,6 +1,0 @@
-It builds and install on netbsd, but
-efl121 needs some udev,hal,libmount wrappers for the eeze module,
-which is needed for building enlightenment.
-
-Current work is to make the package working for linux with 
-the eeze modules.
