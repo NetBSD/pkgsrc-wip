@@ -1,10 +1,11 @@
 # $NetBSD$
-VERSION=	6.0.9
-PKGNAME=	ccnet-server-${VERSION}
-CATEGORIES=	net
-GITHUB_TAG=	v${VERSION}-server
-DISTNAME=	${GITHUB_TAG}
+
+PKGNAME=	ccnet-server-7.1.4
+CATEGORIES=	devel net
+
 MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}-server
+DISTNAME=	${GITHUB_TAG}
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	http://seafile.com/
@@ -17,19 +18,18 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-server
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.0
+
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config gmake aclocal autoheader automake autoconf
+USE_TOOLS+=	pkg-config autoconf automake
 
 PY_PATCHPLIST=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 CONFIGURE_ARGS+=	--enable-server \
 			--disable-compile-demo
 
 pre-configure:
-	set -e; cd ${WRKSRC}; \
-	libtoolize; aclocal; autoheader; automake -a --foreign -i; autoconf
+	cd ${WRKSRC} && ${SH} ./autogen.sh
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
