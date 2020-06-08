@@ -1,13 +1,15 @@
 $NetBSD: distinfo,v 1.1 2014/05/16 15:19:19 hfath Exp $
 
-SHA1 (inetdxtra-20130516_src.tar.gz) = 6d2f2c055d502cb85f2a23d5f7bd592b7f91ce7a
-RMD160 (inetdxtra-20130516_src.tar.gz) = 136a5f948b2b3b477354dba7ad963573a319e98c
-SHA512 (inetdxtra-20130516_src.tar.gz) = bdd193cc1877caf7ebd4013261659d30cac8eb2ba16a69bd5182ee032eaae6dc75e03518c116c5b2290e066246c4e6ed2f6e3d4a15b5fe754be91b7d7fbc083b
-Size (inetdxtra-20130516_src.tar.gz) = 56675 bytes
-SHA1 (patch-Makefile) = 88aa58b5ccc35cfcf7deb7b50f673e78f653c838
-SHA1 (patch-in.ctcs_in.ctcs.c) = dcee3fcec2cd6e5e2590a305fe7230b1dd3e2d89
-SHA1 (patch-in.dhcp_in.dhcp.c) = 649efcc08849fa15913ffcde33ab38a324c0ac6c
-SHA1 (patch-in.dns_in.dns.c) = 421c2bfbf29d24182a2fd062f86c76a25570d789
-SHA1 (patch-in.jabberd_in.jabberd.c) = 86c752940bd9a3f0d7bac41daeedf4d7d93e412a
-SHA1 (patch-in.mvp_in.mvp.c) = e9ec692d268d85f52b2f06c910cee75185e72ea2
-SHA1 (patch-in.www_in.www.c) = fc1a58223adc4401cec773bd331e21d7198cf5f5
+SHA1 (inetdxtra-20140904_src.tar.gz) = 1171f2edc5bab11290d84081470e6dcb2ce674c5
+RMD160 (inetdxtra-20140904_src.tar.gz) = c3a71564b7a48b2054a8532cd267dc1a79dafd01
+SHA512 (inetdxtra-20140904_src.tar.gz) = 911e7f95d1893026caa902ab373c76e13d11a94b61c726490abae2308432a2e07346898f16ad4f463be020afc1ed86219c746e857412c83ce0e1c7772fe73ec7
+Size (inetdxtra-20140904_src.tar.gz) = 143162 bytes
+SHA1 (patch-Makefile) = ce09b73281f7310535dea35b548b8cb47b34ac8d
+SHA1 (patch-in.ctcs_in.ctcs.c) = f094b05986ec03eba053be7c642379f4d4b446da
+SHA1 (patch-in.dhcp_in.dhcp.c) = 517d1eca3eb9a8af5bec376c0dfe68c718d2e6f4
+SHA1 (patch-in.dns_in.dns.c) = 8da64954c590fe9ba4b0af348b87da32409d6cd0
+SHA1 (patch-in.jabberd_in.jabberd.c) = 50e8d4188d68dcd141a01816449f0b84c42fa8f8
+SHA1 (patch-in.mvp_in.mvp.c) = 532eabec3ea811219a37c508bb4b68be178be1bc
+SHA1 (patch-in.proxy_in.proxy.c) = 225f9dbe2f4cc26c2e3335679b49b11ac61f107e
+SHA1 (patch-in.smtp_in.smtp.c) = 1b1462e33b09834b3ac44e944cf6d6eac78f2aa8
+SHA1 (patch-in.www_in.www.c) = abaf0bbd7e0b62a9faffcb161dfa83acc0c7706b

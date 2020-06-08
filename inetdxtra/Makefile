@@ -1,40 +1,57 @@
-# $NetBSD: Makefile,v 1.1 2014/05/16 15:19:19 hfath Exp $
+# $NetBSD$
 
-INETDXTRA_VERSION=	20130516
+INETDXTRA_VERSION=	20140904
 DISTNAME=		inetdxtra-${INETDXTRA_VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//}
 CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=inetdxtra/}
+MASTER_SITES=		http://rawsontetley.org/oss/
 
 MAINTAINER=		hauke@NetBSD.org
-HOMEPAGE=		http://inetdxtra.sourceforge.net/
+HOMEPAGE=		http://rawsontetley.org/proj_inetdxtra.html
 COMMENT=		Collection of inetd based servers
 
 LICENSE=		gnu-gpl-v2
 
-PKG_SYSCONFSUBDIR=	inetdxtra
+USE_TOOLS+=		gunzip
+
+WRKSRC=			${WRKDIR}/inetdxtra
+
 CFLAGS+=		-DSYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 CFLAGS+=		-DONELOG -DNORELATIVE -DCGI -DUPDATEPS
 
-WRKSRC=			${WRKDIR}/inetdxtra
-LIBEXECDIR=		${DESTDIR}${PREFIX}/libexec/inetdxtra
-DOCDIR=			${DESTDIR}${PREFIX}/share/doc/inetdxtra
-EGDIR=			${DESTDIR}${PREFIX}/share/examples/inetdxtra
+PKG_SYSCONFSUBDIR=	inetdxtra
 
-# TODOs
-#
-# Take care of example preference files
+LIBEXECDIR=		libexec/inetdxtra
+DOCDIR=			share/doc/inetdxtra
+EGDIR=			share/examples/inetdxtra
+
+CONF_FILES=		${EGDIR}/inetd.conf.sample \
+				${PKG_SYSCONFDIR}/inetd.conf
+CONF_FILES+=		${EGDIR}/in.dhcp.conf.sample \
+				${PKG_SYSCONFDIR}/in.dhcp.conf
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${LIBEXECDIR} ${DOCDIR} ${EGDIR}
+
+MAN1_PAGES=		in.jabberd/man/in.jabberd.1
+MAN1_PAGES+=		in.www/man/in.www.1
 
 do-install:
-	${MKDIR} ${LIBEXECDIR}
-	${MKDIR} ${DOCDIR}
-	${MKDIR} ${EGDIR}
 .for pp in ctcs dhcp dns jabberd mvp proxy smtp www
-	${INSTALL_PROGRAM} ${WRKSRC}/in.${pp}/in.${pp} ${LIBEXECDIR}
-	${INSTALL_DATA} ${WRKSRC}/in.${pp}/README ${DOCDIR}/README.${pp}
+	${INSTALL_PROGRAM} ${WRKSRC}/in.${pp}/in.${pp} \
+		${DESTDIR}${PREFIX}/${LIBEXECDIR}
+	${INSTALL_DATA} ${WRKSRC}/in.${pp}/README \
+		${DESTDIR}${PREFIX}/${DOCDIR}/README.${pp}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/inetd.conf.sample ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/in.dhcp/in.dhcp.conf.sample ${EGDIR}
+.for mp in ${MAN1_PAGES}
+	gunzip ${WRKSRC}/${mp}.gz
+	${INSTALL_DATA} ${WRKSRC}/${mp} \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${mm}
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/inetd.conf.sample \
+		${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/in.dhcp/in.dhcp.conf.sample \
+		${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

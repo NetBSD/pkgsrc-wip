@@ -1,4 +1,6 @@
-$NetBSD: patch-in.www_in.www.c,v 1.1 2014/05/16 15:19:19 hfath Exp $
+$NetBSD$
+
+Add missing #include
 
 --- in.www/in.www.c.orig	2011-01-13 15:53:56.000000000 +0000
 +++ in.www/in.www.c

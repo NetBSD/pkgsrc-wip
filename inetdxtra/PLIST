@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/16 15:19:19 hfath Exp $
+@comment $NetBSD$
 libexec/inetdxtra/in.ctcs
 libexec/inetdxtra/in.dhcp
 libexec/inetdxtra/in.dns
@@ -7,6 +7,8 @@ libexec/inetdxtra/in.mvp
 libexec/inetdxtra/in.proxy
 libexec/inetdxtra/in.smtp
 libexec/inetdxtra/in.www
+man/man1/in.jabberd.1
+man/man1/in.www.1
 share/doc/inetdxtra/README
 share/doc/inetdxtra/README.ctcs
 share/doc/inetdxtra/README.dhcp
@@ -18,3 +20,4 @@ share/doc/inetdxtra/README.smtp
 share/doc/inetdxtra/README.www
 share/examples/inetdxtra/in.dhcp.conf.sample
 share/examples/inetdxtra/inetd.conf.sample
+@pkgdir bin

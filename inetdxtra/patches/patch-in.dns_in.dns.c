@@ -1,4 +1,7 @@
-$NetBSD: patch-in.dns_in.dns.c,v 1.1 2014/05/16 15:19:19 hfath Exp $
+$NetBSD$
+
+Respect PKG_SYSCONFDIR
+Socket functions generally expect sockaddr, not sockaddr_in 
 
 --- in.dns/in.dns.c.orig	2013-05-16 08:26:34.000000000 +0000
 +++ in.dns/in.dns.c

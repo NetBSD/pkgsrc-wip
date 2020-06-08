@@ -1,4 +1,8 @@
-$NetBSD: patch-in.mvp_in.mvp.c,v 1.1 2014/05/16 15:19:19 hfath Exp $
+$NetBSD$
+
+Socket functions generally expect sockaddr, not sockaddr_in 
+Check for presence of SIOCGIFHWADDR
+Cast sockaddr to sockaddr_in properly before using it with syslog()
 
 --- in.mvp/in.mvp.c.orig	2011-01-13 15:53:56.000000000 +0000
 +++ in.mvp/in.mvp.c
