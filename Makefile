@@ -723,7 +723,6 @@ SUBDIR+=	endless-sky
 SUBDIR+=	engauge-digitizer
 SUBDIR+=	enigma2000
 SUBDIR+=	enlightenment-current
-SUBDIR+=	enlightenment0224
 SUBDIR+=	eor
 SUBDIR+=	eot
 SUBDIR+=	epacts
