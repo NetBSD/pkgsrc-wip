@@ -2862,6 +2862,7 @@ SUBDIR+=	phantomjs
 SUBDIR+=	phantomjs2
 SUBDIR+=	pheanstalk
 SUBDIR+=	phonon-backend-xine
+SUBDIR+=        phoronix-test-suite
 SUBDIR+=	php-ast
 SUBDIR+=	php-dotclear
 SUBDIR+=	php-imagick-imagick6
