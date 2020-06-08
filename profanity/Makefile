@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config
 #CONFIGURE_ARGS+=	--enable-plugins
 #CONFIGURE_ARGS+=	--enable-c-plugins
 #CONFIGURE_ARGS+=	--enable-python-plugins
-#CONFIGURE_ARGS+=	--enable-omemo
+CONFIGURE_ARGS+=	--enable-omemo
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
@@ -29,7 +29,7 @@ pre-configure:
 .include "../../devel/readline/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
 .include "../../wip/libmesode/buildlink3.mk"
-#.include "../../wip/libsignal-protocol-c/buildlink3.mk"
+.include "../../wip/libsignal-protocol-c/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 #.include "../../lang/python/application.mk"
