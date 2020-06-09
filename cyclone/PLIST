@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/cyclone
+bin/cyclone-winds
 bin/icyc
 include/cyclone/bignum.h
 include/cyclone/ck_ht_hash.h
@@ -11,6 +12,10 @@ lib/libcyclone.a
 share/cyclone/cyclone/concurrent.o
 share/cyclone/cyclone/concurrent.sld
 share/cyclone/cyclone/concurrent.so
+share/cyclone/cyclone/foreign.meta
+share/cyclone/cyclone/foreign.o
+share/cyclone/cyclone/foreign.sld
+share/cyclone/cyclone/foreign.so
 share/cyclone/cyclone/match.meta
 share/cyclone/cyclone/match.o
 share/cyclone/cyclone/match.sld
@@ -35,11 +40,6 @@ share/cyclone/scheme/complex.so
 share/cyclone/scheme/cxr.o
 share/cyclone/scheme/cxr.sld
 share/cyclone/scheme/cxr.so
-share/cyclone/scheme/cyclone/array-list.meta
-share/cyclone/scheme/cyclone/array-list.o
-share/cyclone/scheme/cyclone/array-list.scm
-share/cyclone/scheme/cyclone/array-list.sld
-share/cyclone/scheme/cyclone/array-list.so
 share/cyclone/scheme/cyclone/ast.o
 share/cyclone/scheme/cyclone/ast.sld
 share/cyclone/scheme/cyclone/ast.so
