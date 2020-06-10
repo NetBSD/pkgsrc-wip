@@ -1,9 +1,12 @@
 @comment $NetBSD$
 bin/gnome-session
+bin/gnome-session-custom-session
 bin/gnome-session-inhibit
 bin/gnome-session-quit
+libexec/gnome-session-binary
 libexec/gnome-session-check-accelerated
-libexec/gnome-session-check-accelerated-helper
+libexec/gnome-session-check-accelerated-gl-helper
+libexec/gnome-session-check-accelerated-gles-helper
 libexec/gnome-session-failed
 man/man1/gnome-session-inhibit.1
 man/man1/gnome-session-quit.1
@@ -12,16 +15,8 @@ share/GConf/gsettings/gnome-session.convert
 share/doc/gnome-session/dbus/gnome-session.html
 share/glib-2.0/schemas/org.gnome.SessionManager.gschema.xml
 share/gnome-session/hardware-compatibility
-share/gnome-session/session-properties.ui
 share/gnome-session/sessions/gnome-dummy.session
-share/gnome-session/sessions/gnome-wayland.session
 share/gnome-session/sessions/gnome.session
-share/icons/hicolor/16x16/apps/session-properties.png
-share/icons/hicolor/22x22/apps/session-properties.png
-share/icons/hicolor/24x24/apps/session-properties.png
-share/icons/hicolor/32x32/apps/session-properties.png
-share/icons/hicolor/48x48/apps/session-properties.png
-share/icons/hicolor/scalable/apps/session-properties.svg
 share/locale/af/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/am/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/an/LC_MESSAGES/gnome-session-3.0.mo
@@ -38,6 +33,7 @@ share/locale/br/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/bs/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/ca/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-session-3.0.mo
+share/locale/ckb/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/crh/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/cs/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/csb/LC_MESSAGES/gnome-session-3.0.mo
@@ -74,6 +70,7 @@ share/locale/is/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/it/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/ja/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/ka/LC_MESSAGES/gnome-session-3.0.mo
+share/locale/kab/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/kk/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/km/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/kn/LC_MESSAGES/gnome-session-3.0.mo
@@ -84,6 +81,7 @@ share/locale/lv/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/mai/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/mg/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/mi/LC_MESSAGES/gnome-session-3.0.mo
+share/locale/mjw/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/mk/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/ml/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/mn/LC_MESSAGES/gnome-session-3.0.mo
@@ -130,5 +128,6 @@ share/locale/zh_CN/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-session-3.0.mo
 share/locale/zu/LC_MESSAGES/gnome-session-3.0.mo
-share/wayland-sessions/gnome-wayland.desktop
+share/wayland-sessions/gnome.desktop
+share/xsessions/gnome-xorg.desktop
 share/xsessions/gnome.desktop

@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.166 2015/10/10 01:58:22 ryoon Exp $
 #
 
-DISTNAME=		gnome-session-3.16.0
+DISTNAME=		gnome-session-3.36.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/3.16/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/3.36/}
 #SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.xz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} #gnome-splash-2.16.0.png
@@ -18,10 +18,14 @@ BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 #CONFLICTS+=		gnome-core<1.4.2nb4
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+
+MESON_ARGS+=		-Dsystemd=false
+MESON_ARGS+=		-Dsystemd_session=disable
+MESON_ARGS+=		-Dsystemd_journal=false
+MESON_ARGS+=		-Dconsolekit=true
 
 MAKE_ENV+=		REAL_GCONFTOOL=${GCONFTOOL2:Q}
 
@@ -41,11 +45,12 @@ GCONF_SCHEMAS=		gnome-session.schemas
 #	${INSTALL_DATA} ${WRKSRC}/data/gnome-splash-orig.png \
 #	    ${DESTDIR}${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
 
+
+.include "../../devel/meson/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
@@ -54,12 +59,10 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.76
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 #.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libxslt?=	build
-.include "../../textproc/libxslt/buildlink3.mk"
 #.include "../../x11/gnome-control-center/buildlink3.mk"
 #.include "../../x11/gnome-desktop/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.1
-.include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libxslt?=  build
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
