@@ -5,14 +5,12 @@ BUILDLINK_TREE+=	efl
 .if !defined(EFL_BUILDLINK3_MK)
 EFL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.efl+=	efl>=1.24.1
+BUILDLINK_API_DEPENDS.efl+=	efl>=1.24.2nb1
 BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl-current
 
-.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
-.include "../../devel/libuv/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
@@ -21,7 +19,6 @@ BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl-current
 .include "../../inputmethod/scim/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../net/avahi/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

@@ -112,7 +112,6 @@ include/ecore-audio-1/ecore_audio_out_pulse.eo.h
 include/ecore-audio-1/ecore_audio_out_sndfile.eo.h
 include/ecore-audio-1/ecore_audio_out_wasapi.eo.h
 include/ecore-audio-1/ecore_audio_protected.h
-include/ecore-avahi-1/Ecore_Avahi.h
 include/ecore-con-1/Ecore_Con.h
 include/ecore-con-1/Ecore_Con_Eet.h
 include/ecore-con-1/Ecore_Con_Eet_Eo.h
@@ -254,8 +253,6 @@ include/ecore-imf-evas-1/Ecore_IMF_Evas.h
 include/ecore-input-1/Ecore_Input.h
 include/ecore-input-evas-1/Ecore_Input_Evas.h
 include/ecore-ipc-1/Ecore_Ipc.h
-include/ecore-sdl-1/Ecore_Sdl.h
-include/ecore-sdl-1/Ecore_Sdl_Keys.h
 include/ecore-x-1/Ecore_X.h
 include/ecore-x-1/Ecore_X_Atoms.h
 include/ecore-x-1/Ecore_X_Cursor.h
@@ -2070,7 +2067,6 @@ lib/cmake/EvasCxx/EvasCxxConfigVersion.cmake
 lib/ecore/system/upower/v-1.24/module.so
 lib/ecore_con/utils/v-1.24/efl_net_proxy_helper
 lib/ecore_evas/engines/extn/v-1.24/module.so
-lib/ecore_evas/engines/sdl/v-1.24/module.so
 lib/ecore_evas/engines/x/v-1.24/module.so
 lib/ecore_imf/modules/scim/v-1.24/module.so
 lib/ecore_imf/modules/xim/v-1.24/module.so
@@ -2214,9 +2210,6 @@ lib/libecore.so.${PKGVERSION}
 lib/libecore_audio.so
 lib/libecore_audio.so.1
 lib/libecore_audio.so.${PKGVERSION}
-lib/libecore_avahi.so
-lib/libecore_avahi.so.1
-lib/libecore_avahi.so.${PKGVERSION}
 lib/libecore_con.so
 lib/libecore_con.so.1
 lib/libecore_con.so.${PKGVERSION}
@@ -2241,7 +2234,6 @@ lib/libecore_input_evas.so.${PKGVERSION}
 lib/libecore_ipc.so
 lib/libecore_ipc.so.1
 lib/libecore_ipc.so.${PKGVERSION}
-lib/libecore_sdl.so
 lib/libecore_x.so
 lib/libecore_x.so.1
 lib/libecore_x.so.${PKGVERSION}
@@ -2318,7 +2310,6 @@ lib/libexactness_record.so
 lib/libexactness_record.so.1
 lib/libexactness_record.so.${PKGVERSION}
 lib/pkgconfig/ecore-audio.pc
-lib/pkgconfig/ecore-avahi.pc
 lib/pkgconfig/ecore-con.pc
 lib/pkgconfig/ecore-cxx.pc
 lib/pkgconfig/ecore-evas.pc
@@ -2328,7 +2319,6 @@ lib/pkgconfig/ecore-imf.pc
 lib/pkgconfig/ecore-input-evas.pc
 lib/pkgconfig/ecore-input.pc
 lib/pkgconfig/ecore-ipc.pc
-lib/pkgconfig/ecore-sdl.pc
 lib/pkgconfig/ecore-x.pc
 lib/pkgconfig/ecore.pc
 lib/pkgconfig/ector.pc

@@ -2,6 +2,7 @@
 
 DISTNAME=	efl-1.24.2
 CATEGORIES=	x11
+PKGREVISION=	1
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
 EXTRACT_SUFX=	.tar.xz
 
@@ -12,9 +13,9 @@ LICENSE=	2-clause-bsd
 
 EFL_LIBRARY_PATH=	${WRKSRC}/output/src/lib
 
-EFLLIBS=	ecore ecore_audio ecore_avahi ecore_con ecore_evas
-EFLLIBS+=	ecore_file ecore_imf ecore_imf_evas ecore_input ecore_input_evas
-EFLLIBS+=	ecore_ipc ecore_sdl ecore_x ector edje eet efl efreet
+EFLLIBS=	ecore ecore_audio ecore_con ecore_evas ecore_file
+EFLLIBS+=	ecore_imf ecore_imf_evas ecore_input ecore_input_evas
+EFLLIBS+=	ecore_ipc ecore_x ector edje eet efl efreet
 EFLLIBS+=	eina eio eldbus elementary elua embryo emile emotion
 EFLLIBS+=	eo eolian ephysics ethumb ethumb_client evas evil
 
@@ -26,18 +27,18 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${EFL_LIBRARY_PATH}
 
 MESON_ARGS+=	-Dsystemd=false
 MESON_ARGS+=	-Deeze=false
-MESON_ARGS+=	-Dpulseaudio=false
 MESON_ARGS+=	-Dbuild-tests=false
 MESON_ARGS+=	-Dbuild-examples=false
 MESON_ARGS+=	-Dphysics=true
-MESON_ARGS+=	-Davahi=true
-MESON_ARGS+=	-Dsdl=true
 MESON_ARGS+=	-Dglib=true
 MESON_ARGS+=	-Dg-mainloop=true
 
-USE_LANGUAGES=		c c++
-USE_TOOLS=		pkg-config
-ICON_THEMES=		yes
+CFLAGS+=	-g -ggdb3
+
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS=	pkg-config
+ICON_THEMES=	yes
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -70,12 +71,10 @@ SUBST_SED.fix-options=		-e "s|'es-egl', 'none'|'es-egl', 'base', 'none'|g"
 MESON_ARGS+=	-Dopengl=base
 .endif
 
-.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
-.include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-.include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
@@ -86,7 +85,6 @@ MESON_ARGS+=	-Dopengl=base
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../net/avahi/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
