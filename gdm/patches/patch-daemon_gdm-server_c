@@ -1,4 +1,4 @@
-$OpenBSD: patch-daemon_gdm-server_c,v 1.7 2015/10/18 13:25:54 ajacoutot Exp $
+$OpenBSD: patch-daemon_gdm-server_c,v 1.12 2019/05/08 21:58:04 ajacoutot Exp $
 
 REVERT - OpenBSD lacks sigwaitinfo(2)
 From 956d7d1c7a0cfbf2beacdb9e88e645e15ad32047 Mon Sep 17 00:00:00 2001
@@ -18,7 +18,8 @@ From: Ray Strode <rstrode@redhat.com>
 Date: Fri, 12 Jun 2015 13:48:52 -0400
 Subject: require logind support
 
---- daemon/gdm-server.c.orig	2015-11-17 17:16:04.000000000 +0000
+Index: daemon/gdm-server.c
+--- daemon/gdm-server.c.orig	2020-05-04 20:11:25.000000000 +0000
 +++ daemon/gdm-server.c
 @@ -43,7 +43,9 @@
  #include <linux/vt.h>
@@ -30,7 +31,7 @@ Subject: require logind support
  
  #ifdef ENABLE_SYSTEMD_JOURNAL
  #include <systemd/sd-journal.h>
-@@ -92,6 +94,7 @@ struct GdmServerPrivate
+@@ -84,6 +86,7 @@ struct _GdmServer
          char    *auth_file;
  
          guint    child_watch_id;
@@ -38,7 +39,7 @@ Subject: require logind support
  
          gboolean is_initial;
  };
-@@ -122,90 +125,76 @@ static void     gdm_server_finalize     
+@@ -114,90 +117,74 @@ static void     gdm_server_finalize     
  
  G_DEFINE_TYPE (GdmServer, gdm_server, G_TYPE_OBJECT)
  
@@ -65,7 +66,7 @@ Subject: require logind support
 +
 +        error = NULL;
 +        command = g_strdup_printf (CONSOLEKIT_DIR "/ck-get-x11-display-device --display %s",
-+                                   server->priv->display_name);
++                                   server->display_name);
 +
 +        g_debug ("GdmServer: Running helper %s", command);
 +        out = NULL;
@@ -83,9 +84,9 @@ Subject: require logind support
 +        }
  
 -        gdm_run_script (GDMCONFDIR "/Init", GDM_USERNAME,
--                        server->priv->display_name,
+-                        server->display_name,
 -                        NULL, /* hostname */
--                        server->priv->auth_file);
+-                        server->auth_file);
 +        g_free (command);
  
 -        g_signal_emit (server, signals[READY], 0);
@@ -110,7 +111,7 @@ Subject: require logind support
 -        for (l = active_servers; l; l = l->next) {
 -                GdmServer *server = l->data;
 -
--                if (server->priv->pid == pid)
+-                if (server->pid == pid)
 -                        gdm_server_ready (server);
 +#ifdef WITH_SYSTEMD
 +        if (LOGIND_RUNNING()) {
@@ -143,23 +144,22 @@ Subject: require logind support
 -
 -                if (sigwaitinfo (&sigusr1_mask, &info) == -1)
 -                        continue;
-+        if (server->priv->display_device == NULL) {
-+                server->priv->display_device =
-+                    _gdm_server_query_ck_for_display_device (server);
- 
+-
 -                g_idle_add (got_sigusr1, GUINT_TO_POINTER (info.si_pid));
++        if (server->display_device == NULL) {
++                server->display_device =
++                    _gdm_server_query_ck_for_display_device (server);
 +                g_object_notify (G_OBJECT (server), "display-device");
          }
  
 -        return NULL;
-+        return g_strdup (server->priv->display_device);
++        return g_strdup (server->display_device);
  }
  
 -static void
 -gdm_server_launch_sigusr1_thread_if_needed (void)
 +static gboolean
 +on_sigusr1 (gpointer user_data)
-+
  {
 -        static GThread *sigusr1_thread;
 +        GdmServer *server = user_data;
@@ -174,16 +174,16 @@ Subject: require logind support
 -                g_mutex_unlock (&sigusr1_thread_mutex);
 -        }
 +        gdm_run_script (GDMCONFDIR "/Init", GDM_USERNAME,
-+                        server->priv->display_name,
++                        server->display_name,
 +                        NULL, /* hostname */
-+                        server->priv->auth_file);
++                        server->auth_file);
 +
 +        g_signal_emit (server, signals[READY], 0);
 +        return FALSE;
  }
  
  static void
-@@ -226,7 +215,9 @@ gdm_server_init_command (GdmServer *serv
+@@ -218,7 +205,9 @@ gdm_server_init_command (GdmServer *serv
                  debug_options = "";
          }
  
@@ -194,7 +194,7 @@ Subject: require logind support
  
          /* This is a temporary hack to work around the fact that XOrg
           * currently lacks support for multi-seat hotplugging for
-@@ -242,6 +233,10 @@ gdm_server_init_command (GdmServer *serv
+@@ -234,6 +223,10 @@ gdm_server_init_command (GdmServer *serv
           * wasn't booted using systemd, or b) the wrapper tool is
           * missing, or c) we are running for the main seat 'seat0'. */
  
@@ -205,32 +205,31 @@ Subject: require logind support
  #ifdef ENABLE_SYSTEMD_JOURNAL
          /* For systemd, we don't have a log file but instead log to stdout,
             so set it to the xserver's built-in default verbosity */
-@@ -264,8 +259,9 @@ gdm_server_init_command (GdmServer *serv
+@@ -256,8 +249,8 @@ gdm_server_init_command (GdmServer *serv
          return;
  
  fallback:
--        server->priv->command = g_strdup_printf (X_SERVER X_SERVER_ARG_FORMAT, verbosity, debug_options);
 +#endif
- 
-+        server->priv->command = g_strdup_printf (X_SERVER X_SERVER_ARG_FORMAT, verbosity, debug_options);
+         server->command = g_strdup_printf (X_SERVER X_SERVER_ARG_FORMAT, verbosity, debug_options);
+-
  }
  
  static gboolean
-@@ -315,10 +311,12 @@ gdm_server_resolve_command_line (GdmServ
-                 argv[len++] = g_strdup (server->priv->auth_file);
+@@ -307,10 +300,12 @@ gdm_server_resolve_command_line (GdmServ
+                 argv[len++] = g_strdup (server->auth_file);
          }
  
--        if (server->priv->display_seat_id != NULL) {
+-        if (server->display_seat_id != NULL) {
 +#ifdef WITH_SYSTEMD
 +        if (LOGIND_RUNNING() && server->priv->display_seat_id != NULL) {
                  argv[len++] = g_strdup ("-seat");
-                 argv[len++] = g_strdup (server->priv->display_seat_id);
+                 argv[len++] = g_strdup (server->display_seat_id);
          }
 +#endif
  
-         if (server->priv->disable_tcp && ! query_in_arglist) {
-                 argv[len++] = g_strdup ("-nolisten");
-@@ -650,12 +648,6 @@ server_child_watch (GPid       pid,
+         /* If we were compiled with Xserver >= 1.17 we need to specify
+          * '-listen tcp' as the X server dosen't listen on tcp sockets
+@@ -655,12 +650,6 @@ server_child_watch (GPid       pid,
          g_object_unref (server);
  }
  
@@ -243,7 +242,7 @@ Subject: require logind support
  static gboolean
  gdm_server_spawn (GdmServer    *server,
                    const char   *vtarg,
-@@ -693,15 +685,6 @@ gdm_server_spawn (GdmServer    *server,
+@@ -698,15 +687,6 @@ gdm_server_spawn (GdmServer    *server,
          g_debug ("GdmServer: Starting X server process: %s", freeme);
          g_free (freeme);
  
@@ -259,30 +258,24 @@ Subject: require logind support
          if (!g_spawn_async_with_pipes (NULL,
                                         argv,
                                         (char **)env->pdata,
-@@ -1037,11 +1020,16 @@ gdm_server_class_init (GdmServerClass *k
- static void
- gdm_server_init (GdmServer *server)
- {
-+
-         server->priv = GDM_SERVER_GET_PRIVATE (server);
+@@ -1043,6 +1023,10 @@ gdm_server_init (GdmServer *server)
+         server->pid = -1;
  
-         server->priv->pid = -1;
- 
-         server->priv->log_dir = g_strdup (LOGDIR);
+         server->log_dir = g_strdup (LOGDIR);
 +
-+        server->priv->sigusr1_id = g_unix_signal_add (SIGUSR1,
++        server->sigusr1_id = g_unix_signal_add (SIGUSR1,
 +                                                      on_sigusr1,
 +                                                      server);
  }
  
  static void
-@@ -1056,6 +1044,9 @@ gdm_server_finalize (GObject *object)
+@@ -1055,6 +1039,9 @@ gdm_server_finalize (GObject *object)
  
-         g_return_if_fail (server->priv != NULL);
+         server = GDM_SERVER (object);
  
-+        if (server->priv->sigusr1_id > 0)
-+                g_source_remove (server->priv->sigusr1_id);
++        if (server->sigusr1_id > 0)
++                g_source_remove (server->sigusr1_id);
 +
          gdm_server_stop (server);
  
-         g_free (server->priv->command);
+         g_free (server->command);

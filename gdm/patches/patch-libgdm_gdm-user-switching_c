@@ -12,7 +12,7 @@ From: Ray Strode <rstrode@redhat.com>
 Date: Fri, 12 Jun 2015 13:48:52 -0400
 Subject: require logind support
 
---- libgdm/gdm-user-switching.c.orig	2015-11-17 17:16:04.000000000 +0000
+--- libgdm/gdm-user-switching.c.orig	2020-05-04 20:11:25.000000000 +0000
 +++ libgdm/gdm-user-switching.c
 @@ -31,12 +31,25 @@
  #include <glib-object.h>
@@ -153,12 +153,7 @@ Subject: require logind support
 +        return TRUE;
 +}
 +
- static gboolean
--activate_session_id (GDBusConnection  *connection,
--                     GCancellable     *cancellable,
--                     const char       *seat_id,
--                     const char       *session_id,
--                     GError          **error)
++static gboolean
 +session_is_login_window (GDBusConnection *connection,
 +                         const char      *session_id)
 +{
@@ -341,7 +336,12 @@ Subject: require logind support
 +
 +#ifdef WITH_SYSTEMD
 +
-+static gboolean
+ static gboolean
+-activate_session_id (GDBusConnection  *connection,
+-                     GCancellable     *cancellable,
+-                     const char       *seat_id,
+-                     const char       *session_id,
+-                     GError          **error)
 +activate_session_id_for_systemd (GDBusConnection  *connection,
 +                                 GCancellable     *cancellable,
 +                                 const char       *seat_id,
@@ -374,7 +374,7 @@ Subject: require logind support
  {
          gboolean        ret;
          int             res;
-@@ -238,9 +543,9 @@ goto_login_session (GDBusConnection  *co
+@@ -236,9 +541,9 @@ goto_login_session (GDBusConnection  *co
                  return FALSE;
          }
  
@@ -386,7 +386,7 @@ Subject: require logind support
  
                  if (res) {
                          ret = TRUE;
-@@ -259,10 +564,11 @@ goto_login_session (GDBusConnection  *co
+@@ -257,10 +562,11 @@ goto_login_session (GDBusConnection  *co
  
          return ret;
  }
@@ -399,7 +399,7 @@ Subject: require logind support
  {
          GDBusConnection *connection;
          gboolean retval;
-@@ -271,8 +577,23 @@ gdm_goto_login_session_sync (GCancellabl
+@@ -269,8 +575,23 @@ gdm_goto_login_session_sync (GCancellabl
          if (!connection)
                  return FALSE;
  

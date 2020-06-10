@@ -1,4 +1,4 @@
-$OpenBSD: patch-daemon_gdm-launch-environment_c,v 1.6 2015/10/18 13:25:54 ajacoutot Exp $
+$OpenBSD: patch-daemon_gdm-launch-environment_c,v 1.10 2019/11/02 15:34:07 ajacoutot Exp $
 
 XXX fix+push upstream
 
@@ -14,18 +14,19 @@ From: Ray Strode <rstrode@redhat.com>
 Date: Fri, 12 Jun 2015 14:33:40 -0400
 Subject: session: drop session-type property
 
---- daemon/gdm-launch-environment.c.orig	Sun Oct 18 14:26:32 2015
-+++ daemon/gdm-launch-environment.c	Sun Oct 18 14:24:34 2015
+Index: daemon/gdm-launch-environment.c
+--- daemon/gdm-launch-environment.c.orig
++++ daemon/gdm-launch-environment.c
 @@ -50,7 +50,7 @@
  #include "gdm-settings-direct.h"
  #include "gdm-settings-keys.h"
  
 -#define INITIAL_SETUP_USERNAME "gnome-initial-setup"
 +#define INITIAL_SETUP_USERNAME "_gnome-initial-setup"
+ #define GDM_SESSION_MODE "gdm"
+ #define INITIAL_SETUP_SESSION_MODE "initial-setup"
  #define GNOME_SESSION_SESSIONS_PATH DATADIR "/gnome-session/sessions"
- 
- extern char **environ;
-@@ -176,6 +176,9 @@ build_launch_environment (GdmLaunchEnvironment *launch
+@@ -212,6 +212,9 @@ build_launch_environment (GdmLaunchEnvironment *launch
                  char *seat_id;
  
                  seat_id = launch_environment->priv->x11_display_seat_id;
@@ -35,7 +36,7 @@ Subject: session: drop session-type property
  
                  g_hash_table_insert (hash, g_strdup ("GDM_SEAT_ID"), g_strdup (seat_id));
          }
-@@ -204,6 +207,8 @@ on_session_setup_complete (GdmSession        *session,
+@@ -237,6 +240,8 @@ on_session_setup_complete (GdmSession        *session,
                  gdm_session_set_environment_variable (launch_environment->priv->session, key, value);
          }
          g_hash_table_destroy (hash);

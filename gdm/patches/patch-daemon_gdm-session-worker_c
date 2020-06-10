@@ -1,4 +1,4 @@
-$OpenBSD: patch-daemon_gdm-session-worker_c,v 1.10 2015/10/18 13:25:54 ajacoutot Exp $
+$OpenBSD: patch-daemon_gdm-session-worker_c,v 1.21 2020/05/14 15:25:54 ajacoutot Exp $
 
 REVERT - OpenBSD does not have a systemd implementation (we need ConsoleKit)
 From 1ac67f522f5690c27023d98096ca817f12f7eb88 Mon Sep 17 00:00:00 2001
@@ -18,7 +18,14 @@ From: Ray Strode <rstrode@redhat.com>
 Date: Fri, 12 Jun 2015 14:33:40 -0400
 Subject: session: drop session-type property
 
---- daemon/gdm-session-worker.c.orig	2015-11-17 17:16:04.000000000 +0000
+REVERT - OpenBSD does not have a systemd implementation (we need ConsoleKit)
+From 6942fb9b16bab7173bbd295fb19a9770289dbe0e Mon Sep 17 00:00:00 2001
+From: Tim Lunn <tim@feathertop.org>
+Date: Mon, 11 Apr 2016 23:18:10 +1000
+Subject: gdm-session: set PAM_TTY when initialising pam
+
+Index: daemon/gdm-session-worker.c
+--- daemon/gdm-session-worker.c.orig	2020-05-04 20:11:25.000000000 +0000
 +++ daemon/gdm-session-worker.c
 @@ -28,9 +28,11 @@
  #include <string.h>
@@ -42,16 +49,16 @@ Subject: session: drop session-type property
  
  #ifdef ENABLE_SYSTEMD_JOURNAL
  #include <systemd/sd-journal.h>
-@@ -88,7 +92,7 @@
+@@ -93,7 +97,7 @@
  #endif
  
  #ifndef GDM_SESSION_DEFAULT_PATH
 -#define GDM_SESSION_DEFAULT_PATH "/usr/local/bin:/usr/bin:/bin"
-+#define GDM_SESSION_DEFAULT_PATH "/usr/pkg/bin:/usr/bin:/bin"
++#define GDM_SESSION_DEFAULT_PATH "${LOCALBASE}/bin:/usr/bin:/bin"
  #endif
  
  #ifndef GDM_SESSION_ROOT_UID
-@@ -131,6 +135,10 @@ struct GdmSessionWorkerPrivate
+@@ -125,6 +129,10 @@ struct GdmSessionWorkerPrivate
  
          int               exit_code;
  
@@ -62,7 +69,7 @@ Subject: session: drop session-type property
          pam_handle_t     *pam_handle;
  
          GPid              child_pid;
-@@ -145,6 +153,7 @@ struct GdmSessionWorkerPrivate
+@@ -139,6 +147,7 @@ struct GdmSessionWorkerPrivate
          char             *hostname;
          char             *username;
          char             *log_file;
@@ -70,9 +77,9 @@ Subject: session: drop session-type property
          char             *session_id;
          uid_t             uid;
          gid_t             gid;
-@@ -207,6 +216,204 @@ G_DEFINE_TYPE_WITH_CODE (GdmSessionWorke
-                          G_IMPLEMENT_INTERFACE (GDM_DBUS_TYPE_WORKER,
-                                                 worker_interface_init))
+@@ -213,6 +222,204 @@ G_DEFINE_TYPE_WITH_CODE (GdmSessionWorke
+                                                 worker_interface_init)
+                          G_ADD_PRIVATE (GdmSessionWorker))
  
 +#ifdef WITH_CONSOLE_KIT
 +static gboolean
@@ -275,7 +282,17 @@ Subject: session: drop session-type property
  /* adapted from glib script_execute */
  static void
  script_execute (const gchar *file,
-@@ -754,6 +961,7 @@ gdm_session_worker_stop_auditor (GdmSess
+@@ -664,7 +871,9 @@ gdm_session_worker_process_pam_message (
+         char    *user_answer;
+         gboolean res;
+         char    *utf8_msg;
++#ifdef PAM_RADIO_TYPE
+         char	*msg;
++#endif
+ 
+         if (response != NULL) {
+                 *response = NULL;
+@@ -868,6 +1077,7 @@ gdm_session_worker_stop_auditor (GdmSess
          worker->priv->auditor = NULL;
  }
  
@@ -283,27 +300,23 @@ Subject: session: drop session-type property
  static void
  on_release_display (int signal)
  {
-@@ -879,6 +1087,7 @@ jump_to_vt (GdmSessionWorker  *worker,
+@@ -1010,6 +1220,7 @@ jump_to_vt (GdmSessionWorker  *worker,
  
          close (active_vt_tty_fd);
  }
 +#endif
  
  static void
- gdm_session_worker_uninitialize_pam (GdmSessionWorker *worker,
-@@ -909,9 +1118,11 @@ gdm_session_worker_uninitialize_pam (Gdm
+ gdm_session_worker_set_state (GdmSessionWorker      *worker,
+@@ -1126,7 +1337,6 @@ gdm_session_worker_initialize_pam (GdmSe
+ {
+         struct pam_conv        pam_conversation;
+         int                    error_code;
+-        char tty_string[256];
  
-         gdm_session_worker_stop_auditor (worker);
+         g_assert (worker->priv->pam_handle == NULL);
  
-+#ifdef WITH_SYSTEMD
-         if (worker->priv->login_vt != worker->priv->session_vt) {
-                 jump_to_vt (worker, worker->priv->login_vt);
-         }
-+#endif
- 
-         worker->priv->login_vt = 0;
-         worker->priv->session_vt = 0;
-@@ -1036,10 +1247,12 @@ gdm_session_worker_initialize_pam (GdmSe
+@@ -1193,10 +1403,12 @@ gdm_session_worker_initialize_pam (GdmSe
                  }
          }
  
@@ -317,7 +330,22 @@ Subject: session: drop session-type property
  
          if (strcmp (service, "gdm-launch-environment") == 0) {
                  gdm_session_worker_set_environment_variable (worker, "XDG_SESSION_CLASS", "greeter");
-@@ -1342,7 +1555,7 @@ _lookup_passwd_info (const char *usernam
+@@ -1205,12 +1417,14 @@ gdm_session_worker_initialize_pam (GdmSe
+         g_debug ("GdmSessionWorker: state SETUP_COMPLETE");
+         gdm_session_worker_set_state (worker, GDM_SESSION_WORKER_STATE_SETUP_COMPLETE);
+ 
++#ifdef WITH_SYSTEMD
+         /* Temporarily set PAM_TTY with the login VT,
+            PAM_TTY will be reset with the users VT right before the user session is opened */
+         g_snprintf (tty_string, 256, "/dev/tty%d", GDM_INITIAL_VT);
+         pam_set_item (worker->priv->pam_handle, PAM_TTY, tty_string);
+         if (!display_is_local)
+                 worker->priv->password_is_required = TRUE;
++#endif
+ 
+  out:
+         if (error_code != PAM_SUCCESS) {
+@@ -1506,7 +1720,7 @@ _lookup_passwd_info (const char *usernam
                  if (passwd_entry->pw_shell != NULL && passwd_entry->pw_shell[0] != '\0') {
                          *shellp = g_strdup (passwd_entry->pw_shell);
                  } else {
@@ -326,7 +354,7 @@ Subject: session: drop session-type property
                  }
          }
          ret = TRUE;
-@@ -1595,6 +1808,26 @@ gdm_session_worker_get_environment (GdmS
+@@ -1759,6 +1973,26 @@ gdm_session_worker_get_environment (GdmS
          return (const char * const *) pam_getenvlist (worker->priv->pam_handle);
  }
  
@@ -353,7 +381,7 @@ Subject: session: drop session-type property
  static gboolean
  run_script (GdmSessionWorker *worker,
              const char       *dir)
-@@ -1625,6 +1858,9 @@ session_worker_child_watch (GPid        
+@@ -1789,6 +2023,9 @@ session_worker_child_watch (GPid        
                   : WIFSIGNALED (status) ? WTERMSIG (status)
                   : -1);
  
@@ -363,7 +391,7 @@ Subject: session: drop session-type property
  
          gdm_session_worker_uninitialize_pam (worker, PAM_SUCCESS);
  
-@@ -1813,12 +2049,14 @@ gdm_session_worker_start_session (GdmSes
+@@ -1979,6 +2216,7 @@ gdm_session_worker_start_session (GdmSes
  
          error_code = PAM_SUCCESS;
  
@@ -371,22 +399,23 @@ Subject: session: drop session-type property
          /* If we're in new vt mode, jump to the new vt now. There's no need to jump for
           * the other two modes: in the logind case, the session will activate itself when
           * ready, and in the reuse server case, we're already on the correct VT. */
-         if (worker->priv->display_mode == GDM_SESSION_DISPLAY_MODE_NEW_VT) {
-                 jump_to_vt (worker, worker->priv->session_vt);
+@@ -1987,6 +2225,7 @@ gdm_session_worker_start_session (GdmSes
+                         jump_to_vt (worker, worker->priv->session_vt);
+                 }
          }
 +#endif
  
-         session_pid = fork ();
- 
-@@ -1865,6 +2103,7 @@ gdm_session_worker_start_session (GdmSes
-                         _exit (2);
+         if (!worker->priv->is_program_session && !run_script (worker, GDMCONFDIR "/PostLogin")) {
+                 g_set_error (error,
+@@ -2049,6 +2288,7 @@ gdm_session_worker_start_session (GdmSes
+                         _exit (EXIT_FAILURE);
                  }
  
 +#ifdef WITH_SYSTEMD
                  /* Take control of the tty
                   */
                  if (needs_controlling_terminal) {
-@@ -1872,6 +2111,7 @@ gdm_session_worker_start_session (GdmSes
+@@ -2056,6 +2296,7 @@ gdm_session_worker_start_session (GdmSes
                                  g_debug ("GdmSessionWorker: could not take control of tty: %m");
                          }
                  }
@@ -394,7 +423,7 @@ Subject: session: drop session-type property
  
  #ifdef HAVE_LOGINCAP
                  if (setusercontext (NULL, passwd_entry, passwd_entry->pw_uid, LOGIN_SETALL) < 0) {
-@@ -2016,6 +2256,7 @@ gdm_session_worker_start_session (GdmSes
+@@ -2187,11 +2428,13 @@ gdm_session_worker_start_session (GdmSes
          return TRUE;
  }
  
@@ -402,7 +431,33 @@ Subject: session: drop session-type property
  static gboolean
  set_up_for_new_vt (GdmSessionWorker *worker)
  {
-@@ -2073,6 +2314,7 @@ fail:
+         int initial_vt_fd;
+         char vt_string[256], tty_string[256];
++        struct vt_stat vt_state = { 0 };
+         int session_vt = 0;
+ 
+         /* open the initial vt.  We need it for two scenarios:
+@@ -2209,6 +2452,11 @@ set_up_for_new_vt (GdmSessionWorker *wor
+                 return FALSE;
+         }
+ 
++        if (ioctl (fd, VT_GETSTATE, &vt_state) < 0) {
++                g_debug ("GdmSessionWorker: couldn't get current VT: %m");
++                goto fail;
++        }
++
+         if (worker->priv->display_is_initial) {
+                 session_vt = GDM_INITIAL_VT;
+         } else {
+@@ -2222,6 +2470,7 @@ set_up_for_new_vt (GdmSessionWorker *wor
+                 }
+         }
+ 
++        worker->priv->login_vt = vt_state.v_active;
+         worker->priv->session_vt = session_vt;
+ 
+         g_assert (session_vt > 0);
+@@ -2287,6 +2536,7 @@ fail:
          close (fd);
          return FALSE;
  }
@@ -410,36 +465,45 @@ Subject: session: drop session-type property
  
  static gboolean
  set_up_for_current_vt (GdmSessionWorker  *worker,
-@@ -2161,6 +2403,7 @@ gdm_session_worker_open_session (GdmSess
-                         return FALSE;
-                 }
-                 break;
+@@ -2354,12 +2604,14 @@ set_up_for_current_vt (GdmSessionWorker 
+          }
+ #endif
+ 
 +#ifdef WITH_SYSTEMD
+         if (g_strcmp0 (worker->priv->display_seat_id, "seat0") == 0) {
+                 g_debug ("GdmSessionWorker: setting XDG_VTNR to current vt");
+                 set_xdg_vtnr_to_current_vt (worker);
+         } else {
+                 g_debug ("GdmSessionWorker: not setting XDG_VTNR since not seat0");
+         }
++#endif
+ 
+         return TRUE;
+ out:
+@@ -2385,6 +2637,7 @@ gdm_session_worker_open_session (GdmSess
+                 break;
          case GDM_SESSION_DISPLAY_MODE_NEW_VT:
          case GDM_SESSION_DISPLAY_MODE_LOGIND_MANAGED:
++#ifdef WITH_SYSTEMD
                  if (!set_up_for_new_vt (worker)) {
-@@ -2171,6 +2414,7 @@ gdm_session_worker_open_session (GdmSess
+                         g_set_error (error,
+                                      GDM_SESSION_WORKER_ERROR,
+@@ -2392,6 +2645,7 @@ gdm_session_worker_open_session (GdmSess
+                                      "Unable to open VT");
                          return FALSE;
                  }
-                 break;
 +#endif
+                 break;
          }
  
-         flags = 0;
-@@ -2200,7 +2444,9 @@ gdm_session_worker_open_session (GdmSess
+@@ -2414,7 +2668,17 @@ gdm_session_worker_open_session (GdmSess
          g_debug ("GdmSessionWorker: state SESSION_OPENED");
-         worker->priv->state = GDM_SESSION_WORKER_STATE_SESSION_OPENED;
+         gdm_session_worker_set_state (worker, GDM_SESSION_WORKER_STATE_SESSION_OPENED);
  
 +#ifdef WITH_SYSTEMD
          session_id = gdm_session_worker_get_environment_variable (worker, "XDG_SESSION_ID");
 +#endif
- 
-         /* FIXME: should we do something here?
-          * Note that error return status from PreSession script should
-@@ -2210,6 +2456,14 @@ gdm_session_worker_open_session (GdmSess
-          */
-         run_script (worker, GDMCONFDIR "/PreSession");
- 
++
 +#ifdef WITH_CONSOLE_KIT
 +        register_ck_session (worker);
 +
@@ -447,11 +511,10 @@ Subject: session: drop session-type property
 +                session_id = get_ck_session_id (worker);
 +        }
 +#endif
-+
+ 
          if (session_id != NULL) {
                  g_free (worker->priv->session_id);
-                 worker->priv->session_id = session_id;
-@@ -2314,6 +2568,19 @@ gdm_session_worker_handle_set_session_na
+@@ -2523,6 +2787,19 @@ gdm_session_worker_handle_set_session_na
  }
  
  static gboolean
@@ -471,7 +534,34 @@ Subject: session: drop session-type property
  gdm_session_worker_handle_set_session_display_mode (GdmDBusWorker         *object,
                                                      GDBusMethodInvocation *invocation,
                                                      const char            *str)
-@@ -3121,6 +3388,7 @@ worker_interface_init (GdmDBusWorkerIfac
+@@ -2949,6 +3226,7 @@ gdm_session_worker_handle_open (GdmDBusW
+         return TRUE;
+ }
+ 
++#ifdef SUPPORTS_PAM_EXTENSIONS
+ static char **
+ filter_extensions (const char * const *extensions)
+ {
+@@ -2974,6 +3252,7 @@ filter_extensions (const char * const *e
+ 
+         return filtered_extensions;
+ }
++#endif
+ 
+ static gboolean
+ gdm_session_worker_handle_initialize (GdmDBusWorker         *object,
+@@ -2993,8 +3272,10 @@ gdm_session_worker_handle_initialize (Gd
+         while (g_variant_iter_loop (&iter, "{sv}", &key, &value)) {
+                 if (g_strcmp0 (key, "service") == 0) {
+                         worker->priv->service = g_variant_dup_string (value, NULL);
++#ifdef SUPPORTS_PAM_EXTENSIONS
+                 } else if (g_strcmp0 (key, "extensions") == 0) {
+                         worker->priv->extensions = filter_extensions (g_variant_get_strv (value, NULL));
++#endif
+                 } else if (g_strcmp0 (key, "username") == 0) {
+                         worker->priv->username = g_variant_dup_string (value, NULL);
+                 } else if (g_strcmp0 (key, "is-program-session") == 0) {
+@@ -3434,6 +3715,7 @@ worker_interface_init (GdmDBusWorkerIfac
          interface->handle_open = gdm_session_worker_handle_open;
          interface->handle_set_language_name = gdm_session_worker_handle_set_language_name;
          interface->handle_set_session_name = gdm_session_worker_handle_set_session_name;

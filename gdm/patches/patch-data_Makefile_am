@@ -1,7 +1,9 @@
-$OpenBSD: patch-data_Makefile_am,v 1.1 2015/10/18 13:25:54 ajacoutot Exp $
---- data/Makefile.am.orig	2015-11-17 17:16:04.000000000 +0000
+$OpenBSD: patch-data_Makefile_am,v 1.10 2019/11/02 16:34:15 ajacoutot Exp $
+
+Index: data/Makefile.am
+--- data/Makefile.am.orig
 +++ data/Makefile.am
-@@ -192,6 +192,7 @@ if ENABLE_GDM_XSESSION
+@@ -220,6 +220,7 @@ if ENABLE_GDM_XSESSION
  Xsession: $(srcdir)/Xsession.in
  	sed	-e 's,[@]XSESSION_SHELL[@],$(XSESSION_SHELL),g' \
  		-e 's,[@]libexecdir[@],$(libexecdir),g' \
@@ -9,7 +11,7 @@ $OpenBSD: patch-data_Makefile_am,v 1.1 2015/10/18 13:25:54 ajacoutot Exp $
  		<$(srcdir)/Xsession.in >Xsession
  Xsession_files += Xsession
  CLEANFILES += Xsession
-@@ -271,7 +272,7 @@ endif
+@@ -293,7 +294,7 @@ endif
  	if test '!' -d $(DESTDIR)$(logdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(logdir); \
  		chmod 755 $(DESTDIR)$(logdir); \
@@ -18,20 +20,12 @@ $OpenBSD: patch-data_Makefile_am,v 1.1 2015/10/18 13:25:54 ajacoutot Exp $
  	fi
  
  	system=`uname`; \
-@@ -294,36 +295,36 @@ endif
+@@ -316,29 +317,29 @@ endif
  	if test '!' -d $(DESTDIR)$(xauthdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(xauthdir); \
  		chmod 0711 $(DESTDIR)$(xauthdir); \
 -		chown root:gdm $(DESTDIR)$(xauthdir) || : ; \
 +		chown root:676 $(DESTDIR)$(xauthdir) || : ; \
- 	fi
- 
- 	if test -n "$(systemdsystemunit)" -a '!' -d $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR); then \
- 		$(mkinstalldirs) $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR); \
- 		chmod 0755 $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR); \
--		chown root:root $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR) || : ; \
-+		chown root:wheel $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR) || : ; \
- 		$(INSTALL_DATA) $(builddir)/$(systemdsystemunit) $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR)/$(systemdsystemunit); \
  	fi
  
  	if test '!' -d $(DESTDIR)$(screenshotdir); then \
