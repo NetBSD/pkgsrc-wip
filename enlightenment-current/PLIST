@@ -180,6 +180,10 @@ lib/enlightenment/modules/appmenu/netbsd-x86_64-${PKGVERSION}/module.so
 lib/enlightenment/modules/backlight/e-module-backlight.edj
 lib/enlightenment/modules/backlight/module.desktop
 lib/enlightenment/modules/backlight/netbsd-x86_64-${PKGVERSION}/module.so
+lib/enlightenment/modules/battery/e-module-battery.edj
+lib/enlightenment/modules/battery/module.desktop
+lib/enlightenment/modules/battery/netbsd-x86_64-${PKGVERSION}/batget
+lib/enlightenment/modules/battery/netbsd-x86_64-${PKGVERSION}/module.so
 lib/enlightenment/modules/bluez5/e-module-bluez5.edj
 lib/enlightenment/modules/bluez5/module.desktop
 lib/enlightenment/modules/bluez5/netbsd-x86_64-${PKGVERSION}/module.so

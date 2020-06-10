@@ -10,6 +10,7 @@ HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	The Enlightenment window manager
 LICENSE=	2-clause-bsd
 
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	src/modules/everything/everything.pc.in
@@ -31,7 +32,7 @@ MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/menus
 
 MESON_ARGS+=	-Dsystemd=false
 MESON_ARGS+=	-Ddevice-udev=false
-MESON_ARGS+=	-Dbattery=false
+#MESON_ARGS+=	-Dbattery=false
 MESON_ARGS+=	-Dcpufreq=false
 MESON_ARGS+=	-Dsysinfo=false
 MESON_ARGS+=	-Dtemperature=false
@@ -45,6 +46,7 @@ CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/upower/buildlink3.mk"
 .include "../../wip/efl-current/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -27,6 +27,6 @@ MESON_ARGS+=    -Dtemperature=false
 >> src/modules/temperature/e_mod_main.c
 
 :: Plan
-1. Test, optimize dependencies
-2. Try to enbale battery with upower
+1. Test, optimize dependencies << opengl issue
+2. Try to enbale battery with upower << enabled, test
 3. Add another OS support
