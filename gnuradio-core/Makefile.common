@@ -33,16 +33,18 @@
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
-MASTER_SITES=  http://s3-dist.gnuradio.org/
-MASTER_SITES=  http://gnuradio.org/releases/gnuradio/
+MASTER_SITES=	http://s3-dist.gnuradio.org/
+MASTER_SITES=	http://gnuradio.org/releases/gnuradio/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
+HOMEPAGE?=	https://www.gnu.org/software/gnuradio/
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
-USE_TOOLS=	perl gmake cmake pkg-config
-USE_CMAKE=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS=		perl gmake cmake pkg-config
+USE_CMAKE=		yes
+LDFLAGS.NetBSD+=	-lrt
+
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
@@ -53,7 +55,7 @@ DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
 DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/gnuradio-core/patches
 
-PYTHON_VERSIONS_INCOMPATIBLE=    36 37 # not yet ported as of 3.3.0
+PYTHON_VERSIONS_ACCEPTED= 27 # not yet ported as of 3.3.0
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PY_PATCHPLIST=	yes
@@ -96,7 +98,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
 CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 
-CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
+CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib -lrt
 CMAKE_ARGS+=	-DGR_PREFSDIR=${PREFIX}/share/gnuradio/examples/
 
 # adhoc setup not to pick non default version (say python3.6)
@@ -122,14 +124,14 @@ SUBST_MESSAGE.pyvers=	Fix SPHINX_EXECUTABLE NAMES(sphinx-build)
 SUBST_VARS.pyvers+=	PYVERSSUFFIX
 SUBST_STAGE.pyvers=	pre-configure
 
-# REPLACE_PYTHON is some 600 files
-.include	"../../wip/gnuradio-core/replace-python.mk"
+REPLACE_PYTHON=		*/*.py */*/*.py */*/*/*.py */*/*/*/*.py */*/*/*/*/*.py \
+			*/*/*/*/*/*/*.py */*/*/*/*/*/*/*.py */*/*/*/*/*/*/*/*.py
 
 pre-configure:
-	(${MKDIR} ${WRKSRC}/build;)
+	${MKDIR} ${WRKSRC}/build
 
 do-install:
-	(cd ${WRKSRC}/build; ${GMAKE} DESTDIR=${DESTDIR} install)
+	cd ${WRKSRC}/${BUILD_DIRS} && ${GMAKE} DESTDIR=${DESTDIR} install
 
 .include	"../../audio/gsm/buildlink3.mk"
 .include	"../../audio/jack/buildlink3.mk"

@@ -1,3 +1,4 @@
+# $NetBSD$
     -- posi	2019-09-16 23:08:54.343557721 +0900  \
     build/python_compile_helper.py  \
     docs/doxygen/doxyxml/generated/compound.py  \
