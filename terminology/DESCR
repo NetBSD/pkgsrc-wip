@@ -1,1 +1,5 @@
-Enlightenment Desktop Terminal
+A terminal emulator for Linux/BSD/UNIX systems that uses EFL.
+It has a whole bunch of bells and whistles. Use it as your
+regular vt100 terminal emulator with all the usual features,
+such as 256 color support. Terminology is designed to emulate
+Xterm as closely as possible in most respects.

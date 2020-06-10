@@ -1,4 +1,7 @@
-Not building, not tested
+:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-07-10 >> build(NOTE)&run OK
 
-This package has known vulnerabilities, please investigate and fix if possible:
- CVE-2018-20167
+:: NOTE
+edje_cc random hang when building themes. Just SIGKILL helps.
+After make again without make clean, building "fine".
+The package works. Theme switch works.
+Need to find the problem in edje_cc...
