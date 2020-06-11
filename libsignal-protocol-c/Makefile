@@ -1,7 +1,6 @@
 # $NetBSD$
 
 DISTNAME=	libsignal-protocol-c-2.3.3
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=signalapp/}
 GITHUB_PROJECT=	libsignal-protocol-c
