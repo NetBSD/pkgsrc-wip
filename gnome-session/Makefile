@@ -20,7 +20,7 @@ BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		gmake gettext-tools perl pkg-config
 
 MESON_ARGS+=		-Dsystemd=false
 MESON_ARGS+=		-Dsystemd_session=disable
@@ -46,6 +46,7 @@ GCONF_SCHEMAS=		gnome-session.schemas
 #	    ${DESTDIR}${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
 
 
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
