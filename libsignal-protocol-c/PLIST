@@ -18,5 +18,7 @@ include/signal/session_record.h
 include/signal/session_state.h
 include/signal/signal_protocol.h
 include/signal/signal_protocol_types.h
-lib/libsignal-protocol-c.a
+lib/libsignal-protocol-c.so
+lib/libsignal-protocol-c.so.2
+lib/libsignal-protocol-c.so.${PKGVERSION}
 lib/pkgconfig/libsignal-protocol-c.pc

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libsignal-protocol-c/v2.3.2.tar.gz) = 59f1544498776f6fc775865adb2af5a9a39898cb
-RMD160 (libsignal-protocol-c/v2.3.2.tar.gz) = 635bf1547c5a743f92a0969dfd8ec7daf0da848f
-SHA512 (libsignal-protocol-c/v2.3.2.tar.gz) = 7c63c42b9a590ed1a60a6f0094668d9948aa04e5965d052c22ae22b176df7c5582b8ec5c0e6c01ad582dfe2b04067380b9734ad08c64785242e90abcdabdfb8d
-Size (libsignal-protocol-c/v2.3.2.tar.gz) = 271930 bytes
+SHA1 (libsignal-protocol-c-2.3.3.tar.gz) = 3ea0332dbd8e4366facd8de5150ad3a6cdc68987
+RMD160 (libsignal-protocol-c-2.3.3.tar.gz) = 4938f87c0a0e0e9d16ef5738646372c89f86d2ac
+SHA512 (libsignal-protocol-c-2.3.3.tar.gz) = 19d892e13fac32022658de5eaf1db8cec3226f5f3f37a4c1c33bfa9653126ecbc6350a1ab5624025f909803c2277b86321dbea7f64e9932883cae57b65f58112
+Size (libsignal-protocol-c-2.3.3.tar.gz) = 272073 bytes
