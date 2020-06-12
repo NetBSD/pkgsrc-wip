@@ -1928,7 +1928,6 @@ SUBDIR+=	libretro-yabause
 SUBDIR+=	librocket
 SUBDIR+=	libscscp
 SUBDIR+=	libsearpc
-SUBDIR+=	libsignal-protocol-c
 SUBDIR+=	libslab
 SUBDIR+=	libsocialweb
 SUBDIR+=	libspt
