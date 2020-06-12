@@ -24,12 +24,12 @@ CONFIGURE_ARGS+=	--enable-omemo
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
+.include "../../chat/libsignal-protocol-c/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
 .include "../../wip/libmesode/buildlink3.mk"
-.include "../../wip/libsignal-protocol-c/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 #.include "../../lang/python/application.mk"
