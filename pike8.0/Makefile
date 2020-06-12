@@ -16,10 +16,9 @@ HOMEPAGE=	https://pike.lysator.liu.se/
 COMMENT=	Dynamic language with a syntax similar to Java and C
 
 CHECK_SSP=	no
-.if defined(PKGSRC_USE_SSP)
-# do not add flags to everything
-PKGSRC_USE_SSP=	no
-.endif
+# pike performs dynamic allocation and machine code generation, 
+# so leaving SSP enabled causes problems.
+SSP_SUPPORTED=  no
 
 BUILD_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
 BUILD_DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
@@ -35,7 +34,9 @@ USE_LANGUAGES=		c c++
 SHARED_DOCS_LOC=	${PREFIX}/share/doc/${NAME}
 INSTALL_SHARED_DOCS=	ANNOUNCE CHANGES COMMITTERS COPYING COPYRIGHT README README-GIT
 
-INSTALL_TARGET_ARGS+=	INSTALLARGS="buildroot='${DESTDIR}' prefix='${PREFIX}' include_prefix='${PREFIX}/include/${NAME}' lib_prefix='${PREFIX}/lib/${NAME}' --verbose --traditional"
+INSTALL_TARGET_ARGS+=	INSTALLARGS="buildroot='${DESTDIR}' prefix='${PREFIX}' \
+	include_prefix='${PREFIX}/include/${NAME}' \
+	lib_prefix='${PREFIX}/lib/${NAME}' --verbose --traditional"
 INSTALL_TARGET_ARGS+=	buildroot='${DESTDIR}' prefix='${PREFIX}'
 
 .if (defined(ABI))
@@ -54,9 +55,6 @@ REPLACE_FILES.pike+=	lib/modules/Tools.pmod/Standalone.pmod/rsif.pike
 
 # remove any dumped modules from the list, as their generation is not deterministic
 PRINT_PLIST_AWK+=	/^lib\/.*(\.pike\.o|\.pmod\.o)$$/ { next; }
-
-# add the dumped modules from this build
-#GENERATE_PLIST+=	cd ${DESTDIR}/${PREFIX} && find . -name \*.o -print | sed -e 's~^\./~~' ;
 
 # needed to keep make from removing all precompiled cmods because of a patched file.
 post-configure:
@@ -80,29 +78,37 @@ post-build:
 	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 	${MAKE_PROGRAM} ${MAKE_FLAGS} \
 	-f ${MAKE_FILE} DESTDIR="" DOCTARGET="all" documentation ; \
-	${SED} -e 's~${WRKSRC}/smartlink~${PREFIX}/include/${NAME}/smartlink~' < ${WRKSRC}/specs > ${WRKSRC}/specs.tmp
+	${SED} -e 's~${WRKSRC}/smartlink~${PREFIX}/include/${NAME}/smartlink~' \
+		< ${WRKSRC}/specs > ${WRKSRC}/specs.tmp
 	mv ${WRKSRC}/specs.tmp ${WRKSRC}/specs
 
-.PHONY: remove-subpackage-modules remove-dumped-modules fix-versioned-filenames prepare-docs-dir install-modrefs install-shared-docs print-vars
+.PHONY: remove-subpackage-modules remove-dumped-modules fix-versioned-filenames \
+	prepare-docs-dir install-modrefs install-shared-docs print-vars
 
-post-install: remove-dumped-modules remove-subpackage-modules fix-versioned-filenames prepare-docs-dir install-shared-docs install-modrefs
+post-install: remove-dumped-modules remove-subpackage-modules fix-versioned-filenames \
+	prepare-docs-dir install-shared-docs install-modrefs
 
 remove-subpackage-modules:
 	cd ${DESTDIR}/${PREFIX}/lib/${NAME}/modules && \
-	  rm ___Java.so ___GTK2.so ___Mysql.so ___Fuse.so ____Image_TIFF.so _Image_FreeType.so _Image_SVG.so _Image_WebP.so Gdbm.so Odbc.so
+	  rm ___Java.so ___GTK2.so ___Mysql.so ___Fuse.so ____Image_TIFF.so \
+		 _Image_FreeType.so _Image_SVG.so _Image_WebP.so Gdbm.so Odbc.so
 
 remove-dumped-modules:
-	cd ${DESTDIR}/${PREFIX}/lib/${NAME} && find . -type f | sed -n -e '/\.pmod\.o$$/p' -e '/\.pike\.o$$/p' | xargs -n 20 rm -f
-	if [ -f ${DESTDIR}/${PREFIX}/include/${NAME}/y.tab.h ] ; then rm ${DESTDIR}/${PREFIX}/include/${NAME}/y.tab.h ; fi
+	cd ${DESTDIR}/${PREFIX}/lib/${NAME} && find . -type f | \
+		sed -n -e '/\.pmod\.o$$/p' -e '/\.pike\.o$$/p' | xargs -n 20 rm -f
+	if [ -f ${DESTDIR}/${PREFIX}/include/${NAME}/y.tab.h ] ; then \
+		rm ${DESTDIR}/${PREFIX}/include/${NAME}/y.tab.h ; fi
 
 fix-versioned-filenames:
 	mv ${DESTDIR}/${PREFIX}/bin/pike ${DESTDIR}/${PREFIX}/bin/${NAME}
 	mv ${DESTDIR}/${PREFIX}/bin/pike.syms ${DESTDIR}/${PREFIX}/bin/${NAME}.syms
 	if [ -f ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/pike.1 ] ; then \
-	  mv ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/pike.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${NAME}.1 ; \
+	  mv ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/pike.1 \
+		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${NAME}.1 ; \
 	elif [ -f ${DESTDIR}/${PREFIX}/share/man/man1/pike.1 ] ; then \
 	  mkdir -p ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1 ; \
-	  mv ${DESTDIR}/${PREFIX}/share/man/man1/pike.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${NAME}.1 ; \
+	  mv ${DESTDIR}/${PREFIX}/share/man/man1/pike.1 \
+		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${NAME}.1 ; \
 	else \
 	  exit 1 ; \
 	fi
