@@ -1,5 +1,7 @@
 $NetBSD$
+
 NetBSD8 enables memprotect protections. Fixed in upstream source.
+
 --- src/Makefile.in.orig	2015-12-31 19:50:31.000000000 +0000
 +++ src/Makefile.in
 @@ -66,6 +66,8 @@ INSTALLARGS = --new-style

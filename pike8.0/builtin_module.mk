@@ -30,10 +30,9 @@ DISTNAME=	Pike-v${PIKE_VERSION}
 PIKE_EXECUTABLE=	pike${PIKEVERSUFFIX}
 
 CHECK_SSP=	no
-.if defined(PKGSRC_USE_SSP)
-# do not add flags to everything
-PKGSRC_USE_SSP=	no
-.endif
+# pike performs dynamic allocation and machine code generation,
+# so leaving SSP enabled causes problems.
+SSP_SUPPORTED=	no
 
 CATEGORIES=	lang
 MASTER_SITES=	http://pike.lysator.liu.se/pub/pike/${PIKE_RELEASE_TYPE}/${PIKE_VERSION}/
@@ -54,7 +53,8 @@ PIKE_MODULE_OVERLAPPING_FILES=
 SYSTEM_MODULE_PATH!=	pike${PIKEVERSUFFIX} -x module --query=system_module_path
 SYSTEM_DOC_PATH=	${PREFIX}/share/pike${PIKEVERSUFFIX}/refdoc
 
-EXTRACT_ELEMENTS+=	${DISTNAME}/src/${MODULE_TYPE}s/${INTERNAL_MODULENAME} ${DISTNAME}/refdoc
+EXTRACT_ELEMENTS+=	${DISTNAME}/src/${MODULE_TYPE}s/${INTERNAL_MODULENAME} \
+			${DISTNAME}/refdoc
 FILES_SUBST+=		NAME="${NAME}"
 FILES_SUBST+=		MODULENAME="${MODULENAME}"
 FILES_SUBST+=		MODULENAME="${INTERNAL_MODULENAME}"
@@ -63,9 +63,6 @@ FILES_SUBST+=		PIKE_EXECUTABLE="${PIKE_EXECUTABLE}"
 
 # remove any dumped modules from the list, as their generation is not deterministic
 PRINT_PLIST_AWK+=	/^lib\/.*(\.pike\.o|\.pmod\.o)$$/ { next; }
-
-# add the dumped modules from this build
-#GENERATE_PLIST+=	cd ${DESTDIR}/${PREFIX} && find . -name \*.o -print | sed -e 's~^\./~~' ;
 
 do-configure:
 	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} -x module --configure
@@ -78,20 +75,27 @@ do-build:
 # run some build checks and make the module modref if desired.
 post-build:
 .if(${CHECK_MODULE_ENABLED} != "no")
-	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} -e 'return !sizeof(indices(load_module("./module.so"))+indices(load_module("./module.so")()));' || (${ECHO} "Module empty, configure problem?" && exit 1)
+	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} \
+		-e 'return !sizeof(indices(load_module("./module.so"))+indices(load_module("./module.so")()));' \
+		|| (${ECHO} "Module empty, configure problem?" && exit 1)
 .endif
 .if(${MAKE_MODREF} != "no")
-	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} -x module SYSTEM_DOC_PATH=${SYSTEM_DOC_PATH} module_modref
+	cd ${WRKSRC}/${PIKE_MODULE_SRC} && ${PIKE_EXECUTABLE} \
+		-x module SYSTEM_DOC_PATH=${SYSTEM_DOC_PATH} module_modref
 .endif
 
 do-install:
 	${MKDIR} ${DESTDIR}${SYSTEM_MODULE_PATH}
 	cd ${WRKSRC}/${PIKE_MODULE_SRC} \
-	&& SYSTEM_MODULE_PATH=`${PIKE_EXECUTABLE} -x module --query=system_module_path` ${PIKE_EXECUTABLE} -x module SYSTEM_MODULE_PATH=${DESTDIR}${SYSTEM_MODULE_PATH} install
+	&& SYSTEM_MODULE_PATH=`${PIKE_EXECUTABLE} -x module --query=system_module_path` \
+		${PIKE_EXECUTABLE} -x module \
+		SYSTEM_MODULE_PATH=${DESTDIR}${SYSTEM_MODULE_PATH} install
 
-post-install: remove-dumped-modules remove-main-package-files prepare-docs-dir install-shared-docs install-modrefs
+post-install: remove-dumped-modules remove-main-package-files prepare-docs-dir \
+	install-shared-docs install-modrefs
 
-.PHONY: remove-main-package-files remove-dumped-modules prepare-docs-dir install-modrefs install-shared-docs
+.PHONY: remove-main-package-files remove-dumped-modules prepare-docs-dir \
+	install-modrefs install-shared-docs
 
 # remove files that overlap with files in the main pike package, located under PREFIX
 remove-main-package-files:
@@ -104,7 +108,9 @@ remove-main-package-files:
 	  fi
 
 remove-dumped-modules:
-	cd ${DESTDIR}/${PREFIX}/lib/pike${PIKEVERSUFFIX} && find . -type f | sed -n -e '/\.pmod\.o$$/p' -e '/\.pike\.o$$/p' | xargs -n 20 rm -f
+	cd ${DESTDIR}/${PREFIX}/lib/pike${PIKEVERSUFFIX} && \
+		find . -type f | sed -n -e '/\.pmod\.o$$/p' -e '/\.pike\.o$$/p' \
+		| xargs -n 20 rm -f
 
 prepare-docs-dir:
 	rm -rf ${DESTDIR}/${PREFIX}/doc

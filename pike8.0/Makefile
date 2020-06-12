@@ -16,9 +16,9 @@ HOMEPAGE=	https://pike.lysator.liu.se/
 COMMENT=	Dynamic language with a syntax similar to Java and C
 
 CHECK_SSP=	no
-# pike performs dynamic allocation and machine code generation, 
+# pike performs dynamic allocation and machine code generation,
 # so leaving SSP enabled causes problems.
-SSP_SUPPORTED=  no
+SSP_SUPPORTED=	no
 
 BUILD_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
 BUILD_DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
@@ -35,8 +35,8 @@ SHARED_DOCS_LOC=	${PREFIX}/share/doc/${NAME}
 INSTALL_SHARED_DOCS=	ANNOUNCE CHANGES COMMITTERS COPYING COPYRIGHT README README-GIT
 
 INSTALL_TARGET_ARGS+=	INSTALLARGS="buildroot='${DESTDIR}' prefix='${PREFIX}' \
-	include_prefix='${PREFIX}/include/${NAME}' \
-	lib_prefix='${PREFIX}/lib/${NAME}' --verbose --traditional"
+			include_prefix='${PREFIX}/include/${NAME}' \
+			lib_prefix='${PREFIX}/lib/${NAME}' --verbose --traditional"
 INSTALL_TARGET_ARGS+=	buildroot='${DESTDIR}' prefix='${PREFIX}'
 
 .if (defined(ABI))
