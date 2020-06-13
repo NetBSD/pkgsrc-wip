@@ -50,7 +50,7 @@ DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # gr_filter_design in gnuradio-core ask for:
-DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
+DEPENDS+=	${PYPKGPREFIX}-qwt-qt5-[0-9]*:../../wip/py-qwt-qt5
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/gnuradio-core/patches
