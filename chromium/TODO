@@ -3,3 +3,6 @@ To Do:
 * No html5 audio (video has no problem)
 * 'Passwords cryptographer error was encountered:' and
   'Failed to receive encryption key from server.' errors
+
+- This package is affected by several vulnerabilities that are not actively
+  tracked here.  Usually upstream resolve them when releasing new version.
