@@ -18,8 +18,15 @@ BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 WRKSRC=		${WRKDIR}/PyQt-Qwt-pyqt-qwt-${VERSION}
 
 MAKE_ENV+=	PATH=${PATH}:${PREFIX}/qt5/bin
-MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
+#AKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 USE_LANGUAGES=	c++
+
+SUBST_CLASSES+=			installed.txt
+SUBST_MESSAGE.installed.txt=	Remove one extra \${DESTDIR} from list
+SUBST_FILES.installed.txt=	installed.txt
+SUBST_STAGE.installed.txt=	post-configure
+SUBST_SED.installed.txt=	-e '/^\/usr/s,^,${DESTDIR},'
+#SUBST_SED.installed.txt=	-e 's,^${DESTDIR},,'
 
 do-configure:
 	(cd ${WRKSRC}; \
@@ -31,7 +38,8 @@ do-configure:
 	--qwt-lib=qwt \
 	--sip=${PREFIX}/bin/sip${PYVERSSUFFIX} \
 	--qmake=${PREFIX}/qt5/bin/qmake \
-  	--pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5 \
+	--pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5 \
+	--destdir=${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5 \
 	--verbose \
 	)
 

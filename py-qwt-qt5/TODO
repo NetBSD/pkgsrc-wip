@@ -1,5 +1,15 @@
+-- current problem  --
 
-- current problem  --
+===> Installing for py37-qwt-qt5-1.02.00
+=> Generating pre-install file lists
+cd Qwt/ && ( test -e Makefile || /usr/pkg/qt5/bin/qmake -o Makefile /tmp/wip/py-qwt-qt5/work/PyQt-Qwt-pyqt-qwt-1.02.00/Qwt/Qwt.pro ) && /usr/bin/make -f Makefile install
+/usr/pkg/qt5/bin/qmake -install qinstall /tmp/wip/py-qwt-qt5/work/PyQt-Qwt-pyqt-qwt-1.02.00/Qwt/Qwt.so /tmp/wip/py-qwt-qt5/work/.destdir/usr/pkg/lib/python3.7/site-packages/PyQt5/Qwt.so
+mkdir: /usr/pkg/share/sip3.7/PyQt5/Qwt: Permission denied
+*** Error code 1
+
+
+-- Previous Problem --
+
 
 /usr/pkg/bin/python3.7 mk_distinfo.py /tmp/wip/py-qwt-qt5/work/.destdir/usr/pkg/lib/python3.7/site-packages/Qwt-6.1.2.dist-info installed.txt
 Traceback (most recent call last):
