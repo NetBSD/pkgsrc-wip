@@ -1,0 +1,21 @@
+
+- current problem  --
+
+/usr/pkg/bin/python3.7 mk_distinfo.py /tmp/wip/py-qwt-qt5/work/.destdir/usr/pkg/lib/python3.7/site-packages/Qwt-6.1.2.dist-info installed.txt
+Traceback (most recent call last):
+  File "mk_distinfo.py", line 101, in <module>
+    fn_f = open(fn, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/pkg/lib/python3.7/site-packages/PyQt5/Qwt.so'
+*** Error code 1
+
+Stop.
+make: stopped in /tmp/wip/py-qwt-qt5/work/PyQt-Qwt-pyqt-qwt-1.02.00
+*** Error code 1
+
+Stop.
+make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/py-qwt-qt5
+*** Error code 1
+
+Stop.
+make: stopped in /export/CHROOT/usr/pkgsrc/wip/py-qwt-qt5
+
