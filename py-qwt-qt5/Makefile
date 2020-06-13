@@ -24,7 +24,8 @@ USE_LANGUAGES=	c++
 do-configure:
 	(cd ${WRKSRC}; \
 	QT_SELECT=qt5 \
-	python${PYVERSSUFFIX} configure.py \
+	${PKGSRC_SETENV} ${CONFIGURE_ENV} \
+	${PYTHONBIN} configure.py \
 	--qwt-incdir=${PREFIX}/${BUILDLINK_INCDIRS.qwt6-qt5} \
 	--qwt-libdir=${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5} \
 	--qwt-lib=qwt \
