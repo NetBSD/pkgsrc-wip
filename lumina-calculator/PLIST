@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/lumina-calculator
+man/man1/lumina-calculator.1
+share/applications/lumina-calculator.desktop

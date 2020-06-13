@@ -2049,6 +2049,7 @@ SUBDIR+=	lucene
 SUBDIR+=	lugaru
 SUBDIR+=	lumberjack
 SUBDIR+=	lumina
+SUBDIR+=	lumina-calculator
 SUBDIR+=	luv
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
