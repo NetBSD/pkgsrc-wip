@@ -2,6 +2,7 @@
 
 VERSION=	1.02.00
 DISTNAME=	pyqt-qwt-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-qwt-qt5-${DISTNAME:S/pyqt-qwt-//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GauiStori/}
 GITHUB_PROJECT=	PyQt-Qwt
@@ -14,7 +15,7 @@ COMMENT=	Python PyQt wrapper for Qwt6
 
 BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 
-WRKSRC=		${WRKDIR}/PyQt-Qwt-pyqt-qwt-1.02.00
+WRKSRC=		${WRKDIR}/PyQt-Qwt-pyqt-qwt-${VERSION}
 
 MAKE_ENV+=	PATH=${PATH}:${PREFIX}/qt5/bin
 MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
