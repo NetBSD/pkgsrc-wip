@@ -8,7 +8,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lumina-desktop/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/lumina-desktop/lumina-pdf/
 COMMENT=	PDF Viewer Utility
 LICENSE=	modified-bsd

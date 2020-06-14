@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lumina-desktop/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/lumina-desktop/lumina-calculator/
 COMMENT=	Scientific calculator from the Lumina desktop
 LICENSE=	modified-bsd
