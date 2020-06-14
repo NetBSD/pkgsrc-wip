@@ -1,0 +1,9 @@
+Builds fails with:
+
+ | Making all in .
+ |   CC       zbarimg/zbarimg-zbarimg.o
+ | zbarimg/zbarimg.c:43:10: fatal error: ../zbar/gettext.h: No such file or directory
+ |  #include "../zbar/gettext.h"
+ |           ^~~~~~~~~~~~~~~~~~~
+ | compilation terminated.
+ | *** [zbarimg/zbarimg-zbarimg.o] Error code 1
