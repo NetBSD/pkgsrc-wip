@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	zbar
 ZBAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.zbar+=	zbar>=0.23
-BUILDLINK_PKGSRCDIR.zbar?=	../../graphics/zbar
+BUILDLINK_PKGSRCDIR.zbar?=	../../wip/zbar
 
 pkgbase:=	zbar
 .include "../../mk/pkg-build-options.mk"
