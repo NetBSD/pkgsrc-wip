@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	packer-1.5.6
+PKGNAME=	packer-1.6.0
 DISTNAME=	packer-${GITHUB_TAG}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
