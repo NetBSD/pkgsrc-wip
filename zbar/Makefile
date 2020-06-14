@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-qt
 
 PKGCONFIG_OVERRIDE+=	zbar-gtk.pc.in
-PKGCONFIG_OVERRIDE+=	zbar-qt.pc.in
 PKGCONFIG_OVERRIDE+=	zbar.pc.in
 
 .include "options.mk"
