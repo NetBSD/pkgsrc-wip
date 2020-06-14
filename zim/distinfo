@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.8 2015/11/03 03:32:24 agc Exp $
 
-SHA1 (zim-0.72.1.tar.gz) = ba5c094492be4ef06f08660dd94775c4c01dd7e0
-RMD160 (zim-0.72.1.tar.gz) = 5dc01cccba694a6bb12f4f7583c39d0645689db1
-SHA512 (zim-0.72.1.tar.gz) = 3a6f9c0028643913974d3d3419fac947e9c03846bb0fc89be2ad9b20d60893eeb2c079f2f807794c935383d5d90a72bddb4855bc22320cf93f956a4dbe517f0e
-Size (zim-0.72.1.tar.gz) = 2030012 bytes
+SHA1 (zim-0.73.0.tar.gz) = ad6fb9d678b109674d3f725c1e392b22ea5e760a
+RMD160 (zim-0.73.0.tar.gz) = 7257e27c56acafb8aca7a0f3b06cd31f33301129
+SHA512 (zim-0.73.0.tar.gz) = 536f24a4ea436b7fb8626a5878e1e1c29fa3e72d00e31283acdeb2b74830af10431c136ce66f34a3153dc81f2bbed4bea80aa97254db00c19b599c925cbd0532
+Size (zim-0.73.0.tar.gz) = 2047983 bytes

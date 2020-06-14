@@ -258,6 +258,8 @@ ${PYSITELIB}/zim/plugins/linesorter.pyo
 ${PYSITELIB}/zim/plugins/linesorter.pyc
 ${PYSITELIB}/zim/plugins/linkmap.pyo
 ${PYSITELIB}/zim/plugins/linkmap.pyc
+${PYSITELIB}/zim/plugins/osx_menubar.pyo
+${PYSITELIB}/zim/plugins/osx_menubar.pyc
 ${PYSITELIB}/zim/plugins/pathbar.pyo
 ${PYSITELIB}/zim/plugins/pathbar.pyc
 ${PYSITELIB}/zim/plugins/printtobrowser.pyo
@@ -313,6 +315,7 @@ ${PYSITELIB}/zim/plugins/insertsymbol.py
 ${PYSITELIB}/zim/plugins/journal.py
 ${PYSITELIB}/zim/plugins/linesorter.py
 ${PYSITELIB}/zim/plugins/linkmap.py
+${PYSITELIB}/zim/plugins/osx_menubar.py
 ${PYSITELIB}/zim/plugins/pageindex/__init__.py
 ${PYSITELIB}/zim/plugins/pageindex/__init__.pyo
 ${PYSITELIB}/zim/plugins/pageindex/__init__.pyc
@@ -537,6 +540,7 @@ share/zim/manual/Plugins/Tags.txt
 share/zim/manual/Plugins/Task_List.txt
 share/zim/manual/Plugins/Tray_Icon.txt
 share/zim/manual/Plugins/Version_Control.txt
+share/zim/manual/Plugins/macOS_Menubar.txt
 share/zim/manual/Start.txt
 share/zim/manual/Usage.txt
 share/zim/manual/Usage/Collaboration.txt
