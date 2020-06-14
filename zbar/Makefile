@@ -15,6 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--with-jpeg
+CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-video
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-python
