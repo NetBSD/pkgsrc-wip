@@ -2050,6 +2050,7 @@ SUBDIR+=	lugaru
 SUBDIR+=	lumberjack
 SUBDIR+=	lumina
 SUBDIR+=	lumina-calculator
+SUBDIR+=	lumina-pdf
 SUBDIR+=	luv
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
