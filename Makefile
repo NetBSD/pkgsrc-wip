@@ -5083,6 +5083,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zbackup
+SUBDIR+=	zbar
 SUBDIR+=	zdbsp
 SUBDIR+=	zenity
 SUBDIR+=	zero-epwing-git
