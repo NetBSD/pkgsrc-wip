@@ -2,7 +2,7 @@
 
 DISTNAME=	pyPEG2-2.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=	devel textproc python
+CATEGORIES=	textproc python
 MASTER_SITES=	http://fdik.org/pyPEG2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

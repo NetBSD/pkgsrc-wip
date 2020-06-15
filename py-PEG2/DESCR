@@ -1,10 +1,3 @@
-Python is a nice scripting language. It even gives you access to
-its own parser and compiler. It also gives you access to different
-other parsers for special purposes like XML and string templates.
-
-But sometimes you may want to have your own parser. This is what's
-pyPEG for. And pyPEG supports Unicode.
-
 pyPEG is a plain and simple intrinsic parser interpreter framework
 for Python version 2.7 and 3.x. It is based on Parsing Expression
 Grammar, PEG. With pyPEG you can parse many formal languages in a
