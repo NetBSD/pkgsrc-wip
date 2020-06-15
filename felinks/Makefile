@@ -22,17 +22,17 @@ pre-configure:
 	cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
-CONFIGURE_ARGS+=    --datadir=${PREFIX}/share/${PKGBASE}
-CONFIGURE_ARGS+=    --enable-256-colors
-CONFIGURE_ARGS+=    --enable-utf-8
-CONFIGURE_ARGS+=    --without-lzma
-CONFIGURE_ARGS+=    --without-lua
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
+CONFIGURE_ARGS+=	--enable-256-colors
+CONFIGURE_ARGS+=	--enable-utf-8
+CONFIGURE_ARGS+=	--without-lzma
+CONFIGURE_ARGS+=	--without-lua
 
 .include "../../mk/bsd.prefs.mk"
 
 # for backtrace
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=  -lexecinfo
+LIBS+=	-lexecinfo
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"

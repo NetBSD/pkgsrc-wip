@@ -1,1 +1,6 @@
 Makefile: set -e is standard practice in pre-configure. Was removed because of some errors which are supposedly like warnings.
+
+pkglint errors:
+
+ERROR: PLIST:3: Only the libiconv package may install lib/charset.alias.
+ERROR: patches/patch-src_util_memory.c:3: Each patch must be documented.
