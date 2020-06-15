@@ -1,6 +1,5 @@
 @comment $NetBSD$
 bin/elinks
-lib/charset.alias
 man/man1/elinks.1
 man/man5/elinks.conf.5
 man/man5/elinkskeys.5

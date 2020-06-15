@@ -22,6 +22,10 @@ pre-configure:
 	cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/charset.alias
+
+
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--enable-256-colors
 CONFIGURE_ARGS+=	--enable-utf-8

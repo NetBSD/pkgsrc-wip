@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use macro to make mremap compatible to NetBSD
+
 --- src/util/memory.c.orig	2020-05-31 13:15:37.000000000 +0000
 +++ src/util/memory.c
 @@ -21,6 +21,14 @@
