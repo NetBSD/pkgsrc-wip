@@ -378,6 +378,7 @@ lib/guile/2.2/site-ccache/gnucash/report/stylesheets/plain.go
 lib/guile/2.2/site-ccache/gnucash/report/trep-engine.go
 lib/guile/2.2/site-ccache/gnucash/reports.go
 lib/guile/2.2/site-ccache/gnucash/reports/aging.go
+lib/guile/2.2/site-ccache/gnucash/reports/cash-flow-calc.go
 lib/guile/2.2/site-ccache/gnucash/reports/example/average-balance.go
 lib/guile/2.2/site-ccache/gnucash/reports/example/daily-reports.go
 lib/guile/2.2/site-ccache/gnucash/reports/example/hello-world.go
@@ -1262,6 +1263,7 @@ share/guile/site/2.2/gnucash/report/stylesheets/plain.scm
 share/guile/site/2.2/gnucash/report/trep-engine.scm
 share/guile/site/2.2/gnucash/reports.scm
 share/guile/site/2.2/gnucash/reports/aging.scm
+share/guile/site/2.2/gnucash/reports/cash-flow-calc.scm
 share/guile/site/2.2/gnucash/reports/example/average-balance.scm
 share/guile/site/2.2/gnucash/reports/example/daily-reports.scm
 share/guile/site/2.2/gnucash/reports/example/hello-world.scm
