@@ -45,5 +45,16 @@ Just a cosmetic problem.
 [X] Created upstream bug report #663
 
 
+Part 11: Resurrect SunOS codepath
+=================================
+[X] Explicitly define SOLARIS for all SunOS-based operating systems
+    Required at least for SmartOS
+[X] Do not use label_t
+    Comment out declaration of unused function with return value of that type
+[X] Use native inet_aton()
+    Located in libresolv on SunOS
+[X] Use fcntl() instead of ioctl() to enable non-blocking mode of socket
+    Should be usable for all POSIX conformant operating systems
+
 
 EOF
