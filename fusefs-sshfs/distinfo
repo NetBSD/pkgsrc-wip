@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/12 03:04:43 poppnk Exp $
-
-SHA1 (sshfs-fuse-1.4.tar.gz) = 9e1e0b52d0facb2c6417810e90090a7871aa3323
-RMD160 (sshfs-fuse-1.4.tar.gz) = 73c6241a4cf157ca1a750a5008c48352555ac191
-Size (sshfs-fuse-1.4.tar.gz) = 93059 bytes
