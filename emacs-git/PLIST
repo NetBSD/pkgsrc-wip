@@ -2592,8 +2592,6 @@ share/emacs/${PKGVERSION}/lisp/mail/mailclient.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/mailclient.elc
 share/emacs/${PKGVERSION}/lisp/mail/mailheader.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/mailheader.elc
-share/emacs/${PKGVERSION}/lisp/mail/metamail.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/metamail.elc
 share/emacs/${PKGVERSION}/lisp/mail/mspools.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/mspools.elc
 share/emacs/${PKGVERSION}/lisp/mail/qp.el.gz
@@ -2851,6 +2849,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-compat.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
@@ -2975,6 +2975,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/messcompat.el
+share/emacs/${PKGVERSION}/lisp/obsolete/metamail.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/metamail.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/old-emacs-lock.el.gz
