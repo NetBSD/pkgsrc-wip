@@ -1,1 +1,0 @@
-Makefile: set -e is standard practice in pre-configure. Was removed because of some errors which are supposedly like warnings.
