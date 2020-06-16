@@ -220,5 +220,4 @@ do-install:
 		${DESTDIR}${EGDIR}
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
