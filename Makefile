@@ -3022,7 +3022,6 @@ SUBDIR+=	py-IOSXR
 SUBDIR+=	py-Kallithea
 SUBDIR+=	py-Netzob
 SUBDIR+=	py-OpenAL
-SUBDIR+=	py-PEG2
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PyPE
 SUBDIR+=	py-PythonDirector
