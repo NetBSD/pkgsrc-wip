@@ -4,4 +4,8 @@
 edje_cc random hang when building themes. Just SIGKILL helps.
 After make again without make clean, building "fine".
 The package works. Theme switch works.
+
+Workaround: themes compiling disabled, use prebuilded themes
+from own github repo. So, the build not hang anymore, but:
+
 Need to find the problem in edje_cc...
