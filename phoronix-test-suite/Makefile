@@ -20,6 +20,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=5.3:../../devel/php-pcntl
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=5.3:../../devel/php-posix
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3:../../archivers/php-zlib
+DEPENDS+=       ${PHP_PKG_PREFIX}-bz2>=5.3:../../archivers/php-bz2
+DEPENDS+=       ${PHP_PKG_PREFIX}-sqlite3>=5.3:../../databases/php-sqlite3
+DEPENDS+=       ${PHP_PKG_PREFIX}-sockets>=5.3:../../net/php-sockets
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	lib/systemd/system/

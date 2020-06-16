@@ -8,8 +8,6 @@ $NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
 * Remove the systemd directory creation and make the PLIST handle
   the presence/absence of systemd ecosystem.
 
-$NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
-
 --- install-sh.orig	2020-05-25 13:26:05.000000000 +0000
 +++ install-sh
 @@ -53,10 +53,9 @@ mkdir -p $DESTDIR$INSTALL_PREFIX/bin/

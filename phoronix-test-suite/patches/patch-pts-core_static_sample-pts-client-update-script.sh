@@ -5,8 +5,6 @@ $NetBSD$
   lead to unexpected behavior. Hence, this patch replaces the "==" operator
   with "=".
 
-$NetBSD$
-
 --- pts-core/static/sample-pts-client-update-script.sh.orig	2020-05-25 13:26:05.000000000 +0000
 +++ pts-core/static/sample-pts-client-update-script.sh
 @@ -20,7 +20,7 @@ fi

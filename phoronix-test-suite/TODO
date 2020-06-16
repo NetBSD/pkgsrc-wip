@@ -1,5 +1,2 @@
-Fix permission warnings such as:
-warning: /usr/pkgsrc/wip/phoronix-test-suite/work/.destdir/usr/pkg/share/doc/phoronix-test-suite/includes: group-writable directory.
-
 - In install-sh:
  `-e' option of echo is not portable
