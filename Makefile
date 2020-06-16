@@ -1,5 +1,6 @@
 # $NetBSD$
 
+COMMENT=	Work-in-progress packages
 
 SUBDIR+=	0ad
 SUBDIR+=	0ad-data
