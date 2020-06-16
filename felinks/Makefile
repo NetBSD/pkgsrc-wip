@@ -19,8 +19,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config aclocal autoconf autoheader automake
 
 pre-configure:
-	cd ${WRKSRC}; \
-	aclocal; autoheader; automake -a --foreign -i; autoconf
+	cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/charset.alias
