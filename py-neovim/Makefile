@@ -16,6 +16,7 @@ EGG_NAME=	pynvim-${PKGVERSION_NOREV}
 PYTHON_VERSIONS_INCOMPATIBLE=	31 32 33
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
