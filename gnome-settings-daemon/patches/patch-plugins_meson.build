@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- plugins/meson.build.orig	2020-04-29 22:04:41.239865300 +0000
++++ plugins/meson.build
+@@ -3,7 +3,6 @@ enabled_plugins = [
+   ['color', 'Color', ''],
+   ['datetime', 'Datetime'],
+   ['dummy', ''],
+-  ['power', 'Power'],
+   ['housekeeping', 'Housekeeping'],
+   ['keyboard', 'Keyboard'],
+   ['media-keys', 'MediaKeys'],

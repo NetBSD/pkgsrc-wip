@@ -1,0 +1,61 @@
+$NetBSD$
+
+--- meson.build.orig	2020-04-29 22:04:41.202864200 +0000
++++ meson.build
+@@ -118,7 +118,6 @@ m_dep = cc.find_library('m')
+ 
+ # ALSA integration (default enabled)
+ enable_alsa = get_option('alsa')
+-assert(enable_alsa or not host_is_linux, 'ALSA is not optional on Linux platforms')
+ 
+ libgvc = subproject(
+   'gvc',
+@@ -135,9 +134,6 @@ if enable_gudev
+   gudev_dep = dependency('gudev-1.0')
+ endif
+ config_h.set10('HAVE_GUDEV', enable_gudev)
+-if host_is_linux
+-  assert(enable_gudev, 'GUdev is not optional on Linux platforms')
+-endif
+ 
+ has_timerfd_create = cc.has_function('timerfd_create')
+ config_h.set10('HAVE_TIMERFD', has_timerfd_create)
+@@ -151,8 +147,7 @@ if enable_wayland
+ endif
+ config_h.set10('HAVE_WAYLAND', enable_wayland)
+ 
+-# wacom (disabled for s390/s390x and non Linux platforms)
+-enable_wacom = host_is_linux_not_s390
++enable_wacom = false
+ if enable_wacom
+   assert(enable_gudev, 'GUDev support is required for wacom support.')
+   libwacom_dep = dependency('libwacom', version: '>= 0.7')
+@@ -177,7 +172,6 @@ if enable_cups
+   assert(cups_dep.found(), 'CUPS 1.4 or newer not found')
+ 
+   # FIXME: 1.6 cflags generate a lot of errors
+-  '''
+   cups_cflags = []
+   if cups_dep.version().version_compare('>= 1.6')
+     cups_cflags += '-D_PPD_DEPRECATED=""'
+@@ -187,12 +181,10 @@ if enable_cups
+     dependencies: cups_dep,
+     compile_args: cups_cflags
+   )
+-  '''
+ endif
+ 
+ # Rfkill
+ enable_rfkill = get_option('rfkill')
+-assert(enable_rfkill or not host_is_linux, 'rfkill is not optional on Linux platforms')
+ if enable_rfkill
+   assert(cc.has_header('linux/rfkill.h'), 'rfkill support requested but RFKill headers not found')
+   assert(enable_gudev, 'GUdev is required for rfkill support')
+@@ -212,7 +204,6 @@ endif
+ 
+ # Sharing plugin
+ enable_network_manager = get_option('network_manager')
+-assert(enable_network_manager or not host_is_linux, 'NetworkManager support is not optional on Linux platforms')
+ if enable_network_manager
+   # network manager
+   libnm_dep = dependency('libnm', version: '>= 1.0')
