@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--disable-asciidoc
 
 .if !empty(PKG_OPTIONS:Mopenssl)
 PLIST.openssl=		yes
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
