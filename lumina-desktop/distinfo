@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (lumina-1.6.0.tar.gz) = 26fa7726aff964777464de5cd658b34d9c25a871
+RMD160 (lumina-1.6.0.tar.gz) = e9ae8be39159a23386f3f6a100d456f9ebba6084
+SHA512 (lumina-1.6.0.tar.gz) = e923961568ab9cc32206386066daef8cd1fd2db2d5c3e260e5c1da1dcda39a516576418f607cefbe5a1c47d8684591d0e595fb344e7d6aa2859fc3b326e73e30
+Size (lumina-1.6.0.tar.gz) = 20662000 bytes
+SHA1 (patch-icon-theme_changeFillColor.sh) = c681751abc682722b18ada9330ffd28cdb53c8cf
+SHA1 (patch-src-qt5_OS-detect.pri) = c07d2a17370d138508c9b84facf757adb8818f57

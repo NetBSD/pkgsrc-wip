@@ -2054,6 +2054,7 @@ SUBDIR+=	lucene
 SUBDIR+=	lugaru
 SUBDIR+=	lumberjack
 SUBDIR+=	lumina
+SUBDIR+=	lumina-desktop
 SUBDIR+=	luv
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
