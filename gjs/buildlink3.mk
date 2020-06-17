@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gjs
 GJS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gjs+=	gjs>=1.64.1
-BUILDLINK_PKGSRCDIR.gjs?=	../../lang/gjs
+BUILDLINK_PKGSRCDIR.gjs?=	../../wip/gjs
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
