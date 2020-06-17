@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	colord-1.2.12
+DISTNAME=	colord-1.3.5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz

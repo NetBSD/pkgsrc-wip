@@ -1,13 +1,11 @@
 $NetBSD$
 
-Install config file in examples.
-
---- data/Makefile.am.orig	2015-05-01 15:24:15.000000000 +0000
+--- data/Makefile.am.orig	2016-02-17 13:31:21.000000000 +0000
 +++ data/Makefile.am
 @@ -9,7 +9,7 @@ SUBDIRS = 						\
  	ti1
  
- if HAVE_UNIX
+ if HAVE_DAEMON
 -dbusdir = $(sysconfdir)/dbus-1/system.d
 +dbusdir = $(datadir)/examples/colord
  dist_dbus_DATA = org.freedesktop.ColorManager.conf
