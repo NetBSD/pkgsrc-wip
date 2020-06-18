@@ -34,10 +34,10 @@ CONFIGURE_ARGS+=	--without-lua
 LIBS+=	-lexecinfo
 .endif
 
+.include "options.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
