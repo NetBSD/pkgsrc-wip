@@ -25,6 +25,7 @@ post-install:
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--enable-256-colors
 CONFIGURE_ARGS+=	--enable-utf-8
+CONFIGURE_ARGS+=	--without-bzlib
 CONFIGURE_ARGS+=	--without-lzma
 CONFIGURE_ARGS+=	--without-lua
 
@@ -36,7 +37,6 @@ LIBS+=	-lexecinfo
 .endif
 
 .include "options.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
