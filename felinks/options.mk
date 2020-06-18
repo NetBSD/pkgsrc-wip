@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS=		gnutls
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
+.  include "../../security/libgcrypt/buildlink3.mk"
 CONFIGURE_ARGS+=	--without-openssl
 .endif
 
