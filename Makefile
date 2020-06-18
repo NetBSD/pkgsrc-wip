@@ -3449,6 +3449,7 @@ SUBDIR+=	py-hepcrawl
 SUBDIR+=	py-hessianfree
 SUBDIR+=	py-hfk
 SUBDIR+=	py-hg-evolve
+SUBDIR+=	py-hg-git
 SUBDIR+=	py-hgapi
 SUBDIR+=	py-hidapi-git
 SUBDIR+=	py-hieroglyph
