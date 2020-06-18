@@ -1055,7 +1055,6 @@ SUBDIR+=	gfsview-snapshot
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
-SUBDIR+=	gh
 SUBDIR+=	ghc
 SUBDIR+=	ghc-core
 SUBDIR+=	ghc68
