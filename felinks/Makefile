@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config aclocal autoconf autoheader automake
+USE_TOOLS+=		msgfmt xgettext
 
 pre-configure:
 	cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
