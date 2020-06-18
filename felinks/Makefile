@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rkd77/felinks
-COMMENT=	Fork of elinks
+COMMENT=	Fork of elinks, the text web browser
 LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
