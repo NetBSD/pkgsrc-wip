@@ -1,19 +1,15 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	felinks
-GITHUB_TAG=	v0.13.2
-DISTNAME=	v0.13.2
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	felinks-0.13.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkd77/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rkd77/felinks/
+HOMEPAGE=	https://github.com/rkd77/felinks
 COMMENT=	Fork of elinks
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/felinks-0.13.2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config aclocal autoconf autoheader automake
