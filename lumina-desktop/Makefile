@@ -34,7 +34,8 @@ pre-install:
 	${RUN} ${INSTALL_DATA} ${WRKSRC}/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf ${DESTDIR}${EGDIR}
 
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/share/lumina-desktop/menu-scripts/ls.json.sh.orig
+	${RUN} ${RM} -f ${DESTDIR}${PREFIX}/share/lumina-desktop/menu-scripts/ls.json.sh.orig
+	${RUN} ${RM} -f ${DESTDIR}${PREFIX}/etc/luminaDesktop.conf.dist
 
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
