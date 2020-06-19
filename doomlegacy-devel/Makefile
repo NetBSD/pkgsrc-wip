@@ -44,7 +44,7 @@ MAKE_FLAGS+=		OS=MAC
 # Other Unix (should work for GNU/Linux, OpenBSD and SunOS)
 MAKE_FLAGS+=		OS=LINUX
 CFLAGS.SunOS+=		-DSOLARIS
-LDFLAGS.SunOS+=		-lresolv
+LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 .endif
 
 .if ${MACHINE_ENDIAN} == "big"
