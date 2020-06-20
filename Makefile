@@ -784,7 +784,6 @@ SUBDIR+=	fbpanel
 SUBDIR+=	fbsd2pkg
 SUBDIR+=	fceux
 SUBDIR+=	feathercoin
-SUBDIR+=	felinks
 SUBDIR+=	felt
 SUBDIR+=	festvox-awb
 SUBDIR+=	festvox-bdl
