@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	gnome-shell-3.36.3
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-shell/3.36/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +19,8 @@ USE_LANGUAGES=	c
 
 MESON_ARGS+=	-Dnetworkmanager=false
 MESON_ARGS+=	-Dsystemd=false
+MESON_ARGS+=	-Dextensions_app=false
+MESON_ARGS+=	-Dextensions_tool=false
 
 TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
@@ -25,6 +28,10 @@ TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 
 MAKE_ENV+=      LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
+REPLACE_PYTHON+=	meson/*.py
+
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../wip/gnome-autoar/buildlink3.mk"

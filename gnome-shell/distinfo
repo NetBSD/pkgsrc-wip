@@ -4,4 +4,4 @@ SHA1 (gnome-shell-3.36.3.tar.xz) = 8b4447a3ab5a377d5e22991466ce1735bdb24e96
 RMD160 (gnome-shell-3.36.3.tar.xz) = 5b70e47cb5b2b80266db480928796baa6e63c735
 SHA512 (gnome-shell-3.36.3.tar.xz) = 3558ba9ac02148a064a25e498fb8e639edcc118639a10220d2c8f44cbe1975299c6e35e9f32703dfc5f9e27c9fc414915d1527c98d9800bd0ba66b5d7b53b78a
 Size (gnome-shell-3.36.3.tar.xz) = 1771764 bytes
-SHA1 (patch-meson.build) = 8ed1c13dd2764cc924d7f99f3ff4611153983343
+SHA1 (patch-src_shell-util.c) = 830dd5dec94775b64aeaed1738da2384f19c6ec7
