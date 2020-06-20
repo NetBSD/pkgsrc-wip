@@ -1118,7 +1118,6 @@ SUBDIR+=	gnome-paint
 SUBDIR+=	gnome-panel
 SUBDIR+=	gnome-session
 SUBDIR+=	gnome-settings-daemon
-SUBDIR+=	gnome-terminal
 SUBDIR+=	gnome-todo
 SUBDIR+=	gnome-tracker
 SUBDIR+=	gnome3
