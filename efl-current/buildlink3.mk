@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	efl
 .if !defined(EFL_BUILDLINK3_MK)
 EFL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.efl+=	efl>=1.24.2nb1
+BUILDLINK_API_DEPENDS.efl+=	efl>=1.24.3
 BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl-current
 
 .include "../../audio/pulseaudio/buildlink3.mk"

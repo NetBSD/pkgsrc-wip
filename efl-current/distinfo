@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (efl-1.24.2.tar.xz) = d2d23ef4bcb1a0c1bbe294e5e259591c27c9a709
-RMD160 (efl-1.24.2.tar.xz) = f4c58cd8a224d8552c4d3e0d1d8563c6828a2de1
-SHA512 (efl-1.24.2.tar.xz) = 0fc2ee94a074e33ae3c7142f2bb8ec5d174c843a26d2cb0641af466c3f413a25ee81bba2445fe03d518358f11546ec716a70e785fe1a8b90727e29bcc7d5f706
-Size (efl-1.24.2.tar.xz) = 72280100 bytes
+SHA1 (efl-1.24.3.tar.xz) = 6e8e7fe8920db8c6533c174cb1d93a6527c7a19d
+RMD160 (efl-1.24.3.tar.xz) = 2f57c423bc620cb4299d95faaccc332409cf6318
+SHA512 (efl-1.24.3.tar.xz) = 3791955c588bc1b2ca55caa19dc0fb351c9f6c681791bfe76a435255edd55257c9c5ab2f16d0d91ec2d55113bd9d24d45c0f9026ae72d9f6afbddfd093975089
+Size (efl-1.24.3.tar.xz) = 72278592 bytes
 SHA1 (patch-src_lib_ecore_Ecore.h) = 89e11da7e514bc37beb889466edc6164f47e8f0c
 SHA1 (patch-src_lib_ecore_Efl__Core.h) = 5f6720fbb737a54bc73dc07208280972af6d8dfb
 SHA1 (patch-src_lib_ecore_efl__core__proc__env.c) = 1efcc1a40f5da8990fe489f8120c95566fbbaeb4
