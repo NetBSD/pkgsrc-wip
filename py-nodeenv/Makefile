@@ -1,9 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	nodeenv-1.3.3
+DISTNAME=	nodeenv-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=n/nodeenv/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ekalinin/}
+GITHUB_PROJECT=	nodeenv
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	iku.iwasa@gmail.com
 HOMEPAGE=	https://ekalinin.github.io/nodeenv/
