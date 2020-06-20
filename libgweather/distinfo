@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.15 2015/11/03 03:27:41 agc Exp $
 
-SHA1 (libgweather-3.16.1.tar.xz) = 0a5f2c62780fdf2c6b97883d8ea79f6445a6d4d0
-RMD160 (libgweather-3.16.1.tar.xz) = 68e3be391c057be05e23562c7eba75a4761bfbf7
-SHA512 (libgweather-3.16.1.tar.xz) = 753f5428760b1a14bda18c4b2ae056d54433ef68745521f3ec3685b298b934667206af23d61604d13ddc8d36a2a659c02e2a2d498be288c16ea67d4c3eadf040
-Size (libgweather-3.16.1.tar.xz) = 3478080 bytes
+SHA1 (libgweather-3.36.0.tar.xz) = 736b987be6afa9dde19410c60e711e179d18301a
+RMD160 (libgweather-3.36.0.tar.xz) = a14fe933165a181d5bb6cc6ff59e3107abfa0001
+SHA512 (libgweather-3.36.0.tar.xz) = 0f89d4f7faa9582b4b717b29ca60f6dbaa43614ac1e6aa7da8542595f2db2b4c2a1c5f77ed0d2822e6e358665873db03383846b11e797d78cc993f20fd4472a2
+Size (libgweather-3.36.0.tar.xz) = 2702424 bytes
