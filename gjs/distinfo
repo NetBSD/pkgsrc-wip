@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.2 2020/03/12 22:53:12 wiz Exp $
 
-SHA1 (gjs-1.64.1.tar.xz) = f53d45551341806a5983f703295a66dae3404ca9
-RMD160 (gjs-1.64.1.tar.xz) = 427c4e37f70f99b5eef81d80d2e7b667fc6509e4
-SHA512 (gjs-1.64.1.tar.xz) = 8d076b9d9ff3eb66dc76ff1f3ea4c24de0604979b537cd09a62e3c5718f08a0acb6f29de60ed62bb7215a8ffa1387904db98e147d9b20cfab0391f7060566b2f
-Size (gjs-1.64.1.tar.xz) = 418444 bytes
+SHA1 (gjs-1.64.3.tar.xz) = f3a6372321cda99f78feaf3ebdc6391532741f67
+RMD160 (gjs-1.64.3.tar.xz) = cf7057847308b17f39d348dc952feb0bce20a1a8
+SHA512 (gjs-1.64.3.tar.xz) = 9d92e52a7fef07853f3beb181798f89deb60b97b928d916cd827c99a6ab8f83abf7c352a1aa46be476a50e2efadfaf09befa54ccab0d51b0ac7127f2fe794801
+Size (gjs-1.64.3.tar.xz) = 422436 bytes
 SHA1 (patch-meson.build.diff) = a0bef282355dd2cf4db5719cb84c71b64c6b217a
