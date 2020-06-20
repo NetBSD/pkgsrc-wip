@@ -33,7 +33,7 @@ $NetBSD: patch-configure,v 1.1 2019/12/04 11:17:32 leot Exp $
  
  # Javah was obsoleted on Java 8 and removed on Java 11. So, we need to
  # look strictly at the $JAVA_HOME in order to avoid mixing different versions
-@@ -29146,7 +29150,7 @@ fi
+@@ -29146,7 +29148,7 @@ fi
  echo ""
  echo "please verify that the detected configuration matches your expectations:"
  echo "------------------------------------------------------------------------"
