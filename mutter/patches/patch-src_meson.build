@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- src/meson.build.orig	2020-06-02 23:25:27.559633000 +0000
++++ src/meson.build
+@@ -892,6 +892,7 @@ libmutter = shared_library(libmutter_nam
+   c_args: mutter_c_args,
+   dependencies: [
+     libmutter_cogl_dep,
++    libmutter_cogl_path_dep,
+     libmutter_clutter_dep,
+     mutter_deps,
+   ],
