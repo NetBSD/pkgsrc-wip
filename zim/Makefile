@@ -1,9 +1,8 @@
 # $NetBSD: $
 
 DISTNAME=	zim-0.73.0
-#PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	wip editors
+CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
 
 MAINTAINER=	mp@petermann-it.de
