@@ -2,6 +2,7 @@
 #
 
 DISTNAME=		gnome-session-3.36.0
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/3.36/}
 #SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -59,7 +60,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../sysutils/dbus/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.76
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-#.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
+.include "../../wip/gnome-settings-daemon/buildlink3.mk"
 #.include "../../x11/gnome-control-center/buildlink3.mk"
 #.include "../../x11/gnome-desktop/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libxslt?=  build
@@ -67,8 +68,8 @@ BUILDLINK_DEPMETHOD.libxslt?=  build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/gnome-desktop3/buildlink3.mk"
-.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../wip/gnome-desktop3/buildlink3.mk"
+.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
