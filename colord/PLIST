@@ -173,3 +173,5 @@ share/locale/zh_CN/LC_MESSAGES/colord.mo
 share/locale/zh_TW/LC_MESSAGES/colord.mo
 share/polkit-1/actions/org.freedesktop.color.policy
 @pkgdir var/lib/colord/icc
+${PLIST.introspection}lib/girepository-1.0/Colord-1.0.typelib
+${PLIST.introspection}share/gir-1.0/Colord-1.0.gir
