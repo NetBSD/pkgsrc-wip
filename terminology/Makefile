@@ -2,7 +2,7 @@
 
 DISTNAME=	terminology-1.7.0
 CATEGORIES=	x11
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/terminology/
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DEFAULT_DISTFILES}
