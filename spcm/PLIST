@@ -14,6 +14,10 @@ bin/cluster-zfs-nodes
 bin/condor-build-R-packages
 bin/condor-cpus
 bin/condor-list-packages
+bin/job-top
+bin/node-iostat
+bin/node-ps
+bin/node-top
 bin/psnode
 bin/slurm-cluster-load
 bin/slurm-find-strays
