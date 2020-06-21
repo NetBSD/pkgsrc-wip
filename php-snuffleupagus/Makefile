@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 MODNAME=		snuffleupagus
-PECL_VERSION=		0.5.0
+PECL_VERSION=		0.5.1
 CATEGORIES+=		security
 
 # See TODO
