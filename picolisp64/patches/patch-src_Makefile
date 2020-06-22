@@ -1,13 +1,15 @@
 $NetBSD$
 
---- src/Makefile.orig	2016-02-02 15:52:49.000000000 +0000
+Add -fpic for NetBSD builds.
+
+--- src/Makefile.orig	2019-01-30 14:32:00.000000000 +0000
 +++ src/Makefile
-@@ -48,7 +48,7 @@ ifeq ($(shell uname), FreeBSD)
+@@ -51,7 +51,7 @@ ifeq ($(shell uname), FreeBSD)
  else
  ifeq ($(shell uname), NetBSD)
  	OS = NetBSD
--	CFLAGS += -m32
-+	CFLAGS += -m32 -fpic
- 	PICOLISP-FLAGS = -m32 -rdynamic
+-	CFLAGS += ${M32}
++	CFLAGS += ${M32} -fpic
+ 	PICOLISP-FLAGS = ${M32} -rdynamic
  	LIB-FLAGS = -lm
- 	DYNAMIC-LIB-FLAGS = -m32 -shared -export-dynamic
+ 	DYNAMIC-LIB-FLAGS = ${M32} -shared -export-dynamic

@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (picoLisp-17.6.tgz) = c8ef1b687d27cd9dd28f39f4f33b430b4be850b3
-RMD160 (picoLisp-17.6.tgz) = ff9fe4f0e62364975aee253eef296eaa03616f5d
-SHA512 (picoLisp-17.6.tgz) = f7e8aaf6a20c342af98fb948885eb5aebca305f064e69d00fd5fc33b90ad131777686490cb967c16750889a6d649bb95c8c250353a2cc12fe9ff95e63e83751b
-Size (picoLisp-17.6.tgz) = 992572 bytes
-SHA1 (patch-src_Makefile) = fe320943e1660063e3c916d958eb2161c22d86f1
+SHA1 (picoLisp-19.12.tgz) = d0d9c65c8fe61eafc4fa91a66ce3506cfab8a0ff
+RMD160 (picoLisp-19.12.tgz) = 25700d9597378a6d0947b5687b36e485f1795c6f
+SHA512 (picoLisp-19.12.tgz) = b2ac1a79e9b0d358ad800666c403a397268998efaa66c899c181770c94ad2f62f5908840eeaf881bbe57846c74dc579601868d6d0594c8b23f6fd0023dff9c35
+Size (picoLisp-19.12.tgz) = 1018982 bytes
+SHA1 (patch-src_Makefile) = e47670535a76657af9f36079a6ca28049033af6a

@@ -3,7 +3,7 @@
 # used by wip/picolisp64/Makefile
 
 DISTNAME=	picoLisp-${PIL_VERSION}
-PIL_VERSION=	17.6
+PIL_VERSION=	19.12
 CATEGORIES=	lang
 MASTER_SITES=	http://software-lab.de/
 EXTRACT_SUFX=	.tgz
