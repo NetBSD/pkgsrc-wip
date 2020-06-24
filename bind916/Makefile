@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.16.3
+BIND_VERSION=	9.16.4
 
 # For libatomic and 64-bit operations
 #USE_PKGSRC_GCC=	yes
@@ -88,5 +88,5 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
-.include "../../wip/libatomic/buildlink3.mk"
+.include "../../devel/libatomic/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
