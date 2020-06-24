@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.isc.org/software/bind/
-COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.14
+COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.16
 LICENSE=	mpl-2.0
 
 CONFLICTS+=	host-[0-9]*
