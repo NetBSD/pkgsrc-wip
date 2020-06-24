@@ -16,33 +16,27 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-linux-src//}
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
+# checking whether gcc version is at least 4.7...
+GCC_REQD+=	4.7
+
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
-
-LUA_VERSIONS_INCOMPATIBLE=	52 53
-
-# JIT needs WX mappings
-NOT_PAX_MPROTECT_SAFE+=		love11/bin/love
 
 GNU_CONFIGURE_PREFIX=		${PREFIX}/love11
 GNU_CONFIGURE_MANDIR=		${PREFIX}/love11/${PKGMANDIR}/
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/love11/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/love11/lib
 
+.include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../audio/openal-soft/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
-.include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../audio/mpg123/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
