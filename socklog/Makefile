@@ -15,6 +15,8 @@ PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 DJB_RESTRICTED=		NO
 DJB_SLASHPACKAGE=	YES
 
+SUBST_CLASSES+=		djberrno
+
 DOCS=		package/CHANGES package/COPYING package/README doc/*.html
 USER_CMDS=	${CMDDIR}/tryto ${CMDDIR}/uncat
 SYS_CMDS=	${CMDDIR}/socklog ${CMDDIR}/socklog-check ${CMDDIR}/socklog-conf
