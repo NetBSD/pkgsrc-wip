@@ -100,6 +100,7 @@ sbin/cluster-user-cleanup
 sbin/cluster-useradd
 sbin/cluster-users
 sbin/ganglia-web-setup
+sbin/node-iftop
 sbin/node-sync-all-users
 sbin/node-sync-groups
 sbin/node-sync-users
