@@ -2,7 +2,7 @@
 
 DISTNAME=	enlightenment-0.24.1
 CATEGORIES=	wm
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 

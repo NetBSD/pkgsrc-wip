@@ -5,6 +5,7 @@ RMD160 (enlightenment-0.24.1.tar.xz) = 29e61075bb25a60a21a23695a1c075fff5673f70
 SHA512 (enlightenment-0.24.1.tar.xz) = 3835d898f1fdb96ab6539543e9af910b4a9078372af5cfd90abb33c0d5ecb41496499629c54613e3fec4c230233b69bf1abde68f3ffba4996c69979a526da418
 Size (enlightenment-0.24.1.tar.xz) = 28713452 bytes
 SHA1 (patch-data_etc_meson.build) = 164a5ebd5b046381f46226d05d0cb17fcd7edbd7
+SHA1 (patch-src_bin_system_e__system__power.c) = 93ba369fa12421cb1022a90e510a1044056724c3
 SHA1 (patch-src_modules_battery_e__mod__main.c) = 40383429a6e9e7c1cee7daba36dca895b8397a16
 SHA1 (patch-src_modules_battery_e__mod__main.h) = f5768702af131931b972e82bcc15c9946b9787ba
 SHA1 (patch-src_modules_battery_e__mod__sysctl.c) = 4b1548a168212b0734e29a9e173e9faa016c20e9
