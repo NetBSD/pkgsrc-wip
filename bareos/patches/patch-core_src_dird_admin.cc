@@ -2,25 +2,22 @@ $NetBSD$
 
 	Remove inadequate clutter in production messages
 
---- core/src/dird/admin.cc.orig	2019-01-31 11:39:26.000000000 +0000
+--- core/src/dird/admin.cc.orig	2020-04-16 08:31:41.000000000 +0000
 +++ core/src/dird/admin.cc
-@@ -118,7 +118,9 @@ void AdminCleanup(JobControlRecord *jcr,
-         "  Scheduled time:         %s\n"
-         "  Start time:             %s\n"
-         "  End time:               %s\n"
+@@ -120,10 +120,15 @@ void AdminCleanup(JobControlRecord* jcr,
+          "  Scheduled time:         %s\n"
+          "  Start time:             %s\n"
+          "  End time:               %s\n"
 +#ifndef NO_ADV
-         "  Bareos binary info:     %s\n"
+          "  Bareos binary info:     %s\n"
 +#endif
-         "  Termination:            %s\n\n"),
-         edt,
-         jcr->jr.JobId,
-@@ -126,7 +128,9 @@ void AdminCleanup(JobControlRecord *jcr,
-         schedt,
-         sdt,
-         edt,
+          "  Termination:            %s\n\n"),
+        kBareosVersionStrings.Full, kBareosVersionStrings.ShortDate, edt, jcr->impl->jr.JobId,
+-       jcr->impl->jr.Job, schedt, sdt, edt, kBareosVersionStrings.JoblogMessage,
++       jcr->impl->jr.Job, schedt, sdt, edt,
 +#ifndef NO_ADV
-         BAREOS_JOBLOG_MESSAGE,
++       kBareosVersionStrings.JoblogMessage,
 +#endif
-         TermMsg);
+        TermMsg);
  
-    Dmsg0(debuglevel, "Leave AdminCleanup()\n");
+   Dmsg0(debuglevel, "Leave AdminCleanup()\n");

@@ -1,47 +1,44 @@
 $NetBSD$
 
-	Install mtx-changer script if mtx is available
+suppress mtx-changer installation if not found
 
---- core/scripts/CMakeLists.txt.orig	2019-02-13 14:25:55.000000000 +0000
+--- core/scripts/CMakeLists.txt.orig	2020-06-22 13:14:51.366971896 +0000
 +++ core/scripts/CMakeLists.txt
-@@ -41,7 +41,6 @@ INSTALL(FILES
+@@ -42,18 +42,30 @@ install(
  
- IF(NOT client-only)
-    INSTALL(FILES
--         mtx-changer
-          disk-changer
-          bareos-explorer
-          bareos-glusterfind-wrapper
-@@ -54,12 +53,26 @@ IF(NOT client-only)
-          DESTINATION "${scriptdir}")
+ if(NOT client-only)
+   install(
+-    FILES mtx-changer disk-changer bareos-explorer bareos-glusterfind-wrapper
++    FILES disk-changer bareos-explorer bareos-glusterfind-wrapper
+           bareos-ctl-dir bareos-ctl-sd bareos-ctl-funcs
+     PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE
+                 WORLD_READ WORLD_EXECUTE
+     DESTINATION "${scriptdir}"
+   )
  
-    INSTALL(FILES
--            mtx-changer.conf
-             bareos-regress.conf
--            DESTINATION "${confdir}")
-+            DESTINATION "${configtemplatedir}")
+-  install(FILES mtx-changer.conf bareos-regress.conf DESTINATION "${confdir}")
++  install(FILES bareos-regress.conf DESTINATION "${configtemplatedir}")
  
--   INSTALL(FILES
--          logrotate
--          DESTINATION "${sysconfdir}/logrotate.d"
--          RENAME bareos-dir)
-+   IF(NOT ${MTX} STREQUAL "MTX-NOTFOUND")
-+         INSTALL(FILES
-+                 mtx-changer
-+                 PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
-+                             GROUP_READ GROUP_EXECUTE
-+                             WORLD_READ WORLD_EXECUTE
-+                 DESTINATION "${scriptdir}")
+-  install(
+-    FILES logrotate
+-    DESTINATION "${sysconfdir}/logrotate.d"
+-    RENAME bareos-dir
+-  )
++  if(NOT ${MTX} STREQUAL "MTX-NOTFOUND")
++    install(
++      FILES mtx-changer
++      PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE
++		  WORLD_READ WORLD_EXECUTE
++      DESTINATION "${scriptdir}"
++    )
++    install(FILES mtx-changer.conf DESTINATION "${configtemplatedir}")
++  endif()
 +
-+         INSTALL(FILES
-+                 mtx-changer.conf
-+                 DESTINATION "${configtemplatedir}")
-+   ENDIF()
-+
-+   IF (NOT ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
-+   	INSTALL(FILES
-+          	logrotate
-+          	DESTINATION "${sysconfdir}/logrotate.d"
-+          	RENAME bareos-dir)
-+   ENDIF()
- ENDIF()
++  if (NOT ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++    install(
++      FILES logrotate
++      DESTINATION "${sysconfdir}/logrotate.d"
++      RENAME bareos-dir
++    )
++  endif()
+ endif()

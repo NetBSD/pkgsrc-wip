@@ -2,22 +2,30 @@ $NetBSD$
 
 	Add missing free*() calls to keep smartalloc happy
 
---- core/src/stored/btape.cc.orig	2019-01-31 11:39:26.000000000 +0000
+--- core/src/stored/btape.cc.orig	2020-04-16 08:31:41.000000000 +0000
 +++ core/src/stored/btape.cc
-@@ -333,6 +333,7 @@ int main(int margc, char *margv[])
+@@ -331,6 +331,7 @@ int main(int margc, char* margv[])
+ 
  static void TerminateBtape(int status)
  {
-    Dsm_check(200);
-+   FreePlugins(jcr);
-    FreeJcr(jcr);
-    jcr = NULL;
++  FreePlugins(jcr);
+   FreeJcr(jcr);
+   jcr = NULL;
  
-@@ -379,6 +380,8 @@ static void TerminateBtape(int status)
-    }
+@@ -369,6 +370,8 @@ static void TerminateBtape(int status)
+   }
  
-    StopWatchdog();
-+   FlushCryptoCache();
-+   UnloadSdPlugins();
-    TermMsg();
-    TermLastJobsList();
-    CloseMemoryPool();               /* free memory in pool */
+   StopWatchdog();
++  FlushCryptoCache();
++  UnloadSdPlugins();
+   TermMsg();
+   RecentJobResultsList::Cleanup();
+   CleanupJcrChain();
+@@ -377,7 +380,6 @@ static void TerminateBtape(int status)
+   exit(status);
+ }
+ 
+-
+ btime_t total_time = 0;
+ uint64_t total_size = 0;
+ 

@@ -2,18 +2,18 @@ $NetBSD$
 
 	Remove inadequate clutter in production messages
 
---- core/src/dird/authenticate_console.cc.orig	2019-02-01 07:13:31.178559767 +0000
+--- core/src/dird/authenticate_console.cc.orig	2020-04-16 08:31:41.000000000 +0000
 +++ core/src/dird/authenticate_console.cc
-@@ -204,10 +204,12 @@ bool ConsoleAuthenticatorFrom_18_2::Send
+@@ -216,10 +216,12 @@ bool ConsoleAuthenticatorFrom_18_2::Send
  bool ConsoleAuthenticatorFrom_18_2::SendInfoMessage()
  {
    std::string message;
 +#ifndef NO_ADV
-   message += BAREOS_BINARY_INFO;
+   message += kBareosVersionStrings.BinaryInfo;
    message += " binary\n";
-   message += BAREOS_SERVICES_MESSAGE;
+   message += kBareosVersionStrings.ServicesMessage;
    message += "\n";
 +#endif
    message += "You are ";
-   if (ua_->cons) {
+   if (ua_->user_acl) {
      message += "logged in as: ";

@@ -2,9 +2,9 @@ $NetBSD$
 
 	remove inadequate clutter in status messages
 
---- core/src/dird/migrate.cc.orig	2019-02-01 07:15:47.112695213 +0000
+--- core/src/dird/migrate.cc.orig	2020-04-16 08:31:41.000000000 +0000
 +++ core/src/dird/migrate.cc
-@@ -1723,7 +1723,9 @@ static inline void GenerateMigrateSummar
+@@ -1764,7 +1764,9 @@ static inline void GenerateMigrateSummar
             "  Last Volume Bytes:      %s (%sB)\n"
             "  SD Errors:              %d\n"
             "  SD termination status:  %s\n"
@@ -12,19 +12,22 @@ $NetBSD$
             "  Bareos binary info:     %s\n"
 +#endif
             "  Termination:            %s\n\n"),
-            BAREOS, my_name, VERSION, LSMDATE,
-            HOST_OS, DISTNAME, DISTVER,
-@@ -1759,7 +1761,9 @@ static inline void GenerateMigrateSummar
-            edit_uint64_with_suffix(mr->VolBytes, ec5),
-            jcr->SDErrors,
-            sd_term_msg,
+          BAREOS, my_name, kBareosVersionStrings.Full,
+          kBareosVersionStrings.ShortDate, HOST_OS, DISTNAME, DISTVER,
+@@ -1798,7 +1800,11 @@ static inline void GenerateMigrateSummar
+          mig_jcr ? mig_jcr->VolumeName : _("*None*"), jcr->VolSessionId,
+          jcr->VolSessionTime, edit_uint64_with_commas(mr->VolBytes, ec4),
+          edit_uint64_with_suffix(mr->VolBytes, ec5), jcr->impl->SDErrors,
+-         sd_term_msg, kBareosVersionStrings.JoblogMessage, term_code);
++         sd_term_msg,
 +#ifndef NO_ADV
-            BAREOS_JOBLOG_MESSAGE,
++         kBareosVersionStrings.JoblogMessage,
 +#endif
-            term_code);
-    } else {
-       /*
-@@ -1774,7 +1778,9 @@ static inline void GenerateMigrateSummar
++         term_code);
+   } else {
+     /*
+      * Copy/Migrate selection only Job.
+@@ -1813,14 +1819,20 @@ static inline void GenerateMigrateSummar
             "  End time:               %s\n"
             "  Elapsed time:           %s\n"
             "  Priority:               %d\n"
@@ -32,15 +35,17 @@ $NetBSD$
             "  Bareos binary info:     %s\n"
 +#endif
             "  Termination:            %s\n\n"),
-            BAREOS, my_name, VERSION, LSMDATE,
-            HOST_OS, DISTNAME, DISTVER,
-@@ -1785,7 +1791,9 @@ static inline void GenerateMigrateSummar
-            edt,
-            edit_utime(RunTime, elapsed, sizeof(elapsed)),
-            jcr->JobPriority,
+          BAREOS, my_name, kBareosVersionStrings.Full,
+          kBareosVersionStrings.ShortDate, HOST_OS, DISTNAME, DISTVER,
+          edit_uint64(jcr->impl->jr.JobId, ec8), jcr->impl->jr.Job,
+          jcr->impl->res.catalog->resource_name_, jcr->impl->res.catalog_source,
+          sdt, edt, edit_utime(RunTime, elapsed, sizeof(elapsed)),
+-         jcr->JobPriority, kBareosVersionStrings.JoblogMessage, term_code);
++         jcr->JobPriority,
 +#ifndef NO_ADV
-            BAREOS_JOBLOG_MESSAGE,
++         kBareosVersionStrings.JoblogMessage,
 +#endif
-            term_code);
-    }
++         term_code);
+   }
  }
+ 
