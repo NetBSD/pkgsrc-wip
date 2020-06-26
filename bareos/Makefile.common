@@ -25,6 +25,10 @@ USE_CMAKE=	yes
 USE_LANGUAGES=  c c++
 CMAKE_ARG_PATH= ..
 CONFIGURE_DIRS= core/_build
+# needs to be able to do compare-and-swap on time_t (cmpxchg8b)
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=                -march=i586
+.endif
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/core/_build
@@ -69,7 +73,9 @@ FILES_SUBST+=		BAREOS_SD_USER=${BAREOS_SD_USER}
 # cmake arguments
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 CMAKE_ARGS+=	-DCMAKE_STAGING_PREFIX=${BUILDLINK_DIR}
-# reduce job log noise: CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS=-DNO_ADV=1
+# reduce job log noise: CXXFLAGS+=-DNO_ADV=1
+CXXFLAGS+=-DNO_ADV=1
+CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS="${CXXFLAGS}"
 CMAKE_ARGS+=	-DSKIP_GTEST=1
 CMAKE_ARGS+=	-Dconfigtemplatedir=${PREFIX}/${CONFIG_TEMPLATE_PATH}
 CMAKE_ARGS+=	-Dworkingdir=${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working
