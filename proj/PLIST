@@ -106,6 +106,7 @@ ${PLIST.grids}share/proj/conus
 ${PLIST.grids}share/proj/cq77na83.gsb
 ${PLIST.grids}share/proj/cshpgn.gsb
 ${PLIST.grids}share/proj/dnn.gtx
+share/proj/deformation_model.schema.json
 ${PLIST.grids}share/proj/dublht1960-nzvd2016.gtx
 ${PLIST.grids}share/proj/duneht1958-nzvd2016.gtx
 ${PLIST.grids}share/proj/dvr90.gtx
