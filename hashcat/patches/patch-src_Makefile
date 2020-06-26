@@ -1,12 +1,33 @@
 $NetBSD$
 
+Set preferences.
 Add minimal NetBSD support.
 Don't override CC nor optimisation flags in CFLAGS.
 Remove sed magic; we'll use nbsed.
 
---- src/Makefile.orig	2018-10-28 16:29:39.000000000 +0000
+--- src/Makefile.orig	2020-06-16 15:30:11.000000000 +0000
 +++ src/Makefile
-@@ -23,7 +23,7 @@ UNAME                   := $(patsubst MS
+@@ -3,16 +3,16 @@
+ ## License.....: MIT
+ ##
+ 
+-SHARED                  := 0
++SHARED                  := 1
+ DEBUG                   := 0
+ PRODUCTION              := 1
+ PRODUCTION_VERSION      := v6.0.0
+ ENABLE_CUBIN            := 1
+ ENABLE_BRAIN            := 1
+ USE_SYSTEM_LZMA         := 0
+-USE_SYSTEM_ZLIB         := 0
++USE_SYSTEM_ZLIB         := 1
+ USE_SYSTEM_OPENCL       := 0
+-USE_SYSTEM_XXHASH       := 0
++USE_SYSTEM_XXHASH       := 1
+ 
+ ##
+ ## Detect Operating System
+@@ -28,7 +28,7 @@ UNAME                   := $(patsubst MS
  UNAME                   := $(patsubst MINGW32_NT-%,MSYS2,$(UNAME))
  UNAME                   := $(patsubst MINGW64_NT-%,MSYS2,$(UNAME))
  
@@ -15,20 +36,21 @@ Remove sed magic; we'll use nbsed.
  $(error "! Your Operating System ($(UNAME)) is not supported by this Makefile")
  endif
  
-@@ -45,7 +45,6 @@ endif
+@@ -56,7 +56,6 @@ MODULE_INTERFACE_VERSION := 520
  ## Native compiler paths
  ##
  
 -CC                      := gcc
+ AR                      := ar
  FIND                    := find
  INSTALL                 := install
- RM                      := rm
-@@ -53,17 +52,9 @@ SED                     := sed
+@@ -65,18 +64,11 @@ SED                     := sed
  SED_IN_PLACE            := -i
  
  ifeq ($(UNAME),Darwin)
 -CC                      := clang
--# the sed -i option of macOS requires a parameter for the backup file (we just use "")
+ # the sed -i option of macOS requires a parameter for the backup file (we just use "")
+ AR                      := /usr/bin/ar
 -SED                     := /usr/bin/sed
 -SED_IN_PLACE            := -i ""
  PROD_VERS               := $(shell sw_vers -productVersion | cut -d. -f2)
@@ -41,17 +63,7 @@ Remove sed magic; we'll use nbsed.
  
  ##
  ## Version
-@@ -98,6 +89,9 @@ LIBRARY_DEV_FOLDER      ?= $(LIBRARY_DEV
- 
- HASHCAT_FRONTEND        := hashcat
- HASHCAT_LIBRARY         := libhashcat.so.$(VERSION_PURE)
-+ifeq ($(UNAME),Darwin)
-+HASHCAT_LIBRARY         := libhashcat.$(VERSION_PURE).dylib
-+endif
- 
- ifeq ($(UNAME),Darwin)
- HASHCAT_LIBRARY         := libhashcat.$(VERSION_PURE).dylib
-@@ -161,7 +155,6 @@ CFLAGS                  += -Wextra
+@@ -186,7 +178,6 @@ CFLAGS_ZLIB             += -DIOAPI_NO_64
  endif
  
  ifeq ($(DEBUG),0)
@@ -59,7 +71,16 @@ Remove sed magic; we'll use nbsed.
  ifneq ($(UNAME),Darwin)
  LFLAGS                  += -s
  endif
-@@ -217,6 +210,13 @@ LFLAGS_NATIVE           += -lm
+@@ -220,7 +211,7 @@ endif
+ # ZLIB
+ CFLAGS                  += -I$(DEPS_ZLIB_PATH)
+ ifeq ($(USE_SYSTEM_ZLIB),1)
+-LFLAGS                  += -lz
++LFLAGS                  += -lz -lminizip
+ endif
+ 
+ # OpenCL
+@@ -264,6 +255,13 @@ LFLAGS_NATIVE           += -liconv
  endif
  endif # FreeBSD
  
@@ -73,3 +94,17 @@ Remove sed magic; we'll use nbsed.
  ifeq ($(UNAME),Darwin)
  export MACOSX_DEPLOYMENT_TARGET=10.9
  CFLAGS_NATIVE           := $(CFLAGS)
+@@ -534,8 +532,13 @@ MODULES_SRC   := $(wildcard src/modules/
+ MODULES_LIB   := $(patsubst src/modules/module_%.c, modules/module_%.$(MODULE_SUFFIX), $(MODULES_SRC))
+ 
+ ifeq ($(SHARED),1)
++  ifeq ($(UNAME),Darwin)
++modules/module_%.$(MODULE_SUFFIX): src/modules/module_%.c $(HASHCAT_LIBRARY)
++	$(CC)    $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -install_name $(SHARED_FOLDER)/$@ -shared -fPIC -D MODULE_INTERFACE_VERSION_CURRENT=$(MODULE_INTERFACE_VERSION)
++  else
+ modules/module_%.$(MODULE_SUFFIX): src/modules/module_%.c $(HASHCAT_LIBRARY)
+ 	$(CC)    $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -shared -fPIC -D MODULE_INTERFACE_VERSION_CURRENT=$(MODULE_INTERFACE_VERSION)
++  endif
+ else
+ modules/module_%.$(MODULE_SUFFIX): src/modules/module_%.c obj/combined.NATIVE.a
+ 	$(CC)    $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -shared -fPIC -D MODULE_INTERFACE_VERSION_CURRENT=$(MODULE_INTERFACE_VERSION)
