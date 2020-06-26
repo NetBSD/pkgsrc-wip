@@ -12,9 +12,9 @@ BUILDLINK_PKGSRCDIR.qt5-qscintilla?=	../../wip/qt5-qscintilla
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-.include "../../wip/qt5-qtmacextras/buildlink3.mk"
+.include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .endif
-.include "../../wip/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# QT5_QSCINTILLA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-qt5-qscintilla

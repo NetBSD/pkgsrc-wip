@@ -1,7 +1,7 @@
 # $NetBSD: Makefile.common,v 1.1 2019/10/29 17:45:24 kamil Exp $
 #
-# used by x11/qt5-qscintilla/Makefile
-# used by x11/py-qt5-qscintilla/Makefile
+# used by wip/qt5-qscintilla/Makefile
+# used by wip/py-qt5-qscintilla/Makefile
 
 DISTNAME=	QScintilla-2.11.5
 CATEGORIES=	x11
@@ -20,6 +20,6 @@ PATCHDIR=	${.CURDIR}/../../wip/qt5-qscintilla/patches
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-.include "../../wip/qt5-qtmacextras/buildlink3.mk"
+.include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .endif
-.include "../../wip/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"

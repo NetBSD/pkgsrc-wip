@@ -24,8 +24,8 @@ do-configure:
 		--apidir=${QTDIR}/qsci${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
-.include "../../wip/py-sip/buildlink3.mk"
-.include "../../wip/py-qt5/buildlink3.mk"
+.include "../../x11/py-sip/buildlink3.mk"
+.include "../../x11/py-qt5/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=${PKGVERSION_NOREV}
 .include "../../wip/qt5-qscintilla/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
