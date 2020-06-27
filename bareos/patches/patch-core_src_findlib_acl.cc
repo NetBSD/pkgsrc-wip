@@ -59,3 +59,21 @@ $NetBSD$
  /**
   * Define the supported ACL streams for these OSes
   */
+@@ -1091,6 +1092,8 @@ static bacl_exit_code freebsd_build_acl_
+       BErrNo be;
+ 
+       switch (errno) {
++        case EINVAL:
++	  /*FALLTHROUGH*/
+         case ENOENT:
+           return bacl_exit_ok;
+         default:
+@@ -1119,6 +1122,8 @@ static bacl_exit_code freebsd_build_acl_
+         BErrNo be;
+ 
+         switch (errno) {
++	  case EINVAL:
++	    /*FALLTHROUGH*/
+           case ENOENT:
+             return bacl_exit_ok;
+           default:
