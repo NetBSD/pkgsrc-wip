@@ -4992,6 +4992,7 @@ SUBDIR+=	xbsql
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xdiskusage
+SUBDIR+=	xdo
 SUBDIR+=	xebece
 SUBDIR+=	xentools48
 SUBDIR+=	xerces-c-2.8.0
