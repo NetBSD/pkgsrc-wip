@@ -1,10 +1,10 @@
 $NetBSD$
 
-Allow build and re-direct man to proper location
+Allow build
 
 --- Makefile.orig	2017-09-18 12:00:07.000000000 +0000
 +++ Makefile
-@@ -2,13 +2,13 @@ NAME    := xdo
+@@ -2,7 +2,7 @@ NAME    := xdo
  VERCMD  ?= git describe 2> /dev/null
  VERSION := $(shell $(VERCMD) || cat VERSION)
  
@@ -13,10 +13,3 @@ Allow build and re-direct man to proper location
  CFLAGS   += -std=c99 -pedantic -Wall -Wextra
  LDLIBS   := -lxcb -lxcb-util -lxcb-icccm -lxcb-ewmh -lxcb-xtest
  
- PREFIX    ?= /usr/local
- BINPREFIX ?= $(PREFIX)/bin
--MANPREFIX ?= $(PREFIX)/share/man
-+MANPREFIX ?= $(PREFIX)/man
- 
- SRC := $(wildcard *.c)
- OBJ := $(SRC:.c=.o)
