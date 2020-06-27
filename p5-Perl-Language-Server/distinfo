@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2016/07/24 06:59:18 wen Exp $
-
-SHA1 (Perl-LanguageServer-2.0.2.tar.gz) = dce8fdb761979c9619f69a2d1806f4951327c4f7
-RMD160 (Perl-LanguageServer-2.0.2.tar.gz) = 3157789979503d458b0d559182aceeb8a255300b
-SHA512 (Perl-LanguageServer-2.0.2.tar.gz) = 43f7e37a91fa8b2752b1213ef0af2c1bd1527050bf5149ac8087cd73850e2543b284c14bbc1a316c5d8c66973d7cccbf2da2c64b43be7124cc58491f90254712
-Size (Perl-LanguageServer-2.0.2.tar.gz) = 185534 bytes
