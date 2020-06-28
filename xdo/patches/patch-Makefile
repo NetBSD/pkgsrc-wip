@@ -1,6 +1,6 @@
 $NetBSD$
 
-Allow build
+Allow build, see MASTER_SITE issues/19 and pull/17
 
 --- Makefile.orig	2017-09-18 12:00:07.000000000 +0000
 +++ Makefile
