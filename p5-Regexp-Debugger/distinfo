@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (Regexp-Debugger-0.002001.tar.gz) = 818739af9923f108cac0299788e8041e3a525b9b
-RMD160 (Regexp-Debugger-0.002001.tar.gz) = 3f141b7c2486bf5c0a9d4a92f833ad3743edfb03
-SHA512 (Regexp-Debugger-0.002001.tar.gz) = 4ab58395bb0a7afd2457cb324addae6db4eaf7540f4c48d04c31442c7cdcc82965e8dd07fbd584541497fdafc9313160d50acf4a6e73b477b188392e6b224dee
-Size (Regexp-Debugger-0.002001.tar.gz) = 36446 bytes
+SHA1 (Regexp-Debugger-0.002005.tar.gz) = ef9b1d5784c7610f28886e43c783bdb2b2f27a39
+RMD160 (Regexp-Debugger-0.002005.tar.gz) = 07c4f5f585654ce80c7238aaced7439133e0cbde
+SHA512 (Regexp-Debugger-0.002005.tar.gz) = 4e068492a544ceffc3923941d1ce004dbe04abdf0dcdf36b460e28c133713a605cbacc5123b1fb845a867f7c58f2b7c56ad358d5c782748fc29d49fc0e3a7c11
+Size (Regexp-Debugger-0.002005.tar.gz) = 38039 bytes
