@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	distlib-0.3.0
+DISTNAME=	distlib-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distlib/}

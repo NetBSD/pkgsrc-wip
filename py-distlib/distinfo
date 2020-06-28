@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (distlib-0.3.0.zip) = f54031a3c09b370b558ccd965fb29ef4f17675d0
-RMD160 (distlib-0.3.0.zip) = ac1c0dd3f48183155bdc302c1f172ad1f34e7d87
-SHA512 (distlib-0.3.0.zip) = 6f910a9607569c9023a19aee35be15cf8521ec7c07c5d478e6d555a301d024a2ee1db48562707b238a72c631d75d9dc154d38b39ed51746b66c938ac40671e60
-Size (distlib-0.3.0.zip) = 571953 bytes
+SHA1 (distlib-0.3.1.zip) = 1c575431e31c32d25596c360e81bba7fe4638669
+RMD160 (distlib-0.3.1.zip) = e90930fec905210f528d20e24990b600b04dec76
+SHA512 (distlib-0.3.1.zip) = 4c004b09eb93a6bfdd8b9b58175b756aa376c45fdef43a362a52fbffa19feef4850f0eb0f958bbf1eb9d2b8bfc1fc8a67c5b926d954e934c777b5c8b5c18e9d4
+Size (distlib-0.3.1.zip) = 578925 bytes
