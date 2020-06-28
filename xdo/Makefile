@@ -14,6 +14,9 @@ USE_LANGUAGES=	c99
 
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
+# For some reason, not equivalent to  _POSIX_C_SOURCE = 200809L for the purpose of SA_RESTART.
+CFLAGS.NetBSD+=	-D_XOPEN_SOURCE=700
+
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
