@@ -2,6 +2,8 @@
 bin/CGeniusExe
 share/applications/cgenius.desktop
 share/commandergenius/CGLogo.svg
+share/commandergenius/CGLogoInkscape.svg
+share/commandergenius/CGLogoOptimized.svg
 share/commandergenius/cache/K6DEMO.png
 share/commandergenius/cache/eightacc.png
 share/commandergenius/cache/kdreams.png
@@ -19,6 +21,9 @@ share/commandergenius/global/2.png
 share/commandergenius/global/3.png
 share/commandergenius/global/4.png
 share/commandergenius/global/HELPTEXT.CKP
+share/commandergenius/global/TrophyMsg.png
+share/commandergenius/global/Trophy_Sound.ogg
+share/commandergenius/global/achievements.txt
 share/commandergenius/global/bckgrnd.png
 share/commandergenius/global/confirm.png
 share/commandergenius/global/dpad.png
