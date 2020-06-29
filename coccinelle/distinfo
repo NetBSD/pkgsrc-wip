@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.12 2015/11/03 03:27:19 agc Exp $
 
-SHA1 (coccinelle-1.0.6.tgz) = a1c06d8acc7a34a943b3d72e0773cdf54e533bca
-RMD160 (coccinelle-1.0.6.tgz) = f3cd1de8566936d867c1fab31f52071ec3b80d9c
-SHA512 (coccinelle-1.0.6.tgz) = b667762ddf5ad30b126e93572cd8a8b3ffc21a790cd9d6df586e421c5db0a8d049af9587c6e5cb8f7a13f2c090ab2a9cca59ecba69069f9d3fe67b6f75dfe539
-Size (coccinelle-1.0.6.tgz) = 6684278 bytes
-SHA1 (patch-Makefile) = 799c488aaaa9111b7a1104b621c2ea61894d5365
-SHA1 (patch-bundles_pyml_pyml-current_py.ml) = 7389c0b3f93871f8653516a1eb7ac6134fa7016a
+SHA1 (coccinelle-1.0.8.tar.gz) = 5eb00adab241eb8388088248f08fe455b35b849a
+RMD160 (coccinelle-1.0.8.tar.gz) = 2c7676dc5c0bdb6839b665e78cc7ca65db0c15f0
+SHA512 (coccinelle-1.0.8.tar.gz) = 496b1632c92cc026fbe28f784f56d4cd78f89a8ccd28dc7db1069c0c6b2b239675a10da305e37ed2a03c605668ecd3399aeed522f12ec3fbbf3ca07277ab7bce
+Size (coccinelle-1.0.8.tar.gz) = 2670961 bytes
+SHA1 (patch-Makefile) = 834190a7229cfd4c5942c31cb59e9b77cda16a30
+SHA1 (patch-configure.ac) = b250b9ca24e778e48a1d2d9112d1df3f4a7cc8d8

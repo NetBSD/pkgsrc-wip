@@ -1,6 +1,24 @@
 Still not ready for using it to update devel/coccinelle. The following issues
 should be investigated further and if possible fixed:
 
+ - Build fails with:
+
+    ocamlfind ocamlc -c -package result -package seq -package uchar -bin-annot -no-alias-deps -I . stdcompat__buffer.ml -o stdcompat__buffer.cmo
+    File "stdcompat__buffer.ml", line 1:
+    Error: The implementation stdcompat__buffer.ml
+           does not match the interface stdcompat__buffer.cmi:
+           Values do not match:
+             val to_seq : t -> char Stdlib.Seq.t
+           is not included in
+             val to_seq : t -> char Seq/1.t
+           File "stdcompat__buffer_s.mli", line 48, characters 0-28:
+             Expected declaration
+           File "buffer.mli", line 163, characters 0-28: Actual declaration
+           File "_none_", line 1:
+             Definition of module Seq/1
+
+    -- leot (2020/06/29)
+
  - Update to coccinelle-1.0.6 breaks textproc/coccigrep
 
    XXXleot: provide a simple command to test that.
