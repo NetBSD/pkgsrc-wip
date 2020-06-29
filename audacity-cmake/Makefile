@@ -87,6 +87,8 @@ PYTHON_FOR_BUILD_ONLY=		tool
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
+	# file is missing from tarball
+	${TOUCH} ${WRKSRC}/src/RevisionIdent.h
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
