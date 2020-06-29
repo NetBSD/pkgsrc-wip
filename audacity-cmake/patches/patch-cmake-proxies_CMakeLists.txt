@@ -2,10 +2,10 @@ $NetBSD$
 
 Detect pkgsrc portaudio using pkg-config.
 
---- cmake-proxies/CMakeLists.txt.orig	2020-05-19 09:43:53.000000000 +0000
+--- cmake-proxies/CMakeLists.txt.orig	2020-06-19 15:16:47.000000000 +0000
 +++ cmake-proxies/CMakeLists.txt
-@@ -150,7 +150,7 @@ addlib( lame               lame        L
- addlib( lib-widget-extra   libextra    EXTRA       YES   YES   "" )
+@@ -132,7 +132,7 @@ addlib( expat              expat       E
+ addlib( lame               lame        LAME        YES   YES   "lame >= 3.100" )
  addlib( libsndfile         sndfile     SNDFILE     YES   YES   "sndfile >= 1.0.28" )
  addlib( libsoxr            soxr        SOXR        YES   YES   "soxr >= 0.1.1" )
 -addlib( portaudio-v19      portaudio   PORTAUDIO   YES   YES   "" )

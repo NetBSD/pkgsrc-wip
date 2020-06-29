@@ -4,6 +4,7 @@ man/man1/audacity.1
 share/appdata/audacity.appdata.xml
 share/applications/audacity.desktop
 share/audacity/EQDefaultCurves.xml
+share/audacity/modules/mod-script-pipe.so
 share/audacity/nyquist/aud-do-support.lsp
 share/audacity/nyquist/dspprims.lsp
 share/audacity/nyquist/envelopes.lsp

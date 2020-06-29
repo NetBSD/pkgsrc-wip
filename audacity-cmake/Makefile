@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.132 2020/04/16 21:54:06 nia Exp $
 
-DISTNAME=	audacity-2.4.1
+DISTNAME=	audacity-2.4.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=	Audacity
@@ -23,14 +23,15 @@ GCC_REQD+=	4.9
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Debug"
+#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Debug"
+
+CMAKE_ARGS+=	-DPYTHON=${PYTHONBIN}
 
 CMAKE_ARGS+=	-Daudacity_use_expat=system
 CMAKE_ARGS+=	-Daudacity_use_ffmpeg=linked
 CMAKE_ARGS+=	-Daudacity_use_flac=system
 CMAKE_ARGS+=	-Daudacity_use_id3tag=system
 CMAKE_ARGS+=	-Daudacity_use_lame=system
-CMAKE_ARGS+=	-Daudacity_use_libextra=local
 CMAKE_ARGS+=	-Daudacity_use_lv2=system
 CMAKE_ARGS+=	-Daudacity_use_mad=off
 CMAKE_ARGS+=	-Daudacity_use_midi=local
