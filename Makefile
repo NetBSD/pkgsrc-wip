@@ -500,7 +500,6 @@ SUBDIR+=	coxeter
 SUBDIR+=	cpdup
 SUBDIR+=	cpluff
 SUBDIR+=	cpm
-SUBDIR+=	cppcheck
 SUBDIR+=	cppzmq
 SUBDIR+=	cpqarrayd
 SUBDIR+=	cpuminer-multi
