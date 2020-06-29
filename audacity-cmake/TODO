@@ -1,1 +1,5 @@
-Fails to start.
+Fails to compile:
+/scratch/wip/audacity-cmake/work/audacity-Audacity-2.4.2/src/AboutDialog.cpp:66:10: fatal error: RevisionIdent.h: No such file or directory
+ #include <RevisionIdent.h>                                                              
+          ^~~~~~~~~~~~~~~~~
+

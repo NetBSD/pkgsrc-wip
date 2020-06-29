@@ -12,6 +12,7 @@ SHA1 (patch-cmake-proxies_portmidi_CMakeLists.txt) = 661dd5714908299fea9b8612a76
 SHA1 (patch-lib-src_header-substitutes_allegro.h) = e25aa6f348eb52f500099ce829347b7601ba13be
 SHA1 (patch-lib-src_libnyquist_nyquist_cmupv_src_cmupv.c) = 3d6cb845d82b1bcbe31dabd4bad30cb1f7ea27d5
 SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = d313f137f11d3e0fafa383ddeccbc89021e9ddee
+SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_security.c) = 2712a9b0a89a0154fe6b2c59cbd3ad3654d6c3d2
 SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 2d4558f059d86633a1fcdda22ef0c914758b35a0
 SHA1 (patch-src_AudioIO.cpp) = 1b44c68c4233b24a5fa4e17515eb237fee0e283a
 SHA1 (patch-src_CMakeLists.txt) = 7f88c6433e70b900d401f04871a4591b6c991983

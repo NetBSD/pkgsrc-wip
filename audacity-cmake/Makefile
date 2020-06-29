@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2 # AND cc-by-v3.0-license
 
 WRKSRC=		${WRKDIR}/audacity-${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
+BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config msgfmt msgmerge
 USE_LANGUAGES=	c c++
@@ -48,6 +50,8 @@ CMAKE_ARGS+=	-Daudacity_use_twolame=system
 CMAKE_ARGS+=	-Daudacity_use_vamp=system
 CMAKE_ARGS+=	-Daudacity_use_vorbis=system
 CMAKE_ARGS+=	-Daudacity_use_wxwidgets=system
+# pre-compiled headers don't work well on some systems
+CMAKE_ARGS+=	-Daudacity_use_pch=no
 
 CMAKE_ARGS+=	-DLIB_avcodec=${PREFIX}/lib/ffmpeg4/libavcodec.so
 CMAKE_ARGS+=	-DLIB_avformat=${PREFIX}/lib/ffmpeg4/libavformat.so
@@ -78,7 +82,7 @@ CXXFLAGS+=		-march=i586
 
 CFLAGS.SunOS+=		-fPIC
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 pre-configure:
