@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (luafilesystem-1.6.3.tar.gz) = 72bc1415e7eefb339742538505675c59bd69e6bb
-RMD160 (luafilesystem-1.6.3.tar.gz) = cb949e36d9d09061be5eed9c67332cb3178250b5
-SHA512 (luafilesystem-1.6.3.tar.gz) = abfa1b3ac22ed80189560a1a025a7ea21a954defe14e5b539e08f266d180962a691262efc7eb2ddacc2d4aae14d6e356b1a276165b5bed46a13e4d6c61ab99f1
-Size (luafilesystem-1.6.3.tar.gz) = 30379 bytes
-SHA1 (patch-Makefile) = 567f375e16d6007b1764b7507a544e529ecdc354
-SHA1 (patch-config) = 719f87343d8a2be744d632592587618ce49bdc52
