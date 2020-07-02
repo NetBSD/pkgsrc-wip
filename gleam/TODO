@@ -1,6 +1,7 @@
 * finish stdlib package
 * clarify runtime deps: erlang, rebar3, ...?
-* fix rebar3 (update, in wip) or whatever is causing this:
+* fix rebar3 (update, in wip), as with my local version of rebar3 this is
+  not occuring: 
 
 gleam new foo
 * creating foo/LICENSE
