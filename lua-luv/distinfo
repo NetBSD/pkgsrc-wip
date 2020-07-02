@@ -1,6 +1,0 @@
-$NetBSD$
-
-SHA1 (lua-luv-1.32.0.tar.gz) = 1dc5e61c3ad14b1a261afddf72ba6e92aa828d57
-RMD160 (lua-luv-1.32.0.tar.gz) = 725f6a429dfcd697b6b3d10d431227ada8dc8558
-SHA512 (lua-luv-1.32.0.tar.gz) = 7db52afc1ca79052e349be7a37deb67066ee9005f8d7f7d0dae62bd83a93b4140103ee6dddeca2e02a3fc37b3880a5c18904429886af1d441f8de0cfabf5bd8c
-Size (lua-luv-1.32.0.tar.gz) = 91349 bytes
