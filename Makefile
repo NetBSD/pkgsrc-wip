@@ -1177,7 +1177,6 @@ SUBDIR+=	go-pass
 SUBDIR+=	go-paths-helper
 SUBDIR+=	go-properties-map
 SUBDIR+=	go-protobuf-go
-SUBDIR+=	go-pty
 SUBDIR+=	go-rateio
 SUBDIR+=	go-rest
 SUBDIR+=	go-trie
