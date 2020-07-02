@@ -1,0 +1,2 @@
+Gleam is a statically typed functional programming language for building
+scalable concurrent systems. It compiles to  BEAM (Erlang VM). 
