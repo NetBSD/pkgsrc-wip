@@ -1,0 +1,33 @@
+* finish stdlib package
+* clarify runtime deps: erlang, rebar3, ...?
+* fix rebar3 (update, in wip) or whatever is causing this:
+
+gleam new foo
+* creating foo/LICENSE
+* creating foo/.gitignore
+* creating foo/README.md
+* creating foo/gleam.toml
+* creating foo/test/foo_test.gleam
+* creating foo/src/foo.gleam
+* creating foo/.github/workflows/test.yml
+* creating foo/rebar.config
+* creating foo/src/foo.app.src
+
+Your Gleam project "foo" has been successfully created.
+The rebar3 program can be used to compile and test it.
+
+    cd foo
+    rebar3 eunit
+
+hex$ cd foo/
+hex$ rebar3 eunit
+===> Fetching rebar_gleam ({pkg,<<"rebar_gleam">>,<<"0.1.0">>})
+===> Version cached at /home/nikita/.cache/rebar3/hex/default/packages/rebar_gleam-0.1.0.tar is up to date, reusing it
+===> Compiling rebar_gleam
+===> Verifying dependencies...
+===> Package gleam_stdlib-0.10.1 not found. Fetching registry updates and trying again...
+===> Updating package registry...
+===> Writing registry to /home/nikita/.cache/rebar3/hex/default/registry
+===> Generating package index...
+===> Writing index to /home/nikita/.cache/rebar3/hex/default/packages.idx
+===> Package not found in registry: gleam_stdlib-0.10.1.
