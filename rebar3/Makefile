@@ -12,17 +12,19 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	tar
 
-REBAR_DEPS+=	erlware_commons-1.3.1
-REBAR_DEPS+=	ssl_verify_fun-1.1.5
-REBAR_DEPS+=	certifi-2.5.1
-REBAR_DEPS+=	parse_trans-3.3.0
-REBAR_DEPS+=	providers-1.8.1
-REBAR_DEPS+=	getopt-1.0.1
 REBAR_DEPS+=	bbmustache-1.8.0
-REBAR_DEPS+=	relx-3.33.0
+REBAR_DEPS+=	certifi-2.5.1
 REBAR_DEPS+=	cf-0.2.2
 REBAR_DEPS+=	cth_readable-1.4.6
+REBAR_DEPS+=	erlware_commons-1.3.1
 REBAR_DEPS+=	eunit_formatters-0.5.0
+REBAR_DEPS+=	getopt-1.0.1
+REBAR_DEPS+=	parse_trans-3.3.0
+REBAR_DEPS+=	providers-1.8.1
+REBAR_DEPS+=	relx-3.33.0
+REBAR_DEPS+=	ssl_verify_fun-1.1.5
+
+MAKE_ENV+=	DEBUG=1
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
@@ -35,13 +37,31 @@ EXTRACT_DIR.${dep}.tar=	${WRKSRC}/_build/default/lib/${dep:C/-.*//}
 #DISTFILES+=				${DISTNAME:S/-/-cache-/}.tar.gz
 #SITES.${DISTNAME:S/-/-cache-/}.tar.gz=	https://ftp.netbsd.org/pub/NetBSD/misc/fhajny/
 
+BUILD_DEPENDS+=		git-[0-9]*:../../devel/git-base
+
 SUBST_CLASSES+=		escript
 SUBST_STAGE.escript=	pre-configure
-SUBST_MESSAGE.escript=	Fix default escript shebangh
+SUBST_MESSAGE.escript=	Fix default escript shebang
 SUBST_FILES.escript=	src/rebar_prv_escriptize.erl
 SUBST_SED.escript=	-e 's,/usr/bin/env escript,${PREFIX}/bin/escript,'
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/examples/rebar3
+
+# convenience target to rebuild the rebar3 cache file
+build-cache:
+	cd ${WRKDIR} && ${TAR} -c -v -z -f rebar3-cache-${PKGVERSION}${EXTRACT_SUFX} .home
+
+# post-extract:
+# .for dep in ${REBAR_DEPS}
+# 	${MKDIR} ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
+# 	${TAR} xOf ${DISTDIR}/rebar3/${dep}.tar contents.tar.gz |\
+# 		${TAR} xfz - -C ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
+# .endfor
+# 	${MKDIR} ${WRKSRC}/_build/bootstrap/lib
+# 	${MKDIR} ${WRKSRC}/_build/bootstrap/plugins
+# .for dep in ${REBAR_DEPS}
+# 	${LN} -sf ${WRKSRC}/_build/default/lib/${dep:C/-.*//} ${WRKSRC}/_build/bootstrap/lib/
+# .endfor
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/_build/bootstrap/lib
