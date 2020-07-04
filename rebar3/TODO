@@ -1,0 +1,48 @@
+escript ./bootstrap
+./bootstrap:238: Warning: function rm_rf/1 is unused
+./bootstrap:385: Warning: function delete_each/1 is unused
+./bootstrap:398: Warning: function delete_each_dir_win32/1 is unused
+Dependency providers already exists
+Dependency getopt already exists
+Dependency cf already exists
+Dependency erlware_commons already exists
+Dependency parse_trans already exists
+Dependency certifi already exists
+===> Expanded command sequence to be run: [{default,app_discovery},
+                                                  {default,install_deps},
+                                                  {default,lock},
+                                                  {default,compile}]
+===> Provider: {default,app_discovery}
+===> Evaluating config script "/usr/work/wip/rebar3/work/rebar3-3.13.2/_build/default/lib/cth_readable/rebar.config.script"
+===> Evaluating config script "/usr/work/wip/rebar3/work/rebar3-3.13.2/_build/default/lib/relx/rebar.config.script"
+===> Provider: {default,install_deps}
+===> Verifying dependencies...
+===> Hex get_package request failed: {error,
+                                             {failed_connect,
+                                              [{to_address,
+                                                {"repo.hex.pm",443}},
+                                               {inet,
+                                                [inet],
+                                                {tls_alert,
+                                                 {internal_error,
+                                                  "TLS client: In state certify at ssl_handshake.erl:377 generated CLIENT ALERT: Fatal - Internal Error\n {unexpected_error,undef}"}}}]}}
+===> Failed to update package bbmustache from repo hexpm
+escript: exception error: no match of right hand side value 
+                 {error,
+                     {rebar_app_utils,
+                         {missing_package,<<"bbmustache">>,<<"1.8.0">>}}}
+  in function  erl_eval:expr/5 (erl_eval.erl, line 453)
+  in call from escript:eval_exprs/5 (escript.erl, line 872)
+  in call from erl_eval:local_func/6 (erl_eval.erl, line 567)
+  in call from escript:interpret/4 (escript.erl, line 788)
+  in call from escript:start/1 (escript.erl, line 277)
+  in call from init:start_em/1 
+  in call from init:do_boot/3 
+*** Error code 127
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/rebar3
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/rebar3
