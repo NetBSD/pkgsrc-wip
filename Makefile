@@ -224,6 +224,7 @@ SUBDIR+=	axel
 SUBDIR+=	azureus
 SUBDIR+=	backintime
 SUBDIR+=	backplane
+SUBDIR+=	badwolf
 SUBDIR+=	bagel
 SUBDIR+=	bakery
 SUBDIR+=	baler
