@@ -1,7 +1,4 @@
 escript ./bootstrap
-./bootstrap:238: Warning: function rm_rf/1 is unused
-./bootstrap:385: Warning: function delete_each/1 is unused
-./bootstrap:398: Warning: function delete_each_dir_win32/1 is unused
 Dependency providers already exists
 Dependency getopt already exists
 Dependency cf already exists
