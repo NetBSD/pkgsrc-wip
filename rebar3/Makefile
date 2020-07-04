@@ -71,7 +71,7 @@ post-extract:
 .endfor
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./bootstrap
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} escript ./bootstrap
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rebar3 ${DESTDIR}${PREFIX}/bin/
