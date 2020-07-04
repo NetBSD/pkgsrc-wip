@@ -37,8 +37,6 @@ EXTRACT_DIR.${dep}.tar=	${WRKSRC}/_build/default/lib/${dep:C/-.*//}
 #DISTFILES+=				${DISTNAME:S/-/-cache-/}.tar.gz
 #SITES.${DISTNAME:S/-/-cache-/}.tar.gz=	https://ftp.netbsd.org/pub/NetBSD/misc/fhajny/
 
-BUILD_DEPENDS+=		git-[0-9]*:../../devel/git-base
-
 SUBST_CLASSES+=		escript
 SUBST_STAGE.escript=	pre-configure
 SUBST_MESSAGE.escript=	Fix default escript shebang
