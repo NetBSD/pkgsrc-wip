@@ -6,3 +6,20 @@ should be investigated further and if possible fixed:
    XXXleot: provide a simple command to test that.
     
     -- leot (2017/10/10)
+
+ - Test fails with:
+
+    bc_1.res
+    Traceback (most recent call last):
+      File "<frozen importlib._bootstrap>", line 1171, in _install_external_importers
+      File "<frozen importlib._bootstrap>", line 988, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 149, in __enter__
+      File "<frozen importlib._bootstrap>", line 84, in acquire
+    RuntimeError: no current thread ident
+    Fatal Python error: init_importlib_external: external importer setup failed
+    Python runtime state: core initialized
+    
+    Current thread 0xffffffffffffffff (most recent call first):
+    <no Python frame>
+    gmake: *** [Makefile:267: check] Error 1
+    *** Error code 2

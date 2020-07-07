@@ -24,7 +24,7 @@ BUILD_TARGET=	all all.opt
 
 REPLACE_PYTHON=	tools/pycocci
 
-TEST_TARGET=	test
+TEST_TARGET=	check
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} ./autogen
