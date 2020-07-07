@@ -366,7 +366,7 @@ BUILDLINK_TRANSFORM+=	opt:-lpci:-lpciutils
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 # Conflict between OpenSSL and BoringSSL.
-#.include "../../multimedia/ffmpeg3/buildlink3.mk"
+#.include "../../multimedia/ffmpeg4/buildlink3.mk"
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
