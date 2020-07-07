@@ -2925,6 +2925,7 @@ SUBDIR+=	pkg_fake
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgmanager
+SUBDIR+=	plan9port
 SUBDIR+=	plank
 SUBDIR+=	plantri
 SUBDIR+=	plasma-desktop
