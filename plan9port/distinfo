@@ -8,5 +8,5 @@ SHA1 (patch-include_u.h) = d8681e7c663f9dd6da46d0af2eb33a8e1b014fbd
 SHA1 (patch-src_cmd_devdraw_mkwsysrules.sh) = 7418cfbedafa74145c4c3395fe11b2bb3b6b50ef
 SHA1 (patch-src_libthread_NetBSD-386-asm.s) = 474ee6eaf11115b31b1abf4e1536eceab4b5e0c7
 SHA1 (patch-src_libthread_NetBSD-power-asm.s) = 516705bd9d87e4c4010b7eff2add38a9ec1abbda
-SHA1 (patch-src_libthread_NetBSD.c) = 7ffd4bd3da4cc50bb74210bffd10288b3831ac06
-SHA1 (patch-src_libthread_sysofiles.sh) = 8c13a3185a0b03aede29dc3eefdd1ebe4ea79073
+SHA1 (patch-src_libthread_NetBSD.c) = 88a67788c005fd0bb7df3a6b205577f6a7377949
+SHA1 (patch-src_libthread_sysofiles.sh) = 3ec847f2ab77bfc44d6ed679b62eb035dc5b19ea

@@ -1,5 +1,11 @@
 $NetBSD$
 
+Use pthreads on NetBSD.
+
+From upstream pull request #355:
+
+ <https://github.com/9fans/plan9port/pull/355>
+
 --- src/libthread/NetBSD.c.orig	2020-06-22 15:22:27.000000000 +0000
 +++ src/libthread/NetBSD.c
 @@ -1,437 +0,0 @@
