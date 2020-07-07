@@ -334,8 +334,8 @@ do-install:
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
-# Use -lpciutils instead of -lpci under NetBSD.
-BUILDLINK_TRANSFORM.NetBSD+=	opt:-lpci:-lpciutils
+# Use -lpciutils instead of -lpci for pkgsrc.
+BUILDLINK_TRANSFORM+=	opt:-lpci:-lpciutils
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
