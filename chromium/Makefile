@@ -335,7 +335,7 @@ do-install:
 .include "../../devel/nss/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
-BUILDLINK_TRANSFORM+=	opt:-lpci:-lpciutils
+BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
