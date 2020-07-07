@@ -23,6 +23,5 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
-.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
