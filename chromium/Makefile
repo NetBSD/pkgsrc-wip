@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.chromium.org/Home
-COMMENT=	Chromium web browser
+COMMENT=	Open source web browser
 LICENSE=	modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
 USE_TOOLS+=		bash bison flex:pkgsrc gmake pax perl pkg-config
