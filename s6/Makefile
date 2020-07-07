@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	s6-2.7.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://skarnet.org/software/s6/
 
