@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	plan9port-20180205
+DISTNAME=	plan9port-20200622
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=9fans/}
-GITHUB_TAG=	4798a8a5560552480efde5fe8b1f7963a25a96d3
+GITHUB_TAG=	95ab1308b410ad8547e38e47ec4a36f560dcece5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://9fans.github.io/plan9port/
