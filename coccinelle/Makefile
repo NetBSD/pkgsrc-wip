@@ -15,6 +15,7 @@ DEPENDS+=	menhir>=20071212:../../devel/menhir
 
 CONFIGURE_ARGS+=	--with-menhir
 CONFIGURE_ARGS+=	--disable-pyml
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 
 MAKE_JOBS_SAFE=		no
 
