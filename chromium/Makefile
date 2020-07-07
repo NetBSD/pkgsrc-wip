@@ -349,7 +349,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	opt:-lpci:-lpciutils
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
