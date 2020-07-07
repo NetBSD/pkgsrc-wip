@@ -5,6 +5,7 @@ RMD160 (coccinelle-1.0.8.tar.gz) = 2c7676dc5c0bdb6839b665e78cc7ca65db0c15f0
 SHA512 (coccinelle-1.0.8.tar.gz) = 496b1632c92cc026fbe28f784f56d4cd78f89a8ccd28dc7db1069c0c6b2b239675a10da305e37ed2a03c605668ecd3399aeed522f12ec3fbbf3ca07277ab7bce
 Size (coccinelle-1.0.8.tar.gz) = 2670961 bytes
 SHA1 (patch-Makefile) = 834190a7229cfd4c5942c31cb59e9b77cda16a30
+SHA1 (patch-bundles_pyml_Makefile) = f299bec6cdc082e00a8496e5da94fb3b4720692b
 SHA1 (patch-bundles_stdcompat_stdcompat-current_stdcompat____arrayLabels__s.mli.in) = ce10bd3db37f072fe4842ed294462567129d5bf8
 SHA1 (patch-bundles_stdcompat_stdcompat-current_stdcompat____array__s.mli.in) = 138eadb0fbe37118c1676459e9247732e3443cfd
 SHA1 (patch-bundles_stdcompat_stdcompat-current_stdcompat____buffer__s.mli.in) = 16d56373a98f5be8b2dc0eb64a4e07f2bfdf97d4

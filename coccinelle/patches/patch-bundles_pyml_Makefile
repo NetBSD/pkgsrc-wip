@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add support for *BSD.
+
+--- bundles/pyml/Makefile.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/pyml/Makefile
+@@ -30,6 +30,8 @@ else ifeq ($(ARCH),Darwin)
+ 	PYML_ARCH=pyml_arch_darwin.ml
+ else ifeq ($(findstring CYGWIN,$(ARCH)),CYGWIN)
+ 	PYML_ARCH=pyml_arch_cygwin.ml
++else ifeq ($(findstring BSD,$(ARCH)),BSD)
++	PYML_ARCH=pyml_arch_linux.ml
+ else
+ 	$(error Unsupported OS $(ARCH)
+ endif

@@ -1,19 +1,6 @@
 Still not ready for using it to update devel/coccinelle. The following issues
 should be investigated further and if possible fixed:
 
- - Build fails with:
-
-    /usr/pkg/bin/gmake -C bundles/pyml all
-    gmake[1]: Entering directory
-    '/tmp/pkgsrc/wip/coccinelle/work/coccinelle-1.0.8/bundles/pyml'
-    Makefile:34: *** recipe commences before first target.  Stop.
-    gmake[1]: Leaving directory
-    '/tmp/pkgsrc/wip/coccinelle/work/coccinelle-1.0.8/bundles/pyml'
-    gmake: *** [Makefile:480:
-    /tmp/pkgsrc/wip/coccinelle/work/coccinelle-1.0.8/bundles/pyml/pyml.cmxa] Error 2
-
-    -- leot (2020/07/07)
-
  - Update to coccinelle-1.0.6 breaks textproc/coccigrep
 
    XXXleot: provide a simple command to test that.
