@@ -1,0 +1,96 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__hashtbl_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__hashtbl_s.mli.in
+@@ -52,12 +52,12 @@ module type S  =
+     val fold : (key -> 'a -> 'b -> 'b) -> 'a t -> 'b -> 'b
+     val length : 'a t -> int
+     val stats : 'a t -> statistics
+-    val to_seq : 'a t -> (key * 'a) Seq.t
+-    val to_seq_keys : 'a t -> key Seq.t
+-    val to_seq_values : 'a t -> 'a Seq.t
+-    val add_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val replace_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val of_seq : (key * 'a) Seq.t -> 'a t
++    val to_seq : 'a t -> (key * 'a) Stdlib.Seq.t
++    val to_seq_keys : 'a t -> key Stdlib.Seq.t
++    val to_seq_values : 'a t -> 'a Stdlib.Seq.t
++    val add_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val replace_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val of_seq : (key * 'a) Stdlib.Seq.t -> 'a t
+   end
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+@@ -189,12 +189,12 @@ module type SeededS  =
+     val fold : (key -> 'a -> 'b -> 'b) -> 'a t -> 'b -> 'b
+     val length : 'a t -> int
+     val stats : 'a t -> statistics
+-    val to_seq : 'a t -> (key * 'a) Seq.t
+-    val to_seq_keys : 'a t -> key Seq.t
+-    val to_seq_values : 'a t -> 'a Seq.t
+-    val add_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val replace_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val of_seq : (key * 'a) Seq.t -> 'a t
++    val to_seq : 'a t -> (key * 'a) Stdlib.Seq.t
++    val to_seq_keys : 'a t -> key Stdlib.Seq.t
++    val to_seq_values : 'a t -> 'a Stdlib.Seq.t
++    val add_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val replace_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val of_seq : (key * 'a) Stdlib.Seq.t -> 'a t
+   end
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+@@ -293,7 +293,7 @@ functor (H : SeededHashedType) ->
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq : ('a, 'b) t -> ('a * 'b) Seq.t
++val to_seq : ('a, 'b) t -> ('a * 'b) Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq : ('a, 'b) t -> ('a * 'b) Stdcompat__seq.t
+@@ -302,7 +302,7 @@ val to_seq : ('a, 'b) t -> ('a * 'b) Std
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq_keys : ('a, 'b) t -> 'a Seq.t
++val to_seq_keys : ('a, 'b) t -> 'a Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq_keys : ('a, 'b) t -> 'a Stdcompat__seq.t
+@@ -311,7 +311,7 @@ val to_seq_keys : ('a, 'b) t -> 'a Stdco
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq_values : ('a, 'b) t -> 'b Seq.t
++val to_seq_values : ('a, 'b) t -> 'b Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq_values : ('a, 'b) t -> 'b Stdcompat__seq.t
+@@ -320,7 +320,7 @@ val to_seq_values : ('a, 'b) t -> 'b Std
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val add_seq : ('a, 'b) t -> ('a * 'b) Seq.t -> unit
++val add_seq : ('a, 'b) t -> ('a * 'b) Stdlib.Seq.t -> unit
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val add_seq : ('a, 'b) t -> ('a * 'b) Stdcompat__seq.t -> unit
+@@ -329,7 +329,7 @@ val add_seq : ('a, 'b) t -> ('a * 'b) St
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val replace_seq : ('a, 'b) t -> ('a * 'b) Seq.t -> unit
++val replace_seq : ('a, 'b) t -> ('a * 'b) Stdlib.Seq.t -> unit
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val replace_seq : ('a, 'b) t -> ('a * 'b) Stdcompat__seq.t -> unit
+@@ -338,7 +338,7 @@ val replace_seq : ('a, 'b) t -> ('a * 'b
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val of_seq : ('a * 'b) Seq.t -> ('a, 'b) t
++val of_seq : ('a * 'b) Stdlib.Seq.t -> ('a, 'b) t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val of_seq : ('a * 'b) Stdcompat__seq.t -> ('a, 'b) t

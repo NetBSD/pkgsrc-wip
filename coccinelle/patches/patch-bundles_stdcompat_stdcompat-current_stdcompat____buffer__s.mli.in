@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__buffer_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__buffer_s.mli.in
+@@ -45,7 +45,7 @@ val add_int64_le : t -> int64 -> unit
+ (** @since 4.08.0: val add_int64_le : t -> int64 -> unit *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq : t -> char Seq.t
++val to_seq : t -> char Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq : t -> char Stdcompat__seq.t
+@@ -54,7 +54,7 @@ val to_seq : t -> char Stdcompat__seq.t
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seqi : t -> (int * char) Seq.t
++val to_seqi : t -> (int * char) Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seqi : t -> (int * char) Stdcompat__seq.t
+@@ -63,7 +63,7 @@ val to_seqi : t -> (int * char) Stdcompa
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val add_seq : t -> char Seq.t -> unit
++val add_seq : t -> char Stdlib.Seq.t -> unit
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val add_seq : t -> char Stdcompat__seq.t -> unit
+@@ -72,7 +72,7 @@ val add_seq : t -> char Stdcompat__seq.t
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val of_seq : char Seq.t -> t
++val of_seq : char Stdlib.Seq.t -> t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val of_seq : char Stdcompat__seq.t -> t

@@ -24,12 +24,6 @@ BUILD_TARGET=	all all.opt
 
 REPLACE_PYTHON=	tools/pycocci
 
-SUBST_CLASSES+=		man
-SUBST_FILES.man+=	configure
-SUBST_SED.man+=		-e "s,$${prefix}/man,$${prefix}/${PKGMANDIR},g"
-SUBST_STAGE.man=	pre-configure
-SUBST_MESSAGE.man=	Fixing manpath.
-
 TEST_TARGET=	test
 
 pre-configure:

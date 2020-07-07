@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__listLabels_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__listLabels_s.mli.in
+@@ -23,7 +23,7 @@ val filter_map : f:('a -> 'b option) -> 
+ (** @since 4.08.0: val filter_map : f:('a -> 'b option) -> 'a list -> 'b list *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq : 'a list -> 'a Seq.t
++val to_seq : 'a list -> 'a Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq : 'a list -> 'a Stdcompat__seq.t
+@@ -32,7 +32,7 @@ val to_seq : 'a list -> 'a Stdcompat__se
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val of_seq : 'a Seq.t -> 'a list
++val of_seq : 'a Stdlib.Seq.t -> 'a list
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val of_seq : 'a Stdcompat__seq.t -> 'a list

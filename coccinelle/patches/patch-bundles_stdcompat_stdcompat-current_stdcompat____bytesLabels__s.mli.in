@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__bytesLabels_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__bytesLabels_s.mli.in
+@@ -261,7 +261,7 @@ val set_int64_le : Stdcompat__init.bytes
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq : t -> char Seq.t
++val to_seq : t -> char Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq : t -> char Stdcompat__seq.t
+@@ -270,7 +270,7 @@ val to_seq : t -> char Stdcompat__seq.t
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seqi : t -> (int * char) Seq.t
++val to_seqi : t -> (int * char) Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seqi : t -> (int * char) Stdcompat__seq.t
+@@ -279,7 +279,7 @@ val to_seqi : t -> (int * char) Stdcompa
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val of_seq : char Seq.t -> t
++val of_seq : char Stdlib.Seq.t -> t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val of_seq : char Stdcompat__seq.t -> t
