@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__option_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__option_s.mli.in
+@@ -68,7 +68,7 @@ val to_list : 'a option -> 'a list
+ (** @since 4.08.0: val to_list : 'a option -> 'a list *)
+ 
+ @BEGIN_FROM_4_08_0@
+-val to_seq : 'a option -> 'a Seq.t
++val to_seq : 'a option -> 'a Stdlib.Seq.t
+ @END_FROM_4_08_0@
+ @BEGIN_BEFORE_4_08_0@
+ val to_seq : 'a option -> 'a Stdcompat__seq.t

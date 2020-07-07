@@ -3,21 +3,14 @@ should be investigated further and if possible fixed:
 
  - Build fails with:
 
-    ocamlfind ocamlc -c -package result -package seq -package uchar -bin-annot -no-alias-deps -I . stdcompat__hashtbl.ml -o stdcompat__hashtbl.cmo
-    File "stdcompat__hashtbl.ml", line 1:
-    Error: The implementation stdcompat__hashtbl.ml
-           does not match the interface stdcompat__hashtbl.cmi:
-           ...
-           At position module type S = <here>
-           Values do not match:
-             val to_seq : 'a t -> (key * 'a) Stdcompat__seq.t
-           is not included in
-             val to_seq : 'a t -> (key * 'a) Seq.t
-           File "stdcompat__hashtbl_s.mli", line 55, characters 4-48:
-             Expected declaration
-           File "stdcompat__hashtbl.ml", line 185, characters 2-50:
-             Actual declaration
-    make[3]: *** [Makefile:1570: stdcompat__hashtbl.cmo] Error 2
+    /usr/pkg/bin/gmake -C bundles/pyml all
+    gmake[1]: Entering directory
+    '/tmp/pkgsrc/wip/coccinelle/work/coccinelle-1.0.8/bundles/pyml'
+    Makefile:34: *** recipe commences before first target.  Stop.
+    gmake[1]: Leaving directory
+    '/tmp/pkgsrc/wip/coccinelle/work/coccinelle-1.0.8/bundles/pyml'
+    gmake: *** [Makefile:480:
+    /tmp/pkgsrc/wip/coccinelle/work/coccinelle-1.0.8/bundles/pyml/pyml.cmxa] Error 2
 
     -- leot (2020/07/07)
 

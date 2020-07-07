@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__array_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__array_s.mli.in
+@@ -26,7 +26,7 @@ end
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq : 'a array -> 'a Seq.t
++val to_seq : 'a array -> 'a Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq : 'a array -> 'a Stdcompat__seq.t
+@@ -35,7 +35,7 @@ val to_seq : 'a array -> 'a Stdcompat__s
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seqi : 'a array -> (int * 'a) Seq.t
++val to_seqi : 'a array -> (int * 'a) Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seqi : 'a array -> (int * 'a) Stdcompat__seq.t
+@@ -44,7 +44,7 @@ val to_seqi : 'a array -> (int * 'a) Std
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val of_seq : 'a Seq.t -> 'a array
++val of_seq : 'a Stdlib.Seq.t -> 'a array
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val of_seq : 'a Stdcompat__seq.t -> 'a array

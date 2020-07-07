@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__result_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__result_s.mli.in
+@@ -214,7 +214,7 @@ val to_list : ('a, 'e) Stdcompat__pervas
+  *)
+ 
+ @BEGIN_FROM_4_08_0@
+-val to_seq : ('a, 'e) result -> 'a Seq.t
++val to_seq : ('a, 'e) result -> 'a Stdlib.Seq.t
+ @END_FROM_4_08_0@
+ @BEGIN_BEFORE_4_08_0@
+ val to_seq : ('a, 'e) Stdcompat__pervasives.result -> 'a Stdcompat__seq.t

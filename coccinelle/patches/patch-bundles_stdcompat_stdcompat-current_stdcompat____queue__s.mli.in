@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__queue_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__queue_s.mli.in
+@@ -12,7 +12,7 @@ val peek_opt : 'a t -> 'a option
+ (** @since 4.08.0: val peek_opt : 'a t -> 'a option *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val to_seq : 'a t -> 'a Seq.t
++val to_seq : 'a t -> 'a Stdlib.Seq.t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val to_seq : 'a t -> 'a Stdcompat__seq.t
+@@ -21,7 +21,7 @@ val to_seq : 'a t -> 'a Stdcompat__seq.t
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val add_seq : 'a t -> 'a Seq.t -> unit
++val add_seq : 'a t -> 'a Stdlib.Seq.t -> unit
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val add_seq : 'a t -> 'a Stdcompat__seq.t -> unit
+@@ -30,7 +30,7 @@ val add_seq : 'a t -> 'a Stdcompat__seq.
+  *)
+ 
+ @BEGIN_FROM_4_07_0@
+-val of_seq : 'a Seq.t -> 'a t
++val of_seq : 'a Stdlib.Seq.t -> 'a t
+ @END_FROM_4_07_0@
+ @BEGIN_BEFORE_4_07_0@
+ val of_seq : 'a Stdcompat__seq.t -> 'a t

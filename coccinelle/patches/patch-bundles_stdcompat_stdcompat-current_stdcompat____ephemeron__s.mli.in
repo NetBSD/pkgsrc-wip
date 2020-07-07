@@ -1,0 +1,42 @@
+$NetBSD$
+
+--- bundles/stdcompat/stdcompat-current/stdcompat__ephemeron_s.mli.in.orig	2019-09-25 09:19:54.000000000 +0000
++++ bundles/stdcompat/stdcompat-current/stdcompat__ephemeron_s.mli.in
+@@ -20,12 +20,12 @@ module type S  =
+     val fold : (key -> 'a -> 'b -> 'b) -> 'a t -> 'b -> 'b
+     val length : 'a t -> int
+     val stats : 'a t -> Hashtbl.statistics
+-    val to_seq : 'a t -> (key * 'a) Seq.t
+-    val to_seq_keys : 'a t -> key Seq.t
+-    val to_seq_values : 'a t -> 'a Seq.t
+-    val add_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val replace_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val of_seq : (key * 'a) Seq.t -> 'a t
++    val to_seq : 'a t -> (key * 'a) Stdlib.Seq.t
++    val to_seq_keys : 'a t -> key Stdlib.Seq.t
++    val to_seq_values : 'a t -> 'a Stdlib.Seq.t
++    val add_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val replace_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val of_seq : (key * 'a) Stdlib.Seq.t -> 'a t
+     val clean : 'a t -> unit
+     val stats_alive : 'a t -> Hashtbl.statistics
+   end
+@@ -114,12 +114,12 @@ module type SeededS  =
+     val fold : (key -> 'a -> 'b -> 'b) -> 'a t -> 'b -> 'b
+     val length : 'a t -> int
+     val stats : 'a t -> Hashtbl.statistics
+-    val to_seq : 'a t -> (key * 'a) Seq.t
+-    val to_seq_keys : 'a t -> key Seq.t
+-    val to_seq_values : 'a t -> 'a Seq.t
+-    val add_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val replace_seq : 'a t -> (key * 'a) Seq.t -> unit
+-    val of_seq : (key * 'a) Seq.t -> 'a t
++    val to_seq : 'a t -> (key * 'a) Stdlib.Seq.t
++    val to_seq_keys : 'a t -> key Stdlib.Seq.t
++    val to_seq_values : 'a t -> 'a Stdlib.Seq.t
++    val add_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val replace_seq : 'a t -> (key * 'a) Stdlib.Seq.t -> unit
++    val of_seq : (key * 'a) Stdlib.Seq.t -> 'a t
+     val clean : 'a t -> unit
+     val stats_alive : 'a t -> Hashtbl.statistics
+   end
