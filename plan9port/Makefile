@@ -11,6 +11,13 @@ COMMENT=	Plan 9 from User Space
 LICENSE=	lucent
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash:run perl
+
+REPLACE_BASH+=	src/cmd/rc/checkparse
+
+REPLACE_PERL+=	dist/addsrclinks
+REPLACE_PERL+=	dist/fixurls
+REPLACE_PERL+=	unix/man/fixurls
 
 do-build:
 	cd ${WRKSRC} && ./INSTALL -b

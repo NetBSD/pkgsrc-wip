@@ -1,3 +1,1 @@
-On NetBSD/amd64 -current the build fails with:
-
- >>> mk: don't know how to make '.../pkgsrc/wip/plan9port/work/plan9port-95ab1308b410ad8547e38e47ec4a36f560dcece5/lib/libthread.a(NetBSD-x86_64-asm.o)' in .../pkgsrc/wip/plan9port/work/plan9port-95ab1308b410ad8547e38e47ec4a36f560dcece5/src/libthread
+Figure out how to handle the install phase.
