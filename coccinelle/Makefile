@@ -20,7 +20,6 @@ MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	aclocal autoconf automake gmake pkg-config
-BUILD_TARGET=	all all.opt
 
 REPLACE_PYTHON=	tools/pycocci
 
