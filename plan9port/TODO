@@ -1,1 +1,1 @@
-Figure out how to handle the install phase.
+- Address hardcoded assumptions (honors CFLAGS, LDFLAGS, X11BASE)
