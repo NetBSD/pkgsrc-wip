@@ -68,7 +68,7 @@ post-build:
 
 do-install:
 	${RUN} cd ${DESTDIR}${PREFIX}/plan9 && \
-	    ./INSTALL -c -r ${PREFIX}/plan9
+	    PLAN9_TARGET=${PREFIX}/plan9 ./INSTALL -c
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 PTHREAD_AUTO_VARS=	yes
