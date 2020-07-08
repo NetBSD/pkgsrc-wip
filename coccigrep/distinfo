@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.6 2017/05/05 11:04:15 leot Exp $
 
-SHA1 (coccigrep-1.16.tar.gz) = 4232bd9fec64282f96784bb2f26173b076e19cef
-RMD160 (coccigrep-1.16.tar.gz) = ab9d0093860ed509be22d9fa1faba1a53cd6d5b2
-SHA512 (coccigrep-1.16.tar.gz) = 113c308fd05af6ec8765b719ad4eef9d6c39e123c011aedcd0d3f10782b06f3b94e1c8b5e0c609270441d60ef295ab721a40145cc2fe3ebc11afed348f39b269
-Size (coccigrep-1.16.tar.gz) = 32622 bytes
+SHA1 (coccigrep-1.20.tar.gz) = 49216e5a4aeca59f4864f92fd2937ca068760d81
+RMD160 (coccigrep-1.20.tar.gz) = 01b955b84ebb8b284e227c57767ddea8e8f985c8
+SHA512 (coccigrep-1.20.tar.gz) = 35d6a43b515c261ba025b876a72566581f892624eb9f47cde4121f16b2922ead8cd94e2c0ea6e00e4c64a3fe0cdcc4aeadc4c49900a8de8cfc0b589208ecae9c
+Size (coccigrep-1.20.tar.gz) = 33027 bytes
+SHA1 (patch-setup.py) = 0353c852cd438fa275c4dca25514e8dd23789362
