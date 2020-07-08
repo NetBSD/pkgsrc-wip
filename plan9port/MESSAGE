@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD$
+
+To use plan9port PLAN9 and PATH environment variables needs to be set to:
+
+ export PLAN9=${PREFIX}/plan9
+ export PATH=${PATH}:${PLAN9}/bin
+
+===========================================================================
