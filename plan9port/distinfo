@@ -4,6 +4,7 @@ SHA1 (plan9port-20200622-95ab1308b410ad8547e38e47ec4a36f560dcece5.tar.gz) = af51
 RMD160 (plan9port-20200622-95ab1308b410ad8547e38e47ec4a36f560dcece5.tar.gz) = dcd35a7564d1c0569383a6d9782a6c64de10ccac
 SHA512 (plan9port-20200622-95ab1308b410ad8547e38e47ec4a36f560dcece5.tar.gz) = e3e2f66c854304702f10568a3ae8990f62b6b66872f0bb6b9e3f629ff5616e82ce2c88331ec58f27d1c9cf9fda6c7d0cb072e7a746ed0ce94dc600918efda964
 Size (plan9port-20200622-95ab1308b410ad8547e38e47ec4a36f560dcece5.tar.gz) = 23445330 bytes
+SHA1 (patch-INSTALL) = 677acd580efcd7c5e6d75e3c43d41a384e291918
 SHA1 (patch-include_u.h) = d8681e7c663f9dd6da46d0af2eb33a8e1b014fbd
 SHA1 (patch-src_cmd_devdraw_mkwsysrules.sh) = 7418cfbedafa74145c4c3395fe11b2bb3b6b50ef
 SHA1 (patch-src_cmd_rio_mkfile) = b2584bf14a71efb7af4bebba763035d21b38a194

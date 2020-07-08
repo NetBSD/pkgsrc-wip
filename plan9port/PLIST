@@ -4096,8 +4096,6 @@ plan9/include/thread.h
 plan9/include/u.h
 plan9/include/utf.h
 plan9/include/venti.h
-plan9/install.log
-plan9/install.sum
 plan9/install.txt
 plan9/lib/CVS.IEXIST
 plan9/lib/acme.rc
