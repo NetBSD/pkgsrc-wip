@@ -11,7 +11,7 @@ HOMEPAGE=	https://home.regit.org/software/coccigrep/
 COMMENT=	Semantic grep for the C language
 LICENSE=	gnu-gpl-v3
 
-DEPENDS=	coccinelle-[0-9]*:../../devel/coccinelle
+DEPENDS=	coccinelle-[0-9]*:../../wip/coccinelle
 
 USE_LANGUAGES=	# none
 
