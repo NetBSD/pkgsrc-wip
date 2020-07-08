@@ -1,6 +1,1 @@
 - Address possible further hardcoded assumptions
-- acme and probably other graphical programs fails with:
-
-   % acme
-   imageinit: can't open font /lib/font/bit/lucsans/euro.8.font: No such file or directory
-
