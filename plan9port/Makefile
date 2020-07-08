@@ -49,6 +49,8 @@ REPLACE_FILES.rc+=	src/cmd/upas/misc/remotemail
 REPLACE_FILES.rc+=	src/cmd/venti/srv/conf.rc
 REPLACE_FILES.rc+=	src/cmd/venti/srv/tester
 
+INSTALL_ENV+=	PLAN9_TARGET=${PREFIX}/plan9 
+
 pre-build:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/plan9
 	${MV} ${WRKSRC}/* ${DESTDIR}${PREFIX}/plan9
@@ -60,7 +62,7 @@ do-configure:
 
 do-build:
 	${RUN} cd ${DESTDIR}${PREFIX}/plan9 && \
-	    ./INSTALL -b
+	    ${PKGSRC_SETENV} ${MAKE_ENV} ./INSTALL -b
 
 post-build:
 	${RUN} ${FIND} ${DESTDIR}${PREFIX}/plan9 -type f -name '*.orig' | \
@@ -68,7 +70,7 @@ post-build:
 
 do-install:
 	${RUN} cd ${DESTDIR}${PREFIX}/plan9 && \
-	    PLAN9_TARGET=${PREFIX}/plan9 ./INSTALL -c
+	    ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} ./INSTALL -c
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 PTHREAD_AUTO_VARS=	yes
