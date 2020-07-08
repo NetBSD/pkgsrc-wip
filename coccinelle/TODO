@@ -1,11 +1,14 @@
 Still not ready for using it to update devel/coccinelle. The following issues
 should be investigated further and if possible fixed:
 
- - Update to coccinelle-1.0.6 breaks textproc/coccigrep
+ - Update to coccinelle-1.0.8 breaks textproc/coccigrep, e.g.:
 
-   XXXleot: provide a simple command to test that.
+    % cd pkgsrc/pkgtools/pkg_install/files/admin
+    % coccigrep -t size_t *.c
+
+   does not print anything (while there are several variables of size_t type).
     
-    -- leot (2017/10/10)
+    -- leot (2020/07/07)
 
  - When built with PYTHON_VERSION_DEFAULT=38, test fails with:
 
