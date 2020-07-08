@@ -13,17 +13,57 @@ LICENSE=	lucent
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run perl
 
+REPLACE_BASH+=	bin/macedit
+REPLACE_BASH+=	bin/wintext
+REPLACE_BASH+=	mac/9term.app/Contents/MacOS/9term
+REPLACE_BASH+=	mac/Plumb.app/Contents/MacOS/plumb
 REPLACE_BASH+=	src/cmd/rc/checkparse
 
 REPLACE_PERL+=	dist/addsrclinks
 REPLACE_PERL+=	dist/fixurls
 REPLACE_PERL+=	unix/man/fixurls
 
+REPLACE_INTERPRETER+=	rc
+REPLACE.rc.old=		.*/bin/rc
+REPLACE.rc.new=		${PREFIX}/plan9/bin/rc
+REPLACE_FILES.rc+=	acid/transcript
+REPLACE_FILES.rc+=	acid/window
+REPLACE_FILES.rc+=	src/cmd/9660/mk9660.rc
+REPLACE_FILES.rc+=	src/cmd/dict/egfix
+REPLACE_FILES.rc+=	src/cmd/dict/egfix2
+REPLACE_FILES.rc+=	src/cmd/dict/gefix
+REPLACE_FILES.rc+=	src/cmd/dict/getneeds
+REPLACE_FILES.rc+=	src/cmd/fossil/conf.rc
+REPLACE_FILES.rc+=	src/cmd/lp/lp.rc
+REPLACE_FILES.rc+=	src/cmd/lp/lpsend.rc
+REPLACE_FILES.rc+=	src/cmd/map/map.rc
+REPLACE_FILES.rc+=	src/cmd/map/mapdemo.rc
+REPLACE_FILES.rc+=	src/cmd/netfiles/netfileget
+REPLACE_FILES.rc+=	src/cmd/netfiles/netfileput
+REPLACE_FILES.rc+=	src/cmd/netfiles/netfilestat
+REPLACE_FILES.rc+=	src/cmd/spell/spell.rc
+REPLACE_FILES.rc+=	src/cmd/upas/filterkit/pipefrom.sample
+REPLACE_FILES.rc+=	src/cmd/upas/misc/mail.rc
+REPLACE_FILES.rc+=	src/cmd/upas/misc/qmail
+REPLACE_FILES.rc+=	src/cmd/upas/misc/remotemail
+REPLACE_FILES.rc+=	src/cmd/venti/srv/conf.rc
+REPLACE_FILES.rc+=	src/cmd/venti/srv/tester
+
+pre-build:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/plan9
+	${MV} ${WRKSRC}/* ${DESTDIR}${PREFIX}/plan9
+
 do-build:
-	cd ${WRKSRC} && ./INSTALL -b
+	${RUN} cd ${DESTDIR}${PREFIX}/plan9 && \
+	    ./INSTALL -b
+
+post-build:
+	${RUN} ${FIND} ${DESTDIR}${PREFIX}/plan9 -type f -name '*.orig' | \
+	    ${XARGS} ${RM} -f
 
 do-install:
-	cd ${WRKSRC} && ./INSTALL -c
+	${RUN} cd ${DESTDIR}${PREFIX}/plan9 && \
+	    ./INSTALL -c -r ${PREFIX}/plan9
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 PTHREAD_AUTO_VARS=	yes
