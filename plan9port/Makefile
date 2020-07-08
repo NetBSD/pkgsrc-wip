@@ -53,6 +53,11 @@ pre-build:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/plan9
 	${MV} ${WRKSRC}/* ${DESTDIR}${PREFIX}/plan9
 
+do-configure:
+	echo "CFLAGS='${CFLAGS}'" >> ${WRKSRC}/LOCAL.config
+	echo "LDFLAGS='${LDFLAGS}'" >> ${WRKSRC}/LOCAL.config
+	echo "FONTSRV=fontsrv" >> ${WRKSRC}/LOCAL.config
+
 do-build:
 	${RUN} cd ${DESTDIR}${PREFIX}/plan9 && \
 	    ./INSTALL -b
