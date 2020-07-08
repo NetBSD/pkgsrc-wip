@@ -1,3 +1,0 @@
-@comment $NetBSD$
-${LUA_CDIR}/system/core.so
-${LUA_LDIR}/system/init.lua

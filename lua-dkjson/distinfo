@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2015/08/10 22:13:59 jonthn Exp $
-
-SHA1 (lua-dkjson-2.5) = 16cbc26080996d9da827df42cb0844a25518eeb3
-RMD160 (lua-dkjson-2.5) = c0e0839874726d1785d946ab885b61ef55f05267
-SHA512 (lua-dkjson-2.5) = 781b3ae1f3d66881a11383d86e89b517dd67ae9c1824b7ae7eb4dd2e809dae516000a460b5e077e8f8ffe2cf80c5af76a5f9712e401ddcf0d1240d00ccebf4de
-Size (lua-dkjson-2.5) = 22416 bytes

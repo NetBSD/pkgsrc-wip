@@ -1,3 +1,0 @@
-luassert extends Lua's built-in assertions to provide additional tests
-and the ability to create your own.
-You can modify chains of assertions with not.
