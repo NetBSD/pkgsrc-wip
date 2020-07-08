@@ -13,13 +13,13 @@ LICENSE=	mit
 
 DEPENDS+=	${LUA_PKGPREFIX}-cliargs-[0-9]*:../../wip/lua-cliargs
 DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
-DEPENDS+=	${LUA_PKGPREFIX}-system-[0-9]*:../../wip/lua-system
+DEPENDS+=	${LUA_PKGPREFIX}-system-[0-9]*:../../devel/lua-system
 DEPENDS+=	${LUA_PKGPREFIX}-dkjson-[0-9]*:../../wip/lua-dkjson
 DEPENDS+=	${LUA_PKGPREFIX}-say-[0-9]*:../../wip/lua-say
 DEPENDS+=	${LUA_PKGPREFIX}-luassert-[0-9]*:../../wip/lua-luassert
-DEPENDS+=	${LUA_PKGPREFIX}-term-[0-9]*:../../wip/lua-term
+DEPENDS+=	${LUA_PKGPREFIX}-term-[0-9]*:../../devel/lua-term
 DEPENDS+=	${LUA_PKGPREFIX}-penlight-[0-9]*:../../devel/lua-penlight
-DEPENDS+=	${LUA_PKGPREFIX}-mediator-[0-9]*:../../wip/lua-mediator
+DEPENDS+=	${LUA_PKGPREFIX}-mediator-[0-9]*:../../devel/lua-mediator
 
 NO_BUILD=	yes
 
