@@ -1,1 +1,3 @@
 - Address possible further hardcoded assumptions
+- Add possible `x11' option - enabled by default - in order to disable
+  building of all x11 tools
