@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/spatch
 bin/spgen
+lib/coccinelle/dllpyml_stubs.so
 lib/coccinelle/ocaml/ast0_cocci.cmi
 lib/coccinelle/ocaml/ast0_cocci.cmx
 lib/coccinelle/ocaml/ast_c.cmi
