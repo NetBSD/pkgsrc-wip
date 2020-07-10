@@ -72,6 +72,7 @@ sbin/auto-media-format
 sbin/auto-mount-any
 sbin/auto-network-restart
 sbin/auto-nfs-add-share
+sbin/auto-nfs-client-setup
 sbin/auto-nfs-restart
 sbin/auto-nfs-server-setup
 sbin/auto-octet-to-hex
