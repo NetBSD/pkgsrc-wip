@@ -1,0 +1,61 @@
+Getting below error when making libgit2-glib :
+[80/86] Generating Ggit-1.0.gir with a custom command.
+FAILED: libgit2-glib/Ggit-1.0.gir
+/usr/pkg/bin/g-ir-scanner --no-libtool --namespace=Ggit
+--nsversion=1.0 --warn-all --output libgit2-glib/Ggit-1.0.gir
+--c-include=libgit2-glib/ggit.h
+-I/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/libgit2-glib
+-I/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/libgit2-glib
+-I./. -I../. --filelist=/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/libgit2-glib/5746dcd@@git2-glib-1.0@sha/Ggit_1.0_gir_filelist
+--include=GObject-2.0 --include=GLib-2.0 --include=Gio-2.0
+--symbol-prefix=ggit --identifier-prefix=Ggit
+--pkg-export=libgit2-glib-1.0 --cflags-begin -ffast-math
+-fstrict-aliasing -Wpointer-arith -Wmissing-declarations -Wformat=2
+-Wstrict-prototypes -Wmissing-prototypes -Wnested-externs
+-Wold-style-definition -Wdeclaration-after-statement -Wunused
+-Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute
+-Wredundant-decls -Wlogical-op -Wcast-align -Wno-unused-local-typedefs
+-Werror=implicit -Werror=init-self -Werror=main -Werror=missing-braces
+-Werror=return-type -Werror=array-bounds -Werror=write-strings
+-DG_DISABLE_CAST_CHECKS -DG_DISABLE_CHECKS -I./. -I../.
+-I/usr/pkg/include -I/usr/pkg/include/glib-2.0
+-I/usr/pkg/lib/glib-2.0/include -D_FORTIFY_SOURCE=2 -I/usr/include
+-I/usr/pkg/include/python3.7 -I/usr/pkg/include
+-I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0
+-I/usr/pkg/lib/glib-2.0/include -I/usr/include
+-I/usr/pkg/include/python3.7 -I/usr/pkg/include
+-I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0
+-I/usr/pkg/lib/glib-2.0/include --cflags-end --library git2-glib-1.0
+-L/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/libgit2-glib
+-L/usr/lib -L/usr/pkg/lib -L/usr/pkg/lib --extra-library=gio-2.0
+--extra-library=gobject-2.0 --extra-library=glib-2.0
+--extra-library=intl --extra-library=git2 --sources-top-dirs
+/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/subprojects/
+--sources-top-dirs
+/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/subprojects/
+g-ir-scanner: link: gcc -o
+/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/tmp-introspect4jjmxgu9/Ggit-1.0
+-I/usr/include -I/usr/pkg/include/python3.7 -I/usr/pkg/include
+-I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0
+-I/usr/pkg/lib/glib-2.0/include -O2 -D_FORTIFY_SOURCE=2 -I/usr/include
+-I/usr/pkg/include/python3.7 -I/usr/pkg/include
+-I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0
+-I/usr/pkg/lib/glib-2.0/include
+/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/tmp-introspect4jjmxgu9/Ggit-1.0.o
+-L. -Wl,-rpath,. -Wl,--no-as-needed
+-L/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/libgit2-glib
+-Wl,-rpath,/usr/pkgsrc/wip/libgit2-glib/work/libgit2-glib-0.99.0.1/output/libgit2-glib
+-L/usr/lib -Wl,-rpath,/usr/lib -L/usr/pkg/lib -Wl,-rpath,/usr/pkg/lib
+-L/usr/pkg/lib -Wl,-rpath,/usr/pkg/lib -lgit2-glib-1.0 -lgio-2.0
+-lgobject-2.0 -lglib-2.0 -lintl -lgit2 -L/usr/pkg/lib -lgio-2.0
+-lgobject-2.0 -Wl,--export-dynamic -lgmodule-2.0 -pthread -lglib-2.0
+-Wl,-R/usr/pkg/lib -lglib-2.0 -lintl -L/usr/lib -Wl,-R/usr/lib
+-L/usr/pkg/lib -Wl,-R/usr/pkg/lib
+ERROR: can't resolve libraries to shared libraries: git2-glib-1.0
+ninja: build stopped: subcommand failed.
+
+found something similar happed with :
+
+json-glib-1.0 [ https://gitlab.gnome.org/GNOME/json-glib/-/issues/35 ]
+
+so tried work around with LD_LIBRARY_PATH but it doesn't seem to solve error.
