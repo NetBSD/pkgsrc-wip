@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libgit2-glib/v0.99.0.1.tar.gz) = 324af13301a53d135d5f85e94ecbdb8e94a4821b
-RMD160 (libgit2-glib/v0.99.0.1.tar.gz) = 5759b4e81925396752b691b0f12174b6f226a333
-SHA512 (libgit2-glib/v0.99.0.1.tar.gz) = a344a090a104aa78ba3fd9e270fb603423a67c6bf38c10d4eae92eab79197cb23ae0d77af9dd151b2bac2c55d54a7a05ea1a86d4b28b1a95ffb758b73f04b85d
-Size (libgit2-glib/v0.99.0.1.tar.gz) = 184081 bytes
+SHA1 (libgit2-glib-0.99.0.1.tar.gz) = 324af13301a53d135d5f85e94ecbdb8e94a4821b
+RMD160 (libgit2-glib-0.99.0.1.tar.gz) = 5759b4e81925396752b691b0f12174b6f226a333
+SHA512 (libgit2-glib-0.99.0.1.tar.gz) = a344a090a104aa78ba3fd9e270fb603423a67c6bf38c10d4eae92eab79197cb23ae0d77af9dd151b2bac2c55d54a7a05ea1a86d4b28b1a95ffb758b73f04b85d
+Size (libgit2-glib-0.99.0.1.tar.gz) = 184081 bytes
