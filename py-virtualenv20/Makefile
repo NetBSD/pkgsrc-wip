@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	virtualenv-20.0.25
+DISTNAME=	virtualenv-20.0.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 CONFLICTS+=	${PYPKGPREFIX}-virtualenv-[0-9]*
 
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.3<2:../../devel/py-appdirs
-DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.0<1:../../wip/py-distlib
+DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.1<1:../../wip/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0<4:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0<2:../../lang/py-six
 .include "../../lang/python/pyversion.mk"
