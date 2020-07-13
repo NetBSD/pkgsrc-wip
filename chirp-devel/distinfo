@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (chirp-daily-20200622.tar.gz) = 1475c59d513d1f83e4a97c1e794e0c21cdb2e179
+RMD160 (chirp-daily-20200622.tar.gz) = 5c7a32d92b327733bb952434e474caa8bafc535e
+SHA512 (chirp-daily-20200622.tar.gz) = ca79a7bd8fb58b926dcb914443b49c3e1eb30f6aef883242e5b5bc5582edbc6330d788be5cdf3ff036f28c32c645c20541f11e70ee0d1dd388cdc17c3c79cce1
+Size (chirp-daily-20200622.tar.gz) = 929283 bytes
+SHA1 (patch-chirp_platform.py) = f8c0f7ffb0fa08b2b3a591a9ccdf4efca7838646
+SHA1 (patch-chirp_ui_mainapp.py) = 4e201ed531a34800687fa1dcaa18c8406c22d925
+SHA1 (patch-setup.py) = 28302403b4cd397b9654aeead4ab7910164312c2
