@@ -11,6 +11,7 @@ SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51
 SHA1 (patch-src_Makefile_am) = 0f6571c9d5a3e688544f93d687d266e1b71f0f43
 SHA1 (patch-src_zm__event.cpp) = 83d0d3f5de5d3a7b1ea81917bd9c5264c8129637
 SHA1 (patch-src_zm__monitor.cpp) = 4a0f2bd9a180092e3aa7ba8c0626e0907d45ab32
+SHA1 (patch-src_zm__rtp__ctrl.h) = 052b41bf09d41d1d5f980db011603b3b04f6142f
 SHA1 (patch-src_zm__rtp__source.cpp) = 50d2621b474de5defb94b019ba2084f67a5b2665
 SHA1 (patch-src_zm__sdp.cpp) = ed89bc14ae557281bb43baca9c90b78d801d8eb1
 SHA1 (patch-src_zm__thread.h) = a2af2ae87ba07cd51695c73082f8da319ff5f9a7
