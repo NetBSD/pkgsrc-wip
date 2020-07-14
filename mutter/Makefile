@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mutter-3.36.3
+DISTNAME=	mutter-3.36.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mutter/3.36/}
 EXTRACT_SUFX=	.tar.xz
