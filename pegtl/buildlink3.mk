@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	pegtl
+
+.if !defined(PEGTL_BUILDLINK3_MK)
+PEGTL_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.pegtl+=	pegtl>=2.8.3
+BUILDLINK_PKGSRCDIR.pegtl?=	../../wip/pegtl
+.endif	# PEGTL_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-pegtl
