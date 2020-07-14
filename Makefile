@@ -4561,6 +4561,7 @@ SUBDIR+=	stonx
 SUBDIR+=	stormlib
 SUBDIR+=	stracciatella
 SUBDIR+=	stratagus
+SUBDIR+=	straw-viewer
 SUBDIR+=	stress
 SUBDIR+=	stress-ng
 SUBDIR+=	strongswan
