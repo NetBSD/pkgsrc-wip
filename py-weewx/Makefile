@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.24 2019/04/26 14:12:35 maya Exp $
 
-DISTNAME=	weewx-3.9.2
+DISTNAME=	weewx-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
 MASTER_SITES=	http://weewx.com/downloads/
@@ -16,7 +16,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.9.2
+# \todo Allow python 3
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet tested
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Substituting pkgsrc paths
