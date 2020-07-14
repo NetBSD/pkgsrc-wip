@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/01/03 21:11:34 mrampke Exp $
 
-SHA1 (libbsd-0.4.2.tar.gz) = b9dd0b0d217642bf6519b4a5e386b30a73ad5c08
-RMD160 (libbsd-0.4.2.tar.gz) = eeaa86e3cc4b8d3c8599952e6f9f1b2f1a4b78f4
-Size (libbsd-0.4.2.tar.gz) = 442436 bytes
+SHA1 (libbsd-0.10.0.tar.xz) = 9cb8f0b717da13c8aa13b9f3f5f8105ee6e5ccb5
+RMD160 (libbsd-0.10.0.tar.xz) = 12ba2b56ce049a1bae5212435fdd17635f1de6ce
+SHA512 (libbsd-0.10.0.tar.xz) = b75529785b16c93d31401187f8a58258fbebe565dac071c8311775c913af989f62cd29d5ce2651af3ea6221cffd31cf04826577d3e546ab9ca14340f297777b9
+Size (libbsd-0.10.0.tar.xz) = 393576 bytes
