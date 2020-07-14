@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (gnome-shell-3.36.3.tar.xz) = 8b4447a3ab5a377d5e22991466ce1735bdb24e96
-RMD160 (gnome-shell-3.36.3.tar.xz) = 5b70e47cb5b2b80266db480928796baa6e63c735
-SHA512 (gnome-shell-3.36.3.tar.xz) = 3558ba9ac02148a064a25e498fb8e639edcc118639a10220d2c8f44cbe1975299c6e35e9f32703dfc5f9e27c9fc414915d1527c98d9800bd0ba66b5d7b53b78a
-Size (gnome-shell-3.36.3.tar.xz) = 1771764 bytes
+SHA1 (gnome-shell-3.36.4.tar.xz) = 8c071d920e928c2986ffcae67dc1ab628b94ffc4
+RMD160 (gnome-shell-3.36.4.tar.xz) = 39eb9e1851bc432dabcded956d4fbe4e590b4ec5
+SHA512 (gnome-shell-3.36.4.tar.xz) = 879b1590d516e7e9e1ad066c870023d59cbaaca13e1e77d8b14de302574b3138451c4b8ab0ba1b43aec3e6e03bd147304e8e0e995359b181522a790afc97d450
+Size (gnome-shell-3.36.4.tar.xz) = 1774584 bytes
 SHA1 (patch-src_shell-util.c) = 830dd5dec94775b64aeaed1738da2384f19c6ec7

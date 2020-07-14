@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gnome-shell-3.36.3
+DISTNAME=	gnome-shell-3.36.4
 PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-shell/3.36/}
