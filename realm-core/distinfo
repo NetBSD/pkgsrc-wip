@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (realm-core-6.0.8.tar.gz) = 698e737b5a753238365f88a6b1394e675508a2cf
+RMD160 (realm-core-6.0.8.tar.gz) = 5bbb3ae2bc9ca745d03300664691c4b1e2eb8897
+SHA512 (realm-core-6.0.8.tar.gz) = 090a4fdcdcb3cabad3dc9e984e2d7376fb31728214b25841b9b866e50d7557ba343d1aba205d0c36716ec88a42c9a85023252c0cc4b79a265daf416c70133140
+Size (realm-core-6.0.8.tar.gz) = 3619275 bytes
+SHA1 (patch-CMakeLists.txt) = 1c6c6da3c1f9cbdba65300d0af609156819c083a
+SHA1 (patch-src_realm_CMakeLists.txt) = 120937bb8101e0c617178770e79a28d0c6837748
+SHA1 (patch-src_realm_impl_simulated__failure.cpp) = ca8433f4b7f46e0e7984362a9ea3e77e884d79ea
+SHA1 (patch-src_realm_parser_CMakeLists.txt) = ae799e1277a238d7cedce3a9864a6196d3fbffeb
+SHA1 (patch-src_realm_util_features.h) = 7273bfefbe1f8a934197dedbc1c64c6d8353e32d
+SHA1 (patch-src_realm_util_file.cpp) = aa56d5d72cd4ac58f31f886552599cd92579c7b1

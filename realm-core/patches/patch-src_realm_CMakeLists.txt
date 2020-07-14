@@ -1,0 +1,27 @@
+$NetBSD$
+
+--- src/realm/CMakeLists.txt.orig	2020-06-30 08:11:11.000000000 +0000
++++ src/realm/CMakeLists.txt
+@@ -326,6 +326,7 @@ if(NOT REALM_SKIP_SHARED_LIB)
+     )
+ endif()
+ 
++if (NOT SSL_SYSTEM)
+ if(UNIX AND NOT APPLE)
+     if(NOT OpenSSL_DIR)
+         if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/openssl/lib/cmake/OpenSSL/OpenSSLConfig.cmake)
+@@ -361,6 +362,14 @@ if(UNIX AND NOT APPLE)
+         target_link_libraries(StorageShared PUBLIC OpenSSL::Crypto)
+     endif()
+ endif()
++else()
++find_package(OpenSSL REQUIRED)
++target_include_directories(CoreObjects SYSTEM PUBLIC ${OPENSSL_INCLUDE_DIR})
++target_link_libraries(Storage PUBLIC OpenSSL::Crypto)
++if(NOT REALM_SKIP_SHARED_LIB)
++    target_link_libraries(StorageShared PUBLIC OpenSSL::Crypto)
++endif()
++endif()
+ 
+ if(APPLE)
+     target_link_libraries(Storage INTERFACE "-framework Foundation")
