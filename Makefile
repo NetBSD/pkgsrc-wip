@@ -698,6 +698,7 @@ SUBDIR+=	electricsheep
 SUBDIR+=	electricsheep-git
 SUBDIR+=	elegent
 SUBDIR+=	elementary-calculator
+SUBDIR+=	elementary-code
 SUBDIR+=	elfhash-git
 SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot
