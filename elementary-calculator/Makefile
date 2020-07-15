@@ -3,14 +3,12 @@
 DISTNAME=	calculator-1.5.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elementary/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/elementary/calculator/
 COMMENT=	Elementary Calculator
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/calculator-1.5.5
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS=		pkg-config
 USE_CMAKE=		yes

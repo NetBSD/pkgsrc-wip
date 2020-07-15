@@ -3,14 +3,12 @@
 DISTNAME=	granite-5.5.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elementary/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/elementary/granite/
 COMMENT=	Elementary OS Gtk+/GLib extension library
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/granite-5.5.0
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS=		pkg-config
 USE_CMAKE=		yes

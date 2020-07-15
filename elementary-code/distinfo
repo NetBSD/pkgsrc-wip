@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (code/3.4.1.tar.gz) = d73b03a826869b11c2d531b879c3650ba6c3450b
-RMD160 (code/3.4.1.tar.gz) = ae6aa1f54ff25b3d3cdd0820f4d687b1091266bf
-SHA512 (code/3.4.1.tar.gz) = ea98f2e2a08e9458a81fd74690ea6603dedf445b7e3d775af15853ea9cb2fcb442068a25c17cb75ec0b05f22a14e5ccee0876a4cdc820b19061a4e9cdff73f17
-Size (code/3.4.1.tar.gz) = 1468212 bytes
+SHA1 (code-3.4.1.tar.gz) = d73b03a826869b11c2d531b879c3650ba6c3450b
+RMD160 (code-3.4.1.tar.gz) = ae6aa1f54ff25b3d3cdd0820f4d687b1091266bf
+SHA512 (code-3.4.1.tar.gz) = ea98f2e2a08e9458a81fd74690ea6603dedf445b7e3d775af15853ea9cb2fcb442068a25c17cb75ec0b05f22a14e5ccee0876a4cdc820b19061a4e9cdff73f17
+Size (code-3.4.1.tar.gz) = 1468212 bytes
