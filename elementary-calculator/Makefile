@@ -1,12 +1,9 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	calculator
-GITHUB_TAG=	1.5.5
-DISTNAME=	1.5.5
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	calculator-1.5.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elementary/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/elementary/calculator/
