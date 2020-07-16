@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	straw-viewer-0.0.5
+DISTNAME=	straw-viewer-0.0.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trizen/}
 

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (straw-viewer-0.0.5.tar.gz) = 54ce962a5dd07f1a75725cc795aa8a43ac760671
-RMD160 (straw-viewer-0.0.5.tar.gz) = d43a6cb8dbf6d7782d16c677c4cfe392217a4d28
-SHA512 (straw-viewer-0.0.5.tar.gz) = 2d1cb5b72c084187faa2ce9c1bb771b7d652de9a5e7ef2c9edccbb494f6548d739bd785eecf3d865ae0e32da0507fc37b9f74fbe16fa1059e09a74a59c0ffab2
-Size (straw-viewer-0.0.5.tar.gz) = 239885 bytes
+SHA1 (straw-viewer-0.0.6.tar.gz) = 32ed1beb0f98f9a96eed2345761ab50386c7036d
+RMD160 (straw-viewer-0.0.6.tar.gz) = e0acea368de8c3e345e476bb259e1752509ec7ee
+SHA512 (straw-viewer-0.0.6.tar.gz) = 57ba5eb0ffa6115c59297facbd655d4c60ee935a599c76c5d6a4633e68c261225e2ab48aa95632037872ed0414f91366777ece7e4e3122e58ce343bf62183010
+Size (straw-viewer-0.0.6.tar.gz) = 240546 bytes
