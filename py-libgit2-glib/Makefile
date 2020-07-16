@@ -32,7 +32,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libgit2/buildlink3.mk"
-#.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

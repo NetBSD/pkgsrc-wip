@@ -69,8 +69,10 @@ include/libgit2-glib-1.0/libgit2-glib/ggit-tree-entry.h
 include/libgit2-glib-1.0/libgit2-glib/ggit-tree.h
 include/libgit2-glib-1.0/libgit2-glib/ggit-types.h
 include/libgit2-glib-1.0/libgit2-glib/ggit.h
+lib/girepository-1.0/Ggit-1.0.typelib
 lib/libgit2-glib-1.0.so
 lib/libgit2-glib-1.0.so.0
 lib/libgit2-glib-1.0.so.0.9900.0
 lib/pkgconfig/libgit2-glib-1.0.pc
 ${PYSITELIB}/gi/overrides/Ggit.py
+share/gir-1.0/Ggit-1.0.gir
