@@ -2,10 +2,6 @@ $NetBSD$
 
 Modifications for "--enable-libtool".
 
-Remove OS specific CXXFLAGS and PANGOLIBDIR selection
-(tested to fail on GNU/Linux).
-Use pkg-config for Pango Flags/Libs instead.
-
 --- configure.ac.orig	2020-07-16 10:25:51.000000000 +0000
 +++ configure.ac
 @@ -223,7 +223,21 @@ fi
