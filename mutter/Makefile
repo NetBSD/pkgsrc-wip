@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	mutter-3.36.4
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mutter/3.36/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,6 +28,8 @@ PKGCONFIG_OVERRIDE+=	cogl/cogl-pango/mutter-cogl-pango.pc.in
 PKGCONFIG_OVERRIDE+=	cogl/cogl-path/mutter-cogl-path.pc.in
 PKGCONFIG_OVERRIDE+=	cogl/cogl/mutter-cogl.pc.in
 PKGCONFIG_OVERRIDE+=	src/libmutter.pc.in
+
+LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-6
 
 # workaround for enums not being generated
 pre-build:

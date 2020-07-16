@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	gnome-shell-3.36.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-shell/3.36/}
 EXTRACT_SUFX=	.tar.xz
@@ -29,6 +29,8 @@ TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 MAKE_ENV+=      LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
 REPLACE_PYTHON+=	meson/*.py
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-shell
 
 post-extract:
 	cp ${FILESDIR}/*.xml ${WRKSRC}/data/dbus-interfaces/
