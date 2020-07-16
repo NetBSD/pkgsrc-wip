@@ -15,22 +15,22 @@ pkgbase := fltk
 .include "../../mk/pkg-build-options.mk"
 
 # For "opengl" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mopengl)
-.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
-.     include "../../graphics/MesaLib/buildlink3.mk"
-.     include "../../graphics/glu/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.fltk:Mopengl}
+.  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
+.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../graphics/glu/buildlink3.mk"
 .  endif
 .endif
 
 # For "pango" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mpango)
-.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
-.     include "../../devel/pango/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.fltk:Mpango}
+.  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
+.    include "../../devel/pango/buildlink3.mk"
 .  endif
 .endif
 
 # For "x11" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
+.if ${PKG_BUILD_OPTIONS.fltk:Mx11}
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
@@ -39,21 +39,21 @@ pkgbase := fltk
 .endif
 
 # For "xdbe" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mxdbe)
+.if ${PKG_BUILD_OPTIONS.fltk:Mxdbe}
 # No client library required
 .endif
 
 # For "xft2" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mxft2)
-.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
-.     include "../../x11/libXft/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.fltk:Mxft2}
+.  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
+.    include "../../x11/libXft/buildlink3.mk"
 .  endif
 .endif
 
 # For "xinerama" option
-.if !empty(PKG_BUILD_OPTIONS.fltk:Mxinerama)
-.  if !empty(PKG_BUILD_OPTIONS.fltk:Mx11)
-.     include "../../x11/libXinerama/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.fltk:Mxinerama}
+.  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
+.    include "../../x11/libXinerama/buildlink3.mk"
 .  endif
 .endif
 

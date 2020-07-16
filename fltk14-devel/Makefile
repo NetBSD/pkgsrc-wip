@@ -3,7 +3,7 @@
 DISTNAME=	fltk-1.4.x
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
-GITHUB_TAG=	940b7ba13d26dcde4fbd4574d56167501e598327
+GITHUB_TAG=	c380a91361db381747339a02e808e1b6850f7ce2
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gmake nroff
+USE_TOOLS+=		autoconf gmake nroff pkg-config
 # Doesn't run tests, only build them (because they are GUI programs)
 TEST_TARGET=		test
 

@@ -2,9 +2,9 @@ $NetBSD$
 
 Use libtool to build and link binaries.
 
---- makeinclude.in.orig	2015-03-25 20:06:54.000000000 +0000
+--- makeinclude.in.orig	2020-07-16 10:25:51.000000000 +0000
 +++ makeinclude.in
-@@ -153,20 +153,20 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
+@@ -151,20 +151,20 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
  
  .o$(EXEEXT):
  	echo Linking $@...
@@ -21,7 +21,7 @@ Use libtool to build and link binaries.
  	echo Compiling $<...
 -	$(CXX) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CXXFLAGS) -c $< -o $@
 +	$(LIBTOOL) --mode=compile $(CXX) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CXXFLAGS) -c $< -o $@
- 	
+ 
  .mm.o:
  	echo Compiling $<...
 -	$(CXX) -I.. $(ARCHFLAGS) $(CXXFLAGS) -x objective-c++ -c $< -o $@

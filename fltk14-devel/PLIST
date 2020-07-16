@@ -179,6 +179,8 @@ include/FL/Fl_Round_Button.H
 ${PLIST.cs}include/FL/Fl_Round_Button.h
 include/FL/Fl_Round_Clock.H
 ${PLIST.cs}include/FL/Fl_Round_Clock.h
+include/FL/Fl_SVG_File_Surface.H
+${PLIST.cs}include/FL/Fl_SVG_File_Surface.h
 include/FL/Fl_SVG_Image.H
 ${PLIST.cs}include/FL/Fl_SVG_Image.h
 include/FL/Fl_Scroll.H

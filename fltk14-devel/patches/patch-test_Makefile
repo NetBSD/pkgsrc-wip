@@ -3,9 +3,9 @@ $NetBSD$
 Use libtool to link test programs.
 Add note that GUI test programs are not executed automatically.
 
---- test/Makefile.orig	2019-09-24 10:57:29.000000000 +0000
+--- test/Makefile.orig	2020-07-16 10:25:51.000000000 +0000
 +++ test/Makefile
-@@ -182,6 +182,10 @@ GLALL = \
+@@ -180,6 +180,10 @@ GLALL = \
  	shape$(EXEEXT)
  
  all:	$(ALL) $(GLDEMOS)
@@ -16,7 +16,7 @@ Add note that GUI test programs are not executed automatically.
  
  gldemos:	$(GLALL)
  
-@@ -333,7 +337,7 @@ buttons$(EXEEXT): buttons.o
+@@ -332,14 +336,14 @@ buttons$(EXEEXT): buttons.o
  
  blocks$(EXEEXT): blocks.o
  	echo Linking $@...
@@ -25,29 +25,28 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) $(RM) -f -r blocks.app/Contents/MacOS
  	$(OSX_ONLY) mkdir blocks.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) blocks$(EXEEXT) blocks.app/Contents/MacOS
-@@ -344,7 +348,7 @@ checkers$(EXEEXT): pixmaps/black_checker
- 		   pixmaps/white_checker_king_png.h \
- 		   checkers.o
+ 
+ checkers$(EXEEXT): checkers.o checkers_pieces.o
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
-+	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o checkers_pieces.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o checkers_pieces.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
  	$(OSX_ONLY) $(RM) -f -r checkers.app/Contents/MacOS
  	$(OSX_ONLY) mkdir checkers.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) checkers$(EXEEXT) checkers.app/Contents/MacOS
-@@ -353,7 +357,7 @@ clock$(EXEEXT): clock.o
+@@ -352,7 +356,7 @@ clock$(EXEEXT): clock.o
  
  colbrowser$(EXEEXT): colbrowser.o
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTKFORMS) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p colbrowser.app/Contents/Resources
  	$(OSX_ONLY) cp -f rgb.txt colbrowser.app/Contents/Resources/
-@@ -366,21 +370,21 @@ curve$(EXEEXT): curve.o
+@@ -365,21 +369,21 @@ curve$(EXEEXT): curve.o
  
  demo$(EXEEXT): demo.o
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTKFORMS) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p demo.app/Contents/Resources
@@ -68,7 +67,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) cp -f editor-Info.plist editor.app/Contents/Info.plist
  
-@@ -389,21 +393,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
+@@ -388,21 +392,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
  
  file_chooser$(EXEEXT): file_chooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -93,7 +92,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p help_dialog.app/Contents/Resources
  	$(OSX_ONLY) cp -f help_dialog.html help_dialog.app/Contents/Resources/
-@@ -423,14 +427,14 @@ input_choice$(EXEEXT): input_choice.o
+@@ -422,14 +426,14 @@ input_choice$(EXEEXT): input_choice.o
  
  keyboard$(EXEEXT): keyboard_ui.o keyboard.o
  	echo Linking $@...
@@ -105,12 +104,12 @@ Add note that GUI test programs are not executed automatically.
  
  label$(EXEEXT): label.o
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTKFORMS) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  
  line_style$(EXEEXT): line_style.o
-@@ -439,7 +443,7 @@ list_visuals$(EXEEXT): list_visuals.o
+@@ -438,7 +442,7 @@ list_visuals$(EXEEXT): list_visuals.o
  
  mandelbrot$(EXEEXT): mandelbrot_ui.o mandelbrot.o
  	echo Linking $@...
@@ -119,7 +118,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  mandelbrot_ui.o:	mandelbrot_ui.h
  mandelbrot_ui.cxx:	mandelbrot_ui.fl ../fluid/fluid$(EXEEXT)
-@@ -452,7 +456,7 @@ minimum$(EXEEXT): minimum.o
+@@ -451,7 +455,7 @@ minimum$(EXEEXT): minimum.o
  
  native-filechooser$(EXEEXT): native-filechooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -128,16 +127,16 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  navigation$(EXEEXT): navigation.o
-@@ -461,7 +465,7 @@ offscreen$(EXEEXT): offscreen.o
+@@ -460,7 +464,7 @@ offscreen$(EXEEXT): offscreen.o
  
  output$(EXEEXT): output.o $(FLLIBNAME)
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTKFORMS) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTK) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTKFORMS) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  
  overlay$(EXEEXT): overlay.o
-@@ -472,7 +476,7 @@ pixmap$(EXEEXT): pixmap.o
+@@ -471,7 +475,7 @@ pixmap$(EXEEXT): pixmap.o
  
  pixmap_browser$(EXEEXT): pixmap_browser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -146,7 +145,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  preferences$(EXEEXT):	preferences.o
-@@ -496,7 +500,7 @@ subwindow$(EXEEXT): subwindow.o
+@@ -495,7 +499,7 @@ subwindow$(EXEEXT): subwindow.o
  
  sudoku: sudoku.o
  	echo Linking $@...
@@ -155,7 +154,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) $(RM) -r -f sudoku.app/Contents/MacOS
  	$(OSX_ONLY) mkdir sudoku.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) sudoku$(EXEEXT) sudoku.app/Contents/MacOS
-@@ -504,7 +508,7 @@ sudoku: sudoku.o
+@@ -503,7 +507,7 @@ sudoku: sudoku.o
  sudoku.exe: sudoku.o sudoku.rc
  	echo Linking $@...
  	$(RC) sudoku.rc sudokures.o
@@ -164,7 +163,7 @@ Add note that GUI test programs are not executed automatically.
  
  symbols$(EXEEXT): symbols.o
  
-@@ -536,7 +540,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
+@@ -535,7 +539,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
  # OpenGL demos...
  CubeView$(EXEEXT): CubeMain.o CubeView.o CubeViewUI.o
  	echo Linking $@...
@@ -173,7 +172,7 @@ Add note that GUI test programs are not executed automatically.
  		CubeMain.o CubeView.o CubeViewUI.o \
  		$(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
-@@ -547,37 +551,37 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
+@@ -546,35 +550,35 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
  
  cube$(EXEEXT): cube.o
  	echo Linking $@...
@@ -208,7 +207,7 @@ Add note that GUI test programs are not executed automatically.
  shape$(EXEEXT): shape.o
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ shape.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
-+	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ shape.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ gl_overlay.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
  
  cairo_test$(EXEEXT): cairo_test.o
@@ -216,5 +215,3 @@ Add note that GUI test programs are not executed automatically.
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(CAIROFLAGS) $(LDFLAGS) -o $@ cairo_test.o $(LINKFLTK) $(LINKFLTKCAIRO) $(GLDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(CAIROFLAGS) $(LDFLAGS) -o $@ cairo_test.o $(LINKFLTK) $(LINKFLTKCAIRO) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
- 
- # Checkers .png -> .h conversion

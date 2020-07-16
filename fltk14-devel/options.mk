@@ -21,8 +21,8 @@ PLIST_VARS+=		opengl
 # Attention: Some packages that use FLTK need this option (disable with care)
 .if !empty(PKG_OPTIONS:Mopengl)
 .  if !empty(PKG_OPTIONS:Mx11)
-.     include "../../graphics/MesaLib/buildlink3.mk"
-.     include "../../graphics/glu/buildlink3.mk"
+.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../graphics/glu/buildlink3.mk"
 .  endif
 CONFIGURE_ARGS+=	--enable-gl
 PLIST.opengl=		yes
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--disable-gl
 PKG_FAIL_REASON+=	"pango option requires xft2 option."
 .  endif
 .  if !empty(PKG_OPTIONS:Mx11)
-.     include "../../devel/pango/buildlink3.mk"
+.    include "../../devel/pango/buildlink3.mk"
 .  endif
 CONFIGURE_ARGS+=	--enable-pango
 .else
@@ -80,7 +80,7 @@ CONFIGURE_ARGS+=	--disable-xdbe
 # Attention: X servers may be misconfigured for core fonts (disable with care).
 .if !empty(PKG_OPTIONS:Mxft2)
 .  if !empty(PKG_OPTIONS:Mx11)
-.     include "../../x11/libXft/buildlink3.mk"
+.    include "../../x11/libXft/buildlink3.mk"
 .  endif
 CONFIGURE_ARGS+=	--enable-xft
 .else
@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=	--disable-xft
 # Enables support for two or more physical displays.
 .if !empty(PKG_OPTIONS:Mxinerama)
 .  if !empty(PKG_OPTIONS:Mx11)
-.     include "../../x11/libXinerama/buildlink3.mk"
+.    include "../../x11/libXinerama/buildlink3.mk"
 .  endif
 CONFIGURE_ARGS+=	--enable-xinerama
 .else
