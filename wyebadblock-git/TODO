@@ -1,4 +1,4 @@
-At least with wip/surf-git it crashes with:
+At least with wip/surf-git, on NetBSD/amd64 9.99.64, it crashes with:
 
  GLib (gthread-posix.c): Unexpected error from C library during 'pthread_mutex_unlock': Operation not permitted.  Aborting.
 
