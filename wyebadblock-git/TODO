@@ -2,4 +2,15 @@ At least with wip/surf-git it crashes with:
 
  GLib (gthread-posix.c): Unexpected error from C library during 'pthread_mutex_unlock': Operation not permitted.  Aborting.
 
+To reproduce it, after installing wip/surf-git and wip/wyebadblock-git,
+preparing wyebadblock:
+
+ % mkdir -p ~/.config/wyebadblock/
+ % cd ~/.config/wyebadblock/
+ % ftp https://easylist.to/easylist/easylist.txt
+
+...and then creating a symlink so surf will load wyebadblock:
+
+ # ln -s /usr/pkg/lib/wyebrowser/adblock.so adblock.so
+
 Investigate further.
