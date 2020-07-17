@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libinput-1.14.3.tar.xz) = af23a4359202c24b592033f54347719a8f44d872
-RMD160 (libinput-1.14.3.tar.xz) = ac8d31708628f2a54d2b2daf37d54701e2c2eee8
-SHA512 (libinput-1.14.3.tar.xz) = f01d1bd1b25b8060519575644597d35f0c89de5386d298441f440128ceee3e57549921a058adec31adc8b33dbdedf4c0bd12c76905a69f752859d3136e26336d
-Size (libinput-1.14.3.tar.xz) = 567560 bytes
+SHA1 (libinput-1.15.6.tar.xz) = 3313a4d76df51e62dfd3cf84918352faa0cf21de
+RMD160 (libinput-1.15.6.tar.xz) = 2c08d45ebe97b051e17e47813dcaf9a61562f7e8
+SHA512 (libinput-1.15.6.tar.xz) = 90459e5a1f22fd42ffcbab157b461e4514c30803bcebdaced76c65c05cccfa6f259640a50497055fe7ed0b376a6979f6d1d01227ae447fe60ba88fa81142b969
+Size (libinput-1.15.6.tar.xz) = 584184 bytes

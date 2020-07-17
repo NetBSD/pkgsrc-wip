@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libinput-1.14.3
+DISTNAME=	libinput-1.15.6
 CATEGORIES=	devel
 MASTER_SITES=	https://www.freedesktop.org/software/libinput/
 EXTRACT_SUFX=	.tar.xz
@@ -12,8 +12,10 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-pre-configure:
-	sed -i s/true/false/ ${WRKSRC}/*txt
+SUBST_CLASSES+=allno
+SUBST_STAGE.allno=pre-configure
+SUBST_FILES.allno=*.txt
+SUBST_SED.allno=s,true,false,
 
 .include "../../wip/libevdev/buildlink3.mk"
 .include "../../wip/libudev/buildlink3.mk"
