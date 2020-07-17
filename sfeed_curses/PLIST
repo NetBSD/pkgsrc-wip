@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/sfeed_curses
+man/man1/sfeed_curses.1
+share/doc/sfeed_curses/README
