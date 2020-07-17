@@ -60,6 +60,7 @@ DISABLED_LIBS=		aquaero5 hiredis curl dbi esmtp ganglia gcrypt	\
 			netsnmp oping owcapi pcap perl pq python	\
 			rabbitmq routeros rrd sensors statgrab	\
 			tokyotyrant upsclient varnish xmms yajl
+DISABLED_LIBS+=		atasmart dpdk gps iptc jevents ldap microhttpd mosquitto netapp netsnmpagent pqos protobuf protobuf-c rdkafka udev xenctrl
 CONFIGURE_ARGS+=	--with-java=no --with-mic=no --with-oracle=no	\
 			--with-perl-bindings=no 			\
 			--disable-all-plugins
