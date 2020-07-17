@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (weston-7.0.0.tar.xz) = 914c6d0ee569c54c13377a1c5582e534ed7c71f9
-RMD160 (weston-7.0.0.tar.xz) = 7495e38c3ae50373e5b1dae459e88150993c8845
-SHA512 (weston-7.0.0.tar.xz) = fa14467ab89fb12175830d9cf29d89dc04899fd21d801e60e85836e8e52e17e144be78098b3eedfab6c51b7fb055ecfabb456a8a74f4e40485134da59ac58ea3
-Size (weston-7.0.0.tar.xz) = 1086028 bytes
+SHA1 (weston-8.0.0.tar.xz) = 80200a9c677d34c2de52230be444bd03ecd84229
+RMD160 (weston-8.0.0.tar.xz) = 2c183751f7d4dc69a6f40640bb66d9b3e037dc9f
+SHA512 (weston-8.0.0.tar.xz) = 74853b0c9cabbabe942a2d057b65e4e97b48dc5f4df6d7b9ffc10ec52bc787009b12b900be6b426551902b920b7308baa967b7489761641dc9c31cf90440950c
+Size (weston-8.0.0.tar.xz) = 1094904 bytes
