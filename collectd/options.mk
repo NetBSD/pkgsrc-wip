@@ -20,6 +20,8 @@ PKG_SUGGESTED_OPTIONS.Darwin+=	processes swap tcpconns users
 PKG_SUPPORTED_OPTIONS.SunOS+=	disk nfs swap users zfs-arc zone
 PKG_SUGGESTED_OPTIONS.SunOS+=	disk nfs swap users zfs-arc zone
 
+PKG_SUPPORTED_OPTIONS+=		collectd-debug
+
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		apple-sensors battery contextswitch cpu entropy \
@@ -34,3 +36,7 @@ CONFIGURE_ARGS+=	--enable-${option:S/-/_/}
 PLIST.${option}=	yes
 .  endif
 .endfor
+
+.if !empty(PKG_OPTIONS:Mcollectd-debug)
+CONFIGURE_ARGS+=	--enable-debug
+.endif
