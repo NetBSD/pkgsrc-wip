@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	bluez-alsa-2.0.0
+DISTNAME=	bluez-alsa-2.1.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Arkq/}
-GITHUB_TAG=	v2.0.0
+GITHUB_TAG=	v2.1.0
 
 MAINTAINER=	nykula@ukr.net
 HOMEPAGE=	https://github.com/Arkq/bluez-alsa
