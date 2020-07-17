@@ -6,7 +6,7 @@ COLLECTD_PLUGINS=	curl curl_json curl_xml apache bind nginx write_http
 COMMENT=		Statistics collection daemon - curl-based plugins
 PKGREVISION=		15
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libcurl=${BUILDLINK_PREFIX.curl}
 CONFIGURE_ARGS+=	--with-libyajl=${BUILDLINK_PREFIX.yajl}

@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}${MYSQL_VERSION}/}
 PKGREVISION=		2
 COMMENT=		Statistics collection daemon - mysql plugin
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 
 CONFIGURE_ARGS+=	--with-libmysql=${BUILDLINK_PREFIX.mysql-client}

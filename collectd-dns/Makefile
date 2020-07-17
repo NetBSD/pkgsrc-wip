@@ -5,7 +5,7 @@ COLLECTD_PACKAGE=	dns
 COMMENT=		Statistics collection daemon - dns plugin
 PKGREVISION=		3
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 

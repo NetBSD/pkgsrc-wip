@@ -9,7 +9,7 @@ MAKE_ENV+=	DESTDIR=${DESTDIR}
 
 COMMENT=		Statistics collection daemon - redis plugins
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libhires=${BUILDLINK_PREFIX.hiredis}
 

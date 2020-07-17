@@ -6,7 +6,7 @@ COLLECTD_PLUGINS=	memcachec memcached
 COMMENT=		Statistics collection daemon - memcached plugins
 PKGREVISION=		2
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libmemcached=${BUILDLINK_PREFIX.libmemcached}
 

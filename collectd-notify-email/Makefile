@@ -5,7 +5,7 @@ COLLECTD_PACKAGE=	notify-email
 COMMENT=		Statistics collection daemon - notify_email plugin
 PKGREVISION=		3
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libesmtp=${BUILDLINK_PREFIX.libesmtp}
 

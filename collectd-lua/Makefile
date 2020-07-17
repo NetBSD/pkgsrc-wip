@@ -6,7 +6,7 @@ COLLECTD_PLUGINS=	lua
 COMMENT=		Statistics collection daemon - lua plugin
 PKGREVISION=		2
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-lua
 

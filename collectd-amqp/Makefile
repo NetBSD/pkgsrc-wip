@@ -5,7 +5,7 @@ COLLECTD_PACKAGE=	amqp
 COMMENT=		Statistics collection daemon - amqp plugin
 PKGREVISION=		3
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-librabbitmq=${BUILDLINK_PREFIX.rabbitmq-c}
 

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.26 2020/07/05 13:57:32 he Exp $
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 PKGREVISION=	4
 

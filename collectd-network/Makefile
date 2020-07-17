@@ -4,7 +4,7 @@ COLLECTD_PACKAGE=	network
 
 COMMENT=		Statistics collection daemon - network plugin
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libgcrypt=${BUILDLINK_PREFIX.libgcrypt}/bin/libgcrypt-config
 

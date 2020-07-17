@@ -1,21 +1,21 @@
 # $NetBSD: Makefile.common,v 1.24 2020/06/02 11:12:05 nia Exp $
 #
-# used by sysutils/collectd/Makefile
-# used by sysutils/collectd-amqp/Makefile
-# used by sysutils/collectd-curl/Makefile
-# used by sysutils/collectd-dbi/Makefile
-# used by sysutils/collectd-dns/Makefile
-# used by sysutils/collectd-memcached/Makefile
-# used by sysutils/collectd-mysql/Makefile
-# used by sysutils/collectd-network/Makefile
-# used by sysutils/collectd-notify-email/Makefile
-# used by sysutils/collectd-postgresql/Makefile
-# used by sysutils/collectd-riemann/Makefile
-# used by sysutils/collectd-rrdtool/Makefile
-# used by sysutils/collectd-snmp/Makefile
-# used by sysutils/collectd-write_prometheus/Makefile
-# used by sysutils/p5-collectd/Makefile
-# used by sysutils/py-collectd/Makefile
+# used by wip/collectd/Makefile
+# used by wip/collectd-amqp/Makefile
+# used by wip/collectd-curl/Makefile
+# used by wip/collectd-dbi/Makefile
+# used by wip/collectd-dns/Makefile
+# used by wip/collectd-memcached/Makefile
+# used by wip/collectd-mysql/Makefile
+# used by wip/collectd-network/Makefile
+# used by wip/collectd-notify-email/Makefile
+# used by wip/collectd-postgresql/Makefile
+# used by wip/collectd-riemann/Makefile
+# used by wip/collectd-rrdtool/Makefile
+# used by wip/collectd-snmp/Makefile
+# used by wip/collectd-write_prometheus/Makefile
+# used by wip/p5-collectd/Makefile
+# used by wip/py-collectd/Makefile
 
 DISTNAME=	collectd-5.8.0
 MASTER_SITES=	http://collectd.org/files/
@@ -32,13 +32,13 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake pkg-config
 USE_LANGUAGES=		c c99 c++
 
-DISTINFO_FILE=		${.CURDIR}/../../sysutils/collectd/distinfo
-PATCHDIR=		${.CURDIR}/../../sysutils/collectd/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/collectd/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/collectd/patches
 
 .if !empty(COLLECTD_PACKAGE)
 PKGNAME?=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}/}
 
-DEPENDS+=		collectd>=${PKGVERSION_NOREV}:../../sysutils/collectd
+DEPENDS+=		collectd>=${PKGVERSION_NOREV}:../../wip/collectd
 
 COLLECTD_PLUGINS?=	${COLLECTD_PACKAGE:S/-/_/}
 

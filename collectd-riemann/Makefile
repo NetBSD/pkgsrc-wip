@@ -6,7 +6,7 @@ COLLECTD_PLUGINS=	write_riemann
 COMMENT=		Statistics collection daemon - riemann plugin
 PKGREVISION=		7
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 .include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../sysutils/riemann-client/buildlink3.mk"

@@ -6,7 +6,7 @@ COLLECTD_PLUGINS=	rrdtool rrdcached
 COMMENT=		Statistics collection daemon - rrdtool plugins
 PKGREVISION=		9
 
-.include "../../sysutils/collectd/Makefile.common"
+.include "../../wip/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-librrd=${BUILDLINK_PREFIX.rrdtool}
 
