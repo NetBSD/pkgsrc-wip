@@ -19,5 +19,7 @@ MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=		MANPREFIX=${PREFIX:Q}/${PKGMANDIR:Q}
 MAKE_FLAGS+=		CC=${CC:Q}
 
+REPLACE_SH+=		sfeed_markread
+
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
