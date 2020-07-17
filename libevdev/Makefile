@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libevdev-1.8.0
+DISTNAME=	libevdev-1.9.1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.freedesktop.org/software/libevdev/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,7 @@ COMMENT=	Keyboard and mouse events, capability bits
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
+MESON_ARGS+=		-Ddocumentation=disabled -Dtests=disabled
 
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
