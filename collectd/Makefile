@@ -23,9 +23,6 @@ DEFAULT_PLUGINS+=	aggregation apcups csv email exec filecount	\
 CONFIGURE_ARGS+=	--enable-${option}
 .endfor
 
-# Several libs not generated in time for linking collectd
-MAKE_JOBS_SAFE=		no
-
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/collectd
 
 .include "options.mk"
