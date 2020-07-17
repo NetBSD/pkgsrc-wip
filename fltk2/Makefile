@@ -1,12 +1,12 @@
 # $NetBSD: Makefile$
 
-DISTNAME=	fltk-legacy-2.0
+DISTNAME=	branch-2.0
 # Last distribution snapshot was 6129. New version should be higher.
 # FLTK library itself defines version 2.1.0 in headerfile (use that).
 PKGNAME=	fltk2-2.1git
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
-GITHUB_TAG=	branch-2.0
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/fltk-legacy/archive/}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org

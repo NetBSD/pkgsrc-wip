@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (fltk-legacy-2.0.zip) = 04c517a89309e72fc229a43cdfc3c5d591c46148
-RMD160 (fltk-legacy-2.0.zip) = 1f38753d10c58433d9d8a33c62dd144d13445dce
-SHA512 (fltk-legacy-2.0.zip) = e8e1c05d95b8817b5ce716558422f79bc8232c03f7d103be4c9b743d5c2890fc9e283b23d761e239a3e0adc8041d67d6d11a17166eecce1743a310537784875e
-Size (fltk-legacy-2.0.zip) = 3852183 bytes
+SHA1 (fltk2-2.1git/branch-2.0.zip) = 04c517a89309e72fc229a43cdfc3c5d591c46148
+RMD160 (fltk2-2.1git/branch-2.0.zip) = 1f38753d10c58433d9d8a33c62dd144d13445dce
+SHA512 (fltk2-2.1git/branch-2.0.zip) = e8e1c05d95b8817b5ce716558422f79bc8232c03f7d103be4c9b743d5c2890fc9e283b23d761e239a3e0adc8041d67d6d11a17166eecce1743a310537784875e
+Size (fltk2-2.1git/branch-2.0.zip) = 3852183 bytes
 SHA1 (patch-configure.in) = e480f0b540bd28354bf4865b121fdfa0b3ec94d3
 SHA1 (patch-fltk2-config.in) = 51619aaec73e3800ce7668eed0c067a610199f21
 SHA1 (patch-fltk_string.h) = f9adba4ec0fc1b5fcf70c4e9ea4b6eeea1d0c5ea

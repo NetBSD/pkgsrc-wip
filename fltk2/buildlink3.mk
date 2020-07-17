@@ -8,12 +8,12 @@ FLTK2_BUILDLINK3_MK:=
 BUILDLINK_DEPMETHOD.fltk2?=	build
 BUILDLINK_API_DEPENDS.fltk2+=	fltk2>=2.1git
 BUILDLINK_ABI_DEPENDS.fltk2+=	fltk2>=2.1git
-BUILDLINK_PKGSRCDIR.fltk2?=	../../x11/fltk2
+BUILDLINK_PKGSRCDIR.fltk2?=	../../wip/fltk2
 
 pkgbase := fltk2
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.fltk2:Mopengl)
+.if ${PKG_BUILD_OPTIONS.fltk2:Mopengl}
 .  include "../../graphics/MesaLib/buildlink3.mk"
 .  include "../../graphics/glu/buildlink3.mk"
 .endif
