@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mtdev-1.1.5.tar.gz) = 346115a91b68652170d02d7b1c0722cf1cacf4eb
-RMD160 (mtdev-1.1.5.tar.gz) = 139be378fa925429815f6b1644c0b503abe7ec4c
-SHA512 (mtdev-1.1.5.tar.gz) = f59f8cda9b81e17253ff2da93a14b6f8e48361aff890dd5d1bb89ca385d713c212f961ed34fc5b866affd83013530a036736faca071ec9a424091979a12c9208
-Size (mtdev-1.1.5.tar.gz) = 335553 bytes
+SHA1 (mtdev-1.1.6.tar.gz) = c53499ba629074343eac5879a3065924a165f439
+RMD160 (mtdev-1.1.6.tar.gz) = 66a1deb9dc54016e2ad9e487658f3f02bbf3e643
+SHA512 (mtdev-1.1.6.tar.gz) = e643264baa880abfc31b53f8e8ed54fe1adea4bc110fab57d36be16caba84f970c09fc864244c64b0a76e85f5f021fd086c12f96badbd886da6ccf254ab678e9
+Size (mtdev-1.1.6.tar.gz) = 362376 bytes

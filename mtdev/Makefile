@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mtdev-1.1.5
+DISTNAME=	mtdev-1.1.6
 CATEGORIES=	devel
 MASTER_SITES=	http://bitmath.org/code/mtdev/
 
