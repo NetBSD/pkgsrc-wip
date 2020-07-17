@@ -1,1 +1,1 @@
-redis plugin for collectd
+redis plugins (redis, write_redis) for collectd
