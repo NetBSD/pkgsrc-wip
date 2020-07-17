@@ -4430,7 +4430,6 @@ SUBDIR+=	serendipity
 SUBDIR+=	service
 SUBDIR+=	seturgent
 SUBDIR+=	sfeed-git
-SUBDIR+=	sfeed_curses
 SUBDIR+=	sfeed_curses-git
 SUBDIR+=	sflphoned
 SUBDIR+=	sgmltools-lite
