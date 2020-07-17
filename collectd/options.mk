@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.collectd
 PKG_SUPPORTED_OPTIONS=	cpu df interface load memory syslog uptime
-PKG_SUGGESTED_OPTIONS+=	cpu df interface load memory syslog uptime
+PKG_SUGGESTED_OPTIONS=	cpu df interface load memory syslog uptime
 
 PKG_SUPPORTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
 PKG_SUPPORTED_OPTIONS.NetBSD+=	swap tcpconns users processes
