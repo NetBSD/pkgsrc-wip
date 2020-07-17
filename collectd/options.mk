@@ -2,7 +2,9 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.collectd
 PKG_SUPPORTED_OPTIONS=	cpu df interface load memory syslog uptime
+PKG_SUPPORTED_OPTIONS+=	multimeter ted
 PKG_SUGGESTED_OPTIONS=	cpu df interface load memory syslog uptime
+PKG_SUGGESTED_OPTIONS+=	multimeter ted
 
 PKG_SUPPORTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
 PKG_SUPPORTED_OPTIONS.NetBSD+=	swap tcpconns users processes
@@ -30,7 +32,8 @@ PLIST_VARS+=		apple-sensors battery contextswitch cpu entropy \
 			df disk		\
 			interface irq load netstat_udp \
 			memory nfs pf processes swap	\
-			syslog tcpconns uptime users zfs-arc zone
+			syslog tcpconns uptime users zfs-arc zone \
+			multimeter ted
 
 .for option in ${PLIST_VARS}
 .  if !empty(PKG_OPTIONS:M${option})

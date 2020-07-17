@@ -36,6 +36,7 @@ lib/collectd/match_value.la
 lib/collectd/mbmon.la
 lib/collectd/memcached.la
 ${PLIST.memory}lib/collectd/memory.la
+${PLIST.multimeter}lib/collectd/multimeter.la
 ${PLIST.netstat_udp}lib/collectd/netstat_udp.la
 ${PLIST.nfs}lib/collectd/nfs.la
 lib/collectd/notify_nagios.la
@@ -58,6 +59,7 @@ lib/collectd/target_set.la
 lib/collectd/target_v5upgrade.la
 ${PLIST.tcpconns}lib/collectd/tcpconns.la
 lib/collectd/teamspeak2.la
+${PLIST.ted}lib/collectd/ted.la
 lib/collectd/threshold.la
 lib/collectd/unixsock.la
 ${PLIST.uptime}lib/collectd/uptime.la
