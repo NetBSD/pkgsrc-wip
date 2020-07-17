@@ -1,6 +1,6 @@
 $NetBSD: patch-configure.ac,v 1.12 2020/03/19 06:26:26 rillig Exp $
 
-Add KERNEL_NETBSD, add entry and disk plugin for NetBSD,
+Add KERNEL_NETBSD, add entry and disk, nfs plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
 Also, the start of process support, but that's not yet finished.
 Correct tokyotyrant detection (add lib, not include, for -L).
@@ -42,15 +42,17 @@ Correct libupsclient detection (argument may be a searchable directory).
  plugin_nfs="no"
  plugin_numa="no"
  plugin_ovs_events="no"
-@@ -6229,6 +6231,7 @@
+@@ -6228,7 +6230,9 @@
+   plugin_disk="yes"
    plugin_entropy="yes"
    plugin_irq="yes"
++  plugin_nfs="yes"
    plugin_processes="yes"
 +  plugin_netstat_udp="yes"
  fi
  
  # Mac OS X devices
-@@ -6568,6 +6571,7 @@
+@@ -6568,6 +6572,7 @@
  AC_PLUGIN([mysql],               [$with_libmysql],          [MySQL statistics])
  AC_PLUGIN([netapp],              [$with_libnetapp],         [NetApp plugin])
  AC_PLUGIN([netlink],             [$with_libmnl],            [Enhanced Linux network statistics])
@@ -58,7 +60,7 @@ Correct libupsclient detection (argument may be a searchable directory).
  AC_PLUGIN([network],             [yes],                     [Network communication plugin])
  AC_PLUGIN([nfs],                 [$plugin_nfs],             [NFS statistics])
  AC_PLUGIN([nginx],               [$with_libcurl],           [nginx statistics])
-@@ -6987,6 +6991,7 @@
+@@ -6987,6 +6992,7 @@
  AC_MSG_RESULT([    mysql . . . . . . . . $enable_mysql])
  AC_MSG_RESULT([    netapp  . . . . . . . $enable_netapp])
  AC_MSG_RESULT([    netlink . . . . . . . $enable_netlink])

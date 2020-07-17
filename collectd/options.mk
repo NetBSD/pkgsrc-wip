@@ -8,6 +8,8 @@ PKG_SUPPORTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
 PKG_SUPPORTED_OPTIONS.NetBSD+=	swap tcpconns users processes
 PKG_SUGGESTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
 PKG_SUGGESTED_OPTIONS.NetBSD+=	swap tcpconns users processes
+PKG_SUPPORTED_OPTIONS.NetBSD+=	nfs
+PKG_SUGGESTED_OPTIONS.NetBSD+=	nfs
 
 PKG_SUPPORTED_OPTIONS.FreeBSD+=	contextswitch pf processes swap tcpconns zfs-arc
 PKG_SUGGESTED_OPTIONS.FreeBSD+=	contextswitch pf processes swap tcpconns zfs-arc
