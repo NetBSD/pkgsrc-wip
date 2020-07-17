@@ -57,11 +57,11 @@ BUILD_DEFS+=		VARBASE
 # Disable all libs support by default
 DISABLED_LIBS=		aquaero5 credis curl dbi esmtp ganglia gcrypt	\
 			iptc lvm2app memcached mnl modbus mongoc mysql	\
-			netsnmp notify oping owcapi pcap perl pq	\
+			netsnmp notify oping owcapi pcap perl pq python	\
 			rabbitmq routeros rrd sensors sigrok statgrab	\
 			tokyotyrant upsclient varnish xml2 xmms yajl
 CONFIGURE_ARGS+=	--with-java=no --with-mic=no --with-oracle=no	\
-			--with-perl-bindings=no --with-python=no	\
+			--with-perl-bindings=no 			\
 			--disable-all-plugins
 .for lib in ${DISABLED_LIBS}
 CONFIGURE_ARGS+=	--with-lib${lib}=no
