@@ -1,6 +1,6 @@
 $NetBSD: patch-configure.ac,v 1.12 2020/03/19 06:26:26 rillig Exp $
 
-Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
+Add KERNEL_NETBSD, add entry and disk plugin for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
 Also, the start of process support, but that's not yet finished.
 Correct tokyotyrant detection (add lib, not include, for -L).
