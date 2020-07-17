@@ -6,9 +6,9 @@ PKGNAME=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}${PGSQL_VERSION}/}
 PKGREVISION=		2
 COMMENT=		Statistics collection daemon - postgresql plugin
 
+.include "../../mk/pgsql.buildlink3.mk"
+COLLECTD_LIB.pq=	${PGSQL_PREFIX}
+
 .include "../../wip/collectd/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-libpq=${PGSQL_PREFIX}
-
-.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

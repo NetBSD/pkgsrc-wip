@@ -5,9 +5,9 @@ COLLECTD_PLUGINS=	redis write_redis
 
 COMMENT=		Statistics collection daemon - redis plugins
 
+.include "../../databases/hiredis/buildlink3.mk"
+COLLECTD_LIB.hiredis=	${BUILDLINK_PREFIX.hiredis}
+
 .include "../../wip/collectd/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-libhires=${BUILDLINK_PREFIX.hiredis}
-
-.include "../../databases/hiredis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

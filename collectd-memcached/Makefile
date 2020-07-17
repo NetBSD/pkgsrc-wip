@@ -6,9 +6,9 @@ COLLECTD_PLUGINS=	memcachec memcached
 COMMENT=		Statistics collection daemon - memcached plugins
 PKGREVISION=		2
 
+.include "../../devel/libmemcached/buildlink3.mk"
+COLLECTD_LIB.memcached=	${BUILDLINK_PREFIX.libmemcached}
+
 .include "../../wip/collectd/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-libmemcached=${BUILDLINK_PREFIX.libmemcached}
-
-.include "../../devel/libmemcached/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

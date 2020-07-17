@@ -5,14 +5,14 @@ COLLECTD_PACKAGE=	dns
 COMMENT=		Statistics collection daemon - dns plugin
 PKGREVISION=		3
 
-.include "../../wip/collectd/Makefile.common"
+.include "../../net/libpcap/buildlink3.mk"
+COLLECTD_LIB.pcap=	${BUILDLINK_PREFIX.libpcap}
 
-CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
+.include "../../wip/collectd/Makefile.common"
 
 # On NetBSD, built-in pcap lacks headers needed
 .if ${OPSYS} == "NetBSD"
 PREFER.libpcap=	pkgsrc
 .endif
 
-.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

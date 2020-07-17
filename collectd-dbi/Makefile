@@ -5,9 +5,9 @@ COLLECTD_PACKAGE=	dbi
 COMMENT=		Statistics collection daemon - dbi plugin
 PKGREVISION=		2
 
+.include "../../databases/libdbi/buildlink3.mk"
+COLLECTD_LIB.dbi=	${BUILDLINK_PREFIX.libdbi}
+
 .include "../../wip/collectd/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-libdbi=${BUILDLINK_PREFIX.libdbi}
-
-.include "../../databases/libdbi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
