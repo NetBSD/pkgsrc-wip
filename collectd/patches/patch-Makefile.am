@@ -1,10 +1,11 @@
 $NetBSD: patch-Makefile.am,v 1.3 2018/01/04 15:42:42 jperkin Exp $
 
-Use other data directory.
+Use other data directory, correct $< in explicit rule
+(https://github.com/collectd/collectd/issues/3313).
 
---- Makefile.am.orig	2017-11-18 09:03:27.326751649 +0000
-+++ Makefile.am
-@@ -165,7 +165,7 @@ AM_CPPFLAGS = \
+--- Makefile.am.orig	2017-11-18 10:03:27.000000000 +0100
++++ Makefile.am	2019-10-08 16:53:17.694282904 +0200
+@@ -165,7 +165,7 @@
  	-DPREFIX='"${prefix}"' \
  	-DCONFIGFILE='"${sysconfdir}/${PACKAGE_NAME}.conf"' \
  	-DLOCALSTATEDIR='"${localstatedir}"' \
@@ -13,7 +14,7 @@ Use other data directory.
  	-DPLUGINDIR='"${pkglibdir}"' \
  	-DPKGDATADIR='"${pkgdatadir}"'
  
-@@ -1205,6 +1205,12 @@ netlink_la_LDFLAGS = $(PLUGIN_LDFLAGS)
+@@ -1205,6 +1205,12 @@
  netlink_la_LIBADD = $(BUILD_WITH_LIBMNL_LIBS)
  endif
  
@@ -26,7 +27,7 @@ Use other data directory.
  if BUILD_PLUGIN_NETWORK
  pkglib_LTLIBRARIES += network.la
  network_la_SOURCES = \
-@@ -1942,6 +1948,8 @@ endif
+@@ -1942,6 +1948,8 @@
  if BUILD_PLUGIN_WRITE_PROMETHEUS
  BUILT_SOURCES += prometheus.pb-c.c prometheus.pb-c.h
  
@@ -35,7 +36,22 @@ Use other data directory.
  prometheus.pb-c.c prometheus.pb-c.h: $(srcdir)/proto/prometheus.proto
  	$(AM_V_PROTOC_C)$(PROTOC_C) -I$(srcdir)/proto --c_out=$(builddir) $(srcdir)/proto/prometheus.proto
  endif
-@@ -1964,7 +1972,7 @@ endif
+@@ -1952,19 +1960,19 @@
+ 
+ collectd.grpc.pb.cc: $(srcdir)/proto/collectd.proto $(srcdir)/proto/types.proto
+ 	$(V_PROTOC)$(PROTOC) -I$(srcdir)/proto \
+-		--grpc_out=$(builddir) --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN) $<
++		--grpc_out=$(builddir) --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN) $>
+ 
+ collectd.pb.cc: $(srcdir)/proto/collectd.proto $(srcdir)/proto/types.proto
+-	$(V_PROTOC)$(PROTOC) -I$(srcdir)/proto --cpp_out=$(builddir) $<
++	$(V_PROTOC)$(PROTOC) -I$(srcdir)/proto --cpp_out=$(builddir) $>
+ 
+ types.pb.cc: $(srcdir)/proto/types.proto
+-	$(V_PROTOC)$(PROTOC) -I$(srcdir)/proto --cpp_out=$(builddir) $<
++	$(V_PROTOC)$(PROTOC) -I$(srcdir)/proto --cpp_out=$(builddir) $>
+ endif
+ endif
  
  install-exec-hook:
  	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/run
