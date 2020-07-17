@@ -48,6 +48,10 @@ TEST_TARGET=	tests
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	CXXFLAGS=${CXXFLAGS:Q}
 MAKE_FLAGS+=	FFLAGS=${FFLAGS:Q}
+# Also set compilers explicitly, overriding Makefile.rule
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CXX=${CXX:Q}
+MAKE_FLAGS+=	FC=${FC:Q}
 
 # You may override the autodetected thread count limit.
 # Default is detected from build host.
@@ -89,22 +93,9 @@ BENCHMARK_ENV=	OMP_NUM_THREADS=${BENCHMARK_MAXTHREADS}
 MAKE_FLAGS+=	LIBNAMESUFFIX=openmp USE_OPENMP=1 NO_AFFINITY=1
 .endif
 
-SUBST_CLASSES+=		find
-SUBST_STAGE.find=	pre-build
-SUBST_SED.find+=	-e "s+%%FIND%%+${FIND}+"
-SUBST_SED.find+=	-e "s+%%XARGS%%+${XARGS}+"
-SUBST_FILES.find+=	${WRKSRC}/Makefile
-
-SUBST_CLASSES+=		compiler
-SUBST_STAGE.compiler=	pre-build
-SUBST_SED.compiler+=	-e "s+%%FC%%+"${FC:Q}"+"
-SUBST_SED.compiler+=	-e "s+%%CC%%+"${CC:Q}"+"
-SUBST_FILES.compiler+=	${WRKSRC}/Makefile.rule
-
 SUBST_CLASSES+=		arch
 SUBST_STAGE.arch=	pre-build
 SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+"
-SUBST_FILES.arch+=	${WRKSRC}/Makefile.rule
 SUBST_FILES.arch+=	${WRKSRC}/Makefile.tail
 SUBST_FILES.arch+=	${WRKSRC}/driver/level3/Makefile
 SUBST_FILES.arch+=	${WRKSRC}/driver/others/Makefile
@@ -119,17 +110,7 @@ SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/TESTING/MATGEN/Makefile
 SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/LAPACKE/src/Makefile
 SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/LAPACKE/utils/Makefile
 SUBST_FILES.arch+=	${WRKSRC}/reference/Makefile
-
-SUBST_CLASSES+=		system
-SUBST_STAGE.system=	pre-build
-SUBST_SED.system+=	-e "s+(ARCH)+(ARCH_)+"
-SUBST_SED.system+=	-e 's+%%LDFLAGS%%+'${LDFLAGS:Q}'+'
-SUBST_SED.system+=	-e 's+%%LOCALBASE%%+${PREFIX}+'
-SUBST_SED.system+=	-e 's+%%FIND%%+${FIND}+'
-SUBST_SED.system+=	-e 's+%%XARGS%%+${XARGS}+'
-SUBST_SED.system+=	-e 's+$${CROSS_SUFFIX}+${PREFIX}/bin/+'
-SUBST_SED.system+=	-e '/Clang.*OpenMP/g'
-SUBST_FILES.system+=	${WRKSRC}/Makefile.system
+SUBST_FILES.arch+=	${WRKSRC}/Makefile.system
 
 SUBST_CLASSES+=		threads
 SUBST_STAGE.threads=	pre-build
