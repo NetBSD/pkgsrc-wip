@@ -1,0 +1,46 @@
+$NetBSD: patch-Makefile.am,v 1.3 2018/01/04 15:42:42 jperkin Exp $
+
+Use other data directory.
+
+--- Makefile.am.orig	2017-11-18 09:03:27.326751649 +0000
++++ Makefile.am
+@@ -165,7 +165,7 @@ AM_CPPFLAGS = \
+ 	-DPREFIX='"${prefix}"' \
+ 	-DCONFIGFILE='"${sysconfdir}/${PACKAGE_NAME}.conf"' \
+ 	-DLOCALSTATEDIR='"${localstatedir}"' \
+-	-DPKGLOCALSTATEDIR='"${localstatedir}/lib/${PACKAGE_NAME}"' \
++	-DPKGLOCALSTATEDIR='"${localstatedir}/db/${PACKAGE_NAME}"' \
+ 	-DPLUGINDIR='"${pkglibdir}"' \
+ 	-DPKGDATADIR='"${pkgdatadir}"'
+ 
+@@ -1205,6 +1205,12 @@ netlink_la_LDFLAGS = $(PLUGIN_LDFLAGS)
+ netlink_la_LIBADD = $(BUILD_WITH_LIBMNL_LIBS)
+ endif
+ 
++if BUILD_PLUGIN_NETSTAT_UDP
++pkglib_LTLIBRARIES += netstat_udp.la
++netstat_udp_la_SOURCES = src/netstat_udp.c
++netstat_udp_la_LDFLAGS = $(PLUGIN_LDFLAGS)
++endif
++
+ if BUILD_PLUGIN_NETWORK
+ pkglib_LTLIBRARIES += network.la
+ network_la_SOURCES = \
+@@ -1942,6 +1948,8 @@ endif
+ if BUILD_PLUGIN_WRITE_PROMETHEUS
+ BUILT_SOURCES += prometheus.pb-c.c prometheus.pb-c.h
+ 
++src/write_prometheus.c: prometheus.pb-c.h
++
+ prometheus.pb-c.c prometheus.pb-c.h: $(srcdir)/proto/prometheus.proto
+ 	$(AM_V_PROTOC_C)$(PROTOC_C) -I$(srcdir)/proto --c_out=$(builddir) $(srcdir)/proto/prometheus.proto
+ endif
+@@ -1964,7 +1972,7 @@ endif
+ 
+ install-exec-hook:
+ 	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/run
+-	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/lib/$(PACKAGE_NAME)
++	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/db/$(PACKAGE_NAME)
+ 	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log
+ 	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
+ 	if test -e $(DESTDIR)$(sysconfdir)/collectd.conf; \

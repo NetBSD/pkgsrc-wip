@@ -1,0 +1,90 @@
+# $NetBSD: Makefile.common,v 1.24 2020/06/02 11:12:05 nia Exp $
+#
+# used by sysutils/collectd/Makefile
+# used by sysutils/collectd-amqp/Makefile
+# used by sysutils/collectd-curl/Makefile
+# used by sysutils/collectd-dbi/Makefile
+# used by sysutils/collectd-dns/Makefile
+# used by sysutils/collectd-memcached/Makefile
+# used by sysutils/collectd-mysql/Makefile
+# used by sysutils/collectd-network/Makefile
+# used by sysutils/collectd-notify-email/Makefile
+# used by sysutils/collectd-postgresql/Makefile
+# used by sysutils/collectd-riemann/Makefile
+# used by sysutils/collectd-rrdtool/Makefile
+# used by sysutils/collectd-snmp/Makefile
+# used by sysutils/collectd-write_prometheus/Makefile
+# used by sysutils/p5-collectd/Makefile
+# used by sysutils/py-collectd/Makefile
+
+DISTNAME=	collectd-5.8.0
+MASTER_SITES=	http://collectd.org/files/
+CATEGORIES=	sysutils
+EXTRACT_SUFX=	.tar.bz2
+EXTRACT_USING=	bsdtar
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://collectd.org/
+LICENSE=	gnu-gpl-v2
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		autoconf automake pkg-config
+USE_LANGUAGES=		c c99 c++
+
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/collectd/distinfo
+PATCHDIR=		${.CURDIR}/../../sysutils/collectd/patches
+
+.if !empty(COLLECTD_PACKAGE)
+PKGNAME?=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}/}
+
+DEPENDS+=		collectd>=${PKGVERSION_NOREV}:../../sysutils/collectd
+
+COLLECTD_PLUGINS?=	${COLLECTD_PACKAGE:S/-/_/}
+
+BUILD_TARGET=		${COLLECTD_PLUGINS:S/$/.la/}
+INSTALL_TARGET=		install-pkglibLTLIBRARIES
+.  for plugin in ${COLLECTD_PLUGINS}
+CONFIGURE_ARGS+=	--enable-${plugin}
+GENERATE_PLIST+=	${ECHO} "lib/collectd/${plugin}.la";
+.  endfor
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		VARBASE
+
+# Disable all libs support by default
+DISABLED_LIBS=		aquaero5 credis curl dbi esmtp ganglia gcrypt	\
+			iptc lvm2app memcached mnl modbus mongoc mysql	\
+			netsnmp notify oping owcapi pcap perl pq	\
+			rabbitmq routeros rrd sensors sigrok statgrab	\
+			tokyotyrant upsclient varnish xml2 xmms yajl
+CONFIGURE_ARGS+=	--with-java=no --with-mic=no --with-oracle=no	\
+			--with-perl-bindings=no --with-python=no	\
+			--disable-all-plugins
+.for lib in ${DISABLED_LIBS}
+CONFIGURE_ARGS+=	--with-lib${lib}=no
+.endfor
+CONFIGURE_ARGS+=	--disable-werror
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
+CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
+
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_getfsstat=no
+# aarch64 accidentally had this function for a bit.
+CONFIGURE_ARGS.NetBSD+=	c_cv_have_htonll=no
+
+CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
+
+SUBST_CLASSES+=		ver
+SUBST_MESSAGE.ver=	Fixing canonical version number
+SUBST_STAGE.ver=	pre-configure
+SUBST_FILES.ver=	configure.ac
+SUBST_SED.ver=		-e 's,m4_esyscmd(./version-gen.sh),${PKGVERSION_NOREV},'
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf
+
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
