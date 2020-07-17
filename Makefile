@@ -4923,7 +4923,6 @@ SUBDIR+=	wang-ttf
 SUBDIR+=	wargus
 SUBDIR+=	warsow
 SUBDIR+=	watch
-SUBDIR+=	wayland-protocols
 SUBDIR+=	wbox
 SUBDIR+=	weatherman
 SUBDIR+=	webbrowser
