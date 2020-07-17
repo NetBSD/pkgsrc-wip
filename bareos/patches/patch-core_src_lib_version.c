@@ -2,7 +2,7 @@ $NetBSD$
 
 	note pkgsrc compile origin
 
---- core/src/lib/version.c.orig	2020-06-22 14:19:42.675724493 +0000
+--- core/src/lib/version.c.orig	2020-04-16 08:31:41.000000000 +0000
 +++ core/src/lib/version.c
 @@ -48,18 +48,18 @@
  #endif

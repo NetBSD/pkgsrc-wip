@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (bareos-19.2.7.zip) = 25b07f234de7a2d51e8e2d96b4be07ffc22481c0
-RMD160 (bareos-19.2.7.zip) = a06461cbf4744b94f523a7144e966cf95f11a8ee
-SHA512 (bareos-19.2.7.zip) = d0bf5742e2e19cd340468a26e913a3cb6661f1ee4b4db5d93ac31499d1b67f0368fd651a274c33a9ee3acfea822124cd1021f25cb8303a7a9d63a548fb3223b8
-Size (bareos-19.2.7.zip) = 16666039 bytes
+SHA1 (bareos-19.2.8.zip) = a050236fa07f40368e47fe58d45ec953d1311d08
+RMD160 (bareos-19.2.8.zip) = 76f9580dd4b4633ca6cef174836002bfbb8fb404
+SHA512 (bareos-19.2.8.zip) = 2568e048b7844ae5bc6f39511f22b858fe5dd204762ea9687c2ee0ba7652eb9e2c633295dc2da9504cded59cd9008aced49b43d560baf0fb6881ab661c517044
+Size (bareos-19.2.8.zip) = 16672809 bytes
 SHA1 (patch-core_CMakeLists.txt) = a08c50bd2449120cb2c4161aa39a842eab0c230c
 SHA1 (patch-core_cmake_BareosCheckIncludes.cmake) = 8f2a88768acdbe9adf94939ae1dabd3edf40144b
 SHA1 (patch-core_cmake_BareosFindAllLibraries.cmake) = eb33f59f616a5d265a6371dcc028a3031b5dbab5
@@ -24,10 +24,12 @@ SHA1 (patch-core_src_dird_dird__conf.cc) = b2d619d164acfa8949e8d10d45972dbce7f3b
 SHA1 (patch-core_src_dird_migrate.cc) = 694f86a15f532f9c13c387f1617be79342ba6e84
 SHA1 (patch-core_src_dird_restore.cc) = ab2243457a788b963ab2dfc6b03046539ee5d06a
 SHA1 (patch-core_src_dird_verify.cc) = b4f346a62358bffc09d5247d1636e352a2318eb0
+SHA1 (patch-core_src_filed_accurate__lmdb.cc) = e373e5997a2fd659f63e3d4cb7b5ce4c43aa5792
 SHA1 (patch-core_src_findlib_acl.cc) = 79d47ae5f79e4e2629a0330787cc45b8347a42e2
 SHA1 (patch-core_src_findlib_find__one.cc) = 50eb6d289b7b2a7b33ee5828db31d03169833d9c
+SHA1 (patch-core_src_lib_mem__pool.cc) = 16b5adc4a5b2b4fd542b4d330e03283b8994a4a7
 SHA1 (patch-core_src_lib_scsi__lli.cc) = 09aa887d71009baa2ce2203c46c88a89097d6546
-SHA1 (patch-core_src_lib_version.c) = e5b54042969a6e2a9348abf0357730c3ba31b668
+SHA1 (patch-core_src_lib_version.c) = edfd88aed983ea3ce1ead6846707b5625ad5fc51
 SHA1 (patch-core_src_lmdb_mdb.c) = 70c76d7ecf610edb47afbb91f3c4d500d85583fe
 SHA1 (patch-core_src_plugins_stored_scsicrypto-sd.cc) = d59125fd445536e220140acf16e43605a4a98e9c
 SHA1 (patch-core_src_plugins_stored_scsitapealert-sd.cc) = 92ef75fbddb587957ec972480a87fe0f5b110111

@@ -3,7 +3,7 @@
 # used by wip/bareos-clientonly/Makefile
 
 GITHUB_PROJECT=	bareos
-VERSION=	19.2.7
+VERSION=	19.2.8
 GITHUB_TAG=	Release/${VERSION}
 
 DISTNAME=	bareos-${VERSION}
