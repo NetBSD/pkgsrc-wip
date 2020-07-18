@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.12.2
+DISTNAME=		gnunet-0.13.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
@@ -70,13 +70,6 @@ SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DI
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
 
-# But really I should fix this upstream
-SUBST_CLASSES+=			binsh
-SUBST_STAGE.binsh=		pre-configure
-SUBST_MESSAGE.binsh=		Fixing env sh to /bin/sh
-SUBST_FILES.binsh=		contrib/scripts/gnunet-bugreport
-SUBST_SED.binsh+=		-e 's,/usr/bin/env sh,/bin/sh,g'
-
 # All helpers have to be suid. fs helper must not be suid.
 # Some helpers and functionalities are only supported on
 # some Operating Systems so far.
@@ -108,6 +101,7 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../www/gnurl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"

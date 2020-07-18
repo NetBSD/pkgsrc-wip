@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (gnunet-0.12.2.tar.gz) = 4b032a11c498d0875b69a7b5c924f6f7668b76d8
-RMD160 (gnunet-0.12.2.tar.gz) = 3cc04391d67ebb9a07ca9a88baf602b5f9b4e66d
-SHA512 (gnunet-0.12.2.tar.gz) = 210a9f06679d32dbb399a056e7a20e411cbfacf7945a282bd7e63eb8bfd7a324815efc48caedff32894d0a3f7a4ba9d1e879e2e04db0222282399ae6fc065c7b
-Size (gnunet-0.12.2.tar.gz) = 7580872 bytes
+SHA1 (gnunet-0.13.0.tar.gz) = 4d0307fb4fcff09a75eb124e8505de1b59c0f0c4
+RMD160 (gnunet-0.13.0.tar.gz) = e11cb56ea2811950c97526a6c20ac275eb38bbfb
+SHA512 (gnunet-0.13.0.tar.gz) = 5cc81d61b1715c34457cc457f82dc60f55fc751fca58b3f4121920366f2f0129e3d52e6ffd2757456c63e14166c82d2e9b351b0e5e9d5ec2a21e8675c32bd7dc
+Size (gnunet-0.13.0.tar.gz) = 7588601 bytes
