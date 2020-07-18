@@ -317,6 +317,7 @@ lib/gnunet/libgnunet_plugin_transport_https_client.la
 lib/gnunet/libgnunet_plugin_transport_https_server.la
 lib/gnunet/libgnunet_plugin_transport_tcp.la
 lib/gnunet/libgnunet_plugin_transport_unix.la
+${PLIST.experimental}lib/gnunet/libgnunet_plugin_transport_udp.la
 ${PLIST.experimental}lib/libgnunetabd.la
 lib/libgnunetarm.la
 lib/libgnunetats.la
