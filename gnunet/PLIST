@@ -14,6 +14,7 @@ bin/gnunet-consensus-profiler
 ${PLIST.conversations}bin/gnunet-conversation
 ${PLIST.conversations}bin/gnunet-conversation-test
 bin/gnunet-core
+bin/gnunet-crypto-tvg
 bin/gnunet-datastore
 bin/gnunet-dht-get
 bin/gnunet-dht-monitor
@@ -24,6 +25,7 @@ bin/gnunet-ecc
 bin/gnunet-fs
 bin/gnunet-gns
 bin/gnunet-gns-proxy-setup-ca
+bin/gnunet-gnsrecord-tvg
 bin/gnunet-identity
 ${PLIST.perl}bin/gnunet-logread
 ${PLIST.perl}bin/gnunet-logread-ipc
@@ -41,6 +43,7 @@ ${PLIST.zbar}bin/gnunet-qr
 bin/gnunet-reclaim
 bin/gnunet-resolver
 bin/gnunet-revocation
+bin/gnunet-revocation-tvg
 ${PLIST.experimental}bin/gnunet-rps
 bin/gnunet-scalarproduct
 bin/gnunet-scrypt
@@ -72,6 +75,7 @@ include/gnunet/gnunet_bio_lib.h
 include/gnunet/gnunet_block_group_lib.h
 include/gnunet/gnunet_block_lib.h
 include/gnunet/gnunet_block_plugin.h
+include/gnunet/gnunet_buffer_lib.h
 include/gnunet/gnunet_cadet_service.h
 include/gnunet/gnunet_client_lib.h
 include/gnunet/gnunet_common.h
@@ -106,6 +110,7 @@ include/gnunet/gnunet_helper_lib.h
 include/gnunet/gnunet_identity_service.h
 include/gnunet/gnunet_json_lib.h
 include/gnunet/gnunet_load_lib.h
+include/gnunet/gnunet_mhd_compat.h
 include/gnunet/gnunet_microphone_lib.h
 include/gnunet/gnunet_mq_lib.h
 include/gnunet/gnunet_mst_lib.h
@@ -131,8 +136,8 @@ include/gnunet/gnunet_plugin_lib.h
 include/gnunet/gnunet_pq_lib.h
 include/gnunet/gnunet_program_lib.h
 include/gnunet/gnunet_protocols.h
-include/gnunet/gnunet_reclaim_attribute_lib.h
-include/gnunet/gnunet_reclaim_attribute_plugin.h
+include/gnunet/gnunet_reclaim_lib.h
+include/gnunet/gnunet_reclaim_plugin.h
 include/gnunet/gnunet_reclaim_service.h
 include/gnunet/gnunet_regex_service.h
 include/gnunet/gnunet_resolver_service.h
@@ -168,7 +173,6 @@ include/gnunet/gnunet_tun_lib.h
 include/gnunet/gnunet_util_lib.h
 include/gnunet/gnunet_vpn_service.h
 include/gnunet/platform.h
-${PLIST.doc}info/gnunet-tutorial.info
 ${PLIST.doc}info/gnunet.info
 ${PLIST.doc}info/images/daemon_lego_block.png
 ${PLIST.doc}info/images/daemon_lego_block.svg
@@ -296,7 +300,8 @@ lib/gnunet/libgnunet_plugin_namestore_flat.la
 ${PLIST.sqlite3}lib/gnunet/libgnunet_plugin_namestore_sqlite.la
 ${PLIST.experimental}lib/gnunet/libgnunet_plugin_peerstore_flat.la
 ${PLIST.sqlite3}lib/gnunet/libgnunet_plugin_peerstore_sqlite.la
-lib/gnunet/libgnunet_plugin_reclaim_attribute_gnuid.la
+lib/gnunet/libgnunet_plugin_reclaim_attestation_jwt.la
+lib/gnunet/libgnunet_plugin_reclaim_attribute_basic.la
 lib/gnunet/libgnunet_plugin_rest_config.la
 lib/gnunet/libgnunet_plugin_rest_copying.la
 lib/gnunet/libgnunet_plugin_rest_gns.la
@@ -311,7 +316,6 @@ lib/gnunet/libgnunet_plugin_transport_http_server.la
 lib/gnunet/libgnunet_plugin_transport_https_client.la
 lib/gnunet/libgnunet_plugin_transport_https_server.la
 lib/gnunet/libgnunet_plugin_transport_tcp.la
-lib/gnunet/libgnunet_plugin_transport_udp.la
 lib/gnunet/libgnunet_plugin_transport_unix.la
 ${PLIST.experimental}lib/libgnunetabd.la
 lib/libgnunetarm.la
@@ -346,7 +350,6 @@ lib/libgnunetnt.la
 lib/libgnunetpeerinfo.la
 lib/libgnunetpeerstore.la
 lib/libgnunetreclaim.la
-lib/libgnunetreclaimattribute.la
 lib/libgnunetregex.la
 lib/libgnunetregexblock.la
 lib/libgnunetrest.la

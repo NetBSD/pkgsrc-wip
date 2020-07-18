@@ -61,6 +61,7 @@ CONF_FILES+=		${FILESDIR}/gnunet_user.conf \
 
 FILES_SUBST+=		PKG_HOME=${GNUNET_DIR}
 
+# TODO: This should be an .in file, but how.
 SUBST_CLASSES+=			sysconfdir
 SUBST_STAGE.sysconfdir=		post-build
 SUBST_MESSAGE.sysconfdir=	Fixing paths in gnunet.conf
