@@ -1,15 +1,15 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.openblas
+PKG_OPTIONS_VAR=	PKG_OPTIONS.openblas
 # Choose dynamic target/processor choice at runtime or
 # fixed build with build host CPU.
-PKG_SUPPORTED_OPTIONS= dynamic
-PKG_SUGGESTED_OPTIONS= dynamic
+PKG_SUPPORTED_OPTIONS=	dynamic-arch
+PKG_SUGGESTED_OPTIONS=	dynamic-arch
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mdynamic)
+.if !empty(PKG_OPTIONS:Mdynamic-arch)
 MAKE_FLAGS+=	DYNAMIC_ARCH=1
 .else
 MAKE_FLAGS+=	DYNAMIC_ARCH=0

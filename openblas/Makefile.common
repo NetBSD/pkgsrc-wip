@@ -8,12 +8,11 @@
 # OPENBLAS_VARIANT = (openblas|openblas_pthread|openblas_openmp)
 # being set.
 
-PORTVERSION=	0.3.7
-DISTNAME=	OpenBLAS-${PORTVERSION}
-PKGNAME=	${OPENBLAS_VARIANT}-${PORTVERSION}
+DISTNAME=	OpenBLAS-0.3.7
+PKGNAME=	${OPENBLAS_VARIANT}-0.3.7
 # ThOr: I do not like that. Can we rather rename the benchmark files
 # to be unique?
-DIST_SUBDIR=	openblas
+DIST_SUBDIR=	openblas-0.3.7
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xianyi/} \
 		http://www.netlib.org/lapack/timing/
@@ -21,7 +20,7 @@ DISTFILES=	${DISTNAME}.tar.gz ${LARGE_FILE} ${TIMING_FILE}
 LARGE_FILE=	large.tgz
 TIMING_FILE=	timing.tgz
 GITHUB_PROJECT=	OpenBLAS
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_TAG=	v0.3.7
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/openblas/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/openblas/patches
@@ -96,27 +95,27 @@ MAKE_FLAGS+=	LIBNAMESUFFIX=openmp USE_OPENMP=1 NO_AFFINITY=1
 SUBST_CLASSES+=		arch
 SUBST_STAGE.arch=	pre-build
 SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+"
-SUBST_FILES.arch+=	${WRKSRC}/Makefile.tail
-SUBST_FILES.arch+=	${WRKSRC}/driver/level3/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/driver/others/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/exports/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/interface/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/kernel/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/kernel/Makefile.L3
-SUBST_FILES.arch+=	${WRKSRC}/lapack/laswp/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/SRC/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/SRC/VARIANTS/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/TESTING/MATGEN/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/LAPACKE/src/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/lapack-netlib/LAPACKE/utils/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/reference/Makefile
-SUBST_FILES.arch+=	${WRKSRC}/Makefile.system
+SUBST_FILES.arch+=	Makefile.tail
+SUBST_FILES.arch+=	driver/level3/Makefile
+SUBST_FILES.arch+=	driver/others/Makefile
+SUBST_FILES.arch+=	exports/Makefile
+SUBST_FILES.arch+=	interface/Makefile
+SUBST_FILES.arch+=	kernel/Makefile
+SUBST_FILES.arch+=	kernel/Makefile.L3
+SUBST_FILES.arch+=	lapack/laswp/Makefile
+SUBST_FILES.arch+=	lapack-netlib/SRC/Makefile
+SUBST_FILES.arch+=	lapack-netlib/SRC/VARIANTS/Makefile
+SUBST_FILES.arch+=	lapack-netlib/TESTING/MATGEN/Makefile
+SUBST_FILES.arch+=	lapack-netlib/LAPACKE/src/Makefile
+SUBST_FILES.arch+=	lapack-netlib/LAPACKE/utils/Makefile
+SUBST_FILES.arch+=	reference/Makefile
+SUBST_FILES.arch+=	Makefile.system
 
 SUBST_CLASSES+=		threads
 SUBST_STAGE.threads=	pre-build
 SUBST_SED.threads+=	-e "s+OPENBLAS_NUM_THREADS+OMP_NUM_THREADS+g"
-SUBST_FILES.threads+=	${WRKSRC}/test/Makefile
-SUBST_FILES.threads+=	${WRKSRC}/ctest/Makefile
+SUBST_FILES.threads+=	test/Makefile
+SUBST_FILES.threads+=	ctest/Makefile
 
 # Fix up pkgconfig file installation.
 SUBST_CLASSES+=		pc
@@ -139,4 +138,3 @@ benchmark: build
 	  ${BENCHMARK_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
 
 .include "options.mk"
-.include "../../mk/bsd.pkg.mk"

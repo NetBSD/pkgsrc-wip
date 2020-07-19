@@ -1,17 +1,17 @@
 $NetBSD$
 
-SHA1 (openblas/OpenBLAS-0.3.7.tar.gz) = 6a79b36d1bf73584a513139806d226f9189d621e
-RMD160 (openblas/OpenBLAS-0.3.7.tar.gz) = 72103fa62efaa9ab77f80f9ae70b1417fa6f2122
-SHA512 (openblas/OpenBLAS-0.3.7.tar.gz) = 9c4898301c675471bbce2bb99b6bbe7c90724784fac06504416d4bd5da3cd4488f727b0a118c9a38ea342daac2af9e32597a847004241cc57de693b58b856262
-Size (openblas/OpenBLAS-0.3.7.tar.gz) = 11986592 bytes
-SHA1 (openblas/large.tgz) = a689e5b180595b40c5719b0f358b31b15b57a2db
-RMD160 (openblas/large.tgz) = 8010ff4002ef42cf22a9ee9345011d68fc27d855
-SHA512 (openblas/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
-Size (openblas/large.tgz) = 2595 bytes
-SHA1 (openblas/timing.tgz) = fd47fc3f26d142a791df51e4a422a49662507252
-RMD160 (openblas/timing.tgz) = f0fe220e7ab611d4db8d8cab960361955e2ab093
-SHA512 (openblas/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
-Size (openblas/timing.tgz) = 1059485 bytes
+SHA1 (openblas-0.3.7/OpenBLAS-0.3.7.tar.gz) = 6a79b36d1bf73584a513139806d226f9189d621e
+RMD160 (openblas-0.3.7/OpenBLAS-0.3.7.tar.gz) = 72103fa62efaa9ab77f80f9ae70b1417fa6f2122
+SHA512 (openblas-0.3.7/OpenBLAS-0.3.7.tar.gz) = 9c4898301c675471bbce2bb99b6bbe7c90724784fac06504416d4bd5da3cd4488f727b0a118c9a38ea342daac2af9e32597a847004241cc57de693b58b856262
+Size (openblas-0.3.7/OpenBLAS-0.3.7.tar.gz) = 11986592 bytes
+SHA1 (openblas-0.3.7/large.tgz) = a689e5b180595b40c5719b0f358b31b15b57a2db
+RMD160 (openblas-0.3.7/large.tgz) = 8010ff4002ef42cf22a9ee9345011d68fc27d855
+SHA512 (openblas-0.3.7/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
+Size (openblas-0.3.7/large.tgz) = 2595 bytes
+SHA1 (openblas-0.3.7/timing.tgz) = fd47fc3f26d142a791df51e4a422a49662507252
+RMD160 (openblas-0.3.7/timing.tgz) = f0fe220e7ab611d4db8d8cab960361955e2ab093
+SHA512 (openblas-0.3.7/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
+Size (openblas-0.3.7/timing.tgz) = 1059485 bytes
 SHA1 (patch-Makefile) = 6029076c34765e53a26617fb4bd36b56ba413f1b
 SHA1 (patch-Makefile.install) = 08c80677f8040623eaf5277cf92b5f5969fb4a07
 SHA1 (patch-Makefile.system) = d9dec776fb0d2919850506f682f3623b68751c90
