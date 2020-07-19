@@ -1928,6 +1928,7 @@ share/twintk/terminfo/t/trs16
 share/twintk/terminfo/t/trs2
 share/twintk/terminfo/t/trs80II
 share/twintk/terminfo/t/trsII
+share/twintk/terminfo/t/truecolor
 share/twintk/terminfo/t/ts-1
 share/twintk/terminfo/t/ts-1p
 share/twintk/terminfo/t/ts1
