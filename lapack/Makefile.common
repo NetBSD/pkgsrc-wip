@@ -1,9 +1,10 @@
 # $NetBSD$
+# used by wip/blas/Makefile
 # used by wip/cblas/Makefile
 # used by wip/lapacke/Makefile
 # used by wip/lapack/Makefile
 
-# Common Makefile for packages derived from the Netlib LAPACK sources.
+# Common Makefile for packages derived from the Netlib BLAS/LAPACK sources.
 # Package Makefile sets LAPACK_COMPONENT and LAPACK_COMPONENT_CMAKE_ARGS to
 # choose the library to install.
 # LAPACK_COMPONENT can be "lapack", "lapacke", or "cblas"
@@ -22,12 +23,12 @@ LICENSE=	modified-bsd
 PATCHDIR=	${.CURDIR}/../../wip/lapack/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/lapack/distinfo
 
-USE_LANGUAGES=		c fortran
-USE_CMAKE=		yes
+USE_LANGUAGES=	c fortran
+USE_CMAKE=	yes
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
+WRKSRC=		${WRKDIR}/${DISTNAME}
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	${WRKSRC}
 
 # Note: We patch the build to install both static and
 # shared libraries.
@@ -39,4 +40,4 @@ CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
 .include "../../wip/lapack/version.mk"
 
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}/build
+	${RUN} ${MKDIR} ${WRKSRC}/build
