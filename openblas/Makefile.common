@@ -8,11 +8,11 @@
 # OPENBLAS_VARIANT = (openblas|openblas_pthread|openblas_openmp)
 # being set.
 
-DISTNAME=	OpenBLAS-0.3.7
-PKGNAME=	${OPENBLAS_VARIANT}-0.3.7
+DISTNAME=	OpenBLAS-${OPENBLAS_VERSION}
+PKGNAME=	${OPENBLAS_VARIANT}-${OPENBLAS_VERSION}
 # ThOr: I do not like that. Can we rather rename the benchmark files
 # to be unique?
-DIST_SUBDIR=	openblas-0.3.7
+DIST_SUBDIR=	openblas-${OPENBLAS_VERSION}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xianyi/} \
 		http://www.netlib.org/lapack/timing/
@@ -20,7 +20,7 @@ DISTFILES=	${DISTNAME}.tar.gz ${LARGE_FILE} ${TIMING_FILE}
 LARGE_FILE=	large.tgz
 TIMING_FILE=	timing.tgz
 GITHUB_PROJECT=	OpenBLAS
-GITHUB_TAG=	v0.3.7
+GITHUB_TAG=	v${OPENBLAS_VERSION}
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/openblas/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/openblas/patches
@@ -136,5 +136,7 @@ benchmark: build
 	  ${MAKE_PROGRAM} ${MAKE_FLAGS} hpl)
 	(cd ${WRKSRC}/benchmark && ${SETENV} ${MAKE_ENV} \
 	  ${BENCHMARK_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
+
+.include "../../wip/openblas/version.mk"
 
 .include "options.mk"
