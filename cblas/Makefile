@@ -11,3 +11,4 @@ LAPACK_COMPONENT_CMAKE_ARGS=	\
 
 .include "../../wip/mk/blas.buildlink3.mk"
 .include "../../wip/lapack/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

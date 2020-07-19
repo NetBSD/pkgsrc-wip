@@ -14,5 +14,5 @@ LAPACK_COMPONENT_CMAKE_ARGS= \
 # their own LAPACK, hence cblas and lapacke packages use
 # mk/blas.buildlink3.mk instead.
 .include	"../../wip/blas/buildlink3.mk"
-
 .include	"../../wip/lapack/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

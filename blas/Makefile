@@ -7,3 +7,4 @@ LAPACK_COMPONENT_CMAKE_ARGS=	\
 	-DCBLAS=OFF -DLAPACKE=OFF -DLAPACK=OFF
 
 .include "../../wip/lapack/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

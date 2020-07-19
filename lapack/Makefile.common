@@ -12,6 +12,7 @@ DISTNAME=	lapack-${NETLIB_BLAS_VERSION}
 PKGNAME=	${LAPACK_COMPONENT}-${NETLIB_BLAS_VERSION}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Reference-LAPACK/}
+GITHUB_PROJECT=	lapack
 GITHUB_TAG=	v${NETLIB_BLAS_VERSION}
 
 HOMEPAGE=	https://www.netlib.org/lapack/
@@ -39,5 +40,3 @@ CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
 
 post-extract:
 	${RUN} mkdir -p ${WRKSRC}/build
-
-.include "../../mk/bsd.pkg.mk"
