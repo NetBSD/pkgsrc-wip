@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=haikarainen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/haikarainen/light/
 COMMENT=	Control backlights (and other hardware lights) under Linux
 LICENSE=	gnu-gpl-v3
