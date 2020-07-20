@@ -4,7 +4,7 @@ DISTNAME=	mruby-2.1.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mruby/}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mruby.org/
 COMMENT=	Lightweight implementation of the Ruby language
 LICENSE=	mit
