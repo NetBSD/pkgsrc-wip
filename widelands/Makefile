@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++11
 
 # C++11
