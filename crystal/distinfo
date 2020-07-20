@@ -1,0 +1,35 @@
+$NetBSD$
+
+SHA1 (crystal-0.34.0-i386-linux-gnu.o.xz) = 8adf4ee2c0c2c0d630b2d5e046270874c9d46b2c
+RMD160 (crystal-0.34.0-i386-linux-gnu.o.xz) = 25534804617110243a3dea1ddda8efd5674ac970
+SHA512 (crystal-0.34.0-i386-linux-gnu.o.xz) = f61e7f444cacb007d61bf0d8b02f7d37799be37d9fc6b6ef20ba4b2ba5c7fd21646b9a59c4e2adbe0bed2488656ebbbb5de945837bbcb055bfc8f5cce816c300
+Size (crystal-0.34.0-i386-linux-gnu.o.xz) = 5981280 bytes
+SHA1 (crystal-0.34.0-i386-linux-musl.o.xz) = a4219b4fdb203142f1cde327ba2d7cffb281b002
+RMD160 (crystal-0.34.0-i386-linux-musl.o.xz) = 194549c3bb45c512228b0cae7e4c13b3c1867ff9
+SHA512 (crystal-0.34.0-i386-linux-musl.o.xz) = 04f59d8685b3beb9c016c4b35d5df18752e62c322795efa01fcebf7e99e66fb1494685ace2d322e4cd10a3c5b6ca128ce96c6bcacfd3fb11d81e61f9952920d0
+Size (crystal-0.34.0-i386-linux-musl.o.xz) = 5982556 bytes
+SHA1 (crystal-0.34.0-x86_64-darwin.o.xz) = d08dea07a2c6c02f2e5e4f9d1150ff884b6bfc7a
+RMD160 (crystal-0.34.0-x86_64-darwin.o.xz) = d0f5be7d9b5803f199f4ddff7188cd9d43c9d807
+SHA512 (crystal-0.34.0-x86_64-darwin.o.xz) = 8248ca539c981721d5ea073eb7e5c35cdbfff1a50ee04d529c0254ca48d356184223a0ff6ef9c8c52bbd1449ebc5bfe5de78325c60b39472a931b667c5f3bc8a
+Size (crystal-0.34.0-x86_64-darwin.o.xz) = 5093296 bytes
+SHA1 (crystal-0.34.0-x86_64-freebsd.o.xz) = 8c2ee3f754fcfa27e412752df67131a3793b355a
+RMD160 (crystal-0.34.0-x86_64-freebsd.o.xz) = 60eb5727a2cae6dc0405378f58299e2ebffa854a
+SHA512 (crystal-0.34.0-x86_64-freebsd.o.xz) = e5398d9c5e62f35c53c50626df4c395a76a96546496d144895aad6433f381012ba69a25c591aff9e0906c925c5280d379baa6b3e1ffd4cda7de6c86487f34d38
+Size (crystal-0.34.0-x86_64-freebsd.o.xz) = 5472288 bytes
+SHA1 (crystal-0.34.0-x86_64-linux-gnu.o.xz) = 105bae3670169fe323a69dcbfb25266c60b9ab20
+RMD160 (crystal-0.34.0-x86_64-linux-gnu.o.xz) = 3f5ccdf6056c221daa898dfa7a45562f17654a08
+SHA512 (crystal-0.34.0-x86_64-linux-gnu.o.xz) = c7277fa9a79fe529b93bbb21fed4338ea39e6bdfec70dc3e1ade689e5c8964c2b7f865587ebb874f17c76ff2ba004f651b5b32ceaa6b42455ef0338a97e7b1c1
+Size (crystal-0.34.0-x86_64-linux-gnu.o.xz) = 5468252 bytes
+SHA1 (crystal-0.34.0-x86_64-linux-musl.o.xz) = 658786696ed60c864ac76e7805aa3d920222f13c
+RMD160 (crystal-0.34.0-x86_64-linux-musl.o.xz) = 42cb74982acec786d4e3b5997cd7918c1235c18a
+SHA512 (crystal-0.34.0-x86_64-linux-musl.o.xz) = 268ebfcb9a7e99d58d6964fd100a1b3e26b15d19fec0385269a35d32dc14a980be218e32919d909d87be9d08a99ba1c10eca1dc9528fd7720d9fb117d7c5da38
+Size (crystal-0.34.0-x86_64-linux-musl.o.xz) = 5468232 bytes
+SHA1 (crystal-0.34.0-x86_64-netbsd.o.xz) = ff593e4096d9754c8d8d3847cd939d5a73d59916
+RMD160 (crystal-0.34.0-x86_64-netbsd.o.xz) = 5c484616a9fbfb930df0b2b5a5c72dee129e574d
+SHA512 (crystal-0.34.0-x86_64-netbsd.o.xz) = b2fd639f87e9a2b1d21c0d228e4bef9fc377bf75b3c632c648a334317c9dc4a24144e18192620a70b9ed5116f537e760e24bcc203429e994dc54eb32f140d03c
+Size (crystal-0.34.0-x86_64-netbsd.o.xz) = 5464816 bytes
+SHA1 (crystal-0.35.0-00380c0038aae81be22e8128d5a092d66b2fdffb.tar.gz) = 3354f4e2146054cd61aebe05e46d16836266164b
+RMD160 (crystal-0.35.0-00380c0038aae81be22e8128d5a092d66b2fdffb.tar.gz) = 22c4adbbd2712042dd0c659870e2ac55b7c8f56c
+SHA512 (crystal-0.35.0-00380c0038aae81be22e8128d5a092d66b2fdffb.tar.gz) = 3c1a2dde43506f5d5446ed9c9aeb142d7e636c4aa49f7352f4abe16ff05398b666477fe81b99c4990adad68b7ceb9371d879eccc57f1254cd8f104cf7c0bde9b
+Size (crystal-0.35.0-00380c0038aae81be22e8128d5a092d66b2fdffb.tar.gz) = 2346211 bytes
+SHA1 (patch-src_compiler_crystal_codegen_link.cr) = 3178a9fa01b82bc450d1b49f74ada40968ad7ff5

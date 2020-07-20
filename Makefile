@@ -518,6 +518,7 @@ SUBDIR+=	crossroads-io
 SUBDIR+=	crrcsim
 SUBDIR+=	crust-firmware
 SUBDIR+=	cryptcat
+SUBDIR+=	crystal
 SUBDIR+=	crystal-bin
 SUBDIR+=	csmith
 SUBDIR+=	csoap
