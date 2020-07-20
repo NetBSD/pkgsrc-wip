@@ -5,5 +5,5 @@ games/widelands: Update to 21
 - Undocumented patch for file "categorized_item_selection_menu.h" removed
   (syntax of source code has changed)
 
-List of upstream is too long to quote, see:
+List of upstream changes is too long to quote, see:
 https://www.widelands.org/changelog/
