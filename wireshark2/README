@@ -1,0 +1,6 @@
+net/wireshark (now based on the 3.x line) requires Qt 5 for its GUI.
+The Qt 5 based GUI may be unusable slow if you use wireshark with the
+X11 DISPLAY redirected via network.
+
+This package is based on the 2.x line that can be compiled with a
+GTK 3 based GUI.
