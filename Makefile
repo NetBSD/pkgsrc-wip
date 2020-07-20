@@ -4937,6 +4937,7 @@ SUBDIR+=	which
 SUBDIR+=	why
 SUBDIR+=	why3
 SUBDIR+=	wicd
+SUBDIR+=	widelands
 SUBDIR+=	will-it-scale-git
 SUBDIR+=	wine64
 SUBDIR+=	wine64-dev

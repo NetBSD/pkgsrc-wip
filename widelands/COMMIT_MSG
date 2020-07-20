@@ -1,0 +1,9 @@
+games/widelands: Update to 21
+
+- Explicitly defined WRKSRC (because source archive name has changed)
+- Patches refactored to apply without fuzz
+- Undocumented patch for file "categorized_item_selection_menu.h" removed
+  (syntax of source code has changed)
+
+List of upstream is too long to quote, see:
+https://www.widelands.org/changelog/

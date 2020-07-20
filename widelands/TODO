@@ -1,0 +1,18 @@
+Build on NetBSD 9 fails with:
+[...]
+[ 79%] Building CXX object src/ui_fsmenu/CMakeFiles/ui_fsmenu_network.dir/netsetup_lan.cc.o
+In file included from /usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/network/netclient.h:25:0,
+                 from /usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/network/internet_gaming.h:26,
+                 from /usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/ui_fsmenu/internet_lobby.h:23,
+                 from /usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/ui_fsmenu/internet_lobby.cc:20:
+/usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/network/bufferedconnection.h:313:7: error: 'map' in namespace 'std' does not name a template type
+  std::map<uint8_t, std::queue<std::vector<uint8_t>>> buffers_to_send_;
+       ^~~
+/usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/network/bufferedconnection.h: In member function 'void BufferedConnection::send(NetPriority, const Targs& ...)':
+/usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/network/bufferedconnection.h:221:3: error: 'buffers_to_send_' was not declared in this scope
+   buffers_to_send_[priority].push(v);
+   ^~~~~~~~~~~~~~~~
+/usr/pkgsrc/work/wip/widelands/work/widelands-build21/src/network/bufferedconnection.h:221:3: note: suggested alternative: 'mutex_send_'
+   buffers_to_send_[priority].push(v);
+   ^~~~~~~~~~~~~~~~
+   mutex_send_
