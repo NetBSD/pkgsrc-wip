@@ -2677,6 +2677,7 @@ SUBDIR+=	p5-Net-Twitter-Lite
 SUBDIR+=	p5-Net-UPnP
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
+SUBDIR+=	p5-ODF-lpOD
 SUBDIR+=	p5-OSSP-uuid
 SUBDIR+=	p5-OptArgs
 SUBDIR+=	p5-PDL
