@@ -207,7 +207,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/completion.zsh \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_crystal
 	cd ${WRKSRC}/src && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/lib/crystal
-	${FIND} ${DESTDIR}${PREFIX}/lib/crystal -name '*.o' -or -name '*.a' -exec rm -f '{}' ';'
+	${FIND} ${DESTDIR}${PREFIX}/lib/crystal \
+		-name '*.o' -or -name '*.a' -or -name '*.orig' \
+		-exec rm -f '{}' ';'
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
