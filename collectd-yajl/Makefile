@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v $
 
 COLLECTD_PACKAGE=	yajl
-COLLECTD_PLUGINS=	ceph log_logstash
+COLLECTD_PLUGINS=	ceph log_logstash sysevent
 
 COMMENT=		Statistics collection daemon - YAJL-based plugins
 

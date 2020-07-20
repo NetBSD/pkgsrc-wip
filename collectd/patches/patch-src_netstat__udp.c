@@ -28,7 +28,7 @@ Useful for busyish DNS name servers.
 + **/
 +
 +#include "collectd.h"
-+#include "common.h"
++#include "utils/common/common.h"
 +#include "plugin.h"
 +
 +#if !defined(KERNEL_NETBSD)

@@ -13,6 +13,7 @@ lib/collectd/aggregation.la
 lib/collectd/apcups.la
 ${PLIST.apple-sensors}lib/collectd/apple_sensors.la
 ${PLIST.battery}lib/collectd/battery.la
+lib/collectd/check_uptime.la
 lib/collectd/chrony.la
 ${PLIST.contextswitch}lib/collectd/contextswitch.la
 ${PLIST.cpu}lib/collectd/cpu.la
@@ -28,6 +29,7 @@ ${PLIST.interface}lib/collectd/interface.la
 ${PLIST.irq}lib/collectd/irq.la
 ${PLIST.load}lib/collectd/load.la
 lib/collectd/logfile.la
+lib/collectd/logparser.la
 lib/collectd/match_empty_counter.la
 lib/collectd/match_hashed.la
 lib/collectd/match_regex.la
@@ -66,8 +68,10 @@ ${PLIST.uptime}lib/collectd/uptime.la
 ${PLIST.users}lib/collectd/users.la
 lib/collectd/uuid.la
 lib/collectd/write_graphite.la
+lib/collectd/write_influxdb_udp.la
 lib/collectd/write_log.la
 lib/collectd/write_sensu.la
+lib/collectd/write_syslog.la
 lib/collectd/write_tsdb.la
 ${PLIST.zfs-arc}lib/collectd/zfs_arc.la
 ${PLIST.zone}lib/collectd/zone.la

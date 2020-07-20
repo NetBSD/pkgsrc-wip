@@ -34,7 +34,7 @@
 # used by wip/p5-collectd/Makefile
 # used by wip/py-collectd/Makefile
 
-DISTNAME=	collectd-5.8.0
+DISTNAME=	collectd-5.11.0
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
@@ -73,14 +73,14 @@ BUILD_DEFS+=		VARBASE
 
 # special case for grpc++ below
 COLLECTD_LIBS=		aquaero5 hiredis curl dbi esmtp ganglia gcrypt	\
-			iptc lvm2app memcached mnl modbus mongoc mysql	\
-			netsnmp oping owcapi pcap perl pq python	\
+			iptc memcached mnl modbus mongoc mysql	\
+			netsnmp oping owcapi pcap perl pq python \
 			rabbitmq routeros rrd sensors statgrab	\
 			tokyotyrant upsclient varnish xmms yajl
-COLLECTD_LIBS+=		atasmart dpdk gps iptc jevents ldap microhttpd mosquitto netapp netsnmpagent pqos protobuf protobuf-c rdkafka udev xenctrl
+COLLECTD_LIBS+=		atasmart dpdk gps iptc jansson jevents ldap microhttpd mosquitto netapp netsnmpagent pqos protobuf protobuf-c qpid-proton rdkafka ssl slurm udev xenctrl
 
-CONFIGURE_ARGS+=	--with-java=no --with-mic=no --with-oracle=no	\
-			--with-perl-bindings=no 			\
+CONFIGURE_ARGS+=	--with-cuda=no --with-java=no --with-mic=no --with-oracle=no	\
+			--with-perl-bindings=no 	\
 			--disable-all-plugins
 
 .for lib in ${COLLECTD_LIBS}
