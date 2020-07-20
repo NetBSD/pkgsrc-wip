@@ -4,7 +4,7 @@ DISTNAME=	nsnake-3.0.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnake/GNU-Linux/}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nsnake.sourceforge.net/
 COMMENT=	Classic snake game on the terminal
 LICENSE=	gnu-gpl-v3
