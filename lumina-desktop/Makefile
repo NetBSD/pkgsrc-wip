@@ -10,7 +10,6 @@ HOMEPAGE=	https://lumina-desktop.org/
 COMMENT=	Lightweight desktop for Unix-like operating systems
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/lumina-1.6.0
 USE_LANGUAGES=	c c++
 
 USE_LIBTOOL=	yes
@@ -22,12 +21,10 @@ CONF_FILES+=	${EGDIR}/luminaDesktop.conf ${PKG_SYSCONFDIR}/luminaDesktop.conf
 
 MAKE_ENV+=	LFLAGS=${LDFLAGS:Q}
 
-CONFIGURE_ARGS+=	--WITH_I18N
-
 do-configure:
 	cd ${WRKSRC} && \
 	${SETENV} ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake PREFIX=${PREFIX}
+	${QTDIR}/bin/qmake PREFIX=${PREFIX} LIBPREFIX=${PREFIX}lib CONFIG+="configure WITH_I18N" ${EXTRA}
 
 pre-install:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
