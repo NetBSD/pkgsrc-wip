@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	zenity-3.18.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/3.18/}
 EXTRACT_SUFX=	.tar.xz
@@ -34,5 +34,4 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
