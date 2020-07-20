@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	starfighter-2.2.1
+DISTNAME=	starfighter-2.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pr-starfighter/}
-GITHUB_TAG=	v2.2.1
+GITHUB_TAG=	v2.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pr-starfighter.github.io/
