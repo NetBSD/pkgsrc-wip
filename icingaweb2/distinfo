@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (icingaweb2-2.6.2.tar.gz) = 03c1d94bf41f7b448c8ce1187fb4127331605772
+RMD160 (icingaweb2-2.6.2.tar.gz) = 3138805cce52cacf7314d21c2060cb0d4b5c4c0a
+SHA512 (icingaweb2-2.6.2.tar.gz) = f5fffbec237b892dbcfeee75a23ba26005cad9b4a1505a4d500bcbd16a8fa29125ed255ee320d3efcd8e43dcfb835244234a5607c562dd8bebe871d1a356b520
+Size (icingaweb2-2.6.2.tar.gz) = 8171965 bytes
+SHA1 (patch-library_Icinga_Application_webrouter.php) = f055902578f257d1b3a9a471116bb7012213d257
