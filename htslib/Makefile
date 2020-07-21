@@ -15,8 +15,7 @@ CONFIGURE_ARGS+=	--enable-libcurl
 PKGCONFIG_OVERRIDE=	htslib.pc.in
 TEST_TARGET=		test
 
-REPLACE_PERL+=		test/compare_sam.pl
-REPLACE_PERL+=		test/test.pl
+REPLACE_PERL+=		test/*.pl
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
