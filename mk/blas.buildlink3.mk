@@ -20,7 +20,7 @@
 #  Typically set in mk.conf.
 #
 #  Possible: one or more of netlib, openblas, openblas_pthread,
-#    openblas_openmp, and accelerate.framework
+#    openblas_openmp, and Apple's accelerate.framework
 #    (to come: Intel MKL, other external optimized builds)
 #
 #  Default: All currently supported implementations (${_BLAS_TYPES})
