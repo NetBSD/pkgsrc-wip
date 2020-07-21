@@ -9,7 +9,7 @@ HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating next-generation sequencing data
 LICENSE=	mit
 
-USE_TOOLS+=		autoconf automake autoreconf gmake perl
+USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-htslib=system
 TEST_TARGET=		test
