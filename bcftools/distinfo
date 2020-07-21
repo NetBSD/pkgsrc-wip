@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (bcftools-1.9.tar.gz) = 9537a1746b4e434a85dd6ef21ffd5f6ef72f3c5f
-RMD160 (bcftools-1.9.tar.gz) = cd39632d3b998792e5ba43abd46153d2206ae3ef
-SHA512 (bcftools-1.9.tar.gz) = c7da82c78690789c53f4c07c6ac6436cc3eebc5d5df613cee30e9bb6f552763df4aaa1593e715ea5d1825e76d2a6c87dbe5b484805b57ac37243c7ef9131dab8
-Size (bcftools-1.9.tar.gz) = 2394968 bytes
-SHA1 (patch-Makefile) = 09eaeb4d4a422d1d450085cda0350cd874bd04dd
-SHA1 (patch-configure.ac) = 3813b1350d802728d958dc3d3fbe13525f8db942
-SHA1 (patch-misc_run-roh.pl) = aaf7ed9f048a75684f41ae33ecedc03c81937b11
+SHA1 (bcftools-1.10.2.tar.gz) = b19c9ba06b1c8e8f135c1e0ab0e4ff713a291bf4
+RMD160 (bcftools-1.10.2.tar.gz) = 7713e8c5bd4195eb610544adb26158c16525fdac
+SHA512 (bcftools-1.10.2.tar.gz) = 12c004603db557ac69098e83ad3aaa5762b02b4718b79f3dc259fbcc5c74b8dad3726b5f61efb57f0b8e3d0349577f7934240f36c82bd98849885a5593791995
+Size (bcftools-1.10.2.tar.gz) = 2880994 bytes
+SHA1 (patch-Makefile) = 1f1397e9b0389a7b4fccc9eae87981e7ce1d7980
+SHA1 (patch-misc_run-roh.pl) = 8a29ee7b1001af6670955f174ce4dbab31f05659
+SHA1 (patch-test_test.pl) = 5fc3896d9013a6d5caa24a4d3e6798905d1243e1
