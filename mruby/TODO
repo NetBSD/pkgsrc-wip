@@ -1,2 +1,2 @@
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2020-6838, CVE-2020-6839, CVE-2020-6840
+  CVE-2020-6838, CVE-2020-6839, CVE-2020-6840, CVE-2020-15866
