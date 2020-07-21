@@ -7,7 +7,8 @@ LAPACK_COMPONENT_CMAKE_ARGS=	\
 	-DBLAS_LIBRARIES=${BLAS_LIBS:Q} \
 	-DUSE_OPTIMIZED_LAPACK=ON \
 	-DLAPACK_LIBRARIES=${LAPACK_LIBS:Q} \
-	-DCBLAS=ON -DLAPACKE=OFF
+	-DCBLAS=ON -DLAPACKE=OFF \
+	-DCMAKE_VERBOSE=ON
 
 .include "../../wip/mk/blas.buildlink3.mk"
 .include "../../wip/lapack/Makefile.common"
