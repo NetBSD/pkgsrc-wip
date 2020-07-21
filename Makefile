@@ -380,6 +380,7 @@ SUBDIR+=	cgnslib
 SUBDIR+=	cgterm
 SUBDIR+=	chakracore-git
 SUBDIR+=	chani
+SUBDIR+=	chapel
 SUBDIR+=	charybdis
 SUBDIR+=	chbg
 SUBDIR+=	check-update
