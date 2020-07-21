@@ -37,8 +37,6 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/run-roh
 	${MV} ${DESTDIR}${PREFIX}/bin/vcfutils.pl \
 		${DESTDIR}${PREFIX}/bin/vcfutils
-	${MV} ${DESTDIR}${PREFIX}/bin/plot-vcfstats \
-		${DESTDIR}${PREFIX}/bin/
 
 .include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
