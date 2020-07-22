@@ -10,19 +10,18 @@ HOMEPAGE=	https://pachterlab.github.io/kallisto/
 COMMENT=	Quantify abundances of transcripts from RNA-Seq data
 LICENSE=	2-clause-bsd
 
+USE_TOOLS+=	autoconf gmake pax
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf autoreconf automake gmake pax
 USE_CMAKE=	yes
 
 SUBST_CLASSES+=		test
-SUBST_STAGE.test=	post-build
+SUBST_STAGE.test=	pre-configure
 SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
-DATADIR=	${PREFIX}/share/kallisto
+INSTALLATION_DIRS+=	${DATADIR}
 
-INSTALLATION_DIRS=	bin ${DATADIR}
-MAKE_JOBS_SAFE=		no
+DATADIR=		${PREFIX}/share/kallisto
 
 post-extract:
 	${CP} ${FILESDIR}/kallisto-test ${WRKSRC}
@@ -31,7 +30,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/kallisto-test ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw test ${DESTDIR}${DATADIR}
 
-# .include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../wip/libaec/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
