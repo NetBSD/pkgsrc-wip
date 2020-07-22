@@ -6,9 +6,9 @@ COMMENT=		Backup Archiving REcovery Open Sourced - client
 
 CONFLICTS=		bareos-[0-9]* bacula-[0-9]* bacula-clientonly-[0-9]*
 
-PATCHDIR=		${.CURDIR}/../bareos/patches
-FILESDIR=		${.CURDIR}/../bareos/files
-DISTINFO_FILE=		${.CURDIR}/../bareos/distinfo
+PATCHDIR=		../../wip/bareos/patches
+FILESDIR=		../../wip/bareos/files
+DISTINFO_FILE=		../../wip/bareos/distinfo
 
 PLIST_SRC=		PLIST.client
 
@@ -17,8 +17,7 @@ CMAKE_ARGS+=		-Dclient-only=true
 
 RCD_SCRIPTS=		bareos-fd
 
-# non WIP .include "${.CURDIR}/../../sysutils/bareos/Makefile.common"
-.include "${.CURDIR}/../bareos/Makefile.common"
+.include "../../wip/bareos/Makefile.common"
 
 CONFIG_TEMPLATES!=	${EGREP} "^"${CONFIG_TEMPLATE_PATH:Q} PLIST.client 2>/dev/null | sed -e 's/ /\\ /g'
 CONF_FILES?=
