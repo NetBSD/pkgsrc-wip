@@ -14,16 +14,16 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-htslib=system
 TEST_TARGET=		test
 
-REPLACE_PERL=		misc/*.pl
+REPLACE_PERL+=		misc/*.pl
+REPLACE_PERL+=		test/*.pl
 REPLACE_PERL+=		misc/plot-bamstats
-REPLACE_PERL+=		test/test.pl
-REPLACE_PYTHON=		misc/*.py
+REPLACE_PYTHON+=	misc/*.py
 
 pre-configure:
 	(cd ${WRKSRC} && autoreconf)
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/htslib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
