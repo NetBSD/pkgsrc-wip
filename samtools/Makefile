@@ -6,11 +6,16 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
-COMMENT=	Tools for manipulating next-generation sequencing data
+COMMENT=	Tools for manipulating sequence alignment maps
 LICENSE=	mit
 
 USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
 GNU_CONFIGURE=	yes
+
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
+SUBST_FILES.version=	configure.ac
 
 REPLACE_PERL+=		misc/*.pl
 REPLACE_PERL+=		test/*.pl
