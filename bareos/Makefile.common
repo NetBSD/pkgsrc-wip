@@ -10,7 +10,7 @@ DISTNAME=	bareos-${VERSION}
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG:C/\//-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bareos/}
-EXTRACT_SUFX=	.zip
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	paul@paulbsd.com
 HOMEPAGE=	http://www.bareos.org/

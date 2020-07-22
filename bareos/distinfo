@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (bareos-19.2.8.zip) = a050236fa07f40368e47fe58d45ec953d1311d08
-RMD160 (bareos-19.2.8.zip) = 76f9580dd4b4633ca6cef174836002bfbb8fb404
-SHA512 (bareos-19.2.8.zip) = 2568e048b7844ae5bc6f39511f22b858fe5dd204762ea9687c2ee0ba7652eb9e2c633295dc2da9504cded59cd9008aced49b43d560baf0fb6881ab661c517044
-Size (bareos-19.2.8.zip) = 16672809 bytes
+SHA1 (bareos-19.2.8.tar.gz) = b26f7db66e108eed1e20b11c36f994456419748e
+RMD160 (bareos-19.2.8.tar.gz) = 221777925946ab05ddc00063ba51daf4555f16d1
+SHA512 (bareos-19.2.8.tar.gz) = 60bbbbd949a63f978cf1ed7d0cfc22c22f117d8c2700eb47531e15b2d91fc700c522519f0b816cd1040283f09b4c81f36910c66c8b6f4bf1ff22180e979bdeb5
+Size (bareos-19.2.8.tar.gz) = 12604929 bytes
 SHA1 (patch-core_CMakeLists.txt) = 17524dd14c665f00a8911589b52f930ec55e1e0e
 SHA1 (patch-core_cmake_BareosCheckIncludes.cmake) = 8f2a88768acdbe9adf94939ae1dabd3edf40144b
 SHA1 (patch-core_cmake_BareosFindAllLibraries.cmake) = eb33f59f616a5d265a6371dcc028a3031b5dbab5
