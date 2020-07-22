@@ -2,19 +2,19 @@ $NetBSD$
 
 	NetBSD changer script using NetBSD chio command
 
---- core/platforms/netbsd/chio-changer.orig	2019-02-08 15:17:46.308846761 +0000
+--- core/platforms/netbsd/chio-changer.orig	2020-07-22 11:05:39.078612642 +0000
 +++ core/platforms/netbsd/chio-changer
 @@ -0,0 +1,134 @@
 +#!/bin/sh
 +#
-+# Bacula interface to chio autoloader
++# Bareos interface to chio autoloader
 +#
 +#  If you set in your Device resource
 +#
 +#  Changer Command = "path-to-this-script/chio-changer %c %o %S %a %d"
 +#    you will have the following input to this script:
 +#
-+#  So Bacula will always call with all the following arguments, even though
++#  So Bareos will always call with all the following arguments, even though
 +#    in come cases, not all are used.
 +#
 +#  chio-changer "changer-device" "command" "slot" "archive-device" "drive-index"
@@ -22,10 +22,10 @@ $NetBSD$
 +#
 +#  N.B. If you change the script, take care to return either 
 +#   the chio exit code or a 0. If the script exits with a non-zero
-+#   exit code, Bacula will assume the request failed.
++#   exit code, Bareos will assume the request failed.
 +
-+CHIO=/bin/chio
-+AWK=/usr/bin/awk
++CHIO=chio
++AWK=awk
 +
 +# check parameter count on commandline
 +check_parm_count() {

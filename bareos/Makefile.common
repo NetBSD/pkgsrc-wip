@@ -22,13 +22,21 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	awk
 USE_CMAKE=	yes
-USE_LANGUAGES=  c c++
 CMAKE_ARG_PATH= ..
 CONFIGURE_DIRS= core/_build
 # needs to be able to do compare-and-swap on time_t (cmpxchg8b)
 .if ${MACHINE_ARCH} == "i386"
 CXXFLAGS+=                -march=i586
 .endif
+
+SUBST_CLASSES+=         paths
+SUBST_STAGE.paths=      pre-configure
+SUBST_MESSAGE.paths=    Fixing absolute paths.
+SUBST_FILES.paths=      core/src/cats/make_catalog_backup.pl.in
+SUBST_FILES.paths+=     core/CMakeLists.txt
+SUBST_SED.paths=        -e 's,"/usr/local,"${PREFIX},g'
+SUBST_SED.paths+=       -e 's,"/var/log,"${VARBASE}/log,g'
+SUBST_VARS.paths=       LOCALBASE PREFIX PKGVERSION
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/core/_build

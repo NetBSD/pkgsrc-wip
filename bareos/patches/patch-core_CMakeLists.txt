@@ -2,7 +2,7 @@ $NetBSD$
 
 	Setup NetBSD parameters
 	Due to current lack of XDR quad marshalling NDMP
-	need to be disabled.
+	needs to be disabled.
 
 --- core/CMakeLists.txt.orig	2020-04-16 08:31:41.000000000 +0000
 +++ core/CMakeLists.txt
@@ -14,8 +14,8 @@ $NetBSD$
 +   set(HAVE_NETBSD_OS 1)
 +   set(ndmp 0)
 +   set(PSCMD "ps -ax -o pid,command")
-+   include_directories(/usr/pkg/include)
-+   link_directories(/usr/pkg/lib)
++   include_directories(@PREFIX@/include)
++   link_directories(@PREFIX@/lib)
 +   link_libraries(intl)
 +endif()
 +

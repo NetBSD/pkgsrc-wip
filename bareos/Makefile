@@ -11,16 +11,6 @@ RCD_SCRIPTS=		bareos bareos-dir bareos-sd bareos-fd
 # For make_catalog_backup.pl.in.
 USE_TOOLS+=		perl:run
 
-REPLACE_PERL?=
-REPLACE_PERL+=		core/src/cats/make_catalog_backup.pl.in
-
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing paths.
-SUBST_FILES.fix-paths?=
-SUBST_FILES.fix-paths+=	
-SUBST_VARS.fix-paths=		PREFIX
-
 .include "options.mk"
 .include "Makefile.common"
 

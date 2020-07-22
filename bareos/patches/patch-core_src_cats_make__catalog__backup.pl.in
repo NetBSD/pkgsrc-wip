@@ -4,17 +4,11 @@ $NetBSD$
 
 --- core/src/cats/make_catalog_backup.pl.in.orig	2019-01-31 11:39:26.000000000 +0000
 +++ core/src/cats/make_catalog_backup.pl.in
-@@ -1,4 +1,4 @@
--#!/usr/bin/env perl
-+#!/usr/pkg/bin/perl
- use strict;
- 
- =head1 SCRIPT
 @@ -36,6 +36,7 @@ use strict;
  my $cat = shift or die "Usage: $0 catalogname";
  my $dir_conf='@sbindir@/bareos-dbcheck -B -c @confdir@';
  my $wd = "@working_dir@";
-+$ENV{PATH} = "/usr/pkg/bin:/usr/pkg/sbin:" . $ENV{PATH};
++$ENV{PATH} = "@PREFIX@/bin:@PREFIX@/sbin:" . $ENV{PATH};
  
  sub dump_sqlite3
  {

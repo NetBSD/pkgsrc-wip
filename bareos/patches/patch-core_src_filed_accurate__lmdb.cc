@@ -1,5 +1,8 @@
 $NetBSD$
 
+	avoid uninitialized member crash.
+	lmdb not verified to be working correctly though.
+
 --- core/src/filed/accurate_lmdb.cc.orig	2020-07-17 12:18:09.949358135 +0000
 +++ core/src/filed/accurate_lmdb.cc
 @@ -45,6 +45,7 @@ static int debuglevel = 100;

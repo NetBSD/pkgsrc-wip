@@ -8,6 +8,7 @@ CONFLICTS=		bareos-[0-9]* bacula-[0-9]* bacula-clientonly-[0-9]*
 
 PATCHDIR=		${.CURDIR}/../bareos/patches
 FILESDIR=		${.CURDIR}/../bareos/files
+DISTINFO_FILE=		${.CURDIR}/../bareos/distinfo
 
 PLIST_SRC=		PLIST.client
 
