@@ -1,0 +1,24 @@
+www/trac: Update to 1.4.2
+
+(Update prepared in wip by Matthias Petermann)
+
+Upstream changes:
+
+* Jinja2 is the template engine, providing performance improvements 
+  over Genshi. Genshi is still supported until Trac 1.5.1 for rendering
+  plugin templates.
+    
+* Custom navigation items can be added to the main and meta navigation.
+ 
+* TracAdmin convert_db command for converting to a new database backend
+  while preserving all environment data.
+  
+* Restyled wiki that allows toggling between narrow and full width. 
+
+* HTTPS support for TracStandalone (tracd)
+
+* Lots of minor bug fixes and improvements
+
+For full change log please refer to:
+	
+		https://trac.edgewall.org/wiki/TracChangeLog
