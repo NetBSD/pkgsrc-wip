@@ -1,0 +1,25 @@
+$NetBSD$
+
+--- qmltermwidget/lib/kpty.cpp.orig	2018-11-25 08:06:16.000000000 +1100
++++ qmltermwidget/lib/kpty.cpp	2020-07-21 12:19:27.296908414 +1000
+@@ -27,11 +27,19 @@
+ #include <QtDebug>
+ 
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #define HAVE_LOGIN
+ #define HAVE_LIBUTIL_H
+ #endif
+ 
++#if defined(__NetBSD__)
++#define HAVE_LOGIN
++#define HAVE_UTIL_H
++#define HAVE_PTSNAME
++#define HAVE_UNLOCKPT
++#define HAVE_GRANTPT
++#endif
++
+ #if defined(__OpenBSD__)
+ #define HAVE_LOGIN
+ #define HAVE_UTIL_H

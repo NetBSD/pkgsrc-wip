@@ -516,6 +516,7 @@ SUBDIR+=	conkeror
 SUBDIR+=	consul
 SUBDIR+=	contacts
 SUBDIR+=	converttomp3
+SUBDIR+=	cool-retro-term-git
 SUBDIR+=	cool-old-term-git
 SUBDIR+=	cops
 SUBDIR+=	copytape
