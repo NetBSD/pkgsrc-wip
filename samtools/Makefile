@@ -28,7 +28,7 @@ TEST_TARGET=		test
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/curses.buildlink3.mk"
