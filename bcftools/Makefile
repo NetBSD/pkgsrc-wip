@@ -3,24 +3,26 @@
 DISTNAME=	bcftools-1.10.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
-GITHUB_PROJECT=	bcftools
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating BCF and VCF variant call files
 LICENSE=	mit
 
-REPLACE_PERL+=		misc/*.pl misc/plot-vcfstats test/test.pl
-REPLACE_PYTHON+=	misc/*.py
+USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
+GNU_CONFIGURE=	yes
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
 SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
-SUBST_FILES.version+=	configure.ac
+SUBST_FILES.version=	configure.ac
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
-GNU_CONFIGURE=	yes
+REPLACE_PERL+=		misc/*.pl
+REPLACE_PERL+=		misc/plot-vcfstats
+REPLACE_PERL+=		misc/fix-broken-GATK-Double-vs-Integer
+REPLACE_PERL+=		test/test.pl
+REPLACE_PYTHON+=	misc/*.py
+
 MAKE_ENV+=	USE_GPL=1
 
 pre-configure:
