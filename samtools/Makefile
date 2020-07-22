@@ -9,15 +9,16 @@ HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating next-generation sequencing data
 LICENSE=	mit
 
-USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-htslib=system
-TEST_TARGET=		test
+USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
+GNU_CONFIGURE=	yes
 
 REPLACE_PERL+=		misc/*.pl
 REPLACE_PERL+=		test/*.pl
 REPLACE_PERL+=		misc/plot-bamstats
 REPLACE_PYTHON+=	misc/*.py
+
+CONFIGURE_ARGS+=	--with-htslib=system
+TEST_TARGET=		test
 
 pre-configure:
 	(cd ${WRKSRC} && autoreconf -if)

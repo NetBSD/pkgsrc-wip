@@ -7,11 +7,11 @@ GITHUB_PROJECT=	bcftools
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
-COMMENT=	Tools for manipulating BCF (binary VCF) sequence files
+COMMENT=	Tools for manipulating BCF and VCF variant call files
 LICENSE=	mit
 
-REPLACE_PERL=	misc/*.pl misc/plot-vcfstats test/test.pl
-REPLACE_PYTHON=	misc/*.py
+REPLACE_PERL+=		misc/*.pl misc/plot-vcfstats test/test.pl
+REPLACE_PYTHON+=	misc/*.py
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
