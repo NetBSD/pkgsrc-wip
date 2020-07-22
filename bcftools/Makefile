@@ -26,7 +26,7 @@ REPLACE_PYTHON+=	misc/*.py
 MAKE_ENV+=	USE_GPL=1
 
 pre-configure:
-	(cd ${WRKSRC} && autoreconf -if)
+	cd ${WRKSRC} && autoreconf -if
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/color-chrs.pl \

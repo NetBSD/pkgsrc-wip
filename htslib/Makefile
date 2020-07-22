@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE=	htslib.pc.in
 TEST_TARGET=		test
 
 pre-configure:
-	(cd ${WRKSRC} && autoreconf)
+	cd ${WRKSRC} && autoreconf
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"

@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-htslib=system
 TEST_TARGET=		test
 
 pre-configure:
-	(cd ${WRKSRC} && autoreconf -if)
+	cd ${WRKSRC} && autoreconf -if
 
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
