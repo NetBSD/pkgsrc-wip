@@ -20,7 +20,7 @@ REPLACE_PERL+=		misc/plot-bamstats
 REPLACE_PYTHON+=	misc/*.py
 
 pre-configure:
-	(cd ${WRKSRC} && autoreconf)
+	(cd ${WRKSRC} && autoreconf -if)
 
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
