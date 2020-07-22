@@ -18,12 +18,14 @@ SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSIO
 SUBST_FILES.version=	configure.ac
 
 REPLACE_PERL+=		misc/*.pl
-REPLACE_PERL+=		misc/plot-vcfstats
 REPLACE_PERL+=		misc/fix-broken-GATK-Double-vs-Integer
+REPLACE_PERL+=		misc/plot-vcfstats
 REPLACE_PERL+=		test/test.pl
 REPLACE_PYTHON+=	misc/*.py
 
-MAKE_ENV+=	USE_GPL=1
+CONFIGURE_ARGS+=	--with-htslib=system
+MAKE_ENV+=		USE_GPL=1
+TEST_TARGET=		test
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
