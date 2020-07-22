@@ -1,5 +1,8 @@
 $NetBSD$
 
+Fix terminal handling for handling for NetBSD.
+TODO: fix upstream.
+
 --- qmltermwidget/lib/kpty.cpp.orig	2018-11-25 08:06:16.000000000 +1100
 +++ qmltermwidget/lib/kpty.cpp	2020-07-21 12:19:27.296908414 +1000
 @@ -27,11 +27,19 @@

@@ -8,4 +8,4 @@ SHA1 (cool-retro-term/1.1.1.tar.gz) = 581809e75c70b42c6bac3e65f89428e79b5ff3b1
 RMD160 (cool-retro-term/1.1.1.tar.gz) = 61d6b1bd96a1c498638e414acef22a238940ff17
 SHA512 (cool-retro-term/1.1.1.tar.gz) = 59da4b5d18ad64b917caebbc63ea9e3d562ed2a2dc9eae00f36cf434df44d17adca084b448f860f24a74ee6b59cd083d6a81e2217df1fb5e9f2731eaf1752148
 Size (cool-retro-term/1.1.1.tar.gz) = 1975853 bytes
-SHA1 (patch-qmltermwidget_lib_kpty_cpp) = 10e9e9df943c372a4082865558c2125dce5761ad
+SHA1 (patch-qmltermwidget_lib_kpty_cpp) = 8d7e71c0212441b7a61d701ce9f2eb7abc41625f
