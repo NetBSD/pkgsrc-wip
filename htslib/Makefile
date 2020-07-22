@@ -11,16 +11,17 @@ LICENSE=	mit
 
 USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-libcurl
-PKGCONFIG_OVERRIDE=	htslib.pc.in
-TEST_TARGET=		test
-
-REPLACE_PERL+=		test/*.pl
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
 SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
 SUBST_FILES.version=	configure.ac
+
+REPLACE_PERL+=		test/*.pl
+
+CONFIGURE_ARGS+=	--enable-libcurl
+PKGCONFIG_OVERRIDE=	htslib.pc.in
+TEST_TARGET=		test
 
 pre-configure:
 	(cd ${WRKSRC} && autoreconf)
