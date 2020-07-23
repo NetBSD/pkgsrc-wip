@@ -1,35 +1,38 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:36 thomasklausner Exp $
-#
+# $NetBSD: $
 
-DISTNAME=	lightdm-gtk-greeter-1.3.1
+DISTNAME=	lightdm-gtk-greeter-2.0.8
 CATEGORIES=	x11
-MASTER_SITES=	https://launchpad.net/lightdm-gtk-greeter/1.4/1.3.1/+download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Xubuntu/}
+GITHUB_RELEASE=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/lightdm-gtk-greeter
 COMMENT=	GTK+ greeter for LightDM
 LICENSE=	gnu-gpl-v3
 
-# Needed for launchpad
-
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS=		intltool msgfmt msgmerge perl pkg-config xgettext
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS=		gmake intltool msgfmt msgmerge pkg-config xgettext
+ICON_THEMES=		yes
 
-EGDIR=		${PREFIX}/share/examples/lightdm
-CONF_FILES+=	${EGDIR}/lightdm-gtk-greeter.conf ${PKG_SYSCONFDIR}/lightdm/lightdm-gtk-greeter.conf
+DEPENDS=	gnome-icon-theme-[0-9]*:../../graphics/gnome-icon-theme
+TOOL_DEPENDS=	xfce4-dev-tools-[0-9]*:../../devel/xfce4-dev-tools
 
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/lightdm ${EGDIR}
+PKG_SYSCONFSUBDIR=	lightdm
+EGDIR=			${PREFIX}/share/examples
+INSTALLATION_DIRS+=	${EGDIR}/lightdm
+CONF_FILES+=		${EGDIR}/lightdm/lightdm-gtk-greeter.conf ${PKG_SYSCONFDIR}/lightdm-gtk-greeter.conf
 
 pre-install:
-	${INSTALL_DATA} ${WRKSRC}/data/lightdm-gtk-greeter.conf ${DESTDIR}${EGDIR}/lightdm-gtk-greeter.conf
+	${INSTALL_DATA} ${WRKSRC}/data/lightdm-gtk-greeter.conf ${DESTDIR}${EGDIR}/lightdm/lightdm-gtk-greeter.conf
 
 post-install:
-	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/lightdm/lightdm-gtk-greeter.conf
+	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/lightdm-gtk-greeter.conf
 
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../wip/lightdm/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../wip/lightdm/buildlink3.mk" # s,wip,x11,
+
 .include "../../mk/bsd.pkg.mk"
