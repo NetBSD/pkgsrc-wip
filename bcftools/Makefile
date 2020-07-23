@@ -21,8 +21,8 @@ SUBST_FILES.version=	configure.ac
 
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	pre-configure
-SUBST_SED.bash+=	-e 's|/bin/bash|${PREFIX}/bin/bash|'
-SUBST_SED.bash+=	-e 's|\\/bin\\/bash|${PREFIX:S,/,\\\/,g}\\/bin\\/bash|'
+SUBST_SED.bash+=	-e 's|/bin/bash|${TOOLS_PATH.bash}|'
+SUBST_SED.bash+=	-e 's|\\/bin\\/bash|${TOOLS_PATH.bash:S,/,\\\/,g}|'
 SUBST_FILES.bash=	test/test.pl
 
 REPLACE_PERL+=		misc/*.pl
