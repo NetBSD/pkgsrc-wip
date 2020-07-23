@@ -33,6 +33,6 @@ post-install:
 	cd ${WRKSRC} && pax -rw test ${DESTDIR}${DATADIR}
 
 .include "../../devel/hdf5/buildlink3.mk"
-.include "../../wip/libaec/buildlink3.mk"
+.include "../../archivers/libaec/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
