@@ -1,0 +1,13 @@
+Fix:
+
+=> Checking for work-directory references in bareos-19.2.8
+ERROR: /usr/pkg/lib/bareos/scripts/bareos-config-lib.sh:        AWK="/scratch/wip/bareos/work/.tools/bin/awk"
+ERROR: /usr/pkg/lib/bareos/scripts/bareos-ctl-dir:      export AWK="/scratch/wip/bareos/work/.tools/bin/awk"
+ERROR: /usr/pkg/lib/bareos/scripts/bareos-ctl-fd:       AWK=/scratch/wip/bareos/work/.tools/bin/awk
+ERROR: /usr/pkg/lib/bareos/scripts/bareos-ctl-sd:       AWK=/scratch/wip/bareos/work/.tools/bin/awk
+ERROR: *** The above files still have references to the build directory.
+ERROR:     This is possibly an error that should be fixed by unwrapping
+ERROR:     the files or adding missing tools to the package makefile!
+*** Error code 1
+
+
