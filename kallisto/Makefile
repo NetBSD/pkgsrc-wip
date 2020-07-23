@@ -19,6 +19,7 @@ SUBST_STAGE.test=	pre-configure
 SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
+MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	${DATADIR}
 
 DATADIR=		${PREFIX}/share/kallisto
