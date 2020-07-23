@@ -9,6 +9,8 @@ HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating sequence alignment maps
 LICENSE=	mit
 
+BUILDLINK_API_DEPENDS.htslib+=	htslib>=1.10.2
+
 USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
 GNU_CONFIGURE=	yes
 
