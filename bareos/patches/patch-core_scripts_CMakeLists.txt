@@ -2,9 +2,18 @@ $NetBSD$
 
 suppress mtx-changer installation if not found
 
---- core/scripts/CMakeLists.txt.orig	2020-06-22 13:14:51.366971896 +0000
+--- core/scripts/CMakeLists.txt.orig	2020-07-09 17:39:20.000000000 +0000
 +++ core/scripts/CMakeLists.txt
-@@ -42,18 +42,30 @@ install(
+@@ -35,25 +35,37 @@ install(
+ install(
+   FILES bareos btraceback.gdb btraceback.dbx btraceback.mdb bareos-config
+         bareos-config-lib.sh bareos-ctl-funcs
+-  PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE
+-              WORLD_READ WORLD_EXECUTE
++  PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ
++              WORLD_READ
+   DESTINATION "${scriptdir}"
+ )
  
  if(NOT client-only)
    install(

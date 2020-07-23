@@ -20,7 +20,7 @@ REPLACE_PERL+=		core/src/cats/make_catalog_backup.pl.in
 MAKE_DIRS_PERMS+=	${VARBASE}/${PKG_SYSCONFSUBDIR} \
 			${REAL_ROOT_USER} ${BAREOS_GROUP} 0770
 
-post-install: # should go away once we find out how to set the run link path in CMakefiles
+post-install:
 	${LN} -fs ${PKG_SYSCONFSUBDIR}/backends/libbareossd-gentape.so ${DESTDIR:Q}/${BAREOS_LIBDIR:Q}/libbareossd-gentape.so
 
 CONFIG_TEMPLATES!=	${EGREP} "^"${CONFIG_TEMPLATE_PATH:Q} PLIST.common 2>/dev/null | sed -e 's/ /\\ /g'

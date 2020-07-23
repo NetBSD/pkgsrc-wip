@@ -19,7 +19,6 @@ LICENSE=	gnu-agpl-v3
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	awk
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	core/_build
