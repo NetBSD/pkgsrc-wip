@@ -1,39 +1,5 @@
-error: failed to run custom build command for `ncurses v5.99.0`
-
-Caused by:
-  process didn't exit successfully: `/usr/pkgsrc/wip/ncspot/work/ncspot-0.2.0/targ
---- stdout
-cargo:rerun-if-env-changed=PKG_CONFIG_PATH
-cargo:rustc-link-lib=ncursesw
-OPT_LEVEL = Some("3")
-TARGET = Some("x86_64-unknown-netbsd")
-HOST = Some("x86_64-unknown-netbsd")
-CC_x86_64-unknown-netbsd = None
-CC_x86_64_unknown_netbsd = None
-HOST_CC = None
-CC = Some("gcc")
-CFLAGS_x86_64-unknown-netbsd = None
-CFLAGS_x86_64_unknown_netbsd = None
-HOST_CFLAGS = None
-CFLAGS = Some("-O2 -D_FORTIFY_SOURCE=2 -I/usr/pkg/include -I/usr/include -I/usr/X1
-CRATE_CC_NO_DEFAULTS = None
-DEBUG = Some("false")
-CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
-
---- stderr
-/usr/pkgsrc/wip/ncspot/work/ncspot-0.2.0/target/release/build/ncurses-79d6f47f462e
-/usr/pkgsrc/wip/ncspot/work/ncspot-0.2.0/target/release/build/ncurses-79d6f47f462ehis function)
-     if (NCURSES_MOUSE_VERSION == 1) {
-         ^~~~~~~~~~~~~~~~~~~~~
-/usr/pkgsrc/wip/ncspot/work/ncspot-0.2.0/target/release/build/ncurses-79d6f47f462er each function it appears in
-thread 'main' panicked at 'assertion failed: command.status().expect("compilation
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-
-*** Error code 101
-
-Stop.
-make[1]: stopped in /usr/pkgsrc/wip/ncspot
-*** Error code 1
-
-Stop.
-make: stopped in /usr/pkgsrc/wip/ncspot
+  = note: ld: cannot find -l__nonexistent__
+          ld: /scratch/wip/ncspot/work/ncspot-0.2.0/target/release/deps/libtime-eeaa06339851f297.rlib(time-eeaa06339851f297.time.67gzcnlx-cgu.1.rcgu.o): in function `time::tzset':
+          time.67gzcnlx-cgu.1:(.text._ZN4time5tzset17h515a7b316aec245bE+0x2): warning: warning: reference to compatibility tzset(); include <time.h> for correct reference
+          ld: /scratch/wip/ncspot/work/ncspot-0.2.0/target/release/deps/libncurses-32be203d69534930.rlib(ncurses-32be203d69534930.ncurses.euaz5lpp-cgu.0.rcgu.o): in function `ncurses::setlocale':
+          ncurses.euaz5lpp-cgu.0:(.text._ZN7ncurses9setlocale17h681cdb49d27fdc27E+0x54): warning: warning: reference to compatibility setlocale();include <locale.h> for correct reference
