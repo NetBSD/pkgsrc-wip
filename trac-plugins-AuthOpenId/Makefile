@@ -1,5 +1,9 @@
 # $NetBSD: Makefile,v 1.8 2015/08/04 20:04:14 thomasklausner Exp $
 
+# upstream does not support 1.2/1.4
+# https://github.com/trac-hacks/authopenid-plugin/issues/32
+# to be deleted 2020-08-06 if no response
+
 DISTVERS=	0.3.4
 DISTNAME=	TracAuthOpenId-${DISTVERS}
 PKGNAME=	trac-plugins-AuthOpenId-${DISTVERS}
@@ -9,7 +13,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/TracAuthOpenId/}
 
 MAINTAINER=	roy@NetBSD.org
-HOMEPAGE=	http://trac.sandbox.lt/auth/wiki/AuthOpenIdPlugin
+HOMEPAGE=	https://github.com/trac-hacks/authopenid-plugin
 COMMENT=	This plugins allows to login to Trac using OpenID
 LICENSE=	modified-bsd
 
