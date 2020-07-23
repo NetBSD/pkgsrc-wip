@@ -20,7 +20,7 @@ SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
 CMAKE_ARGS+=		-DUSE_HDF5:BOOL=ON
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=		no	# Doesn't finished bundled htslib first
 INSTALLATION_DIRS+=	${DATADIR}
 
 DATADIR=		${PREFIX}/share/kallisto
