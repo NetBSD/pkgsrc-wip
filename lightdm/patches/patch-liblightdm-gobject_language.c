@@ -1,40 +1,41 @@
-$NetBSD: patch-ae,v 1.1.1.1 2012/05/15 03:29:36 jeremy-c-reed Exp $
+$NetBSD$
 
+LC_IDENTIFICATION is a GNU extension.
 https://bugs.launchpad.net/lightdm/+bug/790186
 
---- liblightdm-gobject/language.c.orig	2012-05-14 21:00:33.000000000 -0500
-+++ liblightdm-gobject/language.c	2012-05-14 21:13:28.000000000 -0500
-@@ -229,10 +229,16 @@
+--- liblightdm-gobject/language.c.orig	2018-09-05 01:33:31.000000000 +0000
++++ liblightdm-gobject/language.c
+@@ -214,12 +214,16 @@ lightdm_language_get_name (LightDMLangua
          if (locale)
          {
-             gchar *current = setlocale (LC_ALL, NULL);
-+#ifdef LC_IDENTIFICATION
+             const gchar *current = setlocale (LC_ALL, NULL);
++#ifdef LC_IDENTICATION
              setlocale (LC_IDENTIFICATION, locale);
 +#endif
              setlocale (LC_MESSAGES, "");
  
 +#ifdef _NL_IDENTIFICATION_LANGUAGE
-             gchar *language_en = nl_langinfo (_NL_IDENTIFICATION_LANGUAGE);
-+#else
-+            gchar *language_en = "Unknown";
-+#endif
+             const gchar *language_en = nl_langinfo (_NL_IDENTIFICATION_LANGUAGE);
              if (language_en && strlen (language_en) > 0)
                  priv->name = g_strdup (dgettext ("iso_639_3", language_en));
++#endif
  
-@@ -272,10 +278,16 @@
+             setlocale (LC_ALL, current);
+         }
+@@ -254,12 +258,16 @@ lightdm_language_get_territory (LightDML
          if (locale)
          {
              gchar *current = setlocale (LC_ALL, NULL);
-+#ifdef LC_IDENTIFICATION
++#ifdef LC_IDENTICATION
              setlocale (LC_IDENTIFICATION, locale);
 +#endif
              setlocale (LC_MESSAGES, "");
  
 +#ifdef _NL_IDENTIFICATION_TERRITORY
              gchar *country_en = nl_langinfo (_NL_IDENTIFICATION_TERRITORY);
-+#else
-+            gchar *country_en = "Unknown";
-+#endif
              if (country_en && strlen (country_en) > 0 && g_strcmp0 (country_en, "ISO") != 0)
                  priv->territory = g_strdup (dgettext ("iso_3166", country_en));
++#endif
  
+             setlocale (LC_ALL, current);
+         }

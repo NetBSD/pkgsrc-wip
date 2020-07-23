@@ -1,10 +1,15 @@
-$NetBSD: distinfo,v 1.3 2013/05/06 09:09:15 noud4 Exp $
+$NetBSD$
 
-SHA1 (lightdm-1.3.3.tar.gz) = f2392d70e039412c4a87daf0c639d5dba412e4a1
-RMD160 (lightdm-1.3.3.tar.gz) = 9577f04e86b2d0b7e68559c978ce86751a740d43
-SHA512 (lightdm-1.3.3.tar.gz) = 72f838970ae920a3993671b0e39ba96abed77bfff7df7c1cf2daa0bddf219d2e9da87f4d0967e125c63c888e9db54b2dbfa3c706d648b7455920e9857805365e
-Size (lightdm-1.3.3.tar.gz) = 659018 bytes
-SHA1 (patch-ac) = 36ba629f687ef2ef71130aef248433be18751ef8
-SHA1 (patch-ae) = a493621619fd6316e845d70cfb30ebfa8ac5d2ad
-SHA1 (patch-ba) = 41ca277c57049e7319ef86a98887c53383639096
-SHA1 (patch-bb) = acfb527ad17deda612592012e70087b925798470
+SHA1 (lightdm-1.30.0.tar.xz) = d91966f79f173825ac8bb51973842f9fb6c9ef1b
+RMD160 (lightdm-1.30.0.tar.xz) = 98b495fd557bd4424f772e6a699322c34a1df7d9
+SHA512 (lightdm-1.30.0.tar.xz) = bca25a0aa73caf7d51e5882889a1707d2527470a170658c1be98ecfb96c8f85fd616494fc5bed658e744f91b9f8b0a98d2a0cf42f9c030242ae470c8a27145ce
+Size (lightdm-1.30.0.tar.xz) = 509220 bytes
+SHA1 (patch-common_privileges.c) = e42c39fec517aca41389eb7570705c6c5bac7461
+SHA1 (patch-configure) = 9f630858c2b2c8fa4d8c24b10d8df6c16fed587a
+SHA1 (patch-data_lightdm.conf) = 82501d8f55ed46483193afc7299dd3ebe4e46aee
+SHA1 (patch-data_pam_lightdm) = cf6399e38a7f9764ab4d8c63601d9b6a8aa3e966
+SHA1 (patch-data_pam_lightdm-greeter) = 474e9e59af583b33fe0d4fa566998d45c2db2032
+SHA1 (patch-liblightdm-gobject_language.c) = c0fb445e677ad4143cd1ed9c6e61259dc1478895
+SHA1 (patch-liblightdm-gobject_session.c) = 3c81023d892fa1ff5d7fcb3ebb7a8cc96c1ffca7
+SHA1 (patch-src_process.c) = bbb04d197ebbdb0efdd82c55948f5904b1dc3d94
+SHA1 (patch-src_session-child.c) = 0ea24a9fa00f9517e9f8885476a6b9fc7adb43a8

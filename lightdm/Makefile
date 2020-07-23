@@ -1,71 +1,119 @@
-# $NetBSD: Makefile,v 1.8 2014/06/01 12:49:37 thomasklausner Exp $
-#
+# $NetBSD: $
 
-DISTNAME=	lightdm-1.3.3
-PKGREVISION=	1
+DISTNAME=	lightdm-1.30.0
 CATEGORIES=	x11
-MASTER_SITES=	https://launchpad.net/lightdm/1.3/1.3.3/+download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=canonical/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.freedesktop.org/wiki/Software/LightDM
+HOMEPAGE=	https://github.com/canonical/lightdm
 COMMENT=	Light cross-desktop display manager
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+
+PKG_COMPILER=		clang
+PKG_CC=			clang
+PKG_CXX=		clang
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-tests	# PAM
+CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool pkg-config
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c c++11
 USE_PKGLOCALEDIR=	yes
-MAKE_ENV+=		"LIBLIGHTDM_GOBJECT_CFLAGS=-I${BUILDLINK_PREFIX.glib2}/include/glib/glib-2.0/"
+BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
 
 PKGCONFIG_OVERRIDE+=	liblightdm-gobject/liblightdm-gobject-1.pc.in
 PKGCONFIG_OVERRIDE+=	liblightdm-qt/liblightdm-qt-2.pc.in
 
-DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
-EGDIR=			${PREFIX}/share/examples
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/apparmor.d
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/lightdm ${PKG_SYSCONFDIR}/pam.d
-INSTALLATION_DIRS+=	${EGDIR}/apparmor.d ${EGDIR}/dbus/system.d
-INSTALLATION_DIRS+=	${EGDIR}/lightdm ${EGDIR}/pam.d
-CONF_FILES+=		${EGDIR}/apparmor.d/lightdm-guest-session ${PKG_SYSCONFDIR}/apparmor.d/lightdm-guest-session
-CONF_FILES+=		${EGDIR}/dbus/system.d/org.freedesktop.DisplayManager.conf ${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.DisplayManager.conf
-CONF_FILES+=		${EGDIR}/lightdm/lightdm.conf ${PKG_SYSCONFDIR}/lightdm/lightdm.conf
-CONF_FILES+=		${EGDIR}/lightdm/keys.conf ${PKG_SYSCONFDIR}/lightdm/keys.conf
-CONF_FILES+=		${EGDIR}/lightdm/users.conf ${PKG_SYSCONFDIR}/lightdm/users.conf
-CONF_FILES+=		${EGDIR}/pam.d/lightdm ${PKG_SYSCONFDIR}/pam.d/lightdm
-CONF_FILES+=		${EGDIR}/pam.d/lightdm-autologin ${PKG_SYSCONFDIR}/pam.d/lightdm-autologin
-CONF_FILES+=		${EGDIR}/pam.d/lightdm-greeter ${PKG_SYSCONFDIR}/pam.d/lightdm-greeter
+LIGHTDM_GROUP=			lightdm
+LIGHTDM_USER=			lightdm
+PKG_GROUPS_VARS+=		LIGHTDM_GROUP
+PKG_USERS_VARS+=		LIGHTDM_USER
+PKG_GROUPS=			${LIGHTDM_GROUP}
+PKG_USERS=			${LIGHTDM_USER}:${LIGHTDM_GROUP}
+PKG_GECOS.${LIGHTDM_USER}=	Light Display Manager user
+PKG_HOME.${LIGHTDM_USER}=	${VARBASE}/lib/lightdm
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+LIGHTDM_MINVT=		1
+.elif ${OPSYS} == "FreeBSD"
+LIGHTDM_MINVT=		9
+.else
+LIGHTDM_MINVT=		7
+.endif
+
+PKG_SYSCONFSUBDIR=	lightdm
+EGDIR=			${PREFIX}/share/examples/lightdm
+INSTALLATION_DIRS+=	${EGDIR}/dbus-1/system.d
+INSTALLATION_DIRS+=	${EGDIR}/pam.d
+CONF_FILES+=		${EGDIR}/lightdm.conf ${PKG_SYSCONFDIR}/lightdm.conf
+CONF_FILES+=		${EGDIR}/keys.conf ${PKG_SYSCONFDIR}/keys.conf
+CONF_FILES+=		${EGDIR}/users.conf ${PKG_SYSCONFDIR}/users.conf
+CONF_FILES_PERMS+=	${EGDIR}/Xsession ${PKG_SYSCONFDIR}/Xsession \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
+CONF_FILES+=		${EGDIR}/dbus-1/system.d/org.freedesktop.DisplayManager.conf \
+			${PKG_SYSCONFBASE}/dbus-1/system.d/org.freedesktop.DisplayManager.conf
+CONF_FILES+=		${EGDIR}/pam.d/lightdm ${PKG_SYSCONFBASE}/pam.d/lightdm
+CONF_FILES+=		${EGDIR}/pam.d/lightdm-autologin ${PKG_SYSCONFBASE}/pam.d/lightdm-autologin
+CONF_FILES+=		${EGDIR}/pam.d/lightdm-greeter ${PKG_SYSCONFBASE}/pam.d/lightdm-greeter
+MAKE_DIRS_PERMS+=	${VARBASE}/lib/lightdm ${LIGHTDM_USER} ${LIGHTDM_GROUP} 1770
+MAKE_DIRS_PERMS+=	${VARBASE}/lib/lightdm-data ${LIGHTDM_USER} ${LIGHTDM_GROUP} 1770
+
+SUBST_CLASSES+=		xsession
+SUBST_STAGE.xsession=	pre-configure
+SUBST_MESSAGE.xsession=	Fixing Xsession path.
+SUBST_FILES.xsession=	data/Xsession
+SUBST_VARS.xsession=	PKG_SYSCONFBASE PREFIX
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_MESSAGE.conf=	Adjustment of configuration file.
+SUBST_FILES.conf=	data/lightdm.conf
+SUBST_VARS.conf=	LIGHTDM_MINVT PREFIX
+
+post-extract:
+	${RUN}${CP} ${FILESDIR}/Xsession ${WRKSRC}/data/Xsession
 
 pre-install:
-	cd ${WRKSRC}/data && \
-		${INSTALL_DATA} guest-session.apparmor ${DESTDIR}${EGDIR}/apparmor.d/lightdm-guest-session && \
-		${INSTALL_DATA} org.freedesktop.DisplayManager.conf ${DESTDIR}${EGDIR}/dbus/system.d/org.freedesktop.DisplayManager.conf && \
-		${INSTALL_DATA} lightdm.conf ${DESTDIR}${EGDIR}/lightdm/lightdm.conf && \
-		${INSTALL_DATA} keys.conf ${DESTDIR}${EGDIR}/lightdm/keys.conf && \
-		${INSTALL_DATA} users.conf ${DESTDIR}${EGDIR}/lightdm/users.conf;
-	cd ${WRKSRC}/data/pam && \
-		${INSTALL_DATA} lightdm ${DESTDIR}${EGDIR}/pam.d/lightdm && \
-		${INSTALL_DATA} lightdm-autologin ${DESTDIR}${EGDIR}/pam.d/lightdm-autologin && \
-		${INSTALL_DATA} lightdm-greeter ${DESTDIR}${EGDIR}/pam.d/lightdm-greeter
+	${INSTALL_DATA} ${WRKSRC}/data/lightdm.conf ${DESTDIR}${EGDIR}/lightdm.conf
+	${INSTALL_DATA} ${WRKSRC}/data/keys.conf ${DESTDIR}${EGDIR}/keys.conf
+	${INSTALL_DATA} ${WRKSRC}/data/users.conf ${DESTDIR}${EGDIR}/users.conf
+	${INSTALL_DATA} ${WRKSRC}/data/org.freedesktop.DisplayManager.conf \
+	  ${DESTDIR}${EGDIR}/dbus-1/system.d/org.freedesktop.DisplayManager.conf
+	${INSTALL_DATA} ${WRKSRC}/data/pam/lightdm ${DESTDIR}${EGDIR}/pam.d/lightdm
+	${INSTALL_DATA} ${WRKSRC}/data/pam/lightdm-autologin ${DESTDIR}${EGDIR}/pam.d/lightdm-autologin
+	${INSTALL_DATA} ${WRKSRC}/data/pam/lightdm-greeter ${DESTDIR}${EGDIR}/pam.d/lightdm-greeter
+	${INSTALL_DATA} ${WRKSRC}/data/Xsession ${DESTDIR}${EGDIR}/Xsession
 
 post-install:
-	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/apparmor.d/lightdm-guest-session
-	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.DisplayManager.conf
-	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/init/lightdm.conf
-	${RM} -rf ${DESTDIR}${PKG_SYSCONFDIR}/lightdm
-	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/pam.d/lightdm*
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFDIR}/lightdm.conf
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFDIR}/keys.conf
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFDIR}/users.conf
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/apparmor.d/abstractions/lightdm
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/apparmor.d/abstractions/lightdm_chromium-browser
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/apparmor.d/lightdm-guest-session
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/dbus-1/system.d/org.freedesktop.DisplayManager.conf
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/init/lightdm.conf
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/pam.d/lightdm
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/pam.d/lightdm-autologin
+	${RUN}${RM} ${DESTDIR}${PKG_SYSCONFBASE}/pam.d/lightdm-greeter
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/gettext-tools/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openpam/buildlink3.mk"
+.include "../../sysutils/accountsservice/buildlink3.mk"
+.include "../../sysutils/consolekit/buildlink3.mk"
+.include "../../sysutils/upower/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=4.0
 .include "../../x11/libxklavier/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
