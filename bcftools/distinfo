@@ -6,4 +6,3 @@ SHA512 (bcftools-1.10.2.tar.gz) = 12c004603db557ac69098e83ad3aaa5762b02b4718b79f
 Size (bcftools-1.10.2.tar.gz) = 2880994 bytes
 SHA1 (patch-Makefile) = 1f1397e9b0389a7b4fccc9eae87981e7ce1d7980
 SHA1 (patch-misc_run-roh.pl) = 8a29ee7b1001af6670955f174ce4dbab31f05659
-SHA1 (patch-test_test.pl) = 5fc3896d9013a6d5caa24a4d3e6798905d1243e1

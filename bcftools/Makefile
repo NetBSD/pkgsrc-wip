@@ -17,6 +17,12 @@ SUBST_STAGE.version=	pre-configure
 SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSION_NOREV}]|"
 SUBST_FILES.version=	configure.ac
 
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-configure
+SUBST_SED.bash+=	-e 's|/bin/bash|${PREFIX}/bin/bash|'
+SUBST_SED.bash+=	-e 's|\\/bin\\/bash|${PREFIX:S,/,\\\/,g}\\/bin\\/bash|'
+SUBST_FILES.bash=	test/test.pl
+
 REPLACE_PERL+=		misc/*.pl
 REPLACE_PERL+=		misc/fix-broken-GATK-Double-vs-Integer
 REPLACE_PERL+=		misc/plot-vcfstats
