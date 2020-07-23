@@ -16,7 +16,7 @@ HOMEPAGE=	http://m3g.iqm.unicamp.br/packmol/home.shtml
 COMMENT=	Pack molecules in defined regions of space
 LICENSE=	mit
 
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	fortran
 USE_TOOLS+=	cmake
 USE_CMAKE=	yes
 
