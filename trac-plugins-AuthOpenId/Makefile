@@ -12,7 +12,7 @@ EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/TracAuthOpenId/}
 
-MAINTAINER=	roy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/trac-hacks/authopenid-plugin
 COMMENT=	This plugins allows to login to Trac using OpenID
 LICENSE=	modified-bsd
