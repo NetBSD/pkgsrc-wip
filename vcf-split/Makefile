@@ -5,10 +5,10 @@
 #              Wed May 20 07:28:18 CDT 2020               #
 ###########################################################
 
-DISTNAME=	vcf-split-0.1.0.10
+DISTNAME=	vcf-split-0.1.0.14
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	2058f29dd2c1de71091425ccfd2a69d06c6347c7
+GITHUB_TAG=	8b45858e66bc7f356200b8a18318140659b31db8
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcf-split
