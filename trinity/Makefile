@@ -149,7 +149,7 @@ do-install:
 		${DESTDIR}${PREFIX}/libexec/trinity/Trinity
 	${RM} ${DESTDIR}${PREFIX}/libexec/trinity/util/support_scripts/plugin_install_tests.sh.orig
 
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../wip/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -44,7 +44,7 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s libvcflib.so.1 libvcflib.so
 
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../wip/tabixpp/buildlink3.mk"
 .include "../../wip/smithwaterman/buildlink3.mk"
 .include "../../wip/fastahack/buildlink3.mk"

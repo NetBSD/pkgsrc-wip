@@ -45,7 +45,7 @@ PORTVERSION=	2016.09.13
 .include "../../wip/pbseqan/buildlink3.mk"
 .include "../../wip/pbbam/buildlink3.mk"
 .include "../../wip/pbcopper/buildlink3.mk"
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/python/application.mk"

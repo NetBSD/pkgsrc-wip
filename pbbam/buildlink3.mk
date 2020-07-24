@@ -17,7 +17,7 @@ BUILDLINK_PKGSRCDIR.pbbam?=	../../wip/pbbam
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 #.include "../../devel/boost-libs/buildlink3.mk"
-#.include "../../wip/htslib/buildlink3.mk"
+#.include "../../biology/htslib/buildlink3.mk"
 #.include "../../security/openssl/buildlink3.mk"
 .endif	# PBBAM_BUILDLINK3_MK
 

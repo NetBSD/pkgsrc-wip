@@ -30,6 +30,6 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib && ${LN} -s libtabix.so.1 libtabix.so
 
-.include "../../wip/htslib/buildlink3.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
