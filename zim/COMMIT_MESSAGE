@@ -1,0 +1,32 @@
+editors/zim: Update to 0.73.1
+
+(Update prepared in wip by Matthias Petermann)
+
+Upstream changes:
+
+* New features added:
+
+  * A Recent Changes dialog and a Recent Changes pathbar option
+  * A search entry in toolbar
+  * An option for custom commands to replace the current selection
+  * A table plugin
+  * Support for Fossil version control
+  * An option for linenumbers option in insert code block dialog
+  * An option to display date column in tasklist side pane
+  * An option to set the wrap-mode in sourceview
+  * A theme choice for the source view plugin
+  * A "private" switch to server command for commandline usage
+  * Authentication support to web server
+  * A template selection option to web server dialog
+  * An option for fontsize to table of contents plugin
+  * An option to show horizontal lines in table of contents
+  * Ability to combine formatting styles in editor
+
+Platform / general changes:
+
+  * Ported zim to use Python3 & Gtk3
+  * A lot of bug fixes and performance improvements
+
+For full change log please refer to:
+  
+  https://github.com/zim-desktop-wiki/zim-desktop-wiki/blob/master/CHANGELOG.md

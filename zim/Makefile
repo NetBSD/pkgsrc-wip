@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-DISTNAME=	zim-0.73.0
+DISTNAME=	zim-0.73.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
@@ -19,7 +19,7 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	zim.py
-PYTHON_VERSIONS_ACCEPTED=	37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		data-path
 SUBST_STAGE.data-path=	pre-configure
