@@ -19,6 +19,7 @@ LICENSE=	modified-bsd
 # that use the other.
 
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.6:../../www/py-genshi
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py-jinja2
 
 USE_TOOLS+=	pax
 
