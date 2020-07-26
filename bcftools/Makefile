@@ -9,8 +9,6 @@ HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating BCF and VCF variant call files
 LICENSE=	mit
 
-BUILDLINK_API_DEPENDS.htslib+=	htslib>=1.10.2
-
 USE_TOOLS+=	autoconf automake autoreconf bash gmake perl
 GNU_CONFIGURE=	yes
 
@@ -50,6 +48,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/vcfutils.pl \
 		${DESTDIR}${PREFIX}/bin/vcfutils
 
+BUILDLINK_API_DEPENDS.htslib+=	htslib>=1.10.2
 .include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
