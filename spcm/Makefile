@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	SPCM-0.4.1.15
+DISTNAME=	SPCM-0.4.1.16
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	c28e40a65ae7bba899f3279ad08c384f36e9561f
+GITHUB_TAG=	d8b5d25fcb9bf29e465238df9eba9cf016a54ca7
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/spcm.php
@@ -16,18 +16,18 @@ DATADIR=	${PREFIX}/share/cluster-admin
 
 SUBST_CLASSES+=		datadir
 SUBST_STAGE.datadir=	pre-configure
-SUBST_FILES.datadir=	${WRKSRC}/CentOS/Sys-scripts/ganglia-web-setup \
-			${WRKSRC}/Common/Sys-scripts/slurm-update-idle-nodes
+SUBST_FILES.datadir=	CentOS/Sys-scripts/ganglia-web-setup \
+			Common/Sys-scripts/slurm-update-idle-nodes
 SUBST_SED.datadir=	-e 's|%%DATADIR%%|${PREFIX}/share/cluster-admin|g'
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	${WRKSRC}/Common/User-scripts/slurm-shell
+SUBST_FILES.prefix=	Common/User-scripts/slurm-shell
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
 SUBST_CLASSES+=		sbin
 SUBST_STAGE.sbin=	pre-configure
-SUBST_FILES.sbin+=	${WRKSRC}/Common/Src/cluster-passwd.c
+SUBST_FILES.sbin+=	Common/Src/cluster-passwd.c
 SUBST_SED.sbin=		-e 's|/usr/local/sbin|${PREFIX}/sbin|g'
 
 DEPENDS+=	auto-admin>=0.6.3:../../wip/auto-admin
