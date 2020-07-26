@@ -33,8 +33,6 @@ bin/slurm-shell
 bin/slurm-user-cores
 bin/topjob
 bin/topnode
-etc/spcm/slurm-node-resume
-etc/spcm/slurm-node-suspend
 libexec/add-gecos.awk
 sbin/cluster-add-to-group
 sbin/cluster-adduser
@@ -106,6 +104,8 @@ sbin/node-sync-groups
 sbin/node-sync-users
 sbin/slurm-cron-updates
 sbin/slurm-drain-all
+sbin/slurm-node-resume
+sbin/slurm-node-suspend
 sbin/slurm-restart
 sbin/slurm-resume-nodes
 sbin/slurm-resume-updated-nodes
