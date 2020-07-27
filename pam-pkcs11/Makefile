@@ -6,9 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opensc/}pam_pkcs11/
 #http://sourceforge.net/projects/opensc/files/pam_pkcs11/
 
-MAINTAINER=		gdt@ir.bbn.com
-# Did not answer mail 2011-11
-#MAINTAINER=		evaldo@gardenali.biz
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/OpenSC/pam_pkcs11/wiki
 COMMENT=		PKCS \#11 authentication method for PAM
 LICENSE=		gnu-lgpl-v2.1
