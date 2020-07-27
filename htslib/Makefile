@@ -23,6 +23,7 @@ REPLACE_PERL+=		test/*.pl
 CONFIGURE_ARGS+=	--enable-libcurl
 PKGCONFIG_OVERRIDE=	htslib.pc.in
 TEST_TARGET=		test
+MAKE_ENV+=		BUILT_TEST_PROGRAMS=''
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
