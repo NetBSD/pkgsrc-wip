@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2010/07/04 19:26:07 rsmarples Exp $
-
-SHA1 (gitplugin_0.12-r7757.zip) = e1a68281f3de4f730012fdef56671c348127b994
-RMD160 (gitplugin_0.12-r7757.zip) = 714f6464178308ee2504c5034975d4d4cb670a0c
-Size (gitplugin_0.12-r7757.zip) = 20706 bytes
-SHA1 (patch-aa) = ad73a3da7f2cacb0b33f89c2867f4aa0ea2ec305

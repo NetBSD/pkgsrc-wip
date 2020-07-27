@@ -1,4 +1,0 @@
-This plugin allows different trac to show a git repository.
-
-As of trac 1.0, this plugin is part of the main trac package.
-It will be removed from wip on or after 2013-05-13.
