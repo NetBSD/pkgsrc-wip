@@ -1,5 +1,8 @@
 $NetBSD$
 
+	The original build source is lax on the permissions.
+	Adjust permission to match pkgsrc expectations.
+
 --- core/cmake/BareosInstallConfigFiles.cmake.orig	2020-07-09 17:39:20.000000000 +0000
 +++ core/cmake/BareosInstallConfigFiles.cmake
 @@ -69,6 +69,7 @@ macro(

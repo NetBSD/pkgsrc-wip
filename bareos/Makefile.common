@@ -11,7 +11,8 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG:C/\//-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bareos/}
 
-MAINTAINER=	paul@paulbsd.com
+# MAINTAINER=	paul@paulbsd.com
+MAINTAINER=	kardel@NetBSD.org
 HOMEPAGE=	http://www.bareos.org/
 LICENSE=	gnu-agpl-v3
 
@@ -30,8 +31,8 @@ CXXFLAGS+=	-march=i586
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
-SUBST_FILES.paths=	core/src/cats/make_catalog_backup.pl.in
-SUBST_FILES.paths+=	core/CMakeLists.txt
+SUBST_FILES.paths=	core/CMakeLists.txt
+SUBST_FILES.paths+=	core/src/cats/make_catalog_backup.pl.in
 SUBST_SED.paths=	-e 's,"/usr/local,"${PREFIX},g'
 SUBST_SED.paths+=	-e 's,"/var/log,"${VARBASE}/log,g'
 SUBST_VARS.paths=	LOCALBASE PREFIX PKGVERSION

@@ -19,6 +19,9 @@ RCD_SCRIPTS=		bareos-fd
 
 .include "../../wip/bareos/Makefile.common"
 
+# needs to be here to get ${EGREP} defined
+.include "../../mk/bsd.pkg.mk"
+
 CONFIG_TEMPLATES!=	${EGREP} "^"${CONFIG_TEMPLATE_PATH:Q} PLIST.client 2>/dev/null | sed -e 's/ /\\ /g'
 CONF_FILES?=
 
@@ -32,5 +35,3 @@ MAKE_DIRS?=
 MAKE_DIRS+=	${CONFIG_TEMPLATES:H:O:u:S/^${CONFIG_TEMPLATE_PATH}/${PKG_SYSCONFDIR}/}
 MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}
 MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working
-
-.include "../../mk/bsd.pkg.mk"

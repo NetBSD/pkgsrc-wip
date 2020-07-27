@@ -10,15 +10,28 @@ RCD_SCRIPTS=		bareos bareos-dir bareos-sd bareos-fd
 
 # For make_catalog_backup.pl.in.
 USE_TOOLS+=		perl:run
+# strange: pkglint complains about VARBASE not defined in BUILD_DEFS, but it is defined in Makefile.common
+BUILD_DEFS+=		VARBASE
 
 .include "options.mk"
 .include "Makefile.common"
+
+# needs to be here to get ${EGREP} defined
+.include "../../mk/bsd.pkg.mk"
 
 REPLACE_PERL+=		core/src/cats/make_catalog_backup.pl.in
 
 # spool directory
 MAKE_DIRS_PERMS+=	${VARBASE}/${PKG_SYSCONFSUBDIR} \
 			${REAL_ROOT_USER} ${BAREOS_GROUP} 0770
+MAKE_DIRS_PERMS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working \
+			${BAREOS_DIR_USER} ${BAREOS_GROUP} 0770
+MAKE_DIRS_PERMS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR} \
+			${BAREOS_DIR_USER} ${BAREOS_GROUP} 0770
+MAKE_DIRS_PERMS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/bsr \
+			${BAREOS_DIR_USER} ${BAREOS_GROUP} 0770
+MAKE_DIRS_PERMS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/storage \
+			${BAREOS_DIR_USER} ${BAREOS_GROUP} 0770
 
 post-install:
 	${LN} -fs ${PKG_SYSCONFSUBDIR}/backends/libbareossd-gentape.so ${DESTDIR:Q}/${BAREOS_LIBDIR:Q}/libbareossd-gentape.so
@@ -32,9 +45,3 @@ CONF_FILES+=	${l} ${PKG_SYSCONFDIR}${l:S/^${CONFIG_TEMPLATE_PATH}//}
 
 MAKE_DIRS?=
 MAKE_DIRS+=	${CONFIG_TEMPLATES:H:O:u:S/^${CONFIG_TEMPLATE_PATH}/${PKG_SYSCONFDIR}/}
-MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}
-MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/bsr
-MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/storage
-MAKE_DIRS+=	${VARBASE}/db/${PKG_SYSCONFSUBDIR}/working
-
-.include "../../mk/bsd.pkg.mk"

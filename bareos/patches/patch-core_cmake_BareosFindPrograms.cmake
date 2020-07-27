@@ -1,5 +1,10 @@
 $NetBSD$
 
+	the pkgsrc build system provides awk on the path.
+	The cmake build system uses this build path for
+	installed scripts - change the way the awk path
+	is found.
+
 --- core/cmake/BareosFindPrograms.cmake.orig	2020-07-09 17:39:20.000000000 +0000
 +++ core/cmake/BareosFindPrograms.cmake
 @@ -18,10 +18,14 @@
