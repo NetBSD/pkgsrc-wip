@@ -1,34 +1,25 @@
 $NetBSD$
 
---- components/storage_monitor/BUILD.gn.orig	2017-02-02 02:02:52.000000000 +0000
+--- components/storage_monitor/BUILD.gn.orig	2020-06-25 09:31:28.000000000 +0000
 +++ components/storage_monitor/BUILD.gn
-@@ -65,6 +65,29 @@ static_library("storage_monitor") {
-     ]
+@@ -79,6 +79,11 @@ static_library("storage_monitor") {
+     } else {
+       sources += [ "storage_monitor_dummy.cc" ]
+     }
++  } else if (is_netbsd) {
++    sources += [
++      "storage_monitor_netbsd.cc",
++      "storage_monitor_netbsd.h",
++    ]
    }
  
-+  if (is_bsd) {
-+    sources -= [
-+      "mtab_watcher_linux.cc",
-+      "mtab_watcher_linux.h",
-+      "storage_monitor_linux.cc",
-+      "storage_monitor_linux.h",
-+      "udev_util_linux.cc",
-+      "udev_util_linux.h",
-+    ]
-+    if (is_freebsd) {
-+      sources += [
-+        "storage_monitor_freebsd.cc",
-+        "storage_monitor_freebsd.h",
-+      ]
-+    }
-+    if (is_netbsd) {
-+      sources += [
-+        "storage_monitor_netbsd.cc",
-+        "storage_monitor_netbsd.h",
-+      ]
-+    }
-+  }
-+
    if (use_udev) {
-     deps += [ "//device/udev_linux" ]
-   } else if (is_linux) {
+@@ -154,7 +159,7 @@ source_set("unit_tests") {
+         "mtp_manager_client_chromeos_unittest.cc",
+         "storage_monitor_chromeos_unittest.cc",
+       ]
+-    } else if (is_linux) {
++    } else if (is_linux || is_bsd) {
+       sources += [ "storage_monitor_linux_unittest.cc" ]
+     }
+   }

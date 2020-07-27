@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/closure_compiler/compile_js.gni.orig	2020-07-15 18:56:30.000000000 +0000
++++ third_party/closure_compiler/compile_js.gni
+@@ -8,7 +8,7 @@ declare_args() {
+   # Enable closure type-checking for Chrome's web technology-based UI. This
+   # enables the webui_closure_compile target which does a no-op without this
+   # flag enabled. Requires Java.
+-  enable_js_type_check = is_chromeos || is_linux || is_android
++  enable_js_type_check = is_chromeos || is_linux || is_android || is_bsd
+ }
+ 
+ script_path = "//third_party/closure_compiler"

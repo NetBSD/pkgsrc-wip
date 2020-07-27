@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/gfx/canvas_skia.cc.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/gfx/canvas_skia.cc.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/gfx/canvas_skia.cc
-@@ -209,7 +209,7 @@ void Canvas::DrawStringRectWithShadows(c
+@@ -206,7 +206,7 @@ void Canvas::DrawStringRectWithFlags(con
      Range range = StripAcceleratorChars(flags, &adjusted_text);
      bool elide_text = ((flags & NO_ELLIPSIS) == 0);
  

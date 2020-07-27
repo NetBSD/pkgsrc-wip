@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/views/selection_controller.cc.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/views/selection_controller.cc.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/views/selection_controller.cc
-@@ -20,7 +20,7 @@ SelectionController::SelectionController
+@@ -23,7 +23,7 @@ SelectionController::SelectionController
        delegate_(delegate),
        handles_selection_clipboard_(false) {
  // On Linux, update the selection clipboard on a text selection.

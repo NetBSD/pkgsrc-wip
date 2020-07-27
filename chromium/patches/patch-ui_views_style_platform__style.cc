@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ui/views/style/platform_style.cc.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/views/style/platform_style.cc.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/views/style/platform_style.cc
-@@ -17,7 +17,7 @@
- #include "ui/views/controls/focusable_border.h"
- #include "ui/views/controls/scrollbar/scroll_bar_views.h"
+@@ -74,7 +74,7 @@ gfx::Range PlatformStyle::RangeToDeleteB
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
- #define DESKTOP_LINUX
- #endif
+ #endif  // OS_MACOSX
  
+-#if !BUILDFLAG(ENABLE_DESKTOP_AURA) || !defined(OS_LINUX)
++#if !BUILDFLAG(ENABLE_DESKTOP_AURA) || (!defined(OS_LINUX) && !defined(OS_BSD))
+ // static
+ std::unique_ptr<Border> PlatformStyle::CreateThemedLabelButtonBorder(
+     LabelButton* button) {

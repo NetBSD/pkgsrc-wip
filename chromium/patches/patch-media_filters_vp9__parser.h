@@ -1,6 +1,6 @@
 $NetBSD$
 
---- media/filters/vp9_parser.h.orig	2017-02-02 02:02:55.000000000 +0000
+--- media/filters/vp9_parser.h.orig	2020-07-08 21:40:45.000000000 +0000
 +++ media/filters/vp9_parser.h
 @@ -14,6 +14,7 @@
  
@@ -9,4 +9,4 @@ $NetBSD$
 +#include <unistd.h>
  #include <sys/types.h>
  
- #include <deque>
+ #include <memory>

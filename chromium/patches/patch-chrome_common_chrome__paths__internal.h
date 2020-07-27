@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/common/chrome_paths_internal.h.orig	2017-02-02 02:02:50.000000000 +0000
+--- chrome/common/chrome_paths_internal.h.orig	2020-07-08 21:40:36.000000000 +0000
 +++ chrome/common/chrome_paths_internal.h
-@@ -39,7 +39,7 @@ void GetUserCacheDirectory(const base::F
+@@ -45,7 +45,7 @@ void GetUserCacheDirectory(const base::F
  // Get the path to the user's documents directory.
  bool GetUserDocumentsDirectory(base::FilePath* result);
  

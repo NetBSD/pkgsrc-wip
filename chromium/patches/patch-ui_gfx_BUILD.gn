@@ -1,22 +1,67 @@
 $NetBSD$
 
---- ui/gfx/BUILD.gn.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/gfx/BUILD.gn.orig	2020-06-25 09:32:23.000000000 +0000
 +++ ui/gfx/BUILD.gn
-@@ -371,7 +371,7 @@ component("gfx") {
+@@ -150,7 +150,7 @@ jumbo_component("gfx") {
+       "android/view_configuration.h",
+     ]
+   }
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "font_fallback_linux.cc",
+       "font_fallback_linux.h",
+@@ -386,7 +386,7 @@ jumbo_component("gfx") {
    }
  
    # Linux.
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
-     deps += [ "//build/linux:fontconfig" ]
+     deps += [ "//third_party/fontconfig" ]
    }
  
-@@ -549,7 +549,7 @@ static_library("test_support") {
-       "test/ui_cocoa_test_helper.mm",
-     ]
-   }
+@@ -566,7 +566,7 @@ jumbo_source_set("memory_buffer_sources"
+     "//ui/gfx/geometry",
+   ]
+ 
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
-     deps += [ "//build/linux:fontconfig" ]
+     sources += [
+       "linux/client_native_pixmap_dmabuf.cc",
+       "linux/client_native_pixmap_dmabuf.h",
+@@ -596,7 +596,7 @@ jumbo_source_set("memory_buffer_sources"
+     public_deps += [ "//ipc:message_support" ]
    }
- }
+ 
+-  if ((is_linux || use_ozone) && !is_nacl) {
++  if ((is_linux || use_ozone || is_bsd) && !is_nacl) {
+     sources += [
+       "native_pixmap_handle.cc",
+       "native_pixmap_handle.h",
+@@ -672,7 +672,7 @@ test("gfx_unittests") {
+     "text_elider_unittest.cc",
+     "text_utils_unittest.cc",
+   ]
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "font_fallback_linux_unittest.cc",
+       "font_render_params_linux_unittest.cc",
+@@ -763,7 +763,7 @@ test("gfx_unittests") {
+     sources += [ "system_fonts_win_unittest.cc" ]
+   }
+ 
+-  if (is_linux || is_android || is_fuchsia || is_win) {
++  if (is_linux || is_android || is_fuchsia || is_win || is_bsd) {
+     sources += [ "platform_font_skia_unittest.cc" ]
+   }
+ 
+@@ -855,7 +855,7 @@ test("gfx_unittests") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "linux/fontconfig_util_unittest.cc",
+       "linux/native_pixmap_dmabuf_unittest.cc",

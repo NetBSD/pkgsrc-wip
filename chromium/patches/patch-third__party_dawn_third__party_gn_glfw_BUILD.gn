@@ -1,0 +1,30 @@
+$NetBSD$
+
+--- third_party/dawn/third_party/gn/glfw/BUILD.gn.orig	2020-07-15 19:01:33.000000000 +0000
++++ third_party/dawn/third_party/gn/glfw/BUILD.gn
+@@ -34,7 +34,7 @@ config("glfw_public") {
+     defines = [ "_GLFW_COCOA" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     defines = [ "_GLFW_X11" ]
+   }
+ }
+@@ -89,14 +89,14 @@ static_library("glfw") {
+     ]
+   }
+ 
+-  if (is_linux || is_mac) {
++  if (is_linux || is_mac || is_bsd) {
+     sources += [
+       "${glfw_dir}/src/posix_thread.c",
+       "${glfw_dir}/src/posix_thread.h",
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "${glfw_dir}/src/glx_context.c",
+       "${glfw_dir}/src/glx_context.h",

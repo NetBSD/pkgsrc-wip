@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/cookie_config/cookie_store_util.cc.orig	2017-02-02 02:02:52.000000000 +0000
+--- components/cookie_config/cookie_store_util.cc.orig	2020-07-08 21:40:39.000000000 +0000
 +++ components/cookie_config/cookie_store_util.cc
 @@ -11,7 +11,7 @@
  
@@ -11,16 +11,3 @@ $NetBSD$
  namespace {
  
  // Use the operating system's mechanisms to encrypt cookies before writing
-@@ -63,10 +63,10 @@ base::LazyInstance<CookieOSCryptoDelegat
- net::CookieCryptoDelegate* GetCookieCryptoDelegate() {
-   return g_cookie_crypto_delegate.Pointer();
- }
--#else   // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#else   // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
- net::CookieCryptoDelegate* GetCookieCryptoDelegate() {
-   return NULL;
- }
--#endif  // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#endif  // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
- 
- }  // namespace cookie_config

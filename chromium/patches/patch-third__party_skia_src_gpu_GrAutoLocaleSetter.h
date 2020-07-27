@@ -1,9 +1,9 @@
 $NetBSD$
 
---- third_party/skia/src/gpu/GrAutoLocaleSetter.h.orig	2016-11-01 21:00:04.000000000 +0000
+--- third_party/skia/src/gpu/GrAutoLocaleSetter.h.orig	2020-07-15 19:01:40.000000000 +0000
 +++ third_party/skia/src/gpu/GrAutoLocaleSetter.h
-@@ -22,7 +22,7 @@
- #include <xlocale.h>
+@@ -27,7 +27,7 @@
+ #define HAVE_XLOCALE 0
  #endif
  
 -#if defined(SK_BUILD_FOR_ANDROID) || defined(__UCLIBC__) || defined(_NEWLIB_VERSION)

@@ -1,41 +1,50 @@
 $NetBSD$
 
---- v8/BUILD.gn.orig	2016-11-10 20:03:08.000000000 +0000
+--- v8/BUILD.gn.orig	2020-06-25 09:34:52.000000000 +0000
 +++ v8/BUILD.gn
-@@ -2096,6 +2098,14 @@ v8_source_set("v8_libbase") {
+@@ -3336,7 +3336,7 @@ v8_source_set("v8_base_without_compiler"
+ 
+     # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+     # based on Darwin and thus POSIX-compliant to a similar degree.
+-    if (is_linux || is_mac || is_ios || target_os == "freebsd") {
++    if (is_linux || is_mac || is_ios || target_os == "freebsd" || is_bsd) {
+       sources += [
+         "src/trap-handler/handler-inside-posix.cc",
+         "src/trap-handler/handler-inside-posix.h",
+@@ -3677,7 +3677,7 @@ v8_source_set("v8_base_without_compiler"
+     libs += [ "atomic" ]
+   }
+ 
+-  if (v8_enable_vtunetracemark && (is_linux || is_win)) {
++  if (v8_enable_vtunetracemark && (is_linux || is_win || is_bsd)) {
+     sources += [
+       "src/extensions/vtunedomain-support-extension.cc",
+       "src/extensions/vtunedomain-support-extension.h",
+@@ -3932,6 +3932,16 @@ v8_component("v8_libbase") {
        "dl",
        "rt",
      ]
 +  } else if (is_netbsd) {
 +    sources += [
 +      "src/base/debug/stack_trace_posix.cc",
-+      "src/base/platform/platform-netbsd.cc",
++      "src/base/platform/platform-openbsd.cc",
 +    ]
++
 +    libs = [
-+      "execinfo", "rt",
++      "rt",
++      "execinfo",
 +    ]
-   } else if (is_android) {
-     if (current_toolchain == host_toolchain) {
-       libs = [
-@@ -2237,6 +2247,10 @@ if (current_toolchain == v8_snapshot_too
-       "//build/config/sanitizers:deps",
-       "//build/win:default_exe_manifest",
+   } else if (current_os == "aix") {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",
+@@ -4354,6 +4364,10 @@ if (current_toolchain == v8_snapshot_too
+       "src/snapshot/snapshot-empty.cc",
      ]
-+
-+    libs = [
-+      "execinfo", "rt",
-+    ]
-   }
- }
  
-@@ -2263,6 +2277,10 @@ v8_executable("mkpeephole") {
-     "//build/config/sanitizers:deps",
-     "//build/win:default_exe_manifest",
-   ]
++    if (is_bsd) {
++      libs = ["execinfo"]
++    }
 +
-+  libs = [
-+    "execinfo",
-+  ]
- }
+     configs = [ ":internal_config" ]
  
- ###############################################################################
+     deps = [

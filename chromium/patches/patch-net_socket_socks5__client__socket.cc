@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/socket/socks5_client_socket.cc.orig	2017-02-02 02:02:56.000000000 +0000
+--- net/socket/socks5_client_socket.cc.orig	2020-07-15 18:56:00.000000000 +0000
 +++ net/socket/socks5_client_socket.cc
 @@ -4,6 +4,10 @@
  
@@ -12,4 +12,4 @@ $NetBSD$
 +
  #include <utility>
  
- #include "base/callback_helpers.h"
+ #include "base/bind.h"

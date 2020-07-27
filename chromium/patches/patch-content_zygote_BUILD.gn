@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- content/zygote/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
++++ content/zygote/BUILD.gn
+@@ -5,7 +5,7 @@
+ import("//build/config/nacl/config.gni")
+ import("//content/public/common/zygote/features.gni")
+ 
+-if (is_linux) {
++if (is_linux || is_bsd) {
+   source_set("zygote") {
+     sources = [
+       "zygote_linux.cc",
+@@ -26,6 +26,12 @@ if (is_linux) {
+     ]
+ 
+     configs += [ "//content:content_implementation" ]
++
++    if (is_bsd) {
++      sources -= [
++        "zygote_linux.cc",
++      ]
++    }
+   }
+ } else {
+   group("zygote") {

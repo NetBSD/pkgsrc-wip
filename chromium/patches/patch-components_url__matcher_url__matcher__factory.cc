@@ -1,16 +1,13 @@
 $NetBSD$
 
---- components/url_matcher/url_matcher_factory.cc.orig	2017-02-02 02:02:53.000000000 +0000
+--- components/url_matcher/url_matcher_factory.cc.orig	2020-07-08 21:40:41.000000000 +0000
 +++ components/url_matcher/url_matcher_factory.cc
-@@ -16,7 +16,11 @@
+@@ -16,7 +16,7 @@
  #include "base/values.h"
  #include "components/url_matcher/url_matcher_constants.h"
  #include "components/url_matcher/url_matcher_helpers.h"
-+#if defined(OS_BSD)
+-#include "third_party/re2/src/re2/re2.h"
 +#include <re2/re2.h>
-+#else
- #include "third_party/re2/src/re2/re2.h"
-+#endif
  
  namespace url_matcher {
  

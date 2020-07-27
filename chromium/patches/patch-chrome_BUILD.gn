@@ -1,17 +1,26 @@
 $NetBSD$
 
---- chrome/BUILD.gn.orig	2017-02-02 02:02:47.000000000 +0000
+--- chrome/BUILD.gn.orig	2020-07-15 18:56:44.000000000 +0000
 +++ chrome/BUILD.gn
-@@ -132,7 +132,7 @@ if (!is_android && !is_mac) {
-     data = [
-       "$root_out_dir/resources.pak",
-     ]
+@@ -28,7 +28,7 @@ import("//v8/gni/v8.gni")
+ 
+ if (is_android) {
+   import("//build/config/android/rules.gni")
+-} else if (is_linux) {
++} else if (is_linux || is_bsd) {
+   import("//build/linux/extract_symbols.gni")
+ } else if (is_mac) {
+   import("//build/compiled_action.gni")
+@@ -131,7 +131,7 @@ if (!is_android && !is_mac) {
+     deps = [ "//printing/buildflags" ]
+ 
+     data = [ "$root_out_dir/resources.pak" ]
 -    if (is_linux || is_win) {
-+    if (is_linux || is_bsd || is_win) {
-       data += [
-         "$root_out_dir/chrome_100_percent.pak",
-         "$root_out_dir/locales/en-US.pak",
-@@ -212,7 +212,7 @@ if (!is_android && !is_mac) {
++    if (is_linux || is_win || is_bsd) {
+       data_deps = [ "//chrome:packed_resources" ]
+     }
+ 
+@@ -211,7 +211,7 @@ if (!is_android && !is_mac) {
        sources += [ "app/chrome_exe_main_aura.cc" ]
      }
  
@@ -20,12 +29,12 @@ $NetBSD$
        sources += [
          "app/chrome_dll_resource.h",
          "app/chrome_main.cc",
-@@ -1539,7 +1539,7 @@ if (enable_resource_whitelist_generation
+@@ -1536,7 +1536,7 @@ if (enable_resource_whitelist_generation
    }
  }
  
 -if (is_linux) {
 +if (is_linux || is_bsd) {
-   action("manpage") {
-     if (is_chrome_branded) {
-       name = "Google Chrome"
+   if (is_official_build) {
+     group("linux_symbols") {
+       deps = [

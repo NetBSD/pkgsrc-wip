@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- third_party/perfetto/gn/standalone/BUILD.gn.orig	2020-07-15 19:01:38.000000000 +0000
++++ third_party/perfetto/gn/standalone/BUILD.gn
+@@ -143,7 +143,7 @@ config("default") {
+     cflags += [ "-fno-omit-frame-pointer" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     libs += [
+       "pthread",
+       "rt",
+@@ -238,7 +238,7 @@ config("release") {
+ }
+ 
+ config("shared_library") {
+-  if (is_android || is_linux) {
++  if (is_android || is_linux || is_bsd) {
+     ldflags = [ "-fPIC" ]
+   }
+ }
+@@ -248,7 +248,7 @@ config("executable") {
+ 
+   # Android will refuse to run executables if they aren't position independent.
+   # Instead on Linux there isn't any need and they break ASan (goo.gl/paFR6K).
+-  if (is_android || is_linux) {
++  if (is_android || is_linux || is_bsd) {
+     asmflags = [ "-fPIE" ]
+     cflags = [ "-fPIE" ]
+     ldflags += [ "-pie" ]
+@@ -259,7 +259,7 @@ config("executable") {
+   # supported only by Linux, not Android. But concretely we need this only when
+   # use_custom_libcxx=true && custom_libcxx_is_static=false, which happens only
+   # on Linux right now.
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     ldflags += [
+       "-Wl,-rpath=\$ORIGIN/.",
+       "-Wl,-rpath-link=.",

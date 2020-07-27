@@ -1,16 +1,13 @@
 $NetBSD$
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2017-02-02 02:02:49.000000000 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2020-07-08 21:40:34.000000000 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
-@@ -57,7 +57,11 @@
- #include "content/public/browser/web_contents.h"
- #include "google_apis/gaia/gaia_urls.h"
+@@ -95,7 +95,7 @@
  #include "net/base/url_util.h"
-+#if defined(OS_BSD)
+ #include "net/cert/cert_status_flags.h"
+ #include "services/metrics/public/cpp/ukm_recorder.h"
+-#include "third_party/re2/src/re2/re2.h"
 +#include <re2/re2.h>
-+#else
- #include "third_party/re2/src/re2/re2.h"
-+#endif
+ #include "url/url_constants.h"
  
- #if BUILDFLAG(ANDROID_JAVA_UI)
- #include "chrome/browser/android/tab_android.h"
+ #if BUILDFLAG(FULL_SAFE_BROWSING)

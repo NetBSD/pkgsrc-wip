@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h.orig	2017-02-02 02:03:50.000000000 +0000
+--- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h.orig	2020-07-15 19:01:36.000000000 +0000
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h
 @@ -23,6 +23,7 @@
  // user of the library know that it can't be used in a thread-safe manner when
@@ -15,7 +15,7 @@ $NetBSD$
  
  #if !defined(NDEBUG) && !defined(I18N_PHONENUMBERS_USE_BOOST) && \
 -    (defined(__linux__) || defined(__apple__))
-+    (defined(__linux__) || defined(__apple__)) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++    (defined(__linux__) || defined(__apple__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__))
  
  #include <pthread.h>
  

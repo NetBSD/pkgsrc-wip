@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- content/renderer/BUILD.gn.orig	2020-07-08 21:41:48.000000000 +0000
++++ content/renderer/BUILD.gn
+@@ -452,7 +452,7 @@ target(link_target_type, "renderer") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//components/services/font/public/cpp" ]
+   }
+ 
+@@ -658,7 +658,7 @@ target(link_target_type, "renderer") {
+     deps += [ "//printing" ]
+   }
+ 
+-  if (is_linux || is_android) {
++  if (is_linux || is_android || is_bsd) {
+     deps += [ "//sandbox:sandbox_buildflags" ]
+   }
+ 

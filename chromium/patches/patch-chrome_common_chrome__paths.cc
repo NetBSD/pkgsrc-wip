@@ -1,8 +1,26 @@
 $NetBSD$
 
---- chrome/common/chrome_paths.cc.orig	2017-02-02 02:02:50.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2020-07-15 18:55:52.000000000 +0000
 +++ chrome/common/chrome_paths.cc
-@@ -197,7 +197,7 @@ bool PathProvider(int key, base::FilePat
+@@ -52,14 +52,14 @@ const base::FilePath::CharType kPepperFl
+     FILE_PATH_LITERAL("Internet Plug-Ins/PepperFlashPlayer");
+ #endif
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+ // The path to the external extension <id>.json files.
+ // /usr/share seems like a good choice, see: http://www.pathname.com/fhs/
+ const base::FilePath::CharType kFilepathSinglePrefExtensions[] =
+ #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
+-    FILE_PATH_LITERAL("/usr/share/google-chrome/extensions");
++    FILE_PATH_LITERAL("@PREFIX@/share/google-chrome/extensions");
+ #else
+-    FILE_PATH_LITERAL("/usr/share/chromium/extensions");
++    FILE_PATH_LITERAL("@PREFIX@/share/chromium/extensions");
+ #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
+ 
+ // The path to the hint file that tells the pepper plugin loader
+@@ -205,7 +205,7 @@ bool PathProvider(int key, base::FilePat
          return false;
        break;
      case chrome::DIR_DEFAULT_DOWNLOADS_SAFE:
@@ -11,21 +29,16 @@ $NetBSD$
        if (!GetUserDownloadsDirectorySafe(&cur))
          return false;
        break;
-@@ -480,10 +480,12 @@ bool PathProvider(int key, base::FilePat
-       if (!base::PathExists(cur))  // We don't want to create this
-         return false;
+@@ -505,7 +505,7 @@ bool PathProvider(int key, base::FilePat
        break;
--#if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_OPENBSD)
-+#if defined(OS_POSIX) && !defined(OS_MACOSX)
-     case chrome::DIR_POLICY_FILES: {
- #if defined(GOOGLE_CHROME_BUILD)
-       cur = base::FilePath(FILE_PATH_LITERAL("/etc/opt/chrome/policies"));
-+#elif defined(OS_BSD)
-+      cur = base::FilePath(FILE_PATH_LITERAL("/usr/pkg/etc/chrome/policies"));
- #else
-       cur = base::FilePath(FILE_PATH_LITERAL("/etc/chromium/policies"));
+     }
  #endif
-@@ -534,7 +536,7 @@ bool PathProvider(int key, base::FilePat
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+     case chrome::DIR_STANDALONE_EXTERNAL_EXTENSIONS: {
+       cur = base::FilePath(kFilepathSinglePrefExtensions);
+       break;
+@@ -540,7 +540,7 @@ bool PathProvider(int key, base::FilePat
  #endif
        break;
  
@@ -33,23 +46,13 @@ $NetBSD$
 +#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
      case chrome::DIR_NATIVE_MESSAGING:
  #if defined(OS_MACOSX)
- #if defined(GOOGLE_CHROME_BUILD)
-@@ -548,6 +550,9 @@ bool PathProvider(int key, base::FilePat
- #if defined(GOOGLE_CHROME_BUILD)
-       cur = base::FilePath(FILE_PATH_LITERAL(
-           "/etc/opt/chrome/native-messaging-hosts"));
-+#elif defined(OS_BSD)
-+      cur = base::FilePath(FILE_PATH_LITERAL(
-+          "/usr/pkg/etc/chrome/native-messaging-hosts"));
- #else
-       cur = base::FilePath(FILE_PATH_LITERAL(
-           "/etc/chromium/native-messaging-hosts"));
-@@ -560,7 +565,7 @@ bool PathProvider(int key, base::FilePat
-         return false;
-       cur = cur.Append(FILE_PATH_LITERAL("NativeMessagingHosts"));
+ #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
+@@ -574,7 +574,7 @@ bool PathProvider(int key, base::FilePat
+       cur = cur.Append(kGCMStoreDirname);
        break;
--#endif  // defined(OS_LINUX) || defined(OS_MACOSX)
-+#endif  // defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
- #if !defined(OS_ANDROID)
-     case chrome::DIR_GLOBAL_GCM_STORE:
-       if (!PathService::Get(chrome::DIR_USER_DATA, &cur))
+ #endif  // !defined(OS_ANDROID)
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+     case chrome::FILE_COMPONENT_FLASH_HINT:
+       if (!base::PathService::Get(
+               chrome::DIR_COMPONENT_UPDATED_PEPPER_FLASH_PLUGIN, &cur)) {

@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/blink/public/mojom/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
++++ third_party/blink/public/mojom/BUILD.gn
+@@ -237,7 +237,7 @@ mojom("mojom_platform") {
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     enabled_features = [ "renderer_pref_system_font_family_name" ]
+   }
+ 

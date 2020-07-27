@@ -1,13 +1,13 @@
 $NetBSD$
 
---- chrome/common/chrome_switches.h.orig	2017-02-02 02:02:50.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2020-07-08 21:41:47.000000000 +0000
 +++ chrome/common/chrome_switches.h
-@@ -385,7 +385,7 @@ extern const char kAllowNaClSocketAPI[];
- extern const char kEnableWaylandServer[];
+@@ -255,7 +255,7 @@ extern const char kAllowNaClFileHandleAP
+ extern const char kAllowNaClSocketAPI[];
  #endif
  
--#if defined(OS_WIN) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_BSD)
- extern const char kDisableInputImeAPI[];
- extern const char kEnableInputImeAPI[];
+-#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_WIN)
++#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_WIN) || defined(OS_BSD)
+ extern const char kEnableNewAppMenuIcon[];
+ extern const char kGuest[];
  #endif

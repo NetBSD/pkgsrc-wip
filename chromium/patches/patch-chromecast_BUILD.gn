@@ -1,13 +1,13 @@
 $NetBSD$
 
---- chromecast/BUILD.gn.orig	2017-02-02 02:02:51.000000000 +0000
+--- chromecast/BUILD.gn.orig	2020-07-15 18:56:46.000000000 +0000
 +++ chromecast/BUILD.gn
-@@ -51,7 +51,7 @@ cast_test_group("cast_tests") {
-     tests += [ "//gpu:gpu_unittests" ]
+@@ -123,7 +123,7 @@ cast_test_group("cast_tests") {
+     filters += [ sandbox_linux_unittests_filter ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     tests += [ "//chromecast/crash:cast_crash_unittests" ]
-   }
- 
+-  if (is_linux || is_fuchsia) {
++  if (is_linux || is_fuchsia || is_bsd) {
+     tests += [ "//chromecast/media/cma/backend:cast_audio_backend_unittests" ]
+     cast_audio_backend_unittests_filter = {
+       test_name = "cast_audio_backend_unittests"

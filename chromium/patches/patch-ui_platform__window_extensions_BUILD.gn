@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/platform_window/extensions/BUILD.gn.orig	2020-07-15 18:56:34.000000000 +0000
++++ ui/platform_window/extensions/BUILD.gn
+@@ -19,7 +19,7 @@ source_set("extensions") {
+     "//ui/platform_window",
+   ]
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "x11_extension.cc",
+       "x11_extension.h",

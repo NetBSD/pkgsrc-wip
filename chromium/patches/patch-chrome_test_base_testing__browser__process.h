@@ -1,15 +1,16 @@
 $NetBSD$
 
---- chrome/test/base/testing_browser_process.h.orig	2017-02-02 02:02:50.000000000 +0000
+--- chrome/test/base/testing_browser_process.h.orig	2020-07-08 21:40:37.000000000 +0000
 +++ chrome/test/base/testing_browser_process.h
-@@ -107,8 +107,8 @@ class TestingBrowserProcess : public Bro
-   DownloadStatusUpdater* download_status_updater() override;
+@@ -119,8 +119,10 @@ class TestingBrowserProcess : public Bro
    DownloadRequestLimiter* download_request_limiter() override;
+   StartupData* startup_data() override;
  
 -#if (defined(OS_WIN) || defined(OS_LINUX)) && !defined(OS_CHROMEOS)
--  void StartAutoupdateTimer() override {}
-+#if (defined(OS_WIN) || defined(OS_LINUX) || defined(OS_FREEBSD)) && !defined(OS_CHROMEOS)
-+  void StartAutoupdateTimer() /*override*/ {}
++#if (defined(OS_WIN) || (defined(OS_LINUX)) && !defined(OS_CHROMEOS)
+   void StartAutoupdateTimer() override {}
++#elif defined(OS_BSD)
++  void StartAutoupdateTimer() {}
  #endif
  
-   net_log::ChromeNetLog* net_log() override;
+   component_updater::ComponentUpdateService* component_updater() override;

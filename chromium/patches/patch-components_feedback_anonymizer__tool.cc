@@ -1,16 +1,13 @@
 $NetBSD$
 
---- components/feedback/anonymizer_tool.cc.orig	2017-02-02 02:02:52.000000000 +0000
+--- components/feedback/anonymizer_tool.cc.orig	2020-07-08 21:40:39.000000000 +0000
 +++ components/feedback/anonymizer_tool.cc
-@@ -10,7 +10,11 @@
- #include "base/strings/string_number_conversions.h"
- #include "base/strings/string_util.h"
- #include "base/strings/stringprintf.h"
-+#if defined(OS_BSD)
+@@ -15,7 +15,7 @@
+ #include "base/threading/thread_restrictions.h"
+ #include "content/public/browser/browser_thread.h"
+ #include "net/base/ip_address.h"
+-#include "third_party/re2/src/re2/re2.h"
 +#include <re2/re2.h>
-+#else
- #include "third_party/re2/src/re2/re2.h"
-+#endif
  
  using re2::RE2;
  

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/webui/resources/js/icon.js.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/webui/resources/js/icon.js.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/webui/resources/js/icon.js
-@@ -14,7 +14,7 @@ cr.define('cr.icon', function() {
+@@ -16,7 +16,7 @@ cr.define('cr.icon', function() {
        // supports SCALE_FACTOR_100P on all non-iOS platforms.
        supportedScaleFactors.push(1);
      }

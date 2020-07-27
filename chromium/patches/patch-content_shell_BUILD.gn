@@ -1,36 +1,40 @@
 $NetBSD$
 
---- content/shell/BUILD.gn.orig	2017-02-02 02:02:54.000000000 +0000
+--- content/shell/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
 +++ content/shell/BUILD.gn
-@@ -296,7 +296,7 @@ static_library("content_shell_lib") {
+@@ -226,7 +226,7 @@ static_library("content_shell_app") {
+     "//content/public/app",
+     "//v8",
+   ]
+-  if (!is_fuchsia) {
++  if (!is_fuchsia && !is_bsd) {
+     deps += [
+       "//components/crash/core/app",
+       "//components/crash/core/app:test_support",
+@@ -490,6 +490,12 @@ static_library("content_shell_lib") {
+     deps += [ "//third_party/fuchsia-sdk/sdk/fidl/fuchsia.ui.policy" ]
+   }
+ 
++  if (is_bsd) {
++    deps -= [
++      "//components/crash/content/browser",
++    ]
++  }
++
+   if (enable_plugins) {
+     deps += [
+       "//cc/paint",
+@@ -597,7 +603,7 @@ static_library("content_shell_lib") {
      ]
    }
  
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
-     deps += [
-       "//build/linux:fontconfig",
-       "//ui/gfx:test_support",
-@@ -317,7 +317,7 @@ static_library("content_shell_lib") {
-     deps += [ "//content/shell/android:content_shell_jni_headers" ]
+     deps += [ "//build/config/freetype" ]
    }
  
--  if (is_posix && !is_mac) {
-+  if (is_posix && !is_mac && !is_bsd) {
-     deps += [
-       "//components/crash/content/app",
-       "//components/crash/content/browser",
-@@ -366,7 +366,7 @@ static_library("content_shell_lib") {
-     ]
-   }
- 
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     deps += [ "//third_party/freetype2" ]
-   }
- 
-@@ -532,7 +532,7 @@ if (is_android) {
-       }
+@@ -778,7 +784,7 @@ if (is_android) {
+           [ "//third_party/crashpad/crashpad/handler:crashpad_handler" ]
      }
  
 -    if (is_linux && !is_component_build) {
@@ -38,3 +42,12 @@ $NetBSD$
        # Set rpath to find our own libfreetype even in a non-component build.
        configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }
+@@ -1066,7 +1072,7 @@ group("content_shell_crash_test") {
+   if (is_win) {
+     data_deps += [ "//build/win:copy_cdb_to_output" ]
+   }
+-  if (is_posix) {
++  if (is_posix && !is_bsd) {
+     data_deps += [
+       "//third_party/breakpad:dump_syms",
+       "//third_party/breakpad:minidump_stackwalk",

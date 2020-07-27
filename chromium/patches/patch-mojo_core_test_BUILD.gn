@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- mojo/core/test/BUILD.gn.orig	2020-07-15 18:55:59.000000000 +0000
++++ mojo/core/test/BUILD.gn
+@@ -47,7 +47,7 @@ source_set("run_all_unittests") {
+     "//testing/gtest",
+   ]
+ 
+-  if (is_linux && !is_component_build) {
++  if ((is_linux || is_bsd) && !is_component_build) {
+     public_configs = [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+   }
+ }
+@@ -65,7 +65,7 @@ source_set("run_all_perftests") {
+ 
+   sources = [ "run_all_perftests.cc" ]
+ 
+-  if (is_linux && !is_component_build) {
++  if ((is_linux || is_bsd) && !is_component_build) {
+     public_configs = [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+   }
+ }

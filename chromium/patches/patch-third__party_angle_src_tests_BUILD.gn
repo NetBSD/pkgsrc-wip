@@ -1,26 +1,78 @@
 $NetBSD$
 
---- third_party/angle/src/tests/BUILD.gn.orig	2017-02-02 02:03:47.000000000 +0000
+--- third_party/angle/src/tests/BUILD.gn.orig	2020-06-25 09:34:42.000000000 +0000
 +++ third_party/angle/src/tests/BUILD.gn
-@@ -41,7 +41,7 @@ test("angle_unittests") {
-   ]
+@@ -134,7 +134,7 @@ angle_test("angle_unittests") {
+   }
+ }
+ 
+-if (is_win || is_linux || is_mac || is_android || is_fuchsia) {
++if (is_win || is_linux || is_mac || is_android || is_fuchsia || is_bsd) {
+   import("angle_end2end_tests.gni")
+ 
+   angle_test("angle_end2end_tests") {
+@@ -187,7 +187,7 @@ if (is_win || is_linux || is_mac || is_a
+   }
  }
  
 -if (is_win || is_linux || is_mac || is_android) {
 +if (is_win || is_linux || is_mac || is_android || is_bsd) {
-   end2end_gypi = exec_script("//build/gypi_to_gn.py",
-                              [
-                                rebase_path("angle_end2end_tests.gypi"),
-@@ -82,7 +82,7 @@ if (is_win || is_linux || is_mac || is_a
-       "//third_party/angle:libANGLE_config",
+   import("angle_white_box_tests.gni")
+ 
+   angle_test("angle_white_box_tests") {
+@@ -251,7 +251,7 @@ angle_perftests_common("angle_perftests_
+   test_utils = ":angle_common_test_utils_static"
+ }
+ 
+-if (is_win || is_linux || is_android || is_mac) {
++if (is_win || is_linux || is_android || is_mac || is_bsd) {
+   import("angle_perftests.gni")
+ 
+   # This test suite is for perf tests that use ANGLE's internals in some direct way.
+@@ -279,7 +279,7 @@ if (is_win || is_linux || is_android || 
+   }
+ }
+ 
+-if (is_win || is_linux || is_android || is_mac || is_fuchsia) {
++if (is_win || is_linux || is_android || is_mac || is_fuchsia || is_bsd) {
+   import("angle_perftests.gni")
+ 
+   angle_source_set("angle_trace_perftests") {
+@@ -367,13 +367,13 @@ if (is_win || is_linux || is_android || 
+       "${angle_root}:libGLESv2",
      ]
  
--    if (is_linux && !is_component_build) {
-+    if ((is_linux || is_bsd) && !is_component_build) {
-       # Set rpath to find libEGL.so and libGLESv2.so even in a non-component build.
-       configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+-    if (is_win || is_linux) {
++    if (is_win || is_linux || is_bsd) {
+       data_deps += [ "${angle_root}/third_party/glmark2:glmark2_angle" ]
      }
-@@ -175,7 +175,7 @@ if (build_angle_deqp_tests) {
+     if (is_win && target_cpu != "arm64") {
+       data_deps += [ "${angle_root}/third_party/glmark2:glmark2_wgl" ]
+     }
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       data_deps += [ "${angle_root}/third_party/glmark2:glmark2_glx" ]
+     }
+ 
+@@ -793,7 +793,7 @@ if (build_angle_gles1_conform_tests) {
+ 
+     sources += angle_gles1_conform_common_source
+ 
+-    if (!is_win && !is_linux) {
++    if (!is_win && !is_linux || !is_bsd) {
+       defines = [ "NULLWS" ]
+     }
+   }
+@@ -807,7 +807,7 @@ if (build_angle_gles1_conform_tests) {
+ 
+     if (is_win) {
+       sources += [ "$gles1_conform_root/conform/covegl/native_w32.c" ]
+-    } else if (is_linux) {
++    } else if (is_linux || is_bsd) {
+       sources += [ "$gles1_conform_root/conform/covegl/native.c" ]
+     } else {
+       sources += [ "$gles1_conform_root/conform/covegl/native_nws.c" ]
+@@ -910,7 +910,7 @@ if (build_angle_deqp_tests && !is_fuchsi
      # Ask the system headers to expose all the regular function otherwise
      # dEQP doesn't compile and produces warnings about implicitly defined
      # functions.
@@ -29,39 +81,12 @@ $NetBSD$
        # This has to be GNU_SOURCE as on Linux dEQP uses syscall()
        defines += [ "_GNU_SOURCE" ]
      }
-@@ -198,7 +198,7 @@ if (build_angle_deqp_tests) {
-     ]
-   }
- 
--  if (is_linux || is_android) {
-+  if (is_linux || is_android || is_bsd) {
-     deqp_undefine_configs += [ "//build/config/gcc:no_exceptions" ]
-   }
- 
-@@ -234,7 +234,7 @@ if (build_angle_deqp_tests) {
+@@ -1045,7 +1045,7 @@ if (build_angle_deqp_tests && !is_fuchsi
      if (is_win) {
-       sources += rebase_path(deqp_gypi.deqp_libtester_sources_win, ".", "../..")
+       sources += deqp_framework_delibs_sources_win
      }
--    if (is_linux || is_android) {
-+    if (is_linux || is_android || is_bsd) {
-       sources +=
-           rebase_path(deqp_gypi.deqp_libtester_sources_unix, ".", "../..")
+-    if (is_linux || is_android || is_mac) {
++    if (is_linux || is_android || is_mac || is_bsd) {
+       sources += deqp_framework_delibs_sources_unix
      }
-@@ -262,7 +262,7 @@ if (build_angle_deqp_tests) {
  
-     # Taken from gpu/BUILD.gn
-     # TODO(jmadill): this should be in a shared location
--    if (is_linux && !is_chromecast) {
-+    if ((is_linux || is_bsd) && !is_chromecast) {
-       libs = [ "pci" ]
-     }
-   }
-@@ -335,7 +335,7 @@ if (build_angle_deqp_tests) {
-         "../../../deqp/src/data/",
-       ]
- 
--      if (is_linux && !is_component_build) {
-+      if ((is_linux || is_bsd) && !is_component_build) {
-         # Set rpath to find *.so files even in a non-component build.
-         configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
-       }

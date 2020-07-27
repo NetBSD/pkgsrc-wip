@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/ffmpeg/libavutil/mem.c.orig	2017-02-02 02:03:48.000000000 +0000
+--- third_party/ffmpeg/libavutil/mem.c.orig	2020-07-15 19:01:34.000000000 +0000
 +++ third_party/ffmpeg/libavutil/mem.c
 @@ -32,9 +32,6 @@
  #include <stdint.h>

@@ -1,9 +1,9 @@
 $NetBSD$
 
---- media/audio/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
+--- media/audio/BUILD.gn.orig	2020-07-08 21:41:48.000000000 +0000
 +++ media/audio/BUILD.gn
-@@ -206,7 +206,7 @@ source_set("audio") {
-     deps += [ "//media/base/android:media_jni_headers" ]
+@@ -232,7 +232,7 @@ source_set("audio") {
+     ]
    }
  
 -  if (is_linux) {
@@ -11,17 +11,3 @@ $NetBSD$
      sources += [ "linux/audio_manager_linux.cc" ]
    }
  
-@@ -255,10 +255,12 @@ source_set("audio") {
-       configs += [ ":libpulse" ]
-     } else {
-       # TODO(ajwong): Technically, this dl should go in the action.
--      libs += [ "dl" ]
-       deps += [ ":pulse_generate_stubs" ]
-       sources += get_target_outputs(":pulse_generate_stubs")
-     }
-+    if (is_linux) {
-+      libs += [ "dl" ]
-+    }
-   }
- 
-   configs += [ "//build/config/compiler:no_size_t_to_int_warning" ]

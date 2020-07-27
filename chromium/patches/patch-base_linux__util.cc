@@ -1,20 +1,12 @@
 $NetBSD$
 
---- base/linux_util.cc.orig	2017-02-02 02:02:47.000000000 +0000
+--- base/linux_util.cc.orig	2020-06-25 09:31:18.000000000 +0000
 +++ base/linux_util.cc
-@@ -110,12 +110,14 @@ char g_linux_distro[kDistroSize] =
-     "CrOS";
- #elif defined(OS_ANDROID)
-     "Android";
-+#elif defined(OS_BSD)
-+    "BSD";
- #else  // if defined(OS_LINUX)
-     "Unknown";
- #endif
- 
- std::string GetLinuxDistro() {
--#if defined(OS_CHROMEOS) || defined(OS_ANDROID)
-+#if defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
-   return g_linux_distro;
- #elif defined(OS_LINUX)
-   LinuxDistroHelper* distro_state_singleton = LinuxDistroHelper::GetInstance();
+@@ -19,6 +19,7 @@
+ #include "base/files/dir_reader_posix.h"
+ #include "base/files/file_util.h"
+ #include "base/files/scoped_file.h"
++#include "base/logging.h"
+ #include "base/no_destructor.h"
+ #include "base/strings/safe_sprintf.h"
+ #include "base/strings/string_number_conversions.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/storage_monitor/storage_monitor_netbsd.h.orig	2017-02-15 20:24:30.383612419 +0000
+--- components/storage_monitor/storage_monitor_netbsd.h.orig	2020-07-12 14:12:09.343916180 +0000
 +++ components/storage_monitor/storage_monitor_netbsd.h
 @@ -0,0 +1,45 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.
@@ -10,7 +10,7 @@ $NetBSD$
 +// StorageMonitorNetBSD processes mount point change events, notifies listeners
 +// about the addition and deletion of media devices, and answers queries about
 +// mounted devices.
-+// StorageMonitorFreeBSD lives on the UI thread, and uses ???
++// StorageMonitorNetBSD lives on the UI thread, and uses ???
 +// the FILE thread to get mount point change events.
 +
 +#ifndef COMPONENTS_STORAGE_MONITOR_STORAGE_MONITOR_NETBSD_H_
@@ -35,7 +35,7 @@ $NetBSD$
 +  explicit StorageMonitorNetBSD();
 +  virtual ~StorageMonitorNetBSD();
 +
-+  // Must be called for StorageMonitorFreeBSD to work.
++  // Must be called for StorageMonitorNetBSD to work.
 +  virtual void Init() override;
 + private:
 +  // StorageMonitor implementation.
@@ -47,4 +47,4 @@ $NetBSD$
 +
 +} // namespace storage_monitor
 +
-+#endif  // COMPONENTS_STORAGE_MONITOR_STORAGE_MONITOR_NETBSD_H_
++#endif  // COMPONENTS_STORAGE_MONITOR_STORAGE_MONITOR_FREEBSD_H_

@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- media/media_options.gni.orig	2020-07-15 18:55:59.000000000 +0000
++++ media/media_options.gni
+@@ -155,7 +155,7 @@ declare_args() {
+ # On Fuchsia, this is only enabled to build libclearkeycdm.so, the mojo CDM
+ # service is not used.
+ enable_library_cdms =
+-    (is_linux && !is_chromecast) || is_mac || is_win || is_fuchsia
++    ((is_linux || is_bsd) && !is_chromecast) || is_mac || is_win || is_fuchsia
+ 
+ declare_args() {
+   # When enabled, this feature allows developers to use a runtime flag to

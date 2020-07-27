@@ -1,16 +1,13 @@
 $NetBSD$
 
---- components/policy/core/common/schema.cc.orig	2017-02-02 02:02:52.000000000 +0000
+--- components/policy/core/common/schema.cc.orig	2020-07-08 21:40:40.000000000 +0000
 +++ components/policy/core/common/schema.cc
-@@ -21,7 +21,11 @@
- #include "components/json_schema/json_schema_constants.h"
- #include "components/json_schema/json_schema_validator.h"
+@@ -24,7 +24,7 @@
+ #include "base/strings/stringprintf.h"
+ #include "components/policy/core/common/json_schema_constants.h"
  #include "components/policy/core/common/schema_internal.h"
-+#if defined(OS_FREEBSD)
+-#include "third_party/re2/src/re2/re2.h"
 +#include <re2/re2.h>
-+#else
- #include "third_party/re2/src/re2/re2.h"
-+#endif
  
  namespace schema = json_schema_constants;
  

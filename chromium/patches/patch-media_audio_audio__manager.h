@@ -1,10 +1,10 @@
 $NetBSD$
 
---- media/audio/audio_manager.h.orig	2017-02-02 02:02:55.000000000 +0000
+--- media/audio/audio_manager.h.orig	2020-07-08 21:40:45.000000000 +0000
 +++ media/audio/audio_manager.h
-@@ -84,7 +84,7 @@ class MEDIA_EXPORT AudioManager {
-   // See http://crbug.com/422522
-   static void EnableCrashKeyLoggingForAudioThreadHangs();
+@@ -60,7 +60,7 @@ class MEDIA_EXPORT AudioManager {
+   static std::unique_ptr<AudioManager> CreateForTesting(
+       std::unique_ptr<AudioThread> audio_thread);
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)

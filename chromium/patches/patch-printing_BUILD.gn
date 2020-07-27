@@ -1,22 +1,22 @@
 $NetBSD$
 
---- printing/BUILD.gn.orig	2017-02-02 02:02:57.000000000 +0000
+--- printing/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
 +++ printing/BUILD.gn
-@@ -129,7 +129,7 @@ component("printing") {
+@@ -206,7 +206,7 @@ component("printing") {
    if (use_cups) {
      configs += [ ":cups" ]
  
 -    if (is_linux) {
 +    if (is_linux || is_bsd) {
-       # rebase_path does not accept an empty string
-       if (use_sysroot) {
-         cups_sysroot = rebase_path(sysroot)
-@@ -206,7 +206,7 @@ component("printing") {
-       "printing_context_no_system_dialog.cc",
-       "printing_context_no_system_dialog.h",
-     ]
--  } else if (is_linux) {  # Non-ChromeOS Linux.
-+  } else if (is_linux || is_bsd) {  # Non-ChromeOS Linux/BSD.
-     sources += [
-       "printed_document_linux.cc",
-       "printing_context_linux.cc",
+       # CUPS 1.6 deprecated the PPD APIs, but we will stay with this API
+       # for now as the suitability of the replacement is unclear.
+       # More info: crbug.com/226176
+@@ -312,7 +312,7 @@ static_library("test_support") {
+   if (is_fuchsia) {
+     sources += [ "image_fuchsia.cc" ]
+   }
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [ "image_linux.cc" ]
+   }
+   if (is_mac) {

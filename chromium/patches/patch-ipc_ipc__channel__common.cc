@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ipc/ipc_channel_common.cc.orig	2017-02-02 02:02:55.000000000 +0000
+--- ipc/ipc_channel_common.cc.orig	2020-07-08 21:40:45.000000000 +0000
 +++ ipc/ipc_channel_common.cc
-@@ -9,7 +9,7 @@
+@@ -10,7 +10,7 @@
  
  namespace IPC {
  

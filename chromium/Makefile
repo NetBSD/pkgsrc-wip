@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
-DISTNAME=	chromium-85.0.4181.8
+DISTNAME=	chromium-85.0.4183.39
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
@@ -14,12 +14,25 @@ USE_TOOLS+=		bash bison flex:pkgsrc gmake pax perl pkg-config
 TOOLS_PLATFORM.flex=	# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=		c c++
 
+CHECK_PORTABILITY_SKIP+=	third_party/sqlite/src/configure
+CHECK_PORTABILITY_SKIP+=	third_party/protobuf/post_process_dist.sh
+CHECK_PORTABILITY_SKIP+=	third_party/ffmpeg/configure
+CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
+CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
+CHECK_PORTABILITY_SKIP+=	third_party/llvm/flang/tools/f18/flang.sh.in
+CHECK_PORTABILITY_SKIP+=	third_party/llvm/polly/lib/External/isl/configure
+CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
+
 BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 BUILD_DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+BUILD_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+BUILD_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
+#BUILD_DEPENDS+=	clang-[0-9]*:../../lang/clang # clang-format
 
 PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 
@@ -28,180 +41,77 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-#ONLY_FOR_PLATFORM+=	*-*-arm # not tested yet
+#ONLY_FOR_PLATFORM+=	*-*-arm # not yet
+#ONLY_FOR_PLATFORM+=	*-*-aarch64 # not yet
+#ONLY_FOR_PLATFORM+=	*-*-i386 # not yet
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 
-# Workaround
+# Workaround for brotli and other commands.
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
+# Do not use alloca(3) in libc.
+BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
+BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
+BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
+BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
+
 REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
+
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_MESSAGE.path=	Fixing pkg path
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
-SUBST_SED.path+=	-e 's:/usr/local/:${PREFIX}/:'
+SUBST_FILES.path+=	third_party/pdfium/core/fxge/fx_ge_linux.cpp
+SUBST_FILES.path+=	third_party/pdfium/xfa/fgas/font/cfx_fontsourceenum_file.cpp
+SUBST_FILES.path+=	third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
+SUBST_VARS.path+=	PREFIX X11BASE
 
 CFLAGS+=		-fno-stack-protector
+CFLAGS+=		-isystem${PREFIX}/lib/clang/10.0.0/include # third_party/zlib with clang
 
 .include "options.mk"
 
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
 
-KEEPLIBS+= \
-		base/third_party/dmg_fp \
-		base/third_party/dynamic_annotations \
-		base/third_party/icu \
-		base/third_party/nspr \
-		base/third_party/superfasthash \
-		base/third_party/symbolize \
-		base/third_party/valgrind \
-		base/third_party/xdg_mime \
-		base/third_party/xdg_user_dirs \
-		breakpad/src/third_party/curl \
-		chrome/third_party/mozilla_security_manager \
-		courgette/third_party \
-		net/third_party/mozilla_security_manager \
-		net/third_party/nss \
-		third_party/WebKit \
-		third_party/analytics \
-		third_party/angle \
-		third_party/angle/src/common/third_party/numerics \
-		third_party/angle/src/third_party/compiler \
-		third_party/angle/src/third_party/libXNVCtrl \
-		third_party/angle/src/third_party/murmurhash \
-		third_party/angle/src/third_party/trace_event \
-		third_party/boringssl \
-		third_party/brotli \
-		third_party/cacheinvalidation \
-		third_party/catapult \
-		third_party/catapult/third_party/polymer \
-		third_party/catapult/third_party/py_vulcanize \
-		third_party/catapult/third_party/py_vulcanize/third_party/rcssmin \
-		third_party/catapult/third_party/py_vulcanize/third_party/rjsmin \
-		third_party/catapult/tracing/third_party/d3 \
-		third_party/catapult/tracing/third_party/gl-matrix \
-		third_party/catapult/tracing/third_party/jszip \
-		third_party/catapult/tracing/third_party/mannwhitneyu \
-		third_party/ced \
-		third_party/cld_2 \
-		third_party/cld_3 \
-		third_party/cros_system_api \
-		third_party/devscripts \
-		third_party/dom_distiller_js \
-		third_party/fips181 \
-		third_party/flatbuffers \
-		third_party/flot \
-		third_party/google_input_tools \
-		third_party/google_input_tools/third_party/closure_library \
-		third_party/google_input_tools/third_party/closure_library/third_party/closure \
-		third_party/hunspell \
-		third_party/iccjpeg \
-		third_party/icu \
-		third_party/inspector_protocol \
-		third_party/jstemplate \
-		third_party/khronos \
-		third_party/leveldatabase \
-		third_party/libXNVCtrl \
-		third_party/libaddressinput \
-		third_party/libjingle \
-		third_party/libphonenumber \
-		third_party/libsecret \
-		third_party/libsrtp \
-		third_party/libudev \
-		third_party/libusb \
-		third_party/libwebm \
-		third_party/libxml/chromium \
-		third_party/libyuv \
-		third_party/lss \
-		third_party/lzma_sdk \
-		third_party/mesa \
-		third_party/modp_b64 \
-		third_party/mt19937ar \
-		third_party/openh264 \
-		third_party/openmax_dl \
-		third_party/opus \
-		third_party/ots \
-		third_party/pdfium \
-		third_party/pdfium/third_party/agg23 \
-		third_party/pdfium/third_party/base \
-		third_party/pdfium/third_party/bigint \
-		third_party/pdfium/third_party/freetype \
-		third_party/pdfium/third_party/lcms2-2.6 \
-		third_party/pdfium/third_party/libjpeg \
-		third_party/pdfium/third_party/libopenjpeg20 \
-		third_party/pdfium/third_party/libpng16 \
-		third_party/pdfium/third_party/libtiff \
-		third_party/pdfium/third_party/zlib_v128 \
-		third_party/polymer \
-		third_party/protobuf \
-		third_party/protobuf/third_party/six \
-		third_party/qcms \
-		third_party/sfntly \
-		third_party/skia \
-		third_party/smhasher \
-		third_party/sqlite \
-		third_party/tcmalloc \
-		third_party/usrsctp \
-		third_party/web-animations-js \
-		third_party/webdriver \
-		third_party/webrtc \
-		third_party/widevine \
-		third_party/woff2 \
-		third_party/x86inc \
-		third_party/zlib/google \
-		url/third_party/mozilla \
-		v8/src/third_party/valgrind \
-		v8/third_party/inspector_protocol \
-		base/third_party/libevent \
-		third_party/adobe \
-		third_party/speech-dispatcher \
-		third_party/usb_ids \
-		third_party/xdg-utils \
-		third_party/yasm/run_yasm.py \
-		third_party/jinja2 \
-		third_party/ply \
-		third_party/ffmpeg \
-		third_party/markupsafe \
-		third_party/harfbuzz-ng \
-		third_party/zlib
-
 # Proprietary codecs are enabled.
 GN_ARGS+=	proprietary_codecs=true \
 		ffmpeg_branding="Chrome"
 
-GN_ARGS+=	use_gconf=false \
+GN_ARGS+=	clang_use_chrome_plugins=false \
+		enable_hangout_services_extension=true \
 		use_kerberos=false \
-		use_cups=false \
 		use_aura=true \
+		use_cups=true \
 		enable_nacl=false \
-		enable_hevc_demuxing=true \
-		enable_media_router=true \
 		enable_remoting=false \
+		fieldtrial_testing_like_official_build=true \
 		toolkit_views=true \
 		treat_warnings_as_errors=false \
 		use_sysroot=false \
-		use_system_libjpeg=true \
-		use_system_sqlite=false \
-		use_alsa=false \
-		enable_webrtc=false \
+		use_system_libjpeg=false \
+		use_system_harfbuzz=true \
+		use_system_freetype=true \
 		enable_one_click_signin=true \
 		use_allocator="none" \
-		use_experimental_allocator_shim=false \
-		is_clang=false \
-		enable_webrtc=false \
-		use_gnome_keyring=true
+		use_allocator_shim=false \
+		is_clang=true \
+		use_lld=false \
+		use_custom_libcxx=true \
+		use_gold=false \
+		icu_use_data_file=false
 GN_ARGS+=	extra_cxxflags="-I${BUILDLINK_DIR}/include \
 			-I${BUILDLINK_DIR}/include/glib \
-			-I${BUILDLINK_DIR}/include/nss/nss " \
+			-I${BUILDLINK_DIR}/include/nss/nss" \
 		extra_ldflags="-L${PREFIX}/lib \
 			-L${X11BASE}/lib \
 			${COMPILER_RPATH_FLAG}${PREFIX}/lib \
+			${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr \
+			${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss \
+			${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg4 \
 			${COMPILER_RPATH_FLAG}${X11BASE}/lib"
-# To avoid error from sem_destroy(3) in mksnapshot
-GN_ARGS+=	v8_use_snapshot=false
 
-GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild
+GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild --skip-generate-buildfiles
 
 # API key and OAuth credential for Google.
 # This is pkgsrc use only.
@@ -217,11 +127,15 @@ post-extract:
 		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
 
 pre-configure:
-	cd ${WRKSRC} && \
-	${PYTHONBIN} ./build/linux/unbundle/remove_bundled_libraries.py \
-		${KEEPLIBS} --do-remove \
-			|| ${FALSE}
-
+#	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
+#	${LN} -sf ${PREFIX}/bin/clang++ \
+#		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/clang++
+#	${LN} -sf ${PREFIX}/bin/clang \
+#		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/clang
+#	${LN} -sf ${PREFIX}/bin/llvm-ar \
+#		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/llvm-ar
+	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
+		${BUILDLINK_DIR}/bin/java
 	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
 		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
 # a wrapper for rpath $ORIGIN removal
@@ -235,11 +149,16 @@ pre-configure:
 	cd ${WRKSRC} && \
 	${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
 		--system-libraries \
-		flac libjpeg libpng libvpx libwebp libxml libxslt \
-		re2 snappy yasm \
+		ffmpeg flac fontconfig freetype harfbuzz-ng libdrm libpng \
+		libwebp libxml libxslt opus snappy \
 			|| ${FALSE}
 
 do-configure:
+	# Create symlink to NetBSD nodejs command.
+	${MKDIR} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node/bin
+	${LN} -sf ${PREFIX}/bin/node \
+		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node/bin/node
+
 	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} \
 		${PYTHONBIN} ./tools/gn/bootstrap/bootstrap.py \
@@ -256,7 +175,19 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
-		ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
+		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
+			mksnapshot
+	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/mksnapshot
+
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} \
+		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
+			v8_context_snapshot_generator
+	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/v8_context_snapshot_generator
+
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} \
+		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
 			chrome
 
 CHROMIUM_DIR=		chrome
@@ -313,10 +244,10 @@ do-install:
 .endfor
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-# This introduces OpenSSL dependency and it conflicts with bundled BoringSSL.
-#.include "../../print/libcups/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
@@ -324,8 +255,9 @@ do-install:
 .include "../../audio/flac/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
 # Not yet
-#.include "../../fonts/harfbuzz/buildlink3.mk"
 #.include "../../devel/libevent/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -344,7 +276,6 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
@@ -358,15 +289,21 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+#.include "../../textproc/icu/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-# Conflict between OpenSSL and BoringSSL.
-#.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../devel/libatomic/buildlink3.mk"
+# Some C++ files in ui/base/x are not buildable with GCC 8.4.0 on NetBSD/amd64.
+PKG_CC=		${PREFIX}/bin/clang
+PKG_CXX=	${PREFIX}/bin/clang++
+BUILDLINK_DEPMETHOD.clang=	build
+.include "../../lang/clang/buildlink3.mk"
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

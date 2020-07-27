@@ -1,13 +1,31 @@
 $NetBSD$
 
---- chromecast/browser/BUILD.gn.orig	2017-02-02 02:02:51.000000000 +0000
+--- chromecast/browser/BUILD.gn.orig	2020-07-15 18:56:46.000000000 +0000
 +++ chromecast/browser/BUILD.gn
-@@ -120,7 +120,7 @@ source_set("browser") {
-     "//ui/gl",
-   ]
+@@ -249,7 +249,7 @@ cast_source_set("browser") {
+     ]
+   }
  
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
      sources += [
-       "cast_memory_pressure_monitor.cc",
-       "cast_memory_pressure_monitor.h",
+       "cast_system_memory_pressure_evaluator.cc",
+       "cast_system_memory_pressure_evaluator.h",
+@@ -408,7 +408,7 @@ cast_source_set("browser") {
+     ]
+   }
+ 
+-  if (is_linux && use_ozone) {
++  if ((is_linux || is_bsd) && use_ozone) {
+     sources += [
+       "exo/cast_wm_helper.cc",
+       "exo/cast_wm_helper.h",
+@@ -592,7 +592,7 @@ cast_source_set("unittests") {
+     ]
+   }
+ 
+-  if (is_linux && use_ozone) {
++  if ((is_linux || is_bsd) && use_ozone) {
+     sources += [ "webview/webview_window_manager_unittest.cc" ]
+     deps += [
+       "//chromecast/graphics",

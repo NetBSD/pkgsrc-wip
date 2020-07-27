@@ -1,13 +1,13 @@
 $NetBSD$
 
---- third_party/libxslt/BUILD.gn.orig	2017-02-02 02:03:11.000000000 +0000
+--- third_party/libxslt/BUILD.gn.orig	2020-07-15 18:56:31.000000000 +0000
 +++ third_party/libxslt/BUILD.gn
-@@ -82,7 +82,7 @@ static_library("libxslt") {
+@@ -81,7 +81,7 @@ static_library("libxslt") {
    public_configs = [ ":libxslt_config" ]
  
    cflags = []
--  if (is_linux || is_android) {
-+  if (is_linux || is_bsd || is_android) {
+-  if (is_linux || is_android || is_fuchsia) {
++  if (is_linux || is_android || is_fuchsia || is_bsd) {
      include_dirs = [ "linux" ]
    } else if (is_win) {
      include_dirs = [ "win32" ]

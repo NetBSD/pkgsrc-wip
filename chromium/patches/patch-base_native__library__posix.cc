@@ -1,13 +1,13 @@
 $NetBSD$
 
---- base/native_library_posix.cc.orig	2017-02-02 02:02:47.000000000 +0000
+--- base/native_library_posix.cc.orig	2020-06-25 09:31:18.000000000 +0000
 +++ base/native_library_posix.cc
-@@ -35,7 +35,7 @@ NativeLibrary LoadNativeLibraryWithOptio
+@@ -29,7 +29,7 @@ NativeLibrary LoadNativeLibraryWithOptio
+   // http://crbug.com/17943, http://crbug.com/17557, http://crbug.com/36892,
+   // and http://crbug.com/40794.
+   int flags = RTLD_LAZY;
+-#if defined(OS_ANDROID) || !defined(RTLD_DEEPBIND)
++#if defined(OS_ANDROID) || !defined(RTLD_DEEPBIND) || defined(OS_BSD)
+   // Certain platforms don't define RTLD_DEEPBIND. Android dlopen() requires
    // further investigation, as it might vary across versions. Crash here to
    // warn developers that they're trying to rely on uncertain behavior.
-   CHECK(!options.prefer_own_symbols);
--#else
-+#elif !defined(OS_BSD)
-   if (options.prefer_own_symbols)
-     flags |= RTLD_DEEPBIND;
- #endif

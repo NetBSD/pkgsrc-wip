@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ui/views/corewm/tooltip_aura.cc.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/views/corewm/tooltip_aura.cc.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/views/corewm/tooltip_aura.cc
-@@ -34,7 +34,7 @@ const int kCursorOffsetY = 15;
+@@ -46,7 +46,7 @@ constexpr int kVerticalPaddingBottom = 5
  
  // TODO(varkha): Update if native widget can be transparent on Linux.
  bool CanUseTranslucentTooltipWidget() {
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_WIN)
++#if ((defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)) || defined(OS_WIN)
    return false;
  #else
    return true;

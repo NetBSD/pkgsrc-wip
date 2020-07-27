@@ -1,21 +1,13 @@
 $NetBSD$
 
---- components/policy/BUILD.gn.orig	2017-02-02 02:02:52.000000000 +0000
+--- components/policy/BUILD.gn.orig	2020-07-15 18:55:55.000000000 +0000
 +++ components/policy/BUILD.gn
-@@ -14,6 +14,7 @@ import("//tools/grit/grit_rule.gni")
+@@ -19,7 +19,7 @@ gen_policy_templates_local = false
+ # enable these flags (but don't check that in!).
  gen_policy_templates_common = true
  gen_policy_templates_win = is_win
- gen_policy_templates_linux = is_linux
-+gen_policy_templates_bsd = is_bsd
+-gen_policy_templates_linux = is_linux
++gen_policy_templates_linux = is_linux || is_bsd
  gen_policy_templates_android = is_android
  gen_policy_templates_mac = is_mac
- 
-@@ -126,7 +127,7 @@ if (enable_configuration_policy) {
-       outputs += policy_templates_android_outputs
-       defines += [ "gen_policy_templates_android" ]
-     }
--    if (gen_policy_templates_linux) {
-+    if (gen_policy_templates_linux || gen_policy_templates_bsd) {
-       outputs += policy_templates_linux_outputs
-       defines += [ "gen_policy_templates_linux" ]
-     }
+ gen_policy_templates_chromeos = is_chromeos

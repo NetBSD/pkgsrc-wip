@@ -1,10 +1,10 @@
 $NetBSD$
 
---- ui/gfx/font_fallback_linux.cc.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/gfx/font_fallback_linux.cc.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/gfx/font_fallback_linux.cc
-@@ -15,6 +15,10 @@
- #include "base/memory/ptr_util.h"
- #include "ui/gfx/font.h"
+@@ -24,6 +24,10 @@
+ #include "ui/gfx/linux/fontconfig_util.h"
+ #include "ui/gfx/platform_font.h"
  
 +#if defined(OS_BSD)
 +#include <unistd.h>

@@ -1,12 +1,12 @@
 $NetBSD$
 
---- chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc.orig	2017-02-02 02:02:49.000000000 +0000
+--- chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc.orig	2020-07-08 21:40:34.000000000 +0000
 +++ chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc
-@@ -37,10 +37,12 @@ void MTPDeviceMapService::RegisterMTPFil
+@@ -39,10 +39,12 @@ void MTPDeviceMapService::RegisterMTPFil
      // Note that this initializes the delegate asynchronously, but since
      // the delegate will only be used from the IO thread, it is guaranteed
      // to be created before use of it expects it to be there.
-+#if !defined(OS_FREEBSD)
++#if !defined(OS_BSD)
      CreateMTPDeviceAsyncDelegate(
          device_location, read_only,
          base::Bind(&MTPDeviceMapService::AddAsyncDelegate,

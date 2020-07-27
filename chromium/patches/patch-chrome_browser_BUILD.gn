@@ -1,22 +1,66 @@
 $NetBSD$
 
---- chrome/browser/BUILD.gn.orig	2017-02-02 02:02:48.000000000 +0000
+--- chrome/browser/BUILD.gn.orig	2020-07-15 18:56:45.000000000 +0000
 +++ chrome/browser/BUILD.gn
-@@ -2142,7 +2142,7 @@ split_static_library("browser") {
-     deps += [ "//device/udev_linux" ]
-   }
- 
--  if (is_linux && !is_chromeos) {
-+  if ((is_linux || is_bsd) && !is_chromeos) {
-     deps += [ "//third_party/speech-dispatcher" ]
-   }
- 
-@@ -3507,7 +3507,7 @@ split_static_library("browser") {
-     }
+@@ -4342,7 +4342,7 @@ static_library("browser") {
+     ]
    }
  
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
-     if (use_aura) {
-       deps += [ "//build/linux:fontconfig" ]
-       if (use_dbus) {
+     sources += [
+       "chrome_browser_main_linux.cc",
+       "chrome_browser_main_linux.h",
+@@ -4437,7 +4437,7 @@ static_library("browser") {
+     sources += [ "hang_monitor/hang_crash_dump.cc" ]
+   }
+ 
+-  if (is_win || is_linux) {
++  if (is_win || is_linux || is_bsd) {
+     sources += [
+       "renderer_context_menu/spelling_options_submenu_observer.cc",
+       "renderer_context_menu/spelling_options_submenu_observer.h",
+@@ -4574,7 +4574,7 @@ static_library("browser") {
+     ]
+   }
+ 
+-  if (is_posix && !is_mac) {
++  if (is_posix && !is_mac && !is_bsd) {
+     # TODO(crbug.com/753619): Enable crash reporting on Fuchsia.
+     sources += [
+       "//chrome/app/chrome_crash_reporter_client.cc",
+@@ -4587,14 +4587,14 @@ static_library("browser") {
+     ]
+   }
+ 
+-  if (is_win || is_mac || (is_linux && !is_chromeos)) {
++  if (is_win || is_mac || ((is_linux || is_bsd) && !is_chromeos)) {
+     sources += [
+       "password_manager/password_store_signin_notifier_impl.cc",
+       "password_manager/password_store_signin_notifier_impl.h",
+     ]
+   }
+ 
+-  if (is_win || is_mac || is_linux) {
++  if (is_win || is_mac || is_linux || is_bsd) {
+     sources += [
+       "crash_upload_list/crash_upload_list_crashpad.cc",
+       "crash_upload_list/crash_upload_list_crashpad.h",
+@@ -4732,7 +4732,7 @@ static_library("browser") {
+     if (is_mac) {
+       sources += [ "printing/printer_manager_dialog_mac.mm" ]
+     }
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [ "printing/printer_manager_dialog_linux.cc" ]
+     }
+     if (is_win || enable_print_preview) {
+@@ -5824,7 +5824,7 @@ grit("resources") {
+     if (is_chromeos) {
+       inputs = [ "resources/plugin_metadata/plugins_chromeos.json" ]
+     }
+-    if (is_linux && !is_chromeos) {
++    if ((is_linux || is_bsd) && !is_chromeos) {
+       inputs = [ "resources/plugin_metadata/plugins_linux.json" ]
+     }
+     if (is_mac) {

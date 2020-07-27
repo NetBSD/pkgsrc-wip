@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/base/ime/linux/BUILD.gn.orig	2020-06-25 09:32:19.000000000 +0000
++++ ui/base/ime/linux/BUILD.gn
+@@ -12,7 +12,7 @@ import("//build/config/linux/pangocairo/
+ # both ozone and x11 on Linux yet, but when we can we should remove this.
+ # TODO(crbug.com/1085700): Remove || enable_kythe_annotations here.
+ import("//build/toolchain/kythe.gni")
+-assert((is_linux && !is_chromeos) || enable_kythe_annotations)
++assert((is_linux && !is_chromeos) || is_bsd || enable_kythe_annotations)
+ 
+ jumbo_component("linux") {
+   output_name = "ui_base_ime_linux"

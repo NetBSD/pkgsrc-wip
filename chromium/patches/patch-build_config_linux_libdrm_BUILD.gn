@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- build/config/linux/libdrm/BUILD.gn.orig	2020-06-25 09:31:19.000000000 +0000
++++ build/config/linux/libdrm/BUILD.gn
+@@ -5,7 +5,7 @@ import("//build/config/chromecast_build.
+ import("//build/config/chromeos/args.gni")
+ import("//build/config/linux/pkg_config.gni")
+ 
+-assert(is_linux)
++assert(is_linux || is_bsd)
+ 
+ declare_args() {
+   # Controls whether the build should use the version of libdrm library shipped

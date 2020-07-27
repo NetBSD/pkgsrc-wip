@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/events/event_switches.cc.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/events/event_switches.cc.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/events/event_switches.cc
-@@ -28,7 +28,7 @@ const char kTouchEventsDisabled[] = "dis
+@@ -14,7 +14,7 @@ namespace switches {
  const char kCompensateForUnstablePinchZoom[] =
      "compensate-for-unstable-pinch-zoom";
  

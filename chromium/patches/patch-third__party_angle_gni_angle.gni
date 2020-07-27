@@ -1,13 +1,49 @@
 $NetBSD$
 
---- third_party/angle/gni/angle.gni.orig	2017-02-02 02:03:46.000000000 +0000
+--- third_party/angle/gni/angle.gni.orig	2020-07-15 19:01:32.000000000 +0000
 +++ third_party/angle/gni/angle.gni
-@@ -20,6 +20,8 @@ if (is_win) {
-   import("//build/config/win/visual_studio_version.gni")
- } else if (is_linux && use_x11 && !is_chromeos) {
-   angle_enable_gl = true
-+} else if (is_bsd) {
-+  angle_enable_gl = true
- } else if (is_mac || ozone_platform_gbm) {
-   angle_enable_gl = true
- } else if (is_android) {
+@@ -33,7 +33,7 @@ if (angle_has_build) {
+     is_asan = false
+     build_with_chromium = false
+     dcheck_always_on = false
+-    angle_use_x11 = is_linux && !is_ggp
++    angle_use_x11 = (is_linux || is_bsd) && !is_ggp
+     use_ozone = false
+     use_fuzzing_engine = false
+   }
+@@ -100,7 +100,7 @@ declare_args() {
+   angle_enable_d3d9 = is_win && !angle_is_winuwp
+   angle_enable_d3d11 = is_win
+   angle_enable_gl =
+-      (ozone_platform_gbm || !is_linux || (angle_use_x11 && !is_chromeos)) &&
++      (ozone_platform_gbm || !(is_linux || is_bsd) || (angle_use_x11 && !is_chromeos)) &&
+       !is_fuchsia && !angle_is_winuwp && !is_ggp && !is_win_arm64
+ 
+   # ANGLE Vulkan backend on Android requires API level 26, i.e. Oreo, due to
+@@ -154,7 +154,7 @@ if (angle_has_build) {
+   angle_remove_configs += [ "//build/config/compiler:default_include_dirs" ]
+ }
+ angle_better_stack_traces =
+-    (is_debug || dcheck_always_on) && is_linux && !is_asan && !is_cfi
++    (is_debug || dcheck_always_on) && (is_linux || is_bsd) && !is_asan && !is_cfi
+ 
+ if (angle_has_build && is_clang) {
+   angle_remove_configs += [ "//build/config/clang:find_bad_constructs" ]
+@@ -349,7 +349,7 @@ template("angle_test") {
+         configs -= [ "//build/config/android:hide_all_but_jni" ]
+       }
+ 
+-      if (is_linux && !is_component_build) {
++      if ((is_linux || is_bsd) && !is_component_build) {
+         # Set rpath to find shared libs in a non-component build.
+         configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+       }
+@@ -371,7 +371,7 @@ template("angle_test") {
+     }
+     data = invoker.data + [ "//testing/xvfb.py" ]
+ 
+-    if (is_linux && !is_component_build) {
++    if ((is_linux || is_bsd) && !is_component_build) {
+       # Set rpath to find shared libs in a non-component build.
+       configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+     }

@@ -1,21 +1,20 @@
 $NetBSD$
 
---- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2017-02-02 02:02:54.000000000 +0000
+--- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2020-07-08 21:41:48.000000000 +0000
 +++ content/renderer/renderer_main_platform_delegate_linux.cc
-@@ -29,6 +29,7 @@ void RendererMainPlatformDelegate::Platf
+@@ -30,6 +30,7 @@ void RendererMainPlatformDelegate::Platf
  }
  
  bool RendererMainPlatformDelegate::EnableSandbox() {
 +#if !defined(OS_BSD)
    // The setuid sandbox is started in the zygote process: zygote_main_linux.cc
-   // https://chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox.md
+   // https://chromium.googlesource.com/chromium/src/+/master/docs/linux/suid_sandbox.md
    //
-@@ -59,7 +60,7 @@ bool RendererMainPlatformDelegate::Enabl
-     CHECK_EQ(errno, EPERM);
+@@ -66,6 +67,7 @@ bool RendererMainPlatformDelegate::Enabl
    }
  #endif  // __x86_64__
--
-+#endif  // ! OS_BSD
+ 
++#endif
    return true;
  }
  

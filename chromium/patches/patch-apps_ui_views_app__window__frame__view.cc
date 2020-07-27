@@ -1,8 +1,8 @@
 $NetBSD$
 
---- apps/ui/views/app_window_frame_view.cc.orig	2017-02-02 02:02:46.000000000 +0000
+--- apps/ui/views/app_window_frame_view.cc.orig	2020-07-24 02:37:41.000000000 +0000
 +++ apps/ui/views/app_window_frame_view.cc
-@@ -132,7 +132,7 @@ gfx::Rect AppWindowFrameView::GetBoundsF
+@@ -125,7 +125,7 @@ gfx::Rect AppWindowFrameView::GetBoundsF
  gfx::Rect AppWindowFrameView::GetWindowBoundsForClientBounds(
      const gfx::Rect& client_bounds) const {
    gfx::Rect window_bounds = client_bounds;

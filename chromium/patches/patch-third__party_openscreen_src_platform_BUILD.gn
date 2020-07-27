@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- third_party/openscreen/src/platform/BUILD.gn.orig	2020-07-15 19:01:37.000000000 +0000
++++ third_party/openscreen/src/platform/BUILD.gn
+@@ -84,7 +84,7 @@ if (!build_with_chromium) {
+ 
+     public_configs = [ "//util:trace_logging_config" ]
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [
+         "impl/network_interface_linux.cc",
+         "impl/scoped_wake_lock_linux.cc",
+@@ -175,7 +175,7 @@ source_set("test") {
+   if (is_posix) {
+     sources += [ "test/paths_posix.cc" ]
+   }
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [ "test/paths_internal_linux.cc" ]
+   } else if (is_mac) {
+     sources += [ "test/paths_internal_mac.cc" ]

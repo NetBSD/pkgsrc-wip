@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- build/linux/unbundle/fontconfig.gn.orig	2020-06-25 09:31:19.000000000 +0000
++++ build/linux/unbundle/fontconfig.gn
+@@ -2,7 +2,7 @@
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+ 
+-assert(is_linux)
++assert(is_linux || is_bsd)
+ 
+ config("fontconfig_config") {
+   libs = [ "fontconfig" ]

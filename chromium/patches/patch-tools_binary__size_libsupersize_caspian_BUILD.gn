@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- tools/binary_size/libsupersize/caspian/BUILD.gn.orig	2020-07-15 18:56:32.000000000 +0000
++++ tools/binary_size/libsupersize/caspian/BUILD.gn
+@@ -9,7 +9,7 @@ if (!defined(is_wasm)) {
+   is_wasm = current_os == "wasm"
+ }
+ 
+-assert(is_linux || is_wasm)
++assert(is_linux || is_wasm || is_bsd)
+ 
+ source_set("caspian-lib") {
+   sources = [

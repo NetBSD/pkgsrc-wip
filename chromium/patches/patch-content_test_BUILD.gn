@@ -1,36 +1,85 @@
 $NetBSD$
 
---- content/test/BUILD.gn.orig	2017-02-02 02:02:54.000000000 +0000
+--- content/test/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
 +++ content/test/BUILD.gn
-@@ -748,7 +748,7 @@ test("content_browsertests") {
+@@ -585,7 +585,7 @@ jumbo_static_library("test_support") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//ui/platform_window/common" ]
+   }
+ 
+@@ -1316,7 +1316,7 @@ test("content_browsertests") {
      }
    }
  
 -  if (is_android || is_linux || is_mac || is_win) {
-+  if (is_android || is_linux || is_bsd || is_mac || is_win) {
++  if (is_android || is_linux || is_mac || is_win || is_bsd) {
      data += [
        "$root_out_dir/content_shell.pak",
        "data/",
-@@ -1350,7 +1350,7 @@ test("content_unittests") {
-     sources += [ "../browser/memory/memory_monitor_linux_unittest.cc" ]
+@@ -1324,7 +1324,7 @@ test("content_browsertests") {
+     ]
    }
  
--  if (is_android || is_linux || is_mac || is_win) {
-+  if (is_android || is_linux || is_bsd || is_mac || is_win) {
+-  if (is_linux || is_mac || is_win) {
++  if (is_linux || is_mac || is_win || is_bsd) {
+     sources += [
+       "../browser/media/capture/content_capture_device_browsertest_base.cc",
+       "../browser/media/capture/content_capture_device_browsertest_base.h",
+@@ -1386,7 +1386,7 @@ test("content_browsertests") {
+     configs += [ "//build/config/win:delayloads" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "../browser/utility_process_sandbox_browsertest.cc",
+       "../browser/zygote_host/zygote_browsertest.cc",
+@@ -1396,6 +1396,12 @@ test("content_browsertests") {
+       "//ui/gfx:test_support",
+     ]
+ 
++    if (is_bsd) {
++      sources -= [
++        "../browser/utility_process_sandbox_browsertest.cc",
++      ]
++    }
++
+     if (use_atk) {
+       sources += [
+         "../browser/accessibility/accessibility_auralinux_browsertest.cc",
+@@ -1524,7 +1530,7 @@ test("content_browsertests") {
+     data_deps += [ "//ppapi:ppapi_tests" ]
+   }
+ 
+-  if ((is_win || is_chromeos || is_linux) && !is_tsan) {
++  if ((is_win || is_chromeos || is_linux || is_bsd) && !is_tsan) {
+     # NOTE: We don't bother to build these tests when TSan is enabled, because
+     # they can't properly launch a child content_shell in that environment.
+     sources += [ "../browser/launch_as_mojo_client_browsertest.cc" ]
+@@ -1599,7 +1605,7 @@ static_library("run_all_unittests") {
+     ":test_support",
+     "//base/test:test_support",
+   ]
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//services/service_manager/embedder:set_process_title_linux" ]
+   }
+ }
+@@ -2073,7 +2079,7 @@ test("content_unittests") {
+         [ "../browser/accessibility/browser_accessibility_android_unittest.cc" ]
+   }
+ 
+-  if (is_android || is_linux || is_mac || is_win || is_fuchsia) {
++  if (is_android || is_linux || is_mac || is_win || is_fuchsia || is_bsd) {
      data = [
        "$root_out_dir/content_shell.pak",
        "data/",
-@@ -1540,7 +1540,7 @@ test("content_unittests") {
-       "//ui/shell_dialogs:shell_dialogs",
-     ]
- 
--    if (is_linux || is_mac || is_win) {
-+    if (is_linux || is_bsd || is_mac || is_win) {
-       sources +=
-           [ "../browser/media/capture/desktop_capture_device_unittest.cc" ]
-       deps += [ "//third_party/webrtc/modules/desktop_capture" ]
-@@ -1576,7 +1576,7 @@ test("content_unittests") {
-     ]
+@@ -2279,7 +2285,7 @@ test("content_unittests") {
+     }
    }
  
 -  if (is_linux) {
@@ -38,3 +87,12 @@ $NetBSD$
      if (use_dbus) {
        deps += [ "//dbus:test_support" ]
      }
+@@ -2420,7 +2426,7 @@ test("content_unittests") {
+     deps += [ "//ui/gfx/x" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [ "../../services/service_manager/embedder/set_process_title_linux_unittest.cc" ]
+     deps += [ "//services/service_manager/embedder:set_process_title_linux" ]
+   }

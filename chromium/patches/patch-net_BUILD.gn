@@ -1,88 +1,62 @@
 $NetBSD$
 
---- net/BUILD.gn.orig	2017-02-02 02:02:56.000000000 +0000
+--- net/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
 +++ net/BUILD.gn
-@@ -153,6 +153,11 @@ component("net") {
+@@ -1234,7 +1234,7 @@ component("net") {
        ]
-       if (is_android) {
-         sources -= [ "base/openssl_private_key_store_android.cc" ]
-+      } else if (is_bsd) {
-+        sources -= [
-+          "base/address_tracker_linux.cc",
-+          "base/address_tracker_linux.h",
-+        ]
-       }
-     } else {
-       if (is_android) {
-@@ -278,6 +283,13 @@ component("net") {
-       sources -= [ "disk_cache/blockfile/file_posix.cc" ]
+     }
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [
+         "base/network_change_notifier_linux.cc",
+         "base/network_change_notifier_linux.h",
+@@ -1253,6 +1253,12 @@ component("net") {
+       ]
      }
  
 +    if (is_bsd) {
-+      sources -= [
-+         "base/network_change_notifier_linux.cc",
-+         "base/network_change_notifier_linux.h",
++      sources += [
++        "base/platform_mime_util_linux.cc",
 +      ]
 +    }
 +
-     if (is_ios || is_mac) {
-       sources += gypi_values.net_base_mac_ios_sources
+     if (is_mac) {
+       sources += [
+         "base/network_notification_thread_mac.cc",
+@@ -1383,7 +1389,7 @@ component("net") {
+       }
      }
-@@ -966,7 +978,7 @@ if (!is_ios && !is_android) {
-   }
- }
  
--if (is_linux || is_mac) {
-+if (is_linux || is_bsd || is_mac) {
-   executable("cachetool") {
-     testonly = true
-     sources = [
-@@ -995,7 +1007,7 @@ if (is_linux || is_mac) {
-   }
- }
+-    if (is_android || is_chromeos) {
++    if (is_android || is_chromeos || is_bsd) {
+       sources += [
+         "base/network_change_notifier_posix.cc",
+         "base/network_change_notifier_posix.h",
+@@ -1416,7 +1422,7 @@ component("net") {
+     }
  
--if (is_linux) {
-+if (is_linux || is_bsd) {
-   static_library("epoll_server") {
-     sources = [
-       "tools/epoll_server/epoll_server.cc",
-@@ -1098,7 +1110,7 @@ if (is_android) {
-   }
- }
- 
--if (is_android || is_linux) {
-+if (is_android || is_linux || is_bsd) {
-   executable("disk_cache_memory_test") {
-     testonly = true
-     sources = [
-@@ -1276,7 +1288,7 @@ test("net_unittests") {
-     "third_party/nist-pkits/",
-   ]
- 
--  if (is_linux || is_mac || is_win) {
-+  if (is_linux || is_bsd || is_mac || is_win) {
-     deps += [
-       "//third_party/pyftpdlib/",
-       "//third_party/pywebsocket/",
-@@ -1299,7 +1311,7 @@ test("net_unittests") {
-   if (is_desktop_linux) {
-     deps += [ ":epoll_quic_tools" ]
-   }
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     sources += gypi_values.net_linux_test_sources
-     deps += [
-       ":epoll_quic_tools",
-@@ -1319,6 +1331,12 @@ test("net_unittests") {
-     sources -= [ "proxy/proxy_config_service_linux_unittest.cc" ]
+     # Use getifaddrs() on POSIX platforms, except Linux and Android.
+-    if (is_posix && !is_linux && !is_android) {
++    if (is_posix && ((!is_linux && !is_android) || is_bsd)) {
+       sources += [
+         "base/network_interfaces_getifaddrs.cc",
+         "base/network_interfaces_getifaddrs.h",
+@@ -4545,7 +4551,7 @@ test("net_unittests") {
+     sources += [ "socket/udp_socket_posix_unittest.cc" ]
    }
  
-+  if (is_bsd) {
-+    sources -= [
-+      "base/address_tracker_linux_unittest.cc",
-+    ]
-+  }
-+
-   if (v8_use_external_startup_data) {
-     deps += [ "//gin" ]
+-  if (is_android || is_chromeos) {
++  if (is_android || is_chromeos || is_bsd) {
+     sources += [ "base/network_change_notifier_posix_unittest.cc" ]
    }
+ 
+@@ -4750,7 +4756,7 @@ test("net_unittests") {
+   }
+ 
+   # Use getifaddrs() on POSIX platforms, except Linux and Android.
+-  if (is_posix && !is_linux && !is_android) {
++  if (is_posix && ((!is_linux && !is_android) || is_bsd)) {
+     sources += [ "base/network_interfaces_getifaddrs_unittest.cc" ]
+   }
+ 

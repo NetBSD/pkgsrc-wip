@@ -1,13 +1,13 @@
 $NetBSD$
 
---- content/public/common/content_switches.h.orig	2017-02-02 02:02:54.000000000 +0000
+--- content/public/common/content_switches.h.orig	2020-07-08 21:40:42.000000000 +0000
 +++ content/public/common/content_switches.h
-@@ -293,7 +293,7 @@ CONTENT_EXPORT extern const char kDisabl
- CONTENT_EXPORT extern const char kDisableVaapiAcceleratedVideoEncode[];
+@@ -267,7 +267,7 @@ CONTENT_EXPORT extern const char kRemote
+ CONTENT_EXPORT extern const char kRendererWaitForJavaDebugger[];
  #endif
  
 -#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
++#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
  CONTENT_EXPORT extern const char kEnableSpeechDispatcher[];
  #endif
  

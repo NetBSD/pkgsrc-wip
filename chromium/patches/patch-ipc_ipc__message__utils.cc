@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ipc/ipc_message_utils.cc.orig	2017-02-02 02:02:55.000000000 +0000
+--- ipc/ipc_message_utils.cc.orig	2020-07-08 21:40:45.000000000 +0000
 +++ ipc/ipc_message_utils.cc
-@@ -425,7 +425,7 @@ void ParamTraits<unsigned int>::Log(cons
-   l->append(base::UintToString(p));
+@@ -356,7 +356,7 @@ void ParamTraits<unsigned int>::Log(cons
+   l->append(base::NumberToString(p));
  }
  
--#if defined(OS_WIN) || defined(OS_LINUX) || \
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_BSD) || \
+-#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_FUCHSIA) || \
++#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_FUCHSIA) || defined(OS_BSD) || \
      (defined(OS_ANDROID) && defined(ARCH_CPU_64_BITS))
  void ParamTraits<long>::Log(const param_type& p, std::string* l) {
-   l->append(base::Int64ToString(static_cast<int64_t>(p)));
+   l->append(base::NumberToString(p));

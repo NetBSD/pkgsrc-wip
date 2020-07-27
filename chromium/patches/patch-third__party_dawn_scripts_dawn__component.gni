@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/dawn/scripts/dawn_component.gni.orig	2020-07-15 19:01:32.000000000 +0000
++++ third_party/dawn/scripts/dawn_component.gni
+@@ -63,7 +63,7 @@ template("dawn_component") {
+         "@executable_path/",
+       ]
+     }
+-    if (is_linux && dawn_has_build) {
++    if ((is_linux || is_bsd) && dawn_has_build) {
+       configs = [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+     }
+   }

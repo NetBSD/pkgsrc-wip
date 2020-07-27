@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/color/BUILD.gn.orig	2020-07-15 18:56:49.000000000 +0000
++++ ui/color/BUILD.gn
+@@ -87,7 +87,7 @@ jumbo_component("mixers") {
+     sources += [ "cros/native_color_mixers.cc" ]
+   } else if (is_fuchsia) {
+     sources += [ "fuchsia/native_color_mixers.cc" ]
+-  } else if (is_linux) {
++  } else if (is_linux || is_bsd) {
+     sources += [ "linux/native_color_mixers.cc" ]
+   } else if (is_mac) {
+     libs = [ "AppKit.framework" ]

@@ -1,40 +1,31 @@
 $NetBSD$
 
---- third_party/sqlite/BUILD.gn.orig	2017-02-02 02:03:12.000000000 +0000
+--- third_party/sqlite/BUILD.gn.orig	2020-07-15 18:56:49.000000000 +0000
 +++ third_party/sqlite/BUILD.gn
-@@ -22,7 +22,7 @@ if (!use_system_sqlite) {
-       # sqlite3Fts3InitTok).
-       cflags += [ "-Wno-unused-function" ]
+@@ -138,7 +138,7 @@ config("sqlite_warnings") {
+       ]
      }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
-       cflags += [
-         # SQLite doesn"t believe in compiler warnings,
-         # preferring testing.
-@@ -187,7 +187,7 @@ if (!use_system_sqlite) {
-     public_configs = [ ":sqlite_export" ]
    }
- 
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
-     executable("sqlite_shell") {
-       # So shell.c can find the correct sqlite3.h.
-       include_dirs = [ "amalgamation" ]
-@@ -216,7 +216,7 @@ if (use_system_sqlite) {
- 
-   config("sqlite_config") {
-     defines = [ "USE_SYSTEM_SQLITE" ]
--    if (is_ios) {
-+    if (is_ios || is_bsd) {
-       libs = [ "sqlite3" ]
-     } else {
-       assert(false, "extra flags to use system sqlite3 library missing")
-@@ -235,7 +235,7 @@ if (use_system_sqlite) {
+     cflags += [
+       # SQLite doesn't believe in compiler warnings, preferring testing.
+       # http://www.sqlite.org/faq.html#q17
+@@ -191,7 +191,7 @@ component("chromium_sqlite3") {
      }
    }
  
--  if (is_ios) {
-+  if (is_ios || is_bsd) {
-     source_set("sqlite_recover") {
-       sources = [
-         # TODO(shess): Move out of the SQLite source tree, perhaps to ext/.
+-  if (is_linux || is_android) {
++  if (is_linux || is_android || is_bsd) {
+     defines += [
+       # Linux provides fdatasync(), a faster equivalent of fsync().
+       "fdatasync=fdatasync",
+@@ -344,7 +344,7 @@ group("sqlite_dev") {
+   ]
+ }
+ 
+-if (is_win || is_mac || is_linux) {
++if (is_win || is_mac || is_linux || is_bsd) {
+   executable("sqlite_shell") {
+     include_dirs = [
+       # SQLite's shell.c contains an '#include "sqlite3.h", which we want to be

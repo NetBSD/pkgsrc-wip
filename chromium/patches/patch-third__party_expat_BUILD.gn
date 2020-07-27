@@ -1,13 +1,13 @@
 $NetBSD$
 
---- third_party/expat/BUILD.gn.orig	2017-02-02 02:03:11.000000000 +0000
+--- third_party/expat/BUILD.gn.orig	2020-07-15 18:56:30.000000000 +0000
 +++ third_party/expat/BUILD.gn
 @@ -9,7 +9,7 @@ import("//testing/libfuzzer/fuzzer_test.
  # let's not pull it in twice.
  # Chromecast doesn't ship expat as a system library.
  # Libfuzzer and AFL need to build library from sources.
--if (is_linux && !is_chromecast && !use_libfuzzer && !use_afl) {
-+if ((is_linux || is_bsd) && !is_chromecast && !use_libfuzzer && !use_afl) {
+-if (is_linux && !is_chromecast && !use_fuzzing_engine) {
++if ((is_linux || is_bsd) && !is_chromecast && !use_fuzzing_engine) {
    config("expat_config") {
      libs = [ "expat" ]
    }

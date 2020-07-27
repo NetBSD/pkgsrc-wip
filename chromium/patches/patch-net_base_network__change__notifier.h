@@ -1,28 +1,28 @@
 $NetBSD$
 
---- net/base/network_change_notifier.h.orig	2017-02-02 02:02:56.000000000 +0000
+--- net/base/network_change_notifier.h.orig	2020-07-15 18:56:47.000000000 +0000
 +++ net/base/network_change_notifier.h
-@@ -26,7 +26,7 @@ struct NetworkInterface;
+@@ -23,7 +23,7 @@ struct NetworkInterface;
+ class SystemDnsConfigChangeNotifier;
  typedef std::vector<NetworkInterface> NetworkInterfaceList;
- class URLRequest;
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
  namespace internal {
  class AddressTrackerLinux;
  }
-@@ -332,7 +332,7 @@ class NET_EXPORT NetworkChangeNotifier {
-   // a large HOSTS file.
-   static void GetDnsConfig(DnsConfig* config);
+@@ -366,7 +366,7 @@ class NET_EXPORT NetworkChangeNotifier {
+   // Chrome net code.
+   static SystemDnsConfigChangeNotifier* GetSystemDnsConfigNotifier();
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
    // Returns the AddressTrackerLinux if present.
    static const internal::AddressTrackerLinux* GetAddressTracker();
  #endif
-@@ -488,7 +488,7 @@ class NET_EXPORT NetworkChangeNotifier {
-       const NetworkChangeCalculatorParams& params =
-           NetworkChangeCalculatorParams());
+@@ -513,7 +513,7 @@ class NET_EXPORT NetworkChangeNotifier {
+           NetworkChangeCalculatorParams(),
+       SystemDnsConfigChangeNotifier* system_dns_config_notifier = nullptr);
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)

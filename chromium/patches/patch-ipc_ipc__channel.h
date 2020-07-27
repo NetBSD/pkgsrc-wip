@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ipc/ipc_channel.h.orig	2017-02-02 02:02:55.000000000 +0000
+--- ipc/ipc_channel.h.orig	2020-07-08 21:40:45.000000000 +0000
 +++ ipc/ipc_channel.h
-@@ -245,7 +245,7 @@ class IPC_EXPORT Channel : public Sender
+@@ -244,7 +244,7 @@ class COMPONENT_EXPORT(IPC) Channel : pu
    static std::string GenerateUniqueRandomChannelID();
  #endif
  

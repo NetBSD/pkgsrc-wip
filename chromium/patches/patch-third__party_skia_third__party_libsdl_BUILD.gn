@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/skia/third_party/libsdl/BUILD.gn.orig	2020-07-15 19:01:41.000000000 +0000
++++ third_party/skia/third_party/libsdl/BUILD.gn
+@@ -125,7 +125,7 @@ third_party("libsdl") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "../externals/sdl/src/filesystem/unix/SDL_sysfilesystem.c",
+       "../externals/sdl/src/render/opengl/SDL_render_gl.c",

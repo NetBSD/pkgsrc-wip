@@ -1,13 +1,13 @@
 $NetBSD$
 
---- gpu/tools/compositor_model_bench/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
+--- gpu/tools/compositor_model_bench/BUILD.gn.orig	2020-07-15 18:55:58.000000000 +0000
 +++ gpu/tools/compositor_model_bench/BUILD.gn
 @@ -4,7 +4,7 @@
  
  import("//build/config/ui.gni")
  
--if (is_linux && !is_chromeos && current_cpu != "arm" && use_x11) {
-+if ((is_linux || is_bsd) && !is_chromeos && current_cpu != "arm" && use_x11) {
+-if (is_linux && use_x11 && current_cpu != "arm") {
++if ((is_linux || is_bsd) && use_x11 && current_cpu != "arm") {
    executable("compositor_model_bench") {
      sources = [
        "compositor_model_bench.cc",

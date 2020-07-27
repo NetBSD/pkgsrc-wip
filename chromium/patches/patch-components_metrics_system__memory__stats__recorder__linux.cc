@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/metrics/system_memory_stats_recorder_linux.cc.orig	2017-02-02 02:02:52.000000000 +0000
+--- components/metrics/system_memory_stats_recorder_linux.cc.orig	2020-07-08 21:40:39.000000000 +0000
 +++ components/metrics/system_memory_stats_recorder_linux.cc
 @@ -30,6 +30,7 @@ namespace metrics {
    UMA_HISTOGRAM_LINEAR(name, sample, 2500, 50)
@@ -10,11 +10,11 @@ $NetBSD$
    base::SystemMemoryInfoKB memory;
    if (!base::GetSystemMemoryInfo(&memory))
      return;
-@@ -93,6 +94,7 @@ void RecordMemoryStats(RecordMemoryStats
+@@ -81,6 +82,7 @@ void RecordMemoryStats(RecordMemoryStats
        break;
      }
    }
-+#endif // !defined(OS_BSD)
++#endif
  }
  
  }  // namespace metrics

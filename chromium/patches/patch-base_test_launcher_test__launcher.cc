@@ -1,15 +1,32 @@
 $NetBSD$
 
---- base/test/launcher/test_launcher.cc.orig	2017-02-02 02:02:47.000000000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2020-07-08 21:41:45.000000000 +0000
 +++ base/test/launcher/test_launcher.cc
-@@ -59,6 +59,10 @@
- #include "base/win/windows_version.h"
+@@ -56,6 +56,7 @@
+ #include "testing/gtest/include/gtest/gtest.h"
+ 
+ #if defined(OS_POSIX)
++#include <signal.h>
+ #include <fcntl.h>
+ 
+ #include "base/files/file_descriptor_watcher_posix.h"
+@@ -582,7 +583,7 @@ ChildProcessResults DoLaunchChildTestPro
+ #if !defined(OS_FUCHSIA)
+   options.new_process_group = true;
+ #endif
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+   options.kill_on_parent_death = true;
  #endif
  
-+#if defined(OS_FREEBSD)
-+#include <signal.h>
+@@ -1497,6 +1498,10 @@ bool TestLauncher::Init(CommandLine* com
+   results_tracker_.AddGlobalTag("OS_OPENBSD");
+ #endif
+ 
++#if defined(OS_NETBSD)
++  results_tracker_.AddGlobalTag("OS_NETBSD");
 +#endif
 +
- namespace base {
- 
- // See https://groups.google.com/a/chromium.org/d/msg/chromium-dev/nkdTP7sstSc/uT3FaE_sgkAJ .
+ #if defined(OS_POSIX)
+   results_tracker_.AddGlobalTag("OS_POSIX");
+ #endif

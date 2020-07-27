@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- components/safe_browsing/core/resources/BUILD.gn.orig	2020-06-25 09:31:28.000000000 +0000
++++ components/safe_browsing/core/resources/BUILD.gn
+@@ -30,6 +30,8 @@ action("make_file_types_protobuf") {
+     target_arch = "mac"
+   } else if (is_linux) {
+     target_arch = "linux"
++  } else if (is_netbsd) {
++    target_arch = "netbsd"
+   } else {
+     # This will cause the script to fail.
+     target_arch = "unknown_target_arch"

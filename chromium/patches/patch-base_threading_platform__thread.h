@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/threading/platform_thread.h.orig	2017-02-02 02:02:47.000000000 +0000
+--- base/threading/platform_thread.h.orig	2020-06-25 09:31:18.000000000 +0000
 +++ base/threading/platform_thread.h
-@@ -205,7 +205,7 @@ class BASE_EXPORT PlatformThread {
+@@ -221,7 +221,7 @@ class BASE_EXPORT PlatformThread {
  
    static ThreadPriority GetCurrentThreadPriority();
  

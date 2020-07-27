@@ -1,16 +1,16 @@
 $NetBSD$
 
---- ui/webui/resources/js/cr.js.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/webui/resources/js/cr.js.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/webui/resources/js/cr.js
-@@ -451,6 +451,11 @@ var cr = cr || function() {
-     get doc() {
-       return document;
+@@ -431,6 +431,11 @@ var cr = cr || function(global) {
+       return /Mac/.test(navigator.platform);
      },
-+    
+ 
 +    /** Whether this is on *BSD. */
 +    get isBSD() {
-+      return /BSD/.test(navigator.userAgent);
++      return /BSD/.test(navigator.platform);
 +    },
- 
-     /** Whether we are using a Mac or not. */
-     get isMac() {
++
+     /** Whether this is on the Windows platform or not. */
+     get isWindows() {
+       return /Win/.test(navigator.platform);

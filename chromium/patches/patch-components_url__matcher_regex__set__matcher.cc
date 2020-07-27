@@ -1,18 +1,15 @@
 $NetBSD$
 
---- components/url_matcher/regex_set_matcher.cc.orig	2017-02-02 02:02:53.000000000 +0000
+--- components/url_matcher/regex_set_matcher.cc.orig	2020-07-08 21:40:41.000000000 +0000
 +++ components/url_matcher/regex_set_matcher.cc
-@@ -10,8 +10,13 @@
- #include "base/memory/ptr_util.h"
+@@ -12,8 +12,8 @@
+ #include "base/logging.h"
  #include "base/strings/string_util.h"
  #include "components/url_matcher/substring_set_matcher.h"
-+#if defined(OS_BSD)
+-#include "third_party/re2/src/re2/filtered_re2.h"
+-#include "third_party/re2/src/re2/re2.h"
 +#include <re2/filtered_re2.h>
 +#include <re2/re2.h>
-+#else
- #include "third_party/re2/src/re2/filtered_re2.h"
- #include "third_party/re2/src/re2/re2.h"
-+#endif
  
  namespace url_matcher {
  

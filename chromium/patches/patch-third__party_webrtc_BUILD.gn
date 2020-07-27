@@ -1,13 +1,13 @@
 $NetBSD$
 
---- third_party/webrtc/BUILD.gn.orig	2017-02-02 02:03:57.000000000 +0000
+--- third_party/webrtc/BUILD.gn.orig	2020-06-25 09:34:49.000000000 +0000
 +++ third_party/webrtc/BUILD.gn
-@@ -60,6 +60,9 @@ config("common_inherited_config") {
+@@ -172,6 +172,9 @@ config("common_inherited_config") {
    if (is_linux) {
      defines += [ "WEBRTC_LINUX" ]
    }
 +  if (is_bsd) {
-+    defines += [ "WEBRTC_LINUX", "WEBRTC_BSD", "WEBRTC_THREAD_RR" ]
++    defines += [ "WEBRTC_BSD" ]
 +  }
    if (is_mac) {
      defines += [ "WEBRTC_MAC" ]

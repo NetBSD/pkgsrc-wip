@@ -1,22 +1,31 @@
 $NetBSD$
 
---- media/base/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
+--- media/base/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
 +++ media/base/BUILD.gn
-@@ -309,7 +309,7 @@ target(link_target_type, "base") {
-     allow_circular_includes_from += [ "//media/base/android" ]
-   }
- 
--  if (is_linux && use_x11) {
-+  if ((is_linux || is_bsd) && use_x11) {
-     configs += [
-       "//build/config/linux:x11",
-       "//build/config/linux:xext",
-@@ -345,7 +345,7 @@ target(link_target_type, "base") {
-     deps += [ ":media_yasm" ]
+@@ -397,7 +397,7 @@ jumbo_source_set("base") {
+     defines += [ "DISABLE_USER_INPUT_MONITOR" ]
    }
  
 -  if (is_linux || is_win) {
-+  if (is_linux || is_bsd || is_win) {
++  if (is_linux || is_win || is_bsd) {
      sources += [
        "keyboard_event_counter.cc",
        "keyboard_event_counter.h",
+@@ -405,7 +405,7 @@ jumbo_source_set("base") {
+   }
+ 
+   # Note: should also work on is_posix || is_fuchsia
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "scopedfd_helper.cc",
+       "scopedfd_helper.h",
+@@ -612,7 +612,7 @@ source_set("unit_tests") {
+     deps += [ "//media/base/mac:unit_tests" ]
+   }
+ 
+-  if (is_linux || is_win) {
++  if (is_linux || is_win || is_bsd) {
+     sources += [ "keyboard_event_counter_unittest.cc" ]
+   }
+   if (is_win) {

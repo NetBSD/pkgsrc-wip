@@ -1,16 +1,13 @@
 $NetBSD$
 
---- chrome/browser/download/download_query.cc.orig	2017-02-02 02:02:48.000000000 +0000
+--- chrome/browser/download/download_query.cc.orig	2020-07-08 21:40:34.000000000 +0000
 +++ chrome/browser/download/download_query.cc
-@@ -27,7 +27,11 @@
+@@ -28,7 +28,7 @@
+ #include "components/download/public/common/download_item.h"
  #include "components/url_formatter/url_formatter.h"
  #include "content/public/browser/content_browser_client.h"
- #include "content/public/browser/download_item.h"
-+#if defined(OS_BSD)
+-#include "third_party/re2/src/re2/re2.h"
 +#include <re2/re2.h>
-+#else
- #include "third_party/re2/src/re2/re2.h"
-+#endif
  #include "url/gurl.h"
  
- using content::DownloadDangerType;
+ using download::DownloadDangerType;

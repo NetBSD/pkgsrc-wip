@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- services/resource_coordinator/public/mojom/BUILD.gn.orig	2020-07-15 18:56:01.000000000 +0000
++++ services/resource_coordinator/public/mojom/BUILD.gn
+@@ -20,7 +20,7 @@ mojom_component("mojom") {
+   ]
+ 
+   enabled_features = []
+-  if (is_linux || is_android) {
++  if (is_linux || is_android || is_bsd) {
+     enabled_features += [ "private_swap_info" ]
+   }
+ }

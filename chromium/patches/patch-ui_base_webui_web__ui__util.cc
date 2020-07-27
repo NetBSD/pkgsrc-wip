@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/base/webui/web_ui_util.cc.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2020-07-15 18:56:49.000000000 +0000
 +++ ui/base/webui/web_ui_util.cc
-@@ -161,7 +161,7 @@ std::string GetFontFamily() {
+@@ -228,7 +228,7 @@ std::string GetFontFamily() {
  
  // TODO(dnicoara) Remove Ozone check when PlatformFont support is introduced
  // into Ozone: crbug.com/320050

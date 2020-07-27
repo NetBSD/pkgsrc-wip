@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/process_iterator_netbsd.cc.orig	2016-11-12 02:51:19.578931241 +0000
+--- base/process/process_iterator_netbsd.cc.orig	2020-07-09 13:18:47.324483044 +0000
 +++ base/process/process_iterator_netbsd.cc
 @@ -0,0 +1,146 @@
 +// Copyright (c) 2013 The Chromium Authors. All rights reserved.
@@ -97,13 +97,13 @@ $NetBSD$
 +
 +    // Find out what size buffer we need.
 +    size_t data_len = 0;
-+    if (sysctl(mib, arraysize(mib), NULL, &data_len, NULL, 0) < 0) {
++    if (sysctl(mib, __arraycount(mib), NULL, &data_len, NULL, 0) < 0) {
 +      DVPLOG(1) << "failed to figure out the buffer size for a commandline";
 +      continue;
 +    }
 +
 +    data.resize(data_len);
-+    if (sysctl(mib, arraysize(mib), &data[0], &data_len, NULL, 0) < 0) {
++    if (sysctl(mib, __arraycount(mib), &data[0], &data_len, NULL, 0) < 0) {
 +      DVPLOG(1) << "failed to fetch a commandline";
 +      continue;
 +    }

@@ -1,13 +1,13 @@
 $NetBSD$
 
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2017-02-02 02:02:50.000000000 +0000
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2020-07-08 21:41:47.000000000 +0000
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
-@@ -71,7 +71,7 @@ void ShowBadFlagsPrompt(Browser* browser
-     // This flag gives extensions more powers.
+@@ -88,7 +88,7 @@ static const char* kBadFlags[] = {
      extensions::switches::kExtensionsOnChromeURLs,
+ #endif
  
 -#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
++#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
      // Speech dispatcher is buggy, it can crash and it can make Chrome freeze.
      // http://crbug.com/327295
      switches::kEnableSpeechDispatcher,

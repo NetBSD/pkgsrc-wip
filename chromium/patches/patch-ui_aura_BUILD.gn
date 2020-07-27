@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ui/aura/BUILD.gn.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/aura/BUILD.gn.orig	2020-07-15 18:56:33.000000000 +0000
 +++ ui/aura/BUILD.gn
-@@ -361,7 +361,7 @@ test("aura_unittests") {
-     "//ui/gl:test_support",
-   ]
+@@ -267,7 +267,7 @@ jumbo_static_library("test_support") {
+     sources += [ "test/ui_controls_factory_ozone.cc" ]
+   }
  
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
-     deps += [ "//third_party/mesa" ]
+     deps += [ "//ui/platform_window/common" ]
    }
- 
+ }

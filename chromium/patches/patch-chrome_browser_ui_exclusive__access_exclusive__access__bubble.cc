@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc.orig	2017-02-02 02:02:49.000000000 +0000
+--- chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc.orig	2020-07-08 21:40:35.000000000 +0000
 +++ chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc
 @@ -16,7 +16,7 @@
  

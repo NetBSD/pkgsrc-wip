@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- remoting/resources/remoting_strings.grd.orig	2020-07-15 18:56:01.000000000 +0000
++++ remoting/resources/remoting_strings.grd
+@@ -880,7 +880,7 @@ If '<ph name="SERVICE_SCRIPT_NAME">$3<ex
+           Open Screen Recording Preferences
+         </message>
+       </if>
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_SESSION_DIALOG_MESSAGE" desc="The message to show at the top of the session-selection dialog.">
+           Select a session to launch within your Chrome Remote Desktop environment. (Note that some session types may not support running within Chrome Remote Desktop and on the local console simultaneously.)
+         </message>

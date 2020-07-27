@@ -1,13 +1,13 @@
 $NetBSD$
 
---- third_party/zlib/BUILD.gn.orig	2017-02-02 02:03:12.000000000 +0000
+--- third_party/zlib/BUILD.gn.orig	2020-06-25 09:32:39.000000000 +0000
 +++ third_party/zlib/BUILD.gn
-@@ -115,7 +115,7 @@ static_library("minizip") {
-       "contrib/minizip/iowin32.h",
+@@ -356,7 +356,7 @@ static_library("minizip") {
      ]
    }
--  if (is_mac || is_ios || is_android) {
-+  if (is_mac || is_ios || is_android || is_bsd) {
+ 
+-  if (is_mac || is_ios || is_android || is_nacl) {
++  if (is_mac || is_ios || is_android || is_nacl || is_bsd) {
      # Mac, Android and the BSDs don't have fopen64, ftello64, or fseeko64. We
      # use fopen, ftell, and fseek instead on these systems.
      defines = [ "USE_FILE32API" ]

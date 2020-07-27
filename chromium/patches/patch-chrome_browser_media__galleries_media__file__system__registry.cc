@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2017-02-02 02:02:49.000000000 +0000
+--- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2020-07-08 21:41:47.000000000 +0000
 +++ chrome/browser/media_galleries/media_file_system_registry.cc
-@@ -757,7 +757,10 @@ class MediaFileSystemRegistry::MediaFile
+@@ -735,7 +735,10 @@ class MediaFileSystemRegistry::MediaFile
  // Constructor in 'private' section because depends on private class definition.
  MediaFileSystemRegistry::MediaFileSystemRegistry()
      : file_system_context_(new MediaFileSystemContextImpl) {

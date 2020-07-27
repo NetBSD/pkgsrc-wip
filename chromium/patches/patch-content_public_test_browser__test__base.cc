@@ -1,15 +1,22 @@
 $NetBSD$
 
---- content/public/test/browser_test_base.cc.orig	2017-02-02 02:02:54.000000000 +0000
+--- content/public/test/browser_test_base.cc.orig	2020-07-08 21:40:42.000000000 +0000
 +++ content/public/test/browser_test_base.cc
-@@ -6,6 +6,10 @@
+@@ -73,7 +73,7 @@
+ #include "ui/gl/gl_implementation.h"
+ #include "ui/gl/gl_switches.h"
  
- #include <stddef.h>
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+ #include "ui/platform_window/common/platform_window_defaults.h"  // nogncheck
+ #endif
  
-+#if defined(OS_FREEBSD)
-+#include <sys/signal.h>
-+#endif
-+
- #include "base/bind.h"
- #include "base/command_line.h"
- #include "base/debug/stack_trace.h"
+@@ -185,7 +185,7 @@ BrowserTestBase::BrowserTestBase()
+          "a new browser test suite that runs on Android, please add it to "
+          "//build/android/pylib/gtest/gtest_test_instance.py.";
+   g_instance_already_created = true;
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+   ui::test::EnableTestConfigForPlatformWindows();
+ #endif
+ 

@@ -1,16 +1,13 @@
 $NetBSD$
 
---- components/autofill/content/renderer/password_form_conversion_utils.cc.orig	2017-02-02 02:02:52.000000000 +0000
+--- components/autofill/content/renderer/password_form_conversion_utils.cc.orig	2020-07-08 21:40:39.000000000 +0000
 +++ components/autofill/content/renderer/password_form_conversion_utils.cc
-@@ -28,7 +28,11 @@
- #include "third_party/WebKit/public/web/WebFormControlElement.h"
- #include "third_party/WebKit/public/web/WebFrame.h"
- #include "third_party/WebKit/public/web/WebInputElement.h"
-+#if defined(OS_BSD)
+@@ -19,7 +19,7 @@
+ #include "third_party/blink/public/web/web_form_control_element.h"
+ #include "third_party/blink/public/web/web_input_element.h"
+ #include "third_party/blink/public/web/web_local_frame.h"
+-#include "third_party/re2/src/re2/re2.h"
 +#include <re2/re2.h>
-+#else
- #include "third_party/re2/src/re2/re2.h"
-+#endif
+ #include "url/gurl.h"
  
- using blink::WebDocument;
- using blink::WebFormControlElement;
+ using blink::WebElement;

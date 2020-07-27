@@ -1,8 +1,8 @@
 $NetBSD$
 
---- build/linux/libpci/BUILD.gn.orig	2017-02-02 02:02:47.000000000 +0000
+--- build/linux/libpci/BUILD.gn.orig	2020-06-25 09:31:19.000000000 +0000
 +++ build/linux/libpci/BUILD.gn
-@@ -3,20 +3,36 @@
+@@ -3,20 +3,8 @@
  # found in the LICENSE file.
  
  import("//tools/generate_library_loader/generate_library_loader.gni")
@@ -25,32 +25,4 @@ $NetBSD$
 -  ]
 +declare_args() {
 +  use_system_libpci = is_bsd
-+}
-+
-+if (use_system_libpci) {
-+  pkg_config("system_libpci") {
-+    packages = [ "libpci" ]
-+  }
-+
-+  source_set("libpci") {
-+    public_configs = [ ":system_libpci" ]
-+  }
-+
-+} else {
-+  # This generates a target named "libpci".
-+  generate_library_loader("libpci") {
-+    name = "LibPciLoader"
-+    output_h = "libpci.h"
-+    output_cc = "libpci_loader.cc"
-+    header = "<pci/pci.h>"
-+
-+    functions = [
-+      "pci_alloc",
-+      "pci_init",
-+      "pci_cleanup",
-+      "pci_scan_bus",
-+      "pci_fill_info",
-+      "pci_lookup_name",
-+    ]
-+  }
  }

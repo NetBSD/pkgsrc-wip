@@ -1,48 +1,31 @@
 $NetBSD$
 
---- build/toolchain/gcc_toolchain.gni.orig	2017-02-02 02:02:47.000000000 +0000
+--- build/toolchain/gcc_toolchain.gni.orig	2020-07-15 18:55:48.000000000 +0000
 +++ build/toolchain/gcc_toolchain.gni
-@@ -11,6 +11,11 @@ import("//build/toolchain/cc_wrapper.gni
- import("//build/toolchain/goma.gni")
- import("//build/toolchain/toolchain.gni")
- 
-+declare_args() {
+@@ -28,6 +28,9 @@ declare_args() {
+       # Don't enable for Android-on-Chrome OS so that they can build with
+       # symbol_level=0 without this failing (crbug.com/891164).
+       (target_os == "android" || target_os == "win")
++
 +  extra_cxxflags = ""
 +  extra_ldflags = ""
-+}
-+
- # This template defines a toolchain for something that works like gcc
- # (including clang).
- #
-@@ -482,14 +487,23 @@ template("clang_toolchain") {
+ }
+ 
+ # When the arg is set via args.gn, it applies to all toolchains. In order to not
+@@ -589,12 +592,12 @@ template("clang_toolchain") {
    }
  
    gcc_toolchain(target_name) {
 -    prefix = rebase_path("$clang_base_path/bin", root_build_dir)
 -    cc = "$prefix/clang"
 -    cxx = "$prefix/clang++"
--    ld = cxx
--
--    readelf = "${toolprefix}readelf"
--    ar = "${toolprefix}ar"
--    nm = "${toolprefix}nm"
-+    if (is_bsd) {
-+      cc = "${toolprefix}clang39"
-+      cxx = "${toolprefix}clang++39"
-+      ld = cxx
-+      readelf = "readelf"
-+      ar = "${toolprefix}llvm-ar39"
-+      nm = "${toolprefix}llvm-nm39"
-+    } else {
-+      prefix = rebase_path("$clang_base_path/bin", root_build_dir)
-+      cc = "$prefix/clang"
-+      cxx = "$prefix/clang++"
-+      ld = cxx
-+
-+      readelf = "${toolprefix}readelf"
-+      ar = "${toolprefix}ar"
-+      nm = "${toolprefix}nm"
-+    }
++    #prefix = rebase_path("$clang_base_path/bin", root_build_dir)
++    cc = "clang"
++    cxx = "clang++"
+     ld = cxx
+     readelf = "${toolprefix}readelf"
+-    ar = "${prefix}/llvm-ar"
++    ar = "llvm-ar"
+     nm = "${toolprefix}nm"
  
-     forward_variables_from(invoker, [ "strip" ])
- 
+     forward_variables_from(invoker,

@@ -1,24 +1,22 @@
 $NetBSD$
 
---- chrome/browser/chrome_browser_main_posix.cc.orig	2017-02-02 02:02:48.000000000 +0000
+--- chrome/browser/chrome_browser_main_posix.cc.orig	2020-07-08 21:40:33.000000000 +0000
 +++ chrome/browser/chrome_browser_main_posix.cc
-@@ -275,6 +275,11 @@ void ChromeBrowserMainPartsPosix::PostMa
-     g_pipe_pid = getpid();
-     g_shutdown_pipe_read_fd = pipefd[0];
-     g_shutdown_pipe_write_fd = pipefd[1];
-+#if defined(OS_BSD)
-+    // PTHREAD_STACK_MIN causes chromium to crash under FreeBSD,
-+    // we request the default pthread stack size by specifying 0 here.
-+    const size_t kShutdownDetectorThreadStackSize = 0;
-+#else
- #if !defined(ADDRESS_SANITIZER) && !defined(KEEP_SHADOW_STACKS)
-     const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 2;
- #else
-@@ -283,6 +288,7 @@ void ChromeBrowserMainPartsPosix::PostMa
-     // size to avoid hitting the guard page.
-     const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 4;
- #endif
-+#endif // OS_FREEBSD
-     // TODO(viettrungluu,willchan): crbug.com/29675 - This currently leaks, so
-     // if you change this, you'll probably need to change the suppression.
-     if (!base::PlatformThread::CreateNonJoinable(
+@@ -70,7 +70,7 @@ void ExitHandler::ExitWhenPossibleOnUITh
+     // ExitHandler takes care of deleting itself.
+     new ExitHandler();
+   } else {
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
++#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+     switch (signal) {
+       case SIGINT:
+       case SIGHUP:
+@@ -166,7 +166,7 @@ void ChromeBrowserMainPartsPosix::PostMa
+ void ChromeBrowserMainPartsPosix::ShowMissingLocaleMessageBox() {
+ #if defined(OS_CHROMEOS)
+   NOTREACHED();  // Should not ever happen on ChromeOS.
+-#elif defined(OS_MACOSX)
++#elif defined(OS_MACOSX) || defined(OS_BSD)
+   // Not called on Mac because we load the locale files differently.
+   NOTREACHED();
+ #elif defined(USE_AURA)

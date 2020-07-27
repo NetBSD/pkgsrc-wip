@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/launch.cc.orig	2017-02-02 02:02:47.000000000 +0000
+--- base/process/launch.cc.orig	2020-06-25 09:31:18.000000000 +0000
 +++ base/process/launch.cc
 @@ -15,7 +15,7 @@ LaunchOptions::~LaunchOptions() = defaul
  

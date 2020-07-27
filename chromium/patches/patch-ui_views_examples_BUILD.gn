@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/views/examples/BUILD.gn.orig	2020-07-15 18:56:34.000000000 +0000
++++ ui/views/examples/BUILD.gn
+@@ -145,7 +145,7 @@ source_set("views_examples_proc") {
+     "//ui/views:test_support",
+   ]
+ 
+-  if (is_win || is_mac || (is_linux && !is_chromeos)) {
++  if (is_win || is_mac || ((is_linux || is_bsd) && !is_chromeos)) {
+     sources += [
+       "examples_skia_gold_pixel_diff.cc",
+       "examples_skia_gold_pixel_diff.h",

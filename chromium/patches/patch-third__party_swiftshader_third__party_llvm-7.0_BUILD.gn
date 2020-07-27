@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/swiftshader/third_party/llvm-7.0/BUILD.gn.orig	2020-07-15 19:01:43.000000000 +0000
++++ third_party/swiftshader/third_party/llvm-7.0/BUILD.gn
+@@ -107,6 +107,8 @@ if (is_linux) {
+   llvm_include_dirs += [ "configs/android/include/" ]
+ } else if (is_mac) {
+   llvm_include_dirs += [ "configs/darwin/include/" ]
++} else if (is_netbsd) {
++  llvm_include_dirs += [ "configs/netbsd/include/" ]
+ } else {
+   assert(false, "llvm-7.0 not configured for target platform")
+ }

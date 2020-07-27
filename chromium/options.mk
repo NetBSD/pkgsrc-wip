@@ -24,10 +24,10 @@ GN_ARGS+=		is_debug=true
 # Dynamic link build causes link errors in pkgsrc.
 GN_ARGS+=		is_component_build=false
 GN_BOOTSTRAP_FLAGS+=	--debug
-#GN_VERBOSE=		-v
+GN_VERBOSE=		-v
 .else
 BUILDTYPE=		Release
 GN_ARGS+=		is_debug=false \
-			symbol_level=0 \
-			remove_webcore_debug_symbols=true
+			symbol_level=0
+GN_VERBOSE=		# empty
 .endif

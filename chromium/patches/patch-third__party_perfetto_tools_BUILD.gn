@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- third_party/perfetto/tools/BUILD.gn.orig	2020-07-15 19:01:39.000000000 +0000
++++ third_party/perfetto/tools/BUILD.gn
+@@ -27,7 +27,7 @@ group("tools") {
+     "ftrace_proto_gen",
+     "protoprofile",
+   ]
+-  if (is_linux || is_android) {
++  if (is_linux || is_android || is_bsd) {
+     deps += [
+       "busy_threads",
+       "cpu_utilization",
+@@ -43,7 +43,7 @@ group("tools") {
+   }
+ }
+ 
+-if (is_linux && enable_perfetto_heapprofd) {
++if ((is_linux || is_bsd) && enable_perfetto_heapprofd) {
+   executable("profiling_sample_distribution") {
+     sources = [ "profiling_sample_distribution.cc" ]
+     deps = [

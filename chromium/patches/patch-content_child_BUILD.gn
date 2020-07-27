@@ -1,0 +1,25 @@
+$NetBSD$
+
+--- content/child/BUILD.gn.orig	2020-07-15 18:55:57.000000000 +0000
++++ content/child/BUILD.gn
+@@ -143,13 +143,19 @@ target(link_target_type, "child") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [
+       "//components/services/font/public/cpp",
+       "//components/services/font/public/mojom",
+     ]
+   }
+ 
++  #if (is_bsd) {
++  #  deps -= [
++  #    "//services/service_manager/zygote",
++  #  ]
++  #}
++
+   if (is_win) {
+     libs = [ "dwrite.lib" ]
+   }

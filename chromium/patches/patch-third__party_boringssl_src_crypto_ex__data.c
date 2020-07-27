@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/boringssl/src/crypto/ex_data.c.orig	2017-02-02 02:03:46.000000000 +0000
+--- third_party/boringssl/src/crypto/ex_data.c.orig	2020-07-15 19:01:32.000000000 +0000
 +++ third_party/boringssl/src/crypto/ex_data.c
-@@ -188,7 +188,9 @@ int CRYPTO_set_ex_data(CRYPTO_EX_DATA *a
+@@ -186,7 +186,9 @@ int CRYPTO_set_ex_data(CRYPTO_EX_DATA *a
      }
    }
  

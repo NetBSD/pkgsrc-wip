@@ -1,29 +1,34 @@
 $NetBSD$
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2017-02-02 02:02:48.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2020-07-08 21:40:33.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
-@@ -75,12 +75,14 @@ void ChromeBrowserMainPartsLinux::PrePro
+@@ -81,6 +81,7 @@ void ChromeBrowserMainPartsLinux::PrePro
  void ChromeBrowserMainPartsLinux::PostProfileInit() {
    ChromeBrowserMainPartsPosix::PostProfileInit();
  
 +#if !defined(OS_BSD)
+   bool breakpad_registered;
+   if (crash_reporter::IsCrashpadEnabled()) {
+     // If we're using crashpad, there's no breakpad and crashpad is always
+@@ -98,10 +99,11 @@ void ChromeBrowserMainPartsLinux::PostPr
+   }
    g_browser_process->metrics_service()->RecordBreakpadRegistration(
-       breakpad::IsCrashReporterEnabled());
+       breakpad_registered);
 +#endif
  }
  
  void ChromeBrowserMainPartsLinux::PostMainMessageLoopStart() {
 -#if !defined(OS_CHROMEOS)
 +#if !defined(OS_CHROMEOS) && !defined(OS_BSD)
-   bluez::DBusThreadManagerLinux::Initialize();
-   bluez::BluezDBusManager::Initialize(
-       bluez::DBusThreadManagerLinux::Get()->GetSystemBus(), false);
-@@ -90,7 +92,7 @@ void ChromeBrowserMainPartsLinux::PostMa
+   bluez::BluezDBusManager::Initialize(nullptr /* system_bus */);
+ #endif
+ 
+@@ -109,7 +111,7 @@ void ChromeBrowserMainPartsLinux::PostMa
  }
  
  void ChromeBrowserMainPartsLinux::PostDestroyThreads() {
 -#if !defined(OS_CHROMEOS)
 +#if !defined(OS_CHROMEOS) && !defined(OS_BSD)
    bluez::BluezDBusManager::Shutdown();
-   bluez::DBusThreadManagerLinux::Shutdown();
+   bluez::BluezDBusThreadManager::Shutdown();
  #endif

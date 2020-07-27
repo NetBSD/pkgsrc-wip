@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/gfx/font_render_params.h.orig	2017-02-02 02:03:13.000000000 +0000
+--- ui/gfx/font_render_params.h.orig	2020-07-15 18:56:34.000000000 +0000
 +++ ui/gfx/font_render_params.h
-@@ -106,13 +106,13 @@ GFX_EXPORT FontRenderParams GetFontRende
+@@ -111,7 +111,7 @@ GFX_EXPORT FontRenderParams GetFontRende
      const FontRenderParamsQuery& query,
      std::string* family_out);
  
@@ -11,10 +11,12 @@ $NetBSD$
  // Clears GetFontRenderParams()'s cache. Intended to be called by tests that are
  // changing Fontconfig's configuration.
  GFX_EXPORT void ClearFontRenderParamsCacheForTest();
- #endif
- 
--#if defined(OS_CHROMEOS) || defined(OS_LINUX)
-+#if defined(OS_CHROMEOS) || defined(OS_LINUX) || defined(OS_BSD)
- // Gets the device scale factor to query the FontRenderParams.
+@@ -121,7 +121,7 @@ GFX_EXPORT void ClearFontRenderParamsCac
  GFX_EXPORT float GetFontRenderParamsDeviceScaleFactor();
  
+ #if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_ANDROID) || \
+-    defined(OS_FUCHSIA)
++    defined(OS_FUCHSIA) || defined(OS_BSD)
+ // Sets the device scale factor for FontRenderParams to decide
+ // if it should enable subpixel positioning.
+ GFX_EXPORT void SetFontRenderParamsDeviceScaleFactor(

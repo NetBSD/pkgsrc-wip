@@ -1,13 +1,13 @@
 $NetBSD$
 
---- base/trace_event/process_memory_dump.cc.orig	2017-02-02 02:02:47.000000000 +0000
+--- base/trace_event/process_memory_dump.cc.orig	2020-06-25 09:31:18.000000000 +0000
 +++ base/trace_event/process_memory_dump.cc
-@@ -83,7 +83,7 @@ size_t ProcessMemoryDump::CountResidentB
-   const size_t kMaxChunkSize = 8 * 1024 * 1024;
-   size_t max_vec_size =
-       GetSystemPageCount(std::min(mapped_size, kMaxChunkSize), page_size);
--#if defined(OS_MACOSX) || defined(OS_IOS)
-+#if defined(OS_MACOSX) || defined(OS_IOS) || defined(OS_BSD)
-   std::unique_ptr<char[]> vec(new char[max_vec_size]);
- #elif defined(OS_WIN)
+@@ -95,7 +95,7 @@ size_t ProcessMemoryDump::CountResidentB
+ #if defined(OS_WIN)
    std::unique_ptr<PSAPI_WORKING_SET_EX_INFORMATION[]> vec(
+       new PSAPI_WORKING_SET_EX_INFORMATION[max_vec_size]);
+-#elif defined(OS_MACOSX)
++#elif defined(OS_MACOSX) || defined(OS_BSD)
+   std::unique_ptr<char[]> vec(new char[max_vec_size]);
+ #elif defined(OS_POSIX) || defined(OS_FUCHSIA)
+   std::unique_ptr<unsigned char[]> vec(new unsigned char[max_vec_size]);

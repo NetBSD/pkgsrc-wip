@@ -1,10 +1,10 @@
 $NetBSD$
 
---- build/config/crypto.gni.orig	2017-02-02 02:02:47.000000000 +0000
+--- build/config/crypto.gni.orig	2020-07-24 10:44:52.474897202 +0000
 +++ build/config/crypto.gni
-@@ -20,4 +20,4 @@ use_openssl_certs = is_android || is_nac
+@@ -12,4 +12,4 @@
+ # to set up feature flags.
  
- # True if NSS is used for certificate handling. It is possible to use OpenSSL
- # for the crypto library, but NSS for the platform certificate library.
+ # True if NSS is used for certificate handling.
 -use_nss_certs = is_linux
 +use_nss_certs = is_linux || is_bsd

@@ -1,70 +1,80 @@
 $NetBSD$
 
---- build/config/compiler/BUILD.gn.orig	2017-02-02 02:02:47.000000000 +0000
+--- build/config/compiler/BUILD.gn.orig	2020-06-25 09:31:19.000000000 +0000
 +++ build/config/compiler/BUILD.gn
-@@ -150,7 +150,7 @@ config("compiler") {
+@@ -130,7 +130,7 @@ declare_args() {
+   # 'is_android' breaks content_shell_test_apk on android-kitkat-arm-rel.
+   # 'use_xcode_clang' may call old clang.
+   init_stack_vars =
+-      !is_android && !use_xcode_clang && (!is_official_build || is_linux)
++      !is_android && !use_xcode_clang && (!is_official_build || is_linux || is_bsd)
+ 
+   # This argument is to control whether enabling text section splitting in the
+   # final binary. When enabled, the separated text sections with prefix
+@@ -237,7 +237,7 @@ config("compiler") {
      configs += [ "//build/config/win:compiler" ]
    } else if (is_android) {
      configs += [ "//build/config/android:compiler" ]
 -  } else if (is_linux) {
 +  } else if (is_linux || is_bsd) {
      configs += [ "//build/config/linux:compiler" ]
-   } else if (is_nacl) {
-     configs += [ "//build/config/nacl:compiler" ]
-@@ -277,7 +277,7 @@ config("compiler") {
+     if (is_chromeos) {
+       configs += [ "//build/config/chromeos:compiler" ]
+@@ -367,7 +367,7 @@ config("compiler") {
  
-   # Linux/Android common flags setup.
+   # Linux/Android/Fuchsia common flags setup.
    # ---------------------------------
--  if (is_linux || is_android) {
-+  if (is_linux || is_bsd || is_android) {
-     cflags += [
-       "-fPIC",
-       "-pipe",  # Use pipes for communicating between sub-processes. Faster.
-@@ -401,14 +401,14 @@ config("compiler") {
-   # clang-cl (used if is_win) doesn't expose this flag.
-   # Currently disabled for nacl since its toolchain lacks this flag (too old).
-   # TODO(zforman): Once nacl's toolchain is updated, remove check.
--  if (is_clang && is_linux) {
-+  if (is_clang && (is_linux || is_bsd)) {
-     absolute_path = rebase_path("//.")
-     cflags += [ "-fdebug-prefix-map=$absolute_path=." ]
+-  if (is_linux || is_android || is_fuchsia) {
++  if (is_linux || is_android || is_fuchsia || is_bsd) {
+     asmflags += [ "-fPIC" ]
+     cflags += [ "-fPIC" ]
+     ldflags += [ "-fPIC" ]
+@@ -389,7 +389,7 @@ config("compiler") {
+ 
+     # Compiler instrumentation can introduce dependencies in DSOs to symbols in
+     # the executable they are loaded into, so they are unresolved at link-time.
+-    if (!using_sanitizer) {
++    if (!using_sanitizer && !is_bsd) {
+       ldflags += [
+         "-Wl,-z,defs",
+         "-Wl,--as-needed",
+@@ -440,7 +440,7 @@ config("compiler") {
+     ldflags += [ "-Wl,--icf=all" ]
    }
  
-   # C++11 compiler flags setup.
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     cflags += [ "-pthread" ]
+     # Do not use the -pthread ldflag here since it becomes a no-op
+     # when using -nodefaultlibs, which would cause an unused argument
+@@ -480,7 +480,7 @@ config("compiler") {
+     ldflags += [ "-Wl,-z,keep-text-section-prefix" ]
+   }
+ 
+-  if (is_clang && !is_nacl && !use_xcode_clang) {
++  if (is_clang && !is_nacl && !use_xcode_clang && !is_bsd) {
+     cflags += [ "-fcrash-diagnostics-dir=" +
+                 rebase_path("//tools/clang/crashreports", root_build_dir) ]
+ 
+@@ -496,7 +496,7 @@ config("compiler") {
+ 
+   # C11/C++11 compiler flags setup.
    # ---------------------------
--  if (is_linux || is_android || (is_nacl && is_clang)) {
-+  if (is_linux || is_bsd || is_android || (is_nacl && is_clang)) {
-     # gnu++11 instead of c++11 is needed because some code uses typeof() (a
-     # GNU extension).
-     # TODO(thakis): Eventually switch this to c++11 instead,
-@@ -458,7 +458,7 @@ config("compiler") {
-       ]
- 
-       # Apply a lower LTO optimization level as the default is too slow.
--      if (is_linux) {
-+      if (is_linux || is_bsd) {
-         if (use_lld) {
-           ldflags += [ "-Wl,--lto-O1" ]
-         } else {
-@@ -478,7 +478,7 @@ config("compiler") {
-     # targeting ARM, without this flag, LTO produces a .text section that is
-     # larger than the maximum call displacement, preventing the linker from
-     # relocating calls (http://llvm.org/PR22999).
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
-       ldflags += [ "-Wl,-plugin-opt,-function-sections" ]
+-  if (is_linux || is_android || (is_nacl && is_clang) || current_os == "aix") {
++  if (is_linux || is_android || (is_nacl && is_clang) || current_os == "aix" || is_bsd) {
+     if (target_os == "android") {
+       cxx11_override = use_cxx11_on_android
+     } else {
+@@ -1110,7 +1110,7 @@ config("compiler_deterministic") {
+       "-Xclang",
+       ".",
+     ]
+-    if (!is_win) {
++    if (!is_win && !is_bsd) {
+       # We don't use clang -cc1as on Windows (yet? https://crbug.com/762167)
+       asmflags = [ "-Wa,-fdebug-compilation-dir,." ]
      }
-   }
-@@ -742,7 +742,7 @@ config("compiler_codegen") {
- #   configs -= [ "//build/config/compiler:clang_stackrealign" ]
- # See https://crbug.com/556393 for details of where it must be avoided.
- config("clang_stackrealign") {
--  if (is_clang && current_cpu == "x86" && is_linux) {
-+  if (is_clang && current_cpu == "x86" && (is_linux || is_bsd)) {
-     cflags = [
-       # Align the stack on 16-byte boundaries, http://crbug.com/418554.
-       "-mstack-alignment=16",
-@@ -788,7 +788,7 @@ config("runtime_library") {
+@@ -1215,7 +1215,7 @@ config("runtime_library") {
    # smaller.
    if (is_win) {
      configs += [ "//build/config/win:runtime_library" ]
@@ -73,30 +83,30 @@ $NetBSD$
      configs += [ "//build/config/linux:runtime_library" ]
    } else if (is_ios) {
      configs += [ "//build/config/ios:runtime_library" ]
-@@ -1038,7 +1038,7 @@ config("default_warnings") {
-         "-Wno-nonportable-include-path",
+@@ -1493,7 +1493,7 @@ config("default_warnings") {
+         cflags += [ "-Wno-nonportable-include-path" ]
+       }
  
-         # TODO(hans): https://crbug.com/637306
--        "-Wno-address-of-packed-member",
-+        # "-Wno-address-of-packed-member",
-       ]
-     }
-   }
-@@ -1070,7 +1070,7 @@ config("chromium_code") {
-     ]
- 
-     if (!is_debug && !using_sanitizer &&
--        (!is_linux || !is_clang || is_official_build)) {
-+        (!is_linux || !is_bsd || !is_clang || is_official_build)) {
-       # _FORTIFY_SOURCE isn't really supported by Clang now, see
-       # http://llvm.org/bugs/show_bug.cgi?id=16821.
-       # It seems to work fine with Ubuntu 12 headers though, so use it in
-@@ -1128,7 +1128,7 @@ config("no_chromium_code") {
-     ]
-   }
- 
--  if (is_linux || is_android) {
-+  if (is_linux || is_bsd || is_android) {
-     cflags_cc += [
-       # Don't warn about hash_map in third-party code.
-       "-Wno-deprecated",
+-      if (current_toolchain == host_toolchain || !use_xcode_clang) {
++      if ((current_toolchain == host_toolchain || !use_xcode_clang) && !is_bsd) {
+         # Flags NaCl (Clang 3.7) and Xcode 9.2 (Clang clang-900.0.39.2) do not
+         # recognize.
+         cflags += [
+@@ -1740,7 +1740,7 @@ config("thin_archive") {
+   # Mac and iOS use the mac-specific "libtool" command, not ar, which doesn't
+   # have a "thin archive" mode (it does accept -T, but it means truncating
+   # archive names to 16 characters, which is not what we want).
+-  if ((is_posix && !is_nacl && !is_mac && !is_ios) || is_fuchsia) {
++  if ((is_posix && !is_nacl && !is_mac && !is_ios && !is_bsd) || is_fuchsia) {
+     arflags = [ "-T" ]
+   } else if (is_win && use_lld) {
+     arflags = [ "/llvmlibthin" ]
+@@ -2313,7 +2313,7 @@ config("symbols") {
+     # DWARF info may be corrupt; offsets in a range list entry are in different
+     # sections" there.  Maybe just a bug in nacl_switch_32.S.
+     if (!is_mac && !is_ios && !is_nacl && current_cpu != "x86" &&
+-        (use_gold || use_lld)) {
++        (use_gold || use_lld) && !is_bsd) {
+       if (is_clang) {
+         # This flag enables the GNU-format pubnames and pubtypes sections,
+         # which lld needs in order to generate a correct GDB index.

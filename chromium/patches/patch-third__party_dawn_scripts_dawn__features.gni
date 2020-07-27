@@ -1,0 +1,28 @@
+$NetBSD$
+
+--- third_party/dawn/scripts/dawn_features.gni.orig	2020-07-15 19:01:32.000000000 +0000
++++ third_party/dawn/scripts/dawn_features.gni
+@@ -49,7 +49,7 @@ declare_args() {
+ 
+   # Enables the compilation of Dawn's OpenGL backend
+   # (best effort, non-conformant)
+-  dawn_enable_opengl = is_linux && !is_chromeos
++  dawn_enable_opengl = (is_linux || is_bsd) && !is_chromeos
+ 
+   # Enables the compilation of Dawn's Vulkan backend
+   dawn_enable_vulkan =
+@@ -67,7 +67,7 @@ declare_args() {
+       is_debug || (build_with_chromium && use_fuzzing_engine)
+ 
+   # Whether Dawn should enable X11 support.
+-  dawn_use_x11 = is_linux && !is_chromeos
++  dawn_use_x11 = (is_linux || is_bsd) && !is_chromeos
+ 
+   # Enable support WGSL for shaders. Currently this is
+   # experimental, and requires dawn_tint_dir to be set.
+@@ -88,4 +88,4 @@ declare_args() {
+ }
+ 
+ dawn_supports_glfw_for_windowing =
+-    is_win || (is_linux && !is_chromeos) || is_mac
++    is_win || ((is_linux || is_bsd) && !is_chromeos) || is_mac
