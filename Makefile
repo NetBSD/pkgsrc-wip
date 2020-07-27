@@ -4788,7 +4788,6 @@ SUBDIR+=	tr2latex
 SUBDIR+=	trac-plugins-AuthOpenId
 SUBDIR+=	trac-plugins-FullBlog
 SUBDIR+=	trac-plugins-FullBlogNotification
-SUBDIR+=	trac-plugins-GitPlugin
 SUBDIR+=	trac-plugins-GraphViz-svn
 SUBDIR+=	trac-plugins-MasterTickets-svn
 SUBDIR+=	trac-plugins-RoadmapHours-svn

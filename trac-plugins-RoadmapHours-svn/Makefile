@@ -12,7 +12,7 @@ PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	# not defined
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac-hacks.org/wiki/RoadmapHoursPlugin
 COMMENT=	RoadmapHours plugin for Trac
 

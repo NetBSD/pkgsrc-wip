@@ -12,7 +12,7 @@ PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	# not defined
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac-hacks.org/wiki/TimingAndEstimationPlugin
 COMMENT=	TimingAndEstimation plugin for Trac
 LICENSE=	mit

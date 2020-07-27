@@ -9,7 +9,7 @@ PKGREVISION=
 CATEGORIES=		www
 MASTER_SITES=		# not defined
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac-hacks.org/wiki/MasterTicketsPlugin
 COMMENT=	Ticket dependency plugin for Trac
 LICENSE=	modified-bsd
