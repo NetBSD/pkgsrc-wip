@@ -4,7 +4,7 @@ $NetBSD$
 
 --- Makefile.orig	2020-07-21 09:19:56.000000000 +0000
 +++ Makefile
-@@ -22,31 +22,31 @@
+@@ -22,25 +22,26 @@
  # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  # DEALINGS IN THE SOFTWARE.
  
@@ -33,20 +33,12 @@ $NetBSD$
  LIBS     = $(htslib_default_libs)
  
 -prefix      = /usr/local
--exec_prefix = $(prefix)
 +PREFIX      ?= /usr/local
-+exec_prefix = $(PREFIX)
++prefix      = $(PREFIX)
+ exec_prefix = $(prefix)
  bindir      = $(exec_prefix)/bin
--includedir  = $(prefix)/include
-+includedir  = $(PREFIX)/include
- libdir      = $(exec_prefix)/lib
- libexecdir  = $(exec_prefix)/libexec
--datarootdir = $(prefix)/share
-+datarootdir = $(PREFIX)/share
- mandir      = $(datarootdir)/man
- man1dir     = $(mandir)/man1
- man5dir     = $(mandir)/man5
-@@ -69,7 +69,7 @@ BUILT_PROGRAMS = \
+ includedir  = $(prefix)/include
+@@ -69,7 +70,7 @@ BUILT_PROGRAMS = \
  	htsfile \
  	tabix
  
@@ -55,7 +47,7 @@ $NetBSD$
  	test/hts_endian \
  	test/fieldarith \
  	test/hfile \
-@@ -90,7 +90,7 @@ BUILT_TEST_PROGRAMS = \
+@@ -90,7 +91,7 @@ BUILT_TEST_PROGRAMS = \
  	test/test-bcf-translate \
  	test/test-parse-reg
  
