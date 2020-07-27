@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	htslib-1.10.2
+DISTNAME=	htslib-1.10.2.110
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
+GITHUB_TAG=	da595880d134b29fb62f726b72bdc6302ffc9ccc
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/

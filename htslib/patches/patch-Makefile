@@ -1,10 +1,10 @@
 $NetBSD$
 
-# Respect pkgsrc env
+# Respect build environment
 
---- Makefile.orig	2019-12-19 09:54:30.000000000 +0000
+--- Makefile.orig	2020-07-21 09:19:56.000000000 +0000
 +++ Makefile
-@@ -22,44 +22,43 @@
+@@ -22,31 +22,31 @@
  # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  # DEALINGS IN THE SOFTWARE.
  
@@ -46,31 +46,21 @@ $NetBSD$
  mandir      = $(datarootdir)/man
  man1dir     = $(mandir)/man1
  man5dir     = $(mandir)/man5
- man7dir     = $(mandir)/man7
- pkgconfigdir= $(libdir)/pkgconfig
+@@ -69,7 +69,7 @@ BUILT_PROGRAMS = \
+ 	htsfile \
+ 	tabix
  
--MKDIR_P = mkdir -p
--INSTALL = install -p
--INSTALL_DATA    = $(INSTALL) -m 644
--INSTALL_DIR     = $(MKDIR_P) -m 755
--INSTALL_LIB     = $(INSTALL_DATA)
--INSTALL_MAN     = $(INSTALL_DATA)
--INSTALL_PROGRAM = $(INSTALL)
-+MKDIR_P         = mkdir -p
-+INSTALL_DATA    = ${BSD_INSTALL_DATA}
-+INSTALL_DIR     = $(MKDIR_P)
-+INSTALL_LIB     = ${BSD_INSTALL_LIB}
-+INSTALL_MAN     = ${BSD_INSTALL_MAN}
-+INSTALL_PROGRAM = ${BSD_INSTALL_PROGRAM}
+-BUILT_TEST_PROGRAMS = \
++BUILT_TEST_PROGRAMS ?= \
+ 	test/hts_endian \
+ 	test/fieldarith \
+ 	test/hfile \
+@@ -90,7 +90,7 @@ BUILT_TEST_PROGRAMS = \
+ 	test/test-bcf-translate \
+ 	test/test-parse-reg
  
- # Set by config.mk if plugins are enabled
- plugindir =
-@@ -98,7 +97,7 @@ BUILT_THRASH_PROGRAMS = \
- 	test/thrash_threads6 \
- 	test/thrash_threads7
- 
--all: lib-static lib-shared $(BUILT_PROGRAMS) plugins $(BUILT_TEST_PROGRAMS)
-+all: lib-static lib-shared $(BUILT_PROGRAMS) plugins
- 
- HTSPREFIX =
- include htslib_vars.mk
+-BUILT_THRASH_PROGRAMS = \
++BUILT_THRASH_PROGRAMS ?= \
+ 	test/thrash_threads1 \
+ 	test/thrash_threads2 \
+ 	test/thrash_threads3 \
