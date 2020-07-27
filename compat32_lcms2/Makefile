@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/}
 PKGNAME=	compat${ABI}_${DISTNAME}
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.littlecms.com/
 COMMENT=	Little Color Management System - a color management library
 LICENSE=	mit
