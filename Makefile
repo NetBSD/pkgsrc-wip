@@ -1232,7 +1232,6 @@ SUBDIR+=	gopass
 SUBDIR+=	gopher-validator-git
 SUBDIR+=	gpak
 SUBDIR+=	gplbasic
-SUBDIR+=	gpsbabel
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
 SUBDIR+=	gqrx
