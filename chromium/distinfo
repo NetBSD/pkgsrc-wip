@@ -22,6 +22,7 @@ SHA1 (patch-base_debug_proc_maps_linux.cc) = 31057e8b098c9d068c44cc4c5b83b06d4e1
 SHA1 (patch-base_debug_stack__trace__posix.cc) = a880bba4fdfde36d917dedf4fe20aa2763bdb534
 SHA1 (patch-base_debug_stack__trace__unittest.cc) = f6b33c365995bfa00d491a5d0affc9d7f5e57483
 SHA1 (patch-base_files_file__path__unittest.cc) = 4060b1ec9760a858083d8aac067a98b6e4876ec0
+SHA1 (patch-base_files_file__path__watcher__kqueue.cc) = b424986a59340756042a6af3b2a71af954e63528
 SHA1 (patch-base_files_file__path__watcher__stub.cc) = d7a9939097db676d128c437c39b1cc1635326c34
 SHA1 (patch-base_files_file__path__watcher__unittest.cc) = 7865cd40e1360e88a6ca882a8d1ad9a09fdf86de
 SHA1 (patch-base_files_file__util.h) = a5ee1f16c0688a4a9bd92d39712eaa6de0e5bfdc
