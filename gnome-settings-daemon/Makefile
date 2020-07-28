@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.54 2015/04/25 14:24:52 tnn Exp $
 
 DISTNAME=	gnome-settings-daemon-3.36.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/3.36/}
 EXTRACT_SUFX=	.tar.xz
@@ -39,7 +39,7 @@ GCONF_SCHEMAS+=		desktop_gnome_peripherals_touchpad.schemas
 GCONF_SCHEMAS+=		desktop_gnome_peripherals_smartcard.schemas
 PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 
-LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon
+LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-3.0
 
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
