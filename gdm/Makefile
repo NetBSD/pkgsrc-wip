@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--disable-systemd-journal
 CONFIGURE_ARGS+=	--disable-user-display-server
 CONFIGURE_ARGS+=	--with-user=${GDMOWN}
 CONFIGURE_ARGS+=	--with-group=${GDMGRP}
+CONFIGURE_ARGS+=	--with-dbus-sys=${PREFIX}/etc/dbus-1/system.d
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 CONFIGURE_SCRIPT=	./autogen.sh
