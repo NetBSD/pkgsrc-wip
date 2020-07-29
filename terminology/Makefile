@@ -1,13 +1,12 @@
 # $NetBSD: Makefile,v 0.2 2018/09/06 16:15:10 andyb Exp $
 
-DISTNAME=	terminology-1.7.0
+DISTNAME=	terminology-1.8.0
 CATEGORIES=	x11
-PKGREVISION=	2
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/terminology/
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DEFAULT_DISTFILES}
 
-VERSION=		1.7.0
+VERSION=		1.8.0
 THEMES_BIN=		v${VERSION}.tar.gz
 DISTFILES+=		${THEMES_BIN}
 SITES.${THEMES_BIN}=	${MASTER_SITE_GITHUB:=kikadf/}terminology-themes/archive/

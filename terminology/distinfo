@@ -1,10 +1,11 @@
 $NetBSD$
 
-SHA1 (terminology-1.7.0.tar.xz) = 5b49478f689373a46b7902b6be66eda6a5034c38
-RMD160 (terminology-1.7.0.tar.xz) = 0be073844ce5c043e04fbd3250a94a4602f1b11d
-SHA512 (terminology-1.7.0.tar.xz) = 9635da6a51344fbbafd333592252c2539daa795600b4a1d5ea5710e294f18ff9f5667706c789a3c91378b493ae631df47faec2bc43b4cc48d0266506ab3f2e78
-Size (terminology-1.7.0.tar.xz) = 4922616 bytes
-SHA1 (v1.7.0.tar.gz) = cab728dceee58e3b11e552e97ad359e09ad98d70
-RMD160 (v1.7.0.tar.gz) = a23d6927e22bdaece311eae1edfe23d297ba9534
-SHA512 (v1.7.0.tar.gz) = 26a2d4b2bc3797367b170397de5d2922a77284a94f6040bb2c6c2cfadeb25db894e204d8344208ac0f56140d3306c3328d187ca269a314fff07b5945d3746257
-Size (v1.7.0.tar.gz) = 22790368 bytes
+SHA1 (terminology-1.8.0.tar.xz) = 291d57812125c0c8205df1bd6b5f4252debc0995
+RMD160 (terminology-1.8.0.tar.xz) = a9beb6f8ff43ba4fc818565f62b9d75b382a07dc
+SHA512 (terminology-1.8.0.tar.xz) = 2d99b010e6a68f5cbe2d783138cd7321d878206f8000f3f6c59446bc4c998cb4944925ff61356f979c35c115fc87e311d7abbb12919ed52ef36ea9ff25c44d8f
+Size (terminology-1.8.0.tar.xz) = 4938932 bytes
+SHA1 (v1.8.0.tar.gz) = 28aed64dcb9c7a68baab2871df36acfb4bef5f61
+RMD160 (v1.8.0.tar.gz) = 73b472db2ea3908e0e198d7bbfef4240e8006960
+SHA512 (v1.8.0.tar.gz) = 8a62bf3ea95b32a397accdf539d08fc67c04b7fb16da964b6ca2c2b8540204ae2becb667abe9f325e442da0cb581c9c7d0fdfa180a59d5e547e3cef4fb489158
+Size (v1.8.0.tar.gz) = 22811706 bytes
+SHA1 (patch-data_themes_meson.build) = d74b75bea7e7f198e94c905314d07211e09b733a
