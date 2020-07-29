@@ -1,7 +1,0 @@
-WARNING: Application calling GLX 1.3 function "glXCreatePbuffer" when GLX 1.3 is not supported!  This is an application bug!
-failed to create drawable
-IRQ's not enabled, falling back to busy waits: 2 0
-Can't open a pseudo teletype
-Unable to set terminal attributes.
-loadAllColorSchemes
-[1]   Segmentation fault      /usr/pkg/qt5/bin...
