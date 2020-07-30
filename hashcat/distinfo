@@ -1,8 +1,7 @@
 $NetBSD$
 
-SHA1 (hashcat-6.0.0.tar.gz) = 62f0fb50166ffd70efbc5850521ac67821126f4b
-RMD160 (hashcat-6.0.0.tar.gz) = d71c6a710cf0513666edc79635e2c8aeba338f5d
-SHA512 (hashcat-6.0.0.tar.gz) = b508c77e1735c02bb59c427774a3f4fafdea37d09777ef2dcb6e5081cb993d02c4f46a6ab846dc97a8cef2b0f69bbc191e26b8f1608a299bc2c1a6b3d2474f96
-Size (hashcat-6.0.0.tar.gz) = 5360568 bytes
-SHA1 (patch-include_ext__lzma.h) = 8dcf9cae764b306e833702c276b13a80fd71c3f4
-SHA1 (patch-src_Makefile) = cef5b5bd6ef668e690a5c17f8a92710ee1f428ed
+SHA1 (hashcat-6.1.1.tar.gz) = 01237c9455ce5685c7a2394163daa94166dc6d38
+RMD160 (hashcat-6.1.1.tar.gz) = ded2fc1bdbf71836f260df35a909fdc660b780f6
+SHA512 (hashcat-6.1.1.tar.gz) = 788539b488ba55684d6d93ce18f3b05fa822a8cbfcdbcde9c2b54001d8927580dca253e0e9ff9a19f4278045046d732e104054fc743c39f47952ca24d2e93724
+Size (hashcat-6.1.1.tar.gz) = 5385180 bytes
+SHA1 (patch-src_Makefile) = f47e897ab2beb63aa381f1ac381ac51e7879a999

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	hashcat-6.0.0
+DISTNAME=	hashcat-6.1.1
 CATEGORIES=	security
 MASTER_SITES=	https://hashcat.net/files/
 
@@ -11,6 +11,9 @@ LICENSE=	mit
 
 USE_TOOLS+=	gmake gsed
 BUILD_TARGET=	hashcat
+MAKE_ENV+=	SHARED=1
+MAKE_ENV+=	USE_SYSTEM_ZLIB=1
+MAKE_ENV+=	USE_SYSTEM_XXHASH=1
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/include/hashcat/ext_lzma.h.orig

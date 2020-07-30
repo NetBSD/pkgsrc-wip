@@ -5,28 +5,8 @@ Add minimal NetBSD support.
 Don't override CC nor optimisation flags in CFLAGS.
 Remove sed magic; we'll use nbsed.
 
---- src/Makefile.orig	2020-06-16 15:30:11.000000000 +0000
+--- src/Makefile.orig	2020-07-29 10:16:53.000000000 +0000
 +++ src/Makefile
-@@ -3,16 +3,16 @@
- ## License.....: MIT
- ##
- 
--SHARED                  := 0
-+SHARED                  := 1
- DEBUG                   := 0
- PRODUCTION              := 1
- PRODUCTION_VERSION      := v6.0.0
- ENABLE_CUBIN            := 1
- ENABLE_BRAIN            := 1
- USE_SYSTEM_LZMA         := 0
--USE_SYSTEM_ZLIB         := 0
-+USE_SYSTEM_ZLIB         := 1
- USE_SYSTEM_OPENCL       := 0
--USE_SYSTEM_XXHASH       := 0
-+USE_SYSTEM_XXHASH       := 1
- 
- ##
- ## Detect Operating System
 @@ -28,7 +28,7 @@ UNAME                   := $(patsubst MS
  UNAME                   := $(patsubst MINGW32_NT-%,MSYS2,$(UNAME))
  UNAME                   := $(patsubst MINGW64_NT-%,MSYS2,$(UNAME))
@@ -71,15 +51,6 @@ Remove sed magic; we'll use nbsed.
  ifneq ($(UNAME),Darwin)
  LFLAGS                  += -s
  endif
-@@ -220,7 +211,7 @@ endif
- # ZLIB
- CFLAGS                  += -I$(DEPS_ZLIB_PATH)
- ifeq ($(USE_SYSTEM_ZLIB),1)
--LFLAGS                  += -lz
-+LFLAGS                  += -lz -lminizip
- endif
- 
- # OpenCL
 @@ -264,6 +255,13 @@ LFLAGS_NATIVE           += -liconv
  endif
  endif # FreeBSD
@@ -94,7 +65,7 @@ Remove sed magic; we'll use nbsed.
  ifeq ($(UNAME),Darwin)
  export MACOSX_DEPLOYMENT_TARGET=10.9
  CFLAGS_NATIVE           := $(CFLAGS)
-@@ -534,8 +532,13 @@ MODULES_SRC   := $(wildcard src/modules/
+@@ -540,8 +538,13 @@ MODULES_SRC   := $(wildcard src/modules/
  MODULES_LIB   := $(patsubst src/modules/module_%.c, modules/module_%.$(MODULE_SUFFIX), $(MODULES_SRC))
  
  ifeq ($(SHARED),1)
