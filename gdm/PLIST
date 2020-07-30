@@ -21,7 +21,9 @@ share/examples/gdm/Init/Default
 share/examples/gdm/PostLogin/Default.sample
 share/examples/gdm/PostSession/Default
 share/examples/gdm/PreSession/Default
+share/examples/gdm/Xsession
 share/examples/gdm/custom.conf
+share/examples/pam.d/gdm-launch-environment
 share/gdm/BuiltInSessions/custom.desktop
 share/gdm/gdb-cmd
 share/gdm/gdm.schemas
@@ -190,3 +192,4 @@ share/locale/zh_HK/LC_MESSAGES/gdm.mo
 share/locale/zh_TW/LC_MESSAGES/gdm.mo
 share/locale/zu/LC_MESSAGES/gdm.mo
 share/pixmaps/NetBSD.xpm
+@pkgdir share/examples/gdm/pam.d

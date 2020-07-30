@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/06/06 20:44:44 krytarowski Exp $
 
 DISTNAME=	gdm-3.36.2
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 LICENSE=	gnu-gpl-v2
@@ -22,6 +23,12 @@ USE_LANGUAGES=		c c++
 
 .include "options.mk"
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	daemon/gdm-session-worker.c
+SUBST_SED.paths=	-e 's,$${LOCALBASE},${PREFIX},g'
+SUUBST_VARS.paths=	PREFIX
+
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-dmconfdir=${PKG_SYSCONFDIR}/dm
@@ -34,6 +41,9 @@ CONFIGURE_ARGS+=	--disable-user-display-server
 CONFIGURE_ARGS+=	--with-user=${GDMOWN}
 CONFIGURE_ARGS+=	--with-group=${GDMGRP}
 CONFIGURE_ARGS+=	--with-dbus-sys=${PREFIX}/etc/dbus-1/system.d
+CONFIGURE_ARGS+=	--with-initial-vt=05
+CONFIGURE_ARGS+=	--enable-gdm-xsession
+CONFIGURE_ARGS+=	--with-default-path="/usr/local/bin:/usr/local/sbin:${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin/sbin"
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 CONFIGURE_SCRIPT=	./autogen.sh
@@ -54,6 +64,7 @@ OWN_DIRS+=		${VARBASE}/log/gdm
 PKG_SYSCONFSUBDIR=	gdm
 EGDIR=			${PREFIX}/share/examples/gdm
 CONF_FILES=		${EGDIR}/custom.conf ${PKG_SYSCONFDIR}/custom.conf
+CONF_FILES+=		${EGDIR}/Xsession ${PKG_SYSCONFDIR}/Xsession
 
 RCD_SCRIPTS=		gdm
 
@@ -104,6 +115,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gdm/BuiltInSessions
 	${INSTALL_DATA} ${FILESDIR}/custom.desktop \
 		${DESTDIR}${PREFIX}/share/gdm/BuiltInSessions
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/pam.d
+	${INSTALL_DATA} ${FILESDIR}/gdm-* ${DESTDIR}/${PREFIX}/share/examples/pam.d
+	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/gdm/Xsession
 
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../security/openpam/buildlink3.mk"

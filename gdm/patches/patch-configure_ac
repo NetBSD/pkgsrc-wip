@@ -15,9 +15,9 @@ Subject: drop consolekit support
 https://bugzilla.gnome.org/show_bug.cgi?id=722482
 
 Index: configure.ac
---- configure.ac.orig
+--- configure.ac.orig	2020-05-04 20:11:25.000000000 +0000
 +++ configure.ac
-@@ -224,12 +224,6 @@ AM_CONDITIONAL(ENABLE_EXHERBO_PAM_CONFIG, test x$with_
+@@ -224,12 +224,6 @@ AM_CONDITIONAL(ENABLE_EXHERBO_PAM_CONFIG
  AM_CONDITIONAL(ENABLE_LFS_PAM_CONFIG, test x$with_default_pam_config = xlfs)
  AM_CONDITIONAL(ENABLE_ARCH_PAM_CONFIG, test x$with_default_pam_config = xarch)
  
@@ -57,7 +57,7 @@ Index: configure.ac
  fi
  
  PKG_CHECK_MODULES([KEYUTILS],
-@@ -612,14 +619,8 @@ dnl --------------------------------------------------
+@@ -612,14 +619,8 @@ dnl ------------------------------------
  dnl - Check for utmp stuff
  dnl ---------------------------------------------------------------------------
  
@@ -133,7 +133,33 @@ Index: configure.ac
  AC_ARG_WITH(gnome-settings-daemon-directory,
                [AC_HELP_STRING([--with-gnome-settings-daemon-directory],
                                [Specify the directory of gnome-settings-daemon used by the chooser @<:@default=libexecdir@:>@])],,
-@@ -1489,6 +1528,7 @@ echo "
+@@ -1142,10 +1181,10 @@ elif test -x /usr/X11/bin/Xserver; then
+    X_PATH="/usr/X11/bin"
+    X_SERVER_PATH="/usr/X11/bin"
+    X_SERVER="/usr/X11/bin/Xserver"
+-elif test ! -h /usr/X11R6 -a -x /usr/X11R6/bin/X; then
+-   X_PATH="/usr/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
++elif test ! -h /usr/X11R7 -a -x /usr/X11R7/bin/X; then
++   X_PATH="/usr/X11R7/bin"
++   X_SERVER_PATH="/usr/X11R7/bin"
++   X_SERVER="/usr/X11R7/bin/X"
+ elif test ! -h /usr/X11 -a -x /usr/X11/bin/X; then
+    X_PATH="/usr/X11/bin"
+    X_SERVER_PATH="/usr/X11/bin"
+@@ -1173,6 +1212,10 @@ elif test -x /opt/X11R6/bin/X; then
+    X_PATH="/opt/X11R6/bin"
+    X_SERVER_PATH="/opt/X11R6/bin"
+    X_SERVER="/opt/X11R6/bin/X"
++elif test -x /usr/pkg/bin/X; then
++   X_PATH="/usr/pkg/bin"
++   X_SERVER_PATH="/usr/pkg/bin"
++   X_SERVER="/usr/pkg/bin/X"
+ else
+    # what to do, what to do, this is wrong, but this just sets the
+    # defaults, perhaps this user is cross compiling or some such
+@@ -1489,6 +1532,7 @@ echo "
          dmconfdir:                ${dmconfdir}
          localstatedir:            ${localstatedir}
          datadir:                  ${datadir}
@@ -141,7 +167,7 @@ Index: configure.ac
  	gnome-settings-daemon location: ${with_gnome_settings_daemon_directory}
  	gnome-session-check-accel location: ${with_check_accelerated_directory}
  	source code location:	  ${srcdir}
-@@ -1519,6 +1559,8 @@ echo \
+@@ -1519,6 +1563,8 @@ echo \
  "        Xinerama support:         ${XINERAMA_SUPPORT}
          XDMCP support:            ${XDMCP_SUPPORT}
          SELinux support:          ${use_selinux}
@@ -150,7 +176,7 @@ Index: configure.ac
          systemd unit dir:         ${with_systemdsystemunitdir}
          udev dir:                 ${with_udevdir}
          plymouth support:         ${use_plymouth}
-@@ -1528,3 +1570,4 @@ echo \
+@@ -1528,3 +1574,4 @@ echo \
          Enable documentation:     ${enable_documentation}
          Install GDM's Xsession:   ${enable_gdm_xsession}
  "

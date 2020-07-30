@@ -14,14 +14,15 @@ fi
 name="gdm"
 rcvar=${name}
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
-procname="@PREFIX@/sbin/gdm-binary"
+command_args="&"
+pidfile="/var/run/gdm/${name}.pid"
+procname="@PREFIX@/sbin/gdm"
 required_files="@PKG_SYSCONFDIR@/custom.conf"
 extra_commands="reload"
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config ${name}
-	run_rc_command "$1"
+	PATH=@PREFIX@/bin:$PATH run_rc_command "$1"
 else
 	echo -n " ${name}"
 	${command} ${gdm_flags} ${command_args}
