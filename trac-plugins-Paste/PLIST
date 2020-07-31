@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/tracpaste/__init__.py
+${PYSITELIB}/tracpaste/__init__.pyc
+${PYSITELIB}/tracpaste/__init__.pyo
+${PYSITELIB}/tracpaste/db.py
+${PYSITELIB}/tracpaste/db.pyc
+${PYSITELIB}/tracpaste/db.pyo
+${PYSITELIB}/tracpaste/htdocs/css/pastebin.css
+${PYSITELIB}/tracpaste/htdocs/css/timeline.css
+${PYSITELIB}/tracpaste/htdocs/pastebin.png
+${PYSITELIB}/tracpaste/model.py
+${PYSITELIB}/tracpaste/model.pyc
+${PYSITELIB}/tracpaste/model.pyo
+${PYSITELIB}/tracpaste/templates/pastebin.html
+${PYSITELIB}/tracpaste/web_ui.py
+${PYSITELIB}/tracpaste/web_ui.pyc
+${PYSITELIB}/tracpaste/web_ui.pyo
+@pkgdir share/examples/trac
