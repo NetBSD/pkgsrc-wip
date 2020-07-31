@@ -1,0 +1,6 @@
+pkglint suggests to remove listing egg-files in PLIST, but without them
+make package fails:
+
+WARN: PLIST:2: Include "../../lang/python/egg.mk" instead of listing .egg-info files directly.
+
+Needs investigation.
