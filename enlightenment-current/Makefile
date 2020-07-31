@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 0.2 2018/09/06 16:15:10 andyb Exp $
 
-DISTNAME=	enlightenment-0.24.1
+DISTNAME=	enlightenment-0.24.2
 CATEGORIES=	wm
-PKGREVISION=	2
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
@@ -33,7 +32,6 @@ MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/menus
 
 MESON_ARGS+=	-Dsystemd=false
 MESON_ARGS+=	-Ddevice-udev=false
-#MESON_ARGS+=	-Dbattery=false
 MESON_ARGS+=	-Dcpufreq=false
 MESON_ARGS+=	-Dsysinfo=false
 MESON_ARGS+=	-Dtemperature=false
