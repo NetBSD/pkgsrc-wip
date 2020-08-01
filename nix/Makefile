@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		nix-2.3.1
+DISTNAME=		nix-2.3.7
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NixOS/}
 
-MAINTAINER=		ng0@NetBSD.org
+MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://github.com/NixOS/nix/
 COMMENT=		Purely functional package manager
 LICENSE=		gnu-lgpl-v2.1
@@ -22,6 +22,7 @@ PKGCONFIG_OVERRIDE+=	src/libstore/nix-store.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
+# CONFIGURE_ARGS+=	--localstatedir=/nix/var
 CONFIGURE_ARGS+=	--with-sandbox-shell=/bin/sh
 CONFIGURE_ARGS+=	--enable-gc
 
@@ -32,11 +33,11 @@ CONFIGURE_ENV+=		ac_cv_header_aws_s3_S3Client_h=no
 #CONFIGURE_ENV+=	EDITLINE_LIBS=${BUILDLINK_PREFIX.editlinereadline:Q}/lib
 #CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include/readline
 CONFIGURE_ENV+=		EDITLINE_CFLAGS="-DREADLINE"
-CONFIGURE_ENV+=		EDITLINE_LIBS=${BUILDLINK_PREFIX.editlinereadline:Q}/lib
+CONFIGURE_ENV+=		EDITLINE_LIBS=-L${BUILDLINK_PREFIX.editlinereadline:Q}/lib
 #CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editline:Q}/include/readline
 #CONFIGURE_ENV+=	EDITLINE_LIBS=${BUILDLINK_PREFIX.editline:Q}/lib
-CONFIGURE_ENV+=		LIBLZMA_CFLAGS=${BUILDLINK_PREFIX.lzmalib:Q}/include
-CONFIGURE_ENV+=		LIBLZMA_LIBS=${BUILDLINK_PREFIX.lzmalib:Q}/lib
+CONFIGURE_ENV+=		LIBLZMA_CFLAGS="-I${BUILDLINK_PREFIX.lzmalib:Q}/include"
+CONFIGURE_ENV+=		LIBLZMA_LIBS="-llzma -L${BUILDLINK_PREFIX.lzmalib:Q}/lib"
 CONFIGURE_ENV+=		BOOST_ROOT=${BUILDLINK_PREFIX.boost:Q}/lib
 
 # Workaround for:
@@ -44,9 +45,9 @@ CONFIGURE_ENV+=		BOOST_ROOT=${BUILDLINK_PREFIX.boost:Q}/lib
 MAKE_ARGS+=	libutil_ALLOW_UNDEFINED=yes
 
 # verbose build
-# MAKE_ENV+=	V=1
+MAKE_ENV+=	V=1
 # Disable hardcoded -O3
-# MAKE_ENV+=	OPTIMIZE=0
+MAKE_ENV+=	OPTIMIZE=0
 
 # checking for aws/s3/S3Client.h... (cached) no
 # ./configure: 7863: Syntax error: "(" unexpected (expecting "fi")
@@ -58,13 +59,13 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 # incomplete, remove once the docs build
 CONFIGURE_ARGS+=	--disable-doc-gen
 
-SUBST_CLASSES+=		docbook
-SUBST_MESSAGE.docbook=	Fixing docbook URLs.
-SUBST_FILES.docbook+=	doc/manual/installation/prerequisites-source.xml
-SUBST_FILES.docbook+=	doc/manual/local.mk
-SUBST_FILES.docbook+=	doc/manual/manual.xmli
-SUBST_STAGE.docbook=	pre-configure
-SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
+#SUBST_CLASSES+=		docbook
+#SUBST_MESSAGE.docbook=	Fixing docbook URLs.
+#SUBST_FILES.docbook+=	doc/manual/installation/prerequisites-source.xml
+#SUBST_FILES.docbook+=	doc/manual/local.mk
+#SUBST_FILES.docbook+=	doc/manual/manual.xml
+#SUBST_STAGE.docbook=	pre-configure
+#SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
 # and one more.
 SUBST_CLASSES+=		docbook2
@@ -103,4 +104,5 @@ pre-configure:
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+#.include "../../wip/aws-sdk-cpp/buildlink3.mk" # Needs some source fixes
 .include "../../mk/bsd.pkg.mk"

@@ -3,7 +3,30 @@
   must be tested and non-supported (like NetBSD host) ported to.
 
 * building TODO:
-  LD     src/libutil/libnixutil.so
-/usr/pkg/lib: file not recognized: file format not recognized
+c++ -std=c++17 -o src/libexpr/value-to-xml.o -c src/libexpr/value-to-xml.cc -g -Wall -include config.h -fPIC -g -I . -I src -I src/libutil -I src/libstore -I src/libmain -I src/libexpr -I src/nix  -I/usr/pkg/include -I/usr/pkg/include -I/usr/pkg/include -I/usr/pkg/include -DREADLINE -I/usr/pkg/include -O2 -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5  -MMD -MF src/libexpr/.value-to-xml.o.dep -MP
+c++ -std=c++17 -o /usr/work/wip/nix/work/nix-2.3.7/src/libutil/libnixutil.so -shared -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -pthread -Wl,--no-copy-dt-needed-entries src/libutil/affinity.o src/libutil/archive.o src/libutil/args.o src/libutil/compression.o src/libutil/config.o src/libutil/hash.o src/libutil/json.o src/libutil/logging.o src/libutil/serialise.o src/libutil/thread-pool.o src/libutil/util.o src/libutil/xml-writer.o -llzma -L/usr/pkg/lib -lbz2 -pthread -lcrypto -L/usr/pkg/lib -lbrotlienc -lbrotlidec  -lboost_context -Wl,-z,defs -Wl,-soname=libnixutil.so   
+ld: src/libutil/compression.o: in function `nix::XzDecompressionSink::XzDecompressionSink(nix::Sink&)':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:54: undefined reference to `lzma_stream_decoder'
+ld: src/libutil/compression.o: in function `nix::XzCompressionSink::XzCompressionSink(nix::Sink&, bool)':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:258: undefined reference to `lzma_easy_encoder'
+ld: src/libutil/compression.o: in function `nix::XzCompressionSink::~XzCompressionSink()':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:271: undefined reference to `lzma_end'
+ld: src/libutil/compression.o: in function `nix::XzDecompressionSink::~XzDecompressionSink()':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:65: undefined reference to `lzma_end'
+ld: src/libutil/compression.o: in function `nix::XzCompressionSink::~XzCompressionSink()':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:271: undefined reference to `lzma_end'
+ld: src/libutil/compression.o: in function `nix::XzDecompressionSink::~XzDecompressionSink()':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:65: undefined reference to `lzma_end'
+ld: /usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:65: undefined reference to `lzma_end'
+ld: src/libutil/compression.o:/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:271: more undefined references to `lzma_end' follow
+ld: src/libutil/compression.o: in function `nix::XzCompressionSink::write(unsigned char const*, unsigned long)':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:288: undefined reference to `lzma_code'
+ld: /usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:288: undefined reference to `lzma_code'
+ld: src/libutil/compression.o: in function `nix::XzDecompressionSink::write(unsigned char const*, unsigned long)':
+/usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:82: undefined reference to `lzma_code'
+ld: /usr/work/wip/nix/work/nix-2.3.7/src/libutil/compression.cc:82: undefined reference to `lzma_code'
 gmake: *** [mk/lib.mk:104: src/libutil/libnixutil.so] Error 1
 gmake: *** Waiting for unfinished jobs....
+*** Error code 2
+
+
