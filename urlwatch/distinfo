@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.1 2015/08/18 18:36:32 yhardy Exp $
 
-SHA1 (urlwatch-2.18.tar.gz) = 4e3f9660ae6bb02e565004b094b611cd8396898d
-RMD160 (urlwatch-2.18.tar.gz) = 6324221fcf11430207fc02c43134153ceb857d2b
-SHA512 (urlwatch-2.18.tar.gz) = d09f302894c160e59ae795bc3275f1484aee3b2db862891bfc15bbd19187a00ed0f2399985eef7bfa7873a0c617bc8e37d297bc39a96fe760c43a3fd6bdf51b6
-Size (urlwatch-2.18.tar.gz) = 47035 bytes
-SHA1 (patch-setup.py) = 2ad86a4999aa75b07fc85ec4dfd75b47a0ac4b34
+SHA1 (urlwatch-2.21.tar.gz) = c2ea498217258b565d20e5f307978a773b054c9b
+RMD160 (urlwatch-2.21.tar.gz) = 790db24ac22fa8e89f91781c381a8b5e9111c2ee
+SHA512 (urlwatch-2.21.tar.gz) = e832ae0ed836739b85c9e71e0028fc475dcd2944af78c61391d7b3f155b1f22f52e5913b1dd4207f79c210383e6f187650a7e2ef109a59827881d825bfaee7c1
+Size (urlwatch-2.21.tar.gz) = 126464 bytes
+SHA1 (patch-setup.py) = c255541a0eefc16250d4505e3dd0047f2c79d269
