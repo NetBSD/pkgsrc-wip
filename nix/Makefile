@@ -76,6 +76,15 @@ SUBST_FILES.docbook2+=	doc/manual/local.mk
 SUBST_STAGE.docbook2=	pre-configure
 SUBST_SED.docbook2+=	-e 's,http://docbook.org/xml/5.0/rng/docbook.rng,${PREFIX}/share/xsl/docbook,g'
 
+# remove workdir references
+SUBST_CLASSES+=			confignix
+SUBST_MESSAGE.confignix=	remove workdir references
+SUBST_FILES.confignix+=		corepkgs/config.nix.in
+SUBST_STAGE.confignix=		post-configure
+SUBST_SED.confignix+=		-e 's,@bash@,${PREFIX}/bin/bash,g'
+SUBST_SED.confignix+=		-e 's,@coreutils@,/bin,g'
+SUBST_SED.confignix+=		-e 's,@tr@,/usr/bin/tr,g'
+
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
