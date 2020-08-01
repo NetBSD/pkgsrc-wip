@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cfgv-3.1.0
+DISTNAME=	cfgv-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cfgv/}
