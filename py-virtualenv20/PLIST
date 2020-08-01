@@ -265,7 +265,7 @@ ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.py
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-19.1.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-20.1.1-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-20.2-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-43.0.0-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-44.1.1-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-49.2.0-py3-none-any.whl
