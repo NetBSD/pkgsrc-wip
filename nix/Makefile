@@ -30,19 +30,21 @@ CONFIGURE_ARGS+=	--enable-gc
 # left unchanged.
 CONFIGURE_ENV+=		ac_cv_header_aws_s3_S3Client_h=no
 #CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include
-#CONFIGURE_ENV+=	EDITLINE_LIBS=${BUILDLINK_PREFIX.editlinereadline:Q}/lib
-#CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editlinereadline:Q}/include/readline
+#CONFIGURE_ENV+=	EDITLINE_LIBS=-L${BUILDLINK_PREFIX.editlinereadline:Q}/lib
+#CONFIGURE_ENV+=	EDITLINE_CFLAGS=-I${BUILDLINK_PREFIX.editlinereadline:Q}/include/readline
 CONFIGURE_ENV+=		EDITLINE_CFLAGS="-DREADLINE"
-CONFIGURE_ENV+=		EDITLINE_LIBS=-L${BUILDLINK_PREFIX.editlinereadline:Q}/lib
+CONFIGURE_ENV+=		EDITLINE_LIBS="-ledit -L${BUILDLINK_PREFIX.editlinereadline:Q}/lib"
 #CONFIGURE_ENV+=	EDITLINE_CFLAGS=${BUILDLINK_PREFIX.editline:Q}/include/readline
 #CONFIGURE_ENV+=	EDITLINE_LIBS=${BUILDLINK_PREFIX.editline:Q}/lib
-CONFIGURE_ENV+=		LIBLZMA_CFLAGS="-I${BUILDLINK_PREFIX.lzmalib:Q}/include"
-CONFIGURE_ENV+=		LIBLZMA_LIBS="-llzma -L${BUILDLINK_PREFIX.lzmalib:Q}/lib"
+#CONFIGURE_ENV+=		LIBLZMA_CFLAGS="-I${BUILDLINK_PREFIX.xz:Q}/include"
+#CONFIGURE_ENV+=		LIBLZMA_LIBS="-llzma -L${BUILDLINK_PREFIX.xz:Q}/lib"
 CONFIGURE_ENV+=		BOOST_ROOT=${BUILDLINK_PREFIX.boost:Q}/lib
 
 # Workaround for:
 #   /usr/bin/ld: error: undefined symbol: SHA512_Update
 MAKE_ARGS+=	libutil_ALLOW_UNDEFINED=yes
+
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 # verbose build
 MAKE_ENV+=	V=1
@@ -94,7 +96,9 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 pre-configure:
 	cd ${WRKSRC} && ${SH} bootstrap.sh
 
-.include "../../archivers/lzmalib/buildlink3.mk"
+#.include "../../archivers/lzmalib/buildlink3.mk"
+#.include "../../mk/dlopen.buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
