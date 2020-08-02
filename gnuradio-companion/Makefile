@@ -1,24 +1,23 @@
 # $NetBSD: Makefile,v 1.31 2019/08/22 12:23:21 ryoon Exp $
 
 PKGNAME=	gnuradio-companion-${VERSION}
-PKGREVISION=	3
 COMMENT=	User interface entry of GNU Radio
 
 #CONF_FILES+=	${EGDIR}/grc.conf	${PKG_SYSCONFDIR}/grc.conf
 
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+
 REPLACE_BASH=	grc/scripts/freedesktop/grc_setup_freedesktop.in
 
-.include	"../../ham/gnuradio-core/Makefile.common"
-.include	"../../ham/gnuradio-core/Nocore.mk"
+.include	"../../wip/gnuradio-core/Makefile.common"
+.include	"../../wip/gnuradio-core/Nocore.mk"
 
 # gnuradio-companion
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GRC=ON
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
-.include	"../../x11/py-gtk2/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
 
 # -- Configuring gnuradio-companion support...
