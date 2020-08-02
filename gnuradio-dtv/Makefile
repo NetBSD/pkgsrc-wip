@@ -9,8 +9,10 @@ COMMENT=	Various digital television standards of GNU Radio
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_GR_DTV=True
 CMAKE_ARGS+=	-DENABLE_GR_FEC=True
+CMAKE_ARGS+=	-DENABLE_GRC=True
 
-PLIST_MINUS+=	fec
+PLIST_MINUS+=	fec companion
+
 .include	"../../wip/gnuradio-fec/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
 
