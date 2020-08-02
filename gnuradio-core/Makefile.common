@@ -33,8 +33,11 @@
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
-MASTER_SITES=	http://s3-dist.gnuradio.org/
-MASTER_SITES=	http://gnuradio.org/releases/gnuradio/
+#MASTER_SITES=	http://s3-dist.gnuradio.org/
+#MASTER_SITES+=	http://gnuradio.org/releases/gnuradio/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gnuradio/}
+GITHUB_PROJECT=	gnuradio
+GITHUB_RELEASE=	v${VERSION}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	https://www.gnu.org/software/gnuradio/
@@ -44,7 +47,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS=		perl gmake cmake pkg-config
 USE_CMAKE=		yes
 LDFLAGS.NetBSD+=	-lrt
-
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
@@ -108,6 +110,13 @@ CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 CMAKE_ARG_PATH=	../
 
 .include "options.mk"
+
+# Fixes build errors w/ clang
+SUBST_CLASSES+=		boost
+SUBST_MESSAGE.boost=	prepend boost placeholders with namespace
+SUBST_FILES.boost=	*/lib/*.cc
+SUBST_SED.boost=	's, _1), boost::placeholders::_1),'
+SUBST_STAGE.boost=	pre-configure
 
 # disable/enable ALSA, see also patches/patch-gr-audio_lib_CMakeLists.txt
 SUBST_CLASSES+=		alsa

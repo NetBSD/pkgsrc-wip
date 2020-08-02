@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	gnuradio-core
 .if !defined(GNURADIO_CORE_BUILDLINK3_MK)
 GNURADIO_CORE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.7.11
-BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.7.11
+BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.8.1.0
+BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.8.1.0
 BUILDLINK_PKGSRCDIR.gnuradio-core?=	../../ham/gnuradio-core
 .endif # GNURADIO_CORE_BUILDLINK3_MK
 
