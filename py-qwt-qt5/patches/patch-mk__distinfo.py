@@ -1,0 +1,16 @@
+$NetBSD$
+
+Work around DESTDIR installation issue
+
+--- mk_distinfo.py.orig	2019-02-23 12:55:34.000000000 +0000
++++ mk_distinfo.py
+@@ -98,6 +98,9 @@ for name in installed:
+         else:
+             fn_name = fn
+ 
++        if (fn.startswith(sys.prefix)):
++            fn = os.environ.get("DESTDIR") + fn
++
+         fn_f = open(fn, 'rb')
+         data = fn_f.read()
+         fn_f.close()

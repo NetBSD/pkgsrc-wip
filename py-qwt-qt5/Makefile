@@ -17,35 +17,28 @@ BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 
 WRKSRC=		${WRKDIR}/PyQt-Qwt-pyqt-qwt-${VERSION}
 
+CONFIGURE_ENV+=	QT_SELECT=qt5
 MAKE_ENV+=	PATH=${PATH}:${PREFIX}/qt5/bin
-#AKE_ENV+=	INSTALL_ROOT=${DESTDIR}
+INSTALL_ENV+=	INSTALL_ROOT=${DESTDIR}
+ALL_ENV+=	LFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5}
 USE_LANGUAGES=	c++
 
-SUBST_CLASSES+=			installed.txt
-SUBST_MESSAGE.installed.txt=	Remove one extra \${DESTDIR} from list
-SUBST_FILES.installed.txt=	installed.txt
-SUBST_STAGE.installed.txt=	post-configure
-SUBST_SED.installed.txt=	-e '/^\/usr/s,^,${DESTDIR},'
-#SUBST_SED.installed.txt=	-e 's,^${DESTDIR},,'
+PY_PATCHPLIST=	yes
 
 do-configure:
-	(cd ${WRKSRC}; \
-	QT_SELECT=qt5 \
-	${PKGSRC_SETENV} ${CONFIGURE_ENV} \
-	${PYTHONBIN} configure.py \
-	--qwt-incdir=${PREFIX}/${BUILDLINK_INCDIRS.qwt6-qt5} \
-	--qwt-libdir=${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5} \
-	--qwt-lib=qwt \
-	--sip=${PREFIX}/bin/sip${PYVERSSUFFIX} \
-	--qmake=${PREFIX}/qt5/bin/qmake \
-	--pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5 \
-	--destdir=${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5 \
-	--verbose \
-	)
+	set -e; cd ${WRKSRC};						\
+	  ${PKGSRC_SETENV} ${CONFIGURE_ENV}				\
+	  ${PYTHONBIN} configure.py					\
+	  --qwt-incdir=${PREFIX}/${BUILDLINK_INCDIRS.qwt6-qt5}		\
+	  --qwt-libdir=${PREFIX}/${BUILDLINK_LIBDIRS.qwt6-qt5}		\
+	  --qwt-lib=qwt							\
+	  --sip=${PREFIX}/bin/sip${PYVERSSUFFIX}			\
+	  --qmake=${PREFIX}/qt5/bin/qmake				\
+	  --pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5	\
+	  --verbose
 
-.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qwt6-qt5/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
