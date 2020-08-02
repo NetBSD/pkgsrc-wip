@@ -431,6 +431,7 @@ SUBDIR+=	clfswm
 SUBDIR+=	clhep
 SUBDIR+=	cli-git
 SUBDIR+=	clic
+SUBDIR+=	clipnotify
 SUBDIR+=	cliquer
 SUBDIR+=	clisp
 SUBDIR+=	clisp-asdf
