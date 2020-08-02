@@ -1190,7 +1190,6 @@ SUBDIR+=	gnuradio-utils
 SUBDIR+=	gnuradio-video-sdl
 SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
-SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gnutls-guile
 SUBDIR+=	go115
