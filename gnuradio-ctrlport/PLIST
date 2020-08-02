@@ -30,30 +30,3 @@ share/gnuradio/examples/ctrlport/simple_copy.grc
 share/gnuradio/examples/ctrlport/simple_copy_controller.py
 share/gnuradio/examples/ctrlport/usrp_source_control.grc
 share/gnuradio/examples/ctrlport/usrp_source_controller.py
-@pkgdir share/gnuradio/examples/volk_benchmark
-@pkgdir share/gnuradio/examples/tags
-@pkgdir share/gnuradio/examples/network
-@pkgdir share/gnuradio/examples/mp-sched
-@pkgdir share/gnuradio/examples/metadata
-@pkgdir share/gnuradio/examples/filter
-@pkgdir share/gnuradio/examples/blocks
-@pkgdir share/gnuradio/examples/audio
-@pkgdir share/gnuradio/examples/analog
-@pkgdir share/doc/gnuradio-${PKGVERSION}
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/pmt
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/gru
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/gr
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/filter
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fft
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/blocks
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/audio
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/analog
-@pkgdir lib/pkgconfig
-@pkgdir lib/cmake/gnuradio
-@pkgdir include/pmt
-@pkgdir include/gnuradio/thread
-@pkgdir include/gnuradio/swig
-@pkgdir include/gnuradio/messages
-@pkgdir include/gnuradio/filter
-@pkgdir include/gnuradio/audio
-@pkgdir include/gnuradio/analog

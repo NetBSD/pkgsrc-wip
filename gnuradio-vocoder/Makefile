@@ -8,6 +8,9 @@ COMMENT=	All available vocoders in GNU Radio
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_GR_VOCODER=True
+CMAKE_ARGS+=	-DENABLE_GRC=True
+
+PLIST_MINUS+=	companion
 
 .include	"../../devel/libusb1/buildlink3.mk"
 

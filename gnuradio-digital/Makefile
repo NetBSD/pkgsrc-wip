@@ -10,5 +10,8 @@ COMMENT=	Digital related algorithms for GNU Radio
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_GR_DIGITAL=True
+CMAKE_ARGS+=    -DENABLE_GRC=True
+
+PLIST_MINUS+=	companion
 
 .include	"../../mk/bsd.pkg.mk"

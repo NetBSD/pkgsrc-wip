@@ -171,28 +171,43 @@ share/gnuradio/fec/ldpc/n_1100_k_0442_gap_24.alist
 share/gnuradio/fec/ldpc/n_1300_k_0522_gap_30.alist
 share/gnuradio/fec/ldpc/n_1800_k_0902_gap_28.alist
 share/gnuradio/fec/ldpc/simple_g_matrix.alist
-@pkgdir share/gnuradio/examples/volk_benchmark
-@pkgdir share/gnuradio/examples/tags
-@pkgdir share/gnuradio/examples/network
-@pkgdir share/gnuradio/examples/mp-sched
-@pkgdir share/gnuradio/examples/metadata
-@pkgdir share/gnuradio/examples/filter
-@pkgdir share/gnuradio/examples/blocks
-@pkgdir share/gnuradio/examples/audio
-@pkgdir share/gnuradio/examples/analog
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/pmt
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/gru
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/gr
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/filter
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fft
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/blocks
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/audio
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/analog
-@pkgdir include/pmt
-@pkgdir include/gnuradio/thread
-@pkgdir include/gnuradio/messages
-@pkgdir include/gnuradio/filter
-@pkgdir include/gnuradio/fft
-@pkgdir include/gnuradio/blocks
-@pkgdir include/gnuradio/audio
-@pkgdir include/gnuradio/analog
+share/gnuradio/grc/blocks/fec.tree.yml
+share/gnuradio/grc/blocks/fec_async_decoder.block.yml
+share/gnuradio/grc/blocks/fec_async_encoder.block.yml
+share/gnuradio/grc/blocks/fec_ber_bf.block.yml
+share/gnuradio/grc/blocks/fec_bercurve_generator.block.yml
+share/gnuradio/grc/blocks/fec_decode_ccsds_27_bb.block.yml
+share/gnuradio/grc/blocks/fec_decode_ccsds_27_fb.block.yml
+share/gnuradio/grc/blocks/fec_decoder.block.yml
+share/gnuradio/grc/blocks/fec_depuncture_bb.block.yml
+share/gnuradio/grc/blocks/fec_encoder.block.yml
+share/gnuradio/grc/blocks/fec_extended_async_encoder.block.yml
+share/gnuradio/grc/blocks/fec_extended_decoder.block.yml
+share/gnuradio/grc/blocks/fec_extended_encoder.block.yml
+share/gnuradio/grc/blocks/fec_extended_tagged_decoder.block.yml
+share/gnuradio/grc/blocks/fec_extended_tagged_encoder.block.yml
+share/gnuradio/grc/blocks/fec_puncture_xx.block.yml
+share/gnuradio/grc/blocks/fec_tagged_decoder.block.yml
+share/gnuradio/grc/blocks/fec_tagged_encoder.block.yml
+share/gnuradio/grc/blocks/ldpc_decoder_def_list.block.yml
+share/gnuradio/grc/blocks/ldpc_encoder_def_list.block.yml
+share/gnuradio/grc/blocks/tpc_decoder_def_list.block.yml
+share/gnuradio/grc/blocks/tpc_encoder_def_list.block.yml
+share/gnuradio/grc/blocks/variable_cc_decoder_def_list.block.yml
+share/gnuradio/grc/blocks/variable_cc_encoder_def_list.block.yml
+share/gnuradio/grc/blocks/variable_ccsds_encoder_def_list.block.yml
+share/gnuradio/grc/blocks/variable_dummy_decoder_def_list.block.yml
+share/gnuradio/grc/blocks/variable_dummy_encoder_def_list.block.yml
+share/gnuradio/grc/blocks/variable_ldpc_G_matrix_object.block.yml
+share/gnuradio/grc/blocks/variable_ldpc_H_matrix_object.block.yml
+share/gnuradio/grc/blocks/variable_ldpc_bit_flip_decoder.block.yml
+share/gnuradio/grc/blocks/variable_ldpc_encoder_G.block.yml
+share/gnuradio/grc/blocks/variable_ldpc_encoder_H.block.yml
+share/gnuradio/grc/blocks/variable_polar_code_configurator.block.yml
+share/gnuradio/grc/blocks/variable_polar_decoder_sc.block.yml
+share/gnuradio/grc/blocks/variable_polar_decoder_sc_list.block.yml
+share/gnuradio/grc/blocks/variable_polar_decoder_sc_systematic.block.yml
+share/gnuradio/grc/blocks/variable_polar_encoder.block.yml
+share/gnuradio/grc/blocks/variable_polar_encoder_systematic.block.yml
+share/gnuradio/grc/blocks/variable_repetition_decoder_def_list.block.yml
+share/gnuradio/grc/blocks/variable_repetition_encoder_def_list.block.yml

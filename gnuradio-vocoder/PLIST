@@ -41,29 +41,19 @@ share/gnuradio/examples/vocoder/g723_24_audio_loopback.py
 share/gnuradio/examples/vocoder/g723_40_audio_loopback.py
 share/gnuradio/examples/vocoder/gsm_audio_loopback.py
 share/gnuradio/examples/vocoder/ulaw_audio_loopback.py
-@pkgdir share/gnuradio/examples/volk_benchmark
-@pkgdir share/gnuradio/examples/tags
-@pkgdir share/gnuradio/examples/network
-@pkgdir share/gnuradio/examples/mp-sched
-@pkgdir share/gnuradio/examples/metadata
-@pkgdir share/gnuradio/examples/filter
-@pkgdir share/gnuradio/examples/blocks
-@pkgdir share/gnuradio/examples/audio
-@pkgdir share/gnuradio/examples/analog
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/pmt
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/gru
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/gr
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/filter
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fft
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/blocks
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/audio
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/gnuradio/analog
-@pkgdir include/pmt
-@pkgdir include/gnuradio/thread
-@pkgdir include/gnuradio/messages
-@pkgdir include/gnuradio/filter
-@pkgdir include/gnuradio/fft
-@pkgdir include/gnuradio/blocks
-@pkgdir include/gnuradio/audio
-@pkgdir include/gnuradio/analog
-@pkgdir bin
+share/gnuradio/grc/blocks/vocoder_alaw_decode_bs.block.yml
+share/gnuradio/grc/blocks/vocoder_alaw_encode_sb.block.yml
+share/gnuradio/grc/blocks/vocoder_cvsd_decode.block.yml
+share/gnuradio/grc/blocks/vocoder_cvsd_decode_bs.block.yml
+share/gnuradio/grc/blocks/vocoder_cvsd_encode.block.yml
+share/gnuradio/grc/blocks/vocoder_cvsd_encode_sb.block.yml
+share/gnuradio/grc/blocks/vocoder_g721_decode_bs.block.yml
+share/gnuradio/grc/blocks/vocoder_g721_encode_sb.block.yml
+share/gnuradio/grc/blocks/vocoder_g723_24_decode_bs.block.yml
+share/gnuradio/grc/blocks/vocoder_g723_24_encode_sb.block.yml
+share/gnuradio/grc/blocks/vocoder_g723_40_decode_bs.block.yml
+share/gnuradio/grc/blocks/vocoder_g723_40_encode_sb.block.yml
+share/gnuradio/grc/blocks/vocoder_gsm_fr_decode_ps.block.yml
+share/gnuradio/grc/blocks/vocoder_gsm_fr_encode_sp.block.yml
+share/gnuradio/grc/blocks/vocoder_ulaw_decode_bs.block.yml
+share/gnuradio/grc/blocks/vocoder_ulaw_encode_sb.block.yml

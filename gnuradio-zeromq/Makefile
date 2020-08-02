@@ -17,6 +17,9 @@ COMMENT=	All of the zeromq blocks, utilities, and examples
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_GR_ZEROMQ=True
 CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
+CMAKE_ARGS+=	-DENABLE_GRC=True
+
+PLIST_MINUS+=	companion
 
 post-patch:
 	${CP}	${PKGDIR}/files/zmq.hpp ${WRKSRC}/gr-zeromq/include/

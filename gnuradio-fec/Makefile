@@ -8,6 +8,9 @@ COMMENT=	Forward Error Correction blocks, utilities, & examples of GNU Radio
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GR_FEC=ON
+CMAKE_ARGS+=    -DENABLE_GRC=True
+
+PLIST_MINUS+=	companion
 
 .include	"../../math/gsl/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
