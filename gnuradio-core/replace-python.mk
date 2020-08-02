@@ -380,9 +380,4 @@
     grc/blocks/variable_struct.block.yml.py  \
     grc/core/schema_checker/domain.py  \
     tools/clang_format.py  \
-    tools/template_convert.py  \
-    volk/apps/plot_best_vs_generic.py  \
-    volk/gen/volk_compile_utils.py  \
-    volk/gen/volk_tmpl_utils.py  \
-    volk/python/volk_modtool/__init__.py  \
-    volk/python/volk_modtool/cfg.py  \
+    tools/template_convert.py
