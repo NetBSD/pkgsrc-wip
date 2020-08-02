@@ -1180,7 +1180,6 @@ SUBDIR+=	gnuradio-default
 SUBDIR+=	gnuradio-digital
 SUBDIR+=	gnuradio-doxygen
 SUBDIR+=	gnuradio-dtv
-SUBDIR+=	gnuradio-fcd
 SUBDIR+=	gnuradio-fec
 SUBDIR+=	gnuradio-noaa
 SUBDIR+=	gnuradio-pager
