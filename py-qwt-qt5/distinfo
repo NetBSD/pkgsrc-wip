@@ -4,5 +4,5 @@ SHA1 (pyqt-qwt-1.02.00.tar.gz) = d1c113c5c8ae504bfc479dafdad94a2e459ecf09
 RMD160 (pyqt-qwt-1.02.00.tar.gz) = a25d19cd71baf264b03c02ecd2c86dd4fb3b560c
 SHA512 (pyqt-qwt-1.02.00.tar.gz) = f2b54bd4097b726bcf4df897b910d49489efd2bc9d06d239037b0ecb7ed1420c76499e65b84a49efe2e8ba2313857ece92d8d50d157ccc38fda0cc0dac5ab178
 Size (pyqt-qwt-1.02.00.tar.gz) = 103588 bytes
-SHA1 (patch-mk__distinfo.py) = 0de0a5d946d5c9a97744a0cd26bf69e3bbf73b86
+SHA1 (patch-mk__distinfo.py) = c1f863f827720d0b0f04f592a88901b4ffc15ca6
 SHA1 (patch-sip_qwt.sip) = f2491af157af22410ac78f1fb8bf05b332feb58e
