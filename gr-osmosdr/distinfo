@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2015/11/02 23:57:23 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/05/14 19:21:34 joerg Exp $
 
-SHA1 (gr-osmosdr-0.1.4.tar.gz) = 672041a6ffa767d39ffad2432e2a13c11e3ec984
-RMD160 (gr-osmosdr-0.1.4.tar.gz) = 30f97d10655e5a88fdf2bf43a323ea9d9aba0479
-SHA512 (gr-osmosdr-0.1.4.tar.gz) = b364f95c140ba61ab1fc51c49fd01cf4d0db4ce3c3a7680f34ea13bc646820d9b2b860bc0438df83df942249fa959cb90f83c5d117737cd0818db35c27253e65
-Size (gr-osmosdr-0.1.4.tar.gz) = 222961 bytes
+SHA1 (gr-osmosdr-0.2.0.tar.gz) = 299df78837446a53562fcd64ca99f28b763bdeb8
+RMD160 (gr-osmosdr-0.2.0.tar.gz) = e4f67b972d81b155419eef383712d53767289bb7
+SHA512 (gr-osmosdr-0.2.0.tar.gz) = 96eb8ff0a05cf0d5b49384cdc80e0a3d924ba452485acbe852266fd73a5335668b40454421d9f5a52ea610f7100557e51d6a5d9cf6931fe68e8757eb5f02d126
+Size (gr-osmosdr-0.2.0.tar.gz) = 251163 bytes
+SHA1 (patch-lib_airspy_airspy__source__c.cc) = 40e6aedace7fb1754c9dd0096d463c8c8a2799da
+SHA1 (patch-lib_hackrf_hackrf__source__c.cc) = f37b11c5ad7c25a5a04be1373fecafc5d25041cd
+SHA1 (patch-lib_rtl_rtl__source__c.cc) = 900aa235c4a21de40f53928408e11968afbad650
