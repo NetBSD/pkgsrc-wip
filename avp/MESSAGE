@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD$
+AvP is only compatible with AvP Gold game data
+All the game data files and directories must be in lower case !
+Either copy the avp executable to the game data directory or
+set the AVP_DATA environment variable to the game data directory.
+===========================================================================

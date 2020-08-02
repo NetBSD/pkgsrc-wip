@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2020-04-19 19:17:00.000000000 +0000
++++ CMakeLists.txt
+@@ -411,7 +411,7 @@ ENDFOREACH(sourcefile)
+ INCLUDE_DIRECTORIES(${include})
+ 
+ # manually include src/include
+-INCLUDE_DIRECTORIES(src/include)
++INCLUDE_DIRECTORIES(src/include /usr/pkg/include/ffmpeg4 /usr/pkg/include /usr/pkg/include/AL)
+ 
+ IF(AVP_WEB)
+     ADD_DEFINITIONS(-DUSE_OPENGL_ES=1)
