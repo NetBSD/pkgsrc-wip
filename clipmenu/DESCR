@@ -1,0 +1,10 @@
+clipmenu is a simple clipboard manager using dmenu and xsel.
+
+clipmenu has many useful features, including:
+
+ - Customising the maximum number of clips stored (default 1000)
+ - Disabling clip collection temporarily with clipctl disable, reenabling
+   with clipctl enable
+ - Not storing clipboard changes from certain applications, like password
+   managers
+ - Taking direct ownership of the clipboard
