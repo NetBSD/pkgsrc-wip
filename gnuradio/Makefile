@@ -14,31 +14,22 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/gnuradio/
 COMMENT=	Collection of GNU Radio (meta package, easy to install whole thing)
 
-# 21 package for now ( -default is NOT included )
-DEPENDS+=	gnuradio-atsc-[0-9]*:../../wip/gnuradio-atsc
+# 16 packages for now ( -default is NOT included )
 DEPENDS+=	gnuradio-channels-[0-9]*:../../wip/gnuradio-channels
 DEPENDS+=	gnuradio-companion-[0-9]*:../../wip/gnuradio-companion
 DEPENDS+=	gnuradio-core-[0-9]*:../../wip/gnuradio-core
 DEPENDS+=	gnuradio-ctrlport-[0-9]*:../../wip/gnuradio-ctrlport
-
 DEPENDS+=	gnuradio-digital-[0-9]*:../../wip/gnuradio-digital
 DEPENDS+=	gnuradio-doxygen-[0-9]*:../../wip/gnuradio-doxygen
 DEPENDS+=	gnuradio-dtv-[0-9]*:../../wip/gnuradio-dtv
-DEPENDS+=	gnuradio-fcd-[0-9]*:../../wip/gnuradio-fcd
 DEPENDS+=	gnuradio-fec-[0-9]*:../../wip/gnuradio-fec
-
-DEPENDS+=	gnuradio-noaa-[0-9]*:../../wip/gnuradio-noaa
-DEPENDS+=	gnuradio-pager-[0-9]*:../../wip/gnuradio-pager
 DEPENDS+=	gnuradio-qtgui-[0-9]*:../../wip/gnuradio-qtgui
 DEPENDS+=	gnuradio-trellis-[0-9]*:../../wip/gnuradio-trellis
 DEPENDS+=	gnuradio-uhd-[0-9]*:../../wip/gnuradio-uhd
-
 DEPENDS+=	gnuradio-utils-[0-9]*:../../wip/gnuradio-utils
 DEPENDS+=	gnuradio-video-sdl-[0-9]*:../../wip/gnuradio-video-sdl
 DEPENDS+=	gnuradio-vocoder-[0-9]*:../../wip/gnuradio-vocoder
 DEPENDS+=	gnuradio-wavelet-[0-9]*:../../wip/gnuradio-wavelet
-DEPENDS+=	gnuradio-wxgui-[0-9]*:../../wip/gnuradio-wxgui
-
 DEPENDS+=	gnuradio-zeromq-[0-9]*:../../wip/gnuradio-zeromq
 
 .include "../../mk/bsd.pkg.mk"
