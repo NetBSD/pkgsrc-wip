@@ -1171,7 +1171,6 @@ SUBDIR+=	gnunet-go
 SUBDIR+=	gnunet-gtk
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnuradio
-SUBDIR+=	gnuradio-atsc
 SUBDIR+=	gnuradio-channels
 SUBDIR+=	gnuradio-companion
 SUBDIR+=	gnuradio-core
