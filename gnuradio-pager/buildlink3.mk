@@ -5,9 +5,9 @@ BUILDLINK_TREE+=	gnuradio-pager
 .if !defined(GNURADIO_PAGER_BUILDLINK3_MK)
 GNURADIO_PAGER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnuradio-pager+=	gnuradio-pager>=3.7.5
-BUILDLINK_ABI_DEPENDS.gnuradio-pager+=	gnuradio-pager>=3.7.5
-BUILDLINK_PKGSRCDIR.gnuradio-pager?=	../../ham/gnuradio-pager
+BUILDLINK_API_DEPENDS.gnuradio-pager+=	gnuradio-pager>=3.8.1.0
+BUILDLINK_ABI_DEPENDS.gnuradio-pager+=	gnuradio-pager>=3.8.1.0
+BUILDLINK_PKGSRCDIR.gnuradio-pager?=	../../wip/gnuradio-pager
 
 #.include "../../devel/boost-headers/buildlink3.mk"
 #.include "../../devel/boost-libs/buildlink3.mk"
