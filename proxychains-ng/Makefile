@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://ftp.barfooze.de/pub/sabotage/tarballs/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	sxvghd@firemail.cc
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rofl0r/proxychains-ng
 COMMENT=	Chain multiple SOCKS4/SOCKS5 proxies in a transparent way
 LICENSE=	gnu-gpl-v2

@@ -4,7 +4,7 @@ DISTNAME=	trigger-rally-0.6.6.1
 CATEGORIES=	games
 MASTER_SITES=	https://downloads.sourceforge.net/project/trigger-rally/trigger-0.6.6.1/
 
-MAINTAINER=	sxvghd@firemail.cc
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/trigger-rally
 COMMENT=	A 3D rally simulation racing game.
 LICENSE=	gnu-gpl-v2
