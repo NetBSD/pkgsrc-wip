@@ -27,7 +27,7 @@ do-build:
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
 # Running gr_filter_design asks for the package
-DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy12
+DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 .endif
 
 .if !empty(PKG_OPTIONS:Malsa)
