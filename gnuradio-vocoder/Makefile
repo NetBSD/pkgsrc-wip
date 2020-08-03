@@ -6,9 +6,9 @@ COMMENT=	All available vocoders in GNU Radio
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
-CMAKE_ARGS+=	-DENABLE_GR_VOCODER=True
-CMAKE_ARGS+=	-DENABLE_GRC=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_ARGS+=	-DENABLE_GR_VOCODER=ON
+CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 

@@ -6,10 +6,10 @@ COMMENT=	Various digital television standards of GNU Radio
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
-CMAKE_ARGS+=	-DENABLE_GR_DTV=True
-CMAKE_ARGS+=	-DENABLE_GR_FEC=True
-CMAKE_ARGS+=	-DENABLE_GRC=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_ARGS+=	-DENABLE_GR_DTV=ON
+CMAKE_ARGS+=	-DENABLE_GR_FEC=ON
+CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	fec companion
 

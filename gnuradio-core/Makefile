@@ -18,7 +18,7 @@ PLIST_SRC=	${PKGDIR}/PLIST ${PKGDIR}/PLIST.oss
 .endif
 
 # set default as minimum
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 
 # Take care CONF_FILES stuff (The same code in Nocore.mk)
 #post-install:

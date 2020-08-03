@@ -6,10 +6,10 @@ COMMENT=	Uhd-based encoding and decoding algorithms for GNU Radio
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
-CMAKE_ARGS+=	-DENABLE_GR_UHD=True
-CMAKE_ARGS+=	-DENABLE_PYTHON=True
-CMAKE_ARGS+=    -DENABLE_GRC=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_ARGS+=	-DENABLE_GR_UHD=ON
+CMAKE_ARGS+=	-DENABLE_PYTHON=ON
+CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 

@@ -6,10 +6,10 @@ COMMENT=	Trellis-based encoding and decoding algorithms for GNU Radio
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
-CMAKE_ARGS+=	-DENABLE_GR_TRELLIS=True
-CMAKE_ARGS+=	-DENABLE_GR_DIGITAL=True
-CMAKE_ARGS+=	-DENABLE_GRC=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_ARGS+=	-DENABLE_GR_TRELLIS=ON
+CMAKE_ARGS+=	-DENABLE_GR_DIGITAL=ON
+CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 DEPENDS+=	gnuradio-digital-[0-9]*:../../wip/gnuradio-digital
 DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto

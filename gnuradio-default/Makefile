@@ -50,7 +50,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
 
 # --------	 R E S E T    H E R E  -------------
-CMAKE_ARGS+=	-DENABLE_DEFAULT=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=ON
 
 post-patch:
 	${CP}  ${PKGDIR}/../gnuradio-zeromq/files/zmq.hpp ${WRKSRC}/gr-zeromq/include/

@@ -8,7 +8,7 @@ COMMENT=	Signal processing blocks to simulate channel models of GNU Radio
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GR_CHANNELS=ON
-CMAKE_ARGS+=	-DENABLE_GRC=True
+CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 

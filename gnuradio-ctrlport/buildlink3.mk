@@ -7,7 +7,7 @@ GNURADIO_CTRLPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-ctrlport+=	gnuradio-ctrlport>=3.8.1.0
 BUILDLINK_ABI_DEPENDS.gnuradio-ctrlport+=	gnuradio-ctrlport>=3.8.1.0
-BUILDLINK_PKGSRCDIR.gnuradio-ctrlport?=	../../wip/gnuradio-ctrlport
+BUILDLINK_PKGSRCDIR.gnuradio-ctrlport?=		../../wip/gnuradio-ctrlport
 .endif # GNURADIO_CTRLPORT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnuradio-ctrlport

@@ -2,25 +2,26 @@
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
-# used by ham/gnuradio-channels/Makefile
-# used by ham/gnuradio-companion/Makefile
-# used by ham/gnuradio-core/Makefile
-# used by ham/gnuradio-ctrlport/Makefile
-# used by ham/gnuradio-digital/Makefile
-# used by ham/gnuradio-doxygen/Makefile
-# used by ham/gnuradio-dtv/Makefile
-# used by ham/gnuradio-fcd/Makefile
-# used by ham/gnuradio-fec/Makefile
-# used by ham/gnuradio-qtgui/Makefile
-# used by ham/gnuradio-trellis/Makefile
-# used by ham/gnuradio-uhd/Makefile
-# used by ham/gnuradio-utils/Makefile
-# used by ham/gnuradio-video-sdl/Makefile
-# used by ham/gnuradio-vocoder/Makefile
-# used by ham/gnuradio-wavelet/Makefile
-# used by ham/gnuradio-zeromq/Makefile
 
-.include	"../../wip/gnuradio-core/Makefile.version"
+# used by wip/gnuradio-channels/Makefile
+# used by wip/gnuradio-companion/Makefile
+# used by wip/gnuradio-core/Makefile
+# used by wip/gnuradio-ctrlport/Makefile
+# used by wip/gnuradio-digital/Makefile
+# used by wip/gnuradio-doxygen/Makefile
+# used by wip/gnuradio-dtv/Makefile
+# used by wip/gnuradio-fcd/Makefile
+# used by wip/gnuradio-fec/Makefile
+# used by wip/gnuradio-qtgui/Makefile
+# used by wip/gnuradio-trellis/Makefile
+# used by wip/gnuradio-uhd/Makefile
+# used by wip/gnuradio-utils/Makefile
+# used by wip/gnuradio-video-sdl/Makefile
+# used by wip/gnuradio-vocoder/Makefile
+# used by wip/gnuradio-wavelet/Makefile
+# used by wip/gnuradio-zeromq/Makefile
+
+.include	"../../wip/gnuradio-core/version.mk"
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
@@ -106,7 +107,7 @@ CMAKE_ARG_PATH=	../
 SUBST_CLASSES+=		boost
 SUBST_MESSAGE.boost=	prepend boost placeholders with namespace
 SUBST_FILES.boost=	*/lib/*.cc
-SUBST_SED.boost=	's, _1), boost::placeholders::_1),'
+SUBST_SED.boost=	-e 's, _1), boost::placeholders::_1),'
 SUBST_STAGE.boost=	pre-configure
 
 # disable/enable ALSA, see also patches/patch-gr-audio_lib_CMakeLists.txt

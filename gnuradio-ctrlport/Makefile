@@ -5,7 +5,7 @@ COMMENT=	New set of hooks into GNU Radio to allow a remote client to attach
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
-CMAKE_ARGS+=	-DENABLE_GR_CTRLPORT=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_ARGS+=	-DENABLE_GR_CTRLPORT=ON
 
 .include	"../../mk/bsd.pkg.mk"

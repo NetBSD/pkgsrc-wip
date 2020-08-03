@@ -18,6 +18,9 @@ REPLACE_BASH=	grc/scripts/freedesktop/grc_setup_freedesktop.in
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GRC=ON
 
+ICON_THEMES=	yes
+.include	"../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include	"../../graphics/gnome-icon-theme/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
 
 # -- Configuring gnuradio-companion support...

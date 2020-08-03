@@ -8,9 +8,9 @@ COMMENT=	Digital related algorithms for GNU Radio
 # link to libgnuradio-fft.so.${PKGVERSON_NOREV}
 .include       "../../wip/gnuradio-core/buildlink3.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
-CMAKE_ARGS+=	-DENABLE_GR_DIGITAL=True
-CMAKE_ARGS+=    -DENABLE_GRC=True
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_ARGS+=	-DENABLE_GR_DIGITAL=ON
+CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 

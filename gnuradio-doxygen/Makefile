@@ -13,9 +13,9 @@ BUILD_DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 # in case those packages are already installed by other requirement..
 DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
-DEPENDS+=	tex-newunicodechar-[-0-9]*:../../print/tex-newunicodechar
+DEPENDS+=	tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=False
+CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON
 CMAKE_ARGS+=	-DENABLE_SPHINX=ON
 CMAKE_ARGS+=	-DSPHINX_EXECUTABLE=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
