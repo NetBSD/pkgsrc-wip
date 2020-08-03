@@ -8,7 +8,7 @@ Work around DESTDIR installation issue
          else:
              fn_name = fn
  
-+        if (fn.startswith(sys.prefix)):
++        if (fn.startswith(sys.prefix + "/")):
 +            fn = os.environ.get("DESTDIR") + fn
 +        if (os.path.isdir(fn)):
 +            continue
