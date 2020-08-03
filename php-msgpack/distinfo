@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/11/04 01:18:01 agc Exp $
 
-SHA1 (php-msgpack/msgpack-2.1.0.tgz) = 928c9b4f2ae681941b99445951e322a9797a7d57
-RMD160 (php-msgpack/msgpack-2.1.0.tgz) = b198680fcf27b45f9f6172ebc2f58cff7cc0460f
-SHA512 (php-msgpack/msgpack-2.1.0.tgz) = e024694076224796b2fb4dbd4473c5ac782951911437d0ee668231a1908f924a3a28dd616c0821929b425ee5ec06ef51f870f15b677171429049f4ae5f7befb7
-Size (php-msgpack/msgpack-2.1.0.tgz) = 62201 bytes
+SHA1 (php-msgpack/msgpack-2.1.1.tgz) = 4224f4dd2c52540e8513268a9ef980192eec1741
+RMD160 (php-msgpack/msgpack-2.1.1.tgz) = 7dd7647ee83380e534ba33669364064beafdee1f
+SHA512 (php-msgpack/msgpack-2.1.1.tgz) = dffa21e36ac8bafa076557093e0bca70772e810215900ce0f9c0e0cc6f4f5aac567178c9bb6c5f962bdda11139d03bc9004f85d9e0a58acf181ef8959e953281
+Size (php-msgpack/msgpack-2.1.1.tgz) = 126154 bytes
