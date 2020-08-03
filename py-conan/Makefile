@@ -21,9 +21,9 @@ DEPENDS+=	${PYPKGPREFIX}-JWT>=1.4.0<2.0.0:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.8.1<3.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.3<0.5.0:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11<6.0:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-patch-ng-1.17.2:../../wip/py-patch-ng
+DEPENDS+=	${PYPKGPREFIX}-patch-ng>=1.17.4<1.18:../../wip/py-patch-ng
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
-DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0<=1.14.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-node-semver-0.6.1:../../wip/py-node-semver
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.2<1.2.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.3.1:../../devel/py-pylint

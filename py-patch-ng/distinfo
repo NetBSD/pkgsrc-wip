@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (patch-ng-1.17.2.tar.gz) = 19e68c413cc0acbf300070f33fca2a5a3b52487b
-RMD160 (patch-ng-1.17.2.tar.gz) = 677f8724bfee1f209415bb40f01fedc9f35b7ff2
-SHA512 (patch-ng-1.17.2.tar.gz) = d8fd616507f970369516ba56e99329eca5c25e3fcdc52bb86f7a020f9c4dfe9f43e17999dec1b047fb902efb3254c2abb9f3f95673299116154882b3649ff7d1
-Size (patch-ng-1.17.2.tar.gz) = 17167 bytes
+SHA1 (patch-ng-1.17.4.tar.gz) = ecf432dc3f2fd9581bdaabec99bbd8c8cd010b72
+RMD160 (patch-ng-1.17.4.tar.gz) = b84dd11c0f1339a9c779ff19ec9936f96d59b560
+SHA512 (patch-ng-1.17.4.tar.gz) = d4de1e791e375df76d487509b7a5727ed8947cc58d9921fd854e6bf013a8933e98ab595d986ad4b327689f3b6e5c8fa161b7ffad3e264b534dbe23cbbd3b3fce
+Size (patch-ng-1.17.4.tar.gz) = 17395 bytes

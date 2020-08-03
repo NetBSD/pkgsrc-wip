@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	patch-ng-1.17.2
+DISTNAME=	patch-ng-1.17.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/patch-ng/}
