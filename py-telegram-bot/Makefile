@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	python-telegram-bot-12.5.1
+DISTNAME=	python-telegram-bot-12.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-telegram-bot/}
