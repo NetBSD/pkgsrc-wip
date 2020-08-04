@@ -1,49 +1,50 @@
 # $NetBSD$
 
-TBB_VERSION=	2017_20160916
+DISTNAME=	oneTBB-${PKGVERSION}
+PKGNAME=	threadingbuildingblocks-${PKGVERSION}
+PKGVERSION=	2020.3
+CATEGORIES=	parallel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=oneapi-src/}
+GITHUB_PROJECT=	oneTBB
+GITHUB_TAG=	${PKGVERSION:S/./_U/}
 
-DISTNAME=	tbb${TBB_VERSION}oss_src
-PKGNAME=	threadingbuildingblocks-${TBB_VERSION:S/_/./}
-CATEGORIES=	devel
-MASTER_SITES=	https://www.threadingbuildingblocks.org/sites/default/files/software_releases/source/
-EXTRACT_SUFX=	.tgz
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.threadingbuildingblocks.org/sites/default/files/software_releases/source/
-COMMENT=	Intel Threading Building Block
+MAINTAINER=	stix@stix.id.au
+HOMEPAGE=	http://threadingbuildingblocks.org/
+COMMENT=	Library that provides thread building blocks
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/tbb${TBB_VERSION}oss
+ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
+
 USE_LANGUAGES=	c c++
-
-USE_TOOLS+=	gmake pax bash
-
-GCC_REQD+=	5.3 # c++11
-
-BUILD_TARGET=	# empty, all runs tests and it take a lot of time
-MAKE_FLAGS+=	stdver=c++11
-
-INSTALLATION_DIRS+=	include/tbb lib
-
+USE_TOOLS+=	gmake pax
+BUILD_TARGET=	default
 TEST_TARGET=	test
 
-SUBST_CLASSES+=		bash
-SUBST_STAGE.bash=	pre-build
-SUBST_FILES.bash=	build/FreeBSD.inc
-SUBST_FILES.bash+=	build/AIX.inc
-SUBST_FILES.bash+=	build/mic.offload.inc
-SUBST_FILES.bash+=	build/SunOS.inc
-SUBST_FILES.bash+=	build/macos.inc
-SUBST_FILES.bash+=	build/linux.inc
-SUBST_FILES.bash+=	build/netbsd.inc
-SUBST_MESSAGE.bash=	Run bash script with bash.
-SUBST_SED.bash=		-e "s|TEST_LAUNCHER=sh|TEST_LAUNCHER=${BASH}|1"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Linux
+BUILD_OPSYS=	linux
+.else
+BUILD_OPSYS=	${OPSYS}
+.endif
+
+INSTALLATION_DIRS=	include/tbb lib
+
+# Docs are doxygen, but the detailed documentation appears to have moved online.
+#
+#BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+
+post-extract:
+	${CP}	${WRKSRC}/build/FreeBSD.inc ${WRKSRC}/build/NetBSD.inc; \
+	${CP}	${WRKSRC}/build/FreeBSD.clang.inc ${WRKSRC}/build/NetBSD.clang.inc; \
+	${CP}	${WRKSRC}/build/FreeBSD.gcc.inc ${WRKSRC}/build/NetBSD.gcc.inc;
 
 do-install:
-.for file in libtbb.so.2 libtbbmalloc.so.2 libtbbmalloc_proxy.so.2
-	cd ${WRKSRC}/build/netbsd*release/ && \
-		${INSTALL_LIB} ${file} ${DESTDIR}${PREFIX}/lib
-.endfor
-	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
+	cd ${WRKSRC}; \
+	${INSTALL_LIB} build/${BUILD_OPSYS}*release/libtbb.so \
+		${DESTDIR}${PREFIX}/lib; \
+	${INSTALL_LIB} build/${BUILD_OPSYS}*release/libtbbmalloc.so \
+		${DESTDIR}${PREFIX}/lib; \
+	cd ${WRKSRC}/include/tbb/ && pax -rw . ${DESTDIR}${PREFIX}/include/tbb/;
 
 .include "../../mk/bsd.pkg.mk"

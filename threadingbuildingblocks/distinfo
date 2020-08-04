@@ -1,10 +1,6 @@
 $NetBSD$
 
-SHA1 (tbb2017_20160916oss_src.tgz) = 7341672991af0675f22c1c3292fcc70d2e3cb837
-RMD160 (tbb2017_20160916oss_src.tgz) = 78b0e35215ad225fa2e9ca2595ddef1683355e4a
-SHA512 (tbb2017_20160916oss_src.tgz) = c2d2f36946f86d599a5d827008e0c6388ee17c51a60e08a15b809f0e2bb6b4137d485f6cc32f05cd7bbf0edbbf2c80bae185454f0bca9d00151df0ea79dfcbac
-Size (tbb2017_20160916oss_src.tgz) = 2938546 bytes
-SHA1 (patch-build_common.inc) = 78bfc2d2b1857b4fcee35cbbfd2febb67bbb0aaa
-SHA1 (patch-build_netbsd.gcc.inc) = d7cd7501b528b582f9dcc6bc13fd864dbdb324ad
-SHA1 (patch-build_netbsd.inc) = afe3016f90ab4d0738c575a45f9cb2bfe6c5849c
-SHA1 (patch-build_version__info__netbsd.sh) = f760f259ca5cf484e4f03e234eb9ee6e1afdfbae
+SHA1 (oneTBB-2020.3.tar.gz) = 82dd122b9a47dccb5aa8c3c2ab598bbf6e9cef3b
+RMD160 (oneTBB-2020.3.tar.gz) = 535dd90287f1f752f299e7f222cacfaedd9a08f5
+SHA512 (oneTBB-2020.3.tar.gz) = 04c4b5501418792827190691d03d20d4dc1fd3cbbcf459a4d40c5c2281d964e658f31f133ad3907b78e17ed04f4ff16728ed89487ed0ce2cb239f23feb34bd87
+Size (oneTBB-2020.3.tar.gz) = 2639788 bytes
