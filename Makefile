@@ -2491,6 +2491,7 @@ SUBDIR+=	openvas-cli
 SUBDIR+=	openvas-libraries
 SUBDIR+=	openvas-manager
 SUBDIR+=	openvas-scanner
+SUBDIR+=	openvdb
 SUBDIR+=	openvrml
 SUBDIR+=	openxcom
 SUBDIR+=	openzwave
