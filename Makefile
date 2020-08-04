@@ -1193,6 +1193,7 @@ SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gnutls-guile
 SUBDIR+=	go115
 SUBDIR+=	go-backoff
+SUBDIR+=	go-bindata
 SUBDIR+=	go-collectd
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-flags
