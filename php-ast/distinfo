@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (php-ast/ast-1.0.6.tgz) = f50cfe5cd10f54a61c617c2c6b8bbdf5862a48bf
-RMD160 (php-ast/ast-1.0.6.tgz) = da79697181e44dd2bc35b35d09d1c137bde21f20
-SHA512 (php-ast/ast-1.0.6.tgz) = 42ee07ee082ea3c6dcfd86ba25aa3d5bf188f277684acd63f5013b3da6b9ea5eafa2ac55a630ffe43aaf2d7366f055a372e61912a426e1413710658b1d9e4013
-Size (php-ast/ast-1.0.6.tgz) = 41041 bytes
+SHA1 (php-ast/ast-1.0.8.tgz) = 4be71dbb3a0bed2c419fe8e4ca1d21d46576cc92
+RMD160 (php-ast/ast-1.0.8.tgz) = 044e207d949377a47ea482d765fa80039f28267c
+SHA512 (php-ast/ast-1.0.8.tgz) = c8363f7f95e5f42811caa780ef385b92d1917ed8ffb2f25e73319b451250e594c2b20df24c8ac8b6f5bca74e8d600b72d8eacf1a38d95a2fa4aec04aa355919b
+Size (php-ast/ast-1.0.8.tgz) = 45409 bytes

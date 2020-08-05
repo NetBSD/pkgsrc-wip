@@ -1,7 +1,7 @@
 # $NetBSD$
 
 MODNAME=		ast
-PECL_VERSION=		1.0.6
+PECL_VERSION=		1.0.8
 CATEGORIES=		devel
 
 MAINTAINER=		tpaul@NetBSD.org
