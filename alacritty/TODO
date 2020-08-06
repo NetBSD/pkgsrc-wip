@@ -1,3 +1,10 @@
 * This package tracks https://github.com/jwilm/alacritty/issues/2631,
   which is why the build is not done from a release tarball. The ticket
   aims to fix NetBSD builds for alacritty.
+
+TODO:
+=> Checking for missing run-time search paths in alacritty-v0.5.0
+ERROR: bin/alacritty: missing library: libfreetype.so.19
+ERROR: bin/alacritty: missing library: libfontconfig.so.2
+ERROR: bin/alacritty: missing library: libxcb.so.2
+*** Error code 1
