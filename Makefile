@@ -303,6 +303,7 @@ SUBDIR+=	briskmenu
 SUBDIR+=	brlcad
 SUBDIR+=	brltty
 SUBDIR+=	brogue
+SUBDIR+=	browserpass-native
 SUBDIR+=	brumbrumrally
 SUBDIR+=	bscript
 SUBDIR+=	bsdbuild
