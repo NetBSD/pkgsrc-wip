@@ -1,0 +1,44 @@
+# $NetBSD: Makefile,v 1.6 2020/06/20 12:43:46 gdt Exp $
+
+.include "../../sysutils/zabbix50-server/Makefile.common"
+
+PKGNAME=	${DISTNAME:S/-/-frontend-/}
+COMMENT=	Zabbix PHP 7.2+ frontend
+
+EGDIR=		share/examples/zabbix
+
+USE_TOOLS+=		pax
+NO_BUILD=		yes
+
+do-configure:
+	${DO_NADA}
+
+REPLACE_SH+=	ui/locale/*.sh
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		APACHE_GROUP APACHE_USER
+PKG_GROUPS_VARS+=	${APACHE_GROUP}
+PKG_USERS_VARS=		${APACHE_USER}
+
+DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=7.2.0:../../math/php-bcmath
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.2.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=7.2.0:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.2.0:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=7.2.0:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.2.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=7.2.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=7.2.0:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=7.2.0:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=7.2.0:../../devel/php-sysvsem
+
+INSTALLATION_DIRS+=	${EGDIR} share/zabbix
+
+do-install:
+	rm -f ${WRKSRC}/ui/locale/*.orig
+	cd ${WRKSRC}/ui; ${PAX} -rw . ${DESTDIR}${PREFIX}/share/zabbix/
+	${INSTALL_DATA} ${FILESDIR}/httpd-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/php-fpm-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
+
+.include "../../lang/php/phpversion.mk"
+.include "../../mk/bsd.pkg.mk"

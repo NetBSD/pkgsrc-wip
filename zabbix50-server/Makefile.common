@@ -1,0 +1,13 @@
+# $NetBSD: Makefile.common,v 1.16 2020/06/20 12:43:46 gdt Exp $
+# used by sysutils/zabbix50-agent/Makefile
+# used by sysutils/zabbix50-proxy/Makefile
+# used by sysutils/zabbix50-server/Makefile
+# used by sysutils/zabbix50-frontend/Makefile
+
+DISTNAME=	zabbix-5.0.2
+CATEGORIES=	sysutils
+MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/5.0/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.zabbix.com/
+LICENSE=	gnu-gpl-v2

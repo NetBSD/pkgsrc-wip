@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/zabbix_js
+man/man8/zabbix_proxy.8
+sbin/zabbix_proxy
+share/examples/zabbix/zabbix_proxy.conf
+share/zabbix/data.sql
+share/zabbix/double.sql
+share/zabbix/images.sql
+share/zabbix/schema.sql
+share/zabbix/timescaledb.sql
+@pkgdir share/zabbix/externalscripts
+@pkgdir lib/modules
+@pkgdir etc/zabbix_proxy.conf.d
