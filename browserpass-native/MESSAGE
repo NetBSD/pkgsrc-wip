@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD$
+
+To use browserpass-native with Firefox, copy
+
+  ${PREFIX}/share/examples/browserpass-native/com.github.browserpass.native.json
+
+to
+
+  ${HOME}/.mozilla/native-messaging-hosts/com.github.browserpass.native.json
+
+===========================================================================
