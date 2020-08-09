@@ -1,11 +1,6 @@
 @comment $NetBSD$
 bin/openshot-qt
 lib/mime/packages/openshot-qt
-${PYSITELIB}/openshot_qt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/openshot_qt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/openshot_qt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/openshot_qt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/openshot_qt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/openshot_qt/__init__.py
 ${PYSITELIB}/openshot_qt/__init__.pyo
 ${PYSITELIB}/openshot_qt/__init__.pyc
