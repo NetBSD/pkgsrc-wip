@@ -1,15 +1,6 @@
 $NetBSD: distinfo,v 1.4 2019/12/10 19:22:36 plunky Exp $
 
-SHA1 (icewm-1.4.2.tar.bz2) = d1f9af531fec7beaa334db9c0e4764b9e40bbacd
-RMD160 (icewm-1.4.2.tar.bz2) = 6aaabad0c235901556951c9d88178adf15e29f51
-SHA512 (icewm-1.4.2.tar.bz2) = 0d227d75d2e3e6e5314eb0990375b85a34496e61e8b504ee023decb52b0c3a20bfd65c0d491b738d3742ddf3f21acfabfc8e4d43df51d137f568580b6c5ed0cd
-Size (icewm-1.4.2.tar.bz2) = 1731772 bytes
-SHA1 (patch-src_CMakeLists.txt) = 87a236a6d53937921ffca0044b1497124f8a9d83
-SHA1 (patch-src_acpustatus.cc) = 7c47b9e7690db4f011c2cfee3c7d5e36080b4b6a
-SHA1 (patch-src_base.h) = 5321f1f1f8fd1ced2c5f38a7e5e614deee4703df
-SHA1 (patch-src_icesm.cc) = c7fa247c395bb36307b7757a8c2698b62b7d0a6e
-SHA1 (patch-src_icetray.cc) = a8e70da376e13be187037f190c672b8b75fd287b
-SHA1 (patch-src_wmapp.cc) = fdabb4348c1dc55d390c942f34aa0fb597f49fc0
-SHA1 (patch-src_wpixres.cc) = aeb0b6423a48e0f3b4074baa2a0a0c9e52e9d8ed
-SHA1 (patch-src_yapp.cc) = f3c8e1d6d0830d4b95d131af37a1f394737a3c48
-SHA1 (patch-src_ylocale.cc) = 099296135053df781bd3755f9947d34d52fd3020
+SHA1 (icewm-1.7.0.tar.gz) = 3c7c1c4332449fb4348d38481ffcb4fb503c5d64
+RMD160 (icewm-1.7.0.tar.gz) = 9f11f544c08f9961f60dab23773b0331c6df4a69
+SHA512 (icewm-1.7.0.tar.gz) = 25c00d05eb63ff2bf10d8748a266ac31170e26a0f7b385734e586fabca1e001616344c9b7cffb925f0ca24722a6ca0fbb6a247fcb2dd4410caa502484f2b7e09
+Size (icewm-1.7.0.tar.gz) = 2192103 bytes
