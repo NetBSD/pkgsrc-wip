@@ -48,3 +48,21 @@ See also "/tmp/wip/gnuradio-core/work/gnuradio-3.8.0.0/build/CMakeFiles/CMakeOut
 See also "/tmp/wip/gnuradio-core/work/gnuradio-3.8.0.0/build/CMakeFiles/CMakeError.log".
 *** Error code 1
 
+
+as of 2020-08-10
+-------------------------------------------------------------
+[100%] Linking CXX shared library libgnuradio-blocks.so
+ld: warning: libicudata.so.66, needed by /tmp/wip/gnuradio-core/work/.buildlink/lib/libboost_regex.so, not found (try using -rpath or -rpath-link)
+ld: warning: libicui18n.so.66, needed by /tmp/wip/gnuradio-core/work/.buildlink/lib/libboost_regex.so, not found (try using -rpath or -rpath-link)
+ld: warning: libicuuc.so.66, needed by /tmp/wip/gnuradio-core/work/.buildlink/lib/libboost_regex.so, not found (try using -rpath or -rpath-link)
+[100%] Built target gnuradio-blocks
+gmake: *** [Makefile:141: all] Error 2
+*** Error code 2
+
+Stop.
+make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/gnuradio-core
+*** Error code 1
+
+Stop.
+make: stopped in /export/CHROOT/usr/pkgsrc/wip/gnuradio-core
+
