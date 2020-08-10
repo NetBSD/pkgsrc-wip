@@ -5,7 +5,7 @@ bin/batch_rubber_sheet
 bin/light_correct
 bin/shrink_width
 bin/vips
-bin/vips-8.9
+bin/vips-8.10
 bin/vipsedit
 bin/vipsheader
 bin/vipsprofile
@@ -167,5 +167,5 @@ share/gtk-doc/html/libvips/using-cli.html
 share/gtk-doc/html/libvips/using-from-c.html
 share/gtk-doc/html/libvips/using-from-cpp.html
 share/gtk-doc/html/libvips/using-threads.html
-share/locale/de/LC_MESSAGES/vips8.9.mo
-share/locale/en_GB/LC_MESSAGES/vips8.9.mo
+share/locale/de/LC_MESSAGES/vips8.10.mo
+share/locale/en_GB/LC_MESSAGES/vips8.10.mo
