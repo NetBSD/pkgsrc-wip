@@ -78,8 +78,8 @@ CMAKE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
 CMAKE_ARGS+=	-DENABLE_GR_AUDIO=ON
 CMAKE_ARGS+=	-DENABLE_GR_BLOCKS=ON
 CMAKE_ARGS+=	-DENABLE_GR_FFT=ON
-#MAKE_ARGS+=	-DENABLE_GR_FILTER=ON
-#MAKE_ARGS+=	-DENABLE_PYTHON=ON
+CMAKE_ARGS+=	-DENABLE_GR_FILTER=ON
+CMAKE_ARGS+=	-DENABLE_PYTHON=ON
 CMAKE_ARGS+=	-DENABLE_VOLK=ON -DENABLE_INTERNAL_VOLK=OFF
 CMAKE_ARGS+=	-DCMAKE_HAVE_PTHREADS_CREATE=OFF
 
@@ -149,3 +149,4 @@ do-install:
 .include	"../../math/gsl/buildlink3.mk"
 .include	"../../math/volk/buildlink3.mk"
 .include	"../../textproc/log4cpp/buildlink3.mk"
+.include	"../../textproc/icu/buildlink3.mk"

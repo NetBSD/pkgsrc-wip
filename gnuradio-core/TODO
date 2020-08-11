@@ -66,3 +66,27 @@ make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/gnuradio-core
 Stop.
 make: stopped in /export/CHROOT/usr/pkgsrc/wip/gnuradio-core
 
+as of 2020-08-11
+---------------------------------------------------------------
+-- Configuring python-support support...
+--   Dependency PYTHONLIBS_FOUND = TRUE
+--   Dependency SWIG_FOUND = TRUE
+--   Dependency SWIG_VERSION_CHECK = FALSE
+--   Dependency SIX_FOUND = TRUE
+CMake Error at cmake/Modules/GrComponent.cmake:75 (message):
+  user force-enabled python-support but configuration checked failed
+Call Stack (most recent call first):
+  CMakeLists.txt:381 (GR_REGISTER_COMPONENT)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/tmp/wip/gnuradio-core/work/gnuradio-3.8.1.0/build/CMakeFiles/CMakeOutput.log".
+*** Error code 1
+
+Stop.
+make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/gnuradio-core
+*** Error code 1
+
+Stop.
+make: stopped in /export/CHROOT/usr/pkgsrc/wip/gnuradio-core
+
