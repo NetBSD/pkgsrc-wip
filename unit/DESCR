@@ -1,5 +1,5 @@
 NGINX Unit is a lightweight dynamic open-source server for diverse
-web applications; to install it, see here.
+web applications.
 
 Built from scratch, Unit can run web apps in different language
 versions; fully configurable in runtime with zero interruption, it
