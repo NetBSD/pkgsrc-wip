@@ -17,9 +17,10 @@ USE_LANGUAGES+=	c
 
 .include "../../lang/php/phpversion.mk"
 
-.if empty(PKG_BUILD_OPTIONS.${PHP_PKG_PREFIX}:Mphp-embed)
-BROKEN=		"Requires the php-embed option enabled in PHP."
-.endif
+# FIX ME
+#.if empty(PKG_BUILD_OPTIONS.${PHP_PKG_PREFIX}:Mphp-embed)
+#BROKEN=		"Requires the php-embed option enabled in PHP."
+#.endif
 
 post-configure:
 	cd ${WRKSRC} && \
@@ -32,5 +33,5 @@ do-install:
 		${DESTDIR}${PREFIX}/libexec/unit/modules/
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
-.include "../../lang/php/ext.mk"
+#.include "../../lang/php/ext.mk"
 .include "../../www/unit/Makefile.common"
