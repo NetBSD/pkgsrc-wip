@@ -9,6 +9,8 @@ COMMENT=	Signal processing blocks to simulate channel models of GNU Radio
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GR_CHANNELS=ON
 CMAKE_ARGS+=	-DENABLE_GRC=ON
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 PLIST_MINUS+=	companion
 
