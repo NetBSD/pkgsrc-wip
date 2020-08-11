@@ -1,5 +1,16 @@
 # $NetBSD$
 
+# Chirp does not have what would normally called releasees.  They have
+# "daily builds" which are like releases except that:
+#   they are called chirp-daily instead of chirp
+#   they have YYYYMMDD version numbers
+#   they don't have the usual release testing
+# Upstream says
+#    they will not go back to regular version numbers
+#    the preferred name is chirp, not chirp-daily
+# via
+#   https://chirp.danplanet.com/issues/8067
+#   https://chirp.danplanet.com/news/15
 PKGVERSION=	20200622
 PKGNAME=	chirp-${PKGVERSION}
 DISTNAME=	chirp-daily-${PKGVERSION_NOREV}

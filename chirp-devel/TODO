@@ -1,16 +1,5 @@
-* VERSION
+Update to latest.
 
-Figure out the version problem.   Ticket filed upstream asking for clarification:
-  https://chirp.danplanet.com/issues/8067
+Probably this is ready.
 
-It seems that version according to chirp is "daily-YYYYMMNDD".  This
-has multiple issues for pkgsrc:
-  * "-" is not allowed
-  * "daily" is not a version number
-  * "daily" does not clearly sort after 0.4.1
-  * (plus as described in the ticket, the future is unclear
 
-Options seem to be:
-  * Use YYYYMMDD as the version, and expect users to perform manual
-    intervention if there are ever releases.
-  * Use 0.5.YYYYMMDD using "0.5" to represent "daily".
