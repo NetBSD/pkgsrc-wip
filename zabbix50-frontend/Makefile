@@ -9,9 +9,7 @@ EGDIR=		share/examples/zabbix
 
 USE_TOOLS+=		pax
 NO_BUILD=		yes
-
-do-configure:
-	${DO_NADA}
+NO_CONFIGURE=		yes
 
 REPLACE_SH+=	ui/locale/*.sh
 
