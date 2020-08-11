@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_GCC_RUNTIME=	yes
 GNU_CONFIGURE=		yes
+FORTIFY_SUPPORTED=	no
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
@@ -39,7 +40,7 @@ pre-configure:
 	${MKDIR} ${BUILDLINK_DIR}/include/sys
 	cp ${FILESDIR}/videoio.h ${BUILDLINK_DIR}/include/sys
 
-.elif !exists(/usr/include/linux/videodev.h)
+.elif ${OPSYS} == "Linux" && !exists(/usr/include/linux/videodev.h)
 pre-configure:
 	${MKDIR} ${BUILDLINK_DIR}/include/linux
 	cp ${FILESDIR}/videodev.h ${BUILDLINK_DIR}/include/linux
