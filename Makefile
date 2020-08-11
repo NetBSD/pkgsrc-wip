@@ -4558,6 +4558,7 @@ SUBDIR+=	spatt
 SUBDIR+=	spcm
 SUBDIR+=	spe
 SUBDIR+=	spectra
+SUBDIR+=	spectrwm-git
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	spice-gtk
