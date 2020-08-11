@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2020/06/20 12:43:46 gdt Exp $
 
-.include "../../sysutils/zabbix50-server/Makefile.common"
+.include "../zabbix50-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
 COMMENT=	Zabbix PHP 7.2+ frontend
