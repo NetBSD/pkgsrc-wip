@@ -1,0 +1,7 @@
+- in Makefile.common, the hardcode exists
+  CHECK_WRKREF_SKIP+=     libexec/emacs/${EMACS_VERSION}/x86_64--netbsd/emacs.pdmp
+  This should be adjusted
+
+- nox11 version is not checked yet
+
+- cocoa and gnustep are not checked

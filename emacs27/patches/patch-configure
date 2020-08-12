@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2018/10/27 20:58:39 leot Exp $
+
+Do not inject X11 LDFLAGS, pkgsrc handles that.
+Fixes PR pkg/53688.
+
+--- configure.orig	2020-08-04 19:43:32.000000000 +0000
++++ configure
+@@ -9615,9 +9615,11 @@ ac_link="$ac_link $LD_SWITCH_SYSTEM"
+ ## Compare with the gnu-linux case below, which added to the end
+ ## of LD_SWITCH_SYSTEM, and so can instead go at the front of
+ ## LD_SWITCH_SYSTEM_TEMACS.
++
+ case "$opsys" in
+   netbsd|openbsd)
+-   LD_SWITCH_SYSTEM="\$(LD_SWITCH_X_SITE_RPATH) $LD_SWITCH_SYSTEM" ;;
++### This is handled by pkgsrc.
++###   LD_SWITCH_SYSTEM="\$(LD_SWITCH_X_SITE_RPATH) $LD_SWITCH_SYSTEM" ;;
+ esac
+ 
+ C_SWITCH_MACHINE=
