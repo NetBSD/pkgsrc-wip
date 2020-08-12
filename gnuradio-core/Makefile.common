@@ -44,6 +44,11 @@ DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # gr_filter_design in gnuradio-core ask for:
 DEPENDS+=	${PYPKGPREFIX}-qwt-qt5-[0-9]*:../../wip/py-qwt-qt5
+DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/gnuradio-core/patches
@@ -150,3 +155,6 @@ do-install:
 .include	"../../math/volk/buildlink3.mk"
 .include	"../../textproc/log4cpp/buildlink3.mk"
 .include	"../../textproc/icu/buildlink3.mk"
+.include	"../../graphics/cairo/buildlink3.mk"
+.include	"../../graphics/cairo-gobject/buildlink3.mk"
+.include	"../../x11/gtk3/buildlink3.mk"
