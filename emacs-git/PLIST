@@ -78,6 +78,7 @@ man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
 share/applications/emacs.desktop
+share/applications/emacsclient.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
 share/emacs/${PKGVERSION}/etc/COPYING
@@ -250,10 +251,12 @@ share/emacs/${PKGVERSION}/etc/e/eterm-color
 share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
 share/emacs/${PKGVERSION}/etc/edt-user.el
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
+share/emacs/${PKGVERSION}/etc/emacs-mail.desktop
 share/emacs/${PKGVERSION}/etc/emacs.appdata.xml
 share/emacs/${PKGVERSION}/etc/emacs.desktop
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.service
+share/emacs/${PKGVERSION}/etc/emacsclient.desktop
 share/emacs/${PKGVERSION}/etc/enriched.txt
 share/emacs/${PKGVERSION}/etc/forms/README
 share/emacs/${PKGVERSION}/etc/forms/forms-d2.dat
@@ -1656,6 +1659,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/gv.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/gv.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/hierarchy.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/hierarchy.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/inline.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/inline.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/let-alist.el.gz
@@ -3659,6 +3664,8 @@ share/emacs/${PKGVERSION}/lisp/term/rxvt.el.gz
 share/emacs/${PKGVERSION}/lisp/term/rxvt.elc
 share/emacs/${PKGVERSION}/lisp/term/screen.el.gz
 share/emacs/${PKGVERSION}/lisp/term/screen.elc
+share/emacs/${PKGVERSION}/lisp/term/st.el.gz
+share/emacs/${PKGVERSION}/lisp/term/st.elc
 share/emacs/${PKGVERSION}/lisp/term/sun.el.gz
 share/emacs/${PKGVERSION}/lisp/term/sun.elc
 share/emacs/${PKGVERSION}/lisp/term/tmux.el.gz
