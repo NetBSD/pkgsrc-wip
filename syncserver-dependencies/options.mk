@@ -13,5 +13,6 @@ DEPENDS+=	${PYPKGPREFIX}-${APACHE_PKG_PREFIX}-mod_wsgi-[0-9]*:../../www/py-mod_w
 
 .if !empty(PKG_OPTIONS:Mnginx)
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
-DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
+# not available for python 2.x in pkgsrc
+#DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 .endif
