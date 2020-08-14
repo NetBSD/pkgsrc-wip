@@ -384,8 +384,10 @@ CHECK_WRKREF_SKIP+=	bin/spotifyd
 # 12. Can then re-add `--frozen --locked` below
 #
 # Although... also need to update the cargo crate depends list above and those patches...
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --no-default-features --features pulseaudio_backend --release --frozen --locked
+
+CARGO_ARGS=	${DEFAULT_CARGO_ARGS}	\
+		--no-default-features	\
+		--features pulseaudio_backend
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotifyd ${DESTDIR}${PREFIX}/bin
