@@ -3,7 +3,7 @@
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
 
-GO115_VERSION=	1.15rc1 # needs to be in go/version.mk
+GO115_VERSION=	1.15 # needs to be in go/version.mk
 
 DISTNAME=	go${GO115_VERSION}.src
 PKGNAME=	go115-${GO115_VERSION}

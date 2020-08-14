@@ -2080,6 +2080,7 @@ go115/src/cmd/go/testdata/script/list_case_collision.txt
 go115/src/cmd/go/testdata/script/list_compiled_imports.txt
 go115/src/cmd/go/testdata/script/list_constraints.txt
 go115/src/cmd/go/testdata/script/list_dedup_packages.txt
+go115/src/cmd/go/testdata/script/list_err_stack.txt
 go115/src/cmd/go/testdata/script/list_find.txt
 go115/src/cmd/go/testdata/script/list_gofile_in_goroot.txt
 go115/src/cmd/go/testdata/script/list_importmap.txt
@@ -3570,9 +3571,6 @@ go115/src/crypto/ecdsa/equal_test.go
 go115/src/crypto/ecdsa/example_test.go
 go115/src/crypto/ecdsa/testdata/SigVer.rsp.bz2
 go115/src/crypto/ed25519/ed25519.go
-go115/src/crypto/ed25519/ed25519_noasm.go
-go115/src/crypto/ed25519/ed25519_s390x.go
-go115/src/crypto/ed25519/ed25519_s390x.s
 go115/src/crypto/ed25519/ed25519_test.go
 go115/src/crypto/ed25519/internal/edwards25519/const.go
 go115/src/crypto/ed25519/internal/edwards25519/edwards25519.go
@@ -6317,6 +6315,7 @@ go115/src/runtime/race/race_unix_test.go
 go115/src/runtime/race/race_windows_amd64.syso
 go115/src/runtime/race/race_windows_test.go
 go115/src/runtime/race/sched_test.go
+go115/src/runtime/race/syso_test.go
 go115/src/runtime/race/testdata/atomic_test.go
 go115/src/runtime/race/testdata/cgo_test.go
 go115/src/runtime/race/testdata/cgo_test_main.go
@@ -8921,6 +8920,7 @@ go115/test/fixedbugs/issue39459.go
 go115/test/fixedbugs/issue39472.go
 go115/test/fixedbugs/issue39541.go
 go115/test/fixedbugs/issue39651.go
+go115/test/fixedbugs/issue40367.go
 go115/test/fixedbugs/issue4066.go
 go115/test/fixedbugs/issue4085a.go
 go115/test/fixedbugs/issue4085b.go
