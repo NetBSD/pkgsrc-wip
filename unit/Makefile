@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	unit-1.18.0
+DISTNAME=	unit-1.19.0
 
 MAINTAINER=	osa@FreeBSD.org
 
