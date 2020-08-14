@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://gn-review.googlesource.com/c/gn/+/9700
+
 --- tools/gn/build/gen.py.orig	2020-06-25 09:40:29.000000000 +0000
 +++ tools/gn/build/gen.py
 @@ -45,6 +45,8 @@ class Platform(object):

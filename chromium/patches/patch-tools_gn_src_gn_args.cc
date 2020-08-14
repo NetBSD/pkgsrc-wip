@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://gn-review.googlesource.com/c/gn/+/9700
+
 --- tools/gn/src/gn/args.cc.orig	2020-06-25 09:40:29.000000000 +0000
 +++ tools/gn/src/gn/args.cc
 @@ -316,6 +316,8 @@ void Args::SetSystemVarsLocked(Scope* de

@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://gn-review.googlesource.com/c/gn/+/9700
+
 --- tools/gn/src/base/files/file_util.h.orig	2020-07-15 19:07:32.000000000 +0000
 +++ tools/gn/src/base/files/file_util.h
 @@ -325,7 +325,7 @@ bool VerifyPathControlledByAdmin(const b

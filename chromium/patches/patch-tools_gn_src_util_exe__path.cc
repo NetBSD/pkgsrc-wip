@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://gn-review.googlesource.com/c/gn/+/9700
+
 --- tools/gn/src/util/exe_path.cc.orig	2020-06-25 09:40:29.000000000 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@

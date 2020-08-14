@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://gn-review.googlesource.com/c/gn/+/9700
+
 --- tools/gn/src/base/files/scoped_file.cc.orig	2020-07-15 19:07:32.000000000 +0000
 +++ tools/gn/src/base/files/scoped_file.cc
 @@ -31,7 +31,7 @@ void ScopedFDCloseTraits::Free(int fd) {
