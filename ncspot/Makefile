@@ -421,7 +421,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ncspot ${DESTDIR}${PREFIX}/bin
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
