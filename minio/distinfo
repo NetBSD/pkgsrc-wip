@@ -2293,3 +2293,5 @@ RMD160 (sigs.k8s.io_yaml_@v_v1.1.0.mod) = b062175dc1ba92e8c5a80661fa0e953f8b16ce
 SHA512 (sigs.k8s.io_yaml_@v_v1.1.0.mod) = 78f6402daccb04510f4ef35ee457ee13e4f447fba8e6aa33b4d32aa666e925861bf3b3f22c5ba9573871ec7e830f99e4caae0969724a54eadf40e6a7ed7931a0
 Size (sigs.k8s.io_yaml_@v_v1.1.0.mod) = 24 bytes
 SHA1 (patch-go.mod) = b3622e712e2903ef1d50052b77aa489529dacac7
+SHA1 (patch-pkg_disk_stat__fallback.go) = e11b4828f0cf31c349cd471f41b900dece37b125
+SHA1 (patch-pkg_disk_stat__netbsd.go) = cd53f62964bb9db08bb1dc174820f17fc6637d08
