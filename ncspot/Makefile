@@ -10,12 +10,12 @@ HOMEPAGE=	https://github.com/hrkfdn/ncspot/
 COMMENT=	Cross-platform ncurses Spotify client written in Rust
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES+=			c c++
+USE_LANGUAGES+=			c c++	# rust, but needs a toolchain to link
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_ACCEPTED=	37
 PYTHON_FOR_BUILD_ONLY=		tool
 
-USE_NCURSES=	yes # NCURSES_MOUSE_VERSION
+USE_NCURSES=	yes	# NCURSES_MOUSE_VERSION, also needs wide support
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
@@ -412,17 +412,22 @@ CARGO_CRATE_DEPENDS+=	xi-unicode-0.2.1
 
 INSTALLATION_DIRS=	bin
 
-MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.portaudio}/lib
+MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --release -j${_MAKE_JOBS_N}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --release --offline -j${_MAKE_JOBS_N}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ncspot ${DESTDIR}${PREFIX}/bin
 
-.include "../../security/openssl/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libxcb?=	build
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
