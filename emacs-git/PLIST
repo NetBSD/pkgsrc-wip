@@ -1795,8 +1795,6 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-button.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-button.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-capab.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-capab.elc
-share/emacs/${PKGVERSION}/lisp/erc/erc-compat.el.gz
-share/emacs/${PKGVERSION}/lisp/erc/erc-compat.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-dcc.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-dcc.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-desktop-notifications.el.gz
@@ -2953,6 +2951,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/crisp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/crisp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cust-print.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cust-print.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/erc-compat.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/erc-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.el.gz
