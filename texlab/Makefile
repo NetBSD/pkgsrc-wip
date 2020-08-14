@@ -310,9 +310,6 @@ CARGO_CRATE_DEPENDS+=	xmlparser-0.10.0
 
 USE_LANGUAGES=		# none
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --verbose --locked --frozen --release -j${_MAKE_JOBS_N}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty ${DESTDIR}${PREFIX}/bin
 

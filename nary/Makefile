@@ -139,9 +139,6 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${_MAKE_JOBS_N}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nary ${DESTDIR}${PREFIX}/bin
 
