@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://skia-review.googlesource.com/c/skia/+/310856
+
 --- third_party/skia/third_party/angle2/BUILD.gn.orig	2020-07-15 19:01:41.000000000 +0000
 +++ third_party/skia/third_party/angle2/BUILD.gn
 @@ -37,8 +37,8 @@ config("common") {
