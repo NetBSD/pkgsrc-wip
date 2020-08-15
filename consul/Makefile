@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	consul-1.8.2
+DISTNAME=	consul-1.8.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -79,8 +79,8 @@ GO_MODULE_FILES+=	github.com/armon/consul-api/@v/v0.0.0-20180202201655-eb2c6b5be
 GO_MODULE_FILES+=	github.com/armon/consul-api/@v/v0.0.0-20180202201655-eb2c6b5be1b6.zip
 GO_MODULE_FILES+=	github.com/armon/go-metrics/@v/v0.0.0-20180917152333-f0300d1749da.mod
 GO_MODULE_FILES+=	github.com/armon/go-metrics/@v/v0.0.0-20190430140413-ec5e00d3c878.mod
-GO_MODULE_FILES+=	github.com/armon/go-metrics/@v/v0.3.3.mod
-GO_MODULE_FILES+=	github.com/armon/go-metrics/@v/v0.3.3.zip
+GO_MODULE_FILES+=	github.com/armon/go-metrics/@v/v0.3.4.mod
+GO_MODULE_FILES+=	github.com/armon/go-metrics/@v/v0.3.4.zip
 GO_MODULE_FILES+=	github.com/armon/go-radix/@v/v0.0.0-20180808171621-7fddfc383310.mod
 GO_MODULE_FILES+=	github.com/armon/go-radix/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/armon/go-radix/@v/v1.0.0.zip
