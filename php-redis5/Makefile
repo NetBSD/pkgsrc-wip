@@ -17,6 +17,9 @@ LICENSE=	php
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PECL_VERSION}
 
+PHP_VERSIONS_ACCEPTED=		72 73 74
+PHP_VERSIONS_INCOMPATIBLE=	56
+
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-Wno-error=return-type
