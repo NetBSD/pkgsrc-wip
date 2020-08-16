@@ -45,6 +45,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensio
 
 WRKSRC=		${WRKDIR}/synapse-${DISTNAME:S,^v,,}
 USE_LANGUAGES=	# none
+REPLACE_PERL+=	scripts/sync_room_to_group.pl
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
