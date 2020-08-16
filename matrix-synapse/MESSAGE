@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD$
+
+To generate a Synapse configuration, run:
+
+${PYTHONBIN} -m synapse.app.homeserver \
+	--server-name my.domain.name \
+	--config-path ${PREFIX}/etc/matrix-synapse/homeserver.yaml \
+	--generate-config \
+	--report-stats=no
+===========================================================================

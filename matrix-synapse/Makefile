@@ -47,5 +47,8 @@ WRKSRC=		${WRKDIR}/synapse-${DISTNAME:S,^v,,}
 USE_LANGUAGES=	# none
 REPLACE_PERL+=	scripts/sync_room_to_group.pl
 
+MESSAGE_SUBST+=	PREFIX=${PREFIX:Q}
+MESSAGE_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
