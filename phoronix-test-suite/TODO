@@ -1,4 +1,0 @@
-- In install-sh:
- `-e' option of echo is not portable
-- In Makefile:
- php-* dependencies' minimum version requirement needs to be checked

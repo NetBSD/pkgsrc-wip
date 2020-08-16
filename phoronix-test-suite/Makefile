@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	bash
 
+# Only required dependency for the Phoronix Test Suite is PHP 5.3 or newer
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3:../../textproc/php-json

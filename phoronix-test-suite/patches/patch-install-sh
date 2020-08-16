@@ -7,8 +7,9 @@ $NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
   reliable portable option;
 * Remove the systemd directory creation and make the PLIST handle
   the presence/absence of systemd ecosystem.
+* Remove the `-e' option of echo as it is not portable
 
---- install-sh.orig	2020-05-25 13:26:05.000000000 +0000
+--- install-sh.orig	2020-07-09 17:06:29.000000000 +0000
 +++ install-sh
 @@ -53,10 +53,9 @@ mkdir -p $DESTDIR$INSTALL_PREFIX/bin/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/appdata/
@@ -57,7 +58,22 @@ $NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
  rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/static/phoronix-test-suite.desktop
  rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/static/phoronix-test-suite-launcher.desktop
  rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/openbenchmarking.org/openbenchmarking-mime.xml
-@@ -122,6 +120,5 @@ Phoronix Test Suite Files: $INSTALL_PREF
+@@ -114,14 +112,16 @@ else
+ 
+ fi
+ 
+-echo -e "\nPhoronix Test Suite Installation Completed\n
+-Executable File: $INSTALL_PREFIX/bin/phoronix-test-suite
+-Documentation: $INSTALL_PREFIX/share/doc/phoronix-test-suite/
+-Phoronix Test Suite Files: $INSTALL_PREFIX/share/phoronix-test-suite/\n"
++echo
++echo "Phoronix Test Suite Installation Completed"
++echo
++echo "Executable File: $INSTALL_PREFIX/bin/phoronix-test-suite"
++echo "Documentation: $INSTALL_PREFIX/share/doc/phoronix-test-suite/"
++echo "Phoronix Test Suite Files: $INSTALL_PREFIX/share/phoronix-test-suite/"
++echo
+ 
  if [ "X$DESTDIR" != "X" ]
  then
  	echo "Installed to chroot: $DESTDIR"
