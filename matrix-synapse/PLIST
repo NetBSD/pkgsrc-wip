@@ -9,12 +9,6 @@ bin/register_new_matrix_user
 bin/synapse_port_db
 bin/sync_room_to_group.pl
 bin/synctl
-${PYSITELIB}/matrix_${PKGNAME}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/matrix_${PKGNAME}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/matrix_${PKGNAME}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/matrix_${PKGNAME}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/matrix_${PKGNAME}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/matrix_${PKGNAME}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/synapse/__init__.py
 ${PYSITELIB}/synapse/__init__.pyc
 ${PYSITELIB}/synapse/__init__.pyo
