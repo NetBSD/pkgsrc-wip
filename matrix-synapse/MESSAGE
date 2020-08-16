@@ -3,9 +3,11 @@ $NetBSD$
 
 To generate a Synapse configuration, run:
 
+cd ${SYNAPSE_DATA} &&
 ${PYTHONBIN} -m synapse.app.homeserver \
 	--server-name my.domain.name \
-	--config-path ${PREFIX}/etc/matrix-synapse/homeserver.yaml \
+	--config-path ${PKG_SYSCONFDIR}/matrix-synapse/homeserver.yaml \
+	--config-directory ${PKG_SYSCONFDIR}/matrix-synapse \
 	--generate-config \
 	--report-stats=no
 ===========================================================================
