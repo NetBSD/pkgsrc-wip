@@ -34,4 +34,3 @@ install-cargo-binary:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RM} ${DESTDIR}${LOCALBASE}/.crates.toml
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
