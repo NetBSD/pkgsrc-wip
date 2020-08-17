@@ -25,6 +25,8 @@ WRKSRC=		${WRKDIR}/CGP-1
 
 DEPENDS+=	${PHP_PKG_PREFIX}-rrd>=1.1.3:../../databases/php-rrd
 
+PHP_VERSIONS_ACCEPTED=	56 # php-rrd
+
 do-install:
 	cd ${DESTDIR}/${PREFIX}/${INSTALLATION_DIRS} && \
 	unzip -ojqL ${DISTDIR}/${DISTFILES}
