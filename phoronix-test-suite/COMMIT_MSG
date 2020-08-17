@@ -323,29 +323,7 @@ phodevi: Much faster CPU usage reading on large core count systems
 
 pkgsrc changes
 ==============
-Commits since 9.8.0
-    * Added a COMMIT_MSG file
-    * Resolved the pending TODOs
-        - Added patches to avoid unportable `-e' option of echo(1)
-        - Verified minimum required version of PHP dependencies as 5.3
-    * wip/phoronix-test-suite: update phoronix-test-suite to 9.8.0
-        - Update from Phoronix Test Suite 9.6.1 to Phoronix Test Suite 9.8.0
-        - Additions in Makefile to replace the #!/bin/bash she-bang with 
-          #!/usr/pkg/bin/bash
-
-Commits since 9.6.1
-    * Added php-* dependency version checking in TODO
-        - Minimum required version for PHP dependencies needed to verified
-    * Added required PHP dependencies & removed TODO file
-        - Added the entries for required PHP dependencies in the Makefile
-    * phoronix-test-suite: Add an entry about `echo -e' usage in install-sh
-        - `-e' option of echo(1) to be removed later as it is unportable
-    * wip/phoronix-test-suite: update phoronix-test-suite to 9.6.1
-        - Update from Phoronix Test Suite 9.8.0 to Phoronix Test Suite 9.6.1
-        - Added patches to avoid unportable `-R' option of cp(1)
-        - Added patches to replace the unportable "==" operator with "="
-
-Commits since 8.8.1nb1
-    * wip/phoronix-test-suite: import phoronix-test-suite-8.8.1nb1
-        - Import commit from benchmarks/phoronix-test-suite to 
-          wip/phoronix-test-suite
+- Added patches to avoid unportable `-e' option of echo(1)
+- Document rationale behind PHP dependencies versions
+- Added patches to avoid unportable `-R' option of cp(1)
+- Added patches to replace the unportable "==" operator with "="
