@@ -11,18 +11,6 @@ HOMEPAGE=	https://github.com/httpdss/
 COMMENT=	Web interface for Collectd
 LICENSE=	gnu-gpl-v2
 
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-USE_TOOLS+=		pax unzip
-AUTO_MKDIRS=		yes
-#EXTRACT_ONLY=		# empty
-REPLACE_PERL+=		cgi-bin/*.pl
-REPLACE_PERL+=		cgi-bin/*.cgi
-INSTALLATION_DIRS=	share/collectd-web
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_LANGUAGES=	# none
-
 DEPENDS+=	fcgiwrap>=1.1.0:../../www/fcgiwrap
 DEPENDS+=	spawn-fcgi>=1.6.3:../../www/spawn-fcgi
 DEPENDS+=	p5-HTTP-Parser>=0.06:../../www/p5-HTTP-Parser
@@ -32,8 +20,22 @@ DEPENDS+=	p5-CGI>=4.36:../../www/p5-CGI
 #DEPENDS+=	cgic>=2.02:../../www/cgic
 #DEPENDS+=	fcgi>=2.4.0:../../www/fcgi
 
+NO_BUILD=		yes
+USE_TOOLS+=		pax perl:run
+REPLACE_PERL+=		cgi-bin/*.pl
+REPLACE_PERL+=		cgi-bin/*.cgi
+REPLACE_SH+=		check_deps.sh
+REPLACE_PYTHON+=	runserver.py
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+USE_LANGUAGES=	# none
+
+do-configure:
+	# empty target is needed, otherwise REPLACE_* do not happen
+
 do-install:
-	cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${PREFIX}/${INSTALLATION_DIRS}
+	cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${PREFIX}/share/collectd-web
 
 .include "../../lang/perl5/module.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
