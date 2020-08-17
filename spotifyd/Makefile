@@ -399,7 +399,6 @@ do-install:
 # into using that.
 BUILDLINK_API_DEPENDS.rust+=   rust>=1.40.0
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
