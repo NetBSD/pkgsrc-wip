@@ -5,8 +5,8 @@
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-CONFLICTS+=     zabbix-server-[3-4]*
-CONFLICTS+=     zabbix-proxy-*
+CONFLICTS+=	zabbix-server-[3-4]*
+CONFLICTS+=	zabbix-proxy-[0-9]*
 
 DEPENDS+=	fping-[0-9]*:../../net/fping
 
