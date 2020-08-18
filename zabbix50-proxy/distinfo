@@ -4,4 +4,5 @@ SHA1 (zabbix-5.0.2.tar.gz) = d1ef17c3d4878f8a3a4cffe4796123c0d118123a
 RMD160 (zabbix-5.0.2.tar.gz) = 70a4b471452856be1b6c48f3f9d672c2b611ba62
 SHA512 (zabbix-5.0.2.tar.gz) = 81cf26d67e4e4df388dd6505db6f7451cf2f05aa6ac7b5d043c32eec89053cf133075bbb289cfb5b15f48a3eb94f6462427047777035ab09cc1dfeefba926dd6
 Size (zabbix-5.0.2.tar.gz) = 18823956 bytes
+SHA1 (patch-configure) = cf647b9ee52a96882d31f8783ac19b66e3e65105
 SHA1 (patch-src_zabbix__proxy_Makefile.in) = 222264bb6145dcd180657e657899aa960fba6d2e
