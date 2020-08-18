@@ -36,15 +36,6 @@ SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-ZABBIX_GROUP?=		zabbix
-ZABBIX_USER?=		zabbix
-PKG_GROUPS+=		${ZABBIX_GROUP}
-PKG_USERS+=		${ZABBIX_USER}:${ZABBIX_GROUP}
-PKG_GECOS.${ZABBIX_USER}= Zabbix user
-
-FILES_SUBST+=		ZABBIX_USER=${ZABBIX_USER}
-FILES_SUBST+=		ZABBIX_GROUP=${ZABBIX_GROUP}
-
 SMF_INSTANCES=		server
 
 post-install:
