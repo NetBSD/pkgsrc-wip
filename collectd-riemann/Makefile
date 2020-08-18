@@ -11,7 +11,7 @@ PKGREVISION=		7
 #COLLECTD_LIB.protobuf-c=${BUILDLINK_PREFIX.protobuf-c}
 COLLECTD_LIB.riemann-client=${BUILDLINK_PREFIX.riemann-client}
 
-BUILD_DEPENDS+=		protobuf-c-[0-9]*:../../devel/protobuf-c
+.include "../../devel/protobuf-c/buildlink3.mk"
 
 .include "../../wip/collectd/Makefile.common"
 
