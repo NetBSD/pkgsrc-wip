@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix50-server
 PKG_SUPPORTED_OPTIONS+=		inet6 libssh libssh2 snmp
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
-PKG_OPTIONS_GROUP.database=	mysql pgsql sqlite3
+PKG_OPTIONS_GROUP.database=	mysql pgsql 
 PKG_SUGGESTED_OPTIONS+=		libssh snmp pgsql
 
 .if empty(MISSING_FEATURES:Minet6)
@@ -11,6 +11,9 @@ PKG_SUGGESTED_OPTIONS+=		inet6
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		mysql
+PLIST_VARS+=		pgsql
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
@@ -30,6 +33,7 @@ CONFIGURE_ARGS+=	--with-ssh=${BUILDLINK_PREFIX.libssh}
 CONFIGURE_ARGS+=	--with-mysql
 .include "../../mk/mysql.buildlink3.mk"
 ZABBIX_DB_TYPE=		mysql
+PLIST.mysql=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msnmp)
@@ -41,10 +45,5 @@ CONFIGURE_ARGS+=	--with-net-snmp
 CONFIGURE_ARGS+=	--with-postgresql
 .include "../../mk/pgsql.buildlink3.mk"
 ZABBIX_DB_TYPE=		postgresql
-.endif
-
-.if !empty(PKG_OPTIONS:Msqlite3)
-CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
-.include "../../databases/sqlite3/buildlink3.mk"
-ZABBIX_DB_TYPE=		sqlite3
+PLIST.pgsql=		yes
 .endif

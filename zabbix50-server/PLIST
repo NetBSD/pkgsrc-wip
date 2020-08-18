@@ -7,7 +7,7 @@ share/zabbix/data.sql
 share/zabbix/double.sql
 share/zabbix/images.sql
 share/zabbix/schema.sql
-share/zabbix/timescaledb.sql
+${PLIST.pgsql}share/zabbix/timescaledb.sql
 @pkgdir share/zabbix/externalscripts
 @pkgdir share/zabbix/alertscripts
 @pkgdir lib/modules
