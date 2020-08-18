@@ -32,6 +32,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=7.2.0:../../devel/php-sysvsem
 
 INSTALLATION_DIRS+=	${EGDIR} share/zabbix
 
+post-patch: replace-interpreter
+
 do-install:
 	rm -f ${WRKSRC}/ui/locale/*.orig
 	cd ${WRKSRC}/ui; ${PAX} -rw . ${DESTDIR}${PREFIX}/share/zabbix/
@@ -39,4 +41,5 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/php-fpm-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../lang/php/phpversion.mk"
+.include "../../mk/configure/replace-interpreter.mk"
 .include "../../mk/bsd.pkg.mk"
