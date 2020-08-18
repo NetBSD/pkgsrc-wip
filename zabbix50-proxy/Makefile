@@ -5,6 +5,9 @@
 PKGNAME=	${DISTNAME:S/-/-proxy-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
+CONFLICTS+=     zabbix-server-*
+CONFLICTS+=     zabbix-proxy-[3-4]*
+
 USE_TOOLS+=		pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-proxy
