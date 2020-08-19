@@ -37,6 +37,8 @@ SUBST_FILES.fix-paths=		conf/*.conf
 SUBST_FILES.fix-paths+=		man/*.man
 SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
+CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
+
 .include "../../mk/bsd.prefs.mk"
 
 SMF_INSTANCES=		server
