@@ -16,7 +16,6 @@ LICENSE=	gnu-gpl-v3
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_TOOLS+=	pax unzip
-AUTO_MKDIRS=	yes
 EXTRACT_ONLY=	# empty
 
 INSTALLATION_DIRS=	share/collectd-graph-panel

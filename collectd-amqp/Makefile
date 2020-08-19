@@ -3,7 +3,6 @@
 COLLECTD_PACKAGE=	amqp
 
 COMMENT=		Statistics collection daemon - amqp plugin
-PKGREVISION=		3
 
 .include "../../net/rabbitmq-c/buildlink3.mk"
 COLLECTD_LIB.rabbitmq=	${BUILDLINK_PREFIX.rabbitmq-c}

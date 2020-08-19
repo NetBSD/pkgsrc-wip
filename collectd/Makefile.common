@@ -33,6 +33,7 @@
 # used by wip/collectd-yajl/Makefile
 # used by wip/p5-collectd/Makefile
 # used by wip/py-collectd/Makefile
+# used by wip/collectd-memcachec/Makefile
 
 DISTNAME=	collectd-5.11.0
 MASTER_SITES=	http://collectd.org/files/
@@ -79,8 +80,8 @@ COLLECTD_LIBS=		aquaero5 hiredis curl dbi esmtp ganglia gcrypt	\
 			tokyotyrant upsclient varnish xmms yajl
 COLLECTD_LIBS+=		atasmart dpdk gps iptc jansson jevents ldap microhttpd mosquitto netapp netsnmpagent pqos protobuf protobuf-c qpid-proton rdkafka ssl slurm udev xenctrl
 
-CONFIGURE_ARGS+=	--with-cuda=no --with-java=no --with-mic=no --with-oracle=no	\
-			--with-perl-bindings=no 	\
+CONFIGURE_ARGS+=	--with-cuda=no --with-java=no --with-mic=no --with-oracle=no \
+			--with-perl-bindings=no \
 			--disable-all-plugins
 
 .for lib in ${COLLECTD_LIBS}

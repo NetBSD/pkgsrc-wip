@@ -4,7 +4,6 @@ COLLECTD_PACKAGE=	riemann
 COLLECTD_PLUGINS=	write_riemann
 
 COMMENT=		Statistics collection daemon - riemann plugin
-PKGREVISION=		7
 
 #.include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../sysutils/riemann-client/buildlink3.mk"

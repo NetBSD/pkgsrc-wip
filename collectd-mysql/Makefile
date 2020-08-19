@@ -3,7 +3,6 @@
 COLLECTD_PACKAGE=	mysql
 
 PKGNAME=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}${MYSQL_VERSION}/}
-PKGREVISION=		2
 COMMENT=		Statistics collection daemon - mysql plugin
 
 .include "../../mk/mysql.buildlink3.mk"

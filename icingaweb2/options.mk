@@ -1,8 +1,8 @@
 # $NetBSD: options.mk $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.icingaweb2
-PKG_OPTIONS_NONEMPTY_SETS= ido
-PKG_OPTIONS_SET.ido=	mysql pgsql
+PKG_OPTIONS_VAR=		PKG_OPTIONS.icingaweb2
+PKG_OPTIONS_NONEMPTY_SETS=	ido
+PKG_OPTIONS_SET.ido=		mysql pgsql
 
 .include "../../mk/bsd.options.mk"
 

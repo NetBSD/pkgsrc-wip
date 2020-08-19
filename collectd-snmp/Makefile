@@ -3,7 +3,6 @@
 COLLECTD_PACKAGE=	snmp
 
 COMMENT=		Statistics collection daemon - snmp plugin
-PKGREVISION=		3
 
 .include "../../net/net-snmp/buildlink3.mk"
 COLLECTD_LIB.netsnmp=	${BUILDLINK_PREFIX.net-snmp}/bin/net-snmp-config

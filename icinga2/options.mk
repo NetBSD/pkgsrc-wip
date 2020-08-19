@@ -10,10 +10,9 @@ PKG_SUGGESTED_OPTIONS+=	icinga2-livestatus icinga2-notification icinga2-perfdata
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	ido mysql pgsql
+PLIST_VARS+=	mysql pgsql
 
 .if !empty(PKG_OPTIONS:Mmysql)
-PLIST.ido=	yes
 PLIST.mysql=	yes
 CMAKE_ARGS+=	-DICINGA2_WITH_MYSQL=ON
 .include "../../mk/mysql.buildlink3.mk"
@@ -21,7 +20,6 @@ CMAKE_ARGS+=	-DICINGA2_WITH_MYSQL=ON
 CMAKE_ARGS+=	-DICINGA2_WITH_MYSQL=OFF
 .endif
 .if !empty(PKG_OPTIONS:Mpgsql)
-PLIST.ido=	yes
 PLIST.pgsql=	yes
 CMAKE_ARGS+=	-DICINGA2_WITH_PGSQL=ON
 .include "../../mk/pgsql.buildlink3.mk"
@@ -30,13 +28,13 @@ CMAKE_ARGS+=	-DICINGA2_WITH_PGSQL=OFF
 .endif
 
 .for option in checker compat livestatus notification perfdata
-PLIST_VARS+=	${option}
-.if !empty(PKG_OPTIONS:Micinga2-${option})
-CMAKE_ARGS+=	-DICINGA2_WITH_${option:tu}=ON
-PLIST.${option}=yes
-.else
-CMAKE_ARGS+=	-DICINGA2_WITH_${option:tu}=OFF
-.endif
+PLIST_VARS+=		${option}
+.  if !empty(PKG_OPTIONS:Micinga2-${option})
+CMAKE_ARGS+=		-DICINGA2_WITH_${option:tu}=ON
+PLIST.${option}=	yes
+.  else
+CMAKE_ARGS+=		-DICINGA2_WITH_${option:tu}=OFF
+.  endif
 .endfor
 
 .if !empty(PKG_OPTIONS:Micinga2-studio)

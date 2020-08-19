@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=httpdss/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://github.com/httpdss/
+HOMEPAGE=	https://github.com/httpdss/collectd-web
 COMMENT=	Web interface for Collectd
 LICENSE=	gnu-gpl-v2
 
@@ -34,7 +34,7 @@ do-configure:
 	# empty target is needed, otherwise REPLACE_* do not happen
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${PREFIX}/share/collectd-web
+	cd ${WRKSRC} && pax -rw -pp . ${DESTDIR}${PREFIX}/share/collectd-web
 
 .include "../../lang/perl5/module.mk"
 .include "../../lang/python/application.mk"

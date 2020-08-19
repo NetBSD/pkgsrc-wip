@@ -7,7 +7,7 @@ COMMENT=		Statistics collection daemon - pinba plugin
 .include "../../devel/protobuf-c/buildlink3.mk"
 COLLECTD_LIB.protobuf-c=${BUILDLINK_PREFIX.protobuf-c}
 
-BUILD_DEPENDS+= protobuf>=3.0.0:../../devel/protobuf
+BUILD_DEPENDS+=	protobuf>=3.0.0:../../devel/protobuf
 
 .include "../../wip/collectd/Makefile.common"
 

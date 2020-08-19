@@ -3,7 +3,6 @@
 COLLECTD_PACKAGE=	dns
 
 COMMENT=		Statistics collection daemon - dns plugin
-PKGREVISION=		3
 
 .include "../../net/libpcap/buildlink3.mk"
 COLLECTD_LIB.pcap=	${BUILDLINK_PREFIX.libpcap}

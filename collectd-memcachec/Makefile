@@ -3,7 +3,6 @@
 COLLECTD_PACKAGE=	memcachec
 
 COMMENT=		Statistics collection daemon - memcachec plugin
-PKGREVISION=		2
 
 .include "../../devel/libmemcached/buildlink3.mk"
 COLLECTD_LIB.memcached=	${BUILDLINK_PREFIX.libmemcached}

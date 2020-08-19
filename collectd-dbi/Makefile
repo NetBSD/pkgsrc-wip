@@ -3,7 +3,6 @@
 COLLECTD_PACKAGE=	dbi
 
 COMMENT=		Statistics collection daemon - dbi plugin
-PKGREVISION=		2
 
 .include "../../databases/libdbi/buildlink3.mk"
 COLLECTD_LIB.dbi=	${BUILDLINK_PREFIX.libdbi}

@@ -17,7 +17,7 @@ DEFAULT_PLUGINS+=	aggregation apcups csv email exec filecount	\
 			target_scale target_set	target_v5upgrade	\
 			teamspeak2 threshold unixsock uuid write_graphite
 
-DEFAULT_PLUGINS+= check_uptime chrony logparser memcached notify_nagios write_influxdb_udp write_log write_sensu write_syslog write_tsdb zookeeper
+DEFAULT_PLUGINS+=	check_uptime chrony logparser memcached notify_nagios write_influxdb_udp write_log write_sensu write_syslog write_tsdb zookeeper
 
 .for option in ${DEFAULT_PLUGINS}
 CONFIGURE_ARGS+=	--enable-${option}

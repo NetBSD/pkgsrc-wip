@@ -4,7 +4,6 @@ COLLECTD_PACKAGE=	lua
 COLLECTD_PLUGINS=	lua
 
 COMMENT=		Statistics collection daemon - lua plugin
-PKGREVISION=		2
 
 .include "../../wip/collectd/Makefile.common"
 

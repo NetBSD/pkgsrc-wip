@@ -4,7 +4,6 @@ COLLECTD_PACKAGE=	curl
 COLLECTD_PLUGINS=	curl curl_json curl_xml apache bind nginx write_http ascent
 
 COMMENT=		Statistics collection daemon - curl-based plugins
-PKGREVISION=		15
 
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

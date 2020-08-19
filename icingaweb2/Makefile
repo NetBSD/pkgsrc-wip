@@ -28,17 +28,19 @@ NO_BUILD=	YES
 # Can't set NO_CONFIGURE=YES since REPLACE_INTERPRETER needs a configure phase
 do-configure:
 
-PKG_SYSCONFSUBDIR=	icingaweb2
-EGDIR=			${PREFIX}/share/examples/icingaweb2
-SHAREDIR=		${PREFIX}/share/icingaweb2
-INCDIR=			${PREFIX}/lib/php
-INSTALLATION_DIRS+=	${PREFIX}/bin ${EGDIR} ${SHAREDIR}
-STORAGEDIR=		${VARBASE}/db/icingaweb2
-LOGDIR=			${VARBASE}/log/icingaweb2
-OWN_DIRS+=		${STORAGEDIR} ${LOGDIR}
-RUNDIR_PARENT=		${VARBASE}/run
-EDITOR=			vi
-PKG_SYSCONFDIR.icinga2?=${PKG_SYSCONFBASE}/icinga2
+PKG_SYSCONFSUBDIR=		icingaweb2
+EGDIR=				${PREFIX}/share/examples/icingaweb2
+SHAREDIR=			${PREFIX}/share/icingaweb2
+INCDIR=				${PREFIX}/lib/php
+INSTALLATION_DIRS+=		${PREFIX}/bin ${EGDIR} ${SHAREDIR}
+STORAGEDIR=			${VARBASE}/db/icingaweb2
+LOGDIR=				${VARBASE}/log/icingaweb2
+OWN_DIRS+=			${STORAGEDIR} ${LOGDIR}
+RUNDIR_PARENT=			${VARBASE}/run
+EDITOR=				vi
+PKG_SYSCONFDIR.icinga2?=	${PKG_SYSCONFBASE}/icinga2
+
+BUILD_DEFS+=	VARBASE PKG_SYSCONFBASE
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -51,10 +53,10 @@ PKG_SYSCONFDIR.icinga2?=${PKG_SYSCONFBASE}/icinga2
 
 # Install example configuration files.
 # Contents taken from the "Advanced Topics: Icinga Web 2 Manual Setup: Icinga Web 2 Manual Configuration" manual section
-CONFS= roles.ini resources.ini config.ini authentication.ini groups.ini roles.ini
-CONFDIRS= modules modules/monitoring
-CONFS+=	modules/monitoring/config.ini modules/monitoring/backends.ini modules/monitoring/commandtransports.ini
-CONFDIRS+= enabledModules
+CONFS=		roles.ini resources.ini config.ini authentication.ini groups.ini roles.ini
+CONFDIRS=	modules modules/monitoring
+CONFS+=		modules/monitoring/config.ini modules/monitoring/backends.ini modules/monitoring/commandtransports.ini
+CONFDIRS+=	enabledModules
 # symlinks in enabledModules?
 
 # for extraction, see post-extract below
@@ -72,11 +74,11 @@ SUBST_SED.sampleconfig-db=	-e 's,@DB_TYPE@,pgsql,g'
 SUBST_SED.sampleconfig-db+=	-e 's,@DB_PORT@,5432,g'
 .endif
 
-SUBST_CLASSES+=			sampleconfig-path
-SUBST_STAGE.sampleconfig-path=	pre-configure
-SUBST_MESSAGE.sampleconfig-path=Fixing paths in config examples.
-SUBST_FILES.sampleconfig-path=	etc/examples/config.ini
-SUBST_VARS.sampleconfig-path=	SHAREDIR LOGDIR
+SUBST_CLASSES+=				sampleconfig-path
+SUBST_STAGE.sampleconfig-path=		pre-configure
+SUBST_MESSAGE.sampleconfig-path=	Fixing paths in config examples.
+SUBST_FILES.sampleconfig-path=		etc/examples/config.ini
+SUBST_VARS.sampleconfig-path=		SHAREDIR LOGDIR
 
 # for installation of the example configuration files, see do-install below
 
@@ -90,27 +92,27 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 
 # Remove unneeded files in directories that are installed
-RMFILES= application/fonts/fontello-ifont/config.json application/fonts/fontello-ifont/demo.html
-RMFILES+= application/fonts/fontello-ifont/font/ifont.eot application/fonts/fontello-ifont/font/ifont.svg application/fonts/fontello-ifont/font/ifont.ttf application/fonts/fontello-ifont/font/ifont.woff application/fonts/fontello-ifont/font/ifont.woff2
-RMFILES+= application/fonts/fontello-ifont/LICENSE.txt application/fonts/fontello-ifont/README.txt
-RMFILES+= application/fonts/icingaweb.md
-RMFILES+= application/VERSION
-RMFILES+= library/vendor/dompdf/lib/php-font-lib/LICENSE
-RMFILES+= library/vendor/dompdf/LICENSE library/vendor/dompdf/SOURCE
-RMFILES+= library/vendor/HTMLPurifier/LICENSE library/vendor/HTMLPurifier/SOURCE
-RMFILES+= library/vendor/JShrink/LICENSE library/vendor/JShrink/SOURCE
-RMFILES+= library/vendor/lessphp/LICENSE library/vendor/lessphp/SOURCE
-RMFILES+= library/vendor/Parsedown/LICENSE library/vendor/Parsedown/SOURCE
-RMFILES+= library/vendor/Zend/LICENSE.txt library/vendor/Zend/README.md library/vendor/Zend/VERSION
-RMFILES+= public/js/vendor/SOURCE.jquery.tipsy
+RMFILES=	application/fonts/fontello-ifont/config.json application/fonts/fontello-ifont/demo.html
+RMFILES+=	application/fonts/fontello-ifont/font/ifont.eot application/fonts/fontello-ifont/font/ifont.svg application/fonts/fontello-ifont/font/ifont.ttf application/fonts/fontello-ifont/font/ifont.woff application/fonts/fontello-ifont/font/ifont.woff2
+RMFILES+=	application/fonts/fontello-ifont/LICENSE.txt application/fonts/fontello-ifont/README.txt
+RMFILES+=	application/fonts/icingaweb.md
+RMFILES+=	application/VERSION
+RMFILES+=	library/vendor/dompdf/lib/php-font-lib/LICENSE
+RMFILES+=	library/vendor/dompdf/LICENSE library/vendor/dompdf/SOURCE
+RMFILES+=	library/vendor/HTMLPurifier/LICENSE library/vendor/HTMLPurifier/SOURCE
+RMFILES+=	library/vendor/JShrink/LICENSE library/vendor/JShrink/SOURCE
+RMFILES+=	library/vendor/lessphp/LICENSE library/vendor/lessphp/SOURCE
+RMFILES+=	library/vendor/Parsedown/LICENSE library/vendor/Parsedown/SOURCE
+RMFILES+=	library/vendor/Zend/LICENSE.txt library/vendor/Zend/README.md library/vendor/Zend/VERSION
+RMFILES+=	public/js/vendor/SOURCE.jquery.tipsy
 
 # for actual removal, see post-extract below
 
 
 # Some file have the executable bit set, but shouldn't
-NONEXECFILES= application/fonts/fontello-ifont/css/*
-NONEXECFILES+= public/font/*
-NONEXECFILES+= library/vendor/HTMLPurifier/DefinitionCache/Serializer/README
+NONEXECFILES=	application/fonts/fontello-ifont/css/*
+NONEXECFILES+=	public/font/*
+NONEXECFILES+=	library/vendor/HTMLPurifier/DefinitionCache/Serializer/README
 
 # for actual chmod, see post-extract below
 
@@ -277,7 +279,7 @@ PLIST_SUBST+=	SHAREDIR="${SHAREDIR:S.${PREFIX}/..}"
 PLIST_SUBST+=	INCDIR="${INCDIR:S.${PREFIX}/..}"
 PLIST_SUBST+=	EGDIR="${EGDIR:S.${PREFIX}/..}"
 
-GENERATE_PLIST+= printf "${EGDIR:S.${PREFIX}/..}/%s\n" ${CONFS};
+GENERATE_PLIST+=	printf "${EGDIR:S.${PREFIX}/..}/%s\n" ${CONFS};
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../lang/php/phpversion.mk"

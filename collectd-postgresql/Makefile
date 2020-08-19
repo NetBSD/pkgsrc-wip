@@ -3,7 +3,6 @@
 COLLECTD_PACKAGE=	postgresql
 
 PKGNAME=		${DISTNAME:S/collectd/collectd-${COLLECTD_PACKAGE}${PGSQL_VERSION}/}
-PKGREVISION=		2
 COMMENT=		Statistics collection daemon - postgresql plugin
 
 .include "../../mk/pgsql.buildlink3.mk"
