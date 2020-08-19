@@ -328,3 +328,6 @@ pts_Graph: Fix for displaying line graphs with very small values
 phodevi: Support reading sys.power via IPMI PS1_Input_Power/PS2_Input_Power
 phodevi: More robust Arm CPU model detection improvements
 phodevi: Much faster CPU usage reading on large core count systems
+
+
+Package updated by Apurva Nandan as part of Google Summer of Code 2020.
