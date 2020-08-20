@@ -727,8 +727,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/mc	\
 	  ${DESTDIR}${PREFIX}/bin/minio-client
 
-pre-clean:
-	${RUN} test -d ${WRKDIR} && cd ${WRKDIR} && chmod -R +w . || true
-
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
