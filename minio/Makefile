@@ -13,7 +13,7 @@ HOMEPAGE=	https://minio.io/
 COMMENT=	High performance distributed object storage server
 LICENSE=	apache-2.0
 
-EXTRACT_USING=	gtar
+CHECK_RELRO_SKIP=	bin/minio
 
 GO_BUILD_PATTERN=	--ldflags '-X github.com/minio/minio/cmd.Version=${GITHUB_TAG} -X github.com/minio/minio/cmd.ReleaseTag=${GITHUB_TAG}' .
 
