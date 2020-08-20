@@ -1032,3 +1032,4 @@ SHA1 (zip-0.5.6.crate) = 05d84c59be324370bc1c18c0a911ab9a931a19e8
 RMD160 (zip-0.5.6.crate) = cc939baa7f513025d527c64d4317ee202de4ad99
 SHA512 (zip-0.5.6.crate) = e78ccef45715e49228443324057e94046ebd4e0b992f4d91eb680263a7d71aed931d19dd45bf0b18f8a9507a4716cb2f3c7a3888fed0b9a6fba3e65e74125e90
 Size (zip-0.5.6.crate) = 33064 bytes
+SHA1 (patch-vendor_winit_src_platform__impl_linux_mod.rs) = d4b41a886bdc792396eaded25f6aa2f80afb6c4a
