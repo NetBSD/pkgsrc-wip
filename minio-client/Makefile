@@ -19,6 +19,8 @@ GO_SRCPATH=		github.com/minio/mc
 GO_DIST_BASE=		mc-${GITHUB_TAG}
 INSTALLATION_DIRS=	bin
 
+CHECK_RELRO_SKIP=	bin/minio-client
+
 GO_BUILD_PATTERN=	--ldflags '-X github.com/minio/mc/cmd.Version=${PKGVERSION} -X github.com/minio/mc/cmd.ReleaseTag=${GITHUB_TAG}' .
 
 GO_MODULE_FILES+=	github.com/pkg/xattr/@v/v0.4.1.mod
