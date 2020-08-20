@@ -35,10 +35,11 @@ BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 #REPLACE_PYTHON+=		../vendor/xcb-0.8.2/rs-client.py
 #REPLACE_PYTHON+=		../vendor/xcb-0.8.2/build.rs
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/alacritty
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/alacritty.yml ${DESTDIR}${PREFIX}/share/examples/alacritty
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
