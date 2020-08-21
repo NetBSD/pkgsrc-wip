@@ -1,2 +1,5 @@
 Vulnerabilites to investigate:
 - CVE-2020-14983
+  => Fixed in 5.9.0
+
+Package has Python problems.
