@@ -1,4 +1,5 @@
 @comment $NetBSD$
+@pkgdir share/chirp/images
 bin/chirpw
 bin/rpttool
 ${PYSITELIB}/chirp-daily_${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
@@ -545,6 +546,7 @@ ${PYSITELIB}/chirp/util.pyo
 ${PYSITELIB}/chirp/xml_ll.py
 ${PYSITELIB}/chirp/xml_ll.pyc
 ${PYSITELIB}/chirp/xml_ll.pyo
+man/man1/chirpw.1
 share/applications/chirp.desktop
 share/chirp/chirp.xsd
 share/chirp/chirp_banks.xsd
@@ -574,6 +576,4 @@ share/chirp/stock_configs/US FRS and GMRS Channels.csv
 share/chirp/stock_configs/US MURS Channels.csv
 share/chirp/stock_configs/US Marine VHF Channels.csv
 share/doc/chirp/COPYING
-man/man1/chirpw.1
 share/pixmaps/chirp.png
-@pkgdir share/chirp/images
