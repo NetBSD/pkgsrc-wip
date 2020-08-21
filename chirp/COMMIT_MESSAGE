@@ -1,0 +1,7 @@
+ham/chirp: Update to 20200807
+
+Upstream does not have release notes (or releases).
+
+chirp now tracks upstreams "chirp-daily" pseudoreleases, labeled by
+date.  The package remains "chirp"; upstream only calls it chirp-daily
+due to some GNU/Linux packaging issues.
