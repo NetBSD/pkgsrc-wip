@@ -57,4 +57,16 @@ Part 11: Resurrect SunOS codepath
     Should be usable for all POSIX conformant operating systems
 
 
+Part 12: Support for DeePsea tall patches in textures and sprites
+=================================================================
+WAD file for test:
+http://jnechaevsky.users.sourceforge.net/files/512x512.wad
+
+[X] Import general support from Crispy Doom
+[X] Tested to work for sprites with software renderer
+[ ] Make it work for textures with hardware renderer
+    The hardware renderer still has some problems (HOM with specific viewing
+    angles)
+
+
 EOF
