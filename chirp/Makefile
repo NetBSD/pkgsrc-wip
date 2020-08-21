@@ -11,7 +11,7 @@
 # via
 #   https://chirp.danplanet.com/issues/8067
 #   https://chirp.danplanet.com/news/15
-PKGVERSION=	20200622
+PKGVERSION=	20200807
 PKGNAME=	chirp-${PKGVERSION}
 DISTNAME=	chirp-daily-${PKGVERSION_NOREV}
 CATEGORIES=	ham

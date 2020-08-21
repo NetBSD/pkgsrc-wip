@@ -146,6 +146,9 @@ ${PYSITELIB}/chirp/drivers/ftm3200d.pyo
 ${PYSITELIB}/chirp/drivers/ftm350.py
 ${PYSITELIB}/chirp/drivers/ftm350.pyc
 ${PYSITELIB}/chirp/drivers/ftm350.pyo
+${PYSITELIB}/chirp/drivers/ftm7250d.py
+${PYSITELIB}/chirp/drivers/ftm7250d.pyc
+${PYSITELIB}/chirp/drivers/ftm7250d.pyo
 ${PYSITELIB}/chirp/drivers/ga510.py
 ${PYSITELIB}/chirp/drivers/ga510.pyc
 ${PYSITELIB}/chirp/drivers/ga510.pyo
@@ -221,6 +224,9 @@ ${PYSITELIB}/chirp/drivers/ict7h.pyo
 ${PYSITELIB}/chirp/drivers/ict8.py
 ${PYSITELIB}/chirp/drivers/ict8.pyc
 ${PYSITELIB}/chirp/drivers/ict8.pyo
+${PYSITELIB}/chirp/drivers/icv86.py
+${PYSITELIB}/chirp/drivers/icv86.pyc
+${PYSITELIB}/chirp/drivers/icv86.pyo
 ${PYSITELIB}/chirp/drivers/icw32.py
 ${PYSITELIB}/chirp/drivers/icw32.pyc
 ${PYSITELIB}/chirp/drivers/icw32.pyo
@@ -539,7 +545,6 @@ ${PYSITELIB}/chirp/util.pyo
 ${PYSITELIB}/chirp/xml_ll.py
 ${PYSITELIB}/chirp/xml_ll.pyc
 ${PYSITELIB}/chirp/xml_ll.pyo
-man/man1/chirpw.1
 share/applications/chirp.desktop
 share/chirp/chirp.xsd
 share/chirp/chirp_banks.xsd
@@ -569,5 +574,6 @@ share/chirp/stock_configs/US FRS and GMRS Channels.csv
 share/chirp/stock_configs/US MURS Channels.csv
 share/chirp/stock_configs/US Marine VHF Channels.csv
 share/doc/chirp/COPYING
+man/man1/chirpw.1
 share/pixmaps/chirp.png
 @pkgdir share/chirp/images
