@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	backports.csv-1.0.6
+DISTNAME=	backports.csv-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.csv/}
