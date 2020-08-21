@@ -26,6 +26,7 @@ USE_LANGUAGES=	#none
 REPLACE_PYTHON=	*.py chirp/*.py chirp/ui/*.py
 
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-future>=0.18.0:../../devel/py-future
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
