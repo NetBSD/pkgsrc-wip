@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.translate-toolkit
 PKG_SUPPORTED_OPTIONS+=		lxml levenshtein chardet tradostm pycountry doc ical ini csv
-PKG_SUGGESTED_OPTIONS=		lxml levenshtein chardet tradostm pycountry doc ical ini csv
+PKG_SUGGESTED_OPTIONS=		lxml levenshtein chardet tradostm pycountry ical ini 
 PLIST_VARS=			csv doc
 
 
@@ -45,8 +45,9 @@ PLIST.csv=	yes
 .  endif
 .endif
 
+#Off till someone updates textproc/py-sphinx to 3.1.1
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.6.3.:../../textproc/py-sphinx
+BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=3.1.1.:../../textproc/py-sphinx
 SUBST_CLASSES+=		sphinx
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"
 SUBST_FILES.sphinx+=	docs/Makefile
