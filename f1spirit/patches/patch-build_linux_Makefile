@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fixing flags.
+
 --- build/linux/Makefile.orig	2009-02-06 10:12:51.000000000 +0000
 +++ build/linux/Makefile
 @@ -1,6 +1,6 @@

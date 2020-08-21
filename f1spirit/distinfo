@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (f1spirit.src_0.rc9-1615.tgz) = 90a6a0a3b5f7dc18a3497d32bb580bf47e688c95
-RMD160 (f1spirit.src_0.rc9-1615.tgz) = fa91ca937f9e12812376aa7571b4089b83a864a1
-SHA512 (f1spirit.src_0.rc9-1615.tgz) = 7eff68c5e33bb8ad07f8cf238ad1596b83dc5889828747d591b1e319cbef9359b6f134ad92e222ad7947c01278cfd692f6bf729de007dd91b03d12fd3d805335
-Size (f1spirit.src_0.rc9-1615.tgz) = 18522073 bytes
-SHA1 (patch-build_linux_Makefile) = b47cfb4431f4833b036f7f1801399474123fb95f
-SHA1 (patch-sources_F1Shttp.cpp) = 83e7c3e878aaa9be40e34807e0b05aabbe21e3c3
+SHA1 (f1spirit.src_0.rc9-1615.tgz) = 9c0881b232d46125bd330485c3dcb4e21976e3f3
+RMD160 (f1spirit.src_0.rc9-1615.tgz) = d87297b4051de66b6be48f1c1f4b895d0861fb7b
+SHA512 (f1spirit.src_0.rc9-1615.tgz) = aaf627735d9353f221f7e6abb199a2fae8958a92b3f707be69a63d642df59b038d0b007d31777d24f5d03e59d87fe2d061b80fa6a0c7f79e5d14c57f1f0151f7
+Size (f1spirit.src_0.rc9-1615.tgz) = 31242240 bytes
+SHA1 (patch-F1Shttp.cpp) = ce501794347c57a6c0c4f8942b42f316fdb69f5a
+SHA1 (patch-build_linux_Makefile) = d5ae1c75fc14f053a87ab5a33798d9800c6723c8

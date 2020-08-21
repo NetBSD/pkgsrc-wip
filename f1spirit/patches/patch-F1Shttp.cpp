@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fixing curl header.
+
 --- F1Shttp.cpp.orig	2009-02-06 09:54:49.000000000 +0000
 +++ F1Shttp.cpp
 @@ -3,7 +3,6 @@

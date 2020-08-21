@@ -12,7 +12,7 @@ COMMENT=	Remake the Konami MSX1 classic F-1 Spirit
 LICENSE=	unlicense
 
 WRKSRC=		${WRKDIR}/f1spirit-0.rc9.1615
-#USE_TOOLS+=	make
+USE_TOOLS+=	tar
 USE_LANGUAGES=	c++03 c
 
 #LDFLAGS+=	-nostartfiles
@@ -26,6 +26,10 @@ SUBST_STAGE.prefix=	pre-install
 SUBST_FILES.prefix=	f1spirit.sh
 SUBST_MESSAGE.prefix=	Fixing PREFIX.
 SUBST_VARS.prefix=	PREFIX
+
+# filename is .tgz, but its .tar
+do-extract:
+	cd ${WRKDIR} && ${TAR} xvf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 pre-patch:
 	${CP} ${FILESDIR}/f1spirit ${WRKSRC}/f1spirit.sh
