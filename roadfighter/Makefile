@@ -12,7 +12,7 @@ COMMENT=	Remake the Konami MSX classic game Road Fighter
 LICENSE=	unlicense
 
 WRKSRC=		${WRKDIR}/roadfighter-1.0.1269
-#USE_TOOLS=	gmake
+USE_TOOLS+=	tar
 USE_LANGUAGES=	c++03 c
 CFLAGS+=	-Wno-write-strings
 
@@ -24,6 +24,10 @@ SUBST_STAGE.prefix=	pre-install
 SUBST_FILES.prefix=	roadfighter.sh
 SUBST_MESSAGE.prefix=	Fixing PREFIX.
 SUBST_VARS.prefix=	PREFIX
+
+# filename is .tgz, but its .tar
+do-extract:
+	cd ${WRKDIR} && ${TAR} xvf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 pre-patch:
 	${MV} ${WRKSRC}/src/sge/* ${WRKSRC}
