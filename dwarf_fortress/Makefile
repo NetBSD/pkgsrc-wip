@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	df_44_12_linux
-PKGNAME=	dwarf_fortress-44.12
+DISTNAME=	df_47_04_linux
+PKGNAME=	dwarf_fortress-47.04
 CATEGORIES=	games
 MASTER_SITES=	http://www.bay12games.com/dwarves/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,7 +29,7 @@ DISTFILES=	${DISTNAME}32${EXTRACT_SUFX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 .endif
 
-INSTALLATION_DIRS=	bin df_linux
+#INSTALLATION_DIRS=	bin df_linux
 
 AUTO_MKDIRS=	yes
 DFDIR=		df_linux
@@ -62,6 +62,13 @@ SUBST_MESSAGE.fix-paths-1=	Disabling sound.
 SUBST_STAGE.fix-paths-1=	post-configure
 SUBST_FILES.fix-paths-1=	data/init/init.txt
 SUBST_SED.fix-paths-1=		-e 's,SOUND:YES,SOUND:NO,g'
+
+#Because "Patches must not hard-code the pkgsrc PREFIX."
+SUBST_CLASSES+=			fix-paths-2
+SUBST_MESSAGE.fix-paths-2=	Patching PREFIX.
+SUBST_STAGE.fix-paths-2=	post-configure
+SUBST_FILES.fix-paths-2=	df
+SUBST_SED.fix-paths-2=		-e 's,PREFIX,${PREFIX},g'
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"

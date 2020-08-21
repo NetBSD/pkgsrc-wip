@@ -1,3 +1,1 @@
-Fix sound.
-
-Workaround for png issues; use bitmaps instead.
+Fix sound by importing suse-openal.

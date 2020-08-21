@@ -12,7 +12,7 @@ $NetBSD$
 +if [ ! -f ~/df_linux ]
 +then
 +        echo "Copying..."
-+        cp -r /usr/pkg/df_linux ~/
++        cp -r PREFIX/df_linux ~/
 +fi
 +
 +DF_DIR="~/df_linux"

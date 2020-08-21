@@ -208,6 +208,8 @@ df_linux/libs/libgraphics.so
 df_linux/libs/libstdc++.so.6
 df_linux/raw/graphics/example/dwarves.bmp
 df_linux/raw/graphics/graphics_example.txt
+df_linux/raw/interaction examples/example - bogeyman transformation.txt
+df_linux/raw/interaction examples/example - shrine effects.txt
 df_linux/raw/interaction examples/interaction_disturbance.txt
 df_linux/raw/interaction examples/interaction_region.txt
 df_linux/raw/interaction examples/interaction_secret.txt
