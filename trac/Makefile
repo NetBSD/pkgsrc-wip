@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac.edgewall.org/
 COMMENT=	Repository browser, wiki, and issue tracking system
 LICENSE=	modified-bsd
