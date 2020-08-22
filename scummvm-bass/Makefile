@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=		scummvm-bass
+PKGNAME=		scummvm-bass-0
 CATEGORIES=		games
 #ftp can't deal with lack of urlencoded spaces on the 301
 #MASTER_SITES=		http://www.scummvm.org/frs/extras/Beneath%20a%20Steel%20Sky/

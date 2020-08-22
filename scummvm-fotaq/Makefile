@@ -3,7 +3,9 @@
 
 PKGNAME=		scummvm-fotaq-0
 CATEGORIES=		games
-MASTER_SITES=		https://www.scummvm.org/frs/extras/Flight%20of%20the%20Amazon%20Queen/
+#ftp can't deal with lack of urlencoded spaces on the 301
+#MASTER_SITES=		https://www.scummvm.org/frs/extras/Flight%20of%20the%20Amazon%20Queen/
+MASTER_SITES=		https://fr1.eu.scummvm.net/extras/Flight%20of%20the%20Amazon%20Queen/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
