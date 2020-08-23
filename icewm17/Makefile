@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bbidulock/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.icewm.org/
+HOMEPAGE=	http://www.ice-wm.org/
 COMMENT=	Small, fast and light-weight window manager
 LICENSE=	gnu-gpl-v2
 
