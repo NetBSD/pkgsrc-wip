@@ -116,6 +116,7 @@ SUBDIR+=	alsa-plugins-jack
 SUBDIR+=	alt-ergo
 SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
+SUBDIR+=	amass
 SUBDIR+=	amavis-logwatch
 SUBDIR+=	amp-editor
 SUBDIR+=	analizo
