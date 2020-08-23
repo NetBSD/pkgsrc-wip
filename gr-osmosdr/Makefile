@@ -38,7 +38,7 @@ REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include	"../../ham/uhd/buildlink3.mk"
 .include	"../../lang/python/application.mk"
-.include	"../../lang/python/extension.mk"
+#.include	"../../lang/python/extension.mk"
 
 .include	"../../ham/rtl-sdr/buildlink3.mk"
 .include	"../../ham/libmirisdr/buildlink3.mk"
