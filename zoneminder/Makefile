@@ -59,12 +59,17 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 ZM_HTTPD_ROOT=		share/zoneminder/htdocs
 PLIST_SUBST+=		ZM_HTTPD_ROOT=${ZM_HTTPD_ROOT:Q}
+PRINT_PLIST_AWK+=	{ gsub(/${ZM_HTTPD_ROOT:S|/|\\/|g}/, "$${ZM_HTTPD_ROOT}") }
 OWN_DIRS+=		${ZM_HTTPD_ROOT:Q}
 
 ZM_HTTPD_CGIBIN=	libexec/zoneminder/cgi-bin
 PLIST_SUBST+=		ZM_HTTPD_CGIBIN=${ZM_HTTPD_CGIBIN:Q}
+PRINT_PLIST_AWK+=	{ gsub(/${ZM_HTTPD_CGIBIN:S|/|\\/|g}/, "$${ZM_HTTPD_CGIBIN}") }
 BUILD_DEFS+=		ZM_HTTPD_CGIBIN
 OWN_DIRS+=		${ZM_HTTPD_CGIBIN:Q}
+
+# Omit patchfiles from PLIST.
+PRINT_PLIST_AWK+=       /.orig$$/ { next; }
 
 INSTALLATION_DIRS+=	share/zoneminder ${ZM_HTTPD_ROOT}
 INSTALLATION_DIRS+=	libexec/zoneminder ${ZM_HTTPD_CGIBIN}
@@ -214,6 +219,7 @@ PLIST_VARS+=		rcd
 .if ${INIT_SYSTEM} == "rc.d"
 PLIST.rcd=		yes
 .endif
+PRINT_PLIST_AWK+=	{ gsub(/^.+\/examples\/rc.d/, "$${PLIST.rcd}&"); }
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
 LIBS+=		-lexecinfo
