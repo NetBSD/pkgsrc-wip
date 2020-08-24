@@ -7,6 +7,7 @@ Size (ZoneMinder-1.29.0.tar.gz) = 9302624 bytes
 SHA1 (patch-Makefile_am) = d3b66d8d741b739e2e6b354cef29881d8bcde31c
 SHA1 (patch-configure_ac) = 689230f4d7526ab3d47142b111102b9bc4ff409c
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = 841d897662958698a4dfcb95dd5bc43bb5fed568
+SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm) = b97c104f6ac102fc4510eb0977169375cdd97197
 SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51
 SHA1 (patch-src_Makefile_am) = 0f6571c9d5a3e688544f93d687d266e1b71f0f43
 SHA1 (patch-src_zm__event.cpp) = 83d0d3f5de5d3a7b1ea81917bd9c5264c8129637

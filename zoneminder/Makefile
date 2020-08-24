@@ -4,7 +4,7 @@ VERSION=	1.29.0
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
-PKGREVISION=	1
+PKGREVISION=	2
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
 DISTNAME=	${NAME_DIST}-${VERSION}
