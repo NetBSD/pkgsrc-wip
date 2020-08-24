@@ -28,7 +28,7 @@ SUBST_FILES.waddir=	src/d_iwad.c
 SUBST_SED.waddir=	-e 's,PKGSRC_PREFIX,"${PREFIX}",'
 SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
 
-pre-configure:
+do-configure:
 	cd ${WRKSRC} && ./autogen.sh
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 
