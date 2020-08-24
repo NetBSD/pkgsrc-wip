@@ -1960,6 +1960,7 @@ SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	librem
 SUBDIR+=	libreoffice-git
+SUBDIR+=	librespot
 SUBDIR+=	libretro-4do
 SUBDIR+=	libretro-beetle-lynx
 SUBDIR+=	libretro-citra

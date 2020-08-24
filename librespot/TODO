@@ -1,0 +1,18 @@
+Compiling get_if_addrs v0.5.3
+error[E0425]: cannot find function `do_broadcast` in this scope
+   --> /usr/pkgsrc/wip/librespot/work/vendor/get_if_addrs-0.5.3/src/lib.rs:234:31
+    |
+234 |                         match do_broadcast(ifaddr) {
+    |                               ^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `do_broadcast` in this scope
+   --> /usr/pkgsrc/wip/librespot/work/vendor/get_if_addrs-0.5.3/src/lib.rs:253:31
+    |
+253 |                         match do_broadcast(ifaddr) {
+    |                               ^^^^^^^^^^^^ not found in this scope
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `get_if_addrs`.
+
