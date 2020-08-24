@@ -286,15 +286,12 @@ CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.1.4
 INSTALLATION_DIRS=	bin
 
 CARGO_ARGS+=	${DEFAULT_CARGO_ARGS} --no-default-features --features portaudio-backend
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.portaudio}/${BUILDLINK_LIBDIRS.portaudio}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/librespot ${DESTDIR}${PREFIX}/bin
 
 .include "../../audio/portaudio/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
