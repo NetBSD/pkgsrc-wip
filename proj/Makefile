@@ -3,7 +3,7 @@
 # Do not merge to pkgsrc without gdt approval; I have not yet
 # evaluated how much this will break.
 VERSION_BASE=	7.1.0
-VERSION_RC=	RC1
+VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 #PKGREVISION=	0
 # proj RCs have names like 5.1.0RC1 but unpack to 5.1.0
