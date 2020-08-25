@@ -1,5 +1,12 @@
 Vulnerabilites to investigate:
-- CVE-2020-14983
-  => Fixed in 5.9.0
+[X] CVE-2020-14983
+    => Fixed in 5.9.0 (inherited fix from Chocolate Doom)
 
-Package has Python problems.
+Fails without Python:
+[X] Issue reported upstrem
+    => Fixed in Git commit ab1a38d8e902baebc7183fb511bd58c50e2b4571
+[X] Add tool dependency for Python
+
+[X] Add commit message
+[X] Fix PLIST
+[X] Fix man page sections (4 vs. 5 for file format pages on different OS)
