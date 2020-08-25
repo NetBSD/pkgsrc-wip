@@ -5,7 +5,7 @@ CATEGORIES=	devel
 
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bminor/}
 GITHUB_PROJECT=		binutils-gdb
-GITHUB_TAG=		7e24fb63e7db33d3627623629b0e99fe322e26f9
+GITHUB_TAG=		d2bb907b8b46e1a06cab44aa783f377b3c0d07b0
 
 HOMEPAGE=	https://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
