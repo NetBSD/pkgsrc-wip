@@ -390,7 +390,6 @@ SUBDIR+=	chemeq
 SUBDIR+=	chems
 SUBDIR+=	cherokee
 SUBDIR+=	chezscheme
-SUBDIR+=	chirp
 SUBDIR+=	chntpw
 SUBDIR+=	choosefont
 SUBDIR+=	chora
