@@ -1,23 +1,4 @@
-2.1.33 (07-May-2020)
-
-  Security
-
-    - A content injection vulnerability via the private login page has been
-      fixed.  (LP: #1877379)
-
-2.1.32 (05-May-2020)
-
-  i18n
-
-    Fixed a typo in the Spanish translation and uptated mailman.pot and
-    the message catalog for 2.1.31 security fix.
-
-2.1.31 (05-May-2020)
-
-  Security
-
-    - A content injection vulnerability via the options login page has been
-      discovered and reported by Vishal Singh. This is fixed.  (LP: #1873722)
+2.1.34 (26-Jun-2020)
 
   i18n
 
@@ -25,94 +6,16 @@
 
   Bug Fixes and other patches
 
-    - Bounce recognition for a non-compliant Yahoo format is added.
+    - The fix for LP: #1859104 can result in ValueError being thrown on
+      attempts to subscribe to a list. This is fixed and extended to apply
+      REFUSE_SECOND_PENDING to unsubscription as well.  (LP: #1878458)
 
-    - Archiving workaround for non-ascii in string.lowercase in some Python
-      packages is added.
+    - DMARC mitigation no longer misses if the domain name returned by DNS
+      contains upper case.  (LP: #1881035)
 
-2.1.30 (13-Apr-2020)
+    - A new WARN_MEMBER_OF_SUBSCRIBE setting can be set to No to prevent
+      mailbombing of a member of a list with private rosters by repeated
+      subscribe attempts.  (LP: #1883017)
 
-  New Features
-
-    - Thanks to Jim Popovitch, there is now a dmarc_moderation_addresses
-      list setting that can be used to apply dmarc_moderation_action to mail
-      From: addresses listed or matching listed regexps.  This can be used
-      to modify mail to addresses that don't accept external mail From:
-      themselves.
-
-    - There is a new MAX_LISTNAME_LENGTH setting.  The fix for LP: #1780874
-      obtains a list of the names of all the all the lists in the installation
-      in order to determine the maximum length of a legitimate list name.  It
-      does this on every web access and on sites with a very large number of
-      lists, this can have performance implications.  See the description in
-      Defaults.py for more information.
-
-    - Thanks to Ralf Jung there is now the ability to add text based captchas
-      (aka textchas) to the listinfo subscribe form.  See the documentation
-      for the new CAPTCHA setting in Defaults.py for how to enable this.  Also
-      note that if you have custom listinfo.html templates, you will have to
-      add a <mm-captcha-ui> tag to those templates to make this work.  This
-      feature can be used in combination with or instead of the Google
-      reCAPTCHA feature added in 2.1.26.
-
-    - Thanks to Ralf Hildebrandt the web admin Membership Management section
-      now has a feature to sync the list's membership with a list of email
-      addresses as with the bin/sync_members command.
-
-    - There is a new drop_cc list attribute set from DEFAULT_DROP_CC.  This
-      controls the dropping of addresses from the Cc: header in delivered
-      messages by the duplicate avoidance process.  (LP: #1845751)
-
-    - There is a new REFUSE_SECOND_PENDING mm_cfg.py setting that will cause
-      a second request to subscribe to a list when there is already a pending
-      confirmation for that user.  This can be set to Yes to prevent
-      mailbombing of a third party by repeatedly posting the subscribe form.
-      (LP: #1859104)
-
-  i18n
-
-    - The Japanese translation has been updated by Yasuhito FUTATSUKI.
-
-    - The German translation has been updated by Ludwig Reiter.
-
-    - The Spanish translation has been updated by Omar Walid Llorente.
-
-    - The Brazilian Portugese translation has been updated by Emerson de Mello.
-
-  Bug Fixes and other patches
-
-    - Fixed the confirm CGI to catch a rare TypeError on simultaneous
-      confirmations of the same token.  (LP: #1785854)
-
-    - Scrubbed application/octet-stream MIME parts will now be given a
-      .bin extension instead of .obj.
-
-    - Added bounce recognition for a non-compliant opensmtpd DSN with
-      Action: error.  (LP: #1805137)
-
-    - Corrected and augmented some security log messages.  (LP: #1810098)
-
-    - Implemented use of QRUNNER_SLEEP_TIME for bin/qrunner --runner=All.
-      (LP: #1818205)
-
-    - Leading/trailing spaces in provided email addresses for login to private
-      archives and the user options page are now ignored.  (LP: #1818872)
-
-    - Fixed the spelling of the --no-restart option for mailmanctl.
-
-    - Fixed an issue where certain combinations of charset and invalid
-      characters in a list's description could produce a List-ID header
-      without angle brackets.  (LP: #1831321)
-
-    - With the Postfix MTA and virtual domains, mappings for the site list
-      -bounces and -request addresses in each virtual domain are now added
-      to data/virtual-mailman (-owner was done in 2.1.24).  (LP: #1831777)
-
-    - The paths.py module now extends sys.path with the result of
-      site.getsitepackages() if available.  (LP: #1838866)
-
-    - A bug causing a UnicodeDecodeError in preparing to send the confirmation
-      request message to a new subscriber has been fixed.  (LP: #1851442)
-
-    - The SimpleMatch heuristic bounce recognizer has been improved to not
-      return most invalid email addresses.  (LP: #1859011)
+    - Very long filenames for scrubbed attachments are now truncated.
+      (LP: #1884456)
