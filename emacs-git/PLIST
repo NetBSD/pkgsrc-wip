@@ -965,6 +965,7 @@ share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.sv
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.th
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.translators
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.zh
+share/emacs/${PKGVERSION}/etc/w32-feature.el
 share/emacs/${PKGVERSION}/etc/yow.lines
 share/emacs/${PKGVERSION}/lisp/COPYING
 share/emacs/${PKGVERSION}/lisp/README
@@ -1997,6 +1998,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-cloud.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cloud.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cus.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cus.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-dbus.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-dbus.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-delay.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-delay.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-demon.el.gz
