@@ -14,7 +14,8 @@ LICENSE=	gnu-gpl-v2
 .include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES=		c99
-USE_TOOLS+=		autoconf automake pkg-config
+# GNU make is required for man page generation (broken with BSD make)
+USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_PYTHON=python${PYVERSSUFFIX}
 PYTHON_FOR_BUILD_ONLY=	tool
@@ -25,7 +26,6 @@ REPLACE_PYTHON+=	man/simplecpp
 DOOMWADDIR=		share/doom
 INSTALLATION_DIRS+=	share/doc/crispy-doom
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
-INSTALLATION_DIRS+=	${PKGMANDIR}/man4
 
 # Add DOOMWADDIR to search path
 SUBST_CLASSES+=		waddir
@@ -37,17 +37,31 @@ SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
 
 # Man pages with documentation of file formats should go to section 4 on
 # SysV based systems. IRIX and OSF/1 are treated with BSD style by intent.
-PLIST_VARS+=	bsd sysv
+PLIST_VARS+=		bsd sysv
 .if ${OPSYS} == "AIX" || ${OPSYS} == "HPUX" || ${OPSYS} == "SunOS"
-PLIST.sysv=	yes
+PLIST.sysv=		yes
+
+SUBST_CLASSES+=		manpages
+SUBST_STAGE.manpages=	pre-configure
+SUBST_MESSAGE.manpages=	Modify man pages for section 5 to use section 4 ...
+SUBST_FILES.manpages=	man/default.cfg.template man/extra.cfg.template
+SUBST_SED.manpages=	-e 's,5$$,4,'
+SUBST_SED.manpages+=	-e 's,[(]5[)],(4),g'
+
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-configure
+SUBST_MESSAGE.makefile=	Modify Makefile template for man page generation ...
+SUBST_FILES.makefile=	man/Makefile.am
+SUBST_SED.makefile=	-e 's,[.]5,.4,g'
 .else
-PLIST.bsd=	yes
+PLIST.bsd=		yes
 .endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 
+# Rename the XDG files to the style of chocolate-doom
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/crispy-doom/INSTALL.pkgsrc
@@ -65,16 +79,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-doom.metainfo.xml
 	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.Heretic.metainfo.xml \
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-heretic.metainfo.xml
-.if defined(PLIST.sysv)
-	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-doom.cfg.5 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-doom.cfg.4
-	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-heretic.cfg.5 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-heretic.cfg.4
-	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/default.cfg.5 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/default.cfg.4
-	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/heretic.cfg.5 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/heretic.cfg.4
-.endif
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
