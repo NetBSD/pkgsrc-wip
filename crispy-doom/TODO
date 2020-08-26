@@ -10,3 +10,4 @@ Fails without Python:
 [X] Add commit message
 [X] Fix PLIST
 [X] Fix man page sections (4 vs. 5 for file format pages on different OS)
+[ ] Fix man page default.cfg conflict with chocolate-doom
