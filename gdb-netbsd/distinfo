@@ -1,14 +1,6 @@
 $NetBSD$
 
-SHA1 (gdb-8.2.1-d2bb907b8b46e1a06cab44aa783f377b3c0d07b0.tar.gz) = b52ebddf59d0845d8c9f91cae86f120308cd3615
-RMD160 (gdb-8.2.1-d2bb907b8b46e1a06cab44aa783f377b3c0d07b0.tar.gz) = 61de08e321a231dad0481bb6fed33a280ab09a31
-SHA512 (gdb-8.2.1-d2bb907b8b46e1a06cab44aa783f377b3c0d07b0.tar.gz) = 4f8d2c5d120f34b24e607822f603aeca073696aa05c0c30c82c140c4f082815865f44575fb3292f4463131c4276af2b5d8b5c813fbd7732bce9a414ed4c1a885
-Size (gdb-8.2.1-d2bb907b8b46e1a06cab44aa783f377b3c0d07b0.tar.gz) = 60881035 bytes
-SHA1 (patch-gdbserver_Makefile.in) = 8e16df0f5f585ca3247ee4ccb6e6a86bd6771cc7
-SHA1 (patch-gdbserver_configure.srv) = bf1d3debacfe6ef58c49a93c4f667f41e97782c0
-SHA1 (patch-gdbserver_debug.cc) = b88d36a3a57b273c47a9944db979180e473c4b6e
-SHA1 (patch-gdbserver_linux-low.h) = 640909e0ce600a36b31bba6eb09e613a74c66f2d
-SHA1 (patch-gdbserver_netbsd-low.cc) = fc93a3dd78bcb5dd94e037fe4650e641c8202cb6
-SHA1 (patch-gdbserver_netbsd-low.h) = 645c811a95d1526e33ab6e17e20ec56d6aab3f6c
-SHA1 (patch-gdbserver_netbsd-x86__64-low.cc) = 58afabe6460c2f0ac2ced7c00e48c69b4d399daa
-SHA1 (patch-gdbserver_regcache.cc) = fda5de30b4bc71cb398a327807e4cafc141848ae
+SHA1 (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = 8e5ba0ea9f513822d8f5e1b61f1e086832da4fd5
+RMD160 (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = 90987ca409c82bc96c5f3aad04b2d38afce8e5a4
+SHA512 (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = eaa4eaa9a8db968f216077cad4b730b2d6d273cf5205075bcef102c9ca21e85ed2b22e85d5be6bda7c3c4069290f6b7294550e5e6095dcd4401c8d70998162c1
+Size (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = 60902858 bytes
