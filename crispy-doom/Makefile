@@ -61,7 +61,8 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 
-# Rename the XDG files to the style of chocolate-doom
+# Rename XDG files to the style of chocolate-doom
+# Rename man pages so that they don't collide with chocolate-doom
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/crispy-doom/INSTALL.pkgsrc
@@ -79,6 +80,17 @@ post-install:
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-doom.metainfo.xml
 	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.Heretic.metainfo.xml \
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-heretic.metainfo.xml
+.if defined(PLIST.sysv)
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/default.cfg.4 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-default.cfg.4
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/heretic.cfg.4 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-heretic.cfg.4
+.else
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/default.cfg.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-default.cfg.5
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/heretic.cfg.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-heretic.cfg.5
+.endif
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"

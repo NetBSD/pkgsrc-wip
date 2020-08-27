@@ -4,14 +4,12 @@ bin/crispy-doom-setup
 bin/crispy-heretic
 bin/crispy-heretic-setup
 bin/crispy-server
+${PLIST.sysv}man/man4/crispy-default.cfg.4
 ${PLIST.sysv}man/man4/crispy-doom.cfg.4
 ${PLIST.sysv}man/man4/crispy-heretic.cfg.4
-${PLIST.sysv}man/man4/default.cfg.4
-${PLIST.sysv}man/man4/heretic.cfg.4
+${PLIST.bsd}man/man5/crispy-default.cfg.5
 ${PLIST.bsd}man/man5/crispy-doom.cfg.5
 ${PLIST.bsd}man/man5/crispy-heretic.cfg.5
-${PLIST.bsd}man/man5/default.cfg.5
-${PLIST.bsd}man/man5/heretic.cfg.5
 man/man6/crispy-doom-setup.6
 man/man6/crispy-doom.6
 man/man6/crispy-heretic-setup.6
