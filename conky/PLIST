@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/conky
+share/applications/conky.desktop
+share/doc/${PKGNAME}/convert.lua
+share/examples/conky/conky.conf
+share/examples/conky/conky_no_x11.conf
+share/icons/hicolor/scalable/apps/conky-logomark-violet.svg

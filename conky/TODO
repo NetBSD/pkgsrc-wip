@@ -1,0 +1,4 @@
+- Fix curses support on NetBSD.
+- Forwardport the NetBSD battery bits from sysutils/conky
+- Look into default config paths...
+- Build documentation?

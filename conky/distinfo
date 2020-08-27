@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.7 2017/06/30 00:23:03 kamil Exp $
+
+SHA1 (conky-1.11.6.tar.gz) = bf4b3dfe895f400b27a57ddc14964d231dc98005
+RMD160 (conky-1.11.6.tar.gz) = e6be6ed0546b530c451638b7647712f3c4462dc6
+SHA512 (conky-1.11.6.tar.gz) = f7bffcef33680d61d0171ba50b29ddda011c1c1989fc847cd4b5b60d46bed4772294eec34fd27c4d642a9c03e3cedaa31855ffc0f3b60791f4bed14ffdf7490a
+Size (conky-1.11.6.tar.gz) = 2402216 bytes
+SHA1 (patch-CMakeLists.txt) = f3133348d67e62230ad3e6c001c14c4136d43d51
+SHA1 (patch-cmake_Conky.cmake) = b17fdb4dfa968aa4437eb26e68efa5fc308c759d
+SHA1 (patch-cmake_ConkyPlatformChecks.cmake) = 14d9dad017d4f7e45f883288ffa14146ce09d853
+SHA1 (patch-src_entropy.cc) = be1ac9bddde941d698f2e66dfef05d668eda3216
+SHA1 (patch-src_fs.cc) = 02fd3433c353dd883cc9ea2d4593279aee6e22c8
+SHA1 (patch-src_netbsd.cc) = c8ddc81a9abaf30a30ca44de0d48dd22d3ebf744
+SHA1 (patch-src_netbsd.h) = 7c7df63b6ffac9e8ad23f5371b8c3d25ff733ab2
