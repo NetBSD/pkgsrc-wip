@@ -1,60 +1,29 @@
-On NetBSD:
+* MPROTECT
+
+On NetBSD, guile is marked NOT_MPROTECT_SAFE.  However, guile is built
+and then used during the build, and that version hits the same
+problem:
+
+      GEN      guile-procedures.texi
+    allocating JIT code buffer failed: Permission denied
+    jit.c:5612: fatal: assertion failed
+    [1]   Broken pipe             cat alist.doc array-handle.doc array-map.doc a... |
+	  Abort trap (core dumped) GUILE_AUTO_COMPILE=0 ../meta/build-env guild s...
+
+Reported to guile-devel@ on 20200827.
+
+Probably needs a "paxctl +m guile" for the binary (in .libs via
+libtool) after build and before use as a build tool.
+
 
 * with CONFIGURE_ARGS+=       --disable-tmpnam
-  as per https://debbugs.gnu.org/cgi/bugreport.cgi?bug=29001
 
-  SNARF  regex-posix.doc
-  CCLD     libguile-3.0.la
-  CCLD     guile
-  GEN      guile-procedures.texi
-allocating JIT code buffer failed: Permission denied
-jit.c:5612: fatal: assertion failed
-[1]   Broken pipe             cat alist.doc array-handle.doc array-map.doc a... |
-      Abort trap (core dumped) GUILE_AUTO_COMPILE=0 ../meta/build-env guild s...
-gmake[3]: *** [Makefile:4311: guile-procedures.texi] Error 1
-gmake[3]: Leaving directory '/usr/work/wip/guile30/work/guile-3.0.2/libguile'
-gmake[2]: *** [Makefile:2426: all] Error 2
-gmake[2]: Leaving directory '/usr/work/wip/guile30/work/guile-3.0.2/libguile'
-gmake[1]: *** [Makefile:1849: all-recursive] Error 1
-gmake[1]: Leaving directory '/usr/work/wip/guile30/work/guile-3.0.2'
-gmake: *** [Makefile:1735: all] Error 2
-*** Error code 2
+as per https://debbugs.gnu.org/cgi/bugreport.cgi?bug=29001
 
-Stop.
-make[1]: stopped in /usr/pkgsrc/wip/guile30
-*** Error code 1
+Perhaps fixed upstream
 
-Stop.
-make: stopped in /usr/pkgsrc/wip/guile30
-
-
-
-* older TODO:
-
-With threads support:
-
-Needs "sysctl -w security.pax.mprotect.enabled=0".
-
-Test failures:
-error: 'guild compile' failed to remove 't-guild-compile-23088.go.RI4Ae9'
-FAIL: test-guild-compile
-...
-SKIP: test-pthread-create-secondary
-...
-wrote `/scratch/wip/guile30/work/guile-3.0.1/cache/guile/ccache/3.0-LE-8-4.2/scratch/wip/guile30/work/guile-3.0.1/test-suite/standalone/test-out-of-memory.go'                 GC Warning: Failed to expand heap by 134348800 bytes
-GC Warning: Failed to expand heap by 134217728 bytes
-GC Warning: Out of Memory! Heap size: 1 MiB. Returning NULL!
-error creating finalization thread: Cannot allocate memory
-GC Warning: Failed to expand heap by 1000132608 bytes
-GC Warning: Failed to expand heap by 1000001536 bytes
-GC Warning: Out of Memory! Heap size: 1 MiB. Returning NULL!
-mmap(PROT_NONE) failed
-[1]   Abort trap (core dumped) top_srcdir="../.." srcdir="." builddir="." CHA...
-FAIL: test-out-of-memory
-
-  (same as with guile22-2.2.7)
-
-
+\todo Explain why we want to give this arg.  Just vague best
+practices?
 
 * Without threads support, doesn't build:
 
@@ -66,3 +35,9 @@ ld: ./.libs/libguile-3.0.so: warning: warning: tmpnam() possibly used unsafely, 
 ld: ./.libs/libguile-3.0.so: undefined reference to `scm_i_pthread_key_create'
 
 Reported upstream as http://debbugs.gnu.org/cgi/bugreport.cgi?bug=40075
+
+(Probably fixed in 3.0.3, based on bug)
+
+Perhaps make a no-threads option, but it is not clear why we care
+about the non-threaded case.
+
