@@ -70,7 +70,7 @@ Add support to internally create blockmap.
              for (k=0 ; k<4 ; k++)
                  no->bbox[j][k] = LE_SWAP16(mn->bbox[j][k])<<FRACBITS;
          }
-@@ -1840,6 +1860,7 @@ boolean P_SetupLevel (int      to_episod
+@@ -1851,6 +1871,7 @@ boolean P_SetupLevel (int      to_episod
      const char  *errstr;
      char  *sl_mapname = NULL;
      int   i;
@@ -78,7 +78,7 @@ Add support to internally create blockmap.
  
      GenPrintf( (verbose? (EMSG_ver|EMSG_now) : (EMSG_console|EMSG_now)),
                 "Setup Level\n" );
-@@ -1985,18 +2006,69 @@ boolean P_SetupLevel (int      to_episod
+@@ -1999,18 +2020,69 @@ boolean P_SetupLevel (int      to_episod
          goto load_reject;
      }
  

@@ -2,7 +2,7 @@
 
 VERS=		1.48.4
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1541
+SVNVERS=	1545
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -60,12 +60,14 @@ LDFLAGS+=		-lz
 DOOMWADDIR=		share/doom
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/doc/doomlegacy ${DOOMWADDIR}
 
-# Configure to honor environment
+# Configure to honor environment and disable ZIP support on GNU/Linux
 SUBST_CLASSES+=		makeopt
 SUBST_STAGE.makeopt=	do-configure
 SUBST_MESSAGE.makeopt=	Preparing make_options file ...
 SUBST_FILES.makeopt=	make_options
-SUBST_SED.makeopt=	-e 's,\#COMP_ENVIRONMENT,COMP_ENVIRONMENT,'
+SUBST_SED.makeopt=	-e 's,\#[ ]*COMP_ENVIRONMENT,COMP_ENVIRONMENT,'
+SUBST_SED.makeopt+=	-e 's,HAVE_LIBZIP,\# HAVE_LIBZIP,'
+SUBST_SED.makeopt+=	-e 's,HAVE_DLOPEN,\# HAVE_DLOPEN,'
 
 # Configure defaults for LEGACYWADDIR and DOOMWADDIR
 SUBST_CLASSES+=		doomdef

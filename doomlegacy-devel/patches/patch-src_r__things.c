@@ -8,7 +8,7 @@ c97a5c1d8054eab46856f71e4998d71760aa3339
 
 --- src/r_things.c.orig	2020-07-07 09:01:40.000000000 +0000
 +++ src/r_things.c
-@@ -1094,15 +1094,27 @@ fixed_t         dm_texturemid;
+@@ -1097,15 +1097,27 @@ fixed_t         dm_texturemid;
  void R_DrawMaskedColumn ( byte * column_data )
  {
      fixed_t     top_post_sc, bottom_post_sc;  // fixed_t screen coord.
@@ -37,7 +37,7 @@ c97a5c1d8054eab46856f71e4998d71760aa3339
          bottom_post_sc = (dm_bottom_patch == FIXED_MAX) ?
              top_post_sc + dm_yscale*column->length
              : dm_bottom_patch + dm_yscale*column->length;
-@@ -1151,7 +1163,10 @@ void R_DrawMaskedColumn ( byte * column_
+@@ -1154,7 +1166,10 @@ void R_DrawMaskedColumn ( byte * column_
  #endif
  
              dc_source = (byte *)column + 3;
