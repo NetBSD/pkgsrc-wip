@@ -17,4 +17,3 @@ SHA1 (patch-src_r__data.c) = cee177a2af8d29c2e78019d17dbd53d256b34529
 SHA1 (patch-src_r__defs.h) = 91e6543674e3474c9afdb0ba19d6869b658d0543
 SHA1 (patch-src_r__things.c) = de1f80d48180783091bd665007a0ea2f4e54af5e
 SHA1 (patch-src_t__prepro.h) = 768fc3a87665a75a85ff4ff88b53091b13eab55e
-SHA1 (patch-src_v__video.c) = e67dd1f89379f57eddc496099da33515ac6ff969
