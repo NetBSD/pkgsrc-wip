@@ -4895,6 +4895,7 @@ SUBDIR+=	v8
 SUBDIR+=	v8-316
 SUBDIR+=	vacuum
 SUBDIR+=	vagalume
+SUBDIR+=	vala-panel-appmenu
 SUBDIR+=	vale-current
 SUBDIR+=	valgrind
 SUBDIR+=	valgrind-netbsd
