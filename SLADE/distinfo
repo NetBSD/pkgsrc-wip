@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (SLADE-3.1.12a.tar.gz) = 0f8f7048b9cec0a7000d9fe4f52ab57996c96e04
+RMD160 (SLADE-3.1.12a.tar.gz) = a2e64e9f9030d81df39de4a90ae26e6cbd3af433
+SHA512 (SLADE-3.1.12a.tar.gz) = ecedec880b8ebed921e152d016a451164efd4de90ae69963be077d1ef39326670254ca8eb03e1045ca7ae5b02f7512dbbe712f83c845cbbd4ed787a90899ad13
+Size (SLADE-3.1.12a.tar.gz) = 5883702 bytes
+SHA1 (patch-src_External_zreaders_m__alloc.cpp) = 7c42fa1ca0add5c2b6b147fdd7dfa3f21e7fb0a9
+SHA1 (patch-src_External_zreaders_portable__endian.h) = df66b810b2a6a9272d8c668d7d4debd78bba95b5

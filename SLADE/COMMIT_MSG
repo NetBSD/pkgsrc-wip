@@ -1,0 +1,10 @@
+games/slade: Import version 3.1.12a
+
+SLADE3 is a modern editor for Doom-engine based games and source ports.
+It has the ability to view, modify, and write many different game-specific
+formats, and even convert between some of them, or from/to other generic
+formats such as PNG.
+
+SLADE3 can be considered a successor to both SLumpEd and SLADE - it combines
+the features of both, to create an all-in-one editor. Why does it keep the
+name of what was previously just a map editor? Because it fits :)
