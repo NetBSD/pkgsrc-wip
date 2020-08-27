@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	conan-1.27.1
+DISTNAME=	conan-1.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/conan/}
@@ -23,14 +23,14 @@ DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.3<0.5.0:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11<6.0:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-patch-ng>=1.17.4<1.18:../../wip/py-patch-ng
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
-DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0<=1.14.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-node-semver-0.6.1:../../wip/py-node-semver
-DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.2<1.2.0:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.2:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.3.1:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-future>=0.16.0<0.19.0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0<3.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-astroid>=1.6.5:../../devel/py-astroid
-DEPENDS+=	${PYPKGPREFIX}-deprecation>=2.0<2.1:../../devel/py-deprecation
+DEPENDS+=	${PYPKGPREFIX}-deprecation>=2.0:../../devel/py-deprecation
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.28.1<5:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3<3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-bottle>=0.12.8<0.13:../../www/py-bottle
