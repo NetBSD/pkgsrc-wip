@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (zennode-1.2.1.zip) = 3012db4b369a6df70e8d8093a038faf7327190ba
+RMD160 (zennode-1.2.1.zip) = 85f51faba0e2483072e99541754adcb810f37d94
+SHA512 (zennode-1.2.1.zip) = c0c5702c6da701558f4f261d32a310559272415e00f91ae84308580508d0453d07d3fd93da077a6ed4ec6d2b2e64a294b0bb0a2f614a4be09e34b4e4705eab9e
+Size (zennode-1.2.1.zip) = 647067 bytes
+SHA1 (patch-src_DOOM_wad.cpp) = 35fc9379a494223cde251c985a0f917c0dcb1f10
+SHA1 (patch-src_ZenNode_makefile) = 22b3913dcd4e681e467d0acabeb44dc5b480b65e
