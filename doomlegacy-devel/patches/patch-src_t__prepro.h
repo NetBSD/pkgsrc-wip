@@ -2,6 +2,7 @@ $NetBSD: patch-src_t__prepro.h,v 1.1 2020/06/10 15:35:02 micha Exp $
 
 The type label_t is not available on all OS, e.g. on SmartOS.
 labelforname() is an unused function and the only place where label_t is used.
+https://sourceforge.net/p/doomlegacy/bugs/666/
 
 --- src/t_prepro.h.orig	2018-07-16 09:17:06.000000000 +0000
 +++ src/t_prepro.h

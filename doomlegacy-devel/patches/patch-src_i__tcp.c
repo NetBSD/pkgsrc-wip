@@ -2,6 +2,7 @@ $NetBSD: patch-src_i__tcp.c,v 1.3 2020/06/18 10:14:54 micha Exp $
 
 Use native inet_aton() on Solaris.
 Use portable fcntl() instead of ioctl() for non-blocking mode by default.
+https://sourceforge.net/p/doomlegacy/bugs/666/
 
 --- src/i_tcp.c.orig	2020-05-10 22:05:16.000000000 +0000
 +++ src/i_tcp.c

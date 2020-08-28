@@ -2,6 +2,7 @@ $NetBSD$
 
 Use native inet_aton() on Solaris.
 Use portable fcntl() instead of ioctl() for non-blocking mode by default.
+https://sourceforge.net/p/doomlegacy/bugs/666/
 
 --- src/mserv.c.orig	2020-06-16 09:17:35.000000000 +0000
 +++ src/mserv.c

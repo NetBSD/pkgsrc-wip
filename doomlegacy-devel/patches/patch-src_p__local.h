@@ -1,6 +1,7 @@
 $NetBSD$
 
 Add support to internally create blockmap.
+https://sourceforge.net/p/doomlegacy/feature-requests/96/
 
 --- src/p_local.h.orig	2020-05-11 09:40:33.000000000 +0000
 +++ src/p_local.h

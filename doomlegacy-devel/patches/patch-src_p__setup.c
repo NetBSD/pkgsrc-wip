@@ -6,6 +6,7 @@ Created upstream feature request:
 https://sourceforge.net/p/doomlegacy/feature-requests/95/
 
 Add support to internally create blockmap.
+https://sourceforge.net/p/doomlegacy/feature-requests/96/
 
 --- src/p_setup.c.orig	2020-05-11 09:40:34.000000000 +0000
 +++ src/p_setup.c
