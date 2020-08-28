@@ -1,3 +1,3 @@
 [X] Fix pkglint errors
-[ ] Unbreak installation
-[ ] Create PLIST
+[X] Unbreak installation
+[X] Create PLIST

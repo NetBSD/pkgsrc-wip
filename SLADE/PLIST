@@ -1,2 +1,6 @@
 @comment $NetBSD$
 bin/slade
+share/applications/SLADE.desktop
+share/icons/hicolor/128x128/apps/SLADE.png
+share/metainfo/SLADE.metainfo.xml
+share/slade3/slade.pk3
