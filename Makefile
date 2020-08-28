@@ -66,6 +66,7 @@ SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
 SUBDIR+=	R-tuneR
 SUBDIR+=	ReZound
+SUBDIR+=	SLADE
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	TT2020-ttf-git
