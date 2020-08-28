@@ -274,7 +274,7 @@ guile/3.0/lib/guile/3.0/ccache/language/scheme/decompile-tree-il.go
 guile/3.0/lib/guile/3.0/ccache/language/scheme/spec.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/analyze.go
-guile/3.0/lib/guile/3.0/ccache/language/tree-il/canonicalize.go
+guile/3.0/lib/guile/3.0/ccache/language/tree-il/compile-bytecode.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/compile-cps.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/cps-primitives.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/debug.go
@@ -461,7 +461,7 @@ guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
 guile/3.0/lib/libguile-3.0.la
-guile/3.0/lib/libguile-3.0.so.1.1.1-gdb.scm
+guile/3.0/lib/libguile-3.0.so.3.0.0-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
@@ -609,7 +609,7 @@ guile/3.0/share/guile/3.0/language/scheme/decompile-tree-il.scm
 guile/3.0/share/guile/3.0/language/scheme/spec.scm
 guile/3.0/share/guile/3.0/language/tree-il.scm
 guile/3.0/share/guile/3.0/language/tree-il/analyze.scm
-guile/3.0/share/guile/3.0/language/tree-il/canonicalize.scm
+guile/3.0/share/guile/3.0/language/tree-il/compile-bytecode.scm
 guile/3.0/share/guile/3.0/language/tree-il/compile-cps.scm
 guile/3.0/share/guile/3.0/language/tree-il/cps-primitives.scm
 guile/3.0/share/guile/3.0/language/tree-il/debug.scm
