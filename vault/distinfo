@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (vault-1.5.0.tar.gz) = 8128f8ab999db6eafdd02e11bb32973b6f6bb65a
-RMD160 (vault-1.5.0.tar.gz) = 628ec25d71fe3e76bdac0f7949388b876e41ec2c
-SHA512 (vault-1.5.0.tar.gz) = 245d5ea837f561d6c3832a0cb28d851dabe908fac2be7e53d3fd466689778d67b2cd5d9ea8c297f8daceb003c571a9768254a7e27d1fbeb1a376ac75e3c6edfb
-Size (vault-1.5.0.tar.gz) = 34940170 bytes
+SHA1 (vault-1.5.3.tar.gz) = ca11b81ffe657004023bd0388665bfe35ffe5962
+RMD160 (vault-1.5.3.tar.gz) = ad3b62e2e799c326dea17ea152b1a3b149fc10ea
+SHA512 (vault-1.5.3.tar.gz) = 2eaeabf939c20e914319f0038f7b2cea219618a5f830a7d250f4de447b1b7e9fab9fee611752fcd26086b67c3b5e32f403a88d4e7da1d94f34570e1a210bc4f8
+Size (vault-1.5.3.tar.gz) = 35123873 bytes
 SHA1 (patch-vendor_github.com_docker_docker_client_client__unix.go) = 51a400f6adaa6abe4cd42c31cfba4f037d9d81e5
 SHA1 (patch-vendor_github.com_docker_docker_pkg_system_stat__netbsd.go) = 125e35b6f5e9a0cdec8c0a5e0b7c67cc326467ea
 SHA1 (patch-vendor_github.com_ory_dockertest_docker_pkg_system_stat__netbsd.go) = 723ce00bc56771008074e5d77efd465501fda2bb
