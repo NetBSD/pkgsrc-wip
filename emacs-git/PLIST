@@ -935,6 +935,8 @@ share/emacs/${PKGVERSION}/etc/themes/leuven-theme.el
 share/emacs/${PKGVERSION}/etc/themes/light-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/manoj-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/misterioso-theme.el
+share/emacs/${PKGVERSION}/etc/themes/modus-operandi-theme.el
+share/emacs/${PKGVERSION}/etc/themes/modus-vivendi-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tsdh-dark-theme.el
