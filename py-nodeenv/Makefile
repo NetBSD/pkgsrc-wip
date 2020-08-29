@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nodeenv-1.4.0
+DISTNAME=	nodeenv-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekalinin/}
