@@ -567,14 +567,14 @@ $NetBSD$
 +char get_freq(char *p_client_buffer, size_t client_buffer_size,
 +              const char *p_format, int divisor, unsigned int cpu) {
 +  char name[64];
-+  const char *s;
++  const char **s;
 +  int freq = 0;
 +  size_t freq_size = sizeof(freq);
 +
 +  snprintf(name, sizeof(name), "machdep.cpufreq.cpu%u.current", cpu - 1);
 +  if (sysctlbyname(name, &freq, &freq_size, NULL, 0) == -1) {
-+    for (s = *freq_sysctls; s != NULL; ++s) {
-+        if (sysctlbyname(s, &freq, &freq_size, NULL, 0) != -1)
++    for (s = freq_sysctls; *s != NULL; ++s) {
++        if (sysctlbyname(*s, &freq, &freq_size, NULL, 0) != -1)
 +          break;
 +    }
 +  }
