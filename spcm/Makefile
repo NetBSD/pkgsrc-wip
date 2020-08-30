@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 # Add py-hostlist dep
 
-DATADIR=	${PREFIX}/share/cluster-admin
+DATADIR=	${PREFIX}/share/spcm
 
 SUBST_CLASSES+=		sbin
 SUBST_STAGE.sbin=	pre-configure
