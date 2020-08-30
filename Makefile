@@ -1241,7 +1241,6 @@ SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-gsm
 SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	grabtitle-git
-SUBDIR+=	grafana
 SUBDIR+=	grandr
 SUBDIR+=	granite
 SUBDIR+=	graphene
