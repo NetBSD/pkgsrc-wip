@@ -14,7 +14,11 @@ CMAKE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 
+pre-configure: Qt5Qwt6.pc
+.PHONY: Qt5Qwt6.pc
+Qt5Qwt6.pc:
+	ln -sf ${QWT_DIR}/lib/pkgconfig/Qt5Qwt6.pc ${BUILDLINK_DIR}/lib/pkgconfig/Qt5Qwt6.pc
+
 .include	"../../x11/py-qt5/buildlink3.mk"
 .include	"../../x11/qwt6-qt5/buildlink3.mk"
-
 .include	"../../mk/bsd.pkg.mk"
