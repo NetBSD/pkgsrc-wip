@@ -3891,7 +3891,6 @@ SUBDIR+=	py-quaternions
 SUBDIR+=	py-quepy
 SUBDIR+=	py-qutip
 SUBDIR+=	py-qutrub
-SUBDIR+=	py-qwt-qt5
 SUBDIR+=	py-radontea
 SUBDIR+=	py-rainbownum
 SUBDIR+=	py-ranger
