@@ -4,7 +4,7 @@ $NetBSD$
 
 --- src/netbsd.cc.orig	2020-07-27 12:01:52.000000000 +0000
 +++ src/netbsd.cc
-@@ -30,11 +30,31 @@
+@@ -30,11 +30,47 @@
  #include "netbsd.h"
  #include "net_stat.h"
  
@@ -16,6 +16,22 @@ $NetBSD$
 +#define P_STRING   3
 +
 +#define _DEV_SYSMON "/dev/sysmon"
++
++static char const *freq_sysctls[] = {
++#if defined(__powerpc__)
++  "machdep.intrepid.frequency.current",
++#endif
++#if defined(__mips__)
++  "machdep.loongson.frequency.current",
++#endif
++#if defined(__i386__) || defined(__x86_64__)
++  "machdep.est.frequency.current",
++  "machdep.powernow.frequency.current",
++#endif
++  "machdep.cpu.frequency.current",
++  "machdep.frequency.current",
++  NULL
++};
 +
 +typedef struct Devquery {
 +  int type;
@@ -36,7 +52,7 @@ $NetBSD$
  static int init_kvm(void) {
    if (kd_init) { return 0; }
  
-@@ -82,13 +102,13 @@ static int swapmode(int *retavail, int *
+@@ -82,13 +118,13 @@ static int swapmode(int *retavail, int *
    return 1;
  }
  
@@ -53,7 +69,7 @@ $NetBSD$
  
    if ((sysctl(mib, 2, &boottime, &size, nullptr, 0) != -1) &&
        (boottime.tv_sec != 0)) {
-@@ -98,136 +118,158 @@ void update_uptime() {
+@@ -98,136 +134,158 @@ void update_uptime() {
      warn("could not get uptime");
      info.uptime = 0;
    }
@@ -235,7 +251,11 @@ $NetBSD$
 +            iftmp->ifa_addr->sa_len);
 +        }
 +      }
-+
+ 
+-    ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-    ns->last_read_recv = ifnet.if_ibytes;
+-    ns->trans += (ifnet.if_obytes - ns->last_read_trans);
+-    ns->last_read_trans = ifnet.if_obytes;
 +      ifd = (struct if_data *) ifa->ifa_data;
 +      r = ifd->ifi_ibytes;
 +      t = ifd->ifi_obytes;
@@ -245,13 +265,11 @@ $NetBSD$
 +      } else {
 +        ns->recv += (r - ns->last_read_recv);
 +      }
-+
-+      ns->last_read_recv = r;
  
--    ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--    ns->last_read_recv = ifnet.if_ibytes;
--    ns->trans += (ifnet.if_obytes - ns->last_read_trans);
--    ns->last_read_trans = ifnet.if_obytes;
+-    ns->recv_speed = (ns->recv - last_recv) / delta;
+-    ns->trans_speed = (ns->trans - last_trans) / delta;
++      ns->last_read_recv = r;
++
 +      if (t < ns->last_read_trans) {
 +        ns->trans += (long long) 4294967295U - ns->last_read_trans + t;
 +      } else {
@@ -259,9 +277,7 @@ $NetBSD$
 +      }
 +
 +      ns->last_read_trans = t;
- 
--    ns->recv_speed = (ns->recv - last_recv) / delta;
--    ns->trans_speed = (ns->trans - last_trans) / delta;
++
 +      /* calculate speeds */
 +      ns->recv_speed = (ns->recv - last_recv) / delta;
 +      ns->trans_speed = (ns->trans - last_trans) / delta;
@@ -307,7 +323,7 @@ $NetBSD$
    struct kinfo_proc2 *p;
    int n_processes;
    int i, cnt = 0;
-@@ -235,7 +277,7 @@ void update_running_processes() {
+@@ -235,7 +293,7 @@ void update_running_processes() {
    info.run_procs = 0;
  
    if (init_kvm() < 0) {
@@ -316,7 +332,7 @@ $NetBSD$
    } else {
      p = kvm_getproc2(kd, KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2),
                       &n_processes);
-@@ -248,50 +290,84 @@ void update_running_processes() {
+@@ -248,50 +306,84 @@ void update_running_processes() {
    }
  
    info.run_procs = cnt;
@@ -425,22 +441,23 @@ $NetBSD$
    double v[3];
  
    getloadavg(v, 3);
-@@ -299,32 +375,156 @@ void update_load_average() {
+@@ -299,32 +391,172 @@ void update_load_average() {
    info.loadavg[0] = (float)v[0];
    info.loadavg[1] = (float)v[1];
    info.loadavg[2] = (float)v[2];
 +  return 0;
-+}
-+
-+/* char *get_acpi_fan() */
-+void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size) {
-+  if (!p_client_buffer || client_buffer_size <= 0) { return; }
-+
-+  /* not implemented */
-+  memset(p_client_buffer, 0, client_buffer_size);
  }
  
 -double get_acpi_temperature(int fd) { return -1; }
++/* char *get_acpi_fan() */
++void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size) {
++  if (!p_client_buffer || client_buffer_size <= 0) { return; }
+ 
+-void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {}
++  /* not implemented */
++  memset(p_client_buffer, 0, client_buffer_size);
++}
++
 +/* needs root on NetBSD */
 +int get_entropy_avail(unsigned int *val) { return 1; }
 +
@@ -509,8 +526,7 @@ $NetBSD$
 +
 +  prop_object_iterator_release(iter);
 +  prop_object_release(dict);
- 
--void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {}
++
 +  if (rc == false) {
 +    val = NULL;
 +    return -1;
@@ -541,49 +557,65 @@ $NetBSD$
    if (!p_client_buffer || client_buffer_size <= 0) { return; }
  
 +  if (envsys_get_val(dq_acad, (void *)&connected) < 0) {
-+    strncpy(p_client_buffer, "N/A", client_buffer_size);
++    strlcpy(p_client_buffer, "N/A", client_buffer_size);
 +    return;
 +  }
 +
 +  if (connected) {
-+    strncpy(p_client_buffer, "Running on AC Power", client_buffer_size);
++    strlcpy(p_client_buffer, "Running on AC Power", client_buffer_size);
 +  } else {
-+    strncpy(p_client_buffer, "Running on battery", client_buffer_size);
++    strlcpy(p_client_buffer, "Running on battery", client_buffer_size);
 +  }
 +}
 +
-+char get_freq(char *p_client_buffer, size_t client_buffer_size,                                                                                                               
++char get_freq(char *p_client_buffer, size_t client_buffer_size,
 +              const char *p_format, int divisor, unsigned int cpu) {
++  char name[64];
++  const char *s;
++  int freq = 0;
++  size_t freq_size = sizeof(freq);
++
++  snprintf(name, sizeof(name), "machdep.cpufreq.cpu%u.current", cpu - 1);
++  if (sysctlbyname(name, &freq, &freq_size, NULL, 0) == -1) {
++    for (s = *freq_sysctls; s != NULL; ++s) {
++        if (sysctlbyname(s, &freq, &freq_size, NULL, 0) != -1)
++          break;
++    }
++  }
++  if (freq > 0) {
++    snprintf(p_client_buffer, client_buffer_size, p_format,
++             (float)freq / divisor);
++  } else {
++    snprintf(p_client_buffer, client_buffer_size, p_format, 0.0f);
++  }
++  return 1;
++}
++
++void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {
    /* not implemented */
 -  memset(p_client_buffer, 0, client_buffer_size);
-+  /* may be possible to implement, but machine dependent */
-+  return 0;
  }
  
 -/* char *get_acpi_fan() */
 -void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size) {
 -  if (!p_client_buffer || client_buffer_size <= 0) { return; }
-+void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {
++int get_battery_perct(const char *) {
 +  /* not implemented */
++  return 0;
 +}
  
-+int get_battery_perct(const char *) {
++double get_battery_perct_bar(struct text_object *obj) {
    /* not implemented */
 -  memset(p_client_buffer, 0, client_buffer_size);
-+  return 0;
++  return 0.0;
  }
  
 -int get_entropy_avail(unsigned int *val) { return 1; }
-+double get_battery_perct_bar(struct text_object *obj) {
-+  /* not implemented */
-+  return 0.0;
-+}
- 
--int get_entropy_poolsize(unsigned int *val) { return 1; }
 +void get_battery_short_status(char *buffer, unsigned int n, const char *bat) {
 +  /* not implemented */
 +}
-+
+ 
+-int get_entropy_poolsize(unsigned int *val) { return 1; }
 +int update_diskio(void) {
 +  /* not implemented */
 +  return 0;
