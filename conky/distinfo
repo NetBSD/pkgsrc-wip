@@ -9,5 +9,5 @@ SHA1 (patch-cmake_Conky.cmake) = b17fdb4dfa968aa4437eb26e68efa5fc308c759d
 SHA1 (patch-cmake_ConkyPlatformChecks.cmake) = 14d9dad017d4f7e45f883288ffa14146ce09d853
 SHA1 (patch-src_entropy.cc) = be1ac9bddde941d698f2e66dfef05d668eda3216
 SHA1 (patch-src_fs.cc) = 02fd3433c353dd883cc9ea2d4593279aee6e22c8
-SHA1 (patch-src_netbsd.cc) = 009c9ecc67b2b3f236ff9cf1ee097ca6f616f3eb
+SHA1 (patch-src_netbsd.cc) = 346cf7dc5d4d8897ca4871a1763199ce27aa5f57
 SHA1 (patch-src_netbsd.h) = 7c7df63b6ffac9e8ad23f5371b8c3d25ff733ab2

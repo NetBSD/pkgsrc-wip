@@ -1,4 +1,4 @@
 - Fix curses support on NetBSD.
-- Forwardport the NetBSD battery bits from sysutils/conky
+- Make the NetBSD battery bits not fail
 - Look into default config paths...
 - Build documentation?

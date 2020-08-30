@@ -69,7 +69,7 @@ $NetBSD$
  
    if ((sysctl(mib, 2, &boottime, &size, nullptr, 0) != -1) &&
        (boottime.tv_sec != 0)) {
-@@ -98,136 +134,158 @@ void update_uptime() {
+@@ -98,136 +134,156 @@ void update_uptime() {
      warn("could not get uptime");
      info.uptime = 0;
    }
@@ -101,27 +101,27 @@ $NetBSD$
 +  int mib[] = { CTL_VM, VM_UVMEXP2 };
    struct uvmexp_sysctl uvmexp;
 -  size_t size = sizeof(uvmexp);
--
++  size_t ssize;
+ 
 -  if (sysctl(mib, 2, &uvmexp, &size, nullptr, 0) < 0) {
 -    warn("could not get memory info");
 -    return;
 -  }
-+  size_t ssize;
++  ssize = sizeof(uvmexp);
++  memset(&uvmexp, 0, ssize);
  
 -  total_pages = uvmexp.npages;
 -  free_pages = uvmexp.free;
 -  inactive_pages = uvmexp.inactive;
-+  ssize = sizeof(uvmexp);
-+  memset(&uvmexp, 0, ssize);
++  info.mem = info.memmax = info.swap = info.swapfree = info.swapmax = 0;
++  info.buffers = info.cached = info.memfree = info.memeasyfree = 0;
++  info.bufmem = 0;
  
 -  info.memmax = (total_pages * pagesize) >> 10;
 -  info.mem = ((total_pages - free_pages - inactive_pages) * pagesize) >> 10;
 -  info.memwithbuffers = info.mem;
 -  info.memeasyfree = info.memfree = info.memmax - info.mem;
-+  info.mem = info.memmax = info.swap = info.swapfree = info.swapmax = 0;
-+  info.buffers = info.cached = info.memfree = info.memeasyfree = 0;
-+  info.bufmem = 0;
- 
+-
 -  if (swapmode(&swap_avail, &swap_free) >= 0) {
 -    info.swapmax = swap_avail;
 -    info.swap = (swap_avail - swap_free);
@@ -160,8 +160,7 @@ $NetBSD$
  
 -void update_net_stats() {
 -  int i;
-+int
-+update_net_stats(void) {
++int update_net_stats(void) {
 +  struct net_stat *ns;
    double delta;
 -  struct ifnet ifnet;
@@ -241,8 +240,7 @@ $NetBSD$
 +      if (ifa->ifa_addr->sa_family != AF_LINK) {
 +        continue;
 +      }
- 
--    ns->last_read_trans = ifnet.if_obytes;
++
 +      for (iftmp = ifa->ifa_next;
 +         iftmp != NULL && strcmp(ifa->ifa_name, iftmp->ifa_name) == 0;
 +         iftmp = iftmp->ifa_next) {
@@ -252,9 +250,6 @@ $NetBSD$
 +        }
 +      }
  
--    ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--    ns->last_read_recv = ifnet.if_ibytes;
--    ns->trans += (ifnet.if_obytes - ns->last_read_trans);
 -    ns->last_read_trans = ifnet.if_obytes;
 +      ifd = (struct if_data *) ifa->ifa_data;
 +      r = ifd->ifi_ibytes;
@@ -265,17 +260,21 @@ $NetBSD$
 +      } else {
 +        ns->recv += (r - ns->last_read_recv);
 +      }
- 
--    ns->recv_speed = (ns->recv - last_recv) / delta;
--    ns->trans_speed = (ns->trans - last_trans) / delta;
-+      ns->last_read_recv = r;
 +
++      ns->last_read_recv = r;
+ 
+-    ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-    ns->last_read_recv = ifnet.if_ibytes;
+-    ns->trans += (ifnet.if_obytes - ns->last_read_trans);
+-    ns->last_read_trans = ifnet.if_obytes;
 +      if (t < ns->last_read_trans) {
 +        ns->trans += (long long) 4294967295U - ns->last_read_trans + t;
 +      } else {
 +        ns->trans += (t - ns->last_read_trans);
 +      }
-+
+ 
+-    ns->recv_speed = (ns->recv - last_recv) / delta;
+-    ns->trans_speed = (ns->trans - last_trans) / delta;
 +      ns->last_read_trans = t;
 +
 +      /* calculate speeds */
@@ -302,8 +301,7 @@ $NetBSD$
 -  } else {
 -    kvm_getproc2(kd, KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2),
 -                 &n_processes);
-+int update_total_processes(void)
-+{
++int update_total_processes(void) {
 +  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_ALL};
 +  size_t size;
 +
@@ -323,7 +321,7 @@ $NetBSD$
    struct kinfo_proc2 *p;
    int n_processes;
    int i, cnt = 0;
-@@ -235,7 +293,7 @@ void update_running_processes() {
+@@ -235,7 +291,7 @@ void update_running_processes() {
    info.run_procs = 0;
  
    if (init_kvm() < 0) {
@@ -332,7 +330,7 @@ $NetBSD$
    } else {
      p = kvm_getproc2(kd, KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2),
                       &n_processes);
-@@ -248,50 +306,84 @@ void update_running_processes() {
+@@ -248,50 +304,84 @@ void update_running_processes() {
    }
  
    info.run_procs = cnt;
@@ -353,21 +351,21 @@ $NetBSD$
 +  } else {
 +    info.cpu_count = cpu_count;
 +  }
-+
+ 
+-struct cpu_load_struct fresh = {{0, 0, 0, 0, 0}};
 +  info.cpu_usage = (float *)malloc((info.cpu_count + 1) * sizeof(float));
 +  if (info.cpu_usage == nullptr) { CRIT_ERR(nullptr, NULL, "malloc"); }
 +}
  
--struct cpu_load_struct fresh = {{0, 0, 0, 0, 0}};
+-long cpu_used, oldtotal, oldused;
 +struct cpu_info {
 +  long oldtotal;
 +  long oldused;
 +};
  
--long cpu_used, oldtotal, oldused;
-+int update_cpu_usage(void) {
- 
 -void update_cpu_usage() {
++int update_cpu_usage(void) {
++
 +  int i, j = 0;
    long used, total;
 -  static u_int64_t cp_time[CPUSTATES];
@@ -383,15 +381,15 @@ $NetBSD$
 +    get_cpu_count();
 +    conky_cpu_setup = 1;
 +  }
- 
--  info.cpu_usage = 0;
++
 +  if (!global_cpu) {
 +    malloc_cpu_size = (info.cpu_count + 1) * sizeof(struct cpu_info);
 +    cpu = (cpu_info *)malloc(malloc_cpu_size);
 +    memset(cpu, 0, malloc_cpu_size);
 +    global_cpu = cpu;
 +  }
-+
+ 
+-  info.cpu_usage = 0;
 +  /* cpu[0] is overall stats, get it from separate sysctl */
 +  cp_len = CPUSTATES * sizeof(long);
 +  cp_time = (long int *)malloc(cp_len);
@@ -441,19 +439,17 @@ $NetBSD$
    double v[3];
  
    getloadavg(v, 3);
-@@ -299,32 +391,172 @@ void update_load_average() {
+@@ -299,32 +389,259 @@ void update_load_average() {
    info.loadavg[0] = (float)v[0];
    info.loadavg[1] = (float)v[1];
    info.loadavg[2] = (float)v[2];
 +  return 0;
- }
- 
--double get_acpi_temperature(int fd) { return -1; }
++}
++
 +/* char *get_acpi_fan() */
 +void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size) {
 +  if (!p_client_buffer || client_buffer_size <= 0) { return; }
- 
--void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {}
++
 +  /* not implemented */
 +  memset(p_client_buffer, 0, client_buffer_size);
 +}
@@ -464,18 +460,13 @@ $NetBSD$
 +/* needs root on NetBSD */
 +int get_entropy_poolsize(unsigned int *val) { return 1; }
 +
-+int
-+sysmon_open()
-+{
-+  if (sysmon_fd == -1)
-+    sysmon_fd = open(_DEV_SYSMON, O_RDONLY);
-+
-+  return sysmon_fd == -1;
-+}
++int sysmon_open() {
++  if (sysmon_fd != -1)
++    return 0;
++  return (sysmon_fd = open(_DEV_SYSMON, O_RDONLY)) == -1;
+ }
 + 
-+int8_t
-+envsys_get_val(Devquery dq, void *val)
-+{
++static int8_t envsys_get_val(Devquery dq, void *val) {
 +  const char *descr;
 +  const char *cval;
 +  prop_dictionary_t dict;
@@ -485,24 +476,25 @@ $NetBSD$
 +  prop_string_t str;
 +  bool rc = false;
 +
-+  if (!sysmon_open())
++  if (sysmon_open() != 0)
 +    return -1;
-+
-+  if (prop_dictionary_recv_ioctl(sysmon_fd, ENVSYS_GETDICTIONARY, &dict)
-+    != 0)
+ 
+-double get_acpi_temperature(int fd) { return -1; }
++  if (prop_dictionary_recv_ioctl(sysmon_fd, ENVSYS_GETDICTIONARY, &dict) != 0)
 +    return -1;
-+
+ 
+-void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {}
 +  if ((device = prop_dictionary_get(dict, dq.dev)) == NULL)
 +    return -1;
 +    
 +  iter = prop_array_iterator((prop_array_t)device);
 +
-+  while((obj = prop_object_iterator_next(iter)))  {
++  while ((obj = prop_object_iterator_next(iter)))  {
 +    if (!prop_dictionary_get_cstring_nocopy((prop_dictionary_t)obj, "description", &descr))
 +      return -1;
 +    if (descr != NULL && *descr) {
-+      if(strcmp(descr, dq.key) == 0) {
-+        switch(dq.type) {
++      if (strcmp(descr, dq.key) == 0) {
++        switch (dq.type) {
 +        case P_BOOL:
 +          rc = prop_dictionary_get_bool((prop_dictionary_t)obj,
 +            dq.row, (bool *)val);
@@ -537,8 +529,7 @@ $NetBSD$
  
  int open_acpi_temperature(const char *name) { return -1; }
  
-+double get_acpi_temperature(int fd)
-+{
++double get_acpi_temperature(int fd) {
 +  Devquery dq_tz = { P_INT64, "acpitz0", "temperature", "cur-value" };
 +  int64_t temperature;
 +
@@ -556,6 +547,8 @@ $NetBSD$
  
    if (!p_client_buffer || client_buffer_size <= 0) { return; }
  
+-  /* not implemented */
+-  memset(p_client_buffer, 0, client_buffer_size);
 +  if (envsys_get_val(dq_acad, (void *)&connected) < 0) {
 +    strlcpy(p_client_buffer, "N/A", client_buffer_size);
 +    return;
@@ -566,8 +559,11 @@ $NetBSD$
 +  } else {
 +    strlcpy(p_client_buffer, "Running on battery", client_buffer_size);
 +  }
-+}
-+
+ }
+ 
+-/* char *get_acpi_fan() */
+-void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size) {
+-  if (!p_client_buffer || client_buffer_size <= 0) { return; }
 +char get_freq(char *p_client_buffer, size_t client_buffer_size,
 +              const char *p_format, int divisor, unsigned int cpu) {
 +  char name[64];
@@ -590,32 +586,123 @@ $NetBSD$
 +  }
 +  return 1;
 +}
+ 
+-  /* not implemented */
+-  memset(p_client_buffer, 0, client_buffer_size);
++static int get_bat_perct(const char *bat) {
++  int batperct;
++  int64_t cur_charge, max_charge;
++  Devquery dq_charge = { P_INT64, NULL, "charge", NULL};
 +
-+void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {
-   /* not implemented */
--  memset(p_client_buffer, 0, client_buffer_size);
- }
- 
--/* char *get_acpi_fan() */
--void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size) {
--  if (!p_client_buffer || client_buffer_size <= 0) { return; }
-+int get_battery_perct(const char *) {
-+  /* not implemented */
-+  return 0;
-+}
- 
-+double get_battery_perct_bar(struct text_object *obj) {
-   /* not implemented */
--  memset(p_client_buffer, 0, client_buffer_size);
-+  return 0.0;
++  dq_charge.dev = bat;
++
++  dq_charge.row = "max-value";
++
++  if (envsys_get_val(dq_charge, (void *)&max_charge) < 0)
++    return 0;
++
++  dq_charge.row = "cur-value";
++
++  if (envsys_get_val(dq_charge, (void *)&cur_charge) < 0)
++    return 0;
++
++  return (int)(((float) cur_charge / max_charge) * 100);
  }
  
 -int get_entropy_avail(unsigned int *val) { return 1; }
-+void get_battery_short_status(char *buffer, unsigned int n, const char *bat) {
-+  /* not implemented */
-+}
++int get_battery_perct(const char *bat) {
++  int number;
++  char acpiname[32];
  
 -int get_entropy_poolsize(unsigned int *val) { return 1; }
++  sscanf(bat, "BAT%d", &number);
++  snprintf(acpiname, sizeof(acpiname), "acpibat%d", number);
++  return get_bat_perct(acpiname);
++}
++
++static void get_bat_state(const char *bat, char *buf, unsigned int n) {
++  bool connected = false, charging = false;
++  Devquery dq_ac = { P_BOOL, "acpiacad0", "connected", "cur-value" };
++  Devquery dq_charging = { P_BOOL, bat, "charging", "cur-value" };
++
++  /* get AC state */
++  if (envsys_get_val(dq_ac, (void *)&connected) < 0) {
++    /* did not get any information from envsys */
++    strlcpy(buf, "N/A", n);
++    return;
++  }
++
++  /* is the battery charging ? */
++  (void)envsys_get_val(dq_charging, (void *)&charging);
++
++  if (connected)
++    if (charging)
++      snprintf(buf, n, "charging (%d%%)", get_bat_perct(bat));
++    else
++      strlcpy(buf, "on-line", n);
++  else
++    snprintf(buf, n, "off-line (%d%%)", get_bat_perct(bat));
++}
++
++static void get_bat_time(const char *bat, char *buf, unsigned int n) {
++  int64_t charge, discharge;
++  int hours, minutes;
++  Devquery dq_discharge = { P_INT64, bat, "discharge rate",
++                "cur-value"};
++  Devquery dq_charge = { P_INT64, bat, "charge", "cur-value"};
++
++  if ((envsys_get_val(dq_discharge, (void *)&discharge) < 0) || !discharge) {
++    strlcpy(buf, "N/A", n);
++    return;
++  }
++  if (envsys_get_val(dq_charge, (void *)&charge) < 0) {
++    strlcpy(buf, "N/A", n);
++    return;
++  }
++
++  hours = (int)((float) charge / discharge);
++  minutes = (int)((((float) charge / discharge) - hours) * 60);
++
++  snprintf(buf, n, "%d:%02d", hours, minutes);
++}
++
++void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item) {
++  int bat_num;
++  char acpiname[32];
++
++  sscanf(bat, "BAT%d", &bat_num);
++  snprintf(acpiname, sizeof(acpiname), "acpibat%d", bat_num);
++
++  switch (item) {
++  case BATTERY_TIME:
++    get_bat_time(acpiname, buf, n);
++    break;
++  case BATTERY_STATUS:
++    get_bat_state(acpiname, buf, n);
++    break;
++  default:
++    fprintf(stderr, "Unknown requested battery stat %d\n", item);
++  }
++}
++
++double get_battery_perct_bar(struct text_object *obj) {
++  return get_battery_perct(obj->data.s);
++}
++
++void get_battery_short_status(char *buffer, unsigned int n, const char *bat) {
++  get_battery_stuff(buffer, n, bat, BATTERY_STATUS);
++  if (0 == strncmp("charging", buffer, 8)) {
++    buffer[0] = 'C';
++    memmove(buffer + 1, buffer + 8, n - 8);
++  } else if (0 == strncmp("off-line", buffer, 11)) {
++    buffer[0] = 'D';
++    memmove(buffer + 1, buffer + 11, n - 11);
++  } else if (0 == strncmp("on-line", buffer, 12)) {
++    buffer[0] = 'A';
++    memmove(buffer + 1, buffer + 12, n - 12);
++  }
++}
++
 +int update_diskio(void) {
 +  /* not implemented */
 +  return 0;
