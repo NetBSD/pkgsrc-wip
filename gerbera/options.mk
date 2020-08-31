@@ -16,25 +16,25 @@ CMAKE_ARGS+=	-DWITH_DEBUG=OFF
 .if !empty(PKG_OPTIONS:Mffmpeg)
 CMAKE_ARGS+=	-DWITH_AVCODEC=ON
 
-. include "../../multimedia/ffmpeg4/buildlink3.mk"
+.  include "../../multimedia/ffmpeg4/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpegthumbnailer)
 CMAKE_ARGS+=	-DWITH_FFMPEGTHUMBNAILER=ON
 
-. include "../../multimedia/ffmpegthumbnailer/buildlink3.mk"
+.  include "../../multimedia/ffmpegthumbnailer/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mlastfm)
 CMAKE_ARGS+=	-DWITH_LASTFM=ON
 
-. include "../../audio/liblastfm/buildlink3.mk"
+.  include "../../audio/liblastfm/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mjavascript)
 CMAKE_ARGS+=	-DWITH_JS=OFF
 
-. include "../../lang/libduktape/buildlink3.mk"
+.  include "../../lang/libduktape/buildlink3.mk"
 .endif
 
 .if empty(PKG_OPTIONS:Msystemd)
