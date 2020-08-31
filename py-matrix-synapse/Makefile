@@ -44,6 +44,8 @@ DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx via py-repoze.who
+
 DEPENDS+=	zip>=3.0:../../archivers/zip
 DEPENDS+=	freetype>=1.5:../../graphics/freetype
 
