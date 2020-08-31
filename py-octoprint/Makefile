@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-flask-assets>=0.12:../../www/py-flask-assets
 DEPENDS+=	${PYPKGPREFIX}-flask-babel>=0.12:../../www/py-flask-babel
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.2.11:../../www/py-flask-login
 DEPENDS+=	${PYPKGPREFIX}-flask-principal>=0.4:../../www/py-flask-principal
-DEPENDS+=	${PYPKGPREFIX}-frozendict>=1.2:../../wip/py-frozendict
+DEPENDS+=	${PYPKGPREFIX}-frozendict>=1.2:../../devel/py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-future>=0.17.1:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-futures>=3.2:../../devel/py-futures
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.8.1:../../textproc/py-jinja2
