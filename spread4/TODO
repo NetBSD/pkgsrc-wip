@@ -1,0 +1,40 @@
+* DESCR
+
+Enhance DESCR to explain how this is different from net/spread.
+
+* Replace/update plan
+
+Explain (perhaps in TOOD; there is no standard place) if this is
+replacing net/spread or becoming a new package.
+
+* spread 5 plan
+
+Explain (in TODO?) if wip/spread4 should be updated to 5, or if there
+should be a separate wip/spread5.  A straw proposal is that 3 is
+needed for old API and python, and that 5 is mostly 4 with IPv6, so
+there is no real need to have 4 if 5 is available.
+
+* COMMIT_MSG
+
+Create a COMMIT_MSG that can be used to add a new spread4 package, or
+to update net/spread.
+
+* Fix build on netbsd8/amd64
+
+Currently fails with complaint about -ldl.
+
+* Hoist license comment from net/spread
+
+((Generally, minimize diffs from net/spread except for intentional
+changes.)
+
+* LICENSE
+
+Search licenses/ to see if it really is unique.
+
+Determine if license is DFSG-acceptable
+
+Create a license file, either spread-license or spread and use it.
+
+Document DFSG-ness or lack thereoof in a COMMIT_MSG.license.
+
