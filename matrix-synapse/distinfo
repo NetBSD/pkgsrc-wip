@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (synapse/v1.18.0.tar.gz) = 075f8b53dc6c5ca10aeb8732fef996d1961b6e6a
-RMD160 (synapse/v1.18.0.tar.gz) = abd425e7032b431dbccea9ef1d3b872854d171fe
-SHA512 (synapse/v1.18.0.tar.gz) = edbbc55910d6691caf7209a10b74a3022f9cafdc2dd4693ee5d4337372a307f9a4fbd72444c6d73615cde360a8517772fea98d72292321f40f3e98bf8fb706b3
-Size (synapse/v1.18.0.tar.gz) = 6764546 bytes
+SHA1 (synapse/v1.19.1.tar.gz) = f8abcdb21ad5bac862ecccd1d13ad5c950d41f35
+RMD160 (synapse/v1.19.1.tar.gz) = cf142c11c7d7e60eeededb6dac3549339b3e8bc6
+SHA512 (synapse/v1.19.1.tar.gz) = 819d2afd70c72375eea0da9c50f9e3a91e92bdddd37bdb2eaa7fb5ce50567b0c7aa2cc5434af32498fdf17a5b8fdc997e34b5d79e34865c97c38e9e0d165ac25
+Size (synapse/v1.19.1.tar.gz) = 6778340 bytes

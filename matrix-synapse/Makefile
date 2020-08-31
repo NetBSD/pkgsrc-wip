@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	synapse
 GITHUB_TAG=	${DISTNAME}
-DISTNAME=	v1.18.0
+DISTNAME=	v1.19.1
 PKGNAME=	matrix-synapse-${DISTNAME:S,^v,,}
 EGG_NAME=	matrix_synapse-${DISTNAME:S,^v,,}
 CATEGORIES=	chat
