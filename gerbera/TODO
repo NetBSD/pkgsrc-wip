@@ -1,1 +1,2 @@
+- fix the installation path of the manual page
 - re-introduce the -d, -u, -g, and -P options (background, username, group, PID file)
