@@ -1710,6 +1710,7 @@ SUBDIR+=	jfsw-git
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
 SUBDIR+=	jitsi
+SUBDIR+=	jitsi-meet
 SUBDIR+=	jlibtool
 SUBDIR+=	jmol
 SUBDIR+=	jmtpfs
