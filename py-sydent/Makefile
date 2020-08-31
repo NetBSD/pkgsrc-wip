@@ -1,6 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	${PYPKGPREFIX}-sydent-0.1
+DISTNAME=	py-sydent-0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	www
 GITHUB_PROJECT=	sydent
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
@@ -15,7 +16,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-daemonize>=2.4.7:../../devel/py-daemonize
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers-[0-9]*:../../textproc/py-phonenumbers
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
 DEPENDS+=	${PYPKGPREFIX}-signedjson-[0-9]*:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
@@ -25,10 +25,12 @@ DEPENDS+=	${PYPKGPREFIX}-libnacl-[0-9]*:../../security/py-libnacl
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 WRKSRC=		${WRKDIR}/sydent-3d3ac5ab802ad91bbecfc0cd6a50bdd31875c1fe
 #USE_LANGUAGES=	# none
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

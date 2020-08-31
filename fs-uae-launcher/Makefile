@@ -36,9 +36,10 @@ PLIST_SUBST+=	VERSION=${VERSION}
 #DEPENDS+=	${PYPKGPREFIX}-qt4>=4.10.2nb1:../../x11/py-qt4
 # when building with qt5 it should co-exist with calibre and qbzr.
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=20:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-lhafile>=0:../../archivers/py-lhafile
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 # Use the normal "gmake install" to install; not setup.py via "../../lang/python/extension.mk".
 
@@ -49,4 +50,5 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

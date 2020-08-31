@@ -11,10 +11,10 @@ HOMEPAGE=	https://github.com/getsentry/symbolic/
 COMMENT=	Library for dealing with symbol files and more
 LICENSE=	mit
 
-
 MAKE_ENV+=	RUSTFLAGS="-Clink-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib"
 
-DEPENDS+=       ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+
 DEPENDS+=       ${PYPKGPREFIX}-milksnake>=0.1.5:../../wip/py-milksnake
 DEPENDS+=       ${PYPKGPREFIX}-cffi>=1.11.5:../../devel/py-cffi
 DEPENDS+=       ${PYPKGPREFIX}-cparser>=2.18:../../devel/py-cparser
@@ -90,4 +90,5 @@ do-install:
 BUILDLINK_API_DEPENDS.rust+=     rust>=1.25.0
 .include "../../lang/rust/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

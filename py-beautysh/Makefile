@@ -12,12 +12,12 @@ HOMEPAGE=	https://github.com/bemeurer/beautysh/
 COMMENT=	Bash beautifier for the masses
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 REPLACE_PYTHON+=	beautysh/beautysh.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

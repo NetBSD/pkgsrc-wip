@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 #PYTHON_VERSIONS_ACCEPTED=	36 27
 PYTHON_VERSIONS_ACCEPTED=	27
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-readline>=1.0:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.6:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.8.2:../../math/py-numpy
@@ -31,6 +30,8 @@ PYSETUP=		setup.py
 #PYSETUPINSTALLARGS=	--prefix=${PREFIX}
 REPLACE_PYTHON+=	*.py
 
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+
 #do-install:
 #	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR} --prefix=${PREFIX}
 
@@ -39,4 +40,5 @@ REPLACE_PYTHON+=	*.py
 #.include "../../lang/python/egg.mk"
 .include "../../lang/python/distutils.mk"
 #.include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

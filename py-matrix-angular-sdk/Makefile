@@ -13,11 +13,12 @@ HOMEPAGE=	https://github.com/matrix-org/
 COMMENT=	AngularJS services for implementing the Client-Server API
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 USE_LANGUAGES=		# none
 WRKSRC=			${WRKDIR}/${DISTNAME}
 INSTALLATION_DIRS=	${PYSITELIB}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

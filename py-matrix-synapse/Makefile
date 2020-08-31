@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	synapse-0.22.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-matrix-${DISTNAME}
 CATEGORIES=	chat
 GITHUB_PROJECT=	synapse
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
@@ -12,8 +12,6 @@ MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/matrix-org/
 COMMENT=	Matrix is an open federated Instant Messaging and VoIP
 LICENSE=	apache-2.0
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
@@ -48,6 +46,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx via py-repoze.who
 
 DEPENDS+=	zip>=3.0:../../archivers/zip
 DEPENDS+=	freetype>=1.5:../../graphics/freetype
+
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
@@ -90,4 +90,5 @@ OWN_DIRS_PERMS+=	${SYNAPSE_LOGDIR} ${SYNAPSE_USER} ${SYNAPSE_GROUP} 0750
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
