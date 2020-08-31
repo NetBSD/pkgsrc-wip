@@ -4,7 +4,7 @@
 DISTNAME=	spread-src-4.4.1
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.spread.org/

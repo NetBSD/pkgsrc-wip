@@ -21,7 +21,8 @@ to update net/spread.
 
 * Fix build on netbsd8/amd64
 
-Currently fails with complaint about -ldl.
+Currently fails with complaint about -ldl.  Email sent to upstream
+20200830.
 
 * Hoist license comment from net/spread
 
