@@ -1083,6 +1083,7 @@ SUBDIR+=	genus2reduction
 SUBDIR+=	geoclue
 SUBDIR+=	geocode-glib
 SUBDIR+=	geoloc
+SUBDIR+=	gerbera
 SUBDIR+=	gerris
 SUBDIR+=	gerris-snapshot
 SUBDIR+=	getdns
