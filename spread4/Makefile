@@ -55,5 +55,10 @@ SUBST_VARS.spread=	SPREAD_USER SPREAD_GROUP SPREAD_DIR PKG_SYSCONFDIR
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/sample.spread.access_ip ${DESTDIR}${EXAMPLEDIR}/spread.access_ip
 
+.include "../../mk/dlopen.buildlink3.mk"
+# Work around upstream bug where -ldl is added on NetBSD.  Reported to
+# contact address on 20200830.
+BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
