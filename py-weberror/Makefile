@@ -13,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.3.1:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.2:../../www/py-paste
+DEPENDS+=	${PYPKGPREFIX}-paste>=1.7.2:../../www/py-paste
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=0.9.8:../../www/py-WebOb
 

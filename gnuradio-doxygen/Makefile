@@ -6,6 +6,8 @@ COMMENT=	Doxygen documentation of GNU Radio
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
+
 BUILD_DEPENDS+=	doxygen>=1.8.15:../../devel/doxygen
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz

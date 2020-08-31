@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
 DEPENDS+=	${PYPKGPREFIX}-PasteScript-[0-9]*:../../www/py-PasteScript
-DEPENDS+=	${PYPKGPREFIX}-Paste-[0-9]*:../../www/py-paste
+DEPENDS+=	${PYPKGPREFIX}-paste-[0-9]*:../../www/py-paste
 
 DEPENDS+=	${PYPKGPREFIX}-waitress>=0.8.8:../../www/py-waitress
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=1.0.8:../../www/py-WebOb

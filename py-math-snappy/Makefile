@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.2:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
+
 USE_LANGUAGES=	c c++
 
 .include "../../devel/py-cython/buildlink3.mk"

@@ -26,6 +26,8 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbe
 # optional, but recommended
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-keyring
+
 USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
 PLIST_SUBST+=		PKGBASE=${PKGBASE}

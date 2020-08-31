@@ -18,8 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 #DEPENDS+=	${PYPKGPREFIX}-repoze.sphinx.autointerface-[0-9]*:../../wip/repoze.sphinx.autointerface
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
 
-WRKSRC=		${WRKDIR}/repoze.who-2.3
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

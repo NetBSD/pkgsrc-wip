@@ -11,7 +11,8 @@ COMMENT=	Access a multitude of neuroimaging data formats
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
+# not for python 2.x
+#DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-dicom>=0.9.8:../../wip/py-dicom
 
 USE_LANGUAGES=	c

@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.4:../../textproc/py-sphinx
 #DEPENDS+=	${PYPKGPREFIX}-gist>=1.5.28:../../wip/py-gist
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-gnuplot
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gnuplot, py-sphinx
 
 USE_LANGUAGES=	# none
 

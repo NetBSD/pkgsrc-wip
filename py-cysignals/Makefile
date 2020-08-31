@@ -12,6 +12,8 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.3:../../textproc/py-sphinx
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
+
 GNU_CONFIGURE=	NO
 
 post-extract:

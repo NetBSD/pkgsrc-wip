@@ -12,6 +12,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.1.3:../../textproc/py-sphinx
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

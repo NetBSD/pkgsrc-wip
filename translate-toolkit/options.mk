@@ -47,6 +47,7 @@ PLIST.csv=	yes
 
 #Off till someone updates textproc/py-sphinx to 3.1.1
 .if !empty(PKG_OPTIONS:Mdoc)
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=3.1.1.:../../textproc/py-sphinx
 SUBST_CLASSES+=		sphinx
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"

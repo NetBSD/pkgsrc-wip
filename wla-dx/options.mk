@@ -10,6 +10,7 @@ PLIST_VARS+=	doc
 
 
 .if !empty(PKG_OPTIONS:Mdoc)
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
 BUILD_DEPENDS+=	py[0-9]*-sphinx-[0-9]*:../../textproc/py-sphinx
 PLIST.doc=	yes
 .endif

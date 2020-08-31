@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 GITHUB_TAG=	release-${PKGVERSION_NOREV:S/./-/g}
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
+
 USE_TOOLS+=	gmake
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx

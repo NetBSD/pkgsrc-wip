@@ -19,5 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-wadllib-[0-9]*:../../wip/py-wadllib
 DEPENDS+=	${PYPKGPREFIX}-lazr.uri-[0-9]*:../../wip/py-lazr.uri
 DEPENDS+=	${PYPKGPREFIX}-lazr.restfulclient-[0-9]*:../../wip/py-lazr.restfulclient
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-keyring
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
