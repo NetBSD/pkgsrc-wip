@@ -16,11 +16,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
-#CMAKE_ARGS+=	-DWITH_AVCODEC=ON
-CMAKE_ARGS+=	-DWITH_DEBUG=OFF
-CMAKE_ARGS+=	-DWITH_FFMPEGTHUMBNAILER=ON
-#CMAKE_ARGS+=	-DWITH_LASTFM=ON
-CMAKE_ARGS+=	-DWITH_SYSTEMD=OFF
 
 RCD_SCRIPTS=	gerbera
 
@@ -57,7 +52,8 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.xml ${DESTDIR}${EGDIR}/config.xml
 
-#.include "../../audio/liblastfm/buildlink3.mk"
+.include "options.mk"
+
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -65,8 +61,6 @@ post-install:
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../lang/libduktape/buildlink3.mk"
-.include "../../multimedia/ffmpegthumbnailer/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../net/libupnp/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
