@@ -19,10 +19,10 @@ there is no real need to have 4 if 5 is available.
 Create a COMMIT_MSG that can be used to add a new spread4 package, or
 to update net/spread.
 
-* Fix build on netbsd8/amd64
+* man apges
 
-Currently fails with complaint about -ldl.  Email sent to upstream
-20200830.
+There is perhaps some @MANTYPE@ confusion.  There are manpages in the
+PLIST but they are not build on netbsd-8.
 
 * Hoist license comment from net/spread
 
