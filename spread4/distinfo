@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.2 2014/07/18 11:10:22 fhajny Exp $
 
-SHA1 (spread-src-4.4.0.tar.gz) = 944d31501517c892a446fa484a7fd928e9ede941
-RMD160 (spread-src-4.4.0.tar.gz) = f05cbca46efdd9dd1a4219188f4a5483188bb109
-SHA512 (spread-src-4.4.0.tar.gz) = 6785727bd9aadb432922f750d7c9e8cf6f48be095b3113e09de325be034209f91aa42a37c6598e7ad4f3013eee103e402a586346fdbc990180cbb2ec6fac1646
-Size (spread-src-4.4.0.tar.gz) = 763723 bytes
+SHA1 (spread-src-4.4.1.tar.gz) = f1afef5b4a93644eec1c593872852b7a307098db
+RMD160 (spread-src-4.4.1.tar.gz) = ef161507ba59ece4cf48519341f920d03409eccd
+SHA512 (spread-src-4.4.1.tar.gz) = 19f3fe897e4a4bd68dffc7d28d7b99826bbcbb5c2f44eb18127ed486063594bfd788c03c8c338b9b329302659325fa84a9cbfee3f202a9970afb1a560bb6f496
+Size (spread-src-4.4.1.tar.gz) = 760038 bytes
 SHA1 (patch-configure) = 283f0e86e9cd149f5051e0b9a75471636a52191d
 SHA1 (patch-daemon_auth-ip.c) = 24e438cc78b40ae86f7d1380ae3b6415f859d43a
 SHA1 (patch-daemon_auth-pword.c) = 921404829d20ff8a6b45ee3495db07550d7d4eb9
