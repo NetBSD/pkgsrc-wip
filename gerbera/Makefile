@@ -40,17 +40,20 @@ FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 GERBERA_HOME=		${PKG_HOME.${GERBERA_USER}}
 
 SUBST_CLASSES+=		config
-SUBST_FILES.config=	config.xml
+SUBST_FILES.config=	config.xml gerbera.desktop
 SUBST_VARS.config=	GERBERA_HOME PREFIX OPSYS
 SUBST_STAGE.config=	pre-configure
 
-INSTALLATION_DIRS+=	share/examples/gerbera
+INSTALLATION_DIRS+=	share/applications share/examples/gerbera
 
 post-extract:
 	${CP} ${FILESDIR}/config.xml.in ${WRKSRC}/config.xml
+	${CP} ${FILESDIR}/gerbera.desktop.in ${WRKSRC}/gerbera.desktop
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.xml ${DESTDIR}${EGDIR}/config.xml
+	${INSTALL_DATA} ${WRKSRC}/gerbera.desktop \
+		${DESTDIR}${PREFIX}/share/applications/gerbera.desktop
 
 .include "options.mk"
 
@@ -68,4 +71,5 @@ post-install:
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

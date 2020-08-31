@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/gerbera
+share/applications/gerbera.desktop
 share/examples/gerbera/config.xml
 share/gerbera/js/common.js
 share/gerbera/js/import.js
