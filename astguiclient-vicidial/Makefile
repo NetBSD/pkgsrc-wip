@@ -32,7 +32,7 @@ DEPENDS+=	p5-Digest-SHA1>=2.1:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Pod-Usage>=1.6:../../devel/p5-Pod-Usage
 DEPENDS+=	p5-Getopt-Long>=2.5:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-Net-Telnet>=3.0:../../net/p5-Net-Telnet
-DEPENDS+=	p5-Time-HiRes>=1.9:../../time/p5-Time-HiRes
+#DEPENDS+=	p5-Time-HiRes>=1.9:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Net-Server>=2.0:../../net/p5-Net-Server
 DEPENDS+=	p5-Mail-Sendmail>=0.7:../../mail/p5-Mail-Sendmail
 DEPENDS+=	p5-Unicode-Map>=0.1:../../converters/p5-Unicode-Map

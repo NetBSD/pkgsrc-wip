@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.8 2015/01/14 15:22:23 fhajny Exp $
-#
 
 PKGNAME=	${DISTNAME:S/munin/munin-master/}
 COMMENT=	System monitoring tool, master version
@@ -14,7 +13,7 @@ DEPENDS+=	p5-HTML-Template>=0:../../www/p5-HTML-Template
 DEPENDS+=	p5-IO-Socket-INET6>=2.69:../../net/p5-IO-Socket-INET6
 DEPENDS+=	p5-Log-Log4perl>=1.18:../../devel/p5-Log-Log4perl
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
-DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+#DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 DEPENDS+=	p5-URI>=1.60:../../www/p5-URI
 DEPENDS+=	rrdtool>=1.2:../../databases/rrdtool
 

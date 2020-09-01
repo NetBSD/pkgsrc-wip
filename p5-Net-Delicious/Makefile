@@ -16,7 +16,7 @@ DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-XML-Simple>=2.08:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-Log-Dispatch>=2.11:../../devel/p5-Log-Dispatch
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
-DEPENDS+=	p5-Time-HiRes>=1.65:../../time/p5-Time-HiRes
+#DEPENDS+=	p5-Time-HiRes>=1.65:../../time/p5-Time-HiRes
 DEPENDS+=	p5-IO-stringy>=2.10:../../devel/p5-IO-stringy
 DEPENDS+=	p5-YAML>=0.39:../../textproc/p5-YAML
 DEPENDS+=	p5-Config-Simple>=2:../../sysutils/p5-Config-Simple

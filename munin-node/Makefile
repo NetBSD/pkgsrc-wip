@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.14 2015/01/13 15:36:06 fhajny Exp $
-#
 
 PKGNAME=	${DISTNAME:S/munin/munin-node/}
 COMMENT=	System monitoring tool, client version
@@ -12,7 +11,7 @@ DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Socket6>=0:../../net/p5-Socket6
-DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+#DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/plugin-conf.d
 OWN_DIRS=		${PKG_SYSCONFDIR}/plugins

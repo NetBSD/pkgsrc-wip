@@ -11,7 +11,7 @@ COMMENT=		Runtime cgiapp info in a popup window
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-CGI-Application>=4.01:../../www/p5-CGI-Application
-DEPENDS+=		p5-Time-HiRes>=1.66:../../time/p5-Time-HiRes
+#DEPENDS+=		p5-Time-HiRes>=1.66:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/DevPopup/.packlist
 

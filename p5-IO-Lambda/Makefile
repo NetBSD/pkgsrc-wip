@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+#DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
