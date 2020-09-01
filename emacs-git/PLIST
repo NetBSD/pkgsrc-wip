@@ -1718,8 +1718,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/tabulated-list.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tabulated-list.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-ses.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-ses.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-unsafep.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-unsafep.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/testcover.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/testcover.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/text-property-search.el.gz
