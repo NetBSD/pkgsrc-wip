@@ -120,6 +120,7 @@ SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
 SUBDIR+=	amass
 SUBDIR+=	amavis-logwatch
+SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amp-editor
 SUBDIR+=	analizo
 SUBDIR+=	and
