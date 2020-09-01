@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.AIX,v 1.2 2011/09/10 19:55:04 ftigeot Exp $
-lib/munin/plugins/swap
