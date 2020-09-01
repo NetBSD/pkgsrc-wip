@@ -39,7 +39,7 @@ DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.1:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pylru>=1.2.0:../../wip/py-pylru
 DEPENDS+=	${PYPKGPREFIX}-regex>2018.11.6:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.21.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-rsa>=4.0:../../security/py-rsa
+DEPENDS+=	${PYPKGPREFIX}-rsa>=4.0:../../security/py-rsa40
 DEPENDS+=	${PYPKGPREFIX}-sarge>=0.1.5:../../wip/py-sarge
 DEPENDS+=	${PYPKGPREFIX}-scandir>=1.10:../../devel/py-scandir
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.6:../../devel/py-semantic_version
