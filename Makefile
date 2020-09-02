@@ -2440,6 +2440,7 @@ SUBDIR+=	ogre
 SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omnispeak
+SUBDIR+=	onefetch
 SUBDIR+=	oneko
 SUBDIR+=	oneloop
 SUBDIR+=	oolite
