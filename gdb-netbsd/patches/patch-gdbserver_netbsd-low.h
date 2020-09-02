@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdbserver/netbsd-low.h.orig	2020-08-27 02:43:00.927090317 +0000
+--- gdbserver/netbsd-low.h.orig	2020-09-02 16:10:13.482596165 +0000
 +++ gdbserver/netbsd-low.h
-@@ -0,0 +1,153 @@
+@@ -0,0 +1,157 @@
 +/* Copyright (C) 2020 Free Software Foundation, Inc.
 +
 +   This file is part of GDB.
@@ -67,6 +67,8 @@ $NetBSD$
 +  int create_inferior (const char *program,
 +		       const std::vector<char *> &program_args) override;
 +
++  void post_create_inferior () override;
++
 +  int attach (unsigned long pid) override;
 +
 +  int kill (process_info *proc) override;
@@ -97,7 +99,7 @@ $NetBSD$
 +  void request_interrupt () override;
 +
 +  bool supports_read_auxv () override;
-+  
++
 +  int read_auxv (CORE_ADDR offset, unsigned char *myaddr,
 +		 unsigned int len) override;
 +
@@ -114,6 +116,8 @@ $NetBSD$
 +		    int size, struct raw_breakpoint *bp) override;
 +
 +  bool stopped_by_sw_breakpoint () override;
++
++  bool supports_qxfer_siginfo () override;
 +
 +  int qxfer_siginfo (const char *annex, unsigned char *readbuf,
 +		     unsigned const char *writebuf, CORE_ADDR offset,
@@ -134,12 +138,12 @@ $NetBSD$
 +  bool supports_disable_randomization () override;
 +
 +  bool supports_qxfer_libraries_svr4 () override;
-+  
++
 +  int qxfer_libraries_svr4 (const char*, unsigned char*, const unsigned char*,
 +			    CORE_ADDR, int) override;
 +
 +  bool supports_pid_to_exec_file () override;
-+  
++
 +  char *pid_to_exec_file (int pid) override;
 +
 +  const char *thread_name (ptid_t thread) override;
