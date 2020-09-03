@@ -1,7 +1,5 @@
 The compiler itself compiles, but the standard library isn't ported.
 
-Installation hasn't been done yet, so the PLIST is empty.
-
 - Since DMD requires itself to bootstrap, it has to fetch a DMD compiler.
 This has to be done during the fetch stage and checked against a checksum,
 not during build.
