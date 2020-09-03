@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/31 00:50:04 jihbed Exp $
-
-SHA1 (gwsmhg-0.8.1.tar.gz) = 040b9f31c3c12742365d46c51efe30d6bd29e946
-RMD160 (gwsmhg-0.8.1.tar.gz) = 768a3b05ae2d6b297ad5e2b101e123e85c9788b1
-SHA512 (gwsmhg-0.8.1.tar.gz) = 3186fc213d427b7704b40d003455697a64c4092a87550815656eb9b4806a94057de50c5efca536bb1ea0ec3c01942959e3b395e272a5253430d2990ac6ad8502
-Size (gwsmhg-0.8.1.tar.gz) = 103209 bytes

@@ -1323,7 +1323,6 @@ SUBDIR+=	gurlchecker
 SUBDIR+=	gvariant
 SUBDIR+=	gwget
 SUBDIR+=	gwhois
-SUBDIR+=	gwsmhg
 SUBDIR+=	gwyddion
 SUBDIR+=	gxconsole
 SUBDIR+=	gxmms2
