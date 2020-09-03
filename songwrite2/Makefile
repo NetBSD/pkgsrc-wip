@@ -10,7 +10,7 @@ HOMEPAGE=	http://home.gna.org/oomadness/en/songwrite/
 COMMENT=	Music score and songbook editor
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 
 USE_PKGLOCALEDIR=		yes
 USE_LANGUAGES=			# none

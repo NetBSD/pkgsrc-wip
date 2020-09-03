@@ -675,7 +675,11 @@ ${PYSITELIB}/graphite/worker_pool/pool.pyo
 ${PYSITELIB}/graphite/worker_pool/pool.pyc
 ${PYSITELIB}/graphite/worker_pool/pool.py
 ${PYSITELIB}/graphite/wsgi.py
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 share/examples/graphite/dashboard.conf.example
 share/examples/graphite/example-client.py
 share/examples/graphite/example-graphite-vhost.conf

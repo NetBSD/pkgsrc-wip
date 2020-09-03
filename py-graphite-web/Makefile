@@ -16,7 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.3.1:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.3.1:../../www/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+
+PYTHON_VERSIONED_DEPENDENCIES+=	cairo
 
 EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
@@ -73,5 +74,6 @@ post-install:
 	${LN} -s ${PKG_SYSCONFDIR}/local_settings.py ${DESTDIR}${PREFIX}/${PYSITELIB}/graphite/
 
 .include "../../databases/py-carbon/Makefile.common"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

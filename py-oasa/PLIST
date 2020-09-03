@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/09 21:37:34 jihbed Exp $
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/oasa/__init__.py
 ${PYSITELIB}/oasa/__init__.pyc
 ${PYSITELIB}/oasa/__init__.pyo

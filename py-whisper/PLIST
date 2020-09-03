@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/07 04:56:45 minskim Exp $
+@comment $NetBSD$
 bin/find-corrupt-whisper-files.py
 bin/rrd2whisper.py
 bin/update-storage-times.py
@@ -15,7 +15,12 @@ bin/whisper-resize.py
 bin/whisper-set-aggregation-method.py
 bin/whisper-set-xfilesfactor.py
 bin/whisper-update.py
-${PYSITELIB}/${EGG_FILE}
+${PLIST.py2x}${PYSITELIB}/${EGG_FILE}
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/requires.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/whisper.py
 ${PYSITELIB}/whisper.pyc
 ${PYSITELIB}/whisper.pyo

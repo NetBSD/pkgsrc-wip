@@ -3,16 +3,16 @@
 DISTNAME=	gtg-0.1.1
 PKGREVISION=	1
 CATEGORIES=	editors python
-MASTER_SITES=	http://launchpad.net/gtg/trunk/0.1.1/+download/
+#MASTER_SITES=	http://launchpad.net/gtg/trunk/0.1.1/+download/
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://gtg.fritalk.com/
+HOMEPAGE=	https://flathub.org/apps/details/org.gnome.GTG
 COMMENT=	GTG is a personal organizer for the GNOME
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-configobj>=4.6.0:../../devel/py-configobj
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt

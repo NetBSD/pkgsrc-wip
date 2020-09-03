@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://microtetris.sourceforge.net/
 COMMENT=	MicroTetris is a simple and compact popular game Tetris
 
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

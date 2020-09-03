@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=1.0:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.6:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.8.2:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pyglet>=1.1:../../wip/py-pyglet
-DEPENDS+=	${PYPKGPREFIX}-cairo>=1.8.8:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo>=1.8.8:../../graphics/py-cairo118
 DEPENDS+=	${PYPKGPREFIX}-cairosvg>=1.0.9:../../converters/py27-cairosvg
 #Meh linux sleep thing same with the dbus req.
 #DEPENDS+=	${PYPKGPREFIX}-psutil>=5.2.2:../../sysutils/py-psutil
