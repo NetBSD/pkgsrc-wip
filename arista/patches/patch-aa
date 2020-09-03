@@ -1,8 +1,8 @@
 $NetBSD: patch-aa,v 1.1.1.1 2009/05/31 10:02:19 jihbed Exp $
 
---- arista.desktop.orig	2009-05-31 09:20:42.000000000 +0000
-+++ arista.desktop	2009-05-31 09:21:09.000000000 +0000
-@@ -2,10 +2,10 @@
+--- arista.desktop.orig	2011-06-20 14:16:06.000000000 +0000
++++ arista.desktop
+@@ -2,11 +2,11 @@
  Name=Arista Transcoder
  GenericName=Multimedia Converter
  Comment=Convert multimedia for all your devices
@@ -14,4 +14,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/05/31 10:02:19 jihbed Exp $
 -Icon=/usr/share/arista/ui/icon.svg
 +Icon=/usr/pkg/share/arista/ui/icon.svg
  Categories=AudioVideo;GNOME;GTK;
+ MimeType=x-content/video-dvd;x-content/video-vcd;x-content/video-svcd;
  
