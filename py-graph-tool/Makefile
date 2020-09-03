@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--with-numpy=${PREFIX}
 CONFIGURE_ARGS+=	--disable-silent-rules
 
 # Why is this necessary?
-CXXFLAGS+=	-I${PREFIX}/lib/python2.7/site-packages/numpy/core/include
+CXXFLAGS+=	-I${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages/numpy/core/include
 CXXFLAGS+=	-Wno-unknown-pragmas
 CXXFLAGS+=	-Wno-maybe-uninitialized
 CXXFLAGS+=	-std=c++14
