@@ -14,9 +14,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-pre-configure:
-	ln -s python ${BUILDLINK_DIR}/bin/python3
-
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../x11/gtk2/buildlink3.mk"
