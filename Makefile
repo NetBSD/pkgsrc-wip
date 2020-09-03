@@ -1895,7 +1895,6 @@ SUBDIR+=	libgringotts
 SUBDIR+=	libgrss
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
-SUBDIR+=	libgtksourceviewmm
 SUBDIR+=	libgtkstylus
 SUBDIR+=	libgtop
 SUBDIR+=	libguestfs-appliance

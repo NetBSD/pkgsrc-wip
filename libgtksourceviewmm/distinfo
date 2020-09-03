@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/08/04 08:22:38 makoto Exp $
-
-SHA1 (libgtksourceviewmm-0.3.1.tar.gz) = 85dd97e3c17aa67b2748a9ea7aa5d94b4c0b3cd6
-RMD160 (libgtksourceviewmm-0.3.1.tar.gz) = b358e1bbe44064b411c0f4c2689340809e00817e
-Size (libgtksourceviewmm-0.3.1.tar.gz) = 568777 bytes
