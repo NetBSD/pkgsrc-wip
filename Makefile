@@ -4264,7 +4264,6 @@ SUBDIR+=	redfang
 SUBDIR+=	reduze
 SUBDIR+=	refkeen
 SUBDIR+=	regexxer
-SUBDIR+=	reinteract
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
 SUBDIR+=	resid-builder
