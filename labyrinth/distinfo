@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/24 22:04:02 jihbed Exp $
-
-SHA1 (labyrinth_0.4.1.tar.gz) = 88b2557f614736968ffa624dd5d08c5bdfb7f302
-RMD160 (labyrinth_0.4.1.tar.gz) = 0020a9a7d1a199d5946ded20420884c11668aa12
-Size (labyrinth_0.4.1.tar.gz) = 553527 bytes
-SHA1 (patch-aa) = ca0f6024bf27b5fd8ba87d6ac31c6409a428e57b

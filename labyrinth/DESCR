@@ -1,8 +1,0 @@
-Labyrinth is a lightweight mind-mapping tool, written in Python using
-Gtk and Cairo to do the drawing. It is intended to be as light and intuitive
-as possible, but still provide a wide range of powerful features.
-
-A mind-map is a diagram used to represent words, ideas, tasks or other
-items linked to and arranged radially around a central key word or idea
-It is used to generate, visualise, structure  and classify ideas, and as an
-aid in study, organisation, problem solving, and decision making

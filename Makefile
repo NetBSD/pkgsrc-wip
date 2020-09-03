@@ -1790,7 +1790,6 @@ SUBDIR+=	kwrited
 SUBDIR+=	kyototycoon
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
-SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
 SUBDIR+=	lander
 SUBDIR+=	lapack
