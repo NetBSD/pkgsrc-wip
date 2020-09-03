@@ -24,7 +24,8 @@ PYTHON_VERSIONS_ACCEPTED=	27 # py-notify, py-gtk2, py-gobject
 
 INSTALLATION_DIRS+=	bin
 
-REPLACE_PYTHON+=	${WRKSRC}/monajat-applet
+REPLACE_PYTHON+=	monajat-applet
+REPLACE_PYTHON+=	monajat-mod
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
