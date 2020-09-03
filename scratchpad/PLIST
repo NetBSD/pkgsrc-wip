@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:15 thomasklausner Exp $
-bin/scratchpad
-share/applications/scratchpad.desktop
-share/doc/scratchpad/README
-share/gconf/schemas/scratchpad.schemas
-share/pixmaps/scratchpad.svg
-share/scratchpad/scratchpad-ui.xml

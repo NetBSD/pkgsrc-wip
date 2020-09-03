@@ -4426,7 +4426,6 @@ SUBDIR+=	scm
 SUBDIR+=	scmail
 SUBDIR+=	scourge
 SUBDIR+=	scr2png
-SUBDIR+=	scratchpad
 SUBDIR+=	scrc
 SUBDIR+=	scribus
 SUBDIR+=	scsh-install-lib
