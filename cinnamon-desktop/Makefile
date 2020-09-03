@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/02/19 18:01:20 jihbed Exp $
 
-DISTNAME=	cinnamon-desktop-4.0.1
+DISTNAME=	cinnamon-desktop-4.6.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
 GITHUB_PROJECT=	cinnamon-desktop

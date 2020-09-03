@@ -13,11 +13,22 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
+#SUBST_CLASSES=		pypath
+#SUBST_STAGE.pypath=	pre-configure
+#SUBST_FILES.pypath=	pygobject/meson.build files/meson.build
+#SUBST_VARS.pypath=	PREFIX PYTHONBIN
+
+PY_PATCHPLIST=	yes
+
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libxapp
 
 USE_TOOLS+=	gmake bash pkg-config intltool msgfmt
 
-#REPLACE_BASH=	files/usr/bin/xfce4-set-wallpaper
+REPLACE_PYTHON=	schemas/meson_install_schemas.py	\
+		files/usr/bin/pastebin			\
+		files/usr/bin/upload-system-info
+
+REPLACE_BASH=	files/usr/bin/xfce4-set-wallpaper
 
 pre-install:
 	${CHMOD} +x ${WRKSRC}/schemas/meson_install_schemas.py

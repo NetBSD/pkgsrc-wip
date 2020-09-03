@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.1 2015/02/19 17:04:55 jihbed Exp $
 
-SHA1 (cinnamon-desktop-4.0.1.tar.gz) = c0a622d805a5823d029fb0c12453f559d0c7d980
-RMD160 (cinnamon-desktop-4.0.1.tar.gz) = afbff554a8e0fab6d3a01acb20b0937b9bfbac47
-SHA512 (cinnamon-desktop-4.0.1.tar.gz) = 68ce970736eac025c5cf73239dccd010d70197011e75258dc234bdbb52346466f51fc211c58d2ce730e63fb6250fa763ccbdf44cc08df7a028a0bea01826ddb4
-Size (cinnamon-desktop-4.0.1.tar.gz) = 489598 bytes
+SHA1 (cinnamon-desktop-4.6.4.tar.gz) = 589fa7fadd9cf63a9763f832e83e97d7fbcbcf21
+RMD160 (cinnamon-desktop-4.6.4.tar.gz) = ea0dccd48779dbda5338b0038f2429f5bf52fe4a
+SHA512 (cinnamon-desktop-4.6.4.tar.gz) = 09a0e521bd97d4eead9e84ca929a04202d3d4ef35e689d84578a534cc00f1be0a22e04c407f7caaaca4bb5b5a837bd1a2893cd727d0045f15ee20938c36fae72
+Size (cinnamon-desktop-4.6.4.tar.gz) = 495195 bytes
 SHA1 (patch-libcinnamon-desktop_cdesktop-enums.h) = de429f814c46e767abc023d2dafada44b90e76e3
-SHA1 (patch-schemas_org.cinnamon.desktop.session.gschema.xml.in.in) = 5a7c99cacc2ec7964f07ec762a9e628948b6eeed
+SHA1 (patch-schemas_org.cinnamon.desktop.session.gschema.xml.in.in) = ecfc9b2aa147e1895706f2381be770d5de178b25

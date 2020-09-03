@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.1 2015/02/19 17:04:55 jihbed Exp $
 
-SHA1 (cinnamon-settings-daemon-4.0.3.tar.gz) = 72f8fbaaa317de8dc173fd74a086e090dbf09404
-RMD160 (cinnamon-settings-daemon-4.0.3.tar.gz) = 1d10d4f2facd0d969dc2556d4c70ae57ef4f4288
-SHA512 (cinnamon-settings-daemon-4.0.3.tar.gz) = 68629fb1067096ee735087558e1455d8a2b572491eb9c880ae562e712bde46c31240fa848ffd7a298feafe95b71546b2fa1f4f9b6cdcfb3210a37195d909ef59
-Size (cinnamon-settings-daemon-4.0.3.tar.gz) = 663186 bytes
+SHA1 (cinnamon-settings-daemon-4.6.4.tar.gz) = 70da86dafd1484647187c2a43c1966538a095e2a
+RMD160 (cinnamon-settings-daemon-4.6.4.tar.gz) = 4cb68f51262ad042cd99974432cba7b991c84ccd
+SHA512 (cinnamon-settings-daemon-4.6.4.tar.gz) = 77ddb637fd93fdfd59fb27c5a10082259fd99b4753ff36b3473db12f2fe0d19ee89d44c9e72f1ce9eab3f228c5fef418ce774dd78746d77b959ad9d8f93c1208
+Size (cinnamon-settings-daemon-4.6.4.tar.gz) = 668339 bytes
 SHA1 (patch-configure.ac) = 0ab4cb7368487fae951d68d5bc2a5d6c7f40f4f1
 SHA1 (patch-data_org.cinnamon.settings-daemon.plugins.power.gschema.xml.in.in) = 5da78c10161554521bba6ff19215763ddbe93e25
 SHA1 (patch-files_Makefile.in) = 1a100b728e963ffa354502913ef77b4d023e6acf

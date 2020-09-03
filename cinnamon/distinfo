@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (cinnamon-3.8.9.tar.gz) = f7f4b67f4972274634e1beefc36477f6dbfd2109
-RMD160 (cinnamon-3.8.9.tar.gz) = bf4e15b6e8518e8ca1eae05ca9931b6df9cd85a7
-SHA512 (cinnamon-3.8.9.tar.gz) = 3b07daf531819e21037ec0161c462d03bb60e0e059e6dfe5f6ab200858391c9b4a2c033e4a38f9acc83ddbedde8e54ab78a346a71718e5f4b5025061335b7f14
-Size (cinnamon-3.8.9.tar.gz) = 2235921 bytes
+SHA1 (cinnamon-4.6.7.tar.gz) = fdd9493a5856cb33f7212d85583aed8d8b3a4114
+RMD160 (cinnamon-4.6.7.tar.gz) = 7ca215e916ee9ab4b0c470a2da55cba9ba479412
+SHA512 (cinnamon-4.6.7.tar.gz) = 4807d5330c1e2a7e1804257b88dbec2822aa386b0bc2fe2d3aca8e5a27125703987dbabca35360e99216e7b4370bcf6339de562026b48529442a4edda6eb9070
+Size (cinnamon-4.6.7.tar.gz) = 2271281 bytes
 SHA1 (patch-configure.ac) = e8b055699a6d98feaa19855cc306720cd444120a
 SHA1 (patch-data_org.cinnamon.gschema.xml.in) = 2b0e12c578cc007232d3ad11813774142244a562
 SHA1 (patch-files_Makefile.in) = 435a12f03baabd1e3ec482d9a5f4f28645a689a2

@@ -1,6 +1,6 @@
 # $NetBSD$: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
 
-DISTNAME=	cjs-4.0.0
+DISTNAME=	cjs-4.6.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
 GITHUB_PROJECT=	cjs
