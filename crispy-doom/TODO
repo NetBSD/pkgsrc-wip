@@ -5,6 +5,7 @@ Vulnerabilites to investigate:
 Fails without Python:
 [X] Issue reported upstrem
     => Fixed in Git commit ab1a38d8e902baebc7183fb511bd58c50e2b4571
+    => Fix released in 5.9.1
 [X] Add tool dependency for Python
 
 [X] Add commit message
