@@ -2,6 +2,7 @@
 
 DISTNAME=	Text-Quote-0.32
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
@@ -10,7 +11,6 @@ HOMEPAGE=	https://metacpan.org/release/Text-Quote
 COMMENT=	Quotes strings as required for perl to eval them back correctly
 
 DEPENDS+=	p5-Carp-Assert>=0.13:../../devel/p5-Carp-Assert
-DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 DEPENDS+=	p5-MIME-Base64>=2.12:../../converters/p5-MIME-Base64
 
 PERL5_PACKLIST=	auto/Text/Quote/.packlist

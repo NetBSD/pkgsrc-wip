@@ -2,7 +2,7 @@
 
 DISTNAME=	ptksdict-1.2.1
 PKGNAME=	${DISTNAME:S/ptksdict/sdict-tools/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://sdict.com/rsc/files/
 
@@ -15,7 +15,6 @@ USE_TOOLS+=		gzip tar
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
-DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 #DEPENDS+=	p5-IO-File-[0-9]*:../../devel/p5-IO-File
 DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
 DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
