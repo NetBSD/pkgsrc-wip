@@ -1,8 +1,17 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/python_xapp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/python_xapp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/python_xapp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/python_xapp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/xapp/GSettingsWidgets.py
+${PYSITELIB}/xapp/GSettingsWidgets.pyc
+${PYSITELIB}/xapp/GSettingsWidgets.pyo
+${PYSITELIB}/xapp/SettingsWidgets.py
+${PYSITELIB}/xapp/SettingsWidgets.pyc
+${PYSITELIB}/xapp/SettingsWidgets.pyo
 ${PYSITELIB}/xapp/__init__.py
-${PYSITELIB}/xapp/__init__.pyo
 ${PYSITELIB}/xapp/__init__.pyc
-${PYSITELIB}/xapp/os.pyo
-${PYSITELIB}/xapp/os.pyc
+${PYSITELIB}/xapp/__init__.pyo
 ${PYSITELIB}/xapp/os.py
+${PYSITELIB}/xapp/os.pyc
+${PYSITELIB}/xapp/os.pyo

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (python-xapp-1.4.0.tar.gz) = 1c5288b6afbc17b6f86fb3c741fcd452c9a291be
-RMD160 (python-xapp-1.4.0.tar.gz) = 9fff50a67c7d5f6f1803560a63de3d9da2bee7b8
-SHA512 (python-xapp-1.4.0.tar.gz) = b364135536fde6175b7a5b5002ccb3103401760a78856b665715caec3c95e544238cfb3447600a1fd729a24917a37b2aba5a13fdcb4462510b5bf7090189309f
-Size (python-xapp-1.4.0.tar.gz) = 12431 bytes
+SHA1 (python3-xapp-2.0.1.tar.gz) = 94ff8de56b07610ed8099813c29e60bfedec73f3
+RMD160 (python3-xapp-2.0.1.tar.gz) = 14e73b50a652055c5f983f58db1fdec57d7025e7
+SHA512 (python3-xapp-2.0.1.tar.gz) = a529680ab2adbcd829ec224b7dafeb5f641afaabd51ac6cea154d1adf46772b0f2c58a78c6f136d3c6dde0b5d69a4e53a988f69d282af852ecf9ffa130ec1fe4
+Size (python3-xapp-2.0.1.tar.gz) = 19839 bytes
