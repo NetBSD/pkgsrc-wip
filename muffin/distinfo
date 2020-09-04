@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/06/22 14:47:06 jihbed Exp $
+$NetBSD$
 
-SHA1 (muffin-3.8.3.tar.gz) = 14a4138061706bb849c94fb8c8696934c506a546
-RMD160 (muffin-3.8.3.tar.gz) = cd98b93387b89e561457ffa2dd44f605322b8636
-SHA512 (muffin-3.8.3.tar.gz) = 2baf92b66ea0e7fee5268c4c2d8c063a3a6e864ed134278e3cc32a47efc0cc292835d59ab60d3732a58c11af66f7dd87d6f1d98f6bbdc5d07c5262e9444d8106
-Size (muffin-3.8.3.tar.gz) = 2723230 bytes
-SHA1 (patch-src_core_delete.c) = 561547d271d0e8dd8090ea9156cd403438a8545d
+SHA1 (muffin-4.6.2.tar.gz) = e60621968fd648b3d4fa5ac6f69672ffe8f2c32d
+RMD160 (muffin-4.6.2.tar.gz) = e5462ce6de521fe6515dfe9db0d9e1209bfaf9f2
+SHA512 (muffin-4.6.2.tar.gz) = a8b9ed5ef81c0b436dea4e3421349031af05aeb42ce051615a8b937b9c877a308a340c6503593fcf943eba441cc4e16dc4f011cb12bbfe91a599f1d955ba1310
+Size (muffin-4.6.2.tar.gz) = 5196057 bytes
