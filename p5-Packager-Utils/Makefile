@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.9 2015/07/12 18:57:34 thomasklausner Exp $
 
 DISTNAME=	p5-Packager-Utils-0.0
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	#
 
@@ -22,7 +23,6 @@ PERL5_MODULE_TYPE=	MakeMaker
 PERL5_PACKLIST=		auto/Packager/Utils/.packlist
 
 DEPENDS+=	p5-Alien-Packages-[0-9]*:../../devel/p5-Alien-Packages
-DEPENDS+=	p5-Module-CoreList-[0-9]*:../../devel/p5-Module-CoreList
 DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
