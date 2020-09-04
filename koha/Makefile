@@ -1,20 +1,19 @@
 # $NetBSD: Makefile,v 1.5 2012/10/01 21:52:41 asau Exp $
 
 DISTNAME=	koha-2.2.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/koha/
-LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://koha.org/
 COMMENT=	Koha is an integrated library system
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
 DEPENDS+=	apache>=2.4:../../www/apache24
 DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Date-Manip>=5.44:../../devel/p5-Date-Manip
-DEPENDS+=	p5-Digest-MD5>=2.35:../../security/p5-Digest-MD5
 DEPENDS+=	p5-DBD-mysql>=3.0002:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-DBI>=1.56:../../databases/p5-DBI
 DEPENDS+=	p5-Event>=1.06:../../devel/p5-Event

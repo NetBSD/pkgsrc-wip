@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.6 2012/10/04 18:42:21 asau Exp $
-#
 
 DISTNAME=	Maypole-2.13
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TE/TEEJAY/
 
@@ -22,7 +22,6 @@ DEPENDS+=	p5-Class-DBI-Pager>=0:../../wip/p5-Class-DBI-Pager
 DEPENDS+=	p5-Class-DBI-Plugin-RetrieveAll>=0:../../wip/p5-Class-DBI-Plugin-RetrieveAll
 DEPENDS+=	p5-Class-DBI-Plugin-Type>=0:../../wip/p5-Class-DBI-Plugin-Type
 DEPENDS+=	p5-Class-DBI-SQLite>=0.08:../../wip/p5-Class-DBI-SQLite
-DEPENDS+=	p5-Digest-MD5>=0:../../security/p5-Digest-MD5
 DEPENDS+=	p5-File-MMagic-XS>=0.08:../../misc/p5-File-MMagic-XS
 DEPENDS+=	p5-HTML-Tree>=0:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTTP-Body>=0.5:../../www/p5-HTTP-Body

@@ -2,14 +2,15 @@
 
 DISTNAME=	astguiclient_2.13rc1
 PKGNAME=	vicidial-2.13rc1
+PKGREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=astguiclient/}
 EXTRACT_SUFX=	.zip
-LICENSE=	gnu-agpl-v3
 
 MAINTAINER=	angelmadames@gmail.com
 HOMEPAGE=	https://sourceforge.net/projects/astguiclient/
 COMMENT=	Asterisk GUI client, VICIdial
+LICENSE=	gnu-agpl-v3
 
 NO_BUILD=	yes
 USE_TOOLS+=	perl pax
@@ -27,7 +28,6 @@ INTERACTIVE_STAGE=	configure install
 	# Perl dependencies :
 DEPENDS+=	p5-DBI>=1.6:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql>=1.6:../../databases/p5-DBD-mysql
-DEPENDS+=	p5-Digest-MD5>=2.5:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-SHA1>=2.1:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Pod-Usage>=1.6:../../devel/p5-Pod-Usage
 DEPENDS+=	p5-Getopt-Long>=2.5:../../devel/p5-Getopt-Long

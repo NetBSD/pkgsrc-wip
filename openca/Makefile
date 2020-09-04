@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2014/06/22 19:57:10 thomasklausner Exp $
 
 DISTNAME=	openca-0.9.2.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openca/}
 
@@ -14,7 +14,6 @@ DEPENDS+=	p5-CGI-Session>=3.95:../../www/p5-CGI-Session
 DEPENDS+=	p5-Convert-ASN1>=0.17:../../textproc/p5-Convert-ASN1
 DEPENDS+=	p5-MIME-Base64>=2.20:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Digest-SHA1>=2.02:../../security/p5-Digest-SHA1
-DEPENDS+=	p5-Digest-MD5>=2.24:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-HMAC>=1.01:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-IO-Socket-SSL>=0.92:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-IO-stringy>=2.108:../../devel/p5-IO-stringy

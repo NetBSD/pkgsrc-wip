@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.12 2012/10/07 16:22:55 asau Exp $
-#
 
 DISTNAME=	ptksdict-1.2.1
 PKGNAME=	${DISTNAME:S/ptksdict/sdict-tools/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://sdict.com/rsc/files/
 
@@ -15,7 +14,6 @@ USE_TOOLS+=		gzip tar
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
-DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 #DEPENDS+=	p5-IO-File-[0-9]*:../../devel/p5-IO-File
