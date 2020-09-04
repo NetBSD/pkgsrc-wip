@@ -2,7 +2,7 @@
 
 DISTNAME=	astguiclient_2.13rc1
 PKGNAME=	vicidial-2.13rc1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=astguiclient/}
 EXTRACT_SUFX=	.zip
@@ -44,7 +44,6 @@ DEPENDS+=	p5-Archive-Zip>=1.5:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Test-Simple>=1.3:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Text-CSV>=1.6:../../textproc/p5-Text-CSV
 DEPENDS+=	p5-Test-NoWarnings>=1.0:../../devel/p5-Test-NoWarnings
-DEPENDS+=	p5-File-Temp>=0.2:../../devel/p5-File-Temp
 DEPENDS+=	p5-libwww>=6.2:../../www/p5-libwww
 DEPENDS+=	p5-HTML-Parser>=3.7:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Strip>=1.6:../../www/p5-HTML-Strip

@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2013/03/04 21:58:38 thomasklausner Exp $
-#
 
 DISTNAME=	ninka-1.3.2pre20180106
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	kamel.derouiche@gmail.com
@@ -17,7 +17,6 @@ PKGREVISION=		0
 DEPENDS+=		p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
-DEPENDS+=		p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=		p5-Spreadsheet-WriteExcel-[0-9]*:../../math/p5-Spreadsheet-WriteExcel
 DEPENDS+=		p5-IO-CaptureOutput-[0-9]*:../../devel/p5-IO-CaptureOutput
 #BUILD_DEPENDS+=	p5-Test-Strict-[0-9]*:../../devel/p5-Test-Strict
