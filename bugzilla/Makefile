@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.26 2017/01/16 14:06:43 mef Exp $
 
 DISTNAME=	bugzilla-5.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -13,7 +13,6 @@ LICENSE=	mpl-2.0
 # mod_perl
 DEPENDS+=	ap2[0-9]-perl-[0-9]*:../../www/ap2-perl
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
-DEPENDS+=	p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-TimeZone-[0-9]*:../../time/p5-DateTime-TimeZone

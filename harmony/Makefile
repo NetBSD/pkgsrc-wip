@@ -4,7 +4,7 @@ GITHUB_TAG=	a7bb5a65b71644d9efce5fed783ed545b9336548
 GITHUB_PROJECT=	harmony
 DISTNAME=	harmony-${GITHUB_TAG}
 PKGNAME=	harmony-0.0.20181014
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bugzilla/}
 
@@ -22,7 +22,6 @@ DEPENDS+=	p5-FFI-Platypus-[0-9]*:../../wip/p5-FFI-Platypus
 DEPENDS+=	p5-DBIx-Connector-[0-9]*:../../databases/p5-DBIx-Connector
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
-DEPENDS+=	p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-TimeZone-[0-9]*:../../time/p5-DateTime-TimeZone
