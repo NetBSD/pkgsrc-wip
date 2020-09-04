@@ -4,6 +4,7 @@ GITHUB_TAG=	a7bb5a65b71644d9efce5fed783ed545b9336548
 GITHUB_PROJECT=	harmony
 DISTNAME=	harmony-${GITHUB_TAG}
 PKGNAME=	harmony-0.0.20181014
+PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bugzilla/}
 
@@ -53,7 +54,6 @@ DEPENDS+=	p5-JSON-RPC-[0-9]*:../../www/p5-JSON-RPC
 DEPENDS+=	p5-Test-Taint-[0-9]*:../../devel/p5-Test-Taint
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Scrubber-[0-9]*:../../www/p5-HTML-Scrubber
-DEPENDS+=	p5-Encode-[0-9]*:../../textproc/p5-Encode
 DEPENDS+=	p5-Encode-Detect-[0-9]*:../../textproc/p5-Encode-Detect
 DEPENDS+=	p5-Email-Reply-[0-9]*:../../mail/p5-Email-Reply
 DEPENDS+=	p5-HTML-FormatText-WithLinks-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks

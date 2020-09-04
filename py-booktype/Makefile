@@ -2,6 +2,7 @@
 
 DISTNAME=	Booktype-1.5
 PKGNAME=	${PYPKGPREFIX}-booktype-1.5
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Booktype/}
 
@@ -10,9 +11,7 @@ HOMEPAGE=	http://booki-dev.flossmanuals.net/
 COMMENT=	FLOSS Manuals collaborative book writing tool
 LICENSE=	gnu-gpl-v3
 
-
 DEPENDS+=	p5-Text-Aspell>=0.09:../../textproc/p5-Text-Aspell
-DEPENDS+=	p5-Encode>=2.44:../../textproc/p5-Encode
 DEPENDS+=	p5-XML-DOM>=1.44:../../textproc/p5-XML-DOM
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.6.0:../../converters/py-simplejson
