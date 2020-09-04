@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/jitsi-meet-${DISTNAME}
 USE_LANGUAGES=	c c++
-USE_TOOLS=	gmake pax
+USE_TOOLS=	gmake tar
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
@@ -24,7 +24,6 @@ BUILD_TARGET=	compile
 INSTALL_TARGET=	deploy
 
 INSTALLATION_DIRS+=	share/jitsi-meet
-INSTALLATION_DIRS+=	share/jitsi-meet/css
 
 do-configure:
 	cd ${WRKSRC} && \
@@ -32,12 +31,8 @@ do-configure:
 
 post-install:
 	cd ${WRKSRC} && \
-		${PAX} -rw *.js *.html resources/*.txt \
-			connection_optimization favicon.ico fonts images libs \
-			static sounds LICENSE lang \
-			${DESTDIR}${PREFIX}/share/jitsi-meet && \
-		${PAX} -rw css/all.css \
-			${DESTDIR}${PREFIX}/share/jitsi-meet/css
+		${MAKE} source-package
+	${RUN} ${TAR} -C ${DESTDIR}${PREFIX}/share -xjf ${WRKSRC}/jitsi-meet.tar.bz2
 
 .include "../../lang/nodejs/buildlink3.mk"
 .include "../../lang/nodejs/nodeversion.mk"

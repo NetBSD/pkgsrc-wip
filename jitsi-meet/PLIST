@@ -178,7 +178,6 @@ share/jitsi-meet/libs/video-blur-effect.min.map
 share/jitsi-meet/logging_config.js
 share/jitsi-meet/metro.config.js
 share/jitsi-meet/plugin.head.html
-share/jitsi-meet/resources/robots.txt
 share/jitsi-meet/robots.txt
 share/jitsi-meet/sounds/incomingMessage.wav
 share/jitsi-meet/sounds/joined.wav
