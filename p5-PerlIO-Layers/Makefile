@@ -2,6 +2,7 @@
 
 DISTNAME=	PerlIO-Layers-0.011
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PerlIO/}
 
@@ -11,8 +12,6 @@ HOMEPAGE=	https://metacpan.org/release/PerlIO-Layers
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES+=	c
-
-DEPENDS+=	p5-XSLoader-[0-9]*:../../devel/p5-XSLoader
 
 PERL5_MODULE_TYPE=	Module::Build
 
