@@ -2,7 +2,7 @@
 
 DISTNAME=	Plucene-1.25
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plucene/}
 
@@ -19,7 +19,6 @@ DEPENDS+=	p5-IO-stringy>=2.104:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Lingua-Stem>=0.81:../../textproc/p5-Lingua-Stem
 DEPENDS+=	p5-Scalar-List-Utils>=1.13:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Tie-Array-Sorted>=1.1:../../devel/p5-Tie-Array-Sorted
-DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
 DEPENDS+=	p5-Encode-compat>=0:../../wip/p5-Encode-compat
 BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
 
