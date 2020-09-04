@@ -239,6 +239,7 @@ SUBDIR+=	bamtools
 SUBDIR+=	banshee
 SUBDIR+=	baresip
 SUBDIR+=	barony
+SUBDIR+=	barony337
 SUBDIR+=	barrier
 SUBDIR+=	basepkg
 SUBDIR+=	bashdb
