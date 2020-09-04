@@ -2,6 +2,7 @@
 
 DISTNAME=	ozymandns_src_0.1
 PKGNAME=	${DISTNAME:S/_src_/-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cship.info/mirror/dnstunnel/ http://beta.ivancover.com/dnstunnel/ http://wiki.kartbuilding.net/ http://s3.amazonaws.com/dmk/
 EXTRACT_SUFX=	.tgz
@@ -13,7 +14,6 @@ COMMENT=	Tool to enable ssh tunnel over DNS using TXT records
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=		p5-LWP-UserAgent-Determined-[0-9]*:../../www/p5-LWP-UserAgent-Determined
 DEPENDS+=		p5-MIME-Base32-[0-9]*:../../converters/p5-MIME-Base32
-DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		YES

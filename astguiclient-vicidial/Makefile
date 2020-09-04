@@ -2,7 +2,7 @@
 
 DISTNAME=	astguiclient_2.13rc1
 PKGNAME=	vicidial-2.13rc1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=astguiclient/}
 EXTRACT_SUFX=	.zip
@@ -56,7 +56,6 @@ DEPENDS+=	p5-Mail-POP3Client>=2.1:../../mail/p5-Mail-POP3Client
 DEPENDS+=	p5-IO-Socket-SSL>=2.0:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Crypt-Eksblowfish>=0.0:../../security/p5-Crypt-Eksblowfish
 DEPENDS+=	p5-IO-tty>=1.1:../../devel/p5-IO-Tty
-DEPENDS+=	p5-MIME-Base64>=3.1:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net-SFTP-Foreign>=1.8:../../wip/p5-Net-SFTP-Foreign
 	# Needed for Super List Loader:
 DEPENDS+=	p5-Spreadsheet-WriteExcel>=2.4:../../math/p5-Spreadsheet-WriteExcel

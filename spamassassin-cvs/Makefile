@@ -2,7 +2,7 @@
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.spamassassin.org/devel/		\
 		http://eu.spamassassin.org/devel/		\
@@ -16,8 +16,6 @@ LICENSE=	apache-2.0
 DEPENDS+=	p5-Net-DNS>=0.29:../../net/p5-Net-DNS
 DEPENDS+=	p5-HTML-Parser>=3.29:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=	p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
-#DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]* \
 		spamassassin-[1-9]*

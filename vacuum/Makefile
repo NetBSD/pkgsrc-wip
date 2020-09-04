@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 17:41:40 asau Exp $
 
 DISTNAME=	vacuum-0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vacuum/}
 
@@ -11,7 +11,6 @@ COMMENT=	Vacuum Magic, a fast-paced action game
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-SDL>=1.20.0:../../devel/p5-SDL
-DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
