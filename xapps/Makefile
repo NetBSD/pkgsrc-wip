@@ -11,18 +11,16 @@ HOMEPAGE=	https://github.com/linuxmint/xapps
 COMMENT=	Components which are common to multiple desktop environments
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libxapp
+USE_TOOLS=		pkg-config intltool
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++ fortran
+WRKSRC=			${WRKDIR}/xapp-1.8.9
+USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=	gmake bash pkg-config intltool msgfmt
-
-#REPLACE_BASH=	files/usr/bin/xfce4-set-wallpaper
-
-pre-install:
-	${CHMOD} +x ${WRKSRC}/schemas/meson_install_schemas.py
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"
