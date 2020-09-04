@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdb/nat/netbsd-nat.h.orig	2020-09-02 16:10:13.481487586 +0000
+--- gdb/nat/netbsd-nat.h.orig	2020-09-04 21:53:29.055935316 +0000
 +++ gdb/nat/netbsd-nat.h
-@@ -0,0 +1,47 @@
+@@ -0,0 +1,46 @@
 +/* Internal interfaces for the NetBSD code.
 +
 +   Copyright (C) 2006-2020 Free Software Foundation, Inc.
@@ -38,15 +38,14 @@ $NetBSD$
 +
 +extern const char *thread_name (ptid_t ptid);
 +
-+extern void list_threads (pid_t pid,
-+			  gdb::function_view<void (ptid_t)> callback);
++extern void for_each_thread (pid_t pid,
++			     gdb::function_view<void (ptid_t)> callback);
 +
 +extern void enable_proc_events (pid_t pid);
 +
 +extern int qxfer_siginfo (pid_t pid, const char *annex, unsigned char *readbuf,
 +			  unsigned const char *writebuf, CORE_ADDR offset,
 +			  int len);
-+
 +}
 +
 +#endif

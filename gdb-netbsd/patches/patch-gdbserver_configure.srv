@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdbserver/configure.srv.orig	2020-08-26 18:57:35.000000000 +0000
+--- gdbserver/configure.srv.orig	2020-09-03 16:35:18.000000000 +0000
 +++ gdbserver/configure.srv
-@@ -349,6 +349,13 @@ case "${gdbserver_host}" in
+@@ -349,6 +349,12 @@ case "${gdbserver_host}" in
  			srv_tgtobj="${srv_tgtobj} nat/windows-nat.o"
  			srv_tgtobj="${srv_tgtobj} arch/amd64.o arch/i386.o"
  			;;
@@ -11,7 +11,6 @@ $NetBSD$
 +			srv_tgtobj="${srv_tgtobj} nat/fork-inferior.o"
 +			srv_tgtobj="${srv_tgtobj} nat/netbsd-nat.o"
 +			srv_tgtobj="${srv_tgtobj} arch/amd64.o"
-+			srv_netbsd=yes
 +			;;
  
    xtensa*-*-linux*)	srv_regobj=reg-xtensa.o

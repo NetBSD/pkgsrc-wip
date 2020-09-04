@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gdb/nat/fork-inferior.c.orig	2020-08-26 18:57:35.000000000 +0000
+--- gdb/nat/fork-inferior.c.orig	2020-09-03 16:35:18.000000000 +0000
 +++ gdb/nat/fork-inferior.c
 @@ -526,7 +526,10 @@ startup_inferior (process_stratum_target
  

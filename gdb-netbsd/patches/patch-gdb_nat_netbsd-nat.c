@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdb/nat/netbsd-nat.c.orig	2020-09-02 16:10:13.481373355 +0000
+--- gdb/nat/netbsd-nat.c.orig	2020-09-04 21:53:29.055817757 +0000
 +++ gdb/nat/netbsd-nat.c
-@@ -0,0 +1,211 @@
+@@ -0,0 +1,213 @@
 +/* Internal interfaces for the NetBSD code.
 +
 +   Copyright (C) 2006-2020 Free Software Foundation, Inc.
@@ -29,6 +29,8 @@ $NetBSD$
 +#include <sys/types.h>
 +#include <sys/ptrace.h>
 +#include <sys/sysctl.h>
++
++#include <cstring>
 +
 +#include "gdbsupport/function-view.h"
 +
@@ -153,7 +155,7 @@ $NetBSD$
 +   is a C++ function that is called for each detected thread.  */
 +
 +void
-+list_threads (pid_t pid, gdb::function_view<void (ptid_t)> callback)
++for_each_thread (pid_t pid, gdb::function_view<void (ptid_t)> callback)
 +{
 +  auto fn
 +    = [&callback, &pid] (const struct kinfo_lwp *kl)

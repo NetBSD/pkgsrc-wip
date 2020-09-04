@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gdbsupport/eintr.h.orig	2020-09-02 16:10:13.482874765 +0000
+--- gdbsupport/eintr.h.orig	2020-09-04 21:53:29.059799516 +0000
 +++ gdbsupport/eintr.h
 @@ -0,0 +1,41 @@
 +/* Utility for handling interrupted syscalls by signals.
@@ -29,16 +29,16 @@ $NetBSD$
 +
 +namespace gdb
 +{
-+template <typename Fun, typename... Args>
-+inline decltype (auto) handle_eintr (const Fun &F, const Args &... A)
++template <typename Ret, typename Fun, typename... Args>
++inline Ret handle_eintr (const Ret &R, const Fun &F, const Args &... A)
 +{
-+  decltype (F (A...)) ret;
++  Ret ret;
 +  do
 +    {
 +      errno = 0;
 +      ret = F (A...);
 +    }
-+  while (ret == -1 && errno == EINTR);
++  while (ret == R && errno == EINTR);
 +  return ret;
 +}
 +}

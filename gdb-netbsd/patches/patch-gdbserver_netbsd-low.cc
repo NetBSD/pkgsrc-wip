@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdbserver/netbsd-low.cc.orig	2020-09-02 16:10:13.482445671 +0000
+--- gdbserver/netbsd-low.cc.orig	2020-09-04 21:53:29.059281151 +0000
 +++ gdbserver/netbsd-low.cc
-@@ -0,0 +1,1352 @@
+@@ -0,0 +1,1348 @@
 +/* Copyright (C) 2020 Free Software Foundation, Inc.
 +
 +   This file is part of GDB.
@@ -50,17 +50,15 @@ $NetBSD$
 +
 +const struct target_desc *netbsd_tdesc;
 +
-+/* Call add_process with the given parameters, and initializes
++/* Call add_process with the given parameters, and initialize
 +   the process' private data.  */
 +
-+static struct process_info *
++static void
 +netbsd_add_process (int pid, int attached)
 +{
 +  struct process_info *proc = add_process (pid, attached);
 +  proc->tdesc = netbsd_tdesc;
 +  proc->priv = nullptr;
-+
-+  return proc;
 +}
 +
 +/* Callback used by fork_inferior to start tracing the inferior.  */
@@ -90,7 +88,7 @@ $NetBSD$
 +      if (write (2, "stdin/stdout redirected\n",
 +		 sizeof ("stdin/stdout redirected\n") - 1) < 0)
 +	{
-+	  /* Errors ignored.  */;
++	  /* Errors ignored.  */
 +	}
 +    }
 +}
@@ -106,7 +104,7 @@ $NetBSD$
 +	add_thread (ptid, nullptr);
 +      };
 +
-+  netbsd_nat::list_threads (pid, fn);
++  netbsd_nat::for_each_thread (pid, fn);
 +}
 +
 +/* Implement the create_inferior method of the target_ops vector.  */
@@ -171,7 +169,7 @@ $NetBSD$
 +  ptid_t resume_ptid = resume_info[0].thread;
 +  const int signal = resume_info[0].sig;
 +  const bool step = resume_info[0].kind == resume_step;
-+  
++
 +  if (resume_ptid == minus_one_ptid)
 +    resume_ptid = ptid_of (current_thread);
 +
@@ -208,7 +206,7 @@ $NetBSD$
 +	  }
 +      };
 +
-+  netbsd_nat::list_threads (pid, fn);
++  netbsd_nat::for_each_thread (pid, fn);
 +
 +  int request = gdb_catching_syscalls_p (pid) ? PT_CONTINUE : PT_SYSCALL;
 +
@@ -241,6 +239,7 @@ $NetBSD$
 +/* Helper function for child_wait and the derivatives of child_wait.
 +   HOSTSTATUS is the waitstatus from wait() or the equivalent; store our
 +   translation of that in OURSTATUS.  */
++
 +static void
 +netbsd_store_waitstatus (struct target_waitstatus *ourstatus, int hoststatus)
 +{
@@ -268,7 +267,8 @@ $NetBSD$
 +{
 +  int status;
 +
-+  pid_t pid = gdb::handle_eintr (::waitpid, ptid.pid (), &status, options);
++  pid_t pid
++    = gdb::handle_eintr<int> (-1, ::waitpid, ptid.pid (), &status, options);
 +
 +  if (pid == -1)
 +    perror_with_name (_("Child process unexpectedly missing"));
@@ -287,7 +287,7 @@ $NetBSD$
 +static ptid_t
 +netbsd_wait (ptid_t ptid, struct target_waitstatus *ourstatus,
 +	     int target_options)
-+{ 
++{
 +  pid_t pid = netbsd_waitpid (ptid, ourstatus, target_options);
 +  ptid_t wptid = ptid_t (pid);
 +
@@ -321,7 +321,7 @@ $NetBSD$
 +     If a signal was targeted to the whole process, lwp is 0.  */
 +  wptid = ptid_t (pid, lwp, 0);
 +
-+  /* Bail out on non-debugger oriented signals..  */
++  /* Bail out on non-debugger oriented signals.  */
 +  if (signo != SIGTRAP)
 +    return wptid;
 +
@@ -329,13 +329,11 @@ $NetBSD$
 +  if (code <= SI_USER || code == SI_NOINFO)
 +    return wptid;
 +
-+  /* Process state for threading events */
++  /* Process state for threading events.  */
 +  ptrace_state_t pst = {};
 +  if (code == TRAP_LWP)
-+    {
-+      if (ptrace (PT_GET_PROCESS_STATE, pid, &pst, sizeof (pst)) == -1)
-+	perror_with_name (("ptrace"));
-+    }
++    if (ptrace (PT_GET_PROCESS_STATE, pid, &pst, sizeof (pst)) == -1)
++      perror_with_name (("ptrace"));
 +
 +  if (code == TRAP_LWP && pst.pe_report_event == PTRACE_LWP_EXIT)
 +    {
@@ -385,9 +383,7 @@ $NetBSD$
 +    }
 +
 +  if (code == TRAP_TRACE)
-+    {
 +      return wptid;
-+    }
 +
 +  if (code == TRAP_SCE || code == TRAP_SCX)
 +    {
@@ -400,9 +396,9 @@ $NetBSD$
 +	  return wptid;
 +	}
 +
-+      ourstatus->kind =
-+	(code == TRAP_SCE) ? TARGET_WAITKIND_SYSCALL_ENTRY :
-+	TARGET_WAITKIND_SYSCALL_RETURN;
++      ourstatus->kind
++	= ((code == TRAP_SCE) ? TARGET_WAITKIND_SYSCALL_ENTRY :
++	   TARGET_WAITKIND_SYSCALL_RETURN);
 +      ourstatus->value.syscall_number = sysnum;
 +      return wptid;
 +    }
@@ -439,7 +435,7 @@ $NetBSD$
 +	 This is required after ::create_inferior, when the gdbcore does not
 +	 know about the first internal thread.
 +	 This may also happen on attach, when an event is registered on a thread
-+	 that was not fully initialized during the attach stage. */
++	 that was not fully initialized during the attach stage.  */
 +      if (wptid.lwp () != 0 && !find_thread_ptid (wptid)
 +	  && ourstatus->kind != TARGET_WAITKIND_THREAD_EXITED)
 +	add_thread (wptid, nullptr);
@@ -468,7 +464,7 @@ $NetBSD$
 +	    perror_with_name (("ptrace"));
 +	  break;
 +	default:
-+	  error (("Unknwon stopped status"));
++	  error (("Unknown stopped status"));
 +	}
 +    }
 +}
@@ -479,10 +475,12 @@ $NetBSD$
 +netbsd_process_target::kill (process_info *process)
 +{
 +  pid_t pid = process->pid;
-+  ptrace (PT_KILL, pid, nullptr, 0);
++  if (ptrace (PT_KILL, pid, nullptr, 0) == -1)
++    return -1;
 +
 +  int status;
-+  gdb::handle_eintr (::waitpid, pid, &status, 0);
++  if (gdb::handle_eintr<int> (-1, ::waitpid, pid, &status, 0) == -1)
++    return -1;
 +  mourn (process);
 +  return 0;
 +}
@@ -652,7 +650,7 @@ $NetBSD$
 +  return 0;
 +}
 +
-+/* Implement the kill_request target_ops method.  */
++/* Implement the request_interrupt target_ops method.  */
 +
 +void
 +netbsd_process_target::request_interrupt ()
@@ -661,6 +659,10 @@ $NetBSD$
 +
 +  ::kill (inferior_ptid.pid(), SIGINT);
 +}
++
++/* Read the AUX Vector for the specified PID, wrapping the ptrace(2) call
++   with the PIOD_READ_AUXV operation and using the PT_IO standard input
++   and output arguments.  */
 +
 +static size_t
 +netbsd_read_auxv(pid_t pid, void *offs, void *addr, size_t len)
@@ -744,8 +746,7 @@ $NetBSD$
 +    }
 +}
 +
-+/* Implement the to_stopped_by_sw_breakpoint target_ops
-+   method.  */
++/* Implement the stopped_by_sw_breakpoint target_ops method.  */
 +
 +bool
 +netbsd_process_target::stopped_by_sw_breakpoint ()
@@ -760,8 +761,7 @@ $NetBSD$
 +	 psi.psi_siginfo.si_code == TRAP_BRKPT;
 +}
 +
-+/* Implement the to_supports_stopped_by_sw_breakpoint target_ops
-+   method.  */
++/* Implement the supports_stopped_by_sw_breakpoint target_ops method.  */
 +
 +bool
 +netbsd_process_target::supports_stopped_by_sw_breakpoint ()
@@ -881,8 +881,8 @@ $NetBSD$
 +  if (*phdr_memaddr == 0 || *num_phdr == 0)
 +    {
 +      warning ("Unexpected missing AT_PHDR and/or AT_PHNUM: "
-+	       "phdr_memaddr = %ld, phdr_num = %d",
-+	       (long) *phdr_memaddr, *num_phdr);
++	       "phdr_memaddr = %s, phdr_num = %d",
++	       core_addr_to_string (*phdr_memaddr), *num_phdr);
 +      return 2;
 +    }
 +
@@ -907,7 +907,7 @@ $NetBSD$
 +  std::vector<unsigned char> phdr_buf;
 +  phdr_buf.resize (num_phdr * phdr_size);
 +
-+  if ((*target).read_memory (phdr_memaddr, phdr_buf.data (), phdr_buf.size ()))
++  if (target->read_memory (phdr_memaddr, phdr_buf.data (), phdr_buf.size ()))
 +    return 0;
 +
 +  /* Compute relocation: it is expected to be 0 for "regular" executables,
@@ -966,7 +966,7 @@ $NetBSD$
 +  if (dynamic_memaddr == 0)
 +    return map;
 +
-+  while ((*target).read_memory (dynamic_memaddr, buf, dyn_size) == 0)
++  while (target->read_memory (dynamic_memaddr, buf, dyn_size) == 0)
 +    {
 +      dyn_type *const dyn = (dyn_type *) buf;
 +#if defined DT_MIPS_RLD_MAP
@@ -1017,7 +1017,7 @@ $NetBSD$
 +    unsigned char uc;
 +  } addr;
 +
-+  int ret = (*target).read_memory (memaddr, &addr.uc, ptr_size);
++  int ret = target->read_memory (memaddr, &addr.uc, ptr_size);
 +  if (ret == 0)
 +    {
 +      if (ptr_size == sizeof (CORE_ADDR))
@@ -1091,8 +1091,8 @@ $NetBSD$
 +  int header_done = 0;
 +
 +  const struct link_map_offsets *lmo
-+    = (sizeof (T) == sizeof (int64_t))
-+    ? &lmo_64bit_offsets : &lmo_32bit_offsets;
++    = ((sizeof (T) == sizeof (int64_t))
++       ? &lmo_64bit_offsets : &lmo_32bit_offsets);
 +  int ptr_size = sizeof (T);
 +
 +  while (annex[0] != '\0')
@@ -1131,12 +1131,10 @@ $NetBSD$
 +
 +      if (r_debug != 0)
 +	{
-+	  if (read_one_ptr (target, r_debug + lmo->r_map_offset,
-+			    &lm_addr, ptr_size) != 0)
-+	    {
-+	      warning ("unable to read r_map from 0x%lx",
-+		       (long) r_debug + lmo->r_map_offset);
-+	    }
++	  CORE_ADDR map_offset = r_debug + lmo->r_map_offset;
++	  if (read_one_ptr (target, map_offset, &lm_addr, ptr_size) != 0)
++	    warning ("unable to read r_map from %s",
++		     core_addr_to_string (map_offset));
 +	}
 +    }
 +
@@ -1177,7 +1175,7 @@ $NetBSD$
 +	  /* Not checking for error because reading may stop before
 +	     we've got PATH_MAX worth of characters.  */
 +	  libname[0] = '\0';
-+	  (*target).read_memory (l_name, libname, sizeof (libname) - 1);
++	  target->read_memory (l_name, libname, sizeof (libname) - 1);
 +	  libname[sizeof (libname) - 1] = '\0';
 +	  if (libname[0] != '\0')
 +	    {
@@ -1229,15 +1227,15 @@ $NetBSD$
 +static bool
 +elf_64_file_p (const char *file)
 +{
-+  int fd = gdb::handle_eintr (::open, file, O_RDONLY);
++  int fd = gdb::handle_eintr<int> (-1, ::open, file, O_RDONLY);
 +  if (fd < 0)
 +    perror_with_name (("open"));
 +
 +  Elf64_Ehdr header;
-+  ssize_t ret = gdb::handle_eintr (::read, fd, &header, sizeof (header));
++  ssize_t ret = gdb::handle_eintr<ssize_t> (-1, ::read, fd, &header, sizeof (header));
 +  if (ret == -1)
 +    perror_with_name (("read"));
-+  gdb::handle_eintr (::close, fd);
++  gdb::handle_eintr<int> (-1, ::close, fd);
 +  if (ret != sizeof (header))
 +    error ("Cannot read ELF file header: %s", file);
 +
@@ -1312,11 +1310,9 @@ $NetBSD$
 +const gdb_byte *
 +netbsd_process_target::sw_breakpoint_from_kind (int kind, int *size)
 +{
-+  static gdb_byte brkpt[PTRACE_BREAKPOINT_SIZE];
++  static gdb_byte brkpt[PTRACE_BREAKPOINT_SIZE] = {*PTRACE_BREAKPOINT};
 +
 +  *size = PTRACE_BREAKPOINT_SIZE;
-+
-+  memcpy (brkpt, PTRACE_BREAKPOINT, PTRACE_BREAKPOINT_SIZE);
 +
 +  return brkpt;
 +}

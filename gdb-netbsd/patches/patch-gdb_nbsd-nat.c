@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gdb/nbsd-nat.c.orig	2020-08-26 18:57:35.000000000 +0000
+--- gdb/nbsd-nat.c.orig	2020-09-03 16:35:18.000000000 +0000
 +++ gdb/nbsd-nat.c
 @@ -20,6 +20,7 @@
  #include "defs.h"
@@ -182,7 +182,7 @@ $NetBSD$
 -
 -  if (ptrace (PT_SET_EVENT_MASK, pid, &events, sizeof (events)) == -1)
 -    perror_with_name (("ptrace"));
-+  netbsd_nat::list_threads (pid, fn);
++  netbsd_nat::for_each_thread (pid, fn);
  }
  
  /* Implement the "post_startup_inferior" target_ops method.  */

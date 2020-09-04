@@ -1,17 +1,20 @@
 $NetBSD$
 
-SHA1 (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = 8e5ba0ea9f513822d8f5e1b61f1e086832da4fd5
-RMD160 (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = 90987ca409c82bc96c5f3aad04b2d38afce8e5a4
-SHA512 (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = eaa4eaa9a8db968f216077cad4b730b2d6d273cf5205075bcef102c9ca21e85ed2b22e85d5be6bda7c3c4069290f6b7294550e5e6095dcd4401c8d70998162c1
-Size (gdb-8.2.1-05fd99cc80b1955e8c846dacfa57fe52816d4869.tar.gz) = 60902858 bytes
-SHA1 (patch-gdb_configure.nat) = 7806b08e423fca823f3b525c0018fa9fe9aaa41c
-SHA1 (patch-gdb_nat_fork-inferior.c) = 3d800887af4fa8ce3d18f7b4416cba2fa8b6f487
-SHA1 (patch-gdb_nat_netbsd-nat.c) = 42048f8f0184d4aa8c7fbbfb4e5656151be39707
-SHA1 (patch-gdb_nat_netbsd-nat.h) = c2def3bb32c67fd02c7e9ea242c7ccceee26d18c
-SHA1 (patch-gdb_nbsd-nat.c) = 6313f30db292b466e2f2dd00f975bf3e45f0d0c5
-SHA1 (patch-gdbserver_Makefile.in) = 94d6abcf997fdc3cbf9c9ddab34cb242b7f54c76
-SHA1 (patch-gdbserver_configure.srv) = 14937ff7334c5efc013ba30cc6d1116c034e0618
-SHA1 (patch-gdbserver_netbsd-low.cc) = 13cb703fda319fc50f3927cd51a464659cc10b1b
-SHA1 (patch-gdbserver_netbsd-low.h) = 6bae8bf34714db16c667387f12aafaaad8c1f0dd
-SHA1 (patch-gdbserver_netbsd-x86__64-low.cc) = 860e3bb6ce5ca28ca2bab98ed6b975886847759e
-SHA1 (patch-gdbsupport_eintr.h) = 57ee80d3335f49636fd570459fbe72fa434f93ba
+SHA1 (gdb-8.2.1-c5cd900e4f197870812c2d3e2c194871c171ef42.tar.gz) = a22b30c4bd636cff1a8f5116091146c81758e15c
+RMD160 (gdb-8.2.1-c5cd900e4f197870812c2d3e2c194871c171ef42.tar.gz) = c903097d45bd580b588f9aaf73ad94e0a134f8ed
+SHA512 (gdb-8.2.1-c5cd900e4f197870812c2d3e2c194871c171ef42.tar.gz) = be929f01e55df3e98fbdbbb2f93324c0a46c28cd651d1632d05cc41bdb8d1a2a778de7c26f4303b710cb80bff8c0596aa60b4b1167c390ec225dcf73955aceea
+Size (gdb-8.2.1-c5cd900e4f197870812c2d3e2c194871c171ef42.tar.gz) = 60943579 bytes
+SHA1 (patch-gdb_ChangeLog) = 8eec8e606020f5134aac488b95647496bf98aaf3
+SHA1 (patch-gdb_configure.nat) = ffaac7f26fba75a2eacd8b2b20a25c50b8d024ed
+SHA1 (patch-gdb_nat_fork-inferior.c) = 5e909ad6896922b496d0d2c38336cb9cdb58a0ee
+SHA1 (patch-gdb_nat_netbsd-nat.c) = c74dd5c0cc7614064ebfb32805180579a58dc8f9
+SHA1 (patch-gdb_nat_netbsd-nat.h) = 42e92740762bb22c1d47413cb096aa99baaffddd
+SHA1 (patch-gdb_nbsd-nat.c) = 44b12fa7e7cabf41d24611902495f8a468979983
+SHA1 (patch-gdbserver_ChangeLog) = 8359289c89459e86092d54ad342bea0974e6399c
+SHA1 (patch-gdbserver_Makefile.in) = 1c340ff6681fc5d860d74e9dd7b8ca419097b97f
+SHA1 (patch-gdbserver_configure.srv) = 23dc272de0f96ed4f7de8a4fa8720dca91765d59
+SHA1 (patch-gdbserver_netbsd-low.cc) = 27dbb51a9e4f7bf60c8bc46e759c11e5724855b5
+SHA1 (patch-gdbserver_netbsd-low.h) = 98ecc6c7b7ef458c01234dcaf8a1c3168f695e14
+SHA1 (patch-gdbserver_netbsd-x86__64-low.cc) = 306063768bf7f8e29176593b78cfa8c86fe5e488
+SHA1 (patch-gdbsupport_ChangeLog) = f32a8af60f2066764deffd6edebb5473416c6a27
+SHA1 (patch-gdbsupport_eintr.h) = e8892a3499fc84cbc43cf5293874d18964a90959

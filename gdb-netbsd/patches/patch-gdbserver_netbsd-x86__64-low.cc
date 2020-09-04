@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdbserver/netbsd-x86_64-low.cc.orig	2020-09-02 16:10:13.482761789 +0000
+--- gdbserver/netbsd-x86_64-low.cc.orig	2020-09-04 21:53:29.059587469 +0000
 +++ gdbserver/netbsd-x86_64-low.cc
-@@ -0,0 +1,250 @@
+@@ -0,0 +1,187 @@
 +/* Copyright (C) 2020 Free Software Foundation, Inc.
 +
 +   This file is part of GDB.
@@ -30,8 +30,6 @@ $NetBSD$
 +#include "arch/amd64.h"
 +#include "x86-tdesc.h"
 +#include "tdesc.h"
-+
-+static int use_xml;
 +
 +/* The index of various registers inside the regcache.  */
 +
@@ -93,7 +91,7 @@ $NetBSD$
 +static void
 +netbsd_x86_64_fill_gregset (struct regcache *regcache, char *buf)
 +{
-+  struct reg *r = (struct reg *)buf;
++  struct reg *r = (struct reg *) buf;
 +
 +#define netbsd_x86_64_collect_gp(regnum, fld) do {		\
 +    collect_register (regcache, regnum, &r->regs[_REG_##fld]);	\
@@ -130,7 +128,7 @@ $NetBSD$
 +static void
 +netbsd_x86_64_store_gregset (struct regcache *regcache, const char *buf)
 +{
-+  struct reg *r = (struct reg *)buf;
++  struct reg *r = (struct reg *) buf;
 +
 +#define netbsd_x86_64_supply_gp(regnum, fld) do {		\
 +    supply_register (regcache, regnum, &r->regs[_REG_##fld]);	\
@@ -175,66 +173,6 @@ $NetBSD$
 +  netbsd_tdesc = tdesc;
 +}
 +
-+/* Update all the target description of all processes; a new GDB
-+   connected, and it may or not support xml target descriptions.  */
-+
-+static void
-+x86_64_netbsd_update_xmltarget (void)
-+{
-+  struct thread_info *saved_thread = current_thread;
-+
-+  /* Before changing the register cache's internal layout, flush the
-+     contents of the current valid caches back to the threads, and
-+     release the current regcache objects.  */
-+  regcache_release ();
-+
-+  for_each_process ([] (process_info *proc) {
-+		      int pid = proc->pid;
-+
-+		      /* Look up any thread of this process.  */
-+		      current_thread = find_any_thread_of_pid (pid);
-+
-+		      the_low_target.arch_setup ();
-+		    });
-+
-+  current_thread = saved_thread;
-+}
-+
-+/* Process qSupported query, "xmlRegisters=". */
-+
-+static void
-+netbsd_x86_64_process_qsupported (char **features, int count)
-+{
-+  /* Return if gdb doesn't support XML.  If gdb sends "xmlRegisters="
-+     with "i386" in qSupported query, it supports x86 XML target
-+     descriptions.  */
-+  use_xml = 0;
-+  for (int i = 0; i < count; i++)
-+    {
-+      const char *feature = features[i];
-+
-+      if (startswith (feature, "xmlRegisters="))
-+	{
-+	  char *copy = xstrdup (feature + 13);
-+	  char *last;
-+	  char *p;
-+
-+	  for (p = strtok_r (copy, ",", &last); p != NULL;
-+	       p = strtok_r (NULL, ",", &last))
-+	    {
-+	      if (strcmp (p, "i386") == 0)
-+		{
-+		  use_xml = 1;
-+		  break;
-+		}
-+	    }
-+
-+	  free (copy);
-+	}
-+    }
-+  x86_64_netbsd_update_xmltarget ();
-+}
-+
 +/* Description of all the x86-netbsd register sets.  */
 +
 +struct netbsd_regset_info netbsd_target_regsets[] =
@@ -251,5 +189,4 @@ $NetBSD$
 +struct netbsd_target_ops the_low_target =
 +{
 + netbsd_x86_64_arch_setup,
-+ netbsd_x86_64_process_qsupported,
 +};

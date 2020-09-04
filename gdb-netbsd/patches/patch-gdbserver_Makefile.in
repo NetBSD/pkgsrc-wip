@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gdbserver/Makefile.in.orig	2020-08-26 18:57:35.000000000 +0000
+--- gdbserver/Makefile.in.orig	2020-09-03 16:35:18.000000000 +0000
 +++ gdbserver/Makefile.in
 @@ -193,6 +193,9 @@ SFILES = \
  	$(srcdir)/linux-x86-low.cc \
