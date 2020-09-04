@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2012/09/24 17:14:31 asau Exp $
-#
 
 DISTNAME=	bindgraph-0.2
+PKGREVISION=	1
 CATEGORIES=	local
 MASTER_SITES=	http://www.linux.it/~md/software/
 EXTRACT_SUFX=	.tgz
@@ -10,8 +10,6 @@ MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	https://www.linux.it/~md/software/
 COMMENT=	Tool that makes graphs from BIND queries
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	p5-Time-Local-[0-9]*:../../time/p5-Time-Local
 
 .include "../../databases/rrdtool/buildlink3.mk"
 
