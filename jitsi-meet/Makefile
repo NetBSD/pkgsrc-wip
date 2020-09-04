@@ -21,7 +21,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 BUILD_DEPENDS+=	npm-[0-9]*:../../lang/npm
 
 BUILD_TARGET=	compile
-INSTALL_TARGET=	deploy
+INSTALL_TARGET=	deploy source-package
 
 INSTALLATION_DIRS+=	share/jitsi-meet
 
@@ -30,8 +30,6 @@ do-configure:
 		npm install
 
 post-install:
-	cd ${WRKSRC} && \
-		${MAKE} source-package
 	${RUN} ${TAR} -C ${DESTDIR}${PREFIX}/share -xjf ${WRKSRC}/jitsi-meet.tar.bz2
 
 .include "../../lang/nodejs/buildlink3.mk"
