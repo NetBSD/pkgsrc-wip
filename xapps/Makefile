@@ -18,6 +18,7 @@ USE_LANGUAGES=		c c++ fortran
 WRKSRC=			${WRKDIR}/xapp-1.8.9
 USE_PKGLOCALEDIR=	yes
 
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
