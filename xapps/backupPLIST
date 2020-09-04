@@ -19,7 +19,7 @@ lib/libxapp.so
 lib/libxapp.so.1
 lib/libxapp.so.${PKGVERSION}
 lib/pkgconfig/xapp.pc
-${PYSITELIB}/gi/overrides/XApp.py
+lib/python3.7/site-packages/gi/overrides/XApp.py
 libexec/xapps/applet_constants.py
 libexec/xapps/mate-xapp-status-applet.py
 libexec/xapps/sn-watcher/xapp-sn-watcher
