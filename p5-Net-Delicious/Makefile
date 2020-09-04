@@ -9,8 +9,6 @@ MAINTAINER=	charlie@rubberduck.com
 HOMEPAGE=	https://metacpan.org/release/Net-Delicious
 COMMENT=	OOP for the del.icio.us API
 
-BUILD_DEPENDS+=	p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
-
 DEPENDS+=	p5-libwww>=2:../../www/p5-libwww
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-XML-Simple>=2.08:../../textproc/p5-XML-Simple

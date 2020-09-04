@@ -2,6 +2,7 @@
 
 DISTNAME=	CGI-Expand-2.05
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/B/BO/BOWMANBS/}
 
@@ -9,7 +10,6 @@ MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	https://metacpan.org/release/CGI-Expand
 COMMENT=	Convert flat hash to nested data using TT2\'s dot convention
 
-DEPENDS+=	p5-Test-Simple>0:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Test-Exception>0:../../devel/p5-Test-Exception
 
 USE_LANGUAGES+=	# empty
