@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2013/03/04 21:58:38 thomasklausner Exp $
 
 DISTNAME=	ninka-1.3.2pre20180106
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	kamel.derouiche@gmail.com
@@ -14,7 +14,6 @@ GIT_REPO.ninka=		https://github.com/dmgerman/ninka
 GIT_REVISION.ninka=	81f185261c8863c5b84344ee31192870be939faf
 PKGREVISION=		0
 
-DEPENDS+=		p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 DEPENDS+=		p5-Spreadsheet-WriteExcel-[0-9]*:../../math/p5-Spreadsheet-WriteExcel
