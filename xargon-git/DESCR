@@ -1,0 +1,8 @@
+Game engine for the game Xargon using SDL. The game data is not included with
+the package. If you don't have the data files handy, all three episodes have
+been released as freeware and can be downloaded from
+
+ http://www.classicdosgames.com/game/Xargon.html
+
+The data files should be extracted all in lower case. This package provides the
+executables xrfile01, xrfile02 and xrfile03 for each of the Xargon episodes.

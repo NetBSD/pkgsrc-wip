@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/xrfile01
+bin/xrfile02
+bin/xrfile03

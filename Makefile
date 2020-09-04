@@ -5011,6 +5011,7 @@ SUBDIR+=	xalan-c
 SUBDIR+=	xalan-c-1.10
 SUBDIR+=	xapps
 SUBDIR+=	xar
+SUBDIR+=	xargon-git
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
