@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.4 2012/10/03 15:09:49 asau Exp $
-#
 
 DISTNAME=		majordomo-20060817
 PKGNAME=		majordomo-devel-20060817
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://ftp.mj2.org/pub/mj2/snapshots/2006-08/
 
@@ -22,7 +22,6 @@ DEPENDS+=	p5-TimeDate>=1.15:../../time/p5-TimeDate
 DEPENDS+=	p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 # optional
-DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Text-Reflow>=1.04:../../textproc/p5-Text-Reflow
 # Support for MySQL/PostgreSQL is experimental in MJ2
 #DEPENDS+=	p5-DBI>=1.28:../../databases/p5-DBI

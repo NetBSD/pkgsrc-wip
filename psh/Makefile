@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.5 2012/10/05 13:52:03 asau Exp $
-#
 
 DISTNAME=	psh-1.8.1
 CATEGORIES=	shells
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnp/}
 GITHUB_TAG=	psh-${PKGVERSION_NOREV}
 DIST_SUBDIR=	psh
@@ -16,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 PKG_SHELL=	${PREFIX}/bin/psh
 
 DEPENDS+=	p5-BSD-Resource>=1.24:../../devel/p5-BSD-Resource
-DEPENDS+=	p5-Term-ReadLine>=1.16:../../devel/p5-Term-ReadLine
 
 PERL5_PACKLIST=		auto/psh/.packlist
 

@@ -2,6 +2,7 @@
 
 DISTNAME=	PDL-2.019
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDL/}
 
@@ -9,7 +10,6 @@ MAINTAINER=	apost@recalcitrant.org
 HOMEPAGE=	http://pdl.perl.org/
 COMMENT=	PDL turns perl in to a free, array-oriented, numerical language
 
-DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib

@@ -1,7 +1,7 @@
 # $NetBSD: $
 
 DISTNAME=	cyrus-imapd-3.0.13
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrusimap/}
 GITHUB_RELEASE=	${PKGNAME_NOREV}
@@ -10,7 +10,6 @@ MAINTAINER=	mp@petermann-it.de
 HOMEPAGE=	https://www.cyrusimap.org/
 COMMENT=	Cyrus IMAP server
 LICENSE=	original-bsd # like license
-DEPENDS+=	p5-Term-ReadLine>=1.20:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Authen-SASL-Cyrus>=0.13:../../security/p5-Authen-SASL-Cyrus
 DEPENDS+=	cyrus-saslauthd>=2.1.17:../../security/cyrus-saslauthd
 
