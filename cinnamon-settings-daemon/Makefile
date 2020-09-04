@@ -22,47 +22,45 @@ CONFIGURE_ARGS+=	--disable-smartcard-support
 SUBST_CLASSES=		egdir
 SUBST_MESSAGE.egdir=	Adapting Makefiles for CONF_FILES.
 SUBST_FILES.egdir=	plugins/*/Makefile.am
-SUBST_STAGE.egdir=	post-patch
+SUBST_STAGE.egdir=	pre-configure
 SUBST_SED.egdir=	-e 's,.(sysconfdir)/xdg,$$(datadir)/examples/cinnamon-settings-daemon,'
 SUBST_SED.egdir+=	-e 's,.(sysconfdir)/dbus-1,$$(datadir)/examples/dbus-1,'
 
 EGDIR=			${PREFIX}/share/examples/cinnamon-settings-daemon/autostart
 AUDIR=			${PKG_SYSCONFDIR}/xdg/autostart
 
-CONF_FILES+=		${EGDIR}/cinnamon-settings-daemon-a11y-keyboard.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-a11y-keyboard.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-a11y-settings.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-a11y-settings.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-automount.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-automount.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-background.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-background.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-clipboard.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-clipboard.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-color.desktop			\
-			${AUDIR}/cinnamon-settings-daemon-color.desktop			\
-			${EGDIR}/cinnamon-settings-daemon-cursor.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-cursor.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-housekeeping.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-housekeeping.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-keyboard.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-keyboard.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-mouse.desktop			\
-			${AUDIR}/cinnamon-settings-daemon-mouse.desktop			\
-			${EGDIR}/cinnamon-settings-daemon-orientation.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-orientation.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-power.desktop			\
-			${AUDIR}/cinnamon-settings-daemon-power.desktop			\
-			${EGDIR}/cinnamon-settings-daemon-screensaver-proxy.desktop	\
-			${AUDIR}/cinnamon-settings-daemon-screensaver-proxy.desktop	\
-			${EGDIR}/cinnamon-settings-daemon-sound.desktop			\
-			${AUDIR}/cinnamon-settings-daemon-sound.desktop			\
-			${EGDIR}/cinnamon-settings-daemon-xrandr.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-xrandr.desktop		\
-			${EGDIR}/cinnamon-settings-daemon-xsettings.desktop		\
-			${AUDIR}/cinnamon-settings-daemon-xsettings.desktop		\
-			share/examples/dbus-1/system.d/org.cinnamon.SettingsDaemon.DateTimeMechanism.conf \
-			${PKG_SYSCONFDIR}/dbus-1/system.d/org.cinnamon.SettingsDaemon.DateTimeMechanism.conf
+CONF_FILES+=		${EGDIR}/cinnamon-settings-daemon-a11y-keyboard.desktop \
+			${AUDIR}/cinnamon-settings-daemon-a11y-keyboard.desktop \
+			${EGDIR}/cinnamon-settings-daemon-a11y-settings.desktop \
+			${AUDIR}/cinnamon-settings-daemon-a11y-settings.desktop \
+			${EGDIR}/cinnamon-settings-daemon-automount.desktop \
+			${AUDIR}/cinnamon-settings-daemon-automount.desktop \
+			${EGDIR}/cinnamon-settings-daemon-background.desktop \
+			${AUDIR}/cinnamon-settings-daemon-background.desktop \
+			${EGDIR}/cinnamon-settings-daemon-clipboard.desktop \
+			${AUDIR}/cinnamon-settings-daemon-clipboard.desktop \
+			${EGDIR}/cinnamon-settings-daemon-color.desktop	\
+			${AUDIR}/cinnamon-settings-daemon-color.desktop	\
+			${EGDIR}/cinnamon-settings-daemon-cursor.desktop \
+			${AUDIR}/cinnamon-settings-daemon-cursor.desktop \
+			${EGDIR}/cinnamon-settings-daemon-housekeeping.desktop \
+			${AUDIR}/cinnamon-settings-daemon-housekeeping.desktop \
+			${EGDIR}/cinnamon-settings-daemon-keyboard.desktop \
+			${AUDIR}/cinnamon-settings-daemon-keyboard.desktop \
+			${EGDIR}/cinnamon-settings-daemon-mouse.desktop	\
+			${AUDIR}/cinnamon-settings-daemon-mouse.desktop	\
+			${EGDIR}/cinnamon-settings-daemon-orientation.desktop \
+			${AUDIR}/cinnamon-settings-daemon-orientation.desktop \
+			${EGDIR}/cinnamon-settings-daemon-power.desktop	\
+			${AUDIR}/cinnamon-settings-daemon-power.desktop	\
+			${EGDIR}/cinnamon-settings-daemon-screensaver-proxy.desktop \
+			${AUDIR}/cinnamon-settings-daemon-screensaver-proxy.desktop \
+			${EGDIR}/cinnamon-settings-daemon-sound.desktop	\
+			${AUDIR}/cinnamon-settings-daemon-sound.desktop	\
+			${EGDIR}/cinnamon-settings-daemon-xrandr.desktop \
+			${AUDIR}/cinnamon-settings-daemon-xrandr.desktop \
+			${EGDIR}/cinnamon-settings-daemon-xsettings.desktop \
+			${AUDIR}/cinnamon-settings-daemon-xsettings.desktop
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh

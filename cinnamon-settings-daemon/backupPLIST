@@ -33,8 +33,6 @@ share/cinnamon-settings-daemon/icons/hicolor/64x64/devices/kbd-numlock-off.png
 share/cinnamon-settings-daemon/icons/hicolor/64x64/devices/kbd-numlock-on.png
 share/cinnamon-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-off.png
 share/cinnamon-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-on.png
-share/dbus-1/system-services/org.cinnamon.SettingsDaemon.DateTimeMechanism.service
-share/dbus-1/system.d/org.cinnamon.SettingsDaemon.DateTimeMechanism.conf
 share/examples/cinnamon-settings-daemon/autostart/cinnamon-settings-daemon-a11y-keyboard.desktop
 share/examples/cinnamon-settings-daemon/autostart/cinnamon-settings-daemon-a11y-settings.desktop
 share/examples/cinnamon-settings-daemon/autostart/cinnamon-settings-daemon-automount.desktop
@@ -52,6 +50,7 @@ share/examples/cinnamon-settings-daemon/autostart/cinnamon-settings-daemon-scree
 share/examples/cinnamon-settings-daemon/autostart/cinnamon-settings-daemon-sound.desktop
 share/examples/cinnamon-settings-daemon/autostart/cinnamon-settings-daemon-xrandr.desktop
 share/examples/cinnamon-settings-daemon/autostart/cinnamon-settings-daemon-xsettings.desktop
+share/examples/dbus-1/system.d/org.cinnamon.SettingsDaemon.DateTimeMechanism.conf
 share/glib-2.0/schemas/org.cinnamon.settings-daemon.enums.xml
 share/glib-2.0/schemas/org.cinnamon.settings-daemon.peripherals.gschema.xml
 share/glib-2.0/schemas/org.cinnamon.settings-daemon.peripherals.wacom.gschema.xml
