@@ -11,7 +11,6 @@
 #include "envsys.h"
 
 #define _DEV_SYSMON "/dev/sysmon"
-#define ACPIBAT_FMT "acpibat%d"
 
 int
 envsys_supported (void)
@@ -20,13 +19,13 @@ envsys_supported (void)
 }
 
 prop_array_t
-get_battery (char * battery_name)
+get_device (const char * name)
 {
     prop_dictionary_t sys_dict;
-    prop_array_t bat_arr;
+    prop_array_t array;
     int smfd;
 
-    if (battery_name == NULL)
+    if (name == NULL)
         return NULL;
 
     smfd = open (_DEV_SYSMON, O_RDONLY);
@@ -42,14 +41,14 @@ get_battery (char * battery_name)
 
     close (smfd);
 
-    bat_arr = prop_dictionary_get (sys_dict, battery_name);
-    if (bat_arr == NULL)
+    array = prop_dictionary_get (sys_dict, name);
+    if (array == NULL)
         return NULL;
 
-    prop_object_retain (bat_arr);
+    prop_object_retain (array);
     prop_object_release (sys_dict);
 
-    return bat_arr;
+    return array;
 }
 
 bool
@@ -70,7 +69,7 @@ stat_is_valid (prop_dictionary_t stat)
 
 int64_t
 handle_stat (prop_dictionary_t stat,
-             char * key)
+             const char * key)
 {
     prop_number_t numval;
 
@@ -91,14 +90,14 @@ envsys_read (int battery,
     prop_object_iterator_t iter;
     prop_dictionary_t id;
     prop_string_t desc;
-    prop_array_t bat_info;
+    prop_array_t bat_info, ac_info;
     bool is_present = false;
     int64_t charge_rate = 0,
             max_charge = 0,
             cur_charge = 0,
             warn_charge = 0,
             crit_charge = 0;
-    char bat_name[] = ACPIBAT_FMT;
+    char dev_name[32];
     int bat_id = battery - 1;
 
     if (info == NULL || (battery - 1 < 0))
@@ -107,22 +106,40 @@ envsys_read (int battery,
     info->battery_flags = 0;
     info->using_minutes = 1;
 
-    snprintf (bat_name, strlen (ACPIBAT_FMT), ACPIBAT_FMT, bat_id);
+    snprintf (dev_name, sizeof (dev_name), "acpibat%d", bat_id);
 
-    bat_info = get_battery (bat_name);
+    bat_info = get_device (dev_name);
     if (bat_info == NULL)
         return -1;
+
+    ac_info = get_device ("acpiacad0");
+    if (ac_info != NULL) {
+        iter = prop_array_iterator (ac_info);
+        while ((id = (prop_dictionary_t) prop_object_iterator_next (iter)) != NULL)
+        {
+            desc = (prop_string_t) prop_dictionary_get (id, "description");
+            if (desc == NULL) continue;
+            if (!prop_string_equals_cstring (desc, "connected"))
+                continue;
+            if (handle_stat (id, "cur-value") != 0) {
+                info->ac_line_status = AC_LINE_STATUS_ON;
+            } else {
+                info->ac_line_status = AC_LINE_STATUS_OFF;
+            }
+            break;
+        }
+        prop_object_iterator_release (iter);
+        prop_object_release (ac_info);
+    } else {
+        info->ac_line_status = AC_LINE_STATUS_UNKNOWN;
+    }
 
     iter = prop_array_iterator (bat_info);
     while ((id = (prop_dictionary_t) prop_object_iterator_next (iter)) != NULL)
     {
         desc = (prop_string_t) prop_dictionary_get (id, "description");
         if (desc == NULL) continue;
-        if (prop_string_equals_cstring (desc, "charging"))
-        {
-            /* 1 is AC_LINE_STATUS_ON, 0 is AC_LINE_STATUS_OFF */
-            info->ac_line_status = handle_stat (id, "cur-value");
-        } else if (prop_string_equals_cstring (desc, "charge")) {
+        if (prop_string_equals_cstring (desc, "charge")) {
             cur_charge = handle_stat (id, "cur-value");
             max_charge = handle_stat (id, "max-value");
             warn_charge = handle_stat (id, "warning-capacity");
