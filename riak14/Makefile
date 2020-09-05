@@ -19,7 +19,7 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../wip/erlang15/Makefile.versions"
+.include "../../wip/erlang-basho/Makefile.versions"
 .include "Makefile.versions"
 
 .for depname depver in ${RIAK_VERSIONS}
@@ -119,5 +119,5 @@ do-install:
 
 .include "../../devel/ncurses/buildlink3.mk"
 BUILDLINK_DEPMETHOD.erlang=	build
-.include "../../wip/erlang15/buildlink3.mk"
+.include "../../wip/erlang-basho/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
