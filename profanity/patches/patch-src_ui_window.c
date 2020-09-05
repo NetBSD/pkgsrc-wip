@@ -1,15 +1,20 @@
 $NetBSD$
 
-Add support for curses(3).
+Prevent NetBSD libcurses from dereferencing a null pointer.
 
---- src/ui/window.c.orig	2017-01-28 21:10:04.000000000 +0000
+--- src/ui/window.c.orig	2020-07-01 16:49:19.000000000 +0000
 +++ src/ui/window.c
-@@ -46,6 +46,8 @@
- #include <ncursesw/ncurses.h>
- #elif HAVE_NCURSES_H
- #include <ncurses.h>
-+#elif HAVE_CURSES_H
-+#include <curses.h>
- #endif
- 
- #include "config/theme.h"
+@@ -1858,7 +1858,12 @@ win_sub_print(WINDOW *win, char *msg, gb
+ void
+ win_sub_newline_lazy(WINDOW *win)
+ {
+-    int curx = getcurx(win);
++    int curx;
++
++    if (win == NULL) {
++        return;
++    }
++    curx = getcurx(win);
+     if (curx > 0) {
+         int cury = getcury(win);
+         wmove(win, cury+1, 0);

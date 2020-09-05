@@ -1,4 +1,0 @@
-@comment $NetBSD$
-include/mesode.h
-lib/libmesode.la
-lib/pkgconfig/libmesode.pc

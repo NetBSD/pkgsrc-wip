@@ -1,5 +1,0 @@
-- Review curses(3) patches
-- Check if also non-monochromatic themes work
-- Re-enable Python support if handy or add a `python' option for it
-  (python-config and python are not found in the configure phase and needs to
-  be fixed)
