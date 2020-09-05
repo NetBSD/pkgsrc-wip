@@ -18,7 +18,7 @@ SUBST_STAGE.sbin=	pre-configure
 SUBST_FILES.sbin+=	Common/Src/cluster-passwd.c
 SUBST_SED.sbin=		-e 's|%%PREFIX%%|${PREFIX}|g'
 
-DEPENDS+=	auto-admin>=0.6.3:../../wip/auto-admin
+DEPENDS+=	auto-admin>=0.6.7.11:../../wip/auto-admin
 
 USE_TOOLS+=	bash
 WRKSRC=		${WRKDIR}/SPCM-${PKGVERSION_NOREV}
