@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	identify-1.4.29
+DISTNAME=	identify-1.4.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/identify/}
