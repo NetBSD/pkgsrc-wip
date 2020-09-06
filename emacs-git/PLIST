@@ -2158,6 +2158,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnregistry.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnregistry.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnrss.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnrss.elc
+share/emacs/${PKGREVSION}/lisp/gnus/nnselect.el.gz
+share/emacs/${PKGREVSION}/lisp/gnus/nnselect.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnspool.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnspool.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nntp.el.gz
