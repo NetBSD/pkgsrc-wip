@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/03/11 15:06:47 uccwen Exp $
 
-SHA1 (Astro-SpaceTrack-0.128.tar.gz) = 127963c75df280faf63e29fec1096def1e32e26d
-RMD160 (Astro-SpaceTrack-0.128.tar.gz) = fe49d75d0350caa0335570b43714f00ab8514215
-SHA512 (Astro-SpaceTrack-0.128.tar.gz) = 1a422652952c1777789929b104a03bfcd57de6714b12c31ad0ca25e69200e4a69db2beaa6be71bb878ee84a41ff6f8f8f3f7d36fa11bedfaf65f0ff6e8eba309
-Size (Astro-SpaceTrack-0.128.tar.gz) = 184169 bytes
+SHA1 (Astro-SpaceTrack-0.141.tar.gz) = 775048638263ccfbd6d858e59e627a30e91df98d
+RMD160 (Astro-SpaceTrack-0.141.tar.gz) = ff39d7617fa26594b2bb4e3649aec9172a7ac3e1
+SHA512 (Astro-SpaceTrack-0.141.tar.gz) = 9e59b7e792c9147126420d7eb52c55d94ceb8a4f8b90107f21b7026795bfea01aef8bfbb5cbd446bc471fef6427f4e085a425bf2e4efc88371cd342919d202a6
+Size (Astro-SpaceTrack-0.141.tar.gz) = 189388 bytes
