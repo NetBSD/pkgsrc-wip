@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	Sub-Prototype-0.02
+DISTNAME=	Sub-Prototype-0.03
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/
+MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Sub-Prototype

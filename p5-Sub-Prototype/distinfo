@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (Sub-Prototype-0.02.tar.gz) = 71e7f48e8553c3b760f0076619df74290dea036f
-RMD160 (Sub-Prototype-0.02.tar.gz) = 7a0b7d41ff7312bd60e1b777bf003da0fdeb2eac
-SHA512 (Sub-Prototype-0.02.tar.gz) = aeb81c5ca25cff873951628ed63193f314dad36e1cce5085be95a4a863b9f4b71f7137f211ff2ea0313117d343a5a2833689fe5682797df341c3dbe3e25aace7
-Size (Sub-Prototype-0.02.tar.gz) = 14703 bytes
-SHA1 (patch-Makefile.PL) = 46ae57fed2e363898f5e3f13dc4e5e3e782f8d6b
+SHA1 (Sub-Prototype-0.03.tar.gz) = 86a4e19dbc8c9238e676aa19b6516a048eb19863
+RMD160 (Sub-Prototype-0.03.tar.gz) = 658a6b18dcd87c80cd55f4e3a922bb3c3e7203d8
+SHA512 (Sub-Prototype-0.03.tar.gz) = fa2d4e7f5d5db310899eb0d6d0c9d451fbf37af5a17b35709a772be913f5dc1adaa744bb1c87e6e7b23723d279c1ed8c4b3da8629e843ce56fcadd94e22d7b2b
+Size (Sub-Prototype-0.03.tar.gz) = 26103 bytes
