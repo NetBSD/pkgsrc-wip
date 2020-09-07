@@ -2710,7 +2710,6 @@ SUBDIR+=	p5-Sys-MemInfo
 SUBDIR+=	p5-Template-Plugin-Class
 SUBDIR+=	p5-Term-ReadLine-Perl5
 SUBDIR+=	p5-Test-Fake-HTTPD
-SUBDIR+=	p5-Test-Strict
 SUBDIR+=	p5-Test-Stub
 SUBDIR+=	p5-Test-Unit-Lite
 SUBDIR+=	p5-Test-WWW-Mechanize-CGIApp
