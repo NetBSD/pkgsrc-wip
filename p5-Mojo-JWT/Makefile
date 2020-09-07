@@ -14,7 +14,7 @@ HOMEPAGE=	https://metacpan.org/pod/Mojo::JWT
 COMMENT=	JSON Web Token the Mojo way
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Mojolicious-[0-9]*:../../wip/p5-Mojolicious
+DEPENDS+=	p5-Mojolicious-[0-9]*:../../www/p5-Mojolicious
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Mojo/JWT/.packlist

@@ -14,7 +14,7 @@ COMMENT=	Web based bug tracking system
 LICENSE=	mpl-2.0
 
 DEPENDS+=	ap2[0-9]-perl-[0-9]*:../../www/ap2-perl
-DEPENDS+=	p5-Mojolicious-[0-9]*:../../wip/p5-Mojolicious
+DEPENDS+=	p5-Mojolicious-[0-9]*:../../www/p5-Mojolicious
 DEPENDS+=	p5-Mojolicious-Plugin-OAuth2-Server-[0-9]*:../../www/p5-Mojolicious-Plugin-OAuth2-Server
 DEPENDS+=	p5-MojoX-Log-Log4perl-Tiny-[0-9]*:../../wip/p5-MojoX-Log-Log4perl-Tiny
 DEPENDS+=	p5-Mojo-JWT-[0-9]*:../../wip/p5-Mojo-JWT
