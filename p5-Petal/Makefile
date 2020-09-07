@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/10/09 14:06:29 thomasklausner Exp $
 
-DISTNAME=		Petal-2.24
+DISTNAME=		Petal-2.26
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NINE/}
