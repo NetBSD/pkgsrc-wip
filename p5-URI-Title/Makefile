@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/10/09 14:06:30 thomasklausner Exp $
 
-DISTNAME=		URI-Title-1.901
+DISTNAME=		URI-Title-1.902
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}

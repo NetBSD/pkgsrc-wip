@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2014/02/05 05:05:06 uccwen Exp $
 
-SHA1 (URI-Title-1.901.tar.gz) = 069e20075e3002835179bd5ea25f11373941a56c
-RMD160 (URI-Title-1.901.tar.gz) = 67bca6dfa53576456d2496da4210dd530a985f55
-SHA512 (URI-Title-1.901.tar.gz) = a4b8cae6d15ab1cf1a9668048d4a4ced3a0426b39c582b24ed1611d3d4d8a2621487fd1f340bcdbaa27d569e70b95d29ef457aec578c628574cc9f686793e743
-Size (URI-Title-1.901.tar.gz) = 19056 bytes
+SHA1 (URI-Title-1.902.tar.gz) = 9c2c75b70880b19ee6154d4ce19aa2030964bfe1
+RMD160 (URI-Title-1.902.tar.gz) = 81eb609c9ba439bafeb49d5321880303f0597b1b
+SHA512 (URI-Title-1.902.tar.gz) = f371f6c40fad85d081fb0d2fcc9e0657a152d02d4adafc11013633a50db188fdecdff911dbb8d302641a7ddcf73e9d4f7d115e108f1267bbfd1f1f7880c183c9
+Size (URI-Title-1.902.tar.gz) = 20035 bytes
