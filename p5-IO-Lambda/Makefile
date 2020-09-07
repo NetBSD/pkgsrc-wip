@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2013/11/24 10:00:21 thomasklausner Exp $
 
-DISTNAME=	IO-Lambda-1.26
+DISTNAME=	IO-Lambda-1.30
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/K/KA/KARASIK/
@@ -17,6 +17,7 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PERL5_PACKLIST=	auto/IO/Lambda/.packlist
 
