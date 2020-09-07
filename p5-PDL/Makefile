@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2012/10/04 19:11:57 asau Exp $
 
-DISTNAME=	PDL-2.019
+DISTNAME=	PDL-2.021
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDL/}
 
@@ -21,6 +20,7 @@ DEPENDS+=	p5-Inline-[0-9]*:../../devel/p5-Inline
 DEPENDS+=	p5-Inline-C-[0-9]*:../../devel/p5-Inline-C
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Module-Compile-[0-9]*:../../devel/p5-Module-Compile
+DEPENDS+=	p5-Pod-Parser-[0-9]*:../../textproc/p5-Pod-Parser
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
