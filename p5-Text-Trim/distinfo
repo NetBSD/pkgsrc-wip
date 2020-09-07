@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2011/10/19 07:36:55 jgoamakf Exp $
 
-SHA1 (Text-Trim-1.02.tar.gz) = 46db3649b9713a9b0d7201f3cccf2b1e8e7e015e
-RMD160 (Text-Trim-1.02.tar.gz) = ff611cffef609e3247203940d8485e77c3c55dc1
-SHA512 (Text-Trim-1.02.tar.gz) = d45981f5ab69276a713cf7e8c7229e00b322786bb6e0b8d06b3f303532bc2994582763a384a010954c4460eefaf80351d30c8a4f846b8f5337db6cef57b2b994
-Size (Text-Trim-1.02.tar.gz) = 5905 bytes
+SHA1 (Text-Trim-1.03.tar.gz) = 7f19f098de335983e7a3166804f92266af47b12d
+RMD160 (Text-Trim-1.03.tar.gz) = 56d56673de170112305e767d2f672037a09fe0de
+SHA512 (Text-Trim-1.03.tar.gz) = 0b9a302e23c397fbb618f675e8422a3ba72be0c8951b96cd5459a850d6c2855400e371b2edec99b1d5d7f9b166388e1047615e1a698cc61e972bdaa737d37780
+Size (Text-Trim-1.03.tar.gz) = 13276 bytes
