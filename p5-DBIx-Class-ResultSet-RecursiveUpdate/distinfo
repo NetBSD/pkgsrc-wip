@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2016/02/27 07:39:37 wen Exp $
+
+SHA1 (DBIx-Class-ResultSet-RecursiveUpdate-0.42.tar.gz) = f4b3943873b73d0ce8fd2084d5d7568492c9b4d0
+RMD160 (DBIx-Class-ResultSet-RecursiveUpdate-0.42.tar.gz) = 8214a6624a9ff65931d2eedb0f7d39a7632a006d
+SHA512 (DBIx-Class-ResultSet-RecursiveUpdate-0.42.tar.gz) = 4ff07e0d36102081459aec74191a05d3a741d98b5fc14aca46057fa0a1b604ae9eec8e329ae785e76223bf79e8ecdf6fcebfcf865a2e10eb7fa9b2a27ef0b346
+Size (DBIx-Class-ResultSet-RecursiveUpdate-0.42.tar.gz) = 84068 bytes

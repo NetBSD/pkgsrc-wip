@@ -1,0 +1,4 @@
+You can feed the ->create method of DBIx::Class with a recursive
+datastructure and have the related records created. Unfortunately
+you cannot do a similar thing with update_or_create. This module
+tries to fill that void until DBIx::Class has an api itself.
