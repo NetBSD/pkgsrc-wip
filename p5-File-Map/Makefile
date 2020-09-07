@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2014/01/04 14:10:49 uccwen Exp $
 
-DISTNAME=	File-Map-0.66
+DISTNAME=	File-Map-0.67
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
 
