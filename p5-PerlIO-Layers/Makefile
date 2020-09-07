@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2013/04/13 08:39:13 jgoamakf Exp $
 
-DISTNAME=	PerlIO-Layers-0.011
+DISTNAME=	PerlIO-Layers-0.012
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PerlIO/}
 
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Querying your filehandle's capabilities
 HOMEPAGE=	https://metacpan.org/release/PerlIO-Layers
 LICENSE=	${PERL5_LICENSE}
-
-USE_LANGUAGES+=	c
 
 PERL5_MODULE_TYPE=	Module::Build
 
