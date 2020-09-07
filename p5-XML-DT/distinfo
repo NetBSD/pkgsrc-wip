@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.3 2013/05/14 02:26:40 jgoamakf Exp $
 
-SHA1 (XML-DT-0.68.tar.gz) = aee0a88a1c3b7fb85c995d79bfa8cc136d6300bc
-RMD160 (XML-DT-0.68.tar.gz) = c653ee72f9e9c84b7d7c4a548328cd9e2229a0f8
-SHA512 (XML-DT-0.68.tar.gz) = 37108b13a98e23145b87693e8df20b5b6f7fc2aea13c9b19201e78d86d5de36c693d3deeb37769ec87bc78789811aefe146000bf4e836fba6664ceffddf6b326
-Size (XML-DT-0.68.tar.gz) = 31150 bytes
+SHA1 (XML-DT-0.69.tar.gz) = 5dc0b7e75f93cd3c6cd838f9e9e39d52d4a11cf0
+RMD160 (XML-DT-0.69.tar.gz) = 6c2bde631b4366814ee984a3b4040a202d3aa95d
+SHA512 (XML-DT-0.69.tar.gz) = 3facb713ec4177a72b65a6e9574787c8fa5d09b37cabe31f1af6e300db5998670aa57105c833e05a0ce6ba6d9dacfebef870ef4c5da6d607363fd0c648f65c4d
+Size (XML-DT-0.69.tar.gz) = 31757 bytes
