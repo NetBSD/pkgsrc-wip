@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2012/10/04 18:42:21 asau Exp $
 
-DISTNAME=	MongoDB-v2.0.1
+DISTNAME=	MongoDB-v2.2.2
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MO/MONGODB/}
@@ -22,6 +22,8 @@ DEPENDS+=	p5-boolean>=0.28:../../devel/p5-boolean
 DEPENDS+=	p5-Config-AutoConf-[0-9]*:../../devel/p5-Config-AutoConf
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
+DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
+DEPENDS+=	p5-Safe-Isa-[0-9]*:../../devel/p5-Safe-Isa
 
 TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
@@ -29,16 +31,9 @@ TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 # BSON::Decimal128 is not installed (version '1' required)
 # BSON::Types is not installed (any version required)
 # Class::XSAccessor is not installed (any version required)
-# Safe::Isa is not installed (any version required)
-# Type::Library is not installed (any version required)
-# Type::Tiny is not installed (version '1' required)
 # Type::Tiny::XS is not installed (any version required)
-# Type::Utils is not installed (any version required)
-# Types::Standard is not installed (any version required)
 
-MAKE_JOBS_SAFE=	no
 PERL5_PACKLIST=	auto/MongoDB/.packlist
-USE_LANGUAGES=	c
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
