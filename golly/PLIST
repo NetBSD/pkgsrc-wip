@@ -59,15 +59,10 @@ share/golly/Help/images/about.gif
 share/golly/Help/images/blend0.png
 share/golly/Help/images/blend1.png
 share/golly/Help/images/clips.png
-share/golly/Help/images/hex.png
-share/golly/Help/images/layers.png
-share/golly/Help/images/lifeviewer.png
-share/golly/Help/images/theme.png
 share/golly/Help/images/transforms.png
 share/golly/Help/index.html
 share/golly/Help/intro.html
 share/golly/Help/layer.html
-share/golly/Help/lifeviewer.html
 share/golly/Help/lua.html
 share/golly/Help/lua.html~
 share/golly/Help/mouse.html
@@ -385,6 +380,7 @@ share/golly/Patterns/Self-Rep/Codd/signals-demo.rle
 share/golly/Patterns/Self-Rep/Codd/tape-reader-demo.rle
 share/golly/Patterns/Self-Rep/Devore/Devore-body.rle
 share/golly/Patterns/Self-Rep/Devore/Devore-rep.rle
+share/golly/Patterns/Self-Rep/Devore/Mahler-rep.zip
 share/golly/Patterns/Self-Rep/Devore/crossover.rle
 share/golly/Patterns/Self-Rep/Devore/discriminator.rle
 share/golly/Patterns/Self-Rep/Flow6/Flow6.zip
@@ -513,12 +509,10 @@ share/golly/Scripts/Lua/heisenburp.lua
 share/golly/Scripts/Lua/hexgrid.lua
 share/golly/Scripts/Lua/invert.lua
 share/golly/Scripts/Lua/life-integer-gun30.lua
-share/golly/Scripts/Lua/lifeviewer.lua
 share/golly/Scripts/Lua/make-torus.lua
 share/golly/Scripts/Lua/metafier.lua
 share/golly/Scripts/Lua/move-object.lua
 share/golly/Scripts/Lua/move-selection.lua
-share/golly/Scripts/Lua/oplus/images/lifeviewer.png
 share/golly/Scripts/Lua/oplus/init.lua
 share/golly/Scripts/Lua/oplus/init.lua~
 share/golly/Scripts/Lua/oplus/sounds/README.txt
@@ -529,6 +523,7 @@ share/golly/Scripts/Lua/pd-glider.lua
 share/golly/Scripts/Lua/pop-plot.lua
 share/golly/Scripts/Lua/shift.lua
 share/golly/Scripts/Lua/slide-show.lua
+share/golly/Scripts/Lua/showinviewer.lua
 share/golly/Scripts/Lua/tile-with-clip.lua
 share/golly/Scripts/Lua/tile.lua
 share/golly/Scripts/Lua/toChangeState.lua

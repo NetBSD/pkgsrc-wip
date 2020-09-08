@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	3.3
+VERSION=	3.4
 PKGNAME=	golly-${VERSION}
 DISTNAME=	${PKGNAME_NOREV}-src
 CATEGORIES=	x11
@@ -24,5 +24,5 @@ CONFIGURE_ARGS+=	"--with-python-shlib=libpython2.7.so"
 .include "../../graphics/MesaLib/buildlink3.mk"
 #.include "../../lang/lua/buildlink3.mk" # uses its own built-in version 5.2
 .include "../../lang/python27/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
