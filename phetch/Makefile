@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/xvxx/phetch/
 COMMENT=	Quick lil gopher client for your terminal
 LICENSE=	mit
 
-USE_LANGUAGES+=	c c++	# rust, but needs a toolchain to link
+USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
 USE_TOOLS+=	pkg-config
 
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.26
