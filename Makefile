@@ -2481,6 +2481,7 @@ SUBDIR+=	openrw-git
 SUBDIR+=	openscep
 SUBDIR+=	openshot-qt
 SUBDIR+=	opensips
+SUBDIR+=	opensmtpd
 SUBDIR+=	openssl110
 SUBDIR+=	opensubdiv
 SUBDIR+=	opentomb
