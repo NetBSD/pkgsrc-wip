@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MG/MGRAHAM/
+HOMEPAGE=	https://metacpan.org/pod/CGI::Application::Plugin::Forward
 COMMENT=	Pass control from one run mode to another
 
 DEPENDS+=	p5-CGI-Application>=4.01:../../www/p5-CGI-Application

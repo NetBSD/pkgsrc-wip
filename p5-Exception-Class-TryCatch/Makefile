@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/
+HOMEPAGE=	https://metacpan.org/pod/Exception::Class::TryCatch
 COMMENT=	Syntactic try/catch sugar for use with Exception::Class
 
 DEPENDS+=	p5-Exception-Class>=0:../../devel/p5-Exception-Class

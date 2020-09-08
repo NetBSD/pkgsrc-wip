@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.2 2012/10/04 19:11:59 asau Exp $
-#
 
 DISTNAME=	Test-WWW-Mechanize-CGIApp-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/H/HA/HARTZELL/
+HOMEPAGE=	https://metacpan.org/pod/Test::WWW::Mechanize
 COMMENT=	Test::WWW::Mechanize for CGI::Application
 
 DEPENDS+=	p5-CGI-Application>=0:../../www/p5-CGI-Application

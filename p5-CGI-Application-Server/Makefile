@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/
+HOMEPAGE=	https://metacpan.org/pod/CGI::Application::Server
 COMMENT=	Simple HTTP server for developing with CGI::Application
 
 DEPENDS+=	p5-CGI-Application>=4.0:../../www/p5-CGI-Application

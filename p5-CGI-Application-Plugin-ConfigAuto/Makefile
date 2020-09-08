@@ -5,7 +5,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MA/MARKSTOS/
+HOMEPAGE=	https://metacpan.org/pod/CGI::Application::Plugin::ConfigAuto
 COMMENT=	Easy config file management for CGI::Application
 
 DEPENDS+=	p5-CGI-Application>=4.11:../../www/p5-CGI-Application

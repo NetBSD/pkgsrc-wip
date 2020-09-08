@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.4 2012/10/04 09:13:32 asau Exp $
-#
 
 DISTNAME=	Class-DBI-Pager-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +6,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/
+HOMEPAGE=	https://metacpan.org/pod/Class::DBI::Pager
 COMMENT=	Class::DBI::Pager - Pager utility for Class::DBI
 
 DEPENDS+=	p5-Class-DBI>=0.9:../../databases/p5-Class-DBI

@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/W/WO/WONKO/
+HOMEPAGE=	https://metacpan.org/pod/CGI::Application::Plugin::ViewCode
 COMMENT=	View the source of the running application
 
 DEPENDS+=	p5-Syntax-Highlight-Perl-Improved>=1.01:../../wip/p5-Syntax-Highlight-Perl-Improved

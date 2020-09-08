@@ -6,7 +6,7 @@ CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LH/LHOWARD/}
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/L/LH/LHOWARD/
+HOMEPAGE=	https://metacpan.org/pod/Net::Syslog
 COMMENT=	Extension for sending syslog messages directly to a remote syslogd
 LICENSE=	${PERL5_LICENSE}
 

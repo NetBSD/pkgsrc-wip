@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://metacpan.org/author/SPEEVES
+HOMEPAGE=	https://metacpan.org/pod/Apache::AuthenNTLM
 COMMENT=	Perl5/Apache module for NTLM authorization
 
 PERL5_PACKLIST=	auto/Apache/AuthenNTLM/.packlist

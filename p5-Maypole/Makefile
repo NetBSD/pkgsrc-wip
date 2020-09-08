@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TE/TEEJAY/
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/T/TE/TEEJAY/
+HOMEPAGE=	https://metacpan.org/pod/Maypole
 COMMENT=	Maypole - MVC web application framework
 
 DEPENDS+=	p5-CGI-Simple>=0:../../www/p5-CGI-Simple

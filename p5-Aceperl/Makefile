@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.5 2013/05/17 18:06:16 shattered Exp $
-#
 
 DISTNAME=		AcePerl-1.92
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +6,7 @@ CATEGORIES=		databases
 MASTER_SITES=		http://www.cpan.org/authors/id/L/LD/LDS/
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		https://www.cpan.org/authors/id/L/LD/LDS/
+HOMEPAGE=		https://metacpan.org/pod/Ace
 COMMENT=		Perl interface for the ACEDB object-oriented database
 
 
