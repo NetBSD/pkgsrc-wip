@@ -1,0 +1,12 @@
+[X] Modify patches for release 6.7.1p1
+    - Patch for "mk/makemap/Makefile.am" removed (file no longer exists)
+    - Patch for "smtpd/queue_fs.c" removed
+      Use of statfs() is now guarded by "#ifdef __OpenBSD__"
+    - Patch for "smtpd/smtp_session.c" reduced
+      The buffersize for "username" was already increased upstream
+[X] Update PLIST
+    Binaries with sendmail names are no longer installed
+[ ] Check CONFLICTS
+    Maybe some can be removed after sendmail binaries are no longer installed
+[X] Remove BROKEN_FOR_PLATFORM
+    - OpenBSD-*-* (not tested yet)
