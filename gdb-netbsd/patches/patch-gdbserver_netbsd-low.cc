@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdbserver/netbsd-low.cc.orig	2020-09-04 21:53:29.059281151 +0000
+--- gdbserver/netbsd-low.cc.orig	2020-09-08 13:10:47.484204564 +0000
 +++ gdbserver/netbsd-low.cc
-@@ -0,0 +1,1348 @@
+@@ -0,0 +1,1327 @@
 +/* Copyright (C) 2020 Free Software Foundation, Inc.
 +
 +   This file is part of GDB.
@@ -93,20 +93,6 @@ $NetBSD$
 +    }
 +}
 +
-+/* Register threads in the process specified by PID.  */
-+
-+static void
-+netbsd_add_threads (pid_t pid)
-+{
-+  auto fn
-+    = [] (ptid_t ptid)
-+      {
-+	add_thread (ptid, nullptr);
-+      };
-+
-+  netbsd_nat::for_each_thread (pid, fn);
-+}
-+
 +/* Implement the create_inferior method of the target_ops vector.  */
 +
 +int
@@ -140,16 +126,8 @@ $NetBSD$
 +int
 +netbsd_process_target::attach (unsigned long pid)
 +{
-+
-+  if (ptrace (PT_ATTACH, pid, nullptr, 0) != 0)
-+    error ("Cannot attach to process %lu: %s (%d)\n", pid,
-+	    safe_strerror (errno), errno);
-+
-+  netbsd_add_process (pid, 1);
-+  netbsd_nat::enable_proc_events (pid);
-+  netbsd_add_threads (pid);
-+
-+  return 0;
++  /* Unimplemented.  */
++  return -1;
 +}
 +
 +/* Returns true if GDB is interested in any child syscalls.  */
@@ -534,13 +512,13 @@ $NetBSD$
 +
 +  while (regset->size >= 0)
 +    {
-+      char *buf = (char *) xmalloc (regset->size);
-+      int res = ptrace (regset->get_request, inferior_ptid.pid (), buf,
++      std::vector<char> buf;
++      buf.resize (regset->size);
++      int res = ptrace (regset->get_request, inferior_ptid.pid (), buf.data (),
 +			inferior_ptid.lwp ());
 +      if (res == -1)
 +	perror_with_name (("ptrace"));
-+      regset->store_function (regcache, buf);
-+      free (buf);
++      regset->store_function (regcache, buf.data ());
 +      regset++;
 +    }
 +}
@@ -555,20 +533,20 @@ $NetBSD$
 +
 +  while (regset->size >= 0)
 +    {
-+      char *buf = (char *)xmalloc (regset->size);
-+      int res = ptrace (regset->get_request, inferior_ptid.pid (), buf,
++      std::vector<char> buf;
++      buf.resize (regset->size);
++      int res = ptrace (regset->get_request, inferior_ptid.pid (), buf.data (),
 +			inferior_ptid.lwp ());
 +      if (res == -1)
 +	perror_with_name (("ptrace"));
-+      if (res == 0)
-+	{
-+	  /* Then overlay our cached registers on that.  */
-+	  regset->fill_function (regcache, buf);
-+	  /* Only now do we write the register set.  */
-+	  res = ptrace (regset->set_request, inferior_ptid.pid (), buf,
-+			inferior_ptid.lwp ());
-+	}
-+      free (buf);
++
++      /* Then overlay our cached registers on that.  */
++      regset->fill_function (regcache, buf.data ());
++      /* Only now do we write the register set.  */
++      res = ptrace (regset->set_request, inferior_ptid.pid (), buf. data (),
++		    inferior_ptid.lwp ());
++      if (res == -1)
++	perror_with_name (("ptrace"));
 +      regset++;
 +    }
 +}
@@ -851,14 +829,17 @@ $NetBSD$
 +  const size_t auxv_size = sizeof (auxv_type);
 +  const size_t auxv_buf_size = 128 * sizeof (auxv_type);
 +
-+  char *auxv_buf = (char *) xmalloc (auxv_buf_size);
++  std::vector<char> auxv_buf;
++  auxv_buf.resize (auxv_buf_size);
 +
-+  netbsd_read_auxv (pid, nullptr, auxv_buf, auxv_buf_size);
++  netbsd_read_auxv (pid, nullptr, auxv_buf.data (), auxv_buf_size);
 +
 +  *phdr_memaddr = 0;
 +  *num_phdr = 0;
 +
-+  for (char *buf = auxv_buf; buf < (auxv_buf + auxv_buf_size); buf += auxv_size)
++  for (char *buf = auxv_buf.data ();
++       buf < (auxv_buf.data () + auxv_buf_size);
++       buf += auxv_size)
 +    {
 +      auxv_type *const aux = (auxv_type *) buf;
 +
@@ -875,8 +856,6 @@ $NetBSD$
 +      if (*phdr_memaddr != 0 && *num_phdr != 0)
 +	break;
 +    }
-+
-+  xfree (auxv_buf);
 +
 +  if (*phdr_memaddr == 0 || *num_phdr == 0)
 +    {
@@ -1287,7 +1266,7 @@ $NetBSD$
 +char *
 +netbsd_process_target::pid_to_exec_file (pid_t pid)
 +{
-+  return netbsd_nat::pid_to_exec_file (pid);
++  return const_cast<char *> (netbsd_nat::pid_to_exec_file (pid));
 +}
 +
 +/* Implementation of the target_ops method "supports_pid_to_exec_file".  */

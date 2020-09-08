@@ -7,7 +7,7 @@ $NetBSD$
  			srv_tgtobj="${srv_tgtobj} arch/amd64.o arch/i386.o"
  			;;
 +  x86_64-*-netbsd*)	srv_regobj=""
-+			srv_tgtobj="netbsd-low.o netbsd-x86_64-low.o fork-child.o"
++			srv_tgtobj="netbsd-low.o netbsd-amd64-low.o fork-child.o"
 +			srv_tgtobj="${srv_tgtobj} nat/fork-inferior.o"
 +			srv_tgtobj="${srv_tgtobj} nat/netbsd-nat.o"
 +			srv_tgtobj="${srv_tgtobj} arch/amd64.o"

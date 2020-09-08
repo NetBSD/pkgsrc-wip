@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gdb/nat/netbsd-nat.c.orig	2020-09-04 21:53:29.055817757 +0000
+--- gdb/nat/netbsd-nat.c.orig	2020-09-08 13:10:45.226850952 +0000
 +++ gdb/nat/netbsd-nat.c
 @@ -0,0 +1,213 @@
 +/* Internal interfaces for the NetBSD code.
@@ -37,22 +37,25 @@ $NetBSD$
 +namespace netbsd_nat
 +{
 +
-+/* Return the executable file name of a process specified by PID.  Returns the
-+   string in a static buffer.  */
++/* See netbsd-nat.h.  */
 +
-+char *
++const char *
 +pid_to_exec_file (pid_t pid)
 +{
 +  static char buf[PATH_MAX];
 +  int mib[4] = {CTL_KERN, KERN_PROC_ARGS, pid, KERN_PROC_PATHNAME};
 +  size_t buflen = sizeof (buf);
-+  if (::sysctl (mib, ARRAY_SIZE (mib), buf, &buflen, NULL, 0))
++  if (::sysctl (mib, ARRAY_SIZE (mib), buf, &buflen, NULL, 0) != 0)
 +    return NULL;
 +  return buf;
 +}
 +
-+/* Generic thread (LWP) lister within a specified process.  The callback
-+   parameters is a C++ function that is called for each detected thread.  */
++/* Generic thread (LWP) lister within a specified PID.  The CALLBACK
++   parameters is a C++ function that is called for each detected thread.
++   When the CALLBACK function returns true, the iteration is interrupted.
++
++   This function assumes internally that the queried process is stopped
++   and the number of threads does not change between two sysctl () calls.  */
 +
 +static bool
 +netbsd_thread_lister (const pid_t pid,
@@ -106,7 +109,7 @@ $NetBSD$
 +  return false;
 +}
 +
-+/* Return true if PTID is still active in the inferior.  */
++/* See netbsd-nat.h.  */
 +
 +bool
 +thread_alive (ptid_t ptid)
@@ -115,7 +118,7 @@ $NetBSD$
 +  lwpid_t lwp = ptid.lwp ();
 +
 +  auto fn
-+    = [&lwp] (const struct kinfo_lwp *kl)
++    = [=] (const struct kinfo_lwp *kl)
 +      {
 +        return kl->l_lid == lwp;
 +      };
@@ -123,8 +126,7 @@ $NetBSD$
 +  return netbsd_thread_lister (pid, fn);
 +}
 +
-+/* Return the name assigned to a thread by an application.  Returns
-+   the string in a static buffer.  */
++/* See netbsd-nat.h.  */
 +
 +const char *
 +thread_name (ptid_t ptid)
@@ -135,7 +137,7 @@ $NetBSD$
 +  static char buf[KI_LNAMELEN] = {};
 +
 +  auto fn
-+    = [&lwp] (const struct kinfo_lwp *kl)
++    = [=] (const struct kinfo_lwp *kl)
 +      {
 +	if (kl->l_lid == lwp)
 +	  {
@@ -151,14 +153,13 @@ $NetBSD$
 +    return NULL;
 +}
 +
-+/* A generic thread lister within a specific PID.  The CALLBACK parameter
-+   is a C++ function that is called for each detected thread.  */
++/* See netbsd-nat.h.  */
 +
 +void
 +for_each_thread (pid_t pid, gdb::function_view<void (ptid_t)> callback)
 +{
 +  auto fn
-+    = [&callback, &pid] (const struct kinfo_lwp *kl)
++    = [=, &callback] (const struct kinfo_lwp *kl)
 +      {
 +	ptid_t ptid = ptid_t (pid, kl->l_lid, 0);
 +	callback (ptid);
@@ -168,7 +169,7 @@ $NetBSD$
 +  netbsd_thread_lister (pid, fn);
 +}
 +
-+/* Enable additional event reporting in a new process specified by PID.  */
++/* See netbsd-nat.h.  */
 +
 +void
 +enable_proc_events (pid_t pid)
@@ -185,8 +186,7 @@ $NetBSD$
 +    perror_with_name (("ptrace"));
 +}
 +
-+/* Implement reading and writing of inferior's siginfo_t specified by PID.
-+   Returns -1 on failure and the number of bytes on a successful transfer.  */
++/* See netbsd-nat.h.  */
 +
 +int
 +qxfer_siginfo (pid_t pid, const char *annex, unsigned char *readbuf,

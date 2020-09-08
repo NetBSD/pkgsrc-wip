@@ -21,7 +21,7 @@ $NetBSD$
 -  if (sysctl (mib, ARRAY_SIZE (mib), buf, &buflen, NULL, 0))
 -    return NULL;
 -  return buf;
-+  return netbsd_nat::pid_to_exec_file (pid);
++  return const_cast<char *> (netbsd_nat::pid_to_exec_file (pid));
  }
  
  /* Return the current directory for the process identified by PID.  */

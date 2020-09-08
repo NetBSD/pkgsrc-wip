@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gdb/nat/netbsd-nat.h.orig	2020-09-04 21:53:29.055935316 +0000
+--- gdb/nat/netbsd-nat.h.orig	2020-09-08 13:10:45.226975075 +0000
 +++ gdb/nat/netbsd-nat.h
-@@ -0,0 +1,46 @@
+@@ -0,0 +1,72 @@
 +/* Internal interfaces for the NetBSD code.
 +
 +   Copyright (C) 2006-2020 Free Software Foundation, Inc.
@@ -32,16 +32,42 @@ $NetBSD$
 +namespace netbsd_nat
 +{
 +
-+extern char *pid_to_exec_file (pid_t pid);
++/* Return the executable file name of a process specified by PID.  Returns the
++   string in a static buffer.  */
++
++extern const char *pid_to_exec_file (pid_t pid);
++
++/* Return true if PTID is still active in the inferior.  */
 +
 +extern bool thread_alive (ptid_t ptid);
 +
++/* Return the name assigned to a thread by an application.  Returns
++   the string in a static buffer.
++
++   This function assumes internally that the queried process is stopped.  */
++
 +extern const char *thread_name (ptid_t ptid);
++
++/* A generic thread lister within a specific PID.  The CALLBACK parameter
++   is a C++ function that is called for each detected thread.
++
++   This function assumes internally that the queried process is stopped.  */
 +
 +extern void for_each_thread (pid_t pid,
 +			     gdb::function_view<void (ptid_t)> callback);
 +
++/* Enable additional event reporting in a new process specified by PID.
++
++   This function assumes internally that the queried process is stopped and
++   traced.  */
++
 +extern void enable_proc_events (pid_t pid);
++
++/* Implement reading and writing of inferior's siginfo_t specified by PID.
++   Returns -1 on failure and the number of bytes on a successful transfer.
++
++   This function assumes internally that the queried process is stopped and
++   traced.  */
 +
 +extern int qxfer_siginfo (pid_t pid, const char *annex, unsigned char *readbuf,
 +			  unsigned const char *writebuf, CORE_ADDR offset,

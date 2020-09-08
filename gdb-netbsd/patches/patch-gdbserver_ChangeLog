@@ -7,9 +7,9 @@ $NetBSD$
 +
 +	* netbsd-low.cc: Add.
 +	* netbsd-low.h: Likewise.
-+	* netbsd-x86_64-low.cc: Likewise.
++	* netbsd-amd64-low.cc: Likewise.
 +	* Makefile.in (SFILES): Register "netbsd-low.cc", "netbsd-low.h",
-+	"netbsd-x86_64-low.cc".
++	"netbsd-amd64-low.cc".
 +	* configure.srv: Add x86_64-*-netbsd*.
 +
  2020-08-13  Simon Marchi  <simon.marchi@polymtl.ca>
