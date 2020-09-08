@@ -10,7 +10,6 @@ SHA1 (patch-gdb_nat_fork-inferior.c) = ac89754b5dd1a69b0058bedaf512272a8d8d30fe
 SHA1 (patch-gdb_nat_netbsd-nat.c) = 7e3e38976d1c7bc6a1f19e4a80df9cd58c526459
 SHA1 (patch-gdb_nat_netbsd-nat.h) = df8d545ffb2a35ca6c467b15a5893612a596d49f
 SHA1 (patch-gdb_nbsd-nat.c) = 990e2a7028526f22719a7da91d3388c62dca074d
-SHA1 (patch-gdb_testsuite_lib_fortran.exp) = 89362ab7b8e0becba8d5975a81935f22536afd7b
 SHA1 (patch-gdbserver_ChangeLog) = 6328d14345bf070aea1ea1028344ad6e8e0ba68a
 SHA1 (patch-gdbserver_Makefile.in) = 4fe153030dd40b672eae2184c68070be181a9161
 SHA1 (patch-gdbserver_configure.srv) = 003db2c5e3caaf41113d1a353dccac488a1b9948
