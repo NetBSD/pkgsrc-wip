@@ -3,7 +3,7 @@
 DISTNAME=	WebService-Audioscrobbler-0.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NI/NILSONSFJ/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NILSONSFJ/}
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	https://www.last.fm/api

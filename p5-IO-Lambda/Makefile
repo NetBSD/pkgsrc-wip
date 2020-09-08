@@ -3,7 +3,7 @@
 DISTNAME=	IO-Lambda-1.30
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/K/KA/KARASIK/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KA/KARASIK/}
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	https://metacpan.org/release/IO-Lambda

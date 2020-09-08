@@ -4,7 +4,7 @@ DISTNAME=	Spread-3.17.3-1.07
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	net perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JE/JESUS/}
 
 MAINTAINER=	gizm0@inbox.lv
 COMMENT=	Perl5 module interface to Spread network utilities

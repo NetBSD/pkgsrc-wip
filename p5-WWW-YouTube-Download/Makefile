@@ -3,7 +3,7 @@
 DISTNAME=	WWW-YouTube-Download-0.63
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/O/OA/OALDERS/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/WebService-GData

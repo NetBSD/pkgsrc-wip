@@ -3,7 +3,7 @@
 DISTNAME=	AnyEvent-I3-0.17
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MS/MSTPLBG/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTPLBG/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/AnyEvent::I3

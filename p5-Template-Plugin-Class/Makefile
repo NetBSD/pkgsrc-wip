@@ -4,7 +4,7 @@
 DISTNAME=	Template-Plugin-Class-0.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RC/RCLAMP/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/release/Template-Plugin-Class

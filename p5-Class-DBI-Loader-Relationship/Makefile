@@ -3,7 +3,7 @@
 DISTNAME=	Class-DBI-Loader-Relationship-1.2
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SI/SIMON/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SI/SIMON/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/pod/Class::DBI::Loader::Relationship

@@ -3,7 +3,7 @@
 DISTNAME=	Syntax-Highlight-Perl-Improved-1.01
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DA/DAVIDCYL/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAVIDCYL/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/pod/Syntax::Highlight::Perl::Improved

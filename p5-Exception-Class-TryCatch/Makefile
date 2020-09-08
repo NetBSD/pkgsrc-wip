@@ -3,7 +3,7 @@
 DISTNAME=	Exception-Class-TryCatch-1.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/pod/Exception::Class::TryCatch

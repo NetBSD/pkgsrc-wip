@@ -3,7 +3,7 @@
 DISTNAME=	Class-DBI-Pager-0.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/pod/Class::DBI::Pager

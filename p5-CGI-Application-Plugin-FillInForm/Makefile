@@ -3,7 +3,7 @@
 DISTNAME=	CGI-Application-Plugin-FillInForm-1.15
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MARKSTOS/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKSTOS/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/release/CGI-Application-Plugin-FillInForm

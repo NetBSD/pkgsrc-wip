@@ -4,7 +4,7 @@
 DISTNAME=	WebService-GData-0.06
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SZ/SZABGAB/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SZ/SZABGAB/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/WebService-GData

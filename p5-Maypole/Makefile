@@ -4,7 +4,7 @@ DISTNAME=	Maypole-2.13
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TE/TEEJAY/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TE/TEEJAY/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/pod/Maypole

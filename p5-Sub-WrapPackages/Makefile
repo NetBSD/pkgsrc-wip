@@ -3,7 +3,7 @@
 DISTNAME=	Sub-WrapPackages-2.01
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DC/DCANTRELL/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DC/DCANTRELL/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/release/Sub-WrapPackages

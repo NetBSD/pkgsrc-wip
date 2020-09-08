@@ -3,7 +3,7 @@
 DISTNAME=	CGI-Untaint-1.26
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TM/TMTM/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TM/TMTM/}
 
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	https://metacpan.org/pod/CGI::Untaint

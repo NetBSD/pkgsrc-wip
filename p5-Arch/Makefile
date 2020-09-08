@@ -4,7 +4,7 @@ DISTNAME=	Arch-0.5.2
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 # MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Arch/}
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MIGO/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIGO/}
 
 MAINTAINER=	jfranz@bsdprojects.net
 COMMENT=	Perl module for Arch

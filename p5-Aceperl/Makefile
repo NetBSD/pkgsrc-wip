@@ -3,7 +3,7 @@
 DISTNAME=		AcePerl-1.92
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		databases
-MASTER_SITES=		http://www.cpan.org/authors/id/L/LD/LDS/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LD/LDS/}
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		https://metacpan.org/pod/Ace
