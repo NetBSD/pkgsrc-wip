@@ -2,9 +2,9 @@ $NetBSD$
 
 Fix path.
 
---- SABnzbd.py.orig	2020-02-12 20:18:12.258920844 +0000
-+++ SABnzbd.py
-@@ -42,6 +42,10 @@ import ssl
+--- SABnzbd.py.orig	2020-08-30 20:58:31.000000000 +0200
++++ SABnzbd.py	2020-09-07 20:29:13.831328403 +0200
+@@ -35,6 +35,10 @@
  import time
  import re
  
@@ -14,8 +14,8 @@ Fix path.
 +
  try:
      import Cheetah
-     if Cheetah.Version[0] < '2':
-@@ -919,7 +923,8 @@ def main():
+     import feedparser
+@@ -925,7 +929,8 @@
  
      sabnzbd.MY_FULLNAME = os.path.normpath(os.path.abspath(sabnzbd.MY_FULLNAME))
      sabnzbd.MY_NAME = os.path.basename(sabnzbd.MY_FULLNAME)

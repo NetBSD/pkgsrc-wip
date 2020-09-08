@@ -2,26 +2,12 @@
 
 # Global and legacy options
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.sabnzbdplus
-PKG_SUPPORTED_OPTIONS=	par2 unrar feedparser openssl
-PKG_SUGGESTED_OPTIONS=	par2 unrar feedparser openssl
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sabnzbd
+PKG_SUPPORTED_OPTIONS=	feedparser openssl
+PKG_SUGGESTED_OPTIONS=	feedparser openssl
 
 .include "../../mk/bsd.options.mk"
 .include "../../lang/python/application.mk"
-
-###
-### par2 support
-###
-.if !empty(PKG_OPTIONS:Mpar2)
-DEPENDS+=	par2-[0-9]*:../../archivers/par2
-.endif
-
-###
-### unrar support
-###
-.if !empty(PKG_OPTIONS:Munrar)
-DEPENDS+=	unrar-[0-9]*:../../archivers/unrar
-.endif
 
 ###
 ### feedparser support
