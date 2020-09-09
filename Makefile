@@ -2895,7 +2895,6 @@ SUBDIR+=	phalanx
 SUBDIR+=	phantomjs
 SUBDIR+=	phantomjs2
 SUBDIR+=	pheanstalk
-SUBDIR+=	phetch
 SUBDIR+=	phonon-backend-xine
 SUBDIR+=	phoronix-test-suite
 SUBDIR+=	php-ast
