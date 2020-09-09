@@ -39,6 +39,8 @@ CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--enable-table-db
 CONFIGURE_ARGS+=	--without-zlib-version-check
 
+CFLAGS.SunOS+=		-D__EXTENSIONS__
+
 EXAMPLEDIR=	${PREFIX}/share/examples/opensmtpd
 CONF_FILES=	${EXAMPLEDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
 
