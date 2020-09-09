@@ -44,6 +44,8 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 EXAMPLEDIR=	${PREFIX}/share/examples/opensmtpd
 CONF_FILES=	${EXAMPLEDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
 
+MAKE_DIRS+=     ${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+
 RCD_SCRIPTS=	opensmtpd
 
 SUBST_CLASSES+=		paths
