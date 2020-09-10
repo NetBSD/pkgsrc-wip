@@ -13,6 +13,7 @@ fi
 
 name="zabbix_server"
 rcvar=${name}
+start_precmd="ulimit -s 10240"
 command="@PREFIX@/sbin/${name}"
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 
@@ -21,5 +22,6 @@ if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
+	[ "x$1" = "start" ] && ulimit -s 10240
 	${command} ${command_args}
 fi
