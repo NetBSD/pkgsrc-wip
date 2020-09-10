@@ -3,6 +3,7 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.icinga2
 PKG_SUPPORTED_OPTIONS=	debug
 PKG_SUPPORTED_OPTIONS+=	mysql pgsql
+PKG_SUPPORTED_OPTIONS+=	icingadb
 PKG_SUPPORTED_OPTIONS+=	icinga2-checker icinga2-compat
 PKG_SUPPORTED_OPTIONS+=	icinga2-livestatus icinga2-notification icinga2-perfdata
 PKG_SUGGESTED_OPTIONS=	icinga2-checker icinga2-compat
@@ -25,6 +26,14 @@ CMAKE_ARGS+=	-DICINGA2_WITH_PGSQL=ON
 .include "../../mk/pgsql.buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DICINGA2_WITH_PGSQL=OFF
+.endif
+
+PLIST_VARS+=	icingadb
+.if !empty(PKG_OPTIONS:Micingadb)
+CMAKE_ARGS+=	-DICINGA2_WITH_ICINGADB=ON
+PLIST.icingadb=	yes
+.else
+CMAKE_ARGS+=	-DICINGA2_WITH_ICINGADB=OFF
 .endif
 
 .for option in checker compat livestatus notification perfdata

@@ -1,8 +1,8 @@
 # $NetBSD: Makefile $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	icinga2-2.9.1
-PKGREVISION=	1
+DISTNAME=	icinga2-2.12.0
+PKGREVISION=	#empty
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 
@@ -161,6 +161,5 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/icinga2
 
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/yajl/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
