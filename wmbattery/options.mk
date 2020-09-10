@@ -3,12 +3,6 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wmbattery
 PKG_SUPPORTED_OPTIONS=	hal upower
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--enable-envsys
-.endif
-
 .include "../../mk/bsd.options.mk"
 
 #

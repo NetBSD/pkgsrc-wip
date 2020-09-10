@@ -9,13 +9,14 @@ HOMEPAGE=	https://www.dockapps.net/
 COMMENT=	Dockapp that shows battery status
 LICENSE=	gnu-gpl-v2
 
-PATCHDIR=	${.CURDIR}/../../wip/wmbattery/patches
-FILESDIR=	${.CURDIR}/../../wip/wmbattery/files
-
-.include "options.mk"
-
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoreconf autoconf automake gmake pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--enable-envsys
+.endif
 
 pre-configure:
 	${CP} \
@@ -25,5 +26,6 @@ pre-configure:
 
 	cd ${WRKSRC} && autoreconf -fi
 
+.include "options.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
