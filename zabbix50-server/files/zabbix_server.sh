@@ -22,6 +22,6 @@ if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
-	[ "x$1" = "start" ] && ulimit -s 10240
+	[ "x$1" = "xstart" ] && ulimit -s 10240
 	${command} ${command_args}
 fi
