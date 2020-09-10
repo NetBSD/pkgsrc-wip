@@ -1,7 +1,7 @@
 # $NetBSD: Makefile $
 
-DISTNAME=	icingaweb2-2.6.2
-PKGREVISION=	12
+DISTNAME=	icingaweb2-2.8.2
+PKGREVISION=	# empty
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 CATEGORIES=	net sysutils www
@@ -104,7 +104,6 @@ RMFILES+=	library/vendor/JShrink/LICENSE library/vendor/JShrink/SOURCE
 RMFILES+=	library/vendor/lessphp/LICENSE library/vendor/lessphp/SOURCE
 RMFILES+=	library/vendor/Parsedown/LICENSE library/vendor/Parsedown/SOURCE
 RMFILES+=	library/vendor/Zend/LICENSE.txt library/vendor/Zend/README.md library/vendor/Zend/VERSION
-RMFILES+=	public/js/vendor/SOURCE.jquery.tipsy
 
 # for actual removal, see post-extract below
 
