@@ -1,11 +1,13 @@
 # $NetBSD: Makefile,v 1.37 2020/06/20 12:43:46 gdt Exp $
-
+# used by sysutils/zabbix50-proxy/Makefile
+# used by sysutils/zabbix50-agent/Makefile
+#
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-CONFLICTS+=	zabbix-server-[3-4]*
+CONFLICTS+=	zabbix-server-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*
 
 DEPENDS+=	fping-[0-9]*:../../net/fping
@@ -40,8 +42,6 @@ SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
 
 .include "../../mk/bsd.prefs.mk"
-
-SMF_INSTANCES=		server
 
 post-install:
 	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \

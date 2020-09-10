@@ -14,7 +14,7 @@
     <method_context>
         <method_credential user="@ZABBIX_USER@" group="@ZABBIX_GROUP@"/>
     </method_context>
-    <instance name="agent" enabled="false">
+    <instance name="@SMF_INSTANCES@" enabled="false">
       <dependency name="config-file" grouping="require_all" restart_on="refresh" type="path">
         <service_fmri value="file://localhost@PKG_SYSCONFDIR@/zabbix_agentd.conf"/>
       </dependency>

@@ -5,8 +5,8 @@
 PKGNAME=	${DISTNAME:S/-/-proxy-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-CONFLICTS+=     zabbix-server-*
-CONFLICTS+=     zabbix-proxy-[3-4]*
+CONFLICTS+=	zabbix-server-[0-9]*
+CONFLICTS+=	zabbix-proxy-[0-9]*
 
 USE_TOOLS+=		pax pkg-config
 GNU_CONFIGURE=		yes
@@ -36,8 +36,6 @@ SUBST_FILES.fix-paths+=		man/*.man
 SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
-
-SMF_INSTANCES=		proxy
 
 post-install:
 	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \

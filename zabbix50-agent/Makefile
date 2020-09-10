@@ -5,7 +5,7 @@
 PKGNAME=	${DISTNAME:S/-/-agent-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-CONFLICTS+=     zabbix-agent-[3-4]*
+CONFLICTS+=	zabbix-agent-[0-9]*
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
@@ -30,8 +30,6 @@ SUBST_FILES.fix-paths+=		man/*.man
 SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
-
-SMF_INSTANCES=		agent
 
 .include "options.mk"
 
