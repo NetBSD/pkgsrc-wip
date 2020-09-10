@@ -9,15 +9,16 @@ RCD_SCRIPTS=	collectd
 .include "../../mk/bsd.prefs.mk"
 
 # Simple plugins that have no dependencies
-DEFAULT_PLUGINS+=	aggregation apcups csv email exec filecount	\
-			hddtemp logfile match_empty_counter match_hashed\
-			match_regex match_timediff match_value mbmon	\
-			ntpd olsrd openvpn powerdns statsd table tail	\
-			tail_csv target_notification target_replace	\
-			target_scale target_set	target_v5upgrade	\
-			teamspeak2 threshold unixsock uuid write_graphite
-
-DEFAULT_PLUGINS+=	check_uptime chrony logparser memcached notify_nagios write_influxdb_udp write_log write_sensu write_syslog write_tsdb zookeeper
+DEFAULT_PLUGINS=	aggregation apcups check_uptime chrony csv	\
+			email exec filecount hddtemp logfile logparser	\
+			match_empty_counter match_hashed match_regex	\
+			match_timediff match_value mbmon memcached	\
+			notify_nagios ntpd olsrd openvpn powerdns	\
+			statsd table tail tail_csv target_notification	\
+			target_replace target_scale target_set		\
+			target_v5upgrade teamspeak2 threshold unixsock	\
+			uuid write_graphite write_influxdb_udp write_log\
+			write_sensu write_syslog write_tsdb zookeeper
 
 .for option in ${DEFAULT_PLUGINS}
 CONFIGURE_ARGS+=	--enable-${option}
