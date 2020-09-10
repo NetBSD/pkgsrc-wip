@@ -1071,7 +1071,6 @@ SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
 SUBDIR+=	gdb
 SUBDIR+=	gdb-git
-SUBDIR+=	gdb-netbsd
 SUBDIR+=	gdb5
 SUBDIR+=	gdb6
 SUBDIR+=	gde
