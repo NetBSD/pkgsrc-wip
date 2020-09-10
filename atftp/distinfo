@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/23 19:12:14 minskim Exp $
-
-SHA1 (atftp-0.7.tar.gz) = 83726e552ca10a164f1a7b344b0c51ca33423fe9
-RMD160 (atftp-0.7.tar.gz) = 06bd2ba663a87fabb79e1536275ad23f60c68636
-Size (atftp-0.7.tar.gz) = 202234 bytes
-SHA1 (patch-aa) = 24e8a18d63b454e847623b93f9ce443eed70d280
-SHA1 (patch-ab) = 3e43d5143b897298f2fe518b676a57fc599f5f5c
-SHA1 (patch-ac) = cf2e2a9dd53af6aebd1fb88db0865ae44152b228
-SHA1 (patch-ad) = 5754391faee836d31912efb5a64c1ca474bff793

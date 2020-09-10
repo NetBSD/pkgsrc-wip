@@ -202,7 +202,6 @@ SUBDIR+=	asterisk11-vicidial
 SUBDIR+=	astguiclient-vicidial
 SUBDIR+=	atanks
 SUBDIR+=	aten
-SUBDIR+=	atftp
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
 SUBDIR+=	ats2

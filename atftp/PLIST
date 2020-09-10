@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/23 20:21:27 poppnk Exp $
-bin/atftp
-man/man1/atftp.1
-man/man8/atftpd.8
-sbin/atftpd
