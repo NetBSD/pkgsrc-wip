@@ -1,3 +1,2 @@
-- Only build and install tested, still not tested against AWS ECS.
 - Double-check
   patch-ecs-cli_vendor_github.com_docker_docker_pkg_system_stat__netbsd.go
