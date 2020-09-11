@@ -13,7 +13,7 @@ NO_BUILD=	yes
 
 USE_TOOLS+=	bash:run
 
-DEPENDS+=	clipnotify-[0-9]*:../../wip/clipnotify
+DEPENDS+=	clipnotify-[0-9]*:../../x11/clipnotify
 DEPENDS+=	dmenu-[0-9]*:../../x11/dmenu
 DEPENDS+=	xsel-[0-9]*:../../x11/xsel
 
