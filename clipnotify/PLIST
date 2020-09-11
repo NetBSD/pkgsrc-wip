@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/clipnotify
-share/doc/clipnotify/README.md

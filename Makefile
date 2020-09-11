@@ -438,7 +438,6 @@ SUBDIR+=	clhep
 SUBDIR+=	cli-git
 SUBDIR+=	clic
 SUBDIR+=	clipmenu
-SUBDIR+=	clipnotify
 SUBDIR+=	cliquer
 SUBDIR+=	clisp
 SUBDIR+=	clisp-asdf
