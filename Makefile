@@ -3916,6 +3916,7 @@ SUBDIR+=	py-rpyc
 SUBDIR+=	py-rql
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-sabyenc
+SUBDIR+=	py-sabyenc3
 SUBDIR+=	py-safersympify
 SUBDIR+=	py-safety
 SUBDIR+=	py-sage
