@@ -1849,6 +1849,8 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-spelling.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-spelling.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-stamp.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-stamp.elc
+share/emacs/${PKGVERSION}/lisp/erc/erc-status-sidebar.el.gz
+share/emacs/${PKGVERSION}/lisp/erc/erc-status-sidebar.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-track.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-track.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-truncate.el.gz
