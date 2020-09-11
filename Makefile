@@ -3225,7 +3225,6 @@ SUBDIR+=	py-collectd
 SUBDIR+=	py-colorlog
 SUBDIR+=	py-colormath
 SUBDIR+=	py-colorpy
-SUBDIR+=	py-commonmark
 SUBDIR+=	py-complexsystems
 SUBDIR+=	py-conan
 SUBDIR+=	py-concepts
