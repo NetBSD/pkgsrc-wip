@@ -5,8 +5,15 @@ BUILDLINK_TREE+=	efl
 .if !defined(EFL_BUILDLINK3_MK)
 EFL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.efl+=	efl>=1.24.3
-BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl-current
+BUILDLINK_API_DEPENDS.efl+=	efl>=1.25.0
+BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl
+
+pkgbase := efl
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_OPTIONS.efl:Mg-mainloop)
+.include "../../devel/libuv/buildlink3.mk"
+.endif
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 0.3 2018/09/07 20:03:10 andyb Exp $
 
-DISTNAME=	efl-1.24.3
+DISTNAME=	efl-1.25.0
 CATEGORIES=	x11
 #PKGREVISION=	1
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
@@ -29,16 +29,13 @@ MESON_ARGS+=	-Dsystemd=false
 MESON_ARGS+=	-Deeze=false
 MESON_ARGS+=	-Dbuild-tests=false
 MESON_ARGS+=	-Dbuild-examples=false
+#MESON_ARGS+=	-Dv4l2=false
 MESON_ARGS+=	-Dphysics=true
-MESON_ARGS+=	-Dglib=true
-MESON_ARGS+=	-Dg-mainloop=true
 
-CFLAGS+=	-g -ggdb3
-
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS=	pkg-config
-ICON_THEMES=	yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS=		pkg-config
+ICON_THEMES=		yes
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -70,6 +67,8 @@ SUBST_SED.fix-options=		-e "s|'es-egl', 'none'|'es-egl', 'base', 'none'|g"
 
 MESON_ARGS+=	-Dopengl=base
 .endif
+
+.include "options.mk"
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
