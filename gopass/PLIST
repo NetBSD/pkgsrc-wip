@@ -1,5 +1,9 @@
 @comment $NetBSD$
 bin/gopass
+bin/gopass-git-credentials
+bin/gopass-hibp
+bin/gopass-jsonapi
+bin/gopass-summon-provider
 share/bash-completion/completions/gopass
 share/fish/vendor_completions.d/gopass.fish
 share/zsh/site-functions/_gopass
