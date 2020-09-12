@@ -2,6 +2,10 @@ $NetBSD$
 
 Add support for NetBSD.
 
+Shared upstream via:
+
+ <https://github.com/moby/moby/pull/41441>
+
 --- /dev/null	2020-09-01 18:37:14.499473640 +0000
 +++ ecs-cli/vendor/github.com/docker/docker/pkg/system/stat_netbsd.go
 @@ -0,0 +1,13 @@
