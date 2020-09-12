@@ -3,6 +3,7 @@
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-server/Makefile
 # used by sysutils/zabbix50-frontend/Makefile
+# used by sysutils/zabbix50-java/Makefile
 
 DISTNAME=	zabbix-5.0.3
 CATEGORIES=	sysutils

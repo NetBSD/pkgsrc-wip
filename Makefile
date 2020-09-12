@@ -5123,6 +5123,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zabbix50-agent
 SUBDIR+=	zabbix50-frontend
+SUBDIR+=	zabbix50-java
 SUBDIR+=	zabbix50-proxy
 SUBDIR+=	zabbix50-server
 SUBDIR+=	zapping
