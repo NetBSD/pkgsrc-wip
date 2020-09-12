@@ -5,7 +5,6 @@
 PKGNAME=	${DISTNAME:S/-/-proxy-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-CONFLICTS+=	zabbix-server-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*
 
 USE_TOOLS+=		pax pkg-config
