@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	consul-1.8.3
+DISTNAME=	consul-1.8.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -333,7 +333,8 @@ GO_MODULE_FILES+=	github.com/hashicorp/raft/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/hashicorp/raft/@v/v1.1.2.mod
 GO_MODULE_FILES+=	github.com/hashicorp/raft/@v/v1.1.2.zip
 GO_MODULE_FILES+=	github.com/hashicorp/serf/@v/v0.9.3.mod
-GO_MODULE_FILES+=	github.com/hashicorp/serf/@v/v0.9.3.zip
+GO_MODULE_FILES+=	github.com/hashicorp/serf/@v/v0.9.4.mod
+GO_MODULE_FILES+=	github.com/hashicorp/serf/@v/v0.9.4.zip
 GO_MODULE_FILES+=	github.com/hashicorp/vault/api/@v/v1.0.4.mod
 GO_MODULE_FILES+=	github.com/hashicorp/vault/api/@v/v1.0.4.zip
 GO_MODULE_FILES+=	github.com/hashicorp/vault/sdk/@v/v0.1.13.mod
@@ -699,7 +700,8 @@ GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.2.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.2.zip
 GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20181108054448-85acf8d2951c.mod
 GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20190308202827-9d24e82272b4.mod
-GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20190308202827-9d24e82272b4.zip
+GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20200416051211-89c76fbcd5d1.mod
+GO_MODULE_FILES+=	golang.org/x/time/@v/v0.0.0-20200416051211-89c76fbcd5d1.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180221164845-07fd8470d635.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20181011042414-1f849cf54d09.mod
