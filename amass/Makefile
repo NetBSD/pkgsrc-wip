@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	amass-3.10.2
+DISTNAME=	amass-3.10.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OWASP/}
 GITHUB_PROJECT=	Amass
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://owasp.org/www-project-amass/
 COMMENT=	In-depth Attack Surface Mapping and Asset Discovery
 LICENSE=	apache-2.0
