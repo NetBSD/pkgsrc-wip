@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (celluloid-0.18.tar.xz) = eb342e196ff941f75ff16c97599b01010b029d1c
-RMD160 (celluloid-0.18.tar.xz) = 781136b27082783ceca435a35cdc526ecd9a33c9
-SHA512 (celluloid-0.18.tar.xz) = 22e04ee774ca1e3d9bdc966ce32ca4c6f00ac5731b4019a4e92552d74524f7a20d4dfcb94f1c043f906c0bbb121708b08d34b00bc8a914391f38eaf08c7e50c2
-Size (celluloid-0.18.tar.xz) = 354752 bytes
+SHA1 (celluloid-0.19.tar.xz) = cbebfbcde08907ffbfc6db7ce3943e1c13b89f0b
+RMD160 (celluloid-0.19.tar.xz) = 242fec4aa73c6ef9a6fa698727c0ec5f1aa17026
+SHA512 (celluloid-0.19.tar.xz) = 4db31ab156e0056e6280c1cbb3f2d2996c4a5e18478bbefb19e13e731bec90672adc30548516bca1aef1e49ae1e22a1d9b8980587a2117f17ecc2b38c7d1498d
+Size (celluloid-0.19.tar.xz) = 372548 bytes
