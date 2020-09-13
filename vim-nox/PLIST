@@ -2,3 +2,5 @@
 bin/rview
 bin/rvim
 bin/vim
+bin/vimdiff
+bin/vimtutor

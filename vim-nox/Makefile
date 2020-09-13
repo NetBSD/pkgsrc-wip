@@ -16,9 +16,8 @@ CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 CONFIGURE_ARGS+=	--enable-gui=no --without-x
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
 
-
 BUILD_TARGET=		vim
-INSTALL_TARGET=		installvimbin
+INSTALL_TARGET=		installvimbin installvimdiff installtutorbin
 TEST_TARGET=		check
 
 post-install:
