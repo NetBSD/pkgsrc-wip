@@ -10,6 +10,7 @@ PKG_SUGGESTED_OPTIONS+=	ruby python perl lua
 
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../editors/vim-share
 
+CONFLICTS+=		vim-[0-9]*
 CONFLICTS+=		vim-gtk-[0-9]* vim-gtk2-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 
