@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2017/04/14 12:10:26 leot Exp $
-
-SHA1 (hg-evolve-7.3.0.tar.gz) = b35f79deb1d1878e1afb86323d84b81a2dd6c952
-RMD160 (hg-evolve-7.3.0.tar.gz) = 0860f2eb2df88234b7f35ecc1684221f5f776aa1
-SHA512 (hg-evolve-7.3.0.tar.gz) = 9a2f430ec661ed514dbfc23a278e8944e649da5d40f8491c7c3eb76d597baad81de8c244a696660a49c9bcd1f1622f2a02a366308beb1388f87092f525a19ec1
-Size (hg-evolve-7.3.0.tar.gz) = 712362 bytes
