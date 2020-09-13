@@ -1,8 +1,3 @@
-Pint is Python module/package to define, operate and manipulate physical
-quantities: the product of a numerical value and a unit of measurement.
-It allows arithmetic operations between them and conversions from and
-to different units.
-
-It is distributed with a comprehensive list of physical units, prefixes
-and constants. Due to it's modular design, you to extend (or even rewrite!)
-the complete list without changing the source code
+Pint is a Python package to define, operate and manipulate physical quantities
+the product of a numerical value and a unit of measurement. It allows arithmetic 
+ooperations between them and conversions from and to different units.

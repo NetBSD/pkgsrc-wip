@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/09/30 10:31:54 fhajny Exp $
+$NetBSD$
 
-SHA1 (Pint-0.5.2.zip) = 8017605186214b25ea244876481f107408514088
-RMD160 (Pint-0.5.2.zip) = 278e25f93cc15e28c6b1d4e2fd10051a4560e06d
-SHA512 (Pint-0.5.2.zip) = 923e091fba7501ec4776c296931ed2dfd2ec7ca89b36b8664ded76f6c27859ffc3faa8ffb18bfa8a6a9bb541a08cdd7ef9a9527a1c791b337b34eb795c71cb6f
-Size (Pint-0.5.2.zip) = 134033 bytes
+SHA1 (Pint-0.14.tar.gz) = acd8ffefc5d292cf86b56082b7183f913bdeff6a
+RMD160 (Pint-0.14.tar.gz) = 57f9ac33b8410311e3a9386feee03efacf460edc
+SHA512 (Pint-0.14.tar.gz) = e58379805481d07e0a4634cdc999f0faa21da7e4fa7c7bade86c45492e130157e08e156d51e179b3a7c69f720ba0d6c20b54e91e9ab5e010f0ed515a0042cbcc
+Size (Pint-0.14.tar.gz) = 251229 bytes

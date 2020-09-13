@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2014/09/30 10:31:54 fhajny Exp $
+# $NetBSD$
 
-DISTNAME=	Pint-0.5.2
+DISTNAME=	Pint-0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pint/}
-EXTRACT_SUFX=	.zip
+CATEGORIES=	math python
+MASTER_SITES=	https://files.pythonhosted.org/packages/8c/97/122b87ce55c3ba7b75b3b5e9b12a55b86d72aae4cb56d1d11c93a1ff0002/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://files.pythonhosted.org/packages/source/P/Pint/
+HOMEPAGE=	https://github.com/hgrecco/pint
 COMMENT=	Physical quantities module
-LICENSE=	modified-bsd
+#LICENSE=	# TODO: (see mk/license.mk)
 
+USE_LANGUAGES=	# none
+
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
