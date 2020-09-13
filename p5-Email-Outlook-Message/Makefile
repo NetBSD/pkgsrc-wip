@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Email-Outlook-Message-0.919
+DISTNAME=	Email-Outlook-Message-0.920
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
@@ -14,6 +14,7 @@ DEPENDS+=	p5-Email-MIME-ContentType>=1.014:../../mail/p5-Email-MIME-ContentType
 DEPENDS+=	p5-Email-MIME>=1.923:../../mail/p5-Email-MIME
 DEPENDS+=	p5-Email-Sender>=1.3:../../mail/p5-Email-Sender
 DEPENDS+=	p5-Email-Simple>=2.102:../../mail/p5-Email-Simple
+DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
 DEPENDS+=	p5-IO-String>=1:../../devel/p5-IO-String
 DEPENDS+=	p5-OLE-Storage_Lite>=0.14:../../devel/p5-OLE-Storage_Lite
 
