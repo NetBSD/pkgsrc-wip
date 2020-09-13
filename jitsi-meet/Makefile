@@ -18,6 +18,8 @@ USE_TOOLS=	gmake tar
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
+#XXX git(1) is used to pull source code over the network
+BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 BUILD_DEPENDS+=	npm-[0-9]*:../../lang/npm
 
 BUILD_TARGET=	compile
