@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.00 2016/12/08 10:14:30 tm Exp $
 
-PKGNAME=		vim-nox-${VIM_VERSION}.${VIM_PATCHLEVEL}
+PKGNAME=		vim-nox11-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
 COMMENT=		Vim editor (vi clone) with scripting languages support
 
