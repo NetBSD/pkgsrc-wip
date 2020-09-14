@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (hal-cgp-0.1.1.tar.gz) = 47cce1453f4815ea345c0e41ebad91d864c5a36b
+RMD160 (hal-cgp-0.1.1.tar.gz) = 35c7eeaaa737ec7e7813a5ee0539e6de842d17a8
+SHA512 (hal-cgp-0.1.1.tar.gz) = 59b5bd55c7e2cf1432b2c7af92739c68a8d9ed0c7d7626c201dec50b11311aefbfa5de76d3bd9d62660e9be7c8f9252d5b495f10c518e553afe289015b0bc80c
+Size (hal-cgp-0.1.1.tar.gz) = 32036 bytes
+SHA1 (patch-setup.py) = 4872c84aaa50097d76737899432843eec636afd8

@@ -1,0 +1,4 @@
+pystencils uses sympy to define stencil operations, that can be
+executed on numpy arrays. Exploiting the stencil structure makes
+pystencils run faster than normal numpy code and even as Cython
+and numba, as demonstrated in this notebook.

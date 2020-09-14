@@ -1,0 +1,7 @@
+hal-cgp is an extensible pure Python library implementing Cartesian
+genetic programming to represent, mutate and evaluate populations of
+individuals encoding symbolic expressions targeting applications with
+computationally expensive fitness evaluations. It supports the translation
+from a CGP genotype, a two-dimensional Cartesian graph, into the
+corresponding phenotype, a computational graph implementing a particular
+mathematical expression
