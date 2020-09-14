@@ -1,10 +1,10 @@
 # $NetBSD: options.mk,v 1.1 2017/05/21 17:30:03 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix50-proxy
-PKG_SUPPORTED_OPTIONS+=		inet6 libssh libssh2 snmp
+PKG_SUPPORTED_OPTIONS+=		inet6 libssh2 snmp
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	mysql pgsql sqlite3
-PKG_SUGGESTED_OPTIONS+=		libssh snmp pgsql
+PKG_SUGGESTED_OPTIONS+=		libssh2 snmp pgsql
 
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=		inet6
@@ -22,11 +22,6 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .if !empty(PKG_OPTIONS:Mlibssh2)
 CONFIGURE_ARGS+=	--with-ssh2=${BUILDLINK_PREFIX.libssh2}
 .include "../../security/libssh2/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mlibssh)
-CONFIGURE_ARGS+=	--with-ssh=${BUILDLINK_PREFIX.libssh}
-.include "../../security/libssh/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
