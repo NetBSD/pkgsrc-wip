@@ -1,0 +1,17 @@
+EFMlrs EFMlrs is a Python package combined with a designated workflow that
+makes it easy for users to calculate elementary flux modes (EFMs) using a
+new approach in metabolic modelling - the [mplrs algorithm](http://
+cgm.cs.mcgill.ca/~avis/C/lrs.html). Besides this new approach also [efmtool]
+(https://csb.ethz.ch/tools/software/efmtool.html) is supported, as it uses
+the most common and established algorithm for calculating EFMs - the double
+description method.
+
+The mplrs algorithm can make use of up to two thousand threads in parallel
+so that for the first time EFMs can be calculated for models that are too
+big to be calculated using tools e.g. efmtool that are based on the double
+description method. Furthermore the EFMlrs package provides a method that
+makes it possible to integrate reaction bounds from the sbml files, so that
+subsets of EFMs can be calculated. This feature is compatible with both
+algorithms, the mplrs algorithm and the efmtool. EFMlrs can be used as a
+stand alone console python program but is flexible enough to be integrated
+in already established workflows
