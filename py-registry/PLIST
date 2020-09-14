@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/Registry/Registry.py
+${PYSITELIB}/Registry/Registry.pyc
+${PYSITELIB}/Registry/Registry.pyo
+${PYSITELIB}/Registry/RegistryLog.py
+${PYSITELIB}/Registry/RegistryLog.pyc
+${PYSITELIB}/Registry/RegistryLog.pyo
+${PYSITELIB}/Registry/RegistryParse.py
+${PYSITELIB}/Registry/RegistryParse.pyc
+${PYSITELIB}/Registry/RegistryParse.pyo
+${PYSITELIB}/Registry/SettingsParse.py
+${PYSITELIB}/Registry/SettingsParse.pyc
+${PYSITELIB}/Registry/SettingsParse.pyo
+${PYSITELIB}/Registry/__init__.py
+${PYSITELIB}/Registry/__init__.pyc
+${PYSITELIB}/Registry/__init__.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
