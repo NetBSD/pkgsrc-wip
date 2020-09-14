@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 16:22:54 asau Exp $
-#
 
 DISTNAME=	scantailor-0.9.9.2
 PKGREVISION=	1
@@ -28,5 +27,5 @@ SUBST_STAGE.paths=	pre-configure
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../x11/Xrender/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
