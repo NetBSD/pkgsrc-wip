@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (rigidbodysimulator-0.2.5.tar.gz) = 53a9bbeac48eb651df089bf933269c5ac4ed079f
+RMD160 (rigidbodysimulator-0.2.5.tar.gz) = 268864850ea1169835a42c816439fc7bbcf768ee
+SHA512 (rigidbodysimulator-0.2.5.tar.gz) = 3dff6b85e58b3b4d1787a99d2d44ad2d3512abda154bd347b8286ada98c868e2486cdaa2be668e6a99bde1ae728f94af87dd679b4730dc82183dc666f032ac8e
+Size (rigidbodysimulator-0.2.5.tar.gz) = 25770 bytes
+SHA1 (patch-setup.py) = 5ca8930cf56b4db8efd1fe8cc5927d3a9c95e0d1
