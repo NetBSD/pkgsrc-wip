@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (SymEnergy-1.0.7.tar.gz) = 15cbb07b499927e0edbc860261af1463e961ce1a
+RMD160 (SymEnergy-1.0.7.tar.gz) = 0e2de9273d60a6936ea7bd1cdf228c81e0b70bd4
+SHA512 (SymEnergy-1.0.7.tar.gz) = 0854fcf14c8a178c631941288bcce9b1b481a0fc889763aa94dbd7f5ce7f644846c26b87541373b88c75daf46e301d7dcf51bbafb137cf702286e948438f855a
+Size (SymEnergy-1.0.7.tar.gz) = 81362 bytes
+SHA1 (patch-setup.py) = c8964352bd0e3538cc190ce9059523e74313cf6c
