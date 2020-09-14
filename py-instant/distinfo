@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (instant-2017.1.0.tar.gz) = 19c3f5b1b52d649300d4cad61d14ebf90888f767
+RMD160 (instant-2017.1.0.tar.gz) = 5a34050c76178c5a783c443938077c988d42e8a3
+SHA512 (instant-2017.1.0.tar.gz) = 7841d83a8377b8aca72490a07a9dd18906cf4a1c2e6ba7b62386963aaf3d975fc0cd838ae130e0e61b992ba7b8a44fa65ab885bb65d32cf50fd195ea5b6e9d34
+Size (instant-2017.1.0.tar.gz) = 75921 bytes
+SHA1 (patch-setup.py) = 9264fab63aaae49ce66abb07c4ced933c434a1bf

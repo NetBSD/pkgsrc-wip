@@ -1,0 +1,13 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mozdebug/__init__.py
+${PYSITELIB}/mozdebug/__init__.pyc
+${PYSITELIB}/mozdebug/__init__.pyo
+${PYSITELIB}/mozdebug/mozdebug.py
+${PYSITELIB}/mozdebug/mozdebug.pyc
+${PYSITELIB}/mozdebug/mozdebug.pyo

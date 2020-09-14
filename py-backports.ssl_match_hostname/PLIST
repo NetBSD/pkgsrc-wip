@@ -1,0 +1,7 @@
+@comment $NetBSD$
+${PYSITELIB}/backports/__init__.py
+${PYSITELIB}/backports/__init__.pyc
+${PYSITELIB}/backports/__init__.pyo
+${PYSITELIB}/backports/ssl_match_hostname/__init__.py
+${PYSITELIB}/backports/ssl_match_hostname/__init__.pyc
+${PYSITELIB}/backports/ssl_match_hostname/__init__.pyo

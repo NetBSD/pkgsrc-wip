@@ -1,0 +1,13 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mozcrash/__init__.py
+${PYSITELIB}/mozcrash/__init__.pyc
+${PYSITELIB}/mozcrash/__init__.pyo
+${PYSITELIB}/mozcrash/mozcrash.py
+${PYSITELIB}/mozcrash/mozcrash.pyc
+${PYSITELIB}/mozcrash/mozcrash.pyo

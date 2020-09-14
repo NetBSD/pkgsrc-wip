@@ -1,0 +1,5 @@
+Lark is a parser built with a focus on ergonomics, performance and resilience.
+
+Lark can parse all context-free languages. That means it is capable of parsing
+almost any programming language out there, and to some degree most natural
+languages too.
