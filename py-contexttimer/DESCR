@@ -1,0 +1,2 @@
+A timer context manager measuring the clock wall time of the code
+block it contains

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/notify2.py
+${PYSITELIB}/notify2.pyc
+${PYSITELIB}/notify2.pyo

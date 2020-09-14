@@ -3278,6 +3278,7 @@ SUBDIR+=	py-deepstate
 SUBDIR+=	py-delay
 SUBDIR+=	py-delny
 SUBDIR+=	py-deltasigma
+SUBDIR+=	py-depinfo
 SUBDIR+=	py-dependency
 SUBDIR+=	py-dependency_management
 SUBDIR+=	py-dependenpy
@@ -5188,3 +5189,4 @@ ${.CURDIR}/INDEX: ${.CURDIR}/PKGDB
 
 
 .include "../mk/misc/category.mk"
+
