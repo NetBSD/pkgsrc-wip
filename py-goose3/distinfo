@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (goose3-3.1.6.tar.gz) = 48dd99f0c7fc6a6f19e1e89d2b66dc77243c4711
+RMD160 (goose3-3.1.6.tar.gz) = fd1f29c623d95610f98737abe473a31b9ac48da2
+SHA512 (goose3-3.1.6.tar.gz) = 943e74183dab2a88fccda6934ac731f6c97147d5e73dd9948a263e2752a7ffb8c5d8711215a10a4c8eedc238ffc742e21e65050ce015adc2ffdd93df9031b2d7
+Size (goose3-3.1.6.tar.gz) = 37724 bytes
+SHA1 (patch-setup.py) = ccb1d569abd950c0a81911ad1727c78ed724eec1

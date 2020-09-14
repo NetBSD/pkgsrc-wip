@@ -1,0 +1,15 @@
+Goose was originally an article extractor written in Java that has most
+recently (Aug2011) been converted to a scala project.
+
+This is a complete rewrite in Python. The aim of the software is to take
+any news article or article-type web page and not only extract what is
+the main body of the article but also all meta data and most probable
+image candidate.
+
+Goose will try to extract the following information:
+
+    - Main text of an article
+    - Main image of article
+    - Any YouTube/Vimeo movies embedded in article
+    - Meta Description
+    - Meta tags
