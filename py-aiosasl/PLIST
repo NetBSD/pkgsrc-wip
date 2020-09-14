@@ -1,0 +1,20 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/aiosasl/__init__.py
+${PYSITELIB}/aiosasl/__init__.pyc
+${PYSITELIB}/aiosasl/__init__.pyo
+${PYSITELIB}/aiosasl/channel_binding_methods.py
+${PYSITELIB}/aiosasl/channel_binding_methods.pyc
+${PYSITELIB}/aiosasl/channel_binding_methods.pyo
+${PYSITELIB}/aiosasl/stringprep.py
+${PYSITELIB}/aiosasl/stringprep.pyc
+${PYSITELIB}/aiosasl/stringprep.pyo
+${PYSITELIB}/aiosasl/utils.py
+${PYSITELIB}/aiosasl/utils.pyc
+${PYSITELIB}/aiosasl/utils.pyo
+${PYSITELIB}/aiosasl/version.py
+${PYSITELIB}/aiosasl/version.pyc
+${PYSITELIB}/aiosasl/version.pyo

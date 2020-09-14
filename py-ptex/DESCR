@@ -1,0 +1,2 @@
+PypTeX is the Python Preprocessor for LaTeX. It allows one to embed Python
+code fragments in a LaTeX template file

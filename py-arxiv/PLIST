@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/arxiv/__init__.py
+${PYSITELIB}/arxiv/__init__.pyc
+${PYSITELIB}/arxiv/__init__.pyo
+${PYSITELIB}/arxiv/arxiv.py
+${PYSITELIB}/arxiv/arxiv.pyc
+${PYSITELIB}/arxiv/arxiv.pyo

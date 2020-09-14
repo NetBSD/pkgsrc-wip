@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pennylane_pq/__init__.py
+${PYSITELIB}/pennylane_pq/__init__.pyc
+${PYSITELIB}/pennylane_pq/__init__.pyo
+${PYSITELIB}/pennylane_pq/_version.py
+${PYSITELIB}/pennylane_pq/_version.pyc
+${PYSITELIB}/pennylane_pq/_version.pyo
+${PYSITELIB}/pennylane_pq/devices.py
+${PYSITELIB}/pennylane_pq/devices.pyc
+${PYSITELIB}/pennylane_pq/devices.pyo
+${PYSITELIB}/pennylane_pq/expval.py
+${PYSITELIB}/pennylane_pq/expval.pyc
+${PYSITELIB}/pennylane_pq/expval.pyo
+${PYSITELIB}/pennylane_pq/ops.py
+${PYSITELIB}/pennylane_pq/ops.pyc
+${PYSITELIB}/pennylane_pq/ops.pyo
+${PYSITELIB}/pennylane_pq/pqops.py
+${PYSITELIB}/pennylane_pq/pqops.pyc
+${PYSITELIB}/pennylane_pq/pqops.pyo

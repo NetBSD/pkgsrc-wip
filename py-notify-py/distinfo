@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (notify_py-0.2.3.tar.gz) = 6494991c13e9a2dced220c52873a7d562361d65f
+RMD160 (notify_py-0.2.3.tar.gz) = e1c86bc89ec6c9fea9017a55f6193c70d2dd5f08
+SHA512 (notify_py-0.2.3.tar.gz) = 5d2f1c36f4cbd488f963c605f7e1a07f925ddfae86b9a6ab6fb31e383d71ecb8c41a552997278b5211fc626588275e402358928927eedd48413366d6b549e131
+Size (notify_py-0.2.3.tar.gz) = 644866 bytes
+SHA1 (patch-notifypy_notify.py) = 830bcb7076e46f71c37edb7ee473de12db7802c8
+SHA1 (patch-notifypy_os__notifiers_____init____.py) = f8d677b9797a11fb27992ed0df3834628b3bc2f8

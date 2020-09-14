@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (pox-0.2.8.zip) = 5f857b53bde9e7d3229d6cd6bb155555fbc0e746
+RMD160 (pox-0.2.8.zip) = d822edcafabd0b061503c94243b3c2e5fe6d57e2
+SHA512 (pox-0.2.8.zip) = 010668a959cc0a4e2bc73fa6abf2ca90b0a86310c38271b8f15a6f9076a92f26200042922278d464f5d73abbdec3ea0b4728bba36fe491b03f102b0147b692ca
+Size (pox-0.2.8.zip) = 128536 bytes
+SHA1 (patch-setup.py) = a6a51717280ebb0ba4b8a3fe3876a50497a7425c
