@@ -4824,6 +4824,7 @@ SUBDIR+=	typespeed
 SUBDIR+=	typhoon
 SUBDIR+=	u-boot
 SUBDIR+=	u-boot-full
+SUBDIR+=	u-boot-nanopi-r2s
 SUBDIR+=	u-boot-orangepi-pc
 SUBDIR+=	u-boot-pinebook-crust
 SUBDIR+=	uTox-git
