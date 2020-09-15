@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/spotify-qt
+share/applications/spotify-qt.desktop
+share/icons/hicolor/scalable/apps/spotify-qt.svg
