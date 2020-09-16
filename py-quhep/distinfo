@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (quhep-0.0.3.tar.gz) = 1f67074208b0a3296680f4ca0fe1f8e4f0d387b6
+RMD160 (quhep-0.0.3.tar.gz) = b253e601293cc4adce9d25186277774a23e22d6d
+SHA512 (quhep-0.0.3.tar.gz) = 0c07a07b833a55683301302d43fd7cfe56bb1b4c7da942af100d12bccfa4cd05cae31f905ac96e716c237701f1bcba73e4f0b2b31be11beec365181325790cfd
+Size (quhep-0.0.3.tar.gz) = 22721 bytes
+SHA1 (patch-setup.py) = 29d4a719b72827ad03c9ee502cca72ea5d173b1f
