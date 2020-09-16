@@ -1207,6 +1207,7 @@ SUBDIR+=	go-ghodss-yaml
 SUBDIR+=	go-gomail
 SUBDIR+=	go-gopacket
 SUBDIR+=	go-humanize
+SUBDIR+=	go-jira
 SUBDIR+=	go-junit-report
 SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
