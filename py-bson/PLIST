@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/bson/__init__.py
+${PYSITELIB}/bson/__init__.pyc
+${PYSITELIB}/bson/__init__.pyo
+${PYSITELIB}/bson/codec.py
+${PYSITELIB}/bson/codec.pyc
+${PYSITELIB}/bson/codec.pyo
+${PYSITELIB}/bson/network.py
+${PYSITELIB}/bson/network.pyc
+${PYSITELIB}/bson/network.pyo
+${PYSITELIB}/bson/objectid.py
+${PYSITELIB}/bson/objectid.pyc
+${PYSITELIB}/bson/objectid.pyo
+${PYSITELIB}/bson/py3compat.py
+${PYSITELIB}/bson/py3compat.pyc
+${PYSITELIB}/bson/py3compat.pyo
+${PYSITELIB}/bson/tz_util.py
+${PYSITELIB}/bson/tz_util.pyc
+${PYSITELIB}/bson/tz_util.pyo

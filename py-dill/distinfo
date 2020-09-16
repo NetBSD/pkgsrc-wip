@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.1 2014/06/09 21:12:57 jihbed Exp $
 
-SHA1 (dill-0.2.4.tgz) = f36c57e0146b9c570db7040f1a1b0da9b69a4b41
-RMD160 (dill-0.2.4.tgz) = 6a29a4e66ad8b37881ef3c02b6c02829cb05716f
-SHA512 (dill-0.2.4.tgz) = 1deed95bc9d3e5c2c30e1ceebecf5112dabcf36a5a49345e8561a289d185511a151dfadc7400b9fc2773ca4b0f1a357d077c7439309a4eea66eecef3ef8acca9
-Size (dill-0.2.4.tgz) = 58607 bytes
-SHA1 (patch-setup.py) = db2ec39a36236e594f3b64662bd9ed39021d10a8
+SHA1 (dill-0.3.2.zip) = 579007426983214b21dcbc8e9393571939c7cf9a
+RMD160 (dill-0.3.2.zip) = d9673f22c08141b85567b036a1ac1ad9d761eb6a
+SHA512 (dill-0.3.2.zip) = 6b28a787bd8ae0fc37dcded46245dfa0b62b56616daf217285e6dbb2b95e3f8a78478976da682714147410c7a7996c8198c59e3de241a0956b4ef3430110dc08
+Size (dill-0.3.2.zip) = 177570 bytes
+SHA1 (patch-setup.py) = 856c66b0823b5b598c95a54874f8ad2b85504cf8

@@ -1,21 +1,25 @@
 # $NetBSD$
 
-DISTNAME=	dill-0.2.4
+DISTNAME=	dill-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=d/dill/}
-EXTRACT_SUFX=	.tgz#md5=8e7d1ec5a0f150b536da4d0623c3931b
+MASTER_SITES=	https://files.pythonhosted.org/packages/e2/96/518a8ea959a734b70d2e95fef98bcbfdc7adad1c1e5f5dd9148c835205a5/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.cacr.caltech.edu/~mmckerns/dill.htm
-COMMENT=	Utility for serialization of python objects
-LICENSE=	2-clause-bsd
-
-DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/readline
+HOMEPAGE=	https://pypi.org/project/dill
+COMMENT=	Serialize all of python
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	27
+DEPENDS+=	${PYPKGPREFIX}-readline>=3.7.6:../../devel/py-readline
+DEPENDS+=	${PYPKGPREFIX}-objgraph>=1.7.2:../../graphics/py-objgraph
+
+post-extract:
+	${MV} ${WRKSRC}/scripts/undill ${WRKSRC}/scripts/undill${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/scripts/get_objgraph ${WRKSRC}/scripts/get_objgraph${PYVERSSUFFIX}
+
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
