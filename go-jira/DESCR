@@ -1,2 +1,2 @@
-go-jira is a Simple command line client for Atlassian's Jira service
+go-jira is a simple command line client for Atlassian's Jira service
 written in Go.
