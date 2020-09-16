@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/evmasm
+${PYSITELIB}/pyevmasm-${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/pyevmasm-${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/pyevmasm-${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/pyevmasm-${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/pyevmasm-${EGG_INFODIR}/requires.txt
+${PYSITELIB}/pyevmasm-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyevmasm/__init__.py
+${PYSITELIB}/pyevmasm/__init__.pyc
+${PYSITELIB}/pyevmasm/__init__.pyo
+${PYSITELIB}/pyevmasm/__main__.py
+${PYSITELIB}/pyevmasm/__main__.pyc
+${PYSITELIB}/pyevmasm/__main__.pyo
+${PYSITELIB}/pyevmasm/evmasm.py
+${PYSITELIB}/pyevmasm/evmasm.pyc
+${PYSITELIB}/pyevmasm/evmasm.pyo
