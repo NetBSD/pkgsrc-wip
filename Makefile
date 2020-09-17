@@ -2797,6 +2797,7 @@ SUBDIR+=	pcsx
 SUBDIR+=	pcsx-df
 SUBDIR+=	pcsx2
 SUBDIR+=	pcsxr
+SUBDIR+=	pcsxr-nia
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdfcrack
 SUBDIR+=	pdfminer
