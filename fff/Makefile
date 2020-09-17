@@ -1,0 +1,23 @@
+# $NetBSD$
+
+DISTNAME=	fff-2.1
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dylanaraps/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/dylanaraps/fff/
+COMMENT=	Simple file manager written in bash
+LICENSE=	mit
+
+USE_TOOLS+=	bash:run
+USE_LANGUAGES=	# none
+NO_BUILD=	yes
+
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+
+REPLACE_BASH+=	fff
+
+DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
+DEPENDS+=	xdotool-[0-9]*:../../x11/xdotool
+
+.include "../../mk/bsd.pkg.mk"

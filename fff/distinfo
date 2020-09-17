@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (fff-2.1.tar.gz) = 4ee66c0af3b1aca48908bab0febb75227c7c5449
+RMD160 (fff-2.1.tar.gz) = 890dc6edc2792b38868c78629ca4b637df5c403f
+SHA512 (fff-2.1.tar.gz) = 6ce354229bbb53680361a8aa04e8d01294fc6e3c7a8e3d96a89c14190b2d70ff3ac1ded230eaf15711e7f9ac0318a490658452b6ffc91ec7752cc9f934abb24a
+Size (fff-2.1.tar.gz) = 15573 bytes
+SHA1 (patch-fff) = b3c3cdcb5c7db4723a05b74d74d1ad2e199b6d3d
