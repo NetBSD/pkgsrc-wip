@@ -37,7 +37,7 @@ SUBST_FILES.fix-paths+=		man/*.man
 SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
 SUBST_CLASSES+=			fix-pkgbase
-SUBST_STAGE.fix-pkgbase=	post-patch
+SUBST_STAGE.fix-pkgbase=	pre-configure
 SUBST_MESSAGE.fix-pkgbase=	Fixing PKGBASE.
 SUBST_FILES.fix-pkgbase=	src/zabbix_proxy/Makefile.am
 SUBST_SED.fix-pkgbase=		-e 's,%%PKGBASE%%,${PKGBASE},g'
