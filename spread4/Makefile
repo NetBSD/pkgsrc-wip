@@ -57,7 +57,7 @@ post-install:
 
 .include "../../mk/dlopen.buildlink3.mk"
 # Work around upstream bug where -ldl is added on NetBSD.  Reported to
-# contact address on 20200830.
+# contact address on 20200830, with no response.
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 .include "../../mk/pthread.buildlink3.mk"
