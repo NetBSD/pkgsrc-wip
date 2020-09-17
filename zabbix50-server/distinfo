@@ -7,4 +7,4 @@ Size (zabbix-5.0.3.tar.gz) = 18893485 bytes
 SHA1 (patch-m4_ax__lib__mysql.m4) = 9786c6bff3d22334263921c201bf241a207a46bc
 SHA1 (patch-m4_libssh.m4) = 8b4ac3964caf94bb0e4939d265dcefc08a07a0df
 SHA1 (patch-src_libs_zbxsysinfo_netbsd_net.c) = 468f2112a3d65b0a73f371194ae15ce0df0ad71c
-SHA1 (patch-src_zabbix__server_Makefile.am) = 43e1ef3632bb049be1f757e703bd3714db0bbb17
+SHA1 (patch-src_zabbix__server_Makefile.am) = d139b4fedf8f443fbe9966256e98374d5e5cdb67
