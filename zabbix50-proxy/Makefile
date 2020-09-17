@@ -5,12 +5,14 @@
 PKGNAME=	${DISTNAME:S/-/-proxy-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
+CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*
 
-USE_TOOLS+=		pax pkg-config
+USE_TOOLS+=		autoreconf autoconf automake pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-proxy
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-libcurl
@@ -20,12 +22,12 @@ CONFIGURE_ARGS+=	--with-libxml2
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
-EGDIR=		share/examples/zabbix
+EGDIR=		share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/zabbix_proxy.conf ${PKG_SYSCONFDIR}/zabbix_proxy.conf
 
 RCD_SCRIPTS=	zabbix_proxy
 
-INSTALLATION_DIRS+=	${EGDIR} share/zabbix
+INSTALLATION_DIRS+=	${EGDIR} share/${PKGBASE}
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -34,12 +36,30 @@ SUBST_FILES.fix-paths=		conf/*.conf
 SUBST_FILES.fix-paths+=		man/*.man
 SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
+SUBST_CLASSES+=			fix-pkgbase
+SUBST_STAGE.fix-pkgbase=	post-patch
+SUBST_MESSAGE.fix-pkgbase=	Fixing PKGBASE.
+SUBST_FILES.fix-pkgbase=	src/zabbix_proxy/Makefile.am
+SUBST_SED.fix-pkgbase=		-e 's,%%PKGBASE%%,${PKGBASE},g'
+
+PLIST_SUBST+=			PKGBASE=${PKGBASE}
+
+CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
+
 .include "../../mk/bsd.prefs.mk"
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	   aclocal -I m4 ; automake -ai --foreign; autoconf -I m4
 
 post-install:
 	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \
-		${PAX} -rw . ${DESTDIR}${PREFIX}/share/zabbix/
-	rm ${DESTDIR}${PREFIX}/share/zabbix/Makefile*
+		${PAX} -rw . ${DESTDIR}${PREFIX}/share/${PKGBASE}/
+	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/Makefile*
+	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/data.sql
+	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/images.sql
+	${MV} ${DESTDIR}${PREFIX}/bin/zabbix_js \
+	   ${DESTDIR}${PREFIX}/bin/zabbix_proxy_js
 
 .include "options.mk"
 

@@ -1,14 +1,11 @@
 @comment $NetBSD$
-bin/zabbix_js
+bin/zabbix_proxy_js
 man/man8/zabbix_proxy.8
 sbin/zabbix_proxy
-share/examples/zabbix/zabbix_proxy.conf
-share/zabbix/data.sql
-${PLIST.mysql}share/zabbix/double.sql
-${PLIST.pgsql}share/zabbix/double.sql
-share/zabbix/images.sql
-share/zabbix/schema.sql
-${PLIST.pgsql}share/zabbix/timescaledb.sql
-@pkgdir share/zabbix/externalscripts
+share/examples/${PKGBASE}/zabbix_proxy.conf
+share/${PKGBASE}/double.sql
+share/${PKGBASE}/schema.sql
+share/${PKGBASE}/timescaledb.sql
+@pkgdir share/${PKGBASE}/externalscripts
 @pkgdir lib/modules
 @pkgdir etc/zabbix_proxy.conf.d
