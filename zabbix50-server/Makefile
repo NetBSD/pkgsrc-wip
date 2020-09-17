@@ -12,7 +12,7 @@ CONFLICTS+=	zabbix-server-[0-9]*
 
 DEPENDS+=	fping-[0-9]*:../../net/fping
 
-USE_TOOLS+=		autoreconf autoconf automake pax pkg-config
+USE_TOOLS+=		aclocal autoconf automake pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-server
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -41,7 +41,7 @@ SUBST_FILES.fix-paths+=		man/*.man
 SUBST_SED.fix-paths=		-e 's,/usr/local/etc,${PKG_SYSCONFDIR},g'
 
 SUBST_CLASSES+=			fix-pkgbase
-SUBST_STAGE.fix-pkgbase=	post-patch
+SUBST_STAGE.fix-pkgbase=	pre-configure
 SUBST_MESSAGE.fix-pkgbase=	Fixing PKGBASE.
 SUBST_FILES.fix-pkgbase=	src/zabbix_server/Makefile.am
 SUBST_SED.fix-pkgbase=		-e 's,%%PKGBASE%%,${PKGBASE},g'
