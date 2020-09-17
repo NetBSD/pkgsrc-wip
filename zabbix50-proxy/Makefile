@@ -8,7 +8,7 @@ COMMENT=	Enterprise-class Monitoring Solution for Everyone
 CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*
 
-USE_TOOLS+=		autoreconf autoconf automake pax pkg-config
+USE_TOOLS+=		aclocal autoconf automake pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-proxy
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
