@@ -2,13 +2,13 @@
 bin/zabbix_js
 man/man8/zabbix_server.8
 sbin/zabbix_server
-share/examples/zabbix/zabbix_server.conf
-share/zabbix/data.sql
-share/zabbix/double.sql
-share/zabbix/images.sql
-share/zabbix/schema.sql
-${PLIST.pgsql}share/zabbix/timescaledb.sql
-@pkgdir share/zabbix/externalscripts
-@pkgdir share/zabbix/alertscripts
+share/examples/${PKGBASE}/zabbix_server.conf
+share/${PKGBASE}/data.sql
+share/${PKGBASE}/double.sql
+share/${PKGBASE}/images.sql
+share/${PKGBASE}/schema.sql
+${PLIST.pgsql}share/${PKGBASE}/timescaledb.sql
+@pkgdir share/${PKGBASE}/externalscripts
+@pkgdir share/${PKGBASE}/alertscripts
 @pkgdir lib/modules
 @pkgdir etc/zabbix_server.conf.d
