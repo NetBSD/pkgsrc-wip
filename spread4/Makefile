@@ -56,8 +56,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/sample.spread.access_ip ${DESTDIR}${EXAMPLEDIR}/spread.access_ip
 
 .include "../../mk/dlopen.buildlink3.mk"
-# Work around upstream bug where -ldl is added on NetBSD.  Reported to
-# contact address on 20200830, with no response.
+# Work around upstream bug where -ldl is added on NetBSD.  Per POSIX,
+# the use of -ldl is irregular:
+#  https://pubs.opengroup.org/onlinepubs/9699919799/functions/dlopen.html
+# Reported to contact address on 20200830, with no response.
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 .include "../../mk/pthread.buildlink3.mk"
