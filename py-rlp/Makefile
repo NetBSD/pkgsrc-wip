@@ -26,7 +26,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
-BUILD_DEPENDS+=	# TODO: setuptools-markdown>=0
 DEPENDS+=	${PYPKGPREFIX}-eth-utils-[0-9]*:../../wip/py-eth-utils
 
 USE_LANGUAGES=	# none
