@@ -13,6 +13,9 @@ COMMENT=	Symbolic execution tool for analysis of binaries and smart contracts
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
+DEPENDS+=	${PYPKGPREFIX}-eth-hash-[0-9]*:../../wip/py-eth-hash
+DEPENDS+=	${PYPKGPREFIX}-eth-typing-[0-9]*:../../wip/py-eth-typing
+DEPENDS+=	${PYPKGPREFIX}-eth-utils-[0-9]*:../../wip/py-eth-utils
 DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-pyelftools-[0-9]*:../../devel/py-pyelftools
 DEPENDS+=	${PYPKGPREFIX}-pysha3-[0-9]*:../../devel/py-pysha3
