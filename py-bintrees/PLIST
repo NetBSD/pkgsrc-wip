@@ -15,6 +15,7 @@ ${PYSITELIB}/bintrees/avltree.pyo
 ${PYSITELIB}/bintrees/bintree.py
 ${PYSITELIB}/bintrees/bintree.pyc
 ${PYSITELIB}/bintrees/bintree.pyo
+${PYSITELIB}/bintrees/cython_trees.so
 ${PYSITELIB}/bintrees/rbtree.py
 ${PYSITELIB}/bintrees/rbtree.pyc
 ${PYSITELIB}/bintrees/rbtree.pyo

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ana-0.05.tar.gz) = 4ff7fe2f7813f2c79ae077f424fb22fa4b2d1dd0
-RMD160 (ana-0.05.tar.gz) = 60aec0b0567be7d4a89834739e28c6d518103b9c
-SHA512 (ana-0.05.tar.gz) = 98eaf9f6db5eaadfa2907b6b611ed04c0216197130761a4959fb37facb4f3b6cf100243a65e32c106f6d60225599080e11a2d0477cb87be34e28fae14aab8e30
-Size (ana-0.05.tar.gz) = 3132 bytes
+SHA1 (ana-0.06.tar.gz) = fd53b0f6fc1d2f48f20e6b462ddb3b25e0aa4082
+RMD160 (ana-0.06.tar.gz) = 4c5925f113ba9ef1fbdce1a14a38ac3ed5b4ce72
+SHA512 (ana-0.06.tar.gz) = d4944f96379d399040e191d3058d35e5e7ca2cd7193b8dfb3b7b78e0dbf26c8c5dc48acb7c570e51fead0387ee708246de8cf9231ef35028bdd7686f732df875
+Size (ana-0.06.tar.gz) = 5876 bytes

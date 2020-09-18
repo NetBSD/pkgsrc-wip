@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-progressbar-[0-9]*:../../wip/py-progressbar
 DEPENDS+=	${PYPKGPREFIX}-pygit-[0-9]*:../../wip/py-pygit
 DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../wip/py-rpyc
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_ACCEPTED=	37 36
 
 CMAKE_ARG_PATH=	${WRKSRC}
 CONFIGURE_DIRS=	${WRKSRC}/build

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bintrees-2.0.7
+DISTNAME=	bintrees-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bintrees/}
