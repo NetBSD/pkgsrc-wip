@@ -10,7 +10,7 @@ GITHUB_TAG=	0.3.4
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/trailofbits/manticore/
 COMMENT=	Symbolic execution tool for analysis of binaries and smart contracts
-LICENSE=	apache-2.0
+LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-rlp-[0-9]*:../../wip/py-rlp
