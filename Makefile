@@ -4143,6 +4143,7 @@ SUBDIR+=	py-wafo
 SUBDIR+=	py-wahcade
 SUBDIR+=	py-wally
 SUBDIR+=	py-wasanbon
+SUBDIR+=	py-wasm
 SUBDIR+=	py-webapp2
 SUBDIR+=	py-webapp3
 SUBDIR+=	py-weberror
