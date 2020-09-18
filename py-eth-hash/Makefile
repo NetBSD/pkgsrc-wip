@@ -20,10 +20,10 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 BUILD_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 BUILD_DEPENDS+=	# TODO: pytest==3.3.2>=0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
-BUILD_DEPENDS+=	# TODO: flake8==3.4.1>=0
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 BUILD_DEPENDS+=	${PYPKGPREFIX}-isort-[0-9]*:../../devel/py-isort
-BUILD_DEPENDS+=	# TODO: Sphinx>=1.6.5,<2
-BUILD_DEPENDS+=	# TODO: sphinx_rtd_theme>=0.1.9
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 BUILD_DEPENDS+=	# TODO: setuptools-markdown>=0
 
 USE_LANGUAGES=	# none

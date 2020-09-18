@@ -21,12 +21,12 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 BUILD_DEPENDS+=	# TODO: pytest>=4.4,<4.5
 BUILD_DEPENDS+=	# TODO: pytest-xdist>=0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
-BUILD_DEPENDS+=	# TODO: flake8==3.8.3>=0
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 BUILD_DEPENDS+=	${PYPKGPREFIX}-isort-[0-9]*:../../devel/py-isort
-BUILD_DEPENDS+=	# TODO: mypy==0.782>=0
-BUILD_DEPENDS+=	# TODO: pydocstyle>=3.0.0,<4
-BUILD_DEPENDS+=	# TODO: Sphinx>=1.6.5,<2
-BUILD_DEPENDS+=	# TODO: sphinx_rtd_theme>=0.1.9
+BUILD_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
+BUILD_DEPENDS+=	${PYPKGPREFIX}-docstyle-[0-9]*:../../devel/py-docstyle
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 
 USE_LANGUAGES=	# none
 
