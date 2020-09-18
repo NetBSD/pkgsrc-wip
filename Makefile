@@ -3159,6 +3159,7 @@ SUBDIR+=	py-booktype
 SUBDIR+=	py-brian
 SUBDIR+=	py-bruce
 SUBDIR+=	py-bsddb
+SUBDIR+=	py-bumpversion
 SUBDIR+=	py-bxa
 SUBDIR+=	py-bytecodeassembler
 SUBDIR+=	py-cachelib
