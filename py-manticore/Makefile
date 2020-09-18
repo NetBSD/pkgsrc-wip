@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-z3-[0-9]*:../../math/py-z3
 DEPENDS+=	${PYPKGPREFIX}-prettytable-[0-9]*:../../wip/py-prettytable
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-PYTHON_VERSIONS_ACCEPTED=	36 37
+PYTHON_VERSIONS_ACCEPTED=	37 36
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
