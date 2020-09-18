@@ -22,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-crytic-compile-[0-9]*:../../wip/py-crytic-compile
 DEPENDS+=	${PYPKGPREFIX}-pyevmasm-[0-9]*:../../wip/py-pyevmasm
 DEPENDS+=	${PYPKGPREFIX}-z3-[0-9]*:../../math/py-z3
 DEPENDS+=	${PYPKGPREFIX}-prettytable-[0-9]*:../../wip/py-prettytable
+DEPENDS+=	${PYPKGPREFIX}-wasm-[0-9]*:../../wip/py-wasm
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONS_ACCEPTED=	37 36
