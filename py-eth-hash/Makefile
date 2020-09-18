@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/ethereum/eth-hash
 COMMENT=	eth-hash: The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3
 LICENSE=	mit
 
-BUILD_DEPENDS+=	# TODO: bumpversion>=0.5.3,<1
+BUILD_DEPENDS+=	${PYPKGPREFIX}-bumpversion-[0-9]*:../../wip/py-bumpversion
 BUILD_DEPENDS+=	# TODO: pytest-xdist>=0
 BUILD_DEPENDS+=	# TODO: pytest-watch>=4.1.0,<5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel

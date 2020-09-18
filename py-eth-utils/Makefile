@@ -25,7 +25,7 @@ BUILD_DEPENDS+=	# TODO: pytest>=3.4.1,<4.0.0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 BUILD_DEPENDS+=	# TODO: pytest>=3.4.1,<4.0.0
 BUILD_DEPENDS+=	# TODO: pytest-pythonpath>=0.3,<1.0
-BUILD_DEPENDS+=	# TODO: bumpversion>=0.5.3,<1.0.0
+BUILD_DEPENDS+=	${PYPKGPREFIX}-bumpversion-[0-9]*:../../wip/py-bumpversion
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-eth-hash-[0-9]*:../../wip/py-eth-hash
