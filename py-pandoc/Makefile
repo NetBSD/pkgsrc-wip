@@ -1,17 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	pypandoc-1.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+DISTNAME=	pypandoc-1.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	https://files.pythonhosted.org/packages/71/81/00184643e5a10a456b4118fc12c96780823adb8ed974eb2289f29703b29b/
+MASTER_SITES=	https://files.pythonhosted.org/packages/d6/b7/5050dc1769c8a93d3ec7c4bd55be161991c94b8b235f88bf7c764449e708/
 
-MAINTAINER=	kamekderouiche@yahoo.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/bebraw/pypandoc
 COMMENT=	Thin wrapper for pandoc
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-pip>=8.1.0:../../devel/py-pip
+DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-.include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

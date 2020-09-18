@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pypandoc-1.4.tar.gz) = d09976429a01fe3fb574bbc58c77aff72de3acb2
-RMD160 (pypandoc-1.4.tar.gz) = b146334973ef6cba4d478274b0db2ca0a0a34581
-SHA512 (pypandoc-1.4.tar.gz) = da023211b78c7bcabfd156a6113829782fde36b83f47039df3dbd2af1a88d9fb9d55d036dd9e3445b7e6db0611d0eae0224a34e859e5029e20452b409aaa9b5e
-Size (pypandoc-1.4.tar.gz) = 27116 bytes
+SHA1 (pypandoc-1.5.tar.gz) = 94345c77acbb23a9d44115c7b9f0e32290fc99c7
+RMD160 (pypandoc-1.5.tar.gz) = c34fc4358e3030377490c7a59042f5dd6b8b9a93
+SHA512 (pypandoc-1.5.tar.gz) = 511f5f5f7bff8de686c3f74d3756d27a3ae245803e2e9b45abc957acf112b306eff057ce87e8f3b335de00b97d4753de31e9681830d9aa776247ca707683ed13
+Size (pypandoc-1.5.tar.gz) = 26494 bytes

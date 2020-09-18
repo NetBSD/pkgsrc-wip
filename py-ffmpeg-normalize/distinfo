@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ffmpeg-normalize-1.3.10.tar.gz) = 10c9062f3486a6d5e92cb88b0d7726649643e71e
-RMD160 (ffmpeg-normalize-1.3.10.tar.gz) = d0460dbc15faf33eea356fb588df73a4da848809
-SHA512 (ffmpeg-normalize-1.3.10.tar.gz) = 0d31e5c65959d00ce23c4fb83af530f684598c5e93ac55f7b385cecea03f87f5369f366ab5947d88dce990986662c80ba5142ca27a06a021413f498018df3659
-Size (ffmpeg-normalize-1.3.10.tar.gz) = 1946495 bytes
+SHA1 (ffmpeg-normalize-1.20.1.tar.gz) = 300fd55b80fdd37448cfb4d38a38f29048653493
+RMD160 (ffmpeg-normalize-1.20.1.tar.gz) = 8d467ca6b09a514fab0c719df1f3cd3e2087f89c
+SHA512 (ffmpeg-normalize-1.20.1.tar.gz) = 648a5dbf762aeb84d7bc1b46ddce292f4906c4c62aba057b5b346917ff555f158ca5f90256c203b369feec2ae457aef980c607b0a89f93ee891d2a7d8dde2f3f
+Size (ffmpeg-normalize-1.20.1.tar.gz) = 1961551 bytes

@@ -1,0 +1,3 @@
+Python package with bindings to the "Virtual Instrument Software Architecture"
+VISA library, in order to control measurement devices and test equipment
+via GPIB, RS232, or USB

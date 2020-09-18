@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:29:08 jihbed Exp $
-
-SHA1 (sexy-python-0.1.9.tar.gz) = 9fe24366512258cd6254f42e51dbb71f9f6bb6cb
-RMD160 (sexy-python-0.1.9.tar.gz) = 2f8c31b92c9fcceae95dc07567ee8a70ed943a12
-SHA512 (sexy-python-0.1.9.tar.gz) = e735f06efce302e10b89cfd3d6c641d523cd29517792ccaa4d022d7be6f6a350fff180f1c94d255ccbc82891cac7346520dfed2a88d828fbd7e891aa56396530
-Size (sexy-python-0.1.9.tar.gz) = 322261 bytes
