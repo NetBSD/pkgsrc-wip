@@ -8,11 +8,7 @@ ${PYSITELIB}/${EGG_FILE}/not-zip-safe
 ${PYSITELIB}/${EGG_FILE}/requires.txt
 ${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/rpyc/__init__.py
-${PYSITELIB}/rpyc/__init__.pyc
-${PYSITELIB}/rpyc/__init__.pyo
 ${PYSITELIB}/rpyc/core/__init__.py
-${PYSITELIB}/rpyc/core/__init__.pyc
-${PYSITELIB}/rpyc/core/__init__.pyo
 ${PYSITELIB}/rpyc/core/async.py
 ${PYSITELIB}/rpyc/core/async.pyc
 ${PYSITELIB}/rpyc/core/async.pyo
@@ -29,8 +25,6 @@ ${PYSITELIB}/rpyc/core/netref.py
 ${PYSITELIB}/rpyc/core/netref.pyc
 ${PYSITELIB}/rpyc/core/netref.pyo
 ${PYSITELIB}/rpyc/core/protocol.py
-${PYSITELIB}/rpyc/core/protocol.pyc
-${PYSITELIB}/rpyc/core/protocol.pyo
 ${PYSITELIB}/rpyc/core/reactor.py
 ${PYSITELIB}/rpyc/core/reactor.pyc
 ${PYSITELIB}/rpyc/core/reactor.pyo
@@ -74,8 +68,6 @@ ${PYSITELIB}/rpyc/utils/factory.py
 ${PYSITELIB}/rpyc/utils/factory.pyc
 ${PYSITELIB}/rpyc/utils/factory.pyo
 ${PYSITELIB}/rpyc/utils/helpers.py
-${PYSITELIB}/rpyc/utils/helpers.pyc
-${PYSITELIB}/rpyc/utils/helpers.pyo
 ${PYSITELIB}/rpyc/utils/registry.py
 ${PYSITELIB}/rpyc/utils/registry.pyc
 ${PYSITELIB}/rpyc/utils/registry.pyo
