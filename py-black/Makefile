@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	black-19.10b0
+DISTNAME=	black-20.8b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://black.readthedocs.io/
 COMMENT=	Uncompromising Python code formatter
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/black-19.10b0
 USE_LANGUAGES=	# none
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
@@ -28,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp-cors-[0-9]*:../../www/py-aiohttp-cors
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-aiohttp
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && for b in black blackd; \
+	cd ${DESTDIR}${PREFIX}/bin && for b in black black-primer blackd; \
           do ${MV} $$b $$b-${PYVERSSUFFIX}; \
         done
 
