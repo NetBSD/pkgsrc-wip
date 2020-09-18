@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (idalink-0.11.tar.gz) = 2d09d33988086eac24d778673951dcce1712e9ba
-RMD160 (idalink-0.11.tar.gz) = a8c76b02d807faea7b9949e0c08ff4631e2c3657
-SHA512 (idalink-0.11.tar.gz) = bcd982a4d35fe49b0e73d24b2f3d394cc04140c448b9cd7d979734a331f8bf75d7cea62fea094a4ae354296b2a33747340ebf8d545fc86b562d163981750bd9c
-Size (idalink-0.11.tar.gz) = 6219 bytes
-SHA1 (patch-idalink_support_ida__env.sh) = 8b719e17077c2053e5b8997097aae740c673e79e
+SHA1 (idalink-0.12.tar.gz) = df77f14dc565679a2de1a4b8393ee91d27b4c163
+RMD160 (idalink-0.12.tar.gz) = 222e1b9f9aeac7119d25c987c7847f0f793600fd
+SHA512 (idalink-0.12.tar.gz) = 2b65e7563100c1adbd21642a35ea53f8630075aa025f2fc7999c636922d12ee1def0761eb269f97dc1ac747deb8bc8b186ba2c067d4c613dcbc83287dafa478b
+Size (idalink-0.12.tar.gz) = 8130 bytes

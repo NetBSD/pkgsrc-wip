@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	idalink-0.11
-PKGNAME=	${PYPKGPREFIX}-idalink-0.11
+DISTNAME=	idalink-0.12
+PKGNAME=	${PYPKGPREFIX}-idalink-0.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/idalink/}
 
