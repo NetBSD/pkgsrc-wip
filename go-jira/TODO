@@ -1,0 +1,6 @@
+- Instead of removing `keyring' support, properly patch it to support more
+  Unix-like platforms (while for `keyring' it's probably trivial that would also
+  need UnixCreds support that ATM seems implemented only for Linux... For NetBSD
+  that's probably doable but I have no idea about other Unix-like platforms.)
+  Given that... probably importable in the pkgsrc tree also without doing this
+  TODO item.
