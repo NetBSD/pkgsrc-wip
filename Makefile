@@ -3916,6 +3916,7 @@ SUBDIR+=	py-restkit
 SUBDIR+=	py-retrying
 SUBDIR+=	py-rf
 SUBDIR+=	py-rlcompleter2
+SUBDIR+=	py-rlp
 SUBDIR+=	py-rogues
 SUBDIR+=	py-ropemode
 SUBDIR+=	py-rpaths
