@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/05/05 23:50:47 jihbed Exp $
 
-SHA1 (cytoolz-0.6.1.tar.gz) = 5b99c4166b73f2aecf97fa08a9499dc74bbef674
-RMD160 (cytoolz-0.6.1.tar.gz) = 6eafa7c483a4155a315d4f84f1f65db3736901c6
-SHA512 (cytoolz-0.6.1.tar.gz) = 22a290721097a1c0db63b4afbfc6e825ceb76952d3a8fd7f1d408f09a2d747ac0a219b52bfc4e5754f6d0f41aada2ca797a0e431f1798488a1a18acba5f5277b
-Size (cytoolz-0.6.1.tar.gz) = 188308 bytes
+SHA1 (cytoolz-0.10.1.tar.gz) = ff59cc6d99e8840867a7fb46351f1b5c5c60dc67
+RMD160 (cytoolz-0.10.1.tar.gz) = 1093edea2b7306f75f46d7ce04268320ed9fa09c
+SHA512 (cytoolz-0.10.1.tar.gz) = 55c4fca8d4ace766a8241a25a6c4924971b7e7068ee79ad65fa8aac136aa1f88e57337c0ec278ee9e8544c6e96dd31138b39d7cc28cd91ff0e53a71f8dec55d1
+Size (cytoolz-0.10.1.tar.gz) = 475647 bytes
