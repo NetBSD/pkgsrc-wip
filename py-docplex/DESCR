@@ -1,0 +1,5 @@
+With this library, you can quickly and easily add the power of
+optimization to your application. You can model your problems
+by using the Python API and solve them on the cloud with the
+IBM Decision Optimization on Cloud service or on your computer
+with IBM ILOG CPLEX Optimization Studio

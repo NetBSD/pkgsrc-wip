@@ -1,0 +1,3 @@
+Qiskit is made up of elements that each work together to enable quantum
+computing. This element is Ignis, which provides tools for quantum
+hardware verification, noise characterization, and error correction

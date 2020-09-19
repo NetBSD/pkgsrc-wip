@@ -13,11 +13,7 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	c c++
 
 DEPENDS+=       ${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-network>=0.5.0:../../math/py-network
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.2:../../math/py-scipy
-DEPENDS+=       ${PYPKGPREFIX}-sympy>=1.5.1:../../math/py-sympy
-DEPENDS+=       ${PYPKGPREFIX}-sympy>=1.5.1:../../math/py-sympy
-DEPENDS+=       ${PYPKGPREFIX}-sympy>=1.5.1:../../math/py-sympy
+DEPENDS+=	${PYPKGPREFIX}-networkx>=0.5.0:../../math/py-networkx
 DEPENDS+=       ${PYPKGPREFIX}-sympy>=1.5.1:../../math/py-sympy
 DEPENDS+=       ${PYPKGPREFIX}-dill>=0.3.2:../../wip/py-dill
 
