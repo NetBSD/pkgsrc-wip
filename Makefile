@@ -4982,6 +4982,7 @@ SUBDIR+=	wine64
 SUBDIR+=	wine64-dev
 SUBDIR+=	wings
 SUBDIR+=	winwrangler
+SUBDIR+=	wireguard-go
 SUBDIR+=	wireless-tools
 SUBDIR+=	wireshark2
 SUBDIR+=	wise2
