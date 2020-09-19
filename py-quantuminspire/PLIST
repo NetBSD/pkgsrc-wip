@@ -37,6 +37,9 @@ ${PYSITELIB}/quantuminspire/qiskit/circuit_parser.pyo
 ${PYSITELIB}/quantuminspire/qiskit/qi_job.py
 ${PYSITELIB}/quantuminspire/qiskit/qi_job.pyc
 ${PYSITELIB}/quantuminspire/qiskit/qi_job.pyo
+${PYSITELIB}/quantuminspire/qiskit/qi_result.py
+${PYSITELIB}/quantuminspire/qiskit/qi_result.pyc
+${PYSITELIB}/quantuminspire/qiskit/qi_result.pyo
 ${PYSITELIB}/quantuminspire/qiskit/quantum_inspire_provider.py
 ${PYSITELIB}/quantuminspire/qiskit/quantum_inspire_provider.pyc
 ${PYSITELIB}/quantuminspire/qiskit/quantum_inspire_provider.pyo

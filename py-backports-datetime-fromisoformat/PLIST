@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/backports/__init__.py
+${PYSITELIB}/backports/__init__.pyc
+${PYSITELIB}/backports/__init__.pyo
+${PYSITELIB}/backports/_datetime_fromisoformat.so
+${PYSITELIB}/backports/datetime_fromisoformat/__init__.py
+${PYSITELIB}/backports/datetime_fromisoformat/__init__.pyc
+${PYSITELIB}/backports/datetime_fromisoformat/__init__.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

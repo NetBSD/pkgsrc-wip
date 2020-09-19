@@ -1,0 +1,7 @@
+Import IPython Notebooks as modules (with Jupyter v4)
+
+Functions in other notebooks are hard to maintain and hamper reproducibility
+of other notebooks.** As you use the functions in different projects, you'll
+want to fix bugs, make performance improvements or re-write it in a more elegant
+fashion. As soon as you start to fix something in the other notebook, you might
+break it and your analysis is not reproducible any more

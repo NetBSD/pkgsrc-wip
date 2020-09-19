@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/17 12:12:34 jihbed Exp $
-
-SHA1 (guppy-0.1.9.tar.gz) = 3a51893f90c9d5394716eb1a22ea8263646399db
-RMD160 (guppy-0.1.9.tar.gz) = d2868536ea505736711a25bdebd65bf28bd51f97
-SHA512 (guppy-0.1.9.tar.gz) = c22bb97404b1b704b444400db97ade5f79aebfc0d4fae68d98ff982b70b7a95953e10ccac82cac6cc6eeb3c83af1b8403114ffffcf15accd68bf64ee698a82ed
-Size (guppy-0.1.9.tar.gz) = 494828 bytes

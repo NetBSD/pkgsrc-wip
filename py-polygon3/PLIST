@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/Polygon/IO.py
+${PYSITELIB}/Polygon/IO.pyc
+${PYSITELIB}/Polygon/IO.pyo
+${PYSITELIB}/Polygon/Shapes.py
+${PYSITELIB}/Polygon/Shapes.pyc
+${PYSITELIB}/Polygon/Shapes.pyo
+${PYSITELIB}/Polygon/Utils.py
+${PYSITELIB}/Polygon/Utils.pyc
+${PYSITELIB}/Polygon/Utils.pyo
+${PYSITELIB}/Polygon/__init__.py
+${PYSITELIB}/Polygon/__init__.pyc
+${PYSITELIB}/Polygon/__init__.pyo
+${PYSITELIB}/Polygon/cPolygon.so
+${PYSITELIB}/${EGG_FILE}

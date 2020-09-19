@@ -1,2 +1,9 @@
-The Quantum Inspire platform allows to execute quantum algorithms using
-the cQASM language
+The Quantum Inspire platform allows to execute quantum algorithms
+using the cQASM language. The software development kit (SDK) for
+the Quantum Inspire platform consists of:
+
+* An API for the [Quantum Inspire](https://www.quantum-inspire.com/)
+platform (the QuantumInspireAPI class)
+* Backends for:
+  * the [ProjectQ SDK](https://github.com/ProjectQ-Framework/ProjectQ)
+  * the [Qiskit SDK](https://qiskit.org/)

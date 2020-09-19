@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/zmqrpc/ZmqProxy.py
+${PYSITELIB}/zmqrpc/ZmqProxy.pyc
+${PYSITELIB}/zmqrpc/ZmqProxy.pyo
+${PYSITELIB}/zmqrpc/ZmqReceiver.py
+${PYSITELIB}/zmqrpc/ZmqReceiver.pyc
+${PYSITELIB}/zmqrpc/ZmqReceiver.pyo
+${PYSITELIB}/zmqrpc/ZmqRpcClient.py
+${PYSITELIB}/zmqrpc/ZmqRpcClient.pyc
+${PYSITELIB}/zmqrpc/ZmqRpcClient.pyo
+${PYSITELIB}/zmqrpc/ZmqRpcServer.py
+${PYSITELIB}/zmqrpc/ZmqRpcServer.pyc
+${PYSITELIB}/zmqrpc/ZmqRpcServer.pyo
+${PYSITELIB}/zmqrpc/ZmqSender.py
+${PYSITELIB}/zmqrpc/ZmqSender.pyc
+${PYSITELIB}/zmqrpc/ZmqSender.pyo
+${PYSITELIB}/zmqrpc/__init__.py
+${PYSITELIB}/zmqrpc/__init__.pyc
+${PYSITELIB}/zmqrpc/__init__.pyo
