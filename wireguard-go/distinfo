@@ -64,4 +64,5 @@ SHA1 (wireguard-go-0.0.20200320.tar.xz) = b76f871984b2689d7909eddf73d33a4c7b29c3
 RMD160 (wireguard-go-0.0.20200320.tar.xz) = acb5defeb676ae02cadada7be13d274b1fc4bc83
 SHA512 (wireguard-go-0.0.20200320.tar.xz) = e403b8747ec42f0e34eaedfa54f3fa5b09fb26cf0c7cf6c8f6c7f0edf2b7896f272860ee0561f8ecc051375e61a7b2b8ceb64e1f9a080f16f3c5ceb9e6c0f93b
 Size (wireguard-go-0.0.20200320.tar.xz) = 80556 bytes
+SHA1 (patch-ipc_uapi__bsd.go) = 353120f52a2a9331210221721fd55a9553b9973f
 SHA1 (patch-rwcancel-select_default.go) = b873e0ca032103a32ca31b968f270bc532a2de0d
