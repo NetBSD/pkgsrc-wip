@@ -6,7 +6,7 @@ PKGNAME=	argtable2-2.13
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=argtable/}
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://argtable.sourceforge.net/
 COMMENT=	ANSI C Library for parsing GNU style command line arguments
 LICENSE=	gnu-gpl-v2

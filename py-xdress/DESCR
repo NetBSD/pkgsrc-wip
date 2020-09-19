@@ -1,4 +1,0 @@
-XDress is an automatic wrapper generator for C/C++ written in pure Python
-Currently, xdress may generate Python bindings (via Cython) for C++ classes & fu
-nctions and in-memory wrappers for C++ standard library containers
-(sets, vectors, maps). In the future, other tools and bindings will be supported

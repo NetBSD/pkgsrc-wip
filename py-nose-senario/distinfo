@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/17 23:19:45 jihbed Exp $
-
-SHA1 (nose_scenario-0.1.3.tar.gz) = fe0b429ae2f75109b6d2c61bf5711ac26118b124
-RMD160 (nose_scenario-0.1.3.tar.gz) = db773627875ea9c3bed0fb8bf8670ced1c7e3489
-SHA512 (nose_scenario-0.1.3.tar.gz) = 1eb6b97d3c4311caf92f07eb7edad1c96e15fdbfbf0cc2a7ae2ef08fd46b35a25b057b217da042a282177897429444e54c72f2acb0cd032d1f0c9536e3dcb037
-Size (nose_scenario-0.1.3.tar.gz) = 11105 bytes

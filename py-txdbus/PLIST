@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/31 21:59:04 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -43,33 +43,3 @@ ${PYSITELIB}/txdbus/protocol.pyo
 ${PYSITELIB}/txdbus/router.py
 ${PYSITELIB}/txdbus/router.pyc
 ${PYSITELIB}/txdbus/router.pyo
-${PYSITELIB}/txdbus/test/__init__.py
-${PYSITELIB}/txdbus/test/__init__.pyc
-${PYSITELIB}/txdbus/test/__init__.pyo
-${PYSITELIB}/txdbus/test/client_tests.py
-${PYSITELIB}/txdbus/test/client_tests.pyc
-${PYSITELIB}/txdbus/test/client_tests.pyo
-${PYSITELIB}/txdbus/test/test_authentication.py
-${PYSITELIB}/txdbus/test/test_authentication.pyc
-${PYSITELIB}/txdbus/test/test_authentication.pyo
-${PYSITELIB}/txdbus/test/test_client_against_internal_bus.py
-${PYSITELIB}/txdbus/test/test_client_against_internal_bus.pyc
-${PYSITELIB}/txdbus/test/test_client_against_internal_bus.pyo
-${PYSITELIB}/txdbus/test/test_client_against_native_bus.py
-${PYSITELIB}/txdbus/test/test_client_against_native_bus.pyc
-${PYSITELIB}/txdbus/test/test_client_against_native_bus.pyo
-${PYSITELIB}/txdbus/test/test_endpoints.py
-${PYSITELIB}/txdbus/test/test_endpoints.pyc
-${PYSITELIB}/txdbus/test/test_endpoints.pyo
-${PYSITELIB}/txdbus/test/test_marshal.py
-${PYSITELIB}/txdbus/test/test_marshal.pyc
-${PYSITELIB}/txdbus/test/test_marshal.pyo
-${PYSITELIB}/txdbus/test/test_message.py
-${PYSITELIB}/txdbus/test/test_message.pyc
-${PYSITELIB}/txdbus/test/test_message.pyo
-${PYSITELIB}/txdbus/test/test_objects.py
-${PYSITELIB}/txdbus/test/test_objects.pyc
-${PYSITELIB}/txdbus/test/test_objects.pyo
-${PYSITELIB}/txdbus/test/test_validators.py
-${PYSITELIB}/txdbus/test/test_validators.pyc
-${PYSITELIB}/txdbus/test/test_validators.pyo

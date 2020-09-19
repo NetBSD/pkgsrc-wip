@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/02 23:50:32 jihbed Exp $
-
-SHA1 (mocker-0.10.1.tar.bz2) = 6665c21fd6593664de0c4b7d3ad7dbfc5130e7f4
-RMD160 (mocker-0.10.1.tar.bz2) = aadd9051e7ee7ae8dfe95048b58fdd86a61cc48d
-Size (mocker-0.10.1.tar.bz2) = 35190 bytes

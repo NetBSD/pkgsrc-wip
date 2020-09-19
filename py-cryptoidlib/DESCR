@@ -1,7 +1,0 @@
-cryptoIDlib is a python library and command-line tools for working with cryptoID
-certificate chains. Among other things, it provides client and server
-implementations of the cryptoID key management protocols.
-
-cryptoIDlib's sister library is TLS Lite. TLS Lite is necessary if you want to
-use the key management protocols. Also, if you have TLS Lite and cryptoIDlib,
-you can use cryptoIDs to authenticate in TLS.

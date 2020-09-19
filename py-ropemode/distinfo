@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2012/10/04 17:39:33 jihbed Exp $
 
-SHA1 (ropemode-0.2.tar.gz) = bbcb15e3a65ea8051b8efe42f4e66a57a2c81e87
-RMD160 (ropemode-0.2.tar.gz) = f3d9c29519ee83c08bd264a293d51bd4e61eb4f0
-SHA512 (ropemode-0.2.tar.gz) = 59b9a8f8caf03f480994c546b48c0be8bd85ebf44b406e216b6651e254b3fd9c6a532a5bab1be1301b12dcf756d3ad325f38e810fe5ea5bbcc700979cfbd5055
-Size (ropemode-0.2.tar.gz) = 12268 bytes
+SHA1 (ropemode-0.5.tar.gz) = 5fb92cf05bb229854c8ad05dcdad24ab8c3b044b
+RMD160 (ropemode-0.5.tar.gz) = 72203fe4462fcdf88103bcb05b588f2596db54d6
+SHA512 (ropemode-0.5.tar.gz) = 4911103fa51af51c124a578fdc9a4814029bbbc08744604a5a7eede47d1fbab7755ab693997f1cdd824c82d818abee64f72f26167eebb9f7debf354cde5519cd
+Size (ropemode-0.5.tar.gz) = 12769 bytes

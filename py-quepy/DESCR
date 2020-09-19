@@ -1,4 +1,0 @@
-Quepy is a python framework to transform natural language questions to queries
-in a database query language. It can be easily customized to different kinds of
-questions in natural language and database queries. So, with little coding you
-can build your own system for natural language access to your database

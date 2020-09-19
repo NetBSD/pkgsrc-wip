@@ -1,5 +1,0 @@
-PyPedal provides an API that may be used to maniuplate pedigrees in a number
-of ways. Key metrics include coefficients of inbreeding and relationship;
-effective founder and ancestor numbers; and expected inbreeding from a given
-mating. If you have Graphviz and  pydot installed, PyPedal can be used to
-produce a graph from your pedigree

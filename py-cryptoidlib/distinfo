@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/18 14:50:56 jihbed Exp $
-
-SHA1 (cryptoIDlib-0.3.3.tar.gz) = 910e02ca8b9e44deaa84076557eb11e714608ab2
-RMD160 (cryptoIDlib-0.3.3.tar.gz) = cce1f2cd098e437ba7ef01efcb2ed34fa93cb836
-Size (cryptoIDlib-0.3.3.tar.gz) = 393393 bytes

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/09/07 18:56:46 jihbed Exp $
-
-SHA1 (xdress-0.2.tar.gz) = a14023fc0f392ed150f7f495234d12fa47aa20f0
-RMD160 (xdress-0.2.tar.gz) = 4ac4c36f9de864510ab185182085284328c5ea2d
-SHA512 (xdress-0.2.tar.gz) = 69e4c88b74dbc480354d8780df538be8bdd499f93c9695969b3d56c8d66ea011b6b81f5a2e459dd3f1035d6330250a122de00d571d1e6fed077fd11f48c15b8a
-Size (xdress-0.2.tar.gz) = 72437 bytes
-SHA1 (patch-configure.py) = c809204fd80da0d938a9cb3d5d767365b5c32636

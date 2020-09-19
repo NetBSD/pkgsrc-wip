@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/02/05 20:55:04 jihbed Exp $
-
-SHA1 (hurry.filesize-0.9.tar.gz) = 56cd5993be741b2c0ce43c7bb0d851223264f7c7
-RMD160 (hurry.filesize-0.9.tar.gz) = ec6d4accdb682361df70ced334c8032a34146e60
-SHA512 (hurry.filesize-0.9.tar.gz) = 24b7ebf5a6e833cec01d1904e5202ab5bde238fbeabb92d893866118e152c0f861f853e11bb71c58d84060bffaf0b7bc88221e37aaacc0b07751febf8a2b1606
-Size (hurry.filesize-0.9.tar.gz) = 2810 bytes
