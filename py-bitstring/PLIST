@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/07/27 23:37:12 jihbed Exp $
-${PYSITELIB}/bitstring.py
-${PYSITELIB}/bitstring.pyc
-${PYSITELIB}/bitstring.pyo
-share/doc/py-bitstring/bitstring_manual.pdf

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2012/09/30 09:55:06 noud4 Exp $
-
-SHA1 (bitstring-3.1.5.zip) = 96ffe09e9788a22a3d75ad4a629d24bfc70bdac3
-RMD160 (bitstring-3.1.5.zip) = e345b651eb2b23e13eba75793b4ab0bf91ce357e
-SHA512 (bitstring-3.1.5.zip) = a147c5da1b230299435b7903d991f9a5daf1144cf441bdedbceffd94ea1bcf3c7e27fca94aa624ab0b8b3abba5278e56720b85d7f33b9ebf3099e9ee4ffdb3f3
-Size (bitstring-3.1.5.zip) = 624428 bytes

@@ -1,5 +1,0 @@
-A pure Python module for analysing, constructing and modifying binary data
-The underlying binary data can be interpreted as, or constructed from
-hexadecimal, octal or binary strings, signed or unsigned integers,and signed
-or unsigned exponential-Golomb coded integers. It can also be used as and
-created from plain Python strings
