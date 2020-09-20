@@ -1,0 +1,3 @@
+A framework for inspecting data, based on flowcharts from 'pyqtgraph'.
+'plottr's main aim is to allow the user to define custom data processing
+flows and plotting. A particular use case is data filtering and plotting
