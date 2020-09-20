@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/09/06 21:24:10 jihbed Exp $
+$NetBSD$
 
-SHA1 (mystic-0.2a1.tgz) = 1e557959518091d2360e994157df27d4159f7cf8
-RMD160 (mystic-0.2a1.tgz) = 8a48a613bbd727f084c01ecf0f13309c45638aa9
-Size (mystic-0.2a1.tgz) = 194630 bytes
+SHA1 (mystic-0.3.6.zip) = 3d29258d6666d60d66d5c63f25dde2b75dfe93c6
+RMD160 (mystic-0.3.6.zip) = cdc1171f91ae519a1fa38dc69e4fe48da3caabea
+SHA512 (mystic-0.3.6.zip) = a0cc71f697ed3c820c5eb05c5c1a0d486381ca33b490f9bf7702b2c809fce077342232674534f3687ea15aac44be81f4c6e0cd05ec516514f15ef75a9a7dbe05
+Size (mystic-0.3.6.zip) = 1007665 bytes
