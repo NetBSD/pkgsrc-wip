@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	https://files.pythonhosted.org/packages/f5/07/cc80b30b933c7430597fc884305c499e973f2e4c0a3a6208880ced5cefba/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://files.pythonhosted.org/packages/f5/07/cc80b30b933c7430597fc884305c499e973f2e4c0a3a6208880ced5cefba/
+HOMEPAGE=	https://github.com/bjodah/sym
 COMMENT=	Unified wrapper for symbolic manipulation libraries in Python
 LICENSE=	modified-bsd
 
