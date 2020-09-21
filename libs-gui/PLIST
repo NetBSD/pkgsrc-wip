@@ -584,6 +584,6 @@ lib/GNUstep/Sounds/Sosumi.wav
 lib/GNUstep/Sounds/Submarine.wav
 lib/GNUstep/Sounds/Tink.wav
 lib/libgnustep-gui.so
-lib/libgnustep-gui.so.0.28.0
+lib/libgnustep-gui.so.${PKGVERSION}
 share/GNUstep/Makefiles/Additional/gui.make
 @pkgdir lib/GNUstep/Themes
