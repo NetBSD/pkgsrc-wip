@@ -92,8 +92,10 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-heretic.cfg.5
 .endif
 
+BUILDLINK_API_DEPENDS.SDL2_mixer+=	SDL2_mixer>=2.0.2
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL2+=		SDL2>=2.0.7
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
