@@ -1,0 +1,8 @@
+Cap'n Proto - Insanely Fast Data Serialization Format
+Copyright 2013-2015 Sandstorm Development Group, Inc.
+https://capnproto.org
+
+Cap'n Proto is an insanely fast data interchange format and capability-based
+RPC system.  Think JSON, except binary.  Or think of Google's Protocol Buffers
+(http://protobuf.googlecode.com), except faster.  In fact, in benchmarks,
+Cap'n Proto is INFINITY TIMES faster than Protocol Buffers.

@@ -355,6 +355,7 @@ SUBDIR+=	canto-curses
 SUBDIR+=	canto-daemon
 SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
+SUBDIR+=	capnproto
 SUBDIR+=	cardpeek
 SUBDIR+=	cargo-audit
 SUBDIR+=	caribou
