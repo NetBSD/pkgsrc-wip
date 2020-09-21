@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.ac.orig	2020-09-18 13:48:24.766400687 +0000
++++ configure.ac
+@@ -823,7 +823,7 @@ AC_CHECK_MEMBERS([struct statvfs.f_baset
+ dnl
+ dnl if statfs() takes 2 arguments (Posix) or 4 (Solaris)
+ dnl
+-if test "$ac_cv_func_statfs" = yes ; then
++if test "$ac_cv_func_statvfs" != yes -a "$ac_cv_func_statfs" = yes; then
+   AC_MSG_CHECKING([number of arguments to statfs()])
+   AC_TRY_COMPILE([#include <unistd.h>
+   #ifdef HAVE_SYS_PARAM_H
