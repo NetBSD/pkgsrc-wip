@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/03/07 11:18:41 jihbed Exp $
 
-SHA1 (PuLP-1.4.7.tar.gz) = 049505c7fcfff4f23d0b596b6692cab83c0d7eab
-RMD160 (PuLP-1.4.7.tar.gz) = 69d39eb9b3cc8da7890105b793b41e8c637c3c0d
-Size (PuLP-1.4.7.tar.gz) = 9544652 bytes
+SHA1 (PuLP-2.3.tar.gz) = a82c1f2def922886ecde20f7bc03252d0e7bba3b
+RMD160 (PuLP-2.3.tar.gz) = 301af59d8a1bf59d599b76450de25239fa30faf1
+SHA512 (PuLP-2.3.tar.gz) = d662355d0fc670171e71c189d258ab97d72cb3d7633aacdeb1befa50b9d7f27c62371776e987a90d1c1dc2b0049a73bd787f0174963666152af5fdb2638d0c44
+Size (PuLP-2.3.tar.gz) = 1392791 bytes

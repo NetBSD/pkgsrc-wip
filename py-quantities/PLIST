@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/09 20:41:05 thomasklausner Exp $
+@comment $NetBSD$
 ${PYSITELIB}/quantities/__init__.py
 ${PYSITELIB}/quantities/__init__.pyc
 ${PYSITELIB}/quantities/__init__.pyo
+${PYSITELIB}/quantities/_version.py
+${PYSITELIB}/quantities/_version.pyc
+${PYSITELIB}/quantities/_version.pyo
 ${PYSITELIB}/quantities/constants/__init__.py
 ${PYSITELIB}/quantities/constants/__init__.pyc
 ${PYSITELIB}/quantities/constants/__init__.pyo
@@ -104,6 +107,9 @@ ${PYSITELIB}/quantities/tests/test_conversion.pyo
 ${PYSITELIB}/quantities/tests/test_dimensionality.py
 ${PYSITELIB}/quantities/tests/test_dimensionality.pyc
 ${PYSITELIB}/quantities/tests/test_dimensionality.pyo
+${PYSITELIB}/quantities/tests/test_formatting.py
+${PYSITELIB}/quantities/tests/test_formatting.pyc
+${PYSITELIB}/quantities/tests/test_formatting.pyo
 ${PYSITELIB}/quantities/tests/test_methods.py
 ${PYSITELIB}/quantities/tests/test_methods.pyc
 ${PYSITELIB}/quantities/tests/test_methods.pyo
@@ -143,6 +149,9 @@ ${PYSITELIB}/quantities/units/area.pyo
 ${PYSITELIB}/quantities/units/compound.py
 ${PYSITELIB}/quantities/units/compound.pyc
 ${PYSITELIB}/quantities/units/compound.pyo
+${PYSITELIB}/quantities/units/concentration.py
+${PYSITELIB}/quantities/units/concentration.pyc
+${PYSITELIB}/quantities/units/concentration.pyo
 ${PYSITELIB}/quantities/units/dimensionless.py
 ${PYSITELIB}/quantities/units/dimensionless.pyc
 ${PYSITELIB}/quantities/units/dimensionless.pyo
@@ -200,6 +209,3 @@ ${PYSITELIB}/quantities/units/viscosity.pyo
 ${PYSITELIB}/quantities/units/volume.py
 ${PYSITELIB}/quantities/units/volume.pyc
 ${PYSITELIB}/quantities/units/volume.pyo
-${PYSITELIB}/quantities/version.py
-${PYSITELIB}/quantities/version.pyc
-${PYSITELIB}/quantities/version.pyo

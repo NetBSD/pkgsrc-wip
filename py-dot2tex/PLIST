@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/dot2tex
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/dot2tex/__init__.py
+${PYSITELIB}/dot2tex/__init__.pyc
+${PYSITELIB}/dot2tex/__init__.pyo
+${PYSITELIB}/dot2tex/dot2tex.py
+${PYSITELIB}/dot2tex/dot2tex.pyc
+${PYSITELIB}/dot2tex/dot2tex.pyo
+${PYSITELIB}/dot2tex/dotparsing.py
+${PYSITELIB}/dot2tex/dotparsing.pyc
+${PYSITELIB}/dot2tex/dotparsing.pyo

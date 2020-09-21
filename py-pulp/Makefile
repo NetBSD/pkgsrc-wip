@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2012/10/16 11:40:21 jihbed Exp $
-#
+# $NetBSD$
 
-DISTNAME=	PuLP-1.4.7
+DISTNAME=	PuLP-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/S/L/l/S/P/p/}
-CATEGORIES=	math  python
-MASTER_SITES=	http://pulp-or.googlecode.com/files/
+CATEGORIES=	python # TODO: add primary category
+MASTER_SITES=	https://files.pythonhosted.org/packages/84/9b/5bbd50471fa9749e6f1ee9c88ea276b5357b358820a92e340a1160bb851d/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://code.google.com/p/pulp-or/
-COMMENT=	LP modeler in Python
+HOMEPAGE=	https://github.com/coin-or/pulp
+COMMENT=	PuLP is an LP modeler written in python
 LICENSE=	modified-bsd
+
+DEPENDS+=	# TODO: amply>=0.1.2
 
 USE_LANGUAGES=	# none
 
