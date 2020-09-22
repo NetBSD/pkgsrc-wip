@@ -1,0 +1,2 @@
+ This package provides an implementation of Donald Knuth's Dancing
+Links algorithm for solving exact set cover problems

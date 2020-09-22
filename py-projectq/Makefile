@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	hiq-projectq-0.6.4.post2
+DISTNAME=	projectq-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/4c/9f/1e7014d3e23fd7ab15e423025af134b723b34b2a33bc2dc726cdc81fcd46/
+CATEGORIES=	lang python
+MASTER_SITES=	https://files.pythonhosted.org/packages/e1/5d/d470b8f15f933587efbc38d4202662bae69eccfa69e2b82c2c420afd44fa/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projectq.ch/

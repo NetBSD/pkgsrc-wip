@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (hiq-projectq-0.6.4.post2.tar.gz) = 1d2ee8a10bee34a065ec8ddd21759603af1c714a
-RMD160 (hiq-projectq-0.6.4.post2.tar.gz) = f70a4cf5648f39b98fa19ce63e2212ed195acb13
-SHA512 (hiq-projectq-0.6.4.post2.tar.gz) = 02b9cef43f4e3f2ab49d8f6d3c170d6dbcce310dd3a038a115eea9bf0d0e51a7d8796631e2a9698d36d525857c70bec35f1536f0fd48d9f00fc25bb6b0ba79c0
-Size (hiq-projectq-0.6.4.post2.tar.gz) = 171873 bytes
-SHA1 (patch-setup.py) = f523888d79ccd1fa48cb1843d8dd56ce4530e585
+SHA1 (projectq-0.5.1.tar.gz) = b86897bada75680e240dc377d6d84432fe029af7
+RMD160 (projectq-0.5.1.tar.gz) = 22b019d18a6e246709cabb46991145200f740fa8
+SHA512 (projectq-0.5.1.tar.gz) = 1b3b54603ee04b2b332149b58fc3d4c7e018fdd9911c0782ab2ab7221232f7a6eb7035f3b83d83c79272bb9ae9447df9180694413ce834dfc805bb32eb35a7e7
+Size (projectq-0.5.1.tar.gz) = 228677 bytes

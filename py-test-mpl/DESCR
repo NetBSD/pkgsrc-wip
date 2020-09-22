@@ -1,0 +1,10 @@
+This is a plugin to facilitate image comparison for Matplotlib
+figures in pytest. Matplotlib includes a number of test utilities
+and decorators, but these are geared towards the nose testing
+framework. Pytest-mpl makes it easy to compare figures produced by
+tests to reference images when using pytest.
+
+For each figure to test, the reference image is subtracted from the
+generated image, and the RMS of the residual is compared to a
+user-specified tolerance. If the residual is too large, the test will
+fail (this is implemented using helper functions from matplotlib.testing).
