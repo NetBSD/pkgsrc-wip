@@ -12,6 +12,8 @@ PKG_SUGGESTED_OPTIONS+=		inet6
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=            pgsql
+
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
@@ -41,6 +43,7 @@ CONFIGURE_ARGS+=	--with-net-snmp
 CONFIGURE_ARGS+=	--with-postgresql
 .include "../../mk/pgsql.buildlink3.mk"
 ZABBIX_DB_TYPE=		postgresql
+PLIST.pgsql=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite3)

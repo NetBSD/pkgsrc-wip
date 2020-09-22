@@ -3,9 +3,9 @@ bin/zabbix_proxy_js
 man/man8/zabbix_proxy.8
 sbin/zabbix_proxy
 share/examples/${PKGBASE}/zabbix_proxy.conf
-share/${PKGBASE}/double.sql
+${PLIST.pgsql}share/${PKGBASE}/double.sql
 share/${PKGBASE}/schema.sql
-share/${PKGBASE}/timescaledb.sql
+${PLIST.pgsql}share/${PKGBASE}/timescaledb.sql
 @pkgdir share/${PKGBASE}/externalscripts
 @pkgdir lib/modules
 @pkgdir etc/zabbix_proxy.conf.d
