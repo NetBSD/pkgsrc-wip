@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mkdocs-with-pdf-0.7.2.tar.gz) = e4a6d2d6bd9d70738cca0ca5163dfcab1ec9a6b4
-RMD160 (mkdocs-with-pdf-0.7.2.tar.gz) = 1ea9e9207e42e3bc02cd19438f56b71d8f63ace1
-SHA512 (mkdocs-with-pdf-0.7.2.tar.gz) = 9b6253976b0ef2a538d3e1306c10f0ab2d8d930c00fb2ba6f3b0aa6b06f5bd90fe62f20e492ecef4833c824822d0ced5f1f35f3ba001a1cb2069f259d85377f6
-Size (mkdocs-with-pdf-0.7.2.tar.gz) = 24414 bytes
+SHA1 (mkdocs-with-pdf-0.7.3.tar.gz) = 517cca154f0308fb2ffa955040751a8a77e81c67
+RMD160 (mkdocs-with-pdf-0.7.3.tar.gz) = 13b599922761157b697a7b29abe405599d05df9a
+SHA512 (mkdocs-with-pdf-0.7.3.tar.gz) = fac7e00c86449e06ab671e7f90572c6ebe59fc29a19845b0682167743e28705a450d7901939f9675d56c055597f74e013899eb98fc0290a88bc6b248782baf93
+Size (mkdocs-with-pdf-0.7.3.tar.gz) = 24595 bytes

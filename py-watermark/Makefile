@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://files.pythonhosted.org/packages/8b/c4/519b8a9a790206e55c246390757ae3eb45cb277faf88460d697eee0a0742/
 
-MAINTAINER=	jihbed.research@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/rasbt/watermark
 COMMENT=	IPython magic function to print date/time stamps
 LICENSE=	modified-bsd
