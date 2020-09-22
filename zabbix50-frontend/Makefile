@@ -5,7 +5,9 @@
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
 COMMENT=	Zabbix PHP 7.2+ frontend
 
-EGDIR=		share/examples/zabbix
+CONFLICTS+=	zabbix-frontend-[0-9]*
+
+EGDIR=		share/examples/${PKGBASE}
 
 USE_TOOLS+=		pax
 NO_BUILD=		yes
