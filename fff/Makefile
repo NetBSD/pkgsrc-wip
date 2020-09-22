@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fff-2.1
+DISTNAME=	fff-2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dylanaraps/}
 
@@ -19,5 +19,6 @@ REPLACE_BASH+=	fff
 
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=	xdotool-[0-9]*:../../x11/xdotool
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../mk/bsd.pkg.mk"
