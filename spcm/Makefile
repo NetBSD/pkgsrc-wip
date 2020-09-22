@@ -1,8 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	spcm-0.4.2
+DISTNAME=	spcm-0.4.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_PROJECT=	SPCM
+GITHUB_TAG=	c9aa589a4393b46adba4272c1db7e68d8bf431e8
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/spcm.php
@@ -21,7 +23,6 @@ SUBST_SED.sbin=		-e 's|%%PREFIX%%|${PREFIX}|g'
 DEPENDS+=	auto-admin>=0.6.7.11:../../wip/auto-admin
 
 USE_TOOLS+=	bash
-WRKSRC=		${WRKDIR}/SPCM-${PKGVERSION_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
