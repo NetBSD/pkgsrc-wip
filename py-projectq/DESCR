@@ -1,0 +1,13 @@
+ProjectQ is an open source effort for quantum computing.
+
+It features a compilation framework capable of targeting various types
+of hardware, a high-performance quantum computer simulator with emulation
+capabilities, and various compiler plug-ins. This allows users to
+
+- run quantum programs on the IBM Quantum Experience chip
+- simulate quantum programs on classical computers
+- emulate quantum programs at a higher level of abstraction
+ (e.g., mimicking the action of large oracles instead of compiling
+ them to low-level gates)
+- export quantum programs as circuits (using TikZ)
+- get resource estimates

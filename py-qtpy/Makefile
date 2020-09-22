@@ -1,20 +1,18 @@
 # $NetBSD$
 
-DISTNAME=	QtPy-1.1.1
+DISTNAME=	QtPy-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_PYPI:=q/QtPy/}
+CATEGORIES=	python # TODO: add primary category
+MASTER_SITES=	https://files.pythonhosted.org/packages/af/9f/f92125f9ba07830e5dd99141d07d5edffd555670d2c16a8454ac4a65d27b/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/spyder-ide/qtpy
-COMMENT=	Provides an abstraction layer on top of the various Qt bindings
+COMMENT=	Provides an abstraction layer on top of the various Qt bindings (PyQt5, PyQt4 and PySide) and additional custom QWidgets
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/QtPy-1.1.1
 
 USE_LANGUAGES=	# none
 
+#.include "../../x11/py-qt4/buildlink3.mk"
+.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../x11/py-qt4/buildlink3.mk"
-#.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,3 @@
+Python-compatible C compiler is required to build GLPK from source.
+By default a precompiled wheel is used during compilation, so you
+don't have to compile if you don't want to

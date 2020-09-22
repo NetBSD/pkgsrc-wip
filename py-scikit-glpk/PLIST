@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/glpk/__init__.py
+${PYSITELIB}/glpk/__init__.pyc
+${PYSITELIB}/glpk/__init__.pyo
+${PYSITELIB}/glpk/_glpk.py
+${PYSITELIB}/glpk/_glpk.pyc
+${PYSITELIB}/glpk/_glpk.pyo
+${PYSITELIB}/glpk/_glpk_defines.py
+${PYSITELIB}/glpk/_glpk_defines.pyc
+${PYSITELIB}/glpk/_glpk_defines.pyo
+${PYSITELIB}/glpk/_set_env.py
+${PYSITELIB}/glpk/_set_env.pyc
+${PYSITELIB}/glpk/_set_env.pyo
+${PYSITELIB}/glpk/_utils.py
+${PYSITELIB}/glpk/_utils.pyc
+${PYSITELIB}/glpk/_utils.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

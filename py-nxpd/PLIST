@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nxpd/__init__.py
+${PYSITELIB}/nxpd/__init__.pyc
+${PYSITELIB}/nxpd/__init__.pyo
+${PYSITELIB}/nxpd/ipythonsupport.py
+${PYSITELIB}/nxpd/ipythonsupport.pyc
+${PYSITELIB}/nxpd/ipythonsupport.pyo
+${PYSITELIB}/nxpd/nx_pydot.py
+${PYSITELIB}/nxpd/nx_pydot.pyc
+${PYSITELIB}/nxpd/nx_pydot.pyo
+${PYSITELIB}/nxpd/params.py
+${PYSITELIB}/nxpd/params.pyc
+${PYSITELIB}/nxpd/params.pyo
+${PYSITELIB}/nxpd/pydot/__init__.py
+${PYSITELIB}/nxpd/pydot/__init__.pyc
+${PYSITELIB}/nxpd/pydot/__init__.pyo
+${PYSITELIB}/nxpd/pydot/_dotparser.py
+${PYSITELIB}/nxpd/pydot/_dotparser.pyc
+${PYSITELIB}/nxpd/pydot/_dotparser.pyo
+${PYSITELIB}/nxpd/utils.py
+${PYSITELIB}/nxpd/utils.pyc
+${PYSITELIB}/nxpd/utils.pyo
