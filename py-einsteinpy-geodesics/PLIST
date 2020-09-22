@@ -1,0 +1,13 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/einsteinpy_geodesics/__init__.py
+${PYSITELIB}/einsteinpy_geodesics/__init__.pyc
+${PYSITELIB}/einsteinpy_geodesics/__init__.pyo
+${PYSITELIB}/einsteinpy_geodesics/geodesics_wrapper.py
+${PYSITELIB}/einsteinpy_geodesics/geodesics_wrapper.pyc
+${PYSITELIB}/einsteinpy_geodesics/geodesics_wrapper.pyo
+${PYSITELIB}/einsteinpy_geodesics/julia_backend/KerrSolver.jl
+${PYSITELIB}/einsteinpy_geodesics/julia_backend/run.jl
+${PYSITELIB}/einsteinpy_geodesics/utils.py
+${PYSITELIB}/einsteinpy_geodesics/utils.pyc
+${PYSITELIB}/einsteinpy_geodesics/utils.pyo
