@@ -4,9 +4,9 @@ man/man8/zabbix_server.8
 sbin/zabbix_server
 share/examples/${PKGBASE}/zabbix_server.conf
 share/${PKGBASE}/data.sql
-share/${PKGBASE}/double.sql
 share/${PKGBASE}/images.sql
 share/${PKGBASE}/schema.sql
+${PLIST.pgsql}share/${PKGBASE}/double.sql
 ${PLIST.pgsql}share/${PKGBASE}/timescaledb.sql
 @pkgdir share/${PKGBASE}/externalscripts
 @pkgdir share/${PKGBASE}/alertscripts
