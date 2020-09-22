@@ -1,0 +1,26 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/hugo/__init__.py
+${PYSITELIB}/hugo/__init__.pyc
+${PYSITELIB}/hugo/__init__.pyo
+${PYSITELIB}/hugo/client.py
+${PYSITELIB}/hugo/client.pyc
+${PYSITELIB}/hugo/client.pyo
+${PYSITELIB}/hugo/constants.py
+${PYSITELIB}/hugo/constants.pyc
+${PYSITELIB}/hugo/constants.pyo
+${PYSITELIB}/hugo/context.py
+${PYSITELIB}/hugo/context.pyc
+${PYSITELIB}/hugo/context.pyo
+${PYSITELIB}/hugo/exceptions.py
+${PYSITELIB}/hugo/exceptions.pyc
+${PYSITELIB}/hugo/exceptions.pyo
+${PYSITELIB}/hugo/ext/__init__.py
+${PYSITELIB}/hugo/ext/__init__.pyc
+${PYSITELIB}/hugo/ext/__init__.pyo
+${PYSITELIB}/hugo/handler.py
+${PYSITELIB}/hugo/handler.pyc
+${PYSITELIB}/hugo/handler.pyo
+${PYSITELIB}/hugo/middleware.py
+${PYSITELIB}/hugo/middleware.pyc
+${PYSITELIB}/hugo/middleware.pyo
