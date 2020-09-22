@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	nbval-0.9.6
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-test-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://files.pythonhosted.org/packages/7a/5c/ae5ea6f6bbaefcb4de94072bd31566682fe927f33ab8bfeb8f0179aa346a/
 
