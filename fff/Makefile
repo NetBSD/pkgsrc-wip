@@ -19,7 +19,7 @@ SUBST_CLASSES+=         prefix
 SUBST_MESSAGE.prefix=   Fixing paths.
 SUBST_STAGE.prefix=     pre-configure
 SUBST_FILES.prefix+=    fff
-SUBST_SED.prefix+=      -e 's,FFF_W3M_PATH,${PREFIX}/libexec/w3m,g'
+SUBST_SED.prefix+=      -e 's,$$FFF_W3M_PATH,${PREFIX}/libexec/w3m/w3mimgdisplay,g'
 
 REPLACE_BASH+=	fff
 
