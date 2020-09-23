@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	crispy-doom-5.9.1
+DISTNAME=	crispy-doom-5.9.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -35,8 +35,9 @@ SUBST_FILES.waddir=	src/d_iwad.c
 SUBST_SED.waddir=	-e 's,PKGSRC_PREFIX,"${PREFIX}",'
 SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
 
-# Man pages with documentation of file formats should go to section 4 on
-# SysV based systems. IRIX and OSF/1 are treated with BSD style by intent.
+# Man pages with documentation of file formats (section 5 on BSD) should go
+# go to section 4 on SysV based systems.
+# Note: IRIX and OSF/1 are treated with BSD style by intent.
 PLIST_VARS+=		bsd sysv
 .if ${OPSYS} == "AIX" || ${OPSYS} == "HPUX" || ${OPSYS} == "SunOS"
 PLIST.sysv=		yes
