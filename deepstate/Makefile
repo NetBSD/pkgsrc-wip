@@ -6,6 +6,7 @@ USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
 
+DEPENDS+=	afl-[0-9]*:../../devel/afl
 DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../wip/py-angr
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
