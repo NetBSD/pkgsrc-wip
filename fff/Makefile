@@ -15,11 +15,11 @@ NO_BUILD=	yes
 
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
-SUBST_CLASSES+=         prefix
-SUBST_MESSAGE.prefix=   Fixing paths.
-SUBST_STAGE.prefix=     pre-configure
-SUBST_FILES.prefix+=    fff
-SUBST_SED.prefix+=      -e 's,$$FFF_W3M_PATH,${PREFIX}/libexec/w3m/w3mimgdisplay,g'
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing paths.
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix+=	fff
+SUBST_SED.prefix+=	-e 's,$$FFF_W3M_PATH,${PREFIX}/libexec/w3m/w3mimgdisplay,g'
 
 REPLACE_BASH+=	fff
 
