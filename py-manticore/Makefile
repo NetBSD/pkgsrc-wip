@@ -1,5 +1,7 @@
 # $NetBSD: Makefile,v 1.10 2018/05/06 22:20:22 khorben Exp $
 
+.include "../../wip/py-angr/version.mk"
+
 DISTNAME=	manticore-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	devel
@@ -12,6 +14,7 @@ HOMEPAGE=	https://github.com/trailofbits/manticore/
 COMMENT=	Symbolic execution tool for analysis of binaries and smart contracts
 LICENSE=	gnu-agpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-angr>=${ANGR_VERSION}:../../wip/py-angr
 DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-rlp-[0-9]*:../../wip/py-rlp
 DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
@@ -20,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-pysha3-[0-9]*:../../devel/py-pysha3
 DEPENDS+=	${PYPKGPREFIX}-unicorn-[0-9]*:../../emulators/py-unicorn
 DEPENDS+=	${PYPKGPREFIX}-crytic-compile-[0-9]*:../../wip/py-crytic-compile
 DEPENDS+=	${PYPKGPREFIX}-pyevmasm-[0-9]*:../../wip/py-pyevmasm
-DEPENDS+=	${PYPKGPREFIX}-z3-[0-9]*:../../math/py-z3
+DEPENDS+=	${PYPKGPREFIX}-z3solver-[0-9]*:../../math/py-z3solver
 DEPENDS+=	${PYPKGPREFIX}-prettytable-[0-9]*:../../wip/py-prettytable
 DEPENDS+=	${PYPKGPREFIX}-wasm-[0-9]*:../../wip/py-wasm
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml

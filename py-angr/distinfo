@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.3 2020/08/18 20:24:57 riastradh Exp $
+
+SHA1 (angr-9.0.4378.tar.gz) = c29ad10196b67eb81c7b0c0ff51c762dd9b12da5
+RMD160 (angr-9.0.4378.tar.gz) = 398626530b722861c4203416733dcc7eb9b46a1a
+SHA512 (angr-9.0.4378.tar.gz) = 9aa80e5f303e22c443ecdb8b7ee6a08fb0c178162f7fefd258f6c7f07450f7223a9cffa9f900f3fa621d2fe221a2555dabacdb135f3301eb47e27df8e9e52d9d
+Size (angr-9.0.4378.tar.gz) = 1174851 bytes
+SHA1 (patch-native_Makefile) = 56ccd2df70393a25797a2c35523299e577fa9481
+SHA1 (patch-native_log.c) = deee60432d81962919b4060f13e7d5a1da6ad9d8
+SHA1 (patch-setup.py) = fb99a4987728f429e6c46b06951339cd7293e38e
