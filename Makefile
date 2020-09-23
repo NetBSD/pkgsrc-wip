@@ -937,6 +937,7 @@ SUBDIR+=	fusionpbx
 SUBDIR+=	fvcom2
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
+SUBDIR+=	fvwm3
 SUBDIR+=	fxrays
 SUBDIR+=	fxt
 SUBDIR+=	g21k-binutils
