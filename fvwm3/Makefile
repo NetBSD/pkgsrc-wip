@@ -18,6 +18,7 @@ USE_TOOLS+=	msgfmt msgmerge xgettext
 # xsltproc
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
+# otherwise we get installed scripts that point to the tools directory.
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL5}
 
