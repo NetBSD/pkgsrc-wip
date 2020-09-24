@@ -8,6 +8,8 @@ AUTO_MKDIRS=	yes
 
 DEPENDS+=	deepstate>=${VERSION}:../../wip/deepstate
 DEPENDS+=	deepstate-afl>=${VERSION}:../../wip/deepstate-afl
+#XXX seems to not build on NetBSD
+#DEPENDS+=	deepstate-honggfuzz>=${VERSION}:../../wip/deepstate-honggfuzz
 
 PYTHON_VERSIONS_ACCEPTED=	37 36
 

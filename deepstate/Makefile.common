@@ -2,6 +2,7 @@
 #
 # used by wip/deepstate/Makefile
 # used by wip/deepstate-afl/Makefile
+# used by wip/deepstate-honggfuzz/Makefile
 # used by wip/py-deepstate/Makefile
 
 VERSION=	0.1

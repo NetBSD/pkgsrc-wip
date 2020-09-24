@@ -612,6 +612,7 @@ SUBDIR+=	decode-dimms
 SUBDIR+=	dee
 SUBDIR+=	deepstate
 SUBDIR+=	deepstate-afl
+SUBDIR+=	deepstate-honggfuzz
 SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-desktop
 SUBDIR+=	deforaos-framer
