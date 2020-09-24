@@ -1,14 +1,8 @@
 # $NetBSD$
 
-MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
-
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
-
-#XXX these two seem to require additional build steps
-BUILD_DEPENDS+=	afl-[0-9]*:../../devel/afl
-BUILD_DEPENDS+=	honggfuzz-[0-9]*:../../devel/honggfuzz
 
 DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../wip/py-angr
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
@@ -35,15 +29,12 @@ PYTHON_VERSIONS_ACCEPTED=	37 36
 CMAKE_ARG_PATH=	${WRKSRC}
 CMAKE_ARGS+=       -DPYTHON=${PREFIX}/bin/python${PYVERSSUFFIX}
 CONFIGURE_DIRS=	${WRKSRC}/build
-PYSETUPSUBDIR=	build
 
 pre-configure:
-	${MKDIR} ${WRKSRC}/build
+	${MKDIR} ${CONFIGURE_DIRS}
 
 post-install:
-.for binaryfile in deepstate-afl deepstate-angora deepstate-eclipser \
-	deepstate-ensembler deepstate-honggfuzz deepstate-libfuzzer \
-	deepstate-manticore deepstate-reduce futurize pasteurize
+.for binaryfile in futurize pasteurize
 	${MV} ${FAKEHOMEDIR}/.local/bin/${binaryfile} ${DESTDIR}${PREFIX}/bin
 .endfor
 

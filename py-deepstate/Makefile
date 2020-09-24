@@ -6,9 +6,10 @@ USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
 
-DEPENDS+=	deepstate-[0-9]*:../../wip/deepstate
+DEPENDS+=	deepstate>=${VERSION}:../../wip/deepstate
+DEPENDS+=	deepstate-afl>=${VERSION}:../../wip/deepstate-afl
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_ACCEPTED=	37 36
 
 CMAKE_ARG_PATH=	${WRKSRC}
 CONFIGURE_DIRS=	${WRKSRC}/build
@@ -18,5 +19,5 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 .include "../../wip/deepstate/Makefile.common"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

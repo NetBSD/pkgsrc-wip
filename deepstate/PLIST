@@ -1,12 +1,4 @@
 @comment $NetBSD$
-bin/deepstate-afl
-bin/deepstate-angora
-bin/deepstate-eclipser
-bin/deepstate-ensembler
-bin/deepstate-honggfuzz
-bin/deepstate-libfuzzer
-bin/deepstate-manticore
-bin/deepstate-reduce
 bin/futurize
 bin/pasteurize
 include/deepstate/Compiler.h

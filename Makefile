@@ -611,6 +611,7 @@ SUBDIR+=	debugger-git
 SUBDIR+=	decode-dimms
 SUBDIR+=	dee
 SUBDIR+=	deepstate
+SUBDIR+=	deepstate-afl
 SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-desktop
 SUBDIR+=	deforaos-framer

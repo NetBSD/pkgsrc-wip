@@ -1,9 +1,11 @@
 # $NetBSD$
 #
 # used by wip/deepstate/Makefile
+# used by wip/deepstate-afl/Makefile
 # used by wip/py-deepstate/Makefile
 
-DISTNAME=	deepstate-0.1
+VERSION=	0.1
+DISTNAME=	deepstate-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
 GITHUB_PROJECT=	deepstate
@@ -15,3 +17,4 @@ COMMENT=	Augments C/C++ Test-Driven Development with Symbolic Execution
 LICENSE=	apache-2.0
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/deepstate/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/deepstate/patches
