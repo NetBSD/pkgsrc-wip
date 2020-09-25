@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/stcompact
+bin/stctrl
+bin/stindex
+bin/stmgr
+bin/stnode
+bin/strelay
