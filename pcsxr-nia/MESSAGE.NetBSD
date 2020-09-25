@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD$
+
+Note for NetBSD users with native X11:
+
+Please ensure your userspace is at least as new as 9.0_STABLE, otherwise,
+a bug will prevent any games from being loaded by PCSX-R.
+
+===========================================================================
