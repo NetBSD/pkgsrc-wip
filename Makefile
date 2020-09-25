@@ -2151,7 +2151,6 @@ SUBDIR+=	meka-git
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
-SUBDIR+=	merkaartor
 SUBDIR+=	mes-nyacc
 SUBDIR+=	mescc-tools
 SUBDIR+=	meta-tracker
