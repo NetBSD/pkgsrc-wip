@@ -5,10 +5,10 @@
 #              Wed May 20 07:41:36 CDT 2020               #
 ###########################################################
 
-DISTNAME=	basic-stats-0.0.0.6
+DISTNAME=	basic-stats-0.0.0.7
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	44713aed544443aa1b6682806bfe15c6a52c0708
+GITHUB_TAG=	e4e114969b41c6a3d233a9c890d88c12cab5e553
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/basic-stats
