@@ -6,7 +6,7 @@ USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
 
-BUILD_DEPENDS+=	afl-[0-9]*:../../devel/afl
+DEPENDS+=	afl-[0-9]*:../../devel/afl
 DEPENDS+=	deepstate>=${VERSION}:../../wip/deepstate
 
 CMAKE_ARG_PATH=	${WRKSRC}
