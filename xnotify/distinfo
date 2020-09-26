@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/09/11 13:27:43 leot Exp $
+
+SHA1 (xnotify-0.3.2.tar.gz) = af7dfcc5ec5d4a5b5ddc21c08da859cb2b0c6721
+RMD160 (xnotify-0.3.2.tar.gz) = f593937e3521f21a044bde9e3c79a27fc1a409d9
+SHA512 (xnotify-0.3.2.tar.gz) = d12d421129acd85b95dd310618cbe9c3dd4e4d7b0238da611f6e3285f92b8f4a14d510bae3a109385c50dd3517fd25dec49709121a10f0efe362fbcc18ff3b60
+Size (xnotify-0.3.2.tar.gz) = 12533 bytes

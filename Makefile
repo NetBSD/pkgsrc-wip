@@ -5101,6 +5101,7 @@ SUBDIR+=	xmms2
 SUBDIR+=	xmoto
 SUBDIR+=	xnedit
 SUBDIR+=	xnee
+SUBDIR+=	xnotify
 SUBDIR+=	xoo
 SUBDIR+=	xoreos
 SUBDIR+=	xoreos-tools
