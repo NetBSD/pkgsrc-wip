@@ -613,6 +613,7 @@ SUBDIR+=	dee
 SUBDIR+=	deepstate
 SUBDIR+=	deepstate-afl
 SUBDIR+=	deepstate-honggfuzz
+SUBDIR+=	deepstate-libfuzzer
 SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-desktop
 SUBDIR+=	deforaos-framer

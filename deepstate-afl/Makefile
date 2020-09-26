@@ -9,13 +9,13 @@ AUTO_MKDIRS=	yes
 DEPENDS+=	afl-[0-9]*:../../devel/afl
 DEPENDS+=	deepstate>=${VERSION}:../../wip/deepstate
 
+CONFIGURE_DIRS=	${WRKSRC}/build
 CMAKE_ARG_PATH=	${WRKSRC}
+
 CMAKE_ARGS+=	-DPYTHON=${PREFIX}/bin/python${PYVERSSUFFIX}
 CMAKE_ARGS+=	-DDEEPSTATE_AFL=ON
-CONFIGURE_DIRS=	${WRKSRC}/build
-#XXX should work with CONFIGURE_ENV instead
-PKGSRC_MAKE_ENV+=	CC=${LOCALBASE}/bin/afl-gcc
-PKGSRC_MAKE_ENV+=	CXX=${LOCALBASE}/bin/afl-g++
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${LOCALBASE:Q}/bin/afl-gcc
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${LOCALBASE:Q}/bin/afl-g++
 
 pre-configure:
 	${MKDIR} ${CONFIGURE_DIRS}

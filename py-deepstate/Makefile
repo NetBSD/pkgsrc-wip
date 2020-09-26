@@ -10,6 +10,7 @@ DEPENDS+=	deepstate>=${VERSION}:../../wip/deepstate
 DEPENDS+=	deepstate-afl>=${VERSION}:../../wip/deepstate-afl
 #XXX seems to not build on NetBSD
 #DEPENDS+=	deepstate-honggfuzz>=${VERSION}:../../wip/deepstate-honggfuzz
+DEPENDS+=	deepstate-libfuzzer>=${VERSION}:../../wip/deepstate-libfuzzer
 
 PYTHON_VERSIONS_ACCEPTED=	37 36
 
