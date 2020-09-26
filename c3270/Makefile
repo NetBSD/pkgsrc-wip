@@ -3,7 +3,7 @@
 DISTNAME=	c3270-3.3.15ga9-src
 PKGNAME=	c3270-3.3.15ga9
 CATEGORIES=	net
-MASTER_SITES=	http://x3270.bgp.nu/download/03.03.15/
+MASTER_SITES=	http://x3270.bgp.nu/download/03.03/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
