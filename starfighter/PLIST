@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/starfighter
+man/man6/starfighter.6
 share/applications/starfighter.desktop
 share/doc/starfighter/COPYING
 share/doc/starfighter/LICENSES
