@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/ssam-tse
+lib/ssam-tse/libEntitiesMP.so
+lib/ssam-tse/libGameMP.so
+lib/ssam-tse/libShaders.so
+share/ssam-tse/SE1_10.gro

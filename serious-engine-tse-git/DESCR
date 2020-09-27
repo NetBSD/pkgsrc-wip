@@ -1,0 +1,10 @@
+An open source version of a game engine developed by Croteam for
+the classic Serious Sam games.  This package provides the engine
+for "Serious Sam 2" also known as "The Second Encounter".
+
+The game data files are not included. The game data and
+share/ssam-tfe/SE1_10.gro should be stored in
+
+ ~/.local/share/Serious Engine/serioussamse
+
+adjusted as necessary if $XDG_DATA_HOME is set.

@@ -4475,6 +4475,7 @@ SUBDIR+=	sent
 SUBDIR+=	seqtk
 SUBDIR+=	serendipity
 SUBDIR+=	serious-engine-tfe-git
+SUBDIR+=	serious-engine-tse-git
 SUBDIR+=	service
 SUBDIR+=	seturgent
 SUBDIR+=	sfeed-git
