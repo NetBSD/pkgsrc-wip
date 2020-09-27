@@ -4474,6 +4474,7 @@ SUBDIR+=	sendmailX
 SUBDIR+=	sent
 SUBDIR+=	seqtk
 SUBDIR+=	serendipity
+SUBDIR+=	serious-engine-tfe-git
 SUBDIR+=	service
 SUBDIR+=	seturgent
 SUBDIR+=	sfeed-git

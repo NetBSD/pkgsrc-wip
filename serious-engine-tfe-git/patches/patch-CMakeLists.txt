@@ -1,0 +1,159 @@
+$NetBSD$
+
+1) Use the system ogg/vorbis libraries.
+2) Also support NetBSD and OpenBSD.
+3) Name the executables according to "the first encounter" or "the second encounter"
+4) Install the files in more reasonable places.
+
+--- CMakeLists.txt.orig	2020-09-04 12:08:26.000000000 +0000
++++ CMakeLists.txt
+@@ -60,6 +60,31 @@ if(USE_SYSTEM_ZLIB)
+     endif()
+ endif()
+ 
++find_package(PkgConfig REQUIRED)
++
++if(PKG_CONFIG_FOUND)
++    pkg_check_modules(OGG REQUIRED ogg)
++    if(OGG_FOUND)
++     include_directories(${OGG_INCLUDE_DIRS})
++    else()
++     message(FATAL_ERROR "Error! libogg not found")
++    endif()
++    pkg_check_modules(VORBIS REQUIRED vorbis)
++    if(VORBIS_FOUND)
++     include_directories(${VORBIS_INCLUDE_DIRS})
++    else()
++     message(FATAL_ERROR "Error! libvorbis not found")
++    endif()
++    pkg_check_modules(VORBISFILE REQUIRED vorbisfile)
++    if(VORBISFILE_FOUND)
++     include_directories(${VORBISFILE_INCLUDE_DIRS})
++    else()
++     message(FATAL_ERROR "Error! libvorbisfile not found")
++    endif()
++else()
++    message(FATAL_ERROR "Error! pkg-config not found")
++endif()
++
+ # RAKE! Where to install the binaries.
+ if(CMAKE_INSTALL_PREFIX STREQUAL "/usr/local" OR CMAKE_INSTALL_PREFIX STREQUAL "") # Only works for linux since I don't
+                                                                                    # know what default is for windows/macos/freebsd.
+@@ -75,6 +100,12 @@ endif()
+ if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+     SET(FREEBSD TRUE)
+ endif()
++if(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++    SET(NETBSD TRUE)
++endif()
++if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++    SET(OPENBSD TRUE)
++endif()
+ if(APPLE)
+     SET(MACOSX TRUE)
+ endif()
+@@ -180,7 +211,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_CO
+     		add_definitions(-D_FILE_OFFSET_BITS=64)
+     		add_definitions(-D_LARGEFILE_SOURCE=1)
+     		add_definitions(-DPRAGMA_ONCE=1)
+-	elseif(FREEBSD)
++	elseif(FREEBSD OR NETBSD OR OPENBSD)
+     		set(CMAKE_SKIP_RPATH ON CACHE BOOL "Skip RPATH" FORCE)
+     		add_definitions(-DPLATFORM_UNIX=1)
+     		add_definitions(-DPLATFORM_FREEBSD=1)
+@@ -190,7 +221,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_CO
+     		include_directories("/usr/local/include")
+ 	endif()
+ 	
+-        if(MACOSX OR LINUX OR FREEBSD)
++        if(MACOSX OR LINUX OR FREEBSD OR NETBSD OR OPENBSD)
+ 		add_compile_options(-pthread)
+                 add_compile_options(-fsigned-char)
+ 	endif()
+@@ -272,8 +303,10 @@ option(TFE "Compile a The First Encounte
+ if (TFE)
+  add_definitions(-DFIRST_ENCOUNTER=1)
+  set(MP "")
++ set(ENCOUNTER "tfe")
+ else()
+  set(MP "MP")
++ set(ENCOUNTER "tse")
+ endif()
+ 
+ 
+@@ -286,7 +319,7 @@ endif()
+ 
+ include_directories(
+     .
+-    ${CMAKE_SOURCE_DIR}/External/libogg/include
++#    ${CMAKE_SOURCE_DIR}/External/libogg/include
+ )
+ if(USE_TREMOR)
+ if(PANDORA)
+@@ -294,8 +327,8 @@ if(PANDORA)
+ else()
+     # !!!Do something here!
+ endif()
+-else()
+-    include_directories(External/libvorbis/include)
++#else()
++#    include_directories(External/libvorbis/include)
+ endif()
+ 
+ # We build ECC, then use it to generate C++ code for the game entities...
+@@ -1001,6 +1034,9 @@ if(LINUX)
+     target_link_libraries(ssam "m")
+     target_link_libraries(ssam "dl")
+     target_link_libraries(ssam "pthread")
++    target_link_libraries(ssam ${OGG_LIBRARIES})
++    target_link_libraries(ssam ${VORBIS_LIBRARIES})
++    target_link_libraries(ssam ${VORBISFILE_LIBRARIES})
+     target_link_libraries(ssam ${SDL2_LIBRARY})
+     target_link_libraries(ssam ${ZLIB_LIBRARIES})
+     if(PANDORA)
+@@ -1016,10 +1052,13 @@ if(LINUX)
+     endif()
+ endif()
+ 
+-if(FREEBSD)
++if(FREEBSD OR NETBSD OR OPENBSD)
+     set_target_properties(ssam PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+     target_link_libraries(ssam "m")
+     target_link_libraries(ssam "pthread")
++    target_link_libraries(ssam ${OGG_LIBRARIES})
++    target_link_libraries(ssam ${VORBIS_LIBRARIES})
++    target_link_libraries(ssam ${VORBISFILE_LIBRARIES})
+     target_link_libraries(ssam ${SDL2_LIBRARY})
+     target_link_libraries(ssam ${ZLIB_LIBRARIES})
+     if(BUILD_DEDICATED_SERVER)
+@@ -1031,9 +1070,7 @@ if(FREEBSD)
+     endif()
+ endif()
+ 
+-if(TFE)
+- set_target_properties(ssam PROPERTIES OUTPUT_NAME "ssam-tfe")
+-endif()
++set_target_properties(ssam PROPERTIES OUTPUT_NAME "ssam-${ENCOUNTER}")
+ 
+ # RAKE! Install Section.
+ if(DEBUG) # RAKE! Will this work with TFE?
+@@ -1048,8 +1085,8 @@ if(DEBUG) # RAKE! Will this work with TF
+     endif()
+ else()
+     install(TARGETS ssam ${SHADERSLIB} ${GAMEMPLIB} ${ENTITIESMPLIB}
+-            RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}/Bin"
+-            LIBRARY DESTINATION "${CMAKE_INSTALL_PREFIX}/Bin"
++            RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}/bin"
++            LIBRARY DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ssam-${ENCOUNTER}"
+             PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_WRITE GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+     if(BUILD_DEDICATED_SERVER)
+         install(TARGETS SeriousSamDedicated
+@@ -1062,7 +1099,7 @@ endif()
+ # and SE1_10.gro needs to be installed to Games root dir.
+ if(NOT LOCAL_INSTALL)
+     install(FILES ${CMAKE_SOURCE_DIR}/../SE1_10.gro
+-            DESTINATION ${CMAKE_INSTALL_PREFIX}
++            DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ssam-${ENCOUNTER}"
+             PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_WRITE GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+ endif()
+ 

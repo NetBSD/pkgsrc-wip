@@ -1,0 +1,29 @@
+# $NetBSD$
+
+# used by wip/serious-engine-tfe-git/Makefile
+# used by wip/serious-engine-tse-git/Makefile
+
+DISTNAME=	serious-engine-0.0
+CATEGORIES=	games
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+#HOMEPAGE=	https://github.com/rcgordon/Serious-Engine
+HOMEPAGE=	https://github.com/ptitSeb/Serious-Engine
+COMMENT=	Open source version of a game engine for the Serious Sam games
+LICENSE=	gnu-gpl-v2
+
+GIT_REPOSITORIES=	serious
+GIT_REPO.serious=	git://github.com/ptitSeb/Serious-Engine
+WRKSRC=			${WRKDIR}/serious/Sources
+
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release
+CMAKE_ARGS+=	-DCMAKE_INCLUDE_CURRENT_DIR:BOOL=TRUE
+
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../wip/mk/git-package.mk"
+.include "../../mk/bsd.pkg.mk"
