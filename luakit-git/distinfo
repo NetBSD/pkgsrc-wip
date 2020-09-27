@@ -5,4 +5,4 @@ RMD160 (luakit/2aecefe95c99808121edbf3903c3947779f8c4d4-2aecefe95c99808121edbf39
 SHA512 (luakit/2aecefe95c99808121edbf3903c3947779f8c4d4-2aecefe95c99808121edbf3903c3947779f8c4d4.zip) = f493fde91e87b8bd40f3a90b558c4d297ed31bc00e6924660a5c1fa55aa35bfd2eb7c8a6a7ea1d6b9ef7d095d358659d350ca92fbc6f654a9df9a1544ce30fdf
 Size (luakit/2aecefe95c99808121edbf3903c3947779f8c4d4-2aecefe95c99808121edbf3903c3947779f8c4d4.zip) = 518360 bytes
 SHA1 (patch-Makefile) = d45f31061ea5d5bcf5ed6d63fcea41590003e10b
-SHA1 (patch-lib_window.lua) = cdbea2b3a9cca18c6e3a6b682cdb33b44ef286c0
+SHA1 (patch-common_ipc.c) = 0b45f8ecacbf7f94fe6913826944afdf80279c9d
