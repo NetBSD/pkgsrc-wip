@@ -2,5 +2,5 @@ $NetBSD$
 
 SHA1 (patch-CMakeLists.txt) = 8118cf60d01846bf0772e9e7a89a7f5e5b8035a5
 SHA1 (patch-Ecc_StdH.h) = e8c1bc298362db1781b5d15aeebcc10201ab8600
-SHA1 (patch-Engine_Base_Unix_UnixDynamicLoader.cpp) = 2e139fae083e0dc5f6f5af355e8bd907cabc2d94
+SHA1 (patch-Engine_Base_Unix_UnixDynamicLoader.cpp) = 51c406427eadf287df4a6be1990e427730bb2204
 SHA1 (patch-Engine_Engine.cpp) = 482b4af4d14aeade6c49703dc3578b730969280c
