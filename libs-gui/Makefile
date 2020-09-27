@@ -6,19 +6,21 @@ DISTNAME=	gui-0_28_0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/gui-//:S/_/./g}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+DIST_SUBDIR=	gnustep-gui
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gnustep/libs-gui/
-COMMENT=	Replacement of x11/gnustep-gui
+COMMENT=	GNUstep AppKit Implementation
 LICENSE=	gnu-lgpl-v2.1 OR gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/libs-gui-gui-0_28_0
+WRKSRC=			${WRKDIR}/libs-gui-${DISTNAME}
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		objc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 MAKE_FILE=		GNUmakefile
+
+PLIST_SUBST=	API_VERSION=${PKGVERSION:C/\.[0-9]$//}
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
