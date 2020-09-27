@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=go-jira/}
 GITHUB_PROJECT=	jira
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/go-jira/jira
 COMMENT=	Simple Go command line client for Atlassian's Jira service
 LICENSE=	apache-2.0
