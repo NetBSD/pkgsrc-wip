@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/fff
-man/man1/fff.1
-share/doc/fff/README.md
