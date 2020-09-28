@@ -4,6 +4,8 @@ share/dbus-1/services/org.mate.panel.applet.BriskMenuFactory.service
 share/glib-2.0/schemas/com.solus-project.brisk-menu.gschema.xml
 share/icons/hicolor/scalable/actions/brisk_system-log-out-symbolic.svg
 share/locale/ar/LC_MESSAGES/brisk-menu.mo
+share/locale/be/LC_MESSAGES/brisk-menu.mo
+share/locale/be_Latn/LC_MESSAGES/brisk-menu.mo
 share/locale/bg/LC_MESSAGES/brisk-menu.mo
 share/locale/bn/LC_MESSAGES/brisk-menu.mo
 share/locale/bs/LC_MESSAGES/brisk-menu.mo
@@ -51,6 +53,7 @@ share/locale/sk/LC_MESSAGES/brisk-menu.mo
 share/locale/sr_RS/LC_MESSAGES/brisk-menu.mo
 share/locale/sr_RS@latin/LC_MESSAGES/brisk-menu.mo
 share/locale/sv_SE/LC_MESSAGES/brisk-menu.mo
+share/locale/te/LC_MESSAGES/brisk-menu.mo
 share/locale/tr/LC_MESSAGES/brisk-menu.mo
 share/locale/uk/LC_MESSAGES/brisk-menu.mo
 share/locale/vi/LC_MESSAGES/brisk-menu.mo

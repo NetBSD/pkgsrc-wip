@@ -12,6 +12,10 @@ LICENSE=	gnu-lgpl-v3
 USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
+CMAKE_ARGS+=	-DENABLE_MATE=ON
+CMAKE_ARGS+=    -DENABLE_XFCE=ON
+CMAKE_ARGS+=    -DENABLE_APPMENU_GTK_MODULE=ON
+CMAKE_ARGS+=    -DENABLE_VALAPANEL=ON
 
 PKGCONFIG_OVERRIDE+=	subprojects/appmenu-gtk-module/data/appmenu-gtk2-parser.pc.in
 PKGCONFIG_OVERRIDE+=	subprojects/appmenu-gtk-module/data/appmenu-gtk3-parser.pc.in

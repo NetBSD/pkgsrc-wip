@@ -1,10 +1,10 @@
 # $NetBSD$
 
 
-DISTNAME=	brisk-menu-v0.6.1
+DISTNAME=	brisk-menu-v0.6.2
 #PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	x11
-MASTER_SITES=	-https://github.com/getsolus/brisk-menu/releases/download/v0.6.1/brisk-menu-v0.6.1.tar.xz
+MASTER_SITES=	-https://github.com/getsolus/brisk-menu/releases/download/v0.6.2/brisk-menu-v0.6.2.tar.xz
 
 EXTRACT_SUFX=	.tar
 
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	pkg-config
 USE_CMAKE=	yes
-WRKSRC=		${WRKDIR}/brisk-menu-v0.6.1
+WRKSRC=		${WRKDIR}/brisk-menu-0.6.2
 USE_LANGUAGES=	c c++
 
 do-configure:
