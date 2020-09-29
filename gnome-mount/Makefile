@@ -3,12 +3,12 @@
 
 DISTNAME=		gnome-mount-0.8
 PKGREVISION=		37
-CATEGORIES?=		sysutils wip
+CATEGORIES?=		sysutils mate
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
-MAINTAINER=		nervoso@NetBSD.org
-HOMEPAGE=		http://hal.freedesktop.org/
-COMMENT=		Programs for mounting, unmounting and ejecting storage devices
+MAINTAINER=	nervoso@k1.com.br
+HOMEPAGE=	http://hal.freedesktop.org/
+COMMENT=	Programs for mounting, unmounting and ejecting storage devices
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
@@ -27,7 +27,6 @@ post-extract:
 	${CP} ${FILESDIR}/gnome-mount.schemas.in.NetBSD ${WRKSRC}/gnome-mount.schemas.in
 .endif
 
-DEPENDS+=	gvfs>0:../../sysutils/gvfs
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"

@@ -1,9 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2013/08/12 14:24:36 obache Exp $
-
-* XXX
-* gtk/gtk.h is not included from libnotify/notify.h of libnotify-0.7
-* XXX
-* libnotify-0.7 API change
+$NetBSD$
 
 --- src/gnome-mount.c.orig	2008-04-16 23:41:32.000000000 +0000
 +++ src/gnome-mount.c

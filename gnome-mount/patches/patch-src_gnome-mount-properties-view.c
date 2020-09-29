@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2008/12/25 05:33:20 hasso Exp $
+$NetBSD$
 
---- src/gnome-mount-properties-view.c.orig	2008-02-25 23:55:05 +0200
-+++ src/gnome-mount-properties-view.c	2008-12-24 22:38:36 +0200
+--- src/gnome-mount-properties-view.c.orig	2008-02-25 21:55:05.000000000 +0000
++++ src/gnome-mount-properties-view.c
 @@ -35,7 +35,7 @@
  #include <string.h>
  #include <gconf/gconf-client.h>

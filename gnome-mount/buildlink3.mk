@@ -25,7 +25,6 @@ BUILDLINK_PKGSRCDIR.gnome-mount?=	../../wip/gnome-mount
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 
-DEPENDS+=	gvfs>0:../../sysutils/gvfs
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../wip/libgnome-keyring/buildlink3.mk"
