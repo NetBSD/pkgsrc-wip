@@ -1,6 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	sdl-hercules-hyperion-4.2.1
+PKGREVISION=	1
 DISTNAME=	Release_${PKGVERSION_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}

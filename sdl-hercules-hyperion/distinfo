@@ -14,5 +14,6 @@ SHA1 (patch-hostopts.h) = d464925f82570cbcf368f0b76d1b545a5eebacfd
 SHA1 (patch-hscutl.c) = 72ff77bff284e63bc42e124b56051fe735f74de6
 SHA1 (patch-hthreads.h) = 25004a78c3fd0a803c5f4e0b0de8d05819602ac9
 SHA1 (patch-htypes.h) = 7e057ae370b266758176fbe13964581cac5004f0
-SHA1 (patch-tuntap.c) = ea3ca480613781e9dc09479d32e6d1138cc396aa
+SHA1 (patch-msgenu.h) = 89a1ac7373da138e79e3538aaaf96f85d07ab873
+SHA1 (patch-tuntap.c) = 9fc0be227907ae0eca4bb41c95be8c3540d6def5
 SHA1 (patch-tuntap.h) = 24946aab519beb6185800801f2bb38dccfdfef94
