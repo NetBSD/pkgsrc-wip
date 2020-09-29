@@ -3,7 +3,7 @@
 DISTNAME=	mkdocs-material-extensions-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://files.pythonhosted.org/packages/37/96/9c7825ac728f89de143741bb6db8750726e590b1f1a85cab9050871c9311/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mkdocs-material-extensions/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/facelessuser/mkdocs-material-extensions
