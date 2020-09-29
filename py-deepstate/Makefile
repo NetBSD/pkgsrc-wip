@@ -14,12 +14,12 @@ DEPENDS+=	deepstate-libfuzzer>=${VERSION}:../../wip/deepstate-libfuzzer
 
 PYTHON_VERSIONS_ACCEPTED=	37 36
 
+CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
-CONFIGURE_DIRS=	${WRKSRC}/build
 PYSETUPSUBDIR=	build
 
 pre-configure:
-	${MKDIR} ${WRKSRC}/build
+	cd ${WRKSRC} && ${MKDIR} ${CONFIGURE_DIRS}
 
 .include "../../wip/deepstate/Makefile.common"
 .include "../../lang/python/egg.mk"

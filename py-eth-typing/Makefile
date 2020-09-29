@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/ethereum/eth-typing
 COMMENT=	eth-typing: Common type annotations for ethereum python packages
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-bumpversion-[0-9]*:../../wip/py-bumpversion
+BUILD_DEPENDS+=	${PYPKGPREFIX}-bumpversion-[0-9]*:../../devel/py-bumpversion
 BUILD_DEPENDS+=	# TODO: pytest-watch>=4.1.0,<5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
