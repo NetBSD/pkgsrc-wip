@@ -3,7 +3,7 @@
 DISTNAME=	mkdocs-material-5.5.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	https://files.pythonhosted.org/packages/b3/2f/c87b86610caf65d4fe12a033d890be26600d5bdd34132801abd717bee7df/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mkdocs-material/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://squidfunk.github.io/mkdocs-material/
