@@ -3,7 +3,7 @@
 DISTNAME=	pymdown-extensions-8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	https://files.pythonhosted.org/packages/bd/c9/801e1e0942eb82a066ac51f6cab7249523bb0e857e16d96a3c92907e6eb9/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymdown-extensions/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/facelessuser/pymdown-extensions
