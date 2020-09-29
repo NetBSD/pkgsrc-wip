@@ -5,7 +5,7 @@
 # used by sysutils/zabbix50-frontend/Makefile
 # used by sysutils/zabbix50-java/Makefile
 
-DISTNAME=	zabbix-5.0.3
+DISTNAME=	zabbix-5.0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/5.0/
 

@@ -1,6 +1,6 @@
 @comment $NetBSD$
-share/examples/zabbix/httpd-zabbix.conf
-share/examples/zabbix/php-fpm-zabbix.conf
+share/examples/zabbix-frontend/httpd-zabbix.conf
+share/examples/zabbix-frontend/php-fpm-zabbix.conf
 share/zabbix/actionconf.php
 share/zabbix/api_jsonrpc.php
 share/zabbix/app/.htaccess
@@ -569,6 +569,7 @@ share/zabbix/include/classes/html/CSubmitButton.php
 share/zabbix/include/classes/html/CSup.php
 share/zabbix/include/classes/html/CTabView.php
 share/zabbix/include/classes/html/CTable.php
+share/zabbix/include/classes/html/CTableColumn.php
 share/zabbix/include/classes/html/CTableInfo.php
 share/zabbix/include/classes/html/CTag.php
 share/zabbix/include/classes/html/CTextArea.php
