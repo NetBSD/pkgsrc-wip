@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/11/12 12:26:33 othyro Exp $
-
-SHA1 (pcsxr-1.9.93.tar.bz2) = 7b69d16c2a562ee986fd1723e67bff2d7f6e10ba
-RMD160 (pcsxr-1.9.93.tar.bz2) = cdae5a76293891d9cbb60c6e66efe738aabfe215
-Size (pcsxr-1.9.93.tar.bz2) = 1379921 bytes
-SHA1 (patch-plugins_bladesio1_gui.c) = d83e056a39816250018b4eca632b93b330d6c780

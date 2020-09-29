@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/09/05 03:28:30 othyro Exp $
-
-SHA1 (PcsxSrc-1.6beta.tgz) = 2f25f9b2e4ec7b9949a36914f98f81dbd5138294
-RMD160 (PcsxSrc-1.6beta.tgz) = 11fb5f8bae0b9ab4a82441e1cb8c6e39fb44013c
-Size (PcsxSrc-1.6beta.tgz) = 450595 bytes
-SHA1 (patch-aa) = 9faee84b30c48a5274c2f1df7dbc6aef3a314450
