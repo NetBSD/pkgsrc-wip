@@ -1815,6 +1815,7 @@ SUBDIR+=	ldc017
 SUBDIR+=	ldc120
 SUBDIR+=	lde
 SUBDIR+=	ldtp
+SUBDIR+=	lemonbar
 SUBDIR+=	leo
 SUBDIR+=	lfe
 SUBDIR+=	lgogdownloader-git
