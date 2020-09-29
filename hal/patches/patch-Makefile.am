@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.am.orig	2008-08-10 13:50:10.000000000 +0000
++++ Makefile.am
+@@ -6,7 +6,7 @@ SUBDIRS = libhal libhal-storage partutil
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = hal.pc hal-storage.pc
+ 
+-dbusdir = $(DBUS_SYS_DIR)
++dbusdir = $(PREFIX)/share/examples/hal
+ dist_dbus_DATA = hal.conf
+ 
+ # Creating ChangeLog from git log (taken from cairo/Makefile.am):
