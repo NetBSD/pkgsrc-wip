@@ -44,7 +44,7 @@ post-install:
 
 .include "../../converters/uulib/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"	# for make test
-BUILDLINK_DEPMETHOD.cppunit=    test
+#BUILDLINK_DEPMETHOD.cppunit=    test
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
