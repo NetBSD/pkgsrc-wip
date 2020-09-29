@@ -43,7 +43,7 @@ Part 10: Some textures show pink/black/pink stripes
 Just a cosmetic problem.
 
 [X] Created upstream bug report #663
-    Reason was missing support for DeepSea tall patches (see Part 12)
+    Reason was missing support for DeePsea tall patches (see Part 12)
     Fixed in SVN revision 1547
     => Works as expected
 
@@ -61,6 +61,10 @@ Part 11: Resurrect SunOS codepath
 [X] Use fcntl() instead of ioctl() to enable non-blocking mode of socket
     Should be usable for all POSIX conformant operating systems
 [X] Created upstream bug report #666
+    Patches merged in SVN revision 1548
+[X] Remove pkgsrc patches for SunOS support
+
+Part 11 finished.
 
 
 Part 12: Support for DeePsea tall patches in textures and sprites
@@ -72,15 +76,31 @@ http://jnechaevsky.users.sourceforge.net/files/512x512.wad
 [X] Tested to work for sprites with software renderer
 [X] Make it work for textures with hardware renderer
 [X] Propose reduced patchset upstream
-    => Support for DeepSea tall patches was added in SVN revision 1547
+    => Support for DeePsea tall patches was added in SVN revision 1547
 [X] Test upstream patches
     => Works now with software and hardware renderer
-[X] Remove pkgsrc patches for DeepSea tall patches
+[X] Remove pkgsrc patches for DeePsea tall patches
 
 The hardware renderer still has some problems (HOM with specific viewing
 angles). This looks unrelated to the texture format.
 
 Part 12 finished.
+
+
+Part 13: Problem with masked textures if width not a power of 2
+===============================================================
+[X] Discussed while testing fix for bug #663 with Lost Civilization
+    => Problem with a large tree in Map 1
+    => A similar problem exist with the rotating saw blade in Map 4
+    Fixed in SVN revision 1549
+    => Works as expected
+
+Part 13 finished.
+
+
+Part 14: Import final release
+=============================
+[ ] Import version 1.48.6 to pkgsrc
 
 
 EOF
