@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2017/05/21 17:30:03 adam Exp $
+# $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix50-agent
 PKG_SUPPORTED_OPTIONS+=		inet6

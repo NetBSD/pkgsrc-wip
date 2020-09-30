@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zabbix_server.sh,v 1.1 2017/05/21 17:30:03 adam Exp $
+# $NetBSD$
 #
 # Zabbix server daemon
 #

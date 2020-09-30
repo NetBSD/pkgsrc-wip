@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/06/20 12:43:46 gdt Exp $
+# $NetBSD$
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 

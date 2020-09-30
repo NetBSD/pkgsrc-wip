@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2020/06/20 12:43:46 gdt Exp $
+# $NetBSD$
 # used by sysutils/zabbix50-agent/Makefile
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-server/Makefile

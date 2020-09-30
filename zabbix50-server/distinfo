@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2020/06/20 12:43:46 gdt Exp $
+$NetBSD$
 
 SHA1 (zabbix-5.0.4.tar.gz) = 9ff4fe2a8661eaea115cf214d025a24fc4ef7cbd
 RMD160 (zabbix-5.0.4.tar.gz) = b95bed3dc13f750a1aa72ed012e2fbbca7def2eb
