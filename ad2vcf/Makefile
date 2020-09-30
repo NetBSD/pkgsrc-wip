@@ -5,11 +5,11 @@
 #              Tue May 19 13:12:28 CDT 2020               #
 ###########################################################
 
-DISTNAME=	ad2vcf-0.1.1.47
+DISTNAME=	ad2vcf-0.1.1.49
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_PROJECT=	ad2vcf
-GITHUB_TAG=	69864bda9c3b1248543665d9aab0547fba4f004e
+GITHUB_TAG=	9785f31fbad4773e7f88a49e3f5bfa5c28b42e5e
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/ad2vcf
