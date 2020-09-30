@@ -3143,7 +3143,6 @@ SUBDIR+=	py-biskit
 SUBDIR+=	py-bitarray
 SUBDIR+=	py-bitsets
 SUBDIR+=	py-bitstring
-SUBDIR+=	py-black
 SUBDIR+=	py-blaze
 SUBDIR+=	py-blist
 SUBDIR+=	py-blosc
