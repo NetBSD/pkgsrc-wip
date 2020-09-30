@@ -2393,7 +2393,6 @@ SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
-SUBDIR+=	nxengine-evo
 SUBDIR+=	nyh-hoc
 SUBDIR+=	nzbget
 SUBDIR+=	objfw-fossil
