@@ -1153,6 +1153,7 @@ SUBDIR+=	gnome-backgrounds
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-builder
 SUBDIR+=	gnome-clipboard-daemon
+SUBDIR+=	gnome-common
 SUBDIR+=	gnome-control-center
 SUBDIR+=	gnome-core
 SUBDIR+=	gnome-desktop3
