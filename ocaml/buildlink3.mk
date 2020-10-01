@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	ocaml
 .if !defined(OCAML_BUILDLINK3_MK)
 OCAML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=4.10.0+rc1
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.10.0+rc1
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=4.11.1
+BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.11.1
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 #BUILDLINK_DEPMETHOD.ocaml?=	build
 
