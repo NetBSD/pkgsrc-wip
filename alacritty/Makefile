@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	alacritty-${GITHUB_TAG}
+DISTNAME=	alacritty-0.5.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	v0.5.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jwilm/alacritty
