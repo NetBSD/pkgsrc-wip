@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.16.6
+BIND_VERSION=	9.16.7
 
 # For libatomic and 64-bit operations
 #USE_PKGSRC_GCC=	yes

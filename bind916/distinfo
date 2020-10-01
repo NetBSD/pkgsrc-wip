@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.14 2020/02/20 16:37:06 taca Exp $
 
-SHA1 (bind-9.16.6.tar.xz) = f8a4c1bd074cc0305a4c50971e71da5a3b810d78
-RMD160 (bind-9.16.6.tar.xz) = 3b296d967a6a5a709b599efbffc9697060c5f91b
-SHA512 (bind-9.16.6.tar.xz) = 37f57db6d1633cc85a4d954a69bbb3372c65ac43fef965df5aee8dcdd32153bb5b0c6d0d5f00f353dd4464c71d74dc8e801937b930e2b8f6799fa77af5f243e0
-Size (bind-9.16.6.tar.xz) = 3228368 bytes
+SHA1 (bind-9.16.7.tar.xz) = 633667fac05ad1f87d89bddc504b3e1c3fe0549a
+RMD160 (bind-9.16.7.tar.xz) = 55a5a7cb173ff0bb2214f073c90c2e281daedbd1
+SHA512 (bind-9.16.7.tar.xz) = 176c84657e8a7b10a7ca93c939ca6a7fcdefb22f9200c3f01be59bcd8990dee27b8dc0970299225bcbe0f1aa8f49a67c80c4a9853895ffbcd685adb9674e7768
+Size (bind-9.16.7.tar.xz) = 3241476 bytes
 SHA1 (patch-bin_named_Makefile.in) = 8ef44cfa5b7c66562d9e26b0d3052ccd53388b6f
 SHA1 (patch-bin_named_main.c) = c62eb07ae859d022a77d2b3cbaa48df73e4fa8d4
 SHA1 (patch-bin_named_pfilter.c) = b54f872c883c8fbc2d9c04df65c185dc057cc36b
@@ -11,7 +11,7 @@ SHA1 (patch-bin_named_pfilter.h) = c14617cb266a4b5d33ba6e5db98562e806792833
 SHA1 (patch-bin_named_server.c) = 57f43d4556588447f44980c5acd36cb00cc528cc
 SHA1 (patch-bin_nsupdate_nsupdate.c) = f71213385ec7c78243c1f93a6940caa111cb5072
 SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = d953bf48aadcdf7e95975d335167cc50f54ef91e
-SHA1 (patch-bin_tests_system_kasp_tests.sh) = 76d49ddc9781dd9f03420f1a0b212cc7d0a4e1e3
+SHA1 (patch-bin_tests_system_kasp_tests.sh) = 88402d84b337c864934618f2707bd6e91e3457e4
 SHA1 (patch-bin_tests_system_metadata_tests.sh) = d01a492d0b7738760bdbff714248e279a78fef28
 SHA1 (patch-bin_tests_system_rpz_tests.sh) = 1bc5e0d5c0cc50608e6314c2d2664bd1dc3f6e34
 SHA1 (patch-bin_tools_arpaname.c) = b17050df38ca9734f40351a37a6faf581481e2da
@@ -29,7 +29,6 @@ SHA1 (patch-lib_dns_rbt.c) = c18e79500cae16039020a4fcd8f11a0ced646edc
 SHA1 (patch-lib_dns_rbtdb.c) = 389a83f425050733cb90652ffcb515d7a53d76f2
 SHA1 (patch-lib_dns_request.c) = 890ca130eb515635fe099c92e653a942a91c5253
 SHA1 (patch-lib_dns_sdb.c) = 8a94a65785bb938d330d1446e0100e50fa5fa9bd
-SHA1 (patch-lib_dns_spnego.c) = 817e8d9eceb10a3e7d396ee76b218b4f0009be3f
 SHA1 (patch-lib_dns_validator.c) = 0487bc39326dd6bc9b327aff661045b7416a952d
 SHA1 (patch-lib_dns_view.c) = 54f498d5e2519652498b100789c9c6139a10db12
 SHA1 (patch-lib_isc_backtrace.c) = 5463d3174d1ed809e12e415109fd9b5ecdf8fe2b
