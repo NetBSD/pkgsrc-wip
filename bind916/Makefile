@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.16.4
+BIND_VERSION=	9.16.6
 
 # For libatomic and 64-bit operations
 #USE_PKGSRC_GCC=	yes
@@ -83,7 +83,7 @@ post-install:
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/arm
+	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.rst ${DESTDIR}${PREFIX}/${DOCDIR}/arm
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

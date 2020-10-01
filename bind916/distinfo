@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.14 2020/02/20 16:37:06 taca Exp $
 
-SHA1 (bind-9.16.4.tar.xz) = e6cb05910a6bb9dbc36b3b6d88de7b28fa78c299
-RMD160 (bind-9.16.4.tar.xz) = 6debe010ff34a7e9f137fb089753d6d0ecc9d52c
-SHA512 (bind-9.16.4.tar.xz) = b1cf0607b0d7569ea594e02848eed601b8faf31c527fc17d379cfff3cd45c0c8b849364af0312e9b65bc14875aad87de379281603c150a07bf021ec740e92860
-Size (bind-9.16.4.tar.xz) = 3465172 bytes
+SHA1 (bind-9.16.6.tar.xz) = f8a4c1bd074cc0305a4c50971e71da5a3b810d78
+RMD160 (bind-9.16.6.tar.xz) = 3b296d967a6a5a709b599efbffc9697060c5f91b
+SHA512 (bind-9.16.6.tar.xz) = 37f57db6d1633cc85a4d954a69bbb3372c65ac43fef965df5aee8dcdd32153bb5b0c6d0d5f00f353dd4464c71d74dc8e801937b930e2b8f6799fa77af5f243e0
+Size (bind-9.16.6.tar.xz) = 3228368 bytes
 SHA1 (patch-bin_named_Makefile.in) = 8ef44cfa5b7c66562d9e26b0d3052ccd53388b6f
 SHA1 (patch-bin_named_main.c) = c62eb07ae859d022a77d2b3cbaa48df73e4fa8d4
 SHA1 (patch-bin_named_pfilter.c) = b54f872c883c8fbc2d9c04df65c185dc057cc36b
@@ -11,7 +11,7 @@ SHA1 (patch-bin_named_pfilter.h) = c14617cb266a4b5d33ba6e5db98562e806792833
 SHA1 (patch-bin_named_server.c) = 57f43d4556588447f44980c5acd36cb00cc528cc
 SHA1 (patch-bin_nsupdate_nsupdate.c) = f71213385ec7c78243c1f93a6940caa111cb5072
 SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = d953bf48aadcdf7e95975d335167cc50f54ef91e
-SHA1 (patch-bin_tests_system_kasp_tests.sh) = 644857a9cdbdb4baba3de004f58945f9542aad55
+SHA1 (patch-bin_tests_system_kasp_tests.sh) = 76d49ddc9781dd9f03420f1a0b212cc7d0a4e1e3
 SHA1 (patch-bin_tests_system_metadata_tests.sh) = d01a492d0b7738760bdbff714248e279a78fef28
 SHA1 (patch-bin_tests_system_rpz_tests.sh) = 1bc5e0d5c0cc50608e6314c2d2664bd1dc3f6e34
 SHA1 (patch-bin_tools_arpaname.c) = b17050df38ca9734f40351a37a6faf581481e2da

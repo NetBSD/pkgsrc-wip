@@ -2,7 +2,7 @@ $NetBSD$
 
 Portability in shell script, don't use == with test.
 
---- bin/tests/system/kasp/tests.sh.orig	2020-05-06 09:59:35.000000000 +0000
+--- bin/tests/system/kasp/tests.sh.orig	2020-08-10 09:31:13.000000000 +0000
 +++ bin/tests/system/kasp/tests.sh
 @@ -320,7 +320,7 @@ check_key() {
  	# Check file existence.
@@ -139,7 +139,7 @@ Portability in shell script, don't use == with test.
  		grep "Published: " "$STATE_FILE" > /dev/null && log_error "unexpected publish in $STATE_FILE"
  		grep "Active: " "$STATE_FILE" > /dev/null && log_error "unexpected active in $STATE_FILE"
  		grep "Retired: " "$STATE_FILE" > /dev/null && log_error "unexpected retired in $STATE_FILE"
-@@ -1286,7 +1286,7 @@ set_keytimes_algorithm_policy() {
+@@ -1324,7 +1324,7 @@ set_keytimes_algorithm_policy() {
  	set_keytime    "KEY1" "PUBLISHED" "${created}"
  	set_keytime    "KEY1" "ACTIVE"    "${created}"
  	# Key was pregenerated.
@@ -148,7 +148,7 @@ Portability in shell script, don't use == with test.
  		keyfile=$(key_get KEY1 BASEFILE)
  		grep "; Publish:" "${keyfile}.key" > published.test${n}.key1
  		published=$(awk '{print $3}' < published.test${n}.key1)
-@@ -1313,7 +1313,7 @@ set_keytimes_algorithm_policy() {
+@@ -1351,7 +1351,7 @@ set_keytimes_algorithm_policy() {
  	set_keytime    "KEY2" "PUBLISHED" "${created}"
  	set_keytime    "KEY2" "ACTIVE"    "${created}"
  	# Key was pregenerated.
@@ -157,16 +157,16 @@ Portability in shell script, don't use == with test.
  		keyfile=$(key_get KEY2 BASEFILE)
  		grep "; Publish:" "${keyfile}.key" > published.test${n}.key2
  		published=$(awk '{print $3}' < published.test${n}.key2)
-@@ -1336,7 +1336,7 @@ set_keytimes_algorithm_policy() {
- 	set_keytime    "KEY3" "PUBLISHED" "${published}"
- 	set_keytime    "KEY3" "ACTIVE"    "${published}"
+@@ -1374,7 +1374,7 @@ set_keytimes_algorithm_policy() {
+ 	set_keytime    "KEY3" "PUBLISHED" "${created}"
+ 	set_keytime    "KEY3" "ACTIVE"    "${created}"
  	# Key was pregenerated.
 -	if [ "$1" == "pregenerated" ]; then
 +	if [ "$1" = "pregenerated" ]; then
  		keyfile=$(key_get KEY3 BASEFILE)
  		grep "; Publish:" "${keyfile}.key" > published.test${n}.key3
  		published=$(awk '{print $3}' < published.test${n}.key3)
-@@ -2469,12 +2469,12 @@ rollover_predecessor_keytimes() {
+@@ -2541,12 +2541,12 @@ rollover_predecessor_keytimes() {
  	set_addkeytime  "KEY1" "PUBLISHED"   "${_created}" "${_addtime}"
  	set_addkeytime  "KEY1" "SYNCPUBLISH" "${_created}" "${_addtime}"
  	set_addkeytime  "KEY1" "ACTIVE"      "${_created}" "${_addtime}"
@@ -181,7 +181,7 @@ Portability in shell script, don't use == with test.
  }
  
  # Key properties.
-@@ -2922,7 +2922,7 @@ csk_rollover_predecessor_keytimes() {
+@@ -2994,7 +2994,7 @@ csk_rollover_predecessor_keytimes() {
  	set_addkeytime      "KEY1" "PUBLISHED"   "${_created}" "${_addksktime}"
  	set_addkeytime      "KEY1" "SYNCPUBLISH" "${_created}" "${_addzsktime}"
  	set_addkeytime      "KEY1" "ACTIVE"      "${_created}" "${_addzsktime}"
@@ -190,7 +190,7 @@ Portability in shell script, don't use == with test.
  }
  
  #
-@@ -3824,8 +3824,8 @@ dnssec_verify
+@@ -3908,8 +3908,8 @@ dnssec_verify
  n=$((n+1))
  echo_i "check that of zone ${ZONE} migration to dnssec-policy uses the same keys ($n)"
  ret=0
@@ -201,7 +201,7 @@ Portability in shell script, don't use == with test.
  status=$((status+ret))
  
  # Test migration to dnssec-policy, existing keys do not match key algorithm.
-@@ -3939,8 +3939,8 @@ dnssec_verify
+@@ -4024,8 +4024,8 @@ dnssec_verify
  n=$((n+1))
  echo_i "check that of zone ${ZONE} migration to dnssec-policy keeps existing keys ($n)"
  ret=0
@@ -212,7 +212,7 @@ Portability in shell script, don't use == with test.
  status=$((status+ret))
  
  # Test migration to dnssec-policy, existing keys do not match key length.
-@@ -4055,8 +4055,8 @@ dnssec_verify
+@@ -4141,8 +4141,8 @@ dnssec_verify
  n=$((n+1))
  echo_i "check that of zone ${ZONE} migration to dnssec-policy keeps existing keys ($n)"
  ret=0
