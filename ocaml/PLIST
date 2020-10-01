@@ -1,7 +1,7 @@
 @comment $NetBSD: PLIST,v 1.49 2018/10/16 00:19:40 gdt Exp $
 bin/ocaml
-${PLIST.instrumented_runtime}bin/ocaml-instr-graph
-${PLIST.instrumented_runtime}bin/ocaml-instr-report
+@comment ${PLIST.instrumented_runtime}bin/ocaml-instr-graph
+@comment ${PLIST.instrumented_runtime}bin/ocaml-instr-report
 bin/ocamlc
 bin/ocamlc.byte
 ${PLIST.ocaml-opt}bin/ocamlc.opt
@@ -30,9 +30,9 @@ ${PLIST.ocaml-opt}bin/ocamlobjinfo.opt
 ${PLIST.ocaml-opt}bin/ocamlopt
 ${PLIST.ocaml-opt}bin/ocamlopt.byte
 ${PLIST.ocaml-opt}bin/ocamlopt.opt
-@comment 4.09 bin/ocamloptp
-@comment 4.09 bin/ocamloptp.byte
-@comment 4.09 ${PLIST.ocaml-opt}bin/ocamloptp.opt
+${PLIST.ocaml-opt}bin/ocamloptp
+${PLIST.ocaml-opt}bin/ocamloptp.byte
+${PLIST.ocaml-opt}bin/ocamloptp.opt
 bin/ocamlprof
 bin/ocamlprof.byte
 ${PLIST.ocaml-opt}bin/ocamlprof.opt
@@ -83,6 +83,7 @@ lib/ocaml/caml/domain.h
 lib/ocaml/caml/domain_state.h
 lib/ocaml/caml/domain_state.tbl
 lib/ocaml/caml/dynlink.h
+lib/ocaml/caml/eventlog.h
 lib/ocaml/caml/exec.h
 lib/ocaml/caml/fail.h
 lib/ocaml/caml/finalise.h
@@ -423,6 +424,9 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmmgen_state.mli
 lib/ocaml/compiler-libs/cmo_format.cmi
 lib/ocaml/compiler-libs/cmo_format.cmti
 lib/ocaml/compiler-libs/cmo_format.mli
+lib/ocaml/compiler-libs/cmt2annot.cmi
+lib/ocaml/compiler-libs/cmt2annot.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmt2annot.cmx
 lib/ocaml/compiler-libs/cmt_format.cmi
 lib/ocaml/compiler-libs/cmt_format.cmt
 lib/ocaml/compiler-libs/cmt_format.cmti
@@ -1359,6 +1363,11 @@ lib/ocaml/compiler-libs/typedecl_properties.cmt
 lib/ocaml/compiler-libs/typedecl_properties.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/typedecl_properties.cmx
 lib/ocaml/compiler-libs/typedecl_properties.mli
+lib/ocaml/compiler-libs/typedecl_separability.cmi
+lib/ocaml/compiler-libs/typedecl_separability.cmt
+lib/ocaml/compiler-libs/typedecl_separability.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/typedecl_separability.cmx
+lib/ocaml/compiler-libs/typedecl_separability.mli
 lib/ocaml/compiler-libs/typedecl_unboxed.cmi
 lib/ocaml/compiler-libs/typedecl_unboxed.cmt
 lib/ocaml/compiler-libs/typedecl_unboxed.cmti
@@ -1474,6 +1483,7 @@ ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink_platform_intf.cmx
 ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink_types.cmx
 lib/ocaml/ephemeron.ml
 lib/ocaml/ephemeron.mli
+lib/ocaml/eventlog_metadata
 lib/ocaml/expunge
 lib/ocaml/extract_crc
 lib/ocaml/filename.ml
@@ -2236,6 +2246,7 @@ man/man3/Float.ArrayLabels.3
 man/man3/Format.3
 man/man3/Fun.3
 man/man3/Gc.3
+man/man3/Gc.Memprof.3
 man/man3/Genlex.3
 man/man3/Hashtbl.3
 man/man3/Hashtbl.HashedType.3
@@ -2283,6 +2294,7 @@ man/man3/Misc.EnvLazy.3
 man/man3/Misc.Error_style.3
 man/man3/Misc.Int_literal_converter.3
 man/man3/Misc.LongString.3
+man/man3/Misc.Magic_number.3
 man/man3/Misc.Stdlib.3
 man/man3/Misc.Stdlib.Array.3
 man/man3/Misc.Stdlib.List.3
@@ -2326,8 +2338,6 @@ man/man3/Parser.Incremental.3
 man/man3/Parser.MenhirInterpreter.3
 man/man3/Parsetree.3
 man/man3/Parsing.3
-man/man3/Pervasives.3
-man/man3/Pervasives.LargeFile.3
 man/man3/Pparse.3
 man/man3/Pprintast.3
 man/man3/Printast.3

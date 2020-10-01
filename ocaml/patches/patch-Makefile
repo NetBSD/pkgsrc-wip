@@ -1,20 +1,17 @@
 $NetBSD$
 
-Use BSD_INSTALL_* instead of mkdir
-Honor LDFLAGS
-
---- Makefile.orig	2020-01-10 16:10:46.000000000 +0000
+--- Makefile.orig	2020-09-01 12:47:58.000000000 +0000
 +++ Makefile
-@@ -53,7 +53,7 @@ OPTCOMPFLAGS= -function-sections
- else
- OPTCOMPFLAGS=
- endif
+@@ -61,7 +61,7 @@ INCLUDES=-I utils -I parsing -I typing -
+ COMPFLAGS=-strict-sequence -principal -absname -w +a-4-9-40-41-42-44-45-48-66 \
+ 	  -warn-error A \
+           -bin-annot -safe-string -strict-formats $(INCLUDES)
 -LINKFLAGS=
 +LINKFLAGS= -cclib "$(LDFLAGS)"
  
  ifeq "$(strip $(NATDYNLINKOPTS))" ""
  OCAML_NATDYNLINKOPTS=
-@@ -545,10 +545,10 @@ endif
+@@ -351,10 +351,10 @@ endif
  # Installation
  .PHONY: install
  install:
@@ -29,7 +26,7 @@ Honor LDFLAGS
  	$(INSTALL_DATA) \
  	  VERSION \
  	  "$(INSTALL_LIBDIR)"
-@@ -602,7 +602,7 @@ ifeq "$(INSTALL_SOURCE_ARTIFACTS)" "true
+@@ -408,7 +408,7 @@ ifeq "$(INSTALL_SOURCE_ARTIFACTS)" "true
  endif
  	$(MAKE) -C tools install
  ifeq "$(UNIX_OR_WIN32)" "unix" # Install manual pages only on Unix
