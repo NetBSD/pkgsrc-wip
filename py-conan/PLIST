@@ -437,6 +437,9 @@ ${PYSITELIB}/conans/client/toolchain/base.pyo
 ${PYSITELIB}/conans/client/toolchain/cmake.py
 ${PYSITELIB}/conans/client/toolchain/cmake.pyc
 ${PYSITELIB}/conans/client/toolchain/cmake.pyo
+${PYSITELIB}/conans/client/toolchain/make.py
+${PYSITELIB}/conans/client/toolchain/make.pyc
+${PYSITELIB}/conans/client/toolchain/make.pyo
 ${PYSITELIB}/conans/client/tools/__init__.py
 ${PYSITELIB}/conans/client/tools/__init__.pyc
 ${PYSITELIB}/conans/client/tools/__init__.pyo
@@ -761,9 +764,6 @@ ${PYSITELIB}/conans/test/utils/__init__.pyo
 ${PYSITELIB}/conans/test/utils/conan_v2_tests.py
 ${PYSITELIB}/conans/test/utils/conan_v2_tests.pyc
 ${PYSITELIB}/conans/test/utils/conan_v2_tests.pyo
-${PYSITELIB}/conans/test/utils/conanfile.py
-${PYSITELIB}/conans/test/utils/conanfile.pyc
-${PYSITELIB}/conans/test/utils/conanfile.pyo
 ${PYSITELIB}/conans/test/utils/cpp_test_files.py
 ${PYSITELIB}/conans/test/utils/cpp_test_files.pyc
 ${PYSITELIB}/conans/test/utils/cpp_test_files.pyo
@@ -773,6 +773,9 @@ ${PYSITELIB}/conans/test/utils/deprecation.pyo
 ${PYSITELIB}/conans/test/utils/genconanfile.py
 ${PYSITELIB}/conans/test/utils/genconanfile.pyc
 ${PYSITELIB}/conans/test/utils/genconanfile.pyo
+${PYSITELIB}/conans/test/utils/mocks.py
+${PYSITELIB}/conans/test/utils/mocks.pyc
+${PYSITELIB}/conans/test/utils/mocks.pyo
 ${PYSITELIB}/conans/test/utils/multi_config.py
 ${PYSITELIB}/conans/test/utils/multi_config.pyc
 ${PYSITELIB}/conans/test/utils/multi_config.pyo
@@ -782,6 +785,9 @@ ${PYSITELIB}/conans/test/utils/profiles.pyo
 ${PYSITELIB}/conans/test/utils/python_test_files.py
 ${PYSITELIB}/conans/test/utils/python_test_files.pyc
 ${PYSITELIB}/conans/test/utils/python_test_files.pyo
+${PYSITELIB}/conans/test/utils/scm.py
+${PYSITELIB}/conans/test/utils/scm.pyc
+${PYSITELIB}/conans/test/utils/scm.pyo
 ${PYSITELIB}/conans/test/utils/server_launcher.py
 ${PYSITELIB}/conans/test/utils/server_launcher.pyc
 ${PYSITELIB}/conans/test/utils/server_launcher.pyo
