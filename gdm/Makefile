@@ -119,7 +119,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/gdm-* ${DESTDIR}/${PREFIX}/share/examples/pam.d
 	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/gdm/Xsession
 
-.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../security/openpam/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
