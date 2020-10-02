@@ -49,7 +49,7 @@ post-extract:
 .include "../../security/gcr/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
-.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../devel/meson/build.mk"
