@@ -4,7 +4,7 @@ DISTNAME=	phaethon-${GITHUB_TAG}
 PKGNAME=	phaethon-${GITHUB_TAG:S/v//}
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
-GITHUB_TAG=	v0.0.5
+GITHUB_TAG=	v0.0.6
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://xoreos.org/
