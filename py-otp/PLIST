@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyotp/__init__.py
+${PYSITELIB}/pyotp/__init__.pyc
+${PYSITELIB}/pyotp/__init__.pyo
+${PYSITELIB}/pyotp/compat.py
+${PYSITELIB}/pyotp/compat.pyc
+${PYSITELIB}/pyotp/compat.pyo
+${PYSITELIB}/pyotp/hotp.py
+${PYSITELIB}/pyotp/hotp.pyc
+${PYSITELIB}/pyotp/hotp.pyo
+${PYSITELIB}/pyotp/otp.py
+${PYSITELIB}/pyotp/otp.pyc
+${PYSITELIB}/pyotp/otp.pyo
+${PYSITELIB}/pyotp/py.typed
+${PYSITELIB}/pyotp/totp.py
+${PYSITELIB}/pyotp/totp.pyc
+${PYSITELIB}/pyotp/totp.pyo
+${PYSITELIB}/pyotp/utils.py
+${PYSITELIB}/pyotp/utils.pyc
+${PYSITELIB}/pyotp/utils.pyo
