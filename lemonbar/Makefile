@@ -11,13 +11,12 @@ HOMEPAGE=	https://github.com/LemonBoy/bar
 COMMENT=	Featherweight lemon-scented bar
 LICENSE=	mit
 
-USE_TOOLS+=	gmake
+# perl is a build dependency because pod2man is needed
+# to generate lemonbar's man page
+USE_TOOLS+=	gmake perl
 
-# this post-build target was copied from the FreeBSD port.
-#
-# this generates the man page because, for some reason, the `all'
-# target of lemonbar's Makefile does not call the `doc' target
-# that would normally do this.
+# generate the man page as in the lemonbar Makefile's `doc' target
+# because, for some reason, `all' does not call it
 post-build:
 	${LOCALBASE}/bin/pod2man --section=1 --name=lemonbar \
 		--center="lemonbar manual" \
@@ -31,6 +30,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/lemonbar.1 ${DESTDIR}${PREFIX}/man/man1/
 
 .include "../../x11/libxcb/buildlink3.mk"
-# perl for pod2man
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
