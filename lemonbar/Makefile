@@ -31,4 +31,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/lemonbar.1 ${DESTDIR}${PREFIX}/man/man1/
 
 .include "../../x11/libxcb/buildlink3.mk"
+# perl for pod2man
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
