@@ -1,6 +1,0 @@
-Aesthete is an attempt to provide a Python-based fully-featured,
-innovative  integrated mathematical environment, as a frontend to sympy,
-scipy and numpy. Aesthete is not intended as a GUIfied replacement
-for MATLAB (if that is  what you are looking for, try QtOctave or SAGE).
-Instead it focuses on providing basic, unscripted maths processing
-and presentation.
