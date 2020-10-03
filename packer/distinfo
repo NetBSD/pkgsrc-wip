@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (packer-v1.6.3.tar.gz) = 92e65e1e65beee0605f27034e7389a36441dc1cb
-RMD160 (packer-v1.6.3.tar.gz) = e4fb07ea4ccccbd5be292125ab10a5acb5eaf4c2
-SHA512 (packer-v1.6.3.tar.gz) = 7ded292505c5681d1b76856061f844bc4c9b18e3519fa7e2586c54b990ce4b9f3f6d6e4c2bbf0f5b5bfb86b90c461d21d88ef183d421b1e6a2ae73c5b3342612
-Size (packer-v1.6.3.tar.gz) = 17658322 bytes
+SHA1 (packer-v1.6.4.tar.gz) = e080a58c8d03b6650e9ec93ec4d20116d7d8fa61
+RMD160 (packer-v1.6.4.tar.gz) = d48b53f22e80431b389947ff11a7d815e4b4527d
+SHA512 (packer-v1.6.4.tar.gz) = ab4c0722b3b347a956b6ffee0bcd2b809c0677f690fd575f49dff71e5660e64f0bf580a3050940f86314f449692d9816a63dd94ce5682fd97a22cd1fe72a838c
+Size (packer-v1.6.4.tar.gz) = 17678845 bytes
