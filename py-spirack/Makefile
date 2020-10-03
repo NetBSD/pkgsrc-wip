@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	https://files.pythonhosted.org/packages/d6/ae/fca118f737dc653edde86958fa63f68865e8f0320a213d8ab7e12781ecb5/
 
-MAINTAINER=	jihbed.research@gamail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/mtiggelman/SPI-rack
 COMMENT=	Drivers for the QuTech SPI-rack
 LICENSE=	mit
