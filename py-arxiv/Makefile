@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	https://files.pythonhosted.org/packages/7b/c4/f1c53cdff1e8fbd3eba97276a5112745c1cb861bad43fb5b7c5c033159c1/
 
-MAINTAINER=	jihbed.research@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/lukasschwab/arxiv.py
 COMMENT=	Python wrapper for the arXiv API
 LICENSE=	mit
