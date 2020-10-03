@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/09 20:09:15 jihbed Exp $
-
-SHA1 (pyutilib.component.executables-3.4.tar.gz) = 19899d2660645ce93e9b6e622e4be34aa857046e
-RMD160 (pyutilib.component.executables-3.4.tar.gz) = 15639238b376bfff5f019e30f4cb73ca0cd25f4d
-Size (pyutilib.component.executables-3.4.tar.gz) = 4141 bytes
