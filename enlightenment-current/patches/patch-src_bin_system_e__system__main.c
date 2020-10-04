@@ -9,7 +9,7 @@ $NetBSD$
     char type[32], usergroup[256], cmd[32], glob[256], buf[1024];
     Eina_Bool in_usergroup;
 +#if defined (__NetBSD__)
-+   FILE *f = fopen("/usr/pkg/etc/enlightenment/system.conf", "r");
++   FILE *f = fopen("@PREFIX@/etc/enlightenment/system.conf", "r");
 +#else
     FILE *f = fopen("/etc/enlightenment/system.conf", "r");
 +#endif

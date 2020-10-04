@@ -8,7 +8,7 @@ $NetBSD$
          "/etc/xdg",
          "/usr/etc/xdg",
          "/usr/local/etc/xdg",
-+        "/usr/pkg/etc/xdg",
++        "@PREFIX@/etc/xdg",
          "/usr/opt/etc/xdg",
          "/usr/opt/xdg",
          "/usr/local/opt/etc/xdg",

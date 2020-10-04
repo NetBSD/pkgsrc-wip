@@ -9,7 +9,7 @@ $NetBSD$
     int deny = 0;
  
 +#if defined (__NetBSD__)
-+   snprintf(file, sizeof(file), "/usr/pkg/etc/enlightenment/sysactions.conf");
++   snprintf(file, sizeof(file), "@PREFIX@/etc/enlightenment/sysactions.conf");
 +#else
     snprintf(file, sizeof(file), "/etc/enlightenment/sysactions.conf");
 +#endif
