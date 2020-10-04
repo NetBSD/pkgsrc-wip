@@ -1,18 +1,11 @@
-:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-06-06 >> build OK
+#### Status
+Build on NetBSD 9.0_STABLE amd64, pkgsrc-2020Q2
 
-Message: ecore_buffer disabled! <[dependency('wayland-client'), dependency('wayland-server'), ecore]
-Message: ecore_cocoa disabled! < osx
-Message: ecore_drm disabled! < dep: eeze
-Message: ecore_drm2 disabled! < dep: eeze
-Message: ecore_fb disabled! < deafault false, Framebuffer (/dev/fb / fbocon) support in efl
-Message: ecore_wayland disabled! <[dependency('wayland-client', version: '>= 1.8.0'), dependency('wayland-cursor', version: '>= 1.8.0 '), \
-				   dependency('xkbcommon', version: '>= 0.5.0'), dependency('uuid')]
-Message: ecore_wl2 disabled! <[dependency('wayland-client'), dependency('wayland-server'), dependency('xkbcommon'), \
-				  wayland_protocol, dl, m, ecore, ecore_input, libdrm, buildsystem]
-Message: eeze disabled! < linuxism
-Message: efl_canvas_wl disabled! <[eo, efl, evas, dependency('wayland-server', version : '>= 1.11.0'), dependency('xkbcommon', version : '>= 0.6.0')]
-Message: elput disabled! < dep: eeze
+3rd party binary repository:
+`# echo "https://sourceforge.net/projects/kikadf/files/NetBSD/amd64/All/" >> /usr/pkg/etc/pkgin/repositories.conf`
+`# pkgin -f update`
+`# pkgin install efl`
 
-:: Plan
-1. Test with enlightenment-current, optimize depends
-2. Add another OS support
+#### Plan
+- Fix segfault when build with efl main loop: https://phab.enlightenment.org/T8812
+- Add another OS support
