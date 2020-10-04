@@ -1753,6 +1753,7 @@ SUBDIR+=	kea
 SUBDIR+=	kea-git
 SUBDIR+=	keama-git
 SUBDIR+=	keditbookmarks
+SUBDIR+=	kermit
 SUBDIR+=	kfind
 SUBDIR+=	kgamma5
 SUBDIR+=	kget

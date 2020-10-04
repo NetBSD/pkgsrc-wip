@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.28 2020/07/30 03:03:07 gutteridge Exp $
+
+SHA1 (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 90a3cdc9d5112d752a8637b6a76f6aef7da8a00c
+RMD160 (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 4cd3cc02f6f5367b158f2fabc910e3ab7ffcee6a
+SHA512 (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 017c742d53fa847b844554ce46708a32bee76af2efb092c3149b92f9ef50e0aa03ce52ffe99fc46ebfb7eeda1f4660b9f936d92c48625eda92369496070dd3a1
+Size (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 2545990 bytes
+SHA1 (patch-aa) = fd3a613ce3cd3755a2e3b8baf33df33593713024
+SHA1 (patch-ab) = 280bfca4d44630bc9ec4a9331b650b81c7f80774
+SHA1 (patch-ac) = 62cc9e92f2413a42312d9f6d168ee85664b6aab9
+SHA1 (patch-ad) = 414f61c19185e4a82a8326121c2d9dacfba48077
+SHA1 (patch-ae) = 3cd335d719933fce95c2f5b05e9959d0d1ca06e0
+SHA1 (patch-af) = 2a09f9f933d3c1e6860983d8138ac61f33306ef7
+SHA1 (patch-ag) = cae37680ea5af85f4d2c774fe230f73a1f0be48c
+SHA1 (patch-ah) = 5b2098dfd57f8bd4d107acafaabe1a2c9b97d037
+SHA1 (patch-aj) = 6468e2139639f601de4609db8dff07b8b3a82d82
+SHA1 (patch-ak) = 983583d79abc4fcee1b7e9bf8ae46f184aa7011d
+SHA1 (patch-al) = 616ad10e65b24a04d24ff2556d6362ef3cc64b78
+SHA1 (patch-am) = 8c5acbfefe7b7d11825cc32c4449582b51f6cad9
+SHA1 (patch-ckcftp.c) = 1af977dce79f61c43619186c6a5d2032d7a9a6bd
+SHA1 (patch-ckcpro.w) = 247c1d0e0bcec632c4095c10067757cc40fb3831
+SHA1 (patch-ckupty.c) = fd8966627f3642550750ccd42e3add64a36dae09
+SHA1 (patch-ckuus3.c) = 557e938b36931f7948783116d1c5c2224d51bcbb
+SHA1 (patch-ckuus4.c) = 2204f4c95f8266358b66ac0936ac83ab27bec0c9

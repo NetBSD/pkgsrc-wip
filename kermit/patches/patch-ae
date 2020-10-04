@@ -1,0 +1,65 @@
+$NetBSD: patch-ae,v 1.8 2020/07/30 03:03:07 gutteridge Exp $
+
+Portability fixes for DragonFly, SunOS, and Linux.
+
+The Linux fix is taken from upstream's 9.0.305 Alpha.01 release, and is
+noted to be a temporary workaround, so it may change in form in a
+pending release.
+
+--- ckucmd.c.orig	2011-07-14 12:14:37.000000000 +0000
++++ ckucmd.c
+@@ -7370,7 +7370,11 @@ cmdconchk() {
+ 
+ /* Here we must look inside the stdin buffer - highly platform dependent */
+ 
+-#ifdef _IO_file_flags			/* Linux */
++#ifdef __FILE_defined                   /* glibc 2.28 1 Aug 2018 */
++    x = (int) ((stdin->_IO_read_end) - (stdin->_IO_read_ptr));
++    debug(F101,"cmdconchk __FILE_defined","",x);
++#else /* __FILE_defined */ 
++#ifdef _IO_file_flags              /* Linux (glibc 2.28 removed this symbol */
+     x = (int) ((stdin->_IO_read_end) - (stdin->_IO_read_ptr));
+     debug(F101,"cmdconchk _IO_file_flags","",x);
+ #else  /* _IO_file_flags */
+@@ -7382,8 +7386,19 @@ cmdconchk() {
+ #ifdef NOARROWKEYS
+     debug(F101,"cmdconchk NOARROWKEYS x","",0);
+ #else
++#if defined(__sun) && (defined(__amd64) || defined(__sparcv9))
++    struct sun_64_FILE {
++	unsigned char	*_ptr;  /* next character from/to here in buffer */
++	unsigned char	*_base; /* the buffer */
++	unsigned char	*_end;  /* the end of the buffer */
++	ssize_t		_cnt;   /* number of available characters in buffer */
++    } *sun_64_stdin = (struct sun_64_FILE *)stdin;
++    debug(F101,"cmdconchk sun_64_stdin->_cnt","",sun_64_stdin->_cnt);
++    x = sun_64_stdin->_cnt;
++#else
+     debug(F101,"cmdconchk stdin->_cnt","",stdin->_cnt);
+     x = stdin->_cnt;
++#endif
+ #endif /* NOARROWKEYS */
+ #endif /* VMS */
+     if (x == 0) x = conchk();
+@@ -7395,7 +7410,12 @@ cmdconchk() {
+     if (x == 0) x = conchk();
+     if (x < 0) x = 0;
+ #else  /* USE_FILE_CNT */
+-#ifdef USE_FILE_R			/* FreeBSD, OpenBSD, etc */
++#if defined(__DragonFly__) && defined(feof_unlocked)
++    debug(F101,"cmdconchk stdin->_r","",((struct __FILE_public *)stdin)->_r);
++    x = ((struct __FILE_public *)stdin)->_r;
++    if (x == 0) x = conchk();
++    if (x < 0) x = 0;
++#elif defined(USE_FILE_R)			/* FreeBSD, OpenBSD, etc */
+     debug(F101,"cmdconchk stdin->_r","",stdin->_r);
+     x = stdin->_r;
+     if (x == 0) x = conchk();
+@@ -7407,6 +7427,7 @@ cmdconchk() {
+ #endif /* USE_FILE__CNT */
+ #endif /* USE_FILE_CNT */
+ #endif /* _IO_file_flags */
++#endif /* __FILE_defined */
+ #endif /* CMD_CONINC */
+ #endif /* OS2 */
+     return(x + y);
