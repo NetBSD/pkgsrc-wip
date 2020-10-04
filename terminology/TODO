@@ -1,11 +1,8 @@
-:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-07-10 >> build(NOTE)&run OK
+#### Status
+Build on NetBSD 9.0_STABLE amd64, pkgsrc-2020Q2
 
-:: NOTE
-edje_cc random hang when building themes. Just SIGKILL helps.
-After make again without make clean, building "fine".
-The package works. Theme switch works.
+3rd party binary repository:
+`# echo "https://sourceforge.net/projects/kikadf/files/NetBSD/amd64/All/" >> /usr/pkg/etc/pkgin/repositories.conf`
+`# pkgin -f update`
+`# pkgin install terminology`
 
-Workaround: themes compiling disabled, use prebuilded themes
-from own github repo. So, the build not hang anymore, but:
-
-Need to find the problem in edje_cc...
