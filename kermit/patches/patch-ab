@@ -5,9 +5,9 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
   *v23* methods were not version-flexible enough). Now afer simplification
   there is lots of duplicate code left over that could be simplified more.
 
---- ck_ssl.c.orig	2011-07-06 15:03:32.000000000 +0200
-+++ ck_ssl.c	2020-04-06 16:43:41.323530837 +0200
-@@ -301,7 +301,7 @@
+--- ck_ssl.c.orig	2017-04-26 15:56:23.000000000 +0000
++++ ck_ssl.c
+@@ -303,7 +303,7 @@ X509_STORE_CTX *ctx;
                  break;
              default:
                  printf("Error %d while verifying certificate.\r\n",
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
                  break;
              }
          }
-@@ -804,6 +804,17 @@
+@@ -806,6 +806,17 @@ ssl_client_cert_callback(s, x509, pkey)
  #define MS_CALLBACK
  #endif /* MS_CALLBACK */
  
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
  static RSA MS_CALLBACK *
  #ifdef CK_ANSIC
  tmp_rsa_cb(SSL * s, int export, int keylength)
-@@ -822,7 +833,16 @@
+@@ -824,7 +835,16 @@ int keylength;
          if (ssl_debug_flag)
              printf("Generating temporary (%d bit) RSA key...\r\n",keylength);
  
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
  
          if (ssl_debug_flag)
              printf("\r\n");
-@@ -936,10 +956,26 @@
+@@ -938,10 +958,26 @@ get_dh512()
  
      if ((dh=DH_new()) == NULL)
          return(NULL);
@@ -80,7 +80,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      return(dh);
  }
  
-@@ -950,10 +986,26 @@
+@@ -952,10 +988,26 @@ get_dh768()
  
      if ((dh=DH_new()) == NULL)
          return(NULL);
@@ -108,7 +108,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      return(dh);
  }
  
-@@ -964,10 +1016,26 @@
+@@ -966,10 +1018,26 @@ get_dh1024()
  
      if ((dh=DH_new()) == NULL)
          return(NULL);
@@ -136,7 +136,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      return(dh);
  }
  
-@@ -978,10 +1046,26 @@
+@@ -980,10 +1048,26 @@ get_dh1536()
  
      if ((dh=DH_new()) == NULL)
          return(NULL);
@@ -164,7 +164,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      return(dh);
  }
  
-@@ -992,10 +1076,26 @@
+@@ -994,10 +1078,26 @@ get_dh2048()
  
      if ((dh=DH_new()) == NULL)
          return(NULL);
@@ -192,21 +192,24 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      return(dh);
  }
  #endif /* NO_DH */
-@@ -1054,10 +1154,11 @@
-     if (ssl == NULL)
+@@ -1057,13 +1157,14 @@ ssl_display_comp(SSL * ssl)
          return;
  
+ #ifndef OPENSSL_NO_COMP                  /* ifdefs Bernard Spil 12/2015 */
 -    if (ssl->expand == NULL || ssl->expand->meth == NULL)
 +    const COMP_METHOD *method = SSL_get_current_compression(ssl);
 +    if (method == NULL)
+ #endif /* OPENSSL_NO_COMP */
          printf("Compression: None\r\n");
+ 
+ #ifndef OPENSSL_NO_COMP                  /* ifdefs Bernard Spil 12/2015 */
      else {
 -        printf("Compression: %s\r\n",ssl->expand->meth->name);
 +        printf("Compression: %s\r\n",SSL_COMP_get_name(method));
      }
+ #endif /* OPENSSL_NO_COMP */
  }
- 
-@@ -1072,7 +1173,7 @@
+@@ -1079,7 +1180,7 @@ int verbose;
  #endif /* CK_ANSIC */
  {
      X509 *peer;
@@ -215,7 +218,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      const char *cipher_list;
      char buf[512]="";
  
-@@ -1457,13 +1558,23 @@
+@@ -1489,13 +1590,23 @@ the build.\r\n\r\n");
  
  #ifdef ZLIB
      cm = COMP_zlib();
@@ -239,72 +242,33 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
  
      /* Ensure the Random number generator has enough entropy */
      if ( !RAND_status() ) {
-@@ -1483,8 +1594,12 @@
-         }
-         debug(F110,"ssl_rnd_file",ssl_rnd_file,0);
- 
-+#ifdef OPENSSL_NO_EGD
-+	rc1 = 0;
-+#else
-         rc1 = RAND_egd(ssl_rnd_file);
-         debug(F111,"ssl_once_init","RAND_egd()",rc1);
-+#endif
-         if ( rc1 <= 0 ) {
-             rc2 = RAND_load_file(ssl_rnd_file, -1);
-             debug(F111,"ssl_once_init","RAND_load_file()",rc1);
-@@ -1579,25 +1694,13 @@
+@@ -1613,12 +1724,6 @@ ssl_tn_init(mode) int mode;
              /* This can fail because we do not have RSA available */
              if ( !ssl_ctx ) {
                  debug(F110,"ssl_tn_init","SSLv23_client_method failed",0);
+-#ifndef OPENSSL_NO_SSL3                  /* ifdef Bernard Spil 12/2015 */
 -                ssl_ctx=(SSL_CTX *)SSL_CTX_new(SSLv3_client_method());
+-#endif /* OPENSSL_NO_SSL3 */
 -            }
 -            if ( !ssl_ctx ) {
 -                debug(F110,"ssl_tn_init","SSLv3_client_method failed",0);
                  last_ssl_mode = -1;
                  return(0);
              }
--#ifndef COMMENT
--            tls_ctx=(SSL_CTX *)SSL_CTX_new(TLSv1_client_method());
--#else /* COMMENT */
-             tls_ctx=(SSL_CTX *)SSL_CTX_new(SSLv23_client_method());
-             /* This can fail because we do not have RSA available */
-             if ( !tls_ctx ) {
-                 debug(F110,"ssl_tn_init","SSLv23_client_method failed",0);
--                tls_ctx=(SSL_CTX *)SSL_CTX_new(SSLv3_client_method());
--            }
--#endif /* COMMENT */
--            if ( !tls_ctx ) {
--                debug(F110,"ssl_tn_init","TLSv1_client_method failed",0);
-                 last_ssl_mode = -1;
-                 return(0);
-             }
-@@ -1611,25 +1714,13 @@
+@@ -1664,12 +1769,6 @@ ssl_tn_init(mode) int mode;
              /* This can fail because we do not have RSA available */
              if ( !ssl_ctx ) {
                  debug(F110,"ssl_tn_init","SSLv23_server_method failed",0);
+-#ifndef OPENSSL_NO_SSL3           /* ifdef Bernard Spil 12/2015 */
 -                ssl_ctx=(SSL_CTX *)SSL_CTX_new(SSLv3_server_method());
+-#endif /* OPENSSL_NO_SSL3 */
 -            }
 -            if ( !ssl_ctx ) {
 -                debug(F110,"ssl_tn_init","SSLv3_server_method failed",0);
                  last_ssl_mode = -1;
                  return(0);
              }
--#ifdef COMMENT
--            tls_ctx=(SSL_CTX *)SSL_CTX_new(TLSv1_server_method());
--#else /* COMMENT */
-             tls_ctx=(SSL_CTX *)SSL_CTX_new(SSLv23_server_method());
-             /* This can fail because we do not have RSA available */
-             if ( !tls_ctx ) {
-                 debug(F110,"ssl_tn_init","SSLv23_server_method failed",0);
--                tls_ctx=(SSL_CTX *)SSL_CTX_new(TLSv1_server_method());
--            }
--#endif /* COMMENT */
--            if ( !tls_ctx ) {
--                debug(F110,"ssl_tn_init","TLSv1_server_method failed",0);
-                 last_ssl_mode = -1;
-                 return(0);
-             }
-@@ -1655,7 +1746,6 @@
+@@ -1710,7 +1809,6 @@ ssl_tn_init(mode) int mode;
          SSL_CTX_set_info_callback(ssl_ctx,ssl_client_info_callback);
          SSL_CTX_set_info_callback(tls_ctx,ssl_client_info_callback);
  
@@ -312,7 +276,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
          /* Set the proper caching mode */
          if ( mode == SSL_SERVER ) {
              SSL_CTX_set_session_cache_mode(ssl_ctx,SSL_SESS_CACHE_SERVER);
-@@ -1666,10 +1756,6 @@
+@@ -1721,10 +1819,6 @@ ssl_tn_init(mode) int mode;
          }
          SSL_CTX_set_session_id_context(ssl_ctx,(CHAR *)"1",1);
          SSL_CTX_set_session_id_context(tls_ctx,(CHAR *)"2",1);
@@ -323,7 +287,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      }
  
      /* The server uses defaults for the certificate files. */
-@@ -1777,7 +1863,14 @@
+@@ -1832,7 +1926,14 @@ ssl_tn_init(mode) int mode;
  
                  if ( ssl_debug_flag )
                      printf("Generating temp (512 bit) RSA key ...\r\n");
@@ -339,26 +303,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
                  if ( ssl_debug_flag )
                      printf("Generation of temp (512 bit) RSA key done\r\n");
  
-@@ -2153,18 +2246,10 @@
-         printf("SSL_DEBUG_FLAG on\r\n");
- 
-     if (!tls_http_ctx ) {
--#ifdef COMMENT
--        /* too many web servers still do not support TLSv1 */
--        tls_http_ctx=(SSL_CTX *)SSL_CTX_new(TLSv1_client_method());
--#else /* COMMENT */
-         tls_http_ctx=(SSL_CTX *)SSL_CTX_new(SSLv23_client_method());
-         /* This can fail because we do not have RSA available */
-         if ( !tls_http_ctx ) {
-             debug(F110,"ssl_http_init","SSLv23_client_method failed",0);
--            tls_http_ctx=(SSL_CTX *)SSL_CTX_new(SSLv3_client_method());
--        }
--#endif /* COMMENT */
--        if ( !tls_http_ctx ) {
-             debug(F110,"ssl_http_init","TLSv1_client_method failed",0);
-             return(0);
-         }
-@@ -2182,7 +2267,7 @@
+@@ -2230,7 +2331,7 @@ ssl_http_init(hostname) char * hostname;
       * for TLS be sure to prevent use of SSLv2
       */
      SSL_CTX_set_options(tls_http_ctx,
@@ -367,7 +312,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
  
      SSL_CTX_set_info_callback(tls_http_ctx,ssl_client_info_callback);
  
-@@ -2575,7 +2660,11 @@
+@@ -2623,7 +2724,11 @@ ssl_anonymous_cipher(ssl) SSL * ssl;
  int
  ssl_verify_crl(int ok, X509_STORE_CTX *ctx)
  {
@@ -379,7 +324,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      X509_NAME *subject = NULL;
      X509_NAME *issuer = NULL;
      X509 *xs = NULL;
-@@ -2595,6 +2684,14 @@
+@@ -2643,6 +2748,14 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
      if (!crl_store)
          return ok;
  
@@ -394,7 +339,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      store_ctx = X509_STORE_CTX_new();
      if ( !store_ctx )
          return(ok);
-@@ -2641,11 +2738,16 @@
+@@ -2689,11 +2802,16 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
       * Try to retrieve a CRL corresponding to the _subject_ of
       * the current certificate in order to verify it's integrity.
       */
@@ -412,7 +357,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      if (rc > 0 && crl != NULL) {
          /*
           * Verify the signature on this CRL
-@@ -2653,7 +2755,11 @@
+@@ -2701,7 +2819,11 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
          if (X509_CRL_verify(crl, X509_get_pubkey(xs)) <= 0) {
              fprintf(stderr, "Invalid signature on CRL!\n");
              X509_STORE_CTX_set_error(ctx, X509_V_ERR_CRL_SIGNATURE_FAILURE);
@@ -424,7 +369,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
              X509_STORE_CTX_free(store_ctx);
              return 0;
          }
-@@ -2661,12 +2767,16 @@
+@@ -2709,12 +2831,16 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
          /*
           * Check date of CRL to make sure it's not expired
           */
@@ -442,7 +387,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
              X509_STORE_CTX_free(store_ctx);
              return 0;
          }
-@@ -2675,22 +2785,38 @@
+@@ -2723,22 +2849,38 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
  "Found CRL is expired - revoking all certificates until you get updated CRL.\n"
                      );
              X509_STORE_CTX_set_error(ctx, X509_V_ERR_CRL_HAS_EXPIRED);
@@ -482,7 +427,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      if (rc > 0 && crl != NULL) {
          /*
           * Check if the current certificate is revoked by this CRL
-@@ -2698,19 +2824,34 @@
+@@ -2746,19 +2888,34 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
          n = sk_X509_REVOKED_num(X509_CRL_get_REVOKED(crl));
          for (i = 0; i < n; i++) {
              revoked = sk_X509_REVOKED_value(X509_CRL_get_REVOKED(crl), i);
@@ -517,7 +462,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      }
      return ok;
  }
-@@ -2877,6 +3018,7 @@
+@@ -2929,6 +3086,7 @@ show_hostname_warning(char *s1, char *s2
  #ifndef OpenBSD
  #ifndef FREEBSD4
  #ifndef NETBSD15
@@ -525,7 +470,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
  #ifndef LINUX
  #ifndef AIX41
  #ifndef UW7
-@@ -2919,6 +3061,7 @@
+@@ -2971,6 +3129,7 @@ inet_aton(char * ipaddress, struct in_ad
  #endif /* UW7 */
  #endif /* AIX41 */
  #endif /* LINUX */
@@ -533,7 +478,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
  #endif /* NETBSD15 */
  #endif /* FREEBSD4 */
  #endif /* OpenBSD */
-@@ -3057,7 +3200,7 @@
+@@ -3113,7 +3272,7 @@ int
  tls_is_anon(int x)
  {
      char buf[128];
@@ -542,7 +487,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      SSL * ssl = NULL;
  
      switch ( x ) {
-@@ -3101,7 +3244,7 @@
+@@ -3157,7 +3316,7 @@ int
  tls_is_krb5(int x)
  {
      char buf[128];
@@ -551,7 +496,7 @@ $NetBSD: patch-ab,v 1.8 2020/04/08 15:22:07 rhialto Exp $
      SSL * ssl = NULL;
  
      switch ( x ) {
-@@ -4343,7 +4486,14 @@
+@@ -4399,7 +4558,14 @@ X509_userok(X509 * peer_cert, const char
      if (!(fp = fopen(buf, "r")))
          return 0;
      while (!r && (file_cert = PEM_read_X509(fp, NULL, NULL, NULL))) {

@@ -8,9 +8,9 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
   curses include and library pathes coming from BUILDLINK_*FLAGS).
 
 
---- makefile.orig	2011-08-21 15:12:07.000000000 +0000
+--- makefile.orig	2020-09-19 20:17:04.000000000 +0000
 +++ makefile
-@@ -824,12 +824,12 @@ manroot = $(prefix)
+@@ -827,12 +827,12 @@ manroot = $(prefix)
  
  K4LIB=-L/usr/kerberos/lib
  K4INC=-I/usr/kerberos/include
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  # To override these assignments; for example, if your OpenSSL files are
  # not in /usr/local/ssl, invoke the desired target like this:
-@@ -1869,7 +1869,7 @@ netbsd+krb5:
+@@ -1878,7 +1878,7 @@ netbsd+krb5:
  	-DCK_CAST $$HAVE_DES -DNOFTP_GSSAPI $(K5INC) $(K5INC)/krb5 \
  	$(KFLAGS)" \
  	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lcurses $$DES_LIB \
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  # NetBSD - With Kerberos 5 and SSL and Zlib.
  # OK: 2011/08/21 on 5.1 with MIT Kerberos.
-@@ -1896,7 +1896,7 @@ netbsd+krb5+ssl netbsd+krb5+openssl+zlib
+@@ -1905,7 +1905,7 @@ netbsd+krb5+ssl netbsd+krb5+openssl+zlib
  	-DCK_SSL -DCK_PAM -DZLIB -DNO_DCL_INET_ATON $$OPENSSLOPTION \
  	$(KFLAGS)" "LNKFLAGS = $(LNKFLAGS)" \
  	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lssl $$DES_LIB \
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  #Special Security Enhanced NetBSD target with SRP, SSL, and zlib support.
  #To build this, you need to BUILD the pkgsrc srp_client package.  After
-@@ -3544,7 +3544,7 @@ solaris2xg+openssl+zlib+pam+shadow:
+@@ -3553,7 +3553,7 @@ solaris2xg+openssl+zlib+pam+shadow:
  	-DCK_AUTHENTICATION -DCK_SSL -DCK_PAM -DCK_SHADOW  -DZLIB \
  	-DBIGBUFOK $(SSLINC) $(KFLAGS)" \
  	"LIBS= $(SSLLIB) -ltermlib \
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  #Ditto but with GCC 3.1 in which you have to specify 32-bit with -m32.
  #In Solaris 9 (and maybe 8) you'll also need specifiy the Library path.
-@@ -3899,7 +3899,7 @@ solaris9g+krb5+ssl solaris10g+krb5+ssl s
+@@ -3908,7 +3908,7 @@ solaris9g+krb5+ssl solaris10g+krb5+ssl s
  	-DCK_CURSES -DCK_NEWTERM -DDIRENT -DHDBUUCP -DTCPSOCKET  -DBIGBUFOK \
  	-DCK_AUTHENTICATION -DCK_SSL -DZLIB -DCK_KERBEROS -DKRB5 \
  	-DCK_ENCRYPTION -DCK_CAST $$OPENSSLOPTION \
@@ -63,25 +63,35 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  	"LIBS= $(SSLLIB) $(K5LIB) -lz -lssl -ltermlib -lsocket -lnsl -lm \
  	-lresolv -lcrypto \
  	$$GSSAPILIB -lkrb5 -lcom_err -lk5crypto $$DES_LIB $(LIBS)"
-@@ -6095,22 +6095,6 @@ linux:
+@@ -6207,32 +6207,6 @@ linux-2015:
  	if test `grep openpty /usr/include/pty.h | wc -l` -gt 0; \
  	then HAVE_OPENPTY='-DHAVE_OPENPTY'; \
  	else HAVE_OPENPTY=''; fi ; \
 -	HAVE_LIBCURSES=''; \
--	if test -f /usr/lib64/libncurses.so || \
+-	if test -f /lib64/libncurses.so.5 || \
+-	   test -f /lib64/libncurses.so || \
+-	   test -f /lib64/libncurses.a; then \
+-	   HAVE_LIBCURSES='-lncurses'; \
+-	else if test -f /usr/lib64/libncurses.so || \
 -	   test -f /usr/lib/libncurses.a  || \
+-	   test -f /usr/lib64/libncurses.so.5 || \
 -	   test -f /usr/lib/libncurses.so; then \
--	  HAVE_LIBCURSES='-lncurses'; \
+-	   HAVE_LIBCURSES='-lncurses'; \
+-	else if test -f /usr/lib/$(MULTIARCH)/libncurses.so || \
+-	   test -f /usr/lib/$(MULTIARCH)/libncurses.a  || \
+-	   test -f /usr/lib/$(MULTIARCH)/libncurses.so; then \
+-	   HAVE_LIBCURSES='-lncurses'; \
 -	else if test -f /usr/lib64/libcurses.so || \
 -	   test -f /usr/lib/libcurses.a || \
 -	   test -f /usr/lib/libcurses.so; then \
--	     HAVE_LIBCURSES='-lcurses'; fi; fi; \
+-	   HAVE_LIBCURSES='-lcurses'; fi; fi; fi; fi; \
 -	HAVE_CURSES=''; \
 -	if test -n '$$HAVE_LIBCURSES'; then \
 -	  if test -f /usr/include/ncurses.h; then \
 -	    HAVE_CURSES='-DCK_NCURSES  -I/usr/include/ncurses'; \
 -	  else if test -f /usr/include/curses.h; then \
 -	    HAVE_CURSES='-DCK_CURSES'; \
+-	  else HAVE_LIBCURSES=''; \
 -	fi; fi; fi; \
  	if test -f /usr/include/baudboy.h || test -f /usr/include/ttylock.h; \
  	then HAVE_LOCKDEV='-DHAVE_LOCKDEV' ; \
