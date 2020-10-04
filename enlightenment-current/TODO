@@ -1,6 +1,12 @@
-:: NetBSD 9.0_STABLE amd64, pkgsrc-current 2020-06-06 >> build&run OK
+#### Status
+Build on NetBSD 9.0_STABLE amd64, pkgsrc-2020Q2
 
-:: Plan
-1. Test, optimize dependencies << opengl issue
-2. Try to enbale battery with upower << enabled, test
-3. Add another OS support
+3rd party binary repository:
+`# echo "https://sourceforge.net/projects/kikadf/files/NetBSD/amd64/All/" >> /usr/pkg/etc/pkgin/repositories.conf`
+`# pkgin -f update`
+`# pkgin install enlightenment-current`
+
+#### Plan
+- Test, optimize dependencies << opengl issue
+- Try to enbale battery with upower << enabled, test
+- Add another OS support
