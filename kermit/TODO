@@ -1,6 +1,4 @@
-- Rebase patches to the alpha
-
-- Rename patch files to modern norms
+- Add comments to patch files
 
 - File patches upstream
 
