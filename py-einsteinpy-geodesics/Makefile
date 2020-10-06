@@ -13,7 +13,6 @@ LICENSE=	mit
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2.1:../../devel/py-coverage
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.57.1:../../devel/py-hypothesis
 BUILD_DEPENDS+=	${PYPKGPREFIX}-isort>=4.3.21:../../devel/py-isort
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.782:../../devel/py-codestyle
 BUILD_DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.6.0:../../lang/py-mypy
@@ -27,6 +26,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.12:../../textproc/py-alabaster
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
 BUILD_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../wip/py-black
+
+PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test
 
 USE_LANGUAGES=	# none
 

@@ -11,7 +11,6 @@ COMMENT=	The bidirectional mapping library for Python
 LICENSE=	mpl-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.57.1:../../devel/py-hypothesis
 BUILD_DEPENDS+= ${PYPKGPREFIX}-test>=5.3.5:../../devel/py-test
 BUILD_DEPENDS+= ${PYPKGPREFIX}-test-benchmark>=3.2.3:../../devel/py-test-benchmark
 BUILD_DEPENDS+= ${PYPKGPREFIX}-sortedcollections>=1.2.1:../../wip/py-sortedcollections
@@ -23,10 +22,13 @@ BUILD_DEPENDS+= ${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
 #BUILD_DEPENDS+= ${PYPKGPREFIX}-pre-commit>=2.7.1:../../wip/py-pre-commit
 BUILD_DEPENDS+= ${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
 
+PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test
+
 USE_LANGUAGES=	# none
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
