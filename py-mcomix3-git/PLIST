@@ -86,7 +86,6 @@ libexec/mcomix/mcomix/languages.py
 libexec/mcomix/mcomix/last_read_page.py
 libexec/mcomix/mcomix/layout.py
 libexec/mcomix/mcomix/lens.py
-libexec/mcomix/mcomix/lib/FlifImagePlugin.py
 libexec/mcomix/mcomix/lib/__init__.py
 libexec/mcomix/mcomix/lib/mountmanager.py
 libexec/mcomix/mcomix/lib/mt.py
