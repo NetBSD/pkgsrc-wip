@@ -11,7 +11,6 @@ COMMENT=	Community-developed python astronomy tools
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-h5py-[0-9]*:../../devel/py-h5py
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 # TEST_DEPENDS

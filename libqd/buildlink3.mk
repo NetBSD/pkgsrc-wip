@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_DEPMETHOD.libqd?=	build
+
+BUILDLINK_TREE+=	libqd
+
+.if !defined(LIBQD_BUILDLINK3_MK)
+LIBQD_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libqd+=	libqd>=2.3.22
+BUILDLINK_PKGSRCDIR.libqd?=	../../wip/libqd
+.endif	# LIBQD_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libqd
