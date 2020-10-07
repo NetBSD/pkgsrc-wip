@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	spotify-qt-2.11
+DISTNAME=	spotify-qt-2.12
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kraxarn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,7 +22,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-# DEPENDS+=	librespot-[0-9]*:../../wip/librespot
+DEPENDS+=	librespot-[0-9]*:../../wip/librespot
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
