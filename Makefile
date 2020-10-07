@@ -3176,6 +3176,7 @@ SUBDIR+=	py-bsddb
 SUBDIR+=	py-bson
 SUBDIR+=	py-bumpversion
 SUBDIR+=	py-bxa
+SUBDIR+=	py-cachecontrol
 SUBDIR+=	py-cachelib
 SUBDIR+=	py-calphad
 SUBDIR+=	py-calverter
