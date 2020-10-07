@@ -1,10 +1,10 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix50-proxy
-PKG_SUPPORTED_OPTIONS+=		inet6 libssh libssh2 snmp
+PKG_SUPPORTED_OPTIONS+=		inet6 ipmi libssh libssh2 snmp
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	mysql pgsql sqlite3
-PKG_SUGGESTED_OPTIONS+=		libssh2 snmp pgsql
+PKG_SUGGESTED_OPTIONS+=		ipmi libssh2 pgsql snmp
 
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=		inet6
@@ -50,4 +50,9 @@ PLIST.pgsql=		yes
 CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 .include "../../databases/sqlite3/buildlink3.mk"
 ZABBIX_DB_TYPE=		sqlite3
+.endif
+
+.if !empty(PKG_OPTIONS:Mipmi)
+CONFIGURE_ARGS+=	--with-openipmi=${LOCALBASE}
+.include "../../devel/OpenIPMI/buildlink3.mk"
 .endif
