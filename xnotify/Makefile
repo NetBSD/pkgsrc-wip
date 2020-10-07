@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2020/09/11 13:27:43 leot Exp $
 
-DISTNAME=	xnotify-0.3.2
+DISTNAME=	xnotify-0.5.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
