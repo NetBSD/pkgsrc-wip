@@ -33,4 +33,5 @@ do-install:
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
