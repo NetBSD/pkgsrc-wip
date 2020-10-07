@@ -5328,7 +5328,7 @@ SUBDIR+=	zmap
 SUBDIR+=	zodiac
 SUBDIR+=	zoneminder
 SUBDIR+=	zvbi
-
+SUBDIR+=	nono
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
 	${ECHO_MSG} "Extracting complete dependency database.  This may take a while..."
