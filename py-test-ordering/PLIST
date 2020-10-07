@@ -1,0 +1,13 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_ordering/__init__.py
+${PYSITELIB}/pytest_ordering/__init__.pyc
+${PYSITELIB}/pytest_ordering/__init__.pyo
+${PYSITELIB}/pytest_ordering/_version.py
+${PYSITELIB}/pytest_ordering/_version.pyc
+${PYSITELIB}/pytest_ordering/_version.pyo
