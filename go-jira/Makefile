@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	go-jira-1.0.26
+DISTNAME=	go-jira-1.0.27
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-jira/}
 GITHUB_PROJECT=	jira
@@ -66,6 +66,8 @@ GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.6.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.6.zip
 GO_MODULE_FILES+=	github.com/mgutz/ansi/@v/v0.0.0-20170206155736-9520e82c474b.mod
 GO_MODULE_FILES+=	github.com/mgutz/ansi/@v/v0.0.0-20170206155736-9520e82c474b.zip
+GO_MODULE_FILES+=	github.com/mitchellh/go-wordwrap/@v/v1.0.1.mod
+GO_MODULE_FILES+=	github.com/mitchellh/go-wordwrap/@v/v1.0.1.zip
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.3.mod
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.3.zip
 GO_MODULE_FILES+=	github.com/pkg/browser/@v/v0.0.0-20170505125900-c90ca0c84f15.mod
