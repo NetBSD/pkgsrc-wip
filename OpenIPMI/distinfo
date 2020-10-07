@@ -4,4 +4,4 @@ SHA1 (OpenIPMI-2.0.29.tar.gz) = a8dd1a9b877e94926af1da69421e8f2bd642c9c7
 RMD160 (OpenIPMI-2.0.29.tar.gz) = 1a82606dca2e585a5075eeb40e23aa10029724db
 SHA512 (OpenIPMI-2.0.29.tar.gz) = ff23aadfe4b9002574d1f06dda3d61f7a03ef1df2c61855516b7d67bd6d3272c53af74e3412e1045242dcb845f50b7c542083e918805c0efac424dd86e720a10
 Size (OpenIPMI-2.0.29.tar.gz) = 3119530 bytes
-SHA1 (patch-configure) = 633922a3546f3be1b7dd5cd9b409d2359181e463
+SHA1 (patch-configure) = 644287934ea58b18aebad100cfe3f37c39eca3ff
