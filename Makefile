@@ -112,6 +112,7 @@ SUBDIR+=	alacritty
 SUBDIR+=	alberta
 SUBDIR+=	aldo
 SUBDIR+=	alive
+SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-lib-git
 SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-plugins-jack
