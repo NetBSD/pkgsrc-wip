@@ -8,8 +8,6 @@ bin/openipmish
 bin/rmcp_ping
 bin/sdrcomp
 bin/solterm
-etc/ipmi/ipmisim1.emu
-etc/ipmi/lan.conf
 include/OpenIPMI/deprecator.h
 include/OpenIPMI/extcmd.h
 include/OpenIPMI/internal/ilist.h
@@ -93,4 +91,5 @@ man/man5/ipmi_lan.5
 man/man5/ipmi_sim_cmd.5
 man/man7/ipmi_cmdlang.7
 man/man7/openipmi_conparms.7
-@pkgdir man/man8
+share/examples/OpenIPMI/ipmisim1.emu
+share/examples/OpenIPMI/lan.conf

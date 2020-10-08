@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake perl pkg-config
 
-CONFIGURE_ARGS+=	--with-python=${LOCALBASE}/bin/python${PYVERSSUFFIX}
+CONFIGURE_ARGS+=	--with-python=${PREFIX}/bin/python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-perl=no
 CONFIGURE_ARGS+=	--with-swig=no
 
@@ -27,9 +27,19 @@ PKGCONFIG_OVERRIDE+=	OpenIPMItcl.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIui.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIutils.pc.in
 
+EGDIR=			${PREFIX}/share/examples/OpenIPMI
+EGFILES=		lan.conf ipmisim1.emu
+
+INSTALLATION_DIRS=	share/examples/OpenIPMI
+
+post-install:
+.for file in ${EGFILES}
+	${MV} ${DESTDIR}${PREFIX}/etc/ipmi/${file} ${DESTDIR}${EGDIR}/${file}
+.endfor
+
 .include "../../devel/popt/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/perl5/buildlink3.mk"
+#.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
