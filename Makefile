@@ -4417,6 +4417,7 @@ SUBDIR+=	raw
 SUBDIR+=	rawdog
 SUBDIR+=	rawgl
 SUBDIR+=	rawgl-git
+SUBDIR+=	raylib
 SUBDIR+=	rc.d.Interix
 SUBDIR+=	rdsn-git
 SUBDIR+=	rdup

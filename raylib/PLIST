@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/raylib.h
+lib/cmake/raylib/raylib-config-version.cmake
+lib/cmake/raylib/raylib-config.cmake
+lib/libraylib.a
+lib/pkgconfig/raylib.pc
