@@ -13,6 +13,8 @@ share/APE/Languages/AWK/Macros/macros
 share/APE/Languages/AWK/Macros/menu.txt
 share/APE/Languages/AWK/language_opts
 share/APE/Languages/AWK/syntax_highlighting
+share/APE/Languages/BC/Macros/macros
+share/APE/Languages/BC/Macros/menu.txt
 share/APE/Languages/BC/language_opts
 share/APE/Languages/BC/syntax_highlighting
 share/APE/Languages/Bash/Macros/macros
