@@ -4058,7 +4058,6 @@ SUBDIR+=	py-riccipy
 SUBDIR+=	py-rich
 SUBDIR+=	py-rigidbodysimulator
 SUBDIR+=	py-rlcompleter2
-SUBDIR+=	py-rlp
 SUBDIR+=	py-rogues
 SUBDIR+=	py-ropemode
 SUBDIR+=	py-rpaths
