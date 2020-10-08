@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (multiprocess-0.70.4.tgz) = 8cdc76b02f7705fafed553ae95e847f3637d5495
-RMD160 (multiprocess-0.70.4.tgz) = 734ba89e08d4ef7b3173eb1474c07a0bb1baa328
-SHA512 (multiprocess-0.70.4.tgz) = afba2b064be18d51b38405ebe679d5698321fb710129db2a1e9ee355fc253aa7ad86d2ea751c9064c5cf5e99a0d82a7bbace5e8d17dfe787556a68e46fba94d9
-Size (multiprocess-0.70.4.tgz) = 1062131 bytes
+SHA1 (multiprocess-0.70.10.zip) = 2f291dd83c1e6a2c38ea7222d775dc8fb1946ad2
+RMD160 (multiprocess-0.70.10.zip) = 31a019237a1050e1794e511c55db1c643b50af3a
+SHA512 (multiprocess-0.70.10.zip) = 27407a85c4755d45578eb91d8f32f69c84f3dbac4452f01ee0d7d1c4810319be5998f2054543c9591aef4595863adcca6abd418274804502b19ee6cc3911a0d8
+Size (multiprocess-0.70.10.zip) = 2408221 bytes

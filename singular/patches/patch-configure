@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.orig	2020-05-20 10:20:32.000000000 +0000
++++ configure
+@@ -23796,7 +23796,7 @@ else
+ fi
+ 
+ 
+-if test x"${ENABLE_COUNTEDREF_AUTOLOAD}" == xyes; then
++if test x"${ENABLE_COUNTEDREF_AUTOLOAD}" = xyes; then
+ 
+ $as_echo "#define SI_COUNTEDREF_AUTOLOAD 1" >>confdefs.h
+ 
