@@ -3002,6 +3002,7 @@ SUBDIR+=	portscout
 SUBDIR+=	posh
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postfix-logwatch
+SUBDIR+=	postgresql-timescaledb
 SUBDIR+=	postoffice
 SUBDIR+=	postr
 SUBDIR+=	povray
