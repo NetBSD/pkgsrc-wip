@@ -1,1 +1,8 @@
 nono is OMRON LUNA-I emulator runs on NetBSD and so on.
+It is buildable using Clang on older NetBSDs so you 
+can configure Clang to be used for the build by simply
+adding the following to /etc/mk.conf 
+PKGSRC_COMPILER=       clang
+CLANGBASE=             /usr/pkg
+HAVE_LLVM=             yes
+
