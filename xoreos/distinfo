@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/09/05 23:04:36 yhardy Exp $
 
-SHA1 (xoreos/v0.0.5.tar.gz) = c02ef109a5c7b615873eaccb0100c1b5121a1fb4
-RMD160 (xoreos/v0.0.5.tar.gz) = cc49da1089900d29dd0a3d97b2564322e8035751
-SHA512 (xoreos/v0.0.5.tar.gz) = 2f0a60c84ed4ff38285897f0f5e305a65b684a30634008e94e343f8715a6f891cd5d47f798b140f1b043ee480346ad69b70ac9ef39e258f564c808dd1d39ece5
-Size (xoreos/v0.0.5.tar.gz) = 3459452 bytes
+SHA1 (xoreos/v0.0.6.tar.gz) = c54df358115a1f2648282314f2ce0cd098fd4d1b
+RMD160 (xoreos/v0.0.6.tar.gz) = a6913a15439596bfa418b036b3539fd89c681793
+SHA512 (xoreos/v0.0.6.tar.gz) = 64ba77c3c629f4eb147ccba472bb1a8b93437eda2955b0abb2f59814d49e75af504c7334ab7c081504aa716e5acfd503fcccf896d5cc40ef454aaf75f23f430b
+Size (xoreos/v0.0.6.tar.gz) = 3934821 bytes
